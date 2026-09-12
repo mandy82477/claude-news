@@ -211,6 +211,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-09-12
+- **Google（Gemini）**：HN 討論稱 Gemini 2.5 Pro／Flash 十月停用、尚無 GA 版 Pro 級後繼；長文件利基（千頁僅需 30 萬 tokens）Anthropic／OpenAI 均無同等方案，代價逾 10 倍 → 需要此利基的工程師暫無替代可轉。僅單一 HN 討論串（19 分），無官方公告佐證（Hacker News）
+
 ### 2026-09-08
 - **Cognition**（Devin 開發商）：The Tech Buzz 報導完成新一輪募資，估值達 480 億美元，AI 編碼賽道戰力升級；僅標題可用，資金用途、投資人名單未見報導（Topic Watch）
 - **Logitech**：推出可自訂快捷鍵的 MX Keypad，鎖定開發者作為多應用 AI 控制中心，廠商自宣性質，無 Claude 對比（Topic Watch）

@@ -28,8 +28,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-11
-**最後新聞更新：** 2026-09-11
+**最後更新：** 2026-09-12
+**最後新聞更新：** 2026-09-12
 
 > **最新工作流模式**（2026-09-11）
 > Skills 設計新增 drawio-skill：把自然語言、程式碼、Terraform/K8s、SQL 與 OpenAPI 轉成可編輯、通過測試的 draw.io 架構圖，含 drift diff 與 CI 架構測試（存量盤點，本庫首次收錄）。
@@ -50,8 +50,8 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-10 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
-| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-11 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-07 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
@@ -60,6 +60,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-27 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **Agent Loop 終止條件** | Loop exit condition 設計模式（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-19 | 「怎麼停下」比「怎麼跑起來」更難；要有顯式終止條件 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
@@ -159,6 +160,33 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### github/spec-kit：GitHub 官方 Spec-Driven Development 入門工具包，近 7 天新增 2,311 星（約 330 星/日）（2026-09-12）
+
+- **主線：** —
+- **核心模式：** GitHub 官方釋出的 Spec-Driven Development（規格驅動開發）入門工具包，用 spec → plan → tasks → implement 固定流程取代直接下 vibe coding 提示，讓中間產物（規格書、計畫）可審查、可重複
+- **與既有模式的關係：** 本表尚無「規格驅動開發」類別，新增一列；概念早見於「誰負責拆分」節引用的 Spec-Driven Development 學術文章，spec-kit 是官方釋出的具體實作
+- **可信度註記：** 星速偵測收錄（近 7 天 +2,311 星），未見 forks／issues／近期 commit 佐證；來源方為 GitHub 官方帳號
+- **來源：** GitHub Search；[GitHub](https://github.com/github/spec-kit)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### stablyai/orca：用既有訂閱跑任意 coding agent 的多 agent ADE，桌面／行動／遠端執行環境皆支援，近 7 天新增 4,966 星（約 709 星/日）（2026-09-12）
+
+- **主線：** —
+- **核心模式：** 多 agent Agent Development Environment（ADE），讓使用者以自己既有的訂閱（非另計費 API key）跑任意 coding agent，桌面、行動裝置、遠端執行環境皆支援
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「用既有訂閱、跨裝置執行」取向的 ADE——既有代表技巧（Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam）多聚焦單機 orchestrator 分派，本則強調沿用訂閱省去額外計費並跨桌面／行動／遠端環境執行
+- **可信度註記：** 星速偵測收錄（近 7 天 +4,966 星），未見 forks／issues／近期 commit 佐證
+- **來源：** GitHub Search；[GitHub](https://github.com/stablyai/orca)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### rpamis/comet：把想法轉成可評測工作流程的 agent skill harness，本庫存量盤點今日首次收錄（2026-05-14 出生、3,023 星）（2026-09-12）
+
+- **主線：** —
+- **核心模式：** Agent skill harness，把想法轉成可評測（evaluated）的工作流程
+- **與既有模式的關係：** 補上「Skills 設計」類別一種「skill 產出即附評測」取向的做法——既有代表技巧（知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill）多聚焦封裝與分享，本則鎖定把評測綁進 skill 產出流程本身
+- **可信度註記：** 本庫存量盤點通道首次收錄（已成名但本庫未報導過的 repo，2026-05-14 出生），未見 forks／issues／近期 commit 佐證，功能敘述為廠商自述
+- **來源：** GitHub Search（存量盤點）；[GitHub](https://github.com/rpamis/comet)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### Agents365-ai/drawio-skill：把自然語言、程式碼、Terraform/K8s、SQL 與 OpenAPI 來源轉成可編輯、通過測試的 draw.io 架構圖（2026-09-11）
 

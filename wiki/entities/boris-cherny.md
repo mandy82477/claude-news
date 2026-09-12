@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 👤 人物
 **首次出現：** 2026-04-23（事後報告發布）
 **最後更新：** 2026-09-12
-**最後新聞更新：** 2026-08-04
+**最後新聞更新：** 2026-09-12
 
-> **驗證方法論與 Electron 桌面應用重寫嘗試**（2026-08-03 報導，2026-09-02 查證）：Boris Cherny 在 Y Combinator Startup School 2026 訪談（07-25/26 舉行、07-28 發布）中表示，引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」。該實驗已查實為**用 Claude 將 Electron 版桌面應用改寫為 Swift 原生版**：從一段簡短對話式 prompt 起跑、連續執行兩週以上，agent 以 **Electron 版與 Swift build 逐像素比對**自我驗證（[Daring Fireball 2026-08-02](https://daringfireball.net/linked/2026/08/02/cherny-claude-swift)、[barath.ai 紀要](https://www.barath.ai/learnings/boris-cherny-yc-startup-school-2026)，查證日 2026-09-02）。
+> **重申 Claude 正式環境程式碼品質門檻高於人類**（2026-09-11）：Simon Willison 轉引發言，隔日開發者提「AI slop」質疑獲親回信（BI，09-12，僅標題）。
 
 ---
 
 ## 現況
 
-**截至 2026-08-03（本頁記錄的最近一次公開發言）**，Boris Cherny 的論述重心已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」，並以團隊用 Claude 把 Electron 版桌面應用重寫為 Swift 原生版、以逐像素比對作自我驗證為例（YC Startup School 2026 訪談）。**自 2026-08-04 起本庫未再收到他的新公開發言**——這是事實，不是本頁漏更新。
+**截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（Simon Willison 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文僅標題可用（Business Insider，2026-09-12）。
 
 Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 
-**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI。逐條見下方言論摘要表。
+**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類。逐條見下方言論摘要表。
 
 ---
 
@@ -50,6 +50,8 @@ Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude
 
 | 日期 | 主題分類 | 一句話論述 | 立場延續/轉折 |
 |------|---------|-----------|--------------|
+| 2026-09-12 | 商業/社群 | 一名開發者為「AI slop」問題致信 Boris Cherny，他親自回信（原文僅標題可用） | 延續——與 09-11 品質門檻聲明呼應同一場「AI slop」討論 |
+| 2026-09-11 | 方法論 | 重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫；Anthropic 內部設有多項相關指引 | 延續——呼應 06-24「AI 寫 100% 程式碼正在變得有問題」的品質疑慮，具體化為可操作的品質門檻主張 |
 | 2026-08-03 | 方法論 | 引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」；以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例 | 深化——將「Loops 是未來」的自主執行哲學具體化為可操作的「驗證優先」方法論 |
 | 2026-07-27 | 哲學（原文已查實） | 呼籲使用者停止「微管理」AI——框大目標讓 agent 自行導航，完整論述見「呼籲停止『微管理』AI」節 | 延續——與「Loops 是未來」「我寫 loop 讓 loop 去 prompt Claude」一脈相承 |
 | 2026-07-25 | 安全 | Opus 5 是目前最難被提示注入攻破的模型，比評測分數更讓他興奮 | 轉折——首次公開聚焦模型安全性面向，此前宣言多聚焦能力／效率 |
@@ -70,6 +72,17 @@ Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude
 ---
 
 ## 公開言論與主張
+
+### 回應「AI slop」批評與 production code 品質門檻聲明（2026-09-11／09-12）
+
+Simon Willison 於 2026-09-11 在部落格「Quoting Boris Cherny」引述其公開發言：「Production code written by Claude should have a higher bar than if it was written by a human. At Anthropic, we have many gu[idelines]...」（原文於此處被截斷，完整脈絡未載）。此語呼應他 2026-06-24 曾坦承「AI 寫 100% 程式碼正在變得有問題」的立場，將品質疑慮具體化為「門檻應更高」的主張。
+
+翌日（09-12）Business Insider 報導一名開發者曾就「AI slop」（AI 產出程式碼品質下滑）現象致信 Boris Cherny，他親自回信；報導僅標題可用，回信內容與雙方對話細節未見報導。
+
+- 來源：[Simon Willison，2026-09-11](https://simonwillison.net/2026/Sep/11/boris-cherny/)
+- 來源：[Google News / Business Insider，2026-09-12](https://news.google.com/rss/articles/CBMihgFBVV95cUxQdl9CNzFpU1IyZjY1T2hTbFpCZUJpbFFzRVlIeFJxdFJRQVlYVkhmaEpfUDNvOGhXbkl3VFpoaGU1Q3FJaWdBTnBlSjVULUlqU0NwMGZZVDVkdmJsSVlKajVKbDVjR3VxUnpuaW14WH)
+
+---
 
 ### 驗證方法論與 Electron 桌面應用重寫嘗試（2026-08-03）
 
@@ -213,6 +226,8 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 
 ## 歷史記錄
 
+- 2026-09-12：Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）
+- 2026-09-11：Simon Willison 部落格引述其發言，稱 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫，並提及 Anthropic 內部設有多項相關指引（原文於此處截斷）（simonwillison.net，2026-09-11）
 - 2026-08-03：於 YC Startup School 2026 訪談中表示，引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」（「verification 大概是人們最容易做錯的一件事」），並以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例（daringfireball.net 轉引 John Gruber，Hacker News 69 分，2026-08-02）。**後續（2026-09-02）**：重寫細節查實為改寫成 Swift 原生版、以逐像素比對自我驗證
 - 2026-07-27：Business Insider 報導呼籲使用者停止「微管理」（micromanaging）AI，延續其「Loops 是未來」設計哲學；原文正文未能擷取，僅標題可確認核心主張（查證狀態見「呼籲停止微管理」段落標記）（Google News / Business Insider，2026-07-27）
 - 2026-07-25：Boris Cherny 公開表示 Opus 5 是目前最難被提示注入攻破的模型（Simon Willison 部落格轉引 X 貼文，https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything）
@@ -255,3 +270,5 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 - [[news/2026-07-25]]
 - [[news/2026-07-28]]
 - [[news/2026-08-04]]
+- [[news/2026-09-11]]
+- [[news/2026-09-12]]
