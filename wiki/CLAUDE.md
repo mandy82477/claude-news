@@ -45,7 +45,6 @@ wiki/
 
 - `news/` 為唯讀原始資料，**不可修改**
 - `log.md` **只能 append**，不可修改既有條目
-- Wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/` 路徑下，**不可**誤存至父層 `ObsidianLab/` 目錄
 - 繁體中文為主；英文術語保留英文
 
 ---
@@ -83,11 +82,3 @@ wiki 正文的連結寫法以 web reader 解析器（`web_reader/assets/app.js` 
 
 - 引用日報：`[[news/2026-04-25]]`；外部：`[標題](url)`
 - 來源歸因不寫入 wiki 正文：記者在回報訊息的「來源歸因」欄回報，由主編 append 至 `data/source_attribution.jsonl`，規則見 `.claude/reporter-rules/wiki-reporter-shared.md`
-
----
-
-## ✅ 每次修改頁面必須同步更新「最後更新」欄位
-
-格式：**只填日期，不加說明文字。**
-- ✅ `**最後更新：** 2026-06-18`
-- ❌ `**最後更新：** 2026-06-18（任何說明文字）`
