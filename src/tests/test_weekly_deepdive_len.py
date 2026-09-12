@@ -59,7 +59,7 @@ class DeepdiveVisibleLenTest(unittest.TestCase):
         self.assertEqual(visible(marked), len("牌價沒動實付卻漲了，原因是換代"))
 
     def test_thresholds_are_the_calibrated_pair(self):
-        """門檻與規格檔 `.claude/commands/weekly-report.md` 同步（2026-08-30 校準）。"""
+        """門檻與規格檔 `.claude/skills/weekly-report/deepdive.md` 同步（2026-08-30 校準）。"""
         self.assertEqual((mod.DEEPDIVE_MIN_CHARS, mod.DEEPDIVE_MAX_CHARS), (900, 1300))
 
 

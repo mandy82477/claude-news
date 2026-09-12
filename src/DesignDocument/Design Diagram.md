@@ -334,7 +334,7 @@ flowchart LR
 | 新增週更／機器快照頁 | 標頭加「更新頻率」欄**且**登記 `scripts/check_wiki_freshness.py` 的 `DERIVED_PAGES`（未登記會紅——2026-09-02 擋掉雲端 web build 的教訓） |
 | rebase 撞到 append-only 檔衝突 | `python scripts/resolve_append_only.py`（白名單內 union 自解；白名單外 abort 交人工） |
 | 改質疑題庫 | `scripts/inquiry_bank.py`（加題須經使用者確認；`--seed` 僅測試用） |
-| 改週報格式／帳本檢查 | `.claude/commands/weekly-report.md`＋`scripts/check_weekly_ledger.py` |
+| 改週報格式／帳本檢查 | `.claude/skills/weekly-report/SKILL.md`＋`scripts/check_weekly_ledger.py` |
 | 改懸置標記語法／偵測 | `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」＋`scripts/scan_pending_verifications.py`／`check_pending_markers.py` |
 | 查/結轉知帳本 | `python scripts/pending_handoffs.py list｜open｜close｜void`（`data/pending-handoffs.jsonl`） |
 | 改記者職責/規則 | `.claude/reporter-rules/wiki-ingest-[category].md` |

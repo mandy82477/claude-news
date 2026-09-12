@@ -5,7 +5,7 @@ description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開
 
 # Wiki 週度延伸回顧
 
-> **這是每週工作的第二段，不是入口。** 平常跑 `/weekly`（總指揮，會先跑 `.claude/commands/weekly-report.md` 再跑本 skill）；單獨執行本 skill 只在補做策展那一段時使用。
+> **這是每週工作的第二段，不是入口。** 平常跑 `/weekly`（總指揮，會先跑 `.claude/skills/weekly-report/SKILL.md` 再跑本 skill）；單獨執行本 skill 只在補做策展那一段時使用。
 > 單獨執行時，收尾（步驟 6）由本 skill 自己負責；由 `/weekly` 帶起時，**步驟 6 一律跳過**，收尾交給總指揮統一做（單一 push）。
 
 每週執行一次，建議在週末或週一執行，可與 `.claude/commands/wiki-lint.md` 同一天跑。
