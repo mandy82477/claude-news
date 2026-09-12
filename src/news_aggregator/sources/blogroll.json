@@ -1,5 +1,5 @@
 {
-  "_doc": "權威部落客 RSS 名單。status: probation(試用期30天)/active/retired。汰換由 /source-review 建議、使用者確認後改此檔。命中統計不存此檔，由 data/*.jsonl 推導。blog 條目 schema: {\"slug\", \"name\", \"rss_url\", \"added\": \"YYYY-MM-DD\", \"tags\": [], \"status\": \"probation\", \"notes\": \"\"} 2026-09-12 起含各家 AI 廠商官方 blog／changelog（tags 含 vendor）：只加來源、不改規則，條目經關鍵字預過濾後走現有流程；xAI／DeepSeek／Moonshot／Zhipu 無可用 RSS、Qwen github blog 近 30 天無內容，實測後未加。",
+  "_doc": "權威部落客 RSS 名單。status: probation(試用期30天)/active/retired。汰換由 /source-review 建議、使用者確認後改此檔。命中統計不存此檔，由 data/*.jsonl 推導。blog 條目 schema: {\"slug\", \"name\", \"rss_url\", \"added\": \"YYYY-MM-DD\", \"tags\": [], \"status\": \"probation\", \"notes\": \"\", \"topic\": \"(選填，wiki 專頁 slug；設了就跳過關鍵字預過濾、條目標 topic)\", \"max_items\": \"(選填，topic 模式每次上限，預設 3)\"} 2026-09-12 起含各家 AI 廠商官方 blog／changelog（tags 含 vendor）：只加來源、不改規則，帶 \"topic\" 的廠商 feed 不套關鍵字預過濾（每次至多 max_items 則、標 topic 進專頁雷達候選，由日報步驟判衝擊）；Microsoft Foundry 不帶 topic，走一般關鍵字路徑；xAI／DeepSeek／Moonshot／Zhipu 無可用 RSS、Qwen github blog 近 30 天無內容，實測後未加。",
   "blogs": [
     {
       "slug": "simonwillison",
@@ -62,7 +62,9 @@
         "openai"
       ],
       "status": "probation",
-      "notes": "OpenAI 官方新聞／發布（含模型、產品、企業案例）。2026-09-12 實測：可抓、近 30 天 62 則；關鍵字預過濾後多數不進日報，只有提到 Claude／LLM／agent 者會進。觀察一個月，看 competitor-landscape 時序是否被非編碼工具條目塞滿再決定開專頁"
+      "notes": "OpenAI 官方新聞／發布（含模型、產品、企業案例）。2026-09-12 實測：可抓、近 30 天 62 則。觀察一個月，看 competitor-landscape 時序是否被非編碼工具條目塞滿再決定開專頁。帶 topic：不套關鍵字預過濾，每次至多 3 則進專頁雷達候選，由日報步驟判「對用 Claude 的人有沒有衝擊」，無衝擊不寫",
+      "topic": "competitor-landscape",
+      "max_items": 3
     },
     {
       "slug": "deepmind-blog",
@@ -75,7 +77,9 @@
         "google"
       ],
       "status": "probation",
-      "notes": "DeepMind 官方部落格（模型與研究發布）。2026-09-12 實測：可抓、近 30 天 10 則。Gemini 產品線另有 blog.google/products/gemini/rss/ 可抓，本次未加"
+      "notes": "DeepMind 官方部落格（模型與研究發布）。2026-09-12 實測：可抓、近 30 天 10 則。Gemini 產品線另有 blog.google/products/gemini/rss/ 可抓，本次未加。帶 topic：不套關鍵字預過濾，每次至多 3 則進專頁雷達候選，由日報步驟判「對用 Claude 的人有沒有衝擊」，無衝擊不寫",
+      "topic": "competitor-landscape",
+      "max_items": 3
     },
     {
       "slug": "meta-newsroom",
@@ -88,7 +92,9 @@
         "meta"
       ],
       "status": "probation",
-      "notes": "Meta 官方新聞室（AI 產品發布走這裡，如 Muse）。ai.meta.com/blog 無 RSS（實測 404），以新聞室替代。2026-09-12 實測：可抓、近 30 天 10 則"
+      "notes": "Meta 官方新聞室（AI 產品發布走這裡，如 Muse）。ai.meta.com/blog 無 RSS（實測 404），以新聞室替代。2026-09-12 實測：可抓、近 30 天 10 則。帶 topic：不套關鍵字預過濾，每次至多 3 則進專頁雷達候選，由日報步驟判「對用 Claude 的人有沒有衝擊」，無衝擊不寫",
+      "topic": "competitor-landscape",
+      "max_items": 3
     },
     {
       "slug": "microsoft-foundry",
@@ -115,7 +121,9 @@
         "coding-tool"
       ],
       "status": "probation",
-      "notes": "GitHub（Microsoft）Copilot 官方 changelog，Claude Code 的直接競品迭代。2026-09-12 實測：可抓、近 30 天 10 則"
+      "notes": "GitHub（Microsoft）Copilot 官方 changelog，Claude Code 的直接競品迭代。2026-09-12 實測：可抓、近 30 天 10 則。帶 topic：不套關鍵字預過濾，每次至多 3 則進專頁雷達候選，由日報步驟判「對用 Claude 的人有沒有衝擊」，無衝擊不寫",
+      "topic": "competitor-landscape",
+      "max_items": 3
     }
   ]
 }

@@ -25,7 +25,7 @@ paths:
 | **官方核心** | GitHub Changelog、SDK / API 迭代、定價結構變化、Anthropic 公告 |
 | **社群實測** | 工程師驗證過的工作流模式、agent 設計、Bug 回報與替代方案（HN / Reddit） |
 | **生態動態** `[改版: 2026-09-12]` | 融資、大型企業合作（AWS / Google）、政策趨勢、周邊工具——**只收會改變工程師決策的那些**：定價、可用性、法規強制、供應商鎖定。純資本敘事與市場觀感不收 |
-| **專頁定向** | 為特定 wiki 專頁定向抓取的少量條目（`src/news_aggregator/sources/topic_watch.json`），判準是「對該專頁有無價值」而非標題是否提及 Claude／Anthropic |
+| **專頁定向** | 為特定 wiki 專頁定向抓取的少量條目（`src/news_aggregator/sources/topic_watch.json`；`[加入: 2026-09-12]` 另含 `src/news_aggregator/sources/blogroll.json` 帶 `topic` 的各家 AI 廠商官方 blog／changelog，每 feed 每次至多 3 則），判準是「對該專頁有無價值」而非標題是否提及 Claude／Anthropic；廠商發布另加一道「會不會改變用 Claude 的人的選型、帳單、可用性或能力對比」的判斷，無衝擊不寫 |
 | **存量盤點** | 已成名但本庫從未報導過的 GitHub repo，每日至多 2 則補進（`src/news_aggregator/sources/github_releases.py` C 窗）。含 Agent Skills 生態——SKILL.md 是 Anthropic originated 的格式，該生態整體屬 Claude 生態，但多數 repo 的描述不含 claude 字樣 |
 | **使用者提問** `[加入: 2026-09-02]` | 使用者在對話中點名的事實（工具、事件、疑問），**經主編以 web 工具查證一手來源後**直接沉澱進 wiki，不經日報。紀律：查證是入場券（未查證只能標懸置）、寫入必標「查證日＋來源連結」、歸因 slug `user-query`、`wiki/log.md` Query 條目為溯源記錄。此通道證據等級不低於日報——入口即主編查證，記者通道反而無 web 工具 |
 

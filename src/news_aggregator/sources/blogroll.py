@@ -9,6 +9,16 @@ The blog list itself starts empty — curation happens out-of-band via
 /source-review + user confirmation, which edits blogroll.json directly. This
 module ships the mechanism; it works correctly (returns []) with an empty or
 absent list.
+
+Vendor feeds (2026-09-12): a blog entry may carry ``"topic": "<wiki slug>"``.
+Such feeds are official blogs/changelogs of other AI vendors fetched *for a
+specific wiki page* (competitor-landscape); their posts never mention Claude,
+so the keyword pre-filter is skipped and every recent post is emitted with
+``topic`` set -- exactly like sources/topic_watch.py. The digest step then
+judges each one on "does this release change anything for a Claude user" and
+drops the rest (see news-pipeline-steps.md 專頁雷達). ``max_items`` (default
+``TOPIC_MAX_ITEMS``) caps how many such posts one feed may emit per run, so a
+busy vendor newsroom cannot dilute the radar.
 """
 import json
 import logging
@@ -38,6 +48,9 @@ KEYWORDS = [
     "llm",
     "ai agent",
 ]
+
+# Per-run cap for a topic-mode (vendor) feed; overridable per blog via "max_items".
+TOPIC_MAX_ITEMS = 3
 
 
 class Blogroll(BaseSource):
@@ -102,6 +115,9 @@ def _fetch_blog(blog: dict, cutoff: datetime) -> list[FeedItem]:
     if feed.bozo and not feed.entries:
         raise ValueError(f"bozo feed: {feed.bozo_exception}")
 
+    topic = (blog.get("topic") or "").strip()
+    max_items = int(blog.get("max_items") or TOPIC_MAX_ITEMS) if topic else None
+
     items: list[FeedItem] = []
     for entry in feed.entries:
         pub = parse_feed_time(entry)
@@ -110,7 +126,9 @@ def _fetch_blog(blog: dict, cutoff: datetime) -> list[FeedItem]:
 
         title = entry.get("title", "(no title)")
         summary = entry.get("summary", "") or ""
-        if not _matches_keywords(title, summary):
+        # Vendor feeds carry a topic: skip the keyword gate (their posts never
+        # mention Claude) and let the digest step judge impact instead.
+        if not topic and not _matches_keywords(title, summary):
             continue
 
         items.append(FeedItem(
@@ -121,7 +139,10 @@ def _fetch_blog(blog: dict, cutoff: datetime) -> list[FeedItem]:
             score=0,
             score_unit="",
             summary=summary[:200],
-            category="community",
+            category="media" if topic else "community",
+            topic=topic,
         ))
+        if max_items is not None and len(items) >= max_items:
+            break
 
     return items

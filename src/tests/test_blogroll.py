@@ -7,6 +7,8 @@ Covers:
 - Keyword pre-filter admits on-topic posts and rejects off-topic ones.
 - A single blog's RSS failure (network error, bozo feed) never raises and
   does not prevent other blogs in the list from being fetched.
+- Vendor feeds with "topic" skip the keyword gate, tag items with that topic,
+  and are capped by max_items (2026-09-12).
 """
 import json
 import time
@@ -185,3 +187,47 @@ class TestBlogrollFetch(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestTopicModeVendorFeed(unittest.TestCase):
+    """帶 topic 的廠商 feed：不套關鍵字閘、條目標 topic、受 max_items 上限。"""
+
+    def _run(self, blog, entries):
+        from news_aggregator.sources.blogroll import _fetch_blog
+        cutoff = datetime.now(tz=timezone.utc) - timedelta(hours=26)
+        with patch("news_aggregator.sources.blogroll.requests.get") as mock_get:
+            mock_get.return_value = MagicMock(content=b"", raise_for_status=lambda: None)
+            with patch(
+                "news_aggregator.sources.blogroll.feedparser.parse",
+                return_value=_FakeFeed(entries),
+            ):
+                return _fetch_blog(blog, cutoff)
+
+    def test_topic_feed_skips_keyword_gate_and_tags_topic(self):
+        blog = {"slug": "v", "name": "Vendor", "rss_url": "https://v.example/rss",
+                "topic": "competitor-landscape"}
+        items = self._run(blog, [_entry("GPT-6 Astra launch", "no keyword here")])
+        self.assertEqual(len(items), 1, "topic 模式不得被關鍵字閘擋下")
+        self.assertEqual(items[0].topic, "competitor-landscape")
+        self.assertEqual(items[0].category, "media")
+        self.assertEqual(items[0].source, "Blog / Vendor")
+
+    def test_topic_feed_capped_by_max_items(self):
+        blog = {"slug": "v", "name": "Vendor", "rss_url": "https://v.example/rss",
+                "topic": "competitor-landscape", "max_items": 2}
+        items = self._run(blog, [_entry(f"post {i}") for i in range(5)])
+        self.assertEqual(len(items), 2)
+
+    def test_topic_feed_default_cap(self):
+        from news_aggregator.sources.blogroll import TOPIC_MAX_ITEMS
+        blog = {"slug": "v", "name": "Vendor", "rss_url": "https://v.example/rss",
+                "topic": "competitor-landscape"}
+        items = self._run(blog, [_entry(f"post {i}") for i in range(10)])
+        self.assertEqual(len(items), TOPIC_MAX_ITEMS)
+
+    def test_plain_blog_still_keyword_gated_and_untagged(self):
+        blog = {"slug": "p", "name": "Person", "rss_url": "https://p.example/rss"}
+        items = self._run(blog, [_entry("Kyoto photos", "food"), _entry("On Claude Code", "")])
+        self.assertEqual([i.title for i in items], ["On Claude Code"])
+        self.assertEqual(items[0].topic, "")
+        self.assertEqual(items[0].category, "community")
