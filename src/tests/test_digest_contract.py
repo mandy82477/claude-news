@@ -196,6 +196,7 @@ class TestSearchIndexIncludesBody(unittest.TestCase):
             "OUT_JS": self.root / "web_reader" / "data" / "data.js",
             "OUT_WIKI_DIR": self.root / "web_reader" / "data" / "wiki",
             "OUT_DIGEST_DIR": self.root / "web_reader" / "data" / "digest",
+            "OUT_WEEKLY_DIR": self.root / "web_reader" / "data" / "weekly",
             "OUT_SEARCH_INDEX": self.root / "web_reader" / "data" / "search-index.json",
         }
         originals = {k: getattr(build_web, k) for k in patched}
