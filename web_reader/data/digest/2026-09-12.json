@@ -12,10 +12,10 @@
   "focus": [],
   "topicRadar": [],
   "sourceStatus": [],
-  "preview": "投資判讀頁拆成「每日判讀」與「週更教材」兩頁；社群模式概覽首度依 60 天線汰掉五類。",
+  "preview": "研究者用 8 種手法繞過 Claude Code 黑名單權限，只有白名單擋得住；另一份 30 天審計顯示 CLAUDE.md 寫了 TDD 規則，Claude 六成時候仍先寫碼。",
   "reader": {
     "date": "2026-09-12",
-    "summary": "投資判讀頁拆成「每日判讀」與「週更教材」兩頁；社群模式概覽首度依 60 天線汰掉五類。",
+    "summary": "研究者用 8 種手法繞過 Claude Code 黑名單權限，只有白名單擋得住；另一份 30 天審計顯示 CLAUDE.md 寫了 TDD 規則，Claude 六成時候仍先寫碼。",
     "noNews": false,
     "sections": [
       {
@@ -23,16 +23,28 @@
         "key": "features",
         "items": [
           {
-            "fact": "官方沒答的「規則寫了 Claude 真的會照做嗎」，社群有量化答案且是負面的：CLAUDE.md 明寫 TDD 六行規則，30 天提交審計顯示 60% 情況仍先寫碼後補測試",
+            "fact": "dev.to 作者做了 30 天提交審計：CLAUDE.md 明寫六行 TDD 規則，Claude Code 仍有 60% 的情況先寫程式碼、事後才補測試",
             "link": "topics/coding-workflow-guide",
             "linkText": "",
-            "judgment": "靠 CLAUDE.md 規範測試紀律不可靠，要把 TDD 寫進指令或 hooks 才擋得住。"
+            "judgment": "靠 CLAUDE.md 規範測試紀律不可靠，要把 TDD 做成指令或 hooks 才擋得住。"
           },
           {
-            "fact": "平行跑 4–5 個 agent 每天推近 90 次 commit，測試瓶頸從「測不測」移到「CI 撐不撐得住」，社群做法是本地合併佇列",
+            "fact": "一位開發者平行跑 4–5 個 agent、每天推近 90 次 commit，CI 被拖垮後改用本地合併佇列逐一測完再合",
             "link": "topics/coding-workflow-guide",
             "linkText": "",
-            "judgment": "規模化平行 agent 前先算 CI 帳單，不是先加測試。"
+            "judgment": "規模化平行 agent 前先算 CI 帳單，瓶頸不在測不測。"
+          },
+          {
+            "fact": "anthropic-sdk-python v1.5.0 為 Managed Agents 加上 auto mode 工具權限設定，是 5 月底以來四筆 SDK 更新中第一次列出具體項目",
+            "link": "entities/managed-agents",
+            "linkText": "",
+            "judgment": "Managed Agents 還在動，但官方文件仍缺細節，選型時別把它當已定型。"
+          },
+          {
+            "fact": "Claude Code v2.1.268 的 apps gateway 新增 pricing 設定，登入版客戶端經 managed settings 取得一致費率",
+            "link": "entities/claude-code",
+            "linkText": "",
+            "judgment": "團隊透過 gateway 用 Claude Code 的人，/cost 顯示的數字終於對得上實際帳單。"
           }
         ]
       },
@@ -41,16 +53,22 @@
         "key": "commercial",
         "items": [
           {
-            "fact": "投資訊號頁拆成兩頁：每日判讀留在原頁，可重複使用的教材（IPO 流程六格、S-1 先看五處、散戶的坑）獨立成新頁",
-            "link": "topics/market-lessons",
-            "linkText": "",
-            "judgment": "想學怎麼讀消息面看教材頁，想知道本週發生什麼看判讀頁，不必再從長頁裡挑。"
-          },
-          {
-            "fact": "判讀頁把「買得到的標的」表升為第一張表，未上市線降為「買不到的消息線」",
+            "fact": "Anthropic 9 月威脅情報報告自揭伊朗、胡塞武裝、俄羅斯駭客、Moonshot 蒸餾四個濫用案例，逾 25 家媒體同日跟進",
             "link": "topics/market-signals",
             "linkText": "",
-            "judgment": "讀者是會買個股的人，先看得到能下手的標的，再看只能當教材的那幾條。"
+            "judgment": "自揭濫用同時替偵測能力背書、也替監管收緊供彈藥，兩面並存，媒體家數只代表聲量不代表方向。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "fact": "研究者在 Show HN 公開 8 種繞過 Claude Code deny-list 權限設定的手法，附可跑的 repo，只有 allow-list 擋得住，官方尚無回應",
+            "link": "topics/ai-agent-safety",
+            "linkText": "",
+            "judgment": "用黑名單設權限的人現在就該改白名單，這不是理論風險。"
           }
         ]
       },
@@ -59,26 +77,38 @@
         "key": "community",
         "items": [
           {
-            "fact": "模式概覽表首次依 60 天線汰除五類（可靠性測試、跨環境 Agent 記憶、確定性 Agent 框架、Agent 記憶保護、跨 Repo 依賴可視化），原始條目仍在",
-            "link": "topics/community-tech-patterns",
-            "linkText": "",
-            "judgment": "表上剩下的七類是現在還在動的做法，不再混著兩個月沒訊號的舊類別。"
-          },
-          {
-            "fact": "新增「LLM 維護的知識庫」主題頁，收本庫自身這類 wiki 的社群實作與訊號",
+            "fact": "Karpathy 4 月提出的三層 LLM wiki 模式，四個多月內長出至少四種路線互異的公開實作，最常被跳過的是「整理」那一步",
             "link": "topics/llm-wiki-pattern",
             "linkText": "",
-            "judgment": "想照這個模式自建知識庫的人，現在有一頁看得到別人踩過什麼。"
+            "judgment": "想自建知識庫的人先決定孤兒頁和矛盾誰來清，不是先挑工具。"
           },
           {
-            "fact": "工具目錄補進 I-have-ADHD（HN 499，鎖 agent 冗語）、effective-html（3,023★，產互動原型）等四款",
+            "fact": "Agents365 的 drawio-skill 把程式碼、Terraform、SQL、OpenAPI 轉成可測試的 draw.io 架構圖，含 drift diff 與 CI 架構測試",
+            "link": "topics/community-tech-patterns",
+            "linkText": "",
+            "judgment": "架構圖能跟著程式碼一起被測，文件過期這件事第一次有機械解。"
+          },
+          {
+            "fact": "同日四款 Claude Code 周邊破 500 星：avibe（本機 Agent OS）、ccteam（跨廠商 agent 整編）、dsh-TUI、better-agent-terminal",
             "link": "topics/community-tech-tools",
             "linkText": "",
-            "judgment": "挑工具前先看決策表對應症狀，星數只代表規模不代表適合你。"
+            "judgment": "多 agent 統一操控是本週最擁擠的賽道，選之前先對症狀查決策表。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "fact": "前 Anthropic 研究員 Jacob Coxon 辭職指控公司拿人命賭自我改進超智能，馬斯克嘲諷像設局；前 DeepMind 安全研究員 Josh Engels 對 NBC 稱「沒有大人在把關」",
+            "link": "entities/jacob-coxon",
+            "linkText": "",
+            "judgment": "一週內多名安全研究員離職並公開警告，質疑個人資歷不等於可以忽略訊號的聚集。"
           }
         ]
       }
     ],
-    "itemCount": 7
+    "itemCount": 10
   }
 }
