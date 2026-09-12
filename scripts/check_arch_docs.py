@@ -25,7 +25,7 @@ check_arch_docs.py — 架構文件漂移機械檢查（取代 /arch-doc-sync �
     全部通過 → exit 0，列印報告
     任一檢查失敗 → exit 1，列印報告與失敗明細
 
-供 scripts/run_tests.py 呼叫，也供 .claude/commands/arch-doc-sync.md 步驟 5/6 呼叫。
+供 scripts/run_tests.py 呼叫，也供 .claude/skills/arch-doc-sync/SKILL.md 步驟 5/6 呼叫。
 """
 from __future__ import annotations
 
