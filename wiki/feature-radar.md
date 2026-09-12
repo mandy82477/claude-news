@@ -21,7 +21,7 @@
 
 ## ⚠️ 從你現在的版本升上去，會遇到什麼
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.261，2026-09-06），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.269，2026-09-12），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code#版本更新]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
@@ -66,6 +66,22 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### `claude plugin eval`：外掛自動化評測
+**發布：** 2026-09-11（v2.1.269） | **熱度：** 🔥🔥🔥 | **試用價值：** ⏳ 觀望 | **狀態：** 正式發布
+
+**是什麼：** 對 plugin 執行 eval 套件，產出可重現的評分結果（JSON＋HTML 報告），並提供 no-plugin baseline 對照組。
+
+**為何熱：** GitHub release 發布次日即獲 MarkTechPost 專文報導，補充 6 種 grader 類型與「CI gate for skills」用法；官方文件索引同步新增 `plugin-evals.md` 專頁。
+
+**現在要試嗎：** 適合正在維護／發布 plugin 的開發者，可用來在 CI 建立品質門檻；一般使用者無需操作。
+
+**快速上手：**
+```
+claude plugin eval --help
+```
+
+**注意事項：** 發布僅一天，尚無社群實測回報；grader 類型與 CI 整合細節見官方文件（[plugin-evals.md](https://code.claude.com/docs/en/plugin-evals.md)）。
 
 ### Smart Reports（Beta）
 **發布：** 2026-09-10（Claude Help Center release notes） | **狀態：** Beta
@@ -157,6 +173,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Smart Reports**（Beta，團隊用量分析報表：使用狀況、完成工作與成本） | 2026-09-10 | 🔥 | ⏳ 觀望 | Beta |
 | **maxEffortLevel 推理努力上限設定**（v2.1.267，跨供應商統一設定 effort 上限，含 Bedrock/Vertex/Foundry） | 2026-09-09 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **managedMcpServers 管理設定**（v2.1.259，組織可統一佈署 HTTP/SSE MCP 伺服器） | 2026-09-02 | 🔥🔥 | ⏳ 觀望 | 正式發布 |

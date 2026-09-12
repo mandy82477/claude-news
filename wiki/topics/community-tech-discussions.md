@@ -28,10 +28,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-09
+**最後新聞更新：** 2026-09-12
 
-> **最熱討論**（2026-09-09）
-> - **「回頭手寫」**（HN 48 分）：作者放棄用 Claude 開發新版 app、改回手寫，對照職場全面依賴 LLM 寫程式的現況。
+> **最熱討論**（2026-09-12）
+> - **Boris Cherny 親自回信「AI slop」質疑**：開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆，登上 Business Insider、Simon Willison 引述。
 
 ---
 
@@ -112,6 +112,7 @@ Claude Code 創始人的設計哲學已形成獨立討論主線：
 - **「coding is solved」**（2026-05-08）：「我從未手寫一行程式」引發社群兩極化辯論，術語從 vibe coding 演化為 spec-driven development。
 - **Loop Engineering 完整文章**（2026-06-20）：PR review、測試、push 如何抽象為 loop 的完整拆解，代表社群對此哲學的持續深入消化。
 - **立場收縮**（2026-06-24）：Boris Cherny 公開承認 AI 全量代碼在企業場景引發問題，首度為「coding is solved」論述設下邊界（Times of India 單一報導，本頁此後未再收到社群延燒；他本人 2026-07-27、08-03 另有兩則發言，言論軌跡見 [[entities/boris-cherny]]）。
+- **親自回信「AI slop」質疑**（2026-09-12）：開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆，登上 Business Insider；回信內容見 [[entities/boris-cherny]]，社群反應見下方「最近在討論什麼」。
 
 ### MCP 成本結構
 
@@ -147,6 +148,9 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者 | 2026-09-12 · 2026-09-12 | 🔥🔥 | ☄️閃現 | 開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述（詳見細節） | — |
+| HN 討論「AI 解數學難題也可能助長濫用」：留言呈現風險當真與質疑聳動兩極 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | WSJ 報導 AI 解數學難題與濫用風險；HN 留言兩極：一稱已居家合成病毒結構，一批報導標題聳動（詳見細節） | — |
+| 開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt，工作流程已重構三次 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | 開發者分享兩年用 agent 經驗，工作流程重構三次；「垂直切片」vs「整包功能」提示結構尚無共識（詳見細節） | — |
 | 作者放棄用 Claude 開發新版 app、改回手寫，對照職場全面依賴 LLM 寫程式的現況 | 2026-09-09 · 2026-09-09 | 🔥🔥 | ☄️閃現 | 作者有一款自建、擁有穩定用戶群的成功 app，過去約六個月斷續用 Claude 開發新版本後決定放棄、改回手寫；同時提及自己工作場所全面依賴 LLM 寫程式；HN score 48 | — |
 | Reddit r/ClaudeCode：反駁額度抱怨聲浪，資深後端工程師稱半年僅遇限額約一次 | 2026-09-06 · 2026-09-06 | 🔥 | ☄️閃現 | 針對本週一片抱怨用量限制的貼文，作者稱自己資深後端、用 Claude Code 半年很少碰到上限，主張問題出在工作流而非額度；無「週熱門」標記，score 不可信 | — |
 | Simon Willison：OpenAI 面向開發者發布 GPT-6 Astra | 2026-09-05 · 2026-09-05 | 🔥 | ☄️閃現 | Simon Willison 部落格記錄 OpenAI 面向開發者發布 GPT-6 Astra；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/)（Blog） | — |
@@ -203,6 +207,9 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者**：開發者質疑 AI slop，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述；回信內容見 [[entities/boris-cherny]]；[原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxQdl9CNzFpU1IyZjY1T2hTbFpCZUJpbFFzRVlIeFJxdFJRQVlYVkhmaEpfUDNvOGhXbkl3VFpoaGU1Q3FJaWdBTnBlSjVULUlqU0NwMGZZVDVkdmJsSVlKajVKbDVjR3VxUnpuaW14WHpCd1Nsb2ZxQnJkXzRzV2szWDNTWjdkdw?oc=5)（Business Insider）
+- **HN 討論「AI 解數學難題也可能助長濫用」**：WSJ 報導伴隨濫用風險討論；HN 留言兩極，一稱已居家合成病毒結構，一批報導標題聳動；[原文](https://www.wsj.com/tech/ai/ai-math-millennium-prize-safety-openai-anthropic-05179825)（HN）
+- **開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt**：開發者分享兩年來使用 LLM coding agent 的經驗，工作流程已歷經三次重構，就「垂直切片」（vertical slices）或「整包功能」（whole-feature）提示結構討論意見不一，尚無定論；[原文](https://www.reddit.com/r/ClaudeCode/comments/1wecard/vertical_slices_vs_wholefeature_prompts_how_do/)（Reddit）
 - **使用者付費帳號無預警遭停權（後已恢復），引發社群對帳號執法透明度的討論**：使用者部落格文章記述自己付費帳號無預警因「suspicious signals」遭停權，事後已恢復，過程中缺乏清楚的申訴管道與說明；HN score 39；與本頁「🌊 持續關注中的長期議題」「Anthropic 透明度與信任赤字」既有 2026-06-23「帳號封禁無申訴管道」軸線同屬一條「帳號執法不透明」議題，本則是該軸線最新獨立訊號；本頁僅記錄社群對帳號執法透明度的反應角度，政策面（管制依據、申訴機制設計）不在此展開；[原文](https://kix.codes/anthropic-banned-me-for-suspicious-signals/)（HN）
 - **HN 討論質疑 AISLE「curl 六個 CVE、OpenAI 與 Anthropic 掃出零個」資安行銷手法**：資安新創 AISLE 部落格宣稱其自動化工具找出 curl 專案 6 個 CVE，同時暗示 OpenAI 與 Anthropic 的自動化找漏洞工具在同一目標上零命中；HN score 31，留言區普遍質疑這是刻意設計的競爭性資安行銷敘事而非嚴謹能力對比（如未說明測試方法論、樣本範圍是否公平）；本頁僅記錄社群對此類「拿 Claude/Anthropic 當對照組」資安行銷手法的信任度質疑，技術細節不在此展開；[原文](https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero)（HN）
 - **Claude Code 意外遺失印度 Mythic Society 多年累積的班加羅爾文化遺產紀錄工作，HN 討論聚焦自主 agent 損害究責與備份習慣**：Deccan Herald 報導，印度文化機構 Mythic Society 使用 Claude Code 過程中，多年累積的班加羅爾文化遺產紀錄工作意外遺失，該機構現正投入資金強化備份系統；HN score 17，討論聚焦於自主 agent 造成不可逆損害時的究責歸屬（該由使用者的備份習慣還是工具的預設安全邊界負責），與 [[topics/community-tech-patterns]] 2026-08-30「一句話觸發遞迴刪檔」節點同屬「模糊指示或自主行動觸發破壞性結果」議題軸線，本則是該軸線首個造成真實文化資產損失、非虛構個人專案的具名機構案例；[原文](https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958)（HN）
@@ -254,6 +261,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者（2026-09-12）
+
+- **來源：** 一名開發者的公開質疑信與 Boris Cherny 回覆（Business Insider 報導，Simon Willison 引述）
+- **核心論點：** 開發者質疑「AI 產出程式碼品質下滑」（AI slop），Claude Code 創造者 Boris Cherny 親自回覆；本頁僅記錄社群情緒與工作流信任反應，回信具體內容見 [[entities/boris-cherny]]
+- **關鍵回響：**
+  - 📝 跨媒體：Business Insider 報導事件經過，Simon Willison 部落格引述
+- **收斂結論：**（無）事件當日剛發生，尚無社群後續反應資料
 
 #### 「回頭手寫」：作者放棄用 Claude 開發新版 app，對照職場全面依賴 LLM 寫程式的現況（2026-09-09）
 
