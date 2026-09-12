@@ -71,6 +71,9 @@ DERIVED_PAGES = {
     "topics/engineering-skill-playbook":
         ".claude/reporter-rules/wiki-ingest-features.md「工程流程 Skill 指南維護」"
         "（週更，讀官方 skills repo 清冊，非新聞條目；每日 ingest 不更新）",
+    "topics/market-lessons":
+        ".claude/reporter-rules/wiki-ingest-market-lint.md「教材頁週更」"
+        "（週更，吃 market-signals 的判讀與結算表，非新聞條目；每日 ingest 不更新）",
     "topics/skill-interest-watch":
         ".claude/reporter-rules/wiki-ingest-community-lint.md「skill-interest-watch：機器快照頁」"
         "（每日由 scripts/skill_interest_snapshot.py 覆寫，吃 GitHub Search 非新聞條目；"

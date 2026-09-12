@@ -324,7 +324,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ### 5h. 投資訊號回顧環（主編親查）`[加入: 2026-09-05]`
 
-`wiki/topics/market-signals.md` 的判讀是**預測性宣稱**，本步是它唯一的結算端：對 `## 回顧結算` 表中「兩週後」為 ⏳ 且判讀日距今 ≥ 14 天的列，結兩件事——**催化劑在結算日前出現了沒**（查本庫日報，`scripts/news_mentions.py`，每列都做）與**上市標的的兩週粗方向**（↑／↓／～，只做帶代號的列），回填「兩週後」與「對錯」，並把定案結果對回 `## 一課一課學` 的「押對了嗎」欄。記者無 web 工具，查不了股價，這是本步不派工的唯一理由。
+`wiki/topics/market-signals.md` 的判讀是**預測性宣稱**，本步是它唯一的結算端：對 `## 回顧結算` 表中「兩週後」為 ⏳ 且判讀日距今 ≥ 14 天的列，結兩件事——**催化劑在結算日前出現了沒**（查本庫日報，`scripts/news_mentions.py`，每列都做）與**上市標的的兩週粗方向**（↑／↓／～，只做帶代號的列），回填「兩週後」與「對錯」；接著把本週判讀沉澱進週更教材頁 `wiki/topics/market-lessons.md`（消息線表、課程表含「押對了嗎」、IPO 背景段順檢）。記者無 web 工具，查不了股價，這是本步不派工的唯一理由。
 
 **⚠️ 雲端兩半都做** `[改版: 2026-09-12]`：催化劑那一半純查本庫日報；股價那一半用 **WebSearch**（見 `.claude/reporter-rules/wiki-ingest-market-lint.md` 執行步驟第 3 步），而 WebSearch 由 Anthropic 端執行、不經沙盒 egress，**因此本步不受雲端網路白名單影響、不需探測**（`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空，恆印 `EGRESS: market OK`）。唯一例外是該環境根本沒有 WebSearch 工具可用——此時才寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」並列入待使用者確認區；日後若本步改用 WebFetch 直抓行情站，須同步把那些網域填進 market 組並改回探測式。
 

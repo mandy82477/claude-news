@@ -6258,3 +6258,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **根因：** 09-03 校準時該類只留 `documentation (agent OR skill) claude in:description` 一條查詢，設定檔 `why` 記著「llm-wiki 專有詞 0 命中」。與 SKILL.md 存量盤點同病：Karpathy 式 LLM wiki 的 repo 描述寫「Karpathy」「LLM wiki」不寫 claude，綁 claude 的查詢結構上撈不到。09-12 `--probe` 實測 `"llm wiki" in:name,description` 30 筆、`karpathy wiki in:name,description` 30 筆全切題（claude-obsidian 14.8k、llm-wiki-agent 3.5k、karpathy-llm-wiki 2.2k、llm-wiki-compiler 2k、llmwiki 1.6k），09-03 的「0 命中」結論已過時。
 
 **處置：** (a) `data/skill_interest_watch.json` 該類加上述兩條查詢（排前），原查詢保留，`why` 改記 09-12 校準；(b) 主編 web 查證六個一手來源（Karpathy 原始模式、Fulkerson 生產版、Ghelbur 重建版、Liu 六個月實錄、CodeAlmanac、wuphf）的設計對照，結論「骨架本庫全有且多數更嚴，真正缺的是 query 作為第一級動作」——待使用者裁決是否沉澱為 `topics/llm-wiki-pattern` 主題頁與 `/wiki-query` skill；(c) 同日根目錄 CLAUDE.md 新增「這是一個 LLM wiki：三個動作」一節。歸因 slug `user-query`。
+
+## 2026-09-12 Query：投資訊號頁拆成每日判讀頁＋週更教材頁（使用者裁決）
+
+**點出什麼：** 使用者說「近期判讀放前面，其他的要放別頁，因為算是沉澱過的消息，比較適合週更」。同日三輪讀者 review 也反映：三張結論表壓在判讀之前，「押對了嗎」整欄 ⏳、圖例離判讀 50 行，每日更新的東西被沉澱層擋住。
+
+**根因：** 一頁同時回答兩群不同節奏的問題——每日（這則怎麼判、有沒有能買的、催化劑登記、結算加列）與每週（課程表押對了嗎、教材線走到哪、IPO 背景）。依 `.claude/reporter-rules/wiki-ingest-format.md`「頁面拆分原則」，題分成不同時序的兩群即拆。
+
+**處置：** 新建 `wiki/topics/market-lessons.md`（投資判讀教材，週更）收 IPO 背景段、買不到的消息線表、一課一課學課程表；`market-signals.md` 留摘要、買得到的標的（每日，判讀涉及上市公司時同步）、近期判讀、回顧結算、里程碑。兩頁以 wikilink 互連，不做母子頁（母頁契約規定母頁每日唯讀，與每日判讀流衝突；課程表是判讀的衍生，衍生關係用連結）。觸發邊：`.claude/reporter-rules/wiki-ingest-market-lint.md`「教材頁週更」（`/wiki-lint` 5h 結算後沉澱），`scripts/check_wiki_freshness.py` DERIVED_PAGES 登記；記者規則改「結論表的歸屬：每日一張、每週兩張」，角色檔標教材頁唯讀；index 加一列。同日先前裁決：讀者定位「會買個股的工程師」、蒐集邊界不擴大（專注 Claude／Anthropic）、安全線只留官方一手那則。三輪 review 產物：`docs/page-audits/wave9-{novice-reader,stock-reader-recheck,stock-reader-round3}-2026-09-12.md`。
