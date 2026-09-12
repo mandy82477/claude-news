@@ -191,6 +191,8 @@ class TestSearchIndexIncludesBody(unittest.TestCase):
             "WIKI_TOPICS": self.root / "wiki" / "topics",
             "WIKI_RADAR": self.root / "wiki" / "feature-radar.md",
             "NEWS_DIR": self.root / "news",
+            "DAILY_DIR": self.root / "daily",
+            "WEEKLY_DIR": self.root / "weekly",
             "OUT_JS": self.root / "web_reader" / "data" / "data.js",
             "OUT_WIKI_DIR": self.root / "web_reader" / "data" / "wiki",
             "OUT_DIGEST_DIR": self.root / "web_reader" / "data" / "digest",

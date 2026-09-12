@@ -80,6 +80,8 @@
       "^\\.claude/reporter-rules/wiki-ingest-\\[.+\\]\\.md$",
       "^news/YYYY-MM-DD\\.md$",
       "^news/TARGET_DATE\\.md$",
+      "^daily/TARGET_DATE\\.md$",
+      "^daily/YYYY-MM-DD\\.md$",
       "^news/YESTERDAY\\.md$",
       "^wiki/YYYY-MM-DD\\.md$",
       "^gathered_items\\.json$",
@@ -1407,6 +1409,46 @@
         "\"market\":"
       ],
       "_note": "2026-09-12 加入。摘要行是 f-string，literal 『EGRESS: official OK』不會出現在程式碼裡，故規格端釘實際字串、消費端釘 f-string 骨架與四個組名鍵。"
+    },
+    {
+      "name": "讀者版日報六領域節名（規格端 <-> 解析端 <-> 渲染端）：節名改了而 build_web / app.js 沒跟，該領域整段在網站上靜默消失（同 2026-08-14 區塊 emoji 的死法）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/commands/news-pipeline-steps.md",
+        "scripts/build_web.py",
+        "scripts/check_reader_digest.py",
+        "web_reader/assets/app.js"
+      ],
+      "patterns": [
+        "🛠️ 功能|READER_DOMAIN_SECTIONS|DOMAIN_LABELS|readerDigestHtml"
+      ],
+      "_note": "2026-09-12 加入（日報改版「乙」）。alternation 四支各對應一端：規格端釘節名原形（Step 2b 機械契約字串表），build_web 釘節名表常數名，check_reader_digest 釘它的節名白名單常數名，app.js 釘渲染函式名。六個節名的逐字內容由 check_reader_digest.py 每日在 Step 2b 驗，這裡看守的是「四端都還認得同一件事」。"
+    },
+    {
+      "name": "讀者版日報標題與無新知行（規格端 <-> build_web 解析器）：`# YYYY-MM-DD 今天 wiki 學到什麼` 與 `> 今日 wiki 無新知（YYYY-MM-DD）` 兩行的形狀是規格與程式的共同契約",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/commands/news-pipeline-steps.md",
+        "scripts/build_web.py"
+      ],
+      "patterns": [
+        "# YYYY-MM-DD 今天 wiki 學到什麼|READER_TITLE_RE",
+        "今日 wiki 無新知|READER_NO_NEWS_RE"
+      ],
+      "_note": "2026-09-12 加入。無新知行改壞的後果比標題行嚴重：空日會被當成「有內容但解不出來」，網站出空頁。"
+    },
+    {
+      "name": "讀者版日報條目三段式（規格端 <-> 解析端 <-> 格式閘）：`- 事實 → [[頁名]] → 判斷` 的全形箭頭分隔符，三端都得認得",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/commands/news-pipeline-steps.md",
+        "scripts/build_web.py",
+        "scripts/check_reader_digest.py"
+      ],
+      "patterns": [
+        "READER_ITEM_SEP|ITEM_SEP|一句新事實 → \\[\\[頁名\\]\\] → 改變了什麼判斷"
+      ],
+      "_note": "2026-09-12 加入。分隔符改了而解析端沒跟，每一條都會被判成「不是三段式」而丟掉——寫了等於沒寫。"
     }
   ],
   "coupling_hints": {

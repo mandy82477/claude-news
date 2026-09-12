@@ -300,6 +300,41 @@
 </div>`;
   }
 
+  // ── 讀者版日報（daily/*.md → digest JSON 的 reader 欄）────────────────
+  // 2026-09-12 改版「乙」：日報回答「今天 wiki 學到什麼」，按 wiki 六領域分節，
+  // 每條三段：一句新事實 → 頁面按鈕 → 改變了什麼判斷。沒有 reader 欄的日期（改版日之前）
+  // 退回舊的新聞式渲染，歷史頁不改行為。
+  function readerDigestHtml(r) {
+    const parts = [];
+    if (r.summary) {
+      parts.push(`<div class="reader-lede">${esc(r.summary)}</div>`);
+    }
+    if (r.noNews || !(r.sections || []).length) {
+      parts.push(`<div class="reader-empty">今日知識庫無新知。沒有新事實改變任何判斷，不拿舊料充數。</div>`);
+      return parts.join('\n');
+    }
+    r.sections.forEach(sec => {
+      // 節名是「emoji + 空格 + 中文」——只把中文拉開字距，emoji 整串原樣保留。
+      // 不可對整串跑 split('')：那會拆開代理對與變異選擇子，🛠️ 會裂成兩個方塊。
+      const sp = String(sec.label || '').indexOf(' ');
+      const icon = sp > 0 ? sec.label.slice(0, sp) : '';
+      const word = sp > 0 ? sec.label.slice(sp + 1) : String(sec.label || '');
+      const spaced = word.split('').join(' ');
+      parts.push(`<div class="section section--reader">
+<div class="section__h"><span class="section__h-icon">${esc(icon)}</span><span class="section__h-label">${esc(spaced)}</span><span class="section__h-count">${sec.items.length} items</span></div>`);
+      sec.items.forEach(it => {
+        const link = it.link ? wikilinkButtonHtml(it.link) : '';
+        parts.push(`<div class="reader-item">
+  <div class="reader-item__fact">${esc(it.fact)}</div>
+  ${link ? `<div class="reader-item__page">${link}</div>` : ''}
+  ${it.judgment ? `<div class="reader-item__judgment">${esc(it.judgment)}</div>` : ''}
+</div>`);
+      });
+      parts.push('</div>');
+    });
+    return parts.join('\n');
+  }
+
   // ── Render digest ────────────────────────────────────────────────────────────
   function renderDigest(d, container) {
     if (!d) { container.innerHTML = '<div style="padding:40px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:12px">No digest data.</div>'; return; }
@@ -317,8 +352,10 @@
     const freshHtml = !isLatest ? '' :
       _ageDays === 0 ? '<span class="pulse-dot">fresh</span>' :
       `<span class="digest-age">${_ageDays === 1 ? '1 day ago' : _ageDays + ' days ago'}</span>`;
+    const r = d.reader || null;
     const metaTopItems = [
-      `<span><b>${d.articleCount}</b> articles</span>`,
+      r ? `<span><b>${r.itemCount || 0}</b> updates</span>`
+        : `<span><b>${d.articleCount}</b> articles</span>`,
       freshHtml,
     ].filter(Boolean);
     const metaBottomItems = [
@@ -333,7 +370,7 @@
     <div class="day-badge__m">${esc(dp.m)} · ${esc(dp.dow)}</div>
   </div>
   <div class="feed__meta">
-    <h1>每日新聞摘要 · Claude Code &amp; Anthropic</h1>
+    <h1>${r ? '今天 wiki 學到什麼 · Claude Code &amp; Anthropic' : '每日新聞摘要 · Claude Code &amp; Anthropic'}</h1>
     <div class="feed__metarow">
       ${metaTopItems.join('<span class="sep">·</span>')}
     </div>
@@ -342,6 +379,16 @@
     </div>
   </div>
 </div>`);
+
+    // 讀者版日期：整頁改渲染「今天 wiki 學到什麼」，不再渲染新聞條目。
+    // 原料欄位（sourceStatus / articleCount）仍在 JSON 裡，供 lint 來源健康檢查與
+    // pipeline-change-check 量測使用，但不是讀者版的內容。
+    if (r) {
+      parts.push(readerDigestHtml(r));
+      parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
+      container.innerHTML = parts.join('\n');
+      return;
+    }
 
     // bulletin — one-line skip signal above focus
     if (d.bulletin) {
@@ -674,7 +721,7 @@
         parts.push(`<a href="#${esc(d.date)}" class="arch__row" onclick="event.preventDefault();openDigestPage('${esc(d.date)}')">
   <div class="${dateCls}">${esc(d.date.slice(5))}<span class="dow">${esc(dow)}</span></div>
   <div class="arch__row__focus">${esc(d.preview)}</div>
-  <div class="arch__row__count">${d.articleCount}<span class="unit">items</span></div>
+  <div class="arch__row__count">${d.kind === 'reader' ? (d.itemCount || 0) : (d.articleCount || 0)}<span class="unit">${d.kind === 'reader' ? 'updates' : 'items'}</span></div>
 </a>`);
       });
       parts.push(`</div>

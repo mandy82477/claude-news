@@ -22,6 +22,8 @@ WIKI_TOPICS   = ROOT / "wiki" / "topics"
 WIKI_RADAR    = ROOT / "wiki" / "feature-radar.md"
 READER_TAGS   = ROOT / "data" / "reader-tags.json"
 NEWS_DIR      = ROOT / "news"
+# daily/ = 讀者版日報（2026-09-12 改版「乙」）。news/ 降為原料層，照產照存但不再上站。
+DAILY_DIR     = ROOT / "daily"
 WEEKLY_DIR    = ROOT / "weekly"
 OUT_JS           = ROOT / "web_reader" / "data" / "data.js"
 OUT_WIKI_DIR     = ROOT / "web_reader" / "data" / "wiki"
@@ -305,6 +307,15 @@ def _headings_of(target: str) -> set[str] | None:
     return {re.sub(r'\*{1,3}([^*]+)\*{1,3}', r'\1', h).strip() for h in HEADING_RE.findall(raw)}
 
 
+def _rel(f: Path) -> str:
+    """WARN 訊息用的相對路徑。測試會把 ROOT 換成 tmp 目錄而 WEEKLY_DIR／DAILY_DIR
+    仍指真實目錄，此時 relative_to 會拋——一支只負責印 WARN 的路徑不該弄死建置。"""
+    try:
+        return str(f.relative_to(ROOT))
+    except ValueError:
+        return str(f)
+
+
 def check_wikilink_anchors(all_md_files: list[Path]) -> int:
     """[[頁面#錨點]] 的錨點必須真的是目標頁的 h2–h4 標題，否則讀者點過去只會落在頁首。
     純頁面斷鏈由 check_wikilinks 負責，本函式只管錨點；同樣不中斷建置。
@@ -325,7 +336,7 @@ def check_wikilink_anchors(all_md_files: list[Path]) -> int:
                     continue  # 頁面本身斷鏈 → 交給 check_wikilinks 報
                 if anchor not in headings:
                     warns += 1
-                    print(f"WARN: {f.relative_to(ROOT)} 的 [[{target}#{anchor}]] 錨點不存在於該頁標題")
+                    print(f"WARN: {_rel(f)} 的 [[{target}#{anchor}]] 錨點不存在於該頁標題")
     return warns
 
 
@@ -337,7 +348,9 @@ def check_wikilinks(all_md_files: list[Path]) -> int:
     entity_slugs = {f.stem for f in WIKI_ENTITIES.glob("*.md")}
     topic_slugs  = {f.stem for f in WIKI_TOPICS.glob("*.md")}
     root_slugs   = {f.stem for f in WIKI_DIR.glob("*.md")}  # feature-radar, feature-radar-archive-*, index, overview
-    news_dates   = {f.stem for f in NEWS_DIR.glob("*.md")}
+    # daily/ 的日期也算合法 news/ target：讀者版存在而原料缺席時（例如手寫樣本）
+    # `[[news/YYYY-MM-DD]]` 在網站上仍解析到該日日報頁，不該報斷鏈。
+    news_dates   = {f.stem for f in NEWS_DIR.glob("*.md")} | {f.stem for f in DAILY_DIR.glob("*.md")}
 
     valid_targets = set(root_slugs)
     valid_targets |= entity_slugs | {f"entities/{s}" for s in entity_slugs}
@@ -358,7 +371,7 @@ def check_wikilinks(all_md_files: list[Path]) -> int:
             if target in headings:
                 continue  # in-page section self-reference (e.g. [[已知問題]])
             warns += 1
-            print(f"WARN: {f.relative_to(ROOT)} 含斷鏈 wikilink [[{target}]]")
+            print(f"WARN: {_rel(f)} 含斷鏈 wikilink [[{target}]]")
     return warns
 
 
@@ -1132,6 +1145,127 @@ def parse_digest(f: Path) -> dict:
     return result
 
 
+# ── 讀者版日報（daily/YYYY-MM-DD.md）──────────────────────────
+# 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，進料是當日 ingest
+# 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）但不再上站。
+# 規格端住 `.claude/commands/news-pipeline-steps.md` 的 `Step 2b：讀者版日報`，
+# 其「機械契約字串」表與本段互相指認並登記 .claude/review-registry.json 的 sync_pairs——
+# 節名或標記行改了而這裡沒跟，該領域整段靈默消失（同 2026-08-14 區塊 emoji 的死法）。
+
+READER_TITLE_RE = re.compile(r"^#\s+(\d{4}-\d{2}-\d{2})\s+今天 wiki 學到什麼\s*$", re.MULTILINE)
+# 無新知行：`> 今日 wiki 無新知（YYYY-MM-DD）`——wiki 當日零實質改動時的唯一內容
+READER_NO_NEWS_RE = re.compile(r"^>\s*今日 wiki 無新知（(\d{4}-\d{2}-\d{2})）\s*$", re.MULTILINE)
+# 六個領域節名——順序即版面順序；emoji 與 wiki 標頭「領域」欄同源。
+# 沒有內容的領域整節省略（規格），解析端也不留空殼。
+READER_DOMAIN_SECTIONS = [
+    ("🛠️ 功能",      "features"),
+    ("🤖 模型",      "models"),
+    ("💼 商業",      "commercial"),
+    ("🏛️ 安全政策",  "safetyPolicy"),
+    ("🌐 社群",      "community"),
+    ("👤 人物",      "people"),
+]
+READER_H2_RE = re.compile(r"^##\s+(.+?)\s*$")
+# 每條三段式：`- 一句新事實 → [[entities/claude-code]] → 改變了什麼判斷`
+# 分隔符是全形箭頭；恰好三段才收，少一段代表「改變了什麼判斷」沒寫——那正是過濾。
+READER_ITEM_SEP = "→"
+READER_WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
+
+
+def parse_reader_digest(f: Path) -> dict:
+    """daily/YYYY-MM-DD.md → 讀者版 payload（掛進該日 digest JSON 的 `reader` 欄）。"""
+    raw = read_md(f)
+    date_str = f.stem
+    result: dict = {"date": date_str, "summary": "", "noNews": False,
+                    "sections": [], "itemCount": 0}
+
+    m = READER_NO_NEWS_RE.search(raw)
+    if m:
+        result["noNews"] = True
+        result["summary"] = f"今日 wiki 無新知（{m.group(1)}）"
+        return result
+
+    by_label = dict(READER_DOMAIN_SECTIONS)
+    current: dict | None = None
+    for line in raw.splitlines():
+        h = READER_H2_RE.match(line)
+        if h:
+            label = h.group(1).strip()
+            key = by_label.get(label)
+            if key:
+                current = {"label": label, "key": key, "items": []}
+                result["sections"].append(current)
+            else:
+                current = None  # 不認得的節名：其下條目不收，不靈默走進前一節
+            continue
+        stripped = line.strip()
+        if not stripped:
+            continue
+        # 總結句：標題下、第一個領域節之前的首行 `>` 引述
+        if current is None and stripped.startswith(">"):
+            if not result["summary"]:
+                result["summary"] = stripped.lstrip(">").strip()
+            continue
+        if current is None or not stripped.startswith("-"):
+            continue
+        parts = [seg.strip() for seg in stripped[1:].split(READER_ITEM_SEP)]
+        if len(parts) != 3 or not all(parts):
+            continue
+        fact, link_raw, judgment = parts
+        lm = READER_WIKILINK_RE.search(link_raw)
+        current["items"].append({
+            "fact": fact,
+            "link": lm.group(1).strip() if lm else "",
+            "linkText": READER_WIKILINK_RE.sub("", link_raw).strip(),
+            "judgment": judgment,
+        })
+
+    result["sections"] = [sec for sec in result["sections"] if sec["items"]]
+    result["itemCount"] = sum(len(sec["items"]) for sec in result["sections"])
+    return result
+
+
+def collect_reader_digests(daily_dir: Path) -> dict:
+    out: dict = {}
+    for f in sorted(daily_dir.glob("*.md")):
+        try:
+            out[f.stem] = parse_reader_digest(f)
+        except Exception as e:
+            print(f"  [warn] reader digest {f.name}: {e}")
+    return out
+
+
+def empty_digest(date_str: str) -> dict:
+    """讀者版存在但當日原料缺席時的底座（例：手寫樣本、原料已過期）。"""
+    return {"date": date_str, "generatedAt": "", "articleCount": 0, "sourceCount": "",
+            "bulletin": "", "topStories": [], "techUpdates": [], "mediaReports": [],
+            "discussions": [], "billing": [], "focus": [], "topicRadar": [],
+            "sourceStatus": [], "preview": ""}
+
+
+def attach_reader_digests(digest_all: dict, reader_all: dict) -> None:
+    """有讀者版的日期：digest JSON 掛上 `reader`，前端改渲染讀者版。
+    沒有的日期（改版日之前）一字不動，歷史頁照舊的 news/ 解析結果渲染。
+    原料欄位（sourceStatus / articleCount）在兩種日期上都保留——它們是 lint 6e
+    來源健康檢查與 pipeline-change-check 的量測面板，不是讀者看得到的內容。"""
+    for date_str, r in reader_all.items():
+        d = digest_all.get(date_str)
+        if d is None:
+            d = empty_digest(date_str)
+            digest_all[date_str] = d
+        d["reader"] = r
+        if r["summary"]:
+            d["preview"] = r["summary"][:160]
+
+
+def reader_search_text(r: dict) -> str:
+    segs = [r.get("summary", "")]
+    for sec in r.get("sections", []):
+        for it in sec["items"]:
+            segs.append(f"{it['fact']}；{it['judgment']}")
+    return "；".join(x for x in segs if x)
+
+
 # ── Build ─────────────────────────────────────────────────────────────────────
 
 def build():
@@ -1140,8 +1274,10 @@ def build():
     # 錨點檢查另外補掃 weekly/——`[[頁#錨點]]` 也會出現在週報裡（2026-09-05 model-comparison
     # 健檢 §8.2 實測：weekly/ 內錨點連結 1 個，先前完全沒被掃到）。不可併入 all_wiki_md 本身，
     # 否則 check_wikilinks() 會對 weekly/ 裡的 news/ 連結誤報斷鏈。
-    anchor_scan = all_wiki_md + sorted(WEEKLY_DIR.glob("*.md"))
-    _broken = check_wikilinks(all_wiki_md)
+    # daily/ 讀者版也掃：它的每一條都以 [[頁名]] 指向當日被改的 wiki 頁，指錯就是斷鏈。
+    daily_md = sorted(DAILY_DIR.glob("*.md"))
+    anchor_scan = all_wiki_md + sorted(WEEKLY_DIR.glob("*.md")) + daily_md
+    _broken = check_wikilinks(all_wiki_md + daily_md)
     _anchor = check_wikilink_anchors(anchor_scan)
     print(f"wikilink 健檢合計：斷鏈 WARN {_broken}／錨點 WARN {_anchor}（此行供 lint 心跳抄錄——WARN 要有消費端）")
 
@@ -1177,25 +1313,40 @@ def build():
         sys.exit(1)
 
     digest_all: dict = {}
-    digest_index: list = []
     for f in sorted(NEWS_DIR.glob("*.md"), reverse=True):
         try:
             d = parse_digest(f)
             digest_all[d["date"]] = d
-            digest_index.append({
-                "date": d["date"],
-                "articleCount": d["articleCount"],
-                "preview": d["preview"],
-                "topCount": len(d["topStories"]),
-            })
         except Exception as e:
             print(f"  [warn] digest {f.name}: {e}")
 
     # ── 已沉澱徽章／今日 wiki 動態（用既有 lastNewsUpdate 欄位比對，不新增管線）──
     attach_sedimented_badges(digest_all, entities, topics)
 
+    # ── 讀者版日報：有 daily/<date>.md 的日期，網站日報頁改渲染讀者版 ──────
+    reader_all = collect_reader_digests(DAILY_DIR)
+    attach_reader_digests(digest_all, reader_all)
+
     # ── 投資訊號：最新判讀日期對得上的那天，日報頁末尾加一則 💰 條目 ──────────
-    attach_market_signal(digest_all, parse_market_signal(MARKET_SIGNALS_PAGE))
+    # 讀者版的日期不注入：市場記者的判讀本就是當日 wiki diff 的一部分，
+    # 由讀者版自己寫在 💼 商業節末一條——注入與自寫擇一，不要雙份。
+    _signal = parse_market_signal(MARKET_SIGNALS_PAGE)
+    if _signal and _signal["date"] in reader_all:
+        _signal = None
+    attach_market_signal(digest_all, _signal)
+
+    digest_index: list = []
+    for date_str in sorted(digest_all.keys(), reverse=True):
+        d = digest_all[date_str]
+        r = d.get("reader")
+        digest_index.append({
+            "date": date_str,
+            "kind": "reader" if r else "news",
+            "articleCount": d["articleCount"],
+            "itemCount": r["itemCount"] if r else 0,
+            "preview": d["preview"],
+            "topCount": len(d["topStories"]),
+        })
 
     # ── Parse weekly reports (weekly/YYYY-Wnn.md) ─────────────────────────────
     weekly_all, weekly_index = collect_weekly(WEEKLY_DIR)
@@ -1464,6 +1615,17 @@ def build():
     # Digests: index 今日聚焦 text + all story titles + story bodies —
     # body 補入前索引只到標題層，關鍵字若只出現在條目內文（未出現在標題）就搜不到。
     for date_str, d in digest_all.items():
+        # 讀者版的日期：索引讀者版內容，不索引原料（news/ 不再上站）。
+        if d.get("reader"):
+            r = d["reader"]
+            search_index.append({
+                "id":      date_str,
+                "type":    "digest",
+                "name":    f"日報 {date_str}",
+                "summary": (r.get("summary") or "")[:90],
+                "text":    reader_search_text(r),
+            })
+            continue
         focus_txt = "；".join(f["text"] for f in d.get("focus", []))
         titles = "；".join(
             s["title"]
@@ -1494,6 +1656,7 @@ def build():
     with OUT_SEARCH_INDEX.open("w", encoding="utf-8") as fp:
         json.dump(search_index, fp, ensure_ascii=False, separators=(",", ":"))
 
+    print(f"    -> 讀者版日報 {len(reader_all)} 份（daily/），其餘 {len(digest_all) - len(reader_all)} 日退回 news/ 解析")
     print(f"OK: {len(entities)} entities, {len(topics)} topics, {len(digest_all)} digests, "
           f"{len(weekly_all)} weekly reports" + (" + radar" if radar else ""))
     print(f"    -> {OUT_JS} ({OUT_JS.stat().st_size//1024} KB)")

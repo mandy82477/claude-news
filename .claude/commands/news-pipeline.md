@@ -50,12 +50,13 @@ Phase A agent 完成後自動通知本 session。
 
 ---
 
-## Phase B：Step 2 Wiki Ingest（本 session 親自執行，不可委派）
+## Phase B：Step 2 Wiki Ingest ＋ Step 2b 讀者版日報（本 session 親自執行，不可委派）
 
 收到 Phase A 完成通知後：
 
 - **若 Phase A 回報 Step 1a FAILED** → 不進入 Phase B、不進入 Phase C。本 session 直接用 Bash 對 `REPO_ROOT\src\logs\task_scheduler.log` append 一行 `Aggregator FAILED - stopping`（依 `.claude/commands/news-pipeline-steps.md` Step 6 格式），輸出完成摘要（Step 2 以後全部標記 ⏭️），結束
 - **若 Phase A 成功** → **本 session 直接**（不透過任何背景 agent）依 `.claude/commands/wiki-ingest.md` 的完整步驟，針對 TARGET_DATE 執行 wiki ingest：分類 → foreground 派工六類記者 → 彙整 `feature-radar.md` / `index.md` / `log.md`。記下本階段結果（OK / FAILED）供 Phase C 寫入 Step 6 log
+- **ingest 完成後，本 session 接著執行 `Step 2b：讀者版日報`** `[加入: 2026-09-12]`（逐字規格見 `.claude/commands/news-pipeline-steps.md` 的該步）：讀當日 wiki diff，寫 `daily/TARGET_DATE.md`。**必須排在 Step 2 之後、Phase C 的 Step 3 之前**——它吃的是尚未 commit 的 wiki 改動，Step 3 一 commit 就取不到那份 diff 了。本步失敗不阻斷，仍進 Phase C
 
 ---
 

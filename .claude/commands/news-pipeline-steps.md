@@ -353,6 +353,72 @@ Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，完整步驟見 `.c
 
 ---
 
+## Step 2b：讀者版日報（`daily/TARGET_DATE.md`）`[加入: 2026-09-12]`
+
+**與 Step 2 一樣由呼叫 `/news-pipeline` 的 session 親自執行**（雲端則是頂層 session 一條龍做完），**排在 Step 2 wiki ingest 之後、Step 3 commit 之前**。
+
+讀者版回答的不是「今天發生什麼」，是「**知識庫今天學到什麼、改變了什麼判斷**」。`news/TARGET_DATE.md` 照產照存（原料層，供 lint 5d／7b 溯源與各記者沉澱使用），**但不再是讀者看到的東西**。判準與取捨見沿革檔 2026-09-12。
+
+### 機械契約字串（勿改；新增時登記 `.claude/review-registry.json`）
+
+**script 會 grep 的字串只住這張表**，下方規則引用時指回本表、不另抄。改任何一格必須同步右欄消費端。
+
+| 契約字串／形狀 | 消費端 | 改壞的後果 |
+|---|---|---|
+| 標題 `# YYYY-MM-DD 今天 wiki 學到什麼` | `build_web.py` READER_TITLE_RE | 標題行不被認得（日期仍取檔名，不致命）|
+| 無新知行 `> 今日 wiki 無新知（YYYY-MM-DD）` | `build_web.py` READER_NO_NEWS_RE | 空日會被當成「有內容但解不出來」，網站出空頁 |
+| 六個領域節名 `## 🛠️ 功能`／`## 🤖 模型`／`## 💼 商業`／`## 🏛️ 安全政策`／`## 🌐 社群`／`## 👤 人物` | `build_web.py` READER_DOMAIN_SECTIONS、`app.js` readerDigestHtml | 該領域整段靜默消失（同 2026-08-14 區塊 emoji 的死法）|
+| 條目三段式 `- 一句新事實 → [[頁名]] → 改變了什麼判斷`（分隔符為全形箭頭，恰好三段）| `build_web.py` READER_ITEM_SEP | 少一段或多一段的條目被丟掉，寫了等於沒寫 |
+
+### 步驟
+
+1. **取當日 wiki diff**（就是本步的進料，不靠歸因記錄）：
+
+   ```
+   git -C REPO_ROOT diff HEAD --stat -- wiki/
+   git -C REPO_ROOT diff HEAD -- wiki/<你要看的頁>
+   ```
+
+   **不需要基準 sha**：Step 2 只寫不 commit，wiki/ 的當日改動要到 Step 3 才進 git，所以本步執行時 `git diff HEAD -- wiki/` 就是今天全部的改動。若本次執行中途曾先 commit 過 wiki（如記者分批完成的 interim commit），改以那筆 commit 的前一個 sha 為基準：`git -C REPO_ROOT diff <sha> -- wiki/`。
+2. **不算「學到」的改動**：`wiki/log.md`（編輯部日誌）、`wiki/index.md`（目錄）、frontmatter 機器欄位（`days_since_*`、`inbound_links`、`attribution_*`、`pending_*`、`signal`）、`%% 維運備忘 %%`、`web_reader/`。只改「最後更新」日期而內文未動者同。
+3. **寫 `daily/TARGET_DATE.md`**，格式依上表契約字串：
+
+   ```markdown
+   # TARGET_DATE 今天 wiki 學到什麼
+
+   > 一句總結（≤ 120 字元，delta-first：寫今天改變了什麼，不寫這頁是什麼）
+
+   ## 🛠️ 功能
+   - 一句新事實 → [[entities/claude-code]] → 改變了什麼判斷
+   ## 🤖 模型
+   ## 💼 商業
+   ## 🏛️ 安全政策
+   ## 🌐 社群
+   ## 👤 人物
+   ```
+
+   - **沒有內容的領域整節省略**，不寫空節也不寫「本日無」
+   - **每條 ≤ 200 字元**（量測前先剝掉 wikilink）；wikilink **必須指到實際被改的那一頁**（可加 `#錨點`；錨點打錯會讓 `build_web.py` 的錨點健檢致命、擋下 web build）
+   - **「改變了什麼判斷」寫不出來的條目不寫**——那正是過濾，不是遺漏；同一事件被多家媒體覆述在這裡只有一條，因為 wiki 也只學到一件事
+   - **市場記者的 💰 判讀若當日有**，放 `## 💼 商業` 節末一條，格式相同（指 [[topics/market-signals]]）。**有讀者版的日期，`build_web.py` 不再另外注入 💰 條目**——自寫與注入擇一，不要雙份
+   - **wiki 當日零實質改動**時，整份檔只寫標題加一行 `> 今日 wiki 無新知（TARGET_DATE）`，不拿舊料充數
+4. **長度自檢（強制）**：
+
+   ```
+   PYTHON scripts/check_reader_digest.py TARGET_DATE
+   ```
+
+   （檢查每條 ≤ 200 字元、六領域節名合法、條目恰好三段、wikilink 目標存在；非零退出即違規，修好再收工）
+5. **內規外洩自檢（強制）**：同 Step 1b-3a-2 的禁詞清單，對 `daily/TARGET_DATE.md` 再跑一次；另不得出現 `ingest`、`派工`、`記者`、`diff` 這類維運語——讀者看到的是知識，不是編輯部的工作流程。
+6. `daily/TARGET_DATE.md` 隨 **Step 3** 一併 commit（見該步的 `git add` 清單），不單獨 commit、不單獨 push。
+
+### 產出失敗時
+
+本步失敗（寫不出來、diff 取不到）**不阻斷 pipeline**：Step 3～Step 6 照常跑，該日網站日報頁自動退回舊的 `news/` 解析結果（`build_web.py` 的退回路徑本來就是為改版日之前的歷史頁寫的），Step 6 log 記一行 `Reader digest FAILED - falling back to news/`。
+
+
+---
+
 # Phase C 步驟（Step 3 / 4 / 5 / 6）
 
 ## Step 3：Commit Wiki 變更（不 push）
@@ -360,10 +426,11 @@ Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，完整步驟見 `.c
 用 Bash 執行（**先不 push**，於 Step 5 統一推送）：
 
 ```
-git -C REPO_ROOT add wiki/ data/source_attribution.jsonl data/pending-handoffs.jsonl
+git -C REPO_ROOT add wiki/ daily/TARGET_DATE.md data/source_attribution.jsonl data/pending-handoffs.jsonl
 git -C REPO_ROOT commit -m "wiki: auto-ingest TARGET_DATE"
 ```
 
+- `daily/TARGET_DATE.md` 是 Step 2b 的讀者版日報；本步失敗時此檔不存在，`git add` 會報錯——改用 `git add wiki/ data/...` 略過即可
 - `data/source_attribution.jsonl`（來源歸因）與 `data/pending-handoffs.jsonl`（轉知帳本）是 Step 2 主編彙整的產出，與 wiki 同批 commit；無變更時 `git add` 為 no-op
 - 若 wiki 無任何變更，跳過 commit，繼續 Step 4
 
@@ -517,6 +584,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 | Step 0 昨日缺跑檢查 | ✅ 無缺失 / ⚠️ 昨日（YESTERDAY）日報缺失 / ⏭️ backfill 模式跳過 |
 | Step 1 新聞聚合 | ✅ / ❌ |
 | Step 2 Wiki Ingest | ✅ / ❌ |
+| Step 2b 讀者版日報 | ✅ / ⚠️ 今日無新知（照寫空日檔）/ ❌ 退回 news/ |
 | Step 3 Wiki Commit | ✅ / ⏭️ 無變更 / ❌ |
 | Step 4 Web 建置 | ✅ / ❌ |
 | Step 5 統一推送（news+wiki+web） | ✅ / ❌ |
@@ -541,6 +609,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 - Step 0 僅在 TARGET_DATE 為今日時執行；backfill 模式（TARGET_DATE 非今日）跳過
 - Step 1 失敗時停止整個 pipeline（Phase A agent 立即停止，不進入 Phase B / Phase C，Step 6 log 改由呼叫 session 直接寫入）
 - Step 2（wiki ingest，由呼叫 session 親自執行，不在背景 agent 內）失敗時記錄並仍進入 Phase C（Step 4 不依賴 wiki）
+- Step 2b（讀者版日報）同樣由呼叫 session 親自執行，排在 Step 2 之後、Step 3 之前；失敗不阻斷，該日網站退回舊的 `news/` 解析結果
 - Step 4 web build gate（`scripts/gate_web_build.py`）擋下時跳過 web build 與 web commit，仍須執行 Step 5 的統一 push；gate 放行（含「失敗全屬已登記缺口」）時照常 build
 - Step 4（web build）失敗時跳過 web commit，但仍須執行 Step 5 的統一 push（推送已完成的 news / wiki commit）
 - **所有 git push 集中在 Step 5 一次完成**；中途步驟（1b、3）一律只 commit 不 push，避免 Pages 部署並發競爭
