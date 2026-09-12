@@ -20,7 +20,7 @@ wiki 頁開一條窄通道**：每頁配少量經實測校準的 query，抓回�
 傳染給存活者（見 `dedup._inherit_topic`——不傳染的話定向命中會被靜默丟棄）。
 
 三道防稀釋護欄：每 topic `max_items`、全域 `_global_max`、以及日報把這些條目
-收在獨立的「專頁雷達」區塊而非正文六區（見 news-pipeline-steps.md Step 1b）。
+收在獨立的「專頁雷達」區塊而非正文六區（見 .claude/skills/news-digest/selection.md）。
 
 設定與 query 校準紀錄見 `topic_watch.json`；**新增 query 前必須實測命中率**，
 未驗證的 query 等於沒有偵測力，只會製造雜訊。

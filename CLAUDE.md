@@ -45,6 +45,7 @@
 ## Skills
 
 - 🟢 每天：`/news-pipeline`（抓新聞 → 日報 → wiki ingest → 建置 web → push；已含 `/wiki-ingest`）
+  - 步驟本體住四個 skill，由 `/news-pipeline` 依序呼叫，不單獨執行：`.claude/skills/news-gather/`（Step 0/0b/1a/1c）、`.claude/skills/news-digest/`（Step 1b，格式與選材在同目錄 `format.md`／`selection.md`）、`.claude/skills/reader-digest/`（Step 2b，格式在同目錄 `format.md`）、`.claude/skills/web-publish/`（Step 3–6 與完成摘要）`[加入: 2026-09-13]`
 - 🟡 每週：`/weekly`（週報 ＋ wiki 週度回顧 ＋ 開放迴路掃描 ＋ 單一 push；已含 `/weekly-report`、`/wiki-weekly-review`），另跑 `/wiki-lint` 做每週品質檢查
 - 問 wiki 內容、查某件事的現況、要出處：`/wiki-query`
 - 改完 `.claude/` 或本檔：`/review-commands`，直到零錯誤

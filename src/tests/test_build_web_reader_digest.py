@@ -1,7 +1,7 @@
 """讀者版日報（daily/YYYY-MM-DD.md）解析契約測試。
 
 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，來源是當日 ingest
-對 wiki/ 的 diff。規格端住 `.claude/commands/news-pipeline-steps.md` 的
+對 wiki/ 的 diff。規格端住 `.claude/skills/reader-digest/format.md` 的
 `Step 2b：讀者版日報`「機械契約字串」表；本檔鎖住三種情況：
 
 1. 完整六領域 —— 節名順序、每條三段（事實／wikilink／判斷句）都解得出來

@@ -39,7 +39,7 @@ CLAUDE.md 說資料檔「不需 commit」是指手動流程無此義務,非禁�
 
 **寫者分工 `[改版: 2026-07-25]`：** 原本記載「單一寫者=① Actions」,但那導致 ② 的 `--confirm-digest` 結果從未進 repo——② 在容器內把 `emitted_items.json` 標記為已確認,容器一銷毀就沒了,下次全新 checkout 讀到的仍是未確認。實測 2026-07-14～07-24 雲端期間每日確認率幾乎為 0（僅本機手動執行的 07-19、07-22 為 100%）,兩階段確認機制形同空轉,跨日去重全靠 `seen_urls.json` 獨撐。現改為:
 - ① Actions 寫 `gathered_items.json` / `seen_urls.json` / `emitted_items.json`（新增未確認條目）
-- ② 雲端 routine **只寫 `emitted_items.json` 的確認欄位**,並與日報同批 push（見 `.claude/commands/news-pipeline-steps.md` 的 `Step 1c：確認 emitted-cache`）
+- ② 雲端 routine **只寫 `emitted_items.json` 的確認欄位**,並與日報同批 push（見 `.claude/skills/news-gather/SKILL.md` 的 `Step 1c：確認 emitted-cache`）
 - 兩者時間錯開至少 1.6 小時且都走 push 重試,不構成競態;手動 `--date` 補救不碰快取,見 `main.py`
 
 ## 出問題時如何補救

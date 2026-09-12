@@ -33,7 +33,7 @@ argument-hint: [YYYY-Wnn]
 |---|---|
 | **確認閘相反** | `/wiki-weekly-review` 明訂未經使用者確認不得修改任何頁面（延伸判斷屬主觀取捨）；`/weekly-report` 是自主產出。合併後只會二選一：週報被卡在確認閘後面，或策展變成自動執行——後者等於廢掉那條規則 |
 | **凍結語義衝突** | `/weekly-report` 步驟 5 明訂寫入後即凍結、不因後續 ingest 回頭修改；`/wiki-weekly-review` 則主動改 wiki。若策展先跑，週報會引用到同一次執行中剛被改出來的頁面狀態 |
-| **帳本獨立性** | 週報第 (3) 段的帳本有機械檢查（`scripts/check_weekly_ledger.py`）與反確認偏誤護欄。策展若先知道本週開了哪些預告，會傾向加碼「能讓預告成真」的主題——與 `.claude/commands/news-pipeline-steps.md` Step 3e 對選材的警告同源 |
+| **帳本獨立性** | 週報第 (3) 段的帳本有機械檢查（`scripts/check_weekly_ledger.py`）與反確認偏誤護欄。策展若先知道本週開了哪些預告，會傾向加碼「能讓預告成真」的主題——與 `.claude/skills/news-digest/SKILL.md` Step 3e 對選材的警告同源 |
 
 > 判斷式：**這一步會不會讓後面那步「已經知道答案」？** 會 → 順序錯了。
 
@@ -104,7 +104,7 @@ argument-hint: [YYYY-Wnn]
 3. `PYTHON REPO_ROOT\scripts\build_web.py` → `git -C REPO_ROOT add web_reader/` → `git -C REPO_ROOT commit -m "web: rebuild YYYY-Wnn（週報＋週度回顧上站）"`
 4. `git -C REPO_ROOT push`（**單一 push**）
 
-- **push 失敗**：照 `.claude/commands/news-pipeline-steps.md` 的 `Step 5` push 失敗重試程序處理（`pull --rebase` 上限 2 次），不要另寫一套。**`pull --rebase` 若帶進新的 `news/*.md`，回第 0 步重跑補掃**——rebase 正是新日報最常進入本機的路徑
+- **push 失敗**：照 `.claude/skills/web-publish/SKILL.md` 的 `Step 5` push 失敗重試程序處理（`pull --rebase` 上限 2 次），不要另寫一套。**`pull --rebase` 若帶進新的 `news/*.md`，回第 0 步重跑補掃**——rebase 正是新日報最常進入本機的路徑
 - **為什麼第 0 步存在** `[加入: 2026-08-22]`：涵蓋窗是在**開工當下**盤點的，而 `daily-news-pipeline-cloud`（每日 12/17/22 UTC 三班，涵蓋台北 20:00 至隔日 06:00）會在本指令執行期間繼續產出日報。2026-W34 踩過：週報依開工時可見的 3 份日報寫成，檔尾寫「08-20 之後尚未產出」，並據此對 4 條預告判「本週零命中」；收尾 rebase 帶進 08-20／08-21 後補掃，命中 WIRED〈工程師已找到繞過隱形浮水印的方法〉，直接推翻該期「無人復現」的結案結論。**成本是一次 grep，擋掉的是拿「我沒看到」當「沒發生」寫給讀者。**
 - **與排程的關係**：本指令無雲端排程。`weekly/` 不與任何排程重疊；`wiki/` 會與 `weekly-wiki-lint-cloud`（每週六 03:00 UTC（台北 11:00））及 `daily-news-pipeline-cloud`（每日 12/17/22 UTC 三班，涵蓋台北 20:00 至隔日 06:00）競爭，靠上述 push 重試化解
 

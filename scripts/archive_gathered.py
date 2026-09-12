@@ -7,7 +7,7 @@
 的內容早已滾出視窗——那天的新聞就永久漏失。
 
 有了副本，補跑可以直接 replay 當天的真實原料，產出與原本該有的日報一致
-（見 `.claude/commands/news-pipeline-steps.md` 的「補跑（backfill）注意事項」）。
+（見 `.claude/skills/news-gather/SKILL.md` 的「補跑（backfill）注意事項」）。
 
 檔名取 `gathered_items.json` 內的 `date` 欄位，不取系統當下日期——這樣 backfill
 產生的原料也會歸檔到它真正對應的那一天。

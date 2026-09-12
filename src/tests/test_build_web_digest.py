@@ -88,7 +88,7 @@ class TestBulletStyleRegression(unittest.TestCase):
     empty section on the web reader. This test locks in that the parser does
     NOT recognize bullet-style entries as stories, so any future change that
     accidentally "fixes" this (making bullets parse) is caught — the true
-    fix belongs in digest generation (news-pipeline-steps.md), not the parser.
+    fix belongs in digest generation (.claude/skills/news-digest/), not the parser.
     """
 
     def test_bullet_entries_not_parsed_as_stories(self):

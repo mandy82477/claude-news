@@ -28,7 +28,7 @@ TARGET_DATE = `date -u +%F`，**開工時求值一次後固定，全程不得重
 
 ## 前置閘與失敗處理：不在本檔
 
-`Step 0b：冪等閘`（日報已存在則中止）、`Step 1b` 開頭的新鮮度防線（資料非目標日期則中止）、以及 `Step 5` 的 push 失敗重試，全部定義在 `.claude/commands/news-pipeline-steps.md`，**本機與雲端行為完全相同**，照該檔執行即可。
+`Step 0b：冪等閘`（日報已存在則中止）、`Step 1b` 開頭的新鮮度防線（資料非目標日期則中止）、以及 `Step 5` 的 push 失敗重試，全部定義在 `.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md` 與 `.claude/skills/web-publish/SKILL.md`，**本機與雲端行為完全相同**，照該檔執行即可。
 
 本檔不重複這些邏輯——兩處各寫一份就會失步，而失步的那一份會在無人值守時生效。
 
@@ -50,13 +50,13 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 
 ## 第二步：執行 pipeline 步驟
 
-規範來源是 `.claude/commands/news-pipeline-steps.md`（步驟細節不在本檔重複，避免兩份副本失步）。依下表對照執行，**用標題找步驟，不要用編號推測範圍**：
+規範來源是四個 pipeline skill（`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`＋同目錄 `format.md`／`selection.md`、`.claude/skills/reader-digest/SKILL.md`＋`format.md`、`.claude/skills/web-publish/SKILL.md`；順序與派工見 `.claude/commands/news-pipeline.md`），步驟細節不在本檔重複，避免兩份副本失步。依下表對照執行，**用標題找步驟，不要用編號推測範圍**：
 
-| 該檔中的步驟標題 | 雲端如何處理 |
+| skill 檔中的步驟標題 | 雲端如何處理 |
 |------|------|
 | `Step 0：昨日缺跑檢查` | TARGET_DATE 為今日時照做；補上前一天的日報時 TARGET_DATE 非今日，該步驟本就跳過 |
 | `Step 0b：冪等閘` | 照做。非 backfill 模式，所以「日報已存在」一律中止——這正是「這批資料已經變成日報了」的判斷 |
-| `Step 1a：新聞抓取` | **跳過**，改跑一行 `cp src/gathered_archive/TARGET_DATE.json src/gathered_items.json`（`TARGET_DATE` 是佔位符，代入實際日期；本 repo 的 runbook 一律不用 `$` shell 變數，Bash 工具每次呼叫是獨立 shell、變數不跨呼叫存活）——GitHub Actions 已抓完並把當日原料按日歸檔。**不可直接吃現成的 `gathered_items.json`**：它是單槽的，會被下一班抓料、本機補跑、或亂序落地的延遲 run 覆寫（2026-08-29 現場即如此：單槽檔停在 08-28，而 08-29 的 archive 與日報都在）。此檔不存在（cp 失敗）即代表當日確實沒抓到料，交給 Step 1b 開頭的新鮮度防線擋下，正確。**push 前必須把單槽檔還原**——見該檔 Step 5 的「replay 路徑收尾」 |
+| `Step 1a：新聞抓取` | **跳過**，改跑一行 `cp src/gathered_archive/TARGET_DATE.json src/gathered_items.json`（`TARGET_DATE` 是佔位符，代入實際日期；本 repo 的 runbook 一律不用 `$` shell 變數，Bash 工具每次呼叫是獨立 shell、變數不跨呼叫存活）——GitHub Actions 已抓完並把當日原料按日歸檔。**不可直接吃現成的 `gathered_items.json`**：它是單槽的，會被下一班抓料、本機補跑、或亂序落地的延遲 run 覆寫（2026-08-29 現場即如此：單槽檔停在 08-28，而 08-29 的 archive 與日報都在）。此檔不存在（cp 失敗）即代表當日確實沒抓到料，交給 Step 1b 開頭的新鮮度防線擋下，正確。**push 前必須把單槽檔還原**——見 `.claude/skills/web-publish/SKILL.md` Step 5 的「replay 路徑收尾」 |
 | `Step 1b：生成日報` | 照做，完成後 commit（**不 push**） |
 | `Step 1c：確認 emitted-cache` | **照做，不可跳過，且必須 commit `src/news_aggregator/emitted_items.json`**（該 Step 已明文要求）——你是全新 checkout、結束後容器銷毀，不 commit 等於沒改過。2026-07-14～07-24 雲端每日確認率幾乎為 0 就是漏了這個 commit。失敗只記警告，繼續後續步驟 |
 | `Step 2：Wiki Ingest` | 照做，但規範在別的檔案，見下方「Wiki Ingest」段落 |
@@ -66,9 +66,9 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 | `Step 5：Commit Web 並統一推送` | 照做，**單一 push** |
 | `Step 6：寫入 task_scheduler.log` | 照做，無論前面成敗都必須寫 |
 
-> 上表若與 `.claude/commands/news-pipeline-steps.md` 的實際步驟標題對不上（有標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照該檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 news-pipeline-steps.md 不同步`，供使用者回頭修 runbook。
+> 上表若與四個 pipeline skill 的實際步驟標題對不上（有標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照 skill 檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 pipeline skill 不同步`，供使用者回頭修 runbook。
 
-**Phase 劃分不適用於雲端：** `news-pipeline-steps.md` 與 `.claude/commands/news-pipeline.md` 把步驟分成 Phase A / B / C，那是為了本機 session 省 context 而拆的背景 agent 邊界。你是雲端頂層 session，**全部步驟自己一條龍做完，不 spawn 背景 agent 執行 pipeline 步驟**（記者派工除外，見下）。
+**Phase 劃分不適用於雲端：** `.claude/commands/news-pipeline.md` 把步驟分成 Phase A / B / C，那是為了本機 session 省 context 而拆的背景 agent 邊界。你是雲端頂層 session，**全部步驟自己一條龍做完，不 spawn 背景 agent 執行 pipeline 步驟**（記者派工除外，見下）。
 
 ---
 

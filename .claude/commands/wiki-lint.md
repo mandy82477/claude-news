@@ -497,7 +497,7 @@ code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截�
 
 **指標一：ref 覆蓋率（每週必跑）**——回歸偵測器：格式改動弄斷歸因時會連續每天壞，成本僅兩個 grep，不可等月報。
 
-⚠️ **日報有三種歸因格式，必須同時計** `[改版: 2026-09-04]`：`（ref: url）` 行內式為 2026-07-24 以前；`[N]` 註腳＋檔尾清單為 2026-07-25～2026-09-03；`（[來源名](url)）` 行內連結為 2026-09-04 起（格式定義見 `.claude/commands/news-pipeline-steps.md`「Step 1b：生成日報」）。**只計其中一兩種，會把新格式的日子讀成 0 而誤報覆蓋率暴跌**——2026-07-26 lint 實例：舊式單一 grep 誤報 71%，雙格式重算實際 97%。此為「回歸偵測器自己壞掉」的前例，改日報格式時必須回頭同步本節。
+⚠️ **日報有三種歸因格式，必須同時計** `[改版: 2026-09-04]`：`（ref: url）` 行內式為 2026-07-24 以前；`[N]` 註腳＋檔尾清單為 2026-07-25～2026-09-03；`（[來源名](url)）` 行內連結為 2026-09-04 起（格式定義見 `.claude/skills/news-digest/selection.md`「📌 今日聚焦」）。**只計其中一兩種，會把新格式的日子讀成 0 而誤報覆蓋率暴跌**——2026-07-26 lint 實例：舊式單一 grep 誤報 71%，雙格式重算實際 97%。此為「回歸偵測器自己壞掉」的前例，改日報格式時必須回頭同步本節。
 
 ⚠️ **必須先限縮到「今日聚焦」區塊再數**：2026-09-03 以前的日報檔尾「選材門檻」附錄（已於 09-04 廢除）使用相同的 `- **[...]**` 條列形狀，不限縮會灌大分母（2026-07-26 實例：未限縮 7 條，實際 5 條）。
 
@@ -703,11 +703,11 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 依序執行（`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`）：
 
 1. **Commit wiki 變更**（先不 push）：`git -C REPO_ROOT add wiki/` → `git -C REPO_ROOT commit -m "wiki: weekly lint YYYY-MM-DD"`（wiki 無變更則跳過 commit，續下一步）
-2. **強制 web build gate**：`PYTHON REPO_ROOT\scripts\gate_web_build.py`（此腳本代跑完整測試套件，不要另外自己跑 `run_tests.py` 再自行判斷——判準集中在腳本裡，才不會與 `.claude/commands/news-pipeline-steps.md` Step 4 失步）
-   - 擋下（exit≠0）→ **先依 `.claude/commands/news-pipeline-steps.md` Step 4「gate 擋下時的修復迴圈」嘗試修復再重跑 gate（至多 2 輪，允許清單與禁止事項皆同）**；仍擋下才跳過 build 與 web commit，仍執行步驟 4 推送已完成的 wiki commit
+2. **強制 web build gate**：`PYTHON REPO_ROOT\scripts\gate_web_build.py`（此腳本代跑完整測試套件，不要另外自己跑 `run_tests.py` 再自行判斷——判準集中在腳本裡，才不會與 `.claude/skills/web-publish/SKILL.md` Step 4 失步）
+   - 擋下（exit≠0）→ **先依 `.claude/skills/web-publish/SKILL.md` Step 4「gate 擋下時的修復迴圈」嘗試修復再重跑 gate（至多 2 輪，允許清單與禁止事項皆同）**；仍擋下才跳過 build 與 web commit，仍執行步驟 4 推送已完成的 wiki commit
    - 放行（exit 0，含「測試失敗但全屬 `docs/known-test-gaps.json` 已登記缺口」）→ 續步驟 3
    - 兩種結果都在步驟 4 的心跳紀錄抄上腳本輸出的**最後一行摘要**，不要自己改寫措辭
-   - 放寬理由與邊界見 `.claude/commands/news-pipeline-steps.md` Step 4 的說明區塊（2026-07-31 教訓：抓料端依賴缺口不該讓整站停更）
+   - 放寬理由與邊界見 `.claude/skills/web-publish/SKILL.md` Step 4 的說明區塊（2026-07-31 教訓：抓料端依賴缺口不該讓整站停更）
 3. **建置 web 並 commit**：`PYTHON REPO_ROOT\scripts\build_web.py` → `git -C REPO_ROOT add web_reader/` → `git -C REPO_ROOT commit -m "web: rebuild YYYY-MM-DD（週更 lint 上站）"`
 3b. **渲染層驗收（build 成功時必做）`[加入: 2026-08-28]`**：對本輪**改動最多的 2 頁**，看渲染後的結果，不是只看 markdown——
 
@@ -717,10 +717,10 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 
    > **為什麼不能只信 build 綠燈 `[加入: 2026-08-28]`**：`build_web.py` 只證明「資料層對」，不證明「讀者看到的東西對」；全域 `REVIEW-PRINCIPLES.md` 第 11 條明言 DOM／資料斷言不可替代眼睛驗收。（教訓見沿革檔 2026-08-09）
 
-4. **心跳紀錄（無論成功／no-op／中止都必須寫）`[加入: 2026-07-27]`**：append 一行結果到 `src/logs/task_scheduler.log`（格式沿用該檔既有慣例，如 `[週六 YYYY/MM/DD hh:mm:ss.00] Weekly lint OK - 修 N 頁，M 項待確認，測試/build/push 結果`；no-op 寫 `Weekly lint OK (no-op) - 無頁面需修正`；中途失敗寫 `Weekly lint FAILED - <卡在哪一步>`）→ `git -C REPO_ROOT add src/logs/task_scheduler.log` → `git -C REPO_ROOT commit -m "chore: weekly lint heartbeat YYYY-MM-DD"`。**這一步是本步驟序列中唯一保證產生 commit 的步驟**——目的是讓「跑了但無事可改」與「靜默死亡」在 GitHub 上可分辨（2026-07-25 雲端 lint 無聲失敗、死因不可考的教訓：當時成功與死亡的 artifact 都是零）。對應每日 pipeline 的 `.claude/commands/news-pipeline-steps.md`「Step 6」（無論前面成敗都必須寫），本機與雲端行為一致。
+4. **心跳紀錄（無論成功／no-op／中止都必須寫）`[加入: 2026-07-27]`**：append 一行結果到 `src/logs/task_scheduler.log`（格式沿用該檔既有慣例，如 `[週六 YYYY/MM/DD hh:mm:ss.00] Weekly lint OK - 修 N 頁，M 項待確認，測試/build/push 結果`；no-op 寫 `Weekly lint OK (no-op) - 無頁面需修正`；中途失敗寫 `Weekly lint FAILED - <卡在哪一步>`）→ `git -C REPO_ROOT add src/logs/task_scheduler.log` → `git -C REPO_ROOT commit -m "chore: weekly lint heartbeat YYYY-MM-DD"`。**這一步是本步驟序列中唯一保證產生 commit 的步驟**——目的是讓「跑了但無事可改」與「靜默死亡」在 GitHub 上可分辨（2026-07-25 雲端 lint 無聲失敗、死因不可考的教訓：當時成功與死亡的 artifact 都是零）。對應每日 pipeline 的 `.claude/skills/web-publish/SKILL.md`「Step 6」（無論前面成敗都必須寫），本機與雲端行為一致。
 4b. **命中帳（每輪必記）`[加入: 2026-09-04]`**：`python scripts/lint_health.py hits record --date YYYY-MM-DD --rules-rev <規則版本> --step 3a=N --step 3b=N … --step 7b=N`——每個執行過的步驟各一筆命中數（0 也要記，零命中才是訊號），`data/lint_step_hits.jsonl` 併入本步 push
 
-5. **單一 push**：`git -C REPO_ROOT push`（本次所有 commit 一次推送，一次 push = 一個 Pages 部署，避免並發競爭；理由同 `.claude/commands/news-pipeline-steps.md` Step 5）
+5. **單一 push**：`git -C REPO_ROOT push`（本次所有 commit 一次推送，一次 push = 一個 Pages 部署，避免並發競爭；理由同 `.claude/skills/web-publish/SKILL.md` Step 5）
 
 > 本步 commit 為實質改動閉迴路的一部分，**不可只留在對話裡**（同 SessionStart hook 的未 commit 提醒對象）。心跳紀錄在中止情境下照樣執行——lint 中途放棄時，先寫 FAILED 心跳並 commit push 再結束，不可靜默離開。
 

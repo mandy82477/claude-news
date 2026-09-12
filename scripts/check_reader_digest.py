@@ -6,7 +6,7 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
     python scripts/check_reader_digest.py [YYYY-MM-DD]   # 指定日期
     python scripts/check_reader_digest.py                # 掃全部 daily/*.md
 
-由 `.claude/commands/news-pipeline-steps.md` 的 `Step 2b：讀者版日報` 第 4 步呼叫。
+由 `.claude/skills/reader-digest/SKILL.md` 第 4 步呼叫。
 規格（節名、三段式、無新知行）住該步的「機械契約字串」表，本腳本是它的消費端；
 兩端互相指認並登記於 .claude/review-registry.json 的 sync_pairs。
 

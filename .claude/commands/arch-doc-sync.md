@@ -42,7 +42,7 @@ description: 系統架構變動時，快速同步更新架構文件（Design Dia
   - 純 bug fix / 微調 → 通常不進架構文件
 
 ### 2. 先更新事實來源 `Design Diagram.md`
-- 對照**實際系統**核實，不憑記憶：pipeline 讀 `.claude/commands/news-pipeline-steps.md` 與 `news-pipeline.md`；來源清單讀 `src/news_aggregator/main.py` 的 `sources = [...]`；lint 讀 `.claude/commands/wiki-lint.md`；派工讀 `.claude/reporter-rules/wiki-ingest.md`
+- 對照**實際系統**核實，不憑記憶：pipeline 讀 `.claude/commands/news-pipeline.md`、`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`、`.claude/skills/reader-digest/SKILL.md`、`.claude/skills/web-publish/SKILL.md`；來源清單讀 `src/news_aggregator/main.py` 的 `sources = [...]`；lint 讀 `.claude/commands/wiki-lint.md`；派工讀 `.claude/reporter-rules/wiki-ingest.md`
 - 改對應的 mermaid 圖與文字；更新標頭「最後更新」為今日
 - 這是下游 HTML 的依據，**先它、後 HTML**
 

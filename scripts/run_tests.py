@@ -11,7 +11,7 @@ run_tests.py — 執行 src/tests/ 下所有確定性單元測試（unittest dis
     全部通過 → exit 0
     任何失敗／錯誤 → 印出失敗案例清單，exit 1
 
-供 news-pipeline-steps.md Step 4（建置 Web Reader）前置檢查呼叫：
+供 .claude/skills/web-publish/SKILL.md Step 4（建置 Web Reader）前置檢查呼叫：
 測試失敗時視同 Step 4 失敗，跳過 web build 與 web commit。
 
 跑完 unittest 全數通過後，另外執行 scripts/check_rules.py（.claude/commands、

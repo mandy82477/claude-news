@@ -1150,7 +1150,7 @@ def parse_digest(f: Path) -> dict:
 # 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，進料是當日 ingest
 # 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）；讀者版日期只保留
 # 它的今日聚焦與重點話題上站（乙-2），其餘新聞區塊不畫。
-# 規格端住 `.claude/commands/news-pipeline-steps.md` 的 `Step 2b：讀者版日報`，
+# 規格端住 `.claude/skills/reader-digest/format.md`（步驟在 `.claude/skills/reader-digest/SKILL.md`），
 # 其「機械契約字串」表與本段互相指認並登記 .claude/review-registry.json 的 sync_pairs——
 # 節名或標記行改了而這裡沒跟，該領域整段靈默消失（同 2026-08-14 區塊 emoji 的死法）。
 

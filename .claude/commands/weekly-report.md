@@ -297,7 +297,7 @@ W36 修過三次，三次的病各不相同，記錄下來當界標：
 …判準文字…｜查證：關鍵字1、關鍵字2
 ```
 
-關鍵字須是**能在 `news/*.md` 直接 grep 到的字串**（產品名、issue 編號、版本號、機構名），不可是形容詞。日更 pipeline 會在**選材完成後**用這些關鍵字掃當日條目，命中則 append 至 `weekly/open-signals.jsonl` 供下期回收取用（見 `.claude/commands/news-pipeline-steps.md` Step 3e）。
+關鍵字須是**能在 `news/*.md` 直接 grep 到的字串**（產品名、issue 編號、版本號、機構名），不可是形容詞。日更 pipeline 會在**選材完成後**用這些關鍵字掃當日條目，命中則 append 至 `weekly/open-signals.jsonl` 供下期回收取用（見 `.claude/skills/news-digest/SKILL.md` Step 3e）。
 
 續盯條目的判準**一律逐字沿用，不得補寫、不得縮寫、不得加查證線索**——`scripts/check_weekly_ledger.py` 對回收表判準逐字比對，加一個字即報「判準遭改寫」讓測試轉紅。`scan_open_forecasts.py` 對缺線索的舊條目印 ⚠️，那是**可接受的常態提醒**，不是待辦。舊判準真的驗不動（無線索、或超出形狀規範）→ 比照「連續兩期未定 → 強制結案」的處置把它結掉（不必等滿兩期），再以合規的新判準另立一條，不得原地修補。
 
@@ -338,7 +338,7 @@ W36 修過三次，三次的病各不相同，記錄下來當界標：
 
 > **由 `/weekly` 帶起時跳過本步驟**（`.claude/commands/weekly.md` 會在兩個子指令都跑完後統一收尾）。只有單獨執行 `/weekly-report` 補跑時才執行以下內容。
 
-**沒有這一步，週報只會躺在工作目錄裡**：未 commit（違反根目錄 `CLAUDE.md` 的完工定義）、未 build（web reader 的「週報」分頁仍顯示「尚無週報」）、未 push（線上看不到）。形狀與 `.claude/commands/news-pipeline-steps.md` 的 `Step 4`／`Step 5` 一致：
+**沒有這一步，週報只會躺在工作目錄裡**：未 commit（違反根目錄 `CLAUDE.md` 的完工定義）、未 build（web reader 的「週報」分頁仍顯示「尚無週報」）、未 push（線上看不到）。形狀與 `.claude/skills/web-publish/SKILL.md` 的 `Step 4`／`Step 5` 一致：
 
 ```
 git -C REPO_ROOT add weekly/
@@ -355,7 +355,7 @@ git -C REPO_ROOT push        # 單一 push
 ```
 
 - **單一 push**：每次 push 觸發一個 GitHub Pages 部署，分多次會互相搶佔導致線上停在舊版
-- **push 失敗**：照 `.claude/commands/news-pipeline-steps.md` 的 `Step 5` push 失敗重試程序處理（`pull --rebase` 上限 2 次），不要另寫一套
+- **push 失敗**：照 `.claude/skills/web-publish/SKILL.md` 的 `Step 5` push 失敗重試程序處理（`pull --rebase` 上限 2 次），不要另寫一套
 - **與排程的關係**：`/weekly` 沒有雲端排程，不會與 `daily-news-pipeline-cloud`（每日 12/17/22 UTC 三班，涵蓋台北 20:00 至隔日 06:00）或 `weekly-wiki-lint-cloud`（每週六 03:00 UTC（台北 11:00））衝突；產出檔在 `weekly/`，與那兩者會動的 `news/`、`wiki/` 不重疊。若執行時間逼近排程時點，靠上述 push 重試化解
 
 ---

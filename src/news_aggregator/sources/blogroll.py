@@ -16,7 +16,7 @@ specific wiki page* (competitor-landscape); their posts never mention Claude,
 so the keyword pre-filter is skipped and every recent post is emitted with
 ``topic`` set -- exactly like sources/topic_watch.py. The digest step then
 judges each one on "does this release change anything for a Claude user" and
-drops the rest (see news-pipeline-steps.md 專頁雷達). ``max_items`` (default
+drops the rest (see .claude/skills/news-digest/selection.md 專頁雷達). ``max_items`` (default
 ``TOPIC_MAX_ITEMS``) caps how many such posts one feed may emit per run, so a
 busy vendor newsroom cannot dilute the radar.
 """

@@ -75,7 +75,7 @@ gh issue list --label reader-feedback --state open --json number,title,createdAt
 ```
 | 聚焦條目 | 當時標籤 | 後續 30 天 | 判定 |
 ```
-＋命中率＋偏誤模式觀察（如「Show HN 工具類系統性高估」）＋若有明確偏誤，附選材指引修正提案（目標：`.claude/commands/news-pipeline-steps.md` Step 1b 選材相關段落），**經使用者確認才修改**。
+＋命中率＋偏誤模式觀察（如「Show HN 工具類系統性高估」）＋若有明確偏誤，附選材指引修正提案（目標：`.claude/skills/news-digest/selection.md`），**經使用者確認才修改**。
 
 命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
 
@@ -127,7 +127,7 @@ gh issue list --label reader-feedback --state open --json number,title,createdAt
 1. `git -C REPO_ROOT add wiki/` → `git -C REPO_ROOT commit -m "wiki: weekly review YYYY-MM-DD"`（無變更則跳過）
 2. `PYTHON REPO_ROOT\scripts\run_tests.py`（失敗 → 跳過 build 與 web commit，仍執行步驟 4 推送 wiki commit）
 3. `PYTHON REPO_ROOT\scripts\build_web.py` → `git -C REPO_ROOT add web_reader/` → `git -C REPO_ROOT commit -m "web: rebuild YYYY-MM-DD（週度回顧上站）"`
-4. `git -C REPO_ROOT push`（單一 push，理由見 `.claude/commands/news-pipeline-steps.md` Step 5）
+4. `git -C REPO_ROOT push`（單一 push，理由見 `.claude/skills/web-publish/SKILL.md` Step 5）
 
 ## 注意事項
 

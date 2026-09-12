@@ -204,7 +204,7 @@ class TestReplayCannotSilentlyCopyTheWrongDay(unittest.TestCase):
     """
 
     def test_the_freshness_guard_still_checks_the_date(self):
-        steps = (REPO_ROOT / ".claude" / "commands" / "news-pipeline-steps.md"
+        steps = (REPO_ROOT / ".claude" / "skills" / "news-digest" / "SKILL.md"
                  ).read_text(encoding="utf-8")
         self.assertIn("確認 `date` 等於 TARGET_DATE 且 `items` 非空", steps)
 
