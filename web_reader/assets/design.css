@@ -501,6 +501,7 @@ code {
 /* 讀者版日報（2026-09-12 改版「乙」）——六領域分節，每條三段：
    事實（讀）→ 頁面按鈕（跳）→ 判斷句（記）。hairline 左邊框標記判斷句，不填色。*/
 .section__h-icon { font-size: 13px; opacity: 0.9; margin-right: 2px; }
+.section__h--reader { margin-top: 28px; }
 .reader-lede {
   font-family: var(--font-display); font-style: italic; font-size: 19px;
   color: var(--ink-1); line-height: 1.6;

@@ -10,12 +10,14 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
 規格（節名、三段式、無新知行）住該步的「機械契約字串」表，本腳本是它的消費端；
 兩端互相指認並登記於 .claude/review-registry.json 的 sync_pairs。
 
-檢查五項：
+檢查六項：
   1. 標題行 `# YYYY-MM-DD 今天 wiki 學到什麼`，日期與檔名一致
   2. h2 節名必須是六個領域之一（拼錯的節名整段會在網站上消失，這是唯一的看守）
   3. 每個條目恰好三段（事實 → wikilink → 判斷句）；少一段代表「改變了什麼判斷」沒寫
   4. 每條 ≤ 200 字元（剝掉 wikilink 後量測）
   5. wikilink 目標存在於 wiki/（指到不存在的頁＝讀者點了沒有東西）
+  6. 事實句與總結句不含整理語（HOUSEKEEPING_WORDS）——主詞必須是世界上的東西，
+     不是本庫的頁面／表格／目錄（2026-09-12 乙-2，使用者：「每個領域都有一樣問題」）
 
 行為：全過 exit 0；任何違規印出「檔案:行號 問題」後 exit 1。
 「今日 wiki 無新知」的空日檔一律視為合法（它是規格要求的寫法，不是失敗）。
@@ -34,6 +36,13 @@ H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 ITEM_SEP = "→"
 ITEM_MAX_CHARS = 200
+
+# 整理語：出現在事實句或總結句，代表這條寫的是知識庫自己動了哪裡，不是世界發生了什麼。
+# 規格端見 Step 2b「事實句的主詞必須是世界上的東西」。判斷句不查（它本來就可以談本庫怎麼看）。
+HOUSEKEEPING_WORDS = [
+    "本庫", "本頁", "拆成兩頁", "拆頁", "併頁", "汰除", "汰掉", "移出", "升為第一",
+    "改版", "主題頁", "新增頁", "獨立成新頁", "概覽表", "目錄補", "表格升", "留在原頁",
+]
 
 # 與 build_web.READER_DOMAIN_SECTIONS 同一組節名（規格端見 Step 2b 契約表）
 DOMAIN_LABELS = [
@@ -85,6 +94,13 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
             no_news = True
             continue
 
+        # 總結句（第一個領域節之前的 `>` 行）也不得是整理紀錄
+        if current_label is None and stripped.startswith(">"):
+            hit = [w for w in HOUSEKEEPING_WORDS if w in stripped]
+            if hit:
+                problems.append(f"{rel}:{n} 總結句含整理語「{hit[0]}」——寫今天世界發生了什麼，不寫動了哪頁")
+            continue
+
         h = H2_RE.match(stripped)
         if h:
             label = h.group(1).strip()
@@ -111,6 +127,12 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
                 f"實得 {len(parts)} 段"
             )
             continue
+
+        hit = [w for w in HOUSEKEEPING_WORDS if w in parts[0]]
+        if hit:
+            problems.append(
+                f"{rel}:{n} 事實句含整理語「{hit[0]}」——主詞必須是世界上的東西，不是本庫的頁面／表格"
+            )
 
         plain = WIKILINK_RE.sub(r"\1", stripped)
         if len(plain) > ITEM_MAX_CHARS:

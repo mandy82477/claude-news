@@ -10,6 +10,9 @@
 
 另鎖住 attach_reader_digests 的兩條行為：有讀者版的日期掛 reader 欄並改寫
 preview；沒有讀者版的日期（改版日之前）一字不動——歷史頁不可壞。
+
+乙-2（2026-09-12 同日）：讀者版日期的今日聚焦與重點話題仍上站，搜尋索引要跟著收
+（reader_search_text 帶 d 時併入 focus 文字與前 5 則重點話題標題，其餘新聞區塊不收）。
 """
 import tempfile
 import unittest
@@ -228,6 +231,21 @@ class TestReaderDigestChecker(unittest.TestCase):
                 "- " + "長" * 210 + " → [[entities/claude-code]] → 判斷。\n")
         self.assertTrue(any("超過上限" in p for p in self._check(text)))
 
+    def test_housekeeping_fact_flagged(self):
+        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
+                "- 投資判讀頁拆成兩頁，教材獨立成新頁 → [[entities/claude-code]] → 判斷。\n")
+        self.assertTrue(any("事實句含整理語" in p for p in self._check(text)))
+
+    def test_housekeeping_summary_flagged(self):
+        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 社群模式概覽表首度汰掉五類。\n\n## 🛠️ 功能\n\n"
+                "- 事實 → [[entities/claude-code]] → 判斷。\n")
+        self.assertTrue(any("總結句含整理語" in p for p in self._check(text)))
+
+    def test_housekeeping_word_in_judgment_is_allowed(self):
+        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
+                "- 官方發布 X → [[entities/claude-code]] → 本庫判斷這改變了選型。\n")
+        self.assertEqual(self._check(text), [])
+
     def test_title_date_mismatch_flagged(self):
         text = ("# 2026-01-01 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
                 "- 事實 → [[entities/claude-code]] → 判斷。\n")
@@ -236,3 +254,27 @@ class TestReaderDigestChecker(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestReaderSearchTextKeepsFocusAndHeadlines(unittest.TestCase):
+    """乙-2：讀者版日期仍上站的聚焦與重點話題要能被搜到；不上站的媒體區不索引。"""
+
+    def setUp(self):
+        self.r = _parse(PARTIAL, "2026-09-13")
+        self.d = {
+            "focus": [{"tag": "[重大事件]", "text": "聚焦句甲"}],
+            "topStories": [{"title": f"重點 {i}"} for i in range(7)],
+            "mediaReports": [{"title": "媒體覆述不該被索引"}],
+        }
+
+    def test_without_raw_digest_only_reader_text(self):
+        txt = build_web.reader_search_text(self.r)
+        self.assertIn("功能事實", txt)
+        self.assertNotIn("聚焦句甲", txt)
+
+    def test_focus_and_top_five_headlines_indexed(self):
+        txt = build_web.reader_search_text(self.r, self.d)
+        self.assertIn("聚焦句甲", txt)
+        self.assertIn("重點 4", txt)
+        self.assertNotIn("重點 5", txt, "重點話題只上站前 5 則，第 6 則不索引")
+        self.assertNotIn("媒體覆述", txt)

@@ -278,7 +278,9 @@
   }
 
   // ── Story HTML ───────────────────────────────────────────────────────────────
-  function storyHtml(s, star = false, focusTag = '') {
+  // lean=true（讀者版日期的重點話題）：不畫來源標籤、UTC 時間、情緒符號——
+  // 2026-09-12 使用者裁決「沒必要出現在頁面的字就不用出現」；歷史頁（lean=false）一字不動。
+  function storyHtml(s, star = false, focusTag = '', lean = false) {
     // JS-side URL match (focusTag) takes priority; fall back to Python-computed focusTags
     const effectiveTag = focusTag || (s.focusTags && s.focusTags[0]) || '';
     const cls = star ? 'story story--star' : 'story';
@@ -292,20 +294,65 @@
     return `<div class="${cls}">
   <div class="story__title"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${focusBadge}${sedimentBadges}</div>
   ${s.body ? `<div class="story__body">${esc(s.body)}</div>` : ''}
-  <div class="sourceline">
+  ${lean ? '' : `<div class="sourceline">
     ${s.source ? `<code>${esc(s.source)}</code>` : ''}
     ${s.time   ? `<span>· ${esc(s.time)}</span>` : ''}
     ${sentimentHtml(s.sentiment)}
-  </div>
+  </div>`}
 </div>`;
+  }
+
+  // ── 今日聚焦區塊（新聞式歷史頁與讀者版日期共用）──────────────────────────
+  function focusSectionHtml(d) {
+    if (!d.focus?.length) return '';
+    const parts = [];
+    parts.push(`<div class="section section--focus">
+<div class="section__h"><span class="section__h-label">今 日 聚 焦</span><span class="section__h-en">today's focus</span><span class="section__h-count">${d.focus.length} items</span></div>
+<ul class="focus-list">`);
+    d.focus.forEach(f => {
+      const cls = focusTagCls(f.tag);
+      // 2026-09-04 使用者裁決：今日聚焦句尾不顯示來源連結（先改「來源 1、來源 2」為圖示，再裁決整個移除）。
+      // markdown 的行內連結照留——6g 歸因覆蓋率靠它算；細節在下方各區條目自有原文連結。
+      const refs = '';
+      parts.push(`<li class="focus-item"><span class="focus-tag focus-tag--${cls}">${esc(f.tag)}</span><span>${esc(f.text)}</span>${refs}</li>`);
+    });
+    // 投資訊號（wiki/topics/market-signals.md 的最新判讀日期＝本日時才有）：
+    // 沿用 focus-item 版式接在聚焦列表末尾，點擊進判讀頁。教學型事件研究、非投資建議。
+    if (d.marketSignal) {
+      parts.push(`<li class="focus-item focus-item--market"><span class="focus-tag focus-tag--market">投資訊號</span><button type="button" class="focus-item__link" onclick="openWikiPage('market-signals','topic')">${esc(d.marketSignal.title)} — 看判讀 →</button></li>`);
+    }
+    parts.push('</ul>');
+    // 常駐導流：重度使用者的核心問題「該不該升版」答案在熱度雷達頁，
+    // 但從日報頁原本沒有任何入口（2026-07-28 讀者 review 高影響項）
+    parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
+    parts.push('</div>');
+    return parts.join('\n');
   }
 
   // ── 讀者版日報（daily/*.md → digest JSON 的 reader 欄）────────────────
   // 2026-09-12 改版「乙」：日報回答「今天 wiki 學到什麼」，按 wiki 六領域分節，
   // 每條三段：一句新事實 → 頁面按鈕 → 改變了什麼判斷。沒有 reader 欄的日期（改版日之前）
   // 退回舊的新聞式渲染，歷史頁不改行為。
+  // 乙-2（同日）：使用者裁決今日聚焦與重點話題留在讀者版頂部（它們是舊格式裡校準最久的
+  // 兩節，病灶是媒體覆述不是它們）；資料沿用 news/ 解析出的 focus／topStories，
+  // 其餘新聞區塊（技術更新／媒體／討論／付費）仍不畫。
+  const READER_TOP_STORIES_MAX = 5;
+  function readerNewsTopHtml(d) {
+    const parts = [];
+    const focus = focusSectionHtml(d);
+    if (focus) parts.push(focus);
+    const top = (d.topStories || []).slice(0, READER_TOP_STORIES_MAX);
+    if (top.length) {
+      parts.push(`<div class="section">
+<div class="section__h"><span class="section__h-label">重 點 話 題</span><span class="section__h-en">headlines</span><span class="section__h-count">${top.length} items</span></div>`);
+      top.forEach(s => parts.push(storyHtml(s, true, '', true)));
+      parts.push('</div>');
+    }
+    return parts.join('\n');
+  }
   function readerDigestHtml(r) {
     const parts = [];
+    parts.push(`<div class="section__h section__h--reader"><span class="section__h-label">知 識 庫 今 天 學 到 什 麼</span><span class="section__h-en">what the wiki learned</span><span class="section__h-count">${r.itemCount || 0} updates</span></div>`);
     if (r.summary) {
       parts.push(`<div class="reader-lede">${esc(r.summary)}</div>`);
     }
@@ -354,11 +401,12 @@
       `<span class="digest-age">${_ageDays === 1 ? '1 day ago' : _ageDays + ' days ago'}</span>`;
     const r = d.reader || null;
     const metaTopItems = [
-      r ? `<span><b>${r.itemCount || 0}</b> updates</span>`
+      r ? `<span><b>${(d.focus || []).length}</b> focus</span><span class="sep">·</span><span><b>${r.itemCount || 0}</b> updates</span>`
         : `<span><b>${d.articleCount}</b> articles</span>`,
       freshHtml,
     ].filter(Boolean);
-    const metaBottomItems = [
+    // 讀者版日期只留日期：來源數與產生時間是編輯部的量測值，不是讀者要的字（2026-09-12 乙-2）
+    const metaBottomItems = r ? [esc(d.date)] : [
       esc(d.date),
       d.sourceCount ? `${esc(d.sourceCount)} sources` : '',
       d.generatedAt ? `generated ${esc(d.generatedAt)}` : '',
@@ -370,7 +418,7 @@
     <div class="day-badge__m">${esc(dp.m)} · ${esc(dp.dow)}</div>
   </div>
   <div class="feed__meta">
-    <h1>${r ? '今天 wiki 學到什麼 · Claude Code &amp; Anthropic' : '每日新聞摘要 · Claude Code &amp; Anthropic'}</h1>
+    <h1>${r ? '今日聚焦與 wiki 新知 · Claude Code &amp; Anthropic' : '每日新聞摘要 · Claude Code &amp; Anthropic'}</h1>
     <div class="feed__metarow">
       ${metaTopItems.join('<span class="sep">·</span>')}
     </div>
@@ -380,12 +428,15 @@
   </div>
 </div>`);
 
-    // 讀者版日期：整頁改渲染「今天 wiki 學到什麼」，不再渲染新聞條目。
+    // 讀者版日期：頂部畫今日聚焦＋重點話題（乙-2），接著「知識庫今天學到什麼」六領域；
+    // 技術更新／媒體報導／社群討論／付費方案這些新聞區塊不畫。
     // 原料欄位（sourceStatus / articleCount）仍在 JSON 裡，供 lint 來源健康檢查與
     // pipeline-change-check 量測使用，但不是讀者版的內容。
     if (r) {
+      const top = readerNewsTopHtml(d);
+      if (top) parts.push(top);
       parts.push(readerDigestHtml(r));
-      parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
+      if (!top) parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
       container.innerHTML = parts.join('\n');
       return;
     }
@@ -396,28 +447,8 @@
     }
 
     // focus — first
-    if (d.focus?.length) {
-      parts.push(`<div class="section section--focus">
-<div class="section__h"><span class="section__h-label">今 日 聚 焦</span><span class="section__h-en">today's focus</span><span class="section__h-count">${d.focus.length} items</span></div>
-<ul class="focus-list">`);
-      d.focus.forEach(f => {
-        const cls = focusTagCls(f.tag);
-        // 2026-09-04 使用者裁決：今日聚焦句尾不顯示來源連結（先改「來源 1、來源 2」為圖示，再裁決整個移除）。
-        // markdown 的行內連結照留——6g 歸因覆蓋率靠它算；細節在下方各區條目自有原文連結。
-        const refs = '';
-        parts.push(`<li class="focus-item"><span class="focus-tag focus-tag--${cls}">${esc(f.tag)}</span><span>${esc(f.text)}</span>${refs}</li>`);
-      });
-      // 投資訊號（wiki/topics/market-signals.md 的最新判讀日期＝本日時才有）：
-      // 沿用 focus-item 版式接在聚焦列表末尾，點擊進判讀頁。教學型事件研究、非投資建議。
-      if (d.marketSignal) {
-        parts.push(`<li class="focus-item focus-item--market"><span class="focus-tag focus-tag--market">投資訊號</span><button type="button" class="focus-item__link" onclick="openWikiPage('market-signals','topic')">${esc(d.marketSignal.title)} — 看判讀 →</button></li>`);
-      }
-      parts.push('</ul>');
-      // 常駐導流：重度使用者的核心問題「該不該升版」答案在熱度雷達頁，
-      // 但從日報頁原本沒有任何入口（2026-07-28 讀者 review 高影響項）
-      parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
-      parts.push('</div>');
-    }
+    const focusHtml = focusSectionHtml(d);
+    if (focusHtml) parts.push(focusHtml);
 
     // build focus URL → tag map (for badge injection on matching stories)
     const focusUrlMap = {};

@@ -22,7 +22,8 @@ WIKI_TOPICS   = ROOT / "wiki" / "topics"
 WIKI_RADAR    = ROOT / "wiki" / "feature-radar.md"
 READER_TAGS   = ROOT / "data" / "reader-tags.json"
 NEWS_DIR      = ROOT / "news"
-# daily/ = 讀者版日報（2026-09-12 改版「乙」）。news/ 降為原料層，照產照存但不再上站。
+# daily/ = 讀者版日報（2026-09-12 改版「乙」）。news/ 降為原料層，照產照存；
+# 讀者版日期只有它的 📌 今日聚焦與 ⭐ 重點話題仍上站（乙-2，app.js readerNewsTopHtml），其餘新聞區塊不畫。
 DAILY_DIR     = ROOT / "daily"
 WEEKLY_DIR    = ROOT / "weekly"
 OUT_JS           = ROOT / "web_reader" / "data" / "data.js"
@@ -1147,7 +1148,8 @@ def parse_digest(f: Path) -> dict:
 
 # ── 讀者版日報（daily/YYYY-MM-DD.md）──────────────────────────
 # 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，進料是當日 ingest
-# 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）但不再上站。
+# 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）；讀者版日期只保留
+# 它的今日聚焦與重點話題上站（乙-2），其餘新聞區塊不畫。
 # 規格端住 `.claude/commands/news-pipeline-steps.md` 的 `Step 2b：讀者版日報`，
 # 其「機械契約字串」表與本段互相指認並登記 .claude/review-registry.json 的 sync_pairs——
 # 節名或標記行改了而這裡沒跟，該領域整段靈默消失（同 2026-08-14 區塊 emoji 的死法）。
@@ -1258,11 +1260,16 @@ def attach_reader_digests(digest_all: dict, reader_all: dict) -> None:
             d["preview"] = r["summary"][:160]
 
 
-def reader_search_text(r: dict) -> str:
+def reader_search_text(r: dict, d: dict | None = None) -> str:
+    """讀者版日期的搜尋文字：讀者版全文，加上該日仍上站的今日聚焦與重點話題標題（乙-2）。
+    其餘新聞區塊（技術更新／媒體／討論／付費）不上站，也不索引——搜到卻看不到是死連結。"""
     segs = [r.get("summary", "")]
     for sec in r.get("sections", []):
         for it in sec["items"]:
             segs.append(f"{it['fact']}；{it['judgment']}")
+    if d:
+        segs.extend(f["text"] for f in d.get("focus", []) if f.get("text"))
+        segs.extend(s["title"] for s in d.get("topStories", [])[:5] if s.get("title"))
     return "；".join(x for x in segs if x)
 
 
@@ -1615,7 +1622,7 @@ def build():
     # Digests: index 今日聚焦 text + all story titles + story bodies —
     # body 補入前索引只到標題層，關鍵字若只出現在條目內文（未出現在標題）就搜不到。
     for date_str, d in digest_all.items():
-        # 讀者版的日期：索引讀者版內容，不索引原料（news/ 不再上站）。
+        # 讀者版的日期：索引讀者版內容＋仍上站的聚焦與重點話題標題；其餘新聞區塊不索引。
         if d.get("reader"):
             r = d["reader"]
             search_index.append({
@@ -1623,7 +1630,7 @@ def build():
                 "type":    "digest",
                 "name":    f"日報 {date_str}",
                 "summary": (r.get("summary") or "")[:90],
-                "text":    reader_search_text(r),
+                "text":    reader_search_text(r, d),
             })
             continue
         focus_txt = "；".join(f["text"] for f in d.get("focus", []))
