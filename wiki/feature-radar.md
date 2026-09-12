@@ -224,7 +224,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **workflow → ultracode 重命名**（⚠️ Breaking Change, v2.1.160） | 2026-06-02 | 🔥 | ✅ 推薦 | 正式發布 |
 | **Claude Code v2.1.158**（Auto mode on Bedrock/Vertex/Foundry） | 2026-05-30 | 🔥 | ✅ 推薦 | 正式發布 |
 | **Claude Opus 4.8**（SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用） | 2026-05-28 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Dynamic Workflows**（最多 1,000 平行子代理，UltraCode 1.7M token bug 無退款） | 2026-05-28 | 🔥 | ❌ 暫不推薦 | Research Preview |
+| **Dynamic Workflows**（最多 1,000 平行子代理，UltraCode 1.7M token bug 無退款） | 2026-05-28 | 🔥 | ❌ 暫不推薦 | 全部付費方案（Pro 在 `/config` 開）；2026-05-28 首發時為研究預覽。積木定位見 [[topics/anthropic-agent-stack]] |
 | **`skipLfs` 選項 + npm 版本通知**（v2.1.153） | 2026-05-28 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Coordinator 模式 + `/code-review --fix`**（v2.1.152） | 2026-05-27 | 🔥 | ✅ 推薦 | 正式發布 |
 | **小企業 Skills**（31 個官方 Skills） | 2026-05-24 | 🔥 | ✅ 推薦 | 正式發布 |

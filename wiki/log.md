@@ -6266,3 +6266,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **根因：** 一頁同時回答兩群不同節奏的問題——每日（這則怎麼判、有沒有能買的、催化劑登記、結算加列）與每週（課程表押對了嗎、教材線走到哪、IPO 背景）。依 `.claude/reporter-rules/wiki-ingest-format.md`「頁面拆分原則」，題分成不同時序的兩群即拆。
 
 **處置：** 新建 `wiki/topics/market-lessons.md`（投資判讀教材，週更）收 IPO 背景段、買不到的消息線表、一課一課學課程表；`market-signals.md` 留摘要、買得到的標的（每日，判讀涉及上市公司時同步）、近期判讀、回顧結算、里程碑。兩頁以 wikilink 互連，不做母子頁（母頁契約規定母頁每日唯讀，與每日判讀流衝突；課程表是判讀的衍生，衍生關係用連結）。觸發邊：`.claude/reporter-rules/wiki-ingest-market-lint.md`「教材頁週更」（`/wiki-lint` 5h 結算後沉澱），`scripts/check_wiki_freshness.py` DERIVED_PAGES 登記；記者規則改「結論表的歸屬：每日一張、每週兩張」，角色檔標教材頁唯讀；index 加一列。同日先前裁決：讀者定位「會買個股的工程師」、蒐集邊界不擴大（專注 Claude／Anthropic）、安全線只留官方一手那則。三輪 review 產物：`docs/page-audits/wave9-{novice-reader,stock-reader-recheck,stock-reader-round3}-2026-09-12.md`。
+
+## 2026-09-12 Query：agent 積木頁沒讓讀者知道「官方為什麼出、我多了什麼工作流」（第 13 波健檢）
+
+**點出什麼：** 使用者說「介紹 agent 那頁效果不是很好，沒有讓我知道目前 function 讓我多實作了什麼工作流、為什麼官方要出這個」「所有跟 agent 操作有關的我都在乎」。健檢卡盤點八種積木十六格，「官方為什麼出」缺 4 格、「可照做的工作流」缺 7 格；冷讀者 Q2（subagent 加 workflows 能跑什麼）半拿到，卡在四原語只有名字沒有一行 script。
+
+**根因：** 頁面兩個軸（選型表、六層架構）講的都是積木「之間的關係」，讀者問的是每個積木「自己的來歷與產出」，這個軸不存在；不是漏寫幾句，是軸選錯。另有四處事實錯：頁面說 `/goal` 無官方專頁（有）、MCP 隧道標公開測試（研究預覽須申請）、issue #24798 標 75 則未結（已關閉 84 則）、SDK 計費句抄自 pricing。
+
+**處置：** [[topics/anthropic-agent-stack]] 改一積木一卡（八張，三欄：沒有它之前／官方多給了什麼＋最小指令／還做不到什麼，指令與 prompt 全取官方文件逐字），新增「這八塊怎麼疊」（官方可證四條：workflow 的 agent 可再派 subagent ≤3 層、`/goal` 可啟 workflow、subagent 裡開不了 workflow、workflow 裡開不了 teams），「你該用哪個」換官方三問決策樹，選型表與六層降附錄；計費算式歸子頁 [[entities/managed-agents]]；[[feature-radar]] Dynamic Workflows 狀態格由 Research Preview 更正為全付費方案；功能記者規則落點改八卡三欄。複驗：Q1／Q2／Q4 拿到、Q3 半（已補官方分界句）。產物 `docs/page-audits/anthropic-agent-stack-2026-09-12*.md`。歸因 slug `user-query`。

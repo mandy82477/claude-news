@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 87
+inbound_links: 88
 attribution_count: 476
 attribution_last: "2026-09-11"
 top_source: "github-issues"

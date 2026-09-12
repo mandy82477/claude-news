@@ -56,10 +56,17 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 | 最適合 | 要跑數小時以上、跨 session 保留狀態的工作流；需要資料不出境（自架沙箱） |
 | 不適合 | 單次 30 分鐘內做得完、或不需保留跨 session 狀態的任務——`/goal` 就夠 |
 
-> 跨功能的熱度對比見 [[feature-radar]]；跟其他官方 agent 形態怎麼挑、積木怎麼組，以及**計費算式與官方算例**（token 牌價＋$0.08／session-hr），見上層 [[topics/anthropic-agent-stack]]「選型細節」。
+> 跨功能的熱度對比見 [[feature-radar]]；跟其他官方 agent 形態怎麼挑、八塊積木各自為什麼出，見上層 [[topics/anthropic-agent-stack]]。
 
 **為什麼只剩 🔥🔥**：近四週（08-09～09-06）只被提到兩天——一次是 SDK 版號、一次是別人拿它當對照組——沒有任何正向採用回報，實質新功能停在 05-22。
 %% 維運備忘：2026-09-05 頁面健檢一次性下修。量測：python scripts/news_mentions.py --since 4w --any "Managed Agents" "受管代理" → 命中 08-20（版號無細節）、09-03（負向對照）。現行「連續 4 週零命中 −1 格」對本頁降 0 格，故為編輯判斷；上限式判準是否成法見 docs/page-audits/ledger.md 待裁決。feature-radar L226 已同步。%%
+
+---
+
+## 怎麼計費
+
+- **依模型 token 牌價**（快取乘數適用；session 內 web search 另計 $10／1,000 次；`inference_geo: "us"` 1.1×）＋ session runtime **$0.08／session-hour**（只計 `running` 狀態，取代 container-hour）。
+- **計費例外與算例**：不適用 Batch 折扣與 partner 雲端平台；官方算例 Opus 5 跑 1 小時、50k 輸入／15k 輸出 ≈ **$0.705**（[定價文件](https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing)，2026-09-06 查證）。
 
 ---
 
