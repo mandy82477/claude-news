@@ -49,3 +49,13 @@ Managed Agents 計費（L69–70）沿用第 2 波 2026-09-06 查證，本波未
 1. 每張卡的「官方為什麼出」欄只准用第一節表格的逐字句或其忠實改寫；工作流欄優先抄官方自己給的 prompt 範本（workflows 六條、teams 兩條、cross-session 三條、/goal 四例），社群案例放第二位。
 2. 二-①（/goal 專頁）與二-⑤（MCP 隧道狀態）是硬錯，實作單必含；二-⑥ issue #24798 改「已關閉、84 則」並把「由 workflows 承接」降為本頁推論或刪。
 3. 官方 agents 總覽頁的三問決策樹（誰協調／要不要互講／碰不碰同檔）比本頁六層架構更貼讀者視角，可考慮以它取代六層作為「怎麼挑」節的骨架，六層降為附錄。
+
+## 五、健檢卡「需官方查證表」五項回覆（主 session，2026-09-12 補查）
+
+| # | 項 | 官方 | 處置 |
+|---|---|---|---|
+| 1 | Agent SDK 列版本下限與計費切割句 | 未上網重查。v0.100.0／v0.95.0 出自本庫 2026-05-07 條目（`entities/claude-code.md` L769、`entities/managed-agents.md` L133）；計費切割暫停句的家在 `entities/pricing.md` L151 與 L613 節 | 本頁該列改一句「計入訂閱配額，細節見 [[entities/pricing]]」，不再抄事實；09-14 pricing 換軌只需改 pricing 一處 |
+| 2 | **組合題：subagent 加 workflows 能不能疊** | sub-agents 頁："By default, a subagent can spawn subagents of its own, up to three layers below the main conversation"（`CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH`）；同頁 Available tools：`Workflow` 一律從 subagent 工具池移除；agent-teams 頁：teammate 不可巢狀、`-p` 與 SDK session 不 spawn teammate；workflows 頁限制表："No mid-run user input"；goal 頁："If a subagent or a background shell command is still running when a turn ends, Claude Code skips the evaluation for that turn" | 可疊的組合（官方可證）：**workflow 的 agent 可再派 subagent（≤3 層）**；**`/goal` 的 session 可以啟 workflow**（評估會等背景工作完）。不可疊：subagent 裡不能開 workflow；workflow 裡不能開 agent teams；workflow 中途不能等你輸入。設計者拿這四句寫「怎麼疊」一節 |
+| 3 | L62「Explore 跳過 CLAUDE.md」 | sub-agents 頁逐字："Explore and Plan skip your CLAUDE.md files and the parent session's git status to keep research fast and inexpensive." "Explore and Plan are the only subagents that omit CLAUDE.md and git status." | **對，保留**；二-② 改判：只有版本號 v2.1.198 對錯事實（該版是 extended thinking 繼承） |
+| 4 | Managed Agents 持久記憶狀態 | memory 頁：memory store 走 `agent-memory-2026-07-22` beta header，無需申請；dreaming 為研究預覽須申請（overview 頁） | 「持久記憶（公開測試）」可保留為 beta；Dreaming 維持研究預覽 |
+| 5 | dynamic workflows 兩頁狀態不一致 | 官方現況：all paid plans（Pro 在 /config 開）。Research Preview 是 v2.1.154 首發時狀態 | `feature-radar` L227 狀態欄過期，實作單列一格修正並互指；退款爭議（UltraCode 1.7M token）是獨立事實，留 radar，本頁只 wikilink 不重述 |
