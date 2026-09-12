@@ -154,3 +154,4 @@ jobs:
             echo "::error::Push failed after 3 attempts — 今日抓料未落地"
             exit 1
           fi
+

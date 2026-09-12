@@ -46,3 +46,4 @@ jobs:
           # 查前一個 UTC 日：本 job 於 01:00 UTC 跑，當日的 pipeline 尚未開始
           python3 scripts/daily_health_check.py --format md \
             --date "$(date -u -d yesterday +%F)" | tee -a "$GITHUB_STEP_SUMMARY"
+
