@@ -658,3 +658,12 @@
 [cloud weekly-wiki-lint-cloud COMPLETE 2026-09-12T03:54:43Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-09-12T17:01:03Z]
 [Sat 2026/09/12 22:02:142] [cloud daily-news-pipeline-cloud STARTED 2026-09-12T22:02:14Z]
+[Sat 2026/09/12 22:58:52.00] === Agent pipeline start (2026-09-12) ===
+[Sat 2026/09/12 22:58:52.00] Aggregator OK (replay from gathered_archive/2026-09-12.json)
+[Sat 2026/09/12 22:58:52.00] Wiki ingest OK（六類記者＋devpractice＋market 全數完成，無失敗）
+[Sat 2026/09/12 22:58:52.00] Reader digest OK（daily/2026-09-12.md，與稍早使用者 Query 產出的今日條目合併）
+[Sat 2026/09/12 22:58:52.00] Building web reader...
+[Sat 2026/09/12 22:58:52.00] 測試全綠 - web build 放行
+[Sat 2026/09/12 22:58:52.00] Single push done (news + wiki + web)
+[cloud daily-news-pipeline-cloud COMPLETE 2026-09-12T22:58:52Z]
+[Sat 2026/09/12 22:58:52.00] === Pipeline complete (agent) ===
