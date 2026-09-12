@@ -12,9 +12,9 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 2
-attribution_count: 0
-attribution_last: null
-top_source: null
+attribution_count: 5
+attribution_last: "2026-09-12"
+top_source: "user-query"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
