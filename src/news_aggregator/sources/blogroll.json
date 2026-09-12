@@ -1,12 +1,16 @@
 {
-  "_doc": "權威部落客 RSS 名單。status: probation(試用期30天)/active/retired。汰換由 /source-review 建議、使用者確認後改此檔。命中統計不存此檔，由 data/*.jsonl 推導。blog 條目 schema: {\"slug\", \"name\", \"rss_url\", \"added\": \"YYYY-MM-DD\", \"tags\": [], \"status\": \"probation\", \"notes\": \"\"}",
+  "_doc": "權威部落客 RSS 名單。status: probation(試用期30天)/active/retired。汰換由 /source-review 建議、使用者確認後改此檔。命中統計不存此檔，由 data/*.jsonl 推導。blog 條目 schema: {\"slug\", \"name\", \"rss_url\", \"added\": \"YYYY-MM-DD\", \"tags\": [], \"status\": \"probation\", \"notes\": \"\"} 2026-09-12 起含各家 AI 廠商官方 blog／changelog（tags 含 vendor）：只加來源、不改規則，條目經關鍵字預過濾後走現有流程；xAI／DeepSeek／Moonshot／Zhipu 無可用 RSS、Qwen github blog 近 30 天無內容，實測後未加。",
   "blogs": [
     {
       "slug": "simonwillison",
       "name": "Simon Willison",
       "rss_url": "https://simonwillison.net/atom/everything/",
       "added": "2026-07-11",
-      "tags": ["ai-engineering", "llm-eval", "tools"],
+      "tags": [
+        "ai-engineering",
+        "llm-eval",
+        "tools"
+      ],
       "status": "probation",
       "notes": "llm CLI 作者，日更，橫跨模型評測/工具實測/生態觀察"
     },
@@ -15,7 +19,11 @@
       "name": "Jesse Vincent",
       "rss_url": "https://blog.fsck.com/feed/feed.xml",
       "added": "2026-07-11",
-      "tags": ["claude-code", "plugins", "skills"],
+      "tags": [
+        "claude-code",
+        "plugins",
+        "skills"
+      ],
       "status": "probation",
       "notes": "Superpowers plugin 作者，篇篇命中 Claude Code plugin/skills 實務"
     },
@@ -24,7 +32,10 @@
       "name": "Armin Ronacher",
       "rss_url": "https://lucumr.pocoo.org/feed.atom",
       "added": "2026-07-11",
-      "tags": ["agent-design", "tooling"],
+      "tags": [
+        "agent-design",
+        "tooling"
+      ],
       "status": "probation",
       "notes": "Flask 作者，深挖 agent 工具設計失敗機制與升版風險"
     },
@@ -33,9 +44,78 @@
       "name": "antirez",
       "rss_url": "https://antirez.com/rss",
       "added": "2026-07-11",
-      "tags": ["systems", "claude-code"],
+      "tags": [
+        "systems",
+        "claude-code"
+      ],
       "status": "probation",
       "notes": "Redis 創始人，Claude Code 批判性實測（頻率低但含金量高）"
+    },
+    {
+      "slug": "openai-news",
+      "name": "OpenAI News",
+      "rss_url": "https://openai.com/news/rss.xml",
+      "added": "2026-09-12",
+      "tags": [
+        "vendor",
+        "competitor",
+        "openai"
+      ],
+      "status": "probation",
+      "notes": "OpenAI 官方新聞／發布（含模型、產品、企業案例）。2026-09-12 實測：可抓、近 30 天 62 則；關鍵字預過濾後多數不進日報，只有提到 Claude／LLM／agent 者會進。觀察一個月，看 competitor-landscape 時序是否被非編碼工具條目塞滿再決定開專頁"
+    },
+    {
+      "slug": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "rss_url": "https://deepmind.google/blog/rss.xml",
+      "added": "2026-09-12",
+      "tags": [
+        "vendor",
+        "competitor",
+        "google"
+      ],
+      "status": "probation",
+      "notes": "DeepMind 官方部落格（模型與研究發布）。2026-09-12 實測：可抓、近 30 天 10 則。Gemini 產品線另有 blog.google/products/gemini/rss/ 可抓，本次未加"
+    },
+    {
+      "slug": "meta-newsroom",
+      "name": "Meta Newsroom",
+      "rss_url": "https://about.fb.com/news/feed/",
+      "added": "2026-09-12",
+      "tags": [
+        "vendor",
+        "competitor",
+        "meta"
+      ],
+      "status": "probation",
+      "notes": "Meta 官方新聞室（AI 產品發布走這裡，如 Muse）。ai.meta.com/blog 無 RSS（實測 404），以新聞室替代。2026-09-12 實測：可抓、近 30 天 10 則"
+    },
+    {
+      "slug": "microsoft-foundry",
+      "name": "Microsoft Foundry Blog",
+      "rss_url": "https://devblogs.microsoft.com/foundry/feed/",
+      "added": "2026-09-12",
+      "tags": [
+        "vendor",
+        "channel",
+        "microsoft"
+      ],
+      "status": "probation",
+      "notes": "Microsoft Foundry 官方 devblog——Claude 在 Foundry 通路的可用性與功能公告會先出現在這裡。2026-09-12 實測：可抓、近 30 天 3 則，其中 3 則命中關鍵字（含「five new Claude capabilities in Foundry」）"
+    },
+    {
+      "slug": "github-copilot-changelog",
+      "name": "GitHub Copilot Changelog",
+      "rss_url": "https://github.blog/changelog/label/copilot/feed/",
+      "added": "2026-09-12",
+      "tags": [
+        "vendor",
+        "competitor",
+        "microsoft",
+        "coding-tool"
+      ],
+      "status": "probation",
+      "notes": "GitHub（Microsoft）Copilot 官方 changelog，Claude Code 的直接競品迭代。2026-09-12 實測：可抓、近 30 天 10 則"
     }
   ]
 }
