@@ -42,7 +42,7 @@ Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過
 
 本頁摘要中的職稱與經歷描述僅來自 Coxon 本人貼文。尚無獨立媒體對其身分、任職時間或具體職掌的查證，查證狀態見上方標記。事件的機制與政策面（自我改進超級智能爭論）見 [[topics/recursive-self-improvement]]，本頁僅記錄此人此言與其可信度爭議。
 
-2026-09-12 起，Times of India、ESG Dive 分別以「又一名 Anthropic 員工」辭職示警、及本次辭職個案檢視 AI 公司 IPO 治理疑慮為題跟進報導；兩則報導均未具名，是否指本人或另一起獨立辭職事件尚待查證（見下方爭議節）。
+2026-09-12 起，Times of India、ESG Dive 分別以「又一名 Anthropic 員工」辭職示警、及本次辭職個案檢視 AI 公司 IPO 治理疑慮為題跟進報導；兩則報導均未具名，是否指本人或另一起獨立辭職事件仍未能確認（見下方爭議節的查證標記）。
 
 ## 核心論述
 
@@ -84,7 +84,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
-- 2026-09-12：Times of India、ESG Dive 同日跟進報導；前者稱「又一名 Anthropic 員工」提出 AI 警告後離職，後者以此辭職事件檢視 AI 公司 IPO 前公司治理疑慮；均未具名，是否即本人或另一起獨立事件尚待查證
+- 2026-09-12：Times of India、ESG Dive 同日跟進報導；前者稱「又一名 Anthropic 員工」提出 AI 警告後離職，後者以此辭職事件檢視 AI 公司 IPO 前公司治理疑慮；均未具名，是否即本人或另一起獨立事件仍未能確認
 - 2026-09-11：Hugging Face 執行長於 Business Insider 評論一名 Anthropic 研究員的 AI 警告，比喻「問空調師傅氣候變遷」，暗示質疑其專業代表性（報導未點名對象，僅標題可用）
 - 2026-09-10：科技作家 Cal Newport 發表部落格評論〈Anthropic Just Threatened to Kill Billions of People. This Is Not Okay〉，引述本人辭職聲明全文與 Hubinger 回應，批評相關警告不應被輕描淡寫（Hacker News 討論）
 - 2026-09-10：Forbes、CNN、Wired、PBS、Time、Axios、半島電視台等至少 7 家媒體跟進報導一名「剛辭去 Anthropic 職務的研究員」示警 AI 存在性風險，標題均未具名（研判即本人，身分連結為推論），Forbes 稱馬斯克公開嘲諷此人「看起來像是一場設局」
