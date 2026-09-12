@@ -378,3 +378,56 @@ class TestMainExitCode(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestReaderDigestGate(unittest.TestCase):
+    """日報改版乙：改版日起「原料有、讀者版沒有」必須是問題；改版日前不檢查。"""
+
+    def _repo(self, tmp, d, news=True, reader=False, gather=True):
+        import json as _json
+        repo = Path(tmp)
+        (repo / "src" / "gathered_archive").mkdir(parents=True)
+        if gather:
+            (repo / "src" / "gathered_archive" / f"{d}.json").write_text(
+                _json.dumps({"items": [{"t": 1}]}), encoding="utf-8")
+        (repo / "news").mkdir(); (repo / "daily").mkdir()
+        (repo / "web_reader" / "data" / "digest").mkdir(parents=True)
+        if news:
+            (repo / "news" / f"{d}.md").write_text("# x", encoding="utf-8")
+            (repo / "web_reader" / "data" / "digest" / f"{d}.json").write_text("{}", encoding="utf-8")
+        if reader:
+            (repo / "daily" / f"{d}.md").write_text("# x", encoding="utf-8")
+        return repo
+
+    def test_missing_reader_after_cutover_is_a_problem(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as tmp:
+            d = date(2026, 9, 13)
+            r = check(d, repo=self._repo(tmp, d.isoformat(), reader=False))
+            self.assertFalse(r["healthy"])
+            self.assertIn("讀者版", [p[0] for p in r["problems"]])
+            self.assertIn("③b 讀者版缺件", render_md({**r, "parked": []}))
+
+    def test_reader_present_after_cutover_is_green(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as tmp:
+            d = date(2026, 9, 13)
+            r = check(d, repo=self._repo(tmp, d.isoformat(), reader=True))
+            self.assertTrue(r["healthy"])
+            self.assertIn("③b 讀者版已產出", render_md({**r, "parked": []}))
+
+    def test_before_cutover_reader_is_not_checked(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as tmp:
+            d = date(2026, 9, 1)
+            r = check(d, repo=self._repo(tmp, d.isoformat(), reader=False))
+            self.assertTrue(r["healthy"])
+            self.assertNotIn("③b", render_md({**r, "parked": []}))
+
+    def test_missing_news_does_not_also_report_reader(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as tmp:
+            d = date(2026, 9, 13)
+            r = check(d, repo=self._repo(tmp, d.isoformat(), news=False, reader=False))
+            self.assertNotIn("讀者版", [p[0] for p in r["problems"]])
+

@@ -18,6 +18,9 @@
   ③ 網站：`web_reader/data/digest/YYYY-MM-DD.json` 存在
      —— 單獨檢查是因為「日報有、網站沒有」是真實會發生的半成品狀態
      （2026-07-31 就是這樣：日報與 wiki 都好，只有 web build 被跳過）
+  ③b 讀者版：`daily/YYYY-MM-DD.md` 存在（日報改版乙起，2026-09-12 生效）
+     —— Step 2b 漏跑時網站只會靜默退回舊格式，沒人會知道；這一項讓
+     「沒跑」和「跑了」在看門狗上長得不一樣。改版日之前的日期不檢查。
   ④ 近 7 天缺口：Step 0 只看昨天，連漏數天時要能一次看到全貌
 
 外加一項（`parked_branches()`，只在 CLI 路徑跑、不進 check()）：
@@ -50,6 +53,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+READER_DIGEST_SINCE = date(2026, 9, 12)  # 日報改版乙生效日：此日起 daily/<date>.md 為必要產出
+
 
 # 雲端 routine 停泊未併成果的分支命名慣例。
 PARKED_BRANCH_RE = re.compile(r"cloud-daily-\d{4}-\d{2}-\d{2}-unmerged")
@@ -86,6 +91,9 @@ def check(target: date, repo: Path = REPO_ROOT) -> dict:
 
     digest_ok = (repo / "news" / f"{d}.md").exists()
     web_ok = (repo / "web_reader" / "data" / "digest" / f"{d}.json").exists()
+    # 讀者版（日報改版乙）：改版日起，有原料日報就該有讀者版；之前的日期不適用
+    reader_applies = target >= READER_DIGEST_SINCE
+    reader_ok = (repo / "daily" / f"{d}.md").exists()
 
     problems = []
     if gather_n == 0:
@@ -95,6 +103,8 @@ def check(target: date, repo: Path = REPO_ROOT) -> dict:
     elif not web_ok:
         # 只有在日報存在時才算「網站沒跟上」；日報本身就沒有的話，上面那條已經涵蓋
         problems.append(("網站", f"web_reader/data/digest/{d}.json 不存在——日報有但網站沒重建（多半是 web build gate 擋下）"))
+    if digest_ok and reader_applies and not reader_ok:
+        problems.append(("讀者版", f"daily/{d}.md 不存在——原料日報有但讀者版沒產出（Step 2b 漏跑，網站靜默退回舊格式）"))
 
     holes = []
     for i in range(1, 8):
@@ -109,6 +119,8 @@ def check(target: date, repo: Path = REPO_ROOT) -> dict:
         "gather_n": gather_n,
         "digest_ok": digest_ok,
         "web_ok": web_ok,
+        "reader_applies": reader_applies,
+        "reader_ok": reader_ok,
         "problems": problems,
         "holes": holes,
     }
@@ -146,6 +158,9 @@ def render_md(r: dict) -> str:
         lines.append("- ✅ ② web reader 已重建")
     elif r["digest_ok"]:
         lines.append(f"- ❌ ② 日報有但網站沒重建：web_reader/data/digest/{r['date']}.json 不存在（多半是 web build gate 擋下）")
+    if r.get("reader_applies") and r["digest_ok"]:
+        lines.append(f"- ✅ ③b 讀者版已產出：daily/{r['date']}.md" if r.get("reader_ok")
+                     else f"- ❌ ③b 讀者版缺件：daily/{r['date']}.md 不存在（Step 2b 漏跑，網站靜默退回舊格式）")
 
     parked = r.get("parked", [])
     if parked:
