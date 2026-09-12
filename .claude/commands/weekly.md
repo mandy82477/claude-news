@@ -11,7 +11,7 @@ argument-hint: [YYYY-Wnn]
 |---|---|---|---|
 | 0 | 本檔步驟 0 | 本機專屬補跑 | 5b 榜單週更、5c 清算、lint 待裁示呈報、開放迴路掃描 |
 | 1 | `.claude/commands/weekly-report.md` | 對外交付 | `weekly/YYYY-Wnn.md`（凍結存檔） |
-| 2 | `.claude/commands/wiki-weekly-review.md` | 對內策展 | `wiki/` 頁面加碼 + `wiki/log.md` |
+| 2 | `.claude/skills/wiki-weekly-review/SKILL.md` | 對內策展 | `wiki/` 頁面加碼 + `wiki/log.md` |
 | 3 | 本檔步驟 3 | 收尾 | commit + test + build + **單一 push** |
 
 ---
@@ -85,7 +85,7 @@ argument-hint: [YYYY-Wnn]
 
 ### 2. wiki 週度延伸回顧（對內策展）
 
-讀 `.claude/commands/wiki-weekly-review.md` 並依其步驟 1–5 執行（含六記者並行判斷、月度聚焦校準判斷、`wiki/reader-notes.md` 收件匣消費、彙整清單交使用者確認、依確認執行、log 記錄）。
+讀 `.claude/skills/wiki-weekly-review/SKILL.md` 並依其步驟 1–5 執行（含六記者並行判斷、月度聚焦校準判斷、`wiki/reader-notes.md` 收件匣消費、彙整清單交使用者確認、依確認執行、log 記錄）。
 
 - **使用者確認閘保留**：步驟 3 的建議清單仍須經使用者確認才可執行修改，本指令不代為決定
 - **跳過該檔的步驟 6（收尾閉迴路）**——同上，留到步驟 3

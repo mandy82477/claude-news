@@ -32,10 +32,6 @@
         "pattern": "根目錄 `CLAUDE\\.md`"
       },
       {
-        "file": ".claude/commands/wiki-weekly-review.md",
-        "pattern": "根目錄 `CLAUDE\\.md`"
-      },
-      {
         "file": ".claude/commands/weekly-report.md",
         "pattern": "根目錄 `CLAUDE\\.md`"
       },
@@ -826,7 +822,7 @@
       "files": [
         ".claude/commands/weekly.md",
         ".claude/commands/weekly-report.md",
-        ".claude/commands/wiki-weekly-review.md"
+        ".claude/skills/wiki-weekly-review/SKILL.md"
       ],
       "patterns": [
         "/weekly(?![-a-z])",
