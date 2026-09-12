@@ -36,7 +36,7 @@ argument-hint: YYYY-MM-DD [YYYY-MM-DD]
 
 **按時間順序補跑（最舊 → 最新）**，確保歷史記錄正確插入。
 
-對每個待補跑日期，依照 `/wiki-ingest` 的完整步驟執行：
+對每個待補跑日期，依照 `.claude/skills/wiki-ingest/SKILL.md` 的完整步驟執行：
 - 更新受影響的 entities/ 和 topics/ 頁面（歷史記錄插入正確位置）
 - 更新 feature-radar.md
 - Append 至 log.md

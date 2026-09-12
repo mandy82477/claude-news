@@ -1,6 +1,6 @@
 # Wiki Ingest — 開發實務（devpractice）記者指南（daily）`[加入: 2026-09-02]`
 
-devpractice 記者**不在六類分類路由內**——沒有任何日報條目會被分類成「開發實務」。他的料是**其他記者沉澱完之後的 wiki diff**：每日 ingest 彙整完成後，由主編派工（見 `.claude/commands/wiki-ingest.md`「第四步」，此為本角色的明文觸發邊），他自己 git diff 看新增了什麼、決定哪些跟 coding 開發相關。
+devpractice 記者**不在六類分類路由內**——沒有任何日報條目會被分類成「開發實務」。他的料是**其他記者沉澱完之後的 wiki diff**：每日 ingest 彙整完成後，由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4b」，此為本角色的明文觸發邊），他自己 git diff 看新增了什麼、決定哪些跟 coding 開發相關。
 
 **為什麼吃 diff 不吃 tag**（2026-09-02 使用者裁決）：靠其他記者標 tag 是跨記者耦合——主線 tag 規則自己就寫著「漏填等於該節點不存在」，等於把「什麼算 coding」的判斷分散給兩個不管這頁的人。diff 不會漏、不會忘、不依賴紀律，且撿的是記者已判定值得入庫的內容，天然過了一層品質濾網。
 

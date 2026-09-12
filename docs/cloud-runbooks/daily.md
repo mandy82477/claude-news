@@ -74,11 +74,11 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 
 ## Wiki Ingest（上表的 Step 2）
 
-完整步驟見 `.claude/commands/wiki-ingest.md`，照該檔執行：分類今日日報條目 → 平行派工六類記者 → 彙整 `wiki/feature-radar.md` / `wiki/index.md` / `wiki/log.md` / `data/source_attribution.jsonl`。
+完整步驟見 `.claude/skills/wiki-ingest/SKILL.md`，照該檔執行：分類今日日報條目 → 平行派工六類記者 → 彙整 `wiki/feature-radar.md` / `wiki/index.md` / `wiki/log.md` / `data/source_attribution.jsonl`。
 
 **派工注意：**
 - 你是頂層 session，用 Task tool 派工會同步等待完成，不會有本機那個「巢狀背景通知迷路」的問題，可放心派
-- 派工一律 `subagent_type: "general-purpose"` + `model: "sonnet"`，prompt 首段為角色前導（導向 `.claude/agents/wiki-reporter-[category].md`），格式照 `.claude/commands/wiki-ingest.md` 步驟 3。**這就是正典路徑，不是降級**——2026-08-15 起本機與雲端同一條路，不再需要在 log 標注「降級執行」（歷史：07-18～08-14 雲端無法載入自訂 `wiki-reporter-*` subagent_type，六次退回內嵌路徑；已裁決轉正，見 `.claude/reporter-rules/wiki-ingest.md`「派工方式」）
+- 派工一律 `subagent_type: "general-purpose"` + `model: "sonnet"`，prompt 首段為角色前導（導向 `.claude/agents/wiki-reporter-[category].md`），格式照 `.claude/skills/wiki-ingest/dispatch.md`。**這就是正典路徑，不是降級**——2026-08-15 起本機與雲端同一條路，不再需要在 log 標注「降級執行」（歷史：07-18～08-14 雲端無法載入自訂 `wiki-reporter-*` subagent_type，六次退回內嵌路徑；已裁決轉正，見 `.claude/reporter-rules/wiki-ingest.md`「派工方式」）
 
 **失敗處理：** Step 2 整體失敗或部分記者失敗時，記錄錯誤但仍繼續後續步驟（web build 不依賴 wiki 完整性）。
 

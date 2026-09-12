@@ -5,19 +5,19 @@ argument-hint: [YYYY-MM-DD]
 
 # News Pipeline
 
-執行完整每日自動化流程，分三段執行。
+執行完整每日自動化流程，分三段執行。三段的步驟規範分住四個 skill（本檔只排順序，步驟語意不在本檔），對照表見檔末。
 
-**為何拆三段：** Step 2（wiki ingest 記者派工）需要用 Agent tool 呼叫記者 agent。若把這步包進背景 agent 內執行，「背景 agent 自己再派 agent」這個巢狀情境下，記者的完成通知會被系統送到最上層 session，而不是送回中間那層背景 agent——即使呼叫時完全沒有設定 `run_in_background: true` 也一樣，這是巢狀背景執行的系統性限制，不是措辭問題（已實際發生過一次，該次記錄見 Phase B 說明）。因此：
+**拆三段的邊界（不可放寬）：**
 
-- **Step 2 必須由呼叫 `/news-pipeline` 的本 session 親自執行**，不可再包進任何背景 agent
-- **`/news-pipeline` 本身也不可被包進背景 agent 呼叫**（例如不可用 Agent tool 以 `run_in_background: true` 派一個 agent去執行 `/news-pipeline`）——否則本 session 也變成巢狀背景層，Phase B 一樣會壞掉
+- **Step 2（wiki ingest 記者派工）必須由呼叫 `/news-pipeline` 的本 session 親自執行**，不可再包進任何背景 agent——巢狀背景下記者的完成通知會被送到最上層 session，而不是送回中間那層背景 agent
+- **`/news-pipeline` 本身也不可被包進背景 agent 呼叫**（例如不可用 Agent tool 以 `run_in_background: true` 派一個 agent 去執行 `/news-pipeline`）——否則本 session 也變成巢狀背景層，Phase B 一樣會壞掉
 - 其餘不涉及 Agent 派工的步驟（Step 0、1a、1b、3、4、5、6）可安全包進背景 agent，節省本 session context
 
 ### TARGET_DATE 一律取 UTC 日期 `[加入: 2026-08-29]`
 
-**`date -u +%F`，不是本機時區的今天。** 雲端 routine 用的就是 UTC（見 `docs/cloud-runbooks/daily.md`），本機若用台北日期，兩邊在**台北 00:00–08:00** 這個窗內會差一天——而深夜補跑正好落在那個窗裡。
+**`date -u +%F`，不是本機時區的今天**（雲端 routine 用的就是 UTC，見 `docs/cloud-runbooks/daily.md`）。
 
-> 2026-08-29 踩過：台北 00:44 跑的一次補跑，把 UTC 08-28 的資料標成 08-29 那天的日報檔名。那份日報裡 08/29 的條目**一則都沒有**（08/26 三則、08/27 十七則、08/28 廿一則），而它佔住了 08-29 的檔名，使當天真正的新聞被 `Step 0b：冪等閘` 擋在門外——**錯標一天不只是標籤錯，它會吃掉一整天的日報。**
+> 上述兩條的實證與病例見沿革檔 `docs/rules-changelog/news-pipeline-steps.md` 2026-08-29。
 
 若提供日期參數（`$ARGUMENTS`），以補跑模式執行；否則以今天為目標。
 
@@ -55,7 +55,7 @@ Phase A agent 完成後自動通知本 session。
 收到 Phase A 完成通知後：
 
 - **若 Phase A 回報 Step 1a FAILED** → 不進入 Phase B、不進入 Phase C。本 session 直接用 Bash 對 `REPO_ROOT\src\logs\task_scheduler.log` append 一行 `Aggregator FAILED - stopping`（依 `.claude/skills/web-publish/SKILL.md` Step 6 格式），輸出完成摘要（Step 2 以後全部標記 ⏭️），結束
-- **若 Phase A 成功** → **本 session 直接**（不透過任何背景 agent）依 `.claude/commands/wiki-ingest.md` 的完整步驟，針對 TARGET_DATE 執行 wiki ingest：分類 → foreground 派工六類記者 → 彙整 `feature-radar.md` / `index.md` / `log.md`。記下本階段結果（OK / FAILED）供 Phase C 寫入 Step 6 log
+- **若 Phase A 成功** → **本 session 直接**（不透過任何背景 agent）依 `.claude/skills/wiki-ingest/SKILL.md` 的完整步驟，針對 TARGET_DATE 執行 wiki ingest：分類 → foreground 派工六類記者 → 彙整 `feature-radar.md` / `index.md` / `log.md`。記下本階段結果（OK / FAILED）供 Phase C 寫入 Step 6 log
 - **ingest 完成後，本 session 接著執行 `Step 2b：讀者版日報`** `[加入: 2026-09-12]`（逐字規格見 `.claude/skills/reader-digest/SKILL.md`）：讀當日 wiki diff，寫 `daily/TARGET_DATE.md`。**必須排在 Step 2 之後、Phase C 的 Step 3 之前**——它吃的是尚未 commit 的 wiki 改動，Step 3 一 commit 就取不到那份 diff 了。本步失敗不阻斷，仍進 Phase C
 
 ---
@@ -97,6 +97,6 @@ Phase C agent 完成後自動通知本 session；本 session 彙整 Phase A + B 
 |---|---|---|
 | Phase A | Step 0 / 0b / 1a / 1c | `.claude/skills/news-gather/SKILL.md` |
 | Phase A | Step 1b 生成日報 | `.claude/skills/news-digest/SKILL.md`（＋同目錄 `format.md`、`selection.md`） |
-| Phase B | Step 2 wiki ingest | `.claude/commands/wiki-ingest.md` |
+| Phase B | Step 2 wiki ingest | `.claude/skills/wiki-ingest/SKILL.md` |
 | Phase B | Step 2b 讀者版日報 | `.claude/skills/reader-digest/SKILL.md`（＋同目錄 `format.md`） |
 | Phase C | Step 3 / 4 / 5 / 6 ＋完成摘要 | `.claude/skills/web-publish/SKILL.md` |

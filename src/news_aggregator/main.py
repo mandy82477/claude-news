@@ -237,7 +237,7 @@ def main() -> None:
         # 確認的判準是「這批原料有沒有真的被 pipeline 處理過」，不是「有沒有印進
         # 日報」。日報只留讀者要讀的重點，本來就會篩掉一部分；被篩掉的條目仍會
         # 經由 `scripts/list_digest_omissions.py` 進入 wiki ingest 的分類與派工，
-        # 由記者判斷收不收（見 `.claude/commands/wiki-ingest.md`）。
+        # 由記者判斷收不收（見 `.claude/skills/wiki-ingest/SKILL.md`）。
         #
         # 2026-07-25 曾短暫改成「只確認出現在日報裡的 URL」，但那會讓每天被日報
         # 篩掉的條目永遠處於未確認狀態、日復一日被重新提供，直到 14 天 TTL 過期

@@ -1,6 +1,6 @@
 # Wiki Ingest — 投資分析（market）記者指南（daily）`[加入: 2026-09-05，改版: 2026-09-12]`
 
-投資分析記者**不在六類分類路由內**——沒有任何日報條目會被分類成「投資訊號」。他的料是**當日日報本身**，換一副眼鏡重讀：同一則消息，放進市場框架會看到什麼。每日 ingest 彙整完成後由主編派工（見 `.claude/commands/wiki-ingest.md`「4c」，此為本角色的明文觸發邊）。
+投資分析記者**不在六類分類路由內**——沒有任何日報條目會被分類成「投資訊號」。他的料是**當日日報本身**，換一副眼鏡重讀：同一則消息，放進市場框架會看到什麼。每日 ingest 彙整完成後由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4c」，此為本角色的明文觸發邊）。
 
 **唯一負責頁面：** `wiki/topics/market-signals.md`（其餘頁面唯讀，含週更的教材頁 `wiki/topics/market-lessons.md`）。它與 [[topics/anthropic-business]] 的分工：**事實在那邊，觀點在這邊**——本頁不複製任何事實敘述，一律 wikilink 指回事實的家（[[topics/anthropic-business]]／[[entities/pricing]]／[[topics/enterprise-tool-tracker]]／[[topics/competitor-landscape]]）。
 

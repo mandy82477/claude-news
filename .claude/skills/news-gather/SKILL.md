@@ -117,7 +117,7 @@ PYTHON -m news_aggregator.main --confirm-digest --date TARGET_DATE
 
 ## Step 2：Wiki Ingest（不在本檔案）
 
-Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，**也不可包進任何背景 agent**，完整步驟見 `.claude/commands/wiki-ingest.md`（不在此重複，避免兩份副本失步）。執行方式與失敗處理原則見 `.claude/commands/news-pipeline.md` Phase B：Step 2 失敗時記錄但仍進入 Phase C（web build 不依賴 wiki）。
+Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，**也不可包進任何背景 agent**，完整步驟見 `.claude/skills/wiki-ingest/SKILL.md`（不在此重複，避免兩份副本失步）。執行方式與失敗處理原則見 `.claude/commands/news-pipeline.md` Phase B：Step 2 失敗時記錄但仍進入 Phase C（web build 不依賴 wiki）。
 
 ---
 
