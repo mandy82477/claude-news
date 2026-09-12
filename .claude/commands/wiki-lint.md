@@ -382,7 +382,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ### 5m. code-quality-decline 三條線 issue 狀態複查（主編親做）`[加入: 2026-09-07]`
 
-「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者無 web 工具。逐一跑（`gh issue view` 一次只吃一個 issue；本 repo 的 remote 是 `mandy82477/ObsidianLab`，不加 `-R` 會查到錯的 repo）：
+「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者無 web 工具。逐一跑（`gh issue view` 一次只吃一個 issue；本 repo 的 remote 是 `mandy82477/claude-news`，不加 `-R` 會查到錯的 repo）：
 
     for n in 41930 65687 77136 83510; do gh issue view $n -R anthropics/claude-code --json number,state,updatedAt; done
 

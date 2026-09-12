@@ -24,8 +24,8 @@ import re
 import unittest
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent      # CLAUDE_NEWS/
-WORKFLOW = REPO_ROOT.parent / ".github" / "workflows" / "daily-gather.yml"
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent      # repo 根
+WORKFLOW = REPO_ROOT / ".github" / "workflows" / "daily-gather.yml"
 TRIGGER = REPO_ROOT / "docs" / "cloud-runbooks" / "triggers" / "daily-news-pipeline-cloud.json"
 
 # GitHub 排程延遲的實測最大值（2026-08-28，+11.2h）。最後一班必須涵蓋它。
@@ -173,7 +173,7 @@ class TestRetryWindowCoversTheVariance(unittest.TestCase):
         """
         self.assertGreaterEqual(self.attempts[-1] + MAX_RUNTIME_H, 24,
                                 "最後一班若不再頂到 UTC 午夜，本條的前提就要重想")
-        body = (REPO_ROOT.parent / ".github" / "workflows" / "daily-watchdog.yml"
+        body = (REPO_ROOT / ".github" / "workflows" / "daily-watchdog.yml"
                 ).read_text(encoding="utf-8")
         self.assertIn("date -u -d yesterday", body,
                       "看門狗必須查前一個 UTC 日——最後一班 22:00 起跑、跨到午夜才收尾")
@@ -185,7 +185,7 @@ class TestRetryWindowCoversTheVariance(unittest.TestCase):
         門檻是 10 天——7 天的舊報告照樣通過，於是拿上週資料標死鏈而不自知。
         （週更只有一班，沒有重試可言，所以這條仍是「一個夠久的緩衝」。）
         """
-        linkcheck = REPO_ROOT.parent / ".github" / "workflows" / "weekly-linkcheck.yml"
+        linkcheck = REPO_ROOT / ".github" / "workflows" / "weekly-linkcheck.yml"
         produced = _hour(re.findall(CRON_RE, linkcheck.read_text(encoding="utf-8"),
                                     flags=re.M)[0])
         lint = _hour(json.loads(

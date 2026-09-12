@@ -31,9 +31,10 @@ import re
 import sys
 from pathlib import Path
 
-# 本腳本住 CLAUDE_NEWS/scripts/，workflow 住上一層的 .github/workflows/
-PROJECT_ROOT = Path(__file__).resolve().parent.parent      # …/CLAUDE_NEWS
-REPO_ROOT = PROJECT_ROOT.parent                            # …/ObsidianLab（workflow 的 working-directory）
+# 本腳本住 <repo>/scripts/，workflow 住 <repo>/.github/workflows/
+# （2026-09-12 自 ObsidianLab 分割獨立後，專案根即 repo 根＝workflow 的 working-directory）
+PROJECT_ROOT = Path(__file__).resolve().parent.parent      # …/claude-news
+REPO_ROOT = PROJECT_ROOT
 WORKFLOW_DIR = REPO_ROOT / ".github" / "workflows"
 
 ARRAY_OPEN_RE = re.compile(r"^\s*([A-Z_]+_PATHS)=\(\s*$")

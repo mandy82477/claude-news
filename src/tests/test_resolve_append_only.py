@@ -22,8 +22,8 @@ class TestWhitelist(unittest.TestCase):
             self.assertNotIn("index.md", p)
             self.assertNotIn("topics/", p)
             self.assertNotIn("entities/", p)
-        self.assertIn("CLAUDE_NEWS/wiki/log.md", rao.APPEND_ONLY)
-        self.assertNotIn("CLAUDE_NEWS/src/news_aggregator/emitted_items.json", rao.APPEND_ONLY)
+        self.assertIn("wiki/log.md", rao.APPEND_ONLY)
+        self.assertNotIn("src/news_aggregator/emitted_items.json", rao.APPEND_ONLY)
 
 
 class TestUnionMerge(unittest.TestCase):
@@ -67,7 +67,7 @@ class TestUnionMerge(unittest.TestCase):
         """白名單外的衝突 → exit 1 且不動檔（那是需要人判斷的）。"""
         orig = rao.conflicted_paths
         try:
-            rao.conflicted_paths = lambda: ["CLAUDE_NEWS/wiki/index.md", "CLAUDE_NEWS/wiki/log.md"]
+            rao.conflicted_paths = lambda: ["wiki/index.md", "wiki/log.md"]
             self.assertEqual(rao.main(["--check"]), 1)
         finally:
             rao.conflicted_paths = orig

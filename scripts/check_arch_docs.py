@@ -41,7 +41,7 @@ CURRENT_HTML = REPO_ROOT / "docs" / "architecture-current.html"
 EVOLUTION_HTML = REPO_ROOT / "docs" / "architecture-evolution.html"
 ARCH_CSS = REPO_ROOT / "docs" / "architecture.css"
 TRIGGER_DIR = REPO_ROOT / "docs" / "cloud-runbooks" / "triggers"
-WORKFLOW_DIR = REPO_ROOT.parent / ".github" / "workflows"
+WORKFLOW_DIR = REPO_ROOT / ".github" / "workflows"
 
 # 刻意寫在文件裡、但不是現行排程的 cron。每一筆都要有理由——這是白名單，
 # 不是垃圾桶。
@@ -345,7 +345,7 @@ def check_crons(report: Report):
                         continue
                     if (p.name, cron) in CRON_ALLOWLIST:
                         continue
-                    stale.append(f"{p.relative_to(REPO_ROOT.parent)}:{i} 「{cron}」")
+                    stale.append(f"{p.relative_to(REPO_ROOT)}:{i} 「{cron}」")
 
     passed = not stale
     details = [f"現行 cron {len(authoritative)} 組；文件中掃到 {scanned} 處 cron 字面值"]

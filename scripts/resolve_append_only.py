@@ -21,16 +21,16 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-REPO = ROOT.parent  # git root 在 CLAUDE_NEWS 上一層
+REPO = ROOT  # 2026-09-12 分割獨立後，專案根即 git root
 
 # 相對 git root。只放「兩側都只會 append」的檔——任何會被改寫既有行的檔都不准進來。
 APPEND_ONLY = {
-    "CLAUDE_NEWS/wiki/log.md",
-    "CLAUDE_NEWS/data/source_attribution.jsonl",
-    "CLAUDE_NEWS/data/devpractice-candidates.jsonl",
-    "CLAUDE_NEWS/data/pending-signals.jsonl",
-    "CLAUDE_NEWS/weekly/open-signals.jsonl",
-    "CLAUDE_NEWS/src/logs/task_scheduler.log",
+    "wiki/log.md",
+    "data/source_attribution.jsonl",
+    "data/devpractice-candidates.jsonl",
+    "data/pending-signals.jsonl",
+    "weekly/open-signals.jsonl",
+    "src/logs/task_scheduler.log",
 }
 
 

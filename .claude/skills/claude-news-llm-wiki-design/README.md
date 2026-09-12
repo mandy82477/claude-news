@@ -10,7 +10,7 @@ This system codifies the visual + content language of that vault: a dark, dense,
 
 | Source | Where | Notes |
 |---|---|---|
-| `mandy82477/ObsidianLab` (GitHub) | `https://github.com/mandy82477/ObsidianLab` | The vault itself. Branch `master`. CLAUDE_NEWS lives under `CLAUDE_NEWS/`. |
+| `mandy82477/claude-news` (GitHub) | `https://github.com/mandy82477/claude-news` | The project repo itself. Branch `master`. Split out of the `ObsidianLab` vault on 2026-09-12; the project root is now the repo root. |
 | News digests | `CLAUDE_NEWS/news/YYYY-MM-DD.md` | Daily auto-generated digests (Traditional Chinese). |
 | Wiki entities | `CLAUDE_NEWS/wiki/entities/*.md` | Persistent pages for models, products, features, people. |
 | Wiki topics | `CLAUDE_NEWS/wiki/topics/*.md` | Cross-day ongoing issues. |

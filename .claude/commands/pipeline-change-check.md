@@ -28,7 +28,7 @@ argument-hint: baseline | compare
 3. 記錄當下 `git rev-parse HEAD`
 4. 寫入 `src/logs/pipeline_baseline.json`，含：快照建立時間、對應 digest 日期、指標組、git HEAD hash
 
-`src/logs/` 已被 repo 根目錄（`ObsidianLab/.gitignore`）的 `logs/` 規則涵蓋，`pipeline_baseline.json` 屬工作狀態不需 commit，也不需另外調整 `.gitignore`。
+`src/logs/` 已被 repo 根的 `.gitignore` 中 `logs/` 規則涵蓋，`pipeline_baseline.json` 屬工作狀態不需 commit，也不需另外調整 `.gitignore`。
 
 ## 模式二：`compare`（改動後、首次跑完 pipeline 之後）
 

@@ -2,6 +2,8 @@
 
 每日自動抓取 Claude / Anthropic 相關新聞，生成 Markdown 日報並維護 LLM 知識庫。
 
+> 本 repo 原為 ObsidianLab vault 的 `CLAUDE_NEWS/` 子資料夾，2026-09-12 分割為獨立 repo（專案根即 repo 根，雲端 routine 與 `.claude/` 自訂 agent 因此從同一層開門）；本機資料夾仍原地嵌在 vault 內。
+
 ## 架構
 
 ```

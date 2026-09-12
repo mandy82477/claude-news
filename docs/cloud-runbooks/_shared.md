@@ -3,7 +3,7 @@
 `[建立: 2026-07-25]`
 
 所有雲端排程 routine（`daily.md` / `weekly-lint.md`）開頭都必須先讀本檔。
-routine 的 trigger prompt 只是薄殼（「cd 到 CLAUDE_NEWS，讀某份 runbook 照做」），**真正的執行規範全部在 repo 內**，跟著 pipeline 一起版本控管。
+routine 的 trigger prompt 只是薄殼（「讀某份 runbook 照做」），**真正的執行規範全部在 repo 內**，跟著 pipeline 一起版本控管。
 
 ---
 
@@ -28,8 +28,8 @@ routine 的 trigger prompt 只是薄殼（「cd 到 CLAUDE_NEWS，讀某份 runb
 
 | 變數 | 雲端值 |
 |------|--------|
-| 工作目錄 | repo checkout 內的 `CLAUDE_NEWS/`（所有操作前先 `cd` 進去） |
-| `REPO_ROOT` | 上述 `CLAUDE_NEWS/` 的絕對路徑 |
+| 工作目錄 | repo checkout 的根（2026-09-12 分割獨立後，專案根即 repo 根，不需再 `cd` 子目錄） |
+| `REPO_ROOT` | 上述 repo 根的絕對路徑 |
 | `PYTHON` | `python3` |
 | 今日日期 | `date -u +%F`（UTC）。**每日 pipeline 的目標日期不用此值**——見 daily.md 開頭 |
 
