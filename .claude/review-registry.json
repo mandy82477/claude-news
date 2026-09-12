@@ -1449,6 +1449,17 @@
         "READER_ITEM_SEP|ITEM_SEP|一句新事實 → \\[\\[頁名\\]\\] → 改變了什麼判斷"
       ],
       "_note": "2026-09-12 加入。分隔符改了而解析端沒跟，每一條都會被判成「不是三段式」而丟掉——寫了等於沒寫。"
+    },
+    {
+      "name": ".claude/rules/claude-md-edit.md <-> docs/rules-changelog/claude-md-edit.md：指路行與沿革檔互相指認（沿革節拆檔 2026-09-12，只改一側會讓指路懸空或沿革檔失去歸屬）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/rules/claude-md-edit.md",
+        "docs/rules-changelog/claude-md-edit.md"
+      ],
+      "patterns": [
+        "docs/rules\\-changelog/claude\\-md\\-edit\\.md|\\.claude/rules/claude\\-md\\-edit\\.md 沿革"
+      ]
     }
   ],
   "coupling_hints": {

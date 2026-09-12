@@ -7,7 +7,7 @@ paths:
 ---
 # CLAUDE.md 及規則檔修改規則
 
-修改 `CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/*.md` 前必須讀取此檔案。
+修改根目錄 `CLAUDE.md`、`wiki/CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/*.md`、`.claude/agents/*.md`、`.claude/review-registry.json` 前必須讀取此檔案（與檔首 `paths:` 同範圍）。
 
 ---
 
@@ -15,10 +15,10 @@ paths:
 
 **先執行反向查詢，找出所有引用方：**
 ```
-grep -r "被修改的檔名" .claude/commands/ .claude/rules/ .claude/reporter-rules/
+grep -rn "被修改的檔名" .claude/ docs/rules-changelog/
 ```
 
-逐一確認每個引用方在修改後仍能正確找到所需規則。若不確定影響範圍，寧可先查、再動手。
+範圍要含 `.claude/agents/`（八個記者角色檔都引用 reporter-rules）、`.claude/review-registry.json`（registry 登記的檔名與 pattern）與沿革檔。逐一確認每個引用方在修改後仍能正確找到所需規則。若不確定影響範圍，寧可先查、再動手。
 
 ---
 
@@ -34,6 +34,12 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 | `見 CLAUDE.md`（無路徑前綴） | ❌ 禁止 |
 
 理由：裸露路徑在重構時無法靠 grep 追蹤，容易造成 skill 靜默失效。
+
+---
+
+## 修改時：條文標記 `[加入: YYYY-MM-DD]`／`[改版: YYYY-MM-DD]` `[加入: 2026-09-12]`
+
+新增條文標 `[加入: 日期]`，實質改寫既有條文標 `[改版: 日期]`，寫在該條標題或句尾。消費端：`.claude/commands/wiki-lint.md` 規則老化掃描以此算距今天數；沿革檔以此日期對應段落（考古鏈 `[加入: 日期]` → 沿革檔 → `wiki/log.md` 同日條目）。純錯字修正不標。
 
 ---
 
@@ -57,9 +63,9 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 
 ## 修改時：機械契約字串住固定區 `[加入: 2026-09-04]`
 
-**任何會被 script grep／regex 消費的字串（小標、表頭、標籤、格式形狀），在規格檔裡只能住「機械契約字串」表**（`weekly-report.md` 與 `news-pipeline-steps.md` Step 1b 已各設一張），正文條文引用時指回該表，不另抄一份；新增契約字串時同步登記 `.claude/review-registry.json` 的 `sync_pairs`（規格端與消費端互相指認），讓 `check_rules.py` 看守。
+**任何會被 script grep／regex 消費的字串（小標、表頭、標籤、格式形狀），在規格檔裡只能住該規格檔的「機械契約字串」表**（現有：`weekly-report.md` 一張、`news-pipeline-steps.md` Step 1b 與 Step 2b 各一張），正文條文引用時指回該表，不另抄一份；新增契約字串時同步登記 `.claude/review-registry.json` 的 `sync_pairs`（規格端與消費端互相指認），讓 `check_rules.py` 看守。
 
-> 立法依據（2026-09-04 prompt review）：六個 🔴 有五個是「規格改了、機器沒跟」——契約字串散在散文裡，改文案順手就改斷（聚焦連結格式、`素材涵蓋窗`、判準凍結比對各中一次）。字串住固定表＋registry 雙看守後，這類失效在 commit 前就會紅。
+> 立法依據見沿革檔 2026-09-04。
 
 **判斷式：** 這個字串有沒有任何 script 在 grep？用指令答，不憑印象——
 
@@ -73,7 +79,7 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
 
 ## rules 檔必須有 `paths:` 範圍 `[加入: 2026-09-12]`
 
-無 `paths:` 的規則檔會在**每個 session 無條件載入**（2026-09-12 實測：19 檔合計 244 KB，為根目錄 `CLAUDE.md` 的 21 倍，且全部無範圍）。
+無 `paths:` 的規則檔會在**每個 session 無條件載入**（實測與搬遷經過見沿革檔 2026-09-12）。
 
 - **新增規則檔必帶 `paths:`**，寫在檔首 frontmatter，`---` 後緊接 `# 標題`：
 
@@ -89,7 +95,7 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
 - glob 相對專案根（`CLAUDE_NEWS/`），支援 `**` 與 `{a,b}`。
 - **載入靠明文 Read，不靠自動載入**：記者由角色檔（`.claude/agents/wiki-reporter-*.md`）列規則清單、主編由 command 內文指名，`paths:` 只是縮小無條件載入量。
 - **只給記者／主編明文 Read 的規則放 `.claude/reporter-rules/`，不放本資料夾**——那裡沒有自動載入機制，不需要也不應該帶 `paths:`（帶了只是裝飾）。本資料夾只留主 session 自己會用到的規則。
-- 由 `src/tests/test_rules_frontmatter.py` 看守：缺 `paths:`、空清單、或 glob 在庫內零匹配皆 FAIL（只掃 `.claude/rules/*.md`）。
+- 由 `src/tests/test_rules_frontmatter.py` 看守：缺 `paths:`、空清單、glob 在庫內零匹配、或 frontmatter 後未緊接 `# 標題` 皆 FAIL（只掃 `.claude/rules/*.md`）。
 
 ---
 
@@ -99,5 +105,9 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
 
 規則一致性已納入測試套件（`scripts/check_rules.py`，讀取 `.claude/review-registry.json` 執行裸露引用、路徑存在性、錨點、同步配對四類機械檢查），`/review-commands` 只做失敗判讀與修復，不再手動 grep。新增同步配對或錨點時登記進 `.claude/review-registry.json`，不需另外維護紙本註冊表。
 
+Stop hook `.claude/hooks/check_rules_on_stop.py` 會在收工時比對規則檔 mtime 與 `.claude/.last-rules-check`，改了規則卻沒跑 `check_rules.py` 全綠就會被擋下——這不是替代 `/review-commands`，只是兜底。
+
 **判斷標準：**
 > 所有引用這個檔案的 command / skill，在修改後還能正確找到所需的規則或格式嗎？若否，先修引用再收工。
+
+> **沿革檔：** `docs/rules-changelog/claude-md-edit.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-12]`）
