@@ -18,7 +18,7 @@ top_source: "topic-watch"
 pending_count: 3
 pending_overdue: 2
 pending_next_review: "2026-09-15"
-pending_signalled: 0
+pending_signalled: 1
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---

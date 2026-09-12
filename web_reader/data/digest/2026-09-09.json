@@ -297,11 +297,5 @@
     }
   ],
   "preview": "前 OpenAI／現任 Anthropic 研究員 Jacob Coxon 於 X 發表辭職聲明，直指公司「不負責任地衝向自我改進超級智能、拿全人類性命當賭注」；Anthropic 安全研究員 Evan Hubinger 稍早也表態，現有模型風險「低」，但擔憂技術持續進化將帶來逾 10% 機率「殺死所有人類」的存在風險",
-  "sedimentedToday": [
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    }
-  ]
+  "sedimentedToday": []
 }

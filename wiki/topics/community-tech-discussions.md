@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-09-12"
-last_news_update: "2026-09-09"
+last_news_update: "2026-09-12"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 44
-attribution_count: 131
-attribution_last: "2026-09-09"
+attribution_count: 134
+attribution_last: "2026-09-12"
 top_source: "hacker-news"
 pending_count: 2
 pending_overdue: 0

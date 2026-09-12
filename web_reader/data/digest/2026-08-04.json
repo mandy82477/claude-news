@@ -57,13 +57,7 @@
       "time": "08/03 00:22",
       "sentiment": "",
       "body": "Claude Code 負責人 Boris Cherny 在 Y Combinator Startup School 訪談中談到，讓 Claude 執行困難任務的關鍵已不在提示工程，而在於能否讓 Claude 沿途驗證自己的工作；他以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例說明。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "boris-cherny",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Anthropic's Fever Dream: Claude's package that stole real keys",
@@ -394,11 +388,5 @@
     }
   ],
   "preview": "Claude Code 近期兩則熱門 GitHub Issue 反映可靠度問題：一則指 Max 訂閱用戶會瞬間打到用量上限（累計 1483 則留言、722 個表情反應），另一則回報多項提示會卡住 5–20 分鐘以上（150 個表情反應）。",
-  "sedimentedToday": [
-    {
-      "id": "boris-cherny",
-      "name": "Boris Cherny",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }
