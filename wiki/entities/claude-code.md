@@ -30,18 +30,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-11
+**最後新聞更新：** 2026-09-12
 
-> **最新動態**（2026-09-11）
-> - **v2.1.268**：Claude apps gateway 新增 `pricing:` 設定（`gateway.yaml`），登入版 Claude Code 客戶端經 managed settings 取得一致費率，`/cost` 與 telemetry 對得上；計費細節見 [[entities/pricing]]。
-> - **服務事故**：Mythos 5.1、Fable 5.1 錯誤率升高（09-11 14:28 UTC 已部署修復並監控中，尚未確認解決）；Claude API 延遲升高（09-10 21:43→23:24 UTC，已解決）。
-> - **互動數更新**：Claude.ai Projects 知識庫串接需求（#2511，635 讚，今日互動最高）；Desktop 多視窗支援（#30154，249 讚）；VSCode Edit 預覽/diff 未顯示（#8660，90 讚）。
+> **最新動態**（2026-09-12）
+> - **v2.1.269**：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告。
+> - **官方文件**：桌面版 Git 需求從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要」。
+> - **新增已知問題**：Desktop（macOS）無法啟用 Bypass Permissions（#61415）；九月 Windows 累積更新致 Cowork device_bash 失效，ARM64／x64 皆中（#92958）。
+> - **互動數更新**：XDG Base Directory 規範不支援（#1455，447 讚）；vfpext 缺失（#74649，86 則留言）。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.269**（2026-09-11）：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出可重現的評分結果（JSON＋HTML 報告，含 no-plugin baseline 對照組）；見 `claude plugin eval --help`；官方文件索引同步新增 [plugin-evals.md](https://code.claude.com/docs/en/plugin-evals.md)。
 - **v2.1.267**（2026-09-09）：新增 `maxEffortLevel` 設定（可放頂層或個別模型的 `modelSettings` 下），對所有供應商（含 Bedrock、Vertex、Foundry）統一設定推理努力（effort）上限，使用者仍可在上限內自行選擇較低等級。
 - **v2.1.266**（2026-09-08）：修復 2.1.265 一項迴歸，影響 LLM-gateway／proxy 的 `CLAUDE_CODE_USE_GATEWAY` 環境變數（原文截斷，細節未知）；純 bug 修復。
 - **v2.1.261**（2026-09-04）：`/status` 與 `claude doctor` 新增「Organization policy」欄位，說明組織政策載入失敗的原因（例如代理伺服器未正確轉發 endpoint）。
@@ -49,6 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-09-12）：桌面版文件將 Git 需求措辭從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要 Git」；session 定義同時拿掉「各自獨立的程式碼變更」字樣，僅保留獨立聊天紀錄與專案資料夾（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-08-29）：桌面版文件新增 3 段、移除 2 段——① 採用 adaptive reasoning 的模型上，`MAX_THINKING_TOKENS` 設為非預設值時的行為；② Claude 跨 session 傳訊時，該處顯示標註傳送方的卡片；③ **extended thinking 現為預設啟用**，用以提升複雜任務表現（既有功能的預設狀態澄清，非新指令／旗標）。
 - **Cowork 與網頁／App 共用記憶**（Help Center release notes，2026-08-25）：記住的項目集中列在設定 > Memory 的 Topics，可個別編輯或刪除；健康、信仰等敏感主題預設不納入，須手動開啟「Include sensitive topics in memory」才會記錄。原文於「記憶預設對部分方案開啟」處截斷，適用範圍未完整取得；TechCrunch、SiliconANGLE、CNET、Engadget、SD Times、The Register、Techzine、ZDNET 等多家媒體同步報導。
 - **Skill／外掛安全掃描（beta）**（Help Center release notes，2026-08-06 標註日期）：Enterprise 方案的第三方 Skill 或外掛在上傳、編輯時自動檢查是否含惡意內容，屬背景自動掃描，無使用者端可執行操作。
@@ -279,7 +282,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**提案：Function Hooks——外掛以 `$` 物件追蹤副作用、安全深度改行為並可組合註冊（issue #91870，107 則留言、94 讚，本輪互動最高功能提案，09-05）**：與 #24057 同屬 hooks／外掛成熟度議題，屬新機制提案；官方尚未回應。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（68 條未修復、3 條查無官方）
+### 🔌 平台相容性（70 條未修復、3 條查無官方）
 
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（GitHub issue #92984，累積 32 個讚，2026-09-10）**：移除該 KB 可恢復。Anthropic Status 同步確認成因為 09-08 Windows 更新致工作區無法存取本機磁碟，尚未發布修復版本；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
@@ -298,7 +301,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 無法加入私有 GitHub marketplace（GitHub issue #28125，累積 35 個讚，2026-08-02）**：使用者回報 Cowork 功能無法加入私有（private）GitHub marketplace；官方尚未回應。
 - 🔴 **未修復**｜**Bedrock：Claude Opus 4.7 回傳 permission_error，儘管帳號權限狀態顯示 AUTHORIZED（GitHub issue #51183，累積 39 則留言、12 個讚，首見 2026-07-31，2026-08-16 互動數更新）**：在 AWS Bedrock 環境下，即使帳號權限狀態顯示為 AUTHORIZED（已授權），呼叫 Opus 4.7 仍回傳 permission_error 錯誤；回報者已確認搜尋過現有 issue 未見重複回報；與既有「Bedrock 功能相容性落差（持續）」同屬 Bedrock 接入層問題，官方尚未回應。
 - 🔴 **未修復**｜**Cowork：儲存 Global instructions 後靜默還原成舊版本（GitHub issue #40175，累積 30 則留言、20 個讚，2026-08-01）**：在 Cowork 中儲存 Global instructions（全域指示）後，會靜默還原成較舊版本，使用者不會收到任何警告或錯誤提示，屬資料遺失類 bug；官方尚未回應。
-- 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 62 則留言、423 個讚，2026-07-30）**：Linux 使用者指出 Claude Code 將快取資料與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG Base Directory 規範分別寫入 `$XDG_CACHE_HOME`、`$XDG_CONFIG_HOME` 等標準路徑，影響習慣遵循該規範管理 dotfiles 的 Linux 使用者；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 68 則留言、447 個讚，2026-09-12 互動數更新）**：快取與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG 標準路徑；官方尚未回應。
 - 🔴 **未修復**｜**Dispatch 主對話持續顯示離線，儘管 Cowork 任務正常運作（GitHub issue #45937，累積 37 則留言，2026-07-26）**：使用者回報 Dispatch 主對話在行動裝置端持續顯示「This desktop appears offline」，即使直接從桌面端發起提示也一樣；然而個別 Cowork 任務仍能正常運作，顯示問題限於主對話的連線狀態顯示；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援終端機 CLI 已有的 `/btw` 指令（GitHub issue #37323，累積 35 則留言、216 個讚，首見 2026-07-23，2026-08-09 互動數更新，今日日報互動量最高）**：使用者呼籲 VS Code 擴充套件比照終端機 CLI 版本支援 `/btw` 指令；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**GitHub connector 可連結帳號內所有 repository 卻無法讀取任何內容，回報為近期功能退化（GitHub issue #71542，累積 60 則留言、43 個讚，首見 2026-07-18，2026-08-30 留言數更新，今日全站已知問題聚焦頭條）**：使用者回報 GitHub connector 雖能成功連結帳號內所有公開與私有 repository，Claude 卻無法讀取任何內容，帳號全域皆受影響（公開與私有 repo 皆然）；標題明確標註為近期發生的功能退化（regression）；與既有「GitHub Connector 已在 Claude Desktop 連結卻未被識別」（issue #32479）同屬 GitHub connector 可靠性問題但現象不同，暫分列追蹤；官方尚未回應。
@@ -323,7 +326,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**VSCode 擴充套件確認變更時未顯示 Edit 預覽/diff（GitHub issue #8660，累積 52 則留言、90 個讚，首見 2026-07-08，2026-09-11 互動數更新，已持續數月未修復）**：確認變更時 diff 畫面未正確顯示，難以於套用前檢視異動；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop/Cowork 缺 RTL（希伯來/阿拉伯文）排版支援（GitHub issue #38005，累積 41 則留言、111 個讚，首見 2026-07-07，2026-08-05 互動數更新，功能請求）**：使用者要求 Claude Desktop 與 Cowork 介面支援 RTL（right-to-left）排版，目前不支援希伯來文、阿拉伯文等 RTL 語言的正確顯示；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Pro：CoworkVMService 因「signature verification initialization failed: failed to get service executable path」無法啟動（GitHub issue #29941，累積 39 則留言，首見 2026-07-23）**：使用者回報 Windows 11 Pro 上 CoworkVMService 因簽章驗證初始化失敗（找不到服務執行檔路徑）而無法啟動，導致 Cowork 功能在該平台完全無法使用；官方尚未回應。
-- 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 85 則留言、7 個讚，首見 2026-07-27，2026-08-28 讚數更新，今日 GitHub Issues 討論度最高項目）**：使用者回報 Windows 11 Pro 環境因缺少 Host Compute Service（HCS）的 vfpext 服務，導致 Cowork 功能無法正常運作；與既有 CoworkVMService 簽章驗證失敗（issue #29941）同屬 Windows 平台 Cowork 啟動障礙但成因不同，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 86 則留言、7 個讚，2026-09-12 留言數更新）**：與 #29941 同屬 Windows Cowork 啟動障礙但成因不同；官方尚未回應。
+- 🔴 **未修復**｜**Desktop：macOS 無法啟用 Bypass Permissions，自動退回 Accept Edits（GitHub issue #61415，累積 65 則留言、29 個讚，2026-09-11，v2.1.148）**：畫面顯示「Permission mode couldn't be changed」；官方尚未回應。
+- 🔴 **未修復（範圍擴大）**｜**Cowork（Windows）九月累積更新破壞 device_bash，ARM64／x64 皆中，五機 A/B 回滾確認（GitHub issue #92958，累積 49 則留言、8 個讚，2026-09-12）**：與 #92984 同源，移除對應 KB 可恢復；官方尚未修復。
 - 🔴 **未修復**｜**Claude Desktop（Windows 11）主視窗持續蓋在其他應用程式最上層，且無設定可關閉（GitHub issue #85891，累積 87 則留言、181 個讚，2026-08-28 首見，2026-09-04 互動數更新）**：使用者回報 Windows 11 版 Claude Desktop 主視窗行為類似強制「always on top」，持續蓋在其他應用程式最上層，介面中找不到任何可關閉此行為的設定；影響多視窗工作流程；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code Web 支援從非預設分支啟動 session（GitHub issue #10018，累積 59 則留言、162 個讚，2026-08-29，今日全站互動量最高功能請求）**：使用者呼籲 Claude Code Web 支援從 default branch 以外的分支啟動 session，目前僅能從預設分支開始；與既有「功能請求：支援與 main 以外分支進行 diff 比較」（issue #23626，聚焦比較差異而非啟動 session）同屬「非預設分支」相關訴求但層面不同，暫分列追蹤；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
@@ -664,6 +669,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-12 | **v2.1.269**：新增 `claude plugin eval`；官方文件更新（桌面版 Git 需求）；新增已知問題 2 則；互動數更新 2 則。細節見「已知問題」「版本更新」各節。 |
 | 2026-09-11 | **v2.1.268**（gateway pricing）；SDK v1.5.0；新增已知問題 2 則；Status 事故 2 起；#2511 互動最高（635 讚）。細節見上方「已知問題」「服務穩定性」「版本更新」各節。 |
 | 2026-09-11（反向對照） | 自建 benchmark「Benzi」宣稱 SWE-bench Verified 78.2%、低於 10 美分/修復，勝過 Claude Code 與 CodeGraph；單一廠商榜單，未見第三方複測（[原文](https://benzi.fly.dev/benchmark)）|
 | 2026-09-08 | 新增已知問題：`MEMORY.md` 門檻可設定（#91188）。互動更新：#26224（131 留言，今日最高）、#32479（96 留言）、#62503（40 留言）。iOS 新增用量按鈕；HN 拆解雲端 microVM 架構。 |
