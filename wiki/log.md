@@ -6274,3 +6274,15 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **根因：** 頁面兩個軸（選型表、六層架構）講的都是積木「之間的關係」，讀者問的是每個積木「自己的來歷與產出」，這個軸不存在；不是漏寫幾句，是軸選錯。另有四處事實錯：頁面說 `/goal` 無官方專頁（有）、MCP 隧道標公開測試（研究預覽須申請）、issue #24798 標 75 則未結（已關閉 84 則）、SDK 計費句抄自 pricing。
 
 **處置：** [[topics/anthropic-agent-stack]] 改一積木一卡（八張，三欄：沒有它之前／官方多給了什麼＋最小指令／還做不到什麼，指令與 prompt 全取官方文件逐字），新增「這八塊怎麼疊」（官方可證四條：workflow 的 agent 可再派 subagent ≤3 層、`/goal` 可啟 workflow、subagent 裡開不了 workflow、workflow 裡開不了 teams），「你該用哪個」換官方三問決策樹，選型表與六層降附錄；計費算式歸子頁 [[entities/managed-agents]]；[[feature-radar]] Dynamic Workflows 狀態格由 Research Preview 更正為全付費方案；功能記者規則落點改八卡三欄。複驗：Q1／Q2／Q4 拿到、Q3 半（已補官方分界句）。產物 `docs/page-audits/anthropic-agent-stack-2026-09-12*.md`。歸因 slug `user-query`。
+
+## 2026-09-12 Ingest
+
+- 來源日報：[[news/2026-09-12]]
+- 更新頁面：entities/claude-code、entities/fable-5、entities/boris-cherny、entities/jacob-coxon、topics/anthropic-business、topics/ai-talent-flow、topics/anthropic-government-policy、topics/competitor-landscape、topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline、topics/market-signals、wiki/feature-radar.md、wiki/index.md
+- 新增頁面：無
+- 摘要：Anthropic 09-11 威脅情報報告持續發酵（伊朗鎖定美國海軍、俄羅斯神風無人機、生物武器濫用細節，十餘家媒體跟進），五角大廈傳十月前遷出機密工作負載、Nvidia 傳洽談投資 Anthropic IPO 同日浮出；又一名 Anthropic 員工帶警告離職使治理疑慮延燒；功能面 v2.1.269 新增 `claude plugin eval`；Claude Code 創造者 Boris Cherny 親自回應「AI slop」疑慮登上主流媒體；社群面 spec-kit／orca 兩款工具本週星速快速成長，新增「規格驅動開發」類別。
+- 呈現品質：全部通過（六記者＋market 記者機械自查 `check_cell_limits.py`／`check_reader_language.py`／`check_pending_markers.py` 均為 OK；index.md 一筆表格儲存格超限由主編當場修正，未流入收尾）
+- 品質備註：[功能] 派工分類把 Simon Willison 引述 Boris Cherny 一則同時誤標「功能」，主編已同步雙派至人物記者、無缺漏（人物記者已收錄至 entities/boris-cherny）
+- devpractice 沉澱：候選 6 筆（entities/claude-code：`claude plugin eval`、兩則新已知問題〔macOS Bypass Permissions #61415、Windows 更新致 Cowork device_bash 失效 #92958〕、桌面版文件 Git 需求措辭更新；topics/anthropic-agent-stack：`/goal` 官方細節、Agent teams／Agent view 三問決策框架；topics/community-tech-patterns：規格驅動開發新類別）；基準線 753648bcbf→14ce5f46a5
+- market 判讀：2 則（🔴 0／🟡 2：國防部傳十月前遷出全部機密工作負載〔開新線「政府客戶流失」〕、Nvidia 傳洽談投資 Anthropic IPO〔IPO 進程線第 6 則〕；今日其餘威脅情報報告跟進報導判為 09-11 已開判讀之延續，未另開新則）；買得到的標的新增 1 列（Nvidia, NASDAQ: NVDA）；里程碑登記 2 筆；回顧結算 ⏳ 新增 2 列
+- 轉知帳本：close 1 筆（H-28955d 商業記者：已加訊並同步 Bloomberg 查證內容，❓ 標記本體依規則留給 `/wiki-lint` 5c）、void 2 筆（H-817e3e、H-d575e8：功能記者核實內容已於既有記錄一致，無需重複記入）、開 1 筆（H-624b00 社群→功能：評估 spec-kit／orca／comet 三款新 agent 工作模式是否納入官方-社群功能對照矩陣新增列）
