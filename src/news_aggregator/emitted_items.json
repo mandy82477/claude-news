@@ -1,549 +1,4 @@
 {
-  "https://support.claude.com/en/articles/12138966-release-notes#eb29862e4a385ee8": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan#49722060af45b73e": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work#70a66efc7b6b93aa": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans#4a17eb1f20cdae9a": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan#4b335272e39c222b": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/releases/tag/v2.1.250": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.122.0": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://github.com/obra/superpowers": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 278958,
-    "digest_confirmed": true
-  },
-  "https://github.com/affaan-m/ECC": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 243909,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/38335": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 837,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/6235": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 385,
-    "digest_confirmed": true
-  },
-  "https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 316,
-    "digest_confirmed": true
-  },
-  "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 271,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/45596": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 268,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/27302": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 238,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/5088": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 182,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/18435": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 170,
-    "digest_confirmed": true
-  },
-  "https://github.com/opslane/opslane": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 34,
-    "digest_confirmed": true
-  },
-  "https://www.cnbc.com/2026/08/28/judge-blocks-pentagon-blacklist--anthropic-.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 21,
-    "digest_confirmed": true
-  },
-  "https://github.com/paoloanzn/pi-black": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 8,
-    "digest_confirmed": true
-  },
-  "https://llmcanvas.chat": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 4,
-    "digest_confirmed": true
-  },
-  "https://dev.to/vpodk/anthropic-enables-auto-mode-by-default-for-claude-code-21om": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 4,
-    "digest_confirmed": true
-  },
-  "https://github.com/shadok-ai/shadok-ai": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 3,
-    "digest_confirmed": true
-  },
-  "https://leadcode.build": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 3,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0v676/do_you_guys_think_that_fable_51_is_actually": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1w0v4yq/claude_just_validated_what_ive_spent_three_months": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0uyu7/a_comparison_of_opus_5_47_and_46_running_a_code": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0utwi/one_dev_claude_code_agent_fleet_running_a_saas": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0us6k/claude_code_really_said_swirling_bonbon": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reuters.com/world/how-anthropic-pentagon-dispute-over-ai-safeguards-escalated-2026-08-28": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.forbes.com/sites/jonmarkman/2026/08/28/anthropics-45-billion-nscale-deal-buys-460-megawatts-of-vera-rubin": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1w0tntf/citation_issues_the_past_little_while": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w0t2t9/claude_code_for_vs_code_bug": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.chinausfocus.com/finance-economy/claude-vs-kimi": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://cybernews.com/security/claude-code-auto-mode-malware-vulnerability": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://gbhackers.com/mcp-rce-exploitation": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://finance.yahoo.com/technology/ai/articles/exclusive-claude-revenue-surges-1-132739054.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1w0px6l/anthropic_said_fable_5_would_be_restored_to": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.theregister.com/ai-and-ml/2026/08/28/pentagon-blacklisted-anthropic-over-claude-powers-it-didnt-have/5293266": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.axios.com/2026/08/28/judge-blocks-pentagon-anthropic-blacklist": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://analyticsindiamag.com/ai-features/youre-drowning-claude-code-in-instructions-you-cant-explain-or-remember": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1w0ocjl/new_to_claude_what_would_you_suggest": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.sfgate.com/local/article/open-ai-anthropic-ruining-sf-22404657.php": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.bostonglobe.com/2026/08/28/newsletters/anthropic-campaign-donations-legislature-the-scrum": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.storyboard18.com/brand-makers/google-deepminds-share-of-elite-ai-talent-declines-as-rivals-gain-ground-109141.htm": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.washingtonpost.com/technology/2026/08/27/federal-judge-overturns-pentagon-ban-claude-chatbot-maker-anthropic": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.hostinger.com/tutorials/how-to-send-email-in-claude": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.cbsnews.com/news/judge-rules-trump-administration-illegally-punished-ai-firm-anthropic": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.nbcnews.com/business/business-news/anthropic-pentagon-blacklist-claude-judge-rcna594825": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://itwire.com/business-it-news/data/agent-island-lets-developers-walk-away-while-claude-code-and-codex-keep-working": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://arstechnica.com/ai/2026/08/anthropics-new-hardware-standard-lets-ai-agents-control-the-physical-world": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/artificial/comments/1w05763/can_an_ai_make_other_ais_better_we_benchmarked_5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.cbsnews.com/news/openai-anthropic-ai-cyber-threat-warning": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.bloomberg.com/news/articles/2026-08-27/anthropic-tests-new-way-for-claude-to-work-with-robots-and-scientific-lab-tools": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.ft.com/content/dd069af7-a2a2-4984-8d9a-5edeaf54f2f8?syn-25a6b1a6=1": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reuters.com/technology/anthropic-unveils-new-framework-allowing-ai-agents-operate-physical-devices-2026-08-27": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://prospect.org/2026/08/27/anthropic-reenlists-for-war-defense-department-ai": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://fortune.com/2026/08/27/anthropic-makes-first-move-into-physical-ai-with-universal-standard-for-scientists-manufacturing": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://finance.yahoo.com/technology/ai/articles/anthropic-bet-tens-billions-amd-175220772.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://gizmodo.com/anthropic-is-quietly-cutting-google-out-of-the-equation-2000803895": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.wiz.io/blog/ai-infrastructure-honeypot": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.cnbc.com/video/2026/08/27/google-takes-am-at-anthropic-microsoft-with-budget-friendly-ai-pricing.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://enterpriseai.economictimes.indiatimes.com/news/industry/thinking-machines-lab-cofounder-barret-zoph-joins-google/133568907": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.thestar.com/news/canada/government-to-announce-64-top-researchers-coming-to-canada/article_a15d09ff-632b-4c9c-be6e-d0559e09b681.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://thenewstack.io/claude-built-in-browser-cowork": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.ft.com/content/0ec76ba3-5f7f-4085-88fb-acf21954bc85?syn-25a6b1a6=1": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.wsj.com/business/earnings/salesforce-profit-revenue-rise-expands-partnership-with-anthropics-claude-f17aa26f": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.cnbc.com/2026/08/26/salesforce-anthropic-partnership-claudeforce.html": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://venturebeat.com/orchestration/salesforce-just-put-its-entire-crm-inside-claude-and-says-youll-never-need-its-app-again": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/artificial/comments/1vz7jey/sandboxaq_releases_switch_for_shared_aiagent": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/artificial/comments/1vyuv28/finally_a_proper_ui_for_skills": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://dev.to/thefluxread/us-house-democrats-press-openai-and-anthropic-rogue-ai-agents-sandbox-breakouts-and-the-ai-kill-ad1": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://code.claude.com/docs/en/desktop.md#e1600cec9f354c1b": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://github.com/JimLiu/baoyu-design": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 3637,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/10018": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 59,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/12346": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 50,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/61889": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 43,
-    "digest_confirmed": true
-  },
-  "https://github.com/anthropics/claude-code/issues/85891": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 87,
-    "digest_confirmed": true
-  },
-  "https://www.sfgate.com/local/article/open-ai-anthropic-ruining-sf-22404657.php?link_source=ta_first_comment&taid=6a91be8eb9a1130001896fd8&fbclid=IwY2xjawT_Fs1wZG9mA2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDzQwOTk2MjYyMzA4NTYwOQABHvfPHyGSByYNR7Cmkzc-oVqd31kuJy3YUIMwJB5LlB84Hi71zSB_6e5NVbld_aem_L8Ysu4gjQinZHOeaZObNKA": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 25,
-    "digest_confirmed": true
-  },
-  "https://www.ibtimes.com/anthropic-just-beat-pentagon-court-judge-said-national-security-was-used-punish-its-ai-rules-3806895": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 17,
-    "digest_confirmed": true
-  },
-  "https://news.ycombinator.com/item?id=49481969": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 13,
-    "digest_confirmed": true
-  },
-  "https://startupfortune.com/researcher-alon-hertz-tricked-claude-codex-and-hermes-into-running-malware": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 12,
-    "digest_confirmed": true
-  },
-  "https://github.com/yevhens-hue/claude-skills-starter-kit": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 2,
-    "digest_confirmed": true
-  },
-  "https://github.com/RomanVolkov/agentctl": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 1,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1ohy9/im_about_to_learn_ui_just_to_prove_to_you_that": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1n1kp/i_built_a_habit_tracker_that_never_asks_what_time": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1mycm/i_made_skill_engineeringdecipline_it_focuses_on": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1ms72/response_stalled_too_large_tool_call": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1mhwz/claude_code_vs_grok_build": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeCode/comments/1w1mgs5/switch_from_codex_to_claude_code": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMigwJBVV95cUxNWFJ1QVZIVjNQTTFPRThZWVZYTkJ4Ulc2ajBKZXhSODMtVVVqMjloeE1zNkk1TnFraDVWc3AxTkZDdFc0Tk9adHdNNVhsLVBDeWlwblRqX2JQRHZjeG14NzRQVmZkSXlZTGRhdmJlV0NKZUlkNzFCOG00THhDWWJwWGZ3Um50MEIzeDlZcHJOb3pqRWF6SVV4TTNPVGxzYlpyOXh1ZXFCU2F3cEJ6djJqSXpISWFpMmhzeTNCYndOa1BBd2ZJT2w2RTBOdlJWYUFJbWFZR2VmREk3cURaLWNQRzIxeVNLWmVoYk5CV21Jd2hmQ2UtYnZrTU5QQzFPeXo4SERr?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUU9JWUlzbmh4STU5a3BHWEo1TlRPVEJCM2JhR3d1bEZabXA5OXRUUjJfY0ZsUU1XTVhjNU5KM3V5anRadlhPM0Zsc0dwZDcwT1F5ejVJamhTXzhLc2JzczQ4YUU5aUhTdG5jVzhJR2dpZ3poZG03a0FpS21jT1Rsbg?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRVpaX1RfSmRzNzNYODhTLU5mRzFUYWNuT09yeFNSeUNzQlN5azlQRlhDa0JSdlRyN0ZkUmlJYXVWQjZnbTh4a2xWbHU3dWdJcnJQN0Nlazk4OG1pS1ZJTUE1MHZBSkctdlVVdktvZ2JCaFptem5BX2g5WFlzckZNQ29kV2tHbkhINU9jdFdjVWxrbVpJVkp1RFZoMEZoU1FYREdyaGFQQQ?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSlJhNzBFNUxUMW8xOWpySlkza2EyMENZSjBEQmJGc1Rrc2wtaXg0c0E0dGhqN092LXNqVHRRX0tyWUdHYi1rWmE5eGo2bWUtMS1KRmx0TUhxZ2JWdkUxNEVEaFdwUnJWN19hWkY1dmUzX0xsTm1CcjdvT2U5VGFmY3JJVUFGX2JEcHdNTVhMbnB0NVhEaEJRaEotaVBtQzJvbTJqa3lvcTVucGpjX1BQaGJ3?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNeEszX3E4WURrM3ZzNEpYV1ZpbWFZNk0zYjdNMnltYzdoaFlmNW9lcUlEaWhBUzItSHByRW15SkxQOHJzMDJKTFB1TU41SURtaURxVGdnVmY0SGxnNlpWbHNXMjV2N0tzMVV1Q2hvdEJSZFVvMDRFTkptX29CTF9vTHVNbWMxWU1nSE1qS2thdnI2ZkhJVVc0c1FIb29UUERiNTlWeTI1SmFXMTRudy1EX3Nzbm1aVXg4?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbnp1aVBZRHNVc0JPVEFuclhUTVdjSW1mMXJjTjU1UXZ2MzhHdXFvNU1QRWJIaXJFcm41WUd3MzRISmhXVG9hMElDc3NjN0NpUWMzcFB4QWdYX0JRbkY3N0QxLUlULS1kRE5oSFRIVlBZSkJiamczbzNXTFM2OUkzV2VEUkpYVVVjeXpKNmV1R0gzRVU4YVlv?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIcEZmeXAxNFgzNnMwX0FhQmk1VWpjalNmOUt3djNiVTB3U2F1a2RsUk5EekFRUVRmWmlTT0VLekltT0lBYXcyR0RZTkl2dmxPM0RsaEZNc0NDNm9fYzM5aE1BQ3FCZm1yWkpj?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdkVBTkVna3J0QUNvc0tCdnlJVGd5RW9qNWtta1BETTF6cVJyeXhGSWxvaWtyY0Q0VDkxdi04TklBUWVseVU3UGVpa1laeVlPb3F0UkUzRjVEc0ZHdzBBc2dkenJJblcxcXpPR2ZEWUZlb3RHMjJMR2Y1NG10MDdWOUtFYXdBZ0gzTDRISkRkWnE2NGFnczNGU0ZWT3JKYlAybDgxNzBMaFBROUE?oc=5": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1w047gy/i_think_were_starting_to_see_the_downside_of": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1vzl671/literally_me_when_claude_codes": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
-  "https://www.reddit.com/r/ClaudeAI/comments/1vxdnw6/week_4_of_making_my_fishing_game_entirely_with_ai": {
-    "first_emitted": "2026-08-29",
-    "score_at_emit": 0,
-    "digest_confirmed": true
-  },
   "https://github.com/Shubhamsaboo/awesome-llm-apps": {
     "first_emitted": "2026-08-30",
     "score_at_emit": 135173,
@@ -776,7 +231,7 @@
   },
   "https://github.com/anthropics/claude-code/issues/10238": {
     "first_emitted": "2026-08-31",
-    "score_at_emit": 53,
+    "score_at_emit": 54,
     "digest_confirmed": false
   },
   "https://twitter.com/ClaudeDevs/status/2093742322525810912": {
@@ -4813,5 +4268,245 @@
     "first_emitted": "2026-09-12",
     "score_at_emit": 0,
     "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.270": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://github.com/zenstory-ai/oh-story-claudecode": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 6824,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/38335": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 850,
+    "digest_confirmed": false
+  },
+  "https://github.com/proliferate-ai/proliferate": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 500,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/6235": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 394,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/27302": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 246,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/18435": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 187,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/85891": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 100,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/63875": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 76,
+    "digest_confirmed": false
+  },
+  "https://github.com/anthropics/claude-code/issues/5826": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 67,
+    "digest_confirmed": false
+  },
+  "https://news.ycombinator.com/item?id=49672966": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 57,
+    "digest_confirmed": false
+  },
+  "https://www.bbc.com/news/articles/c14dpgm0rg4o": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 54,
+    "digest_confirmed": false
+  },
+  "https://www.bloomberg.com/news/articles/2026-09-12/anthropic-ceo-says-it-s-time-to-slow-pace-of-improving-ai-models": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 48,
+    "digest_confirmed": false
+  },
+  "https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 39,
+    "digest_confirmed": false
+  },
+  "https://twitter.com/trydotworks/status/2098618997230985375": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 13,
+    "digest_confirmed": false
+  },
+  "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 12,
+    "digest_confirmed": false
+  },
+  "https://github.com/takaakit/astah-pro-mcp": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 4,
+    "digest_confirmed": false
+  },
+  "https://github.com/Javier-Barrio/myCC/tree/main": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 4,
+    "digest_confirmed": false
+  },
+  "https://bloomiro.com/mcp": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 4,
+    "digest_confirmed": false
+  },
+  "https://github.com/khuynh22/agent-dev-team": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 3,
+    "digest_confirmed": false
+  },
+  "https://kvetch.io/conciliatower": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 1,
+    "digest_confirmed": false
+  },
+  "https://openai.com/index/perplexity-improving-accuracy-with-astra": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf95fl/why_did_it_say_ma_like_did_gemini_miss_his_mom_or": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf8q8s/somethings_weird": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf86pt/i_finetuned_qwen25coder14b_on_220k_mql5_examples": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf7yjc/elon_musk_grok_and_sam_altman_openai_have_joined": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf6z7b/the_limit_is_getting_faster_to_use_up": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wf6yxt/will_hyperoptimized_prompts_become_the_new": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxNeE1ZYk0xbVVWVzJTZ3lCblZLZ3ZxMTJwUXVYUkI3VUY1SnNhbDVNNkl2eXFQTkV1cU5sclRUYjJXSHliajREVWVHMkhWSzM4MUNxaG9aN1A5YmN4ZEJkQUFPVDFEQnhuN2NMbDN2ZXhFS1ZpVjFSUENGMGwzNnFjWC1KLWVkQ2oyMHfSAYoBQVVfeXFMTXBCX2VWUXNtVDc5Q0Fyd052UHlEeldEX0s5Tzd5UTVWdlRNajlJd1MtSDlYZkxvVEs2N1FVNlNVYWJvelg1NUR0YkJvdF8xYmQwbmxWdnZMV3VULTFTZHNURDFCLXY5bHJrR3duYUlRU0xEWDFJT0lTT3dGWDBocTFZMDVwV2JhWnVn?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOHhueHlnZnRqcHV4MGgxS2R5MmdxNWRFcnNMb2NrM19hNXBvVkxKenhubFBCNWRWeEhfS3JnMmVCVHBtNkdfdFVBdjZUVEcwV2laZHBMejZOZGxiNHlFZnkzb0VEWG9EcE0xeXQ5c3g5cVNvT3NPdkY4MmhpZU5lUlZSMGVnM2tqSkdDSDlrUk5nVjNWa2wza092eFRablVYM0d4NGdiMEVYeEtzaklzamF3RkN6OEVNSjJLcXJhbHNtUVpEM1NvVUhfMFNaZ1FfcTRBSFRnbmRrQdIB3wFBVV95cUxOVjA3dXBRUGdZOU1rS3RZaUxPMVVqTFBPMlU2N1NlY2dqN2RDaDQ2akxDUlFNMDJpcVp4TERNanpET3IyRUpsQ0RKSWxPeXJDaWRKWXdESXNJdDh5WmhESGNFTS1MeW9mSjlOdk5JLVlTYnBmSTJlRE1IRGhnZVMwWXRMbG5ybjRQZjVrNmlSeXJCSGlOYlRFa1JpX3lyX0dRdFdFVmw0UEFmWXhEOWFXU2stNDdrZERMVWl0cF9fRTZEZ0xQRkdPN2JMN3V6VnQxd1JiZVRwWW45djV0QlY4?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNaDdoNGR4ZlhXYXJvbHI5akZwVnp6Uk15MEQ5NktCNmppYnM2Q0NZLUhzYjFZY29mbVozcGdrOFFqREpHLUVnTFg5c2M0VmNucmh2aVFXV2RqTkZFQ21rYUJfeVl6XzBJWGdncjNJUkdpMDZrSUNTb1F3eVpGcG9YZmlzbWFNV0JSZGdleW5GUjNuTExLUng2bmJrNER0TE1lMnlBSmdfeGVWOUM5SmNvVTBSeDk5WGNjZG5mdDEwd3BHdEZhaU0xcl9JcGZUYkdzRkVMSE52YzhYVnAxWHBIWE41b9IB4wFBVV95cUxNaDdoNGR4ZlhXYXJvbHI5akZwVnp6Uk15MEQ5NktCNmppYnM2Q0NZLUhzYjFZY29mbVozcGdrOFFqREpHLUVnTFg5c2M0VmNucmh2aVFXV2RqTkZFQ21rYUJfeVl6XzBJWGdncjNJUkdpMDZrSUNTb1F3eVpGcG9YZmlzbWFNV0JSZGdleW5GUjNuTExLUng2bmJrNER0TE1lMnlBSmdfeGVWOUM5SmNvVTBSeDk5WGNjZG5mdDEwd3BHdEZhaU0xcl9JcGZUYkdzRkVMSE52YzhYVnAxWHBIWE41bw?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNDlWVTlEdFh3TFlwazFkVUFlN0pMSzYtbjNqMXh6WWR0RkdUbS1GTHRtOFJ5X0dKMzlHdGgtelpUNkU2SVd5NEdySXlDbS10WVV5WUVBemVidHg5Rks4eFhCZTFJUHFZb00wd0xXM3RQMnNkV01aMUQ5Q2FnY1d2UnFGRnVPbjB2V1E3UkhHLWpHamdFb1JaUlFmU09lX2tEb0ZudEFHMERfUzBLRHNKWThPdnptX1k3bnJlMmx6dXhVUURlMWEyY0hHOHZDOFlYTXfSAdIBQVVfeXFMTTQ5VlU5RHRYd0xZcGsxZFVBZTdKTEs2LW4zajF4ellkdEZHVG0tRkx0bThSeV9HSjM5R3RoLXpaVDZFNklXeTRHckl5Q20tdFlVeVlFQXplYnR4OUZLOHhYQmUxSVBxWW9NMHdMVzN0UDJzZFdNWjFEOUNhZ2NXdlJxRkZ1T24wdldRN1JIRy1qR2pnRW9SWlJRZlNPZV9rRG9GbnRBRzBEX1MwS0RzSlk4T3Z6bV9ZN25yZTJsenV4VVFEZTFhMmNIRzh2QzhZWE13?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IMkFTZ25QYzR0R0V3UnUteU9DTl9KZzRRd0ZKMjhYS0tqVUFDYjlLaFYtSW45eVpjeGg3Q0EybnlKQ1JLUWZiQ25DTVBYUjJlVEhGeVQtR1JuQQ?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5mM1diU0xVYk5rVWpXMzdoSlVkbWFmRVV2SDV5OUNtT2QwbU45WlpYcjZNd0JGU3lZNk95QmVuSWJEbGFhbHpYb3FtejBMWVN0SkpkRmxkTUEyTmNtM1BqUGdKYXJCdHl6?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMibEFVX3lxTE5WU3hzRWpvZEhrVVRDRUVqZnlWbVRKQjlRUXhFbnZPMENUeWJMTGN0QmNXb1dYNTFwZHdzenl2NGhpUS1sYzM1UlZSZnVxc2l0aThZVXB6QXFuYjA0aHlxZFR5c3MxcVlFT2hIUQ?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaUNzQU5iTlA4SG9SV0NiM3lQR0podWt3QmFxS3Z3Y2Y3MmtBN2RtQ21sNEMtLVFTUVBvRDRpX2szcTV0UGxCalFfeEljTEYxQ29lblBsYzVFamNtTEJHend2WTZTOGdlSzU1NmdsVjJuR2NzOUIxbVlqb0JkdnhENTFsUWZYbGc3MDJPaG44Mm9Hc3lPX2JFaWtpQ0Vvb1lVM21zMTR5anNXWURPMU05d1RYQ1c?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMia0FVX3lxTE1rNWpPMzdWODR2anAxbW1fZ0d4dW1EOFJ3eWpXaHlWZVhxcS1IMERlZnZHWkE4b3RoTmJLc2xjTXZBSFBCOUttLTR0WlA2VHNTWVNOa1lsMzREc1doYUNDYkVHTzhDSEI5TjB3?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTElvLVpyQUlhSW9WZDVNbXV2LV9HbFpseTFhbW00MHRpcDBlZnptTkwtZXhodEt2a2tuVkNpZUZ0SXRqZFVJdmVXTGJGaUxEY05MQUVYU2YzRV8xN2hTNlNHdkRaVWdydUFSckRqMWIzSjVLeHdHa2JYWDUzYzVKZnhya29NZUpRb29JTWpEU0gxeTU4QWxWeHBzQVNWUnlielZaWGx3bmtkbmIzN0YwMXlRNHBtSDBuZDB4NHpITFE5amlhZl9pZlZEMG8?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxPN3UtUzlPZk9tWHZsV21qVFBnN1Y1dlhrM25jZl9sMmdPcWRMd1RTT2ctYzJ6NTl3MmVfWElNclhRYXVOWG02ZDdzVzJLZXBXbHNBclY1Vkt4ckJYVjVuTnNWRDdGMEt5dVdaa254U0FfX2M0LWJ5T2Jkd1dBWHhWN3piVQ?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMic0FVX3lxTFBKX3pxbGZNYktzNXhOWHU3NDJmeVppd1BHYjJ5ckRSSGYzakJOZWFGdTdvZzhvMi1qTENFdmtmRGR5c1hsS2VSdmcxV1V5bWxOd0ZlS01TcGs5VkhRNTlpV3Z2dzVrcnF4Nl9WdFg2emtnakU?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://simonwillison.net/2026/Sep/12/astra-running-routes": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcDJFOUplZ2xaYWFBVlpobVVaUVRTYzh2SlNIT0pvaEdTc3J5MEpBNzZuN21Lb1lwS3ZTMHJhb0g4VW1XeTZSZ2c5d3pvMW51X0hJRU96cW1jdG9WY3BleUZyWjBYYkg5TXlEWUY3X2tFNk1sR2tncHBLM3kzSzBTOXl2OXA4TFEzTXdUb3ByTTZjdlZzM28yeWJfVEVXNDc1UjY1UFR3aW9OLV9rV2hjOVhxeFZDd2I4RldUTmphem9rZkh3bTJMNVlRZ09VeUlDaXZXTy13?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZkE3SzFLWmJNc3RvT2QtU2JTVTl6OWVnclZUc0hiUXBhN0tlVlNjOWVvNnJ6dVBvZnlqeHBUNEV5ekxITVlQRG1fakN4NHpKWEczS0xPTWFoS3lkbUZ3R0hrTFBibnQ5SzVTOVFzWkRLZGdwRHhMUW1XRmJuTE5NWU8xUDRCZ0NKSzBEYkpxU3B1MW5iUm9Wa3h1RzJ2VklZd1doNEpmOTRpTnEySi1fZ2FGUQ?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjk4TTdkdmFaRHVDUHBMXzJtZ25FWWJtVnRPYm15VlhFVmFydDRKZ2luM1loZEVoVjJEVHgyVk52bTZUVDA5ZkF2OS14M0g2WkNBZ2tqVDB6MGRFczZpN0V5WVladEMyT3FyeGRpUlN3dE9DRVZaamd3cXFQdFhuVmp3eGltRGwteF9YT2VsZ1FHWWFfM01TS1lzLVo2c1VIbDVNX1o0bG9STXdQSkd3b0l6YURLbGRxSmJMeUJR?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://simonwillison.net/2026/Sep/12/paul-ford": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVE5aWZpMEpzQ1ZfTDRRM2lqV3VjbFdXUUVjdE9LenBETEh4dzR0MDdHdTUwd0pzR3JXb0tBSkI5WTdyMEtIbGdwZDV6MkoxNWxPNGh3bjNDN0pKbDVKRVhOZEpJbUtMTXplR1k1d3cxdW0zWk5GSnVzQnpOR1czcFlVRXNkd2t2aDMzeGV3?oc=5": {
+    "first_emitted": "2026-09-13",
+    "score_at_emit": 0,
+    "digest_confirmed": false
   }
 }
