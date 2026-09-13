@@ -18,6 +18,8 @@
 
 **📖 線上閱讀：<https://mandy82477.github.io/claude-news/web_reader/>** ｜ 日報與 wiki 都能在瀏覽器讀，不必開 Obsidian。
 
+📱 網站是 PWA：iPhone 用 Safari 開啟後「分享 → 加入主畫面」，Android 用 Chrome 選單「安裝應用程式」，即可像 app 一樣全螢幕閱讀，已看過的頁面離線也能開。
+
 ## 目錄
 
 - [三個主軸](#三個主軸)
