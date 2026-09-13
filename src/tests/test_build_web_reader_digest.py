@@ -173,6 +173,109 @@ NO_NEWS = """# 2026-09-14 今天 wiki 學到什麼
 """
 
 
+NEWS = """# 日報
+
+**日期：** 2026-09-11
+
+---
+
+### 📌 今日聚焦
+- **[重大事件]** 聚焦甲（[官方](https://example.com/a)）
+- **[社群趨勢]** 聚焦乙（[GitHub](https://github.com/x/issues/1)）
+- **[持續追蹤]** 聚焦丙，來源只在歸因帳本（[媒體](https://example.com/ledger-only)）
+
+### ⭐ 重點話題
+
+**[故事 A 與聚焦甲同源](https://example.com/a)**
+內文 A。
+`HN / x` · 09/11 14:30 UTC
+
+**[故事 B](https://example.com/b)**
+內文 B。
+`GitHub Issues / claude-code` · 09/11 09:27 UTC
+
+**[故事 C](https://example.com/c)**
+內文 C。
+`src` · 09/11 09:00 UTC
+
+### 🔧 技術更新
+- 不該被搬。
+"""
+
+
+class TestTopSectionsFromNews(unittest.TestCase):
+    """丙-2：daily/ 頂部搬 news/ 的 📌 今日聚焦；⭐ 重點話題剔掉聚焦已講過的 URL，最多 5 則。"""
+
+    def setUp(self):
+        self._td = tempfile.TemporaryDirectory()
+        root = Path(self._td.name)
+        (root / "wiki").mkdir()
+        self.wiki = _wiki(root / "wiki")
+        news = root / "news"; news.mkdir()
+        (news / "2026-09-11.md").write_text(NEWS, encoding="utf-8")
+        # claude-code 頁把聚焦甲的來源 URL 寫進正文 → 不算漏收；聚焦乙的 URL 沒人寫 → WARN
+        f = self.wiki / "entities" / "claude-code.md"
+        f.write_text(f.read_text(encoding="utf-8") + "\n來源：https://example.com/a\n", encoding="utf-8")
+        ledger = root / "attr.jsonl"
+        ledger.write_text('{"date": "2026-09-11", "page": "entities/x", "item_url": "https://example.com/ledger-only"}\n'
+                          '{"date": "2026-09-10", "page": "entities/x", "item_url": "https://github.com/x/issues/1"}\n',
+                          encoding="utf-8")
+        self.text, _, self.warnings = gen.generate("2026-09-11", self.wiki, news, ledger)
+
+    def tearDown(self):
+        self._td.cleanup()
+
+    def test_focus_copied_verbatim_above_domains(self):
+        self.assertIn("## 📌 今日聚焦\n\n- **[重大事件]** 聚焦甲（[官方](https://example.com/a)）\n", self.text)
+        self.assertLess(self.text.index("## 📌 今日聚焦"), self.text.index("## 🛠️ 功能"))
+        self.assertNotIn("不該被搬", self.text)
+
+    def test_top_stories_dedup_against_focus_and_drop_source_line(self):
+        self.assertIn("## ⭐ 重點話題", self.text)
+        self.assertNotIn("故事 A 與聚焦甲同源", self.text)
+        self.assertIn("**[故事 B](https://example.com/b)**\n內文 B。", self.text)
+        self.assertNotIn("GitHub Issues / claude-code", self.text)
+
+    def test_focus_source_missing_from_ledger_and_pages_is_warned(self):
+        # 第 1 條：URL 在今日頁正文 → 不警告；第 3 條：URL 在當日歸因帳本 → 不警告；
+        # 第 2 條：帳本裡只有前一天的歸因、頁面也沒寫 → 警告
+        self.assertTrue(any("聚焦第 2 條" in w for w in self.warnings))
+        self.assertFalse(any("聚焦第 1 條" in w for w in self.warnings))
+        self.assertFalse(any("聚焦第 3 條" in w for w in self.warnings))
+
+    def test_parser_ignores_top_sections_and_checker_accepts(self):
+        r = _parse(self.text, "2026-09-11")
+        self.assertEqual(r["itemCount"], 5)
+        self.assertNotIn("📌 今日聚焦", [s["label"] for s in r["sections"]])
+        chk = load_script_module("check_reader_digest")
+        valid = {"entities/claude-code", "entities/managed-agents", "topics/market-signals",
+                 "topics/tail-in-label", "topics/header-domain-only"}
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "2026-09-11.md"
+            f.write_text(self.text, encoding="utf-8")
+            self.assertEqual(chk.check_file(f, valid), [])
+
+    def test_no_news_file_means_no_top_sections(self):
+        text, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope", Path(self._td.name) / "nope.jsonl")
+        self.assertNotIn("📌", text)
+
+
+class TestReaderTopStories(unittest.TestCase):
+    def test_web_side_dedup_matches_generator(self):
+        d = {"focus": [{"ref_urls": ["https://example.com/a"]}],
+             "topStories": [{"title": f"t{i}", "url": f"https://example.com/{c}"} for i, c in enumerate("abcdefg")]}
+        tops = build_web.reader_top_stories(d)
+        self.assertEqual([t["url"][-1] for t in tops], list("bcdef"))
+
+    def test_attach_sets_reader_top_stories(self):
+        d = build_web.empty_digest("2026-09-13")
+        d["focus"] = [{"ref_urls": ["https://example.com/a"]}]
+        d["topStories"] = [{"title": "A", "url": "https://example.com/a"}, {"title": "B", "url": "https://example.com/b"}]
+        digest_all = {"2026-09-13": d}
+        build_web.attach_reader_digests(digest_all, {"2026-09-13": _parse(PARTIAL, "2026-09-13")})
+        self.assertEqual([t["title"] for t in d["readerTopStories"]], ["B"])
+
+
 class TestParser(unittest.TestCase):
     def test_unknown_section_pages_not_swallowed(self):
         r = _parse(PARTIAL, "2026-09-13")
@@ -238,6 +341,14 @@ class TestReaderSearchText(unittest.TestCase):
         self.assertIn("重點 4", txt)
         self.assertNotIn("重點 5", txt, "重點話題只上站前 5 則，第 6 則不索引")
         self.assertNotIn("媒體覆述", txt)
+
+    def test_headlines_already_in_focus_not_indexed_twice(self):
+        d = dict(self.d)
+        d["focus"] = [{"tag": "[重大事件]", "text": "聚焦句甲", "ref_urls": ["u0"]}]
+        d["topStories"] = [{"title": f"重點 {i}", "url": f"u{i}"} for i in range(7)]
+        txt = build_web.reader_search_text(self.r, d)
+        self.assertNotIn("重點 0", txt)
+        self.assertIn("重點 5", txt)
 
 
 class TestChecker(unittest.TestCase):

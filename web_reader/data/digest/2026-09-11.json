@@ -765,5 +765,25 @@
       }
     ],
     "itemCount": 13
-  }
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Edit preview/diff not showing in VSCode extension UI when confirming changes",
+      "url": "https://github.com/anthropics/claude-code/issues/8660",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/10 21:46",
+      "sentiment": "",
+      "body": "VSCode 擴充套件確認變更時編輯預覽／diff 未顯示的問題，回報者於今年 3 月更新指出問題仍未修復，該 issue 已累積 90 個 👍 反應與 55 則留言。",
+      "focusTags": []
+    },
+    {
+      "title": "Feature Request: Option to disable paste text collapse in input field",
+      "url": "https://github.com/anthropics/claude-code/issues/23134",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/11 12:15",
+      "sentiment": "",
+      "body": "使用者要求可關閉貼上多行文字時自動折疊為「[Pasted text #N +X lines]」的行為，指出這使得貼上內容在送出前難以檢視與編輯，該請求獲 157 個 👍 反應。",
+      "focusTags": []
+    }
+  ]
 }

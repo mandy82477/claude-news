@@ -341,7 +341,9 @@
     const parts = [];
     const focus = focusSectionHtml(d);
     if (focus) parts.push(focus);
-    const top = (d.topStories || []).slice(0, READER_TOP_STORIES_MAX);
+    // 丙-2：重點話題剔掉聚焦已講過的（build_web.reader_top_stories 算好放 readerTopStories）；
+    // 快取到舊 data.js 時退回前 5 則
+    const top = Array.isArray(d.readerTopStories) ? d.readerTopStories : (d.topStories || []).slice(0, READER_TOP_STORIES_MAX);
     if (top.length) {
       parts.push(`<div class="section">
 <div class="section__h"><span class="section__h-label">重 點 話 題</span><span class="section__h-en">headlines</span><span class="section__h-count">${top.length} items</span></div>`);

@@ -30,6 +30,7 @@ build_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）產生器。
 """
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -37,12 +38,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 WIKI_DIR = ROOT / "wiki"
 DAILY_DIR = ROOT / "daily"
+NEWS_DIR = ROOT / "news"
+ATTRIBUTION = ROOT / "data" / "source_attribution.jsonl"   # 記者歸因帳本：{date, page, item_url, …} 一行一筆
 
 # 標題行 `# YYYY-MM-DD 今天 wiki 學到什麼`（build_web.READER_TITLE_RE 的產出端）
 TITLE_FMT = "# {date} 今天 wiki 學到什麼"
 NO_NEWS_FMT = "> 今日 wiki 無新知（{date}）"
 # 頁面小節 `### [[頁名|頁面標題]]`（build_web.READER_PAGE_RE 的產出端）
 PAGE_HEADING_FMT = "### [[{page}|{name}]]"
+# 頂部兩節：從 news/TARGET_DATE.md 原樣搬來的 📌 今日聚焦，與剔除聚焦已講過事件後的 ⭐ 重點話題（≤5 則）。
+# 節名住 format.md 契約表；build_web 對 daily/ 只認六領域，這兩節在網站上的資料仍取自 news/ 解析結果
+# （build_web.attach_reader_digests 的 readerTopStories 做同一套剔重），這裡是給 Obsidian 讀者的完整版。
+FOCUS_SECTION = "## 📌 今日聚焦"
+TOP_SECTION = "## ⭐ 重點話題"
+TOP_MAX = 5
+NEWS_FOCUS_H3 = "### 📌 今日聚焦"
+NEWS_TOP_H3 = "### ⭐ 重點話題"
+NEWS_H3_RE = re.compile(r"^###\s")
+MD_URL_RE = re.compile(r"\((https?://[^\s()]+)\)")
+NEWS_TOP_TITLE_RE = re.compile(r"^\*\*\[(.+?)\]\((https?://[^\s()]+)\)\*\*\s*$")
+NEWS_TOP_SOURCE_RE = re.compile(r"^`[^`]+`\s*·")
 
 # 頁頂 callout 首行：`> **標籤**（YYYY-MM-DD…）`——與 scripts/check_hierarchy.py 的
 # CALLOUT_DATE_RE 看同一件事（那邊只要日期，這邊還要標籤與同行尾巴）。
@@ -111,6 +126,41 @@ def has_undated_callout(head: str) -> bool:
     return not any(re.search(r"（[^）]*\d{4}-\d{2}-\d{2}", l) for l in bold)
 
 
+def news_sections(news_md: str) -> tuple[list[str], list[str]]:
+    """news/ 日報 → (📌 今日聚焦的條列行, ⭐ 重點話題的原始行)。找不到的節回空 list。"""
+    def block(h3: str) -> list[str]:
+        lines = news_md.splitlines()
+        try:
+            i = next(k for k, l in enumerate(lines) if l.strip() == h3)
+        except StopIteration:
+            return []
+        out = []
+        for l in lines[i + 1:]:
+            if NEWS_H3_RE.match(l):
+                break
+            out.append(l.rstrip())
+        return out
+    focus = [l for l in block(NEWS_FOCUS_H3) if l.startswith("- ")]
+    return focus, block(NEWS_TOP_H3)
+
+
+def top_stories_minus_focus(top_lines: list[str], focus_urls: set[str], limit: int = TOP_MAX) -> list[list[str]]:
+    """⭐ 原始行 → 每則 [標題行, 內文行…]，剔掉 URL 已在聚焦裡的、剔掉來源行，最多 limit 則。"""
+    stories: list[list[str]] = []
+    cur: list[str] | None = None
+    for l in top_lines:
+        m = NEWS_TOP_TITLE_RE.match(l.strip())
+        if m:
+            cur = [l.strip()] if m.group(2) not in focus_urls else None
+            if cur is not None:
+                stories.append(cur)
+            continue
+        if cur is None or not l.strip() or NEWS_TOP_SOURCE_RE.match(l.strip()):
+            continue
+        cur.append(l.strip())
+    return stories[:limit]
+
+
 def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list[dict]], list[str]]:
     """回傳 ({節名: [item…]}, warnings)。item = {page, name, lines, inbound}。"""
     sections: dict[str, list[dict]] = {s: [] for s in SECTION_ORDER}
@@ -137,14 +187,22 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
                 "name": name or f.stem,
                 "lines": [l for b in hits for l in (b + [""])][:-1],
                 "inbound": int(im.group(1)) if im else 0,
+                "raw": raw,
             })
     for items in sections.values():
         items.sort(key=lambda it: (-it["inbound"], it["page"]))
     return sections, warnings
 
 
-def render(target_date: str, sections: dict[str, list[dict]]) -> str:
+def render(target_date: str, sections: dict[str, list[dict]],
+           focus_lines: list[str] | None = None, top_stories: list[list[str]] | None = None) -> str:
     out = [TITLE_FMT.format(date=target_date), ""]
+    if focus_lines:
+        out += [FOCUS_SECTION, "", *focus_lines, ""]
+    if top_stories:
+        out += [TOP_SECTION, ""]
+        for st in top_stories:
+            out += [*st, ""]
     total = sum(len(v) for v in sections.values())
     if total == 0:
         out.append(NO_NEWS_FMT.format(date=target_date))
@@ -163,9 +221,41 @@ def render(target_date: str, sections: dict[str, list[dict]]) -> str:
     return "\n".join(out).rstrip("\n") + "\n"
 
 
-def generate(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[str, int, list[str]]:
+def attributed_urls(target_date: str, ledger: Path = ATTRIBUTION) -> set[str]:
+    """記者當日歸因帳本裡的 item_url——某則來源被任一記者收進任一頁的證據。"""
+    urls: set[str] = set()
+    if not ledger.exists():
+        return urls
+    for line in ledger.read_text(encoding="utf-8").splitlines():
+        try:
+            rec = json.loads(line)
+        except ValueError:
+            continue
+        if rec.get("date") == target_date and rec.get("item_url"):
+            urls.add(rec["item_url"])
+    return urls
+
+
+def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_DIR,
+             ledger: Path = ATTRIBUTION) -> tuple[str, int, list[str]]:
     sections, warnings = collect(target_date, wiki_dir)
-    return render(target_date, sections), sum(len(v) for v in sections.values()), warnings
+    focus_lines: list[str] = []
+    top_stories: list[list[str]] = []
+    news_f = news_dir / f"{target_date}.md"
+    if news_f.exists():
+        focus_lines, top_raw = news_sections(news_f.read_text(encoding="utf-8"))
+        focus_urls = {u for l in focus_lines for u in MD_URL_RE.findall(l)}
+        top_stories = top_stories_minus_focus(top_raw, focus_urls)
+        # 乙版放棄的那層保險，機械撿回：聚焦每條的來源 URL，既不在記者當日歸因帳本、
+        # 也沒被任何今日覆寫 callout 的頁寫進正文 → 多半是記者漏收，點名出來給人判斷
+        today_raw = "\n".join(it["raw"] for items in sections.values() for it in items)
+        attributed = attributed_urls(target_date, ledger)
+        for n, l in enumerate(focus_lines, 1):
+            urls = MD_URL_RE.findall(l)
+            if urls and not any(u in attributed or u in today_raw for u in urls):
+                warnings.append(f"聚焦第 {n} 條的來源既不在當日歸因帳本、也未出現在今日更新的頁——記者可能漏收：{l[:60]}…")
+    text = render(target_date, sections, focus_lines, top_stories)
+    return text, sum(len(v) for v in sections.values()), warnings
 
 
 def main(argv: list[str]) -> int:

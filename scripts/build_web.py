@@ -1170,6 +1170,9 @@ READER_DOMAIN_SECTIONS = [
     ("👤 人物",      "people"),
 ]
 READER_H2_RE = re.compile(r"^##\s+(.+?)\s*$")
+# daily/ 頂部兩節（產生器從 news/ 搬來給 Obsidian 讀者看的）：解析端認得但不收——
+# 網站上這兩節的資料取自 news/ 解析結果（focus 帶標籤與 ref_urls、readerTopStories 剔重），不重複解析
+READER_PASSTHROUGH_SECTIONS = {"📌 今日聚焦", "⭐ 重點話題"}
 # 頁面小節 `### [[頁名|頁面標題]]`——一頁一節，別名是頁面 H1（前端仍以 wikiPageName 為準）
 READER_PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
 # callout 首行 `> **標籤**（YYYY-MM-DD…）`——標籤自由（最新動態／最新判讀／本週衝擊…），
@@ -1233,7 +1236,7 @@ def parse_reader_digest(f: Path) -> dict:
                 current = {"label": label, "key": key, "items": []}
                 result["sections"].append(current)
             else:
-                current = None  # 不認得的節名：其下頁面不收，不靈默走進前一節
+                current = None  # 不認得的節名（含頂部兩節）：其下內容不收，不靈默走進前一節
             continue
         pm = READER_PAGE_RE.match(line)
         if pm:
@@ -1255,6 +1258,16 @@ def parse_reader_digest(f: Path) -> dict:
     result["sections"] = [sec for sec in result["sections"] if sec["items"]]
     result["itemCount"] = sum(len(sec["items"]) for sec in result["sections"])
     return result
+
+
+READER_TOP_STORIES_MAX = 5
+
+
+def reader_top_stories(d: dict) -> list:
+    """讀者版日期的 ⭐ 重點話題：剔掉 URL 已在 📌 今日聚焦 ref_urls 裡的（聚焦已經講過），前 5 則。
+    與 build_reader_digest.top_stories_minus_focus 同一套規則，那邊產 daily/ 檔，這邊產網站資料。"""
+    focus_urls = {u for f in d.get("focus", []) for u in f.get("ref_urls", [])}
+    return [s for s in d.get("topStories", []) if s.get("url") not in focus_urls][:READER_TOP_STORIES_MAX]
 
 
 def reader_preview(r: dict) -> str:
@@ -1298,6 +1311,7 @@ def attach_reader_digests(digest_all: dict, reader_all: dict) -> None:
             d = empty_digest(date_str)
             digest_all[date_str] = d
         d["reader"] = r
+        d["readerTopStories"] = reader_top_stories(d)
         pv = reader_preview(r)
         if pv:
             d["preview"] = pv[:160]
@@ -1312,7 +1326,10 @@ def reader_search_text(r: dict, d: dict | None = None) -> str:
             segs.append(f"{it.get('name', '')}；{it.get('label', '')}；{strip_markdown_to_text(it.get('body', ''))}")
     if d:
         segs.extend(f["text"] for f in d.get("focus", []) if f.get("text"))
-        segs.extend(s["title"] for s in d.get("topStories", [])[:5] if s.get("title"))
+        tops = d.get("readerTopStories")
+        if tops is None:
+            tops = reader_top_stories(d)
+        segs.extend(s["title"] for s in tops if s.get("title"))
     return "；".join(x for x in segs if x)
 
 

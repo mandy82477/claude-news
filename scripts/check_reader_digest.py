@@ -20,9 +20,10 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
   4. 頁面小節底下至少一行 `>` callout；首行 `> **標籤**（YYYY-MM-DD…）` 的日期須等於檔名日期
      （日期對不上＝抄到了別天的 callout，或有人手改了日期）
   5. 領域節底下、頁面小節之外不得有散落的 `>` 行（那些行不會上站）
+  6. 頂部 `## 📌 今日聚焦`／`## ⭐ 重點話題` 兩節合法，內容不查（它們是 news/ 的投影）
 
 內容本身（標籤字樣、字數、寫法）不查——那是各頁 callout 自己的事，規則在
-`.claude/reporter-rules/wiki-ingest-format.md`「頂部 delta-first callout」。
+`.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」。
 
 行為：全過 exit 0；任何違規印出「檔案:行號 問題」後 exit 1。
 「今日 wiki 無新知」的空日檔一律視為合法（它是規格要求的寫法，不是失敗）。
@@ -42,6 +43,8 @@ H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
 CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*（(\d{4}-\d{2}-\d{2})[^）\n]*）(.*)$")
 
+# daily/ 頂部兩節：合法但不是領域節，其下內容不查（規格端見 format.md 契約表）
+PASSTHROUGH_LABELS = {"📌 今日聚焦", "⭐ 重點話題"}
 # 與 build_web.READER_DOMAIN_SECTIONS 同一組節名（規格端見 format.md 契約表）
 DOMAIN_LABELS = [
     "🛠️ 功能",
@@ -105,7 +108,9 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
         if h:
             close_page()
             label = h.group(1).strip()
-            if label not in DOMAIN_LABELS:
+            if label in PASSTHROUGH_LABELS:
+                current_label = None
+            elif label not in DOMAIN_LABELS:
                 problems.append(f"{rel}:{n} 節名「{label}」不在六個領域內，該段在網站上會整段消失")
                 current_label = None
             else:
