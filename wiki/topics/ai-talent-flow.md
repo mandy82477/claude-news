@@ -118,7 +118,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - dev.to 報導：Gemini 3.5 Pro 延期至七月，同期 4 位 Google 資深研究員轉投 Anthropic，AI 人才流動繼續向 Anthropic 傾斜（推論，未經 Google 官方確認）。（ref: https://dev.to/doremonai/gemini-35-pro-delayed-to-july-4-senior-google-researchers-defect-to-anthropic-47he）
 
 #### 2026-06-26
-- dev.to 深度報導：Google AI 人才出走潮一週內 4 位頂尖研究員離職，含諾貝爾獎得主 John Jumper；Google 市值蒸發約 $2,700 億美元（該報導標題自述的數字，非分析師具名估算；2026-09-13 查證見 [[entities/john-jumper]]）、Gemini 3.5 延期；dev.to 另有報導 Jumper 在「危機中途」加入 Anthropic 的動機分析。（ref: https://dev.to/doremonai/googles-ai-brain-drain-4-top-researchers-leave-for-anthropic-in-one-week-270b-wiped-gemini-35-5ffl；ref: https://dev.to/peremptory/the-nobel-laureate-who-joined-anthropic-mid-crisis-5cfh）
+- dev.to 深度報導：一週內 4 位頂尖研究員離職，含 John Jumper；市值與延期兩項歸因皆該報導自述（09-13 查證見 [[entities/john-jumper]]）（[dev.to](https://dev.to/doremonai/googles-ai-brain-drain-4-top-researchers-leave-for-anthropic-in-one-week-270b-wiped-gemini-35-5ffl)）
+- dev.to 另一篇分析 Jumper 在「危機中途」加入 Anthropic 的動機（[dev.to](https://dev.to/peremptory/the-nobel-laureate-who-joined-anthropic-mid-crisis-5cfh)）
 
 #### 2026-06-25
 - FT 報導 Anthropic 新聘一位對「人類長期存亡」有爭議觀點的經濟學家，引發 AI 安全社群討論。（ref: https://www.ft.com/content/bb04671c-4377-4231-96ef-0f8e57ed5d1b）

@@ -171,7 +171,9 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 
 #### 2026-07-29
 **密碼學界對 07-28 密碼分析研究的第一波深度反應**：
-- **密碼工程背景部落客評論**（HN score 168）：Cryptography Engineering 部落格作者評論 Anthropic 07-28 公布的兩項 Claude Mythos Preview 密碼分析成果（HAWK 簽章方案攻擊、round-reduced AES 改進攻擊），指出兩者在「成熟度」與「意義」上有落差（[Cryptography Engineering](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)，2026-07-29）。**落差的具體所指（2026-09-13 讀原文查證）**：作者認為 **HAWK 攻擊是真成果**——它沒有發明新數學，而是把既有工具接起來，但**產出了真的能跑的程式碼**，對挑戰實例只花數小時 wall-clock 就跑完，等於把安全強度砍半、逼該方案得加倍金鑰長度，而 HAWK 的賣點正是效率。**AES-7 那篇則只是 2013 年舊work 的常數倍改進**：需要 2^89 次加密運算與 2^105 個選擇明文，作者直言「你得先說服一個真的加密者產出 2^105 筆加密」才談得上，屬知識的小增量而非實用攻擊。一句話：HAWK 打的是還在標準化中的候選方案且方法可複現，AES 那篇是對已部署且實務上仍打不破的密碼做理論推進（[Cryptography Engineering](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)，查證 2026-09-13）
+- **密碼工程背景部落客評論**（HN score 168）：作者評論 07-28 公布的兩項 Mythos Preview 密碼分析成果，指 HAWK 攻擊與 AES 改進攻擊在「成熟度」與「意義」上有落差（[Cryptography Engineering](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)，2026-07-29）。具體所指見下兩條（09-13 讀原文查證）
+  - **HAWK 攻擊是真成果**：沒有發明新數學，而是把既有工具接起來，但**產出了真能跑的程式碼**，對挑戰實例數小時 wall-clock 跑完，等於把安全強度砍半、逼該方案加倍金鑰長度——而 HAWK 的賣點正是效率
+  - **AES-7 那篇只是 2013 年舊研究的常數倍改進**：需 2^89 次加密運算與 2^105 個選擇明文，作者直言「你得先說服一個真的加密者產出 2^105 筆加密」；屬知識小增量而非實用攻擊
 - **Matthew Green 觀點（經 Simon Willison 引述）**：密碼學家 Matthew Green 將此次研究成果放入「公鑰密碼演算法邁向後量子轉型過渡期」的脈絡評論（[Simon Willison](https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything)，2026-07-29，原文引自 blog.cryptographyengineering.com）
 - 兩則皆為密碼學專業社群對 07-28 研究成果的第一波深度反應，顯示該研究已進入專家圈層討論，非僅止於一般科技媒體轉述
 

@@ -6292,3 +6292,23 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 來源：讀者版產生器 `scripts/build_reader_digest.py` 的聚焦漏收 WARN（09-11 聚焦第三條來源不在當日歸因帳本、也不在任何今日更新頁），對上 2026-09-11 Ingest 條目的「未分類待裁示」。
 - 裁示：比照既有先例收進 [[entities/claude-code]]「開發者須知」——該處已有 Persona 年齡驗證（06-22）一條，Anthropic 平台級帳號／年齡政策適用全產品含 Claude Code；不新開頁。功能記者規則 `.claude/reporter-rules/features/pages.md` 登記觸發邊「平台級帳號／年齡政策公告 → 本頁開發者須知」，累積逾 5 條再評估拆消費版產品頁。
 - 讀者版 `daily/2026-09-11.md` 已凍結，不回填；歸因帳本補一筆 `entities/claude-code`。
+
+## 2026-09-13 週度延伸回顧
+
+- 延伸：**3 項全數執行**——(1) `topics/recursive-self-improvement` 「## 技術彙整」節首加開覆寫式彙整表〈這波離職示警，誰說了什麼〉（5 列：Coxon／Hubinger／Benton／Engels／09-12 未具名，欄位為當事人｜原職位｜發言日｜核心主張｜媒體），表下三句讀法提醒：Hubinger 仍在職、Coxon–Hubinger 關聯 BBC 只稱「疑似」不採信、HN 有質疑 Coxon 資淺的反面聲音；(2) `topics/anthropic-business` 把 09-04「自建支付對上 Stripe」與 09-09「Commerce Agents ＋ Visa／Mastercard」互指並補一句並置判讀（相隔五天的兩則獨立訊號同指跨入支付／商務代理基礎設施，一自建一結盟）；(3) `wiki/reader-notes.md` 第 37 行「GPT-5.6 vs Claude」⏳ 條更新等待對象為 GPT-6 Astra 世代（09-05 起換代），並註明 `topics/model-task-leaderboard` 的活榜單快照已是部分回應，惟活榜單為第三方彙整、題型各異，不等於官方 coding benchmark，故仍維持 ⏳
+- 使用者跳過項目：無
+- 聚焦校準：非本月首次（`wiki/metrics.md` 已有 09-06 的 73.7%），跳過
+- 記者回報：六位皆已回報；功能、社群、人物三位回報「無」（本週訊號量大但既有結構已吸收，未溢出）
+- 讀者回饋（GitHub Issues `reader-feedback`）：本輪 0 筆開啟中
+- 📌 雜記清理：無（現存唯一一筆 09-03 星圖規劃，距今 10 天未逾 30 天）
+
+## 2026-09-13 本機補跑（`/weekly` 步驟 0）：5b／5c／5m
+
+- **跨家榜單週更（5b）**：已更新 18 榜／其中 LMArena 本週無法取得（`lmarena.ai` 301 重導至 `arena.ai`，抓到的是 Search Arena／WebDev Arena 而非文字對話總榜，未以其數字充當本列答案，連續失敗第 1 週）、Terminal-Bench 二手數字與上週數量級矛盾（本輪 TB 3.0 首位 GLM-5.3 0.283 vs 上週 Opus 5 42.7%）故不採計。**本輪三個實質變化**：Search Arena 連續 3 週抓不到後恢復直接抓取（gpt-5.6-sol-xhigh 1257 居首、claude-opus-4-6-search 1253 次之，汰換討論可擱置）；SWE-bench 上週的「兩說歧異」查明為 Verified 與 Pro 兩子集混談，本輪起分列（Pro：Fable 5.1 81.2% 領先；Verified：Opus 5 96%）；OpenRouter 連續 3 週出現第三種說法（本週 DeepSeek V4 Flash 居首），此列可靠度目前最低。另記錄榜頁已出現 Terminal-Bench 4.0 分頁
+- **逾期待查證清算（5c）**：盤點 103 筆（Lane A 8／Lane B 95），本輪處理 16 筆（查實 7／依日報更新但未查官方 6／確認官方未載 1／失效移除 0／退回 Lane B 1 ＝ ai-talent-flow:138 探針假命中，09-12 日報無對應條目）。**查實並移除標記者 7 筆**：`entities/fable-5` ⟨Q-02⟩（Fable 5.1 傳聞已由 09-01 官方發布證實，儲存格與細節區同批移除）、`entities/dario-amodei`×2（FEC 申報確認捐款人即本人；三筆捐款同收款方、捐款人各自獨立）、`entities/managed-agents` ⟨Q-02⟩（v0.118.0 release notes 僅一條 feature，與 v0.117.0 dreaming 非同批次）、`entities/mythos`×2（讀 Cryptography Engineering 原文補上 HAWK 與 AES-7 的落差具體所指；版本名稱傳聞已由官方發布證實）、`entities/sonnet-5`（TB 2.1 85.2%、Terminus-2 harness 上 80.4% 勝過 Opus 4.8 74.6%，第三方彙整非官方）。**改 🔎 查無官方 1 筆**：`entities/john-jumper`（Gemini 3.5 延期官方僅稱程式能力未達內部預期，從未歸因人才出走；2,700 億出自 dev.to 標題自述，CNBC 記當日 2,000 億）。**部分查實 1 筆**：`entities/robert-mahari` 經歷與職掌已讀到正文確認，另立窄化標記只留「到任日未公開」
+- **結案回掃**：`entities/john-jumper` 3 處＋`topics/ai-talent-flow` 4 處的 2,700 億口徑全部上修為「dev.to 自述，非官方」；`index.md` robert-mahari 列狀態 `active（待核實）` → `active` 並補經歷；`entities/sonnet-5` 時序區「待補 benchmark 連結」一句同步更新
+- **📊 產消對帳（概估）**：近 7 天新增 24 筆｜每週產能 18 筆（A 10＋B 8）｜本輪實際可消 16 筆｜**淨增 6 筆/週**；趨勢 09-06 39 筆 → 09-13 103 筆（+64）；Lane B 依現行額度需約 11.9 週排空。⚠️ **產出快過消費，主編處置建議＝提高記者端標記門檻**（「僅標題可用」的媒體轉述改為直接寫成「僅標題」事實、不另標懸置），而非提高本步額度——額度是本機人力，拉高只會讓 `/weekly` 更長
+- **⚠️ 舊語法盲區**：39 筆未進佇列，前三頁 `topics/ai-agent-safety` 14、`index` 7、`overview` 4，須由記者輪回填才進得了佇列
+- **pricing 通路與乘數複查（5e）**：不觸發——該區塊「資料截至 2026-09-03」距今 10 天未逾 30 天。⚠️ **更正 09-12 lint 的漏抓帳 (4)**：該筆記「通路表缺資料截至欄位使 30 天複查條件永不觸發」，實際上該欄在節導言句中（`wiki/entities/pricing.md` 「## 通路與乘數」首段），欄位存在、條件可觸發，該筆漏抓帳建議撤銷
+- **code-quality-decline 三條線（5m）**：4 個 issue 逐一以 `gh issue view` 比對／表上 3 列全部維持原判定（#41930 CLOSED 未變；#65687 OPEN；#77136 OPEN 最後更新推進至 09-12、留言 121 則；#83510 OPEN 最後更新推進至 09-10、留言 13 則）／已更新「Opus 5 上線後的品質觀感」列的最後更新日與留言數／資料截至改為 2026-09-13。無任一列由「還在」翻「已結案」，`## 摘要` 不需改寫
+- **懸置語法檢查**：通過（標記 164 → 157 筆，舊語法存量 39 筆未增加）

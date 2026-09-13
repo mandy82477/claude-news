@@ -284,7 +284,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-08-13
 - **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
-- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-09-27｜訊 2026-09-07）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 報導僅標題可用，無正文細節（Google News/Barron's）。**後續（依 2026-09-07 日報）**：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、宣稱優於 GPT-5 與 Claude；該定價與能力宣稱僅見媒體標題，xAI 官方頁面未查證，能力提升內容仍未見
+- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-09-27｜訊 2026-09-07）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
+- 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
 
 ### 2026-08-11

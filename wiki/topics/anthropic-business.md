@@ -159,7 +159,7 @@ Anthropic 的收入來自兩條軌道（2026-06-15 後正式成文化）：
 
 **2026-08-05～07 新增：自研晶片團隊正式證實**：Reuters（08-05）率先報導 Anthropic 正籌建內部晶片設計團隊並招募工程師；TechCrunch、Business Insider、Tom's Hardware（皆 08-05）、arstechnica（08-06）、Fstoppers（08-07）陸續跟進同一事件。Business Insider 引述 Anthropic 發言人證實：「Anthropic would co-design hardware and models, allowing Claude to run faster and more efficiently 'at the scale our customers need.'」，同時公司明確表態：「Anthropic has taken and will continue to take a 'multi-chip approach' in which hardware from AWS, Google, Nvidia, and AMD will remain central」——即自研晶片是**補充**既有多雲/多晶片供應鏈，非取代（見上方「哪個合作會改到你用的 Claude」表 AMD $50 億投資、Micron 多年協議、SK 集團供應鏈接洽等既有紀錄）。**對商業的意涵**：延續近期 Samsung 代工洽談（07-02/06，The Information／TechRepublic，確定性未升級）、SK 集團供應鏈接洽（07-26，Fortune，「Anthropic 主動尋求自製晶片供應」措辭）等自研硬體布局系列信號，本次是首次由公司正式證實「成立內部晶片設計團隊」（而非單純委外代工洽談），代表硬體自主布局從「向外尋求供應」進一步深化至「自行設計」，意在降低對 Nvidia GPU 的長期成本與供給依賴（推論）；具體晶片類型、量產時程、投入規模未見細節，僅標題與公司聲明層級資訊（Google News/Reuters；Google News/TechCrunch；Google News/Business Insider；Google News/Tom's Hardware；Google News/arstechnica；Google News/Fstoppers；同日 Wccftech 將此事與 ByteDance 禁止員工蒸餾美國 AI 模型並列於同篇，此處僅取晶片團隊部分為佐證，蒸餾禁令屬出口管制／安全政策議題，見 [[topics/ai-agent-safety]]）
 
-**2026-09-04 新增：自建支付技術，傳分食 Stripe 市場**：The Information 報導 Anthropic 正推進自建支付（in-house payments）技術，可能分食部分 Stripe 市場；僅標題可用，具體技術範疇（是否為 agent 自主下單/結帳基礎設施）、時程、與 Stripe 既有整合關係是否終止均未見報導細節。若屬實，代表 Anthropic 的業務擴張正從「AI 模型與工具」延伸至「金融基礎設施」層，與既有自研晶片（08-05～07）同屬「核心業務外自建關鍵基礎設施」的策略模式（推論），惟支付與晶片分屬完全不同領域，兩者是否反映同一套「凡是規模夠大就自建」的公司文化尚待更多案例佐證（Google News/The Information）。
+**2026-09-04 新增：自建支付技術，傳分食 Stripe 市場**：The Information 報導 Anthropic 正推進自建支付（in-house payments）技術，可能分食部分 Stripe 市場；僅標題可用，具體技術範疇（是否為 agent 自主下單/結帳基礎設施）、時程、與 Stripe 既有整合關係是否終止均未見報導細節。若屬實，代表 Anthropic 的業務擴張正從「AI 模型與工具」延伸至「金融基礎設施」層，與既有自研晶片（08-05～07）同屬「核心業務外自建關鍵基礎設施」的策略模式（推論），惟支付與晶片分屬完全不同領域，兩者是否反映同一套「凡是規模夠大就自建」的公司文化尚待更多案例佐證（Google News/The Information）。**與 09-09 的 Claude Commerce Agents ＋ Visa／Mastercard 合作並置看**（見「哪個合作會改到你用的 Claude」）：相隔五天的兩則獨立訊號同指「跨入支付／商務代理基礎設施」——一則講自建、一則講結盟，兩條路同時走（2026-09-13 並置判讀）。
 
 > 更多計費細節見 [[entities/pricing]]
 
@@ -304,7 +304,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
-- **Visa／Mastercard**（2026-09-09）：Anthropic 推出 Claude Commerce Agents 商務代理功能，並與 Visa、Mastercard 建立合作關係，具體交易機制、資格與是否另計費均未見報導，僅標題可用（Crowdfund Insider）
+- **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
 - **LoanPro**（2026-09-09）：貸款管理平台採用建構在 AWS 與 Claude 上的 AI 原生客服介面，客服通話時間最多縮短 15%，具體導入規模未見報導（citybiz）
 - **Fluidstack**（2026-09-07）：主導 Anthropic 一筆 500 億美元的算力建置案，詳見下方細節（AI Magazine）
 - **Hut 8**（2026-09-07）：比特幣礦業公司藉 350 億美元 Anthropic 合作案加速 AI 業務轉型，推論與 09-01 已記錄的 Lambda 交易為同一筆，詳見下方細節（Yahoo Finance）

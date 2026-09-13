@@ -127,7 +127,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 | 2026-09-11 | **anthropic-sdk-python v1.5.0** 新增 Managed Agents auto mode 工具權限設定，changelog 首度列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0)）|
 | 2026-09-03 | Reddit 貼文宣稱自建開源 agent 框架以同一模型達同準度、成本低最多 75%，未附測試方法與資料集（[原文](https://www.reddit.com/r/LocalLLaMA/comments/1w65ise/we_built_an_opensource_modelneutral_agent_harness/)）|
 | 2026-08-19 | **anthropic-sdk-python v0.125.0** 新增 managed agents 的 web search 設定相關功能，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0)）|
-| 2026-07-22 | **anthropic-sdk-python v0.118.0** 新增三項 Managed Agents 支援：model effort、初始 session events、threads 增量串流；與 v0.117.0 的 dreaming 非同批次（2026-09-13 查 release notes 確認，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0)）|
+| 2026-07-22 | **anthropic-sdk-python v0.118.0** 新增三項 Managed Agents 支援：model effort、初始 session events、threads 增量串流（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0)，09-13 查證）|
 | 2026-07-16 | **anthropic-sdk-python v0.117.0** 新增「api: add support for dreaming」，即 Dreaming 記憶整合 API（官方 dreams 文件確認，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0)）|
 | 2026-07-01 | **anthropic-sdk-python v0.115.0** 新增 Managed Agents API 支援，開發者可透過官方 SDK 直接操作（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0)）|
 | 2026-05-22 | **自架沙箱完整參考文件發布**（via Reddit r/ClaudeAI 報告 v2.1.145 新增）：企業可在完全自有基礎設施部署受管代理（文件範圍見歷史細節）|

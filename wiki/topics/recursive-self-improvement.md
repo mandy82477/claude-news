@@ -3,7 +3,7 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-11"
+last_updated: "2026-09-13"
 last_news_update: "2026-09-11"
 status_main: "ongoing"
 days_since_news: 1
@@ -27,7 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-11
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-11
 
 > **最新動態**（2026-09-11）
@@ -74,6 +74,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### 這波離職示警，誰說了什麼（2026-09-13 彙整）
+
+> 本表每週重寫：新當事人出現時加列。逐則完整脈絡見下方各節。
+
+| 當事人 | 原職位 | 發言日 | 核心主張 | 媒體 |
+|---|---|---|---|---|
+| [[entities/jacob-coxon]] | Anthropic pretraining 研究員（前 OpenAI，共三年） | 2026-09-09 | 兩家公司都沒有負責任行事，正直衝向自我改進型超智慧、拿人命當賭注 | X 原貼文；WSJ 獨家、BBC、Politico 等十餘家跟進（HN 623 分） |
+| [[entities/evan-hubinger]] | Anthropic 對齊科學主管（在職） | 2026-09-09／09-10 | AI 十年內殺死所有人類的機率逾 10%；現有模型風險低，但公司尚無解決超智慧對齊的計畫 | BBC 轉述；CBS News 補完整發言 |
+| Joe Benton | 曾於 Anthropic 帶領一個安全研究團隊 | 2026-09-11 | 擔憂系統很快脫離人類掌控，籲提升前沿 AI 事故透明度（「房間裡沒有大人」） | NBC News 專訪 |
+| Josh Engels | 前 Google DeepMind AI 安全研究員 | 2026-09-11 | 同上（與 Benton 同場受訪） | NBC News 專訪 |
+| 未具名員工 | 未見報導 | 2026-09-12 | 帶著警告離職，內容未見具體揭露 | Times of India、ESG Dive |
+
+**讀這張表要注意三件事**：① Hubinger **仍在職**，與其餘離職者性質不同；② Coxon 與 Hubinger 的發言是否互相回應，BBC 只稱「疑似」、原文無佐證，本站不採信兩者有明確關聯；③ HN 討論串有讀者質疑 Coxon 資淺、認為媒體反應過度，社群並非全員採信（見下方「反面聲音」）。
+
 ### NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」（2026-09-11 新增）
 
 - **揭露來源**：NBC News〈AI researchers leave Anthropic and Google: 'There are no adults in the room'〉（經 Hacker News，2026-09-10 23:23 UTC）；僅取得摘要，正文待補充查證
@@ -119,7 +133,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Anthropic 官方部落格（經 Google News 轉載）〈Automated researchers can reliably mitigate alignment failures〉；TechCrunch〈An Anthropic researcher just gave us a peek at self-improving AI〉；Startup Fortune〈Anthropic Says Claude Is Showing Early Signs of Self-Improvement〉——三則報導同一事件，官方部落格為主要引用來源
 - **核心主張（僅標題可用）**：Anthropic 稱其「自動化研究員」（automated researchers）——用於稽核、發現並修復模型對齊問題的自動化 AI 系統——能可靠緩解對齊失誤；Google News RSS 未提供正文，具體運作機制、緩解成效的量化數據、是否涉及模型參與自身訓練流程的修改均未見報導
 - **與既有敘事的關係**：與 06-04《When AI Builds Itself》報告（工程師代碼交付量 8 倍提升）同屬「AI 加速/輔助自身開發」大主題，但性質不同——06-04 報告談的是 AI **加速人類工程師的產出**，本則談的是 AI **稽核並修復其他 AI 模型的對齊問題**，兩者是否應視為同一遞歸自我改進光譜的不同階段，或應區分為「開發加速」與「對齊維護」兩條獨立敘事，待後續報導提供機制細節後再判
-- ❓ **待查證**（標 2026-08-29｜查 Automated researchers、alignment failures｜複 2026-09-27｜訊 2026-09-01）：09-01 Anthropic 官方部落格〈improving-alignment-security-efforts〉將「改善對齊」與「改善安全」併為同一份官方檢討發布，惟該篇聚焦 07-30／08-04 兩起評估環境資安事件（詳見 [[topics/ai-agent-safety]]），並未提供本則「自動化研究員」機制細節或緩解成效量化數據的新資訊；官方原文的具體機制、量化數據、與遞歸自我改進定義的關係仍未見報導，懸置維持原狀
+- ❓ **待查證**（標 2026-08-29｜查 Automated researchers、alignment failures｜複 2026-09-27｜訊 2026-09-01）：「自動化研究員」的具體機制、量化數據、與遞歸自我改進定義的關係仍未見報導
+- 09-01 官方部落格〈improving-alignment-security-efforts〉把「改善對齊」與「改善安全」併為同一份檢討，但聚焦 07-30／08-04 兩起評估環境資安事件（見 [[topics/ai-agent-safety]]），未提供上述新資訊
 - **可信度評估**：Anthropic 官方部落格為一手來源，可信度高；惟正文未取得，僅能確認標題主張存在，無法評估具體技術內容；TechCrunch／Startup Fortune 的「自我改進」框架用詞是否忠實反映官方原文措辭，亦屬上方 ❓ 標記的懸置範圍
 
 ### 遞歸自我改進定義（Anthropic Institute 2026-06-04）

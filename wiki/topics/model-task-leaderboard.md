@@ -53,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記） | 09-08～09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
 | [寫 code（Aider 實戰）](#eval-aider) | ⛔ **這個榜已經不動了**——榜上沒有任何現役模型，想看寫 code 的排名請改看上一列 | 停更（本次直接抓取見最新 2025-11-20） | [Aider Polyglot](https://aider.chat/docs/leaderboards/) |
-| [寫文案、聊天、翻譯](#eval-lmarena) | ⛔ **本週抓不到**——下方為 08–09 月舊值：Claude Fable 5（約 1525 Elo）> Claude Opus 4.8／GPT-5.5 Pro > Gemini 3.1 Pro Preview；要現在的排名請直接點右邊連結 | 08–09 月（此後未能更新） | [LMArena](https://lmarena.ai/) |
+| [寫文案、聊天、翻譯](#eval-lmarena) | ⛔ **本週抓不到**——舊值：Fable 5（約 1525 Elo）> Opus 4.8／GPT-5.5 Pro > Gemini 3.1 Pro Preview；現在的排名請點右邊連結 | 08–09 月（此後未能更新） | [LMArena](https://lmarena.ai/) |
 | [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242） | 榜頁未標日期（本次 09-13 抓取） | [Search Arena](https://arena.ai/leaderboard) |
 | [做網頁／前端](#eval-webdev) | gpt-6-astra-max（1800）> claude-fable-5.1-max（1758）> claude-opus-5-max（1687） | 榜頁未標日期（本次 09-13 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
 | [畫圖（文生圖）](#eval-image) | GPT Image 2.5 Flare max（1187）> GPT Image 2.5 Sunburst max（1179）> GPT Image 2 high（1171） | 榜頁未標日期（本次 09-13 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
@@ -61,7 +61,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [生成影片](#eval-video) | Wan 3.0（1242）> Gemini Omni Flash（1237）> MiniMax H3 Max（1231）（前三 Elo 差距 ≤11，實質接近） | 榜頁未標日期（本次 09-13 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
 | [語音合成（TTS）](#eval-tts) | Sonic 3.6（1276）> Inworld Realtime TTS-2（1243）> Simba 3.2（1237） | 榜頁未標日期（本次 09-13 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
 | [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR（1.7% WER）> MAI-Transcribe-2（2.0%）> Scribe v2（2.2%） | 榜頁未標日期（本次 09-13 抓取，近 7 天中位數） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
-| [電腦操作 agent](#eval-terminal) | ⚠️ 本週二手來源與上週互相矛盾，不採計（見註記）；上週值：Claude Opus 5（42.7%，TB 3.0） | 08-28（此後未能確認） | [Terminal-Bench](https://www.tbench.ai/) |
+| [電腦操作 agent](#eval-terminal) | ⚠️ 本週的媒體轉述數字與上週互相矛盾，不採計（見註記）；上週值：Claude Opus 5（42.7%，TB 3.0） | 08-28（此後未能確認） | [Terminal-Bench](https://www.tbench.ai/) |
 | [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912） | 09-13 | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
 | [音樂生成](#eval-music) | Suno V5.5（1170）> Mureka V9（1155）> Mureka V8（1140） | 榜頁未標日期（本次 09-13 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
 | [Embedding（自建 RAG）](#eval-mteb) | KaLM-Gemma3-12B（72.32）> gemini-embedding-001（68.37）> Qwen3-0.6B（64.34）（媒體轉述，榜版不可互比） | 07–09 月（媒體轉述） | [MTEB](https://huggingface.co/spaces/mteb/leaderboard) |
@@ -75,7 +75,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Search Arena 連續 3 週抓不到後本週恢復（2026-09-13）**：本輪直接抓取成功，前五為 gpt-5.6-sol-xhigh 1257 > claude-opus-4-6-search 1253 > gpt-5.5-search 1242 > claude-opus-4-7 1233 > claude-fable-5 1230。汰換此榜的討論可先擱置。
 - **LMArena 本週抓不到（第 1 週）**：`lmarena.ai` 本輪回應為 301 重導至 `arena.ai`，抓到的是 Search Arena／WebDev Arena 的資料，**不是文字對話總榜**；本頁不以那兩榜的數字充當本列答案，快照格改列舊值並標明日期。連續 2 週抓不到即進入汰換討論。
 - **SWE-bench 兩子集本輪都有數字**：Pro（1,865 題）Fable 5.1 81.2% > Fable 5／Mythos 5 80.3% > Opus 5 79.2%；Verified（500 題，已飽和）Opus 5 96% > Mythos 5 95.5% > Fable 5 95%。上週「兩說歧異」的成因即兩子集混談，本輪起分列。來源為媒體轉述，官方榜頁直接抓取內容截斷。
-- **Terminal-Bench 二手來源與上週互相矛盾，本週不採計**：本輪二手稱 TB 3.0 首位為 GLM-5.3（0.283、僅 3 個受測模型）、TB 2.1 首位為 Gemini 3.8 Flash（0.894）；上週記錄為 TB 3.0 Claude Opus 5 42.7%、2.1 版 GPT-5.6 Sol 65.9%。兩輪皆二手且數量級對不上（0.283 vs 42.7%），在直接抓取成功前不改寫名次。
+- **Terminal-Bench 二手來源與上週互相矛盾，本週不採計**：本輪二手稱 TB 3.0 首位 GLM-5.3（0.283、僅 3 個受測模型）、TB 2.1 首位 Gemini 3.8 Flash（0.894），上週則記 TB 3.0 Opus 5 42.7%、2.1 版 GPT-5.6 Sol 65.9%。
+- 兩輪皆二手、數量級對不上（0.283 vs 42.7%），在直接抓取成功前不改寫名次。另本輪抓取時榜頁已出現 **Terminal-Bench 4.0** 分頁。
 - **OpenRouter 連續 3 週三種說法**：09-06 直接抓取 Hermes Agent 35.7 兆 token 居首、同期媒體稱 GPT-5.6 Luna 居首、本週媒體稱 DeepSeek V4 Flash 居首。三說無一可互證，本頁採本週最新且標明二手；此列的可靠度目前最低。
 - **MTEB 本週前三與上週不同**：本輪 KaLM-Gemma3-12B 72.32 > gemini-embedding-001 68.37 > Qwen3-0.6B 64.34，上週為 QZhou-Embedding 75.97 居首。兩輪皆二手、榜版可能不同（v1／v2 不可互比），差異未解。
 - **METR 給出新數字但不可當排名**：二手稱 Time Horizon 1.1 版 Claude Mythos Preview 17.4 小時@50%，**已超過官方自陳「≥16 小時量測不可信」的門檻**，且本輪未取得完整名次表；僅供尺度感，不作為選型依據。
