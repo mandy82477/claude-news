@@ -29,8 +29,10 @@
 
   <div class="mx-auto max-w-4xl px-5 py-8">
 
+    <!-- 圖① 全流程總覽（Phase A/B/C） -->
+    <div id="dgm-overview" class="dgm-panel">
     <!-- 環境鐵則 callout -->
-    <div class="mb-8" style="border: 1px solid var(--warn); border-radius: 2px; background: var(--warn-tint); padding: 12px 16px;">
+    <div class="mb-6" style="border: 1px solid var(--warn); border-radius: 2px; background: var(--warn-tint); padding: 12px 16px;">
       <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--warn); letter-spacing: 0.04em; margin-bottom: 6px;">⚠ 環境鐵則（讀圖前必知）</div>
       <ul style="font-family: var(--font-sans); font-size: 12px; color: var(--ink-2); line-height: 1.7; padding-left: 16px; list-style: disc;">
         <li>本專案<strong style="color: var(--ink-1); font-weight: 500;">沒有 <code style="font-family: var(--font-mono);">ANTHROPIC_API_KEY</code></strong>，全流程不呼叫任何外部 LLM API。</li>
@@ -39,8 +41,6 @@
       </ul>
     </div>
 
-    <!-- 圖① 全流程總覽（Phase A/B/C） -->
-    <div id="dgm-overview" class="dgm-panel">
       <div class="text-[13px] mb-4" style="font-family: var(--font-sans); color: var(--ink-2);">
         <span style="color: var(--ochre-9); font-weight: 500;">全流程總覽</span> — <span style="font-family: var(--font-mono); font-size: 11px;">/news-pipeline</span> 三段式；Step 2 因巢狀背景限制必須由呼叫 session 親自執行。
       </div>
