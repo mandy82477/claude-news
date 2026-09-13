@@ -11,7 +11,7 @@
     <div class="wrap" style="padding-top: 1.25rem; padding-bottom: 1.25rem;">
       <div>
         <h1 class="arch-title">自動化新聞知識庫系統<span class="arch-title__sub"> / 架構演進</span></h1>
-        <p class="arch-subtitle">SCRIPT &middot; LLM 呼叫點 &middot; AGENT 設計 &mdash; 三條線的時間軸（2026-04-25 &rarr; 2026-09-03）</p>
+        <p class="arch-subtitle">SCRIPT &middot; LLM 呼叫點 &middot; AGENT 設計 &mdash; 三條線的時間軸（2026-04-25 &rarr; 2026-09-13）</p>
       </div>
       <nav class="arch-nav">
         <a href="architecture-evolution-v2.html" class="arch-tab arch-tab--active">架構演進</a>
@@ -1328,6 +1328,79 @@ pipeline 由 LLM agent 執行，失敗訊息它讀得懂也修得好；Step 4 �
 <p><strong>進料放寬：</strong> wiki 沉澱來源由「日報唯一」改為「日報＋使用者提問」（主編 web 查證後直接沉澱，slug user-query）。</p>
 <p><strong>興趣類別 skill 榜</strong> <code>skill_interest_snapshot.py</code>：12 類定向 GitHub 搜尋、每日覆寫快照頁；8 類上榜、4 類治理需求校準無辨識力（感測器裝錯層）改指路 tools 決策表；榜→tools 單向橋。</p>
 <p><strong>兩個踩坑固化：</strong> <code>check_wiki_freshness.py</code> 新增「未登記衍生頁」檢查（建頁漏登記 DERIVED_PAGES 擋掉雲端 web build 一天）；Step 5 自解白名單擴至 append-only 檔（<code>resolve_append_only.py</code> union，本機與雲端班次撞 log.md 不再整輪重跑）。</p>
+    </div>
+  </button>
+</div>
+
+<div class="event-card-wrap" data-track="llm" data-search="日報改版乙／丙：讀者版從今天發生什麼改為今天 wiki 學到什麼，再改為頁頂 callout 投影
+2026-09-12 先把讀者版日報的問句從「今天發生什麼」改成「今天 wiki 學到什麼」；隔天再改版：不重新消化內容，改由各頁頂部「最新動態」callout 原樣投影，日報不是第二份沉澱。
+">
+  <span class="event-card-wrap__dot" style="background-color: var(--ochre-9);"></span>
+  <button class="event-card event-card--llm" onclick="toggleEvent(this)">
+    <div class="event-card__head">
+      <div>
+        <div>
+          <span class="event-date">2026.09.12</span>
+          <span class="event-tag event-tag--llm">讀者版日報改版</span>
+
+        </div>
+        <h3 class="event-title">日報改版乙／丙：從「今天發生什麼」到頁頂 callout 投影</h3>
+      </div>
+      <span class="event-toggle">+</span>
+    </div>
+    <div class="event-body" hidden>
+
+      <p><strong>乙版：</strong> 讀者版日報從「今天發生什麼」改為「今天 wiki 學到什麼」。</p>
+<p><strong>丙版：</strong> 隨後再改版，由 <code>reader-digest</code> skill 的 <code>build_reader_digest.py</code> 把各頁頂部「最新動態」callout 原樣投影成讀者版，不重新消化內容——每個事實只有一個家（頁頂 callout），日報不是第二份沉澱。</p>
+    </div>
+  </button>
+</div>
+
+<div class="event-card-wrap" data-track="agent" data-search="commands 轉 skills 重構：12 個 command 拆成 21 個 skill
+2026-09-13 12 個 command 拆成 21 個 skill＋各自 references/ 目錄；.claude/reporter-rules/ 改為每記者一資料夾；規則檔條文的日期標記 [加入:]／[改版:] 全面廢除，342 處清除。
+">
+  <span class="event-card-wrap__dot" style="background-color: var(--success);"></span>
+  <button class="event-card event-card--agent" onclick="toggleEvent(this)">
+    <div class="event-card__head">
+      <div>
+        <div>
+          <span class="event-date">2026.09.13</span>
+          <span class="event-tag event-tag--agent">skill 重構</span>
+
+        </div>
+        <h3 class="event-title">commands→skills 重構：12 個 command 拆成 21 個 skill</h3>
+      </div>
+      <span class="event-toggle">+</span>
+    </div>
+    <div class="event-body" hidden>
+
+      <p><strong>重構範圍：</strong> 12 個 command 拆成 21 個 skill，各自帶 <code>references/</code> 目錄（步驟留 SKILL.md、格式與判準拆進同目錄 reference）。</p>
+<p><strong>reporter-rules 同步重整：</strong> <code>.claude/reporter-rules/</code> 從 18 檔攤平改為每記者一資料夾。</p>
+<p><strong>條文日期標記全面廢除：</strong> 規則檔條文的 <code>[加入:]</code>／<code>[改版:]</code> 版本戳全庫清除（342 處），改由 git blame 算規則年齡，來歷改記進 <code>docs/rules-changelog/</code>。</p>
+    </div>
+  </button>
+</div>
+
+<div class="event-card-wrap" data-track="script" data-search="開發完工定義 hook 上線：dev-done.md 與 check_tests_on_stop.py
+2026-09-13 新增 .claude/rules/dev-done.md 與 Stop hook check_tests_on_stop.py：程式改動（src/scripts/.claude/hooks）測試未綠不得收工。
+">
+  <span class="event-card-wrap__dot" style="background-color: var(--info);"></span>
+  <button class="event-card event-card--script" onclick="toggleEvent(this)">
+    <div class="event-card__head">
+      <div>
+        <div>
+          <span class="event-date">2026.09.13</span>
+          <span class="event-tag event-tag--script">開發完工定義</span>
+
+        </div>
+        <h3 class="event-title">開發完工定義 hook 上線</h3>
+      </div>
+      <span class="event-toggle">+</span>
+    </div>
+    <div class="event-body" hidden>
+
+      <p><strong>新規則：</strong> <code>.claude/rules/dev-done.md</code> 規定改 pipeline／script／hook／規則檔時，測試綠＋已 commit＋依賴缺口登記三者到齊才算完成。</p>
+<p><strong>新 Stop hook：</strong> <code>check_tests_on_stop.py</code> 在 <code>src/</code>、<code>scripts/</code>、<code>.claude/hooks/</code> 有未 commit 改動且測試未綠時擋收工，規則檔另由既有 <code>check_rules_on_stop.py</code> 看守。</p>
     </div>
   </button>
 </div>

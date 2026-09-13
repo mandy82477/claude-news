@@ -1,6 +1,6 @@
 # Design Diagram — 現況架構（維運用）
 
-**最後更新：** 2026-09-03
+**最後更新：** 2026-09-13
 **文件定位：** 這份是「**系統現在怎麼運作**」的操作/維運架構圖，給要執行或維護 pipeline 的人看。
 「**系統怎麼演變成現在這樣**」的演進敘事，另見 `docs/architecture-evolution.html`（互動時間軸），兩者分工不重疊。
 
@@ -15,11 +15,13 @@
 
 三段拆分的原因：Step 2 要用 Agent tool 派記者，而「背景 agent 再派 agent」會導致完成通知迷路（巢狀背景的系統性限制），所以 Step 2 必須由呼叫 skill 的 session 親自跑。
 
+`/news-pipeline` 本身已轉為 skill（總指揮＋`references/dispatch.md` 兩段 agent prompt 全文，`REPO_ROOT` 由 `git rev-parse` 動態取得，不再寫死本機路徑）；三段拆五個步驟規範各自成 skill：`news-gather`（Step 0/0b/1a/1c）、`news-digest`（1b）、`wiki-ingest`（2）、`reader-digest`（2b，讀者版日報，見下方 Wiki Ingest 節）、`web-publish`（3–6），`/news-pipeline` 只留規範對照表指路。
+
 ```mermaid
 flowchart TD
     TRIG["/news-pipeline [YYYY-MM-DD]\n在 Claude Code session 觸發"] --> PA
 
-    subgraph PA["Phase A —— 背景 agent（model: sonnet）"]
+    subgraph PA["Phase A —— 背景 agent（model: sonnet）\nnews-gather + news-digest skill"]
         S0["Step 0：昨日缺跑檢查\n（今日模式才跑，backfill 跳過）"]
         S1A["Step 1a：Python 聚合器\n--gather-only（無 LLM）"]
         S1B["Step 1b：Claude session 生成日報\n六區塊 + 自檢 3a 格式/3b 來源表\n/3c 摘要忠實度（抽樣對照原文）"]
@@ -29,13 +31,15 @@ flowchart TD
     PA -->|Step 1a FAILED| STOP["寫 log：Aggregator FAILED\n跳過 B/C，結束"]
     PA -->|成功，通知本 session| PB
 
-    subgraph PB["Phase B —— 呼叫 session 親自執行（不可委派）"]
-        S2["Step 2：Wiki Ingest\n主編分類 → 六記者 foreground 派工 → 主編彙整\n→ 4b devpractice 記者 diff 撿料（沉澱不寫頁）"]
+    subgraph PB["Phase B —— 呼叫 session 親自執行（不可委派）\nwiki-ingest + reader-digest skill"]
+        S2["Step 2：Wiki Ingest\n主編分類 → 六記者 foreground 派工 → 主編彙整\n→ 4b devpractice 記者 diff 撿料／4c market 記者判讀（沉澱不寫頁）"]
+        S2B["Step 2b：讀者版日報\nbuild_reader_digest.py 把各頁頂部\n當日 callout 投影成 daily/TARGET_DATE.md\n＋格式閘 check_reader_digest.py\n失敗不阻斷，退回 news/ 舊解析"]
+        S2 --> S2B
     end
 
     PB --> PC
 
-    subgraph PC["Phase C —— 第二個背景 agent（model: sonnet）"]
+    subgraph PC["Phase C —— 第二個背景 agent（model: sonnet）\nweb-publish skill"]
         S3["Step 3：commit wiki（不 push）"]
         S4["Step 4：web build gate → 建置 web reader
 gate_web_build.py 代跑測試：已登記缺口放行；
@@ -171,12 +175,19 @@ flowchart TD
     CONSOLIDATE --> LEDGER["data/source_attribution.jsonl\n（append：記者回報的『來源歸因』欄\n轉 日期×來源×類別×頁面）"]
     CONSOLIDATE --> HAND["data/pending-handoffs.jsonl\n（pending_handoffs.py open/close/void\n記者回報的轉知登帳與結案）"]
     CONSOLIDATE --> DEVP["4b devpractice 記者（sonnet，彙整後才派）\ndevpractice_diff.py show：上次基準線以來 wiki 新增\n→ 挑 coding 相關 → data/devpractice-candidates.jsonl\n→ mark 推進基準線（daily 只沉澱，不寫頁）"]
+    CONSOLIDATE --> MARKET["4c market 記者（sonnet，與 4b 同批）\n吃當日日報本身換市場框架重讀\n→ wiki/topics/market-signals.md 判讀"]
     USERQ["使用者提問通道（user-query）\n主編 web 查證後直接沉澱，不經日報\n歸因 slug user-query，log Query 溯源"] -.-> SHARED
 ```
 
-**頁面歸屬＝動態認領：** 記者的負責頁面由 `index.md` 的「領域」欄位決定，不寫死清單；新頁面自動被對應記者涵蓋。六位記者的 agent description 亦改為領域導向不點名頁面（頁名例子是沒人同步的抄寫處，`[改版: 2026-09-02]`）。
+派工全文（類別↔角色檔對照表、六記者 prompt 模板、防偏誤說明、4b／4c 首段）住 `.claude/skills/wiki-ingest/references/dispatch.md`；收報核對清單與逐檔寫入規則住 `.claude/skills/wiki-ingest/references/checklist.md`；分類表與分流鐵則住 `.claude/skills/wiki-ingest/references/classification.md`。
 
-**第七位記者 devpractice `[加入: 2026-09-02]`：** 不在六類分類路由內——料不是日報條目，是其他記者沉澱完之後的 wiki diff。設計理由：靠其他記者標 tag 是跨記者耦合（主線 tag 規則明寫「漏填等於不存在」），diff 不會漏、不依賴紀律、且撿的是已判定值得入庫的內容。基準線記 `data/devpractice_state.json`（commit sha），漏跑自動補齊；狀態檔與候選帳本隨 pipeline push（雲端與本機共用基準線）。daily 只沉澱（08-15「日更彙整頁長回 log」教訓）；weekly 於 `/wiki-lint` 5f 彙整：guide「本週 coding 亮點」覆寫節、guide「社群面待補」逐段深查、coding 跨頁對帳。空手必附盤點證據（「無候選」是最省力的合法答案）、連續 2 週零亮點轉知檢討判準。
+**頁面歸屬＝動態認領：** 記者的負責頁面由 `index.md` 的「領域」欄位決定，不寫死清單；新頁面自動被對應記者涵蓋。六位記者的 agent description 亦改為領域導向不點名頁面（頁名例子是沒人同步的抄寫處）。
+
+**Step 2b 讀者版日報（`reader-digest` skill，2026-09-12/13 改版）：** 讀者版從「今天發生什麼」改為「今天 wiki 學到什麼」，再改由各頁頂部「最新動態」callout 投影——記者在 Step 2 把當日 delta 覆寫進頁頂 callout，`scripts/build_reader_digest.py` 只按六領域原樣列出、不重新消化；每個事實只有一個家（頁頂 callout），日報不是第二份。`scripts/check_reader_digest.py` 看守格式（六領域節名合法、callout 首行日期＝檔名日期）。`news/TARGET_DATE.md` 照產照存，供 lint 5d／7b 溯源使用。
+
+**記者規則檔重整（2026-09-13）：** `.claude/reporter-rules/` 從 18 檔攤平改為「三份共用檔（`shared.md`／`page-templates.md`／`page-lifecycle.md`）＋每記者一資料夾（`daily.md`／`weekly.md`／`pages.md`）」；記者由 `.claude/agents/wiki-reporter-*.md` 指名讀取清單，分類表與派工正典改住 `.claude/skills/wiki-ingest/references/classification.md`，導覽見 `.claude/reporter-rules/README.md`。
+
+**第七位記者 devpractice：** 不在六類分類路由內——料不是日報條目，是其他記者沉澱完之後的 wiki diff。設計理由：靠其他記者標 tag 是跨記者耦合（主線 tag 規則明寫「漏填等於不存在」），diff 不會漏、不依賴紀律、且撿的是已判定值得入庫的內容。基準線記 `data/devpractice_state.json`（commit sha），漏跑自動補齊；狀態檔與候選帳本隨 pipeline push（雲端與本機共用基準線）。daily 只沉澱（08-15「日更彙整頁長回 log」教訓）；weekly 於 `/wiki-lint` 5f 彙整：guide「本週 coding 亮點」覆寫節、guide「社群面待補」逐段深查、coding 跨頁對帳。空手必附盤點證據（「無候選」是最省力的合法答案）、連續 2 週零亮點轉知檢討判準。
 
 **進料放寬：日報＋使用者提問 `[加入: 2026-09-02]`：** 使用者在對話中點名的事實，經主編以 web 工具查證一手來源後直接沉澱進 wiki（查證是入場券、必標查證日＋來源連結、slug `user-query`、`wiki/log.md` Query 條目為溯源）。此通道證據等級不低於日報——入口在主編層、有 web 工具，記者通道反而沒有。首例：archify／Understand-Anything／codegraph 三工具（知識傳承三工種）。
 
@@ -194,7 +205,9 @@ flowchart TD
 
 ---
 
-## Wiki Lint（`/wiki-lint`，每週手動，10 步）
+## Wiki Lint（`/wiki-lint`，每週手動，總指揮＋四段子 skill）
+
+`/wiki-lint` 本身只排順序與收尾（步驟 8/9/10），四段步驟本體各自成 skill，依序執行不並行：A `wiki-lint-reporters`（步驟 1–5：載入全貌、六記者並行＋收報核對＋月度蒸餾、語意分岔候選、新實體頁、overview）、B `wiki-lint-sweeps`（5a–5m 主編親做／親查的十三個週更掃描）、C `wiki-lint-rules-health`（6a–6l 規則健檢＋漏抓帳與規則版本戳）、D `wiki-lint-reader-acceptance`（7 讀者模擬驗收、7b 歷史質疑代打）。A 必須先於 B（B 的 5f devpractice 週彙整、5k 社群三表都要等六記者寫完）；單段失敗不阻斷其餘段，回報行收斂進步驟 8。
 
 ```mermaid
 flowchart TD
@@ -202,10 +215,25 @@ flowchart TD
     L2["2. 六記者並行（model: sonnet）\n3a 矛盾 / 3b 孤立 / 3c 過期(用最後新聞更新判)\n3d resolved 收尾 / 3e 呈現品質 / 3f 入口層健檢\n3g 待查證回訪"] --> L3
     L3["3. 語意分岔／死案候選（需使用者確認）"] --> L4
     L4["4. 建議新實體頁"] --> L5
-    L5["5. 更新 overview.md\n5a 熱度降溫（news_mentions.py）/ 5b 跨家榜單（haiku 抓）\n5c 逾期待查證清算（Lane A/B，本機）/ 5d 歸因抽查\n5e pricing 通路乘數 / 5f devpractice 週彙整（第七隻派工）"] --> L6
-    L6["6. 規則健檢 6a–6g\n(矛盾/引用/遵守率/年齡/來源健康+記分卡\n+發現窗逐窗產消對帳+星史增長看守\n/跨檔語意矛盾/品質指標+成長迴路蒸餾)"] --> L7
-    L7["7. 讀者模擬驗收（3 讀者 3 跳測試）\n7b 質疑題庫代打（inquiry_bank.py draw，seed 綁 ISO 週）"] --> L8
-    L8["8. append log（含 metrics 趨勢）"] --> L9
+    L5["5. 更新 overview.md"] --> LB
+
+    subgraph LB["B：wiki-lint-sweeps —— 5a–5m 十三個週更掃描"]
+        L5B["5a 熱度降溫 / 5b 跨家榜單 / 5c 逾期待查證清算\n5d 歸因抽查 / 5e pricing 通路乘數\n5f devpractice 週彙整 / 5k 社群三表 …"]
+    end
+
+    LB --> LC
+
+    subgraph LC["C：wiki-lint-rules-health —— 6a–6l 規則健檢"]
+        L6["矛盾/引用/遵守率/6d 規則年齡（lint_health.py age，git blame）\n/來源健康+記分卡/發現窗產消對帳/星史增長看守\n/跨檔語意矛盾/品質指標+成長迴路蒸餾/…"]
+    end
+
+    LC --> LD
+
+    subgraph LD["D：wiki-lint-reader-acceptance —— 7/7b"]
+        L7["7. 讀者模擬驗收（3 讀者 3 跳測試）\n7b 質疑題庫代打（inquiry_bank.py draw，seed 綁 ISO 週）"]
+    end
+
+    LD --> L8["8. append log（含 metrics 趨勢）\n模板：wiki-lint/references/log-format.md"] --> L9
     L9["9. 更新 index.md"] --> L10
     L10["10. 收尾閉迴路
 commit wiki → web build gate（擋下先走
@@ -222,7 +250,7 @@ commit wiki → web build gate（擋下先走
 
 ## 週報線（`/weekly` 總指揮，每週）
 
-`[改版: 2026-08-09]` 原本的 `/weekly` 只產週報；現改為**總指揮**，依序帶起兩個子指令再統一收尾（週報本體更名 `/weekly-report`）。順序固定「週報先、策展後」，不可調換也不可合併。
+原本的 `/weekly` 只產週報；現改為**總指揮**（command），依序帶起三段再統一收尾。順序固定「本機補跑 → 週報先 → 策展後」，不可調換也不可合併。三段本體皆已轉為 skill：`weekly-local-catchup`（步驟 0）、`weekly-report`（步驟 1，本體＋`references/` 四份：contracts／headline／deepdive／forecast）、`wiki-weekly-review`（步驟 2）；`wiki-query`、`wiki-readability`、`arch-doc-sync` 亦同期轉為 skill。
 
 ```mermaid
 flowchart TD
@@ -293,7 +321,11 @@ flowchart TD
     FIX --> CHECK
 ```
 
-**通用化：** 此機制已抽成全域 skill `/build-review-command`（通用引擎 + 專案 registry 分離），可在其他專案快速建立同套兩層防線。
+**通用化：** 此機制已抽成全域 skill `/build-review-command`（通用引擎 + 專案 registry 分離），可在其他專案快速建立同套兩層防線。全域 `~/.claude/SKILL-PRINCIPLES.md`（skill 只寫步驟、格式與判準放同目錄 reference、肥了就拆）為撰寫本專案 skill 的共同準則，不在本 repo 內。
+
+**掃描範圍與登記量（2026-09-13）：** `check_rules.py` 讀 registry 的 `globs` 逐項掃描，涵蓋 `.claude/commands/**`、`.claude/rules/**`、`.claude/skills/**`、`.claude/reporter-rules/**` 與 `CLAUDE.md`；`.claude/review-registry.json` 現有 117 組 `sync_pairs`。配套治理腳本：`scripts/check_skill_refs.py`（skill 指路完整性：description、目錄形狀、references 孤兒／斷鏈，已掛進 `run_tests.py`）、`scripts/registry_relocate.py`（檔案搬家時一行改 registry 路徑）、`scripts/strip_rule_markers.py`（清除已廢除的條文日期標記 `[加入: …]`／`[改版: …]`）。
+
+**開發完工定義（`.claude/rules/dev-done.md`）：** 改 pipeline／script／hook／規則檔時，測試綠＋已 commit＋依賴缺口登記三者到齊才算完成；新增 Stop hook `check_tests_on_stop.py` 在 `src/`、`scripts/`、`.claude/hooks/` 有未 commit 改動且測試未綠時擋收工（規則檔仍由 `check_rules_on_stop.py` 看守）。`scripts/check_reader_language.py` 新增 `scope: "callout"` 禁詞（如「整理語」），只在頁頂 `>` callout 引文行上算命中——callout 會被讀者版日報原樣抄上站，禁詞範圍需比照表格列（`scope: "table"`）獨立收斂。
 
 ---
 
@@ -307,7 +339,9 @@ flowchart LR
         C["wiki/feature-radar.md, index.md, overview.md, metrics.md"]
         D["wiki/log.md（append only）"]
         E["web_reader/data/（build 產物）"]
+        F["daily/YYYY-MM-DD.md\n（讀者版日報，build_reader_digest.py 從 B 的頁頂 callout 投影）"]
     end
+    B --> F
     B & C & D --> BUILD["scripts/build_web.py\n（wikilink 斷鏈檢查 + 領域欄位防呆\n+ 剝除 [[sources/*]] 分析標記不外洩 web\n+ 嵌來源記分卡 window.TRANSPARENCY）"]
     A --> BUILD
     BUILD --> E
@@ -337,9 +371,14 @@ flowchart LR
 | 改週報格式／帳本檢查 | `.claude/skills/weekly-report/SKILL.md`＋`scripts/check_weekly_ledger.py` |
 | 改懸置標記語法／偵測 | `.claude/reporter-rules/page-templates.md`「懸置標記語法」＋`scripts/scan_pending_verifications.py`／`check_pending_markers.py` |
 | 查/結轉知帳本 | `python scripts/pending_handoffs.py list｜open｜close｜void`（`data/pending-handoffs.jsonl`） |
-| 改記者職責/規則 | `.claude/reporter-rules/<記者>/daily.md`（週更 `weekly.md`、頁面契約 `pages.md`） |
+| 改記者職責/規則 | `.claude/reporter-rules/<記者>/daily.md`（週更 `weekly.md`、頁面契約 `pages.md`）；三份跨記者共用檔 `shared.md`／`page-templates.md`／`page-lifecycle.md` |
+| 改 wiki ingest 分類表／派工 | `.claude/skills/wiki-ingest/references/classification.md`（分類與派工正典）／`dispatch.md`（prompt 模板）／`checklist.md`（收報核對） |
+| 改讀者版日報格式／挑選規則 | `.claude/skills/reader-digest/references/format.md`；產出 `scripts/build_reader_digest.py`、閘 `scripts/check_reader_digest.py` |
+| 改 wiki-lint 任一段步驟 | 對應子 skill：`wiki-lint-reporters`／`wiki-lint-sweeps`／`wiki-lint-rules-health`／`wiki-lint-reader-acceptance`；log 模板 `wiki-lint/references/log-format.md`；6d 規則年齡 `scripts/lint_health.py age`（git blame） |
 | 改 web 呈現 | `web_reader/`（設計規範見 `.claude/rules/web-reader-design.md`）+ `scripts/build_web.py` |
-| 改任何規則/指令後驗證 | `/review-commands`（判讀 `scripts/check_rules.py` 失敗並修復；機械檢查已掛進 `run_tests.py`） |
-| 改規則一致性檢查項 | `.claude/review-registry.json`（同步配對/錨點/allowlist，登記於此即生效） |
+| 改任何規則/指令後驗證 | `/review-commands`（判讀 `scripts/check_rules.py`／`scripts/check_skill_refs.py` 失敗並修復；機械檢查已掛進 `run_tests.py`） |
+| 改規則一致性檢查項 | `.claude/review-registry.json`（同步配對/錨點/allowlist，登記於此即生效；掃描範圍含 `.claude/skills/**`、`.claude/reporter-rules/**`） |
+| 檔案搬家時同步 registry 路徑 | `python scripts/registry_relocate.py` |
+| 開發完工定義（測試綠/已 commit/依賴缺口登記） | `.claude/rules/dev-done.md`；Stop hook `check_tests_on_stop.py` |
 
 執行日誌：`src/logs/` | 測試：`scripts/run_tests.py`
