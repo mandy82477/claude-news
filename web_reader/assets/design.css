@@ -2714,3 +2714,12 @@ code {
   .nav__inner { row-gap: 0; }
   .detail__topbar { top: 95px; }
 }
+
+/* 手機版 wiki 索引卡片減密（2026-09-13）：一張卡五種樣式（等寬標題、[[slug]]、型別 chip、狀態 pill、斜體摘要），
+   375px 實測 slug 與中文名重複、摘要 13px 偏小。slug 藏掉、中文名放大、摘要回到 14px；桌機不變。 */
+@media (max-width: 700px) {
+  .entity-row .entity-row__slug { display: none; }
+  .entity-row .entity-row__zh { font-size: 16px; margin-bottom: 0; }
+  .entity-row .entity-row__summary { font-size: 14px; line-height: 1.6; }
+  .entity-row { padding: 16px 8px; }
+}
