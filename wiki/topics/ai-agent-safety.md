@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新安全事件**（2026-09-11）
-> Show HN 揭露：研究者以 8 種手法繞過 Claude Code 的 deny-list 權限設定，只有改用 allow-list（白名單）才擋得住；官方尚無回應，見「## 現在還擋不住的攻擊」。
+> Show HN 揭露：研究者以 8 種手法繞過 Claude Code 的 deny-list 權限設定，僅 allow-list（白名單）擋得住，官方尚無回應（[[topics/ai-agent-safety#現在還擋不住的攻擊]]）。用黑名單設權限者現在就該改白名單。
 
 ---
 

@@ -31,7 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新功能缺口**（2026-09-11）
-> - **⟨G-11⟩ 跨 harness 統一操作層再添兩款**：avibe、firstintent/ccteam（各 501★），密度持續累積，官方仍無對應方案。
+> - **跨工具統一操作層**：串接不同 AI 編碼工具的社群方案，今日再添 avibe、ccteam，累計 7 款（[[topics/official-community-gap#Agent 工作模式產品化追蹤]]）。
+> - 官方目前無對應功能，這類跨工具整合需求只能靠社群工具解決，是留給工具作者的機會。
 
 ## 摘要
 
