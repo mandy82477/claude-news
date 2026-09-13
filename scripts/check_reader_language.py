@@ -161,7 +161,7 @@ TERMS: list[dict] = [
      "alt": "刪掉，或直接寫「最新 N 天」而不解釋為什麼只留這些"},
     {"key": "整理語", "scope": "callout",
      "pattern": r"拆成兩頁|拆頁|併頁|獨立成新頁|新增主題頁|新增頁|本頁開張|概覽表|升為第一|留在原頁|表格升|換版面|改版面",
-     "why": "callout 要寫讀者在乎的重點（外面發生了什麼），這句寫的是我們動了哪頁哪張表；讀者版日報直接抄 callout，整理紀錄會原樣上站（規格見 wiki-ingest-format.md「頂部 delta-first callout」，2026-09-13）",
+     "why": "callout 要寫本頁讀者在乎的更新重點（外面發生了什麼），這句寫的是我們動了哪頁哪張表；讀者版日報直接抄 callout，整理紀錄會原樣上站（規格見 wiki-ingest-format.md「頂部 delta-first callout」，2026-09-13）",
      "alt": "改寫成事件本身：誰發布／量測／說了什麼，頁面整理不寫進 callout"},
 ]
 
