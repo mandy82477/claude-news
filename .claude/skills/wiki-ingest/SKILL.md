@@ -7,12 +7,12 @@ description: 讀取今日日報並更新 wiki 知識庫。每天聚合器執行�
 
 讀取今日日報，以多記者架構更新 wiki 知識庫。**TARGET_DATE** = 呼叫時傳入的日期（`$ARGUMENTS`，或 pipeline 傳入的 TARGET_DATE）；未提供則用今天的日期。
 
-> `.claude/commands/news-pipeline.md` 的 Phase B 直接讀本 skill 執行，不另維護副本——修改本檔的分類、派工或彙整邏輯時，`/news-pipeline` 會自動套用最新版本，不需同步修改其他檔案。
+> `.claude/skills/news-pipeline/SKILL.md` 的 Phase B 直接讀本 skill 執行，不另維護副本——修改本檔的分類、派工或彙整邏輯時，`/news-pipeline` 會自動套用最新版本，不需同步修改其他檔案。
 
 兩份參考檔，正文不重述：
 
-- **派工** → `.claude/skills/wiki-ingest/dispatch.md`（類別↔角色檔對照表、六記者 prompt 模板、防偏誤說明、4b／4c 首段）——**派工前逐字讀它**
-- **核對與寫檔** → `.claude/skills/wiki-ingest/checklist.md`（共用檔案的逐檔寫入規則、完成前強制核對清單、完成摘要表）
+- **派工** → `.claude/skills/wiki-ingest/references/dispatch.md`（類別↔角色檔對照表、六記者 prompt 模板、防偏誤說明、4b／4c 首段）——**派工前逐字讀它**
+- **核對與寫檔** → `.claude/skills/wiki-ingest/references/checklist.md`（共用檔案的逐檔寫入規則、完成前強制核對清單、完成摘要表）
 
 ---
 
@@ -79,27 +79,27 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 > ⚠️ **記者 agent 必須以 foreground（同步）方式啟動，不可設 `run_in_background: true`。** 背景記者的完成通知無法回到派工 agent，會造成永久等待。
 
-類別↔角色檔對照表、prompt 五區塊模板與防偏誤說明住 `.claude/skills/wiki-ingest/dispatch.md`，逐字照它派。
+類別↔角色檔對照表、prompt 五區塊模板與防偏誤說明住 `.claude/skills/wiki-ingest/references/dispatch.md`，逐字照它派。
 
 ### 4. 彙整共用檔案（主編）
 
-收到所有記者回報後，統一更新共用檔案：`wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl`，以及視情況更新 `wiki/overview.md`。**逐檔寫入規則見 `.claude/skills/wiki-ingest/checklist.md`**，本檔不重述。
+收到所有記者回報後，統一更新共用檔案：`wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl`，以及視情況更新 `wiki/overview.md`。**逐檔寫入規則見 `.claude/skills/wiki-ingest/references/checklist.md`**，本檔不重述。
 
 ### 4b. devpractice 沉澱派工（主編）`[加入: 2026-09-02]`
 
-彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他不吃日報條目，吃**本輪 ingest 寫進 wiki 的 diff**，所以必須排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/dispatch.md`。
+彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他不吃日報條目，吃**本輪 ingest 寫進 wiki 的 diff**，所以必須排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`。
 
 收報後把「候選 N 筆／本日無候選」記入 log.md 本次 ingest 紀錄一行 `devpractice 沉澱：…`；`data/devpractice-candidates.jsonl` 與 `data/devpractice_state.json` 併入收尾 commit（雲端與本機共用同一條 diff 基準線，不 commit 會斷）。
 
 ### 4c. market 判讀派工（主編）`[加入: 2026-09-05]`
 
-與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/dispatch.md`，其後附今日日報條目節錄（與六記者同一份步驟 2 產物，不另篩）。
+與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後附今日日報條目節錄（與六記者同一份步驟 2 產物，不另篩）。
 
 收報後把「判讀 N 則／本日無訊號」記入 log.md 本次 ingest 紀錄一行 `market 判讀：…`；記者回報的來源歸因照步驟 4 append 至 `data/source_attribution.jsonl`（slug 用該則日報條目的來源，不是 `user-query`）。
 
 ### 5. 完成前強制核對與摘要
 
-**在宣告完成之前**，逐項確認 `.claude/skills/wiki-ingest/checklist.md` 的核對清單，再依該檔的摘要表格式輸出完成摘要。
+**在宣告完成之前**，逐項確認 `.claude/skills/wiki-ingest/references/checklist.md` 的核對清單，再依該檔的摘要表格式輸出完成摘要。
 
 ---
 

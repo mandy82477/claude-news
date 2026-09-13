@@ -13,7 +13,7 @@ description: 低成本可讀性掃描：單一 agent 只讀每頁開頭與結構
 
 用 **Agent tool**（`run_in_background: true`）派**一個** agent，不派六記者——可讀性問題九成暴露在頁面開頭與結構層，單一視角掃全站反而更容易發現跨頁共通毛病。
 
-派工 prompt **逐字讀 `.claude/skills/wiki-readability/prompt.md` 貼入**（含省 token 鐵則、五項評分、輸出格式），`{TODAY}` 替換為今日日期。
+派工 prompt **逐字讀 `.claude/skills/wiki-readability/references/prompt.md` 貼入**（含省 token 鐵則、五項評分、輸出格式），`{TODAY}` 替換為今日日期。
 
 ## 2. 收到報告後
 

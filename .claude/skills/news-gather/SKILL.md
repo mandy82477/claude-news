@@ -5,7 +5,7 @@ description: 每日 pipeline 抓料段：缺跑檢查、冪等閘、Python 抓�
 
 # 抓料與閘門（Step 0 / 0b / 1a / 1c）
 
-由 `.claude/commands/news-pipeline.md` 的 Phase A 背景 agent 讀取執行。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入（值見該檔）。**本 skill 不 spawn 子 agent。**
+由 `.claude/skills/news-pipeline/SKILL.md` 的 Phase A 背景 agent 讀取執行。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入（值見 `.claude/skills/news-pipeline/references/dispatch.md`）。**本 skill 不 spawn 子 agent。**
 
 同屬 Phase A 的 `Step 1b：生成日報` 在 `.claude/skills/news-digest/SKILL.md`，接在 Step 1a 之後、Step 1c 之前執行。
 
@@ -92,7 +92,7 @@ PYTHON REPO_ROOT\scripts\archive_gathered.py
 
 ## Step 1b：生成日報（不在本檔案）
 
-逐字規格見 `.claude/skills/news-digest/SKILL.md`（步驟）、`.claude/skills/news-digest/format.md`（骨架與機械契約字串）、`.claude/skills/news-digest/selection.md`（選材判準）。Phase A agent 在 Step 1a 之後接著執行該 skill，成功 commit 後才回到本檔的 Step 1c。
+逐字規格見 `.claude/skills/news-digest/SKILL.md`（步驟）、`.claude/skills/news-digest/references/format.md`（骨架與機械契約字串）、`.claude/skills/news-digest/references/selection.md`（選材判準）。Phase A agent 在 Step 1a 之後接著執行該 skill，成功 commit 後才回到本檔的 Step 1c。
 
 ---
 
@@ -117,7 +117,7 @@ PYTHON -m news_aggregator.main --confirm-digest --date TARGET_DATE
 
 ## Step 2：Wiki Ingest（不在本檔案）
 
-Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，**也不可包進任何背景 agent**，完整步驟見 `.claude/skills/wiki-ingest/SKILL.md`（不在此重複，避免兩份副本失步）。執行方式與失敗處理原則見 `.claude/commands/news-pipeline.md` Phase B：Step 2 失敗時記錄但仍進入 Phase C（web build 不依賴 wiki）。
+Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，**也不可包進任何背景 agent**，完整步驟見 `.claude/skills/wiki-ingest/SKILL.md`（不在此重複，避免兩份副本失步）。執行方式與失敗處理原則見 `.claude/skills/news-pipeline/SKILL.md` Phase B：Step 2 失敗時記錄但仍進入 Phase C（web build 不依賴 wiki）。
 
 ---
 

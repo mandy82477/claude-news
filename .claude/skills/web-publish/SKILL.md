@@ -5,7 +5,7 @@ description: 每日 pipeline 收尾段：commit wiki、web build gate、單一 p
 
 # 收尾與發布（Step 3 / 4 / 5 / 6）
 
-由 `.claude/commands/news-pipeline.md` 的 Phase C 背景 agent 讀取執行。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入（值見該檔）。**本 skill 不 spawn 子 agent。**
+由 `.claude/skills/news-pipeline/SKILL.md` 的 Phase C 背景 agent 讀取執行。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入（值見 `.claude/skills/news-pipeline/references/dispatch.md`）。**本 skill 不 spawn 子 agent。**
 
 ---
 
@@ -138,7 +138,7 @@ git -C REPO_ROOT push || {
 REPO_ROOT\src\logs\task_scheduler.log
 ```
 
-**本步驟由 Phase C agent 執行**，Step 0/1a/1b（Phase A）與 Step 2（Phase B）的結果由呼叫 session 透過 Phase C 的 spawn prompt「已知結果」欄位傳入（見 `.claude/commands/news-pipeline.md` Phase C），Phase C agent 不需重新查證，直接引用即可；Step 3/4/5 的結果則是 Phase C agent 自己執行後得知。
+**本步驟由 Phase C agent 執行**，Step 0/1a/1b（Phase A）與 Step 2（Phase B）的結果由呼叫 session 透過 Phase C 的 spawn prompt「已知結果」欄位傳入（見 `.claude/skills/news-pipeline/references/dispatch.md` Phase C），Phase C agent 不需重新查證，直接引用即可；Step 3/4/5 的結果則是 Phase C agent 自己執行後得知。
 
 **例外：若 Phase A 的 Step 1a 失敗**，pipeline 不會進入 Phase C（見 Phase B 的失敗處理），此時 Step 6 log 改由呼叫 session 直接 append，格式相同。
 

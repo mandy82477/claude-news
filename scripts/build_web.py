@@ -547,7 +547,7 @@ WEEKLY_H3_RE = re.compile(r'^###\s+(.+?)\s*$', re.MULTILINE)
 WEEKLY_FOOTER_RE = re.compile(r'\n-{3,}\s*\n+(\*\*素材涵蓋窗.*)\Z', re.DOTALL)
 WEEKLY_FORECAST_HEADER_RE = re.compile(r'^\|\s*類型\s*\|\s*預告\s*\|\s*判準\s*\|\s*$', re.MULTILINE)
 # 回收表（回頭看上一期預告的結果）——欄名與 forecasts 表刻意不同，兩張表才能在同段共存。
-# 欄名若改動，`.claude/skills/weekly-report/forecast.md` 第 (3) 段的欄位定義必須同步（見 review-registry sync_pair）。
+# 欄名若改動，`.claude/skills/weekly-report/references/forecast.md` 第 (3) 段的欄位定義必須同步（見 review-registry sync_pair）。
 WEEKLY_RECAP_HEADER_RE = re.compile(r'^\|\s*上週預告\s*\|\s*判準\s*\|\s*本週結果\s*\|\s*$', re.MULTILINE)
 # 回收小標與回收表之間那行盤點摘要（幾條活著／幾條死了／幾筆判錯）。2026-08-30 新增：
 # 新順序（新開在上、回收在下）下，節導言與新開導言併入 intro，回收導言需獨立欄位才進得了網站。
@@ -1150,7 +1150,7 @@ def parse_digest(f: Path) -> dict:
 # 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，進料是當日 ingest
 # 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）；讀者版日期只保留
 # 它的今日聚焦與重點話題上站（乙-2），其餘新聞區塊不畫。
-# 規格端住 `.claude/skills/reader-digest/format.md`（步驟在 `.claude/skills/reader-digest/SKILL.md`），
+# 規格端住 `.claude/skills/reader-digest/references/format.md`（步驟在 `.claude/skills/reader-digest/SKILL.md`），
 # 其「機械契約字串」表與本段互相指認並登記 .claude/review-registry.json 的 sync_pairs——
 # 節名或標記行改了而這裡沒跟，該領域整段靈默消失（同 2026-08-14 區塊 emoji 的死法）。
 

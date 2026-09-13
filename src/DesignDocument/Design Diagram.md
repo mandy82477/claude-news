@@ -325,7 +325,7 @@ flowchart LR
 | 增減權威部落客 | `src/news_aggregator/sources/blogroll.json`（status: probation/active/retired，汰換依來源記分卡建議、使用者確認） |
 | 調來源品質標籤 / 看來源效益 | `data/source_registry.json`（標籤）＋ `python scripts/source_scorecard.py`（記分卡，隨 `/wiki-lint` 6e 週跑） |
 | 改過濾規則 | `src/news_aggregator/filter.py`（純規則，無 LLM） |
-| 改日報格式 | `.claude/skills/news-digest/format.md`／`.claude/skills/news-digest/selection.md` |
+| 改日報格式 | `.claude/skills/news-digest/references/format.md`／`.claude/skills/news-digest/references/selection.md` |
 | 改每日自動線（排程/告警） | `.github/workflows/daily-gather.yml`、`daily-watchdog.yml`（repo 根，非 CLAUDE_NEWS 下）＋雲端 routine runbook `docs/cloud-runbooks/` |
 | 改專頁定向抓取的題目 | `src/news_aggregator/sources/topic_watch.json` |
 | 改 GitHub 發現窗（A/B/C 上限、scope、D 窗關鍵字閘） | `src/news_aggregator/sources/github_releases.py` 檔頭常數＋`hn_repo_bridge.py` `_SCOPE_TERMS`；每窗對帳在 `data/discovery_queue_history.csv` |

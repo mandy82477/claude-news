@@ -12,7 +12,7 @@ description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開
 
 **與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨，需要使用者確認才能執行。
 
-派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整清單格式、log 模板住 `.claude/skills/wiki-weekly-review/dispatch.md`，本檔不重述——**派工前逐字讀它**。
+派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整清單格式、log 模板住 `.claude/skills/wiki-weekly-review/references/dispatch.md`，本檔不重述——**派工前逐字讀它**。
 
 ---
 
@@ -40,19 +40,19 @@ gh issue list --label reader-feedback --state open --json number,title,createdAt
 
 ### 2. 六位記者並行判斷（同一訊息中平行呼叫全部）
 
-沿用 `.claude/skills/wiki-ingest/dispatch.md` 的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須帶 `model: "sonnet"`（lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+沿用 `.claude/skills/wiki-ingest/references/dispatch.md` 的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須帶 `model: "sonnet"`（lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
-prompt 全文見 `.claude/skills/wiki-weekly-review/dispatch.md`「六記者派工 prompt」。
+prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「六記者派工 prompt」。
 
 ### 月度加項：聚焦校準 `[加入: 2026-07-05]`
 
 **每月執行一次**（判斷方式：`wiki/metrics.md` 的「聚焦命中率」欄**本月尚無數值** → 執行；已有數值 → 輸出「本月聚焦校準已執行，跳過」並跳過本節）。判斷產出物而非執行記錄（立法理由見沿革檔 `docs/rules-changelog/wiki-weekly-review.md` 2026-07-16）。
 
-執行時派一個 Sonnet agent（`model: "sonnet"`），規格與輸出表見 `.claude/skills/wiki-weekly-review/dispatch.md`「月度聚焦校準」。命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
+執行時派一個 Sonnet agent（`model: "sonnet"`），規格與輸出表見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「月度聚焦校準」。命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
 
 ### 3. 彙整回報給使用者確認
 
-收齊六位記者回報後，彙整成單一清單呈現給使用者，**不自動執行**。格式見 `.claude/skills/wiki-weekly-review/dispatch.md`「彙整確認清單」。
+收齊六位記者回報後，彙整成單一清單呈現給使用者，**不自動執行**。格式見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「彙整確認清單」。
 
 **同時處理 `wiki/reader-notes.md` 收件匣**（本 skill 是它的每週消費者）：
 - 🔍 興趣主題被記者採納為加碼建議 → 在清單標明來源，該 note 待使用者確認執行後標 ✅ 已納入
@@ -66,7 +66,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/dispatch.md`「六記者派�
 
 ### 5. 記錄
 
-完成後在 `wiki/log.md` 末尾 append，模板見 `.claude/skills/wiki-weekly-review/dispatch.md`「log 條目」。
+完成後在 `wiki/log.md` 末尾 append，模板見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「log 條目」。
 
 ### 6. 收尾閉迴路：commit wiki + build web + 單一 push `[加入: 2026-07-10]`
 

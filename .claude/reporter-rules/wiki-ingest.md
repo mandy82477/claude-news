@@ -112,7 +112,7 @@ slug 對照表見 `.claude/reporter-rules/wiki-reporter-shared.md`「來源歸�
 
 ## 第四步：衍生記者派工（不在分類路由內）`[加入: 2026-09-05]`
 
-彙整完成、wiki 檔案定稿後，派兩位**不吃分類路由**的衍生記者。他們沒有任何日報條目會被分類過來，本節即其明文觸發邊（依 `.claude/reporter-rules/wiki-ingest-format.md`「建頁時必須確認觸發邊」）；派工方式與六記者相同（`subagent_type: "general-purpose"` + `model: "sonnet"` + 角色前導），逐字 prompt 見 `.claude/skills/wiki-ingest/dispatch.md` 的 4b／4c 首段。
+彙整完成、wiki 檔案定稿後，派兩位**不吃分類路由**的衍生記者。他們沒有任何日報條目會被分類過來，本節即其明文觸發邊（依 `.claude/reporter-rules/wiki-ingest-format.md`「建頁時必須確認觸發邊」）；派工方式與六記者相同（`subagent_type: "general-purpose"` + `model: "sonnet"` + 角色前導），逐字 prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md` 的 4b／4c 首段。
 
 | 記者 | 吃什麼 | 角色檔 | daily 規則 | 為何排在彙整之後 |
 |---|---|---|---|---|

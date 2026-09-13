@@ -4,7 +4,7 @@
 
 ## 派工前綴（不在本檔，逐字讀那裡）
 
-**類別↔角色檔對照表**與**第一段角色前導**（記者拿到規則的唯一途徑）住 `.claude/skills/wiki-ingest/dispatch.md`——ingest 與 lint 共用同一份，本檔不另抄。派工時取該檔的角色前導那一段，接上以下 lint 專屬段組成完整 prompt。
+**類別↔角色檔對照表**與**第一段角色前導**（記者拿到規則的唯一途徑）住 `.claude/skills/wiki-ingest/references/dispatch.md`——ingest 與 lint 共用同一份，本檔不另抄。派工時取該檔的角色前導那一段，接上以下 lint 專屬段組成完整 prompt。
 
 每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + `model: "sonnet"`（sonnet 因 lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 

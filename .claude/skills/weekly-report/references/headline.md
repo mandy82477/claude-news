@@ -6,7 +6,7 @@
 
 ## 頭條要有標題 `[改版: 2026-09-06]`
 
-`## 一、頭條敘事：` 冒號後接一句話，那就是本期的頭條標題，**≤60 字**，由 `check_weekly_ledger.py` 的 `HEADLINE_DECK_RE` 硬擋（W36 起；舊期凍結不回溯）。格式見 `.claude/skills/weekly-report/contracts.md`——`頭條敘事` 四個字不可省，`build_web.py` 以 `"頭條" in title` 認這一節。網站把冒號後那段渲染成頭條副標（`app.js` 的 `weeklyHeadlineDeck()`）。原本另立的 `> **本週一句話**：` callout 已於 2026-09-06 退場，兩者合併成這一句。
+`## 一、頭條敘事：` 冒號後接一句話，那就是本期的頭條標題，**≤60 字**，由 `check_weekly_ledger.py` 的 `HEADLINE_DECK_RE` 硬擋（W36 起；舊期凍結不回溯）。格式見 `.claude/skills/weekly-report/references/contracts.md`——`頭條敘事` 四個字不可省，`build_web.py` 以 `"頭條" in title` 認這一節。網站把冒號後那段渲染成頭條副標（`app.js` 的 `weeklyHeadlineDeck()`）。原本另立的 `> **本週一句話**：` callout 已於 2026-09-06 退場，兩者合併成這一句。
 
 **寫這一句的判準：**
 

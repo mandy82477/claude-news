@@ -19,10 +19,10 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 | 參考檔 | 內容 |
 |---|---|
-| `.claude/skills/weekly-report/contracts.md` | 機械契約字串表（script 會 grep 的字串只住那裡） |
-| `.claude/skills/weekly-report/headline.md` | 第 (1) 段：頭條標題三判準、必附行動、十條規則、冷讀者三問 |
-| `.claude/skills/weekly-report/deepdive.md` | 第 (2) 段：選題三判準、寫作方向三件套、來源紀律、四段骨架、禁用內部詞 |
-| `.claude/skills/weekly-report/forecast.md` | 第 (3)(4) 段：兩表格式、回收書寫紀律、帳目生命週期、判準四規格、檔尾數字 |
+| `.claude/skills/weekly-report/references/contracts.md` | 機械契約字串表（script 會 grep 的字串只住那裡） |
+| `.claude/skills/weekly-report/references/headline.md` | 第 (1) 段：頭條標題三判準、必附行動、十條規則、冷讀者三問 |
+| `.claude/skills/weekly-report/references/deepdive.md` | 第 (2) 段：選題三判準、寫作方向三件套、來源紀律、四段骨架、禁用內部詞 |
+| `.claude/skills/weekly-report/references/forecast.md` | 第 (3)(4) 段：兩表格式、回收書寫紀律、帳目生命週期、判準四規格、檔尾數字 |
 
 ---
 
@@ -36,7 +36,7 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 **選題素材**（決定寫什麼）固定涵蓋窗：**近 7 日** `news/*.md`（唯讀，不可修改）＋ `wiki/log.md` 同期 ingest 紀錄＋ `wiki/feature-radar.md`＋ **`wiki/reader-notes.md` 狀態 ⏳ 的 🔍 興趣主題** `[加入: 2026-08-20]`。
 
-**內容素材**（決定深度）不受此窗限制 `[加入: 2026-08-16]`——`wiki/` 既有頁面、任何一期歷史日報、官方文件、以及**依缺口向外查找**的第三方來源皆可用。約束不在來源位置，在來源可取回性，見 `.claude/skills/weekly-report/deepdive.md`「來源紀律」。
+**內容素材**（決定深度）不受此窗限制 `[加入: 2026-08-16]`——`wiki/` 既有頁面、任何一期歷史日報、官方文件、以及**依缺口向外查找**的第三方來源皆可用。約束不在來源位置，在來源可取回性，見 `.claude/skills/weekly-report/references/deepdive.md`「來源紀律」。
 
 > **素材窗是用來確保選題貼著本週，不是用來限制能查多深。**（教訓見沿革檔 2026-W33 A）
 
@@ -48,16 +48,16 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 | 段 | 規範檔 |
 |---|---|
-| (1) 頭條敘事（300–500 字，不列清單） | `.claude/skills/weekly-report/headline.md` |
-| (2) 技術討論＋深挖（本週版本／討論綜述／深挖 900–1,300 字） | `.claude/skills/weekly-report/deepdive.md` |
-| (3) 下週看什麼（新開表在上、回收表在下） | `.claude/skills/weekly-report/forecast.md` |
-| (4) 檔尾數字（5 個，條列不得寫成表格） | `.claude/skills/weekly-report/forecast.md` |
+| (1) 頭條敘事（300–500 字，不列清單） | `.claude/skills/weekly-report/references/headline.md` |
+| (2) 技術討論＋深挖（本週版本／討論綜述／深挖 900–1,300 字） | `.claude/skills/weekly-report/references/deepdive.md` |
+| (3) 下週看什麼（新開表在上、回收表在下） | `.claude/skills/weekly-report/references/forecast.md` |
+| (4) 檔尾數字（5 個，條列不得寫成表格） | `.claude/skills/weekly-report/references/forecast.md` |
 
-四段的節標題、表頭、判準尾巴等字串一律照 `.claude/skills/weekly-report/contracts.md`，不憑記憶寫。
+四段的節標題、表頭、判準尾巴等字串一律照 `.claude/skills/weekly-report/references/contracts.md`，不憑記憶寫。
 
 ### 5. 凍結存檔
 
-寫入 `weekly/YYYY-Wnn.md` 後視為當週凍結版本，不因後續 ingest 回頭修改（下週報若要回收上週對錯，於新一期第 (3) 段處理，不修舊檔）。唯一例外：同日發現、同日改的可讀性缺陷（見 `.claude/skills/weekly-report/headline.md`）。
+寫入 `weekly/YYYY-Wnn.md` 後視為當週凍結版本，不因後續 ingest 回頭修改（下週報若要回收上週對錯，於新一期第 (3) 段處理，不修舊檔）。唯一例外：同日發現、同日改的可讀性缺陷（見 `.claude/skills/weekly-report/references/headline.md`）。
 
 ### 6. 收尾閉迴路 `[加入: 2026-07-26]`
 
@@ -83,9 +83,9 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 ## 邊界
 
-- 由本機 session 執行（`/weekly` 帶起或單獨補跑）；無 egress 環境的退路見 `.claude/skills/weekly-report/deepdive.md`。
+- 由本機 session 執行（`/weekly` 帶起或單獨補跑）；無 egress 環境的退路見 `.claude/skills/weekly-report/references/deepdive.md`。
 - 繁體中文為主；`news/` 唯讀，不可修改日報內容；不自行改 `wiki/reader-notes.md` 的狀態。
-- 契約字串一律以 `.claude/skills/weekly-report/contracts.md` 為準，改任何一格必須同步該表右欄消費端。
+- 契約字串一律以 `.claude/skills/weekly-report/references/contracts.md` 為準，改任何一格必須同步該表右欄消費端。
 - 驗證閘：`scripts/check_weekly_ledger.py`（掛在 `scripts/run_tests.py` 內）綠了才算完；單獨執行時測試失敗則跳過 build，仍推送已完成的 commit。
 
 ## 後續（不在本次範圍）

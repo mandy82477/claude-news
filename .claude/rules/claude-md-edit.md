@@ -63,7 +63,7 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 
 ## 修改時：機械契約字串住固定區 `[加入: 2026-09-04]`
 
-**任何會被 script grep／regex 消費的字串（小標、表頭、標籤、格式形狀），在規格檔裡只能住該規格檔的「機械契約字串」表**（現有：`weekly-report.md` 一張、`.claude/skills/news-digest/format.md` 與 `.claude/skills/reader-digest/format.md` 各一張），正文條文引用時指回該表，不另抄一份；新增契約字串時同步登記 `.claude/review-registry.json` 的 `sync_pairs`（規格端與消費端互相指認），讓 `check_rules.py` 看守。
+**任何會被 script grep／regex 消費的字串（小標、表頭、標籤、格式形狀），在規格檔裡只能住該規格檔的「機械契約字串」表**（現有：`weekly-report.md` 一張、`.claude/skills/news-digest/references/format.md` 與 `.claude/skills/reader-digest/references/format.md` 各一張），正文條文引用時指回該表，不另抄一份；新增契約字串時同步登記 `.claude/review-registry.json` 的 `sync_pairs`（規格端與消費端互相指認），讓 `check_rules.py` 看守。
 
 > 立法依據見沿革檔 2026-09-04。
 

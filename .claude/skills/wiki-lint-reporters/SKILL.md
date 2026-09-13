@@ -20,7 +20,7 @@ description: /wiki-lint A 段：載入 wiki 全貌、六記者並行 lint 派工
 
 ## 2. 並行派工（六位記者同時執行）
 
-對每個類別呼叫 Agent tool，在**同一訊息中並行發出全部六個呼叫**。**派工前綴（類別↔角色檔對照表＋第一段角色前導）逐字讀 `.claude/skills/wiki-ingest/dispatch.md`**（ingest 與 lint 共用同一份，本段不另抄）；接在它後面的 lint 專屬段與記者回報格式照 `.claude/skills/wiki-lint-reporters/references/dispatch.md`。
+對每個類別呼叫 Agent tool，在**同一訊息中並行發出全部六個呼叫**。**派工前綴（類別↔角色檔對照表＋第一段角色前導）逐字讀 `.claude/skills/wiki-ingest/references/dispatch.md`**（ingest 與 lint 共用同一份，本段不另抄）；接在它後面的 lint 專屬段與記者回報格式照 `.claude/skills/wiki-lint-reporters/references/dispatch.md`。
 
 **收報核對（自我遵守率）`[加入: 2026-07-05，擴充: 2026-08-28]`：** 主編收到每份回報後，執行兩層核對：
 

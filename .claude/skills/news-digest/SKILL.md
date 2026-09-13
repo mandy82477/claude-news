@@ -5,12 +5,12 @@ description: 每日 pipeline Step 1b：讀 gathered_items.json 寫 news/ 日報�
 
 # Step 1b：生成日報
 
-由 `.claude/commands/news-pipeline.md` 的 Phase A 背景 agent 讀取執行，接在 `.claude/skills/news-gather/SKILL.md` 的 Step 1a 之後、Step 1c 之前。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入。**本 skill 不 spawn 子 agent。**
+由 `.claude/skills/news-pipeline/SKILL.md` 的 Phase A 背景 agent 讀取執行，接在 `.claude/skills/news-gather/SKILL.md` 的 Step 1a 之後、Step 1c 之前。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入。**本 skill 不 spawn 子 agent。**
 
 兩份參考檔，正文不重述：
 
-- **格式** → `.claude/skills/news-digest/format.md`（機械契約字串表、骨架、每條排版格式、檔尾規則）
-- **選材** → `.claude/skills/news-digest/selection.md`（聚焦門檻、各區塊收錄條件、防重複、禁詞清單）
+- **格式** → `.claude/skills/news-digest/references/format.md`（機械契約字串表、骨架、每條排版格式、檔尾規則）
+- **選材** → `.claude/skills/news-digest/references/selection.md`（聚焦門檻、各區塊收錄條件、防重複、禁詞清單）
 
 ---
 
@@ -43,7 +43,7 @@ PYTHON REPO_ROOT\scripts\check_gather_health.py
 
 ## 2. 生成
 
-直接用繁體中文生成日報 Markdown（**不呼叫任何外部 API**）：骨架與語氣分寸照 `.claude/skills/news-digest/format.md`，各區塊收什麼照 `.claude/skills/news-digest/selection.md`。
+直接用繁體中文生成日報 Markdown（**不呼叫任何外部 API**）：骨架與語氣分寸照 `.claude/skills/news-digest/references/format.md`，各區塊收什麼照 `.claude/skills/news-digest/references/selection.md`。
 
 ## 3. 寫入
 
@@ -61,7 +61,7 @@ grep -cE '^\*\*\[.+\]\(https?://' news/TARGET_DATE.md
 
 ## 3a-2. 內規外洩自檢（強制）`[加入: 2026-09-04]`
 
-對 `news/TARGET_DATE.md` 跑 `.claude/skills/news-digest/selection.md`「禁詞清單」節的 grep，**應為零命中**；有命中就刪除該段再檢。
+對 `news/TARGET_DATE.md` 跑 `.claude/skills/news-digest/references/selection.md`「禁詞清單」節的 grep，**應為零命中**；有命中就刪除該段再檢。
 
 ## 3b. 來源狀態表存在性檢查（強制）
 
@@ -89,7 +89,7 @@ PYTHON REPO_ROOT\scripts\scan_open_forecasts.py TARGET_DATE
 
 - 讀 `weekly/` 最新一期的未結案預告，取其判準結尾的「｜查證：關鍵字」對今日日報做字串比對，命中則 append 至 `weekly/open-signals.jsonl`，供下期 `/weekly-report` 回收時取用（免去憑記憶重讀七天日報）
 - **純字串比對，不做判斷、不改日報**；命中與否都不影響本日產出，失敗只記錄不阻斷 pipeline
-- ⚠️ **此步驟必須留在選材與寫入之後**：若讓選材階段知道週報正在賭什麼，會產生確認偏誤——選材傾向撿能證實預告的條目，命中率虛高，並連帶破壞每月聚焦校準的獨立性（校準量測的正是選材品質，兩者不得互相知情）。規格見 `.claude/skills/weekly-report/forecast.md` 第 (3) 段
+- ⚠️ **此步驟必須留在選材與寫入之後**：若讓選材階段知道週報正在賭什麼，會產生確認偏誤——選材傾向撿能證實預告的條目，命中率虛高，並連帶破壞每月聚焦校準的獨立性（校準量測的正是選材品質，兩者不得互相知情）。規格見 `.claude/skills/weekly-report/references/forecast.md` 第 (3) 段
 
 ## 3f. 懸置標記命中偵測（機械，非 LLM）`[加入: 2026-08-10]`
 

@@ -50,7 +50,7 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 
 ## 第二步：執行 pipeline 步驟
 
-規範來源是四個 pipeline skill（`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`＋同目錄 `format.md`／`selection.md`、`.claude/skills/reader-digest/SKILL.md`＋`format.md`、`.claude/skills/web-publish/SKILL.md`；順序與派工見 `.claude/commands/news-pipeline.md`），步驟細節不在本檔重複，避免兩份副本失步。依下表對照執行，**用標題找步驟，不要用編號推測範圍**：
+規範來源是四個 pipeline skill（`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`＋同目錄 `format.md`／`selection.md`、`.claude/skills/reader-digest/SKILL.md`＋`format.md`、`.claude/skills/web-publish/SKILL.md`；順序與派工見 `.claude/skills/news-pipeline/SKILL.md`），步驟細節不在本檔重複，避免兩份副本失步。依下表對照執行，**用標題找步驟，不要用編號推測範圍**：
 
 | skill 檔中的步驟標題 | 雲端如何處理 |
 |------|------|
@@ -68,7 +68,7 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 
 > 上表若與四個 pipeline skill 的實際步驟標題對不上（有標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照 skill 檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 pipeline skill 不同步`，供使用者回頭修 runbook。
 
-**Phase 劃分不適用於雲端：** `.claude/commands/news-pipeline.md` 把步驟分成 Phase A / B / C，那是為了本機 session 省 context 而拆的背景 agent 邊界。你是雲端頂層 session，**全部步驟自己一條龍做完，不 spawn 背景 agent 執行 pipeline 步驟**（記者派工除外，見下）。
+**Phase 劃分不適用於雲端：** `.claude/skills/news-pipeline/SKILL.md` 把步驟分成 Phase A / B / C，那是為了本機 session 省 context 而拆的背景 agent 邊界。你是雲端頂層 session，**全部步驟自己一條龍做完，不 spawn 背景 agent 執行 pipeline 步驟**（記者派工除外，見下）。
 
 ---
 
@@ -78,7 +78,7 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 
 **派工注意：**
 - 你是頂層 session，用 Task tool 派工會同步等待完成，不會有本機那個「巢狀背景通知迷路」的問題，可放心派
-- 派工一律 `subagent_type: "general-purpose"` + `model: "sonnet"`，prompt 首段為角色前導（導向 `.claude/agents/wiki-reporter-[category].md`），格式照 `.claude/skills/wiki-ingest/dispatch.md`。**這就是正典路徑，不是降級**——2026-08-15 起本機與雲端同一條路，不再需要在 log 標注「降級執行」（歷史：07-18～08-14 雲端無法載入自訂 `wiki-reporter-*` subagent_type，六次退回內嵌路徑；已裁決轉正，見 `.claude/reporter-rules/wiki-ingest.md`「派工方式」）
+- 派工一律 `subagent_type: "general-purpose"` + `model: "sonnet"`，prompt 首段為角色前導（導向 `.claude/agents/wiki-reporter-[category].md`），格式照 `.claude/skills/wiki-ingest/references/dispatch.md`。**這就是正典路徑，不是降級**——2026-08-15 起本機與雲端同一條路，不再需要在 log 標注「降級執行」（歷史：07-18～08-14 雲端無法載入自訂 `wiki-reporter-*` subagent_type，六次退回內嵌路徑；已裁決轉正，見 `.claude/reporter-rules/wiki-ingest.md`「派工方式」）
 
 **失敗處理：** Step 2 整體失敗或部分記者失敗時，記錄錯誤但仍繼續後續步驟（web build 不依賴 wiki 完整性）。
 

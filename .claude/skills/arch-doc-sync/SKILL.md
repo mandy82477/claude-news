@@ -7,7 +7,7 @@ description: 系統架構變動時，快速同步更新架構文件（Design Dia
 
 當 CLAUDE_NEWS 系統結構改變（新 pipeline 步驟、新來源、新記者規則、新治理機制、模型分工變化等）時，用此流程把三份架構文件同步到最新。
 
-三份文件的分工表、`.dgm-*`／`.event-*` class 契約、驗證 A／B 檢查表住 `.claude/skills/arch-doc-sync/contract.md`，本檔不重述——**動手前先讀它**。
+三份文件的分工表、`.dgm-*`／`.event-*` class 契約、驗證 A／B 檢查表住 `.claude/skills/arch-doc-sync/references/contract.md`，本檔不重述——**動手前先讀它**。
 
 ---
 
@@ -30,18 +30,18 @@ description: 系統架構變動時，快速同步更新架構文件（Design Dia
   - 純 bug fix / 微調 → 通常不進架構文件
 
 ### 2. 先更新事實來源 `Design Diagram.md`
-- 對照**實際系統**核實，不憑記憶：pipeline 讀 `.claude/commands/news-pipeline.md`、`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`、`.claude/skills/reader-digest/SKILL.md`、`.claude/skills/web-publish/SKILL.md`；來源清單讀 `src/news_aggregator/main.py` 的 `sources = [...]`；lint 讀 `.claude/skills/wiki-lint/SKILL.md`；派工讀 `.claude/reporter-rules/wiki-ingest.md`
+- 對照**實際系統**核實，不憑記憶：pipeline 讀 `.claude/skills/news-pipeline/SKILL.md`、`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`、`.claude/skills/reader-digest/SKILL.md`、`.claude/skills/web-publish/SKILL.md`；來源清單讀 `src/news_aggregator/main.py` 的 `sources = [...]`；lint 讀 `.claude/skills/wiki-lint/SKILL.md`；派工讀 `.claude/reporter-rules/wiki-ingest.md`
 - 改對應的 mermaid 圖與文字；更新標頭「最後更新」為今日
 - 這是下游 HTML 的依據，**先它、後 HTML**
 
 ### 3. 更新 `docs/architecture-current.html`
-- 只改有變動的那張 panel，比照既有 box 的 class 寫法（class 與 panel key 見 `.claude/skills/arch-doc-sync/contract.md`）
+- 只改有變動的那張 panel，比照既有 box 的 class 寫法（class 與 panel key 見 `.claude/skills/arch-doc-sync/references/contract.md`）
 - 若新增一張圖：filter bar 加一個 `.dgm-tab`（`data-dgm="<key>"`）+ 一個 `#dgm-<key>` panel
 - **更新日期標記**「現況截至 YYYY-MM-DD」為今日
 - 設計 token（顏色/字體）若要調，**只改 `architecture.css`**，不在 HTML 內寫死
 
 ### 4. 更新 `docs/architecture-evolution.html`（僅里程碑）
-- 事件卡片結構見 `.claude/skills/arch-doc-sync/contract.md`
+- 事件卡片結構見 `.claude/skills/arch-doc-sync/references/contract.md`
 - 新事件插入**對應月份分組**、依日期排序（不是塞末尾）
 - `track` 三選一：`script`（腳本/pipeline）/ `llm`（LLM 呼叫點）/ `agent`（Agent 設計）
 - 只有真正的新架構模式才配新 diagram（SVG）；沿用既有 A–F 的畫法
@@ -54,7 +54,7 @@ python scripts/check_arch_docs.py
 ```
 涵蓋來源清單一致、日期三處同步、charset meta、CSS token 存在性四類，不管走哪條驗證路徑都必須通過。
 
-接著照 `.claude/skills/arch-doc-sync/contract.md`「驗證檢查表」走 A（preview 可用，首選）或 B（靜態 fallback）。
+接著照 `.claude/skills/arch-doc-sync/references/contract.md`「驗證檢查表」走 A（preview 可用，首選）或 B（靜態 fallback）。
 
 ### 6. Commit
 - Commit 前再跑一次 `python scripts/check_arch_docs.py` 到零錯誤

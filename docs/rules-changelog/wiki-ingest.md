@@ -4,7 +4,7 @@
 
 ## 2026-09-13
 
-`/wiki-ingest` 從舊 command 檔轉成 skill（`.claude/skills/wiki-ingest/`）。步驟語意、契約字串與判準逐字不動，只換家：類別↔角色檔對照表、六記者 prompt 模板、防偏誤說明、4b／4c prompt 首段移入同目錄 `dispatch.md`；共用檔案逐檔寫入規則、完成前強制核對清單、完成摘要表移入同目錄 `checklist.md`；下列兩則教訓敘事移入本檔。`$ARGUMENTS` 的日期改以 TARGET_DATE 稱呼（呼叫時傳入的參數仍是同一個值）。引用端（`.claude/commands/news-pipeline.md`、`.claude/commands/wiki-backfill.md`、`.claude/reporter-rules/`、`.claude/skills/news-gather/`、`.claude/skills/news-digest/`、`docs/cloud-runbooks/daily.md`、`src/news_aggregator/main.py`）與 `.claude/review-registry.json` 同步改指新家。
+`/wiki-ingest` 從舊 command 檔轉成 skill（`.claude/skills/wiki-ingest/`）。步驟語意、契約字串與判準逐字不動，只換家：類別↔角色檔對照表、六記者 prompt 模板、防偏誤說明、4b／4c prompt 首段移入同目錄 `dispatch.md`；共用檔案逐檔寫入規則、完成前強制核對清單、完成摘要表移入同目錄 `checklist.md`；下列兩則教訓敘事移入本檔。`$ARGUMENTS` 的日期改以 TARGET_DATE 稱呼（呼叫時傳入的參數仍是同一個值）。引用端（`.claude/skills/news-pipeline/SKILL.md`、`.claude/commands/wiki-backfill.md`、`.claude/reporter-rules/`、`.claude/skills/news-gather/`、`.claude/skills/news-digest/`、`docs/cloud-runbooks/daily.md`、`src/news_aggregator/main.py`）與 `.claude/review-registry.json` 同步改指新家。
 
 ## 2026-07-25（ingest 輸入不能只有日報）
 

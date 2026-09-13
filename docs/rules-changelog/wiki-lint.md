@@ -41,5 +41,5 @@
 - **5g 印給空氣看**：`gen_wiki_frontmatter.py` 每次都印 signal 分布並寫進 frontmatter，但沒有任何 lint 步驟讀它——同 2026-08-28 懸置語法 WARN 無人讀、C 窗佇列只寫在 `logger.info` 的同型死法。
 - **6i 連續滿分**：「連續滿分與抓不到問題是同一枚硬幣」原本只是一句話，6i 讓它變成動作（`lint_health.py mutate`／`hits report`）。
 - **月度判斷法統一為 metrics.md 口徑 `[改版: 2026-09-13]`**：lint 端原本判「`wiki/log.md` 本月尚無 `Lint` 記錄」（判執行記錄），`/wiki-weekly-review` 判「`wiki/metrics.md` 本月無數值」（判產出物）並明寫前者踩過的坑——同一個月裡兩套口徑可以給出相反答案（lint 跑了但月度項整段跳過時，log 有記錄而 metrics 沒數值）。本次統一為 metrics.md 的「採用驗證率」欄，總指揮開一節「月度判斷法」，A 段月度蒸餾與 C 段 6g 指標二／6j 共用。
-- **跨檔重複收斂**：六記者派工表與角色前導的家收斂到 `.claude/skills/wiki-ingest/dispatch.md`（lint 端只留 lint 專屬段）；雲端 egress 探測樣板 5b／5c／5m 三抄合一；步驟 10 的 gate 修復迴圈、push 重試改指 `.claude/skills/web-publish/SKILL.md` Step 4／Step 5（commit 路徑與訊息保留在本地）；`news/` 唯讀／`log.md` only append／繁中三條改指 `wiki/CLAUDE.md`「🚫 絕對限制」。
+- **跨檔重複收斂**：六記者派工表與角色前導的家收斂到 `.claude/skills/wiki-ingest/references/dispatch.md`（lint 端只留 lint 專屬段）；雲端 egress 探測樣板 5b／5c／5m 三抄合一；步驟 10 的 gate 修復迴圈、push 重試改指 `.claude/skills/web-publish/SKILL.md` Step 4／Step 5（commit 路徑與訊息保留在本地）；`news/` 唯讀／`log.md` only append／繁中三條改指 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - **機械檢查射程**：`bare_references`／`path_existence`／`coupling_hints` 的掃描 glob 補上 `.claude/skills/**/*.md`——前三批搬出去的 skill 檔原本全在射程外，等於搬一次就少一層看守。

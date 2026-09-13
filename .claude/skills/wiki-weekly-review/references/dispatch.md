@@ -38,7 +38,7 @@
 ```
 | 聚焦條目 | 當時標籤 | 後續 30 天 | 判定 |
 ```
-＋命中率＋偏誤模式觀察（如「Show HN 工具類系統性高估」）＋若有明確偏誤，附選材指引修正提案（目標：`.claude/skills/news-digest/selection.md`），**經使用者確認才修改**。
+＋命中率＋偏誤模式觀察（如「Show HN 工具類系統性高估」）＋若有明確偏誤，附選材指引修正提案（目標：`.claude/skills/news-digest/references/selection.md`），**經使用者確認才修改**。
 
 ## 彙整確認清單（步驟 3）
 

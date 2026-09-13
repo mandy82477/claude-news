@@ -1,6 +1,6 @@
 # 日報（`news/YYYY-MM-DD.md`）格式契約
 
-`.claude/skills/news-digest/SKILL.md`（Step 1b）的格式單一來源。選材判準不在本檔，見 `.claude/skills/news-digest/selection.md`。
+`.claude/skills/news-digest/SKILL.md`（Step 1b）的格式單一來源。選材判準不在本檔，見 `.claude/skills/news-digest/references/selection.md`。
 
 ## 機械契約字串（勿改；新增時登記 `.claude/review-registry.json`）`[加入: 2026-09-04]`
 
@@ -20,7 +20,7 @@
 
 ## 骨架（照抄的部分）
 
-以 `#`／`###`／表格開頭的行是要照抄的骨架；各區塊要收什麼、怎麼挑，見 `.claude/skills/news-digest/selection.md`。**六個正文區塊 ＋ 選配的專頁雷達區塊，無內容則省略。**
+以 `#`／`###`／表格開頭的行是要照抄的骨架；各區塊要收什麼、怎麼挑，見 `.claude/skills/news-digest/references/selection.md`。**六個正文區塊 ＋ 選配的專頁雷達區塊，無內容則省略。**
 
 ```
 # Claude Code & Anthropic 每日新聞摘要

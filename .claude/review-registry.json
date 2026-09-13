@@ -167,50 +167,50 @@
   ],
   "sync_pairs": [
     {
-      "name": "news-pipeline.md 內兩段 Agent prompt：REPO_ROOT/PYTHON 逐字相同 + 不可背景",
+      "name": "news-pipeline references/dispatch.md 內兩段 Agent prompt：REPO_ROOT 單一家、逐字相同",
       "assertion": "equal_values",
       "files": [
-        ".claude/commands/news-pipeline.md"
+        ".claude/skills/news-pipeline/references/dispatch.md"
       ],
       "pattern": "REPO_ROOT\\s*=\\s*(\\S+)"
     },
     {
-      "name": "news-pipeline.md 內兩段 Agent prompt：PYTHON 逐字相同",
+      "name": "news-pipeline references/dispatch.md 內兩段 Agent prompt：PYTHON 單一家、逐字相同",
       "assertion": "equal_values",
       "files": [
-        ".claude/commands/news-pipeline.md"
+        ".claude/skills/news-pipeline/references/dispatch.md"
       ],
       "pattern": "PYTHON\\s*=\\s*(\\S+)"
     },
     {
-      "name": "news-pipeline.md <-> .claude/skills/news-gather/SKILL.md：皆明文「不可包進背景 agent」語意",
+      "name": "news-pipeline SKILL.md <-> .claude/skills/news-gather/SKILL.md：皆明文 Step 2 由呼叫的 session 前景／親自執行",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/news-pipeline.md",
+        ".claude/skills/news-pipeline/SKILL.md",
         ".claude/skills/news-gather/SKILL.md"
       ],
       "patterns": [
-        "不可.*背景"
+        "Step 2 由.{0,30}(前景|親自)執行"
       ]
     },
     {
-      "name": "news-pipeline.md Phase B <-> .claude/skills/wiki-ingest/SKILL.md：互相參照，無精簡複本殘留",
+      "name": "news-pipeline SKILL.md Phase B <-> .claude/skills/wiki-ingest/SKILL.md：互相參照，無精簡複本殘留",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/news-pipeline.md"
+        ".claude/skills/news-pipeline/SKILL.md"
       ],
       "patterns": [
         "skills/wiki-ingest/SKILL\\.md"
       ]
     },
     {
-      "name": "wiki-ingest SKILL.md 提及被 news-pipeline.md Phase B 呼叫，無精簡複本殘留",
+      "name": "wiki-ingest SKILL.md 提及被 news-pipeline Phase B 呼叫，無精簡複本殘留",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-ingest/SKILL.md"
       ],
       "patterns": [
-        "news-pipeline\\.md"
+        "skills/news-pipeline/SKILL\\.md"
       ]
     },
     {
@@ -229,7 +229,7 @@
       "name": "wiki-ingest dispatch.md / reporter-rules/wiki-ingest.md：六類記者角色檔名一致 + 正典派工路徑（general-purpose + 角色前導 + model: \"sonnet\"）；2026-09-13 起 /wiki-lint 派工前綴改指 dispatch.md，不再是第三份副本",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/wiki-ingest/dispatch.md",
+        ".claude/skills/wiki-ingest/references/dispatch.md",
         ".claude/reporter-rules/wiki-ingest.md"
       ],
       "patterns": [
@@ -320,7 +320,7 @@
       "name": "wiki-ingest checklist.md 關鍵步驟：feature-radar 彙整 + 呈現品質 log 欄位 + 完成前核對清單",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/wiki-ingest/checklist.md"
+        ".claude/skills/wiki-ingest/references/checklist.md"
       ],
       "patterns": [
         "wiki/feature-radar\\.md",
@@ -341,28 +341,28 @@
       ]
     },
     {
-      "name": "news-pipeline.md 關鍵步驟：三段 Phase 齊全 + 已知結果 + 禁止背景包裹",
+      "name": "news-pipeline SKILL.md 關鍵步驟：三段 Phase 齊全 ＋ Step 2 前景邊界",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/news-pipeline.md"
+        ".claude/skills/news-pipeline/SKILL.md"
       ],
       "patterns": [
         "## Phase A",
         "## Phase B",
         "## Phase C",
-        "已知結果",
-        "本身也不可被包進背景 agent"
+        "本身也在前景呼叫"
       ]
     },
     {
-      "name": "news-pipeline.md 關鍵結構：Phase A/C 步驟劃分",
+      "name": "news-pipeline references/dispatch.md 關鍵結構：Phase A/C 派工段與已知結果欄",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/news-pipeline.md"
+        ".claude/skills/news-pipeline/references/dispatch.md"
       ],
       "patterns": [
         "# Phase A 步驟",
-        "# Phase C 步驟"
+        "# Phase C 步驟",
+        "已知結果"
       ],
       "_note": "2026-09-13 拆檔：原一組守三件事（Step 2 不在本檔案、Phase A/C 劃分、Step 6 log），拆後分居三檔，另見緊接在後的兩組。"
     },
@@ -550,7 +550,7 @@
       "name": "日報歸因格式 <-> wiki-lint 6g 量測：產出端與量測端都必須認得現行行內連結格式（2026-09-04 改版；改日報歸因格式必須同步 6g，否則回歸偵測器自己讀成 0）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/news-digest/selection.md",
+        ".claude/skills/news-digest/references/selection.md",
         ".claude/skills/wiki-lint-rules-health/SKILL.md"
       ],
       "patterns": [
@@ -568,7 +568,7 @@
       "patterns": [
         "三種歸因格式，必須同時計",
         "必須先限縮到「今日聚焦」區塊再數",
-        "news\\-digest/selection\\.md"
+        "news\\-digest/references/selection\\.md"
       ]
     },
     {
@@ -621,10 +621,10 @@
       "_note": "2026-08-01 加入。web build 的放行判準集中在腳本裡；任一處退回自己跑 run_tests.py 再判斷，兩處就會失步（日更放行、週更擋下之類）。"
     },
     {
-      "name": "weekly-report/contracts.md 第(3)段兩張表的欄名 <-> build_web.py 解析錨點（欄名改動會讓該表整張不進 JSON、在網站上靜默消失）",
+      "name": "weekly-report/references/contracts.md 第(3)段兩張表的欄名 <-> build_web.py 解析錨點（欄名改動會讓該表整張不進 JSON、在網站上靜默消失）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md",
+        ".claude/skills/weekly-report/references/contracts.md",
         "scripts/build_web.py",
         "scripts/check_weekly_ledger.py",
         "scripts/scan_open_forecasts.py"
@@ -676,10 +676,10 @@
       "_note": "2026-08-05 加入。頁面 07-26 建立後因日更與 lint 兩側都無觸發規則而孤兒化 10 天。2026-08-15 改版：日更小縫兩週就把頁面長回 log，改為 daily 只標 tag、weekly 整線重寫（每線 ≤30 行固定骨架）。 2026-08-15 修正兩處：pattern `**主線：**` 未跳脫（`*` 開頭讓 re.compile 拋 PatternError，整支 check_rules.py 崩潰、五項檢查全部跑不了，不只是這條紅）；另移除 `並行規模`——四條線名的家是 community.md，要求 lint 檔複述會製造第二份真相，且 lint 那節已改為通用寫法（「對每條有新節點的線」）不再列線名。剩下兩個 pattern 已足以達成本條自述的目的「兩側規則齊全」。"
     },
     {
-      "name": "週報預告偵測的反確認偏誤護欄：weekly-report/forecast.md 與 .claude/skills/news-digest/SKILL.md 都必須明載掃描在選材之後、且只偵測不判定",
+      "name": "週報預告偵測的反確認偏誤護欄：weekly-report/references/forecast.md 與 .claude/skills/news-digest/SKILL.md 都必須明載掃描在選材之後、且只偵測不判定",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/forecast.md",
+        ".claude/skills/weekly-report/references/forecast.md",
         ".claude/skills/news-digest/SKILL.md"
       ],
       "patterns": [
@@ -691,10 +691,10 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊"
     },
     {
-      "name": "今日聚焦選材門檻三條存在於 .claude/skills/news-digest/selection.md（2026-09-04 起僅「判斷用」一份，檔尾附錄已廢除；門檻消失代表校準機制斷根）",
+      "name": "今日聚焦選材門檻三條存在於 .claude/skills/news-digest/references/selection.md（2026-09-04 起僅「判斷用」一份，檔尾附錄已廢除；門檻消失代表校準機制斷根）",
       "assertion": "min_count",
       "files": [
-        ".claude/skills/news-digest/selection.md"
+        ".claude/skills/news-digest/references/selection.md"
       ],
       "patterns": [
         "\\*\\*\\[新工具\\]\\*\\*：",
@@ -755,10 +755,10 @@
       ]
     },
     {
-      "name": "news-pipeline.md <-> .claude/skills/web-publish/SKILL.md：完成摘要必須接出「待使用者裁示」（待確認事項只寫進 log.md 等於靜默丟棄——2026-08-02 裁示擱置 6 天的防再犯）",
+      "name": "news-pipeline SKILL.md <-> .claude/skills/web-publish/SKILL.md：完成摘要必須接出「待使用者裁示」（待確認事項只寫進 log.md 等於靜默丟棄——2026-08-02 裁示擱置 6 天的防再犯）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/news-pipeline.md",
+        ".claude/skills/news-pipeline/SKILL.md",
         ".claude/skills/web-publish/SKILL.md"
       ],
       "patterns": [
@@ -821,7 +821,7 @@
       "assertion": "all_contain",
       "files": [
         "src/news_aggregator/sources/topic_watch.json",
-        ".claude/skills/news-digest/selection.md",
+        ".claude/skills/news-digest/references/selection.md",
         ".claude/skills/wiki-ingest/SKILL.md"
       ],
       "patterns": [
@@ -834,7 +834,7 @@
       "name": "日報區塊 emoji 必須同時出現在日報規格、build_web 解析器與 app.js 渲染器（新增區塊只改規格，網站會把它吞進前一區）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/news-digest/format.md",
+        ".claude/skills/news-digest/references/format.md",
         "scripts/build_web.py",
         "web_reader/assets/app.js"
       ],
@@ -853,7 +853,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/reporter-rules/wiki-ingest.md",
-        ".claude/skills/wiki-ingest/dispatch.md"
+        ".claude/skills/wiki-ingest/references/dispatch.md"
       ],
       "patterns": [
         "臨場加寫"
@@ -886,10 +886,10 @@
       "_note": "2026-08-16 加入。官方部落格〈Maximizing the value of your Claude Code sessions〉（HN 268 分，當日最高互動的官方一手內容）全庫零收錄——分類層無落點（社群列讀起來像『社群產出』、功能列只有版本/指令/旗標）＋ coding-workflow-guide 一句『不吃新聞條目』，兩層同時漏。三邊只要有一邊被改回去，官方使用指南就會再次無家可歸；社群側缺席則官方模式類條目又會被記者當成不屬自己而略過。"
     },
     {
-      "name": "多來源條目的來源欄：日報產出端（.claude/skills/news-digest/format.md）與歸因端（wiki-reporter-shared.md）必須都認得 ＋ 分隔",
+      "name": "多來源條目的來源欄：日報產出端（.claude/skills/news-digest/references/format.md）與歸因端（wiki-reporter-shared.md）必須都認得 ＋ 分隔",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/news-digest/format.md",
+        ".claude/skills/news-digest/references/format.md",
         ".claude/reporter-rules/wiki-reporter-shared.md"
       ],
       "patterns": [
@@ -899,10 +899,10 @@
       "_mutate_note": "2026-09-04 mutate 判 ＋ 過寬，改為與「來源」鄰接"
     },
     {
-      "name": "深挖專欄的三邊耦合：規格（weekly-report/deepdive.md）、解析器（build_web.py 以 h3 抽 deepDive 元件）、檢查器（check_weekly_ledger.py 擋非 ### 層級）",
+      "name": "深挖專欄的三邊耦合：規格（weekly-report/references/deepdive.md）、解析器（build_web.py 以 h3 抽 deepDive 元件）、檢查器（check_weekly_ledger.py 擋非 ### 層級）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/deepdive.md",
+        ".claude/skills/weekly-report/references/deepdive.md",
         "scripts/check_weekly_ledger.py"
       ],
       "patterns": [
@@ -963,10 +963,10 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬（散文即可滿足），收緊"
     },
     {
-      "name": "weekly-report/headline.md 頭條敘事規則 <-> check_weekly_ledger.py 機械檢查：規格與檢查器同進退",
+      "name": "weekly-report/references/headline.md 頭條敘事規則 <-> check_weekly_ledger.py 機械檢查：規格與檢查器同進退",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/headline.md"
+        ".claude/skills/weekly-report/references/headline.md"
       ],
       "patterns": [
         "入口讀者裁定",
@@ -1003,11 +1003,11 @@
       "_note": "2026-08-26 加入。wiki-lint 步驟 2 逐字引用 Step 4 的節名；節名改動時兩處要一起改，否則 lint 端的引用指向不存在的節。"
     },
     {
-      "name": "存量盤點前綴的產出端 <-> 消費端：github_releases.py 實際輸出的 `[存量盤點｜` 字串必須與 .claude/skills/news-digest/selection.md 的寫法規則逐字相同（改前綴而規格沒跟上，日報撰寫者辨識不出這批不是今日新聞，會把 2 月出生的 9 萬星 repo 寫成今日發布——這是本通道唯一的誠實防線）",
+      "name": "存量盤點前綴的產出端 <-> 消費端：github_releases.py 實際輸出的 `[存量盤點｜` 字串必須與 .claude/skills/news-digest/references/selection.md 的寫法規則逐字相同（改前綴而規格沒跟上，日報撰寫者辨識不出這批不是今日新聞，會把 2 月出生的 9 萬星 repo 寫成今日發布——這是本通道唯一的誠實防線）",
       "assertion": "all_contain",
       "files": [
         "src/news_aggregator/sources/github_releases.py",
-        ".claude/skills/news-digest/selection.md"
+        ".claude/skills/news-digest/references/selection.md"
       ],
       "patterns": [
         "\\[存量盤點｜"
@@ -1091,7 +1091,7 @@
       "name": "判準查證尾巴分隔符：`｜查證` 存在於規格與 scan_open_forecasts（PROBE_RE）——改分隔符全部預告失去偵測",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/forecast.md",
+        ".claude/skills/weekly-report/references/forecast.md",
         "scripts/scan_open_forecasts.py"
       ],
       "patterns": [
@@ -1102,7 +1102,7 @@
       "name": "聚焦行內連結解析器：規格點名的 FOCUS_INLINE_LINK_RE／GROUP_RE 必須真的存在於 build_web（規格與程式互相指認）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/news-digest/format.md",
+        ".claude/skills/news-digest/references/format.md",
         "scripts/build_web.py"
       ],
       "patterns": [
@@ -1114,7 +1114,7 @@
       "name": "週報頭條標題（規格端）：`## 一、頭條敘事：<一句話>` 冒號後那句是本期頭條標題；`頭條敘事` 四字不可省（build_web 以「頭條」認節）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md"
+        ".claude/skills/weekly-report/references/contracts.md"
       ],
       "patterns": [
         "## 一、頭條敘事[：:]"
@@ -1144,7 +1144,7 @@
       "name": "週報檔尾（規格端＋程式端）：`**素材涵蓋窗**` 與 WEEKLY_FOOTER_RE 同名同形",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md",
+        ".claude/skills/weekly-report/references/contracts.md",
         "scripts/build_web.py"
       ],
       "patterns": [
@@ -1155,7 +1155,7 @@
       "name": "週報回收小標：規格、build_web、check_weekly_ledger 三邊都認「上週的線怎麼了」（非 alternation，抓得到改名）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md",
+        ".claude/skills/weekly-report/references/contracts.md",
         "scripts/build_web.py",
         "scripts/check_weekly_ledger.py"
       ],
@@ -1167,7 +1167,7 @@
       "name": "週報兩表表頭：新開（類型｜預告｜判準）與回收（上週預告｜判準｜本週結果）欄名逐字一致於規格與三支消費端",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md",
+        ".claude/skills/weekly-report/references/contracts.md",
         "scripts/build_web.py",
         "scripts/check_weekly_ledger.py",
         "scripts/scan_open_forecasts.py"
@@ -1182,7 +1182,7 @@
       "name": "日報 emoji 看守補完：📌（今日聚焦）與 📡（來源狀態）在規格與 build_web 解析器必須同在（pair 45 因 app.js 無此二符號涵蓋不到）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/news-digest/format.md",
+        ".claude/skills/news-digest/references/format.md",
         "scripts/build_web.py"
       ],
       "patterns": [
@@ -1194,7 +1194,7 @@
       "name": "週報節標題：`## 一、`／`## 四、本週數字` 是 check_weekly_ledger 兩支檢查的唯一入口，不中即靜默跳過（不報錯）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md",
+        ".claude/skills/weekly-report/references/contracts.md",
         "scripts/check_weekly_ledger.py"
       ],
       "patterns": [
@@ -1206,7 +1206,7 @@
       "name": "本週數字條列（規格端）：`- **值**——說明` 的全形破折號——散文裡的 —— 有 60 處，必須連標籤一起比對",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/contracts.md"
+        ".claude/skills/weekly-report/references/contracts.md"
       ],
       "patterns": [
         "\\*\\*值\\*\\*——說明"
@@ -1468,7 +1468,7 @@
       "name": "讀者版日報六領域節名（規格端 <-> 解析端 <-> 渲染端）：節名改了而 build_web / app.js 沒跟，該領域整段在網站上靜默消失（同 2026-08-14 區塊 emoji 的死法）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/reader-digest/format.md",
+        ".claude/skills/reader-digest/references/format.md",
         "scripts/build_web.py",
         "scripts/check_reader_digest.py",
         "web_reader/assets/app.js"
@@ -1482,7 +1482,7 @@
       "name": "讀者版日報標題與無新知行（規格端 <-> build_web 解析器）：`# YYYY-MM-DD 今天 wiki 學到什麼` 與 `> 今日 wiki 無新知（YYYY-MM-DD）` 兩行的形狀是規格與程式的共同契約",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/reader-digest/format.md",
+        ".claude/skills/reader-digest/references/format.md",
         "scripts/build_web.py"
       ],
       "patterns": [
@@ -1495,7 +1495,7 @@
       "name": "讀者版日報條目三段式（規格端 <-> 解析端 <-> 格式閘）：`- 事實 → [[頁名]] → 判斷` 的全形箭頭分隔符，三端都得認得",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/reader-digest/format.md",
+        ".claude/skills/reader-digest/references/format.md",
         "scripts/build_web.py",
         "scripts/check_reader_digest.py"
       ],
@@ -1537,14 +1537,14 @@
       ]
     },
     {
-      "name": "wiki-lint A 段派工前綴不得再自抄：reporters/SKILL.md 必須指向 wiki-ingest/dispatch.md 並釘住派工路徑（2026-09-13 去重；指路斷了就等於沒有角色前導，記者拿不到規則）",
+      "name": "wiki-lint A 段派工前綴不得再自抄：reporters/SKILL.md 必須指向 wiki-ingest/references/dispatch.md 並釘住派工路徑（2026-09-13 去重；指路斷了就等於沒有角色前導，記者拿不到規則）",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-lint-reporters/SKILL.md",
         ".claude/skills/wiki-lint-reporters/references/dispatch.md"
       ],
       "patterns": [
-        "\\.claude/skills/wiki-ingest/dispatch\\.md"
+        "\\.claude/skills/wiki-ingest/references/dispatch\\.md"
       ]
     },
     {

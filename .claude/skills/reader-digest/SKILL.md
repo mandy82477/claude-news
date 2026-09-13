@@ -9,7 +9,7 @@ description: 每日 pipeline Step 2b：取當日 wiki diff 寫 daily/ 讀者版�
 
 讀者版回答的不是「今天發生什麼」，是「**知識庫今天學到什麼、改變了什麼判斷**」。`news/TARGET_DATE.md` 照產照存（原料層，供 lint 5d／7b 溯源與各記者沉澱使用）。判準與取捨見沿革檔 2026-09-12。
 
-格式契約（模板、機械契約字串、每條 ≤ 200 字元等條件、「不算學到」清單、主詞規則、網站版面）在 `.claude/skills/reader-digest/format.md`，本檔不重述。
+格式契約（模板、機械契約字串、每條 ≤ 200 字元等條件、「不算學到」清單、主詞規則、網站版面）在 `.claude/skills/reader-digest/references/format.md`，本檔不重述。
 
 ---
 
@@ -23,8 +23,8 @@ description: 每日 pipeline Step 2b：取當日 wiki diff 寫 daily/ 讀者版�
    ```
 
    **不需要基準 sha**：Step 2 只寫不 commit，wiki/ 的當日改動要到 Step 3 才進 git，所以本步執行時 `git diff HEAD -- wiki/` 就是今天全部的改動。若本次執行中途曾先 commit 過 wiki（如記者分批完成的 interim commit），改以那筆 commit 的前一個 sha 為基準：`git -C REPO_ROOT diff <sha> -- wiki/`。
-2. **剔除不算「學到」的改動**：清單見 `.claude/skills/reader-digest/format.md`。
-3. **寫 `daily/TARGET_DATE.md`**，格式與逐條條件全依 `.claude/skills/reader-digest/format.md`。
+2. **剔除不算「學到」的改動**：清單見 `.claude/skills/reader-digest/references/format.md`。
+3. **寫 `daily/TARGET_DATE.md`**，格式與逐條條件全依 `.claude/skills/reader-digest/references/format.md`。
 4. **長度自檢（強制）**：
 
    ```
@@ -32,7 +32,7 @@ description: 每日 pipeline Step 2b：取當日 wiki diff 寫 daily/ 讀者版�
    ```
 
    （檢查每條 ≤ 200 字元、六領域節名合法、條目恰好三段、wikilink 目標存在、事實句與總結句不含整理語；非零退出即違規，修好再收工）
-5. **內規外洩自檢（強制）**：對 `daily/TARGET_DATE.md` 跑 `.claude/skills/news-digest/selection.md`「禁詞清單」節的 grep；另不得出現 `ingest`、`派工`、`記者`、`diff` 這類維運語——讀者看到的是知識，不是編輯部的工作流程。
+5. **內規外洩自檢（強制）**：對 `daily/TARGET_DATE.md` 跑 `.claude/skills/news-digest/references/selection.md`「禁詞清單」節的 grep；另不得出現 `ingest`、`派工`、`記者`、`diff` 這類維運語——讀者看到的是知識，不是編輯部的工作流程。
 6. `daily/TARGET_DATE.md` 隨 **Step 3** 一併 commit（見 `.claude/skills/web-publish/SKILL.md` 該步的 `git add` 清單），不單獨 commit、不單獨 push。
 
 ## 產出失敗時

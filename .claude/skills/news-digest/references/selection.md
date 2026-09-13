@@ -1,6 +1,6 @@
 # 日報選材判準（Step 1b）
 
-`.claude/skills/news-digest/SKILL.md` 的選材單一來源。骨架與機械契約字串不在本檔，見 `.claude/skills/news-digest/format.md`。
+`.claude/skills/news-digest/SKILL.md` 的選材單一來源。骨架與機械契約字串不在本檔，見 `.claude/skills/news-digest/references/format.md`。
 
 ⚠️ **本檔全是給你判斷用的規則，一律判斷完即丟**——日報成品內不得出現「選材門檻」「准入」「讀者契約」「冷讀者」「本區」「機械契約」字樣的句子，也不得出現 `[加入:]`／`[改版:]` 標記（2026-07-25 與 2026-09-03 都發生過規則被原樣印進日報）。
 
@@ -21,7 +21,7 @@
 
 **每一條聚焦項目，凡有對應的參考新聞，在句末用行內連結引用** `[改版: 2026-09-04]`：格式 `（[來源名](url)）`，多則用頓號並列 `（[HN](url1)、[官方](url2)）`。來源名寫讀者認得的短名（媒體名／HN／官方／issue 編號），**不寫裸 URL、不用 `[N]` 腳注**——腳注要讀者跳到檔尾再跳回來，5 分鐘讀者不會做這個動作，等於聚焦沒有連結（2026-09-04 冷讀者實測；舊期的 `[N]` 檔尾清單格式已退場，不回溯改舊檔）。
 - 若確實找不到對應新聞（例如是推論或背景說明）→ 可省略連結
-- **此格式為機械契約**：形狀與消費端見 `.claude/skills/news-digest/format.md`「機械契約字串」表；回歸測試 `src/tests/test_focus_inline_links.py` 會紅
+- **此格式為機械契約**：形狀與消費端見 `.claude/skills/news-digest/references/format.md`「機械契約字串」表；回歸測試 `src/tests/test_focus_inline_links.py` 會紅
 
 範例：
 - **[重大事件]** Claude 發布 Sonnet 4，context window 翻倍。（[官方](https://example.com/announcement)）
@@ -42,7 +42,7 @@
 
 ## 💰 付費方案動態
 
-定價、配額、Token 費用相關。排序位置見 `.claude/skills/news-digest/format.md`。
+定價、配額、Token 費用相關。排序位置見 `.claude/skills/news-digest/references/format.md`。
 
 ## 📰 媒體報導
 
