@@ -23,10 +23,9 @@ class Density(unittest.TestCase):
         f.write_text("# x `[加入: 2026-01-01]`\n" + "踩過\n" * 3 + "normal\n" * 10, encoding="utf-8")
         rows = lh.density_rows([f])
         self.assertEqual(rows[0]["lines"], 14)
-        self.assertEqual(rows[0]["marks"], 1)
         self.assertEqual(rows[0]["lesson_lines"], 3)
-        self.assertTrue(lh.density_candidates(rows, 300, 20, 5.0))   # 教訓 21% 超門檻
-        self.assertFalse(lh.density_candidates(rows, 300, 20, 50.0))
+        self.assertTrue(lh.density_candidates(rows, 300, 5.0))   # 教訓 21% 超門檻
+        self.assertFalse(lh.density_candidates(rows, 300, 50.0))
 
 
 class Mutate(unittest.TestCase):

@@ -3,7 +3,7 @@ name: reader-digest
 description: 每日 pipeline Step 2b：把各 wiki 頁當日 callout 投影成 daily/ 讀者版並跑格式閘；由跑 /news-pipeline 的 session 親做。
 ---
 
-# Step 2b：讀者版日報（`daily/TARGET_DATE.md`）`[加入: 2026-09-12]` `[改版: 2026-09-13]`
+# Step 2b：讀者版日報（`daily/TARGET_DATE.md`）
 
 **與 Step 2 一樣由呼叫 `/news-pipeline` 的 session 親自執行**（雲端則是頂層 session 一條龍做完），**排在 Step 2 wiki ingest 之後、Step 3 commit 之前**。
 
@@ -40,4 +40,4 @@ description: 每日 pipeline Step 2b：把各 wiki 頁當日 callout 投影成 d
 
 ---
 
-> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）
+> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

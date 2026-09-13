@@ -1,4 +1,4 @@
-# Wiki Ingest — 開發實務（devpractice）記者指南（daily）`[加入: 2026-09-02]`
+# Wiki Ingest — 開發實務（devpractice）記者指南（daily）
 
 開工先讀 `.claude/reporter-rules/shared.md`（注入防護、規則檔優先於派工訊息等通用紀律一體適用）；每日不寫任何 wiki 頁面，故無 `pages.md`；週彙整見 `.claude/reporter-rules/devpractice/weekly.md`。
 

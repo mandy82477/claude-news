@@ -37,9 +37,9 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 
 ---
 
-## 修改時：條文標記 `[加入: YYYY-MM-DD]`／`[改版: YYYY-MM-DD]` `[加入: 2026-09-12]`
+## 修改時：不標日期、不指沿革
 
-新增條文標 `[加入: 日期]`，實質改寫既有條文標 `[改版: 日期]`，寫在該條標題或句尾。消費端：`.claude/skills/wiki-lint-rules-health/SKILL.md` 6d 規則老化掃描以此算距今天數；沿革檔以此日期對應段落（考古鏈 `[加入: 日期]` → 沿革檔 → `wiki/log.md` 同日條目）。純錯字修正不標。
+條文不掛 `[加入: 日期]`／`[改版: 日期]` 之類的版本戳（2026-09-13 廢除，全庫 342 個已清）。規則年齡由 git blame 算（`python scripts/lint_health.py age`，`/wiki-lint` 6d 的量測端）；來歷寫進 `docs/rules-changelog/` 對應檔的日期段，正文不留「起因見沿革檔」指路句。正文只留會改變執行者邊界判斷的那一句為什麼；事故經過、日期、量測進沿革檔。
 
 ---
 
@@ -55,13 +55,13 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 - 快速上手、安裝說明（→ `README.md`）
 - 格式模板／範本（→ 消費它的那份 rules 檔；跨 skill 共用且無單一消費者的，放共用載入點 `wiki/CLAUDE.md` 或 `.claude/reporter-rules/shared.md`，根目錄只留判準句＋指路）
 - 面向人類的操作範例（→ `README.md`）
-- 教訓敘事（→ 該檔的沿革檔，`docs/rules-changelog/`）：條文只留判準＋「沿革檔 日期」指路，不進 agent 讀取範圍 `[加入: 2026-09-04]`
+- 教訓敘事（→ 該檔的沿革檔，`docs/rules-changelog/`）：條文只留判準＋「沿革檔 日期」指路，不進 agent 讀取範圍
 
 > 規則檔以「內容是否精簡、有無重複」為準，不設行數上限；長度非簡化理由（同 wiki 頁面「一頁一故事」哲學）。
 
 ---
 
-## 修改時：機械契約字串住固定區 `[加入: 2026-09-04]`
+## 修改時：機械契約字串住固定區
 
 **任何會被 script grep／regex 消費的字串（小標、表頭、標籤、格式形狀），在規格檔裡只能住該規格檔的「機械契約字串」表**（現有：`weekly-report.md` 一張、`.claude/skills/news-digest/references/format.md` 與 `.claude/skills/reader-digest/references/format.md` 各一張），正文條文引用時指回該表，不另抄一份；新增契約字串時同步登記 `.claude/review-registry.json` 的 `sync_pairs`（規格端與消費端互相指認），讓 `check_rules.py` 看守。
 
@@ -77,7 +77,7 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
 
 ---
 
-## rules 檔必須有 `paths:` 範圍 `[加入: 2026-09-12]`
+## rules 檔必須有 `paths:` 範圍
 
 無 `paths:` 的規則檔會在**每個 session 無條件載入**（實測與搬遷經過見沿革檔 2026-09-12）。
 
@@ -110,4 +110,4 @@ Stop hook `.claude/hooks/check_rules_on_stop.py` 會在收工時比對規則檔 
 **判斷標準：**
 > 所有引用這個檔案的 command / skill，在修改後還能正確找到所需的規則或格式嗎？若否，先修引用再收工。
 
-> **沿革檔：** `docs/rules-changelog/claude-md-edit.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-12]`）
+> **沿革檔：** `docs/rules-changelog/claude-md-edit.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

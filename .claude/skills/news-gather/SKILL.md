@@ -9,7 +9,7 @@ description: 每日 pipeline 抓料段：缺跑檢查、冪等閘、Python 抓�
 
 同屬 Phase A 的 `Step 1b：生成日報` 在 `.claude/skills/news-digest/SKILL.md`，接在 Step 1a 之後、Step 1c 之前執行。
 
-## 本機與雲端的行為必須一致 `[加入: 2026-07-25]`
+## 本機與雲端的行為必須一致
 
 **四個 pipeline skill（news-gather／news-digest／reader-digest／web-publish）是唯一的步驟語意來源。** 本機 `/news-pipeline` 與雲端 routine 跑出來的行為必須相同——同樣的閘門、同樣的失敗處理、同樣的重試、同樣的產物。
 
@@ -35,7 +35,7 @@ description: 每日 pipeline 抓料段：缺跑檢查、冪等閘、Python 抓�
 
 ---
 
-## Step 0b：冪等閘 `[加入: 2026-07-25]`
+## Step 0b：冪等閘
 
 檢查 `news/TARGET_DATE.md` 是否已存在：
 
@@ -60,7 +60,7 @@ PYTHON -m news_aggregator.main --gather-only [--date TARGET_DATE]
 - 成功後寫出 `src/gathered_items.json`（含 items、date、source_status）
 - 若失敗（exit code 非 0），停止並回報錯誤，不繼續後續步驟
 
-**抓完立刻歸檔（強制）`[加入: 2026-07-25]`：**
+**抓完立刻歸檔（強制）：**
 
 ```
 PYTHON REPO_ROOT\scripts\archive_gathered.py
@@ -70,7 +70,7 @@ PYTHON REPO_ROOT\scripts\archive_gathered.py
 
 ---
 
-### 補跑（backfill）注意事項 `[加入: 2026-07-25]`
+### 補跑（backfill）注意事項
 
 雲端漏跑後在本機 `/news-pipeline <date>` 補，有四個已知摩擦點：
 
@@ -105,7 +105,7 @@ PYTHON -m news_aggregator.main --confirm-digest --date TARGET_DATE
 
 - 把 Step 1a 篩出的項目標記 `digest_confirmed: true`；未確認的項目視同未出現過，下次重跑會重新提供、不會被永久靜默丟棄（2026-07-13 曾因日報未產出導致 25 則新聞永久漏失，詳見當日 log）
 - 失敗只記警告，不影響已完成的 news commit，繼續後續步驟
-- **確認結果必須進 git（強制）`[加入: 2026-07-25]`**：`--confirm-digest` 改的是 `src/news_aggregator/emitted_items.json`，這個檔不 commit 就等於沒改過——GitHub Actions 與雲端 routine 都是全新 checkout，讀的是 repo 版本。執行完 append 下列指令，讓它跟著 Step 5 的統一 push 一起上去：
+- **確認結果必須進 git（強制）**：`--confirm-digest` 改的是 `src/news_aggregator/emitted_items.json`，這個檔不 commit 就等於沒改過——GitHub Actions 與雲端 routine 都是全新 checkout，讀的是 repo 版本。執行完 append 下列指令，讓它跟著 Step 5 的統一 push 一起上去：
   ```
   git -C REPO_ROOT add src/news_aggregator/emitted_items.json
   git -C REPO_ROOT commit -m "data: confirm emitted-cache TARGET_DATE"
@@ -131,4 +131,4 @@ Step 2 由呼叫 `/news-pipeline` 的 session 親自執行，**也不可包進�
 
 ---
 
-> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）
+> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

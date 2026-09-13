@@ -22,7 +22,7 @@ description: 讀取今日日報並更新 wiki 知識庫。每天聚合器執行�
 
 讀取 `news/TARGET_DATE.md`。若檔案不存在，停止並告知使用者。
 
-**再取當日「未進日報」的條目（強制）`[加入: 2026-07-26]`：**
+**再取當日「未進日報」的條目（強制）：**
 
 ```
 python scripts/list_digest_omissions.py --date TARGET_DATE
@@ -30,7 +30,7 @@ python scripts/list_digest_omissions.py --date TARGET_DATE
 
 **日報是給讀者看的，只留讀者要讀的重點，篩掉一部分是預期行為；但 wiki 是沉澱層，要考慮全部。** 收不收由各類別記者依自己的門檻判斷——**不收可以，沒看過不行**。上述指令列出的條目與日報條目一起進入下一步分類。
 
-**再取懸置標記命中偵測結果 `[加入: 2026-08-10]`：** 若當日 `/news-pipeline` 已跑過 Step 3f，直接取用其 stdout 印出的派工附件（依記者分組的「待查證命中」清單）；若無此輸出（如單獨補跑 `/wiki-ingest`），自行執行：
+**再取懸置標記命中偵測結果：** 若當日 `/news-pipeline` 已跑過 Step 3f，直接取用其 stdout 印出的派工附件（依記者分組的「待查證命中」清單）；若無此輸出（如單獨補跑 `/wiki-ingest`），自行執行：
 
 ```
 python scripts/scan_pending_verifications.py TARGET_DATE
@@ -38,7 +38,7 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。規格見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
 
-**再取轉知待接手清單 `[加入: 2026-08-15]`：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
+**再取轉知待接手清單：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
 
 同時讀取：
 - `wiki/CLAUDE.md` — wiki 目錄結構與基本限制
@@ -53,7 +53,7 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 未進日報的條目在原文節錄中標一行 `- **日報未收錄**（僅原始抓取資料，摘要較簡略）`，讓記者知道細節密度不同、判斷時以自己的類別門檻為準。
 
-**專頁定向抓取的條目（`topic` 欄非空）`[加入: 2026-08-13]`**：`gathered_items.json` 中 `topic` 非空者，是為某個 wiki 專頁定向抓來的（來源標籤 `Topic Watch / <slug>`），**直接路由給該 slug 所屬領域的記者**，不必再走類別判斷。原文節錄中標一行 `- **專頁定向**（目標頁：topics/<slug>；收錄判準為該專頁觸發條件，**不套用 Claude/Anthropic 關聯門檻**）`。
+**專頁定向抓取的條目（`topic` 欄非空）**：`gathered_items.json` 中 `topic` 非空者，是為某個 wiki 專頁定向抓來的（來源標籤 `Topic Watch / <slug>`），**直接路由給該 slug 所屬領域的記者**，不必再走類別判斷。原文節錄中標一行 `- **專頁定向**（目標頁：topics/<slug>；收錄判準為該專頁觸發條件，**不套用 Claude/Anthropic 關聯門檻**）`。
 
 > 這批的標題天生不含 Claude/Anthropic——那正是它們被定向抓來的原因。記者**不得因為「跟 Claude 沒關係」而略過**，但仍須依該專頁自己的觸發條件判斷收不收——不收可以，沒看過不行。
 
@@ -85,13 +85,13 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 收到所有記者回報後，統一更新共用檔案：`wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl`，以及視情況更新 `wiki/overview.md`。**逐檔寫入規則見 `.claude/skills/wiki-ingest/references/checklist.md`**，本檔不重述。
 
-### 4b. devpractice 沉澱派工（主編）`[加入: 2026-09-02]`
+### 4b. devpractice 沉澱派工（主編）
 
 彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他不吃日報條目，吃**本輪 ingest 寫進 wiki 的 diff**，所以必須排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`。
 
 收報後把「候選 N 筆／本日無候選」記入 log.md 本次 ingest 紀錄一行 `devpractice 沉澱：…`；`data/devpractice-candidates.jsonl` 與 `data/devpractice_state.json` 併入收尾 commit（雲端與本機共用同一條 diff 基準線，不 commit 會斷）。
 
-### 4c. market 判讀派工（主編）`[加入: 2026-09-05]`
+### 4c. market 判讀派工（主編）
 
 與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後附今日日報條目節錄（與六記者同一份步驟 2 產物，不另篩）。
 

@@ -14,7 +14,7 @@ description: 每日 pipeline Step 1b：讀 gathered_items.json 寫 news/ 日報�
 
 ---
 
-## 0-1. 新鮮度防線（強制，生成前先做）`[加入: 2026-07-25]`
+## 0-1. 新鮮度防線（強制，生成前先做）
 
 讀取 `src/gathered_items.json`，確認 `date` 等於 TARGET_DATE 且 `items` 非空。
 
@@ -23,7 +23,7 @@ description: 每日 pipeline Step 1b：讀 gathered_items.json 寫 news/ 日報�
 
 本機剛跑完 Step 1a 時這道檢查通常必然通過（資料才剛產生）；它真正保護的是**replay 路徑**——雲端每日班與補跑都是 `cp gathered_archive/<date>.json` 進來，而檔名只差一個字就會 replay 錯一天，這道檢查是唯一擋得住的地方。兩種環境都執行，不因「應該不會發生」而略過。
 
-## 0-2. 原料健康檢查（強制）`[加入: 2026-07-25]`
+## 0-2. 原料健康檢查（強制）
 
 新鮮度防線只擋「沒抓到」，擋不住「抓到但殘缺」——10 個來源掛 9 個仍會生出一份看起來正常、實則系統性偏食的日報，並被六記者沉澱進 wiki 變成長期污染。
 
@@ -59,7 +59,7 @@ grep -cE '^\*\*\[.+\]\(https?://' news/TARGET_DATE.md
 
 （今日聚焦以外的每個區塊各條目都應貢獻一個匹配；正常日報此數值 ≥ 5）
 
-## 3a-2. 內規外洩自檢（強制）`[加入: 2026-09-04]`
+## 3a-2. 內規外洩自檢（強制）
 
 對 `news/TARGET_DATE.md` 跑 `.claude/skills/news-digest/references/selection.md`「禁詞清單」節的 grep，**應為零命中**；有命中就刪除該段再檢。
 
@@ -71,7 +71,7 @@ grep -c "^| .* | [✅❌] | [0-9]" news/TARGET_DATE.md
 
 （應 ≥ 8，代表來源狀態表已寫入；若不足，補寫 📡 來源狀態區塊再檢）
 
-## 3d. 摘要忠實度自檢（強制）`[加入: 2026-07-17，措辭更正: 2026-07-26]`
+## 3d. 摘要忠實度自檢（強制）
 
 抽樣核對說明句是否忠於原文——**凡進了日報的條目，記者就是讀你寫的摘要來沉澱**（未進日報者另走 `scripts/list_digest_omissions.py` 直接餵原始抓取資料），摘要失真會被沉澱成長期污染：
 
@@ -81,7 +81,7 @@ grep -c "^| .* | [✅❌] | [0-9]" news/TARGET_DATE.md
 - 結果記入本 Step 回報（「忠實度自檢：抽 N 條，改寫 M 條」）；**M ≥ 3 視為摘要品質異常**，除改寫外須在回報中標 ⚠️ 供使用者判斷是否深查
 - 判斷原則：這是「忠實」檢查不是「精彩」檢查——語氣、取捨、詳略不管，只管事實有沒有依據
 
-## 3e. 週報未結案預告偵測（機械，非 LLM）`[加入: 2026-08-02]`
+## 3e. 週報未結案預告偵測（機械，非 LLM）
 
 ```
 PYTHON REPO_ROOT\scripts\scan_open_forecasts.py TARGET_DATE
@@ -91,7 +91,7 @@ PYTHON REPO_ROOT\scripts\scan_open_forecasts.py TARGET_DATE
 - **純字串比對，不做判斷、不改日報**；命中與否都不影響本日產出，失敗只記錄不阻斷 pipeline
 - ⚠️ **此步驟必須留在選材與寫入之後**：若讓選材階段知道週報正在賭什麼，會產生確認偏誤——選材傾向撿能證實預告的條目，命中率虛高，並連帶破壞每月聚焦校準的獨立性（校準量測的正是選材品質，兩者不得互相知情）。規格見 `.claude/skills/weekly-report/references/forecast.md` 第 (3) 段
 
-## 3f. 懸置標記命中偵測（機械，非 LLM）`[加入: 2026-08-10]`
+## 3f. 懸置標記命中偵測（機械，非 LLM）
 
 ```
 PYTHON REPO_ROOT\scripts\scan_pending_verifications.py TARGET_DATE
@@ -102,7 +102,7 @@ PYTHON REPO_ROOT\scripts\scan_pending_verifications.py TARGET_DATE
 - **B 級（僅單一弱探針命中且僅在內文）不進派工附件**，只記入 jsonl 供之後查核，不得轉貼給記者
 - **純字串比對，不做判斷、不改 wiki**；失敗只記錄不阻斷 pipeline，不影響本日其餘產出
 
-## 3g. 截止日到期前強制官方複查（機械，非 LLM）`[加入: 2026-08-28]`
+## 3g. 截止日到期前強制官方複查（機械，非 LLM）
 
 ```
 PYTHON REPO_ROOT\scripts\scan_expiring_deadlines.py
@@ -129,4 +129,4 @@ commit 成功後回到 `.claude/skills/news-gather/SKILL.md` 的 `Step 1c：確�
 
 ---
 
-> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）
+> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

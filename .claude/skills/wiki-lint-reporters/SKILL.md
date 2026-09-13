@@ -22,16 +22,16 @@ description: /wiki-lint A 段：載入 wiki 全貌、六記者並行 lint 派工
 
 對每個類別呼叫 Agent tool，在**同一訊息中並行發出全部六個呼叫**。**派工前綴（類別↔角色檔對照表＋第一段角色前導）逐字讀 `.claude/skills/wiki-ingest/references/dispatch.md`**（ingest 與 lint 共用同一份，本段不另抄）；接在它後面的 lint 專屬段與記者回報格式照 `.claude/skills/wiki-lint-reporters/references/dispatch.md`。
 
-**收報核對（自我遵守率）`[加入: 2026-07-05，擴充: 2026-08-28]`：** 主編收到每份回報後，執行兩層核對：
+**收報核對（自我遵守率）：** 主編收到每份回報後，執行兩層核對：
 
 1. **形狀層**：逐項核對 3a–3h 八項 ＋ 轉知處置，**共九項是否各有明確結果**（具體頁名＋結論，而非籠統一句「全部通過」；「無」也算明確結果，但須看得出該項有被執行）。缺項或含糊者以 SendMessage 退回該記者補做，不得代填
-2. **行為層抽驗（每輪至少 1 次）`[加入: 2026-08-28，補真隨機: 2026-09-02]`**：從六份回報中隨機抽 1 位記者的 1 項「已修復／已更新」宣稱，**主編親自開檔核對 diff 是否如實**（`git diff` 或直接讀該頁對應段落）。不符即退回，並在 log 記「抽驗不符：[記者][項目]」。**抽選必用擲骰，不可自由心證**：先把六份回報中所有「已修復／已更新」宣稱編號列成清單（共 N 項），再跑 `python -c "import random,datetime;iso=datetime.date.today().isocalendar();random.seed(f'{iso[0]}-W{iso[1]:02d}');print(random.randint(1, N))"` 取抽中編號（N 代入實際項數；seed 綁 ISO 週，同週重跑同結果、不可重擲換題）
+2. **行為層抽驗（每輪至少 1 次）**：從六份回報中隨機抽 1 位記者的 1 項「已修復／已更新」宣稱，**主編親自開檔核對 diff 是否如實**（`git diff` 或直接讀該頁對應段落）。不符即退回，並在 log 記「抽驗不符：[記者][項目]」。**抽選必用擲骰，不可自由心證**：先把六份回報中所有「已修復／已更新」宣稱編號列成清單（共 N 項），再跑 `python -c "import random,datetime;iso=datetime.date.today().isocalendar();random.seed(f'{iso[0]}-W{iso[1]:02d}');print(random.randint(1, N))"` 取抽中編號（N 代入實際項數；seed 綁 ISO 週，同週重跑同結果、不可重擲換題）
 
 核對結果（N/6 位一次過、**退回原因**、抽驗結果）記入步驟 8 log。
 
-> 行為層抽驗的依據：**連續滿分與抓不到問題是同一枚硬幣**；對照全域 `REVIEW-PRINCIPLES.md` A1（不信回報、獨立重驗）。`[加入: 2026-08-28]`（沿革檔 2026-08-28 B）
+> 行為層抽驗的依據：**連續滿分與抓不到問題是同一枚硬幣**；對照全域 `REVIEW-PRINCIPLES.md` A1（不信回報、獨立重驗）。（沿革檔 2026-08-28 B）
 
-**月度蒸餾（記者成長迴路）`[加入: 2026-07-05]`：** 僅每月第一次 lint 執行（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」），其餘週次輸出「非本月首次 lint，跳過月度蒸餾」。
+**月度蒸餾（記者成長迴路）：** 僅每月第一次 lint 執行（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」），其餘週次輸出「非本月首次 lint，跳過月度蒸餾」。
 
 1. grep 過去 30 天 `wiki/log.md` 的**「退回」**記錄（收報核對段落）與**「品質備註」**行（ingest 紀錄，見 `.claude/skills/wiki-ingest/references/checklist.md` 的 log 模板）
 2. 按「記者類別 × 錯誤型態」統計出現次數

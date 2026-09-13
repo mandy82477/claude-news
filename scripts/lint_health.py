@@ -5,7 +5,7 @@ lint 原本是靜態考卷：進化只靠使用者不定期質疑 → 主編改�
 子命令，讓 lint 自己產生「我漏了什麼／我是不是壞了／我是不是太肥了」的訊號，
 並各自有消費端（見 .claude/skills/wiki-lint-rules-health/SKILL.md 6h／6i 與 .claude/skills/wiki-lint/SKILL.md 步驟 8）：
 
-  density   規則密度量測（6h 的量測端）：每檔行數、[加入:]/[改版:] 標記數、
+  density   規則密度量測（6h 的量測端）：每檔行數、
             教訓敘事行數與佔比；超過門檻者列為蒸餾候選。規則債跟內容債一樣
             會壓垮閱讀者，而規則的閱讀者是每個 agent。
   mutate    檢查器的檢查（6i）：對 review-registry 每組 all_contain／min_count
@@ -51,7 +51,6 @@ MISSES_PATH = DATA_DIR / "lint_misses.jsonl"
 REGISTRY_PATH = REPO_ROOT / ".claude" / "review-registry.json"
 
 RULE_GLOBS = [".claude/rules/*.md", ".claude/reporter-rules/**/*.md", ".claude/commands/*.md", "CLAUDE.md", "wiki/CLAUDE.md"]
-MARK_RE = re.compile(r"\[(?:加入|改版|裁決|使用者指示)")
 LESSON_RE = re.compile(r"踩過|教訓|反例|實測|實例|曾犯|曾發生|發生過|首次發現|立法依據")
 
 WHY_VALUES = ("考卷外", "考卷內抽樣不足", "檢查失效", "無對應檢查")
@@ -79,7 +78,6 @@ def density_rows(files: list[Path] | None = None) -> list[dict]:
         text = f.read_text(encoding="utf-8")
         lines = text.splitlines()
         n = len(lines)
-        marks = len(MARK_RE.findall(text))
         lesson = sum(1 for l in lines if LESSON_RE.search(l))
         try:
             name = f.relative_to(REPO_ROOT).as_posix()
@@ -87,32 +85,91 @@ def density_rows(files: list[Path] | None = None) -> list[dict]:
             name = f.as_posix()
         rows.append({
             "file": name,
-            "lines": n, "marks": marks, "lesson_lines": lesson,
+            "lines": n, "lesson_lines": lesson,
             "lesson_pct": round(100.0 * lesson / n, 1) if n else 0.0,
         })
     rows.sort(key=lambda r: -r["lines"])
     return rows
 
 
-def density_candidates(rows: list[dict], t_lines: int, t_marks: int, t_pct: float) -> list[dict]:
-    return [r for r in rows if r["lines"] > t_lines or r["marks"] > t_marks or r["lesson_pct"] > t_pct]
+def density_candidates(rows: list[dict], t_lines: int, t_pct: float) -> list[dict]:
+    return [r for r in rows if r["lines"] > t_lines or r["lesson_pct"] > t_pct]
 
 
 def cmd_density(args, out) -> int:
     rows = density_rows()
-    cands = density_candidates(rows, args.threshold_lines, args.threshold_marks, args.threshold_lesson_pct)
-    out.write(f"# 規則密度（{len(rows)} 檔｜門檻：行 >{args.threshold_lines}、標記 >{args.threshold_marks}、教訓行 >{args.threshold_lesson_pct}%）\n")
-    out.write(f"{'行數':>5} {'標記':>4} {'教訓':>4} {'教訓%':>5}  檔案\n")
+    cands = density_candidates(rows, args.threshold_lines, args.threshold_lesson_pct)
+    out.write(f"# 規則密度（{len(rows)} 檔｜門檻：行 >{args.threshold_lines}、教訓行 >{args.threshold_lesson_pct}%）\n")
+    out.write(f"{'行數':>5} {'教訓':>4} {'教訓%':>5}  檔案\n")
     for r in rows[:15]:
         flag = "⚠️" if r in cands else "  "
-        out.write(f"{r['lines']:>5} {r['marks']:>4} {r['lesson_lines']:>4} {r['lesson_pct']:>5}  {flag} {r['file']}\n")
-    out.write(f"總計 {sum(r['lines'] for r in rows)} 行、{sum(r['marks'] for r in rows)} 標記、{sum(r['lesson_lines'] for r in rows)} 教訓行\n")
+        out.write(f"{r['lines']:>5} {r['lesson_lines']:>4} {r['lesson_pct']:>5}  {flag} {r['file']}\n")
+    out.write(f"總計 {sum(r['lines'] for r in rows)} 行、{sum(r['lesson_lines'] for r in rows)} 教訓行\n")
     if cands:
         out.write(f"\n⚠️ 蒸餾候選 {len(cands)} 檔（每次 lint 至多提案 2 檔，經使用者確認才動）：\n")
         for r in cands:
-            out.write(f"  - {r['file']}：{r['lines']} 行／{r['marks']} 標記／教訓 {r['lesson_pct']}%\n")
+            out.write(f"  - {r['file']}：{r['lines']} 行／教訓 {r['lesson_pct']}%\n")
         return 2
     out.write("\n✅ 無檔超過密度門檻\n")
+    return 0
+
+
+# ── age ──────────────────────────────────────────────────────────────────────
+# 6d 的量測端：規則年齡由 git blame 算，不靠人手維護的 [加入: 日期] 標記（2026-09-13 廢除）。
+# 每個 `##`／`###` 節標題行的最後修改日＝該節的年齡；逾 --days 的列出來讓 lint 逐條確認是否仍吻合現狀。
+
+HEADING_RE = re.compile(r"^#{2,3}\s+\S")
+
+
+def _blame_times(path: Path) -> dict[int, int]:
+    """回傳 {行號: author-time epoch}；git 不可用或檔案未追蹤時回空 dict。"""
+    import subprocess
+    try:
+        rel = path.relative_to(REPO_ROOT).as_posix()
+        proc = subprocess.run(["git", "blame", "--line-porcelain", "--", rel], cwd=REPO_ROOT,
+                              capture_output=True, text=True, encoding="utf-8", errors="replace")
+    except (OSError, ValueError):
+        return {}
+    if proc.returncode != 0:
+        return {}
+    times: dict[int, int] = {}
+    lineno = 0
+    for raw in proc.stdout.splitlines():
+        if re.match(r"^[0-9a-f]{40} \d+ (\d+)", raw):
+            lineno = int(raw.split()[2])
+        elif raw.startswith("author-time "):
+            times[lineno] = int(raw.split()[1])
+    return times
+
+
+def age_rows(files: list[Path] | None = None, today: "datetime.date | None" = None) -> list[dict]:
+    import datetime as _dt
+    today = today or _dt.date.today()
+    rows: list[dict] = []
+    for f in files or rule_files():
+        times = _blame_times(f)
+        if not times:
+            continue
+        try:
+            name = f.relative_to(REPO_ROOT).as_posix()
+        except ValueError:
+            name = f.as_posix()
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if HEADING_RE.match(line) and i in times:
+                d = _dt.date.fromtimestamp(times[i])
+                rows.append({"file": name, "line": i, "heading": line.strip("# ").strip()[:60],
+                             "date": d.isoformat(), "days": (today - d).days})
+    rows.sort(key=lambda r: -r["days"])
+    return rows
+
+
+def cmd_age(args, out) -> int:
+    rows = age_rows()
+    old = [r for r in rows if r["days"] > args.days]
+    out.write(f"📅 規則年齡（git blame 節標題最後修改日｜閾值 {args.days} 天｜{len(rows)} 節）\n")
+    for r in old:
+        out.write(f"  ⚠️ {r['file']}:{r['line']} {r['heading']}（{r['date']}，{r['days']} 天）→ 確認是否仍吻合現狀\n")
+    out.write(f"逾閾值 {len(old)} 節／在閾值內 {len(rows) - len(old)} 節\n")
     return 0
 
 
@@ -288,10 +345,12 @@ def main(argv: list[str] | None = None) -> int:
 
     d = sub.add_parser("density")
     d.add_argument("--threshold-lines", type=int, default=300)
-    d.add_argument("--threshold-marks", type=int, default=20)
     d.add_argument("--threshold-lesson-pct", type=float, default=5.0)
 
     sub.add_parser("mutate")
+
+    a = sub.add_parser("age")
+    a.add_argument("--days", type=int, default=60)
 
     h = sub.add_parser("hits")
     hs = h.add_subparsers(dest="hcmd", required=True)
@@ -320,6 +379,8 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.cmd == "density":
             rc = cmd_density(args, out)
+        elif args.cmd == "age":
+            rc = cmd_age(args, out)
         elif args.cmd == "mutate":
             rc = cmd_mutate(args, out)
         elif args.cmd == "hits":

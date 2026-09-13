@@ -1,4 +1,4 @@
-# Wiki Ingest — 開發實務（devpractice）週彙整指南（lint 層）`[加入: 2026-09-02]`
+# Wiki Ingest — 開發實務（devpractice）週彙整指南（lint 層）
 
 `/wiki-lint` 步驟 5f 由主編派 devpractice 記者執行（此為週彙整的明文觸發邊）。每日 ingest 不讀此檔——daily 只沉澱候選帳本（`.claude/reporter-rules/devpractice/daily.md`），彙整全在本檔。
 
@@ -10,7 +10,7 @@
 
 ### 1. 覆寫 guide「本週 coding 亮點」節
 
-讀近 7 天 `data/devpractice-candidates.jsonl`，**並讀 [[topics/skill-interest-watch]] 各類「本週竄升」欄**（機器快照，`[加入: 2026-09-03]`——竄升者是「這週值得知道」的第一手候選，但星數是規模不是品質，入亮點須另有一句為什麼），在 `wiki/topics/coding-workflow-guide.md` 維護 `## 本週 coding 亮點` 節（首次執行時建立，位置在「我想問的是」表之前）：
+讀近 7 天 `data/devpractice-candidates.jsonl`，**並讀 [[topics/skill-interest-watch]] 各類「本週竄升」欄**（機器快照，——竄升者是「這週值得知道」的第一手候選，但星數是規模不是品質，入亮點須另有一句為什麼），在 `wiki/topics/coding-workflow-guide.md` 維護 `## 本週 coding 亮點` 節（首次執行時建立，位置在「我想問的是」表之前）：
 
 - **覆寫不 prepend**（同 feature-radar「現在值得跟的三件」哲學——它回答「這禮拜」，不是編年史）
 - ≤ 10 行條列，每條：一句話＋指向細節所在頁的 wikilink（事實的家在原頁，本節只做導流）

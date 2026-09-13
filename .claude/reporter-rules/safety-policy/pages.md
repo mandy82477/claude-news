@@ -4,7 +4,7 @@
 
 ---
 
-## topics/anthropic-government-policy `[加入: 2026-06-18，改版: 2026-09-06]`
+## topics/anthropic-government-policy
 
 **觸發條件：** 日報出現 Anthropic 與美國政府（或其他國家政府）的新互動事件。
 
@@ -19,7 +19,7 @@
 
 ---
 
-## topics/ai-agent-safety `[改版: 2026-09-06]`
+## topics/ai-agent-safety
 
 **觸發條件：**
 - 新的 Claude Code 安全漏洞披露（含 CVE 或具名披露）

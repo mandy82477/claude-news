@@ -1,8 +1,8 @@
-# Wiki Ingest — 投資訊號回顧環（lint 層）`[加入: 2026-09-05，改版: 2026-09-12]`
+# Wiki Ingest — 投資訊號回顧環（lint 層）
 
 `/wiki-lint` 步驟 5h 由**主編親做**（記者無 web 工具，查不了兩週後的股價方向，這是本步不派工的唯一理由）。每日 ingest 不讀此檔（每日規則見 `.claude/reporter-rules/market/daily.md`，表格契約見 `.claude/reporter-rules/market/pages.md`）。
 
-**⚠️ 雲端兩半都做** `[改版: 2026-09-12]`：催化劑那一半只查本庫日報；股價那一半用 **WebSearch**（下方執行步驟第 3 步），而 WebSearch 由 Anthropic 端執行、**不經沙盒 egress**，因此不受雲端網路白名單（Trusted／Custom，見 `docs/cloud-runbooks/_shared.md`「egress 限制」）影響——`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空、恆印 `EGRESS: market OK`，本步不需探測。唯一的跳過理由是該環境根本沒有 WebSearch 工具可用，此時寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」列入 log 的待使用者確認區。日後若本步改用 WebFetch 直抓行情站，須把那些網域填進 market 組並改為探測式。
+**⚠️ 雲端兩半都做**：催化劑那一半只查本庫日報；股價那一半用 **WebSearch**（下方執行步驟第 3 步），而 WebSearch 由 Anthropic 端執行、**不經沙盒 egress**，因此不受雲端網路白名單（Trusted／Custom，見 `docs/cloud-runbooks/_shared.md`「egress 限制」）影響——`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空、恆印 `EGRESS: market OK`，本步不需探測。唯一的跳過理由是該環境根本沒有 WebSearch 工具可用，此時寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」列入 log 的待使用者確認區。日後若本步改用 WebFetch 直抓行情站，須把那些網域填進 market 組並改為探測式。
 
 ---
 
@@ -12,7 +12,7 @@
 
 回顧環同時是**判準的煞車**：連續錯到一定程度就停下來檢討，而不是繼續產出。
 
-**未上市標的結「下一個催化劑出現了沒」，上市標的兩者都結** `[改版: 2026-09-12]`——只結股價方向的話，未上市標的（本頁八成的判讀）結構上永遠結不了帳。
+**未上市標的結「下一個催化劑出現了沒」，上市標的兩者都結**——只結股價方向的話，未上市標的（本頁八成的判讀）結構上永遠結不了帳。
 
 ---
 
@@ -28,7 +28,7 @@
 6. 更新頁面「最後更新」；**不動「最後新聞更新」**（回填是非新聞性維護）
 7. **連續 4 週判讀全錯**（該窗內所有已定案列皆 ❌）→ 在 lint 回報標「⚠️ 投資訊號連續 4 週判讀全錯，建議檢討分級判準或暫停本頁」轉呈使用者裁決。判準的修改屬使用者裁決事項，主編不自行放寬或收緊
 
-## 教材頁週更（`wiki/topics/market-lessons.md`）`[加入: 2026-09-12]`
+## 教材頁週更（`wiki/topics/market-lessons.md`）
 
 結算做完後，同一步把本週的判讀沉澱進教材頁（它不吃日報，這裡是它唯一的觸發邊）：
 

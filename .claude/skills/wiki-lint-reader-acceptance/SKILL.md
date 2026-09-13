@@ -11,7 +11,7 @@ description: /wiki-lint D 段：讀者模擬驗收（步驟 7）與歷史質疑�
 
 ---
 
-## 7. 讀者模擬驗收 `[加入: 2026-07-02]`
+## 7. 讀者模擬驗收
 
 站在三種目標讀者（先 Read `.claude/rules/collection-scope.md`「目標讀者」）的角度各出一題**本週真實會問的問題**（從近 7 天日報事件取材），模擬讀者從 `wiki/index.md` 出發：
 
@@ -32,7 +32,7 @@ description: /wiki-lint D 段：讀者模擬驗收（步驟 7）與歷史質疑�
 讀者模擬：（3 題結果：✅/⚠️ 已修復/❌ 待辦，各附一句說明）
 ```
 
-## 7b. 歷史質疑代打（題庫抽問）`[加入: 2026-09-02]`
+## 7b. 歷史質疑代打（題庫抽問）
 
 讀 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md` 後執行：跑 `python scripts/inquiry_bank.py draw` 抽 2 題（seed 綁本 ISO 週，同週重跑同題），逐題執行探針、產出三態結果（✅ 附證據行／⚠️ 已修復／❌ 記待辦並回報使用者）。
 

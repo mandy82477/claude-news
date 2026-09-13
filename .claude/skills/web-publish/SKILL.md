@@ -37,7 +37,7 @@ PYTHON REPO_ROOT\scripts\gate_web_build.py
 - **exit 0** → 放行，繼續執行 build（可能是「全綠」，也可能是「失敗但全屬已登記缺口」；後者腳本會印出放行理由）
 - **exit 非 0** → **先走下方「gate 擋下時的修復迴圈」，不可直接跳過 build**；迴圈仍失敗才視同 Step 4 失敗：跳過 web build 與 web commit，但仍繼續 Step 5（推送已完成的 news / wiki commit）與 Step 6（記錄 log）
 
-### gate 擋下時的修復迴圈 `[加入: 2026-08-26]`
+### gate 擋下時的修復迴圈
 
 你是 LLM agent，gate 印出的失敗訊息你讀得懂也多半修得好——擋下就放棄等於把「讀者今天看不到網站」當成對一個格式瑕疵的懲罰。（教訓見沿革檔 2026-08-26）
 
@@ -62,7 +62,7 @@ PYTHON REPO_ROOT\scripts\gate_web_build.py
 
 Step 6 的 log 一律抄腳本輸出的**最後一行摘要**（例如 `測試失敗 3 案，全屬已登記缺口（feedparser-sgmllib）- web build 放行`），不要自己改寫措辭——log 是日後判斷「哪天為什麼沒上站」的唯一證據。
 
-> **為何是 gate 而不是直接看測試結果 `[加入: 2026-08-01]`：** 過緊的 gate 用「正確性」的名義製造「可用性」的損失。放寬的邊界很嚴格：**只有登記在 `docs/known-test-gaps.json`、且錯誤訊息也對得上的失敗才放行，出現任何一個沒登記的失敗就照舊全擋**；允許清單空的時候，行為等同舊規則。（教訓見沿革檔 2026-07-31）
+> **為何是 gate 而不是直接看測試結果：** 過緊的 gate 用「正確性」的名義製造「可用性」的損失。放寬的邊界很嚴格：**只有登記在 `docs/known-test-gaps.json`、且錯誤訊息也對得上的失敗才放行，出現任何一個沒登記的失敗就照舊全擋**；允許清單空的時候，行為等同舊規則。（教訓見沿革檔 2026-07-31）
 
 - 放行後依序執行（frontmatter 必須先於 build_web，兩者都吃當日已寫完的 wiki）：
 
@@ -93,12 +93,12 @@ git -C REPO_ROOT push
 ```
 
 - 若 web build 無變更，仍須執行 `git -C REPO_ROOT push` 推送先前的 news / wiki commit
-- **replay 路徑收尾（強制）`[改版: 2026-08-29]`**：本次若曾 `cp src/gathered_archive/<date>.json src/gathered_items.json`（backfill 模式，以及雲端每日班——它現在也走這條路徑），**必須在 Step 1c 之後、任何 push 之前（含中止落地的那次）**執行 `git -C REPO_ROOT checkout -- src/gathered_items.json` 還原成 repo 版本。
+- **replay 路徑收尾（強制）**：本次若曾 `cp src/gathered_archive/<date>.json src/gathered_items.json`（backfill 模式，以及雲端每日班——它現在也走這條路徑），**必須在 Step 1c 之後、任何 push 之前（含中止落地的那次）**執行 `git -C REPO_ROOT checkout -- src/gathered_items.json` 還原成 repo 版本。
   - **不可等到 push 之後**：本 repo 的 `rebase.autoStash` 為 false，工作樹髒的話下方 push 重試的 `git pull --rebase` 會被 git 直接拒絕（不是衝突，是前置檢查），兩次重試必然失敗，而雲端未推送的 commit 隨容器銷毀救不回來——日報、wiki、web 全部白做
   - **不可提早到 Step 1c 之前**：`--confirm-digest` 讀的就是這個檔；Step 2 的專頁定向路由也吃它的 `topic` 欄（那是該欄唯一的來源）
   - **中止路徑也算**：cp 之後才觸發的中止（新鮮度防線、原料健康檢查 exit 2/3）同樣要先還原再 commit abort log，否則 abort log 推不上去、雲端看起來像中途死亡，把一次正確的閘門攔截誤報成靜默失敗
 
-**push 失敗重試（強制）`[加入: 2026-07-25]`**
+**push 失敗重試（強制）**
 
 push 被拒最常見的原因是 non-fast-forward——GitHub Actions 的 `daily-gather` 或另一個環境在你執行期間也 push 了（Actions 排程實測延遲過 2 小時 42 分，時間緩衝不保證不撞）。**在雲端，未推送的 commit 會隨容器銷毀且下次是全新 checkout，救不回來**；本機雖然 commit 還在，仍應照同樣程序處理，兩邊行為一致。
 
@@ -110,7 +110,7 @@ git -C REPO_ROOT push || {
 ```
 
 - 最多重試 **2 次**，每次都先 `pull --rebase` 再 push
-- **工作樹不乾淨時不得走 `pull --rebase`** `[加入: 2026-09-06]`：本 repo `rebase.autoStash` 為 false，git 會在前置檢查就拒絕（`cannot pull with rebase: You have unstaged changes`），兩次重試必然失敗；而 `--autostash` 是**明文禁止**的——`git stash` 的作用域是整個工作區，多 session 並行時會連同別人正在寫的檔一起捲走（教訓見 `.claude/reporter-rules/shared.md`「不可執行改動工作區全域狀態的 git 指令」）。改走：
+- **工作樹不乾淨時不得走 `pull --rebase`**：本 repo `rebase.autoStash` 為 false，git 會在前置檢查就拒絕（`cannot pull with rebase: You have unstaged changes`），兩次重試必然失敗；而 `--autostash` 是**明文禁止**的——`git stash` 的作用域是整個工作區，多 session 並行時會連同別人正在寫的檔一起捲走（教訓見 `.claude/reporter-rules/shared.md`「不可執行改動工作區全域狀態的 git 指令」）。改走：
 
   ```
   git -C REPO_ROOT fetch origin
@@ -123,7 +123,7 @@ git -C REPO_ROOT push || {
 - 先確認在 master 上：2026-07-14 曾因 session 啟動時 `origin/master` 快取落後而處於 detached HEAD，該狀態下 push 不會更新遠端分支
 - **允許自動解的衝突只有兩類**：
   1. `src/news_aggregator/emitted_items.json`——此檔有兩個寫者（GitHub Actions 加入未確認條目、pipeline 翻確認欄位）。解法固定：**放棄我方的 confirm commit、保留遠端版本**，因為日報上站遠比確認欄位重要，未確認的條目只會被重新提供一次，是良性退化。處理後標「emitted-cache 確認本次放棄，項目將於次日重新提供」
-  2. **append-only 檔的 append-append 衝突 `[加入: 2026-09-03]`**——`wiki/log.md`、`data/source_attribution.jsonl` 等只會在檔尾各自新增的檔（白名單住 `scripts/resolve_append_only.py` 的 `APPEND_ONLY`，不在此重抄）。解法固定：**跑 `python scripts/resolve_append_only.py`**，它以 `git merge-file --union` 三方合併保留兩側新增（順序 base→ours→theirs），只動白名單內的檔；有任何白名單外的衝突它會 exit 1 且不動任何檔——此時走下一條 abort。成功後 `git -c core.editor=true rebase --continue` 再 push。
+ 2. **append-only 檔的 append-append 衝突**——`wiki/log.md`、`data/source_attribution.jsonl` 等只會在檔尾各自新增的檔（白名單住 `scripts/resolve_append_only.py` 的 `APPEND_ONLY`，不在此重抄）。解法固定：**跑 `python scripts/resolve_append_only.py`**，它以 `git merge-file --union` 三方合併保留兩側新增（順序 base→ours→theirs），只動白名單內的檔；有任何白名單外的衝突它會 exit 1 且不動任何檔——此時走下一條 abort。成功後 `git -c core.editor=true rebase --continue` 再 push。
      > 沒有判斷成分的衝突不該逼整班重跑。（起因見沿革檔 2026-09-02）
 - **其他任何檔案的衝突 → 不自行解**：`git rebase --abort`，Step 6 log 記 `Push FAILED - rebase conflict`，並列出衝突檔案清單
 - 兩次都失敗 → Step 6 log 記 `Push FAILED`，完成摘要明確標示**本次產出全部未上站**，不可寫成完成
@@ -180,13 +180,13 @@ REPO_ROOT\src\logs\task_scheduler.log
 | Step 6 Log 寫入 | ✅ / ❌ |
 | 目標日期 | TARGET_DATE |
 
-### 📋 待使用者裁示 `[加入: 2026-08-08]`
+### 📋 待使用者裁示
 
 摘要表之後**必接**此區塊——待確認事項只寫進 `wiki/log.md` 等於沒有出口，使用者不會讀那個檔（起因見沿革檔 2026-08-08）。
 
 作法：Grep `wiki/log.md` 中 TARGET_DATE 該次 ingest 紀錄的「📋 待使用者確認」段落，逐條轉貼成一行摘要（`- [頁面/主題]：一句話問題`）。同時 Grep 前 14 天的 ingest 紀錄，**同一議題重複出現者標「⏳ 已擱置 N 天」**置頂。
 
-**另必接 Step 1b-3g 的截止日複查清單 `[加入: 2026-08-28]`：** 若 3g（見 `.claude/skills/news-digest/SKILL.md`）有命中（已過期或 7 天內到期），逐個截止日轉成一行 `- ⏰ [YYYY-MM-DD]（剩 N 天，M 處引用）：[事件]——需查官方原文確認日期是否仍有效`。這批與 log.md 的裁示不同源，**不可因為 log.md 沒有對應段落就省略**；3g 印「無需複查的截止日」時整段省略。
+**另必接 Step 1b-3g 的截止日複查清單：** 若 3g（見 `.claude/skills/news-digest/SKILL.md`）有命中（已過期或 7 天內到期），逐個截止日轉成一行 `- ⏰ [YYYY-MM-DD]（剩 N 天，M 處引用）：[事件]——需查官方原文確認日期是否仍有效`。這批與 log.md 的裁示不同源，**不可因為 log.md 沒有對應段落就省略**；3g 印「無需複查的截止日」時整段省略。
 
 無任何未決項時寫 `- 無`，不可省略此區塊。
 
@@ -203,4 +203,4 @@ REPO_ROOT\src\logs\task_scheduler.log
 
 ---
 
-> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）
+> **沿革檔：** `docs/rules-changelog/news-pipeline-steps.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

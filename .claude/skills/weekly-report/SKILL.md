@@ -34,9 +34,9 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 ### 2. 蒐集素材
 
-**選題素材**（決定寫什麼）固定涵蓋窗：**近 7 日** `news/*.md`（唯讀，不可修改）＋ `wiki/log.md` 同期 ingest 紀錄＋ `wiki/feature-radar.md`＋ **`wiki/reader-notes.md` 狀態 ⏳ 的 🔍 興趣主題** `[加入: 2026-08-20]`。
+**選題素材**（決定寫什麼）固定涵蓋窗：**近 7 日** `news/*.md`（唯讀，不可修改）＋ `wiki/log.md` 同期 ingest 紀錄＋ `wiki/feature-radar.md`＋ **`wiki/reader-notes.md` 狀態 ⏳ 的 🔍 興趣主題**。
 
-**內容素材**（決定深度）不受此窗限制 `[加入: 2026-08-16]`——`wiki/` 既有頁面、任何一期歷史日報、官方文件、以及**依缺口向外查找**的第三方來源皆可用。約束不在來源位置，在來源可取回性，見 `.claude/skills/weekly-report/references/deepdive.md`「來源紀律」。
+**內容素材**（決定深度）不受此窗限制——`wiki/` 既有頁面、任何一期歷史日報、官方文件、以及**依缺口向外查找**的第三方來源皆可用。約束不在來源位置，在來源可取回性，見 `.claude/skills/weekly-report/references/deepdive.md`「來源紀律」。
 
 > **素材窗是用來確保選題貼著本週，不是用來限制能查多深。**（教訓見沿革檔 2026-W33 A）
 
@@ -59,7 +59,7 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 寫入 `weekly/YYYY-Wnn.md` 後視為當週凍結版本，不因後續 ingest 回頭修改（下週報若要回收上週對錯，於新一期第 (3) 段處理，不修舊檔）。唯一例外：同日發現、同日改的可讀性缺陷（見 `.claude/skills/weekly-report/references/headline.md`）。
 
-### 6. 收尾閉迴路 `[加入: 2026-07-26]`
+### 6. 收尾閉迴路
 
 > **由 `/weekly` 帶起時跳過本步驟**（`.claude/commands/weekly.md` 會在三段都跑完後統一收尾）。只有單獨執行 `/weekly-report` 補跑時才執行以下內容。
 
@@ -92,4 +92,4 @@ description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下�
 
 - 第二期 `scripts/weekly_stats.py`：把「檔尾數字」的管線型數字改為腳本自動計算，取代人工盤點；本體裁先跑 2–3 週確認值得讀，再投資腳本化
 
-> **沿革檔：** `docs/rules-changelog/weekly-report.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，`[加入: 2026-09-04]`）
+> **沿革檔：** `docs/rules-changelog/weekly-report.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

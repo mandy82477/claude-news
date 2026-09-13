@@ -28,7 +28,7 @@ description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開
 - `wiki/index.md`
 - `wiki/reader-notes.md` — 使用者「記一下」的待辦收件匣（本週要消費的讀者需求訊號）
 
-### 1b. 讀者回饋入口（GitHub Issues）`[加入: 2026-09-04]`
+### 1b. 讀者回饋入口（GitHub Issues）
 
 網站頁尾「這段看不懂／這條錯了？」連到 GitHub Issue 範本（label `reader-feedback`），是唯一的**真人**訊號入口——冷讀者 review 再多都是模擬。本步：
 
@@ -44,7 +44,7 @@ gh issue list --label reader-feedback --state open --json number,title,createdAt
 
 prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「六記者派工 prompt」。
 
-### 月度加項：聚焦校準 `[加入: 2026-07-05]`
+### 月度加項：聚焦校準
 
 **每月執行一次**（判斷方式：`wiki/metrics.md` 的「聚焦命中率」欄**本月尚無數值** → 執行；已有數值 → 輸出「本月聚焦校準已執行，跳過」並跳過本節）。判斷產出物而非執行記錄（立法理由見沿革檔 `docs/rules-changelog/wiki-weekly-review.md` 2026-07-16）。
 
@@ -68,7 +68,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 完成後在 `wiki/log.md` 末尾 append，模板見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「log 條目」。
 
-### 6. 收尾閉迴路：commit wiki + build web + 單一 push `[加入: 2026-07-10]`
+### 6. 收尾閉迴路：commit wiki + build web + 單一 push
 
 > **由 `/weekly` 帶起時跳過本步驟**（`.claude/commands/weekly.md` 會在兩個子流程都跑完後統一收尾）。只有單獨執行本 skill 時才執行以下內容。
 

@@ -1,4 +1,4 @@
-# 週報機械契約字串（勿改；新增時登記 `.claude/review-registry.json`）`[加入: 2026-09-04]`
+# 週報機械契約字串（勿改；新增時登記 `.claude/review-registry.json`）
 
 **script 會 grep 的字串只住這張表**，`.claude/skills/weekly-report/` 其餘檔案的條文引用時指回本表、不另抄一份。改任何一格必須同步右欄消費端（`check_rules.py` 依 registry 看守）。
 
