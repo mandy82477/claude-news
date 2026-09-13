@@ -41,6 +41,7 @@ desktop.ini
 # 規則檢查記號檔（dirty-period 提醒 / Stop hook 共用，見 .claude/hooks/）
 .claude/.last-rules-check
 .claude/.rules-reminder-sent
+.claude/.last-tests-ok
 
 docs/architecture-evolution-react.bak.html
 

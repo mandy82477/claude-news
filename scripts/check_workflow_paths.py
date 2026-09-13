@@ -17,7 +17,7 @@ check_workflow_paths.py — GitHub Actions workflow 裡指名的產出路徑，�
     1. `NAME_PATHS=( ... )` bash 陣列（daily-gather.yml 的 GATHER_PATHS 現行寫法）
     2. `git add a b \` 續行式的指名路徑（防有人改回舊寫法時失去看守）
 
-另外擋下 `git add -A` / `git add .`——CLAUDE.md「commit 範圍」明訂任何情境不得使用。
+另外擋下 `git add -A` / `git add .`——.claude/rules/dev-done.md 第 2 條明訂任何情境不得使用。
 
 用法：
     python scripts/check_workflow_paths.py
@@ -123,7 +123,7 @@ def main() -> int:
             print(f"  {wf}:{lineno}  {rel}")
         print("  → 刪檔時一併刪掉 workflow 的登記；或該檔本就該存在 → 查為何消失")
     if blanket_hits:
-        print(f"FAIL: workflow 使用了 git add -A / git add .（CLAUDE.md「commit 範圍」明訂禁止）：")
+        print(f"FAIL: workflow 使用了 git add -A / git add .（.claude/rules/dev-done.md 第 2 條明訂禁止）：")
         for wf, lineno, line in blanket_hits:
             print(f"  {wf}:{lineno}  {line}")
     return 1

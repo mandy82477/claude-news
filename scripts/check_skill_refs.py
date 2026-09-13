@@ -22,6 +22,7 @@ exit 0 = 全過；1 = 有違規（逐條印「skill:問題」）。
 """
 from __future__ import annotations
 
+import io
 import re
 import sys
 from pathlib import Path
@@ -113,7 +114,15 @@ def check_skill(skill_dir: Path) -> list[str]:
     return problems
 
 
+def _use_utf8_stdout() -> None:
+    """Windows 主控台預設 cp950，訊息含 ≤ 與中文會 UnicodeEncodeError。只在 main() 呼叫，
+    不放模組層級（見 src/tests/test_script_stdout_hygiene.py）。"""
+    if hasattr(sys.stdout, "buffer"):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
+
 def main(argv: list[str]) -> int:
+    _use_utf8_stdout()
     if not SKILLS.exists():
         print("OK: 無 .claude/skills/，跳過")
         return 0

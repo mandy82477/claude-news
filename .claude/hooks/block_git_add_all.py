@@ -41,7 +41,7 @@ REASON = (
     "🚫 擋下 `git add -A` / `git add --all` / `git add .`。\n"
     "本專案一律指名路徑（如 `git add wiki/ .claude/`）——commit 訊息說不出某個檔案"
     "為什麼在裡面，它就不該在這個 commit 裡。\n"
-    "規則與立法依據：根目錄 CLAUDE.md「commit 範圍」＋ docs/rules-changelog/CLAUDE.md 2026-08-29。"
+    "規則與立法依據：.claude/rules/dev-done.md 第 2 條＋ docs/rules-changelog/CLAUDE.md 2026-08-29。"
 )
 
 

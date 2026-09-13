@@ -1,6 +1,6 @@
 # Workaround 登記表
 
-每上一個 workaround（繞路而非真解）就在此登記一列，避免繞路悄悄變永久（見根目錄 `CLAUDE.md`「完工定義」第 3 條）。
+每上一個 workaround（繞路而非真解）就在此登記一列，避免繞路悄悄變永久（見 `.claude/rules/dev-done.md` 開發完工定義第 3 條）。
 `scripts/open_loops.py` 每週讀此表，**逾「複查日」仍在「進行中」的列**會被列出提醒。
 
 ## 使用規則

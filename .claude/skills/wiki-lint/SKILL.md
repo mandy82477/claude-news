@@ -37,7 +37,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
 ## 10. 收尾閉迴路：commit wiki + build web + 單一 push
 
-**為何必要：** lint 只改 `wiki/*.md`，web build 僅發生於本步驟與 `/news-pipeline`。若跳過本步，本次修正不會出現在 web reader，得等下一次日更 pipeline 才上站。lint 結束前必須自行閉迴路（對齊根目錄 `CLAUDE.md`「完工定義」：測試綠 + 已 commit）。
+**為何必要：** lint 只改 `wiki/*.md`，web build 僅發生於本步驟與 `/news-pipeline`。若跳過本步，本次修正不會出現在 web reader，得等下一次日更 pipeline 才上站。lint 結束前必須自行閉迴路（對齊 `.claude/rules/dev-done.md` 開發完工定義：測試綠 + 已 commit）。
 
 依序執行（`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`）：
 

@@ -2,6 +2,10 @@
 
 每日聚焦 Claude Code 與 Anthropic 核心動態，從官方更新到社群實測。所有條目經 LLM 評分過濾、繁中摘要、再沉澱進 wiki。
 
+## 本站目標
+
+為**需要深度與穩定資訊的工程師**而建：Claude Code 重度使用者（有什麼壞了、值不值得升版）、AI 系統開發者（社群驗證了什麼、踩過哪些坑）、Anthropic 生態追蹤者（政策、融資、合作怎麼走）。三個主軸：官方核心（公告、Changelog、SDK / API 迭代）、社群實測（HN / Reddit 的真實回饋、Bug 與變通）、生態動態（只收會改變工程師決策的融資、合作與政策）。取捨是穩定而非即時：26–30 小時延遲是設計，不追 X / Discord 秒級訊號，不碰 NDA 內部資訊，不做在地化市場觀測。對外完整版是 `README.md`，網站「關於」頁與它同源。
+
 **收不收錄一律問這句：** 這份資料能幫助**需要深度與穩定資訊的工程師**更了解 Claude / Anthropic 生態系嗎？若否，不收錄。
 目標讀者、蒐集範圍與不收錄清單：`.claude/rules/collection-scope.md`（動到 `src/news_aggregator/` 時自動載入）。
 
@@ -26,41 +30,7 @@
 - 不得新增任何「有 API key 才能運作」的功能或 fallback；唯一合法的 LLM 路徑是 Claude session 直接執行
 - 判斷式：這個改動在完全沒有 `ANTHROPIC_API_KEY` 的環境下也能正確運作嗎？若否，重新設計
 
-## 完工定義（Definition of Done）
+## 開發完工定義
 
-**改動未閉迴路不算完成。** 實質改動（pipeline / 規則 / wiki / 腳本）三者到齊：
+改 pipeline、script、hook、規則檔或 web reader 程式時，怎樣才算完成見 `.claude/rules/dev-done.md`（碰這些目錄自動載入；測試綠與 commit 範圍由 hook 強制）。
 
-1. **測試綠**：`python scripts/run_tests.py` 通過
-2. **已 commit**：非 data 檔的改動已進 git（`gathered_items.json` / `emitted_items.json` / `seen_urls.json` 這類 data 檔例外）
-3. **依賴缺口已登記**：若改動依賴尚缺的憑證／服務／真解，在 `docs/workaround-register.md` 登記 owner ＋ 複查日，不可只留在對話裡
-
-三者缺一，任務標「進行中」，不標「完成」。
-
-### commit 範圍
-
-**任何 session、任何情境，一律不得 `git add -A` / `git add .`**，一律指名路徑（如 `git add wiki/ .claude/`）。`.claude/hooks/block_git_add_all.py` 會擋下，`scripts/check_workflow_paths.py` 看守 workflow。
-
-> **判斷式：** 這個 commit 的訊息，說得出裡面每一個檔案為什麼在嗎？說不出 → 你 add 太多了。（立法依據見沿革檔 `docs/rules-changelog/CLAUDE.md` 2026-08-29 A）
-
-## Skills
-
-- 🟢 每天：`/news-pipeline`（抓新聞 → 日報 → wiki ingest → 建置 web → push；已含 `/wiki-ingest`）
- - 步驟本體住四個 skill，由 `/news-pipeline` 依序呼叫，不單獨執行：`.claude/skills/news-gather/`（Step 0/0b/1a/1c）、`.claude/skills/news-digest/`（Step 1b，格式與選材在同目錄 `format.md`／`selection.md`）、`.claude/skills/reader-digest/`（Step 2b，格式在同目錄 `format.md`）、`.claude/skills/web-publish/`（Step 3–6 與完成摘要）
-- 🟡 每週：`/weekly`（週報 ＋ wiki 週度回顧 ＋ 開放迴路掃描 ＋ 單一 push；已含 `/weekly-report`、`/wiki-weekly-review`），另跑 `/wiki-lint` 做每週品質檢查
-- 問 wiki 內容、查某件事的現況、要出處：`/wiki-query`
-- 改完 `.claude/` 或本檔：`/review-commands`，直到零錯誤
-
-> 其餘指令（`/wiki-backfill`、`/wiki-readability`、`/pipeline-change-check` …）見 `.claude/commands/` 與 `.claude/skills/` 各檔的 description。
-> **新增 skill 的判斷標準：** 這個任務是否需要跨多個步驟、值得重複執行，且有明確的輸入與完成條件？若否，用對話即可。
-
-## Wiki 規則入口
-
-- **`wiki/CLAUDE.md`**（碰 `wiki/` 檔案自動載入）：目錄結構、資訊架構哲學、連結語法契約、搜尋策略
-- **`.claude/reporter-rules/`**（記者與 ingest／lint 主編明文 Read，無自動載入）：共用紀律 `shared.md`、頁面格式 `page-templates.md`／生命週期 `page-lifecycle.md`，以及八個記者各自的資料夾（`daily.md`／`pages.md`／`weekly.md`）。導覽見該資料夾的 README
-- **`.claude/rules/`**（主 session，`paths:` 觸發）：`claude-md-edit.md`、`web-reader-design.md`、`collection-scope.md`
-
-**🚫 關鍵限制：** Wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/`，**不可**誤存至父層 `ObsidianLab/` 目錄。
-
-## 修改 rules 或 commands
-
-改任何 `.claude/` 下的檔案或本檔後，執行 `/review-commands` 直到零錯誤；規則與流程見 `.claude/rules/claude-md-edit.md`（修改前必須讀取）。

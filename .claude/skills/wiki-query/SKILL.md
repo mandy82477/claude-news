@@ -64,5 +64,5 @@ python scripts/check_reader_language.py --page <頁面 slug>
 
 - **由任何 session 直接執行**，不 spawn 子 agent。
 - 找不到一手來源時只標懸置，不得寫成事實；`news/` 唯讀，`wiki/log.md` 只能 append。
-- 收尾兩支腳本非綠不算完成；改動照 `./CLAUDE.md`「完工定義」閉迴路（測試綠／已 commit／依賴缺口已登記）。
+- 收尾兩支腳本非綠不算完成；改動照 `.claude/rules/dev-done.md` 開發完工定義閉迴路（測試綠／已 commit／依賴缺口已登記）。
 - **commit 與否屬使用者裁決，本 skill 不自行 commit。**

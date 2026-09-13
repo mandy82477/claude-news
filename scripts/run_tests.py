@@ -49,6 +49,7 @@ CHECK_WORKFLOW_PATHS = REPO_ROOT / "scripts" / "check_workflow_paths.py"
 CHECK_READER_LANGUAGE = REPO_ROOT / "scripts" / "check_reader_language.py"
 CHECK_CELL_LIMITS = REPO_ROOT / "scripts" / "check_cell_limits.py"
 CHECK_SKILL_REFS = REPO_ROOT / "scripts" / "check_skill_refs.py"
+LAST_TESTS_OK = REPO_ROOT / ".claude" / ".last-tests-ok"
 
 
 def main() -> int:
@@ -246,9 +247,17 @@ def main() -> int:
         stream.write(f"\nWARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘\n")
     stream.flush()
 
-    return 0 if (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
-                 and freshness_ok and radar_ok and pending_ok and tools_ok and hierarchy_ok
-                 and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok) else 1
+    all_ok = (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
+              and freshness_ok and radar_ok and pending_ok and tools_ok and hierarchy_ok
+              and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok)
+    if all_ok:
+        # 全綠記號：.claude/hooks/check_tests_on_stop.py 用 mtime 比對，
+        # 髒檔都比它舊就不必在每次 Stop 重跑整套測試（見 .claude/rules/dev-done.md）
+        try:
+            LAST_TESTS_OK.write_text("ok\n", encoding="utf-8")
+        except OSError:
+            pass
+    return 0 if all_ok else 1
 
 
 if __name__ == "__main__":
