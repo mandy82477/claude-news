@@ -33,10 +33,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-12
 
 > **最新動態**（2026-09-12）
-> - **v2.1.269**：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告。
-> - **官方文件**：桌面版 Git 需求從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要」。
+> - **v2.1.269**：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告；外掛開發者可用它做升級前的自動迴歸比對。
+> - **官方文件**：桌面版 Git 需求從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要」；非 worktree 使用者現在可以不裝 Git。
 > - **新增已知問題**：Desktop（macOS）無法啟用 Bypass Permissions（#61415）；九月 Windows 累積更新致 Cowork device_bash 失效，ARM64／x64 皆中（#92958）。
-> - **互動數更新**：XDG Base Directory 規範不支援（#1455，447 讚）；vfpext 缺失（#74649，86 則留言）。
+> - **互動數更新**：XDG Base Directory 規範不支援（#1455，447 讚）；vfpext 缺失（#74649，86 則留言）——皆屬系統整合成熟度缺口，Linux／Cowork 使用者均需留意，官方未給時程。
 ---
 
 ## 現況

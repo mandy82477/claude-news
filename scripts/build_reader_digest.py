@@ -58,6 +58,15 @@ NEWS_H3_RE = re.compile(r"^###\s")
 MD_URL_RE = re.compile(r"\((https?://[^\s()]+)\)")
 NEWS_TOP_TITLE_RE = re.compile(r"^\*\*\[(.+?)\]\((https?://[^\s()]+)\)\*\*\s*$")
 NEWS_TOP_SOURCE_RE = re.compile(r"^`[^`]+`\s*·")
+# 頁內路標：callout 投影到日報後這些指涉沒有東西可指（規則端：page-templates.md「脫離頁面也要讀得懂」）
+# ⟨G-11⟩ 這類頁內編號、「見『## 節』」「詳見下方表格」、以及沒有頁名的同頁錨點 [[#節]]
+PAGE_INTERNAL_RE = re.compile(
+    r"⟨[^⟩\n]{1,16}⟩"
+    r"|[詳參]?見\s*[「『]?\s*##"
+    r"|[詳參]?見[上下]方"
+    r"|[上下]方(?:的)?[^\s，。；]{0,8}(?:表格?|列|節|段)"
+    r"|\[\[#[^\]]+\]\]"
+)
 
 # 頁頂 callout 首行：`> **標籤**（YYYY-MM-DD…）`——與 scripts/check_hierarchy.py 的
 # CALLOUT_DATE_RE 看同一件事（那邊只要日期，這邊還要標籤與同行尾巴）。
@@ -181,6 +190,11 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
             if not section:
                 warnings.append(f"{page}：frontmatter domain={domain!r} 不在六領域內，當日 callout 未收")
                 continue
+            for b in hits:
+                hit_txt = "\n".join(b)
+                pm = PAGE_INTERNAL_RE.search(hit_txt)
+                if pm:
+                    warnings.append(f"{page}：callout 含頁內路標「{pm.group(0)}」，投影進日報後讀者無處可指——改成 [[頁#節]] 完整連結或白話說明")
             im = FRONTMATTER_INBOUND_RE.search(raw)
             sections[section].append({
                 "page": page,
@@ -236,9 +250,46 @@ def attributed_urls(target_date: str, ledger: Path = ATTRIBUTION) -> set[str]:
     return urls
 
 
+PAGE_HEADING_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
+
+
+def frozen_pages(existing: str) -> dict[str, tuple[str, str, list[str]]]:
+    """既有 daily 檔 → {頁路徑: (節名, 頁面標題, 該頁的 callout 行)}。
+    callout 每天覆寫，昨天的日報若隔天重產，昨天那頁的 callout 已經是今天的日期、收不到——
+    日報是不可改的過去，所以重產時把既有檔裡這些頁原樣留住（`wiki/CLAUDE.md`：log 是不可改的過去）。"""
+    out: dict[str, tuple[str, str, list[str]]] = {}
+    section = ""
+    cur: str | None = None
+    for line in existing.splitlines():
+        h = re.match(r"^##\s+(.+?)\s*$", line)
+        if h:
+            section = h.group(1).strip(); cur = None
+            continue
+        pm = PAGE_HEADING_RE.match(line)
+        if pm and section in SECTION_ORDER:
+            cur = pm.group(1).strip()
+            out[cur] = (section, (pm.group(2) or "").strip(), [])
+            continue
+        if cur and line.startswith(">"):
+            out[cur][2].append(line.rstrip())
+    return {k: v for k, v in out.items() if v[2]}
+
+
 def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_DIR,
-             ledger: Path = ATTRIBUTION) -> tuple[str, int, list[str]]:
+             ledger: Path = ATTRIBUTION, existing: str | None = None) -> tuple[str, int, list[str]]:
     sections, warnings = collect(target_date, wiki_dir)
+    if existing:
+        have = {it["page"] for items in sections.values() for it in items}
+        kept = 0
+        for page, (section, name, lines) in frozen_pages(existing).items():
+            if page in have or section not in sections:
+                continue
+            sections[section].append({"page": page, "name": name, "lines": lines, "inbound": -1, "raw": ""})
+            kept += 1
+        if kept:
+            warnings.append(f"保留既有檔 {kept} 頁（其 callout 已被後一天覆寫，日報是不可改的過去）")
+        for items in sections.values():
+            items.sort(key=lambda it: (-it["inbound"], it["page"]))
     focus_lines: list[str] = []
     top_stories: list[list[str]] = []
     news_f = news_dir / f"{target_date}.md"
@@ -266,7 +317,9 @@ def main(argv: list[str]) -> int:
         print("用法：python scripts/build_reader_digest.py YYYY-MM-DD [--stdout]")
         return 2
     target_date = args[0]
-    text, count, warnings = generate(target_date)
+    out_path = DAILY_DIR / f"{target_date}.md"
+    existing = out_path.read_text(encoding="utf-8") if out_path.exists() and "--stdout" not in argv else None
+    text, count, warnings = generate(target_date, existing=existing)
     for w in warnings:
         print(f"  WARN: {w}")
     if "--stdout" in argv:

@@ -2659,15 +2659,15 @@ window.WIKI_DATA = {
       "kind": "reader",
       "articleCount": 63,
       "itemCount": 9,
-      "preview": "Claude Code：v2.1.269：新增 claude plugin eval 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告。",
+      "preview": "Claude Code：v2.1.269：新增 claude plugin eval 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告；外掛開發者可用它做升級前的自動迴歸比對。",
       "topCount": 4
     },
     {
       "date": "2026-09-11",
       "kind": "reader",
       "articleCount": 89,
-      "itemCount": 13,
-      "preview": "Claude Code：v2.1.268：Claude apps gateway 新增 pricing: 設定（gateway.yaml），登入版 Claude Code 客戶端經 managed settings 取得一致費率，/cost 與 telemetry 對得上；計費細節見 entities/pricing。",
+      "itemCount": 14,
+      "preview": "Managed Agents：anthropic-sdk-python v1.5.0 新增 Managed Agents 的 auto mode 工具權限設定——是 05-22 以來四筆 SDK 更新中首次列出具體項目；細節仍待官方文件補充。",
       "topCount": 5
     },
     {

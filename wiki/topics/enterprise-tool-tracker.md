@@ -32,7 +32,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新企業採用異動**（2026-09-11）
-> - **T. Rowe Price（大型資產管理公司）擴大在投資流程中使用 Claude 與 Claude Code**：官方新聞稿宣布，具體整合範疇未見細節，詳見下方使用現況表新增列。
+> - **T. Rowe Price（大型資產管理公司）擴大在投資流程中使用 Claude 與 Claude Code**：官方新聞稿宣布，具體整合範疇未見細節。
+> - 為本頁首見資產管理業者案例，同業評估導入 Claude 時目前僅此一例可比照（[[topics/enterprise-tool-tracker#企業工具使用現況]]）。
 
 ## 摘要
 

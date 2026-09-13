@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ❓ **待查證**（標 2026-09-09｜查 Coxon、hilbertspaess）｜**辭去 Anthropic 職務並公開批評兩家公司「不負責任」**（2026-09-09 報導）：Jacob Coxon 於 X 發文稱已辭去 Anthropic 職務，自述曾任 OpenAI／Anthropic pretraining 研究員三年，指控兩家公司「不負責任地衝向自我改進超級智能」；其過往資歷未見獨立媒體查證，HN 讀者對其資歷提出質疑。
 
 > **最新報導**（2026-09-11）
-> Forbes、CNN、Wired 等至少 7 家媒體跟進報導一名剛辭職研究員的 AI 存在性風險警告，細節與 Coxon 貼文高度吻合（身分連結為推論）。
+> Coxon 是本波離職警告中唯一具名者，其他報導身分多為推論。事件經過見 [[topics/recursive-self-improvement]]；其資歷未經獨立查證，引用時應標「自述」。
 
 ---
 

@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新報導**（2026-09-11）
-> NBC News 首次專訪：曾任 Google DeepMind AI 安全研究員，近期離職，稱「這裡面沒有大人在把關」，呼籲提高 AI 事故透明度。
+> Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。
 
 ## 現況
 

@@ -60,6 +60,10 @@ def _wiki(tmp: Path) -> Path:
         "# 只有標頭領域的頁\n\n**狀態：** ongoing\n**領域：** 🤖 模型\n\n"
         "> **最新進展**（2026-09-11）\n> 沒 frontmatter 也要收。\n\n---\n",
         encoding="utf-8")
+    (tmp / "topics" / "internal-ref.md").write_text(_page(
+        "🌐 社群", "帶頁內路標的頁",
+        "> **最新動態**（2026-09-11）\n> - **⟨G-11⟩ 再添兩款**：詳見下方使用現況表，另見「## 攻防紀錄」與 [[#技術彙整]]。"),
+        encoding="utf-8")
     (tmp / "topics" / "tail-in-label.md").write_text(_page(
         "🌐 社群", "尾巴頁",
         "> **本週趨勢觀察**（2026-09-11，補充說明）同行尾巴文字\n> 第二行。"), encoding="utf-8")
@@ -87,11 +91,23 @@ class TestGenerator(unittest.TestCase):
         pages = [it["page"] for sec in self.r["sections"] for it in sec["items"]]
         self.assertEqual(pages, ["entities/claude-code", "entities/managed-agents",
                                  "topics/header-domain-only",
-                                 "topics/market-signals", "topics/tail-in-label"])
-        self.assertEqual(self.count, 5)
+                                 "topics/market-signals", "topics/internal-ref", "topics/tail-in-label"])
+        self.assertEqual(self.count, 6)
+
+    def test_page_internal_references_are_warned_but_still_collected(self):
+        hits = [w for w in self.warnings if "topics/internal-ref" in w and "頁內路標" in w]
+        self.assertTrue(hits, self.warnings)
+        self.assertIn("⟨G-11⟩", hits[0])
+        clean = [w for w in self.warnings if "topics/tail-in-label" in w and "頁內路標" in w]
+        self.assertFalse(clean)
+        for bad in ("詳見下方使用現況表", "見「## 攻防紀錄」", "[[#技術彙整]]", "見『## 節』", "參見上方"):
+            self.assertTrue(gen.PAGE_INTERNAL_RE.search(bad), bad)
+        for ok in ("見 [[topics/x#攻防紀錄]]", "累計 7 款", "下方"):
+            self.assertFalse(gen.PAGE_INTERNAL_RE.search(ok), ok)
 
     def test_sections_in_spec_order_and_no_empty_shells(self):
         self.assertEqual([s["key"] for s in self.r["sections"]], ["features", "models", "commercial", "community"])
+        self.assertEqual(len(self.r["sections"][3]["items"]), 2)
         for sec in self.r["sections"]:
             self.assertTrue(sec["items"])
 
@@ -114,7 +130,7 @@ class TestGenerator(unittest.TestCase):
         self.assertNotIn("免責", it["body"], "沒有日期的 ⚠️ 免責 callout 不算最新動態")
 
     def test_label_tail_and_same_line_text_survive(self):
-        it = self.r["sections"][3]["items"][0]
+        it = self.r["sections"][3]["items"][1]
         self.assertEqual(it["label"], "本週趨勢觀察")
         self.assertEqual(it["date"], "2026-09-11")
         self.assertTrue(it["body"].startswith("同行尾巴文字"))
@@ -136,7 +152,7 @@ class TestGenerator(unittest.TestCase):
     def test_generated_file_passes_checker(self):
         chk = load_script_module("check_reader_digest")
         valid = {"entities/claude-code", "entities/managed-agents", "topics/market-signals",
-                 "topics/tail-in-label", "topics/header-domain-only"}
+                 "topics/tail-in-label", "topics/header-domain-only", "topics/internal-ref"}
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "2026-09-11.md"
             f.write_text(self.text, encoding="utf-8")
@@ -245,11 +261,11 @@ class TestTopSectionsFromNews(unittest.TestCase):
 
     def test_parser_ignores_top_sections_and_checker_accepts(self):
         r = _parse(self.text, "2026-09-11")
-        self.assertEqual(r["itemCount"], 5)
+        self.assertEqual(r["itemCount"], 6)
         self.assertNotIn("📌 今日聚焦", [s["label"] for s in r["sections"]])
         chk = load_script_module("check_reader_digest")
         valid = {"entities/claude-code", "entities/managed-agents", "topics/market-signals",
-                 "topics/tail-in-label", "topics/header-domain-only"}
+                 "topics/tail-in-label", "topics/header-domain-only", "topics/internal-ref"}
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "2026-09-11.md"
             f.write_text(self.text, encoding="utf-8")
@@ -258,6 +274,44 @@ class TestTopSectionsFromNews(unittest.TestCase):
     def test_no_news_file_means_no_top_sections(self):
         text, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope", Path(self._td.name) / "nope.jsonl")
         self.assertNotIn("📌", text)
+
+
+class TestFrozenPagesKeptOnRegenerate(unittest.TestCase):
+    """隔天重產昨天的日報：昨天那頁的 callout 已被覆寫成今天的日期，既有檔裡的版本要留住。"""
+
+    def setUp(self):
+        self._td = tempfile.TemporaryDirectory()
+        self.wiki = _wiki(Path(self._td.name))
+        self.existing = (
+            "# 2026-09-11 今天 wiki 學到什麼\n\n## 🛠️ 功能\n\n"
+            "### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-11）\n> 舊版內容，頁面已改寫。\n\n"
+            "### [[entities/gone-page|已被覆寫的頁]]\n\n> **最新動態**（2026-09-11）\n> 這頁今天的 callout 已是 09-12，重產要留住我。\n\n"
+            "## 🤖 模型\n\n### [[entities/old-page|舊頁]]\n\n> **最新動態**（2026-09-11）\n> 也留住。\n"
+        )
+
+    def tearDown(self):
+        self._td.cleanup()
+
+    def test_pages_with_moved_on_callouts_are_kept_verbatim(self):
+        text, count, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                             Path(self._td.name) / "nope.jsonl", existing=self.existing)
+        self.assertIn("### [[entities/gone-page|已被覆寫的頁]]", text)
+        self.assertIn("> 這頁今天的 callout 已是 09-12，重產要留住我。", text)
+        self.assertIn("> 也留住。", text)
+        self.assertTrue(any("保留既有檔 2 頁" in w for w in warnings))
+
+    def test_pages_still_dated_today_use_fresh_wiki_version(self):
+        text, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                  Path(self._td.name) / "nope.jsonl", existing=self.existing)
+        self.assertNotIn("舊版內容，頁面已改寫", text)
+        self.assertIn("- **v2.1.268**", text)
+        self.assertEqual(text.count("### [[entities/claude-code|"), 1)
+
+    def test_no_existing_file_no_carry_over(self):
+        text, _, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                         Path(self._td.name) / "nope.jsonl")
+        self.assertNotIn("gone-page", text)
+        self.assertFalse(any("保留既有檔" in w for w in warnings))
 
 
 class TestReaderTopStories(unittest.TestCase):

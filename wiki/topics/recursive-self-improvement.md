@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新動態**（2026-09-11）
-> NBC News 報導 Joe Benton（前 Anthropic 安全研究團隊負責人）與 Josh Engels（前 Google DeepMind 安全研究員）離職後首次受訪，籲提升前沿 AI 事故透明度：兩位前安全研究者親身示警，不是外部評論者。CNBC 同日報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；The Guardian 報導 Musk 稱相關警告為「psyop」（[[topics/recursive-self-improvement#技術彙整]]）。安全警告與政治淡化正面交鋒，尚無定論。
+> NBC News 報導 Joe Benton（前 Anthropic 安全研究團隊負責人）與 Josh Engels（前 Google DeepMind 安全研究員）離職後首次受訪，籲提升前沿 AI 事故透明度：兩位前安全研究者親身示警，不是外部評論者。CNBC 同日報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；The Guardian 報導 Musk 稱相關警告為「psyop」（[[topics/recursive-self-improvement#技術彙整]]）。同步的跨黨派國會監管呼籲見 [[topics/anthropic-government-policy]]「國會立法壓力」列。
 
 ---
 

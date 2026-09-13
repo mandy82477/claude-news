@@ -31,8 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-12
 
 > **最新動態**（2026-09-12）
-> - **五角大廈加碼**：DefenseScoop 稱國防部傳計畫十月前將所有機密 AI 工作負載自 Anthropic 遷出；細節見「## 三個戰場」🪖 軍事合約段落。
+> - **五角大廈加碼**：DefenseScoop 稱國防部傳計畫十月前將所有機密 AI 工作負載自 Anthropic 遷出。細節見 [[topics/anthropic-government-policy#三個戰場]]。
+> - 本案僅涉聯邦機密工作負載採購與使用，商用訂閱與 API 客戶不受影響（僅標題可用，範圍待證實）。
 > - **威脅情報報告技術細節浮現**：WSJ 揭露伊朗關聯帳號（GTG-30005）用 Claude 建置海軍目標鎖定 Python pipeline 的具體技術細節；另有俄羅斯開發者疑似打造自主選擇目標的神風無人機新案例。
+> - Anthropic 稱已偵測並中止涉案帳號，一般用戶的存取與功能不受影響。
 
 ---
 

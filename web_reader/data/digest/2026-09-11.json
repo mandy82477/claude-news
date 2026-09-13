@@ -469,7 +469,7 @@
       "count": 11
     }
   ],
-  "preview": "Claude Code：v2.1.268：Claude apps gateway 新增 pricing: 設定（gateway.yaml），登入版 Claude Code 客戶端經 managed settings 取得一致費率，/cost 與 telemetry 對得上；計費細節見 entities/pricing。",
+  "preview": "Managed Agents：anthropic-sdk-python v1.5.0 新增 Managed Agents 的 auto mode 工具權限設定——是 05-22 以來四筆 SDK 更新中首次列出具體項目；細節仍待官方文件補充。",
   "sedimentedToday": [
     {
       "id": "evan-hubinger",
@@ -527,13 +527,6 @@
         "key": "features",
         "items": [
           {
-            "page": "entities/claude-code",
-            "name": "Claude Code",
-            "label": "最新動態",
-            "date": "2026-09-11",
-            "body": "- **v2.1.268**：Claude apps gateway 新增 `pricing:` 設定（`gateway.yaml`），登入版 Claude Code 客戶端經 managed settings 取得一致費率，`/cost` 與 telemetry 對得上；計費細節見 [[entities/pricing]]。\n- **服務事故**：Mythos 5.1、Fable 5.1 錯誤率升高（09-11 14:28 UTC 已部署修復並監控中，尚未確認解決）；Claude API 延遲升高（09-10 21:43→23:24 UTC，已解決）。\n- **互動數更新**：Claude.ai Projects 知識庫串接需求（#2511，635 讚，今日互動最高）；Desktop 多視窗支援（#30154，249 讚）；VSCode Edit 預覽/diff 未顯示（#8660，90 讚）。"
-          },
-          {
             "page": "entities/managed-agents",
             "name": "Managed Agents",
             "label": "最新動態",
@@ -553,6 +546,13 @@
             "label": "最近變動",
             "date": "2026-09-11",
             "body": "09-10 查證時 dynamic workflows 已開放全部付費方案（Pro 需在 `/config` 開啟），編排從「Claude 逐回合決定」換成一支可存檔重跑的 script；09-11 子頁 SDK v1.5.0 為 Managed Agents 加 auto mode 工具權限，見 [[entities/managed-agents]]。"
+          },
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "2026-09-11",
+            "body": "- **v2.1.268**：Claude apps gateway 新增 `pricing:` 設定（`gateway.yaml`），登入版 Claude Code 客戶端經 managed settings 取得一致費率，`/cost` 與 telemetry 對得上；計費細節見 [[entities/pricing]]。\n- **服務事故**：Mythos 5.1、Fable 5.1 錯誤率升高（09-11 14:28 UTC 已部署修復並監控中，尚未確認解決）；Claude API 延遲升高（09-10 21:43→23:24 UTC，已解決）。\n- **互動數更新**：Claude.ai Projects 知識庫串接需求（#2511，635 讚，今日互動最高）；Desktop 多視窗支援（#30154，249 讚）；VSCode Edit 預覽/diff 未顯示（#8660，90 讚）。"
           }
         ]
       },
@@ -565,7 +565,7 @@
             "name": "大型企業 AI 編碼工具使用追蹤",
             "label": "最新企業採用異動",
             "date": "2026-09-11",
-            "body": "- **T. Rowe Price（大型資產管理公司）擴大在投資流程中使用 Claude 與 Claude Code**：官方新聞稿宣布，具體整合範疇未見細節，詳見下方使用現況表新增列。"
+            "body": "- **T. Rowe Price（大型資產管理公司）擴大在投資流程中使用 Claude 與 Claude Code**：官方新聞稿宣布，具體整合範疇未見細節。\n- 為本頁首見資產管理業者案例，同業評估導入 Claude 時目前僅此一例可比照（[[topics/enterprise-tool-tracker#企業工具使用現況]]）。"
           },
           {
             "page": "topics/market-signals",
@@ -588,18 +588,18 @@
             "body": "Show HN 揭露：研究者以 8 種手法繞過 Claude Code 的 deny-list 權限設定，僅 allow-list（白名單）擋得住，官方尚無回應（[[topics/ai-agent-safety#現在還擋不住的攻擊]]）。用黑名單設權限者現在就該改白名單。"
           },
           {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "2026-09-11",
+            "body": "NBC News 報導 Joe Benton（前 Anthropic 安全研究團隊負責人）與 Josh Engels（前 Google DeepMind 安全研究員）離職後首次受訪，籲提升前沿 AI 事故透明度：兩位前安全研究者親身示警，不是外部評論者。CNBC 同日報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；The Guardian 報導 Musk 稱相關警告為「psyop」（[[topics/recursive-self-improvement#技術彙整]]）。同步的跨黨派國會監管呼籲見 [[topics/anthropic-government-policy]]「國會立法壓力」列。"
+          },
+          {
             "page": "topics/anthropic-government-policy",
             "name": "Anthropic 政府與軍事政策",
             "label": "最新動態",
             "date": "2026-09-11",
             "body": "- **威脅情報報告延燒**：Anthropic 發布 9 月威脅情報報告，揭露伊朗、葉門、俄羅斯、中國關聯行為者濫用 Claude 案例並已中止，跨十餘家媒體同日跟進（[[topics/anthropic-government-policy#攻防紀錄]]）。國家級行為者已把 Claude 當作攻擊工具鏈的一環，非假設情境。\n- **中國蒸餾線更新**：官方指控中國 AI 實驗室非法蒸餾攻擊，稱 Moonshot 曾暗中將用戶請求導向 Claude 處理。中美模型能力差距的官方敘事，來源仍是單方指控。\n- **國會壓力延燒**：跨黨派議員在研究員滅絕警告後推動新規；川普公開淡化 AI 滅絕風險說法。政策風向出現分歧，監管走向未定。"
-          },
-          {
-            "page": "topics/recursive-self-improvement",
-            "name": "AI 遞歸自我改進與全球暫停呼籲",
-            "label": "最新動態",
-            "date": "2026-09-11",
-            "body": "NBC News 報導 Joe Benton（前 Anthropic 安全研究團隊負責人）與 Josh Engels（前 Google DeepMind 安全研究員）離職後首次受訪，籲提升前沿 AI 事故透明度：兩位前安全研究者親身示警，不是外部評論者。CNBC 同日報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；The Guardian 報導 Musk 稱相關警告為「psyop」（[[topics/recursive-self-improvement#技術彙整]]）。安全警告與政治淡化正面交鋒，尚無定論。"
           }
         ]
       },
@@ -621,30 +621,37 @@
         "key": "people",
         "items": [
           {
+            "page": "entities/boris-cherny",
+            "name": "Boris Cherny",
+            "label": "重申 Claude 正式環境程式碼品質門檻高於人類",
+            "date": "2026-09-11",
+            "body": "：Simon Willison 轉引發言，隔日開發者提「AI slop」質疑獲親回信（BI，09-12，僅標題）。"
+          },
+          {
             "page": "entities/jacob-coxon",
             "name": "Jacob Coxon",
             "label": "最新報導",
             "date": "2026-09-11",
-            "body": "Forbes、CNN、Wired 等至少 7 家媒體跟進報導一名剛辭職研究員的 AI 存在性風險警告，細節與 Coxon 貼文高度吻合（身分連結為推論）。"
+            "body": "Coxon 是本波離職警告中唯一具名者，其他報導身分多為推論。事件經過見 [[topics/recursive-self-improvement]]；其資歷未經獨立查證，引用時應標「自述」。"
           },
           {
             "page": "entities/joe-benton",
             "name": "Joe Benton",
             "label": "最新報導",
             "date": "2026-09-11",
-            "body": "NBC News 首次專訪：曾任 Anthropic 安全研究團隊負責人，近期離職，警告先進 AI 研究可能「加速到失控地步」。"
+            "body": "Benton 曾任 Anthropic 安全研究團隊負責人，NBC 具名專訪確認其離職與警告；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。"
           },
           {
             "page": "entities/josh-engels",
             "name": "Josh Engels",
             "label": "最新報導",
             "date": "2026-09-11",
-            "body": "NBC News 首次專訪：曾任 Google DeepMind AI 安全研究員，近期離職，稱「這裡面沒有大人在把關」，呼籲提高 AI 事故透明度。"
+            "body": "Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。"
           }
         ]
       }
     ],
-    "itemCount": 13
+    "itemCount": 14
   },
   "readerTopStories": [
     {
