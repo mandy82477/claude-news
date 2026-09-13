@@ -50,6 +50,9 @@ PAGE_HEADING_FMT = "### [[{page}|{name}]]"
 # `> ❓ **待查證**（標 2026-09-09｜…）` 這類懸置標記因此不會被當成最新動態。
 CALLOUT_RE = re.compile(r"^>\s*\*\*(?P<label>[^*\n]+?)\*\*\s*（(?P<date>\d{4}-\d{2}-\d{2})[^）\n]*）(?P<rest>.*)$")
 FRONTMATTER_DOMAIN_RE = re.compile(r"^domain:\s*\"?([^\"\n]+?)\"?\s*$", re.M)
+# frontmatter 是 gen_wiki_frontmatter.py 事後重算的；機器每日覆寫的頁（如 skill-interest-watch）
+# 在重算前沒有 frontmatter，退回讀標頭「領域」欄（兩者本就同源）
+HEADER_DOMAIN_RE = re.compile(r"^\*\*領域[：:]\*\*\s*(.+?)\s*$", re.M)
 FRONTMATTER_INBOUND_RE = re.compile(r"^inbound_links:\s*(\d+)\s*$", re.M)
 H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.M)
 
@@ -72,7 +75,9 @@ def page_head(raw: str) -> tuple[str, str]:
     if not m:
         return "", ""
     after = raw[m.end():]
-    parts = re.split(r"^---\s*$", after, maxsplit=1, flags=re.M)
+    # 頁首止於第一條 `---`；沒有分隔線的頁（少數人物殼頁）止於第一個 `## ` 節，
+    # 免得正文裡帶日期的引述被當成頁頂 callout
+    parts = re.split(r"^(?:---\s*|##\s.*)$", after, maxsplit=1, flags=re.M)
     return m.group(1).strip(), parts[0]
 
 
@@ -98,9 +103,12 @@ def dated_callouts(head: str, target_date: str) -> list[list[str]]:
 
 
 def has_undated_callout(head: str) -> bool:
-    """頁首有粗體 callout 但沒有一個帶可解析日期——lint 用的 WARN 訊號。"""
+    """頁首有粗體 callout、括號裡沒有任何完整 YYYY-MM-DD——多半是日期寫成「07-10」這種短格式，
+    lint 用的 WARN 訊號。括號內有完整日期但不在開頭的（如「（快照 2026-09-12）」）視為刻意不投影，不警告。"""
     bold = [l for l in head.splitlines() if re.match(r"^>\s*\*\*", l)]
-    return bool(bold) and not any(CALLOUT_RE.match(l) for l in bold)
+    if not bold or any(CALLOUT_RE.match(l) for l in bold):
+        return False
+    return not any(re.search(r"（[^）]*\d{4}-\d{2}-\d{2}", l) for l in bold)
 
 
 def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list[dict]], list[str]]:
@@ -117,7 +125,7 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
                 if has_undated_callout(head):
                     warnings.append(f"{page}：頁首 callout 沒有可解析的（YYYY-MM-DD）日期，永遠不會進讀者版")
                 continue
-            dm = FRONTMATTER_DOMAIN_RE.search(raw)
+            dm = FRONTMATTER_DOMAIN_RE.search(raw) or HEADER_DOMAIN_RE.search(raw)
             domain = dm.group(1).strip() if dm else ""
             section = DOMAIN_TO_SECTION.get(domain)
             if not section:

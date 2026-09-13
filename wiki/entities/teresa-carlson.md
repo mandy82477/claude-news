@@ -34,6 +34,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > ❓ **待查證**（標 2026-08-10｜查 Carlson、FedScoop）｜**加入 Anthropic 傳聞**（2026-07-07 報導）：Teresa Carlson（曾任職 Microsoft、AWS）加入 Anthropic，主導公部門（public sector）業務；確切職稱與到任日期僅 FedScoop 單一媒體標題層級報導，尚無進一步獨立確認。
 
+> **最新報導**（2026-07-07）
+> FedScoop 報導 Teresa Carlson（前 Microsoft、AWS）加入 Anthropic 主導公部門業務，確切職稱與到任日期未見獨立確認。
+
 ---
 
 ## 現況

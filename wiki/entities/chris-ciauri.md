@@ -33,4 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-06
 **最後新聞更新：** 2026-06-18
 
+> **最後動態**（2026-06-18）
+> 首爾媒體說明會公開解封時間框架，稱模型將於數日內恢復可用，展示談判進展。
+
 已併回 [[topics/anthropic-government-policy]]

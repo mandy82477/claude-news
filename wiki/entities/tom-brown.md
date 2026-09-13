@@ -33,4 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-06
 **最後新聞更新：** 2026-06-26
 
+> **最後動態**（2026-06-26）
+> The Verge 報導 Mythos 危機持續惡化，Tom Brown 主導的 NSA 談判逾兩週仍無明確解封時程。
+
 已併回 [[topics/anthropic-government-policy]]

@@ -34,6 +34,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > ❓ **待查證**（標 2026-08-10｜查 Alphabet、Gemini 3.5）｜**人才出走潮市場影響推論**（2026-06-26 報導）：dev.to 多篇報導總結 Google AI 人才出走潮，稱一週內 4 位頂尖研究員離開 Google DeepMind 加入 Anthropic（含 Jumper），並將 Alphabet 市值蒸發約 2,700 億美元、Gemini 3.5 延期歸因於此波出走（社群推論，官方尚無回應）。Jumper 本人加入一事已於 2026-06-21 經 Reuters 獨立確認，不屬本則懸置範圍。
 
+> **最新報導**（2026-06-26）
+> dev.to 報導指出離職研究員（含 Jumper）人才潮，將 Alphabet 市值蒸發約 2,700 億美元、Gemini 3.5 延期歸因於此（社群推論）。
+
 ---
 
 ## 現況

@@ -34,6 +34,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > ❓ **待查證**（標 2026-08-25｜查 airline industry、marketing and safety）｜**Fortune 評論比較 Anthropic 安全論述與航空業經驗**（2026-08-24 報導）：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡，討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導。
 
+> **最新表態**（2026-08-29）
+> 回應外界對 AI 威脅論疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）（待核實）。
+
 ---
 
 ## 現況

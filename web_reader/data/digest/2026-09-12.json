@@ -52,7 +52,7 @@
           {
             "page": "topics/llm-wiki-pattern",
             "name": "Karpathy 式 LLM wiki 模式",
-            "label": "本頁開張",
+            "label": "最新動態",
             "date": "2026-09-12",
             "body": "Karpathy 四月提出的三層 wiki 模式已長出四種公開實作；本庫對照下來三層骨架齊備，缺的是查詢。"
           }

@@ -735,8 +735,35 @@
             "body": "Skills 設計新增 drawio-skill：把自然語言、程式碼、Terraform/K8s、SQL 與 OpenAPI 轉成可編輯、通過測試的 draw.io 架構圖，含 drift diff 與 CI 架構測試（存量盤點，本庫首次收錄）。"
           }
         ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/jacob-coxon",
+            "name": "Jacob Coxon",
+            "label": "最新報導",
+            "date": "2026-09-11",
+            "body": "Forbes、CNN、Wired 等至少 7 家媒體跟進報導一名剛辭職研究員的 AI 存在性風險警告，細節與 Coxon 貼文高度吻合（身分連結為推論）。"
+          },
+          {
+            "page": "entities/joe-benton",
+            "name": "Joe Benton",
+            "label": "最新報導",
+            "date": "2026-09-11",
+            "body": "NBC News 首次專訪：曾任 Anthropic 安全研究團隊負責人，近期離職，警告先進 AI 研究可能「加速到失控地步」。"
+          },
+          {
+            "page": "entities/josh-engels",
+            "name": "Josh Engels",
+            "label": "最新報導",
+            "date": "2026-09-11",
+            "body": "NBC News 首次專訪：曾任 Google DeepMind AI 安全研究員，近期離職，稱「這裡面沒有大人在把關」，呼籲提高 AI 事故透明度。"
+          }
+        ]
       }
     ],
-    "itemCount": 10
+    "itemCount": 13
   }
 }

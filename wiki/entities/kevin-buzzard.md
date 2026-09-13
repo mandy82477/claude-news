@@ -32,6 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-05
 **最後新聞更新：** 2026-09-04
 
+> **最新表態**（2026-09-04）
+> 公開回應 Anthropic 模型 11 天內自主完成 FLT 形式化證明，稱「Anthropic 已經先我一步」，並評論該工作對數學本身貢獻有限。
+
 ## 現況
 
 Imperial College London 數學教授，Xena Project 主持人，主持 EPSRC 資助、以 Lean 形式化證明系統將費馬最後定理（Fermat's Last Theorem）完整形式化的五年期計畫（2023 年啟動）。2026-09-04，Anthropic 研究部門公布其內部模型歷時 11 天自主完成 FLT 的 Lean 完整形式化證明後，Buzzard 於個人部落格發表文章公開回應「Anthropic has beaten me to it」，並評論該工作對數學本身貢獻有限（原文："Note that mathematically this work of anthropic tells us essentially nothing."）。

@@ -33,4 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-06
 **最後新聞更新：** 2026-05-29
 
+> **最後動態**（2026-05-29）
+> 05-26 出席教宗良十四世《Magnifica Humanitas》封論發布，Anthropic 為唯一受邀 AI 公司，確立國際倫理路線。
+
 已併回 [[topics/anthropic-government-policy]]

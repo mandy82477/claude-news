@@ -135,7 +135,7 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-06-18",
       "updateFreq": "",
       "parent": "topics/anthropic-government-policy",
-      "summary": "已併回 anthropic-government-policy",
+      "summary": "首爾媒體說明會公開解封時間框架，稱模型將於數日內恢復可用，展示談判進展。",
       "latestHeadline": "",
       "readerDomains": [
         "🏛️ 政策/安全"
@@ -155,7 +155,7 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-05-29",
       "updateFreq": "",
       "parent": "topics/anthropic-government-policy",
-      "summary": "已併回 anthropic-government-policy",
+      "summary": "05-26 出席教宗良十四世《Magnifica Humanitas》封論發布，Anthropic 為唯一受邀 AI 公司，確立國際倫理路線。",
       "latestHeadline": "",
       "readerDomains": [
         "🏛️ 政策/安全"
@@ -836,7 +836,7 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-06-26",
       "updateFreq": "",
       "parent": "topics/anthropic-government-policy",
-      "summary": "已併回 anthropic-government-policy",
+      "summary": "The Verge 報導 Mythos 危機持續惡化，Tom Brown 主導的 NSA 談判逾兩週仍無明確解封時程。",
       "latestHeadline": "",
       "readerDomains": [
         "🏛️ 政策/安全"
@@ -2666,7 +2666,7 @@ window.WIKI_DATA = {
       "date": "2026-09-11",
       "kind": "reader",
       "articleCount": 89,
-      "itemCount": 10,
+      "itemCount": 13,
       "preview": "Claude Code：v2.1.268：Claude apps gateway 新增 pricing: 設定（gateway.yaml），登入版 Claude Code 客戶端經 managed settings 取得一致費率，/cost 與 telemetry 對得上；計費細節見 entities/pricing。",
       "topCount": 5
     },

@@ -32,6 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-11
 **最後新聞更新：** 2026-09-11
 
+> **最新報導**（2026-09-11）
+> NBC News 首次專訪：曾任 Google DeepMind AI 安全研究員，近期離職，稱「這裡面沒有大人在把關」，呼籲提高 AI 事故透明度。
+
 ## 現況
 
 NBC News 於 2026-09-10 刊出對 Josh Engels 的首次專訪，報導稱他曾任 Google DeepMind AI 安全研究員，近期已離職。他向 NBC 表示：「這裡面沒有大人在把關」（"There are no adults in the room"），呼籲提高尖端 AI 系統事故的透明度。

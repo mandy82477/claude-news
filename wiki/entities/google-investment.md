@@ -32,6 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-06
 **最後新聞更新：** 2026-07-24
 
+> **最新動態**（2026-07-24）
+> Bloomberg 報導 Alphabet 帳面持有 Anthropic 股權市值已跳升至約 $1,240 億美元，反映投資後估值持續墊高（非新一輪投資金額）。
+
 ---
 
 ## 摘要

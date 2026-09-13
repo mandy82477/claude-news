@@ -56,6 +56,10 @@ def _wiki(tmp: Path) -> Path:
     (tmp / "topics" / "no-domain.md").write_text(
         "---\npage: \"x\"\n---\n# 沒有領域的頁\n\n> **本頁是什麼**（2026-09-11 快照）\n> 沒 domain。\n\n---\n",
         encoding="utf-8")
+    (tmp / "topics" / "header-domain-only.md").write_text(
+        "# 只有標頭領域的頁\n\n**狀態：** ongoing\n**領域：** 🤖 模型\n\n"
+        "> **最新進展**（2026-09-11）\n> 沒 frontmatter 也要收。\n\n---\n",
+        encoding="utf-8")
     (tmp / "topics" / "tail-in-label.md").write_text(_page(
         "🌐 社群", "尾巴頁",
         "> **本週趨勢觀察**（2026-09-11，補充說明）同行尾巴文字\n> 第二行。"), encoding="utf-8")
@@ -82,11 +86,12 @@ class TestGenerator(unittest.TestCase):
     def test_only_target_date_callouts_collected(self):
         pages = [it["page"] for sec in self.r["sections"] for it in sec["items"]]
         self.assertEqual(pages, ["entities/claude-code", "entities/managed-agents",
+                                 "topics/header-domain-only",
                                  "topics/market-signals", "topics/tail-in-label"])
-        self.assertEqual(self.count, 4)
+        self.assertEqual(self.count, 5)
 
     def test_sections_in_spec_order_and_no_empty_shells(self):
-        self.assertEqual([s["key"] for s in self.r["sections"]], ["features", "commercial", "community"])
+        self.assertEqual([s["key"] for s in self.r["sections"]], ["features", "models", "commercial", "community"])
         for sec in self.r["sections"]:
             self.assertTrue(sec["items"])
 
@@ -104,12 +109,12 @@ class TestGenerator(unittest.TestCase):
                          ["Claude Code", "Managed Agents"])
 
     def test_second_callout_on_same_page_kept_only_if_dated_today(self):
-        it = self.r["sections"][1]["items"][0]
+        it = self.r["sections"][2]["items"][0]
         self.assertEqual(it["label"], "最新判讀")
         self.assertNotIn("免責", it["body"], "沒有日期的 ⚠️ 免責 callout 不算最新動態")
 
     def test_label_tail_and_same_line_text_survive(self):
-        it = self.r["sections"][2]["items"][0]
+        it = self.r["sections"][3]["items"][0]
         self.assertEqual(it["label"], "本週趨勢觀察")
         self.assertEqual(it["date"], "2026-09-11")
         self.assertTrue(it["body"].startswith("同行尾巴文字"))
@@ -131,7 +136,7 @@ class TestGenerator(unittest.TestCase):
     def test_generated_file_passes_checker(self):
         chk = load_script_module("check_reader_digest")
         valid = {"entities/claude-code", "entities/managed-agents", "topics/market-signals",
-                 "topics/tail-in-label"}
+                 "topics/tail-in-label", "topics/header-domain-only"}
         with tempfile.TemporaryDirectory() as td:
             f = Path(td) / "2026-09-11.md"
             f.write_text(self.text, encoding="utf-8")
