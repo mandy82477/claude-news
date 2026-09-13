@@ -25,6 +25,7 @@ wikilink 目標存在/⟨Q-nn⟩ 雙向對帳）與 scripts/check_workflow_paths
 workflow 指名的產出路徑逐一驗存在，防 2026-09-04 那種「刪了檔沒刪登記 → git add
 exit 128 → 當天抓料整包不落地」）與 scripts/check_reader_language.py（讀者語言閘：
 內部維運用語外洩到 wiki 正文，只擋 data/reader-language-baseline.json 之外的新增）與
+scripts/check_skill_refs.py（skill 指路完整性：description、目錄形狀、references 孤兒／斷鏈）與
 scripts/check_cell_limits.py（字元上限機械閘：表格儲存格 >120／細節區條列 >200，只擋
 data/cell-limit-baseline.json 之外的新增超限）；任一失敗都會讓本腳本整體 exit 1。
 """
@@ -47,6 +48,7 @@ CHECK_HIERARCHY = REPO_ROOT / "scripts" / "check_hierarchy.py"
 CHECK_WORKFLOW_PATHS = REPO_ROOT / "scripts" / "check_workflow_paths.py"
 CHECK_READER_LANGUAGE = REPO_ROOT / "scripts" / "check_reader_language.py"
 CHECK_CELL_LIMITS = REPO_ROOT / "scripts" / "check_cell_limits.py"
+CHECK_SKILL_REFS = REPO_ROOT / "scripts" / "check_skill_refs.py"
 
 
 def main() -> int:
@@ -230,9 +232,28 @@ def main() -> int:
         stream.write(f"\nWARN: {CHECK_CELL_LIMITS} 不存在，跳過字元上限機械閘\n")
     stream.flush()
 
+    # skill 指路完整性閘（2026-09-13：SKILL-PRINCIPLES——description ≤100、目錄形狀、references 無孤兒無斷鏈）
+    skill_refs_ok = True
+    if CHECK_SKILL_REFS.exists():
+        proc = subprocess.run(
+            [sys.executable, str(CHECK_SKILL_REFS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
+        )
+        stream.write("
+" + (proc.stdout or "") + "
+")
+        if proc.stderr:
+            stream.write(proc.stderr + "
+")
+        skill_refs_ok = proc.returncode == 0
+    else:
+        stream.write(f"
+WARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘
+")
+    stream.flush()
+
     return 0 if (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
                  and freshness_ok and radar_ok and pending_ok and tools_ok and hierarchy_ok
-                 and workflow_paths_ok and reader_lang_ok and cell_limits_ok) else 1
+                 and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok) else 1
 
 
 if __name__ == "__main__":
