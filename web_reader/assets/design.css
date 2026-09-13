@@ -154,7 +154,9 @@
 
 /* ── Reset + Base ────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; }
+/* min-height 而非 height：body 若固定 100% 高，內容溢出 body 後 sticky 導覽列會隨之捲走
+   （sticky 只在父容器盒內生效），detail__topbar 的 top 偏移也就只剩空白（2026-09-13 手機版實測，桌機同病） */
+html, body { margin: 0; padding: 0; min-height: 100%; }
 body {
   background: var(--bg-0);
   color: var(--fg-1);
@@ -2661,3 +2663,54 @@ code {
   outline: none;
 }
 .pending-qid { font-size: 11.5px; vertical-align: 0; letter-spacing: 0.02em; }
+
+/* ============================================================
+   手機版 wiki 內文可讀性（2026-09-13，設計稿「Editorial 修正」）
+   實測 375px：內文 callout 14px、H2 13px 小於內文、六分頁擠兩行 12px、
+   chip／排序鈕 27–33px 低於 44px。只動 ≤719px，桌機不變。
+   ============================================================ */
+@media (max-width: 719px) {
+  /* 章節標題：13px 等寬大寫標籤 → 20px 襯線，加序號，行動裝置往下滑抓得到段落 */
+  .detail__body { counter-reset: detail-sec; }
+  .detail__body h2 {
+    font-family: var(--font-cjk);
+    font-size: 20px; font-weight: var(--fw-medium);
+    text-transform: none; letter-spacing: -0.005em; line-height: 1.3;
+    color: var(--ink-1);
+    margin: 32px 0 12px; padding-top: 14px;
+  }
+  .detail__body h2::before {
+    counter-increment: detail-sec;
+    content: counter(detail-sec, decimal-leading-zero);
+    font-family: var(--font-mono); font-size: 11px; font-weight: var(--fw-medium);
+    letter-spacing: 0.22em; color: var(--ink-3);
+    margin-right: 10px; vertical-align: 2px;
+  }
+  /* 頁頂狀態 callout 常帶整段版本清單，14px 在手機太小 */
+  .detail__body > blockquote:first-of-type { font-size: 15px; line-height: 1.7; }
+  .detail__body li { margin: 8px 0; }
+
+  /* 點擊目標 ≥44px */
+  .domain-chip { min-height: 44px; padding: 10px 14px; font-size: 13px; }
+  .sort-btn { min-height: 40px; padding: 8px 12px; font-size: 13px; }
+  .detail__back { min-height: 44px; padding: 10px 14px; }
+  .reader-footer__feedback { display: inline-block; padding: 12px 0; }
+}
+@media (max-width: 480px) {
+  /* 導覽列第二行：六分頁擠 space-around 折行 12px → 單列橫捲 15px，不折行 */
+  .nav__links {
+    justify-content: flex-start;
+    flex-wrap: nowrap; overflow-x: auto;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    padding: 0 8px; gap: 4px;
+  }
+  .nav__links::-webkit-scrollbar { display: none; }
+  .nav__link {
+    flex: none; font-size: 15px;
+    padding: 12px 12px 10px; white-space: nowrap;
+    text-align: left;
+  }
+  /* 兩行之間原有 10px row-gap，收掉；導覽列高度 = 48 品牌列 + 46 分頁列 + 1 邊線 = 95，sticky topbar 跟著下移 */
+  .nav__inner { row-gap: 0; }
+  .detail__topbar { top: 95px; }
+}
