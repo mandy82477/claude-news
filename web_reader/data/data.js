@@ -496,7 +496,7 @@ window.WIKI_DATA = {
       "updateFreq": "",
       "parent": "",
       "summary": "2026-06-21，Reuters 正式確認 John Jumper 已離開 Google DeepMind、加入 Anthropic（HN score 77）。他成為一週內出走 Google 加入 Anthropic 的多位頂尖研究員之一，dev.to 報導指此波人才流失連帶造成 Google Alphabet 市…",
-      "latestHeadline": "dev.to 多篇報導總結此波 Google AI 人才出走潮，指 Jumper 加入時點適逢 Anthropic Mythos 出口管制危機；一週內 4 位頂尖研究員離開 Google，Google Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 延期（來源：dev.to）",
+      "latestHeadline": "dev.to 多篇報導總結此波 Google AI 人才出走潮，指 Jumper 加入時點適逢 Anthropic Mythos 出口管制危機；一週內 4 位頂尖研究員離開 Google，Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 延期（來源：dev.to；數字與因果皆為該報導自述，2026",
       "readerDomains": [
         "👤 人物"
       ]
@@ -736,8 +736,8 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-08-08",
       "updateFreq": "",
       "parent": "",
-      "summary": "Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」部門負責人。Legal IT Insider 與 Law.com 同日各自獨立報導此任命，構成跨來源驗證，惟目前僅能取得兩篇報導標題（Google News RSS 轉址連結），無法讀取實際內文，…",
-      "latestHeadline": "Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人；Legal IT Insider、Law.com 同日獨立報導（僅標題層級可用，正文未見，查證狀態見上方標記）",
+      "summary": "Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」部門負責人。Legal IT Insider 與 Law.com 同日各自獨立報導，構成跨來源驗證；本站最初只取得 Google News RSS 轉址的標題層級資訊，**2026-09-13 複…",
+      "latestHeadline": "Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人；Legal IT Insider、Law.com 同日獨立報導（2026-09-13 已讀正文，經歷與職掌均確認，僅到任日未見）",
       "readerDomains": [
         "👤 人物"
       ]
@@ -898,8 +898,8 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-09-10",
       "updateFreq": "",
       "parent": "",
-      "summary": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（推論，分析師估算），Gemini 3.5 Pro 延期至七月（推論，dev.to 報導，未經 Google 官方確認）。最矚目的是 2024 諾貝爾化學獎得主…",
-      "latestHeadline": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（推論，分析師估算），Gemini 3.5 Pro 延期至七月（推論，dev.to 報導，未經 Google 官方確認）。最矚目的是 2024 諾貝爾化學獎得主",
+      "summary": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（**數字出自 dev.to 報導標題**；2026-09-13 查證：CNBC 記 07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 $2,…",
+      "latestHeadline": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（數字出自 dev.to 報導標題；2026-09-13 查證：CNBC 記 07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 $2,000 ",
       "readerDomains": [
         "💼 商業"
       ]
@@ -2553,7 +2553,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-08-05",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-08-05",
       "updateFreq": "🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）",
       "parent": "",
@@ -2593,7 +2593,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-06-04",
-      "lastUpdated": "2026-09-11",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-11",
       "updateFreq": "",
       "parent": "",
@@ -3752,6 +3752,11 @@ window.WIKI_DATA = {
     }
   ],
   "weeklyIndex": [
+    {
+      "id": "2026-W37",
+      "name": "CLAUDE NEWS 週報 · 2026-W37",
+      "preview": "英國獨立顧問 Grant De Swardt 在 8 月 5 日發現自己的 Claude Max 20x 帳號用量從 45% 爬到 55%，而他那天沒有開工。他去問 Anthropic，得到的答覆是：他的 Claude session key 被盜，被拿去鑄出未經授權的 Claude Code OAuth token。"
+    },
     {
       "id": "2026-W36",
       "name": "2026-W36 週報（08-31 ~ 09-05）",
