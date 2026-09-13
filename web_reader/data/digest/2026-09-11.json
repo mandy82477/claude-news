@@ -670,9 +670,9 @@
           {
             "page": "topics/anthropic-agent-stack",
             "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-            "label": "這頁在回答什麼",
+            "label": "最近變動",
             "date": "2026-09-11",
-            "body": "官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。\n**最近變動**：09-10 查證時 dynamic workflows 已開放全部付費方案（Pro 需在 `/config` 開啟），編排從「Claude 逐回合決定」換成一支可存檔重跑的 script；09-11 子頁 SDK v1.5.0 為 Managed Agents 加 auto mode 工具權限，見 [[entities/managed-agents]]。"
+            "body": "09-10 查證時 dynamic workflows 已開放全部付費方案（Pro 需在 `/config` 開啟），編排從「Claude 逐回合決定」換成一支可存檔重跑的 script；09-11 子頁 SDK v1.5.0 為 Managed Agents 加 auto mode 工具權限，見 [[entities/managed-agents]]。"
           }
         ]
       },
