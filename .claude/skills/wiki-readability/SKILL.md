@@ -5,7 +5,7 @@ description: 低成本可讀性掃描：單一 agent 只讀每頁開頭與結構
 
 # Wiki 可讀性掃描
 
-不定期執行（建議每 2–4 週，或大量 ingest 後）。與 `.claude/commands/wiki-lint.md` 的分工：lint 檢查結構正確性（矛盾、孤立、格式標準），本 skill 只看**讀者視角的可讀性**，且刻意用最省 token 的取樣方式。
+不定期執行（建議每 2–4 週，或大量 ingest 後）。與 `.claude/skills/wiki-lint/SKILL.md` 的分工：lint 檢查結構正確性（矛盾、孤立、格式標準），本 skill 只看**讀者視角的可讀性**，且刻意用最省 token 的取樣方式。
 
 ---
 

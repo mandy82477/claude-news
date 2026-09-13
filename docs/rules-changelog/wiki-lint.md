@@ -1,6 +1,6 @@
-# .claude/commands/wiki-lint.md 沿革（教訓存檔）
+# .claude/skills/wiki-lint/SKILL.md 沿革（教訓存檔）
 
-本檔是 `.claude/commands/wiki-lint.md` 的歷史敘事，不是待執行規則；條文處的「沿革檔 YYYY-MM-DD[ 字母]」皆指本檔對應段。考古鏈：`[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
+本檔是 `.claude/skills/wiki-lint/SKILL.md`（含 `wiki-lint-reporters`／`-sweeps`／`-rules-health`／`-reader-acceptance` 四個子 skill）的歷史敘事，不是待執行規則；條文處的「沿革檔 YYYY-MM-DD[ 字母]」皆指本檔對應段。考古鏈：`[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 
 本檔是**歷史敘事，不是待執行規則**——條文已在上方，執行時不必讀本檔。存放於此的原因：條文本身已能獨立執行，敘事只在有人想問「為什麼有這條」時才需要。考古鏈為 `[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 
@@ -29,3 +29,17 @@
 **2026-09-02**（發現窗產消對帳）：C 窗上線 5 天悄悄積 154 個未報導候選（archify 43k★ 排第 20、約 10 天才輪到），佇列長度只寫在 logger.info、無消費端——與 pending 佇列 19 天 0→51 同病。
 
 **2026-09-04**（6h 規則密度）：首次量測 30 檔 4,585 行、235 個 `[加入:]` 標記、95 行教訓敘事；`wiki-lint.md` 自己 567 行 50 標記——檢查者最肥，同「檢查者把自己排除在檢查範圍外」形狀。密度沒有消費端，就跟 wiki 蒸餾上線前的 patterns 頁一樣單向增長。同日使用者裁決「全清」，五個候選檔一次減肥（本檔即該次產物）。
+
+## 2026-09-13（command → skill 搬家與去重）
+
+原 `/wiki-lint` 指令檔 738 行、69 個日期標記、registry 24 組、全庫 142 處引用，是 6h 密度量測全庫最肥的一檔——「檢查者最肥」這件事本身已在 2026-09-04 記過一次，但當時只做了段落下沉，沒動結構。本次拆成總指揮＋四個子 skill（A 記者收報／B 主編掃描／C 規則健檢／D 讀者驗收／E 收尾），拆分粒度以「有自己的輸入與完成條件、失敗互不阻斷」為準。
+
+**各步立法起因仍在本檔上方對應段**，以下只記本次搬家造成的口徑變動：
+
+- **5a 零次觸發**：`wiki-ingest-features.md` 的 −1 熱度降溫規則指名「由主編在彙整 feature-radar 的同一段執行」，而 lint 全文零提及，自 2026-08-20 立法起零次觸發——本步是它的執行點。搬家後住 `.claude/skills/wiki-lint-sweeps/references/sweeps.md`。
+- **5c 299 筆**：2026-08-08 盤點全庫累積 299 筆待查證，其中 pricing 的旗艦計費分界懸置 20 天而答案自始就在官方說明中心；記者 agent 無 web 工具，本步是唯一的消化端。
+- **5g 印給空氣看**：`gen_wiki_frontmatter.py` 每次都印 signal 分布並寫進 frontmatter，但沒有任何 lint 步驟讀它——同 2026-08-28 懸置語法 WARN 無人讀、C 窗佇列只寫在 `logger.info` 的同型死法。
+- **6i 連續滿分**：「連續滿分與抓不到問題是同一枚硬幣」原本只是一句話，6i 讓它變成動作（`lint_health.py mutate`／`hits report`）。
+- **月度判斷法統一為 metrics.md 口徑 `[改版: 2026-09-13]`**：lint 端原本判「`wiki/log.md` 本月尚無 `Lint` 記錄」（判執行記錄），`/wiki-weekly-review` 判「`wiki/metrics.md` 本月無數值」（判產出物）並明寫前者踩過的坑——同一個月裡兩套口徑可以給出相反答案（lint 跑了但月度項整段跳過時，log 有記錄而 metrics 沒數值）。本次統一為 metrics.md 的「採用驗證率」欄，總指揮開一節「月度判斷法」，A 段月度蒸餾與 C 段 6g 指標二／6j 共用。
+- **跨檔重複收斂**：六記者派工表與角色前導的家收斂到 `.claude/skills/wiki-ingest/dispatch.md`（lint 端只留 lint 專屬段）；雲端 egress 探測樣板 5b／5c／5m 三抄合一；步驟 10 的 gate 修復迴圈、push 重試改指 `.claude/skills/web-publish/SKILL.md` Step 4／Step 5（commit 路徑與訊息保留在本地）；`news/` 唯讀／`log.md` only append／繁中三條改指 `wiki/CLAUDE.md`「🚫 絕對限制」。
+- **機械檢查射程**：`bare_references`／`path_existence`／`coupling_hints` 的掃描 glob 補上 `.claude/skills/**/*.md`——前三批搬出去的 skill 檔原本全在射程外，等於搬一次就少一層看守。

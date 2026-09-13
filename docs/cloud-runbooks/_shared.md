@@ -15,7 +15,7 @@ routine 的 trigger prompt 只是薄殼（「讀某份 runbook 照做」），**
 
 1. **trigger prompt 不得包含任何步驟編號、步驟標題或執行細節**，只能指向 runbook
 2. **runbook 引用步驟時用標題錨點（含中文標題全稱），不用純編號**，並登記進 `.claude/review-registry.json` 由測試套件保護
-3. **runbook 只承載環境差異，不承載行為** `[加入: 2026-07-25]`——閘門、檢查、重試、失敗處理一律寫在 command 檔（`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`、`.claude/skills/web-publish/SKILL.md`、`.claude/commands/wiki-lint.md`），讓**本機 `/news-pipeline` 與雲端排程跑出完全相同的行為**。允許/不允許寫在 runbook 的分界，見 `.claude/skills/news-gather/SKILL.md` 的「本機與雲端的行為必須一致」表
+3. **runbook 只承載環境差異，不承載行為** `[加入: 2026-07-25]`——閘門、檢查、重試、失敗處理一律寫在 command 檔（`.claude/skills/news-gather/SKILL.md`、`.claude/skills/news-digest/SKILL.md`、`.claude/skills/web-publish/SKILL.md`、`.claude/skills/wiki-lint/SKILL.md`），讓**本機 `/news-pipeline` 與雲端排程跑出完全相同的行為**。允許/不允許寫在 runbook 的分界，見 `.claude/skills/news-gather/SKILL.md` 的「本機與雲端的行為必須一致」表
 
 > 判斷標準一：這份 prompt 在 pipeline 改版後會不會靜默走偏？若會，把它搬進 repo。
 > 判斷標準二：這條規則換到另一個環境還成立嗎？成立 → 寫進 command 檔，不寫在 runbook。
@@ -57,7 +57,7 @@ python3 scripts/cloud_bootstrap.py
 
 ## 收尾閉迴路
 
-**實際步驟不在本檔**：每日走 `.claude/skills/web-publish/SKILL.md` 的 `Step 3` / `Step 4` / `Step 5`，每週走 `.claude/commands/wiki-lint.md` 的 `10. 收尾閉迴路`。本檔只記共用理由。
+**實際步驟不在本檔**：每日走 `.claude/skills/web-publish/SKILL.md` 的 `Step 3` / `Step 4` / `Step 5`，每週走 `.claude/skills/wiki-lint/SKILL.md` 的 `10. 收尾閉迴路`。本檔只記共用理由。
 
 形狀相同：commit（無變更則跳過，不算失敗）→ 跑測試套件（失敗則跳過 web build 但**仍推送已完成的 commit**）→ build → **單一 `git push`**。
 
@@ -80,5 +80,5 @@ python3 scripts/cloud_bootstrap.py
 
 - **凡 command 檔標示「需使用者確認」的動作，一律不得自行執行**，改寫成待辦留在 `wiki/log.md` 本次紀錄的「📋 待使用者確認」清單
 - **不可為了讓流程跑完而降低品質門檻**（例如資料不新鮮就硬生日報）
-- **每次執行都必須留下可追查的證據——無論成功／no-op／中止** `[改版: 2026-07-27]`：append 一行結果到 `src/logs/task_scheduler.log` 並隨收尾一起 commit push（每日走 `.claude/skills/web-publish/SKILL.md`「Step 6」、每週走 `wiki-lint.md`「10. 收尾閉迴路」的心跳紀錄步驟，本檔不重複步驟細節）。中止時同樣先寫 FAILED/ABORTED 心跳再結束，不可靜默。**為什麼 no-op 也要寫：** 2026-07-25 weekly lint 無聲失敗、死因不可考——若只規定中止留證據，「順利跑完但無事可改」與「靜默死亡」在 GitHub 上都是零 artifact，無從分辨，驗證等於白等
+- **每次執行都必須留下可追查的證據——無論成功／no-op／中止** `[改版: 2026-07-27]`：append 一行結果到 `src/logs/task_scheduler.log` 並隨收尾一起 commit push（每日走 `.claude/skills/web-publish/SKILL.md`「Step 6」、每週走 `.claude/skills/wiki-lint/SKILL.md`「10. 收尾閉迴路」的心跳紀錄步驟，本檔不重複步驟細節）。中止時同樣先寫 FAILED/ABORTED 心跳再結束，不可靜默。**為什麼 no-op 也要寫：** 2026-07-25 weekly lint 無聲失敗、死因不可考——若只規定中止留證據，「順利跑完但無事可改」與「靜默死亡」在 GitHub 上都是零 artifact，無從分辨，驗證等於白等
 - 全程繁體中文輸出

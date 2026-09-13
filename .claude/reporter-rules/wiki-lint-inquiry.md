@@ -25,7 +25,7 @@
 ## 紀律
 
 - **同週重跑同題**：seed 綁 ISO 週是防「重擲骰子換好答的題」，補跑時不可傳 `--seed` 換題（`--seed` 僅供測試）
-- **❌ 不可為了好看降級成 ⚠️**：修不完就是待辦，誠實記錄；本步驟的價值在訊號，不在滿分（教訓見 `.claude/commands/wiki-lint.md` 收報核對「連續滿分與抓不到問題是同一枚硬幣」）
+- **❌ 不可為了好看降級成 ⚠️**：修不完就是待辦，誠實記錄；本步驟的價值在訊號，不在滿分（教訓見 `.claude/skills/wiki-lint-reporters/SKILL.md` 收報核對「連續滿分與抓不到問題是同一枚硬幣」）
 - **探針結果須含證據**：質疑代打自己也是宣稱，證據行就是它的 diff
 
 ## 題庫維護
@@ -33,7 +33,7 @@
 - 題庫內容**單一來源住 `scripts/inquiry_bank.py`**（探針要跟指令住在一起），本檔只放機制與判準，不重抄題目——兩處抄寫必然漂移
 - **加題條件**：`wiki/log.md` 出現新 Query、且其質疑模式不屬現有模式 → 主編提案（模式名＋操作化探針），**經使用者確認後**加入腳本並補 `src/tests/test_inquiry_bank.py` 對應斷言
 - **刪題須經使用者確認**：腳本自檢會擋題數 <7
-- 題庫的抽選指令與 `.claude/commands/wiki-lint.md` 7b 的指令**必須一致**（已登記 `.claude/review-registry.json` sync_pair，`scripts/check_rules.py` 會驗）
+- 題庫的抽選指令與 `.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 7b 的指令**必須一致**（已登記 `.claude/review-registry.json` sync_pair，`scripts/check_rules.py` 會驗）
 
 ## 人類質疑時效燈（可見性，處理端不在本步驟）
 

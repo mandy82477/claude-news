@@ -8,9 +8,9 @@ description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開
 > **這是每週工作的第二段，不是入口。** 平常跑 `/weekly`（總指揮，會先跑 `.claude/skills/weekly-report/SKILL.md` 再跑本 skill）；單獨執行本 skill 只在補做策展那一段時使用。
 > 單獨執行時，收尾（步驟 6）由本 skill 自己負責；由 `/weekly` 帶起時，**步驟 6 一律跳過**，收尾交給總指揮統一做（單一 push）。
 
-每週執行一次，建議在週末或週一執行，可與 `.claude/commands/wiki-lint.md` 同一天跑。
+每週執行一次，建議在週末或週一執行，可與 `.claude/skills/wiki-lint/SKILL.md` 同一天跑。
 
-**與 `.claude/commands/wiki-lint.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨，需要使用者確認才能執行。
+**與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨，需要使用者確認才能執行。
 
 派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整清單格式、log 模板住 `.claude/skills/wiki-weekly-review/dispatch.md`，本檔不重述——**派工前逐字讀它**。
 
@@ -40,7 +40,7 @@ gh issue list --label reader-feedback --state open --json number,title,createdAt
 
 ### 2. 六位記者並行判斷（同一訊息中平行呼叫全部）
 
-沿用 `.claude/commands/wiki-lint.md` 「步驟 2」的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須帶 `model: "sonnet"`（lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+沿用 `.claude/skills/wiki-ingest/dispatch.md` 的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須帶 `model: "sonnet"`（lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 prompt 全文見 `.claude/skills/wiki-weekly-review/dispatch.md`「六記者派工 prompt」。
 
@@ -72,7 +72,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/dispatch.md`「六記者派�
 
 > **由 `/weekly` 帶起時跳過本步驟**（`.claude/commands/weekly.md` 會在兩個子流程都跑完後統一收尾）。只有單獨執行本 skill 時才執行以下內容。
 
-**僅當步驟 4 實際執行了頁面修改時才需要**（使用者「都不要」且無 log 以外變更 → 仍須 commit log.md 這一筆，照走本步）。理由同 `.claude/commands/wiki-lint.md` 步驟 10：本 skill 改 `wiki/*.md` 不會自動上站，web build 僅發生於本步與 `/news-pipeline`。
+**僅當步驟 4 實際執行了頁面修改時才需要**（使用者「都不要」且無 log 以外變更 → 仍須 commit log.md 這一筆，照走本步）。理由同 `.claude/skills/wiki-lint/SKILL.md` 步驟 10：本 skill 改 `wiki/*.md` 不會自動上站，web build 僅發生於本步與 `/news-pipeline`。
 
 依序執行（`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`）：
 

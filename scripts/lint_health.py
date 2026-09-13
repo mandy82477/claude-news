@@ -3,7 +3,7 @@
 
 lint 原本是靜態考卷：進化只靠使用者不定期質疑 → 主編改題。本腳本提供四個
 子命令，讓 lint 自己產生「我漏了什麼／我是不是壞了／我是不是太肥了」的訊號，
-並各自有消費端（見 .claude/commands/wiki-lint.md 6h／6i 與步驟 8）：
+並各自有消費端（見 .claude/skills/wiki-lint-rules-health/SKILL.md 6h／6i 與 .claude/skills/wiki-lint/SKILL.md 步驟 8）：
 
   density   規則密度量測（6h 的量測端）：每檔行數、[加入:]/[改版:] 標記數、
             教訓敘事行數與佔比；超過門檻者列為蒸餾候選。規則債跟內容債一樣

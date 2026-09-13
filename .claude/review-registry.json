@@ -7,7 +7,8 @@
       ".claude/reporter-rules/*.md",
       "docs/cloud-runbooks/*.md",
       "docs/rules-changelog/*.md",
-      ".claude/agents/*.md"
+      ".claude/agents/*.md",
+      ".claude/skills/**/*.md"
     ],
     "pattern": "CLAUDE\\.md",
     "exempt_files": [
@@ -24,20 +25,12 @@
         "pattern": "根目錄 `CLAUDE\\.md`"
       },
       {
-        "file": ".claude/commands/wiki-lint.md",
-        "pattern": "CLAUDE\\.md 健檢"
-      },
-      {
-        "file": ".claude/commands/wiki-lint.md",
+        "file": ".claude/skills/wiki-lint/SKILL.md",
         "pattern": "根目錄 `CLAUDE\\.md`"
       },
       {
         "file": ".claude/reporter-rules/wiki-ingest-people.md",
         "pattern": "CLAUDE\\.md 論述"
-      },
-      {
-        "file": "docs/cloud-runbooks/weekly-lint.md",
-        "pattern": "CLAUDE\\.md 健檢"
       },
       {
         "file": "docs/cloud-runbooks/probe-custom-subagent-2026-09-12.md",
@@ -56,7 +49,8 @@
       ".claude/reporter-rules/*.md",
       "docs/cloud-runbooks/*.md",
       "docs/rules-changelog/*.md",
-      ".claude/agents/*.md"
+      ".claude/agents/*.md",
+      ".claude/skills/**/*.md"
     ],
     "extensions": [
       ".md",
@@ -82,7 +76,8 @@
       "^data/pending-signals\\.jsonl$",
       "^data/pending-handoffs\\.jsonl$",
       "^CLAUDE_NEWS/CLAUDE\\.md$",
-      "^CLAUDE_NEWS/\\.claude/rules/claude-md-edit\\.md$"
+      "^CLAUDE_NEWS/\\.claude/rules/claude-md-edit\\.md$",
+      "^CLAUDE_NEWS/news/YYYY-MM-DD\\.md$"
     ],
     "_allowlist_note": "以上為 placeholder 或執行期才產生的產物檔，不強制存在。",
     "bare_name_search_dirs": {
@@ -231,11 +226,10 @@
       "_note": "2026-07-25 由 min_count/min:0 改為 max_count/max:0——前者的條件是 count < min 才失敗，min:0 恆為真，這條「不該出現」的檢查一直是假綠。"
     },
     {
-      "name": "wiki-ingest dispatch.md / wiki-lint.md / reporter-rules/wiki-ingest.md：六類記者角色檔名一致 + 正典派工路徑（general-purpose + 角色前導 + model: \"sonnet\"）",
+      "name": "wiki-ingest dispatch.md / reporter-rules/wiki-ingest.md：六類記者角色檔名一致 + 正典派工路徑（general-purpose + 角色前導 + model: \"sonnet\"）；2026-09-13 起 /wiki-lint 派工前綴改指 dispatch.md，不再是第三份副本",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-ingest/dispatch.md",
-        ".claude/commands/wiki-lint.md",
         ".claude/reporter-rules/wiki-ingest.md"
       ],
       "patterns": [
@@ -336,17 +330,14 @@
       ]
     },
     {
-      "name": "wiki-lint.md 關鍵步驟：載入鏈 + 呈現品質標準引用 + 規則引用驗證 + 規則年齡審查",
+      "name": "wiki-lint A 段關鍵步驟：載入鏈（wiki/CLAUDE.md + 主編指南）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-reporters/SKILL.md"
       ],
       "patterns": [
         "wiki/CLAUDE\\.md",
-        "\\.claude/reporter-rules/wiki-ingest\\.md",
-        "Wiki 頁面呈現品質標準",
-        "規則引用驗證",
-        "規則年齡審查"
+        "\\.claude/reporter-rules/wiki-ingest\\.md"
       ]
     },
     {
@@ -453,20 +444,17 @@
       "_note": "2026-09-13 拆檔：原一組十個標題全住同一檔，拆後依標題所在 skill 分四組，pattern 逐字不動。"
     },
     {
-      "name": "雲端 weekly runbook <-> wiki-lint.md：步驟標題錨點逐字相符（改步驟標題必須同步 runbook）",
+      "name": "雲端 weekly runbook <-> /wiki-lint 總指揮：四個子 skill 名與 E 段步驟標題逐字相符（改 skill 名或步驟標題必須同步 runbook）",
       "assertion": "all_contain",
       "files": [
         "docs/cloud-runbooks/weekly-lint.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint/SKILL.md"
       ],
       "patterns": [
-        "1\\. 載入 wiki 全貌",
-        "2\\. 並行派工",
-        "3\\. 處理語意分岔／死案歸檔候選",
-        "4\\. 建議並建立新實體頁",
-        "5\\. 更新 wiki/overview\\.md",
-        "6\\. CLAUDE\\.md 健檢",
-        "7\\. 讀者模擬驗收",
+        "wiki-lint-reporters",
+        "wiki-lint-sweeps",
+        "wiki-lint-rules-health",
+        "wiki-lint-reader-acceptance",
         "8\\. 記錄本次 lint",
         "9\\. 更新 wiki/index\\.md",
         "10\\. 收尾閉迴路"
@@ -563,7 +551,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/skills/news-digest/selection.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
       ],
       "patterns": [
         "行內連結",
@@ -575,7 +563,7 @@
       "name": "wiki-lint 6g 指標一：量測必須同時計三種歸因格式，且先限縮今日聚焦區塊（防灌大分母）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
       ],
       "patterns": [
         "三種歸因格式，必須同時計",
@@ -587,7 +575,7 @@
       "name": "weekly lint 心跳紀錄：wiki-lint.md 收尾與 _shared.md 無人值守原則都必須要求成功/no-op/中止一律寫 task_scheduler.log（07-25 無聲失敗死因不可考的防再犯——只規定中止留證據時，no-op 與死亡無法分辨）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint/SKILL.md",
         "docs/cloud-runbooks/_shared.md"
       ],
       "patterns": [
@@ -612,7 +600,7 @@
       "assertion": "all_contain",
       "files": [
         "docs/cloud-runbooks/weekly-lint.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
       ],
       "patterns": [
         "link_health\\.json",
@@ -625,7 +613,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/skills/web-publish/SKILL.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint/SKILL.md"
       ],
       "patterns": [
         "scripts.gate_web_build\\.py"
@@ -721,7 +709,7 @@
       "assertion": "max_count",
       "files": [
         ".claude/skills/web-publish/SKILL.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint/SKILL.md"
       ],
       "patterns": [
         "Tests FAILED - web build skipped"
@@ -781,7 +769,7 @@
       "name": "wiki-lint.md <-> 雲端 weekly runbook：5c 逾期待查證清算兩側齊全且明載雲端跳過（記者無 web 工具，此步驟是 299 筆待查證的唯一消化端；只留一側會再次孤兒化）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md",
         "docs/cloud-runbooks/weekly-lint.md"
       ],
       "patterns": [
@@ -793,7 +781,7 @@
       "name": "待查證回訪措辭鐵則：不得寫成「至今無後續」（只掃日報就宣稱世界沒有，會讓懸置被讀成已確認——2026-08-08 pricing 懸置 20 天的防再犯）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
       ],
       "patterns": [
         "官方頁面未查證",
@@ -928,7 +916,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/reporter-rules/wiki-ingest-format.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
         "懸置標記",
@@ -955,7 +943,7 @@
       "assertion": "all_contain",
       "files": [
         ".github/workflows/weekly-linkcheck.yml",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
       ],
       "patterns": [
         "link_health\\.json"
@@ -1007,7 +995,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/skills/web-publish/SKILL.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint/SKILL.md"
       ],
       "patterns": [
         "gate 擋下時的修復迴圈"
@@ -1044,7 +1032,7 @@
       "assertion": "all_contain",
       "files": [
         "scripts/check_pending_markers.py",
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md",
         ".claude/skills/weekly-local-catchup/SKILL.md",
         "docs/cloud-runbooks/weekly-lint.md"
       ],
@@ -1057,7 +1045,7 @@
       "name": "check_pending_markers.py 產消對帳 <-> wiki-lint 5c：告警產出端與消費端同進退（只印不讀＝偵測器印給空氣看）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md",
         ".claude/skills/weekly-local-catchup/SKILL.md"
       ],
       "patterns": [
@@ -1094,7 +1082,7 @@
       "name": "wiki-lint.md <-> wiki-lint-inquiry.md：質疑題庫抽題指令一致",
       "assertion": "equal_values",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint-reader-acceptance/SKILL.md",
         ".claude/reporter-rules/wiki-lint-inquiry.md"
       ],
       "pattern": "python scripts/inquiry_bank\\.py (\\w+)"
@@ -1250,7 +1238,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/reporter-rules/wiki-reporter-shared.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
         "wiki_graph\\.py explain [^\\n]*--section"
@@ -1273,7 +1261,7 @@
       "name": "co-landed 同新聞候選（規格端 <-> 程式端）：wiki-lint 6k 的指令必須帶 --with-news，且 wiki_graph 必須真的實作該旗標與 co_landed_pairs（只改規格＝lint 每輪少印一張表且無人察覺；只改程式＝功能沒有消費端，同 signal 白算的病）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint-rules-health/SKILL.md",
         "scripts/wiki_graph.py"
       ],
       "patterns": [
@@ -1298,7 +1286,7 @@
       "assertion": "all_contain",
       "files": [
         "scripts/gen_wiki_frontmatter.py",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
         "--list-signal",
@@ -1312,7 +1300,7 @@
       "files": [
         ".claude/reporter-rules/wiki-ingest-format.md",
         ".claude/reporter-rules/wiki-ingest-community-lint.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
       ],
       "patterns": [
         "時段蒸餾與封存"
@@ -1324,21 +1312,21 @@
       "assertion": "all_contain",
       "files": [
         ".claude/reporter-rules/wiki-ingest-format.md",
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
       ],
       "patterns": [
         "蒸餾候選"
       ]
     },
     {
-      "name": ".claude/commands/wiki-lint.md <-> docs/rules-changelog/wiki-lint.md：指路行與沿革檔互相指認（沿革節拆檔 2026-09-04，只改一側會讓指路懸空或沿革檔失去歸屬）",
+      "name": ".claude/skills/wiki-lint/SKILL.md <-> docs/rules-changelog/wiki-lint.md：指路行與沿革檔互相指認（沿革節拆檔 2026-09-04、搬家 2026-09-13，只改一側會讓指路懸空或沿革檔失去歸屬）",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md",
+        ".claude/skills/wiki-lint/SKILL.md",
         "docs/rules-changelog/wiki-lint.md"
       ],
       "patterns": [
-        "docs/rules\\-changelog/wiki\\-lint\\.md|\\.claude/commands/wiki\\-lint\\.md 沿革"
+        "docs/rules\\-changelog/wiki\\-lint\\.md|\\.claude/skills/wiki\\-lint/SKILL\\.md 沿革"
       ]
     },
     {
@@ -1447,7 +1435,7 @@
       "name": "雲端 egress 探測契約（規格端）：wiki-lint.md 四步各自問對組，並 grep 對的摘要行",
       "assertion": "all_contain",
       "files": [
-        ".claude/commands/wiki-lint.md"
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
         "cloud_egress_check\\.py --group leaderboard",
@@ -1526,6 +1514,110 @@
       "patterns": [
         "docs/rules\\-changelog/claude\\-md\\-edit\\.md|\\.claude/rules/claude\\-md\\-edit\\.md 沿革"
       ]
+    },
+    {
+      "name": "wiki-lint A 段派工模板：3e 呈現品質標準引用（模板抽進 references/dispatch.md 後的新家）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
+      ],
+      "patterns": [
+        "Wiki 頁面呈現品質標準"
+      ]
+    },
+    {
+      "name": "wiki-lint C 段關鍵步驟：規則引用驗證 + 規則年齡審查",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
+      ],
+      "patterns": [
+        "規則引用驗證",
+        "規則年齡審查"
+      ]
+    },
+    {
+      "name": "wiki-lint A 段派工前綴不得再自抄：reporters/SKILL.md 必須指向 wiki-ingest/dispatch.md 並釘住派工路徑（2026-09-13 去重；指路斷了就等於沒有角色前導，記者拿不到規則）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-reporters/SKILL.md",
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
+      ],
+      "patterns": [
+        "\\.claude/skills/wiki-ingest/dispatch\\.md"
+      ]
+    },
+    {
+      "name": "雲端 weekly runbook <-> wiki-lint-reporters：A 段步驟標題錨點逐字相符",
+      "assertion": "all_contain",
+      "files": [
+        "docs/cloud-runbooks/weekly-lint.md",
+        ".claude/skills/wiki-lint-reporters/SKILL.md"
+      ],
+      "patterns": [
+        "1\\. 載入 wiki 全貌",
+        "2\\. 並行派工",
+        "3\\. 處理語意分岔／死案歸檔候選",
+        "4\\. 建議並建立新實體頁",
+        "5\\. 更新 wiki/overview\\.md"
+      ]
+    },
+    {
+      "name": "雲端 weekly runbook <-> wiki-lint-sweeps/references/sweeps.md：B 段步驟標題錨點逐字相符",
+      "assertion": "all_contain",
+      "files": [
+        "docs/cloud-runbooks/weekly-lint.md",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
+      ],
+      "patterns": [
+        "5a\\. feature-radar 熱度降溫",
+        "5b\\. 跨家任務榜單週更",
+        "5c\\. 逾期待查證清算",
+        "5d\\. 歸因忠實度抽查",
+        "5e\\. pricing",
+        "5f\\. devpractice 週彙整",
+        "5g\\. 高引用但停滯",
+        "5h\\. 投資訊號回顧環",
+        "5m\\. code-quality-decline"
+      ]
+    },
+    {
+      "name": "雲端 weekly runbook <-> wiki-lint-rules-health：C 段步驟標題錨點逐字相符",
+      "assertion": "all_contain",
+      "files": [
+        "docs/cloud-runbooks/weekly-lint.md",
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
+      ],
+      "patterns": [
+        "6\\. 規則檔健檢",
+        "6h\\. 規則密度審查",
+        "6i\\. 檢查器的檢查：突變測試",
+        "6j\\. 對抗輪（月度）",
+        "6k\\. 連結缺口偵測（每輪）"
+      ],
+      "_note": "6a/6b/6c/6d/6e/6f/6g/6l 在 runbook 走「健檢分項」的措辭判準、不逐列列出（原設計即如此），故不入本組 pattern。"
+    },
+    {
+      "name": "雲端 weekly runbook <-> wiki-lint-reader-acceptance：D 段步驟標題錨點逐字相符",
+      "assertion": "all_contain",
+      "files": [
+        "docs/cloud-runbooks/weekly-lint.md",
+        ".claude/skills/wiki-lint-reader-acceptance/SKILL.md"
+      ],
+      "patterns": [
+        "7\\. 讀者模擬驗收"
+      ]
+    },
+    {
+      "name": "月度判斷法單一口徑：/wiki-lint 總指揮與 /wiki-weekly-review 都以 wiki/metrics.md 的產出物判斷本月是否已跑過（2026-09-13 統一；原 lint 端讀 wiki/log.md 的執行記錄，兩套口徑會在同一個月給出相反答案）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint/SKILL.md",
+        ".claude/skills/wiki-weekly-review/SKILL.md"
+      ],
+      "patterns": [
+        "wiki/metrics\\.md"
+      ]
     }
   ],
   "coupling_hints": {
@@ -1533,7 +1625,8 @@
     "globs": [
       ".claude/commands/*.md",
       ".claude/rules/*.md",
-      ".claude/reporter-rules/*.md"
+      ".claude/reporter-rules/*.md",
+      ".claude/skills/**/*.md"
     ],
     "min_mutual_references": 2
   }

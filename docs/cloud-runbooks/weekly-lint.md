@@ -4,7 +4,7 @@
 
 **先讀 `docs/cloud-runbooks/_shared.md`**（環境覆寫、收尾閉迴路、無人值守原則），再照本檔執行。
 
-你執行的是 `.claude/commands/wiki-lint.md` 的**自主安全部分**，把需要人工判斷的項目寫成待辦留給使用者，最後閉迴路上站。今日日期用 `date -u +%F`。
+你執行的是 `/wiki-lint`（總指揮 `.claude/skills/wiki-lint/SKILL.md` ＋四個子 skill）的**自主安全部分**，把需要人工判斷的項目寫成待辦留給使用者，最後閉迴路上站。今日日期用 `date -u +%F`。
 
 ---
 
@@ -12,39 +12,39 @@
 
 **模型 `[改版: 2026-09-04]`：** 主編（本 routine 的 session）為 `claude-opus-5`——6 系列規則健檢、7b 質疑代打、6k 處置判斷是「判斷淺」最吃虧的地方，一週一次換旗艦配額影響小（使用者裁決）。記者派工仍一律 `model: "sonnet"`，不隨主編升級。trigger 設定的副本在 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json`，改模型要用 RemoteTrigger 改雲端本體再同步副本，只改副本不生效。
 
-規範來源是 `.claude/commands/wiki-lint.md`（步驟細節不在本檔重複）。依下表對照執行，**用標題找步驟，不要用編號或子項字母推測範圍**：
+規範來源是 `.claude/skills/wiki-lint/SKILL.md` 與它帶起的四個子 skill（步驟細節不在本檔重複）。下表以 **skill 名＋步驟編號** 為 key，**用標題找步驟，不要用編號或子項字母推測範圍**：
 
-| 該檔中的步驟標題 | 雲端如何處理 |
+| skill ＋步驟標題 | 雲端如何處理 |
 |------|------|
-| `1. 載入 wiki 全貌` | 自主執行 |
-| `2. 並行派工（六位記者同時執行）` | 自主執行，派工帶 `model: "sonnet"`；含記者職責內的矛盾修正、孤立連結、狀態更新、呈現品質、待查證回訪，以及社群記者的 community-tech-tools 策展 |
-| `3. 處理語意分岔／死案歸檔候選（需使用者確認）` | **只回報，不動手** → 寫入待辦 |
-| `4. 建議並建立新實體頁` | **只回報，不動手** → 寫入待辦 |
-| `5. 更新 wiki/overview.md` | 自主執行 |
-| `5a. feature-radar 熱度降溫（主編親做）` | 自主執行（`scripts/news_mentions.py` 純本地比對日報；⏳ 逾期處置照該節三選一） |
-| `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
-| `5c. 逾期待查證清算（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**Lane A（本輪額度 10）＋Lane B（本輪額度 8）**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
-| `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
-| `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
-| `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
-| `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
-| `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過寫待辦 |
-| `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
-| `6. CLAUDE.md 健檢` | 分項處理，見下方「健檢分項」 |
-| `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
-| `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
-| `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；**發現只回報**——修規則檔屬「要求確認」→ 待辦，並登 `lint_health.py misses` `[加入: 2026-09-04]` |
-| `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
-| `7. 讀者模擬驗收` | 自主執行 |
-| `8. 記錄本次 lint` | 自主執行，待辦清單寫在這裡 |
-| `9. 更新 wiki/index.md` | 自主執行 |
-| `10. 收尾閉迴路` | 自主執行，套用 `_shared.md` 的收尾閉迴路（單一 push），commit 訊息用 `wiki: weekly lint (cloud) <date>` 與 `web: rebuild (cloud) <date>` |
+| `wiki-lint-reporters` `1. 載入 wiki 全貌` | 自主執行 |
+| `wiki-lint-reporters` `2. 並行派工（六位記者同時執行）` | 自主執行，派工帶 `model: "sonnet"`；含記者職責內的矛盾修正、孤立連結、狀態更新、呈現品質、待查證回訪，以及社群記者的 community-tech-tools 策展 |
+| `wiki-lint-reporters` `3. 處理語意分岔／死案歸檔候選（需使用者確認）` | **只回報，不動手** → 寫入待辦 |
+| `wiki-lint-reporters` `4. 建議並建立新實體頁` | **只回報，不動手** → 寫入待辦 |
+| `wiki-lint-reporters` `5. 更新 wiki/overview.md` | 自主執行 |
+| `wiki-lint-sweeps` `5a. feature-radar 熱度降溫（主編親做）` | 自主執行（`scripts/news_mentions.py` 純本地比對日報；⏳ 逾期處置照該節三選一） |
+| `wiki-lint-sweeps` `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
+| `wiki-lint-sweeps` `5c. 逾期待查證清算（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**Lane A（本輪額度 10）＋Lane B（本輪額度 8）**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
+| `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
+| `wiki-lint-sweeps` `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
+| `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過寫待辦 |
+| `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
+| `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
+| `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；**發現只回報**——修規則檔屬「要求確認」→ 待辦，並登 `lint_health.py misses` `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
+| `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |
+| `wiki-lint` `8. 記錄本次 lint` | 自主執行，待辦清單寫在這裡 |
+| `wiki-lint` `9. 更新 wiki/index.md` | 自主執行 |
+| `wiki-lint` `10. 收尾閉迴路` | 自主執行，套用 `_shared.md` 的收尾閉迴路（單一 push），commit 訊息用 `wiki: weekly lint (cloud) <date>` 與 `web: rebuild (cloud) <date>` |
 
-> 上表若與 `.claude/commands/wiki-lint.md` 的實際步驟標題對不上（標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照該檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 wiki-lint.md 不同步`，供使用者回頭修 runbook。
+> 上表若與各 skill 的實際步驟標題對不上（標題被改名、skill 改名或拆併、或出現表中沒有的新步驟），**不要自行猜測略過**：照該 skill 實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 wiki-lint skill 不同步`，供使用者回頭修 runbook。
 
 ## 健檢分項
 
-`6. CLAUDE.md 健檢` 底下的子項，判準是「該子項是否要求向使用者確認」：
+`wiki-lint-rules-health` `6. 規則檔健檢` 底下的子項，判準是「該子項是否要求向使用者確認」：
 
 - **要求確認的**（規則矛盾、規則調整、跨檔案語意矛盾等，該檔內以「向使用者確認後才修改」「未經確認不得執行」標示）→ **只回報，寫入待辦**
 - **純機械檢查與統計的**（規則引用驗證、遵守率抽樣、來源健康與記分卡、品質指標與 `wiki/metrics.md` append）→ **自主執行**

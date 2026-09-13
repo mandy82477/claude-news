@@ -9,11 +9,11 @@ description: /weekly 步驟 0：補跑雲端沒做的 lint 步驟（5b/5c 等）
 
 `/wiki-lint` 有幾個步驟需要「網路 ＋ LLM 同時具備」：GitHub Actions（無 LLM）做不到，雲端 routine 則**看該環境的網路白名單開到哪**——雲端環境預設是 Trusted（約 70 個網域），本專案需要的官方文件站與榜單站不在內。`[改版: 2026-09-12]`
 
-**這幾步在雲端已改為探測式**（`python scripts/cloud_egress_check.py --group <組>`，見 `.claude/commands/wiki-lint.md` 各節）：探測到 OK，雲端 lint 自己就做完了，本步只會看到「已於雲端完成」；探測到未開才落到這裡。所以本步的正確心態是**補跑那些雲端真的沒做的**，不是無條件重跑一遍——先 Grep `wiki/log.md` 最近一次 lint 紀錄，看該步寫的是數字還是「雲端 egress 未開，跳過」。
+**這幾步在雲端已改為探測式**（`python scripts/cloud_egress_check.py --group <組>`，見 `.claude/skills/wiki-lint-sweeps/references/sweeps.md` 各節）：探測到 OK，雲端 lint 自己就做完了，本步只會看到「已於雲端完成」；探測到未開才落到這裡。所以本步的正確心態是**補跑那些雲端真的沒做的**，不是無條件重跑一遍——先 Grep `wiki/log.md` 最近一次 lint 紀錄，看該步寫的是數字還是「雲端 egress 未開，跳過」。
 
-依序執行，全部讀 `.claude/commands/wiki-lint.md` 的對應節，不在此重述做法：
+依序執行，全部讀 `.claude/skills/wiki-lint-sweeps/references/sweeps.md` 的對應節，不在此重述做法：
 
-1. **5b 跨家任務榜單週更**——雲端該步已記數字則跳過；記「雲端 egress 未開，跳過」才補跑，照 `.claude/commands/wiki-lint.md`「5b. 跨家任務榜單週更」執行（派 `general-purpose` ＋ `model: "haiku"` 抓榜）。**同理適用 5c、5e、5m**——這四步的雲端執行與否由探測決定，不再固定落到本機
+1. **5b 跨家任務榜單週更**——雲端該步已記數字則跳過；記「雲端 egress 未開，跳過」才補跑，照 `.claude/skills/wiki-lint-sweeps/references/sweeps.md`「5b. 跨家任務榜單週更」執行（派 `general-purpose` ＋ `model: "haiku"` 抓榜）。**同理適用 5c、5e、5m**——這四步的雲端執行與否由探測決定，不再固定落到本機
 
 2. **5c 逾期待查證清算**——照該檔「5c. 逾期待查證清算」執行，**Lane A（本輪額度 10）＋Lane B（本輪額度 8）**（`check_pending_markers.py --queue` 已內建兩條分流；Lane A 多數可免 web，但**探測判為未開時整個 5c 跳過**，本機一律可做）。務必照 5c 第 5 步做結案回掃，並把輸出的「📊 產消對帳」與末尾「⚠️ 舊語法盲區」一併抄進回報
 

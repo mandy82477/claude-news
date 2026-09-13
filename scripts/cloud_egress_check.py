@@ -14,7 +14,7 @@ None／Trusted（預設，約 70 個網域白名單）／Custom（使用者自�
 規則檔還是寫著跳過，那幾步在雲端就永遠餓死。所以改成**探測式**——各步先問這支
 腳本「我需要的網域通不通」，通就照做，不通才跳過留待辦。環境改前改後都正確。
 
-## 機械契約（lint 步驟會 grep 這一行，改動要同步 .claude/commands/wiki-lint.md）
+## 機械契約（lint 步驟會 grep 這一行，改動要同步 .claude/skills/wiki-lint-sweeps/references/sweeps.md）
 
 每組印**恰好一行**摘要，形狀固定：
 

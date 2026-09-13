@@ -1,7 +1,7 @@
 """`scripts/cloud_egress_check.py` 的摘要行格式與退出碼。
 
 這支腳本的存在理由是「讓 lint 各步不必寫死『雲端一律跳過』」，所以它的輸出是
-**機械契約**——`.claude/commands/wiki-lint.md` 各步 grep `EGRESS: <組> OK` 那一行
+**機械契約**——`.claude/skills/wiki-lint-sweeps/references/sweeps.md` 各步 grep `EGRESS: <組> OK` 那一行
 來決定要不要執行。契約壞掉時的失效模式是靜默的：grep 不到就一律走「跳過」分支，
 那幾步會恢復成永遠不跑，而沒有任何人會收到錯誤。因此本檔驗兩件事：
 
