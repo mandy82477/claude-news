@@ -559,7 +559,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **任務之間執行 `/clear` 提升 token 效益（2026-08-14 官方部落格，HN 268 分，今日互動最高）**：Anthropic 官方部落格談如何讓每個 token 發揮最大價值，具體建議包含在不相關任務之間執行 `/clear`——可避免先前無關的 context 被送回模型、佔用預算與拉低訊噪比；屬使用建議而非新功能或新指令。
 - **底層 runtime 確認改用 Rust 版 Bun（2026-07-19 證實）**：Simon Willison 透過字串比對驗證 Jarred Sumner 的說法——Claude Code 自 **v2.1.181**（2026-06-17 發布）起，底層執行環境已改用 Rust 重寫版 Bun runtime，Linux 平台啟動速度提升約 10%，但屬底層基礎設施更新，多數使用者對此毫無察覺（作者以 `strings ~/.local/bin/claude | grep -m1 'Bun v1'` 等指令驗證，找到 563 個 `.rs` 檔名）。
 - **Extended Thinking 輸出為加密摘要，非原始推理（2026-06-22）**：session log 中的 thinking blocks 文字是推理的摘要版本，真實推理過程被 Anthropic 加密後存在 600 字元 signature 中，用戶端無法解密。需做審計追蹤或對推理過程有完整性要求的工程師，應避免以 thinking blocks 內容作為事實依據（見「已知問題」）
-- **年齡驗證政策（Persona Identity Verification，2026-06-22）**：Anthropic 在特定使用情境下導入 Persona 第三方身分驗證，以落實年齡管控、使用政策與法規遵循。此政策屬平台使用條款異動，不影響 CLI 操作
+- **年齡驗證政策升級（Yoti 第三方驗證，2026-09-11）**：Claude 消費版宣布不再開放未滿 18 歲使用者使用，改由第三方平台 Yoti 進行年齡驗證，偵測到疑似未成年使用跡象即停用帳號並要求驗證年齡才能恢復；共用帳號給青少年的家庭／教育場景會被擋。見[官方說明](https://support.claude.com/en/articles/15171100-age-assurance-on-claude)
+- **年齡驗證政策（Persona Identity Verification，2026-06-22）**：Anthropic 在特定使用情境下導入 Persona 第三方身分驗證，以落實年齡管控、使用政策與法規遵循。此政策屬平台使用條款異動，不影響 CLI 操作（09-11 起由 Yoti 年齡驗證接續，見上條）
 - **CLI 權限客製化避免手動確認（2026-06-22）**：長工作流中可透過 `settings.json` 的 `allowedTools` 與 Permission Rules 設定白名單，減少 Claude Code 在 agentic 模式下不斷彈出手動確認。`Tool(param:value)` 語法（v2.1.178）支援比對工具輸入參數，搭配 `--dangerously-skip-permissions` 旗標可完全自動化非互動批次流程（見 [教學](https://dev.to/kapoormanish/stop-clicking-approve-how-to-customize-claude-code-cli-permissions-pnh)）
 - **四種儲存格式各有用途（2026-06-22 整理）**：Claude Code 儲存層包含 CLAUDE.md（專案指令）、session storage（當次對話上下文）、project state（持久狀態）、Memories（跨 session 記憶）；建議將專案持久狀態存於 repo，確保重開 session 後一致性（見 [說明](https://dev.to/arthurpro/anthropics-storage-layer-quartet-and-what-each-format-is-actually-for-4nd7)）
 

@@ -145,6 +145,10 @@
 
 **`## 版本更新 → 最新版本` 退場線：** 保留最近 90 天發布的版本，更舊者隨歷史記錄同月封存至 `entities/claude-code-archive`。**本線自該 archive 子頁建立之日起生效**（下一波蒸餾工程）；在此之前版本表只增不汰，不得據本條刪列。沒有這句生效條款，條文當天就讓 121 列裡上百列違規，而斷鏈只是 WARN（`build_web.py` 明載 never raises），會靜默掛著。**節名凍結**——`## 版本更新` 是全站唯一被錨點指入的節（[[feature-radar]] 升版判斷處），不得改名。
 
+### 平台級帳號／年齡政策公告
+
+Anthropic 對全產品（含 Claude Code）的帳號、年齡、身分驗證政策公告 → 本頁「開發者須知」，延續 Persona／Yoti 條目；若此類條目累積超過 5 條，依 `.claude/reporter-rules/page-lifecycle.md` 拆分原則評估獨立成消費版產品頁。
+
 ---
 
 ## topics/official-community-gap

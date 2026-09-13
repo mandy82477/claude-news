@@ -6286,3 +6286,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 6 筆（entities/claude-code：`claude plugin eval`、兩則新已知問題〔macOS Bypass Permissions #61415、Windows 更新致 Cowork device_bash 失效 #92958〕、桌面版文件 Git 需求措辭更新；topics/anthropic-agent-stack：`/goal` 官方細節、Agent teams／Agent view 三問決策框架；topics/community-tech-patterns：規格驅動開發新類別）；基準線 753648bcbf→14ce5f46a5
 - market 判讀：2 則（🔴 0／🟡 2：國防部傳十月前遷出全部機密工作負載〔開新線「政府客戶流失」〕、Nvidia 傳洽談投資 Anthropic IPO〔IPO 進程線第 6 則〕；今日其餘威脅情報報告跟進報導判為 09-11 已開判讀之延續，未另開新則）；買得到的標的新增 1 列（Nvidia, NASDAQ: NVDA）；里程碑登記 2 筆；回顧結算 ⏳ 新增 2 列
 - 轉知帳本：close 1 筆（H-28955d 商業記者：已加訊並同步 Bloomberg 查證內容，❓ 標記本體依規則留給 `/wiki-lint` 5c）、void 2 筆（H-817e3e、H-d575e8：功能記者核實內容已於既有記錄一致，無需重複記入）、開 1 筆（H-624b00 社群→功能：評估 spec-kit／orca／comet 三款新 agent 工作模式是否納入官方-社群功能對照矩陣新增列）
+
+## 2026-09-13 Query：裁示 09-11「Claude 消費版年齡限制政策」未分類條目
+
+- 來源：讀者版產生器 `scripts/build_reader_digest.py` 的聚焦漏收 WARN（09-11 聚焦第三條來源不在當日歸因帳本、也不在任何今日更新頁），對上 2026-09-11 Ingest 條目的「未分類待裁示」。
+- 裁示：比照既有先例收進 [[entities/claude-code]]「開發者須知」——該處已有 Persona 年齡驗證（06-22）一條，Anthropic 平台級帳號／年齡政策適用全產品含 Claude Code；不新開頁。功能記者規則 `.claude/reporter-rules/features/pages.md` 登記觸發邊「平台級帳號／年齡政策公告 → 本頁開發者須知」，累積逾 5 條再評估拆消費版產品頁。
+- 讀者版 `daily/2026-09-11.md` 已凍結，不回填；歸因帳本補一筆 `entities/claude-code`。
