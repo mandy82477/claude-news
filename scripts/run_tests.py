@@ -238,17 +238,12 @@ def main() -> int:
         proc = subprocess.run(
             [sys.executable, str(CHECK_SKILL_REFS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
         )
-        stream.write("
-" + (proc.stdout or "") + "
-")
+        stream.write("\n" + (proc.stdout or "") + "\n")
         if proc.stderr:
-            stream.write(proc.stderr + "
-")
+            stream.write(proc.stderr + "\n")
         skill_refs_ok = proc.returncode == 0
     else:
-        stream.write(f"
-WARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘
-")
+        stream.write(f"\nWARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘\n")
     stream.flush()
 
     return 0 if (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
