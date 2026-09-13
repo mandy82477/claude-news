@@ -42,28 +42,28 @@
 
 | 原檔的節 | 新家 |
 |---|---|
-| 檔首說明（兩個背景 agent 分讀、Step 2 不可包進背景 agent） | `.claude/commands/news-pipeline.md`；「Step 2 不在本檔案」一句在 `.claude/skills/news-gather/SKILL.md` |
-| `## 設定`（REPO_ROOT／PYTHON／模型／TARGET_DATE） | `.claude/commands/news-pipeline.md` 的兩段 Agent prompt（單一家，skill 端只寫「由派工 prompt 傳入」） |
-| `# Phase A 步驟`／`# Phase C 步驟` 標題 | `.claude/commands/news-pipeline.md` 的 `## Phase A 步驟：`／`## Phase C 步驟：` |
+| 檔首說明（兩個背景 agent 分讀、Step 2 不可包進背景 agent） | `.claude/skills/news-pipeline/SKILL.md`；「Step 2 不在本檔案」一句在 `.claude/skills/news-gather/SKILL.md` |
+| `## 設定`（REPO_ROOT／PYTHON／模型／TARGET_DATE） | `.claude/skills/news-pipeline/references/dispatch.md` 的兩段 Agent prompt（單一家，skill 端只寫「由派工 prompt 傳入」） |
+| `# Phase A 步驟`／`# Phase C 步驟` 標題 | `.claude/skills/news-pipeline/references/dispatch.md` 的 `## Phase A 步驟：`／`## Phase C 步驟：` |
 | `## 本機與雲端的行為必須一致` | `.claude/skills/news-gather/SKILL.md` |
 | `## Step 0`／`## Step 0b`／`## Step 1a`＋`### 補跑（backfill）注意事項`／`## Step 1c`／`## Step 2（不在本檔案）` | `.claude/skills/news-gather/SKILL.md` |
 | `## Step 1b：生成日報` 的步驟（0-1／0-2／讀料／寫入／3a／3a-2／3b／3d／3e／3f／3g／commit） | `.claude/skills/news-digest/SKILL.md` |
-| Step 1b 的「機械契約字串」表、輸出骨架、每條排版格式、檔尾兩行說明、📡 來源狀態表、System 語氣句 | `.claude/skills/news-digest/format.md` |
-| Step 1b 的聚焦四標籤門檻、行內連結格式、重點話題三條准入、各區塊收錄條件（含 🧭 專頁雷達與廠商發布判準）、存量盤點寫法、聚焦防重複、分層原則、3a-2 禁詞清單 | `.claude/skills/news-digest/selection.md` |
+| Step 1b 的「機械契約字串」表、輸出骨架、每條排版格式、檔尾兩行說明、📡 來源狀態表、System 語氣句 | `.claude/skills/news-digest/references/format.md` |
+| Step 1b 的聚焦四標籤門檻、行內連結格式、重點話題三條准入、各區塊收錄條件（含 🧭 專頁雷達與廠商發布判準）、存量盤點寫法、聚焦防重複、分層原則、3a-2 禁詞清單 | `.claude/skills/news-digest/references/selection.md` |
 | `## Step 2b：讀者版日報` 的步驟（取 diff／寫檔／`check_reader_digest.py`／內規外洩自檢／產出失敗退回） | `.claude/skills/reader-digest/SKILL.md` |
-| Step 2b 的「機械契約字串」表、模板、每條 ≤200 字元等格式條件、「不算學到」清單、主詞規則、網站版面 | `.claude/skills/reader-digest/format.md` |
+| Step 2b 的「機械契約字串」表、模板、每條 ≤200 字元等格式條件、「不算學到」清單、主詞規則、網站版面 | `.claude/skills/reader-digest/references/format.md` |
 | `## Step 3`／`## Step 4`＋`### gate 擋下時的修復迴圈`／`## Step 5`／`## Step 6`／`## 完成摘要`＋`### 📋 待使用者裁示` | `.claude/skills/web-publish/SKILL.md` |
-| `## 注意事項` | 逐條分進 news-gather 與 web-publish 的「本 skill 的邊界」節；Phase 劃分那一條回 `.claude/commands/news-pipeline.md` |
+| `## 注意事項` | 逐條分進 news-gather 與 web-publish 的「本 skill 的邊界」節；Phase 劃分那一條回 `.claude/skills/news-pipeline/SKILL.md` |
 
 **本次自條文搬進本檔的教訓敘事（正文只留判準句）：**
 
-- 「2026-07-25 與 2026-09-03 都發生過規則被原樣印進日報」——原在 Step 1b 輸出結構的開頭警語（現 `.claude/skills/news-digest/selection.md` 檔首）。
-- 「校準顯示此類條目 30 天存活率 0/9」（[新工具]）、「2026-08-01 校準顯示此類條目 30 天後續產出 0/2」（[持續追蹤]）、「2026-09-06 校準：此型 30 天存活率 0/2，樣本偏薄，下輪校準複核」（[社群趨勢]）——原在 Step 1b 聚焦選材門檻四條（現 `.claude/skills/news-digest/selection.md`「📌 今日聚焦」，只留判準句＋一行指回本檔）。
-- 「冷讀者實測：抓取時刻的來源行時間戳讓最沒新聞性的條目看起來最新鮮」「2026-09-04 冷讀者實測」（星數千分位）——原在 Step 1b 存量盤點條目的寫法（現 `.claude/skills/news-digest/selection.md`）。
+- 「2026-07-25 與 2026-09-03 都發生過規則被原樣印進日報」——原在 Step 1b 輸出結構的開頭警語（現 `.claude/skills/news-digest/references/selection.md` 檔首）。
+- 「校準顯示此類條目 30 天存活率 0/9」（[新工具]）、「2026-08-01 校準顯示此類條目 30 天後續產出 0/2」（[持續追蹤]）、「2026-09-06 校準：此型 30 天存活率 0/2，樣本偏薄，下輪校準複核」（[社群趨勢]）——原在 Step 1b 聚焦選材門檻四條（現 `.claude/skills/news-digest/references/selection.md`「📌 今日聚焦」，只留判準句＋一行指回本檔）。
+- 「冷讀者實測：抓取時刻的來源行時間戳讓最沒新聞性的條目看起來最新鮮」「2026-09-04 冷讀者實測」（星數千分位）——原在 Step 1b 存量盤點條目的寫法（現 `.claude/skills/news-digest/references/selection.md`）。
 - 「2026-08-02 提出的 feature-radar 防霸榜裁示因此擱置 6 天」——原在完成摘要「📋 待使用者裁示」（現 `.claude/skills/web-publish/SKILL.md`，改指「起因見沿革檔 2026-08-08」）。
 - 「2026-09-05 弄丟三位記者的成品」——原在 Step 5 的 `git stash` 禁令（現 `.claude/skills/web-publish/SKILL.md`，教訓仍指 `.claude/reporter-rules/wiki-reporter-shared.md`）。
 
-**registry 同步：** `.claude/review-registry.json` 原 25 組指向舊檔的 sync_pair 逐組換家；其中三組原本靠「所有 pattern 都住同一檔」成立，拆檔後依 pattern 所在 skill 分組——步驟標題錨點對 runbook 那組分成四組、本機／雲端一致那組分成三組、Phase 劃分那組分成三組，pattern 逐字不動。wiki-lint 6g 指路的檔名 pattern 改指 `.claude/skills/news-digest/selection.md`；bare_references 的舊檔 line_allowlist 條目失效刪除（該檔本來就沒有裸露的根目錄規則檔引用）。
+**registry 同步：** `.claude/review-registry.json` 原 25 組指向舊檔的 sync_pair 逐組換家；其中三組原本靠「所有 pattern 都住同一檔」成立，拆檔後依 pattern 所在 skill 分組——步驟標題錨點對 runbook 那組分成四組、本機／雲端一致那組分成三組、Phase 劃分那組分成三組，pattern 逐字不動。wiki-lint 6g 指路的檔名 pattern 改指 `.claude/skills/news-digest/references/selection.md`；bare_references 的舊檔 line_allowlist 條目失效刪除（該檔本來就沒有裸露的根目錄規則檔引用）。
 
 
 **2026-07-25 A**（本機／雲端行為一致）：冪等閘、push 重試最初只寫進雲端 runbook，等於本機跑同一條 pipeline 卻少了兩道保護。
@@ -80,7 +80,7 @@
 
 ## 2026-09-13（`/news-pipeline` 抽敘事）
 
-`.claude/commands/news-pipeline.md` 只留三段 Phase 表、兩條邊界條文與「TARGET_DATE 用 `date -u +%F`」一句，下列兩段敘事移入本檔。
+`.claude/skills/news-pipeline/SKILL.md` 只留三段 Phase 表、兩條邊界條文與「TARGET_DATE 用 `date -u +%F`」一句，下列兩段敘事移入本檔。
 
 **為何拆三段（巢狀背景的系統性限制）**：Step 2 需要用 Agent tool 呼叫記者 agent。若把這步包進背景 agent 內執行，「背景 agent 自己再派 agent」這個巢狀情境下，記者的完成通知會被系統送到最上層 session，而不是送回中間那層背景 agent——**即使呼叫時完全沒有設定 `run_in_background: true` 也一樣**，這是巢狀背景執行的系統性限制，不是措辭問題（已實際發生過一次）。因此 Step 2 由呼叫 `/news-pipeline` 的本 session 親自執行，且 `/news-pipeline` 本身也不可被包進背景 agent 呼叫。
 
