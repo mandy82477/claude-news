@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-12
 **最後新聞更新：** 2026-09-12
 
-> **重申 Claude 正式環境程式碼品質門檻高於人類**（2026-09-12）：Simon Willison 轉引發言，隔日開發者提「AI slop」質疑獲親回信（BI，09-12，僅標題）。
+> **Boris Cherny 親自回信「AI slop」質疑者**（2026-09-12）：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。
 
 ---
 

@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **最新動態**（2026-09-12）
 > - **Nvidia 洽談投資 Anthropic 鉅額 IPO**：Reuters 獨家稱正洽談中，尚未定案；若成真將以股東身分綁定算力生態，見 [[topics/anthropic-business#IPO 走到哪一格]]。
-> - **五角大廈採購爭議未息**：對 Anthropic 政府採購營收敘事添一分不確定，經過見 [[topics/anthropic-government-policy#三個戰場]]。
+> - **五角大廈傳十月前遷出全部機密 AI 工作負載**：僅涉聯邦機密採購，不影響商用訂閱與 API 收入，經過見 [[topics/anthropic-government-policy#三個戰場]]。
 
 ---
 

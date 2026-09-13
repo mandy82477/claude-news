@@ -2659,7 +2659,7 @@ window.WIKI_DATA = {
       "kind": "reader",
       "articleCount": 63,
       "itemCount": 10,
-      "preview": "Claude Code：v2.1.269：新增 claude plugin eval 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告；外掛開發者可用它做升級前的自動迴歸比對。",
+      "preview": "Claude Code：v2.1.269 新增外掛評分指令：claude plugin eval 可對外掛跑 eval 套件並產出 JSON／HTML 報告，外掛開發者能用它做升級前自動迴歸比對。",
       "topCount": 4
     },
     {

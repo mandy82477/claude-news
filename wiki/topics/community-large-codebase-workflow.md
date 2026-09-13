@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-10
 
 > **本週答案變動**（2026-09-12）
-> 三條線各補一則新節點：「除錯與分工」09-05 interns-review-plugin（3 個 fable agent 扮「實習生」對抗式審查）補上對抗式審查又一個具體實作；「索引與記憶」09-06 兩則同日——gentle-ai（Claude Code／Cursor／OpenCode／Codex 共用設定＋持久記憶＋規格驅動開發）補「可攜性」子軸線第二個案例、cpr-compress-preserve-resume（壓縮—保存—還原三段式跨 session 記憶）補「本地索引」子軸線；「Context / Token」09-10 nightshift（DAG 調度多 issue 工作流，疊 PCC 記憶＋向量 RAG＋滑動視窗三層 context 管理）作者具名稱官方 `/goal` 有 context rot 架構缺陷，屬單一開發者對官方功能的負向對照，未見獨立複測。「並行規模」線本輪無帶「主線」tag 的新節點，答案不變。
+> 有新節點的線 3 條（除錯分工／索引記憶／Context 管理），並行規模線本輪無新節點；本週答案不變，細節見頁內。
 
 ---
 

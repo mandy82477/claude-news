@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
 > **最新判讀**（2026-09-12）
-> 📉 負面（敘事型）：國防部傳十月前將機密 AI 工作負載自 Anthropic 遷出（經過見 [[topics/anthropic-government-policy]]）——未動任何數字，僅單一標題未經證實；下一步看十月是否如期遷出。
+> 📉 負面（敘事型）：傳國防部十月前把機密 AI 工作負載全數移出 Anthropic（此前僅三分之二），僅單一標題、未經證實；下一步看十月是否如期遷出。詳見 [[topics/anthropic-government-policy]]。
 
 ---
 
