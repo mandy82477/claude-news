@@ -11,9 +11,14 @@
 
 ## 專案架構
 
-- **`src/news_aggregator/`** — Python 爬蟲，每日抓 Claude / Anthropic 新聞 → `news/YYYY-MM-DD.md`。執行日誌 `src/logs/`，模組說明 `src/DesignDocument/`
-- **`wiki/`** — 從日報萃取的知識庫；`web_reader/` 是它與日報的網站版（`scripts/build_web.py` 建置）
-- 規則分三處：`.claude/rules/`（主 session，`paths:` 觸發）、`.claude/reporter-rules/`（記者與主編明文 Read）、`.claude/commands/`（指令）
+| 路徑 | 是什麼 |
+|---|---|
+| `src/news_aggregator/` | Python 爬蟲，每日產 `news/YYYY-MM-DD.md`；日誌 `src/logs/`，模組說明 `src/DesignDocument/` |
+| `news/` | 日報，唯讀原料 |
+| `wiki/` | 從日報萃取的知識庫，規則在 `wiki/CLAUDE.md` |
+| `web_reader/` | 日報與 wiki 的網站版，`scripts/build_web.py` 建置 |
+| `.claude/reporter-rules/` | 記者與主編規則，明文 Read |
+| `docs/rules-changelog/` | 規則沿革，只有人讀 |
 
 ## 這是一個 LLM wiki：三個動作
 
