@@ -1,6 +1,7 @@
 ---
 name: news-digest
 description: 每日 pipeline Step 1b：讀 gathered_items.json 寫 news/ 日報並自檢、commit；骨架見 format.md，判準見 selection.md。
+disable-model-invocation: true
 ---
 
 # Step 1b：生成日報

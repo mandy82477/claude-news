@@ -1,6 +1,7 @@
 ---
 name: wiki-lint-sweeps
 description: /wiki-lint B 段：主編親做／親查的十三個週更掃描（5a–5m），涵蓋熱度降溫、逾期待查證清算、結論表退場與投資訊號結算。
+disable-model-invocation: true
 ---
 
 # Wiki Lint — B 段：主編掃描（5a–5m）

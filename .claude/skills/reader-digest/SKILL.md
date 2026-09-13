@@ -1,6 +1,7 @@
 ---
 name: reader-digest
 description: 每日 pipeline Step 2b：把各 wiki 頁當日 callout 投影成 daily/ 讀者版並跑格式閘；由跑 /news-pipeline 的 session 親做。
+disable-model-invocation: true
 ---
 
 # Step 2b：讀者版日報（`daily/TARGET_DATE.md`）

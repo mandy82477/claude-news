@@ -1,6 +1,7 @@
 ---
 name: weekly-report
 description: 產生本週深度週報（頭條敘事＋技術討論深挖＋下週看什麼＋檔尾數字），輸出 weekly/YYYY-Wnn.md。週報本體，通常由 /weekly 代為呼叫。
+disable-model-invocation: true
 ---
 
 # Weekly Report — 週報產生

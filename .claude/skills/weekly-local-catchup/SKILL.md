@@ -1,6 +1,7 @@
 ---
 name: weekly-local-catchup
 description: /weekly 步驟 0：補跑雲端沒做的 lint 步驟（5b/5c 等）、呈報 lint 待裁示事項、跑開放迴路掃描並回報三個數字。
+disable-model-invocation: true
 ---
 
 # 本機專屬步驟補跑（`/weekly` 步驟 0）

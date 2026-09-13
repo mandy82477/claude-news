@@ -1,6 +1,7 @@
 ---
 name: web-publish
 description: 每日 pipeline 收尾段：commit wiki、web build gate、單一 push、寫 log；由 /news-pipeline Phase C agent 執行。
+disable-model-invocation: true
 ---
 
 # 收尾與發布（Step 3 / 4 / 5 / 6）

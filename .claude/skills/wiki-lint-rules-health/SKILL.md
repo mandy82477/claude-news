@@ -1,6 +1,7 @@
 ---
 name: wiki-lint-rules-health
 description: /wiki-lint C 段：規則檔健檢（6a–6l）——規則矛盾、引用驗證、遵守率、規則年齡、來源健康、品質指標、密度、突變測試、對抗輪、連結缺口、讀者語言，收尾記漏抓帳與規則版本戳。
+disable-model-invocation: true
 ---
 
 # Wiki Lint — C 段：`6. 規則檔健檢`（6a–6l）

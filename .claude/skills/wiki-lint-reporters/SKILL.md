@@ -1,6 +1,7 @@
 ---
 name: wiki-lint-reporters
 description: /wiki-lint A 段：載入 wiki 全貌、六記者並行 lint 派工、收報兩層核對、月度蒸餾，再處理語意分岔候選、新實體頁與 overview 改寫。
+disable-model-invocation: true
 ---
 
 # Wiki Lint — A 段：六記者派工與收報（步驟 1–5）

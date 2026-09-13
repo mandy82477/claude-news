@@ -1,6 +1,7 @@
 ---
 name: news-gather
 description: 每日 pipeline 抓料段：缺跑檢查、冪等閘、Python 抓取歸檔、emitted-cache 確認；由 /news-pipeline Phase A agent 執行。
+disable-model-invocation: true
 ---
 
 # 抓料與閘門（Step 0 / 0b / 1a / 1c）

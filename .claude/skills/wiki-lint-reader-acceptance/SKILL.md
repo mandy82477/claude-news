@@ -1,6 +1,7 @@
 ---
 name: wiki-lint-reader-acceptance
 description: /wiki-lint D 段：讀者模擬驗收（步驟 7）與歷史質疑代打（7b）——三種目標讀者各出一題走 3 跳驗收，再從題庫抽 2 題跑探針。
+disable-model-invocation: true
 ---
 
 # Wiki Lint — D 段：讀者驗收與質疑代打（7、7b）

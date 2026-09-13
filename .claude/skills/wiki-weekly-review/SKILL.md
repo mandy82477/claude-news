@@ -1,6 +1,7 @@
 ---
 name: wiki-weekly-review
 description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開子區塊/升熱度），經使用者確認後執行。
+disable-model-invocation: true
 ---
 
 # Wiki 週度延伸回顧
