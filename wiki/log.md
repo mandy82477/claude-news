@@ -6312,3 +6312,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **pricing 通路與乘數複查（5e）**：不觸發——該區塊「資料截至 2026-09-03」距今 10 天未逾 30 天。⚠️ **更正 09-12 lint 的漏抓帳 (4)**：該筆記「通路表缺資料截至欄位使 30 天複查條件永不觸發」，實際上該欄在節導言句中（`wiki/entities/pricing.md` 「## 通路與乘數」首段），欄位存在、條件可觸發，該筆漏抓帳建議撤銷
 - **code-quality-decline 三條線（5m）**：4 個 issue 逐一以 `gh issue view` 比對／表上 3 列全部維持原判定（#41930 CLOSED 未變；#65687 OPEN；#77136 OPEN 最後更新推進至 09-12、留言 121 則；#83510 OPEN 最後更新推進至 09-10、留言 13 則）／已更新「Opus 5 上線後的品質觀感」列的最後更新日與留言數／資料截至改為 2026-09-13。無任一列由「還在」翻「已結案」，`## 摘要` 不需改寫
 - **懸置語法檢查**：通過（標記 164 → 157 筆，舊語法存量 39 筆未增加）
+
+## 2026-09-13 待裁示事項清理（使用者裁決「自己修到好」）
+
+把 09-12 雲端 lint 留下的 13 項待裁示逐項處置。**已結 12 項，未結 1 項**（蒸餾，見末段）。
+
+- **overview 不上站（最優先，讀者會踩到）→ 已修，且修的是整類不是一頁**：`build_web.py` 改為對所有根層頁產出 `wiki/<slug>.json`（`ROOT_PAGE_NO_PRODUCT` 明列不產的五個：index／log／metrics／reader-notes／CLAUDE，feature-radar 另走 data.js 行內渲染）。新增測試 `src/tests/test_build_web_root_pages.py` 看守「index.md 連到的根層頁都必須有產物」——**它當場抓到第二個死路 `feature-radar-archive-2026-05`**，證明只修 overview 一頁不夠。`app.js` 補 overview 型別的 wikilink 路由、搜尋結果標籤（總覽）與地圖可開啟判定。已在本機 3131 埠實測：`data/wiki/overview.json` HTTP 200、`openWikiPage('overview','overview')` 渲染出 6,754 字內容、標題正確
+- **規則矛盾 (a) 死鏈節奏 → 已修**：本文寫「每週」而回報模板與 log 模板留著「非本月首次 lint，跳過」的月度分支；兩處模板改為每週，並補「報告過期時寫 ⚠️ 不據以標註」的寫法
+- **規則矛盾 (b) 已知問題狀態四選一 vs 五值 → 已修**：`features/pages.md` 第 134 行改為五選一（加 🔎 查無官方），與同檔第 144 行既有的五值敘述對齊
+- **規則矛盾 (c) 讓位註記 vs 讀者語言禁詞 → 已修**：三份規則檔（commercial／community／safety-policy）共 6 處「（未列入…：表滿載，YYYY-MM-DD）」全部改寫為 `%% … %%` 維運備忘並註明理由；**回填 `entities/pricing` 既有 4 筆**，該頁讀者語言存量 9 → 5 筆、全庫 33 → 29 筆
+- **runbook 步驟表落後八步 → 已修，並補上反向斷言**：`docs/cloud-runbooks/weekly-lint.md` 補 5i／5j／5k／5l／6l／7b 六列（5h／5m 09-12 已補）。**根因是 registry 的 pattern 清單自己漏列那幾步**——配對只驗「清單裡的都在兩邊」，不驗「skill 有的都在清單裡」，所以 runbook 落後八步仍全綠。已把六個步驟標題加進對應三組 sync_pairs，並在 `_note` 寫明「新增步驟必須同步加進 patterns」。順手把 7b 的標題在 runbook 與 skill 兩側對齊為「7b. 歷史質疑代打」
+- **主線 tag 分母寫死 115 → 已修**：`community/pages.md` 第 5 條改為附計數指令、每輪現算；`community/weekly.md` 與兩份 lint 回報模板的 `N/115` 改為 `N/M`。實測目前 97 則節點、已填 27 則（與 09-12 lint 記的 146 亦不符，正是寫死分母會失真的證據）
+- **`_rejected` 發現窗不寫對帳列 → 已修**：`skill_interest_snapshot.py` 對 `_rejected` 中帶 `slug` 的整類撤下續寫 `note=rejected` 列；`wiki-lint-rules-health` 的 note 值域同步加入 `rejected`，並寫明「window 從 CSV 整個消失才是異常」
+- **併頁候選 anthropic-agent-stack ↔ community-large-codebase-workflow → 裁定不併，改補連結**：兩頁視角不同（官方給了什麼零件 vs 社群怎麼組），已在雙方「相關實體」互加一行並各寫一句分工說明
+- **patterns 淘汰候選 Fast Context Task Router → 已降註記**：熱度 🔥🔥 → 🔥，標題加「原專案已下架，不要照著找」，並寫明 Microsoft 原專案自 07-05 下架、此後兩個月零後續；留在演進線上是因為「本地分流」的想法被後續模式繼承
+- **榜單汰換 → 已裁定並執行**：Search Arena 本週恢復直接抓取，**不汰換**；Aider Polyglot 連續 7 週停更、榜上無現役模型，**移出快照表**（18 → 17 榜），「寫 code」這題由 SWE-bench 承接（Pro 子集正是 Aider 想量而量不到的真實工程難度），其題型與算分方式留在頁尾索引供對照
+- **建頁候選 → 建 2 個、不建 2 個**：`entities/simon-willison`（全站引用最多的第一手觀點來源，頁面回答「為什麼一直引用他、他的判斷後來怎樣了」而非人物百科）與 `entities/cowork`（Anthropic 自家產品，屬官方核心主軸；Windows 不穩定叢集留在 claude-code 頁、本頁只指路不複製）已建並各補一列 index。**Codex 與 Cursor 不建頁**——競品工具本身的動態不在蒐集範圍，讀者需要的競爭脈絡 `topics/competitor-landscape` 已承接；此決定記在這裡，避免每輪 lint 重新提案
+- **規則密度蒸餾 2 檔 → 提案已失效，無事可做**：`lint_health.py density` 重測 28 檔**全部低於門檻**（最長 239 行）。原提案的 wiki-lint.md（735 行）與 weekly-report.md（380 行）已於 09-13 的 commands→skills 重構中拆散
+- **ai-agent-safety-archive 狀態統一（擱置 2 週）→ 已無事可做**：9 個 archive 頁的 frontmatter 與標頭狀態實測全為 `resolved（封存頁）`，早前某輪已統一
+- **Q2 資料缺口（擱置 2 週）→ 已修，但缺的不是原本寫的那個**：`source_funnel.jsonl` 的三個數字是永久保留的，真正的窗是 `src/gathered_archive/` 只留 14 天原料。已在 `inquiry_bank.py` 的 Q2 探針補上此前提：落在保留窗外時只做得到數字層，回報必須寫明「原料已過保留窗，只驗數字不驗逐條」，不得當成完整通過
+- **5d 歸因日期誤差（擱置 2 週）→ 已修**：5d 原本假設歸因條目必在該日日報，但記者派工實際涵蓋「當日抓到但未刊出」的條目，對不到就被誤判為 ❓ 無對應（09-12 於 07-26 issue #48407 踩到）。規則改為：對不到先查 `gathered_archive`，新增第四種結果 📦「來源為未刊出的抓取條目」單獨記數，不計入 ❓
+- **5e 漏抓帳撤銷**：09-12 記「pricing 通路表缺『資料截至』欄位使 30 天複查永不觸發」——實測該欄在節導言句中（`entities/pricing.md`「## 通路與乘數」首段，資料截至 2026-09-03），條件可正常觸發，該筆漏抓帳不成立
+
+**未結 1 項｜蒸餾候選 18 個時段**：使用者已裁決執行，四位記者派工後**全部因 session 配額上限（台北 16:00 重置）中止**，工作樹乾淨、無半成品。下次執行時的已定案事項：`safety-china-trust-dispute` 2026-06 本輪不蒸（僅 1 條，等 07 月一起）；`recursive-self-improvement` 需先建 archive 子頁，且該頁議題本週正在延燒、須先驗三條例外的第 3 條；`code-quality-decline` 2026-06 同理（09-10／09-12 才剛加新條目）。
