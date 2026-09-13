@@ -322,6 +322,15 @@ def main() -> int:
             note = "ok"
         _record_queue(f"interest:{cat['slug']}", queued=len(d["repos"]),
                       emitted_n=min(len(d["repos"]), cfg["top_n"]), now=now, note=note)
+    # `_rejected` 裡有兩種東西：被否決的 *查詢*（只有 query 欄）與整個被撤下的
+    # *類別*（有 slug）。後者若不續寫對帳列，它會從 discovery_queue_history.csv
+    # 直接消失——而「刻意撤下」與「窗死」在對帳端長得一模一樣（2026-09-12 lint
+    # 於 interest:source-resilience 上實際踩到）。故比照 retired 續寫 note 列。
+    for rej in cfg.get("_rejected", []):
+        if not rej.get("slug"):
+            continue
+        _record_queue(f"interest:{rej['slug']}", queued=0, emitted_n=0, now=now,
+                      note="rejected")
     PAGE.write_text(render(cfg, data, now), encoding="utf-8")
     logger.info("skill-interest-watch: %d categories, %d repos, page written",
                 len(cfg["categories"]), len(star_seen))

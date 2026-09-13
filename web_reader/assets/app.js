@@ -909,6 +909,7 @@
     if (p.startsWith('entities/')) { wiId = p.slice(9); wiType = 'entity'; }
     else if (p.startsWith('topics/')) { wiId = p.slice(7); wiType = 'topic'; }
     else if (p === 'feature-radar')  { wiId = 'feature-radar'; wiType = 'radar'; }
+    else if (p === 'overview' || p.startsWith('feature-radar-archive')) { wiId = p; wiType = 'overview'; }
     else {
       const wdata = window.WIKI_DATA || {};
       wiId = p;
@@ -1376,7 +1377,7 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     ).join('');
 
     const _pt = item.pageType || type;
-    const typeLabel = _pt === 'entity' ? '實體' : _pt === 'radar' ? '熱度雷達' : '議題';
+    const typeLabel = _pt === 'entity' ? '實體' : _pt === 'radar' ? '熱度雷達' : _pt === 'overview' ? '總覽' : '議題';
 
     // ── Enterprise tracker: inject matrix above markdown body ─────────────
     let trackerHtml = '';
@@ -1665,7 +1666,7 @@ ${kidsHtml}
       const isDigest  = pageType === 'digest';
       const isWeekly  = pageType === 'weekly';
       const typeCls   = (pageType === 'topic' || isDigest || isWeekly) ? 'topic' : 'entity';
-      const typeLabel = isDigest ? '日報' : (isWeekly ? '週報' : (isRadar ? '雷達' : (pageType === 'topic' ? '議題' : '實體')));
+      const typeLabel = isDigest ? '日報' : (isWeekly ? '週報' : (isRadar ? '雷達' : (pageType === 'overview' ? '總覽' : (pageType === 'topic' ? '議題' : '實體'))));
 
       // For name/summary hits show summary; for content hits show match context
       let snippetHtml = '';
@@ -2070,7 +2071,7 @@ ${kidsHtml}
     return 3.5 + Math.sqrt(n.inBody || 0) * 2.1;
   }
   function mapOpenable(n) {
-    return n.pageType === 'entity' || n.pageType === 'topic' || n.id === 'feature-radar';
+    return n.pageType === 'entity' || n.pageType === 'topic' || n.id === 'feature-radar' || n.id === 'overview';
   }
   function mapColor(n) { return mapCss(MAP_DOMAIN_TOKEN[n.domain] || '--ink-2'); }
 

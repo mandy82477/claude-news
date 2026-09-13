@@ -29,13 +29,19 @@
 | `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
 | `wiki-lint-sweeps` `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
 | `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過寫待辦 |
+| `wiki-lint-sweeps` `5i. 安全政策兩頁結論表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
+| `wiki-lint-sweeps` `5j. 商業健康度四表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
+| `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 `model: "sonnet"` |
+| `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
 | `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
 | `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
 | `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；**發現只回報**——修規則檔屬「要求確認」→ 待辦，並登 `lint_health.py misses` `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6l. 讀者語言閘存量清理` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
 | `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |
+| `wiki-lint-reader-acceptance` `7b. 歷史質疑代打` | 自主執行 `[加入: 2026-09-13]`，但**開工前必須先 `git fetch --unshallow`**：雲端容器是淺 clone，Q1 溯源探針的 `git rev-list --before` 在淺 clone 下靜默回空、看起來像「近 7 天沒有新數字」（2026-09-12 實際踩到）|
 | `wiki-lint` `8. 記錄本次 lint` | 自主執行，待辦清單寫在這裡 |
 | `wiki-lint` `9. 更新 wiki/index.md` | 自主執行 |
 | `wiki-lint` `10. 收尾閉迴路` | 自主執行，套用 `_shared.md` 的收尾閉迴路（單一 push），commit 訊息用 `wiki: weekly lint (cloud) <date>` 與 `web: rebuild (cloud) <date>` |

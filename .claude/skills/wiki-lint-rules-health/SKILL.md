@@ -78,7 +78,7 @@ python scripts/lint_health.py age --days 60
 
 發現 ⚠️ 時回報使用者，不自行修改管線程式。
 
-**發現窗產消對帳：** 讀 `data/discovery_queue_history.csv`（各發現窗每日抓取時寫入，schema `date,window,queued,emitted,note`；window 現值 `rising`／`crossing`／`inventory`／`hn_bridge`，note 值域 `ok|cold_start|disabled|retired|error`；`retired`＝該類已判定結構性不適任、刻意撤下，**不得判為窗死**）。**逐 window 判讀**：
+**發現窗產消對帳：** 讀 `data/discovery_queue_history.csv`（各發現窗每日抓取時寫入，schema `date,window,queued,emitted,note`；window 現值 `rising`／`crossing`／`inventory`／`hn_bridge`，note 值域 `ok|cold_start|disabled|retired|rejected|error`；`retired` 與 `rejected` 都是**刻意撤下**（前者為窗自身退役，後者為整個類別被移進設定檔的 `_rejected`），兩者**皆不得判為窗死**；反過來說，**一個 window 從 CSV 上整個消失才是異常**——2026-09-12 lint 就是這樣把 `interest:source-resilience` 誤看成窗死了 7 天）。**逐 window 判讀**：
 - 某 window 佇列量（queued−emitted 積壓）連兩週上升、或排空預估 > 30 天 → ⚠️ 回報使用者（提高該窗配額／一次清倉擇一），不得只抄數字
 - **某 window 連 3 天完全缺列 → ⚠️「該窗未執行或靜默死亡，查 daily gather」**——「今天沒有候選」（queued=0 的列）與「窗沒跑」（整列缺席）必須分得開
 - 檔案缺失或全檔最新日期距今 > 3 天 → ⚠️「對帳未寫入，查 daily gather 是否失敗」——**掃描失敗不得當成 0**
@@ -149,7 +149,7 @@ python -c "import json;d=json.load(open('data/link_health.json',encoding='utf-8'
 📊 品質指標（近 7 天 / 14 天窗口）：
   ref 覆蓋率：XX%（閾值 80%）→ ✅ / ⚠️（缺 ref 日期：…）
   採用驗證率：⏳→⚡/✅ 共 N 條中 M 條達成（XX%，僅供判讀）／非本月首次 lint，跳過
-  外部死鏈：共 N 條疑似死鏈，已標註 M 條 / 非本月首次 lint，跳過
+  外部死鏈：共 N 條疑似死鏈，已標註 M 條（每週執行；報告過期時寫「⚠️ link_health.json 過期，本輪不據以標註」）
 ```
 
 **趨勢表 append：** 算完以上指標後，在 `wiki/metrics.md` 表格 append 一列（只 append 不改舊列；月度指標非首次 lint 時該欄填「跳過」）；並讀最近 3 列，輸出一句趨勢判讀（持平／惡化中／已回升），**惡化中即使未破警戒線也要標 ⚠️**。

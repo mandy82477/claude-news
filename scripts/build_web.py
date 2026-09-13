@@ -470,6 +470,30 @@ def parse_radar(f: Path) -> dict:
     }
 
 
+# 根層頁（wiki/*.md）中不產頁面產物者：index 是路由本身、log 只有維護者讀、
+# metrics 與 reader-notes 是內部帳、CLAUDE.md 是規則檔、feature-radar 另走
+# data.js 的 `radar` 鍵行內渲染。其餘一律要有產物，否則 index 連過去就是死路。
+ROOT_PAGE_NO_PRODUCT = {"index", "log", "metrics", "reader-notes", "CLAUDE", "feature-radar"}
+
+ROOT_PAGE_SUMMARY = {
+    "overview": "現在整個 Claude / Anthropic 生態在發生什麼——每週重寫的當前局勢總覽。",
+}
+
+
+def parse_root_page(f: Path) -> dict:
+    """根層頁（overview、feature-radar 的月度封存頁…）的頁面產物。
+
+    死因看守：radar 另有 data.js 的 `radar` 鍵可行內渲染，這些頁沒有——
+    它們只靠 wiki/<id>.json 這一條路。2026-09-12 抓到 overview 沒有產物，
+    而 index.md 把它列為讀者入口，點進去是死路。
+    """
+    d = parse_radar(f)
+    d["id"] = f.stem
+    d["pageType"] = "overview"
+    d["summary"] = ROOT_PAGE_SUMMARY.get(f.stem, d["name"])
+    return d
+
+
 def attach_sedimented_badges(digest_all: dict, entities: list, topics: list) -> None:
     """為每篇日報標記「已沉澱」——沿用 wiki 頁既有的 lastNewsUpdate 欄位（不新增
     資料管線）：若某 wiki 頁 lastNewsUpdate 等於日報日期，且該頁「name」出現在
@@ -1427,6 +1451,15 @@ def build():
         except Exception as e:
             print(f"  [warn] feature-radar: {e}")
 
+    root_pages = []
+    for _f in sorted(WIKI_DIR.glob("*.md")):
+        if _f.stem in ROOT_PAGE_NO_PRODUCT:
+            continue
+        try:
+            root_pages.append(parse_root_page(_f))
+        except Exception as e:
+            print(f"  [warn] root page {_f.stem}: {e}")
+
     # ── Enrich enterprise-tool-tracker with matrix data ──────────────────────
     tracker_md = ROOT / "wiki" / "topics" / "enterprise-tool-tracker.md"
     tracker_data = parse_enterprise_tracker(tracker_md)
@@ -1442,6 +1475,7 @@ def build():
     current_wiki_ids  = {item["id"] for item in entities + topics}
     if radar:
         current_wiki_ids.add(radar["id"])  # prevent stale-cleanup of feature-radar.json
+    current_wiki_ids |= {rp["id"] for rp in root_pages}
     for stale in existing_wiki_ids - current_wiki_ids:
         (OUT_WIKI_DIR / f"{stale}.json").unlink()
         print(f"  [clean] removed stale wiki/{stale}.json")
@@ -1451,6 +1485,9 @@ def build():
     if radar:
         with (OUT_WIKI_DIR / "feature-radar.json").open("w", encoding="utf-8") as fp:
             json.dump(radar, fp, ensure_ascii=False, indent=2)
+    for rp in root_pages:
+        with (OUT_WIKI_DIR / f"{rp['id']}.json").open("w", encoding="utf-8") as fp:
+            json.dump(rp, fp, ensure_ascii=False, indent=2)
 
     # ── Write per-digest JSON files ───────────────────────────────────────────
     OUT_DIGEST_DIR.mkdir(parents=True, exist_ok=True)

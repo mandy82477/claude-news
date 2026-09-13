@@ -602,7 +602,8 @@
         "link_health\\.json",
         "checked_at"
       ],
-      "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊"
+      "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊",
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": ".claude/skills/web-publish/SKILL.md <-> wiki-lint.md：兩處 web build gate 都必須走 gate_web_build.py",
@@ -769,9 +770,14 @@
         "docs/cloud-runbooks/weekly-lint.md"
       ],
       "patterns": [
-        "逾期待查證清算"
+        "逾期待查證清算",
+        "5i\\. 安全政策兩頁結論表退場複查",
+        "5j\\. 商業健康度四表退場複查",
+        "5k\\. 社群三張結論表退場複查",
+        "5l\\. 模型頁世代表複查"
       ],
-      "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊"
+      "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊",
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": "待查證回訪措辭鐵則：不得寫成「至今無後續」（只掃日報就宣稱世界沒有，會讓懸置被讀成已確認——2026-08-08 pricing 懸置 20 天的防再犯）",
@@ -1035,7 +1041,8 @@
       "patterns": [
         "Lane A（本輪額度 10）",
         "Lane B（本輪額度 8）"
-      ]
+      ],
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": "check_pending_markers.py 產消對帳 <-> wiki-lint 5c：告警產出端與消費端同進退（只印不讀＝偵測器印給空氣看）",
@@ -1609,8 +1616,13 @@
         "5f\\. devpractice 週彙整",
         "5g\\. 高引用但停滯",
         "5h\\. 投資訊號回顧環",
-        "5m\\. code-quality-decline"
-      ]
+        "5m\\. code-quality-decline",
+        "5i\\. 安全政策兩頁結論表退場複查",
+        "5j\\. 商業健康度四表退場複查",
+        "5k\\. 社群三張結論表退場複查",
+        "5l\\. 模型頁世代表複查"
+      ],
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": "雲端 weekly runbook <-> wiki-lint-rules-health：C 段步驟標題錨點逐字相符",
@@ -1624,9 +1636,10 @@
         "6h\\. 規則密度審查",
         "6i\\. 檢查器的檢查：突變測試",
         "6j\\. 對抗輪（月度）",
-        "6k\\. 連結缺口偵測（每輪）"
+        "6k\\. 連結缺口偵測（每輪）",
+        "6l\\. 讀者語言"
       ],
-      "_note": "6a/6b/6c/6d/6e/6f/6g/6l 在 runbook 走「健檢分項」的措辭判準、不逐列列出（原設計即如此），故不入本組 pattern。"
+      "_note": "6a/6b/6c/6d/6e/6f/6g/6l 在 runbook 走「健檢分項」的措辭判準、不逐列列出（原設計即如此），故不入本組 pattern。 2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": "雲端 weekly runbook <-> wiki-lint-reader-acceptance：D 段步驟標題錨點逐字相符",
@@ -1636,8 +1649,10 @@
         ".claude/skills/wiki-lint-reader-acceptance/SKILL.md"
       ],
       "patterns": [
-        "7\\. 讀者模擬驗收"
-      ]
+        "7\\. 讀者模擬驗收",
+        "7b\\. 歷史質疑代打"
+      ],
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
     },
     {
       "name": "月度判斷法單一口徑：/wiki-lint 總指揮與 /wiki-weekly-review 都以 wiki/metrics.md 的產出物判斷本月是否已跑過（2026-09-13 統一；原 lint 端讀 wiki/log.md 的執行記錄，兩套口徑會在同一個月給出相反答案）",

@@ -301,7 +301,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Reddit r/ClaudeCode：質疑用量配合 8/19「50% 提升永久化」而暗中調降（單一貼文，未經證實）**：使用者質疑 Anthropic 暗中調降用量，以在傳聞的「50% 用量提升」8/19 永久生效前後製造對比（score=0，Reddit RSS 無讚數非低互動指標；屬使用者推測，非事實）。**查證本頁既有紀錄**：本頁記錄的「週用量 +50%」促銷（2026-06-15 起臨時提高、多次延長至 2026-07-19）已由 07-20 分界取代，**未見與「8/19 永久化」對應的官方公告**；貼文所稱「8/19」與既有時程（7/19）不吻合，可能指涉另一項未收錄的官方承諾，或屬時程誤記；具體指控查證見下方標記（Reddit r/ClaudeCode，2026-08-14）
 - **✅ 08-18 官方公告部分澄清（是「延長至 8/31」，非「永久化」）**：08-18 官方公告證實「週用量 +50%」促銷持續延長中，**並未如本頁此前誤記般已於 07-19 失效**——貼文對促銷仍生效的直覺並非空穴來風。惟官方措辭為暫時延長至 **2026-08-31**，非永久政策。
 - ❓ **待查證**（標 2026-08-14｜查 暗中調降用量、throttling｜複 2026-09-12）｜**貼文中「暗中調降用量以製造對比效果」的具體指控**仍未獲官方證實或否認，不因促銷延長本身而視為解決。已掃日報至 2026-08-29 無後續；官方頁面未查證
-- （未列入總表：表滿載，2026-09-06）
+- %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
 
 #### 🔴 2026-08-12：升級方案付款流程新爆計費 bug——PaymentIntent 於確認完成前遭提前作廢
 
@@ -317,12 +317,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### 🔴 2026-08-04：Reddit 回報 Max 20x 用量在未使用期間半小時內從 0% 衝到 100%，疑似配額計算異常
 
 - **Reddit r/ClaudeAI 週熱門回報**：Max 20x 用量在**未使用 Claude 的情況下**半小時內從 0% 攀升至 100%（週熱門，2026-08-04）。**與既有已知問題的關聯（推論，待證實同源）**：症狀與 [[entities/claude-code]] 已記錄的 GitHub Issue #41788〈Max 20 plan: rate limit 100% exhausted within ~70 minutes after reset〉（版本迴歸 bug）高度相似，皆為用量在短時間、無明顯使用下被耗盡；兩者是否同根因、同批受影響用戶均未見交叉確認，不可合併（Reddit https://www.reddit.com/r/ClaudeAI/comments/1vf6i4y/max_20x_usage_went_from_0_to_100_in_half_an_hour/）
-- （未列入總表：表滿載，2026-09-06）
+- %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
 
 #### 🔴 2026-08-02：Max 5x → Max 20x 訂閱升級持續失敗，與此前三起已知 issue 同源
 
 - **GitHub Issue #55266**：Max 5x 升級至 Max 20x 失敗，系統回報「Unable to update subscription」；Issue 標題指此問題與此前三起 issue（#10832、#50710、#43118）「same pattern as」，暗示升級流程存在持續性而非一次性的系統問題。**與既有事件的關係**：本頁已多次記錄 Max 計費爭議（06-16 集體訴訟、07-02 升級介面誤導扣費、07-24/25 Fable 5 用量點數異常），本則獨立於「用量計量」之外，聚焦「升級操作本身無法完成」；長期未解可能直接阻擋用戶轉向高階方案，衝擊訂閱轉換率與客服負擔（推論；受影響規模、issue 建立時間、官方回應未見細節）（GitHub https://github.com/anthropics/claude-code/issues/55266）
-- （未列入總表：表滿載，2026-09-06）
+- %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
 
 #### 🔴 2026-07-25：Fable 5 Max 方案異常追蹤更新——留言數攀升至 42，新增「靜默降級 Opus 4.8」細節
 
@@ -350,7 +350,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **長期 Max 用戶反映升級介面誤導、退款無門**：Reddit r/ClaudeAI（score 未標，07/02 05:44 UTC）一則熱門貼文指出，長期 Max 用戶 5 月底將方案從 $100/月升級到 $200/月時，介面誤導其誤購 $200 credits（而非升級訂閱本身），事後找不到有效退款客服管道，一個多月問題未解決，貼文標題直指「Claude 客服是幾乎所有科技公司中最差的」。**對留存的意涵**：這是繼 [[topics/code-quality-decline]] 用戶退款訴求、6/16 Max 集體訴訟（見「計費切割風波」6/16 條目）之後，另一起具體指向「客服/退款流程缺失」而非「模型能力」的留存風險案例；升級付費流程的 UX 缺陷若造成非自願扣費，可能加劇既有集體訴訟的輿論壓力（推論）（Reddit https://www.reddit.com/r/ClaudeAI/comments/1uliph2/claude_truly_has_the_worst_customer_support_out/）
 - **企業合作層級（Select vs Preferred）資訊不透明**：同日 Reddit r/ClaudeAI 另有使用者詢問 Anthropic 企業認證 Select 與 Preferred 合作層級的具體差異（純提問，無官方或社群解答內容）；此分級用語亦見於 [[topics/anthropic-business]] 6/30 DataArt「精選（Select）合作夥伴」條目，但兩層級的權益/門檻差異目前無公開資料，待補充（Reddit https://www.reddit.com/r/ClaudeAI/comments/1ulj6r4/partnership_levels_select_vs_preferred/）
-- （未列入總表：表滿載，2026-09-06）
+- %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
 
 #### 🔴 2026-06-24：隱私政策更新 + 帳號盜刷事件
 
