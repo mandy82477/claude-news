@@ -3,17 +3,17 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-09-10"
-last_news_update: "2026-09-10"
+last_updated: "2026-09-12"
+last_news_update: "2026-09-12"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 35
-attribution_count: 26
-attribution_last: "2026-09-10"
+attribution_count: 27
+attribution_last: "2026-09-12"
 top_source: "reddit"
 pending_count: 2
 pending_overdue: 1
@@ -27,8 +27,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-10
-**最後新聞更新：** 2026-09-10
+**最後更新：** 2026-09-12
+**最後新聞更新：** 2026-09-12
 
 > **三條線，只有一條有官方說法**（2026-09-03）
 > 09-03 全模型錯誤率升高、同日排除，屬服務穩定性事件不是退步。04 月那次官方認了也修了；06 月起的 token 異常與 07-25 起的 Opus 5 品質觀感，到今天都沒有官方說法。
@@ -135,7 +135,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 主張 | 則數 | 最後動態 | 證據硬度 |
 |---|---|---|---|
 | **泛化變慢／變囉唆**（不指名模型版本）| 6 | 2026-08-26「I miss the old Claude Code」 | 單一貼文（HN 25 分）＋五則無互動數貼文 |
-| **Opus 5 過度自信、難以調教** | 3 | 2026-08-13「rage-inducing to use」 | 單一貼文（其中一則登上該週熱門榜）|
+| **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
 | **懷疑正在被 A/B 測試降 effort** | 4 | 2026-09-10「did anthropic nerf fable again」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark ❓ 待查證 ⟨Q-01⟩ | 僅標題可用，數字未見報導 |
 | **二進位對 Opus 5 的硬編碼限制** | 1 | 2026-07-26（已查證屬實，見 [[topics/community-tech-discussions]]）| GitHub issue #80988 |
@@ -232,6 +232,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-09
+
+#### 2026-09-12
+- **「Hate Opus 5. Really dont know why they did this」：「Opus 5 過度自信、難以調教」主張第四則**：r/ClaudeCode 使用者抱怨 Opus 5 話變多但常缺乏根據、易離題下結論，認為比前代模型更難用；單一貼文，無互動數可佐證，方向與既有三則一致，只說明現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wecaw5/hate_opus_5_really_dont_know_why_they_did_this/)）
 
 #### 2026-09-10
 - **「40% session usage on max plan in 30 mins」：Token 消耗異常訊號群第十則**：使用者回報先前以公司 $100 Teams 方案幾乎用不完週限額，改用 Opus 5 high／xHigh 後 30 分鐘內即耗掉週用量的 40%；無互動數可佐證，訊號方向與既有九則一致（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wckk5k/40_session_usage_on_max_plan_in_30_mins/)）

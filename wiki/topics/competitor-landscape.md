@@ -12,8 +12,8 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 59
-attribution_count: 96
-attribution_last: "2026-09-09"
+attribution_count: 97
+attribution_last: "2026-09-12"
 top_source: "google-news"
 pending_count: 9
 pending_overdue: 6
@@ -210,6 +210,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-12
+- **Google（Gemini）**：HN 討論稱 Gemini 2.5 Pro／Flash 十月停用、尚無 GA 版 Pro 級後繼；長文件利基（千頁僅需 30 萬 tokens）Anthropic／OpenAI 均無同等方案，代價逾 10 倍 → 需要此利基的工程師暫無替代可轉。僅單一 HN 討論串（19 分），無官方公告佐證（Hacker News）
 
 ### 2026-09-08
 - **Cognition**（Devin 開發商）：The Tech Buzz 報導完成新一輪募資，估值達 480 億美元，AI 編碼賽道戰力升級；僅標題可用，資金用途、投資人名單未見報導（Topic Watch）

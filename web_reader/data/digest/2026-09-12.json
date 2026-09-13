@@ -1,27 +1,440 @@
 {
   "date": "2026-09-12",
-  "generatedAt": "",
-  "articleCount": 0,
-  "sourceCount": "",
+  "generatedAt": "2026-09-12 22:07 UTC",
+  "articleCount": 63,
+  "sourceCount": "14/14",
   "bulletin": "",
-  "topStories": [],
-  "techUpdates": [],
-  "mediaReports": [],
-  "discussions": [],
+  "topStories": [
+    {
+      "title": "[BUG] Missing HCS services: vfpext - Cowork not working on Windows 11 Pro",
+      "url": "https://github.com/anthropics/claude-code/issues/74649",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 10:13",
+      "sentiment": "",
+      "body": "Windows 11 Pro 使用者回報 Cowork 因缺少 HCS 服務 vfpext 而完全無法運作，此則今日累積 86 則留言，是今日互動量最高的 GitHub Issue。",
+      "focusTags": []
+    },
+    {
+      "title": "Inter-session communication for multi-Claude workflows",
+      "url": "https://github.com/anthropics/claude-code/issues/24798",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 02:55",
+      "sentiment": "",
+      "body": "開發者提出跨多個 Claude session 的通訊機制需求，用於串接大型專案裡有依賴關係的多階段工作流程，累積 84 則留言。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code does not respect the XDG Base Directory specification",
+      "url": "https://github.com/anthropics/claude-code/issues/1455",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/11 19:18",
+      "sentiment": "",
+      "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
+      "url": "https://github.com/anthropics/claude-code/issues/61415",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/11 19:30",
+      "sentiment": "",
+      "body": "桌面版 2.1.148 在 macOS 上無法開啟 Bypass Permissions 模式，會自動退回 Accept Edits 並提示「Permission mode couldn't be changed」，累積 65 則留言。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.269",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.269",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/11 19:17",
+      "sentiment": "",
+      "body": "新增 `claude plugin eval` 指令，可對 plugin 執行評測套件並產出可重現的 JSON／HTML 評分報告；官方文件同步新增《Test plugins with evals》頁面，Claude Code 桌面版文件也同批更新約 6 段內容。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5",
+      "source": "Google News / Reuters",
+      "time": "09/11 19:25",
+      "sentiment": "",
+      "body": "Reuters 彙整 Anthropic 揭露的濫用案例全貌，跨越武器研發、間諜活動與網路攻擊三大類別。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic details bad actors' efforts to misuse its AI for bioweapons",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSTIwVWNDN0RvcEhNZHl6cThaWnhtcVlyN2hfWTl2REYzQ0JuWk5GX1pvcHZVRllvS19WckxaQWpaNkVFMFFqX0RXd0hiazlzNVdNQWV4T1E2bXY5SnFMVFptaTNybHNKazgwLVhVMEsyOW4ydFJTcmFiVWxJb29wUl93Um8tMUowTFUySWxn?oc=5",
+      "source": "Google News / The Guardian",
+      "time": "09/12 01:31",
+      "sentiment": "",
+      "body": "Guardian 聚焦報告中生物武器濫用的細節，是今日媒體跟進中揭露最多技術性內容的一篇。",
+      "focusTags": [
+        "[持續追蹤]"
+      ]
+    },
+    {
+      "title": "EXCLUSIVE: Nvidia in talks to invest in Anthropic's mega IPO, sources say",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbmduYjZNYlh4TmVDd3dMTzZmU21ud1Q5WVVaYXBOM2hUQ201U2tjeDhoWHd6ZjhlQzdtUWxiNmFibkRpc2VlcmxjbWMzTWljZ0ZZSkF6VHFPWnJVUFQwc2g4RDNtb1FCWjN1R3BBcFRzUHkyTXJiRXZpa0NxV29IWFc1LV9lUXh0bXc3TWNrSHZhT0lPTVU2dEswYWhSVUw2SzFkRkVmSHU0S3c?oc=5",
+      "source": "Google News / Reuters",
+      "time": "09/11 23:01",
+      "sentiment": "",
+      "body": "Reuters 引述消息人士報導，Nvidia 正洽談投資 Anthropic 規劃中的鉅額 IPO，尚未定案。",
+      "focusTags": []
+    },
+    {
+      "title": "T. Rowe Price Expands Use of Claude in its Investment Process",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaE5lUkRGdXZiRG1HM2RBblUyaDItTG9TSWZlQUd0WFJzSk9rb0xzZUFob1JNaEE3Sm02QTNIYmlEOGZNSC1JcXZ5bTN1b2M5RDNvM0c5RDNWa0ttLXppUnFrZ2tpM3N5T2YySEJHaDI5MmRYdXBmRFFKVnNEZE95YUVIbVJ2Q2FwNndGaWZnTHBiTG5T?oc=5",
+      "source": "Google News / Markets Media",
+      "time": "09/11 16:10",
+      "sentiment": "",
+      "body": "資產管理公司 T. Rowe Price 宣布擴大在投資流程中使用 Claude，是今日與濫用爭議並存的企業採用正面訊號。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[BUG] Cowork Windows: September 2026 cumulative update breaks Plan9 share attach",
+      "url": "https://github.com/anthropics/claude-code/issues/92958",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 09:29",
+      "sentiment": "",
+      "body": "使用者在五台機器上以回滾 A/B 測試確認，九月 Windows 累積更新（KB5124012／KB5124008）會讓 Cowork 的 `device_bash` 失效，ARM64、x64 皆中。",
+      "focusTags": []
+    },
+    {
+      "title": "Hate Opus 5. Really dont know why they did this",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wecaw5/hate_opus_5_really_dont_know_why_they_did_this/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/12 13:12",
+      "sentiment": "",
+      "body": "使用者抱怨 Opus 5 話變多但缺乏根據，比起以前的版本更容易離題下結論。",
+      "focusTags": []
+    },
+    {
+      "title": "Vertical slices vs whole-feature prompts: how do you structure work for coding agents now?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wecard/vertical_slices_vs_wholefeature_prompts_how_do/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/12 13:12",
+      "sentiment": "",
+      "body": "開發者分享兩年來用 LLM coding agent 的心得，工作流程已重構三次，討論該用「垂直切片」還是「整包功能」下 prompt。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic's AI formalizes Fermat's Last Theorem in Lean",
+      "url": "https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3",
+      "source": "dev.to / #anthropic",
+      "time": "09/09 18:58",
+      "sentiment": "",
+      "body": "Anthropic 稱內部模型在 11 天內寫出 1,300 萬行 Lean 程式碼，完成費馬最後定理的機器驗證證明。",
+      "focusTags": []
+    },
+    {
+      "title": "AI Is Powerful Enough to Crack Our Hardest Math Problems–and Kill Us All",
+      "url": "https://www.wsj.com/tech/ai/ai-math-millennium-prize-safety-openai-anthropic-05179825",
+      "source": "Hacker News",
+      "time": "09/12 10:49",
+      "sentiment": "",
+      "body": "討論串圍繞 AI 解數學難題的能力與潛在濫用風險展開，有留言聲稱已用居家設備結合 agent 合成蛋白質與病毒結構。",
+      "focusTags": []
+    },
+    {
+      "title": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "source": "GitHub Search",
+      "time": "09/12 13:39",
+      "sentiment": "",
+      "body": "Spec-Driven Development 入門工具包，近 7 天新增 2,311 星（約 330 星/日）。",
+      "focusTags": []
+    },
+    {
+      "title": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "source": "GitHub Search",
+      "time": "09/12 13:39",
+      "sentiment": "",
+      "body": "用自己既有訂閱跑任意 coding agent 的多 agent ADE（桌面／行動／遠端執行環境皆支援），近 7 天新增 4,966 星（約 709 星/日）。",
+      "focusTags": []
+    },
+    {
+      "title": "rpamis/comet",
+      "url": "https://github.com/rpamis/comet",
+      "source": "GitHub Search",
+      "time": "09/12 13:39",
+      "sentiment": "",
+      "body": "",
+      "focusTags": []
+    }
+  ],
   "billing": [],
-  "focus": [],
-  "topicRadar": [],
-  "sourceStatus": [],
-  "preview": "投資判讀教材（週更）：建頁：7 課、3 條未上市消息線、IPO 背景知識一段。第一次結算 09-18 起，屆時課程表「押對了嗎」欄才會有值。",
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "昨日揭露的 Anthropic 威脅情報報告持續發酵，WSJ、Reuters、Guardian 等主流媒體跟進報導具體個案：伊朗疑似用 Claude 蒐集分析美國海軍軍艦公開資訊以研擬鎖定建議、俄羅斯開發者打造能自主選擇目標的神風無人機，Guardian 並揭露生物武器濫用的細節",
+      "ref_urls": [
+        "https://www.wsj.com/politics/national-security/anthropic-says-iran-used-its-american-ai-model-to-target-u-s-navy-warships-67583e05",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSTIwVWNDN0RvcEhNZHl6cThaWnhtcVlyN2hfWTl2REYzQ0JuWk5GX1pvcHZVRllvS19WckxaQWpaNkVFMFFqX0RXd0hiazlzNVdNQWV4T1E2bXY5SnFMVFptaTNybHNKazgwLVhVMEsyOW4ydFJTcmFiVWxJb29wUl93Um8tMUowTFUySWxn?oc=5"
+      ],
+      "ref_names": [
+        "WSJ",
+        "Guardian"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "五角大廈傳計畫十月前將所有機密 AI 工作負載自 Anthropic 遷出",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVEEwT1ZiMmZCQTBQcUQ5WXhfLWpZVEwzYzJBbVV6NVJKTmFmZFo1ZGpTUHdVcjJwWjUtOGs2bzJtd21fdGpBSDZYQXYtN2syUWp3UzJqMmZBUk02ZkFHV25IYUNRNXNQSG9BTUt1cXlLaW1aS3JLV2k2SEF1eEwzaUZiaDNleFV0eENZNUV4czE0Y0k0NTNqUVVlU3pXalJkcXhyT3Vxb0RWVm9J?oc=5"
+      ],
+      "ref_names": [
+        "DefenseScoop"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "anthropics/claude-code 發布 v2.1.269，新增 `claude plugin eval` 指令可對 plugin 執行評測套件並產出 JSON/HTML 報告",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.269"
+      ],
+      "ref_names": [
+        "GitHub Release"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "繼日前一名工程師公開警告後，又一名 Anthropic 員工帶著警告離職，公司治理疑慮延燒至上市前夕",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSXNISklTTWRnRGpRMGJTR1M3SnRLaUNwbTh1QnE4LTU1Tk8yZzhKRnVVTkh3TXdYSDFzZTk0ZE9XQXJLOVVqMFFSVWNoNEFFRmJmS2VrdXZqYkFDTFRnQmk0OWdLcjZkZG5yc1hobkxoTXFnT3hoS0pIM2pQdHQ3QzAxMmdJMUxfR1JLYzVJTTNQYkxmVE5BVXY5ZnZfMjlGbnlJODlXbUlnZHpOYXlnRHJkVzBNVG9ya2NESjhodVg3WXZPTjF1T0dMcXoxRmhjUmY5QzVnZlhmT2prNlJIYWhmY3M4Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbEhCZG1VUm1abnJFdHA1NUFUbE5od0c1akNXc01KTlNMQWRwblM4YjEwb0h3bUdFYUQwTlg5VDhnbkNuQk1va05zZjUtejA4NTZidThyc2huOUhfREtBYXE0QkZRQnN2ZV9OdGZxbnBfVzhiRXlnWFFONlgybnFVS2pEdDVfOE5mRjNkMnhnaENoVVVtWUlmTHdfa0FoMmJpczAzWWZ2UTRNMzVHNlpKMQ?oc=5"
+      ],
+      "ref_names": [
+        "Times of India",
+        "ESG Dive"
+      ]
+    },
+    {
+      "tag": "[社群趨勢]",
+      "text": "Claude Code 創造者 Boris Cherny 親自回信給一名質疑「AI 產出程式碼品質下滑」的開發者，登上主流科技媒體",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdl9CNzFpU1IyZjY1T2hTbFpCZUJpbFFzRVlIeFJxdFJRQVlYVkhmaEpfUDNvOGhXbkl3VFpoaGU1Q3FJaWdBTnBlSjVULUlqU0NwMGZZVDVkdmJsSVlKajVKbDVjR3VxUnpuaW14WHpCd1Nsb2ZxQnJkXzRzV2szWDNTWjdkdw?oc=5",
+        "https://simonwillison.net/2026/Sep/11/boris-cherny/"
+      ],
+      "ref_names": [
+        "Business Insider",
+        "Simon Willison 引述"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Study Finds Four Major AI Labs Use Incompatible Prompt Injection Metrics",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS21TeTlwSDNCeVE4cHVkZnZTVTJzNXdTTWg5Z2lla1FaYk9JS0pGRm50ZzQ4eFNScUF6dm9YRTVVZ292aXhpaXNydHg3TXhKSHpUZElTalY2N1prTWhhQmwtemJJcWhXc0w2M1pIbUtkUzFfOVZfdU53Y1Z2OTlOOEJvQko2QjVWVE91UEhVQ3NJbXBjNG9TMnM3VmcwSjMtTmtibFNncW9TaXlUOVFN?oc=5",
+      "body": "研究發現四大 AI 實驗室各自採用不相容的 prompt injection 評測指標（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 31
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 8
+    }
+  ],
+  "preview": "Claude Code：v2.1.269：新增 claude plugin eval 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告。",
+  "sedimentedToday": [
+    {
+      "id": "boris-cherny",
+      "name": "Boris Cherny",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5 與 5.1",
+      "pageType": "entity"
+    },
+    {
+      "id": "jacob-coxon",
+      "name": "Jacob Coxon",
+      "pageType": "entity"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-pattern-trends",
+      "name": "社群趨勢觀察（週更）",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "llm-wiki-pattern",
+      "name": "Karpathy 式 LLM wiki 模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-lessons",
+      "name": "投資判讀教材（週更）",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
   "reader": {
     "date": "2026-09-12",
     "summary": "",
     "noNews": false,
     "sections": [
       {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "2026-09-12",
+            "body": "- **v2.1.269**：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出 JSON／HTML 評分報告。\n- **官方文件**：桌面版 Git 需求從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要」。\n- **新增已知問題**：Desktop（macOS）無法啟用 Bypass Permissions（#61415）；九月 Windows 累積更新致 Cowork device_bash 失效，ARM64／x64 皆中（#92958）。\n- **互動數更新**：XDG Base Directory 規範不支援（#1455，447 讚）；vfpext 缺失（#74649，86 則留言）。"
+          }
+        ]
+      },
+      {
         "label": "💼 商業",
         "key": "commercial",
         "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "2026-09-12",
+            "body": "- **Nvidia 洽談投資 Anthropic 鉅額 IPO**：Reuters 獨家引述消息人士稱正洽談中，尚未定案、無金額細節（見「IPO 走到哪一格」細節區）。\n- **國防部擬十月前遷出全部機密 AI 工作負載**：DefenseScoop 報導，具體原因與替代方案未見（見「還沒過去的風險」細節區）。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "2026-09-12",
+            "body": "📉 負面（敘事型）：國防部傳計畫十月前遷出全部機密 AI 工作負載，較 06-17「三分之二」再升級，僅單一標題可用，未經官方證實。"
+          },
           {
             "page": "topics/market-lessons",
             "name": "投資判讀教材（週更）",
@@ -32,9 +445,29 @@
         ]
       },
       {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "2026-09-12",
+            "body": "- **五角大廈加碼**：DefenseScoop 稱國防部傳計畫十月前將所有機密 AI 工作負載自 Anthropic 遷出；細節見「## 三個戰場」🪖 軍事合約段落。\n- **威脅情報報告技術細節浮現**：WSJ 揭露伊朗關聯帳號（GTG-30005）用 Claude 建置海軍目標鎖定 Python pipeline 的具體技術細節；另有俄羅斯開發者疑似打造自主選擇目標的神風無人機新案例。"
+          }
+        ]
+      },
+      {
         "label": "🌐 社群",
         "key": "community",
         "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最熱討論",
+            "date": "2026-09-12",
+            "body": "- **Boris Cherny 親自回信「AI slop」質疑**：開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆，登上 Business Insider、Simon Willison 引述。"
+          },
           {
             "page": "topics/community-large-codebase-workflow",
             "name": "大型 Codebase 規模化開發：社群工作流主線",
@@ -59,7 +492,50 @@
         ]
       }
     ],
-    "itemCount": 4
+    "itemCount": 9
   },
-  "readerTopStories": []
+  "readerTopStories": [
+    {
+      "title": "[BUG] Missing HCS services: vfpext - Cowork not working on Windows 11 Pro",
+      "url": "https://github.com/anthropics/claude-code/issues/74649",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 10:13",
+      "sentiment": "",
+      "body": "Windows 11 Pro 使用者回報 Cowork 因缺少 HCS 服務 vfpext 而完全無法運作，此則今日累積 86 則留言，是今日互動量最高的 GitHub Issue。",
+      "focusTags": []
+    },
+    {
+      "title": "Inter-session communication for multi-Claude workflows",
+      "url": "https://github.com/anthropics/claude-code/issues/24798",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 02:55",
+      "sentiment": "",
+      "body": "開發者提出跨多個 Claude session 的通訊機制需求，用於串接大型專案裡有依賴關係的多階段工作流程，累積 84 則留言。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code does not respect the XDG Base Directory specification",
+      "url": "https://github.com/anthropics/claude-code/issues/1455",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/11 19:18",
+      "sentiment": "",
+      "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
+      "url": "https://github.com/anthropics/claude-code/issues/61415",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/11 19:30",
+      "sentiment": "",
+      "body": "桌面版 2.1.148 在 macOS 上無法開啟 Bypass Permissions 模式，會自動退回 Accept Edits 並提示「Permission mode couldn't be changed」，累積 65 則留言。",
+      "focusTags": []
+    }
+  ]
 }

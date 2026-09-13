@@ -25,12 +25,6 @@
       "body": "開發者要求讓 Claude Code 能存取並運用 Claude.ai Projects 的知識庫，此需求累積 635 個 👍 反應，是今日互動量最高的 GitHub Issue。",
       "focusTags": [
         "[社群趨勢]"
-      ],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
       ]
     },
     {
@@ -42,12 +36,6 @@
       "body": "使用者要求 Claude Code 桌面版支援在同一應用實例內開啟多個視窗，目前桌面版僅為側邊欄式單視窗應用，該請求獲 249 個 👍 反應。",
       "focusTags": [
         "[社群趨勢]"
-      ],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
       ]
     },
     {
@@ -128,13 +116,7 @@
       "time": "09/11 14:31",
       "sentiment": "",
       "body": "Claude Code 桌面版文件新增「新增雲端環境」說明，使用者可建立具備不同網路存取層級與環境變數設定的自訂雲端環境，並可對既有環境編輯或封存。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     }
   ],
   "mediaReports": [
@@ -214,13 +196,7 @@
       "time": "09/10 17:00",
       "sentiment": "",
       "body": "資產管理公司 T. Rowe Price 宣布擴大在投資流程中使用 Claude 與 Claude Code，財經媒體 marketscreener.com 亦獨立做了同類報導。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     }
   ],
   "discussions": [
@@ -231,13 +207,7 @@
       "time": "09/11 13:51",
       "sentiment": "",
       "body": "使用者回報 Fable 5.1 在 Claude Code 中處理範疇釐清、機制規劃這類任務的回應速度明顯快於前代模型。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "How are you verifying Claude Code's changes without manually testing everything?",
@@ -246,13 +216,7 @@
       "time": "09/11 13:47",
       "sentiment": "",
       "body": "使用者討論 Claude Code 宣稱完成任務後，如何在不逐一手動測試的前提下確認變更確實正確運作。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "How do you share AI coding agent context between developers on the same project?",
@@ -270,13 +234,7 @@
       "time": "09/11 13:05",
       "sentiment": "",
       "body": "使用者以同一句需求描述分別餵給四款規格驅動開發工具（含以 Opus 5 驅動的 Claude Code），比較各自產出的技術堆疊建議差異。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "[Browser Game] Claude has been coding my online horror MMO 24h/day for 3 months. 1800+ versions. Here's what I learned.",
@@ -294,13 +252,7 @@
       "time": "09/11 13:43",
       "sentiment": "",
       "body": "開發者釋出用量視覺化工具，讓使用者能即時看到 Claude Code session 已消耗的 token 深度，避免在毫無提示下用滿上下文。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Show HN: Benzi – A Code Intillegence/Harness Beating Claude Code and CodeGraph",
@@ -309,13 +261,7 @@
       "time": "09/11 01:22",
       "sentiment": "",
       "body": "開發者公布自製程式碼智慧引擎 Benzi 的基準測試，宣稱在 24 個 GitHub issue、10 種語言的對比中，表現優於 Claude Code 與 CodeGraph。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Show HN: I bypassed my Claude Code deny-list 8 ways; only an allow-list held",
@@ -324,13 +270,7 @@
       "time": "09/11 13:22",
       "sentiment": "",
       "body": "開發者實測發現以 deny-list 方式限制 Claude Code 執行權限有 8 種繞過手法皆能成功，唯有改用 allow-list（白名單）機制才真正擋下，並釋出對應防護工具。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Stop asking your AI agent to follow rules. Enforce them.",
@@ -339,13 +279,7 @@
       "time": "08/25 15:25",
       "sentiment": "",
       "body": "作者分享將可用程式檢查的編碼規則從提示詞改為 Claude Code hooks 強制執行後，規則遵守率從機率性提升至 100%，甚至讓用 Haiku 當開發模型也變得可行。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "QuintinShaw/pi-dynamic-workflows",
@@ -354,13 +288,7 @@
       "time": "09/11 14:30",
       "sentiment": "",
       "body": "開發者釋出仿 Claude Code 動態工作流風格的框架，提供程式碼模式 subagent、真實模型路由、日誌化恢復、git worktree 隔離、成本記帳與互動式 `/workflows` 終端介面。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "kwakseongjae/oh-my-design",
@@ -369,13 +297,7 @@
       "time": "09/11 14:30",
       "sentiment": "",
       "body": "開發者釋出工具，一鍵為 Claude Code、Codex、Cursor、OpenCode 安裝超過 400 份分級評等的企業級 DESIGN.md 參考文件與技能包，讓 AI 編碼代理具備設計系統依循基準。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "20000419/fauxnix",
@@ -384,13 +306,7 @@
       "time": "09/11 14:30",
       "sentiment": "",
       "body": "開發者釋出讓 Windows 透過確定性 bash→PowerShell 轉譯執行 Linux 風格指令的 MCP 伺服器與 CLI 工具，免除 VM 或 WSL，供 Claude Code、Codex 等 AI 代理使用。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Agents365-ai/drawio-skill",
@@ -410,13 +326,7 @@
       "time": "09/10 20:30",
       "sentiment": "",
       "body": "新版為 Claude apps gateway 新增支援：組織在 `gateway.yaml` 設定 `pricing:` 後，已登入的 Claude Code 用戶端會透過受管設定取得一致費率，使 `/cost` 與遙測數據能對齊實際費率。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     }
   ],
   "focus": [
@@ -562,23 +472,8 @@
   "preview": "Claude Code：v2.1.268：Claude apps gateway 新增 pricing: 設定（gateway.yaml），登入版 Claude Code 客戶端經 managed settings 取得一致費率，/cost 與 telemetry 對得上；計費細節見 entities/pricing。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "evan-hubinger",
       "name": "Evan Hubinger",
-      "pageType": "entity"
-    },
-    {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
-      "id": "jacob-coxon",
-      "name": "Jacob Coxon",
       "pageType": "entity"
     },
     {
@@ -607,23 +502,8 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     },
     {
