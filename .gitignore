@@ -47,3 +47,4 @@ docs/architecture-evolution-react.bak.html
 
 # 本機專用雜檔（session 交接筆記等）——不進 repo
 docs/local/
+.claude/tree-claims/
