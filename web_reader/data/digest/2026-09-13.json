@@ -1,0 +1,607 @@
+{
+  "date": "2026-09-13",
+  "generatedAt": "2026-09-13 17:09 UTC",
+  "articleCount": 49,
+  "sourceCount": "14/14",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
+      "url": "https://github.com/anthropics/claude-code/issues/27302",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 11:33",
+      "sentiment": "",
+      "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
+      "url": "https://github.com/anthropics/claude-code/issues/18435",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 21:13",
+      "sentiment": "",
+      "body": "桌面版使用者要求能在 Claude Desktop 內快速切換多組帳號設定檔，累積 187 則留言、947 個 👍 反應——是今日按讚數最高的 issue。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
+      "url": "https://github.com/anthropics/claude-code/issues/85891",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 10:29",
+      "sentiment": "",
+      "body": "Windows 11 版 Claude Desktop 視窗會強制蓋在所有其他視窗之上、且無設定可關閉此行為，累積 100 則留言、239 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Recurring error: \"The model's tool call could not be parsed (retry also failed)\" interrupts sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/63875",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 12:05",
+      "sentiment": "",
+      "body": "使用者回報一般 session 進行中頻繁跳出此錯誤並中斷手上動作，累積 76 則留言、116 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop doesn't connect to Custom MCPs altogether (not with OAuth 2.1 nor with SSE)",
+      "url": "https://github.com/anthropics/claude-code/issues/5826",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 14:10",
+      "sentiment": "",
+      "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.270",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/12 19:45",
+      "sentiment": "",
+      "body": "修正 2.1.269 版的一項回歸缺陷：長時間執行的 session 中，唯讀的 git 指令會意外要求使用者授權。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic's AI Warning May Weigh on Chips, But Trade Seen Intact",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaUNzQU5iTlA4SG9SV0NiM3lQR0podWt3QmFxS3Z3Y2Y3MmtBN2RtQ21sNEMtLVFTUVBvRDRpX2szcTV0UGxCalFfeEljTEYxQ29lblBsYzVFamNtTEJHend2WTZTOGdlSzU1NmdsVjJuR2NzOUIxbVlqb0JkdnhENTFsUWZYbGc3MDJPaG44Mm9Hc3lPX2JFaWtpQ0Vvb1lVM21zMTR5anNXWURPMU05d1RYQ1c?oc=5",
+      "source": "Google News / Bloomberg.com",
+      "time": "09/13 08:00",
+      "sentiment": "",
+      "body": "市場分析認為 Amodei 的暫緩呼籲可能短期內為晶片股情緒蒙上陰影，但整體 AI 晶片貿易格局預期不受影響。",
+      "focusTags": []
+    },
+    {
+      "title": "Exclusive: Anthropic CEO reacts to rogue AI agents escaping containment | CNN Business",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTElvLVpyQUlhSW9WZDVNbXV2LV9HbFpseTFhbW00MHRpcDBlZnptTkwtZXhodEt2a2tuVkNpZUZ0SXRqZFVJdmVXTGJGaUxEY05MQUVYU2YzRV8xN2hTNlNHdkRaVWdydUFSckRqMWIzSjVLeHdHa2JYWDUzYzVKZnhya29NZUpRb29JTWpEU0gxeTU4QWxWeHBzQVNWUnlielZaWGx3bmtkbmIzN0YwMXlRNHBtSDBuZDB4NHpITFE5amlhZl9pZlZEMG8?oc=5",
+      "source": "Google News / CNN",
+      "time": "09/13 02:49",
+      "sentiment": "",
+      "body": "CNN 獨家報導 Amodei 就外界流傳「AI agent 脫離控制範圍」的說法做出回應，呼應他今日呼籲暫緩開發步調的整體論述。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic report: 5 ways Claude was exploited for war, spying and repression",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPN3UtUzlPZk9tWHZsV21qVFBnN1Y1dlhrM25jZl9sMmdPcWRMd1RTT2ctYzJ6NTl3MmVfWElNclhRYXVOWG02ZDdzVzJLZXBXbHNBclY1Vkt4ckJYVjVuTnNWRDdGMEt5dVdaa254U0FfX2M0LWJ5T2Jkd1dBWHhWN3piVQ?oc=5",
+      "source": "Google News / Axios",
+      "time": "09/13 01:59",
+      "sentiment": "",
+      "body": "距離報告首度揭露已過兩天，Axios 仍在整理歸類 Anthropic 觀測到的具體濫用個案，顯示這則威脅情報報告的媒體熱度尚未消退。",
+      "focusTags": [
+        "[持續追蹤]"
+      ]
+    },
+    {
+      "title": "5 Reasons Why Users Ditch Claude",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5",
+      "source": "Google News / bgr.com",
+      "time": "09/13 12:17",
+      "sentiment": "",
+      "body": "彙整報導使用者放棄 Claude、改用其他工具的常見原因，是今日與濫用爭議並存的另一則使用者觀點報導。",
+      "focusTags": []
+    },
+    {
+      "title": "AI staff 'genuinely frightened' for humanity's future, ex-Anthropic researcher tells BBC",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IMkFTZ25QYzR0R0V3UnUteU9DTl9KZzRRd0ZKMjhYS0tqVUFDYjlLaFYtSW45eVpjeGg3Q0EybnlKQ1JLUWZiQ25DTVBYUjJlVEhGeVQtR1JuQQ?oc=5",
+      "source": "Google News / BBC",
+      "time": "09/13 11:13",
+      "sentiment": "",
+      "body": "一名離職的 Anthropic 研究員向 BBC 表示，AI 從業人員「真心地為人類未來感到恐懼」。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Ask HN: What default model do you use and why?",
+      "url": "https://news.ycombinator.com/item?id=49672966",
+      "source": "Hacker News",
+      "time": "09/12 14:58",
+      "sentiment": "",
+      "body": "一則 HN 討論串詢問大家平常預設用哪個模型，樓主提到 Fable 對他規劃手機 App 的任務來說「大材小用」，且用量額度容易在數分鐘內被 4 個平行 agent 耗光，累積 57 分。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic CEO Says It's Time to Slow AI Model Advances",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-12/anthropic-ceo-says-it-s-time-to-slow-pace-of-improving-ai-models",
+      "source": "Hacker News",
+      "time": "09/12 18:07",
+      "sentiment": "",
+      "body": "HN 討論串對 Amodei 呼籲暫緩 AI 發展的反應偏向懷疑，多則高分留言認為此舉實際是想拖慢競爭對手腳步、或是為募資造勢鋪陳。",
+      "focusTags": []
+    },
+    {
+      "title": "proliferate-ai/proliferate",
+      "url": "https://github.com/proliferate-ai/proliferate",
+      "source": "GitHub Search",
+      "time": "09/13 14:29",
+      "sentiment": "",
+      "body": "開源 AI IDE，可同時執行 Claude Code、Codex、OpenCode 等多個 agent（本機或雲端皆可），並可組成可重複使用的工作流程，累積 500 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "I fine-tuned Qwen2.5-Coder-14B on 220k MQL5 examples. It reached 94.0% compile success vs 95.33% for GPT-5.6 Sol. Built with Claude Code:",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wf86pt/i_finetuned_qwen25coder14b_on_220k_mql5_examples/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/13 13:48",
+      "sentiment": "",
+      "body": "開發者用 Claude Code 建置 MQL5（交易語言）領域資料集並微調 14B 模型，回報編譯成功率達 94.0%，逼近 GPT-5.6 Sol 的 95.33%。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Will hyper-optimized prompts become the new software piracy?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wf6yxt/will_hyperoptimized_prompts_become_the_new/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/13 12:56",
+      "sentiment": "",
+      "body": "貼文討論高度優化過的 prompt 未來是否會如破解軟體般被複製流通，引發 AI 時代智慧財產權定義的討論。",
+      "focusTags": []
+    },
+    {
+      "title": "zenstory-ai/oh-story-claudecode",
+      "url": "https://github.com/zenstory-ai/oh-story-claudecode",
+      "source": "GitHub Search",
+      "time": "09/13 14:29",
+      "sentiment": "",
+      "body": "",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "[BUG] Claude Max plan session limits exhausted abnormally fast since March 23, 2026 (CLI usage)",
+      "url": "https://github.com/anthropics/claude-code/issues/38335",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 13:18",
+      "sentiment": "",
+      "body": "使用者回報自 3 月 23 日起，Max 方案的 session 額度消耗速度明顯快於以往，累積留言數達 850 則、545 個 👍 反應，是本庫近期互動量最高的 issue。",
+      "focusTags": [
+        "[持續追蹤]"
+      ]
+    },
+    {
+      "title": "Something's weird.",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wf8q8s/somethings_weird/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/13 14:11",
+      "sentiment": "",
+      "body": "一名 5x 方案使用者回報：上週用到週用量 10% 時帳單金額約落在 140 美元，本週同樣用到 10% 時只剩約 50 美元，質疑計費或額度計算方式已悄悄變動。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 執行長 Dario Amodei 公開呼籲全球暫緩 AI 模型能力提升的步調，警告未來 6–12 個月內「AI 群體行為」恐威脅網路安全；Elon Musk、Sam Altman 相繼表態支持暫緩",
+      "ref_urls": [
+        "https://www.bbc.com/news/articles/c14dpgm0rg4o",
+        "https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjk4TTdkdmFaRHVDUHBMXzJtZ25FWWJtVnRPYm15VlhFVmFydDRKZ2luM1loZEVoVjJEVHgyVk52bTZUVDA5ZkF2OS14M0g2WkNBZ2tqVDB6MGRFczZpN0V5WVladEMyT3FyeGRpUlN3dE9DRVZaamd3cXFQdFhuVmp3eGltRGwteF9YT2VsZ1FHWWFfM01TS1lzLVo2c1VIbDVNX1o0bG9STXdQSkd3b0l6YURLbGRxSmJMeUJR?oc=5"
+      ],
+      "ref_names": [
+        "BBC",
+        "VentureBeat",
+        "Yahoo"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "日前 Anthropic 揭露的 AI 濫用威脅情報報告持續獲主流媒體跟進，Axios 今日彙整出「5 種 Claude 遭濫用方式」，涵蓋作戰、間諜蒐研與政治鎮壓等面向",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxPN3UtUzlPZk9tWHZsV21qVFBnN1Y1dlhrM25jZl9sMmdPcWRMd1RTT2ctYzJ6NTl3MmVfWElNclhRYXVOWG02ZDdzVzJLZXBXbHNBclY1Vkt4ckJYVjVuTnNWRDdGMEt5dVdaa254U0FfX2M0LWJ5T2Jkd1dBWHhWN3piVQ?oc=5"
+      ],
+      "ref_names": [
+        "Axios"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "GitHub 上「Claude Max 方案 session 額度自 3 月起異常加速耗盡」的臭蟲回報累計留言數衝上 850 則，是本庫近期互動量最高的 issue；同日多篇 Reddit 貼文回報帳單／額度計算方式疑似有變",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/38335"
+      ],
+      "ref_names": [
+        "GitHub Issue"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "開發者要求 Claude Code 跟進業界正在標準化的 `AGENTS.md`（Codex、Amp、Cursor 等已採用）的討論持續發酵，累計 394 則留言、6,621 個 👍，是本庫今日互動量第二高的 issue",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/6235"
+      ],
+      "ref_names": [
+        "GitHub Issue"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Google DeepMind researcher quits AI safety team, raises alarm over risks of rampant AI development",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOHhueHlnZnRqcHV4MGgxS2R5MmdxNWRFcnNMb2NrM19hNXBvVkxKenhubFBCNWRWeEhfS3JnMmVCVHBtNkdfdFVBdjZUVEcwV2laZHBMejZOZGxiNHlFZnkzb0VEWG9EcE0xeXQ5c3g5cVNvT3NPdkY4MmhpZU5lUlZSMGVnM2tqSkdDSDlrUk5nVjNWa2wza092eFRablVYM0d4NGdiMEVYeEtzaklzamF3RkN6OEVNSjJLcXJhbHNtUVpEM1NvVUhfMFNaZ1FfcTRBSFRnbmRrQdIB3wFBVV95cUxOVjA3dXBRUGdZOU1rS3RZaUxPMVVqTFBPMlU2N1NlY2dqN2RDaDQ2akxDUlFNMDJpcVp4TERNanpET3IyRUpsQ0RKSWxPeXJDaWRKWXdESXNJdDh5WmhESGNFTS1MeW9mSjlOdk5JLVlTYnBmSTJlRE1IRGhnZVMwWXRMbG5ybjRQZjVrNmlSeXJCSGlOYlRFa1JpX3lyX0dRdFdFVmw0UEFmWXhEOWFXU2stNDdrZERMVWl0cF9fRTZEZ0xQRkdPN2JMN3V6VnQxd1JiZVRwWW45djV0QlY4?oc=5",
+      "body": "一名 Google DeepMind 研究員因憂心 AI 對齊程度下降、警告開發步調野蠻生長的風險而離職（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "body": "Perplexity 讓 OpenAI 新模型 GPT-6 Astra 自主執行程式異動與正式環境監控、人工複查頻率大幅降低（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 21
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code：v2.1.270 修復迴歸：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "jacob-coxon",
+      "name": "Jacob Coxon",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-13",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.270 修復迴歸**：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。\n- **AGENTS.md 需求持續攀升**：issue #6235 增至 394 則留言、6621 個讚，本輪功能類別互動量次高，官方仍未回應是否跟進業界標準。\n- **Windows 11 視窗置頂問題擴大**：issue #85891 增至 100 則留言、239 個讚，介面仍無設定可關閉此行為。\n- **多帳號需求兩線同步升溫**：Desktop 快速切換（#18435）增至 947 讚、本輪互動最高；Connector 多帳號登入（#27302）增至 533 讚。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "最新功能缺口",
+            "date": "",
+            "body": "- **跨工具統一操作層再添一款**：orca（用既有訂閱跑任意 coding agent 的多 agent ADE）併入既有清單，累計 8 款，7 天 +4,966★ 為本批最快。\n- **spec-kit／comet 未新增列**：與官方既有 Outcomes／`/goal` 概念重疊或證據不足，官方目前仍無對應這條缺口的功能。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "17 榜全數嘗試（直接抓取 10 榜、媒體轉述 7 榜；Aider Polyglot 本輪汰換，見下）。本週兩件事值得看：**Search Arena 連續 3 週抓不到後恢復**（gpt-5.6-sol-xhigh 登頂，Claude Opus 4.6 search 版緊追第二）；**SWE-bench 上週的「兩說歧異」查明是 Verified 與 Pro 兩個子集混談**，本輪起分列，Pro 子集由 Fable 5.1 領先。反向地，**LMArena 本週改抓不到**（網域重導至 arena.ai，抓到的是別的榜），**Terminal-Bench 二手數字與上週矛盾故不採計**。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **09-14 起你的週配額變成現在的 83%**：+50% 加成 09-13 23:59 PT 到期（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)），接手的是永久 +25%（08-29 官方 Bluesky 公告），換算後相對現在少約 17%。適用 Pro、Max、Team 與座位制 Enterprise。\n- **$100 過渡 credit 09-17 23:59 PT 到期即作廢**，不可續買、不轉存。\n- **四件計費事故仍未解**：Max 訂閱一開工就撞用量上限（#16157，1,492 留言最高）、續訂扣款後帳號停用、session 額度 3 月起異常加速耗盡（#38335，850 留言／545 👍 重新列入）、$16.6M 帳務錯誤退款未定。見「事故現在還在發生嗎」。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。\n- 🔴 **價格戰打到產品層**：Meta Muse Code 結束 beta、推三層訂閱主打低價（09-01）——但月費沒公布，想比價還比不了，先別急著算換算成本。\n- 🟡 **Cursor 可能更依賴 Claude**：OpenAI 傳 11/12 斷供 Cursor（09-04，單一 Reddit 討論串）——你如果在用 Cursor，值得留意它的模型來源會不會換；用 Claude Code 的人這週不必動。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：Google DeepMind 研究員離職，警告 AI 對齊程度下降",
+            "date": "",
+            "body": "三家媒體（storyboard18.com、Firstpost、Inshorts）報導，一名 DeepMind 員工離職前警告 AI「對齊程度」正在下降、五年內恐釀重大傷害；姓名未見報導，詳見「對各公司的影響」表 Google DeepMind 列與「時序」新增節。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "CNN 獨家報導 Anthropic CEO 回應「AI agent 脫離控制範圍」說法，僅標題可用，具體事件內容待查證（詳見「## 技術彙整」）。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Dario Amodei 親自呼籲業界暫緩 AI 發展步調、警告「AI 群體行為」恐於 6–12 個月內接管網路，並稱已承諾一項 AI 減速計畫；HN 社群多則留言質疑此為募資話術或拖累競爭對手（詳見「## 技術彙整」）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "proliferate-ai/proliferate 加入 Multi-agent 架構：開源 AI IDE 可平行執行 Claude Code／Codex／OpenCode，本機或雲端皆可、支援可複用工作流程（500 星）。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Token 消耗異常線再添一則",
+            "date": "",
+            "body": "HN 討論串：Fable 對簡單任務「大材小用」，4 個平行 agent 於數分鐘內燒光 session 額度，等 6 小時逾時後快取已失效（57 分）；官方對這條線仍無回應。"
+          },
+          {
+            "page": "topics/llm-wiki-pattern",
+            "name": "Karpathy 式 LLM wiki 模式",
+            "label": "最新動態",
+            "date": "",
+            "body": "Karpathy 四月提出的三層 wiki 模式已長出四種公開實作；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "最新表態",
+            "date": "",
+            "body": "公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩。"
+          },
+          {
+            "page": "entities/simon-willison",
+            "name": "Simon Willison",
+            "label": "本站引用最多的第一手觀點來源",
+            "date": "",
+            "body": "（ 建頁）\n庫內 114 次提及、橫跨 15 頁，多數不是他本人的新聞事件，而是本站取得 Boris Cherny、Dario Amodei 等人公開發言原文與時間戳的轉載管道。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 13
+  },
+  "readerTopStories": [
+    {
+      "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
+      "url": "https://github.com/anthropics/claude-code/issues/27302",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 11:33",
+      "sentiment": "",
+      "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
+      "url": "https://github.com/anthropics/claude-code/issues/18435",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 21:13",
+      "sentiment": "",
+      "body": "桌面版使用者要求能在 Claude Desktop 內快速切換多組帳號設定檔，累積 187 則留言、947 個 👍 反應——是今日按讚數最高的 issue。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
+      "url": "https://github.com/anthropics/claude-code/issues/85891",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 10:29",
+      "sentiment": "",
+      "body": "Windows 11 版 Claude Desktop 視窗會強制蓋在所有其他視窗之上、且無設定可關閉此行為，累積 100 則留言、239 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Recurring error: \"The model's tool call could not be parsed (retry also failed)\" interrupts sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/63875",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/13 12:05",
+      "sentiment": "",
+      "body": "使用者回報一般 session 進行中頻繁跳出此錯誤並中斷手上動作，累積 76 則留言、116 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop doesn't connect to Custom MCPs altogether (not with OAuth 2.1 nor with SSE)",
+      "url": "https://github.com/anthropics/claude-code/issues/5826",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/12 14:10",
+      "sentiment": "",
+      "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

@@ -133,13 +133,7 @@
       "time": "08/28 16:49",
       "sentiment": "",
       "body": "Business Insider 報導 Anthropic 執行長 Dario Amodei 公開回應外界對 AI 威脅論的疑慮，強調公司「無意摧毀任何人」。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "dario-amodei",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Bay Area Security Workers Threaten Action After Anthropic Office Closure",
@@ -311,11 +305,5 @@
     }
   ],
   "preview": "資安研究者 Alon Hertz 揭露編碼代理（含 Claude、Codex、Hermes）會把 llms.txt／llms-full.txt 這類「給 AI 讀的網站說明檔」當成可信內容；掃描 6,214 個綁定國防承包商、財星 500 大與科技巨頭的網域、8,265 份 llms.txt／llms-full.txt",
-  "sedimentedToday": [
-    {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }

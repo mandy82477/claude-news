@@ -36,13 +36,7 @@
       "time": "09/11 19:18",
       "sentiment": "",
       "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
@@ -64,12 +58,6 @@
       "body": "新增 `claude plugin eval` 指令，可對 plugin 執行評測套件並產出可重現的 JSON／HTML 評分報告；官方文件同步新增《Test plugins with evals》頁面，Claude Code 桌面版文件也同批更新約 6 段內容。",
       "focusTags": [
         "[重大事件]"
-      ],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
       ]
     }
   ],
@@ -341,11 +329,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "cowork",
       "name": "Cowork",
       "pageType": "entity"
@@ -353,11 +336,6 @@
     {
       "id": "fable-5",
       "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
-      "id": "jacob-coxon",
-      "name": "Jacob Coxon",
       "pageType": "entity"
     },
     {
@@ -376,11 +354,6 @@
       "pageType": "topic"
     },
     {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
       "id": "community-pattern-trends",
       "name": "社群趨勢觀察（週更）",
       "pageType": "topic"
@@ -388,16 +361,6 @@
     {
       "id": "community-tech-discussions",
       "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
@@ -413,11 +376,6 @@
     {
       "id": "market-signals",
       "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "興趣類別 skill 總覽",
       "pageType": "topic"
     }
   ],
@@ -554,13 +512,7 @@
       "time": "09/11 19:18",
       "sentiment": "",
       "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
