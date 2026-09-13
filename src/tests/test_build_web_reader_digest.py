@@ -286,11 +286,17 @@ class TestFrozenPagesKeptOnRegenerate(unittest.TestCase):
     def setUp(self):
         self._td = tempfile.TemporaryDirectory()
         self.wiki = _wiki(Path(self._td.name))
+        # gone-page：callout 已被隔天覆寫成 09-12；intro-page：改成無日期自介（治理層，刻意退出日報）
+        (self.wiki / "entities" / "gone-page.md").write_text(_page(
+            "🛠️ 工具/功能", "已被覆寫的頁", "> **最新動態**（2026-09-12）\n> 隔天的內容。"), encoding="utf-8")
+        (self.wiki / "topics" / "intro-page.md").write_text(_page(
+            "🤖 模型", "自介頁", "> **本頁是什麼**（建頁 2026-09-12）\n> 沒有時效。"), encoding="utf-8")
         self.existing = (
             "# 2026-09-11 今天 wiki 學到什麼\n\n## 🛠️ 功能\n\n"
             "### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-11）\n> 舊版內容，頁面已改寫。\n\n"
             "### [[entities/gone-page|已被覆寫的頁]]\n\n> **最新動態**（2026-09-11）\n> 這頁今天的 callout 已是 09-12，重產要留住我。\n\n"
-            "## 🤖 模型\n\n### [[entities/old-page|舊頁]]\n\n> **最新動態**（2026-09-11）\n> 也留住。\n"
+            "## 🤖 模型\n\n### [[entities/old-page|舊頁]]\n\n> **最新動態**（2026-09-11）\n> 也留住。\n\n"
+            "### [[topics/intro-page|自介頁]]\n\n> **本週沉澱**（2026-09-11）\n> 建頁：治理層，不該在日報。\n"
         )
 
     def tearDown(self):
@@ -319,6 +325,16 @@ class TestFrozenPagesKeptOnRegenerate(unittest.TestCase):
         self.assertNotIn("舊版內容，頁面已改寫", text)
         self.assertIn("- **v2.1.268**", text)
         self.assertEqual(text.count("### [[entities/claude-code|"), 1)
+
+    def test_refresh_drops_pages_whose_callout_became_undated_intro(self):
+        text, _, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                         Path(self._td.name) / "nope.jsonl", existing=self.existing, refresh=True)
+        self.assertNotIn("intro-page", text, "改成自介型的頁 --refresh 要從日報拿掉")
+        self.assertTrue(any("intro-page" in w and "自介型" in w for w in warnings))
+        self.assertIn("### [[entities/gone-page|已被覆寫的頁]]", text, "被隔天覆寫的頁仍留住")
+        text_default, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                          Path(self._td.name) / "nope.jsonl", existing=self.existing)
+        self.assertIn("intro-page", text_default, "預設凍結模式不動既有檔")
 
     def test_no_existing_file_no_carry_over(self):
         text, _, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
