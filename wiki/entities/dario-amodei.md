@@ -4,20 +4,20 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-07"
+last_updated: "2026-09-13"
 last_news_update: "2026-08-29"
 status_main: "active"
-days_since_news: 14
+days_since_news: 15
 parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 14
-inbound_links: 9
+children: "['entities/dario-amodei-archive']"
+page_role: "hub"
+days_since_news_subtree: 15
+inbound_links: 12
 attribution_count: 18
 attribution_last: "2026-08-29"
 top_source: "google-news"
-pending_count: 4
-pending_overdue: 4
+pending_count: 2
+pending_overdue: 2
 pending_next_review: null
 pending_signalled: 0
 signal: "健康"
@@ -130,12 +130,6 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
   - **三筆捐款的關係（2026-09-13 釐清）**：同一個收款方（Public First／Public First Action），捐款人各自獨立——公司法人 4000 萬、Dario 個人 100 萬、其他員工合計 200–300 萬；不是同一筆資金分拆，也非公司代個人出資
   - 對手陣營為反監管的 Leading the Future 一系，雙方在 Bores 該席次補選對燒（詳見 [[topics/anthropic-government-policy]]）；WSJ／The Hill／Axios 的「選舉支出翻倍」框架與官方非選舉用途聲明的張力仍在
 - 2026-07-06：接受 STAT News 專訪談 AI 對生技產業的影響——Amodei 表示他「壓縮 21 世紀」（十年內完成百年生醫進展）的願景**目前還做不到**，坦承現階段 AI 在生技的貢獻仍以加速個別研究環節為主，並以同期發布的 [[entities/claude-science]] 為例說明 Anthropic 的切入方式（[STAT News，2026-07-06](https://www.statnews.com/2026/07/06/anthropic-ai-biotech-impact/)，2026-09-03 查證）
-- 2026-06-26：Wired 延伸報導確認 Trump 政府已不再信任 Amodei，改由 Tom Brown（GPT-3 共同研發者、Anthropic 聯合創辦人）全面接管政府溝通；Dario 以商業成功推動 AI 安全的政策立場持續受到質疑（來源：WIRED）
-- 2026-06-25：WIRED 報導 Amodei 退出與白宮 Fable 5 出口管制談判，由聯合創辦人 Tom Brown 接管；白宮人士批評其「行為怪異」無法有效與 Trump 政府溝通（來源：WIRED）
-- 2026-06-24：WIRED 報導白宮與 Dario Amodei 的關係趨於緊張，為 Fable 出口管制爭議持續發酵下的政治維度，顯示 Anthropic 與現任行政當局關係惡化
-- 2026-06-22：Ars Technica 援引 FT 分析：Dario 公開聲明中風險/法規相關字詞密度達每千字 5 字，為 OpenAI Sam Altman（0.6 字）的 8 倍多；批評者認為此頻繁表態間接助攻美國政府 AI 出口禁令
-- 2026-06-21：Times of India 採訪談離開 OpenAI：「最終別人會來判斷誰是對的。」
-- 2026-06-11：Bloomberg 報導兩則：（1）主張政府應可阻止危險 AI 發布，被解讀為針對中國；（2）直屬下屬僅一人的扁平組織結構引發討論。
-- 2026-06-08：Fortune 訪談引述：「在 AI 競賽中文化而非產品才是決勝點」，本人花 40% 時間建設公司文化。
-- 2026-06-06：Bloomberg 報導：對「Claude 是否被用於伊朗學校打擊」表示不知情。
-- 2026-05-12：Code with Claude 大會現場宣布 Pro/Max 使用速率翻倍 + 取消尖峰時段降速，是 Anthropic 透過 SpaceX 外部算力合作首次鬆綁使用限制。
+- 2026-06（總結，上）：白宮信任關係全月走低——談判改由 Tom Brown 接管（06-24～26，WIRED），FT 分析指其風險用詞密度為 Altman 8 倍多（06-22）
+- 2026-06（總結，下）：另有 Fortune「文化決勝論」（06-08）、Bloomberg 政府監管與扁平組織訪談（06-06、06-11）、Times of India 談離開 OpenAI（06-21）。原始條目見 [[entities/dario-amodei-archive#2026-06]]
+- 2026-05（總結）：Code with Claude 大會現場宣布 Pro/Max 速率翻倍＋取消尖峰降速，為 SpaceX 算力合作首次鬆綁使用限制（05-12）。原始條目見 [[entities/dario-amodei-archive#2026-05]]

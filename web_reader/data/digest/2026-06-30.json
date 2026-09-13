@@ -338,6 +338,16 @@
       "id": "community-tech-patterns-archive",
       "name": "社群實戰模式庫——原始條目封存",
       "pageType": "topic"
+    },
+    {
+      "id": "enterprise-cost-management-archive",
+      "name": "企業規模 Claude 成本管理 — 原始條目封存",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap-archive",
+      "name": "官方功能 vs 社群痛點缺口分析——原始條目封存",
+      "pageType": "topic"
     }
   ]
 }

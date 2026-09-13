@@ -1,3 +1,28 @@
+---
+page: "entities/cowork"
+kind: "entity"
+type: "product"
+status: "active（桌面版正式發布；行動版／網頁版 Preview，僅 Max 訂閱戶起步擴大中）"
+domain: "🛠️ 工具/功能"
+last_updated: "2026-09-13"
+last_news_update: "2026-09-12"
+status_main: "active"
+days_since_news: 1
+parent: null
+children: "[]"
+page_role: "root"
+days_since_news_subtree: 1
+inbound_links: 2
+attribution_count: 1
+attribution_last: "2026-09-12"
+top_source: "github"
+pending_count: 0
+pending_overdue: 0
+pending_next_review: null
+pending_signalled: 0
+signal: "孤島"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Cowork
 
 **類型：** product

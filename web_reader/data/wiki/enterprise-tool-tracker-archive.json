@@ -1,0 +1,18 @@
+{
+  "id": "enterprise-tool-tracker-archive",
+  "pageType": "topic",
+  "name": "大型企業 AI 編碼工具使用追蹤 — 原始條目封存",
+  "entityType": "",
+  "status": "resolved（封存頁）",
+  "domain": "💼 商業",
+  "pill": "gray",
+  "firstSeen": "",
+  "startDate": "2026-05-26",
+  "lastUpdated": "2026-09-13",
+  "lastNewsUpdate": "2026-05-27",
+  "updateFreq": "",
+  "parent": "topics/enterprise-tool-tracker",
+  "summary": "本頁是 enterprise-tool-tracker 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。",
+  "latestHeadline": "",
+  "markdown": "# 大型企業 AI 編碼工具使用追蹤 — 原始條目封存\n\n**狀態：** resolved（封存頁）\n**領域：** 💼 商業\n**上層：** [[topics/enterprise-tool-tracker]]\n**開始日期：** 2026-05-26\n**最後更新：** 2026-09-13\n**最後新聞更新：** 2026-05-27\n\n> 本頁是 [[topics/enterprise-tool-tracker]] 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。\n\n## 2026-05\n\n#### 2026-05-27\n- **Uber COO 確認 25% 生產力提升**：Andrew Macdonald 公開表示 Claude Code + ChatGPT 帶來 25% 生產力提升，但成本問題持續（Times of India）\n- **富士通與 Anthropic 簽署戰略合作**：全球範圍企業 AI 部署協議（Yahoo Finance、CX Today、Fujitsu Global）\n- **Travelport + Cognizant + Anthropic**：三方合作建構旅遊 AI 對話訂票系統（PR Newswire）\n- **Nimble Gravity 成立 Applied Anthropic Practice**：專攻銀行、保險、金融服務業 AI 諮詢（PR Newswire）\n\n#### 2026-05-25\n- **Microsoft 宣布 6/30 完全停用 Claude Code**：Cybernews 報導，原因是數月內燒完整年 AI 預算\n\n#### 2026-05-12\n- **UiPath 同時整合 Claude Code 與 Codex**：RPA 龍頭進入 AI 編碼工具市場，雙平台策略\n\n#### 2026-05-05\n- **Amazon 雙品牌並行部署**：全體員工同時開放 Claude Code 與 Codex\n\n#### 2026-05-01\n- **Apple 內部採用 Claude 確認**：外洩文件，企業滲透觸及科技業頂層\n- **Uber 成本問題首報**：Forbes 後於 5/18 深度確認\n\n## 2026-04\n\n#### 2026-04-28\n- **哈佛 FAS 以 Claude 取代 ChatGPT Edu**：學術機構結構性轉換\n"
+}

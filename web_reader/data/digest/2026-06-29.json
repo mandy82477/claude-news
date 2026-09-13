@@ -302,5 +302,11 @@
   "topicRadar": [],
   "sourceStatus": [],
   "preview": "Anthropic 取得美國政府許可，可向特定合作夥伴恢復 Mythos（最強 AI 模型）存取權限，Fable 5 回歸在望。",
-  "sedimentedToday": []
+  "sedimentedToday": [
+    {
+      "id": "ai-talent-flow-archive",
+      "name": "AI 實驗室人才流動 — 原始條目封存",
+      "pageType": "topic"
+    }
+  ]
 }

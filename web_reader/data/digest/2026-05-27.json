@@ -285,5 +285,16 @@
   "topicRadar": [],
   "sourceStatus": [],
   "preview": "Claude Code v2.1.152 正式發布：`/code-review --fix` 可直接將審查結果套用至工作樹，新增 Coordinator 模式協調多 worker 代理人完成跨 session 工程任務，系統提示增加 +4,566 tokens，是架構層級的重大更新。",
-  "sedimentedToday": []
+  "sedimentedToday": [
+    {
+      "id": "boris-cherny-archive",
+      "name": "Boris Cherny — 原始條目封存",
+      "pageType": "entity"
+    },
+    {
+      "id": "enterprise-tool-tracker-archive",
+      "name": "大型企業 AI 編碼工具使用追蹤 — 原始條目封存",
+      "pageType": "topic"
+    }
+  ]
 }

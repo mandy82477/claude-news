@@ -3,14 +3,14 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-11"
+last_updated: "2026-09-13"
 last_news_update: "2026-09-11"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 1
+children: "['topics/enterprise-tool-tracker-archive']"
+page_role: "hub"
+days_since_news_subtree: 2
 inbound_links: 29
 attribution_count: 22
 attribution_last: "2026-09-11"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-11
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-11
 
 > **最新企業採用異動**（2026-09-11）
@@ -321,29 +321,19 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 
 ### 2026-05
 
-#### 2026-05-27
-- **Uber COO 確認 25% 生產力提升**：Andrew Macdonald 公開表示 Claude Code + ChatGPT 帶來 25% 生產力提升，但成本問題持續（Times of India）
-- **富士通與 Anthropic 簽署戰略合作**：全球範圍企業 AI 部署協議（Yahoo Finance、CX Today、Fujitsu Global）
-- **Travelport + Cognizant + Anthropic**：三方合作建構旅遊 AI 對話訂票系統（PR Newswire）
-- **Nimble Gravity 成立 Applied Anthropic Practice**：專攻銀行、保險、金融服務業 AI 諮詢（PR Newswire）
+- **2026-05-27**：Uber COO 確認 25% 生產力提升；富士通、Travelport+Cognizant、Nimble Gravity 三案新增採用（詳見上方使用現況表）
+- **2026-05-25**：Microsoft 宣布原訂 6/30 停用 Claude Code（後於 06-21 加速退出）
+- **2026-05-12**：UiPath 同時整合 Claude Code 與 Codex
+- **2026-05-05**：Amazon 全員雙品牌並行部署 Claude Code + Codex
+- **2026-05-01**：Apple 內部採用經外洩文件確認；Uber 成本問題首報（Forbes 後於 5/18 深度確認）
 
-#### 2026-05-25
-- **Microsoft 宣布 6/30 完全停用 Claude Code**：Cybernews 報導，原因是數月內燒完整年 AI 預算
-
-#### 2026-05-12
-- **UiPath 同時整合 Claude Code 與 Codex**：RPA 龍頭進入 AI 編碼工具市場，雙平台策略
-
-#### 2026-05-05
-- **Amazon 雙品牌並行部署**：全體員工同時開放 Claude Code 與 Codex
-
-#### 2026-05-01
-- **Apple 內部採用 Claude 確認**：外洩文件，企業滲透觸及科技業頂層
-- **Uber 成本問題首報**：Forbes 後於 5/18 深度確認
+原始條目見 [[topics/enterprise-tool-tracker-archive#2026-05]]
 
 ### 2026-04
 
-#### 2026-04-28
-- **哈佛 FAS 以 Claude 取代 ChatGPT Edu**：學術機構結構性轉換
+- **2026-04-28**：哈佛 FAS 以 Claude 取代 ChatGPT Edu，學術機構結構性轉換
+
+原始條目見 [[topics/enterprise-tool-tracker-archive#2026-04]]
 
 ---
 

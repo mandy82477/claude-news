@@ -49,14 +49,14 @@
 | [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active（初期）| Anthropic AI 設計工具，首日社群反映幻覺多、風格偏移、Claude Code 整合差 |
 | [[entities/claude-security]] | product | 🛠️ 工具/功能 | beta | Claude Security 資安產品，情境化安全評估，整合於 Claude Code 開發環境 |
 | [[entities/openclaw]] | product | 🛠️ 工具/功能 | active | 第三方 agentic 工具，歷經禁令後 6/15 起恢復允許但改走信用池 API 費率計費 |
-| [[entities/google-investment]] | event | 💼 商業 | resolved | Google 投資 400 億美元歷史記錄，含循環算力交易結構 |
+| [[entities/google-investment]] | event | 💼 商業 | resolved | Google 投資 400 億美元歷史記錄，含循環算力交易結構　↳ 子故事：[[entities/google-investment-archive]] |
 | [[entities/bernanke]] | person | 👤 人物 | active | 前聯準會主席，2026-07-09 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會 |
-| [[entities/boris-cherny]] | person | 👤 人物 | active | Claude Code 創始人，「Loops 是未來」設計哲學、「coding is solved」論戰、第三方工具邊界聲明；07-17 稱同時執行數千個 Claude Code agent（出處已查實：Fortune Brainstorm Tech 演講） |
+| [[entities/boris-cherny]] | person | 👤 人物 | active | Claude Code 創始人，「Loops 是未來」設計哲學；07-17 稱同時執行數千個 Claude Code agent（出處已查實）　↳ 子故事：[[entities/boris-cherny-archive]] |
 | [[entities/john-jumper]] | person | 👤 人物 | active | 諾貝爾化學獎得主（AlphaFold），2026-06-19 離開 Google DeepMind 加入 Anthropic（Reuters 確認）|
 | [[entities/cat-wu]] | person | 👤 人物 | active | Claude Code 產品負責人，「AI 下一步是主動性（proactivity）」論述 |
 | [[entities/andrej-karpathy]] | person | 👤 人物 | active | 近期加入 Anthropic，CLAUDE.md 四條規則、「最小必要 context」費用控管原則 |
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
-| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：政府監管立場、企業文化論述、Code with Claude 大會現場宣布速率政策 |
+| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：政府監管立場、企業文化論述、Code with Claude 大會現場宣布速率政策　↳ 子故事：[[entities/dario-amodei-archive]] |
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（待核實）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
 | [[entities/opencode]] | product | 🛠️ 工具/功能 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills |
@@ -100,13 +100,13 @@
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界，惡意 `.git` 跨廠可觸發程式碼執行　↳ 子故事：[[topics/ai-agent-safety-archive]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動，其中香港存取限制、輸出浮水印、高風險請求換 Opus 4.8 已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
-| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 官方功能 vs 社群痛點缺口矩陣：哪些痛點官方正在解決、哪些結構性缺席；08-16 起持續有新缺口/矩陣更新 |
+| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 官方功能 vs 社群痛點缺口矩陣：哪些痛點官方正在解決、哪些結構性缺席；08-16 起持續有新缺口/矩陣更新　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]] |
 | [[topics/coding-workflow-guide]] | 🛠️ 工具/功能 | ongoing | 🗓️ 週更 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |
-| [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態 |
-| [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業 AI 編碼工具使用追蹤：Microsoft/Amazon/Uber/Apple 等企業當前工具選擇與變化軌跡；07-03 Alibaba 以疑似後門風險禁用 Claude Code（❌ 退出） |
+| [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
+| [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：現在的數字、IPO 走到哪一格、合作會不會改到你的帳單；補貼倍數只有社群估算　↳ 子故事：[[topics/anthropic-business-archive]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫 |
-| [[topics/ai-talent-flow]] | 💼 商業 | ongoing | AI 實驗室人才流動與對各公司影響：Google DeepMind 高層與核心研究員異動（事件 08-05，08-13 查證補記），Anthropic 主要承接 |
+| [[topics/ai-talent-flow]] | 💼 商業 | ongoing | AI 實驗室人才流動與對各公司影響：Google DeepMind 高層與核心研究員異動（事件 08-05，08-13 查證補記），Anthropic 主要承接　↳ 子故事：[[topics/ai-talent-flow-archive]] |

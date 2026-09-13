@@ -3,14 +3,14 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-11"
+last_updated: "2026-09-13"
 last_news_update: "2026-09-11"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 1
+children: "['topics/official-community-gap-archive']"
+page_role: "hub"
+days_since_news_subtree: 2
 inbound_links: 27
 attribution_count: 8
 attribution_last: "2026-08-23"
@@ -27,7 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-09-11
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-11
 
 > **最新功能缺口**（2026-09-11）
@@ -224,19 +224,12 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 ### 2026-07-08
 - **Claude Cowork 正式擴展至行動裝置與網頁版**：首波開放 Max 訂閱用戶，任務可雲端持續執行、涵蓋政府機構客戶；「平台可及性」缺口的輸入操作面首度正式填補（先前僅 Artifacts 覆蓋輸出面），矩陣狀態維持 ⚡ 部分對應（官方稱完整體驗仍限桌面版）
 
-### 2026-06-30
-- **org default model（v2.1.196）部分填補「多模型路由」缺口**：企業管理員可統一設定 org 預設模型，矩陣狀態從 ❌ 升為 ⚡；個人用戶動態路由需求仍無官方對應
+### 2026-06 時段總結
+- 「平台可及性」缺口本月首度部分填補：Claude Code Artifacts（06-18，輸出共享）升矩陣狀態至 ⚡；官方研究揭露 40 萬場 session 顯示領域專業度是效能倍增器（06-26），並同步測試 Cowork 行動版
+- 「多模型路由/鎖定防禦」本月首度部分填補：v2.1.196 org default model（06-30）供企業端統一設定預設模型，個人用戶動態路由缺口仍未解
+- 原始條目見 [[topics/official-community-gap-archive#2026-06]]
 
-### 2026-06-26
-- **Claude Cowork 行動版測試中**：Anthropic 測試桌機版 Claude Cowork 的行動端（mobile client），若正式推出可部分填補「平台可及性」缺口的輸入操作面；矩陣狀態維持 ⚡，待正式發布後評估
-- **官方研究：40 萬場 session 顯示領域專業度是 Claude 效能倍增器**：使用者領域專業越高，Claude 每條指令完成的工作量越大，各職業成功率幾乎與軟體工程師相同——說明「AI 輔助開發副作用」缺口（技能退化擔憂）的討論更需由非工程師用戶視角補充
-
-### 2026-06-18
-- **Claude Code Artifacts 部分填補「平台可及性」缺口**：工作階段進度可輸出為可共享互動網頁，解決輸出共享問題，但輸入操作（行動/瀏覽器指派任務）仍無解；矩陣狀態從 ❌ 升為 ⚡
-
-### 2026-05-17（同日更新）
-- **Skills 透明度缺口新證據**：Claude Skills `ask_user_input_v0` 靜默限制問題（最多 3 問題 / 4 選項）與 Skills 觸發子 agent 派生問題，是「CLAUDE.md 規則失效」缺口的延伸——官方的「自動完成優先」設計哲學與開發者的「透明可控」期望存在根本落差
-- **CLAUDE.md 失效缺口持續驗證**：HN 廣泛討論 CLAUDE.md / AGENTS.md 維護效益，社群普遍反映指令仍常被忽略，佐證此缺口持續存在
-
-### 2026-05-17（初版建立）
-初版建立：從社群工具分析與官方功能路線比對，建立缺口矩陣。識別 5 個官方未對應的核心缺口，並分析結構性原因。
+### 2026-05 時段總結
+- 05-17 初版建立缺口矩陣：識別 5 個官方未對應的核心缺口並分析結構性原因
+- 同日新增「CLAUDE.md 規則失效」缺口佐證：Claude Skills `ask_user_input_v0` 靜默限制、Skills 觸發子 agent 派生問題，以及 HN 廣泛討論 CLAUDE.md／AGENTS.md 維護效益、指令常被忽略
+- 原始條目見 [[topics/official-community-gap-archive#2026-05]]

@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-09-06"
 last_news_update: "2026-06-14"
 status_main: "resolved"
-days_since_news: 90
+days_since_news: 91
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 90
+days_since_news_subtree: 91
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

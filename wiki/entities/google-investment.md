@@ -4,14 +4,14 @@ kind: "entity"
 type: "event"
 status: "resolved（已完成，後續新輪融資進行中）"
 domain: "💼 商業"
-last_updated: "2026-09-06"
+last_updated: "2026-09-13"
 last_news_update: "2026-07-24"
 status_main: "resolved"
-days_since_news: 50
+days_since_news: 51
 parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 50
+children: "['entities/google-investment-archive']"
+page_role: "hub"
+days_since_news_subtree: 51
 inbound_links: 9
 attribution_count: 1
 attribution_last: "2026-07-24"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** resolved（已完成，後續新輪融資進行中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-24
-**最後更新：** 2026-09-06
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-07-24
 
 > **最新動態**（2026-07-24）
@@ -109,17 +109,16 @@ Bloomberg、TechCrunch、Reuters、NYT、Axios 等多個主流媒體同步報導
 ### 2026-07-23
 - **Bloomberg 報導 Alphabet 持有 Anthropic 股權市值已跳升至約 1,240 億美元**：Bloomberg.com 報導 Alphabet 帳面持有的 Anthropic 股權市值已成長至約 **$124 billion**。**注意**：此為股權市值（帳面評估），非新一輪投資金額，與本頁記錄之 2026-04-24 官方投資額（最高 $400 億美元、當時估值 $3,500 億美元）為不同性質數字——市值跳升反映 Anthropic 整體估值自 04-24 以來的持續墊高（對照 Series H $965B、次級市場 $1.2 兆美元等既有估值訊號，見 [[topics/anthropic-business]]「IPO 走到哪一格」表），惟具體換算所依據的 Anthropic 整體估值基準、Google 持股比例未見報導細節（推論，待後續查證）（Google News/Bloomberg.com）
 
-### 2026-05-01
-- Data Center Knowledge 報導：Google 與 Anthropic 的算力合作已達到 **gigawatt 等級的預購規模**，反映 AI 基礎建設的資本投入正進一步集中，Anthropic 對自身長期算力需求的預判已超越一般規模
+### 2026-05
 
-### 2026-04-27
-- Google 確認追加投資消息再獲多家財經媒體（Yahoo Finance、AI Business、TIKR.com 等）同步報導，總投資額 **$400 億美元**確認
-- CoreWeave（CRWV）宣布與 Anthropic 簽訂基礎設施合作協議，為 Claude 系列模型提供 GPU 算力資源，是 Anthropic 多元化算力供應鏈的重要佈局
-- Anthropic 具備記憶功能的 Managed Agents 正在重塑 AI 工作負載部署模式，直接影響資料中心基礎設施規模需求（Data Center Knowledge 報導）
-- **AWS 週報揭露 Anthropic & Meta 合作**：Amazon Bedrock AgentCore CLI 同步上線，顯示 AWS 正深化整合主流 AI 供應商（含 Anthropic 與 Meta），Anthropic 的模型已可透過 AWS Bedrock 與 Meta 模型並排部署
+- **05-01**：Data Center Knowledge 報導 Google 與 Anthropic 算力合作已達 gigawatt 等級預購規模
 
-### 2026-04-24
-- Google 正式宣布投資
-- 多家主流媒體同步大幅報導
-- HN 社群熱烈討論循環融資結構的意涵
+原始條目見 [[entities/google-investment-archive#2026-05]]
+
+### 2026-04
+
+- **04-27**：多家媒體確認總投資額 $400 億美元；CoreWeave 簽訂 GPU 算力合作；Managed Agents 帶動資料中心需求；AWS 週報揭露 Anthropic 與 Meta 合作
+- **04-24**：Google 正式宣布投資，主流媒體同步大幅報導，HN 熱烈討論循環融資結構
+
+原始條目見 [[entities/google-investment-archive#2026-04]]
 

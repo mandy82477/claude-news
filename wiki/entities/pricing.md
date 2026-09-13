@@ -4,15 +4,15 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-09-10"
+last_updated: "2026-09-13"
 last_news_update: "2026-09-10"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 143
+days_since_news_subtree: 3
+inbound_links: 144
 attribution_count: 94
 attribution_last: "2026-09-10"
 top_source: "google-news"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-10
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-10
 
 > **最新計費政策異動**（2026-09-07）
@@ -358,18 +358,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **加州用戶帳號遭盜刷，歐元計費未授權費用**：ABC7 報導，加州用戶反映 Claude 帳號遭他人盜用，產生以歐元計費的未授權費用；顯示 Anthropic 計費帳號安全存在漏洞，建議用戶定期檢查帳號活動記錄（ABC7 2026-06-24）
 - （未列入總表：距最後動態 74 天，09-22 起若無新回報轉 ⏸）
 
-#### ✅ 2026-05-20：Claude Code 定價溝通混亂事件（Simon Willison 分析）
-
-- **Claude Code 曾短暫顯示為 Max 方案專屬功能**：Anthropic 定價頁在毫無公告的情況下短暫顯示 Claude Code 為 Max 方案（$100–$200/月）專屬功能，引發社群恐慌後已撤回。Simon Willison 深度分析指出問題根源是 Anthropic 的定價溝通策略缺乏透明度。此事件發生於 2026-04-22 前後，但 HN 於 2026-05-19/20 再度廣泛討論，反映社群對 Anthropic 定價透明度的持續不滿
-- **建議**：用戶應持續追蹤官方 [Choosing a Plan](https://www.anthropic.com/pricing) 頁面，而非依賴第三方資訊；Anthropic 任何定價頁更動均可能未經公告
-
-#### ⏸ 2026-05-11：Pro 方案 0% 用量仍遭收費
-
-用戶儀表板顯示 0% 情況下，2–3 個提示後被收取 $3.37 Extra Usage；根本問題：1M context window 觸發 API 計費通道，獨立於訂閱用量計量。Anthropic 尚未公告改善。
-
-#### ⏸ 2026-05-05：提示快取窗口悄悄縮短（未公告）
-
-Anthropic 於 4 月初靜默縮短預設 prompt cache 窗口，實質提高 token 消耗速度；為繼 Token 費用估算翻倍（2026-04-29）後第二次被社群自行發現的靜默計費改動。
+**2026-05 事故**：Claude Code 定價溝通混亂事件（05-20，✅ Simon Willison 分析）、Pro 方案 0% 用量仍遭收費（05-11，⏸ 1M context window 觸發 API 計費通道）、提示快取窗口悄悄縮短（05-05，⏸ 未公告）。完整記錄見 [[entities/pricing-archive#2026-05]]。
 
 **2026-04 事故（已封存）**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
@@ -555,14 +544,7 @@ Anthropic 於 4 月初靜默縮短預設 prompt cache 窗口，實質提高 toke
 - **30 天資料保留政策**：Fable 5 / Mythos 5 所有流量（含 AWS Bedrock）強制保留 30 天，資料離開 AWS 安全邊界；企業應評估隱私影響
 - **AWS Bedrock 強制 provider data sharing（2026-06-21 新增）**：AWS Bedrock 的 Fable 5 model card 顯示，客戶須同意啟用 `anthropic.model-invocation-logging`（即 provider data sharing），Anthropic 可存取推理日誌；金融、醫療等受嚴格資料合規監管的行業在採購決策前需評估此條件（dev.to 2026-06-21）
 
-#### 2026-05-23：模型別名退役警示
-
-- **⚠️ claude-opus-4-20250514 與 claude-sonnet-4-20250514 退役（2026-06-15）**：Anthropic 確認這兩個模型版本將於 6/15 正式退役，使用舊版別名（如 `claude-opus-4-0`、`claude-sonnet-4-0`）的生產環境程式碼將開始失敗。需在 2026-06-14 前遷移至新版模型 ID（如 `claude-opus-4-5-20251001`、`claude-sonnet-4-6-20260101` 等）
-- **Max 方案實質差異說明**：dev.to 分析文章確認 Max 方案不僅是「更多用量」，而是在 context window 長度、Claude Code 可用額度、優先排隊等方面有結構性不同；Max 5x（$100/月）vs Max 20x（$200/月）在 agentic 工作流上的差異尤其顯著
-
-#### 2026-05-13：Anthropic 定價主導權強勁
-
-The Information 報導企業客戶即使面對成本上漲仍持續採用；Anthropic API 定價策略短期維持強勢。
+**2026-05 定價與促銷**：模型別名退役警示＋Max 方案實質差異說明（05-23）、Anthropic 定價主導權強勁（05-13）。完整記錄見 [[entities/pricing-archive#2026-05]]。
 
 ### 配額與速率
 

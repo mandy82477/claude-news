@@ -62,6 +62,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "boris-cherny-archive",
+      "pageType": "entity",
+      "name": "Boris Cherny — 原始條目封存",
+      "entityType": "person",
+      "status": "resolved（封存頁）",
+      "domain": "👤 人物",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-04-23",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-05-27",
+      "updateFreq": "",
+      "parent": "entities/boris-cherny",
+      "summary": "本頁保存 boris-cherny 被搬離主頁的原始條目，一字不刪。想知道現況，回主頁「現況」或「公開言論摘要表」。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "👤 人物"
+      ]
+    },
+    {
       "id": "boris-cherny",
       "pageType": "entity",
       "name": "Boris Cherny",
@@ -322,6 +342,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "dario-amodei-archive",
+      "pageType": "entity",
+      "name": "Dario Amodei — 原始條目封存",
+      "entityType": "person",
+      "status": "resolved（封存頁）",
+      "domain": "👤 人物",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-05-12",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-06-26",
+      "updateFreq": "",
+      "parent": "entities/dario-amodei",
+      "summary": "本頁保存 dario-amodei 被搬離主頁的原始條目，一字不刪。想知道現況，回主頁「現況」或「公開立場與言論」表。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "👤 人物"
+      ]
+    },
+    {
       "id": "dario-amodei",
       "pageType": "entity",
       "name": "Dario Amodei",
@@ -422,6 +462,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "google-investment-archive",
+      "pageType": "entity",
+      "name": "Google 投資 Anthropic 400 億美元 — 原始條目封存",
+      "entityType": "event",
+      "status": "resolved（封存頁）",
+      "domain": "💼 商業",
+      "pill": "gray",
+      "firstSeen": "2026-04-24",
+      "startDate": "",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-05-01",
+      "updateFreq": "",
+      "parent": "entities/google-investment",
+      "summary": "本頁是 google-investment 的原始條目封存，重點層（摘要、關鍵細節）都在主頁。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
       "id": "google-investment",
       "pageType": "entity",
       "name": "Google 投資 Anthropic 400 億美元",
@@ -431,7 +491,7 @@ window.WIKI_DATA = {
       "pill": "gray",
       "firstSeen": "2026-04-24",
       "startDate": "",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-07-24",
       "updateFreq": "",
       "parent": "",
@@ -712,7 +772,7 @@ window.WIKI_DATA = {
       "pill": "gray",
       "firstSeen": "2026-04-25",
       "startDate": "",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-05-19",
       "updateFreq": "",
       "parent": "entities/pricing",
@@ -732,7 +792,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "2026-04-25",
       "startDate": "",
-      "lastUpdated": "2026-09-10",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-10",
       "updateFreq": "",
       "parent": "",
@@ -925,6 +985,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "ai-talent-flow-archive",
+      "pageType": "topic",
+      "name": "AI 實驗室人才流動 — 原始條目封存",
+      "entityType": "",
+      "status": "resolved（封存頁）",
+      "domain": "💼 商業",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-06-21",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-06-29",
+      "updateFreq": "",
+      "parent": "topics/ai-talent-flow",
+      "summary": "本頁是 ai-talent-flow 的原始條目封存，重點層（摘要、對各公司的影響）都在主頁。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
       "id": "ai-talent-flow",
       "pageType": "topic",
       "name": "AI 實驗室人才流動",
@@ -934,7 +1014,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-06-21",
-      "lastUpdated": "2026-09-12",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-10",
       "updateFreq": "",
       "parent": "",
@@ -1327,6 +1407,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "enterprise-cost-management-archive",
+      "pageType": "topic",
+      "name": "企業規模 Claude 成本管理 — 原始條目封存",
+      "entityType": "",
+      "status": "resolved（封存頁）",
+      "domain": "💼 商業",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-05-01",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-06-30",
+      "updateFreq": "",
+      "parent": "topics/enterprise-cost-management",
+      "summary": "本頁是 enterprise-cost-management 的原始條目封存，重點層（缺口表、企業案例、因應策略）都在主頁。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
       "id": "enterprise-cost-management",
       "pageType": "topic",
       "name": "企業規模 Claude 成本管理",
@@ -1336,12 +1436,32 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-05-01",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-04",
       "updateFreq": "",
       "parent": "",
       "summary": "大型組織採用 Claude Code 後，成本結構挑戰迅速浮現。Uber 四個月耗盡全年 AI 預算（Forbes，2026-05-17）是本頁最早的公開案例，揭示企業在缺乏細粒度使用量控管工具的情況下，AI 工具成本極易失控。此議題已從開發者社群的個人抱怨升級至 Forbes、Business Insider 等主流…",
       "latestHeadline": "大型組織採用 Claude Code 後，成本結構挑戰迅速浮現。Uber 四個月耗盡全年 AI 預算（Forbes，2026-05-17）是本頁最早的公開案例，揭示企業在缺乏細粒度使用量控管工具的情況下，AI 工具成本極易失控。此議題已從開發者社群的個人抱怨升級至 Forbes、Business Insider 等主流",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "enterprise-tool-tracker-archive",
+      "pageType": "topic",
+      "name": "大型企業 AI 編碼工具使用追蹤 — 原始條目封存",
+      "entityType": "",
+      "status": "resolved（封存頁）",
+      "domain": "💼 商業",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-05-26",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-05-27",
+      "updateFreq": "",
+      "parent": "topics/enterprise-tool-tracker",
+      "summary": "本頁是 enterprise-tool-tracker 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。",
+      "latestHeadline": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1356,7 +1476,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-05-26",
-      "lastUpdated": "2026-09-11",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-11",
       "updateFreq": "",
       "parent": "",
@@ -2604,6 +2724,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "official-community-gap-archive",
+      "pageType": "topic",
+      "name": "官方功能 vs 社群痛點缺口分析——原始條目封存",
+      "entityType": "",
+      "status": "resolved（封存頁）",
+      "domain": "🛠️ 工具/功能",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "2026-05-17",
+      "lastUpdated": "2026-09-13",
+      "lastNewsUpdate": "2026-06-30",
+      "updateFreq": "",
+      "parent": "topics/official-community-gap",
+      "summary": "本頁保存 official-community-gap 被搬離主頁的原始 `## 時序` 條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "🛠️ 工具/功能"
+      ]
+    },
+    {
       "id": "official-community-gap",
       "pageType": "topic",
       "name": "官方功能 vs 社群痛點缺口分析",
@@ -2613,7 +2753,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-05-17",
-      "lastUpdated": "2026-09-11",
+      "lastUpdated": "2026-09-13",
       "lastNewsUpdate": "2026-09-11",
       "updateFreq": "",
       "parent": "",
