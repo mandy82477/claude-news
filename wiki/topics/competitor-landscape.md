@@ -103,7 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **競品定價細節**
 - ⟨Q-01⟩ ❓ **待查證**（標 2026-08-14｜查 DeepSeek V4-Pro、V4 Flash）：僅悉較 V4 Flash 定價更高，具體費率未見報導；已掃日報至 2026-09-03 無後續，官方頁面未查證。
 - **DeepSeek 雙軌與對比對象**：V4-Pro 隨開源工具 Harness 同步上線，API 定價較 V4 Flash 高，可能為「低價 Flash／高價 Pro」雙軌策略（推論）；KuCoin「逼近 Claude 3 Opus」是 DeepSeek 對 Claude 的比較，與內部兩模型互比不可混用。
-- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
+- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-09-27｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
 - **Lindy 案例（06-29，CNBC）**：AI 新創 Lindy 100% 流量自 Claude 切至 DeepSeek，每月省下數百萬美元，屬企業級大規模用量的相對節省，非單一訂閱價格對比。
 - **Muse Code 定價來源**：定價數字為媒體整理（Wavect、The New Stack），Meta 官方獨立掛牌頁未見（2026-08-13 查證）；09-01 三訂閱層與「20x」折扣層的實際費率均未公布。
 - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Decrypt、Qwen3.8｜複 2026-09-13）：查證後仍未見 Alibaba 官方公告或後續報導確認是否為 07-20 已報導之 Qwen3.8。
@@ -284,7 +284,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-08-13
 - **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
-- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜訊 2026-09-07）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 報導僅標題可用，無正文細節，Grok 版本號與能力提升內容未見（Google News/Barron's）
+- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-09-27｜訊 2026-09-07）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 報導僅標題可用，無正文細節（Google News/Barron's）。**後續（依 2026-09-07 日報）**：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、宣稱優於 GPT-5 與 Claude；該定價與能力宣稱僅見媒體標題，xAI 官方頁面未查證，能力提升內容仍未見
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
 
 ### 2026-08-11

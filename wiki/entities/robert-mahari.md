@@ -32,7 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-07
 **最後新聞更新：** 2026-08-08
 
-> ❓ **待查證**（標 2026-08-10｜查 Legal IT Insider、Law.com）｜**Robert Mahari 出任 Claude for Legal 負責人**（2026-08-07 報導）：Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人（head of Claude for Legal）。Legal IT Insider、Law.com 同日獨立報導，可視為跨來源初步驗證，惟兩篇來源皆為 Google News RSS 轉址連結，僅標題層級可用，正文未見；部門具體職掌範圍、到任時間與過往經歷均未能確認。
+> **Robert Mahari 出任 Claude for Legal 負責人**（2026-08-07 報導，2026-09-13 查證正文）：Anthropic 任命 Robert Mahari 出任「Claude for Legal」負責人（head of Claude for Legal）。**過往經歷已確認**：哈佛法學院與 MIT Media Lab 的 JD-PhD（研究主題即法律 AI）、史丹佛 CodeX 法律資訊學中心副主任，並創辦法律 AI 新創 Akiva AI。**職掌範圍已確認**：帶法律事務所、企業法務與法律科技公司「從產品走到 GTM」，與既有負責法律垂直產品的 Mark Pike 分工。此任命發生在 Claude for Legal 推出約三個月後，該產品上線時附 20 個 MCP connector 串接事務所既有軟體（[Legal IT Insider](https://legaltechnology.com/anthropic-hires-robert-mahari-as-head-of-claude-for-legal/)、[Artificial Lawyer](https://www.artificiallawyer.com/2026/08/07/anthropic-hires-head-of-claude-for-legal/)）。
+>
+> ❓ **待查證**（標 2026-09-13｜查 Robert Mahari、Claude for Legal｜複 2026-10-13）｜**到任日未公開**：Anthropic 官方未發布此任命的新聞稿，實際到任日期各家報導均未載。
 
 > **最新報導**（2026-08-08）
 > Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人，Legal IT Insider、Law.com 同日獨立報導。
@@ -41,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」部門負責人。Legal IT Insider 與 Law.com 同日各自獨立報導此任命，構成跨來源驗證，惟目前僅能取得兩篇報導標題（Google News RSS 轉址連結），無法讀取實際內文，因此該部門具體職掌範圍、Mahari 到任時間、以及其過往經歷（報導提及為法律科技學者暨新創創辦人）等細節均未能確認，查證狀態見上方標記，暫從簡記錄。
+Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」部門負責人。Legal IT Insider 與 Law.com 同日各自獨立報導，構成跨來源驗證；本站最初只取得 Google News RSS 轉址的標題層級資訊，**2026-09-13 複查已讀到正文**：職掌為帶事務所、企業法務與法律科技公司「從產品走到 GTM」，與既有負責法律垂直產品的 Mark Pike 分工；經歷為哈佛法學院／MIT Media Lab JD-PhD（研究法律 AI）、史丹佛 CodeX 法律資訊學中心副主任、法律 AI 新創 Akiva AI 創辦人。任命發生在 Claude for Legal 上線（附 20 個 MCP connector）約三個月後。僅**到任日**仍未見於任何來源，見上方標記。
 
 ## 核心論述
 
@@ -58,4 +60,4 @@ Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」
 
 ## 歷史記錄
 
-- 2026-08-07：Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人；Legal IT Insider、Law.com 同日獨立報導（僅標題層級可用，正文未見，查證狀態見上方標記）
+- 2026-08-07：Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人；Legal IT Insider、Law.com 同日獨立報導（2026-09-13 已讀正文，經歷與職掌均確認，僅到任日未見）

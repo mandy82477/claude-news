@@ -215,7 +215,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **08-29 補充：具名研究者與攻擊方法論**：資安研究者 **Alon Hertz** 發現編碼 agent（Claude、Codex、Hermes 等）會把 `llms.txt`／`llms-full.txt`（網站給 AI 讀取用的「網站說明檔」慣例）內容當成可信指令，而非需審查的外部輸入；Hertz 掃描 **6,214 個網域**（涵蓋國防承包商、財星 500 大企業、科技巨頭）、共 **8,265 份**此類檔案，其中 **120 份**檔案內容指向**尚未註冊的套件名稱**——理論上攻擊者可搶注這些套件名稱、植入惡意程式碼，待受害企業的 agent 依 llms.txt 指示安裝時即完成供應鏈感染，攻擊面可觸及企業內網
 - **The Register：Claude Code 本身的觸發路徑**：僅需要求 Claude Code「摘要一個網站」，即足以讓其讀取並信任該網站的 llms.txt 內容做出非預期行為——具體示範了 Ars Technica／Hertz 研究中「agent 信任 llms.txt」機制在 Claude Code 上的最小觸發條件；僅標題與轉址連結可用，未見與 Hertz 研究是否為同一次揭露或獨立示範的說明
 - **性質判斷**：屬「agent 對外部內容過度信任」的產品層安全問題（提示注入的一種變體），非模型層安全問題；攻擊鏈已具體化為「llms.txt 指向未註冊套件名稱 → 攻擊者搶注 → agent 依指示安裝 → 惡意程式碼進入企業內網」，屬可重現的供應鏈攻擊方法論
-- ❓ **待查證**（標 2026-08-27｜查 Ars Technica、unowned code、Hermes｜訊 2026-08-29）｜**攻擊性質**：08-29 Alon Hertz 研究已釐清為第三方可預先佈局的供應鏈攻擊（llms.txt 指向未註冊套件名稱，待攻擊者搶注後透過 agent 安裝流程植入企業內網），非單純「agent 自主行為的意外後果」；惟 120 份問題檔案是否已有實際套件被搶注、是否已造成真實在野感染案例，Hertz 報告與 The Register 均未見報導，此細部問題仍未有答案
+- ❓ **待查證**（標 2026-08-27｜查 Ars Technica、unowned code、Hermes｜複 2026-09-27｜訊 2026-08-29）｜**攻擊性質**：08-29 Alon Hertz 研究已釐清為第三方可預先佈局的供應鏈攻擊（llms.txt 指向未註冊套件名稱，待攻擊者搶注後透過 agent 安裝流程植入企業內網），非單純「agent 自主行為的意外後果」；惟 120 份問題檔案是否已有實際套件被搶注、是否已造成真實在野感染案例，Hertz 報告與 The Register 均未見報導，此細部問題仍未有答案
 - **可信度評估**：Ars Technica 為主流資安/科技媒體；startupfortune.com 補充具名研究者與量化掃描數據（6,214 域名／8,265 檔案／120 份問題檔案），數字具體可查證性較高，惟 startupfortune.com 本身知名度較低，數字尚待其他資安媒體交叉確認；The Register 為主流資安媒體但僅標題可用
 
 ### gbhackers／CyberSecurityNews：MCP 遠端程式碼執行、盲提示注入與記憶憑證竊取針對 AI 基礎設施（2026-08-27／28 新增，08-29 CyberSecurityNews 跟進）

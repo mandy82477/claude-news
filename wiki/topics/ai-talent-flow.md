@@ -36,7 +36,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（推論，分析師估算），Gemini 3.5 Pro 延期至七月（推論，dev.to 報導，未經 Google 官方確認）。最矚目的是 2024 諾貝爾化學獎得主 John Jumper（6/19，蛋白質結構預測，DeepMind 近 9 年），加上 Jonas Adler（AI 編碼）、Alexander Pritzel（訓練），以及另外 2 位資深研究員（6/28 dev.to 報導）、一名未具名研究員轉投 OpenAI。The Information 同期報導 Google 正重組 AI 編碼突擊隊以追趕 Anthropic——**流失的方向（AI coding）正是 Google 落後的方向**，是這波人才戰最值得注意的一點。
+截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（**數字出自 dev.to 報導標題**；2026-09-13 查證：CNBC 記 07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 $2,000 億，口徑不同），Gemini 3.5 Pro 延期至七月（延期屬實、Google 已確認仍在測試，但**官方把原因指向程式能力未達內部預期，從未歸因於人才出走**）。最矚目的是 2024 諾貝爾化學獎得主 John Jumper（6/19，蛋白質結構預測，DeepMind 近 9 年），加上 Jonas Adler（AI 編碼）、Alexander Pritzel（訓練），以及另外 2 位資深研究員（6/28 dev.to 報導）、一名未具名研究員轉投 OpenAI。The Information 同期報導 Google 正重組 AI 編碼突擊隊以追趕 Anthropic——**流失的方向（AI coding）正是 Google 落後的方向**，是這波人才戰最值得注意的一點。
 
 本頁追蹤 AI 前沿實驗室之間的人才流動，重點放在**對各公司的影響**，而非單一公司視角。整體格局：人才明顯由 Google DeepMind 淨流出，Anthropic 為主要承接方，OpenAI 亦有斬獲。
 
@@ -45,13 +45,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 公司 | 角色 | 具體影響 | 評估 |
 |------|------|---------|------|
 | **Meta** | 淨流失方 | 傳一位「明星」AI 研究員離職轉投 Anthropic（09-10，WSJ，僅標題可用，姓名與職稱未載）| ℹ️ 具體人名、職稱、加入 Anthropic 後的職位均未見報導，戰力影響待觀察 |
-| **Google DeepMind** | 淨流失方＋高層動盪 | 研究員與元老出走批次（6/21–6/28）＋ Discovery Loop 創業潮（08-05/06）＋ Thore Graepel 出走創業（09-07）；市值蒸發約 $2,700 億美元（詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
+| **Google DeepMind** | 淨流失方＋高層動盪 | 研究員與元老出走批次（6/21–6/28）＋ Discovery Loop 創業潮（08-05/06）＋ Thore Graepel 出走創業（09-07）；市值蒸發約 $2,700 億美元（dev.to 口徑，非官方；詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
 | **Anthropic** | 主要承接方 | 科學計算（Jumper）／AI 編碼（Adler）／訓練（Pritzel）／安全經濟；08-21/23 新增晶片人才 Amir Salek（前 Google TPU 計畫創辦人，入 compute 團隊）| 🟢 招募已擴及硬體自主設計；到任日未公開（推論：戰力影響待觀察）|
 | **OpenAI** | 次要承接方 | 獲得一名 Google 頂尖研究員（6/23 SEJ 報導，姓名未具名）| 🟡 同步受惠於 Google 人才外流，規模小於 Anthropic |
 | **Meshy**（3D 生成新創，非 Anthropic 生態） | 人才承接方 | 電腦繪圖資深學者童欣（Dr. Xin Tong）加入出任首席科學家（09-09，僅標題可用）| ℹ️ 3D 生成賽道人才強化；與 Google／Anthropic 人才戰無直接關聯，具體職責與履歷未見報導 |
 
 **對各公司的影響細節**
-- **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元；Gemini 3.5 Pro 延期至七月（推論）；被迫重組 AI 編碼突擊隊
+- **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
   - **09-07**：研究老將 Thore Graepel 離職，投入一項 AI 推理新創事業。**與既有記錄的關係**：未加入 Anthropic 或其他既有前沿實驗室，屬「自行創業」型態，與 08-05／08-06 Jeff Dean 等人出走創辦 Discovery Loop 同屬一類、非「被 Anthropic 承接」的又一筆淨流失。
   - 具體新創名稱、資金來源、Graepel 於新創擔任的職位均未見報導，僅標題可用（推論）。
   - **08-05／08-06**：Hassabis 卸任 DeepMind CEO 轉任 Alphabet 首席科學家（留任集團，非離職）；Jeff Dean、Sanjay Ghemawat、Oriol Vinyals、Quoc Le 離職創辦 Discovery Loop（PBC，Dean 任 CEO，**Alphabet 亦為投資方**），市值影響各家估 1,600–2,000 億美元（盤中估算區間）；Kavukcuoglu 升任 DeepMind SVP
@@ -118,7 +118,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - dev.to 報導：Gemini 3.5 Pro 延期至七月，同期 4 位 Google 資深研究員轉投 Anthropic，AI 人才流動繼續向 Anthropic 傾斜（推論，未經 Google 官方確認）。（ref: https://dev.to/doremonai/gemini-35-pro-delayed-to-july-4-senior-google-researchers-defect-to-anthropic-47he）
 
 #### 2026-06-26
-- dev.to 深度報導：Google AI 人才出走潮一週內 4 位頂尖研究員離職，含諾貝爾獎得主 John Jumper；Google 市值蒸發約 $2,700 億美元（推論，分析師估算）、Gemini 3.5 延期；dev.to 另有報導 Jumper 在「危機中途」加入 Anthropic 的動機分析。（ref: https://dev.to/doremonai/googles-ai-brain-drain-4-top-researchers-leave-for-anthropic-in-one-week-270b-wiped-gemini-35-5ffl；ref: https://dev.to/peremptory/the-nobel-laureate-who-joined-anthropic-mid-crisis-5cfh）
+- dev.to 深度報導：Google AI 人才出走潮一週內 4 位頂尖研究員離職，含諾貝爾獎得主 John Jumper；Google 市值蒸發約 $2,700 億美元（該報導標題自述的數字，非分析師具名估算；2026-09-13 查證見 [[entities/john-jumper]]）、Gemini 3.5 延期；dev.to 另有報導 Jumper 在「危機中途」加入 Anthropic 的動機分析。（ref: https://dev.to/doremonai/googles-ai-brain-drain-4-top-researchers-leave-for-anthropic-in-one-week-270b-wiped-gemini-35-5ffl；ref: https://dev.to/peremptory/the-nobel-laureate-who-joined-anthropic-mid-crisis-5cfh）
 
 #### 2026-06-25
 - FT 報導 Anthropic 新聘一位對「人類長期存亡」有爭議觀點的經濟學家，引發 AI 安全社群討論。（ref: https://www.ft.com/content/bb04671c-4377-4231-96ef-0f8e57ed5d1b）

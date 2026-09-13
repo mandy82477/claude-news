@@ -47,14 +47,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-09-07。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-09-13。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
 | **token 消耗異常**（2026-08-25） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-08-21） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-08-28） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-03、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-08-28，兩則皆開啟） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **Opus 5 上線後的品質觀感**（2026-08-28） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-12、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-09-10，兩則皆開啟且仍在累積留言：121／13 則） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 

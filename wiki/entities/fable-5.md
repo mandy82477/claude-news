@@ -219,7 +219,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### 2026-08-28
 **Reddit 質疑串：「Anthropic 是否在削弱模型」**：r/ClaudeCode 貼文「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」（nerf）；單一使用者觀感回報，無具體案例或量化數字佐證，延續 08-13「rage-inducing」、08-20「smoking gun」等已記錄的社群觀感分歧模式（完整同類記錄見 [[entities/opus-5]]「歷史記錄」）（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）。
 
-❓ 待查證 ⟨Q-02⟩ **Fable 5.1 是否即將發布**：Reddit 傳聞疑似已被路由至新版本測試，無官方佐證（詳見「懸置細節」）。**後續（2026-09-01）**：Anthropic 官方正式發布 Claude Fable 5.1 與 Claude Mythos 5.1，證實社群傳聞屬實；詳見上方「現況」與下方本節 2026-09-01 條目（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）。
+**社群傳聞已證實**：08-28 r/ClaudeCode 討論稱 Fable 5.1 疑似已被路由至新版本測試（當時純屬臆測）；Anthropic 於 2026-09-01 正式發布 Claude Fable 5.1 與 Claude Mythos 5.1，傳聞屬實。詳見上方「現況」與下方本節 2026-09-01 條目（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，查證 2026-09-13）。
 
 #### 2026-08-27
 **GitHub Issue #77136：跨模型代際重複修辭套路問題**：開發者回報 Claude 4.7、4.8、5.0 與 Fable 日益出現重複修辭、難以維持連貫散文的問題，即使給出明確風格指示仍難改善；已累積 106 則留言、517 個反應，尚無官方回應。此為**跨模型代際的共同問題**（非 Fable 5 獨有），完整記錄見 [[entities/opus-5]]「歷史記錄」（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-08-27）。
@@ -311,7 +311,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **懸置細節**
 
 - ⟨Q-01⟩ ❓ **待查證**（標 2026-09-02｜查 techcrunch.com、less restrictive）：TechCrunch 標題稱 Fable 5.1「cheaper, less restrictive」，僅標題可用，「限制更少」具體所指未經證實（Google News/TechCrunch，2026-09-01）
-- ⟨Q-02⟩ ❓ **待查證**（標 2026-08-29｜查 Fable 5.1、1w0v676｜複 2026-09-12｜訊 2026-09-02）：Reddit r/ClaudeCode 討論 Fable 5.1 是否即將發布，部分回覆稱疑似已被路由至新版本測試，純屬社群臆測，無官方公告或版本號佐證（Reddit，2026-08-28）
 - ⟨Q-03⟩ ❓ **待查證**（標 2026-08-26｜查 Futurism、cheaper alternatives｜複 2026-09-09）：Futurism 標題稱企業轉向更便宜替代方案，僅標題可用，無採用數據、案例或方法論佐證（Google News/Futurism，2026-08-26）
 - ⟨Q-04⟩ ❓ **待查證**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-09-09）：tech-insider.org 標題稱三模型定價差 $1,125，僅標題可用，計算基準未經查證（Google News/tech-insider.org，2026-08-26）
 - ⟨Q-05⟩ ❓ **待查證**（標 2026-08-26｜查 analyticsindiamag.com、Almost Nobody｜複 2026-09-09）：analyticsindiamag.com 標題稱 Fable 5「幾乎無人使用」，RSS 摘要未附正文，採用數據、統計方法、對比基準均未見報導（Google News，2026-08-18）

@@ -32,16 +32,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-08-10
 **最後新聞更新：** 2026-06-26
 
-> ❓ **待查證**（標 2026-08-10｜查 Alphabet、Gemini 3.5）｜**人才出走潮市場影響推論**（2026-06-26 報導）：dev.to 多篇報導總結 Google AI 人才出走潮，稱一週內 4 位頂尖研究員離開 Google DeepMind 加入 Anthropic（含 Jumper），並將 Alphabet 市值蒸發約 2,700 億美元、Gemini 3.5 延期歸因於此波出走（社群推論，官方尚無回應）。Jumper 本人加入一事已於 2026-06-21 經 Reuters 獨立確認，不屬本則懸置範圍。
+> 🔎 **查無官方**（標 2026-08-10｜查 Alphabet、Gemini 3.5｜複 2026-11-13）｜**人才出走潮市場影響推論**（2026-06-26 報導）：dev.to 多篇報導總結 Google AI 人才出走潮，稱一週內 4 位頂尖研究員離開 Google DeepMind 加入 Anthropic（含 Jumper），並將 Alphabet 市值蒸發與 Gemini 3.5 延期歸因於此波出走。**2026-09-13 查證結果：這條因果鏈從未出自官方之口，且市值數字各家互不相同。** Google 官方僅確認 Gemini 3.5 Pro 仍在與夥伴測試中，媒體報導的延期原因是**程式能力未達內部預期**，官方從未把延期歸因於研究員離職（[CNBC](https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html)）。市值面：07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 **2,000 億美元**（CNBC）；其他媒體另給 2,250 億與「整段事件累計 4,250 億」等數字；本站原記的 2,700 億出自 dev.to 該篇報導自己的標題（270B wiped），與主流財經媒體的當日數字不同口徑。單日股價反應與「人才出走造成市值蒸發」是兩回事，後者屬推論，非事實。Jumper 本人加入一事已於 2026-06-21 經 Reuters 獨立確認，不屬本則懸置範圍。
 
 > **最新報導**（2026-06-26）
-> dev.to 報導指出離職研究員（含 Jumper）人才潮，將 Alphabet 市值蒸發約 2,700 億美元、Gemini 3.5 延期歸因於此（社群推論）。
+> dev.to 報導指出離職研究員（含 Jumper）人才潮，將 Alphabet 市值蒸發約 2,700 億美元、Gemini 3.5 延期歸因於此（社群推論；2026-09-13 查證：此因果非官方說法，CNBC 當日數字為 2,000 億，見上）。
 
 ---
 
 ## 現況
 
-2026-06-21，Reuters 正式確認 John Jumper 已離開 Google DeepMind、加入 Anthropic（HN score 77）。他成為一週內出走 Google 加入 Anthropic 的多位頂尖研究員之一，dev.to 報導指此波人才流失連帶造成 Google Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 亦因相關震盪而延期（推論）。社群分析認為 Jumper 的加入是 Anthropic 向科學計算與生物 AI 領域擴展的重要人才佈局訊號。
+2026-06-21，Reuters 正式確認 John Jumper 已離開 Google DeepMind、加入 Anthropic（HN score 77）。他成為一週內出走 Google 加入 Anthropic 的多位頂尖研究員之一，dev.to 報導指此波人才流失連帶造成 Google Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 亦因相關震盪而延期（推論；2026-09-13 查證：官方僅確認延期與程式能力未達內部預期有關、從未歸因於離職，CNBC 記當日蒸發約 2,000 億美元）。社群分析認為 Jumper 的加入是 Anthropic 向科學計算與生物 AI 領域擴展的重要人才佈局訊號。
 
 John Jumper 是 2024 年諾貝爾化學獎得主，因 AlphaFold 蛋白質結構預測研究與 Demis Hassabis 共同獲獎。加入時點適逢 Anthropic 面臨 Mythos 出口管制危機。
 
@@ -73,7 +73,7 @@ John Jumper 以 AlphaFold 系列模型的開發著稱，AlphaFold 2 解決了困
 
 ## 歷史記錄
 
-- 2026-06-26：dev.to 多篇報導總結此波 Google AI 人才出走潮，指 Jumper 加入時點適逢 Anthropic Mythos 出口管制危機；一週內 4 位頂尖研究員離開 Google，Google Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 延期（來源：dev.to）
+- 2026-06-26：dev.to 多篇報導總結此波 Google AI 人才出走潮，指 Jumper 加入時點適逢 Anthropic Mythos 出口管制危機；一週內 4 位頂尖研究員離開 Google，Google Alphabet 市值蒸發約 2,700 億美元，Gemini 3.5 延期（來源：dev.to；數字與因果皆為該報導自述，2026-09-13 查證未獲官方或主流財經媒體同口徑支持）
 - 2026-06-23：Barron's、IBD、The Rundown AI、Search Engine Journal 等財經與科技媒體多媒體跟進確認加入 Anthropic，報導指 Alphabet 股價因此下跌；Search Engine Journal 指出 Google 同期失去兩位頂尖 AI 研究員（一至 OpenAI、一至 Anthropic）
 - 2026-06-22：Business Insider、PYMNTS.com 等多家媒體跟進報導 Google Nobel AI 專家加入 Anthropic，為 Reuters 確認事件的後續廣泛報導（未帶出新細節，純轉載確認；近 14 天日報無進一步後續）
 - 2026-06-21：Reuters 正式確認離開 Google DeepMind 加入 Anthropic（HN score 77）
