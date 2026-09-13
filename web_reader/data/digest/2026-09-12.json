@@ -12,7 +12,13 @@
       "time": "09/12 10:13",
       "sentiment": "",
       "body": "Windows 11 Pro 使用者回報 Cowork 因缺少 HCS 服務 vfpext 而完全無法運作，此則今日累積 86 則留言，是今日互動量最高的 GitHub Issue。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Inter-session communication for multi-Claude workflows",
@@ -115,7 +121,13 @@
       "time": "09/12 09:29",
       "sentiment": "",
       "body": "使用者在五台機器上以回滾 A/B 測試確認，九月 Windows 累積更新（KB5124012／KB5124008）會讓 Cowork 的 `device_bash` 失效，ARM64、x64 皆中。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Hate Opus 5. Really dont know why they did this",
@@ -334,6 +346,11 @@
       "pageType": "entity"
     },
     {
+      "id": "cowork",
+      "name": "Cowork",
+      "pageType": "entity"
+    },
+    {
       "id": "fable-5",
       "name": "Claude Fable 5 與 5.1",
       "pageType": "entity"
@@ -341,6 +358,11 @@
     {
       "id": "jacob-coxon",
       "name": "Jacob Coxon",
+      "pageType": "entity"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
       "pageType": "entity"
     },
     {
@@ -508,7 +530,13 @@
       "time": "09/12 10:13",
       "sentiment": "",
       "body": "Windows 11 Pro 使用者回報 Cowork 因缺少 HCS 服務 vfpext 而完全無法運作，此則今日累積 86 則留言，是今日互動量最高的 GitHub Issue。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Inter-session communication for multi-Claude workflows",

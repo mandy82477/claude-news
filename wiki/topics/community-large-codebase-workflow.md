@@ -172,6 +172,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/community-pattern-trends]]（跨模式的宏觀趨勢，週更）
 - [[entities/claude-code]]、[[entities/managed-agents]]（官方 subagent、20 路並行等機制）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
+- [[topics/anthropic-agent-stack]] — 本頁的做法用到的官方零件各是什麼、還做不到什麼（本頁講社群怎麼組，那頁講官方給了什麼）
 
 ## 參考來源
 

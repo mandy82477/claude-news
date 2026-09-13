@@ -53,7 +53,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **官方文件更新**（2026-09-12）：桌面版文件將 Git 需求措辭從「僅 Windows 需要」改為「用獨立 worktree 執行的 session 才需要 Git」；session 定義同時拿掉「各自獨立的程式碼變更」字樣，僅保留獨立聊天紀錄與專案資料夾（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-08-29）：桌面版文件新增 3 段、移除 2 段——① 採用 adaptive reasoning 的模型上，`MAX_THINKING_TOKENS` 設為非預設值時的行為；② Claude 跨 session 傳訊時，該處顯示標註傳送方的卡片；③ **extended thinking 現為預設啟用**，用以提升複雜任務表現（既有功能的預設狀態澄清，非新指令／旗標）。
-- **Cowork 與網頁／App 共用記憶**（Help Center release notes，2026-08-25）：記住的項目集中列在設定 > Memory 的 Topics，可個別編輯或刪除；健康、信仰等敏感主題預設不納入，須手動開啟「Include sensitive topics in memory」才會記錄。原文於「記憶預設對部分方案開啟」處截斷，適用範圍未完整取得；TechCrunch、SiliconANGLE、CNET、Engadget、SD Times、The Register、Techzine、ZDNET 等多家媒體同步報導。
+- **[[entities/cowork|Cowork]] 與網頁／App 共用記憶**（Help Center release notes，2026-08-25）：記住的項目集中列在設定 > Memory 的 Topics，可個別編輯或刪除；健康、信仰等敏感主題預設不納入，須手動開啟「Include sensitive topics in memory」才會記錄。
+  - 原文於「記憶預設對部分方案開啟」處截斷，適用範圍未完整取得；八家媒體同步報導（TechCrunch、Silicon ANGLE、CNET、Engadget、SD Times、The Register、Techzine、ZDNET）。
 - **Skill／外掛安全掃描（beta）**（Help Center release notes，2026-08-06 標註日期）：Enterprise 方案的第三方 Skill 或外掛在上傳、編輯時自動檢查是否含惡意內容，屬背景自動掃描，無使用者端可執行操作。
 - **Inference Hooks**（Claude API Release Notes，2026-08-05）：進入 Enterprise 組織 beta，可將 claude.ai、Cowork、Claude Code 上每一次受管治 prompt 導向企業自身的 AI 安全伺服器。
 - **Claude iOS App 新增用量按鈕與 Claude Code 設定區塊**（Google News／Pasquale Pillitteri，2026-09-08 報導，僅標題可用）：報導指出 iOS App 介面新增用量顯示按鈕，並新增獨立的 Claude Code 設定區塊；RSS 未提供正文，具體涵蓋範圍待查證。

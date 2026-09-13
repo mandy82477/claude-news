@@ -27,14 +27,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **狀態：** ongoing
 **領域：** 🤖 模型
-**蒐集邊界：** 每週抓取 18 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
+**蒐集邊界：** 每週抓取 17 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 **更新頻率：** 🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-08-05
 **最後更新：** 2026-09-13
 **最後新聞更新：** 2026-08-05
 
 > **本週快照重點**（2026-09-13）
-> 18 榜全數嘗試（直接抓取 11 榜、媒體轉述 7 榜）。本週兩件事值得看：**Search Arena 連續 3 週抓不到後恢復**（gpt-5.6-sol-xhigh 登頂，Claude Opus 4.6 search 版緊追第二）；**SWE-bench 上週的「兩說歧異」查明是 Verified 與 Pro 兩個子集混談**，本輪起分列，Pro 子集由 Fable 5.1 領先。反向地，**LMArena 本週改抓不到**（網域重導至 arena.ai，抓到的是別的榜），**Terminal-Bench 二手數字與上週矛盾故不採計**。
+> 17 榜全數嘗試（直接抓取 10 榜、媒體轉述 7 榜；Aider Polyglot 本輪汰換，見下）。本週兩件事值得看：**Search Arena 連續 3 週抓不到後恢復**（gpt-5.6-sol-xhigh 登頂，Claude Opus 4.6 search 版緊追第二）；**SWE-bench 上週的「兩說歧異」查明是 Verified 與 Pro 兩個子集混談**，本輪起分列，Pro 子集由 Fable 5.1 領先。反向地，**LMArena 本週改抓不到**（網域重導至 arena.ai，抓到的是別的榜），**Terminal-Bench 二手數字與上週矛盾故不採計**。
 
 ---
 
@@ -52,7 +52,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
 | [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記） | 09-08～09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
-| [寫 code（Aider 實戰）](#eval-aider) | ⛔ **這個榜已經不動了**——榜上沒有任何現役模型，想看寫 code 的排名請改看上一列 | 停更（本次直接抓取見最新 2025-11-20） | [Aider Polyglot](https://aider.chat/docs/leaderboards/) |
 | [寫文案、聊天、翻譯](#eval-lmarena) | ⛔ **本週抓不到**——舊值：Fable 5（約 1525 Elo）> Opus 4.8／GPT-5.5 Pro > Gemini 3.1 Pro Preview；現在的排名請點右邊連結 | 08–09 月（此後未能更新） | [LMArena](https://lmarena.ai/) |
 | [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242） | 榜頁未標日期（本次 09-13 抓取） | [Search Arena](https://arena.ai/leaderboard) |
 | [做網頁／前端](#eval-webdev) | gpt-6-astra-max（1800）> claude-fable-5.1-max（1758）> claude-opus-5-max（1687） | 榜頁未標日期（本次 09-13 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
@@ -80,7 +79,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenRouter 連續 3 週三種說法**：09-06 直接抓取 Hermes Agent 35.7 兆 token 居首、同期媒體稱 GPT-5.6 Luna 居首、本週媒體稱 DeepSeek V4 Flash 居首。三說無一可互證，本頁採本週最新且標明二手；此列的可靠度目前最低。
 - **MTEB 本週前三與上週不同**：本輪 KaLM-Gemma3-12B 72.32 > gemini-embedding-001 68.37 > Qwen3-0.6B 64.34，上週為 QZhou-Embedding 75.97 居首。兩輪皆二手、榜版可能不同（v1／v2 不可互比），差異未解。
 - **METR 給出新數字但不可當排名**：二手稱 Time Horizon 1.1 版 Claude Mythos Preview 17.4 小時@50%，**已超過官方自陳「≥16 小時量測不可信」的門檻**，且本輪未取得完整名次表；僅供尺度感，不作為選型依據。
-- **Aider Polyglot 停更狀態延續（連續 7 週）**：本輪直接抓取所見最新資料為 2025-11-20（上週記錄為 2025-08-23，日期差異疑為榜頁分區不同，未解），榜上前三名 gpt-5 high 88.0% 等皆非現役陣容，快照格續不列名次。該題由誰承接仍待定。
+- **Aider Polyglot 已於 2026-09-13 移出快照表（連續 7 週停更）**：榜頁最新資料為 2025-11-20，前三名皆非現役陣容，照它選型會選到已被取代的模型
+  - **「寫 code」這題由 SWE-bench 承接**：它一週一動，Pro 子集（1,865 題、需跨檔案修改）正是 Aider 想量而量不到的真實工程難度。Aider 的題型與算分方式仍留在頁尾索引供對照
 - **EQ-Bench 數值與上週完全相同（07-20）**：本輪頁面為 JS 渲染、直接抓取失敗，二手給出與上週一致的數字；無法確認是「榜未更新」還是「二手來源複製舊值」。
 - **AA 系列多榜未載官方資料日期**：文生圖、圖像編輯、影片、TTS、STT、音樂六榜為直接抓取但頁面無快照日期，本頁一律以抓取日標示。
 - **文生圖／改圖兩榜同時換人**：GPT Image 2.5 的 Flare 與 Sunburst 兩個 max 變體本輪包辦兩榜前二，MAI-Image-2.6 自編輯榜首位退至第三。
@@ -143,7 +143,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - **規模**：**Verified** 500 題（工程師人工確認可解、多數單檔案可解決）；**Pro** 1,865 題、跨 41 個活躍 repo（需跨檔案修改、更長 context）。
   - **算分**：patch 跑該專案的 unit tests 全過才算解決；**Pass@1 一次定生死，無重試**。
   - **盲點**：Verified 頂級模型已 9 成以上接近飽和、Pro 頂級也僅兩三成——看到「SWE-bench XX%」先問是哪個子集。
-- <a id="eval-aider"></a>**寫 code（Aider Polyglot）**
+- <a id="eval-aider"></a>**寫 code（Aider Polyglot）｜已於 2026-09-13 移出快照表，僅留算分方式供對照**
   - **題目**：Exercism 程式練習題——實作資料結構、演算法、小工具這類，特挑「連頂級模型都常錯」的難題。
   - **規模**：225 題，C++/Go/Java/JS/Python/Rust 六語言。
   - **算分**：允許兩次嘗試（第一次失敗拿到測試錯誤訊息再改）；必須用結構化編輯格式實際改檔，通過 hidden tests 算對；每題成本一併記錄（同題 o3-pro $146 vs gpt-5 $29 就是這樣量出來的）。

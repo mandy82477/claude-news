@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-09-12
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-12
 
 > **Boris Cherny 親自回信「AI slop」質疑者**（2026-09-12）：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。
@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（Simon Willison 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文僅標題可用（Business Insider，2026-09-12）。
+**截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（[[entities/simon-willison|Simon Willison]] 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文僅標題可用（Business Insider，2026-09-12）。
 
 Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 

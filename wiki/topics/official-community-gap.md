@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本頁比對社群工具所反映的開發者痛點，與 Anthropic 官方功能路線之間的覆蓋情況。識別哪些痛點官方正在積極解決、哪些被忽略或結構性缺席。本頁是**官方視角**（官方產品路線 vs 社群工具）；學術文獻主張與 Claude Code 現況的落差是**文獻視角**，見 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]]。
 
-截至 2026-07-08，矩陣涵蓋 9 個核心痛點：多 agent 協調與安全隔離已獲高度官方對應；輸出品質驗證、平台可及性（Artifacts 輸出共享 + Cowork 行動/網頁版輸入操作，2026-07-08 正式擴展）、多模型路由/鎖定防禦（v2.1.196 org default model，企業端已覆蓋）屬部分對應；跨 session 記憶雖有 Dreaming 但遠未解決；CLAUDE.md 規則失效、Token 成本不透明、AI 輔助開發副作用三項屬**結構性缺席**，社群工具需求持續累積，無官方對應方向。
+截至 2026-07-08，矩陣涵蓋 9 個核心痛點：多 agent 協調與安全隔離已獲高度官方對應；輸出品質驗證、平台可及性（Artifacts 輸出共享 + [[entities/cowork|Cowork]] 行動/網頁版輸入操作，2026-07-08 正式擴展）、多模型路由/鎖定防禦（v2.1.196 org default model，企業端已覆蓋）屬部分對應；跨 session 記憶雖有 Dreaming 但遠未解決；CLAUDE.md 規則失效、Token 成本不透明、AI 輔助開發副作用三項屬**結構性缺席**，社群工具需求持續累積，無官方對應方向。
 
 ---
 

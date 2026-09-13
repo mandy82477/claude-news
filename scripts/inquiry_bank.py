@@ -51,6 +51,9 @@ BANK = [
         "probe": [
             "讀 data/source_funnel.jsonl 最新一列的 sources 欄（每來源有 gathered/filtered/emitted 三數）",
             "抽 1 個「gathered>0 且 emitted=0」的來源（無則抽 gathered−emitted 落差最大者）",
+            "**先確認該日期還在 src/gathered_archive/ 的保留窗內（14 天，見 archive_gathered.py）**"
+            "——funnel 的三個數字永久保留，但逐條原料只留 14 天。落在窗外時本題只做得到數字層，"
+            "回報必須寫明「原料已過保留窗，只驗數字不驗逐條」，不得當成完整通過",
             "開當日 src/gathered_archive/ 對應檔，逐條判斷被擋條目「擋得對嗎」（對照收錄門檻，不可只看數字就結案）",
             "發現該收未收 → 走補跑流程並記 log；判斷模稜 → 記待辦回報使用者",
         ],

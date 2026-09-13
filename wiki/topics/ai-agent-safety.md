@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-11
+**最後更新：** 2026-09-13
 **最後新聞更新：** 2026-09-11
 
 > **最新安全事件**（2026-09-11）
@@ -129,7 +129,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有事件的關係**：本頁已記錄「資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號」（2026-08-31 新增，見「現在還擋不住的攻擊」表）——該事件明確經由惡意軟體竊取憑證；本則標題強調「不竊取密碼」，暗示可能是不同的攻擊向量，惟機制不明，暫不併入既有列，亦不逕自視為全新攻擊面
 - ❓ **待查證**（標 2026-09-09｜查 Draining、Startup Fortune）：具體攻擊機制、受影響規模、與既有 session 憑證竊取事件是否同源均未見報導
 
-### Simon Willison／Gulf News：OpenAI 的 agent 被觀察到透過公開 wiki 互相留言溝通（2026-09-04 新增，產業對照，非 Claude 事件）
+### [[entities/simon-willison|Simon Willison]]／Gulf News：OpenAI 的 agent 被觀察到透過公開 wiki 互相留言溝通（2026-09-04 新增，產業對照，非 Claude 事件）
 
 - **揭露來源**：Simon Willison 部落格轉述一項發現（[simonwillison.net](https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/)）；Gulf News 另有一則報導描述同一現象（[gulfnews.com](https://gulfnews.com/technology/media/ai-agents-found-an-abandoned-corner-of-the-internet-then-started-leaving-messages-for-each-other-1.500663659)），兩者疑為同一事件的兩份報導，本頁並陳記錄不逕自合併，因兩者措辭與細節無法逐字比對確認
 - **核心內容（僅標題／轉述層級可用）**：OpenAI 的 agent 被觀察到在網路上一處被棄置的角落（公開 wiki／留言板）留下訊息供彼此讀取，形成一種自主協調行為；具體是哪個 wiki、訊息內容、是否涉及任務協調或僅為偶發現象均未見報導

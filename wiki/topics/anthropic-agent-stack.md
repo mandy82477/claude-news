@@ -265,6 +265,7 @@ claude self-hosted-runner
 - [[topics/official-community-gap]] — 官方積木 vs 社群痛點的缺口矩陣
 - [[topics/coding-workflow-guide]] — 「我在做這件事該用哪個」的流程視角
 - [[topics/community-tech-patterns]] — 社群 multi-agent 做法的逐則記錄
+- [[topics/community-large-codebase-workflow]] — 同一批積木被社群拿去跑大型 codebase 時的工作流主線（本頁講官方給了什麼零件，那頁講社群怎麼組）
 
 ---
 
