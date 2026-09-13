@@ -293,17 +293,26 @@ class TestFrozenPagesKeptOnRegenerate(unittest.TestCase):
     def tearDown(self):
         self._td.cleanup()
 
+    def test_default_freezes_existing_pages_and_only_adds_new_ones(self):
+        text, _, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
+                                         Path(self._td.name) / "nope.jsonl", existing=self.existing)
+        self.assertIn("> 舊版內容，頁面已改寫。", text, "既有頁不重讀 wiki——重讀會把隔天補進 callout 的事洩漏進舊日報")
+        self.assertNotIn("- **v2.1.268**", text)
+        self.assertIn("### [[entities/managed-agents|Managed Agents]]", text, "既有檔沒有的新頁要補進來")
+        self.assertIn("### [[entities/gone-page|已被覆寫的頁]]", text)
+        self.assertTrue(any("維持原樣未重讀" in w for w in warnings))
+
     def test_pages_with_moved_on_callouts_are_kept_verbatim(self):
         text, count, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
-                                             Path(self._td.name) / "nope.jsonl", existing=self.existing)
+                                             Path(self._td.name) / "nope.jsonl", existing=self.existing, refresh=True)
         self.assertIn("### [[entities/gone-page|已被覆寫的頁]]", text)
         self.assertIn("> 這頁今天的 callout 已是 09-12，重產要留住我。", text)
         self.assertIn("> 也留住。", text)
         self.assertTrue(any("保留既有檔 2 頁" in w for w in warnings))
 
-    def test_pages_still_dated_today_use_fresh_wiki_version(self):
+    def test_refresh_uses_fresh_wiki_version_for_pages_still_dated_today(self):
         text, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
-                                  Path(self._td.name) / "nope.jsonl", existing=self.existing)
+                                  Path(self._td.name) / "nope.jsonl", existing=self.existing, refresh=True)
         self.assertNotIn("舊版內容，頁面已改寫", text)
         self.assertIn("- **v2.1.268**", text)
         self.assertEqual(text.count("### [[entities/claude-code|"), 1)

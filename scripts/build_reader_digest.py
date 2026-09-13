@@ -4,7 +4,11 @@ build_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）產生器。
 
 用法：
     python scripts/build_reader_digest.py YYYY-MM-DD            # 寫 daily/YYYY-MM-DD.md
-    python scripts/build_reader_digest.py YYYY-MM-DD --stdout   # 只印不寫
+    python scripts/build_reader_digest.py YYYY-MM-DD --stdout   # 只印不寫（不看既有檔）
+    python scripts/build_reader_digest.py YYYY-MM-DD --refresh  # 既有檔存在時，仍是該日日期的頁改用 wiki 現版
+
+既有 daily 檔存在時預設「凍結」：頁一律原樣留住，只補新頁——日報是不可改的過去，callout 隔天可能被
+改寫或摻入次日事實，重讀會洩漏未來。
 
 由 `.claude/skills/reader-digest/SKILL.md`（Step 2b）呼叫。
 
@@ -278,18 +282,34 @@ def frozen_pages(existing: str) -> dict[str, tuple[str, str, list[str]]]:
 
 
 def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_DIR,
-             ledger: Path = ATTRIBUTION, existing: str | None = None) -> tuple[str, int, list[str]]:
+             ledger: Path = ATTRIBUTION, existing: str | None = None,
+             refresh: bool = False) -> tuple[str, int, list[str]]:
+    """existing＝該日既有 daily 檔內容。日報是不可改的過去：
+    - 預設（refresh=False）：既有檔裡的頁一律原樣留住，wiki 只用來補「既有檔沒有、今天 callout 日期＝該日」的新頁。
+      callout 隔天可能被改寫、甚至摻進次日事實（實例：09-11 的 callout 在 09-12 ingest 時被補上「隔日…」），
+      重讀 wiki 會讓舊日報洩漏未來——所以不重讀。
+    - refresh=True：頁面 callout 仍是該日日期者改用 wiki 現版（修錯字、改寫 callout 後要同步到日報時用），
+      callout 已被後一天覆寫的頁仍原樣留住。"""
     sections, warnings = collect(target_date, wiki_dir)
     if existing:
         have = {it["page"] for items in sections.values() for it in items}
-        kept = 0
-        for page, (section, name, lines) in frozen_pages(existing).items():
-            if page in have or section not in sections:
+        frozen = frozen_pages(existing)
+        kept = replaced = 0
+        for page, (section, name, lines) in frozen.items():
+            if section not in sections:
                 continue
+            if page in have and refresh:
+                continue
+            if page in have:
+                sections[section] = [it for it in sections[section] if it["page"] != page]
+                replaced += 1
+            else:
+                kept += 1
             sections[section].append({"page": page, "name": name, "lines": lines, "inbound": -1, "raw": ""})
-            kept += 1
         if kept:
             warnings.append(f"保留既有檔 {kept} 頁（其 callout 已被後一天覆寫，日報是不可改的過去）")
+        if replaced:
+            warnings.append(f"既有檔 {replaced} 頁維持原樣未重讀 wiki（要同步 wiki 現版請加 --refresh）")
         for items in sections.values():
             items.sort(key=lambda it: (-it["inbound"], it["page"]))
     focus_lines: list[str] = []
@@ -316,12 +336,12 @@ def main(argv: list[str]) -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Windows cp950 主控台印 emoji 會炸
     args = [a for a in argv[1:] if not a.startswith("--")]
     if len(args) != 1 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args[0]):
-        print("用法：python scripts/build_reader_digest.py YYYY-MM-DD [--stdout]")
+        print("用法：python scripts/build_reader_digest.py YYYY-MM-DD [--stdout] [--refresh]")
         return 2
     target_date = args[0]
     out_path = DAILY_DIR / f"{target_date}.md"
     existing = out_path.read_text(encoding="utf-8") if out_path.exists() and "--stdout" not in argv else None
-    text, count, warnings = generate(target_date, existing=existing)
+    text, count, warnings = generate(target_date, existing=existing, refresh="--refresh" in argv)
     for w in warnings:
         print(f"  WARN: {w}")
     if "--stdout" in argv:

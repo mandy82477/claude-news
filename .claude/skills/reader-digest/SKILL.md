@@ -36,7 +36,7 @@ description: 每日 pipeline Step 2b：把各 wiki 頁當日 callout 投影成 d
 
 本步失敗（腳本例外）**不阻斷 pipeline**：Step 3～Step 6 照常跑，該日網站日報頁自動退回舊的 `news/` 解析結果（`build_web.py` 的退回路徑本來就是為改版日之前的歷史頁寫的），Step 6 log 記一行 `Reader digest FAILED - falling back to news/`。
 
-本步只讀已寫在磁碟上的 wiki 檔，**不依賴未 commit 的 diff**；補跑歷史日期（`/wiki-backfill`）時對該日期重跑第 1 步即可，前提是記者當天有把 callout 日期寫成該日。
+本步只讀已寫在磁碟上的 wiki 檔，**不依賴未 commit 的 diff**。**既有 `daily/TARGET_DATE.md` 存在時腳本預設凍結**：檔內的頁原樣留住、只補新頁——日報是不可改的過去，callout 隔天可能被改寫或摻進次日事實，重讀 wiki 會讓舊日報洩漏未來。記者改寫了仍是該日日期的 callout、要同步到日報時，明確加 `--refresh`。補跑歷史日期（`/wiki-backfill`）在檔不存在時直接跑第 1 步，前提是記者當天有把 callout 日期寫成該日。
 
 ---
 

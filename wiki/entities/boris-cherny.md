@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-12
 **最後新聞更新：** 2026-09-12
 
-> **重申 Claude 正式環境程式碼品質門檻高於人類**（2026-09-11）：Simon Willison 轉引發言，隔日開發者提「AI slop」質疑獲親回信（BI，09-12，僅標題）。
+> **重申 Claude 正式環境程式碼品質門檻高於人類**（2026-09-12）：Simon Willison 轉引發言，隔日開發者提「AI slop」質疑獲親回信（BI，09-12，僅標題）。
 
 ---
 
