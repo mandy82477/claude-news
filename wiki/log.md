@@ -6363,3 +6363,17 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **問題**：[[topics/llm-wiki-pattern]] 頁頂 callout 與摘要仍寫「本庫缺的是查詢層」，但同頁「還沒有的」清單與 09-12 時序都寫「同日已補上 `/wiki-query`」——同一頁前後矛盾，頁頂陳述的是建頁當下、而非最新狀態。
 - **處置**：callout 改為「三層骨架與三個動作齊備，查詢層 09-12 已補上，仍缺機器可讀的查證日與信心欄位」；摘要同步；查詢條目從「還沒有的」移到「有的」並寫明六路分流、答案契約、答案回流；時序加 09-13 一筆。不涉外部事實，未另查一手來源。
 - **歸因**：`user-query`。順帶把 `README.md` 補上「三個動作」一節（commit `b7b2017b`），對外版與 wiki 頁口徑一致。
+
+## 2026-09-13 Ingest
+
+- 來源日報：[[news/2026-09-13]]
+- 更新頁面：entities/dario-amodei、entities/jacob-coxon、entities/pricing、entities/claude-code、topics/recursive-self-improvement、topics/ai-agent-safety、topics/ai-talent-flow、topics/competitor-landscape、topics/official-community-gap、topics/community-tech-patterns、topics/code-quality-decline
+- 新增頁面：無
+- 摘要：Anthropic 執行長 Dario Amodei 公開呼籲全球暫緩 AI 發展並警告 AI 群體行為 6–12 個月內恐危及網路安全（Musk／Altman 附和，HN 社群懷疑聲量並存），09-11 威脅情報報告經 Axios／DroneXL／shattered.io 延燒但查核多為既有事件重述而未獨立記錄；Claude Max 方案 session 額度異常消耗抱怨延燒（GitHub issue 850 留言＋2 篇 Reddit 佐證）；開發者持續施壓官方支援業界標準 `AGENTS.md`（394 留言、6621 讚）；功能面 v2.1.270 修復 2.1.269 迴歸缺陷。
+- 呈現品質：全部通過（人物／安全政策／社群三位記者機械自查一次通過；商業記者 2 頁呈現初稿超字元上限／誤含禁詞，已自行修復後通過；功能記者 `claude-code.md` 4 筆 cell-limit 誤擋——純數字/日期更新致既有超限條列脫離基線指紋，經核對「本來就在基線、未加長」後由主編執行 `--rebuild` 重建基線，非真違規）
+- 品質備註：[功能] cell-limit 機械閘對純互動數字更新的既有超限條列誤判為新增，已由主編 `--rebuild` 重建基線（987 筆），非記者品質問題
+- 交叉核對略過項目：安全政策記者查核後判定 DroneXL／shattered.io×2「俄羅斯自主鎖定無人機」「第 4 起資安事故」與既有 09-11 威脅情報報告記錄同一事件、Axios「5 種濫用方式」為既有報告延燒彙整，三則均無新增技術細節，**未寫入**（避免同事件重複記錄）；bgr.com「使用者放棄 Claude 五大原因」僅標題無具體內容，商業記者判定不構成可查證事實，**未寫入**
+- 轉知帳本：close 1 筆（H-624b00 功能記者：orca 併入既有 G-11 代表工具清單，spec-kit／comet 證據不足未新增矩陣列）、開 1 筆（H-79a7f9 社群→功能：評估 09-13 新增 proliferate-ai/proliferate、zenstory-ai/oh-story-claudecode 是否納入官方-社群功能對照矩陣新增列）
+- 📋 待使用者裁示：商業記者回報 ⚠️ 需主編查證官方說明中心——Max 5x／訂閱週用量計算方式是否有變動（GitHub issue #38335 850 留言／545 讚＋ Reddit 回報週用量 10% 帳單由約 $140 降至約 $50），雲端 egress 政策下無法查證 support.claude.com／官方公告，留待人工查證後裁示
+- devpractice 沉澱：候選 4 筆（entities/managed-agents：anthropic-sdk-python v0.118.0 懸置項目補齊；topics/community-pattern-trends：Fast Context Task Router 確認下架兩個月；entities/sonnet-5：Terminal-Bench 2.1 85.2% 首次中階模型勝過旗艦；topics/model-task-leaderboard：SWE-bench Pro/Verified 混談之謎解開＋Aider Polyglot 淘汰）；基準線 14ce5f46a5→9763cfc993
+- market 判讀：本日無訊號（已檢視 25 則精選＋延燒節錄；最接近門檻者為 Dario Amodei 全球暫緩呼籲，惟未見機關監管動作或具體數字變動，未達「機關出手」門檻；GitHub Max 額度 issue 與既有 pricing.md 09-12 數字重複，非新資訊，維持既有分工不判讀）

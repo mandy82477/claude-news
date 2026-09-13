@@ -29,25 +29,25 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-13
+**最後新聞更新：** 2026-09-13
 
-> **最新動態**（2026-09-12）
-> - **v2.1.269 新增外掛評分指令**：`claude plugin eval` 可對外掛跑 eval 套件並產出 JSON／HTML 報告，外掛開發者能用它做升級前自動迴歸比對。
-> - **桌面版 Git 需求放寬**：官方文件更新，只有用獨立 worktree 執行的 session 才需要裝 Git，非 worktree 使用者現在可以不裝。
-> - **兩個平台限制影響使用**：Desktop（macOS）仍無法啟用 Bypass Permissions（#61415）；Windows 九月更新讓 Cowork device_bash 於 ARM64／x64 失效（#92958）。
-> - **舊問題熱度上升、官方未給時程**：XDG Base Directory 不支援（#1455，447 讚）與 vfpext 缺失（#74649，86 則留言）持續是 Linux／Cowork 使用者的痛點。
+> **最新動態**（2026-09-13）
+> - **v2.1.270 修復迴歸**：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。
+> - **AGENTS.md 需求持續攀升**：issue #6235 增至 394 則留言、6621 個讚，本輪功能類別互動量次高，官方仍未回應是否跟進業界標準。
+> - **Windows 11 視窗置頂問題擴大**：issue #85891 增至 100 則留言、239 個讚，介面仍無設定可關閉此行為。
+> - **多帳號需求兩線同步升溫**：Desktop 快速切換（#18435）增至 947 讚、本輪互動最高；Connector 多帳號登入（#27302）增至 533 讚。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.270**（2026-09-12）：修復 2.1.269 一項迴歸——長時間執行的 session 中，唯讀 git 指令會意外要求使用者授權；純 bug 修復。
 - **v2.1.269**（2026-09-11）：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出可重現的評分結果（JSON＋HTML 報告，含 no-plugin baseline 對照組）；見 `claude plugin eval --help`；官方文件索引同步新增 [plugin-evals.md](https://code.claude.com/docs/en/plugin-evals.md)。
 - **v2.1.267**（2026-09-09）：新增 `maxEffortLevel` 設定（可放頂層或個別模型的 `modelSettings` 下），對所有供應商（含 Bedrock、Vertex、Foundry）統一設定推理努力（effort）上限，使用者仍可在上限內自行選擇較低等級。
 - **v2.1.266**（2026-09-08）：修復 2.1.265 一項迴歸，影響 LLM-gateway／proxy 的 `CLAUDE_CODE_USE_GATEWAY` 環境變數（原文截斷，細節未知）；純 bug 修復。
-- **v2.1.261**（2026-09-04）：`/status` 與 `claude doctor` 新增「Organization policy」欄位，說明組織政策載入失敗的原因（例如代理伺服器未正確轉發 endpoint）。
-- 其餘版本（含 v2.1.258 macOS 12 啟動失敗修復、anthropic-sdk-python v1.0.0 httpx2 breaking change）的逐版異動見下方「版本更新 → 最新版本」表。
+- 其餘版本（含 v2.1.261 `/status`／`claude doctor` 新增 Organization policy 欄位、v2.1.258 macOS 12 啟動失敗修復、anthropic-sdk-python v1.0.0 httpx2 breaking change）的逐版異動見下方「版本更新 → 最新版本」表。
 
 **近期平台與文件異動：**
 
@@ -197,7 +197,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 40 則留言，首見 2026-07-23，2026-08-08 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 端無法得知 auto-memory 索引是否完整載入、遭截斷或未載入（GitHub issue #82056，累積 47 則留言、1 個讚，2026-08-28，環境：Claude Code CLI v2.1.220，主模型 Opus 5，子代理 Fable 5）**：使用者回報索引位於 `~/.claude/projects/<project>/memory/` 的 auto-memory 機制，session 端沒有任何管道可判斷該索引這次是完整載入、被截斷、還是完全沒載入，出錯時使用者與 Claude 本身皆無從得知記憶已失真；與既有「`autoMemoryEnabled=false` 未能抑制記憶體前導文字」（issue #63903）同屬 auto-memory 機制成熟度缺口但關注面不同（一為停用未生效、一為載入狀態不可見），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 39 則留言，2026-09-08）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
-- 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 75 則留言、117 個讚；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
+- 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 76 則留言、116 個讚，2026-09-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**回應超過 32000 output token 上限觸發 API 錯誤（GitHub issue #24055，累積 137 則留言、85 個讚，2026-07-11）**：多名使用者回報回應長度超過 32000 output token 上限時觸發「API Error: Claude's response exceeded the 32000 output token maximum」；官方尚未回應。
 - 🔴 **未修復**｜**主控台新增文字時畫面自動滾回歷史頂端（GitHub issue #826，累積 354 則留言、821 個讚，2026-07-09 首次記錄，2026-07-30 留言數更新，全站已知問題本日互動量最高）**：使用者回報 Claude Code 主控台在新增文字輸出時，畫面會意外滾動回歷史紀錄最頂端，打斷閱讀最新輸出的動線；官方尚未回應。
@@ -212,7 +212,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：新增選項常駐顯示 Claude 的思考過程（GitHub issue #8477，累積 93 則留言、356 個讚，2026-07-17 首次記錄，2026-08-17 互動數更新）**：使用者希望新增設定選項讓 Claude 的 thinking／推理過程預設常駐顯示，而非需要每次手動展開或依賴目前的摘要呈現；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：送出前檢視並編輯「已貼上文字」區塊內容——官方曾承諾以 Editor 功能解決，issue 現已重開（GitHub issue #3412，累積 83 則留言、307 個讚，首見 2026-07-18，2026-08-17 互動數更新，環境：Claude Code 1.0.51／macOS 15 Sequoia／Ghostty；2026-08-10 查證）**：使用者（常見情境為搭配 MacWhisper 等聽寫軟體使用）希望能在送出前檢視並編輯輸入框中已收合的「已貼上文字」區塊內容；官方協作者 dicksontsai 曾於 2026-01-14 回應「下個版本起可用 Editor 功能檢視已貼上文字」，惟該次修復對應的 PR 觸發 GitHub 自動關閉、issue 隨後於當前回報週期被重新開啟（`state_reason: reopened`），顯示先前修復未能持續解決問題或涵蓋範圍不足；與既有「關閉輸入框貼上文字自動收合」需求（issue #23134）同屬貼上文字呈現方式相關訴求但方向不同，暫分列追蹤。
 - 🔴 **未修復**｜**Post/PreToolUse Hooks 未如預期觸發（GitHub issue #6305，累積 40 則留言、16 個讚，首見 2026-07-31，2026-08-22 留言數更新，環境：Claude Code claude-sonnet-4-20250514／macOS Darwin；2026-08-10 查證）**：使用者回報 PreToolUse 與 PostToolUse hooks 未依預期執行；查證同串較早的官方協作者留言（dicksontsai）說明此為既有設計：修改 Settings JSON 後基於安全考量不會立即生效，須以 `/hooks` 確認或開新 session，並指出部分回報者對 `$TOOL_NAME`／`$TOOL_ARGS` 用法有誤（參見[官方文件](https://docs.anthropic.com/en/docs/claude-code/hooks#pretooluse-input)）；惟該說明未必涵蓋本則 2026-07-31 的具體回報情境，issue 仍為 open，無官方留言直接回應此次個案。與既有「Stop Hooks 被忽略」（2026-04-24 回報）同屬 hooks 機制可靠性問題但涉及不同 hook 類型，暫分列追蹤。
-- 🔴 **未修復**｜**功能請求：Skills 支援子目錄結構（GitHub issue #10238，累積 50 則留言、167 個讚，首見 2026-07-17，2026-08-13 互動數更新）**：使用者希望 Skills 檔案結構能支援子目錄組織方式，便於大型或多層次 Skills 套件管理；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：Skills 支援子目錄結構（GitHub issue #10238，累積 54 則留言、168 個讚，首見 2026-07-17，2026-09-12 互動數更新）**：使用者希望 Skills 檔案結構能支援子目錄組織方式，便於大型或多層次 Skills 套件管理；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**未處理例外僅顯示 [object Object]（GitHub issue #59033，累積 70 則留言、85 個讚，2026-07-08）**：發生未處理例外時，錯誤訊息僅顯示 `[object Object]`，未提供可診斷的錯誤內容，增加除錯難度；官方尚未回應。
 - 🔎 **查無官方**（標 2026-08-09｜查 #16856、token 消耗｜複 2026-09-09）｜**升級至 v2.1.1 後 token 消耗異常暴增 4 倍以上（GitHub issue #16856，累積留言 73，2026-07-03 指控）**：使用者反映升級後 rate 消耗速度明顯加快超過 4 倍，屬重大體驗負評；查證確認 issue 仍為 open（`has repro`、`area:cost`、`oncall` 標籤，內部已排查但無公開回應），無官方留言或修復版本；升版前建議留意此回報，若已升級可觀察實際 usage 曲線變化。
 - 🔴 **未修復**｜**Extended Thinking「思考內容」實為摘要，非真實推理（2026-06-22 社群揭露）**：工程師 Patrick McCanna 分析 Claude Code session log 後發現，`thinking blocks` 呈現的文字為摘要，而非模型的真實推理過程。真實推理被 Anthropic 以加密方式存於 600 字元 signature 中，API 僅回傳摘要；完整思考內容需要企業級協議才可取用，Anthropic 持有解密金鑰。需依賴 thinking blocks 進行審計追蹤的工程師應特別注意此限制（HN score 98，見 [原文](https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/)）
@@ -262,7 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
-- 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，980 讚，09-10 更新，全站最高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，819 讚）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，523 讚）皆缺多帳號支援；官方尚未回應。
+- 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，980 讚，09-10 更新，全站最高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，187 則留言、947 讚，09-13 更新，本輪功能類別互動最高）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，246 則留言、533 讚，09-13 更新）皆缺多帳號支援；官方尚未回應。
 
 ### 🔌 MCP 整合（15 條未修復）
 
@@ -277,7 +277,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**macOS：Claude Desktop 從未對第一方 Filesystem extension 送出 `tools/call`（`tools/list` 成功、任何 log 中皆無 `tools/call`）（GitHub issue #80002，累積 61 則留言、27 個讚，首見 2026-07-23，2026-07-24 留言數更新）**：使用者回報 macOS 版 Claude Desktop 與官方第一方 Filesystem extension 整合時，`tools/list` 呼叫可正常成功，但後續實際執行工具時從未送出對應的 `tools/call`，任何 log 中皆查無紀錄；官方尚未回應。
 - 🔴 **未修復**｜**排程 routine 對 custom connector 呼叫任何 MCP 工具皆顯示「MCP tool call requires approval」（GitHub issue #61015，累積 40 則留言、52 個讚，首見 2026-07-23，回報者指出約 2026-05-20 出現回歸）**：使用者回報排定執行的 routine 在呼叫 custom connector 上的任何 MCP 工具時，一律被要求「MCP tool call requires approval」而無法自動執行，回報者指出此問題約於 2026-05-20 開始出現，屬回歸性問題；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：內建 Slack MCP connector 支援連結多個 workspace（GitHub issue #44243，累積 44 則留言、99 個讚，首見 2026-07-19，2026-09-04 互動數更新）**：內建 Slack MCP connector 目前每個 Claude 帳號僅支援連結一個 workspace，UI 或設定皆無法新增第二個 workspace；使用者呼籲支援多 workspace 切換；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**自建 OAuth 2.1 認證 MCP Server 無法連線 Claude Desktop（GitHub issue #5826，累積 66 則留言、71 個讚，2026-07-13 為本日互動最高條目）**：使用者回報自建 OAuth 2.1 認證的 MCP 伺服器在 Claude Code CLI 上運作良好，但 Claude Desktop 完全無法連線，不論走 OAuth 2.1 或 SSE 皆然；官方尚未回應。
+- 🔴 **未修復**｜**自建 OAuth 2.1 認證 MCP Server 無法連線 Claude Desktop（GitHub issue #5826，累積 67 則留言、71 個讚，2026-07-13 為本日互動最高條目，2026-09-12 留言數更新）**：使用者回報自建 OAuth 2.1 認證的 MCP 伺服器在 Claude Code CLI 上運作良好，但 Claude Desktop 完全無法連線，不論走 OAuth 2.1 或 SSE 皆然；官方尚未回應。
 - 🔴 **未修復**｜**MCP Server 整合缺乏 Token 刷新機制（GitHub issue #5706，2026-07-13 回報）**：使用者指出 Claude Code 目前沒有為 MCP 伺服器刷新 token 的機制，只能改用較長效期的 token 作為替代；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：MCP Sampling 支援以善用 Max 訂閱降低 API 成本（GitHub issue #1785，累積 58 則留言，2026-07-12 回報）**：使用者呼籲支援 MCP Sampling，讓 MCP Server 端運算可透過既有 Claude Max 訂閱額度執行，避免額外 API 計費；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 每輪工具呼叫次數限制回歸，中斷 MCP/SSH agent 工作流（GitHub issue #33969，累積 48 則留言、44 個讚，2026-07-07，regression）**：Claude Desktop 每輪工具呼叫次數限制出現回歸，導致依賴多輪工具呼叫的 MCP／SSH 相關 agent 工作流中斷；官方尚未回應。
@@ -332,7 +332,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 86 則留言、7 個讚，2026-09-12 留言數更新）**：與 #29941 同屬 Windows Cowork 啟動障礙但成因不同；官方尚未回應。
 - 🔴 **未修復**｜**Desktop：macOS 無法啟用 Bypass Permissions，自動退回 Accept Edits（GitHub issue #61415，累積 65 則留言、29 個讚，2026-09-11，v2.1.148）**：畫面顯示「Permission mode couldn't be changed」；官方尚未回應。
 - 🔴 **未修復（範圍擴大）**｜**Cowork（Windows）九月累積更新破壞 device_bash，ARM64／x64 皆中，五機 A/B 回滾確認（GitHub issue #92958，累積 49 則留言、8 個讚，2026-09-12）**：與 #92984 同源，移除對應 KB 可恢復；官方尚未修復。
-- 🔴 **未修復**｜**Claude Desktop（Windows 11）主視窗持續蓋在其他應用程式最上層，且無設定可關閉（GitHub issue #85891，累積 87 則留言、181 個讚，2026-08-28 首見，2026-09-04 互動數更新）**：使用者回報 Windows 11 版 Claude Desktop 主視窗行為類似強制「always on top」，持續蓋在其他應用程式最上層，介面中找不到任何可關閉此行為的設定；影響多視窗工作流程；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop（Windows 11）主視窗持續蓋在其他應用程式最上層，且無設定可關閉（GitHub issue #85891，累積 100 則留言、239 個讚，2026-08-28 首見，2026-09-13 互動數更新）**：使用者回報 Windows 11 版 Claude Desktop 主視窗行為類似強制「always on top」，持續蓋在其他應用程式最上層，介面中找不到任何可關閉此行為的設定；影響多視窗工作流程；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code Web 支援從非預設分支啟動 session（GitHub issue #10018，累積 59 則留言、162 個讚，2026-08-29，今日全站互動量最高功能請求）**：使用者呼籲 Claude Code Web 支援從 default branch 以外的分支啟動 session，目前僅能從預設分支開始；與既有「功能請求：支援與 main 以外分支進行 diff 比較」（issue #23626，聚焦比較差異而非啟動 session）同屬「非預設分支」相關訴求但層面不同，暫分列追蹤；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
@@ -353,7 +353,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，累積 385 則留言、6525 個讚，2026-07-10 首見，2026-08-29 互動數更新，全站已知問題中讚數最高單一 issue）**：Claude Code 目前仍不支援業界正在集結的 [AGENTS.md](https://agents.md/) 通用標準——Codex、Amp、Cursor 等工具已陸續標準化採用，僅 Claude Code 仍維持專屬的 `CLAUDE.md`；社群反應數自 2026-05-02 首次回報後持續攀升，凸顯跨工具協作時的配置互操作缺口，官方尚未回應是否納入路線圖。
+- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，累積 394 則留言、6621 個讚，2026-07-10 首見，2026-09-12 互動數更新，全站已知問題中讚數最高單一 issue）**：Claude Code 目前仍不支援業界正在集結的 [AGENTS.md](https://agents.md/) 通用標準——Codex、Amp、Cursor 等工具已陸續標準化採用，僅 Claude Code 仍維持專屬的 `CLAUDE.md`；社群反應數自 2026-05-02 首次回報後持續攀升，凸顯跨工具協作時的配置互操作缺口，官方尚未回應是否納入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（GitHub issue #42776，累積 144 則留言、71 個讚，2026-07-08 首見，2026-09-01 互動數更新）**：Windows 上 Claude Code Desktop 因先前程序未正常結束、殘留檔案鎖（file lock），導致應用程式無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，64 則留言、29 讚，09-05）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
@@ -427,6 +427,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.270** | 2026-09-12 | Bug fix：修復 2.1.269 一項迴歸——長時間執行的 session 中，唯讀 git 指令會意外要求使用者授權；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.270)）|
 | **v2.1.268** | 2026-09-10 | gateway.yaml 新增 `pricing:` 設定，登入客戶端經 managed settings 取得一致費率，`/cost`／telemetry 對得上；見 [[entities/pricing]]（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.268)）|
 | **v2.1.267** | 2026-09-09 | 新增 `maxEffortLevel` 設定，統一設定 Bedrock／Vertex／Foundry 等供應商的推理努力上限，仍可在上限內自選較低等級（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.267)）|
 | **v2.1.266** | 2026-09-08 | Bug fix：修復 2.1.265 一項迴歸，影響 LLM-gateway／proxy 的 `CLAUDE_CODE_USE_GATEWAY` 環境變數（原文截斷，細節未知）；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.266)）|
@@ -673,6 +674,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-13 | **v2.1.270**：修復 2.1.269 迴歸（git 指令誤要求授權）。互動數更新 7 則（AGENTS.md #6235、多帳號 #18435／#27302 等），詳見各節。 |
 | 2026-09-12 | **v2.1.269**：新增 `claude plugin eval`；官方文件更新（桌面版 Git 需求）；新增已知問題 2 則；互動數更新 2 則。細節見「已知問題」「版本更新」各節。 |
 | 2026-09-11 | **v2.1.268**（gateway pricing）；SDK v1.5.0；新增已知問題 2 則；Status 事故 2 起；#2511 互動最高（635 讚）。細節見上方「已知問題」「服務穩定性」「版本更新」各節。 |
 | 2026-09-11（反向對照） | 自建 benchmark「Benzi」宣稱 SWE-bench Verified 78.2%、低於 10 美分/修復，勝過 Claude Code 與 CodeGraph；單一廠商榜單，未見第三方複測（[原文](https://benzi.fly.dev/benchmark)）|

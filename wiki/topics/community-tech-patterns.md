@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-13
+**最後新聞更新：** 2026-09-13
 
-> **最新工作流模式**（2026-09-11）
-> Skills 設計新增 drawio-skill：把自然語言、程式碼、Terraform/K8s、SQL 與 OpenAPI 轉成可編輯、通過測試的 draw.io 架構圖，含 drift diff 與 CI 架構測試（存量盤點，本庫首次收錄）。
+> **最新工作流模式**（2026-09-13）
+> proliferate-ai/proliferate 加入 Multi-agent 架構：開源 AI IDE 可平行執行 Claude Code／Codex／OpenCode，本機或雲端皆可、支援可複用工作流程（500 星）。
 
 ---
 
@@ -50,7 +50,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca、proliferate（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-13 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
@@ -68,7 +68,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | **架構邊界合約** | ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-12 | 用合約與工業標準定義不可越過的架構規則 |
 | **Agent 版本控制** | ADR 注入、架構決策文件先於實作（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-31 | 決策文件先於實作，降低代理方向偏移 |
 | **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
-| **創意工具 Agent 整合** | Palmier Pro（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-23 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-13 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 預算控制** | AgentWatch runtime budget enforcement（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-22 | 在請求到達模型前攔截，強制執行費用或 token 上限 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 手機當 agent 控制介面，各自選不同傳輸層 |
 
@@ -160,6 +160,24 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### proliferate-ai/proliferate：開源 AI IDE，平行執行 Claude Code／Codex／OpenCode 等 agent 並組成可複用工作流程（2026-09-13）
+
+- **主線：** 並行規模
+- **核心模式：** 開源 AI IDE，可同時執行 Claude Code、Codex、OpenCode 等多個 agent（本機或雲端皆可），並將常用操作組成可重複使用的工作流程
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「IDE 化」取向的實作——既有代表技巧（Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca）多為 CLI 或後端 orchestrator，本則把多 agent 平行執行包進 IDE 介面並支援工作流程複用
+- **可信度註記：** 星速偵測收錄（500 星，屬正常成長區間），未見 forks／issues／近期 commit 佐證；功能敘述為專案自述
+- **來源：** GitHub Search；[GitHub](https://github.com/proliferate-ai/proliferate)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### zenstory-ai/oh-story-claudecode：中文網路小說寫作 agent skills 合集，涵蓋掃榜、拆文、寫作、去 AI 味、封面全流程，本庫存量盤點今日首次收錄（2026-04-22 出生、6,824 星）（2026-09-13）
+
+- **主線：** —
+- **核心模式：** 13 個 skill 組成的中文網路小說（网文）寫作流程，涵蓋掃榜選題、拆文分析、正文寫作、去 AI 味潤稿、封面生成，長篇短篇皆支援，具檔案式跨 session 連續性追蹤
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」類別一種「垂直領域全流程 skill 化」取向的做法——既有代表技巧（Palmier Pro）聚焦把 agent 整合擴到創作工具鏈，本則把單一垂直領域（中文網文寫作）的完整生產流程拆成 13 個可組合 skill
+- **可信度註記：** 本庫存量盤點通道首次收錄（已成名但本庫未報導過的 repo，2026-04-22 出生），未見 forks／issues／近期 commit 佐證，功能敘述為專案自述；6,824 星屬本庫近期收錄中同類最高，星數真實性未經第三方驗證
+- **來源：** GitHub Search（存量盤點）；[GitHub](https://github.com/zenstory-ai/oh-story-claudecode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### github/spec-kit：GitHub 官方 Spec-Driven Development 入門工具包，近 7 天新增 2,311 星（約 330 星/日）（2026-09-12）
 

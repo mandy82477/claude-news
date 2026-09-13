@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
 **最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-10
+**最後新聞更新：** 2026-09-13
 
-> **最新動態：傳有明星 AI 研究員將從 Meta 離職加入 Anthropic**（2026-09-10）
-> WSJ 報導，具體姓名與職稱均未見報導，詳見「對各公司的影響」表新增 Meta 列與「時序」新增節。
+> **最新動態：Google DeepMind 研究員離職，警告 AI 對齊程度下降**（2026-09-13）
+> 三家媒體（storyboard18.com、Firstpost、Inshorts）報導，一名 DeepMind 員工離職前警告 AI「對齊程度」正在下降、五年內恐釀重大傷害；姓名未見報導，詳見「對各公司的影響」表 Google DeepMind 列與「時序」新增節。
 
 ## 摘要
 
@@ -45,13 +45,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 公司 | 角色 | 具體影響 | 評估 |
 |------|------|---------|------|
 | **Meta** | 淨流失方 | 傳一位「明星」AI 研究員離職轉投 Anthropic（09-10，WSJ，僅標題可用，姓名與職稱未載）| ℹ️ 具體人名、職稱、加入 Anthropic 後的職位均未見報導，戰力影響待觀察 |
-| **Google DeepMind** | 淨流失方＋高層動盪 | 研究員與元老出走批次（6/21–6/28）＋ Discovery Loop 創業潮（08-05/06）＋ Thore Graepel 出走創業（09-07）；市值蒸發約 $2,700 億美元（dev.to 口徑，非官方；詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
+| **Google DeepMind** | 淨流失方＋高層動盪 | 出走批次＋創業潮＋離職警告 AI 對齊風險下降（6/21–09/13）；市值蒸發約 $2,700 億美元（詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
 | **Anthropic** | 主要承接方 | 科學計算（Jumper）／AI 編碼（Adler）／訓練（Pritzel）／安全經濟；08-21/23 新增晶片人才 Amir Salek（前 Google TPU 計畫創辦人，入 compute 團隊）| 🟢 招募已擴及硬體自主設計；到任日未公開（推論：戰力影響待觀察）|
 | **OpenAI** | 次要承接方 | 獲得一名 Google 頂尖研究員（6/23 SEJ 報導，姓名未具名）| 🟡 同步受惠於 Google 人才外流，規模小於 Anthropic |
 | **Meshy**（3D 生成新創，非 Anthropic 生態） | 人才承接方 | 電腦繪圖資深學者童欣（Dr. Xin Tong）加入出任首席科學家（09-09，僅標題可用）| ℹ️ 3D 生成賽道人才強化；與 Google／Anthropic 人才戰無直接關聯，具體職責與履歷未見報導 |
 
 **對各公司的影響細節**
 - **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
+  - **09-13**：一名 DeepMind 員工離職，警告 AI「對齊程度」正在下降、五年內恐釀重大傷害；storyboard18.com、Firstpost、Inshorts 三家媒體各自報導同一事件，姓名與職稱均未見報導。
+  - **與既有記錄的關係**：與 09-07 Thore Graepel 出走同屬「未流向 Anthropic 等既有前沿實驗室」型態，聚焦公開警告而非新創動向，是否同批未見交叉確認（推論）。
   - **09-07**：研究老將 Thore Graepel 離職，投入一項 AI 推理新創事業。**與既有記錄的關係**：未加入 Anthropic 或其他既有前沿實驗室，屬「自行創業」型態，與 08-05／08-06 Jeff Dean 等人出走創辦 Discovery Loop 同屬一類、非「被 Anthropic 承接」的又一筆淨流失。
   - 具體新創名稱、資金來源、Graepel 於新創擔任的職位均未見報導，僅標題可用（推論）。
   - **08-05／08-06**：Hassabis 卸任 DeepMind CEO 轉任 Alphabet 首席科學家（留任集團，非離職）；Jeff Dean、Sanjay Ghemawat、Oriol Vinyals、Quoc Le 離職創辦 Discovery Loop（PBC，Dean 任 CEO，**Alphabet 亦為投資方**），市值影響各家估 1,600–2,000 億美元（盤中估算區間）；Kavukcuoglu 升任 DeepMind SVP
@@ -71,6 +73,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-13
+- **Google DeepMind 員工離職，警告 AI 對齊程度下降、五年內恐釀重大傷害**：storyboard18.com、Firstpost、Inshorts 三家媒體各自報導同一事件，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列更新（Topic Watch/ai-talent-flow）
 
 #### 2026-09-10
 - **傳有明星 AI 研究員將從 Meta 離職轉投 Anthropic**：WSJ 報導，具體姓名與職稱均未見報導，詳見「對各公司的影響」表新增 Meta 列（Topic Watch/ai-talent-flow，原始來源 Google News/WSJ）

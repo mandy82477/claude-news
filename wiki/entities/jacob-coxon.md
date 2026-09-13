@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（待核實）
 **領域：** 👤 人物
 **首次出現：** 2026-09-09
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-13
+**最後新聞更新：** 2026-09-13
 
 > ❓ **待查證**（標 2026-09-09｜查 Coxon、hilbertspaess）｜**辭去 Anthropic 職務並公開批評兩家公司「不負責任」**（2026-09-09 報導）：Jacob Coxon 於 X 發文稱已辭去 Anthropic 職務，自述曾任 OpenAI／Anthropic pretraining 研究員三年，指控兩家公司「不負責任地衝向自我改進超級智能」；其過往資歷未見獨立媒體查證，HN 讀者對其資歷提出質疑。
 
@@ -45,7 +45,7 @@ Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過
 
 本頁摘要中的職稱與經歷描述僅來自 Coxon 本人貼文。尚無獨立媒體對其身分、任職時間或具體職掌的查證，查證狀態見上方標記。事件的機制與政策面（自我改進超級智能爭論）見 [[topics/recursive-self-improvement]]，本頁僅記錄此人此言與其可信度爭議。
 
-2026-09-12 起，Times of India、ESG Dive 分別以「又一名 Anthropic 員工」辭職示警、及本次辭職個案檢視 AI 公司 IPO 治理疑慮為題跟進報導；兩則報導均未具名，是否指本人或另一起獨立辭職事件仍未能確認（見下方爭議節的查證標記）。
+2026-09-12 起，Times of India、ESG Dive 分別以「又一名 Anthropic 員工」辭職示警、及本次辭職個案檢視 AI 公司 IPO 治理疑慮為題跟進報導；兩則報導均未具名，是否指本人或另一起獨立辭職事件仍未能確認（見下方爭議節的查證標記）。2026-09-13，BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」，同樣未具名，與本人或上述 09-12 個案是否同一人仍無法確認。
 
 ## 核心論述
 
@@ -61,7 +61,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 另有 Hugging Face 執行長於 Business Insider 報導（2026-09-11，僅標題可用）評論一名 Anthropic 研究員的 AI 風險警告，比喻為「問空調師傅氣候變遷」（Like asking your AC guy about climate change），暗示質疑其專業代表性；報導未點名對象，研判與本波辭職／警告報導相關，惟未經證實。
 
-❓ **待查證**（標 2026-09-12｜查 we may not survive this、ESG Dive）｜**「又一名」離職報導是否指本人或另一起獨立事件**（2026-09-12 報導）：Times of India 以「又一名 Anthropic 員工」提出「我們可能撐不過這個」警告後離職為題、ESG Dive 同日以此辭職事件檢視 AI 公司 IPO 治理疑慮跟進報導；兩則均未具名，無法確認是否即為本人（Coxon）的後續延燒，或另一起獨立辭職個案。
+❓ **待查證**（標 2026-09-12｜查 we may not survive this、ESG Dive｜訊 2026-09-13）｜**「又一名」離職報導是否指本人或另一起獨立事件**（2026-09-12 報導）：Times of India 以「又一名 Anthropic 員工」提出「我們可能撐不過這個」警告後離職為題、ESG Dive 同日以此辭職事件檢視 AI 公司 IPO 治理疑慮跟進報導；兩則均未具名，無法確認是否即為本人（Coxon）的後續延燒，或另一起獨立辭職個案。**後續（2026-09-13）：** BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」（原文僅標題可用），與本則、與本人是否同一人仍無法確認。
 
 ## 相關議題
 
@@ -71,6 +71,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 參考來源
 
+- 「AI staff 'genuinely frightened' for humanity's future, ex-Anthropic researcher tells BBC」— Google News／BBC，2026-09-13（僅標題可用，原始連結未附）
 - [I resigned from Anthropic today](https://twitter.com/hilbertspaess/status/2097476196791709843#m) — Hacker News/Twitter，2026-09-09（WSJ 另有獨家報導跟進，連結未取得）
 - ['Seems Like A Setup': Musk Mocks Ex-Anthropic Staffer's Warnings On AI Extinction Risks](https://news.google.com/rss/articles/CBMizwFBVV95cUxOZFYteXVSX2hINXNaUlVTd1hBWUtIZTJVemxyZmI4T250NjRTcHVVTU1tQzhnYXUybU9kSnZyeVFnVWtUczgxN0ZUQWNBaFBUaEhENGxROHJ6QWtyYW1icnItQk83WDIyQ1Nack1FX3NvRnJiQmhnb0paVm42dWRwZUhROTJXOVlCblJfYkg3ckt1cTE5N3p6U1VZNEFBSnN0QzV6bDNfWk9XZ1JTRGtBcjd2bjhWVHBhSnNqaVI3dkpvVzdHdjF4UzFNaFRWOXM?oc=5) — Forbes，2026-09-10（僅標題可用）
 - [Former Anthropic researcher warns AI could 'kill us all'](https://news.google.com/rss/articles/CBMi8AFBVV95cUxQQnF4R0NXdkRxQXIyVVVnQlNVVmg5OElaV1Mzd1ZkV25UaGxibWNNUGhfdm1keUlCVEVyMW9YMGNvOUZGbF9OaWxIY2xVMjhpSWlISVpjdWZzeUdMVFBJX05BdzlJTFFCU1B3YjZYaXM0S2lIaW1xcExwXzY0UnRwU3dYOGtNQi11aUoyb3JaV3FOZ3RTTDVJZnFQTndQZ0lWQUdKMDBQeU5QYUtFMDF5aEdhVS0wMHMzUmRldUJXRWFEWFpDLURaTzU0RHhUYnNGbDV0Q0taNFEzR2hNMHY5bDliajlzNTlPYVBpdk1jQTQ?oc=5) — CNN，2026-09-10（僅標題可用）
@@ -87,6 +88,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
+- 2026-09-13：BBC 報導一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」；原文未具名、僅標題可用，與 09-12 個案或本人是否同一人仍無法確認（來源：Google News／BBC）
 - 2026-09-12：Times of India、ESG Dive 同日跟進報導；前者稱「又一名 Anthropic 員工」提出 AI 警告後離職，後者以此辭職事件檢視 AI 公司 IPO 前公司治理疑慮；均未具名，是否即本人或另一起獨立事件仍未能確認
 - 2026-09-11：Hugging Face 執行長於 Business Insider 評論一名 Anthropic 研究員的 AI 警告，比喻「問空調師傅氣候變遷」，暗示質疑其專業代表性（報導未點名對象，僅標題可用）
 - 2026-09-10：科技作家 Cal Newport 發表部落格評論〈Anthropic Just Threatened to Kill Billions of People. This Is Not Okay〉，引述本人辭職聲明全文與 Hubinger 回應，批評相關警告不應被輕描淡寫（Hacker News 討論）

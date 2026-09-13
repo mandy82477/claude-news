@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-13
+**最後新聞更新：** 2026-09-13
 
-> **本週衝擊**（2026-09-04）
+> **本週衝擊**（2026-09-13）
+> - 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。
 > - 🔴 **價格戰打到產品層**：Meta Muse Code 結束 beta、推三層訂閱主打低價（09-01）——但月費沒公布，想比價還比不了，先別急著算換算成本。
-> - 🟡 **「降本不降質」首見反例**：GitHub HydraFusion 多數基準降本，品質只在一項打平（09-04）——以後看到降本宣稱，先問品質是在哪個基準上測的。
 > - 🟡 **Cursor 可能更依賴 Claude**：OpenAI 傳 11/12 斷供 Cursor（09-04，單一 Reddit 討論串）——你如果在用 Cursor，值得留意它的模型來源會不會換；用 Claude Code 的人這週不必動。
 
 ---
@@ -48,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | GPT-6 Astra 上線 Pro／Enterprise／API（09-05，僅標題）；零資料保留承諾搶企業客戶（08-20）→ 新旗艦已鋪貨三層，能力與定價未載，暫不改變選型 | 能力 | 🔴 | 單一標題（Google News/Pasquale Pillitteri），原文未取得；「重置 Claude 限制」關聯未證實 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查大減（09-13）→ 首見官方自曝的自主 agentic 信任案例，直指 Claude Code 定位 | 能力 | 🔴 | OpenAI 官方部落格單一客戶案例，無第三方驗證或量化數字 |
 | **Microsoft／GitHub** 🏢 | Copilot 終結「無限量」方案（08-17）；HydraFusion 多數基準降本、品質僅一項打平（09-04）→ 降本宣稱要先問品質在哪個基準測的 | 定價 | 🔴 | VentureBeat 標題層級，降幅數字與是否產品化均未見；自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率未載 ❓ 待查證 ⟨Q-01⟩ |
@@ -141,9 +141,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
 - 定價面已實際下修：GPT-5.6 Luna 降 80%、Terra 降 20%，Sol 未降價但提速 2.5 倍（07-30 官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
+- GPT-6 Astra 首個官方自曝案例：Perplexity 用它自主寫通訊、改軟體、監控正式環境，人工複查頻率大減（09-13，OpenAI 官方部落格），直指 Claude Code 的自主任務定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
-- GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、對上述基準結論是否有影響均未見報導（09-05，僅標題）。
+- GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、複查頻率「大減」的量化數字，以及對上述基準結論是否有影響均未見報導。
 
 ### Microsoft／GitHub
 **現在的答案**
@@ -210,6 +211,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-13
+- **OpenAI（透過 Perplexity 案例）**：Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查頻率大減；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）
 
 ### 2026-09-12
 - **Google（Gemini）**：HN 討論稱 Gemini 2.5 Pro／Flash 十月停用、尚無 GA 版 Pro 級後繼；長文件利基（千頁僅需 30 萬 tokens）Anthropic／OpenAI 均無同等方案，代價逾 10 倍 → 需要此利基的工程師暫無替代可轉。僅單一 HN 討論串（19 分），無官方公告佐證（Hacker News）

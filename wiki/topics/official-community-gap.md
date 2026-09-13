@@ -28,15 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
 **最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-11
+**最後新聞更新：** 2026-09-13
 
-> **最新功能缺口**（2026-09-11）
-> - **跨工具統一操作層**：串接不同 AI 編碼工具的社群方案，今日再添 avibe、ccteam，累計 7 款（[[topics/official-community-gap#Agent 工作模式產品化追蹤]]）。
-> - 官方目前無對應功能，這類跨工具整合需求只能靠社群工具解決，是留給工具作者的機會。
+> **最新功能缺口**（2026-09-13）
+> - **跨工具統一操作層再添一款**：orca（用既有訂閱跑任意 coding agent 的多 agent ADE）併入既有清單，累計 8 款，7 天 +4,966★ 為本批最快。
+> - **spec-kit／comet 未新增列**：與官方既有 Outcomes／`/goal` 概念重疊或證據不足，官方目前仍無對應這條缺口的功能。
 
 ## 摘要
 
-**最新更新（2026-09-11）：** ⟨G-11⟩ 跨 harness 統一操作層新增代表工具 avibe、ccteam；另評估 09-10 社群新增 9 筆 agent 工作模式條目（OtoDock 架構揭露、Nightshift、Security Cards、Hordev、dsh-TUI、better-agent-terminal、Orchestrator），除上述兩款外均判定尚不足以新增矩陣列或修改現有列，詳見「時序」。
+**最新更新（2026-09-13）：** ⟨G-11⟩ 跨 harness 統一操作層新增代表工具 orca；同批 spec-kit 與官方既有 Outcomes／`/goal` 概念重疊、comet 證據不足，均未新增矩陣列，詳見「時序」。
 
 本頁比對社群工具所反映的開發者痛點，與 Anthropic 官方功能路線之間的覆蓋情況。識別哪些痛點官方正在積極解決、哪些被忽略或結構性缺席。本頁是**官方視角**（官方產品路線 vs 社群工具）；學術文獻主張與 Claude Code 現況的落差是**文獻視角**，見 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]]。
 
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 成本感知模型路由 | 2026-06-27，Opus 4.7 tokenizer 改版成本大漲後爆發 | Workweave Router（HN 181，實測降 40%+）、Dragoman、Rayline | 無 | ❌ 無官方對應 | 官方無路由/成本最佳化功能，社群工具是唯一解法；漲幅量級見 [[topics/model-comparison#同一份工作，換設定差多少]] |
 | 額度/用量監控 | 2026-05 起持續累積，2026-07-03 因 7/7 計費轉換臨近急遽爆發 | LimitBar、CCLimitPing、claude-needs-input | 企業版 Spend Controls（2026-07-04 宣布，控管粒度未公開，見 [[topics/enterprise-cost-management]]）；個人用戶仍無官方儀表板/告警 UI | 🧪 部分產品化（僅企業版） | 企業版 Spend Controls 已上線；個人用戶仍無官方儀表板，隨計費轉換 deadline 迫切性升高 ⟨G-07⟩ |
 | Slack 內 AI 隊友 | 弱社群前驅（Ano 等輕量 Slack + Claude 整合，2026-06-04） | Ano | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack-native，Anthropic 內部 65% 程式碼由其生成） | ✅ 已產品化 | 此列較弱屬「社群發明」框架——官方主導色彩強，社群前驅稀薄，列入僅供對照參考 |
-| 跨 harness 統一操作層 | 2026-08-24 起一週內密集湧現（loopx 5,067★、Graft 4,842★等 7 款同批；09-10 再添 2 款） | loopx、Graft、metaharness、claw-orchestrator、opencodex、avibe、ccteam | 無 | ❌ 無官方對應 | 與上方 AGENTS.md 列**不同層**：那條談設定檔格式相容，本條談執行期統一操作層 ⟨G-11⟩ |
+| 跨 harness 統一操作層 | 2026-08-24 起一週內密集湧現（loopx 5,067★、Graft 4,842★等 7 款同批；09-10 再添 2 款；09-12 再添 1 款） | loopx、Graft、metaharness、claw-orchestrator、opencodex、avibe、ccteam、orca | 無 | ❌ 無官方對應 | 與上方 AGENTS.md 列**不同層**：那條談設定檔格式相容，本條談執行期統一操作層 ⟨G-11⟩ |
 | Agent 間商業/支付基礎設施 | 2026-08-18，internet-court-skill 首見 | internet-court-skill | 無 | ❌ 無官方對應 | 全新類別——agent 之間經濟往來的信任與爭議解決，非協作/操作層問題；❓ 待查證 ⟨Q-02⟩ ⟨G-12⟩ |
 | 跨工具 agent 設定標準（AGENTS.md） | 2026-05-02 起，[GitHub issue #6235](https://github.com/anthropics/claude-code/issues/6235) 累積 335 則留言、5889 個讚（2026-08-14，全站已知問題讚數之最）| Codex、Amp、Cursor（均已採用 AGENTS.md 標準） | 無 | ❌ 無官方對應 | Claude Code 仍不支援 AGENTS.md，多工具維護痛點；反應數持續攀升；/doctor 精簡建議非互操作標準 ⟨G-08⟩ |
 | 多平行 agent 即時可觀測性／協調地圖 | 2026-07-06 Show HN live-log-viewer-next（讀本機 JSONL transcript 呈現即時對話地圖）；既有 1000 Subagents Fan-out、20-instance 崩潰分析持續堆疊 | live-log-viewer-next、（fan-out/多 instance 分析工具鏈） | Agent View（`claude agents` 多 session 列表管理，v2.1.139）＋ `--forward-subagent-text` 旗標（v2.1.211，2026-07-15）＋ `/fork` 背景 session 化（v2.1.212，2026-07-17） | ❌ 無官方對應 | Agent View 為列表式非即時 live map；--forward-subagent-text 提供資料來源但非觀測產品本身 ⟨G-09⟩ |
@@ -80,7 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）：Claude Code 仍不支援 AGENTS.md，多工具並用者需為 Claude Code 額外維護 CLAUDE.md，造成配置互通痛點；反應數持續攀升顯示壓力未見緩解；v2.1.206（2026-07-10）`/doctor` 新增建議精簡 CLAUDE.md 內容的檢查項，屬維護性提示而非互操作標準對應，缺口性質未變。
 - ⟨G-09⟩ 多平行 agent 即時可觀測性／協調地圖：官方 Agent View 為**列表式** session 管理，非跨 agent 即時狀態流的 live map；當數十至上千平行 agent 併跑時「誰卡住、誰在等、彼此依賴」缺乏即時可觀測面，社群自建地圖式檢視器補位，官方無對應方向。2026-07-15 v2.1.211 新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，讓 `stream-json` 輸出包含 subagent 文字與思考內容，為社群建構觀測工具提供官方資料來源；2026-07-17 v2.1.212 將 `/fork` 改為建立獨立背景 session（`claude agents` 自成一列），原同 session 子 agent 行為更名 `/subtask`，使多開背景任務與同 session 委派的列表可見度更清楚拆分，但本身仍非官方 live map 產品，狀態未變。
 - ⟨G-10⟩ Agent 間直接通訊協定：與上一列「即時可觀測性／協調地圖」的區別：協調地圖是**被動觀測**（讀 transcript/log 呈現狀態，agent 本身不互相收送訊息）；本列是**主動通訊**（agent 之間或跨機器直接交換訊息以協調依賴順序），先前僅能透過檔案系統或外部工具中繼；2026-08-09 官方文件正式確認跨 session 訊息互通功能存在，直接對應 issue #24798 的訴求（已於 [[entities/claude-code]] 已知問題轉為 ✅ 已修復 v2.1.224）；惟官方文件未明確說明是否涵蓋**跨機器**場景，issue #28300（A2A 協定）訴求範圍是否被涵蓋 ❓ 待查證 ⟨Q-01⟩，故狀態暫不升至完全產品化；issue #24798 留言持續累積（60→75→78），內容顯示社群訴求核心其實是「依相依性排序高階流程步驟」的工作流編排，`ListAgents`／`SendMessage` 僅提供點對點訊息傳遞原語，未涵蓋自動依賴排序，此為即使排除跨機器場景後**仍未被涵蓋**的第二個切面；2026-08-24 另有 Windows/MSIX 1.28929.0 版本獨立回報（issue #86069）：跨 session 訊息會送進目標 session 輸入框卻不會自動送出，該 session 因而無回應——官方文件本就未涵蓋 Windows 平台（僅載明 macOS／Linux），此則屬支援範圍外平台的可靠性問題，非既有支援範圍內的功能退化，見 [[entities/claude-code]] 已知問題；🧪 部分產品化維持不變。
-- ⟨G-11⟩ 跨 harness 統一操作層：缺**執行期統一操作面**，非設定檔互通（⟨G-08⟩）。2026-08-24 起密集湧現，官方 `ListAgents`／`SendMessage` 僅涵蓋 CC 自身 session。09-10 再添 avibe、ccteam，官方狀態不變，見 [[topics/community-tech-tools]]「多 agent 協調混亂」。
+- ⟨G-11⟩ 跨 harness 統一操作層：缺執行期統一操作面，非設定檔互通（⟨G-08⟩）。08-24 起密集湧現，官方僅涵蓋 CC 自身 session。09-10 再添 avibe、ccteam；09-12 再添 orca（ADE，7 天 +4,966★，日增最快），官方狀態不變，見 [[topics/community-tech-tools]]「多 agent 協調混亂」。
 
 - ⟨G-12⟩ Agent 間商業/支付基礎設施：internet-court/internet-court-skill（GitHub Search，5,317★，無出生日期標記，2026-08-18 首見）提出「agent 對 agent 商業往來的信任層」方案——自然語言協議＋ERC-7710 委任權限＋x402 支付機制＋履約爭議仲裁；與既有 ⟨G-01⟩ Subagent 派工/編排、⟨G-11⟩ 跨 harness 統一操作層皆不同層——那兩條談的是**協作/操作**，本條談的是 agent 之間**經濟往來**的信任與爭議解決，官方目前無任何對應功能或路線圖線索。可信度提醒：該工具星數雖高，但缺 forks／issues／近期 commit 佐證可查、無出生日期標記，讀者宜自行核實實際採用程度；本列先建立以標記缺口存在，待更多獨立工具佐證後再升級證據強度（⟨Q-02⟩ 詳見「懸置細節」）。
 
@@ -184,6 +184,11 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[topics/community-tech-discussions]] — 社群技術辯論
 
 ## 時序
+
+### 2026-09-12
+- **orca**（stablyai/orca，多 agent ADE，用既有訂閱跑任意 coding agent，7 天 +4,966★）併入既有 ⟨G-11⟩ 跨 harness 統一操作層代表工具清單，非新模式。
+- **spec-kit**（github/spec-kit，Spec-Driven Development 入門工具包，7 天 +2,311★）與官方 Outcomes 規格驗證＋`/goal` 概念重疊，不新增矩陣列。
+- **comet**（rpamis/comet，把想法轉成可評測工作流程的 agent skill harness，3,023★，今日首次收錄）僅一行摘要、缺動能數據，證據不足暫不處置，待更多案例佐證再評估。
 
 ### 2026-09-11
 - 評估 09-10 社群新增 9 筆 agent 工作模式條目：avibe、ccteam 併入 ⟨G-11⟩；OtoDock 為既有工具細節補充，非新缺口；Nightshift 記於 [[entities/claude-code]] 待查證；Security Cards、Hordev、dsh-TUI、better-agent-terminal、Orchestrator 密度或性質皆不足以新增缺口列。

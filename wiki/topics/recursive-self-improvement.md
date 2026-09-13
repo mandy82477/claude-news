@@ -28,10 +28,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
 **最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-11
+**最後新聞更新：** 2026-09-13
 
-> **最新動態**（2026-09-11）
-> NBC News 報導 Joe Benton（前 Anthropic 安全研究團隊負責人）與 Josh Engels（前 Google DeepMind 安全研究員）離職後首次受訪，籲提升前沿 AI 事故透明度：兩位前安全研究者親身示警，不是外部評論者。CNBC 同日報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；The Guardian 報導 Musk 稱相關警告為「psyop」（[[topics/recursive-self-improvement#技術彙整]]）。跨黨派國會監管呼籲同步升溫，進度見 [[topics/anthropic-government-policy]]；做合規規劃的人先別押注聯邦統一立法。
+> **最新動態**（2026-09-13）
+> Dario Amodei 親自呼籲業界暫緩 AI 發展步調、警告「AI 群體行為」恐於 6–12 個月內接管網路，並稱已承諾一項 AI 減速計畫；HN 社群多則留言質疑此為募資話術或拖累競爭對手（詳見「## 技術彙整」）。
 
 ---
 
@@ -69,6 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-10，CBS 補上 Hubinger 完整發言＋CNBC：更多研究員加入減速呼籲**：CBS News 引述 Hubinger 完整發言，新增「Anthropic 尚無解決超級智能對齊問題的計畫」一句；CNBC 同日報導更多 OpenAI、Anthropic 研究員加入呼籲 AI 減速、警告「滅絕」風險，僅標題可用，具體人數與訴求細節未見報導，詳見「## 技術彙整」。
 - **2026-09-11，NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」**：兩位分別曾任 Anthropic 安全研究團隊負責人與 Google DeepMind 安全研究員的離職研究員首次受訪，籲提升前沿 AI 事故透明度；為 Coxon／Hubinger 系列新增具名當事人。
 - **同日，CNBC／Guardian**：CNBC 報導川普公開淡化 AI 滅絕風險、逾十餘位業界人士連署籲放緩；Guardian 報導 Musk 稱相關警告為「psyop」，詳見「## 技術彙整」。
+- **2026-09-12～13，Dario Amodei 本人首度直接呼籲業界暫緩發展步調**：較 06-04《When AI Builds Itself》的「煞車踏板」呼籲更具體——首次提出「AI 群體行為 6–12 個月內接管網路」的時間窗，並稱已承諾一項 AI 減速計畫；具體計畫內容未見報導。HN 社群對此呼籲懷疑聲量高，質疑動機為競爭策略或募資話術而非安全考量，詳見「## 技術彙整」。
 
 ---
 
@@ -87,6 +88,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 未具名員工 | 未見報導 | 2026-09-12 | 帶著警告離職，內容未見具體揭露 | Times of India、ESG Dive |
 
 **讀這張表要注意三件事**：① Hubinger **仍在職**，與其餘離職者性質不同；② Coxon 與 Hubinger 的發言是否互相回應，BBC 只稱「疑似」、原文無佐證，本站不採信兩者有明確關聯；③ HN 討論串有讀者質疑 Coxon 資淺、認為媒體反應過度，社群並非全員採信（見下方「反面聲音」）。
+
+### Dario Amodei 親自呼籲 AI 暫緩發展、警告「AI 群體行為」風險（2026-09-12～13 新增）
+
+- **揭露來源**：Hacker News（轉載 BBC／VentureBeat／Bloomberg／Axios）；Google News（Guardian／PBS／DW／Axios／theguardian.com）
+- **核心主張**：Anthropic 執行長 Dario Amodei 主張現行 AI 發展步調應暫緩並接受更嚴密監控。VentureBeat 標題稱他認為「AI 群體行為」（AI swarm）可能於 6–12 個月內「接管網路」，並承諾一項 AI 減速計畫；PBS 標題稱他認為 AI 產業需要時間讓安全措施跟上；Guardian 標題引述「我們必須放慢步調」
+- **與既有敘事的關係**：延續 06-04《When AI Builds Itself》以來 Anthropic 自身的「煞車踏板」呼籲，首度由 Amodei 本人提出「AI 群體行為」的具體時間窗與「減速計畫」的說法，比 Jack Clark 先前的「brake pedal」措辭更具體；具體計畫內容與「AI 群體行為」的技術定義均未見報導
+- **社群反面聲音（需並陳）**：Bloomberg 轉載串留言質疑「意謂他們發現遇到瓶頸了」「意謂在拖累競爭對手，因為 Anthropic 已不再專注產品與品質」；VentureBeat 轉載串留言質疑「一邊花數百萬訓練會做他們擔心的事的模型，一邊寫這種聲情並茂的信，很難認真看待」；Axios 轉載串留言將此類比募資前的「別逼我做壞事」話術，並反諷「不如乾脆把他們收歸公有事業」
+- ❓ **待查證**（標 2026-09-13｜查 AI swarm、slowdown plan）：「AI 減速計畫」具體內容、「AI 群體行為」推算 6–12 個月時間窗的技術依據均未見報導
+- **可信度評估**：Amodei 本人公開發言，經 BBC／VentureBeat／Bloomberg／Axios／Guardian／PBS／DW 多家主流媒體證實，訊號強度高；惟其呼籲動機延續既有「言行不一」批評（邊呼籲邊 IPO），本頁「## 目前結論」已並陳此質疑
 
 ### NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」（2026-09-11 新增）
 
@@ -161,6 +171,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-09-12～13
+- **[官方減速呼籲，新增] Dario Amodei 親自呼籲 AI 暫緩發展，警告「AI 群體行為」6–12 個月內恐接管網路**：延續 06-04《When AI Builds Itself》「煞車踏板」呼籲，首度提出具體時間窗與「AI 減速計畫」；HN 社群留言普遍質疑動機為競爭策略或募資話術，詳見「## 技術彙整」
 
 ### 2026-09-11
 - **[人物警訊，新增] NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」**：曾任 Anthropic 安全研究團隊負責人與 Google DeepMind 安全研究員的兩位離職者首次受訪，籲提升前沿 AI 事故透明度，詳見「## 技術彙整」

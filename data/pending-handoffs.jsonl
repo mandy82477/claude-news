@@ -169,3 +169,5 @@
 {"id": "H-624b00", "opened": "2026-09-12", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 spec-kit／orca／comet 三款新 agent 工作模式是否納入官方-社群功能對照矩陣（產品化矩陣）新增列", "status": "open"}
 {"id": "H-817e3e", "closed": "2026-09-12", "status": "void", "by": "主編", "result": "已於 2026-09-11 寫入 claude-code.md 歷史記錄（反向對照列），內容與轉知一致，無需重複記入"}
 {"id": "H-d575e8", "closed": "2026-09-12", "status": "void", "by": "主編", "result": "已於既有已知問題 ❓ 待查證條目記載（標 2026-09-11｜查 Nightshift、context rot），內容與轉知一致，無需重複記入"}
+{"id": "H-624b00", "closed": "2026-09-13", "status": "done", "by": "功能", "result": "orca併入既有G-11代表工具清單；spec-kit/comet證據不足未新增矩陣列，評估過程已記入official-community-gap.md時序2026-09-12"}
+{"id": "H-79a7f9", "opened": "2026-09-13", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 09-13 新增於 community-tech-patterns 的 proliferate-ai/proliferate、zenstory-ai/oh-story-claudecode 是否納入官方-社群功能對照矩陣（產品化矩陣）新增列", "status": "open"}

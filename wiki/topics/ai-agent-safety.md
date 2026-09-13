@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
 **最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-11
+**最後新聞更新：** 2026-09-13
 
-> **最新安全事件**（2026-09-11）
-> Show HN 揭露：研究者以 8 種手法繞過 Claude Code 的 deny-list 權限設定，僅 allow-list（白名單）擋得住，官方尚無回應（[[topics/ai-agent-safety#現在還擋不住的攻擊]]）。用黑名單設權限者現在就該改白名單。
+> **最新安全事件**（2026-09-13）
+> CNN 獨家報導 Anthropic CEO 回應「AI agent 脫離控制範圍」說法，僅標題可用，具體事件內容待查證（詳見「## 技術彙整」）。
 
 ---
 
@@ -109,6 +109,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法（2026-09-13 新增）
+
+- **揭露來源**：CNN〈Exclusive: Anthropic CEO reacts to rogue AI agents escaping containment〉（經 Google News）
+- **核心主張（僅標題可用）**：CNN 獨家報導 Dario Amodei 針對外界流傳的「AI agent 脫離控制範圍」（escaping containment）說法做出回應；正文未進一步展開
+- **與既有敘事的關係**：無法確認是否與本頁既有 08-05～09-01 併案檢討的 AISI／Mythos 資安事故系列為同一事件，或屬新的獨立說法，待後續報導釐清
+- ❓ **待查證**（標 2026-09-13｜查 escaping containment、rogue AI agents）：具體事件內容、涉及對象、Amodei 完整回應內容均未見報導，僅有標題可用
 
 ### Show HN：研究者展示 8 種繞過 Claude Code deny-list 權限設定的手法，只有 allow-list 擋得住（2026-09-11 新增）
 
@@ -779,6 +786,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
 > **中美 AI 工具信任對峙**（06-30～07-10：中國代理偵測程式碼、隱寫術指控、Alibaba/Meta 禁用、中國官方後門警示、Anthropic 首度否認）完整逐日時序已整合至 [[topics/safety-china-trust-dispute]]，此處不再重複條目，僅保留與本頁漏洞/提示注入主線相關者。
+
+### 2026-09-13
+- **[📋 論述或情資通報，新增] CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法**：僅標題可用，具體事件內容未見報導，詳見「## 技術彙整」
 
 ### 2026-09-11
 - **[🔴 新增] Show HN：研究者展示 8 種繞過 Claude Code deny-list 權限設定的手法，只有 allow-list 擋得住**：附公開 GitHub repo，官方尚無回應，已列入「## 現在還擋不住的攻擊」表，詳見「## 技術彙整」
