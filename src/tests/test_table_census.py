@@ -83,7 +83,7 @@ class MechanismDirect(unittest.TestCase):
 
     def test_命中行落在無關節內時判為無(self):
         rules = self._rules([
-            ("wiki-ingest-format.md",
+            ("page-templates.md",
              "## 通用規則\n"
              "`## 摘要` 內帶日期的段落超過 2 段時移除，其餘頁面比照辦理。\n"),
         ])
@@ -155,7 +155,7 @@ class MechanismCensusIntegration(unittest.TestCase):
     def test_只有通用規則檔時機制為無(self):
         rows = self._census_with_rules(
             self.PAGE_TEXT,
-            [("wiki-ingest-format.md", "## 通用規則\n`## 摘要` 逾期段落應移除。\n")],
+            [("page-templates.md", "## 通用規則\n`## 摘要` 逾期段落應移除。\n")],
         )
         summary = [r for r in rows if r["section"] == "摘要"]
         self.assertTrue(summary)
@@ -167,7 +167,7 @@ class MechanismCensusIntegration(unittest.TestCase):
         rows = self._census_with_rules(
             self.PAGE_TEXT,
             [
-                ("wiki-ingest-format.md", "## 通用規則\n`## 摘要` 逾期段落應移除。\n"),
+                ("page-templates.md", "## 通用規則\n`## 摘要` 逾期段落應移除。\n"),
                 (rule_name, "## widget-page 更新規則\n`## 摘要` 表格過期後移除。\n"),
             ],
         )

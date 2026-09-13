@@ -7,7 +7,7 @@ description: /wiki-lint C 段：規則檔健檢（6a–6l）——規則矛盾�
 
 由 `.claude/skills/wiki-lint/SKILL.md` 帶起。**這一段檢查的是規則本身，不是 wiki 內容。**
 
-開工前讀取 `wiki/CLAUDE.md`、`.claude/reporter-rules/wiki-ingest.md`、`.claude/reporter-rules/wiki-ingest-format.md`、`.claude/reporter-rules/wiki-reporter-shared.md`，以及 **`/wiki-lint` 自己的五個 skill 檔**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 與本檔）`[加入: 2026-08-28]`，依序執行下列各項。
+開工前讀取 `wiki/CLAUDE.md`、`.claude/skills/wiki-ingest/references/classification.md`、`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/shared.md`，以及 **`/wiki-lint` 自己的五個 skill 檔**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 與本檔）`[加入: 2026-08-28]`，依序執行下列各項。
 
 > `/wiki-lint` 自己的 skill 檔必須在掃描範圍內：**檢查者把自己排除在檢查範圍外，是這類缺陷的共同形狀。**（沿革檔 2026-08-28 D）
 
@@ -28,7 +28,7 @@ description: /wiki-lint C 段：規則檔健檢（6a–6l）——規則矛盾�
 ```
 → **向使用者確認後再修改**，不自行決定保留哪條規則。
 
-> 修完矛盾後**必須回掃**：依 `.claude/reporter-rules/wiki-reporter-shared.md`「事實更正必回掃」，拿該事實的關鍵字 grep 全庫，把仍在講舊說法的引用方一併上修。3a 判矛盾時「以較嚴謹者為準」會把結論**下修**到低確信度頁面，而事後那個結論被查實**上修**時，被下修過的引用方不會自己回來——同步是雙向的，但機制原本只有單向。`[加入: 2026-08-28]`
+> 修完矛盾後**必須回掃**：依 `.claude/reporter-rules/shared.md`「事實更正必回掃」，拿該事實的關鍵字 grep 全庫，把仍在講舊說法的引用方一併上修。3a 判矛盾時「以較嚴謹者為準」會把結論**下修**到低確信度頁面，而事後那個結論被查實**上修**時，被下修過的引用方不會自己回來——同步是雙向的，但機制原本只有單向。`[加入: 2026-08-28]`
 
 ## 6b. 規則引用驗證
 
@@ -57,9 +57,9 @@ description: /wiki-lint C 段：規則檔健檢（6a–6l）——規則矛盾�
 
 ## 6d. 規則年齡審查
 
-`.claude/reporter-rules/wiki-ingest-format.md`、`.claude/reporter-rules/wiki-reporter-shared.md`、各記者規則檔（`wiki-ingest-*.md`）、`.claude/reporter-rules/wiki-ingest.md`（主編指南）與**上方列出的五個 `/wiki-lint` skill 檔** `[加入: 2026-08-28]` 中帶有 `[加入: YYYY-MM-DD]` 標記的 `##` 區塊，計算距今天數。
+`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/shared.md`、各記者規則檔（`.claude/reporter-rules/<類別>/*.md`）、`.claude/skills/wiki-ingest/references/classification.md`（分類與派工正典）與**上方列出的五個 `/wiki-lint` skill 檔** `[加入: 2026-08-28]` 中帶有 `[加入: YYYY-MM-DD]` 標記的 `##` 區塊，計算距今天數。
 
-> 範圍刻意含 `wiki-ingest.md`（無後綴，接不到 `wiki-ingest-*.md` glob）與 `/wiki-lint` 自己的 skill 檔（全庫 `[加入:]` 最密）。（沿革檔 2026-08-28 D）
+> 範圍刻意含記者資料夾下的每一份（`daily.md`／`pages.md`／`weekly.md`）與 `/wiki-lint` 自己的 skill 檔（全庫 `[加入:]` 最密）。（沿革檔 2026-08-28 D）
 
 - **距今 > 60 天**：逐一確認規則描述的行為是否仍與現狀吻合
 - **距今 ≤ 60 天**：記錄「在閾值內，無需審查」
@@ -186,7 +186,7 @@ python scripts/lint_health.py hits report     # 各步驟連續零命中輪數�
 
 ## 6j. 對抗輪（月度）`[加入: 2026-09-04]`
 
-每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/reporter-rules/wiki-lint-adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。發現逐項修到「無阻擋意見」，並依該檔「收報後」登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
+每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/skills/wiki-lint-rules-health/references/adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。發現逐項修到「無阻擋意見」，並依該檔「收報後」登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
 
 ## 6k. 連結缺口偵測（每輪）`[加入: 2026-09-04]`
 
@@ -218,7 +218,7 @@ python scripts/check_reader_language.py --list   # 禁詞清單＋讀者語言�
 python scripts/check_reader_language.py --page <slug>   # 單頁清單
 ```
 
-- 讀 WARN 摘要，從命中最多的頁取 **2 頁**，派 `subagent_type: "general-purpose"` + `model: "sonnet"`（機械式改寫，不需旗艦模型）逐條處理，每條三選一：**改寫成讀者語言**（用 `--list` 的替代詞）／**移進 `%% … %%` 維運備忘**（見 `.claude/reporter-rules/wiki-reporter-shared.md`「維運備忘的家」）／**登記 `data/reader-language-allow.json`**（附理由；page 與 term 不得同時填 `*`）
+- 讀 WARN 摘要，從命中最多的頁取 **2 頁**，派 `subagent_type: "general-purpose"` + `model: "sonnet"`（機械式改寫，不需旗艦模型）逐條處理，每條三選一：**改寫成讀者語言**（用 `--list` 的替代詞）／**移進 `%% … %%` 維運備忘**（見 `.claude/reporter-rules/shared.md`「維運備忘的家」）／**登記 `data/reader-language-allow.json`**（附理由；page 與 term 不得同時填 `*`）
 - 清完該頁後從 `data/reader-language-baseline.json` 的 `pages` **移除該頁整筆**——棘輪只能往下轉，不得為了轉綠把新命中加回基線
 - 禁詞清單住 `scripts/check_reader_language.py` 頂部常數（單一來源），要增刪禁詞改那裡，不在規則檔另抄一份
 - 回報：`讀者語言（6l）：基線剩 N 頁，本輪清 M 頁，新增命中 K`——**K > 0 代表機械閘擋下了新外洩**，在回報寫出是哪頁哪句

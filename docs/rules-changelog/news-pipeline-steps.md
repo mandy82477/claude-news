@@ -39,7 +39,9 @@
 
 **連帶：** 記者規則「頂部 delta-first callout」加一條：今日有實質更新的任何頁（entities/ 也算），callout 日期必須寫成 TARGET_DATE，否則這頁當天不上讀者版；只改內文不動 callout 的頁，讀者版看不到（與乙版「整理不算學到」同一取捨）。Step 2b 不再依賴未 commit 的 diff，補跑歷史日期可直接重跑腳本。registry 原「條目三段式」配對換成「頁面小節」配對，另加「callout 首行形狀」配對把記者規則、三支讀者版腳本與 check_hierarchy 綁成一組。乙版手寫樣本 `daily/2026-09-12.md` 以腳本重產（09-11、09-12 兩日），舊樣本在 git 歷史。
 
-**產生器實跑 WARN（交記者）：** `topics/skill-interest-watch` frontmatter 沒有 `domain`；`topics/safety-china-trust-dispute` 頁首 callout 沒有可解析日期。兩頁在修好前永遠不會進讀者版。
+**產生器實跑 WARN（交記者）：** `topics/skill-interest-watch` frontmatter 沒有 `domain`；`topics/safety-china-trust-dispute` 頁首 callout 沒有可解析日期。兩頁在修好前永遠不會進讀者版。（同日下午已由三位 Sonnet 記者補齊 16 頁 callout 外殼；skill-interest-watch 改為產生器退回讀標頭領域欄，其自介 callout 改「（快照 日期）」刻意不投影。）
+
+**丙-2（同日晚間）：今日聚焦與重點話題搬進 `daily/`，重點話題剔重，聚焦漏收改機械 WARN。** 使用者原話：「另外日報我還是想要本日聚焦和重點話題」。判斷：聚焦答「今天最重要的三五件事」是排序過的頭版，六領域 callout 答「每個領域現在的狀態」是不排序的內頁，兩者互補不重複——前提是頭版夠短且連得到內頁；真正重疊的是 ⭐ 重點話題與聚焦（09-11 實測前 5 則有 2 則是聚焦已講完的同一事件，且用英文原標題）。做法：產生器把 `news/TARGET_DATE.md` 的 📌 條列行原樣搬到 `daily/` 檔首，⭐ 只留 URL 不在聚焦行內連結裡的、去來源行、最多 5 則；網站端 `build_web.reader_top_stories` 用 focus ref_urls 做同一套剔重放 `readerTopStories`，`app.js` 優先讀它。**不採**「聚焦改從當日 callout 挑」：聚焦的價值正是它在 ingest 之前、獨立於記者判斷，兩邊對不上才看得出誰漏了。順勢把乙版放棄的那層保險機械化：聚焦每條的來源 URL 既不在 `data/source_attribution.jsonl` 當日歸因、也沒出現在今日覆寫 callout 的頁正文 → WARN（09-11 實測 4 條中 1 條命中：Claude 消費版未成年年齡驗證，記者未歸因）。第一版用「URL 出現在今日頁正文」單一判準誤報 3/4（wiki 頁通常不貼來源 URL），故改以歸因帳本為主、頁正文為輔。
 
 ## 2026-09-13
 
@@ -75,7 +77,7 @@
 - 「校準顯示此類條目 30 天存活率 0/9」（[新工具]）、「2026-08-01 校準顯示此類條目 30 天後續產出 0/2」（[持續追蹤]）、「2026-09-06 校準：此型 30 天存活率 0/2，樣本偏薄，下輪校準複核」（[社群趨勢]）——原在 Step 1b 聚焦選材門檻四條（現 `.claude/skills/news-digest/references/selection.md`「📌 今日聚焦」，只留判準句＋一行指回本檔）。
 - 「冷讀者實測：抓取時刻的來源行時間戳讓最沒新聞性的條目看起來最新鮮」「2026-09-04 冷讀者實測」（星數千分位）——原在 Step 1b 存量盤點條目的寫法（現 `.claude/skills/news-digest/references/selection.md`）。
 - 「2026-08-02 提出的 feature-radar 防霸榜裁示因此擱置 6 天」——原在完成摘要「📋 待使用者裁示」（現 `.claude/skills/web-publish/SKILL.md`，改指「起因見沿革檔 2026-08-08」）。
-- 「2026-09-05 弄丟三位記者的成品」——原在 Step 5 的 `git stash` 禁令（現 `.claude/skills/web-publish/SKILL.md`，教訓仍指 `.claude/reporter-rules/wiki-reporter-shared.md`）。
+- 「2026-09-05 弄丟三位記者的成品」——原在 Step 5 的 `git stash` 禁令（現 `.claude/skills/web-publish/SKILL.md`，教訓仍指 `.claude/reporter-rules/shared.md`）。
 
 **registry 同步：** `.claude/review-registry.json` 原 25 組指向舊檔的 sync_pair 逐組換家；其中三組原本靠「所有 pattern 都住同一檔」成立，拆檔後依 pattern 所在 skill 分組——步驟標題錨點對 runbook 那組分成四組、本機／雲端一致那組分成三組、Phase 劃分那組分成三組，pattern 逐字不動。wiki-lint 6g 指路的檔名 pattern 改指 `.claude/skills/news-digest/references/selection.md`；bare_references 的舊檔 line_allowlist 條目失效刪除（該檔本來就沒有裸露的根目錄規則檔引用）。
 

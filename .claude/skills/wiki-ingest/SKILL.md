@@ -36,19 +36,19 @@ python scripts/list_digest_omissions.py --date TARGET_DATE
 python scripts/scan_pending_verifications.py TARGET_DATE
 ```
 
-輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。規格見 `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」節。
+輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。規格見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
 
-**再取轉知待接手清單 `[加入: 2026-08-15]`：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，規格見 `.claude/reporter-rules/wiki-ingest.md`「第三步」轉知帳本段）。
+**再取轉知待接手清單 `[加入: 2026-08-15]`：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
 
 同時讀取：
 - `wiki/CLAUDE.md` — wiki 目錄結構與基本限制
-- `.claude/reporter-rules/wiki-ingest.md` — 分類標準與派工流程（主編指南）
+- `.claude/skills/wiki-ingest/references/classification.md` — 分類表、分流鐵則與派工正典
 - `wiki/index.md` — 取得所有現有頁面清單
 - `wiki/log.md` — 確認最近是否已處理過同一份日報（避免重複 ingest）
 
 ### 2. 分類（主編）
 
-讀完**日報條目 + 上一步列出的未收錄條目**後，依 `.claude/reporter-rules/wiki-ingest.md` 的分類表為每則新聞標記類別。
+讀完**日報條目 + 上一步列出的未收錄條目**後，依 `.claude/skills/wiki-ingest/references/classification.md` 的分類表為每則新聞標記類別。
 跨類別條目可標多個類別。
 
 未進日報的條目在原文節錄中標一行 `- **日報未收錄**（僅原始抓取資料，摘要較簡略）`，讓記者知道細節密度不同、判斷時以自己的類別門檻為準。
@@ -75,7 +75,7 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 ### 3. 派工（Agent tool）
 
-**對每個有條目的類別，呼叫 Agent tool**。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/reporter-rules/wiki-ingest.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+**對每個有條目的類別，呼叫 Agent tool**。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 > ⚠️ **記者 agent 必須以 foreground（同步）方式啟動，不可設 `run_in_background: true`。** 背景記者的完成通知無法回到派工 agent，會造成永久等待。
 

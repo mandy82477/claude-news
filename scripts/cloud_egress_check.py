@@ -84,7 +84,7 @@ GROUPS: dict[str, list[str]] = {
         "openrouter.ai",
     ],
     # 5h 投資訊號回顧環。**刻意為空**：該步的股價方向用 **WebSearch**
-    # （`.claude/reporter-rules/wiki-ingest-market-lint.md` 執行步驟第 3 步逐字寫
+    # （`.claude/reporter-rules/market/weekly.md` 執行步驟第 3 步逐字寫
     # 「WebSearch 查該標的…」），而 WebSearch 由 Anthropic 端執行、不經沙盒 egress，
     # 因此不受本腳本量測的限制；催化劑那一半本來就純庫內。空組一律回 OK。
     # 若日後該步改用 WebFetch 直抓行情站，把那些網域填進這裡。

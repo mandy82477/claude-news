@@ -1,12 +1,12 @@
-# Wiki Ingest — 社群記者 Lint 指南
+# Wiki Ingest — 社群記者指南（weekly／lint）
 
-`/wiki-lint` 時由社群記者載入，處理三項任務：`community-tech-tools.md` 策展 + `community-tech-patterns.md` 模式淘汰審查 + `community-pattern-trends.md` 趨勢頁週更。每日 ingest 不需讀此檔。
+`/wiki-lint` 時由社群記者載入，處理三項任務：`community-tech-tools.md` 策展 + `community-tech-patterns.md` 模式淘汰審查 + `community-pattern-trends.md` 趨勢頁週更。每日 ingest 不需讀此檔（每日規則見 `.claude/reporter-rules/community/daily.md`，表格契約見 `.claude/reporter-rules/community/pages.md`）。
 
 ---
 
 ## community-tech-tools 結構 `[加入: 2026-06-19，改版: 2026-09-02]`
 
-**此頁已脫離每日 ingest，全部只在 `/wiki-lint` 維護。** 讀者動線：`我卡在這裡（症狀決策表）→ 推薦細節 → Skills 速查 → 工具目錄`；規模型清單（誰大、誰在漲）不在本頁，見 [[topics/skill-interest-watch]]（「不綁症狀的精選」已於 2026-09-03 退役——它是手抄的榜、無更新機制）。2026-09-02 改版：原「痛點洞察＋值得關注」兩層併為單一決策表——痛點格塞 9 個工具名等於沒有推薦（改版依據見 `wiki/log.md` 2026-09-02 相關條目）。
+**此頁已脫離每日 ingest，全部只在 `/wiki-lint` 維護。** 讀者動線：`我卡在這裡（症狀決策表）→ 推薦細節 → Skills 速查 → 工具目錄`；規模型清單（誰大、誰在漲）不在本頁，見 [[topics/skill-interest-watch]]（「不綁症狀的精選」已於 2026-09-03 退役——它是手抄的榜、無更新機制）。2026-09-02 改版：原「痛點洞察＋值得關注」兩層併為單一決策表——痛點格塞 9 個工具名等於沒有推薦。
 
 | 區塊 | 性質 | 紀律 |
 |------|------|------|
@@ -33,20 +33,20 @@
 **步驟：**
 1. **來源**：讀取距今 7–14 天的 `news/*.md`，這是策展的主要原料；另有**使用者提問通道**（`[加入: 2026-09-02]`，見 `.claude/rules/collection-scope.md`「蒐集範圍」）——主編查證後直接寫入的條目，證據欄標「查證日＋user-query」，你 lint 時視同已達標條目維護（不因無日報出處而汰除；其後續動態照常從日報跟進）
 2. **萃取達標工具寫入 `## 工具目錄`**（門檻，滿足其一）：
-   - 達對照表（`.claude/reporter-rules/wiki-reporter-shared.md`）**中**門檻（HN 評論數已隨日報 summary 提供）
+   - 達對照表（`.claude/reporter-rules/shared.md`）**中**門檻（HN 評論數已隨日報 summary 提供）
    - 同一天被至少 2 個獨立來源報導
    - 已證明採用（多次出現、有實際使用回饋）
    - **排除**：無公開 repo / demo / 連結；純商業廣告；僅媒體報導（media 類）而無任何社群來源（HN/Reddit/GitHub/dev.to）討論
 3. **欄位** `| 工具 | 類型 | 採用 | 首次出現 | 簡介 |`：有 URL → `[**Tool**](url)`，URL 從日報原文擷取；採用預設 `⚡`，score ≥ 100 或評論 ≥ 20 維持 `⚡`，廣泛採用才給 `✅`
    - 寫入前查表去重：同名 / 同 URL 已存在則更新該筆，不新增重複列
-4. **汰除**：採用降為 ❌、或距今 > 30 天仍為 ⏳ 無後續者，移除該列（git history 留存）。「無後續」的判定**用共用腳本查，不要臨場手刻 grep** `[加入: 2026-08-29]`：`python scripts/news_mentions.py --since 4w "英文名" "中文譯名"`。它強制 ≥2 別名、拒絕過寬詞、且輸出命中原文行——三者分別擋掉漏抓、假命中、與「只看次數就下結論」。理由與實例見該腳本檔頭。**現為決策表首選或次選的工具，其目錄列不隨汰除規則移除**（推薦的證據底不能被搬空）
+4. **汰除**：採用降為 ❌、或距今 > 30 天仍為 ⏳ 無後續者，移除該列（git history 留存）。「無後續」的判定**用共用腳本查，不要臨場手刻 grep** `[加入: 2026-08-29]`：`python scripts/news_mentions.py --since 4w "英文名" "中文譯名"`。它強制 ≥2 別名、拒絕過寬詞、且輸出命中原文行——三者分別擋掉漏抓、假命中、與「只看次數就下結論」。**現為決策表首選或次選的工具，其目錄列不隨汰除規則移除**（推薦的證據底不能被搬空）
 5. **同步 `## 我卡在這裡`** `[改版: 2026-09-02]`：新工具能解掉既有症狀、或既有首選出現否定證據時，才動決策表對應列（多數週不動）；新症狀成立門檻＝≥2 筆獨立需求證據（抱怨/求助型條目），單一抱怨不開列
 
 ---
 
 ## community-tech-patterns 模式概覽週更 `[加入: 2026-06-28，改版: 2026-09-06]`
 
-每次 `/wiki-lint` 對 `## 模式概覽` 執行三步，**不再產出 dry run 提案等人確認**——退場與合併的判準已寫進 `.claude/reporter-rules/wiki-ingest-community.md`「四張結論表」第 1 條，符合判準即直接執行並在回報列出，只有**上限 21 列滿載時的讓位**才回報主編裁決。
+每次 `/wiki-lint` 對 `## 模式概覽` 執行三步，**不再產出 dry run 提案等人確認**——退場與合併的判準已寫進 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 1 條，符合判準即直接執行並在回報列出，只有**上限 21 列滿載時的讓位**才回報主編裁決。
 
 1. **重算「最後動態」**：照該檔第 1 條的兩段式撈法——先撈全頁 `**與既有模式的關係：**` 行，再挑逐字含該類別名者，取行號最大者所屬節點的日期，覆寫日期欄與全頁式錨點。
 2. **跑退場與補位**：逾 60 天或算不出最後動態者移出表、降表下一段；剛跨 60 天的列當次處理不留到下週；表未滿載時從表下挑最後動態最新者補回。✅／⚡ 逾 60 天者重判成熟度是否降級。
@@ -67,13 +67,13 @@
 
 ## code-quality-decline 的 issue 狀態不由你維護 `[加入: 2026-09-07]`
 
-`wiki/topics/code-quality-decline.md`「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，屬主編於 `/wiki-lint` 步驟 5m 的工作。你 lint 時只做呈現品質檢查；日報出現該三條線的新社群訊號時，照母規則檔「code-quality-decline 的三張表」更新對應的訊號表，**不自行翻「現在還在嗎」的值**。
+`wiki/topics/code-quality-decline.md`「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，屬主編於 `/wiki-lint` 步驟 5m 的工作。你 lint 時只做呈現品質檢查；日報出現該三條線的新社群訊號時，照 `.claude/reporter-rules/community/pages.md`「topics/code-quality-decline」更新對應的訊號表，**不自行翻「現在還在嗎」的值**。
 
 ---
 
 ## community-large-codebase-workflow 週更整線重寫 `[加入: 2026-08-05，改版: 2026-08-15]`
 
-`community-large-codebase-workflow.md` 是**週更**頁（每日 ingest 只在 patterns 節點標 `**主線：**` tag，不寫此頁——規則見 `.claude/reporter-rules/wiki-ingest-community.md`「主線 tag 規則」）。每次 `/wiki-lint`：
+`community-large-codebase-workflow.md` 是**週更**頁（每日 ingest 只在 patterns 節點標 `**主線：**` tag，不寫此頁——規則見 `.claude/reporter-rules/community/daily.md`「主線 tag 規則」）。每次 `/wiki-lint`：
 
 1. **撈料**：`Grep "\*\*主線：\*\* [^—]" wiki/topics/community-tech-patterns.md`，取近 7 天（補跑時取上次更新日以來）帶 tag 的節點；另掃近 7 天填 `—` 但「與既有模式的關係」提到主線的節點，重判一次
 2. **整線重寫，不 append**：對每條有新節點的線（並行規模／Context 管理／索引記憶／除錯分工），讀該線現有全文＋新節點，**重寫**該線；沒新節點的線不動
@@ -108,7 +108,7 @@
 
 ## 月度蒸餾與細節封存（patterns / discussions 技術彙整）`[加入: 2026-08-28]`
 
-**通用契約住 `.claude/reporter-rules/wiki-ingest-format.md`「時段蒸餾與封存（全站通用）」**——對象判準、≥ 3 個月門檻、三條例外、≤ 15 行時段總結、archive 子頁規格、引用回掃、每頁至多 2 個時段、只動「最後更新」，全部照該節，本節不重抄（2026-09-04 全站泛化：條文複製到六份規則檔必然漂移）。以下只列社群兩頁的特有部分。
+**通用契約住 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」**——對象判準、≥ 3 個月門檻、三條例外、≤ 15 行時段總結、archive 子頁規格、引用回掃、每頁至多 2 個時段、只動「最後更新」，全部照該節，本節不重抄（條文複製到六份規則檔必然漂移）。以下只列社群兩頁的特有部分。
 
 **這兩頁的 archive 頁：** `topics/community-tech-patterns-archive`／`topics/community-tech-discussions-archive`；時段單位就是技術彙整的 `### YYYY-MM` 月份分組，條目為其下 `####`。
 
@@ -119,6 +119,10 @@
 ## 月度蒸餾提案
 | 頁面 | 月份 | 條目數 | 字元數 | 擬總結一句 | 引用檢查 |
 ```
+
+---
+
+## community-pattern-trends 趨勢頁週更
 
 每次 `/wiki-lint` 時更新 `wiki/topics/community-pattern-trends.md`（週更，非每日）。
 
@@ -148,7 +152,7 @@
 
 ## community-tech-tools 決策表驗收：3 跳自檢題 `[加入: 2026-09-02，取代原精選層提拔規則]`
 
-原「值得關注的工具」精選層已於 2026-09-02 併入決策表與「不綁症狀的精選」，提拔規則廢止。取而代之：**每輪策展結束後重跑以下 3 題**（比照 `.claude/reporter-rules/wiki-ingest-models.md` F 條），從 `wiki/index.md` → 本頁 → 對應列，3 跳內須得到**單一工具名＋一句為什麼＋安裝形態**；落在兩列之間或多工具並列無從取捨 → 不合格，補分界再收工：
+原「值得關注的工具」精選層已於 2026-09-02 併入決策表與「不綁症狀的精選」，提拔規則廢止。取而代之：**每輪策展結束後重跑以下 3 題**（比照 `.claude/reporter-rules/models/pages.md` F 條），從 `wiki/index.md` → 本頁 → 對應列，3 跳內須得到**單一工具名＋一句為什麼＋安裝形態**；落在兩列之間或多工具並列無從取捨 → 不合格，補分界再收工：
 
 1. 「我跑大 repo，一天燒掉週配額，想先知道錢花在哪」→ 應命中「帳單爆了」列的單一首選（驗拆痛點：不得同時命中「context 撐爆」列）
 2. 「三個 agent 在同一 repo 上跑，一直互相覆蓋改動」→ 應命中「互相覆蓋」列；若補述「隔離了但 commit 打架」→ 第三欄應接得住

@@ -1,5 +1,7 @@
 # Wiki Ingest — 投資分析（market）記者指南（daily）`[加入: 2026-09-05，改版: 2026-09-12]`
 
+開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/market/pages.md`，主編層的週更結算見 `.claude/reporter-rules/market/weekly.md`。
+
 投資分析記者**不在六類分類路由內**——沒有任何日報條目會被分類成「投資訊號」。他的料是**當日日報本身**，換一副眼鏡重讀：同一則消息，放進市場框架會看到什麼。每日 ingest 彙整完成後由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4c」，此為本角色的明文觸發邊）。
 
 **唯一負責頁面：** `wiki/topics/market-signals.md`（其餘頁面唯讀，含週更的教材頁 `wiki/topics/market-lessons.md`）。它與 [[topics/anthropic-business]] 的分工：**事實在那邊，觀點在這邊**——本頁不複製任何事實敘述，一律 wikilink 指回事實的家（[[topics/anthropic-business]]／[[entities/pricing]]／[[topics/enterprise-tool-tracker]]／[[topics/competitor-landscape]]）。
@@ -45,7 +47,7 @@
 
 ## 判讀格式（機械契約字串）
 
-下表的字串會被 script 消費，**改動必須同步登記端**（見本節下方）：
+下表的字串會被 script 消費，**改動必須同步登記端**：
 
 | 契約字串 | 形狀 | 消費端 |
 |---|---|---|
@@ -82,26 +84,12 @@
 
 ---
 
-## 結論表的歸屬：每日一張、每週兩張 `[改版: 2026-09-12]`
-
-| 表 | 住哪頁 | 誰維護、何時 | 一列是什麼 | 欄位 |
-|---|---|---|---|---|
-| `## 買得到的標的` | `wiki/topics/market-signals.md`（摘要之後、判讀之前） | **你，每日**：判讀涉及上市公司時當天覆寫對應列 | 一個上市標的（主鍵＝代號）。入口：本頁有判讀提到它、或它是 Anthropic 的投資人；具名採用但無帶金額消息的上市公司不佔列，表下一句指 [[topics/enterprise-tool-tracker]] | 標的｜跟 Anthropic 的關係｜本頁判讀｜現在方向｜下一個催化劑 |
-| `## 買不到的消息線（教材）` | `wiki/topics/market-lessons.md` | **主編，每週**（`/wiki-lint` 5h，見 `.claude/reporter-rules/wiki-ingest-market-lint.md`） | 一條未上市主角的消息線（主鍵＝線名） | 線｜現在方向｜則數 · 最後一則｜下一個催化劑｜這條線的課 |
-| `## 一課一課學` | `wiki/topics/market-lessons.md` | 同上 | 一課（主鍵＝課名；「複習：」開頭者不新增列，只在例題欄追加日期） | 課名｜下次怎麼認｜例題｜押對了嗎 |
-
-你**只寫 `market-signals`**；教材頁唯讀。教材頁的兩張表從你每則判讀的「一眼」（線名、正負）、「下一個催化劑」與「一課｜課名」機械抽出，所以這三段的形狀要守住，課名 ≤ 12 字且同一課第二次出現寫「複習：課名」。
-
-`## IPO 這條線，你要先懂的`（教材頁）是通用知識，不吃日報、記者不動；主編每週順檢它與 IPO 線最新一則是否對得上，Anthropic 公開版 S-1 出現時把「S-1 打開先看五個地方」改成對照實際文件的五句。
-
----
-
 ## 每日動作
 
 1. 讀當日 `news/YYYY-MM-DD.md`（派工訊息會附條目節錄），逐則套六類判準與「新資訊」門檻
-2. 有六類消息 →（a）寫判讀 prepend 進 `## 近期判讀`；（b）判讀涉及上市公司時覆寫「買得到的標的」對應列；（c）`## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」登記進 `## 追蹤中的里程碑`；（e）更新「最後更新」與「最後新聞更新」兩個日期欄
+2. 有六類消息 →（a）寫判讀 prepend 進 `## 近期判讀`；（b）判讀涉及上市公司時覆寫「買得到的標的」對應列；（c）`## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/page-templates.md`「懸置標記語法」登記進 `## 追蹤中的里程碑`；（e）更新「最後更新」與「最後新聞更新」兩個日期欄位
 3. 無六類消息 → **不動頁面**，回報「本日無訊號（已檢視 N 條）」＋一句最接近門檻者為何未達標
-4. 依 `.claude/reporter-rules/wiki-reporter-shared.md`「來源歸因回報」欄回報每則判讀所本的日報條目
+4. 依 `.claude/reporter-rules/shared.md`「來源歸因回報」欄回報每則判讀所本的日報條目
 
 ## 紀律
 
@@ -109,8 +97,8 @@
 - **每則一課**：教一個概念就好，兩個以上代表這則其實是兩則
 - **無 web 工具**：需要查證的事實（股價反應、官方文件、私募估值）標「⚠️ 需主編查證：[議題]」寫在回報「同步自查」欄，不得自行推斷
 - **未上市標的照實說「不可買」**，寫在「買得到的標的」表的關係欄（教材頁的消息線表導言由主編維護），不得改寫成間接曝險的推薦
-- 回顧結算的「兩週後」與「對錯」欄由主編於 `/wiki-lint` 5h 回填（`.claude/reporter-rules/wiki-ingest-market-lint.md`），你只負責加 ⏳ 列
-- 其餘通用紀律（注入防護、規則檔優先於派工訊息、書寫風格上限、事實更正必回掃）照 `.claude/reporter-rules/wiki-reporter-shared.md`
+- 回顧結算的「兩週後」與「對錯」欄由主編於 `/wiki-lint` 5h 回填（`.claude/reporter-rules/market/weekly.md`），你只負責加 ⏳ 列
+- 其餘通用紀律（注入防護、規則檔優先於派工訊息、書寫風格上限、事實更正必回掃）照 `.claude/reporter-rules/shared.md`
 
 ## 回報格式
 

@@ -34,7 +34,7 @@ description: /wiki-lint D 段：讀者模擬驗收（步驟 7）與歷史質疑�
 
 ## 7b. 歷史質疑代打（題庫抽問）`[加入: 2026-09-02]`
 
-讀 `.claude/reporter-rules/wiki-lint-inquiry.md` 後執行：跑 `python scripts/inquiry_bank.py draw` 抽 2 題（seed 綁本 ISO 週，同週重跑同題），逐題執行探針、產出三態結果（✅ 附證據行／⚠️ 已修復／❌ 記待辦並回報使用者）。
+讀 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md` 後執行：跑 `python scripts/inquiry_bank.py draw` 抽 2 題（seed 綁本 ISO 週，同週重跑同題），逐題執行探針、產出三態結果（✅ 附證據行／⚠️ 已修復／❌ 記待辦並回報使用者）。
 
 > 這一步代打的是**使用者歷史質疑的已知模式**（溯源、缺席偵測、沉默質疑、讀者查找、可讀性、結構健檢、宣稱對帳、資產重用審計八種，蒸餾自 `wiki/log.md` Query 條目）；新型質疑仍靠使用者，`scripts/open_loops.py` 的人類質疑時效燈不因本步驟而熄滅。
 

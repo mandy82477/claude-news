@@ -1,14 +1,12 @@
 # Wiki Ingest — 商業 Lint 指南（主編層）
 
-`/wiki-lint` 步驟 5e 由**主編**載入，維護 `wiki/entities/pricing.md` 的 `## 通路與乘數` 區塊。每日 ingest 不需讀此檔。
+`/wiki-lint` 步驟 5e 由**主編**載入，維護 `wiki/entities/pricing.md` 的 `## 通路與乘數` 區塊。每日 ingest 不需讀此檔（每日規則見 `.claude/reporter-rules/commercial/daily.md`，表格契約見 `.claude/reporter-rules/commercial/pages.md`）。
 
 ---
 
-## 為什麼這條規則不在 `.claude/reporter-rules/wiki-ingest-commercial.md` `[加入: 2026-08-29]`
+## 為什麼這個區塊不由記者每日維護 `[加入: 2026-08-29]`
 
-pricing 的前三個彙整區塊（我的方案現在有什麼／模型 API 定價現況／當前生效的計費規則）吃的是**日報條目**，由商業記者於每日 ingest 維護。
-
-「通路與乘數」不同——它的進料是 **`platform.claude.com` 與各雲端平台的官方計價文件**，不在日報來源清單內。而 `.claude/reporter-rules/wiki-ingest-commercial.md` 的「官方文件查證優先於媒體轉述」已明訂：**記者無 web 工具**，遇此類事實只能回報主編查證。把這個區塊寫成記者的每日責任，會製造一個永遠空著、且記者每天回報「無法處理」的區塊。
+pricing 的前三個彙整區塊吃的是**日報條目**；「通路與乘數」吃的是 **`platform.claude.com` 與各雲端平台的官方計價文件**，不在日報來源清單內，而記者無 web 工具——寫成記者的每日責任，會製造一個永遠空著、且記者每天回報「無法處理」的區塊。
 
 > 判斷式：這個區塊的答案在**日報**裡，還是在**官方文件**裡？在日報 → 記者 daily；在官方文件 → 主編 lint。
 
@@ -26,7 +24,7 @@ pricing 的前三個彙整區塊（我的方案現在有什麼／模型 API 定�
 | 檢查 | 動作 |
 |---|---|
 | 表上方「資料截至 YYYY-MM-DD」距今 > 30 天 | WebFetch 官方定價頁與平台可用性頁複查，一致則只更新查證日 |
-| 新模型世代發布 | 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者回報模型記者（`.claude/reporter-rules/wiki-ingest-models.md` I 條）|
+| 新模型世代發布 | 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者回報模型記者（`.claude/reporter-rules/models/pages.md` I 條）|
 | 日報出現通路政策變動或乘數異動 | 以日報為**線索**，仍須 WebFetch 官方原文確認後才寫入，並標來源連結與查證日 |
 | 通路表任一列的計費手段或上限有異動 | 同批回掃 [[topics/anthropic-business]]「哪個合作會改到你用的 Claude」的引用快照與「資料截至」日 |
 

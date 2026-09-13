@@ -14,7 +14,7 @@
 ## 這是一個 LLM wiki：三個動作
 
 - **Ingest（每日，`/news-pipeline`）**：爬蟲產日報（`news/` 唯讀原料）→ 主編分類、派六位記者各寫自己領域的頁 → 主編彙整 `wiki/index.md`、`feature-radar.md`、`log.md`。頁面是「被策展的現在」，log 是不可改的過去，index 只放路由；每個事實只有一個家，別處用 wikilink 指過去。
-- **Query（任何 session）**：專有名詞／issue 號／版本號 → 直接 Grep `wiki/`；概念、選型 → `wiki/index.md` 挑頁，頁頂 callout 是最新狀態；「最近怎樣」→ `wiki/log.md` 先 Grep 日期；誰負責哪頁 → `.claude/reporter-rules/` 的負責頁面表；引用關係 → `python scripts/wiki_graph.py`。完整六路見 `wiki/CLAUDE.md`「搜尋策略」；查詢流程與答案回流見 `.claude/skills/wiki-query/SKILL.md`（`/wiki-query`）。
+- **Query（任何 session）**：專有名詞／issue 號／版本號 → 直接 Grep `wiki/`；概念、選型 → `wiki/index.md` 挑頁，頁頂 callout 是最新狀態；「最近怎樣」→ `wiki/log.md` 先 Grep 日期；誰負責哪頁 → `.claude/reporter-rules/<類別>/daily.md` 的負責頁面表；引用關係 → `python scripts/wiki_graph.py`。完整六路見 `wiki/CLAUDE.md`「搜尋策略」；查詢流程與答案回流見 `.claude/skills/wiki-query/SKILL.md`（`/wiki-query`）。
 - **Lint（每週，`/weekly`、`/wiki-lint`）**：矛盾、孤兒、過期、蒸餾封存；歷史質疑抽題代打。
 - **使用者提問通道**：使用者在對話中點名的事實，由主編以 web 工具查證一手來源後直接寫進 wiki（標查證日＋來源），並在 `wiki/log.md` append 一筆 Query 條目；不經日報，歸因 slug `user-query`。
 
@@ -56,7 +56,7 @@
 ## Wiki 規則入口
 
 - **`wiki/CLAUDE.md`**（碰 `wiki/` 檔案自動載入）：目錄結構、資訊架構哲學、連結語法契約、搜尋策略
-- **`.claude/reporter-rules/`**（記者與 ingest／lint 主編明文 Read，無自動載入）：分類與派工、六類記者的負責頁面、頁面格式模板。導覽見該資料夾的 README
+- **`.claude/reporter-rules/`**（記者與 ingest／lint 主編明文 Read，無自動載入）：共用紀律 `shared.md`、頁面格式 `page-templates.md`／生命週期 `page-lifecycle.md`，以及八個記者各自的資料夾（`daily.md`／`pages.md`／`weekly.md`）。導覽見該資料夾的 README
 - **`.claude/rules/`**（主 session，`paths:` 觸發）：`claude-md-edit.md`、`web-reader-design.md`、`collection-scope.md`
 
 **🚫 關鍵限制：** Wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/`，**不可**誤存至父層 `ObsidianLab/` 目錄。

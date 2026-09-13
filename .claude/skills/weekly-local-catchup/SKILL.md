@@ -19,7 +19,7 @@ description: /weekly 步驟 0：補跑雲端沒做的 lint 步驟（5b/5c 等）
 
 3. **lint 待裁示事項呈報**——`Grep "待使用者確認\|待裁示" wiki/log.md` 取最近 3 次 lint 紀錄的未決事項，**直接列在 `/weekly` 的輸出裡呈給使用者**，每項標「⏳ 已擱置 N 週」。理由：那些事項只寫進 `wiki/log.md`，而**使用者不讀該檔**——不呈報等於沒提過
 
-4. **開放迴路掃描** `[移入: 2026-09-12]`——跑 `python scripts/open_loops.py`，它彙整**五類**開放迴路的可見性（只報數字與最舊年齡，不合併處理權——每類仍由各自流程消化）：未 commit 的實質改動、逾複查日的 workaround（表在 `docs/workaround-register.md`）、懸置標記逾期＋舊語法盲區（處理端 `/wiki-lint` 5c）、`wiki/reader-notes.md` 的 ⏳（處理端 `/wiki-weekly-review`）、`wiki/feature-radar.md` 的 ⏳（逾期判定端 `/wiki-lint` 5a）。另附一盞「人類質疑時效燈」：`wiki/log.md` 最新 Query 條目距今 >21 天即亮 ⚠（另計不入總；已知質疑模式由 `/wiki-lint` 7b 依 `.claude/reporter-rules/wiki-lint-inquiry.md` 抽題代打，新型質疑仍靠使用者）。**輸出原樣抄進 `/weekly` 的回報**，同第 3 項的理由：只寫進 log 等於沒提過。日常另有 SessionStart hook 在開啟專案時提醒未 commit 的實質改動。
+4. **開放迴路掃描** `[移入: 2026-09-12]`——跑 `python scripts/open_loops.py`，它彙整**五類**開放迴路的可見性（只報數字與最舊年齡，不合併處理權——每類仍由各自流程消化）：未 commit 的實質改動、逾複查日的 workaround（表在 `docs/workaround-register.md`）、懸置標記逾期＋舊語法盲區（處理端 `/wiki-lint` 5c）、`wiki/reader-notes.md` 的 ⏳（處理端 `/wiki-weekly-review`）、`wiki/feature-radar.md` 的 ⏳（逾期判定端 `/wiki-lint` 5a）。另附一盞「人類質疑時效燈」：`wiki/log.md` 最新 Query 條目距今 >21 天即亮 ⚠（另計不入總；已知質疑模式由 `/wiki-lint` 7b 依 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md` 抽題代打，新型質疑仍靠使用者）。**輸出原樣抄進 `/weekly` 的回報**，同第 3 項的理由：只寫進 log 等於沒提過。日常另有 SessionStart hook 在開啟專案時提醒未 commit 的實質改動。
 
    輸出末尾分成**三個數字**，各答一個問題：
 

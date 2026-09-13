@@ -18,7 +18,7 @@ wiki 的圖從第一天起就存在：頁面＝節點、wikilink＝邊。本腳�
   explain <頁slug> [--section "標題"]
                        雙向引用，出邊按產地分組，含「頁 § 最近標題 § 行號」。
                        --section 改列「指到這一節的錨點邊」＋「指到整頁的邊」兩組，
-                       供事實更正後的回掃當必查名單（見 wiki-reporter-shared.md「事實更正必回掃」）
+                       供事實更正後的回掃當必查名單（見 .claude/reporter-rules/shared.md「事實更正必回掃」）
   path <頁A> <頁B>      頁層 BFS 最短路徑（樣板區邊不參與）
   sections <關鍵詞>     跨頁找「議題散在哪幾節」，回傳限定名＋行號
   cluster              頁層 references 投影分群（label propagation），與 frontmatter

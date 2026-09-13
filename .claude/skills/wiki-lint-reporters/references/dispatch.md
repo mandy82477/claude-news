@@ -8,9 +8,9 @@
 
 每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + `model: "sonnet"`（sonnet 因 lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
-> **頁面範圍為動態認領，不是寫死清單：** 每位記者的負責頁面＝`wiki/index.md` 中「領域」欄等於自己那一組的所有 entities/ 與 topics/ 頁面（含近期新增），開工前先讀 index.md 認領清單，再加上自己規則檔（`.claude/reporter-rules/wiki-ingest-[category].md`）觸發條件表中列出的頁面。這樣新增頁面不需要回頭改派工表。
+> **頁面範圍為動態認領，不是寫死清單：** 每位記者的負責頁面＝`wiki/index.md` 中「領域」欄等於自己那一組的所有 entities/ 與 topics/ 頁面（含近期新增），開工前先讀 index.md 認領清單，再加上自己規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。這樣新增頁面不需要回頭改派工表。
 
-> **社群記者額外任務：** `community-tech-tools.md` 已脫離每日 ingest，是 **lint 專用策展頁**。除 3a–3g 品質檢查外，須額外依 `.claude/reporter-rules/wiki-ingest-community-lint.md` 的「策展規則」與「決策表驗收：3 跳自檢題」執行：讀取近 7–14 天 `news/*.md` 萃取達標新工具、汰除過氣條目、依新證據同步「我卡在這裡」決策表、收工前重跑 3 跳自檢題。派工 prompt 須附上「今日日期」供記者計算 news/ 範圍。
+> **社群記者額外任務：** `community-tech-tools.md` 已脫離每日 ingest，是 **lint 專用策展頁**。除 3a–3g 品質檢查外，須額外依 `.claude/reporter-rules/community/weekly.md` 的「策展規則」與「決策表驗收：3 跳自檢題」執行：讀取近 7–14 天 `news/*.md` 萃取達標新工具、汰除過氣條目、依新證據同步「我卡在這裡」決策表、收工前重跑 3 跳自檢題。派工 prompt 須附上「今日日期」供記者計算 news/ 範圍。
 
 ## lint 專屬段（接在角色前導之後）
 
@@ -21,9 +21,9 @@
 轉知待接手（其他記者先前交辦給你的事；無則寫「無」）：
 [貼入 `python scripts/pending_handoffs.py list --to [類別]` 的輸出]
 
-你的負責頁面＝`wiki/index.md` 中領域為 [對應領域] 的所有頁面（含近期新增），開工前先讀 index.md 認領清單，再加上你規則檔（`.claude/reporter-rules/wiki-ingest-[category].md`）觸發條件表中列出的頁面。
+你的負責頁面＝`wiki/index.md` 中領域為 [對應領域] 的所有頁面（含近期新增），開工前先讀 index.md 認領清單，再加上你規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。
 
-讀取 `.claude/reporter-rules/wiki-ingest-format.md`，然後對每個頁面依序執行：
+讀取 `.claude/reporter-rules/page-templates.md`，然後對每個頁面依序執行：
 
 **3a 矛盾偵測**
 同一事件的描述若與其他已知頁面矛盾（日期不同、結論相反）→ 以日報原文為準修正，兩頁互加 wikilink。
@@ -39,13 +39,13 @@ topics/ 頁面狀態為 `ongoing`，且「**最後新聞更新**」距今超過 
 
 **3c 的回升邊（與上段對稱，不可只做下修）`[加入: 2026-08-20]`**
 掃描狀態為 `monitoring` 的 topics/ 頁面，若「**最後新聞更新**」距今 ≤ 14 天 → 狀態改回 `ongoing`，並列入 index.md 狀態變更回報。
-下修有人管、回升沒人管，頁面就會單向沉底。記者端的即時版規則見 `.claude/reporter-rules/wiki-reporter-shared.md`「每頁必做」；本步是每週的兜底掃描。
+下修有人管、回升沒人管，頁面就會單向沉底。記者端的即時版規則見 `.claude/reporter-rules/shared.md`「每頁必做」；本步是每週的兜底掃描。
 
 **3d 已解決議題收尾**
 topics/ 狀態為 `resolved` → 確認「目前結論」已填寫、頂部 callout 註明已結案。**留在原路徑不遷移**（一頁一故事，遷移會斷 wikilink 與讀者動線）。
 
 **3e 呈現品質審查**
-依 `.claude/reporter-rules/wiki-ingest-format.md`「Wiki 頁面呈現品質標準」掃描：
+依 `.claude/reporter-rules/page-templates.md`「Wiki 頁面呈現品質標準」掃描：
 必須修復：摘要可獨立閱讀、關鍵資訊前置、無 LLM 專屬指令
 警示觸發：頁面 > 200 行、連續 8+ 個無分組日期條目、方案比較未用表格
 
@@ -55,7 +55,7 @@ topics/ 狀態為 `resolved` → 確認「目前結論」已填寫、頂部 call
 
 **3g 待查證回訪**
 對你負責的頁面 grep「待查證」「單方指控」「無官方證實」「待核實」等懸置標記。
-標記語法與各角色可動範圍見 `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」節。
+標記語法與各角色可動範圍見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
 
 已是新語法的標記（帶 `（標 YYYY-MM-DD｜查 …）`）：
 - 比對近 14 天 `news/*.md`，有後續 → **只加 `｜訊 YYYY-MM-DD`** 並更新題目後的內文
@@ -73,7 +73,7 @@ topics/ 狀態為 `resolved` → 確認「目前結論」已填寫、頂部 call
 **措辭鐵則 `[加入: 2026-08-08]`**：你只掃了日報，就只能宣稱日報沒有。**不得寫成「至今無後續」**——那讀起來像「已經確認過了」，但答案可能一直躺在官方說明中心。把「沒查」講出來，該筆才會被步驟 5c 撈去真查。記者無 web 工具，不得自行查證外部來源。
 
 **3h 蒸餾候選提案**
-依 `.claude/reporter-rules/wiki-ingest-format.md`「時段蒸餾與封存（全站通用）」對你負責頁面的事件流區提案：每頁至多 2 個最舊時段，逐筆附引用檢查（`python scripts/wiki_graph.py explain <頁slug> --section "<段名>"` 的入邊）。**只提案不執行**——執行需使用者確認。無達標時段寫「無蒸餾候選」。
+依 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」對你負責頁面的事件流區提案：每頁至多 2 個最舊時段，逐筆附引用檢查（`python scripts/wiki_graph.py explain <頁slug> --section "<段名>"` 的入邊）。**只提案不執行**——執行需使用者確認。無達標時段寫「無蒸餾候選」。
 
 | 頁 | 時段 | 條目數 | 字元數 | 擬總結一句 | 引用檢查 |
 
@@ -96,7 +96,7 @@ resolved 收尾：[list or 無]
 index.md 狀態變更：[page: 舊狀態→新狀態 or 無]
 ```
 
-> lint 專用回報格式的「轉知處置」欄必須與 `.claude/reporter-rules/wiki-reporter-shared.md` 的回報契約同步 `[加入: 2026-08-28]`（沿革檔 2026-08-28 A）。
+> lint 專用回報格式的「轉知處置」欄必須與 `.claude/reporter-rules/shared.md` 的回報契約同步 `[加入: 2026-08-28]`（沿革檔 2026-08-28 A）。
 
 ## 5f devpractice 週彙整 prompt 首段
 

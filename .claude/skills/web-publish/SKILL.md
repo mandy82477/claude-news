@@ -110,7 +110,7 @@ git -C REPO_ROOT push || {
 ```
 
 - 最多重試 **2 次**，每次都先 `pull --rebase` 再 push
-- **工作樹不乾淨時不得走 `pull --rebase`** `[加入: 2026-09-06]`：本 repo `rebase.autoStash` 為 false，git 會在前置檢查就拒絕（`cannot pull with rebase: You have unstaged changes`），兩次重試必然失敗；而 `--autostash` 是**明文禁止**的——`git stash` 的作用域是整個工作區，多 session 並行時會連同別人正在寫的檔一起捲走（教訓見 `.claude/reporter-rules/wiki-reporter-shared.md`「不可執行改動工作區全域狀態的 git 指令」）。改走：
+- **工作樹不乾淨時不得走 `pull --rebase`** `[加入: 2026-09-06]`：本 repo `rebase.autoStash` 為 false，git 會在前置檢查就拒絕（`cannot pull with rebase: You have unstaged changes`），兩次重試必然失敗；而 `--autostash` 是**明文禁止**的——`git stash` 的作用域是整個工作區，多 session 並行時會連同別人正在寫的檔一起捲走（教訓見 `.claude/reporter-rules/shared.md`「不可執行改動工作區全域狀態的 git 指令」）。改走：
 
   ```
   git -C REPO_ROOT fetch origin

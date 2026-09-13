@@ -1,6 +1,8 @@
-# .claude/reporter-rules/wiki-ingest-format.md 沿革（教訓存檔）
+# .claude/reporter-rules/page-templates.md 沿革（教訓存檔）
 
-本檔是 `.claude/reporter-rules/wiki-ingest-format.md` 的歷史敘事，不是待執行規則；條文處的「沿革檔 YYYY-MM-DD[ 字母]」皆指本檔對應段。考古鏈：`[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
+本檔同時是 `.claude/reporter-rules/page-lifecycle.md` 沿革——2026-09-13 原 `wiki-ingest-format.md` 拆成兩檔：格式與欄位（頁面骨架、蒐集邊界、呈現品質標準、懸置標記語法、命名規則）進 page-templates.md，生命週期（節名凍結、拆分、時段蒸餾與封存、警示重構）進 page-lifecycle.md；條文一字未改。
+
+本檔是 `.claude/reporter-rules/page-templates.md` 的歷史敘事，不是待執行規則；條文處的「沿革檔 YYYY-MM-DD[ 字母]」皆指本檔對應段。考古鏈：`[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 
 本檔是**歷史敘事，不是待執行規則**——條文已在上方，建頁或格式審查時不必讀本檔。存放於此的原因：條文本身已能獨立執行，敘事只在有人想問「為什麼有這條」時才需要。考古鏈為 `[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 

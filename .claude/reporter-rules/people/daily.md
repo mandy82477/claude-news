@@ -1,6 +1,8 @@
-# Wiki Ingest — 人物記者指南
+# Wiki Ingest — 人物記者指南（daily）
 
-分類為「人物」的新聞條目由此記者負責。讀此檔後直接操作，需建立新頁面時另讀 `.claude/reporter-rules/wiki-ingest-format.md`。
+開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`。本記者的負責頁無結論表契約，故無 `pages.md`。
+
+分類為「人物」的新聞條目由此記者負責。
 
 ---
 
@@ -33,14 +35,4 @@
 
 ## 回報格式
 
-```
-## 人物 記者回報
-更新頁面：[list]
-feature-radar 新增：無
-index.md 狀態變更：[page: 舊狀態 → 新狀態 or 無]
-新增頁面：[filepath or 無]
-同步自查：[✅ 已同步 / ⚠️ 需主編轉知（說明）/ 不適用]
-待查證命中處置：[已標訊 N 筆: list ／ 證據不足不動 M 筆 ／ 無命中]
-轉知處置：[已處理 N 筆: H-id list ／ 不適用 M 筆（id＋一句理由）／ 無待接手]
-來源歸因：[每筆一行 or 無]
-```
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄；`feature-radar 新增` 欄恆填「無」。

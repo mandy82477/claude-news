@@ -24,13 +24,13 @@
 
 ## 5a. feature-radar 熱度降溫（主編親做）`[加入: 2026-08-28]`
 
-`.claude/reporter-rules/wiki-ingest-features.md`「熱度降溫：它不是棘輪」定的 −1 規則，本步是它的執行點。
+`.claude/reporter-rules/features/pages.md`「熱度降溫：它不是棘輪」定的 −1 規則，本步是它的執行點。
 
 1. 取 `wiki/feature-radar.md` 全覽表中**熱度 ≥ 🔥🔥** 的條目（🔥 已是下限，不必檢查）
 2. 對每個條目查近 4 週日報有無提及——**用共用腳本查，不要臨場手刻 grep** `[加入: 2026-08-29]`：`python scripts/news_mentions.py --since 4w "英文名" "中文譯名"`。它強制 ≥2 別名、拒絕過寬詞、且輸出命中原文行——三者分別擋掉漏抓、假命中、與「只看次數就下結論」。理由與實例見該腳本檔頭。
 3. 零命中 → 熱度 −1 格，**同步對應 `entities/` 頁的「熱度與試用價值」表**——單邊下修是矛盾的來源
 4. **不降的例外**：狀態為「⏰ 倒數中」，或本輪熱度／試用價值有其他變動者
-5. **⏳ 逾期處置（同一趟做完）`[加入: 2026-08-28]`**：全覽表中標 ⏳ 且發布日距今 > 90 天者，依 `.claude/reporter-rules/wiki-ingest-features.md`「⏳ 觀望是有期限的判斷」三選一處置，不得留原狀
+5. **⏳ 逾期處置（同一趟做完）`[加入: 2026-08-28]`**：全覽表中標 ⏳ 且發布日距今 > 90 天者，依 `.claude/reporter-rules/features/pages.md`「⏳ 觀望是有期限的判斷」三選一處置，不得留原狀
 
 **回報格式：**
 ```
@@ -102,11 +102,11 @@
 
    > **第四列為何不可用 `🔎`** `[加入: 2026-08-29]`：`🔎 查無官方` 的定義是「**已查官方一手來源、確認未載**」；Lane A 沒查官方，用它等於宣稱做過沒做的事。（教訓見沿革檔 2026-08-29 B）
 
-   標記語法見 `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」節。**你是唯一有權移除標記或改狀態符號的角色**（記者只能加 `訊`）。
+   標記語法見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。**你是唯一有權移除標記或改狀態符號的角色**（記者只能加 `訊`）。
 
 4. **金額／數字分級**：官方文件未載而僅媒體有數字者，寫「媒體稱（媒體名）」，不得升格為官方數字
 
-5. **結案回掃（強制，每筆查實後立刻做，不得留到最後）** `[加入: 2026-08-20，改版: 2026-09-04]`：語意與 `.claude/reporter-rules/wiki-reporter-shared.md`「事實更正必回掃」同一套，**先入邊、後 grep**——
+5. **結案回掃（強制，每筆查實後立刻做，不得留到最後）** `[加入: 2026-08-20，改版: 2026-09-04]`：語意與 `.claude/reporter-rules/shared.md`「事實更正必回掃」同一套，**先入邊、後 grep**——
 
    ```
    python scripts/wiki_graph.py explain <該筆所在頁> --section "該筆所在的節標題"
@@ -141,10 +141,10 @@
 
 ## 5e. pricing「通路與乘數」複查（主編親查）`[加入: 2026-08-29]`
 
-`wiki/entities/pricing.md` 的 `## 通路與乘數` 吃的是**官方計價文件**（`platform.claude.com` 與各雲端平台），不是日報——記者無 web 工具，寫成記者責任會製造永遠空著的區塊。依 `.claude/reporter-rules/wiki-ingest-commercial-lint.md` 執行：
+`wiki/entities/pricing.md` 的 `## 通路與乘數` 吃的是**官方計價文件**（`platform.claude.com` 與各雲端平台），不是日報——記者無 web 工具，寫成記者責任會製造永遠空著的區塊。依 `.claude/reporter-rules/commercial/weekly.md` 執行：
 
 1. 該區塊「資料截至 YYYY-MM-DD」距今 > 30 天 → WebFetch 官方定價頁與平台可用性頁複查；一致則只更新查證日
-2. 本週有新模型世代發布 → 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者走 `data/pending-handoffs.jsonl` 轉知模型記者（`.claude/reporter-rules/wiki-ingest-models.md` I 條）
+2. 本週有新模型世代發布 → 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者走 `data/pending-handoffs.jsonl` 轉知模型記者（`.claude/reporter-rules/models/pages.md` I 條）
 3. 商業記者本週回報「⚠️ 需主編查證官方計價文件」→ 逐筆查證後寫入，標來源連結與查證日
 4. 本區塊為非新聞性維護：只更新 pricing 的「最後更新」，**不動「最後新聞更新」**
 
@@ -191,7 +191,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 **⚠️ 雲端兩半都做、不需探測**，理由見本檔「雲端 egress 探測」節末「5h 不受此限」段。
 
-執行細節（兩種結算的回填格式、不可驗證的寫法、不得回頭改寫「當時判斷」與「催化劑」、連續 4 週全錯的處置）見 `.claude/reporter-rules/wiki-ingest-market-lint.md`。
+執行細節（兩種結算的回填格式、不可驗證的寫法、不得回頭改寫「當時判斷」與「催化劑」、連續 4 週全錯的處置）見 `.claude/reporter-rules/market/weekly.md`。
 
 **回報格式：**
 ```
@@ -202,7 +202,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5i. 安全政策兩頁結論表退場複查（主編親做）`[加入: 2026-09-06，擴充: 2026-09-06]`
 
-`wiki/topics/ai-agent-safety.md` 的攻擊面結論表（現名 `## 現在還擋不住的攻擊`）（上限 11 列）與 `## 提示注入已不是單點漏洞，是產業級攻擊面`（上限 8 列）的退場條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/wiki-ingest-safety-policy.md`「ai-agent-safety 更新規則」第 2、3 條。`wiki/topics/anthropic-government-policy.md` 的 `## 現在有哪幾條線在動`（上限 8 列）同病同治，複查規則見同一規則檔「anthropic-government-policy 更新規則」第 2、3、4 條。
+`wiki/topics/ai-agent-safety.md` 的攻擊面結論表（現名 `## 現在還擋不住的攻擊`）（上限 11 列）與 `## 提示注入已不是單點漏洞，是產業級攻擊面`（上限 8 列）的退場條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/safety-policy/pages.md`「ai-agent-safety 更新規則」第 2、3 條。`wiki/topics/anthropic-government-policy.md` 的 `## 現在有哪幾條線在動`（上限 8 列）同病同治，複查規則見同一規則檔「anthropic-government-policy 更新規則」第 2、3、4 條。
 
 逐列檢查該表的「最後動態」是否距今逾 90 天且本輪無新回報，符合即依規則移除並在事件記錄補註記；表未滿載時挑候選補位並移除其註記。`## 提示注入…攻擊面` 表滿 8 列時汰除最舊者，並確認導言／收斂點／「仍未有答案的」三處則數與表列數一致。政策頁逐列檢查『線』欄括號內的最後動態日期是否逾 90 天且本輪無新事實，符合即依規則移除並在 `## 時序` 對應條目補註記；表未滿載時從 `## 時序` 挑符合三條判準、最後動態最新者補位。另比對 `## 政府動作對你的產品做了什麼` 的項數是否等於上表標『會』的列數，不等即依規則增刪。
 
@@ -215,7 +215,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5j. 商業健康度四表退場複查（主編親做）`[加入: 2026-09-06]`
 
-`wiki/topics/anthropic-business.md` 的 `## 現在的數字`（上限 10 列）、商業風險表（現名 `## 還沒過去的風險`）（上限 6 列）、`## 哪個合作會改到你用的 Claude`（上限 6 列）與 `## 上面提到的人是誰`（上限 8 人）的退場與補位條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/wiki-ingest-commercial.md`「anthropic-business 更新規則」第 1、4、5、6 條。
+`wiki/topics/anthropic-business.md` 的 `## 現在的數字`（上限 10 列）、商業風險表（現名 `## 還沒過去的風險`）（上限 6 列）、`## 哪個合作會改到你用的 Claude`（上限 6 列）與 `## 上面提到的人是誰`（上限 8 人）的退場與補位條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/commercial/pages.md`「anthropic-business 更新規則」第 1、4、5、6 條。
 
 逐列檢查：指標表看「資料日期」是否逾 180 天且無人發布新值，符合即移出並在細節區留結論；風險表看「風險」欄括號內的最後動態是否逾 90 天且本輪無新事實（**訴訟不適用 90 天**），符合即移除並在細節區補註記，表未滿載時依判準從細節區補位並移除其註記；合作表看該差異是否已消失或逾 180 天無新事實；人物表看每人所連的那一列或那一則是否仍在頁上。另核合作表上的「資料截至」日與 `entities/pricing`「通路與乘數」是否同批（見 5e）。
 
@@ -228,11 +228,11 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5k. 社群三張結論表退場複查（主編派社群記者）`[加入: 2026-09-06]`
 
-`wiki/topics/community-tech-patterns.md` 的 `## 模式概覽`（上限 21 列）、`### 誰負責拆分`（五列固定）與 `### 缺口追蹤`（上限 8 列）的退場、補位、留表優先序條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/wiki-ingest-community-lint.md`「community-tech-patterns 模式概覽週更」。
+`wiki/topics/community-tech-patterns.md` 的 `## 模式概覽`（上限 21 列）、`### 誰負責拆分`（五列固定）與 `### 缺口追蹤`（上限 8 列）的退場、補位、留表優先序條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/community/weekly.md`「community-tech-patterns 模式概覽週更」。
 
 派社群記者執行該節三步：重算「最後動態」（兩段式撈法覆寫日期欄與全頁式錨點）、跑退場與補位（逾 60 天或算不出日期者移出、剛跨線當週處理、表未滿載時從表下補位）、跑合併（代表技巧重疊過半者合併）；同批補填主線 tag（每週 20 則，從最新往回補，累計進度寫進回報）。上限滿載時的讓位交回主編裁決，不由記者自行決定。
 
-`wiki/topics/community-tech-discussions.md` 的 `## 現在吵到哪`（上限 10 列）與 `## 最近在討論什麼`（上限 50 列）同批處理：重算每一列的最後動態與最後一則證據日期、依狀態三值重判、跑退場與補位、把逾 45 天的 🌊延燒 改標 🌙靜候、把逾 90 天的 🌙靜候 移出表。條文見 `.claude/reporter-rules/wiki-ingest-community.md`「community-tech-discussions 的兩張結論表」。
+`wiki/topics/community-tech-discussions.md` 的 `## 現在吵到哪`（上限 10 列）與 `## 最近在討論什麼`（上限 50 列）同批處理：重算每一列的最後動態與最後一則證據日期、依狀態三值重判、跑退場與補位、把逾 45 天的 🌊延燒 改標 🌙靜候、把逾 90 天的 🌙靜候 移出表。條文見 `.claude/reporter-rules/community/pages.md`「community-tech-discussions 的兩張結論表」。
 
 **回報格式：**
 ```
@@ -244,7 +244,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5l. 模型頁世代表複查（主編親做）`[加入: 2026-09-07]`
 
-對 `wiki/entities/fable-5.md` 與 `wiki/entities/opus-5.md` 的結論表各跑一次（判準見 `.claude/reporter-rules/wiki-ingest-models.md`「模型頁兩代對照表」與「entities/opus-5 的兩張表」）：① 兩頁 `## 你現在拿到的是什麼` 表上「資料截至」距今逾 60 天 → WebFetch 官方模型總覽頁重查七列並更新查證日；② fable-5 `## 護欄會怎麼改寫你的請求` 四類是否仍為官方公布的四類；③ opus-5 `## 這些數字是誰量的` 的官方基準是否仍為官方在引用的那幾項，社群側是否首次出現帶測試方法與數字的獨立複測（有則同批改寫導言那句承諾）；④ 兩頁 `## 熱度與試用價值` 對 feature-radar 全覽表對應世代那一列，不一致以 radar 為準覆寫。
+對 `wiki/entities/fable-5.md` 與 `wiki/entities/opus-5.md` 的結論表各跑一次（判準見 `.claude/reporter-rules/models/pages.md`「模型頁兩代對照表」與「entities/opus-5 的兩張表」）：① 兩頁 `## 你現在拿到的是什麼` 表上「資料截至」距今逾 60 天 → WebFetch 官方模型總覽頁重查七列並更新查證日；② fable-5 `## 護欄會怎麼改寫你的請求` 四類是否仍為官方公布的四類；③ opus-5 `## 這些數字是誰量的` 的官方基準是否仍為官方在引用的那幾項，社群側是否首次出現帶測試方法與數字的獨立複測（有則同批改寫導言那句承諾）；④ 兩頁 `## 熱度與試用價值` 對 feature-radar 全覽表對應世代那一列，不一致以 radar 為準覆寫。
 
 **回報格式：**
 ```

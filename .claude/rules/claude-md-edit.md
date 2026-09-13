@@ -7,7 +7,7 @@ paths:
 ---
 # CLAUDE.md 及規則檔修改規則
 
-修改根目錄 `CLAUDE.md`、`wiki/CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/*.md`、`.claude/agents/*.md`、`.claude/review-registry.json` 前必須讀取此檔案（與檔首 `paths:` 同範圍）。
+修改根目錄 `CLAUDE.md`、`wiki/CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/**/*.md`、`.claude/agents/*.md`、`.claude/review-registry.json` 前必須讀取此檔案（與檔首 `paths:` 同範圍）。
 
 ---
 
@@ -29,7 +29,7 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 | 寫法 | 判斷 |
 |------|------|
 | `` `wiki/CLAUDE.md` `` | ✅ 明確 |
-| `` `.claude/reporter-rules/wiki-ingest.md` `` | ✅ 明確 |
+| `` `.claude/reporter-rules/features/daily.md` `` | ✅ 明確 |
 | `` `CLAUDE.md` ``（無路徑前綴） | ❌ 禁止 |
 | `見 CLAUDE.md`（無路徑前綴） | ❌ 禁止 |
 
@@ -53,7 +53,7 @@ command / skill 中永遠使用明確路徑，**禁止裸露的 `CLAUDE.md`**：
 
 **不適合放進 CLAUDE.md 的內容：**
 - 快速上手、安裝說明（→ `README.md`）
-- 格式模板／範本（→ 消費它的那份 rules 檔；跨 skill 共用且無單一消費者的，放共用載入點 `wiki/CLAUDE.md` 或 `.claude/reporter-rules/wiki-reporter-shared.md`，根目錄只留判準句＋指路）
+- 格式模板／範本（→ 消費它的那份 rules 檔；跨 skill 共用且無單一消費者的，放共用載入點 `wiki/CLAUDE.md` 或 `.claude/reporter-rules/shared.md`，根目錄只留判準句＋指路）
 - 面向人類的操作範例（→ `README.md`）
 - 教訓敘事（→ 該檔的沿革檔，`docs/rules-changelog/`）：條文只留判準＋「沿革檔 日期」指路，不進 agent 讀取範圍 `[加入: 2026-09-04]`
 

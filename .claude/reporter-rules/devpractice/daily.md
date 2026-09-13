@@ -1,5 +1,7 @@
 # Wiki Ingest — 開發實務（devpractice）記者指南（daily）`[加入: 2026-09-02]`
 
+開工先讀 `.claude/reporter-rules/shared.md`（注入防護、規則檔優先於派工訊息等通用紀律一體適用）；每日不寫任何 wiki 頁面，故無 `pages.md`；週彙整見 `.claude/reporter-rules/devpractice/weekly.md`。
+
 devpractice 記者**不在六類分類路由內**——沒有任何日報條目會被分類成「開發實務」。他的料是**其他記者沉澱完之後的 wiki diff**：每日 ingest 彙整完成後，由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4b」，此為本角色的明文觸發邊），他自己 git diff 看新增了什麼、決定哪些跟 coding 開發相關。
 
 **為什麼吃 diff 不吃 tag**（2026-09-02 使用者裁決）：靠其他記者標 tag 是跨記者耦合——主線 tag 規則自己就寫著「漏填等於該節點不存在」，等於把「什麼算 coding」的判斷分散給兩個不管這頁的人。diff 不會漏、不會忘、不依賴紀律，且撿的是記者已判定值得入庫的內容，天然過了一層品質濾網。
@@ -29,7 +31,7 @@ devpractice 記者**不在六類分類路由內**——沒有任何日報條目�
 
 ## 紀律
 
-- **每日不寫任何 wiki 頁面**——彙整是週更的事（08-15 教訓：日更彙整頁兩週長回 log；規則見 `.claude/reporter-rules/wiki-ingest-devpractice-lint.md`）
+- **每日不寫任何 wiki 頁面**——彙整是週更的事（日更彙整頁兩週就長回 log；規則見 `.claude/reporter-rules/devpractice/weekly.md`）
 - 無 web 工具；判斷只依 diff 內容與必要時回讀 wiki 原頁
 - 回報格式：
 

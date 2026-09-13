@@ -35,7 +35,8 @@ BLOCK_REASON = (
 def rule_files():
     yield from (CLAUDE_DIR / "commands").glob("*.md")
     yield from (CLAUDE_DIR / "rules").glob("*.md")
-    yield from (CLAUDE_DIR / "reporter-rules").glob("*.md")
+    yield from (CLAUDE_DIR / "reporter-rules").rglob("*.md")
+    yield from (CLAUDE_DIR / "skills").rglob("*.md")
     root_claude = REPO_ROOT / "CLAUDE.md"
     if root_claude.exists():
         yield root_claude

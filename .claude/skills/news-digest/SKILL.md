@@ -97,7 +97,7 @@ PYTHON REPO_ROOT\scripts\scan_open_forecasts.py TARGET_DATE
 PYTHON REPO_ROOT\scripts\scan_pending_verifications.py TARGET_DATE
 ```
 
-- 拿 wiki 全庫「懸置標記」（見 `.claude/reporter-rules/wiki-ingest-format.md`「懸置標記語法」節）的探針比對今日日報，命中則 append 至 `data/pending-signals.jsonl`，並在 stdout 印出依記者分組、可直接貼進派工的附件
+- 拿 wiki 全庫「懸置標記」（見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節）的探針比對今日日報，命中則 append 至 `data/pending-signals.jsonl`，並在 stdout 印出依記者分組、可直接貼進派工的附件
 - 輸出由執行 Step 2（wiki ingest）的主 session 取用：把對應記者類別的派工附件段落原樣附在該記者的派工訊息裡，讓記者知道「今天日報可能回答了哪個懸置」
 - **B 級（僅單一弱探針命中且僅在內文）不進派工附件**，只記入 jsonl 供之後查核，不得轉貼給記者
 - **純字串比對，不做判斷、不改 wiki**；失敗只記錄不阻斷 pipeline，不影響本日其餘產出

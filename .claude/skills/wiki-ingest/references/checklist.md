@@ -6,10 +6,10 @@
 
 **`wiki/feature-radar.md`**
 - 彙整模型 + 功能記者回報的所有 feature-radar 新增條目
-- 依 `.claude/reporter-rules/wiki-ingest-features.md` 的條目格式寫入「最新功能」區塊
+- 依 `.claude/reporter-rules/features/pages.md` 的條目格式寫入「最新功能」區塊
 - 同步更新全覽表的熱度與試用價值
-- 依 `.claude/reporter-rules/wiki-ingest-features.md`「⭐ 現在值得跟的三件 自動更新規則」覆寫 `## ⭐ 現在值得跟的三件` section
-- 依 `.claude/reporter-rules/wiki-ingest-features.md`「⚠️ 從你現在的版本升上去，會遇到什麼 自動更新規則」更新 `## ⚠️ 從你現在的版本升上去，會遇到什麼` section
+- 依 `.claude/reporter-rules/features/pages.md`「⭐ 現在值得跟的三件 自動更新規則」覆寫 `## ⭐ 現在值得跟的三件` section
+- 依 `.claude/reporter-rules/features/pages.md`「⚠️ 從你現在的版本升上去，會遇到什麼 自動更新規則」更新 `## ⚠️ 從你現在的版本升上去，會遇到什麼` section
 
 **`wiki/index.md`**
 - 彙整所有記者回報的 `index.md 狀態變更` 欄位，逐一更新
@@ -28,7 +28,13 @@
 ```
 
 **`data/source_attribution.jsonl`**（append only，不可修改既有行）
-- 把所有記者回報的「來源歸因」欄逐筆轉成一行 JSON append，schema 與 slug 對照見 `.claude/reporter-rules/wiki-ingest.md`「第三步」與 `data/README.md`
+- 把所有記者回報的「來源歸因」欄逐筆轉成一行 JSON append，schema：
+
+  ```json
+  {"date": "<日報日期>", "source": "<slug>", "category": "<六類別>", "page": "<wiki相對路徑不含.md>", "item_url": "...", "item_title": "..."}
+  ```
+
+  slug 對照表見 `.claude/reporter-rules/shared.md`「來源歸因回報」；schema 詳細說明見 `data/README.md`
 - 記者回報「無」則該記者不寫；全部記者皆「無」則不動此檔
 
 **`data/pending-handoffs.jsonl`**（轉知帳本，append only，透過腳本操作）

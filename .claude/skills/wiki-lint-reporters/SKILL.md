@@ -13,8 +13,8 @@ description: /wiki-lint A 段：載入 wiki 全貌、六記者並行 lint 派工
 
 同時讀取：
 - `wiki/CLAUDE.md` — wiki 目錄結構與基本限制
-- `.claude/reporter-rules/wiki-ingest.md` — 分類標準與派工流程（主編指南）
-- `.claude/reporter-rules/wiki-ingest-format.md` — 頁面格式模板、欄位規則、品質標準
+- `.claude/skills/wiki-ingest/references/classification.md` — 分類表、分流鐵則與派工正典
+- `.claude/reporter-rules/page-templates.md` — 頁面格式模板、欄位規則、品質標準
 - `wiki/index.md` — 取得所有頁面清單
 - `wiki/log.md` — 了解最近的 ingest 紀錄與活動
 
@@ -33,7 +33,7 @@ description: /wiki-lint A 段：載入 wiki 全貌、六記者並行 lint 派工
 
 **月度蒸餾（記者成長迴路）`[加入: 2026-07-05]`：** 僅每月第一次 lint 執行（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」），其餘週次輸出「非本月首次 lint，跳過月度蒸餾」。
 
-1. grep 過去 30 天 `wiki/log.md` 的**「退回」**記錄（收報核對段落）與**「品質備註」**行（ingest 紀錄，見 `.claude/reporter-rules/wiki-ingest.md` 第三步）
+1. grep 過去 30 天 `wiki/log.md` 的**「退回」**記錄（收報核對段落）與**「品質備註」**行（ingest 紀錄，見 `.claude/skills/wiki-ingest/references/checklist.md` 的 log 模板）
 2. 按「記者類別 × 錯誤型態」統計出現次數
 3. **同一型態 ≥ 2 次**者產出立法提案；僅 1 次者只列入「觀察中」清單，不立法
 

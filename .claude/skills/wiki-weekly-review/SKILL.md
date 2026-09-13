@@ -22,7 +22,7 @@ description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開
 
 同時讀取：
 - `wiki/CLAUDE.md` — wiki 目錄結構與基本限制
-- `.claude/reporter-rules/wiki-ingest.md` — 分類標準（沿用六類記者分工）
+- `.claude/skills/wiki-ingest/references/classification.md` — 分類標準（沿用六類記者分工）
 - 過去 7 天的 `news/*.md`
 - `wiki/log.md` 近期 ingest 紀錄
 - `wiki/index.md`
@@ -62,7 +62,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 ### 4. 依確認執行
 
-使用者確認後，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/wiki-ingest-format.md` 頁面格式模板。此階段派工同樣沿用 `model: "sonnet"`。
+使用者確認後，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/page-templates.md` 頁面格式模板。此階段派工同樣沿用 `model: "sonnet"`。
 
 ### 5. 記錄
 
