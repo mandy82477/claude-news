@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-09-13"
-last_news_update: "2026-09-11"
+last_news_update: "2026-09-13"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 27
-attribution_count: 8
-attribution_last: "2026-08-23"
+attribution_count: 11
+attribution_last: "2026-09-13"
 top_source: "github-issues"
 pending_count: 3
 pending_overdue: 1
