@@ -21,3 +21,5 @@
 **2026-09-04**（蒸餾契約全站泛化）：原契約寫在社群 lint 檔裡，於是 `ai-agent-safety`（1,257 行）、`anthropic-government-policy`（705 行）、`competitor-landscape`（663 行）、`anthropic-business`、`claude-code`、`pricing`、各人物頁的歷史記錄**結構上沒有封存路徑**——不是誰疏忽，是契約住在一個只有社群記者會讀的檔案裡。
 
 **更新頻率欄位（選填）`[加入: 2026-07-16，改版: 2026-07-28]`**：非每日維護的頁面（週更／lint 專用）在標頭「領域」之後加一行 `**更新頻率：** 🗓️ 週更（讀者導向的節奏說明）`，並在 `wiki/index.md` 對應摘要前綴「🗓️ 週更」——向讀者說明日期停留是設計而非漏更新。補充說明用讀者語言（如「每週策展一次；更新日期停留數天屬正常節奏」），**不得出現 `/wiki-lint`、ingest 等內部指令名**（此欄位會原樣顯示在網站詳頁標頭）。每日維護頁**不加**此欄。目前適用：`wiki/overview.md`、`wiki/topics/community-pattern-trends.md`、`wiki/topics/community-tech-tools.md`、`wiki/topics/model-task-leaderboard.md`、`wiki/topics/community-large-codebase-workflow.md`；日後新增週更頁時比照。
+
+**2026-09-13**（callout 主詞必須是世界上的東西）：讀者版日報改版丙起直接從各頁頂部 callout 產出，昨天在 `check_reader_digest.py` 上的整理語閘因此失效；使用者裁決把規則搬到 callout。起因是首份讀者版六條裡三條主詞是本庫的頁面（拆頁、表格升第一、汰五類），使用者原話「每個領域都有一樣問題」。機械看守改掛 `check_reader_language.py` 的 callout 範圍。

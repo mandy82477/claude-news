@@ -47,7 +47,7 @@ ALLOWLIST = ROOT / "data" / "reader-language-allow.json"
 #   pattern 命中用的 regex
 #   why     為什麼這是內部語言（給修的人判斷用）
 #   alt     讀者語言替代詞（給修的人直接抄）
-# scope: "any"（預設）或 "table"（只在表格列上算命中）
+# scope: "any"（預設）、"table"（只在表格列上算命中）或 "callout"（只在 `>` 引文行上算命中）
 TERMS: list[dict] = [
     {"key": "ingest", "pattern": r"ingest",
      "why": "產製流程的內部步驟名，讀者不知道 wiki 是怎麼被寫出來的",
@@ -159,6 +159,10 @@ TERMS: list[dict] = [
     {"key": "保留最近", "pattern": r"保留最近",
      "why": "內容保留窗口是編輯部的資料保存政策，不是頁面在講的事",
      "alt": "刪掉，或直接寫「最新 N 天」而不解釋為什麼只留這些"},
+    {"key": "整理語", "scope": "callout",
+     "pattern": r"拆成兩頁|拆頁|併頁|獨立成新頁|新增主題頁|新增頁|本頁開張|概覽表|升為第一|留在原頁|表格升|換版面|改版面",
+     "why": "callout 的主詞是本庫的頁面／表格，不是世界發生了什麼；讀者版日報直接抄 callout，整理紀錄會原樣上站（規格見 wiki-ingest-format.md「頂部 delta-first callout」，2026-09-13）",
+     "alt": "改寫成事件本身：誰發布／量測／說了什麼，頁面整理不寫進 callout"},
 ]
 
 _COMPILED = [(t, re.compile(t["pattern"])) for t in TERMS]
@@ -281,8 +285,11 @@ def scan(files: list[Path] | None = None, allow: list[dict] | None = None) -> li
             continue
         for lineno, line in body_lines(text):
             is_table = line.lstrip().startswith("|")
+            is_callout = line.lstrip().startswith(">")
             for term, rx in _COMPILED:
                 if term.get("scope") == "table" and not is_table:
+                    continue
+                if term.get("scope") == "callout" and not is_callout:
                     continue
                 if term.get("skip_if_archive") and pid.endswith("-archive"):
                     continue
@@ -346,7 +353,7 @@ def main() -> int:
     if args.list:
         out.write(f"讀者語言閘禁詞清單（{len(TERMS)} 個）\n\n")
         for t in TERMS:
-            scope = "（僅表格列）" if t.get("scope") == "table" else ""
+            scope = {"table": "（僅表格列）", "callout": "（僅 callout 引文行）"}.get(t.get("scope"), "")
             out.write(f"- {t['key']}{scope}\n    為什麼：{t['why']}\n    改成：{t['alt']}\n")
         out.flush()
         return 0

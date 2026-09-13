@@ -53,6 +53,15 @@ class TestHits(_Case):
 
 
 class TestScopeAndSkips(_Case):
+    def test_callout_scoped_housekeeping_only_fires_in_callout(self):
+        """整理語（拆頁／汰表／本頁開張）只在 `>` callout 行算命中：正文可以講頁面怎麼整理，callout 不行。"""
+        prose = self.scan("a.md", "本頁 09-12 拆成兩頁，教材獨立成新頁。\n")
+        self.assertEqual([h for h in prose if h["term"] == "整理語"], [])
+        callout = self.scan("b.md", "> **最新動態**（2026-09-12）\n> 投資判讀頁拆成兩頁，教材獨立成新頁。\n")
+        self.assertEqual([h["term"] for h in callout], ["整理語"])
+        clean = self.scan("c.md", "> **最新動態**（2026-09-12）\n> Anthropic 發布 9 月威脅情報報告，揭露四個濫用案例。\n")
+        self.assertEqual(clean, [])
+
     def test_table_scoped_term_only_fires_in_table(self):
         prose = self.scan("a.md", "他買了一台二手筆電。\n")
         self.assertEqual([h for h in prose if h["term"] == "二手"], [])
