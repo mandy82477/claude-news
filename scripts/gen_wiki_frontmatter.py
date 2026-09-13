@@ -141,8 +141,40 @@ def strip_pending_probes(text: str) -> str:
     )
 
 
+USAGE = """用法：python scripts/gen_wiki_frontmatter.py [選項]
+
+為 wiki 頁面生成 YAML frontmatter，並重生 index.md 母頁列的「↳ 子故事：」投影。
+**預設會寫入全庫**（entities/ 與 topics/ 下所有頁面 ＋ index.md）。
+
+選項：
+  --dry-run              只印結果，不寫入任何檔案
+  --list-signal [值]     列出該 signal 的頁面（唯讀，預設「⚠️ 高引用但停滯」）
+  -h, --help             印本說明並結束（不寫入）
+
+注意：本檔是全庫寫入，沒有單頁模式——frontmatter 有跨頁欄位（入鏈數、子樹天數、
+index 投影），逐頁算會得到錯的值。多人／多 agent 併行時，跑它會連動別人正在改的
+頁面；不確定就先加 --dry-run。
+"""
+
+
 def main(argv: list[str]) -> int:
     stream = _stdout()
+    # 未知參數一律擋下，不得靜默當成「預設模式」照跑。
+    # 死因：2026-09-13 有 agent 為了看說明而跑 `--help`，本檔當時不認得任何未知
+    # 參數也沒有 --help，於是走到預設路徑、全庫寫入 76 個頁面的 frontmatter
+    # （事後逐一還原）。一個會寫入的腳本，把打錯的旗標當成「照跑」是最壞的預設。
+    known = {"--dry-run", "--list-signal", "-h", "--help"}
+    if {"-h", "--help"} & set(argv[1:]):
+        stream.write(USAGE)
+        stream.flush()
+        return 0
+    unknown = [a for i, a in enumerate(argv[1:], start=1)
+               if a.startswith("-") and a not in known]
+    if unknown:
+        stream.write("未知參數：" + " ".join(unknown) + chr(10) + chr(10))
+        stream.write(USAGE)
+        stream.flush()
+        return 2
     list_signal = None
     if "--list-signal" in argv:
         i = argv.index("--list-signal")
