@@ -13,7 +13,7 @@
 | 六個領域節名 `## 🛠️ 功能`／`## 🤖 模型`／`## 💼 商業`／`## 🏛️ 安全政策`／`## 🌐 社群`／`## 👤 人物` | DOMAIN_TO_SECTION | `build_web.py` READER_DOMAIN_SECTIONS、`check_reader_digest.py` DOMAIN_LABELS、`app.js` readerDigestHtml | 該領域整段靜默消失（同 2026-08-14 區塊 emoji 的死法）|
 | 頁面小節 `### [[頁名|頁面標題]]`（一頁一節，別名＝頁面 H1）| PAGE_HEADING_FMT | `build_web.py` READER_PAGE_RE、`check_reader_digest.py` PAGE_RE | 該頁的 callout 變成散落的 `>` 行，不上站 |
 | 頂部兩節 `## 📌 今日聚焦`／`## ⭐ 重點話題` | FOCUS_SECTION／TOP_SECTION（從 `news/TARGET_DATE.md` 的 `### 📌 今日聚焦`／`### ⭐ 重點話題` 搬） | `build_web.py` READER_PASSTHROUGH_SECTIONS（認得但不收，網站資料取自 news/ 解析）、`check_reader_digest.py` PASSTHROUGH_LABELS | 格式閘把它們當成「不在六領域內」而報錯 |
-| callout 首行 `> **標籤**（YYYY-MM-DD）`（`（` 後緊接日期，日期後可有尾巴）| 原樣抄自 wiki 頁頂；形狀規則在 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」 | `build_reader_digest.py` CALLOUT_RE、`build_web.py` READER_CALLOUT_RE、`check_reader_digest.py` CALLOUT_RE、`scripts/check_hierarchy.py` CALLOUT_DATE_RE | 該頁永遠不會被挑進讀者版；網站上標籤與日期空白 |
+| callout 首行：wiki 頁上 `> **標籤**（YYYY-MM-DD）`，日報裡剝成 `> **標籤**`（日期是挑選鍵不是內容，檔名已是那一天；`（日期，尾巴）` 只留尾巴）| wiki 頁頂原文 → `build_reader_digest.py` strip_callout_date；形狀規則在 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」 | `build_reader_digest.py` CALLOUT_RE、`build_web.py` READER_CALLOUT_RE、`check_reader_digest.py` CALLOUT_RE、`scripts/check_hierarchy.py` CALLOUT_DATE_RE | 該頁永遠不會被挑進讀者版；網站上標籤與日期空白 |
 
 ---
 
@@ -47,14 +47,14 @@
 
 ### [[entities/claude-code|Claude Code]]
 
-> **最新動態**（TARGET_DATE）
-> - **v2.1.268**：……（callout 原文，一字不改）
+> **最新動態**
+> - **v2.1.268**：……（callout 原文，只剝掉首行日期）
 
 ## 🏛️ 安全政策
 
 ### [[topics/ai-agent-safety|AI Agent 安全與可靠性]]
 
-> **最新安全事件**（TARGET_DATE）
+> **最新安全事件**
 > ……
 ```
 

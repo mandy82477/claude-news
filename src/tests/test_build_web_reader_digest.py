@@ -116,7 +116,9 @@ class TestGenerator(unittest.TestCase):
         it = self.r["sections"][0]["items"][0]
         self.assertEqual(it["name"], "Claude Code")
         self.assertEqual(it["label"], "最新動態")
-        self.assertEqual(it["date"], "2026-09-11")
+        self.assertEqual(it["date"], "", "日報裡不印日期——檔名就是那一天")
+        self.assertIn("> **最新動態**\n", self.text)
+        self.assertNotIn("（2026-09-11）", self.text.split("## 🛠️ 功能")[1].split("###")[1])
         self.assertIn("- **v2.1.268**：gateway 新增 `pricing:` 設定，見 [[entities/pricing]]。", it["body"])
         self.assertIn("- **服務事故**：錯誤率升高。", it["body"])
         self.assertNotIn("最新動態", it["body"], "首行標籤拆進 label，不重複進 body")
@@ -133,8 +135,9 @@ class TestGenerator(unittest.TestCase):
     def test_label_tail_and_same_line_text_survive(self):
         it = self.r["sections"][3]["items"][1]
         self.assertEqual(it["label"], "本週趨勢觀察")
-        self.assertEqual(it["date"], "2026-09-11")
-        self.assertTrue(it["body"].startswith("同行尾巴文字"))
+        self.assertEqual(it["date"], "")
+        self.assertIn("> **本週趨勢觀察**（補充說明）同行尾巴文字", self.text, "日期剝掉、尾巴留著")
+        self.assertTrue(it["body"].startswith("（補充說明）同行尾巴文字"))
         self.assertIn("第二行。", it["body"])
 
     def test_pending_marker_is_not_a_callout(self):

@@ -412,7 +412,7 @@
             "page": "entities/claude-code",
             "name": "Claude Code",
             "label": "最新動態",
-            "date": "2026-09-12",
+            "date": "",
             "body": "- **v2.1.269 新增外掛評分指令**：`claude plugin eval` 可對外掛跑 eval 套件並產出 JSON／HTML 報告，外掛開發者能用它做升級前自動迴歸比對。\n- **桌面版 Git 需求放寬**：官方文件更新，只有用獨立 worktree 執行的 session 才需要裝 Git，非 worktree 使用者現在可以不裝。\n- **兩個平台限制影響使用**：Desktop（macOS）仍無法啟用 Bypass Permissions（#61415）；Windows 九月更新讓 Cowork device_bash 於 ARM64／x64 失效（#92958）。\n- **舊問題熱度上升、官方未給時程**：XDG Base Directory 不支援（#1455，447 讚）與 vfpext 缺失（#74649，86 則留言）持續是 Linux／Cowork 使用者的痛點。"
           }
         ]
@@ -425,22 +425,15 @@
             "page": "topics/anthropic-business",
             "name": "Anthropic 商業健康度",
             "label": "最新動態",
-            "date": "2026-09-12",
+            "date": "",
             "body": "- **Nvidia 洽談投資 Anthropic 鉅額 IPO**：Reuters 獨家稱正洽談中，尚未定案；若成真將以股東身分綁定算力生態，見 [[topics/anthropic-business#IPO 走到哪一格]]。\n- **五角大廈傳十月前遷出全部機密 AI 工作負載**：僅涉聯邦機密採購，不影響商用訂閱與 API 收入，經過見 [[topics/anthropic-government-policy#三個戰場]]。"
           },
           {
             "page": "topics/market-signals",
             "name": "投資訊號判讀",
             "label": "最新判讀",
-            "date": "2026-09-12",
+            "date": "",
             "body": "📉 負面（敘事型）：傳國防部十月前把機密 AI 工作負載全數移出 Anthropic（此前僅三分之二），僅單一標題、未經證實；下一步看十月是否如期遷出。詳見 [[topics/anthropic-government-policy]]。"
-          },
-          {
-            "page": "topics/market-lessons",
-            "name": "投資判讀教材（週更）",
-            "label": "本週沉澱",
-            "date": "2026-09-12",
-            "body": "本頁新建：累積 7 課判讀邏輯、3 條可練習的消息線、IPO 流程與 S-1 該看哪五項的背景知識；想學判讀消息面從這裡開始，09-18 起才回填哪些判斷押對了。"
           }
         ]
       },
@@ -452,7 +445,7 @@
             "page": "topics/anthropic-government-policy",
             "name": "Anthropic 政府與軍事政策",
             "label": "最新動態",
-            "date": "2026-09-12",
+            "date": "",
             "body": "- **五角大廈擬十月前遷出**：DefenseScoop 稱國防部計畫十月前遷出全部機密 AI 工作負載（僅標題可用）；僅涉聯邦機密採購，商用訂閱與 API 不受影響。\n- **威脅情報報告揭露新案例**：WSJ 揭露伊朗帳號（GTG-30005）建置海軍目標鎖定 pipeline 技術細節；另傳俄羅斯開發神風無人機自主選目標案例。Anthropic 稱已中止涉案帳號，一般用戶不受影響。"
           }
         ]
@@ -465,28 +458,28 @@
             "page": "topics/community-tech-discussions",
             "name": "社群技術討論趨勢",
             "label": "最熱討論",
-            "date": "2026-09-12",
+            "date": "",
             "body": "Boris Cherny 親自回應「AI slop」品質下滑質疑（Business Insider、Simon Willison 引述），讀者現在有官方說法可查核，不必只靠社群猜測。"
           },
           {
             "page": "topics/community-large-codebase-workflow",
             "name": "大型 Codebase 規模化開發：社群工作流主線",
             "label": "本週答案變動",
-            "date": "2026-09-12",
+            "date": "",
             "body": "有新節點的線 3 條（除錯分工／索引記憶／Context 管理），並行規模線本輪無新節點；本週答案不變，細節見頁內。"
           },
           {
             "page": "topics/community-pattern-trends",
             "name": "社群趨勢觀察（週更）",
             "label": "本週趨勢觀察",
-            "date": "2026-09-12",
+            "date": "",
             "body": "有新節點的線 7 條，最值得注意的是統一容器路線分化出 OS／團隊／平台三層，agent-orchestrator 逾 11,149★ 快速走向規模化採用。"
           },
           {
             "page": "topics/llm-wiki-pattern",
             "name": "Karpathy 式 LLM wiki 模式",
             "label": "最新動態",
-            "date": "2026-09-12",
+            "date": "",
             "body": "Karpathy 四月提出的三層 wiki 模式已長出四種公開實作；本庫對照三層骨架齊備，缺的是查詢層。"
           }
         ]
@@ -499,13 +492,13 @@
             "page": "entities/boris-cherny",
             "name": "Boris Cherny",
             "label": "Boris Cherny 親自回信「AI slop」質疑者",
-            "date": "2026-09-12",
+            "date": "",
             "body": "：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。"
           }
         ]
       }
     ],
-    "itemCount": 10
+    "itemCount": 9
   },
   "readerTopStories": [
     {

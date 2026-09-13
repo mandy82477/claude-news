@@ -1177,7 +1177,8 @@ READER_PASSTHROUGH_SECTIONS = {"📌 今日聚焦", "⭐ 重點話題"}
 READER_PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
 # callout 首行 `> **標籤**（YYYY-MM-DD…）`——標籤自由（最新動態／最新判讀／本週衝擊…），
 # 日期是「這則 callout 是哪天覆寫的」；與 build_reader_digest.CALLOUT_RE 同形
-READER_CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*（(\d{4}-\d{2}-\d{2})[^）\n]*）(.*)$")
+# 丙-3（2026-09-13）：日報裡不印日期（產生器剝掉），首行只剩 `> **標籤**`；帶日期的舊檔仍認得
+READER_CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*(?:（(\d{4}-\d{2}-\d{2})[^）\n]*）)?(.*)$")
 READER_WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 
 
@@ -1187,7 +1188,7 @@ def _reader_item_from_block(page: str, name: str, quote_lines: list[str]) -> dic
     if body:
         m = READER_CALLOUT_RE.match("> " + body[0])
         if m:
-            label, date_str = m.group(1).strip(), m.group(2)
+            label, date_str = m.group(1).strip(), (m.group(2) or "")
             rest = m.group(3).strip()
             body = ([rest] if rest else []) + body[1:]
     return {

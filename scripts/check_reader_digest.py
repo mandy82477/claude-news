@@ -17,8 +17,7 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
   1. 標題行 `# YYYY-MM-DD 今天 wiki 學到什麼`，日期與檔名一致
   2. h2 節名必須是六個領域之一（拼錯的節名整段會在網站上消失，這是唯一的看守）
   3. 每個頁面小節 `### [[頁名|頁面標題]]` 必須在領域節底下，且頁名存在於 wiki/
-  4. 頁面小節底下至少一行 `>` callout；首行 `> **標籤**（YYYY-MM-DD…）` 的日期須等於檔名日期
-     （日期對不上＝抄到了別天的 callout，或有人手改了日期）
+  4. 頁面小節底下至少一行 `>` callout；首行 `> **標籤**`（產生器已剝掉日期）；舊檔若仍帶日期，須等於檔名日期
   5. 領域節底下、頁面小節之外不得有散落的 `>` 行（那些行不會上站）
   6. 頂部 `## 📌 今日聚焦`／`## ⭐ 重點話題` 兩節合法，內容不查（它們是 news/ 的投影）
 
@@ -41,7 +40,8 @@ NO_NEWS_RE = re.compile(r"^>\s*今日 wiki 無新知（(\d{4}-\d{2}-\d{2})）\s*
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 # 與 build_web.READER_PAGE_RE／READER_CALLOUT_RE 同形（規格端見 format.md 契約表）
 PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
-CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*（(\d{4}-\d{2}-\d{2})[^）\n]*）(.*)$")
+# 日報裡首行只剩 `> **標籤**`（產生器剝掉日期）；帶日期的舊檔仍合法，但日期必須等於檔名
+CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*(?:（(\d{4}-\d{2}-\d{2})[^）\n]*）)?(.*)$")
 
 # daily/ 頂部兩節：合法但不是領域節，其下內容不查（規格端見 format.md 契約表）
 PASSTHROUGH_LABELS = {"📌 今日聚焦", "⭐ 重點話題"}
@@ -139,8 +139,8 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
             if page_quote_lines == 0:
                 cm = CALLOUT_RE.match(stripped)
                 if not cm:
-                    problems.append(f"{rel}:{n} callout 首行不是 `> **標籤**（YYYY-MM-DD…）` 形狀，網站上標籤與日期會空白")
-                elif cm.group(2) != f.stem:
+                    problems.append(f"{rel}:{n} callout 首行不是 `> **標籤**` 形狀，網站上標籤會空白")
+                elif cm.group(2) and cm.group(2) != f.stem:
                     problems.append(f"{rel}:{n} callout 日期 {cm.group(2)} 與檔名 {f.stem} 不一致——抄到了別天的最新動態")
             page_quote_lines += 1
             continue

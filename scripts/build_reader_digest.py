@@ -214,6 +214,18 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
     return sections, warnings
 
 
+DATE_PAREN_RE = re.compile(r"（(\d{4}-\d{2}-\d{2})(?:[，,]\s*)?([^）\n]*)）")
+
+
+def strip_callout_date(line: str) -> str:
+    """`> **標籤**（YYYY-MM-DD）` → `> **標籤**`；`（YYYY-MM-DD，尾巴）` → `（尾巴）`。
+    日報檔名已是日期，每條再印一次是噪音（使用者 2026-09-13）。wiki 頁上的 callout 原文不動，日期仍是挑選鍵。"""
+    m = CALLOUT_RE.match(line)
+    if not m:
+        return line
+    return DATE_PAREN_RE.sub(lambda mm: f"（{mm.group(2)}）" if mm.group(2).strip() else "", line, count=1)
+
+
 def render(target_date: str, sections: dict[str, list[dict]],
            focus_lines: list[str] | None = None, top_stories: list[list[str]] | None = None) -> str:
     out = [TITLE_FMT.format(date=target_date), ""]
@@ -236,7 +248,7 @@ def render(target_date: str, sections: dict[str, list[dict]],
         for it in items:
             out.append(PAGE_HEADING_FMT.format(page=it["page"], name=it["name"]))
             out.append("")
-            out.extend(it["lines"])
+            out.extend(strip_callout_date(l) for l in it["lines"])
             out.append("")
     return "\n".join(out).rstrip("\n") + "\n"
 
@@ -300,6 +312,12 @@ def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_
                 continue
             if page in have and refresh:
                 continue
+            if page not in have and refresh:
+                pf = wiki_dir / f"{page}.md"
+                head = page_head(pf.read_text(encoding="utf-8"))[1] if pf.exists() else ""
+                if not any(CALLOUT_RE.match(l) for l in head.splitlines()):
+                    warnings.append(f"{page}：wiki 上已無帶日期的 callout（改成自介型），--refresh 自日報移除")
+                    continue
             if page in have:
                 sections[section] = [it for it in sections[section] if it["page"] != page]
                 replaced += 1

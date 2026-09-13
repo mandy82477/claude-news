@@ -373,7 +373,7 @@
 <div class="section__h"><span class="section__h-icon">${esc(icon)}</span><span class="section__h-label">${esc(spaced)}</span><span class="section__h-count">${sec.items.length} items</span></div>`);
       sec.items.forEach(it => {
         const link = it.page ? wikilinkButtonHtml(it.name ? `${it.page}|${it.name}` : it.page) : '';
-        const meta = [it.label, it.date].filter(Boolean).map(esc).join(' · ');
+        const meta = it.label ? esc(it.label) : '';  // 日期不印：整頁就是那一天（丙-3）
         parts.push(`<div class="reader-item">
   <div class="reader-item__page">${link}${meta ? `<span class="reader-item__meta">${meta}</span>` : ''}</div>
   <div class="reader-item__body">${mdToHtml(it.body || '')}</div>
