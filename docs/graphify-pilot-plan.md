@@ -48,7 +48,7 @@ graphify --version
 ### Step 1：對 wiki 建圖（10 分鐘）
 
 ```bash
-cd C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS
+cd "$(git rev-parse --show-toplevel)"
 graphify wiki/ --output data/graph/
 ```
 

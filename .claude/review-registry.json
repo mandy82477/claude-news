@@ -1675,5 +1675,35 @@
       ".claude/skills/**/*.md"
     ],
     "min_mutual_references": 2
+  },
+  "personal_paths": {
+    "_doc": "檢查 6：個人路徑外洩。掃 git 追蹤的文字檔，命中任一 pattern 即失敗；exclude_globs 是歷史逐字引述（沿革檔、雲端探針記錄），允許保留。",
+    "extensions": [
+      ".md",
+      ".py",
+      ".json",
+      ".jsonl",
+      ".yml",
+      ".yaml",
+      ".txt",
+      ".html",
+      ".css",
+      ".js",
+      ".toml",
+      ".cfg",
+      ".ini"
+    ],
+    "patterns": [
+      "[A-Za-z]:\\\\+Users\\\\+",
+      "/Users/[A-Za-z]",
+      "/home/[A-Za-z0-9_-]+/",
+      "AppData\\\\+",
+      "[A-Za-z0-9._-]+@gmail\\.com"
+    ],
+    "exclude_globs": [
+      "docs/rules-changelog/*.md",
+      "docs/cloud-runbooks/probe-*.md",
+      ".claude/review-registry.json"
+    ]
   }
 }

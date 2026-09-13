@@ -415,6 +415,57 @@ def check_coupling_hints(cfg: dict, sync_pairs_cfg: list, report: Report):
 # main
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# 檢查 6：個人路徑外洩（personal_paths）
+# ---------------------------------------------------------------------------
+
+def check_personal_paths(cfg: dict, report: Report):
+    """git 追蹤的文字檔不得含使用者本機路徑或個人帳號（repo 公開）。"""
+    if not cfg:
+        return
+    import fnmatch
+    import subprocess
+
+    name = "檢查 6：個人路徑外洩（personal_paths）"
+    patterns = [re.compile(p) for p in cfg.get("patterns", [])]
+    extensions = tuple(cfg.get("extensions", [".md", ".py"]))
+    excludes = cfg.get("exclude_globs", [])
+    try:
+        out = subprocess.run(
+            ["git", "ls-files", "-z"], cwd=REPO_ROOT, capture_output=True, check=True
+        ).stdout
+    except (OSError, subprocess.CalledProcessError) as exc:
+        report.add(name, False, [f"git ls-files 失敗：{exc}"])
+        return
+    files = [f for f in out.decode("utf-8", "surrogateescape").split("\0") if f]
+
+    hits: list[str] = []
+    scanned = 0
+    for f in files:
+        if not f.endswith(extensions):
+            continue
+        if any(fnmatch.fnmatch(f, g) for g in excludes):
+            continue
+        try:
+            text = (REPO_ROOT / f).read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+        scanned += 1
+        for lineno, line in enumerate(text.splitlines(), start=1):
+            if any(rx.search(line) for rx in patterns):
+                hits.append(f"{f}:{lineno}: {line.strip()[:100]}")
+
+    details = [f"掃描 {scanned} 個追蹤檔，排除 {excludes}"]
+    if hits:
+        details.append(
+            f"發現 {len(hits)} 處個人路徑／帳號，改用 `git rev-parse --show-toplevel`、PATH 上的 python 或相對路徑："
+        )
+        details.extend(f"  - {h}" for h in hits)
+    else:
+        details.append("無")
+    report.add(name, not hits, details)
+
+
 def main() -> int:
     stream = _stdout()
     registry = load_registry()
@@ -425,6 +476,7 @@ def main() -> int:
     check_anchors(registry.get("anchors"), report)
     check_sync_pairs(registry.get("sync_pairs"), report)
     check_coupling_hints(registry.get("coupling_hints"), registry.get("sync_pairs"), report)
+    check_personal_paths(registry.get("personal_paths"), report)
 
     stream.write(report.render() + "\n")
     stream.flush()

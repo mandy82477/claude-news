@@ -6,7 +6,7 @@ check_skill_refs.py — skill 目錄的指路完整性機械閘。
     python scripts/check_skill_refs.py            # 掃 .claude/skills/*/
     python scripts/check_skill_refs.py --list     # 另印每個 skill 的行數／reference 清單
 
-規格端：C:\\Users\\Mandy\\.claude\\SKILL-PRINCIPLES.md（skill 只寫步驟；模板／契約／判準放 references/；
+規格端：使用者全域 ~/.claude/SKILL-PRINCIPLES.md（skill 只寫步驟；模板／契約／判準放 references/；
 目錄固定 references/ scripts/ assets/；description 100 字內；SKILL.md 沒寫「哪個檔裝什麼、何時讀」
 第三層等於不存在）。本腳本是它的消費端，掛在 scripts/run_tests.py。
 

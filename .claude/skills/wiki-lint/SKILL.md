@@ -39,7 +39,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
 **為何必要：** lint 只改 `wiki/*.md`，web build 僅發生於本步驟與 `/news-pipeline`。若跳過本步，本次修正不會出現在 web reader，得等下一次日更 pipeline 才上站。lint 結束前必須自行閉迴路（對齊 `.claude/rules/dev-done.md` 開發完工定義：測試綠 + 已 commit）。
 
-依序執行（`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`）：
+依序執行（`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`））：
 
 1. **Commit wiki 變更**（先不 push）：`git -C REPO_ROOT add wiki/` → `git -C REPO_ROOT commit -m "wiki: weekly lint YYYY-MM-DD"`（wiki 無變更則跳過 commit，續下一步）
 2. **強制 web build gate**：`PYTHON REPO_ROOT\scripts\gate_web_build.py`。**擋下時的修復迴圈、放行判準與放寬邊界一律照 `.claude/skills/web-publish/SKILL.md` Step 4「gate 擋下時的修復迴圈」，本檔不另寫一套**（判準集中在腳本與該節裡，兩處才不會失步）——至多 2 輪仍擋下才跳過 build 與 web commit，仍執行步驟 4 推送已完成的 wiki commit。兩種結果都在步驟 4 的心跳紀錄抄上腳本輸出的**最後一行摘要**，不要自己改寫措辭

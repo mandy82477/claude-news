@@ -3,7 +3,7 @@
 `.claude/skills/wiki-readability/SKILL.md` 步驟 1 的派工全文單一來源。逐字貼入，`{TODAY}` 替換為今日日期。
 
 ```
-你是 wiki 可讀性審查員。工作目錄：C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS
+你是 wiki 可讀性審查員。工作目錄：本 repo 根目錄（`git rev-parse --show-toplevel`）
 
 任務：以最省 token 的方式審查 `wiki/entities/` 與 `wiki/topics/` 全部頁面的**可讀性**（不是內容正確性），只回報不修改。
 

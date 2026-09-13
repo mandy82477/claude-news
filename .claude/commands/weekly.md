@@ -55,7 +55,7 @@ argument-hint: [YYYY-Wnn]
 
 ### 3. 統一收尾閉迴路
 
-兩段都跑完後才執行。`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`：
+兩段都跑完後才執行。`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`）：
 
 0. **重掃涵蓋窗與預告探針（在 commit 之前，不可略過）**——重列一次 `news/` 目錄，與步驟 1 寫進週報檔尾的涵蓋窗比對：
    - **有新日報**（開工後才產出者）→ 對這幾份補跑第 (3) 段所有續盯／新開條的 `｜查證：` 關鍵字 grep。命中且足以改變某列判定 → **改判該列，並在該列與檔尾標明更正緣由**；命中但不足以改判 → 檔尾註明已補掃。**選題與深挖不回頭改**（`.claude/skills/weekly-report/SKILL.md` 步驟 5 凍結原則），補掃只修正「會讓讀者被誤導的事實判定」

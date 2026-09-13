@@ -75,7 +75,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 **僅當步驟 4 實際執行了頁面修改時才需要**（使用者「都不要」且無 log 以外變更 → 仍須 commit log.md 這一筆，照走本步）。理由同 `.claude/skills/wiki-lint/SKILL.md` 步驟 10：本 skill 改 `wiki/*.md` 不會自動上站，web build 僅發生於本步與 `/news-pipeline`。
 
-依序執行（`REPO_ROOT` = `C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS`，`PYTHON` = `C:\Users\Mandy\AppData\Local\Programs\Python\Python313\python.exe`）：
+依序執行（`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`））：
 
 1. `git -C REPO_ROOT add wiki/` → `git -C REPO_ROOT commit -m "wiki: weekly review YYYY-MM-DD"`（無變更則跳過）
 2. `PYTHON REPO_ROOT\scripts\run_tests.py`（失敗 → 跳過 build 與 web commit，仍執行步驟 4 推送 wiki commit）
