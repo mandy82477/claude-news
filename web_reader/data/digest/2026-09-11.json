@@ -552,7 +552,7 @@
             "name": "Claude Code",
             "label": "最新動態",
             "date": "2026-09-11",
-            "body": "- **v2.1.268**：Claude apps gateway 新增 `pricing:` 設定（`gateway.yaml`），登入版 Claude Code 客戶端經 managed settings 取得一致費率，`/cost` 與 telemetry 對得上；計費細節見 [[entities/pricing]]。\n- **服務事故**：Mythos 5.1、Fable 5.1 錯誤率升高（09-11 14:28 UTC 已部署修復並監控中，尚未確認解決）；Claude API 延遲升高（09-10 21:43→23:24 UTC，已解決）。\n- **互動數更新**：Claude.ai Projects 知識庫串接需求（#2511，635 讚，今日互動最高）；Desktop 多視窗支援（#30154，249 讚）；VSCode Edit 預覽/diff 未顯示（#8660，90 讚）。"
+            "body": "- **v2.1.268**：Claude apps gateway 新增 `pricing:` 設定（`gateway.yaml`），登入版 Claude Code 客戶端經 managed settings 取得一致費率，`/cost` 與 telemetry 對得上；計費細節見 [[entities/pricing]]。\n- **服務事故**：Mythos 5.1、Fable 5.1 錯誤率升高（09-11 14:28 UTC 已部署修復並監控中，尚未確認解決）；Claude API 延遲升高（09-10 21:43→23:24 UTC，已解決）。\n- **互動數更新**：#2511、#30154、#8660 三案同指 Claude Code 與 Claude.ai／桌面版之間的整合缺口，Desktop 與 VSCode 使用者留意，官方未給時程。"
           }
         ]
       },
@@ -599,7 +599,7 @@
             "name": "Anthropic 政府與軍事政策",
             "label": "最新動態",
             "date": "2026-09-11",
-            "body": "- **威脅情報報告延燒**：Anthropic 發布 9 月威脅情報報告，揭露伊朗、葉門、俄羅斯、中國關聯行為者濫用 Claude 案例並已中止，跨十餘家媒體同日跟進（[[topics/anthropic-government-policy#攻防紀錄]]）。國家級行為者已把 Claude 當作攻擊工具鏈的一環，非假設情境。\n- **中國蒸餾線更新**：官方指控中國 AI 實驗室非法蒸餾攻擊，稱 Moonshot 曾暗中將用戶請求導向 Claude 處理。中美模型能力差距的官方敘事，來源仍是單方指控。\n- **國會壓力延燒**：跨黨派議員在研究員滅絕警告後推動新規；川普公開淡化 AI 滅絕風險說法。政策風向出現分歧，監管走向未定。"
+            "body": "- **威脅情報報告延燒**：Anthropic 發布 9 月威脅情報報告，揭露伊朗、葉門、俄羅斯、中國關聯行為者濫用 Claude 案例並已中止，跨十餘家媒體同日跟進（[[topics/anthropic-government-policy#攻防紀錄]]）。國家級行為者已把 Claude 當作攻擊工具鏈的一環，非假設情境。\n- **中國蒸餾線更新**：官方指控中國 AI 實驗室非法蒸餾攻擊，稱 Moonshot 曾暗中將用戶請求導向 Claude 處理。中美模型能力差距的官方敘事，來源仍是單方指控。\n- **國會壓力延燒**：跨黨派議員在研究員滅絕警告後推動新規；川普公開淡化 AI 滅絕風險說法；押注聯邦統一立法的合規規劃現在還不能定案。"
           }
         ]
       },
@@ -639,14 +639,14 @@
             "name": "Joe Benton",
             "label": "最新報導",
             "date": "2026-09-11",
-            "body": "Benton 曾任 Anthropic 安全研究團隊負責人，NBC 具名專訪確認其離職與警告；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。"
+            "body": "Benton 曾任 Anthropic 安全研究團隊負責人，NBC 具名專訪確認其離職與警告；事件全貌見 [[topics/recursive-self-improvement]]。他曾主管 Anthropic 安全研究，這是本波警告中唯一來自內部安全負責人層級的第一手評估。"
           },
           {
             "page": "entities/josh-engels",
             "name": "Josh Engels",
             "label": "最新報導",
             "date": "2026-09-11",
-            "body": "Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。"
+            "body": "Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。他來自 Google DeepMind，說明這波警告不限 Anthropic 一家，引用時別寫成單一公司事件。"
           }
         ]
       }

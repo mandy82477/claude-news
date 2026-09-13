@@ -100,9 +100,10 @@ class TestGenerator(unittest.TestCase):
         self.assertIn("⟨G-11⟩", hits[0])
         clean = [w for w in self.warnings if "topics/tail-in-label" in w and "頁內路標" in w]
         self.assertFalse(clean)
-        for bad in ("詳見下方使用現況表", "見「## 攻防紀錄」", "[[#技術彙整]]", "見『## 節』", "參見上方"):
+        for bad in ("詳見下方使用現況表", "見「## 攻防紀錄」", "[[#技術彙整]]", "見『## 節』", "參見上方",
+                    "（見『IPO 走到哪一格』細節區）", "課程表『押對了嗎』欄才會有值"):
             self.assertTrue(gen.PAGE_INTERNAL_RE.search(bad), bad)
-        for ok in ("見 [[topics/x#攻防紀錄]]", "累計 7 款", "下方"):
+        for ok in ("見 [[topics/x#攻防紀錄]]", "累計 7 款", "下方", "Musk 稱相關警告為「psyop」", "「蒸餾」手法"):
             self.assertFalse(gen.PAGE_INTERNAL_RE.search(ok), ok)
 
     def test_sections_in_spec_order_and_no_empty_shells(self):

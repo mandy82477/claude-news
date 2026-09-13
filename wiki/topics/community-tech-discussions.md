@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-12
 
 > **最熱討論**（2026-09-12）
-> - **Boris Cherny 親自回信「AI slop」質疑**：開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆，登上 Business Insider、Simon Willison 引述。
+> - **Boris Cherny 親自回信「AI slop」質疑**：開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆，登上 Business Insider、Simon Willison 引述。同樣質疑品質下滑的開發者，現在有官方正面回應可查核，不必只靠社群猜測。
 
 ---
 

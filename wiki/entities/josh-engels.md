@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新報導**（2026-09-11）
-> Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。
+> Engels 曾任 Google DeepMind AI 安全研究員，NBC 具名專訪確認其離職發言；事件全貌見 [[topics/recursive-self-improvement]]。他來自 Google DeepMind，說明這波警告不限 Anthropic 一家，引用時別寫成單一公司事件。
 
 ## 現況
 

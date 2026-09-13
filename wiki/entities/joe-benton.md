@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-11
 
 > **最新報導**（2026-09-11）
-> Benton 曾任 Anthropic 安全研究團隊負責人，NBC 具名專訪確認其離職與警告；事件全貌見 [[topics/recursive-self-improvement]]。具名專訪查證度高於社群匿名貼文，可直接引用。
+> Benton 曾任 Anthropic 安全研究團隊負責人，NBC 具名專訪確認其離職與警告；事件全貌見 [[topics/recursive-self-improvement]]。他曾主管 Anthropic 安全研究，這是本波警告中唯一來自內部安全負責人層級的第一手評估。
 
 ## 現況
 
