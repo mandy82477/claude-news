@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ❓ **待查證**（標 2026-08-10｜查 Legal IT Insider、Law.com）｜**Robert Mahari 出任 Claude for Legal 負責人**（2026-08-07 報導）：Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人（head of Claude for Legal）。Legal IT Insider、Law.com 同日獨立報導，可視為跨來源初步驗證，惟兩篇來源皆為 Google News RSS 轉址連結，僅標題層級可用，正文未見；部門具體職掌範圍、到任時間與過往經歷均未能確認。
 
 > **最新報導**（2026-08-08）
-> Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人，Legal IT Insider、Law.com 同日獨立報導（待核實）。
+> Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人，Legal IT Insider、Law.com 同日獨立報導。
 
 ---
 

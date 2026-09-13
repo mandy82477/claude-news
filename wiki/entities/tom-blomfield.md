@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ❓ **待查證**（標 2026-08-10｜查 Blomfield、Monzo｜複 2026-09-17｜訊 2026-09-02）｜**加入 Anthropic 傳聞**（2026-07-13 報導）：Business Insider 報導 Anthropic 聘請英國數位銀行 Monzo 共同創辦人 Tom Blomfield 加入公司，報導涉及 AI compute 與 Y Combinator 背景；僅單一媒體來源，職稱與具體職掌尚未明朗。後續（2026-09-01）：Business Insider 另文以「Anthropic's Tom Blomfield」稱呼並引述其談論「new coworkers」的言論，延續同一媒體對其已加入 Anthropic 的敘事，惟仍未見官方或第二來源確認，職稱與具體職掌仍未明朗。
 
 > **最新表態**（2026-09-02）
-> Business Insider 引述 Blomfield 談 Anthropic 新同事為「hyper-earnest group of meganerds」且「缺乏自我中心」（待核實）。
+> Business Insider 引述 Blomfield 談 Anthropic 新同事為「hyper-earnest group of meganerds」且「缺乏自我中心」。
 
 ---
 

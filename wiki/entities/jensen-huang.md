@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ❓ **待查證**（標 2026-08-27｜查 Jensen Huang、Hugging Face｜複 2026-09-10）｜**黃仁勳談對 OpenAI、Anthropic 投資規模「後悔」**（2026-08-27 報導）：Yahoo Finance 報導 Nvidia 傳出將投資 Hugging Face 129 億美元，同篇引述執行長黃仁勳表示對先前投資 OpenAI、Anthropic 的規模感到「後悔」；日報摘要僅載「regret」一詞，究竟是後悔投得太少（錯失更大獲利）或太多（規模風險），原文脈絡未展開，不得擇一推斷。
 
 > **最新報導**（2026-08-27）
-> Nvidia 傳將投資 Hugging Face 129 億美元，黃仁勳同篇表示對先前投資 OpenAI、Anthropic 規模感到「後悔」（待核實）。
+> Nvidia 傳將投資 Hugging Face 129 億美元，黃仁勳同篇表示對先前投資 OpenAI、Anthropic 規模感到「後悔」。
 
 ---
 
