@@ -56,24 +56,17 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，四個多月內長出至少�
 
 ## 外面的實作
 
-六種路線各挑一個最有辨識度的設計（皆 2026-09-12 查證）：
+六種路線各挑一個最有辨識度的設計，細節與出處一起放（皆 2026-09-12 查證）：
 
-- **Karpathy 原始模式**（一則貼文＋一份 gist）：規則檔當 schema；三個動作都是手動貼 prompt，沒有機制。
-- **Fulkerson 生產版**（個人生產環境）：學習迴路有「畢業」機制，規則穩定後就從提示裡移出。
-- **Ghelbur 重建版**（個人重建＋排程）：排程 agent 的改動先寫成當日 diff，24 小時後才生效。
-- **Jim Liu 六個月實錄**（35 頁／80 篇來源）：每頁 50 字 TL;DR，實測比讀目錄更省 context。
-- **CodeAlmanac**（開源工具，YC S26）：`garden` 指令修過期、斷鏈、重複、無據主張；沒事可修也是合法結果。
-- **wuphf**（開源工具，多 agent 共腦）：每個主張都帶出處 metadata，沒有出處的主張直接觸發警告。
-
-**實作細節**
-
-- **Karpathy 原始模式**：2026-04 的 X 貼文與 gist，數日內 5,000+ 星；三層與三動作都在，但動作全是手動 prompt。整理版本見 [Karpathy's pattern for an LLM wiki in production](https://aaronfulkerson.com/2026/04/12/karpathys-pattern-for-an-llm-wiki-in-production/)（2026-09-12 查證）。
-- **Fulkerson 生產版**：五處延伸——即時資料源取代檔案投遞、指令路由取代臨場 prompt、學習迴路有畢業機制、hook 強制、工作流副作用自動增益。作者回頭對照原始 gist 才發現自己缺全庫整理、目錄、活動 log、來源溯源（同上連結，2026-09-12 查證）。
-- **Ghelbur 重建版**：新事實寫在最上方、舊的留著；矛盾依來源新舊／權威／信心自動調和；會自己長出沒人要求的綜合頁；31 個 slash 指令、每夜與每週排程 agent（[I rebuilt Karpathy's LLM wiki](https://theaioperator.io/p/i-rebuilt-karpathys-llm-wiki-heres)，2026-09-12 查證）。
-- **Jim Liu 六個月實錄**：每日 15 分鐘，每次寫入中位數動 9 檔（4–23）；四個失敗是跳過整理累積孤兒與沒標的矛盾、過度潤飾原文（改用 `do-not-rewrite` 標籤）、蓋掉矛盾丟失歷史（改成 `contradicts:` 並存）、搬家時 schema 漂移長出重複頁（[六個月實錄](https://www.openaitoolshub.org/en/blog/karpathy-llm-wiki)，2026-09-12 查證）。
-- **Jim Liu 的兩個量測**：採用 `last_verified`、`confidence` 與標明關係的連結（連結後綴一個關係詞，如 `(uses)`）；500 頁以下 grep 比混合搜尋快，35 頁時把 Postgres 拿掉（同上，2026-09-12 查證）。
-- **CodeAlmanac**：從 Claude／Codex 對話紀錄與 diff、PR、URL 增量寫入，`topics.yaml` 組織主題，附本地 web 檢視器（[GitHub](https://github.com/AlmanacCode/codealmanac/)，2026-09-12 查證）。本庫 2026-07-22 曾收過此工具，見 [[topics/community-pattern-trends]] 趨勢九。
-- **wuphf**：多個 bot 共用一個腦，每個主張帶「哪個 bot、何時、哪個來源」；跨 bot 矛盾靠信心分數與時間戳調和（[GitHub](https://github.com/nex-crm/wuphf)，2026-09-12 查證）。
+- **Karpathy 原始模式**（2026-04 一則 X 貼文＋一份 gist，數日內 5,000+ 星）：規則檔當 schema；三層與三動作都在，但動作全是手動貼 prompt，沒有機制。整理版本見 [Karpathy's pattern for an LLM wiki in production](https://aaronfulkerson.com/2026/04/12/karpathys-pattern-for-an-llm-wiki-in-production/)。
+- **Fulkerson 生產版**（個人生產環境）：學習迴路有「畢業」機制，規則穩定後就從提示裡移出；另四處延伸是即時資料源取代檔案投遞、指令路由取代臨場 prompt、hook 強制、工作流副作用自動增益。作者回頭對照原始 gist 才發現自己缺全庫整理、目錄、活動 log、來源溯源（同上連結）。
+- **Ghelbur 重建版**（個人重建＋排程）：排程 agent 的改動先寫成當日 diff，24 小時後才生效；新事實寫在最上方、舊的留著，矛盾依來源新舊／權威／信心自動調和，會自己長出沒人要求的綜合頁；31 個 slash 指令、每夜與每週排程（[I rebuilt Karpathy's LLM wiki](https://theaioperator.io/p/i-rebuilt-karpathys-llm-wiki-heres)）。
+- **Jim Liu 六個月實錄**（35 頁／80 篇來源，每日 15 分鐘，每次寫入中位數動 9 檔、範圍 4–23）：每頁 50 字 TL;DR，實測比讀目錄更省 context；500 頁以下 grep 比混合搜尋快，35 頁時把 Postgres 拿掉（[六個月實錄](https://www.openaitoolshub.org/en/blog/karpathy-llm-wiki)）。
+  - 採用 `last_verified`、`confidence` 與帶關係詞的連結（如 `(uses)`）。
+  - 四個失敗：跳過整理累積孤兒與沒標的矛盾、過度潤飾原文（改用 `do-not-rewrite` 標籤）、蓋掉矛盾丟失歷史（改成 `contradicts:` 並存）、搬家時 schema 漂移長出重複頁。
+- **CodeAlmanac**（開源工具，YC S26）：`garden` 指令修過期、斷鏈、重複、無據主張，沒事可修也是合法結果（[GitHub](https://github.com/AlmanacCode/codealmanac/)）。
+  - 從 Claude／Codex 對話紀錄與 diff、PR、URL 增量寫入，`topics.yaml` 組織主題，附本地 web 檢視器；本庫 2026-07-22 曾收過此工具，見 [[topics/community-pattern-trends]] 趨勢九。
+- **wuphf**（開源工具，多 agent 共腦）：每個主張都帶「哪個 bot、何時、哪個來源」的出處 metadata，沒有出處的主張直接觸發警告；跨 bot 矛盾靠信心分數與時間戳調和（[GitHub](https://github.com/nex-crm/wuphf)）。
 
 這一類現在誰大、誰在漲，本頁不抄榜——見 [[topics/skill-interest-watch]] 的「LLM 知識庫／文件策展／知識傳承」類每日快照。
 
