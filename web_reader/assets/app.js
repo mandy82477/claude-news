@@ -330,12 +330,12 @@
   }
 
   // ── 讀者版日報（daily/*.md → digest JSON 的 reader 欄）────────────────
-  // 2026-09-12 改版「乙」：日報回答「今天 wiki 學到什麼」，按 wiki 六領域分節，
-  // 每條三段：一句新事實 → 頁面按鈕 → 改變了什麼判斷。沒有 reader 欄的日期（改版日之前）
-  // 退回舊的新聞式渲染，歷史頁不改行為。
-  // 乙-2（同日）：使用者裁決今日聚焦與重點話題留在讀者版頂部（它們是舊格式裡校準最久的
-  // 兩節，病灶是媒體覆述不是它們）；資料沿用 news/ 解析出的 focus／topStories，
-  // 其餘新聞區塊（技術更新／媒體／討論／付費）仍不畫。
+  // 2026-09-12 改版「乙」：日報回答「今天 wiki 學到什麼」，按 wiki 六領域分節。
+  // 乙-2（同日）：使用者裁決今日聚焦與重點話題留在讀者版頂部；資料沿用 news/ 解析出的
+  // focus／topStories，其餘新聞區塊（技術更新／媒體／討論／付費）仍不畫。
+  // 2026-09-13 改版「丙」：每條不再是 LLM 重寫的三段式，而是一頁一條——頁面按鈕＋該頁頂部
+  // 當日 callout 原文（label／date／body，body 是 markdown，走 mdToHtml 讓 wikilink 變按鈕）。
+  // 沒有 reader 欄的日期（改版日之前）退回舊的新聞式渲染，歷史頁不改行為。
   const READER_TOP_STORIES_MAX = 5;
   function readerNewsTopHtml(d) {
     const parts = [];
@@ -352,12 +352,12 @@
   }
   function readerDigestHtml(r) {
     const parts = [];
-    parts.push(`<div class="section__h section__h--reader"><span class="section__h-label">知 識 庫 今 天 學 到 什 麼</span><span class="section__h-en">what the wiki learned</span><span class="section__h-count">${r.itemCount || 0} updates</span></div>`);
+    parts.push(`<div class="section__h section__h--reader"><span class="section__h-label">知 識 庫 今 天 學 到 什 麼</span><span class="section__h-en">what the wiki learned</span><span class="section__h-count">${r.itemCount || 0} pages</span></div>`);
     if (r.summary) {
       parts.push(`<div class="reader-lede">${esc(r.summary)}</div>`);
     }
     if (r.noNews || !(r.sections || []).length) {
-      parts.push(`<div class="reader-empty">今日知識庫無新知。沒有新事實改變任何判斷，不拿舊料充數。</div>`);
+      parts.push(`<div class="reader-empty">今日知識庫無新知。沒有任何頁面的最新動態在今天改寫，不拿舊料充數。</div>`);
       return parts.join('\n');
     }
     r.sections.forEach(sec => {
@@ -370,11 +370,11 @@
       parts.push(`<div class="section section--reader">
 <div class="section__h"><span class="section__h-icon">${esc(icon)}</span><span class="section__h-label">${esc(spaced)}</span><span class="section__h-count">${sec.items.length} items</span></div>`);
       sec.items.forEach(it => {
-        const link = it.link ? wikilinkButtonHtml(it.link) : '';
+        const link = it.page ? wikilinkButtonHtml(it.name ? `${it.page}|${it.name}` : it.page) : '';
+        const meta = [it.label, it.date].filter(Boolean).map(esc).join(' · ');
         parts.push(`<div class="reader-item">
-  <div class="reader-item__fact">${esc(it.fact)}</div>
-  ${link ? `<div class="reader-item__page">${link}</div>` : ''}
-  ${it.judgment ? `<div class="reader-item__judgment">${esc(it.judgment)}</div>` : ''}
+  <div class="reader-item__page">${link}${meta ? `<span class="reader-item__meta">${meta}</span>` : ''}</div>
+  <div class="reader-item__body">${mdToHtml(it.body || '')}</div>
 </div>`);
       });
       parts.push('</div>');
@@ -401,7 +401,7 @@
       `<span class="digest-age">${_ageDays === 1 ? '1 day ago' : _ageDays + ' days ago'}</span>`;
     const r = d.reader || null;
     const metaTopItems = [
-      r ? `<span><b>${(d.focus || []).length}</b> focus</span><span class="sep">·</span><span><b>${r.itemCount || 0}</b> updates</span>`
+      r ? `<span><b>${(d.focus || []).length}</b> focus</span><span class="sep">·</span><span><b>${r.itemCount || 0}</b> pages</span>`
         : `<span><b>${d.articleCount}</b> articles</span>`,
       freshHtml,
     ].filter(Boolean);
@@ -752,7 +752,7 @@
         parts.push(`<a href="#${esc(d.date)}" class="arch__row" onclick="event.preventDefault();openDigestPage('${esc(d.date)}')">
   <div class="${dateCls}">${esc(d.date.slice(5))}<span class="dow">${esc(dow)}</span></div>
   <div class="arch__row__focus">${esc(d.preview)}</div>
-  <div class="arch__row__count">${d.kind === 'reader' ? (d.itemCount || 0) : (d.articleCount || 0)}<span class="unit">${d.kind === 'reader' ? 'updates' : 'items'}</span></div>
+  <div class="arch__row__count">${d.kind === 'reader' ? (d.itemCount || 0) : (d.articleCount || 0)}<span class="unit">${d.kind === 'reader' ? 'pages' : 'items'}</span></div>
 </a>`);
       });
       parts.push(`</div>

@@ -6,18 +6,23 @@ check_reader_digest.py — 讀者版日報（daily/YYYY-MM-DD.md）格式閘。
     python scripts/check_reader_digest.py [YYYY-MM-DD]   # 指定日期
     python scripts/check_reader_digest.py                # 掃全部 daily/*.md
 
-由 `.claude/skills/reader-digest/SKILL.md` 第 4 步呼叫。
-規格（節名、三段式、無新知行）住該步的「機械契約字串」表，本腳本是它的消費端；
+由 `.claude/skills/reader-digest/SKILL.md` 第 2 步呼叫。
+規格（標題行、六領域節名、頁面小節、callout 首行、無新知行）住
+`.claude/skills/reader-digest/references/format.md` 的「機械契約字串」表，本腳本是它的消費端；
 兩端互相指認並登記於 .claude/review-registry.json 的 sync_pairs。
 
-檢查六項：
+2026-09-13 改版「丙」：daily/ 由 scripts/build_reader_digest.py 從各頁頂部 callout 產出，
+本閘看守的是「產出（或手改）的檔案，網站解析端還認得」：
+
   1. 標題行 `# YYYY-MM-DD 今天 wiki 學到什麼`，日期與檔名一致
   2. h2 節名必須是六個領域之一（拼錯的節名整段會在網站上消失，這是唯一的看守）
-  3. 每個條目恰好三段（事實 → wikilink → 判斷句）；少一段代表「改變了什麼判斷」沒寫
-  4. 每條 ≤ 200 字元（剝掉 wikilink 後量測）
-  5. wikilink 目標存在於 wiki/（指到不存在的頁＝讀者點了沒有東西）
-  6. 事實句與總結句不含整理語（HOUSEKEEPING_WORDS）——主詞必須是世界上的東西，
-     不是本庫的頁面／表格／目錄（2026-09-12 乙-2，使用者：「每個領域都有一樣問題」）
+  3. 每個頁面小節 `### [[頁名|頁面標題]]` 必須在領域節底下，且頁名存在於 wiki/
+  4. 頁面小節底下至少一行 `>` callout；首行 `> **標籤**（YYYY-MM-DD…）` 的日期須等於檔名日期
+     （日期對不上＝抄到了別天的 callout，或有人手改了日期）
+  5. 領域節底下、頁面小節之外不得有散落的 `>` 行（那些行不會上站）
+
+內容本身（標籤字樣、字數、寫法）不查——那是各頁 callout 自己的事，規則在
+`.claude/reporter-rules/wiki-ingest-format.md`「頂部 delta-first callout」。
 
 行為：全過 exit 0；任何違規印出「檔案:行號 問題」後 exit 1。
 「今日 wiki 無新知」的空日檔一律視為合法（它是規格要求的寫法，不是失敗）。
@@ -33,18 +38,11 @@ WIKI_DIR = ROOT / "wiki"
 TITLE_RE = re.compile(r"^#\s+(\d{4}-\d{2}-\d{2})\s+今天 wiki 學到什麼\s*$")
 NO_NEWS_RE = re.compile(r"^>\s*今日 wiki 無新知（(\d{4}-\d{2}-\d{2})）\s*$")
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
-WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
-ITEM_SEP = "→"
-ITEM_MAX_CHARS = 200
+# 與 build_web.READER_PAGE_RE／READER_CALLOUT_RE 同形（規格端見 format.md 契約表）
+PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
+CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*（(\d{4}-\d{2}-\d{2})[^）\n]*）(.*)$")
 
-# 整理語：出現在事實句或總結句，代表這條寫的是知識庫自己動了哪裡，不是世界發生了什麼。
-# 規格端見 Step 2b「事實句的主詞必須是世界上的東西」。判斷句不查（它本來就可以談本庫怎麼看）。
-HOUSEKEEPING_WORDS = [
-    "本庫", "本頁", "拆成兩頁", "拆頁", "併頁", "汰除", "汰掉", "移出", "升為第一",
-    "改版", "主題頁", "新增頁", "獨立成新頁", "概覽表", "目錄補", "表格升", "留在原頁",
-]
-
-# 與 build_web.READER_DOMAIN_SECTIONS 同一組節名（規格端見 Step 2b 契約表）
+# 與 build_web.READER_DOMAIN_SECTIONS 同一組節名（規格端見 format.md 契約表）
 DOMAIN_LABELS = [
     "🛠️ 功能",
     "🤖 模型",
@@ -76,7 +74,16 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
 
     title_seen = False
     no_news = False
+    any_section = False
     current_label: str | None = None
+    page_line: int | None = None      # 目前頁面小節的行號；None＝不在任何頁面小節
+    page_quote_lines = 0
+
+    def close_page():
+        nonlocal page_line, page_quote_lines
+        if page_line is not None and page_quote_lines == 0:
+            problems.append(f"{rel}:{page_line} 頁面小節底下沒有任何 `>` callout 行，這頁在網站上會是空的")
+        page_line, page_quote_lines = None, 0
 
     for n, line in enumerate(lines, 1):
         stripped = line.strip()
@@ -94,69 +101,58 @@ def check_file(f: Path, valid_targets: set[str]) -> list[str]:
             no_news = True
             continue
 
-        # 總結句（第一個領域節之前的 `>` 行）也不得是整理紀錄
-        if current_label is None and stripped.startswith(">"):
-            hit = [w for w in HOUSEKEEPING_WORDS if w in stripped]
-            if hit:
-                problems.append(f"{rel}:{n} 總結句含整理語「{hit[0]}」——寫今天世界發生了什麼，不寫動了哪頁")
-            continue
-
         h = H2_RE.match(stripped)
         if h:
+            close_page()
             label = h.group(1).strip()
             if label not in DOMAIN_LABELS:
-                problems.append(
-                    f"{rel}:{n} 節名「{label}」不在六個領域內，該段在網站上會整段消失"
-                )
+                problems.append(f"{rel}:{n} 節名「{label}」不在六個領域內，該段在網站上會整段消失")
                 current_label = None
             else:
                 current_label = label
+                any_section = True
             continue
 
-        if not stripped.startswith("-"):
-            continue
-
-        if current_label is None:
-            problems.append(f"{rel}:{n} 條目不在任何領域節底下，不會上站")
-            continue
-
-        parts = [seg.strip() for seg in stripped[1:].split(ITEM_SEP)]
-        if len(parts) != 3 or not all(parts):
-            problems.append(
-                f"{rel}:{n} 條目不是三段式（事實 → [[頁名]] → 改變了什麼判斷），"
-                f"實得 {len(parts)} 段"
-            )
-            continue
-
-        hit = [w for w in HOUSEKEEPING_WORDS if w in parts[0]]
-        if hit:
-            problems.append(
-                f"{rel}:{n} 事實句含整理語「{hit[0]}」——主詞必須是世界上的東西，不是本庫的頁面／表格"
-            )
-
-        plain = WIKILINK_RE.sub(r"\1", stripped)
-        if len(plain) > ITEM_MAX_CHARS:
-            problems.append(f"{rel}:{n} 條目 {len(plain)} 字元，超過上限 {ITEM_MAX_CHARS}")
-
-        links = WIKILINK_RE.findall(parts[1])
-        if not links:
-            problems.append(f"{rel}:{n} 中段沒有 [[頁名]]，讀者無處可跳")
-        for raw in links:
-            target = raw.split("|")[0].split("#")[0].replace("\\", "").strip()
+        pm = PAGE_RE.match(stripped)
+        if pm:
+            close_page()
+            if current_label is None:
+                problems.append(f"{rel}:{n} 頁面小節不在任何領域節底下，不會上站")
+                continue
+            target = pm.group(1).split("#")[0].replace("\\", "").strip()
             if target not in valid_targets:
-                problems.append(f"{rel}:{n} wikilink [[{target}]] 指向不存在的 wiki 頁")
+                problems.append(f"{rel}:{n} 頁面小節 [[{target}]] 指向不存在的 wiki 頁")
+            page_line = n
+            continue
+
+        if stripped.startswith(">"):
+            if current_label is None:
+                continue  # 第一個領域節之前的總結句（產生器不寫，手寫時容許）
+            if page_line is None:
+                problems.append(f"{rel}:{n} `>` 行散落在頁面小節之外，不會上站")
+                continue
+            if page_quote_lines == 0:
+                cm = CALLOUT_RE.match(stripped)
+                if not cm:
+                    problems.append(f"{rel}:{n} callout 首行不是 `> **標籤**（YYYY-MM-DD…）` 形狀，網站上標籤與日期會空白")
+                elif cm.group(2) != f.stem:
+                    problems.append(f"{rel}:{n} callout 日期 {cm.group(2)} 與檔名 {f.stem} 不一致——抄到了別天的最新動態")
+            page_quote_lines += 1
+            continue
+
+    close_page()
 
     if not title_seen:
         problems.append(f"{rel}:1 缺標題行 `# {f.stem} 今天 wiki 學到什麼`")
-    if not no_news and current_label is None and not any(
-        H2_RE.match(l.strip()) for l in lines
-    ):
+    if not no_news and not any_section:
         problems.append(f"{rel}:1 既無領域節也無「今日 wiki 無新知」行，內容為空")
 
     return problems
 
 
 def main(argv: list[str]) -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     valid = _valid_wiki_targets()
     if len(argv) > 1:
         files = [DAILY_DIR / f"{argv[1]}.md"]

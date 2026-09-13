@@ -1147,9 +1147,11 @@ def parse_digest(f: Path) -> dict:
 
 
 # ── 讀者版日報（daily/YYYY-MM-DD.md）──────────────────────────
-# 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，進料是當日 ingest
-# 對 wiki/ 的 diff，不是新聞條目。原料 news/*.md 照產照存（溯源用）；讀者版日期只保留
-# 它的今日聚焦與重點話題上站（乙-2），其餘新聞區塊不畫。
+# 2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，六領域分節；原料 news/*.md 照產照存
+# （溯源用），讀者版日期只保留它的今日聚焦與重點話題上站（乙-2），其餘新聞區塊不畫。
+# 2026-09-13 改版「丙」：讀者版不再由 LLM 讀 wiki diff 重新消化，改由 scripts/build_reader_digest.py
+# 把各頁頂部當日（括號日期＝TARGET_DATE）的 callout 原樣搬出來——每個事實只有一個家（頁頂 callout），
+# 日報是它們按六領域排好的投影。每頁一個 `### [[頁名|頁面標題]]` 小節，底下是 callout 原文。
 # 規格端住 `.claude/skills/reader-digest/references/format.md`（步驟在 `.claude/skills/reader-digest/SKILL.md`），
 # 其「機械契約字串」表與本段互相指認並登記 .claude/review-registry.json 的 sync_pairs——
 # 節名或標記行改了而這裡沒跟，該領域整段靈默消失（同 2026-08-14 區塊 emoji 的死法）。
@@ -1168,14 +1170,37 @@ READER_DOMAIN_SECTIONS = [
     ("👤 人物",      "people"),
 ]
 READER_H2_RE = re.compile(r"^##\s+(.+?)\s*$")
-# 每條三段式：`- 一句新事實 → [[entities/claude-code]] → 改變了什麼判斷`
-# 分隔符是全形箭頭；恰好三段才收，少一段代表「改變了什麼判斷」沒寫——那正是過濾。
-READER_ITEM_SEP = "→"
+# 頁面小節 `### [[頁名|頁面標題]]`——一頁一節，別名是頁面 H1（前端仍以 wikiPageName 為準）
+READER_PAGE_RE = re.compile(r"^###\s+\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]\s*$")
+# callout 首行 `> **標籤**（YYYY-MM-DD…）`——標籤自由（最新動態／最新判讀／本週衝擊…），
+# 日期是「這則 callout 是哪天覆寫的」；與 build_reader_digest.CALLOUT_RE 同形
+READER_CALLOUT_RE = re.compile(r"^>\s*\*\*([^*\n]+?)\*\*\s*（(\d{4}-\d{2}-\d{2})[^）\n]*）(.*)$")
 READER_WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 
 
+def _reader_item_from_block(page: str, name: str, quote_lines: list[str]) -> dict:
+    """一個頁面小節 → item。quote_lines 是去掉 `>` 前綴後的 callout 原文行。"""
+    label, date_str, body = "", "", list(quote_lines)
+    if body:
+        m = READER_CALLOUT_RE.match("> " + body[0])
+        if m:
+            label, date_str = m.group(1).strip(), m.group(2)
+            rest = m.group(3).strip()
+            body = ([rest] if rest else []) + body[1:]
+    return {
+        "page": page,
+        "name": name,
+        "label": label,
+        "date": date_str,
+        "body": "\n".join(body).strip(),
+    }
+
+
 def parse_reader_digest(f: Path) -> dict:
-    """daily/YYYY-MM-DD.md → 讀者版 payload（掛進該日 digest JSON 的 `reader` 欄）。"""
+    """daily/YYYY-MM-DD.md → 讀者版 payload（掛進該日 digest JSON 的 `reader` 欄）。
+
+    sections[].items[] 每個 item 是一頁：page（wiki 路徑）、name（頁面標題）、label／date
+    （callout 首行的標籤與日期）、body（callout 其餘原文，markdown，前端用 mdToHtml 渲染）。"""
     raw = read_md(f)
     date_str = f.stem
     result: dict = {"date": date_str, "summary": "", "noNews": False,
@@ -1189,42 +1214,59 @@ def parse_reader_digest(f: Path) -> dict:
 
     by_label = dict(READER_DOMAIN_SECTIONS)
     current: dict | None = None
+    page: tuple[str, str] | None = None
+    quote: list[str] = []
+
+    def flush():
+        nonlocal page, quote
+        if current is not None and page is not None and quote:
+            current["items"].append(_reader_item_from_block(page[0], page[1], quote))
+        page, quote = None, []
+
     for line in raw.splitlines():
         h = READER_H2_RE.match(line)
         if h:
+            flush()
             label = h.group(1).strip()
             key = by_label.get(label)
             if key:
                 current = {"label": label, "key": key, "items": []}
                 result["sections"].append(current)
             else:
-                current = None  # 不認得的節名：其下條目不收，不靈默走進前一節
+                current = None  # 不認得的節名：其下頁面不收，不靈默走進前一節
+            continue
+        pm = READER_PAGE_RE.match(line)
+        if pm:
+            flush()
+            page = (pm.group(1).strip(), (pm.group(2) or "").strip())
             continue
         stripped = line.strip()
         if not stripped:
             continue
-        # 總結句：標題下、第一個領域節之前的首行 `>` 引述
-        if current is None and stripped.startswith(">"):
+        # 總結句：標題下、第一個領域節之前的 `>` 引述（丙版產生器不寫，手寫時仍認得）
+        if current is None and page is None and stripped.startswith(">"):
             if not result["summary"]:
                 result["summary"] = stripped.lstrip(">").strip()
             continue
-        if current is None or not stripped.startswith("-"):
-            continue
-        parts = [seg.strip() for seg in stripped[1:].split(READER_ITEM_SEP)]
-        if len(parts) != 3 or not all(parts):
-            continue
-        fact, link_raw, judgment = parts
-        lm = READER_WIKILINK_RE.search(link_raw)
-        current["items"].append({
-            "fact": fact,
-            "link": lm.group(1).strip() if lm else "",
-            "linkText": READER_WIKILINK_RE.sub("", link_raw).strip(),
-            "judgment": judgment,
-        })
+        if page is not None and stripped.startswith(">"):
+            quote.append(stripped[1:].strip())
+    flush()
 
     result["sections"] = [sec for sec in result["sections"] if sec["items"]]
     result["itemCount"] = sum(len(sec["items"]) for sec in result["sections"])
     return result
+
+
+def reader_preview(r: dict) -> str:
+    """日報卡片的 preview：有總結句用總結句；沒有（丙版產生器不寫）就拿第一頁的頁名＋callout 首句。"""
+    if r.get("summary"):
+        return r["summary"]
+    for sec in r.get("sections", []):
+        for it in sec["items"]:
+            first = strip_markdown_to_text(it.get("body", "")).split("\n")[0].strip().lstrip("-*• ").strip()
+            if first:
+                return f"{it.get('name') or it.get('page')}：{first}"
+    return ""
 
 
 def collect_reader_digests(daily_dir: Path) -> dict:
@@ -1256,8 +1298,9 @@ def attach_reader_digests(digest_all: dict, reader_all: dict) -> None:
             d = empty_digest(date_str)
             digest_all[date_str] = d
         d["reader"] = r
-        if r["summary"]:
-            d["preview"] = r["summary"][:160]
+        pv = reader_preview(r)
+        if pv:
+            d["preview"] = pv[:160]
 
 
 def reader_search_text(r: dict, d: dict | None = None) -> str:
@@ -1266,7 +1309,7 @@ def reader_search_text(r: dict, d: dict | None = None) -> str:
     segs = [r.get("summary", "")]
     for sec in r.get("sections", []):
         for it in sec["items"]:
-            segs.append(f"{it['fact']}；{it['judgment']}")
+            segs.append(f"{it.get('name', '')}；{it.get('label', '')}；{strip_markdown_to_text(it.get('body', ''))}")
     if d:
         segs.extend(f["text"] for f in d.get("focus", []) if f.get("text"))
         segs.extend(s["title"] for s in d.get("topStories", [])[:5] if s.get("title"))

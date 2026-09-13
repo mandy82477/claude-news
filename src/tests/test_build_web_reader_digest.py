@@ -1,18 +1,17 @@
-"""讀者版日報（daily/YYYY-MM-DD.md）解析契約測試。
+"""讀者版日報（daily/YYYY-MM-DD.md）契約測試：產生器 → 解析端 → 格式閘 三端同形。
 
-2026-09-12 日報改版「乙」：讀者版回答「今天 wiki 學到什麼」，來源是當日 ingest
-對 wiki/ 的 diff。規格端住 `.claude/skills/reader-digest/references/format.md` 的
-`Step 2b：讀者版日報`「機械契約字串」表；本檔鎖住三種情況：
+2026-09-12 改版「乙」：讀者版回答「今天 wiki 學到什麼」，六領域分節。
+2026-09-13 改版「丙」：讀者版由 scripts/build_reader_digest.py 從各頁頂部當日 callout 產出
+（一頁一條：`### [[頁名|頁面標題]]` ＋ callout 原文），不再由 LLM 讀 wiki diff 重寫三段式。
+規格端住 `.claude/skills/reader-digest/references/format.md` 的「機械契約字串」表；本檔鎖住：
 
-1. 完整六領域 —— 節名順序、每條三段（事實／wikilink／判斷句）都解得出來
-2. 部分領域省略 —— 沒有內容的領域整節不寫，解析端不得長出空殼節
-3. 無新知 —— `> 今日 wiki 無新知（YYYY-MM-DD）` 時 noNews=True 且無任何節
-
-另鎖住 attach_reader_digests 的兩條行為：有讀者版的日期掛 reader 欄並改寫
-preview；沒有讀者版的日期（改版日之前）一字不動——歷史頁不可壞。
-
-乙-2（2026-09-12 同日）：讀者版日期的今日聚焦與重點話題仍上站，搜尋索引要跟著收
-（reader_search_text 帶 d 時併入 focus 文字與前 5 則重點話題標題，其餘新聞區塊不收）。
+1. 產生器：只收括號日期＝TARGET_DATE 的頁頂 callout、標籤與內容原樣、按 frontmatter domain 分六節、
+   無 domain 的頁 WARN 不收、零命中寫無新知行、`（` 後不緊接日期的（如 ❓ 待查證）不當 callout
+2. 解析端：節名順序、一頁一 item（page／name／label／date／body）、部分領域省略不長空殼、
+   不認得的節名其下頁面不收、無新知 noNews=True
+3. attach_reader_digests：有讀者版的日期掛 reader 欄並改寫 preview；沒有的日期一字不動
+4. 搜尋文字：讀者版正文＋仍上站的聚焦與前 5 則重點話題標題（乙-2），其餘新聞區塊不收
+5. 格式閘 check_reader_digest.py：節名、頁面小節位置、wikilink 存在、callout 首行日期
 """
 import tempfile
 import unittest
@@ -21,55 +20,46 @@ from pathlib import Path
 from tests._helpers import load_script_module
 
 build_web = load_script_module("build_web")
+gen = load_script_module("build_reader_digest")
 
 
-FULL = """# 2026-09-12 今天 wiki 學到什麼
+def _page(domain: str, name: str, callouts: str, inbound: int = 0) -> str:
+    return (
+        "---\n"
+        f'page: "x"\ndomain: "{domain}"\ninbound_links: {inbound}\n'
+        "---\n"
+        f"# {name}\n\n**類型：** product\n**領域：** {domain}\n\n{callouts}\n---\n\n## 摘要\n\n"
+        "> **最新動態**（2020-01-01）\n> 分隔線之後的 callout 不在頁首，不該被收。\n"
+    )
 
-> 今天最重要的一句總結。
 
-## 🛠️ 功能
-
-- 功能事實一 → [[entities/claude-code]] → 功能判斷一。
-- 功能事實二 → [[topics/coding-workflow-guide]] → 功能判斷二。
-
-## 🤖 模型
-
-- 模型事實 → [[entities/opus-5]] → 模型判斷。
-
-## 💼 商業
-
-- 商業事實 → [[entities/pricing]] → 商業判斷。
-
-## 🏛️ 安全政策
-
-- 安全事實 → [[topics/ai-agent-safety]] → 安全判斷。
-
-## 🌐 社群
-
-- 社群事實 → [[topics/community-tech-patterns]] → 社群判斷。
-
-## 👤 人物
-
-- 人物事實 → [[entities/dario-amodei]] → 人物判斷。
-"""
-
-PARTIAL = """# 2026-09-13 今天 wiki 學到什麼
-
-> 只有兩個領域有東西。
-
-## 🛠️ 功能
-
-- 功能事實 → [[entities/claude-code]] → 功能判斷。
-
-## 🌐 社群
-
-- 社群事實 → [[topics/community-tech-patterns]] → 社群判斷。
-"""
-
-NO_NEWS = """# 2026-09-14 今天 wiki 學到什麼
-
-> 今日 wiki 無新知（2026-09-14）
-"""
+def _wiki(tmp: Path) -> Path:
+    (tmp / "entities").mkdir()
+    (tmp / "topics").mkdir()
+    (tmp / "entities" / "claude-code.md").write_text(_page(
+        "🛠️ 工具/功能", "Claude Code",
+        "> **最新動態**（2026-09-11）\n> - **v2.1.268**：gateway 新增 `pricing:` 設定，見 [[entities/pricing]]。\n> - **服務事故**：錯誤率升高。",
+        inbound=88), encoding="utf-8")
+    (tmp / "entities" / "managed-agents.md").write_text(_page(
+        "🛠️ 工具/功能", "Managed Agents",
+        "> **最新動態**（2026-09-11）\n> SDK v1.5.0 加 auto mode。", inbound=10), encoding="utf-8")
+    (tmp / "entities" / "old-page.md").write_text(_page(
+        "🤖 模型", "舊頁", "> **最新進展**（2026-09-01）\n> 不是今天。"), encoding="utf-8")
+    (tmp / "entities" / "pending-only.md").write_text(_page(
+        "👤 人物", "只有懸置標記的人",
+        "> ❓ **待查證**（標 2026-09-11｜查 X）｜**辭職**（2026-09-11 報導）：括號後不是日期，不算 callout。"),
+        encoding="utf-8")
+    (tmp / "topics" / "market-signals.md").write_text(_page(
+        "💼 商業", "投資訊號判讀",
+        "> ⚠️ **教學型事件研究，非投資建議**\n> 免責。\n\n> **最新判讀**（2026-09-11）\n> ⚖️ 兩面：同一頁的第二個 callout。"),
+        encoding="utf-8")
+    (tmp / "topics" / "no-domain.md").write_text(
+        "---\npage: \"x\"\n---\n# 沒有領域的頁\n\n> **本頁是什麼**（2026-09-11 快照）\n> 沒 domain。\n\n---\n",
+        encoding="utf-8")
+    (tmp / "topics" / "tail-in-label.md").write_text(_page(
+        "🌐 社群", "尾巴頁",
+        "> **本週趨勢觀察**（2026-09-11，補充說明）同行尾巴文字\n> 第二行。"), encoding="utf-8")
+    return tmp
 
 
 def _parse(text: str, date: str) -> dict:
@@ -79,186 +69,149 @@ def _parse(text: str, date: str) -> dict:
         return build_web.parse_reader_digest(f)
 
 
-class TestFullSixDomains(unittest.TestCase):
+class TestGenerator(unittest.TestCase):
     def setUp(self):
-        self.r = _parse(FULL, "2026-09-12")
+        self._td = tempfile.TemporaryDirectory()
+        self.wiki = _wiki(Path(self._td.name))
+        self.text, self.count, self.warnings = gen.generate("2026-09-11", self.wiki)
+        self.r = _parse(self.text, "2026-09-11")
 
-    def test_summary_and_flags(self):
-        self.assertEqual(self.r["date"], "2026-09-12")
-        self.assertEqual(self.r["summary"], "今天最重要的一句總結。")
-        self.assertFalse(self.r["noNews"])
+    def tearDown(self):
+        self._td.cleanup()
 
-    def test_all_six_domains_in_spec_order(self):
-        self.assertEqual(
-            [s["key"] for s in self.r["sections"]],
-            ["features", "models", "commercial", "safetyPolicy", "community", "people"],
-        )
+    def test_only_target_date_callouts_collected(self):
+        pages = [it["page"] for sec in self.r["sections"] for it in sec["items"]]
+        self.assertEqual(pages, ["entities/claude-code", "entities/managed-agents",
+                                 "topics/market-signals", "topics/tail-in-label"])
+        self.assertEqual(self.count, 4)
 
-    def test_item_count(self):
-        self.assertEqual(self.r["itemCount"], 7)
-
-    def test_three_segments_per_item(self):
-        it = self.r["sections"][0]["items"][0]
-        self.assertEqual(it["fact"], "功能事實一")
-        self.assertEqual(it["link"], "entities/claude-code")
-        self.assertEqual(it["judgment"], "功能判斷一。")
-
-    def test_section_labels_carry_domain_emoji(self):
-        # 領域 emoji 是資料值（與 wiki 標頭「領域」欄同源），不是 UI 圖示——
-        # 節名整串進 label，前端原樣顯示。
-        self.assertEqual(self.r["sections"][1]["label"], "🤖 模型")
-
-
-class TestPartialDomains(unittest.TestCase):
-    def setUp(self):
-        self.r = _parse(PARTIAL, "2026-09-13")
-
-    def test_only_written_domains_appear(self):
-        self.assertEqual([s["key"] for s in self.r["sections"]], ["features", "community"])
-
-    def test_no_empty_section_shells(self):
+    def test_sections_in_spec_order_and_no_empty_shells(self):
+        self.assertEqual([s["key"] for s in self.r["sections"]], ["features", "commercial", "community"])
         for sec in self.r["sections"]:
             self.assertTrue(sec["items"])
 
-    def test_item_count(self):
-        self.assertEqual(self.r["itemCount"], 2)
+    def test_callout_copied_verbatim_with_label_and_date(self):
+        it = self.r["sections"][0]["items"][0]
+        self.assertEqual(it["name"], "Claude Code")
+        self.assertEqual(it["label"], "最新動態")
+        self.assertEqual(it["date"], "2026-09-11")
+        self.assertIn("- **v2.1.268**：gateway 新增 `pricing:` 設定，見 [[entities/pricing]]。", it["body"])
+        self.assertIn("- **服務事故**：錯誤率升高。", it["body"])
+        self.assertNotIn("最新動態", it["body"], "首行標籤拆進 label，不重複進 body")
+
+    def test_inbound_links_orders_pages_within_section(self):
+        self.assertEqual([it["name"] for it in self.r["sections"][0]["items"]],
+                         ["Claude Code", "Managed Agents"])
+
+    def test_second_callout_on_same_page_kept_only_if_dated_today(self):
+        it = self.r["sections"][1]["items"][0]
+        self.assertEqual(it["label"], "最新判讀")
+        self.assertNotIn("免責", it["body"], "沒有日期的 ⚠️ 免責 callout 不算最新動態")
+
+    def test_label_tail_and_same_line_text_survive(self):
+        it = self.r["sections"][2]["items"][0]
+        self.assertEqual(it["label"], "本週趨勢觀察")
+        self.assertEqual(it["date"], "2026-09-11")
+        self.assertTrue(it["body"].startswith("同行尾巴文字"))
+        self.assertIn("第二行。", it["body"])
+
+    def test_pending_marker_is_not_a_callout(self):
+        self.assertNotIn("pending-only", self.text)
+
+    def test_page_without_domain_is_warned_not_silently_dropped(self):
+        self.assertNotIn("no-domain", self.text)
+        self.assertTrue(any("topics/no-domain" in w and "domain" in w for w in self.warnings))
+
+    def test_no_hit_day_writes_no_news_line(self):
+        text, count, _ = gen.generate("2026-09-10", self.wiki)
+        self.assertEqual(count, 0)
+        self.assertIn("> 今日 wiki 無新知（2026-09-10）", text)
+        self.assertTrue(_parse(text, "2026-09-10")["noNews"])
+
+    def test_generated_file_passes_checker(self):
+        chk = load_script_module("check_reader_digest")
+        valid = {"entities/claude-code", "entities/managed-agents", "topics/market-signals",
+                 "topics/tail-in-label"}
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "2026-09-11.md"
+            f.write_text(self.text, encoding="utf-8")
+            self.assertEqual(chk.check_file(f, valid), [])
 
 
-class TestNoNews(unittest.TestCase):
-    def setUp(self):
-        self.r = _parse(NO_NEWS, "2026-09-14")
+PARTIAL = """# 2026-09-13 今天 wiki 學到什麼
 
-    def test_flagged_and_empty(self):
-        self.assertTrue(self.r["noNews"])
-        self.assertEqual(self.r["sections"], [])
-        self.assertEqual(self.r["itemCount"], 0)
+## 🛠️ 功能
 
-    def test_summary_is_the_no_news_line(self):
-        self.assertEqual(self.r["summary"], "今日 wiki 無新知（2026-09-14）")
+### [[entities/claude-code|Claude Code]]
+
+> **最新動態**（2026-09-13）
+> 功能事實。
+
+## 不是領域的節
+
+### [[entities/pricing|定價]]
+
+> **最新動態**（2026-09-13）
+> 不該被收。
+
+## 🌐 社群
+
+### [[topics/community-tech-patterns|社群模式]]
+
+> **最新工作流模式**（2026-09-13）
+> 社群事實。
+"""
+
+NO_NEWS = """# 2026-09-14 今天 wiki 學到什麼
+
+> 今日 wiki 無新知（2026-09-14）
+"""
 
 
-class TestMalformedItemsAreDropped(unittest.TestCase):
-    """少一段箭頭＝「改變了什麼判斷」沒寫，那條就不該上站——那正是過濾。"""
+class TestParser(unittest.TestCase):
+    def test_unknown_section_pages_not_swallowed(self):
+        r = _parse(PARTIAL, "2026-09-13")
+        self.assertEqual([s["key"] for s in r["sections"]], ["features", "community"])
+        self.assertEqual(r["itemCount"], 2)
+        self.assertEqual(r["sections"][1]["label"], "🌐 社群")
 
-    def test_two_segment_item_not_collected(self):
-        r = _parse(
-            "# 2026-09-15 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-            "- 只有事實跟連結 → [[entities/claude-code]]\n"
-            "- 完整的一條 → [[entities/claude-code]] → 判斷句。\n",
-            "2026-09-15",
-        )
-        self.assertEqual(r["itemCount"], 1)
-        self.assertEqual(r["sections"][0]["items"][0]["fact"], "完整的一條")
+    def test_no_news(self):
+        r = _parse(NO_NEWS, "2026-09-14")
+        self.assertTrue(r["noNews"])
+        self.assertEqual(r["sections"], [])
+        self.assertEqual(r["summary"], "今日 wiki 無新知（2026-09-14）")
 
-    def test_unknown_section_items_not_swallowed_by_previous_domain(self):
-        r = _parse(
-            "# 2026-09-16 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-            "- 功能事實 → [[entities/claude-code]] → 功能判斷。\n\n"
-            "## 不是領域的節\n\n- 雜項 → [[entities/pricing]] → 不該被收。\n",
-            "2026-09-16",
-        )
-        self.assertEqual(r["itemCount"], 1)
+    def test_hand_written_summary_still_recognised(self):
+        r = _parse("# 2026-09-13 今天 wiki 學到什麼\n\n> 手寫總結。\n\n" + PARTIAL.split("\n", 2)[2], "2026-09-13")
+        self.assertEqual(r["summary"], "手寫總結。")
 
 
 class TestAttachReaderDigests(unittest.TestCase):
-    def test_reader_date_gets_reader_and_preview(self):
-        digest_all = {"2026-09-12": build_web.empty_digest("2026-09-12")}
-        digest_all["2026-09-12"]["preview"] = "舊的新聞式 preview"
-        reader_all = {"2026-09-12": _parse(FULL, "2026-09-12")}
-        build_web.attach_reader_digests(digest_all, reader_all)
-        d = digest_all["2026-09-12"]
+    def test_reader_date_gets_reader_and_preview_from_first_page(self):
+        digest_all = {"2026-09-13": build_web.empty_digest("2026-09-13")}
+        digest_all["2026-09-13"]["preview"] = "舊的新聞式 preview"
+        build_web.attach_reader_digests(digest_all, {"2026-09-13": _parse(PARTIAL, "2026-09-13")})
+        d = digest_all["2026-09-13"]
         self.assertIn("reader", d)
-        self.assertEqual(d["preview"], "今天最重要的一句總結。")
+        self.assertEqual(d["preview"], "Claude Code：功能事實。")
 
     def test_legacy_date_untouched(self):
         """改版日之前的日期沒有 daily/ 檔，digest 一字不動——歷史頁不可壞。"""
         legacy = build_web.empty_digest("2026-08-01")
         legacy["preview"] = "舊日報的 preview"
         digest_all = {"2026-08-01": legacy}
-        build_web.attach_reader_digests(digest_all, {"2026-09-12": _parse(FULL, "2026-09-12")})
+        build_web.attach_reader_digests(digest_all, {"2026-09-13": _parse(PARTIAL, "2026-09-13")})
         self.assertNotIn("reader", digest_all["2026-08-01"])
         self.assertEqual(digest_all["2026-08-01"]["preview"], "舊日報的 preview")
 
     def test_reader_without_raw_material_creates_bare_digest(self):
         digest_all: dict = {}
-        build_web.attach_reader_digests(digest_all, {"2026-09-12": _parse(FULL, "2026-09-12")})
-        self.assertIn("2026-09-12", digest_all)
-        self.assertEqual(digest_all["2026-09-12"]["articleCount"], 0)
-        self.assertEqual(digest_all["2026-09-12"]["sourceStatus"], [])
+        build_web.attach_reader_digests(digest_all, {"2026-09-13": _parse(PARTIAL, "2026-09-13")})
+        self.assertEqual(digest_all["2026-09-13"]["articleCount"], 0)
+        self.assertEqual(digest_all["2026-09-13"]["sourceStatus"], [])
 
 
-class TestReaderDigestChecker(unittest.TestCase):
-    """scripts/check_reader_digest.py 是 Step 2b 第 4 步的格式閘——它抓不到的
-    違規，會以「該領域整段在網站上消失」的形式靜默發生。"""
-
-    def setUp(self):
-        self.chk = load_script_module("check_reader_digest")
-        self.valid = {"entities/claude-code", "claude-code",
-                      "topics/community-tech-patterns", "community-tech-patterns"}
-
-    def _check(self, text, name="2026-09-12"):
-        with tempfile.TemporaryDirectory() as td:
-            f = Path(td) / f"{name}.md"
-            f.write_text(text, encoding="utf-8")
-            return self.chk.check_file(f, self.valid)
-
-    def test_good_file_passes(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 事實 → [[entities/claude-code]] → 判斷。\n")
-        self.assertEqual(self._check(text), [])
-
-    def test_no_news_file_passes(self):
-        text = "# 2026-09-12 今天 wiki 學到什麼\n\n> 今日 wiki 無新知（2026-09-12）\n"
-        self.assertEqual(self._check(text), [])
-
-    def test_bad_domain_label_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠 功能\n\n"
-                "- 事實 → [[entities/claude-code]] → 判斷。\n")
-        self.assertTrue(any("不在六個領域內" in p for p in self._check(text)))
-
-    def test_two_segment_item_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 事實 → [[entities/claude-code]]\n")
-        self.assertTrue(any("三段式" in p for p in self._check(text)))
-
-    def test_dead_wikilink_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 事實 → [[entities/does-not-exist]] → 判斷。\n")
-        self.assertTrue(any("不存在的 wiki 頁" in p for p in self._check(text)))
-
-    def test_overlong_item_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- " + "長" * 210 + " → [[entities/claude-code]] → 判斷。\n")
-        self.assertTrue(any("超過上限" in p for p in self._check(text)))
-
-    def test_housekeeping_fact_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 投資判讀頁拆成兩頁，教材獨立成新頁 → [[entities/claude-code]] → 判斷。\n")
-        self.assertTrue(any("事實句含整理語" in p for p in self._check(text)))
-
-    def test_housekeeping_summary_flagged(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 社群模式概覽表首度汰掉五類。\n\n## 🛠️ 功能\n\n"
-                "- 事實 → [[entities/claude-code]] → 判斷。\n")
-        self.assertTrue(any("總結句含整理語" in p for p in self._check(text)))
-
-    def test_housekeeping_word_in_judgment_is_allowed(self):
-        text = ("# 2026-09-12 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 官方發布 X → [[entities/claude-code]] → 本庫判斷這改變了選型。\n")
-        self.assertEqual(self._check(text), [])
-
-    def test_title_date_mismatch_flagged(self):
-        text = ("# 2026-01-01 今天 wiki 學到什麼\n\n> 總結。\n\n## 🛠️ 功能\n\n"
-                "- 事實 → [[entities/claude-code]] → 判斷。\n")
-        self.assertTrue(any("與檔名" in p for p in self._check(text)))
-
-
-if __name__ == "__main__":
-    unittest.main()
-
-
-class TestReaderSearchTextKeepsFocusAndHeadlines(unittest.TestCase):
-    """乙-2：讀者版日期仍上站的聚焦與重點話題要能被搜到；不上站的媒體區不索引。"""
-
+class TestReaderSearchText(unittest.TestCase):
     def setUp(self):
         self.r = _parse(PARTIAL, "2026-09-13")
         self.d = {
@@ -270,6 +223,8 @@ class TestReaderSearchTextKeepsFocusAndHeadlines(unittest.TestCase):
     def test_without_raw_digest_only_reader_text(self):
         txt = build_web.reader_search_text(self.r)
         self.assertIn("功能事實", txt)
+        self.assertIn("Claude Code", txt)
+        self.assertIn("最新工作流模式", txt)
         self.assertNotIn("聚焦句甲", txt)
 
     def test_focus_and_top_five_headlines_indexed(self):
@@ -278,3 +233,54 @@ class TestReaderSearchTextKeepsFocusAndHeadlines(unittest.TestCase):
         self.assertIn("重點 4", txt)
         self.assertNotIn("重點 5", txt, "重點話題只上站前 5 則，第 6 則不索引")
         self.assertNotIn("媒體覆述", txt)
+
+
+class TestChecker(unittest.TestCase):
+    """scripts/check_reader_digest.py 是 Step 2b 的格式閘——它抓不到的違規，
+    會以「該領域整段在網站上消失」的形式靜默發生。"""
+
+    def setUp(self):
+        self.chk = load_script_module("check_reader_digest")
+        self.valid = {"entities/claude-code", "claude-code", "topics/community-tech-patterns"}
+
+    def _check(self, text, name="2026-09-13"):
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / f"{name}.md"
+            f.write_text(text, encoding="utf-8")
+            return self.chk.check_file(f, self.valid)
+
+    HEAD = "# 2026-09-13 今天 wiki 學到什麼\n\n## 🛠️ 功能\n\n"
+
+    def test_good_file_passes(self):
+        self.assertEqual(self._check(self.HEAD + "### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-13）\n> 事實。\n"), [])
+
+    def test_no_news_file_passes(self):
+        self.assertEqual(self._check("# 2026-09-13 今天 wiki 學到什麼\n\n> 今日 wiki 無新知（2026-09-13）\n"), [])
+
+    def test_bad_domain_label_flagged(self):
+        text = "# 2026-09-13 今天 wiki 學到什麼\n\n## 🛠 功能\n\n### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-13）\n> 事實。\n"
+        self.assertTrue(any("不在六個領域內" in p for p in self._check(text)))
+
+    def test_dead_wikilink_flagged(self):
+        text = self.HEAD + "### [[entities/does-not-exist|X]]\n\n> **最新動態**（2026-09-13）\n> 事實。\n"
+        self.assertTrue(any("不存在的 wiki 頁" in p for p in self._check(text)))
+
+    def test_callout_date_mismatch_flagged(self):
+        text = self.HEAD + "### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-01）\n> 別天的。\n"
+        self.assertTrue(any("與檔名" in p and "callout" in p for p in self._check(text)))
+
+    def test_page_without_callout_flagged(self):
+        text = self.HEAD + "### [[entities/claude-code|Claude Code]]\n\n### [[topics/community-tech-patterns|Y]]\n\n> **最新動態**（2026-09-13）\n> 事實。\n"
+        self.assertTrue(any("沒有任何 `>` callout 行" in p for p in self._check(text)))
+
+    def test_stray_quote_outside_page_flagged(self):
+        text = self.HEAD + "> **最新動態**（2026-09-13）\n> 沒掛在頁面小節下。\n"
+        self.assertTrue(any("散落" in p for p in self._check(text)))
+
+    def test_title_date_mismatch_flagged(self):
+        text = "# 2026-01-01 今天 wiki 學到什麼\n\n## 🛠️ 功能\n\n### [[entities/claude-code|Claude Code]]\n\n> **最新動態**（2026-09-13）\n> 事實。\n"
+        self.assertTrue(any("標題日期" in p for p in self._check(text)))
+
+
+if __name__ == "__main__":
+    unittest.main()

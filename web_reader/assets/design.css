@@ -512,16 +512,18 @@ code {
   font-family: var(--font-sans); font-size: 13px; color: var(--ink-3);
   padding: 24px 0; text-align: center;
 }
-.reader-item { margin: 0 0 20px; }
-.reader-item__fact {
-  font-size: 15px; font-weight: var(--fw-regular);
-  color: var(--ink-1); line-height: 1.7; margin: 0 0 6px;
+.reader-item { margin: 0 0 22px; }
+.reader-item__page { margin: 0 0 6px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.reader-item__meta {
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.02em;
 }
-.reader-item__page { margin: 0 0 6px; }
-.reader-item__judgment {
-  font-size: 14px; color: var(--ink-2); line-height: 1.65;
+.reader-item__body {
+  font-size: 14px; color: var(--ink-2); line-height: 1.7;
   padding-left: 12px; border-left: 1px solid var(--ochre-5);
 }
+.reader-item__body p, .reader-item__body ul, .reader-item__body ol { margin: 0 0 6px; }
+.reader-item__body ul, .reader-item__body ol { padding-left: 18px; }
+.reader-item__body > :last-child { margin-bottom: 0; }
 
 /* 🧭 專頁雷達 — 定向抓取區塊，與正文六區以左側 hairline 區隔 */
 .section--radar { border-left: 1px solid var(--border-2); padding-left: 14px; }

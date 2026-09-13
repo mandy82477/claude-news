@@ -60,7 +60,7 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 | `Step 1b：生成日報` | 照做，完成後 commit（**不 push**） |
 | `Step 1c：確認 emitted-cache` | **照做，不可跳過，且必須 commit `src/news_aggregator/emitted_items.json`**（該 Step 已明文要求）——你是全新 checkout、結束後容器銷毀，不 commit 等於沒改過。2026-07-14～07-24 雲端每日確認率幾乎為 0 就是漏了這個 commit。失敗只記警告，繼續後續步驟 |
 | `Step 2：Wiki Ingest` | 照做，但規範在別的檔案，見下方「Wiki Ingest」段落 |
-| `Step 2b：讀者版日報` | 照做。你是頂層 session，ingest 一做完就接著做——**不可跳到 Step 3**，讀者版吃的是尚未 commit 的 wiki diff，commit 之後就取不到了 |
+| `Step 2b：讀者版日報` | 照做。你是頂層 session，ingest 一做完就接著跑 `scripts/build_reader_digest.py`——它讀的是記者剛覆寫的頁頂 callout（括號日期＝TARGET_DATE），跟 wiki 同一筆 commit 進 git |
 | `Step 3：Commit Wiki 變更` | 照做（不 push） |
 | `Step 4：建置 Web Reader` | 照做（先跑測試套件，失敗則跳過 build 仍繼續） |
 | `Step 5：Commit Web 並統一推送` | 照做，**單一 push** |

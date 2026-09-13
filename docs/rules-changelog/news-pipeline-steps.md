@@ -27,6 +27,20 @@
 **乙-2（同日晚間）：今日聚焦與重點話題回到讀者版頂部。** 使用者看過首份讀者版樣本後的原話：「我發現我還是喜歡今日聚焦、重點話題」，另加一句「有些沒必要出現在頁面的字就不用出現」。判斷：改版乙的病灶是 📰 媒體報導把同一事件覆述七次，不是聚焦那 3–5 條——聚焦是舊格式裡校準最久、規則最嚴的一節（30 天存活率追蹤、防重複、行內連結）；而首份「學到什麼」樣本記的是拆頁、汰表這類知識庫自身的整理，讀起來像維護日誌，不像今天發生了什麼。做法：讀者版日期在網站上先畫 news/ 解析出的 focus 與前 5 則 topStories，再接六領域；技術更新／付費／媒體／討論仍不畫；搜尋索引跟著收聚焦文字與那 5 則標題。「沒必要的字」落實為：讀者版日期不畫來源標籤（`HN Repo Bridge` 這類內部來源名）、UTC 抓取時間、情緒符號，頁首也不印來源數與產生時間。`daily/*.md` 契約與 Step 2b 產出一字未動——聚焦不必抄進讀者版檔，`build_web.py` 兩邊資料本來就都有。歷史頁（無 reader 欄）渲染不變。
 
 
+## 2026-09-13 丙
+
+**日報改版「丙」：讀者版從「LLM 讀 wiki diff 重寫三段式」改成「各頁頂部當日 callout 的投影」**（`Step 2b：讀者版日報` 現行做法的立法依據）。
+
+使用者提問原文：「請確認日報目前的 FORMAT，是不是可以改成列每個領域的最新動態？而不是 DIFF 又重新消化？」主編評估後提議「callout 成為唯一的家，日報只是投影」，並建議把 callout 定成固定形狀；使用者裁決：「我不想內容把他變成固定形狀，因為每個頁面重點可能不同。但我覺得可以放最新動態。」
+
+**病灶：** 乙版的 Step 2b 拿 09-12 那份實測，每一條都對得上某頁頂部記者剛寫的 callout（安全政策那條＝`ai-agent-safety` 的「最新安全事件」，功能那條＝`claude-code` 的「最新動態」第一點，商業那條＝`market-signals` 的「最新判讀」）——同一件事寫了兩次，第二次還是 LLM 從 diff 重新消化、要另跑 200 字元閘與整理語閘。改版乙選 diff 而不選 callout，沿革只寫了「不靠歸因記錄」，沒評估過 callout 這條路。
+
+**決策：** 外殼固定、內容自由。外殼＝`> **標籤**（YYYY-MM-DD）`——粗體標籤緊接全形括號、括號內緊接日期，這已是 `scripts/check_hierarchy.py` 驗「母頁不落後子頁」在用的形狀；標籤與內容不設規則（盤點 76 頁：17 頁用「最新動態」、約 10 頁用最新進展／最新判讀／本週衝擊等變體、57 頁沒有標籤化 callout——各頁重點本來就不同，強制統一會把「最新判讀」「本週衝擊」這些有資訊量的標籤壓掉）。Step 2b 改為 `scripts/build_reader_digest.py`：掃頁首、收括號日期＝TARGET_DATE 的 callout、按 frontmatter `domain` 分六節、`inbound_links` 排序、一頁一個 `### [[頁名|頁面標題]]` 小節、callout 原文照抄；不寫總結句（頂部已有今日聚焦）。格式閘 `check_reader_digest.py` 改看守「產出還被解析端認得」（節名、小節位置、wikilink 存在、callout 日期＝檔名日期），字數與整理語閘刪除——內容是各頁記者的事。`build_web.py` 解析端一頁一 item（page／name／label／date／body），`app.js` 以 mdToHtml 渲染 body，wikilink 變按鈕。
+
+**連帶：** 記者規則「頂部 delta-first callout」加一條：今日有實質更新的任何頁（entities/ 也算），callout 日期必須寫成 TARGET_DATE，否則這頁當天不上讀者版；只改內文不動 callout 的頁，讀者版看不到（與乙版「整理不算學到」同一取捨）。Step 2b 不再依賴未 commit 的 diff，補跑歷史日期可直接重跑腳本。registry 原「條目三段式」配對換成「頁面小節」配對，另加「callout 首行形狀」配對把記者規則、三支讀者版腳本與 check_hierarchy 綁成一組。乙版手寫樣本 `daily/2026-09-12.md` 以腳本重產（09-11、09-12 兩日），舊樣本在 git 歷史。
+
+**產生器實跑 WARN（交記者）：** `topics/skill-interest-watch` frontmatter 沒有 `domain`；`topics/safety-china-trust-dispute` 頁首 callout 沒有可解析日期。兩頁在修好前永遠不會進讀者版。
+
 ## 2026-09-13
 
 **步驟檔拆成四個 skill。** .claude/commands/news-pipeline-steps.md（626 行）刪除，不留轉址殼；步驟語意搬進 `.claude/skills/`，格式與判準抽成 skill 同目錄的 reference。本檔續為那四份 skill 的共同沿革檔（標題保留舊路徑，供考古鏈 `[加入: 日期]` 對得上）。

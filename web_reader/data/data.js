@@ -2658,16 +2658,16 @@ window.WIKI_DATA = {
       "date": "2026-09-12",
       "kind": "reader",
       "articleCount": 0,
-      "itemCount": 10,
-      "preview": "研究者用 8 種手法繞過 Claude Code 黑名單權限，只有白名單擋得住；另一份 30 天審計顯示 CLAUDE.md 寫了 TDD 規則，Claude 六成時候仍先寫碼。",
+      "itemCount": 4,
+      "preview": "投資判讀教材（週更）：建頁：7 課、3 條未上市消息線、IPO 背景知識一段。第一次結算 09-18 起，屆時課程表「押對了嗎」欄才會有值。",
       "topCount": 0
     },
     {
       "date": "2026-09-11",
-      "kind": "news",
+      "kind": "reader",
       "articleCount": 89,
-      "itemCount": 0,
-      "preview": "Anthropic 發布 2026 年 9 月威脅情報報告，揭露 7 大類 Claude 遭濫用案例：伊朗與葉門胡塞武裝疑似用於追蹤美國軍艦動態並協助飛彈研發規劃、俄羅斯駭客利用 Claude 自動化規避防毒偵測、中國實驗室疑似透過「蒸餾」手法大量擷取 Claude 輸出訓練自家模型，官方稱已偵測並封鎖相關帳號",
+      "itemCount": 10,
+      "preview": "Claude Code：v2.1.268：Claude apps gateway 新增 pricing: 設定（gateway.yaml），登入版 Claude Code 客戶端經 managed settings 取得一致費率，/cost 與 telemetry 對得上；計費細節見 entities/pricing。",
       "topCount": 5
     },
     {

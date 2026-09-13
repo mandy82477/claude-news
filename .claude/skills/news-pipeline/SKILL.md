@@ -23,9 +23,9 @@ TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** �
 
 ## Phase B：wiki ingest 與讀者版日報（Step 2 / 2b）
 
-- **做什麼：** 依 `.claude/skills/wiki-ingest/SKILL.md` 分類 → 派六類記者 → 彙整 `wiki/feature-radar.md`／`wiki/index.md`／`wiki/log.md`；接著依 `.claude/skills/reader-digest/SKILL.md` 讀當日 wiki diff 寫 `daily/TARGET_DATE.md`
+- **做什麼：** 依 `.claude/skills/wiki-ingest/SKILL.md` 分類 → 派六類記者 → 彙整 `wiki/feature-radar.md`／`wiki/index.md`／`wiki/log.md`；接著依 `.claude/skills/reader-digest/SKILL.md` 跑 `scripts/build_reader_digest.py`，把各頁頂部當日 callout 投影成 `daily/TARGET_DATE.md`
 - **誰做：** Step 2 由本 session 前景執行，六記者以 foreground 派工；`/news-pipeline` 本身也在前景呼叫。巢狀背景下記者的完成通知會送到最上層 session，實證見沿革檔 `docs/rules-changelog/news-pipeline-steps.md` 2026-08-29
-- **失敗怎麼辦：** Step 2 失敗記下結果（供 Step 6 log）仍進 Phase C，web build 不依賴 wiki；Step 2b 失敗不阻斷。Step 2b 排在 Step 2 之後、Step 3 之前——它吃的是尚未 commit 的 wiki 改動
+- **失敗怎麼辦：** Step 2 失敗記下結果（供 Step 6 log）仍進 Phase C，web build 不依賴 wiki；Step 2b 失敗不阻斷。Step 2b 排在 Step 2 之後、Step 3 之前——它讀的是記者剛覆寫的頁頂 callout，要跟 wiki 同一筆 commit 進 git
 
 ## Phase C：收尾與發布（Step 3 / 4 / 5 / 6）
 

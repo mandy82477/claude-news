@@ -1465,44 +1465,63 @@
       "_note": "2026-09-12 加入。摘要行是 f-string，literal 『EGRESS: official OK』不會出現在程式碼裡，故規格端釘實際字串、消費端釘 f-string 骨架與四個組名鍵。"
     },
     {
-      "name": "讀者版日報六領域節名（規格端 <-> 解析端 <-> 渲染端）：節名改了而 build_web / app.js 沒跟，該領域整段在網站上靜默消失（同 2026-08-14 區塊 emoji 的死法）",
+      "name": "讀者版日報六領域節名（規格端 <-> 產出端 <-> 解析端 <-> 渲染端）：節名改了而 build_web / app.js 沒跟，該領域整段在網站上靜默消失（同 2026-08-14 區塊 emoji 的死法）",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/reader-digest/references/format.md",
+        "scripts/build_reader_digest.py",
         "scripts/build_web.py",
         "scripts/check_reader_digest.py",
         "web_reader/assets/app.js"
       ],
       "patterns": [
-        "🛠️ 功能|READER_DOMAIN_SECTIONS|DOMAIN_LABELS|readerDigestHtml"
+        "🛠️ 功能|DOMAIN_TO_SECTION|READER_DOMAIN_SECTIONS|DOMAIN_LABELS|readerDigestHtml"
       ],
       "_note": "2026-09-12 加入（日報改版「乙」）。alternation 四支各對應一端：規格端釘節名原形（Step 2b 機械契約字串表），build_web 釘節名表常數名，check_reader_digest 釘它的節名白名單常數名，app.js 釘渲染函式名。六個節名的逐字內容由 check_reader_digest.py 每日在 Step 2b 驗，這裡看守的是「四端都還認得同一件事」。"
     },
     {
-      "name": "讀者版日報標題與無新知行（規格端 <-> build_web 解析器）：`# YYYY-MM-DD 今天 wiki 學到什麼` 與 `> 今日 wiki 無新知（YYYY-MM-DD）` 兩行的形狀是規格與程式的共同契約",
+      "name": "讀者版日報標題與無新知行（規格端 <-> 產出端 <-> build_web 解析器）：`# YYYY-MM-DD 今天 wiki 學到什麼` 與 `> 今日 wiki 無新知（YYYY-MM-DD）` 兩行的形狀是規格與程式的共同契約",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/reader-digest/references/format.md",
+        "scripts/build_reader_digest.py",
         "scripts/build_web.py"
       ],
       "patterns": [
-        "# YYYY-MM-DD 今天 wiki 學到什麼|READER_TITLE_RE",
+        "# YYYY-MM-DD 今天 wiki 學到什麼|TITLE_FMT|READER_TITLE_RE",
         "今日 wiki 無新知|READER_NO_NEWS_RE"
       ],
       "_note": "2026-09-12 加入。無新知行改壞的後果比標題行嚴重：空日會被當成「有內容但解不出來」，網站出空頁。"
     },
     {
-      "name": "讀者版日報條目三段式（規格端 <-> 解析端 <-> 格式閘）：`- 事實 → [[頁名]] → 判斷` 的全形箭頭分隔符，三端都得認得",
+      "name": "讀者版日報頁面小節（規格端 <-> 產出端 <-> 解析端 <-> 格式閘）：`### [[頁名|頁面標題]]` 一頁一節，四端都得認得",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/reader-digest/references/format.md",
+        "scripts/build_reader_digest.py",
         "scripts/build_web.py",
         "scripts/check_reader_digest.py"
       ],
       "patterns": [
-        "READER_ITEM_SEP|ITEM_SEP|一句新事實 → \\[\\[頁名\\]\\] → 改變了什麼判斷"
+        "### \\[\\[頁名\\|頁面標題\\]\\]|PAGE_HEADING_FMT|READER_PAGE_RE|PAGE_RE"
       ],
-      "_note": "2026-09-12 加入。分隔符改了而解析端沒跟，每一條都會被判成「不是三段式」而丟掉——寫了等於沒寫。"
+      "_note": "2026-09-13 改版「丙」取代原「條目三段式」配對（2026-09-12 加入）。小節形狀改了而解析端沒跟，該頁的 callout 變成散落的 `>` 行——寫了等於沒寫。"
+    },
+    {
+      "name": "頁頂 callout 首行形狀（記者規則 <-> 讀者版產出端 <-> 解析端 <-> 格式閘 <-> 階層檢查）：`> **標籤**（YYYY-MM-DD）` 是四支腳本共同 regex 的形狀，記者規則改外殼而腳本沒跟，該頁永遠進不了讀者版",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/reporter-rules/wiki-ingest-format.md",
+        ".claude/skills/reader-digest/references/format.md",
+        "scripts/build_reader_digest.py",
+        "scripts/build_web.py",
+        "scripts/check_reader_digest.py",
+        "scripts/check_hierarchy.py"
+      ],
+      "patterns": [
+        "> \\*\\*標籤\\*\\*（YYYY-MM-DD）|CALLOUT_RE|READER_CALLOUT_RE|CALLOUT_DATE_RE"
+      ],
+      "_note": "2026-09-13 加入（日報改版「丙」）。使用者裁決：callout 外殼固定、內容自由。外殼＝粗體標籤緊接全形括號、括號內緊接日期；check_hierarchy 早在 2026-09 前就靠同一形狀驗母頁不落後子頁，本配對把記者規則、讀者版三支腳本與它綁成一組。"
     },
     {
       "name": ".claude/rules/claude-md-edit.md <-> docs/rules-changelog/claude-md-edit.md：指路行與沿革檔互相指認（沿革節拆檔 2026-09-12，只改一側會讓指路懸空或沿革檔失去歸屬）",
