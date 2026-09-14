@@ -1643,6 +1643,37 @@ def build():
     except Exception as e:  # 地圖失敗不阻擋 build，前端優雅缺席
         print(f"WARN: graph.json skipped ({e})")
 
+    # ── stats.json（README 的動態 badge 讀這支）──────────────────────────────
+    # 為什麼要有：README 的規模數字原本是人工點算寫死的，隔一個月就不準。改由
+    # 建置產出，badge 去讀它，數字永遠跟著實際內容走。
+    # sources 刻意解析 news_aggregator/main.py 的註冊清單而非數 sources/*.py：
+    # 那個資料夾含 base.py（抽象基底）與 lobsters.py（模組存在但從未註冊），
+    # 數檔案會得到 16，實際會跑的只有 14。
+    try:
+        _src_n = None
+        _main_py = ROOT / "src" / "news_aggregator" / "main.py"
+        _m = re.search(r"^    sources = \[(.*?)^    \]", _main_py.read_text(encoding="utf-8"),
+                       re.S | re.M)
+        if _m:
+            _src_n = len(re.findall(r'^\s*\("', _m.group(1), re.M))
+        _stats = {
+            "generated": str(_today),
+            "latestNews": digest_index[0]["date"] if digest_index else "",
+            "latestWeekly": max((w["id"] for w in weekly_index), default=""),
+            "digests": len(digest_index),
+            "weeklies": len(weekly_index),
+            "wikiPages": len(entities) + len(topics),
+        }
+        if _src_n:
+            _stats["sources"] = _src_n
+        _out_stats = ROOT / "web_reader" / "data" / "stats.json"
+        with _out_stats.open("w", encoding="utf-8") as fp:
+            json.dump(_stats, fp, ensure_ascii=False, indent=2)
+        print(f"    -> {_out_stats} ({_stats['digests']} digests, "
+              f"{_stats['wikiPages']} wiki pages, {_stats.get('sources', '?')} sources)")
+    except Exception as e:  # badge 資料失敗不阻擋 build
+        print(f"WARN: stats.json skipped ({e})")
+
     wiki_data = {
         "entities":    [slim(e) for e in entities],
         "topics":      [slim(t) for t in topics],

@@ -6,10 +6,11 @@
 
 <p align="center"><em>A quiet wiki of noisy news.</em></p>
 
-[![daily-gather](https://github.com/mandy82477/claude-news/actions/workflows/daily-gather.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/daily-gather.yml)
+[![read](https://img.shields.io/badge/read-mandy82477.github.io%2Fclaude--news-8E5F3D?style=flat-square&labelColor=4A4640)](https://mandy82477.github.io/claude-news/web_reader/)
+[![latest digest](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.latestNews&label=latest%20digest&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
+[![digests](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.digests&label=digests&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
+[![wiki](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.wikiPages&suffix=%20pages&label=wiki&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
 [![daily-watchdog](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml)
-[![weekly-linkcheck](https://github.com/mandy82477/claude-news/actions/workflows/weekly-linkcheck.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/weekly-linkcheck.yml)
-![Python 3.13+](https://img.shields.io/badge/python-3.13%2B-blue)
 
 每日聚焦 Claude Code 與 Anthropic 核心動態，從官方更新到社群實測。所有條目經 LLM 評分過濾、繁中摘要、再沉澱進 wiki，給需要穩定訊號而非即時噪音的工程師。
 
@@ -24,6 +25,8 @@
 - [規模](#規模)
 - [三個主軸](#三個主軸)
 - [一天怎麼歸檔](#一天怎麼歸檔)
+- [每週一份週報](#每週一份週報)
+- [知識圖譜](#知識圖譜)
 - [這是一個 LLM wiki：三個動作](#這是一個-llm-wiki三個動作)
 - [自動化怎麼運作](#自動化怎麼運作)
 - [適合誰](#適合誰)
@@ -35,9 +38,9 @@
 | | 數量 |
 |---|---|
 | 每日日報 | 138 份（2026-04-25 起，涵蓋 142 天） |
-| wiki 頁面 | 85 頁（47 個實體、38 個主題） |
-| 抓取管道 | 16 個 |
-| 來源歸因 | 1,766 筆 |
+| 每週週報 | 8 份（2026-W30 起連續八週） |
+| wiki 頁面 | 85 頁（人物與產品 47 頁、長期議題 38 頁） |
+| 抓取管道 | 14 個 |
 
 wiki 頁面依領域分佈：
 
@@ -64,12 +67,26 @@ wiki 頁面依領域分佈：
 
 ## 一天怎麼歸檔
 
-1. **多來源抓取**：十餘個管道。Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、Lobsters、API Release Notes、官方文件變動、技術部落格 RSS。完整清單見 `src/news_aggregator/sources/`。
+1. **多來源抓取**：14 個管道。Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、API Release Notes、官方文件變動、技術部落格 RSS。完整清單見 `src/news_aggregator/sources/`。
 2. **去重過濾**：URL 與標題模糊比對。
 3. **相關性評分**：1 到 5 分，3 分以上保留。
 4. **LLM 摘要**：繁中 Markdown 日報，落在 `news/YYYY-MM-DD.md`。
 5. **Wiki 沉澱**：日報條目整理進 `wiki/`（人物、產品、事件、議題、功能雷達）。條目進了 wiki 才算「已沉澱」。
 6. **網站更新**：重建靜態 web reader 並部署到 GitHub Pages。
+
+## 每週一份週報
+
+日報是當天發生什麼，週報是這一週的敘事。四節固定：頭條敘事、技術討論與深挖、下週看什麼、本週數字。頭條從使用者側的具體事件開篇，不從公司公告開篇——本週的頭條主角是一位英國顧問，他沒開工那天用量卻從 45% 爬到 55%。
+
+「下週看什麼」寫下的每個預測都進 `weekly/open-signals.jsonl`（目前 88 筆），隔週回頭對帳：命中、落空，還是條件變了。寫預測容易，記錄自己猜錯比較難。
+
+## 知識圖譜
+
+wiki 是 Obsidian vault，但要看關聯圖不必開 Obsidian——網站「地圖」分頁重畫了一次，可篩選、可搜尋、點節點開側欄。
+
+89 個節點、615 條連結。關鍵在邊怎麼算：連結分正文引用（497 條）與樣板區引用（310 條），地圖預設勾「只看正文引用」。多數自動產生的知識圖把每條連結等價計算，「相關實體」「延伸閱讀」那種樣板區一算進去就糊成毛球；這裡預設只畫有人真的在正文裡寫下的關聯，需要時再把樣板邊打開。
+
+節點帶領域色與「距上次更新幾天」，哪一塊還在動、哪一塊冷掉了，一眼看得出來。
 
 ## 這是一個 LLM wiki：三個動作
 
@@ -158,6 +175,7 @@ python scripts/build_web.py
 | 路徑 | 是什麼 |
 |---|---|
 | `news/` | 每日日報 `YYYY-MM-DD.md`，唯讀原料 |
+| `weekly/` | 每週週報 `YYYY-Www.md`；`open-signals.jsonl` 是預測對帳帳本 |
 | `wiki/` | LLM 維護的知識庫：`entities/`、`topics/`、`index.md` 路由、`log.md` 不可改的過去、`feature-radar.md` |
 | `src/news_aggregator/` | Python 新聞聚合器；`sources/` 每個來源一檔 |
 | `src/DesignDocument/` | 流程設計與模組說明 |
@@ -166,5 +184,3 @@ python scripts/build_web.py
 | `.claude/` | Claude Code 的 skills、commands、rules、記者 agent 規則，也就是 pipeline 的 LLM 端 |
 | `.github/workflows/` | `daily-gather`、`daily-watchdog`、`weekly-linkcheck` |
 | `docs/` | 自動化架構、雲端 runbook、規則沿革、頁面健檢紀錄 |
-
-開發者規則入口是根目錄 `CLAUDE.md`；wiki 的維護規則在 `wiki/CLAUDE.md`。
