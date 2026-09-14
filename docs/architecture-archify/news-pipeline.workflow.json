@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "自動化新聞知識庫系統 · 全流程總覽",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "phase-a", "label": "Phase A · 背景 agent", "focus": ["trigger", "gather", "digest", "gather_fail"], "note": "抓料與生日報，無需人力介入。" },
+      { "id": "phase-b", "label": "Phase B · 不可委派", "focus": ["digest", "ingest", "reader_digest"], "note": "唯一必須由呼叫 session 親自執行的一段，因巢狀背景限制。" },
+      { "id": "phase-c", "label": "Phase C · 發布與收尾", "focus": ["web_gate", "gate_block", "single_push"], "note": "建置閘門、單一 push、失敗時的降級路徑。" }
+    ]
+  },
+  "lanes": [
+    { "id": "phaseA", "label": "Phase A · 背景 agent（sonnet）" },
+    { "id": "phaseB", "label": "Phase B · 呼叫 Session（不可委派）" },
+    { "id": "phaseC", "label": "Phase C · 背景 agent（sonnet）" },
+    { "id": "exceptions", "label": "失敗／降級路徑", "variant": "exception" }
+  ],
+  "mainPath": ["trigger", "gather", "digest", "ingest", "reader_digest", "web_gate", "single_push"],
+  "nodes": [
+    { "id": "trigger", "lane": "phaseA", "col": 0, "type": "frontend", "label": "/news-pipeline", "sublabel": "Session 觸發", "width": 128 },
+    { "id": "gather", "lane": "phaseA", "col": 1, "type": "backend", "label": "Step 0-1a 抓取", "sublabel": "缺跑檢查＋聚合器（無 LLM）", "width": 168 },
+    { "id": "digest", "lane": "phaseA", "col": 2, "type": "backend", "label": "Step 1b 生成日報", "sublabel": "六區塊＋自檢", "width": 140 },
+    { "id": "gather_fail", "lane": "exceptions", "col": 2, "type": "security", "label": "Aggregator FAILED", "sublabel": "跳過 B/C", "width": 148 },
+    { "id": "ingest", "lane": "phaseB", "col": 3, "type": "security", "label": "Step 2 Wiki Ingest", "sublabel": "主編→六記者→彙整", "tag": "human/session gate", "width": 170 },
+    { "id": "reader_digest", "lane": "phaseB", "col": 4, "type": "backend", "label": "Step 2b 讀者日報", "sublabel": "callout 投影＋格式閘", "width": 160 },
+    { "id": "web_gate", "lane": "phaseC", "col": 4, "type": "security", "label": "Step 4 Build Gate", "sublabel": "commit＋至多 2 輪自修", "tag": "blocking", "width": 168 },
+    { "id": "single_push", "lane": "phaseC", "col": 5, "type": "cloud", "label": "Step 5 Push", "sublabel": "衝突自解僅 2 類，彙整輸出", "width": 168 },
+    { "id": "gate_block", "lane": "exceptions", "col": 5, "type": "security", "label": "Gate 仍擋", "sublabel": "跳過 build 照推", "width": 130 }
+  ],
+  "edges": [
+    { "from": "trigger", "to": "gather" },
+    { "from": "gather", "to": "digest" },
+    { "from": "digest", "to": "gather_fail", "label": "失敗", "variant": "security", "role": "error" },
+    { "from": "digest", "to": "ingest", "label": "通知本 session", "variant": "emphasis" },
+    { "from": "ingest", "to": "reader_digest" },
+    { "from": "reader_digest", "to": "web_gate", "label": "Step 3 commit wiki" },
+    { "from": "web_gate", "to": "single_push", "label": "通過" },
+    { "from": "web_gate", "to": "gate_block", "label": "仍擋", "variant": "security", "role": "error" },
+    { "from": "gate_block", "to": "single_push", "label": "跳過照推", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "amber", "title": "環境鐵則", "items": ["沒有 ANTHROPIC_API_KEY，不呼叫任何外部 LLM API", "claude -p 全面禁用，LLM 只在 Claude Code session 內完成"] },
+    { "dot": "rose", "title": "為何 Phase B 不可委派", "items": ["Step 2 要派六位記者，背景 agent 再派 agent 會讓完成通知迷路", "所以必須由呼叫 skill 的 session 親自執行"] }
+  ]
+}

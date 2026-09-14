@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Wiki Ingest · 主編派工 Orchestrator",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    { "id": "editor", "label": "主編（呼叫 session）" },
+    { "id": "reporters", "label": "六記者（並行，foreground）" },
+    { "id": "postprocess", "label": "彙整後沉澱／判讀" }
+  ],
+  "groups": [
+    { "id": "six_reporters", "label": "六記者並行（同訊息 fan-out，各吃同一份五區塊 prompt）", "lane": "reporters", "fromCol": 0, "toCol": 5, "variant": "emphasis" }
+  ],
+  "nodes": [
+    { "id": "classify", "lane": "editor", "col": 0, "type": "backend", "label": "Step 1 分類", "sublabel": "日報＋未收錄＋定向抓取", "width": 148 },
+    { "id": "dispatch", "lane": "editor", "col": 1, "type": "messagebus", "label": "Step 2 派工", "sublabel": "五區塊 prompt 並行送出", "tag": "orchestrator", "width": 148 },
+    { "id": "converge", "lane": "editor", "col": 5, "type": "backend", "label": "Step 4 彙整", "sublabel": "index／log／radar／歸因", "width": 148 },
+    { "id": "rep_models", "lane": "reporters", "col": 0, "type": "backend", "label": "🤖 模型記者", "sublabel": "認領 wiki 🤖 模型頁", "width": 138 },
+    { "id": "rep_features", "lane": "reporters", "col": 1, "type": "backend", "label": "🛠️ 功能記者", "sublabel": "認領 wiki 🛠️ 功能頁", "width": 138 },
+    { "id": "rep_commercial", "lane": "reporters", "col": 2, "type": "backend", "label": "💼 商業記者", "sublabel": "認領 wiki 💼 商業頁", "width": 138 },
+    { "id": "rep_policy", "lane": "reporters", "col": 3, "type": "backend", "label": "🏛️ 政策記者", "sublabel": "認領 wiki 🏛️ 政策頁", "width": 138 },
+    { "id": "rep_community", "lane": "reporters", "col": 4, "type": "backend", "label": "🌐 社群記者", "sublabel": "認領 wiki 🌐 社群頁", "width": 138 },
+    { "id": "rep_people", "lane": "reporters", "col": 5, "type": "backend", "label": "👤 人物記者", "sublabel": "認領 wiki 👤 人物頁", "width": 138 },
+    { "id": "postprocess", "lane": "postprocess", "col": 5, "type": "external", "label": "4b／4c 沉澱與判讀", "sublabel": "彙整後才派", "width": 158 }
+  ],
+  "edges": [
+    { "from": "classify", "to": "dispatch" },
+    { "from": "dispatch", "to": "rep_features", "label": "並行送出六份 prompt" },
+    { "from": "rep_people", "to": "converge", "label": "六份回報後彙整" },
+    { "from": "converge", "to": "postprocess" }
+  ],
+  "cards": [
+    { "dot": "amber", "title": "六記者吃同一份格式", "items": ["角色前導／日期／條目節錄／待查證命中／轉知待接手，五區塊 prompt", "各自只認領自己的 wiki 領域頁，互不越界"] },
+    { "dot": "rose", "title": "兩條鐵則", "items": ["記者必須 foreground，背景會讓完成通知迷路", "記者不可再派 Agent，只有主編能派工"] }
+  ]
+}
