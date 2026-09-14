@@ -8,7 +8,6 @@
 
 [![daily-gather](https://github.com/mandy82477/claude-news/actions/workflows/daily-gather.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/daily-gather.yml)
 [![daily-watchdog](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml)
-[![quality](https://github.com/mandy82477/claude-news/actions/workflows/quality.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/quality.yml)
 [![weekly-linkcheck](https://github.com/mandy82477/claude-news/actions/workflows/weekly-linkcheck.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/weekly-linkcheck.yml)
 ![Python 3.13+](https://img.shields.io/badge/python-3.13%2B-blue)
 
@@ -160,7 +159,7 @@ python scripts/build_web.py
 | `web_reader/` | 靜態網頁閱讀器，`scripts/build_web.py` 建置 |
 | `scripts/` | 建置、連結檢查、wiki 圖譜等工具 |
 | `.claude/` | Claude Code 的 skills、commands、rules、記者 agent 規則，也就是 pipeline 的 LLM 端 |
-| `.github/workflows/` | `daily-gather`、`daily-watchdog`、`quality`、`weekly-linkcheck` |
+| `.github/workflows/` | `daily-gather`、`daily-watchdog`、`weekly-linkcheck` |
 | `docs/` | 自動化架構、雲端 runbook、規則沿革、頁面健檢紀錄 |
 
 開發者規則入口是根目錄 `CLAUDE.md`；wiki 的維護規則在 `wiki/CLAUDE.md`。
