@@ -385,10 +385,16 @@ code {
 /* 中文才是標題，拉丁這行只說明涵蓋範圍：同為 38px 會讓它比標題更搶眼
    （它反而更寬）。降一階並退到 ink-2，層級才讀得出來。
    不用 Cormorant——那是 40px 以上的展示字體，28px 會顯得又細又糊。 */
+/* 與 .wiki__h1 em、.about__hero-title em 同一個手法：純拉丁段落排成 Cormorant
+   斜體加 ochre，是本站的刊頭重音。日報標題原本沒用到，所以看起來比其他頁平。
+   32px 刻意不在八階字級尺標上：Cormorant 是展示字體、x-height 遠小於思源，
+   32px 的視覺大小約等於一般字體的 24px，它對齊的是光學尺寸不是文字尺標。
+   再小就會回到它當初被移出介面尺寸的原因——又細又糊。（2026-09-14） */
 .feed__meta-h1-en {
   display: block;
-  font-size: var(--fs-h2);
-  color: var(--ink-2);
+  font-family: var(--font-display); font-style: italic;
+  font-size: 32px; font-weight: var(--fw-medium);
+  color: var(--ochre-9);
   margin-top: 2px;
 }
 .feed__metarow {
@@ -609,7 +615,7 @@ code {
   .story, .story--star, .focus-item { padding-block: var(--space-sm); }
   /* 38/28px 的頁標題在 375px 會吃掉 167px、折成四行，佔掉首屏五分之一 */
   .feed__meta h1 { font-size: var(--fs-h2); }
-  .feed__meta-h1-en { font-size: var(--fs-h3); }
+  .feed__meta-h1-en { font-size: 26px; }
 }
 .reader-item__body > :last-child { margin-bottom: 0; }
 
