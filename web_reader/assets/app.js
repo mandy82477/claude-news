@@ -43,7 +43,7 @@
   function setDetailLoading(msg) {
     const el = $('#detail-content');
     if (el) el.innerHTML =
-      `<div style="padding:60px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:12px">${msg}</div>`;
+      `<div style="padding:60px;text-align:center;color:var(--fg-3);font-family:var(--font-body);font-size:var(--fs-small)">${msg}</div>`;
   }
 
   // ── Sort state ───────────────────────────────────────────────────────────────
@@ -386,7 +386,7 @@
 
   // ── Render digest ────────────────────────────────────────────────────────────
   function renderDigest(d, container) {
-    if (!d) { container.innerHTML = '<div style="padding:40px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:12px">No digest data.</div>'; return; }
+    if (!d) { container.innerHTML = '<div style="padding:40px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:var(--fs-meta)">No digest data.</div>'; return; }
 
     const dp = dateParts(d.date);
     const parts = [];
@@ -424,7 +424,7 @@
     <div class="feed__metarow">
       ${metaTopItems.join('<span class="sep">·</span>')}
     </div>
-    <div class="feed__metarow" style="margin-top:4px;font-size:11px">
+    <div class="feed__metarow" style="margin-top:4px;font-size:var(--fs-small)">
       <span>${metaBottomItems.join(' · ')}</span>
     </div>
   </div>
@@ -549,13 +549,13 @@
     if (!index.length) { container.innerHTML = ''; return; }
     const latestDate = index.slice().sort((a,b) => b.date.localeCompare(a.date))[0].date;
     container.innerHTML =
-      `<div style="padding:60px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:12px">載入中…</div>`;
+      `<div style="padding:60px;text-align:center;color:var(--fg-3);font-family:var(--font-body);font-size:var(--fs-small)">載入中…</div>`;
     try {
       const d = await fetchDigest(latestDate);
       renderDigest(d, container);
     } catch(e) {
       container.innerHTML =
-        `<div style="padding:40px;text-align:center;color:var(--fg-3);font-family:var(--font-mono);font-size:12px">載入失敗：${latestDate}.json</div>`;
+        `<div style="padding:40px;text-align:center;color:var(--fg-3);font-family:var(--font-body);font-size:var(--fs-small)">載入失敗：${latestDate}.json</div>`;
       console.error(e);
     }
   }
@@ -928,7 +928,7 @@
   function mdToHtml(md) {
     if (!md) return '';
     if (typeof marked === 'undefined') {
-      return `<pre style="white-space:pre-wrap;font-size:13px">${esc(md)}</pre>`;
+      return `<pre style="white-space:pre-wrap;font-size:var(--fs-small)">${esc(md)}</pre>`;
     }
     const src = md.replace(/\[\[([^\]]+)\]\]/g, (_, p) => `<WIKILINK>${p}</WIKILINK>`);
     return linkifyWikilinks(marked.parse(src));
@@ -1017,7 +1017,7 @@
       md = md.replace(/^(\s*\*\*[^*]+[：:]\*\*[^\n]*\n|\s*\n)*/m, '');
     }
     if (typeof marked === 'undefined') {
-      return `<pre style="white-space:pre-wrap;font-size:13px">${esc(md)}</pre>`;
+      return `<pre style="white-space:pre-wrap;font-size:var(--fs-small)">${esc(md)}</pre>`;
     }
     const detailMap = pendingDetailMap(md);
     md = md.replace(/\[\[([^\]]+)\]\]/g, (_, p) => `<WIKILINK>${p}</WIKILINK>`);
@@ -1301,13 +1301,13 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
 
     const slot = $('#weekly-latest-slot');
     if (!slot) return;
-    slot.innerHTML = `<div style="padding:40px;text-align:center;color:var(--ink-3);font-family:var(--font-mono);font-size:12px">載入中…</div>`;
+    slot.innerHTML = `<div style="padding:40px;text-align:center;color:var(--ink-3);font-family:var(--font-body);font-size:var(--fs-small)">載入中…</div>`;
     try {
       const w = await fetchWeekly(latest.id);
       slot.innerHTML = renderWeeklyJournal(w);
       makeTablesSortable(slot);
     } catch (e) {
-      slot.innerHTML = `<div style="padding:40px;text-align:center;color:var(--ink-3);font-family:var(--font-mono);font-size:12px">載入失敗：${esc(latest.id)}.json</div>`;
+      slot.innerHTML = `<div style="padding:40px;text-align:center;color:var(--ink-3);font-family:var(--font-body);font-size:var(--fs-small)">載入失敗：${esc(latest.id)}.json</div>`;
       console.error(e);
     }
   }
@@ -1317,7 +1317,7 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     const backLabel = $('#detail-back-label');
     if (backLabel) backLabel.textContent = '週報';
     const crumb = $('#detail-breadcrumb');
-    if (crumb) { crumb.textContent = id; crumb.style.cssText = 'font-family:var(--font-mono);font-size:12px;color:var(--tan-7)'; }
+    if (crumb) { crumb.textContent = id; crumb.style.cssText = 'font-family:var(--font-mono);font-size:var(--fs-meta);color:var(--tan-7)'; }
 
     switchView('detail', null);
     setDetailLoading('載入中…');
@@ -1433,7 +1433,7 @@ ${kidsHtml}
     const backLabel = $('#detail-back-label');
     if (backLabel) backLabel.textContent = '典藏';
     const crumb = $('#detail-breadcrumb');
-    if (crumb) { crumb.textContent = date; crumb.style.cssText = 'font-family:var(--font-mono);font-size:12px;color:var(--tan-7)'; }
+    if (crumb) { crumb.textContent = date; crumb.style.cssText = 'font-family:var(--font-mono);font-size:var(--fs-meta);color:var(--tan-7)'; }
 
     switchView('detail', null);
     setDetailLoading('載入中…');
