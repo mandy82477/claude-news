@@ -2614,7 +2614,7 @@ window.WIKI_DATA = {
       "firstSeen": "",
       "startDate": "2026-09-12",
       "lastUpdated": "2026-09-14",
-      "lastNewsUpdate": "2026-09-12",
+      "lastNewsUpdate": "2026-09-14",
       "updateFreq": "",
       "parent": "",
       "summary": "Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六種路線互異的公開實作，從個人生產版到可安裝的通用 skill。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，2026-09-12 已補上 `/wiki-quer…",
