@@ -1762,3 +1762,4 @@
 {"date": "2026-09-13", "source": "github", "category": "社群", "page": "topics/community-tech-patterns", "item_url": "https://github.com/proliferate-ai/proliferate", "item_title": "proliferate-ai/proliferate"}
 {"date": "2026-09-13", "source": "github", "category": "社群", "page": "topics/community-tech-patterns", "item_url": "https://github.com/zenstory-ai/oh-story-claudecode", "item_title": "zenstory-ai/oh-story-claudecode"}
 {"date": "2026-09-13", "source": "hacker-news", "category": "社群", "page": "topics/code-quality-decline", "item_url": "https://news.ycombinator.com/item?id=49672966", "item_title": "Ask HN: What default model do you use and why?"}
+{"date": "2026-09-14", "source": "user-query", "category": "社群", "page": "topics/llm-wiki-pattern", "item_url": "https://github.com/Astro-Han/karpathy-llm-wiki", "item_title": "使用者提問通道：Astro-Han/karpathy-llm-wiki README 查證", "publisher": "github.com"}

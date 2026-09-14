@@ -6377,3 +6377,8 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 📋 待使用者裁示：商業記者回報 ⚠️ 需主編查證官方說明中心——Max 5x／訂閱週用量計算方式是否有變動（GitHub issue #38335 850 留言／545 讚＋ Reddit 回報週用量 10% 帳單由約 $140 降至約 $50），雲端 egress 政策下無法查證 support.claude.com／官方公告，留待人工查證後裁示
 - devpractice 沉澱：候選 4 筆（entities/managed-agents：anthropic-sdk-python v0.118.0 懸置項目補齊；topics/community-pattern-trends：Fast Context Task Router 確認下架兩個月；entities/sonnet-5：Terminal-Bench 2.1 85.2% 首次中階模型勝過旗艦；topics/model-task-leaderboard：SWE-bench Pro/Verified 混談之謎解開＋Aider Polyglot 淘汰）；基準線 14ce5f46a5→9763cfc993
 - market 判讀：本日無訊號（已檢視 25 則精選＋延燒節錄；最接近門檻者為 Dario Amodei 全球暫緩呼籲，惟未見機關監管動作或具體數字變動，未達「機關出手」門檻；GitHub Max 額度 issue 與既有 pricing.md 09-12 數字重複，非新資訊，維持既有分工不判讀）
+## 2026-09-14 Query：Astro-Han/karpathy-llm-wiki 是什麼（使用者提問）
+
+- **查證**：讀其 GitHub README——把 Karpathy LLM wiki 模式打包成可安裝 Agent Skill（`npx add-skill`），raw／wiki／index／log 四件套與 Ingest／Query／Lint 三動作皆為通用指令，2,218 星、MIT，作者自維護 94 頁。
+- **處置**：[[topics/llm-wiki-pattern]]「外面的實作」補為第七種路線（可安裝的殼），callout、摘要、index 鉤子的「四種公開實作」改為六種；時序加 09-14。本庫 09-12 探針已命中此 repo（`data/repo_star_history.csv`）但頁面未列，屬漏收。
+- **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。

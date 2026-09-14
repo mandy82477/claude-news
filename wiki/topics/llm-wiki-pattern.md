@@ -3,7 +3,7 @@ page: "topics/llm-wiki-pattern"
 kind: "topic"
 status: "monitoring"
 domain: "🌐 社群"
-last_updated: "2026-09-13"
+last_updated: "2026-09-14"
 last_news_update: "2026-09-12"
 status_main: "monitoring"
 days_since_news: 1
@@ -29,17 +29,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** LLM Wiki, Karpathy wiki
 **蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 **開始日期：** 2026-09-12
-**最後更新：** 2026-09-13
+**最後更新：** 2026-09-14
 **最後新聞更新：** 2026-09-12
 
-> **最新動態**（2026-09-13）
-> Karpathy 四月提出的三層 wiki 模式已長出四種公開實作；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。
+> **最新動態**（2026-09-14）
+> Karpathy 四月提出的三層 wiki 模式已長出六種公開實作，最新一種是打包成可安裝 skill 的 Astro-Han/karpathy-llm-wiki（2.2k 星）；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。
 
 ---
 
 ## 摘要
 
-Karpathy 於 2026-04 提出的三層 wiki 模式，四個多月內長出至少四種路線互異的公開實作。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，2026-09-12 已補上 `/wiki-query`（六路分流、答案契約、答案回流），現在真正缺的是頁面沒有機器讀得懂的查證日與信心欄位。
+Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六種路線互異的公開實作，從個人生產版到可安裝的通用 skill。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，2026-09-12 已補上 `/wiki-query`（六路分流、答案契約、答案回流），現在真正缺的是頁面沒有機器讀得懂的查證日與信心欄位。
 
 ## 這個模式長什麼樣
 
@@ -56,7 +56,7 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，四個多月內長出至少�
 
 ## 外面的實作
 
-六種路線各挑一個最有辨識度的設計，細節與出處一起放（皆 2026-09-12 查證）：
+七種路線各挑一個最有辨識度的設計，細節與出處一起放（除註明者外皆 2026-09-12 查證）：
 
 - **Karpathy 原始模式**（2026-04 一則 X 貼文＋一份 gist，數日內 5,000+ 星）：規則檔當 schema；三層與三動作都在，但動作全是手動貼 prompt，沒有機制。整理版本見 [Karpathy's pattern for an LLM wiki in production](https://aaronfulkerson.com/2026/04/12/karpathys-pattern-for-an-llm-wiki-in-production/)。
 - **Fulkerson 生產版**（個人生產環境）：學習迴路有「畢業」機制，規則穩定後就從提示裡移出；另四處延伸是即時資料源取代檔案投遞、指令路由取代臨場 prompt、hook 強制、工作流副作用自動增益。作者回頭對照原始 gist 才發現自己缺全庫整理、目錄、活動 log、來源溯源（同上連結）。
@@ -67,6 +67,7 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，四個多月內長出至少�
 - **CodeAlmanac**（開源工具，YC S26）：`garden` 指令修過期、斷鏈、重複、無據主張，沒事可修也是合法結果（[GitHub](https://github.com/AlmanacCode/codealmanac/)）。
   - 從 Claude／Codex 對話紀錄與 diff、PR、URL 增量寫入，`topics.yaml` 組織主題，附本地 web 檢視器；本庫 2026-07-22 曾收過此工具，見 [[topics/community-pattern-trends]] 趨勢九。
 - **wuphf**（開源工具，多 agent 共腦）：每個主張都帶「哪個 bot、何時、哪個來源」的出處 metadata，沒有出處的主張直接觸發警告；跨 bot 矛盾靠信心分數與時間戳調和（[GitHub](https://github.com/nex-crm/wuphf)）。
+- **Astro-Han/karpathy-llm-wiki**（打包成可安裝的 Agent Skill，2,218 星／261 fork，MIT；2026-09-13 查證）：一行 `npx add-skill Astro-Han/karpathy-llm-wiki` 裝進 Claude Code、Cursor、Codex 等支援 Agent Skills 的工具；`raw/`／`wiki/`／`index.md`／`log.md` 四件套與 Ingest／Query／Lint 三動作都是通用指令，作者自己的 wiki 從 2026-04 維護至今 94 頁／99 個來源。README 把自己對比 RAG：知識在寫入時合成，不在每次查詢重推（[GitHub](https://github.com/Astro-Han/karpathy-llm-wiki)）。與前六者的差別是它不是某個人的 wiki，而是任何人拿來起自己 wiki 的殼——本庫 09-12 的 skill-interest-watch 探針即由它命中，見 [[topics/skill-interest-watch]]。
 
 這一類現在誰大、誰在漲，本頁不抄榜——見 [[topics/skill-interest-watch]] 的「LLM 知識庫／文件策展／知識傳承」類每日快照。
 
@@ -114,6 +115,10 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，四個多月內長出至少�
 - [nex-crm/wuphf](https://github.com/nex-crm/wuphf)——多 agent 共腦的出處 metadata（2026-09-12 查證）
 
 ## 時序
+
+### 2026-09-14
+
+- 補第七種路線 Astro-Han/karpathy-llm-wiki（使用者提問，查證其 README）：把模式打包成可安裝 Agent Skill，2.2k 星；本庫 09-12 探針早已命中但本頁未列。
 
 ### 2026-09-13
 
