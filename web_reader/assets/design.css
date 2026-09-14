@@ -243,6 +243,7 @@ code {
 }
 .nav__brand {
   display: flex; align-items: center; gap: 12px;
+  flex-shrink: 0;
   text-decoration: none; margin-right: 16px;
   line-height: 1; cursor: pointer;
   border: 0; padding: 0;
@@ -251,7 +252,7 @@ code {
 .nav__brand-mark { flex-shrink: 0; display: block; }
 .nav__brand-mark rect { transition: stroke 200ms; }
 .nav__brand:hover .nav__brand-mark rect { stroke: var(--ochre-9); }
-.nav__brand-text { display: flex; flex-direction: column; justify-content: center; }
+.nav__brand-text { display: flex; flex-direction: column; justify-content: center; white-space: nowrap; }
 .nav__brand-main {
   font-family: var(--font-head); font-weight: var(--fw-medium);
   font-size: var(--fs-body); letter-spacing: 0.04em; color: var(--ink-1);
@@ -263,14 +264,23 @@ code {
   margin: 0 4px;
 }
 .nav__brand-sub {
-  font-family: var(--font-mono); font-size: var(--fs-small);
+  /* 純拉丁刊頭副標，配 0.24em 字距：抬到 14px 會讓品牌區寬四成並擠爆導覽列 */
+  font-family: var(--font-mono); font-size: var(--fs-meta);
   font-weight: var(--fw-medium); letter-spacing: 0.24em;
   color: var(--ochre-9); margin-top: 4px;
   text-transform: uppercase;
 }
-.nav__links { display: flex; gap: 4px; }
+/* 481–1000px 這段原本沒有保護：塞不下時連結會在自己的盒子裡折行、互相重疊。
+   min-width:0 讓它能縮到內容寬度以下，overflow-x 讓它改用橫捲。（2026-09-14） */
+.nav__links {
+  display: flex; gap: 4px;
+  min-width: 0; overflow-x: auto;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.nav__links::-webkit-scrollbar { display: none; }
 .nav__link {
-  font-family: var(--font-body); font-size: var(--fs-body);
+  font-family: var(--font-body); font-size: var(--fs-small);
+  white-space: nowrap;
   font-weight: var(--fw-regular);
   padding: 6px 14px 4px;
   color: var(--ink-2); text-decoration: none; cursor: pointer;
@@ -328,7 +338,7 @@ code {
 .view.is-active { display: block; animation: view-in 240ms cubic-bezier(0.16, 1, 0.3, 1); }
 
 /* ── Feed (today) ────────────────────────────────────────────── */
-.feed { max-width: 640px; margin: 0 auto; padding: 32px 24px 80px; font-family: var(--font-cjk); }
+.feed { max-width: 760px; margin: 0 auto; padding: 32px 24px 80px; font-family: var(--font-cjk); }
 
 .feed__header {
   display: grid; grid-template-columns: 180px 1fr;
