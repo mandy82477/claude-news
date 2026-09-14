@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 **開始日期：** 2026-09-12
 **最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-12
+**最後新聞更新：** 2026-09-14
 
 > **最新動態**（2026-09-14）
 > Karpathy 四月提出的三層 wiki 模式已長出六種公開實作，最新一種是打包成可安裝 skill 的 Astro-Han/karpathy-llm-wiki（2.2k 星）；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。
@@ -67,7 +67,9 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六�
 - **CodeAlmanac**（開源工具，YC S26）：`garden` 指令修過期、斷鏈、重複、無據主張，沒事可修也是合法結果（[GitHub](https://github.com/AlmanacCode/codealmanac/)）。
   - 從 Claude／Codex 對話紀錄與 diff、PR、URL 增量寫入，`topics.yaml` 組織主題，附本地 web 檢視器；本庫 2026-07-22 曾收過此工具，見 [[topics/community-pattern-trends]] 趨勢九。
 - **wuphf**（開源工具，多 agent 共腦）：每個主張都帶「哪個 bot、何時、哪個來源」的出處 metadata，沒有出處的主張直接觸發警告；跨 bot 矛盾靠信心分數與時間戳調和（[GitHub](https://github.com/nex-crm/wuphf)）。
-- **Astro-Han/karpathy-llm-wiki**（打包成可安裝的 Agent Skill，2,218 星／261 fork，MIT；2026-09-13 查證）：一行 `npx add-skill Astro-Han/karpathy-llm-wiki` 裝進 Claude Code、Cursor、Codex 等支援 Agent Skills 的工具；`raw/`／`wiki/`／`index.md`／`log.md` 四件套與 Ingest／Query／Lint 三動作都是通用指令，作者自己的 wiki 從 2026-04 維護至今 94 頁／99 個來源。README 把自己對比 RAG：知識在寫入時合成，不在每次查詢重推（[GitHub](https://github.com/Astro-Han/karpathy-llm-wiki)）。與前六者的差別是它不是某個人的 wiki，而是任何人拿來起自己 wiki 的殼——本庫 09-12 的 skill-interest-watch 探針即由它命中，見 [[topics/skill-interest-watch]]。
+- **Astro-Han/karpathy-llm-wiki**（可安裝的 Agent Skill，2,218 星／261 fork，MIT；2026-09-13 查證）：一行 `npx add-skill Astro-Han/karpathy-llm-wiki` 裝進支援 Agent Skills 的工具（[GitHub](https://github.com/Astro-Han/karpathy-llm-wiki)）。
+  - `raw/`／`wiki/`／`index.md`／`log.md` 四件套與 Ingest／Query／Lint 三動作都是通用指令；作者自己的 wiki 從 2026-04 維護至今 94 頁／99 個來源。
+  - 與前六者的差別是它不是某個人的 wiki，而是任何人拿來起自己 wiki 的殼；README 把自己對比 RAG，知識在寫入時合成而非每次查詢重推。本庫 09-12 的 skill-interest-watch 探針即由它命中，見 [[topics/skill-interest-watch]]。
 
 這一類現在誰大、誰在漲，本頁不抄榜——見 [[topics/skill-interest-watch]] 的「LLM 知識庫／文件策展／知識傳承」類每日快照。
 
