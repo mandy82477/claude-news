@@ -6382,3 +6382,8 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **查證**：讀其 GitHub README——把 Karpathy LLM wiki 模式打包成可安裝 Agent Skill（`npx add-skill`），raw／wiki／index／log 四件套與 Ingest／Query／Lint 三動作皆為通用指令，2,218 星、MIT，作者自維護 94 頁。
 - **處置**：[[topics/llm-wiki-pattern]]「外面的實作」補為第七種路線（可安裝的殼），callout、摘要、index 鉤子的「四種公開實作」改為六種；時序加 09-14。本庫 09-12 探針已命中此 repo（`data/repo_star_history.csv`）但頁面未列，屬漏收。
 - **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。
+## 2026-09-14 Query：本庫已加入 BM25 全文檢索（使用者提問）
+
+- **查證**：讀 commit `856249f4` 與 `scripts/wiki_search.py`——頁面按標題切段做 BM25（繁中 bigram、英數整詞，零第三方依賴），`data/search_aliases.json` 同義叢集橋接用詞落差，`--expand` 以命中頁為種子沿 wikilink 圖擴散一跳；28 個測試含真實 wiki 回歸。起因是 2026-09-14 問「agent 視覺化」兩輪都答 wiki 沒有，而答案頁寫的是「可觀測性／協調地圖」，`index.md` 的一句摘要不含正文用詞，關鍵字篩候選在查證前就先漏掉。
+- **處置**：[[topics/llm-wiki-pattern]]「CLAUDE_NEWS 對照起來」兩處更新。「已經有的」查詢六路的第 2 路由「index」改為「全文 BM25」。「刻意不做的三件」的向量搜尋一條保留但補上界線：仍不做向量，2026-09-14 補的是**詞彙**檢索，因為漏頁成因不是 grep 慢而是挑候選的方式錯；BM25 是詞彙排序不是語意向量，那條界線沒有移動。
+- **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。
