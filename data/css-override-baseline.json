@@ -1,0 +1,16 @@
+{
+  "_note": "CSS 靜默覆寫閘的存量基線（命中指紋清單）。check_css_overrides.py 只對基線外的新增命中報 FAIL，基線內的印為 WARN 摘要。修好一筆就把它從清單移除——棘輪只能往下轉，不可為了轉綠而加回去。指紋 = 媒體條件 + 選擇器 + 衝突屬性，把該 @media 區塊移到基礎規則之後即失效。",
+  "_baseline_set": "2026-09-14",
+  "_hits": 9,
+  "fingerprints": [
+    "@media (max-width: 480px)|.about__cat-num|font-size,margin-bottom",
+    "@media (max-width: 480px)|.about__cat-title|font-size,margin-bottom",
+    "@media (max-width: 480px)|.about__categories|grid-template-columns,padding",
+    "@media (max-width: 480px)|.about__cat|padding",
+    "@media (max-width: 640px)|.focus-tag|margin-top",
+    "@media (max-width: 700px)|.about__step-num|margin",
+    "@media (max-width: 700px)|.about__steps::before|background,height,left,right,top",
+    "@media (max-width: 880px)|.about__categories|grid-template-columns,padding",
+    "@media (max-width: 880px)|.about__cat|border-right,padding"
+  ]
+}

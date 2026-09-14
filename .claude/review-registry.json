@@ -1705,5 +1705,12 @@
       "docs/cloud-runbooks/probe-*.md",
       ".claude/review-registry.json"
     ]
+  },
+  "css_overrides": {
+    "_note": "CSS 靜默覆寫閘的掃描範圍（scripts/check_css_overrides.py）。存量基線在 data/css-override-baseline.json。",
+    "enabled": true,
+    "globs": [
+      "web_reader/assets/*.css"
+    ]
   }
 }

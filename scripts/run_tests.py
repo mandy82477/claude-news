@@ -49,6 +49,7 @@ CHECK_WORKFLOW_PATHS = REPO_ROOT / "scripts" / "check_workflow_paths.py"
 CHECK_READER_LANGUAGE = REPO_ROOT / "scripts" / "check_reader_language.py"
 CHECK_CELL_LIMITS = REPO_ROOT / "scripts" / "check_cell_limits.py"
 CHECK_SKILL_REFS = REPO_ROOT / "scripts" / "check_skill_refs.py"
+CHECK_CSS_OVERRIDES = REPO_ROOT / "scripts" / "check_css_overrides.py"
 LAST_TESTS_OK = REPO_ROOT / ".claude" / ".last-tests-ok"
 
 
@@ -247,9 +248,23 @@ def main() -> int:
         stream.write(f"\nWARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘\n")
     stream.flush()
 
+    # CSS 靜默覆寫閘（2026-09-14：同特異度靠源順序決勝，一輪內命中六次的事故偵測器）
+    css_overrides_ok = True
+    if CHECK_CSS_OVERRIDES.exists():
+        proc = subprocess.run(
+            [sys.executable, str(CHECK_CSS_OVERRIDES)], capture_output=True, text=True, encoding="utf-8", errors="replace"
+        )
+        stream.write("\n" + (proc.stdout or "") + "\n")
+        if proc.stderr:
+            stream.write(proc.stderr + "\n")
+        css_overrides_ok = proc.returncode == 0
+    else:
+        stream.write(f"\nWARN: {CHECK_CSS_OVERRIDES} 不存在，跳過 CSS 覆寫閘\n")
+    stream.flush()
+
     all_ok = (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
               and freshness_ok and radar_ok and pending_ok and tools_ok and hierarchy_ok
-              and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok)
+              and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok and css_overrides_ok)
     if all_ok:
         # 全綠記號：.claude/hooks/check_tests_on_stop.py 用 mtime 比對，
         # 髒檔都比它舊就不必在每次 Stop 重跑整套測試（見 .claude/rules/dev-done.md）
