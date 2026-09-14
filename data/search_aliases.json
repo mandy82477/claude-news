@@ -1,0 +1,13 @@
+{
+  "_doc": "scripts/wiki_search.py 的查詢同義詞叢集。查詢句含叢集內任一詞時，其餘詞以較低權重併入檢索。只收「同一概念、頁面實際用詞不同」的對；規則見 data/README.md。",
+  "clusters": [
+    {"name": "可觀測性", "terms": ["視覺化", "可觀測性", "觀測", "儀表板", "dashboard", "監控", "live map", "協調地圖", "HUD", "log viewer", "transcript", "即時狀態"]},
+    {"name": "多 agent", "terms": ["多 agent", "多平行 agent", "multi-agent", "multi agent", "subagent", "子 agent", "agent teams", "fan-out", "並行 agent", "平行 agent", "orchestrat"]},
+    {"name": "隔離", "terms": ["隔離", "worktree", "sandbox", "沙盒", "容器", "container", "devcontainer"]},
+    {"name": "記憶", "terms": ["記憶", "memory", "CLAUDE.md", "context", "上下文", "壓縮", "compact"]},
+    {"name": "成本", "terms": ["成本", "帳單", "費用", "定價", "pricing", "token 消耗", "額度", "rate limit", "速率限制"]},
+    {"name": "把關", "terms": ["把關", "驗證", "hook", "Stop hook", "審查", "review", "閘", "gate", "它說做完了"]},
+    {"name": "遙控", "terms": ["遙控", "手機", "行動裝置", "mobile", "remote", "telegram", "bot", "不在電腦前"]},
+    {"name": "安全", "terms": ["安全", "security", "prompt injection", "注入", "權限", "permission", "越權"]}
+  ]
+}
