@@ -14,7 +14,7 @@
 
 每日聚焦 Claude Code 與 Anthropic 核心動態，從官方更新到社群實測。所有條目經 LLM 評分過濾、繁中摘要、再沉澱進 wiki，給需要穩定訊號而非即時噪音的工程師。
 
-*A daily, LLM-curated digest and wiki of Claude Code / Anthropic news, written in Traditional Chinese. Stable, not instant.*
+*A daily, LLM-curated digest and wiki of Claude Code / Anthropic news, written in Traditional Chinese. Built on Andrej Karpathy's LLM wiki pattern. Stable, not instant.*
 
 **📖 線上閱讀：<https://mandy82477.github.io/claude-news/web_reader/>** ｜ 日報與 wiki 都能在瀏覽器讀，不必開 Obsidian。
 
@@ -30,7 +30,6 @@
 - [這是一個 LLM wiki：三個動作](#這是一個-llm-wiki三個動作)
 - [自動化怎麼運作](#自動化怎麼運作)
 - [適合誰](#適合誰)
-- [快速開始](#快速開始)
 - [專案結構](#專案結構)
 
 ## 規模
@@ -95,7 +94,7 @@ wiki 是 Obsidian vault，但要看關聯圖不必開 Obsidian——網站「地
 | 動作 | 頻率 | 做什麼 |
 |---|---|---|
 | **寫入 Ingest** | 每日 | 主編分類日報、派六位記者各寫自己領域的頁；每個事實只有一個家，別處用 wikilink 指過去。頁面是「被策展的現在」，`log.md` 是不可改的過去，`index.md` 只放路由。 |
-| **查詢 Query** | 任何時候 | 在 Claude Code 裡 `/wiki-query`。依問題型態走六條路之一：專有名詞／issue 號直接 Grep、概念先跑 `scripts/wiki_search.py` 全文排序（同義叢集橋接用詞落差、`--expand` 沿 wikilink 擴散）再從 index 補挑、候選全開讀頁頂 callout、「最近怎樣」查 `log.md`、引用關係跑 `scripts/wiki_graph.py`。答案一律附出處與「現在／當時」狀態；wiki 裡沒有的事實，查一手來源後寫回該頁並標查證日，`log.md` 記一筆 Query 條目。設計全貌見 [`docs/wiki-ingest-query-design.md`](docs/wiki-ingest-query-design.md)。 |
+| **查詢 Query** | 任何時候 | `/wiki-query`。專有名詞直接 Grep；概念題走 BM25 全文排序，同義叢集橋接用詞落差、沿 wikilink 圖擴散補候選；引用關係查知識圖譜。答案附出處，wiki 沒有的事實查證後寫回。設計見 [`docs/wiki-ingest-query-design.md`](docs/wiki-ingest-query-design.md)。 |
 | **整理 Lint** | 每週 | `/weekly`、`/wiki-lint`：找矛盾、孤兒頁、過期 callout，蒸餾封存；歷史質疑抽題重驗。 |
 
 ## 自動化怎麼運作
@@ -129,47 +128,6 @@ wiki 是 Obsidian vault，但要看關聯圖不必開 Obsidian——網站「地
 
 > 「濾除社群雜訊，直擊 Claude Code 技術核心。」為需要深度與穩定資訊的工程師而建。
 
-## 快速開始
-
-**需求**
-
-- Python 3.13+
-- [Claude Code](https://claude.com/claude-code)：摘要、評分與 wiki 沉澱都在 Claude session 內執行。本專案**不使用** `ANTHROPIC_API_KEY`，沒有 Claude Code 只能跑到抓料階段。
-- `.env`（repo 根目錄）：
-
-  | 變數 | 必要 | 用途 |
-  |---|---|---|
-  | `GITHUB_TOKEN` | 建議 | GitHub Releases / Issues 來源，避免匿名速率限制 |
-  | `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` | 可選 | Reddit 來源 |
-
-**安裝**
-
-```bash
-pip install -r src/requirements_news.txt
-```
-
-**只抓料，不用 LLM**
-
-```bash
-python -m news_aggregator.main --gather-only
-```
-
-**完整跑一天**（在 Claude Code 裡）
-
-```
-/news-pipeline
-```
-
-日誌在 `src/logs/task_scheduler.log`。補跑過去日期用 `/wiki-backfill`，查 wiki 用 `/wiki-query`。
-
-**本機預覽網站**
-
-```bash
-python scripts/build_web.py
-```
-
-然後執行 `web_reader/serve.bat` 或任何靜態伺服器。
-
 ## 專案結構
 
 | 路徑 | 是什麼 |
@@ -183,4 +141,4 @@ python scripts/build_web.py
 | `scripts/` | 建置、連結檢查、wiki 圖譜等工具 |
 | `.claude/` | Claude Code 的 skills、commands、rules、記者 agent 規則，也就是 pipeline 的 LLM 端 |
 | `.github/workflows/` | `daily-gather`、`daily-watchdog`、`weekly-linkcheck` |
-| `docs/` | 自動化架構、雲端 runbook、規則沿革、頁面健檢紀錄 |
+| `docs/` | [本機開發設定](docs/development.md)、自動化架構、雲端 runbook、規則沿革、頁面健檢紀錄 |
