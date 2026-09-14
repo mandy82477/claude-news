@@ -401,6 +401,11 @@ code {
   font-family: var(--font-body); letter-spacing: -0.005em;
 }
 .story__title a { color: var(--ink-1); border: 0; padding: 0; }
+/* 22px 是桌機的卡片標題級數；手機欄寬只有三分之一，同一級數會折到四行、
+   與 16px 內文的落差也過大，降一階到 18px。（2026-09-14） */
+@media (max-width: 640px) {
+  .story__title { font-size: var(--fs-lead); line-height: var(--lh-heading); }
+}
 .story__title a:hover { color: var(--ink-1); border-bottom: 1px solid var(--ochre-7); padding-bottom: 1px; text-decoration: none; }
 .story__focus-badge { margin-left: 8px; vertical-align: middle; font-size: var(--fs-small); }
 .story__body {
@@ -532,7 +537,7 @@ code {
   font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-3); letter-spacing: 0.02em;
 }
 .reader-item__body {
-  font-size: var(--fs-small); color: var(--ink-2); line-height: 1.7;
+  font-size: var(--fs-body); color: var(--ink-2); line-height: var(--lh-body);
   padding-left: 12px; border-left: 1px solid var(--ochre-5);
 }
 .reader-item__body p, .reader-item__body ul, .reader-item__body ol { margin: 0 0 6px; }
