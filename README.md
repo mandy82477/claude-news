@@ -56,7 +56,7 @@
 | 動作 | 頻率 | 做什麼 |
 |---|---|---|
 | **寫入 Ingest** | 每日 | 主編分類日報、派六位記者各寫自己領域的頁；每個事實只有一個家，別處用 wikilink 指過去。頁面是「被策展的現在」，`log.md` 是不可改的過去，`index.md` 只放路由。 |
-| **查詢 Query** | 任何時候 | 在 Claude Code 裡 `/wiki-query`。依問題型態走六條路之一：專有名詞／issue 號直接 Grep、概念從 index 挑頁讀頁頂 callout、「最近怎樣」查 `log.md`、引用關係跑 `scripts/wiki_graph.py`。答案一律附出處與「現在／當時」狀態；wiki 裡沒有的事實，查一手來源後寫回該頁並標查證日，`log.md` 記一筆 Query 條目。網站上的搜尋走同一份索引。 |
+| **查詢 Query** | 任何時候 | 在 Claude Code 裡 `/wiki-query`。依問題型態走六條路之一：專有名詞／issue 號直接 Grep、概念先跑 `scripts/wiki_search.py` 全文排序（同義叢集橋接用詞落差、`--expand` 沿 wikilink 擴散）再從 index 補挑、候選全開讀頁頂 callout、「最近怎樣」查 `log.md`、引用關係跑 `scripts/wiki_graph.py`。答案一律附出處與「現在／當時」狀態；wiki 裡沒有的事實，查一手來源後寫回該頁並標查證日，`log.md` 記一筆 Query 條目。設計全貌見 [`docs/wiki-ingest-query-design.md`](docs/wiki-ingest-query-design.md)。 |
 | **整理 Lint** | 每週 | `/weekly`、`/wiki-lint`：找矛盾、孤兒頁、過期 callout，蒸餾封存；歷史質疑抽題重驗。 |
 
 ## 自動化怎麼運作
