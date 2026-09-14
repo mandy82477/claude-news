@@ -1400,7 +1400,7 @@ pipeline 由 LLM agent 執行，失敗訊息它讀得懂也修得好；Step 4 �
     <div class="event-body" hidden>
 
       <p><strong>新規則：</strong> <code>.claude/rules/dev-done.md</code> 規定改 pipeline／script／hook／規則檔時，測試綠＋已 commit＋依賴缺口登記三者到齊才算完成。</p>
-<p><strong>新 Stop hook：</strong> <code>check_tests_on_stop.py</code> 在 <code>src/</code>、<code>scripts/</code>、<code>.claude/hooks/</code> 有未 commit 改動且測試未綠時擋收工，規則檔另由既有 <code>check_rules_on_stop.py</code> 看守。</p>
+<p><strong>新 Stop hook：</strong> <code>check_tests_on_stop.py</code> 在 <code>src/</code>、<code>scripts/</code>、<code>.claude/hooks/</code>、<code>web_reader/assets/</code>（2026-09-14 補上）有未 commit 改動且測試未綠時擋收工，規則檔另由既有 <code>check_rules_on_stop.py</code> 看守。</p>
     </div>
   </button>
 </div>
