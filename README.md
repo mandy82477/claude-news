@@ -61,7 +61,7 @@ wiki 頁面依領域分佈：
 | ii. | **社群實測** | Hacker News 與 Reddit 上工程師驗證過的工作流、agent 設計、Bug 回報與變通。 |
 | iii. | **生態動態** | 融資、人事、大型企業合作（AWS / Google）、政策趨勢與周邊工具。只收會改變工程師決策的那些：定價、可用性、法規強制、供應商鎖定。 |
 
-**取捨是穩定而非即時**：26–30 小時延遲是設計，不追 X / Discord 的秒級訊號。社交平台首發訊號請另尋管道。另外兩個抓不到的：NDA 保護下的企業內部實測與未公開路線圖；以及 IG / Discord 擴散的實用型 Claude Code skill（財務分析、前端設計那類不走 HN / Reddit，**遇到請開 issue 告知補充**）。收錄門檻的實作版在 `.claude/rules/collection-scope.md`。
+**取捨是穩定而非即時**：26–30 小時延遲是設計，不追 X / Discord 的秒級訊號。社交平台首發訊號請另尋管道。另外兩個抓不到的：NDA 保護下的企業內部實測與未公開路線圖；以及 IG / Discord 擴散的實用型 Claude Code skill（財務分析、前端設計那類不走 HN / Reddit）。收錄門檻的實作版在 `.claude/rules/collection-scope.md`。
 
 ## 一天怎麼歸檔
 
