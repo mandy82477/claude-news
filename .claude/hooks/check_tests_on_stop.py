@@ -5,8 +5,8 @@ Stop hook: 收工前檢查「程式改動是否測試綠」（開發完工定義
 本檔看程式檔。
 
 行為：
-- git status --porcelain 取未 commit 檔案，只留 src/、scripts/、.claude/hooks/
-  （排除 src/logs/ 與 data 快取 json）
+- git status --porcelain 取未 commit 檔案，只留 src/、scripts/、.claude/hooks/、
+  web_reader/assets/（排除 src/logs/ 與 data 快取 json）
 - 沒有這類改動 → 放行
 - 記號檔 .claude/.last-tests-ok（scripts/run_tests.py 全綠時寫入）比所有髒檔都新
   → 放行（測試已在改動後跑過）
@@ -29,7 +29,11 @@ REPO_ROOT = HOOK_DIR.parent.parent
 MARKER = REPO_ROOT / ".claude" / ".last-tests-ok"
 RUN_TESTS = REPO_ROOT / "scripts" / "run_tests.py"
 
-WATCH_PREFIXES = ("src/", "scripts/", ".claude/hooks/")
+# web_reader/assets/ 收在監看範圍內：dev-done.md 的 paths 已宣告 web_reader/assets/**，
+# 但本 hook 原本不含它，規則對自己宣告的一半範圍是失效的（2026-09-14 發現）。
+# 只收 assets/（手寫 CSS 與 JS），不收 web_reader/data/、index.html、sw.js——
+# 那些是每次 build_web.py 都會重寫的產物，收進來會讓每次建置都強迫重跑整套測試。
+WATCH_PREFIXES = ("src/", "scripts/", ".claude/hooks/", "web_reader/assets/")
 IGNORE_SUBSTRINGS = ("src/logs/", "gathered_items.json", "emitted_items.json", "seen_urls.json", "__pycache__")
 
 
