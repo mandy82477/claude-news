@@ -420,7 +420,7 @@
     <div class="day-badge__m">${esc(dp.m)} · ${esc(dp.dow)}</div>
   </div>
   <div class="feed__meta">
-    <h1>${r ? '今日聚焦與 wiki 新知 · Claude Code &amp; Anthropic' : '每日新聞摘要 · Claude Code &amp; Anthropic'}</h1>
+    <h1>${r ? '今日聚焦與 wiki 新知' : '每日新聞摘要'}<span class="feed__meta-h1-en">Claude Code &amp; Anthropic</span></h1>
     <div class="feed__metarow">
       ${metaTopItems.join('<span class="sep">·</span>')}
     </div>
