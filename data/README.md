@@ -58,6 +58,18 @@ Schema（每行一筆，每次 gather / render 各一筆）：
 | `sources` | 以來源註冊名為 key；`ok`（抓取是否成功）、`gathered` / `filtered` / `emitted` 各階段條目數；對不回註冊名的計數歸入 `"_unmapped"` 桶 |
 | `totals` | 三階段總數 |
 
+## classification-exclusions.jsonl
+
+主編當天分類階段未派給任何記者的條目留痕（append only），`[加入: 2026-09-15]`。起因：使用者稽核 2026-09-14 那輪發現主編分類判斷完全沒有留痕——70 則原料中 13 則從未出現在任何一份派工訊息裡，其中至少 2 則（功能類 bug 回報、社群類工具）是漏判而非合理排除，事後才靠人工比對抓出來。
+
+Schema（每行一筆）：
+
+```json
+{"date": "YYYY-MM-DD", "url": "...", "title": "...", "reason": "一句話排除理由"}
+```
+
+主編分類完成、派工前寫入。分類複核記者（`wiki-reporter-classify-review`）與六記者同批派出，讀當天這份清單覆核，判定誤排除則走「分類回退」同輪追加派工（見 `.claude/skills/wiki-ingest/SKILL.md` 步驟 3b、`.claude/skills/wiki-ingest/references/dispatch.md`「3b／3c」）。
+
 ## pending-handoffs.jsonl
 
 記者間「轉知」帳本（append only，最後一筆勝出），`[加入: 2026-08-15]`。跨記者交辦（如社群記者發現新工作模式要功能記者評估產品化矩陣）過去靠主編口頭轉達、無接手驗收；現在照 `pending-signals.jsonl` 的同構做法走閉迴路：主編 `open` 登帳 → 派工時 `list` 附清單 → 記者回報「轉知處置」→ 主編 `close`／`void`。

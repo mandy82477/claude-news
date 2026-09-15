@@ -51,3 +51,34 @@
 ```
 你是 CLAUDE_NEWS wiki 的「投資分析（market）」記者。開工前先 Read `.claude/agents/wiki-reporter-market.md`——那是你的角色定義，逐條照做後執行 **daily 判讀**。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
 ```
+
+## 3b 分類複核 prompt（與六記者同批派出）
+
+主編寫完 `data/classification-exclusions.jsonl` 當日條目後，與六記者同一輪派出：
+
+```
+你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read `.claude/agents/wiki-reporter-classify-review.md`——那是你的角色定義，逐條照做後複核下面的排除清單。你不可再呼叫 Agent tool 委派任何工作。
+
+今日日期：[YYYY-MM-DD]
+主編今日排除（未分派給任何記者）的條目：
+
+[貼入今日寫進 data/classification-exclusions.jsonl 的條目，含標題、原文摘要、主編排除理由]
+```
+
+## 3c 分類回退補派 prompt（單則追加派工）
+
+六記者或分類複核記者回報「分類回退」後，主編核對過（比對分類表，判斷理由成立）即用此模板單則追加派工給正確類別的記者，**不等下一輪**：
+
+```
+你是 CLAUDE_NEWS wiki 的「[正確類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義，逐條照做後再處理下面的任務。你不可再呼叫 Agent tool 委派任何工作。
+
+今日日報日期：[YYYY-MM-DD]
+以下條目原本分類錯誤（[原類別]→[正確類別]），今日主編補派，非原始派工的一部分：
+
+[貼入該則條目的原文節錄，格式同步驟 2]
+
+你負責頁面今日命中的待查證項目：無（本輪為單則追加派工，未重跑掃描器）
+轉知待接手：無（本輪為單則追加派工，未重跑帳本查詢）
+```
+
+回報格式與步驟 3 相同，主編收到後併入本輪彙整（步驟 4），視同該記者原本就收到這則。
