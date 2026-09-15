@@ -12,7 +12,13 @@
       "time": "09/02 14:34",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "addyosmani/agent-skills",
@@ -21,7 +27,13 @@
       "time": "09/02 14:34",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Feature Request: India-Specific Pricing Plans (INR) for Claude & Claude Code",
@@ -30,7 +42,13 @@
       "time": "09/01 19:17",
       "sentiment": "",
       "body": "使用者請求 Anthropic 仿照 OpenAI、Google 推出印度盧比（INR）定價方案，適用於 Claude Pro 與 Claude Code 訂閱；累積 213 則留言、628 個 👍，是本輪最熱門的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Code Desktop fails to Relaunch on Windows due to orphaned process file lock",
@@ -39,7 +57,13 @@
       "time": "09/01 21:21",
       "sentiment": "",
       "body": "回報 Windows 版 Claude Code 桌面應用因孤兒程序（orphaned process）鎖住檔案而無法重新啟動；累積 144 則留言、71 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Fable 5 prompts 'usage credits required' on Max plan from 2026-07-20, the day it became standard on Max",
@@ -48,7 +72,17 @@
       "time": "09/02 02:12",
       "sentiment": "",
       "body": "回報自 7/20 Fable 5 成為 Max 方案標準內含模型當天起，Claude Code 卻要求「需額外用量額度」並悄悄降級為 Opus 4.8；累積 76 則留言、26 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "long-context-1m",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic banned me for \"suspicious signals\"",
@@ -57,7 +91,13 @@
       "time": "09/02 00:38",
       "sentiment": "",
       "body": "使用者分享 Anthropic 安全團隊以「可疑訊號」為由，未附任何具體條款或範例就直接停權其 Claude Max（$200/月）付費帳號；文中補充帳號已於 9/2 恢復。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
@@ -66,7 +106,17 @@
       "time": "09/02 13:43",
       "sentiment": "",
       "body": "資安新創 AISLE 宣稱其 AI 系統在 curl 專案找到 6 個 CVE 等級漏洞，而先前 OpenAI 與 Anthropic 的掃描均未發現；HN 討論則質疑該公司未揭露背後使用的模型與方法細節，認為文章偏行銷性質。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
@@ -75,7 +125,13 @@
       "time": "09/02 08:01",
       "sentiment": "",
       "body": "報導指出印度 Mythic Society 使用 Claude Code 過程中，多年累積的班加羅爾文化遺產紀錄工作意外遺失，該機構現正投入資金強化備份系統；討論聚焦於自主 agent 造成損害時的究責歸屬。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -86,7 +142,13 @@
       "time": "09/01 22:33",
       "sentiment": "",
       "body": "本版修正 macOS 12（Monterey）上的啟動失敗問題（v2.1.255 引入的迴歸），並修正 remote／排程 session 因「使用者訊息不得為空」而失敗的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.123.0",
@@ -95,7 +157,13 @@
       "time": "09/01 17:50",
       "sentiment": "",
       "body": "新增 beta 版使用者個人資料（user profiles）API 支援。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v1.3.0",
@@ -104,7 +172,13 @@
       "time": "09/01 17:36",
       "sentiment": "",
       "body": "同步新增 beta 版使用者個人資料 API，含 external_user_onboarding 等欄位。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Delays in credit purchases",
@@ -124,7 +198,13 @@
       "time": "09/02 11:30",
       "sentiment": "",
       "body": "分析 Fable 5.1 發布如何牽動美中前沿模型競賽的態勢。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "What's inside Anthropic Claude Fable, Mythos 5.1: smarts, safeguards, and 'anti-distillation mechanisms' - Fortune",
@@ -151,7 +231,13 @@
       "time": "09/02 11:48",
       "sentiment": "",
       "body": "整理 Anthropic 對近期資安事件的回應內容，並介紹新推出的 Enterprise Frontier Safeguards。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Chinese State Media Accuses Anthropic of AI Double Standards - TechRepublic",
@@ -160,7 +246,13 @@
       "time": "09/01 20:16",
       "sentiment": "",
       "body": "報導中國官媒批評 Anthropic 對中、美 AI 發展採取雙重標準。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Desktop \"Secret Swap\": Kimi K3 Running on Opus 5 Slot – Does Local Ollama Proxy Bypass Anthropic's Walled Garden? - 36 Kr",
@@ -187,7 +279,17 @@
       "time": "09/02 14:06",
       "sentiment": "",
       "body": "報導揭露惡意 `.git` 設定檔可誘使 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定的程式碼。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -198,7 +300,13 @@
       "time": "09/01 20:40",
       "sentiment": "",
       "body": "作者以自己單一用戶的實測，比較 Claude Code 內建記憶與自己的認知記憶差異，指出內建記憶確實有效，但兩者做的並非同一件事。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "7 of My 8 Claude Code Agents Had Zero Calls in 30 Days: Finding Dead Agents Automatically",
@@ -207,7 +315,13 @@
       "time": "09/02 00:00",
       "sentiment": "",
       "body": "作者盤點自訂 subagent 使用紀錄，發現 8 個裡有 7 個 30 天內零呼叫，因而建了一套自動偵測「殭屍 agent」的機制。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The blast radius rule for AI coding",
@@ -216,7 +330,13 @@
       "time": "09/01 22:34",
       "sentiment": "",
       "body": "作者分享依「錯誤修復成本」而非「任務難度」劃分三個風險區，決定哪些改動可放心讓 agent 自主執行。😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Supafork – Share and Fork Sessions Across Harnesses",
@@ -281,7 +401,21 @@
       "time": "09/02 14:34",
       "sentiment": "",
       "body": "Claude Fable 5.1、Mythos 5.1 上線後定價頁同步更新：快取讀取（cache hit）費率由標準的基礎輸入價 0.1 倍降至 0.025 倍，較前代最多省下 75% 的長對話快取成本；VentureBeat、Yellow.com 等媒體同步報導此定價變化。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件更新：Claude Code 週用量促銷（May–August 2026）",
@@ -290,7 +424,13 @@
       "time": "09/02 14:34",
       "sentiment": "",
       "body": "Claude Code「週用量提高 50%」的促銷再度延長，新到期日為 2026 年 9 月 13 日（原訂 8 月 31 日到期），適用 Pro、Max、Team 方案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

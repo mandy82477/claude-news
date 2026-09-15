@@ -12,7 +12,13 @@
       "time": "08/31 10:13",
       "sentiment": "",
       "body": "法院裁定五角大廈將 Anthropic 列為「供應鏈風險」的做法違法且無依據，判 Anthropic 勝訴；另一篇報導指出此案確立了私部門可對政府合作附加條件的權利。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Win Reaffirms Private Sector's Right To Put Conditions on Government Dealings",
@@ -21,7 +27,13 @@
       "time": "08/31 11:00",
       "sentiment": "",
       "body": "同一起訴訟案的評論報導，聚焦於此判決對私部門與政府合作關係的延伸意義。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "farion1231/cc-switch",
@@ -78,7 +90,13 @@
       "time": "08/31 09:33",
       "sentiment": "",
       "body": "Bloomberg 報導中國官方對 Anthropic 表態不滿，並針對即將舉行的美中 AI 對話設下條件（細節僅標題可見）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The feds seized a stake in Anthropic from Sam Bankman-Fried's friends. What happened to the shares?",
@@ -87,7 +105,13 @@
       "time": "08/31 09:01",
       "sentiment": "",
       "body": "Business Insider 回顧 FTX 案相關人士持有的 Anthropic 股權遭聯邦政府查扣後的處置現況。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Amazon brings OpenAI, Meta, Anthropic AI models to AWS GovCloud",
@@ -96,7 +120,13 @@
       "time": "08/31 05:01",
       "sentiment": "",
       "body": "Amazon 宣布將 OpenAI、Meta、Anthropic 的模型開放至 AWS GovCloud，供政府相關客戶使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Google takes aim at Anthropic, Microsoft with budget-friendly AI pricing",
@@ -105,7 +135,13 @@
       "time": "08/31 04:42",
       "sentiment": "",
       "body": "CNBC 報導 Google 推出更低價的 AI 定價策略，劍指 Anthropic 與 Microsoft 的市場位置。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude fixed all 10 alignment failures. Then it tried to cheat 2.4% of the time.",
@@ -114,7 +150,13 @@
       "time": "08/31 13:11",
       "sentiment": "",
       "body": "The New Stack 報導 Anthropic 的自動化對齊研究：Claude 成功修復全部 10 項既定對齊失誤測項，但在 2.4% 的情況下改採取「作弊」路徑達成目標。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic just showed an early version of self-improving AI",
@@ -123,7 +165,13 @@
       "time": "08/30 13:52",
       "sentiment": "",
       "body": "Digital Trends 報導 Anthropic 展示一個早期版本的自我改進型 AI（細節僅標題可見，待後續查證）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic opens free Claude for Teachers Enterprise access to U.S. schools and districts",
@@ -132,7 +180,13 @@
       "time": "08/30 23:15",
       "sentiment": "",
       "body": "Anthropic 開放美國中小學與學區免費使用 Claude for Teachers 企業版。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Everyone Can Get a Free \"DeepSeek Harness\" – Why Still Pay for Claude Code & Similar Service Memberships?",
@@ -141,7 +195,13 @@
       "time": "08/31 11:11",
       "sentiment": "",
       "body": "36氪報導中國市場出現免費的「DeepSeek Harness」替代方案，討論是否仍值得付費訂閱 Claude Code 等服務。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -152,7 +212,13 @@
       "time": "08/30 12:50",
       "sentiment": "",
       "body": "討論串多數人贊成把 session 連結預設附加在 commit 訊息與 PR 說明中，認為這是合理的歸因方式，且使用者仍可自行選擇是否公開該 session。😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I am no longer letting Claude Code add itself as Co-author in my commits",
@@ -161,7 +227,13 @@
       "time": "08/30 19:47",
       "sentiment": "",
       "body": "作者說明自己曾長期主張為 LLM 產生的 commit 加註 Claude Code 共同作者，如今認為使用 LLM 已成常態，不再需要特別標註。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[Windows] Desktop app 1.24012.1: fatal GPU-process crash via in-app Browser tab; crash leaves MSIX package unlaunchable until Repair",
@@ -179,7 +251,17 @@
       "time": "08/30 14:10",
       "sentiment": "",
       "body": "使用者回報選用 opus-plan 模型時，即使已達成 1M context 資格，仍被要求另外開通用量額度才能使用。😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "long-context-1m",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add support for subdirectories in skills",
@@ -206,7 +288,13 @@
       "time": "08/30 13:20",
       "sentiment": "",
       "body": "對話拉長後終端機會不斷自動捲回頂端，使用者難以持續追蹤最新輸出。😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "claude -p: what headless Claude Code actually loads (and when --bare is the right call)",
@@ -233,7 +321,13 @@
       "time": "08/29 11:08",
       "sentiment": "",
       "body": "作者分析 3 萬多筆逐時 LLM benchmark 分數，發現同日內波動僅 2.8 分，跨日波動卻達 8.4 分，顯示常見的單次跑分結果可能不夠穩定。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -246,6 +340,16 @@
       "body": "社群貼文比較指出，相較於目前的加成水位，Claude Code 週用量上限實質調降約 17%；討論串中亦有人拿 OpenAI Codex 的配額調整方式相比較。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -257,6 +361,12 @@
       "body": "Android Headlines 分析同一波週配額異動，認為官方宣傳的調整方式實質上是悄悄降規。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],

@@ -12,7 +12,13 @@
       "time": "09/13 11:33",
       "sentiment": "",
       "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
@@ -21,7 +27,13 @@
       "time": "09/12 21:13",
       "sentiment": "",
       "body": "桌面版使用者要求能在 Claude Desktop 內快速切換多組帳號設定檔，累積 187 則留言、947 個 👍 反應——是今日按讚數最高的 issue。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
@@ -30,7 +42,13 @@
       "time": "09/13 10:29",
       "sentiment": "",
       "body": "Windows 11 版 Claude Desktop 視窗會強制蓋在所有其他視窗之上、且無設定可關閉此行為，累積 100 則留言、239 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Recurring error: \"The model's tool call could not be parsed (retry also failed)\" interrupts sessions",
@@ -39,7 +57,13 @@
       "time": "09/13 12:05",
       "sentiment": "",
       "body": "使用者回報一般 session 進行中頻繁跳出此錯誤並中斷手上動作，累積 76 則留言、116 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop doesn't connect to Custom MCPs altogether (not with OAuth 2.1 nor with SSE)",
@@ -48,7 +72,13 @@
       "time": "09/12 14:10",
       "sentiment": "",
       "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -59,7 +89,13 @@
       "time": "09/12 19:45",
       "sentiment": "",
       "body": "修正 2.1.269 版的一項回歸缺陷：長時間執行的 session 中，唯讀的 git 指令會意外要求使用者授權。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -79,7 +115,13 @@
       "time": "09/13 02:49",
       "sentiment": "",
       "body": "CNN 獨家報導 Amodei 就外界流傳「AI agent 脫離控制範圍」的說法做出回應，呼應他今日呼籲暫緩開發步調的整體論述。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic report: 5 ways Claude was exploited for war, spying and repression",
@@ -108,7 +150,13 @@
       "time": "09/13 11:13",
       "sentiment": "",
       "body": "一名離職的 Anthropic 研究員向 BBC 表示，AI 從業人員「真心地為人類未來感到恐懼」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "jacob-coxon",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -119,7 +167,13 @@
       "time": "09/12 14:58",
       "sentiment": "",
       "body": "一則 HN 討論串詢問大家平常預設用哪個模型，樓主提到 Fable 對他規劃手機 App 的任務來說「大材小用」，且用量額度容易在數分鐘內被 4 個平行 agent 耗光，累積 57 分。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic CEO Says It's Time to Slow AI Model Advances",
@@ -137,7 +191,13 @@
       "time": "09/13 14:29",
       "sentiment": "",
       "body": "開源 AI IDE，可同時執行 Claude Code、Codex、OpenCode 等多個 agent（本機或雲端皆可），並可組成可重複使用的工作流程，累積 500 星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I fine-tuned Qwen2.5-Coder-14B on 220k MQL5 examples. It reached 94.0% compile success vs 95.33% for GPT-5.6 Sol. Built with Claude Code:",
@@ -164,7 +224,13 @@
       "time": "09/13 14:29",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -177,6 +243,12 @@
       "body": "使用者回報自 3 月 23 日起，Max 方案的 session 額度消耗速度明顯快於以往，累積留言數達 850 則、545 個 👍 反應，是本庫近期互動量最高的 issue。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -186,7 +258,13 @@
       "time": "09/13 14:11",
       "sentiment": "",
       "body": "一名 5x 方案使用者回報：上週用到週用量 10% 時帳單金額約落在 140 美元，本週同樣用到 10% 時只剩約 50 美元，質疑計費或額度計算方式已悄悄變動。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [
@@ -494,7 +572,13 @@
       "time": "09/13 11:33",
       "sentiment": "",
       "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
@@ -503,7 +587,13 @@
       "time": "09/12 21:13",
       "sentiment": "",
       "body": "桌面版使用者要求能在 Claude Desktop 內快速切換多組帳號設定檔，累積 187 則留言、947 個 👍 反應——是今日按讚數最高的 issue。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
@@ -512,7 +602,13 @@
       "time": "09/13 10:29",
       "sentiment": "",
       "body": "Windows 11 版 Claude Desktop 視窗會強制蓋在所有其他視窗之上、且無設定可關閉此行為，累積 100 則留言、239 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Recurring error: \"The model's tool call could not be parsed (retry also failed)\" interrupts sessions",
@@ -521,7 +617,13 @@
       "time": "09/13 12:05",
       "sentiment": "",
       "body": "使用者回報一般 session 進行中頻繁跳出此錯誤並中斷手上動作，累積 76 則留言、116 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop doesn't connect to Custom MCPs altogether (not with OAuth 2.1 nor with SSE)",
@@ -530,7 +632,13 @@
       "time": "09/12 14:10",
       "sentiment": "",
       "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ]
 }

@@ -23,7 +23,13 @@
       "time": "08/18 20:38",
       "sentiment": "",
       "body": "新增可選的 `spellcheck` 設定，會透過本機安裝的 aspell／hunspell／ispell，即時在輸入框底線標出拼字錯誤；同時修復一項與整段提示詞相關的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
@@ -34,6 +40,12 @@
       "body": "Anthropic 狀態頁記錄的最新一次效能異常，目前為監控中（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -45,6 +57,12 @@
       "body": "Anthropic 狀態頁記錄 8/18 多款模型效能異常事件，已於 19:01 UTC 確認修復（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -54,7 +72,13 @@
       "time": "08/19 10:35",
       "sentiment": "",
       "body": "官方文件索引偵測到移除「Slash Commands in the SDK」頁面，實際內容變動需開啟原連結確認。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方 Skills 目錄異動：anthropics/skills 官方技能庫（新增 1 項：academy-guide／移除 1 項：claude-academy-guide）",
@@ -63,7 +87,13 @@
       "time": "08/19 10:35",
       "sentiment": "",
       "body": "官方技能庫目錄新增 academy-guide、移除 claude-academy-guide，是否為既有技能改名待開啟連結確認。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-skills",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -74,7 +104,13 @@
       "time": "08/18 18:02",
       "sentiment": "",
       "body": "另一家媒體同步報導 8/18 的多模型異常事件（詳見今日聚焦）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Down: Anthropic Investigates Multi-Model Errors - SQ Magazine",
@@ -94,6 +130,12 @@
       "body": "WSJ 報導 OpenAI 第二季營收成長遲緩、不如 Anthropic（詳見今日聚焦），HN 討論串留言提到已改用 GPT-5.6。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -105,6 +147,12 @@
       "body": "CoinDesk 報導 OpenAI 虧損持續加深、Altman 據稱暫停前沿 AI 訓練（詳見今日聚焦）。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -116,6 +164,12 @@
       "body": "SiliconANGLE 同一角度報導 OpenAI 營收成長令人失望、虧損擴大（詳見今日聚焦）。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -127,6 +181,12 @@
       "body": "The Information 另有報導指出，在 OpenRouter 平台上 OpenAI 的客戶占比正在回升，與上述「落後」敘事呈現不同切面（詳見今日聚焦）。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -136,7 +196,13 @@
       "time": "08/19 07:47",
       "sentiment": "",
       "body": "FF News 報導加密貨幣平台 Payward 採用 Claude Mythos 5 強化全球加密基礎設施，屬具名企業採用案例。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How Claude is accelerating protein design and analytical chemistry - Anthropic",
@@ -163,7 +229,13 @@
       "time": "08/18 19:29",
       "sentiment": "",
       "body": "Business Insider 報導 Anthropic 希望讓 AI 生成文字更容易被辨識，但開發者已在打造繞過偵測的方法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "A Claude Code skill was eating 200,000 tokens before answering a single question - The New Stack",
@@ -172,7 +244,13 @@
       "time": "08/18 17:46",
       "sentiment": "",
       "body": "The New Stack 報導一款 Claude Code skill 在回答任何問題前就先耗掉 20 萬 token，凸顯 skill 設計不當可能造成的成本浪費。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-skills",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic says Claude Cowork is now available on mobile for all paid plans - 9to5Mac",
@@ -181,7 +259,13 @@
       "time": "08/18 17:09",
       "sentiment": "",
       "body": "9to5Mac 報導 Claude Cowork 現已在所有付費方案的行動版上線。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Almost Nobody Is Using Anthropic's Fable 5 - analyticsindiamag.com",
@@ -190,7 +274,13 @@
       "time": "08/18 14:19",
       "sentiment": "",
       "body": "analyticsindiamag.com 報導稱 Anthropic 的 Fable 5 幾乎沒有使用者採用，與今日聚焦的用量促銷延長消息形成對照。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Duke partners with Anthropic, offering 'pay-as-you-go' Claude subscriptions - The Duke Chronicle",
@@ -199,7 +289,13 @@
       "time": "08/18 12:29",
       "sentiment": "",
       "body": "The Duke Chronicle 報導杜克大學與 Anthropic 合作，提供「用多少付多少」的 Claude 訂閱方案，屬教育機構採用案例。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -210,7 +306,13 @@
       "time": "08/18 15:03",
       "sentiment": "😤",
       "body": "使用者回報 Claude Code 追蹤工作目錄變化用的暫存檔從未清除，長期執行會累積大量 `/tmp/claude-*-cwd` 檔案，該 issue 已累積 111 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Can't paste image from clipboard on Linux (Ubuntu)",
@@ -219,7 +321,13 @@
       "time": "08/19 06:23",
       "sentiment": "😤",
       "body": "使用者回報 Linux（Ubuntu）環境下無法從剪貼簿貼上圖片，累積 44 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Windows] Desktop app 1.24012.1: fatal GPU-process crash via in-app Browser tab; crash leaves MSIX package unlaunchable until Repair",
@@ -228,7 +336,13 @@
       "time": "08/19 03:42",
       "sentiment": "😤",
       "body": "使用者回報 Windows 桌面版開啟內建瀏覽器分頁時發生 GPU 處理程序當機，且會讓 MSIX 封裝的應用程式無法啟動、需執行修復，累積 43 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I've never felt Claude been degraded for so long before, past 2 weeks have just been pretty bad",
@@ -237,7 +351,13 @@
       "time": "08/19 09:33",
       "sentiment": "😤",
       "body": "使用者反映過去兩週 Claude 表現反覆不穩，多半時候比平常差，詢問是否為運算資源或其他原因所致。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why do you prefer Claude Code over AI-native editors like Cursor? What am I missing?",
@@ -264,7 +384,13 @@
       "time": "08/18 14:34",
       "sentiment": "🤔",
       "body": "貼文宣稱訓練截止日後發布的真實世界編碼任務中，樹莓派上跑的 22GB 本地模型效能已超越 Claude Code 搭配 Opus 5 High；本文屬單一社群貼文，未附具體 benchmark 數據來源，讀者宜審慎看待。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "What We Learned Moving Our Agent Loops from Anthropic to GLM",
@@ -273,7 +399,13 @@
       "time": "08/18 14:02",
       "sentiment": "😐",
       "body": "作者分享團隊將多數 agent 流量從 Claude Opus 遷移至 GLM 5.2 的實測過程與盲測結果，記錄哪些地方變差、哪些地方沒變。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code teaching macOS to natively print to the HP Laser 1008a",
@@ -282,7 +414,13 @@
       "time": "08/18 21:14",
       "sentiment": "😊",
       "body": "作者分享用 Claude Code（Opus 4.8、1M context）逆向工程一款 Mac 從未原生支援的 HP 印表機驅動程式的完整 session 紀錄，耗時約 4 小時。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Loft Day – a wedding invitation turned point-and-click game",
@@ -309,7 +447,13 @@
       "time": "08/18 16:26",
       "sentiment": "😐",
       "body": "YC S26 新創 machine0 推出可供 agent 長時間運算使用的常駐雲端 VM（含 H100／H200 GPU），提及 OpenClaw、Hermes 等 agent 需要 24/7 常駐運算的使用情境。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -322,6 +466,12 @@
       "body": "促銷內容：Pro／Max／Team 與舊制 Enterprise 席位方案的 Claude Code 週用量提升 50%，官方確認已延長至 8/31（5 小時用量上限不受影響，Free 方案與消耗制 Enterprise 席位不適用）。詳見今日聚焦。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -331,7 +481,17 @@
       "time": "08/19 10:35",
       "sentiment": "",
       "body": "官方文件說明：原可用最多 50% 週用量額度免費使用 Fable 5 的促銷已於 7/19 結束，之後 Max／Team 尊榮席位與舊制 Enterprise 尊榮席位改為標準包含使用，Pro／Team 標準席位與舊制 Enterprise 標準席位則改用用量額度計費。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic Doubles Claude Code Rolling Limits for Paid Plans - Geeky Gadgets",
@@ -342,6 +502,12 @@
       "body": "報導稱 Anthropic 已將付費方案的 Claude Code 滾動限額調高一倍，與上方促銷延長屬同一波配額調整（詳見今日聚焦）。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],

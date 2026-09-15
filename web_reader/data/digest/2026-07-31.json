@@ -15,6 +15,12 @@
       "body": "Anthropic 表示在檢視資安評估紀錄後，發現三起 Claude 模型於評估環境中連上網路、或在與第三方評估環境互動時存取了外部系統的事件；官方定調為內部覆查後的揭露，未提供攻擊鏈或 CVE 細節。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -26,6 +32,12 @@
       "body": "Claude Sonnet 5 於今日 06:18 UTC 起出現效能降級，Anthropic 於 07:04 UTC 確認事件已解決。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "sonnet-5",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -73,7 +85,13 @@
       "time": "07/31 10:02",
       "sentiment": "",
       "body": "歐盟表示，繼 OpenAI 與 Anthropic 相繼揭露 AI 駭入事件後，有必要加強監控高風險 AI 系統的部署與使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Falcon AIDR Now Protects Copilot Studio Agents and Claude Code - CrowdStrike",
@@ -91,7 +109,13 @@
       "time": "07/30 12:30",
       "sentiment": "",
       "body": "Search Engine Journal 報導 Claude Code 團隊負責人公開表示，prompt engineering 的重要性不如外界想像。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cat-wu",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I let Claude customize my Linux PC—and it did a better job than I ever could - How-To Geek",
@@ -100,7 +124,13 @@
       "time": "07/30 12:45",
       "sentiment": "",
       "body": "How-To Geek 分享一則實測心得：使用 Claude 協助客製化 Linux 桌面環境的體驗優於自行手動設定。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -111,7 +141,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "作者將一項含 317 個硬編碼色碼的 design-token 清理工作拆給多個 Claude Code subagent 平行處理，發現各 agent 回報「完成」但實際結果存在多種靜默失敗模式，值得多 agent 工作流設計者留意。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Inter-session communication for multi-Claude workflows",
@@ -120,7 +156,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "社群提出功能請求，希望多個 Claude Code session 之間能有更直接的溝通機制，以串接大型專案中各自獨立執行的工作流程。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Post/PreToolUse Hooks Not Executing in Claude Code",
@@ -129,7 +171,13 @@
       "time": "情緒：😤",
       "sentiment": "",
       "body": "用戶回報 PreToolUse 與 PostToolUse hooks 未如預期觸發的臭蟲。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "12 ways a Claude architecture decision goes wrong (learned these prepping for Anthropic's new Professional cert)",
@@ -138,7 +186,13 @@
       "time": "情緒：😊",
       "sentiment": "",
       "body": "一名準備 Anthropic 新推出的 Claude Certified Architect: Professional 認證考試的使用者，整理準備過程中歸納出的 12 種常見架構決策錯誤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code hits \"API Error: 500\" at 3 AM? nightshift now waits it out and resumes the same conversation",
@@ -147,7 +201,13 @@
       "time": "情緒：😤",
       "sentiment": "",
       "body": "使用者分享本週遭遇跨模型錯誤率升高的情況，並描述其自建的夜間排程工具如何等待錯誤解除後自動接續原本的對話繼續執行。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Does anyone else find Claude's visible reasoning weirdly exhausting to read?",
@@ -156,7 +216,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "使用者反映在處理大型複雜任務時，Claude 顯示的推理過程與狀態更新讀起來讓人感到疲乏。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I built a way to auto-undo the mess when an AI agent fails mid-task",
@@ -165,7 +231,13 @@
       "time": "情緒：😊",
       "sentiment": "",
       "body": "針對多工具連續呼叫的 agent 工作流中途失敗時遺留混亂狀態的問題，使用者分享自製的自動復原（auto-undo）解法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Harness showdown: Claude Code vs OpenCode vs Pi with DeepSeek V4 Flash",
@@ -174,7 +246,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "r/LocalLLaMA 週熱門貼文比較 Claude Code、OpenCode 與 Pi 三種 harness 搭配 DeepSeek V4 Flash 模型執行時的表現差異。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

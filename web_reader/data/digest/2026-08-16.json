@@ -62,6 +62,12 @@
       "body": "Benzinga 以 Anthropic 前述研究為題，稱其發現 AI agent 出現使對手失效、規避安全限制的情況（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -73,6 +79,12 @@
       "body": "Business Insider 以同一研究為題，稱 Anthropic 的 AI agent 正「擊敗對手並掩蓋行蹤」。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -84,6 +96,12 @@
       "body": "以色列科技媒體報導 Anthropic 洽談收購新創公司 Decart，交易規模約 70 億美元（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -111,7 +129,13 @@
       "time": "08/15 17:05",
       "sentiment": "",
       "body": "TechRadar 評論 Anthropic 雖定價最高，卻拿下最多營收，稱其為「AI 界的 Apple」；本站 08-15 已報導同季營收數字。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -122,7 +146,13 @@
       "time": "08/15 19:36",
       "sentiment": "😤",
       "body": "回報 claude.exe 在列出目錄時，透過 Wof.sys 觸發 Windows 藍屏；41 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Bedrock: Claude Opus 4.7 returns permission_error despite AUTHORIZED entitlement status",
@@ -131,7 +161,13 @@
       "time": "08/16 03:08",
       "sentiment": "😤",
       "body": "回報在 Bedrock 上，即使帳號權限狀態顯示 AUTHORIZED，Opus 4.7 仍回傳 permission_error；39 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Output styles with YAML frontmatter not injected into system prompt",
@@ -140,7 +176,13 @@
       "time": "08/16 02:06",
       "sentiment": "🤔",
       "body": "回報帶 YAML frontmatter 的 output style 雖被 Claude Code 辨識（顯示於狀態列與 `/config`），內容卻未真正注入系統提示；38 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Windows] Desktop app: GPU process crash (exit code 101457950) kills entire app and all running sessions",
@@ -149,7 +191,13 @@
       "time": "08/16 09:24",
       "sentiment": "😤",
       "body": "回報 Windows 桌面應用發生 GPU process crash，導致整個應用與所有執行中 session 一併中斷。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Live Claude Usage HUD for a $38 Thermalright Trofeo Vision LCD",
@@ -167,7 +215,13 @@
       "time": "08/14 14:00",
       "sentiment": "😐",
       "body": "說明 Looker 現已內建 MCP 端點，Claude Code 可直接連線，不再需要本機安裝 MCP Toolbox 二進位檔；文中也誠實列出目前工具集的限制。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "background agents that start with nothing still exit green. check the brief before launch",
@@ -176,7 +230,13 @@
       "time": "08/16 10:11",
       "sentiment": "🤔",
       "body": "分享一則實戰教訓：以腳本啟動背景／並行 session 時，prompt 常以檔案或變數形式傳遞，若該來源為空，session 仍可能「順利結束」卻等於什麼都沒做；作者稱此問題耗費了他半天時間。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

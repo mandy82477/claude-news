@@ -14,6 +14,12 @@
       "body": "Anthropic Status 頁面、SQ Magazine、《印度快報》均在今日報導 Claude Fable 5 針對 Pro／Max 方案的存取規則出現變動，包含免費存取結束與使用點數誤判問題；同時有 Reddit 用戶反映 Max 方案疑似無法使用 Fable 5，形成跨來源（官方＋媒體＋社群）同步關注的話題。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -23,7 +29,13 @@
       "time": "07/20 00:00",
       "sentiment": "",
       "body": "Bloomberg 專訪／報導聚焦 Claude Code 何以成為當紅開發工具話題，該報導被多個獨立來源引用（source_count=2）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "boris-cherny",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -36,6 +48,12 @@
       "body": "Anthropic Status 頁面顯示 Opus 4.5 錯誤率上升，官方已於 07/20 10:57 UTC 表示修復已實施，正監控結果；此前於 07:57 UTC 首次識別問題。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -47,6 +65,12 @@
       "body": "Anthropic Status 頁面確認部分 Claude Code Max 方案用戶被錯誤提示需使用點數才能存取 Fable 5（該功能本屬方案內含），官方建議受影響用戶重新啟動用戶端。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -58,7 +82,13 @@
       "time": "07/20 12:00",
       "sentiment": "",
       "body": "Yahoo Finance UK 報導一位創投對 Anthropic 上市前景看好，勝過對 OpenAI 的評價。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Alibaba previews Qwen3.8, claims it rivals Anthropic Fable 5",
@@ -69,6 +99,12 @@
       "body": "qz.com 報導阿里巴巴預覽新模型 Qwen3.8，宣稱其能力足以匹敵 Anthropic Fable 5。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -78,7 +114,13 @@
       "time": "07/20 10:46",
       "sentiment": "",
       "body": "FOX13 Memphis 報導 Anthropic 捐贈曼菲斯一家非營利組織 100 萬美元，用於興建聚焦 AI 教育的新總部。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Nozomi Networks joins Anthropic's Project Glasswing to secure OT, IoT and cyber-physical systems",
@@ -87,7 +129,13 @@
       "time": "07/20 10:33",
       "sentiment": "",
       "body": "Industrial Cyber 報導 Nozomi Networks 加入 Anthropic 的 Project Glasswing 計畫，協助強化 OT／IoT／工控系統的安全防護。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Traders bet Anthropic will ship new Claude Opus model within days",
@@ -96,7 +144,13 @@
       "time": "07/20 10:05",
       "sentiment": "",
       "body": "Proactive financial news 報導金融交易者押注 Anthropic 將於數日內推出新款 Claude Opus 模型（屬市場推測性報導）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-8",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "US public health agencies to test OpenAI and Anthropic AI models",
@@ -105,7 +159,13 @@
       "time": "07/20 10:03",
       "sentiment": "",
       "body": "AI News 報導美國公共衛生機構將測試 OpenAI 與 Anthropic 的 AI 模型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Meta weighs up to $10bn AI compute deal with Anthropic",
@@ -116,6 +176,12 @@
       "body": "Yahoo Finance 報導 Meta 正評估對 Anthropic 挹注最高 100 億美元的 AI 運算合作。",
       "focusTags": [
         "[商業動態]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -125,7 +191,13 @@
       "time": "07/20 09:10",
       "sentiment": "",
       "body": "KED Global 報導一名南韓用戶收到 Claude 開出的 1,670 萬美元帳單，疑似為系統故障所致。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic Explained When to Tinker with Effort Level in Claude Code (Spoiler: Not Often)",
@@ -143,7 +215,13 @@
       "time": "07/20 08:22",
       "sentiment": "",
       "body": "Techzine Global 報導 Meta 正探索向 Anthropic 出租 AI 運算資源的可能性，與前述 Meta-Anthropic 合作傳聞相呼應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Mythos FAQ: Capabilities, access, competitors, implications",
@@ -152,7 +230,13 @@
       "time": "07/20 06:32",
       "sentiment": "",
       "body": "csoonline.com 整理 Claude Mythos 的能力、存取方式、競爭者與影響的常見問答。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Alibaba Says New AI Model Is Just Second to Anthropic's Fable 5",
@@ -163,6 +247,12 @@
       "body": "WSJ 報導阿里巴巴表示其新模型能力僅次於 Anthropic Fable 5（source_count=2）。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -172,7 +262,13 @@
       "time": "07/20 05:17",
       "sentiment": "",
       "body": "SQ Magazine 報導 Claude Fable 5 對 Pro 訂閱用戶結束免費存取（source_count=2）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude Fable 5 access plans change from July 20: Here's what's new",
@@ -181,7 +277,13 @@
       "time": "07/20 04:04",
       "sentiment": "",
       "body": "The Indian Express 報導 Anthropic 的 Claude Fable 5 存取方案自 7 月 20 日起有所變動，說明新規則內容。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "UST Partners with Anthropic to Deploy Claude AI Across Enterprise Platforms",
@@ -190,7 +292,13 @@
       "time": "07/20 00:24",
       "sentiment": "",
       "body": "The Fast Mode 報導 IT 服務商 UST 與 Anthropic 合作，將 Claude AI 部署至其企業平台。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Watch The Creator of Claude Code on The Hottest Piece of Software in the World",
@@ -199,7 +307,13 @@
       "time": "07/20 00:00",
       "sentiment": "",
       "body": "Bloomberg 專訪聚焦 Claude Code 創始人，談 Claude Code 成為熱門開發工具的原因（source_count=2）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "boris-cherny",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude's AI assistant could be manipulated through browser extensions",
@@ -208,7 +322,13 @@
       "time": "07/19 18:05",
       "sentiment": "",
       "body": "TechRadar 報導 Claude 的 AI 助理可能透過瀏覽器擴充功能遭到操縱，屬安全風險提醒。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Follows SpaceX Playbook, Claude-Parent Reportedly Pursuing Multibillion-Dollar Credit Lines Ahead of IPO",
@@ -219,6 +339,12 @@
       "body": "Yahoo Finance 報導 Anthropic 傳出仿效 SpaceX 模式，於 IPO 前尋求數十億美元規模的信貸額度。",
       "focusTags": [
         "[商業動態]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -230,6 +356,12 @@
       "body": "South China Morning Post 報導阿里巴巴預告 Qwen3.8，稱其實力僅次於 Anthropic Fable 5。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     }
   ],
@@ -394,7 +526,13 @@
       "time": "07/20 10:21 UTC ·",
       "sentiment": "😤",
       "body": "Reddit 用戶反映 App 內 Pro 方案顯示異常，原因不明（單一用戶觀察，未經官方證實）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "5 kinds of visible memory in a full Claude client. First big update",
@@ -412,7 +550,13 @@
       "time": "07/20 09:03 UTC ·",
       "sentiment": "😤",
       "body": "Reddit 用戶反映 Max 方案疑似無法使用 Fable 5，與今日 Status 頁面回報的存取誤判事件時間點吻合。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Quoting Sam Altman",
@@ -439,7 +583,13 @@
       "time": "07/18 00:28 UTC ·",
       "sentiment": "😐",
       "body": "Reddit 用戶（週熱門）指出 Kimi K3 在 Text Arena 科學類查詢排行榜上暫居首位。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "KIMI K3 Beats Claude Fable and GPT 5.6 sol in arena.ai!!!",
@@ -448,7 +598,13 @@
       "time": "07/16 19:57 UTC ·",
       "sentiment": "😤",
       "body": "Reddit 用戶（週熱門）宣稱 Kimi K3 在 arena.ai 評測中勝過 Claude Fable 與 GPT 5.6（單一社群貼文說法，未見獨立驗證）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Thinking Machines releases first open-weight model \"Inkling\"",
@@ -457,7 +613,13 @@
       "time": "07/15 18:12 UTC ·",
       "sentiment": "😐",
       "body": "Reddit 用戶（週熱門）分享 Thinking Machines 發表首款開源權重模型 Inkling 的消息。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Kimi K3 in the next few hours. Deepseek V4 GA later in the week. New Liquid models. New Mistral models sometime this month. And some rumours suggest GLM 5.5 is coming in August. Openweight AI is eating good.",
@@ -466,7 +628,13 @@
       "time": "07/14 16:47 UTC ·",
       "sentiment": "😐",
       "body": "Reddit 用戶（週熱門）彙整近期開源模型發布動態，包含 Kimi K3、Deepseek V4、Liquid、Mistral 新模型與 GLM 5.5 傳聞。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -479,6 +647,12 @@
       "body": "Anthropic Status 頁面確認部分 Max 方案用戶被錯誤提示需使用點數才能存取 Fable 5，官方建議受影響用戶重新啟動用戶端。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -488,7 +662,13 @@
       "time": "07/20 05:17",
       "sentiment": "",
       "body": "SQ Magazine 報導 Claude Fable 5 對 Pro 訂閱用戶結束免費存取。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude Fable 5 access plans change from July 20: Here's what's new",
@@ -497,7 +677,13 @@
       "time": "07/20 04:04",
       "sentiment": "",
       "body": "The Indian Express 報導 Anthropic 的 Claude Fable 5 存取方案自 7 月 20 日起變動的細節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "So... I can't use fable with my max plan ey?",
@@ -506,7 +692,13 @@
       "time": "07/20 09:03",
       "sentiment": "",
       "body": "Reddit 用戶反映 Max 方案疑似無法使用 Fable 5，與今日 Status 頁面回報的存取誤判事件時間點吻合。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "anthropic nuked the pro plans on the app for some reason",
@@ -515,7 +707,13 @@
       "time": "07/20 10:21",
       "sentiment": "",
       "body": "Reddit 用戶反映 App 內 Pro 方案顯示異常，原因不明（單一用戶觀察，未經官方證實）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude sends S. Korean user $16.7 mn bill in apparent glitch",
@@ -524,7 +722,13 @@
       "time": "07/20 09:10",
       "sentiment": "",
       "body": "KED Global 報導一名南韓用戶收到 Claude 開出的 1,670 萬美元帳單，疑似為系統故障所致。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

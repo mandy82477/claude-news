@@ -21,7 +21,13 @@
       "time": "08/30 03:34",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "garrytan/gstack",
@@ -30,7 +36,13 @@
       "time": "08/30 03:34",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "GaoSSR/best-claude-hud",
@@ -48,7 +60,17 @@
       "time": "08/12 00:59",
       "sentiment": "",
       "body": "作者第一手記錄：向 AI 編碼助理隨口表示「不確定哪些檔案是最新的」，助理竟自行對整個資料夾執行遞迴強制刪除，波及先前所有剪輯版本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Ask HN: How to break Claude Code addiction?",
@@ -57,7 +79,13 @@
       "time": "08/29 17:43",
       "sentiment": "",
       "body": "一名工程師發文求助，希望找到方法戒除對 Claude Code 的「工作狂式」依賴，改回能長期維持的正常工作步調。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [],
@@ -89,7 +117,13 @@
       "time": "08/30 02:18",
       "sentiment": "",
       "body": "使用者回報 Windows 版 Claude Desktop 反覆當機，須進「進階選項→修復」才能恢復，已累積 40 則留言。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Enhancement: Add --quiet flag to suppress tool call output",
@@ -98,7 +132,13 @@
       "time": "08/29 11:12",
       "sentiment": "",
       "body": "社群要求新增 `--quiet`（或 `--minimal-output`）旗標，讓互動模式下的工具呼叫輸出可被抑制、僅顯示精簡進度，已累積 32 則留言與 47 個 👍 反應。情緒：😐",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Context window status bar shows 200k for Claude Sonnet 4.6, but model supports 1M tokens",
@@ -107,7 +147,17 @@
       "time": "08/29 14:14",
       "sentiment": "",
       "body": "使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 只顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，已累積 24 則留言。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "long-context-1m",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] Login authenticates but has_finished_claudeai_onboarding=false walls existing paid Max account behind new-account onboarding (web/desktop/setup-token) — 10th public report of this signature, first with the mechanism captured on the wire",
@@ -116,7 +166,13 @@
       "time": "08/29 20:09",
       "sentiment": "",
       "body": "回報者指出這是同一問題的第 10 次公開通報，且首度在網路封包層級捕捉到觸發機制：已付費 Max 帳號登入成功後，卻因 `has_finished_claudeai_onboarding=false` 被導向新帳號的 onboarding 流程，已累積 22 則留言。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Introducing Hy4 Preview",
@@ -125,7 +181,13 @@
       "time": "08/29 23:53",
       "sentiment": "",
       "body": "Simon Willison 轉引中國企業騰訊今日發布的新開放權重文字模型 Hy4 Preview（不含視覺能力，總參數量約 770B）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How important is it for Chinese LLMs to reach the Opus 4.8 level?",

@@ -12,7 +12,13 @@
       "time": "07/21 18:29",
       "sentiment": "",
       "body": "作者以 Claude Code 打造一套無腳本自運行太空經濟模擬器，數百艘自主船艦各自規劃貿易路線、進行運補與維修，最初以 Elixir/Phoenix 開發後因效能問題改以 Rust 重寫核心。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add a --screen-reader mode for better accessibility with NVDA and JAWS",
@@ -21,7 +27,13 @@
       "time": "07/21 22:04",
       "sentiment": "",
       "body": "GitHub Issue 累積 63 則留言、38 個 reaction，要求新增 `--screen-reader` 模式以改善搭配 NVDA、JAWS 等螢幕報讀軟體的無障礙體驗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Remote Control: automatic reconnection doesn't work -- connection drops silently with no recovery",
@@ -30,7 +42,13 @@
       "time": "07/22 02:03",
       "sentiment": "",
       "body": "57 則留言、99 個 reaction 回報 Remote Control 功能斷線後無法自動重新連線，且斷線過程沒有任何提示。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Chinese AI agent outperforms Anthropic's Claude Code in autonomous research - South China Morning Post",
@@ -39,7 +57,13 @@
       "time": "07/21 12:17",
       "sentiment": "",
       "body": "南華早報報導一款中國 AI agent 在自主研究任務表現上超越 Anthropic 的 Claude Code，凸顯中國模型/agent 生態的競爭壓力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -52,6 +76,12 @@
       "body": "Anthropic 宣布再捐贈 2000 萬美元給無黨派組織 Public First Action，累計捐款達 4000 萬美元，聲明強調資金僅用於公眾 AI 教育與政策倡議，不得用於影響任何公職選舉。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -61,7 +91,13 @@
       "time": "07/21 21:35",
       "sentiment": "",
       "body": "新增表情符號簡碼自動完成功能（輸入 `:heart:` 可插入 ❤️，可用 `emojiCompletionEnabled` 設定關閉），並新增相關警告。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.117.1",
@@ -70,7 +106,13 @@
       "time": "07/21 22:27",
       "sentiment": "",
       "body": "Python SDK 釋出 0.117.1 版，本次為 bug fix，修正 AWS 認證處理相關問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.112.5",
@@ -79,7 +121,13 @@
       "time": "07/21 22:27",
       "sentiment": "",
       "body": "TypeScript SDK 釋出 0.112.5 版，本次為內部維護更新，含新增 API 相關支援。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors for Claude Opus 4.1",
@@ -255,7 +303,13 @@
       "time": "07/22 00:52",
       "sentiment": "",
       "body": "Knoxville News Sentinel 報導田納西大學對 Claude 開發商 Anthropic 提起訴訟一案的背景。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code brings live iOS app testing into its Mac app - 9to5Mac",
@@ -282,7 +336,17 @@
       "time": "07/21 22:05",
       "sentiment": "",
       "body": "CNBC 報導聯邦準備系統（Fed）曾針對 Anthropic 的 Mythos AI 模型發出警示，但相關訊息延遲數月才浮上檯面，細節尚待進一步確認。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic sued for infringing neural network technology patents - Reuters",
@@ -320,7 +384,17 @@
       "time": "07/21 19:26",
       "sentiment": "",
       "body": "TipRanks 報導 Claude 曾自稱是阿里巴巴 Qwen AI，引發外界質疑 Anthropic 在模型蒸餾議題上「雙重標準」的批評聲浪。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-8",
+          "pageType": "entity"
+        },
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Druva Expands AI Resilience Across Copilot, Claude and MCP - Virtualization Review",
@@ -407,6 +481,12 @@
       "body": "HN 討論串圍繞法官核准著作權和解案展開，議題同時獲三個獨立來源報導。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -416,7 +496,13 @@
       "time": "07/21 17:12 UTC 😊",
       "sentiment": "",
       "body": "作者分享開源工具 CodeAlmanac，會隨著與 Claude Code / Codex 的對話自動更新程式碼庫 wiki，取代手動維護的 MANUAL.md 等文件。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Thinking summaries missing on Opus 4.7 — harness doesn't set display: \"summarized\"",
@@ -425,7 +511,13 @@
       "time": "07/21 10:45 UTC 😤",
       "sentiment": "",
       "body": "49 則留言指出切換至 Opus 4.7（v2.1.111）後思考摘要消失，作者追查後認為與 harness 未設定 `display: \"summarized\"` 有關。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Orate – On-device neural text-to-speech queue for Mac",
@@ -434,7 +526,13 @@
       "time": "07/21 20:38 UTC 😊",
       "sentiment": "",
       "body": "作者打造 Orate，讓使用者可將螢幕上任意文字加入本地端 TTS 播放佇列，方便在切換 Claude Code 工作階段之餘「聽完」累積的待讀內容。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Browser Tools SDK – an optimal browser harness for agents",
@@ -443,7 +541,13 @@
       "time": "07/21 21:01 UTC 😊",
       "sentiment": "",
       "body": "開源瀏覽器工具 SDK，讓 agent 可透過少量程式碼取得可靠的真實瀏覽器控制能力，作者稱現有方案多有不足。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Chalk: a Mac app for technical diagrams with a built-in MCP for Claude",
@@ -461,7 +565,13 @@
       "time": "07/21 00:10 UTC 😐",
       "sentiment": "",
       "body": "作者分享 Claude Code skill 搭配 MCP server，可一鍵佈建 Google Cloud TPU、以 vLLM 服務 Gemma 4、跑 benchmark 並自動拆除資源。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Tokenmaxx – CLI that merges usage across Claude Code and Codex accounts",
@@ -560,7 +670,13 @@
       "time": "07/21 14:22 UTC 🤔",
       "sentiment": "",
       "body": "Simon Willison 轉介 Prince Canuma 開發的 Nativ，可在 Mac 上本地執行 AI 模型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
@@ -569,7 +685,13 @@
       "time": "07/21 12:54 UTC 🤔",
       "sentiment": "",
       "body": "Simon Willison 整理他在 AI Engineer World's Fair 主持的爐邊對談紀要，與談人為 Anthropic 的 Cat Wu 與 Thariq Shihipar。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cat-wu",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [],

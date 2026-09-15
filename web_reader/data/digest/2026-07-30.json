@@ -14,6 +14,12 @@
       "body": "密碼學工程背景作者分析 Anthropic 用 Claude Mythos 產出的兩項密碼分析結果：針對 HAWK 簽章方案的攻擊，以及縮減輪數 AES 的改進攻擊，並比較兩者的成熟度與意義落差。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -25,6 +31,12 @@
       "body": "Simon Willison 引述密碼學家 Matthew Green 對上述 Anthropic 密碼分析研究的評論，指出這是公鑰密碼演算法邁向後量子轉型的歷史性過渡期一環。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -36,6 +48,12 @@
       "body": "作者以 4–5 個平行 Claude Code agent 每天推送近 90 次 commit，為避免 8GB 機器同時建置測試而當機，打造本地合併佇列讓提交依序落地並完整測試。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
       ]
     }
   ],
@@ -47,7 +65,13 @@
       "time": "07/30 10:48",
       "sentiment": "",
       "body": "Anthropic 於今日通報多個模型出現錯誤率上升，包含 Opus 4.7 與 Opus 4.5，事件已於 10:48 UTC 解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [],
@@ -61,6 +85,12 @@
       "body": "使用者回報 Claude 在主控台輸出文字時會把捲軸拉回歷史紀錄頂端，干擾正在進行中的工作流程，是今日互動數最高的問題回報。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -72,6 +102,12 @@
       "body": "社群要求 Claude Desktop 支援多帳號設定檔快速切換，此需求獲得大量反應支持，反映多身分（個人／工作）使用情境普遍。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -81,7 +117,13 @@
       "time": "07/30 10:53",
       "sentiment": "",
       "body": "使用者反映 GitHub Connector 已在 Claude Desktop 完成連接設定，但 Claude 實際對話中卻辨識不到，造成串接功能形同虛設。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code does not respect the XDG Base Directory specification",
@@ -90,7 +132,13 @@
       "time": "07/30 01:52",
       "sentiment": "",
       "body": "Linux 使用者指出 Claude Code 把快取與設定檔寫入 `~/.claude.json`、`~/.claude`，未遵循 XDG Base Directory 慣例，造成家目錄混亂。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "FEATURE: Multi-window support in Claude Code Desktop",
@@ -101,6 +149,12 @@
       "body": "社群要求 Claude Code Desktop 支援同時開啟多個視窗，取代目前單視窗＋側邊欄的 session 管理方式。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -112,6 +166,12 @@
       "body": "使用者希望 Claude Code 能直接存取 Claude.ai Projects 的知識庫，讓開發時能沿用專案既有的背景資料，此需求獲高度共鳴。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -121,7 +181,13 @@
       "time": "07/30 11:42",
       "sentiment": "",
       "body": "Windows 使用者回報 Claude Code 執行工具時主控台視窗會閃爍，影響操作體驗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "AI Worming through Word",
@@ -141,7 +207,13 @@
       "time": "07/29 18:42",
       "sentiment": "",
       "body": "文章分析 Anthropic 在美國考慮以國安理由限制中國開放權重模型的討論中的立場：表態反對全面禁令，但同時支持限縮讓開放權重模型具競爭力的關鍵能力，作者對此提出質疑。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I Let Claude Code Write 90% of My Code for 30 Days. I'm a Worse Developer Now.",
@@ -159,7 +231,17 @@
       "time": "07/30 11:32",
       "sentiment": "",
       "body": "使用者原先參考跑分認為 Opus 5 優於 Fable，實際使用後認為 Opus 5 仍有落差，並提及遇到的具體狀況。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why does Claude stop in the middle of executing a plan?",

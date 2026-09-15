@@ -12,7 +12,13 @@
       "time": "07/18 16:12",
       "sentiment": "",
       "body": "作者撰寫完整教學，示範如何把備用 Mac 設為 Claude Code 可透過 computer use 全權控制的常駐環境，可透過手機或 SSH 下指令；作者指出在主力機器開啟 `--dangerously-skip-permissions` 有風險，獨立環境可用來隔離研究與開發任務的風險。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code uses Bun written in Rust now",
@@ -23,6 +29,12 @@
       "body": "Simon Willison 透過字串比對驗證 Jarred Sumner 的說法：Claude Code 自 v2.1.181（6/17 發布）起，底層改用 Rust 重寫版的 Bun runtime，Linux 平台啟動速度提升約 10%，但多數使用者對此毫無察覺。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -34,6 +46,12 @@
       "body": "Claude Code 倉庫今日同時出現多筆高互動未解決 issue：5 小時額度不到 90 分鐘用罄（120 留言）、Session 登出後消失（49 留言）、Environment Contributions 警告持續重現（43 留言）、GitHub connector 連結成功卻無法讀取內容（37 留言）、對話訊息時間戳記請求（36 留言）、跨機器 multi-agent 協作協定請求（35 留言）、Slack 多 workspace 支援請求（33 留言）、Opus 4.7 XML 格式混入 JSON tool call（33 留言）、VS Code diff review 介面請求（32 留言，218 個讚同反應），跨主題呈現社群對既有痛點的持續累積關注。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -45,6 +63,12 @@
       "body": "Tech Times 報導 Claude Fable 5 訂閱限制調整為 Max 方案永久提供、Pro 方案改為 Credits-only；同日 Dawn 另一篇報導則稱 Fable 5 將以 50% 用量上限併入 Max、Team Premium 方案，兩篇報導摘要因原文截斷細節有限，暫無官方公告可完整對照確認。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -58,6 +82,12 @@
       "body": "Claude Code 發布 v2.1.215，變更內容為：不再自動執行 `/verify` 與 `/code-review` 兩項技能，須由使用者手動呼叫指令觸發。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -69,7 +99,13 @@
       "time": "07/19 11:08",
       "sentiment": "",
       "body": "Fast Company 報導提到，新創公司 Thinking Machines 正被視為在「智識調性」上對 Anthropic 構成競爭態勢的對象，惟原文摘要遭截斷，具體內容不明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude poised to command S.Korea's generative AI market on enterprise demand - KED Global",
@@ -78,7 +114,13 @@
       "time": "07/19 10:21",
       "sentiment": "",
       "body": "KED Global 報導指出，受企業端需求帶動，Claude 有望在南韓生成式 AI 市場占據領先地位，惟原文摘要遭截斷，具體數據不明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Elon Musk Admits He Underestimated Anthropic's AI, and Amazon and Alphabet Investors Should Take Notice - The Motley Fool",
@@ -87,7 +129,13 @@
       "time": "07/19 08:46",
       "sentiment": "",
       "body": "The Motley Fool 報導 Elon Musk 坦承先前低估了 Anthropic 的 AI 實力，文章並建議 Amazon、Alphabet 投資人應留意此一動向。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Meta, Anthropic drop bombshell news on AI market - Yahoo Finance Australia",
@@ -96,7 +144,13 @@
       "time": "07/18 17:47",
       "sentiment": "",
       "body": "Yahoo Finance Australia 以「投下震撼彈」形容 Meta 與 Anthropic 近期針對 AI 市場的相關消息，惟原文摘要遭截斷，具體內容不明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Fable 5 Ends Subscription Limbo: Permanent for Max, Credits-Only for Pro - Tech Times",
@@ -107,6 +161,12 @@
       "body": "Tech Times 報導 Claude Fable 5 訂閱限制調整為 Max 方案永久提供、Pro 方案改為 Credits-only，惟原文摘要遭截斷，具體限額數字不明。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -118,6 +178,12 @@
       "body": "Dawn 報導 Anthropic 將把 Fable 5 模型以 50% 用量上限的方式併入 Max、Team Premium 方案，惟原文摘要遭截斷，適用時程與其他限制細節不明。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -127,7 +193,13 @@
       "time": "07/18 10:39",
       "sentiment": "",
       "body": "The New Stack 報導 Elon Musk 開源 Grok Build 以對抗 Anthropic，標題並提及 Anthropic 目前每月支付對方 12.5 億美元，惟原文摘要遭截斷，付款對象與用途細節不明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -138,7 +210,13 @@
       "time": "07/18 16:12",
       "sentiment": "😊",
       "body": "作者撰寫完整教學，示範如何把備用 Mac 設為 Claude Code 可透過 computer use 全權控制的常駐環境，可透過手機或 SSH 下指令，藉此隔離在主力機器開啟 `--dangerously-skip-permissions` 的風險。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] 5-hour limit reached in less than 1h30",
@@ -149,6 +227,12 @@
       "body": "使用者回報方案 5 小時用量限額在不到 1 小時 30 分鐘內即用罄，累積 120 則留言與 31 個讚同反應。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -160,6 +244,12 @@
       "body": "Simon Willison 透過字串比對驗證：Claude Code 自 v2.1.181（6/17 發布）起底層改用 Rust 重寫版 Bun runtime，Linux 平台啟動速度提升約 10%。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -169,7 +259,13 @@
       "time": "07/18 10:43",
       "sentiment": "😤",
       "body": "使用者回報 Claude Code Desktop 登出／重啟後 session 消失，急欲尋求恢復方法，累積 49 則留言與 29 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Environment Contributions warning continuously reappears",
@@ -178,7 +274,13 @@
       "time": "07/18 11:42",
       "sentiment": "😤",
       "body": "使用者回報在 Cursor、VS Code 等 IDE 每次開啟時，「Environment Contributions」警告訊息持續重複出現，累積 43 則留言與 81 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's newest ad is creeping people out",
@@ -187,7 +289,13 @@
       "time": "07/18 23:50",
       "sentiment": "😐",
       "body": "TechCrunch 報導 Anthropic 最新廣告《There's hope in hard questions》以陰暗意象（監控人群、街友、墓地、礦工）搭配旁白提問，讓部分觀眾感到不安。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "GitHub connector links repositories successfully but Claude cannot access content for ANY repository (account-wide, public and private alike) — recent regression",
@@ -196,7 +304,13 @@
       "time": "07/18 20:57",
       "sentiment": "😤",
       "body": "使用者回報 GitHub connector 雖能成功連結帳號內所有公開與私有 repository，Claude 卻無法讀取任何內容，回報為近期的功能退化，累積 37 則留言與 33 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show timestamps on conversation messages",
@@ -205,7 +319,13 @@
       "time": "07/18 21:48",
       "sentiment": "🤔",
       "body": "使用者提出功能請求，希望能在對話訊息上顯示時間戳記，方便監控長時間背景工作進度，累積 36 則留言與 66 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Multi-agent collaboration across machines (Agent-to-Agent protocol)",
@@ -223,7 +343,13 @@
       "time": "07/19 05:09",
       "sentiment": "🤔",
       "body": "使用者提出功能請求，希望內建 Slack MCP connector 能支援單一帳號連結多個 workspace，累積 33 則留言與 69 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Opus 4.7 mixes legacy XML tool-use format into JSON tool calls on longer payloads",
@@ -232,7 +358,13 @@
       "time": "07/18 22:04",
       "sentiment": "😤",
       "body": "使用者回報 Opus 4.7 在處理較長 payload 時，會把舊版 XML tool-use 格式混入 JSON tool call 中，累積 33 則留言與 34 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-7",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] VS Code Extension: Diff review UI similar to GitHub Copilot Edits Review",
@@ -475,7 +607,13 @@
       "time": "07/13 09:29",
       "sentiment": "😤",
       "body": "使用者對 Anthropic 近期用量限額政策頻繁調整（「這裡多一點額度、那裡多一點額度」）表達強烈不滿，要求正視問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic, I think you really need to react. You're slowly losing ground.",
@@ -484,7 +622,13 @@
       "time": "07/12 20:43",
       "sentiment": "😤",
       "body": "使用者呼籲 Anthropic 正視其認為公司正逐漸流失優勢的處境，內容以圖片呈現，原文細節不明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "See y'all next week",
@@ -515,6 +659,12 @@
       "body": "Tech Times 報導 Claude Fable 5 訂閱限制調整為 Max 方案永久提供、Pro 方案改為 Credits-only，惟原文摘要遭截斷，具體限額數字不明。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -526,6 +676,12 @@
       "body": "Dawn 報導 Anthropic 將把 Fable 5 模型以 50% 用量上限的方式併入 Max、Team Premium 方案，惟原文摘要遭截斷，適用時程與其他限制細節不明。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],

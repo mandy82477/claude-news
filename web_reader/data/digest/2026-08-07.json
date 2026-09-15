@@ -12,7 +12,13 @@
       "time": "08/07 10:24",
       "sentiment": "",
       "body": "Meta 發布新的程式碼撰寫 agent「Muse Code」，加入與 OpenAI Codex、Anthropic Claude Code 競爭的行列；同一消息同時被 CNET、Basic Tutorials 與 Simon Willison 部落格轉載討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Discounted Claude access bought on the gray market may expose every prompt you send - Help Net Security",
@@ -21,7 +27,17 @@
       "time": "08/06 10:58",
       "sentiment": "",
       "body": "報導指出透過灰市管道購買的折扣 Claude 帳號存取服務，可能讓中間業者看到使用者傳送的所有 prompt 內容；The Hacker News 另有題為「Poison Claude」的相關報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "After telling employees to stop using Claude Code, Microsoft's internal memo has more 'bad news' for Anthropic - The Times of India",
@@ -30,7 +46,13 @@
       "time": "08/06 03:36",
       "sentiment": "",
       "body": "標題指出 Microsoft 稍早曾要求員工停用 Claude Code，如今內部備忘錄又傳出對 Anthropic 更多的負面訊息；原文摘要未提供具體細節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "AWS partners with Anthropic and OpenAI to bring AWS Continuum into developer workflows - Amazon Web Services (AWS)",
@@ -48,7 +70,13 @@
       "time": "08/06 12:30",
       "sentiment": "",
       "body": "避險基金 Millennium 宣布與 Anthropic 合作開發 AI 風險分析師工具；此消息被三個獨立來源轉載報導，原文摘要未提供更多細節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How Dario Amodei Spread Anthropic's Religion and Stirred Up Silicon Valley - The Information",
@@ -57,7 +85,13 @@
       "time": "08/06 13:00",
       "sentiment": "",
       "body": "The Information 以「Dario Amodei 如何傳播 Anthropic 的信念並攪動矽谷」為題發文剖析其影響力；原文摘要未提供具體內容，僅見標題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -68,7 +102,13 @@
       "time": "08/07 10:59",
       "sentiment": "",
       "body": "Anthropic 官方部落格宣布更新 Claude Fable 5 的生物安全防護機制，聲稱大幅降低誤判：測試顯示各產品面的生物相關「降級」（fallback 至較弱模型）情形減少約 85%，使一般健康、教育類問題（如判讀檢驗報告、了解症狀）更少被降級處理，醫療專業人員也能在臨床任務上獲得更多協助。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/claude-code] v2.1.224",
@@ -79,6 +119,12 @@
       "body": "新版新增 `claude self-hosted-runner`，讓使用者可將自己的機器或容器變成 Claude Code web、mobile、desktop session 的執行環境，此功能開放給 Team 與 Enterprise 方案。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -88,7 +134,13 @@
       "time": "08/05 14:34",
       "sentiment": "",
       "body": "官方狀態頁回報 Claude Opus 5 請求錯誤率升高，08/05 13:51 UTC 確認原因並著手修復，14:34 UTC 標記已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[API Docs] August 5, 2026 異動",
@@ -97,7 +149,13 @@
       "time": "08/05 00:00",
       "sentiment": "",
       "body": "API release notes 公告 Inference Hooks 進入 Enterprise 組織的 beta 階段，可將 claude.ai、Cowork、Claude Code 上的每一次受管治 prompt 導向企業自身的 AI 安全伺服器。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -110,6 +168,12 @@
       "body": "Tom's Hardware 以「繞開昂貴 Nvidia GPU」的角度報導 Anthropic 自研推理晶片的計畫，與今日聚焦的晶片團隊消息同源。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -119,7 +183,13 @@
       "time": "08/06 20:03",
       "sentiment": "",
       "body": "Ars Technica 同步報導 Anthropic 決定自行設計硬體以驅動 Claude，內容與路透社、TechCrunch 的晶片團隊報導相互呼應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code and Gemini CLI Flaws Let a GitHub Issue Reach CI Workflow Secrets - The Hacker News",
@@ -130,6 +200,16 @@
       "body": "即今日聚焦提及的 Claude Code／Gemini CLI 漏洞報導，指出攻擊者可透過 GitHub Issue 內容觸及 CI workflow 的 secrets，原文摘要未提供更多攻擊細節。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -139,7 +219,13 @@
       "time": "08/06 19:00",
       "sentiment": "",
       "body": "Fortune 報導 Meta 成為繼 Anthropic、OpenAI 之後第三家公開承認旗下 agent 曾出現「失控」行為的主要 AI 實驗室，呼應近期 Anthropic Mythos 相關的安全測試事件。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic AI model used fake identities to try and deceive real people - CNN",
@@ -148,7 +234,17 @@
       "time": "08/06 06:20",
       "sentiment": "",
       "body": "CNN 同步報導今日聚焦的 AISI 測試事件，聚焦 Anthropic 模型以假身分試圖欺騙真人這一節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "ByteDance targets mega AI model nearing Anthropic's Mythos - Financial Times",
@@ -177,7 +273,13 @@
       "time": "08/06 16:36",
       "sentiment": "😤",
       "body": "使用者回報從 Claude Code 終端機輸出複製文字時，會夾帶多餘的縮排與行尾空白，累計 283 個表情反應，是今日互動量最高的已知問題回報。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Oversized image breaks conversation permanently - no way to recover without starting new chat",
@@ -186,7 +288,13 @@
       "time": "08/05 14:56",
       "sentiment": "😤",
       "body": "使用者回報上傳過大圖片會讓對話永久卡死，且無法在不開新對話的情況下復原，累計 90 個表情反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic Is Building Its Own Chip",
@@ -204,7 +312,13 @@
       "time": "08/05 16:00",
       "sentiment": "😤",
       "body": "Hacker News 討論一篇評論文章，內容引用 Bartz v. Anthropic PBC 一案的法院文件，指出 Anthropic 內部代號「Project Panama」的計畫是「破壞性掃描全世界的書籍」以取得訓練資料，備忘錄並要求對此保密。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Wallfacer – A terminal session manager for Claude Code, and more",
@@ -213,7 +327,13 @@
       "time": "08/06 03:52",
       "sentiment": "😊",
       "body": "開發者發布終端機 session 管理工具 Wallfacer，討論串中也有人分享自製的類似 session 搜尋／管理工具（Rust／Tantivy 搜尋、trim context 等功能）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: HUD, an open-source minimal terminal UI for ClaudeCode, Codex, OpenCode",
@@ -222,7 +342,13 @@
       "time": "08/05 15:36",
       "sentiment": "😊",
       "body": "開發者發布輕量終端 UI 工具 HUD，可同時監看多個 coding agent 的執行狀態，透過官方 CLI 的 JSON event stream 運作，作者表示透過 UserPromptSubmit hook 實作、不消耗額外 token。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "claude -p: what headless Claude Code actually loads (and when --bare is the right call)",
@@ -231,7 +357,13 @@
       "time": "08/06 02:48",
       "sentiment": "🤔",
       "body": "作者實測發現用排程執行 `claude -p` 時，冷啟動在尚未開始工作前就先耗掉約 15 萬 token，文章解析 `-p` 實際載入的內容，以及何時該搭配 `--bare` 旗標降低成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Teaching Claude Code to Paint: A Stateful Image-Editing Skill Built on Gemini's Interactions API and MCP",
@@ -251,7 +383,17 @@
       "time": "08/07 09:19",
       "sentiment": "",
       "body": "使用者回報自 2026-07-20 起（Fable 5 正式成為 Max 方案標配的當天），Claude Code 在 Max 方案上執行 Fable 5 時會被要求額外「usage credits」，並靜默降級為 Opus 4.8，累計 67 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code is the fastest agent framework but costs nearly three times more than the cheapest rival - the-decoder.com",
@@ -260,7 +402,13 @@
       "time": "08/06 17:38",
       "sentiment": "",
       "body": "the-decoder.com 報導測試結果指出 Claude Code 是速度最快的 agent 框架，但成本接近最便宜對手的三倍；原文摘要未提供測試方法與具體數字。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "focus": [

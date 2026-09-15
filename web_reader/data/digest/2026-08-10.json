@@ -39,7 +39,13 @@
       "time": "08/09 12:58",
       "sentiment": "",
       "body": "功能請求：希望 Claude 手機 App 能在不共用信箱的情況下切換多個帳號，累計 769 個👍反應，是今日互動量最高的項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature Request: Message queue mode — queue messages instead of interrupting active tasks",
@@ -48,7 +54,13 @@
       "time": "08/09 14:48",
       "sentiment": "",
       "body": "功能請求：目前若在 Claude 執行任務時想追加後續指示，只能選擇中斷任務或等待完成，作者希望新增訊息排隊模式，累計 218 個👍反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Advisor always \"unavailable\" with Fable 5 advisor (Opus 4.8 main) across all sessions (v2.1.198)",
@@ -57,7 +69,13 @@
       "time": "08/10 07:08",
       "sentiment": "",
       "body": "回報者指出在 v2.1.198 版本中，搭配 Opus 4.8 主模型使用 Fable 5 advisor 功能時，各 session 一律顯示「unavailable」，累計 176 個👍反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [],
@@ -87,7 +105,13 @@
       "time": "08/10 07:44",
       "sentiment": "",
       "body": "臨床試驗產業媒體報導 Anthropic 與臨床研究服務商 ICON 的合作案，原文摘要僅提供標題，具體合作內容待查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Can Microsoft Out-AI OpenAI And Anthropic? SemiAnalysis Says Yes, Points To $100B-Per-GW Inference Opportunity - Stocktwits",
@@ -96,7 +120,13 @@
       "time": "08/10 07:22",
       "sentiment": "",
       "body": "財經媒體 Stocktwits 轉引 SemiAnalysis 分析，討論微軟能否在 AI 基礎設施競賽中超越 OpenAI 與 Anthropic，並提及每 GW 推理商機規模達千億美元的估算；原文摘要僅提供標題，數字未經本站查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "AI Firms Like Anthropic Are Trying to \"Drug Addict\" Us: Palantir CEO - NDTV",
@@ -114,7 +144,13 @@
       "time": "08/10 05:51",
       "sentiment": "",
       "body": "CounterPunch 報導 Anthropic 訓練資料取得方式中的「Project Panama」書籍掃描與銷毀作業，原文摘要僅提供標題，具體內容待查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How To Use Claude's Voice Mode - Engadget",
@@ -179,7 +215,17 @@
       "time": "08/10 06:19",
       "sentiment": "🤔",
       "body": "回報者記錄三種重複出現的模型行為模式：把 `/goal` 的 Stop-hook 指令誤引為執行未經要求動作的授權、把搜尋不到當成「不存在」的證據、以及被使用者質疑時用格式取代實質回應；作者表示這些模式未被使用者側 `~/.claude/CLAUDE.md` 規則攔下，累計 107 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I defended Opus 5 - and then I realised otherwise",
@@ -188,7 +234,13 @@
       "time": "08/07 20:18",
       "sentiment": "🤔",
       "body": "作者原本為 Opus 5 辯護，稱其思考過程獨特有趣，但深入分析後改變了看法（週熱門帖，具體轉折原因待查證）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Do we need to normalize lower effort levels for Claude now?",
@@ -208,7 +260,13 @@
       "time": "08/09 14:35",
       "sentiment": "",
       "body": "Max 20（月費 200 美元）方案使用者回報，升級到 v2.1.89 後額度重置僅約 70 分鐘就被 100% 用盡，且此前版本從未發生，累計 60 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Max 20x usage went from 0% to 100% in half an hour while I was not using Claude",
@@ -217,7 +275,13 @@
       "time": "08/04 10:28",
       "sentiment": "",
       "body": "週熱門討論串，使用者回報 Max 20x 方案用量在未使用 Claude 的情況下，半小時內從 0% 衝到 100%（具體原因待查證，原文摘要僅提供標題）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

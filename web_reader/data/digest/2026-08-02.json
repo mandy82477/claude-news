@@ -12,7 +12,13 @@
       "time": "08/01 19:09",
       "sentiment": "",
       "body": "用 Rust 打造的 Claude Code agent 監控面板，作者提到同時開多個終端機視窗追蹤不同 session／專案是常見痛點，此工具聚合多個 agent 狀態於單一介面。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Wienerdog – memory and self-improving skills for Claude Code/Codex",
@@ -35,6 +41,12 @@
       "body": "thestreet.com 報導 Morgan Stanley 領投一項規模達 150 億美元、投向 Anthropic 德州校園／資料中心的投資案。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -44,7 +56,13 @@
       "time": "08/02 04:34",
       "sentiment": "",
       "body": "Startup Fortune 報導稱 Anthropic 已承認自身 bug 是先前 Claude Code 故障的原因；本篇為單一媒體來源，具體細節與時間線待其他管道佐證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Andrej Karpathy Says AI Has Moved Beyond Simple Prompts After Claude Opus Builds 3D Lord of the Rings World",
@@ -79,7 +97,13 @@
       "time": "08/01 14:53",
       "sentiment": "",
       "body": "tech-insider.org 比較開源 OpenCode 與付費 Claude Code 的下載量與定價差異，標題指出 OpenCode 下載量達 5.4 倍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -99,7 +123,13 @@
       "time": "08/01 17:29 UTC ·",
       "sentiment": "😤",
       "body": "回報者指出使用 Opus 4.8 觸發 Advisor 功能時，API 未回應也未產生錯誤訊息，該回報獲得 96 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Automatic light/dark theme selection?",
@@ -108,7 +138,13 @@
       "time": "08/01 14:37 UTC ·",
       "sentiment": "😐",
       "body": "使用者要求 Claude Code 終端機主題能跟隨作業系統的明暗模式自動切換，而非每次手動調整，此請求獲得 242 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Cowork Can't add private GitHub marketplace",
@@ -117,7 +153,13 @@
       "time": "08/01 15:37 UTC ·",
       "sentiment": "😤",
       "body": "回報者指出 Cowork 功能無法加入私有 GitHub marketplace，該問題獲得 35 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] MCP OAuth appends trailing slash to `resource` parameter, breaking Entra ID auth (AADSTS9010010)",
@@ -126,7 +168,13 @@
       "time": "08/01 16:45 UTC ·",
       "sentiment": "😤",
       "body": "回報者指出 MCP OAuth 流程會在 `resource` 參數後多加斜線，導致 Entra ID 驗證失敗並拋出 AADSTS9010010 錯誤，獲得 26 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Disable the welcome banner",
@@ -135,7 +183,13 @@
       "time": "08/02 05:36 UTC ·",
       "sentiment": "😐",
       "body": "使用者要求提供關閉啟動歡迎畫面與提示的選項，認為其佔用終端機空間，該請求獲得 126 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Ask HN: I still don't understand why AI agents need \"skills\"",
@@ -144,7 +198,13 @@
       "time": "08/02 00:09 UTC ·",
       "sentiment": "🤔",
       "body": "發文者提問為何 Claude Code、Codex 等框架需要「skills」概念，而不是直接用結構化的 Markdown 文件搭配 AGENTS.md 索引即可達成類似效果。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I stopped reviewing my own code. Here's what had to be true first.",
@@ -153,7 +213,13 @@
       "time": "08/01 06:38 UTC ·",
       "sentiment": "😊",
       "body": "作者分享同時平行執行多個 coding agent、產出的 diff 量已超過自己能逐行審閱的負荷後，如何把品質把關前移到更早階段，而非放棄審查。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I built a Mac notch panel that answers Claude Code permission prompts. Blocking PreToolUse hook, fails open when the app is closed. Architecture notes",
@@ -162,7 +228,13 @@
       "time": "08/02 11:14 UTC ·",
       "sentiment": "😊",
       "body": "作者實作了一個 Mac 瀏海面板，透過阻塞式 PreToolUse hook 攔截並回應 Claude Code 的權限確認提示，並設計為應用程式關閉時預設放行（fail open）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Nuking the crap Claude left in the codebase – CCN",
@@ -171,7 +243,13 @@
       "time": "08/02 04:31 UTC ·",
       "sentiment": "😊",
       "body": "作者打造一款只清除程式碼註解（不動其他內容）的工具，用來處理 AI 模型常在程式碼中留下大量註解的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Heavily nerfed limits or something else?",
@@ -191,7 +269,13 @@
       "time": "08/01 22:00",
       "sentiment": "",
       "body": "XDA 報導稱先前的 $100 Fable 5 免費體驗促銷，附帶改變了 Claude 計費方式的細節，且多數使用者並未留意到此變化；具體計費異動內容待原文查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

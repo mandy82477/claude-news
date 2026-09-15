@@ -12,7 +12,13 @@
       "time": "07/21 02:14",
       "sentiment": "",
       "body": "GitHub Issue 累積 353 則留言、821 個 reaction，為今日互動量最高的社群回報，反映終端機捲動行為的長期困擾。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] No indication of WHICH file for READ tool",
@@ -21,7 +27,13 @@
       "time": "07/20 22:01",
       "sentiment": "",
       "body": "另一則高互動 Issue（133 則留言、186 個 reaction）要求 Read 工具在輸出中明確標示所讀取的檔案名稱，多位使用者反映目前難以追蹤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -34,6 +46,12 @@
       "body": "新增 `sandbox.filesystem.disabled` 設定，可在維持網路出口控管的同時跳過檔案系統隔離；另修復長會話中訊息正規化造成的速度變慢問題。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -43,7 +61,13 @@
       "time": "07/20 20:46",
       "sentiment": "",
       "body": "TypeScript SDK 釋出 0.112.4 版，本次更新為 bug fix，含 AWS 相關欄位保留邏輯修正。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors across Fable 5",
@@ -54,6 +78,12 @@
       "body": "Anthropic Status 顯示 Fable 5 錯誤率上升，官方已實施修復並持續監控結果。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -65,6 +95,12 @@
       "body": "Haiku 4.5 錯誤率上升事件已於今日識別並解決。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -74,7 +110,13 @@
       "time": "07/20 16:16",
       "sentiment": "",
       "body": "Opus 4.8 錯誤率上升事件，官方實施修復並監控後已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Fable 5 requiring usage credits on Max plans",
@@ -83,7 +125,13 @@
       "time": "07/20 15:35",
       "sentiment": "",
       "body": "部分 Claude Code Max 方案用戶被系統誤判需使用點數才能存取 Fable 5（該功能本屬方案內含），問題已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated error rates for Opus 4.5",
@@ -92,7 +140,13 @@
       "time": "07/20 12:48",
       "sentiment": "",
       "body": "Opus 4.5 錯誤率上升事件，官方確認已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Apply for Anthropic's AI for Science rare disease research grants",
@@ -101,7 +155,13 @@
       "time": "07/21 11:51",
       "sentiment": "",
       "body": "Anthropic 針對 AI for Science 計畫推出聚焦罕見基因疾病的專項徵件，入選申請人最高可獲得 5 萬美元的 Claude 額度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -114,6 +174,12 @@
       "body": "Engadget 報導法官核准 Anthropic 這宗創紀錄的 15 億美元著作權和解案。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -123,7 +189,13 @@
       "time": "07/20 22:54",
       "sentiment": "",
       "body": "New York Post 指出此案為 AI 著作權訴訟中首宗達成和解的重大案件。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Alibaba Bans Claude Code Over 25,000 Fake Accounts [2026]",
@@ -134,6 +206,12 @@
       "body": "tech-insider.org 報導阿里巴巴以偵測到 2.5 萬個虛假帳號為由封鎖 Claude Code。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -145,6 +223,12 @@
       "body": "The New Stack 實測比較 Claude Fable 5 與 Kimi K3，結果相當但 Kimi K3 成本僅三分之一、速度慢 4 倍。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -154,7 +238,13 @@
       "time": "07/20 18:46",
       "sentiment": "",
       "body": "Barron's 分析阿里巴巴新模型對 Anthropic 相關個股的潛在影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code Seals Bash and Unicode Bypass Gaps in Agentic Permission Layer",
@@ -163,7 +253,17 @@
       "time": "07/21 11:04",
       "sentiment": "",
       "body": "Tech Times 報導 Claude Code 已修補 agentic 權限層中的 Bash 與 Unicode 繞過漏洞。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Horizon3.ai joins Anthropic's Project Glasswing to advance AI-driven critical infrastructure security",
@@ -172,7 +272,13 @@
       "time": "07/21 10:07",
       "sentiment": "",
       "body": "Industrial Cyber 報導資安公司 Horizon3.ai 加入 Anthropic 的 Project Glasswing，協助強化 AI 驅動的關鍵基礎設施安全。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Databricks' 40% Valuation Bump Looks 'Almost Quaint' Next to Anthropic",
@@ -181,7 +287,13 @@
       "time": "07/21 10:07",
       "sentiment": "",
       "body": "Morningstar 比較 Databricks 40% 估值成長與 Anthropic 近期估值變化的規模差距。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic says an AI security startup's logo looks too much like its own",
@@ -199,7 +311,13 @@
       "time": "07/20 15:37",
       "sentiment": "",
       "body": "Endpoints News 整理 Anthropic 過去 100 天在生技製藥領域的布局，含諾貝爾獎得主延攬與併購動作。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Inference startup Infinity raises $15M from Touring Capital, OpenAI and Anthropic researchers",
@@ -208,7 +326,13 @@
       "time": "07/20 15:15",
       "sentiment": "",
       "body": "TechCrunch 報導推論運算新創 Infinity 獲得 1,500 萬美元融資，投資方包含 OpenAI 與 Anthropic 研究員。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic set to end Conway test as wider preview expected soon",
@@ -226,7 +350,13 @@
       "time": "07/20 14:30",
       "sentiment": "",
       "body": "TBIJ 報導模擬測試中 Claude 曾不遵從 Anthropic CEO 指令，標題引述「這是失控的 AI」的評論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How to create a skill in Claude Code for your design system",
@@ -248,6 +378,12 @@
       "body": "文章分析兩款新開源模型逼近 Fable 5 效能，指出這對 Anthropic 未來的產品差異化構成重大挑戰。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -257,7 +393,13 @@
       "time": "07/20 21:38 UTC 😤",
       "sentiment": "",
       "body": "153 則留言反映 OAuth 登入逾時、`auth.anthropic.com` DNS 無法解析導致完全無法驗證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] API Error: Rate limit reached despite Claude Max subscription and only 16% usage",
@@ -266,7 +408,13 @@
       "time": "07/20 20:37 UTC 😤",
       "sentiment": "",
       "body": "153 則留言回報即使訂閱 Claude Max 方案且僅使用 16% 額度，仍收到 rate limit 錯誤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code Memory Leak - Process Grows to 120+ GB RAM and Gets OOM Killed",
@@ -275,7 +423,13 @@
       "time": "07/20 13:21 UTC 😤",
       "sentiment": "",
       "body": "97 則留言回報記憶體洩漏問題，長時間執行後程序膨脹至超過 120GB RAM 並遭 OOM 強制終止。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add Option to Always Show Claude's Thinking",
@@ -284,7 +438,13 @@
       "time": "07/20 16:10 UTC 🤔",
       "sentiment": "",
       "body": "348 個 reaction、91 則留言支持新增選項讓 Claude 的思考過程始終顯示，而非僅在部分情況呈現。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Bug] Anthropic API Error: Model's tool call could not be parsed (retry also failed)",
@@ -302,7 +462,13 @@
       "time": "07/21 11:44 UTC 🤔",
       "sentiment": "",
       "body": "58 則留言要求新增 `--screen-reader` 模式，以改善搭配 NVDA、JAWS 等螢幕報讀軟體的無障礙體驗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: A Pipeline for Making 10-minute AI Movies with Claude Code and Seedance",
@@ -311,7 +477,13 @@
       "time": "07/20 13:57 UTC 😊",
       "sentiment": "",
       "body": "作者分享以 Claude Code 擔任導演、串接 Seedance、Nano Banana、ElevenLabs 製作 10 分鐘電影的 pipeline，首次產出約需 2.5 小時、成本約 200 美元。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "US judge approves Anthropic's $1.5B settlement of copyright lawsuit",
@@ -322,6 +494,12 @@
       "body": "HN 討論串圍繞法官核准和解案展開，議題同時獲三個獨立來源報導。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -331,7 +509,13 @@
       "time": "07/21 01:10 UTC 🤔",
       "sentiment": "",
       "body": "作者嘗試「反向工程」還原 Fable 5 對 Jacobian Conjecture 反例的思路鏈，因 Anthropic 不公開 Chain of Thought 而以兩個 Fable 互相驗證的方式重建。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Amnesia – audit Claude Code's memory for contradictions",
@@ -367,7 +551,13 @@
       "time": "07/21 04:55 UTC 😊",
       "sentiment": "",
       "body": "作者整合多組 Claude Code、Codex、Cursor 訂閱額度，打造可跨工具切換的配額感知路由工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I added MCP servers to Claude Code. Here's what they cost in tokens.",
@@ -376,7 +566,13 @@
       "time": "07/21 01:02 UTC 😐",
       "sentiment": "",
       "body": "作者實測不同 MCP server 設計注入的隱藏 context 量，量化比較各設計的 token 成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Reverse-engineering is cheap now",
@@ -385,7 +581,13 @@
       "time": "07/20 19:24 UTC 🤔",
       "sentiment": "",
       "body": "Simon Willison 分享觀察到越來越多人使用 coding agent 對家中設備進行逆向工程與自動化。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Who's Afraid of Chinese Models?",
@@ -394,7 +596,13 @@
       "time": "07/20 17:09 UTC 🤔",
       "sentiment": "",
       "body": "Simon Willison 轉引 Ben Thompson 對中國開源模型議題的分析評論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Fable 5 is now metered for Pro and Team Standard, but Claude Code's separate August 19 extension may be more useful to watch",
@@ -403,7 +611,13 @@
       "time": "07/20 07:56 UTC 😤",
       "sentiment": "",
       "body": "週熱門貼文整理 Fable 5 免費存取期限多次延後（6/22→7/7→7/12→7/19），最終於 7/20 起 Max 與 Team Premium 方案調整為計量存取。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I built Synapse – a local MCP server that gives Claude instant knowledge of your codebase",
@@ -412,7 +626,13 @@
       "time": "07/19 18:40 UTC 😊",
       "sentiment": "",
       "body": "週熱門貼文介紹本地端 MCP server Synapse，可在本地索引程式碼庫並讓 Claude Code 直接查詢架構問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -423,7 +643,13 @@
       "time": "07/20 15:35",
       "sentiment": "",
       "body": "部分 Claude Code Max 方案用戶被誤判需使用點數才能存取 Fable 5（該功能本屬方案內含），官方已解決此誤判問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Fable 5 is now metered for Pro and Team Standard, but Claude Code's separate August 19 extension may be more useful to watch",
@@ -432,7 +658,13 @@
       "time": "07/20 07:56",
       "sentiment": "",
       "body": "Fable 5 免費存取期限歷經多次延後後，Max 與 Team Premium 方案自 7/20 起改為計量存取；發文者提醒 Claude Code 另有 8/19 到期的延伸方案更值得關注。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Fable 5 deactivated for $200 Claude.ai Max Customers?",
@@ -441,7 +673,13 @@
       "time": "07/17 18:48",
       "sentiment": "",
       "body": "週熱門貼文反映部分月付 200 美元的 Claude.ai Max 用戶回報 Fable 5 存取遭停用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

@@ -12,7 +12,13 @@
       "time": "08/13 16:47",
       "sentiment": "",
       "body": "VentureBeat 報導 DeepSeek Harness 以開源形式問世，同步搭配 API 定價較高的 V4-Pro 模型，被定位為 Claude Code 的直接競品；36Kr 另一篇實測報導則稱其在類 Minecraft 任務中的表現優於 Claude Code。兩篇報導角度不同（發布資訊 vs. 單一實測心得），後者結論屬單次測試個案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "VS Code 1.133 更新讓 Claude 工作階段更具彈性",
@@ -30,7 +36,13 @@
       "time": "08/14 07:16",
       "sentiment": "",
       "body": "GitHub Issue 要求 Claude Desktop app 支援多帳號管理與快速切換，獲得逾 800 個 👍 反應，反映跨帳號使用情境（如工作與個人帳號並用）仍是社群長期痛點之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude 嘗試證明黎曼猜想，過程中有意外發現",
@@ -39,7 +51,13 @@
       "time": "08/13 18:22",
       "sentiment": "",
       "body": "TechSpot 報導 Claude 在嘗試處理黎曼猜想這道數學難題的過程中，雖未解出猜想本身，但意外得出新的階段性成果，細節見原文。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -50,7 +68,13 @@
       "time": "08/14 10:53",
       "sentiment": "",
       "body": "status.claude.com 本身一度無法連線，事件已於 10:53 UTC 解決，影響範圍為狀態頁存取，非 Claude 服務本身。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Service disruption on Claude Code on the web and related services",
@@ -59,7 +83,13 @@
       "time": "08/14 00:51",
       "sentiment": "",
       "body": "Claude Code on the web 與相關服務於 23:42–00:50 UTC 間出現效能下降，事件已於 00:51 UTC 解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/claude-code] v2.1.232",
@@ -68,7 +98,13 @@
       "time": "08/13 23:29",
       "sentiment": "",
       "body": "Claude Code v2.1.232 發布，重點變更為 subagent forking 預設開啟：`subagent_type: \"fork\"` 的 subagent 將繼承完整對話與 prompt cache，互動 session 中非 teammate 的 agent 派工行為亦有調整。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.4",
@@ -77,7 +113,13 @@
       "time": "08/13 22:06",
       "sentiment": "",
       "body": "anthropic-sdk-typescript 的 vertex-sdk 子套件釋出 0.19.4，屬例行維護版本，詳細變更見 changelog。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.122.0",
@@ -86,7 +128,13 @@
       "time": "08/13 18:35",
       "sentiment": "",
       "body": "anthropic-sdk-python 釋出 v0.122.0，新增 API 的 `output_behavior` 欄位支援，詳細變更見 changelog。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
@@ -115,7 +163,13 @@
       "time": "08/14 08:41",
       "sentiment": "",
       "body": "Bloomberg 報導 Z.ai 推出新程式碼生成模型，意在與 Anthropic、OpenAI 爭奪 coding 市場，反映該領域競爭者持續增加。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code returns blank thinking blocks, but reasoning still costs you",
@@ -124,7 +178,13 @@
       "time": "08/14 07:30",
       "sentiment": "",
       "body": "The Register 報導 Claude Code 出現思考區塊（thinking blocks）回傳為空白、但對應的推理 token 仍照常計費的情況，屬使用者端可感知的行為異常。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Samsung is reportedly using Claude to speed up chip design",
@@ -133,7 +193,13 @@
       "time": "08/14 07:20",
       "sentiment": "",
       "body": "Digital Trends 報導三星據稱正使用 Claude 加速晶片設計流程，屬企業採用案例，具體應用範圍與規模未有更多細節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Even Claude Is in the Dark About Dario Amodei's Wife—and Her Influence at Anthropic",
@@ -142,7 +208,13 @@
       "time": "08/14 00:42",
       "sentiment": "",
       "body": "WSJ 深度報導聚焦 Dario Amodei 之妻在網路上資訊極少一事，並探討其對 Anthropic 內部可能的影響力，屬人物側寫類報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "5 Claude Code hooks that stop costly mistakes before they leave the terminal",
@@ -160,7 +232,13 @@
       "time": "08/13 19:28",
       "sentiment": "",
       "body": "知名放空投資人 Steve Eisman 公開表示 Anthropic 與 OpenAI 是整體 AI 交易的「阿基里斯腱」，屬市場觀察類評論，非官方財務數據。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -189,7 +267,13 @@
       "time": "08/13 21:07 UTC ·",
       "sentiment": "😤",
       "body": "使用者回報 GitHub Connector 在 Claude Desktop 中顯示已連接，但 Claude 本身無法辨識，獲得逾 130 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Make autonomous Claude Code actually viable: tiered Opus brains + Sonnet workers + persistent state",
@@ -198,7 +282,13 @@
       "time": "08/13 16:10 UTC ·",
       "sentiment": "🤔",
       "body": "社群提出分層架構構想：以 Opus 作為指揮中樞、Sonnet 作為執行單元並搭配持久化狀態，讓 Claude Code 能長時間自主運行而非僅止於結對編程，屬工作流設計層級的討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "CVP approved user being blocked on completely benign, non-security queries in fresh sessions on claude.ai (not Claude Code)",
@@ -225,7 +315,13 @@
       "time": "08/14 10:52 UTC ·",
       "sentiment": "😤",
       "body": "Reddit 使用者反映近 3 個月觀察到 Claude Code 品質明顯下滑，並提及該現象不限於特定模型，呼應近期社群對輸出品質穩定性的持續討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -236,7 +332,13 @@
       "time": "08/14 07:52",
       "sentiment": "",
       "body": "Financial Times 報導 OpenAI 與 Anthropic 因中國 AI 對手崛起而涉入定價戰，屬產業級定價策略動態，非 Anthropic 官方方案異動公告。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Models Can Be Cheaper to Use Than Chinese Ones, Study Finds",
@@ -245,7 +347,13 @@
       "time": "08/13 19:03",
       "sentiment": "",
       "body": "The Information 引述研究指出，Anthropic 模型在特定使用情境下的實際成本可能低於中國同類模型，挑戰「中國模型必然更便宜」的既定印象。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "focus": [

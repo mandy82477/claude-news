@@ -14,6 +14,16 @@
       "body": "Anthropic 官方報告涵蓋 2025 年 12 月至 2026 年 8 月間偵測並中止的濫用案例，分屬網路攻擊、影響力操作、監控、傳統武器開發、生物濫用、詐騙與非法蒸餾七大危害領域，涉及 Haiku、Sonnet、Opus 等模型；官方強調 Fable 系列模型未涉入任何案例。此則今日由 4 個獨立來源報導。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -25,6 +35,12 @@
       "body": "開發者要求讓 Claude Code 能存取並運用 Claude.ai Projects 的知識庫，此需求累積 635 個 👍 反應，是今日互動量最高的 GitHub Issue。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -36,6 +52,12 @@
       "body": "使用者要求 Claude Code 桌面版支援在同一應用實例內開啟多個視窗，目前桌面版僅為側邊欄式單視窗應用，該請求獲 249 個 👍 反應。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -45,7 +67,13 @@
       "time": "09/10 21:46",
       "sentiment": "",
       "body": "VSCode 擴充套件確認變更時編輯預覽／diff 未顯示的問題，回報者於今年 3 月更新指出問題仍未修復，該 issue 已累積 90 個 👍 反應與 55 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature Request: Option to disable paste text collapse in input field",
@@ -54,7 +82,13 @@
       "time": "09/11 12:15",
       "sentiment": "",
       "body": "使用者要求可關閉貼上多行文字時自動折疊為「[Pasted text #N +X lines]」的行為，指出這使得貼上內容在送出前難以檢視與編輯，該請求獲 157 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -80,7 +114,13 @@
       "time": "09/11 14:28",
       "sentiment": "",
       "body": "Mythos 5.1 與 Fable 5.1 錯誤率升高事件，官方已於 14:28 UTC 部署修復並轉為監控復原狀態。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded functionality for Claude Cowork on Windows",
@@ -89,7 +129,13 @@
       "time": "09/11 14:19",
       "sentiment": "",
       "body": "9 月 8 日發布的 Windows 更新導致 Claude Cowork 在 Windows 上的工作區無法連線本機磁碟機、無法執行本機指令，官方已於 9/10 15:54 UTC 確認問題，截至本次資料蒐集尚未標記解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated latency on the Claude API for some users",
@@ -98,7 +144,13 @@
       "time": "09/10 23:24",
       "sentiment": "",
       "body": "部分用戶 Claude API 回應延遲升高事件已於 9/10 23:24 UTC 解決，官方時序為 21:43 調查中 → 23:24 已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件更新：Claude Help Center release notes",
@@ -129,6 +181,16 @@
       "body": "WSJ 報導伊朗利用這款美國研發的 AI 模型追蹤美國海軍軍艦動向，為今日威脅情報報告延燒出的具體個案報導之一。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -138,7 +200,17 @@
       "time": "09/10 17:34",
       "sentiment": "",
       "body": "Bloomberg 報導 Anthropic 指稱中國 AI 公司 Moonshot 曾將用戶請求暗中導向 Claude 處理，為今日威脅情報報告中「非法蒸餾」類案例的具體對象之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Says Russian Hackers Used Claude AI to Automate Malware Evasion - SecurityWeek",
@@ -149,6 +221,16 @@
       "body": "SecurityWeek 報導俄羅斯駭客集團利用 Claude 協助自動化調整惡意軟體以規避防毒偵測，屬今日威脅情報報告揭露的網路攻擊類案例。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -176,7 +258,17 @@
       "time": "09/11 03:15",
       "sentiment": "",
       "body": "Guardian 報導更多 Anthropic 研究員接連對 AI 風險發出警告，而馬斯克在社群平台上公開將這波警告稱為「心理操作」（psyop）予以駁斥。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        },
+        {
+          "id": "jacob-coxon",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Trump dismisses AI extinction risks as more than a dozen OpenAI, Anthropic insiders call for a slowdown - CNBC",
@@ -187,6 +279,12 @@
       "body": "CNBC 報導超過十餘位 OpenAI 與 Anthropic 內部人士連署呼籲放緩 AI 發展腳步，川普則公開淡化 AI 滅絕風險的說法。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -196,7 +294,13 @@
       "time": "09/10 17:00",
       "sentiment": "",
       "body": "資產管理公司 T. Rowe Price 宣布擴大在投資流程中使用 Claude 與 Claude Code，財經媒體 marketscreener.com 亦獨立做了同類報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -207,7 +311,13 @@
       "time": "09/11 13:51",
       "sentiment": "",
       "body": "使用者回報 Fable 5.1 在 Claude Code 中處理範疇釐清、機制規劃這類任務的回應速度明顯快於前代模型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How are you verifying Claude Code's changes without manually testing everything?",
@@ -270,7 +380,13 @@
       "time": "09/11 13:22",
       "sentiment": "",
       "body": "開發者實測發現以 deny-list 方式限制 Claude Code 執行權限有 8 種繞過手法皆能成功，唯有改用 allow-list（白名單）機制才真正擋下，並釋出對應防護工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Stop asking your AI agent to follow rules. Enforce them.",
@@ -315,7 +431,13 @@
       "time": "09/11 14:30",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -326,7 +448,13 @@
       "time": "09/10 20:30",
       "sentiment": "",
       "body": "新版為 Claude apps gateway 新增支援：組織在 `gateway.yaml` 設定 `pricing:` 後，已登入的 Claude Code 用戶端會透過受管設定取得一致費率，使 `/cost` 與遙測數據能對齊實際費率。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [
@@ -646,7 +774,13 @@
       "time": "09/10 21:46",
       "sentiment": "",
       "body": "VSCode 擴充套件確認變更時編輯預覽／diff 未顯示的問題，回報者於今年 3 月更新指出問題仍未修復，該 issue 已累積 90 個 👍 反應與 55 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature Request: Option to disable paste text collapse in input field",
@@ -655,7 +789,13 @@
       "time": "09/11 12:15",
       "sentiment": "",
       "body": "使用者要求可關閉貼上多行文字時自動折疊為「[Pasted text #N +X lines]」的行為，指出這使得貼上內容在送出前難以檢視與編輯，該請求獲 157 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ]
 }

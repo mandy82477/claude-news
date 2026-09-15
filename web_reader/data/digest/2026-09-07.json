@@ -12,7 +12,13 @@
       "time": "09/06 14:33",
       "sentiment": "",
       "body": "Team 方案目前僅有 Standard（1.25x Pro 用量）與 Premium（6.25x）兩檔座位，使用者提案新增對等 Max 20x 的高階座位供 CTO、技術主管等重度使用者選用，累積 133 個讚、35 則留言（達 GitHub 中門檻 ≥20 留言）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Environment Contributions warning continuously reappears",
@@ -21,7 +27,13 @@
       "time": "09/07 11:12",
       "sentiment": "",
       "body": "Claude Code Status v1.0.25 在每次開啟 Cursor 或 VS Code 整合終端機時都重複跳出同一則環境貢獻警告，累積 46 則留言、86 個讚。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Text cannot be copied from Claude Code's output using Ctrl+Shift+C or right-click context menu.",
@@ -30,7 +42,13 @@
       "time": "09/06 23:04",
       "sentiment": "",
       "body": "使用者回報 Ctrl+Shift+C 與右鍵選單皆無法複製 Claude Code 輸出的文字，累積 42 則留言、68 個讚。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How a tiny Anthropic team became a surprisingly productive hit factory - Business Insider",
@@ -39,7 +57,13 @@
       "time": "09/07 09:00",
       "sentiment": "",
       "body": "Business Insider 側寫 Anthropic 內部一支小型團隊的高產出節奏，今日有 3 個獨立來源同步轉載同一則報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "ruvnet/metaharness",
@@ -48,7 +72,13 @@
       "time": "09/07 15:55",
       "sentiment": "",
       "body": "Agent 框架腳手架工具，可生成自帶 CLI、MCP 伺服器、記憶與學習迴圈的專屬 agent harness，支援 Claude Code、Codex 等多種工具；634 星，達 GitHub repo 中門檻（≥300 星）。今日另有 3 款同類 agent 工具同批亮相（見下列三則）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "nirholas/XActions",
@@ -57,7 +87,13 @@
       "time": "09/07 15:55",
       "sentiment": "",
       "body": "X/Twitter 自動化工具組，內建供 Claude、GPT 等 AI agent 使用的 MCP 伺服器；513 星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "aqm857886159/Nomi",
@@ -66,7 +102,13 @@
       "time": "09/07 15:55",
       "sentiment": "",
       "body": "開源 AI 影片工作台，可讓 Claude Code、Codex、Cursor 透過 MCP 指揮腳本、生成與剪輯流程；500 星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "shlokkhemani/rabbithole",
@@ -75,7 +117,13 @@
       "time": "09/07 15:55",
       "sentiment": "",
       "body": "MCP 驅動的無限畫布學習工具，選取文字提問後答案以文件形式延伸分支；310 星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [],
@@ -87,7 +135,13 @@
       "time": "09/07 06:11",
       "sentiment": "",
       "body": "Morningstar 分析文章列出 Anthropic 即將進行的 IPO 規模龐大，同時提醒投資人該留意的風險項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Authors push back as publishers and agents make claims on Anthropic settlement - TechCrunch",
@@ -98,6 +152,12 @@
       "body": "TechCrunch 進一步報導，出版商與版權經紀人陣營對 Anthropic 著作權和解金的分配方式提出異議，作者方公開反彈。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -107,7 +167,13 @@
       "time": "09/06 15:00",
       "sentiment": "",
       "body": "The Information 報導，Anthropic 過去 11 個月內已敲定合計 5,170 億美元的算力交易。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Has Committed More Than $100 Billion to AWS, and Its Prospectus Could Reveal More Details About This Contract - Currently.com",
@@ -125,7 +191,17 @@
       "time": "09/07 03:44",
       "sentiment": "",
       "body": "Yahoo Finance 報導，美國國防部加碼維持對 Anthropic 的採購黑名單，並分析亞馬遜與 Alphabet 投資人為何該留意此事。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Fluidstack: Leading Anthropic's US$50bn Compute Build-Out - AI Magazine",
@@ -134,7 +210,13 @@
       "time": "09/07 09:43",
       "sentiment": "",
       "body": "AI Magazine 報導，Fluidstack 主導 Anthropic 一筆 500 億美元的算力建置案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Hut 8 Corp. (HUT)'s AI Pivot Gets a Major Boost From the $35 Billion Anthropic Deal - Yahoo Finance",
@@ -143,7 +225,13 @@
       "time": "09/07 08:30",
       "sentiment": "",
       "body": "Yahoo Finance 報導，比特幣礦業公司 Hut 8 藉由與 Anthropic 的 350 億美元合作案，加速推進 AI 業務轉型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "PicPay Integrates With Anthropic's Claude to Expand Conversational AI Financial Services - FF News",
@@ -152,7 +240,13 @@
       "time": "09/07 09:18",
       "sentiment": "",
       "body": "FF News 報導，巴西金融科技公司 PicPay 整合 Claude，擴大其對話式 AI 金融服務。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Grok 4.5: $2/$6 Pricing Beats GPT-5 & Claude [2026] - shattered.io",
@@ -161,7 +255,13 @@
       "time": "09/07 05:44",
       "sentiment": "",
       "body": "shattered.io 報導 Grok 4.5 以每百萬 token 輸入 2 美元、輸出 6 美元定價，宣稱優於 GPT-5 與 Claude。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic opens real Claude usage data to outside researchers for first time - EdTech Innovation Hub",
@@ -170,7 +270,13 @@
       "time": "09/06 23:01",
       "sentiment": "",
       "body": "EdTech Innovation Hub 報導，Anthropic 首度對外部研究者開放真實 Claude 使用數據。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -181,7 +287,13 @@
       "time": "09/06 17:17",
       "sentiment": "",
       "body": "使用者持續呼籲提供選項，讓 Enter 鍵在 CJK 輸入法確認輸入時只換行、不直接送出訊息（現行行為常誤觸發送），累積 187 個讚、34 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Coop – Isolated VM Environments for Running Claude Code and Codex",
@@ -190,7 +302,13 @@
       "time": "09/07 04:18",
       "sentiment": "",
       "body": "Coop 提供隔離的 VM 環境跑 Claude Code 與 Codex，讓 agent 在無法碰到其他專案或個人檔案的情況下運作，Hacker News 討論中已有使用者表示每天在用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The risks of switching to Codex?",
@@ -226,7 +344,13 @@
       "time": "09/06 21:39",
       "sentiment": "",
       "body": "Show HN 工具 MaskShift 是本地優先的 coding agent harness，訴求零 npm runtime 依賴、可支援沒有原生 tool-calling API 的模型，今日有 2 個獨立來源提及。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Research acceleration: The view inside OpenAI",
@@ -235,7 +359,13 @@
       "time": "09/06 23:57",
       "sentiment": "",
       "body": "Simon Willison 撰文談 OpenAI 內部的「RSI Day」（Recursive Self-Improvement），側寫其研究加速團隊的運作方式。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "plannotator/effective-html",
@@ -244,7 +374,13 @@
       "time": "09/07 15:55",
       "sentiment": "",
       "body": "（2026-06 出生、3,023 星，本庫今日首次收錄）Agent skills 技能包，協助產出可用的 HTML artifact、線框稿、互動原型、計畫與圖表。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -257,6 +393,16 @@
       "body": "這是今日所有 GitHub Issue 中留言數最高者（1,492 則，遠超今日其他 issue 的 46 則），反映 Max 訂閱用戶對用量計算是否準確的不信任正在擴大，該串目前尚無官方明確回覆。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -266,7 +412,13 @@
       "time": "09/07 15:06",
       "sentiment": "",
       "body": "另一則貼文回報收到「即將達上限」警告，但實際用量遠未接近門檻，與上方 GitHub Issue 同屬「配額顯示是否準確」這條線。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

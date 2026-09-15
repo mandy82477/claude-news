@@ -15,7 +15,7 @@
       "focusTags": [],
       "sedimented": [
         {
-          "id": "cowork",
+          "id": "claude-code",
           "pageType": "entity"
         }
       ]
@@ -36,7 +36,13 @@
       "time": "09/11 19:18",
       "sentiment": "",
       "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
@@ -45,7 +51,13 @@
       "time": "09/11 19:30",
       "sentiment": "",
       "body": "桌面版 2.1.148 在 macOS 上無法開啟 Bypass Permissions 模式，會自動退回 Accept Edits 並提示「Permission mode couldn't be changed」，累積 65 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -58,6 +70,12 @@
       "body": "新增 `claude plugin eval` 指令，可對 plugin 執行評測套件並產出可重現的 JSON／HTML 評分報告；官方文件同步新增《Test plugins with evals》頁面，Claude Code 桌面版文件也同批更新約 6 段內容。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -69,7 +87,13 @@
       "time": "09/11 19:25",
       "sentiment": "",
       "body": "Reuters 彙整 Anthropic 揭露的濫用案例全貌，跨越武器研發、間諜活動與網路攻擊三大類別。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic details bad actors' efforts to misuse its AI for bioweapons",
@@ -89,7 +113,13 @@
       "time": "09/11 23:01",
       "sentiment": "",
       "body": "Reuters 引述消息人士報導，Nvidia 正洽談投資 Anthropic 規劃中的鉅額 IPO，尚未定案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "T. Rowe Price Expands Use of Claude in its Investment Process",
@@ -112,6 +142,10 @@
       "focusTags": [],
       "sedimented": [
         {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
           "id": "cowork",
           "pageType": "entity"
         }
@@ -124,7 +158,13 @@
       "time": "09/12 13:12",
       "sentiment": "",
       "body": "使用者抱怨 Opus 5 話變多但缺乏根據，比起以前的版本更容易離題下結論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Vertical slices vs whole-feature prompts: how do you structure work for coding agents now?",
@@ -133,7 +173,13 @@
       "time": "09/12 13:12",
       "sentiment": "",
       "body": "開發者分享兩年來用 LLM coding agent 的心得，工作流程已重構三次，討論該用「垂直切片」還是「整包功能」下 prompt。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's AI formalizes Fermat's Last Theorem in Lean",
@@ -142,7 +188,13 @@
       "time": "09/09 18:58",
       "sentiment": "",
       "body": "Anthropic 稱內部模型在 11 天內寫出 1,300 萬行 Lean 程式碼，完成費馬最後定理的機器驗證證明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "AI Is Powerful Enough to Crack Our Hardest Math Problems–and Kill Us All",
@@ -151,7 +203,13 @@
       "time": "09/12 10:49",
       "sentiment": "",
       "body": "討論串圍繞 AI 解數學難題的能力與潛在濫用風險展開，有留言聲稱已用居家設備結合 agent 合成蛋白質與病毒結構。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "github/spec-kit",
@@ -160,7 +218,13 @@
       "time": "09/12 13:39",
       "sentiment": "",
       "body": "Spec-Driven Development 入門工具包，近 7 天新增 2,311 星（約 330 星/日）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "stablyai/orca",
@@ -169,7 +233,13 @@
       "time": "09/12 13:39",
       "sentiment": "",
       "body": "用自己既有訂閱跑任意 coding agent 的多 agent ADE（桌面／行動／遠端執行環境皆支援），近 7 天新增 4,966 星（約 709 星/日）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "rpamis/comet",
@@ -178,7 +248,13 @@
       "time": "09/12 13:39",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],
@@ -466,7 +542,7 @@
       "focusTags": [],
       "sedimented": [
         {
-          "id": "cowork",
+          "id": "claude-code",
           "pageType": "entity"
         }
       ]
@@ -487,7 +563,13 @@
       "time": "09/11 19:18",
       "sentiment": "",
       "body": "Linux 使用者抱怨 Claude Code 把快取與設定寫進 `~/.claude.json`、`~/.claude`，未遵守 XDG Base Directory 規範，累積 68 則留言、447 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Desktop: Bypass Permissions mode can't be enabled on macOS",
@@ -496,7 +578,13 @@
       "time": "09/11 19:30",
       "sentiment": "",
       "body": "桌面版 2.1.148 在 macOS 上無法開啟 Bypass Permissions 模式，會自動退回 Accept Edits 並提示「Permission mode couldn't be changed」，累積 65 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ]
 }

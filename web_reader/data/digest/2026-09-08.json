@@ -12,7 +12,13 @@
       "time": "09/08 04:36",
       "sentiment": "",
       "body": "技術部落格拆解 Claude Code 雲端沙盒的基礎架構：每個 session 跑在獨立的 Firecracker microVM 上，以 Rust 撰寫的自訂 init 程序（`process_api`）作為 PID 1，並與 Instinct、Poke 等其他行動端 agent 平台的架構並列比較；當日在 Hacker News 取得 58 分（達中門檻 ≥30 分）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Appeal Form Redirect Loop After Account Restriction",
@@ -21,7 +27,13 @@
       "time": "09/07 22:21",
       "sentiment": "",
       "body": "使用者回報帳號遭限制後，申訴表單陷入重新導向迴圈、無法送出申訴，累積 40 則留言（達 GitHub 中門檻 ≥20 留言）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature request: make the auto-memory MEMORY.md compaction reminder threshold configurable",
@@ -30,7 +42,13 @@
       "time": "09/08 13:47",
       "sentiment": "",
       "body": "使用者要求把 `MEMORY.md` 自動記憶壓縮提醒的觸發門檻改為可調整（或至少可個別關閉），而非目前寫死的固定值，累積 39 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [],
@@ -42,7 +60,17 @@
       "time": "09/08 12:33",
       "sentiment": "",
       "body": "Banking Exchange 報導，Anthropic 即將就潛在的兩兆美元 IPO 案敲定承銷銀行名單。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI, Anthropic Seek Investment-Grade Ratings Post Potential IPOs to Cut AI Borrowing Costs: Report - Yahoo Finance",
@@ -51,7 +79,17 @@
       "time": "09/08 12:10",
       "sentiment": "",
       "body": "Yahoo Finance 報導，Anthropic 與 OpenAI 都在 IPO 後尋求投資級信評，以降低未來借貸成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Scuttles Plans to Acquire AI Company Decart - PYMNTS.com",
@@ -62,6 +100,12 @@
       "body": "PYMNTS 報導 Anthropic 取消收購 AI 新創 Decart 的計畫，交易原傳金額為 60 億美元。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -71,7 +115,13 @@
       "time": "09/08 07:16",
       "sentiment": "",
       "body": "calcalistech 進一步分析 Anthropic 撤回這筆 60 億美元 Decart 收購案背後的原因。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude’s AI Text Watermarks Raise Concerns for Students and Authors - FinancialContent",
@@ -82,6 +132,12 @@
       "body": "FinancialContent 報導，Claude 的 AI 文字浮水印機制讓學生與作者擔憂原創內容遭誤判。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -91,7 +147,13 @@
       "time": "09/08 07:30",
       "sentiment": "",
       "body": "報導指出 Claude iOS App 新增用量按鈕，並新增 Claude Code 設定區塊。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic is No. 1 on Best Workplaces for Innovators 2026 - Fast Company",
@@ -100,7 +162,13 @@
       "time": "09/08 11:11",
       "sentiment": "",
       "body": "Fast Company 公布 2026 年最適合創新者工作的公司榜單，Anthropic 名列第一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI’s ~$1 Billion GPT-6 Astra Heralds The Age Of AGI, According To NVIDIA’s Jensen Huang, Yet Anthropic’s Fable 5.1 Still Beats It On SWE-Bench Pro And Coding Benchmarks - Wccftech",
@@ -129,7 +197,13 @@
       "time": "09/08 14:39",
       "sentiment": "",
       "body": "新開源專案，提供 Claude Code skill 把任意影片剪成中文口述影評、支援剪映格式匯出，500 星（達 GitHub repo 中門檻 ≥300 星）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Claude Style Patch – A dropin Claude.MD section for improving Claudish",

@@ -14,6 +14,12 @@
       "body": "社群回報自 3/23 起 Claude Max 方案的 CLI session 額度消耗速度異常加快，該 issue 累計 792 則留言/讚同，是本輪 GitHub Issues 中互動量最高的條目，暫無官方明確回應。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -25,6 +31,12 @@
       "body": "repo commit 歷史中若出現字串 `HERMES.md`，會觸發 Claude Code 將請求誤判並改走 extra usage 計費，而非扣抵 Max 方案內含額度，獲得 533 個讚同、93 則留言。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -34,7 +46,13 @@
       "time": "07/11 12:46",
       "sentiment": "",
       "body": "多名使用者回報回應長度超過 32000 output token 上限時觸發 API 錯誤，獲得 85 個讚同、137 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -47,6 +65,12 @@
       "body": "Auto mode 在 Bedrock、Vertex AI、Foundry 三個平台上不再需要 `CLAUDE_CODE_ENABLE_AUTO_MODE` 環境變數 opt-in 即可使用，可透過設定中的 `disableAutoMode` 關閉；同版並修復終端機凍結問題。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -58,7 +82,13 @@
       "time": "07/11 12:54",
       "sentiment": "",
       "body": "報導指出 Anthropic 為 Claude Code Desktop 新增內建瀏覽器功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic announces 'Claude Corps' to teach nonprofits to use AI more effectively - Dayton Daily News",
@@ -67,7 +97,13 @@
       "time": "07/11 02:44",
       "sentiment": "",
       "body": "Anthropic 宣布「Claude Corps」計畫，協助非營利組織學習有效運用 AI 工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "A $65K job at Anthropic becomes a flashpoint in S.F's affordability crisis - Mission Local",
@@ -76,7 +112,13 @@
       "time": "07/11 01:42",
       "sentiment": "",
       "body": "報導以 Anthropic 一則 6.5 萬美元年薪職缺為切入點，探討舊金山住房負擔能力危機與科技業薪資落差的爭議。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -89,6 +131,12 @@
       "body": "作者實測發現 Claude Code 內建 WebFetch 對多數頁面處理良好（如將 Wikipedia 摘要壓到約 950 tokens），但在 JS 渲染或有反爬機制的頁面上會失敗並把原始 HTML 整段塞回 context，因而動手開發開源工具因應。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -127,7 +175,13 @@
       "time": "07/10 15:46 UTC ·",
       "sentiment": "🤔",
       "body": "r/LocalLLaMA 週熱門貼文轉述 DataBricks 的評測，指 pi-coding-agent 成本約為 Claude Code / Codex 的一半，且 GLM 5.2 表現可比 Opus 4.8 high；為單一來源轉述，數字未見官方交叉確認。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -138,7 +192,13 @@
       "time": "07/02 05:55",
       "sentiment": "",
       "body": "作者指出 Anthropic 已將 Sonnet 5 以 $2/$10 每百萬 token 的價格廣泛開放，優惠將持續至 8 月 31 日，並建議將其設為預設路由模型而非上限。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How My First Claude Code on AWS Bedrock Experiment Cost Me $8.43 in Just One Day",
@@ -147,7 +207,13 @@
       "time": "06/16 11:00",
       "sentiment": "",
       "body": "作者記錄改用 AWS Bedrock 執行 Claude Code 第一天即產生 8.43 美元費用的經驗，並分享設定預算警示的心得，藉此避開 Anthropic 原生方案的 5 小時 session 與週用量上限。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

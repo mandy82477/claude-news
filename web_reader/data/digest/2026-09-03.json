@@ -14,6 +14,12 @@
       "body": "HN 討論串（303 分）留言者比較不同模型用於 RTS 遊戲 3D 世界建模的效果與成本，認為 Opus 5 表現不遜於原方案且更省錢，但生成模型面數偏高、未經最佳化；也有留言質疑 README 展示的疊圖對比說服力不足。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -23,7 +29,13 @@
       "time": "09/02 22:00",
       "sentiment": "",
       "body": "使用者要求為 VS Code 擴充功能新增設定，可關閉自動附加目前開啟檔案／選取範圍的行為；累積 70 則留言、223 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop 1.1.3189 severe UI lag and mouse stutter on Windows — performance regression after update",
@@ -32,7 +44,13 @@
       "time": "09/02 14:28",
       "sentiment": "",
       "body": "回報 Windows 版 Claude Desktop 更新至 1.1.3189 後出現嚴重介面延遲與滑鼠頓挫的效能退步；累積 48 則留言、44 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -45,6 +63,12 @@
       "body": "新增 `managedMcpServers` 管理設定，組織可統一為所有使用者佈署 HTTP/SSE MCP 伺服器，設定格式比照 `.mcp.json`。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -56,6 +80,12 @@
       "body": "Anthropic 狀態頁通報 Mythos/Fable 5.1、Mythos/Fable 5、Opus 5、Opus 4.8、Opus 4.6 多款模型錯誤率升高，13:41 UTC 已鎖定原因，截至本次資料蒐集（14:38 UTC）尚未標記為已解決。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -68,7 +98,7 @@
       "focusTags": [],
       "sedimented": [
         {
-          "id": "sonnet-5",
+          "id": "claude-code",
           "pageType": "entity"
         }
       ]
@@ -80,7 +110,13 @@
       "time": "09/03 14:38",
       "sentiment": "",
       "body": "官方說明文件更新版本需求措辭：使用 Claude Code 者，Fable 5 需 2.1.170（含）以上版本、Fable 5.1 需 2.1.255（含）以上版本；並補充在 Claude 網頁版／桌面版／行動版的模型選單可選取「Fable 5」或「Fable 5.1」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [],
@@ -92,7 +128,13 @@
       "time": "09/02 15:55",
       "sentiment": "",
       "body": "作者說明其 SRE 團隊曾嘗試以 Claude、OpenClaw、LangChain 等工具做事故應變，但遇到 context 溢位、提示注入風險（lethal trifecta）、幻覺與核准疲勞等問題，因此另外打造專用 Rust agent 因應。😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Kit. Claude Code but Concise",
@@ -101,7 +143,13 @@
       "time": "09/02 15:30",
       "sentiment": "",
       "body": "作者將原本測試「headless agent 能多省 context」的實驗，發展成同時支援終端機、ACP、A2A 的單一靜態執行檔，並已取代自己原本使用的 Claude Code、Codex、OpenCode 成為日常主力工具。😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code journal plugin: Notion session summaries at a glance",
@@ -110,7 +158,13 @@
       "time": "09/02 23:11",
       "sentiment": "",
       "body": "作者將自製的 `/journal` skill 包裝成可安裝的 Claude Code plugin，能為每個主題產生一則依季節上色、附星期圖示的摘要卡片，每次執行呼叫 3 次 Notion API。😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "We built an open-source, model-neutral agent harness and compared it with claude managed agents - for the same model, got same accuracy, upto 75% lower cost",
@@ -119,7 +173,13 @@
       "time": "09/03 12:07",
       "sentiment": "",
       "body": "貼文作者宣稱以同一個模型跑自製、與供應商無關的開源 agent harness，準確度與 Claude Managed Agents 打平、成本卻可低最多 75%；貼文未附測試方法與資料集細節。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "managed-agents",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [],

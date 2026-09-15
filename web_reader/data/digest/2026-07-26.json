@@ -15,6 +15,16 @@
       "body": "7/26 上午 Opus 5 請求錯誤率升高，約 16 分鐘後排除。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -26,6 +36,12 @@
       "body": "7/25 晚間多款模型同時出現請求錯誤率升高，約 34 分鐘後排除。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -37,6 +53,12 @@
       "body": "7/25 傍晚同批模型出現錯誤率升高，約 1 小時後排除。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -48,6 +70,12 @@
       "body": "7/25 稍早 Sonnet 4.6 與 Sonnet 5 錯誤率升高約 10 分鐘後恢復正常。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -61,6 +89,12 @@
       "body": "報導 Anthropic 發布 Opus 5，官方稱其在 AI 基準測試指數表現領先，成本約為 Fable 5 的一半。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -72,6 +106,12 @@
       "body": "PCMag 報導 Anthropic 宣稱 Opus 5 在 agentic search 表現優於 Fable 5。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -81,7 +121,13 @@
       "time": "07/26 13:00",
       "sentiment": "",
       "body": "分析 Anthropic 近期晶片採購合作對 AMD 股價的潛在影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "David Sacks Warns Anthropic Doesn't Want Competition",
@@ -90,7 +136,13 @@
       "time": "07/26 08:46",
       "sentiment": "",
       "body": "David Sacks 公開批評 Anthropic 在開源生態議題上的立場，稱其恐傷害美國開源生態系。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Chinese AI models split Silicon Valley, Nvidia and others want open access while Anthropic pushes for ban",
@@ -101,6 +153,12 @@
       "body": "報導矽谷對中國 AI 模型的態度分歧：Nvidia 等傾向開放存取，Anthropic 則推動限制。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -112,6 +170,12 @@
       "body": "Nvidia 發起的開放權重連署簽署企業增至 50 家，但 Amazon 與 Anthropic 並未加入。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -121,7 +185,13 @@
       "time": "07/25 20:23",
       "sentiment": "",
       "body": "SK 集團董事長透露 Anthropic 曾接洽尋求自製晶片所需的供應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I'm not letting Claude touch my passwords, no matter how safe Anthropic claims it is",
@@ -139,7 +209,13 @@
       "time": "07/25 14:43",
       "sentiment": "",
       "body": "報導指出 Claude Mythos 或類似模型可能對外公開發布。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -152,6 +228,12 @@
       "body": "呼籲 Claude Code 支援 Codex、Amp、Cursor 等工具已逐漸標準化的 AGENTS.md 格式，該 issue 已累積 5760 個讚。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -163,6 +245,12 @@
       "body": "回報者稱 API 連線中斷頻繁到讓 Claude Code 無法完成任何任務。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -174,6 +262,12 @@
       "body": "回報 Claude Code 經常誤判自己所在目錄，導致指令失敗並需多輪自我排查才能發現問題。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -183,7 +277,13 @@
       "time": "07/25 18:30 UTC ·",
       "sentiment": "😤",
       "body": "Windows 版 Desktop 應用因孤兒行程檔案鎖定導致無法重新啟動。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code has a hardcoded instruction telling Opus 5 not to use subagents",
@@ -192,7 +292,13 @@
       "time": "07/26 08:45 UTC ·",
       "sentiment": "🤔",
       "body": "討論指出 Claude Code 二進位中內建限制 Opus 5 使用 AgentTool／workflows／deep-research 的系統提示，除非使用者明確要求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Termic – desktop app for running CLI coding agents (Claude Code, Codex)",
@@ -228,7 +334,13 @@
       "time": "07/02 19:56 UTC ·",
       "sentiment": "😊",
       "body": "作者分享實務作法：只在需要頂尖判斷力的任務用 Fable 5，其餘實作、測試、雜務交給較便宜的 subagent 處理以控制成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Transitioning to Spec-Driven Development via AWS Step Functions",

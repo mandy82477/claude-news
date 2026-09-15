@@ -21,7 +21,13 @@
       "time": "09/10 13:44",
       "sentiment": "",
       "body": "使用者要求 Claude 手機 App 支援不需共用信箱的多帳號切換功能，該請求獲得 980 個 👍 反應，是今日互動量最高的 GitHub Issue。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude 4.7, 4.8, 5.0, and Fable increasingly default to repetitive rhetorical tics and often struggle to produce coherent prose despite explicit style instructions",
@@ -30,7 +36,13 @@
       "time": "09/10 10:15",
       "sentiment": "",
       "body": "使用者回報近期模型即使給出明確風格指示，仍傾向套用重複的修辭套路、難以產出流暢文字，該 issue 獲 552 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] AskUserQuestion: \"No response after 60s — continued without an answer\"",
@@ -39,7 +51,13 @@
       "time": "09/09 14:15",
       "sentiment": "",
       "body": "AskUserQuestion 工具在等待使用者回應 60 秒後會逕自視為「無回應」並繼續執行，並未真正暫停等待輸入，該 issue 獲 414 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Self-hosted company OS, Claude Code and Codex agents in departments",
@@ -48,7 +66,13 @@
       "time": "09/09 17:57",
       "sentiment": "",
       "body": "開發者釋出可自架的「公司作業系統」，讓 Claude Code 與 Codex agent 分別進駐不同部門協作，支援 bubblewrap 沙盒隔離與多租戶協作模式；本則今日由 4 個獨立來源報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -61,6 +85,12 @@
       "body": "新版新增 `maxEffortLevel` 設定（可放在頂層或個別模型的 `modelSettings` 下），會對包含 Bedrock、Vertex、Foundry 在內的所有供應商統一設定推理努力上限，使用者仍可在上限內自行選擇較低等級。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -74,6 +104,12 @@
       "body": "Anthropic 官方發布針對近期一連串資安事件的對齊面向自我評估文章，為第四起事件揭露後的官方技術性回應。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -103,6 +139,16 @@
       "body": "路透社報導美國國會議員在 Anthropic 研究人員相繼發出 AI 風險警告後，呼籲盡速制定新的 AI 監管規則。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -112,7 +158,13 @@
       "time": "09/10 10:46",
       "sentiment": "",
       "body": "Axios 獨家報導一名 Anthropic 離職研究員選擇放棄公司股權以脫離競業與保密約束，才得以對外就 AI 風險發聲。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "jacob-coxon",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic adds Fable 5.1 to Claude for Government - FedScoop",
@@ -121,7 +173,17 @@
       "time": "09/10 00:26",
       "sentiment": "",
       "body": "聯邦科技媒體 FedScoop 報導 Anthropic 將 Fable 5.1 模型導入 Claude for Government 產品線，供美國政府機關使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic signs lease for 24,000-square-foot office near Kendall Square - The Boston Globe",
@@ -130,7 +192,13 @@
       "time": "09/09 16:07",
       "sentiment": "",
       "body": "《波士頓環球報》報導 Anthropic 在麻州劍橋 Kendall Square 附近簽下約 2.4 萬平方英尺辦公空間租約，續擴張當地據點。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Users Are Taking The Company To Court Over Max Subscription Terms - Engadget",
@@ -139,7 +207,13 @@
       "time": "09/09 14:48",
       "sentiment": "",
       "body": "Engadget 報導部分 Claude Max 訂閱用戶已對 Anthropic 提起訴訟，爭執點在於 Max 方案的條款內容，可能影響訂閱用戶對方案權益的認知。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Unity launches official Claude Code plugin with 29 built-in engine skills - Pocket Gamer.biz",
@@ -148,7 +222,13 @@
       "time": "09/10 12:50",
       "sentiment": "",
       "body": "Unity 官方推出 Claude Code 外掛，內建 29 項遊戲引擎相關技能，讓開發者可直接在 Unity 專案中透過 Claude Code 呼叫引擎層級操作；另一家遊戲媒體 Inven Global 也獨立做了同類報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -159,7 +239,13 @@
       "time": "09/10 14:31",
       "sentiment": "",
       "body": "中國社群「DSH」官方公眾號收錄的 TUI 補位插件，帶來鯨魚風格頂欄、即時狀態列、串流思考顯示、雙擊 Esc 回滾、以及含 TPS 的 context 進度列，可用 npm 一鍵安裝。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "tony1223/better-agent-terminal",
@@ -168,7 +254,13 @@
       "time": "09/10 14:31",
       "sentiment": "",
       "body": "多工作區終端機聚合工具，整合 Claude Code 的 AI 協作功能，方便同時管理多個專案的終端機視窗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "avibe-bot/avibe",
@@ -177,7 +269,13 @@
       "time": "09/10 14:31",
       "sentiment": "",
       "body": "主打「本機優先」的 Agent OS，讓 AI 夥伴常駐在使用者自己的機器上，可透過瀏覽器或任何聊天 App 驅動官方 Claude Code、Codex 與 OpenCode。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "firstintent/ccteam",
@@ -186,7 +284,13 @@
       "time": "09/10 14:31",
       "sentiment": "",
       "body": "把使用者手邊已在跑的多個編程 agent（Claude Code、Codex、Grok、DeepSeek Harness、Kimi 等）整編成一支團隊，任何 session 都能跨廠商、跨機器派工並收集成果，經 Telegram、Lark 或瀏覽器統一操控。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] Cowork (Windows): all Plan9 shares fail with \"Plan9 mount failed: invalid argument\" after Windows update KB5124008 (26200.9445) — uninstalling the KB fixes it",
@@ -195,7 +299,13 @@
       "time": "09/10 14:17",
       "sentiment": "",
       "body": "Windows 版 Cowork 在安裝特定 Windows 更新 KB5124008 後，所有 Plan9 掛載共用資料夾全數失敗，回報者確認移除該 KB 可恢復正常，該 issue 獲 32 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] C# LSP (csharp-ls) not working - missing workspace/configuration and other request handlers",
@@ -204,7 +314,13 @@
       "time": "09/09 14:13",
       "sentiment": "",
       "body": "C# 語言伺服器 csharp-ls 在 Claude Code 中因缺少 workspace/configuration 等請求處理器而無法正常運作，該 issue 已累積 34 個 👍 反應仍未解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Security Cards – Reducing insecure AI-generated code by 72%",
@@ -213,7 +329,13 @@
       "time": "09/10 12:03",
       "sentiment": "",
       "body": "團隊開源「Security Cards」，針對 13 種程式語言、80 多個常用函式庫提供具體安全指引，實測顯示可讓 Claude Code（搭配 Opus 4.7）產生不安全程式碼的比例最多降低 72.3%。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Orchestrator, spawn and manage Claude Code instances remotely",
@@ -222,7 +344,13 @@
       "time": "09/10 13:46",
       "sentiment": "",
       "body": "開發者釋出可遠端生成、下指令、終止並管理多個 Claude Code 實例的工具，關閉 App 後任務仍會在背景持續執行，之後可再回來查看進度，並支援 Android 與 iOS TestFlight。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Nightshift – Rust CLI to Orchestrate GitHub Issue Resolution with Dags",
@@ -231,7 +359,13 @@
       "time": "09/10 13:01",
       "sentiment": "",
       "body": "作者指出在使用官方 `/goal` 功能處理跨多個 issue 的長任務時遇到嚴重的 context rot 問題、缺乏任務拆解與妥善的脈絡管理，因而以 Rust 打造具備任務相依圖（DAG）調度能力的替代工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Hordev – Claude Code skills that build instead of asking questions",
@@ -240,7 +374,13 @@
       "time": "09/09 17:45",
       "sentiment": "",
       "body": "一套 Claude Code skills 集合，設計理念是遇到不確定情境時傾向直接動手嘗試、而非停下來反覆詢問使用者。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Claude Project Downloader",
@@ -267,7 +407,13 @@
       "time": "09/10 14:19",
       "sentiment": "",
       "body": "使用者回報改用 Opus 5 high/xHigh 後，30 分鐘內就耗掉 40% 的週用量，與過去公司方案幾乎用不完週限額的經驗明顯不同。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I scored 150 AI predictions from 2026 against what actually happened. Here's the four-question test I built to do it.",
@@ -303,7 +449,13 @@
       "time": "09/10 14:10",
       "sentiment": "",
       "body": "使用者質疑 Fable 是否又被降規格，該討論串延續「Claude 變笨了」的長期社群觀感爭論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

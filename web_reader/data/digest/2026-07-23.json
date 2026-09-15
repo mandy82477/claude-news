@@ -12,7 +12,13 @@
       "time": "07/22 15:34",
       "sentiment": "",
       "body": "社群要求新增「達到 session 用量限制時可繼續」的功能，累積 182 個 reaction、71 則留言，是今日互動最高的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] VS Code extension: add setting to disable auto-attach of open file / selection",
@@ -21,7 +27,13 @@
       "time": "07/23 08:31",
       "sentiment": "",
       "body": "189 個 reaction、61 則留言要求 VS Code extension 新增設定，可關閉自動附加當前開啟檔案／選取範圍的行為。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] macOS: Claude Desktop never dispatches tools/call to the first-party Filesystem extension (tools/list succeeds, no tools/call in any log)",
@@ -30,7 +42,13 @@
       "time": "07/23 10:04",
       "sentiment": "",
       "body": "27 個 reaction、59 則留言回報 macOS 版 Claude Desktop 的 Filesystem 擴充功能只回應 `tools/list`，從未實際發出 `tools/call`。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code Update Kills Quadratic Slowdown That Compounded in Auto Mode's Longest Sessions - Tech Times",
@@ -50,6 +68,12 @@
       "body": "作者將整套簡報工具（含動畫、共同編輯）封裝進單一離線 HTML 檔案，免安裝免雲端登入即可編輯、簡報與分享，貼文獲 877 分熱度。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     }
   ],
@@ -61,7 +85,13 @@
       "time": "07/23 11:55",
       "sentiment": "",
       "body": "Anthropic 公布 Economic Futures Research Fund 的研究議程，承諾投入 2 億美元支持外部研究，聚焦勞工衝擊、AI 轉型輔助、所得支持現代化等五大研究方向。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[anthropics/claude-code] v2.1.218",
@@ -72,6 +102,12 @@
       "body": "`/code-review` 改為以背景 subagent 執行，審查工作不再佔用對話內容，並加入無障礙相關的螢幕報讀改善。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -83,6 +119,12 @@
       "body": "Python SDK 釋出 0.118.0 版，新增功能面向 Managed Agents 相關支援。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "managed-agents",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -92,7 +134,13 @@
       "time": "07/22 16:44",
       "sentiment": "",
       "body": "TypeScript SDK 釋出 0.113.0 版，本次更新新增 API 相關功能支援。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors on Haiku 4.5",
@@ -139,7 +187,13 @@
       "time": "07/23 11:04",
       "sentiment": "",
       "body": "San Francisco Chronicle 報導 OpenAI 與 Anthropic 未來可能以數兆美元估值掛牌上市，並分析舊金山當地是否能因此受益。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Where OpenAI, Anthropic, Google, Meta, and other AI giants stand on regulation - Fast Company",
@@ -157,7 +211,13 @@
       "time": "07/23 09:37",
       "sentiment": "",
       "body": "24/7 Wall St. 評論指出兆美元估值的 Anthropic IPO 已成定局，但作者表示自己不會投資。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How Amazon weaned Alexa off Anthropic's pricey models to slash AI costs - Business Insider",
@@ -166,7 +226,13 @@
       "time": "07/23 09:01",
       "sentiment": "",
       "body": "Business Insider 報導 Amazon 如何逐步降低 Alexa 對 Anthropic 高成本模型的依賴，藉此削減 AI 相關支出。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-cost-management",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Releases Claude Security Plugin for Claude Code in Beta: A Multi-Agent Vulnerability Scanner That Runs in Your Terminal - MarkTechPost",
@@ -177,6 +243,12 @@
       "body": "MarkTechPost 報導 Anthropic 發布 Claude Security 外掛 Beta 版，這是一款可在終端機內執行的多代理漏洞掃描工具。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -188,6 +260,12 @@
       "body": "The Wenatchee World 報導法官核准 Anthropic 15 億美元和解案，和解對象為訓練 Claude 時使用的盜版書籍著作權人。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -224,7 +302,13 @@
       "time": "07/22 23:24",
       "sentiment": "",
       "body": "Fortune 分析 Anthropic 與 SpaceX 兩者的支出，如何在帳面上幫助 Google 締造公司史上獲利最高的一季。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Judge approves record $1.5 billion AI copyright settlement involving Anthropic - Jurist.org",
@@ -233,7 +317,13 @@
       "time": "07/22 22:11",
       "sentiment": "",
       "body": "Jurist.org 報導法官核准創紀錄的 15 億美元 AI 著作權和解案，Anthropic 為當事一方。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "AMD (AMD) Lands $5 Billion Anthropic Partnership For AI Chips - Yahoo Finance",
@@ -242,7 +332,13 @@
       "time": "07/22 22:10",
       "sentiment": "",
       "body": "Yahoo Finance 報導 AMD 與 Anthropic 達成 50 億美元的 AI 晶片合作夥伴關係。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code can now tap through your iOS app in real time and fix what it finds - Startup Fortune",
@@ -251,7 +347,13 @@
       "time": "07/22 21:30",
       "sentiment": "",
       "body": "Startup Fortune 報導 Claude Code 現可即時操作使用者的 iOS App 並修復發現的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Treasury threatens sanctions after White House claims Moonshot distilled Anthropic's Fable - TechCrunch",
@@ -262,6 +364,12 @@
       "body": "TechCrunch 報導美國財政部在白宮官員指控中國 Moonshot AI 蒸餾竊取 Anthropic Fable 模型技術後，揚言祭出制裁。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -273,6 +381,12 @@
       "body": "南華早報報導川普政府科技官員指控中國 Moonshot AI 從 Anthropic 竊取技術。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -302,7 +416,13 @@
       "time": "07/22 17:13",
       "sentiment": "",
       "body": "Anthropic 官方內容經 Google News 收錄，介紹 Anthropic Economic Index connector。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code iOS Simulator lets you watch AI build apps in real time - Cult of Mac",
@@ -311,7 +431,13 @@
       "time": "07/22 16:11",
       "sentiment": "",
       "body": "Cult of Mac 報導 Claude Code iOS 模擬器功能，可讓使用者即時觀看 AI 建置 App 的過程。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Exclusive | AMD and Anthropic Sign Major Chips-and-Investment Deal - WSJ",
@@ -322,6 +448,12 @@
       "body": "WSJ 獨家報導 AMD 與 Anthropic 簽署重大晶片暨投資協議。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -331,7 +463,13 @@
       "time": "07/22 12:26",
       "sentiment": "",
       "body": "infoq.com 報導 Anthropic 說明其如何在 Web、Code、Cowork 三種介面中對 Claude 進行行為圍欄控管。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -342,7 +480,13 @@
       "time": "07/23 07:50 UTC 😤",
       "sentiment": "",
       "body": "52 個 reaction、40 則留言回報排程 routine 呼叫自訂 connector 的 MCP 工具時一律被要求核准，回報者指出這是約 2026-05-20 出現的回歸問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Fable 5 prompts 'usage credits required' on Max plan from 2026-07-20, the day it became standard on Max (saved model claude-fable-5[1m])",
@@ -351,7 +495,17 @@
       "time": "07/23 03:58 UTC 😤",
       "sentiment": "",
       "body": "10 個 reaction、35 則留言指出 Fable 5 於 2026-07-20 正式成為 Max 方案標配當天，Max 用戶反而被要求購買額外用量點數，且會被靜默降級至 Opus 4.8。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] Text cannot be copied from Claude Code's output using `Ctrl+Shift+C` or right-click context menu.",
@@ -360,7 +514,13 @@
       "time": "07/23 08:51 UTC 😤",
       "sentiment": "",
       "body": "51 個 reaction、34 則留言回報無法用 `Ctrl+Shift+C` 或右鍵選單複製 Claude Code 輸出內容的文字。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[META] Bypass permissions mode is fundamentally broken — 9-month trail, 12+ duplicates, no resolution",
@@ -369,7 +529,13 @@
       "time": "07/23 00:29 UTC 😤",
       "sentiment": "",
       "body": "彙整議題指出 `bypassPermissions` 模式並未真正略過權限檢查，此問題已延續 9 個月、累積 12 個以上重複回報仍未解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] autoMemoryEnabled=false does not suppress the ~11-16k memory preamble (re: closed #44829)",
@@ -378,7 +544,13 @@
       "time": "07/23 11:10 UTC 🤔",
       "sentiment": "",
       "body": "回報指出即使在設定檔關閉 `autoMemoryEnabled`，系統仍會固定注入約 11–16k token 的記憶體前導說明文字，未被真正抑制。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] API Error: Connection closed mid-response ==> frequent enough to make Claude Code unusable for any task",
@@ -387,7 +559,13 @@
       "time": "07/23 10:55 UTC 😤",
       "sentiment": "",
       "body": "69 個 reaction、32 則留言回報 API 回應中途連線中斷的錯誤頻繁發生，嚴重到讓 Claude Code 難以完成任何任務。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropomorphism in Children's Interactions with LLM Chatbots",
@@ -396,7 +574,13 @@
       "time": "07/22 22:49 UTC 🤔",
       "sentiment": "",
       "body": "一篇系統性回顧論文探討兒童與 LLM 聊天機器人互動時的擬人化現象，梳理其成因與影響，獲 31 分討論熱度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Support /btw command in VS Code extension",
@@ -405,7 +589,13 @@
       "time": "07/22 10:41 UTC 😐",
       "sentiment": "",
       "body": "196 個 reaction、31 則留言要求 VS Code extension 支援終端機 CLI 已有的 `/btw` 指令，以達到功能一致。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "AMD to invest up to $5B in Anthropic",
@@ -416,6 +606,16 @@
       "body": "HN 討論串圍繞 AMD 對 Anthropic 最高 50 億美元投資案展開，部分留言對這種晶片商與 AI 實驗室互相投資的循環模式提出質疑。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -443,7 +643,13 @@
       "time": "07/22 22:44 UTC 😊",
       "sentiment": "",
       "body": "作者分享 nb2lite-skill-claude，將 Google gemini-3.1-flash-lite-image 封裝為 Claude Code 技能與 MCP server，支援多輪、有狀態的圖片編輯。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Promptrack A local menu bar app that tracks your Claude Code usage",
@@ -569,7 +775,13 @@
       "time": "07/22 23:01 UTC 😊",
       "sentiment": "",
       "body": "Simon Willison 轉介 Dylan Castillo 的深入分析，探討各 AI 實驗室是否針對「畫鵜鶘」這類流行測試題目過度最佳化模型表現。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I built an open-source canvas where Claude responds beside your handwritings",
@@ -578,7 +790,13 @@
       "time": "07/17 13:48 UTC 😊",
       "sentiment": "",
       "body": "使用者分享自製開源畫布工具，讓 Claude 的回應能顯示在使用者手寫筆記旁。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I gave GPT-5.6 Sol, Claude Opus 4.8, and Grok 4.5 the same 100 frontend briefs—here are all 300 results",
@@ -587,7 +805,13 @@
       "time": "07/16 16:18 UTC 🤔",
       "sentiment": "",
       "body": "使用者以相同的 100 則前端需求同時測試 GPT-5.6 Sol、Claude Opus 4.8 與 Grok 4.5，並公開全部 300 筆產出結果供比較。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "You know AI has been extensively trained on content/code you authored when...",
@@ -596,7 +820,13 @@
       "time": "07/16 18:26 UTC 🤔",
       "sentiment": "",
       "body": "使用者分享自己觀察到 AI 訓練資料似乎大量涵蓋自己曾撰寫過的內容或程式碼時的心得討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -607,7 +837,13 @@
       "time": "07/22 14:54",
       "sentiment": "",
       "body": "tech-insider.org 比較 Cline、Claude Code 與 GitHub Copilot 三者的定價方案，分別對應免費、20 美元、10 美元的收費模式。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "focus": [

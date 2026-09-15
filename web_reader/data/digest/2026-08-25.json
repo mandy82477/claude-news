@@ -14,6 +14,12 @@
       "body": "一款 macOS 選單列工具，透過 Accessibility API 定期讀取當前視窗文字並寫成純 Markdown 日誌，讓 Claude Code 之類的工具讀取後回答「那天做了什麼」，不需截圖或 OCR。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -25,6 +31,16 @@
       "body": "一則 GitHub Issue 記錄了單一 session 中觀察到的三種重複出現的模型行為模式，回報者認為使用者端 `~/.claude/CLAUDE.md` 規則未能攔截這些模式，討論已累積 137 則留言。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -36,6 +52,12 @@
       "body": "使用者提出：目前 Claude 執行任務時若想追加後續指示，只能中斷當前工作或等待完成，建議新增「訊息佇列模式」讓追加指示排隊而不打斷進行中的任務，獲得 236 個👍。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -54,7 +76,13 @@
       "time": "08/25 10:39",
       "sentiment": "",
       "body": "一套「The Agentic Startup」風格的 Claude Code 指令、skills 與 agent 集合，累積 507 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "mindmuxai/brain.md",
@@ -63,7 +91,13 @@
       "time": "08/25 10:39",
       "sentiment": "",
       "body": "一個零依賴、以檔案為基礎的持久記憶層，為 Claude Code、Codex 等編碼 agent 提供跨 session 保存決策、需求與限制的「專案大腦」，累積 504 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -74,7 +108,13 @@
       "time": "08/25 05:13",
       "sentiment": "",
       "body": "修復在搭載 glibc 2.44 的 Linux 發行版（如 Arch Linux、CachyOS、Fedora Rawhide）上啟動時發生的當機問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Issues logging into Claude.ai",
@@ -98,6 +138,16 @@
       "body": "New Atlas 報導 Claude 將為其工具所產生的內容加上浮水印。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -149,7 +199,13 @@
       "time": "08/25 01:22",
       "sentiment": "",
       "body": "KXAN Austin 報導 Anthropic 正洽談租用德州 Bastrop County 一座大型資料中心。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "More tidbits from Epic UGM: Anthropic's Project Glasswing and a deeper partnership with UpToDate",
@@ -158,7 +214,13 @@
       "time": "08/24 11:00",
       "sentiment": "",
       "body": "Fierce Healthcare 報導 Anthropic 的醫療專案「Project Glasswing」，以及與醫療資訊平台 UpToDate 深化合作的動態。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic tells San Francisco staff to work from home due to possible security team strike",
@@ -176,7 +238,13 @@
       "time": "08/24 18:18",
       "sentiment": "",
       "body": "Bloomberg 就 Anthropic 的公司治理與控制權議題發表分析報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Companies not as keen on Anthropic's best AI model",
@@ -185,7 +253,13 @@
       "time": "08/25 00:47",
       "sentiment": "",
       "body": "cio.com 報導部分企業對 Anthropic 旗艦模型的採用意願不如預期熱絡。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Samsung thinks Claude Code can help it boost chip design — but admits the AI still makes some worryingly big mistakes",
@@ -194,7 +268,13 @@
       "time": "08/25 00:26",
       "sentiment": "",
       "body": "TechRadar 報導三星認為 Claude Code 有助其晶片設計，但也坦言 AI 仍會犯下令人擔憂的重大錯誤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Here's how Thomson Reuters is loosening Claude's costly grip",
@@ -203,7 +283,13 @@
       "time": "08/24 13:00",
       "sentiment": "",
       "body": "Business Insider 報導 Thomson Reuters 正設法降低對 Claude 的高額依賴成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-cost-management",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -216,6 +302,12 @@
       "body": "使用者回報即使在 Ubuntu Linux 上並於 CLAUDE.md 明確指示，Claude Code 仍持續建立 Windows 換行符號（CRLF）的檔案，累積 52 則留言、35 個👍。情緒：😤",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -225,7 +317,13 @@
       "time": "08/24 19:32",
       "sentiment": "",
       "body": "一位使用者分享用 Claude 打造的瀏覽器擴充功能，透過 OCR 從 Kindle Cloud Reader 擷取被限制匯出的畫線筆記內容，登上 HN。情緒：😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic candidates face blunt money question",
@@ -234,7 +332,13 @@
       "time": "08/24 11:55",
       "sentiment": "",
       "body": "Axios 報導 Anthropic 面試流程中會直接詢問應徵者「若公司未來因安全考量放棄 AI 願景導致股票歸零，你會作何感受」，HN 討論中不少人認為這是該公司一貫透明的作法。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Is Claude Code intentionally burning more tokens now?",
@@ -243,7 +347,13 @@
       "time": "08/25 10:36",
       "sentiment": "",
       "body": "使用者質疑近幾個月來 Claude Code 是否比過去消耗更多 token 才能完成相同任務。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "For very heavy Fable 5 usage, is rotating multiple Max accounts allowed, and is it generally cheaper than using the API?",
@@ -279,7 +389,13 @@
       "time": "08/24 14:35",
       "sentiment": "",
       "body": "一則本週熱門貼文描述使用者在配偶遭資遣後，用 Claude 打造求職平台，已促成三人成功獲聘。情緒：😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Having unlimited tokens is wild",
@@ -288,7 +404,13 @@
       "time": "08/21 22:20",
       "sentiment": "",
       "body": "一則本週熱門貼文分享使用者對無限 token 用量體驗的感想。情緒：😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [

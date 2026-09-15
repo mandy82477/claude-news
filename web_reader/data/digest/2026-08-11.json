@@ -86,7 +86,13 @@
       "time": "08/10 22:56",
       "sentiment": "",
       "body": "本版修正一項 bug：session 以過期登入 token 啟動時，feature flag 未依使用者訂閱層級正確評估，曾導致 Max 方案使用者被誤導提示啟用相關功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -227,7 +233,13 @@
       "time": "08/11 08:34",
       "sentiment": "",
       "body": "部落格文章指出，同樣的 token、同樣的模型，2026 年 8 月的 Claude 定價在不同方案／管道間可相差達 40 倍，並回顧一年前 20 美元月費方案的定位變化。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

@@ -12,7 +12,13 @@
       "time": "08/09 10:41",
       "sentiment": "",
       "body": "一款自稱「輕量級 loop 工程狀態核心」的專案，宣稱可跨 Codex、Claude Code 等多種 coding agent 通用，提供持久目標、配額感知的自動喚醒、可執行待辦、證據紀錄與可驗證交接等機制，鎖定長任務多 agent 團隊場景；GitHub 顯示 3641 顆星，實際採用情形有待觀察。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "HangYu8123/HarnessFlow",
@@ -21,7 +27,13 @@
       "time": "08/09 10:41",
       "sentiment": "",
       "body": "另一款鎖定 Codex、Claude、GitHub Copilot 的通用 coding workflow harness 專案，GitHub 顯示 516 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Try Benzi – A coding harness/agent beating Claude Code itself on Sonnet",
@@ -39,7 +51,13 @@
       "time": "08/09 06:39",
       "sentiment": "",
       "body": "功能請求：終端機 CLI 已支援的 `/btw` 指令目前無法在 VS Code 擴充功能中使用，使用者要求補齊功能對等，累計 216 個👍反應，是今日互動量最高的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Enable Remote Control for Claude Code sessions in Claude Desktop App",
@@ -48,7 +66,13 @@
       "time": "08/08 22:49",
       "sentiment": "",
       "body": "功能請求：希望能在 Claude 桌面 App 中對 Claude Code session 開啟 Remote Control，累計 158 個👍反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [],
@@ -69,7 +93,13 @@
       "time": "08/08 15:02",
       "sentiment": "",
       "body": "the-decoder.com 同步報導 Auto Mode 即將成為 Claude Code 預設模式，標題將此舉定調為保護開發者免於錯誤核准風險，與今日聚焦所述為同一事件的另一來源。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Visiting Anthropic's Favorite Atomic Author - The Information",
@@ -107,7 +137,13 @@
       "time": "08/07 19:39",
       "sentiment": "😐",
       "body": "作者回顧半年份的工作日誌，發現自己不知不覺累積了三套不同的筆記系統、僅有一套是刻意決定建立的，反思資訊量對筆記習慣的實際影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How I Used Claude Code to Hunt Down a Memory Leak That Took Down Prod",
@@ -116,7 +152,13 @@
       "time": "08/08 14:33",
       "sentiment": "😊",
       "body": "作者記錄凌晨因記憶體緩慢洩漏導致正式環境當機的排查過程，改用 Claude Code 系統性分析 heap snapshot 後才找出問題，並整理出四項用 AI coding agent 排查正式環境問題的心得。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Git worktrees isolate branches, not every dependency lookup",
@@ -172,7 +214,13 @@
       "time": "08/08 11:40",
       "sentiment": "",
       "body": "使用者回報自己的 Max 訂閱在未做任何操作的情況下被降級為 Free 方案，累計 39 則留言、9 個👍反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Is Claude Opus 5 unlimited?",

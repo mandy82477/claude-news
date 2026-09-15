@@ -12,7 +12,13 @@
       "time": "09/01 14:56",
       "sentiment": "",
       "body": "Meta 的 Claude Code 對標產品 Muse Code 結束 beta，正式推出三個訂閱層級，主打價格戰。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Meta Muse Code: A Cheaper Claude Code Alternative with a 20x Discount Tier",
@@ -30,7 +36,17 @@
       "time": "08/31 13:56",
       "sentiment": "",
       "body": "發文者指出 Claude Max 的「20x」用量標榜容易讓人誤解——實際只放大 5 小時 session 視窗的額度，而非週用量上限；討論串提及已有一起指控行銷用語誤導的訴訟。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Add support for Visual Studio 2026 Integration",
@@ -39,7 +55,13 @@
       "time": "08/31 21:56",
       "sentiment": "",
       "body": "社群對 Claude Code 支援 Visual Studio 2026 整合的功能請求，累積約 531 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Windows] Desktop app 1.24012.1: fatal GPU-process crash (0x060C201E) via in-app Browser tab; crash leaves MSIX package unlaunchable (appxState=2) until Repair",
@@ -57,7 +79,13 @@
       "time": "09/01 03:00",
       "sentiment": "",
       "body": "社群請求讓 Claude Desktop 與 Claude Code CLI 之間的 Skills 能互相同步，累積約 159 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] MCP OAuth appends trailing slash to `resource` parameter, breaking Entra ID auth (AADSTS9010010)",
@@ -66,7 +94,13 @@
       "time": "09/01 14:38",
       "sentiment": "",
       "body": "回報指出 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致 Entra ID 驗證失敗並丟出 AADSTS9010010 錯誤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] I archived my Claude Cowork chats and they are nowhere to be found.",
@@ -75,7 +109,13 @@
       "time": "09/01 13:05",
       "sentiment": "",
       "body": "使用者回報封存 Claude Cowork 對話後，該對話從介面上完全消失、找不回來。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "JuliusBrussee/caveman",
@@ -104,7 +144,13 @@
       "time": "08/31 19:46",
       "sentiment": "",
       "body": "本版修正 Bash 指令因「task output swap refused」在部分 Mac 上失敗的問題，以及專案無 `.claude/settings.local.json` 時「always allow」設定無法儲存的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance on claude.ai and Claude Code",
@@ -113,7 +159,13 @@
       "time": "08/31 20:36",
       "sentiment": "",
       "body": "claude.ai 與 Claude Code 於 16:55–19:16 UTC 出現服務降級，已於 20:36 UTC 解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance on claude.ai",
@@ -122,7 +174,13 @@
       "time": "08/31 17:52",
       "sentiment": "",
       "body": "claude.ai 另一起服務降級事件，已於當日 17:52 UTC 解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -133,7 +191,13 @@
       "time": "09/01 14:16",
       "sentiment": "",
       "body": "聯邦法官裁定五角大廈將 Anthropic 列為「供應鏈風險」的做法違法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "This firm bet on a dead downtown block. Then Anthropic made it 'AI Alley'",
@@ -153,6 +217,12 @@
       "body": "延續今日聚焦的安全事件，Business Insider 補充 Anthropic 已收緊訓練環境安全控管的具體做法。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -162,7 +232,13 @@
       "time": "08/31 23:13",
       "sentiment": "",
       "body": "Reuters 報導 Anthropic 將恢復對外部安全機構開放 AI 模型測試，說明先前暫停測試的收尾動作。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Infostealers are hijacking Claude accounts at users' expense",
@@ -207,7 +283,13 @@
       "time": "08/31 15:10",
       "sentiment": "",
       "body": "Anthropic 的 Claude 認證累計核發已達 8.5 萬張，並計畫擴大合作夥伴培訓。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The biggest questions ahead of Anthropic's potential IPO",
@@ -252,7 +334,13 @@
       "time": "09/01 14:30",
       "sentiment": "",
       "body": "報導一家企業客戶 Trifecta Technologies 藉由與 Anthropic 合作、導入 Claude 服務擴充其 AI 能力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -281,7 +369,17 @@
       "time": "08/31 13:56",
       "sentiment": "",
       "body": "發文者指出官方行銷用語「20x」容易讓人誤以為週用量也放大 20 倍，實際只放大 5 小時 session 視窗的額度；回應中也提到已有相關的行銷不實訴訟。😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Looker's Native MCP Server with Claude Code",
@@ -299,7 +397,13 @@
       "time": "08/31 03:08",
       "sentiment": "",
       "body": "作者主張 agent 的記憶系統需要能明確記住「這條路已經被否決過」，並用可驗證、防竄改的方式保存這些否決紀錄，避免 agent 反覆重踩同一個坑。🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "All 26 of My MCP Tools Failed the Same Way. My Test to Rule Out the Token Proved It Was the Problem.",
@@ -317,7 +421,13 @@
       "time": "09/01 14:45",
       "sentiment": "",
       "body": "使用者分享自己用 Max 5x 方案一年多，官方調高 Claude Code 用量上限後首次又撞到 session 限制。😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "For those running several Claude Code sessions at once: a skill and a hook so each one picks up where it left off after a restart",

@@ -12,7 +12,13 @@
       "time": "07/24 21:09",
       "sentiment": "",
       "body": "同批 GitHub Issues 穩定性／需求回報中，此則要求支援 Visual Studio 2026 整合，累積 144 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Multi-account switching in Claude Mobile app without shared email",
@@ -21,7 +27,13 @@
       "time": "07/24 20:05",
       "sentiment": "",
       "body": "使用者要求 Claude 行動版 App 支援多帳號切換且不需共用 email，累積 140 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Advisor always \"unavailable\" with Fable 5 advisor (Opus 4.8 main) across all sessions (v2.1.198)",
@@ -30,7 +42,13 @@
       "time": "07/24 14:09",
       "sentiment": "",
       "body": "回報指出 Fable 5 顧問功能在以 Opus 4.8 為主模型時始終顯示「無法使用」，橫跨多個工作階段，累積 87 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Plan upgrade payment fails — PaymentIntent voided immediately with `void_invoice` before confirm can complete",
@@ -48,7 +66,13 @@
       "time": "07/24 21:36",
       "sentiment": "",
       "body": "回報指出 Claude Desktop 已連接 GitHub Connector，但 Claude 端無法辨識，累積 72 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I built a deterministic compiler for CLAUDE.md that reduced instruction tokens by 55.82% on my test corpus",
@@ -68,7 +92,13 @@
       "time": "07/25 01:35",
       "sentiment": "",
       "body": "Claude Code 釋出 v2.1.220，官方僅說明為錯誤修正與穩定性改善，未列出具體新功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.120.0",
@@ -79,6 +109,12 @@
       "body": "Python SDK 釋出 0.120.0 版，新增 `claude-opus-5` 模型支援。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -90,6 +126,12 @@
       "body": "TypeScript SDK 釋出 0.115.0 版，同步新增 `claude-opus-5` 模型支援。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -108,7 +150,13 @@
       "time": "07/24 15:36",
       "sentiment": "",
       "body": "Microsoft Office 版 Claude 附加元件安裝異常事件已排除，服務恢復正常。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -130,6 +178,12 @@
       "body": "The GitHub Blog 宣布 Claude Opus 5 已在 GitHub Copilot 上線。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -139,7 +193,17 @@
       "time": "07/25 09:37",
       "sentiment": "",
       "body": "the-decoder.com 報導 Claude Opus 5 定價遠低於 Fable 5，但在多數基準測試上表現相當或更好。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Meet the New Claude Opus 5: Frontier-Class Agentic Coding and Computer Use at Unchanged Opus Pricing - MarkTechPost",
@@ -148,7 +212,17 @@
       "time": "07/24 21:50",
       "sentiment": "",
       "body": "MarkTechPost 指出 Opus 5 在維持原 Opus 定價下，達到 frontier 級的程式撰寫與電腦操作能力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic rolls out Opus 5 AI model in efficiency upgrade - Reuters",
@@ -166,7 +240,13 @@
       "time": "07/25 10:25",
       "sentiment": "",
       "body": "MarketScale 報導 Anthropic 與 Blackstone 合資成立 15 億美元企業 Ode，主張企業 AI 的價值在於導入落地而非模型本身。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Is the New SpaceX for ETF Issuers - Yahoo Finance",
@@ -175,7 +255,13 @@
       "time": "07/24 23:49",
       "sentiment": "",
       "body": "Yahoo Finance 以 SpaceX 類比 Anthropic，分析其對 ETF 發行商的意義。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why this philosopher turned down Anthropic - Financial Times",
@@ -202,7 +288,13 @@
       "time": "07/24 21:43",
       "sentiment": "",
       "body": "SitePoint 比較 Codex 5.3 與 Claude 在複雜重構工作流程上的取捨。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic to pay settlement to Harry Potter publisher - CNN",
@@ -211,7 +303,13 @@
       "time": "07/25 00:26",
       "sentiment": "",
       "body": "CNN 報導 Anthropic 著作權集體訴訟和解案後續：《哈利波特》系列出版商將獲得賠償金。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -222,7 +320,13 @@
       "time": "07/25 02:18",
       "sentiment": "🤔",
       "body": "有開發者轉述推文指出，Anthropic 為 Opus 5 與 Fable 5 移除超過 80% 的 Claude Code 系統提示詞，並指向 Anthropic 官方部落格談新版 context engineering 原則的文章；原推文與細節尚待查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Introducing Claude Opus 5",
@@ -240,7 +344,13 @@
       "time": "07/24 23:00",
       "sentiment": "😐",
       "body": "作者分享自建的 Claude Code／Codex 使用分析儀表板 Promptster，指出多數企業雖有 OTel 花費儀表板，卻缺乏對工程師實際用法與改善空間的分析。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Teaching Claude Code to Paint: A Stateful Image-Editing Skill Built on Gemini's Interactions API and MCP",
@@ -276,7 +386,13 @@
       "time": "07/25 10:54",
       "sentiment": "😤",
       "body": "使用者回報 Claude Code Desktop 上 Opus 5 的 xhigh 推理強度失效，因為思考功能被強制關閉。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I built an open-source multi-agent SDLC harness that beats a cold Claude Code run on large repos, by learning the repo once. Real benchmarks (incl. where it loses) inside. [P]",
@@ -323,7 +439,17 @@
       "time": "07/25 03:22",
       "sentiment": "",
       "body": "回報指出 Fable 5 成為 Max 方案標準模型的第一天（2026-07-20）起，Claude Code 反而在 Max 方案上要求額外用量點數，並靜默降級為 Opus 4.8，累積 15 個 reaction。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "I Did the Math on Claude Sonnet 5. The 60% Opus Discount Is Real, But Temporary.",
@@ -332,7 +458,17 @@
       "time": "07/02 05:55",
       "sentiment": "",
       "body": "作者計算後認為 Anthropic 將 Sonnet 5 以 $2/$10（每百萬 token）定價開放至 8 月 31 日的「60% Opus 折扣」是真實但暫時的優惠，建議設為預設而非上限。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

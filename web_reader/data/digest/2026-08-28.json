@@ -12,7 +12,13 @@
       "time": "08/28 13:44",
       "sentiment": "",
       "body": "GitHub Issue 回報 Claude Max 方案的 session 額度自 3 月底起消耗速度異常加快，該討論已累積 837 則留言與大量 👍 反應，是今日 GitHub Issues 討論度最高的項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature Request: Support AGENTS.md.",
@@ -21,7 +27,17 @@
       "time": "08/27 14:54",
       "sentiment": "",
       "body": "社群持續要求 Claude Code 支援業界正逐漸統一採用的 AGENTS.md 格式（Codex、Amp、Cursor 已支援）；該請求已累積 385 則留言與 6525 個 👍 反應，是持續多日延燒的高熱度議題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Bring Back Buddy — A Consolidated Plea from the Community",
@@ -30,7 +46,17 @@
       "time": "08/26 16:46",
       "sentiment": "",
       "body": "`/buddy` 技能於 4 月 v2.1.97 版本無預告下移除，社群串聯要求官方恢復；該 Issue 已累積 268 則留言與 2076 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "EXCLUSIVE: Claude Revenue Surges 1,000% as Anthropic Gains on ChatGPT - Yahoo Finance",
@@ -39,7 +65,13 @@
       "time": "08/28 13:27",
       "sentiment": "",
       "body": "Yahoo Finance 獨家報導稱 Claude 營收年增達 1,000%，在企業市場對 ChatGPT 的差距持續縮小。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: My Claude quota ran out in 10 minutes, so I made a tool to find out why",
@@ -84,7 +116,13 @@
       "time": "08/27 15:14",
       "sentiment": "",
       "body": "紐約時報報導 Meta 公開批評 Anthropic 的同時，卻也是其最大客戶之一，兩者關係「亦敵亦友」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Google takes aim at Anthropic, Microsoft with budget-friendly AI pricing - CNBC",
@@ -93,7 +131,13 @@
       "time": "08/27 16:12",
       "sentiment": "",
       "body": "CNBC 報導 Google 推出低價 AI 方案，對 Anthropic 與 Microsoft 的企業客戶形成價格競爭壓力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -104,7 +148,13 @@
       "time": "08/28 00:49",
       "sentiment": "",
       "body": "本版僅為錯誤修復與穩定性改善，無具體新功能說明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.122.0",
@@ -113,7 +163,13 @@
       "time": "08/27 20:33",
       "sentiment": "",
       "body": "TypeScript SDK 釋出 v0.122.0，beta 版 files／skills 命名空間改用正式版（GA）介面形狀。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v1.2.0",
@@ -122,7 +178,13 @@
       "time": "08/27 20:28",
       "sentiment": "",
       "body": "Python SDK 同步釋出 v1.2.0，beta 版 files／skills 命名空間同步改用正式版（GA）介面形狀。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件更新：Claude Help Center release notes",
@@ -131,7 +193,13 @@
       "time": "08/28 16:44",
       "sentiment": "",
       "body": "8 月 25 日更新：Claude Cowork 的記憶功能現在與一般對話共通，所有記住的內容可在設定的 Topics 中檢視、編輯或刪除；健康、信仰等敏感主題預設不納入記憶，需另外開啟。8 月 6 日更新：Enterprise 方案新增 Skill／外掛安全掃描（beta），可在第三方 Skill 或外掛上傳或編輯時自動檢查是否含惡意內容。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -142,7 +210,13 @@
       "time": "08/28 05:30",
       "sentiment": "",
       "body": "華郵報導聯邦法官推翻五角大廈對 Anthropic 的黑名單認定。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Pentagon blacklisted Anthropic over Claude powers it didn't have - The Register",
@@ -151,7 +225,13 @@
       "time": "08/28 12:31",
       "sentiment": "",
       "body": "The Register 指出五角大廈當初列黑名單所依據的 Claude「能力」實際上並不存在，是判決翻案的關鍵理由之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic (Re-)Enlists for War - The American Prospect",
@@ -160,7 +240,13 @@
       "time": "08/27 18:22",
       "sentiment": "",
       "body": "The American Prospect 從批判角度分析 Anthropic 與美國國防部門的關係，質疑禁令解除後雙方合作將如何發展。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Tests New Way for Claude to Work With Robots and Scientific Lab Tools - Bloomberg.com",
@@ -196,7 +282,13 @@
       "time": "08/27 14:00",
       "sentiment": "",
       "body": "Ars Technica 報導多款編碼 agent（含 Claude）在企業網路環境中安裝了來源不明的程式碼，凸顯 agent 自動化執行的資安風險。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI, Anthropic, tech leaders warn of \"limited window\" to defend against AI cyber threats - CBS News",
@@ -223,7 +315,13 @@
       "time": "08/28 11:50",
       "sentiment": "",
       "body": "分析文章討論開發者為 Claude Code 堆疊過多、難以追溯的指令設定，反思 CLAUDE.md／規則檔管理方式。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI and Anthropic are ruining San Francisco - sfgate.com",
@@ -261,7 +359,13 @@
       "time": "08/27 17:28",
       "sentiment": "",
       "body": "作者自述因同儕用 Claude Code 大幅提升產出速度，被迫放鬆自我審查、逐漸依賴 agent 直接推上 main，反思長期心智影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Watches user sessions, finds bugs that matter, and fixes them",
@@ -279,7 +383,13 @@
       "time": "08/28 16:14",
       "sentiment": "",
       "body": "社群實測比較三款模型在同一份 code review 提示下的表現差異。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Is it even legal for Anthropic to nerf its models this hard?",
@@ -288,7 +398,21 @@
       "time": "08/28 15:06",
       "sentiment": "",
       "body": "使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Citation Issues the Past Little While",
@@ -306,7 +430,13 @@
       "time": "08/28 12:59",
       "sentiment": "",
       "body": "使用者整理 Fable 5 計費爭議時間軸，指官方承諾恢復訂閱內含已十週，Pro 方案目前仍按 token 計費。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Do you guys think that Fable 5.1 is actually dropping today and will it be available in Claude Code?",
@@ -315,7 +445,13 @@
       "time": "08/28 16:21",
       "sentiment": "",
       "body": "社群討論 Fable 5.1 是否即將發布，部分使用者回報已被路由至疑似新版本測試。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Can an AI make other AIs better? We benchmarked 5 frontier LLMs at rewriting other agents' harnesses (HarnessOpt-Bench)",
@@ -324,7 +460,13 @@
       "time": "08/27 20:17",
       "sentiment": "",
       "body": "社群發布新基準 HarnessOpt-Bench，測試前沿 LLM 改寫其他 agent harness 的能力並防止作弊。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code does not respect the XDG Base Directory specification",
@@ -362,7 +504,13 @@
       "time": "08/28 16:44",
       "sentiment": "",
       "body": "官方說明中心區分「用量限制」與「長度限制」兩種機制：用量限制是特定期間內可互動的「對話預算」，受對話長度、功能使用、模型選擇與 effort 等級影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件更新：Manage usage credits for paid Claude plans",
@@ -371,7 +519,13 @@
       "time": "08/28 16:44",
       "sentiment": "",
       "body": "Pro、Max 5x、Max 20x 方案使用者觸及方案用量上限後，可切換為按標準 API 費率計費的「用量點數」繼續使用，需先綁定付款方式（僅限網頁版啟用）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件更新：Claude Fable 5 on your plan",
@@ -380,7 +534,13 @@
       "time": "08/28 16:44",
       "sentiment": "",
       "body": "官方說明先前「每週訂閱額度最多 50% 可用於 Fable 5」的促銷已於 7 月 19 日結束：Max 方案、Team／Enterprise 高階席位將 Fable 5 納入方案內含，Pro 方案與標準席位則改為按用量點數計費。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

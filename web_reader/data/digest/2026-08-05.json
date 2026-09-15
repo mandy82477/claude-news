@@ -12,7 +12,13 @@
       "time": "08/04 23:13",
       "sentiment": "",
       "body": "使用者要求 Claude Desktop／Cowork 支援希伯來文、阿拉伯文等由右至左書寫的語言，累計 41 則留言與 111 個表情反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[PROPOSAL] Expose compact/session lifecycle hooks for external memory layers",
@@ -21,7 +27,17 @@
       "time": "08/04 10:54",
       "sentiment": "",
       "body": "提案指出已有五個開放中的 issue 要求持久化記憶功能，社群已自行拼湊出三層式 markdown 架構、知識圖譜等替代方案，呼籲官方開放 compact／session 生命週期的 hook 供外部記憶層串接。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How Firms Like Coinbase Are Building Coding Agents to Complement Anthropic's Claude Code",
@@ -41,7 +57,13 @@
       "time": "08/04 22:39",
       "sentiment": "",
       "body": "新版修復了 worktree 隔離 session 及其 subagent 可對主 checkout 執行破壞性 git 指令的問題，隔離範圍現已擴及每個 session 中的檔案編輯與 Bash 執行。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance of multiple models",
@@ -50,7 +72,13 @@
       "time": "08/05 09:13",
       "sentiment": "",
       "body": "官方狀態頁回報 Claude Mythos 5、Claude Fable 5 等模型請求錯誤率升高，截至 08/05 09:13 UTC 仍在處理中，尚未標記解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors across many models",
@@ -59,7 +87,13 @@
       "time": "08/04 21:59",
       "sentiment": "",
       "body": "另一起事件回報部分使用者登入 Anthropic 帳號時遇到問題，官方已於 08/04 21:59 UTC 標記解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -70,7 +104,13 @@
       "time": "08/04 20:20",
       "sentiment": "",
       "body": "Fierce Biotech 報導臨床試驗公司 Icon 與 Anthropic 簽署合作，將 Claude 導入臨床試驗流程；此消息同時被另一獨立來源轉載。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why is Anthropic destroying books? - The Guardian",
@@ -79,7 +119,13 @@
       "time": "08/05 11:00",
       "sentiment": "",
       "body": "The Guardian 以「為何 Anthropic 要銷毀書籍？」為題發文，摘要未附具體內容，僅見標題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Alibaba Just Gave Away Its Best AI Model For Free, Almost Matching Claude and ChatGPT",
@@ -88,7 +134,13 @@
       "time": "08/04 17:16",
       "sentiment": "",
       "body": "Decrypt 報導 Alibaba 免費釋出其最強 AI 模型，效能據稱幾乎追平 Claude 與 ChatGPT。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Cisco 'warns' hackers are using Claude Code, Codex, Cursor and Gemini AI models",
@@ -97,7 +149,13 @@
       "time": "08/04 12:34",
       "sentiment": "",
       "body": "The Times of India 報導 Cisco 提出警示，指出攻擊者已在利用 Claude Code、Codex、Cursor 與 Gemini 等 AI 編碼工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -126,7 +184,21 @@
       "time": "08/04 08:21",
       "sentiment": "😊",
       "body": "標題指出讓 Claude 審查 Codex 產出的程式碼，將通過率從 71.6% 提升至 89.7%；貼文細節未見於摘要。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-large-codebase-workflow",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "7 days without a claude code update, are they re-writing it in rust or something?",
@@ -153,7 +225,13 @@
       "time": "07/31 02:33",
       "sentiment": "🤔",
       "body": "作者指出「Claude Code 忽略我的規則」多半是因為規則寫在 Claude Code 根本沒載入的檔案裡，並整理出完整的載入順序與規則。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "llm-anthropic 0.26",

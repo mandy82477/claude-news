@@ -14,6 +14,12 @@
       "body": "Bloomberg、Reuters、Financial Times 等多家媒體同日報導 Anthropic 洽購世界模型新創 Decart（約 60 億美元），並傳出公司評估上看 2 兆美元估值、規劃創紀錄 IPO；兩則事件同步登上多家財經媒體版面。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -25,6 +31,12 @@
       "body": "TechCrunch、Forbes、Axios、Tech Times、New York Post 等多家媒體同步報導 Anthropic 為 Claude 輸出加入不可見浮水印一事，部分使用者在 Reddit 等平台表達不滿，擔憂遭用於偵測「作弊」；報導亦提及已有工具聲稱可去除該浮水印。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     }
   ],
@@ -36,7 +48,13 @@
       "time": "08/13 08:38",
       "sentiment": "",
       "body": "修復 MCP OAuth 登入失敗問題：針對使用預先註冊 OAuth client 的伺服器（如 Slack），先前會因 redirect URI 不符而登入失敗，本版本已修復。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance for multiple models",
@@ -58,6 +76,12 @@
       "body": "Reuters 引述消息人士報導 Anthropic 正洽購 AI 新創 Decart。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -69,6 +93,12 @@
       "body": "Financial Times 報導 Anthropic 投資人押注公司在創紀錄 IPO 中達到 2 兆美元估值。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -80,6 +110,12 @@
       "body": "TradingView 報導 DeepSeek 正組建團隊、以新一代 AI agent 挑戰 Anthropic 的 Claude Code。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -91,6 +127,12 @@
       "body": "KuCoin 報導 DeepSeek V4 Pro 上線，聲稱其 agent 表現逼近 Claude 3 Opus，成本僅為一小部分。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -100,7 +142,13 @@
       "time": "08/12 22:19",
       "sentiment": "",
       "body": "Engadget 報導 Claude Cowork 現可於 Chrome 側邊欄執行。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Nvidia's $70 billion bet on OpenAI, Anthropic, and others could pay off big for shareholders",
@@ -109,7 +157,13 @@
       "time": "08/12 15:00",
       "sentiment": "",
       "body": "Yahoo Finance 分析 Nvidia 對 OpenAI、Anthropic 等公司合計約 700 億美元的投資，評估可能為股東帶來可觀回報。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning",
@@ -118,7 +172,13 @@
       "time": "08/12 11:47",
       "sentiment": "",
       "body": "The Hacker News 報導 OpenAI、Anthropic、Google 的 API 存在一項瑕疵，可能讓能力較弱的 AI 模型「解讀」出能力較強模型的推理過程；本則報導僅有標題可用，具體攻擊細節與是否已修補尚待查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code vs. Codex: Why I use both and how to choose one (if you must)",
@@ -136,7 +196,13 @@
       "time": "08/12 14:13",
       "sentiment": "",
       "body": "《The Guardian》刊登 Bruce Schneier 與 Nathan E. Sanders 的評論文章，主張若市場拒絕 OpenAI 與 Anthropic，美國政府應將其國有化。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -149,6 +215,12 @@
       "body": "GitHub Issue 累積 655 個 👍，社群持續呼籲官方推出 Linux 桌面版 Claude Desktop 應用程式。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -160,6 +232,12 @@
       "body": "GitHub Issue 累積 480 個 👍，社群要求 claude.ai/code 支援同一 Connector 掛載多個帳號。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -169,7 +247,13 @@
       "time": "08/12 21:11 UTC ·",
       "sentiment": "😊",
       "body": "GitHub Issue 累積 167 個 👍，社群希望 Skills 目錄結構可支援子資料夾以利組織管理。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Option to disable automatic worktree creation for solo developers",
@@ -178,7 +262,13 @@
       "time": "08/12 14:33 UTC ·",
       "sentiment": "😤",
       "body": "GitHub Issue 累積 80 個 👍，獨立開發者反映希望能關閉獨立 macOS 介面自動建立 worktree 的行為。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Environment Contributions warning continuously reappears",
@@ -187,7 +277,13 @@
       "time": "08/13 07:51 UTC ·",
       "sentiment": "😤",
       "body": "GitHub Issue 累積 83 個 👍，回報 Cursor / VSCode 整合終端機每次開啟都會重複出現該警告訊息。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude in Chrome browser extension not connecting to Claude Code CLI",
@@ -196,7 +292,13 @@
       "time": "08/12 12:59 UTC ·",
       "sentiment": "😤",
       "body": "GitHub Issue 累積 41 個 👍，回報 Claude in Chrome 擴充功能無法連接本機 Claude Code CLI。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "gamedev-skills/awesome-gamedev-agent-skills",
@@ -216,6 +318,12 @@
       "body": "Hacker News 討論串出現質疑聲音，部分留言認為此舉是為搶版面而非聚焦模型本身的成本與效能改善。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -225,7 +333,13 @@
       "time": "08/12 15:58 UTC ·",
       "sentiment": "😊",
       "body": "開發者釋出 show-me skill，讓 coding agent 改以精簡視覺化呈現資訊取代大量文字輸出，兩個獨立來源皆有報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I Grepped My Own Claude Code Logs and Found the Hidden Tag Anthropic Never Shows You",
@@ -252,7 +366,13 @@
       "time": "08/13 09:56 UTC ·",
       "sentiment": "😊",
       "body": "Reddit 使用者分享讓 Claude Code 維護一份 MISTAKES.md 記錯清單的實作心得與後續回饋。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

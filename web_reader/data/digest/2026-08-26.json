@@ -14,6 +14,12 @@
       "body": "使用者要求 Claude 手機 App 能在不共用同一組 email 的前提下切換多個帳號，該功能請求累積 164 則留言、879 個👍反應，是今日 GitHub Issues 討論度最高的項目。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -25,6 +31,12 @@
       "body": "使用者提出讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1`，累積 64 則留言、243 個👍反應。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -56,6 +68,12 @@
       "body": "官方 Release Notes 記錄 2026/8/25 更新：Claude Cowork 現在與網頁／App 對話共用記憶，所有記住項目集中列在設定 > Memory 底下的 Topics，可個別編輯或刪除；健康、信仰等敏感主題預設不納入記憶，需手動開啟「Include sensitive topics in memory」才會記錄。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -65,7 +83,13 @@
       "time": "08/25 22:31",
       "sentiment": "",
       "body": "新增啟動警告：當 Bash 允許規則在子指令前使用萬用字元（如 `Bash(git * main)`）時，因為這類寫法也會意外比對插入在子指令前的選項參數，官方新增提示提醒使用者留意。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）（新增 11 頁）",
@@ -83,7 +107,13 @@
       "time": "08/26 10:40",
       "sentiment": "",
       "body": "Anthropic 宣布啟動 500 萬美元獎助計畫，資助獨立研究人員開發開源評測工具，用以衡量 AI 對使用者身心福祉的影響；受獎助者將完全獨立作業，成果以開源專案釋出供任何開發者使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -129,6 +159,12 @@
       "body": "The New Stack 報導 Shopify 執行長揚言封殺 Claude Code，但 Anthropic 其實早已關閉相關功能請求。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -140,6 +176,12 @@
       "body": "36Kr 報導 Claude Code 拒絕採用 AGENTS.md 這項業界標準，官方後續回應引發開發者社群不滿。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -173,6 +215,12 @@
       "body": "使用者回報在 macOS、Claude Code 2.1.153 上，恢復或延續一個曾使用延伸思考（extended thinking）的 session 會永久失敗，累積 62 則留言、50 個👍。情緒：😤",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -184,6 +232,12 @@
       "body": "使用者回報 Pro 方案下新開的 session 預設開啟 1M context，且找不到關閉方式，累積 62 則留言、44 個👍。情緒：😤",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -204,6 +258,16 @@
       "body": "《華爾街日報》報導引發 Hacker News 討論，累積 39 分；討論中有留言指出，該 30 兆美元指的是 AI 服務整體潛在市場規模，並非 Anthropic 宣稱能實際拿下的營收。情緒：🤔",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -213,7 +277,13 @@
       "time": "08/26 06:34",
       "sentiment": "",
       "body": "一篇部落格文章回顧作者今年稍早首次使用 Claude Code 的驚豔體驗，並感慨近期換用新模型後，同樣任務反而要花更久時間才開始真正寫程式，登上 Hacker News（25 分）。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "My Claude Code skill caught a bug in a popular FastAPI template that the human review missed",
@@ -231,7 +301,13 @@
       "time": "08/26 10:06",
       "sentiment": "",
       "body": "使用者稱可以從 Claude 是否跳出「這次 session 表現如何」的回饋彈窗，判斷自己是否正被分到降規模測試的模型版本。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I've been experimenting with reducing context overhead in Claude Code",
@@ -249,7 +325,13 @@
       "time": "08/22 18:15",
       "sentiment": "",
       "body": "一則本週熱門貼文稱作者查閱一手資料與相關討論串後認為，Anthropic 似乎正在 Claude Code 上 A/B 測試降低運算力度（effort）的版本。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

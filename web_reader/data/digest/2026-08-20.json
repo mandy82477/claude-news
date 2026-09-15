@@ -12,7 +12,13 @@
       "time": "08/19 17:07",
       "sentiment": "",
       "body": "作者分享自製工具，用來檢視自己各 coding agent session 的花費、cache miss 對成本的影響，並提供依模型與快取狀態拆解的用量分析與逐一 session 的呼叫細節檢視。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -23,7 +29,13 @@
       "time": "08/20 00:54",
       "sentiment": "",
       "body": "修復使用 LLM gateway 或自訂 base URL 的 session 中 prompt caching 失效的問題，並新增內建「Concise」輸出風格，讓 Claude 直接給結果、省去前言與敘述性文字。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.125.0",
@@ -32,7 +44,13 @@
       "time": "08/19 22:00",
       "sentiment": "",
       "body": "Python SDK 新版本，新增 managed agents 的 web search 設定相關功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "managed-agents",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.5 ／ google-cloud-sdk: v0.0.10",
@@ -41,7 +59,13 @@
       "time": "08/19 22:00",
       "sentiment": "",
       "body": "TypeScript SDK 的 Vertex 與 Google Cloud 子套件同步發布小版本更新，內容以維護性變更為主。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -52,7 +76,17 @@
       "time": "08/20 03:44",
       "sentiment": "",
       "body": "報導稱高盛與 OKX 均在香港被切斷 Claude AI 存取權限，涉及地緣政治與合規因素。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections - TechCrunch",
@@ -61,7 +95,13 @@
       "time": "08/19 22:10",
       "sentiment": "",
       "body": "TechCrunch 與 WSJ 同步報導 OpenAI 推出新的客戶資料隱私保護承諾，被解讀為針對 Anthropic 既有隱私訴求的競爭回應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Coders Say They Already Found Workarounds to Claude’s Invisible Watermarks - WIRED",
@@ -70,7 +110,13 @@
       "time": "08/19 16:44",
       "sentiment": "",
       "body": "WIRED 報導稱有工程師已找到繞過 Claude 隱形浮水印機制的方法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic’s Claude can now send Gmail emails without asking first - Mashable",
@@ -88,7 +134,13 @@
       "time": "08/19 12:15",
       "sentiment": "",
       "body": "報導稱一座與 Anthropic 相關的資料中心取得 13 億美元的私募信貸貸款。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Dev taps Claude Code to craft custom printer driver for macOS - The Register",
@@ -97,7 +149,13 @@
       "time": "08/19 19:31",
       "sentiment": "",
       "body": "The Register 報導一名開發者用 Claude Code 為 macOS 打造自訂印表機驅動程式。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The most interesting takeaway from Anthropic’s design study has nothing to do with proteins - Endpoints News",
@@ -115,7 +173,17 @@
       "time": "08/19 14:01",
       "sentiment": "",
       "body": "The Information 報導 OpenAI 在安全政策上追上 Anthropic 的同時，Anthropic 的營收領先幅度仍在擴大。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -126,7 +194,13 @@
       "time": "08/19 11:35",
       "sentiment": "",
       "body": "arXiv 論文主張不應將模型輸出解答前產生的中間 token 直接擬人化稱為「推理／思考痕跡」，Hacker News 上引發討論。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The Claude language calibration issue on GitHub got an official response from Anthropic. Guess who wrote it.",
@@ -135,7 +209,13 @@
       "time": "08/20 10:20",
       "sentiment": "",
       "body": "Reddit 貼文呼應今日聚焦提及的 Opus 5.0 用詞爭議，指出 Anthropic 對該 GitHub issue 的官方回覆讀起來疑似又是 Claude 代寫。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I let Claude Code trade stocks with my real money. Results:",
@@ -144,7 +224,13 @@
       "time": "08/14 20:09",
       "sentiment": "",
       "body": "使用者分享讓 Claude Code 用真實資金自動交易股票的實驗結果，屬個人實測分享。情緒：😐",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Finally, Claude Code has “Auto-continue when limits reset”",
@@ -153,7 +239,13 @@
       "time": "08/13 15:12",
       "sentiment": "",
       "body": "使用者回報 Claude Code 新增「額度重置後自動繼續」功能，社群反應正面。情緒：😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [
@@ -166,6 +258,12 @@
       "body": "報導稱 Claude Code 的「暫時性用量提升」將於當晚到期。詳見今日聚焦。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {

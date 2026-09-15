@@ -14,6 +14,12 @@
       "body": "The Verge、Engadget、SiliconANGLE、Help Net Security 四家媒體同步報導 Claude 新增 1Password 憑證登入整合，Google News 聚合顯示同一事件被多家獨立媒體各自報導。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -25,6 +31,12 @@
       "body": "TechCrunch 分析 Moonshot AI 即將推出的 Kimi 3 有望縮小與 Anthropic Opus 4.8 之間的差距，CNBC 與金融時報亦分別報導 Moonshot 已發布的 Kimi K3 模型自稱可與 OpenAI、Anthropic 匹敵，r/LocalLLaMA 上亦有貼文稱 Kimi K3 在 arena.ai 排名超越 Claude Fable。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -49,6 +61,12 @@
       "body": "`/fork` 現在會將目前對話複製進一個新的背景 session（在 `claude agents` 中自成一列），使用者可同時繼續原工作；原本由 `/fork` 啟動的同 session 子 agent 功能改名為 `/subtask`。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -58,7 +76,13 @@
       "time": "07/16 21:06",
       "sentiment": "",
       "body": "TypeScript SDK 發布 0.112.1 版，changelog 未列出具體異動項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.117.0",
@@ -67,7 +91,17 @@
       "time": "07/16 19:36",
       "sentiment": "",
       "body": "Python SDK 發布 0.117.0 版，新增對 「dreaming」API 功能的支援。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "managed-agents",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors on Sonnet 5 and Haiku 4.5",
@@ -116,7 +150,13 @@
       "time": "07/17 10:00",
       "sentiment": "",
       "body": "Proactive financial news 報導交易員押注 Anthropic 將第四度延長 Claude Fable 5 的存取期限。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude can now sign into websites with 1Password without exposing your credentials - Help Net Security",
@@ -136,7 +176,13 @@
       "time": "07/17 09:14",
       "sentiment": "",
       "body": "Asset Servicing Times 報導金融科技公司 FIS 與 Anthropic 延長既有合作關係。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic reveals it will pay $600,000 for someone to shape its tricky IPO story - Business Insider",
@@ -145,7 +191,13 @@
       "time": "07/17 09:00",
       "sentiment": "",
       "body": "Business Insider 報導 Anthropic 揭露將支付 60 萬美元，尋人協助形塑其 IPO 前的敘事故事。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Chinese startup Moonshot AI unveils Kimi model it says rivals OpenAI, Anthropic - CNBC",
@@ -183,7 +235,13 @@
       "time": "07/16 22:51",
       "sentiment": "",
       "body": "CNBC 報導微軟執行長 Nadella 批評 Anthropic 的 Fable「受到編輯層面的控制」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Getting Started with the Claude API - MLQ.ai",
@@ -201,7 +259,13 @@
       "time": "07/16 20:12",
       "sentiment": "",
       "body": "Politico 報導美國參議員 Mike Rounds 就 Anthropic 的 Mythos 接受五角大廈簡報。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Alphabet could crush estimates on Cloud strength, Anthropic windfall: BofA - Yahoo! Finance Canada",
@@ -210,7 +274,13 @@
       "time": "07/16 19:33",
       "sentiment": "",
       "body": "Yahoo! Finance Canada 引述美銀分析，Alphabet 雲端業務與 Anthropic 帶來的收益可能使其財報優於預期。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude AI Is Investigating Issues While Downdetector Gains Error Reports - GV Wire",
@@ -230,7 +300,13 @@
       "time": "07/16 18:35",
       "sentiment": "",
       "body": "WIRED 分析 Anthropic 為何積極推動各州加快 AI 監管腳步。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Codex is technically better than Claude Code, but I stopped using it for one specific reason - XDA",
@@ -248,7 +324,13 @@
       "time": "07/16 16:03",
       "sentiment": "",
       "body": "PR Newswire 報導勤業眾信（Deloitte）推出由 Anthropic Claude 模型驅動的安全軟體平台。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Exclusive | Anthropic, China and why Pax Silica architect thinks the US can keep AI lead - South China Morning Post",
@@ -257,7 +339,13 @@
       "time": "07/16 15:00",
       "sentiment": "",
       "body": "南華早報獨家報導 Anthropic 與中國之間的競合關係，並訪問 Pax Silica 政策架構的主要推手，說明其為何認為美國仍能維持 AI 領先地位。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Moonshot's upcoming Kimi 3 is expected to close the gap with Anthropic's Opus 4.8 - TechCrunch",
@@ -268,6 +356,12 @@
       "body": "TechCrunch 分析 Moonshot 即將發布的 Kimi 3 有望縮小與 Anthropic Opus 4.8 之間的差距。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -277,7 +371,13 @@
       "time": "07/16 13:47",
       "sentiment": "",
       "body": "ZDNET 報導 Anthropic 的 Claude Corps 計畫將支付 8.5 萬美元予 1,000 名早期職涯專業人士，目前開放申請。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "1Password brings secure credential access to Anthropic's Claude - SiliconANGLE",
@@ -297,6 +397,12 @@
       "body": "The Verge 報導 Claude 現在可代替使用者使用 1Password 憑證。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -333,7 +439,13 @@
       "time": "07/16 09:51",
       "sentiment": "",
       "body": "金融時報報導中國新創 Moonshot 發布新模型，被視為挑戰 Anthropic 的領先地位。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -398,7 +510,13 @@
       "time": "07/17 08:06",
       "sentiment": "🤔",
       "body": "使用者回報改用 Opus 4.7 後思考摘要不再顯示，經追查發現是 harness 未設定 extended-thinking API 的 `display: \"summarized\"` 參數，累積 78 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: cc-context-telemetry - context and rate-limit % in Claude Code's bar",
@@ -416,7 +534,13 @@
       "time": "07/17 05:00",
       "sentiment": "😤",
       "body": "使用者回報 Cowork 的網路對外連線白名單機制失效，自訂網域仍被以 403 blocked-by-allowlist 擋下，累積 49 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Continue when the session limit reached",
@@ -425,7 +549,13 @@
       "time": "07/17 03:06",
       "sentiment": "🤔",
       "body": "使用者提出功能請求，希望 Claude Code 達到 session 限額時能有續行機制，累積 175 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Mocca – Claude Code wrapper where Plugin takes center stage",
@@ -443,7 +573,13 @@
       "time": "07/17 01:20",
       "sentiment": "🤔",
       "body": "使用者提出功能請求，希望 VS Code 擴充套件新增選項可停用自動附加目前開啟檔案／選取範圍的行為，累積 185 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Cowork Edit/Write tools silently truncate files via byte-conservation buffer cap (deterministic, fires at all file sizes)",
@@ -452,7 +588,13 @@
       "time": "07/16 23:22",
       "sentiment": "😤",
       "body": "使用者維護的問題追蹤指出 Cowork 的 Edit/Write 工具會因緩衝區位元組容量上限而靜默截斷檔案，且此問題在各種檔案大小下皆會確定性重現，累積 16 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Nutshot Simulator – 31 days, 59K prompts, 142M tokens, ~$23K of Claude",
@@ -470,7 +612,13 @@
       "time": "07/16 21:12",
       "sentiment": "🤔",
       "body": "使用者提出功能請求，希望能關閉 Claude Code 輸入框將多行貼上文字自動收合為 `[Pasted text #N +X lines]` 的行為，累積 137 個讚同反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: HeimWall – Catch secrets before you paste them into Claude or Cursor",
@@ -526,6 +674,12 @@
       "body": "使用者回報從 Claude Code 終端機輸出複製文字時，會夾帶不必要的前導縮排與行尾空白，累積 275 個讚同反應，為今日互動量第二高的條目。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -537,6 +691,12 @@
       "body": "使用者回報呼叫進行中畫面會出現閃爍問題，累積 335 個讚同反應，為今日互動量最高的條目。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {

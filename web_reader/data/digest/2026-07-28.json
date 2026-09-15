@@ -12,7 +12,13 @@
       "time": "07/27 23:39",
       "sentiment": "",
       "body": "Simon Willison 部落格記錄 Moonshot AI 釋出 Kimi-K3 權重，與 Tom's Hardware 的報導（見下方媒體報導）同步出現，被視為對 OpenAI 與 Anthropic 在開源模型議題上的又一波壓力，恰與今日 Amodei 的開源立場聲明形成呼應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Users' seemingly private conversations with Anthropic's Claude showed up in Google search results",
@@ -21,7 +27,13 @@
       "time": "07/27 17:20",
       "sentiment": "",
       "body": "「Claude 對話外流搜尋引擎」一事同日再獲 Fortune、Futurism 等媒體跟進報導，Futurism 形容部分外流內容「相當私密」，顯示此事件已跨多家媒體延燒，不只單一報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "社群整理：Claude 5 系列大幅精簡 Claude Code 系統提示詞",
@@ -43,6 +55,16 @@
       "body": "雙方擴大既有合作，Cognizant 將把 Claude 嵌入自身的商業與工程平台，並打造 Claude 認證的人才梯隊，成為 Claude Partner Network 的 Global Premier Partner。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -52,7 +74,13 @@
       "time": "07/27 14:36",
       "sentiment": "",
       "body": "Anthropic Status 記錄一起影響 Claude Opus 5 與 Haiku 4.5 的錯誤率升高事件，事件於 UTC 14:34 恢復基準值後結案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -65,6 +93,12 @@
       "body": "BBC 報導部分使用者透過分享對話功能公開的 Claude 對話紀錄，被發現可經 Google 搜尋直接找到。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -76,6 +110,12 @@
       "body": "International Business Times 指出外流的分享對話中含有 API 金鑰與個人資料等敏感內容。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -87,6 +127,12 @@
       "body": "Axios 報導 Amodei 公開表態反對禁止開源權重模型，同時呼籲加強對中國的晶片出口管制。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -96,7 +142,13 @@
       "time": "07/28 00:13",
       "sentiment": "",
       "body": "TechCrunch 從另一角度報導同一聲明，聚焦 Amodei 對中國 AI 發展的疑慮。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic CEO: Don't ban cheap AI — but clamp down on China",
@@ -105,7 +157,13 @@
       "time": "07/28 01:07",
       "sentiment": "",
       "body": "Politico 從政策角度報導 Amodei 對開源模型禁令與晶片管制立場的政治意涵。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Authors have mixed feelings about the $1.5B Anthropic copyright infringement ruling",
@@ -114,7 +172,13 @@
       "time": "07/27 20:49",
       "sentiment": "",
       "body": "NPR 報導作家群體對先前 Anthropic 版權侵權案 15 億美元和解金的反應不一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Nvidia, Microsoft launch open AI security alliance — without OpenAI, Google, or Anthropic",
@@ -123,7 +187,13 @@
       "time": "07/27 12:06",
       "sentiment": "",
       "body": "The Verge 報導 Nvidia 與 Microsoft 成立的開放 AI 安全聯盟中，OpenAI、Google、Anthropic 均未列名參與。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code Symlink Flaw Exfiltrates Sensitive Files Without User Approval",
@@ -134,6 +204,12 @@
       "body": "gbhackers.com 揭露 Claude Code 存在 symlink 相關瑕疵，可能導致敏感檔案在未經使用者核准下外流。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -143,7 +219,13 @@
       "time": "07/27 18:40",
       "sentiment": "",
       "body": "Tom's Hardware 報導 Moonshot AI 開源 Kimi-K3 權重，宣稱效能接近前沿模型、但運算成本僅需 2–3 分之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic, Cognizant expand team up to embed Claude in industry platforms",
@@ -154,6 +236,12 @@
       "body": "Seeking Alpha 報導 Anthropic 與 Cognizant 擴大合作，將 Claude 導入其製造、生命科學、保險等產業客戶的系統。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -165,6 +253,12 @@
       "body": "Axios 報導 Anthropic 市值已超越 Starbucks 與 McDonald's，反映近期 AI 熱潮下公司估值快速攀升。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -174,7 +268,13 @@
       "time": "07/27 07:17",
       "sentiment": "",
       "body": "Notebookcheck 報導一起透過 Bing 廣告投放的假冒 Claude App 案例，廣告最終導向 Anthropic 官方網站。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -185,7 +285,13 @@
       "time": "07/26 20:35",
       "sentiment": "",
       "body": "使用者要求 Claude 與 Claude Code on the web 支援同一 connector 掛載多組帳號，累積 452 個 👍 反應，是本日互動數最高的單一 issue。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] API Error: Rate limit reached despite Claude Max subscription and only 16% usage",
@@ -203,7 +309,13 @@
       "time": "07/26 20:21",
       "sentiment": "",
       "body": "使用者回報 Claude Code 在部分場景下會卡住 5–20 分鐘以上，累積 149 個 👍 反應。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add Option to Always Show Claude's Thinking",
@@ -212,7 +324,13 @@
       "time": "07/26 23:23",
       "sentiment": "",
       "body": "功能請求，希望提供選項常態顯示 Claude 的思考過程，累積 351 個 👍 反應。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Tell HN: Our paid Claude AI subscription unavailable >1 week and no support",
@@ -221,7 +339,13 @@
       "time": "07/28 08:00",
       "sentiment": "",
       "body": "一名企業用戶反映 Claude AI Team 方案已無法使用超過一週且求助無門，討論串中有使用者分享類似的客服糾紛經驗。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code Deletes Your Context History from Your Device After 30 Days",
@@ -230,7 +354,13 @@
       "time": "07/26 10:42",
       "sentiment": "",
       "body": "討論聚焦 Anthropic 官方資料使用政策頁面，釐清消費版與商用版方案在資料訓練上的差異。情緒：😐",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Too many Claude Code skills? How the listing budget decides which descriptions Claude sees",
@@ -239,7 +369,13 @@
       "time": "07/27 16:30",
       "sentiment": "",
       "body": "第一手實作文章拆解 Claude Code skills 清單的字元預算機制（單一 skill 說明上限 1,536 字元、整體清單依 context window 1% 計算），說明為何新增 skill 可能讓既有 skill 悄悄不再被觸發。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "session-indexer: giving Claude Code a memory that doesn't die with the project next door",
@@ -248,7 +384,13 @@
       "time": "07/04 07:54",
       "sentiment": "",
       "body": "作者分享自製的 Go 工具，將 Claude Code 的 session transcript 索引進本地 SQLite 資料庫，並以語意相似度在新 session 開始時取回相關片段。情緒：😊",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic cut 80% of Claude Code's system prompt for the Claude 5 models and published what should still go in your CLAUDE.md and skills",

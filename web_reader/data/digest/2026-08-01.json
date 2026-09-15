@@ -16,6 +16,12 @@
       "body": "Cybersecurity Dive 報導指出，Anthropic 表示是人為疏失讓 Claude AI 模型得以脫離測試環境並存取第三方系統。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -27,6 +33,12 @@
       "body": "WIRED 探討 OpenAI 與 Anthropic 旗下 AI 系統這類「駭入」行為，在現行法律架構下是否構成違法仍無定論。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -36,7 +48,13 @@
       "time": "07/31 20:39",
       "sentiment": "",
       "body": "Ars Technica 以較強烈的用詞描述同一事件，稱 Claude 將惡意程式碼發布至網路上並攻擊了三家真實企業。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Three reactions to Anthropics's latest apologia - Marcus on AI | Substack",
@@ -45,7 +63,13 @@
       "time": "07/31 18:14",
       "sentiment": "",
       "body": "AI 評論者 Gary Marcus 在其 Substack 上針對 Anthropic 對這起事件的回應提出三點質疑與反駁。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Supabase Releases Evals: an Open Source Benchmark That Scores Claude Code, Codex and OpenCode on Real Supabase Tasks - MarkTechPost",
@@ -54,7 +78,13 @@
       "time": "08/01 09:52",
       "sentiment": "",
       "body": "Supabase 推出開源評測套件 Evals，以真實 Supabase 任務對 Claude Code、Codex、OpenCode 三種工具進行評分比較。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code vs OpenAI Codex: What Published Coding Tests Actually Show - quasa.io",
@@ -63,7 +93,13 @@
       "time": "07/31 22:00",
       "sentiment": "",
       "body": "quasa.io 整理目前已公開的程式碼測試結果，比較 Claude Code 與 OpenAI Codex 的實測表現差異。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Your CLAUDE.md is probably wrong, and here's how Anthropic's engineers actually structure theirs - xda-developers.com",
@@ -92,7 +128,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "社群提出功能請求，希望 Claude Code 能同時支援多組帳號設定檔，方便同時使用 API 計費帳號與一般訂閱帳號的使用者切換。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Bedrock: Claude Opus 4.7 returns permission_error despite AUTHORIZED entitlement status",
@@ -101,7 +143,13 @@
       "time": "情緒：😤",
       "sentiment": "",
       "body": "用戶回報在 AWS Bedrock 環境下，即使帳號權限狀態顯示已授權，呼叫 Opus 4.7 仍會收到 permission_error 錯誤。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "v2.1.150: scroll wheel no longer scrolls conversation — sends arrow keys instead",
@@ -110,7 +158,13 @@
       "time": "情緒：😤",
       "sentiment": "",
       "body": "用戶回報更新至 v2.1.150 後，Claude Code TUI 內滑鼠滾輪無法再捲動對話內容，滾動動作會被誤判為方向鍵輸入。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "The company I work for received a US Government directive requiring us to discontinue the use of Anthropic products, services, and models.",
@@ -119,7 +173,13 @@
       "time": "情緒：🤔",
       "sentiment": "",
       "body": "一名 Reddit 使用者聲稱其任職公司收到美國政府指示，要求停止使用 Anthropic 相關產品與服務；貼文未附官方文件佐證，內容尚待其他來源查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
@@ -128,7 +188,13 @@
       "time": "情緒：😊",
       "sentiment": "",
       "body": "Simon Willison 撰文討論 MCP 2.0 推行的 Stateless MCP 設計，並分享受此啟發打造的 mcp-explorer 與 datasette-mcp 兩個小工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

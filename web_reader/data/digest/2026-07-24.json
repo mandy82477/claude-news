@@ -12,7 +12,13 @@
       "time": "07/23 15:11",
       "sentiment": "",
       "body": "與 Claude-thermos、OneCLI 同日在 Show HN 亮相，這款開源 macOS 影片編輯器內建 AI 生成與本機 MCP server，獲得 171 分熱度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Claude-thermos keeps your Claude session warm for you",
@@ -21,7 +27,17 @@
       "time": "07/23 17:06",
       "sentiment": "",
       "body": "作者做出一個讓 Claude session 維持「warm」快取狀態的小工具，獲得 102 分熱度，留言區有人質疑此舉是否只是把成本轉嫁給其他用戶。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
@@ -30,7 +46,13 @@
       "time": "07/23 15:42",
       "sentiment": "",
       "body": "OneCLI 是一個開源憑證閘道，介於 AI agent 與其呼叫的服務之間，依 host/path 驗證權限後才代為換發真實憑證，避免密鑰直接暴露給 agent，獲得 101 分熱度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] macOS: Claude Desktop never dispatches tools/call to the first-party Filesystem extension (tools/list succeeds, no tools/call in any log)",
@@ -39,7 +61,13 @@
       "time": "07/23 18:19",
       "sentiment": "",
       "body": "今日 GitHub Issues 湧入多筆 Claude Code 穩定性回報，其中此則指出 macOS 版 Claude Desktop 的 Filesystem 擴充功能只回應 `tools/list`，從未實際發出 `tools/call`，累積 61 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] API Error: Connection closed mid-response ==> frequent enough to make Claude Code unusable for any task",
@@ -48,7 +76,13 @@
       "time": "07/24 01:04",
       "sentiment": "",
       "body": "同批穩定性回報中，此則反映連線頻繁中斷已嚴重到讓 Claude Code 無法用於任何任務，累積 69 個 reaction、33 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -59,7 +93,13 @@
       "time": "07/24 10:22",
       "sentiment": "",
       "body": "Opus 4.8 錯誤率上升事件，官方已實施修復並確認解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] sdk: v0.114.0",
@@ -68,7 +108,13 @@
       "time": "07/23 17:34",
       "sentiment": "",
       "body": "TypeScript SDK 釋出 0.114.0 版，新增 API 相關功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v0.119.0",
@@ -77,7 +123,13 @@
       "time": "07/23 17:34",
       "sentiment": "",
       "body": "Python SDK 釋出 0.119.0 版，新增新的 stop reason `model_continue` 等 API 功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -101,6 +153,12 @@
       "body": "Hackread 報導 Tego AI 本週第二度揭露 Claude 相關漏洞，指出隱藏連結可悄悄把檔案外洩給攻擊者。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -110,7 +168,13 @@
       "time": "07/24 07:01",
       "sentiment": "",
       "body": "HackerNoon 分析近期 Claude Opus 5 傳聞截圖看似可信，但尚未通過 API 合約層級的驗證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-8",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic Adds Model Choice to Claude Voice Mode For All Users - SQ Magazine",
@@ -119,7 +183,13 @@
       "time": "07/24 06:41",
       "sentiment": "",
       "body": "SQ Magazine 報導 Anthropic 開放所有使用者在語音模式中自行選擇模型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Harry Potter Publisher To Get Millions In Settlement From Anthropic - NDTV",
@@ -130,6 +200,12 @@
       "body": "NDTV 報導《哈利波特》系列出版商將於 Anthropic 著作權和解案中獲得數百萬美元賠償。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -150,6 +226,12 @@
       "body": "BBC 報導白宮科技顧問指控中國 Moonshot AI 從 Anthropic 竊取技術，另有一則相同來源報導同步跟進。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -161,6 +243,12 @@
       "body": "digitimes 報導中國 AI 實驗室透過 Claude Code 外洩內容，藉此縮小與 Anthropic 的技術差距。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -170,7 +258,13 @@
       "time": "07/23 20:30",
       "sentiment": "",
       "body": "PR Newswire 報導 Cyberhaven 擴充其資料與 AI 安全平台，新增支援 ChatGPT Enterprise 與 Claude Compliance API 整合。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Alphabet's Anthropic Stake Jumps to Around $124 Billion - Bloomberg.com",
@@ -181,6 +275,16 @@
       "body": "Bloomberg 報導 Alphabet 持有的 Anthropic 股權市值已跳升至約 1,240 億美元。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "google-investment",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -219,6 +323,12 @@
       "body": "The Verge 報導語音模式現可於 Opus 與 Sonnet 之間選擇。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -248,6 +358,12 @@
       "body": "The Information 報導矽谷業界聯合反對 Anthropic 對中國 AI 的限制立場。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -257,7 +373,13 @@
       "time": "07/23 14:11",
       "sentiment": "",
       "body": "Security Info Watch 報導 Orca Security 整合 Claude Compliance API，擴大企業 AI 治理能力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "7 Best Claude Code Alternatives for CLI Agentic Coding - KDnuggets",
@@ -275,7 +397,13 @@
       "time": "07/23 12:26",
       "sentiment": "",
       "body": "ZDNET 分享作者如何依任務不同分別選用 Claude 模型、Code 與 Cowork。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI and Anthropic could go public for trillions. Will S.F. cash in? - San Francisco Chronicle",
@@ -293,7 +421,13 @@
       "time": "07/23 10:47",
       "sentiment": "",
       "body": "TestingCatalog AI News 報導 Anthropic 正在為可能的 Claude Opus 5 推出做準備。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-8",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code Update Kills Quadratic Slowdown That Compounded in Auto Mode's Longest Sessions - Tech Times",
@@ -302,7 +436,13 @@
       "time": "07/23 09:58",
       "sentiment": "",
       "body": "Tech Times 報導 Claude Code 一次更新解決了 Auto Mode 長時間工作階段中不斷累積的二次方效能衰退問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -340,7 +480,13 @@
       "time": "07/24 10:28",
       "sentiment": "😤",
       "body": "新手使用者反映燒了不少 token 才發現 Claude Security 沒有 Workflow tool 的存取權限，卡在使用上的困惑。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Day 11 building a game with Claude Code: someone has played my game for over 70 hours. I'm in shock.",
@@ -367,7 +513,13 @@
       "time": "07/24 01:04",
       "sentiment": "😤",
       "body": "使用者回報連線頻繁中斷已嚴重到讓 Claude Code 無法用於任何任務，累積 69 個 reaction、33 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "The first known runaway AI agent - or a very bad marketing stunt?",
@@ -376,7 +528,13 @@
       "time": "07/23 22:53",
       "sentiment": "🤔",
       "body": "Simon Willison 轉貼 Martin Alderson 對一起「AI agent 失控」事件的評論，質疑究竟是真實事故還是一場拙劣的行銷噱頭。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Mumble Dictation – local dictation that learns your vocabulary",
@@ -412,7 +570,13 @@
       "time": "07/23 20:56",
       "sentiment": "😊",
       "body": "社群要求 Claude Desktop / Cowork 支援希伯來文與阿拉伯文的由右至左排版，累積 105 個 reaction、40 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Notebooker.ai – NotebookLM alternative, your own models, keys, storage",
@@ -430,7 +594,13 @@
       "time": "07/23 18:19",
       "sentiment": "😤",
       "body": "回報指出 macOS 版 Claude Desktop 的 Filesystem 擴充功能只回應 `tools/list`，從未實際發出 `tools/call`，累積 61 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: BDFL – Open-source supervisor for Codex and Claude Code",
@@ -493,7 +663,13 @@
       "time": "07/23 14:46",
       "sentiment": "😤",
       "body": "Windows 11 Pro 使用者回報 CoworkVMService 因簽章驗證初始化失敗而無法啟動。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: 5dive – Run a Company of Claude Code/Codex Agents (Written in Bash)",
@@ -511,7 +687,13 @@
       "time": "07/23 13:00",
       "sentiment": "😤",
       "body": "Axios 報導 OpenAI 與 Anthropic 就開放權重模型風險立場趨於一致，HN 討論區有留言批評此舉是自利心態包裝成使命宣稱，累積 287 分熱度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] autoMemoryEnabled=false does not suppress the ~11-16k memory preamble (re: closed #44829)",
@@ -538,7 +720,13 @@
       "time": "07/22 11:21",
       "sentiment": "😤",
       "body": "使用者質疑 Anthropic 宣稱的 50% 用量提升實際上並未反映在其使用體驗中。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "ANTHROPIC GOT SUED",
@@ -565,7 +753,13 @@
       "time": "07/18 14:28",
       "sentiment": "😤",
       "body": "一位自稱從事基因學／神經科學研究的使用者質疑 Fable「對科學研究太危險」的說法，認為自己的用途完全與生物恐怖主義無關。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Got 6 months of Claude Max 20x for free — thanks Anthropic and OpenSource",
@@ -594,7 +788,17 @@
       "time": "07/24 01:16",
       "sentiment": "",
       "body": "自 Fable 5 成為 Max 方案標準模型的第一天（2026-07-20）起，Claude Code 反而在 Max 方案上要求額外用量點數，累積 13 個 reaction。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic is subsidizing our AI coding at 13x. How long will it last?",
@@ -603,7 +807,13 @@
       "time": "07/23 13:13",
       "sentiment": "",
       "body": "作者對比同事將 Opus 4.8 從綁定方案改用純 API 計費後，單月花費從約 125 美元暴增至約 5,500 美元，推估 Anthropic 目前綁定方案的實際補貼倍數。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Antigravity vs Cursor vs Claude Code: Free vs $200 [2026] - tech-insider.org",
@@ -612,7 +822,13 @@
       "time": "07/23 14:52",
       "sentiment": "",
       "body": "tech-insider.org 對比 Antigravity、Cursor 與 Claude Code 的方案價格，涵蓋免費方案至 200 美元方案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "focus": [

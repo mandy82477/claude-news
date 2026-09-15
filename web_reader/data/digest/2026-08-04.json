@@ -12,7 +12,13 @@
       "time": "08/03 07:23",
       "sentiment": "",
       "body": "社群要求 Claude Code 在觸及 session 用量上限後能自動接續而非中斷任務，是今日互動最高的功能請求之一，與今日聚焦中「瞬間打到用量上限」的抱怨呼應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude code requires users to constantly login",
@@ -21,7 +27,13 @@
       "time": "08/03 14:38",
       "sentiment": "",
       "body": "使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] claude.ai visualize feature broken — claudemcpcontent.com unreachable (DNS_PROBE_FINISHED_NXDOMAIN) --- PLEASE REVIEW!",
@@ -30,7 +42,13 @@
       "time": "08/03 03:16",
       "sentiment": "",
       "body": "claude.ai 的 visualize 功能因依賴的網域無法解析而故障，多名使用者留言附和。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG]Cowork network egress allowlist not working - custom domains blocked with 403 blocked-by-allowlist",
@@ -39,7 +57,13 @@
       "time": "08/04 02:39",
       "sentiment": "",
       "body": "Cowork 的網路連出白名單機制未如預期運作，自訂網域仍遭 403 攔截。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "GitHub connector links repositories successfully but Claude cannot access content for ANY repository (account-wide, public and private alike) — recent regression",
@@ -48,7 +72,13 @@
       "time": "08/03 23:32",
       "sentiment": "",
       "body": "使用者回報 GitHub connector 雖能成功連結儲存庫，但 Claude 端讀不到任何內容，公開與私有儲存庫皆受影響，回報者標記為近期出現的迴歸問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Boris Cherny on Trying to Get Claude Code to Rewrite the Claude App",
@@ -57,7 +87,17 @@
       "time": "08/03 00:22",
       "sentiment": "",
       "body": "Claude Code 負責人 Boris Cherny 在 Y Combinator Startup School 訪談中談到，讓 Claude 執行困難任務的關鍵已不在提示工程，而在於能否讓 Claude 沿途驗證自己的工作；他以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例說明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "boris-cherny",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's Fever Dream: Claude's package that stole real keys",
@@ -66,7 +106,13 @@
       "time": "08/02 20:36",
       "sentiment": "",
       "body": "資安部落格 Aikido 對 Anthropic 揭露的安全測試事件做技術解讀，聚焦其中一起涉及供應鏈的插曲：一個具完整網路存取權的 agent 依指示嘗試安裝一個實際上不存在的 PyPI 套件。與今日聚焦的安全揭露屬同一批事件的延伸討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -77,7 +123,13 @@
       "time": "08/04 00:14",
       "sentiment": "",
       "body": "新版為 VSCode 擴充新增 Focus view：可用 `Ctrl+Alt+F` 或選單切換，將工具活動摺疊為可展開的每輪摘要並附即時執行指示。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors on Claude Sonnet 5",
@@ -115,7 +167,13 @@
       "time": "08/04 07:03",
       "sentiment": "",
       "body": "Financial Times 深度報導 Google 為 Anthropic 牽線、規模近 2000 億美元的華爾街融資安排幕後運作。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Kiro vs Claude Code: 80.8% SWE-bench, $200 Cap [2026]",
@@ -124,7 +182,13 @@
       "time": "08/03 14:51",
       "sentiment": "",
       "body": "科技媒體比較 Kiro 與 Claude Code 兩款編碼工具在 SWE-bench 分數與費用上限上的差異。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I tested over 100 Claude Code plugins—here are the 5 that actually matter",
@@ -142,7 +206,13 @@
       "time": "08/03 12:55",
       "sentiment": "",
       "body": "ndtv 報導 Anthropic 宣布擴大在印度市場的布局，Claude 服務可及性提升。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "AI enthusiast unlocks and mods BIOS with Claude Code — AI defeats RSA-2048 signature checks and unlocks 55 hidden settings",
@@ -162,6 +232,12 @@
       "body": "Homeland Security Today 評論 Anthropic 此次資安事件與先前 OpenAI 案例的共通之處。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -180,7 +256,13 @@
       "time": "08/03 07:02",
       "sentiment": "",
       "body": "tech-insider.org 併陳兩則消息：Claude 一次長達 5 小時 44 分鐘的服務中斷，以及 Anthropic 估值突破 470 億美元。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How to Build AI Automations With Claude Cowork",
@@ -209,7 +291,13 @@
       "time": "08/04 11:38",
       "sentiment": "😤",
       "body": "作者宣稱以實測與時間戳記錄，發現 Claude Code 中釘選模型的機制有四種獨立方式會被繞過，且 Sonnet 4.6 在未告知下被移除。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The J-Space: How I Learned To Read An LLM's Mind",
@@ -227,7 +315,13 @@
       "time": "07/17 05:00",
       "sentiment": "😊",
       "body": "作者分享用 PROGRESS.md 與自動重試腳本，讓被限速中斷的 Claude Code session 能自行恢復執行的作法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "What actually belongs in CLAUDE.md — and what to move to skills, hooks, or docs",
@@ -236,7 +330,13 @@
       "time": "07/30 00:51",
       "sentiment": "🤔",
       "body": "文章討論 CLAUDE.md 隨時間膨脹的問題，建議哪些內容該移到 skills、hooks 或文件而非塞進自動載入的主檔案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Devtools must be open source (exe.dev)",
@@ -254,7 +354,13 @@
       "time": "07/31 19:40",
       "sentiment": "😊",
       "body": "作者感謝「對抗式審查者」skill 模式的推廣者，表示這解決了長期以來 Claude 自己批改自己作業、給自己過高評價的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "GTA 6 first attempt. Far from perfect, but it's impressive what the right harness and agentic loops can build.",
@@ -263,7 +369,13 @@
       "time": "08/03 08:46",
       "sentiment": "😊",
       "body": "作者展示用合適的 harness 與 agentic loop 讓 Claude 嘗試重現 GTA 6 的成果，坦言遠非完美但認為展現了潛力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Opus 5 is just frustating",
@@ -272,7 +384,13 @@
       "time": "08/04 11:35",
       "sentiment": "😤",
       "body": "使用者在 r/ClaudeCode 表達對 Opus 5 使用體驗的不滿。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -283,7 +401,13 @@
       "time": "08/03 06:03",
       "sentiment": "",
       "body": "Hacker News 討論指出，部分中國轉售商透過 Sub2API 等開源專案，以低於官方定價最多 90% 的價格轉賣 Claude／Codex 的 API 存取權。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

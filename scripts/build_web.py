@@ -494,13 +494,57 @@ def parse_root_page(f: Path) -> dict:
     return d
 
 
-def attach_sedimented_badges(digest_all: dict, entities: list, topics: list) -> None:
-    """為每篇日報標記「已沉澱」——沿用 wiki 頁既有的 lastNewsUpdate 欄位（不新增
-    資料管線）：若某 wiki 頁 lastNewsUpdate 等於日報日期，且該頁「name」出現在
-    某條目的標題/內文中，該條目附上 sedimented 徽章；同時彙整當日全部已沉澱頁
-    為 sedimentedToday，供前端「今日 wiki 動態」小節使用。"""
+SEDIMENT_SECTIONS = ("topStories", "techUpdates", "mediaReports", "discussions", "billing")
+
+
+def load_sediment_index(f: Path) -> dict:
+    """讀 data/source_attribution.jsonl，建 (日報日期, 條目 URL) → [wiki 頁路徑]。
+
+    這份帳本是主編每日 append 的「哪一則新聞寫進哪一頁」，是徽章唯一的真相來源。
+    壞行略過不致命——帳本壞掉只該讓徽章消失，不該讓整個建置倒下。
+    """
+    idx: dict = {}
+    if not f.exists():
+        return idx
+    for line in f.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            r = json.loads(line)
+        except ValueError:
+            continue
+        date_str, url, page = r.get("date"), r.get("item_url"), r.get("page")
+        if not (date_str and page and isinstance(url, str) and url.startswith("http")):
+            continue
+        pages = idx.setdefault((date_str, url), [])
+        if page not in pages:
+            pages.append(page)
+    return idx
+
+
+def attach_sedimented_badges(digest_all: dict, entities: list, topics: list,
+                             sediment_idx: dict | None = None) -> None:
+    """為每篇日報標記「已沉澱」。
+
+    徽章按 `data/source_attribution.jsonl` 的 (日期, 條目 URL) 比對——那是主編登記
+    的「這則新聞寫進了哪一頁」。**不可改回用頁名在標題/內文裡做字串比對**：頁名
+    「Claude Code」幾乎出現在每一則條目裡，2026-09-14 當天 8 個徽章有 5 個是錯的
+    （2 則根本沒進 wiki、3 則指到沒收它的頁），點下去會把讀者帶到找不到那條新聞
+    的頁面。沒有歸因紀錄的日期不標徽章——不知道就不要猜。
+
+    sedimentedToday（頁尾「今日 wiki 動態」）仍用 wiki 頁的 lastNewsUpdate：它答的
+    是「今天哪些頁動了」，包含使用者提問通道等非日報來源，與單則條目的歸屬無關。
+    """
     all_pages = entities + topics
     by_id = {p["id"]: p for p in all_pages if p.get("id")}
+    if sediment_idx is None:
+        sediment_idx = load_sediment_index(ROOT / "data" / "source_attribution.jsonl")
+
+    def page_ref(page_path: str) -> dict | None:
+        p = by_id.get(str(page_path).split("/")[-1])
+        return {"id": p["id"], "pageType": p["pageType"]} if p else None
+
     for date_str, d in digest_all.items():
         # 專頁雷達條目：把「→ slug」解析成可點的 wiki 頁（slug 可能帶 topics/ 前綴）
         for item in d.get("topicRadar", []):
@@ -508,23 +552,21 @@ def attach_sedimented_badges(digest_all: dict, entities: list, topics: list) -> 
             p = by_id.get(slug)
             item["topicPage"] = ({"id": p["id"], "name": p["name"], "pageType": p["pageType"]}
                                  if p else None)
-        today_pages = [p for p in all_pages
-                       if p.get("lastNewsUpdate") == date_str and p.get("name")]
-        if not today_pages:
-            d["sedimentedToday"] = []
-            continue
         d["sedimentedToday"] = [
             {"id": p["id"], "name": p["name"], "pageType": p["pageType"]}
-            for p in today_pages
+            for p in all_pages
+            if p.get("lastNewsUpdate") == date_str and p.get("name")
         ]
-        for sec in ("topStories", "techUpdates", "mediaReports", "discussions", "billing"):
+        for sec in SEDIMENT_SECTIONS:
             for s in d.get(sec, []):
-                text = f"{s.get('title', '')} {s.get('body', '')}"
-                hits = [p for p in today_pages if p["name"] in text]
-                if hits:
-                    s["sedimented"] = [
-                        {"id": p["id"], "pageType": p["pageType"]} for p in hits[:2]
-                    ]
+                url = s.get("url")
+                if not url:
+                    continue
+                refs = [r for r in (page_ref(pp)
+                                    for pp in sediment_idx.get((date_str, url), []))
+                        if r]
+                if refs:
+                    s["sedimented"] = refs[:3]
 
 
 # ── 投資訊號（wiki/topics/market-signals.md → 日報頁 💰 條目）───────────────
@@ -1412,7 +1454,7 @@ def build():
         except Exception as e:
             print(f"  [warn] digest {f.name}: {e}")
 
-    # ── 已沉澱徽章／今日 wiki 動態（用既有 lastNewsUpdate 欄位比對，不新增管線）──
+    # ── 已沉澱徽章（按 source_attribution 帳本比對）／今日 wiki 動態 ──
     attach_sedimented_badges(digest_all, entities, topics)
 
     # ── 讀者版日報：有 daily/<date>.md 的日期，網站日報頁改渲染讀者版 ──────

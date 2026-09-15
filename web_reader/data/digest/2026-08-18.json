@@ -21,7 +21,13 @@
       "time": "08/17 15:24",
       "sentiment": "",
       "body": "一則批評 Anthropic 對開源 AI 立場的貼文引發 Hacker News 146 分熱議，留言區也有人質疑該文本身是否由 AI 代筆。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic becomes the 'Apple of AI': Most revenue despite being most expensive - techradar.com",
@@ -30,7 +36,13 @@
       "time": "08/17 10:56",
       "sentiment": "",
       "body": "TechRadar 報導 Anthropic 在 token 定價高於對手的情況下，仍拿下 2026 年 7 月最高的 AI token 營收，與今日聚焦的 650 億美元營收消息互為呼應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Is Making Claude Code's Auto Mode the Default Setting - ALM Corp",
@@ -48,7 +60,13 @@
       "time": "08/18 10:08",
       "sentiment": "",
       "body": "報導稱 Claude Code 新增 `/design` 指令，可直接在終端機建立 UI mockup；目前僅此單一媒體來源。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-design",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -59,7 +77,13 @@
       "time": "08/18 10:35",
       "sentiment": "",
       "body": "官方文件說明 Claude Code Desktop 三個分頁（Chat、Cowork、Code）功能，涵蓋 Git 隔離的並行 session、拖放版面配置、整合終端機與檔案編輯器、電腦操作、手機發起 Dispatch session、視覺化 diff review、app 預覽、PR 監控與 connectors。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方 Skills 異動：anthropics/skills 官方技能庫",
@@ -68,7 +92,13 @@
       "time": "08/18 10:35",
       "sentiment": "",
       "body": "官方技能庫新增 2 項技能：`claude-academy-guide`、`discernment-nudge`。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-skills",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/claude-code] v2.1.234",
@@ -77,7 +107,13 @@
       "time": "08/17 20:20",
       "sentiment": "",
       "body": "新增可選的 `CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，讓每個 session 有獨立設定目錄的主機可為專案的 transcript 目錄自訂短名稱。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Degraded performance for Claude Opus 5, Claude Sonnet 5",
@@ -86,7 +122,13 @@
       "time": "08/17 15:29",
       "sentiment": "",
       "body": "Anthropic Status 記錄 Opus 5、Sonnet 5 效能降級事件，已於 8/17 15:29 UTC 確認修復。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -99,6 +141,12 @@
       "body": "Bloomberg 報導 Anthropic 年化營收站上 650 億美元（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -110,6 +158,12 @@
       "body": "Reuters 引述消息來源證實同一則年化營收數字（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -121,6 +175,12 @@
       "body": "CNBC 報導 Anthropic 向投資人透露 7 月年化營收已攀升至 650 億美元（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -132,6 +192,12 @@
       "body": "Benzinga 同步報導這則營收數字，並將其與潛在的 IPO 進程連結（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -143,6 +209,12 @@
       "body": "CNET 報導 Claude 即將為生成內容加上浮水印（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -154,6 +226,12 @@
       "body": "The Guardian 除了報導浮水印功能，也提出疑問：這是否會犧牲文字生成品質（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -165,6 +243,12 @@
       "body": "PCWorld 同樣聚焦浮水印技術對用字選擇的影響（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -176,6 +260,12 @@
       "body": "CyberSecurityNews 揭露勒索軟體操作者濫用 Claude Code 的攻擊鏈（詳見今日聚焦）。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -187,6 +277,12 @@
       "body": "Cybernews 報導 Anthropic 揭露多智能體實驗中的惡意行為現象（詳見今日聚焦）。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -218,7 +314,13 @@
       "time": "08/17 11:53",
       "sentiment": "",
       "body": "Tech Times 報導 Anthropic 已下線 Claude Workbench，既有已儲存的 prompt 消失，仰賴它的 API pipeline 隨之中斷；目前僅此單一來源，細節待查證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Codex vs Cursor vs Claude Code: Which Is Best for Mac in 2026? - macobserver.com",
@@ -236,7 +338,13 @@
       "time": "08/17 14:01",
       "sentiment": "",
       "body": "The Information 探討 Anthropic 與 OpenAI 是否會停止把最強模型賣給企業客戶，改為自留優勢。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -247,7 +355,13 @@
       "time": "08/17 13:12",
       "sentiment": "😊",
       "body": "社群展示網站，收錄社群提交、經人工審核的 Claude Code status line 樣式，每則皆附真實 sandbox 容器截圖；此則同時被兩個獨立來源收錄。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Doberman: The AI watchdog that stops Claude from deleting your database",

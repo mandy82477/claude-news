@@ -12,7 +12,13 @@
       "time": "47 留言 · 08/22 13:09",
       "sentiment": "",
       "body": "同日另有三則開發者體驗相關提案／回報湧入高留言量：VS Code 外掛新增 LaTeX 渲染支援（42 則留言）、允許將自訂 `.claude/agents/` 定義加入 agent team（41 則留言），以及 Post／PreToolUse hooks 未正確觸發的錯誤回報（40 則留言）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "caiovicentino/polymarket-mcp-server",
@@ -30,7 +36,13 @@
       "time": "08/22 15:56",
       "sentiment": "",
       "body": "Simon Willison 撰文主張，善用 coding agent 的關鍵技能是能精準下達修改指令、並有信心驗證變更確實如預期套用，而非僅止於傳統的程式碼審查。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -41,7 +53,13 @@
       "time": "08/23 00:52",
       "sentiment": "",
       "body": "官方發布 v2.1.241，release notes 僅載明「錯誤修復與穩定性改善」，未列出具體異動項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）（新增 2 頁）",
@@ -50,7 +68,13 @@
       "time": "08/23 10:30",
       "sentiment": "",
       "body": "文件索引新增 2 頁週報：Week 33（8/10–14）與 Week 34（8/17–21）「近期更新」頁面，新增頁通常代表新功能或設定項上線，建議開啟確認實際內容。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -61,7 +85,13 @@
       "time": "08/23 08:23",
       "sentiment": "",
       "body": "《金融時報》報導指出，Anthropic 旗艦模型在吸引一般使用者上不敵較低價的競品工具。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How China's gray market sells Claude tokens at a fraction of the price",
@@ -70,7 +100,13 @@
       "time": "08/23 07:54",
       "sentiment": "",
       "body": "《the-decoder.com》報導指出，中國存在灰色市場以低於官方定價的價格轉售 Claude API token 額度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude-maker Anthropic has hired Amir Salek, founder of Google's custom chip programme",
@@ -79,7 +115,21 @@
       "time": "08/23 05:19",
       "sentiment": "",
       "body": "《The Times of India》報導 Anthropic 延攬 Google 自研晶片計畫創辦人 Amir Salek，外界解讀為公司評估自研晶片、跨入硬體領域的訊號。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "ai-talent-flow",
+          "pageType": "topic"
+        },
+        {
+          "id": "amir-salek",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Inherent, founded by DeepMind alumni, says its AI 'teammate' just outperformed Anthropic and OpenAI at replicating research",
@@ -88,7 +138,13 @@
       "time": "08/22 19:00",
       "sentiment": "",
       "body": "《TechCrunch》報導，由 DeepMind 校友創立的新創公司 Inherent 宣稱其 AI「隊友」在複現研究任務上的表現超越 Anthropic 與 OpenAI，惟此為該公司自行發布的說法，尚無第三方驗證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "ReliaQuest Advances AI-Driven, SIEM-Less Security Strategy With Deeper Anthropic Integration",
@@ -97,7 +153,13 @@
       "time": "08/22 14:02",
       "sentiment": "",
       "body": "《TipRanks》報導資安廠商 ReliaQuest 深化與 Anthropic 的技術整合，做為其去 SIEM 化資安策略的一環。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Lean Prompts Beat Micromanagement in New Anthropic Models",
@@ -106,7 +168,13 @@
       "time": "08/22 12:01",
       "sentiment": "",
       "body": "《Geeky Gadgets》一篇教學文章建議，面對新一代 Anthropic 模型時，精簡的提示詞比逐步微觀管理更能發揮效果；同日另有一則來源報導相同主題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -126,7 +194,13 @@
       "time": "🤔 · 08/20 02:09",
       "sentiment": "",
       "body": "一則週熱門 Reddit 貼文討論是否出現了讓 Opus 在工作流中「不再是必要依賴」的關鍵證據，呼應近期社群對模型表現變化的討論氛圍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Make your logo extra bright on HDR screens",
@@ -135,7 +209,13 @@
       "time": "😊 · 62 分 · 08/22 18:43",
       "sentiment": "",
       "body": "作者分享用 Claude Code 協助開發的瀏覽器端小工具，可為 Logo 加上僅 HDR 螢幕才看得到的高亮效果，累積 62 分。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Quoting Linus Torvalds",
@@ -144,7 +224,13 @@
       "time": "😊 · 08/22 21:04",
       "sentiment": "",
       "body": "Simon Willison 引述 Linus Torvalds 在一則 commit 訊息中的說法，提到某次「地獄等級」的除錯過程主要靠 AI 協助完成大量繁瑣工作（原文未點名具體工具）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why does Claude Code say things like, \"that's about 3 days of work\" then proceeds to do it all in a 20 minutes?",
@@ -153,7 +239,13 @@
       "time": "🤔 · 08/19 04:48",
       "sentiment": "",
       "body": "一則週熱門 Reddit 貼文提問，為何 Claude Code 常先估計任務需要數天工時，實際執行卻僅需約 20 分鐘完成，詢問是否有其他使用者也遇到相同現象。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

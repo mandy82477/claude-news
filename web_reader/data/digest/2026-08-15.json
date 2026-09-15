@@ -12,7 +12,13 @@
       "time": "08/14 16:15",
       "sentiment": "",
       "body": "Anthropic 官方部落格談如何讓每個 token 發揮最大價值，具體建議包含任務之間 `/clear`；HN 268 分，是今日互動量最高的項目。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic Risk August 2026 [pdf]",
@@ -23,6 +29,16 @@
       "body": "官方風險報告原文（部分遮蔽）。HN 討論引述其中一句自評：內部 AI R&D 「明顯比沒有 AI 協助時快，但尚未達兩倍（且我們不確定、量測困難）」。HN 55 分。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -32,7 +48,13 @@
       "time": "08/14 15:22",
       "sentiment": "",
       "body": "以 Claude Code hooks 削減 grep 產生的 token，宣稱降幅 42%。HN 39 分、跨 2 來源；討論串中有評論質疑其 README 的 benchmark 段落本身疑似 AI 生成、難以判斷宣稱是否成立。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -43,7 +65,13 @@
       "time": "08/14 22:20",
       "sentiment": "",
       "body": "`--worktree` 旗標與 `claude agents` 檢視新增 GitLab merge request URL 支援（MR 顯示為 `!N`）；另新增可選用的 `forward_user_identity` apps gateway 設定。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Service disruption on Claude services",
@@ -52,7 +80,13 @@
       "time": "08/14 21:58",
       "sentiment": "",
       "body": "影響 Claude API、Claude Code 與 Claude Cowork，影響區間 20:14–20:38 UTC，已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors for Claude Fable 5",
@@ -61,7 +95,13 @@
       "time": "08/15 00:27",
       "sentiment": "",
       "body": "Fable 5 錯誤率升高，影響區間 08-14 20:00 至 08-15 00:11 UTC，已解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -85,6 +125,12 @@
       "body": "報導稱 Anthropic 第二季營收超過 115 億美元。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -96,6 +142,16 @@
       "body": "報導最新 AI 風險報告揭露尚未發布的 Model 2 與新的對齊疑慮。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -107,6 +163,16 @@
       "body": "Axios 報導 Anthropic 認為 AI 風險上升，目前無釋出更強 Model 2 的計畫。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -118,6 +184,12 @@
       "body": "Anthropic 宣布浮水印偵測 API，讓第三方能判斷文字是否出自 Claude。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -129,6 +201,12 @@
       "body": "資安媒體整理浮水印機制與適用範圍。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -138,7 +216,13 @@
       "time": "08/14 19:30",
       "sentiment": "",
       "body": "報導浮水印將同時套用於文字與圖片輸出。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Samsung says Claude Code can cut chip design work from weeks to days, but it still makes serious mistakes",
@@ -149,6 +233,12 @@
       "body": "Samsung 表示 Claude Code 能把晶片設計工作從數週壓縮到數天，但同時指出它仍會犯嚴重錯誤。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -160,6 +250,12 @@
       "body": "同一案例的另一家報導，數字為驗證階段從一個月縮短至兩天。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -171,6 +267,12 @@
       "body": "提醒使用者 Auto 模式已成為預設，建議確認自身權限設定。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -180,7 +282,13 @@
       "time": "08/14 19:13",
       "sentiment": "",
       "body": "評論文章以 2 兆美元估值為切入點討論 AI 是否進入泡沫區間。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -191,7 +299,17 @@
       "time": "08/15 09:26",
       "sentiment": "🤔",
       "body": "功能請求：讓彼此隔離的 Claude session 能直接串接專案流程、依相依性排序高階步驟；75 則留言、21 個👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] Missing HCS services: vfpext - Cowork not working on Windows 11 Pro",
@@ -200,7 +318,13 @@
       "time": "08/14 15:55",
       "sentiment": "😤",
       "body": "Windows 11 Pro 上 Cowork 因缺少 HCS 服務（vfpext）無法運作；85 則留言，是今日 GitHub Issues 互動量最高者。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Remote Control: automatic reconnection doesn't work -- connection drops silently with no recovery",
@@ -209,7 +333,13 @@
       "time": "08/15 07:04",
       "sentiment": "😤",
       "body": "遠端控制連線中斷後不會自動重連，且斷線無提示；63 則留言、103 個👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Feature Request] Real-time steering: priority message channel for redirecting Claude mid-execution",
@@ -218,7 +348,13 @@
       "time": "08/14 18:46",
       "sentiment": "🤔",
       "body": "請求提供優先訊息通道，讓使用者能在執行途中即時導正 Claude；34 則留言、60 個👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop 1.1.3189 severe UI lag and mouse stutter on Windows",
@@ -227,7 +363,13 @@
       "time": "08/15 08:07",
       "sentiment": "😤",
       "body": "Windows 版桌面應用更新後出現嚴重 UI 延遲與滑鼠卡頓，回報為效能退步；46 則留言、43 個👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Some Claude users are mad that Anthropic's new watermarks will catch them using it at their jobs, classes",
@@ -236,7 +378,13 @@
       "time": "08/13 15:16",
       "sentiment": "😤",
       "body": "週熱門貼文：部分使用者不滿浮水印會讓他們在職場與課堂上的使用被辨識出來。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Opus 5 is actually almost rage-inducing to use.",
@@ -245,7 +393,17 @@
       "time": "08/13 11:56",
       "sentiment": "😤",
       "body": "週熱門貼文：使用者稱已依官方建議調整並試過各種全域 CLAUDE.md 設定，仍無法讓 Opus 5 的行為符合期待。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why aren't businesses using Fable 5?",
@@ -254,7 +412,13 @@
       "time": "08/13 18:29",
       "sentiment": "🤔",
       "body": "週熱門貼文：討論企業端採用 Fable 5 的阻力何在。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Your AI Subagents Are Lying to You: 4 Silent Failure Modes",

@@ -14,6 +14,12 @@
       "body": "作者比較 Claude Code 與 OpenCode 對 Anthropic 端點的實際請求與回傳的 usage block，量測出 Claude Code 在快取策略與 harness token 開銷上明顯較高；兩個獨立來源皆有報導。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -23,7 +29,17 @@
       "time": "07/12 18:08",
       "sentiment": "",
       "body": "Fable 5 的存取限制再度延長至 7/19，Simon Willison 的部落格與媒體報導均提及此事，並指出延後原因與 GPT-5.6 Sol 被認為屬於同級模型有關。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's newest enterprise partner is training 20,000 people on Claude",
@@ -32,7 +48,13 @@
       "time": "07/12 17:04",
       "sentiment": "",
       "body": "報導指出 Anthropic 最新企業合作夥伴（UST）將訓練 2 萬名員工使用 Claude，兩個獨立來源報導此案例，被視為企業導入 AI 深度的訊號。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Confessor – replay what private info Claude Code accessed on your PC",
@@ -53,7 +75,17 @@
       "time": "07/12 18:08",
       "sentiment": "",
       "body": "媒體報導 Anthropic 將 Fable 5 存取權限再度延長至 7/19。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's newest enterprise partner is training 20,000 people on Claude — here's the shift it signals",
@@ -62,7 +94,13 @@
       "time": "07/12 17:04",
       "sentiment": "",
       "body": "報導指出 Anthropic 最新企業合作夥伴（UST）將訓練 2 萬名員工使用 Claude，被視為企業導入 AI 深度的訊號。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code now has a built-in browser that lets the AI read, click, and type on external websites",
@@ -104,6 +142,12 @@
       "body": "使用者回報 Max 訂閱方案下幾乎立即就撞到用量上限，該 issue 累積大量留言與讚同反應。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -122,7 +166,13 @@
       "time": "07/12 12:13",
       "sentiment": "😐",
       "body": "使用者要求 Claude 手機版支援多帳號切換且不需共用電子郵件，回應熱烈。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Code Desktop fails to Relaunch on Windows due to orphaned process file lock",
@@ -140,7 +190,13 @@
       "time": "07/12 10:40",
       "sentiment": "😤",
       "body": "使用者回報圖片處理失敗的 API 錯誤反覆出現，一次就耗掉五小時額度約 70%。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Conversation compaction intermittently fails or deadlocks chats",
@@ -149,7 +205,13 @@
       "time": "07/12 14:32",
       "sentiment": "😤",
       "body": "claude.ai 網頁／行動版對話壓縮功能自 1/15 後偶發失敗或卡死，回報者稱為回歸性問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Feature Request] Support for MCP Sampling to leverage Claude Max subscriptions and reduce API costs",
@@ -158,7 +220,13 @@
       "time": "07/12 16:25",
       "sentiment": "😐",
       "body": "社群提議讓 Claude Code 作為 MCP client 時支援 sampling，以便用 Max 訂閱額度取代額外 API 費用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Inter-session communication for multi-Claude workflows",
@@ -178,6 +246,12 @@
       "body": "v2.1.77 之後所有版本的 `--dangerously-skip-permissions` 功能被回報為失效。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -189,6 +263,12 @@
       "body": "Anthropic 官方公告，將原訂於 5–7 月的每週用量上限提高 50% 促銷再次延長至 7/19。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -216,7 +296,13 @@
       "time": "07/12 12:13",
       "sentiment": "🤔",
       "body": "Anthropic 研究團隊用名為 J-lens 的工具，在 Claude Opus 4.6 內部發現一個稱為「J-space」的隱藏空間，可能揭露模型接下來要輸出的概念。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-7",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: Confessor – replay what private info Claude Code accessed on your PC",
@@ -234,7 +320,13 @@
       "time": "07/02 19:56",
       "sentiment": "😐",
       "body": "作者分享僅在需要頂尖判斷力的任務上使用 Fable 5、其餘交給便宜 subagent 處理的實務做法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic hid tracking signals in Unicode apostrophes. That's not telemetry, that's steganography.",
@@ -261,7 +353,13 @@
       "time": "06/16 11:00",
       "sentiment": "😐",
       "body": "作者記錄自己第一次改用 AWS Bedrock 執行 Claude Code 的計費經驗與教訓。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I Pointed a Skill Linter at a 52k-Star Repo. Here Is What 84/100 Looks Like.",
@@ -270,7 +368,13 @@
       "time": "06/13 12:54",
       "sentiment": "😐",
       "body": "作者用自製 skill linter 檢測某高星數 repo 的 24 個 skills，找出多數低分項目共通的兩個可修正模式。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The Paradox of Power: Why Anthropic Released and Then Restricted Claude Fable 5",
@@ -306,7 +410,13 @@
       "time": "06/19 08:06",
       "sentiment": "😐",
       "body": "作者用 Claude Code skill 自動搜尋 Reddit／LinkedIn 上的潛在客戶，並記錄早期版本誤抓到同業競爭者的教訓。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude in 2026: When Frontier AI Stopped Being Just Software",
@@ -333,7 +443,13 @@
       "time": "07/04 07:54",
       "sentiment": "😐",
       "body": "作者釋出 Go 工具 session-indexer，將 Claude Code session 逐字稿索引進本地 SQLite，供跨 session 語意搜尋。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Sonnet 5: Complete Guide to Benchmarks, Pricing, and Features (2026)",
@@ -405,7 +521,13 @@
       "time": "07/12 21:20",
       "sentiment": "😐",
       "body": "作者指出因 GPT-5.6 Sol 明顯屬於 Fable／Mythos 級模型，Anthropic 再次延後 Fable 5 的限制到期日。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "sqlite-utils 4.1.1",
@@ -423,7 +545,13 @@
       "time": "07/12 14:22",
       "sentiment": "🤔",
       "body": "社群成員將 Anthropic 的 J-space 分析方法套用到開源 Qwen3-8B 模型上做對照實驗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-7",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Toolnexus: a vendor-neutral tool-calling layer for LLMs, byte-identical across 5 languages (with real human-in-the-loop suspend/resume)",
@@ -445,6 +573,12 @@
       "body": "Anthropic 官方公告，原訂 5–7 月將 Claude Code 每週用量上限提高 50% 的促銷再次延長，效期至 2026 年 7 月 19 日；適用 Pro／Max／Team 方案及舊制（席位制）Enterprise 方案，Free 方案與用量制 Enterprise 席位不適用；5 小時額度不受影響。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],

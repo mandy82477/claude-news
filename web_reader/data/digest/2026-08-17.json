@@ -12,7 +12,13 @@
       "time": "08/17 00:51",
       "sentiment": "",
       "body": "報導稱中國 AI 公司智譜（Zhipu）宣稱其新模型在抓 bug 能力上優於 Anthropic 與 OpenAI 的模型。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -25,6 +31,12 @@
       "body": "Anthropic Status 頁面記錄本次服務中斷：影響 claude.ai、platform.claude.com、Claude API、Claude Code、Claude Cowork，已於 8/16 22:34 UTC 確認修復。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     }
   ],
@@ -38,6 +50,12 @@
       "body": "NPR 報導 Anthropic 為 Claude 生成內容加上不可見浮水印。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -49,6 +67,12 @@
       "body": "Yahoo Tech 報導讀者擔憂浮水印上線後，自己使用 AI 生成的內容將被輕易識破。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -60,6 +84,12 @@
       "body": "BleepingComputer 證實 Claude 發生大規模中斷，影響多項服務（詳見今日聚焦）。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -69,7 +99,13 @@
       "time": "08/17 05:05",
       "sentiment": "",
       "body": "SOFX 報導稱 Claude agent 曾互相「破壞」彼此任務且未告知使用者；目前僅此單一來源報導，尚待其他媒體或社群佐證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How AI Models From OpenAI and Anthropic Went Rogue - WSJ",
@@ -78,7 +114,13 @@
       "time": "08/16 16:03",
       "sentiment": "",
       "body": "WSJ 探討 OpenAI 與 Anthropic 的 AI 模型出現失控行為的案例。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's $7 billion Decart deal puts a spotlight on its little-known 23-year-old co-founder and chief scientist - calcalistech.com",
@@ -96,7 +138,13 @@
       "time": "08/16 14:24",
       "sentiment": "",
       "body": "TestingCatalog 報導 Anthropic 正在為 Claude Desktop 開發類似 Slack 的功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude turns into Super App, adding web browser for Cowork - TestingCatalog AI News",
@@ -105,7 +153,13 @@
       "time": "08/16 14:22",
       "sentiment": "",
       "body": "同一媒體另報導 Claude 正朝「超級應用」方向發展，為 Cowork 新增內建網頁瀏覽器。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -118,6 +172,12 @@
       "body": "專欄作家 John Gruber 批評 Anthropic 為 Claude 輸出加浮水印的做法是「對寫作本質的扭曲」（詳見今日聚焦）。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -127,7 +187,13 @@
       "time": "08/16 15:05",
       "sentiment": "🤔",
       "body": "Simon Willison 引述 Dario Amodei 在 X 上的發言：他同意大眾對 AI 觀感負面，但認為原因未必如外界所想。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Something is seriously wrong with Anthropic right now",
@@ -163,7 +229,13 @@
       "time": "08/14 11:19",
       "sentiment": "😤",
       "body": "作者記錄所有 26 個 MCP 工具皆以相同方式失敗，並透過測試排除 token 問題的過程。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I stopped reviewing my own code. Here's what had to be true first.",
@@ -183,7 +255,13 @@
       "time": "08/17 03:19",
       "sentiment": "",
       "body": "GitHub Issue 累積 212 則留言，要求 Anthropic 為印度市場推出以盧比計價的 Claude Pro / Claude Code 訂閱方案，比照 OpenAI、Google 已有的作法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

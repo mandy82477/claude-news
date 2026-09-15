@@ -25,6 +25,12 @@
       "body": "TechCrunch 報導 Anthropic 在印度啟動盧比計價，Pro 方案訂為每月 Rs 2,000，NDTV、Times of India、bestmediainfo 等多家印度媒體同步跟進報導。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -36,6 +42,12 @@
       "body": "Forbes 與 The New Stack 均報導 Anthropic 再次延長 Claude Fable 5 的存取權限，且未說明背後原因；Reddit 社群同時討論是否會被排除出訂閱方案之外。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -45,7 +57,17 @@
       "time": "07/13 18:06",
       "sentiment": "",
       "body": "Reuters 獨家報導加拿大金融監管機關在對銀行業的網路風險警告信中引用了 Claude Mythos，顯示監管機構已開始將特定 Claude 模型的能力納入風險評估依據。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How Claude's values vary by model and language",
@@ -65,7 +87,13 @@
       "time": "07/14 06:36",
       "sentiment": "",
       "body": "Claude Code 發布 v2.1.209，修復 `claude agents` 背景 session 中 /model 等對話框被過度廣泛的防護機制阻擋的問題（回退先前過寬的防護邏輯）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -76,7 +104,13 @@
       "time": "07/14 11:00",
       "sentiment": "",
       "body": "The National Interest 報導美國國防部長 Pete Hegseth 曾稱 Anthropic 為「國安風險」，如今 CISA（網路安全暨基礎設施安全局）卻已在使用其產品。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Bun switches from Zig to Rust with Claude's help",
@@ -85,7 +119,13 @@
       "time": "07/14 07:36",
       "sentiment": "",
       "body": "Techzine Global 報導 JavaScript 執行環境 Bun 借助 Claude 之力，將部分程式碼從 Zig 改寫為 Rust。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic 'clear leader in AI', says Musk. Here's what the SpaceX chief really means",
@@ -94,7 +134,13 @@
       "time": "07/14 07:10",
       "sentiment": "",
       "body": "Proactive financial news 分析 Elon Musk 稱 Anthropic 為「AI 領域明確領先者」發言背後的真正意涵。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's extravagant tokenizer complicates AI pricing",
@@ -103,7 +149,13 @@
       "time": "07/14 06:28",
       "sentiment": "",
       "body": "The Register 分析 Anthropic 的 tokenizer 設計較為複雜，使得 API 定價與成本估算更難以直接比較。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "OpenAI CEO Sam Altman Throws Shade At Anthropic's New Ad Amid Tussle With Elon Musk, Apple",
@@ -123,6 +175,12 @@
       "body": "NDTV 詳細報導印度盧比定價方案內容，Pro 方案訂為每月 Rs 2,000。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -150,7 +208,13 @@
       "time": "07/14 00:58",
       "sentiment": "",
       "body": "MarkTechPost 詳細比較 Sonnet 5、Sonnet 4.6 與 Opus 4.8 的 agentic coding 基準測試表現、API 定價與成本效益取捨。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Zig creator calls Bun's Claude Rust rewrite 'unreviewed slop'",
@@ -159,7 +223,13 @@
       "time": "07/13 23:21",
       "sentiment": "",
       "body": "The Register 報導 Zig 語言創始人針對 Bun 用 Claude 完成的 Rust 改寫發表批評，稱其為「未經審查的垃圾程式碼」，與前述 Techzine 報導形成正反兩面對照。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Protesters March on OpenAI, Anthropic, and Google DeepMind Demanding AI Development Pause",
@@ -168,7 +238,13 @@
       "time": "07/13 22:11",
       "sentiment": "",
       "body": "Decrypt 報導抗議者在 OpenAI、Anthropic 與 Google DeepMind 總部前遊行，要求暫停 AI 開發。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude Science app is coming for Kendall Square",
@@ -177,7 +253,13 @@
       "time": "07/13 18:21",
       "sentiment": "",
       "body": "The Boston Globe 報導 Anthropic 的 Claude Science app 即將進駐波士頓 Kendall Square 生技聚落。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "EXCLUSIVE Canada regulator cited Anthropic's Claude Mythos in warning to banks on cyber risks, email shows",
@@ -186,7 +268,17 @@
       "time": "07/13 18:06",
       "sentiment": "",
       "body": "Reuters 獨家報導加拿大金融監管機關引用 Claude Mythos 警告銀行業網路風險。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "What Anthropic's latest AI discovery does—and doesn't—show",
@@ -195,7 +287,13 @@
       "time": "07/13 18:00",
       "sentiment": "",
       "body": "MIT Technology Review 分析 Anthropic 最新 AI 發現實際證明了什麼、又還未能證明什麼，提供較為審慎的解讀觀點。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-7",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How Claude's values vary by model and language",
@@ -215,6 +313,12 @@
       "body": "The New Stack 報導 Anthropic 再度延長 Fable 5 存取，且拒絕說明開發者在 Cursor 中發現了什麼，暗示延長背後另有隱情。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -226,6 +330,12 @@
       "body": "TechCrunch 完整報導 Anthropic 在印度啟動盧比計價，為美國以外最大市場的重要在地化動作。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -246,6 +356,12 @@
       "body": "Forbes 另一角度報導 Fable 5 存取再度延長。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -279,6 +395,12 @@
       "body": "使用者回報 Claude Code OAuth 登入逾時失敗，`auth.anthropic.com` 無法透過 DNS 解析，導致完全無法驗證，累積 150 則留言、46 個讚同反應，為本日互動量最高的條目。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -290,6 +412,12 @@
       "body": "使用者反映 session 過程中會間歇性中斷並顯示模型 tool call 無法被解析的錯誤，累積 75 則留言、117 個讚同反應。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -301,6 +429,12 @@
       "body": "使用者回報收到「伺服器暫時限制請求」的錯誤訊息，強調並非用量上限所致，累積 68 則留言、26 個讚同反應。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -312,6 +446,12 @@
       "body": "另一則獨立回報同樣的 tool call 無法解析錯誤，在 Opus 4.7 環境下多次發生，累積 63 則留言、113 個讚同反應，與前述 issue 63875 為同類問題的不同回報。",
       "focusTags": [
         "[社群趨勢]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -321,7 +461,13 @@
       "time": "07/13 22:03",
       "sentiment": "😊",
       "body": "開發者釋出小工具，讓 Claude Code 在長對話中準備結束話題時播放 Mr. Meeseeks 的語音台詞，社群回響提及類似的語音提示外掛已有多種聲音包可選。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: I implemented a neural network in SQL",
@@ -348,7 +494,13 @@
       "time": "07/13 23:26",
       "sentiment": "😐",
       "body": "開發者推出 Sx 2.0，讓非技術團隊也能透過 Dropbox、Google Drive 等雲端硬碟分享 Claude／Codex 的 skill，不需依賴 git。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "$65K to work at Anthropic? Debate ensues amid IPO wave",
@@ -357,7 +509,13 @@
       "time": "07/13 21:56",
       "sentiment": "😤",
       "body": "報導指出 Anthropic 開出年薪 6.5 萬至 8.5 萬美元的職缺，低於舊金山中位數收入六成，引發公眾對公司財富分配不均的爭議。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Finterm.ai Bloomberg terminal for Claude Code",
@@ -375,7 +533,13 @@
       "time": "07/13 09:20",
       "sentiment": "🤔",
       "body": "作者比對 Anthropic 模型型錄、定價文件與發布節奏，認為 Opus 5 的存在具有一定可信度，但坊間流傳的確切日期與跑分數字目前都缺乏佐證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-4-8",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Show HN: ClaudeThings – your AI engineering and marketing team in one command",
@@ -402,7 +566,13 @@
       "time": "07/14 04:35",
       "sentiment": "😊",
       "body": "開發者釋出 aloud，用 kokoro 語音模型讓 Claude Code 與 Codex 具備語音輸出能力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Fleet Deck – see every Claude Code session on your machine in one board",
@@ -438,7 +608,13 @@
       "time": "07/14 11:10",
       "sentiment": "🤔",
       "body": "使用者以相同的 iOS 卡路里追蹤 App 需求，實測比較 GPT-5.6 Sol 與 Claude Fable 5 的表現。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I made Claude Code and Codex build the same thing. Codex was 63% cheaper but I'm still staying with Claude.",
@@ -456,7 +632,13 @@
       "time": "07/10 11:43",
       "sentiment": "🤔",
       "body": "使用者推論，隨著 OpenAI Sol 上市，Anthropic 現階段將 Fable 5 移出訂閱方案的可能性不高，如同當初 Opus 4.5 上市後未被移出訂閱一樣。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "5 hour and weekly limits have been reset. Thanks Anthropic!",
@@ -465,7 +647,13 @@
       "time": "07/09 19:00",
       "sentiment": "😊",
       "body": "使用者回報 5 小時與每週用量額度已被重置，對此表達感謝。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic just benchmarked \"Fable 5 orchestrates, cheap models execute\": 96% of the performance at 46% of the cost. You can run this pattern in Claude Code today",
@@ -474,7 +662,13 @@
       "time": "07/08 19:17",
       "sentiment": "😊",
       "body": "使用者整理 Anthropic 官方公布的第一手數據：「Fable 5 負責協調、便宜模型負責執行」的多模型模式，能以 46% 的成本達到 96% 的效能，且此模式已可在 Claude Code 中直接使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -487,6 +681,12 @@
       "body": "TechCrunch 報導 Anthropic 在印度啟動盧比計價，為美國以外最大市場的在地化定價動作。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -498,6 +698,12 @@
       "body": "NDTV 詳細報導印度盧比定價方案內容，Pro 方案訂為每月 Rs 2,000。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -507,7 +713,13 @@
       "time": "07/14 06:28",
       "sentiment": "",
       "body": "The Register 分析 Anthropic 的 tokenizer 設計較為複雜，使得 API 定價與跨供應商成本比較更難以估算。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Here's Why Anthropic Extended Access To Claude Fable 5 Extended—Again",
@@ -518,6 +730,12 @@
       "body": "Forbes 報導 Fable 5 存取權限再度延長，未說明明確截止日與後續方案，加深訂閱使用者對未來配額的不確定感。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -529,6 +747,12 @@
       "body": "使用者詢問 Fable-5 未來是否會退出訂閱方案、改為僅限點數付費，反映月費 $100 訂閱用戶對加購點數的不滿。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     }
   ],

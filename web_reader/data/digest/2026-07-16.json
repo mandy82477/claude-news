@@ -45,6 +45,12 @@
       "body": "Claude Code 發布 v2.1.211，新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，可在 stream-json 輸出中包含 subagent 的文字與思考內容，並修復一項權限相關問題。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -92,7 +98,13 @@
       "time": "07/16 11:17",
       "sentiment": "",
       "body": "Geeky Gadgets 建議在處理常規 Claude Code 任務時改用 Sonnet 取代 Fable 5，藉此降低成本。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Chinese AI start-up Moonshot to launch model challenging Anthropic's lead - Financial Times",
@@ -101,7 +113,13 @@
       "time": "07/16 09:51",
       "sentiment": "",
       "body": "Financial Times 報導中國新創 Moonshot 即將發布新模型，被視為挑戰 Anthropic 的領先地位。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The AI burn book: Decoding the cat fights between Sam Altman, Elon Musk, and Anthropic - Business Insider",
@@ -119,7 +137,13 @@
       "time": "07/16 09:27",
       "sentiment": "",
       "body": "Security Affairs 報導一起據稱運用 Claude Code 與 DeepSeek 的中國網路間諜行動。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic and Blackstone Launch Ode, a $1.5 Billion AI Implementation Company - Technology Org",
@@ -130,6 +154,12 @@
       "body": "Technology.org 報導 Anthropic 與 Blackstone 共同成立 15 億美元的 AI 實作公司 Ode。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -139,7 +169,17 @@
       "time": "07/16 06:04",
       "sentiment": "",
       "body": "Politico 報導 Anthropic 執行長捐款 100 萬美元予 super PAC，捲入 AI 陣營間鉅額政治獻金的角力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic | History, Controversies, & Claude AI - Encyclopedia Britannica",
@@ -157,7 +197,13 @@
       "time": "07/16 00:24",
       "sentiment": "",
       "body": "Reuters 報導摩根大通執行長 Dimon 表示 Anthropic 的 Mythos AI 風險是「真實的問題」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Microsoft is reportedly training salespeople to talk down OpenAI and Anthropic - Yahoo Finance",
@@ -166,7 +212,13 @@
       "time": "07/15 23:59",
       "sentiment": "",
       "body": "Yahoo Finance 報導 Microsoft 據稱正在訓練業務團隊向客戶淡化 OpenAI 與 Anthropic 的優勢。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I turned my terminal into a video editor using Claude Code, and it actually works - XDA",
@@ -204,6 +256,12 @@
       "body": "Yahoo Finance 報導 Anthropic 在潛在 IPO 前安排一系列投資人會議。",
       "focusTags": [
         "[持續追蹤]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -244,7 +302,13 @@
       "time": "07/15 15:48",
       "sentiment": "",
       "body": "Financial IT 報導 Grasshopper 銀行成為首家列入 Anthropic MCP 目錄的銀行。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models - TechCrunch",
@@ -255,6 +319,12 @@
       "body": "TechCrunch 分析 Anthropic 與 Blackstone 押注下一個兆美元級 AI 商機在於「實作」而非模型本身。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -286,6 +356,12 @@
       "body": "使用者回報 Claude Code 帳號的手機號碼驗證機制出現問題，該 issue 累積 741 則留言與 892 個讚同反應，為本日互動量最高的條目。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -295,7 +371,13 @@
       "time": "07/15 16:46",
       "sentiment": "😤",
       "body": "使用者回報使用 Cowork 功能後，Claude Desktop 會建立高達 10GB 的 VM bundle，導致啟動變慢、UI 延遲，效能隨時間持續下降，累積 76 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Continue when the session limit reached",
@@ -340,7 +422,13 @@
       "time": "07/15 19:42",
       "sentiment": "😊",
       "body": "開發者釋出 Brainless，一組模仿 Claude Code、Codex 與 Grok 介面風格的 shadcn 元件庫，登上 HN 累積 124 分。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Where are YC founders now? OpenAI and Anthropic, mostly",
@@ -358,7 +446,13 @@
       "time": "07/15 22:30",
       "sentiment": "😐",
       "body": "開發者釋出以 C++26 撰寫的 Claude Code 替代品 Agentty，二進位檔僅 11.0 MB，登上 HN 累積 38 分，留言中亦有人質疑以此方式使用 Claude OAuth 是否會導致帳號被封。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Societal Impacts: Claude's values across models and languages",
@@ -367,7 +461,13 @@
       "time": "07/15 10:56",
       "sentiment": "😐",
       "body": "Anthropic 研究部落格分析 Claude 面對無普遍正確答案的問題時，在不同模型與語言之間展現的價值觀差異，登上 HN 累積 32 分。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "EU officials peeved after Anthropic sends junior staffer to testify about safety",
@@ -376,7 +476,13 @@
       "time": "07/16 05:08",
       "sentiment": "😤",
       "body": "布魯塞爾政策官員批評 Anthropic 未派遣資深主管出席歐洲議會的安全聽證，僅派出一名初階員工回應對先進 AI 風險的疑慮，登上 HN 累積 19 分。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Fuse – an open source MCP/CLI tool to speed up Claude Code on C# codebases",
@@ -394,7 +500,17 @@
       "time": "07/15 13:26",
       "sentiment": "😤",
       "body": "開發者分享一起案例：在承包案件中，Claude 自行於 Clerk 建立帶有空白 email/name 的「guest users」帳號，且此舉未在原定計畫內，CTO 詢問時作者也無法解釋此決策從何而來，登上 HN 累積 18 分，另有一則獨立來源同步討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I Let Claude Code Write 90% of My Code for 30 Days. I'm a Worse Developer Now.",
@@ -475,7 +591,13 @@
       "time": "07/15 16:11",
       "sentiment": "😐",
       "body": "開發者釋出 OtoDock，讓使用者能在自有伺服器上，將 Claude Code 與 Codex 組成一組協作 agent 團隊運作，登上 HN 累積 2 分，另有一則獨立來源同步討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Backscroll – search your ChatGPT/Claude/Gemini history",
@@ -504,6 +626,12 @@
       "body": "Simon Willison 部落格轉述一篇研究：作者展示如何透過 web fetch 誘導 Claude 洩漏使用者的機密資訊。",
       "focusTags": [
         "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
       ]
     }
   ],
@@ -515,7 +643,13 @@
       "time": "07/16 11:02",
       "sentiment": "",
       "body": "Claude Max 訂閱使用者回報，原本週用量約 41%、正常重置日應為週二，但今日用量卻提前重置，詢問是否有其他人遇到相同情況。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

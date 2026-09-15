@@ -12,7 +12,13 @@
       "time": "08/21 03:42",
       "sentiment": "",
       "body": "Business Chief 報導 Anthropic 為因應歐盟 AI Act 的新規定，替 Claude 輸出內容加上浮水印；CNET 同日刊出評論文章，主張 AI 內容標示是大型科技公司的基本責任。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Slack Code puts Claude and ChatGPT in the same channel",
@@ -21,7 +27,13 @@
       "time": "08/20 15:46",
       "sentiment": "",
       "body": "The Next Web 報導 Slack 新推出的 Slack Code 功能，讓 Claude 與 ChatGPT 可在同一個群組頻道內協作，被視為聊天工具切入 AI coding 市場的動作。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "三款高星 GitHub 工具同批亮相",
@@ -39,7 +51,13 @@
       "time": "08/20 22:36",
       "sentiment": "",
       "body": "TechCrunch 引用新數據指出 OpenAI 在企業用戶市場的成長正在追近 Anthropic；The Register 同日報導 OpenAI 祭出零資料保留（zero data retention）承諾，被視為針對 Anthropic 企業客戶的競爭動作。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic says Claude designed protein binders for 14 of 15 test targets",
@@ -61,6 +79,12 @@
       "body": "新增 `keybindingFlavor` 設定，設為 `\"readline\"` 時可讓提示列中的 Ctrl+W 依 Bash 慣例刪除到前一個空白字元；預設值 `\"classic\"` 行為不變。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -72,6 +96,12 @@
       "body": "Python SDK 正式發布 1.0.0，內含 breaking changes：client 升級至 httpx2。升級前建議先查閱完整 changelog。",
       "focusTags": [
         "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -81,7 +111,13 @@
       "time": "08/21 10:36",
       "sentiment": "",
       "body": "官方文件更新 Claude Code Desktop 頁面，說明桌面版具備並行 session（Git 隔離）、拖放式面板配置、內建終端機與檔案編輯器、side chat、電腦操作、手機端 Dispatch session、視覺化 diff 審查、app 預覽、PR 監控、connectors 與企業設定等功能。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -94,6 +130,12 @@
       "body": "路透社引用消息人士報導，Anthropic 計畫調整企業客戶的資料保留政策，細節尚未公開。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -105,6 +147,12 @@
       "body": "彭博社同日跟進報導同一則資料保留政策異動消息，聚焦於「進階 AI」的適用範圍。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
       ]
     },
     {
@@ -116,6 +164,12 @@
       "body": "彭博社報導 Anthropic 據傳預期 IPO 規模將比肩甚至超越 SpaceX 先前創下的紀錄發行規模，細節與時程未定。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -127,6 +181,12 @@
       "body": "雅虎財經報導 Anthropic 有可能最快於本月正式遞交 IPO 文件。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -138,6 +198,12 @@
       "body": "crn.com 報導與 Anthropic 有關聯的 AI 服務公司 Ode 收購顧問公司 Casper Studios。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -149,6 +215,12 @@
       "body": "Seeking Alpha 同日以投資圈角度報導同一起收購案。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -160,6 +232,12 @@
       "body": "The Information 同日跟進報導 Ode 收購 Casper Studios 一事。",
       "focusTags": [
         "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
       ]
     },
     {
@@ -180,7 +258,13 @@
       "time": "08/21 07:46",
       "sentiment": "",
       "body": "Techzine Global 報導 Anthropic 讓企業客戶可以將 AI 資料存放在自有雲端環境中。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "7 ways I make Claude Code use fewer tokens without hurting the results",
@@ -209,7 +293,13 @@
       "time": "😤 · 08/21 09:26",
       "sentiment": "",
       "body": "r/ClaudeCode 使用者回報本次配額重置後，token 分配出現明顯變化，但官方尚無對應公告可查證，內容細節待觀察。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "We tried spec-driven development for months. We couldn't prove it improved the code.",
@@ -236,7 +326,13 @@
       "time": "😤 · 08/20 21:25",
       "sentiment": "",
       "body": "GitHub Issue 回報 Cowork 虛擬機在 Windows ARM64（Snapdragon 平台，如 Samsung Galaxy Book4 Edge）機型上無法啟動，累積 68 則留言／反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "\\[BUG\\] API Error (Connection error.)",
@@ -245,7 +341,13 @@
       "time": "😤 · 08/20 21:48",
       "sentiment": "",
       "body": "另一則 GitHub Issue 彙集了多起 API 連線錯誤回報（Windows 11、Anthropic API 平台），累積 48 則留言／反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [],

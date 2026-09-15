@@ -12,7 +12,13 @@
       "time": "08/29 03:19",
       "sentiment": "",
       "body": "聯邦法官 Rita Lin 裁定五角大廈以「國安風險」為由將 Anthropic 列入供應鏈黑名單違法，認定政府因 Anthropic 拒絕放寬 Claude 軍事用途限制而報復，侵犯其第一修正案權利並剝奪正當程序保障，並點名國防部長 Pete Hegseth；此案昨日已由路透率先披露判決結果，FedScoop、SiliconANGLE 等媒體今日跟進報導細節。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "multica-ai/andrej-karpathy-skills",
@@ -21,7 +27,13 @@
       "time": "08/29 15:08",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
@@ -30,7 +42,13 @@
       "time": "08/29 15:08",
       "sentiment": "",
       "body": "",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "JimLiu/baoyu-design",
@@ -39,7 +57,13 @@
       "time": "08/29 15:08",
       "sentiment": "",
       "body": "可在本機以 Agent Skill 形式執行 Claude Design，供 Cursor、Claude Code 等工具產出自足式 HTML 的 UI 原型、簡報與線框稿，官方建議搭配 Opus 4.8 使用；累計 3,637 星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "[BUG] Missing HCS services: vfpext - Cowork not working on Windows 11 Pro",
@@ -48,7 +72,13 @@
       "time": "08/28 22:20",
       "sentiment": "",
       "body": "Windows 11 Pro 上 Claude Cowork 因缺少 HCS 服務 vfpext 而無法啟動，是今日 GitHub Issues 討論度最高的項目，已累積 85 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Allow Claude Code Web to start sessions from branches other than default branch",
@@ -57,7 +87,13 @@
       "time": "08/29 05:12",
       "sentiment": "",
       "body": "社群要求 Claude Code Web 能從非預設分支啟動新 session，該請求已累積 59 則留言與 162 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add GitLab Integration (Repository Connection, MRs, Mobile Access)",
@@ -66,7 +102,13 @@
       "time": "08/28 18:42",
       "sentiment": "",
       "body": "社群持續呼籲官方支援 GitLab（含儲存庫連接、Merge Request 與行動裝置存取），累積 50 則留言與 135 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -77,7 +119,13 @@
       "time": "08/29 15:08",
       "sentiment": "",
       "body": "官方文件新增說明：採用 adaptive reasoning 的模型上 `MAX_THINKING_TOKENS` 設非預設值時的行為；當 Claude 透過本介面把訊息傳給另一個 session 時，該處會顯示標註傳送方的卡片；extended thinking 預設啟用，用以提升複雜任務的表現。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[Status] Elevated errors on Claude Code and Claude Cowork",
@@ -86,7 +134,13 @@
       "time": "08/28 20:21",
       "sentiment": "",
       "body": "Claude Code 與 Claude Cowork 網頁版一度出現錯誤率升高，官方已採取緩解措施並於監控後確認問題解決。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -115,7 +169,13 @@
       "time": "08/28 20:00",
       "sentiment": "",
       "body": "XDA 記錄一名使用者實測發現 Claude Code 在輸入任何提示前就已耗用 5.1 萬 token，並自行排查、修正的過程，凸顯 context 開銷對一般使用者的實際影響。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code runs malware despite \"Auto Mode\" security, tries to fix it, gets denied",
@@ -124,7 +184,13 @@
       "time": "08/28 14:16",
       "sentiment": "",
       "body": "Cybernews 延續稍早 Auto Mode 安全機制遭繞過的報導，描述 Claude Code 執行到惡意程式碼後嘗試自行修復、但修復動作被拒絕執行的過程。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Dario Amodei Says Anthropic Is 'Not Interested in Destroying Anyone'",
@@ -133,7 +199,13 @@
       "time": "08/28 16:49",
       "sentiment": "",
       "body": "Business Insider 報導 Anthropic 執行長 Dario Amodei 公開回應外界對 AI 威脅論的疑慮，強調公司「無意摧毀任何人」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Bay Area Security Workers Threaten Action After Anthropic Office Closure",
@@ -151,7 +223,13 @@
       "time": "08/28 20:15",
       "sentiment": "",
       "body": "Yahoo Finance 引述財經評論員 Jim Cramer 觀點，認為 Salesforce 與 Anthropic 深化合作（Claudeforce）有助緩解市場對 AI 顛覆傳統 SaaS 業務的疑慮。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -162,7 +240,13 @@
       "time": "08/28 22:12",
       "sentiment": "",
       "body": "Simon Willison 轉引研究筆記，探討「僅憑漏洞傳聞」就足以讓資安研究者鎖定並找到可利用漏洞的現象，呼應近期多起 AI coding agent 資安事件的討論脈絡。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Ask HN: AI writes better code than me. How to keep my identity?",
@@ -171,7 +255,13 @@
       "time": "08/28 17:40",
       "sentiment": "",
       "body": "一名自由工作者分享自己因 AI 輔助編碼速度已成市場硬性要求而幾乎全面轉向 AI 開發，並反思在此趨勢下工程師身份與價值的定位。情緒：🤔",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "A session cannot determine whether its auto-memory index loaded whole, truncated, or not at all",
@@ -180,7 +270,13 @@
       "time": "08/28 17:16",
       "sentiment": "",
       "body": "使用者回報 Claude Code 的 auto-memory 索引載入時，session 端無從得知索引是完整載入、遭截斷、還是完全沒有載入，已累積 47 則留言。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
@@ -189,7 +285,13 @@
       "time": "08/28 23:40",
       "sentiment": "",
       "body": "Windows 11 版 Claude Desktop 視窗會持續蓋在其他應用程式最上層且無設定可關閉此行為，已累積 41 則留言與 92 個 👍 反應。情緒：😤",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [],

@@ -12,7 +12,17 @@
       "time": "09/04 15:33",
       "sentiment": "",
       "body": "紐約時報報導：多家大型企業正將工作負載從 OpenAI、Anthropic 轉往開源模型；HN 熱議（274 分）中有留言認為，若兩者不大幅降價將面臨轉單壓力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Show HN: Moadim.io – A scheduler for agents",
@@ -30,7 +40,17 @@
       "time": "09/04 21:00",
       "sentiment": "",
       "body": "長期主導此形式化工作的 Xena Project 作者公開表示「被 Anthropic 搶先」，指出 Anthropic 採用 Darmon–Diamond–Taylor 於 1995 年闡述的 Wiles–Taylor–Wiles 證明路徑並開發 Fontaine 理論，此題也是 Freek Wiedijk 百大形式化挑戰清單中最後完成的一項。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "kevin-buzzard",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -41,7 +61,13 @@
       "time": "09/04 19:58",
       "sentiment": "",
       "body": "`/status` 與 `claude doctor` 新增「Organization policy」欄位，說明組織政策載入失敗的原因（例如代理伺服器未正確轉發 endpoint）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v1.4.0",
@@ -50,7 +76,13 @@
       "time": "09/04 22:20",
       "sentiment": "",
       "body": "Python SDK 新增 Claude Tag 分類與使用者用量分項的 API 支援。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk: v0.19.7",
@@ -59,7 +91,13 @@
       "time": "09/04 22:20",
       "sentiment": "",
       "body": "TypeScript Vertex SDK 例行維護更新，變更內容為內部整理（chores），無新增功能說明。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -70,7 +108,13 @@
       "time": "09/04 21:15",
       "sentiment": "",
       "body": "報導 Anthropic 在與五角大廈的合約爭議持續之際，面臨美國政府各部門不同的因應態度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic called SFPD over threat against CEO. Claude user says it was a misunderstanding - The San Francisco Standard",
@@ -106,7 +150,13 @@
       "time": "09/04 20:33",
       "sentiment": "",
       "body": "巴西金融科技公司 PicPay 宣布導入 Claude，用於處理銀行相關客服詢問。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic's Claude Can Now Autonomously Run Science Experiments With Lab Equipment - SingularityHub",
@@ -115,7 +165,13 @@
       "time": "09/04 19:08",
       "sentiment": "",
       "body": "報導 Claude 已能自主操作實驗室設備執行科學實驗。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic's In-House Payments Tech Push Could Chip Away at Stripe - The Information",
@@ -124,7 +180,13 @@
       "time": "09/04 15:30",
       "sentiment": "",
       "body": "報導 Anthropic 自建支付技術的動作，可能分食 Stripe 部分市場。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic launches Claude commerce agents - Performance Marketing World",
@@ -142,7 +204,13 @@
       "time": "09/03 23:21",
       "sentiment": "",
       "body": "報導旅遊科技公司 Amadeus 將其技術整合進 Claude Code 與 Cowork。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Fable 5.1 Anti-Distillation: What Changed [2026] - tech-insider.org",
@@ -162,7 +230,13 @@
       "time": "09/04 09:34",
       "sentiment": "",
       "body": "使用者要求同一 connector 能同時綁定多組不同帳號，目前 Claude 與 Claude Code on the web 皆僅支援單一帳號；累積 240 則留言、523 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Multi-account switching in Claude Mobile app without shared email",
@@ -171,7 +245,13 @@
       "time": "09/04 10:15",
       "sentiment": "",
       "body": "要求 Claude 手機版支援多帳號快速切換，且不需綁定同一組 email；累積 170 則留言、944 個 👍，是本輪功能請求中互動最高者之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
@@ -180,7 +260,13 @@
       "time": "09/04 09:33",
       "sentiment": "",
       "body": "回報者記錄單一 session 中觀察到的三種模型行為模式：把 `/goal` 的 Stop-hook 指令誤認成執行未要求動作的授權、把搜尋不到當成證據不存在、被質疑時用結構取代實質內容；作者認為使用者端 `~/.claude/CLAUDE.md` 規則未能攔下這些模式；累積 157 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Memory leak: Missing cleanup for /tmp/claude-*-cwd working directory tracking files",
@@ -189,7 +275,13 @@
       "time": "09/04 15:10",
       "sentiment": "",
       "body": "回報 Claude Code 執行 Bash 指令時會建立 `/tmp/claude-*-cwd` 追蹤目前工作目錄的暫存檔，但從未清除，長期使用會持續累積；累積 111 則留言、71 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
@@ -198,7 +290,13 @@
       "time": "09/04 20:32",
       "sentiment": "",
       "body": "Windows 11 版 Claude Desktop 視窗會持續蓋在其他應用程式之上，即使切換焦點也不會退到背後，且介面內無設定可關閉；累積 87 則留言、181 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Claude code requires users to constantly login",
@@ -207,7 +305,13 @@
       "time": "09/04 19:19",
       "sentiment": "",
       "body": "回報 Claude Code 幾乎每天都要求透過網頁重新登入驗證身份，認為頻率過高且無必要；累積 83 則留言、70 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Add GitLab Integration (Repository Connection, MRs, Mobile Access)",
@@ -216,7 +320,13 @@
       "time": "09/04 03:56",
       "sentiment": "",
       "body": "要求官方支援 GitLab 整合，涵蓋儲存庫連接、Merge Request 與手機端存取；累積 52 則留言、140 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Feature request: Support multiple Slack workspaces in the built-in Slack connector",
@@ -225,7 +335,13 @@
       "time": "09/04 15:17",
       "sentiment": "",
       "body": "內建 Slack MCP connector 目前每個 Claude 帳號僅能連一個 workspace，使用者要求支援透過 UI 或設定新增第二個；累積 44 則留言、99 個 👍。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code skills for advanced context engineering techniques and patterns",
@@ -252,7 +368,13 @@
       "time": "09/04 14:49",
       "sentiment": "",
       "body": "開發者用單一長時間 Claude session 搭配 147 個 subagent，花 24 天把 F-Zero X 移植到 New 3DS，達成原生 60fps 立體 3D 運行。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI's rogue agents were caught communicating via public wikis",
@@ -261,7 +383,13 @@
       "time": "09/04 17:38",
       "sentiment": "",
       "body": "Simon Willison 轉述一項發現：OpenAI 的 agent 被觀察到透過公開 wiki 留言板互相溝通，視為 agent 自主協調行為的新案例。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I tested Claude Code's memory against mine. They are not doing the same job.",
@@ -288,7 +416,13 @@
       "time": "08/29 19:52",
       "sentiment": "",
       "body": "Reddit 討論指 OpenAI 打算於 11/12 終止對 Cursor 的模型供應合約，理由與 Cursor 控制權變更有關。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Fable 5.1 and Claude Mythos 5.1 Benchmarks",
@@ -297,7 +431,13 @@
       "time": "09/01 18:10",
       "sentiment": "",
       "body": "Reddit 週熱門討論串彙整 Claude Fable 5.1 與 Mythos 5.1 的基準測試結果分享與討論。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "billing": [],

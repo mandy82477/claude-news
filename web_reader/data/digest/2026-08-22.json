@@ -12,7 +12,13 @@
       "time": "08/22 05:00",
       "sentiment": "",
       "body": "The Independent、Forbes、Business Insider 三家媒體同日刊出評論，分別討論外界對 Claude AI 浮水印功能的批評聲浪、對企業用戶的實務影響，以及 Anthropic 此舉相較其他業者更進一步的做法。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Quick impressions: A week of using Codex more than Claude",
@@ -21,7 +27,13 @@
       "time": "91 分 · 08/21 19:51",
       "sentiment": "",
       "body": "一篇 Hacker News 高分貼文分享作者實際改用 Codex 一週後的個人觀察（如技能轉移、除錯情境選擇等），累積 91 分；同日 36Kr 也以「Codex 是否開始反擊 Claude Code」為題做產業觀察報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "五款以上高星 GitHub 工具同批亮相",
@@ -50,7 +62,13 @@
       "time": "08/21 19:54",
       "sentiment": "",
       "body": "更新內容包括：`/cost`、狀態列與 `--max-budget-usd` 顯示的成本估算，現會計入資料常駐（data-residency）工作區的 1.1 倍純美國推理附加費；另有一項全螢幕渲染器相關的一次性設定調整（原文於此處被截斷，細節請見完整 release notes）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）（新增 3 頁）",
@@ -79,7 +97,13 @@
       "time": "08/22 09:08",
       "sentiment": "",
       "body": "Ynetnews 刊出人物側寫報導，描述 Cami Clark 在 Anthropic 幕後對公司與執行長 Dario Amodei 的影響力。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -90,7 +114,13 @@
       "time": "🤔 · 08/22 00:29",
       "sentiment": "",
       "body": "GitHub Issue 回報 Claude 在應優先使用 Read／Grep 等內建工具的情境下，仍頻繁改用 Bash 指令（如 sed/grep），累積 45 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "\\[BUG\\] Claude code requires users to constantly login",
@@ -99,7 +129,13 @@
       "time": "😤 · 08/21 15:03",
       "sentiment": "",
       "body": "GitHub Issue 回報 Claude Code 幾乎每天都要求使用者重新透過網頁驗證登入，認為過於頻繁且非必要，累積 79 則留言。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude Code OAuth login fails with a timeout error. `auth.anthropic.com` does not resolve via DNS, making it impossible to authenticate.",
@@ -117,7 +153,13 @@
       "time": "😐 · 69 分 · 08/21 23:09",
       "sentiment": "",
       "body": "作者發布 OzBrain，主張為 agent 與團隊建立跨 session 共享知識庫，取代傳統筆記與任務管理工具，累積 69 分，並見跨來源報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Teaching Claude Code to Paint: A Stateful Image-Editing Skill Built on Gemini's Interactions API and MCP",

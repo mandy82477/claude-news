@@ -12,7 +12,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "標榜可把 ChatGPT 變成 Codex、或把 Claude Web 變成 Claude Code 的工具，GitHub 顯示 3661 顆星，與下列五項工具同批出現在 GitHub 熱門清單。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "tzachbon/smart-ralph",
@@ -21,7 +27,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "結合 Ralph Wiggum loop 與結構化規格流程的 Claude Code plugin，主打規格驅動開發與智慧壓縮（compaction），GitHub 顯示 509 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "gglucass/headroom-desktop",
@@ -30,7 +42,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "macOS 桌面工具，宣稱可將 Claude Code 與 Codex 的 token 成本削減約 50%，GitHub 顯示 506 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "aisa-group/PostTrainBench",
@@ -39,7 +57,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "評測基準，測量 Claude Code、Codex CLI 等 CLI agent 能否在單張 H100 GPU 上於 10 小時內完成基礎模型的後訓練，GitHub 顯示 505 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "ZeroPointRepo/youtube-skills",
@@ -48,7 +72,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "提供 AI agent 使用的 YouTube 字幕擷取技能，可取得逐字稿、搜尋影片、瀏覽頻道，相容 OpenClaw、Hermes-Agent、Claude Code 等多種平台，GitHub 顯示 504 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "clawplays/ospec",
@@ -57,7 +87,13 @@
       "time": "08/12 11:04",
       "sentiment": "",
       "body": "規格驅動的 agentic 工作流框架，將需求轉為「規劃—執行—驗證」的可驗證目標迴圈，並在 repo 中留存規格與證據，相容 Claude Code、Codex、Gemini、OpenCode 等，GitHub 顯示 502 顆星。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Add support for Visual Studio 2026 Integration",
@@ -66,7 +102,13 @@
       "time": "08/11 13:54",
       "sentiment": "",
       "body": "功能請求：希望 Claude Code 能整合 Visual Studio 2026，累計 149 則留言與 514 個 👍 反應，是今日社群互動量最高的功能請求之一。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -77,7 +119,13 @@
       "time": "08/11 19:50",
       "sentiment": "",
       "body": "修復互動式 session 因罕見內部排版錯誤而停止重繪畫面（但程序仍在執行）的問題，並修復 Windows 上找不到 `git` / Git Bash 的問題。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [],
@@ -89,7 +137,13 @@
       "time": "08/11 22:06",
       "sentiment": "🤔",
       "body": "社群討論一則推文指稱 OpenAI 與 Anthropic 在提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容，留言區猜測相關公司可能正設法阻止此類外洩（具體技術細節待查證，原文為推文截圖）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "How to organize Claude Code for product work",
@@ -98,7 +152,13 @@
       "time": "08/11 11:02",
       "sentiment": "😊",
       "body": "作者分享將 Claude Code 工作區整理成情境資料夾、任務與交付物分離、把重複工作沉澱為 skills 的實務做法，強調此系統是「先做錯才慢慢摸索出來的」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "6 out of 10",
@@ -143,7 +203,13 @@
       "time": "08/12 09:16",
       "sentiment": "😤",
       "body": "使用者反映近幾天用量額度消耗速度明顯變快，詢問是否遭調降限額。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "There are no lossless transformations of natural-language text",
@@ -152,7 +218,13 @@
       "time": "08/11 23:48",
       "sentiment": "🤔",
       "body": "Simon Willison 轉引一篇討論文章，主張自然語言文字不存在「無損轉換」。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
@@ -170,7 +242,13 @@
       "time": "08/10 23:17",
       "sentiment": "😊",
       "body": "週熱門討論串，介紹一款將 Claude Code 輸出的「Claude 式用語」翻譯成一般英文的 plugin（具體實作待查證，原文摘要僅提供標題）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "PSA: Be careful letting Claude use WebFetch for research 😵‍💫",
@@ -179,7 +257,17 @@
       "time": "08/08 04:22",
       "sentiment": "😤",
       "body": "週熱門討論串，作者請 Opus 5 研究 AI agent 記憶架構時，發現 Claude 生成看似真實、實則捏造的具體統計數字、百分比與引述。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I used Claude to build a poker app where you deal real cards and everyone uses their phone as their chip stack. It's now been used to play 19,072 poker hands.",
@@ -188,7 +276,13 @@
       "time": "08/08 00:56",
       "sentiment": "😊",
       "body": "週熱門討論串，作者用 Claude 打造一款讓玩家用手機當籌碼、實體發牌的撲克 app，累計已被用來進行 19,072 手牌局。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -199,7 +293,13 @@
       "time": "08/12 10:24",
       "sentiment": "",
       "body": "回報者指出升級方案時付款失敗，PaymentIntent 在確認流程完成前就被 `void_invoice` 提前作廢，累計 26 個 👍 反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Claude asking me for payment details to use existing payment credits",
@@ -208,7 +308,13 @@
       "time": "08/12 09:34",
       "sentiment": "",
       "body": "使用者回報即便帳戶已有既有付款額度（credits），系統仍要求重新輸入付款資訊才能使用。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

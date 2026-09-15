@@ -12,7 +12,13 @@
       "time": "09/08 14:13",
       "sentiment": "",
       "body": "這款開源 skill 鎖定社群戲稱的「Claudism」冗語風格——模型完成任務後仍反覆交代「哪些檔案沒改、哪些事沒做」，作者設計提示模板要求 agent 直接給答案、省略未做事項的說明。當日在 Hacker News 取得 499 分（2 個來源同步報導）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "同日至少 6 款多代理協作／終端管理工具在 Show HN 亮相",
@@ -21,7 +27,13 @@
       "time": "09/09 13:24",
       "sentiment": "",
       "body": "今日 Show HN 集中出現多款圍繞「多 coding agent 協作」的新工具：Type.com（雲端多人協作 IDE，鎖定非技術使用者）、Maxxwell（同時管理多個 agent session 的進度與預算）、Castforge（讓 Claude、Codex、Gemini 組成分工開發團隊）、Clor（Claude 與 Codex 共享記憶的開發環境）、AgentPulse（在 tmux 面板顯示多個 agent 的忙碌／等待狀態）、Bounce Router（Claude、Codex、Muse 間依用量自動切換的路由器），反映「多代理協作介面」持續是社群開發熱點。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -32,7 +44,13 @@
       "time": "09/08 23:55",
       "sentiment": "",
       "body": "修復 2.1.265 版本中的一項迴歸問題：先前未文件化的環境變數 `CLAUDE_CODE_USE_GATEWAY`，除非搭配特定條件否則會被忽略，影響採用 LLM-gateway 或 proxy 架構的部署，現已修正。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "mediaReports": [
@@ -43,7 +61,13 @@
       "time": "09/09 14:09",
       "sentiment": "",
       "body": "citybiz 報導，貸款管理平台 LoanPro 採用建構在 AWS 與 Anthropic Claude 上的 AI 原生介面，將客服通話時間最多縮短 15%。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic Unveils Claude Commerce Agents, Partners With Visa And Mastercard - Crowdfund Insider",
@@ -52,7 +76,13 @@
       "time": "09/09 13:52",
       "sentiment": "",
       "body": "Crowdfund Insider 報導，Anthropic 推出「Claude Commerce Agents」商務代理功能，並與 Visa、Mastercard 建立合作關係。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "A new Anthropic model seeks to test how AI could impact the U.S. economy - NPR",
@@ -61,7 +91,13 @@
       "time": "09/09 13:34",
       "sentiment": "",
       "body": "NPR 報導，Anthropic 推出一款新模型用於測試 AI 對美國經濟可能造成的影響，2 個來源同日跟進報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "The Claude Code Team Is Unbelievably Transparent — They Even Spill the Beans on This Surprising Detail - 36Kr",
@@ -79,7 +115,13 @@
       "time": "09/09 00:38",
       "sentiment": "",
       "body": "Aviation Week 報導，旅遊科技公司 Amadeus 宣布與 Anthropic 建立合作關係。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Salesforce, Anthropic Expand Partnership with Claudeforce - Demand Gen Report",
@@ -88,7 +130,13 @@
       "time": "09/08 17:14",
       "sentiment": "",
       "body": "Demand Gen Report 報導，Salesforce 與 Anthropic 擴大名為「Claudeforce」的合作案。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -99,7 +147,13 @@
       "time": "09/09 14:40",
       "sentiment": "",
       "body": "提供可直接掛載的 skill 與 MCP server，讓 Claude、Codex、OpenCode 等 agent 協助搜尋現金、點數、里程與獎勵機票的省錢旅遊方案，657 星（達 GitHub repo 中門檻 ≥300 星）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "noskillish/bankmcp",
@@ -126,7 +180,13 @@
       "time": "09/09 07:22",
       "sentiment": "",
       "body": "作者分享決定放棄用 Claude 開發自己 app 新版本、改回手動寫程式的心得，反思團隊全面依賴 LLM 後「只剩高層次理解、缺乏細節掌握」的隱憂。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "GPT-6 Astra scores 95% on one robot task, 10% on another",
@@ -144,7 +204,13 @@
       "time": "09/09 14:40",
       "sentiment": "",
       "body": "（2026-02 出生、11,149 星，本庫今日首次收錄）可執行並監督一整組 coding agent 的團隊，涵蓋規劃到合併的完整流程，支援 Claude Code、Codex 等 25 種以上 harness，並提供桌面、網頁、行動與雲端多種使用介面。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [
@@ -155,7 +221,13 @@
       "time": "09/08 22:17",
       "sentiment": "",
       "body": "The New Stack 報導，Anthropic 先前宣傳 Claude Max 方案提供「20 倍用量」，但開發者反映實際使用時頻繁撞上新設的週用量上限；同日 Reddit r/ClaudeCode 也有 Max 方案用戶反映一天內兩度觸頂每日額度，與稍早遭提起的集體訴訟互為呼應（詳見今日聚焦）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
     }
   ],
   "focus": [

@@ -30,7 +30,13 @@
       "time": "08/23 19:55",
       "sentiment": "",
       "body": "Simon Willison 引述 Drew Breunig 的文章觀點：在 Fable 推出之前，花太多心力優化 coding harness 或 context 策略顯得沒有必要——原文以「摩爾定律終結」為題，暗示 Fable 的出現改變了這個判斷（原文完整論證未見於摘要）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "techUpdates": [
@@ -67,12 +73,6 @@
       "body": "《citybiz》報導 Anthropic 延攬前 Google 自研 TPU 團隊負責人 Amir Salek，外界解讀為公司評估自研晶片、跨入硬體領域的訊號。",
       "focusTags": [
         "[重大事件]"
-      ],
-      "sedimented": [
-        {
-          "id": "amir-salek",
-          "pageType": "entity"
-        }
       ]
     },
     {
@@ -100,7 +100,13 @@
       "time": "08/24 05:18",
       "sentiment": "",
       "body": "《Bloomberg》報導 Anthropic 指出澳洲在 Claude 程式開發工具的採用速度上落後其他市場（原文未提供具體數字佐證）。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "UT Research Foundation files patent infringement lawsuit against AI giant Anthropic",
@@ -118,7 +124,13 @@
       "time": "08/24 02:33",
       "sentiment": "",
       "body": "中國科技媒體《36氪》以聳動標題報導 Anthropic 發布道歉聲明，稱有證據顯示 Claude 推理能力曾遭「秘密降低」；本則為單一中國媒體轉述，摘要未提供具體證據內容或官方原始聲明連結，讀者宜自行查核原文後再判斷可信度。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Anthropic opens Claude Academy with free AI courses and workplace rollout guides",
@@ -127,7 +139,13 @@
       "time": "08/23 23:10",
       "sentiment": "",
       "body": "《EdTech Innovation Hub》報導 Anthropic 推出「Claude Academy」，提供免費 AI 課程與企業導入指南。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Why are 'paranoid' Claude agents launching a turf war and deploying self-replicating malware against each other? The experts weigh in",
@@ -136,7 +154,13 @@
       "time": "08/23 11:00",
       "sentiment": "",
       "body": "《TechRadar》一篇專題報導以「多個 Claude agent 互相發動地盤爭奪、部署自我複製惡意程式」為題，訪問多位專家對此現象的看法；標題用語為報導方框架描述，摘要未提供具體實驗設計或攻擊鏈細節，屬觀察性專題而非漏洞揭露。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Scoop: Anthropic asks about mission versus money in candidate interviews",
@@ -145,7 +169,13 @@
       "time": "08/24 09:03",
       "sentiment": "",
       "body": "《Axios》獨家報導 Anthropic 在面試候選人時，會詢問其如何看待「使命」與「金錢」之間的優先順序。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "discussions": [
@@ -167,7 +197,13 @@
       "time": "😐 · 238 留言 · 08/23 16:08",
       "sentiment": "",
       "body": "GitHub Issue 提案要求 Claude Code Desktop 支援在單一應用實例中開啟多個視窗，取代目前的單視窗＋側欄 session 管理方式，累積 238 則留言反應，為今日互動量最高的功能請求。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Disable the welcome banner",
@@ -176,7 +212,13 @@
       "time": "😤 · 138 留言 · 08/23 21:19",
       "sentiment": "",
       "body": "社群反覆回報希望能關閉 CLI 每次啟動顯示的歡迎畫面與提示，認為佔用終端機版面，累積 138 則留言反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[FEATURE] Multi-agent collaboration across machines (Agent-to-Agent protocol)",
@@ -185,7 +227,13 @@
       "time": "🤔 · 41 留言 · 08/24 05:35",
       "sentiment": "",
       "body": "GitHub Issue 提案建議 Claude Code 支援跨機器的 agent 對 agent 協作協定，累積 41 則留言反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "[BUG] Windows/MSIX 1.28929.0: cross-session messages land in the target's composer but are never submitted — session never responds",
@@ -194,7 +242,13 @@
       "time": "😤 · 8 留言 · 08/23 09:13",
       "sentiment": "",
       "body": "Windows MSIX 版本回報，跨 session 訊息會進到目標 session 的輸入框但不會自動送出，導致該 session 無回應，累積 8 則留言反應。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "How I Used Claude Code to Hunt Down a Memory Leak That Took Down Prod",
@@ -221,7 +275,13 @@
       "time": "🤔 · 08/23 08:09",
       "sentiment": "",
       "body": "週熱門 Reddit 貼文分享作者實作 SynthID-Text 風格語言模型浮水印的教學專案，並提及此舉呼應 Anthropic 先前公開表態將為模型輸出加入浮水印機制的方向。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "I replaced Claude Code's auto-memory with an Obsidian vault I curate by hand (LLM Wiki)",
@@ -230,7 +290,13 @@
       "time": "😊 · 08/24 08:46",
       "sentiment": "",
       "body": "Reddit 使用者分享改用手動維護的 Obsidian vault（LLM Wiki 形式）取代 Claude Code 內建自動記憶功能的實作心得。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     }
   ],
   "billing": [],

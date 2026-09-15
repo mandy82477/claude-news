@@ -25,12 +25,6 @@
       "body": "Bernanke 加入 Anthropic 獨立監督機構「長期利益信託」，Reuters、CNBC、Bloomberg 均有報導，凸顯 Anthropic 治理架構持續擴充外部監督成員。",
       "focusTags": [
         "[重大事件]"
-      ],
-      "sedimented": [
-        {
-          "id": "bernanke",
-          "pageType": "entity"
-        }
       ]
     }
   ],
@@ -146,12 +140,6 @@
       "body": "",
       "focusTags": [
         "[重大事件]"
-      ],
-      "sedimented": [
-        {
-          "id": "bernanke",
-          "pageType": "entity"
-        }
       ]
     },
     {
@@ -161,13 +149,7 @@
       "time": "07/09 17:23",
       "sentiment": "",
       "body": "",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "bernanke",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Former Fed Chairman Ben Bernanke Joins Anthropic Oversight Trust",
@@ -176,13 +158,7 @@
       "time": "07/09 16:30",
       "sentiment": "",
       "body": "",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "bernanke",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Anthropic's Reflection: AI gets its screen-time moment",
@@ -419,12 +395,6 @@
       "body": "前聯準會主席 Bernanke 加入 Anthropic 長期利益信託，社群討論其對治理公信力的意義，HN 66 分。情緒：😐",
       "focusTags": [
         "[重大事件]"
-      ],
-      "sedimented": [
-        {
-          "id": "bernanke",
-          "pageType": "entity"
-        }
       ]
     },
     {
