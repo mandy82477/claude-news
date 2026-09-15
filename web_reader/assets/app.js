@@ -585,7 +585,7 @@
     // 標籤 chip 會暫時空著，但不會整頁空白，下次載入即自癒
     const readerDomains = i => i.readerDomains || (i.domain ? [i.domain] : []);
     const filtered = activeDomain === 'all' ? roots
-      : activeDomain === 'weekly' ? roots.filter(i => !!i.updateFreq)
+      : activeDomain === 'weekly' ? roots.filter(i => !!i.updateFreq && !/每日/.test(i.updateFreq))
       : roots.filter(i => readerDomains(i).includes(activeDomain));
     // 週更篩選時置頂一行說明：日期停留數天是策展節奏，不是漏更新
     const weeklyNote = activeDomain === 'weekly'
@@ -1409,7 +1409,7 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
 <div class="detail__type-row">
   ${item.status ? `<span class="pill pill--${item.pill}">${esc(statusLabelFull(item.status))}</span>` : ''}
   <span class="pill pill--gray">${esc(item.entityType || typeLabel)}</span>
-  ${item.updateFreq ? `<span class="pill pill--weekly">🗓️ 週更</span>` : ''}
+  ${item.updateFreq ? `<span class="pill pill--weekly">🗓️ ${/每日/.test(item.updateFreq) ? '每日' : '週更'}</span>` : ''}
 </div>
 ${crumbHtml}
 <h1 class="detail__h1">${esc(item.name)}</h1>

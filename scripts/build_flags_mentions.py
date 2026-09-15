@@ -6,12 +6,16 @@
 裡找字串命中，印出每個旗標的提及次數與來源連結。命中＝社群反應的證據；零命中就是零，
 記者不得腦補「社群沒興趣」以外的結論。
 
+表格解析靠**表頭欄名**（「旗標」與「階」兩欄），不靠欄序——記者加欄、換序都不會
+靜默失效；找不到表或找不到這兩欄時 exit 2 並明說，和「頁上真的沒有第 1／2 階旗標」
+（exit 0）分開講。（review 2026-09-16，P1-5）
+
 用法：
     python scripts/build_flags_mentions.py                       # 讀頁上的旗標
     python scripts/build_flags_mentions.py --flags CLAUDE_CODE_X  # 指定旗標
     python scripts/build_flags_mentions.py --days 30
 
-輸出 markdown，直接貼進派工回報或頁面。exit 0 恆定（這是對帳工具，不是閘）。
+exit 0 對帳完成（含零旗標）｜exit 2 頁面表格解析失敗（格式改了，先修頁或修本腳本）。
 """
 from __future__ import annotations
 
@@ -28,17 +32,39 @@ ARCHIVE = ROOT / "src" / "gathered_archive"
 NEWS = ROOT / "news"
 FLAG_RE = re.compile(r"CLAUDE_CODE_[A-Z0-9_]{3,}")
 MAX_LINKS = 3
+STAGES_TO_CHECK = ("1", "2")
+
+
+class PageFormatError(ValueError):
+    """追蹤表找不到，或缺「旗標」／「階」欄。"""
+
+
+def _cells(line: str) -> list[str]:
+    return [c.strip() for c in line.strip().strip("|").split("|")]
 
 
 def flags_on_page(text: str) -> list[str]:
-    """表格裡標第 1 或第 2 階的旗標（`` `CLAUDE_CODE_X` `` 在同一列且階欄為 1/2）。"""
-    out: list[str] = []
-    for line in text.splitlines():
-        if not line.startswith("| `CLAUDE_CODE_"):
+    """追蹤表裡階欄為 1／2 的旗標。以表頭定位欄位；表頭缺欄或整頁無表 → PageFormatError。"""
+    lines = text.splitlines()
+    header_i = flag_col = stage_col = None
+    for i, line in enumerate(lines):
+        if not line.startswith("|"):
             continue
-        cells = [c.strip() for c in line.strip("|").split("|")]
-        if len(cells) >= 3 and cells[2] in ("1", "2"):
-            m = FLAG_RE.search(cells[0])
+        cells = _cells(line)
+        if "旗標" in cells and any(c == "階" for c in cells):
+            header_i, flag_col, stage_col = i, cells.index("旗標"), cells.index("階")
+            break
+    if header_i is None:
+        raise PageFormatError("追蹤表找不到：沒有同時含「旗標」與「階」兩欄的表頭")
+    out: list[str] = []
+    for line in lines[header_i + 1:]:
+        if not line.startswith("|"):
+            break  # 表結束
+        cells = _cells(line)
+        if len(cells) <= max(flag_col, stage_col) or set(cells[0]) <= {"-", ":"}:
+            continue  # 分隔列或殘列
+        if cells[stage_col] in STAGES_TO_CHECK:
+            m = FLAG_RE.search(cells[flag_col])
             if m and m.group(0) not in out:
                 out.append(m.group(0))
     return out
@@ -74,8 +100,7 @@ def count_mentions(flags: list[str], docs: list[dict]) -> dict[str, dict]:
     """{flag: {"count": n, "links": [(date, title, url)…], "first": date|None}}，純函式。"""
     out: dict[str, dict] = {}
     for flag in flags:
-        hits = [d for d in docs if flag in d.get("text", "")]
-        hits.sort(key=lambda d: d["date"])
+        hits = sorted((d for d in docs if flag in d.get("text", "")), key=lambda d: d["date"])
         out[flag] = {
             "count": len(hits),
             "first": hits[0]["date"] if hits else None,
@@ -111,10 +136,21 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--page", type=Path, default=PAGE)
     args = ap.parse_args(argv)
 
-    flags = args.flags or (flags_on_page(args.page.read_text(encoding="utf-8")) if args.page.exists() else [])
-    if not flags:
-        print("沒有要對帳的旗標（頁上無第 1／2 階旗標，或未指定 --flags）")
-        return 0
+    if args.flags:
+        flags = args.flags
+    else:
+        if not args.page.exists():
+            print(f"頁面不存在：{args.page}")
+            return 2
+        try:
+            flags = flags_on_page(args.page.read_text(encoding="utf-8"))
+        except PageFormatError as e:
+            print(f"表格解析失敗：{e}。頁面格式變了——修頁的表頭（需含「旗標」「階」兩欄）或修本腳本，不要當成「沒有旗標」。")
+            return 2
+        if not flags:
+            print("頁上沒有第 1／2 階的旗標（表格解析正常），本輪無需對帳。")
+            return 0
+    print(f"對帳 {len(flags)} 個旗標")
     print(render(count_mentions(flags, load_docs(args.days)), args.days))
     return 0
 

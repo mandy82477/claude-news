@@ -15,7 +15,7 @@
 
 ## 摘要
 
-- **首批基線 2.1.272（2026-09-14）**：程式本體含 634 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 45 個、消失 5 個；新增裡 27 個像功能、18 個是設定類。
+- **首批基線 2.1.272（2026-09-14）**：程式本體含 618 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
 - **已確認的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階）——官方在 issue #91870 承諾數週內出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
 - **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
 
@@ -32,32 +32,34 @@
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
-| `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` | ≤2.1.261（09-04） | 3 | 已承認：issue #91870 本文 09-09 改寫「數週內出貨、更名 Claude Mods」 | issue 留言 09-09 起至少 6 人回報用此旗標試玩 | 2026-09-14 仍在 build |
-| `CLAUDE_CODE_ARTIFACT_DB_STR_REPLACE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ARTIFACT_FIVE_CLASS_ASKS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ARTIFACT_HOT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ARTIFACT_QUICKSTART` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ARTIFACT_REPL` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ATTRIBUTION_ANNOUNCEMENT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_AUTO_MODE_SERVER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_BASH_EDIT_DIFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_DISABLE_TURN_HANDOFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_DISABLE_WINDOWS_SHELL_LAUNCHER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_MODEL_CAPABILITIES` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_POST_TURN_MEMORY_CONFIG` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_POST_TURN_MEMORY_SYNC` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_QUESTION_OPTIONAL_DESCRIPTIONS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_REMOTE_TOOLS_ADOPT_MCP` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_RESUME_REASON` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_SENDMESSAGE_HANDBACK` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_SESSION_ATTENDED` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_TETHER_LIVE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
-| `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` | ≤2.1.261（09-04） | 3 | 已承認：[issue #91870 本文](https://github.com/anthropics/claude-code/issues/91870) 09-09 改寫「數週內出貨、更名 Claude Mods」，並寫明可用此旗標試玩 | [issue 留言](https://github.com/anthropics/claude-code/issues/91870)：09-04 起 14 人、09-09 官方改寫後 5 人回報用此旗標試玩（2026-09-16 數） | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_DB_STR_REPLACE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_FIVE_CLASS_ASKS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_HOT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_PATH_PIN` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_QUICKSTART` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ARTIFACT_REPL` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ATTRIBUTION_ANNOUNCEMENT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_AUTO_MODE_SERVER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_BASH_EDIT_DIFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_DISABLE_AWAITING_USER_IDLE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_DISABLE_TURN_HANDOFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_DISABLE_WINDOWS_SHELL_LAUNCHER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_MODEL_CAPABILITIES` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_POST_TURN_MEMORY_CONFIG` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_POST_TURN_MEMORY_SYNC` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_QUESTION_OPTIONAL_DESCRIPTIONS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_REMOTE_TOOLS_ADOPT_MCP` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_RESUME_REASON` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_SENDMESSAGE_HANDBACK` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_SESSION_ATTENDED` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_TETHER_LIVE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 
 ## 代號旗標
 
@@ -74,7 +76,6 @@
 ## 已消失
 
 - `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
-- `CLAUDE_CODE_GOAL_CHECKIN_MINUTES0`（2.1.262–2.1.272 之間）
 
 ## 靜默表
 
@@ -92,3 +93,4 @@
 | 日期 | 事件 |
 |---|---|
 | 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |
+| 2026-09-16 | review 後修正：黏字清理（原「已消失」誤列 `GOAL_CHECKIN_MINUTES0`，實為位元組黏字）、過濾改 token 式、第 3 階列補連結與提及人數 |

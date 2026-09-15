@@ -133,7 +133,7 @@ jobs:
               echo "::warning::抓料產出路徑不存在，已略過（請修 daily-gather.yml 的 GATHER_PATHS）：$p"
             fi
           done
-          # 兩個 *_state.json 是清冊型來源（Official Docs / Official Skills）的
+          # 三個 *_state.json 是清冊型來源（Official Docs / Official Skills / Build Flags）的
           # 「上次看到的樣子」。不 commit → 每次全新 checkout 都拿 repo 舊基線比對，
           # 同一筆異動天天重複偵測，且 state 只有本機手動跑才會前進（2026-08-15 發現：
           # 08-13 已把 state 納入版控，但此處漏加，等於只做了一半）。
