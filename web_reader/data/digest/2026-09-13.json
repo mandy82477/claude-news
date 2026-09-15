@@ -12,13 +12,7 @@
       "time": "09/13 11:33",
       "sentiment": "",
       "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
@@ -54,13 +48,7 @@
       "time": "09/12 14:10",
       "sentiment": "",
       "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     }
   ],
   "techUpdates": [
@@ -149,13 +137,7 @@
       "time": "09/13 14:29",
       "sentiment": "",
       "body": "開源 AI IDE，可同時執行 Claude Code、Codex、OpenCode 等多個 agent（本機或雲端皆可），並可組成可重複使用的工作流程，累積 500 星。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "I fine-tuned Qwen2.5-Coder-14B on 220k MQL5 examples. It reached 94.0% compile success vs 95.33% for GPT-5.6 Sol. Built with Claude Code:",
@@ -164,13 +146,7 @@
       "time": "09/13 13:48",
       "sentiment": "",
       "body": "開發者用 Claude Code 建置 MQL5（交易語言）領域資料集並微調 14B 模型，回報編譯成功率達 94.0%，逼近 GPT-5.6 Sol 的 95.33%。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "Will hyper-optimized prompts become the new software piracy?",
@@ -350,29 +326,9 @@
   "preview": "Claude Code：v2.1.270 修復迴歸：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "jacob-coxon",
       "name": "Jacob Coxon",
       "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
     },
     {
       "id": "ai-talent-flow",
@@ -385,11 +341,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
       "id": "competitor-landscape",
       "name": "AI 編碼工具競品動態",
       "pageType": "topic"
@@ -397,16 +348,6 @@
     {
       "id": "official-community-gap",
       "name": "官方功能 vs 社群痛點缺口分析",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "興趣類別 skill 總覽",
       "pageType": "topic"
     }
   ],
@@ -553,13 +494,7 @@
       "time": "09/13 11:33",
       "sentiment": "",
       "body": "使用者要求同一個 Connector 能同時登入多組帳號（例如兩個不同 Google 帳號），累積 246 則留言、533 個 👍 反應，是今日互動量次高的功能請求。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     },
     {
       "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
@@ -595,13 +530,7 @@
       "time": "09/12 14:10",
       "sentiment": "",
       "body": "企業使用者回報自建、帶 OAuth 2.1 驗證的 MCP server 在 Claude Code 上運作正常，但 Claude Desktop 完全無法連線，累積 67 則留言、71 個 👍 反應。",
-      "focusTags": [],
-      "sedimented": [
-        {
-          "id": "claude-code",
-          "pageType": "entity"
-        }
-      ]
+      "focusTags": []
     }
   ]
 }

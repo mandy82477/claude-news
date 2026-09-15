@@ -1,0 +1,546 @@
+{
+  "date": "2026-09-14",
+  "generatedAt": "2026-09-14 16:25 UTC",
+  "articleCount": 70,
+  "sourceCount": "14/14",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "GitHub Actions default configs from Anthropic, Google, and OpenAI's own coding agents were all vulnerable to the same RCE",
+      "url": "https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "09/14 02:33",
+      "sentiment": "",
+      "body": "資安研究者揭露 Anthropic Claude Code、Google Gemini CLI、OpenAI Codex 三家官方發布的 GitHub Actions 預設範本，皆存在可導致遠端程式碼執行（RCE）的同款設定缺陷。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic analyzed 400,000 Claude Code sessions, and it turns out there's a right way to use it",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRWFITFh0RTJHTkdyVnEyb3JtTFZQd3MtNEcxeXBKT3UxRTFOSFdPY2dmOWc1aWE3WjMwTFpnd2toZE9rV1ZSUXcxTFBOazBrdnBQcmpqcElRSHRURkJNRFVyMXdXU3VXNDR4QTJQVENIaTV0ZW5LQ2szQW9BQ0JrWHplRWdQTmNLOERnaFZ4MS1xSDlLQWRWbW5ZRTJqU3pLczNqNEhNVHlNelpmNFdlNDd4XzRkaWpm?oc=5",
+      "source": "Google News / XDA",
+      "time": "09/14 14:31",
+      "sentiment": "",
+      "body": "Anthropic 分析 40 萬則 Claude Code 使用 session，歸納出高成效使用者的共通操作模式，作為官方最佳實踐建議的依據。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Data Fears Prompt Nvidia, Palantir and Booz Allen to Restrict Model Use",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPb0Vkb3BoV3lsNElhVzd2SEJCR0hjd3FXbWlmTnE0ZlBLZXk0QkliX0pMY1JFelNhMF8tNlZYUTI4bkNQeUh1M3RsU29UZWRZSkhVUC12RWpQczN0U1hMblBkSGlQNURDQVh5S0VhbEEtOHRKejJxckxKRndFbDlwTzkyWm1CSFZRQXpndGJPV2lVdTlOWUM3RFcxcmdGSFFCSmZBc3N2WkR6RzBLVEpmajFibw?oc=5",
+      "source": "Google News / The Information",
+      "time": "09/14 13:00",
+      "sentiment": "",
+      "body": "《The Information》報導，因憂心資料外洩風險，Nvidia、Palantir、Booz Allen 等企業客戶已限縮對 Anthropic 模型的內部使用範圍。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "09/14 16:25",
+      "sentiment": "",
+      "body": "桌面版文件新增說明：雲端 session 現支援同時掛載多個 repository（選擇雲端環境後可點擊「+」新增）；並新增 `disableMobileSimulatorTools` 設定旗標，可封鎖 Claude 控制與擷取 iOS 模擬器裝置的工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic prepares Claude Money for personal finance",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNnZ6WnBySGZHMXFRMXEzVXdiaEdJaWY0TW94bnpZQk9ETG11UjFBYklmcVp2VHNJcFNsZGFsVHAwYzNkZjJRZENmTW11bmt2OGlsOGhDVDlDN1JzNDIxZXlmTzN6aXFwNWQ1WXRFRG1qNFZRNk9vaC1NOGM4d19xLWJlUmx5cC1TbGZnQw?oc=5",
+      "source": "Google News / TestingCatalog AI News",
+      "time": "09/14 13:11",
+      "sentiment": "",
+      "body": "據報 Anthropic 正在籌備名為「Claude Money」的個人理財工具，與同日金融顧問通路布局呼應，顯示公司金融領域產品線持續擴張。",
+      "focusTags": []
+    },
+    {
+      "title": "China used Claude AI to track dissidents, Anthropic says",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZUZmMzN0bGp0eGFQckY2cWRlQ3pLQUdiUWFJbDd6NWRLTUxLSGpmWVpPWng1Mng3bDBaZG1idW44Z3c0Uk1iWFpPb2ViLTRHRk9WaXVVTGt6T1FnUDlTckczbFRZSVBOMm02TFVyMUFXbGdPLUhYOVpRTkpYVHRHR09aLWd3QzA0Zkx1aUlPcUdDRFM2M1NPag?oc=5",
+      "source": "Google News / Cybernews",
+      "time": "09/14 14:53",
+      "sentiment": "",
+      "body": "Anthropic 表示偵測到中國政府相關行為者利用 Claude 追蹤異議人士，是近期一系列 AI 濫用威脅情報揭露的最新一起案例。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code vs. AWS Kiro vs. GitHub Copilot: Should Every Developer Use the Same AI Coding Tool?",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZE92bk5FV00zWkw1ZURmSVhwUEVSTzFFblpfc0hxdFZsV2pKWXh3LVhWMFFESU8ycC1xVHg2c3ZOWS0xU2h1VDVlUnE5cVdXTi1SaWFPNERQa09yMHRuNG43ckNDUDJTeFpqN1QzNnJSV1hNb0R0SUhnRlRXRVVwZDItal9sOHZGV0lfdDZqd181Z08xVE9QRGUxRWc5dGU0VVNwZXE4RTFCTzdIaWpyVVMtNzBtUnl2c1NpZk1CdmdTR3V2R3d3eWRGWQ?oc=5",
+      "source": "Google News / securityboulevard.com",
+      "time": "09/14 14:37",
+      "sentiment": "",
+      "body": "文章比較 Claude Code、AWS Kiro、GitHub Copilot 三款主流 AI 編碼工具的定位差異，並討論是否所有開發者都該使用同一套工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude AI partner training expands with new security certifications",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeFd3LXF6YldWcEdLTnhnWERsZmtXRFFWVmF6VGhPR29VV1BUNTJMSXdHQ05LcUt0UUNQbUNaQzZ0UXpOdnUtYndLY1VRMXBYdlRhZURDZ1dzY19VbUhwSVFNWURidWRPQkFvOWJQY2xwWXBzcTdXcmdxeU5XZy1ucVl1eWtDN1p3TkhxbVg5dHoxaUgxcWVOWVZlR1Y0Zw?oc=5",
+      "source": "Google News / ChannelE2E",
+      "time": "09/14 14:00",
+      "sentiment": "",
+      "body": "Anthropic 擴大合作夥伴訓練計畫，新增安全性相關認證課程，強化通路夥伴的資安專業能力。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "genspark-ai/genoffice",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "source": "GitHub Search",
+      "time": "09/14 16:24",
+      "sentiment": "",
+      "body": "開源 AI Office 套件，內建 Docs、Sheets、Slides、PDF、Markdown／HTML 編輯器與 AI agent，並提供 CLI 與 agent skill，讓 Claude Code、Codex、Cursor 可直接讀寫本機 .docx/.xlsx/.pptx 檔案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "agentpit-io/hunter-community",
+      "url": "https://github.com/agentpit-io/hunter-community",
+      "source": "GitHub Search",
+      "time": "09/14 16:24",
+      "sentiment": "",
+      "body": "開源、可自架的個人金融 AI 團隊框架，結合 opencode、Claude Code、MCP 與多代理架構，標榜 15 分鐘內可用 Docker 完成部署。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop fails to launch on Windows — orphaned Silo / Job Object after app crash, only logoff or reboot recovers (HRESULT 0x80070020 in AppModel-Runtime EventID 215/208)",
+      "url": "https://github.com/anthropics/claude-code/issues/53247",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/14 15:09",
+      "sentiment": "",
+      "body": "使用者回報 Claude Desktop 在 Windows 上當機後會留下孤兒 Job Object，導致應用程式無法重新啟動，僅登出或重開機才能恢復，累積 32 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Disable the welcome banner",
+      "url": "https://github.com/anthropics/claude-code/issues/2254",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/14 07:19",
+      "sentiment": "",
+      "body": "長期開放的功能請求，使用者要求提供關閉 Claude Code 啟動歡迎畫面的選項，累積 147 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
+      "url": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
+      "source": "Hacker News",
+      "time": "09/14 13:59",
+      "sentiment": "",
+      "body": "作者分享將 35KB 的大型 preprompt 從 Opus 遷移到自架 Ollama 模型時遇到的各種眉角，並討論資料隱私與供應商鎖定的考量。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic tells investors it will be profitable for second straight quarter",
+      "url": "https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/",
+      "source": "Hacker News",
+      "time": "09/14 15:47",
+      "sentiment": "",
+      "body": "HN 討論質疑「不計訓練成本的獲利」是否具有實質意義，並將其與網路叫車產業上市前的類似操作手法相比。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：Claude Code 週用量促銷（May–August 2026）",
+      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+      "source": "Official Docs",
+      "time": "09/14 16:25",
+      "sentiment": "",
+      "body": "官方文件確認，自 5/13 起實施的「週用量上限提高 50%」促銷已於 9/13 到期，Claude Code 週用量自 9/14 起回復標準額度；文件同時澄清此次調整不影響 5 小時用量上限的計算方式。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 執行長 Dario Amodei 呼籲 AI 產業減速的 3,800 字警告引發連鎖政治反應：川普公開回絕、中國官媒批評此舉是「冷戰」話術，AI 類股同日亦應聲下跌",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcXBVbWdJVHFtcDF3SHNDTUx5dV8yeGJDbXRsMmFNY2RmTHZodXo2NUFtU19nNF9NY0JEVURiQ0pockxyNGgxTkdKMVlDaWZSb0tnMUVHSV9sQXIzZGEtR2RCalV4a1Y3ZkRXb1RrR1ZuTFRscHNXYk5EZUpMNjA4c2FQbDdJd1ZWMXpRd3huRkgzT1lLYUxZX0RKSDNsemJ6b3Ftb01XZEFwMUtvV00yd0NVNFVhQlFW?oc=5",
+        "https://www.yahoo.com/news/us/article/trump-rejects-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-with-ai-wins-182008851.html",
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNSnh0RURESW5RRmc3NlJrdUgxRV95V0pCSkJvY2szWi04YnhjRkY0N0xtT3RQeXp3d0ZBc05wMURvRGtlNUVNakNpdzh6dEVpSUdVem13ZzlhN2ttYXdOZXVWNmxYdEd1Q3l5NjV1TFRJUkxTa3hoMzNZNzY2Q3pfalkxY0JkVEpVa1FJNDhaM0lNRDQyYzZaRFJMSWVPLURKZ01wUDRYUnZwUm9WdWRUSmlpbDRKcm5MdEc3VWhkMW1odV9hV1YyOV9oOXM1QUZreGxJcF9Vd3Fldw?oc=5"
+      ],
+      "ref_names": [
+        "Reuters",
+        "Yahoo",
+        "Yahoo Finance"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "iOS 27／macOS 底層程式碼曝光，顯示 Apple 為 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設定為 Siri 的第三方模型擴充功能",
+      "ref_urls": [
+        "https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWk1IN1hJV1Bna3ZlSERiQktzX25KRDFlZDh0aXlFWkJZa1JNV2l4NUp0SFNNQ3U1aGJucnNvenM5UTRiQVdIWW13RzJ6S1ZGTXJBX2U5aTRvZmJFSUhPRmlaMy1jZnJRa3c2eVROWGRCVkNNbEIyWENVbHdrZ3Q5bDZXWDNSa3B3OHZCWFlWOFFpcXp6SzduTFFySGx3WnRzaWdRZzNraUVUWDB1OXhyVkRn?oc=5"
+      ],
+      "ref_names": [
+        "HN 188 分／MacRumors",
+        "9to5Mac"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 跨入金融顧問市場：Charles Schwab、Orion 同日相繼宣布導入 Claude，鎖定獨立註冊投資顧問（RIA）通路",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRmhuRXViUDlfZnRwMkNKVmtMZGpkeXF5bkppVGV4ejlIdUNnZkpXNHpHeTBXcF9tRkx2d1h2UVkzUU5OanAyVXVZcFhnaTRscTJxa0M3eVBiemZpMTdCZU5UeVVtZ0NQd1dKZ1JVMDhzNkVobVJGNDdWT2tkQlVYRjZ1ckpKRVVTdWZKSHhOTFBqMV9QN1JoZUYzcDloVXZremVEMW13SHFnUms?oc=5",
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPLTZteGo2WlBVM2R0VkI5dElROU01MUxQNXRMQ1NBcnl4VlZ0VWdvekFaaVYwbkV1Z3U5ajJsT0dtYURibnUxbDBSNklCa1hjdDhRbTlHbDZta051UWM5NHhyZVA2SXAxS0FqVzRWS3dqZHdWX1h2WkgwdDBPbkxJdnhCZnBBb1hLWG5ZSUtHUXhoVVNxUXFQdGk5VkhUTTdEalVBWXBuX2ttVTRFVnhQOFBfZnI3amhxUUdydGxqZU5GMnVHTUpueGxGOXlhWHFVZjZLY3dfU3BrMDVSYTFF?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPeXlOZG5CdHprc0tyT1V2MlptQm0xa1FlS1pxa2lENlcxYXVabTFmOGtMU0NMMlFxajlEOGNfZzktRXFtbzZPM0lvWHExOWhjVUljeE1NM240cFI2dFhIUGhJeDNWS0R4OGwtZ3kzMlBYMU8ybFFCTnhOcVJmcFJJV0R3MmFqckdDZEZWRjdRbmtqSmxuaDRUcmZrVTJHamlhS05F?oc=5"
+      ],
+      "ref_names": [
+        "Bloomberg",
+        "Business Wire",
+        "Yahoo Finance"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "資安業者 Rescana 揭露具體攻擊鏈：攻擊者利用 Claude AI 從 180 萬個 Android App 中大規模萃取憑證，發動竊密行動",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNXzF3LVkzVW56SFFOb09nbC0wYmtmdzkzekFwdUF4cFF1dXdpUzQ0UnRYUXQ3d000N091UV9nbi1yRmgybUZoRHM3ZWt6Y0MtMWpfWnEyWDllNkxOS201WEwzeDdEcHRUbC1NcnIxTGZ3ZjJnbkU3OFlYbHpBakhzVWJjdVpZX1doazNzQ05rd2xWQjNnZGx1YjJNLWpqTHVpUmExTUpKaW9OMy1nZmdFMzVFMnFWSGh2bUw0dzE3dGtYU0FXVmdZMVNodTFoa2hyZVQxMGtnby00MDZCODNMbHhPdw?oc=5"
+      ],
+      "ref_names": [
+        "Rescana"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "‘We need more time’: Another researcher quits over AI risks, this time from Google DeepMind",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPV3hFanQ3RE9BRElYcXpSZ2dQWlNsRUFxTmxCRU5sZFBMOVg5cExoWThQV0g1Wm9aNTlPQkc1M3lIRGFIb0o2M1dHN0tsM1Y4ZkhIRUJkVW9HQkJhQTVGR0xHX3VBcDUyUHVEQVphWXVkTDhOYTJZZnEtdFlGOXZoWjJRamRLcjNaR25Ca3BGV3dKNGxfcF9nOTI3ekgyOU5Ob0s3MGdJV3NsMmc5RFdKM0NwMWhnNGg2dmNISDM4UnFiWS1acm5z0gHOAUFVX3lxTFBxRFlabEE0MXAycFdIbDEtV29fTFVUTkZZRmtKRUZ4czdIc29fMERrS0JyLWQ3QkhJdlFmYWJpb0dYQ0N1WFlWd1pkMnQ5NDlmc1VYRk45Z19IY2d6Ni1DZDdxOFl5WXE2MjBXWURtZUJtNGY0UTdLODU1TWZXVkVLbkw0Yk5WUlJnRHBEX3JlTmdndUM2R1lDRWVDeU9jUVpLM0s0Rzg4V0ZQMVFjWDYyUWFLbzRGS0kzcEw3WGpwLTY4Ump1WFdCQ3BDOVJ3?oc=5",
+      "body": "一名 Google DeepMind 研究員以「需要更多時間」為由請辭，警告 AI 開發步調過快（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Google DeepMind Loses Four Founding-Era Leaders In A Single Day",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONkQzNURobjU4Y0E1QmwxQ3VMckdwLUdOdlBGM0xvSWdadjF1em9GMGN5ZnV4Q2NWWjVvSGdTNDBNOG9PbHEtRDVTRVFpMHNBXzJ5UnR3dlpMQ1RGakR6c2trcGwwM1VzYnFIUHYzaEVPb2hjODFmQ0o3MGJqVm82UmJJYmtGdw?oc=5",
+      "body": "Google DeepMind 單日內流失四位創始團隊元老，人才流動再添一筆（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 42
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 18
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 16
+    }
+  ],
+  "preview": "Claude Code：桌面版新增雲端多 repo 掛載＋disableMobileSimulatorTools 旗標：雲端 session 可同時掛多個 repository；新旗標可封鎖 Claude 控制／擷取 iOS 模擬器裝置。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "llm-wiki-pattern",
+      "name": "Karpathy 式 LLM wiki 模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-14",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **桌面版新增雲端多 repo 掛載＋`disableMobileSimulatorTools` 旗標**：雲端 session 可同時掛多個 repository；新旗標可封鎖 Claude 控制／擷取 iOS 模擬器裝置。\n- **GitHub Actions 預設範本 RCE 缺陷**：Reddit 報告指 Claude Code、Gemini CLI、Codex 三家官方範本皆有同款可致 RCE 的設定缺陷，僅單一來源、未附官方回應。\n- **Windows Desktop 孤兒 Job Object 讚數增至 32**：issue #53247 崩潰後須登出或重開機才能復原，官方仍未回應。\n- **關閉啟動歡迎畫面請求增至 147 讚**：issue #2254 長年未獲官方回應或設定選項。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **週配額已換軌，官方文件 09-14 確認**：+50% 加成 09-13 到期，Claude Code 週用量自 09-14 起回復標準額度（永久 +25%），相對加成期間水位少約 17%；官方同時澄清此調整不影響 5 小時用量上限的計算方式（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）。適用 Pro、Max、Team 與座位制 Enterprise。\n- **$100 過渡 credit 09-17 23:59 PT 到期即作廢**，不可續買、不轉存。\n- **四件計費事故仍未解**：Max 訂閱一開工就撞用量上限（#16157，1,492 留言最高）、續訂扣款後帳號停用、session 額度 3 月起異常加速耗盡（#38335，850 留言／545 👍 重新列入）、$16.6M 帳務錯誤退款未定。見「事故現在還在發生嗎」。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Charles Schwab、Orion 同日宣布導入 Claude，鎖定 RIA 通路**：跨入金融顧問市場，同日傳籌備個人理財工具「Claude Money」，詳見下方「其餘合作」。\n- **Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，HN 討論質疑「不計訓練成本的獲利」意涵有限，見 [[topics/anthropic-business#現在的數字]]。\n- **Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用**：跨類別事件，安全政策面見 [[topics/ai-agent-safety]]。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "📉 負面（敘事型）：The Information 報導 Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Claude 內部使用，單一來源、具體範圍未見報導；下一步看 Anthropic 是否回應。詳見 [[topics/anthropic-business]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "Rescana 揭露攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證，待查證（詳見「## 技術彙整」）。"
+          },
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "Cybernews：Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，延續 09-11 威脅情報報告系列，一般用戶不受影響。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Dario Amodei 減速呼籲引發政治連鎖反應：川普公開回絕表示不需更多 AI 監管，北京官媒批評為「冷戰」話術（詳見「## 技術彙整」）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "genspark-ai/genoffice 加入創作工具整合：開源 AI Office 套件，CLI 與 agent skill 讓 Claude Code／Codex／Cursor 直接讀寫本機 .docx/.xlsx/.pptx（6,774 星，forks 899、近日仍有 commit）。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最熱討論",
+            "date": "",
+            "body": "「換到開源模型的代價是不是接近零」再添一則獨立案例：開發者分享把 35KB preprompt 從 Opus 遷移到自架 Ollama 的踩雷筆記與資料隱私考量（HN 59 分）。"
+          },
+          {
+            "page": "topics/llm-wiki-pattern",
+            "name": "Karpathy 式 LLM wiki 模式",
+            "label": "最新動態",
+            "date": "",
+            "body": "Karpathy 四月提出的三層 wiki 模式已長出六種公開實作，最新一種是打包成可安裝 skill 的 Astro-Han/karpathy-llm-wiki（2.2k 星）；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 10
+  },
+  "readerTopStories": [
+    {
+      "title": "GitHub Actions default configs from Anthropic, Google, and OpenAI's own coding agents were all vulnerable to the same RCE",
+      "url": "https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "09/14 02:33",
+      "sentiment": "",
+      "body": "資安研究者揭露 Anthropic Claude Code、Google Gemini CLI、OpenAI Codex 三家官方發布的 GitHub Actions 預設範本，皆存在可導致遠端程式碼執行（RCE）的同款設定缺陷。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic analyzed 400,000 Claude Code sessions, and it turns out there's a right way to use it",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRWFITFh0RTJHTkdyVnEyb3JtTFZQd3MtNEcxeXBKT3UxRTFOSFdPY2dmOWc1aWE3WjMwTFpnd2toZE9rV1ZSUXcxTFBOazBrdnBQcmpqcElRSHRURkJNRFVyMXdXU3VXNDR4QTJQVENIaTV0ZW5LQ2szQW9BQ0JrWHplRWdQTmNLOERnaFZ4MS1xSDlLQWRWbW5ZRTJqU3pLczNqNEhNVHlNelpmNFdlNDd4XzRkaWpm?oc=5",
+      "source": "Google News / XDA",
+      "time": "09/14 14:31",
+      "sentiment": "",
+      "body": "Anthropic 分析 40 萬則 Claude Code 使用 session，歸納出高成效使用者的共通操作模式，作為官方最佳實踐建議的依據。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Data Fears Prompt Nvidia, Palantir and Booz Allen to Restrict Model Use",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPb0Vkb3BoV3lsNElhVzd2SEJCR0hjd3FXbWlmTnE0ZlBLZXk0QkliX0pMY1JFelNhMF8tNlZYUTI4bkNQeUh1M3RsU29UZWRZSkhVUC12RWpQczN0U1hMblBkSGlQNURDQVh5S0VhbEEtOHRKejJxckxKRndFbDlwTzkyWm1CSFZRQXpndGJPV2lVdTlOWUM3RFcxcmdGSFFCSmZBc3N2WkR6RzBLVEpmajFibw?oc=5",
+      "source": "Google News / The Information",
+      "time": "09/14 13:00",
+      "sentiment": "",
+      "body": "《The Information》報導，因憂心資料外洩風險，Nvidia、Palantir、Booz Allen 等企業客戶已限縮對 Anthropic 模型的內部使用範圍。",
+      "focusTags": []
+    }
+  ]
+}
