@@ -176,10 +176,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--today", default=None, help="測試用：覆寫今天的日期")
     args = ap.parse_args(argv)
 
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.date):
-        print(f"--date 格式錯誤（要 YYYY-MM-DD）：{args.date}")
+    try:
+        _date.fromisoformat(args.date)
+        today = _date.fromisoformat(args.today) if args.today else None
+    except ValueError:
+        print(f"--date 不是有效日期（要 YYYY-MM-DD 且真實存在）：{args.date}")
+        print("這是指令參數錯，不是帳本問題——修 TARGET_DATE 再跑，不要去翻帳本。")
         return 3
-    today = _date.fromisoformat(args.today) if args.today else None
 
     archive = args.archive_dir / f"{args.date}.json"
     gathered = None

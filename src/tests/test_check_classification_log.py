@@ -176,6 +176,9 @@ class TestCLI(unittest.TestCase):
             (td / "arch" / "2026-09-13.json").write_text("{not json", encoding="utf-8")
             self.assertEqual(mod.main(["--date", "2026-09-13", "--today", "2026-09-15", *args]), 3)
             self.assertEqual(mod.main(["--date", "2026-9-13", *args]), 3)
+            # F-2：合格式但不存在的日期不能 traceback 落到 exit 1（那會把人導去翻帳本）
+            self.assertEqual(mod.main(["--date", "2026-02-30", *args]), 3)
+            self.assertEqual(mod.main(["--date", "2026-13-01", *args]), 3)
 
     def test_beyond_retention_boundary(self):
         from datetime import date
@@ -186,15 +189,20 @@ class TestCLI(unittest.TestCase):
 
 class TestRealLedger(unittest.TestCase):
     def test_every_ingested_archive_since_ledger_start_reconciles(self):
-        """N-5：從原料出發——保留窗內每個已 ingest（有 news/<date>.md）且 ≥ 帳本起始日的原料檔，
-        帳本都必須有該日期且對帳乾淨。從帳本出發掃日期抓不到「有原料卻沒寫帳本」的回歸。"""
+        """N-5／F-3：從原料出發——保留窗內每個 ≥ 帳本起始日、且 ingest **已完成**的原料檔，
+        帳本都必須有該日期且對帳乾淨。從帳本出發掃日期抓不到「有原料卻沒寫帳本」的回歸。
+
+        「已完成」的訊號是 wiki/log.md 有 `## <date> Ingest` 標題——那是 ingest 收尾寫的產物。
+        不用 news/<date>.md：日報是 ingest 的輸入，Phase A 就存在，拿它當訊號會在
+        日報已產、ingest 未跑完的空窗期把整個套件弄紅、擋住無關 session 收工。"""
         rows = mod.load_log(ROOT / "data" / "classification-log.jsonl")
         dates_in_ledger = {r.get("date") for r in rows}
+        log_text = (ROOT / "wiki" / "log.md").read_text(encoding="utf-8")
         candidates = sorted(
             p.stem for p in (ROOT / "src" / "gathered_archive").glob("????-??-??.json")
-            if p.stem >= LEDGER_START and (ROOT / "news" / f"{p.stem}.md").exists())
+            if p.stem >= LEDGER_START and f"## {p.stem} Ingest" in log_text)
         if not candidates:
-            self.skipTest("保留窗內沒有已 ingest 的原料檔可對帳")
+            self.skipTest("保留窗內沒有已完成 ingest 的原料檔可對帳")
         for d in candidates:
             self.assertIn(d, dates_in_ledger, f"{d} 有原料也有日報，但帳本沒有這一天——ingest 沒寫分類紀錄")
             gathered = json.loads((ROOT / "src" / "gathered_archive" / f"{d}.json").read_text(encoding="utf-8")).get("items") or []

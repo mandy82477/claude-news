@@ -27,7 +27,7 @@
 {"date": "YYYY-MM-DD", "url": "...", "title": "...", "source": "...", "summary": "去 HTML 的原文摘要（≤240 字）", "categories": ["功能", "安全政策"], "reason": ""}
 ```
 
-`categories` 為空陣列＝主編判斷不派給任何記者，此時 `reason` 必填一句話。**記全部而不是只記排除**：只記排除的帳本對不了帳——「忘了處理」和「判斷排除」在帳上一樣是沒出現。寫完立刻跑對帳，非零退出不得派工：
+`categories` 為空陣列＝主編判斷不派給任何記者，此時 `reason` 必填一句話。**記全部而不是只記排除**：只記排除的帳本對不了帳——「忘了處理」和「判斷排除」在帳上一樣是沒出現。寫完立刻跑對帳，exit 1 不得派工（exit 2／3 的處置見下）：
 
 ```
 python scripts/check_classification_log.py --date TARGET_DATE
