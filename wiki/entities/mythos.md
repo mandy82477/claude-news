@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-09-12"
-last_news_update: "2026-09-03"
+last_updated: "2026-09-15"
+last_news_update: "2026-09-15"
 status_main: "active"
-days_since_news: 12
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 12
-inbound_links: 24
-attribution_count: 16
-attribution_last: "2026-09-02"
+days_since_news_subtree: 0
+inbound_links: 25
+attribution_count: 17
+attribution_last: "2026-09-15"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 2

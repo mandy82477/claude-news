@@ -12,11 +12,11 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 95
-attribution_count: 498
+inbound_links: 96
+attribution_count: 508
 attribution_last: "2026-09-15"
 top_source: "github-issues"
-pending_count: 23
+pending_count: 24
 pending_overdue: 16
 pending_next_review: "2026-09-18"
 pending_signalled: 1

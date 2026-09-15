@@ -12,7 +12,7 @@ parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 12
+inbound_links: 14
 attribution_count: 22
 attribution_last: "2026-09-14"
 top_source: "google-news"

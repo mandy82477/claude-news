@@ -4,21 +4,21 @@ kind: "entity"
 type: "model"
 status: "active（現行次旗艦；前代 Opus 4.8 已列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-09-08"
-last_news_update: "2026-09-03"
+last_updated: "2026-09-15"
+last_news_update: "2026-09-15"
 status_main: "active"
-days_since_news: 12
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 12
+days_since_news_subtree: 0
 inbound_links: 37
-attribution_count: 24
-attribution_last: "2026-08-28"
+attribution_count: 25
+attribution_last: "2026-09-15"
 top_source: "reddit"
-pending_count: 2
+pending_count: 3
 pending_overdue: 2
-pending_next_review: null
+pending_next_review: "2026-09-29"
 pending_signalled: 0
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
