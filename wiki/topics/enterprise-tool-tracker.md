@@ -28,21 +28,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-11
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
-> **最新企業採用異動**（2026-09-11）
-> - **T. Rowe Price（大型資產管理公司）擴大在投資流程中使用 Claude 與 Claude Code**：官方新聞稿宣布，具體整合範疇未見細節。
-> - 為本頁首見資產管理業者案例，同業評估導入 Claude 時目前僅此一例可比照（[[topics/enterprise-tool-tracker#企業工具使用現況]]）。
+> **最新企業採用異動**（2026-09-15）
+> - **Google 開放全體工程師使用 Claude**：Business Insider 報導，具體工具範疇與上線時程未見細節。
+> - **Rubrik 發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試**：既有 Claude Code agent（06-30）之外另一產品線。
+> - 兩則皆為本頁首見的今日新增（[[topics/enterprise-tool-tracker#企業工具使用現況]]）。
 
 ## 摘要
 
-**目前追蹤 44 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行**（最新異動見頂部 callout，2026-09-11）。
+**目前追蹤 45 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行**（最新異動見頂部 callout，2026-09-15）。
 
 追蹤各大型企業目前正在使用的 AI 編碼工具，以及工具選擇的變化軌跡。資料來源為公開報導與內部消息洩露，僅記錄有明確來源佐證的事實。
 
 **近期新增／擴大採用：**
 
+- **Google**：開放全體工程師使用 Claude（Business Insider），具體工具範疇未見細節
+- **Rubrik**：發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序
 - **T. Rowe Price**：資產管理公司，擴大在投資流程中使用 Claude 與 Claude Code
 - **Shopify**（❓ 未確認）：執行長公開揚言封殺 Claude Code，尚未確認實際生效
 - **ReliaQuest**：資安廠商，深化與 Anthropic 技術整合作為去 SIEM 化資安策略一環
@@ -79,6 +82,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
+| Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；為既有 Claude Code agent（06-30）之外另一產品線，具體效能數字未見報導 | 2026-09-15 |
 | T. Rowe Price | 大型（全球資產管理公司） | Claude API + Claude Code | ✅ | — | 官方新聞稿宣布擴大在投資流程中使用 Claude 與 Claude Code；具體整合範疇、涵蓋部門未見報導細節 | 2026-09-10 |
 | PicPay | 大型（巴西金融科技公司） | Claude API（對話式 AI 金融服務） | ✅ | 2026-09-04 | 導入 Claude 處理銀行客服詢問，09-07 FF News 稱擴大為對話式 AI 金融服務；拉美市場首見具名金融科技採用案例，具體整合範疇未見報導 | 2026-09-07（首見 2026-09-04）|
 | Shopify | 頂尖 | Claude Code | ❓ | — | 執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節） | Google News/analyticsindiamag.com；Google News/The New Stack |
@@ -152,12 +157,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
 | Claude Code | 8 使用中（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price）+ 1 縮減中（Uber）+ 2 退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
-| Claude API | 29（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究 CRO 產業、金融科技銀行、大型 IT 服務商全球首要夥伴、加密貨幣基礎設施、教育機構訂閱方案、拉美金融科技客服、資產管理投資流程）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
+| Claude API | 31（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
 | Cursor | 1（Uber） | ⚠️ 新創份額下滑 | 成本管控困難；企業級功能不如 Claude Code |
 
-**採用企業清單（Claude API，29）**：Apple、KPMG、iCapital、哈佛、Fujitsu、Travelport、Nimble Gravity、ZoomInfo、LG Group、AppFolio、Salesforce Claude API、TCS、DXC Technology、Atlassian、JPMorgan Chase 美國本部、Charleston Hospitality Group、Notion、加州州政府、Globant、DataArt、Okta、Grasshopper Bank、Cognizant、ICON、Payward、Duke University、PicPay、T. Rowe Price
+**採用企業清單（Claude API，31）**：Apple、KPMG、iCapital、哈佛、Fujitsu、Travelport、Nimble Gravity、ZoomInfo、LG Group、AppFolio、Salesforce Claude API、TCS、DXC Technology、Atlassian、JPMorgan Chase 美國本部、Charleston Hospitality Group、Notion、加州州政府、Globant、DataArt、Okta、Grasshopper Bank、Cognizant、ICON、Payward、Duke University、PicPay、T. Rowe Price、Google、Rubrik（Code Guardian）
 
 ---
 
@@ -178,6 +183,10 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-15
+- **[新增具名企業，✅ 使用中] Business Insider：Google 開放全體工程師使用 Anthropic 的 Claude**：具體工具範疇（是否限 Claude Code）、部門、上線時程均未見報導細節，詳見上方使用現況表新增列（Google News/Business Insider）
+- **[既有企業新產品線] marketscreener.com：Rubrik 發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試**：既有 Claude Code agent（06-30）之外另一產品線，效能數字未見報導，詳見上方使用現況表新增列（Google News/marketscreener.com）
 
 #### 2026-09-10
 - **[新增具名企業，✅ 使用中] PR Newswire：T. Rowe Price 宣布擴大在投資流程中使用 Claude 與 Claude Code**：資產管理公司官方新聞稿宣布，marketscreener.com 同日獨立跟進報導；具體整合部門、規模、應用場景均未見細節，詳見上方使用現況表新增列（Google News/PR Newswire）

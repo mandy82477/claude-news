@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
 > **最新進展**（2026-09-01）
 > Fable 5.1 GA 發布並取代 5.0 成為現行旗艦：同價、快取讀取便宜 75%、知識截止晚 5 個月；Fable 5 轉為 Legacy，官方載明退役不早於 2027-06-09。
@@ -175,6 +175,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-09-15
+**Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：
+- 官方 10:50 UTC 標記 Monitoring（已部署修復並觀察中）、11:14 UTC 標記已解決（[Anthropic Status](https://status.claude.com/incidents/6304r9jjhj34)，2026-09-15）
+- 本次僅波及 Mythos 5.1 與 Fable 5.1 兩者，非全系列事件（與 09-03 那起涵蓋 Opus／Sonnet 全系列不同）；屬穩定性事件，非能力或存取政策變化；Mythos 面記錄見 [[entities/mythos]]
 
 #### 2026-09-11
 **社群觀感：Fable 5.1 在 Claude Code 中回應速度明顯變快（單一來源，無量化數據）**：r/ClaudeCode 使用者發文描述 Fable 5.1 相較先前世代「回應速度明顯變快」，特別針對 scope/mechanism 類任務的完成速度；原文未附具體測試方法、延遲數字或版本對照基準，屬單一使用者主觀觀感，非量化評測（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wdgwnj/is_it_just_me_or_is_fable_51_in_claude_code/)，2026-09-11 13:51 UTC，單一來源、score 恆 0）。

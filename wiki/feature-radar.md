@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-14
+**最後更新：** 2026-09-15
 
 > **這禮拜動了什麼**（2026-09-14）
 > 桌面版文件加了雲端 session 多 repo 掛載與 `disableMobileSimulatorTools` 旗標，都不是破壞性變更。真正該注意的是配額：+50% 加成 09-13 到期，09-14 起換成永久 +25%，相對加成期間淨減約 17%，官方文件當日已確認換軌如期發生。
@@ -64,6 +64,37 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Salesforce in Claude（beta）
+**發布：** 2026-09-15（Help Center release notes） | **狀態：** Beta
+
+**是什麼：** 官方外掛，把 Salesforce 的銷售機會、客戶帳號與 pipeline 資料整合進 Claude，可在對話中直接查詢與操作 CRM 資料。
+
+**為何熱：** 當日日報唯一新增外掛公告，僅 Help Center release notes 一個來源，尚無社群實測或官方部落格佐證；與既有 Salesforce 合作關係（見 [[topics/anthropic-business]]）屬同一夥伴關係下的使用者端產物。
+
+**快速上手：**
+```
+Claude 設定 > Connectors／外掛頁面啟用「Salesforce in Claude」，依畫面指示完成 Salesforce 帳號授權
+```
+
+**注意事項：** 官方原文對啟用門檻（方案限制、企業版或個人可用）未完整載明；同批 5 份文件同日移除 Claude for Excel／Microsoft 365／Outlook／PowerPoint／Word 段落，是否代表該批整合下架尚待官方佐證（見 [[entities/claude-code]]「現在還沒修好的」相關 ❓ 待查證條目）。
+
+### Claude Code 桌面版：`/resume` 接續 CLI session＋面板獨立視窗＋macOS computer use 範圍限縮
+**發布：** 2026-09-15（官方文件更新） | **狀態：** 正式發布
+
+**是什麼：** 三項桌面版變動：① Desktop 輸入 `/resume` 可接續既有 CLI session；② diff、終端機等面板可拉出成獨立視窗；③ macOS 上背景執行 computer use 時，Claude 只在已核准的 App 內作業，不再連帶隱藏螢幕上其他視窗（原行為會連帶隱藏，此為行為變更）。
+
+**為何熱：** 當日日報唯一技術更新，僅官方文件一個來源，尚無社群實測或官方部落格佐證，熱度暫列最低。
+
+**快速上手：**
+```
+# Desktop 輸入框：
+/resume
+
+# 面板拉出：拖曳 diff 或終端機面板標題列至螢幕外即可獨立成視窗
+```
+
+**注意事項：** 純文件更新，無對應版本號可核對；macOS 行為變更的生效版本未載明，實際體驗前建議自行查一次 [desktop.md](https://code.claude.com/docs/en/desktop.md)。
 
 ### Claude Code 桌面版：雲端 session 多 repo 掛載＋`disableMobileSimulatorTools`
 **發布：** 2026-09-14（官方文件更新） | **狀態：** 正式發布
@@ -190,6 +221,8 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
+| **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code 桌面版多 repo 掛載＋`disableMobileSimulatorTools`**（雲端 session 可掛多個 repo；旗標可封鎖 iOS 模擬器工具） | 2026-09-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Smart Reports**（Beta，團隊用量分析報表：使用狀況、完成工作與成本） | 2026-09-10 | 🔥 | ⏳ 觀望 | Beta |

@@ -177,3 +177,6 @@
 {"id": "H-9714c3", "opened": "2026-09-14", "from": "模型", "to": "功能", "page": "entities/claude-code", "note": "Claude Code vs AWS Kiro vs GitHub Copilot 定位比較（securityboulevard.com 2026-09-14）屬工具選型非模型能力，評估是否收進 claude-code.md 定位矩陣", "status": "open"}
 {"id": "H-57aa17", "opened": "2026-09-14", "from": "人物", "to": "投資分析", "page": "topics/market-signals", "note": "AI 類股因川普回絕減速呼籲／中國官媒批評應聲下跌（2026-09-14，Reuters／Yahoo），評估是否收錄為消息面判讀", "status": "open"}
 {"id": "H-57aa17", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "投資分析記者判定不符 market-signals 六類判準：政治表態非機關監管動作，AI 類股下跌屬產業情緒而非 Anthropic 可估算數字（未上市），與既有「只有表態、沒有後果不判讀」判例一致；事實留在人物頁與 anthropic-government-policy"}
+{"id": "H-dbbeeb", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：無 web 工具查證受影響版本/官方回應範圍，既有 09-14 記錄（Reddit 單一來源，已適當避險）維持不動，理由成立"}
+{"id": "H-3e4515", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：genoffice 沿用既有結論歸入官方-社群矩陣既有列（非新列）；hunter-community 屬垂直應用、無跨工具聚類佐證，未達新增矩陣列門檻"}
+{"id": "H-9714c3", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：claude-code.md 無定位矩陣結構可掛，工具選型比較慣例已路由至 topics/competitor-landscape（商業記者頁）；且僅一行摘要無法獨立查證比較內容，不新增結構"}

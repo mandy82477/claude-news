@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（現行次旗艦；前代 Opus 4.8 已列 Legacy）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-09-08
-**最後新聞更新：** 2026-09-03
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
 > **最新動態**（2026-09-03）
 > Opus 5 連同其他世代模型出現錯誤率升高，官方當日 13:41 UTC 鎖定原因、同日 16:16 UTC 標記已解決（2026-09-07 查證，status.claude.com）；屬平台穩定性事件，非能力或定價變化。
@@ -157,6 +157,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行，單一低知名度來源未經佐證 ❓待查證⟨Q-03⟩ |
 | 2026-09-03 | Anthropic 狀態頁：多款模型錯誤率升高，同日 16:16 UTC 已解決（2026-09-07 查證）|
 | 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 ❓待查證⟨Q-01⟩ |
 | 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路；同日另有回饋稱表達方式較 4.8 改善 |
@@ -172,6 +173,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 **歷史記錄細節**
 
+- ⟨Q-03⟩ ❓ **待查證**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-09-29）｜**單一部落格稱 Opus 5.2 秘密試行**：finance.biggo.com 稱回應更快、可自主迭代，並提及內部「RSI」模型；僅連結標記無內文，未見其他來源佐證（[Google News/finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTE5tWk9uLU5DQVVDRElYODFqdk9NQlR2d3VmSk52MHlGbXBSeG9sa1dZX3NkNS04WlQ0NXk0MGNkT2pDcFJiQy0wTXZQQzI1LXV3cE1PMG1wT25zcC1TTEx6LTgzZTJwX3Fwbm1PX1RRa3lMbF9yTnc?oc=5)，2026-09-15）
 - **2026-09-03**：Opus 5／4.8／4.6 與 Fable、Mythos 全系列同時錯誤率升高。官方 13:41 UTC 鎖定原因，**同日 16:16 UTC 標記已解決**（2026-09-07 查證）。屬穩定性事件，非能力或定價變化；跨模型完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w69016/claude_code_server_down_for_a_long_time_now_will/)，2026-09-03）
 
 - **2026-08-28**：Reddit r/ClaudeCode 質疑串「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」；單一使用者觀感回報，無量化數字佐證，延續 08-13、08-20 已記錄的社群觀感分歧模式（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）

@@ -6414,3 +6414,17 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **處置**：建 [[topics/claude-code-experimental]]，四階狀態機（出現在 build→有人談論→官方承認→出貨／移除），每階要證據，30 天零提及摺進靜默表；基線 2.1.272，回填十日差 27 個功能候選入第一階，`ENABLE_FUNCTION_HOOKS` 以 issue 本文為證據列第 3 階。新來源「Build Flags」每版至多一則；`scripts/build_flags_mentions.py` 對社群提及（首跑 25 個候選全部零提及，如實記）。使用者裁決：不直接進日報、要有頁、要有態度確認。
 - **歸因**：`user-query` 兩筆（探針、issue #91870），`data/source_attribution.jsonl` 已 append。
 
+
+## 2026-09-15 Ingest
+
+- 來源日報：[[news/2026-09-15]]
+- 更新頁面：entities/fable-5、entities/mythos、entities/opus-5、entities/claude-code、entities/jacob-coxon、topics/official-community-gap、topics/anthropic-business、topics/enterprise-tool-tracker、topics/competitor-landscape、topics/ai-talent-flow、topics/anthropic-government-policy、topics/ai-agent-safety、topics/recursive-self-improvement、topics/community-tech-discussions、feature-radar、index
+- 新增頁面：entities/jack-clark
+- 摘要：Anthropic 正式推出「Claude for Financial Advisors」，一日內獲至少 7 家財經媒體同步報導；資安業者 Rescana 揭露七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊；Anthropic 向投資人表示已連續第二季轉虧為盈，Futurism 質疑未計入模型訓練成本；共同創辦人 Jack Clark 向 BBC／NPR 表示 AI 緊急關閉開關或需強制、放緩開發是集體行動難題；前 Anthropic 研究員離職 AI 風險警告持續擴散（Guardian／CalMatters）；《The Information》報導開發者找方法在 Claude Code 中繞開 Anthropic 官方模型。
+- 呈現品質：全部通過（六記者機械自查皆一次通過；功能記者初稿因表格列超字元上限已自行重組修復）
+- 品質備註：[主編] feature-radar.md 新增的 2 則表格列一度超 120 字元上限，已縮短文案修復，非記者責任
+- 交叉核對略過項目：商業記者判定 Claude for Financial Advisors 之 7 篇財經媒體報導為同一事件，只在 anthropic-business.md 記一次；安全政策與人物記者對同一波「前 Anthropic 研究員離職警告」報導群（Guardian／CalMatters／CNN／NPR／BBC）依角色分工各記自己面向，避免重複；安全政策記者判定「Irregular 為駭客醜聞幕後黑手」一系列 HN 討論（effort.news／Twitter ×2）為單一部落格＋意識形態色彩重述舊事，核對既有 2026-08-09 記錄後不採信、未寫入
+- 分類回退：追加派工 0 筆／已由原輪雙重分類記者處理 3 筆（Bloomberg「OpenAI 與 Anthropic／Google 談 AI 安全」已由安全政策記者原輪處理；TechCrunch「早期 Anthropic 員工＋前 METR COO 創業」已由安全政策記者原輪處理；CalMatters「CalPERS 對 Coxon 一案的迴響」已由安全政策記者原輪判斷不新增條目）
+- 轉知帳本：void 3 筆（H-dbbeeb／H-3e4515／H-9714c3，功能記者評估後理由成立，詳見各筆 `--result`）
+- devpractice 沉澱：候選 1 筆（entities/claude-code：Function Hooks 正式更名「Claude Mods」，官方承諾數週內出貨並公開三款內建 mod 原始碼）；基準線 a403e9f→5ae4232
+- market 判讀：本日無訊號（已檢視 73 則全條目；最接近門檻者為「Claude for Financial Advisors」與 Schwab 獨家 RIA 通路，惟費率／合約金額未見報導，未達「帶金額」門檻，且 Schwab／Orion 導入本體已於 09-14 記錄，非新資訊）

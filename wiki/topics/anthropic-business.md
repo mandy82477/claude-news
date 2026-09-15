@@ -27,13 +27,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
-> **最新動態**（2026-09-14）
-> - **Charles Schwab、Orion 同日宣布導入 Claude，鎖定 RIA 通路**：跨入金融顧問市場，同日傳籌備個人理財工具「Claude Money」，詳見下方「其餘合作」。
-> - **Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，HN 討論質疑「不計訓練成本的獲利」意涵有限，見 [[topics/anthropic-business#現在的數字]]。
-> - **Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用**：跨類別事件，安全政策面見 [[topics/ai-agent-safety]]。
+> **最新動態**（2026-09-15）
+> - **Anthropic 正式推出「Claude for Financial Advisors」，Schwab 為（暫時性）獨家 RIA 通路夥伴**：至少 7 家財經媒體同步報導，分析師對 Schwab 卡位效果意見分歧，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
+> - **「連續第二季獲利」說法遭 Futurism 跟進批評未計入模型開發成本**：與 09-14 已記錄之 HN 討論同一角度，非新增數字，見 [[topics/anthropic-business#這些數字是誰說的]]。
 
 ---
 
@@ -191,6 +190,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 訊號 | 說明 | 來源 | 來源等級 |
 |------|------|------|------|
+| Futurism：獲利宣稱「未計入模型開發成本」 | 評論文章，與 09-14 已記錄之 HN 討論同一批評角度，非新增數字 | Google News/Futurism，2026-09-15 | 一級媒體 |
 | Anthropic 啟動 500 萬美元身心福祉評測獎助計畫 | 官方部落格：資助獨立研究團隊開發開源評測工具，衡量 AI 對使用者身心福祉的影響 | [Anthropic Blog](https://www.anthropic.com/news/wellbeing-research-grants)，2026-08-26 | 官方一手 |
 | CNBC：Anthropic 超越 OpenAI 成最熱門 AI 新創 | 分析相應股市贏家輸家；與同日 The Information 報導方向一致 | Google News/CNBC，2026-08-19 | 一級媒體 |
 | The Information：Anthropic 營收領先幅度仍在擴大 | OpenAI 安全政策面追上，但營收差距持續擴大 | Google News/The Information，2026-08-19 | 一級媒體 |
@@ -307,7 +307,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
 - **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費方式與上線時間未見報導（MacRumors／HN 188 分）
-- **Charles Schwab／Orion**（2026-09-14）：兩家財務顧問平台同日宣布導入 Claude，鎖定獨立註冊投資顧問（RIA）通路，合約條件與費率未見報導（Bloomberg／Business Wire／Yahoo Finance）
+- **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）
 - **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
 - **LoanPro**（2026-09-09）：貸款管理平台採用建構在 AWS 與 Claude 上的 AI 原生客服介面，客服通話時間最多縮短 15%，具體導入規模未見報導（citybiz）
 - **Fluidstack**（2026-09-07）：主導 Anthropic 一筆 500 億美元的算力建置案，詳見下方細節（AI Magazine）
@@ -493,6 +493,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-15
+- **[戰略合作] Reuters 等 7+ 家財經媒體：Anthropic 定名並推出「Claude for Financial Advisors」**：延續 09-14 記錄之 Schwab／Orion 導入，詳見「哪個合作」清單 Schwab／Orion 條目（FF News、InvestmentNews、AdvisorHub 等跟進）
+- **[分析評論] RIABiz：分析師對 Schwab 卡位效果意見分歧**：一派稱藉獨家合作卡位 RIA 通路「AI 駕駛座」，另一派批評方案通用、進場不算早，費率與合約期限未見報導（Google News/RIABiz）
+- **[財務狀況，非新增數字] Futurism：批評「連續第二季獲利」說法未計入模型開發成本**：與 09-14 已記錄之 HN 討論同一批評角度，詳見「這些數字是誰說的」表新增列（Google News/Futurism）
 
 #### 2026-09-14
 - **[財務狀況] Reuters 引 FT：Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，詳見「現在的數字」表「獲利」列更新；HN 討論質疑「不計訓練成本的獲利」意涵有限（Hacker News／Google News/Reuters）

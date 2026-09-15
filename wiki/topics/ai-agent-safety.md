@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
-> **最新安全事件**（2026-09-14）
-> Rescana 揭露攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證，待查證（詳見「## 技術彙整」）。
+> **最新安全事件**（2026-09-15）
+> 資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息，暴露白名單機制落差，詳見 [[topics/ai-agent-safety#技術彙整]]。
 
 ---
 
@@ -109,6 +109,28 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Reddit／r/ClaudeAI：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息（2026-09-15 新增）
+
+- **揭露來源**：Reddit r/ClaudeAI〈Opus 5 is flagging all my messages even though I'm in the CVP〉（原始貼文，來源標記無「週熱門」，score 不可信）
+- **核心內容**：一名資安研究者稱本人已通過 Anthropic 的 Cyber Verification Program（CVP）白名單審核，但 Opus 5 仍持續標記其研究相關訊息；未提供官方回應
+- **性質判斷**：屬產品層安全（誤攔／過度審查），非攻擊事件——呼應本頁「模型層安全≠產品層安全」框架，本則呈現分類器誤判合法白名單使用者的落差，與 [[topics/anthropic-government-policy]] 07-02 已記錄的 Fable 5 高風險請求誤攔案例性質相近
+- ❓ **待查證**（標 2026-09-15｜查 Cyber Verification Program）：CVP 白名單生效範圍、誤攔是否為已知限制、官方申訴或修復管道均未見報導
+- **可信度評估**：單一 Reddit 貼文，無「週熱門」標記，score 不可信；未見其他研究者附議或官方回應，非攻擊面，不列入「## 現在還擋不住的攻擊」表
+
+### SitePoint：TypeScript 中防範 AI Agent Context Injection 教學（2026-09-15 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：SitePoint（經 Google News 轉載，僅標題可用）
+- **核心內容**：教學文章示範如何在 TypeScript 中防範 AI agent 的 context injection（情境注入）攻擊；未指名特定廠商或 Claude Code
+- **性質判斷**：屬本頁「提示注入已不是單點漏洞，是產業級攻擊面」既有敘事的社群教育側面；本頁對提示注入另有定向補抓，收錄不套用 Claude/Anthropic 關聯門檻
+- **可信度評估**：僅標題可用，具體防護手法未見報導
+
+### TechCrunch：Anthropic 早期員工與前 METR COO 創業，開發約束失控 AI agent 方案（2026-09-15 新增）
+
+- **揭露來源**：TechCrunch（經 Google News 轉載，僅標題可用）
+- **核心內容**：一位 Anthropic 早期員工與前 METR（AI 模型評測機構）COO 共同創業，開發約束失控 AI agent 行為的技術方案；具體技術機制、產品名稱與是否已有客戶均未見報導
+- **性質判斷**：屬「## 拿什麼擋」既有社群/產業工具清單的潛在新成員，惟僅標題可用、無法指名其擋上表哪一列，暫不列入，僅記錄為產業動態
+- **可信度評估**：僅標題可用，公司名稱與技術路線均未見報導
 
 ### Rescana 揭露攻擊鏈：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證（2026-09-14 新增）
 
@@ -809,6 +831,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
 > **中美 AI 工具信任對峙**（06-30～07-10：中國代理偵測程式碼、隱寫術指控、Alibaba/Meta 禁用、中國官方後門警示、Anthropic 首度否認）完整逐日時序已整合至 [[topics/safety-china-trust-dispute]]，此處不再重複條目，僅保留與本頁漏洞/提示注入主線相關者。
+
+### 2026-09-15
+- **[❓ 待查證，新增] Reddit：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息**：單一貼文，CVP 機制細節未見報導，詳見「## 技術彙整」
+- **[🌐 跨類別，新增] SitePoint：TypeScript 中防範 AI Agent Context Injection 教學**：通用防護教學，非 Claude 專屬，詳見「## 技術彙整」
+- **[🟡 產業對照，新增] TechCrunch：Anthropic 早期員工與前 METR COO 創業，開發約束失控 agent 方案**：僅標題可用，詳見「## 技術彙整」
 
 ### 2026-09-14
 - **[🔴 新增] Rescana：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證**：資安業者揭露具體攻擊鏈，惟正文技術細節未見報導，詳見「## 技術彙整」

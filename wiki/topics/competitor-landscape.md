@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
-> **本週衝擊**（2026-09-13）
+> **本週衝擊**（2026-09-15）
 > - 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。
+> - 🔴 **Copilot 加碼「省錢還是求品質」手動三檔**：效率／平衡／智慧可調（09-14，GitHub 官方 changelog），延續 08-17 終結無限量方案的控成本故事——先不必換，但你的預算決策會想知道這個新旋鈕。
 > - 🔴 **價格戰打到產品層**：Meta Muse Code 結束 beta、推三層訂閱主打低價（09-01）——但月費沒公布，想比價還比不了，先別急著算換算成本。
-> - 🟡 **Cursor 可能更依賴 Claude**：OpenAI 傳 11/12 斷供 Cursor（09-04，單一 Reddit 討論串）——你如果在用 Cursor，值得留意它的模型來源會不會換；用 Claude Code 的人這週不必動。
 
 ---
 
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查大減（09-13）→ 首見官方自曝的自主 agentic 信任案例，直指 Claude Code 定位 | 能力 | 🔴 | OpenAI 官方部落格單一客戶案例，無第三方驗證或量化數字 |
-| **Microsoft／GitHub** 🏢 | Copilot 終結「無限量」方案（08-17）；HydraFusion 多數基準降本、品質僅一項打平（09-04）→ 降本宣稱要先問品質在哪個基準測的 | 定價 | 🔴 | VentureBeat 標題層級，降幅數字與是否產品化均未見；自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
+| **Microsoft／GitHub** 🏢 | Copilot 終結「無限量」方案（08-17）；新增效率／平衡／智慧三檔手動控制成本與品質（09-14）→ 使用者現在能自己選省錢還是求品質，不再靠廠商黑箱調度 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率未載 ❓ 待查證 ⟨Q-01⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
@@ -211,6 +211,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-15
+- **Microsoft／GitHub**：Copilot auto model selection 新增效率／平衡／智慧三檔，讓使用者自訂成本與品質取捨；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Meta（Meta One）**：官方發布新訂閱服務 Meta One，整合更多功能與 AI 能力，定位為一般消費訂閱而非編碼工具，與 Muse Code 為不同產品線（Blog/Meta Newsroom）
 
 ### 2026-09-13
 - **OpenAI（透過 Perplexity 案例）**：Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查頻率大減；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）

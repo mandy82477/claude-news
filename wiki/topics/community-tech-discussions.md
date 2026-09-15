@@ -27,8 +27,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
 > **最熱討論**（2026-09-14）
 > 「換到開源模型的代價是不是接近零」再添一則獨立案例：開發者分享把 35KB preprompt 從 Opus 遷移到自架 Ollama 的踩雷筆記與資料隱私考量（HN 59 分）。
@@ -265,6 +265,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Migration from Claude Code to a private local harness. Questions.（2026-09-13）
+
+- **來源：** Reddit / r/LocalLLaMA（週熱門）；[原文](https://www.reddit.com/r/LocalLLaMA/comments/1wfcewd/migration_from_claude_code_to_a_private_local/)
+- **核心論點：** 使用者評估把工作流從 Claude Code 遷移到自架本地 harness，明言「並非談模型本身的智慧程度，本地模型目前追不上 Fable 這類模型」，遷移動機是特定情境下的架構取捨（工具鏈／掌控權，非能力對比）
+- **關鍵回響：**（本次摘要未提供留言區細節，暫無可記錄項目）
+- **收斂結論：**（無）單一 Reddit 貼文（週熱門標記，score 不可信因 RSS 抓取），尚無跨平台佐證；與本頁「換到開源模型的代價是不是接近零」同屬「遷出 Anthropic」軸線，惟本則聚焦 harness／工具鏈遷移，明確排除模型能力對比角度
 
 #### Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama（2026-09-14）
 

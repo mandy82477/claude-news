@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（待核實）
 **領域：** 👤 人物
 **首次出現：** 2026-09-09
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
 > ❓ **待查證**（標 2026-09-09｜查 Coxon、hilbertspaess）｜**辭去 Anthropic 職務並公開批評兩家公司「不負責任」**（2026-09-09 報導）：Jacob Coxon 於 X 發文稱已辭去 Anthropic 職務，自述曾任 OpenAI／Anthropic pretraining 研究員三年，指控兩家公司「不負責任地衝向自我改進超級智能」；其過往資歷未見獨立媒體查證，HN 讀者對其資歷提出質疑。
 
-> **最新報導**（2026-09-11）
-> Coxon 是本波離職警告中唯一具名者，其他報導身分多為推論。事件經過見 [[topics/recursive-self-improvement]]；其資歷未經獨立查證，引用時應標「自述」。
+> **最新報導**（2026-09-15）
+> CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論（僅標題可用）。Coxon 是本波離職警告中唯一具名者，其他報導身分多為推論；事件經過見 [[topics/recursive-self-improvement]]，其資歷未經獨立查證，引用時應標「自述」。
 
 ---
 
@@ -61,6 +61,8 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 另有 Hugging Face 執行長於 Business Insider 報導（2026-09-11，僅標題可用）評論一名 Anthropic 研究員的 AI 風險警告，比喻為「問空調師傅氣候變遷」（Like asking your AC guy about climate change），暗示質疑其專業代表性；報導未點名對象，研判與本波辭職／警告報導相關，惟未經證實。
 
+❓ **待查證**（標 2026-09-15｜查 doomsday warning、broke through）｜**Guardian 分析「這波 AI 末日警告為何破圈」，未具名研究員**（2026-09-15 報導）：The Guardian 分析一名前 Anthropic 研究員的離職 AI 風險警告為何在「AI doomsday」討論中特別「破圈」；CalMatters 同日跟進報導此事在加州公務員退休基金（CalPERS）內部引發的迴響。兩則均未具名，情節與本人（HN 623 分、逾十家媒體跟進）高度吻合但未經證實，亦可能指 [[entities/evan-hubinger]]、[[entities/joe-benton]]、[[entities/josh-engels]] 等同波表態者之一。
+
 ❓ **待查證**（標 2026-09-12｜查 we may not survive this、ESG Dive｜訊 2026-09-13）｜**「又一名」離職報導是否指本人或另一起獨立事件**（2026-09-12 報導）：Times of India 以「又一名 Anthropic 員工」提出「我們可能撐不過這個」警告後離職為題、ESG Dive 同日以此辭職事件檢視 AI 公司 IPO 治理疑慮跟進報導；兩則均未具名，無法確認是否即為本人（Coxon）的後續延燒，或另一起獨立辭職個案。**後續（2026-09-13）：** BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」（原文僅標題可用），與本則、與本人是否同一人仍無法確認。
 
 ## 相關議題
@@ -85,9 +87,12 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 - ['We may not survive this': Another Anthropic employee quits with stark AI warning](https://news.google.com/rss/articles/CBMi5gFBVV95cUxPSXNISklTTWRnRGpRMGJTR1M3SnRLaUNwbTh1QnE4LTU1Tk8yZzhKRnVVTkh3TXdYSDFzZTk0ZE9XQXJLOVVqMFFSVWNoNEFFRmJmS2VrdXZqYkFDTFRnQmk0OWdLcjZkZG5yc1hobk?oc=5) — Google News / The Times of India，2026-09-12（僅標題可用）
 - [Anthropic researcher's resignation highlights governance concerns for AI firms' IPOs](https://news.google.com/rss/articles/CBMisAFBVV95cUxNbEhCZG1VUm1abnJFdHA1NUFUbE5od0c1akNXc01KTlNMQWRwblM4YjEwb0h3bUdFYUQwTlg5VDhnbkNuQk1va05zZjUtejA4NTZidThyc2huOUhfREtBYXE0QkZRQnN2ZV9OdGZxbnBfVzhiRXlnWFFONlgybnFVS2pEdDVfOE5mRjNkMnhnaENoVVVtWUlmTHdfa0FoMmJpczAzWWZ2UTRNMzVHNlpKMQ?oc=5) — ESG Dive（經 Google News），2026-09-11（僅標題可用）
 - [Hugging Face CEO on Anthropic researcher's AI warning: 'Like asking your AC guy about climate change'](https://news.google.com/rss/articles/CBMikAFBVV95cUxNUzFCUmNvWE5fZ21VMHNUOXY1NmVWUmlMMVV4eVI4Z0IxYmZ4RjdpSk1OMXlmWkduZnVUc0YwNFlUMWh6Vnc0SUh5RzBiRTFtUDlPcFBwQkJlc2dqNVh1WUREQVU2Y2pVTnBlWW95YV) — Google News / Business Insider，2026-09-11（僅標題可用）
+- [AI researcher Jacob Coxon reacts to Anderson Cooper's interview with Anthropic CEO Dario Amodei](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqeDR6T3k4dF9HZjA5aFJPc1NHUXpvM1J1ZnA2UDgtRkhfbXdfRXJFbDVWRXpvaTFwNVBabzY3VU51ZmtSNm9JQjNtcXlIak9id20yeGxDc1NwM2EtTmNGZ3NkV2dneHds?oc=5) — Google News／CNN，2026-09-15（僅標題可用）
+- [Why this AI doomsday warning from former Anthropic researcher broke through](https://news.google.com/rss/articles/CBMikgFBVV95cUxNal9ETWZpRkdzdzEwSmpRcWdsVVFsaldpR0E5WXFma3BMOFJBSTRDQlE4SlcyTHl5UzNuekhEMzdiVVp0RGN6NDVOYk5XeGFnQmFWTFFMcTllSzI1d25uWnhrR3lURk1MZ2lfcldzYUZvNjZmdFY3Y2x6OW9mQjdXNGRSVGlGOFFrOGpPS2dCdnNDQQ?oc=5) — Google News／theguardian.com，2026-09-15（未具名，僅標題可用；同日 CalMatters 跟進報導 CalPERS 內部迴響，未經證實是否指本人）
 
 ## 歷史記錄
 
+- 2026-09-15：CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論；專訪本身內容未載，僅標題可用（來源：CNN，經 Google News；Amodei 背景見 [[entities/dario-amodei]]）
 - 2026-09-13：BBC 報導一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」；原文未具名、僅標題可用，與 09-12 個案或本人是否同一人仍無法確認（來源：Google News／BBC）
 - 2026-09-12：Times of India、ESG Dive 同日跟進報導；前者稱「又一名 Anthropic 員工」提出 AI 警告後離職，後者以此辭職事件檢視 AI 公司 IPO 前公司治理疑慮；均未具名，是否即本人或另一起獨立事件仍未能確認
 - 2026-09-11：Hugging Face 執行長於 Business Insider 評論一名 Anthropic 研究員的 AI 警告，比喻「問空調師傅氣候變遷」，暗示質疑其專業代表性（報導未點名對象，僅標題可用）
