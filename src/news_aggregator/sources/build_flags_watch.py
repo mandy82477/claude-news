@@ -77,20 +77,32 @@ MAX_LISTED = 40  # keep the digest line readable; the ledger has the full diff
 
 
 def extract_flags(data: bytes) -> set[str]:
-    return clean_flags({m.group(0).decode("ascii") for m in FLAG_RE.finditer(data)})
+    counts: dict[str, int] = {}
+    for m in FLAG_RE.finditer(data):
+        name = m.group(0).decode("ascii")
+        counts[name] = counts.get(name, 0) + 1
+    return clean_flags(counts)
 
 
-def clean_flags(raw: set[str]) -> set[str]:
+def clean_flags(counts: dict[str, int]) -> set[str]:
     """Drop byte glue. The regex is greedy, so `..._MINUTES` followed by the byte `0`
-    comes out as `..._MINUTES0`; `..._SESSION_` is a prefix cut mid-name. Rule: a name
-    ending in `_` is not a flag; a name that equals another name + 1..MAX_GLUE chars,
-    where the extra part does not start with `_`, is glue (the shorter real name
-    survives). `POST_TURN_MEMORY` vs `POST_TURN_MEMORY_SYNC` is kept — the suffix starts
-    with `_`, which is how real sub-flags are spelled. (review 2026-09-16, P1-1)
+    comes out as `..._MINUTES0`; `..._SESSION_` is a prefix cut mid-name.
+
+    Rules: a name ending in `_` is not a flag. A name that equals another name +
+    1..MAX_GLUE chars (extra part not starting with `_`) is glue **only if it occurs
+    exactly once** — a real flag is referenced from several places in the binary
+    (accessor, reader, string table; median 4 in a real build), glue is a one-off byte
+    accident. Without the count, `BASE_REFS` (a real flag, 4 occurrences) would be
+    deleted because `BASE_REF` exists (review 2026-09-16 round 2, verified against the
+    installed win32 binary: 10/10 glue caught, 0 real flags lost).
+    `POST_TURN_MEMORY` vs `POST_TURN_MEMORY_SYNC` is kept regardless — the suffix
+    starts with `_`, which is how real sub-flags are spelled. (review round 1, P1-1)
     """
-    names = {f for f in raw if not f.endswith("_")}
+    names = {f for f in counts if not f.endswith("_")}
     glued = set()
     for f in names:
+        if counts.get(f, 0) != 1:
+            continue
         for cut in range(1, MAX_GLUE + 1):
             base, extra = f[:-cut], f[-cut:]
             if base in names and not extra.startswith("_") and not base.endswith("_"):

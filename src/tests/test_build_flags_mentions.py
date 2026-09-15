@@ -51,6 +51,22 @@ class TestFlagsOnPage(unittest.TestCase):
         self.assertEqual(mod.flags_on_page(reordered),
                          ["CLAUDE_CODE_POST_TURN_MEMORY", "CLAUDE_CODE_AUTO_MODE_SERVER"])
 
+    def test_blank_line_inside_table_does_not_truncate(self):
+        """P2-A：記者分節手滑插空行，不能只對帳到空行前。"""
+        split = PAGE.replace("| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.272 | 1 |",
+                             "\n| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.272 | 1 |")
+        self.assertEqual(mod.flags_on_page(split),
+                         ["CLAUDE_CODE_POST_TURN_MEMORY", "CLAUDE_CODE_AUTO_MODE_SERVER"])
+
+    def test_non_numeric_stage_is_an_error_not_silence(self):
+        """P2-A：階欄寫成「1（新）」「1→2」不可靜默跳過，要點名。"""
+        for bad in ("1（新）", "1→2", "第 1 階"):
+            page = PAGE.replace("| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.272 | 1 |",
+                                f"| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.272 | {bad} |")
+            with self.assertRaises(mod.PageFormatError) as cm:
+                mod.flags_on_page(page)
+            self.assertIn("CLAUDE_CODE_POST_TURN_MEMORY", str(cm.exception))
+
     def test_missing_stage_column_is_an_error_not_silence(self):
         broken = PAGE.replace("| 旗標 | 首見 | 階 |", "| 旗標 | 首見 | 狀態 |")
         with self.assertRaises(mod.PageFormatError):

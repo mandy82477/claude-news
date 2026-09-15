@@ -43,8 +43,13 @@ def _cells(line: str) -> list[str]:
     return [c.strip() for c in line.strip().strip("|").split("|")]
 
 
-def flags_on_page(text: str) -> list[str]:
-    """追蹤表裡階欄為 1／2 的旗標。以表頭定位欄位；表頭缺欄或整頁無表 → PageFormatError。"""
+VALID_STAGES = ("1", "2", "3", "4")
+
+
+def parse_table(text: str) -> list[tuple[str, str]]:
+    """追蹤表所有列 → [(旗標, 階)]。以表頭定位欄位；空行不結束表（記者分節手滑常見），
+    第一個非空、非 `|` 的行才結束。階欄必須是 1–4 單一數字（`features/pages.md` 契約）；
+    任何一列不是 → PageFormatError 並點名，不靜默跳過（review 2026-09-16 round 2，P2-A）。"""
     lines = text.splitlines()
     header_i = flag_col = stage_col = None
     for i, line in enumerate(lines):
@@ -56,17 +61,37 @@ def flags_on_page(text: str) -> list[str]:
             break
     if header_i is None:
         raise PageFormatError("追蹤表找不到：沒有同時含「旗標」與「階」兩欄的表頭")
-    out: list[str] = []
+    rows: list[tuple[str, str]] = []
+    bad: list[str] = []
     for line in lines[header_i + 1:]:
+        if not line.strip():
+            continue                      # 空行不結束表
         if not line.startswith("|"):
-            break  # 表結束
+            break                         # 表結束
         cells = _cells(line)
-        if len(cells) <= max(flag_col, stage_col) or set(cells[0]) <= {"-", ":"}:
-            continue  # 分隔列或殘列
-        if cells[stage_col] in STAGES_TO_CHECK:
-            m = FLAG_RE.search(cells[flag_col])
-            if m and m.group(0) not in out:
-                out.append(m.group(0))
+        if set(cells[0]) <= {"-", ":"}:
+            continue                      # 分隔列
+        if len(cells) <= max(flag_col, stage_col):
+            bad.append(line.strip()[:60]); continue
+        m = FLAG_RE.search(cells[flag_col])
+        stage = cells[stage_col]
+        if not m:
+            bad.append(line.strip()[:60]); continue
+        if stage not in VALID_STAGES:
+            bad.append(f"{m.group(0)}：階欄「{stage}」不是 1–4 單一數字"); continue
+        rows.append((m.group(0), stage))
+    if bad:
+        raise PageFormatError("有列無法辨識（階欄要 1–4 單一數字，備註寫別欄）：" + "；".join(bad[:5])
+                              + (f"…共 {len(bad)} 列" if len(bad) > 5 else ""))
+    return rows
+
+
+def flags_on_page(text: str) -> list[str]:
+    """追蹤表裡階欄為 1／2 的旗標（去重、保序）。"""
+    out: list[str] = []
+    for flag, stage in parse_table(text):
+        if stage in STAGES_TO_CHECK and flag not in out:
+            out.append(flag)
     return out
 
 
@@ -143,10 +168,15 @@ def main(argv: list[str] | None = None) -> int:
             print(f"頁面不存在：{args.page}")
             return 2
         try:
-            flags = flags_on_page(args.page.read_text(encoding="utf-8"))
+            rows = parse_table(args.page.read_text(encoding="utf-8"))
         except PageFormatError as e:
-            print(f"表格解析失敗：{e}。頁面格式變了——修頁的表頭（需含「旗標」「階」兩欄）或修本腳本，不要當成「沒有旗標」。")
+            print(f"表格解析失敗：{e}。頁面格式變了——修頁（表頭需含「旗標」「階」兩欄，階欄 1–4 單一數字）或修本腳本，不要當成「沒有旗標」。")
             return 2
+        flags = []
+        for flag, stage in rows:
+            if stage in STAGES_TO_CHECK and flag not in flags:
+                flags.append(flag)
+        print(f"追蹤表 {len(rows)} 列，第 1／2 階 {len(flags)} 個")
         if not flags:
             print("頁上沒有第 1／2 階的旗標（表格解析正常），本輪無需對帳。")
             return 0

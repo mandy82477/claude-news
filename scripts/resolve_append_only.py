@@ -31,6 +31,7 @@ APPEND_ONLY = {
     "data/pending-signals.jsonl",
     "weekly/open-signals.jsonl",
     "src/logs/task_scheduler.log",
+    "data/build_flags_history.jsonl",
 }
 
 

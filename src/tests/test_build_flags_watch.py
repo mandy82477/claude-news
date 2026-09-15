@@ -47,21 +47,32 @@ class TestCleanFlags(unittest.TestCase):
                          {"CLAUDE_CODE_ENABLE_FUNCTION_HOOKS", "CLAUDE_CODE_POST_TURN_MEMORY_SYNC"})
 
     def test_byte_glue_is_dropped_but_real_subflags_survive(self):
-        """P1-1：`MINUTES0`、`BASE_URLI`、`SESSION_` 是黏字；`POST_TURN_MEMORY_SYNC` 是真子旗標。"""
-        raw = {"CLAUDE_CODE_GOAL_CHECKIN_MINUTES", "CLAUDE_CODE_GOAL_CHECKIN_MINUTES0",
-               "CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL", "CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URLI",
-               "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS", "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMSV",
-               "CLAUDE_CODE_SESSION_", "CLAUDE_CODE_SESSION_ID",
-               "CLAUDE_CODE_POST_TURN_MEMORY", "CLAUDE_CODE_POST_TURN_MEMORY_SYNC",
-               "CLAUDE_CODE_BASE_REF", "CLAUDE_CODE_BASE_REFS"}
-        self.assertEqual(bf.clean_flags(raw), {
+        """P1-1：`MINUTES0`、`BASE_URLI`、`SESSION_` 是黏字（各只出現 1 次）；
+        `POST_TURN_MEMORY_SYNC` 是真子旗標（以 `_` 起頭）；`BASE_REFS` 出現 4 次是真旗標
+        （第二輪 review 用真二進位證實，不可因 `BASE_REF` 存在就刪）。"""
+        counts = {"CLAUDE_CODE_GOAL_CHECKIN_MINUTES": 5, "CLAUDE_CODE_GOAL_CHECKIN_MINUTES0": 1,
+                  "CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL": 3, "CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URLI": 1,
+                  "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": 6, "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMSV": 1,
+                  "CLAUDE_CODE_SESSION_": 115, "CLAUDE_CODE_SESSION_ID": 9,
+                  "CLAUDE_CODE_POST_TURN_MEMORY": 4, "CLAUDE_CODE_POST_TURN_MEMORY_SYNC": 2,
+                  "CLAUDE_CODE_BASE_REF": 4, "CLAUDE_CODE_BASE_REFS": 4}
+        self.assertEqual(bf.clean_flags(counts), {
             "CLAUDE_CODE_GOAL_CHECKIN_MINUTES", "CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL",
             "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS", "CLAUDE_CODE_SESSION_ID",
             "CLAUDE_CODE_POST_TURN_MEMORY", "CLAUDE_CODE_POST_TURN_MEMORY_SYNC",
-            "CLAUDE_CODE_BASE_REF"})
+            "CLAUDE_CODE_BASE_REF", "CLAUDE_CODE_BASE_REFS"})
+
+    def test_glue_shape_with_multiple_occurrences_is_a_real_flag(self):
+        """出現 ≥2 次就不是黏字，即使形狀像。"""
+        self.assertEqual(bf.clean_flags({"CLAUDE_CODE_BASE_REF": 4, "CLAUDE_CODE_BASE_REFS": 2}),
+                         {"CLAUDE_CODE_BASE_REF", "CLAUDE_CODE_BASE_REFS"})
 
     def test_glue_only_when_the_base_exists(self):
-        self.assertEqual(bf.clean_flags({"CLAUDE_CODE_ARTIFACT_MCP6"}), {"CLAUDE_CODE_ARTIFACT_MCP6"})
+        self.assertEqual(bf.clean_flags({"CLAUDE_CODE_ARTIFACT_MCP6": 1}), {"CLAUDE_CODE_ARTIFACT_MCP6"})
+
+    def test_extract_counts_occurrences_from_bytes(self):
+        data = b'"CLAUDE_CODE_BASE_REF"\x00a.CLAUDE_CODE_BASE_REFS\x00"CLAUDE_CODE_BASE_REFS"\x00CLAUDE_CODE_BASE_REFX\x01'
+        self.assertEqual(bf.extract_flags(data), {"CLAUDE_CODE_BASE_REF", "CLAUDE_CODE_BASE_REFS"})
 
 
 class TestPlumbing(unittest.TestCase):
