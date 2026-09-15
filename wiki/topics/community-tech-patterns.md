@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-13"
-last_news_update: "2026-09-13"
+last_updated: "2026-09-14"
+last_news_update: "2026-09-14"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
-> **最新工作流模式**（2026-09-13）
-> proliferate-ai/proliferate 加入 Multi-agent 架構：開源 AI IDE 可平行執行 Claude Code／Codex／OpenCode，本機或雲端皆可、支援可複用工作流程（500 星）。
+> **最新工作流模式**（2026-09-14）
+> genspark-ai/genoffice 加入創作工具整合：開源 AI Office 套件，CLI 與 agent skill 讓 Claude Code／Codex／Cursor 直接讀寫本機 .docx/.xlsx/.pptx（6,774 星，forks 899、近日仍有 commit）。
 
 ---
 
@@ -50,7 +50,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca、proliferate（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-13 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-14 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
@@ -160,6 +160,24 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### genspark-ai/genoffice：開源 AI Office 套件，CLI 與 agent skill 讓 Claude Code／Codex／Cursor 直接讀寫本機 .docx/.xlsx/.pptx（2026-09-14）
+
+- **主線：** —
+- **核心模式：** 開源 AI Office 套件，內建 Docs、Sheets、Slides、PDF、Markdown／HTML 編輯器與 AI agent；另提供 `genoffice` CLI 與 agent skill，讓 Claude Code、Codex、Cursor 直接讀寫本機 .docx/.xlsx/.pptx，支援三大作業系統
+- **與既有模式的關係：** 本表既有類別皆未鎖定「本機辦公文件格式讀寫」這個具體應用面——與「創意工具 Agent 整合」（Palmier Pro、oh-story-claudecode）相近但服務對象不同（辦公文件 vs 創作內容），暫不併入既有列，留待第二個同類實作出現再判斷是否需要新類別（推論）
+- **可信度註記：** 星速偵測收錄（6,774 星、forks 899，約星數 13%，符合防刷門檻），近日仍有 commit（2026-09-14），跨 2 來源；功能清單為專案自述
+- **來源：** GitHub Search；[GitHub](https://github.com/genspark-ai/genoffice)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### agentpit-io/hunter-community：開源可自架個人金融 AI 團隊框架，結合 opencode／Claude Code／MCP，標榜 15 分鐘 Docker 部署（2026-09-14）
+
+- **主線：** —
+- **核心模式：** 開源、可自架的個人金融 AI 團隊框架，結合 opencode、Claude Code 與 MCP 的多代理架構，標榜 15 分鐘內可用 Docker 完成部署
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「垂直領域（個人金融）多代理團隊」取向的實作——既有代表技巧（Claude Squad、ccteams、OtoDock、omnigent、avibe、ccteam、orca、proliferate）多為通用開發用途，本則把 orchestrator 分派模式套進單一金融決策領域並強調快速自架
+- **可信度註記：** 星速偵測收錄（509 星，forks 57，約星數 11%，符合防刷門檻），近日仍有 commit（2026-09-15）
+- **來源：** GitHub Search；[GitHub](https://github.com/agentpit-io/hunter-community)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### proliferate-ai/proliferate：開源 AI IDE，平行執行 Claude Code／Codex／OpenCode 等 agent 並組成可複用工作流程（2026-09-13）
 

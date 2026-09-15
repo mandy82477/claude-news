@@ -171,3 +171,9 @@
 {"id": "H-d575e8", "closed": "2026-09-12", "status": "void", "by": "主編", "result": "已於既有已知問題 ❓ 待查證條目記載（標 2026-09-11｜查 Nightshift、context rot），內容與轉知一致，無需重複記入"}
 {"id": "H-624b00", "closed": "2026-09-13", "status": "done", "by": "功能", "result": "orca併入既有G-11代表工具清單；spec-kit/comet證據不足未新增矩陣列，評估過程已記入official-community-gap.md時序2026-09-12"}
 {"id": "H-79a7f9", "opened": "2026-09-13", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 09-13 新增於 community-tech-patterns 的 proliferate-ai/proliferate、zenstory-ai/oh-story-claudecode 是否納入官方-社群功能對照矩陣（產品化矩陣）新增列", "status": "open"}
+{"id": "H-79a7f9", "closed": "2026-09-15", "status": "done", "by": "功能", "result": "已評估：genoffice/oh-story 兩者證據不足以新增產品化矩陣列（前者屬既有 Subagent 派工列代表工具範疇，後者所屬分組僅 2 工具、收錄 1 天無官方對應），本輪不動，待分組工具數增加或滿觀察期再評估"}
+{"id": "H-dbbeeb", "opened": "2026-09-14", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "GitHub Actions RCE（Anthropic/Google/OpenAI 三家官方範本同款缺陷）的產品化影響評估；ai-agent-safety 僅記漏洞與風險面", "status": "open"}
+{"id": "H-3e4515", "opened": "2026-09-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 genspark-ai/genoffice（CLI/agent skill 讓 Claude Code 讀寫本機 .docx/.xlsx/.pptx）與 agentpit-io/hunter-community（個人金融多代理框架）是否納入官方-社群功能對照矩陣新增列", "status": "open"}
+{"id": "H-9714c3", "opened": "2026-09-14", "from": "模型", "to": "功能", "page": "entities/claude-code", "note": "Claude Code vs AWS Kiro vs GitHub Copilot 定位比較（securityboulevard.com 2026-09-14）屬工具選型非模型能力，評估是否收進 claude-code.md 定位矩陣", "status": "open"}
+{"id": "H-57aa17", "opened": "2026-09-14", "from": "人物", "to": "投資分析", "page": "topics/market-signals", "note": "AI 類股因川普回絕減速呼籲／中國官媒批評應聲下跌（2026-09-14，Reuters／Yahoo），評估是否收錄為消息面判讀", "status": "open"}
+{"id": "H-57aa17", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "投資分析記者判定不符 market-signals 六類判準：政治表態非機關監管動作，AI 類股下跌屬產業情緒而非 Anthropic 可估算數字（未上市），與既有「只有表態、沒有後果不判讀」判例一致；事實留在人物頁與 anthropic-government-policy"}

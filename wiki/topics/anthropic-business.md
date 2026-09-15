@@ -27,12 +27,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
-> **最新動態**（2026-09-12）
-> - **Nvidia 洽談投資 Anthropic 鉅額 IPO**：Reuters 獨家稱正洽談中，尚未定案；若成真將以股東身分綁定算力生態，見 [[topics/anthropic-business#IPO 走到哪一格]]。
-> - **五角大廈傳十月前遷出全部機密 AI 工作負載**：僅涉聯邦機密採購，不影響商用訂閱與 API 收入，經過見 [[topics/anthropic-government-policy#三個戰場]]。
+> **最新動態**（2026-09-14）
+> - **Charles Schwab、Orion 同日宣布導入 Claude，鎖定 RIA 通路**：跨入金融顧問市場，同日傳籌備個人理財工具「Claude Money」，詳見下方「其餘合作」。
+> - **Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，HN 討論質疑「不計訓練成本的獲利」意涵有限，見 [[topics/anthropic-business#現在的數字]]。
+> - **Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用**：跨類別事件，安全政策面見 [[topics/ai-agent-safety]]。
 
 ---
 
@@ -50,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | IPO 估值預期 | 投資人一方的預期，公司未設此目標 | $2 兆（2026-08-13） | 一級媒體引投資人 | 公開版 S-1 |
 | 年化營收（ARR） | 年化推估，非單季實收 | $650 億（2026-07 數字，08-18 報導） | 一級媒體引公司 | 下次投資人揭露 |
 | 單季營收 | 2026 Q2 實際入帳 | $115 億（2026-08-15） | 一級媒體 | Q3 揭露 |
-| 獲利 | 3Q26 單季，唯一一筆正獲利數字 | 逾 $10 億（2026-07-08） | 第三方研究 | S-1 財報 |
+| 獲利 | 連續獲利季數，公司對投資人的口頭揭露 | 連續第二季獲利（2026-09-13） | 一級媒體引公司 | S-1 財報 |
 | 企業採用率 | Ramp AI Index 企業導入比例 | 43.5%（OpenAI 39.7%，2026-08-12 發布） | 第三方指數 | Ramp 次月指數 |
 | 訂閱補貼倍數 | 訂閱月費換算成等值 API 用量的倍數 | 社群估算 13–40 倍（最新 2026-09-06） | 社群估算 | 無時點 |
 | 產業 TAM | Anthropic 向投資人簡報的市場總量，非公司營收 | $30 兆（2026-08-26） | 一級媒體引公司 | 無時點 |
@@ -68,7 +69,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **採用率的反面證據**：inc.com 2026-08-23 稱 OpenAI 拓展企業用戶速度已超越 Anthropic，無量化數字，見 [[topics/competitor-landscape]]。
 - **訂閱補貼倍數**：三個各自獨立的方法論指向同一量級——token-xray 換算 Max $200 方案等值 $3,400 API 用量（17 倍，2026-05-28）、modelplane.ai 反推約 13 倍（2026-09-06，該文另記月費暴增 44 倍，那是帳單倍數不是補貼倍數）、Quesma 訂閱制與純 API 價差最高 40 倍（2026-08-11）。
 - **補貼倍數沒有官方數字**：上述三筆全是社群估算，三種算法方向一致；企業案例細節見 [[topics/enterprise-cost-management]]。
-- **獲利**：SemiAnalysis 2026-07-08 深度報導揭露 3Q26 獲利逾 $10 億，是唯一一筆正獲利數字，**原文連結已失效**。Anthropic 從未公告盈虧平衡預期。
+- **獲利**：Anthropic 向投資人表示將連續第二季獲利（[Reuters](https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/) 引 FT，2026-09-13），未載具體金額。HN 討論質疑「不計訓練成本的獲利」意涵有限，並類比網路叫車產業上市前的類似操作（2026-09-14）。
+- **獲利舊值**：SemiAnalysis 2026-07-08 曾揭露 3Q26 獲利逾 $10 億，是首見具體金額的正獲利數字，**原文連結已失效**；金額口徑與本次口頭揭露的關係未見報導。Anthropic 從未公告盈虧平衡預期。
 - **口徑不可混用**：「營收占比 70%」與「企業採用率 43.5%」量的不是同一件事，前者算錢、後者算家數。
 - **算力交易總額**：The Information 2026-09-06 報導 Anthropic 過去 11 個月內累計談成算力／雲端合約合計 $5,170 億，涵蓋 AMD、Nvidia、AWS、Google 等多筆合約；統計口徑未見報導。
 - **AWS 承諾金額**：Currently.com 09-06 報導 Anthropic 對 AWS 承諾已逾 $1,000 億美元，招股書可能揭露更多合約細節，推論屬上述 $5,170 億總額中的單一分項（兩則報導未互相引用）。
@@ -304,6 +306,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費方式與上線時間未見報導（MacRumors／HN 188 分）
+- **Charles Schwab／Orion**（2026-09-14）：兩家財務顧問平台同日宣布導入 Claude，鎖定獨立註冊投資顧問（RIA）通路，合約條件與費率未見報導（Bloomberg／Business Wire／Yahoo Finance）
 - **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
 - **LoanPro**（2026-09-09）：貸款管理平台採用建構在 AWS 與 Claude 上的 AI 原生客服介面，客服通話時間最多縮短 15%，具體導入規模未見報導（citybiz）
 - **Fluidstack**（2026-09-07）：主導 Anthropic 一筆 500 億美元的算力建置案，詳見下方細節（AI Magazine）
@@ -489,6 +493,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-14
+- **[財務狀況] Reuters 引 FT：Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，詳見「現在的數字」表「獲利」列更新；HN 討論質疑「不計訓練成本的獲利」意涵有限（Hacker News／Google News/Reuters）
+- **[戰略合作] Bloomberg／Business Wire／Yahoo Finance：Charles Schwab、Orion 同日宣布導入 Claude，鎖定 RIA 通路**：跨入財務顧問通路，具體合約條件、費率未見報導，僅標題層級可用
+- **[產品線擴張，僅標題可用] TestingCatalog AI News：據報 Anthropic 籌備個人理財工具「Claude Money」**：與同日 Schwab／Orion 金融顧問通路布局呼應，顯示金融領域產品線持續擴張，上線時間、功能範疇均未見報導
+- **[商業風險，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：具體限縮範圍、是否涉及 Claude Code 或 API 未見報導；安全政策面另見 [[topics/ai-agent-safety]]，本頁不展開安全機制細節
+- **[公司動態，僅標題可用] ChannelE2E：Claude 合作夥伴訓練計畫新增安全性相關認證課程**：具體課程內容、通路夥伴規模未見報導
 
 #### 2026-09-12
 - **[IPO 前瞻] Reuters 獨家：Nvidia 洽談投資 Anthropic 鉅額 IPO**：消息人士稱尚未定案，具體金額與股權比例未見報導，詳見「IPO 走到哪一格」細節區（Google News/Reuters）

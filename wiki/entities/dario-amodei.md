@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
 > ❓ **待查證**（標 2026-08-25｜查 airline industry、marketing and safety）｜**Fortune 評論比較 Anthropic 安全論述與航空業經驗**（2026-08-24 報導）：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡，討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導。
 
@@ -43,6 +43,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-09-13，Dario Amodei 公開撰文呼籲全球暫緩 AI 模型能力提升的步調並密切監控，警告若維持現行速度，「AI 群體行為」恐在 6–12 個月內危及網路安全；Elon Musk（xAI／Grok）與 Sam Altman（OpenAI）相繼公開表態支持暫緩（Hacker News 轉載 BBC、VentureBeat、Google News 多家媒體）。此番呼籲的安全治理角度完整討論見 [[topics/recursive-self-improvement]]，Hacker News 部分高分留言對呼籲動機提出質疑，詳見下方細節區。
 
+2026-09-14，Trump 公開回絕此一減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（Reuters／Yahoo）。Amodei 另於 CNBC 專訪中稱中國是他所提減速方案中「最棘手的兩難」（Hacker News／CNBC，10分）。
+
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；惟 Dario 本人與白宮的信任關係修復與否，尚無報導確認。
 
 2026 年上半年公開言論集中在：（1）呼籲政府有權阻止危險 AI 模型發布（尤指中國競爭者）；（2）主張企業文化是 AI 競賽決勝關鍵，個人花費 40% 工作時間於文化建設；（3）出席 Code with Claude 大會現場宣布 Pro/Max 速率翻倍政策。
@@ -51,6 +53,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-09-13 | 稱中國是其所提 AI 減速方案中「最棘手的兩難」 | Hacker News（10分）／CNBC |
 | 2026-09-13 | 公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持（詳見下方細節） | Hacker News（轉載 BBC）、VentureBeat、Google News（Yahoo 等）|
 | 2026-08-28 | 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）❓ 待查證 ⟨Q-02⟩ | Google News（Business Insider）|
 | 2026-08-26 | 與 Salesforce 董事長暨執行長 Marc Benioff 共同接受 CNBC Jim Cramer 專訪，逐字稿公開（具體發言內容未見節錄，合作面詳見 [[topics/anthropic-business]]） | CNBC |
@@ -95,6 +98,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Reuters／Yahoo、Yahoo Finance（2026-09-14）](https://www.yahoo.com/news/us/article/trump-rejects-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-with-ai-wins-182008851.html)：「Trump rejects call by CEOs of Anthropic, OpenAI and xAI to slow AI down」，Trump 公開回絕減速呼籲；中國官媒批評為「冷戰」話術；同日 AI 類股應聲下跌
+- Hacker News（10分，2026-09-13）→ [CNBC](https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html)：「Dario Amodei says China presents 'toughest dilemma' for his proposed AI slowdown」
 - Hacker News（轉載 BBC，2026-09-12～13）：「Anthropic head calls for slower AI development」，Dario Amodei 呼籲全球暫緩 AI 模型能力提升步調並密切監控
 - VentureBeat（2026-09-12～13）：「Anthropic CEO says AI swarm could 'take over the Internet' in 6-12 months, commits to AI slowdown plan」
 - Google News（Yahoo 等多家媒體，2026-09-13）：「'Dario is right': Musk and Altman back Anthropic CEO on slowing AI down」
@@ -120,6 +125,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-09-14：Trump 公開回絕 Amodei 的減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（來源：Reuters／Yahoo、Yahoo Finance，2026-09-14）
+- 2026-09-13：接受 CNBC 專訪稱中國是其所提 AI 減速方案中「最棘手的兩難」（來源：Hacker News（10分）／CNBC）
 - 2026-09-13：公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩，安全治理角度完整討論見 [[topics/recursive-self-improvement]]（來源：Hacker News／BBC、VentureBeat，2026-09-13）
 - 2026-08-28：Business Insider 報導 Dario Amodei 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）；僅標題與轉址連結可用，發言的具體場合與完整脈絡未見報導，查證狀態見上方公開立場表格標記（來源：Google News／Business Insider）
 - 2026-08-26：與 Salesforce 董事長暨執行長 Marc Benioff 共同接受 CNBC《Closing Bell: Overtime》主持人 Jim Cramer 專訪，CNBC 公開完整逐字稿；日報僅載逐字稿已公開一事，未節錄任何具體發言內容，合作動態詳見 [[topics/anthropic-business]]（來源：Google News／CNBC）

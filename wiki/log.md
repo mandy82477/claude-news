@@ -6387,3 +6387,18 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **查證**：讀 commit `856249f4` 與 `scripts/wiki_search.py`——頁面按標題切段做 BM25（繁中 bigram、英數整詞，零第三方依賴），`data/search_aliases.json` 同義叢集橋接用詞落差，`--expand` 以命中頁為種子沿 wikilink 圖擴散一跳；28 個測試含真實 wiki 回歸。起因是 2026-09-14 問「agent 視覺化」兩輪都答 wiki 沒有，而答案頁寫的是「可觀測性／協調地圖」，`index.md` 的一句摘要不含正文用詞，關鍵字篩候選在查證前就先漏掉。
 - **處置**：[[topics/llm-wiki-pattern]]「CLAUDE_NEWS 對照起來」兩處更新。「已經有的」查詢六路的第 2 路由「index」改為「全文 BM25」。「刻意不做的三件」的向量搜尋一條保留但補上界線：仍不做向量，2026-09-14 補的是**詞彙**檢索，因為漏頁成因不是 grep 慢而是挑候選的方式錯；BM25 是詞彙排序不是語意向量，那條界線沒有移動。
 - **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。
+
+## 2026-09-14 Ingest
+
+- 來源日報：[[news/2026-09-14]]
+- 更新頁面：entities/claude-code、entities/dario-amodei、entities/pricing、topics/anthropic-business、topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement、topics/community-tech-patterns、topics/community-tech-discussions、topics/market-signals、feature-radar
+- 新增頁面：無
+- 摘要：Dario Amodei 3,800 字減速警告觸發政治連鎖——川普公開回絕、北京批為「冷戰」話術、AI 類股同日下跌；Apple 在 iOS 27／macOS 底層程式碼中為 Siri 加入 Model Delegation，Claude 可被設為第三方模型；Anthropic 同日經 Charles Schwab 與 Orion 跨入 RIA 金融顧問通路，並傳籌備個人理財工具 Claude Money；資安面 Rescana 揭露 Claude 被用於從 180 萬 Android App 大規模萃取憑證，另有三家官方 GitHub Actions 範本同款 RCE 缺陷與中國利用 Claude 追蹤異議人士；計費面 +50% 週用量加成 09-13 到期、09-14 起換軌為永久 +25%，官方文件當日確認。
+- 呈現品質：全部通過（六記者機械自查皆一次通過；商業記者因改寫 pricing.md 既有超限段落觸發 cell-limit 指紋漂移誤擋，依 shared.md 誤擋自查指示執行 `--rebuild` 重建基線，非真違規）
+- 品質備註：[商業] cell-limit 機械閘對既有超限段落的改寫誤判為新增，已 `--rebuild` 重建基線，非記者品質問題
+- 補跑說明：2026-09-14 的雲端 routine 三班中 12:02 UTC 正常中止（抓料未到齊），17:02 與 22:02 兩班皆只留 STARTED、無終結行，屬 runbook 定義的「中途死」，當日日報從未產出。本輪由使用者於 2026-09-15 以 `/news-pipeline 2026-09-14` 補跑，原料走 `src/gathered_archive/2026-09-14.json` replay（70 則，非現抓）。同型無聲死亡近兩週共 4 次（09-02 17:00、09-12 17:00、09-14 17:00／22:00），前兩次皆由同日後一班接手而未成破洞。
+- 交叉核對略過項目：功能與社群記者均判定 XDA「Anthropic 分析 40 萬則 Claude Code session」為二手轉述、本庫 2026-06 已記錄同一研究且未提供新的可操作做法，**未寫入**；安全政策記者判定 GitHub Actions RCE 僅 Reddit 單一來源、未達「現在還擋不住的攻擊」表的官方或具名研究者門檻，只記入技術彙整與時序；模型記者判定今日四則皆為工具選型或平台整合、無可驗證模型能力數字，**整輪未動任何頁面**
+- 轉知帳本：close 1 筆（H-79a7f9 功能記者：genoffice 屬既有 Subagent 派工列代表工具範疇、oh-story 所屬分組僅 2 工具且收錄 1 天，證據不足未新增矩陣列）、void 1 筆（H-57aa17 投資分析記者：AI 類股下跌屬產業情緒非 Anthropic 可估算數字，與既有「只有表態、沒有後果不判讀」判例一致）、開 3 筆（H-dbbeeb 安全政策→功能：GitHub Actions RCE 產品化影響；H-3e4515 社群→功能：genoffice／hunter-community 是否入官方-社群對照矩陣；H-9714c3 模型→功能：Claude Code vs Kiro vs Copilot 定位比較是否入 claude-code 定位矩陣）
+- 📋 待使用者裁示：devpractice 記者指出本輪帳本風險——六記者的更新在它跑沉澱時尚未 commit，它改用工作樹 diff 取料，但 `mark` 只能把基準線推到 HEAD；這批內容 commit 後會在下一輪 `show` 的 diff 裡再次出現，需人工核對是否與本輪已收的 9 筆重複，避免帳本重記同一事實
+- devpractice 沉澱：候選 9 筆（entities/claude-code：v2.1.270 唯讀 git 指令授權迴歸修復、桌面版多 repo 掛載＋`disableMobileSimulatorTools`、GitHub Actions 三家範本同款 RCE；entities/pricing：週配額換軌淨減約 17%；topics/code-quality-decline：4 個平行 agent 數分鐘燒光 Max session 額度；topics/community-tech-discussions：COBRA-Skills contextual bandits、35KB preprompt 遷 Ollama 踩雷；topics/community-tech-patterns：genspark-ai/genoffice、proliferate-ai/proliferate）；基準線 9763cfc993→a403e9f53c
+- market 判讀：1 則（Nvidia／Palantir／Booz Allen 因資料外洩疑慮限縮 Claude 內部使用，第 4 類；里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列；買得到的標的無，Anthropic 未上市）

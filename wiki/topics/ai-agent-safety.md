@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
-> **最新安全事件**（2026-09-13）
-> CNN 獨家報導 Anthropic CEO 回應「AI agent 脫離控制範圍」說法，僅標題可用，具體事件內容待查證（詳見「## 技術彙整」）。
+> **最新安全事件**（2026-09-14）
+> Rescana 揭露攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證，待查證（詳見「## 技術彙整」）。
 
 ---
 
@@ -109,6 +109,29 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Rescana 揭露攻擊鏈：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證（2026-09-14 新增）
+
+- **揭露來源**：Rescana（經 Google News 轉載，2026-09-14）
+- **核心主張（僅標題／摘要可用）**：資安業者 Rescana 揭露具體攻擊鏈，稱攻擊者利用 Claude AI 從 180 萬個 Android App 中大規模萃取憑證，發動竊密行動；報導未提供完整技術細節
+- **與既有敘事的關係**：延續本頁既有「Claude 被進攻性濫用」脈絡（08-18 勒索軟體操作者利用 Claude Code 竊取 LDAP 密碼、Poison Claude 等），惟本則規模遠大於既往任何單一濫用案例，若屬實將是迄今最大規模的 Claude 濫用攻擊鏈
+- ❓ **待查證**（標 2026-09-14｜查 Rescana、Android App）：攻擊鏈具體技術手法（Claude 是否被用於自動化逆向工程、憑證擷取，或僅作輔助工具）、180 萬數字的驗證方法、是否已有受害者通報、Anthropic 官方是否回應均未見報導
+- **可信度評估**：Rescana 為資安業者一手揭露，惟經 Google News 轉載僅摘要可用，正文技術細節與獨立第三方驗證均待查證
+
+### Reddit／r/artificial 週熱門：Anthropic、Google、OpenAI 官方 GitHub Actions 預設範本同款 RCE 瑕疵（2026-09-14 新增，跨類別）
+
+- **揭露來源**：Reddit r/artificial（週熱門排序，[原貼文](https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/)，2026-09-14 02:33 UTC）
+- **核心主張**：資安研究者揭露 Anthropic Claude Code、Google Gemini CLI、OpenAI Codex 三家官方發布的 GitHub Actions 預設設定範本，皆存在可導致遠端程式碼執行（RCE）的同款設定缺陷；三家 coding agent 官方 CI 範本同步中招，非單一廠商個案
+- **與既有敘事的關係**：與本頁「## 現在還擋不住的攻擊」表既有多項信任邊界缺口（`llms.txt`、`.git` 設定檔、deny-list 繞過）同屬「官方預設值本身不安全」的模式，惟本則首見三大廠商官方範本同款瑕疵，性質更接近產業共通設計缺陷；產品化面向見其他分類頁面
+- ❓ **待查證**（標 2026-09-14｜查 GitHub Actions、預設範本）：具體瑕疵技術細節、Anthropic／Google／OpenAI 是否已修補或發布時程、是否已有在野利用均未見報導，僅有單一 Reddit 貼文可查
+- **可信度評估**：Reddit r/artificial 為週熱門排序貼文，惟為單一社群來源，未見具名研究者披露文章、CVE 編號或廠商官方公告，暫不列入「## 現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏官方或具名研究者一手來源佐證新列優先序）
+
+### The Information：資料外洩疑慮促使 Nvidia、Palantir、Booz Allen 限縮 Anthropic 模型內部使用範圍（2026-09-14 新增，跨類別）
+
+- **揭露來源**：The Information（經 Google News 轉載，2026-09-14 13:00 UTC）
+- **核心主張（僅標題可用）**：報導稱因憂心資料外洩風險，Nvidia、Palantir、Booz Allen 等企業客戶已限縮對 Anthropic 模型的內部使用範圍；Google News RSS 未提供正文，具體限縮措施與觸發此決策的具體事件均未見報導
+- **與既有敘事的關係**：與本頁「## 官方現在擋到哪（整頁層）」既有 Enterprise Frontier Safeguards（2026-09-01 公告，監看憑證外洩跡象）形成對照——企業客戶自行限縮使用，可能反映 EFS 上路前的過渡期信任缺口；企業採用面與定價影響見 [[topics/anthropic-business]]
+- ❓ **待查證**（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen｜複 2026-09-28）：三家企業具體限縮的使用範圍、觸發此決策的具體資料外洩事件（若有）、Anthropic 官方是否回應均未見報導
 
 ### CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法（2026-09-13 新增）
 
@@ -786,6 +809,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
 > **中美 AI 工具信任對峙**（06-30～07-10：中國代理偵測程式碼、隱寫術指控、Alibaba/Meta 禁用、中國官方後門警示、Anthropic 首度否認）完整逐日時序已整合至 [[topics/safety-china-trust-dispute]]，此處不再重複條目，僅保留與本頁漏洞/提示注入主線相關者。
+
+### 2026-09-14
+- **[🔴 新增] Rescana：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證**：資安業者揭露具體攻擊鏈，惟正文技術細節未見報導，詳見「## 技術彙整」
+- **[🔴 新增，跨類別] Reddit 週熱門：Anthropic、Google、OpenAI 官方 GitHub Actions 預設範本同款 RCE 瑕疵**：三家 coding agent 官方 CI 範本同步中招，具體修補狀態未見報導，詳見「## 技術彙整」
+- **[🟡 產業對照，新增，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：僅標題可用，具體限縮措施未見報導，詳見「## 技術彙整」
 
 ### 2026-09-13
 - **[📋 論述或情資通報，新增] CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法**：僅標題可用，具體事件內容未見報導，詳見「## 技術彙整」

@@ -29,17 +29,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
-> **最新計費政策異動**（2026-09-13）
-> - **09-14 起你的週配額變成現在的 83%**：+50% 加成 09-13 23:59 PT 到期（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)），接手的是永久 +25%（08-29 官方 Bluesky 公告），換算後相對現在少約 17%。適用 Pro、Max、Team 與座位制 Enterprise。
+> **最新計費政策異動**（2026-09-14）
+> - **週配額已換軌，官方文件 09-14 確認**：+50% 加成 09-13 到期，Claude Code 週用量自 09-14 起回復標準額度（永久 +25%），相對加成期間水位少約 17%；官方同時澄清此調整不影響 5 小時用量上限的計算方式（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）。適用 Pro、Max、Team 與座位制 Enterprise。
 > - **$100 過渡 credit 09-17 23:59 PT 到期即作廢**，不可續買、不轉存。
 > - **四件計費事故仍未解**：Max 訂閱一開工就撞用量上限（#16157，1,492 留言最高）、續訂扣款後帳號停用、session 額度 3 月起異常加速耗盡（#38335，850 留言／545 👍 重新列入）、$16.6M 帳務錯誤退款未定。見「事故現在還在發生嗎」。
 
 ## 現況
 
-**09-14 是下一個會動到你帳單的日子**：週配額換軌後水位約為現在的 83%，同一週還有過渡 credit 09-17 到期。兩者都不需要你做任何設定，但都會改變你這個月能用多少。
+**週配額換軌已於 09-14 生效**（官方文件 09-14 同步確認），水位約為加成期間的 83%；5 小時用量上限的計算方式不受影響。同一週還有過渡 credit 09-17 到期，不需要你做任何設定，但會改變這個月能用多少。
 
 **2026-07-20 起，旗艦模型（現為 Fable 5）在訂閱體系中被切成兩層**：Max 與 Team premium 席位維持標配、上限為週用量的 50%；Pro 與 Team standard 席位改以 usage credits 按 API 費率付費，並發放一次性過渡 credit。此分界經 2026-08-08 官方 Help Center 查證確認，終結 07-18～21 間四則互相矛盾的媒體報導。對照見下方「我的方案現在有什麼」。
 
@@ -141,7 +141,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
 - **✅ 2026-09-13 到期（更正：非如期於 08-31 終止）｜Claude Code 週用量 +50% 促銷**：此促銷原訂 2026-05-13 起，歷經 06-22→07-07→07-12→07-19→08-18→**09-02（本次更正）**多次延長。08-29 官方公告曾記為「08-31 到期、不再延長」，但官方說明中心 **2026-09-02** 更新原文——「We've extended this promotion. Increased weekly limits now run through September 13, 2026.」——實際延長至 **2026-09-13**；09-14 起銜接下方「標準週配額永久 +25%」，兩者不留缺口。適用 **Pro、Max、Team**（來源：[Claude Code May–August 2026 Weekly Limits Promotion](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，2026-09-02 查證）
-- **⏰ 2026-09-14 生效｜標準週配額永久調高 25%，但取消 +50% 加成 → 相較「加成期間」水位實際減少約 17%**：官方公告（Bluesky @anthropicbot，2026-08-29）自 2026-09-14 起將 Claude Code 標準週配額**永久**調高 **25%**，適用 **Pro、Max、Team 與座位制 Enterprise**；上方 +50% 促銷 09-13 屆滿後由本規則接手，不留缺口。換算 `1.25 ÷ 1.50 ≈ 0.833`——09-14 起實際可用週配額約為加成期間的 83%，**減少約 17%**（BleepingComputer〈Anthropic is cutting Claude Code's current weekly limits by 17 percent〉即以此為框架）。**你該做的事**：工作流若貼近週配額上限，09-14 前後應預期可用量下降，評估調整用量節奏或方案層級（來源：[Bluesky @anthropicbot](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)、[BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/)，2026-08-29）
+- **✅ 2026-09-14 已生效（官方文件確認）｜標準週配額永久調高 25%，但取消 +50% 加成 → 相較「加成期間」水位實際減少約 17%**：官方公告（Bluesky @anthropicbot，2026-08-29）自 2026-09-14 起將 Claude Code 標準週配額**永久**調高 **25%**，適用 **Pro、Max、Team 與座位制 Enterprise**；上方 +50% 促銷 09-13 屆滿後由本規則接手，不留缺口。換算 `1.25 ÷ 1.50 ≈ 0.833`——09-14 起實際可用週配額約為加成期間的 83%，**減少約 17%**（BleepingComputer〈Anthropic is cutting Claude Code's current weekly limits by 17 percent〉即以此為框架）。**你該做的事**：工作流若貼近週配額上限，09-14 起應預期可用量下降，評估調整用量節奏或方案層級（來源：[Bluesky @anthropicbot](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)、[BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/)，2026-08-29）
+- **✅ 官方說明中心 2026-09-14 確認換軌如期發生，5 小時上限計算方式不受影響**：促銷 09-13 到期、週用量自 09-14 起回復標準額度（即上方 +25% 永久規則）；澄清見「重要政策變動紀錄」09-14 條目（[來源](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）
 - **✅ Managed Agents 計費＝token＋session runtime（官方定價頁，2026-09-06 查證）**：token 依模型牌價（快取乘數、web search $10／1,000 次、`inference_geo` 1.1×、fast mode 溢價皆照 API 規則）；runtime **$0.08／session-hour**，只計 `running`
 - 上條來源：[Managed Agents pricing](https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing)；`idle`／`rescheduling`／`terminated` 不計時，毫秒計量
 - **Managed Agents 不適用 Batch 折扣與 partner 雲端**（Bedrock／Vertex 無此產品）；runtime 取代 code execution 的 container-hour，不重複收。官方算例：Opus 5 跑 1 小時、50k 輸入／15k 輸出 ≈ **$0.705**，40k 輸入走快取 ≈ $0.525
@@ -373,6 +374,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故（已封存）**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-09-14：官方說明中心確認週用量換軌已如期發生，並澄清不影響 5 小時用量上限
+
+- **Official Docs（support.claude.com）更新確認**：促銷（05-13 起實施，歷經多次延長，見 09-02 條目）已於 **09-13** 到期，Claude Code 週用量自 **09-14** 起回復標準額度（即上方 08-29 條目所記之永久 +25% 規則接手）。
+- **官方澄清**：本次配額調整**不影響 5 小時用量上限的計算方式**——與週配額換軌是兩套獨立機制，讀者不需因本次變動額外調整 5 小時窗的用量節奏。
+- **與既有記錄的關係**：本則為官方一手來源，坐實 08-29／09-02 兩則條目所記之換軌時程與水位換算（相較加成期間約減少 17%），未見數字修正（來源：[Claude Code May–August 2026 Weekly Limits Promotion](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，2026-09-14 查證）
 
 #### 2026-09-06：GitHub Issue #47509（133 👍、35 留言）——使用者提案 Team 方案新增對等 Max 20x 用量的高階座位
 

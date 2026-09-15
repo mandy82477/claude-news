@@ -3,8 +3,8 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-12"
-last_news_update: "2026-09-12"
+last_updated: "2026-09-14"
+last_news_update: "2026-09-14"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-14
+**最後新聞更新：** 2026-09-14
 
-> **最熱討論**（2026-09-12）
-> Boris Cherny 親自回應「AI slop」品質下滑質疑（Business Insider、Simon Willison 引述），讀者現在有官方說法可查核，不必只靠社群猜測。
+> **最熱討論**（2026-09-14）
+> 「換到開源模型的代價是不是接近零」再添一則獨立案例：開發者分享把 35KB preprompt 從 Opus 遷移到自架 Ollama 的踩雷筆記與資料隱私考量（HN 59 分）。
 
 ---
 
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | **CLAUDE.md 與提示詞該寫多少**：寫滿規則讓它照做，還是愈精簡愈準 | 還在吵 | 2026-08-28「指令堆疊難以追溯」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手 ＋ 跨平台多來源 | 官方 2026-07-24 部落格：Claude 5 世代已移除逾八成 Claude Code 系統提示詞，程式評測無可測量的退步 |
 | **AI 輔助會不會讓人能力退化**（Skill Atrophy） | 還在吵 | 2026-08-28「市場硬性要求驅動的全面轉向」，該則為單一低互動（HN 13 分）（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手研究 ＋ 四則獨立貼文自述，無跨平台佐證 | Anthropic 2026-01 對照實驗：用 AI 的一組在剛學過的概念測驗低 17%，且「怎麼用」決定退化多少 |
-| **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-04「NYT〈Corporate America is」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
+| **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-14「Notes on」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **auto 模式算不算一道安全邊界** | 還在吵 | 2026-09-02「Show HN: Aura——SRE」（[[topics/community-tech-discussions#2026-09]]） | 官方文件 ＋ 社群單則實作經驗 | 官方：由第二個分類器模型逐一審動作，但對話裡設的邊界可能因壓縮而遺失，要硬保證得改用 deny 規則 |
 | **輸出浮水印與帳號執法透明到什麼程度才夠** | 還在吵 | 2026-09-02「付費帳號無預警遭停權」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名評論人 ＋ 四家媒體同日跟進 | 官方 2026-08-11 公告浮水印政策，適用全產品線且不可退出；停權申訴管道未見官方說明 |
 | **「Claude 越用越笨」是模型退步還是 context 腐蝕** | 已吵出共識 | 2026-06-20「Context Rot 修復五法」（[[topics/community-tech-discussions#2026-06]]） | 多則實測，含 OpenTelemetry 量化 | 無官方回應；官方對 2026-06 起的 token 異常與 07-25 起的 Opus 5 觀感也沒有說明，那三條線的狀態見 [[topics/code-quality-decline]] |
@@ -148,6 +148,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；Reddit r/artificial 週熱門標記（詳見細節） | — |
+| Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌 | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | Laurie Voss：寫程式成本快速下降，但後續審查、修復與維運工作的成本也同步下降；具名表態，無社群延燒（詳見細節） | — |
 | Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者 | 2026-09-12 · 2026-09-12 | 🔥🔥 | ☄️閃現 | 開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述（詳見細節） | — |
 | HN 討論「AI 解數學難題也可能助長濫用」：留言呈現風險當真與質疑聳動兩極 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | WSJ 報導 AI 解數學難題與濫用風險；HN 留言兩極：一稱已居家合成病毒結構，一批報導標題聳動（詳見細節） | — |
 | 開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt，工作流程已重構三次 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | 開發者分享兩年用 agent 經驗，工作流程重構三次；「垂直切片」vs「整包功能」提示結構尚無共識（詳見細節） | — |
@@ -191,7 +193,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌊延燒 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌊延燒 | 額度焦慮系列延燒，08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar |
 | Claude Code AskUserQuestion 60 秒逾時自動代答引發體驗爭議：07-17 正式定調為「效率繞過」misfeature（最後動態 2026-07-17） | 2026-07-02 · 2026-07-17 | 🔥🔥🔥 | 🌙靜候 | AskUserQuestion 60 秒逾時自動代答引發爭議：07-17 定調為「效率繞過」misfeature（HN score 140），逾 45 天無新證據，改標靜候 | claude-needs-input |
-| 切換到開源模型的代價接近零：閉源護城河瓦解論（09-04 因企業轉用開源模型報導重燃） | 2026-06-22 · 2026-09-04 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT 報導為同一論點新訊號，依規則判重燃 | Recall |
+| 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-09-14 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT、09-14 preprompt 遷移 Ollama 筆記（HN 59）皆為新訊號 | Recall |
 | Loop Engineering 哲學完整文章：「我不再 prompt Claude，我寫 loop」（含 05-05「Loops 是未來」，最後動態 06-20，逾 45 天無新證據改標靜候） | 2026-05-05 · 2026-06-20 | 🔥 | 🌙靜候 | Boris Cherny loop 哲學完整拆解文章：「我不再 prompt Claude，我寫 loop」；HN score 4；與創始人 05-05「Loops 是未來」播客宣言合為一列 | — |
 | Context Rot 修復五法（最後動態 2026-06-20，逾 45 天無新證據改標靜候） | 2026-06-20 · 2026-06-20 | 🔥🔥 | 🌙靜候 | Reddit 熱帖：Context Rot 修復五法——「Claude 越用越笨」幾乎都是 context 腐蝕而非模型退步 | — |
 | Vibe coding / agentic 工程的成就感缺失（最後動態 2026-06-18，逾 45 天無新證據改標靜候） | 2026-06-18 · 2026-06-18 | 🔥🔥 | 🌙靜候 | HN Ask：Vibe coding／agentic 工程是否還有心流感？成品「不像自己做的」認同困惑延燒 | — |
@@ -207,6 +209,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 優化 Agent Skill**：主張既有優化多走 generate–execute–analyze–refine 迴圈，改用 contextual bandits；效率數字未見於摘要；週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wf8b61/cobraskills_contextual_bandits_for_efficient/)（Reddit · 週熱門）
+- **Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌**：Simon Willison 部落格引述 Laurie Voss 觀點：寫程式的成本快速下降，但審查、修復與維運程式碼的成本也同步下降；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Sep/14/laurie-voss/)（Blog）
 - **Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者**：開發者質疑 AI slop，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述；回信內容見 [[entities/boris-cherny]]；[原文](https://news.google.com/rss/articles/CBMihgFBVV95cUxQdl9CNzFpU1IyZjY1T2hTbFpCZUJpbFFzRVlIeFJxdFJRQVlYVkhmaEpfUDNvOGhXbkl3VFpoaGU1Q3FJaWdBTnBlSjVULUlqU0NwMGZZVDVkdmJsSVlKajVKbDVjR3VxUnpuaW14WHpCd1Nsb2ZxQnJkXzRzV2szWDNTWjdkdw?oc=5)（Business Insider）
 - **HN 討論「AI 解數學難題也可能助長濫用」**：WSJ 報導伴隨濫用風險討論；HN 留言兩極，一稱已居家合成病毒結構，一批報導標題聳動；[原文](https://www.wsj.com/tech/ai/ai-math-millennium-prize-safety-openai-anthropic-05179825)（HN）
 - **開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt**：開發者分享兩年來使用 LLM coding agent 的經驗，工作流程已歷經三次重構，就「垂直切片」（vertical slices）或「整包功能」（whole-feature）提示結構討論意見不一，尚無定論；[原文](https://www.reddit.com/r/ClaudeCode/comments/1wecard/vertical_slices_vs_wholefeature_prompts_how_do/)（Reddit）
@@ -261,6 +265,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama（2026-09-14）
+
+- **來源：** 「Notes on gotchas while migrating large prompts away from Anthropic/OpenAI to self-hosted LLMs」— Hacker News（59 分）；[原文](https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/)
+- **核心論點：** 作者分享將 35KB 的大型 preprompt 從 Opus 遷移到自架 Ollama 模型時遇到的具體眉角，並討論資料隱私與供應商鎖定的考量；屬本頁「換到開源模型的代價是不是接近零」爭論的最新獨立訊號
+- **關鍵回響：**（本次摘要未提供留言區細節，暫無可記錄項目）
+- **收斂結論：**（無）單一 HN 貼文，尚無跨平台佐證；與 08-18「把多數 agent 流量從 Claude Opus 遷移至 GLM 5.2」同屬「遷出 Anthropic」實務軸線，本則聚焦自架開源模型（非另一家商用 API）與大型提示詞遷移的技術眉角，非成本或效能對比
 
 #### Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者（2026-09-12）
 
