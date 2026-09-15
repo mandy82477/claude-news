@@ -67,6 +67,16 @@ class TestFlagsOnPage(unittest.TestCase):
                 mod.flags_on_page(page)
             self.assertIn("CLAUDE_CODE_POST_TURN_MEMORY", str(cm.exception))
 
+    def test_empty_first_cell_is_not_a_separator(self):
+        """P2-C：首欄留空的資料列不是分隔列——要被點名，不能靜默吞掉且列數不變。"""
+        page = PAGE.replace("| `CLAUDE_CODE_AUTO_MODE_SERVER` | 2.1.272 | 2 | — | HN | 09-14 |",
+                            "| `CLAUDE_CODE_AUTO_MODE_SERVER` | 2.1.272 | 2 | — | HN | 09-14 |\n"
+                            "|  | 2.1.262 | 1 | — | — | 備註列 |")
+        with self.assertRaises(mod.PageFormatError) as cm:
+            mod.flags_on_page(page)
+        self.assertIn("2.1.262", str(cm.exception))
+        self.assertEqual(len(mod.parse_table(PAGE)), 3)  # 真分隔列 `---` 仍照常跳過
+
     def test_missing_stage_column_is_an_error_not_silence(self):
         broken = PAGE.replace("| 旗標 | 首見 | 階 |", "| 旗標 | 首見 | 狀態 |")
         with self.assertRaises(mod.PageFormatError):

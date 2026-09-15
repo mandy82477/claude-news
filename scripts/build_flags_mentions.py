@@ -69,8 +69,8 @@ def parse_table(text: str) -> list[tuple[str, str]]:
         if not line.startswith("|"):
             break                         # 表結束
         cells = _cells(line)
-        if set(cells[0]) <= {"-", ":"}:
-            continue                      # 分隔列
+        if cells[0] and set(cells[0]) <= {"-", ":"}:
+            continue                      # 分隔列（首欄留空的資料列不是分隔列，要落到下面被點名）
         if len(cells) <= max(flag_col, stage_col):
             bad.append(line.strip()[:60]); continue
         m = FLAG_RE.search(cells[flag_col])
