@@ -688,3 +688,16 @@ ABORTED: gathered_items.json date=2026-09-13 items=49，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-09-14T17:02:15Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-09-14T22:02:51Z]
 [Tue 2026/09/15 01:32:34.00] Watchdog push SENT - 每日新聞 2026-09-14 缺件：日報。本機跑 /news-pipeline 2026-09-14 補
+[週二 2026/09/15 10:21:48.00] === Agent pipeline start (2026-09-14) ===
+[週二 2026/09/15 10:21:48.00] Backfill mode - yesterday check skipped
+[週二 2026/09/15 10:21:48.00] Aggregator OK - 70 則，14/14 來源正常，26/70 進日報
+[週二 2026/09/15 10:21:48.00] Wiki ingest OK - 11 頁更新，0 新頁；feature-radar 新增 1／移除到期倒數 1；來源歸因 append 24 筆；轉知帳本 close 1／void 1／open 3
+[週二 2026/09/15 10:21:48.00] Reader digest OK - daily/2026-09-14.md，10 頁最新動態，格式閘全過
+[週二 2026/09/15 10:21:48.00] Wiki commit OK (4b2410b8)
+[週二 2026/09/15 10:21:48.00] Building web reader...
+[週二 2026/09/15 10:21:48.00] 測試全綠 - web build 放行
+[週二 2026/09/15 10:21:48.00] build_web OK - 47 entities, 38 topics, 139 digests, 8 weekly reports + radar
+[週二 2026/09/15 10:21:48.00] Web commit OK (ab808d92)；wiki frontmatter drift 另 commit (b219c0d0)
+[週二 2026/09/15 10:21:48.00] Push rejected (non-fast-forward) - fetch 後與髒檔清單無交集，merge origin/master (60719f4c) 後重推成功
+[週二 2026/09/15 10:21:48.00] Single push done (news + wiki + web) -> 31f54f1c
+[週二 2026/09/15 10:21:48.00] === Pipeline complete (agent) ===
