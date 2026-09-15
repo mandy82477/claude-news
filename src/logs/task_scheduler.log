@@ -704,3 +704,4 @@ ABORTED: gathered_items.json date=2026-09-13 items=49，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-09-15T12:03:58Z]
 ABORTED: gathered_items.json date=2026-09-14 items=70，非目標日期的新鮮資料 (src/gathered_archive/2026-09-15.json 不存在，GitHub Actions 抓料尚未到齊)
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-15T12:04:39Z]
+[cloud daily-news-pipeline-cloud STARTED 2026-09-15 17:03:01 UTC]
