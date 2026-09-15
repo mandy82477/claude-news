@@ -382,11 +382,6 @@
   "preview": "Claude Code：桌面版新增雲端多 repo 掛載＋disableMobileSimulatorTools 旗標：雲端 session 可同時掛多個 repository；新旗標可封鎖 Claude 控制／擷取 iOS 模擬器裝置。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -434,11 +429,6 @@
     {
       "id": "recursive-self-improvement",
       "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "興趣類別 skill 總覽",
       "pageType": "topic"
     }
   ],

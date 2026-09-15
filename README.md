@@ -37,7 +37,7 @@
 | 每日日報 | 138 份（2026-04-25 起，涵蓋 142 天） |
 | 每週週報 | 8 份（2026-W30 起連續八週） |
 | wiki 頁面 | 85 頁（人物與產品 47 頁、長期議題 38 頁） |
-| 抓取管道 | 14 個 |
+| 抓取管道 | 15 個 |
 
 wiki 頁面依領域分佈：
 
@@ -64,7 +64,7 @@ wiki 頁面依領域分佈：
 
 ## 一天怎麼歸檔
 
-1. **多來源抓取**：14 個管道。Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、API Release Notes、官方文件變動、技術部落格 RSS。完整清單見 `src/news_aggregator/sources/`。
+1. **多來源抓取**：15 個管道。Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、API Release Notes、官方文件變動、技術部落格 RSS、出貨 build 裡的實驗旗標差異。完整清單見 `src/news_aggregator/sources/`。
 2. **去重過濾**：URL 與標題模糊比對。
 3. **相關性評分**：1 到 5 分，3 分以上保留。
 4. **LLM 摘要**：繁中 Markdown 日報，落在 `news/YYYY-MM-DD.md`。

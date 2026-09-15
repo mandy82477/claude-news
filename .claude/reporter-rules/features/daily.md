@@ -21,6 +21,7 @@
 | `wiki/topics/official-community-gap.md` | 官方功能 vs 社群痛點缺口變化 |
 | `wiki/topics/coding-workflow-guide.md` | 🗓️ 主體週更（吃技能清冊）；**官方對既有功能的使用指南**在每日 ingest 即寫入對應流程階段節——見 `.claude/reporter-rules/features/pages.md`；`## 6. 測試與上線` 段末保留一行指向 [[topics/anthropic-agent-stack]]「你該用哪個」的出口（連頁不連錨——該段標題帶進度標記會改名）|
 | `wiki/topics/long-context-1m.md` | 1M context 的**計費規則、預設行為、可控性、可見性**（世代加價分界、預設開啟／關閉、model picker 保不保得住 `[1m]` 變體、UI 顯示的 context 上限是否正確、1M 觸發獨立計費通道）——觸發邊見 `.claude/reporter-rules/features/pages.md` |
+| `wiki/topics/claude-code-experimental.md` | 「Build Flags」來源條目（每版至多一則）：條目列的功能候選旗標各入追蹤表第一階；同輪跑 `python scripts/build_flags_mentions.py` 對社群提及，有命中才升第二階；官方承認、出貨、消失各要對應證據——頁面契約見 `.claude/reporter-rules/features/pages.md` |
 | `wiki/feature-radar.md` | 新增/更新功能條目（**須回報主編彙整**，不直接寫入） |
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 🛠️ 工具/功能 的所有頁面（含日後新增）皆由本記者負責維護與 lint。

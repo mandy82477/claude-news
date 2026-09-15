@@ -117,6 +117,8 @@ jobs:
             src/news_aggregator/seen_urls.json
             src/news_aggregator/sources/official_watch_state.json
             src/news_aggregator/sources/official_skills_repos_state.json
+            src/news_aggregator/sources/build_flags_state.json
+            data/build_flags_history.jsonl
             data/source_funnel.jsonl
             data/discovery_queue_history.csv
             data/repo_star_history.csv

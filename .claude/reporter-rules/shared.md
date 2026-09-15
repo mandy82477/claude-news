@@ -166,6 +166,7 @@ slug | 類別 | page路徑 | item_url | item_title
 | Topic Watch | `topic-watch` |
 | Official Docs | `official-docs` |
 | Official Skills | `official-skills` |
+| Build Flags | `build-flags` |
 | Blog | `blog` |
 | User Query（使用者提問，主編通道專用，記者不會遇到） | `user-query` |
 

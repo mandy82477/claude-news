@@ -76,6 +76,18 @@ Schema（每行一筆）：
 
 寫入時機：主編分類完成、派工前，寫完跑 `python scripts/check_classification_log.py --date <date>`。exit 1（原料未進帳本、排除無理由或摘要不可讀、未知類別）不得派工，append 更正行修到零；⚠️ 警示（URL 打錯、壞行）不阻斷，因為它們掩護不了任何一則原料。exit 2＝腳本判定逾 14 天保留窗，可跳過對帳；exit 3＝窗內缺檔，是抓料缺件，不得跳過。分類複核記者（`wiki-reporter-classify-review`）與六記者同批派出，讀 `categories` 為空的行覆核，判定誤排除則走「分類回退」同輪追加派工（`.claude/skills/wiki-ingest/SKILL.md` 步驟 3b、`.claude/skills/wiki-ingest/references/dispatch.md`「3b／3c」）。
 
+## build_flags_history.jsonl
+
+出貨 Claude Code 程式本體的旗標差異帳本（append only，一版一行），`[加入: 2026-09-15]`。寫者是 `src/news_aggregator/sources/build_flags_watch.py`（每個新版本比對 `CLAUDE_CODE_*` 字串），讀者是 `wiki/topics/claude-code-experimental.md` 與 `scripts/build_flags_mentions.py`。
+
+Schema：
+
+```json
+{"date": "YYYY-MM-DD", "from": "2.1.271", "to": "2.1.272", "added": [...], "removed": [...], "candidates": [...], "plumbing": [...]}
+```
+
+`candidates`＝`added` 裡看起來像功能的（設定類字尾以外）；`plumbing`＝逾時、識別碼等。首行是 2026-09-15 探針回填的十日跨版差（帶 `backfill` 欄），之後每行是單版差。狀態檔 `src/news_aggregator/sources/build_flags_state.json` 存最後一版的完整旗標集，兩者都由 daily-gather commit。
+
 ## pending-handoffs.jsonl
 
 記者間「轉知」帳本（append only，最後一筆勝出），`[加入: 2026-08-15]`。跨記者交辦（如社群記者發現新工作模式要功能記者評估產品化矩陣）過去靠主編口頭轉達、無接手驗收；現在照 `pending-signals.jsonl` 的同構做法走閉迴路：主編 `open` 登帳 → 派工時 `list` 附清單 → 記者回報「轉知處置」→ 主編 `close`／`void`。

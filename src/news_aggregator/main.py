@@ -22,6 +22,7 @@ from news_aggregator.sources.anthropic_blog import AnthropicBlog
 from news_aggregator.sources.anthropic_status import AnthropicStatus
 from news_aggregator.sources.api_docs import ApiDocs
 from news_aggregator.sources.official_docs_watch import OfficialDocsWatch
+from news_aggregator.sources.build_flags_watch import BuildFlagsWatch
 from news_aggregator.sources.official_skills_repos import OfficialSkillsRepos
 from news_aggregator.sources.topic_watch import TopicWatch
 from news_aggregator.sources.blogroll import Blogroll
@@ -290,6 +291,7 @@ def main() -> None:
         ("Blogroll", Blogroll()),
         ("Official Docs", OfficialDocsWatch()),
         ("Official Skills", OfficialSkillsRepos()),
+        ("Build Flags", BuildFlagsWatch()),
         ("Topic Watch", TopicWatch()),
     ]
 

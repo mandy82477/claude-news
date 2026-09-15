@@ -74,6 +74,10 @@ DERIVED_PAGES = {
     "topics/market-lessons":
         ".claude/reporter-rules/market/weekly.md「教材頁週更」"
         "（週更，吃 market-signals 的判讀與結算表，非新聞條目；每日 ingest 不更新）",
+    "topics/claude-code-experimental":
+        ".claude/reporter-rules/features/daily.md 負責頁面表「Build Flags」列"
+        "（吃 Build Flags 來源條目——每版至多一則，非一般新聞；"
+        "第 2 階由 scripts/build_flags_mentions.py 對帳；2026-09-15 建頁）",
     "topics/skill-interest-watch":
         ".claude/reporter-rules/community/weekly.md「skill-interest-watch：機器快照頁」"
         "（每日由 scripts/skill_interest_snapshot.py 覆寫，吃 GitHub Search 非新聞條目；"

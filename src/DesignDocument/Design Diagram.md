@@ -113,6 +113,9 @@ repo 描述關鍵字補撈)"]
         S11["Official Docs\n(官方靜態頁 hash diff\n方案/配額/計費)"]
         S12["Official Skills\n(官方技能 repo 目錄差異\nskills / knowledge-work-plugins)"]
         S13["Topic Watch\n(wiki 專頁定向抓取\n繞過 Claude/Anthropic 標題閘)"]
+        S14["Build Flags
+(出貨 build 旗標差異
+每版至多 1 則)"]
     end
 
     SRC --> DEDUP["dedup.py\nURL 正規化 + 模糊標題去重\n官方來源優先"]

@@ -6408,3 +6408,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **查證**：`gh issue view 91870 --repo anthropics/claude-code` 直讀一手來源——09-09 官方於原提案串內留言：已承諾出貨（"shipping in N weeks"），產品層更名為「Claude Mods」，`function hook` 降級為底層實作術語（mod＝使用 function hook 的 plugin）；並公開三款內建 mod 原始碼 `diff`／`sec-default`／`telemetry`（`github.com/anthropics/claude-code/tree/main/mods`，經 `gh api` 確認目錄存在）；測試旗標仍為 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`（09-03 原貼文已提及，09-09 追認公開）。起因是使用者先後問「Claude mod」「Claude mods」「Function hook 應用」，本庫 09-05 僅記錄提案階段，未收錄 09-09 這則狀態升級。
 - **處置**：[[entities/claude-code]]「現在會咬到你的」原 Function Hooks 提案列（issue #91870）狀態列由「🔴 未修復｜提案」改為「🔴 未修復（官方已承諾出貨）」，補記更名與三款內建 mod。尚未出貨、無版本號可查，暫不進 feature-radar；待實際出貨版本號出現時再轉正常功能條目。
 - **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。
+## 2026-09-15 Query：實驗性功能怎樣才不會漏（使用者提問）
+
+- **查證**：Claude Code 的 npm 套件是 27 KB 薄殼，本體在 `@anthropic-ai/claude-code-linux-x64`。抓 2.1.261（09-04）、2.1.271、2.1.272（09-14）三版比對 `CLAUDE_CODE_*` 字串：594→634 個，十日新增 45、消失 5，單日差 1。`ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就在，比 issue #91870 本文的官方承諾（09-09）早五天，changelog 2.1.261–2.1.272 零提及。新增 45 個裡約半數是逾時／識別碼等設定類，另有兩字代號型（`POLISHED_DEWDROP`）。
+- **處置**：建 [[topics/claude-code-experimental]]，四階狀態機（出現在 build→有人談論→官方承認→出貨／移除），每階要證據，30 天零提及摺進靜默表；基線 2.1.272，回填十日差 27 個功能候選入第一階，`ENABLE_FUNCTION_HOOKS` 以 issue 本文為證據列第 3 階。新來源「Build Flags」每版至多一則；`scripts/build_flags_mentions.py` 對社群提及（首跑 25 個候選全部零提及，如實記）。使用者裁決：不直接進日報、要有頁、要有態度確認。
+- **歸因**：`user-query` 兩筆（探針、issue #91870），`data/source_attribution.jsonl` 已 append。
+

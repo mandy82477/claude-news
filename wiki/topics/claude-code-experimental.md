@@ -1,0 +1,94 @@
+# Claude Code 實驗功能追蹤
+
+**狀態：** ongoing
+**開始日期：** 2026-09-15
+**領域：** 🛠️ 工具/功能
+**蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
+**更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
+
+> **本頁是什麼**（快照 2026-09-15）
+> 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
+
+---
+
+## 摘要
+
+- **首批基線 2.1.272（2026-09-14）**：程式本體含 634 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 45 個、消失 5 個；新增裡 27 個像功能、18 個是設定類。
+- **已確認的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階）——官方在 issue #91870 承諾數週內出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
+- **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
+
+## 怎麼讀這一頁
+
+| 階 | 意思 | 升到這一階要什麼證據 |
+|---|---|---|
+| 1 出現在 build | 程式本體裡有這個名字 | 每版比對自動寫入，不需證據 |
+| 2 有人談論 | 社群或 issue 留言提到它 | 至少一個連結（HN、Reddit、issue 留言），由對帳腳本找到 |
+| 3 官方承認 | Anthropic 員工或官方文件說了它是什麼 | issue 本文、官方文件頁或 changelog 的連結 |
+| 4 已出貨／已移除 | 功能正式上線，或旗標從 build 消失 | changelog 條目，或比對顯示消失的版本 |
+
+## 旗標追蹤表
+
+| 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
+|---|---|---|---|---|---|
+| `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` | ≤2.1.261（09-04） | 3 | 已承認：issue #91870 本文 09-09 改寫「數週內出貨、更名 Claude Mods」 | issue 留言 09-09 起至少 6 人回報用此旗標試玩 | 2026-09-14 仍在 build |
+| `CLAUDE_CODE_ARTIFACT_DB_STR_REPLACE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ARTIFACT_FIVE_CLASS_ASKS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ARTIFACT_HOT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ARTIFACT_QUICKSTART` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ARTIFACT_REPL` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ATTRIBUTION_ANNOUNCEMENT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_AUTO_MODE_SERVER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_BASH_EDIT_DIFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_DISABLE_TURN_HANDOFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_DISABLE_WINDOWS_SHELL_LAUNCHER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_MODEL_CAPABILITIES` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_POST_TURN_MEMORY_CONFIG` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_POST_TURN_MEMORY_SYNC` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_QUESTION_OPTIONAL_DESCRIPTIONS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_REMOTE_TOOLS_ADOPT_MCP` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_RESUME_REASON` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_SENDMESSAGE_HANDBACK` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_SESSION_ATTENDED` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_TETHER_LIVE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+| `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2026-09-14 出現 |
+
+## 代號旗標
+
+兩個字拼成的名字，像內部實驗代號，看得出有東西、看不出是什麼。只記出現與消失，不解讀。
+
+| 旗標 | 動靜 |
+|---|---|
+| `CLAUDE_CODE_POLISHED_DEWDROP` | 2.1.262–2.1.272 之間出現 |
+| `CLAUDE_CODE_SLEEPY_SNOWFLAKE` | 2.1.262–2.1.272 之間出現 |
+| `CLAUDE_CODE_CARVED_SLATE` | 2.1.262–2.1.272 之間消失 |
+| `CLAUDE_CODE_GAULT_KESTREL` | 2.1.262–2.1.272 之間消失 |
+| `CLAUDE_CODE_WALNUT_SPIRE` | 2.1.262–2.1.272 之間消失 |
+
+## 已消失
+
+- `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
+- `CLAUDE_CODE_GOAL_CHECKIN_MINUTES0`（2.1.262–2.1.272 之間）
+
+## 靜默表
+
+第一階超過 30 天沒有任何提及的旗標會摺到這裡，不刪、不進日報。
+
+- 目前無（本頁 2026-09-15 起算）
+
+## 相關實體
+
+- [[entities/claude-code]]：Claude Mods／Function Hooks 的已知問題與版本紀錄住那裡
+- [[feature-radar]]：升到第 4 階出貨的功能會進雷達
+
+## 時序
+
+| 日期 | 事件 |
+|---|---|
+| 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |

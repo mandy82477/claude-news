@@ -42,3 +42,9 @@
 **社群案例一律以一句 wikilink 指回 `[[topics/community-tech-patterns]]`**：舊軸要求每張卡附「社群拿它玩出什麼配置」具體案例，是 11 格「無」的直接來源之一；新軸把社群配置整條搬去它自己的頁面，本節不重述具體配置。
 
 ---
+
+## 2026-09-15：新增 topics/claude-code-experimental（出貨前訊號）
+
+**起因：** `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 2.1.261 build 就在，官方 09-09 才在 issue #91870 本文承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提。同日探針：2.1.261→2.1.272 新增 45 個旗標，約半數是逾時／識別碼等設定類，另有兩字代號型。使用者裁決：不直接進日報，另開專頁＋四階狀態機，每階要證據，30 天零提及摺進靜默表。
+
+**改了什麼：** `.claude/reporter-rules/features/daily.md` 負責頁面加一列；`.claude/reporter-rules/features/pages.md` 加頁面契約（四階、證據、代號、靜默表）；來源 `build_flags_watch.py` 每版至多一則；`scripts/build_flags_mentions.py` 對社群提及。員工留言只算第 2 階：`author_association` 對員工是 CONTRIBUTOR，機械辨識不出官方。
