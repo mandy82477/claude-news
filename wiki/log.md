@@ -6402,3 +6402,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 📋 待使用者裁示：devpractice 記者指出本輪帳本風險——六記者的更新在它跑沉澱時尚未 commit，它改用工作樹 diff 取料，但 `mark` 只能把基準線推到 HEAD；這批內容 commit 後會在下一輪 `show` 的 diff 裡再次出現，需人工核對是否與本輪已收的 9 筆重複，避免帳本重記同一事實
 - devpractice 沉澱：候選 9 筆（entities/claude-code：v2.1.270 唯讀 git 指令授權迴歸修復、桌面版多 repo 掛載＋`disableMobileSimulatorTools`、GitHub Actions 三家範本同款 RCE；entities/pricing：週配額換軌淨減約 17%；topics/code-quality-decline：4 個平行 agent 數分鐘燒光 Max session 額度；topics/community-tech-discussions：COBRA-Skills contextual bandits、35KB preprompt 遷 Ollama 踩雷；topics/community-tech-patterns：genspark-ai/genoffice、proliferate-ai/proliferate）；基準線 9763cfc993→a403e9f53c
 - market 判讀：1 則（Nvidia／Palantir／Booz Allen 因資料外洩疑慮限縮 Claude 內部使用，第 4 類；里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列；買得到的標的無，Anthropic 未上市）
+
+## 2026-09-15 Query：Function Hooks 更名「Claude Mods」，官方已承諾出貨（使用者提問）
+
+- **查證**：`gh issue view 91870 --repo anthropics/claude-code` 直讀一手來源——09-09 官方於原提案串內留言：已承諾出貨（"shipping in N weeks"），產品層更名為「Claude Mods」，`function hook` 降級為底層實作術語（mod＝使用 function hook 的 plugin）；並公開三款內建 mod 原始碼 `diff`／`sec-default`／`telemetry`（`github.com/anthropics/claude-code/tree/main/mods`，經 `gh api` 確認目錄存在）；測試旗標仍為 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`（09-03 原貼文已提及，09-09 追認公開）。起因是使用者先後問「Claude mod」「Claude mods」「Function hook 應用」，本庫 09-05 僅記錄提案階段，未收錄 09-09 這則狀態升級。
+- **處置**：[[entities/claude-code]]「現在會咬到你的」原 Function Hooks 提案列（issue #91870）狀態列由「🔴 未修復｜提案」改為「🔴 未修復（官方已承諾出貨）」，補記更名與三款內建 mod。尚未出貨、無版本號可查，暫不進 feature-radar；待實際出貨版本號出現時再轉正常功能條目。
+- **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。

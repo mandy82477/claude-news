@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-14"
-last_news_update: "2026-09-14"
+last_updated: "2026-09-15"
+last_news_update: "2026-09-15"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 95
-attribution_count: 497
-attribution_last: "2026-09-14"
+attribution_count: 498
+attribution_last: "2026-09-15"
 top_source: "github-issues"
 pending_count: 23
 pending_overdue: 16
@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-15
+**最後新聞更新：** 2026-09-15
 
 > **最新動態**（2026-09-14）
 > - **桌面版新增雲端多 repo 掛載＋`disableMobileSimulatorTools` 旗標**：雲端 session 可同時掛多個 repository；新旗標可封鎖 Claude 控制／擷取 iOS 模擬器裝置。
@@ -285,7 +285,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：MCP Sampling 支援以善用 Max 訂閱降低 API 成本（GitHub issue #1785，累積 58 則留言，2026-07-12 回報）**：使用者呼籲支援 MCP Sampling，讓 MCP Server 端運算可透過既有 Claude Max 訂閱額度執行，避免額外 API 計費；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 每輪工具呼叫次數限制回歸，中斷 MCP/SSH agent 工作流（GitHub issue #33969，累積 48 則留言、44 個讚，2026-07-07，regression）**：Claude Desktop 每輪工具呼叫次數限制出現回歸，導致依賴多輪工具呼叫的 MCP／SSH 相關 agent 工作流中斷；官方尚未回應。
 - 🔴 **未修復**｜**MCP servers/hooks/plugins 設定變更需完整重啟 session（GitHub issue #24057，累積 30 則留言、15 個讚，2026-07-05）**：目前修改 MCP server、hooks 或 plugin 設定後必須重啟整個 session 才會生效，無法熱重載，中斷工作流程並遺失既有 context；社群呼籲改為設定變更後自動重載，官方尚未回應。
-- 🔴 **未修復**｜**提案：Function Hooks——外掛以 `$` 物件追蹤副作用、安全深度改行為並可組合註冊（issue #91870，107 則留言、94 讚，本輪互動最高功能提案，09-05）**：與 #24057 同屬 hooks／外掛成熟度議題，屬新機制提案；官方尚未回應。
+- 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨並公開三款內建 mod 原始碼（issue #91870，查證 2026-09-15）**：`function hook` 降為底層實作術語，mod＝用 function hook 的 plugin。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
 ### 🔌 平台相容性（70 條未修復、3 條查無官方）
