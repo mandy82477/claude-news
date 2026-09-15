@@ -7,7 +7,17 @@ traction so the digest isn't flooded by every drive-by report:
 
 Unauthenticated GitHub API allows 60 req/hr — one request per run is fine.
 GITHUB_TOKEN from config is used when available for a higher limit.
+
+Issues are living documents, not one-shot news: maintainers rewrite the OP to post
+roadmap decisions (2026-09-09, #91870 got "Community Update: shipping in N weeks,
+renamed Claude Mods" prepended to its body and a new title). Keyed by URL alone the
+emitted cache drops every re-fetch unless comments double (the reignite escape hatch
+models a heat surge, not a content change), so that update never reached a digest.
+`dedup_key` therefore hashes what the digest shows — title + body[:200] — so an OP
+rewrite is a new cache entry while a typo fix deep in the body is not. Same cure
+as `official_docs_watch.py`; see `FeedItem.dedup_key`.
 """
+import hashlib
 import logging
 from datetime import datetime, timedelta, timezone
 
@@ -23,6 +33,23 @@ REPO = "anthropics/claude-code"
 MAX_ITEMS = 15
 MIN_COMMENTS_HOT = 5      # older issue, heavy recent discussion
 MIN_COMMENTS_NEW = 2      # brand-new issue with early traction
+SUMMARY_CHARS = 200       # what the digest shows — and therefore what the cache key hashes
+
+
+def content_key(url: str, title: str | None, body: str | None) -> str:
+    """Emitted-cache key: URL + hash of the part of the issue the digest displays.
+
+    Title and body[:SUMMARY_CHARS] only. An OP rewrite or retitle changes the key
+    (re-emitted as a new item); comments, reactions, and edits past the prefix do not
+    (score-based reignition still applies within the same key). Whitespace is
+    collapsed so a reflow of the same words is not a "change".
+    """
+    # Collapse whitespace *before* slicing: a reflow must not shift which words fall
+    # inside the window, or a paragraph re-wrap would masquerade as an OP rewrite.
+    body_norm = " ".join((body or "").split())[:SUMMARY_CHARS]
+    title_norm = " ".join((title or "").split())
+    digest = hashlib.sha256(f"{title_norm}\n{body_norm}".encode("utf-8")).hexdigest()[:16]
+    return f"{url}#{digest}"
 
 
 class GitHubIssues(BaseSource):
@@ -56,9 +83,11 @@ class GitHubIssues(BaseSource):
                 if not (comments >= MIN_COMMENTS_HOT or (is_new and comments >= MIN_COMMENTS_NEW)):
                     continue
                 reactions = issue.get("reactions", {}).get("total_count", 0)
+                url = issue.get("html_url", "")
                 items.append(FeedItem(
                     title=issue.get("title", "(no title)"),
-                    url=issue.get("html_url", ""),
+                    url=url,
+                    dedup_key=content_key(url, issue.get("title"), issue.get("body")),
                     # use created time for new issues so the digest shows when the bug appeared;
                     # updated time would churn on every comment
                     published=created if is_new else datetime.strptime(
