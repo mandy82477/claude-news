@@ -410,11 +410,6 @@
       "pageType": "entity"
     },
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
       "id": "simon-willison",
       "name": "Simon Willison",
       "pageType": "entity"
