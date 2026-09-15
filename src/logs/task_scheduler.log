@@ -717,3 +717,4 @@ ABORTED: gathered_items.json date=2026-09-14 items=70，非目標日期的新鮮
 [週二 2026/09/15 17:50:48.00] Push rejected (non-fast-forward，遠端多 5 個獨立 commit) - fetch 後工作樹乾淨、無 dirty overlap，改走 pull --rebase：2 個 append-only 衝突（data/source_attribution.jsonl、wiki/log.md）以 resolve_append_only.py 自動 union 解決；web_reader/ 生成檔衝突（純 build 產物）以 rebase --skip 捨棄舊 commit，rebase 完成後重跑 build_web.py 重建為新 commit；重推成功
 [週二 2026/09/15 17:50:48.00] Single push done (news + wiki + web) -> a52004c2
 [週二 2026/09/15 17:50:48.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud STARTED 2026-09-15T22:02:41Z]
