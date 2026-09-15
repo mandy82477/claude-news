@@ -71,11 +71,19 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 ### [下一則...]
 ```
 
-無條目的類別標記「無」，不派工；**未標記任何類別的條目**（主編判斷不屬於六類任一），append 一行到 `data/classification-exclusions.jsonl`（格式與寫入時機見 `.claude/skills/wiki-ingest/references/classification.md`「排除紀錄」）——2026-09-15 使用者稽核發現主編排除判斷完全沒有留痕，兩則因此漏收且事後才發現，這是唯一的補救留痕點。
+無條目的類別標記「無」，不派工。
+
+**分類紀錄與對帳（強制，派工前）：** 當日每一則原料各 append 一行到 `data/classification-log.jsonl`，記它分到哪些類別；未分給任何類別的寫理由（格式見 `.claude/skills/wiki-ingest/references/classification.md`「分類紀錄」）。寫完跑：
+
+```
+python scripts/check_classification_log.py --date TARGET_DATE
+```
+
+exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正行修到零才可進步驟 3（帳本不改舊行，同 URL 最後一行勝出；⚠️ 警示行不阻斷）。exit 2＝腳本判定原料已逾 14 天保留窗（逾期 backfill 會遇到）：跳過對帳，帳本每行 `reason` 註明「原料已逾保留窗，未對帳」，照常進步驟 3。exit 3＝原料在窗內卻缺檔或損毀＝抓料缺件，**不得跳過**，先修抓料（`docs/daily-automation.md`）再回來。主編分類是整條鏈唯一沒有第二人把關的一步，這是它唯一的留痕與對帳點。
 
 ### 3. 派工（Agent tool）
 
-**對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（讀當日 `data/classification-exclusions.jsonl` 覆核排除判斷，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+**對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（讀當日 `data/classification-log.jsonl` 中 `categories` 為空的條目，覆核排除判斷，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 > ⚠️ **記者 agent 必須以 foreground（同步）方式啟動，不可設 `run_in_background: true`。** 背景記者的完成通知無法回到派工 agent，會造成永久等待。
 
@@ -83,14 +91,15 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 ### 3b. 處理分類回退（主編，同輪內處理，不等下一輪）
 
-收齊六記者與分類複核記者的回報後，彙整所有「分類回退」項目（六記者回報欄＋分類複核記者的「誤排除」判定）：
+收齊六記者與分類複核記者的回報後，彙整所有「分類回退」項目（六記者回報欄＋分類複核記者的「誤排除」判定），逐項核對：
 
-1. 對每一項，比對 `.claude/skills/wiki-ingest/references/classification.md`「分類表」快速核對理由是否成立——多數情況記者／複核記者的判斷可直接採信，主編此步只擋明顯錯誤（例如記者誤解了分流鐵則）
-2. 理由成立 → 用 `.claude/skills/wiki-ingest/references/dispatch.md`「3c」模板，單則追加派工給正確類別的記者，**同輪內完成**，不登進轉知帳本、不等下一輪（轉知帳本是給「兩面都有事實」的情境，分類回退是主編分錯，責任在主編，應立即修正）
-3. 理由不成立 → 不追加派工，在完成摘要註明理由
-4. 追加派工的回報併入步驟 4 彙整，視同該記者原輪就收到這則
+1. **目標類別原輪是否已收到這則？** 查 `data/classification-log.jsonl` 該則的 `categories`——已含目標類別就不追加派工（那位記者已經處理過，再派會用新 context 重讀頁面、有機會重複寫入），在完成摘要記「已由原輪 [類別] 記者處理」即可
+2. **理由是否成立？** 比對 `.claude/skills/wiki-ingest/references/classification.md`「分類表」與「分流鐵則」。記者／複核記者的判斷多數可採信，主編只擋明顯錯誤；不成立則不派，完成摘要註明理由
+3. **按類別合併追加派工。** 成立的項目依目標類別分組，一類一次呼叫（不是一則一次——每次呼叫都是完整記者啟動，讀角色檔與規則檔就要十幾萬 token），模板見 `.claude/skills/wiki-ingest/references/dispatch.md`「3c」。**同輪內完成**，不登轉知帳本（轉知是「兩面都有事實」，分類回退是主編分錯，責任在主編，當場修）
+4. **一則最多一跳。** 追加派工的記者若再回退，不再派，記入完成摘要待使用者裁示。雲端無人值守，沒有這條會來回乒乓
+5. 追加派工的回報併入步驟 4 彙整，視同該記者原輪就收到；並把該則在 `data/classification-log.jsonl` 的 `categories` 補上目標類別、`reason` 附一句「分類回退自 [原類別]」（append 一行新紀錄，不改舊行）
 
-無分類回退項目時本步驟略過，不影響後續步驟。
+無分類回退項目時本步驟略過。
 
 ### 4. 彙整共用檔案（主編）
 

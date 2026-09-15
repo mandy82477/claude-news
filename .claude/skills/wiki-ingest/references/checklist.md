@@ -52,11 +52,11 @@
 
 **在宣告完成之前，逐項確認所有項目已完成。**
 
-- [ ] 每個有條目的類別均已派工，記者回報已收齊；分類複核記者已派工，回報已收齊
+- [ ] 每個有條目的類別均已派工，記者回報已收齊；分類複核記者已派工並回報（當日排除 0 則則不派，摘要記「排除 0 則，未派複核」）
 - [ ] 六記者回報的「待查證命中處置」欄皆有值（已標訊／證據不足不動／無命中，三選一，不可空白或省略）
 - [ ] 六記者回報的「轉知處置」欄皆有值，且已處理者已 `close`、新轉知已 `open` 登帳（`python scripts/pending_handoffs.py list` 的結果與記者回報一致）
-- [ ] 六記者與分類複核記者回報的「分類回退」項目已全數處理（追加派工或駁回並記理由，無遺留未決）
-- [ ] `data/classification-exclusions.jsonl` 已 append 本日所有未分派條目
+- [ ] 六記者與分類複核記者回報的「分類回退」項目已全數處理（目標類別原輪已收到者不重派；追加派工按類別合併；一則最多一跳；駁回者記理由）
+- [ ] `data/classification-log.jsonl` 已記本日全部原料，`python scripts/check_classification_log.py --date TARGET_DATE` exit 0（追加派工後補記的類別也已 append）；逾期 backfill 遇 exit 2 者，帳本每行 `reason` 已註明「原料已逾保留窗，未對帳」即算通過
 - [ ] feature-radar.md 已彙整更新（無新功能則標「本日無新功能」）
 - [ ] wiki/index.md 狀態已全部同步（含所有記者回報的狀態變更）
 - [ ] wiki/log.md 已 append 本次 ingest 紀錄（含品質審查彙整，未修改既有條目）

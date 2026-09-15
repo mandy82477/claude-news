@@ -58,17 +58,23 @@ Schema（每行一筆，每次 gather / render 各一筆）：
 | `sources` | 以來源註冊名為 key；`ok`（抓取是否成功）、`gathered` / `filtered` / `emitted` 各階段條目數；對不回註冊名的計數歸入 `"_unmapped"` 桶 |
 | `totals` | 三階段總數 |
 
-## classification-exclusions.jsonl
+## classification-log.jsonl
 
-主編當天分類階段未派給任何記者的條目留痕（append only），`[加入: 2026-09-15]`。起因：使用者稽核 2026-09-14 那輪發現主編分類判斷完全沒有留痕——70 則原料中 13 則從未出現在任何一份派工訊息裡，其中至少 2 則（功能類 bug 回報、社群類工具）是漏判而非合理排除，事後才靠人工比對抓出來。
+主編當天分類判斷的完整留痕（append only，同 URL 同日最後一行勝出），`[加入: 2026-09-15]`。**記全部原料，不只記排除**：起因是使用者稽核 2026-09-14 那輪發現主編分類完全沒有留痕——70 則原料有 13 則從未進任何派工訊息，其中至少 2 則是漏判。只記排除對不了帳，「忘了處理」和「判斷排除」在帳上都是沒出現；記全部之後才能用 `scripts/check_classification_log.py` 對原料逐 URL 核對。
 
 Schema（每行一筆）：
 
 ```json
-{"date": "YYYY-MM-DD", "url": "...", "title": "...", "reason": "一句話排除理由"}
+{"date": "YYYY-MM-DD", "url": "...", "title": "...", "source": "...", "summary": "去 HTML 摘要 ≤240 字", "categories": ["功能"], "reason": ""}
 ```
 
-主編分類完成、派工前寫入。分類複核記者（`wiki-reporter-classify-review`）與六記者同批派出，讀當天這份清單覆核，判定誤排除則走「分類回退」同輪追加派工（見 `.claude/skills/wiki-ingest/SKILL.md` 步驟 3b、`.claude/skills/wiki-ingest/references/dispatch.md`「3b／3c」）。
+`categories` 空陣列＝主編未派給任何記者，`reason` 必填。分類回退後追加派工的條目 append 一行新紀錄補上目標類別，不改舊行；寫錯也是 append 更正行，對帳腳本只看同 URL 的最後一行。
+
+**2026-09-14 那 70 行是 2026-09-15 事後重建**（帶 `backfill` 欄），不是當天寫的——它是這個機制上線前那一天的分類，用來當第一批可對帳的資料；之後的日期沒有 `backfill` 欄。
+
+輪替：帳本一年約 25,000 行，`load_log()` 每次全讀。超過一年時把舊年份搬到 `classification-log-YYYY.jsonl` 歸檔，主檔只留當年；對帳只查目標日期，歸檔檔不必載入。
+
+寫入時機：主編分類完成、派工前，寫完跑 `python scripts/check_classification_log.py --date <date>`。exit 1（原料未進帳本、排除無理由或摘要不可讀、未知類別）不得派工，append 更正行修到零；⚠️ 警示（URL 打錯、壞行）不阻斷，因為它們掩護不了任何一則原料。exit 2＝腳本判定逾 14 天保留窗，可跳過對帳；exit 3＝窗內缺檔，是抓料缺件，不得跳過。分類複核記者（`wiki-reporter-classify-review`）與六記者同批派出，讀 `categories` 為空的行覆核，判定誤排除則走「分類回退」同輪追加派工（`.claude/skills/wiki-ingest/SKILL.md` 步驟 3b、`.claude/skills/wiki-ingest/references/dispatch.md`「3b／3c」）。
 
 ## pending-handoffs.jsonl
 

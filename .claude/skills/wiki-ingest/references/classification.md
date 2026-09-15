@@ -19,15 +19,21 @@
 
 跨類別條目標記多個類別——各記者只負責自己那一面。
 
-### 排除紀錄（主編）
+### 分類紀錄（主編）
 
-分類完成後，凡未標記任何類別的條目（含日報條目與 `list_digest_omissions.py` 補的未收錄條目），append 一行到 `data/classification-exclusions.jsonl`：
+分類完成後、派工前，**當日每一則原料**（日報條目＋`list_digest_omissions.py` 補的未收錄條目，合計等於 `src/gathered_archive/<date>.json` 的條目數）各 append 一行到 `data/classification-log.jsonl`：
 
 ```json
-{"date": "YYYY-MM-DD", "url": "...", "title": "...", "reason": "一句話排除理由"}
+{"date": "YYYY-MM-DD", "url": "...", "title": "...", "source": "...", "summary": "去 HTML 的原文摘要（≤240 字）", "categories": ["功能", "安全政策"], "reason": ""}
 ```
 
-這是主編分類判斷唯一的留痕——不寫，這則條目等於沒被任何人看過，事後無法稽核（2026-09-15 使用者稽核發現兩則因此漏收）。
+`categories` 為空陣列＝主編判斷不派給任何記者，此時 `reason` 必填一句話。**記全部而不是只記排除**：只記排除的帳本對不了帳——「忘了處理」和「判斷排除」在帳上一樣是沒出現。寫完立刻跑對帳，非零退出不得派工：
+
+```
+python scripts/check_classification_log.py --date TARGET_DATE
+```
+
+它核對原料的每個 URL 都在帳本裡、排除的都有理由與可讀的摘要、類別名合法；同一 URL 多行以最後一行為準（寫錯就 append 一行更正，不改舊行；URL 打錯、壞行只警示不阻斷）。exit 2 代表腳本判定原料已逾 14 天保留窗（逾期 backfill 會遇到）：跳過對帳，帳本每行 `reason` 註明「原料已逾保留窗，未對帳」，照常派工。exit 3 代表原料在窗內卻缺檔或損毀，是抓料缺件不是逾窗，不得跳過對帳。
 
 ### 分類回退（記者／複核記者）與轉知（記者間）的分界
 

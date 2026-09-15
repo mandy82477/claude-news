@@ -279,7 +279,7 @@
       ]
     },
     {
-      "name": "記者回報格式八欄骨架的單一家（shared.md）：更新頁面/feature-radar 新增/index.md 狀態變更/新增頁面/同步自查/待查證命中處置/轉知處置/來源歸因；各記者 daily.md 只寫自己專屬的欄位差異，不再各抄一份",
+      "name": "記者回報格式九欄骨架的單一家（shared.md）：更新頁面/feature-radar 新增/index.md 狀態變更/新增頁面/同步自查/待查證命中處置/轉知處置/分類回退/來源歸因；各記者 daily.md 只寫自己專屬的欄位差異，不再各抄一份",
       "assertion": "all_contain",
       "files": [
         ".claude/reporter-rules/shared.md"
@@ -292,11 +292,12 @@
         "同步自查：",
         "待查證命中處置：",
         "轉知處置：",
+        "分類回退：",
         "來源歸因："
       ]
     },
     {
-      "name": "分類與派工正典（classification.md）回報格式段同步八欄",
+      "name": "分類與派工正典（classification.md）回報格式段同步九欄",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-ingest/references/classification.md"
@@ -309,6 +310,7 @@
         "同步自查：",
         "待查證命中處置：",
         "轉知處置：",
+        "分類回退：",
         "來源歸因："
       ]
     },
@@ -1664,6 +1666,32 @@
       "patterns": [
         "wiki/metrics\\.md"
       ]
+    },
+    {
+      "name": "分類複核記者派不派的三處同一句：SKILL.md 步驟 3／dispatch.md 3b／checklist.md 核對清單——當日排除 0 則不派（缺任一處，雲端 Sonnet 會派空清單或勾不下去）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-ingest/SKILL.md",
+        ".claude/skills/wiki-ingest/references/dispatch.md",
+        ".claude/skills/wiki-ingest/references/checklist.md"
+      ],
+      "patterns": [
+        "排除 0 則，未派複核"
+      ],
+      "_note": "2026-09-15 review P1-5：三份檔案三種說法。"
+    },
+    {
+      "name": "對帳 exit 2 例外三處同句：SKILL.md 步驟 2／classification.md 分類紀錄／checklist.md 核對清單——逾保留窗 backfill 的 reason 註記語（缺任一處，逾期補跑會在最後一步勾不下去）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-ingest/SKILL.md",
+        ".claude/skills/wiki-ingest/references/classification.md",
+        ".claude/skills/wiki-ingest/references/checklist.md"
+      ],
+      "patterns": [
+        "原料已逾保留窗，未對帳"
+      ],
+      "_note": "2026-09-15 review N-3：P1-5 同型病由 P1-6 修法重新引入。"
     }
   ],
   "coupling_hints": {
