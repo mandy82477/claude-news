@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-05"
 last_news_update: "2026-08-24"
 status_main: "active"
-days_since_news: 20
+days_since_news: 22
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 20
+days_since_news_subtree: 22
 inbound_links: 5
 attribution_count: 9
 attribution_last: "2026-08-19"
@@ -20,7 +20,7 @@ pending_count: 2
 pending_overdue: 1
 pending_next_review: "2026-09-19"
 pending_signalled: 0
-signal: "健康"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Skills

@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-09-12"
 last_news_update: "2026-08-24"
 status_main: "active"
-days_since_news: 20
+days_since_news: 22
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 20
+days_since_news_subtree: 22
 inbound_links: 2
 attribution_count: 1
 attribution_last: "2026-08-23"
@@ -20,7 +20,7 @@ pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
-signal: "孤島"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Amir Salek
