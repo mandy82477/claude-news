@@ -27,12 +27,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新動態**（2026-09-15）
-> - **Anthropic 正式推出「Claude for Financial Advisors」，Schwab 為（暫時性）獨家 RIA 通路夥伴**：至少 7 家財經媒體同步報導，分析師對 Schwab 卡位效果意見分歧，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
-> - **「連續第二季獲利」說法遭 Futurism 跟進批評未計入模型開發成本**：與 09-14 已記錄之 HN 討論同一角度，非新增數字，見 [[topics/anthropic-business#這些數字是誰說的]]。
+> **最新動態**（2026-09-16）
+> - **Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：Reuters、Bloomberg、WSJ、politico.eu 四家媒體同步報導，合約細節未載，詳見「哪個合作」清單新增列。
+> - **開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：Dealroom 兩來源報導，詳見下方時序 2026-09-16。
 
 ---
 
@@ -306,6 +306,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
 - **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費方式與上線時間未見報導（MacRumors／HN 188 分）
 - **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）
 - **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
@@ -493,6 +494,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-16
+- **[戰略合作] Reuters／Bloomberg／WSJ／politico.eu：Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：四家媒體同步報導（Ozempic 藥廠），合約範疇與費用未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列
+- **[基礎設施，僅標題可用] finance.yahoo.com：Anthropic 簽署首份澳洲資料中心協議**：資料中心版圖首次擴及大洋洲，具體規模與合作夥伴未見報導
+- **[市場策略，僅標題可用] Business Insider：Anthropic 全力衝刺把 Claude 賣進中小企業市場**：具體通路、方案與預算未見報導
+- **[商業風險] Dealroom（2 源）：開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：若官方為堵漏收緊政策，重度混用第三方模型的 Claude Code 用戶路由彈性可能受限（推論）
 
 #### 2026-09-15
 - **[戰略合作] Reuters 等 7+ 家財經媒體：Anthropic 定名並推出「Claude for Financial Advisors」**：延續 09-14 記錄之 Schwab／Orion 導入，詳見「哪個合作」清單 Schwab／Orion 條目（FF News、InvestmentNews、AdvisorHub 等跟進）

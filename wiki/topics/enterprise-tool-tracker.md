@@ -28,13 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新企業採用異動**（2026-09-15）
-> - **Google 開放全體工程師使用 Claude**：Business Insider 報導，具體工具範疇與上線時程未見細節。
-> - **Rubrik 發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試**：既有 Claude Code agent（06-30）之外另一產品線。
-> - 兩則皆為本頁首見的今日新增（[[topics/enterprise-tool-tracker#企業工具使用現況]]）。
+> **最新企業採用異動**（2026-09-16）
+> - **Rubrik Code Guardian 追加細節：另支援 MCP**：TNGlobal 報導用於 AI agent 情境，與 09-15 首發同一產品（詳見使用現況表 Rubrik 列）。
 
 ## 摘要
 
@@ -183,6 +181,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-16
+- **[既有企業新產品線，補充來源] TNGlobal：Rubrik Code Guardian 另支援 MCP，用於 AI agent 情境**：與 09-15 marketscreener.com 首發同一產品，本則首次點名 MCP 整合，未見額外效能數字，詳見上方使用現況表 Rubrik 列（Google News/TNGlobal）
 
 #### 2026-09-15
 - **[新增具名企業，✅ 使用中] Business Insider：Google 開放全體工程師使用 Anthropic 的 Claude**：具體工具範疇（是否限 Claude Code）、部門、上線時程均未見報導細節，詳見上方使用現況表新增列（Google News/Business Insider）

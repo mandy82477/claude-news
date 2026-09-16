@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **本週衝擊**（2026-09-15）
+> **本週衝擊**（2026-09-16）
 > - 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。
 > - 🔴 **Copilot 加碼「省錢還是求品質」手動三檔**：效率／平衡／智慧可調（09-14，GitHub 官方 changelog），延續 08-17 終結無限量方案的控成本故事——先不必換，但你的預算決策會想知道這個新旋鈕。
-> - 🔴 **價格戰打到產品層**：Meta Muse Code 結束 beta、推三層訂閱主打低價（09-01）——但月費沒公布，想比價還比不了，先別急著算換算成本。
+> - 🟡 **Google 秀出 Gemini 3.8 Live 語音 agent 與近即時推理**（09-15，DeepMind 官方部落格）——評估語音／即時推理場景時，值得列入候選比較清單，其餘任務不用換。
 
 ---
 
@@ -54,8 +54,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率未載 ❓ 待查證 ⟨Q-01⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
+| **Google（Gemini）** 🏢 | Gemini 3.8 Live／Extended Thinking 推出語音 agent 與近即時多步推理（09-15）→ 評估語音場景時多一個對照對象；另有低價企業方案劍指 Anthropic（08-27） | 能力 | 🟡 | DeepMind 官方部落格一手；企業方案費率仍缺 🔎 查無官方 ⟨Q-06⟩ |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
-| **Google** 🏢 | 低價企業方案劍指 Anthropic 與 Microsoft（08-27，08-31 再報）→ 動到的是企業採購的價格帶，個人使用者現在不必動 | 定價 | 🟡 | CNBC 兩度報導；方案名稱、費率、與 Antigravity 的關係全缺 🔎 查無官方 ⟨Q-06⟩ |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
 | **OpenCode** | 開源免費替代，社群採用規模仍是主要訊號（08-01）→ 想離開訂閱制時的第一個候選 | 定價 | 🟡 | 下載量倍數的統計方法未揭露，完整脈絡見 [[entities/opencode]] |
@@ -211,6 +211,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-16
+- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 與 3.8 Live Extended Thinking，主打語音 agent、對話智慧與近即時多步推理；詳見「對手雷達」列更新（Blog/Google DeepMind Blog）
 
 ### 2026-09-15
 - **Microsoft／GitHub**：Copilot auto model selection 新增效率／平衡／智慧三檔，讓使用者自訂成本與品質取捨；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
