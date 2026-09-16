@@ -4,23 +4,23 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-03"
-last_news_update: "2026-08-27"
+last_updated: "2026-09-16"
+last_news_update: "2026-09-16"
 status_main: "active"
-days_since_news: 19
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 19
-inbound_links: 1
-attribution_count: 1
-attribution_last: "2026-08-27"
+days_since_news_subtree: 0
+inbound_links: 6
+attribution_count: 3
+attribution_last: "2026-09-16"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 1
 pending_next_review: null
 pending_signalled: 0
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Jensen Huang

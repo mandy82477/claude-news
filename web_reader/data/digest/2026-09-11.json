@@ -613,16 +613,6 @@
       "id": "josh-engels",
       "name": "Josh Engels",
       "pageType": "entity"
-    },
-    {
-      "id": "managed-agents",
-      "name": "Managed Agents",
-      "pageType": "entity"
-    },
-    {
-      "id": "anthropic-agent-stack",
-      "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
     }
   ],
   "reader": {

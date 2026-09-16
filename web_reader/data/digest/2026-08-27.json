@@ -653,11 +653,6 @@
   "preview": "Salesforce 與 Anthropic 深化合作，發布整合進 CRM 工作流的 AI 業務外掛「Claudeforce」，Salesforce 同時上修全年營收預測；Reuters、qz.com、CNBC（Benioff 與 Dario Amodei 專訪）等多家媒體同步報導。",
   "sedimentedToday": [
     {
-      "id": "jensen-huang",
-      "name": "Jensen Huang",
-      "pageType": "entity"
-    },
-    {
       "id": "opus-4-7",
       "name": "Claude Opus 4.7",
       "pageType": "entity"
