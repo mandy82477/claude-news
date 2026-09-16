@@ -29,19 +29,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
 > ❓ **待查證**（標 2026-08-25｜查 airline industry、marketing and safety）｜**Fortune 評論比較 Anthropic 安全論述與航空業經驗**（2026-08-24 報導）：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡，討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導。
 
-> **最新表態**（2026-09-13）
-> 公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩。
+> **最新交鋒**（2026-09-16）
+> Dreamforce 現場重申 AI 減速呼籲，與黃仁勳主張加速對比；黃仁勳批評 Anthropic 反壟斷豁免提案「完全沒必要」。Zuckerberg 隔日在減速辯論中點名批評 Anthropic。
 
 ---
 
 ## 現況
 
-2026-09-13，Dario Amodei 公開撰文呼籲全球暫緩 AI 模型能力提升的步調並密切監控，警告若維持現行速度，「AI 群體行為」恐在 6–12 個月內危及網路安全；Elon Musk（xAI／Grok）與 Sam Altman（OpenAI）相繼公開表態支持暫緩（Hacker News 轉載 BBC、VentureBeat、Google News 多家媒體）。此番呼籲的安全治理角度完整討論見 [[topics/recursive-self-improvement]]，Hacker News 部分高分留言對呼籲動機提出質疑，詳見下方細節區。
+2026-09-15，Dario Amodei 於 Dreamforce 現場重申全球 AI 減速呼籲，與同場 Nvidia 執行長黃仁勳主張加速形成對比（The Guardian）；黃仁勳同時批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」，完整交鋒見 [[entities/jensen-huang]]。隔日，Meta 執行長 Mark Zuckerberg 在 AI 減速辯論中公開點名批評 Anthropic（The New York Times，僅標題）。
 
 2026-09-14，Trump 公開回絕此一減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（Reuters／Yahoo）。Amodei 另於 CNBC 專訪中稱中國是他所提減速方案中「最棘手的兩難」（Hacker News／CNBC，10分）。
 
@@ -53,6 +53,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-09-15 | 於 Dreamforce 現場重申全球 AI 減速呼籲，與黃仁勳主張加速形成對比 | The Guardian |
 | 2026-09-13 | 稱中國是其所提 AI 減速方案中「最棘手的兩難」 | Hacker News（10分）／CNBC |
 | 2026-09-13 | 公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持（詳見下方細節） | Hacker News（轉載 BBC）、VentureBeat、Google News（Yahoo 等）|
 | 2026-08-28 | 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）❓ 待查證 ⟨Q-02⟩ | Google News（Business Insider）|
@@ -95,9 +96,14 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - [[topics/anthropic-government-policy#誰在動這幾條線]] — Chris Olah、Tom Brown 等共同創辦人在政府關係線上的角色
 - [[entities/fable-5]] — 2026 旗艦模型（個人出席大會宣布相關政策）
 - [[entities/bernanke]] — 前聯準會主席，2026-07-09 加入監督 Amodei 執行方向的「長期利益信託」董事會
+- [[entities/jensen-huang]] — Nvidia 執行長，2026-09-15 於 Dreamforce 與 Amodei 就 AI 安全立場出現分歧，並批評 Anthropic 反壟斷豁免提案
+- [[entities/mustafa-suleyman]] — Microsoft AI 執行長，同期另一則批評 Anthropic「類人化」論述的具名聲量
 
 ## 參考來源
 
+- [Mark Zuckerberg Takes Aim at Anthropic in Debate Over A.I. Slowdown](https://news.google.com/rss/articles/CBMijwFBVV95cUxNbDdJR2JuaHlmNmNBV3BFUDN1WVh6amQzM0VnWUcwLUl5MVFzaUJDMlBSQkNEeUhSSG1ZcjIya21VSWh5TXQ4dll4X0pHRE1BeUl3V3dydTctWEtRU0ZYQmE4V3BkcVM4VHV6MzdKVy1mNWE0WUtidXRubkFLZmxIRVFKblBEZ3NwczBLQ1habw?oc=5) — Google News/The New York Times，2026-09-16（僅標題可用）
+- [Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce](https://news.google.com/rss/articles/CBMingFBVV95cUxNamhBSWgtcmZwTVRVOXlnbGZMN2R1bDFlMWEtV21wUXFmUGVoWW5vQWNVbU55OEE0T0lWMUFlMXFZVGdvNmN0TElFUGNkQUlwQ01hU09aUEZIZlBjd0lMbGJMOVJHbmhOSTNRaHU0cXBnNmRVQ2lTb21odDUzOGlRQ1phSTRDUDVucThHQjNncjI1Q1pMOVV0WlotdDVpUdIBowFBVV95cUxNQW5ST21vbGJyUWYzcHVFZFJOZUgzTEJ3TWFkS3Y4Nm9fQ2w3c3puMnJqaFBpbl9CVG5Gd1RSZUVGQmJqLVZaN0dBZ0dOWEZNb3IxMDBtaGhWNGllb29aZERqeGxibHhnakZJRDgxeF9oa1NDSGV2YzYwa3plQ0dhZU43aHJNb1MyUlZRRm1hb1BZRVpZRVF4LUd1OWNQXzJpZFpr?oc=5) — Google News/CNBC，2026-09-15
+- [Anthropic CEO renews call for AI slowdown as Nvidia's urges acceleration](https://news.google.com/rss/articles/CBMigAFBVV95cUxPM2d1QUlzZ3FaU3BNX3Z1aEI3V0EtUnpxN2tHZHZhMjNCSFdPdmliZnQ5end4U09MRkZCLVFmMjlOVGhyelpvWUdUaG92a1RvSkdFaW1CZWI5MW9VeHBDQ0RPQ2VXYmE2dGpTTEFyS2VITEtJMXBDWW1hUEtTLWRkUA?oc=5) — Google News/theguardian.com，2026-09-15
 - [Reuters／Yahoo、Yahoo Finance（2026-09-14）](https://www.yahoo.com/news/us/article/trump-rejects-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-with-ai-wins-182008851.html)：「Trump rejects call by CEOs of Anthropic, OpenAI and xAI to slow AI down」，Trump 公開回絕減速呼籲；中國官媒批評為「冷戰」話術；同日 AI 類股應聲下跌
 - Hacker News（10分，2026-09-13）→ [CNBC](https://www.cnbc.com/2026/09/13/china-dilemma-ai-slowdown-anthropic.html)：「Dario Amodei says China presents 'toughest dilemma' for his proposed AI slowdown」
 - Hacker News（轉載 BBC，2026-09-12～13）：「Anthropic head calls for slower AI development」，Dario Amodei 呼籲全球暫緩 AI 模型能力提升步調並密切監控
@@ -125,6 +131,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-09-16：Meta 執行長 Mark Zuckerberg 在 AI 減速辯論中公開點名批評 Anthropic（僅標題，來源：Google News／The New York Times）
+- 2026-09-15：於 Dreamforce 現場重申全球 AI 減速呼籲，與 Nvidia 執行長黃仁勳主張加速形成對比；黃仁勳同時批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」，完整交鋒見 [[entities/jensen-huang]]（來源：Google News／The Guardian、CNBC）
 - 2026-09-14：Trump 公開回絕 Amodei 的減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（來源：Reuters／Yahoo、Yahoo Finance，2026-09-14）
 - 2026-09-13：接受 CNBC 專訪稱中國是其所提 AI 減速方案中「最棘手的兩難」（來源：Hacker News（10分）／CNBC）
 - 2026-09-13：公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩，安全治理角度完整討論見 [[topics/recursive-self-improvement]]（來源：Hacker News／BBC、VentureBeat，2026-09-13）
