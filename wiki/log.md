@@ -6428,3 +6428,16 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：void 3 筆（H-dbbeeb／H-3e4515／H-9714c3，功能記者評估後理由成立，詳見各筆 `--result`）
 - devpractice 沉澱：候選 1 筆（entities/claude-code：Function Hooks 正式更名「Claude Mods」，官方承諾數週內出貨並公開三款內建 mod 原始碼）；基準線 a403e9f→5ae4232
 - market 判讀：本日無訊號（已檢視 73 則全條目；最接近門檻者為「Claude for Financial Advisors」與 Schwab 獨家 RIA 通路，惟費率／合約金額未見報導，未達「帶金額」門檻，且 Schwab／Orion 導入本體已於 09-14 記錄，非新資訊）
+
+## 2026-09-16 Ingest
+
+- 來源日報：[[news/2026-09-16]]
+- 更新頁面：entities/fable-5、entities/pricing、entities/claude-code、entities/managed-agents、entities/dario-amodei、entities/jensen-huang、topics/anthropic-government-policy、topics/ai-agent-safety、topics/recursive-self-improvement、topics/community-tech-patterns、topics/anthropic-business、topics/enterprise-tool-tracker、topics/competitor-landscape、topics/ai-talent-flow、topics/claude-code-experimental、topics/official-community-gap、topics/anthropic-agent-stack、topics/market-signals、feature-radar、index
+- 新增頁面：entities/mustafa-suleyman
+- 摘要：諾和諾德（Novo Nordisk）與 Anthropic 合作用 Claude 加速藥物研發，多家財經媒體同日跟進；微軟 AI 執行長 Mustafa Suleyman 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，輝達執行長黃仁勳同日反對 Anthropic 提出的 AI 安全反壟斷豁免提案並在 Dreamforce 與 Anthropic／OpenAI 執行長就 AI 減速議題分歧；GitHub issue 回報 Claude Max 方案 CLI session 額度自 3 月起異常快速用盡，累積 855 則留言。
+- 呈現品質：全部通過（六記者＋devpractice＋market 機械自查皆一次通過）
+- 品質備註：[主編] 功能記者新增 wiki/entities/mustafa-suleyman 索引列時 run_tests.py 曾短暫紅（`test_每頁都有_index_列`），因該頁由人物記者當輪新建、index.md 尚未同步；主編彙整步驟已補上 index.md 對應列，非記者責任。[主編] 雲端 routine 本輪 checkout 起始即為 detached HEAD、本機 `master` 分支停在遠早於今日的舊 commit（`762cf7c`），與 origin/master 早已分岔；因每次 commit 皆以 `git push origin HEAD:master` 顯式指定 remote ref，遠端歷史未受影響，但已在本輪把本機 `master` 分支重建指向正確歷史（`git checkout -B master HEAD`）避免本機 commit 淪為僅存在 reflog、有被回收之虞——devpractice 記者本輪基準線也因此撞見前一輪 `last_sha`（`5ae4232`）已不可達，改用 48 小時 fallback 補救
+- 分類回退：追加派工 0 筆／已由原輪處理 1 筆（Rubrik「Code Guardian and MCP for AI agents」功能記者提出應歸安全政策／商業，查 `data/classification-log.jsonl` 該則 `categories` 本就含三類，安全政策與商業記者原輪皆已收到並處理，無需追加）
+- 轉知帳本：開 1 筆、同輪即關閉 1 筆（H-c773a5 人物→安全政策：黃仁勳批評的「AI 安全反壟斷豁免」提案本身是否需獨立收錄 anthropic-government-policy；查證後安全政策記者原輪已獨立將同一 CNBC 來源收錄進該頁，視為已處理）
+- devpractice 沉澱：候選 8 筆（entities/claude-code：桌面版 `/resume`＋面板獨立視窗＋macOS computer use 範圍限縮、GitHub connector 帳號級讀取失效已知問題 #71542；topics/official-community-gap：開發者繞開官方模型矩陣缺口 ❌→⚡；topics/community-tech-patterns ×5：aannoo/hcom、pizza-bot、Nanako0129/sepia、AThevon/TokenEater、ruvnet/open-claude-code）；基準線 fallback 48h（`2cc4469`，前輪 `5ae4232` 已不可達）→ `ca76a73`
+- market 判讀：3 則（第 4 類：Novo Nordisk 具名採用；第 4 類：開發者導向非 Anthropic 模型執行、Anthropic 收不到 token 費用；第 4 類：Anthropic 簽署首份澳洲資料中心協議）；「買得到的標的」覆寫 1 列新增 Novo Nordisk（NYSE: NVO）；里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列
