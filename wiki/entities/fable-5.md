@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
 > **最新進展**（2026-09-01）
 > Fable 5.1 GA 發布並取代 5.0 成為現行旗艦：同價、快取讀取便宜 75%、知識截止晚 5 個月；Fable 5 轉為 Legacy，官方載明退役不早於 2027-06-09。
@@ -175,6 +175,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-09-16
+**Scientific American：稱 Anthropic AI 打破數學家最複雜曲線紀錄（僅標題可用，未指名模型版本）**：Google News 轉載 Scientific American 標題〈Anthropic's AI steals mathematicians' record for most complicated curve〉，RSS 僅提供標題與轉址連結，無正文可查證曲線類型、原紀錄保持者或複雜度定義，亦未指明所用模型（Fable 5.1 產品版，或如上方 09-04 費馬定理案例的內部研究模型）。與上方 09-04 費馬最後定理形式化、08-11 黎曼假設 zeta 函數下界紀錄同屬 Anthropic 前沿數學研究能力宣稱，本頁僅作參考記錄，不代表 Fable 5／5.1 產品能力（Google News/Scientific American，社群互動趨近零、僅單一媒體來源，2026-09-16）。
+
+❓ 待查證（標 2026-09-16｜查 complicated curve、Scientific American）｜**曲線紀錄具體內容與所用模型**：僅標題可用，曲線類型、原紀錄保持者、複雜度定義與所用模型版本均未見報導
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：

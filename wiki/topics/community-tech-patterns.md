@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-14
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新工作流模式**（2026-09-14）
-> genspark-ai/genoffice 加入創作工具整合：開源 AI Office 套件，CLI 與 agent skill 讓 Claude Code／Codex／Cursor 直接讀寫本機 .docx/.xlsx/.pptx（6,774 星，forks 899、近日仍有 commit）。
+> **最新工作流模式**（2026-09-15）
+> pizza-bot-app/pizza-bot 加入背景 agent 管理：把背景執行的 AI agent 工作彙整成 email 式收件匣（Unread／Action），HN 52 分、4 來源同日報導。
 
 ---
 
@@ -50,7 +50,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-14 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community、hcom（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-16 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
@@ -160,6 +160,60 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### aannoo/hcom：跨終端機讓 AI agent 互相傳訊、監看、生成彼此的工具，支援 8 種 coding agent CLI（2026-09-16）
+
+- **主線：** —
+- **核心模式：** 開源工具讓執行中的 AI agent 跨終端機互相傳訊、監看彼此執行進度、動態生成新 agent 實例，支援 Claude Code、Codex、Antigravity CLI、Cursor CLI、OpenCode、Kilo、Pi、Kimi 共 8 種 coding agent CLI。
+- **與既有模式的關係：** 延伸本表「Multi-agent 架構」既有的跨廠商跨終端協作技巧（firstintent/ccteam，2026-09-10），同屬讓多個獨立 CLI agent 互通訊息的做法，本則涵蓋 CLI 種類更廣；是否屬大型 codebase 特有痛點拿不準，跨終端通訊對任何規模專案皆適用（推論），暫填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/aannoo/hcom)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### pizza-bot-app/pizza-bot：把背景執行的 AI agent 工作彙整成 email 式收件匣（2026-09-15）
+
+- **主線：** —
+- **核心模式：** 自架桌面應用，把背景執行的 AI agent 工作彙整成 email 式收件匣，依 Unread／Action 分類；Apache 2.0 授權，無需註冊、無遙測，支援 Anthropic、Bedrock、Gemini、OpenAI、OpenRouter 或本地 Ollama 模型。
+- **與既有模式的關係：** 與「Agent 規模化」類別細節提到的可觀測性層（live-log-viewer-next）同屬檢視背景 agent 產出的做法，差異在於本則用「收件匣＋已讀/待處理」分類取代即時日誌流；非大型 codebase 特有痛點。
+- **可信度註記：** HN 52 分，4 個來源同日報導，跨平台驗證強於單純 GitHub 星數；Apache 2.0 開源可查證授權與遙測宣稱。
+- **來源：** Hacker News；[GitHub](https://github.com/pizza-bot-app/pizza-bot)
+- **成熟度：** ⏳ 新興（本庫首次收錄，Show HN 當日）
+
+#### Nanako0129/sepia：去 AI 化寫作風格修正 skill，相容 77 種以上 Agent Skills 相容 agent（2026-09-16）
+
+- **主線：** —
+- **核心模式：** 修正 AI 寫作風格使其較不像 AI 生成的 skill，宣稱相容 77 種以上支援 Agent Skills 標準的 agent，含 Claude Code、Codex、Grok Build、Antigravity 原生外掛。
+- **與既有模式的關係：** 與既有「I-have-ADHD」（鎖定「Claudism」冗語，2026-09-08）同屬「消除 AI 產出的痕跡特徵」skill 化做法，本則聚焦寫作風格而非任務收尾語；非大型 codebase 特有痛點。
+- **可信度註記：** 僅有 GitHub Search 星數（2,640★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Nanako0129/sepia)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### ruvnet/open-claude-code：逆向工程還原重建的 Claude Code CLI 每夜反編譯專案（2026-09-16）
+
+- **主線：** —
+- **核心模式：** 每夜自動反編譯官方 Claude Code CLI 二進位檔並還原重建原始碼，屬逆向工程專案，非官方授權的原始碼重現。
+- **與既有模式的關係：** 本表既有類別皆未鎖定「對閉源 CLI 逆向工程還原」這個做法，暫不併入既有列，留待第二個同類實作出現再判斷是否需要新類別（推論）；非大型 codebase 特有痛點。
+- **可信度註記：** 僅有 GitHub Search 星數（501★），無 forks／issues／近期 commit 佐證可查，未另行查證；反編譯還原的正確性與授權疑慮未經查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/ruvnet/open-claude-code)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### AThevon/TokenEater：原生 macOS App，監控 Claude 用量限制並即時觀看編碼 session（2026-09-16）
+
+- **主線：** —
+- **核心模式：** 原生 macOS 應用程式，監控 Claude AI 用量限制並即時觀看編碼 session 執行狀況。
+- **與既有模式的關係：** 與「Agent 規模化」類別細節提到的可觀測性層（live-log-viewer-next）相近，差異在於本則聚焦用量額度監控而非多 agent 進度追蹤，暫不併入既有列；非大型 codebase 特有痛點。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/AThevon/TokenEater)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### RKiding/Awesome-finance-skills：金融分析 Agent Skills 開源合輯（2026-09-16）
+
+- **主線：** —
+- **核心模式：** 彙整金融分析領域 Agent Skills 的開源合輯，屬策展型參考資源。
+- **與既有模式的關係：** 與既有「Shubhamsaboo/awesome-llm-apps」「x1xhlol/system-prompts-and-models-of-ai-tools」同屬「靜態彙整供橫向參考」類別，本則範圍限定金融分析垂直領域；非大型 codebase 特有痛點。
+- **可信度註記：** 僅有 GitHub Search 星數（3,011★），無 forks／issues／近期 commit 佐證可查，未另行查證；repo 2026-01-31 出生（存量盤點，本庫今日首次收錄）。
+- **來源：** GitHub Search（存量盤點｜2026-01-31 出生、本庫今日首次收錄）；[GitHub](https://github.com/RKiding/Awesome-finance-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### genspark-ai/genoffice：開源 AI Office 套件，CLI 與 agent skill 讓 Claude Code／Codex／Cursor 直接讀寫本機 .docx/.xlsx/.pptx（2026-09-14）
 

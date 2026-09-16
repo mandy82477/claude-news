@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新安全事件**（2026-09-15）
-> 資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息，暴露白名單機制落差，詳見 [[topics/ai-agent-safety#技術彙整]]。
+> **最新安全事件**（2026-09-16）
+> 資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息，暴露白名單機制落差；同日 Rubrik 推出 Code Guardian 並支援 MCP，詳見 [[topics/ai-agent-safety#技術彙整]]。
 
 ---
 
@@ -109,6 +109,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Rubrik 推出 Code Guardian 並支援 MCP，供 AI agent 使用（2026-09-16 新增，產業動態）
+
+- **揭露來源**：TNGlobal（經 Google News 轉載，僅標題可用）
+- **核心內容**：資安業者 Rubrik 推出 Code Guardian（安全防護產品）並支援 MCP，供 AI agent 使用；具體防護機制、鎖定哪一類攻擊面均未見報導
+- **性質判斷**：屬「## 拿什麼擋」既有企業防護產品清單（Radware、CrowdStrike Falcon AIDR）的潛在新成員，惟僅標題可用、無法指名其擋上表哪一列，暫不列入，僅記錄為產業動態
+- **可信度評估**：僅標題可用，產品技術細節與客戶案例均未見報導
 
 ### Reddit／r/ClaudeAI：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息（2026-09-15 新增）
 

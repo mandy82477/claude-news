@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新動態**（2026-09-15）
-> Jack Clark 向 BBC／NPR 提出具體治理提案：AI「緊急關閉開關」或需強制立法，放緩開發是「集體行動難題」，詳見 [[topics/recursive-self-improvement#技術彙整]]。
+> **最新動態**（2026-09-16）
+> Nvidia 黃仁勳於 Dreamforce 與 Anthropic、OpenAI 執行長就 AI 安全公開分歧；09-15 Jack Clark 向 BBC／NPR 提出「緊急關閉開關」立法提案，詳見 [[topics/recursive-self-improvement#技術彙整]]。
 
 ---
 
@@ -197,6 +197,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09-15
+- **[產業分歧，新增] Nvidia CEO 黃仁勳於 Dreamforce 與 Anthropic、OpenAI 執行長就 AI 安全公開分歧**：延續 09-12～13 Amodei 減速呼籲後的產業反應系列；具體爭點為兩家提出的 AI 安全反壟斷豁免提案，內容與豁免範圍見 [[topics/anthropic-government-policy#攻防紀錄]]，不重複記述
 - **[官方治理提案，新增] Jack Clark：AI「緊急關閉開關」或需強制立法（BBC）；放緩 AI 開發是「集體行動難題」（NPR）**：延續 06-04 起「煞車踏板」呼籲系列，首見具體機制名稱，詳見「## 技術彙整」
 - **[媒體反思，新增] The Guardian／Simon Willison：離職警告「破圈」原因分析與「恐懼擴散」業界反思**：對 09-09 Coxon 事件的二次評論，非新事實，詳見「## 技術彙整」
 
