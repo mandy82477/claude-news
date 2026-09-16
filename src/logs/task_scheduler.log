@@ -724,3 +724,14 @@ ABORTED: digest already exists - news/2026-09-15.md 已由前一班（17:03 UTC�
 ABORTED: gathered_items.json date=2026-09-15 items=73，非目標日期的新鮮資料
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-16T12:06:00Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-09-16T17:01:57Z]
+[週三 2026/09/16 17:50:33.00] === Agent pipeline start (2026-09-16) ===
+[週三 2026/09/16 17:50:33.00] Aggregator OK - 83 則，15/15 來源正常，36/83 進日報（原料 replay 自 src/gathered_archive/2026-09-16.json）
+[週三 2026/09/16 17:50:33.00] Wiki ingest OK - 20 頁更新，1 新頁（entities/mustafa-suleyman）；feature-radar 熱度升級 1（桌面版雲端 session）；來源歸因 append 56 筆；轉知帳本開關各 1（H-c773a5，同輪已由安全政策記者處理）；分類回退 0（Rubrik 三分類原輪皆已收到）；devpractice 候選 8；market 判讀 3 則
+[週三 2026/09/16 17:50:33.00] Reader digest OK - daily/2026-09-16.md，16 頁最新動態，格式閘全過（WARN 2：entities/pricing、topics/anthropic-business 的 callout 含裸引號路標未用完整 wikilink，待使用者裁示；另修正今日聚焦第 3 條兩則 CNBC 連結遭手動輸入截斷的問題）
+[週三 2026/09/16 17:50:33.00] Wiki commit OK (e3ea7d2, fccb481)
+[週三 2026/09/16 17:50:33.00] Building web reader...
+[週三 2026/09/16 17:50:33.00] 測試全綠 - web build 放行
+[週三 2026/09/16 17:50:33.00] build_web OK - 49 entities, 39 topics, 141 digests, 8 weekly reports + radar
+[週三 2026/09/16 17:50:33.00] Web commit OK (90739c5)
+[週三 2026/09/16 17:50:33.00] Single push done (news + wiki + web) -> 90739c5
+[週三 2026/09/16 17:50:33.00] === Pipeline complete (agent) ===
