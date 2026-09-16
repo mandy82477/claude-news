@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-11
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-09-11）
-> 09-10 查證時 dynamic workflows 已開放全部付費方案（Pro 需在 `/config` 開啟），編排從「Claude 逐回合決定」換成一支可存檔重跑的 script；09-11 子頁 SDK v1.5.0 為 Managed Agents 加 auto mode 工具權限，見 [[entities/managed-agents]]。
+> **最近變動**（2026-09-16）
+> 子頁 SDK v1.6.0 再擴充 Managed Agents 的 auto mode 工具權限功能（09-11 v1.5.0 之後第二筆），官方原文截斷、細節未知，見 [[entities/managed-agents]]。
 
 ---
 

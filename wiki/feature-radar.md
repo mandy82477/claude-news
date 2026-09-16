@@ -99,9 +99,9 @@ Claude 設定 > Connectors／外掛頁面啟用「Salesforce in Claude」，依�
 ### Claude Code 桌面版：雲端 session 多 repo 掛載＋`disableMobileSimulatorTools`
 **發布：** 2026-09-14（官方文件更新） | **狀態：** 正式發布
 
-**是什麼：** 兩項桌面版變動。雲端 session 現可同時掛載多個 repository，選好雲端環境後點「+」新增；另加一個 `disableMobileSimulatorTools` 設定旗標，可封鎖 Claude 控制與擷取 iOS 模擬器裝置的工具。
+**是什麼：** 桌面版雲端 session 功能持續擴充。09-14 先加了多 repo 掛載與 `disableMobileSimulatorTools` 旗標；09-16 文件再新增「Run long-running tasks in the cloud」段落：Claude Code on the Web 可接手本地 session 到雲端繼續執行，Desktop 端可推送分支，「Code in the web」可讓組織開關雲端 session 功能，並可選在本機／雲端／SSH 三種環境執行。
 
-**為何熱：** 當日日報唯一一則技術更新，只有官方文件一個來源，尚無社群實測或官方部落格佐證，熱度暫列最低。
+**為何熱：** 官方文件連續兩天（09-14、09-16）擴充同一條雲端 session 功能線，顯示這不是單次文件微調而是持續在建的功能；仍只有官方文件一個來源，尚無社群實測或官方部落格佐證，熱度略升一格。
 
 **現在要試嗎：** 跨 repo 改動要一次看完的人可以試多 repo 掛載；做 iOS 開發又不想讓 Claude 碰模擬器的人，那個旗標是現成的關法。
 
@@ -223,7 +223,7 @@ npm install @anthropic-ai/sdk@0.123.0
 |------|----------|------|----------|------|
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Claude Code 桌面版多 repo 掛載＋`disableMobileSimulatorTools`**（雲端 session 可掛多個 repo；旗標可封鎖 iOS 模擬器工具） | 2026-09-14 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Claude Code 桌面版雲端 session**（多 repo 掛載＋`disableMobileSimulatorTools`；09-16 再擴充：本地接手雲端、Desktop 推分支、組織開關） | 2026-09-14 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Smart Reports**（Beta，團隊用量分析報表：使用狀況、完成工作與成本） | 2026-09-10 | 🔥 | ⏳ 觀望 | Beta |
 | **maxEffortLevel 推理努力上限設定**（v2.1.267，跨供應商統一設定 effort 上限，含 Bedrock/Vertex/Foundry） | 2026-09-09 | 🔥🔥 | ⏳ 觀望 | 正式發布 |

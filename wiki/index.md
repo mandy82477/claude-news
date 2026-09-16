@@ -76,6 +76,7 @@
 | [[entities/joe-benton]] | person | 👤 人物 | active | 前 Anthropic 安全研究團隊負責人；2026-09-10 接受 NBC News 首次專訪，警告先進 AI 研究進展恐失控 |
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
+| [[entities/mustafa-suleyman]] | person | 👤 人物 | active | Microsoft AI 執行長；2026-09-16 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，並抨擊其 AI 意識說法（Bloomberg／BBC／Axios）|
 
 ---
 

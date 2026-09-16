@@ -180,3 +180,5 @@
 {"id": "H-dbbeeb", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：無 web 工具查證受影響版本/官方回應範圍，既有 09-14 記錄（Reddit 單一來源，已適當避險）維持不動，理由成立"}
 {"id": "H-3e4515", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：genoffice 沿用既有結論歸入官方-社群矩陣既有列（非新列）；hunter-community 屬垂直應用、無跨工具聚類佐證，未達新增矩陣列門檻"}
 {"id": "H-9714c3", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：claude-code.md 無定位矩陣結構可掛，工具選型比較慣例已路由至 topics/competitor-landscape（商業記者頁）；且僅一行摘要無法獨立查證比較內容，不新增結構"}
+{"id": "H-c773a5", "opened": "2026-09-16", "from": "人物", "to": "安全政策", "page": "entities/jensen-huang", "note": "評估 Anthropic 提出的『AI 安全反壟斷豁免』提案本身是否需獨立收錄進 topics/anthropic-government-policy.md（目前僅在人物線記錄黃仁勳的批評視角）", "status": "open"}
+{"id": "H-c773a5", "closed": "2026-09-16", "status": "done", "by": "安全政策", "result": "同輪安全政策記者已獨立將 Nvidia Huang 反壟斷豁免提案批評收錄進 topics/anthropic-government-policy.md（來源歸因已列同一 CNBC URL），該提案本身於政策線已有記錄，無需額外動作"}

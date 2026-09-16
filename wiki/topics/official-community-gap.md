@@ -27,12 +27,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **最新功能缺口**（2026-09-13）
-> - **跨工具統一操作層再添一款**：orca（用既有訂閱跑任意 coding agent 的多 agent ADE）併入既有清單，累計 8 款，7 天 +4,966★ 為本批最快。
-> - **spec-kit／comet 未新增列**：與官方既有 Outcomes／`/goal` 概念重疊或證據不足，官方目前仍無對應這條缺口的功能。
+> **最新功能缺口**（2026-09-16）
+> - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 收不到對應 token 費用。
+> - **矩陣狀態不變**：仍 ⚡ 部分對應——企業端已有 org default model／白名單，個人動態路由缺口未解，社群工具（Dragoman、Council、Ungate）仍是唯一解法。
 
 ## 摘要
 
@@ -153,7 +153,7 @@ Claude Code Artifacts（2026-06-18）讓工作階段進度可即時輸出為可�
 
 v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 org console 統一設定組織預設模型，使用者在 `/model` 看到「Org default」選項。v2.1.175 的 `enforceAvailableModels` 則可強制限制可用模型清單。
 
-這兩個功能覆蓋的是**企業側的模型管控**需求，與社群訴求（個人用戶在複雜 agent 場景中的多模型動態路由、成本最佳化路由）仍有本質差距。社群工具（Dragoman、Council、Ungate）填補的是後者，官方目前無對應方向。矩陣狀態從 ❌ 升為 ⚡。The Information（2026-09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞開官方模型、改接其他供應商，方向與本列社群訴求一致，惟原文無可讀內文，具體手法與規模未載。
+這兩個功能覆蓋的是**企業側的模型管控**需求，與社群訴求（個人用戶在複雜 agent 場景中的多模型動態路由、成本最佳化路由）仍有本質差距。社群工具（Dragoman、Council、Ungate）填補的是後者，官方目前無對應方向。矩陣狀態從 ❌ 升為 ⚡。The Information（2026-09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞開官方模型、改接其他供應商，方向與本列社群訴求一致，惟原文無可讀內文，具體手法與規模未載。Dealroom（2026-09-16，2 個來源同日報導）同向補充：開發者傾向把 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 因此收不到對應 token 費用，惟同樣未附具體規模數字。
 
 ### ❌ 完全在雷達外：AI 輔助開發副作用
 
@@ -184,6 +184,9 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[topics/community-tech-discussions]] — 社群技術辯論
 
 ## 時序
+
+### 2026-09-16
+- **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，與 09-15 The Information 報導方向一致；矩陣狀態維持 ⚡ 部分對應，未見具體規模數字，不升級。
 
 ### 2026-09-12
 - **orca**（stablyai/orca，多 agent ADE，用既有訂閱跑任意 coding agent，7 天 +4,966★）併入既有 ⟨G-11⟩ 跨 harness 統一操作層代表工具清單，非新模式。

@@ -30,10 +30,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-16
+**最後新聞更新：** 2026-09-16
 
-> **本頁是什麼**（快照 2026-09-15）
+> **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
 ---
@@ -41,6 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 摘要
 
 - **首批基線 2.1.272（2026-09-14）**：程式本體含 619 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
+- **2.1.273（2026-09-16）新增 3 個第一階旗標**：`CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS`、`CLAUDE_CODE_GATEWAY_HINT_HEADERS`、`CLAUDE_CODE_OCHRE_KITE`；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
 - **已確認的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階）——官方在 issue #91870 承諾數週內出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
 - **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
 
@@ -69,11 +70,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_BASH_EDIT_DIFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS` | 2.1.273（09-16） | 1 | — | — | 2.1.273 仍在（比對日 09-16） |
 | `CLAUDE_CODE_DISABLE_AWAITING_USER_IDLE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_DISABLE_TURN_HANDOFF` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_DISABLE_WINDOWS_SHELL_LAUNCHER` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_GATEWAY_HINT_HEADERS` | 2.1.273（09-16） | 1 | — | — | 2.1.273 仍在（比對日 09-16） |
 | `CLAUDE_CODE_MODEL_CAPABILITIES` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_OCHRE_KITE` | 2.1.273（09-16） | 1 | — | — | 2.1.273 仍在（比對日 09-16） |
 | `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_POST_TURN_MEMORY_CONFIG` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
@@ -119,3 +123,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|
 | 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |
 | 2026-09-16 | review 後修正：黏字清理（原「已消失」誤列 `GOAL_CHECKIN_MINUTES0`，實為位元組黏字）、過濾改 token 式、第 3 階列補連結與提及人數 |
+| 2026-09-16 | 2.1.273 新增 3 個第一階旗標：`BRIDGE_CHILD_MACHINE_SETTINGS`、`GATEWAY_HINT_HEADERS`、`OCHRE_KITE`；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
