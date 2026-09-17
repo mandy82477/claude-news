@@ -4,19 +4,19 @@ kind: "entity"
 type: "person"
 status: "active（待核實）"
 domain: "👤 人物"
-last_updated: "2026-09-15"
-last_news_update: "2026-09-15"
+last_updated: "2026-09-17"
+last_news_update: "2026-09-17"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 9
-attribution_count: 16
-attribution_last: "2026-09-15"
+days_since_news_subtree: 0
+inbound_links: 10
+attribution_count: 17
+attribution_last: "2026-09-17"
 top_source: "google-news"
-pending_count: 3
+pending_count: 4
 pending_overdue: 0
 pending_next_review: "2026-09-23"
 pending_signalled: 1

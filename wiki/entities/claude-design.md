@@ -4,23 +4,23 @@ kind: "entity"
 type: "feature"
 status: "active（初期，體驗粗糙）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-04"
-last_news_update: "2026-08-18"
+last_updated: "2026-09-17"
+last_news_update: "2026-09-17"
 status_main: "active"
-days_since_news: 29
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 29
-inbound_links: 5
-attribution_count: 2
-attribution_last: "2026-08-18"
+days_since_news_subtree: 0
+inbound_links: 9
+attribution_count: 3
+attribution_last: "2026-09-17"
 top_source: "devto"
-pending_count: 3
-pending_overdue: 3
+pending_count: 2
+pending_overdue: 2
 pending_next_review: null
 pending_signalled: 0
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Design

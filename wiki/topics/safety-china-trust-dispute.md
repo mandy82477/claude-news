@@ -6,18 +6,18 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-05"
 last_news_update: "2026-07-11"
 status_main: "monitoring"
-days_since_news: 67
+days_since_news: 68
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 67
+days_since_news_subtree: 68
 inbound_links: 15
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 5
-pending_overdue: 0
-pending_next_review: "2026-09-17"
+pending_overdue: 5
+pending_next_review: null
 pending_signalled: 0
 signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"

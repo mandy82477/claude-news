@@ -2,25 +2,25 @@
 page: "entities/cowork"
 kind: "entity"
 type: "product"
-status: "active（桌面版正式發布；行動版／網頁版 Preview，僅 Max 訂閱戶起步擴大中）"
+status: "active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-13"
-last_news_update: "2026-09-12"
+last_updated: "2026-09-17"
+last_news_update: "2026-09-17"
 status_main: "active"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
-inbound_links: 2
-attribution_count: 1
-attribution_last: "2026-09-12"
+days_since_news_subtree: 0
+inbound_links: 13
+attribution_count: 2
+attribution_last: "2026-09-17"
 top_source: "github"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-10-01"
 pending_signalled: 0
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Cowork
