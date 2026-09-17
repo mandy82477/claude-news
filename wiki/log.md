@@ -6441,3 +6441,16 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：開 1 筆、同輪即關閉 1 筆（H-c773a5 人物→安全政策：黃仁勳批評的「AI 安全反壟斷豁免」提案本身是否需獨立收錄 anthropic-government-policy；查證後安全政策記者原輪已獨立將同一 CNBC 來源收錄進該頁，視為已處理）
 - devpractice 沉澱：候選 8 筆（entities/claude-code：桌面版 `/resume`＋面板獨立視窗＋macOS computer use 範圍限縮、GitHub connector 帳號級讀取失效已知問題 #71542；topics/official-community-gap：開發者繞開官方模型矩陣缺口 ❌→⚡；topics/community-tech-patterns ×5：aannoo/hcom、pizza-bot、Nanako0129/sepia、AThevon/TokenEater、ruvnet/open-claude-code）；基準線 fallback 48h（`2cc4469`，前輪 `5ae4232` 已不可達）→ `ca76a73`
 - market 判讀：3 則（第 4 類：Novo Nordisk 具名採用；第 4 類：開發者導向非 Anthropic 模型執行、Anthropic 收不到 token 費用；第 4 類：Anthropic 簽署首份澳洲資料中心協議）；「買得到的標的」覆寫 1 列新增 Novo Nordisk（NYSE: NVO）；里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列
+
+## 2026-09-17 Ingest
+
+- 來源日報：[[news/2026-09-17]]
+- 更新頁面：entities/claude-code、entities/cowork、entities/claude-design、entities/pricing、entities/mustafa-suleyman、entities/dario-amodei、entities/jacob-coxon、topics/claude-code-experimental、topics/coding-workflow-guide、topics/anthropic-business、topics/competitor-landscape、topics/enterprise-tool-tracker、topics/ai-talent-flow、topics/ai-agent-safety、topics/recursive-self-improvement、topics/community-tech-patterns、topics/market-signals、feature-radar、index
+- 新增頁面：entities/claude-docs、entities/claude-slides、entities/michael-burry
+- 摘要：Anthropic 宣布 Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放，是本月至今最大的官方產品異動；摩根大通導入 Claude 並設 2,000 美元支出上限；微軟 AI 執行長 Mustafa Suleyman 公開批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，知名放空交易員 Michael Burry 同日加入批評 AI 減速呼籲「自利」的陣營；諾和諾德與 Anthropic 藥物研發合作獲多家財經媒體同日跟進；私募市場為 Anthropic 開出逾 2 兆美元估值，IPO 申請備受市場關注；GitHub issue 回報 Claude Max 方案「瞬間就打到用量上限」，累積 1,495 則留言。
+- 呈現品質：全部通過（安全政策記者初稿 2 處呈現瑕疵已自行修復：內部門檻用語洩漏至可信度評估句、細節區條列超字元上限；功能記者將 claude-code／cowork／claude-code-experimental 三頁初稿超限內容修剪至上限內；主編修短 index.md Cowork 列一筆超限儲存格，`run_tests.py` 收尾全綠）
+- 品質備註：無
+- 分類回退：追加派工 1 筆（「Google DeepMind co-founder warns AI progress must not outrun safety」原專頁定向 topics/ai-talent-flow→商業，商業記者判定非具體人事異動、專頁定向疑似誤判，改派安全政策；安全政策記者複核後認定該則對 Anthropic 安全政策三頁（`anthropic-government-policy`／`ai-agent-safety`／`recursive-self-improvement`）觸發條件皆不符，最終不收錄於任何頁面）
+- 轉知帳本：開 1 筆（H-943553 安全政策→功能：bragjack 瀏覽器 AI 助理劫持技術涉及 Claude in Chrome 產品面，已記在 `topics/ai-agent-safety`，待下輪功能記者接手評估是否影響 `entities/claude-code` 描述）
+- devpractice 沉澱：候選 6 筆（entities/claude-code：桌面版終端機 session 改讀帳號 skills/plugins、v2.1.274 記憶體用量警示旗標；topics/claude-code-experimental：v2.1.274 新增 6 個第一階旗標；topics/ai-agent-safety：Fable 5.1 一句指令又 rm -rf 刪本地資料庫，同構事件第三起；topics/community-tech-patterns：browserbase/stagehand；topics/coding-workflow-guide：官方用量與長度限制新增省用量建議）；基準線 `ca76a73`→`ac484e8`
+- market 判讀：2 則（第 4 類：摩根大通具名導入 Claude 並設 2,000 美元支出上限；第 4 類：官方「方案與定價」文件大改版，移除 48 段舊版逐 token 定價）；「買得到的標的」新增 1 列 JPMorgan Chase（NYSE: JPM）；里程碑登記 2 筆、回顧結算 ⏳ 新增 2 列

@@ -62,7 +62,7 @@
 | [[entities/opencode]] | product | 🛠️ 工具/功能 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills |
 | [[entities/claude-tag]] | feature | 🛠️ 工具/功能 | active | Claude Tag：Slack-native AI 協作工具，可讀取頻道上下文、跨 session 記憶、主動完成任務；Anthropic 內部 65% 程式碼由其生成 |
 | [[entities/claude-skills]] | feature | 🛠️ 工具/功能 | active | Claude Skills：官方 Skills 產品線與生態單一入口——六大控制層之一，官方小企業/教師技能包、平台支援、第三方移植動態；設計面歸 [[topics/community-tech-patterns]] |
-| [[entities/cowork]] | product | 🛠️ 工具/功能 | active（09-17 起與聊天介面合併） | Cowork 與 Claude 聊天介面已合併為單一 Claude；同步推出 [[entities/claude-docs]]、[[entities/claude-slides]]（beta），Design 整合進對話，先於 Pro／Max 開放 |
+| [[entities/cowork]] | product | 🛠️ 工具/功能 | active（09-17 起與聊天介面合併） | 與聊天介面合併為單一 Claude；同步推出 [[entities/claude-docs]]、[[entities/claude-slides]]（beta），先於 Pro／Max 開放 |
 | [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | beta | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；先開放 Pro、Max 方案 |
 | [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | beta | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；先開放 Pro、Max 方案 |
 | [[entities/fable-5]] | model | 🤖 模型 | active | 現行旗艦 5.1（09-01 GA）；5 轉 Legacy，退役不早於 2027-06-09；兩代同價；護欄擋什麼、被擋會不會知道　↳ 子故事：[[entities/fable-5-archive]] |
