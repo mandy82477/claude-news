@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "記者規則檔：共用檔案 vs 各自獨立資料夾",
+    "output": "reporter-rules.html",
+    "quality_profile": "standard",
+    "viewBox": [
+      960,
+      500
+    ]
+  },
+  "components": [
+    {
+      "id": "shared_md",
+      "type": "database",
+      "label": "shared.md",
+      "sublabel": "共用邊界／回報格式",
+      "tag": "9 位都讀",
+      "pos": [
+        320,
+        60
+      ],
+      "size": [
+        150,
+        62
+      ]
+    },
+    {
+      "id": "templates_md",
+      "type": "database",
+      "label": "page-templates.md",
+      "sublabel": "新頁面模板",
+      "tag": "6 類讀",
+      "pos": [
+        500,
+        60
+      ],
+      "size": [
+        160,
+        62
+      ]
+    },
+    {
+      "id": "r_models",
+      "type": "backend",
+      "label": "models/",
+      "sublabel": "daily.md + pages.md",
+      "pos": [
+        40,
+        220
+      ],
+      "size": [
+        120,
+        60
+      ]
+    },
+    {
+      "id": "r_features",
+      "type": "backend",
+      "label": "features/",
+      "sublabel": "daily.md + pages.md",
+      "pos": [
+        180,
+        220
+      ],
+      "size": [
+        120,
+        60
+      ]
+    },
+    {
+      "id": "r_commercial",
+      "type": "backend",
+      "label": "commercial/",
+      "sublabel": "daily.md + pages.md",
+      "pos": [
+        320,
+        220
+      ],
+      "size": [
+        120,
+        60
+      ]
+    },
+    {
+      "id": "r_safety",
+      "type": "backend",
+      "label": "safety-policy/",
+      "sublabel": "daily.md + pages.md",
+      "pos": [
+        460,
+        220
+      ],
+      "size": [
+        124,
+        60
+      ]
+    },
+    {
+      "id": "r_community",
+      "type": "backend",
+      "label": "community/",
+      "sublabel": "daily/pages/weekly",
+      "pos": [
+        604,
+        220
+      ],
+      "size": [
+        124,
+        60
+      ]
+    },
+    {
+      "id": "r_people",
+      "type": "backend",
+      "label": "people/",
+      "sublabel": "daily.md（無 pages.md）",
+      "pos": [
+        748,
+        220
+      ],
+      "size": [
+        130,
+        60
+      ]
+    },
+    {
+      "id": "r_devpractice",
+      "type": "messagebus",
+      "label": "devpractice/",
+      "sublabel": "daily.md + weekly.md",
+      "pos": [
+        40,
+        380
+      ],
+      "size": [
+        130,
+        60
+      ]
+    },
+    {
+      "id": "r_market",
+      "type": "messagebus",
+      "label": "market/",
+      "sublabel": "daily.md（單一固定頁）",
+      "pos": [
+        190,
+        380
+      ],
+      "size": [
+        140,
+        60
+      ]
+    },
+    {
+      "id": "r_classify_review",
+      "type": "messagebus",
+      "label": "分類複核記者",
+      "sublabel": "不屬任何資料夾",
+      "pos": [
+        580,
+        380
+      ],
+      "size": [
+        130,
+        60
+      ]
+    },
+    {
+      "id": "classification_md",
+      "type": "database",
+      "label": "classification.md",
+      "sublabel": "分類表／分流鐵則",
+      "tag": "唯一讀者",
+      "pos": [
+        760,
+        380
+      ],
+      "size": [
+        150,
+        62
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": ".claude/reporter-rules/",
+      "wraps": [
+        "shared_md",
+        "templates_md",
+        "r_models",
+        "r_features",
+        "r_commercial",
+        "r_safety",
+        "r_community",
+        "r_people",
+        "r_devpractice",
+        "r_market"
+      ],
+      "pad": 22
+    },
+    {
+      "kind": "region",
+      "label": ".claude/skills/wiki-ingest/references/（不同資料夾）",
+      "wraps": [
+        "r_classify_review",
+        "classification_md"
+      ],
+      "pad": 18
+    }
+  ],
+  "connections": [
+    {
+      "from": "shared_md",
+      "to": "r_models",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_features",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_commercial",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_safety",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_community",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_people",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "shared_md",
+      "to": "r_devpractice",
+      "variant": "default",
+      "route": "orthogonal-h",
+      "fromSide": "left",
+      "toSide": "left",
+      "via": [
+        [
+          10,
+          91
+        ],
+        [
+          10,
+          410
+        ]
+      ]
+    },
+    {
+      "from": "shared_md",
+      "to": "r_market",
+      "variant": "default",
+      "route": "orthogonal-v",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          395,
+          140
+        ],
+        [
+          310,
+          140
+        ],
+        [
+          310,
+          300
+        ],
+        [
+          260,
+          300
+        ],
+        [
+          260,
+          378
+        ]
+      ]
+    },
+    {
+      "from": "shared_md",
+      "to": "r_classify_review",
+      "variant": "default",
+      "label": "共用（僅兩節）",
+      "route": "orthogonal-v",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          395,
+          140
+        ],
+        [
+          594,
+          140
+        ],
+        [
+          594,
+          300
+        ],
+        [
+          645,
+          300
+        ],
+        [
+          645,
+          378
+        ]
+      ],
+      "labelAt": [
+        555,
+        136
+      ]
+    },
+    {
+      "from": "templates_md",
+      "to": "r_models",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "templates_md",
+      "to": "r_features",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "templates_md",
+      "to": "r_commercial",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "templates_md",
+      "to": "r_safety",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "templates_md",
+      "to": "r_community",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "templates_md",
+      "to": "r_people",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "orthogonal-v"
+    },
+    {
+      "from": "r_classify_review",
+      "to": "classification_md",
+      "variant": "security",
+      "label": "唯一讀者",
+      "fromSide": "right",
+      "toSide": "left",
+      "route": "orthogonal-h"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "怎麼看這張圖",
+      "items": [
+        "箭頭代表「讀取」；實線是每次派工都讀的共用檔，虛線是只有需要建新頁時才讀",
+        "兩個灰底大框是實際的資料夾邊界——分類複核記者住在完全不同的資料夾，不算 reporter-rules 的一份子"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "共用的部分",
+      "items": [
+        "shared.md：九位記者全部要讀（分類複核記者只讀其中兩節）",
+        "page-templates.md：只有會自己建新頁的六類記者讀，devpractice／market／分類複核不讀"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "各自獨立的部分",
+      "items": [
+        "六類記者每人一個資料夾，各自的 daily.md／pages.md 互不相通——people 是唯一沒有 pages.md 的",
+        "devpractice、market 有自己的 weekly.md；分類複核記者連資料夾都沒有，直接讀 wiki-ingest 底下的 classification.md"
+      ]
+    }
+  ]
+}

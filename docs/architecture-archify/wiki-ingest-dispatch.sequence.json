@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Wiki Ingest 記者派工循序圖",
+    "subtitle": "只涵蓋 /news-pipeline 的 Step2（Phase B）——抓新聞產日報是另一段背景 Phase A、收尾發布是背景 Phase C，皆不在本圖範圍",
+    "output": "pipeline.html",
+    "column_fit": "spread",
+    "quality_profile": "standard",
+    "viewBox": [1280, 930],
+    "views": [
+      { "id": "dispatch", "label": "同批派工", "focus": ["editor", "rep_models", "rep_features", "rep_commercial", "rep_safety", "rep_community", "rep_people", "rep_classify_review"], "note": "對帳閘通過後，同批呼叫六類記者＋分類複核記者。" },
+      { "id": "fallback", "label": "記者回報→分類回退", "focus": ["rep_models", "rep_features", "rep_commercial", "rep_safety", "rep_community", "rep_people", "rep_classify_review", "editor"], "note": "七位記者回報，分類複核記者的誤排除判斷觸發同輪追加派工。" },
+      { "id": "distill", "label": "彙整→沉澱／判讀", "focus": ["editor", "rep_devpractice", "rep_market"], "note": "彙整共用檔後，派開發實務與投資分析兩位記者。" }
+    ]
+  },
+  "participants": [
+    { "id": "editor", "type": "frontend", "label": "主編", "sublabel": "主 Session" },
+    { "id": "rep_models", "type": "external", "label": "模型記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_features", "type": "external", "label": "功能記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_commercial", "type": "external", "label": "商業記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_safety", "type": "external", "label": "安全政策記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_community", "type": "external", "label": "社群記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_people", "type": "external", "label": "人物記者", "sublabel": "共用：分類路由" },
+    { "id": "rep_classify_review", "type": "messagebus", "label": "分類複核記者", "sublabel": "特規：覆核排除" },
+    { "id": "rep_devpractice", "type": "messagebus", "label": "開發實務記者", "sublabel": "特規：吃 wiki diff" },
+    { "id": "rep_market", "type": "messagebus", "label": "投資分析記者", "sublabel": "特規：吃全日報" }
+  ],
+  "segments": [
+    { "from": 145, "to": 215, "label": "分類→寫帳本→對帳閘（主編獨立作業）" },
+    { "from": 225, "to": 435, "label": "同批派工" },
+    { "from": 445, "to": 655, "label": "記者回報→分類回退" },
+    { "from": 665, "to": 795, "label": "彙整→沉澱／判讀" },
+    { "from": 805, "to": 865, "label": "讀者版日報（主編獨立作業）" }
+  ],
+  "messages": [
+    { "id": "d1", "from": "editor", "to": "rep_models", "y": 240, "label": "派工①", "variant": "default" },
+    { "id": "d2", "from": "editor", "to": "rep_features", "y": 270, "label": "派工②", "variant": "default" },
+    { "id": "d3", "from": "editor", "to": "rep_commercial", "y": 300, "label": "派工③", "variant": "default" },
+    { "id": "d4", "from": "editor", "to": "rep_safety", "y": 330, "label": "派工④", "variant": "default" },
+    { "id": "d5", "from": "editor", "to": "rep_community", "y": 360, "label": "派工⑤", "variant": "default" },
+    { "id": "d6", "from": "editor", "to": "rep_people", "y": 390, "label": "派工⑥", "variant": "default" },
+    { "id": "d7", "from": "editor", "to": "rep_classify_review", "y": 420, "label": "派工⑦", "variant": "security" },
+
+    { "id": "r1", "from": "rep_models", "to": "editor", "y": 460, "label": "回報①", "variant": "return" },
+    { "id": "r2", "from": "rep_features", "to": "editor", "y": 490, "label": "回報②", "variant": "return" },
+    { "id": "r3", "from": "rep_commercial", "to": "editor", "y": 520, "label": "回報③", "variant": "return" },
+    { "id": "r4", "from": "rep_safety", "to": "editor", "y": 550, "label": "回報④", "variant": "return" },
+    { "id": "r5", "from": "rep_community", "to": "editor", "y": 580, "label": "回報⑤", "variant": "return" },
+    { "id": "r6", "from": "rep_people", "to": "editor", "y": 610, "label": "回報⑥", "variant": "return" },
+    { "id": "r7", "from": "rep_classify_review", "to": "editor", "y": 640, "label": "回報⑦", "variant": "security", "note": "誤排除→分類回退" },
+
+    { "id": "dd1", "from": "editor", "to": "rep_devpractice", "y": 680, "label": "沉澱派工", "variant": "default" },
+    { "id": "dd2", "from": "editor", "to": "rep_market", "y": 710, "label": "判讀派工", "variant": "default" },
+    { "id": "rr1", "from": "rep_devpractice", "to": "editor", "y": 750, "label": "候選回報", "variant": "return" },
+    { "id": "rr2", "from": "rep_market", "to": "editor", "y": 780, "label": "判讀回報", "variant": "return" }
+  ],
+  "activations": [
+    { "participant": "editor", "from": 150, "to": 860, "type": "frontend" },
+    { "participant": "rep_models", "from": 240, "to": 464, "type": "external" },
+    { "participant": "rep_features", "from": 270, "to": 494, "type": "external" },
+    { "participant": "rep_commercial", "from": 300, "to": 524, "type": "external" },
+    { "participant": "rep_safety", "from": 330, "to": 554, "type": "external" },
+    { "participant": "rep_community", "from": 360, "to": 584, "type": "external" },
+    { "participant": "rep_people", "from": 390, "to": 614, "type": "external" },
+    { "participant": "rep_classify_review", "from": 420, "to": 644, "type": "messagebus" },
+    { "participant": "rep_devpractice", "from": 680, "to": 754, "type": "messagebus" },
+    { "participant": "rep_market", "from": 710, "to": 784, "type": "messagebus" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "怎麼看這張圖", "items": ["橫軸只放真的 agent（主編＋九位記者），不含 Phase A／C 兩個無角色的背景執行 agent", "①～⑦是同一次派工同時送出，不是依序等待；點左上角步驟切換鈕會亮對應欄與箭頭"] },
+    { "dot": "emerald", "title": "共用規則 vs 特殊規則", "items": ["六類記者共用同一套分類路由，各有負責頁面（藍色）", "分類複核／開發實務／投資分析三位角色檔明文「不在分類路由內」，各走特殊觸發規則（橘色）"] },
+    { "dot": "violet", "title": "本輪新增：分類回退", "items": ["記者判斷條目不屬於自己類別時同輪追加派工，不等下一輪、不進轉知帳本"] }
+  ]
+}
