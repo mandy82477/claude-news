@@ -558,11 +558,5 @@
     }
   ],
   "preview": "Bloomberg、Reuters、CNBC、Benzinga 等多家財經媒體同步報導：Anthropic 年化營收已站上 650 億美元，市場解讀為 IPO 前釋出的強力業績訊號。",
-  "sedimentedToday": [
-    {
-      "id": "claude-design",
-      "name": "Claude Design",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }

@@ -1,0 +1,804 @@
+{
+  "date": "2026-09-17",
+  "generatedAt": "2026-09-17 17:20 UTC",
+  "articleCount": 84,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Instantly hitting usage limits with Max subscription",
+      "url": "https://github.com/anthropics/claude-code/issues/16157",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/17 12:27",
+      "sentiment": "",
+      "body": "Max 方案「瞬間就打到用量上限」的問題回報，單則已累積 1,495 則留言、725 個讚，是本日 GitHub Issues 互動量最高的單則。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Feature Request: Support AGENTS.md.",
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/17 15:00",
+      "sentiment": "",
+      "body": "社群呼籲 Claude Code 跟進 Codex、Amp、Cursor 等工具改用統一的 AGENTS.md，取代目前只認 CLAUDE.md 的做法，該請求累積 396 則留言、6,643 個讚。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Novo partners with Anthropic to speed up drug development with Claude",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQS2J5am9JdXFGdHJwckNZOUZiNDJDX0Z3YWN3M180SkdCbUcwMjB4Y0xVV21YaWZUOUcwWWFXbGY3dHNQX1I0Y2NTQnoxUlNRdEd3ZG8wY25HNFZhNlRtcEVFVmozRkVjSGlMQUJRaWFZbkFxRG5KWjFRZUFFcWduMVBFd3RMRC1yMVIxV1VnT0c0Yy1ESmMwVTdGRQ?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "09/16 13:21",
+      "sentiment": "",
+      "body": "諾和諾德（Novo Nordisk）宣布導入 Claude 加速藥物研發，Yahoo Finance、BioPharma Dive、pharmaphorum 等至少 3 家媒體同日跟進報導。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.274",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/17 00:12",
+      "sentiment": "",
+      "body": "新增記憶體用量過高時的警示提示，並附上釋放記憶體或安全重啟的步驟；另新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，用來限制首次非互動啟動的等待時間。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.274 build 新增 6 個功能候選旗標",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.274",
+      "source": "Build Flags",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "自 2.1.273 起新增 6 個功能候選旗標：`CLAUDE_CODE_ARTIFACT_FRESH_READ`、`CLAUDE_CODE_ARTIFACT_OPENING_PREFETCH`、`CLAUDE_CODE_ARTIFACT_START_KIT`、`CLAUDE_CODE_EMIT_STARTUP_TIMING`、`CLAUDE_CODE_FOOTER_INDICATOR`、`CLAUDE_CODE_STARTUP_FAILURE_RESULTS`；build 內出現不代表會正式上線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：方案與定價（Plans & Pricing）",
+      "url": "https://claude.com/pricing",
+      "source": "Official Docs",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "頁面新增 41 段內容，帶出 Claude Design、Slides、Docs 與 Claude Academy 相關段落，同時撤下舊版 Token 定價明細（如 1.50 美元／MTok、18.75 美元／MTok）與既有 context window 對照表，內容變動時點與同日 Cowork 合併上線一致。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "新增說明：以 claude.ai 帳號登入的終端機 session 會載入該帳號啟用的 skills／plugins；本機 session 改讀 `~/.claude/skills/`，雲端 session 讀帳號設定，SSH session 則仍讀本機路徑。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Status] Issues with Google Play subscriptions",
+      "url": "https://status.claude.com/incidents/t8fpw9vcshl9",
+      "source": "Anthropic Status",
+      "time": "09/16 16:51",
+      "sentiment": "",
+      "body": "Google Play 訂閱功能（建立／管理訂閱）一度出現問題，已於 9/16 16:51 UTC 解決。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic wants Claude to analyze your bank account and financial data",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPSHItSXprbjBibEdtbEx6THZMbTg1Mm9XLWVGTUlvcXU2cEpzdmlIdnFBZDg0QVBkY0ItSmM0YlNEUWVlTUpDenpoamthOUo2NzdzWVZaRUJhdk9qd1QyRFZRLTl5R1BhQTlsS0lJc3hkazNVcnlSbG9Ha1BDM003QkQybUg1SG5mRFA5Q0J0LUxsMkx5OXZUTGxrN1V4Y2RDOUxndWxMbTBSZmV4R0NJYWZZYjluRWs1YTZKUy1jVFQtT2h3SkxEWFZmckpvQdIB0wFBVV95cUxQM3hoNG85bjc0RUtDclR5ZWtUVGdOaDBXUEJPYzdDcTNmV1NFOHhZd3ptSmlJN0xkYVR5Y3ZlNWNnSXVqeG9GWXBZVTBhaWxMV3hwUlZwVFoyQ3JSLThveHhySHVyMTllUmpjYURsenliNG85WlVTM0Y2SkRodjBUdTMzRTNkWXJvUnA5REd2ZW1kYkZ2aUNKTll2VWZNejJBYVFYLVEtdTVRYnRpMUZMTDI0TjdXZmVNTVVBa0ZUcU9zZmZ6ZDRZTXZJTmdVLUNwRjVj?oc=5",
+      "source": "Google News / BleepingComputer",
+      "time": "09/17 00:35",
+      "sentiment": "",
+      "body": "BleepingComputer 報導 Anthropic 正推動讓 Claude 分析使用者的銀行帳戶與財務資料。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Russia used Claude AI for espionage, disinformation and drone swarms",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaFU4cVNOSEdrV0k3bWFMZ1QwdWdBUG1jcGZ0SWdMU0FyeV94Y3JUOUxvM09ReXBDUERoc1pLMW5ybmx1ZjJ0X1gtVmFoQ0lPZzFodVFtcFdRS2M2aDQ3Sm1oRURBc2RDQnMtTnpKSnJqMDBHdG1fVXJGMFhmQ2ZLSDBMcDRyU2Z5amU0N00yaXBsS0ZVc2h6UUlMVm5uQlhxQWtEV3R3?oc=5",
+      "source": "Google News / euronews.com",
+      "time": "09/16 15:20",
+      "sentiment": "",
+      "body": "euronews 報導俄羅斯疑似利用 Claude 進行間諜活動、散布假訊息並規劃無人機蜂群戰術。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic policy chief says winning AI race key for safety",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNM19PXzlNZVBFMl9UWXZTczVxNm1panFoLVNIb1dqNmd3UUtPMGs2d3h3d01WamVrVU9felQ2YU84R2F1dDlmRG9VTWVCT0lsTVNOTC10SXZLTHBkc2xqYmMzdTV0ZVRsV1llOEJkUUFMTGRlTHBQVUhDeFZOeUxaOVpKMG16LWVlN2REb05na1ZuZllhM0hSRTc2aGdfZXh0UGVwTlh1bHR3R0po?oc=5",
+      "source": "Google News / politico.com",
+      "time": "09/16 16:44",
+      "sentiment": "",
+      "body": "politico.com 報導 Anthropic 政策長主張，贏得 AI 競賽本身就是確保安全的關鍵。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBfZ1ZRUnVkR2YwbU50cWVaYVhxNEd2YnZ2ZVMzdlJWa1NvTXg3NUEzcEVfOWZ1Z2JuVlRlVVdfbm1HQXBKNEFNNjFJSmJra2FMMU9HZ014ekttTE0wQlJNYktqWFdNNF9YanJuR0NjaThSdk9zRnVVdzEwNTV2Zw?oc=5",
+      "source": "Google News / WSJ",
+      "time": "09/17 01:00",
+      "sentiment": "",
+      "body": "WSJ 人物報導：一名離開 Anthropic 的匿名數學研究者，如今成為 AI 安全議題的代表性人物。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        },
+        {
+          "id": "jacob-coxon",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "I tested Claude Code's memory against mine. They are not doing the same job.",
+      "url": "https://dev.to/heinrichneb/i-tested-claude-codes-memory-against-mine-they-are-not-doing-the-same-job-35jb",
+      "source": "dev.to / #claudecode",
+      "time": "09/01 20:40",
+      "sentiment": "",
+      "body": "作者實測比較 Claude Code 的「記憶」機制與人類記憶的運作方式，認為兩者做的其實不是同一件事。",
+      "focusTags": []
+    },
+    {
+      "title": "Streamline Publishing with a Claude Code Skill",
+      "url": "https://dev.to/gde/streamline-publishing-with-a-claude-code-skill-1bdn",
+      "source": "dev.to / #claudecode",
+      "time": "09/01 14:37",
+      "sentiment": "",
+      "body": "分享一個 Claude Code skill，能把一份 Markdown 檔轉成 dev.to、AWS Builder Center、Medium、LinkedIn 各平台版本，發布前自動檢查、並透過 API 直接發文。",
+      "focusTags": []
+    },
+    {
+      "title": "Michael Burry slams OpenAI, Anthropic for 'self-serving' calls to slow AI",
+      "url": "https://nypost.com/2026/09/14/business/big-short-trader-michael-burry-slams-openai-anthropic-for-self-serving-calls-to-slow-ai/",
+      "source": "Hacker News",
+      "time": "09/17 01:30",
+      "sentiment": "",
+      "body": "知名放空交易員 Michael Burry 批評 OpenAI、Anthropic 呼籲放慢 AI 發展腳步的說法是「自利」之詞。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        },
+        {
+          "id": "michael-burry",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Fable 5.1 rm -rf'ed my local DB",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/17 14:16",
+      "sentiment": "",
+      "body": "使用者回報 Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪掉了。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "I don't want to babysit my AI coding agents anymore",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wiw4d2/i_dont_want_to_babysit_my_ai_coding_agents_anymore/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/17 14:49",
+      "sentiment": "",
+      "body": "一間小型 AI 公司共同創辦人分享團隊日常大量使用 Claude Code 與 Codex 的心得，期望減少對 agent 的盯場需求。",
+      "focusTags": []
+    },
+    {
+      "title": "$200 plan comparison",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wiwi88/200_plan_comparison/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/17 15:04",
+      "sentiment": "",
+      "body": "使用者詢問 ChatGPT 與 Claude 的 200 美元方案哪個比較划算，尋求其他訂閱戶的比較意見。",
+      "focusTags": []
+    },
+    {
+      "title": "yetone/cumora",
+      "url": "https://github.com/yetone/cumora",
+      "source": "GitHub Search",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "跨平台團隊聊天工具，讓 AI agent 以「隊友」身分加入對話，可接雲端或自帶（Claude Code／Codex）模型，3,664 星。",
+      "focusTags": []
+    },
+    {
+      "title": "wanghuan9/skilldock",
+      "url": "https://github.com/wanghuan9/skilldock",
+      "source": "GitHub Search",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "AI skill 管理桌面應用，支援 Claude Code、Cursor、Codex、Windsurf、Gemini CLI 等工具，可安裝、整理、編輯、同步 Skills、MCP 伺服器與外掛，585 星。",
+      "focusTags": []
+    },
+    {
+      "title": "browserbase/stagehand",
+      "url": "https://github.com/browserbase/stagehand",
+      "source": "GitHub Search",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：How do usage and length limits work?",
+      "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+      "source": "Official Docs",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "新增段落建議：面對用量與長度限制時，可先暫時關閉不需要的工具與連接器（如 web search、Research、MCP 連接器）以節省用量。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "coding-workflow-guide",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Manage usage credits for paid Claude plans",
+      "url": "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans",
+      "source": "Official Docs",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "新增「如何為 Claude API 用量付費」的說明段落。",
+      "focusTags": []
+    },
+    {
+      "title": "官方文件更新：Claude Fable 5 on your plan",
+      "url": "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan",
+      "source": "Official Docs",
+      "time": "09/17 15:06",
+      "sentiment": "",
+      "body": "文件釐清 Fable 5 與 5.1 在方案內用法相同：Max 方案、Team／舊制 Enterprise 的進階席位內建這兩個模型；Pro 方案、Team／舊制 Enterprise 的標準席位則需從用量額度（usage credits）中扣款。先前「每週訂閱額度 50% 可用於 Fable 5」的促銷已於 2026 年 7 月 19 日結束，且從未涵蓋 Fable 5.1。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Cowork 與聊天介面自即日起合併為單一 Claude；同步推出 Claude Docs、Claude Slides 兩項 beta 工具，Claude Design 也整合進對話中，可直接編輯、簡報或下載為 PowerPoint／PDF，先在 Pro、Max 方案陸續開放",
+      "ref_urls": [
+        "https://claude.com/blog/cowork-is-now-claude",
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLTEzdFVRZC1oTllOZlEzMms5b3ZHeTZHRXR4SXBlX2U2RW1Ick04YUFJeW5SdVNsTzJzeXpaRmFsX2ZRZWh5eEVocU1QVEM0UkQ5Qm5qZTNocVA1LVY0Sms1cjVDQXhaMVpydWtFV1JoRGFlZVpkTU9GbjJ0ZVV6ZUVxMng2T0ZhalVON0ZmNjI0MkNrSFE?oc=5"
+      ],
+      "ref_names": [
+        "官方",
+        "Reuters",
+        "TechCrunch"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "摩根大通（JPMorgan）在內部導入 Claude，為使用設下 2,000 美元的支出上限並加強安全管控",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxNSm1tNlcybWNuOEtPZ3U2UDllMzlJQ1J5UFRlTHRCSzhjNFEyTDRsSElMNXMzUktmUThjUTg0T3MwUmZwZUdqNUhrMUlpLUtKODQ1YlF1TU9xbWFEOGMwcy1LNV9VdEo4a2hXckN1ZFpfa2wzZTZtSXoxVWZKM0tZNV9GUUs3dDJVSElkcDhjTFVaUQ?oc=5"
+      ],
+      "ref_names": [
+        "Business Insider"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "微軟 AI 執行長 Mustafa Suleyman 公開警告，Anthropic 把 AI 當「人」看待的路線可能養出人類無法掌控的「矽基物種」，稱其可能帶來「災難性衝擊」；同日另有報導指出微軟高層也質疑 Anthropic 提出的 AI 意識說法",
+      "ref_urls": [
+        "https://www.bbc.co.uk/news/articles/c6n07ypqz8kzo",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcXVwcmwwcUVVMFVOeHFOZHdJQlJHMlhwdGNYUl9FeEhKVFZjWWNDV0pGUnh3dVNQZi1BSDhHZUszWmtpbVpYdGNLWU01clRZTngtT2VpQ1lPVkFhSkVwVGVVR1N6T2RaczBvX2NJTmc0aU5GWEhZTVBIYmIwbnVEc0hSRWxzeUF2d0hQQUZCcVl3cEw2MVBVdmU1MDNTbUhwQ0loRzFPSXJBY1lweWlV?oc=5"
+      ],
+      "ref_names": [
+        "BBC",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "私募市場為 Anthropic 開出超過 2 兆美元的估值，市場緊盯即將到來的 IPO 申請進度",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOelF5OXJaQWRDRnQ2TWY1eUZZWG92RDFVTVlLcEhkN2h0YUpmRlpWbXlxZG9hTldUZDZFQlJ0VmxtYlJNQ0dIN0w1d1BFNHYxYmVOOEg3dXdxTkN0TW40VE5Eb21NZG93aTNyczFxbFR6M2d3OGU0ME9HSUJDMmlTSWZBTFRzSzFWYWZIb21WUk1pcmhNSTdZUzd2QkUwX2hHMnhPb3dzMFJsVS15aDBmWXRBeFE?oc=5",
+        "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QWWdpS3U1OVJyc0w4a0FFdFI3R0J3UUhibmdmWWZRSVB1SXg3Q2tvU3VUZDU2bWc4dEJxdFRTeEU1Zl9qazl2aHRZZzFoVTNaYnlOZzRGRGM2UkU5ZWRXNUNYN3F0V2RjS0E?oc=5"
+      ],
+      "ref_names": [
+        "euronews",
+        "Barron's"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Copilot budget increase requests are generally available",
+      "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available",
+      "body": "GitHub Copilot 開放使用者在 AI 額度用盡後申請提高預算，避免功能整個被鎖住，Claude Code 目前沒有對應機制",
+      "topic": "競品動態",
+      "topicPage": null
+    },
+    {
+      "title": "Google DeepMind co-founder warns AI progress must not outrun safety",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOamlVMmlGSklZYU1JVkFVVEphTTBFaUZ3XzAzT2ZNSjhjak13dFQwdklnN3FJNWZtT2dmZ0RBNkZJLXEyYkxNS0g4ZUR0b1dSbGZFY2Z4emNJSVl0X3M0eU5TY2dPQjdzRkoyY3kydWJWelNuWHMzTkhIVUw2dGZzWkFKeFlRMEtaUlU1MFJzR1VJQi1MRmR1LWdBZmJWeTFwNUs5VlZQSFAwRjM3UU5idFJUVTVSMEHSAbcBQVVfeXFMTmppVTJpRkpJWWFNSVZBVVRKYU0wRWlGd18wM09mTUo4Y2pNd3RUMHZJZzdxSTVmbU9nZmdEQTZGSS1xMmJMTUtIOGVEdG9XUmxmRWNmeHpjSUlZdF9zNHlOU2NnT0I3c0ZKMmN5MnViVnpTblhzM05ISFVMNnRmc1pBSnhZUTBLWlJVNTBSc0dVSUItTEZkdS1nQWZiVnkxcDVLOVZWUEhQMEYzN1FOYnRSVFU1UjBB?oc=5",
+      "body": "Google DeepMind 共同創辦人公開示警，AI 發展速度不能超前安全把關（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Google DeepMind Safety Researcher Quits Over AI Existential Risk",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeXZWSmdSdWpPNjNyYmlGeTZxUG9iZndlc3dpQ05LNmxKUVdNX0pUUWkxcmVLeWdZc1YySzJXN2VNRmRNajUtWllzWDMyZWVGNkVEVW5NQnFIVmRBTVVCdGMwRHU3NVZMdmVNSkZieWpDTUJzdVNhUGpkWGY0NTB3bDZVelNZZFpIVi1xUUI4TWlsRGRMR29aTk84VGJpWkk?oc=5",
+      "body": "又一名 Google DeepMind 安全研究員以 AI 存在性風險為由辭職（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 43
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code：桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins：本機 session 讀個人 ~/.claude/skills/，雲端 session 改讀該帳號啟用的 skills/plugins，SSH session 仍讀本機路徑。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-design",
+      "name": "Claude Design",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-docs",
+      "name": "Claude Docs",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-slides",
+      "name": "Claude Slides",
+      "pageType": "entity"
+    },
+    {
+      "id": "cowork",
+      "name": "Cowork",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "jacob-coxon",
+      "name": "Jacob Coxon",
+      "pageType": "entity"
+    },
+    {
+      "id": "michael-burry",
+      "name": "Michael Burry",
+      "pageType": "entity"
+    },
+    {
+      "id": "mustafa-suleyman",
+      "name": "Mustafa Suleyman",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "enterprise-tool-tracker",
+      "name": "大型企業 AI 編碼工具使用追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-17",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins**：本機 session 讀個人 `~/.claude/skills/`，雲端 session 改讀該帳號啟用的 skills/plugins，SSH session 仍讀本機路徑。\n- **v2.1.274**：新增記憶體用量過高警示（附釋放記憶體／安全重啟步驟）、`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，見 [[topics/claude-code-experimental]]。\n- **AGENTS.md 支援訴求持續累積**：issue #6235 讚數 6621→6643、留言 394→396，全站已知問題讚數之最。"
+          },
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方新增說明：用量與長度是兩種不同限制，可暫時關閉不需要的工具／連接器省用量，見第 2a 段「官方的 session 經營建議」。"
+          },
+          {
+            "page": "entities/claude-design",
+            "name": "Claude Design",
+            "label": "最新工具動態",
+            "date": "",
+            "body": "Cowork／Chat 合併同批：Claude Design 整合進對話，可直接編輯、簡報，並下載為 PowerPoint／PDF。詳見 [[entities/cowork]]。"
+          },
+          {
+            "page": "entities/cowork",
+            "name": "Cowork",
+            "label": "最新動態",
+            "date": "",
+            "body": "Cowork 與 Claude 聊天介面合併為單一 Claude，同步推出 Docs／Slides（beta），Design 整合進對話；先開放 Pro、Max。"
+          },
+          {
+            "page": "entities/claude-docs",
+            "name": "Claude Docs",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方隨 [[entities/cowork|Cowork／Chat 合併]]同步推出，beta，先開放 Pro、Max 方案。"
+          },
+          {
+            "page": "entities/claude-slides",
+            "name": "Claude Slides",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方隨 [[entities/cowork|Cowork／Chat 合併]]同步推出，beta，可下載為 PowerPoint／PDF，先開放 Pro、Max 方案。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.274 的程式本體多了 6 個還沒有任何公告的旗標：`CLAUDE_CODE_ARTIFACT_FRESH_READ`、`CLAUDE_CODE_ARTIFACT_OPENING_PREFETCH`、`CLAUDE_CODE_ARTIFACT_START_KIT`、`CLAUDE_CODE_EMIT_STARTUP_TIMING`、`CLAUDE_CODE_FOOTER_INDICATOR`、`CLAUDE_CODE_STARTUP_FAILURE_RESULTS`。對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **官方說明中心新增用量限制說明**：用量與長度是兩種不同限制；建議關閉不需要的工具／連接器以節省用量。\n- **Max 用量上限申訴 issue 持續攀升**：#16157 留言數增至 1,495（725 👍），本頁互動量最高的計費爭議仍未解。\n- **官方 Plans & Pricing 頁大改版，同步今日 Cowork／chat 合併與 Docs／Slides 上線**：新增列入 Claude Academy、Docs／Slides／Design 說明，見下方「方案細節」。\n- **$100 過渡 credit 已於 09-17 23:59 PT 到期作廢**，不可續買、不轉存。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Claude Cowork 與 chat 合併，同步上線 Docs、Slides（beta）**：官方部落格＋多家媒體同步報導，先在 Pro、Max 開放，方案頁同步大改版，詳見 [[topics/anthropic-business#時序]]、[[entities/pricing#方案細節]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。\n- 🔴 **Copilot 預算增加請求正式開放**：額度用盡後可申請提高預算而非被完全鎖住（09-17，GitHub 官方 changelog）——先不必換，但你的成本控管多一個緩衝手段。\n- 🟡 **Google 秀出 Gemini 3.8 Live 語音 agent 與近即時推理**（09-15，DeepMind 官方部落格）——評估語音／即時推理場景時，值得列入候選比較清單，其餘任務不用換。"
+          },
+          {
+            "page": "topics/enterprise-tool-tracker",
+            "name": "大型企業 AI 編碼工具使用追蹤",
+            "label": "最新企業採用異動",
+            "date": "",
+            "body": "- **JPMorgan Chase 美國本部導入 Claude，設 $2,000 支出上限與額外資安控管**：Business Insider 報導，具體工具範疇未見（詳見使用現況表新增列）。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：Yahoo 加入轉載，DeepMind 研究員離職警告延燒第五家媒體",
+            "date": "",
+            "body": "Yahoo 以「Quits Over AI Existential Risk」措辭跟進轉載 09-13 已記錄之同一（姓名未載）研究員警告，內容細節未變；詳見 [[topics/ai-talent-flow#對各公司的影響]] Google DeepMind 列與 [[topics/ai-talent-flow#時序]] 新增節。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "⚖️ 兩面（數字型）：摩根大通具名導入 Claude，設 2,000 美元支出上限與額外安全管控，合約規模與費用結構未揭露。詳見 [[topics/enterprise-tool-tracker]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **agent 誤刪**：Fable 5.1 一句模糊指令又刪除本地資料庫，延續既有遞迴強制刪檔模式\n- **瀏覽器劫持**：資安團隊揭露「bragjack」技術劫持 5 款瀏覽器內建 AI 助理（含 Claude in Chrome），廠商懸賞合計 2 萬美元\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **產業批評**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 的擬人化路線「misguided」\n- **反彈聲浪**：放空交易員 Michael Burry 批評 OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞\n\n詳見 [[topics/recursive-self-improvement#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **瀏覽器互動 SDK 存量盤點**：browserbase/stagehand（24,318 星、2024-03 出生）本庫今日首次收錄，供 agent 呼叫的網頁資料擷取與互動 SDK，相容 Claude Code、Codex、Eve、Mastra。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "放緩呼籲的反彈聲浪擴大",
+            "date": "",
+            "body": "放空名將 Michael Burry 批評 Amodei 與 OpenAI 高層的減速呼籲是「自利」之詞；NYT 同日刊出分析其文章如何形塑外界 AI 恐懼。"
+          },
+          {
+            "page": "entities/jacob-coxon",
+            "name": "Jacob Coxon",
+            "label": "WSJ 人物報導：匿名數學怪咖成 AI 安全代表人物",
+            "date": "",
+            "body": "WSJ 稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物；線索（X 帳號 hilbertspaess）與本人高度吻合但未經證實（推論），詳見下方新增待查證標記。"
+          },
+          {
+            "page": "entities/mustafa-suleyman",
+            "name": "Mustafa Suleyman",
+            "label": "矽基物種警告＋第一手原文",
+            "date": "",
+            "body": "BBC 直接引述其警告：不受控 AI 開發恐催生與人類競爭的「矽基物種」；Reuters 同日跟進 AI 意識角度；本人部落格首見「不應視模型有感受」原文。"
+          },
+          {
+            "page": "entities/michael-burry",
+            "name": "Michael Burry",
+            "label": "加入 AI 減速反彈陣營",
+            "date": "",
+            "body": "知名放空交易員 Michael Burry 在 X 發文批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞，加入 Trump、中國官媒等既有反彈聲浪。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 20
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Instantly hitting usage limits with Max subscription",
+      "url": "https://github.com/anthropics/claude-code/issues/16157",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/17 12:27",
+      "sentiment": "",
+      "body": "Max 方案「瞬間就打到用量上限」的問題回報，單則已累積 1,495 則留言、725 個讚，是本日 GitHub Issues 互動量最高的單則。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Feature Request: Support AGENTS.md.",
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/17 15:00",
+      "sentiment": "",
+      "body": "社群呼籲 Claude Code 跟進 Codex、Amp、Cursor 等工具改用統一的 AGENTS.md，取代目前只認 CLAUDE.md 的做法，該請求累積 396 則留言、6,643 個讚。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Novo partners with Anthropic to speed up drug development with Claude",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQS2J5am9JdXFGdHJwckNZOUZiNDJDX0Z3YWN3M180SkdCbUcwMjB4Y0xVV21YaWZUOUcwWWFXbGY3dHNQX1I0Y2NTQnoxUlNRdEd3ZG8wY25HNFZhNlRtcEVFVmozRkVjSGlMQUJRaWFZbkFxRG5KWjFRZUFFcWduMVBFd3RMRC1yMVIxV1VnT0c0Yy1ESmMwVTdGRQ?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "09/16 13:21",
+      "sentiment": "",
+      "body": "諾和諾德（Novo Nordisk）宣布導入 Claude 加速藥物研發，Yahoo Finance、BioPharma Dive、pharmaphorum 等至少 3 家媒體同日跟進報導。",
+      "focusTags": []
+    }
+  ]
+}

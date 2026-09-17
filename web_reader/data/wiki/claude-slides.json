@@ -1,0 +1,18 @@
+{
+  "id": "claude-slides",
+  "pageType": "entity",
+  "name": "Claude Slides",
+  "entityType": "feature",
+  "status": "beta",
+  "domain": "🛠️ 工具/功能",
+  "pill": "info",
+  "firstSeen": "2026-09-17",
+  "startDate": "",
+  "lastUpdated": "2026-09-17",
+  "lastNewsUpdate": "2026-09-17",
+  "updateFreq": "",
+  "parent": "",
+  "summary": "Claude Slides 是 Anthropic 於 2026-09-17 隨 Claude Cowork 與 Chat 合併同步推出的官方簡報工具（beta）。搭配整合進對話的 Claude Design，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 …",
+  "latestHeadline": "建頁。官方隨 Cowork／Chat 合併同步推出 Claude Slides（beta），可下載為 PowerPoint／PDF，先開放 Pro、Max 方案",
+  "markdown": "# Claude Slides\n\n**類型：** feature\n**狀態：** beta\n**領域：** 🛠️ 工具/功能\n**首次出現：** 2026-09-17\n**最後更新：** 2026-09-17\n**最後新聞更新：** 2026-09-17\n\n> **最新動態**（2026-09-17）\n> 官方隨 [[entities/cowork|Cowork／Chat 合併]]同步推出，beta，可下載為 PowerPoint／PDF，先開放 Pro、Max 方案。\n\n---\n\n## 現況\n\nClaude Slides 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方簡報工具（beta）。搭配整合進對話的 [[entities/claude-design|Claude Design]]，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 Pro、Max 方案可用，官方表示未來數週將擴及更多方案。\n\n❓ **待查證**（標 2026-09-17｜查 claude.com/slides、[[entities/claude-docs]]｜複 2026-10-01）｜**Claude Slides 的具體操作路徑、範本與協作機制**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/slides）更新後確認。\n\n## 熱度與試用價值\n\n| 項目 | 評分 |\n|------|------|\n| 社群熱度 | 🔥🔥🔥🔥 |\n| 試用價值 | ⏳ 觀望 |\n| 最適合 | 待社群實測後補齊 |\n| 不適合 | 待社群實測後補齊 |\n\n> 首日僅官方公告與媒體轉述，尚無社群操作心得；詳細最新熱度見 [[feature-radar]]\n\n## 使用指南\n\nPro／Max 方案使用者於 claude.ai 對話中直接請 Claude 建立或編輯簡報，即可觸發 Claude Slides（beta）；完成後可從 Claude 直接展示，或下載為 PowerPoint／PDF。具體選單路徑官方未附截圖，待補。\n\n## 核心功能\n\n- **對話內建立、編輯簡報**：搭配整合進對話的 Claude Design。\n- **直接展示或匯出**：可從 Claude 內展示，或下載為 PowerPoint／PDF。\n- 其餘功能細節（範本庫、協作、版本歷史）官方摘要未載明，待補。\n\n## 相關議題\n\n- 同批推出：[[entities/cowork]]（Cowork／Chat 合併）、[[entities/claude-docs]]、[[entities/claude-design]]（整合進對話）\n- [[entities/claude-code]]（同日桌面版終端機 session 帳號設定同步異動，屬同一「帳號統一」方向）\n\n## 參考來源\n\n- [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17；HN 討論 226 分；Simon Willison 部落格轉引）\n- Google News／Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld（2026-09-17，同事件媒體報導，僅標題／框架可用）\n- [[news/2026-09-17]]\n\n## 歷史記錄\n\n| 日期 | 事件 |\n|------|------|\n| 2026-09-17 | 建頁。官方隨 Cowork／Chat 合併同步推出 Claude Slides（beta），可下載為 PowerPoint／PDF，先開放 Pro、Max 方案 |\n"
+}

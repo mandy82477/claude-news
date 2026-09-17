@@ -405,11 +405,6 @@
       "pageType": "entity"
     },
     {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "simon-willison",
       "name": "Simon Willison",
       "pageType": "entity"
