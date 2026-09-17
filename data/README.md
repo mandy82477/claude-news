@@ -5,7 +5,6 @@
 另含兩個非 JSONL 檔（皆為 `scripts/source_scorecard.py` 的輸入，設計說明見 `docs/source-scoring-optimization.md`）：
 
 - **`source_registry.json`**：來源註冊表（單一真相源）——pipeline 註冊名 ↔ attribution slug ↔ 來源層品質標籤（`score_reliability` / `curation_mode`）。手動維護，新增或調整來源時同步更新。
-- **`search_aliases.json`**：`scripts/wiki_search.py`（查詢分流第 2 路的全文檢索）的同義詞叢集。只收「同一概念、頁面實際用詞不同」的對（視覺化↔可觀測性↔協調地圖），不收上下位詞或泛泛相關；查詢句命中叢集任一詞，其餘詞以 0.5 權重併入排序，且段落含叢集任一詞即算覆蓋該概念。手動維護：`wiki_search.py` 回零命中而 wiki 明明有答案時，把使用者的用詞加進對應叢集。
 - **`external/domain_pc1.csv`**：Lin et al. (2023, PNAS Nexus) 的 domain 信譽聚合分數（11,520 domains，pc1 0–1），來自 [hauselin/domain-quality-ratings](https://github.com/hauselin/domain-quality-ratings)。靜態外部資料，每季複查時效（見 `docs/workaround-register.md`）。
 
 ## source_attribution.jsonl

@@ -78,7 +78,7 @@ wiki 頁面依領域分佈：
 | 動作 | 頻率 | 做什麼 |
 |---|---|---|
 | **寫入 Ingest** | 每日 | 主編分類日報、派六位記者各寫自己領域的頁；每個事實只有一個家，別處用 wikilink 指過去。頁面是「被策展的現在」，`log.md` 是不可改的過去，`index.md` 只放路由。 |
-| **查詢 Query** | 任何時候 | `/wiki-query`。專有名詞直接 Grep；概念題走 BM25 全文排序，同義叢集橋接用詞落差、沿 wikilink 圖擴散補候選；引用關係查 `scripts/wiki_graph.py`（網站「地圖」分頁是它的視覺版）。答案附出處，wiki 沒有的事實查證後寫回。設計見 [`docs/wiki-ingest-query-design.md`](docs/wiki-ingest-query-design.md)。 |
+| **查詢 Query** | 任何時候 | `/wiki-query`。專有名詞直接 Grep；概念題走 BM25 全文排序，由執行查詢的 session 當場改寫問句橋接用詞落差、沿 wikilink 圖擴散補候選；引用關係查 `scripts/wiki_graph.py`（網站「地圖」分頁是它的視覺版）。答案附出處，wiki 沒有的事實查證後寫回。設計見 [`docs/wiki-ingest-query-design.md`](docs/wiki-ingest-query-design.md)。 |
 | **整理 Lint** | 每週 | `/weekly`、`/wiki-lint`：找矛盾、孤兒頁、過期 callout，蒸餾封存；歷史質疑抽題重驗。 |
 
 ## 自動化怎麼運作

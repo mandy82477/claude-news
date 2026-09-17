@@ -19,3 +19,9 @@
 ## 2026-09-15：collection-scope.md 蒐集範圍加「出貨前訊號」
 
 Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每版至多 1 則）。理由與探針數據見 `docs/rules-changelog/wiki-ingest-features.md` 同日條目。判準句不變：只收會幫工程師更了解生態的；旗標名字本身不是承諾，故只進實驗功能頁第一階。
+
+## 2026-09-17：查詢第 2 路的同義詞表改為查詢改寫
+
+動到根目錄 `./CLAUDE.md` Query 條、`wiki/CLAUDE.md`「搜尋策略」第 2 路、`.claude/skills/wiki-query/`。2026-09-14 上線的同義詞表（data 目錄下的 search_aliases.json，8 組 70 詞，人工登記）三天後由使用者裁定拿掉：「我不想多維護 table」。判斷依據是全庫只有 `scripts/wiki_search.py` 讀它，而跑這支腳本的永遠是 Claude session——語意它本來就懂，靜態詞表只是多一份沒人看守、會靜默過期的資料。改法：session 先把問句改寫成二到四種說法，連同原句當參數傳入；腳本每種說法各跑一次 BM25，分數除以該說法最高分後跨說法加總。
+
+改前改後拿真實 wiki 對照三題（多 agent 視覺化、省 token 費用、長跑 agent 忘事）。第一版融合取「各說法最好的那一次」，結果 `topics/community-pattern-trends` 與 `topics/enterprise-cost-management` 兩個正解掉出前八——只在一種說法裡第一名的頁把名額佔滿；改成加總後回來。同一輪對照還抓到一個被詞表掩蓋的舊問題：虛字表含「用」，查詢端剔除任何含虛字的 bigram，於是「費用」「用量」整個消失，「怎麼省 token 費用」只剩 `token` 一個詞；舊版靠詞表對原句做子字串比對繞過了這件事。修法是「用」只在落單時當虛字。設計取捨與剩餘缺口見 `docs/wiki-ingest-query-design.md` 第 5 節。

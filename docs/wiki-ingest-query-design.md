@@ -2,7 +2,7 @@
 
 **建立：** 2026-09-14 ｜ **範圍：** `wiki/` 的寫入路徑（Ingest）與查詢路徑（Query），以及兩者交界的資料契約 ｜ **不含：** Lint（每週整理）的內部步驟，只標它在哪裡接手
 
-寫這份的起因：Query 第 2 路的最後一塊在 2026-09-14 補完（commit `856249f4`，全文 BM25＋同義叢集＋`--expand` 圖擴散＋「候選頁全開」鐵則），機制散在 `wiki/CLAUDE.md`、`.claude/skills/wiki-query/SKILL.md` 與兩支 script 的 docstring 裡，沒有一處看得到全貌。本檔是那個全貌，不是新規則——執行時仍以各規則檔為準。
+寫這份的起因：Query 第 2 路的最後一塊在 2026-09-14 補完（commit `856249f4`，全文 BM25＋同義叢集＋`--expand` 圖擴散＋「候選頁全開」鐵則；同義叢集於 2026-09-17 改為查詢改寫，見第 5 節），機制散在 `wiki/CLAUDE.md`、`.claude/skills/wiki-query/SKILL.md` 與兩支 script 的 docstring 裡，沒有一處看得到全貌。本檔是那個全貌，不是新規則——執行時仍以各規則檔為準。
 
 ---
 
@@ -90,22 +90,23 @@ flowchart TD
 
 ```mermaid
 flowchart TD
+  S0["⓪ 查詢改寫（在腳本外，由執行查詢的 session 做）<br/>原句＋二到四種說法，一起當參數傳入"]
   S1["① 斷詞：英數連續段為一詞，保留 . - _ + 以命中版號<br/>CJK 取 bigram；查詢端剔除含虛字的 bigram"]
-  S2["② 同義叢集擴充：data/search_aliases.json<br/>命中叢集任一詞，其餘詞以 0.5 權重併入"]
-  S3["③ BM25 段排序：每頁按標題切段、段為文件<br/>排除樞紐頁 index／log／CLAUDE／metrics／reader-notes"]
-  S4["④ 頁彙整：最佳段＋次佳兩段乘 0.25<br/>不做全段加總，否則大頁光靠段數就壓過小頁"]
+  S3["② BM25 段排序，每種說法各跑一次：每頁按標題切段、段為文件<br/>排除樞紐頁 index／log／CLAUDE／metrics／reader-notes"]
+  S4["③ 頁彙整：最佳段＋次佳兩段乘 0.25<br/>不做全段加總，否則大頁光靠段數就壓過小頁"]
+  S2["④ 跨說法融合：各說法分數先除以該說法最高分<br/>再把同一頁在各說法的得分加總"]
   S5{"⑤ 找到判定：實詞 idf 覆蓋率 ≥ 0.3<br/>或命中 ≥ 3 個相異實詞"}
   S6["--expand：通過找到判定的前 5 頁當種子，沿 wikilink 圖走一跳<br/>樣板區邊不算、高度數鄰居壓權、已命中頁不疊加"]
-  S7["仍零命中：把使用者的用詞加進 search_aliases.json 再查<br/>或換路——專有名詞走 Grep、近況走 log.md"]
+  S7["仍零命中：讀 index.md 學庫內用詞，換一批改寫再查<br/>或換路——專有名詞走 Grep、近況走 log.md"]
   OUT["候選頁＋最佳段標題＋行號，可直接 Read offset 跳讀"]
-  S1 --> S2 --> S3 --> S4 --> S5
+  S0 --> S1 --> S3 --> S4 --> S2 --> S5
   S5 -->|"找到且候選 ≥ 3、無低覆蓋"| OUT
   S5 -->|"候選 < 3、有低覆蓋、或零命中 exit 1"| S6
   S6 --> OUT
   S6 -->|"仍零命中"| S7
 ```
 
-零命中的退路順序是固定的：**`--expand` → 補 `data/search_aliases.json` → 換路**。先補叢集再擴散是反的——叢集靠人工登記，擴散是既有 wikilink 免費給的結構訊號。
+零命中的退路順序是固定的：**`--expand` → 換一批改寫 → 換路**。擴散排前面，因為它是既有 wikilink 免費給的結構訊號，不需要再猜一次用詞。
 
 ---
 
@@ -143,15 +144,21 @@ Ingest 每一種產物，被 Query 的哪一路讀、以什麼方式讀：
 - **雲端沙盒 egress 封鎖。** `docs/daily-automation.md` 記載的實測：雲端沙盒封鎖一般外部網域，抓料因此被迫移到 GitHub Actions。任何要連外的檢索服務在每日路徑上跑不起來。
 - **零依賴是刻意的。** `wiki_search.py` 不裝 jieba，CJK 用 bigram；索引隨需在記憶體建、不落地檔案（同 `wiki_graph.py` 的「沒有檔案就沒有過期問題」）。代價是每次查詢重掃 `wiki/`，在目前的頁數量級比維護一份會過期的索引便宜。
 
+### 為什麼不養同義詞表
+
+第 2 路上線時帶一份人工登記的同義叢集（data 目錄下的 search_aliases.json，8 組 70 詞），三天後拿掉。理由：跑 `wiki_search.py` 的永遠是 Claude session，它本來就知道「視覺化」和「可觀測性」是同一件事；靜態詞表是給不懂語意的呼叫端用的補丁，放在這裡只會多一份沒人看守、會靜默過期的資料。改成呼叫端當場改寫問句、腳本負責融合多種說法。代價是同一題兩次查詢的改寫可能不同，所以回報與 Query log 條目要列出用過的說法。
+
 ### 已知缺口
 
 | 缺口 | 觸發條件 | 目前退路 | 未來選項 |
 |---|---|---|---|
-| 同義叢集只橋接登記過的用詞 | 使用者用了第三種說法、頁面用第四種，兩者都不在 `data/search_aliases.json` | 先 `--expand` 走圖；仍零命中就人工把使用者的用詞加進叢集（`data/README.md` 明列這是手動維護） | 從 log 的 Query 條目回頭批次補叢集（未實作） |
+| 改寫品質取決於執行的 session | 改寫全都沒猜中庫內用詞，或把不相干的詞塞進同一種說法 | 先 `--expand` 走圖；仍零命中就讀 `wiki/index.md` 學庫內用詞再改寫一次；輸出的「改寫」行標出每種說法帶進幾頁，零頁的說法看得見 | 從 log 的 Query 條目統計零命中率趨勢（未實作） |
+| 結果不完全可重現 | 同一題兩次查詢，session 給的改寫不同 | 回報與 Query log 條目列出用過的說法，事後可照抄重跑 | 無；這是拿掉詞表的代價 |
 | 圖擴散只走一跳 | 答案頁與命中頁之間隔著一個中介頁 | 換路：路 6 的 `wiki_graph.py path <頁A> <頁B>` 找多跳路徑 | 兩跳擴散（會放大樞紐雜訊，未做） |
 | 樣板區的邊不參與擴散 | 一頁只在別頁的「## 相關實體」被指到，正文無人提及 | 只能靠字面命中或 index 補挑撿回 | 無；這是刻意取捨——樣板區邊屬 see-also，不是敘事引用 |
 | 大頁的弱訊號被壓 | 一頁數十段都沾一點查詢詞，但沒有任何一段強命中 | 加 `--sections` 多列幾段；或改走路 6 的 `sections <關鍵詞>` | 調 `RUNNER_UP_WEIGHT`（會讓大頁重新霸榜，需量測後才動） |
 | 找到判定可能誤判 | 短查詢實詞少、覆蓋率分母小；長句的附帶詞又稀釋分母 | 門檻設成「覆蓋率 ≥ 0.3 **或** 命中 ≥ 3 個相異實詞」，兩條任一成立即算找到 | 無；兩條門檻本來就是為這兩種形狀各設一條 |
+| 虛字表會誤殺實詞 | 查詢端剔除「含任一虛字」的 bigram，實詞若含虛字就一起消失（「可觀」「重要」）；「用」已改成只在落單時剔除，否則「費用」「用量」會讓成本類問句只剩一個詞 | 同詞的其他 bigram 通常還在（「觀測」「測性」）；改寫補另一種說法 | 逐字檢討虛字表（需量測後才動） |
 | CJK bigram 誤配 | 查詢詞的 bigram 恰好出現在無關語境 | 覆蓋率與實詞數門檻擋掉零碎 bigram（`src/tests/test_wiki_search.py` 的「量子／麵包」情境） | 換斷詞器（需第三方依賴，與零依賴取捨相衝） |
 | index 與 log 檢索不到 | 問題其實在問路由或近況，卻走了第 2 路 | 分流本身——路 3／4／5 各自負責 | 無；見第 4 節，這是設計而非缺陷 |
 
@@ -163,7 +170,7 @@ Ingest 每一種產物，被 Query 的哪一路讀、以什麼方式讀：
 
 - `wiki/CLAUDE.md`「搜尋策略」六路的任何增刪 → 第 3 節
 - `.claude/skills/wiki-query/SKILL.md` 與 `.claude/skills/wiki-query/references/contract.md` 的回答契約或回流步驟 → 第 3、4 節
-- `scripts/wiki_search.py` 的門檻常數（`MIN_COVERAGE`、`MIN_MATCHED`、`ALIAS_WEIGHT`、`RUNNER_UP_WEIGHT`、`SEED_TOP`、`EXPAND_WEIGHT`）或 `EXCLUDE_PAGES` → 第 3.1、4、5 節
+- `scripts/wiki_search.py` 的門檻常數（`MIN_COVERAGE`、`MIN_MATCHED`、`RUNNER_UP_WEIGHT`、`SEED_TOP`、`EXPAND_WEIGHT`）、虛字表（`STOP_CHARS`、`STOP_UNIGRAMS`）、跨說法融合方式或 `EXCLUDE_PAGES` → 第 3.1、4、5 節
 - `scripts/wiki_graph.py` 的節點衛生規則（樞紐排除、樣板區 zone） → 第 4、5 節
 - `.claude/skills/news-pipeline/SKILL.md` 的 Phase 切法、`.claude/skills/wiki-ingest/SKILL.md` 的步驟或彙整檔案清單 → 第 2 節
 - `.claude/reporter-rules/page-templates.md` 的頁面標頭欄位或 callout 格式 → 第 4 節

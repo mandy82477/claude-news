@@ -7,20 +7,22 @@
 把檢索面換成**全文**——每頁按標題切段，段為文件做 BM25 排序，回傳頁＋最佳段
 標題＋行號，可直接 Read offset 跳讀。
 
-同義詞叢集 `data/search_aliases.json` 橋接「同概念、不同用詞」（視覺化 ↔
-可觀測性）；查詢句命中叢集任一詞，其餘詞以較低權重併入。零命中時提示擴充。
+查詢改寫橋接「同概念、不同用詞」（視覺化 ↔ 可觀測性）：BM25 只比字面，語意由
+呼叫端補——跑這支的永遠是 Claude session，它把原句改寫成幾種說法當額外參數傳入。
+每種說法各自排序，分數先除以該說法的最高分（長句不會光靠詞多就壓過短句），
+再把同一頁在各說法的得分加總——多種說法都排得上的頁更像答案。本腳本不養同義詞表：表會靜默過期，改寫不會。
 
-`--expand` 圖擴散：把字面／叢集命中的前幾頁當種子，沿 wikilink 圖走一跳，被多個
+`--expand` 圖擴散：把字面／改寫命中的前幾頁當種子，沿 wikilink 圖走一跳，被多個
 種子共同指到的頁加回候選（標「圖擴散」＋種子名）。解「相關頁但沒共用任何詞」那類
 漏；邊的取捨借 wiki_graph.py：樣板區／階層邊不算、index／log 樞紐排除、鄰居度數
-高者壓權。已由字面或叢集找到的頁不再疊加圖分數（兩路取其一，不重複加分）。
+高者壓權。已由字面或改寫找到的頁不再疊加圖分數（兩路取其一，不重複加分）。
 
 斷詞：英數連續段為一詞（保留 `.`/`-`/`_`/`+`，命中 v2.1.211、stream-json）；
 CJK 連續段取 bigram（單字段取 unigram）。不裝 jieba——bigram 對繁中檢索
 足夠且無依賴，與雲端沙盒／CI 環境無關。
 
 用法：
-  python scripts/wiki_search.py "<查詢句>" [--top N] [--expand] [--sections] [--json] [--no-alias]
+  python scripts/wiki_search.py "<問題原句>" ["<改寫 1>" "<改寫 2>" …] [--top N] [--expand] [--sections] [--json]
 """
 from __future__ import annotations
 
@@ -40,13 +42,10 @@ from build_web import WIKI_DIR, strip_markdown_to_text  # noqa: E402
 from gen_wiki_frontmatter import strip_body  # noqa: E402
 from wiki_graph import _neighbor_sets, _parse_page  # noqa: E402
 
-ROOT = Path(__file__).resolve().parent.parent
-ALIASES_PATH = ROOT / "data" / "search_aliases.json"
 EXCLUDE_PAGES = {"index", "log", "CLAUDE", "metrics", "reader-notes"}
 
 K1 = 1.5
 B = 0.75
-ALIAS_WEIGHT = 0.5
 # 頁分數＝最佳段＋次佳兩段的折扣，不做全段加總：否則數百段的大頁光靠段數就壓過小頁
 RUNNER_UP_WEIGHT = 0.25
 # 原句實詞 token 的 idf 覆蓋率門檻：低於此值視為只沾到零碎 bigram（「量子」「麵包」），不算命中；
@@ -54,10 +53,15 @@ RUNNER_UP_WEIGHT = 0.25
 MIN_COVERAGE = 0.3
 MIN_MATCHED = 3
 # 查詢端剔除含虛字的 CJK bigram（「有哪」「哪些」「相關的」）：它們只是句法，不是要找的概念
-STOP_CHARS = set("的有哪些用與和是在了嗎呢麼怎可以什會被把及或就都還很請要想找給我你他它們這那個")
+STOP_CHARS = set("的有哪些與和是在了嗎呢麼怎可以什會被把及或就都還很請要想找給我你他它們這那個")
+# 「用」只在落單時是虛字（「用 hooks 做」）；成對時多半是實詞（費用、用量、使用），剔掉會讓成本類問句只剩 token 一個詞
+STOP_UNIGRAMS = STOP_CHARS | {"用"}
 # 圖擴散：種子＝覆蓋率達標的前 SEED_TOP 頁；鄰居分數＝Σ(種子相對分數／√鄰居度數)×最高分×EXPAND_WEIGHT
 SEED_TOP = 5
 EXPAND_WEIGHT = 0.5
+# 沒指定 --top 時的候選頁數：帶改寫時放寬，否則每種說法的第一名就把名額佔滿
+DEFAULT_TOP = 5
+DEFAULT_TOP_WITH_REWRITES = 8
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 LATIN_RE = re.compile(r"[a-z0-9][a-z0-9._+\-/]*[a-z0-9]|[a-z0-9]")
 CJK_RE = re.compile(r"[㐀-鿿]+")
@@ -168,46 +172,15 @@ class Index:
         return out
 
 
-def load_aliases(path: Path = ALIASES_PATH) -> list[list[str]]:
-    if not path.exists():
-        return []
-    data = json.loads(path.read_text(encoding="utf-8"))
-    return [c["terms"] for c in data.get("clusters", [])]
-
-
 def content_tokens(tokens: list[str]) -> list[str]:
-    kept = [t for t in tokens if not (CJK_RE.fullmatch(t) and set(t) & STOP_CHARS)]
+    kept = [t for t in tokens
+            if not (CJK_RE.fullmatch(t) and (t in STOP_UNIGRAMS if len(t) == 1 else set(t) & STOP_CHARS))]
     return kept or tokens
 
 
-def expand_query(query: str, clusters: list[list[str]]) -> tuple[dict[str, float], list[str], dict[str, set[str]]]:
-    """回傳 (加權 token 表, 命中的叢集詞, 原句 token → 同叢集 token 集合)。
-    原句實詞 token 權重 1，叢集擴充 ALIAS_WEIGHT。"""
-    weights: dict[str, float] = {}
-    for t in content_tokens(tokenize(query)):
-        weights[t] = 1.0
-    q_lower = query.lower()
-    hits: list[str] = []
-    concept: dict[str, set[str]] = {}
-
-    def hit(term: str) -> bool:
-        t = term.lower()
-        if LATIN_RE.fullmatch(t):
-            return re.search(rf"(?<![a-z0-9_-]){re.escape(t)}(?![a-z0-9_-])", q_lower) is not None
-        return t in q_lower
-
-    for terms in clusters:
-        matched = [t for t in terms if hit(t)]
-        if not matched:
-            continue
-        hits.extend(matched)
-        cluster_tokens = {tok for t in terms for tok in tokenize(t)}
-        for tok in cluster_tokens:
-            weights.setdefault(tok, ALIAS_WEIGHT)
-        for t in matched:
-            for tok in tokenize(t):
-                concept.setdefault(tok, set()).update(cluster_tokens)
-    return weights, hits, concept
+def query_weights(query: str) -> dict[str, float]:
+    """查詢句的實詞 token，權重一律 1。"""
+    return {t: 1.0 for t in content_tokens(tokenize(query))}
 
 
 def snippet(text: str, weights: dict[str, float], width: int = 90) -> str:
@@ -224,15 +197,14 @@ def snippet(text: str, weights: dict[str, float], width: int = 90) -> str:
     return ("…" if start else "") + plain[start:start + width] + ("…" if start + width < len(plain) else "")
 
 
-def coverage(index: Index, tokens: set[str], original: dict[str, float], concept: dict[str, set[str]]) -> tuple[float, int]:
-    """回傳 (原句實詞的 idf 加權覆蓋率, 命中的相異實詞數)。
-    原句 token 若屬同義叢集，段落含叢集內任一 token 即算覆蓋（有「可觀測性」＝覆蓋了「視覺化」）。"""
+def coverage(index: Index, tokens: set[str], original: dict[str, float]) -> tuple[float, int]:
+    """回傳 (查詢句實詞的 idf 加權覆蓋率, 命中的相異實詞數)。"""
     total = sum(index.idf(t) for t in original)
     if total <= 0:
         return 0.0, 0
     got, n = 0.0, 0
     for t in original:
-        if t in tokens or (t in concept and concept[t] & tokens):
+        if t in tokens:
             got += index.idf(t)
             n += 1
     return got / total, n
@@ -243,7 +215,7 @@ def is_found(cov: float, matched: int) -> bool:
 
 
 def expand_by_graph(pages: list[dict], adjacency: dict[str, set[str]], top: int) -> list[dict]:
-    """種子＝覆蓋率達標的前 SEED_TOP 頁。回傳擴散進來的新頁（原本沒被字面／叢集找到的），至多 top//2。"""
+    """種子＝覆蓋率達標的前 SEED_TOP 頁。回傳擴散進來的新頁（原本沒被字面／改寫找到的），至多 top//2。"""
     seeds = [e for e in pages if e["found"]][:SEED_TOP]
     if not seeds:
         return []
@@ -253,33 +225,29 @@ def expand_by_graph(pages: list[dict], adjacency: dict[str, set[str]], top: int)
     for seed in seeds:
         for n in adjacency.get(seed["page"], ()):
             deg = max(1, len(adjacency.get(n, ())))
-            boost[n] = boost.get(n, 0.0) + (seed["score"] / top_score) / math.sqrt(deg)
+            boost[n] = boost.get(n, 0.0) + seed["rel"] / math.sqrt(deg)
             via.setdefault(n, []).append(seed["page"])
     already = {e["page"] for e in pages if e["found"]}
     out = []
     for n, b in sorted(boost.items(), key=lambda kv: -kv[1]):
         if n in already:
             continue
-        out.append({"page": n, "score": round(EXPAND_WEIGHT * top_score * b, 2), "coverage": 0.0,
-                    "found": True, "matched": 0, "source": "圖擴散", "via": via[n], "sections": []})
+        out.append({"page": n, "score": round(EXPAND_WEIGHT * top_score * b, 2), "rel": EXPAND_WEIGHT * b,
+                    "coverage": 0.0, "found": True, "matched": 0, "source": "圖擴散", "via": via[n],
+                    "variant": "", "sections": []})
     return out[: max(1, top // 2)]
 
 
-def search(query: str, index: Index, clusters: list[list[str]] | None = None, top: int = 5,
-           expand: bool = False):
-    weights, alias_hits, concept = expand_query(query, clusters or [])
-    original = {t: w for t, w in weights.items() if w >= 1.0}
-    alias_tokens = {t for t, w in weights.items() if w < 1.0}
-    ranked = index.score(weights)
+def rank_one(query: str, index: Index) -> list[dict]:
+    """單一說法的頁排序。`rel`＝分數÷該說法最高分，跨說法融合時加總它，不加總原始 BM25 分數。"""
+    weights = query_weights(query)
     by_page: dict[str, dict] = {}
-    for sc, i in ranked:
+    for sc, i in index.score(weights):
         s = index.sections[i]
-        toks = set(s.tokens)
         entry = by_page.setdefault(s.page, {"page": s.page, "sections": []})
-        cov, matched = coverage(index, toks, original, concept)
+        cov, matched = coverage(index, set(s.tokens), weights)
         entry["sections"].append({"heading": s.heading, "line": s.line, "score": round(sc, 2),
                                   "coverage": round(cov, 2), "matched": matched, "found": is_found(cov, matched),
-                                  "lexical": bool(toks & set(original)), "alias": bool(toks & alias_tokens),
                                   "snippet": snippet(s.text, weights)})
     pages = []
     for e in by_page.values():
@@ -289,29 +257,61 @@ def search(query: str, index: Index, clusters: list[list[str]] | None = None, to
         e["coverage"] = max(x["coverage"] for x in top_secs)
         e["found"] = any(x["found"] for x in top_secs)
         e["matched"] = max(x["matched"] for x in top_secs)
-        e["source"] = "字面命中" if top_secs[0]["lexical"] else "同義叢集"
         e["via"] = []
         pages.append(e)
     pages.sort(key=lambda e: -e["score"])
-    expanded = expand_by_graph(pages, index.adjacency, top) if expand else []
-    # 擴散頁一律以「圖擴散」身分進榜；字面／叢集已找到的頁不疊加圖分數（兩路取其一）
+    best = pages[0]["score"] if pages and pages[0]["score"] else 1.0
+    for e in pages:
+        e["rel"] = e["score"] / best
+    return pages
+
+
+def search(queries: str | list[str], index: Index, top: int = DEFAULT_TOP, expand: bool = False):
+    """`queries` 第一句是使用者原句，其餘是呼叫端的改寫。每種說法各自排序，頁的融合分數＝
+    它在各說法「找到」時的 rel 加總——多種說法都排得上的頁，比只在一種說法裡第一名的頁更像答案。
+    顯示用的段落與來源取該頁最好的那一次（平手歸原句）。"""
+    if isinstance(queries, str):
+        queries = [queries]
+    queries = list(dict.fromkeys(q for q in queries if q.strip()))
+    best: dict[str, dict] = {}
+    fused: dict[str, float] = {}
+    for order, q in enumerate(queries):
+        for e in rank_one(q, index):
+            e["variant"] = q
+            e["source"] = "字面命中" if order == 0 else "改寫命中"
+            if e["found"]:
+                fused[e["page"]] = fused.get(e["page"], 0.0) + e["rel"]
+            old = best.get(e["page"])
+            if old is None or (e["found"], e["rel"]) > (old["found"], old["rel"]):
+                best[e["page"]] = e
+    peak = max(fused.values(), default=0.0) or 1.0
+    for page, e in best.items():
+        e["rel"] = fused[page] / peak if e["found"] else 0.0
+    found_pages = sorted((e for e in best.values() if e["found"]), key=lambda e: -e["rel"])
+    expanded = expand_by_graph(found_pages, index.adjacency, top) if expand else []
+    # 擴散頁一律以「圖擴散」身分進榜；字面／改寫已找到的頁不疊加圖分數（兩路取其一）
     expanded_slugs = {x["page"] for x in expanded}
-    found_pages = [e for e in pages if e["found"]]
-    weak_pages = [e for e in pages if not e["found"] and e["page"] not in expanded_slugs]
-    merged = (sorted(found_pages + expanded, key=lambda e: -e["score"]) + weak_pages)[:top]
-    found = any(e["found"] for e in merged)
-    return {"query": query, "alias_hits": alias_hits, "terms": weights, "pages": merged,
-            "found": found, "expanded": expand}
+    weak_pages = sorted((e for e in best.values() if not e["found"] and e["page"] not in expanded_slugs),
+                        key=lambda e: -e["score"])
+    ranked = (sorted(found_pages + expanded, key=lambda e: -e["rel"]) + weak_pages)[:top]
+    variant_hits = {q: sum(1 for e in ranked if e["found"] and e["variant"] == q) for q in queries}
+    return {"query": queries[0], "variants": queries[1:], "variant_hits": variant_hits, "pages": ranked,
+            "found": any(e["found"] for e in ranked), "expanded": expand}
 
 
 def render(result: dict, show_sections: bool) -> str:
     lines = [f"查詢：{result['query']}"]
-    if result["alias_hits"]:
-        lines.append(f"同義叢集命中：{', '.join(result['alias_hits'])}（擴充詞權重 {ALIAS_WEIGHT}）")
+    if result["variants"]:
+        hits = result["variant_hits"]
+        lines.append("改寫：" + "｜".join(f"{v}（{hits.get(v, 0)} 頁）" for v in result["variants"]))
     if not result["found"]:
-        hint = ("把使用者的用詞加進 data/search_aliases.json" if result["expanded"]
-                else "加 --expand 沿 wikilink 圖擴散，仍無則把使用者的用詞加進 data/search_aliases.json")
-        lines.append(f"零命中（沒有任何候選段的實詞覆蓋率達 {MIN_COVERAGE} 或命中 ≥{MIN_MATCHED} 個實詞）。下一步：{hint}；或換路（專有名詞走 Grep、近況走 log.md）。")
+        steps = []
+        if not result["variants"]:
+            steps.append("把原句改寫成幾種說法（中英對譯、wiki 可能的用詞、上下位詞）當額外參數再查")
+        if not result["expanded"]:
+            steps.append("加 --expand 沿 wikilink 圖擴散")
+        steps.append("換路（專有名詞走 Grep、近況走 log.md）")
+        lines.append(f"零命中（沒有任何候選段的實詞覆蓋率達 {MIN_COVERAGE} 或命中 ≥{MIN_MATCHED} 個實詞）。下一步：{'；'.join(steps)}。")
         return "\n".join(lines)
     lines.append(f"候選頁（{len(result['pages'])} 頁，全部要開，不憑摘要跳過）：")
     for r, e in enumerate(result["pages"], start=1):
@@ -320,7 +320,8 @@ def render(result: dict, show_sections: bool) -> str:
             continue
         best = e["sections"][0]
         flag = "" if e["found"] else "  ⚠ 低覆蓋"
-        lines.append(f"{r}. [[{e['page']}]]  分數 {e['score']}  覆蓋 {e['coverage']}（{best['matched']} 實詞）{flag}  來源 {e['source']}  最佳段 § {best['heading']}  行 {best['line']}")
+        source = e["source"] if e["source"] == "字面命中" else f"改寫命中「{e['variant']}」"
+        lines.append(f"{r}. [[{e['page']}]]  分數 {e['score']}  覆蓋 {e['coverage']}（{best['matched']} 實詞）{flag}  來源 {source}  最佳段 § {best['heading']}  行 {best['line']}")
         lines.append(f"   {best['snippet']}")
         if show_sections:
             for x in e["sections"][1:4]:
@@ -332,20 +333,19 @@ def render(result: dict, show_sections: bool) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="wiki 全文檢索")
-    ap.add_argument("query")
-    ap.add_argument("--top", type=int, default=5)
+    ap.add_argument("queries", nargs="+", metavar="query", help="第一句是問題原句，其餘是改寫")
+    ap.add_argument("--top", type=int, default=None)
     ap.add_argument("--expand", action="store_true", help="以命中頁為種子沿 wikilink 圖擴散一跳")
     ap.add_argument("--sections", action="store_true", help="每頁多列前幾個命中段")
     ap.add_argument("--json", action="store_true")
-    ap.add_argument("--no-alias", action="store_true")
     args = ap.parse_args(argv)
 
     if hasattr(sys.stdout, "buffer"):
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
     index = Index.from_files(iter_wiki_files())
-    clusters = [] if args.no_alias else load_aliases()
-    result = search(args.query, index, clusters, top=args.top, expand=args.expand)
+    top = args.top or (DEFAULT_TOP if len(args.queries) == 1 else DEFAULT_TOP_WITH_REWRITES)
+    result = search(args.queries, index, top=top, expand=args.expand)
     if args.json:
         print(json.dumps(result, ensure_ascii=False, indent=1))
     else:
