@@ -40,13 +40,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**09-17 起 Cowork 併入單一 Claude 介面：** 官方部落格宣布 Claude Cowork 與 claude.ai 聊天介面自即日起合併，使用者不需再先決定「這個任務該開 Cowork 還是開對話」。同批推出 Claude Docs、Claude Slides（皆 beta）與整合進對話的 Claude Design，可直接在對話中編輯文件簡報並下載為 PowerPoint／PDF，先於 Pro、Max 方案開放（HN 226 分；Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld 等媒體同日跟進，均僅標題／框架可用）。**下方「跟 Claude Code 差在哪」與「現在能不能用」兩節記錄的是合併前的介面型態，合併後操作路徑見下方待查證。**
+**09-17 起 Cowork 併入單一 Claude 介面：** 官方部落格宣布 Claude Cowork 與 claude.ai 聊天介面自即日起合併，使用者不需再先決定「這個任務該開 Cowork 還是開對話」。同批推出 Claude Docs、Claude Slides（皆 beta）與整合進對話的 Claude Design，可直接在對話中編輯文件簡報並下載為 PowerPoint／PDF，先於 Pro、Max 方案開放（HN 226 分；Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld 等媒體同日跟進，均僅標題／框架可用）。**下方「跟 Claude Code 差在哪」與「現在能不能用」兩節記錄的是合併前的介面型態，合併後操作路徑見下方標記段落。**
 
 ❓ **待查證**（標 2026-09-17｜查 聊天介面合併、[[entities/claude-docs]]｜複 2026-10-01）｜**合併後 Cowork 既有能力（背景持續執行、獨立 VM 沙箱）如何呈現在合併後的介面**：官方部落格摘要僅說明「不必再選介面」，未載明背景執行、VM 沙箱等既有 Cowork 特徵是否原樣保留、UI 入口如何呈現；待官方文件（Help Center／desktop.md）更新後確認。
 
 Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放，首波僅限 Max 訂閱戶（詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
 
-**跟 Claude Code 差在哪（合併前狀態，見上方待查證）：** Claude Code 是終端機 CLI，面向工程師逐指令互動；Cowork 是圖形化桌面／行動／網頁介面，任務丟出去後可背景執行，不需要盯著終端機。兩者共用底層 Claude agent 能力（如 2026-05-03 macOS 電腦使用功能，Claude Code 與 Cowork 同步取得直接控制桌面滑鼠鍵盤的能力）。2026-05-11 一則 Reddit 貼文（單一使用者觀點，非官方聲明）指出，桌面版 Claude Code 推出後與 Cowork 功能高度重疊，使用者一度分不清楚兩者定位；此後未見官方公開發文說明差異。
+**跟 Claude Code 差在哪（合併前狀態，見上方標記）：** Claude Code 是終端機 CLI，面向工程師逐指令互動；Cowork 是圖形化桌面／行動／網頁介面，任務丟出去後可背景執行，不需要盯著終端機。兩者共用底層 Claude agent 能力（如 2026-05-03 macOS 電腦使用功能，Claude Code 與 Cowork 同步取得直接控制桌面滑鼠鍵盤的能力）。2026-05-11 一則 Reddit 貼文（單一使用者觀點，非官方聲明）指出，桌面版 Claude Code 推出後與 Cowork 功能高度重疊，使用者一度分不清楚兩者定位；此後未見官方公開發文說明差異。
 
 **現在能不能用：**
 

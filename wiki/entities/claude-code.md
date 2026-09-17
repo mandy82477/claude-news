@@ -697,7 +697,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-17 | **v2.1.274** 新增記憶體用量過高警示與 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，詳見 [[topics/claude-code-experimental]]。桌面版文件新增：終端機 session 改讀 claude.ai 帳號的 skills/plugins（雲端取代 `~/.claude/skills/`），與同日 [[entities/cowork\|Cowork／Chat 合併]] 同方向；「Pro/Max plan」頁移除「Choose a Claude plan」段。TradingView 推出官方 MCP Server 串接 Claude（第三方產物，不進 feature-radar）。互動數更新：AGENTS.md #6235（394→396 則留言、6621→6643 讚）。新增 ❓ 待查證：BleepingComputer 報導 Anthropic 擬讓 Claude 分析銀行帳戶與財務資料（僅標題可用）。 |
+| 2026-09-17 | **v2.1.274** 新增記憶體用量過高警示與 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，詳見 [[topics/claude-code-experimental]]。桌面版文件新增：終端機 session 改讀 claude.ai 帳號的 skills/plugins（雲端取代 `~/.claude/skills/`），與同日 [[entities/cowork\|Cowork／Chat 合併]] 同方向；「Pro/Max plan」頁移除「Choose a Claude plan」段。TradingView 推出官方 MCP Server 串接 Claude（第三方產物，不進 feature-radar）。互動數更新：AGENTS.md #6235（394→396 則留言、6621→6643 讚）。新增一則官方待補充報導（❓ 標記）：BleepingComputer 報導 Anthropic 擬讓 Claude 分析銀行帳戶與財務資料（僅標題可用）。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
 | 2026-09-14 | 官方文件：桌面版新增多 repo 掛載＋`disableMobileSimulatorTools`。新增已知問題：Actions 範本 RCE（Reddit）。互動更新：#53247（29→32 讚）、#2254（138→147 讚）。 |
 | 2026-09-13 | **v2.1.270**：修復 2.1.269 迴歸（git 指令誤要求授權）。互動數更新 7 則（AGENTS.md #6235、多帳號 #18435／#27302 等），詳見各節。 |
