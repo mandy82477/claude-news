@@ -182,7 +182,7 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
     warnings: list[str] = []
     for sub in ("entities", "topics"):
         for f in sorted((wiki_dir / sub).glob("*.md")):
-            raw = f.read_text(encoding="utf-8")
+            raw = f.read_text(encoding="utf-8-sig")  # 帶 BOM 的頁 H1 會配不到、整頁靜默漏收
             name, head = page_head(raw)
             page = f"{sub}/{f.stem}"
             hits = dated_callouts(head, target_date)
@@ -314,7 +314,7 @@ def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_
                 continue
             if page not in have and refresh:
                 pf = wiki_dir / f"{page}.md"
-                head = page_head(pf.read_text(encoding="utf-8"))[1] if pf.exists() else ""
+                head = page_head(pf.read_text(encoding="utf-8-sig"))[1] if pf.exists() else ""
                 if not any(CALLOUT_RE.match(l) for l in head.splitlines()):
                     warnings.append(f"{page}：wiki 上已無帶日期的 callout（改成自介型），--refresh 自日報移除")
                     continue
@@ -328,8 +328,12 @@ def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_
             warnings.append(f"保留既有檔 {kept} 頁（其 callout 已被後一天覆寫，日報是不可改的過去）")
         if replaced:
             warnings.append(f"既有檔 {replaced} 頁維持原樣未重讀 wiki（要同步 wiki 現版請加 --refresh）")
+        # 既有檔裡的頁照原順序留在前面，新補的頁排在後面——凍結頁沒有 inbound 可比，
+        # 拿它重排會讓「什麼都沒變的重跑」也改動檔案
+        pos = {page: n for n, page in enumerate(frozen)}
         for items in sections.values():
-            items.sort(key=lambda it: (-it["inbound"], it["page"]))
+            items.sort(key=lambda it: (0, pos[it["page"]], "") if it["page"] in pos
+                       else (1, -it["inbound"], it["page"]))
     focus_lines: list[str] = []
     top_stories: list[list[str]] = []
     news_f = news_dir / f"{target_date}.md"
@@ -353,7 +357,8 @@ def main(argv: list[str]) -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # Windows cp950 主控台印 emoji 會炸
     args = [a for a in argv[1:] if not a.startswith("--")]
-    if len(args) != 1 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args[0]):
+    unknown = [a for a in argv[1:] if a.startswith("--") and a not in ("--stdout", "--refresh")]
+    if unknown or len(args) != 1 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args[0]):
         print("用法：python scripts/build_reader_digest.py YYYY-MM-DD [--stdout] [--refresh]")
         return 2
     target_date = args[0]

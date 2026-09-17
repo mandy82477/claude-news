@@ -336,6 +336,25 @@ class TestFrozenPagesKeptOnRegenerate(unittest.TestCase):
                                           Path(self._td.name) / "nope.jsonl", existing=self.existing)
         self.assertIn("intro-page", text_default, "預設凍結模式不動既有檔")
 
+    def test_regenerate_keeps_existing_order_and_is_idempotent(self):
+        args = ("2026-09-11", self.wiki, Path(self._td.name) / "nope", Path(self._td.name) / "nope.jsonl")
+        first, _, _ = gen.generate(*args, existing=self.existing)
+        self.assertLess(first.index("[[entities/claude-code|"), first.index("[[entities/gone-page|"),
+                        "既有檔裡的頁照原順序——凍結頁沒有 inbound，拿它重排會讓沒變的重跑也改檔")
+        self.assertLess(first.index("[[entities/gone-page|"), first.index("[[entities/managed-agents|"),
+                        "新補的頁排在既有頁後面")
+        second, _, _ = gen.generate(*args, existing=first)
+        self.assertEqual(first, second, "什麼都沒變的重跑不可改動檔案")
+
+    def test_main_rejects_unknown_flag_without_writing(self):
+        self.assertEqual(gen.main(["x", "2026-09-11", "--help"]), 2, "未知旗標不可被忽略後直接寫檔")
+
+    def test_page_saved_with_bom_is_still_collected(self):
+        (self.wiki / "entities" / "bom-page.md").write_text(_page(
+            "🤖 模型", "帶 BOM 的頁", "> **最新動態**（2026-09-11）\n> 記事本存的檔。"), encoding="utf-8-sig")
+        text, _, _ = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope", Path(self._td.name) / "nope.jsonl")
+        self.assertIn("[[entities/bom-page|", text)
+
     def test_no_existing_file_no_carry_over(self):
         text, _, warnings = gen.generate("2026-09-11", self.wiki, Path(self._td.name) / "nope",
                                          Path(self._td.name) / "nope.jsonl")

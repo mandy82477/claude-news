@@ -229,12 +229,15 @@ index.md 狀態變更：[page: 舊狀態 → 新狀態 or 無]
 
 ### 機械自查要附輸出行，不是宣告
 
-收工前對你動過的每一頁跑下面兩支，**把實際輸出的最後一行原樣抄進回報**——不是寫「✅ 通過」：
+收工前對你動過的每一頁跑下面三支，**把實際輸出的最後一行原樣抄進回報**——不是寫「✅ 通過」：
 
 ```
 python scripts/check_cell_limits.py --page <你的頁面 slug>
 python scripts/check_reader_language.py --page <你的頁面 slug>
+python scripts/check_callout_coverage.py TARGET_DATE --page <你的頁面 slug>
 ```
+
+第三支看的是讀者版日報收不收得到你：你把新聞寫進頁面、「最後新聞更新」改成 TARGET_DATE，頁頂 callout 卻沒覆寫成 TARGET_DATE（沒動，或寫成事件日），這頁今天就不上日報。被點名 → 照 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」覆寫後重跑。
 
 `--page` 只是過濾檔案清單，門檻與基線判定與全庫模式是同一段程式碼，所以逐頁跑不會漏——**漏的是「跑完之後又改了一次」**。因此順序固定：**改完 → 跑 → 抄輸出 → 不再動那一頁**；若抄完又想改，重跑並重抄。
 

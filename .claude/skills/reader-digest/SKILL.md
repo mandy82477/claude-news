@@ -16,6 +16,14 @@ disable-model-invocation: true
 
 ## 步驟
 
+0. **涵蓋閘（產出前，強制）：**
+
+   ```
+   PYTHON scripts/check_callout_coverage.py TARGET_DATE
+   ```
+
+   當日吃進新聞（標頭「最後新聞更新」＝TARGET_DATE）卻沒有當日 callout 的頁，會從日報上靜默消失；本閘逐頁點名。非零退出 → 依 `wiki/index.md` 領域欄把被點名的頁補派給所屬記者（派工方式同 `.claude/skills/wiki-ingest/SKILL.md` 步驟 3，一個領域一個 agent，prompt 貼上本閘輸出行），請他照 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」覆寫 callout，收報後重跑到 exit 0 再進第 1 步。補派一輪仍紅 → 不阻斷，把剩餘輸出行抄進完成摘要「📋 待使用者裁示」。
+
 1. **產出（機械）：**
 
    ```
