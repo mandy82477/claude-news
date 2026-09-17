@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新動態：New York Post 加入轉載，DeepMind 研究員離職警告延燒第四家媒體**（2026-09-16）
-> New York Post 以「could kill us all」措辭跟進轉載 09-13 已記錄之同一（姓名未載）研究員警告，內容細節未變；詳見 [[topics/ai-talent-flow#對各公司的影響]] Google DeepMind 列與 [[topics/ai-talent-flow#時序]] 新增節。
+> **最新動態：Yahoo 加入轉載，DeepMind 研究員離職警告延燒第五家媒體**（2026-09-17）
+> Yahoo 以「Quits Over AI Existential Risk」措辭跟進轉載 09-13 已記錄之同一（姓名未載）研究員警告，內容細節未變；詳見 [[topics/ai-talent-flow#對各公司的影響]] Google DeepMind 列與 [[topics/ai-talent-flow#時序]] 新增節。
 
 ## 摘要
 
@@ -73,6 +73,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-17（跟進）
+- **Yahoo 第五家跟進，改用「Quits Over AI Existential Risk」措辭轉載 09-13 事件**：與 09-15 The Independent／news18.com／Moneycontrol、09-16 New York Post 三家媒體同屬持續轉載，未見新增細節（推論）（Topic Watch/ai-talent-flow）
 
 #### 2026-09-16（跟進）
 - **New York Post 第四家跟進，同樣以「could kill us all」措辭轉載 09-13 事件**：與 09-15 The Independent、news18.com、Moneycontrol 三家媒體同屬持續轉載，未見新增細節（推論）（Topic Watch/ai-talent-flow）

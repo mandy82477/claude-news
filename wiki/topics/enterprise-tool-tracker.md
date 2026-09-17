@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新企業採用異動**（2026-09-16）
-> - **Rubrik Code Guardian 追加細節：另支援 MCP**：TNGlobal 報導用於 AI agent 情境，與 09-15 首發同一產品（詳見使用現況表 Rubrik 列）。
+> **最新企業採用異動**（2026-09-17）
+> - **JPMorgan Chase 美國本部導入 Claude，設 $2,000 支出上限與額外資安控管**：Business Insider 報導，具體工具範疇未見（詳見使用現況表新增列）。
 
 ## 摘要
 
@@ -80,6 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| JPMorgan Chase（美國本部） | 頂尖 | Claude（未指明是否限 Claude Code） | ✅ | — | Business Insider 報導導入 Claude 並設 $2,000 支出上限與額外資安控管；與香港分行因出口管制退出（見下方 06-18 列）為不同辦公室 | 2026-09-17 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
 | Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；為既有 Claude Code agent（06-30）之外另一產品線，具體效能數字未見報導 | 2026-09-15 |
 | T. Rowe Price | 大型（全球資產管理公司） | Claude API + Claude Code | ✅ | — | 官方新聞稿宣布擴大在投資流程中使用 Claude 與 Claude Code；具體整合範疇、涵蓋部門未見報導細節 | 2026-09-10 |
@@ -133,6 +134,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
+- **JPMorgan Chase 美國本部（09-17）**：Business Insider 報導導入 Claude 並設定 $2,000 美元支出上限、額外資安控管；與香港分行因出口管制退出（06-18）屬不同辦公室，具體工具範疇、控管粒度未見報導（Google News/Business Insider）
 - **T. Rowe Price（09-10）**：PR Newswire 官方新聞稿宣布資產管理公司 T. Rowe Price 擴大在投資流程中使用 Claude 與 Claude Code，marketscreener.com 同日獨立跟進報導；僅新聞稿標題層級資訊，具體整合部門、規模、應用場景均未見細節（Google News/PR Newswire）
 - **PicPay（09-04）**：PYMNTS.com 報導巴西金融科技公司 PicPay 宣布導入 Anthropic Claude，用於處理銀行相關客服詢問；是拉丁美洲市場首見具名金融科技公司採用案例，延續本頁既有金融產業具名採用趨勢（Grasshopper Bank、iCapital、Millennium 等），惟具體整合方式（Claude API 直接串接客服系統或透過第三方平台）、涵蓋語言、上線範圍均未見報導細節，僅標題可用（Google News/PYMNTS.com）
 - **Shopify（08-26）**：analyticsindiamag.com、The New Stack 報導 Shopify 執行長 Tobi Lütke 揚言封殺（"ban"）Claude Code；The New Stack 另指出 Anthropic 早已關閉（closed）相關功能請求（僅標題層級資訊）
@@ -181,6 +183,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-17
+- **[新增具名企業細節，✅ 使用中] Business Insider：JPMorgan Chase 美國本部導入 Claude，設 $2,000 支出上限與額外資安控管**：與香港分行因出口管制退出（06-18）為不同辦公室，具體工具範疇未見報導，詳見上方使用現況表新增列（Google News/Business Insider）
 
 #### 2026-09-16
 - **[既有企業新產品線，補充來源] TNGlobal：Rubrik Code Guardian 另支援 MCP，用於 AI agent 情境**：與 09-15 marketscreener.com 首發同一產品，本則首次點名 MCP 整合，未見額外效能數字，詳見上方使用現況表 Rubrik 列（Google News/TNGlobal）

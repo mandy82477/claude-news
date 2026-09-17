@@ -29,15 +29,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（初期，體驗粗糙）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-04
-**最後新聞更新：** 2026-08-18
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新工具動態**（2026-08-18）
-> ❓ **待查證**（標 2026-08-18｜查 /design、UI mockup｜複 2026-09-01）｜**the-decoder.com 報導 Claude Code 新增 `/design` 指令，可於終端機直接建立 UI mockup**（經 Google News 轉載，2026-08-18 報導）：單一媒體來源，Google News RSS 摘要僅含連結、無完整內文，未見官方 changelog 對應條目佐證，與 Claude Design 是否為同一產物或獨立指令尚不明確。
+> **最新工具動態**（2026-09-17）
+> Cowork／Chat 合併同批：Claude Design 整合進對話，可直接編輯、簡報，並下載為 PowerPoint／PDF。詳見 [[entities/cowork]]。
 
 ---
 
 ## 現況
+
+**09-17 起整合進對話介面：** 官方部落格宣布（隨 [[entities/cowork|Cowork 與 Chat 合併]]同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；具體是取代或疊加既有獨立設計介面，官方摘要未載明，待後續官方文件確認。
 
 Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude 具備輔助 UI／視覺設計的能力。目前處於初期階段，社群評價以負面為主——幻覺嚴重、工具錯誤頻繁，且輸出設計風格過度貼近 Anthropic 自家品牌，忽略用戶提供的設計素材。初期問題是否已改善未見官方說明，但產品本身持續迭代（見下段官方同步能力）。
 
@@ -77,6 +79,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 歷史記錄
 
+- 2026-09-17：官方部落格宣布（隨 [[entities/cowork|Cowork／Chat 合併]]同批）Claude Design 整合進對話，可直接編輯、簡報並下載為 PowerPoint／PDF
 - ❓ **待查證**（標 2026-08-18｜查 /design、UI mockup｜複 2026-09-01）｜**the-decoder.com 報導 Claude Code 新增 `/design` 指令，可於終端機直接建立 UI mockup**（經 Google News 轉載，2026-08-18 報導）：單一媒體來源，僅連結片段可用，未見官方 changelog 佐證
 - 2026-09-06：官方說明中心確認 `/design-sync` 可自本機程式碼庫匯入 design system，並支援 Claude Design ↔ Claude Code 雙向同步（[官方說明中心](https://support.claude.com/en/articles/14604416-get-started-with-claude-design)，文件 2026-08-06 更新）——2026-07-16 dev.to 教學文章提及的同步能力至此獲官方佐證
 - 2026-04-27：有開發者透過讓 Claude Design 洩漏部分指引，成功反向工程其系統提示詞，並以近似版本公開分享，顯示提示工程邏輯可被複製至其他 LLM 或 Claude Code 環境，降低了其差異化壁壘
@@ -85,6 +88,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 相關實體
 
+- 同日整合的產品：[[entities/cowork]]（Cowork／Chat 合併）、[[entities/claude-docs]]、[[entities/claude-slides]]
 - Claude Code + Figma MCP 搭配使用：Creative Bloq 評測為另一種 AI 輔助設計路徑，與 Claude Design 定位有重疊
 - [[entities/claude-code]]
 
@@ -92,6 +96,8 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 參考來源
 
+- [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17，Claude Design 整合進對話段落）
+- [[news/2026-09-17]]
 - [[news/2026-08-18]]
 - [[news/2026-04-27]]
 - [dev.to：Artifacts in Claude Code: The Operator's Guide](https://dev.to/max_quimby/artifacts-in-claude-code-the-operators-guide-4fb0)（非官方來源，可信度評估見上方「現況」段落）

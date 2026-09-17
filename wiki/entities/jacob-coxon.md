@@ -29,23 +29,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（待核實）
 **領域：** 👤 人物
 **首次出現：** 2026-09-09
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
 > ❓ **待查證**（標 2026-09-09｜查 Coxon、hilbertspaess）｜**辭去 Anthropic 職務並公開批評兩家公司「不負責任」**（2026-09-09 報導）：Jacob Coxon 於 X 發文稱已辭去 Anthropic 職務，自述曾任 OpenAI／Anthropic pretraining 研究員三年，指控兩家公司「不負責任地衝向自我改進超級智能」；其過往資歷未見獨立媒體查證，HN 讀者對其資歷提出質疑。
 
-> **最新報導**（2026-09-15）
-> CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論（僅標題可用）。Coxon 是本波離職警告中唯一具名者，其他報導身分多為推論；事件經過見 [[topics/recursive-self-improvement]]，其資歷未經獨立查證，引用時應標「自述」。
+> **WSJ 人物報導：匿名數學怪咖成 AI 安全代表人物**（2026-09-17）
+> WSJ 稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物；線索（X 帳號 hilbertspaess）與本人高度吻合但未經證實（推論），詳見下方新增待查證標記。
 
 ---
 
 ## 現況
 
-Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過去三年在 OpenAI 與 Anthropic 從事 pretraining 研究。他在貼文中指控兩家公司「都沒有負責任行事」，稱它們「正直衝向自我改進的超級智能，拿我們的生命當賭注」。此貼文經 Hacker News 轉發，互動量達 623 分，為當日全庫最高互動條目，另有 WSJ 獨家報導跟進。
+2026-09-17，WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題的代表性人物。本人 X 帳號 hilbertspaess（典出數學「Hilbert 空間」）與「本波唯一具名離職研究員」的定位相符，研判極可能即指本人（推論），惟 WSJ 原文未直接點名，身分連結未經證實，查證狀態見下方新增標記。
+
+Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過去三年在 OpenAI 與 Anthropic 從事 pretraining 研究，指控兩家公司「都沒有負責任行事，正直衝向自我改進的超級智能，拿我們的生命當賭注」；貼文經 Hacker News 轉發，互動量達 623 分，為當日全庫最高互動條目，另有 WSJ 獨家報導跟進。
 
 本頁摘要中的職稱與經歷描述僅來自 Coxon 本人貼文。尚無獨立媒體對其身分、任職時間或具體職掌的查證，查證狀態見上方標記。事件的機制與政策面（自我改進超級智能爭論）見 [[topics/recursive-self-improvement]]，本頁僅記錄此人此言與其可信度爭議。
-
-2026-09-12 起，Times of India、ESG Dive 分別以「又一名 Anthropic 員工」辭職示警、及本次辭職個案檢視 AI 公司 IPO 治理疑慮為題跟進報導；兩則報導均未具名，是否指本人或另一起獨立辭職事件仍未能確認（見下方爭議節的查證標記）。2026-09-13，BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」，同樣未具名，與本人或上述 09-12 個案是否同一人仍無法確認。
 
 ## 核心論述
 
@@ -54,6 +54,8 @@ Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過
 **細節：** 原文——I resigned from Anthropic today. I spent the last three years doing pretraining research at both OpenAI and Anthropic. Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.
 
 ## 爭議
+
+❓ **待查證**（標 2026-09-17｜查 Anonymous Math Geek、hilbertspaess）｜**WSJ 稱「匿名數學怪咖」離開 Anthropic 成為 AI 安全代表人物**（2026-09-17 報導）：WSJ 刊出人物報導，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題的代表性人物；本人 X 帳號 hilbertspaess 與「本波唯一具名離職研究員」的定位相符，研判極可能即指本人（推論），惟 WSJ 原文未直接點名，身分連結未經證實。
 
 Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開發表著作不多」，質疑此番言論的份量是否足以佐證「pretraining 研究員」的頭銜（HN 討論，2026-09-09）。此質疑尚未見任何一方提出可查證的具體反證，查證狀態見頁首標記——**並非全體讀者採信此番警告的重要性**，本頁不單方陳述其警告，兩面並陳。
 
@@ -73,6 +75,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 參考來源
 
+- [The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety](https://news.google.com/rss/articles/CBMifkFVX3lxTFBfZ1ZRUnVkR2YwbU50cWVaYVhxNEd2YnZ2ZVMzdlJWa1NvTXg3NUEzcEVfOWZ1Z2JuVlRlVVdfbm1HQXBKNEFNNjFJSmJra2FMMU9HZ014ekttTE0wQlJNYktqWFdNNF9YanJuR0NjaThSdk9zRnVVdzEwNTV2Zw?oc=5) — Google News／WSJ，2026-09-17（僅標題可用；身分未直接點名，查證狀態見上方標記）
 - 「AI staff 'genuinely frightened' for humanity's future, ex-Anthropic researcher tells BBC」— Google News／BBC，2026-09-13（僅標題可用，原始連結未附）
 - [I resigned from Anthropic today](https://twitter.com/hilbertspaess/status/2097476196791709843#m) — Hacker News/Twitter，2026-09-09（WSJ 另有獨家報導跟進，連結未取得）
 - ['Seems Like A Setup': Musk Mocks Ex-Anthropic Staffer's Warnings On AI Extinction Risks](https://news.google.com/rss/articles/CBMizwFBVV95cUxOZFYteXVSX2hINXNaUlVTd1hBWUtIZTJVemxyZmI4T250NjRTcHVVTU1tQzhnYXUybU9kSnZyeVFnVWtUczgxN0ZUQWNBaFBUaEhENGxROHJ6QWtyYW1icnItQk83WDIyQ1Nack1FX3NvRnJiQmhnb0paVm42dWRwZUhROTJXOVlCblJfYkg3ckt1cTE5N3p6U1VZNEFBSnN0QzV6bDNfWk9XZ1JTRGtBcjd2bjhWVHBhSnNqaVI3dkpvVzdHdjF4UzFNaFRWOXM?oc=5) — Forbes，2026-09-10（僅標題可用）
@@ -92,6 +95,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
+- 2026-09-17：WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物；身分是否即本人未經證實（推論，查證狀態見上方新增標記）（來源：Google News／WSJ）
 - 2026-09-15：CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論；專訪本身內容未載，僅標題可用（來源：CNN，經 Google News；Amodei 背景見 [[entities/dario-amodei]]）
 - 2026-09-13：BBC 報導一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」；原文未具名、僅標題可用，與 09-12 個案或本人是否同一人仍無法確認（來源：Google News／BBC）
 - 2026-09-12：Times of India、ESG Dive 同日跟進報導；前者稱「又一名 Anthropic 員工」提出 AI 警告後離職，後者以此辭職事件檢視 AI 公司 IPO 前公司治理疑慮；均未具名，是否即本人或另一起獨立事件仍未能確認

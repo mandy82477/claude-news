@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新動態**（2026-09-16）
-> - **Max 方案額度異常耗盡衝上全站互動最高**：issue #38335 留言 837→855、👍 543→545，今日全站聚焦頭條。
-> - **Mobile 多帳號請求 👍 破千**：issue #36151 讚數 980→1006，全站讚數新高；桌面／connector 兩則同缺口同步延燒。
-> - **桌面版文件再擴充雲端 session**：新增本地 session 一鍵接手到雲端續跑、桌面推分支、組織可開關「Code in the web」。
+> **最新動態**（2026-09-17）
+> - **桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins**：本機與雲端 session 皆改讀帳號設定，雲端讀帳號設定取代 `~/.claude/skills/`；本機 session 仍讀個人 `~/.claude/skills/`，SSH session 讀本機路徑。
+> - **v2.1.274**：新增記憶體用量過高警示（附釋放記憶體／安全重啟步驟）、`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，見 [[topics/claude-code-experimental]]。
+> - **AGENTS.md 支援訴求持續累積**：issue #6235 讚數 6621→6643、留言 394→396，全站已知問題讚數之最。
 ---
 
 ## 現況
@@ -51,6 +51,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-09-17）：桌面版文件新增 3 段——以 claude.ai 帳號登入的終端機 session 會載入該帳號啟用的 skills/plugins；本機與雲端 session 皆改讀帳號設定（雲端讀帳號設定取代 `~/.claude/skills/`）；本機 session 仍讀取個人 skills `~/.claude/skills/`，SSH session 讀本機路徑。移除 1 段舊版說明；與同日 [[entities/cowork|Cowork／Chat 合併]]的帳號統一方向一致（[原文](https://code.claude.com/docs/en/desktop.md)）。
+- **官方文件更新**（2026-09-17）：「Use Claude Code with your Pro or Max plan」頁內容變動（23117→23163 字），移除「Choose a Claude plan」段；與同日方案與定價文件大改版（見下方「市場與競爭」與 [[entities/pricing]]）同批發生，具體異動內容未完整取得。
 - **官方文件更新**（2026-09-16）：桌面版新增雲端 session 接手本地工作、桌面推送分支、「Code in the web」組織開關等能力，為 09-14 已收錄功能的擴充，細節見 [[feature-radar]]（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-16｜查 Configure your agent、agent-sdk/configuration、[[topics/anthropic-agent-stack]]）｜**llms.txt 新增 Agent SDK 設定頁**：內容未知，待查證是否為新設定項。
 - **官方文件更新**（2026-09-15）：桌面版新增 `/resume` 接續既有 CLI session；macOS 背景執行 computer use 時，Claude 只在已核准的 App 內作業，不再連帶隱藏其他視窗（行為變更）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -67,6 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-01）｜**BleepingComputer 報導 Anthropic 正推動讓 Claude 分析使用者銀行帳戶與財務資料**（2026-09-17 報導）：Google News RSS 無正文，僅標題可用，具體產品形式（新 connector、既有功能延伸）、適用方案與隱私控管均未知。
 - ❓ **待查證**（標 2026-09-15｜查 Claude for Excel、Claude for Word｜複 2026-09-29）｜**5 份官方文件同日移除 Claude for Excel／Word／PowerPoint／Outlook／M365 整合段落**：同批新增 Salesforce in Claude（beta）公告，是否代表該批整合已下架尚未見官方佐證。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
 - ❓ **待查證**（標 2026-08-17｜查 Slack-like、Claude Desktop｜複 2026-09-20）｜**Anthropic 據報為 Claude Desktop 開發類 Slack 功能**（TestingCatalog AI News，2026-08-16 報導）：仍僅 TestingCatalog 一家報導，尚無官方佐證。
@@ -79,7 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **官方使用研究：** Anthropic 發表基於 2025/10–2026/04 約 40 萬個 session 的分析研究，發現人類主導規劃決策、Claude 主導執行決策，且使用者領域專業越高，Claude 每條指令完成的工作量越大。
 
-**市場與競爭：** Microsoft 正陸續取消內部授權轉推 GitHub Copilot CLI（見 [[topics/competitor-landscape]]）；Ramp AI Index 顯示 Anthropic 企業採用率持續領先 OpenAI（43.5% vs 39.7%，2026-08-12 發布，詳表見 [[topics/anthropic-business]]）；AWS 於 2026-07-15 推出「Claude Apps Gateway」，定位為 Claude Code 與 Claude Desktop 可自架部署（self-hosted）的控制平面，集中身分／政策／遙測／路由／支出上限，路由到 Bedrock 或 Claude Platform on AWS；**Claude Code CLI 官方內建支援**（`claude-apps-gateway` 專頁，2026-09-06 查證，[AWS 官方 blog](https://aws.amazon.com/blogs/) 07-08）。The GitHub Blog（2026-07-24，經 Google News 轉載）報導 Claude Opus 5 已在 GitHub Copilot 上線，屬 Anthropic 模型透過微軟生態系分發的延續；模型陣容細節見 [[topics/model-comparison]]。Unity 於 2026-09-10 推出官方 Claude Code 外掛，內建 29 項遊戲引擎相關技能，讓開發者可在 Unity 專案中直接透過 Claude Code 呼叫引擎層級操作（Pocket Gamer.biz、Inven Global 兩家遊戲媒體獨立報導）；此為 Unity 自家發行的第三方外掛，非 Anthropic 官方產物，故不進 [[feature-radar]]。The Information（09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞過官方模型、改接其他供應商，呼應既有「多模型路由/鎖定防禦」缺口，見 [[topics/official-community-gap]]；Dealroom（09-16，2 個來源同日報導）同向補充：開發者傾向把 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 因此收不到對應 token 費用。
+**市場與競爭：** Microsoft 正陸續取消內部授權轉推 GitHub Copilot CLI（見 [[topics/competitor-landscape]]）；Ramp AI Index 顯示 Anthropic 企業採用率持續領先 OpenAI（43.5% vs 39.7%，2026-08-12 發布，詳表見 [[topics/anthropic-business]]）；AWS 於 2026-07-15 推出「Claude Apps Gateway」，定位為 Claude Code 與 Claude Desktop 可自架部署（self-hosted）的控制平面，集中身分／政策／遙測／路由／支出上限，路由到 Bedrock 或 Claude Platform on AWS；**Claude Code CLI 官方內建支援**（`claude-apps-gateway` 專頁，2026-09-06 查證，[AWS 官方 blog](https://aws.amazon.com/blogs/) 07-08）。The GitHub Blog（2026-07-24，經 Google News 轉載）報導 Claude Opus 5 已在 GitHub Copilot 上線，屬 Anthropic 模型透過微軟生態系分發的延續；模型陣容細節見 [[topics/model-comparison]]。Unity 於 2026-09-10 推出官方 Claude Code 外掛，內建 29 項遊戲引擎相關技能，讓開發者可在 Unity 專案中直接透過 Claude Code 呼叫引擎層級操作（Pocket Gamer.biz、Inven Global 兩家遊戲媒體獨立報導）；此為 Unity 自家發行的第三方外掛，非 Anthropic 官方產物，故不進 [[feature-radar]]。The Information（09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞過官方模型、改接其他供應商，呼應既有「多模型路由/鎖定防禦」缺口，見 [[topics/official-community-gap]]；Dealroom（09-16，2 個來源同日報導）同向補充：開發者傾向把 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 因此收不到對應 token 費用。TradingView（09-17，官方公告，僅標題可用）推出自家 MCP Server 讓 Claude 串接 TradingView 資料與操作，付費方案 public beta；與 Unity 外掛同屬第三方自行發行的 MCP／外掛整合，非 Anthropic 官方產物，故不進 [[feature-radar]]。
 
 ## 熱度與試用價值
 
@@ -366,7 +369,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，累積 394 則留言、6621 個讚，2026-07-10 首見，2026-09-12 互動數更新，全站已知問題中讚數最高單一 issue）**：Claude Code 目前仍不支援業界正在集結的 [AGENTS.md](https://agents.md/) 通用標準——Codex、Amp、Cursor 等工具已陸續標準化採用，僅 Claude Code 仍維持專屬的 `CLAUDE.md`；社群反應數自 2026-05-02 首次回報後持續攀升，凸顯跨工具協作時的配置互操作缺口，官方尚未回應是否納入路線圖。
+- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，累積 396 則留言、6643 個讚，2026-07-10 首見，2026-09-17 互動數更新，全站已知問題中讚數最高單一 issue）**：Claude Code 目前仍不支援業界正在集結的 [AGENTS.md](https://agents.md/) 通用標準——Codex、Amp、Cursor 等工具已陸續標準化採用，僅 Claude Code 仍維持專屬的 `CLAUDE.md`；社群反應數自 2026-05-02 首次回報後持續攀升，凸顯跨工具協作時的配置互操作缺口，官方尚未回應是否納入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
@@ -441,6 +444,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.274** | 2026-09-17 | 新增記憶體用量過高時的可見警示（附釋放記憶體或安全重啟步驟）；新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，限制首次非互動啟動的等待時間；官方原文於此處截斷，其餘變更項目未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.274)）|
 | **v2.1.273** | 2026-09-15 | 新增 5 個內部遙測用途請求標頭，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.273)）|
 | **anthropic-sdk-python v1.6.0** | 2026-09-15 | Features：新增 Managed Agents 相關 auto mode 工具權限功能，官方原文截斷、完整範圍未知，細節見 [[entities/managed-agents]]（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0)）|
 | **anthropic-sdk-typescript vertex-sdk v0.19.9** | 2026-09-15 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.9)）|
@@ -693,6 +697,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-17 | **v2.1.274** 新增記憶體用量過高警示與 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，詳見 [[topics/claude-code-experimental]]。桌面版文件新增：終端機 session 改讀 claude.ai 帳號的 skills/plugins（雲端取代 `~/.claude/skills/`），與同日 [[entities/cowork\|Cowork／Chat 合併]] 同方向；「Pro/Max plan」頁移除「Choose a Claude plan」段。TradingView 推出官方 MCP Server 串接 Claude（第三方產物，不進 feature-radar）。互動數更新：AGENTS.md #6235（394→396 則留言、6621→6643 讚）。新增 ❓ 待查證：BleepingComputer 報導 Anthropic 擬讓 Claude 分析銀行帳戶與財務資料（僅標題可用）。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
 | 2026-09-14 | 官方文件：桌面版新增多 repo 掛載＋`disableMobileSimulatorTools`。新增已知問題：Actions 範本 RCE（Reddit）。互動更新：#53247（29→32 讚）、#2254（138→147 讚）。 |
 | 2026-09-13 | **v2.1.270**：修復 2.1.269 迴歸（git 指令誤要求授權）。互動數更新 7 則（AGENTS.md #6235、多帳號 #18435／#27302 等），詳見各節。 |

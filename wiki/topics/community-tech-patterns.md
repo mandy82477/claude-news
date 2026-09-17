@@ -28,13 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新工作流模式**（2026-09-16）
-> - **背景 agent 管理**：pizza-bot 把背景執行的 AI agent 工作彙整成 email 式收件匣（Unread／Action），HN 52 分、4 來源同日報導。
-> - **Multi-agent 再添一款**：aannoo/hcom 讓不同終端機裡的 agent 互相傳訊、監看，支援 8 種 coding agent CLI。
-> - **同日另收四個專案**：sepia（去 AI 腔寫作 skill）、TokenEater（macOS 用量監控）、open-claude-code（每夜反編譯重建 CLI）、Awesome-finance-skills（金融分析 skill 合輯）。
+> **最新工作流模式**（2026-09-17）
+> - **瀏覽器互動 SDK 存量盤點**：browserbase/stagehand（24,318 星、2024-03 出生）本庫今日首次收錄，供 agent 呼叫的網頁資料擷取與互動 SDK，相容 Claude Code、Codex、Eve、Mastra。
 
 ---
 
@@ -162,6 +160,15 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### GitHub Search 存量盤點：browserbase/stagehand——網頁資料擷取與互動 SDK，相容 Claude Code／Codex／Eve／Mastra（2026-09-17）
+
+- **主線：** —
+- **核心模式：** 開源網頁資料擷取與互動 SDK，讓 coding agent 以程式化方式操作瀏覽器完成資料擷取與網頁互動；可搭配 Claude Code、Codex、Eve、Mastra 等工具使用；GitHub Search 累積 24,318 星
+- **與既有模式的關係：** 補上本頁「Plugin/MCP 整合」類別另一個瀏覽器互動案例——與 2026-09-05 收錄的 feder-cr/AIHawk（完整瀏覽器自動化 agent 再外掛 MCP 介面）取向不同，stagehand 定位是供 agent 呼叫的資料擷取 SDK 本身，非完整自動化 agent；非大型 codebase 特有痛點
+- **可信度註記：** 存量盤點條目，2024-03 出生、本庫今日首次收錄，累積時間跨度逾 2 年；僅取得 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證
+- **來源：** GitHub Search（24,318★，存量盤點｜2024-03 出生、本庫今日首次收錄）；[GitHub](https://github.com/browserbase/stagehand)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）
 
 #### aannoo/hcom：跨終端機讓 AI agent 互相傳訊、監看、生成彼此的工具，支援 8 種 coding agent CLI（2026-09-16）
 

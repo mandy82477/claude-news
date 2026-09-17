@@ -29,13 +29,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新計費政策異動**（2026-09-16）
-> - **週配額已換軌，官方文件 09-14 確認**：+50% 加成 09-13 到期，Claude Code 週用量自 09-14 起回復標準額度（永久 +25%），相對加成期間水位少約 17%；官方同時澄清此調整不影響 5 小時用量上限的計算方式（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）。適用 Pro、Max、Team 與座位制 Enterprise。
-> - **$100 過渡 credit 09-17 23:59 PT 到期即作廢**，不可續買、不轉存。
-> - **四件計費事故仍未解**：Max 訂閱一開工就撞用量上限（#16157，1,492 留言最高）、續訂扣款後帳號停用、session 額度 3 月起異常加速耗盡（#38335，855 留言／545 👍）、$16.6M 帳務錯誤退款未定。見 [[entities/pricing#事故現在還在發生嗎]]。
+> **最新計費政策異動**（2026-09-17）
+> - **官方說明中心新增用量限制說明**：用量與長度是兩種不同限制；建議關閉不需要的工具／連接器以節省用量。
+> - **Max 用量上限申訴 issue 持續攀升**：#16157 留言數增至 1,495（725 👍），本頁互動量最高的計費爭議仍未解。
+> - **官方 Plans & Pricing 頁大改版，同步今日 Cowork／chat 合併與 Docs／Slides 上線**：新增列入 Claude Academy、Docs／Slides／Design 說明，見下方「方案細節」。
+> - **$100 過渡 credit 已於 09-17 23:59 PT 到期作廢**，不可續買、不轉存。
 
 ## 現況
 
@@ -85,6 +86,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Max 20x 的差異不只用量**：context window、Claude Code 額度、優先排隊等有結構性差異，非單純 Pro 的 20 倍
 - **Enterprise 附加功能**：含 Compliance API、Enterprise Gateway 等；合作分級 Select／Preferred 差異未公開。Team 方案於 2026-06-19 官方速率翻倍時同步適用
 - **usage credits 僅可在網頁版開通（2026-08-11 官方查證）**：官方說明中心 usage-credits 條目載明，行動 App（iOS／Android）訂閱者無法直接於 App 內開啟 usage credits，須改至網頁版 `Settings > Usage` 操作；額度用盡後可切換按量計費（API 標準費率）不中斷服務。此為既有「credits 為 opt-in、預設關閉」規則（見上方 2026-08-08 條目）的補充限制（來源：support.claude.com usage-credits 條目，2026-08-11）
+- **09-17 官方 Plans & Pricing 頁大改版**：新增 Claude Academy、Docs／Slides（beta）／Design 說明；移除舊版 token 定價與 context window 對照，均為前代模型過期資訊（Official Docs，09-17）
+- **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
 
 ---
 
@@ -223,7 +226,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-09-09，四家媒體跟進（Verge／Startup Fortune／The New Stack／Engadget），首度點名「20 倍」實為週用量上限機制 | 依現況估算用量，不要以「20 倍」為預算基準 |
 | Max 5x 續訂扣款完成後帳號遭停用 | 🔴 未解 | 2026-09-04，GitHub Issue #5088 累積 184 則留言 | 續訂後立刻確認帳號可用，留下扣款紀錄 |
 | Max 方案 session 額度自 3 月起異常加速耗盡 | 🔴 未解 | 2026-09-16，Issue #38335 累積 855 留言、545 👍，跨 2 則 Reddit 佐證 | 留意消耗速率，於 `Settings > Usage` 核對走勢是否異常 |
-| Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-06，Issue #16157 累積 1,492 則留言、725 👍，本頁互動量最高 | 先查 `Settings > Usage` 是否真的觸頂；異常請在 issue 附時間戳與模型名 |
+| Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-17，Issue #16157 累積 1,495 則留言、725 👍，本頁互動量最高 | 官方新增說明：用量與長度是兩種限制，先關閉不需要的工具／連接器省用量；並查 `Settings > Usage` 是否真的觸頂 |
 
 **已結案三件（供對照）**：共用池機制（2026-08-22 官方確認）、Opus 5 定價兩說收斂（2026-08-08）、Sonnet 5 $2/$10 永久化（2026-08-10）。下方「事故與爭議」事件流每則事故標題前的符號就是它的狀態。
 
@@ -246,6 +249,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-09-17：Issue #16157 留言數增至 1,495——官方同日新增用量限制說明文件
+
+- **GitHub Issue #16157（1,495 留言、725 👍，2026-09-17 查證）**：延續 09-06 已記錄之 1,492 留言，互動量持續攀升，仍為本頁計費／配額爭議互動量最高單則（[GitHub #16157](https://github.com/anthropics/claude-code/issues/16157)）。
+- **官方同日更新說明中心「How do usage and length limits work?」**：新增用量與長度是兩種不同限制的說明，並建議暫時關閉不需要的工具／連接器以節省用量；未直接回應本 issue，狀態維持 🔴（Official Docs，2026-09-17）。
 
 #### 🔴 2026-09-12：Max 方案 session 額度異常追蹤更新——GitHub Issue #38335 攀升至 850 留言、545 👍，重返事故總表
 

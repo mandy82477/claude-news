@@ -29,12 +29,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-08-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
+
+> **最新動態**（2026-09-17）
+> 官方新增說明：用量與長度是兩種不同限制，可暫時關閉不需要的工具／連接器省用量，見第 2a 段「官方的 session 經營建議」。
 
 ---
 
@@ -278,6 +281,8 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 #### 官方的 session 經營建議
 
 Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 7 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
+
+官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。
 
 以下三條**已被官方機制取代或證據不足，本頁不再推薦**：「hook 層設讀取上限」（Claude Code 本來就有硬編碼上限，CLI 25,000／Desktop 10,000 tokens，社群在 issue 求的是放寬不是收緊）；「已否決方案索引」（對應官方 issue 已關閉、0 reactions）；「本地小模型分流省 50–60% context」（生態只驗證成本不驗證 context）。
 

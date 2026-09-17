@@ -27,12 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-17
+**最後新聞更新：** 2026-09-17
 
-> **最新動態**（2026-09-16）
-> - **Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：Reuters、Bloomberg、WSJ、politico.eu 四家媒體同步報導，合約細節未載，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
-> - **開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：Dealroom 兩來源報導，詳見 [[topics/anthropic-business#時序]]。
+> **最新動態**（2026-09-17）
+> - **Claude Cowork 與 chat 合併，同步上線 Docs、Slides（beta）**：官方部落格＋多家媒體同步報導，先在 Pro、Max 開放，方案頁同步大改版，詳見 [[topics/anthropic-business#時序]]、[[entities/pricing#方案細節]]。
 
 ---
 
@@ -494,6 +493,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-17
+- **[產品策略] Claude Cowork 與 chat 合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta），Design 整合進對話**：官方部落格公告，先在 Pro、Max 陸續開放；HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導
+- **[產品策略] 媒體框架：Axios 稱衝擊 Microsoft、Fortune 稱意在打造「superapp」**：同日官方 Plans & Pricing 頁大改版，納入 Docs／Slides／Design／Claude Academy 說明，詳見 [[entities/pricing#方案細節]]
+- **[IPO前瞻，僅標題可用] euronews／Barron's：私募市場為 Anthropic 開出逾 2 兆美元估值，市場緊盯 IPO 申請；Barron's 稱 IPO 將是 AI 產業下一個危機時刻**：均無新增估值數字，與既有「IPO 走到哪一格」表 08-13 記錄的 2 兆美元估值預期同一量級，非新增資訊
+- **[基礎設施，僅標題可用] TechCrunch：Google、Nvidia、Anthropic 支持 Emerald AI，為更多資料中心在電網找空間**：具體投入規模、合作條件均未見報導
 
 #### 2026-09-16
 - **[戰略合作] Reuters／Bloomberg／WSJ／politico.eu：Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：四家媒體同步報導（Ozempic 藥廠），合約範疇與費用未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列
