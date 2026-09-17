@@ -31,8 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-16
 
 > **最新動態**（2026-09-16）
-> - **Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：Reuters、Bloomberg、WSJ、politico.eu 四家媒體同步報導，合約細節未載，詳見「哪個合作」清單新增列。
-> - **開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：Dealroom 兩來源報導，詳見下方時序 2026-09-16。
+> - **Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：Reuters、Bloomberg、WSJ、politico.eu 四家媒體同步報導，合約細節未載，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
+> - **開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：Dealroom 兩來源報導，詳見 [[topics/anthropic-business#時序]]。
 
 ---
 

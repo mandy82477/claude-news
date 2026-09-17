@@ -31,8 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-16
 **最後新聞更新：** 2026-09-16
 
-> **最新工作流模式**（2026-09-15）
-> pizza-bot-app/pizza-bot 加入背景 agent 管理：把背景執行的 AI agent 工作彙整成 email 式收件匣（Unread／Action），HN 52 分、4 來源同日報導。
+> **最新工作流模式**（2026-09-16）
+> - **背景 agent 管理**：pizza-bot 把背景執行的 AI agent 工作彙整成 email 式收件匣（Unread／Action），HN 52 分、4 來源同日報導。
+> - **Multi-agent 再添一款**：aannoo/hcom 讓不同終端機裡的 agent 互相傳訊、監看，支援 8 種 coding agent CLI。
+> - **同日另收四個專案**：sepia（去 AI 腔寫作 skill）、TokenEater（macOS 用量監控）、open-claude-code（每夜反編譯重建 CLI）、Awesome-finance-skills（金融分析 skill 合輯）。
 
 ---
 
