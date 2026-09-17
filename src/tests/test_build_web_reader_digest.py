@@ -147,6 +147,16 @@ class TestGenerator(unittest.TestCase):
         self.assertNotIn("no-domain", self.text)
         self.assertTrue(any("topics/no-domain" in w and "domain" in w for w in self.warnings))
 
+    def test_page_fed_news_today_without_todays_callout_is_warned(self):
+        (self.wiki / "entities" / "missed.md").write_text(
+            "# 漏寫的頁\n\n**領域：** 🤖 模型\n**最後新聞更新：** 2026-09-11\n\n"
+            "> **最新進展**（2026-09-01）\n> callout 沒覆寫。\n\n---\n", encoding="utf-8")
+        text, _, warnings = gen.generate("2026-09-11", self.wiki)
+        self.assertNotIn("entities/missed", text)
+        self.assertTrue(any("entities/missed" in w and "不會上讀者版" in w for w in warnings),
+                        "產生器每天必跑——閘那一步被跳過時，漏頁也要在這裡出聲")
+        self.assertFalse(any("不會上讀者版" in w for w in self.warnings), "沒漏的日子不多話")
+
     def test_no_hit_day_writes_no_news_line(self):
         text, count, _ = gen.generate("2026-09-10", self.wiki)
         self.assertEqual(count, 0)

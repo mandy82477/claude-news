@@ -214,6 +214,42 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
     return sections, warnings
 
 
+LAST_NEWS_RE = re.compile(r"^\*\*最後新聞更新[：:]\*\*\s*(\d{4}-\d{2}-\d{2})", re.M)
+# 機器每日整頁覆寫、沒有記者寫 callout 的頁：「最後新聞更新」天天是當日，但刻意不投影進日報。
+# 新增豁免要寫理由——沒有理由的豁免就是把漏洞登記成合法。
+COVERAGE_EXEMPT = {
+    "topics/skill-interest-watch": "scripts/skill_interest_snapshot.py 每日整頁覆寫的機器快照頁",
+}
+
+
+def coverage_gaps(target_date: str, wiki_dir: Path = WIKI_DIR, only: set[str] | None = None) -> tuple[list[str], int]:
+    """該收卻收不到的頁：標頭「最後新聞更新」＝target_date（當日吃進新聞），頁首卻沒有當日 callout。
+    回傳 (逐頁訊息, 當日吃進新聞的頁數)。only＝只看這些 slug。閘的入口是 scripts/check_callout_coverage.py；
+    generate() 也把結果印成 WARN——產生器每天必跑，閘那一步就算被跳過，漏頁也不會無聲。"""
+    problems: list[str] = []
+    updated = 0
+    for sub in ("entities", "topics"):
+        for f in sorted((wiki_dir / sub).glob("*.md")):
+            page = f"{sub}/{f.stem}"
+            if only is not None and page not in only and f.stem not in only:
+                continue
+            raw = f.read_text(encoding="utf-8-sig")
+            m = LAST_NEWS_RE.search(raw)
+            if not m or m.group(1) != target_date or page in COVERAGE_EXEMPT:
+                continue
+            updated += 1
+            head = page_head(raw)[1]
+            if dated_callouts(head, target_date):
+                continue
+            seen = [cm.group("date") for l in head.splitlines() if (cm := CALLOUT_RE.match(l))]
+            if seen:
+                why = f"頁頂 callout 日期是 {'、'.join(seen)}（要寫 TARGET_DATE，不是事件日；今日重點沒覆寫就覆寫）"
+            else:
+                why = "頁頂沒有 `> **標籤**（YYYY-MM-DD）` 形狀的 callout（自介型「（快照 …）」不算，另加一段當日 callout）"
+            problems.append(f"{page}：最後新聞更新＝{target_date}，但{why}——這頁今天不會上讀者版日報")
+    return problems, updated
+
+
 DATE_PAREN_RE = re.compile(r"（(\d{4}-\d{2}-\d{2})(?:[，,]\s*)?([^）\n]*)）")
 
 
@@ -349,6 +385,7 @@ def generate(target_date: str, wiki_dir: Path = WIKI_DIR, news_dir: Path = NEWS_
             urls = MD_URL_RE.findall(l)
             if urls and not any(u in attributed or u in today_raw for u in urls):
                 warnings.append(f"聚焦第 {n} 條的來源既不在當日歸因帳本、也未出現在今日更新的頁——記者可能漏收：{l[:60]}…")
+    warnings.extend(coverage_gaps(target_date, wiki_dir)[0])
     text = render(target_date, sections, focus_lines, top_stories)
     return text, sum(len(v) for v in sections.values()), warnings
 

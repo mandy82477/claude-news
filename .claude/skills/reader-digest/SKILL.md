@@ -30,7 +30,7 @@ disable-model-invocation: true
    PYTHON scripts/build_reader_digest.py TARGET_DATE
    ```
 
-   腳本掃 `wiki/entities/`、`wiki/topics/` 頁首，收括號日期＝TARGET_DATE 的 callout，按 frontmatter `domain` 分六節寫 `daily/TARGET_DATE.md`；零命中自動寫「今日 wiki 無新知」行。**看 WARN 行**：`domain` 缺或不在六領域、頁首 callout 沒有可解析日期的頁，腳本會點名——那是該頁的記者要修的（規則在 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」），本步不替他改頁，只把 WARN 抄進完成摘要的「📋 待使用者裁示」。另一種 WARN 是「聚焦第 N 條的來源既不在當日歸因帳本、也未出現在今日更新的頁」——多半是記者漏收，同樣抄進待裁示，不在本步補收。腳本同時把 `news/TARGET_DATE.md` 的 📌 今日聚焦與剔重後的 ⭐ 重點話題搬到檔首（規則見 format.md「頂部兩節」）。
+   腳本掃 `wiki/entities/`、`wiki/topics/` 頁首，收括號日期＝TARGET_DATE 的 callout，按 frontmatter `domain` 分六節寫 `daily/TARGET_DATE.md`；零命中自動寫「今日 wiki 無新知」行。**看 WARN 行**：`domain` 缺或不在六領域、頁首 callout 沒有可解析日期的頁，腳本會點名——那是該頁的記者要修的（規則在 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」），本步不替他改頁，只把 WARN 抄進完成摘要的「📋 待使用者裁示」。另一種 WARN 是「聚焦第 N 條的來源既不在當日歸因帳本、也未出現在今日更新的頁」——多半是記者漏收，同樣抄進待裁示，不在本步補收。第三種 WARN 是「最後新聞更新＝TARGET_DATE……這頁今天不會上讀者版日報」——第 0 步的同一份結果；出現在這裡代表第 0 步沒跑或補派後仍漏，回第 0 步處理。腳本同時把 `news/TARGET_DATE.md` 的 📌 今日聚焦與剔重後的 ⭐ 重點話題搬到檔首（規則見 format.md「頂部兩節」）。
 2. **格式閘（強制）：**
 
    ```

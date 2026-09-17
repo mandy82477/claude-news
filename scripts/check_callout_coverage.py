@@ -11,9 +11,9 @@ check_callout_coverage.py — 讀者版日報涵蓋閘：當日吃進新聞的�
 括號日期。記者把新聞寫進時序、把「最後新聞更新」改成 TARGET_DATE，卻沒覆寫 callout（或把日期寫成
 事件日）——這頁當天就從日報上靜默消失，產生器與格式閘都看不見。本閘把這個形狀變成會紅的檢查。
 
-判定：標頭 `**最後新聞更新：**` == TARGET_DATE 的頁，頁首（H1 到第一條 `---`）必須至少有一段首行
-`> **標籤**（TARGET_DATE…）` 的 callout。頁首切法與 callout 形狀直接用產生器的 page_head／
-dated_callouts，兩端不會各認各的。
+判定（本體是 build_reader_digest.coverage_gaps，豁免表 COVERAGE_EXEMPT 也住那裡）：標頭 `**最後新聞更新：**` == TARGET_DATE 的頁，頁首（H1 到第一條 `---`）必須至少有一段首行
+`> **標籤**（TARGET_DATE…）` 的 callout。產生器自己每次產出也會把同一份結果印成 WARN；本腳本是給記者自查與 Step 2b 第 0 步用的、
+會回非零結束碼的入口。
 
 只對 TARGET_DATE 當天跑才有意義：頁面隔天再被更新後，「最後新聞更新」就不再是那一天，歷史日期
 無法從 wiki 現版重驗，所以本閘不掃全部 daily/、不進 run_tests 的全庫檢查。
@@ -28,47 +28,13 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_reader_digest import CALLOUT_RE, WIKI_DIR, dated_callouts, page_head  # noqa: E402
-
-LAST_NEWS_RE = re.compile(r"^\*\*最後新聞更新[：:]\*\*\s*(\d{4}-\d{2}-\d{2})", re.M)
-
-# 機器每日整頁覆寫、沒有記者寫 callout 的頁：「最後新聞更新」天天是當日，但刻意不投影進日報。
-# 新增豁免要寫理由——沒有理由的豁免就是把漏洞登記成合法。
-EXEMPT = {
-    "topics/skill-interest-watch": "scripts/skill_interest_snapshot.py 每日整頁覆寫的機器快照頁",
-}
+from build_reader_digest import coverage_gaps as check  # noqa: E402  判定本體住產生器，兩端同一段程式碼
 
 
 def _norm(slug: str) -> str:
     slug = slug.replace("\\", "/").strip()
     slug = re.sub(r"^wiki/", "", slug)
     return re.sub(r"\.md$", "", slug)
-
-
-def check(target_date: str, wiki_dir: Path = WIKI_DIR, only: set[str] | None = None) -> tuple[list[str], int]:
-    """回傳 (違規訊息, 當日吃進新聞的頁數)。only＝只看這些 slug（entities/x、topics/y）。"""
-    problems: list[str] = []
-    updated = 0
-    for sub in ("entities", "topics"):
-        for f in sorted((wiki_dir / sub).glob("*.md")):
-            page = f"{sub}/{f.stem}"
-            if only is not None and page not in only and f.stem not in only:
-                continue
-            raw = f.read_text(encoding="utf-8-sig")
-            m = LAST_NEWS_RE.search(raw)
-            if not m or m.group(1) != target_date or page in EXEMPT:
-                continue
-            updated += 1
-            head = page_head(raw)[1]
-            if dated_callouts(head, target_date):
-                continue
-            seen = [cm.group("date") for l in head.splitlines() if (cm := CALLOUT_RE.match(l))]
-            if seen:
-                why = f"頁頂 callout 日期是 {'、'.join(seen)}（要寫 TARGET_DATE，不是事件日；今日重點沒覆寫就覆寫）"
-            else:
-                why = "頁頂沒有 `> **標籤**（YYYY-MM-DD）` 形狀的 callout（自介型「（快照 …）」不算，另加一段當日 callout）"
-            problems.append(f"{page}：最後新聞更新＝{target_date}，但{why}——這頁今天不會上讀者版日報")
-    return problems, updated
 
 
 def main(argv: list[str]) -> int:
