@@ -738,3 +738,4 @@ ABORTED: gathered_items.json date=2026-09-15 items=73，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-09-16T22:01:50Z]
 ABORTED: digest already exists - news/2026-09-16.md 已由前一班（17:01 UTC）產出，Step 0b 冪等閘中止（非 backfill 模式）
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-16T22:02:03Z]
+[cloud daily-news-pipeline-cloud STARTED 2026-09-17T12:02:24Z]
