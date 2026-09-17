@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **首批基線 2.1.272（2026-09-14）**：程式本體含 619 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
 - **2.1.273（2026-09-16）新增 3 個第一階旗標**：`CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS`、`CLAUDE_CODE_GATEWAY_HINT_HEADERS`、`CLAUDE_CODE_OCHRE_KITE`；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
-- **2.1.274（2026-09-17）新增 6 個第一階旗標**：`CLAUDE_CODE_ARTIFACT_FRESH_READ`、`CLAUDE_CODE_ARTIFACT_OPENING_PREFETCH`、`CLAUDE_CODE_ARTIFACT_START_KIT`、`CLAUDE_CODE_EMIT_STARTUP_TIMING`、`CLAUDE_CODE_FOOTER_INDICATOR`、`CLAUDE_CODE_STARTUP_FAILURE_RESULTS`；同批另有 1 個設定類旗標（逾時／識別碼類）依蒐集邊界不列；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
+- **2.1.274（2026-09-17）新增 6 個第一階旗標**（名單見下方追蹤表）；同批另有 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
 - **已確認的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階）——官方在 issue #91870 承諾數週內出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
 - **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
 
@@ -134,4 +134,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |
 | 2026-09-16 | review 後修正：黏字清理（原「已消失」誤列 `GOAL_CHECKIN_MINUTES0`，實為位元組黏字）、過濾改 token 式、第 3 階列補連結與提及人數 |
 | 2026-09-16 | 2.1.273 新增 3 個第一階旗標：`BRIDGE_CHILD_MACHINE_SETTINGS`、`GATEWAY_HINT_HEADERS`、`OCHRE_KITE`；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
-| 2026-09-17 | 2.1.274 新增 6 個第一階旗標：`ARTIFACT_FRESH_READ`、`ARTIFACT_OPENING_PREFETCH`、`ARTIFACT_START_KIT`、`EMIT_STARTUP_TIMING`、`FOOTER_INDICATOR`、`STARTUP_FAILURE_RESULTS`；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
+| 2026-09-17 | 2.1.274 新增 6 個第一階旗標（名單見追蹤表）；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |

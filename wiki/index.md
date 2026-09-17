@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-09-12
+**最後更新：** 2026-09-17
 
 ---
 
@@ -62,7 +62,9 @@
 | [[entities/opencode]] | product | 🛠️ 工具/功能 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills |
 | [[entities/claude-tag]] | feature | 🛠️ 工具/功能 | active | Claude Tag：Slack-native AI 協作工具，可讀取頻道上下文、跨 session 記憶、主動完成任務；Anthropic 內部 65% 程式碼由其生成 |
 | [[entities/claude-skills]] | feature | 🛠️ 工具/功能 | active | Claude Skills：官方 Skills 產品線與生態單一入口——六大控制層之一，官方小企業/教師技能包、平台支援、第三方移植動態；設計面歸 [[topics/community-tech-patterns]] |
-| [[entities/cowork]] | product | 🛠️ 工具/功能 | active | Cowork：圖形化桌面／行動／網頁協作介面，任務可背景執行；桌面版需 Pro 以上，Windows 平台不穩定叢集持續 |
+| [[entities/cowork]] | product | 🛠️ 工具/功能 | active（09-17 起與聊天介面合併） | Cowork 與 Claude 聊天介面已合併為單一 Claude；同步推出 [[entities/claude-docs]]、[[entities/claude-slides]]（beta），Design 整合進對話，先於 Pro／Max 開放 |
+| [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | beta | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；先開放 Pro、Max 方案 |
+| [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | beta | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；先開放 Pro、Max 方案 |
 | [[entities/fable-5]] | model | 🤖 模型 | active | 現行旗艦 5.1（09-01 GA）；5 轉 Legacy，退役不早於 2027-06-09；兩代同價；護欄擋什麼、被擋會不會知道　↳ 子故事：[[entities/fable-5-archive]] |
 | [[entities/tom-blomfield]] | person | 👤 人物 | active（待核實）| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（Business Insider 單一來源，AI compute／Y Combinator 背景）|
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
@@ -77,6 +79,7 @@
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
 | [[entities/mustafa-suleyman]] | person | 👤 人物 | active | Microsoft AI 執行長；2026-09-16 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，並抨擊其 AI 意識說法（Bloomberg／BBC／Axios）|
+| [[entities/michael-burry]] | person | 👤 人物 | active | 知名放空交易員（《大賣空》原型人物）；2026-09-17 在 X 批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞 |
 
 ---
 

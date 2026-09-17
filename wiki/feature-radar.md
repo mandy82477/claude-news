@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-15
+**最後更新：** 2026-09-17
 
-> **這禮拜動了什麼**（2026-09-14）
-> 桌面版文件加了雲端 session 多 repo 掛載與 `disableMobileSimulatorTools` 旗標，都不是破壞性變更。真正該注意的是配額：+50% 加成 09-13 到期，09-14 起換成永久 +25%，相對加成期間淨減約 17%，官方文件當日已確認換軌如期發生。
+> **這禮拜動了什麼**（2026-09-17）
+> Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放——本月至今最大的官方產品異動，官方「方案與定價」頁同日大改版收攏相關段落。
 
 ---
 
@@ -64,6 +64,34 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Claude Cowork 與 Chat 合併，同步推出 Claude Docs／Slides
+**發布：** 2026-09-17（官方部落格） | **狀態：** Beta（Pro／Max 起步，數週內擴大）
+
+**是什麼：** Claude Cowork 與 claude.ai 聊天介面合併為單一 Claude，任務不需再選介面；同步推出 Claude Docs、Claude Slides（皆 beta），Claude Design 整合進對話，可直接編輯、簡報並下載為 PowerPoint／PDF。
+
+**現在要試嗎：** Pro、Max 訂閱戶可直接在對話中請 Claude 建立文件／簡報／設計即觸發；官方摘要未載明合併後 Cowork 既有的背景執行、VM 沙箱能力如何呈現，其餘方案暫不適用。
+
+**快速上手：**
+```
+Pro 或 Max 方案登入 claude.ai，直接在對話中請 Claude 建立文件／簡報／設計，即觸發 Claude Docs／Slides／Design（beta）
+```
+
+**注意事項：** Docs／Slides 操作細節待官方文件補齊；首波僅 Pro、Max 可用，其餘方案將於未來數週陸續開放。
+
+### Claude Code v2.1.274：記憶體用量警示＋`CLAUDE_CODE_MCP_STARTUP_WAIT_MS`
+**發布：** 2026-09-17（v2.1.274） | **狀態：** 正式發布
+
+**是什麼：** 新增記憶體用量過高時的可見警示（附釋放記憶體或安全重啟步驟）；新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，限制首次非互動啟動的等待時間。
+
+**現在要試嗎：** 需要限制 MCP 首次啟動等待時間的使用者可設定該旗標；一般使用者無需操作，記憶體警示為自動生效。
+
+**快速上手：**
+```
+export CLAUDE_CODE_MCP_STARTUP_WAIT_MS=<毫秒數>
+```
+
+**注意事項：** 官方 changelog 原文截斷，其餘變更項目未知；同批 build 另有 6 個未公告功能候選旗標，見 [[topics/claude-code-experimental]]。
 
 ### Salesforce in Claude（beta）
 **發布：** 2026-09-15（Help Center release notes） | **狀態：** Beta
@@ -221,6 +249,8 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥🔥🔥 | ⏳ 觀望 | Beta |
+| **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code 桌面版雲端 session**（多 repo 掛載＋`disableMobileSimulatorTools`；09-16 再擴充：本地接手雲端、Desktop 推分支、組織開關） | 2026-09-14 | 🔥🔥 | ⏳ 觀望 | 正式發布 |

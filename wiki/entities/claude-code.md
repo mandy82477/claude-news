@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-17
 
 > **最新動態**（2026-09-17）
-> - **桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins**：本機與雲端 session 皆改讀帳號設定，雲端讀帳號設定取代 `~/.claude/skills/`；本機 session 仍讀個人 `~/.claude/skills/`，SSH session 讀本機路徑。
+> - **桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins**：本機 session 讀個人 `~/.claude/skills/`，雲端 session 改讀該帳號啟用的 skills/plugins，SSH session 仍讀本機路徑。
 > - **v2.1.274**：新增記憶體用量過高警示（附釋放記憶體／安全重啟步驟）、`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，見 [[topics/claude-code-experimental]]。
 > - **AGENTS.md 支援訴求持續累積**：issue #6235 讚數 6621→6643、留言 394→396，全站已知問題讚數之最。
 ---
@@ -51,7 +51,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
-- **官方文件更新**（2026-09-17）：桌面版文件新增 3 段——以 claude.ai 帳號登入的終端機 session 會載入該帳號啟用的 skills/plugins；本機與雲端 session 皆改讀帳號設定（雲端讀帳號設定取代 `~/.claude/skills/`）；本機 session 仍讀取個人 skills `~/.claude/skills/`，SSH session 讀本機路徑。移除 1 段舊版說明；與同日 [[entities/cowork|Cowork／Chat 合併]]的帳號統一方向一致（[原文](https://code.claude.com/docs/en/desktop.md)）。
+- **官方文件更新**（2026-09-17）：終端機 session 載入 claude.ai 帳號 skills/plugins——本機讀個人 `~/.claude/skills/`，雲端改讀帳號設定，SSH 讀本機路徑（[原文](https://code.claude.com/docs/en/desktop.md)）。
+  - 與同日 [[entities/cowork|Cowork／Chat 合併]] 同屬帳號統一方向；同批移除 1 段舊版說明。
 - **官方文件更新**（2026-09-17）：「Use Claude Code with your Pro or Max plan」頁內容變動（23117→23163 字），移除「Choose a Claude plan」段；與同日方案與定價文件大改版（見下方「市場與競爭」與 [[entities/pricing]]）同批發生，具體異動內容未完整取得。
 - **官方文件更新**（2026-09-16）：桌面版新增雲端 session 接手本地工作、桌面推送分支、「Code in the web」組織開關等能力，為 09-14 已收錄功能的擴充，細節見 [[feature-radar]]（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-16｜查 Configure your agent、agent-sdk/configuration、[[topics/anthropic-agent-stack]]）｜**llms.txt 新增 Agent SDK 設定頁**：內容未知，待查證是否為新設定項。
@@ -69,7 +70,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
-- ❓ **待查證**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-01）｜**BleepingComputer 報導 Anthropic 正推動讓 Claude 分析使用者銀行帳戶與財務資料**（2026-09-17 報導）：Google News RSS 無正文，僅標題可用，具體產品形式（新 connector、既有功能延伸）、適用方案與隱私控管均未知。
+- ❓ **待查證**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-01）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**：僅標題可用，產品形式與適用方案未知。
 - ❓ **待查證**（標 2026-09-15｜查 Claude for Excel、Claude for Word｜複 2026-09-29）｜**5 份官方文件同日移除 Claude for Excel／Word／PowerPoint／Outlook／M365 整合段落**：同批新增 Salesforce in Claude（beta）公告，是否代表該批整合已下架尚未見官方佐證。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
 - ❓ **待查證**（標 2026-08-17｜查 Slack-like、Claude Desktop｜複 2026-09-20）｜**Anthropic 據報為 Claude Desktop 開發類 Slack 功能**（TestingCatalog AI News，2026-08-16 報導）：仍僅 TestingCatalog 一家報導，尚無官方佐證。
@@ -369,7 +370,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，累積 396 則留言、6643 個讚，2026-07-10 首見，2026-09-17 互動數更新，全站已知問題中讚數最高單一 issue）**：Claude Code 目前仍不支援業界正在集結的 [AGENTS.md](https://agents.md/) 通用標準——Codex、Amp、Cursor 等工具已陸續標準化採用，僅 Claude Code 仍維持專屬的 `CLAUDE.md`；社群反應數自 2026-05-02 首次回報後持續攀升，凸顯跨工具協作時的配置互操作缺口，官方尚未回應是否納入路線圖。
+- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高）**：Codex、Amp、Cursor 已採用 [AGENTS.md](https://agents.md/)，Claude Code 仍僅認 `CLAUDE.md`；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
@@ -697,7 +698,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-17 | **v2.1.274** 新增記憶體用量過高警示與 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標；同批 build 另新增 6 個未公告功能候選旗標，詳見 [[topics/claude-code-experimental]]。桌面版文件新增：終端機 session 改讀 claude.ai 帳號的 skills/plugins（雲端取代 `~/.claude/skills/`），與同日 [[entities/cowork\|Cowork／Chat 合併]] 同方向；「Pro/Max plan」頁移除「Choose a Claude plan」段。TradingView 推出官方 MCP Server 串接 Claude（第三方產物，不進 feature-radar）。互動數更新：AGENTS.md #6235（394→396 則留言、6621→6643 讚）。新增一則官方待補充報導（❓ 標記）：BleepingComputer 報導 Anthropic 擬讓 Claude 分析銀行帳戶與財務資料（僅標題可用）。 |
+| 2026-09-17 | **v2.1.274** 新增記憶體警示旗標。桌面文件新增帳號 skills/plugins 載入規則。TradingView MCP Server（第三方）。互動數更新、❓ 標記各 1 則，詳見各節。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
 | 2026-09-14 | 官方文件：桌面版新增多 repo 掛載＋`disableMobileSimulatorTools`。新增已知問題：Actions 範本 RCE（Reddit）。互動更新：#53247（29→32 讚）、#2254（138→147 讚）。 |
 | 2026-09-13 | **v2.1.270**：修復 2.1.269 迴歸（git 指令誤要求授權）。互動數更新 7 則（AGENTS.md #6235、多帳號 #18435／#27302 等），詳見各節。 |

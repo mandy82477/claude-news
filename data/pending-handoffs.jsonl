@@ -182,3 +182,4 @@
 {"id": "H-9714c3", "closed": "2026-09-15", "status": "void", "by": "主編", "result": "功能記者：claude-code.md 無定位矩陣結構可掛，工具選型比較慣例已路由至 topics/competitor-landscape（商業記者頁）；且僅一行摘要無法獨立查證比較內容，不新增結構"}
 {"id": "H-c773a5", "opened": "2026-09-16", "from": "人物", "to": "安全政策", "page": "entities/jensen-huang", "note": "評估 Anthropic 提出的『AI 安全反壟斷豁免』提案本身是否需獨立收錄進 topics/anthropic-government-policy.md（目前僅在人物線記錄黃仁勳的批評視角）", "status": "open"}
 {"id": "H-c773a5", "closed": "2026-09-16", "status": "done", "by": "安全政策", "result": "同輪安全政策記者已獨立將 Nvidia Huang 反壟斷豁免提案批評收錄進 topics/anthropic-government-policy.md（來源歸因已列同一 CNBC URL），該提案本身於政策線已有記錄，無需額外動作"}
+{"id": "H-943553", "opened": "2026-09-17", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "bragjack 瀏覽器 AI 助理劫持技術涉及 Claude in Chrome 產品面（Anthropic 等廠商懸賞 2 萬美元），已記在 topics/ai-agent-safety.md，功能記者評估是否影響 entities/claude-code 或相關功能頁的產品描述", "status": "open"}

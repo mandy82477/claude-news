@@ -92,7 +92,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-17 | 官方宣布 Cowork 與 Claude 聊天介面合併為單一 Claude；同步推出 Claude Docs、Claude Slides（beta），Claude Design 整合進對話並可輸出 PowerPoint／PDF；先開放 Pro、Max 方案（HN 226 分，多家媒體同日跟進） |
+| 2026-09-17 | Cowork 與 Chat 合併為單一 Claude；同步推出 Claude Docs、Slides（beta），Design 整合進對話；先開放 Pro、Max（詳見「現況」） |
 | 2026-09-12 | Windows 九月累積更新致 device_bash 於 ARM64／x64 皆失效（#92958），與 09-08 更新致 Plan9 掛載失敗（#92984）同源；官方尚未修復 |
 | 2026-09-10 | Plan9 共用資料夾因 KB5124008 全數掛載失敗（#92984，官方已識別成因，移除該 KB 可恢復）；Google Drive connector 顯示已連結卻叫不到工具（#30457） |
 | 2026-08-25 | Cowork 與網頁／App 共用記憶功能整合，跨介面記住的項目集中在設定 > Memory 管理；同日功能請求：Desktop／Cowork 支援 AWS Bedrock 替代後端（#32668） |
