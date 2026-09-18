@@ -10,6 +10,7 @@
 [![latest digest](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.latestNews&label=latest%20digest&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
 [![digests](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.digests&label=digests&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
 [![wiki](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.wikiPages&suffix=%20pages&label=wiki&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
+[![sources](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmandy82477.github.io%2Fclaude-news%2Fweb_reader%2Fdata%2Fstats.json&query=%24.sources&label=sources&style=flat-square&labelColor=4A4640&color=8E5F3D)](https://mandy82477.github.io/claude-news/web_reader/)
 [![daily-watchdog](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml/badge.svg)](https://github.com/mandy82477/claude-news/actions/workflows/daily-watchdog.yml)
 
 每日聚焦 Claude Code 與 Anthropic 核心動態，從官方更新到社群實測。所有條目經 LLM 評分過濾、繁中摘要、再沉澱進 wiki，給需要穩定訊號而非即時噪音的工程師。
@@ -32,25 +33,9 @@
 
 ## 規模
 
-| | 數量 |
-|---|---|
-| 每日日報 | 138 份（2026-04-25 起，涵蓋 142 天） |
-| 每週週報 | 8 份（2026-W30 起連續八週） |
-| wiki 頁面 | 85 頁（人物與產品 47 頁、長期議題 38 頁） |
-| 抓取管道 | 15 個 |
+即時數字見上方徽章（日報份數、wiki 頁數、抓取管道數），每日隨 pipeline 更新，本檔不重複記錄會過期的統計。
 
-wiki 頁面依領域分佈：
-
-| 領域 | 頁數 |
-|---|---|
-| 👤 人物 | 21 |
-| 🛠️ 工具/功能 | 17 |
-| 💼 商業 | 16 |
-| 🌐 社群 | 12 |
-| 🏛️ 政策/安全 | 10 |
-| 🤖 模型 | 9 |
-
-六個領域各由一位記者認領維護，另有兩位不認領領域頁的專責記者（開發實務沉澱、投資訊號判讀）。規則在 `.claude/reporter-rules/`。
+wiki 依 👤 人物、🛠️ 工具/功能、💼 商業、🌐 社群、🏛️ 政策/安全、🤖 模型六個領域分頁，各由一位記者認領維護，另有兩位不認領領域頁的專責記者（開發實務沉澱、投資訊號判讀）。規則在 `.claude/reporter-rules/`。
 
 ## 三個主軸
 
@@ -64,7 +49,7 @@ wiki 頁面依領域分佈：
 
 ## 一天怎麼歸檔
 
-1. **多來源抓取**：15 個管道。Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、API Release Notes、官方文件變動、技術部落格 RSS、出貨 build 裡的實驗旗標差異。完整清單見 `src/news_aggregator/sources/`。
+1. **多來源抓取**：Anthropic Blog、Anthropic Status、GitHub Releases、GitHub Issues、Hacker News、Reddit、Google News、dev.to、API Release Notes、官方文件變動、技術部落格 RSS、出貨 build 裡的實驗旗標差異等。管道數量會隨新來源加入而變動，即時數字見上方徽章，完整清單見 `src/news_aggregator/sources/`。
 2. **去重過濾**：URL 與標題模糊比對。
 3. **相關性評分**：1 到 5 分，3 分以上保留。
 4. **LLM 摘要**：繁中 Markdown 日報，落在 `news/YYYY-MM-DD.md`。
