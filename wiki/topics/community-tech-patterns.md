@@ -162,6 +162,51 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 ### 2026-09
 
+#### snyk/agent-scan：Snyk 推出 AI agent、MCP server 與 agent skills 安全掃描器（2026-09-18）
+
+- **主線：** —
+- **核心模式：** 資安公司 Snyk 開源的安全掃描工具，掃描對象涵蓋 AI agent、MCP server 與 agent skills 三層，而非僅程式碼本身；GitHub Search 累積 3,060 星
+- **與既有模式的關係：** 補上「安全架構」類別一種「掃描工具」取向的做法——既有代表技巧（Grepathy、Spare Mac、OneCLI、Security Cards）多聚焦行為監控、隔離或生成階段知識注入，本則是把傳統安全掃描器的掃描對象擴到 agent／MCP／skill 三層本身
+- **可信度註記：** 存量盤點條目，2025-04-07 出生、本庫今日首次收錄；僅取得 GitHub Search 星數，來源為具名資安公司 Snyk（非匿名個人專案），但 forks／issues／近期 commit 佐證未查證
+- **來源：** GitHub Search（3,060★，存量盤點｜2025-04-07 出生、本庫今日首次收錄）；[GitHub](https://github.com/snyk/agent-scan)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）
+
+#### asciimoo/hister：離線個人化搜尋索引＋MCP 端點供 agent 整合，作者現身 AMA（2026-09-18）
+
+- **主線：** —
+- **核心模式：** 開源工具把瀏覽紀錄、書籤、本機檔案與爬取網頁建成個人化搜尋索引，離線也能存取內容快照，支援全文與語意搜尋，含 web 介面與 CLI 工具，另附 MCP 端點供 agent 整合；可完全在自己機器上執行；HN Repo Bridge 668 分，作者現身 AMA
+- **與既有模式的關係：** 補上「記憶與知識管理」類別一種「個人瀏覽歷史索引化」取向的做法——既有代表技巧（OKF、OzBrain 等）多聚焦團隊共用或跨 session agent 記憶，本則鎖定單一使用者跨來源（瀏覽/書籤/本機檔案）的個人知識可檢索性，MCP 端點是額外提供的 agent 整合層而非核心設計
+- **可信度註記：** HN Repo Bridge 668 分且作者現身 AMA 回應提問，社群驗證訊號強於單純星數
+- **來源：** HN Repo Bridge；[GitHub](https://github.com/asciimoo/hister)
+- **成熟度：** ⏳ 新興（本庫首次收錄，作者當日 AMA 互動熱烈，尚無長期採用數據）
+
+#### Launch HN: Skillsync（YC W26）——讓 AI chat session 跨 coding agent 搬遷延續（2026-09-17）
+
+- **主線：** —
+- **核心模式：** YC W26 新創 Skillsync 把對話 session（含訊息、推理過程、工具呼叫）在不同 coding agent 之間搬遷延續，訴求避免被單一供應商鎖住；HN 59 分
+- **與既有模式的關係：** 補上「記憶與知識管理」類別一種「跨 harness session 可攜」取向的做法——與 08-24 已記錄的跨 harness 記憶可攜性實作（支援 7 種以上 harness、核心機制是 AI 壓縮 session 過程）方向一致，差異在本則是新創產品化方向、訴求對象明確指向「避免供應商鎖定」；呼應本頁「介面元件複用」「模型使用策略」等類別中「降低廠商鎖定」的既有關注
+- **可信度註記：** YC W26 背書 + HN 59 分，屬新創產品發布，機制細節未見完整技術文件
+- **來源：** Hacker News；[Launch HN](https://news.ycombinator.com/item?id=49743049)
+- **成熟度：** ⏳ 新興（YC 剛畢業新創，本庫今日首次收錄，尚無社群採用回饋數據）
+
+#### Show HN：Die With Me——以 AIM 好友清單介面查看朋友 Claude／Codex 額度剩餘（2026-09-17）
+
+- **主線：** —
+- **核心模式：** 補上 07-03「額度監控與自動恢復工具生態」第三例——仿 AIM 好友清單介面，讓使用者查看朋友的 Claude／Codex 用量還剩多少，額度低於 20% 時進聊天室互動；HN 11 分，跨 2 來源
+- **與既有模式的關係：** 與既有 CCLimitPing（自動恢復型）、LimitBar（單人選單列監控型）同屬回應「額度焦慮系列」痛點的輔助工具，差異在本則把額度監控做成社交／好友清單形式，而非單人視覺化或自動化操作
+- **可信度註記：** HN 11 分，跨 2 個來源同日報導，跨平台驗證強於單純單一貼文
+- **來源：** Hacker News；[加入](https://diewithme.co/join)
+- **成熟度：** ⏳ 新興（Show HN 當日，尚無採用數據，社交化額度監控此前未見）
+
+#### Claude Code journal plugin：個人 `/journal` skill 包裝成公開 plugin，session 摘要自動整理進 Notion（2026-09-02）
+
+- **主線：** —
+- **核心模式：** 作者把個人使用的 `/journal` skill 包裝成公開 plugin，把每次 Claude Code session 的摘要依主題與星期自動整理進 Notion，一次 run 觸發三次 Notion API 呼叫
+- **與既有模式的關係：** 補上「Skills 設計」類別「流程 skill 化」既有取向的一個具體案例——把個人日常記錄流程封裝成可安裝 skill 並公開分享，機制具體（三次 Notion API 呼叫、依主題/星期分類）
+- **可信度註記：** dev.to 條目依內容判斷（非讚數）：第一手描述具體機制與呼叫次數，非行銷稿或新聞轉述；13 讚
+- **來源：** 「[Claude Code journal plugin: Notion session summaries at a glance](https://dev.to/cseeman/claude-code-journal-plugin-notion-session-summaries-at-a-glance-940)」— dev.to / #claudecode
+- **成熟度：** ⏳ 新興（本庫首次收錄，個人專案公開化，尚無社群採用回饋數據）
+
 #### GitHub Search 存量盤點：browserbase/stagehand——網頁資料擷取與互動 SDK，相容 Claude Code／Codex／Eve／Mastra（2026-09-17）
 
 - **主線：** —
