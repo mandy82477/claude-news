@@ -768,3 +768,4 @@ ABORTED: gathered_items.json date=2026-09-17 items=84，非目標日期的新鮮
 [Fri 2026/09/18 18:02:42.00] Web commit OK (92badb9)
 [Fri 2026/09/18 18:02:42.00] Single push done (news + wiki + web) -> bacb867
 [Fri 2026/09/18 18:02:42.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud STARTED 2026-09-18T22:02:47Z]
