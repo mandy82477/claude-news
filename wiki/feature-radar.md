@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-18
 
 > **這禮拜動了什麼**（2026-09-17）
 > Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放——本月至今最大的官方產品異動，官方「方案與定價」頁同日大改版收攏相關段落。
@@ -64,6 +64,17 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Claude Code Projects（Beta 改版）
+**發布：** 2026-09-17（公告） | **狀態：** Beta
+
+**是什麼：** 官方新增的雲端 agent 協調工作區，讓多個 agent 執行緒（threads）並行執行、關閉筆電後仍持續運作，用於委派長時間開發工作；官方文件索引同日新增專頁「Let Claude coordinate ongoing work with Projects」。
+
+**為何熱：** MarkTechPost、Unite.AI、The Verge、VentureBeat、The New Stack、ZDNET 六家科技媒體 2026-09-17 同日獨立報導。
+
+**快速上手：** ❓ 待查證（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）：本次抓取僅取得官方文件標題（[claude-projects.md](https://code.claude.com/docs/en/claude-projects.md)），未取得具體操作步驟，無法給出可執行指令。
+
+**注意事項：** ZDNET 指出本機端開發者對應能力仍要等；The New Stack 提醒多 agent 並行長時間運作可能快速衝高方案用量；細節未經官方原文查證。
 
 ### Claude Cowork 與 Chat 合併，同步推出 Claude Docs／Slides
 **發布：** 2026-09-17（官方部落格） | **狀態：** Beta（Pro／Max 起步，數週內擴大）
@@ -249,6 +260,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |

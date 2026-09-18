@@ -6454,3 +6454,16 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：開 1 筆（H-943553 安全政策→功能：bragjack 瀏覽器 AI 助理劫持技術涉及 Claude in Chrome 產品面，已記在 `topics/ai-agent-safety`，待下輪功能記者接手評估是否影響 `entities/claude-code` 描述）
 - devpractice 沉澱：候選 6 筆（entities/claude-code：桌面版終端機 session 改讀帳號 skills/plugins、v2.1.274 記憶體用量警示旗標；topics/claude-code-experimental：v2.1.274 新增 6 個第一階旗標；topics/ai-agent-safety：Fable 5.1 一句指令又 rm -rf 刪本地資料庫，同構事件第三起；topics/community-tech-patterns：browserbase/stagehand；topics/coding-workflow-guide：官方用量與長度限制新增省用量建議）；基準線 `ca76a73`→`ac484e8`
 - market 判讀：2 則（第 4 類：摩根大通具名導入 Claude 並設 2,000 美元支出上限；第 4 類：官方「方案與定價」文件大改版，移除 48 段舊版逐 token 定價）；「買得到的標的」新增 1 列 JPMorgan Chase（NYSE: JPM）；里程碑登記 2 筆、回顧結算 ⏳ 新增 2 列
+
+## 2026-09-18 Ingest
+
+- 來源日報：[[news/2026-09-18]]
+- 更新頁面：entities/claude-code、topics/claude-code-experimental、topics/anthropic-agent-stack、topics/anthropic-business、topics/competitor-landscape、topics/ai-agent-safety、topics/recursive-self-improvement、topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline、feature-radar、index
+- 新增頁面：無
+- 摘要：三名白帽研究人員用 Claude 找出並存取 OpenAI 內部原始碼獲 6,500 美元獎金，多家媒體同日大篇幅報導；Anthropic 官方發布生命科學驗證計畫（LSVP）並被 Reuters 獨家報導已悄悄設立自有生物實驗室；Claude Code Projects 大改版上線 Beta，六家科技媒體同日報導；資安研究人員揭露 Plugin4Shell 零點擊 RCE 漏洞橫跨 Claude Code、Codex、Copilot、Gemini CLI；Anthropic 揭露 Claude 現負責公司內部下一代模型開發工作量的四分之一；claude-code repo 今日同時湧現多個高互動 issue（多帳號連接器請求 251 則留言等）。
+- 呈現品質：全部通過（商業記者自查抓到新寫入句含讀者語言違規「表滿載」已自行改寫修復；其餘記者機械自查皆一次通過）
+- 品質備註：[主編] 轉知帳本 H-943553 結案時誤用 `close`（應為 `void`，因功能記者判定「不適用、理由成立」而非「已處理」）；script 不允許重複結案更正，結果內容正確，僅狀態欄位語意稍有出入，供之後查核時知悉。[主編] 模型記者本輪回退 5 筆全部指向安全政策：其中 2 筆（Anthropic 官方「AI 開發進度衡量方法」部落格、Reuters「Claude 負責四分之一開發工作量」）原輪已雙重分類、安全政策記者已處理；1 筆（Reddit「無法重現商業說法」）經社群記者複核後判定與 Claude/Anthropic 無直接關聯不收錄；1 筆（「jagged capabilities」）材料不足兩位記者皆判不寫入；餘 2 筆（AP News、Washington Post 的「Claude 協助打造下一代自己」）僅為 Reuters／官方部落格已收錄同一事件的另一媒體覆述，比照本輪 OpenAI 駭客事件十餘家媒體覆述僅收一次的處理原則，未另開追加派工。
+- 分類回退：追加派工 3 筆（經分類複核記者複核後，2 則→社群〈Multiplayer Mode for AI Agents、Agent Router〉互動不足未收錄、1 則→功能〈diff 顯示問題〉已有既存已知問題涵蓋未收錄）＋1 則安全政策補派（King Charles／Bloomberg）證據不足未收錄；另 1 則（多帳號連接器請求）分類複核記者提出回退但查帳本後已由原輪功能記者處理，未追加
+- 轉知帳本：close 1 筆（H-943553 功能記者：bragjack 屬外部攻擊面已在 topics/ai-agent-safety 完整記錄，claude-code.md 表無需修改；狀態欄位誤用見上方品質備註）
+- devpractice 沉澱：候選 8 筆（entities/claude-code：v2.1.276 修復 ANTHROPIC_BASE_URL proxy/gateway 400 錯誤迴歸；topics/claude-code-experimental：v2.1.276 新增/消失候選旗標各 2 個；topics/community-tech-discussions：Claude Code npm 原始碼 18 章逆向解析；topics/community-tech-patterns ×3：snyk/agent-scan、asciimoo/hister、Launch HN Skillsync、Claude Code journal plugin；topics/ai-agent-safety：Simon Willison 轉引自產壓縮摘要提示注入風險）；基準線 `ac484e8`→`9f78704`
+- market 判讀：本日無訊號（已檢視 74 則全條目；最接近門檻者為 CNBC 資料中心合作案報導，惟僅「尋求／洽談」階段、無合約金額，未達門檻）
