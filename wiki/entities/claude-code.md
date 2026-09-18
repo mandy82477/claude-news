@@ -701,7 +701,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-18 | **v2.1.276** 修復 2.1.275 迴歸（proxy/gateway 400 錯誤）。Claude Code Projects 進入 Beta，六家媒體報導，官方文件細節待查證。build 新增 2 候選旗標、消失 2 個，詳見 [[topics/claude-code-experimental]]。互動數更新 5 則（#69238、#86142、#82056、#27302、#3301），詳見各節。 |
+| 2026-09-18 | **v2.1.276** 修復 2.1.275 迴歸（proxy/gateway 400 錯誤）。Claude Code Projects 進入 Beta，六家媒體報導，官方文件細節尚未取得原文。build 新增 2 候選旗標、消失 2 個，詳見 [[topics/claude-code-experimental]]。互動數更新 5 則（#69238、#86142、#82056、#27302、#3301），詳見各節。 |
 | 2026-09-17 | **v2.1.274** 新增記憶體警示旗標。桌面文件新增帳號 skills/plugins 載入規則。TradingView MCP Server（第三方）。互動數更新、❓ 標記各 1 則，詳見各節。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
 | 2026-09-14 | 官方文件：桌面版新增多 repo 掛載＋`disableMobileSimulatorTools`。新增已知問題：Actions 範本 RCE（Reddit）。互動更新：#53247（29→32 讚）、#2254（138→147 讚）。 |

@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-18
+**最後新聞更新：** 2026-09-18
 
-> **最新工作流模式**（2026-09-17）
-> - **瀏覽器互動 SDK 存量盤點**：browserbase/stagehand（24,318 星、2024-03 出生）本庫今日首次收錄，供 agent 呼叫的網頁資料擷取與互動 SDK，相容 Claude Code、Codex、Eve、Mastra。
+> **最新工作流模式**（2026-09-18）
+> - **AI agent／MCP／skill 安全掃描器存量盤點**：snyk/agent-scan（3,060 星）本庫今日首次收錄，針對 AI agent、MCP server 與 agent skills 的安全掃描工具，補上「安全架構」類別一個掃描工具取向。
+> - **個人知識索引加 MCP 端點**：asciimoo/hister（HN Repo Bridge 668 分，作者現身 AMA）把瀏覽紀錄、書籤、本機檔案與爬取網頁建成離線可查的個人化搜尋索引，另附 MCP 端點供 agent 整合。
 
 ---
 
@@ -56,7 +57,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-07 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、已否決方案索引、OzBrain、gentle-ai（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、已否決方案索引、OzBrain、gentle-ai、hister、Skillsync（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-18 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
@@ -67,7 +68,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | **MCP 長 Session 穩健化** | MCP server 失效模式防護（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-14 | 連線中斷、工具超時、上下文失憶；對應心跳、重試、快照 |
 | **架構邊界合約** | ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-12 | 用合約與工業標準定義不可越過的架構規則 |
 | **Agent 版本控制** | ADR 注入、架構決策文件先於實作（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-31 | 決策文件先於實作，降低代理方向偏移 |
-| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
+| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards、agent-scan（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-18 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-13 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 預算控制** | AgentWatch runtime budget enforcement（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-22 | 在請求到達模型前攔截，強制執行費用或 token 上限 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 手機當 agent 控制介面，各自選不同傳輸層 |
@@ -81,9 +82,9 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **Hooks 與自動化**：Stop Hook 要求可驗證完成證明；Pre-completion Hook 防模糊結束；hooks 可感知 agent 活躍狀態驅動環境副作用（螢幕喚醒、實體燈光顏色，見 Adrafinil、氛圍狀態燈）
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）
 - **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認，OpenAI、Nvidia、GitHub 開發者使用；claude-thermos 以保活請求維持快取不過期，但引發「成本轉嫁其他用戶」爭議；pxpipe 反其道而行，把文字 context 渲染成圖片傳遞以降低 token 用量；`claude -p` 未加 `--bare` 冷啟動實測約耗 15 萬 token
-- **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
+- **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；hister 把瀏覽紀錄/書籤/本機檔案建成離線可查的個人搜尋索引並附 MCP 端點；Skillsync 訴求把對話 session（含推理與工具呼叫）跨 coding agent 搬遷延續，避免供應商鎖定；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
-- **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰
+- **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰；agent-scan 把掃描對象從程式碼本身擴到 AI agent、MCP server 與 agent skills 三層
 
 **查證備註**
 - 「Claude 審查 Codex 通過率 71.6%→89.7%」已查得學術來源：[Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?](https://arxiv.org/abs/2607.21656)（arXiv 2607.21656）——116 則 LiveCodeBench 中／難題，六種條件對照，reviewer 只見題目與 writer 草稿、不能執行測試，近似真實 code review 流程；反向（Codex 審查 Claude）則使通過率從 91.4% 降至 82.8%，顯示審查方向有明顯不對稱效應，並非任一模型互審都有效（2026-08-13 查證）

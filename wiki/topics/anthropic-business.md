@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-18
+**最後新聞更新：** 2026-09-18
 
-> **最新動態**（2026-09-17）
-> - **Claude Cowork 與 chat 合併，同步上線 Docs、Slides（beta）**：官方部落格＋多家媒體同步報導，先在 Pro、Max 開放，方案頁同步大改版，詳見 [[topics/anthropic-business#時序]]、[[entities/pricing#方案細節]]。
+> **最新動態**（2026-09-18）
+> - **生命科學布局加碼**：官方推出生命科學驗證計畫（LSVP）放寬生醫安全限制，同日 Reuters 獨家報導已悄悄設立自有生物實驗室加速藥物開發，詳見 [[topics/anthropic-business#時序]]。
 
 ---
 
@@ -243,9 +243,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | 企業轉向開源模型分流訂單（2026-09-04） | 用量大到會被談價的企業客戶 | 續約前把開源自架的等值成本算出來當籌碼 | ⚠️ 高 | 一級媒體＋社群熱議 |
 | 音樂出版商著作權訴訟升級（2026-08-31） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
 | 企業因成本失控退出（2026-07-23） | 沒有部門級用量上限的團隊 | 開企業版支出控管；案例見 [[topics/enterprise-cost-management]] | ⚠️ 高 | 一級媒體 |
+| Claude Code Projects 多 agent 併發推高用量（2026-09-17） | 同時開多個長任務 agent 的 Pro／Max 訂閱用戶 | 限制併發 agent 數量、盯緊用量儀表板，避免額度提前用罄 | ⚠️ 中 | 一級媒體 |
 | 訂閱補貼倍數是兩位數，收窄是進行式（2026-09-06） | 靠訂閱跑自動化工作流的重度使用者 | 先量自己的等值 API 花費，再決定要不要簽長約 | ⚠️ 中 | 社群估算 |
 | 專利侵權訴訟（UTRF，2026-08-24） | 全部使用者（求償含禁制令請求） | 沒有繞法。看訴訟進度，Anthropic 已表明全力抗辯 | ⚠️ 中 | 法院文件＋一級媒體 |
-| 雲端夥伴以自研模型替代（2026-08-13 複查） | 透過 Microsoft 產品間接用到 Claude 的人 | 現在不必動。查無官方，只有兩家媒體轉述 | ℹ️ 低 | 傳聞 |
 
 **嚴重度：** ⚠️ 高＝已經有人因此改了做法；⚠️ 中＝方向明確但還沒落到你身上；ℹ️ 低＝有人這樣說，還沒有可觀察的後果。
 
@@ -254,9 +254,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **競品分流（OpenCode、DeepSeek）** → [[topics/competitor-landscape]]「對手雷達」
 - **浮水印可被繞過** → [[topics/anthropic-government-policy]]（法源與產品後果都在那邊）
 
-%% 維運備忘：退場條文本輪跑一遍（連還在跑的一起跑）：六列全部通過——開源分流 09-04（滿 90 天為 2026-12-03）、音樂訴訟（訴訟不適用 90 天，判決／和解／撤訴前留表）、企業因成本退出 07-23（2026-10-21）、補貼倍數 09-06（2026-12-05）、UTRF（訴訟，同不適用）、自研替代 08-13（2026-11-11）。本輪零命中，最早到期的是企業因成本退出 2026-10-21。表 6 列滿載，無讓位者。下一條新風險進來時依留表優先序讓位的是「雲端夥伴以自研模型替代」（ℹ️ 低、來源等級傳聞、無讀者動作）。 %%
+%% 維運備忘：2026-09-18 新風險「Claude Code Projects 多 agent 併發推高用量」（The New Stack，⚠️ 中）進表，表滿載觸發讓位，依留表優先序（ℹ️ 低最先）讓位者為「雲端夥伴以自研模型替代」，已移出表、細節區加註未列入標記。餘五列本輪到期檢查：開源分流 09-04（2026-12-03）、音樂訴訟（不適用 90 天）、企業因成本退出 07-23（2026-10-21）、補貼倍數 09-06（2026-12-05）、UTRF（訴訟，不適用）。表 6 列滿載，最早到期為企業因成本退出 2026-10-21。 %%
 
-**商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。
+**商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
 - **國防部擬十月前遷出全部機密 AI 工作負載（DefenseScoop，2026-09-11）**：具體原因、替代供應商、涉及的 Claude 產品線均未見報導，僅標題可用；影響範圍限於處理美國政府機密資料的用戶。
 - **企業轉向開源模型分流訂單**：紐約時報報導多家大型企業正將工作負載從 OpenAI、Anthropic 轉往開源模型；Hacker News 討論串達 274 分（高熱度），留言中有人認為若兩家公司不大幅降價，將面臨更大規模的轉單壓力（推論，論壇留言非官方數據）。與本頁既有「補貼不可持續」「競品分流」（DeepSeek、OpenCode）等結構性商業風險同屬一類，惟本則首次明確點出「開源模型」（而非特定競品公司）作為分流去向的整體類別，具體受影響企業名稱、轉移規模均未見報導細節，僅標題與 HN 討論層級資訊（[NYT](https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html)，2026-09-04）。
@@ -268,7 +268,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **音樂訴訟升級：Sony Music、Warner 加入提告（08-29）**：TechCrunch、Business Insider 報導 Sony Music、Warner 等唱片公司對 Anthropic 提起訴訟，指控其「大規模非法透過 BT 下載、抓取受版權保護音樂」訓練 Claude 系列模型並藉此牟利，求償**每首歌最高 15 萬美元**。與 08-18 記錄之 Round Hill Music（10 億美元）、另一出版商對 Anthropic/Suno 訴訟同屬音樂出版業著作權侵權求償，但本次原告改為主流大型唱片公司（Sony、Warner），且首度出現「BT 下載盜版」的具體侵權手法指控（先前記錄的 15 億美元著作權和解案指控的是書籍盜版，見「這些數字是誰說的」表）——顯示 Anthropic 訓練資料來源爭議正從書籍出版業擴散至音樂產業的主流廠牌層級，法律風險規模持續擴大（推論：每首歌 15 萬美元的求償上限若涵蓋大量曲目，潛在總求償金額可能達到與書籍和解案相當甚至更高的量級，惟具體涉案曲目數量未見報導）（[TechCrunch](https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/)；[Business Insider](https://www.businessinsider.com/anthropic-claude-training-copyright-music-lyrics-sony-lawsuit-2026-8)，2026-08-29）。08-31 跟進（非新事實，補上具體法律實體名）：technology.org、The Guardian 同步報導同一起訴訟，明確點名原告之一為 **Warner Chappell**（Warner Music 旗下音樂出版部門，而非 Warner Music 集團本身），未見新增求償金額或案情細節（Google News；The Guardian，2026-08-31）。
 - **頂尖模型是否停售企業客戶**：The Information 報導（僅標題可用）探討 Anthropic 與 OpenAI 是否將停止把最強模型販售給企業客戶、轉為自留競爭優勢；若屬實將是「賣模型」商業邏輯的根本轉向，與本頁「商業模式」段落既有「程式化／訂閱雙軌」框架方向相反（推論）；具體策略內容、時程、是否已有內部決策未見報導，待後續報導補充。
 - **企業因成本退出**：Microsoft 6/21 加速退出（原訂 6/30）；Uber 警戒中；Amazon 傳出逐步降低旗下 Alexa 對高成本模型依賴以削減支出（07-23，Business Insider，僅標題可用，詳見 [[topics/enterprise-cost-management]]）。
-- **雲端夥伴自研模型替代**：Microsoft 傳出以自研模型逐步取代部分產品中的 OpenAI/Anthropic 模型以降成本（SiliconANGLE/Bloomberg 2026-07-07）；若屬實，依賴度收斂從編碼工具層擴大至底層模型層。
+- **雲端夥伴自研模型替代**：Microsoft 傳出以自研模型逐步取代部分產品中的 OpenAI/Anthropic 模型以降成本（SiliconANGLE/Bloomberg 2026-07-07）；若屬實，依賴度收斂從編碼工具層擴大至底層模型層。%% 未列入風險表：表滿載，2026-09-18 %%
 - 🔎 **查無官方**（標 2026-08-13｜查 自研模型、Microsoft｜複 2026-09-13）｜**Microsoft 是否以自研模型取代**：仍僅見 2026-07-07 雙來源報導，未見任一方官方證實。
 - **專利侵權訴訟（UTRF）**：已查證（2026-08-13）：田納西大學研究基金會（UTRF）於 2026-07-21 在德拉瓦州聯邦法院對 Anthropic 提告，指控 Claude Code 背景執行排程系統與記憶整合引擎侵犯其神經型網路專利（US 10,019,470、US 10,095,718）；求償金額未定、要求禁制令；Anthropic 回應「不同意指控，將全力抗辯」（[Bloomberg Law](https://news.bloomberglaw.com/litigation/anthropic-hit-with-patent-suit-over-claude-ai-neural-networks)）。
 - **田納西大學提告（併入上列）**：即上列 UTRF 專利訴訟案——Knoxville News Sentinel 報導確認為同一起 2026-07-21 提告（[Knoxville News Sentinel via WBIR](https://www.wbir.com/article/news/local/knoxville/university-of-tennessee-research-foundation-sues-anthropic/51-cf5be97b-f597-4170-b7ed-1d749dc88570)），2026-08-13 查證後與「專利侵權訴訟」列合併記載，不重複列為獨立風險。08-24 跟進（The Daily Beacon，UT 校內學生報，非新事實）：田納西大學校內學生報跟進報導同一起 UTRF 訴訟案，未見新增求償金額或案情細節（Google News/The Daily Beacon）。
@@ -494,7 +494,14 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 ### 2026-09
 
+#### 2026-09-18
+- **[生命科學布局] 官方：推出生命科學驗證計畫（LSVP），開放生醫專業人士使用 Mythos、Opus、Sonnet 並放寬部分安全限制，先以機構／團隊 Beta 開放**（Anthropic Blog）
+- **[生命科學布局] Reuters 獨家＋qz.com 跟進：Anthropic 悄悄設立自有生物實驗室（wet lab），加速 AI 藥物開發**（Google News/Reuters；Google News/qz.com）
+- **[資本支出] CNBC 引述消息人士：Anthropic 與 OpenAI 同步尋求規模較小的資料中心合作案，加快 AI 運算產能部署**（Google News/CNBC）
+
 #### 2026-09-17
+- **[生命科學布局] 官方部落格：說明 Claude 在生物分子建模的應用進展，與同期生命科學布局同源**（Google News/Anthropic，跨來源數 3）
+- **[商業風險] The New Stack：Claude Code Projects 多 agent 併行長時間運行，容易讓方案用量短時間衝上限**：詳見「還沒過去的風險」表新增列（Google News/The New Stack）
 - **[產品策略] Claude Cowork 與 chat 合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta），Design 整合進對話**：官方部落格公告，先在 Pro、Max 陸續開放；HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導
 - **[產品策略] 媒體框架：Axios 稱衝擊 Microsoft、Fortune 稱意在打造「superapp」**：同日官方 Plans & Pricing 頁大改版，納入 Docs／Slides／Design／Claude Academy 說明，詳見 [[entities/pricing#方案細節]]
 - **[IPO前瞻，僅標題可用] euronews／Barron's：私募市場為 Anthropic 開出逾 2 兆美元估值，市場緊盯 IPO 申請；Barron's 稱 IPO 將是 AI 產業下一個危機時刻**：均無新增估值數字，與既有「IPO 走到哪一格」表 08-13 記錄的 2 兆美元估值預期同一量級，非新增資訊
