@@ -402,13 +402,7 @@
     }
   ],
   "preview": "Claude Code：v2.1.270 修復迴歸：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。",
-  "sedimentedToday": [
-    {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-13",
     "summary": "",

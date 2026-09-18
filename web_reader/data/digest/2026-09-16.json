@@ -591,11 +591,6 @@
       "pageType": "entity"
     },
     {
-      "id": "anthropic-agent-stack",
-      "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-government-policy",
       "name": "Anthropic 政府與軍事政策",
       "pageType": "topic"

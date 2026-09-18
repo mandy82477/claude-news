@@ -477,11 +477,6 @@
   "preview": "Claude Code：桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins：本機 session 讀個人 ~/.claude/skills/，雲端 session 改讀該帳號啟用的 skills/plugins，SSH session 仍讀本機路徑。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-design",
       "name": "Claude Design",
       "pageType": "entity"
@@ -527,38 +522,13 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-talent-flow",
       "name": "AI 實驗室人才流動",
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "coding-workflow-guide",
       "name": "程式開發實戰手冊",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
@@ -569,16 +539,6 @@
     {
       "id": "market-signals",
       "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "興趣類別 skill 總覽",
       "pageType": "topic"
     }
   ],
