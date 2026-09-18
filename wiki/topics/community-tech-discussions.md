@@ -149,7 +149,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
-| 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | ☄️閃現 | 拆解涵蓋 agent loop（串流輸出/工具執行/錯誤恢復/4 層 context 壓縮）、14 步工具執行 pipeline、多 agent 協作（子 agent 共享 prompt cache 前綴省 95% 成本）；HN score 17（詳見細節） | — |
+| 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | ☄️閃現 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節） | — |
 | Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | ☄️閃現 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記 | — |
 | Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；Reddit r/artificial 週熱門標記（詳見細節） | — |
 | Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌 | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | Laurie Voss：寫程式成本快速下降，但後續審查、修復與維運工作的成本也同步下降；具名表態，無社群延燒（詳見細節） | — |
@@ -212,7 +212,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
-- **有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析**：涵蓋 agent loop（async generator 驅動串流輸出/工具執行/錯誤恢復/4 層 context 壓縮）、14 步工具執行 pipeline（權限判定、推測執行、依安全分類並行批次）、多 agent 協作（子 agent 共享 prompt cache 前綴省 95% 成本、fork agent、協調者模式、swarm team）；非官方授權的逆向分析，機制細節未經 Anthropic 確認；HN score 17；[原文](https://claude-code-from-source.com/)（HN）
+- **有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析**：涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制（子 agent 共享 prompt cache 前綴省 95% 成本）；非官方逆向分析，未經 Anthropic 確認；HN score 17；[原文](https://claude-code-from-source.com/)（HN）
 - **Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範**：使用者觀察未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制，主張是否該有額外規範；僅單方觀點，未見反方論述；Reddit r/artificial 週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wirqzs/i_wonder_if_ai_agents_and_ai_usage_should_have/)（Reddit · 週熱門）
 - **Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 優化 Agent Skill**：主張既有優化多走 generate–execute–analyze–refine 迴圈，改用 contextual bandits；效率數字未見於摘要；週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wf8b61/cobraskills_contextual_bandits_for_efficient/)（Reddit · 週熱門）
 - **Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌**：Simon Willison 部落格引述 Laurie Voss 觀點：寫程式的成本快速下降，但審查、修復與維運程式碼的成本也同步下降；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Sep/14/laurie-voss/)（Blog）

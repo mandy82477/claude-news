@@ -82,9 +82,9 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **Hooks 與自動化**：Stop Hook 要求可驗證完成證明；Pre-completion Hook 防模糊結束；hooks 可感知 agent 活躍狀態驅動環境副作用（螢幕喚醒、實體燈光顏色，見 Adrafinil、氛圍狀態燈）
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）
 - **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認，OpenAI、Nvidia、GitHub 開發者使用；claude-thermos 以保活請求維持快取不過期，但引發「成本轉嫁其他用戶」爭議；pxpipe 反其道而行，把文字 context 渲染成圖片傳遞以降低 token 用量；`claude -p` 未加 `--bare` 冷啟動實測約耗 15 萬 token
-- **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；hister 把瀏覽紀錄/書籤/本機檔案建成離線可查的個人搜尋索引並附 MCP 端點；Skillsync 訴求把對話 session（含推理與工具呼叫）跨 coding agent 搬遷延續，避免供應商鎖定；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
+- **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
-- **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰；agent-scan 把掃描對象從程式碼本身擴到 AI agent、MCP server 與 agent skills 三層
+- **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰
 
 **查證備註**
 - 「Claude 審查 Codex 通過率 71.6%→89.7%」已查得學術來源：[Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?](https://arxiv.org/abs/2607.21656)（arXiv 2607.21656）——116 則 LiveCodeBench 中／難題，六種條件對照，reviewer 只見題目與 writer 草稿、不能執行測試，近似真實 code review 流程；反向（Codex 審查 Claude）則使通過率從 91.4% 降至 82.8%，顯示審查方向有明顯不對稱效應，並非任一模型互審都有效（2026-08-13 查證）
@@ -184,7 +184,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 - **主線：** —
 - **核心模式：** YC W26 新創 Skillsync 把對話 session（含訊息、推理過程、工具呼叫）在不同 coding agent 之間搬遷延續，訴求避免被單一供應商鎖住；HN 59 分
-- **與既有模式的關係：** 補上「記憶與知識管理」類別一種「跨 harness session 可攜」取向的做法——與 08-24 已記錄的跨 harness 記憶可攜性實作（支援 7 種以上 harness、核心機制是 AI 壓縮 session 過程）方向一致，差異在本則是新創產品化方向、訴求對象明確指向「避免供應商鎖定」；呼應本頁「介面元件複用」「模型使用策略」等類別中「降低廠商鎖定」的既有關注
+- **與既有模式的關係：** 補上「記憶與知識管理」類別「跨 harness session 可攜」取向——與 08-24 已記錄的跨 harness 記憶可攜性實作方向一致，差異在本則為新創產品化方向，訴求明確指向「避免供應商鎖定」
 - **可信度註記：** YC W26 背書 + HN 59 分，屬新創產品發布，機制細節未見完整技術文件
 - **來源：** Hacker News；[Launch HN](https://news.ycombinator.com/item?id=49743049)
 - **成熟度：** ⏳ 新興（YC 剛畢業新創，本庫今日首次收錄，尚無社群採用回饋數據）

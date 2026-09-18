@@ -236,7 +236,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-09
 
 #### 2026-09-17
-- **「Does it seem to anyone else like even frontier models have a very "jagged" range of capabilities?」：「Opus 5 上線後品質觀感」新增第六種主張**：使用者主要用 Claude Opus 5 與 4.8，觀察到不同任務間的能力落差很不均勻，與既有五種主張（泛化變慢、過度自信、A/B 測試降 effort 等）皆不同——本則聚焦「任務間」不一致而非「隨時間」變差；單一貼文，Reddit r/artificial 週熱門標記，未附測試方法或具體任務清單（來源：[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)）
+- **「even frontier models have a very "jagged" range of capabilities」：「Opus 5 上線後品質觀感」新增第六種主張**：使用者主要用 Opus 5 與 4.8，觀察到不同任務間能力落差不均——聚焦「任務間」不一致而非「隨時間」變差；單一貼文，Reddit r/artificial 週熱門標記（來源：[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)）
 
 #### 2026-09-12
 - **Ask HN 討論串：Token 消耗異常訊號群新增一則**：使用者稱 Fable 對簡單手機 App 任務「大材小用」，4 個平行 agent 數分鐘內耗盡 Max 方案 session 額度，等 6 小時逾時後快取已失效；57 分，方向與既有訊號一致（來源：[Hacker News](https://news.ycombinator.com/item?id=49672966)）
