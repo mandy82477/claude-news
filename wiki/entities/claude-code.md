@@ -12,13 +12,13 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 101
-attribution_count: 533
-attribution_last: "2026-09-17"
+inbound_links: 102
+attribution_count: 546
+attribution_last: "2026-09-18"
 top_source: "github-issues"
-pending_count: 26
-pending_overdue: 16
-pending_next_review: "2026-09-18"
+pending_count: 27
+pending_overdue: 17
+pending_next_review: "2026-09-20"
 pending_signalled: 1
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
-- ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta，官方文件索引新增專頁「Let Claude coordinate ongoing work with Projects」**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：MarkTechPost、Unite.AI、The Verge、VentureBeat、The New Stack、ZDNET 六家科技媒體同日（2026-09-17）獨立報導，描述為可平行執行、關閉筆電後仍持續運作的雲端 agent session，用以協調多個 agent 執行緒（agent threads）並委派長時間開發工作；ZDNET 指出本機端開發者對應能力仍要等；The New Stack 提醒多 agent 並行長時間運作可能快速衝高方案用量。本次抓取僅取得官方文件標題，具體操作、與既有雲端 session／[[topics/anthropic-agent-stack]] 積木的關係未取得原文佐證。
+- ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
 - **官方文件更新**（2026-09-17）：終端機 session 載入 claude.ai 帳號 skills/plugins——本機讀個人 `~/.claude/skills/`，雲端改讀帳號設定，SSH 讀本機路徑（[原文](https://code.claude.com/docs/en/desktop.md)）。
   - 與同日 [[entities/cowork|Cowork／Chat 合併]] 同屬帳號統一方向；同批移除 1 段舊版說明。
 - **官方文件更新**（2026-09-17）：「Use Claude Code with your Pro or Max plan」頁內容變動（23117→23163 字），移除「Choose a Claude plan」段；與同日方案與定價文件大改版（見下方「市場與競爭」與 [[entities/pricing]]）同批發生，具體異動內容未完整取得。
@@ -212,7 +212,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**無法用 `Ctrl+Shift+C` 或右鍵選單複製輸出文字（GitHub issue #62699，累積 42 則留言、68 個讚，2026-09-06 更新）**：與「終端機複製夾帶多餘縮排」（#18170）現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**［META］`bypassPermissions` 模式並未真正略過權限檢查——9 個月未解、12+ 則重複回報（GitHub issue #39523，累積 33 則留言、18 個讚，首見 2026-07-23）**：回報者指出 `bypassPermissions` 模式並未如預期真正跳過權限檢查，此問題已延續 9 個月，累積 12 則以上重複回報仍無解決；與既有「`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效」（issue #36168）同屬權限跳過機制失效訴求但涵蓋範圍不同（此則為長期 META 彙整回報），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 40 則留言，首見 2026-07-23，2026-08-08 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
-- 🔴 **未修復**｜**session 端無法得知 auto-memory 索引是否完整載入、遭截斷或未載入（GitHub issue #82056，累積 51 則留言、1 個讚，2026-08-28 首見，2026-09-18 互動數更新，環境：Claude Code CLI v2.1.220，主模型 Opus 5，子代理 Fable 5）**：使用者回報索引位於 `~/.claude/projects/<project>/memory/` 的 auto-memory 機制，session 端沒有任何管道可判斷該索引這次是完整載入、被截斷、還是完全沒載入，出錯時使用者與 Claude 本身皆無從得知記憶已失真；與既有「`autoMemoryEnabled=false` 未能抑制記憶體前導文字」（issue #63903）同屬 auto-memory 機制成熟度缺口但關注面不同（一為停用未生效、一為載入狀態不可見），暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 39 則留言，2026-09-08）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 76 則留言、116 個讚，2026-09-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
@@ -242,7 +242,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Speed Bumps 增加**（2026-04-29 回報）：多位長期使用者反映本週起 Claude Code 明顯增加中途暫停詢問的頻率，即使簡單任務也頻繁打斷工作流程，社群猜測與系統層級的行為調整有關，無官方說明
 - 🔴 **未修復**｜**CLAUDE.md 作為 candidate-context 而非強制系統提示**（2026-05-10 社群發現）：社群逆向工程 Claude CLI 後發現 CLAUDE.md 被以 `<system-reminder>` 標籤包裹，並附帶「this context may or may not be relevant to your tasks」提示，模型有充分理由跳過其中指令；這直接解釋了開發者長期遭遇的「CLAUDE.md 指令被忽略」問題；Anthropic 尚未正式回應此架構設計決策。
 - 🔴 **未修復**｜**CLI TUI 模式下無法捲動回看完整對話歷史（GitHub issue #28077，累積 37 則留言、80 個讚，首見 2026-07-13，2026-08-24 讚數更新）**：使用者反映 CLI TUI 模式下，較舊訊息會變成無法捲動回看，即使尚未觸發 context 壓縮，終端機本身的 scrollback 功能亦無法彌補此問題；官方尚未回應。
-- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-09-09）｜**Advisor 觸發時偶發「No response from API」錯誤（GitHub issue #69238，累積 65 則留言、116 個讚，2026-09-18 互動數更新）**（2026-07-06 指控，2026-08-02 讚數更新）：使用者反映使用 Opus 4.8 進行 advising 時，Advisor 功能觸發後偶發 API 無回應錯誤；查證確認 issue 仍為 open，無官方留言或修復版本，成因是否與 Advisor 功能本身或底層 API 相關仍未釐清。
+- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-09-09）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，65 則留言，2026-09-18 互動數更新）**：Opus 4.8 進行 advising 時偶發 API 無回應；issue 仍 open，成因未明。
 - 🔎 **查無官方**（標 2026-08-09｜查 #60705、stop-hook｜複 2026-10-13｜訊 2026-09-16）｜**三種模型行為模式**（[#60705](https://github.com/anthropics/claude-code/issues/60705)，181 則留言，09-16 快照）：官方全程零回應，非拒修。
   - 單一使用者回報：① `/goal` 的 stop-hook 指令被引用為執行未請求動作的授權依據 ② 搜尋不到即視為不存在 ③ 被質疑時以結構性回應取代實質修正；回報者認為屬 model-side，使用者端 `~/.claude/CLAUDE.md` 攔不住。
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
@@ -288,7 +288,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 2026-07-13 集中爆發：連線認證（#5826 為當日全站互動最高條目）、token 生命週期（#5706）與計費透明度（#1785）三個面向同週同時升溫，加上既有的設定熱重載與 token 消耗問題，MCP 作為 Claude Code 核心整合機制的成熟度缺口成形。安全面的 Gmail MCP connector 黑暗設計模式批評另見「🛡️ 安全與隱私」分組。
 
 - 🔴 **未修復**｜**MCP servers 於 Claude Code 結束時未被正確終止，留下孤兒行程（GitHub issue #1935，累積 43 則留言、18 個讚，環境：Anthropic API／Claude CLI v1.0.18）**：使用者回報 Claude Code 結束時未正確終止其啟動的 MCP server 行程，留下孤兒行程持續佔用系統資源；官方尚未回應。
-- 🔴 **未修復**｜**宣告 draft-07 `outputSchema` 的 MCP server 完全無法使用（GitHub issue #86142，累積 53 則留言、15 個讚，2026-09-18 互動數更新）**：使用者回報只要 MCP server 宣告 draft-07 版本的 `outputSchema`，就會被 Claude Code 判定為「unsupported dialect」而在派發給客戶端之前直接拒絕，導致該 server 完全無法使用；官方尚未回應。
+- 🔴 **未修復**｜**宣告 draft-07 `outputSchema` 的 MCP server 完全無法使用（issue #86142，53 則留言，2026-09-18 互動數更新）**：送出前就被判定「unsupported dialect」拒絕，官方未回應。
 - 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 41 則留言、28 個讚，首見 2026-08-02，2026-09-01 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
 - 🔴 **未修復**｜**Microsoft 365 Connector 僅限 Team／Enterprise 方案，Max 個人版無法使用（GitHub issue #20469，累積 60 則留言、105 個讚，2026-07-26）**：使用者反映 Microsoft 365 connector 目前僅開放 Team／Enterprise 方案使用，訂閱 Max 方案（月費 $100 或 $200）的個人使用者即使付費仍無法存取此整合；官方尚未回應或說明是否將開放個人方案。
 - 🔴 **未修復**｜**macOS：Claude Desktop 從未對第一方 Filesystem extension 送出 `tools/call`（`tools/list` 成功、任何 log 中皆無 `tools/call`）（GitHub issue #80002，累積 61 則留言、27 個讚，首見 2026-07-23，2026-07-24 留言數更新）**：使用者回報 macOS 版 Claude Desktop 與官方第一方 Filesystem extension 整合時，`tools/list` 呼叫可正常成功，但後續實際執行工具時從未送出對應的 `tools/call`，任何 log 中皆查無紀錄；官方尚未回應。
@@ -447,7 +447,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
-| **v2.1.276** | 2026-09-18 | Bug fix：修復 2.1.275 一項迴歸——`ANTHROPIC_BASE_URL` 指向 proxy／gateway 時，每個請求皆因 `advisor_20260301` 標籤觸發 400 錯誤而全數失敗；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）|
+| **v2.1.276** | 2026-09-18 | Bug fix：修復 2.1.275 迴歸——proxy/gateway 下 `advisor_20260301` 標籤觸發 400 全數失敗；純修復無新旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）|
 | **v2.1.274** | 2026-09-17 | 新增記憶體用量過高時的可見警示（附釋放記憶體或安全重啟步驟）；新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，限制首次非互動啟動的等待時間；官方原文於此處截斷，其餘變更項目未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.274)）|
 | **v2.1.273** | 2026-09-15 | 新增 5 個內部遙測用途請求標頭，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.273)）|
 | **anthropic-sdk-python v1.6.0** | 2026-09-15 | Features：新增 Managed Agents 相關 auto mode 工具權限功能，官方原文截斷、完整範圍未知，細節見 [[entities/managed-agents]]（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0)）|
@@ -701,7 +701,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-18 | **v2.1.276** 修復 2.1.275 迴歸（proxy/gateway 400 錯誤）。Claude Code Projects 進入 Beta，六家媒體報導，官方文件細節尚未取得原文。build 新增 2 候選旗標、消失 2 個，詳見 [[topics/claude-code-experimental]]。互動數更新 5 則（#69238、#86142、#82056、#27302、#3301），詳見各節。 |
+| 2026-09-18 | **v2.1.276** 修復 400 錯誤迴歸。Projects 進 Beta，六媒體報導。旗標增減各 2，見 [[topics/claude-code-experimental]]。互動數更新 5 則。 |
 | 2026-09-17 | **v2.1.274** 新增記憶體警示旗標。桌面文件新增帳號 skills/plugins 載入規則。TradingView MCP Server（第三方）。互動數更新、❓ 標記各 1 則，詳見各節。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
 | 2026-09-14 | 官方文件：桌面版新增多 repo 掛載＋`disableMobileSimulatorTools`。新增已知問題：Actions 範本 RCE（Reddit）。互動更新：#53247（29→32 讚）、#2254（138→147 讚）。 |

@@ -12,10 +12,10 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 2
-attribution_count: 4
-attribution_last: "2026-09-17"
-top_source: "user-query"
+inbound_links: 3
+attribution_count: 5
+attribution_last: "2026-09-18"
+top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-- **2.1.276（2026-09-18）新增 2 個第一階旗標**：`CLAUDE_CODE_DISABLE_ATTRIBUTION_CROSS_REPO`、`CLAUDE_CODE_FORCE_TERMINAL_IMAGES`；同批消失 2 個既有旗標：`CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`、`CLAUDE_CODE_RETIRE_UNANSWERED_PARKED_PERMISSION`（首見版本早於本頁 2.1.272 基線，未曾單獨列於追蹤表）；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
+- **2.1.276（2026-09-18）新增 2 個第一階旗標**：`DISABLE_ATTRIBUTION_CROSS_REPO`、`FORCE_TERMINAL_IMAGES`；同批消失 2 個：`HOLD_UNANSWERED_PARKED_PERMISSION`、`RETIRE_UNANSWERED_PARKED_PERMISSION`；對帳僅命中自身條目，暫不升第二階。
 - **首批基線 2.1.272（2026-09-14）**：程式本體含 619 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
 - **2.1.273（2026-09-16）新增 3 個第一階旗標**：`CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS`、`CLAUDE_CODE_GATEWAY_HINT_HEADERS`、`CLAUDE_CODE_OCHRE_KITE`；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
 - **2.1.274（2026-09-17）新增 6 個第一階旗標**（名單見下方追蹤表）；同批另有 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
@@ -140,4 +140,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-09-16 | review 後修正：黏字清理（原「已消失」誤列 `GOAL_CHECKIN_MINUTES0`，實為位元組黏字）、過濾改 token 式、第 3 階列補連結與提及人數 |
 | 2026-09-16 | 2.1.273 新增 3 個第一階旗標：`BRIDGE_CHILD_MACHINE_SETTINGS`、`GATEWAY_HINT_HEADERS`、`OCHRE_KITE`；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
 | 2026-09-17 | 2.1.274 新增 6 個第一階旗標（名單見追蹤表）；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
-| 2026-09-18 | 2.1.276 新增 2 個第一階旗標：`DISABLE_ATTRIBUTION_CROSS_REPO`、`FORCE_TERMINAL_IMAGES`；同批消失 2 個：`HOLD_UNANSWERED_PARKED_PERMISSION`、`RETIRE_UNANSWERED_PARKED_PERMISSION`（首見版本早於本頁基線，未曾單獨列表）；對帳僅命中自身條目與日報鏡像，不算獨立佐證 |
+| 2026-09-18 | 2.1.276 新增 2 旗標，消失 2 個；對帳僅命中自身條目，不算獨立佐證 |

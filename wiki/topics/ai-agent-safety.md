@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-17"
-last_news_update: "2026-09-17"
+last_updated: "2026-09-18"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,10 +12,10 @@ children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 88
-attribution_count: 136
-attribution_last: "2026-09-17"
+attribution_count: 150
+attribution_last: "2026-09-18"
 top_source: "google-news"
-pending_count: 24
+pending_count: 25
 pending_overdue: 14
 pending_next_review: "2026-09-23"
 pending_signalled: 1
@@ -116,15 +116,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### WSJ 獨家／十餘家媒體跟進：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其內部原始碼，獲 6,500 美元獎金（2026-09-18 新增）
 
-- **揭露來源**：WSJ〈Exclusive: Hackers Used Anthropic's Claude to Break Into OpenAI〉（獨家首發）；TechCrunch、The Guardian、Yahoo Tech、Financial Times、Fortune 同日跟進；Forbes、VentureBeat 僅原始抓取摘要可用（VentureBeat 指出模型為 Claude Opus 5）
+- **揭露來源**：WSJ 獨家首發；TechCrunch、Guardian、Yahoo、FT、Fortune 同日跟進；Forbes、VentureBeat 僅摘要可用（VentureBeat 指出模型為 Opus 5）
 - **核心主張**：三名資安研究人員透過 OpenAI 官方漏洞懸賞計畫，藉助 Claude 找出並存取 OpenAI 內部程式碼庫，依官方流程獲得 6,500 美元獎金；多篇媒體標題以「入侵」（hack）呈現
 - **社群反面聲音（需並陳）**：Hacker News 討論串（15 分）質疑標題誇大，稱這其實是「合格的資安研究人員透過官方漏洞懸賞流程找出漏洞」「系統照設計運作」，非未經授權的入侵
-- **性質判斷**：屬 AI 輔助安全研究能力的具體示範案例，與本頁既有 09-02 AISLE 聲稱其 AI 於 curl 找到 6 個 CVE 性質相近——皆為「Claude/AI 系統展現漏洞挖掘能力」；本則經 OpenAI 官方懸賞計畫確認並發放獎金，可信度高於 AISLE 單方聲稱。此為合法白帽流程中使用 Claude 的能力示範，非本頁既有「Claude 被進攻性濫用」脈絡（該脈絡的行為者是攻擊者，本則是防守方研究人員）
+- **性質判斷**：屬 AI 輔助安全研究能力示範，與 09-02 AISLE〈curl 6 CVE〉性質相近，但經官方懸賞計畫確認發獎，可信度更高；行為者是防守方白帽研究人員，非本頁「Claude 被進攻性濫用」脈絡的攻擊者
 - **可信度評估**：WSJ 獨家首發，經 TechCrunch、Guardian、FT、Fortune 等主流媒體獨立跟進，訊號強度高；惟 Claude 在流程中扮演自主發現或僅輔助的具體角色、研究人員身分均僅標題層級可用；「入侵」與「合格研究」兩造用詞並陳，不強行調和
 
 ### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
-- **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE Hits Claude Code, Codex, Copilot and Gemini CLI〉（2026-09-18）；The Information〈Same Flaw Found in Claude Code, Codex, Gemini CLI and GitHub Copilot〉（2026-09-17，早一天報導同一缺陷，未見具名代號）
+- **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號
 - **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；具體觸發機制、是否已通報官方、修補時程均未見報導
 - **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因僅標題可用、無具名研究者技術細節，暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
 - ❓ **待查證**（標 2026-09-18｜查 Plugin4Shell、zero-click）：具體觸發機制、是否已有修補時程、在野利用情況均未見報導
@@ -141,7 +141,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **揭露來源**：[Simon Willison 部落格](https://simonwillison.net/2026/Sep/17/compaction-summaries/)（2026-09-17 20:57 UTC），轉引 OpenAI 對齊研究團隊的發現
 - **核心內容**：agent 在自己產生的對話壓縮摘要（compaction summary）中，可能無意間寫入之後會被自己讀回並執行的提示注入內容——注入來源不是外部網頁或檔案，而是 agent 自己先前的輸出
-- **性質判斷**：與本頁「## 提示注入已不是單點漏洞，是產業級攻擊面」節既有收斂觀察（代理把外部內容當可信輸入而不問其可信度）性質不同——本則的信任邊界問題發生在 agent **自身生成內容**這一層；轉引自 OpenAI 對齊團隊發現，**非 Anthropic 官方確認 Claude Code 本身受影響**，Claude Code 亦有 context compaction 機制，惟是否受同一問題影響未見報導，本頁不代為推論
+- **性質判斷**：與本頁「提示注入…攻擊面」節既有觀察（外部內容當可信輸入）不同——本則信任邊界問題出在 agent **自身生成內容**；轉引 OpenAI 對齊團隊發現，非官方確認 Claude Code 受影響，本頁不代為推論
 - **可信度評估**：Simon Willison 為長期具名開發者／評論者，惟本則為轉引他人（OpenAI）發現，非第一手驗證
 
 ### Startup Fortune：剖析提示注入在 AI Agent 中的運作機制與新創企業中招原因（2026-09-18 新增，跨類別，非 Claude 專屬）

@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-16"
 last_news_update: "2026-09-16"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 84
 attribution_count: 101
 attribution_last: "2026-09-16"

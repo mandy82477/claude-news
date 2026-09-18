@@ -72,7 +72,7 @@
 
 **為何熱：** MarkTechPost、Unite.AI、The Verge、VentureBeat、The New Stack、ZDNET 六家科技媒體 2026-09-17 同日獨立報導。
 
-**快速上手：** ❓ 待查證（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）：本次抓取僅取得官方文件標題（[claude-projects.md](https://code.claude.com/docs/en/claude-projects.md)），未取得具體操作步驟，無法給出可執行指令。
+**快速上手：** ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**具體操作步驟**：本次抓取僅取得官方文件標題（[claude-projects.md](https://code.claude.com/docs/en/claude-projects.md)），未取得可執行指令。
 
 **注意事項：** ZDNET 指出本機端開發者對應能力仍要等；The New Stack 提醒多 agent 並行長時間運作可能快速衝高方案用量；細節未經官方原文查證。
 

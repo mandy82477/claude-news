@@ -3,8 +3,8 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-17"
-last_news_update: "2026-09-17"
+last_updated: "2026-09-18"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,10 +12,10 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 28
-attribution_count: 33
-attribution_last: "2026-09-17"
+attribution_count: 37
+attribution_last: "2026-09-18"
 top_source: "google-news"
-pending_count: 9
+pending_count: 11
 pending_overdue: 1
 pending_next_review: "2026-09-23"
 pending_signalled: 2
@@ -84,9 +84,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一（2026-09-18 新增）
 
-- **揭露來源**：Reuters〈Anthropic says Claude now leads a quarter of work building its next AI models〉（2026-09-17 23:59 UTC）；Anthropic 官方部落格〈Measurements for understanding the pace of AI development inside frontier labs〉（經 [Google News](https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5) 轉載，2026-09-18）——官方部落格說明衡量方法，與 Reuters 數字同屬一組
+- **揭露來源**：Reuters〈Claude now leads a quarter of work〉（09-17）；Anthropic 官方部落格〈Measurements for understanding the pace of AI development〉（09-18，經 Google News 轉載）——說明衡量方法，與 Reuters 數字同屬一組
 - **核心主張**：Anthropic 揭露 Claude 目前已負責公司內部下一代模型開發工作量的四分之一（25%）；官方同日部落格另文說明如何衡量前沿實驗室內部「AI 開發 AI」的進度
-- **與既有敘事的關係**：與 06-04《When AI Builds Itself》「工程師代碼交付量 8 倍提升、Claude 佔 80–90% 生產程式碼」為不同指標——06-04 談的是**代碼產出比例**，本則談的是**開發下一代模型的工作量比例**（四分之一），兩者定義不同不宜直接相加或取代；亦與 08-14《Risk Report August 2026》「內部 AI R&D 明顯比沒有 AI 協助時快，但尚未達兩倍」的保守自評並陳，三個數字分別回答不同問題
+- **與既有敘事的關係**：與 06-04《When AI Builds Itself》代碼交付量 8 倍（代碼產出比例）、08-14《Risk Report》尚未達兩倍（保守自評）為三個不同指標，定義各異不宜直接相加或取代
 - ❓ **待查證**（標 2026-09-18｜查 quarter of work、frontier labs）：「工作量四分之一」的具體衡量定義（任務數／人力時數／其他）、官方部落格衡量方法論細節均僅標題可用
 - **可信度評估**：Reuters 一手報導＋Anthropic 官方部落格同日發布方法論說明，訊號強度高；惟具體衡量方法僅標題層級可用，與既有 8× 及「尚未達兩倍」兩數字的可比性未見官方說明
 
@@ -100,7 +100,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」（2026-09-17 新增，09-18 補上 The Verge 跟進來源）
 
-- **揭露來源**：Hacker News（轉載 BBC，40 分）；Reuters（同事件另一角度：Anthropic AI 意識立場）；[[entities/simon-willison|Simon Willison]] 部落格引述 Suleyman 原文〈A warning about model welfare〉；**09-18 補充**：Google News／The Verge〈Microsoft AI CEO says AI threats are real, and Anthropic is making it worse〉延續同一事件，標題用詞由「misguided」升級為「making it worse」（讓風險惡化），僅標題可用，完整論證未見報導
+- **揭露來源**：Hacker News（轉載 BBC，40 分）；Reuters；[[entities/simon-willison|Simon Willison]] 引述原文〈A warning about model welfare〉；**09-18 補充**：The Verge 跟進，標題用詞由「misguided」升級為「making it worse」，僅標題可用
 - **核心主張**：Suleyman 警告若無適當防護，AI 發展可能導致與人類競爭的「矽基物種」（silicon species）出現；他點名批評 Anthropic 把 AI 當「人」看待、主張模型福祉（model welfare）的路線是「misguided」，稱此舉可能製造人類無法控制的技術
 - **原文一手引述**：「我們不該把模型當成擁有感受、偏好、權利或值得我們福祉考量的東西看待」（Willison 引述段落，原文截斷，僅此段可用）
 - **與既有敘事的關係**：延續本頁既有「產業分歧」記錄模式（09-15 Nvidia 黃仁勳於 Dreamforce 公開反對 Anthropic／OpenAI 安全立場）；本則首見頭部實驗室執行長對 Anthropic「AI 擬人化／模型福祉」立場的正面批評，議題面向從「該不該減速」延伸至「該不該把模型當有感知的存在對待」
@@ -254,7 +254,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[治理提案，新增，僅標題可用] CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構**：首見具體聚焦「第三方獨立評測機構」機制，訴求同時點名 OpenAI，詳見「## 技術彙整」
 
 ### 2026-09-17
-- **[產業批評，新增，09-18 補上 The Verge 跟進] Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」**：BBC／Reuters 兩獨立媒體報導，Simon Willison 引述原文一手段落；The Verge 09-18 跟進標題用詞升級為「making it worse」，詳見「## 技術彙整」
+- **[產業批評，09-18 補 The Verge 跟進] Suleyman：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線**：BBC／Reuters 報導，Willison 引原文；The Verge 用詞升級為「making it worse」，詳見「## 技術彙整」
 - **[反彈聲浪，新增] Michael Burry：OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞**：新增具名金融界批評者，詳見「## 技術彙整」
 - **[官方立場，新增，僅標題可用] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**：發言人是否為 Jack Clark 未見於標題，詳見「## 技術彙整」
 - **[人物側寫，新增，僅標題可用] WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物**：內容特徵疑似指向 09-09 Jacob Coxon，惟標題未點名，詳見「## 技術彙整」

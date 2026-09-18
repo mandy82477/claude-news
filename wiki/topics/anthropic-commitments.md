@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-05"
 last_news_update: "2026-09-01"
 status_main: "ongoing"
-days_since_news: 16
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 16
+days_since_news_subtree: 17
 inbound_links: 12
 attribution_count: 0
 attribution_last: null
