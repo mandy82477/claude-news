@@ -3,8 +3,8 @@ page: "topics/anthropic-agent-stack"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-16"
-last_news_update: "2026-09-16"
+last_updated: "2026-09-18"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-18
+**最後新聞更新：** 2026-09-18
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-09-16）
-> 子頁 SDK v1.6.0 再擴充 Managed Agents 的 auto mode 工具權限功能（09-11 v1.5.0 之後第二筆），官方原文截斷、細節未知，見 [[entities/managed-agents]]。
+> **最近變動**（2026-09-18）
+> Claude Code Projects 進入 Beta（六家科技媒體 2026-09-17 同日報導，官方文件索引新增專頁），描述為協調多個 agent 執行緒、關閉筆電後仍持續運作的雲端並行 session；是否構成第九塊積木、與既有 agent view／Managed Agents 的分界，待官方文件內容查證後補卡，詳見 [[entities/claude-code]]「近期平台與文件異動」。
 
 ---
 
