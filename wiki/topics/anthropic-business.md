@@ -102,6 +102,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。
 - ⟨Q-03⟩ ❓ **待查證**（標 2026-09-06｜查 calcalistech、IPO 延後｜複 2026-09-20｜訊 2026-09-08）｜**IPO 時程是否已延後**：calcalistech 標題稱 IPO 已延後；同日 ETF Trends 標題卻暗示已有 S-1 可解讀，兩者矛盾，均僅標題可用，原文未能取得。
 - **訊 2026-09-07 追蹤**：Forbes 報導 IPO 延至 10 月中，同步鎖定 $150 億信用額度（此前 08-18 報導規模為「逾 100 億」，本次更具體）；仍為單一媒體來源，未見官方確認，詳見「IPO 走到哪一格」表。
@@ -191,6 +192,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 訊號 | 說明 | 來源 | 來源等級 |
 |------|------|------|------|
+| Anthropic 承諾投入 10 億美元支持 Accenture 內嵌評估者計畫 | 選定 Accenture 為首位獨立評估前沿 AI 安全的「內嵌評估者」，回應 CEO「We Must Pace the Frontier」一文承諾 | [Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)；Google News/The Washington Post，2026-09-19 | 官方一手／一級媒體引公司 |
 | Futurism：獲利宣稱「未計入模型開發成本」 | 評論文章，與 09-14 已記錄之 HN 討論同一批評角度，非新增數字 | Google News/Futurism，2026-09-15 | 一級媒體 |
 | Anthropic 啟動 500 萬美元身心福祉評測獎助計畫 | 官方部落格：資助獨立研究團隊開發開源評測工具，衡量 AI 對使用者身心福祉的影響 | [Anthropic Blog](https://www.anthropic.com/news/wellbeing-research-grants)，2026-08-26 | 官方一手 |
 | CNBC：Anthropic 超越 OpenAI 成最熱門 AI 新創 | 分析相應股市贏家輸家；與同日 The Information 報導方向一致 | Google News/CNBC，2026-08-19 | 一級媒體 |
@@ -260,6 +262,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
+- **反壟斷訴訟指控「踩煞車」呼籲構成合謀（2026-09-19）**：The Hill、Politico、Bloomberg Law News 同日報導新提告，指控 Anthropic 與 OpenAI、SpaceXAI、Google 就 CEO「We Must Pace the Frontier」一文呼籲的產業同步減速構成反壟斷合謀；具體原告身分、求償內容與訴訟進度均未見報導細節，僅標題可用（Google News/The Hill；Google News/Politico；Google News/Bloomberg Law News）。
 - **國防部擬十月前遷出全部機密 AI 工作負載（DefenseScoop，2026-09-11）**：具體原因、替代供應商、涉及的 Claude 產品線均未見報導，僅標題可用；影響範圍限於處理美國政府機密資料的用戶。
 - **企業轉向開源模型分流訂單**：紐約時報報導多家大型企業正將工作負載從 OpenAI、Anthropic 轉往開源模型；Hacker News 討論串達 274 分（高熱度），留言中有人認為若兩家公司不大幅降價，將面臨更大規模的轉單壓力（推論，論壇留言非官方數據）。與本頁既有「補貼不可持續」「競品分流」（DeepSeek、OpenCode）等結構性商業風險同屬一類，惟本則首次明確點出「開源模型」（而非特定競品公司）作為分流去向的整體類別，具體受影響企業名稱、轉移規模均未見報導細節，僅標題與 HN 討論層級資訊（[NYT](https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html)，2026-09-04）。
 - **Nvidia-Lambda-Anthropic 循環融資質疑**：24/7 Wall St. 發表分析文章，質疑 Nvidia 支持之雲端業者 Lambda 與 Anthropic 簽署的 350 億美元雲端運算合約（見「哪個合作會改到你用的 Claude」表 09-01 列）是否構成循環融資——即 Nvidia 投資／支持的下游業者，反過來以巨額合約向 Anthropic 採購運算力，資金流可能部分回流 Nvidia 生態圈。與既有 07-22 AMD 交易 HN 討論串「ouroboros circle（銜尾蛇循環）」質疑同屬同一類「晶片商與 AI 實驗室互相投資推升彼此估值」商業模式疑慮；具體資金流向證據、Nvidia 於 Lambda 之實際投資規模未見報導，屬單一媒體分析評論，非官方或監理機構調查結論（推論）（Google News/24/7 Wall St.，2026-09-02）。
@@ -308,7 +311,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
 - **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
-- **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費方式與上線時間未見報導（MacRumors／HN 188 分）
+- **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費方式與上線時間未見報導（MacRumors／HN 188 分）**訊 2026-09-19**：Reddit r/ClaudeAI 週熱門重新討論同一則程式碼線索，未見新增細節（Reddit）
 - **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）
 - **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
 - **LoanPro**（2026-09-09）：貸款管理平台採用建構在 AWS 與 Claude 上的 AI 原生客服介面，客服通話時間最多縮短 15%，具體導入規模未見報導（citybiz）
@@ -494,6 +497,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-19
+- **[重大事件] Anthropic 宣布 Accenture 出任首位「內嵌評估者」，獨立評估前沿 AI 安全；Washington Post 稱同步承諾投入 10 億美元資金，呼應 CEO「We Must Pace the Frontier」一文承諾**（Anthropic Blog；Google News/The Washington Post）
+- **[商業風險] The Hill、Politico、Bloomberg Law News 同日報導：新提告指控 Anthropic 與 OpenAI、SpaceXAI、Google 就「踩煞車」呼籲構成反壟斷合謀**（Google News/The Hill；Google News/Politico；Google News/Bloomberg Law News）
+- **[IPO前瞻] NYT：Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比**（Google News/The New York Times）
+- **[生命科學布局] TechCrunch、Yahoo Finance 跟進 09-18 已記錄之自有生物實驗室報導：Anthropic 建置專屬濕實驗室，作為 AI 驅動藥物開發計畫一環**（Google News/TechCrunch；Google News/Yahoo Finance）
 
 #### 2026-09-18
 - **[生命科學布局] 官方：推出生命科學驗證計畫（LSVP），開放生醫專業人士使用 Mythos、Opus、Sonnet 並放寬部分安全限制，先以機構／團隊 Beta 開放**（Anthropic Blog）

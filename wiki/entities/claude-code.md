@@ -109,7 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | Windows Desktop 崩潰／孤兒程序／session 消失，紀錄可能被靜默清除（#80444 #42776 #26302 #53247 #26452 #59248） | Windows Desktop（含 Cursor 擴充套件）使用者 | 🔴 | 升級前備份重要對話；當機後登出或重開機再試；別依賴自動保留機制 |
 | Cowork 的 Edit/Write 靜默截斷檔案（#53940） | Windows 上用 Cowork 的人 | 🔴 | 寫入後自行核對檔案長度；官方未給修復時程（44 則留言，可重現） |
-| 進程增長至 120GB+ 遭 OOM killed（#4953） | Linux 上長時間執行的 session | 🔴 | 長工作分段、定期重開 session（97 則留言，可重現） |
+| 進程增長至 120GB+ 遭 OOM killed（#4953 #11315） | Linux 上長時間執行的 session | 🔴 | 長工作分段、定期重開 session（97 則留言，可重現） |
 | Cowork VM bundle 膨脹至 10GB，啟動與 UI 持續變慢（#22543） | 用桌面版 Cowork 的人 | 🔴 | 近期避免在 Cowork 處理大型檔案或大量寫入（官方標高優先） |
 | 改 MCP／hooks／plugin 設定要重啟整個 session 才生效（#24057） | 用 MCP 的人 | 🔴 | 改設定前先收尾，重啟會失去現有內容 |
 | MCP server 沒有 token 刷新機制（#5706） | 自建 MCP server 的人 | 🔴 | 改用長效期 token |
@@ -374,7 +374,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高）**：Codex、Amp、Cursor 已採用 [AGENTS.md](https://agents.md/)，Claude Code 仍僅認 `CLAUDE.md`；官方尚未回應。
+- ✅ **已修復 v2.1.277**｜**AGENTS.md 支援上線（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高的已知問題）**：v2.1.277（2026-09-18）起專案內若無 `CLAUDE.md`，Claude Code 改讀 [AGENTS.md](https://agents.md/)，可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry；`.agents/skills` 資料夾目前不含在內（HN 討論串指出，[原文](https://code.claude.com/docs/en/changelog)）。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
