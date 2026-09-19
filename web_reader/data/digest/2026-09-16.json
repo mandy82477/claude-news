@@ -341,7 +341,13 @@
       "time": "09/16 15:03",
       "sentiment": "",
       "body": "把自然語言指令轉成可靠 Android 自動化操作的框架，可與 Antigravity、Codex、Claude Code 等 AI 編碼助手整合，聲稱在 AndroidWorld Benchmark 達 99%+ 成功率，6,291 星，2 個來源同日報導。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-tools",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Nanako0129/sepia",
