@@ -77,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-05⟩ 跨 session 記憶持久化：Dreaming 兩個月後仍為 Research Preview、試用價值「⏳ 觀望」；社群工具（OKF）跨工具跨模型，Dreaming（僅限 Anthropic 生態）無法取代；OzBrain（2026-08-21 Show HN，score 69，跨 2 來源）進一步鎖定「團隊共用」而非單一使用者跨 session 記憶，主張取代筆記/任務管理工具而非僅作輔助記憶層，凸顯 Dreaming 目前仍是單一 Anthropic 生態內的個人記憶方案，未觸及團隊共享面向；v0.117.0 的 SDK 級「dreaming」支援用途未明（[[entities/managed-agents]] 標記待更多資訊確認是既有機制正式曝光還是新能力）；2026-08-25 新增兩個機制互異的記憶工具——ambient-context 走「被動螢幕活動記錄」路線（不觸碰 agent 本身狀態，靠外部日誌供 Claude 讀取），mindmuxai/brain.md 走「agent 決策/需求顯式寫入」路線，皆與 Dreaming 的自動記憶鞏固方向不同，官方仍無對應，狀態暫不變動。
 - ⟨G-06⟩ 多代理 PR/程式碼審查：官方 `/code-review` 已評 ✅ 推薦，v2.1.218 進一步改為背景 subagent 執行、不再佔用對話內容，並維持 stacked slash commands 作為審查對象，易用性再提升；但社群「adversarial 多模型審查抓到更多真實 bug」的說法尚無雙方公開對照數據佐證，狀態未變。
 - ⟨G-07⟩ 額度/用量監控：個人重度使用者缺口依舊，迫切性隨計費轉換 deadline 逼近而升高，見 [[feature-radar]] ⏰ 倒數中。
-- ⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）：v2.1.277（2026-09-18）起專案無 CLAUDE.md 時 Claude Code 改讀 AGENTS.md，可於 `/config`「Project instructions」調整，缺口轉為已產品化；尚未支援 Bedrock、Vertex、Foundry，`.agents/skills` 資料夾也未涵蓋（HN 討論指出），完整互操作仍未達成。
+- ⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）：v2.1.277 起無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整，缺口轉為已產品化；尚未支援 Bedrock、Vertex、Foundry，`.agents/skills` 也未涵蓋，完整互操作仍未達成。
 - ⟨G-09⟩ 多平行 agent 即時可觀測性／協調地圖：官方 Agent View 為**列表式** session 管理，非跨 agent 即時狀態流的 live map；當數十至上千平行 agent 併跑時「誰卡住、誰在等、彼此依賴」缺乏即時可觀測面，社群自建地圖式檢視器補位，官方無對應方向。2026-07-15 v2.1.211 新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，讓 `stream-json` 輸出包含 subagent 文字與思考內容，為社群建構觀測工具提供官方資料來源；2026-07-17 v2.1.212 將 `/fork` 改為建立獨立背景 session（`claude agents` 自成一列），原同 session 子 agent 行為更名 `/subtask`，使多開背景任務與同 session 委派的列表可見度更清楚拆分，但本身仍非官方 live map 產品，狀態未變。
 - ⟨G-10⟩ Agent 間直接通訊協定：與上一列「即時可觀測性／協調地圖」的區別：協調地圖是**被動觀測**（讀 transcript/log，agent 本身不互相收送訊息）；本列是**主動通訊**（agent 間或跨機器交換訊息以協調依賴順序），先前只能靠檔案系統或外部工具中繼。
   - 2026-08-09 官方文件確認跨 session 訊息功能，對應 issue #24798（[[entities/claude-code]] 已知問題轉 ✅ 已修復 v2.1.224）；留言持續累積（60→75→78），核心訴求其實是「依相依性排序高階流程步驟」的工作流編排。
@@ -190,7 +190,7 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 
 ### 2026-09-19
 - **「Agent 間直接通訊協定」列查證更新（使用者提問）**：⟨Q-01⟩ 結案——跨機器已涵蓋、原生 Windows 自 v2.1.234 起支援；v2.1.224 release notes 本就載明此功能（08-08、08-09 條目稱「changelog 未見」為漏看）。#28300 的共享頻道式 A2A 仍缺，維持 🧪。
-- **⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）轉已產品化**：v2.1.277 起專案無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整；全站讚數最高已知問題 #6235（396 則留言、6643 個讚）就此結案。Bedrock/Vertex/Foundry 與 `.agents/skills` 資料夾尚未涵蓋，矩陣狀態由 ❌ 無官方對應改列 ✅ 已產品化。
+- **⟨G-08⟩ AGENTS.md 轉已產品化**：v2.1.277 起無 CLAUDE.md 時改讀 AGENTS.md；讚數最高已知問題 #6235 就此結案。Bedrock/Vertex/Foundry、`.agents/skills` 尚未涵蓋，矩陣狀態由 ❌ 改列 ✅ 已產品化。
 
 ### 2026-09-16
 - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，與 09-15 The Information 報導方向一致；矩陣狀態維持 ⚡ 部分對應，未見具體規模數字，不升級。
