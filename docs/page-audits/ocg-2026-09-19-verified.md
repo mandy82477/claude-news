@@ -68,3 +68,19 @@
 1. 這頁的病不是版面，是**「官方對應」欄沒有人定期對官方一手**——14 列裡至少 5 列今天是錯的，而且錯的方向一致（低估官方）；任何新設計都要先回答「這一欄誰、多久、拿什麼對一次」，lint 步驟要能直接跑 `gh issue view` 與 CHANGELOG grep。
 2. issue 數字（留言數、讚數）是快變事實又沒有看守，關閉狀態比數字重要十倍；建議狀態欄寫 OPEN／CLOSED（日期＋官方怎麼答），數字退場或只留量級。
 3. AGENTS.md 列從「全站讚數之最的未解缺口」變成「已解，附三個邊界」，這會連動 index 鉤子、claude-code 已知問題、community-tech-tools 等至少 10 頁（`grep -l AGENTS.md wiki/`）——屬事實更正必回掃，跨維護者的走轉知帳本。
+
+## 六、補查（設計者提案 §9 九項，2026-09-19 同日）
+
+| # | 題 | 官方一手 | 判定 |
+|---|---|---|---|
+| 1a | Dynamic workflows 現況 | [workflows](https://code.claude.com/docs/en/workflows)：「Dynamic workflows are available on all paid plans, with Anthropic API access, and on Amazon Bedrock, Google Cloud's Agent Platform, and Microsoft Foundry. On Pro, turn them on from the Dynamic workflows row in `/config`.」文件已無 research preview 字樣；同文件「When an agent hits your claude.ai usage limit, the run pauses rather than failing that agent」 | L55「Research Preview」過期。退款爭議（UltraCode 1.7M token）官方無專文，**未查得**，不得寫成已解或未解 |
+| 1b | Claude Code Projects | [claude-projects](https://code.claude.com/docs/en/claude-projects)：「Projects are in public beta on Pro and Max plans and rolling out gradually … They aren't available on Team or Enterprise plans yet.」定位：一個對話協調多個平行雲端 session | 可列為「多 agent 工作流」列的官方對應之一（public beta）；是否解「看不到誰卡住」官方未明說，**不寫** |
+| 1c | 看不到誰卡住 | [agent-view](https://code.claude.com/docs/en/agent-view)：「Agent view is in research preview.」「appears as a row showing whether it's working, waiting on you, or done」；一般 session 提示列「`← 2 agents`」計數等你的背景 agent | L66 狀態 ❌ 與同列官方對應欄互打屬實；官方有對應（研究預覽）→ 🧪 |
+| 2 | Outcomes／`/goal` | platform [define-outcomes](https://platform.claude.com/docs/en/managed-agents/define-outcomes)：Status: Beta（同 Managed Agents beta header）；`/goal` 文件無 preview／beta 標示，check-ins 需 v2.1.234 以上 | Outcomes＝beta；`/goal` 已是一般功能 |
+| 3 | 個人端模型路由 | [model-config](https://code.claude.com/docs/en/model-config)：`opusplan`「uses `opus` during plan mode, then switches to `sonnet` for execution」；`availableModels`／`enforceAvailableModels` 屬 managed／policy 設定 | 個人端官方只有 `opusplan` 這一種固定切換；依成本或任務動態路由**官方文件未見**（否定證明僅止於 model-config 一頁） |
+| 4 | per-request token 拆解 | [costs](https://code.claude.com/docs/en/costs)：`/usage` 方案用量拆解到 skills／subagents／plugins／個別 MCP server 的百分比、行為旗標（≥10%）、每個 loop 的 token；「The figures are approximate and computed from local session history on this machine, so usage from other devices or claude.ai is not included.」 | 有歸因拆解、無逐請求金額；「成本透明度 ❌ 結構性未解」要改寫成「有歸因、缺逐請求與跨裝置」 |
+| 5 | Cowork 擴展日與範圍（L153 逾期懸置） | 官方 blog [cowork-web-mobile](https://claude.com/blog/cowork-web-mobile)：發布日 **July 7, 2026**；「Beta access is rolling out over the next several weeks starting with Max users」；「Desktop remains the place for deep work, and it's the full Cowork experience, where Claude can also use your local files and browser.」 | 日期＝**07-07**（07-08 是日報日）；L43／L153「正式擴展」不成立，官方用詞是 **beta access**；L153 懸置可結案：網頁／行動版**不等同**桌面，不能用本機檔案與瀏覽器 |
+| 6 | 四個 ❌ 的否定證明 | 官方文件索引 `code.claude.com/docs/llms.txt`（361 行）全文檢視：無 CLAUDE.md 規則遵循保證類功能、無跨 harness 操作層、無 agent 間支付／仲裁、無「AI 輔助開發副作用」對應 | 否定證明範圍＝Claude Code 文件索引＋CHANGELOG grep，寫進頁面時標「截至 2026-09-19 官方文件未見」 |
+| 7 | 兩個 ✅ | 破壞性指令防護：未重查（CHANGELOG 體量大，本輪略）；Slack 內 AI 隊友：文件索引仍列 [claude-tag](https://code.claude.com/docs/en/claude-tag) | 破壞性指令列核對日**不得**填 09-19，維持原日期 |
+| 8 | ⟨Q-02⟩ internet-court-skill | `gh api repos/internet-court/internet-court-skill`（09-19）：5,855★、106 forks、9 watchers、貢獻者 1 人、commits 4 筆、issues＋PR 共 26、建立 2026-06-16、最後 push 2026-08-19 | 星數對 watchers 650:1、4 筆 commit、一個月無更新——**採用未證實，星數不可作為熱度依據**；懸置可結案為「查過、撐不起」，該列是否留表交入口判準（單一工具，不過第 ① 條） |
+| 9 | radar 缺 v2.1.277 | 屬主編彙整工作，本波之後補（或待雲端 ingest 收到） | 待辦 |
