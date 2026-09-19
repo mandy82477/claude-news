@@ -374,7 +374,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- ✅ **已修復 v2.1.277**｜**AGENTS.md 支援上線（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高的已知問題）**：v2.1.277（2026-09-18）起專案內若無 `CLAUDE.md`，Claude Code 改讀 [AGENTS.md](https://agents.md/)，可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry；`.agents/skills` 資料夾目前不含在內（HN 討論串指出，[原文](https://code.claude.com/docs/en/changelog)）。
+- ✅ **已修復 v2.1.277**｜**AGENTS.md 支援上線（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高）**：無 CLAUDE.md 時改讀 [AGENTS.md](https://agents.md/)，可於 `/config` 調整；尚未支援 Bedrock、Vertex、Foundry，`.agents/skills` 資料夾也未涵蓋（HN 討論指出）。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
@@ -449,8 +449,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
-| **v2.1.278** | 2026-09-19 | Auto mode 預設改用 server-side classifier，Claude API／Enterprise／Bedrock／Vertex／Foundry／閘道器用戶不再為分類器耗用額外計費（`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為，退回後產生計費會顯示警告）；`/status` 新增一列顯示分類器是否跑在伺服器端（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
-| **v2.1.277** | 2026-09-18 | 新增 AGENTS.md 支援：專案無 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry；同批新增 `CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY` 設定（見 [Changelog](https://code.claude.com/docs/en/changelog)）|
+| **v2.1.278** | 2026-09-19 | Auto mode 預設免計費改用 server-side classifier（API／Enterprise／Bedrock／Vertex／Foundry／閘道器）；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
+| **v2.1.277** | 2026-09-18 | 新增 AGENTS.md 支援：無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整；尚未支援 Bedrock、Vertex、Foundry（見 [Changelog](https://code.claude.com/docs/en/changelog)）|
 | **anthropic-sdk-python v1.7.0** | 2026-09-18 | Features：新增 rate limit 群組可帶 `display_name` 欄位（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0)）|
 | **anthropic-sdk-typescript vertex-sdk v0.19.10** | 2026-09-18 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.10)）|
 | **anthropic-sdk-typescript google-cloud-sdk v0.0.13** | 2026-09-18 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13)）|
