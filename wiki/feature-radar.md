@@ -273,7 +273,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **自訂專案 Transcript 目錄短名稱**（`CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，v2.1.234） | 2026-08-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Auto 模式預設化**（⚠️ Breaking change：8/14 起 auto 成為 Pro／Max／Team 預設權限模式；免收分類器 token 費；Enterprise 與雲端平台仍選用制） | 2026-08-14 生效（08-07 公告，08-10 官方部落格確認） | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code 跨 session 訊息互通**（需 v2.1.224+、macOS／Linux；`ListAgents` 探索可連線 session、`SendMessage` 指定名稱傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code 跨 session 訊息互通**（v2.1.224+，Windows v2.1.234+；`ListAgents` 探索 session、`SendMessage` 指名傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.232**（Subagent forking 預設開啟，`subagent_type: "fork"` 繼承完整對話與 prompt cache；派工行為亦調整，原文截斷） | 2026-08-13 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **API Inference Hooks**（Enterprise 組織 beta，claude.ai／Cowork／Claude Code 上受管治 prompt 可導向企業自有 AI 安全伺服器） | 2026-08-05 | 🔥 | ⏳ 觀望 | Beta（Enterprise） |
@@ -608,14 +608,14 @@ claude --worktree <GitLab-MR-URL>
 
 ---
 
-### Claude Code 新增跨 session 訊息互通功能（macOS/Linux）
-**發布：** 2026-08-08（官方文件確認：code.claude.com/docs/en/cross-session-messaging） | **狀態：** 正式發布
+### Claude Code 新增跨 session 訊息互通功能（macOS／Linux／Windows）
+**發布：** 2026-08-07（v2.1.224 隨版發布；官方文件 08-09 確認：code.claude.com/docs/en/cross-session-messaging） | **狀態：** 正式發布
 
-**是什麼：** Anthropic 官方文件確認 Claude Code 新增跨 session 訊息功能，需 Claude Code v2.1.224 以上、支援 macOS 與 Linux。條件滿足時該功能預設開啟、無需額外設定；用 `ListAgents` 探索可連線的其他 session，並以 `SendMessage` 指定名稱跨 session 傳訊；同一機制也涵蓋單一 session／team 內對 subagent 與隊友傳訊。
+**是什麼：** Anthropic 官方文件確認 Claude Code 新增跨 session 訊息功能，需 Claude Code v2.1.224 以上（macOS、Linux）或 v2.1.234 以上（原生 Windows）。條件滿足時該功能預設開啟、無需額外設定；用 `ListAgents` 探索可連線的其他 session，並以 `SendMessage` 指定名稱跨 session 傳訊，對象含他機與雲端 session（經 Remote Control，v2.1.225 起可主動發起）；同一機制也涵蓋單一 session／team 內對 subagent 與隊友傳訊。
 
 **為何熱：** 原先僅有 MacRumors、The Mac Observer、finance.biggo.com、Inshorts、9to5Mac 等 5 家媒體同日報導（當時尚無官方佐證），今日查得官方文件正式驗證，是 multi-agent 協作基礎設施的重要一步，與 [[topics/official-community-gap]]「Agent 間直接通訊協定」列直接相關。
 
-**現在要試嗎：** 適合已在平行跑多個 Claude Code session、需要跨 session 交接工作的使用者，滿足版本與平台需求後直接可用；Windows 使用者暫不適用。
+**現在要試嗎：** 適合已在平行跑多個 Claude Code session、需要跨 session 交接工作的使用者，滿足版本需求後直接可用（原生 Windows 需 v2.1.234 以上）。
 
 **快速上手：**
 ```
@@ -624,7 +624,7 @@ ListAgents        # 探索可連線的其他 session
 SendMessage        # 依名稱傳訊給指定 session／subagent／team 隊友
 ```
 
-**注意事項：** 需 Claude Code v2.1.224 以上，僅支援 macOS 與 Linux；官方文件未說明訊息內容是否受任何隔離或稽核限制。
+**注意事項：** 版本需求見上；官方文件提供收訊與送出控管——`crossSessionInbound`（accept／hold／refuse）、`isolatePeerMachines`（送到他機前需核准），也可對 `SendMessage`／`ListAgents` 設 deny 規則；訊息只傳純文字、不代批權限。
 
 ---
 
