@@ -70,7 +70,7 @@
    - GitHub #77136（106 留言／517 反應），跨 Opus 4.7／4.8／5.0／Fable 5 共同問題，官方尚無回應
 
 5. **[[entities/claude-code]] — SDK files／skills 命名空間轉正 GA**
-   - httpx2／beta 介面形狀變動；已知問題持續累積（AGENTS.md、session 額度異常、Bring Back Buddy）
+   - httpx2／beta 介面形狀變動；已知問題持續累積（session 額度異常、Bring Back Buddy；AGENTS.md 已於 v2.1.277 修復）
 
 ### 🟡 持續追蹤
 
