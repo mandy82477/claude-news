@@ -581,10 +581,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.124** | 2026-04-30 | 系統提示新增預算超出提醒機制（+166 tokens）|
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
-### 近期重要更新（2026 Q2 精選）
-
-> Agentic 能力擴展與安全強化事件見上方「已知問題」與下方「歷史記錄」，安裝安全警示已移入「🛡️ 安全與隱私」組，此節不重複列出。相關人物論述見 [[entities/cat-wu]]、[[entities/boris-cherny]]；agent 框架細節見 [[entities/managed-agents]]。
-
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
 - **桌面版官方文件：Auto Mode 模型門檻與 Extended Thinking 預設開啟（2026-09-02 查證，Official Docs）**：官方 Claude Code 桌面版文件新增／異動段落載明，Auto mode 現開放給所有 Anthropic API 使用者，但需 **Claude Opus 4.6 以上或 Sonnet 4.6 以上**版本方可使用；文件同時說明 adaptive reasoning 模式下 `MAX_THINKING_TOKENS` 的行為，並明確標註 **Extended thinking 現為預設開啟**。屬既有功能的門檻／預設行為澄清（文件未附具體生效版本號或日期），非新指令旗標；見 [官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **任務之間執行 `/clear` 提升 token 效益（2026-08-14 官方部落格，HN 268 分，今日互動最高）**：Anthropic 官方部落格談如何讓每個 token 發揮最大價值，具體建議包含在不相關任務之間執行 `/clear`——可避免先前無關的 context 被送回模型、佔用預算與拉低訊噪比；屬使用建議而非新功能或新指令。

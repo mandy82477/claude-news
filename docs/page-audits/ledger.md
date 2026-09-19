@@ -102,6 +102,9 @@
 
 ## 使用者裁決紀錄
 
+- **2026-09-19｜claude-code「近期重要更新（2026 Q2 精選）」整節砍**（第 4 波裁決點，使用者「砍」）：該節第 4 波照預設執行後只剩一行指路；砍前核過——安裝安全警示已住「已知問題」🛡️ 組、cat-wu／boris-cherny 在「相關議題」有家、managed-agents 頁內另有多處連結、全庫無錨點指進此節、節內無懸置標記。第 4 波回訪第 4 項結案。
+- **2026-09-19｜四人物頁不併**（第 7 波裁決點，使用者「人物是不併」）：`entities/bernanke`／`jensen-huang`／`robert-mahari`／`amir-salek` 維持獨立頁，不併入 `topics/anthropic-business`。第 7 波回訪第 4 項結案。
+
 - **2026-09-06｜併三個人物頁**：`entities/chris-olah`、`tom-brown`、`chris-ciauri` 併入 `topics/anthropic-government-policy`「誰在動這幾條線」一行一人，三頁留轉址殼（第 6 波裁決點 1，使用者「好」）。
 - **2026-09-06｜ai-agent-safety「目前結論」整節砍**：第 5 波預設留的 4 列「跨事件的四條結論」依設計者替代去向併入「拿什麼擋」引言與「官方現在擋到哪」第 3 點，一列不消失（使用者「好」）。
 

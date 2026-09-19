@@ -6545,3 +6545,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **根因**：08-08、08-09 兩輪都寫「GitHub release changelog 未見對應條目」；08-09 官方文件已指明最低版本 v2.1.224，卻沒回頭核該版 release notes（該條發布當天就在）。另 Windows 版本註記只進了 [[topics/anthropic-agent-stack]]，[[feature-radar]] 與 [[topics/official-community-gap]] 仍寫「限 macOS／Linux」。
 - **處置**：(a) [[feature-radar]] 該條列與專節補 Windows v2.1.234、他機／雲端 session、收訊控管，發布日改 08-07。(b) [[topics/official-community-gap]]「Agent 間直接通訊協定」列：⟨Q-01⟩ 結案（跨機器已涵蓋、走 Remote Control；#28300 的 MCP 共享頻道式 A2A 與依賴排序仍未提供，狀態維持 🧪 部分產品化）；G-10 的 Windows/MSIX 註記由「支援範圍外平台」改為「文件載明原生 Windows 自 v2.1.234，桌面 MSIX 版是否適用未載明」；時序加 09-19。(c) [[entities/claude-code]] 隱藏註解與 v2.1.224 版本列更正 changelog 說法。(d) [[topics/community-tech-patterns-archive]] 官方趨勢觀察補 Windows 版本。
 - **歸因**：`user-query`，`data/source_attribution.jsonl` 已 append。
+
+## 2026-09-19 Query：頁面健檢兩項懸置裁決結案（使用者裁決）
+
+- **砍節**：[[entities/claude-code]]「近期重要更新（2026 Q2 精選）」整節刪除（第 4 波裁決點，懸 13 天）。該節自第 4 波起只剩一行指路；砍前核過安裝安全警示已住「已知問題」🛡️ 組、[[entities/cat-wu]]／[[entities/boris-cherny]] 在「相關議題」有家、[[entities/managed-agents]] 頁內另有多處連結、全庫無錨點指進此節、節內無懸置標記。
+- **不併**：bernanke／jensen-huang／robert-mahari／amir-salek 四人物頁維持獨立，不併入 [[topics/anthropic-business]]（第 7 波裁決點）。
+- **紀錄**：`docs/page-audits/ledger.md` 使用者裁決紀錄兩筆。
