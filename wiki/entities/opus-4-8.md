@@ -148,18 +148,7 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 - [[news/2026-05-29]]
 - [Claude Opus 4.8 官方公告](https://www.anthropic.com/news/claude-opus-4-8)
 - [Dynamic Workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code)
-
-## 下一代模型觀察：「Opus 5」傳聞（✅ 已於 2026-07-25 獲官方證實，詳見 [[entities/opus-5]]）
-
-以下歷史記錄保留傳聞階段的原始查證過程，供時序參考；Opus 5 現況與能力細節請見 [[entities/opus-5]]，不在此頁重複維護。
-
-**2026-07-24**：HackerNoon 分析近期網路流傳的 Claude Opus 5 傳聞截圖，指出「通過了截圖測試，卻未通過 API 合約層級的驗證」；與 07-13 dev.to 分析方向一致。**2026-07-25 官方正式發布 Opus 5，此傳聞真偽問題已由發布本身解答，不再懸置**（[Google News/HackerNoon](https://news.google.com/rss/articles/CBMioAFBVV95cUxQRF9EUHUybk1zS3N5T0lNdUYyVHJ1ZVl3bktrUjZZSWVQUUU3c0t0Tzh1UFdXYTdITHpRYUJJVmJ2SVhrNko1eHdUdDNHNzRtRk1xdUd0Qk81ZkRiQUNpeVVVUHhnTDZXelFhcnNOYzhsVUxGWFUwYjZJUnk3cXRpUEExalhmVi01X0w4LTVTRmZHUmMtRkJzc0ZOelJnVkVk?oc=5)，2026-07-24）。
-
-**2026-07-23**：TestingCatalog AI News 報導 Anthropic 正在為可能的 Claude Opus 5 推出做準備（[Google News/TestingCatalog AI News](https://news.google.com/rss/articles/CBMikAFBVV95cUxQRWYtODJYNVFKWk5UUXlaN0UtdTl6c2tRMlBrR0IwQ0Y1Y1htUWowSWJ6N0o0d2k4aEdqdzRQM1dzZXZwT3FhNjQ5bDhxNHV4LVVpZVJyLWd0TjFtZFpkS3RCbzlHMVdjOUc4LTQzSkFSZENpd25JQTBfWmZBMk0yZFkwaW1HNEpHT3RaLTV0RDg?oc=5)，2026-07-23）——**由 2026-07-25 正式發布確認**。
-
-**2026-07-13**：dev.to 作者 tokenmixai 於〈I Traced 4 Claude Opus 5 Signals. The Release Date Still Isn't Real Yet.〉一文中，比對 Anthropic 模型型錄、定價文件與過往發布節奏，認為「Opus 5」的存在具一定可信度，但強調坊間流傳的確切發布日期與跑分數字目前均缺乏佐證（"Opus 5 is plausible, but every exact date and benchmark circulating today is unsupported."）。單一 dev.to 分析文章，非官方訊號（[dev.to](https://dev.to/tokenmixai/i-traced-4-claude-opus-5-signals-the-release-date-still-isnt-real-yet-2f2j)，2026-07-13）。此連結於 2026-07-16 補齊（原始記錄僅有泛用網域連結）。**存在性問題已由 2026-07-25 官方發布解答。**
-
-**2026-07-20（市場推測，非官方公告）**：Proactive financial news（經 Google News 轉載，僅標題可用）報導〈Traders bet Anthropic will ship new Claude Opus model within days〉，指金融交易者押注 Anthropic 將於數日內推出新款 Claude Opus 模型（[Google News/Proactive financial news](https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUmt3Y0UyM1FRN3RYVkFvV1VrNXlpRW9BR0t4bkh3bGZ4VTdRVTF4M3RvdkQ2LTduSjlDRW5mSV9ZVHM5SW1qNkFDZkpLYUJjMmp1R0tWNUhzLWtHd3h6cW9TcWpmNjh2ZHVNcWJuRHZhNXU5c0cwd0hkMWpyRVZNRW5CQ2o3Z2dmNVhRUFlyLWVtRENnU3dEUmtCeUl6em5OdWVHdlZXSUpERjV0b3llZVRaVTVubUxXdlJwR3hBWUE4bGZaN2NnY3d3eXdjaUoyT0E?oc=5)）。**已由 2026-07-25 正式發布證實。**
+- Opus 5 傳聞階段（2026-07，已由 07-25 官方發布解答）：[dev.to 四訊號分析 07-13](https://dev.to/tokenmixai/i-traced-4-claude-opus-5-signals-the-release-date-still-isnt-real-yet-2f2j)、[Proactive 交易者押注 07-20](https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUmt3Y0UyM1FRN3RYVkFvV1VrNXlpRW9BR0t4bkh3bGZ4VTdRVTF4M3RvdkQ2LTduSjlDRW5mSV9ZVHM5SW1qNkFDZkpLYUJjMmp1R0tWNUhzLWtHd3h6cW9TcWpmNjh2ZHVNcWJuRHZhNXU5c0cwd0hkMWpyRVZNRW5CQ2o3Z2dmNVhRUFlyLWVtRENnU3dEUmtCeUl6em5OdWVHdlZXSUpERjV0b3llZVRaVTVubUxXdlJwR3hBWUE4bGZaN2NnY3d3eXdjaUoyT0E?oc=5)、[TestingCatalog 07-23](https://news.google.com/rss/articles/CBMikAFBVV95cUxQRWYtODJYNVFKWk5UUXlaN0UtdTl6c2tRMlBrR0IwQ0Y1Y1htUWowSWJ6N0o0d2k4aEdqdzRQM1dzZXZwT3FhNjQ5bDhxNHV4LVVpZVJyLWd0TjFtZFpkS3RCbzlHMVdjOUc4LTQzSkFSZENpd25JQTBfWmZBMk0yZFkwaW1HNEpHT3RaLTV0RDg?oc=5)、[HackerNoon 截圖測試 07-24](https://news.google.com/rss/articles/CBMioAFBVV95cUxQRF9EUHUybk1zS3N5T0lNdUYyVHJ1ZVl3bktrUjZZSWVQUUU3c0t0Tzh1UFdXYTdITHpRYUJJVmJ2SVhrNko1eHdUdDNHNzRtRk1xdUd0Qk81ZkRiQUNpeVVVUHhnTDZXelFhcnNOYzhsVUxGWFUwYjZJUnk3cXRpUEExalhmVi01X0w4LTVTRmZHUmMtRkJzc0ZOelJnVkVk?oc=5)
 
 ## 歷史記錄
 
@@ -171,6 +160,7 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 | 2026-07-23 | **Anthropic 正為潛在 Opus 5 推出做準備**：未提供具體時間或型號細節——已由 07-25 官方發布證實 |
 | 2026-07-21 | 舊「Qwen distillation」爭議經媒體重提，冠以「蒸餾雙標」框架，詳見下方懸置細節 ⟨Q-01⟩ |
 | 2026-07-20 | 市場傳聞 Anthropic 數日內將推出新 Claude Opus 型號——已由 07-25 官方發布證實 |
+| 2026-07-13 | dev.to 比對型錄、定價文件與發布節奏：Opus 5 存在可信，但流傳的確切日期與跑分均無佐證——已由 07-25 官方發布解答 |
 | 2026-07-09 | 錯誤率一度升高（同日解決）：03:50 UTC 確認已解決；同期 Reddit 反映近期體驗轉佳（弱訊號） |
 | 2026-06-24 | 第三方評測：Gemini 3.5 Flash 35.4 vs Opus 4.8 34.8 略勝，指令遵循失誤所致（詳見上方「社群評價」） |
 | 2026-06-24 | 跨平台高錯誤率事件：API、Claude Code、Console 三平台皆受影響，範圍較 6/22 更廣（詳見上方「社群評價」） |

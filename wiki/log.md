@@ -6551,3 +6551,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **砍節**：[[entities/claude-code]]「近期重要更新（2026 Q2 精選）」整節刪除（第 4 波裁決點，懸 13 天）。該節自第 4 波起只剩一行指路；砍前核過安裝安全警示已住「已知問題」🛡️ 組、[[entities/cat-wu]]／[[entities/boris-cherny]] 在「相關議題」有家、[[entities/managed-agents]] 頁內另有多處連結、全庫無錨點指進此節、節內無懸置標記。
 - **不併**：bernanke／jensen-huang／robert-mahari／amir-salek 四人物頁維持獨立，不併入 [[topics/anthropic-business]]（第 7 波裁決點）。
 - **紀錄**：`docs/page-audits/ledger.md` 使用者裁決紀錄兩筆。
+
+## 2026-09-19 Query：頁面健檢另兩項懸置裁決結案（使用者授權照主編建議）
+
+- **收節**：[[entities/opus-4-8]]「下一代模型觀察：『Opus 5』傳聞」整節刪除（第 11 波裁決點）。該節 07-20／07-23／07-24 三則在同頁「歷史記錄」各有一列，屬同頁副本；補 07-13 一列，四個原文連結併入「參考來源」一條。Opus 5 現況的家是 [[entities/opus-5]]。
+- **不拆**：[[topics/code-quality-decline]]「模型釘選：你選的不一定算數」維持為母頁一節（第 12 波裁決點）。08-04 後該線零新事件；2026-10-03 再看。
+- **順帶看到、未處理**：該節 08-04 Reddit 單一來源那筆待查證，複查日 2026-09-13 已過，留給每週檢查。
