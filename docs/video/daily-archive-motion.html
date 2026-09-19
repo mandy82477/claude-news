@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude News 一天怎麼歸檔</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+:root, :root[data-theme="light"] {
+  --bg-0:#F7F4ED; --bg-1:#FBF9F3; --bg-2:#EFEAE0; --bg-3:#E5DFD2;
+  --ink-1:#1A1814; --ink-2:#4A4640; --ink-3:#8A847A; --ink-4:#B8B2A4;
+  --border-1:rgba(26,24,20,.08); --border-2:rgba(26,24,20,.14); --border-strong:rgba(26,24,20,.32);
+  --ochre-9:#8E5F3D; --ochre-7:#B08968; --ochre-5:#C9A88A;
+  --ochre-tint:rgba(176,137,104,.10); --ochre-wash:rgba(176,137,104,.05);
+  --success:#6B8F6B; --danger:#9A4B3A; --warn:#B5852E;
+  color-scheme:light;
+}
+:root[data-theme="dark"] {
+  --bg-0:#14130F; --bg-1:#1B1A15; --bg-2:#22201A; --bg-3:#2B2922;
+  --ink-1:#EDE7D8; --ink-2:#B8B0A0; --ink-3:#807868; --ink-4:#4A463E;
+  --border-1:rgba(237,231,216,.06); --border-2:rgba(237,231,216,.10); --border-strong:rgba(237,231,216,.22);
+  --ochre-9:#D4A574; --ochre-7:#B08968; --ochre-5:#8E6B4F;
+  --ochre-tint:rgba(176,137,104,.14); --ochre-wash:rgba(176,137,104,.07);
+  --success:#9DB89D; --danger:#C28876; --warn:#D4B074;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { color-scheme:light; } }
+
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:100%; background:var(--bg-0); color:var(--ink-1); overflow:hidden; }
+body { font-family:'Inter','Noto Sans TC',system-ui,sans-serif; font-weight:400; }
+
+#viewport { position:fixed; inset:0; display:grid; place-items:center; background:var(--bg-0); }
+#stage { position:relative; width:1920px; height:1080px; transform-origin:center center; background:var(--bg-0); overflow:hidden; }
+
+/* ---------- typographic primitives ---------- */
+.display { font-family:'Cormorant Garamond','Noto Serif TC',Georgia,serif; font-weight:400; }
+.display-i { font-family:'Cormorant Garamond','Noto Serif TC',Georgia,serif; font-style:italic; font-weight:400; }
+.cjk { font-family:'Noto Serif TC','Cormorant Garamond',Georgia,serif; font-weight:400; }
+.mono { font-family:'JetBrains Mono',ui-monospace,monospace; font-weight:400; }
+.caps { font-family:'JetBrains Mono',ui-monospace,monospace; font-size:18px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); font-weight:500; }
+
+.abs { position:absolute; }
+.hidden { opacity:0; }
+
+/* chapter label, top-left corner, persistent */
+#chapter { left:96px; top:64px; display:flex; gap:18px; align-items:baseline; }
+#chapter .num { font-size:44px; color:var(--ochre-9); }
+#chapter .lbl { font-size:20px; color:var(--ink-2); }
+#rule-top { left:96px; top:128px; width:0; height:1px; background:var(--border-strong); }
+#clock { right:96px; top:72px; font-size:16px; color:var(--ink-4); letter-spacing:.12em; }
+
+/* scene containers */
+.scene { position:absolute; inset:0; }
+
+/* S0 title */
+#s0 .t1 { left:96px; top:360px; font-size:150px; line-height:1; letter-spacing:-.01em; }
+#s0 .t2 { left:100px; top:530px; font-size:64px; color:var(--ochre-9); line-height:1; }
+#s0 .t3 { left:100px; top:640px; font-size:24px; color:var(--ink-3); letter-spacing:.06em; }
+#s0 .t4 { left:100px; top:940px; font-size:16px; color:var(--ink-4); letter-spacing:.2em; }
+
+/* S1 sources */
+.chip { position:absolute; padding:14px 22px; border:1px solid var(--border-2); background:var(--bg-1); font-size:20px; color:var(--ink-2); white-space:nowrap; border-radius:2px; }
+.chip .k { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-4); letter-spacing:.14em; margin-right:12px; }
+.chip.lit { border-color:var(--ochre-7); color:var(--ink-1); }
+.noise { position:absolute; width:5px; height:5px; border-radius:99px; background:var(--ink-4); opacity:.55; }
+.counter { position:absolute; right:96px; top:250px; text-align:right; }
+.counter .n { font-size:180px; line-height:1; color:var(--ochre-9); font-variant-numeric:tabular-nums; }
+.counter .l { font-size:22px; color:var(--ink-3); margin-top:12px; letter-spacing:.1em; }
+
+/* S2 funnel */
+.item { position:absolute; height:38px; padding:0 16px; display:flex; align-items:center; gap:14px; border:1px solid var(--border-2); background:var(--bg-1); font-size:16px; color:var(--ink-2); white-space:nowrap; border-radius:2px; width:520px; overflow:hidden; }
+.item .sc { font-family:'JetBrains Mono',monospace; font-size:14px; color:var(--ink-4); width:28px; text-align:center; border:1px solid var(--border-2); border-radius:2px; flex:0 0 auto; }
+.item.keep { border-color:var(--ochre-7); color:var(--ink-1); }
+.item.keep .sc { color:var(--ochre-9); border-color:var(--ochre-7); }
+.item.drop { text-decoration:line-through; color:var(--ink-4); }
+.item.dup .sc { color:var(--danger); }
+.stagelab { position:absolute; font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); font-weight:500; padding-top:12px; border-top:1px solid var(--border-strong); width:240px; }
+.doc { position:absolute; width:620px; height:640px; border:1px solid var(--border-2); background:var(--bg-1); padding:36px 40px; font-family:'JetBrains Mono',monospace; font-size:16px; line-height:1.85; color:var(--ink-2); white-space:pre-wrap; border-radius:2px; }
+.doc .head { color:var(--ink-4); font-size:13px; letter-spacing:.18em; margin-bottom:14px; }
+.doc .cur { display:inline-block; width:9px; height:18px; background:var(--ochre-9); vertical-align:-3px; }
+.stamp { position:absolute; padding:8px 18px; border:1.5px solid var(--ochre-9); color:var(--ochre-9); font-family:'JetBrains Mono',monospace; font-size:22px; letter-spacing:.3em; border-radius:2px; transform:rotate(-8deg); }
+
+/* S3 editor + reporters */
+.node { position:absolute; border:1px solid var(--border-2); background:var(--bg-1); padding:18px 24px; border-radius:2px; min-width:220px; }
+.node .nt { font-size:24px; color:var(--ink-1); }
+.node .ns { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-3); letter-spacing:.1em; margin-top:6px; }
+.node.lit { border-color:var(--ochre-7); }
+.node.editor { border-color:var(--ochre-9); background:var(--ochre-wash); }
+svg.wires { position:absolute; inset:0; width:1920px; height:1080px; pointer-events:none; }
+svg.wires path, svg.wires line { fill:none; stroke:var(--border-strong); stroke-width:1.2; }
+svg.wires .hot { stroke:var(--ochre-7); stroke-width:1.6; }
+.page { position:absolute; width:150px; height:96px; border:1px solid var(--border-2); background:var(--bg-1); padding:12px 14px; border-radius:2px; }
+.page .pt { font-size:15px; color:var(--ink-2); line-height:1.3; }
+.page .pk { font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-4); letter-spacing:.1em; margin-bottom:6px; }
+.page.lit { border-color:var(--ochre-7); }
+.page.lit .pt { color:var(--ink-1); }
+.page .co { position:absolute; left:14px; right:14px; bottom:10px; height:3px; background:var(--ochre-9); transform-origin:left; transform:scaleX(0); }
+.packet { position:absolute; width:10px; height:10px; background:var(--ochre-9); border-radius:2px; }
+.quote { position:absolute; font-size:56px; line-height:1.25; color:var(--ink-1); }
+.quote em { color:var(--ochre-9); font-style:italic; }
+
+/* S4 gate */
+.check { position:absolute; display:flex; align-items:center; gap:22px; font-family:'JetBrains Mono',monospace; font-size:22px; color:var(--ink-3); }
+.check .bx { width:26px; height:26px; border:1px solid var(--border-strong); border-radius:2px; position:relative; flex:0 0 auto; }
+.check .bx::after { content:''; position:absolute; left:8px; top:2px; width:7px; height:14px; border-right:2px solid var(--success); border-bottom:2px solid var(--success); transform:rotate(45deg) scale(0); transform-origin:center; }
+.check.ok { color:var(--ink-1); }
+.check.ok .bx { border-color:var(--success); }
+.check.ok .bx::after { transform:rotate(45deg) scale(1); }
+.browser { position:absolute; width:760px; height:520px; border:1px solid var(--border-strong); background:var(--bg-1); border-radius:2px; overflow:hidden; }
+.browser .bar { height:44px; border-bottom:1px solid var(--border-2); display:flex; align-items:center; padding:0 18px; gap:10px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-3); }
+.browser .bar i { width:10px; height:10px; border:1px solid var(--border-strong); border-radius:99px; display:inline-block; }
+.browser .body { padding:34px 44px; }
+.browser .h { font-family:'Cormorant Garamond','Noto Serif TC',serif; font-size:44px; line-height:1; color:var(--ink-1); }
+.browser .d { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ochre-9); letter-spacing:.18em; margin-top:10px; }
+.browser .row { border-top:1px solid var(--border-1); padding:14px 0; font-size:17px; color:var(--ink-2); display:flex; gap:16px; }
+.browser .row b { font-weight:500; color:var(--ink-4); font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.1em; }
+.phone { position:absolute; width:250px; height:520px; border:1.5px solid var(--border-strong); border-radius:2px; background:var(--bg-1); overflow:hidden; }
+.phone .ph { padding:26px 18px 0; }
+.phone .h { font-family:'Cormorant Garamond','Noto Serif TC',serif; font-size:28px; color:var(--ink-1); }
+.phone .row { border-top:1px solid var(--border-1); padding:12px 0; font-size:13px; color:var(--ink-2); line-height:1.4; }
+
+/* S5 outro */
+.stat { position:absolute; width:400px; border-top:1px solid var(--border-strong); padding-top:20px; }
+.stat .n { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:132px; line-height:1; color:var(--ochre-9); font-variant-numeric:tabular-nums; }
+.stat .l { font-size:20px; color:var(--ink-3); margin-top:6px; letter-spacing:.08em; }
+
+/* ---------- controls ---------- */
+#ctl { position:fixed; left:50%; bottom:22px; transform:translateX(-50%); display:flex; align-items:center; gap:14px; padding:10px 14px; border:1px solid var(--border-2); background:var(--bg-1); border-radius:2px; font-size:13px; z-index:10; transition:opacity .25s; }
+#ctl.hide { opacity:0; pointer-events:none; }
+#ctl button { font:inherit; font-family:'Inter','Noto Sans TC',sans-serif; background:transparent; border:1px solid var(--border-2); color:var(--ink-2); padding:6px 12px; border-radius:2px; cursor:pointer; }
+#ctl button:hover { border-color:var(--ochre-7); color:var(--ochre-9); }
+#ctl button.on { color:var(--ochre-9); border-color:var(--ochre-9); }
+#scrub { width:360px; accent-color:var(--ochre-9); }
+#tc { font-family:'JetBrains Mono',monospace; color:var(--ink-3); min-width:88px; text-align:center; }
+.hint { color:var(--ink-4); font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.08em; }
+</style>
+</head>
+<body>
+<div id="viewport">
+<div id="stage">
+  <div id="chapter" class="abs">
+    <span class="num display-i" id="ch-num">00</span>
+    <span class="lbl cjk" id="ch-lbl"></span>
+  </div>
+  <div id="rule-top" class="abs"></div>
+  <div id="clock" class="abs mono">2026-09-17 · UTC</div>
+
+  <div class="scene" id="s0"></div>
+  <div class="scene" id="s1"></div>
+  <div class="scene" id="s2"></div>
+  <div class="scene" id="s3"></div>
+  <div class="scene" id="s4"></div>
+  <div class="scene" id="s5"></div>
+</div>
+</div>
+
+<div id="ctl">
+  <button id="play">播放</button>
+  <button id="restart">重來</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0">
+  <span id="tc">00.0 / 00.0</span>
+  <span id="chapters"></span>
+  <button id="theme">淺色</button>
+  <span class="hint">SPACE 播放 · H 藏控制列 · ←→ 章節</span>
+</div>
+
+<script>
+/* ============================================================
+   Tiny deterministic timeline engine.
+   Every track is (start, dur, fn(p)); p is eased progress 0..1.
+   Global time drives everything, so scrubbing is exact.
+   ============================================================ */
+const S = document.getElementById('stage');
+const $ = (sel, root=document) => root.querySelector(sel);
+const el = (tag, cls, html, parent) => { const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; (parent||S).appendChild(e); return e; };
+const ease = {
+  out: p => 1-Math.pow(1-p,3),
+  inout: p => p<.5 ? 4*p*p*p : 1-Math.pow(-2*p+2,3)/2,
+  lin: p => p,
+  outBack: p => { const c=1.70158; return 1+ (c+1)*Math.pow(p-1,3)+c*Math.pow(p-1,2); }
+};
+const tracks = [];
+let DUR = 0;
+function tr(start, dur, fn, e='out', pre=true) { tracks.push({start, dur, fn, e:ease[e]||e, pre}); DUR=Math.max(DUR, start+dur); }
+// convenience: fade+translate in
+function fadeIn(node, start, dur=0.7, dx=0, dy=24, e='out') {
+  tr(start, dur, p => { node.style.opacity=p; node.style.transform=`translate(${dx*(1-p)}px,${dy*(1-p)}px)`; }, e);
+}
+function fadeOut(node, start, dur=0.5) { tr(start, dur, p => { node.style.opacity=1-p; }, 'inout', false); }
+function hold(node, start, on=true) { tr(start, 0.001, p => { node.style.opacity = on?1:0; }); }
+function typeText(node, text, start, dur, withCursor=true) {
+  tr(start, dur, p => { const n=Math.floor(text.length*p); node.textContent=text.slice(0,n); if(withCursor && p<1) { const c=document.createElement('span'); c.className='cur'; node.appendChild(c);} }, 'lin');
+}
+function countTo(node, from, to, start, dur, fmt=v=>Math.round(v)) { tr(start, dur, p => { node.textContent = fmt(from+(to-from)*p); }); }
+function drawPath(pathEl, start, dur, e='inout') {
+  const L = pathEl.getTotalLength(); pathEl.style.strokeDasharray=L; pathEl.style.strokeDashoffset=L;
+  tr(start, dur, p => { pathEl.style.strokeDashoffset = L*(1-p); }, e);
+}
+function sceneWindow(node, start, end) {
+  // scene visible only in [start,end)
+  tr(0, 0.001, ()=>{ node.style.opacity=0; node.style.pointerEvents='none'; });
+  tr(start, 0.6, p=>{ node.style.opacity=p; });
+  tr(end-0.6, 0.6, p=>{ node.style.opacity=1-p; }, 'inout', false);
+}
+function chapter(start, num, label) {
+  const n=$('#ch-num'), l=$('#ch-lbl'), r=$('#rule-top');
+  tr(start, 0.6, p=>{ n.textContent=num; l.textContent=label; n.style.opacity=p; l.style.opacity=p; l.style.transform=`translateX(${12*(1-p)}px)`; });
+  tr(start, 0.9, p=>{ r.style.width = 320*p + 'px'; }, 'inout');
+}
+
+/* ============================================================
+   SCENE 0 · title   0 – 7s
+   ============================================================ */
+const s0 = $('#s0');
+{
+  const t1 = el('div','abs display t1','Claude News', s0);
+  const t2 = el('div','abs display-i t2','A quiet wiki of noisy news.', s0);
+  const t3 = el('div','abs cjk t3','一天怎麼歸檔：從 15 個管道到一座 wiki', s0);
+  const t4 = el('div','abs mono t4','MANDY82477.GITHUB.IO / CLAUDE-NEWS', s0);
+  const rule = el('div','abs', '', s0); Object.assign(rule.style,{left:'100px',top:'610px',height:'1px',width:'0',background:'var(--border-strong)'});
+  sceneWindow(s0, 0, 7);
+  fadeIn(t1, 0.4, 1.2, 0, 40);
+  fadeIn(t2, 1.2, 1.0, 0, 24);
+  tr(1.8, 0.9, p=>{ rule.style.width = 560*p+'px'; }, 'inout');
+  fadeIn(t3, 2.4, 0.9, 0, 16);
+  fadeIn(t4, 3.0, 0.9, 0, 0);
+  chapter(0.2, '00', '');
+}
+
+/* ============================================================
+   SCENE 1 · sources   7 – 18s
+   ============================================================ */
+const s1 = $('#s1');
+const SOURCES = [
+  ['anthropic','Anthropic Blog'],['status','Anthropic Status'],['docs','官方文件變動'],['api','API Release Notes'],
+  ['gh-rel','GitHub Releases'],['gh-iss','GitHub Issues'],['flags','出貨 build 實驗旗標'],
+  ['hn','Hacker News'],['reddit','Reddit'],['devto','dev.to'],['rss','技術部落格 RSS'],['gnews','Google News'],
+  ['x','X（不追）'],['discord','Discord（不追）'],['nda','NDA 內部（不碰）']
+];
+{
+  sceneWindow(s1, 7, 18);
+  chapter(7.2, '01', '來源');
+  const chips = [];
+  // scattered positions: 3 rows x 5
+  SOURCES.forEach((s,i)=>{
+    const c = el('div','chip hidden',`<span class="k">${String(i+1).padStart(2,'0')}</span>${s[1]}`, s1);
+    const col=i%4, row=Math.floor(i/4);
+    const x = 120 + col*330 + (row%2)*40 + ((i*37)%30);
+    const y = 250 + row*150 + ((i*53)%40);
+    c.style.left=x+'px'; c.style.top=y+'px';
+    chips.push(c);
+    fadeIn(c, 7.6+i*0.18, 0.6, 0, 30, 'outBack');
+    if(i<12) tr(11.5+i*0.08, 0.3, p=>{ if(p>=1) c.classList.add('lit'); else c.classList.remove('lit'); });
+    else tr(13.2, 0.5, p=>{ c.style.opacity = 1-0.7*p; c.style.textDecoration = p>0.5?'line-through':'none'; }, 'out', false);
+  });
+  // noise particles drifting
+  const N=70, ps=[];
+  for(let i=0;i<N;i++){ const d=el('div','noise','',s1); ps.push(d); }
+  tr(7, 11, p=>{ const t=p*11; ps.forEach((d,i)=>{ const sp=0.4+(i%7)*0.15; const x=(i*131)%1920 + Math.sin(t*sp+i)*40; const y=((i*197)%1000) - t*40*sp; d.style.transform=`translate(${x}px,${((y%1080)+1080)%1080}px)`; d.style.opacity = 0.15+0.35*Math.abs(Math.sin(t+i)); }); }, 'lin');
+  const cnt = el('div','counter hidden','<div class="n display-i">0</div><div class="l cjk">條原始項目 / 日</div>', s1);
+  const cap = el('div','abs cjk hidden','15 個管道。三個平台刻意不追：<br>秒級訊號不是這座 wiki 的工作。', s1);
+  Object.assign(cap.style,{left:'120px',top:'880px',fontSize:'30px',lineHeight:'1.5',color:'var(--ink-2)'});
+  fadeIn(cnt, 9.5, 0.8, 30, 0);
+  countTo($('.n',cnt), 0, 412, 9.6, 5.0);
+  fadeIn(cap, 13.4, 0.9, 0, 16);
+}
+
+/* ============================================================
+   SCENE 2 · Phase A  18 – 36s   funnel → 日報
+   ============================================================ */
+const s2 = $('#s2');
+const ITEMS = [
+  ['Claude Code 2.1.68 changelog：/loop 動態排程', 5, 'keep'],
+  ['HN：subagent 完成通知在背景 agent 迷路', 4, 'keep'],
+  ['Reddit：worktree 平行 session 踩坑整理', 4, 'keep'],
+  ['Anthropic Status：API 延遲事件已解決', 3, 'keep'],
+  ['dev.to：用 Claude 寫 TODO app（第 40 篇）', 1, 'drop'],
+  ['Google News：同一則 changelog 轉載', 5, 'dup'],
+  ['GitHub Issue #9021：MCP OAuth 回呼失敗', 4, 'keep'],
+  ['某公司「AI 將取代所有工程師」新聞稿', 2, 'drop'],
+  ['實驗旗標 diff：新增 3 個 feature gate', 3, 'keep'],
+  ['Reddit：轉貼上一則 HN 討論', 4, 'dup'],
+  ['Anthropic Blog：Claude 5 系列可用性更新', 5, 'keep'],
+  ['RSS：某部落格週報整理（已收原始來源）', 2, 'drop'],
+];
+{
+  sceneWindow(s2, 18, 36);
+  chapter(18.2, '02', 'Phase A · 抓料與日報，背景 agent，不需要 LLM 就能抓');
+  const lab1 = el('div','stagelab','01 · 抓取 → 去重', s2); Object.assign(lab1.style,{left:'120px',top:'200px'});
+  const lab2 = el('div','stagelab','02 · 相關性 1–5 分，≥3 保留', s2); Object.assign(lab2.style,{left:'120px',top:'236px',opacity:0,width:'520px'});
+  const rows=[];
+  ITEMS.forEach((it,i)=>{
+    const r = el('div','item hidden',`<span class="sc">·</span><span>${it[0]}</span>`, s2);
+    r.style.left='120px'; r.style.top=(300+i*50)+'px';
+    rows.push(r);
+    fadeIn(r, 18.6+i*0.16, 0.5, -40, 0);
+  });
+  // dedupe pass
+  ITEMS.forEach((it,i)=>{ if(it[2]==='dup'){ tr(21.4+i*0.05, 0.4, p=>{ const r=rows[i]; if(p>0.5){ r.classList.add('dup','drop'); $('.sc',r).textContent='dup'; } else { r.classList.remove('dup','drop'); $('.sc',r).textContent='·'; } }); } });
+  fadeIn(lab2, 22.6, 0.5, 0, 8);
+  // scoring pass
+  ITEMS.forEach((it,i)=>{ if(it[2]!=='dup'){ tr(23.0+i*0.22, 0.4, p=>{ const r=rows[i]; const sc=$('.sc',r); if(p>0.3){ sc.textContent=it[1]; r.classList.toggle('keep', it[2]==='keep'); r.classList.toggle('drop', it[2]==='drop'); } else { sc.textContent='·'; r.classList.remove('keep','drop'); } }); } });
+  // collapse dropped rows, slide kept rows up & right into doc
+  const keepIdx = ITEMS.map((it,i)=>it[2]==='keep'?i:-1).filter(i=>i>=0);
+  ITEMS.forEach((it,i)=>{ if(it[2]!=='keep') tr(26.4, 0.6, p=>{ rows[i].style.opacity=1-p; rows[i].style.transform=`translateX(${-60*p}px)`; }, 'out', false); });
+  keepIdx.forEach((i,k)=>{ tr(27.0, 0.8, p=>{ const y0=300+i*50, y1=300+k*50; rows[i].style.top = (y0+(y1-y0)*p)+'px'; }, 'inout'); });
+  // counter
+  const cnt = el('div','counter hidden','<div class="n display-i">412</div><div class="l cjk">→ 保留進日報</div>', s2);
+  cnt.style.top='200px';
+  fadeIn(cnt, 22.8, 0.6, 30, 0);
+  countTo($('.n',cnt), 412, 23, 23.0, 3.6);
+  // the 日報 document appears on the right, types itself
+  const doc = el('div','doc hidden','<div class="head">news/2026-09-17.md · STEP 1B · 繁中日報</div><div class="body"></div>', s2);
+  Object.assign(doc.style,{left:'1000px',top:'300px'});
+  fadeIn(doc, 28.2, 0.8, 40, 0);
+  tr(28.2, 0.001, p=>{ cnt.style.opacity=0; });
+  const body = $('.body',doc);
+  const DOCTEXT = `# 2026-09-17 Claude News 日報
+
+## ⭐ 官方核心
+- Claude Code 2.1.68：/loop 支援動態排程
+  影響：長時間 polling 不再燒 token
+- Claude 5 系列可用性更新（Blog）
+
+## 💬 社群實測
+- 背景 agent 再派 agent，完成通知會迷路
+  變通：派工段由呼叫 session 親自跑
+- worktree 多 session 並行的 commit 紀律
+
+## 🔧 Bug 與變通
+- #9021 MCP OAuth 回呼失敗，已有 workaround
+
+來源 23 條 ｜ 評分 ≥3 ｜ 延遲 26–30h`;
+  typeText(body, DOCTEXT, 29.0, 5.2);
+  const stamp = el('div','stamp hidden','唯讀', s2); Object.assign(stamp.style,{left:'1440px',top:'860px'});
+  tr(34.4, 0.35, p=>{ stamp.style.opacity=p; stamp.style.transform=`rotate(-8deg) scale(${1.6-0.6*p})`; }, 'out');
+  const cap = el('div','abs cjk hidden','日報落地就唯讀。之後會變的只有 wiki。', s2);
+  Object.assign(cap.style,{left:'120px',top:'880px',fontSize:'30px',color:'var(--ink-2)'});
+  fadeIn(cap, 33.6, 0.8, 0, 16);
+}
+
+/* ============================================================
+   SCENE 3 · Phase B  36 – 60s   主編 → 六記者 → wiki
+   ============================================================ */
+const s3 = $('#s3');
+const REPORTERS = [['models','模型記者','🤖 模型'],['features','功能記者','🛠️ 工具/功能'],['commercial','商業記者','💼 商業'],['safety','安全政策記者','🏛️ 政策/安全'],['community','社群記者','🌐 社群'],['people','人物記者','👤 人物']];
+const PAGES = [
+  ['entities','claude-code'],['entities','claude-opus-5'],['topics','agent-orchestration'],['topics','mcp-ecosystem'],
+  ['entities','anthropic'],['topics','pricing-and-plans'],['topics','safety-policy'],['entities','dario-amodei'],
+  ['topics','community-workflows'],['topics','worktree-parallel'],['entities','claude-5-family'],['feature','feature-radar']
+];
+{
+  sceneWindow(s3, 36, 60);
+  chapter(36.2, '03', 'Phase B · 沉澱進 wiki，唯一不可委派的一段');
+  const wires = document.createElementNS('http://www.w3.org/2000/svg','svg'); wires.setAttribute('class','wires'); wires.setAttribute('viewBox','0 0 1920 1080'); s3.appendChild(wires);
+  const P = (d, cls) => { const p=document.createElementNS('http://www.w3.org/2000/svg','path'); p.setAttribute('d',d); if(cls) p.setAttribute('class',cls); wires.appendChild(p); return p; };
+
+  // digest (left) → editor
+  const digest = el('div','node hidden','<div class="nt cjk">日報 + 未收錄條目</div><div class="ns">news/ · list_digest_omissions.py</div>', s3);
+  Object.assign(digest.style,{left:'110px',top:'470px'});
+  const editor = el('div','node editor hidden','<div class="nt cjk">主編</div><div class="ns">呼叫 SESSION 本人 · 分類六類</div>', s3);
+  Object.assign(editor.style,{left:'520px',top:'478px'});
+  fadeIn(digest, 36.6, 0.7, -30, 0);
+  const w0 = P('M 460 520 L 520 520'); drawPath(w0, 37.2, 0.4);
+  fadeIn(editor, 37.5, 0.7, -20, 0);
+
+  // reporters fan
+  const reps=[];
+  REPORTERS.forEach((r,i)=>{
+    const n = el('div','node hidden',`<div class="nt cjk">${r[1]}</div><div class="ns">${r[2]}</div>`, s3);
+    const y = 150 + i*140;
+    Object.assign(n.style,{left:'900px',top:y+'px',minWidth:'240px'});
+    reps.push(n);
+    const d = `M 800 520 C 860 520, 840 ${y+44}, 900 ${y+44}`;
+    const w = P(d,'hot'); drawPath(w, 38.6+i*0.12, 0.7);
+    fadeIn(n, 39.1+i*0.12, 0.6, -20, 0);
+  });
+  const cap1 = el('div','abs cjk hidden','同一則訊息並行派六份 prompt。<br>記者 foreground，不可再派 agent。', s3);
+  Object.assign(cap1.style,{left:'110px',top:'700px',fontSize:'28px',lineHeight:'1.55',color:'var(--ink-2)',width:'640px'});
+  fadeIn(cap1, 40.4, 0.8, 0, 14);
+
+  // wiki pages grid (right)
+  const pages=[];
+  PAGES.forEach((pg,i)=>{
+    const col=i%3, row=Math.floor(i/3);
+    const n = el('div','page hidden',`<div class="pk">${pg[0]}/</div><div class="pt mono">${pg[1]}</div><div class="co"></div>`, s3);
+    Object.assign(n.style,{left:(1330+col*180)+'px',top:(200+row*135)+'px'});
+    pages.push(n);
+    fadeIn(n, 41.6+i*0.07, 0.5, 20, 0);
+  });
+  const wikiLab = el('div','stagelab','wiki/ · 每個事實只有一個家', s3); Object.assign(wikiLab.style,{left:'1330px',top:'160px',width:'520px',opacity:0});
+  fadeIn(wikiLab, 41.4, 0.5, 0, 8);
+
+  // packets: each reporter sends to 2 pages; pages light + callout bar
+  const assign = [[0,10],[1,11],[5,4],[6,7],[8,9],[2,3]];
+  assign.forEach((pair,ri)=>{
+    pair.forEach((pi,k)=>{
+      const pk = el('div','packet hidden','', s3);
+      const x0=1140, y0=150+ri*140+44;
+      const col=pi%3,row=Math.floor(pi/3); const x1=1330+col*180+75, y1=200+row*135+48;
+      const t0 = 43.0 + ri*0.5 + k*0.25;
+      tr(t0, 0.9, p=>{ pk.style.opacity = p<0.05||p>0.95?0:1; const x=x0+(x1-x0)*p, y=y0+(y1-y0)*p - Math.sin(p*Math.PI)*60; pk.style.transform=`translate(${x}px,${y}px)`; }, 'inout');
+      tr(t0+0.85, 0.5, p=>{ const pg=pages[pi]; pg.classList.toggle('lit', p>0); $('.co',pg).style.transform=`scaleX(${p})`; });
+    });
+  });
+  // wikilinks between lit pages
+  const links = [[0,2],[2,3],[10,0],[10,11],[4,5],[6,4],[8,9],[9,2],[7,4]];
+  links.forEach((lk,i)=>{
+    const a=lk[0], b=lk[1];
+    const ax=1330+(a%3)*180+75, ay=200+Math.floor(a/3)*135+48, bx=1330+(b%3)*180+75, by=200+Math.floor(b/3)*135+48;
+    const w = P(`M ${ax} ${ay} L ${bx} ${by}`); w.style.strokeDasharray='4 6'; w.style.opacity=0;
+    tr(47.0+i*0.15, 0.5, p=>{ w.style.opacity = 0.9*p; });
+  });
+  const cap2 = el('div','quote hidden','每個事實只有<em>一個家</em>。<br>別處只放 wikilink 指過去。', s3);
+  Object.assign(cap2.style,{left:'110px',top:'800px',fontSize:'48px'});
+  tr(48.0, 0.6, p=>{ cap1.style.opacity=1-p; }, 'out', false);
+  fadeIn(cap2, 48.4, 0.9, 0, 18);
+
+  // callout projection → daily/
+  const daily = el('div','doc hidden','<div class="head">daily/2026-09-17.md · STEP 2B · 讀者版日報</div><div class="body"></div>', s3);
+  Object.assign(daily.style,{left:'1330px',top:'760px',width:'540px',height:'290px',padding:'22px 28px',fontSize:'14px',lineHeight:'1.7'});
+  fadeIn(daily, 52.0, 0.7, 0, 20);
+  // callout bars fly down into daily doc
+  pages.forEach((pg,pi)=>{ if(assign.flat().includes(pi)){ const col=pi%3,row=Math.floor(pi/3); const bar=el('div','packet hidden','',s3); bar.style.width='120px'; bar.style.height='3px';
+    const x0=1330+col*180+14, y0=200+row*135+84, x1=1358, y1=815+(assign.flat().indexOf(pi))*24;
+    tr(52.6+pi*0.08, 0.8, p=>{ bar.style.opacity=p<0.02||p>0.98?0:1; bar.style.transform=`translate(${x0+(x1-x0)*p}px,${y0+(y1-y0)*p}px)`; }, 'inout'); } });
+  typeText($('.body',daily), `> [!delta] claude-code · 2.1.68 /loop 動態排程
+> [!delta] agent-orchestration · 背景派工通知迷路
+> [!delta] mcp-ecosystem · #9021 OAuth 回呼
+> [!delta] worktree-parallel · commit 紀律
+> [!delta] pricing-and-plans · Claude 5 可用性
+> [!delta] feature-radar · 3 個新 feature gate`, 53.4, 3.4);
+  const cap3 = el('div','abs cjk hidden','頁頂 callout 一字不改投影成讀者版日報。<br>你在網站讀到的「日報」，就是這一份。', s3);
+  Object.assign(cap3.style,{left:'110px',top:'800px',fontSize:'30px',lineHeight:'1.55',color:'var(--ink-2)',width:'760px'});
+  tr(52.2, 0.5, p=>{ cap2.style.opacity=1-p; }, 'out', false);
+  fadeIn(cap3, 52.8, 0.8, 0, 14);
+}
+
+/* ============================================================
+   SCENE 4 · Phase C  60 – 76s   gate → 單一 push → 網站
+   ============================================================ */
+const s4 = $('#s4');
+{
+  sceneWindow(s4, 60, 76);
+  chapter(60.2, '04', 'Phase C · 閘門與單一 push，背景 agent');
+  const lab = el('div','stagelab','STEP 3–5 · commit → gate → push', s4); Object.assign(lab.style,{left:'120px',top:'200px',width:'420px'});
+  const CHECKS = ['git commit wiki/ daily/ （指名路徑）','run_tests.py','gate_web_build.py','build_web.py → web_reader/data/','git push（news + wiki + web 一次推）'];
+  const cks=[];
+  CHECKS.forEach((c,i)=>{ const n=el('div','check hidden',`<span class="bx"></span><span>${c}</span>`, s4); Object.assign(n.style,{left:'120px',top:(300+i*78)+'px'}); cks.push(n); fadeIn(n, 60.6+i*0.15, 0.5, -20, 0); tr(62.0+i*0.7, 0.3, p=>{ n.classList.toggle('ok', p>0.5); }); });
+  const gateLab = el('div','abs mono hidden','BLOCKING GATE · 擋下就不建站，news 與 wiki 照推', s4);
+  Object.assign(gateLab.style,{left:'166px',top:'720px',fontSize:'14px',letterSpacing:'.18em',color:'var(--ochre-9)'});
+  fadeIn(gateLab, 63.4, 0.6, 0, 8);
+
+  // browser + phone slide in
+  const br = el('div','browser hidden',`<div class="bar"><i></i><i></i><i></i>&nbsp; mandy82477.github.io/claude-news/web_reader/</div>
+    <div class="body"><div class="h">Claude News</div><div class="d">2026-09-17 · 日報 138 · WIKI 85 頁</div>
+    <div style="height:24px"></div>
+    <div class="row"><b>⭐ 官方</b>Claude Code 2.1.68：/loop 支援動態排程</div>
+    <div class="row"><b>💬 社群</b>背景 agent 派工的完成通知會迷路，變通已收錄</div>
+    <div class="row"><b>🔧 BUG</b>#9021 MCP OAuth 回呼失敗，workaround 在 mcp-ecosystem</div>
+    <div class="row"><b>📌 雷達</b>3 個新 feature gate 進入 feature-radar</div></div>`, s4);
+  Object.assign(br.style,{left:'820px',top:'260px'});
+  const ph = el('div','phone hidden',`<div class="ph"><div class="h">Claude News</div>
+    <div class="row">2.1.68 /loop 動態排程</div><div class="row">背景派工通知迷路，變通已收</div><div class="row">#9021 OAuth 回呼 workaround</div><div class="row">feature-radar +3</div><div class="row">worktree 並行 commit 紀律</div></div>`, s4);
+  Object.assign(ph.style,{left:'1610px',top:'300px'});
+  tr(65.6, 0.9, p=>{ br.style.opacity=p; br.style.transform=`translateY(${40*(1-p)}px) scale(${0.96+0.04*p})`; }, 'outBack');
+  tr(66.4, 0.9, p=>{ ph.style.opacity=p; ph.style.transform=`translateY(${60*(1-p)}px)`; }, 'outBack');
+  const cap = el('div','abs cjk hidden','一次 push 三樣東西，Pages 不會並發互踩。<br>PWA 加到主畫面，看過的頁離線也能開。', s4);
+  Object.assign(cap.style,{left:'820px',top:'820px',fontSize:'28px',lineHeight:'1.55',color:'var(--ink-2)'});
+  fadeIn(cap, 67.6, 0.8, 0, 14);
+  // watchdog line
+  const wd = el('div','abs mono hidden','③ DAILY-WATCHDOG · 隔日 09:00 台北 · 缺件才寄信', s4);
+  Object.assign(wd.style,{left:'120px',top:'880px',fontSize:'16px',letterSpacing:'.16em',color:'var(--ink-3)'});
+  fadeIn(wd, 70.0, 0.8, -20, 0);
+}
+
+/* ============================================================
+   SCENE 5 · outro  76 – 90s
+   ============================================================ */
+const s5 = $('#s5');
+{
+  sceneWindow(s5, 76, 90);
+  chapter(76.2, '05', '穩定，而非即時');
+  const q = el('div','quote hidden','26–30 小時的延遲，<em>是設計。</em>', s5);
+  Object.assign(q.style,{left:'120px',top:'300px',fontSize:'84px'});
+  fadeIn(q, 76.6, 1.1, 0, 30);
+  const sub = el('div','abs cjk hidden','不追 X／Discord 的秒級訊號。不碰 NDA。<br>給需要深度與穩定資訊的工程師。', s5);
+  Object.assign(sub.style,{left:'124px',top:'440px',fontSize:'30px',lineHeight:'1.6',color:'var(--ink-2)'});
+  fadeIn(sub, 78.0, 0.9, 0, 16);
+  const stats = [[138,'份日報 · 2026-04-25 起'],[85,'頁 wiki · 六位記者認領'],[15,'個抓取管道 · 純 Python']];
+  stats.forEach((s,i)=>{ const n=el('div','stat hidden',`<div class="n">0</div><div class="l cjk">${s[1]}</div>`, s5); Object.assign(n.style,{left:(120+i*520)+'px',top:'700px'}); fadeIn(n, 79.5+i*0.3, 0.8, 0, 20); countTo($('.n',n), 0, s[0], 79.8+i*0.3, 2.2); });
+  const url = el('div','abs mono hidden','mandy82477.github.io/claude-news/web_reader/', s5);
+  Object.assign(url.style,{left:'124px',top:'960px',fontSize:'18px',letterSpacing:'.14em',color:'var(--ochre-9)'});
+  fadeIn(url, 84.0, 0.8, 0, 0);
+  const end = el('div','abs display-i hidden','A quiet wiki of noisy news.', s5);
+  Object.assign(end.style,{right:'120px',top:'960px',fontSize:'34px',color:'var(--ink-3)'});
+  fadeIn(end, 84.6, 0.8, 0, 0);
+}
+
+/* ============================================================
+   Player
+   ============================================================ */
+let T=0, playing=false, last=0, raf=0;
+const CHAPTERS=[[0,'片頭'],[7,'01 來源'],[18,'02 Phase A'],[36,'03 Phase B'],[60,'04 Phase C'],[76,'05 收尾']];
+function render(t){
+  T=Math.max(0,Math.min(DUR,t));
+  for(const k of tracks){ if(T<k.start) continue; const p = Math.min(1,(T-k.start)/k.dur); k.fn(k.e(p)); }
+  $('#scrub').value = Math.round(T/DUR*1000);
+  $('#tc').textContent = T.toFixed(1).padStart(4,'0')+' / '+DUR.toFixed(1);
+}
+function reset(){ for(const k of tracks) if(k.pre) k.fn(0); }
+function loop(now){ if(!playing) return; const dt=(now-last)/1000; last=now; render(T+dt); if(T>=DUR){ playing=false; $('#play').textContent='播放'; return; } raf=requestAnimationFrame(loop); }
+function play(){ if(T>=DUR) T=0; playing=true; last=performance.now(); $('#play').textContent='暫停'; raf=requestAnimationFrame(loop); }
+function pause(){ playing=false; cancelAnimationFrame(raf); $('#play').textContent='播放'; }
+function seek(t){ // full re-render from zero for exactness on backward seeks
+  reset(); render(t);
+}
+$('#play').onclick = ()=> playing?pause():play();
+$('#restart').onclick = ()=>{ pause(); seek(0); play(); };
+$('#scrub').oninput = e=>{ pause(); seek(e.target.value/1000*DUR); };
+CHAPTERS.forEach(c=>{ const b=document.createElement('button'); b.textContent=c[1]; b.onclick=()=>{ pause(); seek(c[0]); play(); }; $('#chapters').appendChild(b); });
+$('#theme').onclick = ()=>{ const h=document.documentElement; const d=h.getAttribute('data-theme')==='dark'; h.setAttribute('data-theme', d?'light':'dark'); $('#theme').textContent = d?'深色':'淺色'; };
+document.addEventListener('keydown', e=>{
+  if(e.code==='Space'){ e.preventDefault(); playing?pause():play(); }
+  if(e.key==='h'||e.key==='H'){ $('#ctl').classList.toggle('hide'); }
+  if(e.key==='ArrowRight'){ const n=CHAPTERS.find(c=>c[0]>T+0.01); if(n){ pause(); seek(n[0]); play(); } }
+  if(e.key==='ArrowLeft'){ const prev=[...CHAPTERS].reverse().find(c=>c[0]<T-1); pause(); seek(prev?prev[0]:0); play(); }
+});
+function fit(){ const s=Math.min(innerWidth/1920, innerHeight/1080); $('#stage').style.transform=`scale(${s})`; }
+addEventListener('resize', fit); fit();
+// fonts first, then initial frame
+const Q=new URLSearchParams(location.search); const Q_T=parseFloat(Q.get('t')||'0')||0;
+if(Q.get('theme')) document.documentElement.setAttribute('data-theme', Q.get('theme'));
+if(Q.get('hide')) $('#ctl').classList.add('hide');
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(()=>{ seek(Q_T); });
+seek(Q_T);
+</script>
+</body>
+</html>

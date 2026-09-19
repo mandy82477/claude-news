@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Claude News 一天怎麼歸檔",
+    "viewBox": [1080, 700],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "views": [
+      { "id": "phase-a", "label": "Phase A · 抓料與日報", "focus": ["official", "github", "community", "gather", "digest"], "note": "GitHub Actions 純 Python 抓 15 個管道，commit 回 master；雲端 routine 的 Claude session 生成日報，落地後唯讀。" },
+      { "id": "phase-b", "label": "Phase B · 不可委派的沉澱", "focus": ["digest", "editor", "reporters", "wiki", "reader"], "note": "主編分類、同一訊息並行派六位 foreground 記者，各寫自己領域頁；頁頂 callout 投影成讀者版 daily/。" },
+      { "id": "phase-c", "label": "Phase C · 閘門與單一 push", "focus": ["wiki", "reader", "gate", "push", "pages"], "note": "commit wiki，build gate 過了才建站，news、wiki、web 一次推上 GitHub Pages。" }
+    ]
+  },
+  "stages": [
+    { "label": "來源" },
+    { "label": "Phase A · 背景" },
+    { "label": "Phase B · 呼叫 session" },
+    { "label": "Phase C · 背景" },
+    { "label": "讀者" }
+  ],
+  "nodes": [
+    { "id": "official", "type": "external", "label": "Anthropic 官方", "sublabel": "Blog / Status", "stage": 0, "row": 0, "tag": "source of truth" },
+    { "id": "github", "type": "external", "label": "GitHub", "sublabel": "Releases / Issues", "stage": 0, "row": 1, "tag": "changelog" },
+    { "id": "community", "type": "external", "label": "社群", "sublabel": "HN / Reddit / RSS", "stage": 0, "row": 3, "tag": "實測" },
+    { "id": "gather", "type": "cloud", "label": "Step 0–1a 抓取", "sublabel": "GitHub Actions", "stage": 1, "row": 0, "tag": "無 LLM" },
+    { "id": "digest", "type": "database", "label": "Step 1b 日報", "sublabel": "news/日期.md", "stage": 1, "row": 3, "tag": "此後唯讀" },
+    { "id": "editor", "type": "security", "label": "Step 2 主編分類", "sublabel": "呼叫 session", "stage": 2, "row": 0, "tag": "不可委派" },
+    { "id": "reporters", "type": "backend", "label": "六位記者", "sublabel": "foreground 並行", "stage": 2, "row": 1, "tag": "agents" },
+    { "id": "wiki", "type": "database", "label": "wiki/", "sublabel": "領域頁 + callout", "stage": 2, "row": 2, "tag": "已沉澱" },
+    { "id": "reader", "type": "database", "label": "Step 2b 讀者版", "sublabel": "daily/日期.md", "stage": 2, "row": 3, "tag": "callout 投影" },
+    { "id": "gate", "type": "security", "label": "Step 4 Build Gate", "sublabel": "測試 + 建站", "stage": 3, "row": 1, "tag": "blocking" },
+    { "id": "push", "type": "cloud", "label": "Step 5 單一 push", "sublabel": "news + wiki + web", "stage": 3, "row": 3, "tag": "一次推" },
+    { "id": "pages", "type": "frontend", "label": "GitHub Pages", "sublabel": "web_reader 靜態站", "stage": 4, "row": 3, "tag": "PWA" }
+  ],
+  "flows": [
+    { "from": "official", "to": "gather", "label": "公告與文件變動", "classification": "15 管道之一", "variant": "emphasis", "route": "straight" },
+    { "from": "github", "to": "gather", "label": "版本與 issue", "classification": "15 管道之一", "variant": "default", "route": "vertical-channel" },
+    { "from": "community", "to": "gather", "label": "討論串", "classification": "15 管道之一", "variant": "default", "route": "vertical-channel" },
+    { "from": "gather", "to": "digest", "label": "gathered_items.json", "classification": "commit 回 master", "variant": "emphasis", "route": "straight" },
+    { "from": "digest", "to": "editor", "label": "日報 + 未收錄條目", "classification": "唯讀原料", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "editor", "to": "reporters", "label": "五區塊 prompt", "classification": "同一訊息派六份", "variant": "emphasis", "route": "straight" },
+    { "from": "reporters", "to": "wiki", "label": "領域頁更新", "classification": "每個事實一個家", "variant": "emphasis", "route": "straight" },
+    { "from": "wiki", "to": "reader", "label": "頁頂 callout 投影", "classification": "build_reader_digest.py", "variant": "default", "route": "straight" },
+    { "from": "wiki", "to": "gate", "label": "Step 3 commit wiki", "classification": "指名路徑", "variant": "emphasis", "route": "vertical-channel" },
+    { "from": "gate", "to": "push", "label": "gate 通過", "classification": "至多 2 輪自修", "variant": "emphasis", "route": "straight" },
+    { "from": "push", "to": "pages", "label": "部署", "classification": "Pages 不並發", "variant": "emphasis", "route": "straight" }
+  ],
+  "cards": [
+    { "dot": "amber", "title": "Phase A：抓料不需要 LLM", "items": ["GitHub Actions 純 Python 抓 15 個管道，網路無限制", "雲端沙盒封鎖外網，所以抓料與生日報拆在兩個地方", "日報一落地就唯讀，之後只有 wiki 會變"] },
+    { "dot": "rose", "title": "Phase B：唯一不可委派的一段", "items": ["背景 agent 再派 agent 會讓完成通知迷路", "所以主編必須是呼叫 session 本人，記者 foreground 並行", "沒有 API key、沒有 claude -p，LLM 只在 session 內"] },
+    { "dot": "emerald", "title": "Phase C：閘門與看門狗", "items": ["build gate 擋下就不建站，但 news 與 wiki 照推", "一次 push 三樣東西，避免 Pages 並發競爭", "隔日看門狗檢查產出齊不齊，缺件才寄信"] }
+  ]
+}
