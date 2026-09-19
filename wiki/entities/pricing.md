@@ -29,14 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-19
 
-> **最新計費政策異動**（2026-09-17）
-> - **官方說明中心新增用量限制說明**：用量與長度是兩種不同限制；建議關閉不需要的工具／連接器以節省用量。
-> - **Max 用量上限申訴 issue 持續攀升**：#16157 留言數增至 1,495（725 👍），本頁互動量最高的計費爭議仍未解。
-> - **官方 Plans & Pricing 頁大改版，同步今日 Cowork／chat 合併與 Docs／Slides 上線**：新增列入 Claude Academy、Docs／Slides／Design 說明，見下方「方案細節」。
-> - **$100 過渡 credit 已於 09-17 23:59 PT 到期作廢**，不可續買、不轉存。
+> **最新計費政策異動**（2026-09-19）
+> - **Auto mode 分類器不再計費**：Claude API、Enterprise 及 Bedrock／Vertex／Foundry／閘道器用戶，分類器耗用不計費，可用環境變數退回舊行為（v2.1.278）。
+> - **Team 方案 Max 20x 對應座位提案互動再攀升**：GitHub Issue #47509 增至 151 👍、46 留言，官方仍無回應。
 
 ## 現況
 
@@ -143,6 +141,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-09-19 生效｜Auto mode 預設改用 server-side classifier，分類器耗用不計費**：適用 Claude API、Enterprise 用戶，以及透過 Bedrock、Vertex、Foundry 或閘道器使用的用戶；可用 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退回舊行為，退回後若產生計費會顯示警告；`/status` 新增一列顯示本次 session 分類器是否跑在伺服器端（來源：[anthropics/claude-code v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)，2026-09-19）
+- **✅ 2026-09-19 生效｜Claude Code Projects：工作與計費事項可並行**：專案內處理計費相關事項不再阻擋工作進行，兩者可同時進行；具體涵蓋範圍未見官方文件細節（來源：The Register，2026-09-19）
 - **✅ 2026-09-13 到期（更正：非如期於 08-31 終止）｜Claude Code 週用量 +50% 促銷**：此促銷原訂 2026-05-13 起，歷經 06-22→07-07→07-12→07-19→08-18→**09-02（本次更正）**多次延長。08-29 官方公告曾記為「08-31 到期、不再延長」，但官方說明中心 **2026-09-02** 更新原文——「We've extended this promotion. Increased weekly limits now run through September 13, 2026.」——實際延長至 **2026-09-13**；09-14 起銜接下方「標準週配額永久 +25%」，兩者不留缺口。適用 **Pro、Max、Team**（來源：[Claude Code May–August 2026 Weekly Limits Promotion](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，2026-09-02 查證）
 - **✅ 2026-09-14 已生效（官方文件確認）｜標準週配額永久調高 25%，但取消 +50% 加成 → 相較「加成期間」水位實際減少約 17%**：官方公告（Bluesky @anthropicbot，2026-08-29）自 2026-09-14 起將 Claude Code 標準週配額**永久**調高 **25%**，適用 **Pro、Max、Team 與座位制 Enterprise**；上方 +50% 促銷 09-13 屆滿後由本規則接手，不留缺口。換算 `1.25 ÷ 1.50 ≈ 0.833`——09-14 起實際可用週配額約為加成期間的 83%，**減少約 17%**（BleepingComputer〈Anthropic is cutting Claude Code's current weekly limits by 17 percent〉即以此為框架）。**你該做的事**：工作流若貼近週配額上限，09-14 起應預期可用量下降，評估調整用量節奏或方案層級（來源：[Bluesky @anthropicbot](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)、[BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/)，2026-08-29）
 - **✅ 官方說明中心 2026-09-14 確認換軌如期發生，5 小時上限計算方式不受影響**：促銷 09-13 到期、週用量自 09-14 起回復標準額度（即上方 +25% 永久規則）；澄清見「重要政策變動紀錄」09-14 條目（[來源](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）
@@ -385,6 +385,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-09-19：GitHub Issue #47509 互動量持續攀升至 151 👍、46 留言——Team 方案高階座位提案仍待官方回應
+
+- **GitHub Issue #47509**：延續 09-06 已記錄之 133 👍、35 留言，互動量持續攀升至 **151 👍、46 留言**（2026-09-19 查證）；提案內容不變——Team 方案新增對等 Max 20x 用量的高階座位，供 CTO、技術主管等重度使用者選用，官方仍無回應；若獲採用將改變上方「我的方案現在有什麼」表的 Team 分層。
 
 #### 2026-09-14：官方說明中心確認週用量換軌已如期發生，並澄清不影響 5 小時用量上限
 

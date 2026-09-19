@@ -28,11 +28,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-18
+**最後新聞更新：** 2026-09-19
 
-> **最新動態**（2026-09-18）
-> - 有人拆讀 Claude Code 上線 npm 時附帶的原始碼與 source map，寫成 18 章架構解析，揭露 agent loop、14 步工具執行 pipeline 與多 agent 協作機制細節（HN 17 分）。
-> - Reddit r/artificial 週熱門：使用者質疑未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有年齡驗證機制，主張應有額外規範。
+> **最新動態**（2026-09-19）
+> Claude Code 2.1.277 正式支援 AGENTS.md（無 CLAUDE.md 時改讀），呼應社群 08-27 起的長期呼籲；HN 討論（683 分）指出新支援仍不含 `.agents/skills` 資料夾。
 
 ---
 
@@ -168,7 +167,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Reddit r/MachineLearning 週熱門：分析 31,352 筆逐時 LLM benchmark 分數，同日內波動僅 2.8 分、跨日波動達 8.4 分 | 2026-08-29 · 2026-08-29 | 🔥 | ☄️閃現 | 作者分析 3 萬多筆逐時 LLM benchmark 分數，發現同日內波動僅 2.8 分、跨日波動卻達 8.4 分，顯示常見單次跑分可能不夠穩定；Reddit 週熱門標記 | — |
 | Ask HN：如何戒除 Claude Code「工作狂式」依賴，找回可長期維持的正常工作步調 | 2026-08-29 · 2026-08-29 | 🔥 | ☄️閃現 | 工程師發文求助如何戒除對 Claude Code 的工作狂式依賴；HN score 11 | — |
 | Simon Willison 轉介 Anil Madhavapeddy：僅憑漏洞傳聞就足以讓資安研究者鎖定並找到可利用漏洞 | 2026-08-28 · 2026-08-28 | 🔥 | 🌙靜候 | Anil Madhavapeddy 觀察筆記：僅漏洞傳聞已足以讓資安研究者鎖定並找到可利用漏洞，呼應近期多起 AI coding agent 資安事件（具名表態，無社群延燒）；[原文](https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/)（Blog） | — |
-| 社群長期呼籲 Claude Code 支援 AGENTS.md 標準格式，跨平台已成競品共識 | 2026-08-27 · 2026-08-27 | 🔥🔥🔥🔥 | 🌙靜候 | [GitHub Issue #6235] 指出競品已統一採用 AGENTS.md，累積 385 則留言、6525 個 👍 | — |
+| 社群長期呼籲 Claude Code 支援 AGENTS.md 標準格式，跨平台已成競品共識 | 2026-08-27 · 2026-09-19 | 🔥🔥🔥🔥 | 🌋重燃 | [GitHub Issue #6235] 累積 385 則留言、6525 個 👍（重燃原因：2.1.277 正式上線 AGENTS.md 支援，HN 683 分討論指出缺 `.agents/skills`，2026-09-19） | — |
 | Reddit r/artificial 週熱門：新基準 HarnessOpt-Bench 測試前沿 LLM 改寫其他 agent harness 的能力並防作弊 | 2026-08-27 · 2026-08-27 | 🔥 | 🌙靜候 | 社群發布 HarnessOpt-Bench，測試 5 款前沿 LLM 改寫其他 agent harness 的能力，並設計防作弊機制；Reddit r/artificial 週熱門標記 | — |
 | 用量限制驅動的「規劃用 Claude Code、實作交給本地模型」混合工作流小趨勢 | 2026-08-21 · 2026-08-27 | 🔥🔥 | 🌊延燒 | 近一週至少三則案例（Reddit×2＋XDA）主張因用量限制而分流；最後動態 2026-08-27（XDA 報導） | — |
 | Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | WSJ 報導 Anthropic 稱潛在市場規模達 30 兆美元；HN 留言（score 39）指出這是產業 TAM 估計，非營收承諾 | — |
@@ -264,6 +263,15 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### AGENTS.md 支援正式上線，社群點出 .agents/skills 缺口（2026-09-19）
+
+- **來源：** Claude Code now reads AGENTS.md if there is no Claude.md — Hacker News（683 分）；[原文](https://code.claude.com/docs/en/changelog)
+- **核心論點：** Claude Code 2.1.277 起，專案沒有 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整（尚未支援 Bedrock、Vertex、Foundry）；HN 討論指出新支援不含 `.agents/skills` 資料夾，同批 changelog 另新增 `CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY` 設定
+- **關鍵回響：**
+  - 📝 支持：The Register 報導稱此舉等同官方跟進 OpenAI 提出的 markdown 指示規範（Google News / The Register）
+  - 🧪 跟進實測：Simon Willison 轉引 Anthropic 工程師 Thariq Shihipar 發文，補充上線細節（Blog / Simon Willison）；Reddit r/ClaudeAI 週熱門同步關注（Reddit）
+- **收斂結論：** 呼應本頁 2026-08-27「社群長期呼籲支援 AGENTS.md」條目（見上方「最近在討論什麼」），該請求今日正式兌現，惟 `.agents/skills` 資料夾支援仍缺
 
 #### Migration from Claude Code to a private local harness. Questions.（2026-09-13）
 

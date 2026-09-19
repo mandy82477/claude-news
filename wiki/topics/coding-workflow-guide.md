@@ -30,14 +30,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
 **最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-17
+**最後新聞更新：** 2026-09-19
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
 
-> **最新動態**（2026-09-17）
-> 官方新增說明：用量與長度是兩種不同限制，可暫時關閉不需要的工具／連接器省用量，見第 2a 段「官方的 session 經營建議」。
+> **最新動態**（2026-09-19）
+> v2.1.277 起 repo 無 `CLAUDE.md` 時 Claude Code 原生改讀 `AGENTS.md`，不必再手動 `@AGENTS.md` import，見第 1 段「要放哪幾個檔」。
 
 ---
 
@@ -131,7 +131,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **規則想集中管就用 `.claude/rules/*.md`。** 與「每個目錄一份 CLAUDE.md」是兩種做法，官方明確對照過：rules 放在 repo 根的 `.claude/` 裡、可加 `paths:` glob 限定生效範圍，適合「所有慣例集中一處」或「同一條規則散落多處路徑」；per-directory CLAUDE.md 則適合「各目錄的維護者自己管、規則跟著程式碼一起版控」。
 
-**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。官方也支援這種寫法：Claude Code 只讀 `CLAUDE.md`，但你可以讓它 `@AGENTS.md` 把內容 import 進來，再於底下補 Claude 專屬的指示。
+**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。**v2.1.277（2026-09-18）起，repo 內若沒有 `CLAUDE.md`，Claude Code 會原生改讀 `AGENTS.md`**（可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry），不必再手動 import；兩者都要保留時，仍可在 `CLAUDE.md` 裡用 `@AGENTS.md` 把共用內容帶進來，底下補 Claude 專屬指示。
 
 **只給自己看的東西放 `CLAUDE.local.md`**（沙箱網址、偏好的測試資料），記得加進 `.gitignore`。跨 worktree 的個人設定則改成從家目錄 import。
 

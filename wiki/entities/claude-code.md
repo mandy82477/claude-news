@@ -42,13 +42,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
-- **v2.1.278**（2026-09-19）：Auto mode 預設改用 server-side classifier——Claude API、Enterprise，以及透過 Bedrock、Vertex、Foundry 或閘道器使用者，不再為分類器耗用額外計費；`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為，退回後若產生計費會顯示警告；`/status` 新增一列顯示本次 session 分類器是否跑在伺服器端（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）。
-- **v2.1.277**（2026-09-18）：新增 AGENTS.md 支援——專案內若無 CLAUDE.md，Claude Code 改讀 AGENTS.md，可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry；同批新增 `CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY` 設定（見 [Changelog](https://code.claude.com/docs/en/changelog)）。回應全站讚數最高已知問題 #6235，見下方「已知問題」。
+- **v2.1.278**（2026-09-19）：Auto mode 預設改用 server-side classifier，API／Enterprise／Bedrock／Vertex／Foundry／閘道器不再為分類器耗用額外計費；`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）。
+- **v2.1.277**（2026-09-18）：新增 AGENTS.md 支援，無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry（見 [Changelog](https://code.claude.com/docs/en/changelog)）。回應已知問題 #6235，見下方「已知問題」。
 - **v2.1.276**（2026-09-18）：修復 2.1.275 一項迴歸——`ANTHROPIC_BASE_URL` 指向 proxy／gateway 時，每個請求皆因 `advisor_20260301` 標籤觸發 400 錯誤而全數失敗；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）。
 - **v2.1.272**（2026-09-15）：Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動。
 - **v2.1.270**（2026-09-12）：修復 2.1.269 一項迴歸——長時間執行的 session 中，唯讀 git 指令會意外要求使用者授權；純 bug 修復。
 - **v2.1.269**（2026-09-11）：新增 `claude plugin eval` 指令，對外掛執行 eval 套件並產出可重現的評分結果（JSON＋HTML 報告，含 no-plugin baseline 對照組）；見 `claude plugin eval --help`；官方文件索引同步新增 [plugin-evals.md](https://code.claude.com/docs/en/plugin-evals.md)。
-- 其餘版本（含 v2.1.267 `maxEffortLevel` 統一推理努力上限、v2.1.261 `/status`／`claude doctor` 新增 Organization policy 欄位、v2.1.258 macOS 12 啟動失敗修復、anthropic-sdk-python v1.0.0 httpx2 breaking change）的逐版異動見下方「版本更新 → 最新版本」表。
+- 其餘版本（含 v2.1.261 `/status`／`claude doctor` 新增 Organization policy 欄位、v2.1.258 macOS 12 啟動失敗修復、anthropic-sdk-python v1.0.0 httpx2 breaking change）的逐版異動見下方「版本更新」表。
 
 **近期平台與文件異動：**
 
@@ -223,7 +223,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**畫面/終端機閃爍（GitHub issue #769 進行中呼叫畫面閃爍，累積 306 則留言、335 個讚，Claude CLI v0.2.69，全站已知問題今日互動量最高；issue #1913 終端機閃爍，累積 187 則留言、321 個讚，皆 2026-07-09）**：使用者回報進行中的呼叫會造成畫面閃爍，另有獨立回報指出終端機介面本身也會閃爍，兩者疑為相關或重複問題；官方尚未回應。
 - 🔴 **未修復**｜**Thinking summaries 在 Opus 4.7 消失，harness 未設定 `display: "summarized"`（GitHub issue #49268，累積 49 則留言、78 個讚，首見 2026-07-17，Claude Code v2.1.111，2026-07-21 10:45 UTC 留言數更新）**：使用者改用 Opus 4.7 後思考摘要不再顯示，追查發現 harness 呼叫 extended-thinking API 時未設定 `display: "summarized"` 參數，屬 harness 端設定缺失而非模型行為變化；與既有「Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染」（issue #49322）同屬 thinking summary 顯示問題但根源不同，暫分列追蹤；官方尚未回應。見 [[entities/opus-4-7]]。
 - 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 47 則留言、157 個讚，首見 2026-07-16，2026-09-11 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
-- 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 269 則留言、2092 個讚，2026-07-09 首見，2026-09-19 互動數更新）**：`/buddy` 功能已於 4 月 9 日自 Claude Code v2.1.97 起移除，官方 changelog 未提及；社群發起統整請願要求恢復，反應數居全站已知問題前列，官方尚未回應是否重新上架。
+- 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 269 則留言、2092 個讚，2026-07-09 首見，2026-09-19 互動數更新）**：`/buddy` 已於 4/9 隨 v2.1.97 移除，官方 changelog 未提及；社群請願要求恢復，官方尚未回應。
 - 🔴 **未修復**｜**終端機複製夾帶多餘縮排與行尾空白（GitHub issue #18170，累積 134 則留言、283 個讚，首見 2026-07-08，2026-08-06 互動數更新）**：從 Claude Code 終端機複製文字（段落或程式碼區塊）時會夾帶前導縮排與行尾空白，影響貼上至其他編輯器或文件時的格式整潔；官方尚未回應。
 - 🔴 **未修復**｜**AskUserQuestion 60 秒逾時自動代答（GitHub issue #73125，累積 414 個讚，2026-09-10 更新）**：逾時未回應會自動代答並繼續執行，可能略過決策分岔點；官方確認為刻意設計（v2.1.198），非 bug，尚無可調逾時設定。討論見 [[topics/community-tech-discussions]]。
 - 🔴 **未修復**｜**功能請求：READ 工具未標示目前正在讀取哪一個檔案（GitHub issue #21151，累積 133 則留言、186 個讚，2026-07-17 首次記錄，2026-07-21 留言數更新）**：使用者反映執行 READ 工具讀取檔案時，介面未顯示目前正在讀取的具體檔案名稱，多檔案讀取情境下難以追蹤進度；官方尚未回應或提供設定選項。
@@ -333,7 +333,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork Edit/Write 工具因緩衝區容量上限靜默截斷檔案（byte-conservation buffer cap，GitHub issue #53940，累積 44 則留言／16 個讚，原始回報 2026-04-27，2026-07-16 為作者持續維護的長篇更新摘要）**：使用者回報 Cowork 的 Edit/Write 工具會因緩衝區容量上限機制靜默截斷檔案內容，且此問題具確定性、在任何檔案大小下皆會觸發，並非邊緣情況；屬嚴重的資料完整性缺陷；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 54 則留言、57 個讚，首見 2026-07-17，2026-09-11 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件新增停用自動附加開啟檔案/選取範圍設定（GitHub issue #24726，累積 77 則留言、243 個讚，首見 2026-07-17，2026-09-16 互動數更新）**：使用者希望 VS Code 擴充套件提供選項，可停用自動將目前開啟檔案或選取範圍附加進對話 context 的行為；官方尚未回應或提供設定選項。
-- 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-09-09）｜**Remote Control 自動重連機制失效，靜默斷線且無法自行恢復（GitHub issue #34255，累積 71 則留言、108 個讚，首見 2026-07-16，2026-09-19 互動數更新）**：使用者回報 Remote Control 功能連線中斷後不會自動重連，且無任何提示告知已斷線，需手動介入才能恢復；查證確認 issue 仍為 open，無官方留言或修復版本；與下列 `/remote-control` 相關問題（issue #28322、#29006）同屬 Remote Control 功能仍不穩定的訊號。
+- 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-09-09）｜**Remote Control 自動重連失效，靜默斷線無法恢復（GitHub issue #34255，累積 71 則留言、108 個讚，首見 2026-07-16，2026-09-19 互動數更新）**：連線中斷不會自動重連、無提示，需手動介入；issue 仍 open，無官方回應。與 `/remote-control` 相關問題（issue #28322、#29006）同屬功能不穩定訊號。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 52 則留言、140 個讚，首見 2026-07-15，2026-09-04 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
 - 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-09-09）｜**功能請求：Linear 整合——指派 issue 給 Claude Code 觸發雲端 agent session（GitHub issue #12925，累積 39 則留言、131 個讚，2026-07-30）**：使用者呼籲支援將 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，比照現有 GitHub Issues 指派觸發雲端工作流的模式擴展至 Linear；查證確認 issue 仍為 open（`enhancement`、`external`），無官方留言或排入路線圖跡象。
@@ -449,6 +449,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.278** | 2026-09-19 | Auto mode 預設改用 server-side classifier，Claude API／Enterprise／Bedrock／Vertex／Foundry／閘道器用戶不再為分類器耗用額外計費（`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為，退回後產生計費會顯示警告）；`/status` 新增一列顯示分類器是否跑在伺服器端（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
+| **v2.1.277** | 2026-09-18 | 新增 AGENTS.md 支援：專案無 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry；同批新增 `CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY` 設定（見 [Changelog](https://code.claude.com/docs/en/changelog)）|
+| **anthropic-sdk-python v1.7.0** | 2026-09-18 | Features：新增 rate limit 群組可帶 `display_name` 欄位（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0)）|
+| **anthropic-sdk-typescript vertex-sdk v0.19.10** | 2026-09-18 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.10)）|
+| **anthropic-sdk-typescript google-cloud-sdk v0.0.13** | 2026-09-18 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13)）|
 | **v2.1.276** | 2026-09-18 | Bug fix：修復 2.1.275 迴歸——proxy/gateway 下 `advisor_20260301` 標籤觸發 400 全數失敗；純修復無新旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）|
 | **v2.1.274** | 2026-09-17 | 新增記憶體用量過高時的可見警示（附釋放記憶體或安全重啟步驟）；新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，限制首次非互動啟動的等待時間；官方原文於此處截斷，其餘變更項目未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.274)）|
 | **v2.1.273** | 2026-09-15 | 新增 5 個內部遙測用途請求標頭，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.273)）|
@@ -699,6 +704,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-19 | **v2.1.278**：Auto mode 免計費 server-side classifier，`/status` 新增顯示列。**v2.1.277**：AGENTS.md 支援上線，已知問題 #6235（讚數最高）轉 ✅ 已修復，同步 [[topics/official-community-gap]]。新增已知問題 #11315（記憶體洩漏，與 #4953 分列）。桌面文件新增 Thinking／Verbose 檢視模式。旗標新增 3、消失 1，見 [[topics/claude-code-experimental]]。互動數更新 4 則。 |
 | 2026-09-18 | **v2.1.276** 修復 400 錯誤迴歸。Projects 進 Beta，六媒體報導。旗標增減各 2，見 [[topics/claude-code-experimental]]。互動數更新 5 則。 |
 | 2026-09-17 | **v2.1.274** 新增記憶體警示旗標。桌面文件新增帳號 skills/plugins 載入規則。TradingView MCP Server（第三方）。互動數更新、❓ 標記各 1 則，詳見各節。 |
 | 2026-09-16 | **v2.1.273** 新增遙測標頭；sdk-python v1.6.0 擴充 Managed Agents 權限；桌面文件新增雲端 session 接手／推送分支；新增已知問題 #69044；11 則互動數更新，詳見各節。 |
