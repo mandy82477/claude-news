@@ -28,10 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
 **最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-18
+**最後新聞更新：** 2026-09-19
 
-> **最新動態**（2026-09-18）
-> - **生命科學布局加碼**：官方推出生命科學驗證計畫（LSVP）放寬生醫安全限制，同日 Reuters 獨家報導已悄悄設立自有生物實驗室加速藥物開發，詳見 [[topics/anthropic-business#時序]]。
+> **最新動態**（2026-09-19）
+> - **Accenture 出任首位「內嵌評估者」**：獨立評估前沿 AI 安全，Washington Post 稱 Anthropic 同步承諾投入 10 億美元資金。
+> - **反壟斷訴訟**：三媒體同日報導 Anthropic 與 OpenAI、SpaceXAI、Google 被控就「為前沿踩煞車」呼籲構成合謀。
 
 ---
 
@@ -61,6 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：指標表本輪 10/10 滿載。2026-09-07 換手一列：「定價談判力」（無下一個時點、資料日期最舊 05-13）讓位給新進的「算力交易總額（11個月）」（一級媒體、雖無時點但資料日期最新），已移入細節區並註記讓位日。下一個新指標進來時依留表優先序判斷，現存最舊/最弱者待評估。 %%
 
 **數字細節**
+- **Accenture 內嵌評估者，承諾 10 億美元（2026-09-19）**：Anthropic 官方宣布由 Accenture 出任首位「內嵌評估者」（embedded evaluator），獨立評估前沿 AI 安全，回應 CEO Dario Amodei「We Must Pace the Frontier」一文承諾；Washington Post 報導 Anthropic 同步承諾投入 10 億美元資金於此計畫，具體用途、分期時程均未見官方文件細節（[Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)；Google News/The Washington Post）。
 - **官方估值**：$9,650 億是 2026-05-28 Series H 的投後估值，募資 $650 億，是史上最大單輪 AI 融資。更早的 $3,500 億是 2026-04-24 Google 投資那一輪的估值，**已是歷史值**，完整脈絡見 [[entities/google-investment]]。
 - **IPO 估值預期**：FT 2026-08-13 報導投資人預期 10 月上市時估值 2 兆以上，同日 qz、Fortune、PYMNTS 跟進；**報導同時寫明公司高層未設這個目標**。次級市場 2026-07-09 曾報到 $1.2 兆，但幾乎無人願賣，那個價格反映的是稀缺不是共識。
 - **企業採用率**：Ramp 8 月指數（7 月資料，2026-08-12 發布）為 Anthropic 43.5%、OpenAI 39.7%、xAI 4%，原文寫「extended its gains as the leader」。**2026-05-15 的 34.4% vs 32.3% 是首度超越那一次的歷史數字**，不是現況。
