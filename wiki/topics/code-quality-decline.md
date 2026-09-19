@@ -3,7 +3,7 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-09-18"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
@@ -27,7 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-18
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-18
 
 > **Opus 5 品質觀感線再添第六種主張**（2026-09-18）
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-09-13。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-09-19。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
@@ -150,7 +150,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **effort 旋鈕「非單調」的說法不成立**：2026-07-29 一則 Reddit 貼文稱 effort 超過 `high` 後編碼分數反而下降、並稱官方 migration guide 自承此事。
 - 2026-08-08 查官方文件後判定不成立——官方明載 Opus 5 把額外 effort 轉成更好結果的可靠度高於歷代 Opus（比對見 [[entities/opus-5]]）。本頁先前把它當成「唯一一筆官方確認的行為特性變化」，那是錯的。
-- **這條線和「context 腐蝕」那場爭論不是同一件事**：「越用越笨是模型退步還是 context 腐蝕」已在 [[topics/community-tech-discussions]]「現在吵到哪」吵出共識（context 腐蝕）。本頁不重判那場爭論，只記官方對這 15 則到今天沒有回應。
+- **這條線和「context 腐蝕」那場爭論不是同一件事**：「越用越笨是模型退步還是 context 腐蝕」已在 [[topics/community-tech-discussions]]吵出共識（context 腐蝕），該場逾 90 天無新反方證據，已移出「現在吵到哪」表、併入「已經沒人在吵的」。本頁不重判那場爭論，只記官方對這 15 則到今天沒有回應。
 
 ---
 

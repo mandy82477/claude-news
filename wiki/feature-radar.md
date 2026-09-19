@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-18
+**最後更新：** 2026-09-19
 
 > **這禮拜動了什麼**（2026-09-17）
 > Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放——本月至今最大的官方產品異動，官方「方案與定價」頁同日大改版收攏相關段落。
@@ -278,21 +278,21 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Model Hardware Standard**（統一介面供 Claude 代理人操作機器人與科學實驗室儀器，Bloomberg／Ars Technica／FT 三方跟進） | 2026-08-27 | 🔥🔥🔥 | ⏳ 觀望 | Research Preview |
 | **Cowork 記憶功能整合**（設定 > Memory > Topics，跨 web/App/Cowork 共用記憶，敏感主題預設關閉） | 2026-08-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥🔥 | ❌ 暫不推薦 | 正式發布 |
+| **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥 | ❌ 暫不推薦 | 正式發布 |
 | **Concise 輸出風格**（v2.1.237 新增內建 output style，省略前言與敘述性文字） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
 | **spellcheck 輸入框拼字檢查**（v2.1.235，需本機 aspell／hunspell／ispell） | 2026-08-18 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **自訂專案 Transcript 目錄短名稱**（`CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，v2.1.234） | 2026-08-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Auto 模式預設化**（⚠️ Breaking change：8/14 起 auto 成為 Pro／Max／Team 預設權限模式；免收分類器 token 費；Enterprise 與雲端平台仍選用制） | 2026-08-14 生效（08-07 公告，08-10 官方部落格確認） | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code 跨 session 訊息互通**（需 v2.1.224+、macOS／Linux；`ListAgents` 探索可連線 session、`SendMessage` 指定名稱傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.232**（Subagent forking 預設開啟，`subagent_type: "fork"` 繼承完整對話與 prompt cache；派工行為亦調整，原文截斷） | 2026-08-13 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **API Inference Hooks**（Enterprise 組織 beta，claude.ai／Cowork／Claude Code 上受管治 prompt 可導向企業自有 AI 安全伺服器） | 2026-08-05 | 🔥 | ⏳ 觀望 | Beta（Enterprise） |
 | **Claude Code v2.1.222**（安全修復：worktree 隔離 session 及其 subagent 可對主 checkout 執行破壞性 git 指令的漏洞，隔離範圍擴及檔案編輯與 Bash 執行） | 2026-08-04 | 🔥🔥 | ✅ 建議升級 | 正式發布（安全修復） |
 | **Claude Code v2.1.221**（VSCode 新增 Focus view：chat-menu 切換選項，將工具活動摺疊為可展開的每輪摘要並附即時執行指示，`Ctrl+Alt+F` 開關） | 2026-08-04 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Opus 5**（新次旗艦，`--model` 可選；$5/$25 與 4.8 同價、為 Fable 5 一半；Max／Team premium／API 的預設 Opus） | 2026-07-25 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude 語音模式 Opus／Sonnet 選擇**（所有使用者開放於 Opus／Sonnet 間切換語音模式底層模型，六家媒體同步報導，無官方版本號） | 2026-07-24 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布（全使用者開放） |
+| **Claude 語音模式 Opus／Sonnet 選擇**（所有使用者開放於 Opus／Sonnet 間切換語音模式底層模型，六家媒體同步報導，無官方版本號） | 2026-07-24 | 🔥 | ⚡ 有條件推薦 | 正式發布（全使用者開放） |
 | **API 新增 Stop Reason `model_continue`**（anthropic-sdk-python v0.119.0／anthropic-sdk-typescript sdk-v0.114.0） | 2026-07-23 | 🔥 | ⏳ 觀望 | 正式發布（SDK 層） |
 | **Claude Code Desktop iOS Simulator**（Mac app 內建 iOS Simulator 面板，即時建置／執行／除錯 iPhone App，需已安裝 Xcode iOS 平台） | 2026-07-22（08-10 官方文件查證確認） | 🔥 | ⚡ 有條件推薦 | 公開測試（Pro／Max／Team） |
 | **Claude Code v2.1.218**（`/code-review` 改為背景 subagent 執行，審查工作不再佔用對話內容；同版新增螢幕報讀軟體相關無障礙改善） | 2026-07-22 | 🔥 | ✅ 推薦 | 正式發布 |
@@ -322,7 +322,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **MCP CLI 認證指令**（`claude mcp login/logout`，v2.1.186） | 2026-06-22 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **MCP Enterprise Authorization**（Okta / VS Code 零設定 SSO） | 2026-06-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **破壞性 Git 指令自動封鎖**（Claude Code v2.1.183） | 2026-06-19 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Claude Code Artifacts**（工作階段即時輸出可共享互動網頁） | 2026-06-18 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code Artifacts**（工作階段即時輸出可共享互動網頁） | 2026-06-18 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Tool(param:value) permission 語法 + 巢狀 Skills**（v2.1.178） | 2026-06-15 | 🔥 | ✅ 推薦 | 正式發布 |
 | **enforceAvailableModels 企業管控**（Claude Code v2.1.175） | 2026-06-12 | 🔥 | ✅ 推薦 | 正式發布 |
 | **Claude Fable 5**（Mythos 架構公開版，$10/$50 per M token） | 2026-06-09 | 🔥🔥🔥🔥🔥 | ❌ 改用 5.1（Legacy，仍可呼叫） | 正式發布（Legacy，退役不早於 2027-06-09；現行世代見 Fable 5.1 那一列） |
@@ -358,7 +358,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **MCP `alwaysLoad`** | 2026-04-28 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`worktree.baseRef` 設定** | 2026-05-08 | 🔥 | ⚡ 有條件 | 正式發布 |
 | **Claude Design** | 2026-04-27 | 🔥🔥 | ❌ 暫不推薦 | 正式發布 |
-| **Dreaming 記憶整合**（最後後續 2026-07-17：Python SDK 0.117.0 新增 dreaming API 支援；尚無採用回報） | 2026-05-07 | 🔥 | ⏳ 觀望 | Research Preview |
+| **Dreaming 記憶整合**（最後後續 2026-07-17：Python SDK 0.117.0 新增 dreaming API 支援；已掃日報至 2026-09-18 無新後續，尚無採用回報） | 2026-05-07 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Outcomes 規格驗證** | 2026-05-07 | 🔥 | ⚡ 有條件 | 公開測試 |
 
 ---

@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-16"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-16"
 status_main: "active"
 days_since_news: 2
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-08-27
-**最後更新：** 2026-09-16
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-16
 
 > ❓ **待查證**（標 2026-08-27｜查 Jensen Huang、Hugging Face｜複 2026-09-10）｜**黃仁勳談對 OpenAI、Anthropic 投資規模「後悔」**（2026-08-27 報導）：Yahoo Finance 報導 Nvidia 傳出將投資 Hugging Face 129 億美元，同篇引述執行長黃仁勳表示對先前投資 OpenAI、Anthropic 的規模感到「後悔」；日報摘要僅載「regret」一詞，究竟是後悔投得太少（錯失更大獲利）或太多（規模風險），原文脈絡未展開，不得擇一推斷。
@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-2026-09-15，Jensen Huang 於 Dreamforce 公開場合的言論與 Anthropic、OpenAI 執行長在 AI 安全立場上出現分歧，並批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」（"Completely unnecessary"）；同場 [[entities/dario-amodei|Dario Amodei]] 重申全球 AI 減速呼籲，兩人主張形成對比，完整脈絡見 [[entities/dario-amodei]]（CNBC）。
+2026-09-15，Jensen Huang 於 Dreamforce 公開場合的言論與 Anthropic、OpenAI 執行長在 AI 安全立場上出現分歧，並批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」（"Completely unnecessary"）；同場 [[entities/dario-amodei|Dario Amodei]] 重申全球 AI 減速呼籲，兩人主張形成對比，完整脈絡見 [[entities/dario-amodei]]（CNBC）。反壟斷豁免提案本身的攻防紀錄見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
 2026-08-27，Yahoo Finance 報導 Nvidia 傳出將以 129 億美元投資 Hugging Face，同篇提及黃仁勳對先前投資 OpenAI、Anthropic 的規模表示「後悔」（"regret"）；具體是後悔投得不夠多、還是投得過多，查證狀態見頁首標記。Nvidia 對 OpenAI、Anthropic 的既有投資金額與合作細節屬商業動態，詳見 [[topics/anthropic-business]]。
 
@@ -50,6 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/dario-amodei]] — Anthropic 執行長，2026-09-15 於 Dreamforce 同場交鋒對象
 - [[entities/mustafa-suleyman]] — Microsoft AI 執行長，同期另一則批評 Anthropic 的具名聲量
 - [[topics/anthropic-business]] — Nvidia 與 Anthropic 的投資／合作動態與金額細節
+- [[topics/anthropic-government-policy]] — 反壟斷豁免提案本身的攻防紀錄
 
 ## 參考來源
 

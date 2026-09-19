@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-17
 
 > **本頁在回答什麼**（重寫 2026-08-08）
@@ -43,16 +43,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 本週 coding 亮點
 
-- **Managed Agents 選型定案＋官方五層 agent 協調地圖**——「該不該碰 Managed Agents」首度有清楚四選一分界（`/goal`／內建 subagent／Managed Agents／Agent SDK，附官方算例），並補上按層級排列的協調積木地圖（單向扇出、點對點傳訊、跨機器、持久記憶），見 [[entities/managed-agents]]
-- **換模型前先做 effort sweep**——官方文件證偽社群「effort 調高分數非單調下降」的說法，重申調 effort 通常比換模型更有效，見 [[topics/model-comparison]]
-- **AGENTS.md 跨工具訴求破 6,525 讚，Claude Code 仍未支援**——Codex／Amp／Cursor 已統一採用該標準格式，跨工具並用的人短期內仍得為 Claude Code 另外維護一份 CLAUDE.md，見 [[entities/claude-code]]
-- **`/verify`／`/code-review` 迴歸為手動觸發**——v2.1.215 起評估與改進迴路從自動降為手動，仰賴自動 code review 的工作流要注意不會再自動跑；同批官方查證表確認 subagent 可指定 `model` 欄自行拆分/執行者用不同模型，見 [[topics/community-tech-patterns]]
-- **Max 訂閱用量爭議延燒**——週配額觸頂案累積至 1,492 則留言官方未解，另有駭客可在不竊密碼下抽乾額度、「Max 20x」被點名實為週用量上限機制而非單純 20 倍換算，規劃預算前先查 `Settings > Usage`，見 [[entities/pricing]]
-- **Claude Code 權限 deny-list 可被 8 種手法繞過**——研究者實測顯示只有改用 allow-list 才真正擋得住，用 deny-list 限制權限的人這是直接改變安全配置的證據，見 [[topics/ai-agent-safety]]
-- **官方 dynamic workflows：編排從逐回合判斷改成可重跑 script**——固定會重複跑的流程現在能寫成 `pipeline()`／`parallel()` script 存起來重跑（全付費方案），見 [[topics/anthropic-agent-stack]]
-- **AskUserQuestion 60 秒逾時自動代答是刻意設計，非 bug**——用它設計審批分岔點的人要自行因應逾時代答，官方已確認不會改成 bug 修掉，見 [[entities/claude-code]]
-- **maxEffortLevel：跨供應商統一設 effort 上限**——一個開關同時管 Bedrock／Vertex／Foundry 等所有供應商，多供應商團隊不必逐一設定，也防止個別模型被意外調到最高 effort 推高成本，見 [[entities/claude-code]]
-- **跨 session 記憶層已達成形趨勢**——6 個獨立實作（claude-mem、OKF、CodeAlmanac、OzBrain、手動 Obsidian vault、brain.md）跨 105 天反覆出現，評估要不要導入時這個訊號比單一工具星數更值得參考，見 [[topics/community-tech-patterns]]
+- **Claude Code 週配額換軌，實際可用量淨減約 17%**——+50% 加成促銷到期、標準配額改為永久 +25%，官方同日確認換軌如期發生，見 [[entities/pricing]]
+- **`claude plugin eval` 官方內建外掛評測指令**——含 no-plugin baseline 對照組，出可重現 JSON／HTML 報告，自製或引用外掛前不必再土法寫評測腳本，見 [[entities/claude-code]]
+- **`/goal` 官方細節補齊＋三問題分流框架**——resume 不保留回合／計時／token 基線，背景 subagent 還在跑時完成判定會跳過一輪；agent teams／agent view／workflow 怎麼選看「誰協調」「工人需不需互相講話」，見 [[topics/anthropic-agent-stack]]
+- **Sonnet 5 同 harness 下贏過 Opus 4.8**——Terminal-Bench 2.1 固定 Terminus-2 harness 比較 80.4% vs 74.6%，本站首次記錄中階模型勝過旗艦，見 [[entities/sonnet-5]]
+- **SWE-bench「兩說歧異」查明為 Verified／Pro 混談，Aider Polyglot 因連續 7 週停更下市**——本輪起分列排名，「寫 code」代表指標改由 SWE-bench Pro 承接，選模型看榜先分清子集，見 [[topics/model-task-leaderboard]]
+- **Function Hooks 更名 Claude Mods，官方承諾出貨時程**——數週內開源三款內建 mod 當範例，想寫外掛快有現成參考實作，見 [[entities/claude-code]]
+- **桌面版 skills/plugins 讀取來源三分**——本機讀個人 `~/.claude/skills/`，雲端改讀 claude.ai 帳號設定，SSH 讀本機路徑，跨裝置維護要分清楚讀哪一份，見 [[entities/claude-code]]
+- **逆向拆讀揭露官方省成本手法**——npm 原始碼＋source map 分析出 14 步工具執行 pipeline，子 agent 共享 prompt cache 前綴省 95% 成本，可抄進自己的多 agent 流程，見 [[topics/community-tech-discussions]]
+- **注入新來源：agent 自己的 compaction 摘要**——OpenAI 對齊團隊發現壓縮摘要可能夾帶自身先前輸出的注入內容、被自己讀回執行，長 session 光防外部輸入不夠，見 [[topics/ai-agent-safety]]
 
 ---
 

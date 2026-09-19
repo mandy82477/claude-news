@@ -456,7 +456,8 @@
         "8\\. 記錄本次 lint",
         "9\\. 更新 wiki/index\\.md",
         "10\\. 收尾閉迴路"
-      ]
+      ],
+      "_mutate_exempt": "子 skill 名是唯一識別字串，散文不可能誤中；runbook 步驟表本就一步一列重複（sweeps 13 列），命中數天然過 BROAD_HITS。改名時兩側整批變動仍會紅，契約有效。"
     },
     {
       "name": "model-comparison 選型品質審核六條規則齊全（決策可用性的單一真相源）",

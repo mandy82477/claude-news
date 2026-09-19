@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（正式發布）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-12
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-03
 
 > **最新動態**（2026-09-03）
@@ -91,7 +91,7 @@ claude --model claude-sonnet-5-20260701
 
 - **官方 BrowseComp 對比圖表換版（爭議已落地，2026-08-26 查證）**：Anthropic 於 **2026-06-30 以 changelog 更正**替換了 Sonnet 5 的 BrowseComp 成本效能圖——原圖未套用其標準 agentic-search 方法論，新圖改用 Sonnet 5 system card 設定（10M token 預算、compaction、programmatic tool calling），成本軸上限也從約 $10 拉到 $50。官方定調為**方法論更正**，非挑選有利數據；批評方（[vincentschmalbach.com](https://www.vincentschmalbach.com/anthropic-changed-sonnet-5-chart-after-it-made-sonnet-look-bad/)，HN score 3）認為敘事從「Sonnet 落後 Opus」變成「花得夠多就有用」。**該文未提供修改前後圖表的存檔對照**，換版事實與官方理由則有 changelog 可稽；讀者可自行判斷方法論更正是否合理，本頁不代為裁定
 - ⚠️ **個性/語氣不如 Sonnet 4.6（主觀回饋）**：Reddit 多位使用者反映 Sonnet 5 智力提升但互動個性流失——Sonnet 4.6 原本較有個性、懂得對話節奏、簡短回應精準，Sonnet 5 感覺更像通用「help」助手而非有特色的對話夥伴（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1ulf5xc/something_important_was_lost_between_sonnet_46/)）；屬主觀體驗回饋，非量化評測，與 Fable 5「失去靈魂」討論（見 [[entities/fable-5]] 爭議區）呈現類似的世代模型「個性 vs 能力」取捨模式（推論）
-- ⚠️ **回應內容重複（弱訊號，2026-07-09）**：Reddit r/ClaudeCode 使用者詢問是否也遇到 Sonnet 5 回應內容重複的情形；貼文無 score（Reddit RSS 恆 0，非跨平台佐證），暫僅列為待觀察訊號，不構成已驗證問題
+- ⚠️ **回應內容重複（弱訊號，2026-07-09）**：Reddit r/ClaudeCode 使用者詢問是否也遇到 Sonnet 5 回應內容重複的情形；貼文無 score（Reddit RSS 恆 0，非跨平台佐證），暫僅列為待觀察訊號，不構成已驗證問題。同方向的世代級品質觀感（含 Sonnet 5 在內的第 5 代）整理在 [[topics/code-quality-decline]]
 
 ## 相關議題
 

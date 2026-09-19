@@ -3,7 +3,7 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-18"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
@@ -27,7 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-18
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-18
 
 > **最新動態**（2026-09-18）
@@ -460,7 +460,6 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 人 | 是誰 | 他做的那一件事 |
 |---|---|---|
-| [[entities/dario-amodei\|Dario Amodei]] | Anthropic 執行長 | 對就業衝擊與監管的示警，被指在 IPO 前夕疏遠投資人與部分美國政府（The Information，2026-09-06） |
 | [[entities/bernanke\|Ben Bernanke]] | 前美國聯準會主席 | 2026-07-10 加入長期利益信託董事會，是公司側首個補強治理公信力的動作 |
 | [[entities/jensen-huang\|Jensen Huang]] | Nvidia 執行長 | 2026-08-27 表示對先前投資 OpenAI、Anthropic 的規模感到後悔（媒體轉述，未經證實） |
 | [[entities/robert-mahari\|Robert Mahari]] | 法律科技學者，Claude for Legal 負責人 | 2026-08-07 出任新設 Claude for Legal 部門負責人 |
@@ -502,7 +501,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 #### 2026-09-17
 - **[生命科學布局] 官方部落格：說明 Claude 在生物分子建模的應用進展，與同期生命科學布局同源**（Google News/Anthropic，跨來源數 3）
 - **[商業風險] The New Stack：Claude Code Projects 多 agent 併行長時間運行，容易讓方案用量短時間衝上限**：詳見「還沒過去的風險」表新增列（Google News/The New Stack）
-- **[產品策略] Claude Cowork 與 chat 合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta），Design 整合進對話**：官方部落格公告，先在 Pro、Max 陸續開放；HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導
+- **[產品策略] Claude Cowork 與 chat 合併為單一 Claude，同步推出 [[entities/claude-docs|Docs]]、[[entities/claude-slides|Slides]]（beta），[[entities/claude-design|Design]] 整合進對話**：官方部落格公告，先在 Pro、Max 開放；HN 226 分，多家媒體同步報導
 - **[產品策略] 媒體框架：Axios 稱衝擊 Microsoft、Fortune 稱意在打造「superapp」**：同日官方 Plans & Pricing 頁大改版，納入 Docs／Slides／Design／Claude Academy 說明，詳見 [[entities/pricing#方案細節]]
 - **[IPO前瞻，僅標題可用] euronews／Barron's：私募市場為 Anthropic 開出逾 2 兆美元估值，市場緊盯 IPO 申請；Barron's 稱 IPO 將是 AI 產業下一個危機時刻**：均無新增估值數字，與既有「IPO 走到哪一格」表 08-13 記錄的 2 兆美元估值預期同一量級，非新增資訊
 - **[基礎設施，僅標題可用] TechCrunch：Google、Nvidia、Anthropic 支持 Emerald AI，為更多資料中心在電網找空間**：具體投入規模、合作條件均未見報導

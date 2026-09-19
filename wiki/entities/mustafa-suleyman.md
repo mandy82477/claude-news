@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-17"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-17"
 status_main: "active"
 days_since_news: 1
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-09-16
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-17
 
 > **矽基物種警告＋第一手原文**（2026-09-17）
@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 核心論述
 
-- **警告不受控 AI 發展恐催生「矽基物種」**（BBC，2026-09-17）：稱若無適當防護，不受控的 AI 發展可能導致與人類競爭的「矽基物種」（silicon species）出現，此技術可能造成「災難性影響」（disastrous impact）；同日 Reuters 跟進報導其對 Anthropic AI 意識論述的批評角度。
+- **警告不受控 AI 發展恐催生「矽基物種」**（BBC，2026-09-17）：不受控 AI 發展恐致「矽基物種」（silicon species）與人類競爭，造成「災難性影響」；Reuters 同日跟進 AI 意識批評角度，屬 [[topics/recursive-self-improvement]] 反彈聲浪之一。
 - **原文：不應視模型有感受、權利**（Simon Willison 引述，2026-09-16）：「We should not treat models as though they have feelings, preferences, rights, or any entitlement to our welfare.」
 - **Claude「類人化」論述有「災難性影響」風險**（Bloomberg、BBC，2026-09-16）：批評 Anthropic 對 Claude 具「類人」特質的論述，稱可能招致「災難性影響」（"disastrous impact"）；僅標題可用，具體場合與完整論述未見報導。
 - **抨擊 Anthropic 的 AI 意識說法**（Axios 獨家，2026-09-16）：抨擊 Anthropic 提出的 AI 意識（AI consciousness）相關論述；僅標題可用，具體內容未見報導。

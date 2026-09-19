@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active（待核實）"
 domain: "👤 人物"
-last_updated: "2026-09-17"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-17"
 status_main: "active"
 days_since_news: 1
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（待核實）
 **領域：** 👤 人物
 **首次出現：** 2026-09-09
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-17
 
 > ❓ **待查證**（標 2026-09-09｜查 Coxon、hilbertspaess）｜**辭去 Anthropic 職務並公開批評兩家公司「不負責任」**（2026-09-09 報導）：Jacob Coxon 於 X 發文稱已辭去 Anthropic 職務，自述曾任 OpenAI／Anthropic pretraining 研究員三年，指控兩家公司「不負責任地衝向自我改進超級智能」；其過往資歷未見獨立媒體查證，HN 讀者對其資歷提出質疑。
@@ -65,7 +65,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ❓ **待查證**（標 2026-09-15｜查 doomsday warning、broke through）｜**Guardian 分析「這波 AI 末日警告為何破圈」，未具名研究員**（2026-09-15 報導）：The Guardian 分析一名前 Anthropic 研究員的離職 AI 風險警告為何在「AI doomsday」討論中特別「破圈」；CalMatters 同日跟進報導此事在加州公務員退休基金（CalPERS）內部引發的迴響。兩則均未具名，情節與本人（HN 623 分、逾十家媒體跟進）高度吻合但未經證實，亦可能指 [[entities/evan-hubinger]]、[[entities/joe-benton]]、[[entities/josh-engels]] 等同波表態者之一。
 
-❓ **待查證**（標 2026-09-12｜查 we may not survive this、ESG Dive｜訊 2026-09-13）｜**「又一名」離職報導是否指本人或另一起獨立事件**（2026-09-12 報導）：Times of India 以「又一名 Anthropic 員工」提出「我們可能撐不過這個」警告後離職為題、ESG Dive 同日以此辭職事件檢視 AI 公司 IPO 治理疑慮跟進報導；兩則均未具名，無法確認是否即為本人（Coxon）的後續延燒，或另一起獨立辭職個案。**後續（2026-09-13）：** BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」（原文僅標題可用），與本則、與本人是否同一人仍無法確認。
+❓ **待查證**（標 2026-09-12｜查 we may not survive this、ESG Dive｜訊 2026-09-13）｜**「又一名」離職報導是否指本人或另一起獨立事件**（2026-09-12 報導）：Times of India 以「又一名 Anthropic 員工」提出「我們可能撐不過這個」警告後離職為題、ESG Dive 同日以此辭職事件檢視 AI 公司 IPO 治理疑慮跟進報導（治理面與其他商業風險見 [[topics/anthropic-business]]）；兩則均未具名，無法確認是否即為本人（Coxon）的後續延燒，或另一起獨立辭職個案。**後續（2026-09-13）：** BBC 另引一名「已離職 Anthropic 研究員」稱業界人士「真心地為人類未來感到恐懼」（原文僅標題可用），與本則、與本人是否同一人仍無法確認。
 
 ## 相關議題
 

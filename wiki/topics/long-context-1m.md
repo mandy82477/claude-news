@@ -1,12 +1,12 @@
 ---
 page: "topics/long-context-1m"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-12"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-02"
-status_main: "ongoing"
-days_since_news: 16
+status_main: "monitoring"
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
@@ -24,11 +24,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 1M context：加不加價、你能不能關
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 🛠️ 工具/功能
 **別名：** 1M context window, long context, `[1m]`
 **開始日期：** 2026-04-10
-**最後更新：** 2026-09-12
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-02
 
 > **最新動態**（2026-09-02）
