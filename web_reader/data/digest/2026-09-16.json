@@ -595,16 +595,6 @@
       "id": "managed-agents",
       "name": "Managed Agents",
       "pageType": "entity"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "official-community-gap",
-      "name": "官方功能 vs 社群痛點缺口分析",
-      "pageType": "topic"
     }
   ],
   "reader": {
