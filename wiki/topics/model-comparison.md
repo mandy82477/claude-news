@@ -6,11 +6,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-05"
 last_news_update: "2026-09-02"
 status_main: "ongoing"
-days_since_news: 15
+days_since_news: 16
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 15
+days_since_news_subtree: 16
 inbound_links: 41
 attribution_count: 18
 attribution_last: "2026-09-02"
@@ -24,10 +24,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude 模型選型對照
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-09-05
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-02
 
 > **最新對照更新**（2026-09-01）

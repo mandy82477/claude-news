@@ -3,8 +3,8 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-17"
-last_news_update: "2026-09-17"
+last_updated: "2026-09-18"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 60
-attribution_count: 103
-attribution_last: "2026-09-17"
+attribution_count: 106
+attribution_last: "2026-09-18"
 top_source: "google-news"
 pending_count: 9
 pending_overdue: 7
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-18
+**最後新聞更新：** 2026-09-18
 
-> **本週衝擊**（2026-09-17）
+> **本週衝擊**（2026-09-18）
 > - 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。
-> - 🔴 **Copilot 預算增加請求正式開放**：額度用盡後可申請提高預算而非被完全鎖住（09-17，GitHub 官方 changelog）——先不必換，但你的成本控管多一個緩衝手段。
+> - 🔴 **Copilot 用量與預算管理全面升級**：09-17 同時開放預算增加請求、上線功能採用儀表板、CLI 用量納入 agentic 活動指標 API（GitHub 官方 changelog）——先不必換，但企業成本掌控與觀測力多了一層。
 > - 🟡 **Google 秀出 Gemini 3.8 Live 語音 agent 與近即時推理**（09-15，DeepMind 官方部落格）——評估語音／即時推理場景時，值得列入候選比較清單，其餘任務不用換。
 
 ---
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查大減（09-13）→ 首見官方自曝的自主 agentic 信任案例，直指 Claude Code 定位 | 能力 | 🔴 | OpenAI 官方部落格單一客戶案例，無第三方驗證或量化數字 |
-| **Microsoft／GitHub** 🏢 | Copilot 預算增加請求正式開放（09-17，額度用盡免全鎖）；09-14 已加效率／平衡／智慧三檔 → 使用者對成本失控的自救手段持續增加 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
+| **Microsoft／GitHub** 🏢 | Copilot 09-17 changelog 三連發：預算增加請求開放、功能採用儀表板（Impact Dashboard）上線、CLI 用量納入 agentic 活動指標 API → 企業成本與功能透明度同步加強 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率未載 ❓ 待查證 ⟨Q-01⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
@@ -148,12 +148,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
-- Copilot 額度用盡後可申請提高預算，避免功能被完全鎖住（09-17 官方 changelog）。
+- 09-17 官方 changelog 三連發：預算增加請求開放（額度用盡免全鎖）、Impact Dashboard 新增功能採用儀表板、CLI 用量指標納入 agentic 活動（skills／custom agents／MCP／slash commands／plugins）——企業管理可見度全面加強。
 - Copilot 終結「無限量」方案改行精細用量計費（08-17），與 Anthropic 計費收緊方向趨同。
 - HydraFusion 在多數基準壓低編碼成本，但品質僅單一基準與對照組打平（09-04）——這是本頁首見附上品質權衡的降本案例。
-- 自研模型取代 OpenAI／Anthropic 仍屬傳聞（07-07，SiliconANGLE／Bloomberg 兩來源，官方無回應）。
 **還沒解決**
-- Copilot 新方案的價格級距與生效時程、HydraFusion 的降幅數字與是否產品化，均未見報導。
+- Copilot 新方案的價格級距與生效時程、HydraFusion 降幅是否產品化、三項新用量指標是否連帶調整計費均未見報導。
+- 自研模型取代 OpenAI／Anthropic 仍屬傳聞（07-07，兩來源，官方無回應）。
 
 ### Zhipu Z.AI
 **現在的答案**
@@ -213,7 +213,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-09-18
+- **中國頭部模型（整體）**：報告稱其營收合計僅為 OpenAI 與 Anthropic 合計營收的 10%（南華早報引述報告）
+
 ### 2026-09-17
+- **Microsoft／GitHub**：Copilot 新增功能採用儀表板（Impact Dashboard）與 agentic CLI 用量指標 API（涵蓋 skills、custom agents、MCP、slash commands、plugins）；詳見「對手雷達」列與「雷達細節」更新（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：Copilot 預算增加請求正式開放（GA），額度用盡後可申請提高預算而非被完全鎖住；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
 - **OpenAI**：官方部落格發布「模型不對齊回報框架」，含 6 份異常模型行為報告，非產品或定價異動（Blog/OpenAI News）
 

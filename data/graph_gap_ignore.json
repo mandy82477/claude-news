@@ -2,59 +2,184 @@
   "_doc": "缺口偵測（python scripts/wiki_graph.py gaps）的「已審、無需連結」清單。每對登記 pages（兩個 slug）、reviewed（日期）、why（一句）。登記後該對不再列出；頁面改名時同步。",
   "pairs": [
     {
-      "pages": ["entities/opus-5", "topics/community-tech-discussions"],
+      "pages": [
+        "entities/opus-5",
+        "topics/community-tech-discussions"
+      ],
       "reviewed": "2026-09-12",
       "why": "三則共同落地新聞講的是「Claude 變笨了」，事實的家是 topics/code-quality-decline，兩頁皆已連向它；直接互連會在模型頁與爭論頁之間長出第三份副本"
     },
     {
-      "pages": ["entities/opus-4-8", "topics/competitor-landscape"],
+      "pages": [
+        "entities/opus-4-8",
+        "topics/competitor-landscape"
+      ],
       "reviewed": "2026-09-12",
       "why": "共同落地的是蒸餾爭議，其家為 topics/anthropic-government-policy；competitor-landscape 規則明文「Anthropic 自己的動作不進本頁」"
     },
     {
-      "pages": ["topics/ai-agent-safety", "topics/model-comparison"],
+      "pages": [
+        "topics/ai-agent-safety",
+        "topics/model-comparison"
+      ],
       "reviewed": "2026-09-12",
       "why": "Auto 模式的安全面住 ai-agent-safety、選型面住 model-comparison，兩頁回答不同問題；model-comparison 另有欄數與跨家紀律，不宜引入安全敘事"
     },
     {
-      "pages": ["topics/community-large-codebase-workflow", "topics/skill-interest-watch"],
+      "pages": [
+        "topics/community-large-codebase-workflow",
+        "topics/skill-interest-watch"
+      ],
       "reviewed": "2026-09-12",
       "why": "skill-interest-watch 是機器整頁覆寫的快照頁，且規則明訂單向橋（榜→tools）；large-codebase 的 🧰 行已正確連向 community-tech-tools 決策表"
     },
     {
-      "pages": ["entities/claude-design", "topics/skill-interest-watch"],
+      "pages": [
+        "entities/claude-design",
+        "topics/skill-interest-watch"
+      ],
       "reviewed": "2026-09-12",
       "why": "同上單向橋規則：快照頁由機器覆寫，不接受他頁補入連結，手補下次快照即被蓋掉"
     },
     {
-      "pages": ["topics/anthropic-commitments", "topics/enterprise-tool-tracker"],
+      "pages": [
+        "topics/anthropic-commitments",
+        "topics/enterprise-tool-tracker"
+      ],
       "reviewed": "2026-09-12",
       "why": "官方承諾兌現追蹤與企業採用事件無直接因果；共享鄰居來自兩者都被商業線大量引用，屬樞紐效應而非缺漏"
     },
     {
-      "pages": ["entities/google-investment", "topics/market-signals"],
+      "pages": [
+        "entities/google-investment",
+        "topics/market-signals"
+      ],
       "reviewed": "2026-09-12",
       "why": "market-signals 規則明訂事實不搬家、只連事實的家；Google 投資的現況已由 topics/anthropic-business 承接，該頁已被 market-signals 連結"
     },
     {
-      "pages": ["topics/long-context-1m", "topics/model-task-leaderboard"],
+      "pages": [
+        "topics/long-context-1m",
+        "topics/model-task-leaderboard"
+      ],
       "reviewed": "2026-09-12",
       "why": "1M 旋鈕的計費與控制權與跨家任務榜單無主題交集；共享鄰居僅 opus-5 與 model-comparison 兩個樞紐"
     },
     {
-      "pages": ["entities/chris-olah", "topics/safety-china-trust-dispute"],
+      "pages": [
+        "entities/chris-olah",
+        "topics/safety-china-trust-dispute"
+      ],
       "reviewed": "2026-09-12",
       "why": "Chris Olah 在政策線上的動作是 2026-05 教宗封論出席，與中美工具信任對峙無關；共享鄰居全為 anthropic-government-policy 母子頁"
     },
     {
-      "pages": ["entities/mythos", "topics/long-context-1m"],
+      "pages": [
+        "entities/mythos",
+        "topics/long-context-1m"
+      ],
       "reviewed": "2026-09-12",
       "why": "Mythos 為授權機構限定模型，1M 頁的計費分界與預設行為皆以一般可取用陣容為對象，未涵蓋該模型"
     },
     {
-      "pages": ["entities/opus-4-8", "topics/long-context-1m"],
+      "pages": [
+        "entities/opus-4-8",
+        "topics/long-context-1m"
+      ],
       "reviewed": "2026-09-12",
       "why": "1M 頁的世代分界表只列 Fable 5／Opus 5／Sonnet 5／Sonnet 4.6 與 Sonnet 4／4.5 兩組，Opus 4.8 不在任一表列，屬結構相似度假陽性"
+    },
+    {
+      "pages": [
+        "entities/jensen-huang",
+        "entities/mythos"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "Huang 的表態線住人物頁與 anthropic-government-policy；mythos 是政策限定模型的產品頁，兩頁沒有共同事實，高分來自共享鄰居 mustafa-suleyman／anthropic-business 這兩個樞紐"
+    },
+    {
+      "pages": [
+        "topics/community-pattern-trends",
+        "topics/skill-interest-watch"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "skill-interest-watch 是機器整頁覆寫的快照頁、規則明訂單向橋（榜→tools）；pattern-trends 的證據來源是 community-tech-patterns，兩頁都已正確連向它，互連只會多一份副本"
+    },
+    {
+      "pages": [
+        "entities/managed-agents",
+        "topics/code-quality-decline"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "managed-agents 答「怎麼跑長任務」、code-quality-decline 答「變笨了是真的嗎」，兩頁回答不同問題；共享鄰居全是 claude-code／pricing／feature-radar 這類樞紐"
+    },
+    {
+      "pages": [
+        "topics/code-quality-decline",
+        "topics/coding-workflow-guide"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "品質觀感線的家在 code-quality-decline，實戰手冊只答「怎麼做」；手冊第 9 段已用官方做法回答「它說做完了怎麼驗」，不需引入未結案的品質爭議敘事"
+    },
+    {
+      "pages": [
+        "entities/opus-4-7",
+        "topics/coding-workflow-guide"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "opus-4-7 已被取代（Legacy），手冊不按模型世代切段；手冊需要的模型選型入口已連 topics/model-comparison"
+    },
+    {
+      "pages": [
+        "entities/opus-4-7",
+        "topics/community-tech-tools"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "工具目錄以症狀與工具活躍度為軸，不掛特定模型世代；opus-4-7 為 Legacy 頁，互連會讓目錄長出模型維度"
+    },
+    {
+      "pages": [
+        "topics/coding-workflow-guide",
+        "topics/llm-wiki-pattern"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "llm-wiki-pattern 談的是知識庫設計模式（本庫自身的形態），手冊談的是 coding 流程；兩頁共享鄰居為 community-tech-patterns／skill-interest-watch 兩個樞紐"
+    },
+    {
+      "pages": [
+        "entities/sonnet-5",
+        "topics/competitor-landscape"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "competitor-landscape 規則明文「Anthropic 自己的動作不進本頁」；Sonnet 5 的跨家對照家在 topics/model-task-leaderboard，家內選型在 topics/model-comparison"
+    },
+    {
+      "pages": [
+        "entities/managed-agents",
+        "entities/openclaw"
+      ],
+      "reviewed": "2026-09-19",
+      "why": "openclaw 是第三方 agentic 工具與計費爭議，managed-agents 是官方 agent 積木；共同點只有「都被 pricing 提到」，不是同一件事"
+    },
+    {
+      "pages": ["topics/market-signals", "topics/recursive-self-improvement"],
+      "reviewed": "2026-09-19",
+      "why": "market-signals 規則明訂員工言論／議員呼籲這類關注度訊號留在事實頁，本頁只以待查證探針追蹤官方是否回應；事實的家是 recursive-self-improvement，已相連判定會剝除探針內的 wikilink，故看似缺連結，實為刻意的單向設計"
+    },
+    {
+      "pages": ["entities/claude-code", "entities/mythos"],
+      "reviewed": "2026-09-19",
+      "why": "共同落地新聞是 09-15 Mythos 5.1／Fable 5.1 間歇性錯誤率事件，事實的家是 entities/fable-5（mythos 已明文指向它）；claude-code 也已多處連向 fable-5，claude-code 與 mythos 直接互連只是幫兩個各自的分支多繞一條路"
+    },
+    {
+      "pages": ["entities/claude-code", "topics/market-signals"],
+      "reviewed": "2026-09-19",
+      "why": "共同落地新聞是「開發者把 Claude Code 導向非 Anthropic 模型執行」；market-signals 規則明訂事實不搬家、只連事實的家，該則已明文指向 [[topics/anthropic-business]]、[[topics/official-community-gap]]，claude-code 也已連向 official-community-gap，繞過設計好的家直接連 market-signals 只是多一條路徑"
+    },
+    {
+      "pages": ["entities/evan-hubinger", "topics/market-signals"],
+      "reviewed": "2026-09-19",
+      "why": "同上 market-signals／recursive-self-improvement 那條規則：evan-hubinger 頁已明文將事件機制與政策面交給 topics/recursive-self-improvement，market-signals 對此類員工言論只留追蹤官方回應的待查證探針，非該事件的家"
     }
   ]
 }

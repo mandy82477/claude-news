@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-09-13"
 last_news_update: "2026-09-04"
 status_main: "ongoing"
-days_since_news: 13
+days_since_news: 14
 parent: null
 children: "['topics/enterprise-cost-management-archive']"
 page_role: "hub"
-days_since_news_subtree: 13
+days_since_news_subtree: 14
 inbound_links: 30
 attribution_count: 6
 attribution_last: "2026-09-04"
@@ -24,10 +24,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 企業規模 Claude 成本管理
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-13
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-04
 
 > **最新成本管控動態**（2026-09-06）

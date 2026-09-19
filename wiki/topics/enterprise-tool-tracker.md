@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-09-17"
 last_news_update: "2026-09-17"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/enterprise-tool-tracker-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 31
 attribution_count: 26
 attribution_last: "2026-09-17"

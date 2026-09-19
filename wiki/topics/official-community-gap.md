@@ -6,18 +6,18 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-16"
 last_news_update: "2026-09-16"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 29
 attribution_count: 13
 attribution_last: "2026-09-16"
 top_source: "github-issues"
 pending_count: 3
-pending_overdue: 1
-pending_next_review: "2026-09-18"
+pending_overdue: 2
+pending_next_review: "2026-09-20"
 pending_signalled: 0
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
 **最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-16
+**最後新聞更新：** 2026-09-19
 
 > **最新功能缺口**（2026-09-16）
 > - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 收不到對應 token 費用。

@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-05"
 last_news_update: "2026-09-01"
 status_main: "ongoing"
-days_since_news: 16
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 16
+days_since_news_subtree: 17
 inbound_links: 12
 attribution_count: 0
 attribution_last: null
@@ -24,10 +24,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 承諾兌現追蹤
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-07-03
-**最後更新：** 2026-09-05
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-01
 
 > **最新動態**（2026-09-01，新增追蹤項）

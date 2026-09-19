@@ -3,8 +3,8 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-17"
-last_news_update: "2026-09-17"
+last_updated: "2026-09-18"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,10 +12,10 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 28
-attribution_count: 33
-attribution_last: "2026-09-17"
+attribution_count: 37
+attribution_last: "2026-09-18"
 top_source: "google-news"
-pending_count: 9
+pending_count: 11
 pending_overdue: 1
 pending_next_review: "2026-09-23"
 pending_signalled: 2
@@ -27,12 +27,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-18
+**最後新聞更新：** 2026-09-18
 
-> **最新動態**（2026-09-17）
-> - **產業批評**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 的擬人化路線「misguided」
-> - **反彈聲浪**：放空交易員 Michael Burry 批評 OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞
+> **最新動態**（2026-09-18）
+> - **量化升級**：Anthropic 稱 Claude 已負責公司內部下一代模型開發工作量的四分之一，官方另文說明衡量方法
+> - **獨立監督呼籲**：多位專家聯署公開信，稱 Anthropic 與 OpenAI 都需要真正獨立的安全評測機構
 >
 > 詳見 [[topics/recursive-self-improvement#技術彙整]]。
 
@@ -76,14 +76,31 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-14，政治連鎖反應：川普公開回絕、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，川普表態不需更多 AI 監管，北京官媒反擊為「冷戰」話術；均僅標題可用，詳見「## 技術彙整」。
 - **2026-09-15，Jack Clark（BBC／NPR）首見具體治理機制提案：「緊急關閉開關」立法化＋「集體行動難題」框架**：延續 06-04 起「煞車踏板」呼籲與 09-12～13 Amodei 親自呼籲減速系列，首見具體機制名稱而非泛稱警告；同日 Guardian／Willison 對 09-09 Coxon 事件的媒體/業界反思延續既有敘事，詳見「## 技術彙整」。
 - **2026-09-17，產業批評與反彈聲浪並起**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線；Michael Burry 批評減速呼籲「自利」；Politico 稱 Anthropic 政策長主張贏得 AI 競賽即確保安全（發言人身分未見於標題），詳見「## 技術彙整」。
+- **2026-09-18，量化數字與治理提案並進**：Anthropic／Reuters 揭露 Claude 已負責公司內部下一代模型開發工作量的四分之一，與既有 8 倍、尚未達兩倍兩數字為不同指標；多位專家聯署公開信呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構，首見聚焦「第三方評測」這一項具體機制，詳見「## 技術彙整」。
 
 ---
 
 ## 技術彙整
 
-### Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」（2026-09-17 新增）
+### Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一（2026-09-18 新增）
 
-- **揭露來源**：Hacker News（轉載 BBC，40 分）；Reuters（同事件另一角度：Anthropic AI 意識立場）；[[entities/simon-willison|Simon Willison]] 部落格引述 Suleyman 原文〈A warning about model welfare〉
+- **揭露來源**：Reuters〈Claude now leads a quarter of work〉（09-17）；Anthropic 官方部落格〈Measurements for understanding the pace of AI development〉（09-18，經 Google News 轉載）——說明衡量方法，與 Reuters 數字同屬一組
+- **核心主張**：Anthropic 揭露 Claude 目前已負責公司內部下一代模型開發工作量的四分之一（25%）；官方同日部落格另文說明如何衡量前沿實驗室內部「AI 開發 AI」的進度
+- **與既有敘事的關係**：與 06-04《When AI Builds Itself》代碼交付量 8 倍（代碼產出比例）、08-14《Risk Report》尚未達兩倍（保守自評）為三個不同指標，定義各異不宜直接相加或取代
+- ❓ **待查證**（標 2026-09-18｜查 quarter of work、frontier labs）：「工作量四分之一」的具體衡量定義（任務數／人力時數／其他）、官方部落格衡量方法論細節均僅標題可用
+- **可信度評估**：Reuters 一手報導＋Anthropic 官方部落格同日發布方法論說明，訊號強度高；惟具體衡量方法僅標題層級可用，與既有 8× 及「尚未達兩倍」兩數字的可比性未見官方說明
+
+### CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構（2026-09-18 新增）
+
+- **揭露來源**：Google News／CNBC〈Anthropic and OpenAI need truly independent safety evaluators, experts say in public letter〉（2026-09-18 13:00 UTC）
+- **核心主張（僅標題可用）**：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 都需要真正獨立的安全評測機構把關；具名連署人、信件完整訴求與是否提出具體機制均未見報導
+- **與既有敘事的關係**：延續本頁既有治理提案系列——09-15 Jack Clark 提出「緊急關閉開關」立法化與「集體行動難題」框架、08-10 Sanders 國會層級暫停呼籲；本則首見具體聚焦「第三方獨立評測機構」這一項機制，訴求對象同時點名 OpenAI，非僅 Anthropic 單方
+- ❓ **待查證**（標 2026-09-18｜查 independent safety evaluators、public letter）：連署專家名單、信件完整訴求、Anthropic／OpenAI 官方是否回應均未見報導
+- **可信度評估**：CNBC 為主流媒體報導，惟僅標題層級可用，公開信原文未見引用
+
+### Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」（2026-09-17 新增，09-18 補上 The Verge 跟進來源）
+
+- **揭露來源**：Hacker News（轉載 BBC，40 分）；Reuters；[[entities/simon-willison|Simon Willison]] 引述原文〈A warning about model welfare〉；**09-18 補充**：The Verge 跟進，標題用詞由「misguided」升級為「making it worse」，僅標題可用
 - **核心主張**：Suleyman 警告若無適當防護，AI 發展可能導致與人類競爭的「矽基物種」（silicon species）出現；他點名批評 Anthropic 把 AI 當「人」看待、主張模型福祉（model welfare）的路線是「misguided」，稱此舉可能製造人類無法控制的技術
 - **原文一手引述**：「我們不該把模型當成擁有感受、偏好、權利或值得我們福祉考量的東西看待」（Willison 引述段落，原文截斷，僅此段可用）
 - **與既有敘事的關係**：延續本頁既有「產業分歧」記錄模式（09-15 Nvidia 黃仁勳於 Dreamforce 公開反對 Anthropic／OpenAI 安全立場）；本則首見頭部實驗室執行長對 Anthropic「AI 擬人化／模型福祉」立場的正面批評，議題面向從「該不該減速」延伸至「該不該把模型當有感知的存在對待」
@@ -232,8 +249,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-09-18
+- **[量化升級，新增] Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一**：官方部落格同日另文說明衡量方法，與 06-04「8 倍代碼交付量」、08-14「尚未達兩倍」為三個不同指標，詳見「## 技術彙整」
+- **[治理提案，新增，僅標題可用] CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構**：首見具體聚焦「第三方獨立評測機構」機制，訴求同時點名 OpenAI，詳見「## 技術彙整」
+
 ### 2026-09-17
-- **[產業批評，新增] Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」**：BBC／Reuters 兩獨立媒體報導，Simon Willison 引述原文一手段落，詳見「## 技術彙整」
+- **[產業批評，09-18 補 The Verge 跟進] Suleyman：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線**：BBC／Reuters 報導，Willison 引原文；The Verge 用詞升級為「making it worse」，詳見「## 技術彙整」
 - **[反彈聲浪，新增] Michael Burry：OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞**：新增具名金融界批評者，詳見「## 技術彙整」
 - **[官方立場，新增，僅標題可用] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**：發言人是否為 Jack Clark 未見於標題，詳見「## 技術彙整」
 - **[人物側寫，新增，僅標題可用] WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物**：內容特徵疑似指向 09-09 Jacob Coxon，惟標題未點名，詳見「## 技術彙整」

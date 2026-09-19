@@ -3,15 +3,15 @@ page: "topics/community-pattern-trends"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-13"
-last_news_update: "2026-09-12"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-13"
 update_freq: "🗓️ 週更（無新趨勢節點時刻意不動——日期停留＝趨勢層無變化，非漏更新）"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 10
 attribution_count: 0
 attribution_last: null
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（無新趨勢節點時刻意不動——日期停留＝趨勢層無變化，非漏更新）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-13
 
-> **本週趨勢觀察**（2026-09-12）
-> 有新節點的線 7 條，最值得注意的是統一容器路線分化出 OS／團隊／平台三層，agent-orchestrator 逾 11,149★ 快速走向規模化採用。
+> **本週趨勢觀察**（2026-09-19）
+> 本輪僅趨勢二（Multi-agent 隔離工程化）新增 1 個節點（proliferate，統一容器再添「IDE 化」取向，僅星數佐證）；其餘趨勢無新節點，成形／醞釀狀態不變。
 
 ---
 
@@ -66,7 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **ANMA 架構邊界合約**：用 YAML 合約定義架構邊界 + Hook 強制驗證，讓便宜模型也守得住規則（實測 0/20 vs 無約束時 13/19 違規）
 - **Pre-completion Hook**：Stop Hook 掃描最後一輪輸出，偵測到模糊結束語句就回傳非零 exit，逼模型繼續
 
-**觀察（2026-08-15）：** 近 14 天 patterns.md 無屬於本線的新節點（上一則為 7/2 氛圍狀態燈，已 44 天）。研判非熱度消退，而是「Hooks 取代 CLAUDE.md 硬性規則」已收斂為社群穩定共識，新聞性隨之降低；暫不下修為「↘ 淡出」，列入下次複查觀察，若持續無新節點則重新評估。
+**後續（2026-09-06）：** 2026-08-15 曾觀察本線 44 天無新節點、研判已收斂為社群共識；8/25、9/6 兩則新節點顯示散布方式（市集化）仍在演進，故未下修為「↘ 淡出」。
 
 **對現有設計的啟示：** 你 CLAUDE.md 裡任何「必須 100% 遵守」的規則都放錯位置了——LLM 是機率性遵守，規則越多遵守率越低。把它們分成兩類：偏好留 CLAUDE.md，邊界搬 Hooks。
 
@@ -97,6 +97,7 @@ Hook 的原理：exit 1 = 硬攔截，不是「提醒模型注意」，而是工
 - 🔥 **常駐雲端運算基礎設施（machine0）**（8/18，Launch HN score 78）：YC S26 新創將「常駐化部署」從自架伺服器（OtoDock）延伸至商用雲端 VM——含 GPU、CLI/MCP 皆可操作，鎖定 6–8 小時起跳的長時間 agent 工作負載；作者同時點名常駐環境拉長 `--yolo` 曝露時間的安全代價，呼應 [[topics/ai-agent-safety]] 既有關注
 - 🔥🔥 **跨代理統一容器第三波（opencodex／metaharness／claw-orchestrator）**（8/27，GitHub Search）：08/05（omnigent）、08/09（loopx＋HarnessFlow）之後第三批同類專案湧現，確認「harness 無關、可換底層 agent」非單一事件而是持續性社群方向；同日 Concord（Show HN，MCP）補上互補而非取代的第二條協調路線——不統一容器，而是讓各自獨立運作的 agent 共享任務脈絡，形容為「agent 間的 Slack」
 - 🔥🔥 **統一容器路線第四波（avibe／ccteam／agent-orchestrator／OtoDock）**（9/9–9/10）：avibe（本機常駐 Agent OS）、ccteam（跨廠商團隊整編）、agent-orchestrator（全流程平台，11,149★）三種取向湧現；OtoDock 同期定位為「公司作業系統」，統一容器路線分化出 OS／團隊／平台三層
+- 🔥 **proliferate：統一容器再添「IDE 化」取向**（9/13，GitHub Search）：把多 agent 平行執行包進開源 AI IDE 介面，OS／團隊／平台三層之外的第四種取向；僅星數佐證（500★），尚無社群採用回饋
 
 **代表模式：**
 - **Git Worktrees 隔離原語**：多 agent 各持獨立 worktree，根除共享目錄的覆蓋衝突

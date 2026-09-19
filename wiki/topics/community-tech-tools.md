@@ -3,15 +3,15 @@ page: "topics/community-tech-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-12"
-last_news_update: "2026-09-10"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-18"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 32
 attribution_count: 3
 attribution_last: "2026-09-02"
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-10
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-18
 
-> **最新改版**（2026-09-03）
-> 「不綁症狀的精選」區退役——規模型清單（誰大、誰在漲）改看 [[topics/skill-interest-watch]] 的每日榜；本頁只留**判斷**：症狀決策表、推薦細節、Skills 速查、工具目錄。
+> **本週策展：新增 11 個工具**（2026-09-19）
+> draw.io 架構圖 skill（9,231★）、Snyk agent-scan 資安掃描、browserbase/stagehand 網頁互動 SDK 等進工具目錄；決策表本輪無變動（無新證據推翻現有首選）。
 
 ---
 
@@ -144,6 +144,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 類型 | 採用 | 首次出現 | 簡介 |
 | --- | --- | --- | --- | --- |
+| [**snyk/agent-scan**](https://github.com/snyk/agent-scan) | 安全工具 | ⏳ | 2026-09-18 | Snyk 出品，掃描 AI agent、MCP 伺服器與 agent skills 的資安工具；3,060 星，2025-04 出生 |
+| [**browserbase/stagehand**](https://github.com/browserbase/stagehand) | 整合工具 | ⏳ | 2026-09-17 | 網頁資料擷取與互動 SDK，可搭配 Claude Code／Codex／Eve／Mastra 使用；24,318 星，2024-03 出生 |
+| [**Nanako0129/sepia**](https://github.com/Nanako0129/sepia) | Skills | ⏳ | 2026-09-16 | 去 AI 化寫作風格修正 skill，相容 77 種以上 Agent Skills 相容 agent，含 Claude Code／Codex；2,640 星 |
+| [**ruvnet/open-claude-code**](https://github.com/ruvnet/open-claude-code) | 其他 | ⏳ | 2026-09-16 | 逆向工程還原重建的 Claude Code CLI 每夜反編譯專案；501 星 |
+| [**AThevon/TokenEater**](https://github.com/AThevon/TokenEater) | 費用監測 | ⏳ | 2026-09-16 | 原生 macOS App，監控 Claude AI 用量限制並即時觀看編碼 session；500 星 |
+| [**aannoo/hcom**](https://github.com/aannoo/hcom) | 多 Agent | ⏳ | 2026-09-16 | 讓 AI agent 跨終端機互相傳訊、監看、生成彼此的工具，支援 Claude Code／Codex／Antigravity CLI／Cursor CLI／OpenCode；500 星 |
+| [**RKiding/Awesome-finance-skills**](https://github.com/RKiding/Awesome-finance-skills) | Skills | ⏳ | 2026-09-16 | 金融分析 Agent Skills 開源合輯；3,011 星 |
+| [**zenstory-ai/oh-story-claudecode**](https://github.com/zenstory-ai/oh-story-claudecode) | Skills | ⏳ | 2026-09-13 | 中文網路小說寫作 agent skills 合集，涵蓋扫榜、拆文、寫作、去 AI 味、封面全流程；6,824 星，2026-04 出生 |
+| [**rpamis/comet**](https://github.com/rpamis/comet) | 工作流 | ⏳ | 2026-09-12 | 把想法轉成可評測工作流程的 agent skill harness；3,023 星，2026-05 出生 |
+| [**Agents365-ai/drawio-skill**](https://github.com/Agents365-ai/drawio-skill) | Skills | ⏳ | 2026-09-11 | 把自然語言、程式碼、Terraform/K8s、SQL、OpenAPI 轉換為可編輯、經測試的 draw.io 架構圖，支援增量同步與 CI 架構測試；9,231 星，2026-03 出生 |
+| [**google/artemis**](https://github.com/google/artemis) | 整合工具 | ⏳ | 2026-09-16 | 把自然語言指令轉成可靠 Android 自動化操作，可接 Antigravity／Codex／Claude Code；宣稱 AndroidWorld Benchmark 達 99%+ 成功率；6,291 星，2 個獨立來源同日報導 |
 | [**avibe-bot/avibe**](https://github.com/avibe-bot/avibe) | 多 Agent | ⏳ | 2026-09-10 | 本機優先 Agent OS，AI 夥伴常駐使用者機器，經瀏覽器或聊天 App 驅動官方 Claude Code／Codex／OpenCode；501 星 |
 | [**firstintent/ccteam**](https://github.com/firstintent/ccteam) | 多 Agent | ⏳ | 2026-09-10 | 把已在跑的多個編程 agent（Claude Code、Codex、Grok、DeepSeek Harness、Kimi、Pi）整編成一支團隊，跨廠商跨機器分派任務並經 Telegram／Lark／瀏覽器統一操控；501 星 |
 | [**ccch1mneyyy/dsh-TUI**](https://github.com/ccch1mneyyy/dsh-TUI) | IDE/終端 | ⏳ | 2026-09-10 | 中國社群「DSH」官方收錄的 TUI 補位插件，Claude Code 風格介面元件（鯨魚頂欄、串流思考顯示、雙擊 Esc 回滾、含 TPS 的 context 進度條）；2,933 星 |

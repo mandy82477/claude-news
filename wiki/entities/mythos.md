@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-15"
 last_news_update: "2026-09-15"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 28
 attribution_count: 17
 attribution_last: "2026-09-15"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-09-15
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-15
 
 > **最新進展**（2026-09-01）
@@ -324,7 +324,7 @@ The Philosophical Hacker 指出 SWE-bench 方法論循環論證，HN 再次精�
 七週測試發現 2,000+ 未知軟體漏洞，大量涉及加密貨幣基礎設施（Fox News / CoinDesk / Crypto Briefing 同步報導）。
 
 #### 2026-04-24
-Mythos 遭駭客存取事件（KRON4 等媒體）。⚠️ 細節尚待官方聲明確認。
+❓ **待查證**（標 2026-04-24｜查 KRON4、駭客存取）｜**Mythos 遭駭客存取事件**：僅媒體報導（KRON4 等），細節未經官方聲明確認；已掃日報至 2026-09-18 無後續，官方頁面未查證（KRON4 等媒體，2026-04-24）
 
 ---
 

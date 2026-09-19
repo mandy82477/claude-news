@@ -408,16 +408,6 @@
       "id": "simon-willison",
       "name": "Simon Willison",
       "pageType": "entity"
-    },
-    {
-      "id": "community-pattern-trends",
-      "name": "社群趨勢觀察（週更）",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-lessons",
-      "name": "投資判讀教材（週更）",
-      "pageType": "topic"
     }
   ],
   "reader": {

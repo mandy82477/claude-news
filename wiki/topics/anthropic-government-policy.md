@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-16"
 last_news_update: "2026-09-16"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 84
 attribution_count: 101
 attribution_last: "2026-09-16"
@@ -174,7 +174,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 🚫 出口管制：誰來管最強的模型
 
-政府的論點：Fable 5 護欄可被繞過，可據此存取 Mythos 的攻擊性能力；Anthropic 的立場：技術上不成立，管制沒有根據。導致封鎖的越獄觸發語事後曝光僅為「Fix this code」三個詞，社群廣泛質疑政府技術論點的正當性。FT 研究指出 Anthropic 每千字有 5 字與風險/法規相關，是 OpenAI（0.6 字）的 8 倍，批評者稱這是「Anthropic 把自己說進禁令」的量化佐證。Bloomberg（06-26）分析指出限制 Anthropic 頂尖模型的出口管制可能適得其反——閉源模型遭限制後，中國開源模型的國際採用率可能反而提升。整起封鎖 2026-06-12 生效、06-30 解除，逐日經過見「## 攻防紀錄」封存總結與 [[topics/anthropic-government-policy-archive#2026-06]]。
+政府的論點：Fable 5 護欄可被繞過，可據此存取 Mythos 的攻擊性能力；Anthropic 的立場：技術上不成立，管制沒有根據。導致封鎖的越獄觸發語事後曝光僅為「Fix this code」三個詞，社群廣泛質疑政府技術論點的正當性。FT 研究指出 Anthropic 每千字有 5 字與風險/法規相關，是 OpenAI（0.6 字）的 8 倍，批評者稱這是「Anthropic 把自己說進禁令」的量化佐證。Bloomberg（06-26）分析指出限制 Anthropic 頂尖模型的出口管制可能適得其反——閉源模型遭限制後，中國開源模型的國際採用率可能反而提升。整起封鎖 2026-06-12 生效、06-30 解除，逐日經過見「## 攻防紀錄」歷史摘要與 [[topics/anthropic-government-policy-archive#2026-06]]。
 
 
 2026-07-16，南華早報（SCMP）獨家專訪「Pax Silica」政策架構主要推手，論述美國仍可望維持 AI 領先地位；此為「管制反而助長中國開源模型採用」論述（Bloomberg，2026-06-26）出現以來，首個公開為出口管制/美中科技對峙政策方向背書的正面反論。**2026-08-10 查證**：推手為白宮科技顧問 **Jacob Helberg**；Pax Silica 為美國於 2025-12 聯合英、日、韓、新加坡、荷蘭、以色列、阿聯等 15 國成立的策略性倡議，對抗中國半導體/AI 優勢，2026 年再有瑞典、印度加入（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3360833/anthropic-china-and-why-pax-silica-architect-thinks-us-can-keep-ai-lead)）
@@ -319,7 +319,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 **攻防紀錄蒸餾：兩個時段總結**（原 2026-06 的 60 列、2026-05 的 2 列已搬至 archive，一字不刪）
 
-### 2026-06（封存總結）
+### 2026-06（歷史摘要）
 
 - 06-12 商務部管制生效，06-13 Lutnick 致函要求 90 分鐘內對所有外籍人士停用 Fable 5 與 Mythos 5，Anthropic 約 90 分鐘內撤架（Axios，HN 2,662 分）；**06-30 商務部通知管制已移除，Anthropic 當晚公告翌日恢復**，封鎖 19 天（含首尾）。
 - 觸發原因三說並存：Amazon 研究員讓 Fable 5 產出網路攻擊資訊、由 CEO Jassy 通報白宮（The Verge／WSJ 06-14）；SK Telecom 的中國關聯疑慮（Wired 06-18）；越獄語僅「Fix this code」（06-22）。
@@ -330,7 +330,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 原始條目見 [[topics/anthropic-government-policy-archive#2026-06]]
 
-### 2026-05（封存總結）
+### 2026-05（歷史摘要）
 
 - 05-01 國防部與 SpaceX、OpenAI、Google 等 7 家公司簽署機密網路部署協議，Anthropic 因堅持安全護欄被排除。
 - 05-26 Chris Olah 出席教宗良十四世《Magnifica Humanitas》封論發布，Anthropic 為唯一受邀 AI 公司（AP News、Reuters、NYT、WashPost）。
@@ -602,7 +602,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - **封鎖解除背景補充**：出口管制於 2026-06-12 生效，理由為模型可能被用於嚴重網路攻擊；06-30 解除、07-01 恢復存取；封鎖期共 19 天（含首尾）
 - **三項承諾的意義**：Anthropic 此次承諾框架（安全偵測 + 標準制定合作 + 惡意活動通報）為「私人 AI 公司換取模型存取特權的政府協議」建立首例；未來可能成為其他前沿模型出口管制談判的參照框架
 
-### 2026-06（封存總結）
+### 2026-06（歷史摘要）
 
 - **出口管制起訖**：06-13 Trump 政府引用國安授權要求對所有外籍人士停用 Fable 5 與 Mythos 5，Anthropic 收到指令後約 90 分鐘內撤架（Axios）；HN 2,662 分。06-22 撤銷「國安威脅」標籤，06-30 商務部通知管制已移除，07-01 恢復存取。
 - **觸發原因三說並存**：Amazon 研究員讓 Fable 5 產出網路攻擊資訊、由 CEO Jassy 通報白宮（The Verge／WSJ，06-14）；SK Telecom 的中國關聯疑慮（Wired，06-18）；越獄語僅「Fix this code」（06-22）。
@@ -612,7 +612,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 原始條目見 [[topics/anthropic-government-policy-archive#2026-06]]
 
-### 2026-05（封存總結）
+### 2026-05（歷史摘要）
 
 - 05-01 國防部與 7 家 AI 公司簽署機密網路部署協議，Anthropic 因堅持安全護欄被排除；同期白宮重啟談判。
 - 05-26 Chris Olah 出席教宗良十四世《Magnifica Humanitas》封論發布，Anthropic 為唯一受邀 AI 公司（AP News、Reuters、NYT、WashPost）。

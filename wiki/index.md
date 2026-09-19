@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-19
 
 ---
 
@@ -89,11 +89,11 @@
 
 | 頁面 | 領域 | 狀態 | 摘要 |
 |------|------|------|------|
-| [[topics/long-context-1m]] | 🛠️ 工具/功能 | ongoing | 1M context 的計費與控制權：加不加價看模型世代（舊世代 ×2 輸入）、Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失 |
+| [[topics/long-context-1m]] | 🛠️ 工具/功能 | monitoring | 1M context 的計費與控制權：加不加價看模型世代（舊世代 ×2 輸入）、Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失 |
 | [[topics/claude-code-experimental]] | 🛠️ 工具/功能 | ongoing | Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272 |
-| [[topics/model-comparison]] | 🤖 模型 | ongoing | 模型選型對照：「我該用哪個 Claude 模型、換一個實付差多少」單一入口——快速選型表、情境推薦、換代成本換算；跨家排名指向榜單頁 |
+| [[topics/model-comparison]] | 🤖 模型 | monitoring | 模型選型對照：「我該用哪個 Claude 模型、換一個實付差多少」單一入口——快速選型表、情境推薦、換代成本換算；跨家排名指向榜單頁 |
 | [[topics/model-task-leaderboard]] | 🤖 模型 | ongoing | 🗓️ 週更 任務 × 跨家模型領先者快照：「做某類任務目前哪家最強」——18 類任務的活榜單每週速讀＋各榜評比方式索引；跨家排名的終點在這頁，Claude 家內選型見模型選型對照 |
-| [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | ongoing | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
+| [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | monitoring | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
 | [[topics/code-quality-decline]] | 🌐 社群 | ongoing | 「變笨了」三條線：04 月那次官方已結案，06 月起 token 異常與 Opus 5 品質觀感官方沒說法；先知道你釘不住你選的模型　↳ 子故事：[[topics/code-quality-decline-archive]] |
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
@@ -102,14 +102,14 @@
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；節點證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更：社群趨勢觀察——從 [[topics/community-tech-patterns]] 萃取的宏觀層，7 條成形趨勢的熱度曲線 + 對現有設計的啟示 |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 10 場：5 場還在吵、2 場已有共識、3 場僵住，每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
-| [[topics/llm-wiki-pattern]] | 🌐 社群 | monitoring | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面六種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
+| [[topics/llm-wiki-pattern]] | 🌐 社群 | ongoing | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面六種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界，惡意 `.git` 跨廠可觸發程式碼執行　↳ 子故事：[[topics/ai-agent-safety-archive]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動，其中香港存取限制、輸出浮水印、高風險請求換 Opus 4.8 已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
 | [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 官方功能 vs 社群痛點缺口矩陣：哪些痛點官方正在解決、哪些結構性缺席；08-16 起持續有新缺口/矩陣更新　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]] |
 | [[topics/coding-workflow-guide]] | 🛠️ 工具/功能 | ongoing | 🗓️ 週更 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |
-| [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
+| [[topics/enterprise-cost-management]] | 💼 商業 | monitoring | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：現在的數字、IPO 走到哪一格、合作會不會改到你的帳單；補貼倍數只有社群估算　↳ 子故事：[[topics/anthropic-business-archive]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |

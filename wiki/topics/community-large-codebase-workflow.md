@@ -3,22 +3,22 @@ page: "topics/community-large-codebase-workflow"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-12"
-last_news_update: "2026-09-10"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-13"
 update_freq: "🗓️ 週更（每週從 [[topics/community-tech-patterns]] 沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 42
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
 pending_count: 3
-pending_overdue: 0
-pending_next_review: "2026-09-18"
+pending_overdue: 3
+pending_next_review: null
 pending_signalled: 0
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週從 [[topics/community-tech-patterns]] 沉澱一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-05-02
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-09-10
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-13
 
-> **本週答案變動**（2026-09-12）
-> 有新節點的線 3 條（除錯分工／索引記憶／Context 管理），並行規模線本輪無新節點；本週答案不變，細節見頁內。
+> **本週答案變動**（2026-09-19）
+> 並行規模線本輪新增 1 個節點（proliferate，IDE 化取向、僅星數佐證）；其餘三條線本輪無新節點。四條線「現在的答案」皆不變。
 
 ---
 
@@ -67,7 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化 | Claudette、Superset、cc-fleet 等 | 多來源 |
 | 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；fork 子代理疑似重送整段歷史再添一個未量化放大源 | 《Why 20 Instances Break Down》、Reddit fork 子代理回報 | 單一深度分析＋單一回報 ❓ 待查證⟨Q-01⟩ |
-| 統一容器（第三波） | 08-05／08-09／08-27 三批同類專案湧現，非單一事件而是持續性社群方向 | omnigent、loopx＋HarnessFlow、opencodex／metaharness／claw-orchestrator | 已成趨勢 |
+| 統一容器（第三波） | 08-05／08-09／08-27 三批同類專案湧現，09-13 再添 IDE 化取向；非單一事件而是持續性社群方向 | omnigent、loopx＋HarnessFlow、opencodex／metaharness／claw-orchestrator、proliferate（IDE 化，09-13，僅星數佐證） | 已成趨勢 |
 | 任務脈絡互通 | 不取代底層 agent，讓多個獨立 agent 共享任務脈絡，定位近「agent 間 Slack」 | Concord（MCP） | 單一實測（今日首見）|
 | 可觀測性 | 32 天內 6 個獨立儀表板；分「讀官方 event stream」與「自解析 transcript」兩路 | HUD、Cockpit 等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
 | 落地整合 | 本地合併佇列（4–5 agent／日 90 commit／8GB 筆電） | 單一作者實測 | 單一實測 |

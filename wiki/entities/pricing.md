@@ -7,18 +7,18 @@ domain: "💼 商業"
 last_updated: "2026-09-17"
 last_news_update: "2026-09-17"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 149
+days_since_news_subtree: 1
+inbound_links: 148
 attribution_count: 102
 attribution_last: "2026-09-17"
 top_source: "google-news"
 pending_count: 4
-pending_overdue: 1
-pending_next_review: "2026-09-18"
+pending_overdue: 2
+pending_next_review: "2026-09-21"
 pending_signalled: 0
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -316,8 +316,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 🔴 2026-08-14：Max 方案 session 額度自 3/23 起異常快速耗盡（本頁互動量最高配額回報）+ 社群質疑用量被暗中調降
 
-- **GitHub Issue #38335（👍 543，2026-08-14 查證，CLI 使用情境）**：使用者回報 Claude Max 方案的 session 限制自 **2026-03-23** 起異常快速耗盡；543 個 👍 遠超一般收錄標準（本則為反應數非留言數，量級仍屬本頁近期配額類最高）。機制面見 [[entities/claude-code]] 已知問題；此處僅記配額／計費面：問題若屬實，代表配額計算自 3 月下旬起即可能有系統性異常，而非 07-20 旗艦分界後才出現的新問題（推論；根因、是否與 Issue #79337 同源均未見證實）（GitHub https://github.com/anthropics/claude-code/issues/38335）
-- **Reddit r/ClaudeCode：質疑用量配合 8/19「50% 提升永久化」而暗中調降（單一貼文，未經證實）**：使用者質疑 Anthropic 暗中調降用量，以在傳聞的「50% 用量提升」8/19 永久生效前後製造對比（score=0，Reddit RSS 無讚數非低互動指標；屬使用者推測，非事實）。**查證本頁既有紀錄**：本頁記錄的「週用量 +50%」促銷（2026-06-15 起臨時提高、多次延長至 2026-07-19）已由 07-20 分界取代，**未見與「8/19 永久化」對應的官方公告**；貼文所稱「8/19」與既有時程（7/19）不吻合，可能指涉另一項未收錄的官方承諾，或屬時程誤記；具體指控查證見下方標記（Reddit r/ClaudeCode，2026-08-14）
+- **GitHub Issue #38335（👍 543，2026-08-14 查證，CLI 使用情境）**：Claude Max 方案的 session 限制自 **2026-03-23** 起異常快速耗盡；543 個 👍 遠高於本頁同類回報（反應數非留言數）（GitHub https://github.com/anthropics/claude-code/issues/38335）
+- 機制面見 [[entities/claude-code]] 已知問題；此處僅記配額／計費面：問題若屬實，代表配額計算自 3 月下旬起即可能有系統性異常，而非 07-20 旗艦分界後才出現的新問題（推論；根因、是否與 Issue #79337 同源均未見證實）
+- **Reddit r/ClaudeCode：質疑用量配合 8/19「50% 提升永久化」而暗中調降（單一貼文，未經證實）**：使用者質疑 Anthropic 暗中調降用量，以在傳聞的「50% 用量提升」8/19 永久生效前後製造對比（score=0，Reddit RSS 無讚數非低互動指標；屬使用者推測，非事實）
+- **查證本頁既有紀錄**：本頁記錄的「週用量 +50%」促銷（2026-06-15 起臨時提高、多次延長至 2026-07-19）已由 07-20 分界取代，未見與「8/19 永久化」對應的官方公告；貼文所稱「8/19」與既有時程（7/19）不吻合，可能指涉另一項本頁未記錄的官方承諾，或屬時程誤記；具體指控查證見下方標記（Reddit r/ClaudeCode，2026-08-14）
 - **✅ 08-18 官方公告部分澄清（是「延長至 8/31」，非「永久化」）**：08-18 官方公告證實「週用量 +50%」促銷持續延長中，**並未如本頁此前誤記般已於 07-19 失效**——貼文對促銷仍生效的直覺並非空穴來風。惟官方措辭為暫時延長至 **2026-08-31**，非永久政策。
 - ❓ **待查證**（標 2026-08-14｜查 暗中調降用量、throttling｜複 2026-09-12）｜**貼文中「暗中調降用量以製造對比效果」的具體指控**仍未獲官方證實或否認，不因促銷延長本身而視為解決。已掃日報至 2026-08-29 無後續；官方頁面未查證
 - %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
@@ -380,7 +382,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-05 事故**：Claude Code 定價溝通混亂事件（05-20，✅ Simon Willison 分析）、Pro 方案 0% 用量仍遭收費（05-11，⏸ 1M context window 觸發 API 計費通道）、提示快取窗口悄悄縮短（05-05，⏸ 未公告）。完整記錄見 [[entities/pricing-archive#2026-05]]。
 
-**2026-04 事故（已封存）**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
+**2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
 
@@ -455,7 +457,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與 07-13 官方回應的範圍缺口依然存在**：07-13 印度盧比計價公告僅確認 Pro 訂閱定價，原始訴求同時提及的 **Claude Code** 是否同步在地化仍未見報導。互動量在官方回應後持續攀升（07-03 留言 205 → 07-29 210 → 08-17 212），可能反映此缺口，也可能只是舊討論串持續累積，無從確認（僅記錄現象）。
 - **用詞界定**：本則為使用者訴求延續，**非**官方新公告（GitHub https://github.com/anthropics/claude-code/issues/17432）。
 
-#### 2026-08-10：Claude Sonnet 5 入門定價 $2/$10 永久化，9/1 漲至 $3/$15 的計畫取消（2026-08-26 補記，日報未收錄）
+#### 2026-08-10：Claude Sonnet 5 入門定價 $2/$10 永久化，9/1 漲至 $3/$15 的計畫取消（2026-08-26 補記）
 
 - **官方公告**：Anthropic 官方帳號宣布「making Claude Sonnet 5's introductory pricing permanent」——Sonnet 5 於 6 月發布時載明 $2/$10 per Mtok 為入門價、有效期至 2026-08-31，該價格**維持不變**；原定 2026-09-01 起調至 $3/$15（各降幅 50% 的漲幅）**不會發生**（部分媒體記為 08-11）
 - **官方文件佐證（2026-08-26 查證）**：官方模型總覽頁 Sonnet 5 定價欄現為 `$2 / input MTok, $10 / output MTok`，**已無任何 introductory／temporary／到期字樣**；官方定價文件另載明該價格「is now the standard price」
@@ -617,7 +619,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **社群集體反映配額縮減**：Reddit r/ClaudeCode 多個討論串，訂閱用戶集體反映 Claude Code 配額再次縮減，不滿高漲；Anthropic 無官方公告，縮減幅度與觸發機制不明。結構上，這是 6/16 計費暫停後改以調降配額（而非計費改制）控管成本的另一路徑（推論）。**對採用率的意涵**：重度用戶持續感受配額壓縮可能加速評估競品，「配額縮減 → 不滿 → 切換」的漏斗對訂閱留存構成風險（推論）（Reddit https://old.reddit.com/r/ClaudeCode/comments/1uim4jb/this_is_a_message_for_anthropic_bring_back_the/）
 - **注意**：無具名企業規模數據，此條目為訂閱用戶個人反映，非企業層級案例。
 
-**2026-05 配額事故（已封存）**：臨時用量提升優惠＋企業帳單三倍警訊（05-19）、Max 20x 上限未生效數學實證＋促銷時序整理（05-16）、Opus API 速率悄悄調降（05-10）、SpaceX 算力到位速率翻倍（05-07–09）。原始條目見 [[entities/pricing-archive#2026-05]]。
+**2026-05 配額事故**：臨時用量提升優惠＋企業帳單三倍警訊（05-19）、Max 20x 上限未生效數學實證＋促銷時序整理（05-16）、Opus API 速率悄悄調降（05-10）、SpaceX 算力到位速率翻倍（05-07–09）。原始條目見 [[entities/pricing-archive#2026-05]]。
 
 ### 計費切割風波（Agent SDK / `claude -p` 訂閱脫鉤，2026-06-16 暫停）
 

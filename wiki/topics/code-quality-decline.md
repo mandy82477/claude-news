@@ -3,17 +3,17 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-09-13"
-last_news_update: "2026-09-13"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-18"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 35
-attribution_count: 28
-attribution_last: "2026-09-13"
+attribution_count: 29
+attribution_last: "2026-09-18"
 top_source: "reddit"
 pending_count: 2
 pending_overdue: 2
@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-13
-**最後新聞更新：** 2026-09-13
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-18
 
-> **Token 消耗異常線再添一則**（2026-09-13）
-> HN 討論串：Fable 對簡單任務「大材小用」，4 個平行 agent 於數分鐘內燒光 session 額度，等 6 小時逾時後快取已失效（57 分）；官方對這條線仍無回應。
+> **Opus 5 品質觀感線再添第六種主張**（2026-09-18）
+> Reddit r/artificial 週熱門：使用者主要用 Claude Opus 5 與 4.8，觀察到不同任務間的能力落差很不均勻；官方對這條線仍無回應。
 
 ---
 
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-09-13。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-09-19。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
@@ -128,7 +128,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **16 則**訊號：下表五種主張收 15 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十五則裡十三則是單一使用者觀感，另兩則有外部依據（一則第三方基準待查證、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **17 則**訊號：下表六種主張收 16 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十五則裡十三則是單一使用者觀感，另兩則有外部依據（一則第三方基準待查證、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
@@ -140,6 +140,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **懷疑正在被 A/B 測試降 effort** | 4 | 2026-09-10「did anthropic nerf fable again」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark ❓ 待查證 ⟨Q-01⟩ | 僅標題可用，數字未見報導 |
 | **二進位對 Opus 5 的硬編碼限制** | 1 | 2026-07-26（已查證屬實，見 [[topics/community-tech-discussions]]）| GitHub issue #80988 |
+| **任務間能力落差不均**（「jagged」，不專指單一模型）| 1 | 2026-09-17「even frontier models have a very jagged range」 | 單一貼文（Reddit r/artificial 週熱門）|
 
 **懸置細節**
 
@@ -149,7 +150,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **effort 旋鈕「非單調」的說法不成立**：2026-07-29 一則 Reddit 貼文稱 effort 超過 `high` 後編碼分數反而下降、並稱官方 migration guide 自承此事。
 - 2026-08-08 查官方文件後判定不成立——官方明載 Opus 5 把額外 effort 轉成更好結果的可靠度高於歷代 Opus（比對見 [[entities/opus-5]]）。本頁先前把它當成「唯一一筆官方確認的行為特性變化」，那是錯的。
-- **這條線和「context 腐蝕」那場爭論不是同一件事**：「越用越笨是模型退步還是 context 腐蝕」已在 [[topics/community-tech-discussions]]「現在吵到哪」吵出共識（context 腐蝕）。本頁不重判那場爭論，只記官方對這 15 則到今天沒有回應。
+- **這條線和「context 腐蝕」那場爭論不是同一件事**：「越用越笨是模型退步還是 context 腐蝕」已在 [[topics/community-tech-discussions]]吵出共識（context 腐蝕），該場逾 90 天無新反方證據，已移出「現在吵到哪」表、併入「已經沒人在吵的」。本頁不重判那場爭論，只記官方對這 15 則到今天沒有回應。
 
 ---
 
@@ -233,6 +234,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-09
+
+#### 2026-09-17
+- **「even frontier models have a very "jagged" range of capabilities」：「Opus 5 上線後品質觀感」新增第六種主張**：使用者主要用 Opus 5 與 4.8，觀察到不同任務間能力落差不均——聚焦「任務間」不一致而非「隨時間」變差；單一貼文，Reddit r/artificial 週熱門標記（來源：[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)）
 
 #### 2026-09-12
 - **Ask HN 討論串：Token 消耗異常訊號群新增一則**：使用者稱 Fable 對簡單手機 App 任務「大材小用」，4 個平行 agent 數分鐘內耗盡 Max 方案 session 額度，等 6 小時逾時後快取已失效；57 分，方向與既有訊號一致（來源：[Hacker News](https://news.ycombinator.com/item?id=49672966)）

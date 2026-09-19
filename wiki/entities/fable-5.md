@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-16"
 last_news_update: "2026-09-16"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 53
 attribution_count: 37
 attribution_last: "2026-09-16"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-16
+**最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-16
 
 > **最新進展**（2026-09-16）
@@ -198,7 +198,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Anthropic 官方研究文章**：Claude 歷時 11 天完成費馬最後定理的電腦驗證證明，證明程式碼達 1,300 萬行 Lean。官方寫明用的是「內部研究模型，約略相當 Fable 5.1」，不是 Fable 5 或 5.1 本身，本頁僅作參考記錄（[Anthropic](https://www.anthropic.com/research/formalizing-fermats-last-theorem)，2026-09-04；歸屬 2026-09-07 查證；行數轉引自 [dev.to](https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3)，2026-09-09）
 - 長期主導此形式化工作的 Xena Project 作者 [[entities/kevin-buzzard]] 於部落格公開表示「被 Anthropic 搶先」，指出 Anthropic 走的是 Darmon–Diamond–Taylor 於 1995 年闡述的 Wiles–Taylor–Wiles 證明路徑並開發 Fontaine 理論，此題也是 Freek Wiedijk 百大形式化挑戰清單最後完成的一項（[Xena Project](https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/)，2026-09-04；人物背景查證日 2026-09-05）
 - SingularityHub 報導 Claude 已能自主操作實驗室設備執行科學實驗，與費馬定理證明同屬「長期自主研究任務」訊號，惟兩者是否為同一脈絡未經證實（Google News/SingularityHub，2026-09-04）
-- Reddit r/artificial 週熱門討論串彙整 Claude Fable 5.1 與 Mythos 5.1 基準測試結果，惟摘要未載具體分數，原始數字待查證（Reddit / r/artificial · 週熱門，2026-09-01）
+- ❓ **待查證**（標 2026-09-01｜查 Fable 5.1、Mythos 5.1）｜**Reddit r/artificial 彙整 Fable 5.1／Mythos 5.1 基準測試分數**：週熱門討論串僅標題級摘要可用，未載具體分數；已掃日報至 2026-09-18 無後續，官方頁面未查證（Reddit / r/artificial · 週熱門，2026-09-01）
 - **服務中斷（非模型特定）**：同日 Anthropic、OpenAI、xAI 三家模型服務上午同時發生罕見中斷，三方對外皆未說明確切成因，原文未指名受影響的具體 Claude 模型，是否與下方 09-03 多模型錯誤率事件相關亦未經證實（[Wired](https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/)，2026-09-04）
 
 #### 2026-09-03

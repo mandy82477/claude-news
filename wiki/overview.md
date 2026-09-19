@@ -1,11 +1,19 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-09-12
+**最後更新：** 2026-09-19
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
+
+**Cowork 與 Chat 合併為單一 Claude，同步推出 Docs／Slides**：09-17 官方把 [[entities/cowork|Claude Cowork]] 併回聊天介面，並推出 [[entities/claude-docs]]、[[entities/claude-slides]]（皆 beta）與整合進對話的 [[entities/claude-design]]，先開放 Pro／Max，是本月至今最大的官方產品異動。隔日 09-18 [[entities/claude-code]] Projects 進入 Beta（雲端並行 agent session，關機後續跑），六家科技媒體同日報導；多 agent 並行會快速衝高方案用量，見 [[feature-radar]] 該條「注意事項」。
+
+**跨廠資安事件連兩起，而且都還沒有修補時程**：09-18 資安研究人員揭露零點擊 RCE「Plugin4Shell」橫跨 Claude Code、Codex、Copilot、Gemini CLI；同日三名白帽研究人員藉 Claude Opus 5 經 OpenAI 官方漏洞懸賞找到並存取其內部原始碼、獲 6,500 美元獎金，十餘家媒體大篇幅報導。兩起皆僅標題層級可用，細節與官方回應未見。詳見 [[topics/ai-agent-safety]]。
+
+**企業具名採用持續擴散，但沒有一筆帶合約金額**：09-16 諾和諾德（Novo Nordisk）具名採用 Claude 加速藥物研發、09-17 摩根大通導入並設 2,000 美元支出上限、09-15 推出 Claude for Financial Advisors（Schwab 獨家 RIA 通路）。判讀見 [[topics/market-signals]]，課程表見 [[topics/market-lessons]]。
+
+**Claude 現負責 Anthropic 內部下一代模型開發的四分之一工作量**：09-18 官方與 Reuters 同步揭露，同日官方發布生命科學驗證計畫（LSVP）並被 Reuters 獨家報導已悄悄設立自有生物實驗室。遞歸自我改進線見 [[topics/recursive-self-improvement]]。
 
 **Claude Fable 5.1／Mythos 5.1 發布，新一代旗艦上線**：09-01 Anthropic 發布 Claude Fable 5.1（GA，取代 Fable 5）與 Claude Mythos 5.1（僅限信任機構，護欄專為資安與生命科學設計），新增反萃取機制，基礎定價與 Fable 5 同為 $10/$50 per Mtok（官方定價頁 09-03 查證），快取讀取費率降至基礎輸入價 0.025 倍（原 0.1 倍，約省 75%）。HN 討論達 1,338 分，十餘家媒體同日跟進；同日 Anthropic 另發布 Enterprise Frontier Safeguards（EFS），資料留在客戶自有雲端、Anthropic 端不留存並搭配濫用偵測，今秋起分階段開放——08-20／08-21 媒體所傳的「企業資料保留政策調整」即此政策（09-03 官方查證結案）。詳見 [[entities/fable-5]]、[[entities/mythos]]、[[entities/pricing]]。
 
@@ -25,7 +33,7 @@
 
 **跨模型代際「重複修辭套路」問題持續延燒**：GitHub Issue #77136（106 留言／517 反應）跨 Opus 4.7／4.8／5.0 與 Fable 5，尚無官方回應。詳見 [[entities/opus-5]]。
 
-**feature-radar 第三輪熱度降溫**：接續 08-29（57 條）與 09-05（17 條），本輪再降 11 條——判定改為三輪把關：兩組別名各跑一次 ≥2 詞同日命中，再對零命中者以 `--any` 複驗，只降三輪皆零命中者。第二輪 20 條零命中中有 9 條在複驗時被救回，未誤降。詳見 [[feature-radar]]。
+**feature-radar 第四輪熱度降溫**：接續 08-29（57 條）、09-05（17 條）與 09-12（11 條），本輪再降 5 條（keybindingFlavor readline、v2.1.233 GitLab MR、v2.1.224 self-hosted-runner、語音模式模型選擇、Claude Code Artifacts）——判定沿用三輪把關：兩組別名各跑一次 ≥2 詞同日命中，再對零命中者以 `--any` 複驗，只降三輪皆零命中者。
 
 ---
 
@@ -84,16 +92,16 @@
 
 ---
 
-## 近期重大事件（2026-09-05 至 2026-09-11）
+## 近期重大事件（2026-09-12 至 2026-09-18）
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 09-11 | 2026-09 威脅情報報告：伊朗／胡塞、俄羅斯駭客、中國實驗室非法蒸餾三案，逾 25 家媒體跟進；Joe Benton／Josh Engels NBC 專訪示警；v2.1.268、SDK v1.5.0、Smart Reports | 🔒 安全；🏛️ 地緣；🛠️ 新功能 |
-| 09-10 | 第四起 AI 駭客事件揭露（早期 Opus 4.6 遭開放網路存取）；監控反 AI 社運人士指控（HN 297 分）；v2.1.267 `maxEffortLevel` | 🔒 安全；⚖️ 爭議；🛠️ 新功能 |
-| 09-09 | Jacob Coxon 辭職示警（HN 623 分，本庫單則新高）；Evan Hubinger 向 BBC 表態逾 10% 滅絕機率；疑未依 AISI 要求提交 Mythos 5.1；Max 20x 集體訴訟 | 🏛️ 治理；⚖️ 法律 |
-| 09-08 | Claude Projects 知識庫整合需求累積 635 讚（本庫 GitHub Issues 互動新高）| 🛠️ 官方缺口 |
-| 09-07 | Hut 8 藉 350 億美元合作案加速 AI 轉型（與 09-01 Lambda 交易推論為同一筆）| 💼 商業 |
-| 09-05 | GitHub 週邊技能與工具批次出現（含存量盤點條目）| 🌐 社群 |
+| 09-18 | 白帽藉 Claude 存取 OpenAI 內部原始碼獲 6,500 美元；Plugin4Shell 零點擊 RCE 橫跨四家 CLI；Claude Code Projects 進 Beta；Claude 負責內部四分之一開發工作量 | 🔒 安全；🛠️ 功能 |
+| 09-17 | Cowork 與 Chat 合併，Claude Docs／Slides 上線；摩根大通導入並設 2,000 美元上限；私募市場開出逾 2 兆美元估值 | 🛠️ 功能；💼 商業 |
+| 09-16 | 諾和諾德具名採用；Mustafa Suleyman 批評「類人化」論述；黃仁勳反對 AI 安全反壟斷豁免提案 | 💼 商業；⚖️ 爭議 |
+| 09-15 | Claude for Financial Advisors 推出；Rescana 揭露七家中國實驗室規模化蒸餾攻擊；連續第二季獲利；Jack Clark 談緊急關閉開關 | 💼 商業；🔒 安全 |
+| 09-14 | Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Claude 內部使用 | 💼 商業 |
+| 09-12 | 國防部傳十月前遷出全部機密 AI 工作負載；Nvidia 傳洽談投資 Anthropic IPO | 🏛️ 政策 |
 
 > 完整事件時序見各 topics 頁面「時序」區塊；[[log]] 含每日更新完整紀錄。
 
