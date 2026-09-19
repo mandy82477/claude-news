@@ -116,7 +116,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### The New Stack／The Guardian：具名資安新創 Hacktron AI 揭露 Opus 5 漏洞利用能力較 Opus 4.8 躍升，同手法用於存取 OpenAI 內部系統（2026-09-19 新增，升級既有 09-18 條目）
 
 - **揭露來源**：The New Stack〈[Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5](https://thenewstack.io/claude-exploits-openai-forum/)〉（09-19）；The Guardian〈[OpenAI 'ethically hacked' with help of Anthropic's Claude chatbot](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)〉（09-18，同一連結已見於下方 09-18 條目）
-- **核心內容**：具名資安新創 Hacktron AI 三名研究人員在一個廣泛使用的圖像庫中找到記憶體毀損漏洞；同一漏洞用 Opus 4.8 須先關閉系統記憶體隨機化保護（ASLR）才能利用成功，換上同日發布的 Opus 5 後約 3 小時做出可用的 ARM64 exploit。取得 exploit 後，研究團隊透過 OpenAI 內部員工論壇（Discourse）帳號與一個看似無害的 GitHub pull request，摸清能存取 OpenAI 軟體庫的路徑，已依規範向 OpenAI 通報
+- **核心內容**：具名資安新創 Hacktron AI 三名研究人員在圖像庫中找到記憶體毀損漏洞；Opus 4.8 須先關閉 ASLR 才利用成功，換上同日發布的 Opus 5 後約 3 小時做出可用 ARM64 exploit。研究團隊隨後透過 OpenAI 員工論壇帳號與一個 GitHub pull request，摸清存取 OpenAI 軟體庫的路徑，已依規範通報
 - **與既有敘事的關係**：與下方 09-18 條目（WSJ 獨家、三名研究人員藉官方漏洞懸賞獲 6,500 美元）為同一事件，本則首見具名揭露機構 Hacktron AI，補上 Opus 4.8→Opus 5 能力躍升的量化細節與具體存取鏈，屬技術細節升級而非新事件；研究員稱「理論上可以取得的範圍非常龐大」
 - **可信度評估**：The New Stack 為專業科技媒體，技術細節（ASLR、ARM64、耗時 3 小時）描述具體；Guardian 為主流媒體並引述研究員原話；兩者均非 Anthropic 或 OpenAI 官方一手來源
 

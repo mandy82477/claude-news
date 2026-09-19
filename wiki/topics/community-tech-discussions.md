@@ -267,7 +267,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 #### AGENTS.md 支援正式上線，社群點出 .agents/skills 缺口（2026-09-19）
 
 - **來源：** Claude Code now reads AGENTS.md if there is no Claude.md — Hacker News（683 分）；[原文](https://code.claude.com/docs/en/changelog)
-- **核心論點：** Claude Code 2.1.277 起，專案沒有 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整（尚未支援 Bedrock、Vertex、Foundry）；HN 討論指出新支援不含 `.agents/skills` 資料夾，同批 changelog 另新增 `CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY` 設定
+- **核心論點：** Claude Code 2.1.277 起，專案沒有 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整（尚未支援 Bedrock、Vertex、Foundry）；HN 討論指出新支援不含 `.agents/skills` 資料夾
 - **關鍵回響：**
   - 📝 支持：The Register 報導稱此舉等同官方跟進 OpenAI 提出的 markdown 指示規範（Google News / The Register）
   - 🧪 跟進實測：Simon Willison 轉引 Anthropic 工程師 Thariq Shihipar 發文，補充上線細節（Blog / Simon Willison）；Reddit r/ClaudeAI 週熱門同步關注（Reddit）

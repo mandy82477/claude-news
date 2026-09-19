@@ -77,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-15，Jack Clark（BBC／NPR）首見具體治理機制提案：「緊急關閉開關」立法化＋「集體行動難題」框架**：延續 06-04 起「煞車踏板」呼籲與 09-12～13 Amodei 親自呼籲減速系列，首見具體機制名稱而非泛稱警告；同日 Guardian／Willison 對 09-09 Coxon 事件的媒體/業界反思延續既有敘事，詳見「## 技術彙整」。
 - **2026-09-17，產業批評與反彈聲浪並起**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線；Michael Burry 批評減速呼籲「自利」；Politico 稱 Anthropic 政策長主張贏得 AI 競賽即確保安全（發言人身分未見於標題），詳見「## 技術彙整」。
 - **2026-09-18，量化數字與治理提案並進**：Anthropic／Reuters 揭露 Claude 已負責公司內部下一代模型開發工作量的四分之一，與既有 8 倍、尚未達兩倍兩數字為不同指標；多位專家聯署公開信呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構，首見聚焦「第三方評測」這一項具體機制，詳見「## 技術彙整」。
-- **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元獨立評估前沿 AI 安全，回應 09-18 獨立評測機構呼籲；同日 Anthropic、OpenAI、SpaceXAI、Google 因「踩煞車」呼籲遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」。
+- **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 
 ---
 
@@ -85,9 +85,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Anthropic Blog／Washington Post／CNBC：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元獨立評估前沿 AI 安全（2026-09-19 新增）
 
-- **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/accenture-embedded-evaluation)（2026-09-19）；Washington Post〈Anthropic picks consulting firm to monitor AI safety, pledges to spend $1 billion〉（經 Google News）；CNBC〈Anthropic selects Accenture as first embedded evaluator to help implement Amodei's slowdown proposal〉（經 Google News，僅標題可用）
-- **核心主張**：Anthropic 宣布由顧問公司 Accenture 出任首位「內嵌評估者」（embedded evaluator），獨立評估前沿 AI 安全；官方稱此舉呼應 Dario Amodei 稍早「We Must Pace the Frontier」一文中「將評估嵌入開發流程」的承諾。Washington Post 報導 Anthropic 同時承諾投入 10 億美元資金於此
-- **與既有敘事的關係**：直接回應上方 09-18 條目「CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構」——本則是 Anthropic 首次具體指名獨立評估機構並附金額承諾，是本頁治理提案系列（09-15 Jack Clark「緊急關閉開關」、08-10 起呼籲）首見具體落地執行的案例；Accenture 由 Anthropic 自行選定，「內嵌」評估者是否真正獨立仍待觀察，本頁不代為下結論
+- **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/accenture-embedded-evaluation)（2026-09-19）；Washington Post〈Anthropic picks consulting firm to monitor AI safety, pledges to spend $1 billion〉（經 Google News）；CNBC 同日跟進（僅標題可用）
+- **核心主張**：Anthropic 宣布由顧問公司 Accenture 出任首位「內嵌評估者」，獨立評估前沿 AI 安全，呼應 Dario Amodei「We Must Pace the Frontier」一文承諾；Washington Post 報導同時承諾投入 10 億美元資金
+- **與既有敘事的關係**：直接回應上方 09-18 條目「CNBC：多位專家呼籲獨立安全評測機構」——本則首次具體指名機構並附金額，是本頁治理提案系列首見落地案例；Accenture 由 Anthropic 自行選定，是否真正獨立仍待觀察，本頁不代為下結論
 - ❓ **待查證**（標 2026-09-19｜查 Accenture、embedded evaluator）：Accenture 評估範圍、獨立性保障機制（能否否決或僅出具報告）、10 億美元資金的具體用途與時程均未見報導
 - **可信度評估**：Anthropic 官方部落格一手發布＋Washington Post、CNBC 主流媒體跟進，訊號強度高；惟 Washington Post／CNBC 條目均經 Google News 轉載僅標題可用，10 億美元數字僅見 Washington Post 標題引述，未見官方原文同一數字
 
