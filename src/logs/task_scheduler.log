@@ -772,3 +772,4 @@ ABORTED: gathered_items.json date=2026-09-17 items=84，非目標日期的新鮮
 ABORTED: digest already exists - news/2026-09-18.md 已由前一班（17:03 UTC）產出，Step 0b 冪等閘中止（非 backfill 模式）
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-18T22:02:53Z]
 [cloud weekly-wiki-lint-cloud STARTED 2026-09-19T03:04:45Z]
+[週六 2026/09/19 03:54:27.00] Weekly lint OK (cloud) - 修 28 頁，16 項待確認，測試綠（854 案例全通過）/ gate 放行「測試全綠 - web build 放行」/ build 成功（91 wiki 頁）/ push 見下
