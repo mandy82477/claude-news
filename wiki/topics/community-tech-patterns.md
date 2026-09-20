@@ -52,13 +52,13 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community、hcom、pstack-claude（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-20 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-20 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-20 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-17 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、已否決方案索引、OzBrain、gentle-ai、hister、Skillsync、aoci-code（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-20 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
@@ -168,7 +168,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 - **主線：** 除錯分工
 - **核心模式：** 部落格文章主張長時程 AI coding 任務失敗多因 context 易逝、agent 自我回報不可靠，而非模型不會寫程式碼；解法是組織性而非技術性：一個 session 負責協調與驗證，其餘 session 各自執行，狀態放進外部持久看板（不依賴 agent 自陳），且每一項宣稱在被採信前都重新執行驗證一次；HN 24 分。
-- **與既有模式的關係：** 呼應本頁「Multi-agent 架構」既有 orchestrator 分派技巧，並補上「缺口追蹤：文獻主張×Claude Code 現況」表「信任與驗證層」（現況：官方仍空白、社群工具正長在這個缺口上、未補）一個具體命名方案——用外部看板取代 agent 自我回報、每項宣稱重跑驗證；本文無公開 repo，僅為部落格架構描述，暫不併入既有代表技巧列；context 易逝與跨 session 協調正是大型 codebase 長時程任務的特有痛點，主線填除錯分工。
+- **與既有模式的關係：** 呼應「Multi-agent 架構」既有 orchestrator 分派技巧，補上缺口追蹤表「信任與驗證層」（官方空白、社群工具正長在此缺口）一個具體方案——外部看板取代 agent 自我回報、每項宣稱重跑驗證；無公開 repo，暫不併入既有代表技巧列；長時程跨 session 協調是大型 codebase 特有痛點，主線填除錯分工。
 - **可信度註記：** 單一部落格文章，HN 24 分、單一來源，機制描述具體但未見程式碼或可複現實作，尚無其他來源佐證。
 - **來源：** Hacker News；[原文](https://asyncdot.com/blog/chief-of-staff-pattern-orchestrating-claude-code-sessions/)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者架構提案，尚無社群採用回饋數據）
@@ -176,7 +176,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 #### aoci-spec/aoci-code：程式庫與資料庫結構持久化 Git 版控索引，供 coding agent 動手前先讀（2026-09-20）
 
 - **主線：** 索引記憶
-- **核心模式：** 開源 local-first MCP server ＋ CLI（Go 撰寫），把整個程式庫與資料庫結構做成持久化、Git 版控的知識索引，供 Claude Code、Codex、Cursor、opencode 等 coding agent 在動手前先讀取，訴求給 agent 跨 session 的長期 context、記憶與程式碼完整性守護；GitHub Search 累積 446 星。
+- **核心模式：** 開源 local-first MCP server＋CLI（Go），把程式庫與資料庫結構做成持久化 Git 版控索引，供 Claude Code、Codex、Cursor、opencode 等 agent 動手前先讀，訴求跨 session 長期 context 與程式碼完整性；GitHub Search 446 星。
 - **與既有模式的關係：** 補上「記憶與知識管理」類別一種「治理化程式碼知識索引」取向的做法——既有代表技巧（OKF、hister 等）多聚焦團隊知識格式或個人瀏覽歷史，本則鎖定「codebase 本身結構＋資料庫 schema」做成 agent 可讀的持久索引；大型 codebase 下 agent 記不住跨 session 決策正是此類工具要解的痛點，主線填索引記憶。
 - **可信度註記：** 僅有 GitHub Search 星數（446★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/aoci-spec/aoci-code)
