@@ -4397,7 +4397,7 @@ window.WIKI_DATA = {
     {
       "id": "2026-W38",
       "name": "CLAUDE NEWS 週報 · 2026-W38",
-      "preview": "09-18 資安團隊 AIR 公開一個代號 Plugin4Shell 的漏洞，同時打中 Claude Code、Codex、GitHub Copilot 與 Gemini CLI 四款編碼 agent（Help Net Security）。本刊把這條線稱為外掛零點擊。它不需要你點任何東西：外掛在背景自動更新，攻擊者只要"
+      "preview": "要了一年多、累積 6,643 個讚的那個請求，這週兌現了：Claude Code 從 v2.1.277 起會讀 `AGENTS.md`——Codex、Cursor、Amp 早就共用的那份專案指示檔（#6235，讚數為 09-17 快照；出貨見 官方 changelog，09-18）。本刊把這條線稱為共用設定檔。對同時用"
     },
     {
       "id": "2026-W37",
