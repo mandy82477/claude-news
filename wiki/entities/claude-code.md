@@ -5,20 +5,20 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-09-18"
-last_news_update: "2026-09-18"
+last_news_update: "2026-09-19"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
-inbound_links: 102
-attribution_count: 546
-attribution_last: "2026-09-18"
+days_since_news_subtree: 1
+inbound_links: 105
+attribution_count: 547
+attribution_last: "2026-09-19"
 top_source: "github-issues"
 pending_count: 27
-pending_overdue: 17
-pending_next_review: "2026-09-20"
+pending_overdue: 21
+pending_next_review: "2026-09-25"
 pending_signalled: 1
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -179,7 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（52 條未修復、2 條已修復、1 條拒修、6 條查無官方、2 條❓）
+### 🧠 行為與品質（51 條未修復、3 條已修復、1 條拒修、6 條查無官方、2 條❓）
 
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
 - ❓ **待查證**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-09-25）｜**`/goal` 於複雜多 issue 工作流疑似有 context rot 缺陷（Nightshift 作者具名指出，HN Show HN，2026-09-10）**：未附測試方法或數字，屬單一開發者為自製工具辯護的設計說明，非驗證缺陷回報。
@@ -197,7 +197,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-09｜查 #23377、prompt 過長｜複 2026-09-09）｜**「Prompt is too long」錯誤導致 session 永久卡死（GitHub issue #23377，累積 43 則留言、38 個讚，2026-08-08 回報，2026-08-09 查證收錄）**：查證確認完整標題與內容——一旦觸發「Prompt is too long」錯誤，後續每次輸入皆重現同一錯誤，session 永久無法使用，須捨棄該 session 重開；已標記 `has repro`、`area:core`、`area:ide`、`oncall`（內部已排查但無公開回應）；查無官方留言或修復版本。
 - 🔴 **未修復**｜**功能請求：支援與 main 以外分支進行 diff 比較（GitHub issue #23626，累積 38 則留言、120 個讚，2026-08-07，今日互動量最高功能請求）**：使用者希望 Claude Code 支援與 main 以外分支進行 diff 比較；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**應優先使用 Read／Grep 等內建工具的情境下仍頻繁改用 Bash 指令如 sed/grep（GitHub issue #19649，累積 45 則留言、101 個讚，2026-08-22，既有行為模式回報）**：使用者回報 Claude 在明顯應優先使用 Read、Grep 等內建工具的情境下，仍頻繁改用 Bash 指令（如 `sed`、`grep`）達成相同目的，非單一事件而是持續存在的行為模式；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：允許自訂 `.claude/agents/` 定義加入 agent team 作為隊友（GitHub issue #24316，累積 41 則留言、43 個讚，2026-08-23）**：使用者呼籲開放將 `.claude/agents/` 目錄下的自訂 agent 定義納入 agent team、以隊友（teammate）身分參與任務分派；依官方文件（2026-08-22 查證，見上方「Subagent 型別差異對照」軸線 4），teammate 目前的觸發條件為「interactive session 開 agent teams、主對話派出且帶 `name`」，未明確涵蓋自訂 agent 定義的完整支援範圍；官方尚未回應或排入路線圖。
+- ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：允許自訂 `.claude/agents/` 定義加入 agent team 作為隊友（GitHub issue #24316，累積 41 則留言、43 個讚，2026-08-23）**：使用者呼籲開放將 `.claude/agents/` 目錄下的自訂 agent 定義納入 agent team、以隊友（teammate）身分參與任務分派；官方答：spawning teammate 時可指名 `.claude/agents/` 的定義，隊友照該定義的 `tools` 白名單與 `model`，但 `skills`／`mcpServers` frontmatter 不套用到隊友。
 
 - ⛔ **官方拒修**｜**無法釘選 model version：`--model` 只接受 family 名（GitHub issue #27892，2026-02-23）**：無法指定帶日期 pinned version，官方以 not planned 關閉。見 [[topics/code-quality-decline#模型釘選：你選的不一定算數（2026-02 起）]]。
 - 🔎 **查無官方**（標 2026-08-09｜查 #46221、[[topics/code-quality-decline]]｜複 2026-09-09）｜**Opus 4.6 1M 從選單消失被 200k 取代，預設切 Sonnet（#46221，2026-04-10）**：選 1M 後 /model 該選項消失；關為 duplicate（#45978，無官方留言）。
@@ -248,12 +248,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（13 條未修復、1 條拒修、1 條查無官方、1 條已修復）
+### 📂 Session 與資料管理（11 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
 - 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後 session 全部消失；#59248 Cursor 擴充套件保留清理悄悄刪光紀錄。與「Session 30 天自動刪除」（⛔，有預警）不同；官方尚未回應任一則。
 - 🔴 **未修復**｜**功能請求：刪除 Claude Code session（GitHub issue #13514，累積 47 則留言、110 個讚，2026-08-17）**：使用者呼籲提供刪除既有 session 紀錄的機制，目前僅能保留或 resume，無法主動清除不需要的 session；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**功能請求：跨 session 持久記憶（GitHub issue #14227，累積 34 則留言、11 個讚，2026-08-09）**：使用者反映 Claude Code 每次啟動皆從零開始，沒有先前 session 的記憶、先前工作或對使用者專案與偏好累積理解的機制；與既有「跨 context compaction 的持久記憶」（issue #34556，訴求聚焦單一 session 內壓縮間的記憶保留）為記憶延續性缺口的不同切面——本則訴求範圍是**跨 session**，兩則合計 96 則留言；亦與彙整提案 issue #47023（見下）同屬持久化記憶缺口清單成員；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**提案：開放 compact／session 生命週期 hooks 供外部記憶層串接（GitHub issue #47023，累積 41 則留言、4 個讚，2026-08-04）**：提案指出目前已有 5 個開放中的 issue（#14227、#32627、#34192、#34556、#46138）要求持久化記憶功能，社群已自行拼湊出三層式 markdown 架構、知識圖譜等替代方案，呼籲官方開放 compact／session 生命週期的 hook 供外部記憶層串接；與既有「跨 context compaction 的持久記憶」（issue #34556）等同屬記憶延續性缺口，此則彙整多個既有 issue 並提出具體 hook 化解法；官方尚未回應或排入路線圖。
+- ⛔ **官方拒修**（NOT_PLANNED，2026-05-25）｜**功能請求：跨 session 持久記憶（GitHub issue #14227，累積 34 則留言、11 個讚，2026-08-09）**：使用者反映 Claude Code 每次啟動皆從零開始，缺乏跨 session 記憶；與跨 compaction 記憶訴求（issue #34556）、彙整提案 #47023 同屬記憶延續性缺口；官方標記 NOT_PLANNED 不排入路線圖。
+- ✅ **已修復**（2026-08-17 CLOSED／COMPLETED）｜**提案：開放 compact／session 生命週期 hooks 供外部記憶層串接（GitHub issue #47023，累積 41 則留言、4 個讚，2026-08-04）**：彙整 5 個既有持久記憶 issue（含 #14227、#34556），呼籲官方開放 hook 供外部記憶層串接；官方答：`PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` 四個 hook 今天都有。
 - 🔴 **未修復**｜**Session 重新命名後，第二次退出即消失，僅第一次 resume 正常顯示（GitHub issue #25090，累積 32 則留言、29 個讚，2026-08-01）**：使用者為 session 重新命名後，第一次 resume 該 session 時名稱正常顯示，但第二次退出後名稱又消失，回報者已確認搜尋過現有 issue 未見重複回報；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CLI 與 Desktop app 間同步對話歷史（GitHub issue #28791，累積 30 則留言、131 個讚，2026-08-01）**：使用者呼籲 Claude Code CLI 與 Claude Code Desktop app 之間能同步對話歷史，目前兩端各自獨立、無法互通；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：串接 Claude Code 與 Claude.ai Projects 知識庫（GitHub issue #2511，累積 49 則留言、635 個讚，2026-07-29 首見，2026-09-11 互動數更新，今日全站互動量最高）**：呼籲 Claude Code 存取 Claude.ai Projects 知識庫，避免同一參考資料重複維護；官方尚未回應。
@@ -302,7 +302,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（70 條未修復、3 條查無官方）
+### 🔌 平台相容性（67 條未修復、3 條查無官方、3 條已修復）
 
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
@@ -372,12 +372,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-09-09）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
-- 🔴 **未修復**｜**AGENTS.md 規範不支援（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，09-17 互動數更新，全站讚數最高）**：Codex、Amp、Cursor 已採用 [AGENTS.md](https://agents.md/)，Claude Code 仍僅認 `CLAUDE.md`；官方尚未回應。
+- ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 規範不支援（GitHub issue #6235，396 則留言、6643 個讚，2026-07-10 首見，全站讚數最高）**：Claude Code 現已原生讀取 [AGENTS.md](https://agents.md/)；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
-- 🔴 **未修復**｜**功能請求：Claude Desktop App 遠端控制 Claude Code session（GitHub issue #29006，累積 36 則留言、158 個讚，首見 2026-07-12，2026-08-09 互動數更新）**：社群請求讓 Claude Desktop App 能遠端控制 Claude Code session；官方尚未回應或排入路線圖。與下列 `/remote-control` 既知問題疑似指向同一功能方向（見 issue #28322）。
-- 🔴 **未修復**｜**既有 session 中 `/remote-control`（`/rc`）未被識別為內建指令（GitHub issue #28322，2026-07-13 回報）**：使用者發現在既有 session 中輸入 `/remote-control` 或 `/rc` 會被判定為未知指令，須開啟新 session 才可使用；顯示此指令可能已存在但尚未完整發布或文件化，官方尚未回應。
+- ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：Claude Desktop App 遠端控制 Claude Code session（GitHub issue #29006，累積 36 則留言、158 個讚，首見 2026-07-12）**：官方答遠端控制已可用，在「設定 > Claude Code > 預設啟用遠端控制」打開。
+- ✅ **已修復**（2026-08-19 官方關閉）｜**既有 session 中 `/remote-control`（`/rc`）未被識別為內建指令（GitHub issue #28322，2026-07-13 回報）**：官方答 v2.1.76 修好「Unknown skill」、v2.1.206 起 `/remote-control` 一律解析得到。
 - 🔴 **未修復**｜**Cowork 分頁在 Windows 11 desktop app v1.2581.0 消失（GitHub issue #48407，累積 40 則留言、16 個讚，2026-07-07 首見，2026-07-26 留言數更新）**：使用者回報 Windows 11 上 desktop app 版本 v1.2581.0 找不到 Cowork 分頁，疑為該版本的平台性 regression；官方尚未回應
 - 🔴 **未修復**｜**Focus reporting escape sequences 洩漏至輸入框（GitHub issue #10375，累積 30 則留言、31 個讚，2026-07-05）**：在 WezTerm（可能也影響其他終端機）中使用滑鼠或修飾鍵時，focus reporting escape sequences（`[I`、`[O`）會被誤植入輸入介面文字中，官方尚未回應。
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 40 則留言、5 個讚，首見 2026-07-07，2026-09-08 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
@@ -447,6 +447,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.278** | 2026-09-19 | Auto mode 在 API／Enterprise／Bedrock／Vertex／Foundry／gateway 改伺服器端分類器，不收 overhead 費用（`/status` 新增列）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
+| **v2.1.277** | 2026-09-18 | 原生支援 AGENTS.md：無 CLAUDE.md 時改讀，`/config` 可設定；Bedrock／Vertex／Foundry 尚未支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.277)）|
 | **v2.1.276** | 2026-09-18 | Bug fix：修復 2.1.275 迴歸——proxy/gateway 下 `advisor_20260301` 標籤觸發 400 全數失敗；純修復無新旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）|
 | **v2.1.274** | 2026-09-17 | 新增記憶體用量過高時的可見警示（附釋放記憶體或安全重啟步驟）；新增 `CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標，限制首次非互動啟動的等待時間；官方原文於此處截斷，其餘變更項目未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.274)）|
 | **v2.1.273** | 2026-09-15 | 新增 5 個內部遙測用途請求標頭，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.273)）|

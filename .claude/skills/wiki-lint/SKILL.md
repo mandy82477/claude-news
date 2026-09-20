@@ -12,7 +12,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 | 段 | skill | 涵蓋步驟 |
 |---|---|---|
 | A | `.claude/skills/wiki-lint-reporters/SKILL.md` | 1 載入 wiki 全貌、2 六記者派工與收報兩層核對＋月度蒸餾、3 語意分岔候選、4 新實體頁、5 overview |
-| B | `.claude/skills/wiki-lint-sweeps/SKILL.md` | 5a–5m 主編親做／親查的十三個掃描 |
+| B | `.claude/skills/wiki-lint-sweeps/SKILL.md` | 5a–5n 主編親做／親查的十四個掃描 |
 | C | `.claude/skills/wiki-lint-rules-health/SKILL.md` | 6a–6l 規則檔健檢＋漏抓帳與規則版本戳 |
 | D | `.claude/skills/wiki-lint-reader-acceptance/SKILL.md` | 7 讀者模擬驗收、7b 歷史質疑代打 |
 | E | 本檔步驟 8／9／10 | 記錄 lint、更新 index、收尾閉迴路 |

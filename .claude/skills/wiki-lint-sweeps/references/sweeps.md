@@ -1,4 +1,4 @@
-# Wiki Lint B 段：5a–5m 逐步判準與回報格式
+# Wiki Lint B 段：5a–5n 逐步判準與回報格式
 
 `.claude/skills/wiki-lint-sweeps/SKILL.md` 的判準單一來源。**執行某步之前逐字讀本檔對應節**；每節末的回報格式原樣填入步驟 8 的 lint 紀錄（模板見 `.claude/skills/wiki-lint/references/log-format.md`）。
 
@@ -6,7 +6,7 @@
 
 ---
 
-## 雲端 egress 探測（5b／5c／5m 共用）
+## 雲端 egress 探測（5b／5c／5m／5n 共用）
 
 雲端執行這三步前先跑對應組的探測，依印出的摘要行決定做或不做。**不得在未探測的情況下直接跳過**——網路白名單是使用者可改的環境設定（Trusted → Custom，見 `docs/cloud-runbooks/_shared.md`「egress 限制」），寫死跳過的條文在環境改好之後也不會自己好起來。
 
@@ -15,6 +15,7 @@
 | 5b | `python scripts/cloud_egress_check.py --group leaderboard` | `EGRESS: leaderboard OK` | 「跨家榜單週更因雲端 egress 未開（leaderboard）跳過，留待本機 `/weekly`」 |
 | 5c | `python scripts/cloud_egress_check.py --group official` | `EGRESS: official OK` | 「逾期待查證清算因雲端 egress 未開（official）跳過，留待本機 `/weekly`」；**整步不查證、不改動任何頁面，Lane A 不例外** |
 | 5m | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「code-quality-decline issue 狀態複查因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
+| 5n | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「official-community-gap「官方補了沒」表對官方一手因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 
 待辦一律進 log 的待使用者確認區；該步回報那一行寫「雲端 egress 未開，跳過」。
 
@@ -267,4 +268,26 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 **回報格式：**
 ```
 code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截至 YYYY-MM-DD ／雲端 egress 未開，跳過
+```
+
+---
+
+## 5n. official-community-gap「官方補了沒」表對官方一手（主編親做）
+
+記者無 web 工具，這一步只能主編做。逐列：
+
+1. 表上每個 issue 號只取狀態與官方回覆，不要把整包留言倒進來（#6235 有 405 則）：
+   ```
+   gh issue view <號> -R anthropics/claude-code --json state,stateReason,closedAt,comments \
+     -q '{state,stateReason,closedAt,official:[.comments[]|select(.authorAssociation=="COLLABORATOR" or .authorAssociation=="MEMBER")|{login:.author.login,body:.body[0:400]}]}'
+   ```
+2. 抓 CHANGELOG 全文再本機 grep 該列關鍵詞：`gh api repos/anthropics/claude-code/contents/CHANGELOG.md -H "Accept: application/vnd.github.raw"`。
+3. 官方文件站有對應頁者一併看（code.claude.com／platform.claude.com；否定證明查 `code.claude.com/docs/llms.txt` 的文件索引）。
+4. 核完更新該列「核對日」；核對日逾 30 天的列列進 lint 回報。
+
+**⚠️ 雲端執行時先探測**，見本檔「雲端 egress 探測」表 5n 列（`--group github`，與 5m 同組），符合 registry 第 101 組 egress 契約。
+
+**回報格式：**
+```
+官方補了沒表：N 列比對／M 列已改／核對日逾 30 天 K 列
 ```

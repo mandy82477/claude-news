@@ -106,7 +106,7 @@
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界，惡意 `.git` 跨廠可觸發程式碼執行　↳ 子故事：[[topics/ai-agent-safety-archive]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動，其中香港存取限制、輸出浮水印、高風險請求換 Opus 4.8 已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
-| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 官方功能 vs 社群痛點缺口矩陣：哪些痛點官方正在解決、哪些結構性缺席；08-16 起持續有新缺口/矩陣更新　↳ 子故事：[[topics/official-community-gap-archive]] |
+| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]] |
 | [[topics/coding-workflow-guide]] | 🛠️ 工具/功能 | ongoing | 🗓️ 週更 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |
 | [[topics/enterprise-cost-management]] | 💼 商業 | monitoring | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態　↳ 子故事：[[topics/enterprise-cost-management-archive]] |

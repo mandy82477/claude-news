@@ -3,15 +3,15 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-17"
+last_updated: "2026-09-19"
 last_news_update: "2026-09-17"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 3
 inbound_links: 23
 attribution_count: 2
 attribution_last: "2026-09-17"
@@ -131,7 +131,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **規則想集中管就用 `.claude/rules/*.md`。** 與「每個目錄一份 CLAUDE.md」是兩種做法，官方明確對照過：rules 放在 repo 根的 `.claude/` 裡、可加 `paths:` glob 限定生效範圍，適合「所有慣例集中一處」或「同一條規則散落多處路徑」；per-directory CLAUDE.md 則適合「各目錄的維護者自己管、規則跟著程式碼一起版控」。
 
-**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。官方也支援這種寫法：Claude Code 只讀 `CLAUDE.md`，但你可以讓它 `@AGENTS.md` 把內容 import 進來，再於底下補 Claude 專屬的指示。
+**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。官方自 v2.1.277（2026-09-18）起原生讀 `AGENTS.md`，不必再另外 `@AGENTS.md` import；`@AGENTS.md` import／symlink 降為 Bedrock／Vertex／Foundry 或關掉遙測這類讀不到原生支援場合的替代法。
 
 **只給自己看的東西放 `CLAUDE.local.md`**（沙箱網址、偏好的測試資料），記得加進 `.gitignore`。跨 worktree 的個人設定則改成從家目錄 import。
 
