@@ -203,7 +203,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Anthropic 官方研究文章**：Claude 歷時 11 天完成費馬最後定理的電腦驗證證明，證明程式碼達 1,300 萬行 Lean。官方寫明用的是「內部研究模型，約略相當 Fable 5.1」，不是 Fable 5 或 5.1 本身，本頁僅作參考記錄（[Anthropic](https://www.anthropic.com/research/formalizing-fermats-last-theorem)，2026-09-04；歸屬 2026-09-07 查證；行數轉引自 [dev.to](https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3)，2026-09-09）
 - 長期主導此形式化工作的 Xena Project 作者 [[entities/kevin-buzzard]] 於部落格公開表示「被 Anthropic 搶先」，指出 Anthropic 走的是 Darmon–Diamond–Taylor 於 1995 年闡述的 Wiles–Taylor–Wiles 證明路徑並開發 Fontaine 理論，此題也是 Freek Wiedijk 百大形式化挑戰清單最後完成的一項（[Xena Project](https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/)，2026-09-04；人物背景查證日 2026-09-05）
 - SingularityHub 報導 Claude 已能自主操作實驗室設備執行科學實驗，與費馬定理證明同屬「長期自主研究任務」訊號，惟兩者是否為同一脈絡未經證實（Google News/SingularityHub，2026-09-04）
-- ❓ **待查證**（標 2026-09-01｜查 Fable 5.1、Mythos 5.1）｜**Reddit r/artificial 彙整 Fable 5.1／Mythos 5.1 基準測試分數**：週熱門討論串僅標題級摘要可用，未載具體分數；已掃日報至 2026-09-18 無後續，官方頁面未查證（Reddit / r/artificial · 週熱門，2026-09-01）
+- **Reddit r/artificial 彙整 Fable 5.1／Mythos 5.1 基準測試分數，官方公告已載明具體數字**：週熱門討論串原僅標題級摘要可用；查證後確認官方發布公告本身即列出完整基準分數（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01；查證 2026-09-20）
+  - Terminal-Bench-Science 0.1：**52.6%**（Fable 5.1，對照 24.7%）；Terminal-Bench 4.0：**60.9%**（Mythos 5.1，對照 42.0%）
+  - Humanity's Last Exam **65.0%**（含工具）／**60.9%**（不含）；CursorBench 3.2.0 **73.4%**；OSWorld 2.0 **41.7%**／**77.9%**
 - **服務中斷（非模型特定）**：同日 Anthropic、OpenAI、xAI 三家模型服務上午同時發生罕見中斷，三方對外皆未說明確切成因，原文未指名受影響的具體 Claude 模型，是否與下方 09-03 多模型錯誤率事件相關亦未經證實（[Wired](https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/)，2026-09-04）
 
 #### 2026-09-03
@@ -217,7 +219,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - MarkTechPost 報導 Fable 5.1／Mythos 5.1 在 Terminal-Bench-Science 得分 **52.6%**，並稱快取讀取成本降 75%（與官方定價頁 0.025 倍換算一致，見 09-01 條目）
 - **成本降幅各家說法不一，未見單一媒體逐項拆解**：the-decoder.com 稱「最多降 45%」、Pasquale Pillitteri 稱「25% 更便宜」、Yellow.com 稱快取讀取為 $0.25、MarkTechPost／VentureBeat／WinBuzzer 稱快取讀取降 75%——各數字可能對應不同計費項目（整體成本 vs 快取讀取單項），本頁不選邊，具體定價換算留給 [[entities/pricing]] 與 [[topics/model-comparison#同一份工作，換設定差多少]] 查證（Google News 綜合，2026-09-01～02）
 - Wccftech 報導 Samsung 將其晶片設計工作押注於 Claude Code（與本次發布同日報導，具體採用細節、是否具名確認未見原文佐證）
-- ❓ 待查證 ⟨Q-01⟩ **TechCrunch：新版「更便宜、限制更少」**：標題稱 Fable 5.1「cheaper, less restrictive」，僅標題可用，具體所指未經證實（詳見「懸置細節」）
+- **TechCrunch：新版「更便宜、限制更少」，官方公告證實兩面向皆屬實**：定價面：一般工作負載成本約降 25%，快取讀取降至基礎輸入價 0.025 倍（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01；查證 2026-09-20）
+  - 限制面：資安護欄誤判降 60%、生物護欄對良性請求觸發降 85%，新增可用於防禦性漏洞探勘（此前屬限制範圍），惟惡意用途（產出漏洞利用程式、滲透測試）限制仍在
 - **GitHub Issue #79337 逾 6 週未解**：07-20 首次回報的「Max 方案需額外 usage credits 才能執行 Fable 5、靜默降級至 Opus 4.8」事件持續延燒，累積留言數已增至 **76 則**、reaction 增至 **26 個**，距官方 07-20「確認為誤判並建議重啟」的結論已逾 6 週仍未見官方後續說明或關閉 issue，顯示問題可能非單次誤判；計費/配額面向見 [[entities/pricing]]（[GitHub Issues](https://github.com/anthropics/claude-code/issues/79337)，2026-09-02 02:12 UTC）
 
 #### 2026-09-01
@@ -243,16 +246,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 同日官方說明文件〈Claude Fable 5 on your plan〉重申存取依方案分流（Max 方案優先存取），與 08-19 已查證記錄的規則一致，無新資訊，不重複記錄計費細節（詳見 [[entities/pricing]]）。
 
 #### 2026-08-26
-**Futurism：企業轉向更便宜替代模型、Anthropic 旗艦採用意願下滑（僅標題可用）**：Google News 轉載 Futurism 標題〈Nobody Wants Anthropic's Best AI Model Anymore Now That There Are Way Cheaper Alternatives〉；RSS 僅提供標題與轉址連結，無正文可查證具體採用數據、樣本或方法論。與上方 08-18 analyticsindiamag.com〈Almost Nobody Is Using Anthropic's Fable 5〉標題主題相近，惟來源、標題涵蓋範圍（泛稱「最強模型」vs 明確指名 Fable 5）皆不完全相同，暫不合併視為同一事實的兩次獨立確認，亦不做因果推論。❓ 待查證 ⟨Q-03⟩ **企業轉向更便宜替代方案的具體佐證**：僅標題可用，無採用數據或方法論佐證（詳見「懸置細節」）
+**Futurism：企業轉向更便宜替代模型、Anthropic 旗艦採用意願下滑（僅標題可用）**：Google News 轉載 Futurism 標題〈Nobody Wants Anthropic's Best AI Model Anymore Now That There Are Way Cheaper Alternatives〉；RSS 僅提供標題與轉址連結，無正文可查證具體採用數據、樣本或方法論。與上方 08-18 analyticsindiamag.com〈Almost Nobody Is Using Anthropic's Fable 5〉標題主題相近，查證後確認兩則指向同一組數字，不再視為獨立事實。**企業轉向更便宜替代方案的具體佐證（媒體數字）**：**Fable 5 占 Anthropic 企業客戶總支出比例停滯於約 11%**，資料來自金融科技公司 Ramp（樣本 7 萬家企業），Financial Times 率先報導，Gizmodo 等媒體跟進；同期 Opus 5 企業支出占比已超車 Fable 5（媒體稱，Ramp／Financial Times／Gizmodo，2026-08-24；查證 2026-09-20）
 
-**tech-insider.org 模板化定價比較標題（僅標題可用，模型能力面）**：同日另有 tech-insider.org（經 Google News 轉載）發布標題《Claude Fable 5 vs Opus 5 vs GPT-5.6 Sol: $1,125 Gap [2026]》，比較 Fable 5、[[entities/opus-5|Opus 5]] 與競品 GPT-5.6 Sol 定價；同站另有一篇比較 Opus 5 與 Grok 4.6、Gemini 3.1 Pro 的同系列標題，記於 [[entities/opus-5]]。本則僅標題可用、無正文，「$1,125 Gap」具體數字未經查證，不採信為事實；如經查證，具體定價數字應留給 [[entities/pricing]] 記錄。❓ 待查證 ⟨Q-04⟩ **Fable 5 vs Opus 5 vs GPT-5.6 Sol 的 $1,125 差距計算基準**：僅標題可用，計算基準未經查證（詳見「懸置細節」）
+**tech-insider.org 模板化定價比較標題（僅標題可用，模型能力面）**：同日另有 tech-insider.org（經 Google News 轉載）發布標題《Claude Fable 5 vs Opus 5 vs GPT-5.6 Sol: $1,125 Gap [2026]》，比較 Fable 5、[[entities/opus-5|Opus 5]] 與競品 GPT-5.6 Sol 定價；同站另有一篇比較 Opus 5 與 Grok 4.6、Gemini 3.1 Pro 的同系列標題，記於 [[entities/opus-5]]。本則僅標題可用、無正文，「$1,125 Gap」具體數字未經查證，不採信為事實。🔎 查無官方 ⟨Q-04⟩ **Fable 5 vs Opus 5 vs GPT-5.6 Sol 的 $1,125 差距計算基準**：官方定價頁已查證 Fable 5（$10／$50 每 MTok）與 Opus 5（$5／$25 每 MTok）現行定價屬實，但 Anthropic 不公布與競品的定價比較，GPT-5.6 Sol 價格與「$1,125」計算基準非官方文件所載（詳見「懸置細節」）
 
 **官方說明文件〈Claude Fable 5 on your plan〉重新抓取，內容未變（非新事件）**：官方頁面本輪被重新抓取，經比對內容與 08-19 已查證版本一致，仍為 7/19 促銷到期後的既定分流規則，非新公告；不重複記錄，計費細節仍以 [[entities/pricing]] 為準。
 
 #### 2026-08-19
 **官方說明文件更新確認促銷結束日與分流政策（與 2026-08-08 查證結果一致）**：Anthropic 官方說明文件更新〈Claude Fable 5 on your plan〉頁面，明載先前促銷（允許用戶最多以週訂閱額度 50% 免費使用 Fable 5）已於 **2026-07-19 23:59:59 PT** 結束（並非早期 2026-07-01 公告所稱的 7/7）。促銷結束後：Max 方案、Team 方案 premium seat、舊制（legacy seat-based）Enterprise 方案 premium seat，Fable 5 成為方案標準內含項目；Pro 方案、Team 方案 standard seat、舊制 Enterprise 方案 standard seat，Fable 5 改以 pay-as-you-go usage credits 計費；目前所有付費方案（Pro/Max/Team/Enterprise）皆可使用 Fable 5。本次官方文件與 2026-08-08 Help Center 查證所得的分流結論一致；官方引文為「On Max plans, premium seats on Team plans, and premium seats on legacy seat-based Enterprise plans, Fable 5 will be a standard part of your plan. On Pro plans, standard seats on Team plans, and standard seats on legacy seat-based Enterprise plans, Fable 5 will run on pay-as-you-go usage credits.」。計費規則細節（含週用量 50% 上限是否延續等定價面問題）詳見 [[entities/pricing]]（Official Docs，2026-08-19）。**這裡結束的是限時促銷，不是常態規則**——促銷結束後 Max／Team premium 的週用量 50% 內免費本身仍在，是現行常態分流，見上方結論表。
 
-❓ 待查證 ⟨Q-05⟩ **單一來源報導稱 Fable 5「幾乎無人使用」**：僅標題可用，無採用數據或方法論佐證（詳見「懸置細節」）。**與其他條目的關係**：本則報導日期與同日「Claude Code 週用量促銷延長」報導、以及上方 08-19 官方文件確認的 07-19 促銷到期時間點相近，但原文未提供因果證據，本頁不做因果推論，僅並列記錄。2026-08-26 另有 Futurism 報導呼應類似主題但範圍不完全相同，見下方「2026-08-26」條目，兩則不合併視為同一事實。
+**單一來源報導稱 Fable 5「幾乎無人使用」，媒體數字證實標題誇大但方向屬實**：analyticsindiamag.com 標題誇張化；查證後確認實際數字為 Ramp／Financial Times 揭露的「企業支出占比約 11%、停滯不前」（見下方 08-26 Futurism 條目同一組數字），並非「幾乎無人使用」；本頁不採信誇大用語，僅採信查證後的具體占比數字（媒體稱，Ramp／Financial Times，2026-08-24；查證 2026-09-20）。**與其他條目的關係**：本則報導日期與同日「Claude Code 週用量促銷延長」報導、以及上方 08-19 官方文件確認的 07-19 促銷到期時間點相近，但原文未提供因果證據，本頁不做因果推論，僅並列記錄。
 
 #### 2026-08-15
 **Anthropic Status：錯誤率一度升高（同日解決）**：Anthropic Status 通報 Fable 5 於 2026-08-14 20:00 至 2026-08-15 00:11 UTC 錯誤率升高，事件已解決，無需採取行動（[Anthropic Status](https://status.claude.com/incidents/hdynq1pc0fn8)，2026-08-15）。
@@ -326,10 +329,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **懸置細節**
 
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-09-02｜查 techcrunch.com、less restrictive）：TechCrunch 標題稱 Fable 5.1「cheaper, less restrictive」，僅標題可用，「限制更少」具體所指未經證實（Google News/TechCrunch，2026-09-01）
-- ⟨Q-03⟩ ❓ **待查證**（標 2026-08-26｜查 Futurism、cheaper alternatives｜複 2026-09-09）：Futurism 標題稱企業轉向更便宜替代方案，僅標題可用，無採用數據、案例或方法論佐證（Google News/Futurism，2026-08-26）
-- ⟨Q-04⟩ ❓ **待查證**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-09-09）：tech-insider.org 標題稱三模型定價差 $1,125，僅標題可用，計算基準未經查證（Google News/tech-insider.org，2026-08-26）
-- ⟨Q-05⟩ ❓ **待查證**（標 2026-08-26｜查 analyticsindiamag.com、Almost Nobody｜複 2026-09-09）：analyticsindiamag.com 標題稱 Fable 5「幾乎無人使用」，RSS 摘要未附正文，採用數據、統計方法、對比基準均未見報導（Google News，2026-08-18）
+- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-10-04）：Fable 5（$10／$50）與 Opus 5（$5／$25）定價屬實，但 Anthropic 不比較競品定價，GPT-5.6 Sol 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）
 - ⟨Q-06⟩ ❓ **待查證**（標 2026-09-10｜查 FedScoop、Claude for Government｜複 2026-09-24）：FedScoop 標題稱 Anthropic 將 Fable 5.1 加入 Claude for Government，僅標題可用，具體變更內容（新分層／既有服務更新）未經證實（Google News/FedScoop，2026-09-10）
 
 ### 2026-06（發布與出口管制期）

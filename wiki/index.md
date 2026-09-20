@@ -70,7 +70,7 @@
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
 | [[entities/tino-cuellar]] | person | 👤 人物 | active | Anthropic 首任 Chief Global Affairs Officer（2026-08-05 到任），前 Carnegie Endowment for International Peace 總裁、加州最高法院大法官 |
 | [[entities/robert-mahari]] | person | 👤 人物 | active | Anthropic「Claude for Legal」負責人（2026-08-07 任命；哈佛／MIT JD-PhD、史丹佛 CodeX 副主任、Akiva AI 創辦人，職掌為法律垂直的 GTM，2026-09-13 查證）|
-| [[entities/jensen-huang]] | person | 👤 人物 | active（待核實）| Nvidia 執行長；2026-08-27 傳出對投資 OpenAI／Anthropic 的規模表示「後悔」（Yahoo Finance 單一來源，後悔方向 ❓ 待查證）|
+| [[entities/jensen-huang]] | person | 👤 人物 | active | Nvidia 執行長；2026-08-26 財報電話會議說對投資 OpenAI／Anthropic「唯一的後悔是投得不夠多、不夠早」（已查實）|
 | [[entities/amir-salek]] | person | 👤 人物 | active | Google TPU 專案創辦人（2013–2022，經手前七代）；2026-08 加入 Anthropic compute 團隊，向 James Bradbury 匯報（Bloomberg 查證 2026-09-06）|
 | [[entities/evan-hubinger]] | person | 👤 人物 | active | Anthropic 安全研究員；2026-09-09 公開估計 AI 十年內導致人類全滅機率逾 10%（BBC 具名報導） |
 | [[entities/jack-clark]] | person | 👤 人物 | active | Anthropic 共同創辦人；2026-09-15 向 BBC 稱 AI「緊急關閉開關」未來或需強制、向 NPR 稱放緩開發是「集體行動難題」|

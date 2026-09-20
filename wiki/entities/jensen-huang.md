@@ -33,7 +33,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-16
 
-> ❓ **待查證**（標 2026-08-27｜查 Jensen Huang、Hugging Face｜複 2026-09-10）｜**黃仁勳談對 OpenAI、Anthropic 投資規模「後悔」**（2026-08-27 報導）：Yahoo Finance 報導 Nvidia 傳出將投資 Hugging Face 129 億美元，同篇引述執行長黃仁勳表示對先前投資 OpenAI、Anthropic 的規模感到「後悔」；日報摘要僅載「regret」一詞，究竟是後悔投得太少（錯失更大獲利）或太多（規模風險），原文脈絡未展開，不得擇一推斷。
+> **「後悔」脈絡已查實**（2026-08-26，2026-09-20 查證）
+> 黃仁勳於 Nvidia 2026 會計年度第二季財報電話會議原話：「I think the only regret that I have is that I didn't invest more and sooner.」——後悔的是投得太少、太晚（錯失更大獲利），而非投資規模本身帶來風險；[CNBC](https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html) 等媒體同日報導。
 
 > **最新交鋒**（2026-09-16）
 > 09-15 於 Dreamforce 與 Anthropic、OpenAI 執行長在 AI 安全立場上分歧，並批評 Anthropic「AI 安全反壟斷豁免」提案「完全沒必要」；同場 Amodei 重申 AI 減速呼籲。
@@ -44,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-09-15，Jensen Huang 於 Dreamforce 公開場合的言論與 Anthropic、OpenAI 執行長在 AI 安全立場上出現分歧，並批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」（"Completely unnecessary"）；同場 [[entities/dario-amodei|Dario Amodei]] 重申全球 AI 減速呼籲，兩人主張形成對比，完整脈絡見 [[entities/dario-amodei]]（CNBC）。反壟斷豁免提案本身的攻防紀錄見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
-2026-08-27，Yahoo Finance 報導 Nvidia 傳出將以 129 億美元投資 Hugging Face，同篇提及黃仁勳對先前投資 OpenAI、Anthropic 的規模表示「後悔」（"regret"）；具體是後悔投得不夠多、還是投得過多，查證狀態見頁首標記。Nvidia 對 OpenAI、Anthropic 的既有投資金額與合作細節屬商業動態，詳見 [[topics/anthropic-business]]。
+2026-08-26，黃仁勳於 Nvidia 2026 會計年度第二季財報電話會議表示對先前投資 OpenAI、Anthropic 的規模「後悔」（"regret"）——後悔投得太少、太晚（見上方 callout）；隔日（2026-08-27）Yahoo Finance 報導 Nvidia 傳出將以 129 億美元投資 Hugging Face 時再度引述此語。Nvidia 對 OpenAI、Anthropic 的既有投資金額與合作細節屬商業動態，詳見 [[topics/anthropic-business]]。
 
 ## 相關議題
 
@@ -62,4 +63,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 歷史記錄
 
 - 2026-09-15：於 Dreamforce 公開場合與 Anthropic、OpenAI 執行長在 AI 安全立場上出現分歧，並批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」；同場 Amodei 重申 AI 減速呼籲（來源：Google News／CNBC）
-- 2026-08-27：Yahoo Finance（經 Google News）報導 Nvidia 傳出將投資 Hugging Face 129 億美元，同篇引述黃仁勳對先前投資 OpenAI、Anthropic 的規模感到「後悔」；具體脈絡（後悔太少或太多）未見報導，查證狀態見頁首標記
+- 2026-08-26：Nvidia 2026 會計年度 Q2 財報電話會議，黃仁勳原話「I think the only regret that I have is that I didn't invest more and sooner.」，指後悔投得太少太晚（已查實，2026-09-20 查證，[CNBC](https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html)）
+- 2026-08-27：Yahoo Finance（經 Google News）報導 Nvidia 傳出將投資 Hugging Face 129 億美元，同篇再引述前一日財報電話會議的「後悔」發言

@@ -148,10 +148,10 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | 協調與衝突解決 | 多 agent 併行需要協調衝突的機制 | 官方答案是 git worktree 隔離——用不共用工作區迴避協調，不是解決協調 | 未補 |
 | 信任與驗證層 | 多 agent 產出需要信任與驗證機制 | 官方仍是空白，社群工具正長在這個缺口上 | 未補 |
 
-**一項倒退：** v2.1.215（2026-07-19）起 `/verify` 與 `/code-review` 不再自動觸發，評估與改進的迴路從自動降為手動 ❓ 待查證 ⟨Q-07⟩。
+**一項倒退：** v2.1.215（2026-07-19）起 `/verify` 與 `/code-review` 不再自動觸發，評估與改進的迴路從自動降為手動（見下方懸置細節 ⟨Q-07⟩ 已查證：未恢復）。
 
 **懸置細節**
-- ⟨Q-07⟩ ❓ **待查證**（標 2026-09-06｜查 /code-review 自動觸發、v2.1.215｜複 2026-09-20）：是否已恢復自動觸發，官方文件未見說明，2026-07-19 之後未再回訪
+- ⟨Q-07⟩ **是否已恢復自動觸發**：已查證（[GitHub Release v2.1.215](https://github.com/anthropics/claude-code/releases/tag/v2.1.215)，查證日 2026-09-20）——官方將此列為明確變更項：`/verify` 與 `/code-review` 不再自動執行，需明確以指令呼叫才會觸發；此後官方文件與後續版本 changelog 均未再提及恢復自動觸發，判定**未恢復**、維持手動。
 
 **與官方缺口矩陣互見：** [[topics/official-community-gap]] 是官方視角（官方功能 vs 社群痛點的完整追蹤），上表是文獻視角（學術文獻主張 vs Claude Code 現況）——查「官方功能覆蓋到哪」去那頁，查「文獻主張有沒有兌現」看這裡。
 
@@ -828,9 +828,9 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **主線：** 並行規模、Context 管理
 - **核心模式：** 使用者觀察到 Claude Code 用 "fork" 子代理分工重構程式碼時，四個平行子代理總共耗用約 200 萬 tokens，懷疑根因是每次工具呼叫都重送整段對話歷史，而非只送當次所需的增量內容
 - **與既有模式的關係：** 若機制屬實，將是本頁「並行 Agent 規模化」類別下一種此前未被量化的 token 放大源——與既有的 AgentWatch runtime budget enforcement（預算層攔截）、Context Window 診斷法（07-10，先測量再究責 MCP）互補：本則指向的是子代理 fork 機制本身的重送設計，而非上層工具或 MCP 的 context 消耗；歸入主線 [[topics/community-large-codebase-workflow]] 並行規模／Context 管理雙主線
-- **訊號強度：** 單一 Reddit 回報，機制推論未經官方證實（推論）；機制／已知問題面已同步至功能頁處理，本頁僅記錄其對並行 agent token 經濟的影響
+- **訊號強度：** 單一 Reddit 回報；機制方向已查證（詳見 [[topics/community-large-codebase-workflow#1. 並行規模：幾個 agent 同時跑會互踩？]] ⟨Q-01⟩，查證日 2026-09-20），「200 萬 tokens」數字仍為單一觀察，本頁僅記錄其對並行 agent token 經濟的影響
 - **來源：** 「"fork" subagents in Claude Code inherit your entire conversation, and resend it on every single tool call?」— Reddit r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1vzvixh/fork_subagents_in_claude_code_inherit_your_entire/)
-- **成熟度：** ⏳ 新興（單一使用者觀察，尚無第三方覆核或官方說明）
+- **成熟度：** ⏳ 新興（單一使用者觀察，機制方向已獲官方文件間接證實，具體倍數仍待第三方覆核）
 
 #### dev.to：以 hooks 強制執行取代 prompt 建議的新案例——規則遵循率變 100%，改用 Haiku 當 builder 不再冒險（2026-08-25）
 
@@ -1145,7 +1145,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **核心模式：** 作者同時平行執行多個 coding agent 後，產出 diff 量已超過自己能逐行審閱的負荷；並非放棄審查，而是把品質把關前移到更早階段（如更嚴謹的任務拆解與驗收條件設計），讓下游少了逐行複核的必要性
 - **與既有模式的關係：** 補充本頁「多代理 PR Review」類別在「審查負荷過載」面向的因應之道——既有記錄多聚焦「審查者角色如何設計」（4-agent Code Review、對抗性審查），本篇聚焦「審查者本人放棄逐行審查後，品質把關該往流程哪一端移動」，是對審查瓶頸的上游解法
 - **來源：** 「I stopped reviewing my own code. Here's what had to be true first.」— dev.to / isamu（依 dev.to 內容判斷原則收錄：第一手工作流實作經驗，非行銷/SEO 稿；3 讚不作為判斷依據）
-- **成熟度：** ⏳ 新興（單一作者第一手實作記錄）；🔎 查無官方 ⟨Q-01⟩
+- **成熟度：** ⏳ 新興（單一作者第一手實作記錄；已查證原文，見下方懸置細節 ⟨Q-01⟩）
 
 #### Mac 瀏海面板攔截並回應 Claude Code 權限確認提示，關閉時預設放行（fail open）（2026-08-02）
 
@@ -1162,7 +1162,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **成熟度：** ⏳ 新興（今日首見，單一開發者工具，2,700 次迭代測試聲稱未經第三方驗證）
 
 **懸置細節**
-- ⟨Q-01⟩ 🔎 **查無官方**（標 2026-08-10｜查 diff量、驗收條件｜複 2026-09-13）：已查證（2026-08-13）未能取得原文（dev.to / isamu 該篇文章未見於公開搜尋結果），具體機制仍無法查證
+- ⟨Q-01⟩ **原文核對**：已查證（[dev.to/isamu「I stopped reviewing my own code」](https://dev.to/isamu/i-stopped-reviewing-my-own-code-heres-what-had-to-be-true-first-4nh0)，2026-08-01 發表，查證日 2026-09-20）——原文內容與本頁摘要一致：作者平行跑多個 coding agent，diff 量超過一個工作天能讀完的量，選擇把品質把關移到更早的任務拆解與驗收條件設計階段，機制內容屬實。
 
 ### 2026-07
 
@@ -1235,7 +1235,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **核心模式：** 作者未查閱官方文件，而是直接翻自己的 Claude Code session JSONL 逐字稿，找到一個名為 `<ip_reminder>` 的標籤在對話中途出現；此標籤未見於任何官方文件說明
 - **與既有模式的關係：** 呼應本頁既有「Local Reverse Proxy」「Context Window 診斷法」等「直接檢視 Claude Code 實際送出/收到內容」的第一手偵測方法論類別，補上「逐字稿逆向檢視」這個更輕量、免架設代理即可執行的檢視手段
 - **來源：** 「I Grepped My Own Claude Code Logs and Found the Hidden Tag Anthropic Never Shows You」— dev.to / nomurasan（依 dev.to 內容判斷原則收錄：第一手日誌挖掘，非行銷/SEO 稿；讚數不作為判斷依據）
-- **成熟度：** ⏳ 新興（單一開發者觀察，暫不歸入既有機制類別）；🔎 查無官方 ⟨Q-05⟩
+- **成熟度：** ⏳ 新興（單一開發者觀察，暫不歸入既有機制類別；原文已查證，見下方懸置細節 ⟨Q-05⟩）
 
 #### Claude Code Skills 清單字元預算機制：description 超額會讓既有 skill 悄悄失效（2026-07-28）
 
@@ -1540,11 +1540,11 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **來源：** dev.to（Git worktree 多 agent 並行教學；07-01）
 
 **懸置細節**
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-09-13）：原始 Reddit 貼文與回滾機制未能取得，僅查得同類 agent rollback 的通用做法，非本則的獨立驗證
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-09-13）：原始 Reddit 貼文未能取得，僅查得 Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」的背景資訊，12 條具體錯誤內容仍無法查證
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）；補充查得官方確有自動快照機制——[Checkpointing 官方文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案，`/rewind` 可還原至任一檢查點；但無法比對原貼文所指是否即為此機制
+- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果，僅查得 Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」的背景資訊，12 條具體錯誤內容仍無法查證
 - ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-10-04｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
   - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對
-- ⟨Q-05⟩ 🔎 **查無官方**（標 2026-08-10｜查 ip_reminder、JSONL｜複 2026-09-13）：原始 dev.to 文章未能取得，僅查得同性質的 `<system-reminder>` 標籤（用途不同，見 GitHub issue #52018、#17601），非同一標籤的可靠佐證
+- ⟨Q-05⟩ **ip_reminder 標籤**：原始文章已定位——[dev.to/nomurasan](https://dev.to/nomurasan/i-grepped-my-own-claude-code-logs-and-found-the-hidden-tag-anthropic-never-shows-you-17c0)（2026-07-27 發表，查證日 2026-09-20）。作者 grep 自己的 JSONL session log，找到 `<ip_reminder>` 標籤，單一 session 中比對出 151 行相符、437 次出現，判定為版權安全用途的系統層注入；屬社群逆向工程發現，非官方確認，與先前查得的 `<system-reminder>` 標籤（GitHub issue #52018、#17601）不同。
 
 ### 2026-06
 
@@ -1577,13 +1577,13 @@ Token/context 裁剪從討論走向實測：Compact Memory 提出 O(N²)→O(N) 
 - **已經定案的四類**（Skills 設計、Multi-agent 架構、CLAUDE.md 管理、Hooks 與自動化）：隔離用 worktree、規則用 Hooks 強制而非建議、流程封裝成 skill，近三個月沒出現反對意見。
   **接下來看什麼：** [[topics/community-tech-patterns#2026-09]] 的新節點是否還在複述這三句，複述停了就是真的定案。
 - **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-tech-patterns#2026-07]]）自己排序，或維持人工把關，或等官方補。
-- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-tech-patterns#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-tech-patterns#2026-09]]）——同一個問題兩個相反答案，還沒收斂 ❓ 待查證 ⟨Q-06⟩。
+- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-tech-patterns#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-tech-patterns#2026-09]]）——同一個問題兩個相反答案，還沒收斂；官方數量級參照見下方懸置細節 ⟨Q-06⟩ 已查證：多 agent 系統約耗一般對話 15 倍 token。
 - **費用可觀測性從選配變必備**：2026-06 計費切割風波（該政策已於 2026-06-16 暫停）之後，帳單看得見成了工具的基本要求；工具清單見 [[topics/community-tech-tools]]。
 - **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法已獲社群反覆驗證（[[topics/community-tech-patterns#2026-09]]）。**接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）會不會補上來。
 - **還在試的十一類裡，只有五類近兩週有新動靜**：其餘停在七月，代表社群的注意力現在集中在規模化、終止條件與介面複用三個方向。
 
 **懸置細節**
-- ⟨Q-06⟩ ❓ **待查證**（標 2026-09-06｜查 multi-agent token、15 倍｜複 2026-09-20）：「多 agent 約耗 15 倍 token」本庫僅 [[topics/community-tech-patterns-archive]] 的時序流水帳轉述過，未取得官方原文與發布日期
+- ⟨Q-06⟩ **「多 agent 約耗 15 倍 token」官方原文**：已查證（[Anthropic 官方部落格](https://www.anthropic.com/engineering/built-multi-agent-research-system)，2025-06-13 發布，查證日 2026-09-20）——原文：「agents typically use about 4× more tokens than chat interactions, and multi-agent systems use about 15× more tokens than chats」。[[topics/community-tech-patterns-archive]] 先前的轉述屬實。
 
 > 概念辯論與設計哲學見 [[topics/community-tech-discussions]]
 

@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 OpenCode 是 Claude Code 的主要開源替代品，截至 2026-05-12 已吸引 **157,000 名開發者**轉向（The New Stack 報導）。功能與體驗被 XDA 評測認為與 Claude Code 相當，且完全開源免費。即便 Anthropic 宣布倍增速率限制，對 vendor lock-in 的顧慮仍持續驅動開發者轉向開源方案。
 
-另有 tech-insider.org（Google News 轉載，2026-08-01）稱 OpenCode 下載量達 Claude Code 的 **5.4 倍**（比較定價 Free vs $20）。🔎 **查無官方**（標 2026-08-10｜查 tech-insider.org、OpenCode 下載量｜複 2026-09-13）：此下載量倍數之統計方法與時間範圍，查證後仍未見揭露。
+另有 tech-insider.org（Google News 轉載，2026-08-01）稱 OpenCode 下載量達 Claude Code 的 **5.4 倍**（比較定價 Free vs $20）。🔎 **查無官方**（標 2026-08-10｜查 tech-insider.org、OpenCode 下載量｜複 2026-10-18）：此下載量倍數之統計方法與時間範圍，查證後仍未見揭露；2026-09-20 複查：tech-insider.org 仍是唯一提出此 5.4 倍數字的來源（其 2026-09 版文章重申「OpenCode 贏 GitHub star 數：195K vs 132K，但 Anthropic npm 下載量高 5.4 倍」），無獨立第三方或官方 npm 下載統計可覆核，統計方法與時間範圍依然未揭露。
 
 ## 熱度與試用價值
 

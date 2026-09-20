@@ -67,7 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化 | Claudette、Superset、cc-fleet 等 | 多來源 |
-| 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；fork 子代理疑似重送整段歷史再添一個未量化放大源 | 《Why 20 Instances Break Down》、Reddit fork 子代理回報 | 單一深度分析＋單一回報 ❓ 待查證⟨Q-01⟩ |
+| 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；fork 子代理延續累積父對話上下文再添一個放大源（官方文件已證實機制方向，見下方懸置細節 ⟨Q-01⟩） | 《Why 20 Instances Break Down》、Reddit fork 子代理回報 | 單一深度分析＋單一回報，機制方向已查證 |
 | 統一容器（第三波） | 08-05／08-09／08-27 三批同類專案湧現，09-13 再添 IDE 化取向；非單一事件而是持續性社群方向 | omnigent、loopx＋HarnessFlow、opencodex／metaharness／claw-orchestrator、proliferate（IDE 化，09-13，僅星數佐證） | 已成趨勢 |
 | 任務脈絡互通 | 不取代底層 agent，讓多個獨立 agent 共享任務脈絡，定位近「agent 間 Slack」 | Concord（MCP） | 單一實測（今日首見）|
 | 可觀測性 | 32 天內 6 個獨立儀表板；分「讀官方 event stream」與「自解析 transcript」兩路 | HUD、Cockpit 等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
@@ -95,8 +95,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 極簡輸出 | 單次回覆 70→20 token；65% 降耗；企業已當降本策略 | Caveman Skill、404 Media 報導 | 多來源 |
 | CLAUDE.md 取捨 | 四層寄放地依觸發頻率；載入順序（CLAUDE.local.md 後載、受管理原則檔各 OS 路徑不同） | 「該裝什麼」「載入順序」兩篇 | 單一深度分析 |
 | 固定成本量測 | `claude -p` 未加 `--bare` 冷啟動約 15 萬 token，多 agent pipeline 反覆呼叫會放大 | headless 冷啟動實測 | 單一實測 |
-| 工具輸出裁剪 | 高頻高輸出來源逐一被盯上：grep 搜尋輸出宣稱可削減 42% token，但 benchmark 段落遭質疑 AI 代寫，數字未經第三方驗證 | Graft | 單一實測 ❓ 待查證⟨Q-02⟩ |
-| 子代理歷史重送 | fork 子代理每次工具呼叫疑似重送整段對話歷史，四個平行子代理耗約 200 萬 token；機制未經官方證實 | Reddit 回報 | 單一回報 ❓ 待查證⟨Q-03⟩ |
+| 工具輸出裁剪 | 高頻高輸出來源逐一被盯上：grep 搜尋輸出宣稱可削減 42% token，但 benchmark 段落遭質疑 AI 代寫、p 值僅 0.22（見下方懸置細節 ⟨Q-02⟩）| Graft | 單一實測，無獨立重現 |
+| 子代理歷史重送 | fork 子代理每次工具呼叫累積整段對話歷史，四個平行子代理耗約 200 萬 token；機制方向已由官方文件證實，具體數字仍未載（見下方懸置細節 ⟨Q-03⟩）| Reddit 回報 | 單一回報，機制方向已查證 |
 | 非主流方向 | 清程式碼內 AI 殘留註解（CCN，2,700 次迭代自陳）；文字 context 渲染成圖片（pxpipe） | CCN、pxpipe | 推論 |
 
 **為什麼會這樣**：大 repo 的檔案量與工具輸出量本身就超過 context，任何「多讀一點保險」的直覺都會撐爆；於是社群的每一步都是在把「哪裡吃了 token」變成可量測的數字，再針對數字最大的那塊裁——但量測本身的可信度也需要驗證，不是每個宣稱的百分比都經得起檢視。
@@ -160,9 +160,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 官方機制的最新狀態與版本號以 [[entities/claude-code]]、[[entities/managed-agents]] 為準。
 
 **懸置細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-09-04｜查 Instances Break Down、fork 子代理）｜**規模上限的子代理重送宣稱**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史，機制未經官方證實；已掃日報至 2026-09-03 無後續，官方頁面未查證。
-- ⟨Q-02⟩ ❓ **待查證**（標 2026-09-04｜查 Graft、benchmark 代寫）｜**Graft 裁剪降幅宣稱**：Graft 稱裁剪 grep 搜尋輸出可削減 42% token，但 HN 討論質疑其 benchmark 段落疑似 AI 代寫；已掃日報至 2026-09-03 無後續，官方頁面未查證。
-- ⟨Q-03⟩ ❓ **待查證**（標 2026-09-04｜查 fork 子代理、對話歷史重送）｜**子代理歷史重送機制**：Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史，四個平行子代理耗約 200 萬 token，與規模上限列同源宣稱；已掃日報至 2026-09-03 無後續，官方頁面未查證。
+- ⟨Q-01⟩ **規模上限的子代理重送宣稱**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史。已查證（[官方 subagent 文件](https://code.claude.com/docs/en/sub-agents)，查證日 2026-09-20）：fork 子代理在啟動時繼承父對話的完整歷史、系統提示與工具池，此後與一般對話相同、隨每次工具呼叫持續累積（並非另外的「重送」機制，而是延續累積），故 token 隨呼叫數增加的方向性與社群觀察一致；官方文件未使用「resend」措辭，也未給出量化倍數，具體數字仍以社群量測為準。
+- ⟨Q-02⟩ **Graft 裁剪降幅宣稱**：Graft 稱裁剪 grep 搜尋輸出可削減 42% token，但 HN 討論質疑其 benchmark 段落疑似 AI 代寫。已查證（[GitHub repo](https://github.com/trailhq/Graft)、[HN 原討論串](https://news.ycombinator.com/item?id=49299985)，查證日 2026-09-20）：42% 數字來自作者內部 SWE-bench Verified 測試（8,070→4,650 token），僅 50 題、只跑一次；HN 討論指出 README 的 benchmark 段落疑似 Claude/Codex 代寫，且其自陳的效果提升 p 值僅 0.22（不具統計顯著性）；至今無獨立第三方重現。
+- ⟨Q-03⟩ **子代理歷史重送機制**：Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史，四個平行子代理耗約 200 萬 token，與規模上限列同源宣稱。已查證（同 ⟨Q-01⟩ 來源與結論，查證日 2026-09-20）：機制方向一致（fork 延續累積父對話上下文），但「200 萬 token」的具體數字官方未載，仍為單一社群觀察。
 
 ---
 

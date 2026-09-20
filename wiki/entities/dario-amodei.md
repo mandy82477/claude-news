@@ -33,7 +33,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-17
 **最後新聞更新：** 2026-09-17
 
-> ❓ **待查證**（標 2026-08-25｜查 airline industry、marketing and safety）｜**Fortune 評論比較 Anthropic 安全論述與航空業經驗**（2026-08-24 報導）：Fortune 發表評論文章〈What Anthropic's Dario Amodei can learn from the airline industry's lesson on marketing and safety〉，以航空業在行銷與安全議題上的經驗為借鏡，討論 Dario Amodei 可以從中學到什麼；僅標題可用，具體論點與建議內容未見報導。
+> **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
+> [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
 > **放緩呼籲的反彈聲浪擴大**（2026-09-17）
 > 放空名將 Michael Burry 批評 Amodei 與 OpenAI 高層的減速呼籲是「自利」之詞；NYT 同日刊出分析其文章如何形塑外界 AI 恐懼。
@@ -57,8 +58,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 | 2026-09-15 | 於 Dreamforce 現場重申全球 AI 減速呼籲，與黃仁勳主張加速形成對比 | The Guardian |
 | 2026-09-13 | 稱中國是其所提 AI 減速方案中「最棘手的兩難」 | Hacker News（10分）／CNBC |
 | 2026-09-13 | 公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持（詳見下方細節） | Hacker News（轉載 BBC）、VentureBeat、Google News（Yahoo 等）|
-| 2026-08-28 | 公開回應外界對 AI 威脅論的疑慮，稱 Anthropic「無意摧毀任何人」（"not interested in destroying anyone"）❓ 待查證 ⟨Q-02⟩ | Google News（Business Insider）|
-| 2026-08-26 | 與 Salesforce 董事長暨執行長 Marc Benioff 共同接受 CNBC Jim Cramer 專訪，逐字稿公開（具體發言內容未見節錄，合作面詳見 [[topics/anthropic-business]]） | CNBC |
+| 2026-08-26 | 與 Marc Benioff 共同接受 CNBC 專訪，回應「Anthropic 意圖攻占 SaaS 市場」疑慮，稱「無意摧毀任何人」⟨Q-02⟩（合作面詳見 [[topics/anthropic-business]]） | CNBC（經 Google News／Business Insider 轉載，2026-08-28）|
 | 2026-08-16 | 回應投資人 Gavin Baker 批評，稱 AI 大眾反彈「根本上是一場信任危機」；同日稱唯有交出具體科學突破（如治癒癌症）才能扭轉大眾對 AI 的不信任 | Hacker News（經 TechCrunch、Business Insider）、Google News（Business Insider）、Simon Willison Blog |
 | 2026-08-03 | 對同事表示憂心部分員工是為金錢而非公司使命加入 Anthropic（非公開發言，Axios 引述知情人士），引發社群兩極討論 | Hacker News（經 Twitter/Techmeme）、The Next Web |
 | 2026-07-28 | 部落格聲明「Our position on open-weights models」：澄清 Anthropic 從未主張禁止開源權重模型，呼籲加強對中國晶片出口管制 | Anthropic Blog |
@@ -81,7 +81,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 **懸置細節**
 - ⟨Q-01⟩ **已查實（2026-09-06）**：沒有公開場合與逐字稿——此為 Amodei 對同事的內部談話，由 Axios 引述知情人士轉述，並非公開發言（[The Next Web](https://thenextweb.com/news/ai-talent-wars-loyalty-money-mission-anthropic)、[Fortune](https://fortune.com/2026/08/25/anthropic-ipo-could-create-millionaires-but-company-worried-about-money-over-mission-ai-firm-ceo-dario-amodei/)）
-- ⟨Q-02⟩ ❓ **待查證**（標 2026-08-29｜查 destroying anyone）：僅標題與轉址連結可用，發言的具體場合與完整脈絡未見報導
+- ⟨Q-02⟩ **已查實（2026-09-20）**：場合為 2026-08-26 CNBC 專訪，Marc Benioff 在場，原話「We're not interested in destroying anyone...We think of this as a very positive sum thing, right?」
 
 ## 在 Anthropic 的角色與影響
 

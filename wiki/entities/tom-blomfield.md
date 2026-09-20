@@ -27,13 +27,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Tom Blomfield
 
 **類型：** person
-**狀態：** active（待核實）
+**狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-07-13
 **最後更新：** 2026-09-04
 **最後新聞更新：** 2026-09-02
 
-> ❓ **待查證**（標 2026-08-10｜查 Blomfield、Monzo｜複 2026-09-17｜訊 2026-09-02）｜**加入 Anthropic 傳聞**（2026-07-13 報導）：Business Insider 報導 Anthropic 聘請英國數位銀行 Monzo 共同創辦人 Tom Blomfield 加入公司，報導涉及 AI compute 與 Y Combinator 背景；僅單一媒體來源，職稱與具體職掌尚未明朗。後續（2026-09-01）：Business Insider 另文以「Anthropic's Tom Blomfield」稱呼並引述其談論「new coworkers」的言論，延續同一媒體對其已加入 Anthropic 的敘事，惟仍未見官方或第二來源確認，職稱與具體職掌仍未明朗。
+> **加入 Anthropic 已確認**（2026-07-13，2026-09-20 查證）
+> Blomfield 本人於 X 發文證實：「I'm taking a leave of absence from YC to join Anthropic. I'll be working with [@NotTomBrown] on the compute team.」自 Y Combinator 一般合夥人職位請假，加入 Anthropic compute 團隊，職稱為 Member of Technical Staff，與共同創辦人 Tom Brown（[[entities/tom-brown]]）共事；[Yahoo Tech](https://tech.yahoo.com/ai/claude/articles/anthropics-latest-big-name-hire-094131924.html)、[FinTech Futures](https://www.fintechfutures.com/job-cuts-new-hires/former-monzo-ceo-tom-blomfield-joins-anthropic) 等多家具名媒體同日獨立報導並引述同一 X 貼文。
 
 > **最新表態**（2026-09-02）
 > Business Insider 引述 Blomfield 談 Anthropic 新同事為「hyper-earnest group of meganerds」且「缺乏自我中心」。
@@ -42,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-2026-07-13，Business Insider 報導 Anthropic 新聘 Monzo（英國數位銀行）共同創辦人 Tom Blomfield 加入公司，報導提及此事與 AI compute、Y Combinator 背景相關，惟未提供明確職稱或具體職掌說明；Blomfield 先前為 Y Combinator 合夥人，並曾共同創辦 Monzo 與 GoCardless（單一媒體來源，查證狀態見上方標記）。[[topics/ai-talent-flow]] 將此案定性為「跨界執行層人才，非典型 AI 實驗室流動」，並與同期加入的 [[entities/teresa-carlson|Teresa Carlson]] 並陳觀察；[[topics/anthropic-business]] 同步記錄此人事動態。
+2026-07-13，Tom Blomfield（Monzo、GoCardless 共同創辦人，前 Y Combinator 一般合夥人）本人於 X 宣布請假加入 Anthropic compute 團隊，職稱 Member of Technical Staff，與 Tom Brown 共事（見上方查證），Business Insider 等同日報導。[[topics/ai-talent-flow]] 將此案定性為「跨界執行層人才，非典型 AI 實驗室流動」，並與同期加入的 [[entities/teresa-carlson|Teresa Carlson]] 並陳觀察；[[topics/anthropic-business]] 同步記錄此人事動態。
 
 2026-09-01，Business Insider 另文引述 Blomfield 談論 Anthropic 內部文化，稱新同事為「hyper-earnest group of meganerds（一群異常認真的超級書呆子）」且「lack of ego（缺乏自我中心）」——這是他加入 Anthropic 後首次見諸報導的公開表態，同時也是同一媒體延續早前加入報導的後續，惟仍屬單一媒體來源。
 

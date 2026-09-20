@@ -341,7 +341,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code v2.1.211**（`--forward-subagent-text` 旗標，stream-json 輸出含 subagent 文字與思考內容） | 2026-07-15 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.210**（收合工具摘要列即時耗時計數器、`Write(path)` 啟動警告） | 2026-07-14 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.207**（Auto mode 在 Bedrock/Vertex/Foundry 改預設開啟、修復終端機凍結） | 2026-07-11 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code Desktop 內建瀏覽器**（AI 可在外部網站讀取/點擊/輸入文字，雙方媒體來源，細節見下方詳情） | 2026-07-11 | 🔥 | ⏳ 觀望 | 官方新功能（狀態未明，雙方媒體來源） |
+| **Claude Code Desktop 內建瀏覽器**（AI 可在外部網站讀取/點擊/輸入文字，細節見下方詳情） | 2026-07-06 | 🔥 | ✅ 已確認 | 官方新功能，已正式發布（v2.1.202–2.1.206） |
 | **Claude Code v2.1.206**（`/cd` 目錄路徑建議、`/doctor` CLAUDE.md 精簡檢查） | 2026-07-10 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Reflect with Claude**（Settings 內使用模式儀表板，媒體廣泛報導但 HN 僅 29 分） | 2026-07-09 | 🔥 | ⚡ 有條件推薦 | Preview |
 | **Claude Cowork 行動版 / 網頁版**（雲端持續執行，闔上裝置任務不中斷，首波 Max 訂閱戶，涵蓋政府客戶） | 2026-07-07 | 🔥🔥 | ⚡ 有條件推薦 | Preview（限 Max） |
@@ -927,14 +927,14 @@ claude config set disableAutoMode true
 
 ---
 
-### Claude Code Desktop 內建瀏覽器（2026-07-11 公告，此後未見後續報導）
-**發布：** 2026-07-11（媒體報導，官方版本號見下方注意事項） | **狀態：** 官方新功能（狀態未明，單一媒體來源）
+### Claude Code Desktop 內建瀏覽器（2026-07-06～10 發布，官方版本號已確認）
+**發布：** v2.1.202–2.1.206（Week 28，2026-07-06～10） | **狀態：** ✅ 官方新功能，已正式發布
 
-**是什麼：** The Mac Observer 報導 Anthropic 為 Claude Code Desktop 新增內建瀏覽器功能，讓使用者無需切離桌面應用即可瀏覽網頁內容。
+**是什麼：** Claude Code Desktop 新增內建分頁式瀏覽器，讓使用者無需切離桌面應用即可瀏覽網頁；Claude 可像操作本機開發伺服器一樣讀取、點擊並與外部網站互動（框架文件、issue tracker、第三方 API、即時儀表板），並附兩層安全機制：每次寫入動作皆經 classifier 審查、Auto／Bypass 模式以外另有網域白名單檢查。快捷鍵 macOS 為 Cmd+Shift+B、Windows 為 Ctrl+Shift+B。
 
-**為何熱：** 目前僅單一媒體來源，尚無官方 changelog / release notes 或社群討論佐證，熱度已 🔥 無需再降。
+**為何熱：** 多家媒體（The Mac Observer、9to5Mac、DevOps.com、MLQ AI 等）同步報導，The Mac Observer 並指出瀏覽器運作於完全乾淨、沙箱化的獨立 profile，不會存取個人瀏覽紀錄或已存密碼。
 
-**注意事項：** ❓ **待查證**（標 2026-08-10｜查 Claude Code Desktop、內建瀏覽器｜複 2026-09-20）｜**功能是否存在與官方版本號**：僅 The Mac Observer 單一媒體來源，無官方 changelog／release notes 或社群討論佐證，具體操作方式與官方版本號尚未確認。
+**注意事項：** 官方原文對啟用門檻（方案限制、企業版或個人可用）未完整載明，其餘操作方式與快捷鍵已如上述確認。（查證日 2026-09-20）
 
 ---
 

@@ -149,16 +149,15 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - **模型面意義**：這是本頁「爭議與批評」中 08-05 AISI 假身分事件首次獲官方正面承認與量化回應（investigation＋METR 獨立審查＋訓練面收緊），而非停留在媒體與監管機構單方陳述；政策與監管面完整分析見 [[topics/anthropic-government-policy]]，事件技術細節見 [[topics/ai-agent-safety]]
 
 #### 2026-08-24（追加：Fierce Healthcare／Epic UGM，2026-08-29 補列）
-❓ **待查證**（標 2026-08-29｜查 Fierce Healthcare、UpToDate｜複 2026-09-12）｜**Fierce Healthcare（Epic UGM 報導）：Project Glasswing 與醫療資訊平台 UpToDate 深化合作**（僅標題可用）：
-- Google News 轉載 Fierce Healthcare 標題「More tidbits from Epic UGM: Anthropic's Project Glasswing and a deeper partnership with UpToDate」（[Google News/Fierce Healthcare](https://news.google.com/rss/articles/CBMixgFBVV95cUxNZ18zMV9kMHZXcHBIMjRTdUxKQ3VuV25tLWVJOUlFX0c4SUk4ODRCc0FfdWdvbTJiZ3NKcldlRzRjV0JOcWJrY2NWQkljUk9CX283OUlSTDJiSFVXT001MG1TVUNGLUdLVjdWTFQ3NGhDNzFrakktMG03bGVYNVdGbnhsNTJjWTdmN1pNN1g5T1NWRHJMdlcyc1I1YUtKOVZyRTN6UFc3ZzJFeTcwR1NTZTlwcVRVNDd2aEh1cUVDWW93dkVBcHc?oc=5)，2026-08-24 11:00 UTC），RSS 僅提供標題與轉址連結，無正文摘要，無法確認 UpToDate 合作的具體內容、是否構成 Project Glasswing 的新增夥伴案例、或與上方「## Project Glasswing」既有統計（數據截至 2026-06-02）的關聯
-- UpToDate 為醫療資訊平台；若屬實將是 Project Glasswing 醫療領域應用的新案例，惟醫療產業合作的商業／產品細節不在本頁範圍，本頁僅記模型能力釋出面向
-- 已掃日報至 2026-08-29，無其他來源佐證此則報導或補充細節
+**Fierce Healthcare（Epic UGM 報導）標題捆綁兩則各自獨立的消息，查證後拆分**：
+- 官方查證確認：Epic 是 Project Glasswing 參與組織之一（Anthropic 官方擴展公告新增約 150 個跨產業組織，含醫療業；Becker's Hospital Review 具名確認 Epic 為其一）（[Anthropic](https://www.anthropic.com/news/expanding-project-glasswing)；[Becker's Hospital Review](https://www.beckershospitalreview.com/healthcare-information-technology/innovation/why-epic-joined-anthropics-project-glasswing/)，查證 2026-09-20）
+- 但「與 UpToDate 深化合作」**與 Anthropic／Project Glasswing 無關**：查證確認為 Epic 自家產品將 UpToDate（Wolters Kluwer）整合進其 AI 助理「Art」，屬 Epic-Wolters Kluwer 協議，與本頁 Mythos 5 無涉（[Anthropic Glasswing](https://www.anthropic.com/project/glasswing)，查證 2026-09-20）
+- 官方 Project Glasswing 夥伴頁未列 UpToDate；此為 FierceHealthcare 標題捆綁兩則獨立消息造成的誤讀（[Healthcare IT News](https://www.healthcareitnews.com/news/epic-bets-its-ai-speed-ugm)，查證 2026-09-20）
 
 #### 2026-08-24
-❓ **待查證**（標 2026-08-24｜查 SecurityWeek、more defenders）｜**SecurityWeek：Mythos 5 存取擴大至更多防禦端**（僅標題可用）：
-- Google News 轉載 SecurityWeek 標題「Anthropic Expands Mythos 5 Access to More Defenders, Unveils $35M Open Source Fund」（[Google News/SecurityWeek](https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1E3Um1LaDRvamd5R3M4TDFIdEpIQ1dSY09DV2tsM0FXOTMtUVkxcnlBZ2ZKeEdOcXhYOGtRdFNYQkhab1drZE9WZzhDeHBwbl9vQzlUV29vLXVfcG9WNU5RWDV1cEdHMDBDb0xBVjZiaE5UVDFmeG93OUhpRzRuQnJYOGswcHJwVkJrS1dBeTRSUk5LWXo1S01LVmhLMHZPZU9WWmNhOVRqZ3EwSjZv?oc=5)）；RSS 僅提供標題與轉址連結，無正文摘要，無法確認「更多防禦端」的具體擴大機制是否即 08-22 已記錄的 Claude Security 產品線導入（間接提供漏洞掃描能力），或屬另一波獨立的直接存取擴大
-- 若與 08-22 事件系出同源，本則為 SecurityWeek 兩天後的專業資安媒體跟進；標題中的 3500 萬美元「開源資安基金」與 08-22 記錄的 Claude Security 額度承諾是否為同一筆金額待原文查證，該面向（基金定價/政策細節）不在本頁範圍，本頁僅記錄模型存取範圍面向
-- 已掃日報至 2026-08-24（當日），無其他來源佐證此則報導
+**SecurityWeek：Mythos 5 存取擴大至更多防禦端，官方公告證實與 08-22 事件系出同源**：
+- 查證官方部落格〈Bringing Claude Mythos 5 to more defenders〉：Claude Security（Enterprise 公測中）以 Mythos 5 掃描程式碼、依 CWE 分類回傳修補建議，不需存取模型本身——與 08-22 記錄為**同一起事件**的官方完整版，非另一波獨立擴大
+- 3500 萬美元確認為「Defender Advantage Fund（0xDAF）」，以 Claude 額度形式協助開源專案修補漏洞，與 08-22「Claude Security 額度承諾」為同一筆（[Claude Blog](https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders)，查證 2026-09-20）
 
 #### 2026-08-22
 **Mythos 5 導入 Claude Security 產品線（跨類別事件，模型面摘記）**：

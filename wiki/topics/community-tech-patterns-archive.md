@@ -343,7 +343,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 保留「最近 N 輪」原始內容以維持短期連貫性，更早的歷史則壓縮
 - **解決的問題：** 傳統 agent loop 設計將全量 transcript 傳遞，隨輪數增加 token 成本呈平方增長；大型多輪任務中成本不可控
 - **與既有模式的關係：** 呼應 Context Rot 修復五法中的「壓縮歷史」策略；比 /compact 指令更系統化，可程式化控制壓縮時機與粒度
-- **注意事項：** 摘要過於激進可能造成語意失真，需設計摘要品質驗證機制；🔎 **查無官方**（標 2026-08-10｜查 compact memory、context token｜複 2026-09-13）｜**大規模驗證**：已查證（2026-08-13）原作者（dev.to/saihmadmin）該篇 benchmark 未見獨立第三方重現或引用，僅查得他人針對同類「agent loop token 呈平方增長」問題的獨立分析（如壓縮排程可省 22.7% token，SWE-bench 情境），非本篇 benchmark 的驗證
+- **注意事項：** 摘要過於激進可能造成語意失真，需設計摘要品質驗證機制；🔎 **查無官方**（標 2026-08-10｜查 compact memory、context token｜複 2026-10-20）｜**大規模驗證**：已查證（2026-08-13，複查 2026-09-20 結論不變）原作者（dev.to/saihmadmin）該篇 benchmark 未見獨立第三方重現或引用，僅查得他人針對同類「agent loop token 呈平方增長」問題的獨立分析（如壓縮排程可省 22.7% token、SWE-bench 情境；本輪另查得該現象已是多方部落格廣泛討論的通用問題，如 Fireworks AI、Augment Code 等文章均獨立描述相同的 O(N²) 上下文累積機制），仍非本篇 benchmark 數字本身的驗證
 - **來源：** "The Hidden O(N²) Tax in AI Agent Loops: Measured with a Benchmark You Can Run"（dev.to/saihmadmin，06-23）
 
 #### Hooks 強制執行取代 CLAUDE.md 規則：從建議層到強制層（2026-06-23）
@@ -434,7 +434,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **解決的問題：** 「Claude 越用越笨」現象；3 小時以上任務中途失憶、計劃漂移
 - **適用場景：** 長 session 的 agentic 任務、多工具協同工作流、CI/CD 自動化 agent
 - **注意：** 與 spec-driven development 結合效果更好——先有規格文件，再讓 agent 在精簡 context 下執行（dev.to/kenimo49；Reddit r/ClaudeAI）
-- **大型 Repo 優化（HN 9）：** Git Lazy Mount（github.com/mohsen1/git-lazy-mount）——AI session 按需 fetch 大型 repo，附 sgrep 繞過全量 grep；HN score 9，適用 1GB+ monorepo；🔎 **查無官方**（標 2026-08-10｜查 git-lazy-mount、monorepo｜複 2026-09-13）｜**採用訊號**：已查證（2026-08-13，GitHub API）repo 現況星數僅 15、forks 2、open issues 0，規模極小，尚無擴散跡象，news 亦無後續報導。
+- **大型 Repo 優化（HN 9）：** Git Lazy Mount（github.com/mohsen1/git-lazy-mount）——AI session 按需 fetch 大型 repo，附 sgrep 繞過全量 grep；HN score 9，適用 1GB+ monorepo；🔎 **查無官方**（標 2026-08-10｜查 git-lazy-mount、monorepo｜複 2026-10-20）｜**採用訊號**：已查證（2026-08-13，GitHub API；複查 2026-09-20 結論不變）repo 現況星數僅 16、forks 2、open issues 0（較 08-13 的 15 星僅微增 1），規模極小，尚無擴散跡象，news 亦無後續報導。
 
 #### Loop Engineering：條件觸發的 Claude 執行設計（2026-06-19，更新 2026-06-20）
 
@@ -588,7 +588,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Local stack MCP 整合、39ms 檢索**：開發者分享自建本機持久化記憶層：本地向量資料庫 + MCP 整合，實現 39ms 快速檢索；同時解決每次對話從零開始，以及記憶庫成長後大量消耗 token 的雙重痛點
 - **架構核心原則**：避免將全部記憶注入 context（token 消耗過高），改以語義查詢按需取回相關片段；本機方案同時解決雲端記憶的隱私疑慮，與 Memex 思路相近但強調自建可控性
 - **意義**：是對 Managed Agents Dreaming 官方解法的社群自建補充，在等待官方成熟前已形成可用架構
-- **輕量替代（HN 6）：** Iantha（kiloloop.com/iantha/）——純 Markdown + git 存儲，自動提取時間性任務跨 session 持久保存，無需向量 DB；HN score 6；🔎 **查無官方**（標 2026-08-10｜查 Iantha、kiloloop｜複 2026-09-13）｜**識別準確度**：已查證（2026-08-13）公開搜尋未能定位該工具的獨立報導或後續討論，識別準確度仍無法查證。
+- **輕量替代（HN 6）：** Iantha（kiloloop.com/iantha/）——純 Markdown + git 存儲，自動提取時間性任務跨 session 持久保存，無需向量 DB；HN score 6；🔎 **查無官方**（標 2026-08-10｜查 Iantha、kiloloop｜複 2026-10-20）｜**識別準確度**：已查證（2026-08-13，複查 2026-09-20 結論不變——官方頁面 kiloloop.com/iantha/ 本身為純功能／設定說明頁，未提供準確度或第三方評測數據）公開搜尋未能定位該工具的獨立報導或後續討論，識別準確度仍無法查證。
 
 
 #### Managed Agents 架構模式（2026-05-07）

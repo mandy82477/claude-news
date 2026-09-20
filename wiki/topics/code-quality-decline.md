@@ -132,7 +132,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **18 則**訊號：下表六種主張收 17 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十六則裡十四則是單一使用者觀感，另兩則有外部依據（一則第三方基準待查證、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **18 則**訊號：下表六種主張收 17 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十六則裡十四則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
@@ -142,13 +142,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **泛化變慢／變囉唆**（不指名模型版本）| 7 | 2026-09-19「Claude 4.6 was peak and it's downhill since then」 | 單一貼文（HN 25 分）＋六則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
 | **懷疑正在被 A/B 測試降 effort** | 4 | 2026-09-10「did anthropic nerf fable again」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
-| **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark ❓ 待查證 ⟨Q-01⟩ | 僅標題可用，數字未見報導 |
+| **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
 | **二進位對 Opus 5 的硬編碼限制** | 1 | 2026-07-26（已查證屬實，見 [[topics/community-tech-discussions]]）| GitHub issue #80988 |
 | **任務間能力落差不均**（「jagged」，不專指單一模型）| 1 | 2026-09-17「even frontier models have a very jagged range」 | 單一貼文（Reddit r/artificial 週熱門）|
 
 **懸置細節**
 
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-08-25｜查 Sonar、code quality benchmark）：HackerNoon「Claude Opus 5 Code Quality: What Sonar's Benchmark Reveals」（僅標題可用）——查實會是唯一第三方量化評測，其餘 13 則多為主觀回報（12 單一觀感＋1 GitHub issue）。
+- ⟨Q-01⟩ **Sonar 第三方量化評測**（原題：HackerNoon「Claude Opus 5 Code Quality: What Sonar's Benchmark Reveals」）：已查證（[Sonar 原文](https://www.sonarsource.com/blog/claude-opus-5/)、[HackerNoon 轉載](https://hackernoon.com/claude-opus-5-code-quality-what-sonars-benchmark-reveals)，查證日 2026-09-20）——正確性面（bug 密度、漏洞密度、每行認知複雜度）下降，但 code smell 密度、issue 密度與循環複雜度上升；關鍵但書：Opus 4.8 輸出 600 萬 token、Opus 5 輸出 2171 萬 token（3.6 倍），對應程式碼量僅多 2.3 倍，代表 Opus 5 傾向寫更冗長的程式碼，以「每行」為分母的品質指標可能因此被稀釋美化。是唯一第三方量化評測，其餘 13 則多為主觀回報（12 單一觀感＋1 GitHub issue）。
 
 **兩件要講清楚的事**
 
@@ -169,7 +169,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **你會看到的後果**：一名開發者連續 36 天記錄使用數據，量出不同模型間高達 11.5 倍的效率差距，並觀察到模型有時在沒有明確通知下被換掉——同一筆工作跑在哪個模型上，會直接改變你的花費與完成時間（[dev.to 原文](https://dev.to/recca0120/36-days-of-claude-code-logs-silent-model-switching-115x-efficiency-gap-1bgm)，2026-05-09）。
 
-**只有單一來源的具體宣稱（2026-08-04）：** r/ClaudeCode 一則貼文宣稱以實測記錄四種繞過模型釘選的方式，並稱 Sonnet 4.6 遭無預告移除。該貼文所指的**現象**方向與上述四個節點一致，但貼文獨有的「4 measured bypass vectors」與「Sonnet 4.6 silently removed」**具體技術細節**至今只有這一個來源、無第二來源核對，本頁只採計現象，不採計其量化宣稱（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1vf7uv5/model_pinning_is_completely_broken_in_claude_code/)）。❓ **待查證**（標 2026-08-10｜查 bypass vectors、silently removed｜複 2026-09-13）｜**貼文的具體量化宣稱**（2026-08-04 單一 Reddit 來源）：截至 2026-09-07 未見第二來源。
+**只有單一來源的具體宣稱（2026-08-04）：** r/ClaudeCode 一則貼文宣稱以實測記錄四種繞過模型釘選的方式，並稱 Sonnet 4.6 遭無預告移除。該貼文所指的**現象**方向與上述四個節點一致，但貼文獨有的「4 measured bypass vectors」與「Sonnet 4.6 silently removed」**具體技術細節**至今只有這一個來源、無第二來源核對，本頁只採計現象，不採計其量化宣稱（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1vf7uv5/model_pinning_is_completely_broken_in_claude_code/)）。官方 [Model deprecations](https://docs.claude.com/en/docs/about-claude/model-deprecations) 頁面載明：模型退役前至少提前 60 天公告，退役後的請求會直接失敗（回錯誤），而非靜默切換到其他模型——與貼文「Sonnet 4.6 遭無預告移除」的敘事框架不符（查證日 2026-09-20）；「4 measured bypass vectors」的具體清單官方文件未載，且該 Reddit 原始貼文至今仍是唯一來源，無第二來源或官方逐項證實，此節維持不採計。
 
 **這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立（1M 這一項的完整脈絡見 [[topics/long-context-1m]]）。
 

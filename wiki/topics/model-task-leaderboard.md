@@ -47,7 +47,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **現在的答案，先說清楚：** Claude 對 Codex 最近一次頭對頭查證是 **2026-08-13**，結論是沒有單一答案（數字見 [[topics/competitor-landscape#硬答案]]）；此後本站未再收到新的頭對頭實測，只有下方各榜的每週排名可看。Claude 家內選型與換模型的實付差額見 [[topics/model-comparison]]。
 
 - **本頁量的是模型，不是工具**：讀者常問的 Codex CLI、OpenCode 是 harness（工具），本表列不到它們；換一個工具，同一個模型的分數就會變。
-- ❓ **待查證**（標 2026-09-05｜查 Codex CLI、OpenCode、harness）｜**這些工具各自跑什麼模型**：各工具官方文件是否載明預設模型，本站尚未查得；查到之前不從榜上出現的模型名反推。
+- **Codex CLI 跑什麼模型**：預設依登入方式而異——ChatGPT 登入 `gpt-5.2-codex`；API key 登入 macOS／Linux `gpt-5-codex`、Windows `gpt-5`；2026-09-03 起官方將 `GPT-6-Astra` 列新建議預設（各帳號進度不一）（[OpenAI 文件](https://developers.openai.com/codex/models)，查證 2026-09-20）
+- **OpenCode 跑什麼模型**：官方未內建固定預設模型，須自行在 `opencode.json` 設定 `model`／`small_model`（格式 `provider/model_id`）；官方範例僅示範用途，不代表出廠預設（[OpenCode 文件](https://opencode.ai/docs/models/)，查證 2026-09-20）
 
 ## 本週快照
 

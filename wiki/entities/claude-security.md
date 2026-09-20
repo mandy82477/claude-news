@@ -95,8 +95,9 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 | 日期 | 事件 |
 |------|------|
 | 2026-08-21 | **Claude Mythos 5 整合進 Claude Security**：企業團隊在不直接存取模型本身的前提下取得前沿等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進；額度／定價面（Dealroom 提及 $35M credits 承諾）詳見 [[entities/pricing]]；來源：Google News / MarkTechPost（另有 Dealroom、Palo Alto Networks Unit 42、The New Stack） |
-| 2026-07-24 | **社群反映無 Workflow tool 存取權限**：Reddit 使用者（自稱使用 Claude Code 未滿一個月）反映摸索過程燒費大量 token 才發現 Claude Security 沒有 Workflow tool 的存取權限；是否為既有設計限制或待補功能 ❓ 待查證 ⟨Q-01⟩；來源：Reddit / r/ClaudeCode |
-| 2026-08-10 | [[entities/claude-code]] 查證：官方文件確認 Claude Security 的 Workflow 功能需在 `/config` 內另行啟用「dynamic workflows」才可使用，屬 opt-in 設計，可能即為 07-24 該回報者的成因；惟未見官方直接回應此則個案（詳見 ⟨Q-01⟩） |
+| 2026-07-24 | **社群反映無 Workflow tool 存取權限**：Reddit 使用者（自稱使用 Claude Code 未滿一個月）反映摸索過程燒費大量 token 才發現 Claude Security 沒有 Workflow tool 的存取權限；查證確認為既有 opt-in 設計限制，非缺陷（見下方 ⟨Q-01⟩）；來源：Reddit / r/ClaudeCode |
+| 2026-08-10 | [[entities/claude-code]] 查證：官方文件確認 Claude Security 的 Workflow 功能需在 `/config` 內另行啟用「dynamic workflows」才可使用，屬 opt-in 設計 |
+| 2026-09-20 | 再查證官方 [Dynamic workflows 文件](https://code.claude.com/docs/en/workflows) 確認：Pro 方案須於 `/config` 手動開啟，Max／Team／Enterprise 及透過 Anthropic API 使用時預設已開啟；確認即為 07-24 該回報者的成因，結案（詳見 ⟨Q-01⟩） |
 | 2026-07-23 | **MarkTechPost 報導「Claude Security Plugin」Beta 版**：標題強調「終端機內執行的多代理漏洞掃描工具」，僅標題可用、無正文細節；官方產品頁確認為與 Claude.ai 上 Claude Security app 並行的另一交付面（2026-09-06 查證，見下方 ⟨Q-02⟩）；來源：Google News / MarkTechPost |
 
 ### 2026-05 時段總結
@@ -109,5 +110,5 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 - 原始條目見 [[entities/claude-security-archive#2026-04]]
 
 **懸置細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-08-10｜查 Workflow tool、存取權限｜複 2026-09-16｜訊 2026-08-10）：Reddit 使用者反映 Claude Security 無 Workflow tool 存取權限；同日查證官方文件確認 Workflow 需於 `/config` 另行啟用「dynamic workflows」（opt-in），可能即為成因，惟官方未直接回應此案例。
+- ⟨Q-01⟩ **已查實（2026-09-20）**：Reddit 使用者反映 Claude Security 無 Workflow tool 存取權限，成因確認為既有 opt-in 設計——[官方文件](https://code.claude.com/docs/en/workflows) 載明「Dynamic workflows are available on all paid plans...On Pro, turn them on from the Dynamic workflows row in `/config`」，即 Pro 方案預設關閉、須手動開啟，Max／Team／Enterprise／API 預設已開啟；非缺陷或待補功能。
 - ⟨Q-02⟩ **已查實（2026-09-06）**：兩者是同一產品線的兩個交付面，非重新包裝。官方產品頁 FAQ 明載「以 Claude Mythos 5 驅動的掃描只在 Claude.ai 上的 Claude Security app 提供；Claude Code 的 Claude Security plugin 只用你 Claude Code 帳號裡有的模型」（[官方產品頁](https://claude.com/product/claude-security)）。plugin 於 2026-07-22 進入 beta。

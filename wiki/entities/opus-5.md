@@ -194,9 +194,9 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 | 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行 ❓待查證⟨Q-03⟩；CVP 審核後仍遭護欄標記；Max 5x 質疑縮減幅度超官方 25%；GitHub #56913 提案「Opus 決策、Sonnet 執行」（49 則留言）|
 | 2026-09-12 | Reddit：「Hate Opus 5」，稱話多缺根據、比舊版更易離題下結論（單一觀感）|
 | 2026-09-03 | Anthropic 狀態頁：多款模型錯誤率升高，同日 16:16 UTC 已解決（2026-09-07 查證）|
-| 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 ❓待查證⟨Q-01⟩ |
+| 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 🔎查無官方⟨Q-01⟩ |
 | 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路；同日另有回饋稱表達方式較 4.8 改善 |
-| 2026-08-26 | tech-insider.org 定價比較標題「$19 Gap」，計算基準 ❓待查證⟨Q-02⟩ |
+| 2026-08-26 | tech-insider.org 定價比較標題「$19 Gap」，計算基準 🔎查無官方⟨Q-02⟩ |
 | 2026-08-14 | Anthropic 八月風險報告揭露未發布「Model 2」，官方稱無釋出計畫（見 [[topics/ai-agent-safety]]） |
 | 2026-08-11 | SitePoint 開發者效能評測——**2026-09-07 查證：內文的 context、牌價、發布年皆與官方不符，不採信** |
 | 2026-08-08 | Reddit「PSA」提醒 WebFetch 研究可能捏造統計數字與引述，單一使用者回報 |
@@ -221,9 +221,12 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - **2026-09-03**：Opus 5／4.8／4.6 與 Fable、Mythos 全系列同時錯誤率升高。官方 13:41 UTC 鎖定原因，**同日 16:16 UTC 標記已解決**（2026-09-07 查證）。屬穩定性事件，非能力或定價變化；跨模型完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w69016/claude_code_server_down_for_a_long_time_now_will/)，2026-09-03）
 
 - **2026-08-28**：Reddit r/ClaudeCode 質疑串「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」；單一使用者觀感回報，無量化數字佐證，延續 08-13、08-20 已記錄的社群觀感分歧模式（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）
-  - 同日另有 Reddit 貼文比較 Opus 5、4.7、4.6 在同一份 code review 提示下的表現，情緒中性，僅標題可用；⟨Q-01⟩ ❓ **待查證**（標 2026-08-29｜查 1w0uyu7、code review｜複 2026-09-12）｜**三模型 code review 比較結果具體內容與數字**：RSS 摘要僅標題可用，未見測試方法或分數揭露（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0uyu7/a_comparison_of_opus_5_47_46_running_a_code/)，2026-08-28）
+  - 同日另有 Reddit 貼文比較 Opus 5、4.7、4.6 在同一份 code review 提示下的表現，情緒中性，僅標題可用；⟨Q-01⟩ 🔎 **查無官方**（標 2026-08-29｜查 1w0uyu7、code review｜複 2026-10-04）
+  - **三模型 code review 比較結果**：非正式單一 Reddit 貼文的測試方法與分數本質上不會出現在官方文件中，查無官方（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0uyu7/a_comparison_of_opus_5_47_46_running_a_code/)，2026-08-28；查證 2026-09-20）
 - **2026-08-27**：GitHub Issue #77136 回報 Opus 5（連同 Opus 4.7、4.8、Fable 5）日益預設重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善；106 則留言、517 個反應，尚無官方回應。同日 Reddit「不受歡迎的意見」貼文稱 Opus 5 表達方式較 4.8 有改善（要求改寫時解釋更清楚），與前述問題並非直接矛盾，並陳記錄（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)；[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vzvcc4/unpopular_opinion_opus_5_language_just_became/)，2026-08-27）
-- **2026-08-26**：tech-insider.org（經 Google News 轉載）發布模板化定價比較標題《Claude Opus 5 vs Grok 4.6 vs Gemini 3.1 Pro: $19 Gap [2026]》，比較 Opus 5 與競品 Grok 4.6、Gemini 3.1 Pro 定價；同站同日另有《Claude Fable 5 vs Opus 5 vs GPT-5.6 Sol: $1,125 Gap [2026]》，記於 [[entities/fable-5]]。本則僅標題可用、無正文，「$19 Gap」具體數字未經查證，不採信為事實；如經查證應留給 [[entities/pricing]] 記錄。⟨Q-02⟩ ❓ **待查證**（標 2026-08-26｜查 tech-insider.org、$19 Gap｜複 2026-09-09）｜**Opus 5 vs Grok 4.6 vs Gemini 3.1 Pro 的 $19 差距計算基準**：僅標題可用，未見正文說明計算方式（per-token／月費等）（[Google News/tech-insider.org](https://news.google.com/rss/articles/CBMigwFBVV95cUxNWkVkQU8xS2pPWVFZS2RMemJCQ0JFVnZyZFBia28xMlNlWWNPVFB2eHhxdVhBTWJJRFFmaDlOUU9IcGJUWDlBU0phQUhUUEFGRG51NkttME9tMTl0X1dsV2piR2lsQTZOeURZQV8yRExlTE93cFF2U1hYbUFTZGNRUTIxcw?oc=5)，2026-08-26）
+- **2026-08-26**：tech-insider.org 發布模板化定價比較標題《Claude Opus 5 vs Grok 4.6 vs Gemini 3.1 Pro: $19 Gap [2026]》，比較 Opus 5 與競品定價；同站同日另有 Fable 5 版本，記於 [[entities/fable-5]]
+  - 本則僅標題可用、無正文，「$19 Gap」具體數字未經查證，不採信為事實。⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、$19 Gap｜複 2026-10-04）
+  - **$19 差距計算基準**：官方定價頁已查證 Opus 5 現行定價（$5／$25 每 MTok），但 Anthropic 不比較競品定價，Grok 4.6／Gemini 3.1 Pro 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）
 - **2026-08-20**：Reddit r/ClaudeCode 週熱門標題稱「終於出現讓 Opus 不再是工作流『必要依賴』的證據」；原文只有圖片預覽卡片，2026-08-23 與 2026-09-07 兩次都取不到正文，本站放棄追查（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1vt6gf8/finally_could_this_be_the_smoking_gun_that_makes/)，週熱門，2026-08-20）
   - 同日社群另有一則熱議是 Claude Code 的 effort 數值顯示方式測試，官方澄清為服務端設定改變了數值顯示、非調低使用者選的 effort 等級——兩件事不同，不應混為一談。
 - **2026-08-14**：Anthropic 發布八月風險報告（部分遮蔽 PDF），首度揭露尚未發布的「Model 2」，Axios 報導官方稱目前無釋出更強模型的計畫；報告自陳內部 AI R&D 速度尚未達到「無 AI 協助情況下的兩倍」（自陳量測困難）。對齊疑慮面完整脈絡見 [[topics/ai-agent-safety]]，本頁僅記模型陣容面（[Hacker News](https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf)，55 分；[SiliconANGLE](https://siliconangle.com/2026/08/14/anthropic-details-unreleased-model-2-new-alignment-concerns-latest-ai-risk-report/)；[Axios](https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk)，2026-08-14）
