@@ -31,11 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
 **最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-19
+**最後新聞更新：** 2026-09-20
 
-> **最新動態**（2026-09-19）
-> - 資安新創 Hacktron AI 揭露：同一記憶體毀損漏洞，Opus 4.8 需先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit；研究團隊隨後以同手法存取 OpenAI 內部系統（Guardian／The New Stack，2026-09-18 報導）。
-> - 本週社群訊號另集中一條線：話多缺根據、護欄仍標記已通過官方審核者、用量縮減爭議、提案把決策交給 Sonnet、能力參差——五則均無量化數字，見下方「使用者觀感彙整」。
+> **最新動態**（2026-09-20）
+> GitHub #77136（跨模型重複修辭 bug：4.7／4.8／5／Fable 同時中）留言與反應數持續攀升至 123 則、565 個，08-27 首見時為 106／517，官方仍無回應。
 
 ---
 
@@ -43,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]。兩代同價，Opus 5 的知識截止晚四個月。它在 Max、Team premium、Enterprise 隨用隨付與 API 上是預設的 Opus，但 Claude Code 的整體預設仍是 Sonnet。
 
-自 2026-07-24 上線以來（截至 2026-09-07），社群累積的絕大多數是單一使用者觀感、沒有一則附測試方法或數字——例外見下方「這些數字之外」的 GitHub #77136（106 則留言、517 個反應）與 [[topics/code-quality-decline]] 已查證屬實的 GitHub #80988；官方那側公布了四個基準數字。兩邊各是什麼證據見下方「這些數字是誰量的」。牌價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
+自 2026-07-24 上線以來（截至 2026-09-07），社群累積的絕大多數是單一使用者觀感、沒有一則附測試方法或數字——例外見下方「這些數字之外」的 GitHub #77136（123 則留言、565 個反應，09-20 查證）與 [[topics/code-quality-decline]] 已查證屬實的 GitHub #80988；官方那側公布了四個基準數字。兩邊各是什麼證據見下方「這些數字是誰量的」。牌價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
 ---
 
@@ -100,7 +99,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - **五則「變差了」型貼文**（07-30、08-07、08-13、08-20、08-28）：全是單一使用者觀感，無案例、無數字、無測試方法；其中兩則原文已不可取得。逐則見下方「歷史記錄」。
 - **一則反向回饋**（08-27）：稱 Opus 5 被要求改寫時的解釋比 4.8 清楚。同樣是單一貼文。
 - **一則「effort 超過 high 反而變差」**（07-29）：**已由官方文件推翻**，官方寫 Opus 5 把額外 effort 轉成更好結果的可靠度高於歷代 Opus。
-- **一則跨模型的重複修辭套路**（GitHub #77136，106 則留言、517 個反應，08-27）：4.7、4.8、5 與 Fable 同時出現，不是 Opus 5 獨有；追蹤見 [[entities/claude-code]]。
+- **一則跨模型的重複修辭套路**（GitHub #77136，123 則留言、565 個反應，09-20 查證｜08-27 首見時為 106／517）：4.7、4.8、5 與 Fable 同時出現，不是 Opus 5 獨有；追蹤見 [[entities/claude-code]]。
 - **一則第三方跨家指數**（Artificial Analysis，2026-08-10 一次性查證）：當時 Opus 5 在綜合指數微幅領先 Fable 5，數字與當時的比較見下方 07-26 那一則；**現在的跨家排名以 [[topics/model-task-leaderboard]] 為準**，本頁不留跨家分數。
 
 **所以呢**：官方那四個數字全部由 Anthropic 自己提交、沒有人複跑過；社群到今天也沒有一則量化實測能印證或推翻它。要別人量過的跨家排名去 [[topics/model-task-leaderboard]]；要決定這份工作用哪個模型去 [[topics/model-comparison]]；「有沒有系統性退步」這條線的狀態去 [[topics/code-quality-decline]]。
@@ -224,6 +223,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
   - 同日另有 Reddit 貼文比較 Opus 5、4.7、4.6 在同一份 code review 提示下的表現，情緒中性，僅標題可用；⟨Q-01⟩ 🔎 **查無官方**（標 2026-08-29｜查 1w0uyu7、code review｜複 2026-10-04）
   - **三模型 code review 比較結果**：非正式單一 Reddit 貼文的測試方法與分數本質上不會出現在官方文件中，查無官方（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0uyu7/a_comparison_of_opus_5_47_46_running_a_code/)，2026-08-28；查證 2026-09-20）
 - **2026-08-27**：GitHub Issue #77136 回報 Opus 5（連同 Opus 4.7、4.8、Fable 5）日益預設重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善；106 則留言、517 個反應，尚無官方回應。同日 Reddit「不受歡迎的意見」貼文稱 Opus 5 表達方式較 4.8 有改善（要求改寫時解釋更清楚），與前述問題並非直接矛盾，並陳記錄（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)；[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vzvcc4/unpopular_opinion_opus_5_language_just_became/)，2026-08-27）
+  - 後續（2026-09-20）：留言增至 123 則、反應增至 565 個，官方仍無回應。
 - **2026-08-26**：tech-insider.org 發布模板化定價比較標題《Claude Opus 5 vs Grok 4.6 vs Gemini 3.1 Pro: $19 Gap [2026]》，比較 Opus 5 與競品定價；同站同日另有 Fable 5 版本，記於 [[entities/fable-5]]
   - 本則僅標題可用、無正文，「$19 Gap」具體數字未經查證，不採信為事實。⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、$19 Gap｜複 2026-10-04）
   - **$19 差距計算基準**：官方定價頁已查證 Opus 5 現行定價（$5／$25 每 MTok），但 Anthropic 不比較競品定價，Grok 4.6／Gemini 3.1 Pro 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）

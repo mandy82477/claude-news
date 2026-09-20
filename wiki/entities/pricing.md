@@ -303,12 +303,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **對照本頁既有紀錄**：Karl Kahn 於 2026-06-16 提起的集體訴訟指控 Max 20x **實際用量僅為 Pro 的 6–8 倍**、而非廣告的 20 倍（見方案細節「Max 20x 用量上限集體訴訟進行中」）。兩者是同一爭議的不同角度——訴訟問「20 倍算得對不對」，本則 HN 問「20 倍算的是哪個時間窗」，互為佐證但非同一指控，不可合併。
 - **未解之處**：官方未見文件逐字定義「20x」的計算基準（5 小時視窗、日、週）；本則是否構成訴訟新增指控依據、或僅為社群側佐證討論，未見後續（單一 HN 討論串，score 未知，無主流媒體跟進）。
 
-#### 🔴 2026-08-28：Reddit 整理十週時間軸——官方曾稱 Fable 5 將恢復訂閱內含，Pro 方案至今仍按 token 計費（承諾兌現追蹤見 [[topics/anthropic-commitments]]）
+#### ⛔ 2026-08-28：Reddit 整理十週時間軸為誤讀——查證確認官方從未承諾 Fable 5 恢復訂閱內含（結案見 [[topics/anthropic-commitments]]）
 
 - **Reddit r/ClaudeAI（2026-08-28）**：使用者整理 Fable 5 計費爭議時間軸，指出官方曾表態 Fable 5 將恢復為訂閱內含，惟十週後 Pro 方案仍按 token 計費，情緒標記 😤。
-- **對照本頁既有紀錄**：07-20 分界已經官方查證確認——Pro／Team standard seats 的 Fable 5 **設計上就是**不計入方案週用量、須以 usage credits 按 API 費率付費，並非暫時性故障。「十週」回推約落在 06 月中旬，早於 07-20 分界生效日；具體是哪一則官方表態、措辭為「將恢復」還是「維持既有分層」未見原文可查核，無法判定是否存在與現行分界矛盾的舊承諾。
-- **與本頁定位的關係**：此為「官方承諾與現況落差」型讀者情緒，非計費事實的新資訊；承諾是否兌現追蹤見 [[topics/anthropic-commitments]]（原始官方表態尚待補列）。
-- （不列入總表：承諾兌現追蹤在 [[topics/anthropic-commitments]]）
+- **官方查證結案（2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan)＋[官方 X 公告](https://x.com/claudeai/status/2078302415804379218)）**：Pro／Team Standard 方案從未被官方承諾恢復訂閱內含——07-20 起僅 Max／Team Premium 內含（佔週用量上限 50%）。
+- Pro／Team Standard 僅獲一次性 $100 usage credit（07-20～08-02 領取，已於 09-17 到期），之後按 API 費率計費，屬官方永久性方案差異化政策，非未兌現的承諾（來源同上）。
+- **與本頁定位的關係**：此為 Reddit 貼文對既有 07-20 分界的誤讀，非新計費事實；承諾兌現追蹤詳見 [[topics/anthropic-commitments]]「已結案」表 ⟨C-01⟩。
+- （不列入總表：本則已結案，非現在還在發生的事故）
 
 #### ✅ 2026-08-15：Fable 5／Opus 5 是否共用同一週用量池 → ✅ 官方確認共用，「50% 上限」是池內天花板不是額外配額（2026-08-22 查證結案）
 
