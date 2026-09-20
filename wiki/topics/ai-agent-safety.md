@@ -937,6 +937,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-09-20
+- **[📋 新增] 조선일보：研究人員稱 72 小時內用 Claude 攻破 OpenAI 防線**：僅標題可用，與既有 09-18～09-19 Hacktron AI／WSJ 系列是否同一事件未見報導，詳見「## 技術彙整」
+
+### 2026-09-19
+- **[新增，補記] The New Stack／The Guardian：具名資安新創 Hacktron AI 揭露 Opus 5 漏洞利用能力躍升，同手法用於存取 OpenAI 內部系統**：09-18 條目的技術細節升級版，詳見「## 技術彙整」
+- **[📋 新增，動機質疑] NY Post：業界人士稱 OpenAI 與 Anthropic 誇大資安事件以促使聯邦監管、排擠競爭者**：單一媒體匿名說法，未經證實，詳見「## 技術彙整」
+
 ### 2026-09-18
 - **[📋 新增] WSJ 獨家／十餘家媒體：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其原始碼，獲 6,500 美元**：HN 討論質疑「入侵」標題誇大，稱系統照設計運作，詳見「## 技術彙整」
 - **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：僅標題可用，觸發機制與修補時程未見報導，詳見「## 技術彙整」
