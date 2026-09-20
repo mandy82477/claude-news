@@ -7,12 +7,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-17"
 last_news_update: "2026-09-17"
 status_main: "beta"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 3
+days_since_news_subtree: 2
+inbound_links: 5
 attribution_count: 1
 attribution_last: "2026-09-17"
 top_source: "hn-repo-bridge"
@@ -20,7 +20,7 @@ pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-10-01"
 pending_signalled: 0
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Slides

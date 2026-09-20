@@ -6557,3 +6557,14 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **收節**：[[entities/opus-4-8]]「下一代模型觀察：『Opus 5』傳聞」整節刪除（第 11 波裁決點）。該節 07-20／07-23／07-24 三則在同頁「歷史記錄」各有一列，屬同頁副本；補 07-13 一列，四個原文連結併入「參考來源」一條。Opus 5 現況的家是 [[entities/opus-5]]。
 - **不拆**：[[topics/code-quality-decline]]「模型釘選：你選的不一定算數」維持為母頁一節（第 12 波裁決點）。08-04 後該線零新事件；2026-10-03 再看。
 - **順帶看到、未處理**：該節 08-04 Reddit 單一來源那筆待查證，複查日 2026-09-13 已過，留給每週檢查。
+
+## 2026-09-19 Ingest
+
+- 來源日報：[[news/2026-09-19]]
+- 更新頁面：entities/opus-5、entities/claude-code、entities/pricing、topics/claude-code-experimental、topics/official-community-gap、topics/coding-workflow-guide、topics/anthropic-business、topics/competitor-landscape、topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement、topics/community-tech-discussions、topics/code-quality-decline、feature-radar、overview
+- 新增頁面：無
+- 摘要：Claude Code v2.1.277 新增 AGENTS.md 支援，回應全站互動數最高的已知問題 #6235；v2.1.278 Auto mode 改採免計費 server-side classifier；資安新創 Hacktron AI 以 Claude Opus 5 展示漏洞利用能力較 Opus 4.8 躍升，並用於存取 OpenAI 內部系統；Anthropic 宣布由 Accenture 出任首位「內嵌評估者」並承諾投入 10 億美元落實獨立安全評測承諾，同時與 OpenAI、Google、SpaceXAI 一同面臨「AI pacing 合謀」反壟斷提告。
+- 呈現品質：全部通過
+- 分類回退：追加派工 0 筆；確認已由原輪記者處理 6 筆（The Register「Anthropic 支援 OpenAI markdown 規範」原輪功能記者已收；4 則高互動 GitHub Issues 原輪功能記者已收）；駁回 1 筆（Team plan Max 20x 席位請求，社群記者建議轉功能，但內容屬訂閱定價、商業記者已妥善記錄，不追加功能派工）
+- devpractice 沉澱：候選 6 筆（AGENTS.md 支援上線、Auto mode 免計費 classifier、v2.1.278 三個功能候選旗標、桌面版 Thinking／Verbose 檢視模式、獨立記憶體洩漏個案 #11315、google/artemis）
+- market 判讀：判讀 2 則（Accenture 內嵌評估者 10 億美元承諾／反壟斷「AI pacing 合謀」提告）

@@ -3,21 +3,21 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-16"
-last_news_update: "2026-09-16"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-19"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 29
-attribution_count: 13
-attribution_last: "2026-09-16"
+attribution_count: 15
+attribution_last: "2026-09-19"
 top_source: "github-issues"
-pending_count: 3
+pending_count: 2
 pending_overdue: 2
-pending_next_review: "2026-09-20"
+pending_next_review: null
 pending_signalled: 0
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -30,9 +30,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-19
 **最後新聞更新：** 2026-09-19
 
-> **最新功能缺口**（2026-09-16）
-> - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 收不到對應 token 費用。
-> - **矩陣狀態不變**：仍 ⚡ 部分對應——企業端已有 org default model／白名單，個人動態路由缺口未解，社群工具（Dragoman、Council、Ungate）仍是唯一解法。
+> **最新功能缺口**（2026-09-19）
+> - **AGENTS.md 缺口轉已產品化**：v2.1.277 起專案無 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整；全站讚數最高已知問題 #6235 就此結案。
+> - **仍未涵蓋**：Bedrock、Vertex、Foundry 尚未支援；`.agents/skills` 資料夾也不在內（HN 討論指出）。
 
 ## 摘要
 
@@ -62,7 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Slack 內 AI 隊友 | 弱社群前驅（Ano 等輕量 Slack + Claude 整合，2026-06-04） | Ano | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack-native，Anthropic 內部 65% 程式碼由其生成） | ✅ 已產品化 | 此列較弱屬「社群發明」框架——官方主導色彩強，社群前驅稀薄，列入僅供對照參考 |
 | 跨 harness 統一操作層 | 2026-08-24 起一週內密集湧現（loopx 5,067★、Graft 4,842★等 7 款同批；09-10 再添 2 款；09-12 再添 1 款） | loopx、Graft、metaharness、claw-orchestrator、opencodex、avibe、ccteam、orca | 無 | ❌ 無官方對應 | 與上方 AGENTS.md 列**不同層**：那條談設定檔格式相容，本條談執行期統一操作層 ⟨G-11⟩ |
 | Agent 間商業/支付基礎設施 | 2026-08-18，internet-court-skill 首見 | internet-court-skill | 無 | ❌ 無官方對應 | 全新類別——agent 之間經濟往來的信任與爭議解決，非協作/操作層問題；❓ 待查證 ⟨Q-02⟩ ⟨G-12⟩ |
-| 跨工具 agent 設定標準（AGENTS.md） | 2026-05-02 起，[GitHub issue #6235](https://github.com/anthropics/claude-code/issues/6235) 累積 335 則留言、5889 個讚（2026-08-14，全站已知問題讚數之最）| Codex、Amp、Cursor（均已採用 AGENTS.md 標準） | 無 | ❌ 無官方對應 | Claude Code 仍不支援 AGENTS.md，多工具維護痛點；反應數持續攀升；/doctor 精簡建議非互操作標準 ⟨G-08⟩ |
+| 跨工具 agent 設定標準（AGENTS.md） | 2026-05-02 起，[GitHub issue #6235](https://github.com/anthropics/claude-code/issues/6235) 累積 396 則留言、6643 個讚（2026-09-17，全站已知問題讚數之最）| Codex、Amp、Cursor（均已採用 AGENTS.md 標準） | AGENTS.md 支援（v2.1.277，2026-09-18） | ✅ 已產品化 | 專案無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整；Bedrock/Vertex/Foundry 與 `.agents/skills` 資料夾尚未涵蓋 ⟨G-08⟩ |
 | 多平行 agent 即時可觀測性／協調地圖 | 2026-07-06 Show HN live-log-viewer-next（讀本機 JSONL transcript 呈現即時對話地圖）；既有 1000 Subagents Fan-out、20-instance 崩潰分析持續堆疊 | live-log-viewer-next、（fan-out/多 instance 分析工具鏈） | Agent View（`claude agents` 多 session 列表管理，v2.1.139）＋ `--forward-subagent-text` 旗標（v2.1.211，2026-07-15）＋ `/fork` 背景 session 化（v2.1.212，2026-07-17） | ❌ 無官方對應 | Agent View 為列表式非即時 live map；--forward-subagent-text 提供資料來源但非觀測產品本身 ⟨G-09⟩ |
 | Agent 間直接通訊協定 | 2026-07-08 [GitHub issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊，累積 78 則留言、21 個 👍，2026-08-16 互動數更新）；2026-07-14 [issue #28300](https://github.com/anthropics/claude-code/issues/28300)（跨機器多 agent 協作 A2A 協定） | 無專屬社群工具，訴求以 GitHub issue 形式累積 | 官方文件（2026-09-19 查證，[跨 session 訊息](https://code.claude.com/docs/en/cross-session-messaging)）：`ListAgents`＋`SendMessage`，v2.1.224 起（Windows v2.1.234），可達他機與雲端 session | 🧪 部分產品化（點對點傳訊已含跨機器；MCP 共享頻道式 A2A 與依賴排序未提供） | 點對點傳訊已跨機器、跨平台；共享頻道與依賴排序仍缺 ⟨G-10⟩ |
 
@@ -77,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-05⟩ 跨 session 記憶持久化：Dreaming 兩個月後仍為 Research Preview、試用價值「⏳ 觀望」；社群工具（OKF）跨工具跨模型，Dreaming（僅限 Anthropic 生態）無法取代；OzBrain（2026-08-21 Show HN，score 69，跨 2 來源）進一步鎖定「團隊共用」而非單一使用者跨 session 記憶，主張取代筆記/任務管理工具而非僅作輔助記憶層，凸顯 Dreaming 目前仍是單一 Anthropic 生態內的個人記憶方案，未觸及團隊共享面向；v0.117.0 的 SDK 級「dreaming」支援用途未明（[[entities/managed-agents]] 標記待更多資訊確認是既有機制正式曝光還是新能力）；2026-08-25 新增兩個機制互異的記憶工具——ambient-context 走「被動螢幕活動記錄」路線（不觸碰 agent 本身狀態，靠外部日誌供 Claude 讀取），mindmuxai/brain.md 走「agent 決策/需求顯式寫入」路線，皆與 Dreaming 的自動記憶鞏固方向不同，官方仍無對應，狀態暫不變動。
 - ⟨G-06⟩ 多代理 PR/程式碼審查：官方 `/code-review` 已評 ✅ 推薦，v2.1.218 進一步改為背景 subagent 執行、不再佔用對話內容，並維持 stacked slash commands 作為審查對象，易用性再提升；但社群「adversarial 多模型審查抓到更多真實 bug」的說法尚無雙方公開對照數據佐證，狀態未變。
 - ⟨G-07⟩ 額度/用量監控：個人重度使用者缺口依舊，迫切性隨計費轉換 deadline 逼近而升高，見 [[feature-radar]] ⏰ 倒數中。
-- ⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）：Claude Code 仍不支援 AGENTS.md，多工具並用者需為 Claude Code 額外維護 CLAUDE.md，造成配置互通痛點；反應數持續攀升顯示壓力未見緩解；v2.1.206（2026-07-10）`/doctor` 新增建議精簡 CLAUDE.md 內容的檢查項，屬維護性提示而非互操作標準對應，缺口性質未變。
+- ⟨G-08⟩ 跨工具 agent 設定標準（AGENTS.md）：v2.1.277 起無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整，缺口轉為已產品化；尚未支援 Bedrock、Vertex、Foundry，`.agents/skills` 也未涵蓋，完整互操作仍未達成。
 - ⟨G-09⟩ 多平行 agent 即時可觀測性／協調地圖：官方 Agent View 為**列表式** session 管理，非跨 agent 即時狀態流的 live map；當數十至上千平行 agent 併跑時「誰卡住、誰在等、彼此依賴」缺乏即時可觀測面，社群自建地圖式檢視器補位，官方無對應方向。2026-07-15 v2.1.211 新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，讓 `stream-json` 輸出包含 subagent 文字與思考內容，為社群建構觀測工具提供官方資料來源；2026-07-17 v2.1.212 將 `/fork` 改為建立獨立背景 session（`claude agents` 自成一列），原同 session 子 agent 行為更名 `/subtask`，使多開背景任務與同 session 委派的列表可見度更清楚拆分，但本身仍非官方 live map 產品，狀態未變。
 - ⟨G-10⟩ Agent 間直接通訊協定：與上一列「即時可觀測性／協調地圖」的區別：協調地圖是**被動觀測**（讀 transcript/log，agent 本身不互相收送訊息）；本列是**主動通訊**（agent 間或跨機器交換訊息以協調依賴順序），先前只能靠檔案系統或外部工具中繼。
   - 2026-08-09 官方文件確認跨 session 訊息功能，對應 issue #24798（[[entities/claude-code]] 已知問題轉 ✅ 已修復 v2.1.224）；留言持續累積（60→75→78），核心訴求其實是「依相依性排序高階流程步驟」的工作流編排。
@@ -190,6 +190,7 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 
 ### 2026-09-19
 - **「Agent 間直接通訊協定」列查證更新（使用者提問）**：⟨Q-01⟩ 結案——跨機器已涵蓋、原生 Windows 自 v2.1.234 起支援；v2.1.224 release notes 本就載明此功能（08-08、08-09 條目稱「changelog 未見」為漏看）。#28300 的共享頻道式 A2A 仍缺，維持 🧪。
+- **⟨G-08⟩ AGENTS.md 轉已產品化**：v2.1.277 起無 CLAUDE.md 時改讀 AGENTS.md；讚數最高已知問題 #6235 就此結案。Bedrock/Vertex/Foundry、`.agents/skills` 尚未涵蓋，矩陣狀態由 ❌ 改列 ✅ 已產品化。
 
 ### 2026-09-16
 - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，與 09-15 The Information 報導方向一致；矩陣狀態維持 ⚡ 部分對應，未見具體規模數字，不升級。

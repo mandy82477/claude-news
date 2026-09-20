@@ -7,18 +7,18 @@ last_updated: "2026-09-13"
 last_news_update: "2026-08-05"
 update_freq: "🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 44
+days_since_news: 45
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 44
-inbound_links: 15
+days_since_news_subtree: 45
+inbound_links: 16
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 0
-pending_next_review: "2026-09-19"
+pending_overdue: 1
+pending_next_review: null
 pending_signalled: 0
 signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"

@@ -3,19 +3,19 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-16"
-last_news_update: "2026-09-16"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-19"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 84
-attribution_count: 101
-attribution_last: "2026-09-16"
+days_since_news_subtree: 0
+inbound_links: 92
+attribution_count: 103
+attribution_last: "2026-09-19"
 top_source: "google-news"
-pending_count: 16
+pending_count: 17
 pending_overdue: 11
 pending_next_review: "2026-09-21"
 pending_signalled: 0
@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-16
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-19
 
-> **最新動態**（2026-09-16）
-> CNBC 質疑 Anthropic／OpenAI 自行提名 AI 風險評估機構的公信力；延續 09-15 Nvidia 黃仁勳於 Dreamforce 反對兩家反壟斷豁免提案，詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
+> **最新動態**（2026-09-19）
+> 新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀，The Hill／Politico／Bloomberg Law News 同日報導；具體原告身分與訴狀內容僅標題可用，詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
 ---
 
@@ -223,6 +223,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-09-19 | 🌐 | The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀 | 具體原告身分、訴狀內容與求償範圍僅標題可用；是否與 09-15 反壟斷豁免提案為同一爭議延伸未見報導，不逕自合併 |
 | 2026-09-16 | 🌐 | CNBC 質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力問題 | 延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮；具體評估機構人選未見報導 |
 | 2026-09-15 | 🏢 | Anthropic 與 OpenAI 提出 AI 安全反壟斷豁免提案，擬自行提名風險評估機構；Nvidia CEO 黃仁勳於 Dreamforce 公開反對，稱「完全沒必要」 | 提案內容與豁免範圍僅標題可用；黃仁勳並與 Anthropic、OpenAI 執行長在 AI 安全整體立場上公開分歧 |
 | 2026-09-15 | 🌐 | Rescana：七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊，發布事件分析報告 | 延續中國線既有蒸餾指控（阿里巴巴、Moonshot），首見具名資安機構對多家實驗室的系統性技術分析；僅標題可用 |
@@ -400,6 +401,10 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-09-19
+- **[🌐] The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀**：三媒體同日報導，具體原告身分與訴狀內容僅標題可用；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否互為因果，報導未載，本頁不代為推論，詳見「## 攻防紀錄」
+  - ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、SpaceXAI）：原告身分、訴狀具體主張與求償範圍均未見報導
 
 ### 2026-09-16
 - **[🌐] CNBC：質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力**：延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮，具體人選未見報導，詳見「## 攻防紀錄」
