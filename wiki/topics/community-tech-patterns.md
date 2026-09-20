@@ -12,8 +12,8 @@ children: "['topics/community-tech-patterns-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 58
-attribution_count: 172
-attribution_last: "2026-09-18"
+attribution_count: 176
+attribution_last: "2026-09-20"
 top_source: "github"
 pending_count: 3
 pending_overdue: 0

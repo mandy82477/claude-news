@@ -1,0 +1,584 @@
+{
+  "date": "2026-09-20",
+  "generatedAt": "2026-09-20 17:07 UTC",
+  "articleCount": 37,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Feature Request: India-Specific Pricing Plans (INR) for Claude & Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/17432",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 12:06",
+      "sentiment": "",
+      "body": "要求 Anthropic 為 Claude Pro／Claude Code 訂閱推出印度盧比（INR）定價，提案點名 OpenAI（ChatGPT）與 Google（Gemini）已有類似的當地定價，累積 215 則留言、637 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Feature Request: Microsoft 365 Connector for Max Plan Individual Users",
+      "url": "https://github.com/anthropics/claude-code/issues/20469",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 14:15",
+      "sentiment": "",
+      "body": "Microsoft 365 連接器目前僅限 Team／Enterprise 方案，個人版 Max 使用者（月費 $100／$200）無法使用，該請求累積 61 則留言、105 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
+      "url": "https://github.com/trycua/cua",
+      "source": "Hacker News",
+      "time": "09/19 15:52",
+      "sentiment": "",
+      "body": "作者觀察許多電腦操作任務其實不需要通用大模型（如 GPT-6-Astra、Claude Opus 5）逐步推理即可完成，貼文獲 84 分、由 2 個來源同日報導。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [],
+  "mediaReports": [
+    {
+      "title": "Trump vs. Anthropic - Politico",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ2FKNi1uZ3RjYUZjMVJWZTZJWW5uSTJlcmw3Q25uSjdDOUFEWko0LUR1OHIxNkhwaDl6c3RPOVhSdF9ReDN6RTAwNGd0cEhVdHI3Ym83UXpoYVpSX2MtczlydUlMaHVpaXY3OVhXanpJWXBtenRfcUlJUW9yb3VnYXFURFMzamNpbVBtUkhwcm9VaVZDZWJOOXNKaEFkNjlqYkYwbl8yOGFzaGJTbXJN?oc=5",
+      "source": "Google News / Politico",
+      "time": "09/20 12:30",
+      "sentiment": "",
+      "body": "Politico 以〈Trump vs. Anthropic〉為題報導，原文摘要未附更多細節。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude can send emails without asking; Google still won't let Gemini press send on its own - Android Police",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9RSElpTWxzdWRuNFVVbFc0QTJtMU9aQ2xIZm52Z3hkZER3enc5LTRWbFdBemhuYy1vQkF3cm1HOVRCUTdOcEkwWnZ5MUR4eTdDaFdlX3dmajhQLXJaZzctX19oUUptbUtteTNKb2V6VjlwQQ?oc=5",
+      "source": "Google News / Android Police",
+      "time": "09/20 11:00",
+      "sentiment": "",
+      "body": "Android Police 比較兩家 agentic 助理的自主權：Claude 可不經確認自動寄出郵件，Google Gemini 目前尚不允許自動按下傳送。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code Was Used To Tackle A Notorious Problem During Video Calls... - Wccftech",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcFpZdlI1bUYtTGF2ZUVlTnVVS2J5SjFTaE03RURNQTJGaHRjdUJxS3RldDhqakNiLUNDRmJuTWdsRTQwY1U4XzV3V2g1WjcyV1dUcjF3T3ZFVUIzZ1RKQkk1T09leDBOeDl2MW5GSzhKVmd2Nm5hT2VsRzluaHk3dVpUd053a0NTcDFF0gGQAUFVX3lxTFBEUVAwNHg5VXUwdWJwNjBIc2doUWZWZndRS1l6MEhmOWx6ZnlFbE5XUlBoQXNaRjBxcGVhajNXQlJmWm5qV2g0Z3MwbGxIblY5OGswOFBkbmVWWGZjX1VhUFpLNEdza3dwX0lzYmMxejZEa2ZIbFlvV0h1c01HaDFweUpLMnZZanlyY21TQ01QSw?oc=5",
+      "source": "Google News / Wccftech",
+      "time": "09/20 11:41",
+      "sentiment": "",
+      "body": "Wccftech 報導有開發者用 Claude Code 打造影片迴圈工具，讓視訊會議時看起來持續專注。",
+      "focusTags": []
+    },
+    {
+      "title": "Researchers Breach OpenAI Using Claude in 72 Hours - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQVlZOFllUl9XUjdMaWJNX21LNEdYcFkzNWZubnFueUpsQUR4SXM5bVE3MG5GUWttVGFOSEFzSGUyc0ptdVRJcDR5dy1UQmlZS1hzYnh3TkhJYlJTSlRPOTRJMDl3Q05nZ01WVVFvLUs2WnMxQTVDWUtrZEZBTUw0RHRGckpNSVlE?oc=5",
+      "source": "Google News / 조선일보",
+      "time": "09/20 09:03",
+      "sentiment": "",
+      "body": "韓國《朝鮮日報》報導研究人員在 72 小時內用 Claude 攻破 OpenAI 的防線，原文摘要未附更多細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Judge allows most of Reddit's lawsuit against Anthropic to proceed - Mashable",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVVhTTJxakNfUnR2a0JCaTN4cjhmZ0FOWUFSbU9WWkpYSmQxUFJ1SjRtR2JrVXFGM0Fkb0RmalMwZ0pRbERNUHpIbS1HM0tkUUVpUlNzTndSZnVhcnhUODQxOWJiZEpWenAzOUFnYnZNbFN2N2Y0Um55ZGZ0NWg1TUE0aHFkeDVBT29RemNBeE0?oc=5",
+      "source": "Google News / Mashable",
+      "time": "09/19 16:03",
+      "sentiment": "",
+      "body": "Mashable 報導法官已裁定 Reddit 對 Anthropic 提起的訴訟大部分可繼續進行。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "It's time to cancel your subscriptions - Anthropic is silently nerfing Claude's reasoning budget while telling you it's the same model",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wl6wyn/its_time_to_cancel_your_subscriptions_anthropic/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "09/20 04:20",
+      "sentiment": "",
+      "body": "貼文引述一份針對 4.3 萬則以上 Claude 回應、長達 65 天的分析，指控 Anthropic 未告知使用者就悄悄調降推理預算；未見具名研究機構背書，判讀時宜保留。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Ask HN: How do you interview devs in a post-AI world?",
+      "url": "https://news.ycombinator.com/item?id=49768826",
+      "source": "Hacker News",
+      "time": "09/19 18:10",
+      "sentiment": "",
+      "body": "發起人觀察約八成受訪求職者坦言已改為指揮 AI agent 而非親自寫程式，貼文獲 38 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Orchestrating Claude Code Agents: The Chief of Staff Pattern",
+      "url": "https://asyncdot.com/blog/chief-of-staff-pattern-orchestrating-claude-code-sessions/",
+      "source": "Hacker News",
+      "time": "09/20 05:46",
+      "sentiment": "",
+      "body": "文章主張長時程 AI coding 任務失敗多因 context 易逝、agent 自我回報不可靠，建議由一個 session 負責協調驗證、其餘 session 執行並搭配外部看板記錄狀態，貼文獲 24 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI and Anthropic oversold AI security breaches - NY Post",
+      "url": "https://nypost.com/2026/09/19/us-news/openai-anthropic-oversold-security-breaches-to-pressure-feds-into-protecting-turf-insiders/",
+      "source": "Hacker News",
+      "time": "09/19 19:59",
+      "sentiment": "",
+      "body": "HN 討論串引述紐約郵報報導，指控 OpenAI 與 Anthropic 誇大 AI 安全漏洞事件、藉此向聯邦政府施壓爭取監管保護，內容源自業界人士匿名說法、貼文獲 36 分，仍待進一步證實。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "michael-denyer/pstack-claude",
+      "url": "https://github.com/michael-denyer/pstack-claude",
+      "source": "GitHub Search",
+      "time": "09/20 14:17",
+      "sentiment": "",
+      "body": "把 Cursor 的 agent workflow 基礎架構移植給 Claude Code、Codex、opencode 等其他 harness 使用，目前 504 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "CodeZeno/Claude-Code-Usage-Monitor",
+      "url": "https://github.com/CodeZeno/Claude-Code-Usage-Monitor",
+      "source": "GitHub Search",
+      "time": "09/20 14:17",
+      "sentiment": "",
+      "body": "Windows 工作列小工具，追蹤 Claude Code、Codex、Cursor 等工具的用量上限與重置時間，目前 500 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "aoci-spec/aoci-code",
+      "url": "https://github.com/aoci-spec/aoci-code",
+      "source": "GitHub Search",
+      "time": "09/20 14:17",
+      "sentiment": "",
+      "body": "把整個程式庫與資料庫結構做成持久化、Git 版控的索引，供 Claude Code、Codex、Cursor、opencode 等編碼 agent 在動手前先讀取，目前 446 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "Feature Request: India-Specific Pricing Plans (INR) for Claude & Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/17432",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 12:06",
+      "sentiment": "",
+      "body": "詳見上方⭐——地區定價缺口累積 215 則留言、637 個 👍 反應，是本日互動量最高的單一請求。",
+      "focusTags": []
+    },
+    {
+      "title": "Feature Request: Microsoft 365 Connector for Max Plan Individual Users",
+      "url": "https://github.com/anthropics/claude-code/issues/20469",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 14:15",
+      "sentiment": "",
+      "body": "詳見上方⭐——付費方案分層限制個人版 Max 使用者無法使用該連接器，累積 61 則留言、105 個 👍 反應。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "一起反壟斷訴訟指控 Anthropic、OpenAI、SpaceXAI、Google 就「AI 減速」達成非法協議，Anthropic CEO 已書面承認潛在反壟斷風險、並表示若美國政府願意協調會配合跨實驗室對話。",
+      "ref_urls": [
+        "https://apnews.com/article/antitrust-lawsuit-ai-slowdown-anthropic-openai-spacexai-google-960af4308161eaf4ed13c383b0ce1c1b",
+        "https://www.independent.co.uk/news/lawsuit-anthropic-google-openai-lawyers-b3052942.html"
+      ],
+      "ref_names": [
+        "AP News",
+        "The Independent"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "claude-code repo 上一則 bug 回報指出 Claude 4.7、4.8、5.0 與 Fable 愈來愈常出現重複修辭語病，即使明確給出風格指令仍難產出連貫文字，累積 123 則留言、565 個反應。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/77136"
+      ],
+      "ref_names": [
+        "GitHub Issue #77136"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "另一則回報指 Cowork Windows 2026 年 9 月累積更新（KB5124012／KB5124008）讓 Plan9 share attach 失效、`device_bash` 在 ARM64 與 x64 上都掛掉，回報者已用五台機器做 rollback A/B 驗證確認，累積 56 則留言。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/92958"
+      ],
+      "ref_names": [
+        "GitHub Issue #92958"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 宣布與 Accenture 合作，由後者主導對前沿 AI 進行獨立評估，作為落實 CEO 文章〈We Must Pace the Frontier〉中「在公司內部嵌入評估者」承諾的具體步驟。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/accenture-embedded-evaluation"
+      ],
+      "ref_names": [
+        "官方公告"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "10 Best Vibe Coding Tools in 2026: Compared & Tested",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5KQWdoamRQWjY1Ml9pMG9aaEJDeURPeXBqS21hV29WZnBkQmVCdGg3aHJWVFRTWGRqdUQ2cU8wNHZVcXladVU5S3hET3ZDempTQ0oyMVpUZw?oc=5",
+      "body": "Memeburn 盤點 2026 年多款 vibe coding 工具並做對照測試",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "preview": "Claude Code：Cowork（Windows）新增已知問題：09 月累積更新致 device_bash 失效（#92958），與既有 Plan9 掛載失敗（#92984）同源不同現象。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5",
+      "name": "Claude Opus 5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-20",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Cowork（Windows）新增已知問題**：09 月累積更新致 device_bash 失效（#92958），與既有 Plan9 掛載失敗（#92984）同源不同現象。\n- **Plugin4Shell 跨 agent 零點擊 RCE**：影響 Claude Code、Codex、Copilot、Gemini CLI，僅標題可用，觸發機制與修補時程未見報導。\n- **GitSpawn `.git` 設定檔攻擊查證**：Claude Code 已於 v2.1.196 部分修補，09-01 覆測一條執行路徑仍未修補。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "AGENTS.md 已補",
+            "date": "",
+            "body": "Claude Code v2.1.277（09-18）起原生讀 `AGENTS.md`，不必再寫 `@AGENTS.md` import 或做 symlink。三個邊界：有 `CLAUDE.md` 時預設仍只讀 `CLAUDE.md`；要兩者並讀得在 `/config` 把「Project instructions」改成 `claude-md-and-agents-md`；Bedrock／Vertex／Foundry 或關掉遙測的 session 讀不到。\n同批更正：2026-08-17 官方一次關掉本頁引用的五個 issue（#6235、#24798、#47023、#24316、#29006），本頁原先把它們當成還在累積的社群壓力。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5",
+            "name": "Claude Opus 5",
+            "label": "最新動態",
+            "date": "",
+            "body": "GitHub #77136（跨模型重複修辭 bug：4.7／4.8／5／Fable 同時中）留言與反應數持續攀升至 123 則、565 個，08-27 首見時為 106／517，官方仍無回應。"
+          },
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "17 榜全數嘗試（直接抓取 12 榜、媒體轉述 5 榜、無法取得 0 榜）。本週真正的變化有三件：**`arena.ai` 改版造成的兩列失聯已解除**——查到新位址（文字榜 `/leaderboard/text` 改名 Text Arena、搜尋榜 `/leaderboard/search`），兩榜都不是死掉是搬家，**汰換討論取消**；**OpenRouter 本輪直接抓到榜頁**，Claude Fable 5.1 與 Qwen 3.8 Max 並列第一——但這是四週來的第四種說法，仍是全表可靠度最低的一列；**Terminal-Bench 恢復採計**，二手數字與 08-28 一致，上週那組對不上的數字判為來源有誤。Claude 這邊的位置比上週看得更清楚：**Text Arena 前三名全是 Claude**（但差 4 分、在誤差內，分不出高下），Opus 5 續居 Terminal-Bench 3.0 與 SWE-bench Verified 首位。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- 聯邦法官裁定 Reddit 對 Anthropic 資料爬取／授權訴訟大部分可續行，Reddit（NYSE: RDDT）首度成為本頁可交易標的。\n- 反壟斷合謀訴訟新增：Anthropic 執行長書面承認跨實驗室協調步調可能觸及反壟斷問題。詳見 [[topics/anthropic-government-policy]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "聯邦法官裁定 Reddit 對 Anthropic 資料爬取訴訟大部分可續行；反壟斷合謀提告新增 Anthropic 回應與業界動機質疑，詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **韓媒稱 72 小時內用 Claude 攻破 OpenAI**：조선일보報導，僅標題可用，與既有 Hacktron AI／WSJ 系列是否同一事件未見報導\n- **業界動機質疑**：NY Post 稱 OpenAI、Anthropic 誇大資安事件以促成聯邦監管、排擠競爭者，單一匿名業界說法\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty（Accenture 專責 AI 業務單位）主導，範圍含評估與 red-team 模型，詳見 [[topics/recursive-self-improvement#技術彙整]]。"
+          },
+          {
+            "page": "topics/anthropic-commitments",
+            "name": "Anthropic 承諾兌現追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "（5c 查證結案）\n「Fable 5 恢復訂閱內含」查證後移入已結案表：官方從未承諾 Pro 方案恢復訂閱內含，屬社群誤讀（詳見「已結案」表）。其餘追蹤中承諾（METR 獨立審查、隱寫術修復、解禁三承諾、spyware 指控回應、Agent SDK 計費切割暫停、HERMES.md 拒絕退款）狀態未變。"
+          },
+          {
+            "page": "topics/recursive-self-improvement-archive",
+            "name": "AI 遞歸自我改進與全球暫停呼籲 — 原始條目封存",
+            "label": "原始條目封存",
+            "date": "",
+            "body": "本頁為 [[topics/recursive-self-improvement]] 的時序／技術彙整原始條目封存，一字未刪；重點層（摘要、目前結論）見主頁。"
+          },
+          {
+            "page": "topics/safety-china-trust-dispute-archive",
+            "name": "中美 AI 工具信任對峙 — 原始條目封存",
+            "label": "原始條目封存",
+            "date": "",
+            "body": "本頁為 [[topics/safety-china-trust-dispute]] 的時序原始條目封存，一字未刪；重點層（摘要、敘事五階段、技術指控線）見主頁。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **多 agent 信任與驗證層添一方案**：Chief of Staff Pattern 主張一個 session 協調驗證、其餘 session 執行，狀態放外部看板，宣稱要重跑驗證才採信。\n- **codebase 知識索引再添一例**：aoci-code 把整個程式庫與資料庫結構做成持久化 Git 版控索引，供 agent 動手前先讀。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Ask HN 面試官觀察：約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人程式能力感到不安，呼應本頁「Skill Atrophy」長期議題。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "社群再添「悄悄降推理預算」指控",
+            "date": "",
+            "body": "Reddit r/ClaudeAI 週熱門引用 4.3 萬+ 則回應、65 天分析，指控 Anthropic 未告知調降推理預算仍稱同一模型；「泛化變慢」主張增至 8 則，官方仍無回應。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "Feature Request: India-Specific Pricing Plans (INR) for Claude & Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/17432",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 12:06",
+      "sentiment": "",
+      "body": "要求 Anthropic 為 Claude Pro／Claude Code 訂閱推出印度盧比（INR）定價，提案點名 OpenAI（ChatGPT）與 Google（Gemini）已有類似的當地定價，累積 215 則留言、637 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Feature Request: Microsoft 365 Connector for Max Plan Individual Users",
+      "url": "https://github.com/anthropics/claude-code/issues/20469",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/20 14:15",
+      "sentiment": "",
+      "body": "Microsoft 365 連接器目前僅限 Team／Enterprise 方案，個人版 Max 使用者（月費 $100／$200）無法使用，該請求累積 61 則留言、105 個 👍 反應。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
+      "url": "https://github.com/trycua/cua",
+      "source": "Hacker News",
+      "time": "09/19 15:52",
+      "sentiment": "",
+      "body": "作者觀察許多電腦操作任務其實不需要通用大模型（如 GPT-6-Astra、Claude Opus 5）逐步推理即可完成，貼文獲 84 分、由 2 個來源同日報導。",
+      "focusTags": []
+    }
+  ]
+}

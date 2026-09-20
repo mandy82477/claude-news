@@ -5,16 +5,16 @@ type: "model"
 status: "active（現行次旗艦；前代 Opus 4.8 已列 Legacy）"
 domain: "🤖 模型"
 last_updated: "2026-09-20"
-last_news_update: "2026-09-19"
+last_news_update: "2026-09-20"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 35
-attribution_count: 29
-attribution_last: "2026-09-19"
+attribution_count: 30
+attribution_last: "2026-09-20"
 top_source: "reddit"
 pending_count: 3
 pending_overdue: 0
