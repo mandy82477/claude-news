@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "/page-audit-review 誰被續用、誰是新派",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1085,
+      775
+    ],
+    "legend": {
+      "mode": "hidden"
+    },
+    "column_fit": "spread"
+  },
+  "participants": [
+    {
+      "id": "main",
+      "type": "external",
+      "label": "主 session",
+      "sublabel": "自己做"
+    },
+    {
+      "id": "audit",
+      "type": "backend",
+      "label": "健檢卡",
+      "sublabel": "續用 ×2"
+    },
+    {
+      "id": "cold",
+      "type": "frontend",
+      "label": "冷讀者",
+      "sublabel": "一次性"
+    },
+    {
+      "id": "designer",
+      "type": "database",
+      "label": "設計者",
+      "sublabel": "續用 ×2"
+    },
+    {
+      "id": "review",
+      "type": "security",
+      "label": "評審",
+      "sublabel": "續用 ×2"
+    },
+    {
+      "id": "impl",
+      "type": "cloud",
+      "label": "實作者",
+      "sublabel": "續用 ×2"
+    },
+    {
+      "id": "recheck",
+      "type": "messagebus",
+      "label": "複驗冷讀者",
+      "sublabel": "一次性"
+    }
+  ],
+  "messages": [
+    {
+      "from": "main",
+      "to": "audit",
+      "y": 160,
+      "label": "步驟 1 派工 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "main",
+      "to": "cold",
+      "y": 188,
+      "label": "步驟 1 派工 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "audit",
+      "to": "main",
+      "y": 216,
+      "label": "交件：考題集＋診斷",
+      "variant": "return"
+    },
+    {
+      "from": "cold",
+      "to": "main",
+      "y": 244,
+      "label": "交件：四題實測",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "audit",
+      "y": 272,
+      "label": "步驟 2 對照冷讀者交件 · 續用",
+      "variant": "emphasis"
+    },
+    {
+      "from": "audit",
+      "to": "main",
+      "y": 300,
+      "label": "交件：Q2 判定",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "designer",
+      "y": 328,
+      "label": "步驟 3 提案 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "designer",
+      "to": "main",
+      "y": 356,
+      "label": "交件：提案三件",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "review",
+      "y": 384,
+      "label": "步驟 4 審提案 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "review",
+      "to": "main",
+      "y": 412,
+      "label": "交件：評審意見",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "designer",
+      "y": 440,
+      "label": "步驟 5 第二輪 · 續用",
+      "variant": "emphasis"
+    },
+    {
+      "from": "designer",
+      "to": "main",
+      "y": 468,
+      "label": "交件：定稿",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "impl",
+      "y": 496,
+      "label": "步驟 6 實作 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "impl",
+      "to": "main",
+      "y": 524,
+      "label": "交件：實作回報",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "review",
+      "y": 552,
+      "label": "步驟 7 實作複核 · 續用",
+      "variant": "emphasis"
+    },
+    {
+      "from": "main",
+      "to": "recheck",
+      "y": 580,
+      "label": "步驟 7 複驗 · 新派",
+      "variant": "default"
+    },
+    {
+      "from": "review",
+      "to": "main",
+      "y": 608,
+      "label": "交件：放行與否",
+      "variant": "return"
+    },
+    {
+      "from": "recheck",
+      "to": "main",
+      "y": 636,
+      "label": "交件：四題複驗",
+      "variant": "return"
+    },
+    {
+      "from": "main",
+      "to": "impl",
+      "y": 664,
+      "label": "步驟 8 修正批次 · 續用",
+      "variant": "emphasis"
+    },
+    {
+      "from": "impl",
+      "to": "main",
+      "y": 692,
+      "label": "交件：修正回報",
+      "variant": "return"
+    }
+  ],
+  "activations": [
+    {
+      "participant": "main",
+      "from": 152,
+      "to": 702,
+      "type": "external"
+    },
+    {
+      "participant": "audit",
+      "from": 154,
+      "to": 222,
+      "type": "backend"
+    },
+    {
+      "participant": "cold",
+      "from": 182,
+      "to": 250,
+      "type": "frontend"
+    },
+    {
+      "participant": "audit",
+      "from": 266,
+      "to": 306,
+      "type": "backend"
+    },
+    {
+      "participant": "designer",
+      "from": 322,
+      "to": 362,
+      "type": "database"
+    },
+    {
+      "participant": "review",
+      "from": 378,
+      "to": 418,
+      "type": "security"
+    },
+    {
+      "participant": "designer",
+      "from": 434,
+      "to": 474,
+      "type": "database"
+    },
+    {
+      "participant": "impl",
+      "from": 490,
+      "to": 530,
+      "type": "cloud"
+    },
+    {
+      "participant": "review",
+      "from": 546,
+      "to": 614,
+      "type": "security"
+    },
+    {
+      "participant": "recheck",
+      "from": 574,
+      "to": 642,
+      "type": "messagebus"
+    },
+    {
+      "participant": "impl",
+      "from": 658,
+      "to": 698,
+      "type": "cloud"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "violet",
+      "title": "怎麼看這張圖",
+      "items": [
+        "同一條線出現兩段長條＝同一位被續用",
+        "只有一段長條＝一次性，用完就不再用",
+        "粗箭頭是續用派工，虛線是交件回派"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "誰被續用、誰不是",
+      "items": [
+        "健檢卡、設計者、評審、實作者各續用一次",
+        "冷讀者與複驗冷讀者都是一次性，且是兩位",
+        "設計者和評審是兩位不同的 agent"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "主 session 自己做",
+      "items": [
+        "備料、官方查證、定使命句、驗收",
+        "拆頁、砍節、併頁停下問使用者",
+        "測試綠才 commit，遠端有新的不 push"
+      ]
+    }
+  ]
+}

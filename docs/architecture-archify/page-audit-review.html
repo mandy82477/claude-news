@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="archify 2.17.0-dev.1">
-  <title>/page-audit-review 頁面健檢流程</title>
+  <title>/page-audit-review 誰被續用、誰是新派</title>
   <script>
     // Resolve the theme before first paint so light-preference users don't
     // see a dark flash. The toolbar script below re-applies with UI state.
@@ -5081,7 +5081,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
            data-preset-badge-blueprint="蓝图 / 修订 01"
            data-preset-badge-editorial="编辑风格 / 现场笔记">
         <div class="pulse-dot"></div>
-        <h1>/page-audit-review 頁面健檢流程</h1>
+        <h1>/page-audit-review 誰被續用、誰是新派</h1>
       </div>
     </div>
 
@@ -5130,9 +5130,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     <!-- Main Diagram -->
     <div class="diagram-container" data-detail-level="read"
          data-preset-badge-editorial-plate="ARCHIFY / 图版 04">
-      <svg viewBox="0 0 1040 660" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
-        <title id="archify-diagram-title">/page-audit-review 頁面健檢流程</title>
-        <desc id="archify-diagram-description">由 Archify 生成的工作流图。</desc>
+      <svg viewBox="0 0 1085 775" role="img" lang="zh-CN" aria-labelledby="archify-diagram-title archify-diagram-description" data-preset="classic" data-quality-profile="showcase">
+        <title id="archify-diagram-title">/page-audit-review 誰被續用、誰是新派</title>
+        <desc id="archify-diagram-description">由 Archify 生成的时序图。</desc>
         <!-- Definitions -->
         <defs>
           <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -5155,212 +5155,295 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <!-- Background Grid -->
         <rect width="100%" height="100%" fill="url(#grid)" />
 
-        <!-- Swimlanes -->
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-0" x="40" y="52" width="826" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="74" class="t-dim" font-size="10" font-weight="600">01 / 主 session</text>
-
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-1" x="40" y="176" width="826" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="198" class="t-dim" font-size="10" font-weight="600">02 / 調查（獨立 context）</text>
-
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-2" x="40" y="300" width="826" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="322" class="t-dim" font-size="10" font-weight="600">03 / 設計＋評審（Opus）</text>
-
-        <rect data-graph-role="structural-frame" data-composition-frame-kind="lane" data-composition-frame-id="lane-3" x="40" y="424" width="826" height="104" rx="10" class="c-lane" stroke-width="1"/>
-        <text x="54" y="446" class="t-dim" font-size="10" font-weight="600">04 / 實作＋複驗</text>
-
-        <!-- Phase headers -->
-        <line x1="56" y1="35" x2="458" y2="35" class="a-default" stroke-width="1.1"/>
-        <rect x="56" y="27" width="402" height="16" rx="4" class="c-mask"/>
-        <text x="257" y="39" class="t-muted" font-size="8" font-weight="600" text-anchor="middle">健檢</text>
-        <line x1="486" y1="35" x2="714" y2="35" class="a-emphasis" stroke-width="1.1"/>
-        <rect x="486" y="27" width="228" height="16" rx="4" class="c-mask"/>
-        <text x="600" y="39" class="t-backend" font-size="8" font-weight="600" text-anchor="middle">設計與實作</text>
-        <line x1="758" y1="35" x2="850" y2="35" class="a-dashed" stroke-width="1.1"/>
-        <rect x="758" y="27" width="92" height="16" rx="4" class="c-mask"/>
-        <text x="804" y="39" class="t-messagebus" font-size="8" font-weight="600" text-anchor="middle">複驗收尾</text>
-
-        <!-- Workflow groups -->
+        <!-- Time Segments -->
 
 
-        <!-- Edge paths -->
-        <path data-edge-from="audit" data-edge-to="predict" data-edge-label="冷讀者交件" data-edge-key="0" data-composition-points="292,243;358,243" d="M 292 243 L 358 243" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="designer" data-edge-to="review" data-edge-key="1" data-composition-points="586,367;614,367" d="M 586 367 L 614 367" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="implement" data-edge-to="recheck" data-edge-key="2" data-composition-points="722,491;750,491" d="M 722 491 L 750 491" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="mission" data-edge-to="designer" data-edge-key="3" data-composition-points="466,119;532,119;532,341" d="M 466 119 L 532 119 L 532 341" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="predict" data-edge-to="mission" data-edge-key="4" data-composition-points="412,217;412,145" d="M 412 217 L 412 145" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="prep" data-edge-to="audit" data-edge-key="5" data-composition-points="102,145;102,166;238,166;238,217" d="M 102 145 L 102 166 L 238 166 L 238 217" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="prep" data-edge-to="verify" data-edge-key="6" data-composition-points="156,119;184,119" d="M 156 119 L 184 119" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
-        <path data-edge-from="recheck" data-edge-to="gate" data-edge-label="放行" data-edge-key="7" data-composition-points="804,465;804,145" d="M 804 465 L 804 145" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="review" data-edge-to="implement" data-edge-label="實作單" data-edge-key="8" data-composition-points="722,367;738,367;738,414;668,414;668,465" d="M 722 367 L 738 367 L 738 414 L 668 414 L 668 465" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
-        <path data-edge-from="verify" data-edge-to="mission" data-edge-key="9" data-composition-points="292,119;358,119" d="M 292 119 L 358 119" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <!-- Lifelines -->
+        <path d="M 118.5 142 L 118.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 263.5 142 L 263.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 408.5 142 L 408.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 553.5 142 L 553.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 698.5 142 L 698.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 843.5 142 L 843.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
+        <path d="M 988.5 142 L 988.5 710" class="a-default" stroke-width="0.8" stroke-dasharray="3,7"/>
 
-        <!-- Nodes -->
-        <g id="node-prep" data-node-id="prep" data-node-label="備料與報價" tabindex="0" role="button" aria-label="聚焦備料與報價，機械輸入, 主 session › 健檢" aria-pressed="false" data-node-kind="external" data-node-sublabel="機械輸入" data-node-context="主 session › 健檢">
-          <title>備料與報價 · 機械輸入 · 主 session › 健檢</title>
-          <rect x="48" y="93" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="48" y="93" width="108" height="52" rx="6" class="c-external" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(54 99) scale(0.6875)">
+        <!-- Activations -->
+        <rect x="113.5" y="152" width="10" height="550" rx="3" class="c-mask"/>
+        <rect x="113.5" y="152" width="10" height="550" rx="3" class="c-external" stroke-width="1"/>
+        <rect x="258.5" y="154" width="10" height="68" rx="3" class="c-mask"/>
+        <rect x="258.5" y="154" width="10" height="68" rx="3" class="c-backend" stroke-width="1"/>
+        <rect x="403.5" y="182" width="10" height="68" rx="3" class="c-mask"/>
+        <rect x="403.5" y="182" width="10" height="68" rx="3" class="c-frontend" stroke-width="1"/>
+        <rect x="258.5" y="266" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="258.5" y="266" width="10" height="40" rx="3" class="c-backend" stroke-width="1"/>
+        <rect x="548.5" y="322" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="548.5" y="322" width="10" height="40" rx="3" class="c-database" stroke-width="1"/>
+        <rect x="693.5" y="378" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="693.5" y="378" width="10" height="40" rx="3" class="c-security" stroke-width="1"/>
+        <rect x="548.5" y="434" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="548.5" y="434" width="10" height="40" rx="3" class="c-database" stroke-width="1"/>
+        <rect x="838.5" y="490" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="838.5" y="490" width="10" height="40" rx="3" class="c-cloud" stroke-width="1"/>
+        <rect x="693.5" y="546" width="10" height="68" rx="3" class="c-mask"/>
+        <rect x="693.5" y="546" width="10" height="68" rx="3" class="c-security" stroke-width="1"/>
+        <rect x="983.5" y="574" width="10" height="68" rx="3" class="c-mask"/>
+        <rect x="983.5" y="574" width="10" height="68" rx="3" class="c-messagebus" stroke-width="1"/>
+        <rect x="838.5" y="658" width="10" height="40" rx="3" class="c-mask"/>
+        <rect x="838.5" y="658" width="10" height="40" rx="3" class="c-cloud" stroke-width="1"/>
+
+        <!-- Messages -->
+        <g data-edge-from="main" data-edge-to="audit" data-edge-label="步驟 1 派工 · 新派" data-edge-key="0">
+          <path data-composition-edge-from="main" data-composition-edge-to="audit" data-composition-points="125.5,160;256.5,160" d="M 125.5 160 L 256.5 160" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="138.2" y="140" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="191" y="150" class="t-backend" font-size="9" text-anchor="middle">步驟 1 派工 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="cold" data-edge-label="步驟 1 派工 · 新派" data-edge-key="1">
+          <path data-composition-edge-from="main" data-composition-edge-to="cold" data-composition-points="125.5,188;401.5,188" d="M 125.5 188 L 401.5 188" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="210.7" y="168" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="263.5" y="178" class="t-backend" font-size="9" text-anchor="middle">步驟 1 派工 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="audit" data-edge-to="main" data-edge-label="交件：考題集＋診斷" data-edge-key="2">
+          <path data-composition-edge-from="audit" data-composition-edge-to="main" data-composition-points="256.5,216;125.5,216" d="M 256.5 216 L 125.5 216" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="138.2" y="196" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="191" y="206" class="t-muted" font-size="9" text-anchor="middle">交件：考題集＋診斷</text>
+        </g>
+        </g>
+
+        <g data-edge-from="cold" data-edge-to="main" data-edge-label="交件：四題實測" data-edge-key="3">
+          <path data-composition-edge-from="cold" data-composition-edge-to="main" data-composition-points="401.5,244;125.5,244" d="M 401.5 244 L 125.5 244" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="221.1" y="224" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="263.5" y="234" class="t-muted" font-size="9" text-anchor="middle">交件：四題實測</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="audit" data-edge-label="步驟 2 對照冷讀者交件 · 續用" data-edge-key="4">
+          <path data-composition-edge-from="main" data-composition-edge-to="audit" data-composition-points="125.5,272;256.5,272" d="M 125.5 272 L 256.5 272" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <g data-detail="context">
+          <rect x="112.2" y="252" width="157.6" height="16" rx="3" class="c-mask"/>
+          <text x="191" y="262" class="t-backend" font-size="9" text-anchor="middle">步驟 2 對照冷讀者交件 · 續用</text>
+        </g>
+        </g>
+
+        <g data-edge-from="audit" data-edge-to="main" data-edge-label="交件：Q2 判定" data-edge-key="5">
+          <path data-composition-edge-from="audit" data-composition-edge-to="main" data-composition-points="256.5,300;125.5,300" d="M 256.5 300 L 125.5 300" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="151.2" y="280" width="79.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="191" y="290" class="t-muted" font-size="9" text-anchor="middle">交件：Q2 判定</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="designer" data-edge-label="步驟 3 提案 · 新派" data-edge-key="6">
+          <path data-composition-edge-from="main" data-composition-edge-to="designer" data-composition-points="125.5,328;546.5,328" d="M 125.5 328 L 546.5 328" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="283.2" y="308" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="336" y="318" class="t-backend" font-size="9" text-anchor="middle">步驟 3 提案 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="designer" data-edge-to="main" data-edge-label="交件：提案三件" data-edge-key="7">
+          <path data-composition-edge-from="designer" data-composition-edge-to="main" data-composition-points="546.5,356;125.5,356" d="M 546.5 356 L 125.5 356" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="293.6" y="336" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="336" y="346" class="t-muted" font-size="9" text-anchor="middle">交件：提案三件</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="review" data-edge-label="步驟 4 審提案 · 新派" data-edge-key="8">
+          <path data-composition-edge-from="main" data-composition-edge-to="review" data-composition-points="125.5,384;691.5,384" d="M 125.5 384 L 691.5 384" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="350.5" y="364" width="116" height="16" rx="3" class="c-mask"/>
+          <text x="408.5" y="374" class="t-backend" font-size="9" text-anchor="middle">步驟 4 審提案 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="review" data-edge-to="main" data-edge-label="交件：評審意見" data-edge-key="9">
+          <path data-composition-edge-from="review" data-composition-edge-to="main" data-composition-points="691.5,412;125.5,412" d="M 691.5 412 L 125.5 412" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="366.1" y="392" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="408.5" y="402" class="t-muted" font-size="9" text-anchor="middle">交件：評審意見</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="designer" data-edge-label="步驟 5 第二輪 · 續用" data-edge-key="10">
+          <path data-composition-edge-from="main" data-composition-edge-to="designer" data-composition-points="125.5,440;546.5,440" d="M 125.5 440 L 546.5 440" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <g data-detail="context">
+          <rect x="278" y="420" width="116" height="16" rx="3" class="c-mask"/>
+          <text x="336" y="430" class="t-backend" font-size="9" text-anchor="middle">步驟 5 第二輪 · 續用</text>
+        </g>
+        </g>
+
+        <g data-edge-from="designer" data-edge-to="main" data-edge-label="交件：定稿" data-edge-key="11">
+          <path data-composition-edge-from="designer" data-composition-edge-to="main" data-composition-points="546.5,468;125.5,468" d="M 546.5 468 L 125.5 468" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="304" y="448" width="64" height="16" rx="3" class="c-mask"/>
+          <text x="336" y="458" class="t-muted" font-size="9" text-anchor="middle">交件：定稿</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="impl" data-edge-label="步驟 6 實作 · 新派" data-edge-key="12">
+          <path data-composition-edge-from="main" data-composition-edge-to="impl" data-composition-points="125.5,496;836.5,496" d="M 125.5 496 L 836.5 496" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="428.2" y="476" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="481" y="486" class="t-backend" font-size="9" text-anchor="middle">步驟 6 實作 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="impl" data-edge-to="main" data-edge-label="交件：實作回報" data-edge-key="13">
+          <path data-composition-edge-from="impl" data-composition-edge-to="main" data-composition-points="836.5,524;125.5,524" d="M 836.5 524 L 125.5 524" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="438.6" y="504" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="481" y="514" class="t-muted" font-size="9" text-anchor="middle">交件：實作回報</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="review" data-edge-label="步驟 7 實作複核 · 續用" data-edge-key="14">
+          <path data-composition-edge-from="main" data-composition-edge-to="review" data-composition-points="125.5,552;691.5,552" d="M 125.5 552 L 691.5 552" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <g data-detail="context">
+          <rect x="345.3" y="532" width="126.4" height="16" rx="3" class="c-mask"/>
+          <text x="408.5" y="542" class="t-backend" font-size="9" text-anchor="middle">步驟 7 實作複核 · 續用</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="recheck" data-edge-label="步驟 7 複驗 · 新派" data-edge-key="15">
+          <path data-composition-edge-from="main" data-composition-edge-to="recheck" data-composition-points="125.5,580;981.5,580" d="M 125.5 580 L 981.5 580" class="a-default" stroke-width="1.4" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="500.7" y="560" width="105.60000000000001" height="16" rx="3" class="c-mask"/>
+          <text x="553.5" y="570" class="t-backend" font-size="9" text-anchor="middle">步驟 7 複驗 · 新派</text>
+        </g>
+        </g>
+
+        <g data-edge-from="review" data-edge-to="main" data-edge-label="交件：放行與否" data-edge-key="16">
+          <path data-composition-edge-from="review" data-composition-edge-to="main" data-composition-points="691.5,608;125.5,608" d="M 691.5 608 L 125.5 608" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="366.1" y="588" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="408.5" y="598" class="t-muted" font-size="9" text-anchor="middle">交件：放行與否</text>
+        </g>
+        </g>
+
+        <g data-edge-from="recheck" data-edge-to="main" data-edge-label="交件：四題複驗" data-edge-key="17">
+          <path data-composition-edge-from="recheck" data-composition-edge-to="main" data-composition-points="981.5,636;125.5,636" d="M 981.5 636 L 125.5 636" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="511.1" y="616" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="553.5" y="626" class="t-muted" font-size="9" text-anchor="middle">交件：四題複驗</text>
+        </g>
+        </g>
+
+        <g data-edge-from="main" data-edge-to="impl" data-edge-label="步驟 8 修正批次 · 續用" data-edge-key="18">
+          <path data-composition-edge-from="main" data-composition-edge-to="impl" data-composition-points="125.5,664;836.5,664" d="M 125.5 664 L 836.5 664" class="a-emphasis" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        <g data-detail="context">
+          <rect x="417.8" y="644" width="126.4" height="16" rx="3" class="c-mask"/>
+          <text x="481" y="654" class="t-backend" font-size="9" text-anchor="middle">步驟 8 修正批次 · 續用</text>
+        </g>
+        </g>
+
+        <g data-edge-from="impl" data-edge-to="main" data-edge-label="交件：修正回報" data-edge-key="19">
+          <path data-composition-edge-from="impl" data-composition-edge-to="main" data-composition-points="836.5,692;125.5,692" d="M 836.5 692 L 125.5 692" class="a-default" stroke-width="1.4" stroke-dasharray="3,5" marker-end="url(#arrowhead)"/>
+        <g data-detail="context">
+          <rect x="438.6" y="672" width="84.8" height="16" rx="3" class="c-mask"/>
+          <text x="481" y="682" class="t-muted" font-size="9" text-anchor="middle">交件：修正回報</text>
+        </g>
+        </g>
+
+        <!-- Segment Labels -->
+
+
+        <!-- Participants -->
+        <g id="node-main" data-node-id="main" data-node-label="主 session" tabindex="0" role="button" aria-label="聚焦主 session，自己做, 时序参与者" aria-pressed="false" data-node-kind="external" data-node-sublabel="自己做" data-node-context="时序参与者">
+          <title>主 session · 自己做 · 时序参与者</title>
+          <rect x="62" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="62" y="72" width="113" height="54" rx="6" class="c-external" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(68 78) scale(0.6875)">
             <rect x="2.5" y="5" width="8.5" height="8" rx="1.5"/>
             <path d="M8 2.5h5.5V8M13.5 2.5 7.5 8.5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="102" y="114" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">備料與報價</text>
-          <text data-detail="context" x="102" y="131" class="t-muted" font-size="8" text-anchor="middle">機械輸入</text>
+          <text data-node-label="" data-detail-anchor="" x="118.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">主 session</text>
+          <text data-detail="context" x="118.5" y="111" class="t-muted" font-size="7" text-anchor="middle">自己做</text>
         </g>
 
-        <g id="node-verify" data-node-id="verify" data-node-label="主編查證" tabindex="0" role="button" aria-label="聚焦主編查證，官方一手, 主 session › 健檢" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="官方一手" data-node-context="主 session › 健檢">
-          <title>主編查證 · 官方一手 · 主 session › 健檢</title>
-          <rect x="184" y="93" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="184" y="93" width="108" height="52" rx="6" class="c-cloud" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(190 99) scale(0.6875)">
-            <path d="M4.3 12.5h7.3a2.4 2.4 0 0 0 .2-4.8 4 4 0 0 0-7.5-1.3A3.1 3.1 0 0 0 4.3 12.5Z"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="238" y="114" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">主編查證</text>
-          <text data-detail="context" x="238" y="131" class="t-muted" font-size="8" text-anchor="middle">官方一手</text>
-        </g>
-
-        <g id="node-mission" data-node-id="mission" data-node-label="定使命句" tabindex="0" role="button" aria-label="聚焦定使命句，裁決問使用者, 主 session › 健檢" aria-pressed="false" data-node-kind="security" data-node-sublabel="裁決問使用者" data-node-context="主 session › 健檢">
-          <title>定使命句 · 裁決問使用者 · 主 session › 健檢</title>
-          <rect x="358" y="93" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="358" y="93" width="108" height="52" rx="6" class="c-security" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(364 99) scale(0.6875)">
-            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
-            <path d="m5.8 8 1.5 1.5 3-3"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="412" y="114" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">定使命句</text>
-          <text data-detail="context" x="412" y="131" class="t-muted" font-size="8" text-anchor="middle">裁決問使用者</text>
-        </g>
-
-        <g id="node-gate" data-node-id="gate" data-node-label="驗收並收尾" tabindex="0" role="button" aria-label="聚焦驗收並收尾，測試綠才 commit, 主 session › 複驗收尾" aria-pressed="false" data-node-kind="database" data-node-sublabel="測試綠才 commit" data-node-context="主 session › 複驗收尾">
-          <title>驗收並收尾 · 測試綠才 commit · 主 session › 複驗收尾</title>
-          <rect x="750" y="93" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="750" y="93" width="108" height="52" rx="6" class="c-database" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(756 99) scale(0.6875)">
-            <ellipse cx="8" cy="4" rx="5" ry="2"/>
-            <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="804" y="114" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">驗收並收尾</text>
-          <text data-detail="context" x="804" y="131" class="t-muted" font-size="8" text-anchor="middle">測試綠才 commit</text>
-        </g>
-
-        <g id="node-audit" data-node-id="audit" data-node-label="健檢卡＋冷讀者" tabindex="0" role="button" aria-label="聚焦健檢卡＋冷讀者，考題集＋盲讀, 調查（獨立 context） › 健檢" aria-pressed="false" data-node-kind="backend" data-node-sublabel="考題集＋盲讀" data-node-context="調查（獨立 context） › 健檢">
-          <title>健檢卡＋冷讀者 · 考題集＋盲讀 · 調查（獨立 context） › 健檢</title>
-          <rect x="184" y="217" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="184" y="217" width="108" height="52" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(190 223) scale(0.6875)">
+        <g id="node-audit" data-node-id="audit" data-node-label="健檢卡" tabindex="0" role="button" aria-label="聚焦健檢卡，續用 ×2, 时序参与者" aria-pressed="false" data-node-kind="backend" data-node-sublabel="續用 ×2" data-node-context="时序参与者">
+          <title>健檢卡 · 續用 ×2 · 时序参与者</title>
+          <rect x="207" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="207" y="72" width="113" height="54" rx="6" class="c-backend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(213 78) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="238" y="238" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">健檢卡＋冷讀者</text>
-          <text data-detail="context" x="238" y="255" class="t-muted" font-size="8" text-anchor="middle">考題集＋盲讀</text>
+          <text data-node-label="" data-detail-anchor="" x="263.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">健檢卡</text>
+          <text data-detail="context" x="263.5" y="111" class="t-muted" font-size="7" text-anchor="middle">續用 ×2</text>
         </g>
 
-        <g id="node-predict" data-node-id="predict" data-node-label="預測對照" tabindex="0" role="button" aria-label="聚焦預測對照，冷讀者交件後, 調查（獨立 context） › 健檢" aria-pressed="false" data-node-kind="backend" data-node-sublabel="冷讀者交件後" data-node-context="調查（獨立 context） › 健檢">
-          <title>預測對照 · 冷讀者交件後 · 調查（獨立 context） › 健檢</title>
-          <rect x="358" y="217" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="358" y="217" width="108" height="52" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(364 223) scale(0.6875)">
-            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="412" y="238" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">預測對照</text>
-          <text data-detail="context" x="412" y="255" class="t-muted" font-size="8" text-anchor="middle">冷讀者交件後</text>
-        </g>
-
-        <g id="node-designer" data-node-id="designer" data-node-label="設計者" tabindex="0" role="button" aria-label="聚焦設計者，提案 · 逐字稿, 設計＋評審（Opus） › 設計與實作" aria-pressed="false" data-node-kind="backend" data-node-sublabel="提案 · 逐字稿" data-node-context="設計＋評審（Opus） › 設計與實作">
-          <title>設計者 · 提案 · 逐字稿 · 設計＋評審（Opus） › 設計與實作</title>
-          <rect x="478" y="341" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="478" y="341" width="108" height="52" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(484 347) scale(0.6875)">
-            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="532" y="362" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">設計者</text>
-          <text data-detail="context" x="532" y="379" class="t-muted" font-size="8" text-anchor="middle">提案 · 逐字稿</text>
-        </g>
-
-        <g id="node-review" data-node-id="review" data-node-label="評審" tabindex="0" role="button" aria-label="聚焦評審，四視角 · 實作單, 設計＋評審（Opus） › 設計與實作" aria-pressed="false" data-node-kind="security" data-node-sublabel="四視角 · 實作單" data-node-context="設計＋評審（Opus） › 設計與實作">
-          <title>評審 · 四視角 · 實作單 · 設計＋評審（Opus） › 設計與實作</title>
-          <rect x="614" y="341" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="614" y="341" width="108" height="52" rx="6" class="c-security" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(620 347) scale(0.6875)">
-            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
-            <path d="m5.8 8 1.5 1.5 3-3"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="668" y="362" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">評審</text>
-          <text data-detail="context" x="668" y="379" class="t-muted" font-size="8" text-anchor="middle">四視角 · 實作單</text>
-        </g>
-
-        <g id="node-implement" data-node-id="implement" data-node-label="實作者" tabindex="0" role="button" aria-label="聚焦實作者，Sonnet · 逐步驗, 實作＋複驗 › 設計與實作" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Sonnet · 逐步驗" data-node-context="實作＋複驗 › 設計與實作">
-          <title>實作者 · Sonnet · 逐步驗 · 實作＋複驗 › 設計與實作</title>
-          <rect x="614" y="465" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="614" y="465" width="108" height="52" rx="6" class="c-backend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(620 471) scale(0.6875)">
-            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
-          </g>
-          <text data-node-label="" data-detail-anchor="" x="668" y="486" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">實作者</text>
-          <text data-detail="context" x="668" y="503" class="t-muted" font-size="8" text-anchor="middle">Sonnet · 逐步驗</text>
-        </g>
-
-        <g id="node-recheck" data-node-id="recheck" data-node-label="複驗" tabindex="0" role="button" aria-label="聚焦複驗，新冷讀者複驗, 實作＋複驗 › 複驗收尾" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="新冷讀者複驗" data-node-context="實作＋複驗 › 複驗收尾">
-          <title>複驗 · 新冷讀者複驗 · 實作＋複驗 › 複驗收尾</title>
-          <rect x="750" y="465" width="108" height="52" rx="6" class="c-mask"/>
-          <rect x="750" y="465" width="108" height="52" rx="6" class="c-frontend" stroke-width="1.5"/>
-          <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(756 471) scale(0.6875)">
+        <g id="node-cold" data-node-id="cold" data-node-label="冷讀者" tabindex="0" role="button" aria-label="聚焦冷讀者，一次性, 时序参与者" aria-pressed="false" data-node-kind="frontend" data-node-sublabel="一次性" data-node-context="时序参与者">
+          <title>冷讀者 · 一次性 · 时序参与者</title>
+          <rect x="352" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="352" y="72" width="113" height="54" rx="6" class="c-frontend" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="frontend" class="semantic-sigil s-frontend" transform="translate(358 78) scale(0.6875)">
             <rect x="2" y="3" width="12" height="10" rx="2"/>
             <path d="M2 6.5h12"/>
             <circle cx="4.1" cy="4.8" r=".7" class="sigil-fill"/>
             <circle cx="6.3" cy="4.8" r=".7" class="sigil-fill"/>
           </g>
-          <text data-node-label="" data-detail-anchor="" x="804" y="486" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">複驗</text>
-          <text data-detail="context" x="804" y="503" class="t-muted" font-size="8" text-anchor="middle">新冷讀者複驗</text>
+          <text data-node-label="" data-detail-anchor="" x="408.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">冷讀者</text>
+          <text data-detail="context" x="408.5" y="111" class="t-muted" font-size="7" text-anchor="middle">一次性</text>
         </g>
 
-        <!-- Edge labels -->
-        <g data-detail="context" data-edge-from="audit" data-edge-to="predict" data-edge-label="冷讀者交件" data-edge-key="0">
-          <rect x="296" y="223" width="58" height="14" rx="3" class="c-mask"/>
-          <text x="325" y="233" class="t-backend" font-size="8" text-anchor="middle">冷讀者交件</text>
+        <g id="node-designer" data-node-id="designer" data-node-label="設計者" tabindex="0" role="button" aria-label="聚焦設計者，續用 ×2, 时序参与者" aria-pressed="false" data-node-kind="database" data-node-sublabel="續用 ×2" data-node-context="时序参与者">
+          <title>設計者 · 續用 ×2 · 时序参与者</title>
+          <rect x="497" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="497" y="72" width="113" height="54" rx="6" class="c-database" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(503 78) scale(0.6875)">
+            <ellipse cx="8" cy="4" rx="5" ry="2"/>
+            <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="553.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">設計者</text>
+          <text data-detail="context" x="553.5" y="111" class="t-muted" font-size="7" text-anchor="middle">續用 ×2</text>
         </g>
 
-
-
-
-
-
-        <g data-detail="context" data-edge-from="recheck" data-edge-to="gate" data-edge-label="放行" data-edge-key="7">
-          <rect x="789" y="445" width="30" height="14" rx="3" class="c-mask"/>
-          <text x="804" y="455" class="t-backend" font-size="8" text-anchor="middle">放行</text>
-        </g>
-        <g data-detail="context" data-edge-from="review" data-edge-to="implement" data-edge-label="實作單" data-edge-key="8">
-          <rect x="683.6" y="394" width="38.8" height="14" rx="3" class="c-mask"/>
-          <text x="703" y="404" class="t-backend" font-size="8" text-anchor="middle">實作單</text>
+        <g id="node-review" data-node-id="review" data-node-label="評審" tabindex="0" role="button" aria-label="聚焦評審，續用 ×2, 时序参与者" aria-pressed="false" data-node-kind="security" data-node-sublabel="續用 ×2" data-node-context="时序参与者">
+          <title>評審 · 續用 ×2 · 时序参与者</title>
+          <rect x="642" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="642" y="72" width="113" height="54" rx="6" class="c-security" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-security" transform="translate(648 78) scale(0.6875)">
+            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
+            <path d="m5.8 8 1.5 1.5 3-3"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="698.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">評審</text>
+          <text data-detail="context" x="698.5" y="111" class="t-muted" font-size="7" text-anchor="middle">續用 ×2</text>
         </g>
 
+        <g id="node-impl" data-node-id="impl" data-node-label="實作者" tabindex="0" role="button" aria-label="聚焦實作者，續用 ×2, 时序参与者" aria-pressed="false" data-node-kind="cloud" data-node-sublabel="續用 ×2" data-node-context="时序参与者">
+          <title>實作者 · 續用 ×2 · 时序参与者</title>
+          <rect x="787" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="787" y="72" width="113" height="54" rx="6" class="c-cloud" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="cloud" class="semantic-sigil s-cloud" transform="translate(793 78) scale(0.6875)">
+            <path d="M4.3 12.5h7.3a2.4 2.4 0 0 0 .2-4.8 4 4 0 0 0-7.5-1.3A3.1 3.1 0 0 0 4.3 12.5Z"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="843.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">實作者</text>
+          <text data-detail="context" x="843.5" y="111" class="t-muted" font-size="7" text-anchor="middle">續用 ×2</text>
+        </g>
+
+        <g id="node-recheck" data-node-id="recheck" data-node-label="複驗冷讀者" tabindex="0" role="button" aria-label="聚焦複驗冷讀者，一次性, 时序参与者" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="一次性" data-node-context="时序参与者">
+          <title>複驗冷讀者 · 一次性 · 时序参与者</title>
+          <rect x="932" y="72" width="113" height="54" rx="6" class="c-mask"/>
+          <rect x="932" y="72" width="113" height="54" rx="6" class="c-messagebus" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(938 78) scale(0.6875)">
+            <path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/>
+            <circle cx="5" cy="4.5" r="1" class="sigil-fill"/>
+            <circle cx="10.5" cy="8" r="1" class="sigil-fill"/>
+            <circle cx="7" cy="11.5" r="1" class="sigil-fill"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="988.5" y="94" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">複驗冷讀者</text>
+          <text data-detail="context" x="988.5" y="111" class="t-muted" font-size="7" text-anchor="middle">一次性</text>
+        </g>
 
         <!-- Legend -->
-        <g data-legend="" data-legend-bridge="">
-          <text x="20" y="552" class="t-primary" font-size="12" font-weight="650">图例</text>
-          <g data-legend-semantic-kind="frontend" data-legend-kind="frontend" data-legend-label="用户界面" data-legend-x="20" data-legend-baseline="572" data-legend-width="78">
-            <rect x="20" y="564" width="14" height="9" rx="2" class="c-frontend" stroke-width="1"/>
-            <text x="42" y="572" class="t-muted" font-size="7.5" font-weight="500">用户界面</text>
-          </g>
-          <g data-legend-semantic-kind="backend" data-legend-kind="backend" data-legend-label="Agent 逻辑" data-legend-x="105" data-legend-baseline="572" data-legend-width="87">
-            <rect x="105" y="564" width="14" height="9" rx="2" class="c-backend" stroke-width="1"/>
-            <text x="127" y="572" class="t-muted" font-size="7.5" font-weight="500">Agent 逻辑</text>
-          </g>
-          <g data-legend-semantic-kind="security" data-legend-kind="security" data-legend-label="策略" data-legend-x="199" data-legend-baseline="572" data-legend-width="61">
-            <rect x="199" y="564" width="14" height="9" rx="2" class="c-security" stroke-width="1"/>
-            <text x="221" y="572" class="t-muted" font-size="7.5" font-weight="500">策略</text>
-          </g>
-          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="上下文 / 追踪" data-legend-x="267" data-legend-baseline="572" data-legend-width="100">
-            <rect x="267" y="564" width="14" height="9" rx="2" class="c-database" stroke-width="1"/>
-            <text x="289" y="572" class="t-muted" font-size="7.5" font-weight="500">上下文 / 追踪</text>
-          </g>
-          <g data-legend-semantic-kind="cloud" data-legend-kind="cloud" data-legend-label="云服务" data-legend-x="374" data-legend-baseline="572" data-legend-width="70">
-            <rect x="374" y="564" width="14" height="9" rx="2" class="c-cloud" stroke-width="1"/>
-            <text x="396" y="572" class="t-muted" font-size="7.5" font-weight="500">云服务</text>
-          </g>
-          <g data-legend-semantic-kind="external" data-legend-kind="external" data-legend-label="外部系统" data-legend-x="451" data-legend-baseline="572" data-legend-width="78">
-            <rect x="451" y="564" width="14" height="9" rx="2" class="c-external" stroke-width="1"/>
-            <text x="473" y="572" class="t-muted" font-size="7.5" font-weight="500">外部系统</text>
-          </g>
-        </g>
+
       </svg>
       <p class="intent-trace-status no-print" id="intent-trace-status" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="share-chapter-cue no-print" id="share-chapter-cue" hidden role="status" aria-live="polite">
@@ -5549,37 +5632,37 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     <div class="cards">
       <div class="card">
         <div class="card-header">
-          <div class="card-dot amber"></div>
-          <h3>先問存在理由</h3>
+          <div class="card-dot violet"></div>
+          <h3>怎麼看這張圖</h3>
         </div>
         <ul>
-          <li>&bull; 先答頁面要回答讀者哪幾題，再談版面</li>
-          <li>&bull; 節點三問：留、延伸、併入、砍</li>
-          <li>&bull; 拆頁單位是問題，不是行數</li>
+          <li>&bull; 同一條線出現兩段長條＝同一位被續用</li>
+          <li>&bull; 只有一段長條＝一次性，用完就不再用</li>
+          <li>&bull; 粗箭頭是續用派工，虛線是交件回派</li>
         </ul>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <div class="card-dot cyan"></div>
-          <h3>獨立驗證</h3>
+          <div class="card-dot emerald"></div>
+          <h3>誰被續用、誰不是</h3>
         </div>
         <ul>
-          <li>&bull; 冷讀者只沿 index 連結走，不知流程</li>
-          <li>&bull; 複驗一律新 agent，原四題逐字</li>
-          <li>&bull; 閘綠不等於合格，冷讀者是最後一關</li>
+          <li>&bull; 健檢卡、設計者、評審、實作者各續用一次</li>
+          <li>&bull; 冷讀者與複驗冷讀者都是一次性，且是兩位</li>
+          <li>&bull; 設計者和評審是兩位不同的 agent</li>
         </ul>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <div class="card-dot rose"></div>
-          <h3>裁決與邊界</h3>
+          <div class="card-dot slate"></div>
+          <h3>主 session 自己做</h3>
         </div>
         <ul>
-          <li>&bull; 拆頁、砍節、併頁停下來問使用者</li>
-          <li>&bull; 跨維護者的頁只走 pending_handoffs</li>
-          <li>&bull; remote 有新 commit 不 push</li>
+          <li>&bull; 備料、官方查證、定使命句、驗收</li>
+          <li>&bull; 拆頁、砍節、併頁停下問使用者</li>
+          <li>&bull; 測試綠才 commit，遠端有新的不 push</li>
         </ul>
       </div>
     </div>
