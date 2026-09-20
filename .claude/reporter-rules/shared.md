@@ -24,11 +24,13 @@
 ## 大型頁面讀取策略
 
 頁面 > 300 行時，**不可一次全讀**：
-1. 先 Grep 搜尋目標區塊標題，取得行號
-2. 再用 Read + offset/limit 只讀需要的段落
+1. 先 Grep 取行號——**能用條目層的關鍵字就不要用節標題**：issue 編號（`#16157`）、版本號（`v2.1.277`）、工具名、⟨Q-nn⟩ 都比節標題準。表格列與條列是自足的，改一列不需要讀整節
+2. 再用 Read + offset/limit 只讀命中行的**前後約 10–20 行**；確實要重寫整節（週更結論層、蒸餾）才讀整節
 3. 同一次 ingest 中多個無關頁面的更新，在單一訊息中平行發出多個 Edit 呼叫
 
-典型大型頁面：`community-tech-patterns.md`、`community-tech-patterns-archive.md`、`claude-code.md`
+> **成本看 token 不看行數。** 行數會騙人：`claude-code.md` 行數只排全庫第四，讀一次卻約 86K token、全庫最貴（長表格列，每行平均 180 字元）；它最常被改的「已知問題」**單節就約 41K**——照節標題讀，等於每天為了改一列 bug 狀態載入 41K。
+
+典型大型頁面（整頁約 70–86K token）：`claude-code.md`、`community-tech-patterns.md`、`anthropic-business.md`、`ai-agent-safety.md`、`community-tech-patterns-archive.md`
 
 ## 每頁必做
 
