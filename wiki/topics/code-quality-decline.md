@@ -148,7 +148,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **懸置細節**
 
-- ⟨Q-01⟩ **Sonar 第三方量化評測**（原題：HackerNoon「Claude Opus 5 Code Quality: What Sonar's Benchmark Reveals」）：已查證（[Sonar 原文](https://www.sonarsource.com/blog/claude-opus-5/)、[HackerNoon 轉載](https://hackernoon.com/claude-opus-5-code-quality-what-sonars-benchmark-reveals)，查證日 2026-09-20）——正確性面（bug 密度、漏洞密度、每行認知複雜度）下降，但 code smell 密度、issue 密度與循環複雜度上升；關鍵但書：Opus 4.8 輸出 600 萬 token、Opus 5 輸出 2171 萬 token（3.6 倍），對應程式碼量僅多 2.3 倍，代表 Opus 5 傾向寫更冗長的程式碼，以「每行」為分母的品質指標可能因此被稀釋美化。是唯一第三方量化評測，其餘 13 則多為主觀回報（12 單一觀感＋1 GitHub issue）。
+- ⟨Q-01⟩ **Sonar 第三方量化評測**（原題：HackerNoon「Claude Opus 5 Code Quality: What Sonar's Benchmark Reveals」）
+  - 已查證（[Sonar 原文](https://www.sonarsource.com/blog/claude-opus-5/)、[HackerNoon 轉載](https://hackernoon.com/claude-opus-5-code-quality-what-sonars-benchmark-reveals)，查證日 2026-09-20）：正確性面（bug 密度、漏洞密度、每行認知複雜度）下降，但 code smell 密度、issue 密度與循環複雜度上升。
+  - **關鍵但書**：Opus 4.8 輸出 600 萬 token、Opus 5 輸出 2,171 萬（3.6 倍），對應程式碼量卻只多 2.3 倍——代表它傾向寫更冗長的程式碼，**以「每行」為分母的品質指標可能因此被稀釋美化**。
+  - 這是唯一的第三方量化評測；其餘 13 則多為主觀回報（12 單一觀感＋1 GitHub issue）。
 
 **兩件要講清楚的事**
 

@@ -160,8 +160,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 官方機制的最新狀態與版本號以 [[entities/claude-code]]、[[entities/managed-agents]] 為準。
 
 **懸置細節**
-- ⟨Q-01⟩ **規模上限的子代理重送宣稱**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史。已查證（[官方 subagent 文件](https://code.claude.com/docs/en/sub-agents)，查證日 2026-09-20）：fork 子代理在啟動時繼承父對話的完整歷史、系統提示與工具池，此後與一般對話相同、隨每次工具呼叫持續累積（並非另外的「重送」機制，而是延續累積），故 token 隨呼叫數增加的方向性與社群觀察一致；官方文件未使用「resend」措辭，也未給出量化倍數，具體數字仍以社群量測為準。
-- ⟨Q-02⟩ **Graft 裁剪降幅宣稱**：Graft 稱裁剪 grep 搜尋輸出可削減 42% token，但 HN 討論質疑其 benchmark 段落疑似 AI 代寫。已查證（[GitHub repo](https://github.com/trailhq/Graft)、[HN 原討論串](https://news.ycombinator.com/item?id=49299985)，查證日 2026-09-20）：42% 數字來自作者內部 SWE-bench Verified 測試（8,070→4,650 token），僅 50 題、只跑一次；HN 討論指出 README 的 benchmark 段落疑似 Claude/Codex 代寫，且其自陳的效果提升 p 值僅 0.22（不具統計顯著性）；至今無獨立第三方重現。
+- ⟨Q-01⟩ **規模上限的子代理重送宣稱**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史。
+  - 已查證（[官方 subagent 文件](https://code.claude.com/docs/en/sub-agents)，查證日 2026-09-20）：fork 子代理**啟動時**繼承父對話的完整歷史、系統提示與工具池，此後與一般對話相同、隨每次呼叫持續累積。
+  - 也就是說**沒有另外的「重送」機制，是延續累積**——token 隨呼叫數增加的方向性與社群觀察一致。
+  - 官方文件未用「resend」措辭、也未給量化倍數，具體數字仍以社群量測為準。
+- ⟨Q-02⟩ **Graft 裁剪降幅宣稱**：Graft 稱裁剪 grep 搜尋輸出可削減 42% token，但 HN 討論質疑其 benchmark 段落疑似 AI 代寫。
+  - 已查證（[GitHub repo](https://github.com/trailhq/Graft)、[HN 原討論串](https://news.ycombinator.com/item?id=49299985)，查證日 2026-09-20）：42% 來自作者內部 SWE-bench Verified 測試（8,070→4,650 token），**僅 50 題、只跑一次**。
+  - HN 指出 README 的 benchmark 段落疑似 Claude／Codex 代寫，且作者自陳的效果提升 **p 值僅 0.22**（不具統計顯著性）。
+  - 至今無獨立第三方重現。
 - ⟨Q-03⟩ **子代理歷史重送機制**：Reddit 回報稱 fork 子代理每次工具呼叫疑似重送整段對話歷史，四個平行子代理耗約 200 萬 token，與規模上限列同源宣稱。已查證（同 ⟨Q-01⟩ 來源與結論，查證日 2026-09-20）：機制方向一致（fork 延續累積父對話上下文），但「200 萬 token」的具體數字官方未載，仍為單一社群觀察。
 
 ---

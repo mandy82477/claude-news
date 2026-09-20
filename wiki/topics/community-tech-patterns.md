@@ -1540,11 +1540,17 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **來源：** dev.to（Git worktree 多 agent 並行教學；07-01）
 
 **懸置細節**
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）；補充查得官方確有自動快照機制——[Checkpointing 官方文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案，`/rewind` 可還原至任一檢查點；但無法比對原貼文所指是否即為此機制
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果，僅查得 Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」的背景資訊，12 條具體錯誤內容仍無法查證
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）。
+  - 補充查得官方確有自動快照機制：[Checkpointing 文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案、`/rewind` 可還原至任一檢查點。
+  - 但無法比對原貼文所指是否即為此機制。
+- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
+  - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
+  - 12 條具體錯誤內容仍無法查證。
 - ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-10-04｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
   - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對
-- ⟨Q-05⟩ **ip_reminder 標籤**：原始文章已定位——[dev.to/nomurasan](https://dev.to/nomurasan/i-grepped-my-own-claude-code-logs-and-found-the-hidden-tag-anthropic-never-shows-you-17c0)（2026-07-27 發表，查證日 2026-09-20）。作者 grep 自己的 JSONL session log，找到 `<ip_reminder>` 標籤，單一 session 中比對出 151 行相符、437 次出現，判定為版權安全用途的系統層注入；屬社群逆向工程發現，非官方確認，與先前查得的 `<system-reminder>` 標籤（GitHub issue #52018、#17601）不同。
+- ⟨Q-05⟩ **ip_reminder 標籤**：原始文章已定位——[dev.to/nomurasan](https://dev.to/nomurasan/i-grepped-my-own-claude-code-logs-and-found-the-hidden-tag-anthropic-never-shows-you-17c0)（2026-07-27 發表，查證日 2026-09-20）。
+  - 作者 grep 自己的 JSONL session log 找到 `<ip_reminder>` 標籤，單一 session 比對出 151 行相符、437 次出現，判定為版權安全用途的系統層注入。
+  - **屬社群逆向工程發現、非官方確認**，且與先前查得的 `<system-reminder>` 標籤（GitHub issue #52018、#17601）不是同一個。
 
 ### 2026-06
 
@@ -1577,13 +1583,16 @@ Token/context 裁剪從討論走向實測：Compact Memory 提出 O(N²)→O(N) 
 - **已經定案的四類**（Skills 設計、Multi-agent 架構、CLAUDE.md 管理、Hooks 與自動化）：隔離用 worktree、規則用 Hooks 強制而非建議、流程封裝成 skill，近三個月沒出現反對意見。
   **接下來看什麼：** [[topics/community-tech-patterns#2026-09]] 的新節點是否還在複述這三句，複述停了就是真的定案。
 - **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-tech-patterns#2026-07]]）自己排序，或維持人工把關，或等官方補。
-- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-tech-patterns#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-tech-patterns#2026-09]]）——同一個問題兩個相反答案，還沒收斂；官方數量級參照見下方懸置細節 ⟨Q-06⟩ 已查證：多 agent 系統約耗一般對話 15 倍 token。
+- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-tech-patterns#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-tech-patterns#2026-09]]）。
+  - 同一個問題兩個相反答案，還沒收斂。官方數量級參照見 ⟨Q-06⟩：多 agent 系統約耗一般對話 15 倍 token。
 - **費用可觀測性從選配變必備**：2026-06 計費切割風波（該政策已於 2026-06-16 暫停）之後，帳單看得見成了工具的基本要求；工具清單見 [[topics/community-tech-tools]]。
 - **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法已獲社群反覆驗證（[[topics/community-tech-patterns#2026-09]]）。**接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）會不會補上來。
 - **還在試的十一類裡，只有五類近兩週有新動靜**：其餘停在七月，代表社群的注意力現在集中在規模化、終止條件與介面複用三個方向。
 
 **懸置細節**
-- ⟨Q-06⟩ **「多 agent 約耗 15 倍 token」官方原文**：已查證（[Anthropic 官方部落格](https://www.anthropic.com/engineering/built-multi-agent-research-system)，2025-06-13 發布，查證日 2026-09-20）——原文：「agents typically use about 4× more tokens than chat interactions, and multi-agent systems use about 15× more tokens than chats」。[[topics/community-tech-patterns-archive]] 先前的轉述屬實。
+- ⟨Q-06⟩ **「多 agent 約耗 15 倍 token」官方原文**：已查證（[Anthropic 官方部落格](https://www.anthropic.com/engineering/built-multi-agent-research-system)，2025-06-13 發布，查證日 2026-09-20）。
+  - 原文：「agents typically use about 4× more tokens than chat interactions, and multi-agent systems use about 15× more tokens than chats」。
+  - [[topics/community-tech-patterns-archive]] 先前的轉述屬實。
 
 > 概念辯論與設計哲學見 [[topics/community-tech-discussions]]
 
