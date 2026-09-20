@@ -29,17 +29,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-19
+**最後新聞更新：** 2026-09-20
 
-> **最新動態**（2026-09-19）
-> - Claude Code 2.1.277 正式支援 AGENTS.md（無 CLAUDE.md 時改讀），呼應社群 08-27 起的長期呼籲；HN 討論（683 分）指出新支援仍不含 `.agents/skills` 資料夾。
-> - Simon Willison 轉引 OpenAI 對齊團隊研究（09-17）：agent 自產生的對話壓縮摘要可能藏自我提示注入，形成讀回並自我執行的注入迴路。
+> **最新動態**（2026-09-20）
+> - Ask HN 面試官觀察：約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人程式能力感到不安，呼應本頁「Skill Atrophy」長期議題。
 
 ---
 
 ## 摘要
 
-社群現在有五場關於 Claude Code 的觀念爭論還在吵，一場已經吵出共識，三場僵住了——最新一則證據是 09-14 的自架 Ollama 遷移實務筆記。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
+社群現在有五場關於 Claude Code 的觀念爭論還在吵，一場已經吵出共識，三場僵住了——最新一則證據是 09-19 招募方對候選人能力驗證的焦慮。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
 
 做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；哪個方向在加溫、熱度往哪走，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
 
@@ -51,8 +50,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 爭論 | 現在狀態 | 最後一則證據 | 證據硬度 | 官方怎麼說 |
 |---|---|---|---|---|
+| **AI 輔助會不會讓人能力退化**（Skill Atrophy） | 還在吵 | 2026-09-19「招募方視角的能力驗證焦慮」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手研究 ＋ 五則獨立貼文自述，無跨平台佐證 | Anthropic 2026-01 對照實驗：用 AI 的一組在剛學過的概念測驗低 17%，且「怎麼用」決定退化多少 |
 | **CLAUDE.md 與提示詞該寫多少**：寫滿規則讓它照做，還是愈精簡愈準 | 還在吵 | 2026-08-28「指令堆疊難以追溯」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手 ＋ 跨平台多來源 | 官方 2026-07-24 部落格：Claude 5 世代已移除逾八成 Claude Code 系統提示詞，程式評測無可測量的退步 |
-| **AI 輔助會不會讓人能力退化**（Skill Atrophy） | 還在吵 | 2026-08-28「市場硬性要求驅動的全面轉向」，該則為單一低互動（HN 13 分）（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手研究 ＋ 四則獨立貼文自述，無跨平台佐證 | Anthropic 2026-01 對照實驗：用 AI 的一組在剛學過的概念測驗低 17%，且「怎麼用」決定退化多少 |
 | **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-14「Notes on」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **auto 模式算不算一道安全邊界** | 還在吵 | 2026-09-02「Show HN: Aura——SRE」（[[topics/community-tech-discussions#2026-09]]） | 官方文件 ＋ 社群單則實作經驗 | 官方：由第二個分類器模型逐一審動作，但對話裡設的邊界可能因壓縮而遺失，要硬保證得改用 deny 規則 |
 | **輸出浮水印與帳號執法透明到什麼程度才夠** | 還在吵 | 2026-09-02「付費帳號無預警遭停權」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名評論人 ＋ 四家媒體同日跟進 | 官方 2026-08-11 公告浮水印政策，適用全產品線且不可退出；停權申訴管道未見官方說明 |
@@ -103,6 +102,7 @@ AI 輔助開發正在改變工程師的自我認知，形成社群層面的結�
 - **撰寫者角色的量化案例**（2026-07-13）：dev.to 作者連續 30 天讓 Claude Code 撰寫約 90% 程式碼（5 萬行、$187 token 成本），事後反思明確指出「vibe coding 帶來的技能退化與倦怠是少有人討論的代價」；補上「撰寫者角色」退化面向的具體量化數字，與 07-05 審查者案例互補（單篇第一手記錄，尚無跨平台呼應）
 - **同儕壓力驅動的自我審查放鬆**（2026-08-27）：Tell HN 作者自述因同儕用 Claude Code 大幅提升產出速度，被迫放鬆自我審查、逐漸依賴 agent 直接推上 main，反思長期心智影響；單一貼文、score 未見報導，與既有 Skill Atrophy 論述方向一致，補上「同儕競爭壓力」這個誘因面向（來源：[Hacker News](https://news.ycombinator.com/item?id=49468252)）
 - **市場硬性要求驅動的全面轉向**（2026-08-28）：Ask HN 自由工作者自述工作流幾乎全面轉向 AI（始於 GPT-5.3 前後），歷經 Harness Engineering、MCP 附加、深度 Prompt Engineering 三階段。新意在驅動力是市場要求而非個人選擇，與 08-27 那則的同儕壓力是兩個層級（HN 13 分）
+- **招募方視角的能力驗證焦慮**（2026-09-19）：Ask HN 面試官自述約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正的程式能力感到不安；補上「招募方如何評估候選人」這個此前未見的角度，與既有「撰寫者」「審查者」角色退化案例互補（單一貼文，score 38，尚無跨平台呼應）
 - **共識到哪**：多數人同意退化正在發生，這一點已經沒什麼人反對；怎麼解沒有共識——反 atrophy 的工具（recap 等）都還在很早的階段。Anthropic 2026-01 的對照實驗給了目前唯一一份量化依據：用 AI 的一組在剛學過的概念測驗低 17%，而「怎麼用」比「用不用」更決定退化多少。
 
 ### Boris Cherny Loop 哲學
@@ -149,6 +149,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | ☄️閃現 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節） | — |
 | 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | ☄️閃現 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節） | — |
 | Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | ☄️閃現 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記 | — |
 | Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；Reddit r/artificial 週熱門標記（詳見細節） | — |
@@ -191,7 +192,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Reddit r/ClaudeCode 週熱門：為何 Claude Code 常先估「約 3 天工時」，實際執行卻僅需約 20 分鐘完成 | 2026-08-19 · 2026-08-19 | 🔥 | 🌙靜候 | 使用者提問：Claude Code 常估工時「約 3 天」，實際僅需約 20 分鐘完成，原因不明（Reddit 週熱門） | — |
 | Reddit r/ClaudeCode 週熱門：貼文宣稱樹莓派上跑的 22GB 本地模型於「真實世界編碼任務」表現超越 Claude Code + Opus 5 High | 2026-08-19 · 2026-08-19 | 🔥 | 🌙靜候 | 貼文宣稱樹莓派 22GB 本地模型編碼任務表現超越 Opus 5 High，**未附任何 benchmark 數據**，訊號極弱 | — |
 | What We Learned Moving Our Agent Loops from Anthropic to GLM：團隊分享盲測結果與遷移原因 | 2026-08-18 · 2026-08-18 | 🔥 | 🌙靜候 | Unblocked 團隊分享將 agent 流量自 Claude Opus 遷移至 GLM 5.2 的盲測結果與原因；HN score 18 | — |
-| 「Anthropic's War on open source AI」批評文於 HN 引發熱議，留言區另質疑該文本身是否由 AI（疑似 Grok 假扮 Claude）代筆 | 2026-08-17 · 2026-08-17 | 🔥🔥🔥 | 🌙靜候 | 「Anthropic's War on open source AI」批評文於 HN 引熱議（score 146），留言另疑該文由 AI（Grok 冒充 Claude）代筆 | — |
 | GitHub Issue：「Bring Back Buddy」——`/buddy` skill 隨 v2.1.97 無預警消失，社群發起統整請願 | 2026-08-11 · 2026-08-11 | 🔥🔥🔥 | 🌊延燒 | `/buddy` skill 隨 v2.1.97 無預警消失，Issue #45596 留言持續增長至 268、👍 2076，18 天後仍在累積，升格 🌊延燒 | — |
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌊延燒 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌊延燒 | 額度焦慮系列延燒，08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
@@ -202,10 +202,11 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 > 當時熱度的意思是首見那時的討論規模：🔥🔥🔥🔥🔥 跨平台廣泛熱議 / 社群兩極化；🔥🔥🔥 單平台高互動 / 議題共鳴深；🔥🔥 多次被引用 / 催生後續工具；🔥 值得關注但尚未擴散
 
-**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。
+**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。「Anthropic's War on open source AI」批評文引發熱議（08-17）本輪滿載讓位移出，原文見 [[topics/community-tech-discussions#2026-08]]。
 
 **最近在討論什麼細節**
 
+- **Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent**：發起人面試時觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正理解自己在做什麼感到不安；HN score 38；與本頁「Skill Atrophy 與技藝認同」長期議題同軸，補上「招募方視角」；[原文](https://news.ycombinator.com/item?id=49768826)（HN）
 - **有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析**：涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制（子 agent 共享 prompt cache 前綴省 95% 成本）；非官方逆向分析，未經 Anthropic 確認；HN score 17；[原文](https://claude-code-from-source.com/)（HN）
 - **Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範**：使用者觀察未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制，主張是否該有額外規範；僅單方觀點，未見反方論述；Reddit r/artificial 週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wirqzs/i_wonder_if_ai_agents_and_ai_usage_should_have/)（Reddit · 週熱門）
 - **Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 優化 Agent Skill**：主張既有優化多走 generate–execute–analyze–refine 迴圈，改用 contextual bandits；效率數字未見於摘要；週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wf8b61/cobraskills_contextual_bandits_for_efficient/)（Reddit · 週熱門）
@@ -264,6 +265,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Ask HN：後 AI 時代該怎麼面試工程師——約八成受訪者已改為指揮 agent（2026-09-19）
+
+- **來源：** 「Ask HN: How do you interview devs in a post-AI world?」— Hacker News（38 分）；[原文](https://news.ycombinator.com/item?id=49768826)
+- **核心論點：** 發起人面試時觀察，約八成受訪求職者坦言已改為指揮 AI agent 而非親自寫程式；他仍想確認團隊成員真正會寫程式、理解自己在做什麼，對純粹「指揮 agent」的招募現況感到不安
+- **關鍵回響：**（本次摘要未提供留言區細節，暫無可記錄項目）
+- **收斂結論：**（無）單一 HN 貼文，尚無跨平台佐證；與本頁「Skill Atrophy 與技藝認同」長期議題相關但角度不同——既有討論多聚焦被輔助者自身的能力／認同退化，本則首次從「招募方如何評估候選人」角度切入同一現象
 
 #### AGENTS.md 支援正式上線，社群點出 .agents/skills 缺口（2026-09-19）
 

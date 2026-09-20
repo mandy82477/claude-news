@@ -33,7 +33,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-20
 
 > **最新工作流模式**（2026-09-20）
-> - **Skill 品質稽核補安全架構第二取向**：216 個公開 skill 稽核，69% 觸發寫法不可靠；87 subagent 中 57% 未宣告 tools，85% 不符最小權限，與 agent-scan 互補（掃工具 vs 掃結果）。
+> - **多 agent 信任與驗證層添一方案**：Chief of Staff Pattern 主張一個 session 協調驗證、其餘 session 執行，狀態放外部看板，宣稱要重跑驗證才採信。
+> - **codebase 知識索引再添一例**：aoci-code 把整個程式庫與資料庫結構做成持久化 Git 版控索引，供 agent 動手前先讀。
 
 ---
 
@@ -51,13 +52,13 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community、hcom（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-16 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、proliferate、hunter-community、hcom、pstack-claude（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-20 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-17 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、已否決方案索引、OzBrain、gentle-ai、hister、Skillsync（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-18 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、已否決方案索引、OzBrain、gentle-ai、hister、Skillsync、aoci-code（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-20 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
@@ -140,7 +141,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 缺口 | 文獻主張 | 現況 | 狀態 |
 |---|---|---|---|
-| 通訊原語 | 共享黑板需補直接傳訊與事件驅動 | cross-session 傳訊 v2.1.224 起預設開啟，任意 session 皆可互傳 | 已補（2026-09-06 查證） |
+| 通訊原語 | 共享黑板需補直接傳訊與事件驅動 | cross-session 傳訊 v2.1.224 起預設開啟，任意 session 皆可互傳，涵蓋跨機器；共享頻道式 A2A（issue #28300）仍缺，見 [[topics/official-community-gap]] | 已補（2026-09-06 查證；措辭於 2026-09-20 依 official-community-gap 對齊） |
 | 編排者與工人的脈絡交接 | 工人需承接編排者的上下文才接得住任務 | fork 型 subagent 繼承整段對話與工具集，互動 session 預設開啟 | 已補（2026-09-06 查證） |
 | 強拆分者勝過強執行者 | 應把強模型或人力投在拆分 | subagent 定義有 model 欄，呼叫時可另行指定，也有全域環境變數；官方團隊文件建議隊友用 Sonnet | 已補（2026-09-06 查證） |
 | 動態粒度 | 拆分粒度應按執行者能力當場調整 | 官方只有工作流大小三檔靜態旋鈕，截至查證日未見動態粒度 | 未補（2026-09-06 查證） |
@@ -162,6 +163,42 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### Orchestrating Claude Code Agents: The Chief of Staff Pattern——協調驗證 session ＋ 外部持久看板的多 agent 編排架構（2026-09-20）
+
+- **主線：** 除錯分工
+- **核心模式：** 部落格文章主張長時程 AI coding 任務失敗多因 context 易逝、agent 自我回報不可靠，而非模型不會寫程式碼；解法是組織性而非技術性：一個 session 負責協調與驗證，其餘 session 各自執行，狀態放進外部持久看板（不依賴 agent 自陳），且每一項宣稱在被採信前都重新執行驗證一次；HN 24 分。
+- **與既有模式的關係：** 呼應本頁「Multi-agent 架構」既有 orchestrator 分派技巧，並補上「缺口追蹤：文獻主張×Claude Code 現況」表「信任與驗證層」（現況：官方仍空白、社群工具正長在這個缺口上、未補）一個具體命名方案——用外部看板取代 agent 自我回報、每項宣稱重跑驗證；本文無公開 repo，僅為部落格架構描述，暫不併入既有代表技巧列；context 易逝與跨 session 協調正是大型 codebase 長時程任務的特有痛點，主線填除錯分工。
+- **可信度註記：** 單一部落格文章，HN 24 分、單一來源，機制描述具體但未見程式碼或可複現實作，尚無其他來源佐證。
+- **來源：** Hacker News；[原文](https://asyncdot.com/blog/chief-of-staff-pattern-orchestrating-claude-code-sessions/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者架構提案，尚無社群採用回饋數據）
+
+#### aoci-spec/aoci-code：程式庫與資料庫結構持久化 Git 版控索引，供 coding agent 動手前先讀（2026-09-20）
+
+- **主線：** 索引記憶
+- **核心模式：** 開源 local-first MCP server ＋ CLI（Go 撰寫），把整個程式庫與資料庫結構做成持久化、Git 版控的知識索引，供 Claude Code、Codex、Cursor、opencode 等 coding agent 在動手前先讀取，訴求給 agent 跨 session 的長期 context、記憶與程式碼完整性守護；GitHub Search 累積 446 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」類別一種「治理化程式碼知識索引」取向的做法——既有代表技巧（OKF、hister 等）多聚焦團隊知識格式或個人瀏覽歷史，本則鎖定「codebase 本身結構＋資料庫 schema」做成 agent 可讀的持久索引；大型 codebase 下 agent 記不住跨 session 決策正是此類工具要解的痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（446★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/aoci-spec/aoci-code)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### michael-denyer/pstack-claude：把 Cursor agent workflow 基礎架構移植給 Claude Code、Codex、opencode 等 harness（2026-09-20）
+
+- **主線：** —
+- **核心模式：** 開源工具將 Cursor 的 agent workflow 基礎架構移植給 Claude Code、Codex、OpenCode、Gemini、Prime Agent 等其他 harness 使用；GitHub Search 累積 504 星。
+- **與既有模式的關係：** 延伸「Multi-agent 架構」既有跨 harness 可攜取向（omnigent 解耦協調邏輯與底層 harness、hcom 跨終端傳訊），本則把 Cursor 專屬的工作流基礎架構整包移植到五種其他 harness；是否屬大型 codebase 特有痛點拿不準，工作流可攜性對任何規模專案皆適用（推論），暫填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（504★），無 forks／issues／近期 commit 佐證可查，未另行查證；「Cursor agent workflow 基礎架構」具體機制未見詳細說明。
+- **來源：** GitHub Search；[GitHub](https://github.com/michael-denyer/pstack-claude)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### CodeZeno/Claude-Code-Usage-Monitor：Windows 工作列小工具追蹤 Claude Code／Codex／Cursor 用量上限與重置時間（2026-09-20）
+
+- **主線：** —
+- **核心模式：** Windows 工作列小工具，追蹤 Claude Code、Codex、Cursor 等工具的用量上限與重置時間；免費開源；GitHub Search 累積 500 星。
+- **與既有模式的關係：** 與 09-16 收錄的 AThevon/TokenEater（macOS 原生 App 監控用量並即時觀看 session）同屬額度監控可視化取向，本則為 Windows 平台版本；也與 07-03「額度監控與自動恢復工具生態」（CCLimitPing、LimitBar）同屬回應額度焦慮系列痛點的輔助工具；非大型 codebase 特有痛點，暫填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/CodeZeno/Claude-Code-Usage-Monitor)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### snyk/agent-scan：Snyk 推出 AI agent、MCP server 與 agent skills 安全掃描器（2026-09-18）
 
