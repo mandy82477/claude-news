@@ -230,6 +230,10 @@
         {
           "id": "ai-agent-safety",
           "pageType": "topic"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
         }
       ]
     },
@@ -499,6 +503,11 @@
     {
       "id": "dario-amodei",
       "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5 與 5.1",
       "pageType": "entity"
     },
     {

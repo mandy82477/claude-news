@@ -379,6 +379,10 @@
         {
           "id": "ai-agent-safety",
           "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
         }
       ]
     },
@@ -413,7 +417,13 @@
       "time": "09/17 18:06",
       "sentiment": "",
       "body": "作者對公開 repo 中的 Claude Code skills／subagents／slash commands 掃描發現：216 個 skill 裡 69% 觸發條件寫法有問題；87 個 subagent 中 57% 完全沒宣告 `tools` 清單、等於繼承呼叫者整組工具權限，加上另外授予裸 `Bash` 或萬用字元的，合計 85% 的樣本不符最小權限原則。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "sandbaseai/cli",
@@ -623,11 +633,6 @@
     {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
     },
     {

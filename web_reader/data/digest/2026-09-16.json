@@ -582,11 +582,6 @@
   "preview": "Claude Code：Max 方案額度異常耗盡衝上全站互動最高：issue #38335 留言 837→855、👍 543→545，今日全站聚焦頭條。",
   "sedimentedToday": [
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
       "id": "jensen-huang",
       "name": "Jensen Huang",
       "pageType": "entity"
