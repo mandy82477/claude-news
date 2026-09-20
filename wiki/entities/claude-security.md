@@ -12,7 +12,7 @@ parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
 days_since_news_subtree: 29
-inbound_links: 10
+inbound_links: 11
 attribution_count: 3
 attribution_last: "2026-08-22"
 top_source: "google-news"

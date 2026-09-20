@@ -112,3 +112,5 @@
 {"date": "2026-09-19", "week": "2026-W38", "forecast": "AGENTS.md 支援的兩個缺角（本列於收尾補掃時改判，原本賭的是官方會不會表態——v2.1.277 已出貨，改盯剩下的缺口）：不支援 Bedrock／Vertex／Foundry，也不含 `.agents/skills` 資料夾", "origin": "新立", "probe": "Bedrock", "entries": []}
 {"date": "2026-09-19", "week": "2026-W38", "forecast": "AGENTS.md 支援的兩個缺角（本列於收尾補掃時改判，原本賭的是官方會不會表態——v2.1.277 已出貨，改盯剩下的缺口）：不支援 Bedrock／Vertex／Foundry，也不含 `.agents/skills` 資料夾", "origin": "新立", "probe": "Vertex", "entries": []}
 {"date": "2026-09-19", "week": "2026-W38", "forecast": "AGENTS.md 支援的兩個缺角（本列於收尾補掃時改判，原本賭的是官方會不會表態——v2.1.277 已出貨，改盯剩下的缺口）：不支援 Bedrock／Vertex／Foundry，也不含 `.agents/skills` 資料夾", "origin": "新立", "probe": "agents/skills", "entries": []}
+
+{"date": "2026-09-20", "week": "2026-W37", "forecast": "配額換軌之後：09-14 起永久 +25% 取代暫行 +50%，對用滿的人淨減約 17%（換軌前無事可做，換軌後看回報）", "origin": "續盯", "probe": "人工補登：更正已完成", "entries": [], "note": "覆蓋上方三列的指示：使用者 2026-09-20 同意改 W38，該列已於 W38 本身更正為 ✅ 結案（併回既有的撞上限敘事）並在回收表導言註明同日更正。W39 回收表不會再有這一列，不需另計判錯。"}

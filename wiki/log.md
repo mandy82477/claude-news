@@ -6662,3 +6662,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **無發現**：頭條「使用者側開篇」規則運作正常；九期深挖零重複；來源紀律無缺口。
 - **處置**：(a) `check_weekly_ledger.py` 新增 `check_probe_liveness()`——新開預告整組探針在當週日報零命中即硬擋，W39 起生效；已親手改壞驗紅（生效期調至 W37 精準抓到那兩條，W31–W35 零誤擋），附 6 個單元測試。(b) `forecast.md` 補「探針用日報的詞」「零命中是疑點不是結論」「會不會修型每期至多 2 條、優先排定催化劑」。(c) `deepdive.md` 要求對每條 ⏳ 興趣各寫一行「本週哪個事件算它的訊號」。(d) `weekly-report/SKILL.md` 步驟 2 開頭先 `git pull --rebase`。(e) W38 已凍結不回改；漏掉的 3 則訊號已補登 `weekly/open-signals.jsonl`，W39 回收表須更正並於摘要計入判錯 1 筆。
 - **歸因**：`user-query`。
+
+## 2026-09-20 Query：W38 整期改版＋週報選材判準改寫（使用者裁示「W38 可以改、主題也可以改；選材範圍太少、寫出來沒有直接幫助」）
+
+- **W38 整期重寫**（覆蓋上一筆處置 (e) 的「已凍結不回改」——使用者同日明示可改）：頭條與深挖改為「Claude Code 開始讀 AGENTS.md，但 repo 有 CLAUDE.md 時不會讀」。深挖教四個會讓 AGENTS.md 安靜失效的情況（上層任一 CLAUDE.md、`CLAUDE.local.md`、升版後第一個 session、`.agents/` 不讀）與 `@AGENTS.md` 匯入修法；綜述改收 40 萬 session 研究、216 個 skill 稽核、外掛零點擊漏洞等可直接用的材料。一手來源於 2026-09-20 查證：code.claude.com/docs/en/memory、anthropic.com/research/claude-code-expertise、skillcrossroads.com/report。
+- **回收表更正**：W37「配額換軌之後」由「零實測回報、續盯」改判 ✅ 結案（當週 5 則相關條目，併回既有撞上限敘事），導言註明同日更正；`weekly/open-signals.jsonl` 補一列覆蓋先前「W39 須計判錯 1 筆」的指示。
+- **選材判準改寫**（`.claude/skills/weekly-report/references/deepdive.md`）：新增第一關「讀者下週一用得上嗎」；選題池由「本週事故／成本新聞」擴為五個來源（本週出貨的功能怎麼用、社群驗證過的做法、選型比較、讀者興趣筆記、長燒 issue 機制解剖）；加題材輪替（連續兩期同一群 → 第三期換群，除非該群有頭條級事件）；綜述每期須含「可以直接用的一件事」；機制層解釋由入選門檻改為撐住做法的手段。
+- **驗證**：`check_weekly_ledger.py` ✅ 零警告；`check_rules.py` 零 ❌；`run_tests.py` 全綠。
+- **歸因**：`user-query`。
