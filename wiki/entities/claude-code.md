@@ -31,12 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-19
+**最後新聞更新：** 2026-09-20
 
-> **最新動態**（2026-09-19）
-> - **AGENTS.md 支援上線**：v2.1.277 起專案無 CLAUDE.md 時改讀 AGENTS.md，可在 `/config`「Project instructions」調整，尚未支援 Bedrock／Vertex／Foundry；官方回應全站讚數最高已知問題 #6235（HN 683 分、The Register 同步報導）。
-> - **v2.1.278：Auto mode 免計費 server-side classifier**：Claude API／Enterprise／Bedrock／Vertex／Foundry／閘道器用戶不再為分類器耗用額外計費，`/status` 新增顯示列（`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為）。
-> - **build 新增 3 個功能候選旗標**：`CLAUDE_CODE_PARSED_WILLOW`、`CLAUDE_CODE_PER_TURN_TIMING`、`CLAUDE_CODE_SESSION_START_ANNOUNCEMENTS_BEFORE_PROMPT`；見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-09-20）
+> - **Cowork（Windows）新增已知問題**：09 月累積更新致 device_bash 失效（#92958），與既有 Plan9 掛載失敗（#92984）同源不同現象。
+> - **Plugin4Shell 跨 agent 零點擊 RCE**：影響 Claude Code、Codex、Copilot、Gemini CLI，僅標題可用，觸發機制與修補時程未見報導。
+> - **GitSpawn `.git` 設定檔攻擊查證**：Claude Code 已於 v2.1.196 部分修補，09-01 覆測一條執行路徑仍未修補。
 ---
 
 ## 現況
@@ -130,12 +130,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 🛡️ 安全與隱私（16 條未修復、3 條已修復、1 條拒修、1 條❓）
 
+- 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews／The Information，2026-09-17～09-18 報導）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，影響 Claude Code 與 Codex、Copilot、Gemini CLI 等多款主流編碼 agent；僅標題層級可用，具體觸發機制、是否已通報官方與修補時程均未見報導。事件完整分析見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**GitHub Actions 預設範本三家 AI coding agent 通用 RCE 缺陷（Reddit r/artificial 週熱門，2026-09-14）**：Claude Code、Gemini CLI、Codex 官方 Actions 範本皆傳有同款可致 RCE 的設定缺陷。
   - 僅見 Reddit 轉載，未附具名研究者、CVE 或官方回應，受影響版本與修復狀態未知，待原始來源或官方公告確認；跨產品面另見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**安裝安全警示：Google 搜尋廣告曾出現仿冒官方安裝包**（多家資安媒體同步報導）：假冒包植入 Trojan:Win32/Kepavll!rfn，透過 IElevator 機制竊取瀏覽器 Cookie 與機密憑證；**務必僅從官方來源安裝：`github.com/anthropics/claude-code`**。
 - 🔴 **未修復（08-31 補上量化數字，嚴重度升級）**｜**Opus 5 Auto Mode 安全機制遭具名研究者繞過，並有實際惡意程式碼利用案例（embracethered／Simon Willison／Cybernews／The Register，2026-08-27～08-31）**：資安研究者 embracethered（經 simonwillison.net 轉載，2026-08-27）公布可繞過 Claude Code Opus 5「Auto Mode」（低監督／高自動化預設權限模式）安全機制、誘使 agent 在未經授權情況下執行任意程式碼的攻擊手法；Cybernews（2026-08-28）補充至少一起實際遭惡意程式碼利用的在野案例，**在野案例中 Claude 曾嘗試修復被植入的惡意程式碼，但修復動作遭拒絕執行**。**08-31（embracethered／The Register）補上量化數字**：小樣本測試中僅需請 Claude Code 摘要一個網頁即可觸發，提示注入攻擊成功率達 **60–80%**，與 Anthropic 委託第三方針對 Auto Mode 的評測宣稱 **0%** 形成明顯落差（兩個數字並陳，不擇一；樣本規模與雙方評測方法論均未見完整揭露）。屬產品層安全（權限／沙箱繞過）問題，非模型層問題；官方尚未公開回應或就實測數字提出說明。**Tech Times／The Next Web（2026-09-01～09-02 轉載跟進）** 重申「僅需請 Auto Mode 摘要一個網頁即可劫持該次執行」並稱**官方目前尚無修復計畫**——此為媒體轉述而非 GitHub issue 上的官方明確回覆，故仍標 🔴 未修復而非 ⛔ 官方拒修。與既有 v2.1.216／v2.1.223 修補的 Auto Mode 繞過（見下方「已修復」條目）屬相關但不同批次的發現。事件完整分析見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**僅需請 Claude Code 摘要一個網址即可誘發信任 llms.txt 內容而產生非預期行為（The Register，2026-08-29～08-30 報導）**：The Register 揭露 Claude Code 會將目標網站 `llms.txt` 檔案內容視為可信指令來源，使用者只需請 Claude 摘要或讀取一個網址，該網址若帶有惡意撰寫的 `llms.txt`，即可誘發非預期行為，屬產品層攻擊面問題（信任邊界設計缺陷），非單一 bug；官方尚未公開回應或提供修補說明。與已知 GitHub Issue 內容經 prompt injection 執行任意程式碼（CVE-2026-54316，見下方「已修復」）同屬信任邊界／注入攻擊面議題，但觸發媒介不同（llms.txt vs CI runner 內容），暫分列追蹤。
-- 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：報導揭露惡意撰寫的 `.git` 設定檔（如 core.fsmonitor、hooks 相關設定）可誘使 Claude Code、Codex、Cursor 等多款 AI coding agent 在讀取該 repo 時執行攻擊者指定的程式碼，非 Claude Code 單一產品缺陷，而是多款 agent 共通的信任邊界問題（clone／開啟不明來源 repo 即可能觸發）；與上列 llms.txt 信任邊界問題同屬「開啟不明來源內容即可能觸發非預期執行」的同類攻擊面，但觸發媒介為 repo 內的 `.git` 設定而非網頁內容，暫分列追蹤；官方尚未回應。事件完整分析見 [[topics/ai-agent-safety]]
+- 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：報導揭露惡意撰寫的 `.git` 設定檔（如 core.fsmonitor、hooks 相關設定）可誘使 Claude Code、Codex、Cursor 等多款 AI coding agent 在讀取該 repo 時執行攻擊者指定的程式碼，非 Claude Code 單一產品缺陷，而是多款 agent 共通的信任邊界問題（clone／開啟不明來源 repo 即可能觸發）；與上列 llms.txt 信任邊界問題同屬「開啟不明來源內容即可能觸發非預期執行」的同類攻擊面，但觸發媒介為 repo 內的 `.git` 設定而非網頁內容，暫分列追蹤。Claude Code 已於 **v2.1.196** 部分修補；Manifold Security 於 2026-09-01 覆測，其中一條執行路徑仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。事件完整分析見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，累積 195 則留言、22 個讚，2026-08-12 首見，2026-09-04 留言數更新，今日全站已知問題互動量最高）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
   - 09-15（Reddit r/ClaudeAI）一名資安研究者反映已通過 CVP 審核，Opus 5 仍持續標記其研究相關訊息，與本則模式相符；惟未載明是否發生於 Claude Code，僅供旁證。
@@ -304,9 +305,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（68 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（69 條未修復、3 條查無官方、3 條已修復）
 
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
+- 🔴 **未修復**｜**Cowork（Windows）2026-09 累積更新導致 device_bash 失效，ARM64（KB5124012／28000.2954）與 x64（KB5124008／26200.9445）皆受影響，回報者以五台機器 rollback A/B 測試確認（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 共用資料夾掛載失敗（issue #92984）同屬 09-08 累積更新引發的 Cowork Windows 相容性問題，但現象不同（此則為 device_bash 完全失效，非僅資料夾掛載）；官方尚未回應。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）安裝程式因先前一次「顯示成功」實則套件狀態不一致的安裝，導致後續安裝以 HRESULT 0x80073CF6 失敗（GitHub issue #49917，累積 38 則留言、8 個讚）**：官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop（Windows）反覆當機，須進「進階選項→修復」才能恢復（GitHub issue #85199，累積 40 則留言，2026-08-30）**：使用者回報 Windows 版 Claude Desktop 反覆當機，每次都須進入「進階選項→修復」才能恢復使用，屬穩定性問題；官方尚未回應。
@@ -705,6 +707,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-20 | 新增已知問題 2 則：Cowork（Windows）device_bash 因 09 月累積更新失效（#92958，與 #92984 同源不同現象）、Plugin4Shell 跨 agent 零點擊 RCE（僅標題可用）。GitSpawn（.git 設定檔攻擊）補記 v2.1.196 部分修補、Manifold 09-01 覆測一條路徑仍未修補。 |
 | 2026-09-19 | v2.1.278 免計費 classifier；v2.1.277 AGENTS.md 上線，#6235 轉✅。新增 #11315。旗標增3消1，見 [[topics/claude-code-experimental]]。互動4則。 |
 | 2026-09-18 | **v2.1.276** 修復 400 錯誤迴歸。Projects 進 Beta，六媒體報導。旗標增減各 2，見 [[topics/claude-code-experimental]]。互動數更新 5 則。 |
 | 2026-09-17 | **v2.1.274** 新增記憶體警示旗標。桌面文件新增帳號 skills/plugins 載入規則。TradingView MCP Server（第三方）。互動數更新、❓ 標記各 1 則，詳見各節。 |
