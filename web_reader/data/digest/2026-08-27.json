@@ -658,6 +658,11 @@
       "pageType": "entity"
     },
     {
+      "id": "opus-4-8-archive",
+      "name": "Claude Opus 4.8 · 原始條目",
+      "pageType": "entity"
+    },
+    {
       "id": "opus-4-8",
       "name": "Claude Opus 4.8",
       "pageType": "entity"

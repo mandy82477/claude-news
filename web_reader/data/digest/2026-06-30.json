@@ -348,6 +348,11 @@
       "id": "official-community-gap-archive",
       "name": "官方功能 vs 社群痛點缺口分析——原始條目封存",
       "pageType": "topic"
+    },
+    {
+      "id": "safety-china-trust-dispute-archive",
+      "name": "中美 AI 工具信任對峙 — 原始條目封存",
+      "pageType": "topic"
     }
   ]
 }

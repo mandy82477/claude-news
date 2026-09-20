@@ -241,5 +241,11 @@
     }
   ],
   "preview": "Anthropic 本週正式推出 Claude Managed Agents，多代理人協作從社群自組架構走向官方托管服務，multi-agent 工作流程的官方與社群方案邊界開始重新定義。",
-  "sedimentedToday": []
+  "sedimentedToday": [
+    {
+      "id": "long-context-1m-archive",
+      "name": "1M context：加不加價、你能不能關——原始條目封存",
+      "pageType": "topic"
+    }
+  ]
 }

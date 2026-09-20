@@ -15,6 +15,16 @@
   "preview": "",
   "sedimentedToday": [
     {
+      "id": "managed-agents-archive",
+      "name": "Managed Agents——原始條目封存",
+      "pageType": "entity"
+    },
+    {
+      "id": "opencode-archive",
+      "name": "OpenCode——原始條目封存",
+      "pageType": "entity"
+    },
+    {
       "id": "opencode",
       "name": "OpenCode",
       "pageType": "entity"
