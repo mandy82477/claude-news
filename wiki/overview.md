@@ -84,7 +84,7 @@
 
 10. **[[topics/safety-china-trust-dispute]]**（monitoring，長期無新進展）
 
-11. **[[topics/anthropic-commitments]] — 承諾兌現追蹤**：本輪新增 Fable 5 恢復訂閱內含承諾（🔴 未兌現，社群轉述待官方一手查證）
+11. **[[topics/anthropic-commitments]] — 承諾兌現追蹤**：Fable 5 恢復訂閱內含一項已結案（⛔ 查證確認官方從未做過此承諾，2026-09-20；詳見 [[entities/pricing]] 2026-08-28 節）
 
 12. **[[topics/code-quality-decline]]**（ongoing）— 三條退步線只有 2026-04 那條有官方說法，另兩條官方未回應
 
