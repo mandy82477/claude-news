@@ -197,9 +197,27 @@ def _horizontal(value: str) -> str | None:
     return None
 
 
+ELEVATION_SHADOW_RE = re.compile(
+    r"box-shadow\s*:\s*(?!none)(?P<val>[^;}]+)", re.I)
+
+
+def _is_elevation_shadow(value: str) -> bool:
+    """非零偏移的 box-shadow ＝ 抬升陰影（禁止清單）；零偏移的是 ring，放行。
+
+    禁止清單擋的是「紙張浮起來」那個效果，不是 box-shadow 這個屬性本身——
+    focus ring 與 pulse 動畫都寫成 `0 0 0 Npx`（無偏移），那是環不是陰影。
+    判準因此看前兩個長度值：有任一個非零就是把東西墊高，落在禁止清單內。
+    """
+    nums = re.findall(r"(-?[\d.]+)(px|rem|em)", value)
+    if len(nums) < 2:
+        return False
+    return any(float(n) != 0 for n, _ in nums[:2])
+
+
 def scan(files: list[Path]) -> dict:
     dead: list[dict] = []
     shorthand: list[str] = []
+    shadows: list[str] = []
 
     for path in files:
         try:
@@ -211,6 +229,12 @@ def scan(files: list[Path]) -> dict:
             rel = path.relative_to(REPO_ROOT).as_posix()
         except ValueError:
             rel = path.name
+
+        for m in ELEVATION_SHADOW_RE.finditer(_strip_comments(text)):
+            val = m.group("val").strip()
+            if _is_elevation_shadow(val):
+                line_no = text[: m.start()].count("\n") + 1
+                shadows.append(f"{rel}:{line_no}  box-shadow: {val}")
 
         for idx, r in enumerate(rules):
             if r.media is None:
@@ -261,7 +285,7 @@ def scan(files: list[Path]) -> dict:
                     )
                     break
 
-    return {"dead": dead, "shorthand": shorthand}
+    return {"dead": dead, "shorthand": shorthand, "shadows": shadows}
 
 
 def resolve_globs() -> list[Path]:
@@ -332,6 +356,18 @@ def main(argv: list[str] | None = None) -> int:
 
     for line in res["shorthand"]:
         stream.write(f"WARN: {line}\n")
+
+    if res["shadows"]:
+        stream.write(
+            "\nFAIL: 抬升陰影 — `.claude/rules/web-reader-design.md` 禁止清單："
+            "抬升用 hairline 邊框＋底色對比＋overlay 模糊做，不用陰影\n"
+            "（focus ring／pulse 那種零偏移的 `0 0 0 Npx` 不在此限，本檢查不會擋）\n\n"
+        )
+        for line in res["shadows"]:
+            stream.write(f"  {line}\n")
+        stream.write("\n")
+        stream.flush()
+        return 1
     if legacy:
         stream.write(f"WARN: 存量基線內 {len(legacy)} 筆死媒體查詢（修好一筆就從基線移除）\n")
 

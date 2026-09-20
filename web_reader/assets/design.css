@@ -1815,7 +1815,7 @@ code {
   width: 100%; max-width: 600px; margin: 0 16px;
   background: var(--bg-1); border: 1px solid var(--border-2);
   border-radius: var(--radius-2);
-  box-shadow: 0 24px 64px rgba(26,24,20,0.18);
+  /* 不用抬升陰影：底色＋hairline＋overlay 的 backdrop-filter 已做完區隔（禁止清單） */
   overflow: hidden;
   animation: search-in 140ms ease;
 }

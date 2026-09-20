@@ -94,9 +94,12 @@ paths:
 
 ## 禁止清單
 
-- ❌ gradient（background 和 border 都不行）
+- ❌ **裝飾性漸層**（background 和 border 都不行）
+  - 禁的是「看得出漸層」這個**效果**，不是 `linear-gradient()` 這個函式。用 `repeating-linear-gradient` 畫 **1px 虛線分隔線**（實 4px／空 4px 交替，等價於 `border-style: dashed`、只是 dash 長度可控）不在此限——它產生的是一條虛線，不是漸層。
+  - 判斷式：**把它截圖給人看，他會說「這裡有漸層」嗎？** 不會 → 不是本條要擋的東西。
 - ❌ box-shadow（除非是 focus ring）
  - 品牌 token 檔（`.claude/skills/claude-news-llm-wiki-design/colors_and_type.css`）定義的 `--shadow-1/--shadow-2`（"one whisper for elevated paper"）在本站**刻意不使用**——2026-07-26 美感 review 曾提議放寬給三處抬升容器，使用者裁決維持全面禁用。此為已裁決事項，後續 review 不需再提
+ - **抬升要用本站自己的語彙做**：hairline 邊框＋底色對比＋（必要時）overlay 的 `backdrop-filter`，不用陰影。`.search-modal` 曾有一道 `0 24px 64px` 的抬升陰影（2026-05-15 寫入，早於上述裁決故漏網），2026-09-20 移除——該 modal 本來就有 `--bg-1` 底色、hairline 邊框與 overlay 模糊三重區隔，陰影是多的
 - ❌ 平台 emoji 作為 UI 圖示
 - ❌ `--font-mono` 用在 UI 控制元件
 - ❌ 第二強調色（只有 ochre）
