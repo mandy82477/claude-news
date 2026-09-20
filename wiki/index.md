@@ -39,7 +39,7 @@
 |------|------|------|------|------|
 | [[entities/sonnet-5]] | model | 🤖 模型 | active | Claude Sonnet 5：Claude Code v2.1.197 預設模型，1M context，$2/$10 per Mtok 標準價（08-10 永久化），agentic 效能接近 Opus 4.8 |
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | active | Claude Science：科學家專用 AI 工作台，整合研究工具套件、可稽核 artifact、彈性運算資源；Anthropic 宣布自行開發藥物 |
-| [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具 |
+| [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]] |
 | [[entities/opus-5]] | model | 🤖 模型 | active | Claude Opus 5：現行次旗艦，$5/$25 與 4.8 同價、知識晚四個月；Max／Team premium／API 的預設 Opus（Claude Code 整體預設仍 Sonnet） |
 | [[entities/opus-4-8]] | model | 🤖 模型 | active（Legacy） | Opus 4.8：SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用；官方已列 Legacy、退役不早於 2027-05-28，建議遷移至 [[entities/opus-5]]　↳ 子故事：[[entities/opus-4-8-archive]] |
 | [[entities/opus-4-7]] | model | 🤖 模型 | active（已被取代）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |

@@ -4,13 +4,13 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-19"
 status_main: "active"
 days_since_news: 1
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/claude-code-archive']"
+page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 105
 attribution_count: 560
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-19
 
 > **最新動態**（2026-09-19）
@@ -839,30 +839,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-05-02 | v2.1.126：`/model` 選擇器現在從 gateway 的 `/v1/models` 端點列出模型（適用於 `ANTHROPIC_BASE_URL` 自訂 gateway 場景）；新增 `claude project purge` 指令 |
 | 2026-05-02 | 社群工具：Omar（100 agent TUI 管理）、graphify（知識圖譜插件 450k+ 下載）、NanoBrain（git-backed 知識庫）、Council（多模型並行 CLI）、Destiny（占卜技能）、Mote（Minecraft agent）|
 | 2026-05-02 | GameMaker 正式啟用 Claude Code 整合（AI 輔助遊戲開發工作流程），iCapital 金融平台採用 Anthropic 技術 |
-| 2026-04-30 | GameMaker 宣布整合 Claude Code，為遊戲開發者提供 AI 輔助工作流程 |
-| 2026-04-30 | v2.1.124 系統提示更新：新增「File modification detected」預算超出提醒機制（+166 tokens）；v2.1.126 精簡核心身份指令（-87 tokens） |
-| 2026-04-30 | Claude Security 公開測試版推出，情境化安全評估直接整合於 Claude Code；見 [[entities/claude-security]] |
-| 2026-04-30 | TypeScript SDK v0.92.0：改善 Managed API 相關功能 |
-| 2026-04-30 | Anthropic 定位為「agentic AI 的 AWS」：Managed Agents + Persistent Memory 公開測試版 |
-| 2026-04-29 | Anthropic 發布官方「Champion Kit」：為推動企業採用 Claude Code 的工程師設計，含 30 天推廣計畫、常見疑慮應對話術與分享素材 |
-| 2026-04-29 | 社群工具：Cockpit（Web UI）、Harness（多 worktree 並行 agent）、CodeThis（MCP paste bin）、Claude Exporter（匯出至 PDF/Word/Notion）|
-| 2026-04-28 | v2.1.121 發布：MCP `alwaysLoad` 選項（設為 true 跳過 tool-search 延遲）、`claude plugin prune` 清除舊外掛 |
-| 2026-04-28 | Runhouse 團隊股權收購：分散式 AI 基礎設施與計算編排專家加入 Anthropic，強化 agentic 工作流底層架構 |
-| 2026-04-28 | Auto Compact 失效事件被回報，session 鎖死問題無法通過重啟解決 |
-| 2026-04-28 | Anthropic 為 Managed Agents 加入跨會話記憶功能（正式公告） |
-| 2026-04-27 | API 金鑰外洩漏洞被媒體報導：可能在自動化流程中洩漏至 npm 等公開倉庫 |
-| 2026-04-27 | HERMES.md 計費 bug 引發更廣泛媒體關注，確認損失達 $200，等待修復 |
-| 2026-04-27 | 版本從 2.1.120 回滾至 2.1.119，疑似靜默撤版 |
-| 2026-04-27 | 28 個滲透測試子代理人開源工具 pentest-ai-agents 釋出 |
-| 2026-04-26 | HERMES.md 計費路由 bug 曝光，Anthropic 確認但拒絕退款 |
-| 2026-04-26 | Anthropic 測試 Bugcrawl 漏洞偵測工具，見 [[entities/bugcrawl]] |
-| 2026-04-26 | Anthropic 工程部落格詳解 Claude Research 多代理架構設計 |
-| 2026-04-26 | 多個社群工具發布：Claude Squad（多人協作）、mux0（多 agent 終端）、agent-order（Codex+Claude PRD 協作） |
-| 2026-04-25 | 社群開發 CC-Canary 工具自動偵測效能漂移 |
-| 2026-04-24 | Stop hooks 失效問題被回報（Claude 4.7） |
-| 2026-04-24 | Anthropic 正式承認效能退步源於工程疏失 |
-| 2026-04 | Google 開始秘密開發競品 |
 | ~2026-03 | 效能退步開始，社群陸續察覺 |
+
+### 2026-04 時段總結
+- 04-24～04-25：Anthropic 正式承認效能退步源於工程疏失（詳見「已知問題」）；Stop hooks 失效回報；CC-Canary 工具興起偵測效能漂移。
+- 04-26～04-27：HERMES.md 計費 bug 曝光擴大媒體關注（詳見「已知問題」）；版本疑似靜默撤版；API 金鑰外洩經媒體報導（詳見「已知問題」）；Anthropic 測試 Bugcrawl（見 [[entities/bugcrawl]]）。
+- 04-26～04-27（續）：Claude Research 架構部落格；pentest-ai-agents 釋出；社群工具 Claude Squad／mux0／agent-order。
+- 04-28：v2.1.121（MCP `alwaysLoad`、`claude plugin prune`）；Runhouse 團隊股權收購；Managed Agents 加入跨會話記憶正式公告；Auto Compact 失效事件回報（詳見「已知問題」）。
+- 04-29：官方發布 Champion Kit 企業推廣素材；社群工具 Cockpit／Harness／CodeThis／Claude Exporter 發布。
+- 04-30：Claude Security 公開測試版推出（見 [[entities/claude-security]]）；GameMaker 整合公告；v2.1.124 系統提示更新；TypeScript SDK v0.92.0；Anthropic 定位「agentic AI 的 AWS」（Managed Agents + Persistent Memory 公測）。
+- 2026-04（月）：Google 被指秘密開發競品。
+- 原始條目見 [[entities/claude-code-archive#2026-04]]
 
 **懸置細節**
 - ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-10-18）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。
