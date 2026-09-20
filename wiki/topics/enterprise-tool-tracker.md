@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Microsoft**（❌ 已停用 Claude Code）：成本考量；2026-06-21 確認於 Fable 5 封鎖期間加速退出，2026-06-22 The Jerusalem Post 跟進確認系統性降低對 Claude 依賴，GitHub Copilot 為主要替代方案
 - **JPMorgan Chase**（❌ 已退出）：香港分行因出口管制被迫退出
 - **Alibaba**（❌ 已禁用）：資安疑慮禁用 Claude Code，明確改用內部工具 Qoder
-- **Goldman Sachs、OKX**（❌ 已退出）：於香港被切斷 Claude AI 存取權限，涉及地緣政治與合規因素，成因未明（外觀近似 JPMorgan Chase 香港退出案例，同源查證見下表 ⟨Q-03⟩ 標記）
+- **Goldman Sachs、OKX**（❌ 已退出）：於香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 案不同源（已查證 ⟨Q-03⟩，見下表）
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
@@ -88,7 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | PicPay | 大型（巴西金融科技公司） | Claude API（對話式 AI 金融服務） | ✅ | 2026-09-04 | 導入 Claude 處理銀行客服詢問，09-07 FF News 稱擴大為對話式 AI 金融服務；拉美市場首見具名金融科技採用案例，具體整合範疇未見報導 | 2026-09-07（首見 2026-09-04）|
 | Shopify | 頂尖 | Claude Code | ❓ | — | 執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節） | Google News/analyticsindiamag.com；Google News/The New Stack |
 | ReliaQuest | 大型（資安廠商） | Claude API（AI 驅動資安平台整合）| ✅ | — | 深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環；具體整合範疇、合作規模未見報導（詳見下方細節） | 2026-08-22 |
-| Goldman Sachs | 頂尖 | Claude AI | ❌ | — | 香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 同源（已查證 ⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]] | 2026-08-20 |
+| Goldman Sachs | 頂尖 | Claude AI | ❌ | — | 香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 不同源（已查證 ⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]] | 2026-08-20 |
 | OKX | 大型（加密貨幣交易平台） | Claude AI | ❌ | — | 與高盛同批：香港被切斷 Claude AI 存取權限，成因未明，詳見 [[topics/anthropic-government-policy]] | 2026-08-20 |
 | Payward（Kraken 母公司） | 大型（全球加密貨幣交易平台母公司） | Claude Mythos 5 | ✅ | — | 採用僅限授權機構存取的 Claude Mythos 5，強化全球加密基礎設施；規模未見細節 | 2026-08-19 |
 | Duke University | 大型（高等教育機構） | Claude（pay-as-you-go 訂閱方案） | ✅ | — | 提供師生 pay-as-you-go Claude 訂閱方案；繼哈佛 FAS、Syracuse 後另一高教具名案例 | 2026-08-18 |
@@ -145,7 +145,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Samsung（08-15，首見 08-14）**：跨 3 媒體確認具體量化成效，惟仍為媒體轉述、非三星或 Anthropic 官方發布：TechSpot（08-15）稱 Claude Code 能把晶片設計工作從「數週壓縮到數天」；Tech My Money（08-14）稱驗證階段「從一個月縮到兩天」——兩則數字不同，並陳不擇一。三則均明確指出 Claude Code **仍會犯嚴重錯誤**。延續 08-14 記錄之 ❓ 未確認狀態，08-15 升級為 ✅；與 [[topics/anthropic-business]] 已記錄之 Samsung 代工洽談（07-02/06）、Series H 投資人身份為不同性質事件——本則為 Samsung**使用**Claude Code 的採用案例，非供應鏈/投資關係（Google News/TechSpot；Google News/Tech My Money）。**08-25 三度確認（TechRadar，非新事實）**：TechRadar 報導同一事實——三星認為 Claude Code 有助其晶片設計，但坦言 AI 仍會犯下「令人擔憂的重大錯誤」；未見新增具體數字或案例細節，屬既有 08-14/08-15 記錄的第三方媒體再確認，狀態與量化數字均不變（Google News/TechRadar）。
 
 **懸置細節**
-- ⟨Q-03⟩ 已查證（2026-09-20）：確認同源——兩案根本原因均為 Anthropic 條款／出口管制解讀：Lutnick 指示暫停 Mythos／Fable 模型出口後，條款禁止「adversarial nations 如中國」地區使用，兩家銀行各自解讀為涵蓋香港，各自獨立但同因。
+- ⟨Q-03⟩ 已查證（2026-09-20，對照 [[topics/anthropic-government-policy]] 既有查證）：**兩案不同源**——JPMorgan（06-18）肇因出口管制（已於 06-30 解除）；Goldman／OKX（08-19/20）肇因 Anthropic 區域存取政策，與出口管制無關。此前「同源」猜測不成立，已更正。
 - ⟨Q-02⟩ 已查證（2026-09-20，The Information＋Meta 回應）｜**Meta 限制工程師使用 Claude 屬實**：內部文件證實 Applied AI 團隊自 5 月起需核准才能用 Claude Code／Codex，6 月底生效，外部輸出禁入訓練樣本、須人工審查。
 - Meta 發言人僅稱有「明確政策」，未直接證實或否認具體內容；與本頁既有 MetaCode 自建、降低外部依賴脈絡一致。
 - ⟨Q-01⟩ 已查證（2026-08-13）：非混淆，為同一組事實的正確引用——tech-insider.org 報導確認封鎖係「兩起爭議交會」的結果：(1) 資安研究者指出 Claude Code 更新曾內含可辨識中國地區用戶的隱藏邏輯（「後門」爭議，Anthropic 否認為監控工具，稱是已在淘汰中的窄範圍反濫用實驗）；(2) 即為 06-25 已記錄之 Anthropic 蒸餾攻擊指控（約 2.5 萬假帳號、2,880 萬次對話）。兩者並非各自獨立的「新理由」，而是同一封鎖決策的兩項並存成因（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/alibaba-bans-anthropics-claude-code-after-an-alleged-hidden-china-detection-backdoor-is-uncovered-employees-told-to-switch-to-qoder-as-the-rift-between-the-firms-widens)；[tech-insider.org](https://tech-insider.org/ie/alibaba-bans-claude-code-2026/)）
