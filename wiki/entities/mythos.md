@@ -4,13 +4,13 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-15"
 status_main: "active"
 days_since_news: 5
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/mythos-archive']"
+page_role: "hub"
 days_since_news_subtree: 5
 inbound_links: 28
 attribution_count: 17
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-15
 
-> **最新進展**（2026-09-01）
-> Anthropic 正式發布 **Claude Mythos 5.1**——與 Fable 5.1 為同一模型的不同防護層級，維持僅限信任機構存取，防護「專為資安與生命科學工作設計」；新增反萃取（anti-distillation）機制。此為 2026-07-25 Mashable「Mythos 或類似模型將公開發布」傳聞的部分證實——**版本確實迭代，但仍非全面公開**，詳見下方「歷史記錄」07-25 條目。定價與能力面完整記錄見 [[entities/fable-5]]。
+> **最新進展**（2026-09-15）
+> Anthropic 狀態頁通報 Mythos 5.1／Fable 5.1 間歇性錯誤率升高，同日 11:14 UTC 已解決，屬穩定性事件非政策變化（詳見下方「時序」）。09-01 起 Mythos 5.1 與 Fable 5.1 同步發布，維持僅限信任機構存取，防護「專為資安與生命科學工作設計」；此為 2026-07-25 Mashable「Mythos 或類似模型將公開發布」傳聞的部分證實——**版本確實迭代，但仍非全面公開**，詳見下方「時序」07-25 條目。定價與能力面完整記錄見 [[entities/fable-5]]。
 
 ---
 
@@ -288,44 +288,25 @@ Glasswing 夥伴從 50 擴展至 150 個新組織（共 200 個，15+ 國家）�
 #### 2026-06-01
 ENISA（歐盟網路安全局）獲准存取，成首個歐洲政府機構。英國銀行同日遭拒，OpenAI 主動提出替代方案——AI 安全能力開始成為地緣政治談判籌碼。The Information 報導授權費被稱「Budget Buster」。
 
-#### 2026-05-30
-Anthropic red team 發布《Measuring LLMs' ability to develop exploits》，公開確認 Mythos Preview 漏洞開發能力是「step-change」，超越所有現有前沿模型。
+### 2026-05（總結；原始條目已移出）
 
-#### 2026-05-29
-Reuters 確認：Anthropic to roll out Claude Mythos in coming weeks（數週內面向公眾推出）。
+- **Project Glasswing 第一個月報告（05-23）**：約 50 個夥伴、10,000+ 高危漏洞；同日 exploit 開發能力評估報告確認可組合完整攻擊鏈。
+- **CVD 儀表板上線 + Claude Code app 字串洩露（05-24）**：281 個專案／1,596 筆記錄首次公開；app 字串洩露「Claude Code 與 Claude Security 將取得 Mythos 存取權」，Anthropic 聲明初期仍限制存取。
+- **議會簡報與能力評估論文（05-25）**：Exploit 評估完整論文發布；美國眾議員 Lou Correa 閉門簡報稱 Mythos 能輕易入侵其銀行帳戶；UK AISI 測得企業網路接管成功率 6/10（vs GPT-5.5 3/10）。
+- **漏洞數字密集報導（05-26）**：10K–23K 漏洞數字經多家媒體報導（門檻不同致數字分歧），公開釋出路線同日獲三家媒體確認。
+- **印度政府部署（05-27）**：宣布在網路安全計畫中部署 Mythos，首個主權政府採用案例。
+- **Reuters 確認即將公開推出（05-29）**：報導 Anthropic 計畫數週內面向公眾推出 Claude Mythos。
+- **漏洞開發能力「step-change」論文（05-30）**：Anthropic red team 公開確認 Mythos Preview 漏洞開發能力超越所有現有前沿模型。
+- 另：CVE-2026-39861 沙箱逃逸漏洞曝光引發 Mythos 諷刺性討論（05-08，見 [[topics/ai-agent-safety]]）；OpenAI GPT-5.5 Cyber 跟進採同存取限制策略（05-01）。
+- 原始條目見 [[entities/mythos-archive#2026-05]]
 
-#### 2026-05-27
-印度政府宣布在網路安全計畫中部署 Mythos，首個主權政府採用案例。
+### 2026-04（總結；原始條目已移出）
 
-#### 2026-05-26
-10K–23K 漏洞數字媒體密集報導（Help Net Security / eWeek / PYMNTS / Techzine，數字分歧來自篩選門檻不同）。The Register / Gotrade / CyberSecurityNews 三家媒體同日確認公開釋出路線。
-
-#### 2026-05-25
-Anthropic 安全團隊發布 Exploit 評估完整論文（https://red.anthropic.com/2026/exploit-evals/）。Politico 引述美國議會閉門簡報：眾議員 Lou Correa 表示 Mythos 能輕易入侵其銀行帳戶；UK AISI 測試企業網路接管成功率 6/10。The Register 報導 Anthropic 準備釋出 Mythos 等級模型。
-
-#### 2026-05-24
-CVD 儀表板正式上線（281 個專案 / 1,596 筆記錄）。Claude Code app 字串洩露：「Access to the Claude Mythos model in Claude Code and Claude Security」，Anthropic 聲明初期仍限制存取。
-
-#### 2026-05-23
-Project Glasswing 第一個月報告：約 50 個夥伴、10,000+ 高危漏洞。安全團隊同步發布 Mythos exploit 開發能力評估報告，確認可組合完整攻擊鏈。
-
-#### 2026-05-08
-Claude Code CVE-2026-39861（CVSS 7.7）沙箱逃逸漏洞曝光，社群廣泛討論 Mythos 的諷刺性。見 [[topics/ai-agent-safety]]。
-
-#### 2026-05-01
-TechCrunch：Sam Altman 批評 Mythos 限制後，旋即宣布 OpenAI GPT-5.5 Cyber 採同策略，僅開放給關鍵防禦者。
-
-#### 2026-04-29 / 04-30
-Bloomberg / WSJ 報導白宮正式反對擴大 Mythos 存取，聯邦政府首次直接干預。Steve Blank 發文：「我們已打開潘朵拉的盒子」（HN 廣泛討論）。
-
-#### 2026-04-27 / 04-28
-The Philosophical Hacker 指出 SWE-bench 方法論循環論證，HN 再次精選持續擴散。IEEE Spectrum 報導：需程式碼隔離、執行沙盒、權限最小化才能安全部署。
-
-#### 2026-04-25
-七週測試發現 2,000+ 未知軟體漏洞，大量涉及加密貨幣基礎設施（Fox News / CoinDesk / Crypto Briefing 同步報導）。
-
-#### 2026-04-24
-**Mythos 遭未授權存取事件**：Anthropic 已就此發出聲明——「We're investigating a report claiming unauthorised access to Claude Mythos Preview through one of our third-party vendor environments」，並稱**無證據顯示自家系統遭入侵、亦無證據顯示未授權活動擴及該第三方廠商環境之外**。存取管道為一處第三方廠商（vendor）環境；據報導，取得存取的是一個專門關注未發布模型的 Discord 私密社群，多次嘗試後成功並持續使用。當時 Mythos 僅開放少數企業測試（報導點名 Amazon、Apple、JP Morgan Chase）。（[Euronews](https://www.euronews.com/next/2026/04/22/hackers-breach-anthropics-too-dangerous-to-release-mythos-ai-model-report)，2026-04-22 報導／04-24 更新；2026-09-20 查證）
+- **白宮正式反對擴大存取（04-29/30）**：聯邦政府首次直接干預單一 AI 模型存取；Steve Blank 發文稱「潘朵拉的盒子已打開」，HN 廣泛討論。
+- **SWE-bench 方法論爭議浮現（04-27/28）**：The Philosophical Hacker 指出循環論證，Anthropic 截至 04-28 未回應；IEEE Spectrum 同期報導：需程式碼隔離、執行沙盒、權限最小化才能安全部署。
+- **七週漏洞測試結果（04-25）**：測得 2,000+ 未知軟體漏洞，大量涉及加密貨幣基礎設施（Fox News／CoinDesk／Crypto Briefing 同步報導）。
+- **未授權存取事件（04-24，2026-09-20 查證）**：經第三方 vendor 環境遭存取，Anthropic 聲明無證據顯示自家系統遭入侵、亦無證據顯示範圍擴及該環境外；當時 Mythos 僅開放 Amazon、Apple、JP Morgan Chase 等少數企業測試。
+- 原始條目見 [[entities/mythos-archive#2026-04]]
 
 ---
 

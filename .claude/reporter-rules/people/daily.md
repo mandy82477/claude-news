@@ -23,7 +23,7 @@
 
 ## 更新規則
 
-**每個人物頁核心欄位：** `類型: person`、`狀態: active`、`領域: 👤 人物`。
+**每個人物頁核心欄位：** `**類型：** person`、`**狀態：** active`、`**領域：** 👤 人物`（粗體＋全形冒號，格式權威在 `.claude/reporter-rules/page-templates.md`）。
 
 **歷史記錄格式：** 每筆事件以 `- YYYY-MM-DD：[一句話描述]` 條列在 `## 歷史記錄`，最新在最上方。
 
@@ -35,4 +35,4 @@
 
 ## 回報格式
 
-照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」八欄；`feature-radar 新增` 欄恆填「無」。
+照 `.claude/reporter-rules/shared.md`「回報格式（回報契約）」的全部欄位（**不在此寫死欄數**——該契約會增欄，寫死的數字必然漂掉）；`feature-radar 新增` 欄恆填「無」。

@@ -1718,6 +1718,18 @@
         "🗓️ 非新聞驅動"
       ],
       "_note": "2026-09-19 雲端 lint 漏抓帳 (2)：5g 的 21 天門檻對週更快照頁型態系統性誤觸；2026-09-20 /weekly 依使用者裁示改為頁面層豁免而非調全域門檻。"
+    },
+    {
+      "name": "子故事投影遞迴契約：產出端（gen_wiki_frontmatter.py 投影整個子樹）與驗證端（check_hierarchy.py 查『有 index 列的祖先』）必須同源——只改一邊，巢狀子頁會永遠驗不過或永遠投影不到",
+      "assertion": "all_contain",
+      "files": [
+        "scripts/gen_wiki_frontmatter.py",
+        "scripts/check_hierarchy.py"
+      ],
+      "patterns": [
+        "子頁不入 index"
+      ],
+      "_note": "2026-09-20：managed-agents（本身是 anthropic-agent-stack 的子頁）長出 -archive 後首次觸發。投影只掃 index 列、而 index 沒有子頁的列，孫子頁因此無列可掛；檢查端卻對每個 hub 都要求投影，兩邊對巢狀的假設相反。"
     }
   ],
   "coupling_hints": {

@@ -4,13 +4,13 @@ kind: "entity"
 type: "model"
 status: "active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位由 Opus 5 接手）"
 domain: "🤖 模型"
-last_updated: "2026-09-07"
+last_updated: "2026-09-20"
 last_news_update: "2026-08-27"
 status_main: "active"
 days_since_news: 24
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/opus-4-8-archive']"
+page_role: "hub"
 days_since_news_subtree: 24
 inbound_links: 9
 attribution_count: 6
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位由 Opus 5 接手）
 **領域：** 🤖 模型
 **首次出現：** 2026-05-28
-**最後更新：** 2026-09-07
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-08-27
 
 > **最新進展**（2026-08-27）
@@ -163,16 +163,23 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 | 2026-07-20 | 市場傳聞 Anthropic 數日內將推出新 Claude Opus 型號——已由 07-25 官方發布證實 |
 | 2026-07-13 | dev.to 比對型錄、定價文件與發布節奏：Opus 5 存在可信，但流傳的確切日期與跑分均無佐證——已由 07-25 官方發布解答 |
 | 2026-07-09 | 錯誤率一度升高（同日解決）：03:50 UTC 確認已解決；同期 Reddit 反映近期體驗轉佳（弱訊號） |
-| 2026-06-24 | 第三方評測：Gemini 3.5 Flash 35.4 vs Opus 4.8 34.8 略勝，指令遵循失誤所致（詳見上方「社群評價」） |
-| 2026-06-24 | 跨平台高錯誤率事件：API、Claude Code、Console 三平台皆受影響，範圍較 6/22 更廣（詳見上方「社群評價」） |
-| 2026-06-22 | 529 Overloaded 事件：全球約 90 分鐘中斷，Max Plan 用戶錯誤激增（詳見上方「社群評價」） |
-| 2026-06-22 | Quake 瀏覽器版程序生成關卡：GitHub Copilot + Opus 4.8 編譯 WebAssembly 版本（[leereilly.net](https://leereilly.net/quakelike/)）|
-| 2026-05-31 | Thinking 模式 context drain 量化：每輪最高 900K cache tokens（4.7 僅 14K–34K），引發費用可控性討論 |
-| 2026-05-30 | UltraCode 嚴重 bug：1.7M tokens 消耗無輸出、無退款；Qwen distillation 爭議（主流否定）；v2.1.158 擴展至 Bedrock/Vertex/Foundry |
-| 2026-05-29 | v2.1.156 修復 thinking blocks 400 錯誤；社群混合反映（行為退步投訴 + 大型任務好評）|
-| 2026-05-28 | 正式發布，HN 1662 分；Dynamic Workflows Research Preview 同步推出；Fast Mode 降至前代 1/3 費用 |
+### 2026-06（總結；原始條目已移出）
+
+- **第三方評測（06-24）**：RuntimeWire 測得 Gemini 3.5 Flash 35.4 分小勝 Opus 4.8 34.8 分，失分主因為指令遵循失誤（JSON-only 任務誤出 Markdown code fence），非能力差距，HN score 3 參考價值有限。
+- **跨平台高錯誤率（06-24）**：API、Claude Code、Console 三平台同時出現高錯誤率，範圍較 06-22 更廣，Anthropic 調查中。
+- **529 Overloaded 大規模事件（06-21～22）**：官方確認 Opus 4.8 及 4.7/4.6/Sonnet 4.6 出現 elevated error rates，全球約 90 分鐘中斷，Max Plan 用戶錯誤持續激增。
+- Quake 瀏覽器版程序生成關卡：GitHub Copilot + Opus 4.8 編譯 WebAssembly 版本（06-22，[leereilly.net](https://leereilly.net/quakelike/)）。
+- 原始條目見 [[entities/opus-4-8-archive#2026-06]]
+
+### 2026-05（總結；原始條目已移出）
+
+- **2026-05-28 正式發布**：同步推出 Dynamic Workflows（Research Preview）與 Fast Mode 降價，HN score 1662，是 2026 年以來 Anthropic 發布規模最大的旗艦更新（詳見上方「現況」）。
+- v2.1.156 修復 thinking blocks 400 錯誤（05-29）；社群同時反映行為退步（德語文法異常、"pecl scripts" 怪異行為）與大型任務好評並陳。
+- **UltraCode 嚴重 bug（05-30）**：1.7M tokens 消耗後零輸出、無退款機制；同日 Qwen distillation 爭議首度浮現，主流判斷為 proxy 詐騙服務假冒 Claude，而非真實蒸餾；v2.1.158 同步擴展至 Bedrock/Vertex/Foundry。
+- **Thinking 模式 context drain 量化（05-31）**：每輪最高寫入 900,000 cache tokens，Opus 4.7 僅 14,000–34,000（40–60 倍差距）；ultracode 模式實測單一請求生成約 70 個 agent。
+- 原始條目見 [[entities/opus-4-8-archive#2026-05]]
 
 **懸置細節**
 - ⟨Q-01⟩ **2026-08-10 官方／第三方媒體查證**：查得 TipRanks 全文（非僅標題），確認非單純舊事重炒。核心事實：Anthropic 於 2026-06-10 致函美國參議院銀行委員會，指控與 Alibaba Qwen Lab 有關的操作者對 Claude 發動迄今最大規模蒸餾攻擊（約 25,000 個詐騙帳號、28.8M 次交流，2026-04-22 至 06-05 間）
   - 隨後開發者發現 Claude Opus 4.8 在部分語言測試中會自稱是 Qwen，媒體以此建構「Anthropic 對外指控蒸餾、自身卻疑似蒸餾對手」的雙標敘事
-  - 多方技術分析（含 [blog.kilo.ai](https://blog.kilo.ai/p/did-claude-opus-48-distill-alibabas)）認為較可能的解釋並非真實蒸餾，而是訓練資料汙染／提示脆弱性／proxy 路由造成的中文語系身份錯亂 bug——與上方 05-30 條目「proxy 詐騙服務假冒 Claude」判斷方向一致，屬同一根因的延伸報導而非獨立新事件（[TipRanks](https://www.tipranks.com/news/anthropic-faces-distillation-hypocrisy-backlash-as-claude-claims-to-be-alibabas-qwen-ai)，2026-07-21）
+  - 多方技術分析（含 [blog.kilo.ai](https://blog.kilo.ai/p/did-claude-opus-48-distill-alibabas)）認為較可能的解釋並非真實蒸餾，而是訓練資料汙染／提示脆弱性／proxy 路由造成的中文語系身份錯亂 bug——與 [[entities/opus-4-8-archive#2026-05|2026-05-30 條目]]「proxy 詐騙服務假冒 Claude」判斷方向一致，屬同一根因的延伸報導而非獨立新事件（[TipRanks](https://www.tipranks.com/news/anthropic-faces-distillation-hypocrisy-backlash-as-claude-claims-to-be-alibabas-qwen-ai)，2026-07-21）

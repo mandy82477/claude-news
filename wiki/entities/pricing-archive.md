@@ -4,7 +4,7 @@ kind: "entity"
 type: "policy"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-09-13"
+last_updated: "2026-09-20"
 last_news_update: "2026-05-19"
 status_main: "resolved"
 days_since_news: 124
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-13
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-05-19
 
 > 本頁是 [[entities/pricing]] 的原始條目封存，重點層（現行規則、牌價、還在發生的事故）都在主頁。
@@ -97,3 +97,20 @@ ServeTheHome 首報；與 SpaceX 算力到位（Sonnet 速率翻倍）同時期�
 #### ⏸ 2026-05-05：提示快取窗口悄悄縮短（未公告）
 
 Anthropic 於 4 月初靜默縮短預設 prompt cache 窗口，實質提高 token 消耗速度；為繼 Token 費用估算翻倍（2026-04-29）後第二次被社群自行發現的靜默計費改動。
+
+## 2026-06
+
+#### 2026-06-26：Max 5x × 2 vs Max 20x × 1 方案分析
+
+- **社群發現：兩個 Max 5x 帳號可並行兩個 session，性價比策略受關注**：Reddit 用戶（r/ClaudeAI）分析指出，雙 Max 5x 帳號架構可**同時**運行兩個獨立的 Claude Code session，對需要並行工作流的獨立開發者而言可能更具彈性，單一 Max 20x 帳號無法同時跑兩個 session（Reddit https://www.reddit.com/r/ClaudeAI/comments/1ug6kjv/two_max_5x_accounts_cost_the_same_as_one_20x_and/）
+- **⚠️ 價格更正**：原始 Reddit 貼文與本頁前版將 Max 5x 誤植為 $50/月（兩個合計 $100 = 一個 Max 20x）；查證 2026-05-14 官方政策公告原文（xda-developers、dev.to）確認 **Max 5x 實際為 $100/月、Max 20x 為 $200/月**，兩個 Max 5x（$200）與一個 Max 20x（$200）費用相同，而非原貼文所述的 Max 5x×2 = Max 20x×1 的低價組合；性價比論點仍成立（可並行兩個 session），但費用比較基準已修正
+- **適用場景**：主要利好獨立開發者與小型團隊；企業用戶因合規與帳號管理需求，不一定適合多帳號架構（多帳號合規邊界見「計費切割風波」2026-05-17 條目）
+- **注意**：此為社群分析，Anthropic 官方未就多帳號策略表態；使用前仍需確認 ToS 合規邊界
+
+#### 2026-06-09：Claude Fable 5 定價發布
+
+- **Fable 5 定價**：$10 input / $50 output per million token（double Opus 4.8）；context window 1M；最大 output 128K
+- **6/22 前含括於訂閱**：Pro / Max 訂閱用戶 6/22 前免費使用 Fable 5，之後改為消費制（enterprise consumption-based plan 或 API 直接計費）
+- **Mythos 5**（無護欄完整版）：僅限授權用戶，定價比 Fable 5 更高，細節未公開
+- **30 天資料保留政策**：Fable 5 / Mythos 5 所有流量（含 AWS Bedrock）強制保留 30 天，資料離開 AWS 安全邊界；企業應評估隱私影響
+- **AWS Bedrock 強制 provider data sharing（2026-06-21 新增）**：AWS Bedrock 的 Fable 5 model card 顯示，客戶須同意啟用 `anthropic.model-invocation-logging`（即 provider data sharing），Anthropic 可存取推理日誌；金融、醫療等受嚴格資料合規監管的行業在採購決策前需評估此條件（dev.to 2026-06-21）

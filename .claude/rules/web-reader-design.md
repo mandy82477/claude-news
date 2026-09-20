@@ -56,16 +56,19 @@ paths:
 ## 元件慣例
 
 ### Tab / filter bar
+
+實作類名是 `.domain-chips` / `.domain-chip`（**不是 `.tab-row` / `.tab`——那兩個類名全庫從未存在過**，照舊範例寫會加出一組沒人套用的死 CSS）：
+
 ```css
-.tab-row { border-bottom: 1px solid var(--border-2); display: flex; gap: 0; }
-.tab {
-  font-family: var(--font-sans); font-size: 12px;
-  padding: 7px 14px; border-bottom: 2px solid transparent;
+.domain-chips { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 0; border-bottom: 1px solid var(--border-2); }
+.domain-chip {
+  font-family: var(--font-sans); font-size: var(--fs-small);
+  padding: 7px 14px; border: none; border-bottom: 2px solid transparent;
   background: transparent; color: var(--ink-3);
   margin-bottom: -1px;
 }
-.tab:hover { color: var(--ink-2); border-bottom-color: var(--ochre-5); }
-.tab--active { color: var(--ochre-9); border-bottom-color: var(--ochre-9); font-weight: 500; }
+.domain-chip:hover { color: var(--ink-2); border-bottom-color: var(--ochre-5); }
+.domain-chip--active { color: var(--ochre-9); border-bottom-color: var(--ochre-9); }
 ```
 
 ### Pill（狀態標籤）
@@ -79,10 +82,13 @@ paths:
 - emoji 只允許在 markdown 內文或 wiki 資料值中保留
 - icon 尺寸：UI 行內 13px，裝飾性最大 18px
 
-### 卡片（entity / pinned）
+### 卡片（pinned）
 - `border: 1px solid var(--border-2)`，`border-radius: 2px`
 - hover：`background: var(--bg-1); border-color: var(--border-strong)`
 - **無 box-shadow、無 gradient**
+- 適用 `.radar-card` / `.gap-card` / `.pin-card`
+
+> **entity 清單不是卡片**：2026-07-04 起改為表格列 `.entity-table` / `.entity-row`，`.entity-card` 全庫從未存在過。照舊標題把 entity 當卡片改，會改錯元件。
 
 ---
 

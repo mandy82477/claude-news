@@ -136,7 +136,15 @@ def check(wiki_dir: Path = WIKI_DIR) -> tuple[list[str], int]:
         cd = pages[hub]["callout_date"]
         if newest and (not cd or cd < newest):
             fails.append(f"hub 落後：{hub} callout 日期 {cd or '缺'} < 子樹最新新聞 {newest}（母頁 callout 須跟上子頁）")
-        listed = proj.get(hub, set())
+        # 投影掛在「有 index 列的那個祖先」上，不是掛在 hub 自己身上——子頁不入 index，
+        # 巢狀 hub（子頁自己又有子頁）在 index 上沒有列可掛，對它自己查投影必然落空。
+        # 與 gen_wiki_frontmatter.py 的遞迴投影同源，改一邊必須改另一邊。
+        top = hub
+        guard = 0
+        while pages.get(top, {}).get("parent") and guard < 50:
+            top = pages[top]["parent"]
+            guard += 1
+        listed = proj.get(top, set())
         # redirect 殼不進投影（`[加入: 2026-09-06]`，見 gen_wiki_frontmatter.py 同步）——
         # 併回的空殼對讀者無內容價值，不該出現在母頁「↳ 子故事：」
         missing = sorted(set(real_kids) - listed)

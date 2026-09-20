@@ -4,13 +4,13 @@ kind: "entity"
 type: "product"
 status: "active（快速成長）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-05"
+last_updated: "2026-09-20"
 last_news_update: "2026-05-22"
 status_main: "active"
 days_since_news: 121
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/opencode-archive']"
+page_role: "hub"
 days_since_news_subtree: 121
 inbound_links: 6
 attribution_count: 0
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（快速成長）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-05
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-05-22
 
 > **最新動態**（2026-05-22）
@@ -97,8 +97,10 @@ OpenCode 的成長發生在幾個推力同時出現的時間點：
 
 ## 歷史記錄
 
-| 日期 | 事件 |
-|------|------|
-| 2026-05-22 | XDA 評為可行替代方案；`OpenCode-power-pack` 移植官方 11 個 skills；DeepSeek 宣布建構自有競品，顯示開源 Claude Code 競品格局持續擴大 |
-| 2026-05-12 | The New Stack 報導 157,000 名開發者里程碑；Anthropic 宣布倍增速率限制後 vendor lock-in 顧慮仍驅動轉移 |
-| 2026-04-27 | 首次出現社群討論，OpenCode-power-pack 移植 Anthropic 官方 skills |
+### 2026-05 時段總結
+- XDA 評為 Claude Code 可行替代方案，`OpenCode-power-pack` 完成移植官方 11 個 skills（05-22）；The New Stack 報導 157,000 名開發者轉向里程碑（05-12）
+- 原始條目見 [[entities/opencode-archive#2026-05]]
+
+### 2026-04 時段總結
+- 04-27 首次出現社群討論，OpenCode-power-pack 移植 Anthropic 官方 11 個 skills
+- 原始條目見 [[entities/opencode-archive#2026-04]]

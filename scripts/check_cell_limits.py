@@ -138,14 +138,24 @@ def _strip_link_urls(text: str) -> str:
     return MD_LINK_RE.sub("]", text)
 
 
+CHILDREN_PROJECTION_RE = re.compile(r"\s*↳ 子故事：.*$")
+
+
 def _table_cells(line: str) -> list[str]:
-    """表格列的儲存格（去頭尾空格），不含開頭/結尾的空字串。"""
+    """表格列的儲存格（去頭尾空格），不含開頭/結尾的空字串。
+
+    `↳ 子故事：` 那一段不計入字數：它是 `gen_wiki_frontmatter.py` 每次重生的**機器投影**
+    （家在各子頁的「上層」欄），不是撰稿者寫的摘要。本閘管的是讀者讀得動的鉤子長度，
+    把機器附加的片段算進人寫的預算，會變成「某頁多了一個 archive 子頁，就要求另一個人
+    去砍他的鉤子」——那是叫人修一個他沒寫、也不該由他修的東西。
+    """
     stripped = line.strip()
     if not stripped.startswith("|"):
         return []
     parts = stripped.split("|")
     # split 會在開頭/結尾產生空字串（因為列以 | 開頭與結尾）
-    return [p.strip() for p in parts[1:-1]] if len(parts) > 2 else []
+    cells = [p.strip() for p in parts[1:-1]] if len(parts) > 2 else []
+    return [CHILDREN_PROJECTION_RE.sub("", c).strip() for c in cells]
 
 
 def fingerprint(kind: str, content: str) -> str:

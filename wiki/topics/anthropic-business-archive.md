@@ -4,7 +4,7 @@ kind: "topic"
 type: "event"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-09-06"
+last_updated: "2026-09-20"
 last_news_update: "2026-06-14"
 status_main: "resolved"
 days_since_news: 98
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-06
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-06-14
 
 > 本頁是 [[topics/anthropic-business]] 的原始條目封存，重點層（現在的數字、IPO 走到哪一格、還沒過去的風險）都在主頁。
@@ -126,6 +126,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[Claude Corps $150M 獲國際媒體廣泛後續報導]** inc.com、NonProfit Times 等媒體跟進 Claude Corps 詳細計畫；1,000 名研究員嵌入 150 家非營利組織，15 個以上國家；AI 公益投資成 Anthropic IPO 前品牌建設重點（inc.com）
 - **[B2B SaaS 廠商定價競爭壓力]** SaaStr 分析：消費者以 $20-200/月訂閱 Claude 即可取得大量 agent 工作，而企業 API 每次呼叫 $1；傳統 B2B SaaS 在 AI 時代面臨根本性定價競爭挑戰（SaaStr）
 
+### 其餘合作彙整（原「哪個合作會改到你用的 Claude」一行制清單，2026-09-20 蒸餾搬入）
+
+- **Rubrik**（2026-06-30）：發布 Claude Code 專用 AI agent 與安全層（Techzine）
+- **Okta**（2026-06-30）：與 Anthropic 於 XAA、MCP、Glasswing 安全框架展開合作（Cyber Magazine）
+- **DataArt**（2026-06-30）：加入 Claude Partner Network 精選合作夥伴（National Law Review）
+- **Globant**（2026-06-30）：結盟推出 Claude 驅動 AI Pods（PR Newswire）
+- **加州州政府**（2026-06-29）：Newsom 簽署協議，Claude 進入加州州政府應用（Politico）
+- **Tenable**（2026-06-29）：與 Claude Compliance API 策略整合（TahawulTech）
+- **美國政府（Mythos 5 解禁擴大）**（2026-06-28）：商務長批准擴大至 100+ 美國機構，出口管制後最大鬆綁（TechCrunch）
+- **奧地利／歐盟遊說**（2026-06-28）：出口管制切斷歐洲存取後，奧地利向歐盟遊說爭取 Anthropic 設歐洲研究中心（Bloomberg）
+- **美國政府（Mythos 5 解禁）**（2026-06-27）：批准向 100+ 美國機構有限釋出 Mythos 5（Semafor、CNBC、WSJ、Reuters）
+- **Notion**（2026-06-25）：正式整合 Claude Agents 與 Cursor 作為外部 agent（letsdatascience.com）
+- **Railway**（2026-06-24）：平台整合 Claude Code、Codex、OpenCode、Pi，可於隔離沙盒執行（blog.railway.com）
+- **Charleston Hospitality Group**（2026-06-22）：加入 Anthropic 企業 AI 網路，餐旅業具名採用案例（—）
+- **Micron Technology**（2026-06-22）：多年 AI 記憶體與供應協議，同步投資 Anthropic（Reuters）
+
 ## 2026-06-14 以前
 
 早期時序條目按主題收斂，各主題內日期倒序；2026-06-15 起維持上方逐日區塊（依月份分組呈現）。
@@ -196,3 +212,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-05-30 [未授權平台清單削減]** Bloomberg 報導 Anthropic 在社群反彈後將未授權平台清單砍半；具體名單未公開，影響多個使用 Claude API 的第三方工具
 - **2026-05-28 [PMF 觀察]** Simon Willison 發文認為 Anthropic / OpenAI 已達 PMF，HN 970 分；社群討論聚焦在「PMF 是否等於可持續商業模式」
 - **2026-05-28 [補貼量化]** token-xray 計算 Claude Code Max $200/月享有 17 倍補貼，引發「Anthropic 如何長期維持此定價」的可持續性討論
+
+### 其餘合作彙整（原「哪個合作會改到你用的 Claude」一行制清單，2026-09-20 蒸餾搬入）
+
+- **DXC Technology**（2026-06-12）：多年全球聯盟，訓練數萬名 Claude 認證工程師（—）
+- **Samsung + SK Hynix**（2026-05-28）：Series H 同步入股（—）
+- **Apollo + Blackstone**（2026-05-29）：安排 360 億美元債務融資用於 AI 晶片採購（—）
+- **富士通**（2026-05-26）：日本市場企業部署（—）
+- **KPMG**（2026-05-25）：專業服務業滲透（—）
+- **Stainless**（2026-05-18）：收購（3 億美元以上），官方 SDK + MCP 伺服器生成商（社群替代：Ironic）
+- **Google（投資）**（2024）：$400 億美元，見 [[entities/google-investment]]
+- **Amazon（投資）**（2023–2024）：$40 億美元，算力＋生態綁定

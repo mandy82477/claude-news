@@ -98,7 +98,22 @@ def project_children_into_index(children_of: dict, index_path: Path, dry_run: bo
         if not m:
             continue
         slug = m.group(2).strip()
-        kids = sorted(k for k in children_of.get(slug, []) if k not in redirect_slugs)
+        # 投影整個子樹，不只直屬子頁——子頁不入 index，所以「子頁自己又長出子頁」時
+        # （例：managed-agents 是 anthropic-agent-stack 的子頁，它再長出 -archive），
+        # 那個孫子頁在 index 上沒有任何一列可以掛，記者依 index 認領就永遠看不到它。
+        # 階層規則明文「每層遞迴適用、無深度上限」，投影也必須遞迴。
+        kids: list[str] = []
+        stack = list(children_of.get(slug, []))
+        seen: set[str] = set()
+        while stack:
+            k = stack.pop()
+            if k in seen:
+                continue
+            seen.add(k)
+            if k not in redirect_slugs:
+                kids.append(k)
+            stack.extend(children_of.get(k, []))
+        kids = sorted(kids)
         if not kids and not m.group(3):
             continue  # 無子頁也無舊投影的列一律不碰——不做無關的空白正規化（避免 diff 噪音）
         seg = ("　↳ 子故事：" + "、".join(f"[[{k}]]" for k in kids)) if kids else ""

@@ -18,7 +18,7 @@ paths:
 grep -rn "被修改的檔名" .claude/ docs/rules-changelog/
 ```
 
-範圍要含 `.claude/agents/`（八個記者角色檔都引用 reporter-rules）、`.claude/review-registry.json`（registry 登記的檔名與 pattern）與沿革檔。逐一確認每個引用方在修改後仍能正確找到所需規則。若不確定影響範圍，寧可先查、再動手。
+範圍要含 `.claude/agents/`（所有記者角色檔都引用 reporter-rules；**不寫死檔數**——角色檔會增減，寫死的數字必然漂掉）、`.claude/review-registry.json`（registry 登記的檔名與 pattern）與沿革檔。逐一確認每個引用方在修改後仍能正確找到所需規則。若不確定影響範圍，寧可先查、再動手。
 
 ---
 
@@ -103,7 +103,7 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
 
 **修改完成後執行 `/review-commands`，直到零錯誤才可收工。**
 
-規則一致性已納入測試套件（`scripts/check_rules.py`，讀取 `.claude/review-registry.json` 執行裸露引用、路徑存在性、錨點、同步配對四類機械檢查），`/review-commands` 只做失敗判讀與修復，不再手動 grep。新增同步配對或錨點時登記進 `.claude/review-registry.json`，不需另外維護紙本註冊表。
+規則一致性已納入測試套件（`scripts/check_rules.py`，讀取 `.claude/review-registry.json` 執行裸露引用、路徑存在性、錨點、同步配對、coupling hints、個人路徑外洩等機械檢查；**檢查項會增加，以該腳本輸出為準、不在此寫死類數**），`/review-commands` 只做失敗判讀與修復，不再手動 grep。新增同步配對或錨點時登記進 `.claude/review-registry.json`，不需另外維護紙本註冊表。
 
 Stop hook `.claude/hooks/check_rules_on_stop.py` 會在收工時比對規則檔 mtime 與 `.claude/.last-rules-check`，改了規則卻沒跑 `check_rules.py` 全綠就會被擋下——這不是替代 `/review-commands`，只是兜底。
 

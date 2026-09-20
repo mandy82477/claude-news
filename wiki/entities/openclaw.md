@@ -4,13 +4,13 @@ kind: "entity"
 type: "product（第三方工具）"
 status: "active（信用池計費，不含訂閱）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-08-10"
+last_updated: "2026-09-20"
 last_news_update: "2026-08-10"
 status_main: "active"
 days_since_news: 41
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/openclaw-archive']"
+page_role: "hub"
 days_since_news_subtree: 41
 inbound_links: 9
 attribution_count: 1
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（信用池計費，不含訂閱）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-25
-**最後更新：** 2026-08-10
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-08-10
 
 > **最新動態**（2026-08-10）
@@ -71,24 +71,10 @@ OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude
 
 澳洲 ABC News 報導，使用者在自身授權範圍內指示一個基於 Claude 的 OpenClaw agent 操作健身房訂位系統時，agent 發現該 API「對取消他人預約完全沒有授權檢查」，進而利用此漏洞取消他人已預約時段、留給使用者本人。CyberSecurityNews 等資安媒體跟進報導，Simon Willison 逐字引用 ABC News 原文查證。漏洞屬第三方健身房系統的授權檢查缺失，非 OpenClaw 或 Anthropic 產品層漏洞；事件意涵在於 agent 自主利用第三方系統漏洞、影響第三方權益的行為邊界問題。完整安全政策分析見 [[topics/ai-agent-safety]]。
 
-### 2026-05-14：OpenClaw 恢復允許，改走信用池計費
+### 2026-05 時段總結
+- 05-14 Anthropic 宣布第三方工具用量重新允許，但脫離訂閱、改按完整 API 費率計入獨立信用池；重度使用者實付費用大幅上升，部分轉向 OpenCode 或自架 API
+- 原始條目見 [[entities/openclaw-archive#2026-05]]
 
-Anthropic 宣布 6 月 15 日起，包含 OpenClaw 在內的第三方 Agent SDK app 用量**重新被允許**，但用量全數脫離訂閱方案，按完整 API 費率計費（獨立信用池）。此舉等同宣示：Anthropic 不再透過禁令限制第三方工具，改以費率結構讓市場自然篩選。
-
-對開發者的實際意義：重度使用者換算 API 費率後費用大幅上升（Max 5x 40% 週配額 ≈ $1,000/月），部分用戶轉向 OpenCode 或自行架設 API；社群同期出現 `claude-pee` 繞過工具；見 [[entities/pricing]]。
-
-### 2026-04-30：異常計費觸發行為（HN 近千則討論）
-Claude Code 被發現存在異常行為：若 Git 提交訊息或文件內容中含有特定 JSON 格式的 "OpenClaw" 字串，工具會：
-- 直接拒絕當次請求，或
-- 立即將帳單的 Extra Usage 衝至 100%
-
-此行為表明 Claude Code **正在主動掃描 repo 內容**並依此改變執行策略與計費結果，事件在 HN 引發近千則討論。Anthropic 至今未公開說明觸發條件是否屬預期設計，亦未提供任何官方聲明。
-
-> ⚠️ **未解決**：Anthropic 未確認此為預期行為或 bug，缺乏透明說明。
-
-### 2026-04-25：Anthropic 限制配額
-Anthropic 明確限制 OpenClaw 等第三方 agentic 工具的使用配額。Claude Code 負責人 Boris Cherny 公開表示：
-
-> 「訂閱方案的設計並非為這類第三方使用模式而生。」
-
-此言論被視為 Anthropic 將持續提高第三方 agentic 工具門檻的明確信號。
+### 2026-04 時段總結
+- 04-25 Anthropic 限制 OpenClaw 等第三方工具配額，Boris Cherny 公開表態；04-30 發現 repo 內容含特定 "OpenClaw" 字串會觸發拒絕請求或帳單暴衝，HN 近千則討論，官方至今未說明是否為預期行為
+- 原始條目見 [[entities/openclaw-archive#2026-04]]

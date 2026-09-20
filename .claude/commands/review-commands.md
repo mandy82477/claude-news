@@ -48,7 +48,7 @@ python scripts/check_rules.py
 
 ### 4. 維護規則
 
-**新增同步配對或錨點時，登記進 `.claude/review-registry.json`**（`sync_pairs` / `anchors` / `bare_references.line_allowlist` / `path_existence.allowlist_patterns`），不要另外維護紙本註冊表——registry 本身就是唯一事實來源，`scripts/check_rules.py` 直接讀取執行。
+**新增同步配對或錨點時，登記進 `.claude/review-registry.json`**（`sync_pairs` / `anchors` / `bare_references.line_allowlist` / `path_existence.allowlist_patterns`；新增個人路徑白名單走 `personal_paths.exclude_globs`），不要另外維護紙本註冊表——registry 本身就是唯一事實來源，`scripts/check_rules.py` 直接讀取執行。
 
 ---
 
@@ -66,6 +66,7 @@ python scripts/check_rules.py：✅ 零錯誤 / ❌ → 已修正
 | 3 錨點 | ✅ / ❌ N 個已修正 |
 | 4 同步配對 | ✅ N/N 通過 |
 | 5 coupling hints | ✅ 無新耦合 / 已登記 N 組 |
+| 6 個人路徑外洩 | ✅ / ❌ N 處已修正 |
 
 本輪修正：（列出修正的檔案與原因，若無則寫「無」）
 狀態：✅ 全部通過，零錯誤

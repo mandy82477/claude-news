@@ -40,7 +40,7 @@ argument-hint: baseline | compare
 4. **舊資料回歸（必做）：**
    - 執行 `python scripts/build_web.py`，確認成功不報錯
    - inline Python 迴圈 load 全部 `web_reader/data/digest/*.json`，確認每份都能正確解析、無一 JSONDecodeError 或例外
-5. 全部通過後提醒使用者：「連續 3 天留意文章數與來源分布；週期性異常由 `/wiki-lint` 的 6f 來源健康檢查接手。」
+5. 全部通過後提醒使用者：「連續 3 天留意文章數與來源分布；週期性異常由 `/wiki-lint` 的 6e 來源健康檢查接手。」
 
 ---
 

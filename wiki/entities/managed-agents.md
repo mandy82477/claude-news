@@ -4,13 +4,13 @@ kind: "entity"
 type: "feature"
 status: "beta（所有 API 帳號預設可用，須帶 beta header）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-16"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-16"
 status_main: "beta"
 days_since_news: 4
 parent: "topics/anthropic-agent-stack"
-children: "[]"
-page_role: "child"
+children: "['entities/managed-agents-archive']"
+page_role: "hub+child"
 days_since_news_subtree: 4
 inbound_links: 31
 attribution_count: 6
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-09-16
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-16
 
 > **最新動態**（2026-09-16）
@@ -132,23 +132,15 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 | 2026-07-22 | **anthropic-sdk-python v0.118.0** 新增三項 Managed Agents 支援：model effort、初始 session events、threads 增量串流（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0)，09-13 查證）|
 | 2026-07-16 | **anthropic-sdk-python v0.117.0** 新增「api: add support for dreaming」，即 Dreaming 記憶整合 API（官方 dreams 文件確認，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0)）|
 | 2026-07-01 | **anthropic-sdk-python v0.115.0** 新增 Managed Agents API 支援，開發者可透過官方 SDK 直接操作（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0)）|
-| 2026-05-22 | **自架沙箱完整參考文件發布**（via Reddit r/ClaudeAI 報告 v2.1.145 新增）：企業可在完全自有基礎設施部署受管代理（文件範圍見歷史細節）|
-| 2026-05-19 | 新增**自架沙箱（self-hosted sandboxes）**與 **MCP 隧道（MCP tunnels）**：企業可於自有基礎設施執行 agent 工作流，私有 MCP 伺服器無需公開即可連接（the-decoder.com）|
-| 2026-05-18 | InfoQ：Anthropic 於 Code With Claude 正式公告 **Proactive Workflows** 與 **Capability Curve** 兩項新能力（各自解什麼見歷史細節）|
-| 2026-05-16 | dev.to 深度解析 Dreaming——Agent 於非活躍期間透過 Outcomes 與 Orchestration 自我優化，副標「How Agents Self-Improve While You Sleep」（見歷史細節）|
-| 2026-05-13 | v2.1.140 的 `subagent_type` 改為大小寫與分隔符號不敏感（`"Code Reviewer"` → `code-reviewer`），降低配置摩擦；同期 Boris Cherny 公開每晚數千子代理工作流（見歷史細節）|
-| 2026-05-12 | v2.1.139 新增 Agent View（Research Preview，多 session 管理面板，`claude agents`）與 `/goal` 指令，是邁向非同步工作流的里程碑 |
-| 2026-05-11 | 正式發布（從研究預覽升格）；社群自建 70 天多代理架構開發者分享實戰：Opus 決策層 + OpenCode 工程師層 + 並行研究代理，核心結論是任務簡報品質決定系統成敗；官方 vs 社群自組方案的比較進入主流討論 |
-| 2026-05-07 | Python SDK v0.100.0 + TypeScript SDK v0.95.0 新增 Managed Agents 原生支援，雙線同日發布 |
-| 2026-05-06 | 「Code with Claude」大會宣布重大更新：Dreaming 記憶整合、20 路子代理並行、Outcomes 規格驗證 |
-| 2026-04-30 | 公開測試版推出，Anthropic 定位為「agentic AI 的 AWS」，Managed Agents + Persistent Memory 同步開放 |
-| 2026-04-28 | 首次正式宣布加入跨會話記憶功能 |
 
-**歷史細節**
-- **自架沙箱參考文件（2026-05-22）**：文件涵蓋 worker 輪詢機制、環境金鑰管理、webhook 喚醒設定、監控方案及客戶自管安全責任，標誌企業化部署從「支援」走向「完整文件化」。
-- **Proactive Workflows 與 Capability Curve（2026-05-18）**：前者讓 Agent 可主動（而非被動等待觸發）排程並執行任務，與 Cat Wu「AI 的下一步是主動性（proactivity）」論述一致；後者提供能力曲線追蹤，協助評估 Agent 在不同任務類型的能力進展。
-- **dev.to 技術解析（2026-05-16）**：Code with Claude 大會功能的首篇深度技術解析，對關注 agent 長期自主執行行為的開發者有參考價值。
-- **Boris Cherny 的數千子代理工作流（2026-05-13）**：由 Business Insider 等主流媒體報導，是 Managed Agents 大規模並行能力的極端現實應用案例（見 [[entities/boris-cherny]]）。
+### 2026-05 時段總結
+- 「Code with Claude」大會宣布重大更新：Dreaming 記憶整合、20 路子代理並行、Outcomes 規格驗證（05-06）；SDK 雙線原生支援（05-07）；正式發布升格（05-11）；Agent View 與 `/goal` 指令上線（05-12）
+- 自架沙箱與 MCP 隧道上線（05-19）；Proactive Workflows／Capability Curve 公告（05-18）；自架沙箱完整參考文件（05-22）；Boris Cherny 公開每晚數千子代理工作流（05-13）
+- 原始條目見 [[entities/managed-agents-archive#2026-05]]
+
+### 2026-04 時段總結
+- 04-28 首次宣布跨會話記憶功能；04-30 公開測試版推出，定位「agentic AI 的 AWS」
+- 原始條目見 [[entities/managed-agents-archive#2026-04]]
 
 **懸置細節**
 

@@ -3,13 +3,13 @@ page: "topics/long-context-1m"
 kind: "topic"
 status: "monitoring"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-02"
 status_main: "monitoring"
 days_since_news: 18
 parent: null
-children: "[]"
-page_role: "root"
+children: "['topics/long-context-1m-archive']"
+page_role: "hub"
 days_since_news_subtree: 18
 inbound_links: 12
 attribution_count: 3
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** 1M context window, long context, `[1m]`
 **開始日期：** 2026-04-10
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-02
 
 > **最新動態**（2026-09-02）
@@ -113,8 +113,10 @@ Claude Code v2.1.197 將 [[entities/sonnet-5|Sonnet 5]] 設為預設模型，所
 ### 2026-06-11
 v2.1.173 修正模型名稱含 `[1m]` 後綴時無法正規化的問題（Fable 5 預設含 1M，後綴自動移除）。
 
-### 2026-05-11
-使用者在儀表板顯示 0% 訂閱用量的情況下遭收取 $3.37 Extra Usage，歸因於 1M context 觸發獨立 API 計費通道。
+### 2026-05 時段總結
+- 05-11 使用者在儀表板顯示 0% 訂閱用量下遭收取 $3.37 Extra Usage，歸因於 1M context 觸發獨立 API 計費通道
+- 原始條目見 [[topics/long-context-1m-archive#2026-05]]
 
-### 2026-04-10
-[#46221](https://github.com/anthropics/claude-code/issues/46221) 開立：Opus 4.6 1M context 從模型選單消失被 200K 變體取代，預設無預警切為 Sonnet，進行中 session 被中途降級；以 duplicate 關閉（關聯 #45978），該 issue 雖標記 `completed` 但全程無官方或協作者留言確認修復方式。
+### 2026-04 時段總結
+- 04-10 #46221 開立：Opus 4.6 1M context 從選單消失、session 中途被降級，以 duplicate 關閉但全程無官方確認修復
+- 原始條目見 [[topics/long-context-1m-archive#2026-04]]

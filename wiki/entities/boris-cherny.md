@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-13"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-12"
 status_main: "active"
 days_since_news: 8
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-09-13
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-12
 
 > **Boris Cherny 親自回信「AI slop」質疑者**（2026-09-12）：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。
@@ -131,47 +131,13 @@ Bloomberg 發布一則影片／報導，標題為「Watch The Creator of Claude 
 
 ---
 
-### 13 個日常 Claude Code 使用技巧（2026-06-28）
-
-Boris Cherny 在 [howborisusesclaudecode.com](https://howborisusesclaudecode.com) 公開分享個人日常 setup，具體技巧包括：
-
-- 同時開 5 個 Claude Code 實例，各自對應同一 repo 的 5 個獨立 git checkout
-- 另開 5–10 個 claude.ai/code 瀏覽器 session 並行操作
-- 使用 `&` 指令將 session 背景化
-- 使用 `--teleport` 旗標在本地環境與 Web 環境之間切換
-- 從 iPhone 早上啟動 session，下午在桌機接力繼續
-- 依賴系統通知提醒何時需要介入輸入
-
-他特別強調此 setup 是「surprisingly vanilla」——Claude Code 開箱即用，無需特殊魔改配置。此次分享被 Hacker News 收錄（06/27 17:10 UTC，score 5），是其個人工作流從「哲學宣言」轉向「操作實踐」的一次具體展示。
-
-- 來源：[howborisusesclaudecode.com](https://howborisusesclaudecode.com)（Hacker News 2026-06-27）
-
----
-
-### 「AI 寫 100% 程式碼正在變得有問題」立場轉變（2026-06-24）
-
-Times of India 報導 Boris Cherny 承認「AI 寫 100% 程式碼正在變得有問題（is getting problematic）」，這與他此前在「Code with Claude」大會宣稱「AI 已解決程式設計問題（coding is solved）」的立場形成明顯對比。此聲明與企業端近期出現的 AI 過度依賴反彈聲浪相呼應，顯示 Claude Code 創始人自身的公開立場已出現調整。
-
-- 來源：[Times of India，2026-06-23](https://timesofindia.indiatimes.com/technology/tech-news/claude-code-creator-boris-cherny-who-declared-ai-has-solved-coding-admits-ai-writing-100-code-is-getting-problematic-as-companies-/articleshow/131954700.cms)
-
----
-
-### AI ROI 與實驗平衡論述（2026-06-23）
-
-Business Insider 報導 Boris Cherny 對企業 AI 投資策略的立場：支持企業聚焦 AI ROI 是正確方向，但同時主張企業仍需保留實驗空間，不應將預算完全鎖定在 ROI 導向的評估框架。這是他繼「coding is solved」系列宣言後，首次針對企業採購與投資邏輯公開發聲，定位在協助企業領導人理解 AI 工具投資的雙軌思維。
-
-- 來源：[Business Insider，2026-06-23](https://www.businessinsider.com/boris-cherny-anthropic-token-cost-roi-ai-2026-6)
-
----
-
-### 「Claude Code 讓工程師更孤獨」論述歸屬釐清（2026-06-22）
-
-2026-06-22 Business Insider「engineering leader 讓工程師更孤獨」一說，後續具名來源確認發言人為 Anthropic 工程副總裁 **Fiona Fung**，**並非 Boris Cherny**。此聲明不歸於本頁，詳見 [[entities/fiona-fung]]。
-
----
-
-### Loop Engineering 哲學引用（2026-06-20）
-techstackups.com 技術文章引用 Boris Cherny 採訪中的論述：「我不再 prompt Claude，我寫 loop 讓 loop 去 prompt Claude；我的工作是寫 loop。」此聲明被視為他繼「coding is solved」後的第二個重要設計哲學表態，進一步將 **工程師角色重新定義為「寫迴圈的人」而非「寫 prompt 的人」**。這也是 2026-05-05「Loops 是未來」哲學的延伸具體化，從範式宣言進化為操作層面的自我定位描述。注意：此引用來自採訪轉述，而非 Boris 直接發文。
+### 2026-06（總結；原始條目已移出）
+- 06-28「13 個日常使用技巧」：howborisusesclaudecode.com 公開個人 setup（5 個並行實例＋獨立 git checkout、`--teleport`），強調「surprisingly vanilla」
+- 06-24：Times of India 報導其承認「AI 寫 100% 程式碼正在變得有問題」，與稍早「coding is solved」立場對比
+- 06-23：Business Insider 報導其對企業 AI 投資立場——支持 ROI 導向但反對完全不留實驗預算
+- 06-22：「engineering leader 讓工程師更孤獨」一說後續具名確認為 Fiona Fung（[[entities/fiona-fung]]），非本人，原歸屬懸置已排除
+- 06-20：techstackups.com 採訪引用「我寫 loop 讓 loop 去 prompt Claude」Loop 工程哲學名言
+- 原始條目見 [[entities/boris-cherny-archive#2026-06]]
 
 ---
 
@@ -227,11 +193,7 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 - 2026-07-20：Bloomberg 發布影片／報導「Watch The Creator of Claude Code on The Hottest Piece of Software in the World」，標題未具名，佐以 Bloomberg 7/16 特稿與多平台「Creator of Claude Code」慣稱推測極可能為本人（Google News / Bloomberg.com，2026-07-20）。**後續（2026-09-03）**：Bloomberg 影片頁面明列受訪者為 Boris Cherny，身分懸置解除
 - 2026-07-17：Startup Fortune 報導其表示現在同時執行數千個 Claude Code agent，呼應 5/13 揭露的夜間數千子代理工作流，（Google News / Startup Fortune，2026-07-17）。**後續（2026-09-03）**：出處查實為 Fortune Brainstorm Tech 2026-06-08 演講，詳見上方「現在同時執行數千個 Claude Code agent」節
 - 2026-07-08：inc.com 報導「Head of Claude Code」談新創公司需具備的 5 種員工原型（Prototyper／Builder／Sweeper／Grower／Maintainer）——**發言人經查證即 Boris Cherny 本人**（原文引述其 X 貼文；[inc.com，2026-07-07](https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409)，2026-09-03 查證）；先前「可能為 [[entities/cat-wu]]」的懸置已解除
-- 2026-06-28：在 howborisusesclaudecode.com 公開 13 個日常 Claude Code 使用技巧，涵蓋 5 個並行實例搭配獨立 git checkout、`--teleport` 跨環境切換、iPhone 啟動電腦接力等；強調「surprisingly vanilla」setup（Hacker News，score 5）
-- 2026-06-24：Times of India 報導其承認「AI 寫 100% 程式碼正在變得有問題」，與早前「coding is solved」立場形成對比，呼應企業端過度依賴反彈聲浪
-- 2026-06-23：Business Insider 報導其對企業 AI 投資的立場：支持 ROI 導向，但反對完全不留實驗預算
-- 2026-06-22：「engineering leader 讓工程師更孤獨」一說，後續具名來源確認發言人為 Anthropic 工程副總裁 Fiona Fung（[[entities/fiona-fung]]），非 Boris Cherny；原歸屬懸置已排除
-- 2026-06-20：techstackups.com 採訪引用 Loop 工程哲學名言「我不再 prompt Claude，我寫 loop 讓 loop 去 prompt Claude；我的工作是寫 loop」，被視為繼「coding is solved」後的第二個重要設計哲學表態
+- 2026-06（總結）：「AI 寫 100% 程式碼正在變得有問題」立場轉變（06-24）、13 個日常使用技巧公開（06-28）、AI ROI 與實驗平衡論述（06-23）、Loop 工程哲學名言（06-20）；「工程師更孤獨」一說後續確認為 Fiona Fung 非本人（06-22）。原始條目見 [[entities/boris-cherny-archive#2026-06]]
 - 2026-05（總結）：「Loops 是未來」（05-05）→「軟體工程已死」（05-06）→「coding is solved」（05-08）→ 數千子代理夜間工作流（05-13）→ Platformer 專訪（05-27），是其設計哲學系列宣言的奠基月。原始條目見 [[entities/boris-cherny-archive#2026-05]]
 - 2026-04（總結）：效能退步事件事後報告承諾 50+ 項修復（04-23）；The Verge 報導聲明訂閱方案非為第三方 agentic 工具而設計（04-25）。原始條目見 [[entities/boris-cherny-archive#2026-04]]
 

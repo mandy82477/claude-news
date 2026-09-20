@@ -3,13 +3,13 @@ page: "topics/safety-china-trust-dispute"
 kind: "topic"
 status: "monitoring（核心「後門」敘事自 07-10 雙方首度正面否認後未見新進展，轉低頻觀察；新出現的相關但獨立事件見下方說明）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-05"
+last_updated: "2026-09-20"
 last_news_update: "2026-07-11"
 status_main: "monitoring"
 days_since_news: 71
 parent: null
-children: "[]"
-page_role: "root"
+children: "['topics/safety-china-trust-dispute-archive']"
+page_role: "hub"
 days_since_news_subtree: 71
 inbound_links: 15
 attribution_count: 0
@@ -28,10 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring（核心「後門」敘事自 07-10 雙方首度正面否認後未見新進展，轉低頻觀察；新出現的相關但獨立事件見下方說明）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-30
-**最後更新：** 2026-09-05
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-07-11
 
-> **本頁記到 2026-07-11 為止**（2026-07-11，07-10 Anthropic 首度公開否認中國官方的後門指控，此後該敘事線無新進展）
+> **本頁記到 2026-07-11 為止**（2026-07-11）
+> 07-10 Anthropic 首度公開否認中國官方的後門指控，此後該敘事線無新進展。
 > 之後的中國事件見 [[topics/anthropic-government-policy]]。
 
 ---
@@ -203,5 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-07-01～07-02
 - 同形字符隱寫術機制曝光（HN score 2263，thereallo.dev / 36Kr）；dev.to（adioof）獨立提出相似 steganography 指控（07-11 日報二次收錄）
 
-### 2026-06-30
-- Reddit/HN/vincentschmalbach.com 揭露 v2.1.91 起中國代理偵測程式碼；「embedded spyware」指控首見
+### 2026-06（歷史摘要）
+- 06-30，Reddit/HN/vincentschmalbach.com 揭露 v2.1.91 起中國代理偵測程式碼；「embedded spyware」指控首見，完整技術細節見「## 技術指控線」。
+
+原始條目見 [[topics/safety-china-trust-dispute-archive#2026-06]]

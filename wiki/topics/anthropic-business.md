@@ -384,29 +384,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Blackstone（私募基金）**（2026-07-02）：面向高淨值客戶基金因 Anthropic 創單月最強表現（Bloomberg）
 - **AWS／Google Cloud（Enterprise Gateway）**（2026-07-01）：新增 Enterprise Gateway，簡化雲端上使用 Claude Code（DevOps.com）
 - **美國商務部**（2026-07-01）：達成正式協議，Fable 5 全面解禁，承諾偵測風險等條件（WSJ、Bloomberg、Reuters 等）
-- **Rubrik**（2026-06-30）：發布 Claude Code 專用 AI agent 與安全層（Techzine）
-- **Okta**（2026-06-30）：與 Anthropic 於 XAA、MCP、Glasswing 安全框架展開合作（Cyber Magazine）
-- **DataArt**（2026-06-30）：加入 Claude Partner Network 精選合作夥伴（National Law Review）
-- **Globant**（2026-06-30）：結盟推出 Claude 驅動 AI Pods（PR Newswire）
-- **加州州政府**（2026-06-29）：Newsom 簽署協議，Claude 進入加州州政府應用（Politico）
-- **Tenable**（2026-06-29）：與 Claude Compliance API 策略整合（TahawulTech）
-- **美國政府（Mythos 5 解禁擴大）**（2026-06-28）：商務長批准擴大至 100+ 美國機構，出口管制後最大鬆綁（TechCrunch）
-- **奧地利／歐盟遊說**（2026-06-28）：出口管制切斷歐洲存取後，奧地利向歐盟遊說爭取 Anthropic 設歐洲研究中心（Bloomberg）
-- **美國政府（Mythos 5 解禁）**（2026-06-27）：批准向 100+ 美國機構有限釋出 Mythos 5（Semafor、CNBC、WSJ、Reuters）
-- **Notion**（2026-06-25）：正式整合 Claude Agents 與 Cursor 作為外部 agent（letsdatascience.com）
-- **Railway**（2026-06-24）：平台整合 Claude Code、Codex、OpenCode、Pi，可於隔離沙盒執行（blog.railway.com）
-- **Charleston Hospitality Group**（2026-06-22）：加入 Anthropic 企業 AI 網路，餐旅業具名採用案例（—）
-- **Micron Technology**（2026-06-22）：多年 AI 記憶體與供應協議，同步投資 Anthropic（Reuters）
-- **DXC Technology**（2026-06-12）：多年全球聯盟，訓練數萬名 Claude 認證工程師（—）
-- **Samsung + SK Hynix**（2026-05-28）：Series H 同步入股（—）
-- **Apollo + Blackstone**（2026-05-29）：安排 360 億美元債務融資用於 AI 晶片採購（—）
-- **富士通**（2026-05-26）：日本市場企業部署（—）
-- **KPMG**（2026-05-25）：專業服務業滲透（—）
-- **Stainless**（2026-05-18）：收購（3 億美元以上），官方 SDK + MCP 伺服器生成商（社群替代：Ironic）
-- **Google（投資）**（2024）：$400 億美元，見 [[entities/google-investment]]
-- **Amazon（投資）**（2023–2024）：$40 億美元，算力＋生態綁定
+**其餘合作彙整（2026-05～06，21 筆，一行制清單已蒸餾）**：晶片／資本——Samsung+SK Hynix（05-28，Series H 同步入股）、Apollo+Blackstone（05-29，360 億美元晶片債務融資）；企業導入——富士通（05-26）、KPMG（05-25）、Stainless 收購（05-18）、DXC Technology（06-12，多年全球聯盟）、Micron Technology（06-22，記憶體協議＋投資）、Charleston Hospitality Group（06-22）、Railway（06-24）、Notion（06-25）、Tenable（06-29，Compliance API）；Partner Network 單日四項（06-30：Rubrik、Okta、DataArt、Globant）；政府／政策——加州州政府（06-29）、美國政府 Mythos 5 分兩批解禁（06-27／06-28）、奧地利／歐盟遊說（06-28）；歷史投資——Google（2024，$400 億，見 [[entities/google-investment]]）、Amazon（2023–2024，$40 億）。原始條目見 [[topics/anthropic-business-archive#2026-06]]（06-12 以前及兩筆歷史投資見 [[topics/anthropic-business-archive#2026-06-14 以前]]）。
 
-%% 維運備忘：原「意義」欄的敘述併進上方一句，不另外開細節條目；一句寫不下者才下沉「戰略合作細節」區。本清單只保留最近 3 個完整月，逾窗 21 列待下一輪蒸餾——實數 65 列日期 ≥2026-07-01（本清單），21 列 ≤2026-06-30（Rubrik…Amazon 投資）已逾 3 個月保留窗，但本波 `## 時序` 蒸餾已用滿「每頁至多 2 個時段」上限，這 21 列本波不搬，列為下一輪蒸餾候選。條文的家在 `.claude/rules/wiki-ingest-commercial.md` 第 5 條。 %%
+%% 維運備忘：原「意義」欄的敘述併進上方一句，不另外開細節條目；一句寫不下者才下沉「戰略合作細節」區。本清單只保留最近 3 個完整月，逾窗列滾動蒸餾。2026-09-20 本輪蒸餾：21 列 ≤2026-06-30（Rubrik…Amazon 投資）已搬出，一字不刪照搬至 archive；表清單現起點為 2026-07-01。條文的家在 `.claude/rules/wiki-ingest-commercial.md` 第 5 條。 %%
 
 **戰略合作細節**
 - **Amadeus（09-03）**：Skift 報導旅遊科技公司 Amadeus 將其技術整合進 Claude Code 與 Cowork；延續本頁既有 SDK 夥伴生態邊緣擴張模式（如 Claranova、MixRoute），是旅遊產業首個具名整合案例，惟具體整合形式（MCP 連接器、資料 API 或其他）、涵蓋範圍未見報導，僅標題可用（Google News/Skift）。

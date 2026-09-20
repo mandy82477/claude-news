@@ -4,13 +4,13 @@ kind: "entity"
 type: "feature"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-05"
+last_updated: "2026-09-20"
 last_news_update: "2026-08-24"
 status_main: "active"
 days_since_news: 27
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/claude-skills-archive']"
+page_role: "hub"
 days_since_news_subtree: 27
 inbound_links: 5
 attribution_count: 9
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-05
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-08-24
 
 > **最新官方動態**（2026-08-19）
@@ -134,12 +134,15 @@ Skills 的載入路徑依 session 類型而異：本機 session 讀個人 `~/.cl
 | 2026-06-16 | v2.1.178：Skills 在巢狀子 Agent 中可正常運作，搭配新版 `Tool(param:value)` permission 語法 |
 | 2026-06-09 | v2.1.169：新增 `--safe-mode` 旗標與 `CLAUDE_CODE_SAFE_MODE` 環境變數，一鍵停用含 skills 在內的所有客製化設定 |
 | 2026-06-05 | 官方部落格《Lessons from building Claude Code: How we use skills》，公開內部數百個 Skills 的實戰心得 |
-| 2026-05-31 | 社群整理官方 Skills 設計指南揭露的「漸進式揭露」三層架構（啟動只讀名稱+簡述，命中後才載入完整內容） |
-| 2026-05-27 | security-guidance plugin 全面開放給所有 Claude Code 用戶（非僅 Enterprise），首次將企業安全功能下放一般開發者工作流 |
-| 2026-05-24 | 官方發布「31 個小企業 Skills」技能包，首日下載達 38.2 萬次 |
-| 2026-05-20 | 社群指出 Anthropic 建立了 skill runtime 卻無創作者變現機制的結構性缺口 |
-| 2026-05-17 | Claude Skills 靜默覆蓋指令爭議浮現：`ask_user_input_v0` 硬性限制（最多 3 問題／4 選項）與 subagent 意外衍生行為，引發社群對機制透明度的系統性質疑 |
-| 2026-04-27 | OpenCode-power-pack 移植 Anthropic 官方 11 個 skills 至 OpenCode，是本頁追蹤到的最早生態事件 |
+
+### 2026-05 時段總結
+- 官方發布「31 個小企業 Skills」技能包，首日下載 38.2 萬次（05-24）；security-guidance plugin 全面下放所有用戶（05-27）；社群整理出「漸進式揭露」三層架構（05-31）
+- `ask_user_input_v0` 靜默限制與 subagent 意外衍生行為引發透明度質疑（05-17）；創作者變現機制缺口浮現（05-20）
+- 原始條目見 [[entities/claude-skills-archive#2026-05]]
+
+### 2026-04 時段總結
+- 04-27 OpenCode-power-pack 移植 Anthropic 官方 11 個 skills，是本頁最早的生態事件
+- 原始條目見 [[entities/claude-skills-archive#2026-04]]
 
 **懸置細節**
 - ⟨Q-01⟩ ❓ **待查證**（標 2026-08-19｜查 The New Stack、20 萬 token｜複 2026-09-19）：The New Stack 報導某 Claude Code skill 在回答問題前耗掉 20 萬 token，僅標題可用，具體是哪個 skill、是否為既有已知問題均未見報導細節；已掃日報至 2026-09-03 無後續，官方頁面未查證。
