@@ -1033,7 +1033,7 @@
       "_note": "2026-08-29 review 三度修正：首版 files 只列消費端＋patterns 用 2 字元的「3g」；二版改「截止日」仍是兩檔天然都含的通用詞；三版釘腳本名但只守住 name 宣稱的前半（被呼叫），沒守住後半（輸出有接手方）。現兩者各一個 pattern。"
     },
     {
-      "name": "Lane A/B 額度四處同步：check_pending_markers.py <-> wiki-lint 5c <-> weekly-local-catchup skill <-> 雲端 runbook（只改 py 而三份文件沒跟上，消化端會照舊額度做事——2026-08-29 review 以突變實證此漏）",
+      "name": "5c 清零制四處同步：check_pending_markers.py <-> wiki-lint 5c <-> weekly-local-catchup skill <-> 雲端 runbook。四處都必須載明「清零」，不得寫回每輪額度——額度的前提是「主編一個人查」，而那正是讓「逾期數」淪為佇列長度別名的原因",
       "assertion": "all_contain",
       "files": [
         "scripts/check_pending_markers.py",
@@ -1042,21 +1042,21 @@
         "docs/cloud-runbooks/weekly-lint.md"
       ],
       "patterns": [
-        "Lane A（本輪額度 10）",
-        "Lane B（本輪額度 8）"
+        "清零"
       ],
-      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——原因是 pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。"
+      "_note": "2026-09-13 補反向缺口：runbook 步驟表曾落後 skill 八步而本配對全綠——pattern 清單自己漏列那幾步，配對只驗「清單裡的都在」、不驗「skill 有的都在清單裡」。新增步驟時必須同步加進本 patterns。｜2026-09-20 使用者裁示改清零制：舊 patterns 看守的是 Lane A 10／B 8 兩個額度字串，改為看守「清零」出現在四處，防的是有人因為「這輪做不完」把額度偷偷寫回來。"
     },
     {
-      "name": "check_pending_markers.py 產消對帳 <-> wiki-lint 5c：告警產出端與消費端同進退（只印不讀＝偵測器印給空氣看）",
+      "name": "check_pending_markers.py 本輪目標行 <-> wiki-lint 5c：告警產出端與消費端同進退（只印不讀＝偵測器印給空氣看）",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-lint-sweeps/references/sweeps.md",
         ".claude/skills/weekly-local-catchup/SKILL.md"
       ],
       "patterns": [
-        "產消對帳"
-      ]
+        "本輪目標"
+      ],
+      "_note": "2026-09-20：原看守「產消對帳」。清零制下該行改印「🎯 本輪目標：清到 0」，不再有產能/消費兩個數字可對帳；看守字串隨之改名，契約意圖不變。"
     },
     {
       "name": "開放迴路五類 <-> weekly-local-catchup/SKILL.md：類別與處理端必須同步（腳本加減一類而文件沒跟上，讀者會照舊以為只有兩類）",

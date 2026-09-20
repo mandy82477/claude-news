@@ -23,7 +23,7 @@
 | `wiki-lint-reporters` `5. 更新 wiki/overview.md` | 自主執行 |
 | `wiki-lint-sweeps` `5a. feature-radar 熱度降溫（主編親做）` | 自主執行（`scripts/news_mentions.py` 純本地比對日報；⏳ 逾期處置照該節三選一） |
 | `wiki-lint-sweeps` `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
-| `wiki-lint-sweeps` `5c. 逾期待查證清算（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**Lane A（本輪額度 10）＋Lane B（本輪額度 8）**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5c. 逾期待查證清算（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
 | `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |

@@ -336,33 +336,25 @@ class QueueLaneSplitTest(_WikiCase):
         self.assertIn("alpha", lane_a)
         self.assertNotIn("bravo", lane_a)
 
-    def test_lane_a_quota_caps_listing(self):
-        """M6 殺手：額度切片必須生效。"""
-        self._fill(n_sig=15, n_nosig=0)
-        lane_a, _ = self._lane_sections(self._queue())
-        self.assertEqual(lane_a.count("alpha"), mod.SIGNAL_LIMIT)
-
-    def test_lane_b_quota_caps_listing(self):
-        """M7 殺手。"""
-        self._fill(n_sig=0, n_nosig=15)
-        _, lane_b = self._lane_sections(self._queue())
-        self.assertEqual(lane_b.count("bravo"), mod.QUEUE_LIMIT)
-
-    def test_lane_quotas_are_not_interchangeable(self):
-        """M3 殺手：兩個額度對調就失去分流意義（A 是便宜工作，額度必須較大）。"""
+    def test_both_lanes_list_every_item_without_truncation(self):
+        """清零制殺手：任何截斷都會讓執行者以為「只要做這幾筆」，隊伍就長回來。"""
         self._fill(n_sig=15, n_nosig=15)
         lane_a, lane_b = self._lane_sections(self._queue())
-        self.assertGreater(
-            lane_a.count("alpha"), lane_b.count("bravo"),
-            "Lane A（不需 web）額度必須大於 Lane B（需 web）"
-        )
+        self.assertEqual(lane_a.count("alpha"), 15, "Lane A 必須全列")
+        self.assertEqual(lane_b.count("bravo"), 15, "Lane B 必須全列")
 
-    def test_capacity_uses_actual_backlog_not_nominal_quota(self):
-        """本輪實際可消 = min(積壓, 額度) 逐 Lane 相加；產能仍是名目值（見 print_queue 註解）。"""
+    def test_target_line_states_clear_to_zero_with_backlog_count(self):
+        """目標行是執行者唯一照著做的一行：必須講「清到 0」且帶待清總數。"""
         self._fill(n_sig=3, n_nosig=20)
         out = self._queue()
-        # 由常數推導，額度調整時不必改測試（2026-09-06 Lane B 5→8 時本行寫死過一次）
-        self.assertIn(f"本輪實際可消 {3 + mod.QUEUE_LIMIT} 筆", out)
+        self.assertIn("清到 0", out)
+        self.assertIn("待清 23 筆", out)
+
+    def test_target_line_says_zero_when_queue_empty(self):
+        """佇列空時不得印「清到 0（待清 0 筆）」那種怪句，要能看出是已清空。"""
+        out = self._queue()
+        self.assertIn("逾期 0", out)
+        self.assertNotIn("清到 0（待清", out)
 
     # ---- 趨勢／歷史子系統（2026-08-29 第二輪 review：N8–N12、N15 全存活，此處補洞）----
 
@@ -442,37 +434,25 @@ class QueueLaneSplitTest(_WikiCase):
         # X3 殺手：帳齡是精確值。標 07-01 → 複 07-15 → today 08-29 = 逾期 45 天
         self.assertIn("逾期 45 天", first)
 
-    def test_closing_action_line_reports_per_lane_clearable(self):
-        """X5 殺手：收尾行動行是操作者唯一照著做的一行，兩個數字不可對調。"""
+    def test_closing_action_line_demands_clearing_everything(self):
+        """X5 殺手：收尾行動行是操作者唯一照著做的一行，必須要求全清、且數字不可對調。"""
         self._fill(n_sig=3, n_nosig=20)
         out = self._queue()
-        self.assertIn(f"Lane A 3 筆 ＋ Lane B {mod.QUEUE_LIMIT} 筆", out)
+        self.assertIn("Lane A 3 筆 ＋ Lane B 20 筆", out)
+        self.assertIn("全部清掉", out)
 
-    # ---- 截斷提示與排空預估（N1–N5 全存活，此處補洞）----
+    # ---- 清零制：不得有截斷、不得有排空預估（2026-09-20 取代額度制）----
 
-    def test_truncation_notice_counts_hidden_rows(self):
-        """N1／N2／N3 殺手。"""
+    def test_never_truncates_regardless_of_backlog_size(self):
+        """N1–N3 的清零制版：舊制靠「另 N 筆未顯示」截斷，那正是隊伍長不完的機制。"""
         self._fill(n_sig=14, n_nosig=12)
-        out = self._queue()
-        self.assertIn(f"另 {14 - mod.SIGNAL_LIMIT} 筆未顯示", out)   # Lane A
-        self.assertIn(f"另 {12 - mod.QUEUE_LIMIT} 筆未顯示", out)   # Lane B
-
-    def test_no_truncation_notice_when_within_quota(self):
-        self._fill(n_sig=3, n_nosig=3)
         self.assertNotIn("未顯示", self._queue())
 
-    def test_no_truncation_notice_when_exactly_at_quota(self):
-        """X12 殺手：> 改 >= 會在額度剛好時印出「另 0 筆未顯示」。"""
-        self._fill(n_sig=mod.SIGNAL_LIMIT, n_nosig=mod.QUEUE_LIMIT)
-        self.assertNotIn("未顯示", self._queue())
-
-    def test_drain_estimate_divides_lane_b_by_its_own_quota(self):
-        """N4 殺手：除以 SIGNAL_LIMIT 會把 8.6 週算成 4.3 週，低估一半。"""
-        # 刻意讓 clearable(3+QUEUE_LIMIT) 與 QUEUE_LIMIT 分歧：除錯了會低估一半
+    def test_no_drain_estimate_under_clear_to_zero(self):
+        """排空預估在清零制下必然是「1 輪」，印出來只會讓人以為還能分期付款。"""
         self._fill(n_sig=3, n_nosig=20)
         out = self._queue()
-        weeks = round(20 / mod.QUEUE_LIMIT, 1)
-        self.assertIn(f"Lane B 需約 {weeks} 週排空", out)   # 20 / QUEUE_LIMIT，非 20 / clearable
+        self.assertNotIn("排空", out)
 
     def test_rate_window_boundary_is_exclusive_and_width_matters(self):
         """M4／M8 殺手：窗口寬度與邊界都要釘死。
@@ -487,15 +467,16 @@ class QueueLaneSplitTest(_WikiCase):
         out = self._queue()
         self.assertIn("近 7 天新增 2 筆", out)
 
-    def test_rate_meter_warns_when_production_exceeds_capacity(self):
-        self._fill(n_sig=0, n_nosig=30, marked="2026-08-27")
+    def test_high_intake_warning_fires_above_threshold(self):
+        """待清量異常高時要提醒回頭看標記門檻——但仍要求清零，不得改成調額度。"""
+        self._fill(n_sig=0, n_nosig=mod.HIGH_INTAKE_WARN + 5)
         out = self._queue()
-        self.assertIn("產消對帳", out)
-        self.assertIn("淨增", out)
-        self.assertIn("產出快過消費", out)
+        self.assertIn("本輪目標", out)
+        self.assertIn("標記門檻", out)
+        self.assertIn("清零照做", out)
 
-    def test_rate_meter_silent_when_within_capacity(self):
-        self._fill(n_sig=0, n_nosig=3, marked="2026-08-27")
+    def test_high_intake_warning_silent_at_normal_volume(self):
+        self._fill(n_sig=0, n_nosig=3)
         out = self._queue()
-        self.assertIn("產消對帳", out)
-        self.assertNotIn("產出快過消費", out)
+        self.assertIn("本輪目標", out)
+        self.assertNotIn("標記門檻", out)

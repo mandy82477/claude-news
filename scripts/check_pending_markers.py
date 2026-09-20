@@ -61,8 +61,13 @@ from pending_markers import (  # noqa: E402
 )
 
 REVIEW_DEFAULT_DAYS = 14
-QUEUE_LIMIT = 8  # Lane B（本輪額度 8）需 web 查證；四處同步見 .claude/review-registry.json
-SIGNAL_LIMIT = 10  # Lane A（本輪額度 10）已有日報訊號；四處同步見 .claude/review-registry.json
+# 2026-09-20 起改為清零制：每輪把逾期清到 0，不設每輪額度。
+# 為什麼拿掉額度：舊制 Lane A 10／B 8 的前提是「主編一個人查」，於是排空要 92 天、
+# 而複查日只給 30 天——每一筆都必然在輪到它之前先逾期，「逾期數」淪為佇列長度的別名。
+# 實證（2026-09-20）：按頁面所有權拆給六記者並行，一輪清掉 109 筆。瓶頸從來不是總量，
+# 是「只有一個人做」。四處同步見 .claude/review-registry.json。
+CLEAR_TO_ZERO = True
+HIGH_INTAKE_WARN = 60  # 單輪待清量超過這個數，才需要回頭看記者端標記門檻是不是鬆了
 RATE_WINDOW_DAYS = 7  # 產消對帳的回看窗口
 SHORT_PROBE_LEN = 6
 
@@ -453,37 +458,6 @@ def _read_last_history(path: Path, today: date) -> tuple[str, int] | None:
         return None
 
 
-def _median_review_gap(wiki_dir: Path) -> float | None:
-    """全庫「標→複」間隔的中位數（天）。
-
-    存在理由：排空天數與複查日過去各印各的，從沒被並排比過。複查日若短於排空
-    時間，每一筆都必然在輪到它之前先逾期——此時「逾期數」只是佇列長度的別名，
-    照它調額度會調錯方向。只計真的寫了 `複` 的標記，沒寫的不套預設值充數。
-    """
-    gaps: list[int] = []
-    for path in sorted(wiki_dir.rglob("*.md")):
-        if path.name == "log.md":
-            continue
-        try:
-            text = path.read_text(encoding="utf-8-sig")
-        except Exception:
-            continue
-        for mk in iter_pending(text, path):
-            if not mk.review:
-                continue
-            marked_date = _parse_date(mk.marked)
-            review_date = _parse_date(mk.review)
-            if marked_date is None or review_date is None:
-                continue
-            if review_date > marked_date:
-                gaps.append((review_date - marked_date).days)
-    if not gaps:
-        return None
-    gaps.sort()
-    n = len(gaps)
-    return float(gaps[n // 2]) if n % 2 else (gaps[n // 2 - 1] + gaps[n // 2]) / 2
-
-
 def _append_history(path: Path, today: date, total: int, a: int, b: int, added: int) -> None:
     """每輪 append 一列。沒有這個，下週跑同一支腳本仍答不出「比上週好還是壞」——
     而本次改版的起因正是『19 天從 0 長到 51 無人察覺』。"""
@@ -540,51 +514,46 @@ def print_queue(out, wiki_dir: Path | None = None, today: date | None = None,
     lane_b = [e for e in entries if not e[0]]   # 無訊欄
     print("# check_pending_markers.py --queue 逾期佇列\n", file=out)
 
-    print(f"## Lane A（本輪額度 {SIGNAL_LIMIT}）：日報已有後續訊號，多數可免 web——{len(lane_a)} 筆", file=out)
+    print(f"## Lane A：日報已有後續訊號，多數可免 web——{len(lane_a)} 筆", file=out)
     print("   記者已標 `訊`＝日報有後續。多數可只憑日報收斂，但探針是機械比對、可能假命中——", file=out)
     print("   逐筆確認該日條目是否真指此事實；確認不了就退回 Lane B，不可硬結。處置見 5c 步驟 3 第四列。", file=out)
-    for _, _, line in lane_a[:SIGNAL_LIMIT]:
+    for _, _, line in lane_a:
         print(f"  {line}", file=out)
     if not lane_a:
         print("  （無）", file=out)
-    elif len(lane_a) > SIGNAL_LIMIT:
-        print(f"  … 另 {len(lane_a) - SIGNAL_LIMIT} 筆未顯示", file=out)
 
     print(file=out)
-    print(f"## Lane B（本輪額度 {QUEUE_LIMIT}）：需 WebFetch 官方查證——{len(lane_b)} 筆", file=out)
+    print(f"## Lane B：需 WebFetch 官方查證——{len(lane_b)} 筆", file=out)
     print("   需官方一手來源，雲端 egress 封鎖時整個 5c 跳過（含本區）。", file=out)
-    for _, _, line in lane_b[:QUEUE_LIMIT]:
+    for _, _, line in lane_b:
         print(f"  {line}", file=out)
     if not lane_b:
         print("  （無）", file=out)
-    elif len(lane_b) > QUEUE_LIMIT:
-        print(f"  … 另 {len(lane_b) - QUEUE_LIMIT} 筆未顯示", file=out)
 
     print(file=out)
     print(f"總逾期數：{len(entries)}（Lane A {len(lane_a)}／Lane B {len(lane_b)}）", file=out)
 
-    # 產消對帳：存量數字看不出流量，沒有這段就無法判斷額度夠不夠。
+    # 清零制（2026-09-20 起）：本輪目標是把上面兩條 Lane 清到 0，沒有每輪額度。
+    # 分流保留的理由與額度無關——它告訴執行者哪些要花 web 預算、哪些不用。
     added = _recent_marked(wiki_dir, today, RATE_WINDOW_DAYS)
-    # 兩個不同的數字，別混用：
-    #   throughput = 每週產能（能力值），是「會不會結構性落後」的分母
-    #   clearable  = 這輪實際消得掉幾筆（受現有積壓限制），只作展示
-    # 2026-08-29 review 建議把 min() 當分母，實測會在「積壓 0 但近期有新標記」時
-    # 誤報產出過快——積壓空不代表產能是 0，只代表沒東西可消。
-    throughput = SIGNAL_LIMIT + QUEUE_LIMIT
-    clearable = min(len(lane_a), SIGNAL_LIMIT) + min(len(lane_b), QUEUE_LIMIT)
-    net = added - throughput
-    verdict = f"淨增 {net} 筆/週" if net > 0 else (f"淨減 {-net} 筆/週" if net < 0 else "打平")
-    print(
-        f"📊 產消對帳（概估）：近 {RATE_WINDOW_DAYS} 天新增 {added} 筆｜每週產能 {throughput} 筆"
-        f"（A {SIGNAL_LIMIT}＋B {QUEUE_LIMIT}）｜本輪實際可消 {clearable} 筆｜{verdict}",
-        file=out,
-    )
-    if net > 0:
+    if entries:
         print(
-            "   ⚠️ 產出快過消費，積壓會持續成長。要嘛提高額度，要嘛降低標記產出"
-            "（記者端提高標記門檻），不可只看「總逾期數」而不看這一行。",
+            f"🎯 本輪目標：清到 0（待清 {len(entries)} 筆；近 {RATE_WINDOW_DAYS} 天新增 {added} 筆）",
             file=out,
         )
+        print(
+            "   按頁面所有權拆給各類別記者並行——瓶頸不是總量，是「只有一個人做」"
+            "（2026-09-20 實證：六記者並行一輪清掉 109 筆）。",
+            file=out,
+        )
+        if len(entries) > HIGH_INTAKE_WARN:
+            print(
+                f"   ⚠️ 待清量超過 {HIGH_INTAKE_WARN} 筆：清零照做，但這輪之後回頭看一次"
+                "記者端標記門檻是不是鬆了（正常週進料約 20–35 筆）。",
+                file=out,
+            )
+    else:
+        print(f"🎯 逾期 0（近 {RATE_WINDOW_DAYS} 天新增 {added} 筆，複查日未到）", file=out)
 
     # 趨勢：上一輪快照對照。存量數字沒有方向，只有序列才答得出「比上週好還是壞」。
     if history_path is not None:
@@ -599,31 +568,6 @@ def print_queue(out, wiki_dir: Path | None = None, today: date | None = None,
             print("📈 趨勢：尚無上一輪快照（下次執行起可比較）", file=out)
         _append_history(history_path, today, len(entries), len(lane_a), len(lane_b), added)
 
-    # 排空預估：「43 筆」沒有時間感，「8.6 週」有。
-    if lane_b and QUEUE_LIMIT:
-        drain_days = len(lane_b) / QUEUE_LIMIT * 7
-        print(f"⏳ 依現行額度，Lane B 需約 {len(lane_b) / QUEUE_LIMIT:.1f} 週排空（期間仍在進料）", file=out)
-        # 複查日 vs 排空時間：兩個數字過去各印各的，從沒被並排比過。
-        # 不比就看不出「逾期」到底在量什麼——若複查日短於排空時間，
-        # 每一筆都必然在輪到它之前先變成逾期，逾期數就只是佇列長度的別名。
-        med = _median_review_gap(wiki_dir)
-        if med is not None:
-            print(
-                f"📏 複查日中位數 {med:.0f} 天 vs 排空 {drain_days:.0f} 天",
-                file=out,
-            )
-            if med < drain_days:
-                print(
-                    f"   ⚠️ 複查日比排空時間短 {drain_days - med:.0f} 天：每一筆都會在輪到它之前先逾期，"
-                    "「逾期數」因此等於佇列長度、不等於被忽略的筆數。",
-                    file=out,
-                )
-                print(
-                    f"   → 要讓逾期重新有意義，二選一：額度提到約 {len(lane_b) / max(med, 1) * 7:.0f} 筆/週，"
-                    "或把複查日改成「今天＋排空天數」而非固定 14/30 天。",
-                    file=out,
-                )
-
     # 舊語法盲區：佇列只讀新語法標記（舊字樣沒有探針欄，機器找不到它）。
     # 只印數字會讓 5c 誤以為「總逾期數 0」＝沒事，故在此列出頁面分佈，
     # 讓消化端每輪至少看得到盲區規模與位置。
@@ -637,11 +581,14 @@ def print_queue(out, wiki_dir: Path | None = None, today: date | None = None,
         print("  → 這些筆沒有探針欄，5c 永遠撈不到；依 `/wiki-lint` 3g 於記者輪回填為新語法後才會進佇列", file=out)
 
     print(file=out)
-    print(
-        f"→ 本輪請處理 Lane A {min(len(lane_a), SIGNAL_LIMIT)} 筆 ＋ Lane B "
-        f"{min(len(lane_b), QUEUE_LIMIT)} 筆；寫回四選一見 `/wiki-lint` 5c 步驟 3",
-        file=out,
-    )
+    if entries:
+        print(
+            f"→ 本輪請把 Lane A {len(lane_a)} 筆 ＋ Lane B {len(lane_b)} 筆**全部清掉**"
+            "（清零制，無每輪額度）；寫回四選一見 `/wiki-lint` 5c 步驟 3",
+            file=out,
+        )
+    else:
+        print("→ 逾期佇列已空，本輪 5c 無待清項（舊語法盲區另見上方，處理端是 3g）", file=out)
 
 
 def main() -> int:
