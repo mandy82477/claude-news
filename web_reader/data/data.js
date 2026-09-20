@@ -182,6 +182,26 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "claude-code-archive",
+      "pageType": "entity",
+      "name": "Claude Code——原始條目封存",
+      "entityType": "",
+      "status": "resolved（封存頁）",
+      "domain": "🛠️ 工具/功能",
+      "pill": "gray",
+      "firstSeen": "",
+      "startDate": "",
+      "lastUpdated": "2026-09-20",
+      "lastNewsUpdate": "2026-04-30",
+      "updateFreq": "",
+      "parent": "entities/claude-code",
+      "summary": "本頁保存 claude-code 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
+      "latestHeadline": "",
+      "readerDomains": [
+        "🛠️ 工具/功能"
+      ]
+    },
+    {
       "id": "claude-code",
       "pageType": "entity",
       "name": "Claude Code",
@@ -191,7 +211,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "2025（正式推出）",
       "startDate": "",
-      "lastUpdated": "2026-09-19",
+      "lastUpdated": "2026-09-20",
       "lastNewsUpdate": "2026-09-19",
       "updateFreq": "",
       "parent": "",
@@ -848,7 +868,7 @@ window.WIKI_DATA = {
       "name": "OpenClaw——原始條目封存",
       "entityType": "",
       "status": "resolved（封存頁）",
-      "domain": "🛠️ 工具/功能",
+      "domain": "💼 商業",
       "pill": "gray",
       "firstSeen": "",
       "startDate": "",
@@ -859,7 +879,7 @@ window.WIKI_DATA = {
       "summary": "本頁保存 openclaw 被搬離主頁的原始「事件時序」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
       "readerDomains": [
-        "🛠️ 工具/功能"
+        "💼 商業"
       ]
     },
     {
@@ -868,7 +888,7 @@ window.WIKI_DATA = {
       "name": "OpenClaw",
       "entityType": "product（第三方工具）",
       "status": "active（信用池計費，不含訂閱）",
-      "domain": "🛠️ 工具/功能",
+      "domain": "💼 商業",
       "pill": "active",
       "firstSeen": "2026-04-25",
       "startDate": "",
@@ -879,7 +899,7 @@ window.WIKI_DATA = {
       "summary": "OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：**這些用量全數脫離訂閱方案，改為按完整 API 費率…",
       "latestHeadline": "OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：這些用量全數脫離訂閱方案，改為按完整 API 費率計費",
       "readerDomains": [
-        "🛠️ 工具/功能"
+        "💼 商業"
       ]
     },
     {
@@ -888,7 +908,7 @@ window.WIKI_DATA = {
       "name": "OpenCode——原始條目封存",
       "entityType": "",
       "status": "resolved（封存頁）",
-      "domain": "🛠️ 工具/功能",
+      "domain": "💼 商業",
       "pill": "gray",
       "firstSeen": "",
       "startDate": "",
@@ -899,7 +919,7 @@ window.WIKI_DATA = {
       "summary": "本頁保存 opencode 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
       "readerDomains": [
-        "🛠️ 工具/功能"
+        "💼 商業"
       ]
     },
     {
@@ -908,7 +928,7 @@ window.WIKI_DATA = {
       "name": "OpenCode",
       "entityType": "product",
       "status": "active（快速成長）",
-      "domain": "🛠️ 工具/功能",
+      "domain": "💼 商業",
       "pill": "active",
       "firstSeen": "2026-04-27",
       "startDate": "",
@@ -919,7 +939,7 @@ window.WIKI_DATA = {
       "summary": "**最新動態（2026-05-22）：** XDA 正式評為 Claude Code 的可行開源替代方案，同期 `OpenCode-power-pack` 完成移植官方 11 個 skills；截至目前（最後新聞更新 2026-05-22）無更新後續報導。 OpenCode 是 Claude Code 的主要開源替代品…",
       "latestHeadline": "XDA 評為 Claude Code 可行替代方案，`OpenCode-power-pack` 完成移植官方 11 個 skills（05-22）；The New Stack 報導 157,000 名開發者轉向里程碑（05-12）",
       "readerDomains": [
-        "🛠️ 工具/功能"
+        "💼 商業"
       ]
     },
     {
