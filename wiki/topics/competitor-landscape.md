@@ -52,10 +52,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查大減（09-13）→ 首見官方自曝的自主 agentic 信任案例，直指 Claude Code 定位 | 能力 | 🔴 | OpenAI 官方部落格單一客戶案例，無第三方驗證或量化數字 |
 | **Microsoft／GitHub** 🏢 | Code review 改版：版本演進更清楚、自動解決建議更聰明、accept 時產生 commit 訊息；10/19 起停用部分模型（09-19）→ 審查功能與模型陣容持續追平 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代仍屬傳聞（07-07，2 來源，官方無回應） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
-| **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率未載 ❓ 待查證 ⟨Q-01⟩ |
+| **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
-| **Google（Gemini）** 🏢 | Gemini 3.8 Live／Extended Thinking 推出語音 agent 與近即時多步推理（09-15）→ 評估語音場景時多一個對照對象；另有低價企業方案劍指 Anthropic（08-27） | 能力 | 🟡 | DeepMind 官方部落格一手；企業方案費率仍缺 🔎 查無官方 ⟨Q-06⟩ |
+| **Google（Gemini）** 🏢 | Gemini 3.8 Live／Extended Thinking 推出語音 agent 與近即時多步推理（09-15）→ 評估語音場景時多一個對照對象；另有低價企業方案劍指 Anthropic（08-27） | 能力 | 🟡 | DeepMind 官方部落格一手；企業方案為 Google Cloud 消費制計費，非固定席位價（2026-09-20 查證 ⟨Q-06⟩，見下方細節） |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
@@ -65,7 +65,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **🏢 圖例**：具名企業採用記錄（見 [[topics/enterprise-tool-tracker]]）或官方企業方案，缺一不標。企業評估候選名單：雷達表帶 🏢 者；具名採用／退出記錄見 [[topics/enterprise-tool-tracker]]。
 
 **懸置細節**
-- ⟨Q-06⟩ 🔎 **查無官方**（標 2026-08-29｜查 Google、企業定價、Antigravity｜複 2026-09-12）：Google 低價 AI 方案的方案名稱、費率、與 Antigravity 的關係均未見；08-31 CNBC 影音再報同一敘事，無新增數字。
+- ⟨Q-06⟩ 已查證（2026-09-20，[antigravity.google/docs/plans](https://antigravity.google/docs/plans/)）：企業存取走 Gemini Enterprise Agent Platform，Google Cloud 消費制計費，無固定席位價，不支援 BYO-key／合約制組織方案。
+- 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
 **未列入上表**（⚪ 級，動態仍記在下方時序）：騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
@@ -89,12 +90,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 工具/模型 | 定價 | vs Claude | vs Claude 定位 | 來源日期 |
 |---------|------|-----------|--------------|---------|
 | Muse Code / Muse Spark 1.2 / Muse Glimmer（Meta）| 按量計費：標準層 $1.25／$4.25、Contributor 層 $0.10／$0.20（每 M token）；Glimmer 開源免費 | 標準層≈0.43×、Contributor 層≈0.02×（對 Sonnet 5 $10/Mtok 輸出）；Glimmer 免費 | 明確對標 Claude Code 與 Codex，第一步策略是價格而非能力 | 2026-09-01（定價數字為媒體整理，2026-08-13 查證）|
-| DeepSeek（V4-Pro／V4 Flash／Lindy 案例）| V4-Pro 費率未見掛牌價；V4 Flash 僅見「成本較 Claude API 降低逾 100 倍」定性描述 | —（未見掛牌價；「降逾 100 倍」宣稱未指明對比模型，無法算倍數） | 低價 Flash／高價 Pro 雙軌（推論）；Lindy 全量切換每月省數百萬美元 | 2026-08-14（Google News/VentureBeat）|
-| Alibaba「最強」模型（名稱未指明）| 免費開放 | 免費（無倍數可算） | Decrypt 稱效能「幾乎追平」Claude 與 ChatGPT，未提供 benchmark 或模型名稱｜🔎 查無官方 ⟨Q-03⟩ | 2026-08-04（Google News/Decrypt）|
+| DeepSeek（V4-Pro／V4 Flash／Lindy 案例）| 官方查證：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，每 M token，快取未命中；尖峰時段雙倍）；V4 Flash（官方頁列「DeepSeek-Flash」）輸入 $0.15／輸出 $0.60（離峰） | V4-Pro 輸出≈0.198×、V4 Flash 輸出≈0.06×（對 Sonnet 5 $10/Mtok 輸出，離峰價） | 低價 Flash／高價 Pro 雙軌已證實；Lindy 全量切換每月省數百萬美元 | 2026-08-14 上線（Google News/VentureBeat）；定價 2026-09-20 查證（[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）|
+| Alibaba Qwen3.8-Max（已查證 ⟨Q-03⟩）| 免費開放權重（Hugging Face／ModelScope） | 免費（無倍數可算） | 2.4 兆參數（95B 啟用），Terminal-Bench 2.1 得 86.6（Opus 4.8／Fable 5 同 84.6），細節見下方 | 2026-08-04 首報；08-03 發布＋benchmark 09-20 查證 |
 | Kiro（AWS） | Free（50 credits）／Pro $20／Pro+ $40／Pro Max $100／Power $200，每人每月 | —（訂閱制，非按 token 計費，不可比） | AWS 旗下 spec-driven 編碼 agent（IDE/CLI/Web）；$200 為其自身頂層方案，非跨產品比較 | 2026-08-03（[kiro.dev](https://kiro.dev/)，2026-08-13 查證定價）|
-| OpenCode | 免費（開源）| —（免費開源工具，實際成本取決於所接模型） | 開源免費 vs 訂閱付費（$20/月）的採用落差，是本頁最早的分流訊號｜🔎 查無官方 ⟨Q-04⟩ | 2026-08-01（Google News/tech-insider.org）|
+| OpenCode | 免費（開源）| —（免費開源工具，實際成本取決於所接模型） | 開源免費 vs 訂閱付費（$20/月）的採用落差，是本頁最早的分流訊號；已查證 ⟨Q-04⟩：下載量統計為 npm registry 公開數字，非推算 | 2026-08-01（Google News/tech-insider.org）|
 | Antigravity（Google） | Free（20 次/日）／Pro ~$20／Ultra ~$100／Ultra Max $200（原 $249.99 調降）| —（訂閱制，不可比） | 依附 Google AI 訂閱框架；與 Cursor、Claude Code 並列比較 | 2026-07-23（第三方比較站彙整，2026-08-13 查證）|
-| Cline | 免費（Free）| —（免費開源工具） | 開源 VS Code 擴充，定位在 Claude Code（$20/月）與 GitHub Copilot（$10/月）之間的免費替代｜🔎 查無官方 ⟨Q-05⟩ | 2026-07-22（Google News/tech-insider.org）|
+| Cline | 免費（Free，工具本身）| —（工具免費，token 費用另計） | 開源 VS Code 擴充，介於 Claude Code（$20/月）與 Copilot（$10/月）間的免費替代；用量限制已查證 ⟨Q-05⟩，見下方 | 2026-07-22（Google News/tech-insider.org）|
 | Cursor | Hobby 免費／Pro $20／Pro+ $60／Ultra $200／Teams $40/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：SpaceX 收購後未見因收購而生的定價異動，6 級方案為既有架構延續 | 2026-08-13 查證（收購確認 2026-06-17）|
 | OpenAI Codex CLI | Free（試用）／Go $8／Plus $20／Pro 5x $100／Pro 20x $200／Business $30/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：2026-04-02 起改按 token 用量計費，非固定訊息數 | 2026-08-13 查證（多方比較站彙整）|
 | GPT-5.6（OpenAI API） | 已查證：Luna 降 80%（$0.20／$1.20）；Terra 降 20%（$2／$12）；Sol 未降價但提速 2.5 倍 | Luna≈0.12×、Terra≈1.2×（對 Sonnet 5 $10/Mtok 輸出）；Sol 未提新價 | OpenAI 官方明確訴求以更低價格對打 Anthropic | 2026-07-30（OpenAI 官方；2026-08-13 查證數字）|
@@ -102,20 +103,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Grok 4.5（xAI） | $2／$6 per Mtok（input／output） | 輸入 1.0×、輸出 ≈0.6×（對 Sonnet 5 $2/$10 per Mtok） | 宣稱優於 GPT-5 與 Claude，對標哪個 Claude 模型未指明，無 benchmark 佐證 | 2026-09-07（單一來源 shattered.io）|
 
 **競品定價細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-08-14｜查 DeepSeek V4-Pro、V4 Flash）：僅悉較 V4 Flash 定價更高，具體費率未見報導；已掃日報至 2026-09-03 無後續，官方頁面未查證。
+- ⟨Q-01⟩ 已查證（2026-09-20，[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，快取未命中）；V4 Flash 輸入 $0.15／輸出 $0.60（離峰）。
+- V4-Pro 輸出約為 V4 Flash 的 3.3 倍，確認雙軌定價策略屬實；尖峰時段（UTC 01:00–04:00、06:00–10:00 週一至五）雙倍。
 - **DeepSeek 雙軌與對比對象**：V4-Pro 隨開源工具 Harness 同步上線，API 定價較 V4 Flash 高，可能為「低價 Flash／高價 Pro」雙軌策略（推論）；KuCoin「逼近 Claude 3 Opus」是 DeepSeek 對 Claude 的比較，與內部兩模型互比不可混用。
 - ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-09-27｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
 - **Lindy 案例（06-29，CNBC）**：AI 新創 Lindy 100% 流量自 Claude 切至 DeepSeek，每月省下數百萬美元，屬企業級大規模用量的相對節省，非單一訂閱價格對比。
 - **Muse Code 定價來源**：定價數字為媒體整理（Wavect、The New Stack），Meta 官方獨立掛牌頁未見（2026-08-13 查證）；09-01 三訂閱層與「20x」折扣層的實際費率均未公布。
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Decrypt、Qwen3.8｜複 2026-09-13）：查證後仍未見 Alibaba 官方公告或後續報導確認是否為 07-20 已報導之 Qwen3.8。
+- ⟨Q-03⟩ 已查證（2026-09-20）：08-04 Decrypt 所稱「免費最強模型」即 08-03 正式發布的 **Qwen3.8-Max**——2.4 兆參數（95B 啟用）MoE、1M context，權重開源。
+- 官方 benchmark：31 項文字測試 Fable 5 奪 15 冠、GPT-5.6 Sol 9 冠、Qwen 7 冠；Terminal-Bench 2.1 得 86.6（Opus 4.8／Fable 5 同 84.6）。「幾乎追平」與官方數字大致吻合，非誇大。
 - **Kiro 的 80.8% SWE-bench**：該分數歸屬（Kiro 或 Claude Code）查證後仍未見官方或後續報導證實，kiro.dev 官網未列此分數。
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 tech-insider.org、OpenCode 下載量｜複 2026-09-13）：OpenCode 下載量達 Claude Code 5.4 倍之統計方法與時間範圍查證後仍未見揭露；該事實的完整脈絡見 [[entities/opencode]]。
-- ⟨Q-05⟩ 🔎 **查無官方**（標 2026-08-10｜查 Cline、tech-insider.org｜複 2026-09-13）：Cline 各工具用量限制、功能差異查證後仍未見官方揭露。
+- ⟨Q-04⟩ 已查證（2026-09-20）：5.4 倍統計基礎為 npm registry 公開下載數字——2026-07-31 止 30 天窗口 Claude Code 44,264,901 次 vs OpenCode 8,245,142 次，方法公開可驗證，非黑箱推算，脈絡見 [[entities/opencode]]。
+- ⟨Q-05⟩ 已查證（2026-09-20，[Cline 官方 FAQ](https://cline.bot/faq)）：Cline 工具免費、僅收所接模型 token 費；官方載明免費模型（如 Gemini）常遇 rate limit，惟未公布量化上限數字。
 - **已移出表**：GitHub Copilot Pro+（$39/月，Opus 採 27 倍加價換算）來源日期 2026-05-06 已逾 90 天，結論保留於「硬答案」；Kimi K3、HydraFusion 僅有相對成本的定性宣稱、無掛牌價，改記於「對手雷達」硬度欄與「雷達細節」。
 - **pi-coding-agent**：低成本編碼 agent 的成本數字已升格為「硬答案」條目（Databricks，2026-08-13 查證）。
 - **GLM-5.2 外部榜單佐證**：FrontierSWE 74.4 vs Opus 4.8 75.1、Terminal-Bench 2.1 81.0、SWE-bench Pro 62.1；單一外部來源、非日報進料，使用者 2026-07-17 手動查證，詳見 [[log]] 該日 Query 條目。
 
-❓ **待查證**（標 2026-08-14｜查 price war、定價戰｜複 2026-09-12）｜**中美 AI 定價戰敘事，均無具體數字**：FT 報導 OpenAI 與 Anthropic 因中國 AI 對手崛起涉入定價戰；同日 The Information 引述一項研究稱 Anthropic 模型在特定情境下實際成本可能低於中國同類模型（研究指出，非官方數據）。兩則若屬實，會削弱本表多筆「中國模型較 Claude 便宜數十至上百倍」訊號的普遍適用性，惟均僅標題層級，不可推算倍數。已掃日報至 2026-08-29 無後續；官方頁面未查證。
+已查證（2026-09-20）｜**中美 AI 定價戰現已有具體數字**：08-14 FT／The Information 報導的定價戰敘事，後續已有量化佐證——OpenAI 官方將輕量版 GPT-5.6 Luna 降價 80%，API 費率降至 $0.20／$1.20（每 M token，輸入／輸出）；Anthropic 以 Opus 5 回應，官方定價約為前代旗艦的一半。中國開源模型仍以低 60–90% 每 token 定價施壓，惟截至 2026 年中，美中閉源模型定價差距已收斂至輸入 19%、輸出 14%（第三方統計）。本頁既有多筆「中國模型較 Claude 便宜數十至上百倍」的訊號（如 DeepSeek V4 Flash「降逾 100 倍」定性描述）與此處官方降價後的實際倍率需分開看——降價後價差已顯著收斂，不可再套用降價前的舊倍數。
 
 ## 雷達細節
 
@@ -185,7 +188,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 來源 | 內容 | 量化數字 |
 |------|------|------|---------|
-| 2026-08-22 | 36Kr | 「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察，與同日 HN 高分貼文呼應同一主題（另見 [[topics/community-tech-discussions]]，詳見下方細節） | ❓ 待查證 ⟨Q-02⟩ |
+| 2026-08-22 | 36Kr | 「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察，與同日 HN 高分貼文呼應同一主題（另見 [[topics/community-tech-discussions]]，詳見下方細節） | 🔎 查無官方 ⟨Q-02⟩ |
 | 2026-07-15 | HackerNoon（跨 2 來源） | 「Claude Code vs Codex vs OpenCode：全端工程師誠實裁決」，三方比較文 | 🔎 查無官方（標 2026-08-10｜複 2026-09-13）：為工程師個人觀點比較文，查證後仍未見具體評分數據 |
 | 2026-07-22 | South China Morning Post（跨 2 來源） | 中國 Qiushi Engine（浙江大學團隊）於 ResearchClawBench 自主研究排行榜奪冠，Claude Code 第三、Open Science Desktop 第二 | 已查證：2026-08-13，[SCMP 原文](https://www.scmp.com/news/china/science/article/3361370/chinese-ai-agent-outperforms-anthropics-claude-code-autonomous-research) |
 | 2026-07-25 | SitePoint | 「Codex 5.3 生產環境工作流——何時該選它而非 Claude 做複雜重構」，工作流選型建議文 | 🔎 查無官方（標 2026-08-10｜複 2026-09-13）：為工作流選型建議文，查證後仍未見具體評測方法論或分數 |
@@ -195,7 +198,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **查證快照細節**
 - **36Kr（08-22）**：「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察報導，與同日 Hacker News 高分貼文「Quick impressions: A week of using Codex more than Claude」呼應同一主題（該則個人觀察角度另見 [[topics/community-tech-discussions]]）。
-- ⟨Q-02⟩ ❓ **待查證**（標 2026-08-22｜查 Codex、評測方法論）：僅標題可用，具體評測方法論或量化分數未見報導；已掃日報至 2026-09-03 無後續，官方頁面未查證。
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-22｜查 Codex、評測方法論｜複 2026-10-04）：延伸查證 36Kr 同系列報導確認此篇性質為產業競爭態勢觀察評論，非帶方法論的評測文章，站內未見任何一篇 36Kr 報導提供 Codex vs Claude Code 的量化分數或測試方法；判定此則本質上不存在可查證的「評測方法論」，非官方未公開。
 - **MarkTechPost（08-01）**：Supabase Evals 已查證（2026-08-13）——Build 階段 Opus 5／Kimi K3 均 100%（未輔助）；Sonnet 5 經 skills 輔助由 78%→100%、GPT-5.6 Sol 由 89%→100%（[supabase.com/evals](https://supabase.com/blog/introducing-supabase-evals)）。
 - **quasa.io（08-01）**：第三方彙整已查證（2026-08-13）——SWE-bench Verified 兩者持平 ~88.6–88.7%（Opus 5 於 07 月發布後 Claude 升至 97.0%）。
 - **quasa.io 其餘兩組**：SWE-bench Pro Claude Opus 4.8 領先 69.2% vs 58.6%；Terminal-Bench Codex 領先 82.7% vs 69.4%（2026-08-13 查證）。
