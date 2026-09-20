@@ -94,7 +94,9 @@ python scripts/lint_health.py age --days 60
 
 ## 6f. 跨檔案語意矛盾掃描
 
-讀取 `.claude/commands/review-commands.md`「同步配對註冊表」列出的所有配對，逐組**語意比對**（非僅字面 grep）：兩側對同一行為的指示是否實質衝突（例如一方說「必須 foreground」另一方說「可背景執行」；一方列六類 subagent_type 但名稱與另一方不同）。
+讀取 `.claude/review-registry.json` 的 `sync_pairs` 列出的所有配對，逐組**語意比對**（非僅字面 grep）：兩側對同一行為的指示是否實質衝突（例如一方說「必須 foreground」另一方說「可背景執行」；一方列六類 subagent_type 但名稱與另一方不同）。
+
+> `check_rules.py` 檢查 4 只驗兩側 pattern 是否各自命中，不讀語意；本步是它接不到的那一半。
 
 → 輸出 dry-run 回報：
 ```

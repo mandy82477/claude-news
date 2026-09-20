@@ -1694,6 +1694,30 @@
         "原料已逾保留窗，未對帳"
       ],
       "_note": "2026-09-15 review N-3：P1-5 同型病由 P1-6 修法重新引入。"
+    },
+    {
+      "name": "6f 語意矛盾掃描的配對來源＝registry 的 sync_pairs（紙本註冊表已廢除；指錯地方會讓 6f 每輪掃一個不存在的清單，靜默空轉）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
+      ],
+      "patterns": [
+        "`.claude/review-registry.json` 的 `sync_pairs`"
+      ],
+      "_note": "2026-09-19 雲端 lint 漏抓帳 (3)：原指 review-commands.md「同步配對註冊表」，該節已明文廢除；2026-09-20 /weekly 依使用者裁示修正並登記看守。"
+    },
+    {
+      "name": "新鮮度豁免契約：產出端（gen_wiki_frontmatter.py 的 STALENESS_EXEMPT_RE／signal 值）與規則端（sweeps.md 5g 的宣告語法）必須同字（改一邊，豁免會靜默失效或規則叫人寫一個沒人讀的欄位）",
+      "assertion": "all_contain",
+      "files": [
+        "scripts/gen_wiki_frontmatter.py",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
+      ],
+      "patterns": [
+        "新鮮度豁免",
+        "🗓️ 非新聞驅動"
+      ],
+      "_note": "2026-09-19 雲端 lint 漏抓帳 (2)：5g 的 21 天門檻對週更快照頁型態系統性誤觸；2026-09-20 /weekly 依使用者裁示改為頁面層豁免而非調全域門檻。"
     }
   ],
   "coupling_hints": {

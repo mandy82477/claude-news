@@ -20,6 +20,7 @@ pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-10-13"
 pending_signalled: 0
+staleness_exempt: null
 signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---

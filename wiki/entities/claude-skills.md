@@ -20,6 +20,7 @@ pending_count: 2
 pending_overdue: 2
 pending_next_review: null
 pending_signalled: 0
+staleness_exempt: null
 signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---

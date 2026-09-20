@@ -22,6 +22,7 @@ Bases 才能直接排序篩選，不需要外部腳本。
 | `孤島` | 入鏈 ≤ 3 且 21 天內有新聞 | 一直在更新但幾乎沒人指向，讀者到不了 |
 | `休眠` | 入鏈 < 15 且 超過 21 天無新聞 | 正常，該主題近期沒事發生 |
 | `健康` | 其餘 | — |
+| `🗓️ 非新聞驅動` | 頁面宣告了 `**新鮮度豁免：**<理由>` | 該頁的維護規則明文不動「最後新聞更新」（例：週更外部榜單快照），以天數判停滯對它恆為真。**豁免不等於隱藏**：它有自己的一格、理由寫進 `staleness_exempt` 欄，分布行看得到，只是 5g 清單撈不到 |
 
 `signal` 有消費端才不會白算：`⚠️ 高引用但停滯` 由 `/wiki-lint` 步驟 5g 逐頁處置
 （`--list-signal` 即其入口）。**列出方式刻意留在本檔而非 wiki_graph**——判準（入鏈 ≥ 15、
@@ -70,6 +71,10 @@ FIELD_RE = {
 
 PARENT_RE = re.compile(r"^\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)", re.MULTILINE)
 LAST_NEWS_RE_ANY = re.compile(r"^\*\*最後新聞更新[：:]\*\*\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
+# 非新聞驅動頁的新鮮度豁免：值＝理由（必填，空白視為未宣告）。
+# 這類頁的維護規則明文不動「最後新聞更新」（例：週更外部榜單快照），
+# 以天數判停滯對它們恆為真，是判準與頁型不合，不是頁面沒更新。
+STALENESS_EXEMPT_RE = re.compile(r"^\*\*新鮮度豁免[：:]\*\*\s*(\S.*?)\s*$", re.MULTILINE)
 INDEX_ROW_RE = re.compile(r"^(\|\s*\[\[([^\]|#]+)\]\]\s*\|.*?)(\s*↳ 子故事：[^|]*)?(\|\s*)$")
 
 
@@ -331,8 +336,15 @@ def main(argv: list[str]) -> int:
         meta["pending_next_review"] = next_review.isoformat() if next_review else None
         meta["pending_signalled"] = signalled
 
+        exempt_m = STALENESS_EXEMPT_RE.search("\n".join(body.splitlines()[:60]))
+        exempt = exempt_m.group(1).strip() if exempt_m else None
+        meta["staleness_exempt"] = exempt
+
         stale = days is not None and days > STALE_DAYS
-        if ib >= INBOUND_HIGH and stale:
+        if exempt:
+            # 豁免不等於隱藏：給它自己的一格，5g 清單撈不到但分布行看得到。
+            signal = "🗓️ 非新聞驅動"
+        elif ib >= INBOUND_HIGH and stale:
             signal = "⚠️ 高引用但停滯"
         elif ib <= ISLAND_INBOUND and not stale:
             signal = "孤島"

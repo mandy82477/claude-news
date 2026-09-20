@@ -133,6 +133,25 @@ def judged_repo_urls() -> set[str]:
             for m in re.finditer(r"https://github\.com/[\w.\-]+/[\w.\-]+", text)}
 
 
+def tools_catalog_rows() -> int | None:
+    """tools 頁「工具目錄」的現行列數（不含表頭）。
+
+    寫死分母會永久失真——2026-09-19 lint 實測頁面已長到 136 列而模板仍寫 125。
+    抄不到時回 None，由呼叫端改寫成不帶數字的說法，不硬填一個假數字。
+    """
+    try:
+        text = TOOLS_PAGE.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    import re as _re
+    m = _re.search(r"^## 工具目錄\s*$(.*?)(?=^## |\Z)", text, _re.M | _re.S)
+    if not m:
+        return None
+    rows = [l for l in m.group(1).splitlines()
+            if l.strip().startswith("|") and not _re.match(r"^\|\s*-{2,}", l.strip())]
+    return max(len(rows) - 1, 0) if rows else None
+
+
 def decision_table_from_tools() -> tuple[list[str], str]:
     """從 tools 頁（判斷的家）機械抄「我卡在這裡」決策表：回傳 (表格行列表, 圖例行)。
 
@@ -166,6 +185,7 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
         if len(cells) >= 4 and cells[0] not in ("我的症狀",) and not set(cells[0]) <= {"-", ":", " "}:
             row_by_symptom[cells[0]] = l
     n_active = sum(1 for c in cfg["categories"] if c.get("status") != "retired" and c.get("queries"))
+    catalog_rows = tools_catalog_rows()
     lines = [
         "# 興趣類別 skill 總覽",
         "",
@@ -179,10 +199,12 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
         # 括號內不以日期開頭：這段是頁面自介不是當日動態，讀者版產生器（build_reader_digest.py）
         # 只收「（YYYY-MM-DD」開頭的 callout，寫成「（快照 日期）」就不會天天被投影進日報
         f"> **本頁是什麼**（快照 {today}）",
-        "> 讀者關心的開發實務類別，一頁看完兩件事：**該裝哪個**（「我卡在這裡」決策表——有人判斷過、帶證據等級與判定日）"
-        f"與**這一類現在誰大、本週誰在漲**（GitHub 每日規模榜，{n_active} 類可用 GitHub 辨識）。"
-        "**星數是規模不是品質**：榜不做推薦，推薦只看決策表；榜上標 🧭 的工具代表決策表或工具目錄已有判斷。"
-        "判斷的完整證據、推薦細節、Skills 速查與 125 列工具目錄在 [[topics/community-tech-tools]]。",
+        "> - **該裝哪個**：看「我卡在這裡」決策表——有人判斷過，帶證據等級與判定日。",
+        f"> - **這一類現在誰大、本週誰在漲**：看 GitHub 每日規模榜（{n_active} 類可用 GitHub 辨識）。",
+        "> - **星數是規模不是品質**：榜不做推薦，推薦只看決策表；榜上標 🧭 者代表決策表或工具目錄已有判斷。",
+        "> - 完整證據、推薦細節、Skills 速查與"
+        + (f" {catalog_rows} 列工具目錄" if catalog_rows else "工具目錄")
+        + "在 [[topics/community-tech-tools]]。",
         "",
         "---",
         "",

@@ -20,7 +20,8 @@ pending_count: 1
 pending_overdue: 1
 pending_next_review: null
 pending_signalled: 0
-signal: "⚠️ 高引用但停滯"
+staleness_exempt: "本頁吃外部榜單而非新聞，週更規則明文不動「最後新聞更新」，以天數判停滯對它恆為真"
+signal: "🗓️ 非新聞驅動"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 任務 × 跨家模型領先者週快照
@@ -29,6 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **蒐集邊界：** 每週抓取 17 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 **更新頻率：** 🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）
+**新鮮度豁免：** 本頁吃外部榜單而非新聞，週更規則明文不動「最後新聞更新」，以天數判停滯對它恆為真
 **開始日期：** 2026-08-05
 **最後更新：** 2026-09-20
 **最後新聞更新：** 2026-08-05

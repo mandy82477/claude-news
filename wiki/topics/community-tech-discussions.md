@@ -13,12 +13,13 @@ page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 46
 attribution_count: 145
-attribution_last: "2026-09-20"
+attribution_last: "2026-09-19"
 top_source: "hacker-news"
 pending_count: 2
 pending_overdue: 2
 pending_next_review: null
 pending_signalled: 0
+staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
@@ -197,7 +198,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Claude Code AskUserQuestion 60 秒逾時自動代答引發體驗爭議：07-17 正式定調為「效率繞過」misfeature（最後動態 2026-07-17） | 2026-07-02 · 2026-07-17 | 🔥🔥🔥 | 🌙靜候 | AskUserQuestion 60 秒逾時自動代答引發爭議：07-17 定調為「效率繞過」misfeature（HN score 140），逾 45 天無新證據，改標靜候 | claude-needs-input |
 | 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-09-14 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT、09-14 preprompt 遷移 Ollama 筆記（HN 59）皆為新訊號 | Recall |
 | AI Skill Atrophy：「做更多、理解更少」 | 2026-06-10 · 2026-08-28 | 🔥🔥🔥🔥 | 🌊延燒 | HN Ask：Prompt-Then-Review 迴圈讓能力侵蝕；社群無共識但警覺度升高；最後動態 08-28（市場全面轉向，見上方長期議題） | — |
-| Boris Cherny「coding is solved」/ 反 vibe coding（最後動態 2026-06-24，逾 45 天無新證據改標靜候） | 2026-05-08 · 2026-06-24 | 🔥🔥🔥🔥🔥 | 🌙靜候 | 多平台（HN/Business Insider/YouTube）廣泛討論，社群兩極化；術語從 vibe coding 走向 spec-driven；06-24 Boris Cherny 公開為此論述設下邊界（立場收縮，見上方長期議題） | — |
 | 工具生態發現性問題 | 2026-05-15 · 2026-09-02 | 🔥 | 🌙靜候 | Skills/MCP 散落各處，缺乏集中發現機制；2026-09-02 skilldock 針對此痛點推出集中管理桌面應用，惟生態層級的發現機制本身仍未解決，維持靜候 | skilldock |
 
 > 當時熱度的意思是首見那時的討論規模：🔥🔥🔥🔥🔥 跨平台廣泛熱議 / 社群兩極化；🔥🔥🔥 單平台高互動 / 議題共鳴深；🔥🔥 多次被引用 / 催生後續工具；🔥 值得關注但尚未擴散

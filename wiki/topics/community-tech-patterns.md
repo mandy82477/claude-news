@@ -13,12 +13,13 @@ page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 58
 attribution_count: 172
-attribution_last: "2026-09-20"
+attribution_last: "2026-09-18"
 top_source: "github"
 pending_count: 7
 pending_overdue: 6
 pending_next_review: "2026-10-04"
 pending_signalled: 1
+staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---

@@ -20,6 +20,7 @@ pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
+staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---

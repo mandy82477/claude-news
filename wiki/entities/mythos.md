@@ -20,6 +20,7 @@ pending_count: 3
 pending_overdue: 2
 pending_next_review: "2026-10-04"
 pending_signalled: 1
+staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
