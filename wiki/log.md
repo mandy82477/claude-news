@@ -6600,6 +6600,20 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   6. `topics/recursive-self-improvement` ↔ `topics/anthropic-government-policy`：補雙向 wikilink 串起「評測機構獨立性」一線（09-16 質疑自行提名公信力 → 09-18 專家聯署要求真獨立機構，互為因果只差三天）。
   7. `entities/claude-skills`：補「Skills 載入路徑依 session 類型而異」（本機讀 `~/.claude/skills/`、雲端讀帳號設定、SSH 讀本機），來源 09-17 官方桌面版文件；原本只記在 `entities/claude-code`。
 - 使用者跳過項目：無（7 項全數採納）。
+
+## 2026-09-20 Ingest
+
+- 來源日報：[[news/2026-09-20]]
+- 更新頁面：entities/opus-5、entities/claude-code、entities/pricing、topics/anthropic-government-policy、topics/ai-agent-safety、topics/recursive-self-improvement、topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline、topics/market-signals、overview
+- 新增頁面：無
+- 摘要：一起反壟斷訴訟指控 Anthropic、OpenAI、SpaceXAI、Google 就「AI 減速」達成非法協議（Anthropic CEO 已書面承認潛在反壟斷風險）；claude-code repo 上 Claude 4.7～5.0 與 Fable 跨模型重複修辭語病 bug、Cowork Windows 09 月更新致 device_bash 失效兩則高互動回報；Anthropic 與 Accenture 合作嵌入式評估，落實「Pace the Frontier」承諾。
+- 呈現品質：全部通過
+- 品質備註：
+  - [商業] ⚠️ entities/pricing.md:82（2026-08-12 查證）現載「Pro 另含 Microsoft 365 整合」，與今日 GitHub Issue #20469（M365 connector 僅限 Team/Enterprise、Max 個人版不可用）疑有落差；本次雲端環境 claude.com 網域被 egress 擋下無法查證，列入本次「📋 待使用者裁示」
+  - [社群] ⚠️ topics/code-quality-decline.md「Opus 5 上線後品質觀感」段落開頭句「本頁累積 18 則訊號：下表六種主張收 17 則」與表格實際加總既存落差（非本次造成），建議 `/wiki-lint` 核對全段則數口徑
+- 分類回退：追加派工 3 筆（模型記者與商業記者皆獨立回報「reasoning budget nerfing」應歸社群，改派後已收錄進 topics/code-quality-decline；分類複核記者判定「5-hour limit [dead] 討論串」與「Gantt charts 貼文」誤排除，改派社群記者後依門檔判斷仍不收錄，維持不收但已給過分類機會）；駁回 0 筆
+- devpractice 沉澱：候選 10 筆（GitSpawn 部分修補細節、Session 額度自動繼續查證、LiteLLM MCP RCE CVE 查證、skillcrossroads 216 skill 稽核、Chief of Staff Pattern、aoci-code、pstack-claude、Claude-Code-Usage-Monitor、claudish-to-english plugin、Opus 5 Sonar 第三方量化評測）
+- market 判讀：判讀 2 則（聯邦法官裁定 Reddit 對 Anthropic 資料爬取訴訟大部分可續行，Reddit／NYSE:RDDT 首度成為本頁可交易標的；反壟斷訴訟新增 Anthropic CEO 書面承認可能觸及反壟斷問題）
 - 人物記者：無建議——減速呼籲反彈與安全離職浪潮兩條線都已有完整建頁與交叉連結。
 - `reader-notes.md` 收件匣：3 條 ⏳ 🔍 興趣主題（LLM code review 單位成本、codebase map 格式規約、GPT-6 Astra 對照跑分）本週經社群／模型／商業三記者分頭查證**皆無新節點**，維持 ⏳ 不標 ✅；📌 雜記 1 條（09-03 星圖規劃，17 天未逾 30 天）保留。
 - 聚焦校準：非本月首次（9 月已於 09-06 執行，命中率 73.7%），跳過。
