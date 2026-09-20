@@ -14,6 +14,8 @@
 | `wiki/topics/enterprise-tool-tracker.md` | 具名企業採用 / 退出 AI 編碼工具；企業工具切換報導（含有規模描述的匿名企業）；企業 AI 工具預算或成本相關的具名案例 |
 | `wiki/topics/enterprise-cost-management.md` | 企業規模成本挑戰、具名案例 |
 | `wiki/entities/pricing.md` | 訂閱方案、計費政策、token 成本 |
+| `wiki/entities/openclaw.md` | 第三方 agentic 工具的**使用政策與計費**變化（禁令、恢復、信用池費率）。本頁主線是計費政策；OpenClaw agent 造成的安全事件由安全政策記者寫進 [[topics/ai-agent-safety]]，本頁只留一行指過去 |
+| `wiki/entities/opencode.md` | OpenCode 的**產品事實**（採用規模、功能對等性評測、對官方 skills 的移植）。競爭面的判讀（衝擊度、定價對照）住 [[topics/competitor-landscape]] 的 OpenCode 列，本頁是它指過來的「完整脈絡」——那一列有新動態時同步回寫本頁，別讓本頁再停在舊日期 |
 | `wiki/topics/competitor-landscape.md` | 競品動態、企業工具市佔變化（**先看 `.claude/reporter-rules/commercial/pages.md` 該頁第 0 條「本頁不收什麼」**）|
 | `wiki/topics/ai-talent-flow.md` | AI 實驗室間人才流動、對各公司的商業影響（誰流失、誰承接、戰力與市場意涵）|
 

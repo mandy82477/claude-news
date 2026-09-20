@@ -3,7 +3,7 @@ page: "entities/opencode"
 kind: "entity"
 type: "product"
 status: "active（快速成長）"
-domain: "🛠️ 工具/功能"
+domain: "💼 商業"
 last_updated: "2026-09-20"
 last_news_update: "2026-05-22"
 status_main: "active"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **類型：** product
 **狀態：** active（快速成長）
-**領域：** 🛠️ 工具/功能
+**領域：** 💼 商業
 **首次出現：** 2026-04-27
 **最後更新：** 2026-09-20
 **最後新聞更新：** 2026-05-22

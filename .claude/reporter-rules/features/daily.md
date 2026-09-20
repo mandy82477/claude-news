@@ -14,7 +14,6 @@
 | `wiki/entities/bugcrawl.md` | BugCrawl 漏洞偵測工具動態 |
 | `wiki/topics/anthropic-agent-stack.md` | 官方 agent 積木總覽（母頁）：八張積木卡（為什麼出／多給了什麼／還做不到什麼）、「怎麼疊」、決策樹與兩份附錄。agent 架構相關功能經「多標三件事」寫入本頁（見 `.claude/reporter-rules/features/pages.md`）；官方查證欄位由主編維護 |
 | `wiki/entities/managed-agents.md` | Managed Agents 框架更新（[[topics/anthropic-agent-stack]] 的子頁，收代管平台產品事實：現況、計費、零件成熟度、歷史） |
-| `wiki/entities/openclaw.md` | OpenClaw 第三方整合政策變化 |
 | `wiki/entities/claude-design.md` | Claude Design 工具更新 |
 | `wiki/entities/claude-security.md` | Claude Security 資安產品動態 |
 | `wiki/entities/claude-skills.md` | Skills 官方產品線與生態：官方技能包、平台支援、分享機制、第三方移植（設計面歸社群記者 patterns 頁） |

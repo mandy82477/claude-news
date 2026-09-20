@@ -6641,3 +6641,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **讀者語言閘誤判一則**：`topics/ai-agent-safety` 的「共享**封存**檔」講的是 zip／tar 壓縮檔，被當成頁面封存的內部術語擋下，已由該頁記者改寫措辭。與同日 gradient 那條同型——**閘擋的是詞，要擋的是意思**。
 - **共用工作樹事故兩起**（均未造成最終損失）：其一，另一 session 在樹上跑了 `git reset --hard`，清空商業記者未提交的工作；reflog 確認為 `reset: moving to HEAD`、未回退歷史，已推送的 commit 均在，記者重做並自行 commit。其二，社群記者對 `community-tech-patterns` 的編輯一度被並行 agent 整檔覆寫，已重做並二次驗證（今日三層工作——⟨Q-04⟩ 結案、Skills 稽核節點、5c 清零——經核皆在）。
 - **待觀察**：清零只清掉存量。每週自然進料約 18–33 筆、Lane B 產能 8 筆，若下輪隊伍再度拉長，複查日與排空天數的落差會重新出現，屆時仍須在「提高額度」與「複查日隨佇列深度計算」之間擇一。
+
+## 2026-09-20 Query：功能記者名下的頁是否都歸屬正確（使用者提問）
+
+- **查證**：分類正典（`.claude/skills/wiki-ingest/references/classification.md`）定義功能類＝**官方**的版本／指令／旗標／SDK／beta 功能／使用指南。逐頁核對領域欄為 🛠️ 工具/功能 的 19 頁：17 頁符合（皆 Anthropic 自家產品或官方功能追蹤，含自家開發的 [[entities/bugcrawl]]），2 頁不符。
+- **不符的兩頁**：[[entities/opencode]]（頁面自述「Claude Code 的主要開源替代品」，第三方競品）與 [[entities/openclaw]]（頁面自標「第三方工具」，主線為配額禁令→信用池計費）。
+- **為什麼會出事**：兩頁的新聞從不派給功能記者——OpenCode 的後續被分類為競品動態、由商業記者寫進 [[topics/competitor-landscape]]；OpenClaw 唯一一筆歸因走安全政策。`opencode` 歸因帳本自 07-11 起零筆、最後新聞停在 05-22（四個月），而同期 competitor-landscape 的 OpenCode 列持續在更新——頁面掛在一個永遠收不到它新聞的主人名下，屬「僅有領域概括覆蓋、無執行機制」的靜默孤兒化。領域欄為四月建頁時所填，此後未重審。
+- **處置**：兩頁及其 archive 子頁領域改為 💼 商業（頁首、[[index]] 兩列同步）；功能記者負責頁面表移除 `openclaw` 列；商業記者負責頁面表新增兩列並寫明觸發條件與分工（`openclaw` 主線是計費政策、安全事件仍歸 [[topics/ai-agent-safety]]；`opencode` 收產品事實、競爭判讀留在 competitor-landscape 該列，並要求該列有新動態時同步回寫本頁）。功能記者名下由 19 頁變 17 頁。
+- **歸因**：`user-query`。

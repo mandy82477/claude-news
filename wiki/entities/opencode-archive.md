@@ -2,7 +2,7 @@
 page: "entities/opencode-archive"
 kind: "entity"
 status: "resolved（封存頁）"
-domain: "🛠️ 工具/功能"
+domain: "💼 商業"
 last_updated: "2026-09-20"
 last_news_update: "2026-05-22"
 status_main: "resolved"
@@ -26,7 +26,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # OpenCode——原始條目封存
 
 **狀態：** resolved（封存頁）
-**領域：** 🛠️ 工具/功能
+**領域：** 💼 商業
 **上層：** [[entities/opencode]]
 **最後更新：** 2026-09-20
 **最後新聞更新：** 2026-05-22
