@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-20
 
-> **最新動態**（2026-09-19）
+> **最新動態**（2026-09-20）
 > 聯邦法官裁定 Reddit 對 Anthropic 資料爬取訴訟大部分可續行；反壟斷合謀提告新增 Anthropic 回應與業界動機質疑，詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
 ---

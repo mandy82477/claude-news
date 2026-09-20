@@ -29,13 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
 **最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-19
+**最後新聞更新：** 2026-09-20
 
-> **最新動態**（2026-09-19）
-> - **獨立評估落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元獨立評估前沿 AI 安全，回應 09-18 獨立評測機構呼籲
-> - **反壟斷提告**：Anthropic、OpenAI、SpaceXAI、Google 因「踩煞車」呼籲遭控反壟斷合謀，詳見 [[topics/anthropic-government-policy#攻防紀錄]]
->
-> 詳見 [[topics/recursive-self-improvement#技術彙整]]。
+> **最新動態**（2026-09-20）
+> Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty（Accenture 專責 AI 業務單位）主導，範圍含評估與 red-team 模型，詳見 [[topics/recursive-self-improvement#技術彙整]]。
 
 ---
 
@@ -89,7 +86,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/accenture-embedded-evaluation)（2026-09-19）；Washington Post〈Anthropic picks consulting firm to monitor AI safety, pledges to spend $1 billion〉（經 Google News）；CNBC 同日跟進（僅標題可用）
 - **核心主張**：Anthropic 宣布由顧問公司 Accenture 出任首位「內嵌評估者」，獨立評估前沿 AI 安全，呼應 Dario Amodei「We Must Pace the Frontier」一文承諾；Washington Post 報導同時承諾投入 10 億美元資金
 - **與既有敘事的關係**：直接回應上方 09-18 條目「CNBC：多位專家呼籲獨立安全評測機構」——本則首次具體指名機構並附金額，是本頁治理提案系列首見落地案例；Accenture 由 Anthropic 自行選定，是否真正獨立仍待觀察，本頁不代為下結論
-- ❓ **待查證**（標 2026-09-19｜查 Accenture、embedded evaluator）：Accenture 評估範圍、獨立性保障機制（能否否決或僅出具報告）、10 億美元資金的具體用途與時程均未見報導
+- **09-20 補充（官方原文細節）**：官方部落格全文說明合作由 **Faculty**（Accenture 旗下專責 AI 業務單位）主導，工作範圍包含評估與 red-team 模型；其餘工作項目官方原文尚有列舉，本頁僅取得部分摘要，不逕自補全
+- ❓ **待查證**（標 2026-09-19｜查 Accenture、embedded evaluator｜訊 2026-09-20）：獨立性保障機制（能否否決或僅出具報告）、10 億美元資金的具體用途與時程均未見報導；評估範圍部分已知含評估與 red-team 模型（見上方 09-20 補充），完整項目清單仍未見報導
 - **可信度評估**：Anthropic 官方部落格一手發布＋Washington Post、CNBC 主流媒體跟進，訊號強度高；惟 Washington Post／CNBC 條目均經 Google News 轉載僅標題可用，10 億美元數字僅見 Washington Post 標題引述，未見官方原文同一數字
 
 ### Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一（2026-09-18 新增）
@@ -257,6 +255,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-09-20
+- **[補充，新增] Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty 主導，範圍含評估與 red-team 模型**：官方部落格全文補充，非新事件，詳見「## 技術彙整」
 
 ### 2026-09-19
 - **[治理落地，新增] Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元**：回應 09-18 獨立評測機構呼籲，詳見「## 技術彙整」
