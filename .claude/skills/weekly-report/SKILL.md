@@ -35,6 +35,8 @@ disable-model-invocation: true
 
 ### 2. 蒐集素材
 
+**先 `git pull --rebase`，再列 `news/`。** 涵蓋窗由「動筆那一刻本機有哪幾份日報」決定，而日報是雲端班次產的、不 pull 就看不到。W38 動筆時 09-19 日報已在遠端、本機沒有，當週最大的使用者側事件（AGENTS.md 支援出貨）因此落在窗外，直到 push 前 rebase 才進來——那時全文已定稿，依凍結原則只能補一句更正，不能重選頭條。收尾的補掃救得了事實，救不了選題。
+
 **選題素材**（決定寫什麼）固定涵蓋窗：**近 7 日** `news/*.md`（唯讀，不可修改）＋ `wiki/log.md` 同期 ingest 紀錄＋ `wiki/feature-radar.md`＋ **`wiki/reader-notes.md` 狀態 ⏳ 的 🔍 興趣主題**。
 
 **內容素材**（決定深度）不受此窗限制——`wiki/` 既有頁面、任何一期歷史日報、官方文件、以及**依缺口向外查找**的第三方來源皆可用。約束不在來源位置，在來源可取回性，見 `.claude/skills/weekly-report/references/deepdive.md`「來源紀律」。

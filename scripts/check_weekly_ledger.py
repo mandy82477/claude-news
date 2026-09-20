@@ -455,12 +455,75 @@ def check_headline(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
     return ok
 
 
+# ── 探針活性（W39 起生效）────────────────────────────────────────────────────
+# 探針要能在日報 grep 到後續，前提是它**用的是日報的詞**。撰稿者立預告時很容易
+# 用自己在頭條裡造的詞（W37「週配額、17%、撞上限」），而日報寫的是另一套
+# （「用量縮減、額度、usage limits、25%」）。這種探針在立案當週就找不到生出它的那則
+# 新聞，當然永遠找不到後續——下期回收只會看到「零命中」，然後把有事的線判成沒事。
+# 2026-09-20 回溯量測：九期 150 個探針中 21% 立案當週即零命中；整條全滅的 3 條
+# （W36 沙箱、W37 額度被偷／配額換軌）後來全數以「零命中」收場，其中配額換軌那條
+# 實際有 5 則相關日報條目，是判錯。W31–W35 無一條全滅，零誤擋。
+PROBE_LIVENESS_SINCE = "2026-W39"
+PROBE_TAIL_RE = re.compile(r"｜查證：(.+?)\s*$")
+NEWS_DIR = REPO_ROOT / "news"
+
+
+def _issue_window_text(issue_id: str, news_dir: Path) -> str | None:
+    """該期 ISO 週（含前一日，週報常於週日寫、涵蓋上週六起）的日報全文；一份都沒有回 None。"""
+    from datetime import date, timedelta
+    m = re.match(r"(\d{4})-W(\d{2})$", issue_id)
+    if not m:
+        return None
+    monday = date.fromisocalendar(int(m.group(1)), int(m.group(2)), 1)
+    chunks = []
+    for i in range(-1, 7):
+        f = news_dir / f"{(monday + timedelta(days=i)).isoformat()}.md"
+        if f.exists():
+            chunks.append(f.read_text(encoding="utf-8-sig"))
+    return "\n".join(chunks) if chunks else None
+
+
+def check_probe_liveness(report: list[str], weekly_dir: Path = WEEKLY_DIR,
+                         news_dir: Path = NEWS_DIR) -> bool:
+    """新開預告的探針，在立案當週的日報至少要有一個命中——全滅即硬擋。"""
+    files = sorted(weekly_dir.glob("[0-9][0-9][0-9][0-9]-W[0-9][0-9].md")) if weekly_dir.exists() else []
+    if not files:
+        return True
+    curr = files[-1]
+    if curr.stem < PROBE_LIVENESS_SINCE:
+        return True  # 舊期已凍結，不回溯
+    text = _issue_window_text(curr.stem, news_dir)
+    if text is None:
+        report.append(f"  ℹ️ {curr.stem}：找不到該週日報，探針活性略過（不當作通過的證據）")
+        return True
+    hay = text.lower()
+    ok = True
+    for row in _parse_table(curr.read_text(encoding="utf-8-sig"), FORECAST_HEADER_RE):
+        if len(row) < 3:
+            continue
+        tail = PROBE_TAIL_RE.search(row[2])
+        if not tail:
+            continue  # 缺線索由 check() 另行硬擋
+        probes = [x.strip() for x in re.split(r"[、,，]", tail.group(1)) if x.strip()]
+        if probes and not any(p.lower() in hay for p in probes):
+            ok = False
+            report.append(
+                f"  ❌ {curr.stem}：探針在立案當週的日報全數零命中——「{_strip_bold(row[1])[:30]}」"
+                f"（{'、'.join(probes)}）。連生出這條預告的新聞都找不到的探針，找不到後續；"
+                "改用日報原文裡真的出現過的字串（產品名、issue 編號、機構名）"
+            )
+    if ok:
+        report.append(f"  ✅ {curr.stem}：新開預告的探針在當週日報皆有命中")
+    return ok
+
+
 def main() -> int:
     report: list[str] = []
     ok = check(report)
     ok = check_weekly_numbers(report) and ok
     ok = check_deepdive(report) and ok
     ok = check_headline(report) and ok
+    ok = check_probe_liveness(report) and ok
     out = _stdout()
     print("# check_weekly_ledger.py 報告\n", file=out)
     print("\n".join(report) if report else "  （無週報）", file=out)
