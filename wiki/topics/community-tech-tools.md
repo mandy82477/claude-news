@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-18
 
 > **本週策展：新增 11 個工具**（2026-09-19）
@@ -199,12 +199,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**OzBrain**](https://ozbrain.com) | 記憶工具 | ⏳ | 2026-08-21 | agent 與團隊共享的知識庫，取代傳統筆記/任務管理工具；Show HN score 69，多家報導 |
 | [**Proliferate**](https://github.com/proliferate-ai/proliferate) | 多 Agent | ⏳ | 2026-08-21 | YC S25，開源自架 AI IDE，統一操作 Claude Code／Codex／OpenCode／Cursor／Grok；Show HN score 39，多家報導 |
 | [**Frugal Tokens**](https://demo.frugaltokens.com/) | 費用監測 | ⏳ | 2026-08-19 | 探索跨 coding agent（含 Claude Code）的成本與用量，含 cache miss 對花費的影響；Show HN score 33，多家報導 |
-| [**machine0**](https://machine0.io) | 整合工具 | ⏳ | 2026-08-18 | YC S26，持久化 CPU/GPU 雲端 VM 供長時間自主 agent 運算，`machine0 new mybox` 即開機，$0.013/hr 起；Launch HN score 78 |
-| [**internet-court-skill**](https://github.com/internet-court/internet-court-skill) | 安全工具 | ⏳ | 2026-08-18 | agent-to-agent 商務信任層 skill：自然語言 mandate、ERC-7710 委任權限、x402 支付、託管與爭議解決；5,317 星（09-02 更新），佐證不足（見收錄註記） |
-| [**claw-orchestrator**](https://github.com/Enderfga/claw-orchestrator) | 多 Agent | ⏳ | 2026-08-17 | 跨 harness 統一 runtime（Claude Code／Codex／Antigravity／Cursor／OpenCode），持久 session＋multi-agent councils＋MCP server；547 星 |
-| [**statuslin.es**](https://statuslin.es) | UI 工具 | ⏳ | 2026-08-17 | 社群策展的 Claude Code status line 樣式展示網站，每則附真實 sandbox 容器截圖；同時被 2 個獨立來源收錄 |
 | [**Graft**](https://github.com/NanoNets/Graft) | 費用監測 | ⚠️ | 2026-08-15 | Claude Code hooks 削減 grep 輸出 token，宣稱降幅 42%（HN 39，跨 2 來源）；HN 討論串質疑 README 的 benchmark 段落疑似 AI 代寫，數字未經第三方覆核 |
-| [**/show-me**](https://www.humanlayer.com/blog/show-me-skill) | Skills | ⏳ | 2026-08-13 | agent skill，讓 coding agent 以精簡視覺化呈現取代大量文字輸出；兩個獨立來源同日報導 |
 | [**devspace**](https://github.com/Waishnav/devspace) | 整合工具 | ⏳ | 2026-08-11 | 把 ChatGPT 網頁介面／Claude Web 轉換成類 Codex／Claude Code 的操作體驗；3,675 星，已查證非刷星（forks 10.9%） |
 | [**loopx**](https://github.com/huangruiteng/loopx) | 多 Agent | ⏳ | 2026-08-09 | 輕量級 loop 工程狀態核心，持久目標、配額感知自動喚醒、可執行待辦、證據紀錄與可驗證交接，agent-loop agnostic；4,476 星，已查證非刷星（forks 8.6%） |
 | [**omnigent**](https://github.com/omnigent-ai/omnigent) | 多 Agent | ⏳ | 2026-08-05 | harness 無關 meta-harness，換底層 agent（Claude Code／Codex／Cursor／Pi）不必重寫協作邏輯；9,080 星（08-05 查證非刷星時為 8,150 星，forks 14.7%），持續成長 |
@@ -303,10 +298,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**mux0**](https://mux0.com/) | IDE/終端 | ✅ | 2026-04-26 | 開源 macOS 終端，側邊欄即時顯示多 agent 狀態 |
 | **CC-Canary** | 工作流 | ✅ | 2026-04-25 | 讀取 session log 自動偵測效能漂移，HERMES.md bug 後更受重視；詳見 [[topics/code-quality-decline]] |
 
-**收錄註記**（表內「見收錄註記」的三筆）
+**收錄註記**（表內「見收錄註記」的兩筆）
 - **andrej-karpathy-skills**（08-29）：僅 GitHub Search 星數，無 forks／issues 佐證可查，增速異常，不作為獨立驗證訊號。
 - **gstack**（08-30）：13.0 萬星僅用 5.5 個月達成，增速明顯快於同類存量盤點案例，星數真實性未經驗證；作者具名且內容具體故收錄。
-- **internet-court-skill**（08-18 收錄，09-02 更新星數）：5,317 星，前次 08-18 為 3,793 星；無出生日期標記、無 forks／issues 佐證可查。
 
 **懸置細節**
 - ⟨Q-01⟩ 已查證（2026-08-13）：「4 倍」宣稱的機制已釐清數據不一致的來源——GeoSQL 讓 agent 把空間查詢結果透過 Dekart 渲染成地圖並回看修正幾何錯誤（map-in-the-loop），4 倍準確度提升**只在連接 Dekart 時成立**；未連接 Dekart 時 GeoSQL 表現與一般 SQL agent 相當，先前細部任務成功率數據加總不一致即源於部分任務未啟用 Dekart 視覺回饋（[dekart.xyz 部落格](https://dekart.xyz/blog/claude-code-vs-aino-geospatial-agent/)、[Show HN](https://news.ycombinator.com/item?id=48829242)）；詳見 [[topics/community-tech-discussions]]
