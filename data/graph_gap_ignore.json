@@ -162,24 +162,44 @@
       "why": "openclaw 是第三方 agentic 工具與計費爭議，managed-agents 是官方 agent 積木；共同點只有「都被 pricing 提到」，不是同一件事"
     },
     {
-      "pages": ["topics/market-signals", "topics/recursive-self-improvement"],
+      "pages": [
+        "topics/market-signals",
+        "topics/recursive-self-improvement"
+      ],
       "reviewed": "2026-09-19",
       "why": "market-signals 規則明訂員工言論／議員呼籲這類關注度訊號留在事實頁，本頁只以待查證探針追蹤官方是否回應；事實的家是 recursive-self-improvement，已相連判定會剝除探針內的 wikilink，故看似缺連結，實為刻意的單向設計"
     },
     {
-      "pages": ["entities/claude-code", "entities/mythos"],
+      "pages": [
+        "entities/claude-code",
+        "entities/mythos"
+      ],
       "reviewed": "2026-09-19",
       "why": "共同落地新聞是 09-15 Mythos 5.1／Fable 5.1 間歇性錯誤率事件，事實的家是 entities/fable-5（mythos 已明文指向它）；claude-code 也已多處連向 fable-5，claude-code 與 mythos 直接互連只是幫兩個各自的分支多繞一條路"
     },
     {
-      "pages": ["entities/claude-code", "topics/market-signals"],
+      "pages": [
+        "entities/claude-code",
+        "topics/market-signals"
+      ],
       "reviewed": "2026-09-19",
       "why": "共同落地新聞是「開發者把 Claude Code 導向非 Anthropic 模型執行」；market-signals 規則明訂事實不搬家、只連事實的家，該則已明文指向 [[topics/anthropic-business]]、[[topics/official-community-gap]]，claude-code 也已連向 official-community-gap，繞過設計好的家直接連 market-signals 只是多一條路徑"
     },
     {
-      "pages": ["entities/evan-hubinger", "topics/market-signals"],
+      "pages": [
+        "entities/evan-hubinger",
+        "topics/market-signals"
+      ],
       "reviewed": "2026-09-19",
       "why": "同上 market-signals／recursive-self-improvement 那條規則：evan-hubinger 頁已明文將事件機制與政策面交給 topics/recursive-self-improvement，market-signals 對此類員工言論只留追蹤官方回應的待查證探針，非該事件的家"
+    },
+    {
+      "pages": [
+        "topics/anthropic-agent-stack",
+        "topics/community-large-codebase-workflow"
+      ],
+      "reviewed": "2026-09-20",
+      "why": "2026-09-20 使用者裁示後判定不併：一頁答「官方出了哪八塊積木」（🛠️ 功能記者、吃官方文件），一頁答「社群在大型 repo 怎麼做」（🌐 社群記者、週更沉澱自 community-tech-patterns）；問題、進料與單一維護者都不同，併頁會讓同一頁出現兩個記者。兩頁已互連，那才是正確關係"
     }
   ]
 }

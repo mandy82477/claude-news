@@ -453,6 +453,37 @@ def _read_last_history(path: Path, today: date) -> tuple[str, int] | None:
         return None
 
 
+def _median_review_gap(wiki_dir: Path) -> float | None:
+    """全庫「標→複」間隔的中位數（天）。
+
+    存在理由：排空天數與複查日過去各印各的，從沒被並排比過。複查日若短於排空
+    時間，每一筆都必然在輪到它之前先逾期——此時「逾期數」只是佇列長度的別名，
+    照它調額度會調錯方向。只計真的寫了 `複` 的標記，沒寫的不套預設值充數。
+    """
+    gaps: list[int] = []
+    for path in sorted(wiki_dir.rglob("*.md")):
+        if path.name == "log.md":
+            continue
+        try:
+            text = path.read_text(encoding="utf-8-sig")
+        except Exception:
+            continue
+        for mk in iter_pending(text, path):
+            if not mk.review:
+                continue
+            marked_date = _parse_date(mk.marked)
+            review_date = _parse_date(mk.review)
+            if marked_date is None or review_date is None:
+                continue
+            if review_date > marked_date:
+                gaps.append((review_date - marked_date).days)
+    if not gaps:
+        return None
+    gaps.sort()
+    n = len(gaps)
+    return float(gaps[n // 2]) if n % 2 else (gaps[n // 2 - 1] + gaps[n // 2]) / 2
+
+
 def _append_history(path: Path, today: date, total: int, a: int, b: int, added: int) -> None:
     """每輪 append 一列。沒有這個，下週跑同一支腳本仍答不出「比上週好還是壞」——
     而本次改版的起因正是『19 天從 0 長到 51 無人察覺』。"""
@@ -570,7 +601,28 @@ def print_queue(out, wiki_dir: Path | None = None, today: date | None = None,
 
     # 排空預估：「43 筆」沒有時間感，「8.6 週」有。
     if lane_b and QUEUE_LIMIT:
+        drain_days = len(lane_b) / QUEUE_LIMIT * 7
         print(f"⏳ 依現行額度，Lane B 需約 {len(lane_b) / QUEUE_LIMIT:.1f} 週排空（期間仍在進料）", file=out)
+        # 複查日 vs 排空時間：兩個數字過去各印各的，從沒被並排比過。
+        # 不比就看不出「逾期」到底在量什麼——若複查日短於排空時間，
+        # 每一筆都必然在輪到它之前先變成逾期，逾期數就只是佇列長度的別名。
+        med = _median_review_gap(wiki_dir)
+        if med is not None:
+            print(
+                f"📏 複查日中位數 {med:.0f} 天 vs 排空 {drain_days:.0f} 天",
+                file=out,
+            )
+            if med < drain_days:
+                print(
+                    f"   ⚠️ 複查日比排空時間短 {drain_days - med:.0f} 天：每一筆都會在輪到它之前先逾期，"
+                    "「逾期數」因此等於佇列長度、不等於被忽略的筆數。",
+                    file=out,
+                )
+                print(
+                    f"   → 要讓逾期重新有意義，二選一：額度提到約 {len(lane_b) / max(med, 1) * 7:.0f} 筆/週，"
+                    "或把複查日改成「今天＋排空天數」而非固定 14/30 天。",
+                    file=out,
+                )
 
     # 舊語法盲區：佇列只讀新語法標記（舊字樣沒有探針欄，機器找不到它）。
     # 只印數字會讓 5c 誤以為「總逾期數 0」＝沒事，故在此列出頁面分佈，

@@ -36,7 +36,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-08-05
 
 > **本週快照重點**（2026-09-20）
-> 17 榜全數嘗試（直接抓取 10 榜、媒體轉述 6 榜、無法取得 1 榜）。本週多數榜名次不動，真正的變化只有三件：**`arena.ai` 改版同時打掉 LMArena 與 Search Arena 兩列**（前者連續 2 週取不到、進入汰換討論，後者剛恢復一週又掉回去）；**OpenRouter 本輪直接抓到榜頁**，Claude Fable 5.1 與 Qwen 3.8 Max 並列第一——但這是四週來的第四種說法，仍是全表可靠度最低的一列；**Terminal-Bench 恢復採計**，二手數字與 08-28 一致，上週那組對不上的數字判為來源有誤。Claude 這邊的位置大致守住：Fable 5 系列在對話、情商、OpenRouter 用量三處居首，Opus 5 續居 Terminal-Bench 3.0 與 SWE-bench Verified 首位。
+> 17 榜全數嘗試（直接抓取 12 榜、媒體轉述 5 榜、無法取得 0 榜）。本週真正的變化有三件：**`arena.ai` 改版造成的兩列失聯已解除**——查到新位址（文字榜 `/leaderboard/text` 改名 Text Arena、搜尋榜 `/leaderboard/search`），兩榜都不是死掉是搬家，**汰換討論取消**；**OpenRouter 本輪直接抓到榜頁**，Claude Fable 5.1 與 Qwen 3.8 Max 並列第一——但這是四週來的第四種說法，仍是全表可靠度最低的一列；**Terminal-Bench 恢復採計**，二手數字與 08-28 一致，上週那組對不上的數字判為來源有誤。Claude 這邊的位置比上週看得更清楚：**Text Arena 前三名全是 Claude**（但差 4 分、在誤差內，分不出高下），Opus 5 續居 Terminal-Bench 3.0 與 SWE-bench Verified 首位。
 
 ---
 
@@ -54,8 +54,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
 | [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記；與上週同值） | 09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
-| [寫文案、聊天、翻譯](#eval-lmarena) | Claude Fable 5（1508.6 Elo）> Claude Opus 5（約 1505）> GPT-5.6 Sol（1482.8）（媒體轉述；**連續 2 週無法直接取得，考慮汰換**） | 09 月（媒體轉述，無確切榜頁日期） | [LMArena](https://lmarena.ai/) |
-| [查資料（AI 搜尋）](#eval-search) | ⛔ **本週抓不到**（見註記）；上週值：gpt-5.6-sol-xhigh > claude-opus-4-6-search > gpt-5.5-search | 09-13（此後未能更新） | [Search Arena](https://arena.ai/leaderboard) |
+| [寫文案、聊天、翻譯](#eval-lmarena) | claude-fable-5-high（1506）> claude-opus-4-6-high（1505）> claude-opus-4-7-high（1502）（前三名差 4 分，實質難分；Claude 包辦前三） | 09-13（榜頁自標） | [Text Arena](https://arena.ai/leaderboard/text) |
+| [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242） | 08-24（榜頁自標，已 27 天未更新） | [Search Arena](https://arena.ai/leaderboard/search) |
 | [做網頁／前端](#eval-webdev) | gpt-6-astra-max（1800）> claude-fable-5.1-max（1758）> claude-opus-5-max（1687）（與上週同值） | 榜頁未標日期（本次 09-20 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
 | [畫圖（文生圖）](#eval-image) | GPT Image 2.5 Flare max（1188）> GPT Image 2.5 Sunburst max（1182）> GPT Image 2 high（1171） | 榜頁未標日期（本次 09-20 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
 | [改圖（圖像編輯）](#eval-imageedit) | GPT Image 2.5 Sunburst max（1176）> GPT Image 2.5 Flare max（1155）> MAI-Image-2.6（1132） | 榜頁未標日期（本次 09-20 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
@@ -73,10 +73,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 本週註記（僅列異常）
 
-- **⚠️ `arena.ai` 改版同時打掉兩列（本週最該注意的事）**：`lmarena.ai` 已 301 重導至 `arena.ai`，而 `arena.ai/leaderboard` 現在預設顯示的是 Agent Arena。
-  - 後果：LMArena **連續 2 週無法直接取得**（進入汰換討論），Search Arena 上週剛恢復、本輪再度掉回抓不到。兩列是同一個站點改版造成，不是兩個獨立問題。
-  - 下輪先確認各分榜的新 URL（Search Arena 疑為 `arena.ai/leaderboard/search`），再判斷是否真的要汰換。
-- **LMArena 改列二手數字（連續 2 週無法直接取得）**：二手為 Claude Fable 5 1508.6 > Claude Opus 5 約 1505 > GPT-5.6 Sol 1482.8；報導未標榜頁快照日期，僅知為 09 月。與本頁 08–09 月舊值（Fable 5 約 1525）方向一致但數值不同，**在直接抓取恢復前不可當精確值引用**。
+- **✅ `arena.ai` 改版造成的兩列失聯已解除（本輪查到新 URL）**：`lmarena.ai` 301 重導至 `arena.ai` 後，`arena.ai/leaderboard` 預設顯示 Agent Arena，才讓兩列同時抓不到——是一個站點改版，不是兩個獨立問題，也不是榜死掉。
+  - 新位址：文字對話總榜在 `arena.ai/leaderboard/text`（改名 **Text Arena**），搜尋榜在 `arena.ai/leaderboard/search`。兩者本輪皆直接抓取成功，**汰換討論取消**。
+  - ⚠️ Search Arena 榜頁自標資料日期為 **08-24，已 27 天未更新**——取得沒問題，是榜自己沒動；下輪若仍停在 08-24，改以「榜停更」而非「抓不到」記錄。
+- **Text Arena 前三名全是 Claude、且差距在誤差內**：1506±5 > 1505±4 > 1502±4（fable-5-high／opus-4-6-high／opus-4-7-high）。
+  - **前三差 4 分而信賴區間各有 ±4~5，實質分不出高下**，不要拿這個排序當選型依據。
+  - 本輪同時推翻上週的二手數字（曾記 GPT-5.6 Sol 第三），該筆為媒體轉述之誤。
 - **Terminal-Bench 恢復採計**：本輪 TB 3.0 為 Opus 5 42.7% > GPT-5.6 Sol 34.6% > Fable 5 34.0%，**與 08-28 的記錄一致**；上週那組數量級對不上的數字（0.283）未再出現，判為該來源之誤。
   - **TB 4.0 已有數字**（Claude Mythos 5.1 0.609），與 3.0 的百分制不同量綱，本頁只採 TB 3.0 一個版本。
 - **OpenRouter 第四週、第四種說法**：09-06 稱 Hermes Agent 居首、同期媒體稱 GPT-5.6 Luna、上週媒體稱 DeepSeek V4 Flash、本輪得 Claude Fable 5.1 與 Qwen 3.8 Max 並列 53.4。
@@ -101,7 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 同一題丟給兩個**匿名**模型，人類看產出投票誰好。多數榜實際用 Bradley-Terry 統計模型（棋類 Elo 的嚴謹版，不會過度加權近期比賽）把幾萬場勝負摺算成分數，再換算成 Elo 風格數字呈現。分數是相對的，**只在同一個榜內可比**。
 
-- <a id="eval-lmarena"></a>**寫文案、聊天（LMArena）**
+- <a id="eval-lmarena"></a>**寫文案、聊天（Text Arena，原 LMArena）**
   - **題目**：真實使用者當下輸入的任何問題——寫 email、潤稿、翻譯、解 bug、閒聊都有，不設題庫。
   - **規模**：累積 680 萬+ 盲測票、360+ 模型，全球最大人類偏好榜。
   - **算分**：兩匿名模型同題作答、投票；Bradley-Terry 摺算成 Elo 風格分數。有 style control（把「寫得長、排版漂亮」的討喜因素統計拆離）與位置／組織偏差修正。
