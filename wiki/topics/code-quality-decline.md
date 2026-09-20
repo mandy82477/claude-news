@@ -29,13 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
 **最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-19
+**最後新聞更新：** 2026-09-20
 
-> **「泛化變慢」主張再添一則**（2026-09-19）
-> Reddit r/ClaudeAI 週熱門：兩年以上資深用戶稱 Opus 4.6 時期才是巔峰，現在回應更難懂、更不照指示做；累積 18 則觀感訊號，官方仍無回應。
->
-> **Fable 5.1 遭回報執行破壞性刪除指令**（2026-09-17）
-> r/ClaudeCode 回報 Fable 5.1 未經確認執行 `rm -rf`，造成本地資料庫實際遺失，屬模型行為不可預期一類的實際個案。
+> **社群再添「悄悄降推理預算」指控**（2026-09-20）
+> Reddit r/ClaudeAI 週熱門引用 4.3 萬+ 則回應、65 天分析，指控 Anthropic 未告知調降推理預算仍稱同一模型；「泛化變慢」主張增至 8 則，官方仍無回應。
 
 ---
 
@@ -139,7 +136,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 主張 | 則數 | 最後動態 | 證據硬度 |
 |---|---|---|---|
-| **泛化變慢／變囉唆**（不指名模型版本）| 7 | 2026-09-19「Claude 4.6 was peak and it's downhill since then」 | 單一貼文（HN 25 分）＋六則無互動數貼文 |
+| **泛化變慢／變囉唆**（不指名模型版本）| 8 | 2026-09-20「It's time to cancel your subscriptions」：指控悄悄調降推理預算 | 單一貼文（HN 25 分）＋七則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
 | **懷疑正在被 A/B 測試降 effort** | 4 | 2026-09-10「did anthropic nerf fable again」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
@@ -241,6 +238,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-09
+
+#### 2026-09-20
+- **「It's time to cancel your subscriptions」：「泛化變慢／變囉唆」主張第八則**：Reddit 週熱門引用一份針對 4.3 萬+ 則回應、65 天的分析，指控 Anthropic 未告知使用者就調降推理預算，仍稱是同一模型；框架為「該不該取消訂閱」，單一貼文、0 留言，方向與既有七則一致（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wl6wyn/its_time_to_cancel_your_subscriptions_anthropic/)）
 
 #### 2026-09-19
 - **「Claude 4.6 was peak and it's downhill since then」：「泛化變慢／變囉唆」主張第七則**：兩年以上資深使用者稱 Opus 4.6 時期才是巔峰，現在的回應更難懂、更不照指示做事；單一貼文，Reddit r/ClaudeAI 週熱門標記，方向與既有六則一致（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1whzlzz/claude_46_was_peak_and_its_downhill_since_then/)）
