@@ -6576,3 +6576,31 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **處置**：(a) 兩張表併成「官方補了沒」13 列，三值符號＋核對日欄；「目前結論」前移並換成「官方為什麼還沒補」。(b) [[entities/claude-code]] 六筆已關 issue 狀態更正、組頭重算、版本表補 v2.1.277／278。(c) [[topics/coding-workflow-guide]] AGENTS.md 句更正。(d) 兩筆逾期待查證結案（internet-court-skill 採用未證實、Cowork 行動版不等同桌面）。(e) 每週檢查新增 5n：整張表對官方一手重核。(f) 轉知社群 4 筆。
 - **未決**：對照矩陣是否整節併入新表，待使用者裁決，現照保守預設留 3 列。
 - **紀錄**：`docs/page-audits/ledger.md` 第 14 波列、校準表、2026-09-26 回訪清單。
+## 2026-09-20 週度補跑（`/weekly` 步驟 0：雲端跳過的 lint 步驟）
+
+09-19 雲端 lint 因 egress 未開整步跳過 5b／5c／5e，本機承接：
+
+- **跨家榜單週更（5b）**：已更新 16 榜／1 榜無法取得（Search Arena）。**本輪根因發現**：`lmarena.ai` 已 301 重導至 `arena.ai`，而 `arena.ai/leaderboard` 現在預設顯示 Agent Arena——LMArena（連續 2 週取不到，進入汰換討論）與 Search Arena（上週剛恢復、本輪再掉回）兩列的失敗是**同一個站點改版**造成，不是兩個獨立問題。Terminal-Bench 恢復採計（本輪值與 08-28 一致，上週那組對不上的數字判為來源有誤）；OpenRouter 本輪直接抓到榜頁但為四週來第四種說法；MTEB 本輪來源自相矛盾（第三名分數高於第二名）故不採計。
+- **逾期待查證清算（5c）**：盤點 122 筆，本輪處理 13 筆（查實 7／確認官方未載 1／Lane A 依日報收斂 5），結案回掃上修 1 頁，剩餘 109 筆。
+  - Lane A 額度 10、實收 9 筆，其中 **4 筆為探針假命中**（ai-talent-flow:142、recursive-self-improvement:215、claude-security:108、tom-blomfield:35——`訊` 日期的日報查無對應條目，或有條目但未提供新事實），依 5c 步驟 2 退回 Lane B，不硬結。
+  - Lane B 額度 8 全數處理：mythos 遭未授權存取（查到 Anthropic 官方聲明原文）、teresa-carlson 職稱（Global Head of Public Sector，多家具名媒體＋本人檔案一致）、Volta ⟨Q-02⟩（確認與 08-04 案為同一筆交易：英國總部、挪威 Tydal 機房、六年期）、SemiAnalysis $100B/GW（查到 Tokenomics Model＋AgentX 方法論與 $3/GPU-hr 成本假設）、Project Panama（Bartz v. Anthropic PBC，Alsup 法官合理使用裁定與 15 億美元盜版部分和解分屬兩條）、Cesar Fernandez 州別清單（加州／紐約／伊利諾／麻州四州）、眾議院民主黨具體訴求（08-10 兩封信、29 位與 22 位連署、8/24 期限、籲聽證會）；deep_think CoT 外洩改判 🔎 查無官方（官方零表態、無 CVE、後續全是內容農場轉述）。
+  - **📊 產消對帳（概估）**：近 7 天新增 29 筆｜每週產能 18 筆（A 10＋B 8）｜本輪實際可消 17 筆｜**淨增 11 筆/週**，腳本標「⚠️ 產出快過消費」。📈 趨勢 09-13 103 筆 → 本輪起點 122 筆（+19）。⏳ 依現行額度 Lane B 需約 14.1 週排空。**主編處置建議（待裁示）**：本輪淨增的主因不是消化太慢而是**進料變多**（近 7 天 29 筆遠高於前期），建議先查記者端標記門檻是否鬆動，再談調額度。
+  - **⚠️ 舊語法盲區**：42 筆未回填、不在佇列內，前三頁為 topics/ai-agent-safety(16)、index(5)、feature-radar(4)。
+  - 最久逾期由 135 天降至 24 天（mythos:327 結案）；基線已 `--rebuild-count` 重建為 179 筆。
+- **pricing「通路與乘數」複查（5e）**：**本輪未到期，不需複查**。⚠️ **09-19 雲端 lint 的「該區塊無『資料截至』戳」與據此開的漏抓帳第 (4) 項，經核為誤判**——戳確實存在（`資料截至 **2026-09-03**`，距今 17 天 < 30 天觸發門檻），只是日期被 `**` 粗體包住。全庫 grep 確認無任何 script 消費此字串，故非檢查失效而是人工讀漏。5j「跨表核對無從比對」的同一則附註亦應一併更正。
+
+## 2026-09-20 週度延伸回顧
+
+- 延伸：六記者提 7 項建議，**使用者確認全部執行**——
+  1. `topics/community-tech-patterns`：補收 09-17 Show HN《Linting 216 public Claude Code skills》（216 個 skill 中 69% 觸發條件寫法有問題；87 個 subagent 中 85% 不符最小權限），在「安全架構」下與 09-18 `snyk/agent-scan` 並列為「Skills 品質／合規稽核」子取向（一個掃工具、一個掃結果）。
+  2. `topics/community-tech-discussions`：補收 09-17 Simon Willison 轉引 OpenAI 對齊團隊〈Self-generated prompt injections in compaction summaries〉——compaction 是所有長 session 都會觸發的機制，庫內原本零覆蓋。
+  3. `entities/opus-5`：新增「使用者觀感彙整／已驗證問題」節，把五個日期的獨立訊號收攏為「社群對 Opus 5『判斷可不可信』的疑慮」一條可追蹤線，每則標各自的證據強度，收在「兩個方向都沒有量化證據」。記者回核原文時發現 GitHub #56913 實為 09-15 22:16 UTC（只是 09-16 才進日報），已併入 09-15 而非另列。
+  4. `entities/fable-5` ↔ `topics/code-quality-decline`：09-17 r/ClaudeCode「Fable 5.1 rm -rf'ed my local DB」雙向互引，未獨立開子區塊（單則未達門檻）。
+  5. `topics/anthropic-business`：「商業模式」新增「兩條並行擴張軌」子段——橫向產品線（Cowork 合併＋Docs/Slides/Design）與三個垂直 GTM（金融顧問、Novo Nordisk、LSVP）同週發生，重點放在時間集中度本身與共用的「旗艦客戶背書後滲透垂直」打法，個別事件不重列。
+  6. `topics/recursive-self-improvement` ↔ `topics/anthropic-government-policy`：補雙向 wikilink 串起「評測機構獨立性」一線（09-16 質疑自行提名公信力 → 09-18 專家聯署要求真獨立機構，互為因果只差三天）。
+  7. `entities/claude-skills`：補「Skills 載入路徑依 session 類型而異」（本機讀 `~/.claude/skills/`、雲端讀帳號設定、SSH 讀本機），來源 09-17 官方桌面版文件；原本只記在 `entities/claude-code`。
+- 使用者跳過項目：無（7 項全數採納）。
+- 人物記者：無建議——減速呼籲反彈與安全離職浪潮兩條線都已有完整建頁與交叉連結。
+- `reader-notes.md` 收件匣：3 條 ⏳ 🔍 興趣主題（LLM code review 單位成本、codebase map 格式規約、GPT-6 Astra 對照跑分）本週經社群／模型／商業三記者分頭查證**皆無新節點**，維持 ⏳ 不標 ✅；📌 雜記 1 條（09-03 星圖規劃，17 天未逾 30 天）保留。
+- 聚焦校準：非本月首次（9 月已於 09-06 執行，命中率 73.7%），跳過。
+- 來源歸因：3 筆已 append 至 `data/source_attribution.jsonl`（記者回報時未附 URL，由主編回日報補齊）。

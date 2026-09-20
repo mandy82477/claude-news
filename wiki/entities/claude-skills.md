@@ -73,6 +73,8 @@ description: 在 PR 或 diff review 前，依團隊規範檢查命名、測試�
 
 將此目錄提交進 repo（`.claude/skills/`），任何人 clone 專案後 Claude Code 會自動載入，達到架構護欄效果（社群實測案例見 2026-05-20）。也可搭配 `--safe-mode` 旗標（v2.1.169 起）在排查問題時一鍵停用所有 skills、hooks、MCP 等客製化設定。
 
+Skills 的載入路徑依 session 類型而異：本機 session 讀個人 `~/.claude/skills/`、雲端 session 改讀 claude.ai 帳號設定、SSH session 仍讀本機路徑（2026-09-17 官方文件更新，詳見 [[entities/claude-code]]「現況」）。
+
 ## 官方 Skills 生態一覽
 
 | 面向 | 內容 | 日期 |

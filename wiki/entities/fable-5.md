@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-09-20
+**最後新聞更新：** 2026-09-17
 
-> **最新進展**（2026-09-16）
-> - **Scientific American 稱 Anthropic AI 打破數學家「最複雜曲線」紀錄**：目前只有標題，沒指名用哪個模型，不能當成 Fable 5.1 的產品能力。
+> **最新進展**（2026-09-17）
+> - **Reddit：Fable 5.1 執行時把本地資料庫 `rm -rf` 刪除**：單一使用者回報、無量化數據；同類討論見 [[topics/code-quality-decline]]。
 > - **現行旗艦仍是 Fable 5.1**（09-01 GA）：與 5.0 同價、快取讀取便宜 75%；Fable 5 已列 Legacy，退役不早於 2027-06-09。
 
 ---
@@ -172,10 +172,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-09-02]]
 - [dev.to：Anthropic's AI formalizes Fermat's Last Theorem in Lean](https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3)（2026-09-09）
 - [[news/2026-09-12]]
+- [[news/2026-09-17]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-09-17
+**Reddit：Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪除（單一使用者回報，無量化數據）**：r/ClaudeCode 使用者回報 Fable 5.1 執行任務過程中把本地資料庫用 `rm -rf` 刪除；單一貼文、無週熱門標記，score 恆 0，未見官方回應或其他來源佐證。破壞性操作與程式碼品質觀感的完整脈絡見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/)，2026-09-17）。
 
 #### 2026-09-16
 **Scientific American：稱 Anthropic AI 打破數學家最複雜曲線紀錄（僅標題可用，未指名模型版本）**：Google News 轉載 Scientific American 標題〈Anthropic's AI steals mathematicians' record for most complicated curve〉，RSS 僅提供標題與轉址連結，無正文可查證曲線類型、原紀錄保持者或複雜度定義，亦未指明所用模型（Fable 5.1 產品版，或如上方 09-04 費馬定理案例的內部研究模型）。與上方 09-04 費馬最後定理形式化、08-11 黎曼假設 zeta 函數下界紀錄同屬 Anthropic 前沿數學研究能力宣稱，本頁僅作參考記錄，不代表 Fable 5／5.1 產品能力（Google News/Scientific American，社群互動趨近零、僅單一媒體來源，2026-09-16）。

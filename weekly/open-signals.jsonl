@@ -90,3 +90,4 @@
 {"date": "2026-09-18", "week": "2026-W37", "forecast": "年齡驗證誤判：消費版停止服務未滿 18 歲者，改由第三方 Yoti 驗證，疑似未成年即停用帳號（09-11）", "origin": "新立", "probe": "年齡驗證", "entries": []}
 {"date": "2026-09-19", "week": "2026-W37", "forecast": "資料自己不見了：`#26452` 重啟後 session 全消失、`#59248` 保留清理靜默刪除對話紀錄且無法復原（09-04～09-05）", "origin": "續盯", "probe": "59248", "entries": []}
 {"date": "2026-09-19", "week": "2026-W37", "forecast": "資料自己不見了：`#26452` 重啟後 session 全消失、`#59248` 保留清理靜默刪除對話紀錄且無法復原（09-04～09-05）", "origin": "續盯", "probe": "retention", "entries": [{"title": "Silent retention cleanup deletes session transcripts with no warning, opt-in, or recovery", "url": "https://github.com/anthropics/claude-code/issues/59248"}]}
+{"date": "2026-09-18", "week": "2026-W37", "forecast": "年齡驗證誤判：消費版停止服務未滿 18 歲者，改由第三方 Yoti 驗證，疑似未成年即停用帳號（09-11）", "origin": "新立", "probe": "年齡驗證", "entries": []}

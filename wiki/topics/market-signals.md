@@ -6,7 +6,7 @@ domain: "💼 商業"
 last_updated: "2026-09-19"
 last_news_update: "2026-09-19"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
@@ -392,8 +392,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-09-10｜查 American Prospect、監控系統｜複 2026-09-24）｜**Anthropic 是否對社運人士監控系統指控發布正式回應**：The American Prospect 調查報導（HN 297 分，今日最高），單一媒體來源，官方尚未表態或否認。
 - ❓ **待查證**（標 2026-09-09｜查 Cognition、Devin｜複 2026-09-23）｜**Cognition 480 億美元估值的正式來源與投資人名單是否公開**：Topic Watch 條目僅提供一行估值數字，缺原始報導、輪次與成交條件等細節。
 - ❓ **待查證**（標 2026-09-05｜查 Nasdaq、承銷商、公開遞件｜複 2026-09-19）｜**Anthropic 公開版 S-1 是否遞交**：目前無官方時間表，多家一級媒體報導 6/1 已機密遞件、目標 10 月（2026-06-01／06-02 兩說，2026-09-05 查證）。公開版 S-1 出現前，所有財務數字都是轉述。
-- ❓ **待查證**（標 2026-09-04｜查 Morgan Stanley、Goldman Sachs｜複 2026-09-18｜訊 2026-09-08）｜**主辦 Anthropic IPO 的投行是否正式公告**：FT 報導兩家投行洽談主辦（消息來源匿名）；09-08 Banking Exchange 稱已接近敲定銀行名單，仍非投行自身或官方公告確認。
-- ❓ **待查證**（標 2026-09-06｜查 calcalistech、IPO延後｜複 2026-09-20｜訊 2026-09-07）｜**IPO 延後說法是否有第二家媒體佐證**：09-07 Forbes 報導提供第二來源，稱延至 10 月中並同步鎖定 150 億美元信用額度；仍非官方確認，且與 09-06 calcalistech／ETF Trends 兩則矛盾標題的原文比對尚未完成。
+- ❓ **待查證**（標 2026-09-04｜查 Morgan Stanley、Goldman Sachs｜複 2026-10-04｜訊 2026-09-08）｜**主辦 Anthropic IPO 的投行是否正式公告**：FT 報導兩家投行洽談主辦（來源匿名）；09-08 Banking Exchange 稱已接近敲定名單，仍非投行自身或官方確認，此後無新進展。
+- ❓ **待查證**（標 2026-09-06｜查 calcalistech、IPO延後｜複 2026-10-04｜訊 2026-09-07）｜**IPO 延後說法是否有第二家媒體佐證**：已有第二、三家——09-07 Forbes 稱延至 10 月中並鎖定 150 億美元信用額度，09-08 FT 與 Yahoo Finance 同稱延至十月。
+- 三家方向一致，09-06 ETF Trends 的「已有 S-1 可解讀」標題未獲後續支持。仍無官方確認，原文逐字比對未做。
 - ❓ **待查證**（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評｜複 2026-09-22）｜**信評機構是否對 Anthropic、OpenAI 發布正式評等**：Banking Exchange、Financial Times 等媒體稱銀行團推動兩家公司於 IPO 後取得投資級信評以降低舉債成本，目前僅為意向報導，尚無信評機構自身公開評等或評等展望。
 
 ---

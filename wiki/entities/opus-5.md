@@ -29,11 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（現行次旗艦；前代 Opus 4.8 已列 Legacy）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-19
 
 > **最新動態**（2026-09-19）
-> 資安新創 Hacktron AI 揭露：同一記憶體毀損漏洞，Opus 4.8 需先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit；研究團隊隨後以同手法存取 OpenAI 內部系統（Guardian／The New Stack，2026-09-18 報導）。
+> - 資安新創 Hacktron AI 揭露：同一記憶體毀損漏洞，Opus 4.8 需先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit；研究團隊隨後以同手法存取 OpenAI 內部系統（Guardian／The New Stack，2026-09-18 報導）。
+> - 本週社群訊號另集中一條線：話多缺根據、護欄仍標記已通過官方審核者、用量縮減爭議、提案把決策交給 Sonnet、能力參差——五則均無量化數字，見下方「使用者觀感彙整」。
 
 ---
 
@@ -105,6 +106,22 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 ---
 
+## 使用者觀感彙整／已驗證問題
+
+> 資料截至 2026-09-17。本節收攏本週分散五個日期的獨立訊號，判斷它們是不是同一條線，不是逐則重述——原文與查證細節在下方「歷史記錄」對應日期。
+
+本週五則訊號指向同一個主題——**社群對 Opus 5「判斷可不可信」的疑慮**，但彼此證據強度不同，不可合併成一個結論：
+
+- **話多缺根據**（09-12）：單一使用者觀感，稱 Opus 5 比舊版本更容易離題下結論，無案例佐證。
+- **護欄誤傷已過官方審核者**（09-15）：一名資安研究者稱已通過 Anthropic 的 Cyber Verification Program（CVP），Opus 5 仍持續標記其研究相關訊息；單一貼文，若屬實代表 CVP 審核結果未被護欄辨識，但無跨案例佐證。
+- **用量縮減幅度爭議**（09-15）：Max 5x 用戶質疑實際縮減幅度超過官方所稱 25%；單一使用者觀感，無自己的用量數字佐證，計費面完整脈絡見 [[entities/pricing]]。
+- **社群自提「決策交給 Sonnet」架構**（09-15）：GitHub Issue #56913 提案把 Claude Code 改為 Opus 統籌決策、Sonnet 執行的分層架構，累積 49 則留言、尚無官方回應；這是對現行「Opus 判斷、自己執行」模式的一種不信任投票，但屬功能請求非能力評測。
+- **能力落差不均勻（「參差」）**（09-17）：r/artificial 週熱門討論串，使用者以 Opus 5 與 4.8 為例，觀察不同任務間能力落差很不均勻；惟未附具體案例或分數。
+
+**所以呢**：五則全是社群觀感或功能請求，**沒有一則附測試方法或量化數字**，不構成「Opus 5 判斷力下降」的證據，也不能排除；能不能信任 Opus 5 的判斷仍是懸而未決的問題，下一輪若出現帶數字的複測，優先併入這裡。系統性退步的既有查證狀態見 [[topics/code-quality-decline]]。
+
+---
+
 ## 核心功能
 
 - **兩個 breaking change（從 Opus 4.8 升上來）**：thinking 預設開啟；thinking 只有在 effort `high` 以下才關得掉
@@ -154,6 +171,15 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - [The New Stack：Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5](https://thenewstack.io/claude-exploits-openai-forum/)（2026-09-19）
 - [The Guardian：OpenAI 'ethically hacked' with help of Anthropic's Claude chatbot](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)（2026-09-18）
 - [[news/2026-09-19]]
+- [Reddit：Hate Opus 5. Really dont know why they did this](https://www.reddit.com/r/ClaudeCode/comments/1wecaw5/hate_opus_5_really_dont_know_why_they_did_this/)（2026-09-12）
+- [[news/2026-09-12]]
+- [Reddit：Opus 5 is flagging all my messages even though I'm in the CVP](https://www.reddit.com/r/ClaudeAI/comments/1wh010w/opus_5_is_flagging_all_my_messages_even_though_im/)（2026-09-15）
+- [Reddit：Por esto me voy de Claude](https://www.reddit.com/r/ClaudeCode/comments/1wh2tzt/por_esto_me_voy_de_claude/)（2026-09-15）
+- [GitHub Issue #56913：tiered Opus brains + Sonnet workers + persistent state](https://github.com/anthropics/claude-code/issues/56913)（2026-09-15）
+- [[news/2026-09-15]]
+- [[news/2026-09-16]]
+- [Reddit：Does it seem to anyone else like even frontier models have a very "jagged" range of capabilities?](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)（週熱門，2026-09-17）
+- [[news/2026-09-18]]
 
 ## 歷史記錄
 
@@ -162,8 +188,10 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 | 日期 | 事件 |
 |------|------|
 | 2026-09-18 | 資安新創 Hacktron AI 揭露：Opus 5 上線首日即做出前代做不到的 ARM64 exploit，同手法後續用於存取 OpenAI 內部系統 |
+| 2026-09-17 | Reddit r/artificial 週熱門：Opus 5 與 4.8 能力落差不均勻（「參差」）討論，無具體案例或分數 |
 | 2026-09-16 | Reddit 週熱門稱 Opus 4.6 為「使用兩年來的巔峰」、其後代際下滑，單一使用者觀感 |
-| 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行，單一低知名度來源未經佐證 ❓待查證⟨Q-03⟩ |
+| 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行 ❓待查證⟨Q-03⟩；CVP 審核後仍遭護欄標記；Max 5x 質疑縮減幅度超官方 25%；GitHub #56913 提案「Opus 決策、Sonnet 執行」（49 則留言）|
+| 2026-09-12 | Reddit：「Hate Opus 5」，稱話多缺根據、比舊版更易離題下結論（單一觀感）|
 | 2026-09-03 | Anthropic 狀態頁：多款模型錯誤率升高，同日 16:16 UTC 已解決（2026-09-07 查證）|
 | 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 ❓待查證⟨Q-01⟩ |
 | 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路；同日另有回饋稱表達方式較 4.8 改善 |
@@ -181,8 +209,14 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 - **2026-09-18**：資安新創 Hacktron AI 揭露，同一記憶體毀損漏洞 Opus 4.8 須先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit（[The New Stack](https://thenewstack.io/claude-exploits-openai-forum/)，2026-09-19）
   - 研究團隊隨後以同一手法，經 OpenAI 內部員工論壇帳號與一個 GitHub pull request 摸清可存取 OpenAI 軟體庫的路徑，已依規範通報；屬單一資安新創的示範性測試、非官方基準複測，該新創有展示能力的商業誘因（[The Guardian](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)，2026-09-18）
+- **2026-09-17**：Reddit r/artificial 週熱門討論串，使用者主要以 Opus 5 與 4.8 為例，觀察不同任務間能力落差很不均勻（「jagged」），討論成因；未附具體案例或分數，非量化評測（[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)，週熱門，2026-09-17）
 - **2026-09-16**：Reddit 週熱門稱使用兩年餘的使用者認為 Opus 4.6 是巔峰、此後（含 Opus 5）回應更難理解、更不照指示；單一觀感無數字佐證，另見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1whzlzz/claude_46_was_peak_and_its_downhill_since_then/)，週熱門，2026-09-16）
-- ⟨Q-03⟩ ❓ **待查證**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-09-29）｜**單一部落格稱 Opus 5.2 秘密試行**：finance.biggo.com 稱回應更快、可自主迭代，並提及內部「RSI」模型；僅連結標記無內文，未見其他來源佐證（[Google News/finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTE5tWk9uLU5DQVVDRElYODFqdk9NQlR2d3VmSk52MHlGbXBSeG9sa1dZX3NkNS04WlQ0NXk0MGNkT2pDcFJiQy0wTXZQQzI1LXV3cE1PMG1wT25zcC1TTEx6LTgzZTJwX3Fwbm1PX1RRa3lMbF9yTnc?oc=5)，2026-09-15）
+- **2026-09-15**：同日三則獨立訊號，暫不判定為單一模式，分別記錄：
+  - 一名資安研究者稱已通過 Anthropic 的 Cyber Verification Program（CVP）審核，Opus 5 仍持續標記其研究相關訊息；單一貼文，無案例佐證（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wh010w/opus_5_is_flagging_all_my_messages_even_though_im/)，2026-09-15）
+  - Max 5x 訂閱用戶質疑近期用量縮減幅度不只官方所稱的 25%，稱此前幾乎全程仰賴 Opus 5 規劃工作流程；單一使用者觀感，計費面完整脈絡見 [[entities/pricing]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wh2tzt/por_esto_me_voy_de_claude/)，2026-09-15）
+  - GitHub Issue #56913 提案將 Claude Code 改為分層架構——Opus 負責統籌決策、Sonnet 負責執行、並搭配持久化狀態，累積 49 則留言，尚無官方回應（[GitHub Issue #56913](https://github.com/anthropics/claude-code/issues/56913)，2026-09-15）
+  - ⟨Q-03⟩ ❓ **待查證**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-09-29）｜**單一部落格稱 Opus 5.2 秘密試行**：finance.biggo.com 稱回應更快、可自主迭代，並提及內部「RSI」模型；僅連結標記無內文，未見其他來源佐證（[Google News/finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTE5tWk9uLU5DQVVDRElYODFqdk9NQlR2d3VmSk52MHlGbXBSeG9sa1dZX3NkNS04WlQ0NXk0MGNkT2pDcFJiQy0wTXZQQzI1LXV3cE1PMG1wT25zcC1TTEx6LTgzZTJwX3Fwbm1PX1RRa3lMbF9yTnc?oc=5)，2026-09-15）
+- **2026-09-12**：Reddit r/ClaudeCode 貼文「Hate Opus 5. Really dont know why they did this」，使用者抱怨 Opus 5 話變多但缺乏根據，比舊版本更容易離題下結論；單一使用者觀感，無量化數字佐證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wecaw5/hate_opus_5_really_dont_know_why_they_did_this/)，2026-09-12）
 - **2026-09-03**：Opus 5／4.8／4.6 與 Fable、Mythos 全系列同時錯誤率升高。官方 13:41 UTC 鎖定原因，**同日 16:16 UTC 標記已解決**（2026-09-07 查證）。屬穩定性事件，非能力或定價變化；跨模型完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w69016/claude_code_server_down_for_a_long_time_now_will/)，2026-09-03）
 
 - **2026-08-28**：Reddit r/ClaudeCode 質疑串「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」；單一使用者觀感回報，無量化數字佐證，延續 08-13、08-20 已記錄的社群觀感分歧模式（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）

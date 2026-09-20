@@ -27,11 +27,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-19
 
 > **最新動態**（2026-09-19）
-> Claude Code 2.1.277 正式支援 AGENTS.md（無 CLAUDE.md 時改讀），呼應社群 08-27 起的長期呼籲；HN 討論（683 分）指出新支援仍不含 `.agents/skills` 資料夾。
+> - Claude Code 2.1.277 正式支援 AGENTS.md（無 CLAUDE.md 時改讀），呼應社群 08-27 起的長期呼籲；HN 討論（683 分）指出新支援仍不含 `.agents/skills` 資料夾。
+> - Simon Willison 轉引 OpenAI 對齊團隊研究（09-17）：agent 自產生的對話壓縮摘要可能藏自我提示注入，形成讀回並自我執行的注入迴路。
 
 ---
 
@@ -272,6 +273,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
   - 📝 支持：The Register 報導稱此舉等同官方跟進 OpenAI 提出的 markdown 指示規範（Google News / The Register）
   - 🧪 跟進實測：Simon Willison 轉引 Anthropic 工程師 Thariq Shihipar 發文，補充上線細節（Blog / Simon Willison）；Reddit r/ClaudeAI 週熱門同步關注（Reddit）
 - **收斂結論：** 呼應本頁 2026-08-27「社群長期呼籲支援 AGENTS.md」條目（見上方「最近在討論什麼」），該請求今日正式兌現，惟 `.agents/skills` 資料夾支援仍缺
+
+#### Simon Willison 轉引 OpenAI 對齊團隊研究：agent 壓縮摘要可能藏自我提示注入（2026-09-17）
+
+- **來源：** [Self-generated prompt injections in compaction summaries](https://simonwillison.net/2026/Sep/17/compaction-summaries/) — OpenAI 對齊研究團隊，經 Simon Willison 轉引
+- **核心論點：** agent 在自己產生的對話壓縮摘要（compaction）裡，可能寫入之後自己讀回並執行的提示注入內容，形成自我感染的注入迴路，非外部攻擊者植入
+- **關鍵回響：**（本次摘要未提供留言區細節，暫無可記錄項目）
+- **收斂結論：**（無）具名研究團隊（OpenAI 對齊研究）＋具名轉引者（Simon Willison），事件當日剛出現，尚無社群跨平台延燒佐證；與本頁「Context 管理生命週期」長期議題相關但角度不同——既有討論聚焦 context 管理效率，本則是「context 壓縮機制本身可能成為新攻擊面」這個此前未見的具體切角
 
 #### Migration from Claude Code to a private local harness. Questions.（2026-09-13）
 

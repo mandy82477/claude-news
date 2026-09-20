@@ -188,7 +188,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - **Oxide 加入 Project Glasswing**：Oxide Computer 宣布加入 Project Glasswing，將 Claude Mythos 5 應用於主動識別並修補自家開源程式碼庫（韌體、作業系統、控制平面、網路堆疊）中的潛在漏洞（[Oxide Blog](https://oxide.computer/blog/oxide-anthropic-project-glasswing)，HN score 16）。Oxide 強調其一貫信念「所有關鍵軟體都應可被檢視」，故開源自身全部程式碼；此為 Project Glasswing 又一具名企業夥伴案例，能力面詳見本頁，商業/安全政策面另見相關頁面。
 
 #### 2026-07-25
-❓ **待查證**（標 2026-08-10｜查 Mashable、public release｜複 2026-09-17｜訊 2026-09-02）｜**Mashable：Claude Mythos 或類似模型可能對外公開發布**（僅標題可用；09-01 發布的 Mythos 5.1 仍限信任機構，「公開發布」猜測依日報未成立，Mashable 原文與官方是否另有公開時程未查）：
+❓ **待查證**（標 2026-08-10｜查 Mashable、public release｜複 2026-10-04｜訊 2026-09-02）｜**Mashable：Claude Mythos 或類似模型可能對外公開發布**（僅標題可用；09-01 發布的 Mythos 5.1 仍限信任機構，「公開發布」猜測依日報未成立，Mashable 原文與官方是否另有公開時程未查）：
 - Google News 轉載 Mashable 標題「Anthropic's Claude Mythos, or a model like it, to get public release」（[Google News/Mashable](https://mashable.com/tech/anthropic-mythos-might-get-public-release)）；RSS 僅提供標題與轉址連結，無正文摘要，無法確認具體時程、版本形態（完整無護欄版 vs 附加護欄新版本）或與現有 Fable 5 的關係
 - 若屬實將是繼 Fable 5（2026-06-09，Mythos 架構附加護欄公開版）後，Mythos 級能力進一步向大眾開放的重大政策轉向；暫無第二來源佐證，待後續報導補充具體內容再擴寫分析
 - **後續（2026-09-01）**：Anthropic 正式發布 Claude Mythos 5.1，但**存取模式維持信任機構限定**（「available only through our trusted access programs」），並未如標題所暗示轉為全面公開發布；版本迭代屬實，「公開發布」的猜測則未成立。詳見上方「現況」（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）
@@ -324,7 +324,7 @@ The Philosophical Hacker 指出 SWE-bench 方法論循環論證，HN 再次精�
 七週測試發現 2,000+ 未知軟體漏洞，大量涉及加密貨幣基礎設施（Fox News / CoinDesk / Crypto Briefing 同步報導）。
 
 #### 2026-04-24
-❓ **待查證**（標 2026-04-24｜查 KRON4、駭客存取）｜**Mythos 遭駭客存取事件**：僅媒體報導（KRON4 等），細節未經官方聲明確認；已掃日報至 2026-09-18 無後續，官方頁面未查證（KRON4 等媒體，2026-04-24）
+**Mythos 遭未授權存取事件**：Anthropic 已就此發出聲明——「We're investigating a report claiming unauthorised access to Claude Mythos Preview through one of our third-party vendor environments」，並稱**無證據顯示自家系統遭入侵、亦無證據顯示未授權活動擴及該第三方廠商環境之外**。存取管道為一處第三方廠商（vendor）環境；據報導，取得存取的是一個專門關注未發布模型的 Discord 私密社群，多次嘗試後成功並持續使用。當時 Mythos 僅開放少數企業測試（報導點名 Amazon、Apple、JP Morgan Chase）。（[Euronews](https://www.euronews.com/next/2026/04/22/hackers-breach-anthropics-too-dangerous-to-release-mythos-ai-model-report)，2026-04-22 報導／04-24 更新；2026-09-20 查證）
 
 ---
 

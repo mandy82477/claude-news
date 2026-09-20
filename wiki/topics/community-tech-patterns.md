@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-18
+**最後更新：** 2026-09-20
+**最後新聞更新：** 2026-09-20
 
-> **最新工作流模式**（2026-09-18）
-> - **AI agent／MCP／skill 安全掃描器存量盤點**：snyk/agent-scan（3,060 星）本庫今日首次收錄，針對 AI agent、MCP server 與 agent skills 的安全掃描工具，補上「安全架構」類別一個掃描工具取向。
-> - **個人知識索引加 MCP 端點**：asciimoo/hister（HN Repo Bridge 668 分，作者現身 AMA）把瀏覽紀錄、書籤、本機檔案與爬取網頁建成離線可查的個人化搜尋索引，另附 MCP 端點供 agent 整合。
+> **最新工作流模式**（2026-09-20）
+> - **Skill 品質稽核補安全架構第二取向**：216 個公開 skill 稽核，69% 觸發寫法不可靠；87 subagent 中 57% 未宣告 tools，85% 不符最小權限，與 agent-scan 互補（掃工具 vs 掃結果）。
 
 ---
 
@@ -85,6 +84,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
 - **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰
+  - **Skills 品質／合規稽核**：agent-scan 掃工具本身安全性；skillcrossroads 稽核 216 個公開 skill 的觸發條件，69% 寫法有問題，87 個 subagent 中 57% 未宣告 tools 清單，加計裸 Bash／萬用字元後 85% 不符最小權限（[[topics/community-tech-patterns#2026-09]]）
 
 **查證備註**
 - 「Claude 審查 Codex 通過率 71.6%→89.7%」已查得學術來源：[Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?](https://arxiv.org/abs/2607.21656)（arXiv 2607.21656）——116 則 LiveCodeBench 中／難題，六種條件對照，reviewer 只見題目與 writer 草稿、不能執行測試，近似真實 code review 流程；反向（Codex 審查 Claude）則使通過率從 91.4% 降至 82.8%，顯示審查方向有明顯不對稱效應，並非任一模型互審都有效（2026-08-13 查證）
@@ -179,6 +179,15 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **可信度註記：** HN Repo Bridge 668 分且作者現身 AMA 回應提問，社群驗證訊號強於單純星數
 - **來源：** HN Repo Bridge；[GitHub](https://github.com/asciimoo/hister)
 - **成熟度：** ⏳ 新興（本庫首次收錄，作者當日 AMA 互動熱烈，尚無長期採用數據）
+
+#### Show HN：Linting 216 個公開 Claude Code skills——69% 觸發條件寫法不可靠（2026-09-17）
+
+- **主線：** —
+- **核心模式：** 作者自製 linter 對 216 個公開 Claude Code skill 做靜態稽核：69% 的觸發條件（`description` 寫法）判定不可靠地觸發；另外對 87 個 subagent 稽核，57% 未宣告 `tools` 清單，加計裸 `Bash`／萬用字元用法後，85% 不符最小權限原則
+- **與既有模式的關係：** 補上「安全架構」類別一種「Skills 品質／合規稽核」取向——與 09-18 收錄的 snyk/agent-scan（掃描 agent／MCP／skill 工具本身安全性）互補，一個掃工具、一個掃結果；資安稽核適用於任何規模專案，非大型 codebase 特有痛點，暫填 —。
+- **可信度註記：** Show HN 單一作者靜態檢測工具，樣本為 216 個公開 skill／87 個 subagent，機制細節與抽樣方法未見完整技術文件
+- **來源：** [Show HN: Linting 216 public Claude Code skills – 69% won't reliably trigger](https://skillcrossroads.com) — Hacker News（skillcrossroads.com）
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無其他來源複現）
 
 #### Launch HN: Skillsync（YC W26）——讓 AI chat session 跨 coding agent 搬遷延續（2026-09-17）
 
@@ -1532,7 +1541,8 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 **懸置細節**
 - ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-09-13）：原始 Reddit 貼文與回滾機制未能取得，僅查得同類 agent rollback 的通用做法，非本則的獨立驗證
 - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-09-13）：原始 Reddit 貼文未能取得，僅查得 Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」的背景資訊，12 條具體錯誤內容仍無法查證
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-09-13｜訊 2026-08-15）：原始文章一度定位不到，僅查得同類主題的其他獨立文章非第一手佐證；2026-08-15 日報附連結證實文章存在，惟內文細節尚未逐一核對
+- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-10-04｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
+  - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對
 - ⟨Q-05⟩ 🔎 **查無官方**（標 2026-08-10｜查 ip_reminder、JSONL｜複 2026-09-13）：原始 dev.to 文章未能取得，僅查得同性質的 `<system-reminder>` 標籤（用途不同，見 GitHub issue #52018、#17601），非同一標籤的可靠佐證
 
 ### 2026-06

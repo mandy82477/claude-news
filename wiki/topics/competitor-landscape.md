@@ -318,7 +318,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Meta**：CNBC 與 Simon Willison 報導 Meta 宣布開源其最強模型 Muse Glimmer，戰線從產品層擴大至模型層權重（Google News/CNBC；Blog/Simon Willison）
 
 ### 2026-08-10
-- **Microsoft**：Stocktwits 轉引 SemiAnalysis 討論 Microsoft 能否「Out-AI」OpenAI 與 Anthropic，估算每 GW 推理商機達千億美元；細節見 [[topics/anthropic-business]]（Google News/Stocktwits）
+- **Microsoft**：Stocktwits 轉引 SemiAnalysis 討論 Microsoft 能否「Out-AI」OpenAI 與 Anthropic，估算每 GW 推理商機達千億美元（**該機構自家模型的估算，非財報數字**；方法論見 [[topics/anthropic-business]]）（Google News/Stocktwits）
 
 ### 2026-08-07
 - **Meta**：WSJ 報導 Meta 發布程式碼撰寫 agent「Muse Code」，明確對標 OpenAI 與 Anthropic（Google News/WSJ）

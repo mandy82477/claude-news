@@ -104,6 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／CNBC〈Anthropic and OpenAI need truly independent safety evaluators, experts say in public letter〉（2026-09-18 13:00 UTC）
 - **核心主張（僅標題可用）**：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 都需要真正獨立的安全評測機構把關；具名連署人、信件完整訴求與是否提出具體機制均未見報導
 - **與既有敘事的關係**：延續本頁既有治理提案系列——09-15 Jack Clark 提出「緊急關閉開關」立法化與「集體行動難題」框架、08-10 Sanders 國會層級暫停呼籲；本則首見具體聚焦「第三方獨立評測機構」這一項機制，訴求對象同時點名 OpenAI，非僅 Anthropic 單方
+  - 與 [[topics/anthropic-government-policy#攻防紀錄]] 09-16 CNBC 質疑自行提名評測機構公信力互為因果：16 日先質疑自提名公信力，18 日即有專家聯署要求換真獨立機構
 - ❓ **待查證**（標 2026-09-18｜查 independent safety evaluators、public letter）：連署專家名單、信件完整訴求、Anthropic／OpenAI 官方是否回應均未見報導
 - **可信度評估**：CNBC 為主流媒體報導，惟僅標題層級可用，公開信原文未見引用
 

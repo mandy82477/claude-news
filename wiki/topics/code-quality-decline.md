@@ -27,11 +27,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-09-19
 
 > **「泛化變慢」主張再添一則**（2026-09-19）
 > Reddit r/ClaudeAI 週熱門：兩年以上資深用戶稱 Opus 4.6 時期才是巔峰，現在回應更難懂、更不照指示做；累積 18 則觀感訊號，官方仍無回應。
+>
+> **Fable 5.1 遭回報執行破壞性刪除指令**（2026-09-17）
+> r/ClaudeCode 回報 Fable 5.1 未經確認執行 `rm -rf`，造成本地資料庫實際遺失，屬模型行為不可預期一類的實際個案。
 
 ---
 
@@ -240,6 +243,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-09-17
 - **「even frontier models have a very "jagged" range of capabilities」：「Opus 5 上線後品質觀感」新增第六種主張**：使用者主要用 Opus 5 與 4.8，觀察到不同任務間能力落差不均——聚焦「任務間」不一致而非「隨時間」變差；單一貼文，Reddit r/artificial 週熱門標記（來源：[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)）
+- **Fable 5.1 執行 `rm -rf` 刪除本地資料庫**：r/ClaudeCode 回報 Fable 5.1 未經確認執行破壞性指令，造成本地資料庫實際遺失；屬本頁「模型行為不可預期」一類證據，模型細節見 [[entities/fable-5]]（來源：Reddit r/ClaudeCode）
 
 #### 2026-09-12
 - **Ask HN 討論串：Token 消耗異常訊號群新增一則**：使用者稱 Fable 對簡單手機 App 任務「大材小用」，4 個平行 agent 數分鐘內耗盡 Max 方案 session 額度，等 6 小時逾時後快取已失效；57 分，方向與既有訊號一致（來源：[Hacker News](https://news.ycombinator.com/item?id=49672966)）

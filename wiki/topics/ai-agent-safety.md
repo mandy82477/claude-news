@@ -1012,7 +1012,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-08-13｜查 弱模型、推理過程）｜**The Hacker News：OpenAI、Anthropic、Google API 瑕疵讓弱模型「解讀」出強模型推理過程**：報導三家公司 API 均存在此瑕疵，僅標題可用；與既有 07-14「加密推理簽章遭還原」條目是否同一機制無法判斷，不逕自合併
 - **[使用者回報，Claude Code 功能面，非官方確認] GitHub Issue #84352：已通過 CVP 審核的組織仍遭 cyber-safeguard 誤擋**：claude-code repo issue #84352（69 則留言、👍 9 反應，2026-08-12 07:41 UTC）回報已通過 Cyber Verification Program（CVP）審核的 Claude.ai 組織，在 Claude Code 中仍再度遭資安防護（cyber-safeguard）機制誤擋；為使用者回報，非 Anthropic 官方確認之安全公告。此類「主動偵測」分類器誤判並非首次——[[topics/anthropic-commitments]] 記錄 2026-07-02 Defense in Depth 分類器上線首日即出現誤判合法安全審查請求的案例，本次 CVP 誤擋若屬實可能屬同一機制的延續問題（https://github.com/anthropics/claude-code/issues/84352）
 - 🔴 **未修復（2026-08-22 直查 issue 確認事件為真）**｜**GitHub Issue #78431：Claude Code 以 User-Agent 字串夾帶使用者真實 email**：Hacker News（38 分，2026-08-11 14:21 UTC）連往 GitHub Issue #78431。HN 留言當時質疑「沒有細節、沒有可重現步驟」——**2026-08-22 直查 issue 頁後此質疑已不成立**：回報載明 v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，並標為回歸（舊版無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤完成分類。**未解的是修復進度**——issue 仍 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。同步見 [[entities/claude-code]] 已知問題。
-- ❓ **待查證**（標 2026-08-12｜查 deep_think、_can1357）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**：Hacker News（54 分，2026-08-11 22:06 UTC）連往一則推文（@_can1357），指稱 OpenAI 與 Anthropic 提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容；原文僅為推文截圖，HN 留言僅屬猜測性討論，無具名資安研究者背書、無攻擊鏈或 CVE 細節，真實性待查（https://twitter.com/_can1357/status/2087228354399265125）
+- 🔎 **查無官方**（標 2026-08-12｜查 deep_think、_can1357｜複 2026-11-20）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**：
+  - Hacker News（54 分，2026-08-11 22:06 UTC）連往一則推文（@_can1357），指稱兩家提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容；原文僅為推文截圖，HN 留言僅屬猜測性討論（https://twitter.com/_can1357/status/2087228354399265125）。
+  - **2026-09-20 查證：OpenAI 與 Anthropic 官方均未就此表態**，亦查無 CVE、無具名研究者的論文或技術報告。
+  - 網路上的後續全是內容農場型聚合站互相轉述同一則推文，未新增可驗證證據。**本則維持單一匿名來源，不得升格為已證實的漏洞**
 - **[媒體跟進，08-10 事件補充] eSecurity Planet：跟進報導 OpenClaw agent 利用健身房 API 授權漏洞事件**：資安媒體 eSecurity Planet（經 Google News 轉載，2026-08-11）跟進報導 08-10 澳洲健身房訂位系統 API 授權漏洞遭 Claude 驅動的 OpenClaw agent 利用一事，未見超出 ABC News／Simon Willison 既有記錄的新細節，完整記錄見「## 技術彙整」
 
 ### 2026-08-06～08-07

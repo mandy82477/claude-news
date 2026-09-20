@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 每週抓取 17 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 **更新頻率：** 🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-08-05
-**最後更新：** 2026-09-13
+**最後更新：** 2026-09-20
 **最後新聞更新：** 2026-08-05
 
-> **本週快照重點**（2026-09-13）
-> 17 榜全數嘗試（直接抓取 10 榜、媒體轉述 7 榜；Aider Polyglot 本輪汰換，見下）。本週兩件事值得看：**Search Arena 連續 3 週抓不到後恢復**（gpt-5.6-sol-xhigh 登頂，Claude Opus 4.6 search 版緊追第二）；**SWE-bench 上週的「兩說歧異」查明是 Verified 與 Pro 兩個子集混談**，本輪起分列，Pro 子集由 Fable 5.1 領先。反向地，**LMArena 本週改抓不到**（網域重導至 arena.ai，抓到的是別的榜），**Terminal-Bench 二手數字與上週矛盾故不採計**。
+> **本週快照重點**（2026-09-20）
+> 17 榜全數嘗試（直接抓取 10 榜、媒體轉述 6 榜、無法取得 1 榜）。本週多數榜名次不動，真正的變化只有三件：**`arena.ai` 改版同時打掉 LMArena 與 Search Arena 兩列**（前者連續 2 週取不到、進入汰換討論，後者剛恢復一週又掉回去）；**OpenRouter 本輪直接抓到榜頁**，Claude Fable 5.1 與 Qwen 3.8 Max 並列第一——但這是四週來的第四種說法，仍是全表可靠度最低的一列；**Terminal-Bench 恢復採計**，二手數字與 08-28 一致，上週那組對不上的數字判為來源有誤。Claude 這邊的位置大致守住：Fable 5 系列在對話、情商、OpenRouter 用量三處居首，Opus 5 續居 Terminal-Bench 3.0 與 SWE-bench Verified 首位。
 
 ---
 
@@ -51,39 +51,45 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
-| [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記） | 09-08～09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
-| [寫文案、聊天、翻譯](#eval-lmarena) | ⛔ **本週抓不到**——舊值：Fable 5（約 1525 Elo）> Opus 4.8／GPT-5.5 Pro > Gemini 3.1 Pro Preview；現在的排名請點右邊連結 | 08–09 月（此後未能更新） | [LMArena](https://lmarena.ai/) |
-| [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242） | 榜頁未標日期（本次 09-13 抓取） | [Search Arena](https://arena.ai/leaderboard) |
-| [做網頁／前端](#eval-webdev) | gpt-6-astra-max（1800）> claude-fable-5.1-max（1758）> claude-opus-5-max（1687） | 榜頁未標日期（本次 09-13 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
-| [畫圖（文生圖）](#eval-image) | GPT Image 2.5 Flare max（1187）> GPT Image 2.5 Sunburst max（1179）> GPT Image 2 high（1171） | 榜頁未標日期（本次 09-13 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
-| [改圖（圖像編輯）](#eval-imageedit) | GPT Image 2.5 Sunburst max（1167）> GPT Image 2.5 Flare max（1145）> MAI-Image-2.6（1124） | 榜頁未標日期（本次 09-13 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
-| [生成影片](#eval-video) | Wan 3.0（1242）> Gemini Omni Flash（1237）> MiniMax H3 Max（1231）（前三 Elo 差距 ≤11，實質接近） | 榜頁未標日期（本次 09-13 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
-| [語音合成（TTS）](#eval-tts) | Sonic 3.6（1276）> Inworld Realtime TTS-2（1243）> Simba 3.2（1237） | 榜頁未標日期（本次 09-13 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
-| [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR（1.7% WER）> MAI-Transcribe-2（2.0%）> Scribe v2（2.2%） | 榜頁未標日期（本次 09-13 抓取，近 7 天中位數） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
-| [電腦操作 agent](#eval-terminal) | ⚠️ 本週的媒體轉述數字與上週互相矛盾，不採計（見註記）；上週值：Claude Opus 5（42.7%，TB 3.0） | 08-28（此後未能確認） | [Terminal-Bench](https://www.tbench.ai/) |
-| [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912） | 09-13 | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
-| [音樂生成](#eval-music) | Suno V5.5（1170）> Mureka V9（1155）> Mureka V8（1140） | 榜頁未標日期（本次 09-13 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
+| [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記；與上週同值） | 09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
+| [寫文案、聊天、翻譯](#eval-lmarena) | Claude Fable 5（1508.6 Elo）> Claude Opus 5（約 1505）> GPT-5.6 Sol（1482.8）（媒體轉述；**連續 2 週無法直接取得，考慮汰換**） | 09 月（媒體轉述，無確切榜頁日期） | [LMArena](https://lmarena.ai/) |
+| [查資料（AI 搜尋）](#eval-search) | ⛔ **本週抓不到**（見註記）；上週值：gpt-5.6-sol-xhigh > claude-opus-4-6-search > gpt-5.5-search | 09-13（此後未能更新） | [Search Arena](https://arena.ai/leaderboard) |
+| [做網頁／前端](#eval-webdev) | gpt-6-astra-max（1800）> claude-fable-5.1-max（1758）> claude-opus-5-max（1687）（與上週同值） | 榜頁未標日期（本次 09-20 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
+| [畫圖（文生圖）](#eval-image) | GPT Image 2.5 Flare max（1188）> GPT Image 2.5 Sunburst max（1182）> GPT Image 2 high（1171） | 榜頁未標日期（本次 09-20 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
+| [改圖（圖像編輯）](#eval-imageedit) | GPT Image 2.5 Sunburst max（1176）> GPT Image 2.5 Flare max（1155）> MAI-Image-2.6（1132） | 榜頁未標日期（本次 09-20 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
+| [生成影片](#eval-video) | Gemini Omni Flash（1233）> Wan 3.0（1229）> MiniMax H3 Max（1227）（前三 Elo 差距 ≤6，實質難分） | 榜頁未標日期（本次 09-20 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
+| [語音合成（TTS）](#eval-tts) | Sonic 3.6（1276）> Qwen-Audio-3.0-TTS-Plus（1260）> Inworld Realtime TTS-2（1247） | 榜頁未標日期（本次 09-20 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
+| [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR 與 StepAudio 3 ASR 並列第一（同為 1.7% WER）> MAI-Transcribe-2（2.0%） | 榜頁未標日期（本次 09-20 抓取，近 7 天中位數） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
+| [電腦操作 agent](#eval-terminal) | Claude Opus 5（42.7%）> GPT-5.6 Sol（34.6%）> Claude Fable 5（34.0%）**只看 TB 3.0，勿與 2.x／4.0 互比**（媒體轉述，見註記） | 08-28（09-20 複核一致） | [Terminal-Bench](https://www.tbench.ai/) |
+| [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912）（與上週同值） | 09-20 | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
+| [音樂生成](#eval-music) | Suno V5.5（1160）> Mureka V9（1136）> Mureka V8（1129）（名次同上週，Elo 全體下修） | 榜頁未標日期（本次 09-20 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
 | [Embedding（自建 RAG）](#eval-mteb) | KaLM-Gemma3-12B（72.32）> gemini-embedding-001（68.37）> Qwen3-0.6B（64.34）（媒體轉述，榜版不可互比） | 07–09 月（媒體轉述） | [MTEB](https://huggingface.co/spaces/mteb/leaderboard) |
 | [聊天陪伴／情商](#eval-eqbench) | Claude Fable 5（1349.5）> Kimi K3（1349.2）> GPT-5.5（1325.8） | 07-20（媒體轉述，數值與上週相同） | [EQ-Bench](https://eqbench.com/) |
 | [放多長的任務給 agent](#eval-metr) | Claude Mythos Preview（17.4 小時@50%）（⚠️ 逾官方自陳可信上限，且無完整名次表） | 2026-05（1.1 版，媒體轉述） | [METR](https://metr.org/) |
 | [讀文件不胡說（幻覺率低）](#eval-vectara) | finix_s1_32b（1.8%）> gpt-5.4-nano（3.1%）> gemini-2.5-flash-lite（3.3%） | 05-11 | [Vectara 幻覺榜](https://github.com/vectara/hallucination-leaderboard) |
-| [大家實際在用什麼](#eval-openrouter) | DeepSeek V4 Flash > 騰訊 Hy3 > Owl Alpha 免費版（第三週出現第三種說法，見註記） | 09-11（媒體轉述） | [OpenRouter](https://openrouter.ai/rankings) |
+| [大家實際在用什麼](#eval-openrouter) | Claude Fable 5.1 與 Qwen 3.8 Max 並列第一（同為 53.4）> GPT-6 Astra max（52.7）（本輪為直接抓取，見註記） | 09-19 | [OpenRouter](https://openrouter.ai/rankings) |
 
 ## 本週註記（僅列異常）
 
-- **Search Arena 連續 3 週抓不到後本週恢復（2026-09-13）**：本輪直接抓取成功，前五為 gpt-5.6-sol-xhigh 1257 > claude-opus-4-6-search 1253 > gpt-5.5-search 1242 > claude-opus-4-7 1233 > claude-fable-5 1230。汰換此榜的討論可先擱置。
-- **LMArena 本週抓不到（第 1 週）**：`lmarena.ai` 本輪回應為 301 重導至 `arena.ai`，抓到的是 Search Arena／WebDev Arena 的資料，**不是文字對話總榜**；本頁不以那兩榜的數字充當本列答案，快照格改列舊值並標明日期。連續 2 週抓不到即進入汰換討論。
-- **SWE-bench 兩子集本輪都有數字**：Pro（1,865 題）Fable 5.1 81.2% > Fable 5／Mythos 5 80.3% > Opus 5 79.2%；Verified（500 題，已飽和）Opus 5 96% > Mythos 5 95.5% > Fable 5 95%。上週「兩說歧異」的成因即兩子集混談，本輪起分列。來源為媒體轉述，官方榜頁直接抓取內容截斷。
-- **Terminal-Bench 二手來源與上週互相矛盾，本週不採計**：本輪二手稱 TB 3.0 首位 GLM-5.3（0.283、僅 3 個受測模型）、TB 2.1 首位 Gemini 3.8 Flash（0.894），上週則記 TB 3.0 Opus 5 42.7%、2.1 版 GPT-5.6 Sol 65.9%。
-- 兩輪皆二手、數量級對不上（0.283 vs 42.7%），在直接抓取成功前不改寫名次。另本輪抓取時榜頁已出現 **Terminal-Bench 4.0** 分頁。
-- **OpenRouter 連續 3 週三種說法**：09-06 直接抓取 Hermes Agent 35.7 兆 token 居首、同期媒體稱 GPT-5.6 Luna 居首、本週媒體稱 DeepSeek V4 Flash 居首。三說無一可互證，本頁採本週最新且標明二手；此列的可靠度目前最低。
-- **MTEB 本週前三與上週不同**：本輪 KaLM-Gemma3-12B 72.32 > gemini-embedding-001 68.37 > Qwen3-0.6B 64.34，上週為 QZhou-Embedding 75.97 居首。兩輪皆二手、榜版可能不同（v1／v2 不可互比），差異未解。
+- **⚠️ `arena.ai` 改版同時打掉兩列（本週最該注意的事）**：`lmarena.ai` 已 301 重導至 `arena.ai`，而 `arena.ai/leaderboard` 現在預設顯示的是 Agent Arena。
+  - 後果：LMArena **連續 2 週無法直接取得**（進入汰換討論），Search Arena 上週剛恢復、本輪再度掉回抓不到。兩列是同一個站點改版造成，不是兩個獨立問題。
+  - 下輪先確認各分榜的新 URL（Search Arena 疑為 `arena.ai/leaderboard/search`），再判斷是否真的要汰換。
+- **LMArena 改列二手數字（連續 2 週無法直接取得）**：二手為 Claude Fable 5 1508.6 > Claude Opus 5 約 1505 > GPT-5.6 Sol 1482.8；報導未標榜頁快照日期，僅知為 09 月。與本頁 08–09 月舊值（Fable 5 約 1525）方向一致但數值不同，**在直接抓取恢復前不可當精確值引用**。
+- **Terminal-Bench 恢復採計**：本輪 TB 3.0 為 Opus 5 42.7% > GPT-5.6 Sol 34.6% > Fable 5 34.0%，**與 08-28 的記錄一致**；上週那組數量級對不上的數字（0.283）未再出現，判為該來源之誤。
+  - **TB 4.0 已有數字**（Claude Mythos 5.1 0.609），與 3.0 的百分制不同量綱，本頁只採 TB 3.0 一個版本。
+- **OpenRouter 第四週、第四種說法**：09-06 稱 Hermes Agent 居首、同期媒體稱 GPT-5.6 Luna、上週媒體稱 DeepSeek V4 Flash、本輪得 Claude Fable 5.1 與 Qwen 3.8 Max 並列 53.4。
+  - 本輪採計的理由是它是四者中唯一直接抓到榜頁、且榜頁自標 09-19 的一次；但此列四週四說，**可靠度仍是全表最低**，選型時不要單看它。
+- **MTEB 本輪二手自相矛盾，不採計**：抓回的三名為 KaLM-Gemma3-12B 72.32 > Qwen3-Embedding-8B 70.58 > Jina v5-text-small **71.7**——第三名分數高於第二名，代表該來源混用了不同榜版或不同子任務的數字。快照格維持上週值並照舊標二手。
+- **SWE-bench 與上週同值**：Pro（1,865 題）Fable 5.1 81.2% > Fable 5／Mythos 5 80.3% > Opus 5 79.2%；Verified（500 題，已飽和）Opus 5 96% > Mythos 5 95.5% > Fable 5 95%。兩子集不可互比，本頁自 09-13 起分列。來源仍為媒體轉述，官方榜頁直接抓取內容截斷。
 - **METR 給出新數字但不可當排名**：二手稱 Time Horizon 1.1 版 Claude Mythos Preview 17.4 小時@50%，**已超過官方自陳「≥16 小時量測不可信」的門檻**，且本輪未取得完整名次表；僅供尺度感，不作為選型依據。
 - **Aider Polyglot 已於 2026-09-13 移出快照表（連續 7 週停更）**：榜頁最新資料為 2025-11-20，前三名皆非現役陣容，照它選型會選到已被取代的模型
   - **「寫 code」這題由 SWE-bench 承接**：它一週一動，Pro 子集（1,865 題、需跨檔案修改）正是 Aider 想量而量不到的真實工程難度。Aider 的題型與算分方式仍留在頁尾索引供對照
-- **EQ-Bench 數值與上週完全相同（07-20）**：本輪頁面為 JS 渲染、直接抓取失敗，二手給出與上週一致的數字；無法確認是「榜未更新」還是「二手來源複製舊值」。
+- **EQ-Bench 連續 3 輪同值（07-20）**：頁面為 JS 渲染、直接抓取持續失敗，二手數字三輪不動。兩種可能仍未分辨（榜停更 vs 二手複製舊值），但**連續三輪不動已足以讓此列不宜作為選型依據**；下輪若仍如此，列入汰換討論。
 - **AA 系列多榜未載官方資料日期**：文生圖、圖像編輯、影片、TTS、STT、音樂六榜為直接抓取但頁面無快照日期，本頁一律以抓取日標示。
-- **文生圖／改圖兩榜同時換人**：GPT Image 2.5 的 Flare 與 Sunburst 兩個 max 變體本輪包辦兩榜前二，MAI-Image-2.6 自編輯榜首位退至第三。
+- **AA 系列三榜名次有動**（文生圖／改圖兩榜名次不變，僅 Elo 微升）：
+  - 影片榜 **Gemini Omni Flash 反超 Wan 3.0** 登頂，但前三 Elo 差 ≤6，屬雜訊範圍。
+  - TTS 榜 **Qwen-Audio-3.0-TTS-Plus 新進第二**，Inworld Realtime TTS-2 退到第三、Simba 3.2 掉出前三。
+  - STT 榜 **StepAudio 3 ASR 以同分 1.7% WER 與 Fun-Realtime-ASR 並列第一**。
 
 ## 評比方式索引（每榜比什麼、分數怎麼來）
 
