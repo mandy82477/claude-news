@@ -402,11 +402,6 @@
       "id": "mythos",
       "name": "Claude Mythos",
       "pageType": "entity"
-    },
-    {
-      "id": "opus-5",
-      "name": "Claude Opus 5",
-      "pageType": "entity"
     }
   ],
   "reader": {

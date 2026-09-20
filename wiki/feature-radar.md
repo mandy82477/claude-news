@@ -9,13 +9,13 @@
 
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-09-02）
+## ⭐ 現在值得跟的三件（最後輪替 2026-09-19）
 
-- **Claude Code Auto 模式已預設化**：8/14 起 auto 成為 Pro／Max／Team 預設權限模式，取代手動確認。**怎麼開始：** 打 `/permissions`，在 Auto 分頁確認要不要關掉——靠手動確認做安全把關的人尤其要看一次（提示注入實測見 [[entities/claude-code]] 已知問題 🛡️ 組）。
+- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應全站讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，可到 `/config`「Project instructions」調整（Bedrock／Vertex／Foundry 尚未支援）。
 - **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
 - **Claude Opus 5**：07-25 收錄（官方 07-24 發布），$5/$25 與 Opus 4.8 同價（2026-09-07 官方查證），Max／Team premium／API 的預設 Opus。**怎麼開始：** `/model` 切成 Opus 5。
 
-%% 09-02 換上 Fable 5.1，原第三名「跨 session 訊息互通」熱度降溫逾一週、讓出名額；SendFeedback（08-27）、SDK 命名空間轉正（08-29）、使用者個人資料 API（09-01）熱度不夠高未上榜；本輪無新達標功能，維持不動，照 wiki-ingest-features.md §7(c) 覆寫 %%
+%% 09-19 換上 AGENTS.md 支援（🔥🔥🔥🔥🔥，型態同屬「你不動它、它也會改變你行為」），讓出原第一名「Claude Code Auto 模式已預設化」（🔥🔥🔥🔥，連續上榜逾 7 天、本輪熱度／試用價值未變動，被更新且更熱的同型候選取代）；v2.1.278 Auto mode 免計費 classifier 熱度僅 🔥🔥🔥，未達 🔥🔥🔥🔥 候選門檻，未列入評選 %%
 
 ---
 
@@ -64,6 +64,40 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### v2.1.278：Auto mode 免計費 server-side classifier
+**發布：** 2026-09-19（v2.1.278） | **狀態：** 正式發布
+
+**是什麼：** Auto mode 預設改用 server-side classifier，Claude API、Enterprise，以及透過 Bedrock、Vertex、Foundry 或閘道器使用的用戶不再為分類器耗用額外計費；`/status` 新增一列顯示本次 session 的分類器是否跑在伺服器端。
+
+**為何熱：** 直接降低 auto mode 隱性用量成本，影響幾乎所有企業與 API 用戶；GitHub release 首發，尚無社群實測回報。
+
+**現在要試嗎：** 已生效，不需操作；想確認自己是否已受惠可查 `/status`。
+
+**快速上手：**
+```
+/status   # 看「分類器是否跑在伺服器端」那一列
+export CLAUDE_CODE_AUTO_MODE_SERVER=0   # 想退回舊行為（Bedrock／Vertex／Foundry／閘道器適用）
+```
+
+**注意事項：** 退回舊行為後若產生計費，官方會顯示警告，不會靜默收費。
+
+### Claude Code 讀取 AGENTS.md（無 CLAUDE.md 時）
+**發布：** 2026-09-18（v2.1.277） | **狀態：** 正式發布
+
+**是什麼：** 專案內若無 CLAUDE.md，Claude Code 改讀 AGENTS.md，可在 `/config`「Project instructions」調整。
+
+**為何熱：** 回應全站讚數最高的已知問題（issue #6235，396 則留言、6,643 個讚）；HN 討論串 683 分（2 個管道同步收錄），The Register 稱此舉等同跟進 OpenAI 提出的 markdown 指示規範，Anthropic 工程師 Thariq Shihipar 發文說明（經 Simon Willison 轉引）。
+
+**現在要試嗎：** Claude API 直連或消費版可直接受益；Bedrock、Vertex、Foundry 尚未支援；需要跨工具共用設定檔的團隊可放心改用 AGENTS.md。
+
+**快速上手：**
+```
+# 專案根目錄放 AGENTS.md（同時有 CLAUDE.md 時 CLAUDE.md 優先）
+# 改行為：/config →「Project instructions」
+```
+
+**注意事項：** 尚未支援 Bedrock、Vertex、Foundry；目前不含 `.agents/skills` 資料夾（HN 討論已有開發者點出這個落差）。
 
 ### Claude Code Projects（Beta 改版）
 **發布：** 2026-09-17（公告） | **狀態：** Beta
@@ -260,6 +294,8 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
+| **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

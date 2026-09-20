@@ -12,7 +12,7 @@ children: "['topics/official-community-gap-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 30
-attribution_count: 14
+attribution_count: 15
 attribution_last: "2026-09-19"
 top_source: "github-issues"
 pending_count: 0
@@ -116,6 +116,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-08⟩ 別家 agent 的 AGENTS.md，它讀不讀：**已補**。Claude Code v2.1.277（2026-09-18）起可直接把 `AGENTS.md` 當專案指示讀，官方文件寫「works without adding a `CLAUDE.md`, an import, or a setting」。
   - 三個邊界：有 `CLAUDE.md` 或 `CLAUDE.local.md` 時預設只讀 `CLAUDE.md`；要兩者並讀，把 `/config` 的「Project instructions」設成 `claude-md-and-agents-md`。
   - Bedrock／Vertex／Foundry 或關掉遙測的 session 讀不到，那些場合仍用 `@AGENTS.md` import。issue #6235 官方已於 2026-08-17 關閉，當時給的是 import／symlink 做法，原生支援是一個月後的事。
+  - 社群另回報 `.agents/skills` 資料夾不在原生支援範圍內（HN 討論，2026-09-19；官方文件未提）。
 - ⟨G-09⟩ 多平行 agent 即時可觀測性／協調地圖：官方 Agent View 為**列表式** session 管理，非跨 agent 即時狀態流的 live map；當數十至上千平行 agent 併跑時「誰卡住、誰在等、彼此依賴」缺乏即時可觀測面，社群自建地圖式檢視器補位，官方無對應方向。2026-07-15 v2.1.211 新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，讓 `stream-json` 輸出包含 subagent 文字與思考內容，為社群建構觀測工具提供官方資料來源；2026-07-17 v2.1.212 將 `/fork` 改為建立獨立背景 session（`claude agents` 自成一列），原同 session 子 agent 行為更名 `/subtask`，使多開背景任務與同 session 委派的列表可見度更清楚拆分，但本身仍非官方 live map 產品，狀態未變。
 - ⟨G-10⟩ Agent 間直接通訊協定：與上一列「即時可觀測性／協調地圖」的區別：協調地圖是**被動觀測**（讀 transcript/log，agent 本身不互相收送訊息）；本列是**主動通訊**（agent 間或跨機器交換訊息以協調依賴順序），先前只能靠檔案系統或外部工具中繼。
   - 2026-08-09 官方文件確認跨 session 訊息功能，對應 issue #24798（[[entities/claude-code]] 已知問題轉 ✅ 已修復 v2.1.224）；留言持續累積（60→75→78），核心訴求其實是「依相依性排序高階流程步驟」的工作流編排。
@@ -208,7 +209,10 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - 一個工具的星數撐不起一整條缺口，等有第二個獨立方案再說；工具本身見 [[topics/community-tech-tools]]。
 - **同一個痛點不再有兩個互相打架的狀態**：先前「多模型路由」一處寫「官方無對應」、另一處寫「部分對應」，跨 session 記憶也有兩個狀態；現在每個痛點只有一個狀態，並標出最後一次對過官方的日期。
 - **「Slack 裡要一個 AI 隊友」這一列開始計時**：這一列的社群前驅一直只有 Ano 一個，開列日在本頁時序上查不到；自 2026-09-20 起算，若往後 90 天社群這邊仍無新東西、官方也沒動，就把它移出表。
+
+### 2026-09-19
 - **「Agent 間直接通訊協定」列查證更新（使用者提問）**：⟨Q-01⟩ 結案——跨機器已涵蓋、原生 Windows 自 v2.1.234 起支援；v2.1.224 release notes 本就載明此功能（08-08、08-09 條目稱「changelog 未見」為漏看）。#28300 的共享頻道式 A2A 仍缺，維持 🧪。
+- **AGENTS.md 原生支援還沒涵蓋的一塊**：`.agents/skills` 資料夾不在內（HN 討論指出，社群回報，官方文件未提）。
 
 ### 2026-09-16
 - **多模型路由/鎖定防禦再添佐證**：Dealroom（2 個來源同日報導）稱開發者傾向讓 Claude Code 接到非 Anthropic 模型後端執行，與 09-15 The Information 報導方向一致；矩陣狀態維持 ⚡ 部分對應，未見具體規模數字，不升級。

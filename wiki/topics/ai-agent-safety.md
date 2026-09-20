@@ -3,17 +3,17 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-18"
-last_news_update: "2026-09-18"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-19"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 88
-attribution_count: 150
-attribution_last: "2026-09-18"
+days_since_news_subtree: 1
+inbound_links: 90
+attribution_count: 152
+attribution_last: "2026-09-19"
 top_source: "google-news"
 pending_count: 25
 pending_overdue: 14
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
 **最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-18
+**最後新聞更新：** 2026-09-19
 
-> **最新安全事件**（2026-09-18）
-> - **雙重用途示範**：白帽研究人員藉 Claude Opus 5 經 OpenAI 官方漏洞懸賞找到並存取其原始碼，獲 6,500 美元；HN 質疑「入侵」用詞誇大
+> **最新安全事件**（2026-09-19）
+> - **漏洞利用能力躍升**：資安新創 Hacktron AI 稱同一記憶體毀損漏洞，Opus 4.8 需關閉系統記憶體隨機化保護（ASLR）才能利用、換 Opus 5 約 3 小時做出可用 exploit；研究團隊以同手法存取 OpenAI 內部系統，是 09-18 白帽懸賞案的技術細節升級版
 > - **跨廠 RCE**：代號「Plugin4Shell」的零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI，修補時程未見報導
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
@@ -113,6 +113,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### The New Stack／The Guardian：具名資安新創 Hacktron AI 揭露 Opus 5 漏洞利用能力較 Opus 4.8 躍升，同手法用於存取 OpenAI 內部系統（2026-09-19 新增，升級既有 09-18 條目）
+
+- **揭露來源**：The New Stack〈[Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5](https://thenewstack.io/claude-exploits-openai-forum/)〉（09-19）；The Guardian〈[OpenAI 'ethically hacked' with help of Anthropic's Claude chatbot](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)〉（09-18，同一連結已見於下方 09-18 條目）
+- **核心內容**：具名資安新創 Hacktron AI 三名研究人員在圖像庫中找到記憶體毀損漏洞；Opus 4.8 須先關閉 ASLR 才利用成功，換上同日發布的 Opus 5 後約 3 小時做出可用 ARM64 exploit。研究團隊隨後透過 OpenAI 員工論壇帳號與一個 GitHub pull request，摸清存取 OpenAI 軟體庫的路徑，已依規範通報
+- **與既有敘事的關係**：與下方 09-18 條目（WSJ 獨家、三名研究人員藉官方漏洞懸賞獲 6,500 美元）為同一事件，本則首見具名揭露機構 Hacktron AI，補上 Opus 4.8→Opus 5 能力躍升的量化細節與具體存取鏈，屬技術細節升級而非新事件；研究員稱「理論上可以取得的範圍非常龐大」
+- **可信度評估**：The New Stack 為專業科技媒體，技術細節（ASLR、ARM64、耗時 3 小時）描述具體；Guardian 為主流媒體並引述研究員原話；兩者均非 Anthropic 或 OpenAI 官方一手來源
+
 ### WSJ 獨家／十餘家媒體跟進：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其內部原始碼，獲 6,500 美元獎金（2026-09-18 新增）
 
 - **揭露來源**：WSJ 獨家首發；TechCrunch、Guardian、Yahoo、FT、Fortune 同日跟進；Forbes、VentureBeat 僅摘要可用（VentureBeat 指出模型為 Opus 5）
@@ -123,7 +130,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
-- **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號
+- **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號；Startup Fortune（09-19）跟進報導，未提供新技術細節
 - **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；具體觸發機制、是否已通報官方、修補時程均未見報導
 - **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因僅標題可用、無具名研究者技術細節，暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
 - ❓ **待查證**（標 2026-09-18｜查 Plugin4Shell、zero-click）：具體觸發機制、是否已有修補時程、在野利用情況均未見報導

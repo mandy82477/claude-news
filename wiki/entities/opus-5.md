@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（現行次旗艦；前代 Opus 4.8 已列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-09-15"
-last_news_update: "2026-09-15"
+last_updated: "2026-09-19"
+last_news_update: "2026-09-19"
 status_main: "active"
-days_since_news: 3
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
-inbound_links: 37
-attribution_count: 25
-attribution_last: "2026-09-15"
+days_since_news_subtree: 1
+inbound_links: 35
+attribution_count: 29
+attribution_last: "2026-09-19"
 top_source: "reddit"
 pending_count: 3
 pending_overdue: 2
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（現行次旗艦；前代 Opus 4.8 已列 Legacy）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-09-15
-**最後新聞更新：** 2026-09-15
+**最後更新：** 2026-09-19
+**最後新聞更新：** 2026-09-19
 
-> **最新動態**（2026-09-03）
-> Opus 5 連同其他世代模型出現錯誤率升高，官方當日 13:41 UTC 鎖定原因、同日 16:16 UTC 標記已解決（2026-09-07 查證，status.claude.com）；屬平台穩定性事件，非能力或定價變化。
+> **最新動態**（2026-09-19）
+> 資安新創 Hacktron AI 揭露：同一記憶體毀損漏洞，Opus 4.8 需先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit；研究團隊隨後以同手法存取 OpenAI 內部系統（Guardian／The New Stack，2026-09-18 報導）。
 
 ---
 
@@ -150,6 +150,10 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - [Reddit：Is it even legal for Anthropic to nerf its models this hard?](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)（2026-08-28）
 - [Reddit：A comparison of Opus 5, 4.7, and 4.6 running a code review](https://www.reddit.com/r/ClaudeCode/comments/1w0uyu7/a_comparison_of_opus_5_47_46_running_a_code/)（2026-08-28）
 - [[news/2026-08-28]]
+- [Reddit：Claude 4.6 was peak and it's downhill since then](https://www.reddit.com/r/ClaudeAI/comments/1whzlzz/claude_46_was_peak_and_its_downhill_since_then/)（週熱門，2026-09-16）
+- [The New Stack：Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5](https://thenewstack.io/claude-exploits-openai-forum/)（2026-09-19）
+- [The Guardian：OpenAI 'ethically hacked' with help of Anthropic's Claude chatbot](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)（2026-09-18）
+- [[news/2026-09-19]]
 
 ## 歷史記錄
 
@@ -157,6 +161,8 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-18 | 資安新創 Hacktron AI 揭露：Opus 5 上線首日即做出前代做不到的 ARM64 exploit，同手法後續用於存取 OpenAI 內部系統 |
+| 2026-09-16 | Reddit 週熱門稱 Opus 4.6 為「使用兩年來的巔峰」、其後代際下滑，單一使用者觀感 |
 | 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行，單一低知名度來源未經佐證 ❓待查證⟨Q-03⟩ |
 | 2026-09-03 | Anthropic 狀態頁：多款模型錯誤率升高，同日 16:16 UTC 已解決（2026-09-07 查證）|
 | 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 ❓待查證⟨Q-01⟩ |
@@ -173,6 +179,9 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 **歷史記錄細節**
 
+- **2026-09-18**：資安新創 Hacktron AI 揭露，同一記憶體毀損漏洞 Opus 4.8 須先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit（[The New Stack](https://thenewstack.io/claude-exploits-openai-forum/)，2026-09-19）
+  - 研究團隊隨後以同一手法，經 OpenAI 內部員工論壇帳號與一個 GitHub pull request 摸清可存取 OpenAI 軟體庫的路徑，已依規範通報；屬單一資安新創的示範性測試、非官方基準複測，該新創有展示能力的商業誘因（[The Guardian](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)，2026-09-18）
+- **2026-09-16**：Reddit 週熱門稱使用兩年餘的使用者認為 Opus 4.6 是巔峰、此後（含 Opus 5）回應更難理解、更不照指示；單一觀感無數字佐證，另見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1whzlzz/claude_46_was_peak_and_its_downhill_since_then/)，週熱門，2026-09-16）
 - ⟨Q-03⟩ ❓ **待查證**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-09-29）｜**單一部落格稱 Opus 5.2 秘密試行**：finance.biggo.com 稱回應更快、可自主迭代，並提及內部「RSI」模型；僅連結標記無內文，未見其他來源佐證（[Google News/finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTE5tWk9uLU5DQVVDRElYODFqdk9NQlR2d3VmSk52MHlGbXBSeG9sa1dZX3NkNS04WlQ0NXk0MGNkT2pDcFJiQy0wTXZQQzI1LXV3cE1PMG1wT25zcC1TTEx6LTgzZTJwX3Fwbm1PX1RRa3lMbF9yTnc?oc=5)，2026-09-15）
 - **2026-09-03**：Opus 5／4.8／4.6 與 Fable、Mythos 全系列同時錯誤率升高。官方 13:41 UTC 鎖定原因，**同日 16:16 UTC 標記已解決**（2026-09-07 查證）。屬穩定性事件，非能力或定價變化；跨模型完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w69016/claude_code_server_down_for_a_long_time_now_will/)，2026-09-03）
 
