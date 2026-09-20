@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行次旗艦；前代 Opus 4.8 已列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-19"
 status_main: "active"
 days_since_news: 1

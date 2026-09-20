@@ -6,7 +6,7 @@ domain: "💼 商業"
 last_updated: "2026-09-19"
 last_news_update: "2026-09-19"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
@@ -16,7 +16,7 @@ attribution_count: 32
 attribution_last: "2026-09-19"
 top_source: "google-news"
 pending_count: 19
-pending_overdue: 3
+pending_overdue: 1
 pending_next_review: "2026-09-22"
 pending_signalled: 3
 signal: "健康"

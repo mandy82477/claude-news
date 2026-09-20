@@ -16,7 +16,7 @@ attribution_count: 152
 attribution_last: "2026-09-19"
 top_source: "google-news"
 pending_count: 25
-pending_overdue: 14
+pending_overdue: 13
 pending_next_review: "2026-09-23"
 pending_signalled: 1
 signal: "健康"

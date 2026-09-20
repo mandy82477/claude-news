@@ -3,7 +3,7 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-19"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,9 +11,9 @@ parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 36
-attribution_count: 30
-attribution_last: "2026-09-19"
+inbound_links: 39
+attribution_count: 31
+attribution_last: "2026-09-20"
 top_source: "reddit"
 pending_count: 2
 pending_overdue: 2

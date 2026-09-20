@@ -11,12 +11,12 @@ parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 92
+inbound_links: 93
 attribution_count: 103
 attribution_last: "2026-09-19"
 top_source: "google-news"
-pending_count: 17
-pending_overdue: 11
+pending_count: 14
+pending_overdue: 8
 pending_next_review: "2026-09-21"
 pending_signalled: 0
 signal: "健康"

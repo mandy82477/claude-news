@@ -16,8 +16,8 @@ inbound_links: 7
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 signal: "休眠"

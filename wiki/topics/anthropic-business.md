@@ -3,7 +3,7 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-19"
+last_updated: "2026-09-20"
 last_news_update: "2026-09-19"
 status_main: "ongoing"
 days_since_news: 1
@@ -15,9 +15,9 @@ inbound_links: 104
 attribution_count: 273
 attribution_last: "2026-09-19"
 top_source: "google-news"
-pending_count: 9
-pending_overdue: 9
-pending_next_review: null
+pending_count: 7
+pending_overdue: 6
+pending_next_review: "2026-10-04"
 pending_signalled: 1
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
