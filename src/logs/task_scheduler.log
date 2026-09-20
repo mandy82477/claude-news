@@ -791,3 +791,4 @@ ABORTED: digest already exists - news/2026-09-19.md 已由前一班（17:01 UTC�
 [週日 2026/09/20 12:03:22.68] === Agent pipeline start (2026-09-20) ===
 ABORTED: gathered_items.json date=2026-09-19 items=63，非目標日期的新鮮資料
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-20T12:03:22Z]
+[cloud daily-news-pipeline-cloud STARTED 2026-09-20T17:02:13Z]
