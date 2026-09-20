@@ -1,7 +1,7 @@
 {
   "count": 106,
   "updated": "2026-09-20",
-  "note": "5c 逾期待查證清算 2026-09-20：ai-agent-safety 13 筆、anthropic-government-policy 8 筆、safety-china-trust-dispute 5 筆、anthropic-commitments 1 筆、recursive-self-improvement 1 筆，共 28 筆，逐筆 WebFetch/WebSearch 官方一手來源查證後結案（查實為主，2 筆確認官方持續未公開更新複查日）",
+  "note": "2026-09-20 使用者裁示「先清 0」：六記者依 5c 契約把 109 筆逾期全數結案（查實改寫為主，查無官方者依契約改 🔎 並推複查日）",
   "fingerprints": [
     {
       "key": "entities/claude-code::2026-09-18::claude-projects、claude code projects",

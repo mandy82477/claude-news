@@ -12,12 +12,12 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 7
-inbound_links: 42
+inbound_links: 43
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
-pending_count: 3
-pending_overdue: 3
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null

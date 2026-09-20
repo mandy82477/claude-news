@@ -15,8 +15,8 @@ inbound_links: 40
 attribution_count: 18
 attribution_last: "2026-09-02"
 top_source: "reddit"
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null

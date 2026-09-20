@@ -12,12 +12,12 @@ parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 150
+inbound_links: 148
 attribution_count: 105
 attribution_last: "2026-09-19"
 top_source: "google-news"
-pending_count: 4
-pending_overdue: 2
+pending_count: 3
+pending_overdue: 0
 pending_next_review: "2026-09-21"
 pending_signalled: 0
 staleness_exempt: null

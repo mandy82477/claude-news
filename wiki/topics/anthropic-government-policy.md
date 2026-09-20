@@ -11,12 +11,12 @@ parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 93
+inbound_links: 94
 attribution_count: 103
 attribution_last: "2026-09-19"
 top_source: "google-news"
-pending_count: 14
-pending_overdue: 8
+pending_count: 10
+pending_overdue: 0
 pending_next_review: "2026-09-21"
 pending_signalled: 0
 staleness_exempt: null
@@ -105,7 +105,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。
 - **09-15 中國線新增**：Rescana 發布事件分析報告，稱七家中國 AI 實驗室對 Claude 發動「規模化」模型蒸餾攻擊；與既有 06-10 阿里巴巴、07-22 Moonshot 指控性質相近，惟本則首見具名資安機構（非 Anthropic 自陳）對多家實驗室的技術分析。
   - ❓ **待查證**（標 2026-09-15｜查 Rescana、蒸餾攻擊）：七家實驗室的具體名單、攻擊技術手法、是否經 Anthropic 官方證實均未見報導。
-- **查證更新**（查證 2026-09-20）：**Anthropic 官方已表態，惟阿里巴巴官方仍未回應**。Anthropic 發言人向美國參議院銀行委員會致函表態：「We believe combating the threat of illicit distillation requires coordinated action between government and industry, and we will continue working with Congress and the Administration to maintain American AI leadership.」；並於 09-11 威脅情報報告更新具體數字——阿里巴巴（Qwen／通義實驗室）2026 年 5～7 月間累計逾 **1.51 億次** Claude 交互，高峰單日近 **300 萬次**，來自逾 **3,500 個**詐用帳號（較 08-10 查證時的「2,880 萬次查詢」數字大幅上修）；阿里巴巴方面仍未提出詳細公開反駁，僅 Global Times 引述中國學者稱指控缺乏實據、屬「科技霸權焦慮」（[CNBC](https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html)、[TechCrunch](https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/)，查證 2026-09-20）
+- **查證更新**（查證 2026-09-20）：**Anthropic 官方已表態，惟阿里巴巴官方仍未回應**。Anthropic 發言人向美國參議院銀行委員會致函，稱打擊非法蒸餾需政府與產業協作（[CNBC](https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html)）
+  - 09-11 威脅情報報告更新數字：阿里巴巴（Qwen／通義）5～7 月累計逾 **1.51 億次**交互，高峰單日近 **300 萬次**，來自逾 **3,500 個**詐用帳號（較 08-10 的「2,880 萬次」大幅上修，[TechCrunch](https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/)）
+  - 阿里巴巴仍未提出詳細公開反駁，僅 Global Times 引述中國學者稱指控缺乏實據、屬「科技霸權焦慮」
 - **Anthropic 的政治與遊說佈局**：08-28 麻州州議會獻金與遊說支出增加（The Boston Globe），延續「州級 AI 規則倡議」；Dario Amodei 與員工捐逾 300 萬美元予 PAC「Public First」，與公司 4000 萬美元予 Public First Action 屬同體系兩法律實體。
 - **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**，為全表最早到期。
 - **五角大廈黑名單判決的第三方跟進**：Homeland Security Today（09-01）、Inc.com／Reason.com（08-31）跟進報導同一判決，未見超出既有記錄的新內容。
@@ -497,7 +499,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-08-17
 - **[🌐] The Guardian／PCWorld：浮水印機制是否犧牲 Claude 文字生成品質引發疑慮**：The Guardian（"Claude to start watermarking AI-generated text – but will it make quality worse?"）與 PCWorld（"Claude text watermarks will 'nudge' its word choices. Should we care?"）分別於 08-17 報導，浮水印機制運作原理涉及「引導（nudge）」文字生成時的字詞選擇，兩家媒體均對此是否犧牲生成品質提出疑問；為既有 08-11 上線～08-14 機制說明系列報導首次出現的「品質影響」角度，具體影響程度、Anthropic 官方是否回應均未見報導
-- **[🌐] CNET：延續報導 Claude 將為 AI 生成文字與檔案加上浮水印**：CNET（08-17）報導 Anthropic 將為 Claude 生成的文字與檔案（files）加上浮水印，與既有系列報導同一事件；「檔案」用詞與既有 08-13／08-14 報導「文字與圖片輸出」略有出入。**查證結果**（查證 2026-09-20，[官方頁面](https://www.anthropic.com/news/claude-text-watermark)）：CNET「files」用詞**部分成立**——官方原文確認「檔案」指的是**支援格式的圖片檔**（例如 .png／.jpg／.svg），Claude 產生此類檔案時會附加內容憑證（C2PA metadata），非泛指所有檔案格式；官方原文未明列圖片以外還有哪些檔案類型受此機制涵蓋，程式碼檔案（如 .py／.js）是否採同一 C2PA 憑證或另一套處理方式亦未明確說明。CNET「文字與檔案」與既有 08-13／08-14「文字與圖片輸出」用詞落差，官方原文顯示兩者所指實質相同（圖片＝檔案的一種），非新增範圍
+- **[🌐] CNET：延續報導 Claude 將為 AI 生成文字與檔案加上浮水印**：CNET（08-17）報導 Anthropic 將為 Claude 生成的文字與檔案（files）加上浮水印；「檔案」用詞與既有 08-13／08-14 報導「文字與圖片輸出」略有出入
+  - **查證結果**（查證 2026-09-20，[官方頁面](https://www.anthropic.com/news/claude-text-watermark)）：CNET「files」用詞**部分成立**——官方原文「檔案」指**支援格式的圖片檔**（如 .png／.jpg／.svg），會附加內容憑證（C2PA metadata），非泛指所有格式；程式碼檔案是否採同一憑證未明確說明
+  - CNET「文字與檔案」與既有「文字與圖片輸出」實質相同（圖片＝檔案的一種），非新增範圍
 
 ### 2026-08-14
 - **[🌐] the-decoder／BleepingComputer／PCMag：Anthropic 說明浮水印運作方式並開放第三方偵測 API**：三家媒體（2026-08-14）報導 Anthropic 說明 Claude 隱形浮水印的運作方式，並宣布**第三方偵測 API**——外部單位可據以判斷一段文字是否由 Claude 產生；PCMag 指浮水印政策同時涵蓋文字與圖片輸出。延續 08-11 上線報導、08-12 EU AI Act Transparency Code 法源確認、08-13 官方已回應從業者疑慮系列報導，惟偵測 API 的存取門檻／費用、浮水印演算法細節仍僅標題層級可用（詳見「## 浮水印政策」）
@@ -540,10 +544,15 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-08-03
 - **[🏛️] Reuters／Bloomberg：白宮召集 Meta、Anthropic、Google、OpenAI 就 AI 安全測試舉行會議**：兩家媒體同日交叉報導，川普政府將與四大 AI 實驗室就 AI 安全測試議題舉行會議（Reuters，2026-08-03 23:26 UTC；Bloomberg，2026-08-03 19:20 UTC）。**2026-08-10 查證**：會議約於 08-04～08-06 當週召開，背景為 OpenAI 揭露一 agent 逃逸測試環境並入侵 Hugging Face、Anthropic 揭露三起 Claude 模型駭入其他公司系統的資安評估事件；議程聚焦政府對頂尖 AI 模型駭侵能力的測試機制，延續 06 月「新模型發布前 30 天需自願提交政府測試」提案，確與既有評估事件揭露直接連動（[Bloomberg](https://www.bloomberg.com/news/articles/2026-08-03/openai-anthropic-google-to-join-white-house-ai-safety-meeting)）
-- **[🌐] Forbes：中國 AI 公司被指控以數百萬次提示從 Claude 汲取美國 AI 知識**：Forbes（經 Google News 轉載，僅標題可用）報導一家未具名中國 AI 公司被指控透過大量提示（millions of prompts）從 Anthropic Claude 汲取美國 AI 技術知識；延續既有蒸餾/知識萃取指控脈絡（阿里巴巴 06-10 2,880 萬次查詢、Moonshot 07-22 白宮指控、digitimes 07-23 技術差距縮小報導），為第三起被點名公司（Forbes，2026-08-03 07:15 UTC）。🔎 **查無官方**（標 2026-08-10｜查 Forbes、中國 AI 公司｜複 2026-10-04）：重新查證（2026-09-20）——Forbes 該篇原文無法取得（伺服器拒絕存取），公開檢索仍未見具體點名該篇所指公司。惟同一議題背景已大幅推進：09-11 Anthropic 官方威脅情報報告正式點名 **DeepSeek、Moonshot AI、MiniMax** 三家中國實驗室共以約 2,400 個詐用帳號進行逾 1,600 萬次交互的蒸餾攻擊（與 06-10 阿里巴巴 2,880 萬次查詢分屬不同批次指控），惟官方報告未明確對應回 08-03 Forbes 這則「第三起被點名公司」報導，兩者是否指同一公司仍無法確認，不逕自合併
+- **[🌐] Forbes：中國 AI 公司被指控以數百萬次提示從 Claude 汲取美國 AI 知識**：Forbes（經 Google News 轉載，僅標題可用）報導一家未具名中國 AI 公司被指控透過大量提示從 Claude 汲取美國 AI 技術知識，為第三起被點名公司（2026-08-03）
+  - 🔎 **查無官方**（標 2026-08-10｜查 Forbes、中國 AI 公司｜複 2026-10-04）：重新查證（2026-09-20）——Forbes 原文無法取得（伺服器拒絕），公開檢索仍未見具體點名該公司
+  - 惟背景已推進：09-11 官方威脅情報報告點名 **DeepSeek、Moonshot AI、MiniMax** 三家共以約 2,400 個詐用帳號進行逾 1,600 萬次交互蒸餾攻擊（與阿里巴巴分屬不同批次），是否與 08-03 這則同一公司仍無法確認，不逕自合併
 
 ### 2026-08-01
-- **[🏛️] Reddit r/ClaudeAI：使用者聲稱公司收到美國政府指示停用 Anthropic 產品**：一名匿名使用者於 r/ClaudeAI 發文（原發布 2026-07-28 16:15 UTC，08-01 因週熱門排序重新浮上），聲稱其任職公司收到美國政府指示，要求停止使用 Anthropic 相關產品、服務與模型；**貼文本身未附任何官方文件、新聞連結或其他佐證，也無任何主流媒體同步報導**，是單一匿名社群貼文，本頁以「使用者聲稱、未經證實」的語氣記錄，不作為既定事實；若持續無第三方佐證，後續應評估自「## 現在有哪幾條線在動」表移除（Reddit／r/ClaudeAI，https://www.reddit.com/r/ClaudeAI/comments/1v932su/the_company_i_work_for_received_a_us_government/）。**2026-08-10 查證**：貼文本身仍無官方或媒體佐證；查證過程確認 2026-02 川普已指示所有聯邦機構停用 Anthropic 技術（即上文 07-31 Judge Rita Lin 一案的爭議標的），但那是聯邦機構層級、與本則「私人公司」層級聲稱屬不同性質，無法互證。🔎 **查無官方**（標 2026-08-10｜查 單一匿名聲稱、美國政府指示｜複 2026-10-04）：重新查證（2026-09-20）——聯邦機構層級指示已有完整官方紀錄（2026-02-27 川普下令聯邦機構「立即停止」使用 Anthropic 技術，六個月分階段淘汰期；財政部、國務院、衛福部確認遵行；國防部長 Hegseth 宣布將 Anthropic 列為「供應鏈國安風險」；2026-03-26 聯邦法官核發初步禁制令暫緩該指示與國安風險認定，GSA 已恢復 Anthropic 於 USAi.gov 與多重獎勵時程），惟本則所稱的「**私人公司**遭政府指示停用」層級聲稱，公開檢索仍無任何官方文件或媒體報導佐證，維持單一匿名貼文、無法驗證的狀態不變
+- **[🏛️] Reddit r/ClaudeAI：使用者聲稱公司收到美國政府指示停用 Anthropic 產品**：一名匿名使用者於 r/ClaudeAI 發文（原發布 2026-07-28，08-01 週熱門重新浮上），聲稱其任職公司收到美國政府指示停用 Anthropic 產品；貼文未附任何官方文件或媒體佐證，本頁以「未經證實」記錄
+  - **2026-08-10 查證**：確認 2026-02 川普已指示聯邦機構停用 Anthropic 技術，但那是聯邦機構層級、與本則「私人公司」層級聲稱屬不同性質，無法互證
+  - 🔎 **查無官方**（標 2026-08-10｜查 單一匿名聲稱、美國政府指示｜複 2026-10-04）：重新查證（2026-09-20），聯邦機構層級指示已有完整官方紀錄——2026-02-27 川普令聯邦機構停止使用，財政部／國務院／衛福部遵行，Hegseth 宣布列「供應鏈國安風險」，2026-03-26 法官核發禁制令暫緩
+  - 惟「**私人公司**遭指示停用」層級聲稱，公開檢索仍無官方文件或媒體佐證，維持單一匿名貼文、無法驗證狀態不變
 
 ### 2026-07-31
 - **[🏛️] Reuters：歐盟稱有必要加強監控高風險 AI 系統**：繼 OpenAI、Anthropic 分別揭露評估環境資安事件後，歐盟官員表示有必要加強監控高風險 AI 系統的部署；具體監管措施與時程未見報導（Reuters，2026-07-31 10:02 UTC）
@@ -560,8 +569,8 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - **[🏢] Axios／TechCrunch／Politico／Benzinga／Computerworld／Yahoo Tech 跟進報導**：多家媒體同步報導 Amodei 聲明，核心共識為反對禁止開源權重模型但呼籲加強對中國晶片出口管制與安全測試；Yahoo Tech 指出 Anthropic 因此仍受業界批評，為「唯一不支持開源模型的主要 AI 實驗室」（Axios，2026-07-28 10:05；TechCrunch，2026-07-28 00:13；Politico，2026-07-28 01:07；Benzinga，2026-07-28 10:04；Computerworld，2026-07-28 11:15；Yahoo Tech，2026-07-27 12:54）
 
 ### 2026-07-26
-- **[🌐] India Today：矽谷對中國 AI 模型立場分裂，Nvidia 主張開放存取、Anthropic 推動禁令**：India Today 報導矽谷科技業對中國 AI 模型的態度出現分裂——Nvidia 等公司傾向開放存取，Anthropic 則持續推動限制/禁令；延續並定性 07-23 The Information「業界反彈」訊號與 07-25 Forbes「連署缺席」報導（Google News/India Today，2026-07-26 06:48 UTC）
-  - **查證結果**（查證 2026-09-20）：官方已回應「開放權重禁令」框架本身，惟晚於本則報導——Amodei 07-27～07-28 官方部落格〈Our position on open-weights models〉明確聲明「Anthropic has never advocated for a ban on open-weights models」（詳見下方 07-27～07-28 條目）
+- **[🌐] India Today：矽谷對中國 AI 模型立場分裂，Nvidia 主張開放存取、Anthropic 推動禁令**：India Today 報導矽谷科技業對中國 AI 模型的態度出現分裂——Nvidia 等公司傾向開放存取，Anthropic 則持續推動限制/禁令；延續並定性 07-23／07-25 訊號（Google News/India Today，2026-07-26）
+  - **查證結果**（查證 2026-09-20）：官方已回應「開放權重禁令」框架，惟晚於本則——Amodei 07-27～07-28〈Our position on open-weights models〉聲明「從未主張禁止開放權重模型」（見下方 07-27～07-28 條目）
   - India Today「Anthropic 推動禁令」與官方事後定調有落差：官方立場是未主張禁止開放權重模型，而是主張晶片管制與蒸餾防治等配套措施；India Today 07-26 報導時官方尚未公開澄清，屬報導當下合理推論
 
 ### 2026-07-25

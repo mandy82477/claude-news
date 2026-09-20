@@ -12,12 +12,12 @@ parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 54
+inbound_links: 55
 attribution_count: 37
 attribution_last: "2026-09-16"
 top_source: "google-news"
-pending_count: 6
-pending_overdue: 5
+pending_count: 2
+pending_overdue: 0
 pending_next_review: "2026-09-24"
 pending_signalled: 0
 staleness_exempt: null

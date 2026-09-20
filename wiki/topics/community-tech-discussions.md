@@ -15,9 +15,9 @@ inbound_links: 46
 attribution_count: 145
 attribution_last: "2026-09-19"
 top_source: "hacker-news"
-pending_count: 2
-pending_overdue: 2
-pending_next_review: null
+pending_count: 1
+pending_overdue: 0
+pending_next_review: "2026-10-20"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

@@ -17,7 +17,7 @@ attribution_count: 29
 attribution_last: "2026-09-19"
 top_source: "reddit"
 pending_count: 3
-pending_overdue: 2
+pending_overdue: 0
 pending_next_review: "2026-09-29"
 pending_signalled: 0
 staleness_exempt: null

@@ -16,8 +16,8 @@ inbound_links: 105
 attribution_count: 560
 attribution_last: "2026-09-19"
 top_source: "github-issues"
-pending_count: 27
-pending_overdue: 21
+pending_count: 20
+pending_overdue: 0
 pending_next_review: "2026-09-25"
 pending_signalled: 1
 staleness_exempt: null

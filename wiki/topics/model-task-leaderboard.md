@@ -16,8 +16,8 @@ inbound_links: 16
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: "本頁吃外部榜單而非新聞，週更規則明文不動「最後新聞更新」，以天數判停滯對它恆為真"

@@ -15,8 +15,8 @@ inbound_links: 12
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -62,7 +62,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |------------|------|--------|------|
 | **Session 歷史 30 天自動刪除** | ⛔ 明確拒絕 | 2026-06-30 | 官方在 GitHub issue #62476 明確表示不會修復；社群替代方案見 [[entities/claude-code]] 已知問題 |
 | **Fable 5 / Mythos 5 解禁談判** | ✅ 已兌現 | 2026-07-01 | 出口管制全面解除，詳見 [[topics/anthropic-government-policy]] |
-| **Fable 5 恢復訂閱內含** | ⛔ 官方從未承諾 | 2026-09-20 | Reddit r/ClaudeAI 08-28 貼文整理計費爭議時間軸時的誤讀。查證（2026-09-20，[Claude Help Center：Fable models on your plan](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan)＋[官方 X 公告](https://x.com/claudeai/status/2078302415804379218)）：官方公告自 07-20 起 Fable 5／5.1 僅 **Max／Team Premium** 方案內含（佔週用量上限 50%），**Pro／Team Standard 方案從未被承諾恢復內含**，僅獲一次性 $100 usage credit（07-20～08-02 領取，promotional credit 已於 09-17 到期），之後按 API 費率（input $10／output $50 每百萬 token）計費，此為官方永久性方案差異化政策，非「未兌現的承諾」 |
+| **Fable 5 恢復訂閱內含** | ⛔ 官方從未承諾 ⟨C-01⟩ | 2026-09-20 | Reddit 08-28 貼文誤讀，官方查證見表下 |
+
+**已結案細節**
+- ⟨C-01⟩ Reddit r/ClaudeAI 08-28 貼文整理計費爭議時間軸時的誤讀。查證（2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan)＋[官方 X 公告](https://x.com/claudeai/status/2078302415804379218)）：官方公告自 07-20 起僅 **Max／Team Premium** 方案內含（佔週用量上限 50%）
+  - **Pro／Team Standard 方案從未被承諾恢復內含**，僅獲一次性 $100 usage credit（07-20～08-02 領取，已於 09-17 到期），之後按 API 費率計費，屬官方永久性方案差異化政策，非「未兌現的承諾」
 
 ## 相關實體
 
