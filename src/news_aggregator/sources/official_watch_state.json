@@ -1390,8 +1390,8 @@
     ]
   },
   "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan": {
-    "hash": "997cb359c0509b8641d537c8377dc70a2edb7ea6d52fb62ca2a4c83fe53b53c4",
-    "length": 22947,
+    "hash": "31f0e247501a28af07923279b6bc8d6131469e9e75187b0392a1b7a2dfb08986",
+    "length": 22995,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1617,6 +1617,7 @@
       "Manage members on Team and Enterprise plans",
       "Manage model access for your organization",
       "Manage plugins for your organization",
+      "Manage pooled group budgets on Enterprise plans",
       "Manage usage credits for Team and seat-based Enterprise plans",
       "Manage usage credits for paid Claude plans",
       "Manage user feedback settings on Claude Console",
@@ -1795,8 +1796,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "c3d205f4c910905e12e251510c573a3a53c2fdb18b86e6631ee581257052c297",
-    "length": 23050,
+    "hash": "ea136cf0a43d40e462017672c5d640bf441db5d9edf1510305f2a0be247f2620",
+    "length": 23098,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2022,6 +2023,7 @@
       "Manage members on Team and Enterprise plans",
       "Manage model access for your organization",
       "Manage plugins for your organization",
+      "Manage pooled group budgets on Enterprise plans",
       "Manage usage credits for Team and seat-based Enterprise plans",
       "Manage usage credits for paid Claude plans",
       "Manage usage credits for paid Claude plans | Claude Help Center Skip to main content API docs Release notes How to get support English Français Deutsch Bahasa Indonesia Italiano 日本語 한국어 Português Pусский 简体中文 Español 繁體中文 English Search ⌘ K Claude Release notes",
@@ -2225,8 +2227,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "248c547c6afdb0c7572d2643922670e378113fcba319f1dba95100a1ff6ab0b0",
-    "length": 22818,
+    "hash": "b9a01118f5dc3c4130c1e2f616a3eb6825bc237b3c8c0312181ef86a30ce2298",
+    "length": 22866,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2446,6 +2448,7 @@
       "Manage members on Team and Enterprise plans",
       "Manage model access for your organization",
       "Manage plugins for your organization",
+      "Manage pooled group budgets on Enterprise plans",
       "Manage usage credits for Team and seat-based Enterprise plans",
       "Manage usage credits for paid Claude plans",
       "Manage user feedback settings on Claude Console",
@@ -2626,8 +2629,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "966c439cd7a58da598e7e092204431dca8660112dc871b1bb4901c9453991ca3",
-    "length": 23234,
+    "hash": "98bf51e832f1fee509f47b8c591d45644c152483454ab38e08b7f1a1b69ea6e1",
+    "length": 23282,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2865,6 +2868,7 @@
       "Manage members on Team and Enterprise plans",
       "Manage model access for your organization",
       "Manage plugins for your organization",
+      "Manage pooled group budgets on Enterprise plans",
       "Manage usage credits for Team and seat-based Enterprise plans",
       "Manage usage credits for paid Claude plans",
       "Manage user feedback settings on Claude Console",
@@ -3062,8 +3066,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "a50790ca701a87af0a8eef2b1dcb80d0f163ba22099c1794ead1676bde4bbc2e",
-    "length": 44484,
+    "hash": "918b0815baf7512df99f55891b726a70eb1d497e18517c56b54d240b82e1289b",
+    "length": 44532,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -3414,6 +3418,7 @@
       "Manage members on Team and Enterprise plans",
       "Manage model access for your organization",
       "Manage plugins for your organization",
+      "Manage pooled group budgets on Enterprise plans",
       "Manage usage credits for Team and seat-based Enterprise plans",
       "Manage usage credits for paid Claude plans",
       "Manage user feedback settings on Claude Console",
