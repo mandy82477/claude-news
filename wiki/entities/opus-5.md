@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（現行次旗艦；前代 Opus 4.8 已列 Legacy）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-21
+**最後新聞更新：** 2026-09-21
 
-> **最新動態**（2026-09-20）
-> GitHub #77136（跨模型重複修辭 bug：4.7／4.8／5／Fable 同時中）留言與反應數持續攀升至 123 則、565 個，08-27 首見時為 106／517，官方仍無回應。
+> **最新動態**（2026-09-21）
+> 單一部落格傳聞 Opus 5.5 將於週二發布、降價 20%；僅標題可用，尚待查證。
 
 ---
 
@@ -180,6 +180,8 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - [[news/2026-09-16]]
 - [Reddit：Does it seem to anyone else like even frontier models have a very "jagged" range of capabilities?](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)（週熱門，2026-09-17）
 - [[news/2026-09-18]]
+- [Google News/Pasquale Pillitteri：Claude Opus 5.5 Leak Points to 20% Lower Prices and a Tuesday Launch](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)（2026-09-21）
+- [[news/2026-09-21]]
 
 ## 歷史記錄
 
@@ -187,6 +189,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-21 | 傳聞：Opus 5.5 週二發布、降價 20% ❓待查證⟨Q-04⟩ |
 | 2026-09-18 | 資安新創 Hacktron AI 揭露：Opus 5 上線首日即做出前代做不到的 ARM64 exploit，同手法後續用於存取 OpenAI 內部系統 |
 | 2026-09-17 | Reddit r/artificial 週熱門：Opus 5 與 4.8 能力落差不均勻（「參差」）討論，無具體案例或分數 |
 | 2026-09-16 | Reddit 週熱門稱 Opus 4.6 為「使用兩年來的巔峰」、其後代際下滑，單一使用者觀感 |
@@ -207,6 +210,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 **歷史記錄細節**
 
+- **2026-09-21**：⟨Q-04⟩ ❓ **待查證**（標 2026-09-21｜查 Opus 5.5、Pasquale Pillitteri｜複 2026-10-05）｜**單一部落格稱 Opus 5.5 週二發布**：稱降價 20%；僅標題可用，無查證方法，未見其他來源佐證（[Google News/Pasquale Pillitteri](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)，2026-09-21）
 - **2026-09-18**：資安新創 Hacktron AI 揭露，同一記憶體毀損漏洞 Opus 4.8 須先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit（[The New Stack](https://thenewstack.io/claude-exploits-openai-forum/)，2026-09-19）
   - 研究團隊隨後以同一手法，經 OpenAI 內部員工論壇帳號與一個 GitHub pull request 摸清可存取 OpenAI 軟體庫的路徑，已依規範通報；屬單一資安新創的示範性測試、非官方基準複測，該新創有展示能力的商業誘因（[The Guardian](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)，2026-09-18）
 - **2026-09-17**：Reddit r/artificial 週熱門討論串，使用者主要以 Opus 5 與 4.8 為例，觀察不同任務間能力落差很不均勻（「jagged」），討論成因；未附具體案例或分數，非量化評測（[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)，週熱門，2026-09-17）

@@ -29,13 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-19
+**最後更新：** 2026-09-21
+**最後新聞更新：** 2026-09-21
 
-> **本週衝擊**（2026-09-19）
-> - 🔴 **OpenAI 秀出自主 agentic 信任案例**：Perplexity 用 GPT-6 Astra 自主管理正式環境、人工複查大減（09-13，OpenAI 官方部落格）——單一自報案例，暫不必換工具，但值得追蹤後續是否有更多佐證。
-> - 🔴 **Copilot code review 全面改版＋10/19 起停用部分模型**（09-19，GitHub 官方 changelog）——先不必換，但企業審查流程與模型選型都要重新校準。
-> - 🟡 **Google 秀出 Gemini 3.8 Live 語音 agent 與近即時推理**（09-15，DeepMind 官方部落格）——評估語音／即時推理場景時，值得列入候選比較清單，其餘任務不用換。
+> **本週衝擊**（2026-09-21）
+> - 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。
+> - 🟡 **Grok 4.7 登陸 GitHub Copilot**（09-21，GitHub 官方 changelog）——Copilot 生態內的推理模型選項再添一款，用 Copilot 的人可留意評估，其餘任務不用換。
 
 ---
 
@@ -49,18 +48,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | Perplexity 用 GPT-6 Astra 自主寫通訊、改軟體、監控正式環境，人工複查大減（09-13）→ 首見官方自曝的自主 agentic 信任案例，直指 Claude Code 定位 | 能力 | 🔴 | OpenAI 官方部落格單一客戶案例，無第三方驗證或量化數字 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
 | **Microsoft／GitHub** 🏢 | Code review 改版：版本演進更清楚、自動解決建議更聰明、accept 時產生 commit 訊息；10/19 起停用部分模型（09-19）→ 審查功能與模型陣容持續追平 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代動機已獲官方高層證實（09-20 查證） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
+| **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
 | **Google（Gemini）** 🏢 | Gemini 3.8 Live／Extended Thinking 推出語音 agent 與近即時多步推理（09-15）→ 評估語音場景時多一個對照對象；另有低價企業方案劍指 Anthropic（08-27） | 能力 | 🟡 | DeepMind 官方部落格一手；企業方案為 Google Cloud 消費制計費，非固定席位價（2026-09-20 查證 ⟨Q-06⟩，見下方細節） |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
 | **OpenCode** | 開源免費替代，社群採用規模仍是主要訊號（08-01）→ 想離開訂閱制時的第一個候選 | 定價 | 🟡 | 下載量倍數的統計方法未揭露，完整脈絡見 [[entities/opencode]] |
-| **xAI（Grok 4.5）** | 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（09-07）→ 比較基準（對標哪個 Claude 模型）不明，先觀察不換 | 定價 | 🟡 | 單一來源（shattered.io），宣稱式標題，無 benchmark 佐證、比較對象未指明 |
 
 **🏢 圖例**：具名企業採用記錄（見 [[topics/enterprise-tool-tracker]]）或官方企業方案，缺一不標。企業評估候選名單：雷達表帶 🏢 者；具名採用／退出記錄見 [[topics/enterprise-tool-tracker]]。
 
@@ -145,10 +144,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
 - 定價面已實際下修：GPT-5.6 Luna 降 80%、Terra 降 20%，Sol 未降價但提速 2.5 倍（07-30 官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
-- GPT-6 Astra 首個官方自曝案例：Perplexity 用它自主寫通訊、改軟體、監控正式環境，人工複查頻率大減（09-13，OpenAI 官方部落格），直指 Claude Code 的自主任務定位。
+- GPT-6 Astra 官方自曝案例已升級為兩則：Perplexity 自主寫通訊、改軟體、監控正式環境（09-13）；V7 賦予 agent「機構記憶」，把企業檔案轉為 agent context，最難圖查詢測試達 89% 準確率（09-21）——兩則均直指 Claude Code 的自主任務與長期記憶定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
-- GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、複查頻率「大減」的量化數字，以及對上述基準結論是否有影響均未見報導。
+- GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
 
 ### Microsoft／GitHub
 **現在的答案**
@@ -216,6 +215,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-21
+- **OpenAI**：官方部落格發布 V7，讓 AI agent 具備「機構記憶」，把公司檔案轉為 agent context；GPT-6 Astra 於其最難圖查詢測試達 89% 準確率；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）
+- **xAI（透過 GitHub Copilot）**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
 
 ### 2026-09-19
 - **Microsoft／GitHub**：Copilot code review 改版——版本演進呈現更清楚、自動解決建議更聰明、accept 時產生 commit 訊息；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）

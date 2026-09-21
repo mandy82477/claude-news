@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-20"
-last_news_update: "2026-09-20"
+last_updated: "2026-09-21"
+last_news_update: "2026-09-21"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-21
+**最後新聞更新：** 2026-09-21
 
-> **最新工作流模式**（2026-09-20）
-> - **多 agent 信任與驗證層添一方案**：Chief of Staff Pattern 主張一個 session 協調驗證、其餘 session 執行，狀態放外部看板，宣稱要重跑驗證才採信。
-> - **codebase 知識索引再添一例**：aoci-code 把整個程式庫與資料庫結構做成持久化 Git 版控索引，供 agent 動手前先讀。
+> **最新工作流模式**（2026-09-21）
+> - **Plugin／MCP 整合添一例**：docsagent 用原生 C++ 搜尋核心讓 Claude 等 agent 存取個人知識庫（Zotero，Obsidian／Apple Notes 在路上）。
+> - **Skills 設計添一例**：fire-your-seo-agency 把 SEO／AEO／GEO 稽核流程封裝成 Claude Code skill。
 
 ---
 
@@ -52,12 +52,12 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、fire-your-seo-agency（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-21 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-20 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
-| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-12 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-20 | 跨 session、跨工具、跨機器的持久記憶協定 |
-| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-17 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
@@ -163,6 +163,33 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### docsagent/docsagent：原生 C++ 搜尋核心 MCP，讓 Claude 等 agent 存取個人知識庫（先支援 Zotero）（2026-09-21）
+
+- **主線：** —
+- **核心模式：** MCP 伺服器讓 Claude、Cursor、Cline 等 agent 即時、私有存取個人知識庫，先支援 Zotero，Obsidian／Apple Notes 開發中；採原生 C++ 搜尋核心（BM25＋段落排序），查詢約 15ms；GitHub Search 616 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」類別一個「私有知識庫存取」取向的代表技巧——既有代表技巧（Claude Code 作為 MCP 協調中心、XActions、stagehand）多聚焦工具鏈調度或網頁互動，本則鎖定本機個人知識庫的低延遲檢索；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（616★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/docsagent/docsagent)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### leopard627/fire-your-seo-agency：Claude Code skill 自動稽核並優化 SEO／AEO／GEO／LLMO／NEO 排名（2026-09-21）
+
+- **主線：** —
+- **核心模式：** Claude Code skill，自動稽核並優化網站在 SEO／AEO／GEO／LLMO 與 Naver（NEO）排名，作者訴求取代每月數十萬韓元的代操服務；GitHub Search 504 星。
+- **與既有模式的關係：** 補上「Skills 設計」類別一個「垂直領域稽核流程 skill 化」的代表技巧，與既有金融分析 skill 合輯（RKiding/Awesome-finance-skills，09-16 收錄）同屬把特定領域專業知識封裝成可複用 skill 的取向，本則鎖定 SEO／在地搜尋（Naver）稽核；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（504★），無 forks／issues／近期 commit 佐證可查，未另行查證；作者自述訴求取代付費代操服務，屬產品行銷框架，機制本身（自動稽核＋優化）有 repo 佐證。
+- **來源：** GitHub Search；[GitHub](https://github.com/leopard627/fire-your-seo-agency)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+
+#### simonw/llm-keys-ui 0.1：管理多組 LLM API 金鑰的圖形介面外掛（2026-09-21）
+
+- **主線：** —
+- **核心模式：** Simon Willison 發布 `llm` CLI 外掛 llm-keys-ui 0.1，針對「管理多組 LLM API 金鑰」這個具體問題提供圖形介面；Blogroll 策展來源。
+- **與既有模式的關係：** 現有代表技巧皆聚焦 Claude Code／agent 工作流本身，本則是通用 `llm` CLI（非 Claude Code 專屬）的金鑰管理外掛，與既有類別核心機制不重疊，暫不併入既有代表技巧列；單一小型工具，無可複用機制描述。非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 來源為 Blogroll 策展名單（Simon Willison 本人部落格），非星數／留言數可比對，內容以官方發布說明為準。
+- **來源：** Blog；[原文](https://simonwillison.net/2026/Sep/20/llm-keys-ui/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一小型工具，尚無社群採用回饋數據）
 
 #### Orchestrating Claude Code Agents: The Chief of Staff Pattern——協調驗證 session ＋ 外部持久看板的多 agent 編排架構（2026-09-20）
 

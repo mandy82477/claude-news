@@ -6684,3 +6684,14 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **選材判準改寫**（`.claude/skills/weekly-report/references/deepdive.md`）：新增第一關「讀者下週一用得上嗎」；選題池由「本週事故／成本新聞」擴為五個來源（本週出貨的功能怎麼用、社群驗證過的做法、選型比較、讀者興趣筆記、長燒 issue 機制解剖）；加題材輪替（連續兩期同一群 → 第三期換群，除非該群有頭條級事件）；綜述每期須含「可以直接用的一件事」；機制層解釋由入選門檻改為撐住做法的手段。
 - **驗證**：`check_weekly_ledger.py` ✅ 零警告；`check_rules.py` 零 ❌；`run_tests.py` 全綠。
 - **歸因**：`user-query`。
+
+## 2026-09-21 Ingest
+
+- 來源日報：[[news/2026-09-21]]
+- 更新頁面：entities/opus-5、entities/claude-code、entities/pricing、topics/anthropic-business、topics/competitor-landscape、topics/anthropic-government-policy、topics/recursive-self-improvement、topics/community-tech-patterns、topics/community-tech-discussions、feature-radar（主編：Auto mode 免計費 classifier 熱度 🔥🔥🔥→🔥🔥🔥🔥，⭐ 現在值得跟的三件輪替，讓出 Claude Opus 5）
+- 新增頁面：無
+- 摘要：Claude Chat／Cowork 介面合併與 Claude Code 停止收費 auto mode 安全檢查＋支援 AGENTS.md 為今日產品面主軸；商業面 Anthropic 傳出推遲 IPO、Nscale 1,030 億美元資料中心合約、設立生物濕實驗室三線並進；安全政策面首度出現 Anthropic 官方 R&D Automation Index（Claude 主導 26% 內部研發任務）
+- 呈現品質：全部通過（模型／功能／商業／安全政策／社群五記者初次寫入時各有 1–3 處字元上限超限或禁詞誤觸，修復後機械自查全數重跑通過）
+- 分類回退：追加派工 1 次（5 筆，功能→社群，XDA／MakeUseOf／Forbes 第三方心得測評文，逐則檢視後皆未達收錄門檻，未產出頁面內容）；另 5 筆回退（模型→安全政策 1、安全政策→人物 1、安全政策→商業 2、商業→功能 1）核對後確認原輪已因雙重分類收到，未追加派工
+- devpractice 沉澱：本日無候選（14 頁有新增行，逐一覆核皆為 frontmatter 機械欄位或既有 repo 數字刷新，無新工具/選型變動）
+- market 判讀：判讀 1 則（Nscale 1,030 億美元資料中心合約，Anthropic／Microsoft 並列最大客戶）／其餘 14 則逐一套六類判準後判定材料性不足未寫入

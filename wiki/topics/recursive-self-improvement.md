@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-21
+**最後新聞更新：** 2026-09-21
 
-> **最新動態**（2026-09-20）
-> Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty（Accenture 專責 AI 業務單位）主導，範圍含評估與 red-team 模型，詳見 [[topics/recursive-self-improvement#技術彙整]]。
+> **最新動態**（2026-09-21）
+> Anthropic 首度公布 R&D Automation Index，Claude 研發任務主導比例 26%，完全無人監督自動化仍為零，詳見 [[topics/recursive-self-improvement#技術彙整]]。
 
 ---
 
@@ -76,10 +76,28 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-17，產業批評與反彈聲浪並起**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線；Michael Burry 批評減速呼籲「自利」；Politico 稱 Anthropic 政策長主張贏得 AI 競賽即確保安全（發言人身分未見於標題），詳見「## 技術彙整」。
 - **2026-09-18，量化數字與治理提案並進**：Anthropic／Reuters 揭露 Claude 已負責公司內部下一代模型開發工作量的四分之一，與既有 8 倍、尚未達兩倍兩數字為不同指標；多位專家聯署公開信呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構，首見聚焦「第三方評測」這一項具體機制，詳見「## 技術彙整」。
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
+- **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
+- **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
 
 ---
 
 ## 技術彙整
+
+### dev.to（reidmarlow）：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零（2026-09-21 新增）
+
+- **揭露來源**：dev.to／#anthropic〈Anthropic's R&D Automation Index measures supervision, not autonomy〉（reidmarlow，2026-09-21）
+- **核心主張**：Anthropic 首度公布內部 R&D Automation Index，量化 Claude 在其研發任務中的介入程度——「主導」（Leads）比例為 26%，涉入九成以上整體研發流程；作者強調即使有這些數字，**完全無人監督（fully unattended）的自動化比率目前仍是零**
+- **與既有敘事的關係**：與 09-18《工作量四分之一》（25%）疑似同一組官方數據，另補「主導／涉入」分級與「零無人監督」；dev.to 非官方一手來源，兩則是否同次揭露暫不逕自合併。作者指出外界「模型自建後繼者」解讀比實際機制（全程有監督）窄得多
+- ❓ **待查證**（標 2026-09-21｜查 R&D Automation Index、Leads）：Anthropic 官方是否已發布對應原始頁面或報告、26% 與「涉入九成以上」的精確定義與衡量方法均未見一手來源
+- **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；具體數字是否忠實反映官方原始資料待官方一手來源核實
+
+### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
+
+- **揭露來源**：The Information（經 Google News）〈OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI〉（2026-09-21，RSS 僅提供跳轉連結，無正文）
+- **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 一度接近達成協議，讓雙方互相對彼此的 AI 模型進行壓力測試；具體協議內容、進度與是否已生效均未見報導
+- **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-19 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
+- ❓ **待查證**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal）：協議具體範圍、進度與是否已簽署均未見報導，僅 The Information 單一來源
+- **可信度評估**：僅單一媒體來源（The Information），RSS 摘要無正文，訊號強度低，暫不視為與 09-19 Accenture 內嵌評估者同一量級進展
 
 ### Anthropic Blog／Washington Post／CNBC：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元獨立評估前沿 AI 安全（2026-09-19 新增）
 
@@ -255,6 +273,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-09-21
+- **[量化補充，新增] dev.to：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零**：延續 09-18「工作量四分之一」系列，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄，詳見「## 技術彙整」
+- **[治理提案，新增，單一來源] The Information：OpenAI 與 Anthropic 傳近乎達成協議，互相壓力測試對方 AI 模型**：與既有「獨立評測機構」系列方向不同（同業互評），僅單一來源，詳見「## 技術彙整」
 
 ### 2026-09-20
 - **[補充，新增] Accenture 內嵌評估合作補上官方原文細節：合作由 Faculty 主導，範圍含評估與 red-team 模型**：官方部落格全文補充，非新事件，詳見「## 技術彙整」

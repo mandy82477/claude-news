@@ -203,3 +203,4 @@
 {"id": "H-25dbcd", "closed": "2026-09-20", "status": "done", "by": "社群", "result": "不適用：community-tech-tools.md 為 lint 專用頁，每日 ingest 不得更新，留待 /wiki-lint 處理"}
 {"id": "H-c893bf", "closed": "2026-09-20", "status": "done", "by": "社群", "result": "不適用：skill-interest-watch.md 為 community-tech-tools.md 每日鏡像，該頁 lint 專用不可每日更新，留待 /wiki-lint 處理"}
 {"id": "H-a8bd29", "opened": "2026-09-20", "from": "社群", "to": "功能", "page": "topics/community-tech-patterns", "note": "Chief of Staff Pattern（外部持久看板＋逐項複核）是新出現的 agent 編排模式，建議評估 official-community-gap 產品化矩陣是否需新增列", "status": "open"}
+{"id": "H-a8bd29", "closed": "2026-09-21", "status": "void", "by": "主編", "result": "[功能] Chief of Staff Pattern 出自單一部落格文章，未達 official-community-gap 入列門檻（需 ≥2 獨立社群工具或單一 GitHub issue ≥100 讚），概念最貼近既有 G-06 列，不開新列"}

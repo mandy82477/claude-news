@@ -2,20 +2,20 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-21
 
 > **這禮拜動了什麼**（2026-09-17）
 > Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放——本月至今最大的官方產品異動，官方「方案與定價」頁同日大改版收攏相關段落。
 
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-09-19）
+## ⭐ 現在值得跟的三件（最後輪替 2026-09-21）
 
 - **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應全站讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，可到 `/config`「Project instructions」調整（Bedrock／Vertex／Foundry 尚未支援）。
 - **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
-- **Claude Opus 5**：07-25 收錄（官方 07-24 發布），$5/$25 與 Opus 4.8 同價（2026-09-07 官方查證），Max／Team premium／API 的預設 Opus。**怎麼開始：** `/model` 切成 Opus 5。
+- **Auto mode 免計費 server-side classifier**：v2.1.278 起，API／Enterprise／Bedrock／Vertex／Foundry／閘道器用戶不再為 auto mode 分類器額外計費。**怎麼開始：** 已自動生效，查 `/status` 確認分類器是否跑在伺服器端。
 
-%% 09-19 換上 AGENTS.md 支援（🔥🔥🔥🔥🔥，型態同屬「你不動它、它也會改變你行為」），讓出原第一名「Claude Code Auto 模式已預設化」（🔥🔥🔥🔥，連續上榜逾 7 天、本輪熱度／試用價值未變動，被更新且更熱的同型候選取代）；v2.1.278 Auto mode 免計費 classifier 熱度僅 🔥🔥🔥，未達 🔥🔥🔥🔥 候選門檻，未列入評選 %%
+%% 09-21 換上 Auto mode 免計費 classifier（今日媒體二度報導、熱度 🔥🔥🔥→🔥🔥🔥🔥 達候選門檻），讓出原第三名「Claude Opus 5」（🔥🔥🔥🔥🔥，發布已逾 30 天時間閘、本輪熱度／試用價值未變動，時間閘外無合格替補豁免，被更新達標的候選取代）；09-19 換上的 AGENTS.md 支援仍是「你不動它、它也會改變你行為」型態，維持固定第一名 %%
 
 ---
 
@@ -294,7 +294,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
-| **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
+| **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥🔥🔥 | ⏳ 觀望 | Beta |
