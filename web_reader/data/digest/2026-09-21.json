@@ -1,0 +1,614 @@
+{
+  "date": "2026-09-21",
+  "generatedAt": "2026-09-21 17:10 UTC",
+  "articleCount": 54,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Console scrolling top of history when claude add text to the console",
+      "url": "https://github.com/anthropics/claude-code/issues/826",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/21 14:35",
+      "sentiment": "",
+      "body": "回報者指出在 Claude Code macOS Shell 環境（CLI 0.2.74）下，Claude 在主控台輸出文字時畫面會被捲回歷史紀錄最上方，累積 354 則留言、822 個 👍 反應，是本日互動量最高的單一議題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Add support for Visual Studio 2026 Integration",
+      "url": "https://github.com/anthropics/claude-code/issues/15942",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/21 08:45",
+      "sentiment": "",
+      "body": "功能請求呼籲 Claude Code 支援 Visual Studio 2026 整合，累積 154 則留言、556 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic sets up biology lab as it ramps AI drug program",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQWm1lWnVEMlF3OUFPREdtSk9WTDhsSDJHd1liVEF1a1RuQ0lZQ3g0ZzhHRzNMWnFaQkNtYlNTT09LaXFweTI4dkxRMEJwZ096aV9RUXRKdEVMVGlVUlBYNTlGTkFNQVh1aVRYdkZPd05UVm9TSk1ZNEJTNktjS2lkN3BJX2J6ZFd5RmRIbjAxS0RsX0QyQWNPYWNwTDlINFJ2NkVDWDRneXh4MVhic0tHMlNiNGZEYllpUUhySW9wcGp1Uk96YzVFRkI0RktDMFdSYm0zVGtLa3V1TDFQTTE4cEo1YVBvUTV2dWtCUk1jQQ?oc=5",
+      "source": "Google News / Channel 3000",
+      "time": "09/21 15:30",
+      "sentiment": "",
+      "body": "Channel 3000 與 80 Level 同日各自報導，Anthropic 為擴大 AI 藥物開發計畫設立濕實驗室（wet lab）投入生物研究，2 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's R&D Automation Index measures supervision, not autonomy",
+      "url": "https://dev.to/reidmarlow/anthropics-rd-automation-index-measures-supervision-not-autonomy-i0i",
+      "source": "dev.to / #anthropic",
+      "time": "09/20 16:14",
+      "sentiment": "",
+      "body": "dev.to 分析文指出 Anthropic 首度公布內部「R&D Automation Index」：Claude 在其研發任務中「主導（Leads）」比例為 26%，涉入九成以上整體研發流程，但作者強調目前完全無人監督的自動化比率仍為零，實際運作比外界解讀的「模型自建後繼者」窄得多。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [],
+  "mediaReports": [
+    {
+      "title": "Anthropic Considers New Claude Model as OpenAI Gains Ground Ahead of Potential IPO - citybiz",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPNlkxQ2IzM3JLX3hFRTJzRVB6OXZKSDl5Q3pfdnp3bExjTkU1bEZYLXJYdlg1WXlpbGVQMWRfNjhaSXp2OERWNk1TcG51ZUlqclFlUTFka2xCZmcxb1BPSW5ZcmdCN01mSm14enhFaHQxM0swUzVXakFXdm9xYkhCWWk0RHh1ckR3cy1jdFBzZmpyUWtUNHRZVVlaNkd5dWJ6RzJlVVN1S0FFZ3hOTXJ4bFc2Y0JnemV3V0xGa2Jn?oc=5",
+      "source": "Google News / citybiz",
+      "time": "09/21 09:54",
+      "sentiment": "",
+      "body": "citybiz 報導指出，隨著 OpenAI 在潛在 IPO 前持續拉近差距，Anthropic 正考慮推出新款 Claude 模型，原文摘要未附更多細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI - The Information",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUDRwaDNUMzFDNEdibnZnNE9OYnpoeVIzQjhlQ1BtUmQzU3BoM0ZOM3JUZXEzTDdMcHpiQ05RUjNBRGJ0ZzBQbFRrQXdJWkxaVzZLeVo0QTN0ZEU3MjVNblItQ3J0WGI2dV9HUEpUU2FsU1B1T0hKMWdBTm9FZDhoTnRYYW1VTGFCQTFzNU9xLUVmRmN1?oc=5",
+      "source": "Google News / The Information",
+      "time": "09/21 13:55",
+      "sentiment": "",
+      "body": "The Information 報導，OpenAI 與 Anthropic 傳出一度接近達成協議，讓雙方互相對彼此的 AI 模型做壓力測試；報導僅單一消息來源，細節待證實。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude in Chrome transcripts can now be pulled by Enterprise compliance teams, in beta - MIXED Reality News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeDZXRVFOVXk1VlZpaWNqSHR3V2xyV1M4RTJWeUpya3RMN0VNNjc0aXFZUEJaY0ExTW9rRGd2ZjFkbHp1dTVHbFRaZGlVbmlub0IyeU9NZDgtYkdvcGpyd2lwUTlmYlVxTmctYzJhV0FQMDY5aFRHWi1XdkdXVGtfNFNQT3daM0hNWktR?oc=5",
+      "source": "Google News / MIXED Reality News",
+      "time": "09/21 11:30",
+      "sentiment": "",
+      "body": "MIXED Reality News 報導，Claude in Chrome 的操作紀錄現已開放企業合規團隊調閱，目前為 beta 階段。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Opus 5.5 Leak Points to 20% Lower Prices and a Tuesday Launch - Pasquale Pillitteri",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5",
+      "source": "Google News / Pasquale Pillitteri",
+      "time": "09/21 07:19",
+      "sentiment": "",
+      "body": "消息流傳指稱 Claude Opus 5.5 將於週二發布、售價較前代下降兩成，來源為單一非具名部落格，可信度待查證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Accenture Will Help Anthropic Test AI Model Safety - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVMySjhETHVodXdyS2tkZmJZSmItNDdxc2pWYWRGNy1wYWxaU3dXbXVmWFFacFZTVDZ6TlhLakM5ODhEVDJmblJUQl95TE5pVGZVM0VCSGNqMnl6eTkzcm1qd1lLTEFHYVRwSTZfeWFhbHl1TXZaMGlFMU1yTG5SQ1NodE1IZw?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "09/21 14:48",
+      "sentiment": "",
+      "body": "Yahoo Finance 與 WSJ 同日報導 Accenture 股價因與 Anthropic 的 AI 安全評估合作消息在盤前走揚——合作案本身已於昨日（09-20）日報聚焦報導，今日追蹤的是市場的股價反應。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "docsagent/docsagent",
+      "url": "https://github.com/docsagent/docsagent",
+      "source": "GitHub Search",
+      "time": "09/21 16:31",
+      "sentiment": "",
+      "body": "MCP 伺服器讓 Claude、Cursor、Cline 等 agent 即時、私有存取個人知識庫（先支援 Zotero，Obsidian／Apple Notes 在路上），採原生 C++ 搜尋核心（BM25＋段落排序，約 15ms），目前 616 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "leopard627/fire-your-seo-agency",
+      "url": "https://github.com/leopard627/fire-your-seo-agency",
+      "source": "GitHub Search",
+      "time": "09/21 16:31",
+      "sentiment": "",
+      "body": "一款 Claude Code skill，自動稽核並優化 SEO／AEO／GEO／LLMO 排名，訴求取代每月數十萬韓元的代操服務，目前 504 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "The president wanted to unleash AI. Then came Anthropic",
+      "url": "https://www.politico.com/news/magazine/2026/09/20/anthropic-white-house-ai-01085212",
+      "source": "Hacker News",
+      "time": "09/21 04:01",
+      "sentiment": "",
+      "body": "HN 討論引用 Politico 報導，白宮官員表示美國仍在 AI 前緣保持領先，但「即使是最低限度的監理，也該讓企業在出包時負起責任」；留言者解讀此語為政治問責的甩鍋話術，貼文獲 11 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "How Anthropic CEO Dario Amodei's Writings Help Explain A.I. Fears",
+      "url": "https://www.nytimes.com/2026/09/17/technology/dario-amodei-anthropic-essays-ai.html",
+      "source": "Hacker News",
+      "time": "09/20 23:22",
+      "sentiment": "",
+      "body": "HN 討論串貼出紐約時報一篇分析，探討 Dario Amodei 個人文章如何形塑外界對 AI 風險的認知，貼文獲 10 分。",
+      "focusTags": []
+    },
+    {
+      "title": "I am done with this shit.",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wm5c21/i_am_done_with_this_shit/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "09/21 06:55",
+      "sentiment": "",
+      "body": "Reddit r/ClaudeAI 週熱門貼文與 Simon Willison 部落格同日引用同一則推文，抱怨到職新公司半個月以來「沒有人真正搞懂系統」，規格、程式碼、測試、PR 混亂難辨，反映部分工程師對 AI 輔助開發現況的挫折感；原文於擷取時已截斷，細節未附。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "llm-keys-ui 0.1",
+      "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
+      "source": "Blog / Simon Willison",
+      "time": "09/20 19:22",
+      "sentiment": "",
+      "body": "Simon Willison 發布新外掛，針對「管理多組 LLM API 金鑰」這個具體痛點提供圖形介面工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "[BUG] Claude Code Usage for Max Plan hitting limits extremely fast",
+      "url": "https://github.com/anthropics/claude-code/issues/37394",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/21 06:03",
+      "sentiment": "",
+      "body": "回報指出 Max Plan 方案下 Claude Code 用量觸頂速度異常快，累積 92 則留言、43 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 把 Claude Chat 與 Cowork 合併為單一介面。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNM0ZIdnpLeVFZd2E4UU1FLUpMcURwODFMOURQSlA3cnRsbmJSOGYyMUVMTE1wdzg1Q192TnlmMF9KN0FOTy1OY0J0RXFSS2RqVEQ3Y2tPT283YWVzRlNHRWJ2X3JYT2ZJRldQazExU1BqeV9pLUJpWW5GYU5YRHBGbTFDbjZOWWxPbjBoN3dhUnhhNkVqTFIyVmhHOGk1dmVVMVE?oc=5"
+      ],
+      "ref_names": [
+        "extremetech"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Code 停止向 API 使用者收取 auto mode 安全檢查費用，並新增支援讀取 OpenAI 提出的 AGENTS.md 格式指令。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTGs3WWlhSjZCRkZyUnhOVVE3TzhTT2d6QWhvSUVfNXI3ZWZPRDRmQnJNc3dTNWt6MnlEUlU3Nzk1QkVqa1FRc2w2bk8xT0s3TjhJQ0U5aUQ4dHJvNHNRX3lhNks1M1JxYlB5dnlUTWh5NjRTeHdNQ2ZBSVYwcllNWm51WG5xM09mRml4NlBFamY?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcTRzQTdDY2pzbXNLMUxQemdoOXprM213anB2SUN5d216WHdBeExKRnYwOUkzcUw5VHZobllvb01IbDFMdFdYdFh5MW5qSVVkSVZiS194WUlYb2xFUEh6Nk82LWppNUdoUWVMdlZrYWdQanlRb3pDTmJpUVUwZFp6VFQ0dC1VUWl2LWRhRHpVcHQtUFpNUVNTdDY2SGdRMDYyTERsTml6RXBtc2dvT0lTNzk4V3BuUWc?oc=5"
+      ],
+      "ref_names": [
+        "MIXED Reality News",
+        "infoworld"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "傳出 Anthropic 推遲 IPO 計畫，報導同時指出 OpenAI 預期燒錢速度將更快。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOWkk0YjlMWFlZRUxhcWhUVkFYbUgxR0NRS3N0S0pKdDMtbmVKMTNpZ0JQNm12Rzh1Q1EyQk1Ga3lOb2VfRnl4M25tWG50ZWZHRExvT21xUzAzTjN4dWt0NENhYzEwcFNXakhKS3QxMUE5Z3owSVVPSDRwbnBXN0RTSFp5YXpVZU1vck1iWUxHc2pUTlB4MDBGbnZQX3VPdw?oc=5"
+      ],
+      "ref_names": [
+        "Investor's Business Daily"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "雲端業者 Nscale 總值 1,030 億美元的資料中心合約中，Anthropic 與 Microsoft 是最大兩家客戶。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWDR1ZzBnN3IwblJpX2RXNWtCdVIxNi0xcm1NSklQcm93anRDd0p1cVlXME1Ua1QySExvYWExYWhHdzBTeFdMeENBZ1Fqb0U2NXIybDZxT1Qxc2R3WmpwYUFraktNV21CWnZPZ185cTNQTUFYbUJGcHhGYkdUc3pVODhrNDRpUHN6S0ZiMzY2eldkTWp0QzNpd2l6U0VhMlFTRWpjallBcHRWdTBBd3dxUUpySlg0RThY?oc=5"
+      ],
+      "ref_names": [
+        "Bloomberg"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Grok 4.7 is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "body": "xAI 最新推理模型 Grok 4.7 已在 GitHub Copilot 上線，主打 agentic coding 與多步驟複雜工作流，是 Claude Code 使用者評估同類競品時的新增對照點",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 26
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code：新增已知問題：Max Plan 額度觸頂速度異常快（#37394，92 留言、43 讚）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5",
+      "name": "Claude Opus 5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "興趣類別 skill 總覽",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-21",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增已知問題**：Max Plan 額度觸頂速度異常快（#37394，92 留言、43 讚）。\n- **既有已知問題互動更新**：#826 主控台捲動（354 留言、822 讚，全站互動最高）等 5 則同步更新留言／讚數。\n- **待查證**：Claude in Chrome 操作紀錄據稱開放企業合規團隊調閱（beta，僅標題可用）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5",
+            "name": "Claude Opus 5",
+            "label": "最新動態",
+            "date": "",
+            "body": "單一部落格傳聞 Opus 5.5 將於週二發布、降價 20%；僅標題可用，尚待查證。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **新 GitHub Issue #37394**：Max Plan 用量觸頂速度異常快（92 留言、43 👍），與既有 #16157／#38335 同類回報，互動量較低、官方尚無回應。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Nscale 總值 1,030 億美元資料中心合約曝光**：Anthropic 與 Microsoft 為最大兩家客戶，此前僅知 Anthropic 自身一筆 450 億美元（Bloomberg）。\n- **IPO 延後傳聞再現**：Investor's Business Daily 重申 IPO 延後說法，未見新增時程或官方確認。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。\n- 🟡 **Grok 4.7 登陸 GitHub Copilot**（09-21，GitHub 官方 changelog）——Copilot 生態內的推理模型選項再添一款，用 Copilot 的人可留意評估，其餘任務不用換。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- Bloomberg 首度揭露 Nscale 資料中心合約總值達 1,030 億美元，Anthropic 與 Microsoft（NASDAQ: MSFT）為最大兩家客戶，但兩者拆分金額未披露。\n- 09-20 舊聞：聯邦法官裁定 Reddit 對 Anthropic 資料爬取／授權訴訟大部分可續行，Reddit（NYSE: RDDT）首度成為本頁可交易標的。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "Politico 長文分析白宮力推 AI 發展與 Anthropic 主張監理間的緊張關係，引述涉入官員談「問責」為監理底線，詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 首度公布 R&D Automation Index，Claude 研發任務主導比例 26%，完全無人監督自動化仍為零，詳見 [[topics/recursive-self-improvement#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Plugin／MCP 整合添一例**：docsagent 用原生 C++ 搜尋核心讓 Claude 等 agent 存取個人知識庫（Zotero，Obsidian／Apple Notes 在路上）。\n- **Skills 設計添一例**：fire-your-seo-agency 把 SEO／AEO／GEO 稽核流程封裝成 Claude Code skill。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Skill Atrophy 討論🌋重燃：新進員工吐槽到職半月「沒人真的搞懂系統」，Simon Willison 同日引述同一則推文佐證。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 10
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Console scrolling top of history when claude add text to the console",
+      "url": "https://github.com/anthropics/claude-code/issues/826",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/21 14:35",
+      "sentiment": "",
+      "body": "回報者指出在 Claude Code macOS Shell 環境（CLI 0.2.74）下，Claude 在主控台輸出文字時畫面會被捲回歷史紀錄最上方，累積 354 則留言、822 個 👍 反應，是本日互動量最高的單一議題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Add support for Visual Studio 2026 Integration",
+      "url": "https://github.com/anthropics/claude-code/issues/15942",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/21 08:45",
+      "sentiment": "",
+      "body": "功能請求呼籲 Claude Code 支援 Visual Studio 2026 整合，累積 154 則留言、556 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic sets up biology lab as it ramps AI drug program",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQWm1lWnVEMlF3OUFPREdtSk9WTDhsSDJHd1liVEF1a1RuQ0lZQ3g0ZzhHRzNMWnFaQkNtYlNTT09LaXFweTI4dkxRMEJwZ096aV9RUXRKdEVMVGlVUlBYNTlGTkFNQVh1aVRYdkZPd05UVm9TSk1ZNEJTNktjS2lkN3BJX2J6ZFd5RmRIbjAxS0RsX0QyQWNPYWNwTDlINFJ2NkVDWDRneXh4MVhic0tHMlNiNGZEYllpUUhySW9wcGp1Uk96YzVFRkI0RktDMFdSYm0zVGtLa3V1TDFQTTE4cEo1YVBvUTV2dWtCUk1jQQ?oc=5",
+      "source": "Google News / Channel 3000",
+      "time": "09/21 15:30",
+      "sentiment": "",
+      "body": "Channel 3000 與 80 Level 同日各自報導，Anthropic 為擴大 AI 藥物開發計畫設立濕實驗室（wet lab）投入生物研究，2 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's R&D Automation Index measures supervision, not autonomy",
+      "url": "https://dev.to/reidmarlow/anthropics-rd-automation-index-measures-supervision-not-autonomy-i0i",
+      "source": "dev.to / #anthropic",
+      "time": "09/20 16:14",
+      "sentiment": "",
+      "body": "dev.to 分析文指出 Anthropic 首度公布內部「R&D Automation Index」：Claude 在其研發任務中「主導（Leads）」比例為 26%，涉入九成以上整體研發流程，但作者強調目前完全無人監督的自動化比率仍為零，實際運作比外界解讀的「模型自建後繼者」窄得多。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

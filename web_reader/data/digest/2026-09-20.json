@@ -361,23 +361,8 @@
   "preview": "Claude Code：Cowork（Windows）新增已知問題：09 月累積更新致 device_bash 失效（#92958），與既有 Plan9 掛載失敗（#92984）同源不同現象。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
-      "id": "opus-5",
-      "name": "Claude Opus 5",
-      "pageType": "entity"
-    },
-    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
       "pageType": "topic"
     },
     {
@@ -386,33 +371,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
       "id": "official-community-gap",
       "name": "官方功能 vs 社群痛點缺口分析",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "興趣類別 skill 總覽",
       "pageType": "topic"
     }
   ],
