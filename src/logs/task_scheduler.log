@@ -834,3 +834,4 @@ ABORTED: digest already exists - news/2026-09-20.md 已由前一班（17:02 UTC�
 [週2 2026/09/22 17:43:44.00 UTC] 測試全綠 - web build 放行
 [週2 2026/09/22 17:43:44.00 UTC] Single push done (news + wiki + web)
 [週2 2026/09/22 17:43:44.00 UTC] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud STARTED 2026-09-22T22:08:02Z]
