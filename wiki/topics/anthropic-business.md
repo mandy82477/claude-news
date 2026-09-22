@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
-> **最新動態**（2026-09-21）
-> - **Nscale 總值 1,030 億美元資料中心合約曝光**：Anthropic 與 Microsoft 為最大兩家客戶，此前僅知 Anthropic 自身一筆 450 億美元（Bloomberg）。
-> - **IPO 延後傳聞再現**：Investor's Business Daily 重申 IPO 延後說法，未見新增時程或官方確認。
+> **最新動態**（2026-09-22）
+> - **反壟斷合謀訴訟原告身分曝光**：四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶提集體訴訟，主張協議始於 2026-07、降低訂閱者所獲價值（Hacker News；AP News）。
+> - **Palo Alto Networks 推出結合 Claude、GPT 的 AI 資安服務**：具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）。
 
 ---
 
@@ -271,8 +271,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
 - **反壟斷訴訟指控「踩煞車」呼籲構成合謀（2026-09-19）**：The Hill、Politico、Bloomberg Law News 同日報導新提告，指控 Anthropic 與 OpenAI、SpaceXAI、Google 就「踩煞車」呼籲構成反壟斷合謀；原告身分、求償內容與進度均未見報導細節，僅標題可用。
+- **09-22 跟進（HN 32 分＋AP News）**：具名原告為四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶，主張協議始於 2026-07、降低訂閱者所獲價值；求償金額仍未見報導。
 - **國防部擬十月前遷出全部機密 AI 工作負載（DefenseScoop，2026-09-11）**：具體原因、替代供應商、涉及的 Claude 產品線均未見報導，僅標題可用；影響範圍限於處理美國政府機密資料的用戶。
 - **企業轉向開源模型分流訂單**：紐約時報報導多家大型企業正將工作負載從 OpenAI、Anthropic 轉往開源模型；Hacker News 討論串達 274 分（高熱度），留言中有人認為若兩家公司不大幅降價，將面臨更大規模的轉單壓力（推論，論壇留言非官方數據）。與本頁既有「補貼不可持續」「競品分流」（DeepSeek、OpenCode）等結構性商業風險同屬一類，惟本則首次明確點出「開源模型」（而非特定競品公司）作為分流去向的整體類別，具體受影響企業名稱、轉移規模均未見報導細節，僅標題與 HN 討論層級資訊（[NYT](https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html)，2026-09-04）。
+- **09-22 跟進（Bloomberg，僅標題可用）**：報導改聚焦新創公司因同一成本壓力轉向較便宜開源模型，具體規模與個案未見報導。
 - **Nvidia-Lambda-Anthropic 循環融資質疑**：24/7 Wall St. 發表分析文章，質疑 Nvidia 支持之雲端業者 Lambda 與 Anthropic 簽署的 350 億美元雲端運算合約（見「哪個合作會改到你用的 Claude」表 09-01 列）是否構成循環融資——即 Nvidia 投資／支持的下游業者，反過來以巨額合約向 Anthropic 採購運算力，資金流可能部分回流 Nvidia 生態圈。與既有 07-22 AMD 交易 HN 討論串「ouroboros circle（銜尾蛇循環）」質疑同屬同一類「晶片商與 AI 實驗室互相投資推升彼此估值」商業模式疑慮；具體資金流向證據、Nvidia 於 Lambda 之實際投資規模未見報導，屬單一媒體分析評論，非官方或監理機構調查結論（推論）（Google News/24/7 Wall St.，2026-09-02）。
 - **Nvidia 執行長「後悔」**：Yahoo Finance 報導 Nvidia 傳出將投資 Hugging Face **129 億美元**，執行長黃仁勳同時表示對先前投資 OpenAI、Anthropic 的規模感到「後悔」（regret）。若屬實，反映 Nvidia 作為 Anthropic 重要投資人／算力供應商對既有投資部位規模的內部反思，可能影響後續加碼意願（推論）；惟「傳出」為未經證實的媒體報導，具體後悔緣由（規模過大、報酬率不如預期或策略轉向）未見細節，言論面詳見 [[entities/jensen-huang]]。
 - **創投人士質疑 IPO 前景**：24/7 Wall St. 報導知名創投人 Chamath Palihapitiya 提出「3 個 AI 殺手」警訊，並質疑 Anthropic 傳聞中 2 兆美元 IPO 前景是否可能率先崩盤；與既有 08-15 Steve Eisman 唱空言論同屬市場知名人士公開質疑估值敘事的訊號，且與同日「IPO 走到哪一格」表新增之 30 兆美元 TAM 論戰同源並發（推論）；具體「3 個殺手」論點內容、量化依據未見報導，僅標題可用。
@@ -319,6 +321,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Palo Alto Networks**（2026-09-22）：推出結合 Claude、GPT 模型的 AI 資安服務，具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）
 - **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
 - **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費與上線時間未見報導（MacRumors／HN 188 分）**訊 09-19**：Reddit 週熱門重新討論同一線索，無新細節
 - **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）
@@ -496,6 +499,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-22
+- **[商業風險，跟進] Hacker News（32 分）＋AP News：反壟斷合謀訴訟原告身分曝光——四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶提集體訴訟**：主張協議始於 2026-07、降低訂閱者所獲價值，詳見「還沒過去的風險」細節區更新（Hacker News；Google News/AP News）
+- **[戰略合作，僅標題可用] Yahoo Finance：Palo Alto Networks 推出結合 Claude、GPT 模型的 AI 資安服務**：具體整合規模與費用未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/Yahoo Finance）
+- **[產品影響力，僅標題可用] the-decoder.com：Anthropic 稱 Claude 協助 Xiaomi 打造平價旗艦模型，在開放模型排行中領先**：具體協助方式與合作條件未見報導（Google News/the-decoder.com）
+- **[商業風險，跟進，僅標題可用] Bloomberg：報導聚焦新創因 OpenAI、Anthropic 成本壓力轉向較便宜開源模型**：與 09-04 已記錄之企業轉單同屬一類，改換新創視角，具體個案未見報導，詳見「還沒過去的風險」細節區更新（Google News/bloomberg.com）
 
 #### 2026-09-21
 - **[資本支出] Bloomberg：Nscale 總值 1,030 億美元資料中心合約中，Anthropic 與 Microsoft 為最大兩家客戶**：首度揭露 Nscale 整體合約規模與客戶排名，此前僅知 08-28 Anthropic 自身一筆 450 億美元；詳見「哪個合作會改到你用的 Claude」清單 Nscale 條目更新（Google News/Bloomberg.com）
