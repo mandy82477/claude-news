@@ -30,13 +30,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
-> **最新動態**（2026-09-21）
-> - **新增已知問題**：Max Plan 額度觸頂速度異常快（#37394，92 留言、43 讚）。
-> - **既有已知問題互動更新**：#826 主控台捲動（354 留言、822 讚，全站互動最高）等 5 則同步更新留言／讚數。
-> - **待查證**：Claude in Chrome 操作紀錄據稱開放企業合規團隊調閱（beta，僅標題可用）。
+> **最新動態**（2026-09-22）
+> - **新增已知問題**：功能請求「串接 Claude.ai Projects 知識庫」（#2511，51 留言、642 讚，本日反應數最高）。
+> - **服務穩定性**：Fable 5／Mythos 5.1／Opus 5 錯誤率升高已修復（Anthropic Status，00:50–02:10 UTC）。
+> - **既有已知問題互動更新**：CVP 資安誤擋（#84352，199 留言、27 讚，本日互動量最高）等 4 則同步更新留言／讚數。
 ---
 
 ## 現況
@@ -140,7 +140,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：報導揭露惡意撰寫的 `.git` 設定檔（如 core.fsmonitor、hooks 相關設定）可誘使 Claude Code、Codex、Cursor 等多款 AI coding agent 在讀取該 repo 時執行攻擊者指定的程式碼，非 Claude Code 單一產品缺陷，而是多款 agent 共通的信任邊界問題（clone／開啟不明來源 repo 即可能觸發）；與上列 llms.txt 信任邊界問題同屬「開啟不明來源內容即可能觸發非預期執行」的同類攻擊面，但觸發媒介為 repo 內的 `.git` 設定而非網頁內容，暫分列追蹤；官方尚未回應。事件完整分析見 [[topics/ai-agent-safety]]
   - **v2.1.196 部分修補**；Manifold Security 2026-09-01 覆測，一條執行路徑仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，累積 195 則留言、22 個讚，2026-08-12 首見，2026-09-04 留言數更新，今日全站已知問題互動量最高）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
+- 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，累積 199 則留言、27 個讚，2026-08-12 首見，2026-09-22 互動數更新，今日全站已知問題互動量最高）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
   - 09-15（Reddit r/ClaudeAI）一名資安研究者反映已通過 CVP 審核，Opus 5 仍持續標記其研究相關訊息，與本則模式相符；惟未載明是否發生於 Claude Code，僅供旁證。
 - 🔴 **未修復**｜**Claude Code 送出的 User-Agent 字串夾帶使用者真實 email（GitHub Issue #78431，經 Hacker News 轉發 38 分，2026-08-11）**：2026-08-22 直查 issue 頁確認——回報**已補上可重現條件**：v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，回報者標明為**回歸**（舊版本無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤。**但 issue 仍為 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復**。此前本頁對此事件真實性持保留態度——現已可確認事件為真、標籤獲官方分類，未解的是修復進度而非事件本身（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。
 - ✅ **已修復 v2.1.163**｜**Claude Code 與 Gemini CLI「Comment and Control」漏洞：GitHub Issue 內容可觸及 CI workflow secrets**（2026-08-07 報導，2026-08-10 查證）：研究團隊 Novee Security 在 Black Hat USA（08-05）發表「Comment and Control」技術，證實無倉庫權限的帳號僅需開一則 GitHub Issue，內容經 prompt injection 即可在 Claude Code Security Review、Gemini CLI Action、GitHub Copilot Agent 的 CI runner 上執行任意程式碼，進而取得 `GITHUB_TOKEN`、`ANTHROPIC_API_KEY` 等 workflow secrets；Claude Code 端漏洞另利用 Hugging Face 公開下載計數器作為側通道，逐字元外洩 API 金鑰。受影響版本 v0.2.54–v2.1.162，已於 **v2.1.163** 修復；Gemini CLI 端另一漏洞獲 CVSS 10.0 滿分評級。見 [The Hacker News](https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html)；事件細節另見 [[topics/ai-agent-safety]]
@@ -227,9 +227,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**對話拉長後終端機不斷自動捲回頂端（GitHub issue #36582，2026-08-30）**：使用者回報對話拉長後終端機會不斷自動捲回頂端，難以持續追蹤最新輸出；與既有「主控台新增文字時畫面自動滾回歷史頂端」（issue #826）同屬終端機自動捲回頂端的症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**畫面/終端機閃爍（GitHub issue #769 進行中呼叫畫面閃爍，累積 306 則留言、335 個讚，Claude CLI v0.2.69，全站已知問題今日互動量最高；issue #1913 終端機閃爍，累積 187 則留言、321 個讚，皆 2026-07-09）**：使用者回報進行中的呼叫會造成畫面閃爍，另有獨立回報指出終端機介面本身也會閃爍，兩者疑為相關或重複問題；官方尚未回應。
 - 🔴 **未修復**｜**Thinking summaries 在 Opus 4.7 消失，harness 未設定 `display: "summarized"`（GitHub issue #49268，累積 49 則留言、78 個讚，首見 2026-07-17，Claude Code v2.1.111，2026-07-21 10:45 UTC 留言數更新）**：使用者改用 Opus 4.7 後思考摘要不再顯示，追查發現 harness 呼叫 extended-thinking API 時未設定 `display: "summarized"` 參數，屬 harness 端設定缺失而非模型行為變化；與既有「Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染」（issue #49322）同屬 thinking summary 顯示問題但根源不同，暫分列追蹤；官方尚未回應。見 [[entities/opus-4-7]]。
-- 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 47 則留言、157 個讚，首見 2026-07-16，2026-09-11 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
+- 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 51 則留言、159 個讚，首見 2026-07-16，2026-09-22 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 269 則留言、2092 個讚，2026-07-09 首見，2026-09-19 互動數更新）**：`/buddy` 已於 4/9 隨 v2.1.97 移除，官方 changelog 未提及；社群請願要求恢復，官方尚未回應。
-- 🔴 **未修復**｜**終端機複製夾帶多餘縮排與行尾空白（GitHub issue #18170，累積 134 則留言、283 個讚，首見 2026-07-08，2026-08-06 互動數更新）**：從 Claude Code 終端機複製文字（段落或程式碼區塊）時會夾帶前導縮排與行尾空白，影響貼上至其他編輯器或文件時的格式整潔；官方尚未回應。
+- 🔴 **未修復**｜**終端機複製夾帶多餘縮排與行尾空白（GitHub issue #18170，累積 136 則留言、294 個讚，首見 2026-07-08，2026-09-22 互動數更新）**：從 Claude Code 終端機複製文字（段落或程式碼區塊）時會夾帶前導縮排與行尾空白，影響貼上至其他編輯器或文件時的格式整潔；官方尚未回應。
 - 🔴 **未修復**｜**AskUserQuestion 60 秒逾時自動代答（GitHub issue #73125，累積 414 個讚，2026-09-10 更新）**：逾時未回應會自動代答並繼續執行，可能略過決策分岔點；官方確認為刻意設計（v2.1.198），非 bug，尚無可調逾時設定。討論見 [[topics/community-tech-discussions]]。
 - 🔴 **未修復**｜**功能請求：READ 工具未標示目前正在讀取哪一個檔案（GitHub issue #21151，累積 133 則留言、186 個讚，2026-07-17 首次記錄，2026-07-21 留言數更新）**：使用者反映執行 READ 工具讀取檔案時，介面未顯示目前正在讀取的具體檔案名稱，多檔案讀取情境下難以追蹤進度；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增選項常駐顯示 Claude 的思考過程（GitHub issue #8477，累積 93 則留言、356 個讚，2026-07-17 首次記錄，2026-08-17 互動數更新）**：使用者希望新增設定選項讓 Claude 的 thinking／推理過程預設常駐顯示，而非需要每次手動展開或依賴目前的摘要呈現；官方尚未回應或排入路線圖。
@@ -308,8 +308,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（69 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（70 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
@@ -320,7 +321,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 64 則留言、243 個讚，2026-08-25）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，為更新後效能退化（GitHub issue #26302，累積 44 則留言、44 個讚，2026-08-21，版本更新後新出現的效能回歸）**：使用者回報升級至 Claude Desktop 1.1.3189 後，Windows 上出現嚴重 UI 延遲與滑鼠卡頓，屬更新後的效能退化（regression）；官方尚未回應。
-- 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 67 則留言、60 個讚，2026-08-19）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
+- 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 70 則留言、62 個讚，首見 2026-08-19，2026-09-22 互動數更新）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
 
 > Windows 上 Cowork VM 啟動失敗於 8 天內至少 5 起獨立事件湧現：#29941 Windows 11 Pro CoworkVMService 簽章驗證初始化失敗（07-23）、#74649 缺少 HCS vfpext 服務導致無法運作（07-27～07-29）、#27801 workspace 啟動顯示「VM service not running」、重開機亦無法解決（07-28）、#40198 Windows ARM64（Snapdragon）無法啟動（07-28）、#40175 Cowork Global instructions 儲存後靜默還原舊版本（08-01）；五起成因各異（簽章驗證、服務缺失、VM 啟動、架構相容、設定持久化），疑指向 Cowork Windows VM 層本身不穩定，而非個別 driver 問題；官方尚未回應或確認共同成因，此為推論。
 
@@ -392,8 +393,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（35 條已修復、8 條未修復、1 條查無官方）
+### 🌐 服務穩定性（36 條已修復、8 條未修復、1 條查無官方）
 
+- ✅ **已修復**｜**Anthropic Status：Opus 5、Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-22 00:50–02:10 UTC，02:35 UTC 監控確認恢復）**：三款模型請求錯誤率升高，官方分批修復後確認恢復正常。[來源](https://status.claude.com/incidents/7g1qpkyz5gxh)
 - ✅ **已修復（約 24 分鐘後解決）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率間歇升高（2026-09-15 10:50 UTC 進入監控 → 11:14 UTC 確認解決）**：與 09-11 同款模型錯誤率事件（見下）為不同起單獨通報事故，暫分列追蹤。[來源](https://status.claude.com/incidents/6304r9jjhj34)
 - 🔴 **未修復（監控中）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-11 14:28 UTC 已部署修復並監控中）**：截至彙整時尚未標記為 resolved。[來源](https://status.claude.com/incidents/t33dncr5ydvl)
 - ✅ **已修復（約 1 小時 41 分後解決）**｜**Anthropic Status：Claude API 延遲升高（2026-09-10 21:43 UTC 識別 → 23:24 UTC 確認已緩解）**：官方通報部分使用者遇到 Claude API 回應速度低於正常水準，23:24 UTC 確認已緩解（mitigated）。[來源](https://status.claude.com/incidents/2pt83vlkk7x7)
