@@ -206,3 +206,5 @@
 {"id": "H-a8bd29", "closed": "2026-09-21", "status": "void", "by": "主編", "result": "[功能] Chief of Staff Pattern 出自單一部落格文章，未達 official-community-gap 入列門檻（需 ≥2 獨立社群工具或單一 GitHub issue ≥100 讚），概念最貼近既有 G-06 列，不開新列"}
 {"id": "H-40b52e", "opened": "2026-09-22", "from": "社群", "to": "功能", "page": "wiki/feature-radar.md", "note": "feature-radar 沒有「額度快用完主動告警」的官方狀態條目，本頁新列的官方側出口指過去；官方一手見 verified 第四節（#13585 OPEN／👍 124、#65292 not_planned、/usage 與狀態列僅被動可見）。", "status": "open"}
 {"id": "H-0d154f", "opened": "2026-09-22", "from": "社群", "to": "功能", "page": "wiki/topics/official-community-gap.md", "note": "official-community-gap:78 以 Throttle Meter 當代表社群工具，該列已因無連結移出 community-tech-tools 目錄；若仍要引用，請換成點得進去的工具。", "status": "open"}
+{"id": "H-0d154f", "closed": "2026-09-22", "status": "done", "by": "功能", "result": "official-community-gap.md:78 已將無連結的 Tokenyst／Throttle Meter／Agent FM 換成可點入的 CostHawk、Usage4Claude、tare、Frugal Tokens、TokenEater"}
+{"id": "H-40b52e", "closed": "2026-09-22", "status": "void", "by": "主編", "result": "功能記者今日核對：7則條目均未涉及官方推出主動額度告警功能，現況（feature-radar 無此條目）與官方一手 #13585 OPEN／#65292 not_planned 一致，無需更動；是否加一句『官方尚無』說明性條目留待後續評估"}

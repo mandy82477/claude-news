@@ -6705,3 +6705,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **Omar 證據 🟢 → 🟡 的依據**：一手自述不再宣稱「TUI 儀表板管到 100 個 agent」（2026-05-02 收錄時的說法），現版 README 已改為形式化編排、09-22 查得僅 48★——屬「自述仍解同一症狀、只是規模或形態的宣稱變了」，降證據等級但不換首選。
 
 **歸因**：`user-query`（第 15 波健檢流程；併頁裁決點屬使用者、尚未裁決，主 session 代判照保守預設不併，〔併〕分岔留在 `docs/page-audits/tools-2026-09-22-draft.md`）。
+
+## 2026-09-22 Ingest
+
+- 來源日報：[[news/2026-09-22]]
+- 更新頁面：entities/dario-amodei、entities/claude-code、topics/community-tech-patterns、topics/anthropic-business、topics/ai-talent-flow、topics/official-community-gap、topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement
+- 新增頁面：無
+- 摘要：GitHub Issues 湧現多則高互動 Claude Code 已知問題（CVP 誤擋、終端機複製多餘縮排、Termux/Android glibc 破壞性回歸、專案知識庫整合請求）與一起已修復的多模型錯誤率升高事故；安全政策面 Dario Amodei 將簡報聯合國安理會、Anthropic／OpenAI 陳情澳洲放寬訓練禁令、反壟斷合謀集體訴訟曝光原告身分、Anthropic 官方發布研發步調量測方法論、MaxKB／AWS AgentCore／Jev 三則提示注入風險並陳
+- 呈現品質：全部通過（六記者機械自查（字元上限／讀者語言／callout 涵蓋）與 1 次分類複核全數通過；安全政策、功能記者過程中各有暫時性 FAIL（讀者語言用詞、懸置標記語法）已自行改寫修復並重跑確認）
+- 分類回退：3 筆回報，皆未追加派工——Tell HN 合約簽署事件（社群→安全政策）與 Palo Alto Networks 資安服務（安全政策→商業）兩筆原輪雙重分類已收到；Simon Willison 介紹 Jev 部落格文（社群→安全政策）經核對與 Claude/Anthropic 無直接關聯且非 Topic Watch 通道，安全政策記者自身回報亦未主動請求此則（其 Jev 提示注入故事已由已定向抓取的 VentureBeat 條目獨立完整覆蓋），理由不成立不派
