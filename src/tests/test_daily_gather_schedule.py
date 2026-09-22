@@ -244,6 +244,11 @@ class TestDataActuallyLands(unittest.TestCase):
         """裸 push 會在兩分鐘視窗內被任何併發推送打掉，當天抓料整包不落地。"""
         body = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("git pull --rebase", body)
+        # 2026-09-22 事故：裸 rebase 在整頁覆寫的 skill-interest-watch.md 衝突，
+        # 三次重試全在半套 rebase 狀態下重跑，抓料整包不落地。GATHER_PATHS 全是
+        # 本 run 重產的機器檔，衝突時本 run 版本（rebase 的 theirs）必須自動勝出，
+        # 且 rebase 失敗要 abort 回乾淨狀態再重試。
+        self.assertIn("git pull --rebase -X theirs origin master || git rebase --abort", body)
         # 重試耗盡必須讓 job 失敗——GitHub 寄信是本系統唯一的主動告警管道
         self.assertIn("::error::", body)
         self.assertIn("exit 1", body)
