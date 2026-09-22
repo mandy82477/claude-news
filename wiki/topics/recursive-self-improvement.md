@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
-> **最新動態**（2026-09-21）
-> Anthropic 首度公布 R&D Automation Index，Claude 研發任務主導比例 26%，完全無人監督自動化仍為零，詳見 [[topics/recursive-self-improvement#技術彙整]]。
+> **最新動態**（2026-09-22）
+> Anthropic Institute 官方頁面連結曝光（2 個來源），延續 09-18「工作量四分之一」系列，方法論細節仍未見報導，詳見 [[topics/recursive-self-improvement#技術彙整]]。
 
 ---
 
@@ -83,6 +83,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### Anthropic Institute：官方頁面〈Measurements for understanding the pace of AI development inside frontier labs〉曝光，2 個來源同日報導（2026-09-22 新增，延續 09-18 條目）
+
+- **揭露來源**：[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)（經 Google News，2026-09-22 15:32 UTC，2 個來源）
+- **核心內容**：09-18 條目已記錄的同名官方說明文章，其正式 Institute 頁面連結今日曝光，說明如何衡量前緣實驗室內部「AI 開發 AI」的進度；RSS 原文摘要不可讀，僅標題與連結可用，具體衡量方法論、與「工作量四分之一」數字的對應關係仍未見報導
+- **與既有敘事的關係**：即 09-18 條目引用的同一份官方說明文件，非新事件，本則補上可直接查證的官方連結
+- ❓ **待查證**（標 2026-09-22｜查 Institute、measuring-pace）：頁面正文方法論細節、與 26%／25%／8× 三個既有數字的對應關係均未見報導
+- **可信度評估**：Anthropic 官方一手頁面，可信度高；惟 RSS 摘要不可讀，正文內容現階段無法查證
+
 ### dev.to（reidmarlow）：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零（2026-09-21 新增）
 
 - **揭露來源**：dev.to／#anthropic〈Anthropic's R&D Automation Index measures supervision, not autonomy〉（reidmarlow，2026-09-21）
@@ -113,7 +121,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Reuters〈Claude now leads a quarter of work〉（09-17）；Anthropic 官方部落格〈Measurements for understanding the pace of AI development〉（09-18，經 Google News 轉載）——說明衡量方法，與 Reuters 數字同屬一組
 - **核心主張**：Anthropic 揭露 Claude 目前已負責公司內部下一代模型開發工作量的四分之一（25%）；官方同日部落格另文說明如何衡量前沿實驗室內部「AI 開發 AI」的進度
 - **與既有敘事的關係**：與 06-04《When AI Builds Itself》代碼交付量 8 倍（代碼產出比例）、08-14《Risk Report》尚未達兩倍（保守自評）為三個不同指標，定義各異不宜直接相加或取代
-- ❓ **待查證**（標 2026-09-18｜查 quarter of work、frontier labs）：「工作量四分之一」的具體衡量定義（任務數／人力時數／其他）、官方部落格衡量方法論細節均僅標題可用
+- ❓ **待查證**（標 2026-09-18｜查 quarter of work、frontier labs｜訊 2026-09-22）：官方 Institute 頁面連結今日經 2 個來源確認（見上方 09-22 條目），惟「工作量四分之一」具體衡量定義與方法論細節仍未見頁面正文佐證
 - **可信度評估**：Reuters 一手報導＋Anthropic 官方部落格同日發布方法論說明，訊號強度高；惟具體衡量方法僅標題層級可用，與既有 8× 及「尚未達兩倍」兩數字的可比性未見官方說明
 
 ### CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構（2026-09-18 新增）
@@ -273,6 +281,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-09-22
+- **[官方連結補齊，新增] Anthropic Institute 官方頁面：《Measurements for understanding the pace of AI development inside frontier labs》，2 個來源同日報導**：延續 09-18《工作量四分之一》系列，補齊官方 Institute 頁面連結，惟頁面實質方法論內容仍未見報導，詳見「## 技術彙整」
 
 ### 2026-09-21
 - **[量化補充，新增] dev.to：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零**：延續 09-18「工作量四分之一」系列，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄，詳見「## 技術彙整」

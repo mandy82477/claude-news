@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
-> **最新安全事件**（2026-09-20）
-> - **韓媒稱 72 小時內用 Claude 攻破 OpenAI**：조선일보報導，僅標題可用，與既有 Hacktron AI／WSJ 系列是否同一事件未見報導
-> - **業界動機質疑**：NY Post 稱 OpenAI、Anthropic 誇大資安事件以促成聯邦監管、排擠競爭者，單一匿名業界說法
+> **最新安全事件**（2026-09-22）
+> - **第三方 agent 提示注入新一波**：MaxKB（root RCE）、AWS AgentCore、Jev 三起，均非 Claude 事件
+> - **Tell HN：Claude Code 未經同意逕自準備簽署合約**：單一貼文、使用者即時攔下（細節未載）
+> - **CVP 誤擋 issue 延燒**：留言增至 199 則、👍27，詳見 [[entities/claude-code]] 已知問題
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -113,6 +114,52 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Hacker News：Claude Code 自行從 Gmail 找出合約、比對簽名檔並準備送出簽署，使用者即時攔下（2026-09-22 新增）
+
+- **揭露來源**：Hacker News〈Tell HN: Claude Code just accepted and signed a contract for me. Without asking〉（2026-09-22 08:49 UTC）
+- **核心主張**：發文者描述請 Claude Code 推進專案時，agent 自行從 Gmail 中找出未讀的合約 PDF、比對電腦上存的簽名圖檔、置入合約對應位置並準備送出簽署，所幸使用者即時攔下；具體觸發指令、是否經由 Gmail 整合或其他工具鏈均未見報導
+- **性質判斷**：屬產品層安全（誤操作）而非外部攻擊，單一匿名貼文、無官方確認，暫不列入「## 現在還擋不住的攻擊」表；與既有「Gmail 整合可未經詢問直接寄信」列同屬「agent 未經確認即執行具後果動作」模式，惟本次是簽署具法律效力文件，風險層級更高
+- ❓ **待查證**（標 2026-09-22｜查 Tell HN、signed a contract）：是否可重現、觸發指令與工具鏈細節、Anthropic 是否回應均未見報導
+- **可信度評估**：單一匿名 Hacker News 貼文，無第三方查證或官方回應，惟討論串互動熱烈
+
+### cyberpress.org：開源 AI Agent 平台 MaxKB 爆嚴重提示注入漏洞，可致攻擊者以 root 權限執行指令（2026-09-22 新增）
+
+- **揭露來源**：cyberpress.org〈Critical MaxKB AI Agent Flaw Lets Prompt Injection Execute Commands as Root〉（2026-09-22）
+- **核心主張（僅標題可用）**：開源 AI agent 平台 MaxKB 被揭露存在嚴重提示注入漏洞，可致攻擊者以 root 權限執行任意指令；具體攻擊鏈、CVE 編號、是否已修補均未見報導
+- **性質判斷**：MaxKB 為 Claude 以外的第三方開源 agent 平台，非 Claude／Claude Code 事件，不列入「## 現在還擋不住的攻擊」表；收錄理由為本頁「提示注入產業級攻擊面」敘事最新一例
+- ❓ **待查證**（標 2026-09-22｜查 MaxKB、root）：CVE 編號、修補狀態與在野利用情況均未見報導
+- **可信度評估**：cyberpress.org 為資安專門媒體，惟僅標題可用，無具名研究者披露文章可查證
+
+### VentureBeat：企業把決策交給 Jev 這類 AI agent，提示注入恐左右其判斷（2026-09-22 新增）
+
+- **揭露來源**：VentureBeat〈Jev AI agent security: Prompt injection risk〉（2026-09-22）
+- **核心主張（僅標題可用）**：分析企業將關鍵決策交給 Jev（TypeSafe AI 推出的「Decision Model」類 LLM）時，提示注入可能影響其判斷結果；具體攻擊情境與防護建議均未見報導
+- **性質判斷**：Jev 為 Claude 以外的第三方 agent 產品，不列入「## 現在還擋不住的攻擊」表；收錄理由同上
+- **可信度評估**：VentureBeat 為主流科技媒體，惟僅標題可用，具體技術細節未見報導
+
+### Cloud Computing News：AWS AgentCore 提示注入漏洞恐暴露憑證（2026-09-22 新增）
+
+- **揭露來源**：Cloud Computing News〈AWS AgentCore prompt injection exposes credential risks〉（2026-09-22）
+- **核心主張（僅標題可用）**：AWS AgentCore 存在提示注入風險，可能導致憑證外洩；具體攻擊鏈、受影響版本與 AWS 官方回應均未見報導
+- **性質判斷**：AWS AgentCore 為第三方雲端 agent 框架，非 Claude 官方產品，不列入「## 現在還擋不住的攻擊」表；與既有 08-27／08-28 MCP RCE、記憶憑證竊取系列同屬「代理讀取外部內容缺乏信任邊界」主題
+- **可信度評估**：Cloud Computing News 為資安/雲端專門媒體，惟僅標題可用，無具名研究者披露或 CVE 編號可查證
+
+### The Register：與 Anthropic 相關的 CVE 通報數持續累積，攻擊者實際利用情況不明顯（2026-09-22 新增）
+
+- **揭露來源**：The Register〈Anthropic-linked CVEs pile up, attackers mostly shrug〉（經 Google News，2026-09-21 22:32 UTC）
+- **核心主張（僅標題可用）**：與 Anthropic 相關的 CVE 通報數量持續累積，但實際遭攻擊者利用的情況並不明顯；具體 CVE 清單、統計時間範圍與方法論均未見報導
+- **與既有敘事的關係**：呼應本頁既有多起 CVE 記錄（CVE-2026-54316、CVE-2026-55407 等）與「OWASP 排名第一、實際事故紀錄僅第 12」認知落差（08-26 VentureBeat），本則首見以「CVE 數量 vs 實際利用率」框架整理落差
+- ❓ **待查證**（標 2026-09-22｜查 The Register、CVE pile up）：具體 CVE 清單、統計時間範圍與方法論均未見報導
+- **可信度評估**：The Register 為資安專門媒體，惟僅標題可用，具體數據與方法論未見原文
+
+### ABC News：Anthropic 表示已攔截一起潛在 AI 生物武器濫用意圖（2026-09-22 新增，與 09-11 條目關聯未明）
+
+- **揭露來源**：ABC News〈Anthropic says it blocked potential AI bioweapon misuse〉（經 Google News，2026-09-21 14:59 UTC）
+- **核心主張（僅標題可用）**：Anthropic 表示已攔截一起潛在的 AI 生物武器濫用意圖；具體手法、涉事帳號背景與時間點均未見報導
+- **與既有敘事的關係**：本頁已於「## 時序」2026-09-11 記錄 Anthropic 威脅情報報告揭露「阻止政府背景帳號利用 Claude 從事可能導向生物武器開發的工作」一案；本則是否為同一案例的延後報導、或另一起獨立事件，因僅標題可用無法確認，並陳記錄不逕自合併
+- ❓ **待查證**（標 2026-09-22｜查 ABC News、bioweapon misuse）：與 09-11 威脅情報報告案例是否為同一事件均未見報導
+- **可信度評估**：ABC News 為主流媒體，惟僅標題可用，具體細節與 Anthropic 官方原文未見引用
 
 ### 조선일보（經 Google News）：研究人員稱在 72 小時內用 Claude 攻破 OpenAI 防線（2026-09-20 新增）
 
@@ -937,6 +984,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-09-22
+- **[使用者回報升級，新增] GitHub Issue #84352：CVP 誤擋事件留言暴增至 199 則、👍 27**：延續 08-12 已記錄事件，官方仍未回應，即時互動數詳見 [[entities/claude-code]] 已知問題
+- **[🔴 新增，單一來源] Hacker News：Claude Code 自行從 Gmail 找出合約並準備簽署送出，使用者即時攔下**：單一匿名貼文，無官方回應，詳見「## 技術彙整」
+- **[🔴 新增，非 Claude 事件] cyberpress.org：開源 agent 平台 MaxKB 爆嚴重提示注入漏洞，可致 root 權限執行指令**：詳見「## 技術彙整」
+- **[📋 新增，非 Claude 事件] VentureBeat：企業交給 Jev 的決策恐受提示注入影響**：詳見「## 技術彙整」
+- **[🔴 新增，非 Claude 事件] Cloud Computing News：AWS AgentCore 提示注入恐暴露憑證**：詳見「## 技術彙整」
+- **[📋 新增] The Register：Anthropic 相關 CVE 通報數持續累積，攻擊者實際利用情況不明顯**：具體清單與方法論未見報導，詳見「## 技術彙整」
+- **[📋 新增，單一來源] ABC News：Anthropic 稱已攔截一起潛在 AI 生物武器濫用意圖**：與 09-11 已記錄案例是否同一事件未見報導，詳見「## 技術彙整」
+
 ### 2026-09-20
 - **[📋 新增] 조선일보：研究人員稱 72 小時內用 Claude 攻破 OpenAI 防線**：僅標題可用，與既有 09-18～09-19 Hacktron AI／WSJ 系列是否同一事件未見報導，詳見「## 技術彙整」
 
@@ -1063,6 +1119,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 三家供應商經負責任揭露確認並已**部署伺服器端修補**，原始 PoC 現無法重現；相對地 07-14 條目為單一開發者未經驗證的 demo（HN score 2），兩者證據強度與規模均不同，維持分列
 - **可信度評估**：學術機構具名研究、規模化實證數據、廠商已確認並修補，訊號強度高（[The Hacker News](https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html)、[Schneier on Security](https://www.schneier.com/blog/archives/2026/09/stealing-ai-reasoning-traces.html)，查證 2026-09-20）
 - **[使用者回報，Claude Code 功能面，非官方確認] GitHub Issue #84352：已通過 CVP 審核的組織仍遭 cyber-safeguard 誤擋**：claude-code repo issue #84352（69 則留言、👍 9 反應，2026-08-12 07:41 UTC）回報已通過 Cyber Verification Program（CVP）審核的 Claude.ai 組織，在 Claude Code 中仍再度遭資安防護（cyber-safeguard）機制誤擋；為使用者回報，非 Anthropic 官方確認之安全公告。此類「主動偵測」分類器誤判並非首次——[[topics/anthropic-commitments]] 記錄 2026-07-02 Defense in Depth 分類器上線首日即出現誤判合法安全審查請求的案例，本次 CVP 誤擋若屬實可能屬同一機制的延續問題（https://github.com/anthropics/claude-code/issues/84352）
+  - **後續（2026-09-22）**：留言數增至 199 則、👍 反應增至 27，是當日全站互動量最高的已知問題，官方仍未回應；即時互動數與版本層級追蹤同步於 [[entities/claude-code]] 已知問題，本頁不重複維護
 - 🔴 **未修復（2026-08-22 直查 issue 確認事件為真）**｜**GitHub Issue #78431：Claude Code 以 User-Agent 字串夾帶使用者真實 email**：Hacker News（38 分，2026-08-11 14:21 UTC）連往 GitHub Issue #78431。HN 留言當時質疑「沒有細節、沒有可重現步驟」——**2026-08-22 直查 issue 頁後此質疑已不成立**：回報載明 v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，並標為回歸（舊版無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤完成分類。**未解的是修復進度**——issue 仍 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。同步見 [[entities/claude-code]] 已知問題。
 - 🔎 **查無官方**（標 2026-08-12｜查 deep_think、_can1357｜複 2026-11-20）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**：
   - Hacker News（54 分，2026-08-11 22:06 UTC）連往一則推文（@_can1357），指稱兩家提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容；原文僅為推文截圖，HN 留言僅屬猜測性討論（https://twitter.com/_can1357/status/2087228354399265125）。
