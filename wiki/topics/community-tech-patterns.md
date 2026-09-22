@@ -29,12 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
-> **最新工作流模式**（2026-09-21）
-> - **Plugin／MCP 整合添一例**：docsagent 用原生 C++ 搜尋核心讓 Claude 等 agent 存取個人知識庫（Zotero，Obsidian／Apple Notes 在路上）。
-> - **Skills 設計添一例**：fire-your-seo-agency 把 SEO／AEO／GEO 稽核流程封裝成 Claude Code skill。
+> **最新工作流模式**（2026-09-22）
+> - **Multi-agent 架構添一例**：Foremerge 在 git worktree 之上疊一層意圖衝突偵測，agent 動手前先廣播意圖與範圍，在真正產生程式碼衝突前先攔住架構層級的互斥變更。
 
 ---
 
@@ -53,7 +52,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、fire-your-seo-agency（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-21 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-20 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude、Foremerge（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-22 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
@@ -163,6 +162,15 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### Show HN: Foremerge——疊在 git worktree 上的意圖衝突偵測層，防平行 coding agent 互踩架構（2026-09-22）
+
+- **主線：** 並行規模
+- **核心模式：** 本地端「類 git」協調層，疊加在既有 git／worktree 之上、不改變兩者行為；agent 動手前先廣播「意圖」與變更範圍，在寫碼前先偵測架構層級的意圖衝突（例：一個 agent 抽換某類別、另一個同時在擴充它），git 只在改到同一行才發現這類衝突；HN 44 分，2 個來源同日報導。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧（Claude Squad、ccteams 等）一個「衝突預防」取向的代表技巧——既有做法聚焦任務分派與獨立 worktree，本則鎖定分派後、真正寫碼前的意圖層衝突偵測；並行 agent 互踩正是大型 codebase 特有痛點，主線填並行規模。
+- **可信度註記：** HN 討論串，44 分、2 個來源同日報導；GitHub repo 可查（[naw103/foremerge](https://github.com/naw103/foremerge)），機制描述具體，未見獨立第三方復現或採用回饋。
+- **來源：** Hacker News；[原文](https://github.com/naw103/foremerge)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具提案，尚無社群採用回饋數據）
 
 #### docsagent/docsagent：原生 C++ 搜尋核心 MCP，讓 Claude 等 agent 存取個人知識庫（先支援 Zotero）（2026-09-21）
 
