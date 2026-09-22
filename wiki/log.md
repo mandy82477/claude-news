@@ -6695,3 +6695,13 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：追加派工 1 次（5 筆，功能→社群，XDA／MakeUseOf／Forbes 第三方心得測評文，逐則檢視後皆未達收錄門檻，未產出頁面內容）；另 5 筆回退（模型→安全政策 1、安全政策→人物 1、安全政策→商業 2、商業→功能 1）核對後確認原輪已因雙重分類收到，未追加派工
 - devpractice 沉澱：本日無候選（14 頁有新增行，逐一覆核皆為 frontmatter 機械欄位或既有 repo 數字刷新，無新工具/選型變動）
 - market 判讀：判讀 1 則（Nscale 1,030 億美元資料中心合約，Anthropic／Microsoft 並列最大客戶）／其餘 14 則逐一套六類判準後判定材料性不足未寫入
+
+## 2026-09-22 Query：第 15 波頁面健檢——community-tech-tools 重設計（健檢卡／冷讀者／主編查證／設計／評審後實作）
+
+- **43 列移除的名單與理由**：整列沒有任何可點的連結——`weekly.md` 新增 4b 條（可達性）回頭適用存量列。移除：Claude Usage Widget、adamsreview、vibe-log-cli、Tokenyst、Remind、draft CLI plugin、re_gent、obsidian-semantic、Claudy、DataMoat、4-agent Code Review、awesome-ux-skills、/qu /ans 跨 session 插件、recap、Kstack、Claude Code Routines、Claudette、claude-smart、Memex、Claude-Find、Askdiff、Kirikiri、Prism MCP、Smithy、Patina、Pilot Shell、Council、Chrome 用量監控擴充、Throttle Meter、Brifly、Mneme、Nimbalyst、Trent、CodeThis、Claude Exporter、Jupyter MCP server、PullMD、EvanFlow、Relay plugin、SmolVM、Rapunzel、OpenCode-power-pack、CC-Canary（共 43 列，152 → 109，另加新增 4 列＝113）。每一列另有出處（`wiki/log.md`／各 `*-archive.md`／其他 topic 頁），機械核對 43／43 全數命中，沒有任何一列是某事實的唯一的家，git history 另留全文。
+- **⟨Q-01⟩ 降級**：Geosql「4 倍」宣稱的機制已於 2026-08-13 查證完畢（只在連 Dekart 時成立），屬已解決態，不該用懸置語法留著讓讀者以為還沒有結論，改為「一則細節」下的普通散文。`iter_pending()` 對本頁回 0 筆，全庫懸置標記 114／基線 106 不受影響。
+- **新列「額度快用完，想在斷線前被提醒」開列依據**：達 `weekly.md` 第 5 條「≥2 筆獨立需求證據」門檻——官方 issue #13585（OPEN，👍 124）與 #65292（已標 not_planned）兩筆獨立官方側證據；冷讀者兩波屬內部驗收，不計入需求證據。首選 Claude-Code-Usage-Monitor（⚪，判 09-22｜查 09-22，8,713★、07-05 後未更新）。
+- **本波未換任何首選的理由**：九個既有症狀列的首選（tare、pxpipe、graphify、brain.md、Harness→ness、Omar、Groundtruth、CLAUDE.md 不聽的「—」、Workweave Router）皆未出現「自述已不再解這個症狀」這類否定證據，改名／換網域／星數增減均不構成換首選的理由（`weekly.md` 新增條文明定）。
+- **Omar 證據 🟢 → 🟡 的依據**：一手自述不再宣稱「TUI 儀表板管到 100 個 agent」（2026-05-02 收錄時的說法），現版 README 已改為形式化編排、09-22 查得僅 48★——屬「自述仍解同一症狀、只是規模或形態的宣稱變了」，降證據等級但不換首選。
+
+**歸因**：`user-query`（第 15 波健檢流程；併頁裁決點屬使用者、尚未裁決，主 session 代判照保守預設不併，〔併〕分岔留在 `docs/page-audits/tools-2026-09-22-draft.md`）。

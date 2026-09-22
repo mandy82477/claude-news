@@ -204,3 +204,5 @@
 {"id": "H-c893bf", "closed": "2026-09-20", "status": "done", "by": "社群", "result": "不適用：skill-interest-watch.md 為 community-tech-tools.md 每日鏡像，該頁 lint 專用不可每日更新，留待 /wiki-lint 處理"}
 {"id": "H-a8bd29", "opened": "2026-09-20", "from": "社群", "to": "功能", "page": "topics/community-tech-patterns", "note": "Chief of Staff Pattern（外部持久看板＋逐項複核）是新出現的 agent 編排模式，建議評估 official-community-gap 產品化矩陣是否需新增列", "status": "open"}
 {"id": "H-a8bd29", "closed": "2026-09-21", "status": "void", "by": "主編", "result": "[功能] Chief of Staff Pattern 出自單一部落格文章，未達 official-community-gap 入列門檻（需 ≥2 獨立社群工具或單一 GitHub issue ≥100 讚），概念最貼近既有 G-06 列，不開新列"}
+{"id": "H-40b52e", "opened": "2026-09-22", "from": "社群", "to": "功能", "page": "wiki/feature-radar.md", "note": "feature-radar 沒有「額度快用完主動告警」的官方狀態條目，本頁新列的官方側出口指過去；官方一手見 verified 第四節（#13585 OPEN／👍 124、#65292 not_planned、/usage 與狀態列僅被動可見）。", "status": "open"}
+{"id": "H-0d154f", "opened": "2026-09-22", "from": "社群", "to": "功能", "page": "wiki/topics/official-community-gap.md", "note": "official-community-gap:78 以 Throttle Meter 當代表社群工具，該列已因無連結移出 community-tech-tools 目錄；若仍要引用，請換成點得進去的工具。", "status": "open"}

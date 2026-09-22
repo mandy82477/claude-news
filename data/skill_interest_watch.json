@@ -118,7 +118,7 @@
         "一堆 agent 在跑，看不到誰卡住"
       ],
       "tools_note": null,
-      "caveat": "同名提醒：決策表首選 Harness＝frenchie4111/harness（多 worktree 並行管理）；榜上的 revfactory/harness（設計 agent team 的 meta-skill）不是同一個專案，裝前認清 owner。"
+      "caveat": "同名提醒：決策表首選已改名 ness（ness-dev/ness，原名 Harness，多 worktree 並行管理）；榜上的 revfactory/harness（設計 agent team 的 meta-skill）不是同一個專案，裝前認清 owner。"
     },
     {
       "group": "B",

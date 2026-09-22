@@ -7,12 +7,12 @@ last_updated: "2026-09-19"
 last_news_update: "2026-09-13"
 update_freq: "🗓️ 週更（每週從 [[topics/community-tech-patterns]] 沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 8
+days_since_news: 9
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 8
-inbound_links: 43
+days_since_news_subtree: 9
+inbound_links: 44
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 先從 10–20 個 agent 驗證協調機制；每次倍增規模重新驗證，不要線性外推
 - 協調有兩種互不取代的型態：統一容器（meta-harness 換底層 agent 不必重寫協作邏輯）與任務脈絡互通（Concord 讓各自獨立的 agent 像 Slack 一樣互相知會，不吃底層 agent）
 
-**🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——「多個 agent 在同一 repo 互相覆蓋」列（首選 Harness）與「一堆 agent 在跑，看不到誰卡住」列（首選 Omar）
+**🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——「多個 agent 在同一 repo 互相覆蓋」列（首選 ness，原名 Harness）與「一堆 agent 在跑，看不到誰卡住」列（首選 Omar）
 
 **還沒解決**：官方 20 路並行、創始人「每晚數千子代理」與社群實測「4→20 就崩」之間的落差沒人系統驗證（推論）。fork 子代理疑似每次工具呼叫重送整段對話歷史（四個平行子代理耗 200 萬 token）若屬實，是規模上限的新增放大源，未經官方證實。
 
