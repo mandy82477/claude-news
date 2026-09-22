@@ -107,6 +107,12 @@
       "term": "記者",
       "line_contains": "記者會",
       "reason": "「首爾記者會」指真實新聞發布會，非編輯部角色詞（隨 2026-06 條目自 entities/fable-5 搬入，原頁已有同型例外）"
+    },
+    {
+      "page": "topics/skill-interest-watch",
+      "term": "lint",
+      "line_contains": "shadcn-ui/lint",
+      "reason": "「shadcn-ui/lint」是本週竄升表列出的真實 GitHub repo 路徑（org shadcn-ui、repo 名字面即 lint），非編輯部週更檢查流程（2026-09-22 ingest 發現）"
     }
   ]
 }
