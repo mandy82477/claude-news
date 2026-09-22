@@ -212,8 +212,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "4525a0cd01190c9466f3c94c06e49707d8445b5417a6c8eb438598217445653c",
-    "length": 83887,
+    "hash": "d4cf6c6bc44d90631f6ec103112d86f1d69d81b6ad018358a08f6386b38dc878",
+    "length": 83869,
     "segments": [
       "\"args\": [\"--verbose\"],",
       "\"autoPort\": false",
@@ -445,7 +445,7 @@
       "An [artifact](/docs/en/artifacts) that loads a typeface from [Google Fonts](/docs/en/artifacts#improve-the-visual-design) also requests `fonts.googleapis.com` and `fonts.gstatic.com`. Both hosts are optional. If you block them, artifacts render in fallback typefaces. Block with a fast rejection rather than a silent drop so the font request fails immediately instead of delaying the page's first render.",
       "Anthropic checks connections to that host against your organization's IP allowlist using the address they arrive from. If your proxy sends traffic for it out through an address that isn't on that allowlist, Claude in Chrome and other features that connect through the bridge stop working while the rest of the app keeps working.",
       "Apps with broad reach, like terminals, Finder or File Explorer, and System Settings or Settings, show an extra warning in the prompt so you know what approving them grants.",
-      "Artifacts can also load JavaScript libraries, such as React or a charting package, from `cdnjs.cloudflare.com`, `cdn.jsdelivr.net`, `cdn.tailwindcss.com`, and `code.jquery.com`, and from no other external host. If you block those hosts, the parts of an artifact that depend on a library don't work, and unlike a blocked font, a blocked library has no fallback. Block with a fast rejection here too, so a blocked library request fails at once rather than hanging until it times out.",
+      "Artifacts can also load JavaScript libraries, such as React or a charting package, from `cdnjs.cloudflare.com`, `cdn.jsdelivr.net`, `cdn.tailwindcss.com`, `code.jquery.com`, and `unpkg.com`, and from no other external host. If you block those hosts, the parts of an artifact that depend on a library don't work, and unlike a blocked font, a blocked library has no fallback. Block with a fast rejection here too, so a blocked library request fails at once rather than hanging until it times out.",
       "Auto mode is available to all users on the Anthropic API and requires Claude Opus 4.6 or later, Sonnet 4.6 or later, or a [Fable model](/docs/en/model-config#work-with-fable). Organization administrators can turn auto mode off with the `disableAutoMode` key in [managed settings](#managed-settings).",
       "Auto-verify is on by default. Disable it per-project by adding `\"autoVerify\": false` to `.claude/launch.json`, or toggle it from the server dropdown menu.",
       "Before you send your first message, configure four things in the prompt area:",
@@ -570,7 +570,7 @@
       "The following features aren't available in Desktop, except where noted:",
       "The integrated terminal lets you run commands alongside your session without switching to another app. Open it from the **Views** menu or press **Ctrl+\\`** on macOS or Windows. The terminal opens in your session's working directory and shares the same environment as Claude, so commands like `npm test` or `git status` see the same files Claude is editing. To open a second terminal tab, click **+** in the terminal pane header or right-click a folder in the chat to choose **Open in terminal**. The terminal is available in local sessions only.",
       "The pane layout, terminal, file editor, and view modes in this section require Claude Desktop v1.2581.0 or later. Open **Claude → Check for Updates** on macOS or **Help → Check for Updates** on Windows to update.",
-      "The plugin browser is not available in cloud sessions, and plugins you install from the desktop app aren't available for cloud sessions. To use a plugin in a cloud session, either declare it in the repository's `.claude/settings.json` under [`enabledPlugins`](/docs/en/settings-reference#enabledplugins) so Claude Code [installs it at session start](/docs/en/cloud-environments#what-carries-over-from-your-setup), or enable it for your claude.ai account so Claude Code loads it as a [synced plugin](/docs/en/plugins-reference#synced-plugins). Plugins aren't available in WSL sessions. For the full plugin reference including creating your own plugins, see [plugins](/docs/en/plugins).",
+      "The plugin browser is not available in cloud sessions, and plugins you install from the desktop app aren't available for cloud sessions. A cloud session also doesn't install plugins that the repository's `.claude/settings.json` declares, as [What carries over from your setup](/docs/en/cloud-environments#what-carries-over-from-your-setup) explains. To use a plugin in a cloud session, enable it for your claude.ai account so Claude Code loads it as a [synced plugin](/docs/en/plugins-reference#synced-plugins). Plugins aren't available in WSL sessions. For the full plugin reference including creating your own plugins, see [plugins](/docs/en/plugins).",
       "The prompt also shows what level of control Claude gets for that app. These tiers are fixed by app category and can't be changed:",
       "The prompt box supports two ways to bring in external context:",
       "The remote machine must run Linux or macOS. Desktop installs Claude Code on the remote machine automatically the first time you connect. Once connected, SSH sessions support permission modes, connectors, plugins, and MCP servers.",
@@ -1013,8 +1013,8 @@
     ]
   },
   "https://platform.claude.com/docs/en/about-claude/pricing": {
-    "hash": "db549e61fcaf2f8c7629417f74a54766a23579b3d648c779f4bb30d03c51e56d",
-    "length": 29328,
+    "hash": "757cfe8c8e7f9dd3bdff017ae9ce7e06ea7f31b5bcdeb7d5399532e1a07111c5",
+    "length": 29329,
     "segments": [
       "\"cache_creation_input_tokens\" : 0 ,",
       "\"cache_creation_input_tokens\" : 7345 ,",
@@ -1067,7 +1067,7 @@
       "CCU price $0.01 per CCU (fixed; discounts apply at token-to-CCU conversion, not to the CCU price)",
       "CLI, SDKs, and libraries",
       "Cache operation Multiplier Duration",
-      "Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1) Same duration as the preceding write",
+      "Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1 ) Same duration as the preceding write",
       "Cache read tokens 40,000 × $5 × 0.1 / 1,000,000 $0.02",
       "Cache write tokens are charged when content is first stored. Cache read tokens are charged when a subsequent request retrieves the cached content. A cache hit costs 10% of the standard input price, which means caching pays off after one cache read for the 5-minute duration (1.25x write), or after two cache reads for the 1-hour duration (2x write). On Claude Fable 5.1 and Claude Mythos 5.1, a cache hit costs 2.5% of the standard input price ($0.25 USD per million tokens).",
       "Claude 4.6 and later models and Claude Mythos Preview include the full 1M token context window at standard pricing. (A 900k-token request is billed at the same per-token rate as a 9k-token request.) Prompt caching and batch processing discounts apply at standard rates across the full context window.",
