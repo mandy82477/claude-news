@@ -11,6 +11,7 @@
 | `daily-news-pipeline-cloud` | `trig_01AWf2wwmVeL3ykPCSyxyvzw` | `docs/cloud-runbooks/triggers/daily-news-pipeline-cloud.json` | `docs/cloud-runbooks/daily.md` |
 | `weekly-wiki-lint-cloud` | `trig_01E41amaGSNuL8jeUhCR8iUw` | `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json` | `docs/cloud-runbooks/weekly-lint.md` |
 | `daily-watchdog-push` | `trig_01FqjE53JVAKTnPxnt8iJCb6` | `docs/cloud-runbooks/triggers/daily-watchdog-push.json` | `docs/cloud-runbooks/watchdog-push.md` |
+| `daily-page-audit-cloud` | `trig_01W2aCMBHBhcajivNmvY4Zhf` | `docs/cloud-runbooks/triggers/daily-page-audit-cloud.json` | `docs/cloud-runbooks/page-audit.md` |
 
 **已停用的一次性探針（保留供 `RemoteTrigger list` 對帳，API 無 delete）：** `probe-custom-subagent-2026-09-12`（`trig_01RS1bLgV3MX9Ta6x7SceXrt`，enabled=false）——結果見 `docs/cloud-runbooks/probe-custom-subagent-2026-09-12.md`：雲端從 repo 根啟動，子目錄 `CLAUDE_NEWS/.claude/agents/` 的自訂 subagent 不可用（Read 過角色檔後仍不出現），skills 與子目錄 CLAUDE.md 則按需載入。**這正是 2026-09-12 把專案分割為獨立 repo `claude-news` 的理由**——分割後 `.claude/` 就在 repo 根，待下一次雲端班次驗證自訂 subagent 是否可用。
 
