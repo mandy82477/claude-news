@@ -501,11 +501,6 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "fable-5",
       "name": "Claude Fable 5 與 5.1",
       "pageType": "entity"
@@ -524,11 +519,6 @@
       "id": "mustafa-suleyman",
       "name": "Mustafa Suleyman",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-talent-flow",
-      "name": "AI 實驗室人才流動",
-      "pageType": "topic"
     },
     {
       "id": "enterprise-tool-tracker",
