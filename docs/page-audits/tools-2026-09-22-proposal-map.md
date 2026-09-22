@@ -1,9 +1,9 @@
 # 第 15 波逐行號去向表：topics/community-tech-tools（L1–L315）
 
-行號＝檔案原始行號（含 frontmatter），對象頁 **315 行**，改後 **281 行**（scratchpad 實測）。
+行號＝檔案原始行號（含 frontmatter），對象頁 **315 行**，改後 **283 行**（scratchpad 實測；第一輪寫的 281 是把結尾空字串也數進去，評審重算的 280 是第二輪補句之前的值）。
 本表照**保守預設**寫（唯一裁決點「tools ↔ skill-interest-watch 的決策表逐字副本要不要併」未回覆：兩頁都留、SIW 不動、`index.md:27` 不改指）。若使用者裁「併」，本頁要動的兩句逐字見 draft 的〔併〕區塊，差異列在本檔末節。
 
-**保命條款（砍列前的懸置核對）**：本頁 `iter_pending()` 回 **0 筆**新語法懸置標記（實測），全庫 114 筆／基線 106 不受本案影響。L306 的 ⟨Q-01⟩ 屬「舊字樣」殘餘（41 筆，基線 42，腳本只擋「增加」），降級後 40 筆，仍過閘。43 個被移除的目錄列**逐列機械核對過另有出處**（`wiki/log.md`／`*-archive.md`／其他 topic 頁），無一是某事實的唯一的家——名單與出處見本檔末節前。
+**保命條款（砍列前的懸置核對）**：本頁 `iter_pending()` 回 **0 筆**新語法懸置標記（實測），全庫 114 筆／基線 106 不受本案影響。L306 的 ⟨Q-01⟩ 是 `⟨X-nn⟩` 短標記，2026-09-06 起即由 `pending_markers._exempt()` 排除在舊字樣之外（`pending-legacy-baseline.json` 的 `_note` 逐字寫），**降級前後全庫都是 41 筆**；本頁唯一一筆 legacy 是 L138 圖例的「存疑」，也是豁免（實測 `iter_legacy` 改前改後皆 1 筆）。第一輪寫的「41 → 40」是代判錯，已更正（評審 🟡-5）。43 個被移除的目錄列**逐列機械核對過另有出處**（`wiki/log.md`／`*-archive.md`／其他 topic 頁），無一是某事實的唯一的家——名單與出處見本檔末節前。
 
 | 行 | 是什麼 | 去向 | 備註 |
 |---|---|---|---|
@@ -22,19 +22,19 @@
 | L45、L46、L47 | 空行／`---`／空行 | 留 | |
 | L48 | `## 我卡在這裡` | **留原處，節名一字不改** | 三方凍結：`review-registry.json:107`、`check_tools_page.py:32／41／55`、`skill_interest_snapshot.py:167`（驗紅見 proposal 第 5 節） |
 | L49 | 空行 | 留 | |
-| L50 | 「本表每週複查一次；急性事件另見…」 | **覆寫**（draft A-4） | 與 L64「不隨時間自動回訪」當場互打（冷讀者 Q4、健檢卡第 7(2) 節第 4 項）。只能留一個真的：新句只寫「最後一次確認寫在證據欄的**查**」，**複查週期／誰複查／逾期怎麼標三條條文移進 `weekly.md`**（draft B-1）。兩個 wikilink 原樣保留 |
+| L50 | 「本表每週複查一次；急性事件另見…」 | **覆寫**（draft A-4） | 與 L64「不隨時間自動回訪」當場互打（冷讀者 Q4、健檢卡第 7(2) 節第 4 項）。只能留一個真的：新句只寫「最後一次確認寫在證據欄的**查**」，**複查週期／誰複查／逾期怎麼標三條條文移進 `weekly.md`**（draft B-1）。評審 🟡-9：`[[entities/claude-code]]` 那一跳經冷讀者實測是死路（該頁關於 Harness 只有 `:856` 一行、與判定日同一天同一件事），**拿掉這一跳**，只留 `[[topics/ai-agent-safety]]` |
 | L51 | 空行 | 留 | |
 | L52–L53 | 四欄表頭＋分隔列 | **留原樣** | `skill_interest_snapshot.py:248` 把總覽頁重印區的表頭寫死成這四欄——這是本案不加第五欄的原因 |
 | L54 | 列：帳單爆了（tare） | **改寫留表**（draft A-4 第 1 列） | 症狀句一字不改；首選補連結；次選 Claude Usage Widget **移除**（verified 一-5：6 個同名專案、頁面描述對不上任何一個）改為 TokenEater（502★，macOS）；Frugal Tokens 連結 demo 站 → `dpclark4/frugal-tokens`；證據補「查 09-22，287★」 |
 | L55 | 列：context 撐爆（pxpipe） | **改寫留表**（第 3 列） | 症狀句不改；三個工具補連結，Graft 連結換 `trailhq/Graft`；證據補「查 09-22，7,426★」 |
 | L56 | 列：大 repo（graphify） | **改寫留表**（第 4 列） | 症狀句是 `skill_interest_watch.json[codebase-understanding]` 的對帳字串，一字不改；證據欄原把 🟢 與星數訊號塞同格（健檢卡第 7(1) 節第 2 項），改為「判 05-02 起多來源｜查 09-22，12.0 萬★」；括號裡「（社群實測待累積）」移進推薦細節 |
 | L57 | 列：重講一遍（brain.md） | **改寫留表**（第 5 列） | 症狀句不改；OzBrain 補「付費服務」（verified 二：Free 50／Pro $20／Max $99，頁面原未標）；證據補「查 09-22，552★」 |
-| L58 | 列：多 agent 互相覆蓋（Harness） | **改寫留表**（第 6 列） | 症狀句是 `orchestration`／`git-hygiene` 兩類的對帳字串＋`large-codebase:63` 🧰 行引用，一字不改。首選改名 `ness`（原名 Harness）＋換連結；**第二欄的分界句改寫成冷讀者要的那句**（「已經用 worktree 隔離、只差 commit 落地不打架」）——冷讀者 Q1 說第三欄才是主答案而它只有裸名字，本案給它連結 |
+| L58 | 列：多 agent 互相覆蓋（Harness） | **改寫留表**（第 6 列） | 症狀句是 `orchestration`／`git-hygiene` 兩類的對帳字串＋`large-codebase:63` 🧰 行引用，一字不改。首選改名 `ness`（原名 Harness）＋換連結；**徽章 ⌨️ → 🖥️**（評審 🟡-3：verified 第六節逐字把「L57 ⌨️ CLI vs 現版是桌面 IDE」列為同頁不一致）；**第二欄的分界句改寫成冷讀者要的那句**（「已經用 worktree 隔離、只差 commit 落地不打架」）——冷讀者 Q1 說第三欄才是主答案而它只有裸名字，本案給它連結 |
 | L59 | 列：看不到誰卡住（Omar） | **改寫留表**（第 7 列） | 症狀句是 `orchestration` 第二個對帳字串，不改；Omar 連結換 `omar-os/omar`；Cockpit → `episko`（原名 Cockpit）；證據 🟢 → **🟡**（理由：現版自述已從「TUI 儀表板管 100 個 agent」改為形式化編排，原 🟢 背書的那個宣稱在一手已不存在＝新證據，非因星數或無人回訪而降） |
 | L60 | 列：說做完了沒做（Groundtruth） | **改寫留表**（第 8 列） | 症狀句是 `testing-verification` 對帳字串＋`large-codebase:139` 🧰 行引用，不改；兩個工具補連結；證據補「查 09-22，7★」；**不換首選**，理由進推薦細節 |
 | L61 | 列：CLAUDE.md 不聽（首選 `—` 但證據 🟢） | **改寫留表**（第 9 列） | 症狀句是 `implementation-guard` 對帳字串，不改。健檢卡第 7(1) 節第 1 項：沒有工具而 🟢 在替什麼背書？證據欄改成 `—（這一列沒有工具可評，理由見細節）`；`check_tools_page` 對 `—` 開頭的首選格直接豁免，機械仍過 |
 | L62 | 列：供應商綁死（Workweave Router） | **改寫留表**（第 10 列） | 症狀句不改；連結換 `weave-os/router`；證據補「查 09-22，4,735★」 |
-| （新） | 列：**額度快用完，想在斷線前被提醒** | **新增**（第 2 列） | 主 session 代判開列。依據 `weekly.md:43`「≥2 筆獨立需求證據」：#13585 OPEN／👍 124＋#65292 not_planned＋冷讀者兩波。首選 Claude-Code-Usage-Monitor，證據 **⚪**（只有星數，誠實標）。症狀句刻意不含「帳單」 |
+| （新） | 列：**額度快用完，想在斷線前被提醒** | **新增**（第 2 列） | 主 session 代判開列。依據 `weekly.md:43`「≥2 筆獨立需求證據」：#13585 OPEN／👍 124 ＋ #65292 not_planned 兩筆官方 issue（冷讀者是內部驗收，不計入需求證據）。首選 Claude-Code-Usage-Monitor，證據 **⚪（判 09-22｜查 09-22，8,713★、07-05 後未更新）**——評審 🔴-4：只寫「查」與圖例的「兩個日期」不符，且「79 天沒更新」只寫在細節、讀者只看表會以為它活著，故把壞消息寫進格子。第三欄評審 🟡-6 的逐字版本會讓該格達 **148 字元**（上限 120，實測），改為兩個次選：跨平台且仍在更新的 `bozdemir/claude-usage-widget`（53★）與 Windows 的 `usage-monitor-for-claude`，量到 **98 字元**；CCLimitPing 解的是「解封自動續跑」不是提醒，下沉推薦細節並留在目錄 |
 | L63 | 空行 | 留 | |
 | L64 | 圖例段 | **覆寫**（draft A-4） | 三件事：①「證據等級為收錄或查證當時的判定…不隨時間自動回訪」改寫成「判／查」兩個日期的讀者語言；②末句「首選只在出現新證據時更換，不為輪替而換」是編輯守則（冷讀者內部用語表），**刪除，條文原就住 `weekly.md:19`**；③安裝徽章原樣保留（🖥️「注意平台鎖定」在新表兩處有實際對應：TokenEater 僅 macOS、usage-monitor-for-claude 僅 Windows，健檢卡第 7(1) 節第 3 項的失效就此解掉） |
 | L65 | 空行 | 留 | |
@@ -48,8 +48,10 @@
 | L74 | 條：clarp 的政策風險 | **留原樣** | 內容未被任何新事實推翻；前提是否仍成立列入 proposal 第 10 節待補查 |
 | L75 | 條：記憶類的分界 | **改寫**（draft A-4） | brain.md 504 → 552★；OzBrain 補「付費服務」與價目；VIR 那半句原樣 |
 | （新） | 條：三個首選換了門牌 | **新增** | Harness→ness／Omar→omar-os／Cockpit→episko，附「舊網址靠轉址活著」 |
+| L72（續） | 條：這一列的兩個次選 | **新增**（原 L72 的另一半） | 評審 🟡-1：原 L72 的判斷句「omnigent 無第三方實測回報，列次選、證據 ⚪」在第一輪 draft 憑空消失，本條把它整句接回，並附 09-22 的 10,150★／15.9% |
 | （新） | 條：額度告警的官方側 | **新增** | 官方只有被動可見；#13585 仍 OPEN、#65292 not_planned；出口 [[feature-radar]]（連頁不連錨，`weekly.md:20`） |
-| （新） | 條：額度告警三個工具都只有星數 | **新增** | 8,713★/07-05 停更、293★/僅 Windows、45★/解的是別的題——⚪ 的強度講給讀者聽 |
+| （新） | 條：額度告警的三個候選都只有星數 | **新增** | 8,713★/07-05 停更、293★/僅 Windows、53★/最小但最新——⚪ 的強度講給讀者聽 |
+| （新） | 條：額度告警這一列的其他選項 | **新增** | 評審 🟡-6／🟡-7：CCLimitPing 解的是自動續跑不是提醒；冷讀者自己撿到的 `agent-baton`（目錄 L236，未移除）只有 Reddit 貼文、09-22 查不到可裝的頁，寫明為何沒進三格 |
 | （新） | 條：Groundtruth 只有 7★ 為什麼還是首選 | **新增** | 回答冷讀者「⚪／小專案該不該裝」與 verified 七-1 |
 | （新） | 條：三個次選只有社群貼文、沒有可裝的頁 | **新增** | Writ／Caliber／claudely（verified 五）。誠實寫「查不到」而不是刪次選 |
 | L76 | 空行 | 留 | |
@@ -73,7 +75,7 @@
 | L139 | 類型列圖例（10 值） | **改寫**（draft A-5） | 目錄實用 **12 值**（腳本普查：`模型路由` 1 列＝L213、`UI 工具` 1 列＝L214）。補齊兩值，不做靜默重分類 |
 | L140 | 入選標準列 | **改寫**（draft A-5） | 冷讀者說這列對他有用卻用編輯台語氣寫。改寫成讀者語言，並把「沒有任何可點的連結就不列」寫進去——這是本案移除 43 列的依據面（現行 `weekly.md:39` 早有同義排除句） |
 | L141–L143 | 空行／`---`／空行 | 留 | |
-| L144 | `## 工具目錄` | **留原處，節名一字不改** | `skill_interest_snapshot.py:147` 用它算總覽頁印的「N 列工具目錄」分母；列數改變後總覽頁隔天自動改印 112 |
+| L144 | `## 工具目錄` | **留原處，節名一字不改** | `skill_interest_snapshot.py:147` 用它算總覽頁印的「N 列工具目錄」分母；列數改變後總覽頁隔天自動改印 113 |
 | （新） | 目錄表前一句 | **新增** | 「每一列都點得進去，最早到 2026-04；採用符號與證據是兩條不同的軸」 |
 | L146–L147 | 目錄表頭＋分隔列 | **留原樣** | `| 首次出現 |` 是 `review-registry.json:103` 的凍結錨點 |
 | L148–L299 | 目錄 152 列 | 見下方分組 | |
@@ -95,15 +97,15 @@
 | **改寫**（逐列見下） | 10 | L201、L202、L205、L208、L213、L270、L274、L275、L279、L286 |
 | **倒序移位**（內容不改，只換位置） | 6 | L158（09-16 排在 L157 的 09-11 之下）、L188、L190、L195、L207、L209——違反 `weekly.md:15`「依日期倒序」，全表重排後 20 行的相對位置改變 |
 | **移除** | 43 | 見下方逐列 |
-| **新增** | 3 | 額度告警那一列的三個工具（usage-monitor-for-claude／Claude-Code-Usage-Monitor／CCLimitPing），首次出現欄填 2026-09-22、簡介末標「來自讀者提問」 |
+| **新增** | 4 | 額度告警那一列的四個工具（usage-monitor-for-claude／Claude-Code-Usage-Monitor／CCLimitPing／claude-usage-widget），首次出現欄填 2026-09-22、簡介末標「來自讀者提問」 |
 
-**152 − 43 ＋ 3 ＝ 112 列。**
+**152 − 43 ＋ 4 ＝ 113 列。**（實測；重排後倒序違規 0）
 
 ### 改寫的 10 列
 
 | 行 | 改什麼 | 依據 |
 |---|---|---|
-| L201 | Frugal Tokens 連結 `demo.frugaltokens.com` → `github.com/dpclark4/frugal-tokens` | verified 三：demo 站只剩標題，主站 301 轉址 |
+| L201 | Frugal Tokens 連結 `demo.frugaltokens.com` → `github.com/dpclark4/frugal-tokens`（評審 🟡-13：draft 已改成可直接貼上的整列，其餘四格逐字沿用；L202／L213 同） | verified 三：demo 站只剩標題，主站 301 轉址 |
 | L202 | Graft 連結 `NanoNets/Graft` → `trailhq/Graft`；補 8,994★／09-22 仍活躍 | verified 二；**⚠️ 效果存疑維持不變**——⚠️ 針對的是「42% 未經第三方覆核」，這一層無新證據 |
 | L205 | omnigent 星數 9,080 → 10,150、forks 14.7% → 15.9% | verified 二 |
 | L208 | Cockpit → **episko**（原名 Cockpit），連結 `episko.dev` → `github.com/respeak-io/episko`，補 v0.30.0 | verified 三 |
@@ -116,13 +118,19 @@
 
 ### 移除的 43 列（同一條理由，逐列列出行號）
 
-**理由（全部同一條）**：整列沒有任何可點的連結，讀者拿到名字裝不了東西、也查不了死活。這不是新規則——`weekly.md:39` 現行排除條款第一句就是「無公開 repo / demo / 連結」不收錄，這 43 列是該條立法前的存量。決策表首選／次選豁免（`weekly.md:42`），故 L270 claudely、L279 Caliber 留，L275 graphify 改為補連結而非移除。
+**理由（全部同一條）**：整列沒有任何可點的連結，讀者拿到名字裝不了東西、也查不了死活。**依據是本波同批立的 `weekly.md` 4b 條**——它把現行 L39 的排除條款（那是策展步驟 2 收**新**工具的入口條件，不是退場條文）回頭適用到存量列，並寫明與第 4 條的分工：第 4 條管「還在不在被人用」（❌／>30 天仍 ⏳），4b 管「讀者點不點得進去」，兩者各自獨立成立即可移出。第一輪寫成「不是新規則」是錯的（評審 🟡-2）。決策表首選／次選豁免（`weekly.md:42`），故 L270 claudely、L279 Caliber 留，L275 graphify 改為補連結而非移除。
 
 L238（Claude Usage Widget，同時是 L54 次選——verified 一-5 判定不可辨識，故不適用豁免）、L245、L246、L247、L248、L249、L250、L251、L252、L253、L254、L255、L257、L258、L259、L260、L261、L262、L264、L265、L266、L268、L269、L271、L272、L273、L277、L278、L281、L282、L283、L284、L285、L287、L288、L289、L290、L292、L293、L294、L295、L296、L299。
 
-**每一列另有出處（機械核對，43／43 全數命中）**，抽樣：L238 → `community-tech-patterns-archive:793`；L255 awesome-ux-skills → `community-tech-patterns-archive:898`；L258 recap → `wiki/log.md:2043`＋本頁副作用節；L273 Pilot Shell → `coding-workflow-guide:471／475`；L281 Throttle Meter → `official-community-gap:78`＋`code-quality-decline-archive:51`；L283 Mneme → `community-tech-patterns-archive:651`＋本頁副作用節；L285 Trent → `entities/claude-security:69`＋`community-tech-discussions:730`；L296 OpenCode-power-pack → `wiki/index.md:62`；L299 CC-Canary → `entities/claude-code-archive:61`。**沒有任何一列是某事實的唯一的家**，git history 另留全文。
+**每一列另有出處（機械核對，43／43 全數命中；評審複核時 L257「/qu /ans 跨 session 插件」要以別名 `/qu /ans` 才重現，命中 `claude-code:827`、`patterns-archive:909`、`log.md:4127`）**，抽樣：L238 → `community-tech-patterns-archive:793`；L255 awesome-ux-skills → `community-tech-patterns-archive:898`；L258 recap → `wiki/log.md:2043`＋本頁副作用節；L273 Pilot Shell → `coding-workflow-guide:471／475`；L281 Throttle Meter → `official-community-gap:78`＋`code-quality-decline-archive:51`；L283 Mneme → `community-tech-patterns-archive:651`＋本頁副作用節；L285 Trent → `entities/claude-security:69`＋`community-tech-discussions:730`；L296 OpenCode-power-pack → `wiki/index.md:62`；L299 CC-Canary → `entities/claude-code-archive:61`。**沒有任何一列是某事實的唯一的家**，git history 另留全文。
 
 **連帶**：L281 Throttle Meter 被 `official-community-gap:78` 引用為代表社群工具、L278／L238 與額度告警同題——三者的功能都由新開的「額度快用完」列以**點得進去的**工具接手；OCG 那一句的處置走跨維護者轉知（proposal 第 7 節第 2 筆），本波不改別人的頁。
+
+## 對象頁以外的連帶改動（評審 🔴-3）
+
+| 檔：行 | 現況 | 去向 |
+|---|---|---|
+| `data/skill_interest_watch.json:121`（`orchestration` 的 `caveat`） | 逐字寫「決策表首選 Harness＝frenchie4111/harness…」，`skill_interest_snapshot.py:249–250` 每天原樣印進總覽頁 `:196` | **整串替換**（逐字見 draft B-0）。本頁砍掉 L71 同名提醒後若不同批改它，改名隔天就被機器頁重印成過期字串。`weekly.md:29` 明訂社群記者維護的就是這個設定檔，不是機器頁本身 |
 
 ## 若使用者裁「併」（tools 的決策表 ↔ SIW 的逐字副本）
 
