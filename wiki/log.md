@@ -6714,3 +6714,5 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 摘要：GitHub Issues 湧現多則高互動 Claude Code 已知問題（CVP 誤擋、終端機複製多餘縮排、Termux/Android glibc 破壞性回歸、專案知識庫整合請求）與一起已修復的多模型錯誤率升高事故；安全政策面 Dario Amodei 將簡報聯合國安理會、Anthropic／OpenAI 陳情澳洲放寬訓練禁令、反壟斷合謀集體訴訟曝光原告身分、Anthropic 官方發布研發步調量測方法論、MaxKB／AWS AgentCore／Jev 三則提示注入風險並陳
 - 呈現品質：全部通過（六記者機械自查（字元上限／讀者語言／callout 涵蓋）與 1 次分類複核全數通過；安全政策、功能記者過程中各有暫時性 FAIL（讀者語言用詞、懸置標記語法）已自行改寫修復並重跑確認）
 - 分類回退：3 筆回報，皆未追加派工——Tell HN 合約簽署事件（社群→安全政策）與 Palo Alto Networks 資安服務（安全政策→商業）兩筆原輪雙重分類已收到；Simon Willison 介紹 Jev 部落格文（社群→安全政策）經核對與 Claude/Anthropic 無直接關聯且非 Topic Watch 通道，安全政策記者自身回報亦未主動請求此則（其 Jev 提示注入故事已由已定向抓取的 VentureBeat 條目獨立完整覆蓋），理由不成立不派
+- devpractice 沉澱：候選 5 筆（entities/claude-code #37394 額度異常第三個獨立 issue、topics/community-tech-patterns 新增 Foremerge、topics/community-tech-tools 三個首選工具改名＋新增「額度快用完斷線前提醒」決策列、topics/official-community-gap 花費估不準新段落）
+- market 判讀：判讀 1 則（反壟斷合謀訴訟原告身分曝光，四名消費者訂閱戶集體訴訟，加訊既有 09-19 待查證項並更新 Alphabet/GOOGL 判讀計數，回顧結算 ⏳ 新增一列 2026-10-06）／其餘條目逐一套六類判準後判定材料性不足未寫入
