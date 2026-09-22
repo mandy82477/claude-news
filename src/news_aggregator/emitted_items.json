@@ -4387,7 +4387,7 @@
   "https://vellum.blueprintr.io": {
     "first_emitted": "2026-09-21",
     "score_at_emit": 18,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/mathaix/claramap-builder": {
     "first_emitted": "2026-09-21",
@@ -4597,276 +4597,276 @@
   "https://github.com/jangviktor-web/nihaixia": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 3005,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/viettranx/3dviz-pro-max": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 507,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/84352#220221748f286f70": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 199,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/18170#69c11b83ff006a3f": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 136,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://status.claude.com/incidents/7g1qpkyz5gxh": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 136,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/50270#18dfd0c214a9dd88": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 70,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/23134#300db493636436f8": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 51,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/2511#69b6389b9dca2aef": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 51,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/naw103/foremerge": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 44,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.ycombinator.com/item?id=49798257": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 39,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.tomshardware.com/tech-industry/big-tech/anthropic-openai-spacexai-and-google-face-antitrust-lawsuit-for-agreeing-to-slow-ai-development-plaintiffs-say-plan-has-been-in-motion-for-months-before-calls-agreement-self-serving": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 32,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.praxos.ai": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 7,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://gcm.echorelay.net": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 5,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.ycombinator.com/item?id=49802378": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://drivingbench.com": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.ycombinator.com/item?id=49802729": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 2,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://whami.app": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/a-lottes/aSPARK": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wnd3t1/i_wonder_did_code_write_the_plan_config_page": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/institute/measuring-pace-of-ai-development": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wnchdk/max_x5_usage_limits": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://tech-insider.org/claude-code-vs-codex-vs-gemini-cli-2026": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wnbkvg/you_cant_vibe_code_your_way_to_understanding_the": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wnb559/share_your_protips_to_a_beginner": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wnaoox/where_is_opus_55_and_the_reset": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wna373/claude_usage_limit_hits_after_only_1520_seconds": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://finance.yahoo.com/technology/ai/articles/palo-alto-networks-unveils-ai-133647470.html": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.bloomberg.com/news/articles/2026-09-22/anthropic-ceo-dario-amodei-to-brief-un-security-council-on-ai": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://the-decoder.com/xiaomis-affordable-flagship-ai-leads-the-open-models-and-anthropic-says-claude-helped-get-it-there": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://thenextweb.com/news/anthropic-openai-australia-ai-training-copyright": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.techspot.com/news/113937-engineer-claude-code-has-made-job-soul-sucking.html": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://suaragarut.id/en/anthropic-resolves-claude-ai-outage": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://tech-insider.org/claude-fable-5-1-api-setup-2026": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.sbs.co.kr/amp/news.amp?news_id=N1008766479": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://mixed-news.com/en/tencent-gander-duplex-voice-agent-codex-claude-code": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://cyberpress.org/critical-maxkb-ai-agent-flaw?amp=1": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reuters.com/legal/litigation/anthropic-openai-call-australia-relax-ban-training-ai-models-2026-09-22": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.fool.com/investing/2026/09/22/got-fill-in-dollar-amount-2-magnificent-ai-cloud-s": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.britannica.com/money/Anthropic-PBC": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://finance.yahoo.com/healthcare/articles/novo-nordisk-partners-anthropic-bring-014854957.html": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://simonwillison.net/2026/Sep/21/jev": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.theregister.com/security/2026/09/21/anthropic-linked-cves-pile-up-attackers-mostly-shrug/5298018": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://venturebeat.com/security/companies-are-putting-jev-in-charge-of-ai-agent-decisions-and-prompt-injection-can-influence-the-verdict": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://thenewstack.io/grok-build-vs-claude-code-memory": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://adtmag.com/articles/2026/09/21/claude-code-turns-software-development-into-a-management-job.aspx": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://builtin.com/articles/claude-code-vs-google-gemini-spark": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://wccftech.com/metas-muse-agent-sparks-claude-code-moment-for-cpus-as-401-cpu-to-gpu-ratio-poised-to-reshape-intel-amd-and-arms-fortunes": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://mixed-news.com/en/claude-code-stops-charging-auto-mode-safety-checks-agents-md": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.bloomberg.com/news/articles/2026-09-21/startups-like-harvey-embrace-open-models-to-cut-reliance-on-anthropic-openai": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.infoworld.com/article/4224410/claude-code-now-also-accepts-instructions-in-openais-agents-md-format.html": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://devops.com/claude-code-adds-agents-md-fallback-cutting-instruction-file-sprawl": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://mixed-news.com/en/claude-in-chrome-sessions-compliance-api-enterprise-beta": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://abcnews.com/GMA/News/anthropic-blocked-potential-ai-bioweapon-misuse/story?id=136351654": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.cloudcomputing-news.net/news/aws-agentcore-prompt-injection-credential-risks": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.theinformation.com/articles/openai-anthropic-neared-deal-stress-test-others-ai": {
     "first_emitted": "2026-09-22",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   }
 }
