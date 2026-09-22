@@ -825,3 +825,12 @@ ABORTED: digest already exists - news/2026-09-20.md 已由前一班（17:02 UTC�
 [週2 2026/09/22 12:12:29.00 UTC] ABORTED: gathered_items.json date=2026-09-21 items=54，非目標日期的新鮮資料（archive 尚無 src/gathered_archive/2026-09-22.json，GitHub Actions 抓料未到齊，交下一班（17:00/22:00 UTC）接手）
 [週2 2026/09/22 12:12:29.00 UTC] === Pipeline complete (agent, aborted) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-09-22T17:07:35Z]
+[週2 2026/09/22 17:43:44.00 UTC] === Agent pipeline start (2026-09-22) ===
+[週2 2026/09/22 17:43:44.00 UTC] Aggregator OK
+[週2 2026/09/22 17:43:44.00 UTC] Wiki ingest OK
+[週2 2026/09/22 17:43:44.00 UTC] Building web reader...
+[週2 2026/09/22 17:43:44.00 UTC] 測試失敗含未登記案例（讀者語言閘 — 1 筆新增的內部用語外洩）- web build 擋下
+[週2 2026/09/22 17:43:44.00 UTC] REPAIRED: topics/skill-interest-watch.md:157「shadcn-ui/lint」誤判為內規外洩詞，登記 data/reader-language-allow.json 例外後重跑通過
+[週2 2026/09/22 17:43:44.00 UTC] 測試全綠 - web build 放行
+[週2 2026/09/22 17:43:44.00 UTC] Single push done (news + wiki + web)
+[週2 2026/09/22 17:43:44.00 UTC] === Pipeline complete (agent) ===
