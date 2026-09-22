@@ -30,22 +30,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-22
+**最後新聞更新：** 2026-09-22
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **放緩呼籲的反彈聲浪擴大**（2026-09-17）
-> 放空名將 Michael Burry 批評 Amodei 與 OpenAI 高層的減速呼籲是「自利」之詞；NYT 同日刊出分析其文章如何形塑外界 AI 恐懼。
+> **將向聯合國安理會簡報 AI 風險**（2026-09-22）
+> Bloomberg 報導 Amodei 預定向聯合國安理會簡報 AI 風險；僅標題可用，簡報時間與具體內容未見報導。
 
 ---
 
 ## 現況
 
-2026-09-17，知名放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 等公司高層的 AI 減速呼籲是「自利」之詞，加入既有反彈陣營，完整脈絡見 [[entities/michael-burry]]。同日 The New York Times 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題可用）；另有 Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，具體內容與因果未見報導（僅標題）。
+2026-09-22，Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險；僅標題可用，簡報時間與具體內容未見報導。
 
-2026-09-15，Dario Amodei 於 Dreamforce 現場重申全球 AI 減速呼籲，與同場 Nvidia 執行長黃仁勳主張加速形成對比（The Guardian）；黃仁勳同時批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」，完整交鋒見 [[entities/jensen-huang]]。隔日，Meta 執行長 Mark Zuckerberg 在 AI 減速辯論中公開點名批評 Anthropic（The New York Times，僅標題）。
+2026-09-17，知名放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 等公司高層的 AI 減速呼籲是「自利」之詞，加入既有反彈陣營，完整脈絡見 [[entities/michael-burry]]。同日 The New York Times 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題可用）；另有 Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，具體內容與因果未見報導（僅標題）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；惟 Dario 本人與白宮的信任關係修復與否，尚無報導確認。
 
@@ -103,6 +103,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Anthropic CEO Dario Amodei to Brief UN Security Council on AI Risks](https://www.bloomberg.com/news/articles/2026-09-22/anthropic-ceo-dario-amodei-to-brief-un-security-council-on-ai) — Google News／Bloomberg，2026-09-22（僅標題可用）
 - [How Anthropic CEO Dario Amodei's Writings Help Explain A.I. Fears](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbjdsMmVOalo4al9nOGNOMzl6ZTNwLUFHVzZlN3Ayd1ZUMkhReU4wZ0Y0X05hbnpoWldIQ0ZReUdoNVA5MTRBQUs2ZzZISU56X1dQbTIzRVQ2ZWpHeW5NVDZsdFRyMG9RWDBoYjNmNGU1ckxlNUtsRFo1dy02dlowVlZZWVRBamhHOWtF?oc=5) — Google News／The New York Times，2026-09-17（僅標題可用）
 - [SpaceX Investors Just Got Some Bad News From Anthropic Founder Dario Amodei](https://news.google.com/rss/articles/CBMimAFBVV95cUxOX1FTbUlTeHZFbVppZVRkYUtlXzZGVDNfbFFmU2pqbG1Tai1Ra0g3cTItaVMyX0pnaktabVduWWFFTDhsZFhuZ0hOMUkxamFtM2RibnZtWThuRlVJcGxuVkRVSk1COHJxRkowMVl5TEVnOVdXNUtrZk5taXJ6NllpeDBfWE9oOGk2YnFWSGFXZ2FoNWxuRlVXag?oc=5) — Google News／Yahoo Finance，2026-09-17（僅標題可用；無正文，因果未知）
 - [Mark Zuckerberg Takes Aim at Anthropic in Debate Over A.I. Slowdown](https://news.google.com/rss/articles/CBMijwFBVV95cUxNbDdJR2JuaHlmNmNBV3BFUDN1WVh6amQzM0VnWUcwLUl5MVFzaUJDMlBSQkNEeUhSSG1ZcjIya21VSWh5TXQ4dll4X0pHRE1BeUl3V3dydTctWEtRU0ZYQmE4V3BkcVM4VHV6MzdKVy1mNWE0WUtidXRubkFLZmxIRVFKblBEZ3NwczBLQ1habw?oc=5) — Google News/The New York Times，2026-09-16（僅標題可用）
@@ -135,6 +136,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-09-22：Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險（僅標題可用）（來源：Google News／Bloomberg）
 - 2026-09-17：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，詳見 [[entities/michael-burry]]（來源：Hacker News／New York Post）
 - 2026-09-17：NYT 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題）（來源：Google News／The New York Times）
 - 2026-09-17：Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，因果未見報導（僅標題）（來源：Google News／Yahoo Finance）
