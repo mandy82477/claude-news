@@ -1,0 +1,101 @@
+# 第 16 波設計提案：topics/community-large-codebase-workflow
+
+使命句（主 session 代判，健檢卡 A）：**大 repo 上撞的四面牆，社群現在怎麼組做法、做到哪、還缺什麼；官方零件在哪一頁。**
+逐字稿 `lcw-2026-09-23-draft.md`，逐行去向 `lcw-2026-09-23-proposal-map.md`。官方事實只取 `lcw-2026-09-23-verified.md` 已錨的句子；行號一律用檔案原始行號（健檢卡口徑）。
+
+## 1. 推薦案（一個）
+
+**骨架不動，每條線「現在的答案」的第一條改成「官方已給」，並把鄰居已撤回、已判錯、已數到下一波的句子拿下來。**
+
+根因（健檢卡第 8 節、冷讀者「最想改」第 1 條）：四條線只有社群半邊。讀者先不知道官方給了什麼，就讀不懂社群在官方之上補了什麼——Qa 的「官方支不支援 worktree」、Qc 的「auto memory 夠不夠」、Qf2 的「20 路是什麼的 20」三題都卡在這裡。四件事同時做：
+
+1. **每線首條「官方已給」**（新 L59／L84／L111／L137），連頁不連錨：
+   - 線 1 → `claude --worktree`、`isolation: worktree`（verified §一-1，官方文件直連）；何時該隔離指 [[topics/anthropic-agent-stack]]，monorepo 只取需要的目錄指 [[topics/coding-workflow-guide]]（guide L253 `worktree.sparsePaths`）。
+   - 線 2 → `--bare` 跳過哪些自動載入（verified §一-4，headless 文件直連，全庫無家）；`/context` 與讀取上限指 [[topics/coding-workflow-guide]]。
+   - 線 3 → auto memory 前 200 行／25KB、「是 context 不是強制設定」（verified §一-5、§三 Q3）；分層指 [[topics/coding-workflow-guide]]（guide L195–L204）。
+   - 線 4 → 要 Claude 出示證據、`/goal`、Stop hook，指 [[topics/coding-workflow-guide]] 第 9 段（只轉述 guide 既有內容，不另引官方原文）。
+   放在「現在的答案」層內當首條條列，不另開一層：四層骨架與 ≤30 行契約不動（改後 22／24／23／22 行，實測）。
+2. **L65「官方 20 路」拆成兩個一手、寫明是上限**：Claude Code 一個 session 預設同時 20 個 subagent、可調（verified §一-2）；Managed Agents 最多 20 個子代理（managed-agents L89）。句首直說「開得出幾個和跑得穩幾個是兩回事」。
+3. **與 guide L287 的互斥寫成一句**（新 L163，目前結論）：「自己加讀取上限」「已否決方案索引」guide 不再推薦、社群仍有人做或在要；分界是那頁只收官方機制撐得起的做法、本頁記社群走到哪。兩條因此從 L83／L111「現在的答案」拿下，只留在子問題表（L95、L128），另開轉知 C-1 請功能記者確認 L287 前提仍成立。
+4. **把錯的、漏的、過期的修掉**：⟨Q-01⟩⟨Q-03⟩ 併一筆並降為「官方證實 fork 繼承父對話；累積與 200 萬為社群推論與單一觀察」（L65／L70／L89／L99 四句三種狀態收成一種）；補兩則漏接料（147 subagent＝patterns L709 帶 tag 未進頁、hcom＝patterns L301 任務脈絡互通第二例）；「第三波」「今日首見」「32 天 6 個」「學術重現」拿掉；三個跨頁星數刪掉改指 tools；L141 與 L139 互斥改寫；代表實作與證據強度修到 **28/28**。
+
+## 2. 不選的方向（各一行）
+
+- **官方句放進 🧰 行**：`check_tools_page.py:97` 把 🧰 行上所有「」都當症狀句對帳（`:101–102` 報失效），官方句一帶引號就紅；且 🧰 行的家是 tools 決策表。
+- **另開第五層「官方給了什麼」**：動骨架；健檢卡第 8 節「骨架別動」。
+- **拆「跨 session 記憶：官方 vs 社群」子頁**：健檢卡拆子頁候選 0（第 2 節兩候選皆 2/3，①不亮）。
+- **把 09-20～09-22 帶 tag 的三則（Foremerge、Chief of Staff、aoci-code）也補進來**：它們是下次週更整線重寫的正常料，不是漏接；混進來會讓本波的 callout 同時講兩件事。
+- **把 cqd「怎麼自己量一次」當線 2「怎麼量 context」的家**：冷讀者實測 `code-quality-decline.md:68` 量的是 token 與模型、不是 context 組成（健檢卡第 9 節校準 1）；改為分流「同 session 變笨 → discussions、換版本變差 → cqd」。
+- **本頁寫 verified 的新星數（loopx 5,925★、graphify 120,564★、brain.md 552★）**：跨頁數字的家是 tools；tools L213 的 loopx 仍 4,476 星、舊 owner，屬 tools 下次策展。
+- **保留 ⟨Q-nn⟩ 短標記**：三筆都已查證卻用懸置語法，冷讀者逐字點名（`wave16-cold-reader:98`）；降為普通條列不影響任何基線（第 6 節）。
+
+## 3. 可行性前提（一行）
+
+四個 `### N.` 標題一字不改（`community-tech-patterns.md:903` 錨進線 1 標題）、四條 🧰 行七個「」症狀句一字不改（`check_tools_page.py:94–102`）、`**還沒解決**` 標籤不改（`weekly.md:100` 的 `wiki_graph.py sections "還沒解決"` 在 `wiki_graph.py:288–289` 做子字串比對）——本案三者皆未動。
+
+## 4. 新骨架
+
+| 節 | 一句用途 | 行數（原→新） |
+|---|---|---|
+| 標頭＋callout | 讀者拿到的新事實：四件官方零件、20 是上限 | 11 → 11（L27–L37） |
+| `## 摘要`＋摘要表 | 四面牆＋四鄰分工（agent-stack／guide／tools／patterns）；表兩列同步 | 10 → 10（L41–L50） |
+| 線 1 並行規模 | 官方已給＋3 條；補 147 subagent、hcom、Merge Queue 工具名 | 21 → 22 |
+| 線 2 Context／Token | 官方已給＋3 條；拿掉讀取上限；分流 discussions／cqd | 23 → 24 |
+| 線 3 索引與記憶 | 官方已給＋2 條（「已否決」移出）；還沒解決壓成兩句 | 23 → 23 |
+| 線 4 除錯與分工 | 官方已給＋3 條；論文打折一句；L141 互斥解掉 | 21 → 22 |
+| `## 目前結論` | 2 條現況＋互斥句＋你的選項＋接下來看什麼；「查過的數字」兩筆（原三筆） | 16 → 16（L156–L171 → L159–L174） |
+| 相關實體＋參考來源 | 補 archive、tools、guide、OCG、cqd；維運說明進 `%% %%` | 12 → 18（L175–L186 → L178–L195） |
+
+**186 → 195 行**（scratchpad 實測）。
+
+## 5. 誰看守什麼（附行號；沒有腳本的寫「無看守」）
+
+| 契約 | 看守 |
+|---|---|
+| 🧰 行症狀句與 tools 決策表逐字一致 | **有**：`check_tools_page.py:75–102`（`check_spokes`） |
+| 表格格 ≤120、條列 ≤200 字元 | **有**：`check_cell_limits.py:50–51`、`:176–197`；本頁基線 0 筆，任何命中都算新增 |
+| 37 個維運禁詞 | **有**：`check_reader_language.py:51`（TERMS）、`:276`（scan） |
+| 「節點」「本輪」「沉澱」「懸置」「查證日」 | **無看守**：不在 TERMS；實測注入「本節點…本輪無新增節點」只抓到 lint／記者 |
+| 每線 ≤30 行、首條「官方已給」、≤3 條、代表實作 ≤3、證據五值、callout ≤2 句 | **無看守**（本波自驗用 scratchpad 腳本，不進 `run_tests.py`） |
+| 懸置短標記 | `pending_markers.py:46–48` 只認帶 ❓／🔎 的 ⟨Q-nn⟩，本頁三個皆不計 |
+
+## 6. 閘：我自己跑過的結果
+
+**現行基線（動手前，對象頁）**：`check_cell_limits` 基線內 0 筆、無新增；`check_reader_language` 基線內 0 筆、無新增；`check_tools_page` ✅；`check_pending_markers` 119 筆（基線 106）。
+
+**draft 頁面部分整份套進 scratchpad 副本後**（wiki 未動；round-trip：draft A 區逐塊套回原檔，與副本逐字相同）：
+
+| 閘 | 改後 | 說明 |
+|---|---|---|
+| 每線行數 | **22／24／23／22**（≤30） | 原 21／23／23／21 |
+| 代表實作 ≤3／證據五值 | **28/28、28/28** | 原 23/28、21/28（健檢卡第 3 節）；無看守 |
+| `check_cell_limits.scan()` | **0 筆** | 最長條列 191 字元（線 1 官方已給，首版 217 已砍）、最長格 102 |
+| `check_reader_language.scan()` | **0 筆** | 注入「記者每週 lint」→ 2 命中，閘會紅 |
+| `check_tools_page.check()`／`check_spokes()` | `[]`／`[]` | 七個症狀句全在決策表 |
+| 懸置標記 | 全庫 **119 → 119** | **不是主 session 代判的 118**：本頁 `iter_pending` 改前改後皆 0（短標記無 ❓／🔎）；`iter_legacy` 1 → 0（原 L171 為 short_marker 豁免，不在 40 筆內） |
+
+**驗紅（spoke）**：副本 L142 把「它說做完了，但根本沒做」改成「它說做完了，其實沒做」→ `check_spokes()` 回 `spoke 引用失效 community-large-codebase-workflow.md:142：「它說做完了，其實沒做」不在決策表症狀欄`。紅在 `check_tools_page.py:97`（抓出「」）→ `:101`（不在 symptoms 集合）→ `:102`（append 失敗），`main()` 在 `:126–130` 印 ❌、exit 1。注入 125 字元儲存格 → cell 閘命中 1。
+
+**我保住的症狀句清單**（L64／L89／L115／L142）：「多個 agent 在同一 repo 互相覆蓋」「一堆 agent 在跑，看不到誰卡住」「context 一直被工具輸出撐爆」「帳單爆了，看不到錢花在哪」「接手沒碰過的大 repo，agent 讀不懂」「每開新 session 都要重講一遍」「它說做完了，但根本沒做」。
+
+## 7. 規則檔與轉知
+
+**進規則檔（draft B 區，全是條文、頁面只留一句讀者語言）**：B-1 骨架首條「官方已給」（`weekly.md:89`）；B-2 🧰 行「」只放症狀句（`:96`）；B-3 撈料窗改「上次最後更新日之後」＋去 archive 找名字（`:83`；根因：09-03 與 09-12 兩次重寫間隔 9 天，7 天窗漏掉 09-04 的 147 subagent——健檢卡第 4 節，推論）；B-4 代表實作「等，見真正住的頁」＋證據一格一值（`:105`）；B-5 星數不上頁、「已成趨勢」60 天降級、禁「今日／本輪／第 N 波」、查過的數字不用短標記、callout 禁「節點／本輪」、摘要表欄名改正（`:106–:108`；原條文寫的「目前收斂點」欄不存在）；B-6 tag 判準反例進 `daily.md:71` 之後（判準的家在 daily）。
+
+**轉知 5 筆**（`pending_handoffs.py open`，完整參數見 draft C 區）：C-1 功能／guide L287 前提是否仍成立；C-2 功能／guide 缺 `--bare` 與「變笨先看 `/context`」；C-3 功能／agent-stack 缺 subagent 20 上限與 worktree 指令；C-4 功能／claude-code L502 vs L821 互斥；C-5 社群／cqd 與 discussions 的分界（冷讀者分不出的那兩頁）。
+
+**只記 log、不轉知**：併筆與降級、兩則漏接料、`claude-code:197` 的 🔎 與新措辭一致無需動；tools L213 loopx 過期、trends L37「本輪」／L99「第三波」屬同維護者下次策展。**主編自理**：`index.md:102` 本頁那列的「節點證據」。
+
+## 8. 仍需補查（本案沒有它也能上）
+
+1. `/context` 的官方逐字（verified §三 Q2「本波未逐字抓」）——本案只寫「看得到啟動時載入了什麼」，不寫它顯示各塊佔多少。
+2. L61「先在 10–20 個驗證、每倍增重驗」的出處（archive L240，健檢卡第 6 節「需查」）——本案降為「社群的崩潰分析建議」的選項語氣。
+3. 「已成趨勢 60 天降級」與「節點／本輪」禁詞都**無看守**；最小方案是把後者加進 `check_reader_language.py` TERMS 並走存量基線，本波不做（改 script 屬另一波）。
+
+最後一行（原樣抄，四支閘對現行 wiki，依序 `check_tools_page` → `check_cell_limits --page` → `check_reader_language --page` → `check_pending_markers`）：
+```
+狀態：✅ 數字皆帶日期、首選皆唯一、全站 🧰 spoke 症狀句對帳通過
+OK: 字元上限機械閘 — 無新增超限
+OK: 讀者語言閘 — 無新增命中
+狀態：✅ 懸置標記語法檢查通過
+```
