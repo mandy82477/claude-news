@@ -3,15 +3,15 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-19"
-last_news_update: "2026-09-19"
+last_updated: "2026-09-23"
+last_news_update: "2026-09-23"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 1
 inbound_links: 33
 attribution_count: 3
 attribution_last: "2026-09-19"
