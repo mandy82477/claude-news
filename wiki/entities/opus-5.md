@@ -27,20 +27,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Opus 5
 
 **類型：** model
-**狀態：** active（現行次旗艦；前代 Opus 4.8 已列 Legacy）
+**狀態：** active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新動態**（2026-09-21）
-> 單一部落格傳聞 Opus 5.5 將於週二發布、降價 20%；僅標題可用，尚待查證。
+> **最新動態**（2026-09-23）
+> Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 官方改列 Legacy，仍可用。09-21 傳聞的「Opus 5.5 週二發布、降價 20%」已由本次官方發布證實方向一致（牌價確實降 20%），細節見下方 ⟨Q-04⟩。
 
 ---
 
 ## 現況
 
-Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]。兩代同價，Opus 5 的知識截止晚四個月。它在 Max、Team premium、Enterprise 隨用隨付與 API 上是預設的 Opus，但 Claude Code 的整體預設仍是 Sonnet。
+**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。
+
+Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]，與 4.8 兩代同價、知識截止晚四個月，曾是 Max、Team premium、Enterprise 隨用隨付與 API 上預設的 Opus，Claude Code 的整體預設則一路是 Sonnet。
 
 自 2026-07-24 上線以來（截至 2026-09-07），社群累積的絕大多數是單一使用者觀感、沒有一則附測試方法或數字——例外見下方「這些數字之外」的 GitHub #77136（123 則留言、565 個反應，09-20 查證）與 [[topics/code-quality-decline]] 已查證屬實的 GitHub #80988；官方那側公布了四個基準數字。兩邊各是什麼證據見下方「這些數字是誰量的」。牌價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
@@ -52,7 +54,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 | 這一格 | Opus 4.8（Legacy） | Opus 5（現行） | 官方出處（查證日） |
 |---|---|---|---|
-| 現在誰是預設 | 否，官方請你遷移到 Opus 5 | 是——但只是「預設的 Opus」；Claude Code 的整體預設仍是 Sonnet | 官方 What's new W30、說明中心（2026-09-07）|
+| 現在誰是預設 | 否，官方請你遷移到 Opus 5 | 曾是「預設的 Opus」，2026-09-23 起已由 [[entities/opus-5-5\|Opus 5.5]] 接手；Claude Code 的整體預設仍是 Sonnet | 官方 What's new W30、說明中心（2026-09-07）；預設異動查證（2026-09-23）|
 | 牌價（輸入／輸出，每百萬 token）| $5 ／ $25 | $5 ／ $25（同價）| 官方模型總覽頁（2026-09-07）|
 | 知識截止 | 2026-01 | 2026-05（晚四個月）| 官方模型總覽頁（2026-09-07）|
 | 會不會停掉 | Legacy，退役**不早於 2027-05-28** | 退役**不早於 2027-07-24** | 官方模型總覽頁（2026-09-07）|
@@ -133,6 +135,7 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 ## 相關議題
 
+- [[entities/opus-5-5]] — 2026-09-23 起接手預設 Opus 的現行世代
 - [[entities/fable-5]] — 現任旗艦；官方說法是「Opus 5 調高 effort 仍不夠時」才換過去
 - [[entities/opus-4-8]] — 前代次旗艦，現為 Legacy；它現在還在當誰的 fallback
 - [[entities/mythos]] — 同權重的無護欄版，資安任務上仍領先 Opus 5
@@ -182,6 +185,8 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 - [[news/2026-09-18]]
 - [Google News/Pasquale Pillitteri：Claude Opus 5.5 Leak Points to 20% Lower Prices and a Tuesday Launch](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)（2026-09-21）
 - [[news/2026-09-21]]
+- [Claude Opus 5.5 官方發布文](https://www.anthropic.com/claude-opus-5-5)（2026-09-22，完整記錄見 [[entities/opus-5-5]]）
+- [[news/2026-09-23]]
 
 ## 歷史記錄
 
@@ -189,7 +194,8 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-21 | 傳聞：Opus 5.5 週二發布、降價 20% ❓待查證⟨Q-04⟩ |
+| 2026-09-21 | 傳聞：Opus 5.5 週二發布、降價 20% ❓待查證⟨Q-04⟩｜訊 2026-09-23 |
+| 2026-09-23 | **Opus 5.5 正式發布**，取代 Opus 5 成為預設 Opus，Opus 5 改列 Legacy；完整記錄見 [[entities/opus-5-5]] |
 | 2026-09-18 | 資安新創 Hacktron AI 揭露：Opus 5 上線首日即做出前代做不到的 ARM64 exploit，同手法後續用於存取 OpenAI 內部系統 |
 | 2026-09-17 | Reddit r/artificial 週熱門：Opus 5 與 4.8 能力落差不均勻（「參差」）討論，無具體案例或分數 |
 | 2026-09-16 | Reddit 週熱門稱 Opus 4.6 為「使用兩年來的巔峰」、其後代際下滑，單一使用者觀感 |
@@ -210,7 +216,10 @@ Opus 5 是**現行的次旗艦**：官方 2026-07-24 發布（本站 07-25 收�
 
 **歷史記錄細節**
 
-- **2026-09-21**：⟨Q-04⟩ ❓ **待查證**（標 2026-09-21｜查 Opus 5.5、Pasquale Pillitteri｜複 2026-10-05）｜**單一部落格稱 Opus 5.5 週二發布**：稱降價 20%；僅標題可用，無查證方法，未見其他來源佐證（[Google News/Pasquale Pillitteri](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)，2026-09-21）
+- **2026-09-21**：⟨Q-04⟩ ❓ **待查證**（標 2026-09-21｜查 Opus 5.5、Pasquale Pillitteri｜複 2026-10-05｜訊 2026-09-23）｜**單一部落格稱 Opus 5.5 週二發布**：稱降價 20%；僅標題可用，無查證方法（[Google News/Pasquale Pillitteri](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)，2026-09-21）
+  - **後續（2026-09-23）**：Anthropic 正式發布 Opus 5.5，牌價降 20%，方向與傳聞一致；發布日為官方公告當天而非傳聞所稱「週二」，完整記錄見 [[entities/opus-5-5]]
+- **2026-09-23**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，取代 Opus 5 成為預設 Opus；Opus 5 改列 Legacy，仍可用（官方 models overview（2026-09-23 查證），2026-09-23）
+  - 牌價、基準與定位完整記錄見 [[entities/opus-5-5]]，本頁不重複（[Anthropic](https://www.anthropic.com/claude-opus-5-5)；[GitHub](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)，2026-09-23）
 - **2026-09-18**：資安新創 Hacktron AI 揭露，同一記憶體毀損漏洞 Opus 4.8 須先關閉系統 ASLR 才利用成功，換 Opus 5 後約 3 小時做出標準環境下可用的 ARM64 exploit（[The New Stack](https://thenewstack.io/claude-exploits-openai-forum/)，2026-09-19）
   - 研究團隊隨後以同一手法，經 OpenAI 內部員工論壇帳號與一個 GitHub pull request 摸清可存取 OpenAI 軟體庫的路徑，已依規範通報；屬單一資安新創的示範性測試、非官方基準複測，該新創有展示能力的商業誘因（[The Guardian](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot)，2026-09-18）
 - **2026-09-17**：Reddit r/artificial 週熱門討論串，使用者主要以 Opus 5 與 4.8 為例，觀察不同任務間能力落差很不均勻（「jagged」），討論成因；未附具體案例或分數，非量化評測（[Reddit](https://www.reddit.com/r/artificial/comments/1wj6qq2/does_it_seem_to_anyone_else_like_even_frontier/)，週熱門，2026-09-17）

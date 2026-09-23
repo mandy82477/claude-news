@@ -7,6 +7,8 @@
 
 ## 當前局勢
 
+**Claude Opus 5.5 發布，成為 Claude Code 預設模型**：09-22 官方發布 Claude 5.5 家族首款 [[entities/opus-5-5]]，牌價 $4／$20 較 Opus 5 降 20%、官方稱多數工作追平 Fable 5.1；Claude Code v2.1.280 同日把 `default` 改指它（Foundry 除外），Pro／Max 用量上限同步調高。同日 OpenAI 推出 GPT-6 Sol／Luna 迎戰，Bloomberg 報導 Anthropic IPO 計畫生變、可能延後。詳見 [[entities/opus-5-5]]、[[entities/pricing]]、[[topics/anthropic-business]]。
+
 **Cowork 與 Chat 合併為單一 Claude，同步推出 Docs／Slides**：09-17 官方把 [[entities/cowork|Claude Cowork]] 併回聊天介面，並推出 [[entities/claude-docs]]、[[entities/claude-slides]]（皆 beta）與整合進對話的 [[entities/claude-design]]，先開放 Pro／Max，是本月至今最大的官方產品異動。隔日 09-18 [[entities/claude-code]] Projects 進入 Beta（雲端並行 agent session，關機後續跑），六家科技媒體同日報導；多 agent 並行會快速衝高方案用量，見 [[feature-radar]] 該條「注意事項」。
 
 **跨廠資安事件連兩起，而且都還沒有修補時程**：09-18 資安研究人員揭露零點擊 RCE「Plugin4Shell」橫跨 Claude Code、Codex、Copilot、Gemini CLI；同日三名白帽研究人員藉 Claude Opus 5 經 OpenAI 官方漏洞懸賞找到並存取其內部原始碼、獲 6,500 美元獎金，十餘家媒體大篇幅報導。兩起皆僅標題層級可用，細節與官方回應未見。詳見 [[topics/ai-agent-safety]]。
@@ -43,8 +45,9 @@
 |------|------|------|
 | **Claude Fable 5.1** | 🟢 旗艦（2026-09-01 發布，取代 Fable 5）| 反萃取機制；快取讀取費率降至 0.025x（約省 75%）；一般可用 |
 | **Claude Mythos 5.1** | 🟢 政策限定（2026-09-01 發布，取代 Mythos 5）| 僅限信任機構，護欄專為資安與生命科學設計 |
-| **Claude Opus 5** | 🟢 次旗艦（2026-07-25 發布）| Max／Team premium／Enterprise PAYG／API 的預設 Opus（Claude Code 整體預設仍是 Sonnet，2026-09-07 查證）；跨模型代際「重複修辭套路」問題持續（GitHub #77136）|
-| **Claude Sonnet 5** | 🟢 Claude Code 預設 | 1M context；$2/$10 per Mtok（**標準價，已於 2026-08-10 永久化**，無到期壓力）|
+| **Claude Opus 5.5** | 🟢 現行 Opus（2026-09-22 發布）| Claude Code v2.1.280 起為 Pro／Max／Team／Enterprise／API 的 `default` 模型（Foundry 仍 Sonnet 4.5）；$4/$20，官方稱多數工作追平 Fable 5.1 |
+| Claude Opus 5 | ⚠️ 已改列 Legacy（2026-09-22）| 仍可用，$5/$25；預設 Opus 由 Opus 5.5 接手；跨模型代際「重複修辭套路」問題持續（GitHub #77136）|
+| **Claude Sonnet 5** | 🟢 Active（Foundry 通道預設仍 Sonnet 4.5） | 1M context；$2/$10 per Mtok（**標準價，已於 2026-08-10 永久化**，無到期壓力）|
 | Claude Opus 4.8 | ⚠️ 已被取代 | 次旗艦地位已由 Opus 5 接手；feature-radar 熱度本輪降溫（🔥🔥🔥🔥🔥→🔥🔥🔥🔥）|
 | Claude Sonnet 4.6 | ✅ Active | 仍可選用 |
 | Claude Haiku 4.5 | ✅ Active | 低延遲／高頻批量任務的現行選項 |

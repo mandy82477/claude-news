@@ -29,14 +29,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-09-18
-**最後新聞更新：** 2026-09-18
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-09-18）
-> Claude Code Projects 進入 Beta（六家科技媒體 2026-09-17 同日報導，官方文件索引新增專頁），描述為協調多個 agent 執行緒、關閉筆電後仍持續運作的雲端並行 session；是否構成第九塊積木、與既有 agent view／Managed Agents 的分界，待官方文件內容查證後補卡，詳見 [[entities/claude-code]]「近期平台與文件異動」。
+> **最近變動**（2026-09-23）
+> 補齊兩個常被混淆的官方上限與指令：同一 session 內用 Agent tool 平行開 subagent 上限 20 路（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 可調），與第三節 workflows 的 16／256 路、Managed Agents 的 20 路子代理是三個不互通的數字（第二節）；worktree 隔離的實際下法是 `claude --worktree <name>` 或角色檔 `isolation: worktree`（「你該用哪個」第 3 問）。
 
 ---
 
@@ -80,6 +80,8 @@ Continue that code review and now analyze the authorization logic
   `--agent`（v2.0.59 起）讓角色檔 body 整段取代預設 system prompt、resume 後身分保留；搭 `--name` 就成了一位長駐領域專家——別的 session 用傳訊丟任務給他、隔天 `--continue` 接續，context 不歸零（[官方 sub-agents 文件](https://code.claude.com/docs/en/sub-agents)，2026-09-12 查證）。
 
 - **還做不到什麼**：Explore 與 Plan 唯讀、一次性不能追問，且會跳過 CLAUDE.md 與上層 session 的 git status（官方明說只有這兩個省略）；Explore 的模型繼承主對話、在 Claude API 上以 Opus 為上限，要來回追問改用 `general-purpose`。**subagent 裡開不了 workflow**。
+
+**同一 session 內用 Agent tool 平行開 subagent，上限 20 路**：官方 sub-agents 文件——「By default, when 20 subagents are running in a session, spawning another with the Agent tool fails with `Concurrent subagent limit reached`」，可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（2026-09-23 查證）。這是**本節**的上限，第三節 dynamic workflows 的 16／256 路、[[entities/managed-agents]] 的 20 路子代理是另外兩個不互通、不疊加的場景。
 
 ### 三、Dynamic workflows：把編排寫成一支可重跑的 script
 
@@ -210,7 +212,7 @@ claude self-hosted-runner
 
 1. **誰來協調？** 在同一個對話裡派出去、收回來 → 內建 subagent；丟出去、晚點回來看 → agent view；要 Claude 規劃、分派、盯著跑 → agent teams；計畫握在一支 script 手上 → dynamic workflows。
 2. **這些工人需不需要互相講話？** 不需要 → subagent 就夠；需要交換發現、互相質疑 → agent teams；只是要問另一個 session 一句話 → 跨 session 傳訊。
-3. **它們會不會碰到同一批檔案？** 會 → 用 worktree 隔離（背景 session 會自動搬進 `.claude/worktrees/`）。
+3. **它們會不會碰到同一批檔案？** 會 → 用 worktree 隔離（背景 session 會自動搬進 `.claude/worktrees/`）。實際下法兩種（官方 worktrees 文件，2026-09-23 查證）：自己開一個獨立 session 用 `claude --worktree <name>`；要讓內建 subagent 自動各自隔離，在角色檔 frontmatter 寫 `isolation: worktree`，不必自己先手動建 worktree 再指路徑。
 
 要跑數小時以上、跨 session 保留狀態，或資料不出境，那是另一條分支：[[entities/managed-agents]]（平台代管）或 self-hosted runner（你自己的機器）。逐欄對照見下方附錄（[官方 agents 總覽](https://code.claude.com/docs/en/agents)，2026-09-12 查證）。
 
@@ -276,3 +278,4 @@ claude self-hosted-runner
 - 2026-09-10：查證重點——dynamic workflows 全付費方案開放；跨 session 傳訊原生 Windows v2.1.234 起支援、閒置通知 v2.1.236 起；agent teams 仍為實驗性、預設關閉。
 - 2026-09-11：anthropic-sdk-python v1.5.0 為 Managed Agents 新增 auto mode 工具權限設定，積木層級無變動（細節見 [[entities/managed-agents]]）。
 - 2026-09-12：改以「一塊積木一張卡」重寫，補上八塊的官方存在理由與可貼上的指令、新增「怎麼疊」與官方三問決策樹；更正 `/goal` 官方專頁、MCP 隧道狀態（研究預覽須申請）與 issue #24798 現況（已關閉、84 則留言）。查證來源：[goal](https://code.claude.com/docs/en/goal)、[sub-agents](https://code.claude.com/docs/en/sub-agents)、[agent teams](https://code.claude.com/docs/en/agent-teams)、[managed agents](https://platform.claude.com/docs/en/managed-agents/overview)。
+- 2026-09-23：第二節補 Agent tool 20 路上限（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS`）並釐清三處人數上限不互通；「你該用哪個」第 3 問補 worktree 實際指令。查證：[sub-agents](https://code.claude.com/docs/en/sub-agents)、[worktrees](https://code.claude.com/docs/en/worktrees)。

@@ -30,10 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新計費政策異動**（2026-09-21）
+> **最新計費政策異動**（2026-09-23）
+> - **Opus 5.5 上線，牌價 $4/$20 per Mtok**：較 Opus 5 執行成本省 40%（官方口徑），快取讀取降至基礎輸入價 5%。
 > - **新 GitHub Issue #37394**：Max Plan 用量觸頂速度異常快（92 留言、43 👍），與既有 #16157／#38335 同類回報，互動量較低、官方尚無回應。
 
 ## 現況
@@ -116,6 +117,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 模型 | Input / Output per Mtok | 備注 |
 |------|------|------|
+| Claude Opus 5.5 | **$4 / $20** | 2026-09-22 發布，較 Opus 5 執行成本省 40%；快取讀取 5%（$0.20/Mtok），Batch 5 折。Opus 5、Fable 5 列為 legacy（[官方](https://www.anthropic.com/claude-opus-5-5)） |
 | Claude Sonnet 5 | $2 / $10 | **標準定價（不再是促銷）**：原訂 2026-08-31 到期的入門價已於 2026-08-10 永久化，9/1 漲至 $3/$15 的計畫取消；Claude Code 新預設模型，相較 Opus 4.8 估計省 60% 成本 |
 | Claude Fable 5.1 | **$10 / $50** | 與 Fable 5 同價（官方定價頁 2026-09-03 查證）；**快取命中 ×0.025**（其餘模型 ×0.1），Batch $5/$25。Mythos 5.1 同價但僅限授權機構 |
 | Claude Fable 5 | $10 / $50 | Pro／Team standard 走此費率以 usage credits 計費；Max／Team premium 為標配（週用量 50% 內）。訂閱端分界見上方「我的方案現在有什麼」|
@@ -123,6 +125,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Claude Opus 4.8 | **$5 / $25** | 官方載明 Opus 5 定價「unchanged from Claude Opus 4.8」；2026-07-24 起次旗艦地位被 Opus 5 取代，各平台仍可用 |
 | Claude Sonnet 4.6 | **$3 / $15** | 前代 Sonnet，官方列為 legacy 仍可用；1M context / 128k 輸出。（Sonnet 5 原訂 8/31 後回到此價位的計畫已取消）|
 | Claude Haiku 4.5 | **$1 / $5** | 陣容中最低價；200K context / 64k 輸出（非 1M，與其餘四者不同）。適合高頻批量與延遲敏感的 sub-agent |
+
+**Opus 5.5「省 40%」與「省 60%」不是同一個比較（2026-09-23）**：官方「40%」比的是 Opus 5.5 對 Opus 5 的執行成本（$5/$25 → $4/$20）；VentureBeat 報導的「60%」比的是 Opus 5.5 對 Fable 5.1 的 API 定價（$10/$50 → $4/$20）。兩者基準模型不同，不可互換引用。
 
 **Opus 5 定價「歧異」已解消（2026-08-08 官方查證）**：官方文件載明 **$5 / $25 per Mtok，「unchanged from Claude Opus 4.8」**。此前兩種說法其實同時成立——「為 Fable 5 的一半」（$5 vs $10）與 MarkTechPost「維持原 Opus 定價」（與 4.8 相同）是同一組數字的兩個對照對象。Fast mode（research preview，僅 Claude API）另計 **$10 / $50**（來源：[What's new in Claude Opus 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5)）。能力細節見 [[entities/opus-5]]、[[topics/model-comparison]]。
 
@@ -395,6 +399,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-09-22／23：Claude Opus 5.5 發布，牌價 $4/$20 per Mtok
+
+- **官方一手來源**：Anthropic 官方部落格 2026-09-22 發布 Opus 5.5，牌價較 Opus 5（$5/$25）低，官方口徑為執行成本省 40%（來源：[Claude Opus 5.5](https://www.anthropic.com/claude-opus-5-5)）。
+- **媒體查證**：MIXED Reality News（09-23）確認 $4/Mtok 起、Pro／Max 用量上限同步調高，完整定價表見上方「模型 API 定價現況」（Google News/MIXED）。
+- **與媒體「60%」說法的關係**：VentureBeat 報導 Opus 5.5 API 價格較 Fable 5.1（$10/$50）便宜 60%——與官方「40%」比較基準不同（Fable 5.1 vs Opus 5），兩者不可互換引用，詳見上表下方更正說明。
 
 #### 2026-09-19：GitHub Issue #47509 互動量持續攀升至 151 👍、46 留言——Team 方案高階座位提案仍待官方回應
 

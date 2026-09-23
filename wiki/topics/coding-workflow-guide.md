@@ -30,15 +30,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-19
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
 
-> **最新動態**（2026-09-19）
-> v2.1.277 起 repo 無 `CLAUDE.md` 時 Claude Code 原生改讀 `AGENTS.md`，不必再手動 `@AGENTS.md` import，見第 1 段「要放哪幾個檔」。
+> **最新動態**（2026-09-23）
+> 補三個官方缺口：`-p`／SDK 呼叫用 `--bare` 跳過 hooks／skills／CLAUDE.md 等自動發現以省啟動時間（第 2a 段）；session 變笨先打 `/context` 看載入了什麼（第 9 段）；hook 攔截靠的是 `exit 2` 不是 `exit 1`，沒印 JSON 時 `exit 1` 只是 non-blocking（第 1 段）。
 
 ---
 
@@ -209,6 +209,8 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 - **skill 跟 CLAUDE.md 一樣是建議層。** 差別在載入時機與 token 成本，不在強制力。官方原話：一條 skill 若失效，「use hooks to enforce behavior deterministically」。
 - **強制層是 hooks 或 permissions 兩者。** 而 `PreToolUse` hook 最硬——它先於任何權限模式檢查，回 `deny` 時連 `bypassPermissions` 和 `--dangerously-skip-permissions` 都擋得住。
 
+**exit code 語意**（官方 hooks 文件，2026-09-23 查）：`exit 2` 才是硬攔截——「Exit 2 means a blocking error… exit 2 blocks whether or not you print JSON」。沒印出合法 JSON 到 stdout 時，`exit 1` 只會被當成 non-blocking error，Claude 照常放行該動作。`Stop` hook 的 `exit 2` 語意不同——不是攔阻工具呼叫，而是「Prevents Claude from stopping, continues the conversation」。
+
 另有兩層容易被忽略：`.claude/agent-memory/`（subagent 專屬記憶，**與主 session 的 auto memory 是不同東西**）、以及 skill frontmatter 內可寫 `hooks:`，scoped 到該 skill 的生命週期。
 
 ### `paths:` 省了 context，代價是什麼
@@ -283,6 +285,8 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 7 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
 
 官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。
+
+**腳本／SDK 呼叫場景的省法：** 官方 headless 文件（2026-09-23 查）記載 `--bare` 旗標——「Add `--bare` to reduce startup time by skipping auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md」；官方稱這是 script 與 SDK 呼叫的建議模式，未來會成為 `-p` 的預設值。這與上方「分層 CLAUDE.md」「`claudeMdExcludes`」等互動式 session 的省法不同層級——後者省的是載入內容的量，`--bare` 省的是連自動發現這個動作本身都跳過，只適合不需要專案客製化行為的一次性腳本呼叫。
 
 以下三條**已被官方機制取代或證據不足，本頁不再推薦**：「hook 層設讀取上限」（Claude Code 本來就有硬編碼上限，CLI 25,000／Desktop 10,000 tokens，社群在 issue 求的是放寬不是收緊）；「已否決方案索引」（對應官方 issue 已關閉、0 reactions）；「本地小模型分流省 50–60% context」（生態只驗證成本不驗證 context）。
 
@@ -521,6 +525,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 9. 除錯 — 怎麼知道它真的做了　`[已補：庫內證據]`
 
+**懷疑「這個 session 變笨了」，第一步不是換 prompt，是打 `/context`**——看這次啟動實際載入了什麼：哪些 CLAUDE.md／skills／rules 進了 context、是否已被 compact 掉（第 1 段「skill 的描述清單 compact 後不重載」）。這條診斷順序全站原本沒有一頁明寫，`/context` 過去只被記到它會列出 Skills（見第 8 段「官方診斷工具」），此處補上它作為「session 變笨」時的第一步用法。
+
 官方**幫這個問題命名了**：「The trust-then-verify gap」——Claude 產出看起來合理但沒處理邊界情況的實作。官方的修法一句話：「If you can't verify it, don't ship it.」
 
 最直接對應「誠實回報」的官方做法：
@@ -638,6 +644,11 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - [Explore the .claude directory](https://code.claude.com/docs/en/claude-directory) ／ [Extend Claude with skills](https://code.claude.com/docs/en/skills) ／ [Automate actions with hooks](https://code.claude.com/docs/en/hooks-guide) — 目錄結構、skill 截短規則、hook 事件表
 - [Keep Claude working toward a goal](https://code.claude.com/docs/en/goal) — `/goal` 條件寫法
 - [完整文件索引](https://code.claude.com/docs/llms.txt) — 官方 185 頁清單
+
+2026-09-23 補查：
+
+- [Claude Code SDK / headless mode](https://code.claude.com/docs/en/headless) — `--bare` 旗標省啟動時間
+- [Automate actions with hooks](https://code.claude.com/docs/en/hooks-guide) — 補 `exit 1`／`exit 2` 語意（含 `Stop` hook 特例）
 
 社群與一手觀察：
 

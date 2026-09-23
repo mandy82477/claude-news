@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-22"
-last_news_update: "2026-09-22"
+last_updated: "2026-09-23"
+last_news_update: "2026-09-23"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新工作流模式**（2026-09-22）
-> - **Multi-agent 架構添一例**：Foremerge 在 git worktree 之上疊一層意圖衝突偵測，agent 動手前先廣播意圖與範圍，在真正產生程式碼衝突前先攔住架構層級的互斥變更。
+> **最新工作流模式**（2026-09-23）
+> - **Multi-agent 架構添一例**：FrontierAgent 原生 CLI 內建 ReAct／Agent Team 雙模式，macOS／Linux 一行安裝、免強制 Docker。
 
 ---
 
@@ -52,7 +52,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、fire-your-seo-agency（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-21 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude、Foremerge（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-22 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude、Foremerge、FrontierAgent（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-23 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
@@ -162,6 +162,24 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### ApodexAI/FrontierAgent：原生命令列 TUI agent 框架，ReAct 與 Agent Team 雙模式，免強制 Docker（2026-09-23）
+
+- **主線：** 並行規模
+- **核心模式：** 開源 agent 框架，原生命令列 TUI，支援 ReAct（單 agent 逐步推理）與 Agent Team（多 agent 協作）雙模式，macOS／Linux 一行指令啟動，無需預裝、無強制 Docker 依賴；GitHub Search 4,515 星，近 8 天 +1,403 星（約 175 星/日）。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧（Claude Squad、ccteams 等）一個「單一框架內建雙模式切換」取向的代表技巧——既有做法多是外掛在既有 harness 上的協調層，本則從框架本身原生支援單/多 agent 兩種模式；多 agent 協作屬大型 codebase 特有痛點，主線填並行規模。
+- **可信度註記：** forks 224（星/fork 比約 5%，低於常態 1/10 參考值）、open issues 17（有實質往來）、近期持續 commit（抓取當日仍在推送），三項佐證非全無，未達「異常高星數無佐證」排除門檻，惟星/fork 比偏低，收錄但保留觀察。
+- **來源：** GitHub Search；[GitHub](https://github.com/ApodexAI/FrontierAgent)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### shadcn-ui/lint：agent-first 的 Tailwind 設計系統 linter，讓 agent 可驗證設計規則（2026-09-23）
+
+- **主線：** —
+- **核心模式：** shadcn-ui 官方團隊發布的 linter，讓開發者把設計系統規則寫成 agent 可自動驗證的形式（非僅供人類讀），鎖定 Tailwind CSS 設計系統的一致性檢查；GitHub Search 2,670 星。
+- **與既有模式的關係：** 現有類別聚焦 Claude Code／agent 工作流本身（Skills、Hooks、MCP、記憶等），本則是「把設計系統規則轉成 agent 可驗證格式」，與既有代表技巧核心機制不重疊，暫不併入既有代表技巧列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** forks 50（星/fork 比約 2%，偏低）、open issues 9、近期持續 commit，三項佐證非全無；出自 shadcn-ui 官方組織帳號，非匿名個人專案。
+- **來源：** GitHub Search；[GitHub](https://github.com/shadcn-ui/lint)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### Show HN: Foremerge——疊在 git worktree 上的意圖衝突偵測層，防平行 coding agent 互踩架構（2026-09-22）
 

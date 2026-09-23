@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **本週衝擊**（2026-09-21）
+> **本週衝擊**（2026-09-23）
+> - 🔴 **GitHub Copilot 三連發企業信任功能**：本地沙箱、OpenTelemetry、JetBrains 工具核准同週上線（09-22／23，GitHub 官方 changelog）——Claude Code 目前無對應設定，企業採購比較時會被問到。
 > - 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。
-> - 🟡 **Grok 4.7 登陸 GitHub Copilot**（09-21，GitHub 官方 changelog）——Copilot 生態內的推理模型選項再添一款，用 Copilot 的人可留意評估，其餘任務不用換。
 
 ---
 
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
-| **Microsoft／GitHub** 🏢 | Code review 改版：版本演進更清楚、自動解決建議更聰明、accept 時產生 commit 訊息；10/19 起停用部分模型（09-19）→ 審查功能與模型陣容持續追平 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代動機已獲官方高層證實（09-20 查證） |
+| **Microsoft／GitHub** 🏢 | 本地沙箱限制指令對檔案／網路／憑證的存取、OTel 納入企業管理設定、JetBrains 1.18 新增 AI 工具核准與組織共享技能（09-22／23）→ Claude Code 目前均無對應設定，企業信任功能持續追平 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代動機已獲官方高層證實（09-20 查證） |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
@@ -151,12 +151,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
-- 09-19 code review 改版＋10/19 起停用部分模型；09-14 週報再添模型選擇與 Sentry 整合——功能與模型陣容持續追平。
-- 09-17 官方 changelog 三連發：預算增加請求開放、Impact Dashboard 上線、CLI 用量指標納入 agentic 活動——企業管理可見度全面加強。
-- Copilot 終結「無限量」方案改行精細用量計費（08-17）；HydraFusion 降本但品質僅單一基準打平（09-04）。
-**還沒解決**
-- 停用模型清單、code review 改版涵蓋範圍、Copilot 新方案的價格級距與生效時程均未見完整報導。
+- 09-22／23：本地沙箱（限制未預期指令存取檔案／網路／憑證）、OpenTelemetry 納入企業管理設定、JetBrains 1.18 新增 AI 工具核准與組織共享技能／指令——**Claude Code 目前均無對應設定**。
+- 09-19 code review 改版＋10/19 起停用部分模型；09-17 官方 changelog 三連發：預算增加請求開放、Impact Dashboard、CLI 用量指標——企業管理可見度全面加強。
 - 已查證（09-20）：自研模型取代已獲官方高層證實動機（首席 AI 官 Suleyman 公開發言），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
+**還沒解決**
+- 沙箱與 OTel 設定細節、JetBrains 版本適用範圍、停用模型清單均未見完整報導。
+- Copilot 新方案的價格級距與生效時程未見細節。
 
 ### Zhipu Z.AI
 **現在的答案**
@@ -215,6 +215,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-23
+- **Microsoft／GitHub**：Copilot app 新增本地沙箱，限制未預期指令對檔案／網路／憑證的存取；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot app 新增 OpenTelemetry 設定，透過企業管理設定開放；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot for JetBrains 1.18.0 新增 AI 工具核准、agent 對話更多控制、組織層級共享技能與指令；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
+- **DeepSeek／Moonshot AI**：Gizmodo 報導中國當局調查兩家公司，起因是 Anthropic 先前指控其將部分請求轉發給 Claude 處理——若屬實顯示部分中國模型的實測能力可能部分借道 Claude，衝擊本頁既有「低價可用替代」判讀的可信度（推論，安全政策面詳見 [[topics/ai-agent-safety]]）（Google News/Gizmodo）
 
 ### 2026-09-21
 - **OpenAI**：官方部落格發布 V7，讓 AI agent 具備「機構記憶」，把公司檔案轉為 agent context；GPT-6 Astra 於其最難圖查詢測試達 89% 準確率；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/OpenAI News）

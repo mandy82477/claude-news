@@ -28,19 +28,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-02
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新對照更新**（2026-09-01）
-> - **旗艦換代**：Fable 5.1（GA）取代 5.0；Mythos 5.1 同步發布，仍限信任機構存取，快取讀取費率降至 0.025 倍（見「同一份工作，換設定差多少」）。
-> - **公開陣容**：Fable 5.1 > [[entities/opus-5|Opus 5]] > Sonnet 5（Claude Code 預設）> Sonnet 4.6 > Haiku 4.5；Opus 4.8 / 4.7 皆已被取代。
+> **最新對照更新**（2026-09-23）
+> - **次旗艦換代**：[[entities/opus-5-5|Opus 5.5]] 發布，取代 [[entities/opus-5|Opus 5]] 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價降至 $4／$20（每 Mtok，降 20%），官方稱運算成本降 40%（見「同一份工作，換設定差多少」）。
+> - **公開陣容**：Fable 5.1 > [[entities/opus-5-5|Opus 5.5]] > Sonnet 5（Claude Code 預設）> Sonnet 4.6 > Haiku 4.5；Opus 5 / 4.8 / 4.7 皆已被取代。
 > - **未經證實**：36氪稱 Anthropic 因 Claude 推理能力「秘密降低」發布道歉聲明，查無官方或第二來源佐證，見下方時序 2026-08-24。
 
 ---
 
 ## 摘要
 
-**現行公開陣容：Fable 5.1 > Opus 5 > Sonnet 5 > Sonnet 4.6 > Haiku 4.5**（Opus 4.8 / 4.7 已被取代；Fable 5.0 於 2026-09-01 由 5.1 取代；Mythos 5.1 僅限授權機構）。本頁只回答「**我這份工作該用哪個 Claude 模型、換一個實付差多少**」——橫向對照、情境推薦與可驗證的選型分界；各模型的爭議、時序、已知問題在各自的 entities 頁，定價細節在 [[entities/pricing]]。
+**現行公開陣容：Fable 5.1 > Opus 5.5 > Sonnet 5 > Sonnet 4.6 > Haiku 4.5**（Opus 5 / 4.8 / 4.7 已被取代；Fable 5.0 於 2026-09-01 由 5.1 取代；Mythos 5.1 僅限授權機構）。本頁只回答「**我這份工作該用哪個 Claude 模型、換一個實付差多少**」——橫向對照、情境推薦與可驗證的選型分界；各模型的爭議、時序、已知問題在各自的 entities 頁，定價細節在 [[entities/pricing]]。
 
 跨家「誰強」不在本頁作答——最近一次頭對頭查證是 2026-08-13，結論是**沒有單一答案**（不同基準測不同能力面向，選型看任務類型不看單一分數）；當時的數字見 [[topics/competitor-landscape#硬答案]]，各榜最新排名見 [[topics/model-task-leaderboard#本週快照]]。
 
@@ -49,43 +49,44 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 模型 | 一句定位 | 定價（$/Mtok in/out）· Context | 最適合 |
 |------|---------|------------------------------|--------|
 | [[entities/fable-5\|Fable 5.1]] | 旗艦（Mythos 級公開版，2026-09-01 取代 5.0） | $10 / $50 · 1M（快取讀取降至 0.025×，見 [[entities/pricing]]） | 跨多天的長期 agentic 工作流、deep reasoning、安全漏洞分析 |
-| [[entities/opus-5\|Opus 5]] | 次旗艦（Max 預設 / Pro 最強） | $5 / $25（官方確認）· 1M | 數小時自主編碼、跨數十檔 refactor、複雜系統工程 |
+| [[entities/opus-5-5\|Opus 5.5]] | 次旗艦（Pro／Max／Team／Enterprise／API 預設 Opus，2026-09-23 起） | $4 / $20（官方確認）· 1M | 數小時無人盯著的編碼任務、跨數十檔 refactor、複雜系統工程 |
 | [[entities/sonnet-5\|Sonnet 5]] | 主力平衡（Claude Code 預設） | $2 / $10（標準價）· 1M | 日常規模開發（分鐘～1 小時級）、tool use 密集、成本敏感 |
 | Sonnet 4.6 | 前代主力 | $3 / $15（官方確認）· 1M | 已驗證穩定、尚未遷移的既有工作流 |
 | Haiku 4.5 | 輕量 worker | $1 / $5（官方確認）· 200K | 即時互動、高頻批量分類、延遲與成本敏感的 sub-agent |
 
-**不進表的選項：** [[entities/opus-4-8|Opus 4.8]]、[[entities/opus-4-7|Opus 4.7]] 皆已被取代，新採用一律改用 Opus 5（Fast Mode 已非 4.8 獨佔優勢）；[[entities/fable-5|Fable 5.0]] 已被 5.1 取代，新採用一律改用 5.1；[[entities/mythos|Mythos 5.1]] 為非公開陣容（僅限信任機構的無護欄安全研究），一般開發用途改選 Fable 5.1。四者的細節見下方「選型細節」。「不適合」的判準亦全數列於選型細節，每個模型一條。
+**不進表的選項：** [[entities/opus-5|Opus 5]]、[[entities/opus-4-8|Opus 4.8]]、[[entities/opus-4-7|Opus 4.7]] 皆已被取代，新採用一律改用 Opus 5.5（Fast Mode 已非 4.8 獨佔優勢）；[[entities/fable-5|Fable 5.0]] 已被 5.1 取代，新採用一律改用 5.1；[[entities/mythos|Mythos 5.1]] 為非公開陣容（僅限信任機構的無護欄安全研究），一般開發用途改選 Fable 5.1。五者的細節見下方「選型細節」。「不適合」的判準亦全數列於選型細節，每個模型一條。
 
 ### 選型細節
 
 - **Fable 5.1**（2026-09-01 取代 5.0）：官方定位 long-running agents／deep reasoning／安全漏洞分析（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）；不適合日常短任務（改 Sonnet 5）或前沿 LLM 開發（護欄行為未經 5.1 查證）。存取與定價見 [[entities/fable-5]]、[[entities/pricing]]。
-- **Opus 5**：官方定位 multihour autonomous coding agents／large-scale refactoring（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)），比日常大一級、不到跨多天；不適合日常規模開發（改 Sonnet 5）或跨多天極長任務（改 Fable 5）。細節與已知限制見 [[entities/opus-5]]。
+- **Opus 5.5**（2026-09-23 取代 Opus 5）：官方稱多數工作表現追平 Fable 5.1、運算成本降 40%（相對 Opus 5），比日常大一級、不到跨多天；不適合日常規模開發（改 Sonnet 5）或跨多天極長任務（改 Fable 5.1）。具名基準分數官方尚未公布，細節與已知限制見 [[entities/opus-5-5]]。
+- **Opus 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，官方改列 Legacy，新採用一律改用 Opus 5.5。見 [[entities/opus-5]]。
 - **Sonnet 5**：官方定位 code generation／agentic tool use（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)），Claude Code 日常主力、v2.1.197 起為預設；不適合跨數十檔 refactor（改 Opus 5）或高頻批量延遲敏感場景（改 Haiku 4.5）。
 - **Sonnet 4.6**：**$3 / $15 per Mtok、1M context、128k 輸出**（官方模型總覽頁，2026-08-20 查證；legacy 仍可用）。適合既有穩定工作流；不適合新專案——Sonnet 5 更便宜且無到期日，新專案一律選 Sonnet 5。見 [[entities/pricing]]。
 - **Haiku 4.5**：官方定位 real-time applications／sub-agent tasks（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)），**$1/$5 per Mtok、200K context**（2026-08-20 查證）；不適合多步驟推理，200K 明顯低於其餘模型的 1M。見 [[topics/long-context-1m]]。
 - **Opus 4.8 / Opus 4.7（已被取代）**：僅適合尚未遷移者的既有工作流延續，不建議新採用——次旗艦地位已由 Opus 5 接手，Fast Mode 亦非 4.8 獨佔優勢（官方文件確認 Opus 5 與 4.8 皆支援 fast mode）。Opus 4.7 另有 200K context 上限與思考深度議題，見 [[entities/opus-4-7]]。
 - **Mythos 5.1（非公開陣容，2026-09-01 取代 5.0）**：無護欄完整版，僅供信任機構的安全研究、滲透測試；一般使用者取不到，不可作為公開陣容模型的淘汰基準——公開陣容資安首選為 Fable 5.1。與 Fable 5.1 為同一模型的不同防護層級，存取模式（信任機構限定）自 5.0 起未變，詳見 [[entities/mythos]]。
-- **定價備注**：Opus 5 為 **$5 / $25 per Mtok**，官方模型總覽頁逐字確認（2026-08-08 首查，2026-08-20 複查一致），與 Opus 4.8 相同。發布當週「為 Fable 5 一半」與「維持原 Opus 定價」兩說同時成立。沿革見 [[entities/pricing#模型 API 定價現況]]。
+- **定價備注**：Opus 5.5 為 **$4 / $20 per Mtok**（官方 models overview（2026-09-23 查證）），較 Opus 5 的 $5 / $25 降 20%。Opus 5 已改列 Legacy，沿用原定價未變。沿革見 [[entities/pricing#模型 API 定價現況]]。
 
 ## 情境推薦
 
 | 你的情境 | 建議 | 依據 |
 |---------|------|------|
 | Claude Code 日常開發 | **Sonnet 5**（預設即是） | 官方 coding／agents 主力定位；v2.1.197 起預設 |
-| 想接近旗艦效能但成本減半 | **Opus 5** | 官方稱評測逼近 Fable 5；$5/$25 為 Fable 5 的一半（2026-08-08 官方確認）|
+| 想接近旗艦效能但成本降四成 | **Opus 5.5** | 官方稱多數工作表現追平 Fable 5.1、運算成本降 40%（相對 Opus 5，2026-09-23）；具名基準分數尚未公布 |
 | 跨多天的複雜 agentic 任務 | **Fable 5.1** | 917 場景以 0.9 分險勝 Opus 4.8（5.0 世代數據，5.1 尚無同口徑對照），但 token 約 2 倍 |
-| 資安審查 / 漏洞分析 | **Fable 5.1**（首選）→ 次選 **Opus 5** | Fable 5.1 能力最強惟有分類器誤判；Mythos 5.1 非公開選項 |
+| 資安審查 / 漏洞分析 | **Fable 5.1**（首選）→ 次選 **Opus 5.5** | Fable 5.1 能力最強惟有分類器誤判；Mythos 5.1 非公開選項 |
 | 需要壓成本的批量任務 | **Haiku 4.5 + Sonnet 5 協調**，或 **Fable 5 調度 + 便宜模型執行** | 社群轉載（Reddit，2026-07-08）：Fable 5 調度 46% 成本達 96% 效能 |
-| 生產環境求穩 | **Sonnet 4.6 或 Sonnet 5** | Opus 5 上線首兩週有多起錯誤率事件與分歧評價 |
+| 生產環境求穩 | **Sonnet 4.6 或 Sonnet 5** | Opus 5 上線首兩週有多起錯誤率事件與分歧評價；Opus 5.5 剛發布尚無同類驗證期資料 |
 
 ### 情境推薦細節
 
 - **Claude Code 日常開發**：官方定位為 coding／agents／enterprise workflows 主力（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）；Claude Code v2.1.197 起為預設（2026-07-01，見 [[entities/sonnet-5]]）；1M context，agentic 效能足夠日常規模。
-- **想接近旗艦效能但成本減半**：官方稱編碼與知識工作評測逼近 Fable 5.0（2026-07-25 對照，5.1 尚無同口徑數據），定價為 Fable 5.1 牌價一半（$5/$25 vs $10/$50，官方確認）。
+- **想接近旗艦效能但成本降四成**：官方稱 Opus 5.5 多數工作表現追平 Fable 5.1、運算成本較 Opus 5 降 40%（Anthropic 發布文，2026-09-23），未附具名基準分數；牌價 $4/$20 較 Opus 5 的 $5/$25 降 20%。
 - **跨多天的複雜 agentic 任務**：官方定位 long-running agents；917 場景以 0.9 分之差略勝 Opus 4.8（Reddit，2026-06-12，5.0 世代數據），但 token 約 2 倍，需連成本一起讀。
-- **資安審查 / 漏洞分析**：Fable 5.1 能力最強，但 5.0 世代 07-02 起有 Defense in Depth 分類器誤判實測（5.1 是否延續未經查證）；Opus 5 官方文件（2026-07-25）自陳資安任務仍落後 Mythos，惟 Mythos 5.1 非公開選項，不構成 Opus 5 的淘汰理由。
+- **資安審查 / 漏洞分析**：Fable 5.1 能力最強，但 5.0 世代 07-02 起有 Defense in Depth 分類器誤判實測（5.1 是否延續未經查證）；Opus 5.5 隨附資安防護機制強化（The Verge，2026-09-23），惟 Mythos 5.1 非公開選項，不構成 Fable 5.1 首選的淘汰理由。
 - **需要壓成本的批量任務**：Haiku 4.5 官方定位 sub-agent tasks／cost-sensitive；搭配 Sonnet 5 協調為社群驗證架構。Fable 5 調度 46% 成本達 96% 效能為社群整理轉載（Reddit，週熱門，2026-07-08），未見原始官方發布連結。
-- **生產環境求穩**：Opus 5 上線首週有 5 起模型錯誤率事件（Anthropic Status，07-26／07-28），皆數十分鐘至 1 小時內排除；社群自 07-29 起累積「過度自信」「不如跑分預期」「令人挫折」等分歧回饋，皆無量化數字，弱訊號。Sonnet 4.6/5 已累積較長驗證週期。
+- **生產環境求穩**：Opus 5 上線首週有 5 起模型錯誤率事件（Anthropic Status，07-26／07-28），皆數十分鐘至 1 小時內排除；社群自 07-29 起累積「過度自信」「不如跑分預期」「令人挫折」等分歧回饋，皆無量化數字，弱訊號。Sonnet 4.6/5 已累積較長驗證週期；Opus 5.5（2026-09-23 發布）尚無同類驗證期資料。
 
 > **換模型不是唯一旋鈕。** 官方明載「調 effort 通常比換模型更有效」（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）：Opus 5 起手用預設 `effort: high`，只有最吃重的編碼／agentic 任務才上探 `xhigh`。`max` 並非越高越好（官方稱報酬遞減、簡單任務易 overthinking），換模型前先針對自己的 evals 跑一次 effort sweep——官方原文與社群措辭的落差見下方「Effort dial 細節」。
 
@@ -118,13 +119,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Sonnet 5 | 新 +30% | 130K + 6.5K | $0.33 | 2.6× |
 | Sonnet 4.6 | 舊 | 100K + 5K | $0.38 | 3× |
 | Opus 4.6（非可選項，換代前基準線） | 舊 | 100K + 5K | $0.63 | 5× |
-| Opus 5 / 4.8 | 新 +30% | 130K + 6.5K | $0.81 | 6.5× |
+| Opus 5.5 | 新 +30%（沿用 Opus 5 起的 tokenizer，官方未載變動） | 130K + 6.5K | $0.65 | 5× |
 | Fable 5 | 新 +30% | 130K + 6.5K | $1.63 | 13× |
 
 **兩個只有換算後才看得出來的結論：**
 
 - **Sonnet 5 比 Sonnet 4.6 便宜，即使 token 變多**——牌價降 33%、token 增 30%，淨結果仍是省（$0.33 vs $0.38）。新專案選 Sonnet 5 的理由不只是牌價。
-- **Opus 5 比 Opus 4.6 貴約 30%，即使牌價一模一樣**——同為 $5 / $25，但新 tokenizer 讓同一份文字多算 30% token。**帳面沒漲，實付漲了**；這是升版後最容易被帳單意外到的一條。（Opus 4.6 不在現行陣容，本列是**換代前的基準線**，用來標出漲幅發生在哪一步。）
+- **Opus 5.5 牌價降 20%（$5→$4、$25→$20），換算後仍略貴於 Opus 4.6**——新 tokenizer 讓同一份文字多算 30% token，牌價降幅抵銷了大半但沒有完全抵銷（$0.65 vs $0.63）。Opus 5 本身（$5/$25）已改列 Legacy、退出本表；Opus 4.6 不在現行陣容，本列是**換代前的基準線**，用來標出漲幅發生在哪一步。
 
 ### Fable 5.1／Mythos 5.1：快取讀取費率大降（官方定值，非換算）
 
@@ -175,7 +176,7 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 
 ## 相關實體
 
-- [[entities/fable-5]] · [[entities/opus-5]] · [[entities/opus-4-8]] · [[entities/sonnet-5]] · [[entities/opus-4-7]] · [[entities/mythos]]
+- [[entities/fable-5]] · [[entities/opus-5-5]] · [[entities/opus-5]] · [[entities/opus-4-8]] · [[entities/sonnet-5]] · [[entities/opus-4-7]] · [[entities/mythos]]
 - 功能熱度與升版建議：[[feature-radar]]
 - 定價細節：[[entities/pricing]]
 - [[topics/model-task-leaderboard]] — 各活榜單的原始排名與算分方式；本頁只把它換算成「你該用哪個」。
@@ -183,6 +184,7 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 
 ## 時序（陣容變化）
 
+- 2026-09-23：**Opus 5.5 發布**，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價 $4/$20（降 20%），官方稱運算成本降 40%
 - 2026-09-01：**Fable 5.1 發布**，取代 Fable 5.0 成為公開陣容旗艦；Mythos 5.1 同步發布，維持信任機構限定存取
 - 2026-08-24：**36氪稱 Anthropic 就 Claude 推理能力「秘密降低」發布道歉聲明**：查證後確認非新事件，是 2026-06-11 官方已道歉的 Fable 5 護欄爭議之後續轉述；完整事件見 [[entities/fable-5#2026-06（發布與出口管制期）]]（查證 2026-09-20）
 - 2026-07-25：**Opus 5 發布**，取代 Opus 4.8 成為次旗艦、Claude Max 新預設模型、Claude Pro 最強模型

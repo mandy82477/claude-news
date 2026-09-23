@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **AGENTS.md 已補**（2026-09-20）
-> Claude Code v2.1.277（09-18）起原生讀 `AGENTS.md`，不必再寫 `@AGENTS.md` import 或做 symlink。三個邊界：有 `CLAUDE.md` 時預設仍只讀 `CLAUDE.md`；要兩者並讀得在 `/config` 把「Project instructions」改成 `claude-md-and-agents-md`；Bedrock／Vertex／Foundry 或關掉遙測的 session 讀不到。
-> 同批更正：2026-08-17 官方一次關掉本頁引用的五個 issue（#6235、#24798、#47023、#24316、#29006），本頁原先把它們當成還在累積的社群壓力。
+> **模型路由列補上一個固定指定機制**（2026-09-23）
+> `CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件）；連同既有 `opusplan`，個人端仍只有「固定指定」，依成本或任務動態選模型的路由官方文件依舊未見。
+> 09-20：Claude Code v2.1.277 起原生讀 `AGENTS.md`，三個邊界見下方「官方補了沒」表。
 
 ## 摘要
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 想在一個地方操作好幾家 agent | ❌ | 無——官方只管 Claude Code 自己的 session，截至 2026-09-19 官方文件未見 | 只有社群工具，08-24 起一個月冒出 10 款 ⟨G-11⟩ | 2026-09-19 |
 | 新開一個 session 它就忘光 | 🧪 | Claude Code 的 auto memory（依你的更正與偏好自己寫筆記，`/memory` 管理，子代理也各有一份） | 跨工具、跨模型、團隊共享仍要靠社群工具；要自己接外部記憶層，四個 session／compact hook 都能用 ⟨G-05⟩ | 2026-09-19 |
 | 額度快用完、錢花到哪看不看得到 | 🧪 | `/usage` 拆到 skills／subagents／plugins／各 MCP server 的百分比與每個 loop 的 token、狀態列 `rate_limits`、VS Code 70% 警示橫幅 | 沒有逐次請求的金額，數字是本機估算、不含其他裝置與 claude.ai；告警門檻似乎不能自訂 ⟨G-07⟩ | 2026-09-19 |
-| 想自己決定哪段用哪個模型、不被鎖住 | 🧪 | 個人端有 `opusplan`：規劃時用 Opus、開始執行自動換 Sonnet；org default model（v2.1.196）與 `enforceAvailableModels` 白名單則是企業管理端 | 只有這一種固定切換，依成本或任務動態選模型的路由截至 2026-09-19 官方文件未見；換設定差多少錢見 [[topics/model-comparison]] ⟨G-13⟩ | 2026-09-19 |
+| 想自己決定哪段用哪個模型、不被鎖住 | 🧪 | `opusplan`＋`CLAUDE_CODE_SUBAGENT_MODEL`（統一指定 subagent 預設模型）；企業端另有 org default model | 三者皆是**固定指定**，動態選模型的路由官方文件未見；細節見下方 ⟨G-13⟩ | 2026-09-23 |
 | 一堆 agent 在跑，看不到誰卡住 | 🧪 | Agent view（研究預覽）每個 session 一列，標出它在跑、在等你、還是做完了；提示列會顯示還有幾個 agent 在等你；`--forward-subagent-text` 可帶出子代理文字 | 看得到單一 session 的狀態，看不到誰在等誰這種依賴關係的全圖 ⟨G-09⟩ | 2026-09-19 |
 | Agent 之間直接傳訊 | 🧪 | 跨 session 訊息 `ListAgents`＋`SendMessage`（v2.1.224 起，原生 Windows v2.1.234），可達他機與雲端 | 點對點已跨機器；共享頻道式 A2A（issue #28300 仍開著）與自動依賴排序沒有 ⟨G-10⟩ | 2026-09-19 |
 | 它說做完了，但品質夠不夠 | 🧪 | `/goal` 判完成條件（一般功能）、`/code-review`（v2.1.218 起背景執行）；Outcomes 規格驗證屬 Managed Agents，仍是 beta、要帶 beta header | 答的是「做完沒」不是「寫得好不好」；社群的多模型對抗審查無公開對照數據 ⟨G-06⟩ | 2026-09-19 |
@@ -120,6 +120,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-08⟩ 別家 agent 的 AGENTS.md，它讀不讀：**已補**。Claude Code v2.1.277（2026-09-18）起可直接把 `AGENTS.md` 當專案指示讀，官方文件寫「works without adding a `CLAUDE.md`, an import, or a setting」。
   - 三個邊界：有 `CLAUDE.md` 或 `CLAUDE.local.md` 時預設只讀 `CLAUDE.md`；要兩者並讀，把 `/config` 的「Project instructions」設成 `claude-md-and-agents-md`。
   - Bedrock／Vertex／Foundry 或關掉遙測的 session 讀不到，那些場合仍用 `@AGENTS.md` import。issue #6235 官方已於 2026-08-17 關閉，當時給的是 import／symlink 做法，原生支援是一個月後的事。
+  - **09-22 補（HN 327 分）**：關掉 telemetry 讀不到的成因是載入器卡在一道遠端 feature flag 後，且不會有任何警告訊息；官方 issue #95690 已追蹤並標記修復，修復版本號尚未見於官方 changelog。
   - 社群另回報 `.agents/skills` 資料夾不在原生支援範圍內（HN 討論，2026-09-19；官方文件未提）。
 - ⟨G-09⟩ 多平行 agent 即時可觀測性／協調地圖：官方 Agent View 為**列表式** session 管理，非跨 agent 即時狀態流的 live map；當數十至上千平行 agent 併跑時「誰卡住、誰在等、彼此依賴」缺乏即時可觀測面，社群自建地圖式檢視器補位，官方無對應方向。2026-07-15 v2.1.211 新增 `--forward-subagent-text` 旗標與 `CLAUDE_CODE_FORWARD_SUBAGENT_TEXT` 環境變數，讓 `stream-json` 輸出包含 subagent 文字與思考內容，為社群建構觀測工具提供官方資料來源；2026-07-17 v2.1.212 將 `/fork` 改為建立獨立背景 session（`claude agents` 自成一列），原同 session 子 agent 行為更名 `/subtask`，使多開背景任務與同 session 委派的列表可見度更清楚拆分，但本身仍非官方 live map 產品，狀態未變。
 - ⟨G-10⟩ Agent 間直接通訊協定：與上一列「即時可觀測性／協調地圖」的區別：協調地圖是**被動觀測**（讀 transcript/log，agent 本身不互相收送訊息）；本列是**主動通訊**（agent 間或跨機器交換訊息以協調依賴順序），先前只能靠檔案系統或外部工具中繼。
@@ -130,8 +131,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-11⟩ 跨 harness 統一操作層：缺執行期統一操作面，非設定檔互通（⟨G-08⟩）。08-24 起密集湧現，官方僅涵蓋 CC 自身 session。09-10 再添 avibe、ccteam；09-12 再添 orca（ADE，7 天 +4,966★，日增最快），官方狀態不變，見 [[topics/community-tech-tools]]「多 agent 協調混亂」。
 
 - ⟨G-12⟩ Agent 跟 agent 做生意、吵架怎麼判：目前只有 internet-court-skill 一個社群方案在談這件事（自然語言協議＋ERC-7710 委任權限＋x402 支付＋履約爭議仲裁），證據還撐不起單獨成一列，工具本身見 [[topics/community-tech-tools]]。
-- ⟨G-13⟩ 想自己決定哪段用哪個模型、不被鎖住：個人端官方只有 `opusplan` 這一種固定切換——規劃模式用 Opus，進到執行換 Sonnet。org default model（v2.1.196，2026-06-29）與 `enforceAvailableModels`（v2.1.175）都是企業管理端的設定。
-  - 依成本或任務動態挑模型，截至 2026-09-19 官方模型設定文件未見。代表社群工具：Workweave Router（HN 181，實測降 40%+）、Dragoman、Council、Ungate、Rayline。
+- ⟨G-13⟩ 想自己決定哪段用哪個模型、不被鎖住：個人端官方有 `opusplan`（規劃用 Opus、執行換 Sonnet）；另有 `CLAUDE_CODE_SUBAGENT_MODEL` 統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件，2026-09-23 查）。
+  - org default model（v2.1.196，2026-06-29）與 `enforceAvailableModels`（v2.1.175）都是企業管理端的設定。
+  - 依成本或任務動態挑模型，官方文件未見——model-config 文件明載除上述固定指定機制外並無 automatic difficulty-based model routing。
+  - 代表社群工具：Workweave Router（HN 181，實測降 40%+）、Dragoman、Council、Ungate、Rayline。
   - The Information（2026-09-15）與 Dealroom（2026-09-16）均報導開發者正把 Claude Code 接到非 Anthropic 模型後端執行，兩則都沒有規模數字。
 
 ---
@@ -173,9 +176,9 @@ Claude Code Artifacts（2026-06-18）讓工作階段進度可即時輸出為可�
 
 ### 🧪 部分對應：多模型路由 / 鎖定防禦
 
-v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 org console 統一設定組織預設模型，使用者在 `/model` 看到「Org default」選項。v2.1.175 的 `enforceAvailableModels` 則可強制限制可用模型清單。個人端官方只有 `opusplan` 這一種固定切換（規劃用 Opus、執行換 Sonnet）。
+v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 org console 統一設定組織預設模型，使用者在 `/model` 看到「Org default」選項。v2.1.175 的 `enforceAvailableModels` 則可強制限制可用模型清單。個人端官方有 `opusplan` 這一種固定切換（規劃用 Opus、執行換 Sonnet），另有 `CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件，2026-09-23 查）。
 
-這兩個功能覆蓋的是**企業側的模型管控**需求，與社群訴求（個人用戶在複雜 agent 場景中的多模型動態路由、成本最佳化路由）仍有本質差距。社群工具（Dragoman、Council、Ungate）填補的是後者，官方目前無對應方向。The Information（2026-09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞開官方模型、改接其他供應商，方向與本列社群訴求一致，惟原文無可讀內文，具體手法與規模未載。Dealroom（2026-09-16，2 個來源同日報導）同向補充：開發者傾向把 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 因此收不到對應 token 費用，惟同樣未附具體規模數字。
+這三個功能給的都是**固定指定**（依角色或組織身分決定用哪個模型），與社群訴求（依成本或任務難度**動態**路由）仍有本質差距——官方 model-config 文件明載除上述指定機制外，並無 automatic difficulty-based model routing。社群工具（Dragoman、Council、Ungate）填補的是後者，官方目前無對應方向。The Information（2026-09-15，僅標題）報導部分開發者正找方法在 Claude Code 中繞開官方模型、改接其他供應商，方向與本列社群訴求一致，惟原文無可讀內文，具體手法與規模未載。Dealroom（2026-09-16，2 個來源同日報導）同向補充：開發者傾向把 Claude Code 接到非 Anthropic 模型後端執行，Anthropic 因此收不到對應 token 費用，惟同樣未附具體規模數字。
 
 ---
 
@@ -192,6 +195,8 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 
 ### 2026-09-23
 - **`## 對照矩陣`併入『官方補了沒』表（使用者裁決）**：CLAUDE.md 規則失效、AI 輔助開發副作用兩個 ❌ 與平台可及性 1 個 🧪，從獨立矩陣改插進主表，表由 13 列增為 16 列；獨立節移除，平台可及性的細節仍留在下方「技術彙整」一節。
+- **⟨G-13⟩ 模型路由列補上 `CLAUDE_CODE_SUBAGENT_MODEL`**：官方文件確認可統一指定 subagent 預設模型，與既有 `opusplan` 同屬「固定指定」。
+  - 文件同時明載並無 automatic difficulty-based model routing，「依成本或任務動態選模型」缺口判定不變，僅核對日與說明更新。
 
 ### 2026-09-20
 - **AGENTS.md 由缺口轉為已補**：Claude Code v2.1.277（09-18）起原生讀 `AGENTS.md`，本頁該列自 ❌ 改 ✅ 並補三個邊界；同時更正 08-17 官方一次關閉的五個 issue（#6235、#24798、#47023、#24316、#29006）與 #14227（05-25 標為不打算做），本頁原先仍當它們是進行中的社群壓力。

@@ -2,20 +2,20 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-21
+**最後更新：** 2026-09-23
 
-> **這禮拜動了什麼**（2026-09-17）
-> Claude Cowork 與聊天介面合併為單一 Claude，同步推出 Claude Docs、Claude Slides（beta）與整合進對話的 Claude Design，先在 Pro／Max 方案陸續開放——本月至今最大的官方產品異動，官方「方案與定價」頁同日大改版收攏相關段落。
+> **這禮拜動了什麼**（2026-09-23）
+> Claude Opus 5.5 發布並成為 Claude Code 的預設 Opus（v2.1.280）：Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 模型全面改指它，不動設定也會換；牌價 $4／$20 較 Opus 5 降 20%，官方稱多數工作追平 Fable 5.1。跑排程任務的人先 `/model` 看一眼現在實際跑的是哪一個。
 
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-09-21）
+## ⭐ 現在值得跟的三件（最後輪替 2026-09-23）
 
-- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應全站讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，可到 `/config`「Project instructions」調整（Bedrock／Vertex／Foundry 尚未支援）。
+- **Claude Opus 5.5 成為預設模型**：v2.1.280 起 `default` 全面改指 Opus 5.5（Foundry 仍 Sonnet 4.5），你不動它、它也會改變你每個未指定模型的 session 與排程任務。**怎麼開始：** `/model` 看現在實際跑的是哪一個；額度敏感或大量排程的人用 `/model sonnet` 固定回去，細節見 [[entities/opus-5-5]]。
+- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應全站讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，可到 `/config`「Project instructions」調整（Bedrock／Vertex／Foundry 尚未支援；關閉 telemetry 時會被靜默略過，官方已標修復）。
 - **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
-- **Auto mode 免計費 server-side classifier**：v2.1.278 起，API／Enterprise／Bedrock／Vertex／Foundry／閘道器用戶不再為 auto mode 分類器額外計費。**怎麼開始：** 已自動生效，查 `/status` 確認分類器是否跑在伺服器端。
 
-%% 09-21 換上 Auto mode 免計費 classifier（今日媒體二度報導、熱度達候選門檻，詳見全覽表），讓出原第三名「Claude Opus 5」（發布已逾 30 天時間閘、本輪熱度／試用價值未變動，時間閘外無合格替補豁免，被更新達標的候選取代）；09-19 換上的 AGENTS.md 支援仍是「你不動它、它也會改變你行為」型態，維持固定第一名 %%
+%% 09-23 換上 Claude Opus 5.5 預設換代（預設值改變型，依規則固定第一條），讓出 Auto mode 免計費 classifier（09-21 上榜、🔥🔥🔥🔥，被熱度同級但屬「不動也會改變你」型且較新的條目取代）；Fable 5.1 09-01 發布仍在 30 天時間閘內、🔥🔥🔥🔥🔥 留第三 %%
 
 ---
 
@@ -27,6 +27,7 @@
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
 | v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
 | v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
 | v2.1.257 | 預設 Fable 模型換成 5.1；auto 模式新增 Containment Escape 規則 | 預設值改變 | Pro／Team standard 的 Fable 走 usage credits，升完看一次帳單通道；雲端 CI 若需抓 metadata／執行對外連線，在環境標記為預期用途，否則 auto 不再自動核准 |
@@ -64,6 +65,24 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Claude Opus 5.5 成為 Claude Code 新預設模型
+**發布：** 2026-09-22（v2.1.280） | **熱度：** 🔥🔥🔥🔥 | **試用價值：** ⚡ 有條件推薦 | **狀態：** 正式發布
+
+**是什麼：** Claude Code 的 `default` 模型全面改指向 Claude Opus 5.5——Pro／Max／Team／Enterprise／API／Bedrock／Vertex 皆同步切換，Microsoft Foundry 仍為 Sonnet 4.5；不需手動切換，下次啟動就是新模型。模型本身的規格、牌價與基準見 [[entities/opus-5-5]]。
+
+**為何熱：** 不動手也會改變你行為的預設值變更，牽動所有未明確指定模型的 session 與 routines／scheduled tasks；官方稱多數任務打平 Fable 5.1、成本降 40%；Reddit 已有使用者回報 routines 因此改跑 Opus、額度消耗上升（單一低互動來源）。
+
+**現在要試嗎：** 已是預設，無需主動嘗試；額度敏感或跑大量排程任務的使用者建議先 `/model` 確認目前實際套用的模型，避免原本跑 Sonnet 的 routine 被非預期換成較貴的 Opus。
+
+**快速上手：**
+```
+/model
+# 檢查目前 session 實際套用的模型；要固定回 Sonnet：
+/model sonnet
+```
+
+**注意事項：** Foundry 通道不受影響，仍為 Sonnet 4.5；費率 $4／$20 每 Mtok，cache read $0.20／Mtok，定價細節見 [[entities/pricing]]。
 
 ### v2.1.278：Auto mode 免計費 server-side classifier
 **發布：** 2026-09-19（v2.1.278） | **狀態：** 正式發布
@@ -294,6 +313,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Opus 5.5 成為新預設模型**（v2.1.280，Pro/Max/Team/Enterprise/API/Bedrock/Vertex，Foundry 仍 Sonnet 4.5；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥🔥 | ⏳ 觀望 | Beta |

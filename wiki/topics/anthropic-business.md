@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新動態**（2026-09-22）
-> - **反壟斷合謀訴訟原告身分曝光**：四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶提集體訴訟，主張協議始於 2026-07、降低訂閱者所獲價值（Hacker News；AP News）。
-> - **Palo Alto Networks 推出結合 Claude、GPT 的 AI 資安服務**：具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）。
+> **最新動態**（2026-09-23）
+> - **Opus 5.5 發布**：官方定價 $4/$20 per Mtok，較 Opus 5 執行成本省 40%；同日與醫療 AI 服務 OpenEvidence、Amazon 賣家工具兩起戰略合作曝光，詳見「哪個合作會改到你用的 Claude」。
+> - **IPO 前景再添雜音**：Bloomberg 報導 IPO 計畫生變、市場情緒受衝擊，僅標題可用，尚無新增時程或估值數字。
 
 ---
 
@@ -103,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列與 ⟨Q-03⟩（Google News/Bloomberg.com）。
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。
 - ⟨Q-03⟩ ❓ **待查證**（標 2026-09-06｜查 calcalistech、IPO 延後｜複 2026-10-04｜訊 2026-09-21）｜**IPO 時程是否已延後**：calcalistech 標題稱 IPO 已延後，同日 ETF Trends 標題卻暗示已有 S-1 可解讀。
@@ -321,6 +322,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Amazon（Seller Assistant／Amazon Quick 外掛）**（2026-09-23）：開放賣家工具予外部 AI 代理人，首波合作對象為 Claude，同步升級 Seller Assistant 並推出結合 Amazon Quick 與 Claude 的新外掛，具體功能與計費未見報導（GeekWire；About Amazon）
+- **OpenEvidence**（2026-09-22）：Reuters 獨家報導 Anthropic 與醫療 AI 服務 OpenEvidence 結盟，計畫將醫療 AI 服務推向全球，合約範疇與費用未見報導（Reuters；PYMNTS）
+- **未具名資料中心（控制權洽談）**（2026-09-23）：The Information 報導 Anthropic 正洽談加強對更多資料中心的控制權，具體規模、對象未見報導（Google News/The Information）
 - **Palo Alto Networks**（2026-09-22）：推出結合 Claude、GPT 模型的 AI 資安服務，具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）
 - **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
 - **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費與上線時間未見報導（MacRumors／HN 188 分）**訊 09-19**：Reddit 週熱門重新討論同一線索，無新細節
@@ -499,6 +503,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-23
+- **[定價，官方一手來源] Anthropic 官方：Claude Opus 5.5 發布，$4/$20 per Mtok，較 Opus 5 執行成本省 40%**：完整定價與快取折扣詳見 [[entities/pricing]]（Hacker News，1,674 分；[Anthropic Blog](https://www.anthropic.com/claude-opus-5-5)）
+- **[戰略合作] Reuters 獨家：Anthropic 與醫療 AI 服務 OpenEvidence 結盟，推向全球醫療 AI 服務**：合約範疇與費用未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/Reuters；PYMNTS）
+- **[戰略合作] GeekWire／About Amazon：Amazon 開放賣家工具予外部 AI 代理人，首波合作對象為 Claude**：同步升級 Seller Assistant 並推出結合 Amazon Quick 與 Claude 的新外掛，具體功能與計費未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/GeekWire；About Amazon）
+- **[資本支出，僅標題可用] The Information：Anthropic 洽談加強對更多資料中心的控制權**：具體規模、對象未見報導（Google News/The Information）
+- **[IPO前瞻，僅標題可用] Bloomberg：IPO 計畫生變，市場情緒受衝擊**：具體變動內容、新時程未見報導，詳見「IPO 走到哪一格」表 ⟨Q-03⟩（Google News/Bloomberg.com）
 
 #### 2026-09-22
 - **[商業風險，跟進] Hacker News（32 分）＋AP News：反壟斷合謀訴訟原告身分曝光——四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶提集體訴訟**：主張協議始於 2026-07、降低訂閱者所獲價值，詳見「還沒過去的風險」細節區更新（Hacker News；Google News/AP News）

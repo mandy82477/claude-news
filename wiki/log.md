@@ -6757,3 +6757,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **對帳**：`check_tools_page.py`（含 `check_spokes` 榜橋對帳）綠。
 
 **歸因**：`user-query`（使用者裁決，ledger 第 15 波 tools↔SIW 分法提案）。
+
+## 2026-09-23 Ingest
+
+- 來源日報：[[news/2026-09-23]]（15/15 來源正常，72 則；日報收錄 27 則，另 45 則透過 `list_digest_omissions.py` 一併提供給記者判斷）
+- 分類派工：模型 24 則、功能 9 則、商業 26 則、安全政策 10 則、社群 19 則、人物 1 則（六類並行 foreground，`subagent_type: general-purpose` + `model: sonnet`）；排除 5 則、分類複核記者判全數維持排除
+- 更新頁面：
+  - **模型**：`entities/opus-5-5.md`（新頁：Claude Opus 5.5，$4/$20、快取讀取 $0.20、1M context、退場不早於 2027-09-22；官方稱多數工作追平 Fable 5.1；Claude Code v2.1.280 起為預設 Opus）、`entities/opus-5.md`（改列 Legacy；⟨Q-04⟩ Opus 5.5 傳聞標訊 09-23）、`topics/model-comparison.md`（快速選型表 Opus 5→5.5、費率變動同步）
+  - **功能**：`entities/claude-code.md`（v2.1.280 預設模型換代；AGENTS.md 關 telemetry 時被靜默略過 #95690 已知問題；記憶體膨脹 120GB #4953、MEMORY.md 壓縮閾值 #91188）、`topics/official-community-gap.md`（⟨G-08⟩、⟨G-13⟩ 補 `CLAUDE_CODE_SUBAGENT_MODEL`）、`topics/coding-workflow-guide.md`（補 `--bare`、`/context` 診斷、hook exit code 語意）、`topics/anthropic-agent-stack.md`（補 20 路預設上限與 worktree 指令）
+  - **商業**：`entities/pricing.md`（Opus 5.5 牌價列、Pro／Max 上限調高）、`topics/anthropic-business.md`（IPO 延後、資料中心控制權、OpenEvidence 結盟、Amazon 賣家工具、價格戰）、`topics/competitor-landscape.md`（Copilot 本機沙箱／OTel／JetBrains 1.18、中國調查 DeepSeek／Moonshot）
+  - **安全政策**：`topics/ai-agent-safety.md`（安全測試仍嘗試受限動作、Opus 5.5 資安防護，皆 ❓ 待查證；CBS 三人攻入 OpenAI 併入 09-18 既有事件後續）、`topics/anthropic-government-policy.md`（中國調查線最後動態 09-22）
+  - **社群**：`topics/community-tech-patterns.md`（FrontierAgent、shadcn-ui/lint 兩節點）；AI·rete·RAG（無 Claude 關聯）與 kernel 分類器推文（單一截圖）評估後不收
+  - **人物**：無（Jared Kaplan 首次提及、無具體聲明，未達建頁門檻）
+- 新增頁面：`entities/opus-5-5.md`
+- feature-radar：新增「Claude Opus 5.5 成為 Claude Code 新預設模型」（🔥🔥🔥🔥 ⚡）；⭐ 三件輪替（Opus 5.5 預設換代依「不動也會改變你」規則置首，讓出 Auto mode classifier）；⚠️ 升版表加 v2.1.280 預設值改變列；callout 改寫
+- index：新增 opus-5-5 列；opus-5 改 active（Legacy）
+- overview：當前局勢 prepend Opus 5.5 段；主要模型現況表 Opus 5.5 現行、Opus 5 Legacy、Sonnet 5 不再標「Claude Code 預設」
+- 轉知帳本：結案 6（H-28f7a3 模型；H-90ad60／H-668f22／H-fc5914／H-de1e7b／H-f91933 功能，其中 H-f91933 以站內證據判斷、官方原文未逐字核）；未結 1（H-c63724 功能，需 web 查證官方讀取上限）；新開 2（H-3bf1c7 社群→功能：OCG 表評估 FrontierAgent／shadcn lint 新列；H-2a6440 模型→社群：code-quality-decline「Opus 5」措辭換代）。模型記者另兩項轉知（pricing／anthropic-business 換代、Opus 5.5 資安防護）已由商業與安全政策記者同輪處理，不登帳
+- 摘要：Claude Opus 5.5 發布日——效能追平 Fable 5.1、牌價 $4/$20、成為 Claude Code 預設 Opus；同日 OpenAI GPT-6 Sol／Luna 迎戰、Bloomberg 報 IPO 延後、Reuters 獨家 OpenEvidence 醫療 AI 結盟
+- 呈現品質：全部通過（六記者機械自查全綠；社群頁 66 筆超限為既有基線）
+- 品質備註：[日報] Phase A 摘要忠實度自檢修正 7 處（Google News redirect 殼佔大宗、缺可用摘要內文），屬來源結構問題非記者品質；[功能] H-f91933 記者無 web 工具改以站內證據判定，主編 lint 5c 補核
+- 分類回退：無
+- devpractice 沉澱：基準線 e1771832 → 583674d8，候選 7 筆（claude-code 預設換代與 AGENTS.md telemetry 成因、agent-stack 20 路上限與 worktree、guide --bare／/context／exit code、OCG SUBAGENT_MODEL、model-comparison 換代、patterns 兩工具）
+- market 判讀：判讀 2 則（Opus 5.5 定價牌價降 20%／成本降 40%〔第 4 類〕；Bloomberg IPO 計畫生變〔第 2 類〕）／里程碑 2 筆／回顧結算 ⏳ 2 列；其餘 6 則檢視後未達六類門檻

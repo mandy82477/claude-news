@@ -30,19 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-23
+**最後新聞更新：** 2026-09-23
 
-> **最新動態**（2026-09-22）
-> - **新增已知問題**：功能請求「串接 Claude.ai Projects 知識庫」（#2511，51 留言、642 讚，本日反應數最高）。
-> - **服務穩定性**：Fable 5／Mythos 5.1／Opus 5 錯誤率升高已修復（Anthropic Status，00:50–02:10 UTC）。
-> - **既有已知問題互動更新**：CVP 資安誤擋（#84352，199 留言、27 讚，本日互動量最高）等 4 則同步更新留言／讚數。
+> **最新動態**（2026-09-23）
+> - **v2.1.280：Claude Opus 5.5 成為新預設模型**（Pro／Max／Team／Enterprise／API／Bedrock／Vertex；Microsoft Foundry 仍為 Sonnet 4.5），1M context，$4／$20 每 Mtok。
+> - **AGENTS.md 已修復狀態補一筆成因**：telemetry 關閉時讀不到本機 AGENTS.md 且無警告，卡在遠端 feature flag，官方 issue #95690 已追蹤並標記修復（修復版本號未見於 changelog）。
+> - **既有已知問題互動更新**：記憶體洩漏 OOM Killed（#4953，98 留言）、`MEMORY.md` 壓縮門檻可設定（#91188，54 留言）同步更新。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.280**（2026-09-22）：**Claude Opus 5.5 成為新預設模型**——Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 皆改指向 `claude-opus-5-5`（Foundry 仍為 Sonnet 4.5，官方文件 2026-09-23 查）；1M context，$4／$20 每 Mtok。
+  同版新增全螢幕模式更多清單的滑鼠操作支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)）。模型能力與定價細節見 [[entities/pricing]]。
 - **v2.1.278**（2026-09-19）：Auto mode 預設改用 server-side classifier，API／Enterprise／Bedrock／Vertex／Foundry／閘道器不再為分類器耗用額外計費；`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）。
 - **v2.1.277**（2026-09-18）：新增 AGENTS.md 支援，無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry（見 [Changelog](https://code.claude.com/docs/en/changelog)）。回應已知問題 #6235，見下方「已知問題」。
 - **v2.1.276**（2026-09-18）：修復 2.1.275 一項迴歸——`ANTHROPIC_BASE_URL` 指向 proxy／gateway 時，每個請求皆因 `advisor_20260301` 標籤觸發 400 錯誤而全數失敗；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）。
@@ -111,7 +113,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | Windows Desktop 崩潰／孤兒程序／session 消失，紀錄可能被靜默清除（#80444 #42776 #26302 #53247 #26452 #59248） | Windows Desktop（含 Cursor 擴充套件）使用者 | 🔴 | 升級前備份重要對話；當機後登出或重開機再試；別依賴自動保留機制 |
 | Cowork 的 Edit/Write 靜默截斷檔案（#53940） | Windows 上用 Cowork 的人 | 🔴 | 寫入後自行核對檔案長度；官方未給修復時程（44 則留言，可重現） |
-| 進程增長至 120GB+ 遭 OOM killed（#4953 #11315） | Linux 上長時間執行的 session | 🔴 | 長工作分段、定期重開 session（97 則留言，可重現） |
+| 進程增長至 120GB+ 遭 OOM killed（#4953 #11315） | Linux 上長時間執行的 session | 🔴 | 長工作分段、定期重開 session（98 則留言，可重現） |
 | Cowork VM bundle 膨脹至 10GB，啟動與 UI 持續變慢（#22543） | 用桌面版 Cowork 的人 | 🔴 | 近期避免在 Cowork 處理大型檔案或大量寫入（官方標高優先） |
 | 改 MCP／hooks／plugin 設定要重啟整個 session 才生效（#24057） | 用 MCP 的人 | 🔴 | 改設定前先收尾，重啟會失去現有內容 |
 | MCP server 沒有 token 刷新機制（#5706） | 自建 MCP server 的人 | 🔴 | 改用長效期 token |
@@ -219,7 +221,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**［META］`bypassPermissions` 模式並未真正略過權限檢查——9 個月未解、12+ 則重複回報（GitHub issue #39523，累積 33 則留言、18 個讚，首見 2026-07-23）**：回報者指出 `bypassPermissions` 模式並未如預期真正跳過權限檢查，此問題已延續 9 個月，累積 12 則以上重複回報仍無解決；與既有「`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效」（issue #36168）同屬權限跳過機制失效訴求但涵蓋範圍不同（此則為長期 META 彙整回報），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 40 則留言，首見 2026-07-23，2026-08-08 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
-- 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 39 則留言，2026-09-08）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 54 則留言，2026-09-08 首見，2026-09-23 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 76 則留言、116 個讚，2026-09-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**回應超過 32000 output token 上限觸發 API 錯誤（GitHub issue #24055，累積 137 則留言、85 個讚，2026-07-11）**：多名使用者回報回應長度超過 32000 output token 上限時觸發「API Error: Claude's response exceeded the 32000 output token maximum」；官方尚未回應。
@@ -371,7 +373,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓（GitHub issue #26302，累積 46 則留言、43 個讚，2026-08-15）**：使用者回報更新至 Claude Desktop 1.1.3189 後，Windows 上出現嚴重 UI 延遲與滑鼠卡頓，回報為效能退步（regression）；與既有「Cowork 建立 10GB VM bundle 導致效能持續惡化」（issue #22543）同屬 Desktop 效能問題但觸發情境不同（此則未特定指向 Cowork），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 36 則留言、1 個讚，2026-08-16）**：Windows 桌面應用（Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080）發生 GPU process crash（exit code 101457950），導致整個應用程式與所有執行中的 session 一併中斷；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Windows/MSIX 1.28929.0：跨 session 訊息會送進目標 session 輸入框卻不會自動送出，該 session 從此無回應（GitHub issue #86069，累積 8 個讚，2026-08-23）**：使用者回報在 Windows MSIX 版本（1.28929.0）下，透過跨 session 訊息互通功能（見上方「功能請求：多 Claude session 間直接通訊」issue #24798 已修復條目）傳送的訊息會正確出現在目標 session 的輸入框中，但不會如預期自動送出，導致目標 session 完全無回應；與既有跨 session 訊息互通功能同源但屬 Windows/MSIX 平台特有的送出步驟缺陷，暫分列追蹤；官方尚未回應。
-- 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 97 則留言、75 個讚，2026-07-06 首次記錄，2026-08-19 讚數更新）**：使用者回報 Claude Code 進程會持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。
+- 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 98 則留言、77 個讚，2026-09-22 互動數更新）**：Claude Code 進程持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。
 - 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 65 則留言、57 個讚，2026-09-19）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**macOS 持續性 ECONNRESET 連線錯誤（GitHub issue #5674，累積 54 則留言、54 個讚，首見 2026-07-06，2026-09-21 互動數更新）**：僅在 macOS 上出現的持續性連線中斷問題（ECONNRESET），連線中斷導致任務被打斷，Windows 環境未見同樣狀況，疑為平台特定的網路層處理差異；官方尚未回應。
 - 🔴 **未修復**｜**Linux 上持續產生 Windows 換行（CRLF）檔案（GitHub issue #2805，累積 52 則留言、35 個讚，首見 2026-07-06，2026-08-25 互動數更新）**：即便 CLAUDE.md 已明確指示使用 LF 換行，Claude Code 在 Ubuntu Linux 上仍持續產生 CRLF 換行的檔案，跨平台團隊協作時易引發不必要的 diff 雜訊；官方尚未回應。
@@ -383,6 +385,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
 - 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-10-18）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
 - ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
+  **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
@@ -458,6 +461,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.280** | 2026-09-22 | **Opus 5.5 成新預設模型**（Foundry 仍 Sonnet 4.5，2026-09-23 查證），$4／$20 每 Mtok；全螢幕更多清單支援滑鼠（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)）|
 | **v2.1.278** | 2026-09-19 | Auto mode 預設免計費改用 server-side classifier（API／Enterprise／Bedrock／Vertex／Foundry／閘道器）；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
 | **v2.1.277** | 2026-09-18 | 新增 AGENTS.md 支援：無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整；尚未支援 Bedrock、Vertex、Foundry（見 [Changelog](https://code.claude.com/docs/en/changelog)）|
 | **anthropic-sdk-python v1.7.0** | 2026-09-18 | Features：新增 rate limit 群組可帶 `display_name` 欄位（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0)）|
@@ -499,7 +503,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **anthropic-sdk-typescript vertex-sdk v0.19.5 / google-cloud-sdk v0.0.10** | 2026-08-19 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.5)）|
 | **v2.1.235** | 2026-08-18 | 新增可選 `spellcheck` 設定：透過本機安裝的 aspell／hunspell／ispell，即時在輸入框底線標出拼字錯誤；同時修復一項與整段提示詞（whole-prompt）相關的問題，官方 changelog 原文於此處截斷，其餘細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.235)）|
 | **v2.1.234** | 2026-08-17 | 新增可選環境變數 `CLAUDE_CODE_PROJECT_DIR_NAME`：讓每個 session 有獨立設定目錄的主機（如 CI／多租戶執行環境）可為專案 transcript 目錄自訂短名稱；官方 changelog 原文於此處截斷，其餘細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.234)）|
-| **v2.1.233** | 2026-08-14 | 新增 `--worktree` 旗標與 `claude agents` 視圖的 GitLab merge request URL 支援（MR 顯示為 `!N`）；新增選用（opt-in）的 `forward_user_identity` apps gateway 設定（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.233)）|
+| **v2.1.233** | 2026-08-14 | 新增 GitLab MR URL 顯示支援（`--worktree` 旗標本身早於 v2.1.133 即存在）；新增選用 `forward_user_identity` gateway 設定（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.233)）|
 | **v2.1.232** | 2026-08-13 | Subagent forking 預設開啟：帶 `subagent_type: "fork"` 的 subagent 現在預設繼承完整對話與 prompt cache；互動 session 中非 teammate 的 agent 任務指派行為亦有相應調整，官方 changelog 原文於此處截斷，細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.232)）|
 | **anthropic-sdk-typescript vertex-sdk v0.19.4** | 2026-08-13 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.4)）|
 | **anthropic-sdk-python v0.122.0** | 2026-08-13 | Features：新增 API `output_behavior` 欄位支援於 dream creation（可建立新記憶庫或原地更新既有輸入庫），非先前判讀的「dream cr」截斷字詞（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.122.0)，查證日 2026-09-20）|
@@ -713,6 +717,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-23 | **v2.1.280**：Opus 5.5 成新預設模型。AGENTS.md 補 telemetry 成因（#95690）。修正 v2.1.233 斷句誤導。互動數更新：#4953、#91188。 |
 | 2026-09-20 | 新增已知問題 2 則：Cowork device_bash 失效（#92958）、Plugin4Shell 跨 agent RCE（僅標題可用）。GitSpawn 補記 v2.1.196 部分修補。 |
 | 2026-09-19 | v2.1.278 免計費 classifier；v2.1.277 AGENTS.md 上線，#6235 轉✅。新增 #11315。旗標增3消1，見 [[topics/claude-code-experimental]]。互動4則。 |
 | 2026-09-18 | **v2.1.276** 修復 400 錯誤迴歸。Projects 進 Beta，六媒體報導。旗標增減各 2，見 [[topics/claude-code-experimental]]。互動數更新 5 則。 |
