@@ -4667,42 +4667,42 @@
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.280": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.14": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.19.11": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.8.0": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/claude-opus-5-5": {
     "first_emitted": "2026-09-23",
-    "score_at_emit": 1666,
-    "digest_confirmed": false
+    "score_at_emit": 1674,
+    "digest_confirmed": true
   },
   "https://github.com/JayPokale/Chisle": {
     "first_emitted": "2026-09-23",
-    "score_at_emit": 507,
-    "digest_confirmed": false
+    "score_at_emit": 509,
+    "digest_confirmed": true
   },
   "https://github.com/Haleclipse/CometixCode": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 503,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/zhikunqingtao/zhikuncode": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 501,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://artificialanalysis.ai/models/claude-opus-5-5": {
     "first_emitted": "2026-09-23",
@@ -4711,88 +4711,88 @@
   },
   "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on": {
     "first_emitted": "2026-09-23",
-    "score_at_emit": 308,
-    "digest_confirmed": false
+    "score_at_emit": 327,
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/4953#f4cce70a1d5a0013": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 98,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/91188#40b3c0229accbc90": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 54,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://ai-rete-rag.com": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 40,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://twitter.com/TheAhmadOsman/status/2102535871727857915/photo/1": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 17,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://useax.dev": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/rondoflow/rondoflow": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://jade.email": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/kvitapp/kvit-plugins": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 2,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://dev.to/adilaidev/why-claude-loses-users-to-cheaper-ai-tools-44cn": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 2,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/hsnsdt/usagebar": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/sshah03/use-citations": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://openai.com/index/two-years-of-openai-academy": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wo8h8s/opus_55_write_funny_song_to_introduce_yourself_to": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wo89ts/i_tried_using_weird_programming_languages_to_get": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wo85p3/am_i_crazy_or_has_front_end_been_terrible_as_of": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1wo8492/prompts_and_jevcontolled_rts_game_ported_and": {
     "first_emitted": "2026-09-23",
@@ -4837,7 +4837,7 @@
   "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMifEFVX3lxTE4zbEpUVHQwVDl3TENaSC1aRlR6em8xYlo2TVIwVUpaenB6T0xyUFNaakdmZks4cV9oVDl3cFdjSi16Q1k4QU04bUF0bXMwWGZmY3Zya0xkZl9NRE9EZjhVVTR4ZHA0UWdscm84eFV4azFqcXdNdEd4WjhILWo?oc=5": {
     "first_emitted": "2026-09-23",
@@ -4897,7 +4897,7 @@
   "https://simonwillison.net/2026/Sep/23/bof-agentic-engineering": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaXRsOGVIV1c0LUJuY0lJbkpick8xZV9lajkwVkNpcGtsalg2OXc3ZC1GSUxlb21ITEp4a28zbmUxZTRiVjRXcG9mZ2RTWG1BX0dPWHAyUDA3eTVwTjZ4RXdjQlk2eEZqd1duUU1pdVRxZGwyeDlNVFFkU1NOX3NySVRobUtqOG1iX3p3?oc=5": {
     "first_emitted": "2026-09-23",
@@ -4907,17 +4907,17 @@
   "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://about.fb.com/news/2026/09/meta-spf-scam-efforts": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMVNRTjJSWU9kS09nUmcwSWU3MGIxeFRtY2xFV1dHajVVSzdSbWREdVJUVVlQZC1GUnBzTEVibDNhM2o4SFVIaXJkSW91TnBLMmhsWi1MSXJ5dUVqUzFQcHc3cGFyOXZDaExBd245R1Fmc00tbjM1b25ZaVMzRFpVMjBBUnR2RlhqQ3c?oc=5": {
     "first_emitted": "2026-09-23",
@@ -4927,12 +4927,12 @@
   "https://openai.com/index/grab-openai-ai-skills-southeast-asia": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5": {
     "first_emitted": "2026-09-23",
@@ -4977,7 +4977,7 @@
   "https://simonwillison.net/2026/Sep/22/llm": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNalNQRnNqazhhNmxmWWVWcm11dDR5NU1xMmpWTi1jNmVxWVNCMnBKQjJvNzJCcVkxMDBkMzlQQ3V2RllHLS1abE9DUmJDRTVLZ2tJYjdOM0dhLWhqRV9rSGpWWW5pWlJwOExpTWJJb200aUVfNGhTR29ucW5CVlNxWFBFOUNsblJwdnQ2QnE3LWJnV0FSY2xkZkJlSUZsdVBqS2VubThFOHdOVkwwZTZlYXNLRENpNVBs?oc=5": {
     "first_emitted": "2026-09-23",
@@ -5012,7 +5012,7 @@
   "https://simonwillison.net/2026/Sep/22/llm-anthropic": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR3kyT0JlSC1QNUhOT0RtQ0VZVzFRSF9IZVE1TlhmY3RMU012NENzcm9IVXdXM0NQMmZRVVRxV0d4QmgyUHBCWXRsQ1J3OGhCZ1JPUGhJOG1ZYTdXcTBLVG5PQ1NHUzB6WEVlZFl6U2tDcUdqVkYzSndmOGxlREwtd05Fb1VIUnZpT2d3bDhKWQ?oc=5": {
     "first_emitted": "2026-09-23",
@@ -5027,7 +5027,7 @@
   "https://simonwillison.net/2026/Sep/22/llm-typesafe": {
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/LocalLLaMA/comments/1wn9a2w/what_underrated_ai_tools_have_actually_made_you": {
     "first_emitted": "2026-09-23",
@@ -5058,5 +5058,190 @@
     "first_emitted": "2026-09-23",
     "score_at_emit": 0,
     "digest_confirmed": false
+  },
+  "https://github.com/ApodexAI/FrontierAgent": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 4515,
+    "digest_confirmed": true
+  },
+  "https://github.com/shadcn-ui/lint": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 2670,
+    "digest_confirmed": true
+  },
+  "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wo91ob/routinesscheduled_tasks_on_opus_by_default": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wo8nhw/claude_code_kept_asking_for_my_ruling_after_the": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wo8lt8/the_guild_agents_typesafe_for_builders": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.barrons.com/articles/anthropic-ipo-etf-ai-stocks-f40be6bc": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://thehackernews.com/2026/09/anthropic-and-openai-models-still.html": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.digitaltoday.co.kr/en/view/107211/anthropic-launches-claude-opus-5-5-raises-speed-30-percent-cuts-cost-40-percent": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.makeuseof.com/claudes-20-boost-is-back-celebrating-opus-5-5": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://winbuzzer.com/2026/09/23/claude-opus-5-5-lower-prices-cybersecurity-limits-a004-xcxwbn": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.newser.com/story/396898/anthropic-unveils-opus-55-touts-safety-amid-ai-turmoil.html": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-and-openevidence-team-to-expand-reach-of-medical-ai": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://hackernoon.com/you-dont-have-to-leave-claude-code-to-use-deepseek": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.businessinsider.com/jared-kaplan-ai-safety-concerns-last-year-gain-traction-anthropic-2026-9": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://techxplore.com/news/2026-09-anthropic-openai-cheaper-ai-safety.html": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.helpnetsecurity.com/2026/09/23/anthropic-claude-opus-5-5": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://tech-insider.org/gpt-6-sol-luna-undercut-claude-opus-5-5-2026": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.theinformation.com/articles/anthropic-talks-cement-control-data-centers": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://kingy.ai/blog/gpt-6-sol-vs-claude-sonnet-5": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://kingy.ai/blog/claude-opus-5-5-vs-gpt-6-astra-vs-gpt-5-6-sol": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.reuters.com/legal/litigation/anthropic-openevidence-partner-bring-medical-ai-worldwide-2026-09-22": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.testingcatalog.com/anthropic-launches-claude-opus-5-5-with-lower-api-costs": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.bloomberg.com/news/articles/2026-09-22/derailed-ipo-plans-rattle-us-market-ahead-of-anthropic-debut": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.cbsnews.com/news/openai-hack-anthropic-claude-vulnerabilities": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://gizmodo.com/china-probes-deepseek-moonshot-ai-over-anthropics-claims-they-route-requests-to-claude-2000815507": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://kingy.ai/blog/claude-opus-5-5-specs-benchmarks-pricing-comparison": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://mashable.com/tech/claude-opus-launch-promises-better-performance-cheaper-price": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity": {
+    "first_emitted": "2026-09-23",
+    "score_at_emit": 0,
+    "digest_confirmed": true
   }
 }
