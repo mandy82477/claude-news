@@ -1643,7 +1643,8 @@ window.WIKI_DATA = {
       "summary": "**我卡住了，社群有什麼能救？** 本頁把社群工具依「症狀」排列：每個症狀給一個先裝的、一條「什麼時候該改裝別的」的分界，以及這個判斷是哪天下的、最近一次確認這個專案還在不在是哪天。有一個症狀我們認為答案是機制不是工具，那一格就誠實空著。 按開發流程階段找官方做法見 coding-workflow-guide；做法背後…",
       "latestHeadline": "我卡住了，社群有什麼能救？ 本頁把社群工具依「症狀」排列：每個症狀給一個先裝的、一條「什麼時候該改裝別的」的分界，以及這個判斷是哪天下的、最近一次確認這個專案還在不在是哪天。有一個症狀我們認為答案是機制不是工具，那一格就誠實空著。",
       "readerDomains": [
-        "🌐 社群"
+        "🌐 社群",
+        "💻 開發實務"
       ]
     },
     {
@@ -3124,7 +3125,7 @@ window.WIKI_DATA = {
       "updateFreq": "",
       "parent": "",
       "summary": "**2026-09-18 官方補上了本頁掛最久的那一個**：Claude Code 自 v2.1.277 起原生讀 `AGENTS.md`，這一列從「全站讚數最高的未解缺口」變成「已補，但有三個邊界」。 本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，…",
-      "latestHeadline": "AGENTS.md 由缺口轉為已補：Claude Code v2.1.277（09-18）起原生讀 `AGENTS.md`，本頁該列自 ❌ 改 ✅ 並補三個邊界；同時更正 08-17 官方一次關閉的五個 issue（#6235、#24798、#47023、#24316、#29006）與 #14227（05-25 標為不",
+      "latestHeadline": "`## 對照矩陣`併入『官方補了沒』表（使用者裁決）：CLAUDE.md 規則失效、AI 輔助開發副作用兩個 ❌ 與平台可及性 1 個 🧪，從獨立矩陣改插進主表，表由 13 列增為 16 列；獨立節移除，平台可及性的細節仍留在下方「技術彙整」一節。",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -3212,18 +3213,18 @@ window.WIKI_DATA = {
     {
       "id": "skill-interest-watch",
       "pageType": "topic",
-      "name": "興趣類別 skill 總覽",
+      "name": "社群工具規模榜",
       "entityType": "",
       "status": "ongoing",
       "domain": "🌐 社群",
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-09-02",
-      "lastUpdated": "2026-09-22",
-      "lastNewsUpdate": "2026-09-22",
-      "updateFreq": "🗓️ 每日快照（機器產出；決策表抄自社群工具目錄、最多落後一天；「本週竄升」以七日星數差計）",
+      "lastUpdated": "2026-09-23",
+      "lastNewsUpdate": "2026-09-23",
+      "updateFreq": "🗓️ 每日快照（機器產出；「本週竄升」以七日星數差計）",
       "parent": "",
-      "summary": "本表每日同步自 community-tech-tools（判斷與證據的家；改判斷請改那頁），同步日 2026-09-22。 **圖例**——證據：🟢 多來源實測／🟡 單一實測（多為作者自測）／⚪ 僅星數。括號裡兩個日期：**判**＝下這個判斷的那天，**查**＝最近一次確認這個專案還在不在、多大的那天；判很舊而查很新，…",
+      "summary": "榜依 GitHub 描述機械比對，偶有跨類誤收（同一 repo 出現在兩類、或非本類工具混入）；星數與分類皆非推薦。",
       "latestHeadline": "",
       "readerDomains": [
         "🌐 社群",
@@ -3235,6 +3236,7 @@ window.WIKI_DATA = {
     "💻 開發實務": [
       "coding-workflow-guide",
       "skill-interest-watch",
+      "community-tech-tools",
       "community-large-codebase-workflow",
       "managed-agents"
     ]
