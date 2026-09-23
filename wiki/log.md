@@ -6739,3 +6739,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **轉知**：3 筆開給功能／模型記者（H-668f22／H-de1e7b／H-28f7a3），guide 缺 hook exit code 語意、official-community-gap 缺 `CLAUDE_CODE_SUBAGENT_MODEL` 與互斥句、opus-5 預設模型字樣各一筆。
 
 **歸因**：`user-query`（第 17 波健檢流程；`docs/page-audits/trends-2026-09-23-draft.md` 為完整逐字稿與實作單）。
+
+## 2026-09-23 裁決：official-community-gap 對照矩陣併入官方補了沒表（使用者裁決 1b）
+
+`wiki/topics/official-community-gap.md` 第 14 波裁決點 1：使用者裁「對照矩陣併入」。`## 對照矩陣` 整節（3 列：CLAUDE.md 規則失效 ❌、平台可及性 🧪、AI 輔助開發副作用 ❌）砍除，逐字插入 `## 官方補了沒` 表——`❌` 區最上插兩列（CLAUDE.md 寫了它不聽、用 AI 寫久了技能退化技術債變快）、`🧪` 區末插一列（手機或瀏覽器用得到嗎），表由 13 列增為 16 列。刪前確認：三列事實在新表或「技術彙整」一節都有家（平台可及性同時留在技術彙整節細節），無孤兒列。同步改：A-3 摘要末句改「16 個痛點…3 個 ❌／7 個 🧪／6 個 ✅」；`## 目前結論` 首句「上面那個 ❌、下方對照表裡的兩列」改「上面三個 ❌ 裡有兩個」（對照表已不存在，避免懸空指涉）；`## 時序` 2026-09-20 Cowork 條改寫（依 draft〔併〕版，補「這條線因此獨立成一列」）；prepend `### 2026-09-23` 一則記併表事實。全庫 grep `對照矩陣`：僅 `wiki/log.md`（append-only歷史、不改）與本頁自身；`.claude/reporter-rules/features/pages.md` 現行版本已無「對照矩陣」字樣（第 14 波原稿即未提及，本波無需再動）。懸置標記基線：改前 119 筆、改後 119 筆，本頁改動未涉任何 ⟨Q-nn⟩／❓／🔎 標記。
+
+**歸因**：`user-query`（第 14 波裁決點 1，逐字稿 `docs/page-audits/ocg-2026-09-19-draft.md`〔併〕分岔；ledger 待裁決列 `docs/page-audits/ledger.md:263` 本波結案）。
