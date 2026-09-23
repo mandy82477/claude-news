@@ -52,7 +52,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、fire-your-seo-agency（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-21 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、pstack-claude、Foremerge、FrontierAgent（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-23 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-23 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
@@ -168,7 +168,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **主線：** 並行規模
 - **核心模式：** 開源 agent 框架，原生命令列 TUI，支援 ReAct（單 agent 逐步推理）與 Agent Team（多 agent 協作）雙模式，macOS／Linux 一行指令啟動，無需預裝、無強制 Docker 依賴；GitHub Search 4,515 星，近 8 天 +1,403 星（約 175 星/日）。
 - **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧（Claude Squad、ccteams 等）一個「單一框架內建雙模式切換」取向的代表技巧——既有做法多是外掛在既有 harness 上的協調層，本則從框架本身原生支援單/多 agent 兩種模式；多 agent 協作屬大型 codebase 特有痛點，主線填並行規模。
-- **可信度註記：** forks 224（星/fork 比約 5%，低於常態 1/10 參考值）、open issues 17（有實質往來）、近期持續 commit（抓取當日仍在推送），三項佐證非全無，未達「異常高星數無佐證」排除門檻，惟星/fork 比偏低，收錄但保留觀察。
+- **可信度註記：** forks 224（星/fork 比約 5%，低於常態 1/10 參考值）、open issues 17（有實質往來）、近期持續 commit（抓取當日仍在推送），三項佐證非全無，不屬「異常高星數無佐證」的排除情況，惟星/fork 比偏低，收錄但保留觀察。
 - **來源：** GitHub Search；[GitHub](https://github.com/ApodexAI/FrontierAgent)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 

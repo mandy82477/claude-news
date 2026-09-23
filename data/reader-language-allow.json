@@ -113,6 +113,12 @@
       "term": "lint",
       "line_contains": "shadcn-ui/lint",
       "reason": "「shadcn-ui/lint」是本週竄升表列出的真實 GitHub repo 路徑（org shadcn-ui、repo 名字面即 lint），非編輯部週更檢查流程（2026-09-22 ingest 發現）"
+    },
+    {
+      "page": "topics/community-tech-patterns",
+      "term": "lint",
+      "line_contains": "shadcn-ui/lint",
+      "reason": "GitHub repo 名 shadcn-ui/lint 的字面子串（agent-first 設計系統 linter），非本站每週維運動作名（2026-09-23 ingest 誤報）"
     }
   ]
 }

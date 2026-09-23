@@ -11,8 +11,8 @@
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-09-23）
 
-- **Claude Opus 5.5 成為預設模型**：v2.1.280 起 `default` 全面改指 Opus 5.5（Foundry 仍 Sonnet 4.5），你不動它、它也會改變你每個未指定模型的 session 與排程任務。**怎麼開始：** `/model` 看現在實際跑的是哪一個；額度敏感或大量排程的人用 `/model sonnet` 固定回去，細節見 [[entities/opus-5-5]]。
-- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應全站讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，可到 `/config`「Project instructions」調整（Bedrock／Vertex／Foundry 尚未支援；關閉 telemetry 時會被靜默略過，官方已標修復）。
+- **Claude Opus 5.5 成為預設模型**：v2.1.280 起 `default` 改指 Opus 5.5（Foundry 仍 Sonnet 4.5），未指定模型的 session 與排程任務會跟著換。**怎麼開始：** `/model` 看現在跑的是哪一個；額度敏感的人用 `/model sonnet` 固定，細節見 [[entities/opus-5-5]]。
+- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
 - **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
 
 %% 09-23 換上 Claude Opus 5.5 預設換代（預設值改變型，依規則固定第一條），讓出 Auto mode 免計費 classifier（09-21 上榜、🔥🔥🔥🔥，被熱度同級但屬「不動也會改變你」型且較新的條目取代）；Fable 5.1 09-01 發布仍在 30 天時間閘內、🔥🔥🔥🔥🔥 留第三 %%
@@ -67,7 +67,7 @@
 ## 🆕 最新功能（2026-09）
 
 ### Claude Opus 5.5 成為 Claude Code 新預設模型
-**發布：** 2026-09-22（v2.1.280） | **熱度：** 🔥🔥🔥🔥 | **試用價值：** ⚡ 有條件推薦 | **狀態：** 正式發布
+**發布：** 2026-09-22（v2.1.280） | **狀態：** 正式發布
 
 **是什麼：** Claude Code 的 `default` 模型全面改指向 Claude Opus 5.5——Pro／Max／Team／Enterprise／API／Bedrock／Vertex 皆同步切換，Microsoft Foundry 仍為 Sonnet 4.5；不需手動切換，下次啟動就是新模型。模型本身的規格、牌價與基準見 [[entities/opus-5-5]]。
 
@@ -313,7 +313,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
-| **Claude Opus 5.5 成為新預設模型**（v2.1.280，Pro/Max/Team/Enterprise/API/Bedrock/Vertex，Foundry 仍 Sonnet 4.5；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Opus 5.5 成為新預設模型**（v2.1.280，除 Foundry 外全通道；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥🔥 | ⏳ 觀望 | Beta |
