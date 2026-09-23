@@ -49,6 +49,8 @@
 
 | 15 | topics/community-tech-tools（廣度優先第 1 層第 10 頁，入邊 35、315 行；第 14 波回訪第 5 項點名） | 樞紐 | 2026-09-22 | 定稿（使命句主 session 代判，健檢卡 A）「你卡在哪個症狀，社群現在該裝哪一個——以及什麼時候該換掉它」。315→283 行：決策表 9→10 列（新開「額度快用完，想在斷線前被提醒」，首選 Claude-Code-Usage-Monitor ⚪，依 #13585 OPEN 👍124＋#65292 not_planned 達開列門檻）、證據欄改「判 MM-DD｜查 MM-DD，N★」雙日期（不加欄，`skill_interest_snapshot.py:248` 四欄表頭不動）、十列首選與次選全部帶連結、**首選 0 換**（改名／星數／無回訪不算否定證據，條文入 weekly.md 首選鐵則）、Harness→ness／Omar→omar-os／Cockpit→episko／Graft→trailhq／Workweave→weave-os／Frugal Tokens→dpclark4 逐處改、✅ 撐不起者降 ⚡（ness 99★、Omar 48★）、Omar 證據 🟢→🟡（自述已不再宣稱「管 100 個」）、目錄 152→113（43 列無任何可點連結依新 4b 條移除，逐列另有出處；倒序違規 6→0）、⟨Q-01⟩ 已解決態降為普通散文（全庫懸置基線 106 不減）、`weekly.md` 新增 4b 可達性／4c ⚡ 退場（>120 天＋8 週零命中、一輪 ≤10 列）／✅ 需兩筆採用證據／第三欄契約／自檢第 4 題；`data/skill_interest_watch.json:121` caveat 同步改名；index L27 補「額度快用完想被提醒」；轉知功能記者 2 筆（H-40b52e、H-0d154f）。**併頁裁決點（tools↔SIW 決策表逐字副本）留給使用者，本波保守預設不併**，〔併〕分岔逐字稿在 draft | ✅ 複驗過：原四題 半／半／拿到／半 → **拿到／拿到／拿到／拿到**（3／4／3／3 跳）；「分不出」第三度命中（SIW 副本落後一天且改名前的 Harness 仍在副本上） | 2026-09-29 | `tools-2026-09-22{,-verified,-proposal,-proposal-map,-draft,-review}.md`、`wave15-cold-reader{,-recheck}-2026-09-22.md` |
 
+| 16 | topics/community-large-codebase-workflow（廣度優先第 1 層第 11 頁，入邊 43、186 行；第 15 波回訪第 7 項三候選中入邊最高：43／20／8） | 樞紐 | 2026-09-23 | **報價**：樞紐規模——健檢卡＋冷讀者＋主編查證平行，設計者／評審／實作者各一，複驗新冷讀者；預算 5 新＋4 續用。已知線索：週更整線重寫頁（規則 weekly.md「週更整線重寫」）；入邊 43 中 37 條來自 patterns 節點的 `**主線：**` tag；第 15 波健檢卡指「🧰 現在就能下的解」行空轉、L74 實測無工具名；reader-notes L33 建頁動機＝使用者本人是大 codebase 老手 | | | `lcw-2026-09-23{,-verified,-proposal,-proposal-map,-draft,-review}.md`、`wave16-cold-reader-2026-09-23.md` |
+
 > 第 1 波同時吃掉 `wiki/reader-notes.md` 的 ⏳「『誰比較強』三頁互踢」——考題集必含「Codex 和 Claude 誰強」，落點必須唯一。
 
 ## 待辦（第 3 波遺留）
