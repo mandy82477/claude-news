@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 44
+inbound_links: 52
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
@@ -184,7 +184,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/official-community-gap]]（同一個痛點官方補了沒）
 - [[topics/community-tech-discussions]]（context 腐蝕 vs 模型退步等設計哲學層討論）
 - [[topics/code-quality-decline]]（換版本後變差、帳單變多：怎麼自己量一次）
-- [[topics/community-pattern-trends]]（跨模式的宏觀趨勢，週更）
+- [[topics/community-pattern-trends]]（社群做法收斂成的方向、各自怎麼走到今天）
 - [[entities/claude-code]]、[[entities/managed-agents]]（各功能的版本紀錄與已知問題；Managed Agents 是平台代管的另一個產品）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
 

@@ -11,7 +11,7 @@ parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 46
+inbound_links: 47
 attribution_count: 148
 attribution_last: "2026-09-21"
 top_source: "hacker-news"
@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 社群現在有五場關於 Claude Code 的觀念爭論還在吵，一場已經吵出共識，三場僵住了——最新一則證據是 09-21 一則新進員工吐槽沒人搞懂系統的貼文，讓「AI 輔助會不會讓人能力退化」這場爭論重燃。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
 
-做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；哪個方向在加溫、熱度往哪走，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
+做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；社群做法收斂成哪幾個方向、各自怎麼走到今天，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
 
 ---
 

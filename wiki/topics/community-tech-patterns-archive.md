@@ -276,7 +276,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **實作方向：**
   - 設定 Stop Hook（或 pre-completion hook）掃描最後一輪 Claude 輸出
   - 維護模糊結束語句的 pattern list（「if this ever becomes a problem」、「a separate task」、「let me know if」等）
-  - 偵測到 pattern 時，返回 non-zero exit code，強制 Claude 繼續執行而非結束
+  - 偵測到 pattern 時，返回 non-zero exit code，強制 Claude 繼續執行而非結束（2026-09-23 註：官方語意是 Stop hook 要 exit 2 才會阻止停下，其他非零不擋，見 [[topics/community-pattern-trends]] 趨勢一）
   - 可搭配 Stop Hook 要求可驗證完成證明（測試通過、檔案存在等）
 - **解決的問題：** Claude Code 的「提前結束」anti-pattern——用「讓我知道如果…」代替真正解決問題；在長任務中尤其常見，因為 Claude 在接近 context limit 時傾向「延後處理」
 - **與既有模式的關係：** 呼應「Hooks 強制執行取代 CLAUDE.md 規則」的核心原則；是 Stop Hook 強制完成驗證的具體實作案例
@@ -523,7 +523,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Hooks 精細化控制
 
-- **PreToolUse 四種 exit code**：Block（阻止工具執行）、Allow（放行）、Modify（修改工具輸入後放行）、Error（視為工具執行失敗）；官方文件僅介紹基礎用法，四種 exit code 的實際差異遠超文件描述，影響攔截、允許、修改等場景的設計決策
+- **PreToolUse 四種 exit code**：Block（阻止工具執行）、Allow（放行）、Modify（修改工具輸入後放行）、Error（視為工具執行失敗）；官方文件僅介紹基礎用法，四種 exit code 的實際差異遠超文件描述，影響攔截、允許、修改等場景的設計決策（2026-09-23 註：官方文件的 exit code 只有 exit 2 會擋；Block／Allow 這類是 JSON 回傳的決策欄位 `permissionDecision`，不是 exit code，見 [[topics/community-pattern-trends]] 趨勢一）
 - **PreToolUse 是一台小型狀態機**：每次工具調用前皆可插入判斷邏輯，結合 exit code 可實現精細的工具調用治理
 
 

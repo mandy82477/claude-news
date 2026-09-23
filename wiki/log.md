@@ -6729,3 +6729,13 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **轉知**：4 筆開給功能記者（H-c63724／H-90ad60／H-fc5914／H-f91933），guide 互斥句查證、guide 缺 `--bare` 與變笨診斷、agent-stack 缺 20 上限與 worktree 指令、claude-code 同頁兩句互斥各一筆。
 
 **歸因**：`user-query`（第 16 波健檢流程；`docs/page-audits/lcw-2026-09-23-draft.md` 為完整逐字稿與實作單）。
+
+## 2026-09-23 Query：第 17 波頁面健檢——community-pattern-trends 重設計（健檢卡／冷讀者／主編查證／設計＋評審／實作）
+
+**不開轉知、只記 log**：🔥 重打 14 筆與 57 筆標估；四則漏收補進（agent-channels 不補的理由）；趨勢四跑淡出檢查的結果（MaskShift、magnitude 不推進路由方向）；guide L287 三條留演進、出啟示；#56913 not_planned；L190 $100／$18 刪（verified §二：無 token 假設）。guide L287 前兩條的前提已由第 16 波 H-c63724 轉知在案，本波不重開。
+
+**同維護者、本波不改、下次該頁策展處理（僅記 log）**：`community-tech-tools` L63 把 Workweave 歸在「不想被單一供應商綁死」、決策表沒有「想依難度降階省錢」症狀（冷讀者 CR:37）；`community-tech-patterns` L1653「現在收斂到哪」與本頁同題兩家（併頁屬使用者裁決）；patterns L1655「CLAUDE.md 管理已定案」vs discussions L54「還在吵」（CR:115）；patterns 09-15 pizza-bot、09-16 TokenEater（歸「Agent 規模化」）是否屬趨勢六，下次週更照 B-1 第 1 步判；09-20～09-22 的 Chief of Staff、aoci-code、Foremerge、pstack-claude 是下次週更的正常料，不是漏收。
+
+**轉知**：3 筆開給功能／模型記者（H-668f22／H-de1e7b／H-28f7a3），guide 缺 hook exit code 語意、official-community-gap 缺 `CLAUDE_CODE_SUBAGENT_MODEL` 與互斥句、opus-5 預設模型字樣各一筆。
+
+**歸因**：`user-query`（第 17 波健檢流程；`docs/page-audits/trends-2026-09-23-draft.md` 為完整逐字稿與實作單）。

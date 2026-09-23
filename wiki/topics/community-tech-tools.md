@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 37
+inbound_links: 41
 attribution_count: 4
 attribution_last: "2026-09-16"
 top_source: "user-query"
@@ -67,7 +67,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **推薦細節**
 
 - **pxpipe vs Graft 的數字強度不同**（08-30 彙整）：pxpipe 有作者實測（25,000 text token 壓至 2,700 image token、帳單降 59–70%，08-05；星數防刷已查證 forks 8.5%）；Graft 宣稱降 42%（08-15）但 HN 討論質疑 benchmark 段落疑似 AI 代寫、未經第三方覆核。接受走代理層就選 pxpipe（證據較強）；只想掛個 hook 隨時可拔、且不介意數字未覆核，才選 Graft。
-- **「CLAUDE.md 不聽」沒有工具首選是結論不是留白**：dev.to 一手實作（08-25）顯示**以 hooks 強制執行取代 prompt 建議後，規則遵循率達 100%**——答案是機制不是工具，做法見 [[topics/community-tech-patterns]]。四個失效機理中只有後三者是工具能解的：規則被機率性忽略且無反饋、規則越多越貴（Writ 以語意檢索只注入相關規則）、規則腐化（Patina 偵測）、跨工具碎片化（Caliber 統一管理）。
+- **「CLAUDE.md 不聽」沒有工具首選是結論不是留白**：dev.to 一手實作（08-25）顯示改用 hooks 強制執行後規則遵循率達 100%——答案是機制不是工具；哪些規則該搬去 hook、hook 要回 exit 2 才擋得住，見 [[topics/community-pattern-trends]] 趨勢一。
+- **「CLAUDE.md 不聽」哪些是工具能解的**：四個失效機理中只有後三者是工具能解的：規則被機率性忽略且無反饋、規則越多越貴（Writ 以語意檢索只注入相關規則）、規則腐化（Patina 偵測）、跨工具碎片化（Caliber 統一管理）。
 - **接手大 repo 的分界**（09-03 補寫）：graphify 給 **agent** 用（本機 AST、免向量 DB，`/graphify` skill）；同組另三個解的是不同工種——Understand-Anything 給**人**探索、archify 給人**交付圖**、codegraph 是 graphify 的競品（自動同步索引，僅星數證據）。官方面的「接手大 repo 第一步」（先讀 CI、從子目錄啟動、LSP）在 [[topics/coding-workflow-guide]] 第 2a 段：官方設定先做，索引工具再裝。
 - **三個首選換了門牌**（09-22 查證）：Harness → [ness](https://github.com/ness-dev/ness)、Omar → [omar-os/omar](https://github.com/omar-os/omar)（官網也從 omar.tech 改成 omar.rs）、Cockpit → [episko](https://github.com/respeak-io/episko)。舊網址目前還會自動轉，但作者一關轉址就失效。
 - **多 agent 互踩的首選為什麼不換**：ness 09-22 查得 99★／13 forks，自述已從 CLI 變成「給 agent 用的 IDE」（徽章隨之從 ⌨️ 改為 🖥️），但 README 仍寫可同時跑十個 Claude，仍解同一個症狀，故不換首選。
