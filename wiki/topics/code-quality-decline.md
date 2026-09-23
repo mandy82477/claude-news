@@ -6,12 +6,12 @@ domain: "🌐 社群"
 last_updated: "2026-09-20"
 last_news_update: "2026-09-20"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 38
+days_since_news_subtree: 3
+inbound_links: 40
 attribution_count: 32
 attribution_last: "2026-09-20"
 top_source: "reddit"
@@ -75,7 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本庫沒有把 CC-Canary 列為推薦工具（社群工具目錄對這個症狀還沒有首選）——它給你的是自己跟自己比的一條線，不是外部基準。
 
-**🧰 現在就能下的解**：先量 context 組成再怪工具（[[topics/community-large-codebase-workflow]] 線 2）；社群工具目錄的決策表目前沒有對應「感覺變笨、想先量測歸因」的列。%% —（決策表暫無對應列｜候選症狀：感覺變笨，想先量測歸因） %%
+**🧰 現在就能下的解**：先量 context 組成再怪工具——官方 `/context` 看各類別佔用（[[topics/community-large-codebase-workflow]] 線 2），還不確定誰在撐爆就照 [[topics/community-tech-tools]]「context 一直被工具輸出撐爆」列第三欄先跑 PrismoDev 診斷；決策表沒有專為感覺變笨、想先量測歸因而設的列。%% —（決策表暫無對應列｜候選症狀：感覺變笨，想先量測歸因） %%
 
 ---
 

@@ -6716,3 +6716,16 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：3 筆回報，皆未追加派工——Tell HN 合約簽署事件（社群→安全政策）與 Palo Alto Networks 資安服務（安全政策→商業）兩筆原輪雙重分類已收到；Simon Willison 介紹 Jev 部落格文（社群→安全政策）經核對與 Claude/Anthropic 無直接關聯且非 Topic Watch 通道，安全政策記者自身回報亦未主動請求此則（其 Jev 提示注入故事已由已定向抓取的 VentureBeat 條目獨立完整覆蓋），理由不成立不派
 - devpractice 沉澱：候選 5 筆（entities/claude-code #37394 額度異常第三個獨立 issue、topics/community-tech-patterns 新增 Foremerge、topics/community-tech-tools 三個首選工具改名＋新增「額度快用完斷線前提醒」決策列、topics/official-community-gap 花費估不準新段落）
 - market 判讀：判讀 1 則（反壟斷合謀訴訟原告身分曝光，四名消費者訂閱戶集體訴訟，加訊既有 09-19 待查證項並更新 Alphabet/GOOGL 判讀計數，回顧結算 ⏳ 新增一列 2026-10-06）／其餘條目逐一套六類判準後判定材料性不足未寫入
+
+## 2026-09-23 Query：第 16 波頁面健檢——community-large-codebase-workflow 重設計（健檢卡／冷讀者／主編查證／設計＋評審／實作）
+
+- **⟨Q-01⟩⟨Q-03⟩ 併筆＋短標記降級**：兩則同源的 fork 子代理「歷史重送」宣稱併成頁末「查過的數字」一筆；三個 ⟨Q-nn⟩ 短標記全部改普通條列（本頁三個 ⟨Q-nn⟩ 前面都沒有 ❓／🔎，`pending_markers.py` 的 `SHORT_RE` 本就認不到，`iter_pending()` 改前改後皆回 0 筆）。**全庫懸置標記 119 → 119，不變**；主 session 先前代判的「119→118」為誤判，已更正（實核見 `docs/page-audits/lcw-2026-09-23-draft.md` 保命條款段）。
+- **漏接料補進線 1**：147 subagent 單一長 session（24 天完成 F-Zero X 移植，09-04）與 hcom（跨終端互相傳訊，09-16）兩則此前未收進主線頁，本波補入「規模上限」「任務脈絡互通」兩列。
+- **四處跨頁數字改指路**：原直接寫在本頁的工具星數／趨勢批次數字，改為「見 [[topics/community-tech-tools]]」「見 [[topics/community-pattern-trends]]」，本頁只留做法描述，數字的家收斂到那兩頁。
+- **兩條「現在的答案」拿下的理由**：「hook 層設讀取上限」與「已否決方案索引」從各線「現在的答案」移除——理由是社群證據撐不起可執行結論（讀取上限在社群端是 issue 要求放寬而非做法；否決方案索引證據僅推論層級），不是「官方做法頁不推薦」，兩條仍留在子問題表供追蹤。
+- **同維護者、本波不改（下次該頁策展處理，僅記 log 不開轉知）**：`community-tech-tools:213` loopx 仍記 4,476★ 且連舊 owner `huangruiteng`，verified 已查得 5,925★、專案已轉址 `loopx-project/loopx`；`community-pattern-trends:37` 殘留「本輪」用詞、`:99` 標題寫「第三波」；`topics/code-quality-decline` 與 `topics/community-tech-discussions` 的分界對冷讀者不明顯（discussions L67／L77「已確認根因不在模型退步」vs cqd L113–L118「三種解釋都排除不掉」，L157 沒說差在哪），本波已在主線頁線 2 分流成「同一 session 越跑越笨→discussions，換版本後變差→cqd」，兩頁各補一句讀者看得到的分界待下次策展；cqd L78 的 🧰 把「先量 context 組成」送回本頁一併待處理；`community-tech-patterns` L220／L401／L465／L510／L537 五則多 agent 工具依新反例判準（daily.md「容易誤判成 `—` 的反例」）應改標「並行規模」，下次週更一次性重判並收進線 1。
+- **`entities/claude-code:197` 的 🔎**：fork 子代理「每次重送」查無官方一節與本頁新措辭（L101「fork 子代理繼承父對話（官方證實）；社群回報四個平行子代理耗約 200 萬 token，官方沒給數字」）一致，無需改動。
+
+**轉知**：4 筆開給功能記者（H-c63724／H-90ad60／H-fc5914／H-f91933），guide 互斥句查證、guide 缺 `--bare` 與變笨診斷、agent-stack 缺 20 上限與 worktree 指令、claude-code 同頁兩句互斥各一筆。
+
+**歸因**：`user-query`（第 16 波健檢流程；`docs/page-audits/lcw-2026-09-23-draft.md` 為完整逐字稿與實作單）。
