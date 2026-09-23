@@ -1,32 +1,24 @@
 {
   "date": "2026-09-23",
-  "article_count": 88,
+  "article_count": 72,
   "source_status": {
-    "Anthropic Status": {
+    "Build Flags": {
       "ok": true,
       "count": 0
-    },
-    "Anthropic Blog": {
-      "ok": true,
-      "count": 0
-    },
-    "dev.to": {
-      "ok": true,
-      "count": 12
-    },
-    "Google News": {
-      "ok": true,
-      "count": 46
-    },
-    "HN Repo Bridge": {
-      "ok": true,
-      "count": 2
     },
     "GitHub Issues": {
       "ok": true,
       "count": 15
     },
-    "Official Skills": {
+    "HN Repo Bridge": {
+      "ok": true,
+      "count": 2
+    },
+    "Anthropic Blog": {
+      "ok": true,
+      "count": 0
+    },
+    "Anthropic Status": {
       "ok": true,
       "count": 0
     },
@@ -34,162 +26,44 @@
       "ok": true,
       "count": 0
     },
-    "Hacker News": {
+    "Official Skills": {
       "ok": true,
-      "count": 16
+      "count": 0
+    },
+    "dev.to": {
+      "ok": true,
+      "count": 12
     },
     "Topic Watch": {
       "ok": true,
       "count": 0
     },
+    "Hacker News": {
+      "ok": true,
+      "count": 15
+    },
     "Official Docs": {
       "ok": true,
-      "count": 8
-    },
-    "Build Flags": {
-      "ok": true,
-      "count": 1
+      "count": 0
     },
     "Blogroll": {
       "ok": true,
-      "count": 12
+      "count": 13
+    },
+    "Google News": {
+      "ok": true,
+      "count": 45
     },
     "GitHub": {
       "ok": true,
-      "count": 13
+      "count": 15
     },
     "Reddit": {
       "ok": true,
-      "count": 13
+      "count": 6
     }
   },
   "items": [
-    {
-      "title": "Claude Code 2.1.280 build 新增 10 個功能候選旗標（自 2.1.278 起）",
-      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.280",
-      "source": "Build Flags",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "功能候選 10 個：`CLAUDE_CODE_AUTO_MODE_CLASSIFIER_OVERLAP`、`CLAUDE_CODE_DIR_SYNC_CHAIN`、`CLAUDE_CODE_HOST_SCHEDULED_RUN`、`CLAUDE_CODE_INLINE_TOOLS`、`CLAUDE_CODE_MAX_EFFORT_REMINDER`、`CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH`、`CLAUDE_CODE_PLUGIN_DIRS`、`CLAUDE_CODE_REMOTE_TOOLS_ASK_SEATS`、`CLAUDE_CODE_REMOTE_TOOLS_JUMP_QUEUE`、`CLAUDE_CODE_RUSTLING_PIXEL`；消失 1 個：`CLAUDE_CODE_LUMINOUS_WHISTLE`；build 裡出現的旗標不等於會上線；官方態度與社群反應見 wiki 的 Claude Code 實驗功能頁",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.280#2.1.280",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：Claude Help Center release notes",
-      "url": "https://support.claude.com/en/articles/12138966-release-notes",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "Claude Help Center release notes 內容有變動（前次 44532 字 → 本次 44857 字）。新增 3 段：Claude Opus 5.5 launch；September 22, 2026；We just launched Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable；移除 2 段：Disable public projects for your organization；Why Claude switched models in your conversation with Opus 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://support.claude.com/en/articles/12138966-release-notes#5fec086446ad5a76",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：Use Claude Code with your Pro or Max plan",
-      "url": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "Use Claude Code with your Pro or Max plan 內容有變動（前次 23282 字 → 本次 23317 字）。移除 2 段：Disable public projects for your organization；Why Claude switched models in your conversation with Opus 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan#7ad578607bff638e",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：How do usage and length limits work?",
-      "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "How do usage and length limits work? 內容有變動（前次 22866 字 → 本次 22901 字）。移除 2 段：Disable public projects for your organization；Why Claude switched models in your conversation with Opus 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work#0b55be259024b057",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：Manage usage credits for paid Claude plans",
-      "url": "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "Manage usage credits for paid Claude plans 內容有變動（前次 23098 字 → 本次 23132 字）。移除 3 段：Disable public projects for your organization；How do I pay for my Claude API usage?；Why Claude switched models in your conversation with Opus 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans#11894d37c6da4533",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：Claude Fable 5 on your plan",
-      "url": "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "Claude Fable 5 on your plan 內容有變動（前次 22995 字 → 本次 23030 字）。移除 2 段：Disable public projects for your organization；Why Claude switched models in your conversation with Opus 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan#2bf146c044b1678f",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：API 模型定價（Platform Docs）",
-      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "API 模型定價（Platform Docs） 內容有變動（前次 29329 字 → 本次 29765 字）。新增 11 段：1 Cache hits and refreshes on Claude Fable 5.1 and Claude Mythos 5.1 are priced at 0.025x the base input price.；2 Cache hits and refreshes on Claude Opus 5.5 are priced at 0.05x the base input price.；All other models use the standard 0.1x multiplier.；Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1 ; 0.05x on Claude Opus 5.5 ) Sa；Cache write tokens are charged when content is first stored. Cache read tokens are charged when a subsequent request ret（另有 6 段未列）；移除 5 段：1 Cache hits and refreshes on Claude Fable 5.1 and Claude Mythos 5.1 are priced at 0.025x the base input price. All othe；Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1 ) Same duration as the precedin；Cache write tokens are charged when content is first stored. Cache read tokens are charged when a subsequent request ret；Fast mode , in research preview, provides significantly faster output for Claude Opus 5 and Claude Opus 4.8 at premium p； API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.1 Claude Opus 5 Cla。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://platform.claude.com/docs/en/about-claude/pricing#5fb50c73f29d330b",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：方案與定價（Plans & Pricing）",
-      "url": "https://claude.com/pricing",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "方案與定價（Plans & Pricing） 內容有變動（前次 20822 字 → 本次 20998 字）。新增 5 段：Batch processing Opus 4.8；Daily driver for agentic coding and enterprise work；Developer blog；Get up to 2.5x faster speeds with fast mode for Opus 5.5 at 2x standard pricing. Learn more .；Learn more (opens in new tab) Explore detailed pricing (opens in new tab) Opus 5；移除 3 段：Batch processing Sonnet 4.6；Get up to 2.5x faster speeds with fast mode for Opus 5 at 2x standard pricing. Learn more .；Learn more (opens in new tab) Explore detailed pricing (opens in new tab) Fable 5。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://claude.com/pricing#05a117839989e7a5",
-      "contributors": []
-    },
-    {
-      "title": "官方文件更新：Claude Code 桌面版",
-      "url": "https://code.claude.com/docs/en/desktop.md",
-      "source": "Official Docs",
-      "published": "09/23 15:06 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "Claude Code 桌面版 內容有變動（前次 83869 字 → 本次 83885 字）。新增 1 段：[Extended thinking](/docs/en/model-config#extended-thinking) is enabled by default, which improves performance on comple；移除 1 段：[Extended thinking](/docs/en/model-config#extended-thinking) is enabled by default, which improves performance on comple。（官方一手文件的變更偵測，非新聞報導）",
-      "category": "official",
-      "topic": "",
-      "dedup_key": "https://code.claude.com/docs/en/desktop.md#220da479de89f0dc",
-      "contributors": []
-    },
     {
       "title": "[anthropics/claude-code] v2.1.280",
       "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
@@ -247,18 +121,47 @@
       "contributors": []
     },
     {
+      "title": "ApodexAI/FrontierAgent",
+      "url": "https://github.com/ApodexAI/FrontierAgent",
+      "source": "GitHub Search",
+      "published": "09/23 15:29 UTC",
+      "score": 4515,
+      "score_unit": "星",
+      "source_count": 1,
+      "summary": "[星速偵測｜近 8 天 +1,403 星（約 175 星/日）] 🧩 FrontierAgent, our agent framework, open-sourced alongside it — native command-line TUI, ReAct and Agent Team modes, one command on macOS and Linux, no preinstall, no hard Docker dependency.",
+      "category": "community",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
+      "title": "shadcn-ui/lint",
+      "url": "https://github.com/shadcn-ui/lint",
+      "source": "GitHub Search",
+      "published": "09/23 15:29 UTC",
+      "score": 2670,
+      "score_unit": "星",
+      "source_count": 1,
+      "summary": "[星速偵測｜近 8 天 +1,131 星（約 141 星/日）] An agent-first linter for Tailwind design systems. Write design system rules that agents can verify.",
+      "category": "community",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
       "title": "Claude Opus 5.5",
       "url": "https://www.anthropic.com/claude-opus-5-5",
       "source": "Hacker News",
       "published": "09/22 16:29 UTC",
-      "score": 1666,
+      "score": 1674,
       "score_unit": "分",
-      "source_count": 4,
+      "source_count": 7,
       "summary": "We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.\nClaude Opus 5.5 is our first release since we called for pacing the frontier. It was tested before release by external evaluators, including Frontier Design and METR. On our automated behavioral audit, the most comprehensive alignment test we run, Opus 5.5 is the strongest-performing model we’ve tested to date. It also comes with the safeguards we’ve developed for our most capable models.\nHere are some of the improvements you can expect from Opus 5.5:\nPerformance. Opus 5.5 is a major step up from Opus 5. It’s the new leading model, and early testers saw large jumps in performance on their most complex work. One tes",
       "category": "community",
       "topic": "",
       "dedup_key": "",
       "contributors": [
+        "Google News / Anthropic",
         "HN Repo Bridge"
       ]
     },
@@ -266,8 +169,8 @@
       "title": "JayPokale/Chisle",
       "url": "https://github.com/JayPokale/Chisle",
       "source": "GitHub Search",
-      "published": "09/23 15:06 UTC",
-      "score": 507,
+      "published": "09/23 15:29 UTC",
+      "score": 509,
       "score_unit": "星",
       "source_count": 1,
       "summary": "Cut your AI coding agent's token bill on three axes: terse prose, YAGNI-first code, and tool-output compression. Claude Code, Pi, Cursor, Codex, Gemini + 4 more. Zero deps, published benchmarks including the runs it loses.",
@@ -280,7 +183,7 @@
       "title": "Haleclipse/CometixCode",
       "url": "https://github.com/Haleclipse/CometixCode",
       "source": "GitHub Search",
-      "published": "09/23 15:06 UTC",
+      "published": "09/23 15:29 UTC",
       "score": 503,
       "score_unit": "星",
       "source_count": 1,
@@ -294,7 +197,7 @@
       "title": "zhikunqingtao/zhikuncode",
       "url": "https://github.com/zhikunqingtao/zhikuncode",
       "source": "GitHub Search",
-      "published": "09/23 15:06 UTC",
+      "published": "09/23 15:29 UTC",
       "score": 501,
       "score_unit": "星",
       "source_count": 1,
@@ -305,28 +208,14 @@
       "contributors": []
     },
     {
-      "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-      "source": "Hacker News",
-      "published": "09/22 16:51 UTC",
-      "score": 318,
-      "score_unit": "分",
-      "source_count": 1,
-      "summary": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback) Intelligence, Performance & Price Analysis\nModel summary\nSpeed\nClaude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback) is amongst the leading models in intelligence, but somewhat expensive when comparing to other models of similar price. The model supports text and image input, outputs text, and has a 1M tokens context window.\nClaude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback) scores 58 on the Artificial Analysis Intelligence Index, placing it well above average among comparable models (median: 25). When evaluating the Intelligence Index, it generated 260M tokens, which is very verbose in comparison to the median of 88M.\nPricing for Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "Claude Code reads AGENTS.md only when telemetry is on",
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
       "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
       "source": "Hacker News",
       "published": "09/23 12:15 UTC",
-      "score": 308,
+      "score": 327,
       "score_unit": "分",
       "source_count": 1,
-      "summary": "Claude Code reads AGENTS.md only when telemetry is on\nClaude Code 2.1.277 added AGENTS.md support, but the loader sits behind a remote feature flag. With telemetry or nonessential traffic turned off, a local AGENTS.md is skipped without a warning. This is what I measured and the one-line CLAUDE.md I use instead.\nClaude Code 2.1.277 announced support for AGENTS.md. In a project with no CLAUDE.md, it is supposed to read AGENTS.md instead. I keep telemetry off in my shell, and in my repos the file never loaded. Issue #95690 explains why, and I added my own measurements to it. This post collects them in one place.\nWhere the gate is\nThe loader ships as a built-in plugin called agents-md. Its registration in the 2.1.280 bundle looks like this:\nvar W = !1;\nvar B = () => Oa(\"tengu_agents_md_mod\", ",
+      "summary": "Claude Code reads AGENTS.md only when telemetry is on\nClaude Code 2.1.277 added AGENTS.md support, but the loader sits behind a remote feature flag. With telemetry or nonessential traffic turned off, a local AGENTS.md is skipped without a warning. This is what I measured and the one-line CLAUDE.md I use instead.\nClaude Code 2.1.277 announced support for AGENTS.md\n. In a project with no CLAUDE.md\n, it is supposed to read AGENTS.md\ninstead. I keep telemetry off in my shell, and in my repos the file never loaded. Issue #95690 explains why, and I added my own measurements to it. This post collects them in one place.\nWhere the gate is\nThe loader ships as a built-in plugin called agents-md\n. Its registration in the 2.1.280 bundle looks like this:\nvar W = !1;\nvar B = () => Oa(\"tengu_agents_md_mod",
       "category": "community",
       "topic": "",
       "dedup_key": "",
@@ -501,6 +390,62 @@
       "contributors": []
     },
     {
+      "title": "Gemini 3.8 text-to-speech says hello",
+      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "source": "Blog / Google DeepMind Blog",
+      "published": "09/23 15:25 UTC",
+      "score": 0,
+      "score_unit": "",
+      "source_count": 1,
+      "summary": "Gemini 3.8 text-to-speech says hello\nToday, we’re introducing two new text-to-speech models to the Gemini family, transforming voice generation from static presets into a dynamic creative studio. These models enable creators, developers, and enterprises to create richer, more expressive audio experiences, while enabling improved user experiences in products like Gemini Notebook and Google Vids.\n- Gemini 3.8 Flash TTS: Built for deep creative direction and character design. Create entirely new voices from scratch using natural language prompts to bring characters to life across gaming, immersive audiobooks, podcasts, and interactive media. Direct every performance line by line with granular control over acting cues, pacing, dialect shifts, and backchanneling.\n- Gemini 3.8 Flash-Lite TTS: Bu",
+      "category": "media",
+      "topic": "competitor-landscape",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
+      "title": "Routines/Scheduled tasks on Opus by default!",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo91ob/routinesscheduled_tasks_on_opus_by_default/",
+      "source": "Reddit / r/ClaudeCode",
+      "published": "09/23 15:24 UTC",
+      "score": 0,
+      "score_unit": "留言",
+      "source_count": 1,
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>FYI everyone.</p> <p>Routines and scheduled tasks run on &quot;default&quot; model which got switched to OPUS 5.5 yesterday.</p> <p>I woke up this morning to 73% of m",
+      "category": "community",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
+      "title": "Claude Code kept asking for my \"ruling\" after the options it provided had scrolled away. So I made the question stick.",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo8nhw/claude_code_kept_asking_for_my_ruling_after_the/",
+      "source": "Reddit / r/ClaudeCode",
+      "published": "09/23 15:09 UTC",
+      "score": 0,
+      "score_unit": "留言",
+      "source_count": 1,
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ClaudeCode/comments/1wo8nhw/claude_code_kept_asking_for_my_ruling_after_the/\"> <img alt=\"Claude Code kept asking for my &quot;ruling&quot; after the ",
+      "category": "community",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
+      "title": "The guild + agents (Typesafe for builders)",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo8lt8/the_guild_agents_typesafe_for_builders/",
+      "source": "Reddit / r/ClaudeCode",
+      "published": "09/23 15:08 UTC",
+      "score": 0,
+      "score_unit": "留言",
+      "source_count": 1,
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ClaudeCode/comments/1wo8lt8/the_guild_agents_typesafe_for_builders/\"> <img alt=\"The guild + agents (Typesafe for builders)\" src=\"https://preview.redd",
+      "category": "community",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
       "title": "Opus 5.5 write funny song to introduce yourself to the world, you're new",
       "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo8h8s/opus_55_write_funny_song_to_introduce_yourself_to/",
       "source": "Reddit / r/ClaudeCode",
@@ -557,64 +502,8 @@
       "contributors": []
     },
     {
-      "title": "Prompts- and JEV-contolled RTS game ported and improved with Opus 5.5",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo8492/prompts_and_jevcontolled_rts_game_ported_and/",
-      "source": "Reddit / r/ClaudeCode",
-      "published": "09/23 14:49 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ClaudeCode/comments/1wo8492/prompts_and_jevcontolled_rts_game_ported_and/\"> <img alt=\"Prompts- and JEV-contolled RTS game ported and improved with Op",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "Can the Primary Owner of Team's account obtain the exact text of claude code CLI conversation through a Team data export",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo83za/can_the_primary_owner_of_teams_account_obtain_the/",
-      "source": "Reddit / r/ClaudeCode",
-      "published": "09/23 14:49 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>I use Claude Code in the terminal with a Claude Team seat. If the organization’s Primary Owner runs Organization settings → Data and privacy → Export Data, does the r",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "GPT-6 Astra vs Claude Opus 5.5 — I compared them across 5 categories. Results are more split than the headlines suggest.Ran GPT-6 Astra and Claude Opus 5.5 head-to-head (coding, price, security, context). Opus 5.5 wins coding + value, Astra wins the frontier stuff.",
-      "url": "https://www.reddit.com/r/artificial/comments/1wo7sjb/gpt6_astra_vs_claude_opus_55_i_compared_them/",
-      "source": "Reddit / r/artificial",
-      "published": "09/23 14:37 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Both dropped in September 2026 (Astra Sept 3, Opus 5.5 Sept 22), so I put them side by side across the categories that actually matter for building. Sharing the numbe",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "Claude Opus 5.5 how big of an upgrade is it really?",
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wo7gge/claude_opus_55_how_big_of_an_upgrade_is_it_really/",
-      "source": "Reddit / r/ClaudeCode",
-      "published": "09/23 14:24 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Claude Opus 5.5 just dropped, with Anthropic focusing heavily on better coding, stronger agentic performance, faster output and lower costs. They say it can cost arou",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
       "title": "Amazon opens its seller tools to outside AI agents, starting with Anthropic’s Claude - GeekWire",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQ1pVeHhockdFWjl1eXJoYlJKZmZHT2JTOXlLalRYeHBKalY1RnNNdXBNY0ZIUmVSZnNCckVDMDJyLVI1LWFXLWxyTXB3Q1JWYnRmZXhjOFBfbkdLb3Jzcy1QUGhXaFA2Wm9pOUs1eHRWLURHeFFlVDJCbmE5bXRhRU5HbjVVMThHbXJNSTZTTnlQaTJwWWFtWWRha1RZRktWSG4xMi0ydFhHbUVNV2lDMHE4NA?oc=5",
+      "url": "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude/",
       "source": "Google News / GeekWire",
       "published": "09/23 14:10 UTC",
       "score": 0,
@@ -628,7 +517,7 @@
     },
     {
       "title": "Anthropic’s IPO Is Delayed. Here’s How to Play the AI Giant Right Now. - Barron's",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1vRmI2YVFVYzd3ekhiajZyTXN4VVJaQzBCczhTeHlhdFFpcXJHU3QxN0ZXbkJ4a0ZINDZaNG01SUIzcG1vZTdaVXJ2UjRSZngtYWd5SzFNT05rNTZzNFY1Q3V3emE4ZGhRZUJ3bHBFczJZQzZDMDRQcw?oc=5",
+      "url": "https://www.barrons.com/articles/anthropic-ipo-etf-ai-stocks-f40be6bc",
       "source": "Google News / Barron's",
       "published": "09/23 13:18 UTC",
       "score": 0,
@@ -642,27 +531,13 @@
     },
     {
       "title": "Amazon gives sellers an even smarter Seller Assistant and a new plugin for Amazon Quick and Anthropic’s Claude - About Amazon",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaUJEMEhNVjVhWlBoRXNvX0FlWEtZMUxyRGZXekdwR2NVcjhTSWZYd0phakF5N3N3Q3FuN2F3UV91SW9McFY3c1REZmhpTmE0NVR0RkFVT1FJSFNBWFNEX0FJV2czQ0VvOWkxY2J3U0RVUjBSV3NzQzA5eUxXTTJ3SjdBQWNwQ2dJbklNWlkwV2N6SUJfSzhwTWdaU2p3Zw?oc=5",
+      "url": "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-plugin-amazon-quick-claude",
       "source": "Google News / About Amazon",
       "published": "09/23 13:05 UTC",
       "score": 0,
       "score_unit": "",
       "source_count": 2,
       "summary": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQaUJEMEhNVjVhWlBoRXNvX0FlWEtZMUxyRGZXekdwR2NVcjhTSWZYd0phakF5N3N3Q3FuN2F3UV91SW9McFY3c1REZmhpTmE0NVR0RkFVT1FJSFNBWFNEX0FJV2czQ0VvOWkxY2J3U0",
-      "category": "media",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "CBTS Unveils Blueprint for 100% Agentic Delivery After Scaling Anthropic Company-Wide, Giving Mid-Market Companies a Proven Path to AI-Fueled Growth - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxPdFRkX293em1NMjl5N1d3aUxieXRxZHRvVzBiQWZzM1ZlOXVERi00bmRDcG1UYmVzLUViMlBoQ1BGTXEyNlhibXpMakhBMEJDME5xWEY5RUJReEtUenFfNkZfdUFURDN6STRyMHV3Z0FQcnFrUUxWU24yRkRpUUw1SFN5NFJDYm5aTnhMb1ZMS2t6ZVZRSll5S1hpVUdwQkJPdm43aWYxTmdEZmlNenhjRWlNZ3djRjRNLWpJUHpPYU1MbmpmYXNQVjR3c1JHOU5mVzVHYjF5ODJBNVpKdEU0MExDMWQtMjdvZmJCbWRQcnA3OFFzQmhfczJ4aXB0V1RnX1YyQ00zYVlPMGFLSW1WdGlhS1RHdzJ6S2hXc09sYVdpWHhjbWI5YmRlbw?oc=5",
-      "source": "Google News / Business Wire",
-      "published": "09/23 13:00 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqwJBVV95cUxPdFRkX293em1NMjl5N1d3aUxieXRxZHRvVzBiQWZzM1ZlOXVERi00bmRDcG1UYmVzLUViMlBoQ1BGTXEyNlhibXpMakhBMEJDME5xWEY5RUJReEtUenFfNkZfdUFURDN6STRyMHV3Z0",
       "category": "media",
       "topic": "",
       "dedup_key": "",
@@ -684,7 +559,7 @@
     },
     {
       "title": "Anthropic and OpenAI Models Still Attempt Restricted Actions in Safety Tests - The Hacker News",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4zbEpUVHQwVDl3TENaSC1aRlR6em8xYlo2TVIwVUpaenB6T0xyUFNaakdmZks4cV9oVDl3cFdjSi16Q1k4QU04bUF0bXMwWGZmY3Zya0xkZl9NRE9EZjhVVTR4ZHA0UWdscm84eFV4azFqcXdNdEd4WjhILWo?oc=5",
+      "url": "https://thehackernews.com/2026/09/anthropic-and-openai-models-still.html",
       "source": "Google News / The Hacker News",
       "published": "09/23 11:47 UTC",
       "score": 0,
@@ -698,7 +573,7 @@
     },
     {
       "title": "Anthropic launches Claude Opus 5.5, raising speed 30 percent and cutting costs 40 percent - 디지털투데이",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORWNzbWhaX0loZUkyUmJWaWlHVHIwZzR1RUY1VlM0cUZabFJhN3docGlrSzAxMUJFWTA1ck1Md2NuUVN3TDd4ZmlyaEFtc0dqcFFxR3kxYzRhUzZlMXJFZVpRX0pZeXh0OUpKd2dTYUpXcHdBRzNYS1pzTXBTR0VDUHR1WmhTeWlaVmZnRUExWVp6SVpSWjQzUGs2UEZ1bW1vVmJGSnB3R0hRZ3MySjFfQ3R1TUQ2SGhQOHhKNmxMWGhFeDg?oc=5",
+      "url": "https://www.digitaltoday.co.kr/en/view/107211/anthropic-launches-claude-opus-5-5-raises-speed-30-percent-cuts-cost-40-percent",
       "source": "Google News / 디지털투데이",
       "published": "09/23 11:40 UTC",
       "score": 0,
@@ -712,7 +587,7 @@
     },
     {
       "title": "Claude's 20% boost is back, and this time we're celebrating Opus 5.5 - MakeUseOf",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1MSmJZVklodXpxU29WU0M2a2JOSUp0dTVQWVNqSlI3bWxiaEdlZ0F5Rjk2SlRqckFRbW9hRjhSZEpHRmQ5aEZOWllGTVNkYy0wZGE3d2hrYU40NjFJZUZRZE8yblBFcUpUbEtUMFExUXFmRXRwZDc3elY5ck8?oc=5",
+      "url": "https://www.makeuseof.com/claudes-20-boost-is-back-celebrating-opus-5-5/",
       "source": "Google News / MakeUseOf",
       "published": "09/23 11:35 UTC",
       "score": 0,
@@ -726,7 +601,7 @@
     },
     {
       "title": "Claude Opus 5.5, GPT-6 Sol and Luna Launch at Lower Prices - WinBuzzer",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSUdFOXJfOUZOb2lmVWUzbmdfa3FTOXp0NlNMUWQ3Z2VKT2VmZDFxb1ZURXdFeTFQYi01TldaNnUyNm4zNmU5NkU3blpBNFI4Mm0tNUwyWGk3Y051Y2h5LWZTTHdVRm9yRjRqMkVMYVJhQ2lWOGtCbUV1RUg3OWhSX0V0dFIyemZJYV9hMThYQkJQZDFhYWpMRjFnVQ?oc=5",
+      "url": "https://winbuzzer.com/2026/09/23/claude-opus-5-5-lower-prices-cybersecurity-limits-a004-xcxwbn/",
       "source": "Google News / WinBuzzer",
       "published": "09/23 11:28 UTC",
       "score": 0,
@@ -740,7 +615,7 @@
     },
     {
       "title": "Anthropic Unveils Opus 5.5, Touts Safety Amid AI Turmoil - Newser",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTnB2cTFqcGlXYUNXOTctenZsSXVLS2dhZXhkOWU4cEhlMkM3OHRRVzd1dWhTLXRfNXpFLV9BTUVmWHpuUmtWMHhXa3hleTVHWTB2MzRzcWw2SVZ1WkNrSGRDSUtOQlZva3dSYjRwQi1CRjNEYkx4RURFYU5qS2h4VnY2UnZHLXdtUldUdHNPQlN6WkZHM2xwUFBxWQ?oc=5",
+      "url": "https://www.newser.com/story/396898/anthropic-unveils-opus-55-touts-safety-amid-ai-turmoil.html",
       "source": "Google News / Newser",
       "published": "09/23 11:05 UTC",
       "score": 0,
@@ -754,7 +629,7 @@
     },
     {
       "title": "Anthropic and OpenEvidence Team to Expand Reach of Medical AI - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPU0tTd1o0cS1vTXNZeE5odWFsTXBFeXlfVzg0aFhtaHA2c3ZLMm1ZOGpuZS0xMkNWSnViRzhfRnhaaDBuX09yUHNOM0NiNGtlQ0R4cmtxOF9KX0lRNXFTWFRud1pHTzhvVVNfbGxvb3hmd0kwTTRuZlllS2IycjRVbm10YlZZakFfVVZEdC1IbDFGRmJNU0t3TU5Ba0R6M2VWNUt4bjlORU1mSS01QW5ObDU3T194ZFpXcDFn?oc=5",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-and-openevidence-team-to-expand-reach-of-medical-ai/",
       "source": "Google News / PYMNTS.com",
       "published": "09/23 10:50 UTC",
       "score": 0,
@@ -768,7 +643,7 @@
     },
     {
       "title": "You Don’t Have to Leave Claude Code to Use DeepSeek - HackerNoon",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE15NVY4TTRhZlJKWHhsUm5QMS1NbU1UbXpwWUllaUNzVzdOajFWR1hoQ013bHY3OGhIVFptU0Noc1Zua003cUFTWUdTS1pKTlpBa055dUVtT3NpVkNYWlhWNzFjekptaTE3SGRJN2c2aHR4WV9SQ0tKRzRjQXltUQ?oc=5",
+      "url": "https://hackernoon.com/you-dont-have-to-leave-claude-code-to-use-deepseek",
       "source": "Google News / HackerNoon",
       "published": "09/23 10:49 UTC",
       "score": 0,
@@ -782,7 +657,7 @@
     },
     {
       "title": "Meet the top Anthropic scientist who predicted the core of today’s AI doom debate - Business Insider",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOM1M1UEVZOXN6dkRBSDljdjNqSHplQldhUnZ6bkwxdkJWY3NRQTB4ZThGV25wT3hKU2xvSEJsS0FUZ2ZmbmJoRnBGRExBSnlOQkktU3F0LW8tbHdaenhwQ0RUTHdkVzhLcmItVHlHaFExN0p2R2dhd3c2UGZZVElzblVtbS1GTDB0SzZDMHpTTUhzZkNxUXRMQVpnQWlUSkRQUUd5alFWWQ?oc=5",
+      "url": "https://www.businessinsider.com/jared-kaplan-ai-safety-concerns-last-year-gain-traction-anthropic-2026-9",
       "source": "Google News / Business Insider",
       "published": "09/23 09:00 UTC",
       "score": 0,
@@ -796,7 +671,7 @@
     },
     {
       "title": "Anthropic, OpenAI release cheaper AI even as safety fears grow - Tech Xplore",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOYlRXd2RCS1JJNXVkbUc2OGVXaVNtMWd6NFpsQ3d6Y0xrYTJ4OEI3MmxfZXBmVVdLbGxHbU8zMGtPYk1vck1adkk3WlJMMlJ4dG1Nd2doOVlQc2Y4UUJuTUQyS01vWWdaTkpHcGF2NzFPcDNabTljc1FidDRYSUNwcw?oc=5",
+      "url": "https://techxplore.com/news/2026-09-anthropic-openai-cheaper-ai-safety.html",
       "source": "Google News / Tech Xplore",
       "published": "09/23 08:38 UTC",
       "score": 0,
@@ -809,9 +684,9 @@
       "contributors": []
     },
     {
-      "title": "Claude Opus 5.5 cuts costs and adds safeguards for autonomous AI - helpnetsecurity.com",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1oU3NKNTVfanRWUVFOakZZM3V2bzRENjVhTVhhQkk3QUVUc1ZHZ2E3VmUtckpqY3dLZUh2TnJBc2FYeWpJUzBvR0NzbGpxOEFRdFZ4elNBSWNlZnI4VGg4QkpoXy1UMUlaTjIyb0ZQLUhWd3ZHN01aNw?oc=5",
-      "source": "Google News / helpnetsecurity.com",
+      "title": "Claude Opus 5.5 cuts costs and adds safeguards for autonomous AI - Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/09/23/anthropic-claude-opus-5-5/",
+      "source": "Google News / Help Net Security",
       "published": "09/23 08:30 UTC",
       "score": 0,
       "score_unit": "",
@@ -824,7 +699,7 @@
     },
     {
       "title": "GPT-6 Sol, Luna Pricing Undercuts Claude, DeepSeek - tech-insider.org",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAwRHpVVkF6VUZ5Vkdub1MxdVJsQkFUMkVURUdKZC1OOU5oYnFsbVdlZWtFMDI2akdLVUhSWWZETi01Y0ZGalZ0ck4weFV4STBFamx6dnF0VXh2UzAxdGJGOEpiTnUyelFRUGJUcW9iSk5UWUJRNXhJekZn?oc=5",
+      "url": "https://tech-insider.org/gpt-6-sol-luna-undercut-claude-opus-5-5-2026/",
       "source": "Google News / tech-insider.org",
       "published": "09/23 06:11 UTC",
       "score": 0,
@@ -852,7 +727,7 @@
     },
     {
       "title": "Anthropic in Talks to Cement Control Over More Data Centers - The Information",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaXRsOGVIV1c0LUJuY0lJbkpick8xZV9lajkwVkNpcGtsalg2OXc3ZC1GSUxlb21ITEp4a28zbmUxZTRiVjRXcG9mZ2RTWG1BX0dPWHAyUDA3eTVwTjZ4RXdjQlk2eEZqd1duUU1pdVRxZGwyeDlNVFFkU1NOX3NySVRobUtqOG1iX3p3?oc=5",
+      "url": "https://www.theinformation.com/articles/anthropic-talks-cement-control-data-centers",
       "source": "Google News / The Information",
       "published": "09/23 02:21 UTC",
       "score": 0,
@@ -908,7 +783,7 @@
     },
     {
       "title": "Claude Opus 5.5 undercuts Opus 5 at $4 per million tokens, and Pro and Max limits go up - MIXED Reality News",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMVNRTjJSWU9kS09nUmcwSWU3MGIxeFRtY2xFV1dHajVVSzdSbWREdVJUVVlQZC1GUnBzTEVibDNhM2o4SFVIaXJkSW91TnBLMmhsWi1MSXJ5dUVqUzFQcHc3cGFyOXZDaExBd245R1Fmc00tbjM1b25ZaVMzRFpVMjBBUnR2RlhqQ3c?oc=5",
+      "url": "https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits/",
       "source": "Google News / MIXED Reality News",
       "published": "09/23 00:05 UTC",
       "score": 0,
@@ -949,22 +824,8 @@
       "contributors": []
     },
     {
-      "title": "Introducing Claude Opus 5.5 - Anthropic",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-      "source": "Google News / Anthropic",
-      "published": "09/22 23:25 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 3,
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5\" target=\"_blank\">Introducing Cla",
-      "category": "media",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
       "title": "GPT-6 Sol vs Claude Sonnet 5: Same Price, Which Model Delivers More? - Kingy AI",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5NU3FkMThvdl9CSHBjUGZrWVBfTzB5TE11UjIzdWoxaE5IMXZXYmwtTHl3UjA3Y0oyRmlCSm1Cak0yWUVqU25TTzhTenhQXzZyX2o0aUZSNENfUUpsS0Y5dw?oc=5",
+      "url": "https://kingy.ai/blog/gpt-6-sol-vs-claude-sonnet-5/",
       "source": "Google News / Kingy AI",
       "published": "09/22 22:44 UTC",
       "score": 0,
@@ -978,7 +839,7 @@
     },
     {
       "title": "Claude Opus 5.5 vs GPT-6 Astra, Sol and Luna vs GPT-5.6 Sol: Benchmarks and Real Costs - Kingy AI",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1VU1hrbnhCeUJVTHA3eTU4R0x0aXBDZlhuUkcxTzZuQkg0OS1hZWk1My1wZGpzcW02VjVmUlQ2N1ZOSzBuRU9EcGZ0NFpRcW80SW1NakUwMHZBdDU5bTd0SEJqcE5wc1VXY2xQVnFHZktKVks1MVFj?oc=5",
+      "url": "https://kingy.ai/blog/claude-opus-5-5-vs-gpt-6-astra-vs-gpt-5-6-sol/",
       "source": "Google News / Kingy AI",
       "published": "09/22 22:04 UTC",
       "score": 0,
@@ -992,7 +853,7 @@
     },
     {
       "title": "EXCLUSIVE: Anthropic, OpenEvidence partner to bring medical AI worldwide - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOLVV5RE9jdGNuVXUycl9fTjJ1Ty1tVzZ2U1MxcWtaZDhXOG5qc29yTENvLVJtZ19PM09MQng5azRmbU5kNG40dUtBcVcxN0U1eGZNUkZwaXA0amt6R25qak9za19YTTNKVHFDVGg0VVVzN3V2VjFHdnBHN3BpUmtQR3BUdThUd3FqbXJIOHZLVE1kbVVRV005bDJmM3o3N2Z2Z3Bvd2NYZjhSLUdpYUhZ?oc=5",
+      "url": "https://www.reuters.com/legal/litigation/anthropic-openevidence-partner-bring-medical-ai-worldwide-2026-09-22/",
       "source": "Google News / Reuters",
       "published": "09/22 21:31 UTC",
       "score": 0,
@@ -1006,7 +867,7 @@
     },
     {
       "title": "Anthropic launches Claude Opus 5.5 with lower API costs - TestingCatalog AI News",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNY21wamJpdDdjLXhBU1cxUlNwVUJXNHlRYkRRdC1fUjZWZ1ZtUkpzd3IzaEdDcklwS29BVVdUeEF6VGdINW9WRm1oSnowei1rYzU5VTZFS3NYYVlhcklRbzhsUEFyRGl4NFlYbm5vOFJPWTBERkdpOFZHWDAwajE2UktxdUVxMEFUSWdRWExZNnI?oc=5",
+      "url": "https://www.testingcatalog.com/anthropic-launches-claude-opus-5-5-with-lower-api-costs/",
       "source": "Google News / TestingCatalog AI News",
       "published": "09/22 20:42 UTC",
       "score": 0,
@@ -1019,9 +880,9 @@
       "contributors": []
     },
     {
-      "title": "Anthropic releases Claude Opus 5.5, beating Fable 5.1 on key agentic benchmarks at 60% cheaper API price - venturebeat.com",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQcml5V2NScmlDMmg0VXdZR3AyXzJlTHlzRnJ5S05mMHNxQ2ZjSmwwV2tVcWx5RXE4V3JJWWh3MXlKdXdlNno4MVAwaGdXcVVJYm9TNGx5bWgxZjM1dm1VR0ppRGNsRTVZc1UwVkJuRmIwLTFoYnJkUE9sU0taS3Z2dVd6X1VwMEc3SVlJNDhyWWtSMGdlRC01VGQ0bngtWDhLY2ZzSUU3SWFJcnNSRldWdnVHejRKdV9GOEhOUzNiUFFHQmd4Mko0ZjctT0k0STJzVm93?oc=5",
-      "source": "Google News / venturebeat.com",
+      "title": "Anthropic releases Claude Opus 5.5, beating Fable 5.1 on key agentic benchmarks at 60% cheaper API price - VentureBeat",
+      "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+      "source": "Google News / VentureBeat",
       "published": "09/22 19:05 UTC",
       "score": 0,
       "score_unit": "",
@@ -1034,7 +895,7 @@
     },
     {
       "title": "Derailed IPO Plans Rattle US Market Ahead of Anthropic Debut - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQX0U2RnRxMzJ5SVF1LVhDTGlzSXJ4VXJBeW11VXdOTTRrZThGXzdaVnJabWg5NWFRcTdBcGFpYlJwemNLWThtT2FLUE1FYUlsbUpybjVNWlVUVG9CWlMyN2YxUktDTjlUY1RVajM2elE5UUJjcV9QM2dPZ21idGx6am91N0Y3a3gyemtjenY1T2JuM2hHYUotcG5xUUI4emNTVWx5NmN2VDVidWhoSU5pVg?oc=5",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-22/derailed-ipo-plans-rattle-us-market-ahead-of-anthropic-debut",
       "source": "Google News / Bloomberg.com",
       "published": "09/22 18:53 UTC",
       "score": 0,
@@ -1048,7 +909,7 @@
     },
     {
       "title": "3 guys hacked OpenAI using a rival Anthropic model. Here's what it shows about frontier labs' vulnerabilities. - CBS News",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sYU85M1h2UmRpRWhzdWdqNGFrM0gycTJBR2YyMm80VU1MdTFuQUFieVFhb2hZV0tIM1RRc3RiV0JRWDJvbl9RQWNvMlRLMFJDRlg2Nm93TG0xbFZqekVVa1g4MVNtM3RFdm1OaGpJVEFRZkNGZGdmRWVfZzR6TVU?oc=5",
+      "url": "https://www.cbsnews.com/news/openai-hack-anthropic-claude-vulnerabilities/",
       "source": "Google News / CBS News",
       "published": "09/22 18:53 UTC",
       "score": 0,
@@ -1076,7 +937,7 @@
     },
     {
       "title": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude - Gizmodo",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNalNQRnNqazhhNmxmWWVWcm11dDR5NU1xMmpWTi1jNmVxWVNCMnBKQjJvNzJCcVkxMDBkMzlQQ3V2RllHLS1abE9DUmJDRTVLZ2tJYjdOM0dhLWhqRV9rSGpWWW5pWlJwOExpTWJJb200aUVfNGhTR29ucW5CVlNxWFBFOUNsblJwdnQ2QnE3LWJnV0FSY2xkZkJlSUZsdVBqS2VubThFOHdOVkwwZTZlYXNLRENpNVBs?oc=5",
+      "url": "https://gizmodo.com/china-probes-deepseek-moonshot-ai-over-anthropics-claims-they-route-requests-to-claude-2000815507",
       "source": "Google News / Gizmodo",
       "published": "09/22 18:45 UTC",
       "score": 0,
@@ -1090,7 +951,7 @@
     },
     {
       "title": "Claude Opus 5.5: Specs, Benchmarks, Pricing and How It Stacks Up Against GPT-6 Astra, Fable 5.1 and Every Frontier Model - Kingy AI",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1mQ0FyWTdYeVFzcFdYU2Q3TFBmZDdLdVhNQXVhb2lEUnVlVVo2Q1E2SzR4UEpGUmVPNXZaS2VHUUpFQk9rUGhSYm9HV2c1U2d4X29DMHprMTFrN1pZM3lETlc4b1ZfSzB2MXZ3R0hHMU1rcUNQZGJsT01wZC1BVUE?oc=5",
+      "url": "https://kingy.ai/blog/claude-opus-5-5-specs-benchmarks-pricing-comparison/",
       "source": "Google News / Kingy AI",
       "published": "09/22 18:34 UTC",
       "score": 0,
@@ -1104,7 +965,7 @@
     },
     {
       "title": "What AI slowdown? OpenAI, Anthropic release dueling models as price wars heat up - Fortune",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNU3paNUN6bmt3RFlzT0RmZHl0U0NkT1REdmFTd0tjcUxLaEJINGZQZEpUMHlnUEJKcGxwQWZVUmZEZ0J1am85S0E3b0NXZ1VKaTRtcFNKZDVBSDZXRmxVSXlteF85Wlh6MGxmQ3MyN2J2Ynp2LS00V2EtenNReFExNjhWRF9KZ1VUREV3bm9aZHQ4NmdLOElDaDUtWXQwR29RNnJJaGN0N3JjRXZCdExhME5YeURUdllpSmt6VjhWeUEtVFVqTXNz?oc=5",
+      "url": "https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up/",
       "source": "Google News / Fortune",
       "published": "09/22 18:00 UTC",
       "score": 0,
@@ -1118,7 +979,7 @@
     },
     {
       "title": "Claude Opus 5.5 is now available on AWS | Artificial Intelligence - Amazon Web Services (AWS)",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUF84Y3BrZ1ZCZC1FLWwtVi1VcGJBU0xpQmpKSlBsenowckNCRnFsa2FkdmRDb25oTGx0Q0VXbG02MFh0NUg5NlptUmdTcDU2WmdONERITlZlVFNSZzNjakw4dE4yQWUtbHlqQ041VlRnZU8yUVZmejd6bVl1QmlZaXIxc09nbXNQT1lfNU1Eaw?oc=5",
+      "url": "https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/",
       "source": "Google News / Amazon Web Services (AWS)",
       "published": "09/22 17:28 UTC",
       "score": 0,
@@ -1132,7 +993,7 @@
     },
     {
       "title": "Anthropic unveils Claude Opus 5.5 - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+      "url": "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/",
       "source": "Google News / Reuters",
       "published": "09/22 17:22 UTC",
       "score": 0,
@@ -1146,13 +1007,27 @@
     },
     {
       "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LXpuMjB6YUtNY1Z4RTBDTlZON1BlejZ3RUFR?oc=5",
+      "url": "https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html",
       "source": "Google News / The New York Times",
       "published": "09/22 17:20 UTC",
       "score": 0,
       "score_unit": "",
       "source_count": 1,
       "summary": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl82VnlnNDZ1ZElxSE9RMmlPZ29FSjVleTBLZG9SYzRxc0FXRXpWWmRqekhENWtKdXdNX2ZGOFdCcGZjZVFHMWc1a3hLcGRtZUNmaU5DMmlHbzZIX3hWbTlTWklXU3c5LX",
+      "category": "media",
+      "topic": "",
+      "dedup_key": "",
+      "contributors": []
+    },
+    {
+      "title": "Anthropic launches Claude Opus 5.5, promising Fable-level performance at a lower price - Mashable",
+      "url": "https://mashable.com/tech/claude-opus-launch-promises-better-performance-cheaper-price",
+      "source": "Google News / Mashable",
+      "published": "09/22 17:17 UTC",
+      "score": 0,
+      "score_unit": "",
+      "source_count": 1,
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNR3kyT0JlSC1QNUhOT0RtQ0VZVzFRSF9IZVE1TlhmY3RMU012NENzcm9IVXdXM0NQMmZRVVRxV0d4QmgyUHBCWXRsQ1J3OGhCZ1JPUGhJOG1ZYTdXcTBLVG5PQ1NHUzB6WEVlZFl6U2",
       "category": "media",
       "topic": "",
       "dedup_key": "",
@@ -1173,22 +1048,8 @@
       "contributors": []
     },
     {
-      "title": "Anthropic launches Claude Opus 5.5, promising Fable-level performance at a lower price - Mashable",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR3kyT0JlSC1QNUhOT0RtQ0VZVzFRSF9IZVE1TlhmY3RMU012NENzcm9IVXdXM0NQMmZRVVRxV0d4QmgyUHBCWXRsQ1J3OGhCZ1JPUGhJOG1ZYTdXcTBLVG5PQ1NHUzB6WEVlZFl6U2tDcUdqVkYzSndmOGxlREwtd05Fb1VIUnZpT2d3bDhKWQ?oc=5",
-      "source": "Google News / Mashable",
-      "published": "09/22 17:12 UTC",
-      "score": 0,
-      "score_unit": "",
-      "source_count": 1,
-      "summary": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNR3kyT0JlSC1QNUhOT0RtQ0VZVzFRSF9IZVE1TlhmY3RMU012NENzcm9IVXdXM0NQMmZRVVRxV0d4QmgyUHBCWXRsQ1J3OGhCZ1JPUGhJOG1ZYTdXcTBLVG5PQ1NHUzB6WEVlZFl6U2",
-      "category": "media",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
       "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity - The Verge",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVDNTSkNCdjRXSUVQQzc4LWtrblRKM3p6N1RvMk9UQTRfamFBMy1UelVxdjRGX3hRSlpTYmFDa1piM2FKT3lfdFlGdXZ0YmoyOURoRzBvM3hYRnp4elUzX2ZqYURxbEJWSjVCY1hWWHhVSTFWZjd3VkJGRlNkWXk3N3pYWWFHbVItLVA1RmJPOUoyblZ0dGp2aWF4QVJMZlk?oc=5",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
       "source": "Google News / The Verge",
       "published": "09/22 16:30 UTC",
       "score": 0,
@@ -1209,90 +1070,6 @@
       "score_unit": "",
       "source_count": 1,
       "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-typesafe/releases/tag/0.1a0\">llm-typesafe 0.1a0</a></p>\n        <p>I built this new plugin for <a href=\"https://llm.datasette.io/\">L",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "What underrated AI tools have actually made you more productive in 2026?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wn9a2w/what_underrated_ai_tools_have_actually_made_you/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/22 13:18 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>I asked this back in 2025, but the AI landscape has changed a lot since then.</p> <p>Not looking for the usual ChatGPT, Claude, Gemini, Midjourney, etc. I'm curious a",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "[Splash Engine] Qwen3.8-27B in native 8-bit at 37–55 tok/s on Apple Silicon: Extending Splash to Q8, 256k context scaling, and the \"Reasoning Cliff\"",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wmbbf9/splash_engine_qwen3827b_in_native_8bit_at_3755/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/21 12:25 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1wmbbf9/splash_engine_qwen3827b_in_native_8bit_at_3755/\"> <img alt=\"[Splash Engine] Qwen3.8-27B in native 8-bit at 37–55 tok/s on",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "I tested 9 LLMs on the exact same web-dev prompt for ~8 hours — RTX 3060 12GB results (Rate the best!)",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wljzix/i_tested_9_llms_on_the_exact_same_webdev_prompt/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/20 15:26 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1wljzix/i_tested_9_llms_on_the_exact_same_webdev_prompt/\"> <img alt=\"I tested 9 LLMs on the exact same web-dev prompt for ~8 hour",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "Steer LLMs and Agents at the Token Level: An interactive tool for token visualization & control, model inspection and data annotation.",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wkc4c9/steer_llms_and_agents_at_the_token_level_an/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/19 04:21 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1wkc4c9/steer_llms_and_agents_at_the_token_level_an/\"> <img alt=\"Steer LLMs and Agents at the Token Level: An interactive tool fo",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "Qwen3.8-27B at 144 tok/s on an M5 Max MacBook Pro",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wk9hze/qwen3827b_at_144_toks_on_an_m5_max_macbook_pro/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/19 02:11 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1wk9hze/qwen3827b_at_144_toks_on_an_m5_max_macbook_pro/\"> <img alt=\"Qwen3.8-27B at 144 tok/s on an M5 Max MacBook Pro\" src=\"https",
-      "category": "community",
-      "topic": "",
-      "dedup_key": "",
-      "contributors": []
-    },
-    {
-      "title": "XingChen-AGI/Xing4.0-29B-A4B MoE",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wimf5p/xingchenagixing4029ba4b_moe/",
-      "source": "Reddit / r/LocalLLaMA · 週熱門",
-      "published": "09/17 06:46 UTC",
-      "score": 0,
-      "score_unit": "留言",
-      "source_count": 1,
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>I find another new model at HF:</p> <p><a href=\"https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B\">https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B</a></p> <p><s",
       "category": "community",
       "topic": "",
       "dedup_key": "",
