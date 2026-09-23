@@ -51,6 +51,8 @@
 
 | 16 | topics/community-large-codebase-workflow（廣度優先第 1 層第 11 頁，入邊 43、186 行） | 樞紐 | 2026-09-23 | 定稿（使命句主 session 代判，健檢卡 A）「大 repo 上撞的四面牆，社群現在怎麼組做法、做到哪、還缺什麼；官方零件在哪一頁」。186→195 行，四層 ≤30 骨架不動：四線「現在的答案」首條改「**官方已給**」（worktree 隔離＋`isolation: worktree`／`--bare`＋`/context`／auto memory／Stop hook，官方逐字取自 verified，連頁不連錨）；L65「官方 20 路」改寫為兩個一手上限（Claude Code session 預設 20 subagent 可調、Managed Agents 20）而非「跑得穩」；與 guide L287 互斥的兩條（已否決方案索引、讀取上限）移出「現在的答案」、留子問題表、理由改「社群證據撐不起可執行結論」＋一句分界；⟨Q-01⟩⟨Q-03⟩ 併為「查過的數字」普通條列（懸置計數 119 不變——本頁三筆本就不帶 ❓／🔎）；代表實作 ≤3 與證據五值 23／21→28/28（無腳本看守，proposal 明寫）；`weekly.md` 撈料窗改「`%%` 週更已收至」水位前 3 天（147 subagent 節點漏收根因＝7 天窗）＋「已成趨勢」60 天退場＋星數不寫本頁；`daily.md` tag 判準加反例；index L102 改句；轉知功能記者 4 筆（H-c63724／H-90ad60／H-fc5914／H-f91933：guide L287 仍成立否、guide 缺 `--bare` 與變笨診斷、agent-stack 缺 20 上限與 worktree 指令、claude-code L502 vs L821 互斥）；cqd↔discussions 分界為同維護者待辦記 log。最後一批：線 2 補官方 `/context` 逐字＋PrismoDev、cqd L78 🧰 行解循環 | ✅ 複驗過：原四題 拿到／半／半／拿到（5／6／5／3 跳）→ 拿到／半／半／拿到（**3／5／3／2 跳**）；Q2 半的根因（量法無步驟、cqd L78 循環）在最後一批補，Q3「auto memory 夠不夠團隊用」全站無人答，進回訪 | 2026-09-30 | `lcw-2026-09-23{,-verified,-proposal,-proposal-map,-draft,-review}.md`、`wave16-cold-reader{,-recheck}-2026-09-23.md` |
 
+| 17 | topics/community-pattern-trends（廣度優先第 1 層第 12 頁，入邊 8、338 行；第 16 波回訪第 6 項：功能記者 4 筆轉知未結案故先審 trends） | 中層 | 2026-09-23 | **報價**：中層規模——健檢卡（輕量 Q1/Q2/Q4/Q5）＋冷讀者＋主編查證平行，設計者一、實作者一，主 session 兼評審抽驗；新 agent 4（超中層 2–3 一名：冷讀者是最後一關不省，第 8／9 波兩度「patterns vs trends 分不出」點名到本頁處理）。已知線索：九條趨勢 338 行、週更規則 weekly.md「趨勢頁週更」；reader-notes L31 使用者本人關心趨勢四（自動模型路由）；ledger 第 9 波回訪第 3 項待本頁處理入口句 | | | `trends-2026-09-23{,-verified,-proposal,-proposal-map,-draft}.md`、`wave17-cold-reader-2026-09-23.md` |
+
 > 第 1 波同時吃掉 `wiki/reader-notes.md` 的 ⏳「『誰比較強』三頁互踢」——考題集必含「Codex 和 Claude 誰強」，落點必須唯一。
 
 ## 待辦（第 3 波遺留）
