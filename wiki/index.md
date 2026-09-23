@@ -19,12 +19,12 @@
 
 ## 💻 開發實務入口
 
-只放**答「怎麼做」**的頁面（接手 repo 該怎麼設定、卡住了先裝什麼、大 repo 怎麼並行、agent 該用哪種形態跑）；選什麼、出事了、要花多少的頁在各自領域的分頁下；產品動態與事件追蹤住各自的頁，整理後沉澱到這幾頁。工具的判斷（該裝哪個、證據多強）由社群工具目錄每週整理，每日同步進「興趣類別 skill 總覽」——讀者只需看總覽一頁。
+只放**答「怎麼做」**的頁面（接手 repo 該怎麼設定、卡住了先裝什麼、大 repo 怎麼並行、agent 該用哪種形態跑）；選什麼、出事了、要花多少的頁在各自領域的分頁下；產品動態與事件追蹤住各自的頁，整理後沉澱到這幾頁。工具的判斷（該裝哪個、證據多強）只在社群工具目錄，每週整理；各類工具現在誰大、誰在漲看「社群工具規模榜」。
 
 | 我想…… | 去哪 |
 |---|---|
 | 接手／新建一個 repo，**官方**建議先做哪些設定（CLAUDE.md、LSP、探索） | [[topics/coding-workflow-guide]] 第 1、2a 段 |
-| 我卡住了（帳單爆、額度快用完想被提醒、context 撐爆、agent 互踩、它說做完了沒做、agent 讀不懂大 repo、跑 auto 出事……），**社群首選**是哪個 | [[topics/skill-interest-watch]]「我卡在這裡」決策表 |
+| 我卡住了（帳單爆、額度快用完想被提醒、context 撐爆、agent 互踩、它說做完了沒做、agent 讀不懂大 repo、跑 auto 出事……），**社群首選**是哪個 | [[topics/community-tech-tools]]「我卡在這裡」決策表 |
 | 我關心的某類工具，現在誰最大、本週誰在竄升（七日星數差，每日快照） | [[topics/skill-interest-watch]] 各類別（按開發流程段） |
 | 它說做完了，我怎麼知道是真的——**官方**做法（要證據、`/goal`、Stop hook） | [[topics/coding-workflow-guide]] 第 9 段 |
 | 我想讓 agent 自己跑幾小時／過夜，該用哪個（`/goal`、subagent、dynamic workflows、agent teams、agent view、Managed Agents、Agent SDK） | [[topics/anthropic-agent-stack]]「你該用哪個」 |
@@ -97,7 +97,7 @@
 | [[topics/code-quality-decline]] | 🌐 社群 | ongoing | 「變笨了」三條線：04 月那次官方已結案，06 月起 token 異常與 Opus 5 品質觀感官方沒說法；先知道你釘不住你選的模型　↳ 子故事：[[topics/code-quality-decline-archive]] |
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
-| [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 興趣類別 skill 總覽：一頁看完「該裝哪個」（每日同步社群工具目錄的決策表）與「這類誰大、誰在漲」；可用 GitHub 辨識的類別（開發流程段＋治理）每日問「這一類現在誰最熱、本週誰竄升」；無法用星數找的治理需求誠實指路到社群工具目錄決策表或實戰手冊；機器產出、星數是規模不是品質 |
+| [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
 | [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 每種社群做法的原始證據與採用量，21 類（Multi-agent、Skills、CLAUDE.md、Hooks 四類已定案）；「該怎麼改設定」看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-tech-patterns-archive]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |

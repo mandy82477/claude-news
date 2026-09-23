@@ -102,11 +102,12 @@ class TestRender(unittest.TestCase):
         finally:
             sis.STAR_HISTORY = orig
         self.assertIn("冷啟動", md)                       # 星史不足 → 明寫，不留白
-        self.assertIn("## 我卡在這裡（決策表）", md)        # 決策表機械抄自 tools 頁
-        self.assertIn("| 我的症狀 | 先裝這個 |", md)        # 抄本有表頭（tools 頁契約）
-        self.assertIn("**本庫判斷**", md)                  # 每類判斷區塊
+        # 2026-09-23 使用者裁決「按問題切」：榜不再抄決策表，每類改印一行指路到 tools 症狀列
+        self.assertNotIn("## 我卡在這裡（決策表）", md)     # 決策表只住 tools 頁
+        self.assertNotIn("| 我的症狀 | 先裝這個 |", md)     # 不再有抄本
+        self.assertIn("**本庫判斷 →** 見 [[topics/community-tech-tools]]「", md)  # 單向橋
+        self.assertIn("# 社群工具規模榜", md)
         self.assertIn("規模榜：無", md)                    # retired 類只印判斷、不掛空榜
-        self.assertNotIn("本庫判斷 →", md)                 # 舊式指路橋已由抄錄取代
         self.assertIn("| [github/spec-kit]", md)
         self.assertIn("Spec-Driven ／ Development", md)   # 儲存格 | 轉義
         self.assertIn("**最後更新：** 2026-09-03", md)

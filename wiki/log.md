@@ -6745,3 +6745,15 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 `wiki/topics/official-community-gap.md` 第 14 波裁決點 1：使用者裁「對照矩陣併入」。`## 對照矩陣` 整節（3 列：CLAUDE.md 規則失效 ❌、平台可及性 🧪、AI 輔助開發副作用 ❌）砍除，逐字插入 `## 官方補了沒` 表——`❌` 區最上插兩列（CLAUDE.md 寫了它不聽、用 AI 寫久了技能退化技術債變快）、`🧪` 區末插一列（手機或瀏覽器用得到嗎），表由 13 列增為 16 列。刪前確認：三列事實在新表或「技術彙整」一節都有家（平台可及性同時留在技術彙整節細節），無孤兒列。同步改：A-3 摘要末句改「16 個痛點…3 個 ❌／7 個 🧪／6 個 ✅」；`## 目前結論` 首句「上面那個 ❌、下方對照表裡的兩列」改「上面三個 ❌ 裡有兩個」（對照表已不存在，避免懸空指涉）；`## 時序` 2026-09-20 Cowork 條改寫（依 draft〔併〕版，補「這條線因此獨立成一列」）；prepend `### 2026-09-23` 一則記併表事實。全庫 grep `對照矩陣`：僅 `wiki/log.md`（append-only歷史、不改）與本頁自身；`.claude/reporter-rules/features/pages.md` 現行版本已無「對照矩陣」字樣（第 14 波原稿即未提及，本波無需再動）。懸置標記基線：改前 119 筆、改後 119 筆，本頁改動未涉任何 ⟨Q-nn⟩／❓／🔎 標記。
 
 **歸因**：`user-query`（第 14 波裁決點 1，逐字稿 `docs/page-audits/ocg-2026-09-19-draft.md`〔併〕分岔；ledger 待裁決列 `docs/page-audits/ledger.md:263` 本波結案）。
+
+## 2026-09-23 裁決：tools 與 skill-interest-watch 按問題切（使用者裁決）
+
+按問題切、不按 tab 切：[[topics/community-tech-tools]] 只答「我卡住了該裝哪個」（決策表、推薦細節、工具目錄，判斷與證據的唯一家）；[[topics/skill-interest-watch]] 改名「社群工具規模榜」，只答「這一類現在誰大、誰在漲」。**撤回 2026-09-03 再裁決**「tools 退出開發實務 tab、總覽每日抄錄整張決策表」——三波冷讀者分不出兩頁差在哪，且副本落後一天、實測印出 tools 已換掉的舊 owner。
+
+- **規模榜頁**（`scripts/skill_interest_snapshot.py` 重產）：拿掉「我卡在這裡（決策表）」整節與各類抄錄列；每類改一行「**本庫判斷 →** 見 tools「〈症狀句〉」列」（症狀句仍由 `data/skill_interest_watch.json` 的 `tools_symptom` 提供，無症狀類沿用原 fallback 句）；標題、更新頻率句與頁首說明改規模榜語意。重產後 180 行、6 行「本庫判斷 →」、零決策表。
+- **入口**：`wiki/index.md`「💻 開發實務入口」「我卡住了…社群首選」列改指 tools 決策表，入口說明句與規模榜摘要句同步；`data/reader-tags.json` 💻 開發實務 tab 加回 `community-tech-tools`（`src/tests/test_reader_tags.py` 名單同步）。
+- **tools 頁**：摘要末句與相關頁面列改為「規模榜見 skill-interest-watch；該裝哪個只有這一頁有答案」。
+- **規則**：`.claude/reporter-rules/community/weekly.md`「skill-interest-watch：機器快照頁」節改寫；沿革見 `docs/rules-changelog/reporter-community.md` 同日。
+- **對帳**：`check_tools_page.py`（含 `check_spokes` 榜橋對帳）綠。
+
+**歸因**：`user-query`（使用者裁決，ledger 第 15 波 tools↔SIW 分法提案）。

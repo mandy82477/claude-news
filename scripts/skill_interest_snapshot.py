@@ -153,11 +153,11 @@ def tools_catalog_rows() -> int | None:
 
 
 def decision_table_from_tools() -> tuple[list[str], str]:
-    """從 tools 頁（判斷的家）機械抄「我卡在這裡」決策表：回傳 (表格行列表, 圖例行)。
+    """讀 tools 頁（判斷的家）「我卡在這裡」決策表：回傳 (表格行列表, 圖例行)。
 
-    2026-09-03 使用者裁決：開發實務 tab 只留本頁一頁，判斷仍只在 tools 頁**寫**（單一寫者），
-    本頁每日重產時**抄**過來給讀者讀——「每個事實一個家」管的是誰寫，不是讀者在哪讀。
-    抄本最多落後一天；抄不到（tools 頁改版）時明說，不留白裝正常。
+    2026-09-23 使用者裁決「按問題切」：本頁不再印這張表（副本落後一天、冷讀者分不出兩頁），
+    只用它確認設定檔 `tools_symptom` 的症狀句還在表上——在才印「本庫判斷 →」指路行，
+    不在就退回 fallback 句，不指向一列不存在的症狀。
     """
     try:
         text = TOOLS_PAGE.read_text(encoding="utf-8")
@@ -178,45 +178,35 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
     cold = span < cfg["rise_window_days"]
     emitted = _emitted_repo_urls() or set()
     judged = judged_repo_urls()
-    table_rows, legend = decision_table_from_tools()
-    row_by_symptom = {}
+    table_rows, _legend = decision_table_from_tools()
+    known_symptoms = set()
     for l in table_rows:
         cells = [c.strip() for c in l.strip("|").split("|")]
         if len(cells) >= 4 and cells[0] not in ("我的症狀",) and not set(cells[0]) <= {"-", ":", " "}:
-            row_by_symptom[cells[0]] = l
+            known_symptoms.add(cells[0])
     n_active = sum(1 for c in cfg["categories"] if c.get("status") != "retired" and c.get("queries"))
     catalog_rows = tools_catalog_rows()
     lines = [
-        "# 興趣類別 skill 總覽",
+        "# 社群工具規模榜",
         "",
         "**狀態：** ongoing",
         "**開始日期：** 2026-09-02",
         "**領域：** 🌐 社群",
-        "**更新頻率：** 🗓️ 每日快照（機器產出；決策表抄自社群工具目錄、最多落後一天；「本週竄升」以七日星數差計）",
+        "**更新頻率：** 🗓️ 每日快照（機器產出；「本週竄升」以七日星數差計）",
         f"**最後更新：** {today}",
         f"**最後新聞更新：** {today}",
         "",
         # 括號內不以日期開頭：這段是頁面自介不是當日動態，讀者版產生器（build_reader_digest.py）
         # 只收「（YYYY-MM-DD」開頭的 callout，寫成「（快照 日期）」就不會天天被投影進日報
         f"> **本頁是什麼**（快照 {today}）",
-        "> - **該裝哪個**：看「我卡在這裡」決策表——有人判斷過，帶證據等級與判定日。",
-        f"> - **這一類現在誰大、本週誰在漲**：看 GitHub 每日規模榜（{n_active} 類可用 GitHub 辨識）。",
-        "> - **星數是規模不是品質**：榜不做推薦，推薦只看決策表；榜上標 🧭 者代表決策表或工具目錄已有判斷。",
-        "> - 完整證據、推薦細節、Skills 速查與"
-        + (f" {catalog_rows} 列工具目錄" if catalog_rows else "工具目錄")
-        + "在 [[topics/community-tech-tools]]。",
-        "",
-        "---",
-        "",
-        "## 我卡在這裡（決策表）",
-        "",
-        f"本表每日同步自 [[topics/community-tech-tools]]（判斷與證據的家；改判斷請改那頁），同步日 {today}。",
+        f"> - **這頁是什麼**：各類社群工具在 GitHub 上現在誰最大、本週誰在漲（{n_active} 類可用 GitHub 辨識，每日快照）。",
+        "> - **該裝哪個**：看 [[topics/community-tech-tools]]「我卡在這裡」決策表——有人判斷過，帶證據等級與判定日"
+        + (f"；那頁另有 {catalog_rows} 列工具目錄" if catalog_rows else "")
+        + "。",
+        "> - **星數是規模不是品質**：本頁不做推薦；每類底下的「本庫判斷 →」直接連到那頁對應的症狀列。",
+        "> - **🧭**：該 repo 在社群工具目錄已有判斷，點過去看結論。",
         "",
     ]
-    if table_rows:
-        lines += table_rows + ([""] + [legend, ""] if legend else [""])
-    else:
-        lines += ["> ⚠️ 本次抄不到決策表（社群工具目錄的「我卡在這裡」節可能改版）——請直接看 [[topics/community-tech-tools]]。", ""]
     lines += [
         "---",
         "",
@@ -224,7 +214,7 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
         "",
         "| 欄 | 意思 |",
         "|---|---|",
-        "| 本庫判斷 | 該類別對應的決策表列（同上表，就近重印方便對照） |",
+        "| 本庫判斷 | 該類別對應的 tools 決策表症狀列，連過去看首選 |",
         "| 目前前 5 | 該類別 GitHub 搜尋命中的 repo 依星數排序，星數為快照當日值 |",
         "| 本週竄升 | 七日內星數增量 ≥ "
         f"{cfg['rise_min_delta']:,} 者，依增量排序；資料來自本庫每日記錄的星數 |",
@@ -243,9 +233,9 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
     def judgment_block(cat: dict, has_judged: bool) -> list[str]:
         sym = cat.get("tools_symptom")
         syms = ([sym] if isinstance(sym, str) else sym) if sym else []
-        rows = [row_by_symptom[s] for s in syms if s in row_by_symptom]
-        if rows:
-            out = ["**本庫判斷**（同頁首決策表對應列）", "", "| 我的症狀 | 先裝這個 | 什麼時候改裝別的 | 證據 |", "|---|---|---|---|"] + rows
+        hits = [s for s in syms if s in known_symptoms]
+        if hits:
+            out = [f"**本庫判斷 →** 見 [[{TOOLS_LINK}]]「" + "」；「".join(hits) + "」列"]
             if cat.get("caveat"):
                 out += ["", f"> {cat['caveat']}"]
             return out
@@ -305,7 +295,7 @@ def render(cfg: dict, data: dict, now: datetime) -> str:
         "",
         "## 參考來源",
         "",
-        "- 決策表與判斷：[[topics/community-tech-tools]]（每週整理；本頁每日同步）",
+        "- 該裝哪個（決策表與判斷）：[[topics/community-tech-tools]]（每週整理）",
         "- 規模榜：GitHub Search API（依星數排序，每日快照）；「本週竄升」以本庫每日記錄的星數差計算，保留 60 天",
         "- 類別與搜尋條件由維護者校準（每條 query 上線前實測命中；找不到有辨識力 query 的類別只印判斷，不掛空榜）",
         "",

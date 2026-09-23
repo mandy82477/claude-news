@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 摘要
 
 **我卡住了，社群有什麼能救？** 本頁把社群工具依「症狀」排列：每個症狀給一個先裝的、一條「什麼時候該改裝別的」的分界，以及這個判斷是哪天下的、最近一次確認這個專案還在不在是哪天。有一個症狀我們認為答案是機制不是工具，那一格就誠實空著。
-按開發流程階段找官方做法見 [[topics/coding-workflow-guide]]；做法背後的機制與實測見 [[topics/community-tech-patterns]]；概念辯論見 [[topics/community-tech-discussions]]；同一個痛點官方補了沒見 [[topics/official-community-gap]]；官方功能見 [[feature-radar]]。[[topics/skill-interest-watch]] 是這張決策表的每日副本，外加各類 GitHub 規模榜——判斷只寫在這一頁，想知道某一類現在誰大、本週誰在漲就去那邊。
+按開發流程階段找官方做法見 [[topics/coding-workflow-guide]]；做法背後的機制與實測見 [[topics/community-tech-patterns]]；概念辯論見 [[topics/community-tech-discussions]]；同一個痛點官方補了沒見 [[topics/official-community-gap]]；官方功能見 [[feature-radar]]。各類工具現在誰大、本週誰在漲的 GitHub 規模榜見 [[topics/skill-interest-watch]]；該裝哪個只有這一頁有答案。
 
 ---
 
@@ -279,6 +279,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/community-tech-patterns]] — 工作流模式與技術做法
 - [[topics/community-tech-discussions]] — 概念辯論與設計哲學
 - [[topics/official-community-gap]] — 官方 vs 社群缺口分析
-- [[topics/skill-interest-watch]] — 這張決策表的每日副本，外加各類 GitHub 規模榜
+- [[topics/skill-interest-watch]] — 社群工具規模榜：各類工具在 GitHub 上現在誰大、本週誰在漲
 - [[topics/community-large-codebase-workflow]] — 大型 codebase 的四條做法主線，每條線都指回本頁的症狀列
 - [[feature-radar]] — 官方功能熱度雷達

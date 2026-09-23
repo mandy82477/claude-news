@@ -88,6 +88,7 @@ class TestDecidedExclusions(unittest.TestCase):
     HOW_TO_PAGES = {
         "coding-workflow-guide",
         "skill-interest-watch",
+        "community-tech-tools",  # 2026-09-23 使用者裁決：撤回 09-03「tools 退出 tab」，「卡住了先裝什麼」的家
         "community-large-codebase-workflow",
         "managed-agents",
     }
