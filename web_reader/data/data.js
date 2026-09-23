@@ -1495,12 +1495,12 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-05-02",
-      "lastUpdated": "2026-09-19",
-      "lastNewsUpdate": "2026-09-13",
-      "updateFreq": "🗓️ 週更（每週從 [[topics/community-tech-patterns]] 沉澱一次；更新日期停留數天屬正常節奏）",
+      "lastUpdated": "2026-09-23",
+      "lastNewsUpdate": "2026-09-23",
+      "updateFreq": "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）",
       "parent": "",
-      "summary": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁把 community-tech-patterns 裡屬於這四個痛點的節…",
-      "latestHeadline": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁把 community-tech-patterns 裡屬於這四個痛點的節",
+      "summary": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁按這四面牆整理社群現在怎麼組做法、做到哪、還缺什麼，每條線的第一條先指官…",
+      "latestHeadline": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁按這四面牆整理社群現在怎麼組做法、做到哪、還缺什麼，每條線的第一條先指官",
       "readerDomains": [
         "🌐 社群",
         "💻 開發實務"

@@ -6,12 +6,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-18"
 last_news_update: "2026-09-18"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 4
-inbound_links: 10
+days_since_news_subtree: 5
+inbound_links: 12
 attribution_count: 4
 attribution_last: "2026-09-10"
 top_source: "user-query"

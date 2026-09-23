@@ -404,11 +404,6 @@
   "preview": "Claude Code：v2.1.270 修復迴歸：長時間執行的 session 中，唯讀 git 指令會意外要求授權，2.1.269 引入的迴歸已修復。",
   "sedimentedToday": [
     {
-      "id": "community-large-codebase-workflow",
-      "name": "大型 Codebase 規模化開發：社群工作流主線",
-      "pageType": "topic"
-    },
-    {
       "id": "community-pattern-trends",
       "name": "社群趨勢觀察（週更）",
       "pageType": "topic"

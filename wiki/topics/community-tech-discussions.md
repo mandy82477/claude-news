@@ -6,12 +6,12 @@ domain: "🌐 社群"
 last_updated: "2026-09-21"
 last_news_update: "2026-09-21"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 45
+days_since_news_subtree: 2
+inbound_links: 46
 attribution_count: 148
 attribution_last: "2026-09-21"
 top_source: "hacker-news"
