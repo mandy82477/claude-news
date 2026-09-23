@@ -560,11 +560,6 @@
       "id": "long-context-1m",
       "name": "1M context：加不加價、你能不能關",
       "pageType": "topic"
-    },
-    {
-      "id": "model-comparison",
-      "name": "Claude 模型選型對照",
-      "pageType": "topic"
     }
   ]
 }

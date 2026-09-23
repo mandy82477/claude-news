@@ -1,0 +1,782 @@
+{
+  "date": "2026-09-23",
+  "generatedAt": "2026-09-23 15:33 UTC",
+  "articleCount": 72,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude Opus 5.5",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "source": "Hacker News ＋Google News / Anthropic、HN Repo Bridge",
+      "time": "09/22 16:29",
+      "sentiment": "",
+      "body": "發布討論在 Hacker News 累積 1,674 分，7 個來源同日交叉報導（含 Google News、HN Repo Bridge），是本日互動量最高的單一話題。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code Memory Leak - Process Grows to 120+ GB RAM and Gets OOM Killed",
+      "url": "https://github.com/anthropics/claude-code/issues/4953",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/22 21:31",
+      "sentiment": "",
+      "body": "回報指出處理程序記憶體會膨脹超過 120GB 並遭 OOM 機制砍掉，累積 98 則留言、77 個 👍 反應，是本日互動量最高的 GitHub Issue。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "source": "Hacker News",
+      "time": "09/23 12:15",
+      "sentiment": "",
+      "body": "作者實測發現 2.1.277 加入的 AGENTS.md 讀取功能，在關閉 telemetry／nonessential traffic 時會被 remote feature flag 靜默跳過、不出警告；官方 issue #95690 已追蹤此問題並標記修復，HN 累積 327 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Feature request: make the auto-memory MEMORY.md compaction reminder threshold configurable",
+      "url": "https://github.com/anthropics/claude-code/issues/91188",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/23 09:32",
+      "sentiment": "",
+      "body": "要求把 MEMORY.md 自動壓縮提醒的閾值改為可設定（或至少可關閉），累積 54 則留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.280",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/22 16:38",
+      "sentiment": "",
+      "body": "新增 Claude Opus 5.5（`claude-opus-5-5`）並設為預設 Opus 模型，1M context、輸入輸出 $4／$20 每 Mtok、快取讀取 $0.20/Mtok；同批也為全螢幕模式的更多清單加入滑鼠支援。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-python] v1.8.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.8.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "09/22 16:25",
+      "sentiment": "",
+      "body": "新增 `claude-opus-5-5` 支援；同批 TypeScript SDK 也釋出 vertex-sdk v0.19.11（4 個來源同日報導）與 google-cloud-sdk v0.0.14 兩個小版本，官方 changelog 未附具體變更說明。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
+      "source": "Google News / The Verge",
+      "time": "09/22 16:30",
+      "sentiment": "",
+      "body": "The Verge 報導 Opus 5.5 隨附針對資安領域強化的防護機制。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+      "url": "https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html",
+      "source": "Google News / The New York Times",
+      "time": "09/22 17:20",
+      "sentiment": "",
+      "body": "紐約時報將此次發布放在近期 AI 安全爭論的脈絡下報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Derailed IPO Plans Rattle US Market Ahead of Anthropic Debut",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-22/derailed-ipo-plans-rattle-us-market-ahead-of-anthropic-debut",
+      "source": "Google News / Bloomberg.com",
+      "time": "09/22 18:53",
+      "sentiment": "",
+      "body": "彭博指出 Anthropic 首次公開發行（IPO）計畫生變，市場情緒受到波及。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Amazon opens its seller tools to outside AI agents, starting with Anthropic's Claude",
+      "url": "https://www.geekwire.com/2026/amazon-opens-its-seller-tools-to-outside-ai-agents-starting-with-anthropics-claude/",
+      "source": "Google News / GeekWire",
+      "time": "09/23 14:10",
+      "sentiment": "",
+      "body": "GeekWire 報導亞馬遜開放賣家工具給外部 AI 代理人存取，首波合作對象即為 Anthropic 的 Claude。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "3 guys hacked OpenAI using a rival Anthropic model. Here's what it shows about frontier labs' vulnerabilities.",
+      "url": "https://www.cbsnews.com/news/openai-hack-anthropic-claude-vulnerabilities/",
+      "source": "Google News / CBS News",
+      "time": "09/22 18:53",
+      "sentiment": "",
+      "body": "CBS News 報導三名人士以對手 Anthropic 的模型攻入 OpenAI 系統，報導以此檢視前緣實驗室的資安弱點，細節有限。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "China Probes DeepSeek, Moonshot AI Over Anthropic's Claims They Route Requests to Claude",
+      "url": "https://gizmodo.com/china-probes-deepseek-moonshot-ai-over-anthropics-claims-they-route-requests-to-claude-2000815507",
+      "source": "Google News / Gizmodo",
+      "time": "09/22 18:45",
+      "sentiment": "",
+      "body": "Gizmodo 報導中國當局調查 DeepSeek、Moonshot AI，起因是 Anthropic 先前指控兩者將部分請求轉發給 Claude 處理。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Meet the top Anthropic scientist who predicted the core of today's AI doom debate",
+      "url": "https://www.businessinsider.com/jared-kaplan-ai-safety-concerns-last-year-gain-traction-anthropic-2026-9",
+      "source": "Google News / Business Insider",
+      "time": "09/23 09:00",
+      "sentiment": "",
+      "body": "Business Insider 側寫 Anthropic 科學家 Jared Kaplan，回顧其去年提出的 AI 安全論點如何在今日的爭論中逐漸受到重視。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic and OpenAI Models Still Attempt Restricted Actions in Safety Tests",
+      "url": "https://thehackernews.com/2026/09/anthropic-and-openai-models-still.html",
+      "source": "Google News / The Hacker News",
+      "time": "09/23 11:47",
+      "sentiment": "",
+      "body": "The Hacker News 報導安全測試中，Anthropic 與 OpenAI 的模型仍會嘗試執行受限制的動作。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "source": "Blog / Simon Willison",
+      "time": "09/22 23:46 UTC ·",
+      "sentiment": "😐",
+      "body": "Simon Willison 彙整同日多家廠商（Anthropic、OpenAI 等）的模型發布與定價文案，記錄這波價格戰的第一手材料。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
+      "url": "https://ai-rete-rag.com/",
+      "source": "Hacker News",
+      "time": "09/22 16:15 UTC ·",
+      "sentiment": "😊",
+      "body": "作者分享用 Rete 規則引擎做出可稽核的決策、再讓 RAG／LLM 只負責引用政策文件解釋理由（不可覆寫判定）的架構，HN 累積 40 分、2 個來源討論。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic classifiers prohibit kernel development",
+      "url": "https://twitter.com/TheAhmadOsman/status/2102535871727857915/photo/1",
+      "source": "Hacker News",
+      "time": "09/23 04:01 UTC ·",
+      "sentiment": "🤔",
+      "body": "一則推文（附截圖）宣稱 Claude 的分類器會擋下核心（kernel）開發相關請求；HN 討論串累積 17 分，留言多質疑 Anthropic 推動 AI 監管的動機，原文細節有限。",
+      "focusTags": []
+    },
+    {
+      "title": "ApodexAI/FrontierAgent",
+      "url": "https://github.com/ApodexAI/FrontierAgent",
+      "source": "GitHub Search",
+      "time": "09/23 15:29 UTC ·",
+      "sentiment": "😐",
+      "body": "原生命令列 TUI 的 agent 框架，支援 ReAct 與 Agent Team 模式，macOS／Linux 一行指令安裝、免預裝、不強制依賴 Docker；近 8 天星數增加 1,403（約每日 175 星），目前累計 4,515 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "shadcn-ui/lint",
+      "url": "https://github.com/shadcn-ui/lint",
+      "source": "GitHub Search",
+      "time": "09/23 15:29 UTC ·",
+      "sentiment": "😐",
+      "body": "針對 Tailwind 設計系統的 agent-first linter，讓開發者把設計系統規則寫成 agent 可驗證的形式；近 8 天星數增加 1,131（約每日 141 星），目前累計 2,670 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "Claude Opus 5.5 undercuts Opus 5 at $4 per million tokens, and Pro and Max limits go up",
+      "url": "https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits/",
+      "source": "Google News / MIXED Reality News",
+      "time": "09/23 00:05",
+      "sentiment": "",
+      "body": "報導確認 Opus 5.5 定價每百萬 token $4 起、較 Opus 5 更便宜，Claude Pro 與 Max 方案的用量上限同步調高；官方 changelog 另列輸出價為 $20／Mtok、快取讀取 $0.20／Mtok。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 發布 Claude Opus 5.5，效能追平 Claude Fable 5.1、運算成本降 40%，Claude Code v2.1.280 已將其設為預設 Opus 模型（1M context）。",
+      "ref_urls": [
+        "https://www.anthropic.com/claude-opus-5-5",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.280"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "GitHub"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "OpenAI 同日推出 GPT-6 Sol、GPT-6 Luna 迎戰，VentureBeat 指 Opus 5.5 在關鍵 agentic 基準上勝過 Fable 5.1、API 價格便宜 60%，Fortune 稱 AI 價格戰再度升溫。",
+      "ref_urls": [
+        "https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price",
+        "https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up/"
+      ],
+      "ref_names": [
+        "VentureBeat",
+        "Fortune"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Bloomberg 報導 Anthropic 上市（IPO）計畫生變、可能延後，同日《The Information》指其正洽談加強對更多資料中心的控制權。",
+      "ref_urls": [
+        "https://www.bloomberg.com/news/articles/2026-09-22/derailed-ipo-plans-rattle-us-market-ahead-of-anthropic-debut",
+        "https://www.theinformation.com/articles/anthropic-talks-cement-control-data-centers"
+      ],
+      "ref_names": [
+        "Bloomberg",
+        "The Information"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Reuters 獨家報導 Anthropic 與醫療 AI 服務 OpenEvidence 結盟，計畫將醫療 AI 服務推向全球。",
+      "ref_urls": [
+        "https://www.reuters.com/legal/litigation/anthropic-openevidence-partner-bring-medical-ai-worldwide-2026-09-22/"
+      ],
+      "ref_names": [
+        "Reuters"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Local sandboxing in the GitHub Copilot app",
+      "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app",
+      "body": "GitHub Copilot app 新增本機沙箱，可限制指令對檔案、網路與憑證的存取範圍，Claude Code 目前無對應設定。",
+      "topic": "競品動態",
+      "topicPage": null
+    },
+    {
+      "title": "OpenTelemetry in the GitHub Copilot app",
+      "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+      "body": "Copilot app 支援透過企業管理設定開啟 OpenTelemetry，讓企業可觀測 agent 效能與工具呼叫，是 Claude Code 尚未提供的可觀測性能力。",
+      "topic": "競品動態",
+      "topicPage": null
+    },
+    {
+      "title": "New features and improvements in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
+      "body": "Copilot for JetBrains 1.18.0 新增 AI 輔助工具核准、更多 agent 對話控制，以及組織共用技能／指令，是 IDE 內 agent 治理功能的競品對照點。",
+      "topic": "競品動態",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 45
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code：v2.1.280：Claude Opus 5.5 成為新預設模型（Pro／Max／Team／Enterprise／API／Bedrock／Vertex；Microsoft Foundry 仍為 Sonnet 4.5），1M context，$4／$20 每 Mtok。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5",
+      "name": "Claude Opus 5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-agent-stack",
+      "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-large-codebase-workflow",
+      "name": "大型 Codebase 規模化開發：社群工作流主線",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-pattern-trends",
+      "name": "社群趨勢觀察（週更）",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "model-comparison",
+      "name": "Claude 模型選型對照",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-23",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.280：Claude Opus 5.5 成為新預設模型**（Pro／Max／Team／Enterprise／API／Bedrock／Vertex；Microsoft Foundry 仍為 Sonnet 4.5），1M context，$4／$20 每 Mtok。\n- **AGENTS.md 已修復狀態補一筆成因**：telemetry 關閉時讀不到本機 AGENTS.md 且無警告，卡在遠端 feature flag，官方 issue #95690 已追蹤並標記修復（修復版本號未見於 changelog）。\n- **既有已知問題互動更新**：記憶體洩漏 OOM Killed（#4953，98 留言）、`MEMORY.md` 壓縮門檻可設定（#91188，54 留言）同步更新。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "模型路由列補上一個固定指定機制",
+            "date": "",
+            "body": "`CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件）；連同既有 `opusplan`，個人端仍只有「固定指定」，依成本或任務動態選模型的路由官方文件依舊未見。\n09-20：Claude Code v2.1.277 起原生讀 `AGENTS.md`，三個邊界見下方「官方補了沒」表。"
+          },
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "最新動態",
+            "date": "",
+            "body": "補三個官方缺口：`-p`／SDK 呼叫用 `--bare` 跳過 hooks／skills／CLAUDE.md 等自動發現以省啟動時間（第 2a 段）；session 變笨先打 `/context` 看載入了什麼（第 9 段）；hook 攔截靠的是 `exit 2` 不是 `exit 1`，沒印 JSON 時 `exit 1` 只是 non-blocking（第 1 段）。"
+          },
+          {
+            "page": "topics/anthropic-agent-stack",
+            "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
+            "label": "最近變動",
+            "date": "",
+            "body": "補齊兩個常被混淆的官方上限與指令：同一 session 內用 Agent tool 平行開 subagent 上限 20 路（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 可調），與第三節 workflows 的 16／256 路、Managed Agents 的 20 路子代理是三個不互通的數字（第二節）；worktree 隔離的實際下法是 `claude --worktree <name>` 或角色檔 `isolation: worktree`（「你該用哪個」第 3 問）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "topics/model-comparison",
+            "name": "Claude 模型選型對照",
+            "label": "最新對照更新",
+            "date": "",
+            "body": "- **次旗艦換代**：[[entities/opus-5-5|Opus 5.5]] 發布，取代 [[entities/opus-5|Opus 5]] 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價降至 $4／$20（每 Mtok，降 20%），官方稱運算成本降 40%（見「同一份工作，換設定差多少」）。\n- **公開陣容**：Fable 5.1 > [[entities/opus-5-5|Opus 5.5]] > Sonnet 5（Claude Code 預設）> Sonnet 4.6 > Haiku 4.5；Opus 5 / 4.8 / 4.7 皆已被取代。\n- **未經證實**：36氪稱 Anthropic 因 Claude 推理能力「秘密降低」發布道歉聲明，查無官方或第二來源佐證，見下方時序 2026-08-24。"
+          },
+          {
+            "page": "entities/opus-5",
+            "name": "Claude Opus 5",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 官方改列 Legacy，仍可用。09-21 傳聞的「Opus 5.5 週二發布、降價 20%」已由本次官方發布證實方向一致（牌價確實降 20%），細節見下方 ⟨Q-04⟩。"
+          },
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 發布 Claude Opus 5.5，Claude Code v2.1.280 起設為預設 Opus；牌價降至 $4／$20 每 Mtok（較 Opus 5 降 20%），官方稱「運算成本降 40%」。同日 OpenAI 發布 GPT-6 Sol／Luna 應戰新一輪價格戰。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Opus 5.5 上線，牌價 $4/$20 per Mtok**：較 Opus 5 執行成本省 40%（官方口徑），快取讀取降至基礎輸入價 5%。\n- **新 GitHub Issue #37394**：Max Plan 用量觸頂速度異常快（92 留言、43 👍），與既有 #16157／#38335 同類回報，互動量較低、官方尚無回應。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Opus 5.5 發布**：官方定價 $4/$20 per Mtok，較 Opus 5 執行成本省 40%；同日與醫療 AI 服務 OpenEvidence、Amazon 賣家工具兩起戰略合作曝光，詳見「哪個合作會改到你用的 Claude」。\n- **IPO 前景再添雜音**：Bloomberg 報導 IPO 計畫生變、市場情緒受衝擊，僅標題可用，尚無新增時程或估值數字。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot 三連發企業信任功能**：本地沙箱、OpenTelemetry、JetBrains 工具核准同週上線（09-22／23，GitHub 官方 changelog）——Claude Code 目前無對應設定，企業採購比較時會被問到。\n- 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- Opus 5.5 牌價降 20%、官方稱運算成本降 40%，同日 OpenAI 推出 GPT-6 應戰，價格戰升溫。\n- Bloomberg：Anthropic IPO 計畫生變、市場情緒受波及，首見一線財經媒體具名報導延後。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理；具體調查範圍與兩家公司回應未見報導。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **Opus 5.5 隨附資安領域強化防護**（The Verge）：具體機制未見報導（僅標題）\n- **安全測試顯示 Anthropic、OpenAI 模型仍會嘗試受限制動作**（The Hacker News）：測試方法未見報導（僅標題）\n- **09-18 OpenAI 漏洞懸賞事件**：CBS News 後續以「入侵」框架重新報導，未見新技術細節\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Multi-agent 架構添一例**：FrontierAgent 原生 CLI 內建 ReAct／Agent Team 雙模式，macOS／Linux 一行安裝、免強制 Docker。"
+          },
+          {
+            "page": "topics/community-large-codebase-workflow",
+            "name": "大型 Codebase 規模化開發：社群工作流主線",
+            "label": "四面牆，官方都已給了起點",
+            "date": "",
+            "body": "每個 agent 一個 worktree、腳本呼叫加 `--bare`、跨 session 的 auto memory、用 Stop hook 擋住「說做完卻沒做」——四面牆官方都已給了零件；Claude Code 一個 session 預設最多同時跑 20 個 subagent，那是上限，不是「20 個都跑得穩」。四條線的「現在的答案」第一條因此都改成官方零件在哪，社群做法接在後面。"
+          },
+          {
+            "page": "topics/community-pattern-trends",
+            "name": "社群趨勢觀察（週更）",
+            "label": "最新趨勢觀察",
+            "date": "",
+            "body": "- **Hook 要回 exit 2 才擋得住**：官方 hooks 文件寫明 exit 2 才會攔下工具呼叫，exit 1 只算非阻擋錯誤、動作照跑；本頁趨勢一先前寫成「exit 1 硬攔截」，已更正。\n- **三條方向官方已有對應**：模型路由（`opusplan`）、手機遠端控制、跨 session 記憶（auto memory），各條先看官方給了什麼；模型路由 8/14 之後社群沒有新做法進來。\n- **新做法**：規格驅動多了 GitHub 的 spec-kit（9/12），跨 session 記憶多了 Skillsync、hister（9/17–9/18），多 agent 互通多了 hcom（9/16）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 16
+  },
+  "readerTopStories": [
+    {
+      "title": "Claude Code Memory Leak - Process Grows to 120+ GB RAM and Gets OOM Killed",
+      "url": "https://github.com/anthropics/claude-code/issues/4953",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/22 21:31",
+      "sentiment": "",
+      "body": "回報指出處理程序記憶體會膨脹超過 120GB 並遭 OOM 機制砍掉，累積 98 則留言、77 個 👍 反應，是本日互動量最高的 GitHub Issue。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+      "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+      "source": "Hacker News",
+      "time": "09/23 12:15",
+      "sentiment": "",
+      "body": "作者實測發現 2.1.277 加入的 AGENTS.md 讀取功能，在關閉 telemetry／nonessential traffic 時會被 remote feature flag 靜默跳過、不出警告；官方 issue #95690 已追蹤此問題並標記修復，HN 累積 327 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Feature request: make the auto-memory MEMORY.md compaction reminder threshold configurable",
+      "url": "https://github.com/anthropics/claude-code/issues/91188",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/23 09:32",
+      "sentiment": "",
+      "body": "要求把 MEMORY.md 自動壓縮提醒的閾值改為可設定（或至少可關閉），累積 54 則留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

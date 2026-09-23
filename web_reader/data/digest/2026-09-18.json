@@ -629,13 +629,7 @@
     }
   ],
   "preview": "Claude Code：v2.1.276：修復 2.1.275 一項迴歸——ANTHROPIC_BASE_URL 指向 proxy／gateway 時，每個請求皆因 advisor_20260301 標籤觸發 400 錯誤而全數失敗；純 bug 修復。",
-  "sedimentedToday": [
-    {
-      "id": "anthropic-agent-stack",
-      "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-18",
     "summary": "",
