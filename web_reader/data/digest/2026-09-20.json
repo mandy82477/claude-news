@@ -359,13 +359,7 @@
     }
   ],
   "preview": "Claude Code：Cowork（Windows）新增已知問題：09 月累積更新致 device_bash 失效（#92958），與既有 Plan9 掛載失敗（#92984）同源不同現象。",
-  "sedimentedToday": [
-    {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-20",
     "summary": "",

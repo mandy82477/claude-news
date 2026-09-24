@@ -527,11 +527,6 @@
   "preview": "Claude Code：AGENTS.md 支援上線：v2.1.277 起專案無 CLAUDE.md 時改讀 AGENTS.md，可在 /config「Project instructions」調整，尚未支援 Bedrock／Vertex／Foundry；官方回應全站讚數最高已知問題 #6235（HN 683 分、Th",
   "sedimentedToday": [
     {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "market-lessons",
       "name": "投資判讀教材（週更）",
       "pageType": "topic"

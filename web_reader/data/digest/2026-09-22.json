@@ -406,23 +406,8 @@
   "preview": "Claude Code：新增已知問題：功能請求「串接 Claude.ai Projects 知識庫」（#2511，51 留言、642 讚，本日反應數最高）。",
   "sedimentedToday": [
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-talent-flow",
-      "name": "AI 實驗室人才流動",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-tools",
       "name": "社群工具目錄",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"
     }
   ],

@@ -372,11 +372,5 @@
     }
   ],
   "preview": "Anthropic 為 Claude 輸出加上隱形浮水印技術引發訂閱用戶強烈反彈，專欄作家 John Gruber 撰文批評此舉是「對寫作本質的扭曲」；NPR、Yahoo Tech 等媒體同步報導讀者對被辨識出使用 AI 生成內容的不安。",
-  "sedimentedToday": [
-    {
-      "id": "claude-science",
-      "name": "Claude Science",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }

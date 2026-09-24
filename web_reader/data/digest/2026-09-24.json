@@ -1,0 +1,735 @@
+{
+  "date": "2026-09-24",
+  "generatedAt": "2026-09-24 17:12 UTC",
+  "articleCount": 68,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "source": "Hacker News ＋Anthropic Blog、Google News / Anthropic、HN Repo Bridge",
+      "time": "09/23 18:06",
+      "sentiment": "",
+      "body": "Anthropic 部落格文章說明：新設的生命科學研究團隊聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，本次早期成果即為 Claude 在僅有高層指引下發現的類 CRISPR 酶系統。Hacker News 討論累積 729 分，Google News、HN Repo Bridge 等 4 個來源同日交叉報導。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-science",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Saying \"hi\" returns \"API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy\"",
+      "url": "https://github.com/anthropics/claude-code/issues/60366",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/23 19:53",
+      "sentiment": "",
+      "body": "回報指出僅輸入「hi」等日常問候就被誤判違反使用政策、直接回傳 API 錯誤，累積 91 則留言、28 個 👍 反應，是本日互動量最高的 Claude Code 缺陷回報。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude.ai is about 3x faster after 3,000+ changes",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kajNUckJ3NnNXdXZTR2xiTVVXblVMWjFib3ZBejdKcEF1Z0QxLXFZZDJiOXlUZ3Nvb2NEd3R3ZExJczMxbWMycFhIYjZXQXBtNVVpWHgyRzVqVnFtZXJpckoycl9peDBHd3NfMUhtRG5fS1EzbzJudGZB?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "Help Net Security 報導 Anthropic 表示 Claude.ai 經過 3,000 多項變更後，回應速度已達約 3 倍提升，是本日唯一附具體效能數字的產品狀態更新。",
+      "focusTags": []
+    },
+    {
+      "title": "Linear Integration: Assign issues to Claude Code to trigger cloud agent sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/12925",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/24 06:45",
+      "sentiment": "",
+      "body": "功能請求要求把 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，累積 146 個 👍 反應、45 則留言，是本日反應數最高的功能請求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.281",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/23 19:19",
+      "sentiment": "",
+      "body": "新增 Claude apps gateway 對新版 Claude Desktop 金鑰在 `desktop` policy 區塊的支援，包含 `blockReadsOutsideWorkingDirectories` 與 `disableBypassPermissionsMode` 兩項設定。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.281 build 新增 9 個功能候選旗標",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.281",
+      "source": "Build Flags",
+      "time": "09/24 15:18",
+      "sentiment": "",
+      "body": "自 2.1.280 起新增 9 個功能候選環境變數（含 artifact 權限繼承、CCR 提早連線、substitution rm 提示停用等），另有 1 個設定類旗標未列出；build 中出現不代表會正式上線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Adobe expands creative tool access to Google Gemini, brings Acrobat to Claude",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOE51SndIRlBKRWt4Z3VxaXBiQktmdko0M2tVbkVfcEpSaWVmY1dKemhyanZSU3Y5TUU5Y1RxeVBXZjhoMDA3Qjg2bEZ0NlhENXBaNERZUThfZm9sNU56a21mWkR2Z0NCelE1eVl6MXdwZnJmZEVPNHpRSHZyVWVjODRVcDJjdFh5N1JPd2l5TklXRTY3NEI1ZV9PR0hEb3B3ZEJFUGZuQVFfaEx0?oc=5",
+      "source": "Google News / 9to5mac.com",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "9to5mac 報導 Adobe 擴大創作工具的 AI 整合範圍，把 Acrobat 帶進 Claude 生態，同批也對 Google Gemini 開放存取。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\"",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBCWU40OGxGYUZKQTZvcFNhWTVyemFmMmpnMzNHU2tEWkppTTFFSEpVVXQ5VEg5NTFGTFRjQXYyTzE3SllFMGxlMDc1LU1XUlRyN3BGZG5YRTJPNXNhYThINEhpZ282ZVJDUjR1cnNCVlpWT0FKZXlmUWlQSDhRTlE?oc=5",
+      "source": "Google News / Axios",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "Axios 獨家報導川普陣營盟友把 Anthropic 執行長塑造成 AI「末日論」代表人物，開闢新一輪政治攻防戰線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        },
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "AI could make more companies worth hacking, Anthropic report suggests",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPb1JQRHd1RmpxSXZoWnVwdXp0SzZJY3dQMmQxOEQ3aHdacnk1VXFQSEs1YlpVa2c1VEp1MWlLRFI5SWFxTVVBYWJsdlZUbEw4aXZjdmFoNTBOcGsxTmd6YmNwVDlEM3NreDlhbUdpdXpMY0phNzBEd1ZOY2VkcldnVnlESDhTMXRGQXRmNkxncm95cHZkWExHQW9iWkZoRXFIZHc?oc=5",
+      "source": "Google News / Fortune",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "Fortune 報導 Anthropic 一份報告指出，AI 普及可能讓更多企業成為駭客眼中更值得攻擊的目標。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic Chief Economist Says Company Is Exploring Ways to Steer AI Toward Augmenting Workers",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE05NkFHMjBlYWM2Mjh1TUVEM0ozakhOajFHYWtpa2ZxdzZjeGI1QnplNlVRX3EyaV8wZVdIRVVZWjJkZ1JHb3hWLTZaSWp3OG5BN2FabmNlMzBfUmF0NGFMQ3F1Nl9SZ19hMzZSdEpGNEtNaEVuVW9KbDhJTQ?oc=5",
+      "source": "Google News / thecrimson.com",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "thecrimson.com 報導 Anthropic 首席經濟學家表示，公司正探索讓 AI 朝「輔助勞工」而非取代方向發展的做法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "SpaceX, OpenAI, and Anthropic Are Worth More Than Every Single IPO in the Last 45 Years",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRmRuSl9kZkpSenBNTEtVQUNPanhUWkZ5U0lQMHR5ZGlOdkkxQWRIekI5ZGNXMTFGMWlOSkhLWGZ0V2dNSzhmX1lLZWNoNGtBU2pBekRIZkFtTFdQczJUc29LcHFyM0pyRkx4NENPY2xWZS1xX3FuaUpFSVlWRjdnTHlnRzNIUU90RjViaXQ2bEItUGtUdm95Y2phdkxZQQ?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "09/23",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導 SpaceX、OpenAI、Anthropic 三家民間公司合計估值已超越過去 45 年全部 IPO 公司的總市值。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Explains Claude Code's Quality Drop: 3% Hit [2026]",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1FbFRybmtOZm9paW1XaEJ5Q1lpZ1gxMExWUDF2Q2N2X0FEakZKUkdBWXVBcjF1bWFfVnlzNnY2WFd1akVZa3VNZmJ2T0REV0UwUlpXdUhjdGlWYlF1M25iMmpvLWNQVUNLeC1feWJDNjI2Y3BfNGRoc1VFVQ?oc=5",
+      "source": "Google News / shattered.io",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "shattered.io 報導稱 Anthropic 已對 Claude Code 近期約 3% 的品質下滑提出官方說明；本則僅單一來源報導，細節有限，讀者宜留意後續是否有其他來源佐證。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[BUG] missing ide_selection and wrong ide_opened_file in VSCode extension",
+      "url": "https://github.com/anthropics/claude-code/issues/8451",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/24 12:02 UTC ·",
+      "sentiment": "😤",
+      "body": "VSCode 擴充功能回報 `ide_selection` 欄位缺失、`ide_opened_file` 回傳錯誤檔案，累積 50 則留言、35 個 👍 反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] autoMemoryEnabled=false does not suppress the ~11-16k memory preamble (re: closed #44829)",
+      "url": "https://github.com/anthropics/claude-code/issues/63903",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/24 09:31 UTC ·",
+      "sentiment": "😤",
+      "body": "回報指出關閉 `autoMemoryEnabled` 只會停止寫入自動記憶，但寫死的 11–16k token 記憶前導文字仍未被抑制，是先前已關閉 issue #44829 的延續，累積 47 則留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code's default effort for Opus 5 went up without a CLI update. If you benchmark, pin --effort",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/24 15:06 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者以自建文件搜尋工具跑 33 題基準測試，發現 Opus 5 的預設 effort 在未更新 CLI 版本的情況下悄悄調高，提醒做基準測試時應明確 pin `--effort` 避免結果失真。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "GPT-6 Astra scores 95% on one robot task, 10% on another",
+      "url": "https://dev.to/techaiwire/gpt-6-astra-scores-95-on-one-robot-task-10-on-another-aa2",
+      "source": "dev.to / #anthropic",
+      "time": "09/23 UTC ·",
+      "sentiment": "😐",
+      "body": "Robocurve 團隊在真實機械手臂上比較 GPT-6 Astra 與 Claude Fable 5.1：Astra 在簡單任務拿下 19/20，困難任務僅 2/20，兩模型難度落差明顯。",
+      "focusTags": []
+    },
+    {
+      "title": "Ryze-AI-Adgent/open-seo-mcp-skills",
+      "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+      "source": "GitHub Search",
+      "time": "09/24 15:18 UTC ·",
+      "sentiment": "😐",
+      "body": "免費 SEO MCP 伺服器與開源 SEO／GEO Claude skills，可用真實 GSC／GA4／廣告數據做關鍵字研究、排名追蹤、稽核與反向連結分析，目前累計 1,449 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "bangtutorial/bang-motion",
+      "url": "https://github.com/bangtutorial/bang-motion",
+      "source": "GitHub Search",
+      "time": "09/24 15:18 UTC ·",
+      "sentiment": "😐",
+      "body": "瀏覽器動態圖形 agent skill，可產出片頭、宣傳片、動態字卡等五種解說風格、單一 index.html 輸出，相容 Claude Code、Codex、Gemini CLI、Cursor，目前累計 509 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Callous-0923/agent-study",
+      "url": "https://github.com/Callous-0923/agent-study",
+      "source": "GitHub Search",
+      "time": "09/24 15:18 UTC ·",
+      "sentiment": "😐",
+      "body": "36 章 AI Agent 全端課程，涵蓋 ReAct 迴圈、Claude Code 逆向、MCP／A2A 協議、RAG、DSPy 與生產可觀測性，全部附可執行 Python 檔，目前累計 500 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude itself is now leading 26% of the work building the next version of Claude",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wjus8c/claude_itself_is_now_leading_26_of_the_work/",
+      "source": "Reddit / r/ClaudeAI · 週熱門 ＋dev.to / #anthropic",
+      "time": "09/18 16:21 UTC ·",
+      "sentiment": "😐",
+      "body": "約一週前的討論串本週重新登上熱門：貼文引述 Anthropic 說法指 Claude 目前主導自身下一代開發工作的 26%（7 個月前為 0%），且同時有約 3 萬個 agent 在做研究與工程工作；`dev.to` 另有一篇獨立文章描述同一趨勢。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "09/24 15:18",
+      "sentiment": "",
+      "body": "官方定價文件新增「Claude Consumption Unit（CCU）」計費單位定義，並重新表述快取讀取折扣倍率：一般模型維持 0.1 倍基礎輸入價，Claude Fable 5.1 與 Claude Mythos 5.1 為 0.025 倍、Claude Opus 5.5 為 0.05 倍。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic launches Claude Code cloud sessions and hands out up to $250 in credit",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUkwbGllRm9kSE5TQXZJNmpUWjVPdWJ5TDRJVXQ0MmMyOHpwNXVFRTRYOVNhblB5eTZqWC03Rko0dHV5dTh1RHJqWDNVcXl5ckkyUHl3dWRKeGVnajdpWUZFdUlRMVNpekowRkE?oc=5",
+      "source": "Google News / Pasquale Pillitteri",
+      "time": "09/23",
+      "sentiment": "",
+      "body": "3 個獨立來源同日報導 Anthropic 為 Claude Code cloud sessions 新用戶提供最高 250 美元額度；另有報導指出 Opus 5.5 上線同時導入實驗性的用量上限重置機制。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 宣布新設生命科學研究團隊與實驗室，Claude 在僅有高層指引下發現一組具 CRISPR 特徵的新型酶系統，Hacker News 累積 729 分、4 個來源同日交叉報導。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "繼昨日 Opus 5.5 發布後，Anthropic 再推出 Claude Code cloud sessions（新用戶最高可獲 250 美元額度，3 個來源同日報導），同時為 Opus 5.5 使用者導入實驗性用量上限重置機制。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUkwbGllRm9kSE5TQXZJNmpUWjVPdWJ5TDRJVXQ0MmMyOHpwNXVFRTRYOVNhblB5eTZqWC03Rko0dHV5dTh1RHJqWDNVcXl5ckkyUHl3dWRKeGVnajdpWUZFdUlRMVNpekowRkE?oc=5"
+      ],
+      "ref_names": [
+        "Pasquale Pillitteri"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "OpenAI 與 Anthropic 執行長在聯合國同台呼籲建立 AI 安全標準與國際合作，CNN、CNBC 等至少 2 個來源報導。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMXh4clVJR1A3aXVJeE5OdW5JY3pyeTVWT080TWx6SDhTS3UtbHZkMFEzWHBlaXo0WVZsZmVxOTlfTWxyVTM0X1QxRkZadWxmU2QxcW1KdFJHUmdYV2NaQm05NXczMV9BYk10SWlxX0h1OHVSQzVQYUVxdDJBZHFYOVBJOENOZ2l1OEhFWm9pUl8?oc=5",
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTFBnYmxuWFJ2T3UxeFlEbFlOY3VvVjFzaHQ2U2Z2MHlPZ0Q5c01zQ19aQmlGNE1hcnBUQWk3WTlXSmk4cUI0ZFp3TTVndkNDa3Q1RFFWdjdjV1lZWDJVZkpmaldLdEowRXpkSEZid2piVUXSAXZBVV95cUxNMHZEbDdqaUUwYy1xbTYxQ1dSWTJBZGhRRS1BOThUWTVKQnpBSnl3aTktbkN3Vmx2WGR1clRVZExIdDF0TU5meWo2T0wzek1HZTNQZnQ1SjNhTm9PZTJOTkMxUkxiWVdjRnZ5R21ZR3dLTmZyeGRR?oc=5"
+      ],
+      "ref_names": [
+        "CNN",
+        "CNBC"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資，用於推進 AI 輔助藥物設計。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNa1Fzb3RVemdHVmI4TzNwanpLM1JpcFY2MEhmQThNZ1BEWDV5ZEFBNTBaVFlFU0hCT3pZUWl5UzJGazFWQXQ4TzF4OGtDSFhGdV9ISFl2eUxnTjN5NG1HM3ZjSHVITTJGMUtCU0F2Z1ZPREpXM3NLaFNYZUlhcFdScGNBQVQtdWpDRUtqVjVoRktZRnFlTG9ScG1RLUwxNnUtM1VhYTctVy14akdPcVpCWHpn?oc=5"
+      ],
+      "ref_names": [
+        "BioSpace"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "More ways to request and configure Copilot code reviews",
+      "url": "https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews",
+      "body": "GitHub Copilot code review 新增個人化設定選項、擴大適用方案並提供企業層級預設，是 Claude Code 尚無對應介面的程式碼審查功能。",
+      "topic": "競品動態",
+      "topicPage": null
+    },
+    {
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "body": "Google DeepMind 說明其 Private AI Compute 架構如何在裝置端隱私標準下提供跨裝置的持久記憶，是記憶／隱私機制上的競品對照點。",
+      "topic": "競品動態",
+      "topicPage": null
+    },
+    {
+      "title": "'Pushing the frontier is best done outside': DeepMind alum Simon Kohl on leaving Big Tech",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM3BSQWZkakdMSXkzNVRBczd1QnFHQjNWa1BwMzRJQ0o2emtMUlIxYTRvVXU3RmhuN05HSFRBRzh0akpYY1FNSW01SDVnTzFlTkI4OGk4WGw2OE9lTE1vaEhlTlkzaEJNaXlXMVRpQ194cXVzRE51dmFLVTdPam1Jcg?oc=5",
+      "body": "Sifted 報導 DeepMind 校友 Simon Kohl 離開大型科技公司、認為在體制外更能推進前沿研究。（→ AI 人才流動）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Munich humanoid startup Vesoma exits stealth with 60-person team, DeepMind AI chief",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNHZVVjl6elp5S1JCczVGdWowNDM1T01iRzRDMjZfWGt2ODFTYW9acVdzWW5Fdks5UlE3UDU2YVhNQVQtNXhpdzRya3ZaUGR4UnUwMXFkY1I3YjdJMy1VcnBKeHVKRDYzbFBoUTBJX2FjOWU4UUZ3Y1lLTmw0Ry1kYjVEM1ZSMXpUU1Q1MjFNakxCTWpVQmlGQ2FMNi1DNE54WTdwbHJJb1NCb0g3THMydF82dWQtblk?oc=5",
+      "body": "Dealroom 報導慕尼黑人形機器人新創 Vesoma 走出隱身模式，60 人團隊由前 DeepMind AI 主管帶領。（→ AI 人才流動）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 41
+    }
+  ],
+  "preview": "Claude Code：v2.1.281：新增 desktop policy 兩項設定（blockReadsOutsideWorkingDirectories、disableBypassPermissionsMode）；build 另新增 9 個功能候選旗標，見 topics/claude-code-experimen",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-science",
+      "name": "Claude Science",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "sridhar-vembu",
+      "name": "Sridhar Vembu",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-24",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.281**：新增 desktop policy 兩項設定（`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`）；build 另新增 9 個功能候選旗標，見 [[topics/claude-code-experimental]]。\n- **[BUG] 輸入「hi」即誤判違反 Usage Policy（issue #60366，91 則留言，本日互動最高）**：與既有「Usage Policy 隨機拒絕」現象相符，見下方「已知問題」。\n- **已知問題互動更新**：#63903（記憶體前導文字）、#8451（`ide_selection`）、#12925（Linear，146 讚為本日最高功能請求）。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "新增一列：Linear 整合官方仍無對應",
+            "date": "",
+            "body": "GitHub issue #12925（指派 Linear 工單給 Claude Code 觸發雲端 agent）累積 146 讚、本日反應數最高功能請求；官方僅支援 GitHub Issues 指派，Linear 尚無原生對應，社群已自接 Linear MCP＋Lanes MCP 橋接。\n09-23：`CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型，個人端仍只有「固定指定」。"
+          },
+          {
+            "page": "entities/claude-science",
+            "name": "Claude Science",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 宣布新設生命科學研究團隊與實驗室，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統；與本頁 Claude Science app 是否同一產品線，原文未載明。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.281 新增 9 個第一階旗標：`ARTIFACT_INHERITED_TYPE_GRANT`、`ARTIFACT_TEXT_VARIANT`、`CCR_EARLY_REMOTE_CONNECT`、`COMMIT_BETWEEN_KEYS`、`COORDINATOR_SKILL_GUIDANCE`、`DISABLE_STARTUP_WORK_GATE`、`DISABLE_SUBSTITUTION_RM_PROMPT`、`HOST_GATEWAY_LINEAGE`、`MCP_APPS_HOST`；對帳僅命中來源條目本身，非獨立社群提及，暫不升第二階。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Claude Code cloud sessions 上線，新用戶最高可領 $250 額度**：3 家媒體同日報導，額度使用條件與到期日未見細節，功能面見 [[entities/claude-code]]。\n- **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Adobe 把 Acrobat 帶進 Claude 生態，Basecamp 獲 NVIDIA＋Anthropic 領投 1.4 億美元**：兩則戰略合作／投資新增，詳見「哪個合作會改到你用的 Claude」一行制清單。\n- **首席經濟學家：正探索讓 AI「輔助勞工」而非取代**：公司首度就勞工政策公開表態，僅標題可用，詳見時序。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot 持續加碼企業信任功能**：code review 新增個人化設定＋企業層級預設，全面 GA（09-23）；疊加本地沙箱／OTel／JetBrains 工具核准（09-22），GitHub 官方 changelog——Claude Code 均無對應設定，企業採購比較時會被問到。\n- 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：慕尼黑人形機器人新創 Vesoma 由前 DeepMind AI 主管領軍走出隱身",
+            "date": "",
+            "body": "Vesoma 60 人團隊、DeepMind 淨流失方新增一筆承接紀錄，詳見「對各公司的影響」表新增列；另一則 DeepMind 校友離職專訪僅時序記錄，詳見 [[topics/ai-talent-flow#時序]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "OpenAI 與 Anthropic 執行長於聯合國同台呼籲訂定 AI 安全標準；Amodei 主張協議應「範圍限定」；川普此前拒絕「全球主義」式 AI 控制提案。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Axios 獨家：川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Vembu 與 HN 社群質疑減速呼籲背後的監管俘獲疑慮。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Skills 設計、創意工具 Agent 整合各添一例**：open-seo-mcp-skills 串真實 GSC／GA4 數據做 SEO 稽核；bang-motion 瀏覽器動態圖形 skill 跨 Claude Code／Codex／Gemini CLI／Cursor。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "首度出現正面反轉訊號",
+            "date": "",
+            "body": "Reddit 週熱門稱 Claude 終於「像回真正的 Claude」，暗示先前品質觀感失真；單一貼文、無技術細節，與 09-22 Opus 5.5 上線同期，細節見時序。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "川普陣營政治攻防升級＋UN 發言",
+            "date": "",
+            "body": "- **新戰線**：Axios 獨家報導川普陣營盟友將 Amodei 塑造成 AI「末日論」代表人物（僅標題可用）\n- **UN 大會發言**：FT 報導 Amodei 呼籲 AI 安全協議應「範圍限定」，與 09-22 預告的安理會簡報是否同場合未明（單一媒體轉述）"
+          },
+          {
+            "page": "entities/sridhar-vembu",
+            "name": "Sridhar Vembu",
+            "label": "公開評論 AI 減速爭論",
+            "date": "",
+            "body": "（待核實）\nZoho 創辦人 Sridhar Vembu 向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」；僅標題可用，無逐字引述。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Saying \"hi\" returns \"API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy\"",
+      "url": "https://github.com/anthropics/claude-code/issues/60366",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/23 19:53",
+      "sentiment": "",
+      "body": "回報指出僅輸入「hi」等日常問候就被誤判違反使用政策、直接回傳 API 錯誤，累積 91 則留言、28 個 👍 反應，是本日互動量最高的 Claude Code 缺陷回報。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude.ai is about 3x faster after 3,000+ changes",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5kajNUckJ3NnNXdXZTR2xiTVVXblVMWjFib3ZBejdKcEF1Z0QxLXFZZDJiOXlUZ3Nvb2NEd3R3ZExJczMxbWMycFhIYjZXQXBtNVVpWHgyRzVqVnFtZXJpckoycl9peDBHd3NfMUhtRG5fS1EzbzJudGZB?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "09/24",
+      "sentiment": "",
+      "body": "Help Net Security 報導 Anthropic 表示 Claude.ai 經過 3,000 多項變更後，回應速度已達約 3 倍提升，是本日唯一附具體效能數字的產品狀態更新。",
+      "focusTags": []
+    },
+    {
+      "title": "Linear Integration: Assign issues to Claude Code to trigger cloud agent sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/12925",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/24 06:45",
+      "sentiment": "",
+      "body": "功能請求要求把 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，累積 146 個 👍 反應、45 則留言，是本日反應數最高的功能請求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}
