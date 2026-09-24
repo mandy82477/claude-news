@@ -854,3 +854,13 @@ ABORTED: digest already exists - news/2026-09-20.md 已由前一班（17:02 UTC�
 [cloud daily-news-pipeline-cloud STARTED 2026-09-24T12:08:58Z]
 ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-24)的新鮮資料——GitHub Actions 當日抓料尚未完成或延遲（src/gathered_archive/2026-09-24.json 亦不存在），交下一班（17/22 UTC）接手
 [cloud daily-news-pipeline-cloud STARTED 2026-09-24T17:08:21Z]
+[Thu 2026/09/24 17:08:21.00] === Agent pipeline start (2026-09-24) ===
+[Thu 2026/09/24 17:07:00.00] Aggregator OK (GitHub Actions daily-gather, replay from src/gathered_archive/2026-09-24.json)
+[Thu 2026/09/24 17:20:00.00] Digest OK (news/2026-09-24.md, 68 items, 15/15 sources healthy)
+[Thu 2026/09/24 17:47:00.00] Wiki ingest OK (6 category reporters + classify-review + devpractice + market, all foreground)
+[Thu 2026/09/24 17:47:00.00] Reader digest OK (daily/2026-09-24.md, 14 pages, 4 WARN page-internal-anchor cosmetic issues)
+[Thu 2026/09/24 17:48:00.00] Building web reader...
+[Thu 2026/09/24 17:48:00.00] 測試全綠 - web build 放行
+[Thu 2026/09/24 17:48:00.00] REPAIRED: feature-radar 表格儲存格超限、entities/pricing 內部用語外洩（「記者」）、entities/sridhar-vembu 與 index.md 新增舊語法懸置標記（6 筆）、feature-radar 2026-09 索引缺漏（詳細條目/全覽表列不對稱）— 皆為內容修復，未動任何檢查腳本
+[Thu 2026/09/24 17:48:30.00] Single push done (news + wiki + web)
+[Thu 2026/09/24 17:48:30.00] === Pipeline complete (agent) ===
