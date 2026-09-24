@@ -3,8 +3,8 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-22"
-last_news_update: "2026-09-22"
+last_updated: "2026-09-24"
+last_news_update: "2026-09-24"
 status_main: "ongoing"
 days_since_news: 2
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新動態**（2026-09-22）
-> Anthropic Institute 官方頁面連結曝光（2 個來源），延續 09-18「工作量四分之一」系列，方法論細節仍未見報導，詳見 [[topics/recursive-self-improvement#技術彙整]]。
+> **最新動態**（2026-09-24）
+> Axios 獨家：川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Vembu 與 HN 社群質疑減速呼籲背後的監管俘獲疑慮。
 
 ---
 
@@ -78,10 +78,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
+- **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 
 ---
 
 ## 技術彙整
+
+### 政治連鎖反應延燒：川普陣營鎖定 Amodei「末日論」人設、企業家與 HN 社群質疑減速動機（2026-09-24 新增）
+
+- **揭露來源**：Axios（獨家，經 Google News）；NDTV〈Vembu 訪談〉；NPR（經 Hacker News，10 分，低互動）〈AI freeze〉
+- **核心主張**：Axios 稱川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Zoho 創辦人 Vembu 向 NDTV 表示 OpenAI、Anthropic 可放慢腳步，「沒有人拿槍指著他們」；NPR 報導「AI 凍結」恐讓大型 AI 公司更大、傷害小公司，HN 討論聚焦「監管俘獲」疑慮
+- **與既有敘事的關係**：延續 09-12～13 Amodei 呼籲減速、09-14 政治連鎖反應系列，Axios 為新升級（從川普回絕到陣營攻擊 CEO 人設）；Vembu／NPR 提出「監管俘獲」框架，是「言行不一」批評外的第二種質疑；人物角度見 [[entities/dario-amodei]]
+- ❓ **待查證**（標 2026-09-24｜查 Axios、doomerism、regulatory capture）：Axios「新戰線」具體操作手法、NPR／HN 討論串具體論點、Vembu 完整訪談內容均未見報導
+- **可信度評估**：Axios 獨家、NDTV 一手受訪，惟均僅標題或摘要可用；NPR／HN 互動極低（10 分），訊號強度弱，暫列入觀察
 
 ### Anthropic Institute：官方頁面〈Measurements for understanding the pace of AI development inside frontier labs〉曝光，2 個來源同日報導（2026-09-22 新增，延續 09-18 條目）
 

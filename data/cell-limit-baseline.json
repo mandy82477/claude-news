@@ -1,8 +1,8 @@
 {
   "_note": "字元上限機械閘的存量基線（頁 → 命中指紋）。check_cell_limits.py 只對基線外的新增超限報 FAIL，基線內的印為 WARN 摘要。清乾淨一頁就把該頁整筆移除——棘輪只能往下轉，不可為了轉綠而加回去。指紋 = 類型 + 該格/該條正規化內容雜湊，改寫即失效。",
   "_baseline_set": "2026-09-05",
-  "_pages": 35,
-  "_hits": 924,
+  "_pages": 34,
+  "_hits": 915,
   "pages": {
     "entities/andrej-karpathy": [
       "list_item:47c0bdac05eb"
@@ -17,6 +17,7 @@
       "list_item:6d2a48bf74e7"
     ],
     "entities/claude-code": [
+      "list_item:00bcad36728c",
       "list_item:00c166d6ab23",
       "list_item:024e93e7e762",
       "list_item:037abdf9b200",
@@ -69,6 +70,7 @@
       "list_item:5401cf73a27e",
       "list_item:55d7479b34dc",
       "list_item:57f050cd9e16",
+      "list_item:5a29cf753706",
       "list_item:5f2183a522c9",
       "list_item:5fe2a0e6ae24",
       "list_item:62f6afc41b9b",
@@ -78,7 +80,6 @@
       "list_item:68aacc01198f",
       "list_item:6c075afdb406",
       "list_item:6d089af8c381",
-      "list_item:702c1fb08d4d",
       "list_item:706ba1ee0f01",
       "list_item:72760d1d9936",
       "list_item:738a1dd199a9",
@@ -97,6 +98,7 @@
       "list_item:92d0c4e13b01",
       "list_item:93333ecf61ef",
       "list_item:96e61ad10ef5",
+      "list_item:9ae3f6940af7",
       "list_item:9b60a9d0703f",
       "list_item:9daffce7af6e",
       "list_item:9dd567e2006d",
@@ -104,7 +106,6 @@
       "list_item:a16e9f04c42b",
       "list_item:a389d2e808a0",
       "list_item:a4187d7883c1",
-      "list_item:a458e49f6c48",
       "list_item:a69da7957a7b",
       "list_item:a84fbc2665e3",
       "list_item:a8fbb44ea762",
@@ -132,7 +133,6 @@
       "list_item:da926d71c1d5",
       "list_item:dc222ea71333",
       "list_item:dd79bf609a41",
-      "list_item:ddc1c98d2a4b",
       "list_item:de2a20029fa4",
       "list_item:e271041ab197",
       "list_item:e3e4f2fc69cc",
@@ -146,7 +146,6 @@
       "list_item:ec2bedd460a5",
       "list_item:ed8a572c3dd9",
       "list_item:f06981ea6dd3",
-      "list_item:f4a0a9191426",
       "list_item:f7b1fce64f01",
       "list_item:fd01d50eeb41",
       "list_item:fdee02d202aa",
@@ -253,7 +252,6 @@
       "table_cell:bc0e4da21db9",
       "table_cell:bf840c914d3a",
       "table_cell:c56a8edd760a",
-      "table_cell:c9f6798cabda",
       "table_cell:d211b3ce010f",
       "table_cell:d2b5222f1e32",
       "table_cell:d5ca5dbce9ff",
@@ -439,8 +437,7 @@
       "table_cell:4d633f709ee5"
     ],
     "index": [
-      "table_cell:b908cba37613",
-      "table_cell:cf3c05b8f76e"
+      "table_cell:b908cba37613"
     ],
     "topics/ai-agent-safety": [
       "list_item:016aee9a1e76",
@@ -799,13 +796,6 @@
       "list_item:5bec6562ab8b",
       "list_item:cc5a0cfa5f5d"
     ],
-    "topics/community-pattern-trends": [
-      "list_item:60f7d79d550f",
-      "list_item:916396373817",
-      "list_item:e82b2b8cd7d2",
-      "list_item:f59278243493",
-      "list_item:f9e847455346"
-    ],
     "topics/community-tech-discussions": [
       "list_item:01468bc3c82f",
       "list_item:06d79c3efd88",
@@ -928,7 +918,6 @@
       "list_item:fc9fcf34d383"
     ],
     "topics/community-tech-tools": [
-      "list_item:64c4bbc7cf8e",
       "list_item:accba5820127",
       "list_item:e88270c9b10a"
     ],

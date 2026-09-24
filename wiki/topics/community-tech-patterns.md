@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新工作流模式**（2026-09-23）
-> - **Multi-agent 架構添一例**：FrontierAgent 原生 CLI 內建 ReAct／Agent Team 雙模式，macOS／Linux 一行安裝、免強制 Docker。
+> **最新工作流模式**（2026-09-24）
+> - **Skills 設計、創意工具 Agent 整合各添一例**：open-seo-mcp-skills 串真實 GSC／GA4 數據做 SEO 稽核；bang-motion 瀏覽器動態圖形 skill 跨 Claude Code／Codex／Gemini CLI／Cursor。
 
 ---
 
@@ -51,7 +51,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、fire-your-seo-agency（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-21 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、open-seo-mcp-skills（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-24 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-23 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
@@ -69,7 +69,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 | **架構邊界合約** | ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-12 | 用合約與工業標準定義不可越過的架構規則 |
 | **Agent 版本控制** | ADR 注入、架構決策文件先於實作（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-31 | 決策文件先於實作，降低代理方向偏移 |
 | **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards、agent-scan（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-18 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
-| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-14 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode、bang-motion（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 預算控制** | AgentWatch runtime budget enforcement（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-22 | 在請求到達模型前攔截，強制執行費用或 token 上限 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 手機當 agent 控制介面，各自選不同傳輸層 |
 
@@ -162,6 +162,33 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### Ryze-AI-Adgent/open-seo-mcp-skills：免費 SEO MCP 伺服器＋開源 SEO／GEO Claude skills，串真實 GSC／GA4／廣告數據（2026-09-24）
+
+- **主線：** —
+- **核心模式：** 免費 SEO MCP 伺服器與開源 SEO／GEO Claude skills，可用真實 Google Search Console／GA4／廣告數據做關鍵字研究、排名追蹤、稽核與反向連結分析；GitHub Search 1,449 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧 fire-your-seo-agency（2026-09-21）同屬 SEO／GEO 領域的另一實作，差異在本則直接串接 MCP 伺服器讀真實數據源，而非僅稽核既有排名；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,449★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### bangtutorial/bang-motion：瀏覽器動態圖形 agent skill，五種解說風格單一 HTML 輸出（2026-09-24）
+
+- **主線：** —
+- **核心模式：** 瀏覽器端動態圖形 agent skill，可產出片頭、宣傳片、動態字卡等五種解說風格，單一 index.html 輸出，相容 Claude Code、Codex、Gemini CLI、Cursor；GitHub Search 509 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、oh-story-claudecode）一個「動態圖形／短片生成」取向的代表技巧，跨 harness 相容是既有兩例沒有的取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（509★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/bangtutorial/bang-motion)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Callous-0923/agent-study：36 章 AI Agent 全端課程，涵蓋 ReAct、Claude Code 逆向、MCP／A2A、RAG、DSPy（2026-09-24）
+
+- **主線：** —
+- **核心模式：** 36 章 AI Agent 全端課程，涵蓋 ReAct 迴圈、Claude Code 逆向工程、MCP／A2A 協議、RAG、DSPy 與生產可觀測性，全部附可執行 Python 檔；GitHub Search 500 星。
+- **與既有模式的關係：** 屬課程／教材類資源盤點，非新做法或工具，與 2026-08-29 x1xhlol/system-prompts-and-models-of-ai-tools、2026-08-30 Shubhamsaboo/awesome-llm-apps 同屬彙整型參考資料，不進模式概覽表；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Callous-0923/agent-study)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊教材，尚無社群採用回饋數據）
 
 #### ApodexAI/FrontierAgent：原生命令列 TUI agent 框架，ReAct 與 Agent Team 雙模式，免強制 Docker（2026-09-23）
 

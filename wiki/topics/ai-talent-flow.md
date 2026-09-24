@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新動態：南韓 SBS 跟進轉載，安全疑慮離職警告延燒第六家媒體**（2026-09-22）
-> news.sbs.co.kr 以「AI Firms Are Gambling With Our Lives」措辭跟進轉載 09-13 已記錄之同一（姓名未載）研究員警告，內容細節未變；詳見 [[topics/ai-talent-flow#時序]] 新增節。
+> **最新動態：慕尼黑人形機器人新創 Vesoma 由前 DeepMind AI 主管領軍走出隱身**（2026-09-24）
+> Vesoma 60 人團隊、DeepMind 淨流失方新增一筆承接紀錄，詳見「對各公司的影響」表新增列；另一則 DeepMind 校友離職專訪僅時序記錄，詳見 [[topics/ai-talent-flow#時序]]。
 
 ## 摘要
 
@@ -50,6 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Anthropic** | 主要承接方 | 科學計算（Jumper）／AI 編碼（Adler）／訓練（Pritzel）／安全經濟；08-21/23 新增晶片人才 Amir Salek（前 Google TPU 計畫創辦人，入 compute 團隊）| 🟢 招募已擴及硬體自主設計；到任日未公開（推論：戰力影響待觀察）|
 | **OpenAI** | 次要承接方 | 獲得一名 Google 頂尖研究員（6/23 SEJ 報導，姓名未具名）| 🟡 同步受惠於 Google 人才外流，規模小於 Anthropic |
 | **Meshy**（3D 生成新創，非 Anthropic 生態） | 人才承接方 | 電腦繪圖資深學者童欣（Dr. Xin Tong）加入出任首席科學家（09-09，僅標題可用）| ℹ️ 3D 生成賽道人才強化；與 Google／Anthropic 人才戰無直接關聯，具體職責與履歷未見報導 |
+| **Vesoma**（慕尼黑人形機器人新創，非 Anthropic 生態） | 人才承接方 | 60 人團隊由前 DeepMind AI 主管領軍，走出隱身模式（09-24，Dealroom，僅標題可用）| ℹ️ 人形機器人賽道人才強化；主管姓名、具體職稱與離職時間均未見報導 |
 
 **對各公司的影響細節**
 - **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
@@ -74,6 +75,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-24
+- **慕尼黑人形機器人新創 Vesoma 走出隱身模式，60 人團隊由前 DeepMind AI 主管領軍**：Dealroom 報導，主管姓名與具體職稱未見報導，詳見「對各公司的影響」表新增 Vesoma 列（Topic Watch/ai-talent-flow）
+- **[非典型流動，僅標題可用] DeepMind 校友 Simon Kohl 離開大型科技公司，稱「推進前沿最好在體制外做」**：Sifted 專訪，未指明去向或加入哪家公司，屬個人觀點表態而非具體職位異動，未列入「對各公司的影響」表（Topic Watch/ai-talent-flow）
 
 #### 2026-09-22（跟進）
 - **news.sbs.co.kr 第六家跟進，改用「AI Firms Are Gambling With Our Lives」措辭轉載 09-13 事件**：與前五家媒體同屬持續轉載，未見新增細節（推論）（Topic Watch/ai-talent-flow）

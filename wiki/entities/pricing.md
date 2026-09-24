@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新計費政策異動**（2026-09-23）
-> - **Opus 5.5 上線，牌價 $4/$20 per Mtok**：較 Opus 5 執行成本省 40%（官方口徑），快取讀取降至基礎輸入價 5%。
-> - **新 GitHub Issue #37394**：Max Plan 用量觸頂速度異常快（92 留言、43 👍），與既有 #16157／#38335 同類回報，互動量較低、官方尚無回應。
+> **最新計費政策異動**（2026-09-24）
+> - **Claude Code cloud sessions 上線，新用戶最高可領 $250 額度**：3 家媒體同日報導，額度使用條件與到期日未見細節，功能面見 [[entities/claude-code]]。
+> - **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。
 
 ## 現況
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 方案 | 月費 | 訂閱內含 | 需另計費 | 可領優惠 | 你該做的動作 |
 |------|------|---------|---------|---------|------------|
 | Free | $0 | 基本額度；旗艦存取未載 | — | — | 09-14 起週配額永久 +25% 不適用本方案（見下方週配額改版說明）|
-| Pro | $20（年繳 $17／月）| 全模型，**Fable 旗艦除外**（免另計費最強為 Opus 5）| **Fable 5／5.1** — $10/$50 per Mtok，走 usage credits | **已截止**：一次性 $100 過渡 credit 領取窗於 2026-08-02 關閉 | 已領者記得在 09-17 到期前用掉；至 `Settings > Usage` 確認 auto-reload 未開 |
+| Pro | $20（年繳 $17／月）| 全模型，**Fable 旗艦除外**（免另計費最強為 Opus 5.5，取代 Opus 5）| **Fable 5／5.1** — $10/$50 per Mtok，走 usage credits | **已截止**：一次性 $100 過渡 credit 領取窗於 2026-08-02 關閉 | 已領者記得在 09-17 到期前用掉；至 `Settings > Usage` 確認 auto-reload 未開 |
 | Max 5x | $100 | 全模型；**旗艦（Fable 5／5.1）上限為週用量 50%** | 超出後走 usage credits | — | 留意旗艦誤要求購點問題（見事故區）|
 | Max 20x | $200 | 同上，額度更高 | 同上 | — | 用量上限集體訴訟進行中 |
 | Team standard seat | $20（年繳）／$25（月繳）每席 | 同 Pro | 同 Pro | 同 Pro | 同 Pro |
@@ -86,6 +86,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Enterprise 附加功能**：含 Compliance API、Enterprise Gateway 等；合作分級 Select／Preferred 差異未公開。Team 方案於 2026-06-19 官方速率翻倍時同步適用
 - **usage credits 僅可在網頁版開通（2026-08-11 官方查證）**：官方說明中心 usage-credits 條目載明，行動 App（iOS／Android）訂閱者無法直接於 App 內開啟 usage credits，須改至網頁版 `Settings > Usage` 操作；額度用盡後可切換按量計費（API 標準費率）不中斷服務。此為既有「credits 為 opt-in、預設關閉」規則（見上方 2026-08-08 條目）的補充限制（來源：support.claude.com usage-credits 條目，2026-08-11）
 - **09-17 官方 Plans & Pricing 頁大改版**：新增 Claude Academy、Docs／Slides（beta）／Design 說明；移除舊版 token 定價與 context window 對照，均為前代模型過期資訊（Official Docs，09-17）
+- **Free 不含 Opus 5.5、Pro 可用（2026-09-24，單一弱來源）**：shattered.io 稱 Free 不提供 Opus 5.5、Pro 可用；方向與官方 Opus 5.5 取代 Opus 5 的既有分界一致，惟本則單一低知名度來源，未經官方原文比對（shattered.io）
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
 
 ---
@@ -399,6 +400,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-09-23：Claude Code cloud sessions 上線，新用戶最高可領 $250 額度
+3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]（功能記者同輪處理）。
+
+#### ❓ 2026-09-23：Opus 5.5 上線同時傳「實驗性用量上限重置」機制
+❓ **待查證**（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置｜複 2026-10-08）｜**Claude 是否新增實驗性用量上限重置機制**：Google News／Pasquale Pillitteri 單一來源稱 Opus 5.5 上線同時導入「experimental usage limit resets」，具體機制、適用方案與是否官方確認均未見報導；同一媒體 09-05 曾以「Anthropic Resets Claude Limits」為題報導，09-06 查證結果為價格結構未變（見上方「2026-09-05」條），故本則比照處理，不逕自視為新規則寫入「當前生效的計費規則」。
 
 #### 2026-09-22／23：Claude Opus 5.5 發布，牌價 $4/$20 per Mtok
 

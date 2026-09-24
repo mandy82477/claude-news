@@ -3,8 +3,8 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-23"
-last_news_update: "2026-09-23"
+last_updated: "2026-09-24"
+last_news_update: "2026-09-24"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新動態**（2026-09-23）
-> 中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理；具體調查範圍與兩家公司回應未見報導。
+> **最新動態**（2026-09-24）
+> OpenAI 與 Anthropic 執行長於聯合國同台呼籲訂定 AI 安全標準；Amodei 主張協議應「範圍限定」；川普此前拒絕「全球主義」式 AI 控制提案。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -232,6 +232,8 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-09-24 | 🏛️🏢 | CNN／CNBC／FT：OpenAI 與 Anthropic 執行長於聯合國大會同台呼籲訂定 AI 安全標準；Amodei 主張協議應「narrow（範圍限定）」而非全面性；川普此前已公開拒絕「全球主義陰謀」式的 AI 控制提案 | 具體標準草案、協議範疇與川普發言全文均未見報導；延續 09-22 Bloomberg「Amodei 將向聯合國安理會簡報 AI 風險」動態，首見公開呼籲具體立場，詳見「## 時序」|
+| 2026-09-24 | 🏢 | The Information（經 Google News）：Google、OpenAI、Anthropic 三方組成的 AI 安全聯盟正在成形 | 具體組織架構、成員範圍與運作機制均未見報導，僅標題可用；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否同一佈局延伸，報導未載，不逕自合併，詳見「## 時序」|
 | 2026-09-22 | 🏛️ | Gizmodo（經 Google News）：中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理 | 具體調查機關、進度與 DeepSeek／Moonshot 官方回應均未見報導；延續既有中國線 09-11 Moonshot 挪用指控，首見中國監管機構對該指控的正式動作，詳見「## 現在有哪幾條線在動」中國線最後動態 |
 | 2026-09-22 | 🏛️ | Bloomberg：Anthropic 執行長 Dario Amodei 將向聯合國安理會簡報 AI 風險 | 簡報時間、具體議程與內容均未見報導，僅標題可用 |
 | 2026-09-22 | 🏢 | Reuters／The Next Web：Anthropic 與 OpenAI 同步向澳洲政府陳情，要求放寬以在地內容訓練 AI 模型的禁令 | 具體訴求範圍與澳洲政府回應均未見報導；延續既有 07-13 澳洲著作權遊說線，本次聚焦訓練資料禁令，是否同一佈局待後續釐清 |
@@ -418,6 +420,11 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-09-24
+- **[🏛️🏢] CNN／CNBC／FT：OpenAI、Anthropic 執行長於聯合國同台呼籲 AI 安全標準，Amodei 主張協議應「範圍限定」；川普此前已拒絕「全球主義」式 AI 控制提案**：延續 09-22 Bloomberg 簡報動態，首見具體呼籲內容，詳見「## 攻防紀錄」
+  - ❓ **待查證**（標 2026-09-24｜查 narrow AI safety、聯合國大會）：三家媒體均僅標題可用，協議具體條款、涵蓋範圍與是否已有其他國家響應均未見報導
+- **[🏢] The Information：Google、OpenAI、Anthropic 三方組成的 AI 安全聯盟正在成形**：與同日聯合國呼籲屬同一週期安全合作訊號，是否為同一佈局的組織化版本未見報導，不逕自合併；具體架構與成員範圍僅標題可用，詳見「## 攻防紀錄」
 
 ### 2026-09-22
 - **[🏛️] Gizmodo：中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理**：延續 09-11 Moonshot 挪用指控，首見中國監管機構正式動作，具體範圍與官方回應未見報導，詳見「## 攻防紀錄」

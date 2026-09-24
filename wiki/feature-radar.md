@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-23
+**最後更新：** 2026-09-24
 
 > **這禮拜動了什麼**（2026-09-23）
 > Claude Opus 5.5 發布並成為 Claude Code 的預設 Opus（v2.1.280）：Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 模型全面改指它，不動設定也會換；牌價 $4／$20 較 Opus 5 降 20%，官方稱多數工作追平 Fable 5.1。跑排程任務的人先 `/model` 看一眼現在實際跑的是哪一個。
@@ -313,6 +313,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude apps gateway desktop policy 支援**（v2.1.281，`blockReadsOutsideWorkingDirectories`／`disableBypassPermissionsMode` 兩項可設定政策） | 2026-09-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Opus 5.5 成為新預設模型**（v2.1.280，除 Foundry 外全通道；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

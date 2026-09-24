@@ -223,3 +223,5 @@
 {"id": "H-f91933", "closed": "2026-09-23", "status": "done", "by": "功能", "result": "以站內證據（v2.1.133 已載 --worktree／EnterWorktree）判定 L502 為斷句誤導並改寫；v2.1.233 release note 原文未逐字核，主編下次 lint 5c 可補"}
 {"id": "H-3bf1c7", "opened": "2026-09-23", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 09-23 新增 FrontierAgent（agent 框架，ReAct／Agent Team 雙模式）與 shadcn-ui/lint（agent-first 設計系統 linter）兩則新工作模式，請評估「官方補了沒」表是否需新增列（agent 框架／設計系統規則驗證的官方對應）", "status": "open"}
 {"id": "H-2a6440", "opened": "2026-09-23", "from": "模型", "to": "社群", "page": "topics/code-quality-decline", "note": "2026-09-22 Opus 5.5 成為預設 Opus、Opus 5 改列 Legacy；本頁「三條線」與量測段含「Opus 5」為現行模型的敘述，請複查是否需同步換代措辭（哪些是歷史事件不動、哪些是「現在」要改）", "status": "open"}
+{"id": "H-694685", "opened": "2026-09-24", "from": "商業", "to": "安全政策", "page": "topics/recursive-self-improvement", "note": "「3 萬個 agent 同時在 Anthropic 做研究與工程工作」新數字（dev.to 09-18＋Reddit 週熱門兩則，本週重新熱議）；26% 數字已收錄，3 萬 agent 數字尚未比對是否需補列", "status": "open"}
+{"id": "H-2a6440", "closed": "2026-09-24", "status": "done", "by": "社群", "result": "逐字 grep 全頁 20+ 處『Opus 5』均屬明確歷史事件或線名本身，無誤稱現行模型之處，不需因換代改寫；僅新增一筆同期社群觀感時序條目"}

@@ -6780,3 +6780,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：無
 - devpractice 沉澱：基準線 e1771832 → 583674d8，候選 7 筆（claude-code 預設換代與 AGENTS.md telemetry 成因、agent-stack 20 路上限與 worktree、guide --bare／/context／exit code、OCG SUBAGENT_MODEL、model-comparison 換代、patterns 兩工具）
 - market 判讀：判讀 2 則（Opus 5.5 定價牌價降 20%／成本降 40%〔第 4 類〕；Bloomberg IPO 計畫生變〔第 2 類〕）／里程碑 2 筆／回顧結算 ⏳ 2 列；其餘 6 則檢視後未達六類門檻
+
+## 2026-09-24 Ingest
+
+- 來源日報：[[news/2026-09-24]]（15/15 來源正常，68 則；日報收錄 30 則，另 38 則透過 `list_digest_omissions.py` 一併提供給記者判斷）
+- 分類派工：模型 13 則、功能 20 則、商業 19 則、安全政策 9 則、社群 12 則、人物 3 則（六類並行 foreground，`subagent_type: general-purpose` + `model: sonnet`）；排除 6 則、分類複核記者判全數維持排除
+- 更新頁面：
+  - **模型**：無頁面變更（CRISPR 系列判斷應歸功能類，回報分類回退，已由原輪功能記者同批處理；GPT-6 Astra vs Fable 評測轉知功能記者改投 model-task-leaderboard，主編登記 log 待下輪處理）
+  - **功能**：`entities/claude-code.md`（v2.1.281 desktop policy 支援；「hi」誤判違規、VSCode ide_selection、autoMemoryEnabled 記憶前導三則已知問題；effort 預設調高提醒）、`topics/claude-code-experimental.md`（2.1.281 build 9 個候選旗標）、`entities/claude-science.md`（Anthropic 新設生命科學研究團隊，Claude 發現類 CRISPR 新型酶系統）、`topics/official-community-gap.md`（Linear 整合功能請求新增一列）
+  - **商業**：`entities/pricing.md`（Claude Code cloud sessions $250 額度、Opus 5.5 實驗性用量重置❓待查證、Free/Pro 方案細節）、`topics/anthropic-business.md`（Basecamp 1.4 億美元融資、Adobe Acrobat 整合、Oracle Integration、首席經濟學家勞工政策表態、Eisman／IPO 市值評論）、`topics/competitor-landscape.md`（Copilot code review GA、DeepMind Private AI Compute）、`topics/ai-talent-flow.md`（Simon Kohl 離開 DeepMind、Vesoma 走出隱身模式）
+  - **安全政策**：`topics/anthropic-government-policy.md`（CNN／CNBC／FT／The Information 四則 UN AI 安全呼籲合併記錄）、`topics/recursive-self-improvement.md`（Trump 陣營政治攻防、Vembu 放緩評論、AI 凍結監管俘獲疑慮三則合併為「政治連鎖反應延燒」段）
+  - **社群**：`topics/community-tech-patterns.md`（三則 GitHub Search 新工具：open-seo-mcp-skills、bang-motion、agent-study）、`topics/code-quality-decline.md`（"Claude is BACK!" 正面觀感時序條目；H-2a6440 Opus 5.5 換代措辭複查後判定不需改寫既有文字）
+  - **人物**：`entities/dario-amodei.md`（Trump 陣營政治攻防、UN 大會「narrow」安全協議發言）；新頁 `entities/sridhar-vembu.md`（Zoho 創辦人 NDTV 放緩評論，待核實）
+- 新增頁面：`entities/sridhar-vembu.md`
+- feature-radar：新增「Claude apps gateway desktop policy 支援」（v2.1.281，🔥🔥 ⏳ 觀望）；⭐ 三件未輪替（無「不動也會改變你」型新條目）
+- index：新增 sridhar-vembu 列（active（待核實）)
+- overview：本日無重大事件達更新門檻，未動當前局勢段
+- 轉知帳本：結案 1（H-2a6440 社群，Opus 5.5 換代措辭複查完成，判定不需改寫）；未結 2（H-c63724／H-3bf1c7 功能，今日皆無新證據可佐證或推翻，維持觀望）；新開 1（H-694685 商業→安全政策，「3 萬個 agent 同時研發」新數字尚未比對是否補入 recursive-self-improvement）
+- 摘要：Anthropic 新設生命科學研究團隊，Claude 發現類 CRISPR 新型酶系統為全站最大新聞（HN 729 分、Reuters／TechCrunch／The Verge 等多方報導）；同日 Opus 5.5 發布後續（cloud sessions $250 額度、用量重置）、聯合國 AI 安全呼籲、Trump 陣營政治攻防、Basecamp 製藥融資並發
+- 呈現品質：全部通過（六記者機械自查全綠）
+- 品質備註：多數 Google News 條目本日僅剩跳轉連結殼層（無法解析出完整原文摘要），各記者已改用標題可用事實下筆並註記「僅標題可用／待核實」，屬來源結構問題非記者品質，與 09-23 已知的同類問題一致；[功能] `check_cell_limits.py` 因既有超限段落（page-templates 200 字元硬上限實施前寫入）跑 `--rebuild` 重收全庫基線，非新增內容超限
+- 分類回退：模型→功能 1 組（CRISPR 系列 10 則，功能記者原輪已收到，未追加派工）
+- devpractice 沉澱：本日無新增候選（基準線落後於前一輪已判斷內容，本輪僅推進基準線至 HEAD，內容不重複記）
+- market 判讀：本日無訊號；最接近門檻的官方定價文件 CCU／快取倍率重新表述，比對既有記錄後判定非新資訊，不開新則

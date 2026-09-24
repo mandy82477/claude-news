@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-20
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **社群再添「悄悄降推理預算」指控**（2026-09-20）
-> Reddit r/ClaudeAI 週熱門引用 4.3 萬+ 則回應、65 天分析，指控 Anthropic 未告知調降推理預算仍稱同一模型；「泛化變慢」主張增至 8 則，官方仍無回應。
+> **首度出現正面反轉訊號**（2026-09-24）
+> Reddit 週熱門稱 Claude 終於「像回真正的 Claude」，暗示先前品質觀感失真；單一貼文、無技術細節，與 09-22 Opus 5.5 上線同期，細節見時序。
 
 ---
 
@@ -238,6 +238,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-09
+
+#### 2026-09-24
+- **首度出現正面反轉訊號**：Reddit r/ClaudeAI 週熱門貼文（原發 09-22）稱 Claude 終於「像回真正的 Claude」，暗示 Opus 4.7 起品質觀感失真、現已恢復；單一貼文、無技術細節，方向與既有六則負面主張相反，與 Opus 5.5 上線同期（推論：時間點重疊），尚不足開新列（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wnpit2/claude_is_back/)）
 
 #### 2026-09-20
 - **「It's time to cancel your subscriptions」：「泛化變慢／變囉唆」主張第八則**：Reddit 週熱門引用一份針對 4.3 萬+ 則回應、65 天的分析，指控 Anthropic 未告知使用者就調降推理預算，仍稱是同一模型；框架為「該不該取消訂閱」，單一貼文、0 留言，方向與既有七則一致（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wl6wyn/its_time_to_cancel_your_subscriptions_anthropic/)）

@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-12
-**最後新聞更新：** 2026-08-17
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新動態**（2026-08-17）
-> GitHub Search 發現官方 repo `anthropics/life-sciences`（576★），描述為「Claude for Life Sciences Launch」使用的 Claude Code Marketplace；與「Claude Science」品牌關係待後續報導釐清。
+> **最新動態**（2026-09-24）
+> Anthropic 宣布新設生命科學研究團隊與實驗室，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統；與本頁 Claude Science app 是否同一產品線，原文未載明。
 
 ---
 
 ## 現況
 
-**Marketplace repo 曝光（2026-08-17）：** GitHub Search 發現官方 repo `anthropics/life-sciences`（576★），描述為「Claude for Life Sciences Launch」使用的 Claude Code Marketplace，長期託管 `marketplace.json`（非實際 MCP servers 本身）。「Claude for Life Sciences」與本頁「Claude Science」是否為同一產品線的官方命名調整或另立的 MCP marketplace 擴充，原文未進一步說明，暫記待後續報導釐清。
+**新設生命科學研究團隊與實驗室（2026-09-24）：** Anthropic 部落格宣布新設生命科學研究團隊，聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統（Hacker News 729 分，4 個來源同日交叉報導，含 Reuters 獨立確認角度）。此團隊／實驗室與本頁所記錄、2026-07-01 發布的 Claude Science app 是否為同一產品線的延伸或另立獨立團隊，官方原文未載明，暫以獨立事件記錄；該酶系統實際用途原文亦未載明（The Next Web 標題稱「功能尚未確定」，僅供旁證）。
 
-**早期使用者評價（2026-07-15）：** the-scientist.com 報導科學研究者對 Claude Science 的早期評價：工作流程加快，但仍存在功能缺口（"Faster Workflows, But Gaps Remain"）。原文僅有標題可用（Google News 轉址頁面無法取得完整內容），具體缺口項目與量化證據待後續報導補齊。
+**Marketplace repo 曝光（2026-08-17）：** GitHub Search 發現官方 repo `anthropics/life-sciences`（576★），描述為「Claude for Life Sciences Launch」使用的 Claude Code Marketplace，長期託管 `marketplace.json`（非實際 MCP servers 本身）。「Claude for Life Sciences」與本頁「Claude Science」是否為同一產品線的官方命名調整或另立的 MCP marketplace 擴充，原文未進一步說明，暫記待後續報導釐清。
 
 Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作台 app。整合研究常用工具套件、可稽核 artifact（Auditable Artifacts）與彈性雲端運算資源，定位為科研人員的端對端 AI 研究平台。使用者可直接存取此 app，無需自行配置底層 API。
 
@@ -80,9 +80,11 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 ## 參考來源
 
+- [Anthropic Blog: Claude discovers a novel enzyme system with CRISPR-like repeats](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system)（2026-09-23）
 - [Anthropic Blog: Claude Science AI Workbench](https://www.anthropic.com/news/claude-science-ai-workbench)（2026-07-01）
 - Google News / the-scientist.com："Early Verdicts on Claude Science: Faster Workflows, But Gaps Remain"（2026-07-15，僅標題可用）
 - GitHub Search: [anthropics/life-sciences](https://github.com/anthropics/life-sciences)（576★，2026-08-17 查證）
+- [[news/2026-09-24]]
 - [[news/2026-07-01]]
 - [[news/2026-07-15]]
 - [[news/2026-08-17]]
@@ -91,6 +93,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-24 | Anthropic 宣布新設生命科學研究團隊與實驗室；早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統，與本頁 Claude Science app 是否同一產品線原文未載明 |
 | 2026-08-17 | GitHub Search 發現官方 repo `anthropics/life-sciences`（576★），為「Claude for Life Sciences Launch」的 Claude Code Marketplace，長期託管 `marketplace.json`；與「Claude Science」品牌關係待後續報導釐清 |
 | 2026-07-15 | the-scientist.com 報導科學研究者早期評價：工作流程加快，但仍存在功能缺口；僅標題可用，細節待補 |
 | 2026-07-01 | 正式發布，科學家專用 AI 工作台 app，整合研究工具套件、可稽核 artifact 與彈性雲端運算 |

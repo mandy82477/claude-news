@@ -28,20 +28,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **模型路由列補上一個固定指定機制**（2026-09-23）
-> `CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件）；連同既有 `opusplan`，個人端仍只有「固定指定」，依成本或任務動態選模型的路由官方文件依舊未見。
-> 09-20：Claude Code v2.1.277 起原生讀 `AGENTS.md`，三個邊界見下方「官方補了沒」表。
+> **新增一列：Linear 整合官方仍無對應**（2026-09-24）
+> GitHub issue #12925（指派 Linear 工單給 Claude Code 觸發雲端 agent）累積 146 讚、本日反應數最高功能請求；官方僅支援 GitHub Issues 指派，Linear 尚無原生對應，社群已自接 Linear MCP＋Lanes MCP 橋接。
+> 09-23：`CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型，個人端仍只有「固定指定」。
 
 ## 摘要
 
-**2026-09-18 官方補上了本頁掛最久的那一個**：Claude Code 自 v2.1.277 起原生讀 `AGENTS.md`，這一列從「全站讚數最高的未解缺口」變成「已補，但有三個邊界」。
+**2026-09-24 新增一列，官方仍無對應**：指派 Linear 工單給 Claude Code 觸發雲端 agent（issue #12925，146 讚）——官方僅 GitHub Issues 支援此模式，Linear 尚無原生對應。
 
 本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，答案不在本頁**——看 [[topics/community-tech-tools]]「我卡在這裡」；官方積木各自怎麼用、怎麼疊看 [[topics/anthropic-agent-stack]]；學術文獻主張與 Claude Code 現況的落差是另一個視角，見 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]]。
 
-16 個痛點裡，3 個官方目前沒有任何對應、7 個補了一半、6 個已經能直接用。
+17 個痛點裡，4 個官方目前沒有任何對應、7 個補了一半、6 個已經能直接用。
 
 ---
 
@@ -69,6 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-09-19 |
 | 它會不會跑出破壞性指令 | ✅ | 破壞性 git 指令自動封鎖（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222） | git 層已完整；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | — |
 | Slack 裡要一個 AI 隊友 | ✅ | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack 原生） | 這一列的社群前驅稀薄、官方主導色彩強，放在這裡只供對照 | 2026-09-19 |
+| 把 Linear 工單指派給 Claude Code 就觸發雲端 agent | ❌ | 無——僅 GitHub Issues 可指派觸發雲端工作流；截至 2026-09-24 官方文件未見 Linear 對應支援，issue 見 [[entities/claude-code]] | 社群自接官方 Linear MCP＋本地 Lanes MCP 橋接 issue-to-code；官方尚未排入路線圖，issue #12925 累積 146 讚 | 2026-09-24 |
 
 ---
 
@@ -192,6 +193,9 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[entities/claude-code]] — Claude Code 現在有哪些毛病、哪些修了，以及每個 issue 的留言與讚數
 
 ## 時序
+
+### 2026-09-24
+- **新增一列：Linear 整合觸發雲端 agent**：GitHub issue #12925 累積 146 讚（本日反應數最高功能請求），僅 GitHub Issues 支援指派觸發雲端工作流，Linear 官方尚無對應；社群已有 Linear 官方 MCP＋本地 Lanes MCP 的橋接做法。表由 16 列增為 17 列。
 
 ### 2026-09-23
 - **`## 對照矩陣`併入『官方補了沒』表（使用者裁決）**：CLAUDE.md 規則失效、AI 輔助開發副作用兩個 ❌ 與平台可及性 1 個 🧪，從獨立矩陣改插進主表，表由 13 列增為 16 列；獨立節移除，平台可及性的細節仍留在下方「技術彙整」一節。

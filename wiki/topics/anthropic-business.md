@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
-> **最新動態**（2026-09-23）
-> - **Opus 5.5 發布**：官方定價 $4/$20 per Mtok，較 Opus 5 執行成本省 40%；同日與醫療 AI 服務 OpenEvidence、Amazon 賣家工具兩起戰略合作曝光，詳見「哪個合作會改到你用的 Claude」。
-> - **IPO 前景再添雜音**：Bloomberg 報導 IPO 計畫生變、市場情緒受衝擊，僅標題可用，尚無新增時程或估值數字。
+> **最新動態**（2026-09-24）
+> - **Adobe 把 Acrobat 帶進 Claude 生態，Basecamp 獲 NVIDIA＋Anthropic 領投 1.4 億美元**：兩則戰略合作／投資新增，詳見「哪個合作會改到你用的 Claude」一行制清單。
+> - **首席經濟學家：正探索讓 AI「輔助勞工」而非取代**：公司首度就勞工政策公開表態，僅標題可用，詳見時序。
 
 ---
 
@@ -294,6 +294,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **著作權訴訟疑似重複報導**：The Post-Crescent 報導 Anthropic 因訓練 AI 使用受版權保護書籍遭提告；同期查無其他獨立媒體報導有別於既有 15 億美元著作權集體訴訟和解案（見「這些數字是誰說的」表）的新訴訟。
 - 🔎 **查無官方**（標 2026-08-13｜查 Post-Crescent、著作權訴訟｜複 2026-10-04）｜**是否為獨立新訴訟**：延伸查證僅得 Bartz v. Anthropic 和解案官方／法院文件，未查得 Post-Crescent 具名的獨立新案號；維持「高度疑似地方報重提既有和解案」判斷。
 - **知名放空投資人唱空估值敘事**：Yahoo Finance 報導「Big Short」原型投資人 Steve Eisman 公開表示 Anthropic 與 OpenAI 是整體 AI 交易的「阿基里斯腱」（Achilles' heel）；屬市場觀察類評論，非官方財務數據或公司聲明，具體論據、部位規模未見報導。與同日出現的 CFO 早期 IPO 會議、投資人估值上看 2 兆美元等籌備信號同期並存，形成「籌備動作推進 vs 知名空頭唱空」的敘事張力（推論）。
+  - **09-24 跟進**：Yahoo Finance 報導 Eisman 改稱 AI CEO 們在「假造」末日危機敘事，同時指 Anthropic 可能仍在加速布局；屬同一人物的市場評論延續，具體論據未見報導（Google News/Yahoo Finance）。
 
 ---
 
@@ -322,6 +323,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Basecamp**（2026-09-24）：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資，用於推進 AI 輔助藥物設計，具體投資額度與角色未見細節（Google News/BioSpace）
+- **Adobe**（2026-09-24）：Adobe 把 Acrobat 帶進 Claude 生態，同批對 Google Gemini 開放存取，具體整合範疇與計費未見報導（Google News/9to5mac.com）
+- **Oracle**（2026-09-23）：Oracle 官方部落格說明如何串接 Claude 至 Oracle Integration 工具，具體功能範疇未見報導（Google News/Oracle Blogs）
 - **Amazon（Seller Assistant／Amazon Quick 外掛）**（2026-09-23）：開放賣家工具予外部 AI 代理人，首波合作對象為 Claude，同步升級 Seller Assistant 並推出結合 Amazon Quick 與 Claude 的新外掛，具體功能與計費未見報導（GeekWire；About Amazon）
 - **OpenEvidence**（2026-09-22）：Reuters 獨家報導 Anthropic 與醫療 AI 服務 OpenEvidence 結盟，計畫將醫療 AI 服務推向全球，合約範疇與費用未見報導（Reuters；PYMNTS）
 - **未具名資料中心（控制權洽談）**（2026-09-23）：The Information 報導 Anthropic 正洽談加強對更多資料中心的控制權，具體規模、對象未見報導（Google News/The Information）
@@ -503,6 +507,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-24
+- **[戰略合作] BioSpace：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資**：用於推進 AI 輔助藥物設計，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/BioSpace）
+- **[戰略合作] 9to5mac.com：Adobe 把 Acrobat 帶進 Claude 生態，同批對 Google Gemini 開放存取**：具體整合範疇與計費未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/9to5mac.com）
+- **[勞工政策，僅標題可用] thecrimson.com：Anthropic 首席經濟學家表示公司正探索讓 AI 朝「輔助勞工」而非取代方向發展**：具體政策內容與時程未見報導（Google News/thecrimson.com）
+- **[商業風險，跟進] Yahoo Finance：Steve Eisman 稱 AI CEO 們在假造「末日危機」，同時指 Anthropic 可能仍在加速**：與既有「阿基里斯腱」唱空言論同一人物延續，詳見「還沒過去的風險」細節區更新（Google News/Yahoo Finance）
+- **[估值敘事，僅標題可用] Yahoo Finance：SpaceX、OpenAI、Anthropic 三家民間公司合計估值已超越過去 45 年全部 IPO 公司總市值**：比較口徑與具體數字未見報導，三家合計非 Anthropic 單一估值，不併入「現在的數字」表（Google News/Yahoo Finance）
 
 #### 2026-09-23
 - **[定價，官方一手來源] Anthropic 官方：Claude Opus 5.5 發布，$4/$20 per Mtok，較 Opus 5 執行成本省 40%**：完整定價與快取折扣詳見 [[entities/pricing]]（Hacker News，1,674 分；[Anthropic Blog](https://www.anthropic.com/claude-opus-5-5)）

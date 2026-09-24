@@ -30,20 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-24
+**最後新聞更新：** 2026-09-24
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **將向聯合國安理會簡報 AI 風險**（2026-09-22）
-> Bloomberg 報導 Amodei 預定向聯合國安理會簡報 AI 風險；僅標題可用，簡報時間與具體內容未見報導。
+> **川普陣營政治攻防升級＋UN 發言**（2026-09-24）
+> - **新戰線**：Axios 獨家報導川普陣營盟友將 Amodei 塑造成 AI「末日論」代表人物（僅標題可用）
+> - **UN 大會發言**：FT 報導 Amodei 呼籲 AI 安全協議應「範圍限定」，與 09-22 預告的安理會簡報是否同場合未明（單一媒體轉述）
 
 ---
 
 ## 現況
 
-2026-09-22，Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險；僅標題可用，簡報時間與具體內容未見報導。
+2026-09-24，Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容未見報導。同日 FT「聯合國大會即時報導」提及 Amodei 呼籲 AI 安全協議應「範圍限定」（narrow），與 09-22 預告的聯合國安理會簡報是否同一場合未明；為單一媒體轉述，非逐字引述。
 
 2026-09-17，知名放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 等公司高層的 AI 減速呼籲是「自利」之詞，加入既有反彈陣營，完整脈絡見 [[entities/michael-burry]]。同日 The New York Times 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題可用）；另有 Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，具體內容與因果未見報導（僅標題）。
 
@@ -100,9 +101,12 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - [[entities/jensen-huang]] — Nvidia 執行長，2026-09-15 於 Dreamforce 與 Amodei 就 AI 安全立場出現分歧，並批評 Anthropic 反壟斷豁免提案
 - [[entities/mustafa-suleyman]] — Microsoft AI 執行長，同期另一則批評 Anthropic「類人化」論述的具名聲量
 - [[entities/michael-burry]] — 知名放空交易員，2026-09-17 公開批評其 AI 減速呼籲是「自利」之詞
+- [[entities/sridhar-vembu]] — Zoho 創辦人，2026-09-23 向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步」，加入減速爭論的外部評論聲量
 
 ## 參考來源
 
+- [Scoop: Trump allies open new front on Anthropic CEO as face of AI "doomerism"](https://news.google.com/rss/articles/CBMif0FVX3lxTFBCWU40OGxGYUZKQTZvcFNhWTVyemFmMmpnMzNHU2tEWkppTTFFSEpVVXQ5VEg5NTFGTFRjQXYyTzE3SllFMGxlMDc1LU1XUlRyN3BGZG5YRTJPNXNhYThINEhpZ282ZVJDUjR1cnNCVlpWT0FKZXlmUWlQSDhRTlE?oc=5) — Google News／Axios，2026-09-24（僅標題可用，Scoop 獨家）
+- [FT 聯合國大會即時報導](https://news.google.com/rss/articles/CBMicEFVX3lxTE4yQUdqNE15M09tanI3bHRPY1pLaUl0SERqMzVzR2JkRDNPZHE5V09GTllTbU9Hc0JzUVUyUkNmaVJMZV82SE9uaGRRdEV0d0RXcXBNVFU4Tzd6ZVhtVkJRdzlvcFBjMTBPeDFEazRYZWs?oc=5) — Google News／Financial Times，2026-09-24：提及 Amodei 呼籲 AI 安全協議應「範圍限定」（narrow），僅標題可用，無完整語境
 - [Anthropic CEO Dario Amodei to Brief UN Security Council on AI Risks](https://www.bloomberg.com/news/articles/2026-09-22/anthropic-ceo-dario-amodei-to-brief-un-security-council-on-ai) — Google News／Bloomberg，2026-09-22（僅標題可用）
 - [How Anthropic CEO Dario Amodei's Writings Help Explain A.I. Fears](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbjdsMmVOalo4al9nOGNOMzl6ZTNwLUFHVzZlN3Ayd1ZUMkhReU4wZ0Y0X05hbnpoWldIQ0ZReUdoNVA5MTRBQUs2ZzZISU56X1dQbTIzRVQ2ZWpHeW5NVDZsdFRyMG9RWDBoYjNmNGU1ckxlNUtsRFo1dy02dlowVlZZWVRBamhHOWtF?oc=5) — Google News／The New York Times，2026-09-17（僅標題可用）
 - [SpaceX Investors Just Got Some Bad News From Anthropic Founder Dario Amodei](https://news.google.com/rss/articles/CBMimAFBVV95cUxOX1FTbUlTeHZFbVppZVRkYUtlXzZGVDNfbFFmU2pqbG1Tai1Ra0g3cTItaVMyX0pnaktabVduWWFFTDhsZFhuZ0hOMUkxamFtM2RibnZtWThuRlVJcGxuVkRVSk1COHJxRkowMVl5TEVnOVdXNUtrZk5taXJ6NllpeDBfWE9oOGk2YnFWSGFXZ2FoNWxuRlVXag?oc=5) — Google News／Yahoo Finance，2026-09-17（僅標題可用；無正文，因果未知）
@@ -136,6 +140,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容與參戰人士未見報導（來源：Google News／Axios）
+- 2026-09-24：FT「聯合國大會即時報導」提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，與 09-22 預告的聯合國安理會簡報是否同一場合未明（來源：Google News／Financial Times）
 - 2026-09-22：Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險（僅標題可用）（來源：Google News／Bloomberg）
 - 2026-09-17：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，詳見 [[entities/michael-burry]]（來源：Hacker News／New York Post）
 - 2026-09-17：NYT 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題）（來源：Google News／The New York Times）
