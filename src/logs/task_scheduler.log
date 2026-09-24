@@ -864,3 +864,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [Thu 2026/09/24 17:48:00.00] REPAIRED: feature-radar 表格儲存格超限、entities/pricing 內部用語外洩（「記者」）、entities/sridhar-vembu 與 index.md 新增舊語法懸置標記（6 筆）、feature-radar 2026-09 索引缺漏（詳細條目/全覽表列不對稱）— 皆為內容修復，未動任何檢查腳本
 [Thu 2026/09/24 17:48:30.00] Single push done (news + wiki + web)
 [Thu 2026/09/24 17:48:30.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud STARTED 2026-09-24T22:08:53Z]
