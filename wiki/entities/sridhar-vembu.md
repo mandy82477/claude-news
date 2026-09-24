@@ -1,3 +1,29 @@
+---
+page: "entities/sridhar-vembu"
+kind: "entity"
+type: "person"
+status: "active（待核實）"
+domain: "👤 人物"
+last_updated: "2026-09-24"
+last_news_update: "2026-09-24"
+status_main: "active"
+days_since_news: 0
+parent: null
+children: "[]"
+page_role: "root"
+days_since_news_subtree: 0
+inbound_links: 1
+attribution_count: 1
+attribution_last: "2026-09-24"
+top_source: "google-news"
+pending_count: 1
+pending_overdue: 0
+pending_next_review: "2026-10-08"
+pending_signalled: 0
+staleness_exempt: null
+signal: "孤島"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Sridhar Vembu
 
 **類型：** person
@@ -7,18 +33,18 @@
 **最後更新：** 2026-09-24
 **最後新聞更新：** 2026-09-24
 
-> **公開評論 AI 減速爭論**（2026-09-24，待核實）
+> **公開評論 AI 減速爭論**（2026-09-24，僅標題可用）
 > Zoho 創辦人 Sridhar Vembu 向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」；僅標題可用，無逐字引述。
 
 ---
 
 ## 現況
 
-2026-09-23，印度企業軟體公司 Zoho 創辦人暨執行長 Sridhar Vembu 向 NDTV 表示，OpenAI、Anthropic 等公司「可以放慢腳步」，沒有人拿槍指著他們要求加速，暗示放緩是可行選項（待核實：Google News RSS 殼層未解析出完整原文，措辭為標題轉述而非確認逐字引述）。Vembu 並非 Anthropic 內部人士，此則屬外部知名企業家對 AI 減速爭論的公開評論，加入 [[entities/michael-burry]]、Trump 等對 [[entities/dario-amodei]] 減速呼籲不同立場的聲量，完整脈絡見 [[topics/recursive-self-improvement]]。
+2026-09-23，印度企業軟體公司 Zoho 創辦人暨執行長 Sridhar Vembu 向 NDTV 表示，OpenAI、Anthropic 等公司「可以放慢腳步」，沒有人拿槍指著他們要求加速，暗示放緩是可行選項（僅標題可用：Google News RSS 殼層未解析出完整原文，措辭為標題轉述，非確認逐字引述）。Vembu 並非 Anthropic 內部人士，此則屬外部知名企業家對 AI 減速爭論的公開評論，加入 [[entities/michael-burry]]、Trump 等對 [[entities/dario-amodei]] 減速呼籲不同立場的聲量，完整脈絡見 [[topics/recursive-self-improvement]]。
 
 ## 核心論述
 
-- **「可以放慢腳步」**（NDTV，2026-09-23，待核實）：標題轉述 Vembu 稱 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」；具體發言場合、完整語境與逐字原文未見報導。
+- ❓ **待查證**（標 2026-09-24｜查 Sridhar Vembu、NDTV、放慢腳步｜複 2026-10-08）｜**「可以放慢腳步」逐字引述**（NDTV，2026-09-23）：標題轉述 Vembu 稱 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」；具體發言場合、完整語境與逐字原文未見報導。
 
 ## 相關議題
 
@@ -32,4 +58,4 @@
 
 ## 歷史記錄
 
-- 2026-09-23：向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」，加入 AI 減速爭論的外部評論陣營（待核實，僅標題可用）（來源：Google News／NDTV）
+- 2026-09-23：向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」，加入 AI 減速爭論的外部評論陣營（僅標題可用，逐字用語未經確認）（來源：Google News／NDTV）

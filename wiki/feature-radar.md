@@ -66,6 +66,15 @@
 
 ## 🆕 最新功能（2026-09）
 
+### Claude apps gateway desktop policy 支援
+**發布：** 2026-09-23（v2.1.281） | **狀態：** 正式發布
+
+**是什麼：** 新版 Claude Desktop 金鑰可在 `desktop` policy 區塊設定 `blockReadsOutsideWorkingDirectories`（禁止讀取工作目錄以外檔案）與 `disableBypassPermissionsMode`（停用略過權限模式）兩項政策。
+
+**為何熱：** GitHub Release 首發，僅官方一個來源，面向企業／Desktop 管理員的窄眾功能，尚無社群實測或官方部落格佐證，熱度暫列較低。
+
+**注意事項：** Release note 未詳述兩項政策實際生效行為，管理員套用前建議先在測試環境確認效果。
+
 ### Claude Opus 5.5 成為 Claude Code 新預設模型
 **發布：** 2026-09-22（v2.1.280） | **狀態：** 正式發布
 
@@ -313,7 +322,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
-| **Claude apps gateway desktop policy 支援**（v2.1.281，`blockReadsOutsideWorkingDirectories`／`disableBypassPermissionsMode` 兩項可設定政策） | 2026-09-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
+| **Claude apps gateway desktop policy 支援**（v2.1.281，新版 Desktop 金鑰可設讀取範圍與繞過權限模式） | 2026-09-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Opus 5.5 成為新預設模型**（v2.1.280，除 Foundry 外全通道；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

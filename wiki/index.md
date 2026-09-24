@@ -81,7 +81,7 @@
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
 | [[entities/mustafa-suleyman]] | person | 👤 人物 | active | Microsoft AI 執行長；2026-09-16 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，並抨擊其 AI 意識說法（Bloomberg／BBC／Axios）|
 | [[entities/michael-burry]] | person | 👤 人物 | active | 知名放空交易員（《大賣空》原型人物）；2026-09-17 在 X 批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞 |
-| [[entities/sridhar-vembu]] | person | 👤 人物 | active（待核實） | Zoho 創辦人，2026-09-23 向 NDTV 稱 OpenAI、Anthropic「可以放慢腳步」（待核實） |
+| [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 創辦人，2026-09-23 向 NDTV 稱 OpenAI、Anthropic「可以放慢腳步」（僅標題可用） |
 
 ---
 

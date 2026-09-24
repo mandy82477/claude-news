@@ -4,19 +4,19 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-09-23"
-last_news_update: "2026-09-23"
+last_updated: "2026-09-24"
+last_news_update: "2026-09-24"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 159
-attribution_count: 108
-attribution_last: "2026-09-23"
+attribution_count: 111
+attribution_last: "2026-09-24"
 top_source: "google-news"
-pending_count: 3
+pending_count: 4
 pending_overdue: 2
 pending_next_review: "2026-10-04"
 pending_signalled: 0
@@ -402,7 +402,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 定價與促銷（模型定價、方案設計）
 
 #### 2026-09-23：Claude Code cloud sessions 上線，新用戶最高可領 $250 額度
-3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]（功能記者同輪處理）。
+3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]。
 
 #### ❓ 2026-09-23：Opus 5.5 上線同時傳「實驗性用量上限重置」機制
 ❓ **待查證**（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置｜複 2026-10-08）｜**Claude 是否新增實驗性用量上限重置機制**：Google News／Pasquale Pillitteri 單一來源稱 Opus 5.5 上線同時導入「experimental usage limit resets」，具體機制、適用方案與是否官方確認均未見報導；同一媒體 09-05 曾以「Anthropic Resets Claude Limits」為題報導，09-06 查證結果為價格結構未變（見上方「2026-09-05」條），故本則比照處理，不逕自視為新規則寫入「當前生效的計費規則」。
