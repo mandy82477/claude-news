@@ -58,6 +58,7 @@ PYTHON REPO_ROOT\scripts\gate_web_build.py
 **硬性禁止（違反任一條就等於把 gate 拆掉）：**
 - 不可修改任何 `scripts/check_*.py`、`run_tests.py`、`gate_web_build.py`
 - 不可為了放行而新增 `docs/known-test-gaps.json` 條目（該檔只在人工登記 workaround 時動）
+- 不可修改存量基線與白名單：`data/*baseline*.json`、`data/*-allow.json`、`data/baseline-changes.jsonl`，也不可跑任何 `--rebuild`／`--allow-grow`／`--write-baseline`——基線只准人工變緊
 - 不可用「刪掉觸發失敗的內容」了事——探針寫錯要改對，不是把整條懸置標記刪掉；刪除等於湮滅待查證事項
 - 修復只准動失敗訊息**指名**的位置，不可順手擴大改動範圍
 

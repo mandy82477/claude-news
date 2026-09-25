@@ -114,3 +114,24 @@ wiki 外部連結的健康快照，**唯一寫者是 `.github/workflows/weekly-l
 覆寫式快照（非 append），歷史留在 git。**分層模式下報告仍是完整清單**——沒掃到的連結會沿用上次結果補回，否則 lint 會讀到縮水的死鏈清單、把仍失效的連結當成已修好。分層是省請求，不是省結論。產出這個檔的理由見該 workflow 檔頭：這步是純網路、不需 LLM，套用分裂架構後就不再需要本機。
 
 三桶分類的由來：2026-08-20 首次全量掃描 795 條，舊的「非 2xx 即死鏈」判出 58 條，實際只有 5 條真死。把 401（付費牆）與單次逾時判成死鏈，會讓記者把活著的來源標成失效——污染頁面的成本遠高於漏標一條死鏈。
+
+## `baseline-changes.jsonl`
+
+存量基線的**放寬**帳本（append only）。各機械閘的存量基線只准變緊；確屬例外要讓基線多一筆時，必須在這裡留一行理由，否則 `src/tests/test_baseline_ratchet.py` 對 HEAD 版比集合差即紅。字元上限閘由 `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "…"` 自動寫入；其他基線（`reader-language-baseline.json`、`pending-legacy-baseline.json`）目前手寫。記者與 web-publish 修復迴圈不得寫入。
+
+Schema（每行一筆）：
+
+```json
+{"date": "2026-09-25", "file": "data/cell-limit-baseline.json", "added": [{"page": "entities/claude-code", "kind": "list_item", "anchor": "…", "max_len": 230}], "removed": [], "reason": "…", "actor": "Mandy"}
+```
+
+| 欄位 | 說明 |
+|------|------|
+| `date` | 寫入日（YYYY-MM-DD） |
+| `file` | 被放寬的基線檔（repo 相對路徑） |
+| `added` | 新增／放寬的條目。形狀依基線而定：字元上限閘 `{page, kind, anchor, max_len}`；讀者語言閘 `{page, fp}`；舊語法懸置 `{max_legacy}` |
+| `removed` | 同一次重建順帶移除或收緊的條目（字元上限閘自動填；手寫可給空陣列） |
+| `reason` | 必填、非空；空理由的行不算登記 |
+| `actor` | 執行者（預設系統使用者名，可用 `--actor` 指定） |
+
+只有**尚未 commit 的新行**能豁免同一次改動的放寬；HEAD 已有的舊行不能拿來豁免之後的放寬。

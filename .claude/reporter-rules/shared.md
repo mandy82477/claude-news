@@ -222,6 +222,8 @@ python scripts/check_callout_coverage.py TARGET_DATE --page <你的頁面 slug>
 
 第三支看的是讀者版日報收不收得到你：你把新聞寫進頁面、「最後新聞更新」改成 TARGET_DATE，頁頂 callout 卻沒覆寫成 TARGET_DATE（沒動，或寫成事件日），這頁今天就不上日報。被點名 → 照 `.claude/reporter-rules/page-templates.md`「頂部 delta-first callout」覆寫後重跑。
 
+第一支被點名時只有兩條路：縮短，或下沉。**記者不得使用 `--rebuild`／`--allow-grow`，也不得手改任何 `data/*baseline*.json`**——改寫既有超限列而不變長本來就放行，會被點名就代表那是新內容；基線只准人工變緊。
+
 `--page` 只是過濾檔案清單，門檻與基線判定與全庫模式是同一段程式碼，所以逐頁跑不會漏——**漏的是「跑完之後又改了一次」**。因此順序固定：**改完 → 跑 → 抄輸出 → 不再動那一頁**；若抄完又想改，重跑並重抄。
 
 > 判斷式：**「我跑過而且通過」與「我沒跑」，在回報上長得一樣嗎？** 一樣 → 那個欄位沒有作用。
