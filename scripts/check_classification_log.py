@@ -11,9 +11,12 @@ categories 為空代表主編判斷不派給任何記者，此時 reason 必填�
 （2026-09-15 使用者稽核：70 則有 13 則從未進任何派工訊息，事後才靠人工比對抓出）。
 
 阻斷（exit 1）只給**會讓漏處理躲過對帳**的問題：原料未進帳本、排除無理由、排除摘要
-不可讀、未知類別。其餘（帳本 URL 打錯、壞 JSON 行、結構壞行）只印 ⚠️ 不阻斷——
-它們掩護不了任何一則原料（被掩護的那則仍會以「未進帳本」阻斷），留著只會製造
-「append 更正也修不掉」的死鎖。
+不可讀、未知類別；排除摘要是剝殼後仍空的純殼層摘要、或排除理由屬記者收錄判斷（重複／
+已報導）而非分類判斷，這兩條新規則只對 `ENFORCE_FROM`（見下方常數）起的日期阻斷——
+帳本 append only、舊行改不了，生效日前的舊行降為 ⚠️ 警示，`--enforce-all` 可強制全開
+做追溯稽核。其餘（帳本 URL 打錯、壞 JSON 行、結構壞行）只印 ⚠️ 不阻斷——它們掩護不了
+任何一則原料（被掩護的那則仍會以「未進帳本」阻斷），留著只會製造「append 更正也修不掉」
+的死鎖。
 
 exit 0 全數對上｜1 有阻斷級問題｜2 原料已逾 14 天保留窗（逾期 backfill，依 SKILL.md
 步驟 2 例外跳過對帳）｜3 原料在窗內卻缺檔或損毀（抓料缺件，先修抓料，不得跳過）。
@@ -21,6 +24,7 @@ exit 0 全數對上｜1 有阻斷級問題｜2 原料已逾 14 天保留窗（�
 用法：
     python scripts/check_classification_log.py --date 2026-09-14
     python scripts/check_classification_log.py --date 2026-09-14 --json
+    python scripts/check_classification_log.py --date 2026-09-14 --enforce-all
 """
 from __future__ import annotations
 
@@ -46,6 +50,38 @@ _HTML_RESIDUE = re.compile(
 )
 MIN_SUMMARY = 20
 HTML_HINT = "（若原文本就在談 HTML 標籤，把尖括號改寫成文字敘述即可）"
+# 帳本 append only、舊行不可改：殼層排除與重複理由兩條規則若對生效日前的舊行也阻斷，
+# 會把 2026-09-22／09-24 事故當時就已寫死的舊排除行永遠卡紅，逼人去改不可改的舊行。
+# 兩條新規則只對 >= 生效日的行阻斷，舊行降級為警示；`--enforce-all` 供追溯稽核強制全開。
+ENFORCE_FROM = "2026-09-25"  # 與 scripts/check_log_handoffs.py 的生效日常數同名同語意
+# HN 討論串被 dead/flagged 後，抓料只留得下這幾種殼標記，摘要正文全被吃掉——
+# 2026-09-24 兩則（Tokenhush、per-step reasoning effort）就是這樣過了 MIN_SUMMARY 字數關，
+# 被主編當「無可讀摘要」排除，wiki 全庫零命中。判長度前先剝殼，剝完仍短才算數。
+# 💬 是留言貼文一律會有的前綴符號（與標籤無關），拆成獨立於標籤集合之外，
+# 這樣「只認某幾種標籤」的測試改動不會被 💬 蓋住——標籤集合變動要能被測試看見。
+_SHELL_BULLET = "💬"
+_SHELL_TAGS = ("flagged", "dead", "deleted")
+
+
+def _shell_marker_re() -> re.Pattern[str]:
+    tags = "|".join(re.escape(t) for t in _SHELL_TAGS)
+    return re.compile(rf"{_SHELL_BULLET}|\[(?:{tags})\]")
+
+
+# 重複與否是記者的收錄判斷（同一事件昨天報過要不要再收），不是主編的分類判斷——
+# 分類表沒有「重複」這一格。`(?<!不)重複` 排除「不重複開列」這種同日單一事故合併敘述
+# （2026-09-22 實測：合併敘述會被無腦子串比對誤傷，只有跨日「已報過/昨日」才算違規）。
+_DUPLICATE_REASON = re.compile(r"(?<!不)重複|已報導|已報過|昨日|前日|前一日")
+
+
+def _strip_shell_markers(summary: str) -> str:
+    return _shell_marker_re().sub("", summary).strip()
+
+
+def _is_pure_shell(summary: str) -> bool:
+    """整段摘要剝完認得的標記後空無一物，才算「純殼」——只是含有標記但仍有其他
+    文字的摘要不算，那種情況該走一般的太短判斷，不冒用殼層訊息。"""
+    return summary.strip() != "" and _strip_shell_markers(summary) == ""
 
 
 def load_log(path: Path) -> list[dict]:
@@ -90,10 +126,18 @@ def _last_valid_rows(log_rows: list[dict], date: str) -> tuple[dict[str, dict], 
     return last, warnings
 
 
-def audit(gathered_items: list[dict], log_rows: list[dict], date: str) -> tuple[list[str], list[str]]:
-    """回傳 (阻斷級問題, 警示)。純函式，供測試與 CLI 共用。"""
+def audit(
+    gathered_items: list[dict], log_rows: list[dict], date: str, enforce_all: bool = False,
+) -> tuple[list[str], list[str]]:
+    """回傳 (阻斷級問題, 警示)。純函式，供測試與 CLI 共用。
+
+    `enforce_all`：殼層排除與重複理由兩條規則預設只對 `date >= ENFORCE_FROM` 阻斷，
+    生效日前的行降為警示（帳本 append only，舊行改不了，阻斷等於死鎖）；
+    設為 True 時對任何日期都阻斷，供追溯稽核／回放驗證用。
+    """
     last, warnings = _last_valid_rows(log_rows, date)
     problems: list[str] = []
+    effective_enforce = enforce_all or date >= ENFORCE_FROM
 
     for r in last.values():
         cats = r["categories"]
@@ -104,9 +148,16 @@ def audit(gathered_items: list[dict], log_rows: list[dict], date: str) -> tuple[
         if not cats:
             if not (r.get("reason") or "").strip():
                 problems.append(f"排除但沒寫理由：{title}")
+            reason = r.get("reason") or ""
+            if _DUPLICATE_REASON.search(reason):
+                msg = f"重複與否屬記者收錄判斷，不是分類理由：{title}"
+                (problems if effective_enforce else warnings).append(msg)
             summary = str(r.get("summary") or "")
             if _HTML_RESIDUE.search(summary):
                 problems.append(f"排除條目的 summary 殘留 HTML，複核記者讀不到內文{HTML_HINT}：{title}")
+            elif _is_pure_shell(summary):
+                msg = f"殼層摘要不得當排除依據，請以標題與 URL 判類派出：{title}"
+                (problems if effective_enforce else warnings).append(msg)
             elif len(summary.strip()) < MIN_SUMMARY:
                 problems.append(f"排除條目的 summary 太短（<{MIN_SUMMARY} 字），複核記者無從判斷：{title}")
 
@@ -130,9 +181,9 @@ def audit(gathered_items: list[dict], log_rows: list[dict], date: str) -> tuple[
     return problems, warnings
 
 
-def reconcile(gathered_items: list[dict], log_rows: list[dict], date: str) -> list[str]:
+def reconcile(gathered_items: list[dict], log_rows: list[dict], date: str, enforce_all: bool = False) -> list[str]:
     """只回阻斷級問題（空＝可派工）。"""
-    return audit(gathered_items, log_rows, date)[0]
+    return audit(gathered_items, log_rows, date, enforce_all)[0]
 
 
 def summarize(gathered_items: list[dict], log_rows: list[dict], date: str) -> dict:
@@ -174,6 +225,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--log", type=Path, default=LOG)
     ap.add_argument("--archive-dir", type=Path, default=ARCHIVE)
     ap.add_argument("--today", default=None, help="測試用：覆寫今天的日期")
+    ap.add_argument("--enforce-all", action="store_true",
+                     help=f"殼層排除／重複理由兩條規則預設只對 >= {ENFORCE_FROM} 阻斷，"
+                          "此旗標對任何日期都阻斷（追溯稽核用，帳本舊行仍改不了）")
     args = ap.parse_args(argv)
 
     try:
@@ -202,7 +256,7 @@ def main(argv: list[str] | None = None) -> int:
         return 3
 
     log_rows = load_log(args.log)
-    problems, warnings = audit(gathered, log_rows, args.date)
+    problems, warnings = audit(gathered, log_rows, args.date, args.enforce_all)
     stats = summarize(gathered, log_rows, args.date)
 
     if args.json:

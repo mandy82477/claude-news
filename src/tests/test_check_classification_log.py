@@ -127,6 +127,135 @@ class TestFiltering(unittest.TestCase):
         self.assertEqual(len(warnings), 2)
 
 
+DE = mod.ENFORCE_FROM  # 生效日當天或之後——兩條新規則預設也會阻斷，不必 --enforce-all
+GATHERED_E = [{"url": A, "title": "A"}, {"url": B, "title": "B"}, {"url": C, "title": "C"}]
+
+
+def row_e(url, cats, reason="", title="t", summary=OK_SUMMARY):
+    return row(url, cats, reason, date=DE, title=title, summary=summary)
+
+
+class TestShellSummaryNotAnExclusionBasis(unittest.TestCase):
+    """2026-09-25 事故：09-24 兩則 HN 討論串被 [dead]/[flagged] 後，摘要只剩殼層標記
+    （Tokenhush 23 字、per-step reasoning effort 20 字），舊版只量原始字數，都過了
+    MIN_SUMMARY=20 的關卡，被主編當「無可讀摘要」排除，wiki 全庫零命中。
+
+    帳本 append only、舊行改不了：新規則只對 `ENFORCE_FROM`（生效日）起的日期預設阻斷，
+    生效日前的舊行降為警示，用 `enforce_all=True` 才追溯阻斷——`DE`/`row_e` 系列測 default
+    生效後的阻斷，`D`/`row` 系列（沿用既有帳本起始日 2026-09-14，早於生效日）測舊行降級。"""
+
+    def test_pure_shell_summary_excluded_blocks_from_enforce_date(self):
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "無可讀摘要", summary="💬 [flagged]\n\n💬 [flagged]")]
+        problems = mod.reconcile(GATHERED_E, log, DE)
+        self.assertTrue(any("殼層摘要不得當排除依據" in p and "https" not in p for p in problems))
+
+    def test_mixed_shell_tags_summary_excluded_blocks_from_enforce_date(self):
+        """per-step reasoning effort 那則：[dead] 與 [flagged] 混用，一樣是純殼。"""
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "無可讀摘要", summary="💬 [dead]\n\n💬 [flagged]")]
+        problems = mod.reconcile(GATHERED_E, log, DE)
+        self.assertTrue(any("殼層摘要不得當排除依據" in p for p in problems))
+
+    def test_shell_summary_with_categories_passes(self):
+        """殼層摘要有分類（未被排除）就放行，不再要求摘要可讀——與生效日無關。"""
+        log = [row_e(A, ["功能"], summary="💬 [flagged]\n\n💬 [flagged]"),
+               row_e(B, ["商業"]), row_e(C, [], "x")]
+        self.assertEqual(mod.reconcile(GATHERED_E, log, DE), [])
+
+    def test_ledger_correction_by_append_still_passes(self):
+        """同一 URL append 一行補上真摘要與分類，最後一行勝出即可通過。"""
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "無可讀摘要", summary="💬 [flagged]\n\n💬 [flagged]"),
+               row_e(C, ["社群"], summary=OK_SUMMARY)]
+        self.assertEqual(mod.reconcile(GATHERED_E, log, DE), [])
+
+    def test_pre_enforce_date_downgrades_to_warning_by_default(self):
+        """2026-09-22／09-24 舊帳本：預設（不傳 enforce_all）不阻斷，只警示——
+        帳本 append only 改不了舊行，阻斷等於死鎖。"""
+        log = [row(A, ["功能"]), row(B, ["商業"]),
+               row(C, [], "無可讀摘要", summary="💬 [flagged]\n\n💬 [flagged]")]
+        problems, warnings = mod.audit(GATHERED, log, D)
+        self.assertEqual(problems, [])
+        self.assertTrue(any("殼層摘要不得當排除依據" in w for w in warnings))
+
+    def test_pre_enforce_date_still_blocks_with_enforce_all(self):
+        """追溯稽核旗標：--enforce-all 讓舊日期也阻斷，用來重放歷史事故。"""
+        log = [row(A, ["功能"]), row(B, ["商業"]),
+               row(C, [], "無可讀摘要", summary="💬 [flagged]\n\n💬 [flagged]")]
+        problems = mod.reconcile(GATHERED, log, D, enforce_all=True)
+        self.assertTrue(any("殼層摘要不得當排除依據" in p for p in problems))
+
+    def test_shell_marker_recognition_is_regex_sensitive(self):
+        """把可辨識的殼標記集合從 {flagged, dead, deleted} 窄化成只認 flagged 時，
+        混用 [dead] 的那則不再被判為「純殼」，且未剝殼的原始字數（20 字）不小於
+        MIN_SUMMARY，於是完全不再被點名——證明判定確實跟著標記集合走，不是寫死的
+        字串比對（09-24 per-step reasoning effort 那則的真實字數就是 20）。只含
+        [flagged] 的 Tokenhush 那則不含未被辨識的標記，不受窄化影響，仍判為純殼。"""
+        mixed = "💬 [dead]\n\n💬 [flagged]"  # 20 字，對照 per-step reasoning effort 真實摘要
+        pure_flagged = "💬 [flagged]\n\n💬 [flagged]"
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "無可讀摘要", summary=mixed)]
+
+        problems = mod.reconcile(GATHERED_E, log, DE)
+        self.assertTrue(any("殼層摘要不得當排除依據" in p for p in problems),
+                         "完整標記集合下，混用 [dead]/[flagged] 應判為純殼")
+
+        original_tags = mod._SHELL_TAGS
+        try:
+            mod._SHELL_TAGS = ("flagged",)
+            problems_narrowed = mod.reconcile(GATHERED_E, log, DE)
+            self.assertEqual(problems_narrowed, [],
+                              "窄化成只認 flagged 後，[dead] 不再被剝掉、原始字數已達門檻，不該再被點名")
+
+            log_pure_flagged = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+                                 row_e(C, [], "無可讀摘要", summary=pure_flagged)]
+            problems_pure = mod.reconcile(GATHERED_E, log_pure_flagged, DE)
+            self.assertTrue(any("殼層摘要不得當排除依據" in p for p in problems_pure),
+                             "只含 [flagged] 的純殼摘要不受標記集合窄化影響，仍判為純殼")
+        finally:
+            mod._SHELL_TAGS = original_tags
+
+
+class TestDuplicateReasonIsNotAClassificationDecision(unittest.TestCase):
+    """2026-09-22 事故：5 則以「與昨日日報已完整報導重複」為理由排除；重複與否是記者的
+    收錄判斷，分類表沒有這一格，主編不得拿它當分類排除理由。帳本舊行不可改，因此規則
+    只對 `ENFORCE_FROM` 起的日期預設阻斷，生效日前的舊行降為警示（見下方兩則生效日測試）。"""
+
+    def test_reason_citing_duplicate_blocks_from_enforce_date(self):
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "與昨日（09-21）日報已完整報導的同一事件重複，媒體覆述不重複收錄")]
+        problems = mod.reconcile(GATHERED_E, log, DE)
+        self.assertTrue(any("重複與否屬記者收錄判斷，不是分類理由" in p for p in problems))
+
+    def test_same_day_incident_consolidation_does_not_block(self):
+        """N-1：「不重複開列」是同一天單一事故的合併敘述，不是「先前已報過」，不算違規。"""
+        log = [row_e(A, ["功能"]), row_e(B, ["商業"]),
+               row_e(C, [], "與同日 status.claude.com 事件同一起事故的媒體覆述，事實已由該條收錄，不重複開列")]
+        self.assertEqual(mod.reconcile(GATHERED_E, log, DE), [])
+
+    def test_other_duplicate_phrasings_block_from_enforce_date(self):
+        for reason in ("與前日報導重複", "已報導過的事件", "前一日已報過"):
+            with self.subTest(reason=reason):
+                log = [row_e(A, ["功能"]), row_e(B, ["商業"]), row_e(C, [], reason)]
+                problems = mod.reconcile(GATHERED_E, log, DE)
+                self.assertTrue(any("不是分類理由" in p for p in problems), reason)
+
+    def test_pre_enforce_date_downgrades_to_warning_by_default(self):
+        """2026-09-22 舊帳本 5 則「重複」理由：預設不阻斷，只警示。"""
+        log = [row(A, ["功能"]), row(B, ["商業"]),
+               row(C, [], "與昨日（09-21）日報已完整報導的同一事件重複，媒體覆述不重複收錄")]
+        problems, warnings = mod.audit(GATHERED, log, D)
+        self.assertEqual(problems, [])
+        self.assertTrue(any("重複與否屬記者收錄判斷，不是分類理由" in w for w in warnings))
+
+    def test_pre_enforce_date_still_blocks_with_enforce_all(self):
+        log = [row(A, ["功能"]), row(B, ["商業"]),
+               row(C, [], "與昨日（09-21）日報已完整報導的同一事件重複，媒體覆述不重複收錄")]
+        problems = mod.reconcile(GATHERED, log, D, enforce_all=True)
+        self.assertTrue(any("重複與否屬記者收錄判斷，不是分類理由" in p for p in problems))
+
+
 class TestExcludedSummaryReadability(unittest.TestCase):
     def test_residue_html_blocks_only_on_excluded_rows(self):
         truncated = '<img alt="Built a cool way to visualize your Claude Code / Codex history" src="https://external-preview.redd.it/eW96'

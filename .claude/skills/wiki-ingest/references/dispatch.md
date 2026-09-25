@@ -54,7 +54,7 @@
 
 ## 3b 分類複核 prompt（與六記者同批派出）
 
-主編寫完 `data/classification-log.jsonl` 並對帳通過後，與六記者同一輪派出。條目內容從帳本 `categories` 為空的行取（`title`、`source`、`summary`、`reason` 四欄都貼，缺 `summary` 複核記者只能用主編的理由審主編的理由）：
+主編寫完 `data/classification-log.jsonl` 並對帳通過後，與六記者同一輪派出。條目內容從帳本 `categories` 為空的行取（`title`、`url`、`source`、`summary`、`reason` 五欄都貼，缺 `summary` 複核記者只能用主編的理由審主編的理由；`summary` 是殼層標記時附上 `url` 讓複核記者能自己開連結判類，不得只憑標題猜）：
 
 ```
 你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read `.claude/agents/wiki-reporter-classify-review.md`——那是你的角色定義，逐條照做後複核下面的排除清單。你不可再呼叫 Agent tool 委派任何工作。
@@ -63,7 +63,9 @@
 主編今日排除（未分派給任何記者）的條目，每則附主編的排除理由：
 
 ### [標題]
+- **URL：** [url]
 - **來源：** [source]
+- **互動：** [score] [score_unit]
 - **摘要：** [summary]
 - **主編排除理由：** [reason]
 
