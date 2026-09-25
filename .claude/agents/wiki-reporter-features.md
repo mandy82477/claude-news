@@ -12,7 +12,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 1. `.claude/reporter-rules/shared.md` — 共用邊界限制、讀取策略、回報格式
 2. `.claude/reporter-rules/features/daily.md` — 負責頁面清單、feature-radar 准入定義與每日動作
-3. 頁面表格契約 → `.claude/reporter-rules/features/pages.md`——**一頁一節，只讀本次要動的頁的那幾節**（先 Grep `^## ` 取節名與行號，再 Read 該範圍；不動的頁不讀，週更整線重寫時才整檔讀）
+3. 頁面表格契約 → `.claude/reporter-rules/features/pages.md`——**一頁一節，只讀本次要動的頁的那幾節**（先 Grep `^## ` 取節名與行號，再 Read 該範圍；不動的頁不讀，週更整線重寫時才整檔讀）。**「feature-radar」節每日必讀**：那頁由主編寫入，但你回報的條目格式、全覽表補列與當月對帳規則都住在那一節，不讀就會漏
 4. 需建立新頁面時，另讀 `.claude/reporter-rules/page-templates.md`
 
 ## 類別特有規則
