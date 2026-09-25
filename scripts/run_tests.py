@@ -5,30 +5,32 @@ run_tests.py — 執行 src/tests/ 下所有確定性單元測試（unittest dis
 只用標準庫，不依賴 pytest 或任何第三方套件。
 
 用法：
-    python scripts/run_tests.py
+    python scripts/run_tests.py            # 安靜模式（預設）：每道閘只印最後一行，紅了才印全文
+    python scripts/run_tests.py --verbose  # 舊行為：unittest 逐案例印、每道閘印完整報告
 
 行為：
     全部通過 → exit 0
     任何失敗／錯誤 → 印出失敗案例清單，exit 1
 
+為什麼預設安靜（2026-09-24）：本腳本一次輸出 2,000 多行（857 個測試逐案例一行、
+check_rules 報告 680 行、各閘存量 WARN 清單），任何 agent 把它整包讀進 context 就是
+50–60k token；今天 Phase C 收尾 agent 為此花了 162k。閘的消費端只需要 exit code 與
+最後一行（cloud runbook 心跳、web-publish 摘要都是抄最後一行），失敗時才需要全文。
+失敗清單格式「  FAIL: …」／「  ERROR: …」與各閘紅時的完整輸出維持不變——
+scripts/gate_web_build.py 與 .claude/hooks/check_tests_on_stop.py 靠它們判定。
+
 供 .claude/skills/web-publish/SKILL.md Step 4（建置 Web Reader）前置檢查呼叫：
 測試失敗時視同 Step 4 失敗，跳過 web build 與 web commit。
 
-跑完 unittest 全數通過後，另外執行 scripts/check_rules.py（.claude/commands、
-.claude/rules 與 .claude/reporter-rules 的規則一致性機械檢查）、scripts/check_arch_docs.py（架構文件
-來源清單/日期/charset/CSS token 漂移檢查）、scripts/check_weekly_ledger.py
-（週報預告帳本：漏收/判準遭改寫/殭屍條目/跳期）、scripts/check_wiki_freshness.py
-（頁面「最後新聞更新」宣稱 × 歸因記錄交叉比對：漏更/無從對照/欄位缺失）、
-scripts/check_feature_radar.py（feature-radar 當月詳細條目 ↔ 全覽表列對帳）與
-scripts/check_pending_markers.py（懸置標記語法：日期/符號對應/排版/探針品質/
-wikilink 目標存在/⟨Q-nn⟩ 雙向對帳）與 scripts/check_workflow_paths.py（GH Actions
-workflow 指名的產出路徑逐一驗存在，防 2026-09-04 那種「刪了檔沒刪登記 → git add
-exit 128 → 當天抓料整包不落地」）與 scripts/check_reader_language.py（讀者語言閘：
-內部維運用語外洩到 wiki 正文，只擋 data/reader-language-baseline.json 之外的新增）與
-scripts/check_skill_refs.py（skill 指路完整性：description、目錄形狀、references 孤兒／斷鏈）與
-scripts/check_cell_limits.py（字元上限機械閘：表格儲存格 >120／細節區條列 >200，只擋
-data/cell-limit-baseline.json 之外的新增超限）；任一失敗都會讓本腳本整體 exit 1。
+跑完 unittest 後，依序執行下列機械閘（任一失敗都讓本腳本整體 exit 1）：
+check_rules（規則一致性）、check_arch_docs（架構文件漂移）、check_weekly_ledger
+（週報預告帳本）、check_wiki_freshness（新鮮度宣稱 × 歸因）、check_feature_radar
+（radar 索引對帳）、check_pending_markers（懸置標記語法）、check_tools_page（決策表契約）、
+check_hierarchy（子故事階層）、check_workflow_paths（GH Actions 指名路徑）、
+check_reader_language（讀者語言閘）、check_cell_limits（字元上限閘）、check_skill_refs
+（skill 指路完整性）、check_css_overrides（CSS 靜默覆寫）。
 """
+import argparse
 import io
 import subprocess
 import sys
@@ -37,23 +39,49 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = REPO_ROOT / "src"
-CHECK_RULES = REPO_ROOT / "scripts" / "check_rules.py"
-CHECK_ARCH_DOCS = REPO_ROOT / "scripts" / "check_arch_docs.py"
-CHECK_WEEKLY_LEDGER = REPO_ROOT / "scripts" / "check_weekly_ledger.py"
-CHECK_WIKI_FRESHNESS = REPO_ROOT / "scripts" / "check_wiki_freshness.py"
-CHECK_FEATURE_RADAR = REPO_ROOT / "scripts" / "check_feature_radar.py"
-CHECK_PENDING_MARKERS = REPO_ROOT / "scripts" / "check_pending_markers.py"
-CHECK_TOOLS_PAGE = REPO_ROOT / "scripts" / "check_tools_page.py"
-CHECK_HIERARCHY = REPO_ROOT / "scripts" / "check_hierarchy.py"
-CHECK_WORKFLOW_PATHS = REPO_ROOT / "scripts" / "check_workflow_paths.py"
-CHECK_READER_LANGUAGE = REPO_ROOT / "scripts" / "check_reader_language.py"
-CHECK_CELL_LIMITS = REPO_ROOT / "scripts" / "check_cell_limits.py"
-CHECK_SKILL_REFS = REPO_ROOT / "scripts" / "check_skill_refs.py"
-CHECK_CSS_OVERRIDES = REPO_ROOT / "scripts" / "check_css_overrides.py"
+SCRIPTS = REPO_ROOT / "scripts"
 LAST_TESTS_OK = REPO_ROOT / ".claude" / ".last-tests-ok"
 
+# (腳本檔名, 缺檔時的 WARN 說明) —— 執行順序即列表順序
+GATES: list[tuple[str, str]] = [
+    ("check_rules.py", "規則一致性檢查"),
+    ("check_arch_docs.py", "架構文件漂移檢查"),
+    ("check_weekly_ledger.py", "週報帳本檢查"),
+    ("check_wiki_freshness.py", "wiki 新鮮度檢查"),
+    ("check_feature_radar.py", "feature-radar 對帳"),
+    ("check_pending_markers.py", "懸置標記語法檢查"),
+    ("check_tools_page.py", "tools 決策表契約檢查"),
+    ("check_hierarchy.py", "階層契約檢查"),
+    ("check_workflow_paths.py", "workflow 路徑檢查"),
+    ("check_reader_language.py", "讀者語言閘"),
+    ("check_cell_limits.py", "字元上限機械閘"),
+    ("check_skill_refs.py", "skill 指路完整性閘"),
+    ("check_css_overrides.py", "CSS 覆寫閘"),
+]
 
-def main() -> int:
+
+def summarize(name: str, stdout: str, stderr: str, returncode: int, verbose: bool) -> str:
+    """決定一道閘要印什麼。
+
+    verbose 或閘紅（returncode != 0）→ 原樣印全文（stdout＋stderr），消費端靠全文裡的
+    FAIL／❌ 行判定；閘綠且安靜 → 只印「[腳本名] 最後一個非空行」。
+    """
+    if verbose or returncode != 0:
+        out = "\n" + (stdout or "") + "\n"
+        if stderr:
+            out += stderr + "\n"
+        return out
+    lines = [ln for ln in (stdout or "").splitlines() if ln.strip()]
+    last = lines[-1] if lines else "（無輸出）"
+    return f"[{name}] {last}\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="跑全部單元測試與機械閘；預設安靜，--verbose 印全文")
+    ap.add_argument("--verbose", "-v", action="store_true", help="unittest 逐案例印、每道閘印完整報告（舊行為）")
+    args = ap.parse_args(argv)
+    verbose = args.verbose
+
     # Windows 預設 console/file 編碼常是 cp950，日報與 wiki fixture 含大量中文
     # 與 emoji，非 UTF-8 環境下讀檔／print 會壞掉，故此處手動包一層 UTF-8 stream，
     # 不依賴 PYTHONUTF8 環境變數（設定它對已啟動的直譯器 stdout 編碼無效）。
@@ -68,7 +96,8 @@ def main() -> int:
     loader = unittest.TestLoader()
     suite = loader.discover(start_dir=str(SRC_DIR / "tests"), pattern="test_*.py", top_level_dir=str(SRC_DIR))
 
-    runner = unittest.TextTestRunner(stream=stream, verbosity=2)
+    # 安靜模式 verbosity=0：只有失敗才印 traceback；verbose 才逐案例印一行
+    runner = unittest.TextTestRunner(stream=stream, verbosity=2 if verbose else 0)
     result = runner.run(suite)
 
     unit_ok = result.wasSuccessful()
@@ -82,189 +111,22 @@ def main() -> int:
             stream.write(f"  ERROR: {test}\n")
     stream.flush()
 
-    # 規則一致性機械檢查（commands / rules 的裸露引用、路徑存在性、錨點、同步配對）
-    rules_ok = True
-    if CHECK_RULES.exists():
-        proc = subprocess.run([sys.executable, str(CHECK_RULES)], capture_output=True, text=True, encoding="utf-8", errors="replace")
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        rules_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_RULES} 不存在，跳過規則一致性檢查\n")
-    stream.flush()
-
-    # 架構文件漂移機械檢查（來源清單 / 日期三處同步 / charset / CSS token）
-    arch_docs_ok = True
-    if CHECK_ARCH_DOCS.exists():
+    gates_ok = True
+    for script, label in GATES:
+        path = SCRIPTS / script
+        if not path.exists():
+            stream.write(f"\nWARN: {path} 不存在，跳過{label}\n")
+            stream.flush()
+            continue
         proc = subprocess.run(
-            [sys.executable, str(CHECK_ARCH_DOCS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
+            [sys.executable, str(path)], capture_output=True, text=True, encoding="utf-8", errors="replace"
         )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        arch_docs_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_ARCH_DOCS} 不存在，跳過架構文件漂移檢查\n")
-    stream.flush()
+        stream.write(summarize(script, proc.stdout, proc.stderr, proc.returncode, verbose))
+        stream.flush()
+        if proc.returncode != 0:
+            gates_ok = False
 
-    # 週報預告帳本一致性（漏收 / 判準遭改寫 / 殭屍條目 / 跳期 / 條數與查證線索）
-    weekly_ledger_ok = True
-    if CHECK_WEEKLY_LEDGER.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_WEEKLY_LEDGER)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        weekly_ledger_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_WEEKLY_LEDGER} 不存在，跳過週報帳本檢查\n")
-    stream.flush()
-
-    # wiki 新鮮度宣稱 × 歸因記錄交叉比對（漏更 / 無從對照 / 缺欄位）
-    freshness_ok = True
-    if CHECK_WIKI_FRESHNESS.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_WIKI_FRESHNESS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        freshness_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_WIKI_FRESHNESS} 不存在，跳過 wiki 新鮮度檢查\n")
-    stream.flush()
-
-    # feature-radar 索引層對帳（當月詳細條目 ↔ 全覽表列）
-    radar_ok = True
-    if CHECK_FEATURE_RADAR.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_FEATURE_RADAR)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        radar_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_FEATURE_RADAR} 不存在，跳過 feature-radar 對帳\n")
-    stream.flush()
-
-    # 懸置標記語法檢查（日期/符號對應/排版/探針品質/wikilink 目標存在/⟨Q-nn⟩ 雙向對帳）
-    pending_ok = True
-    if CHECK_PENDING_MARKERS.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_PENDING_MARKERS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        pending_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_PENDING_MARKERS} 不存在，跳過懸置標記語法檢查\n")
-    stream.flush()
-
-    # tools 決策表契約（數字帶日期／首選唯一——2026-09-02 改版的兩個讀者承諾）
-    tools_ok = True
-    if CHECK_TOOLS_PAGE.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_TOOLS_PAGE)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        tools_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_TOOLS_PAGE} 不存在，跳過 tools 決策表契約檢查\n")
-    stream.flush()
-
-    # 子故事階層契約（2026-09-03：扁平／上層有效／領域繼承／archive 掛父／hub 不落後／index 投影）
-    hierarchy_ok = True
-    if CHECK_HIERARCHY.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_HIERARCHY)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        hierarchy_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_HIERARCHY} 不存在，跳過階層契約檢查\n")
-    stream.flush()
-
-    # workflow 指名路徑存在性（2026-09-04：刪頁漏刪 git add 登記 → 抓料整包不落地）
-    workflow_paths_ok = True
-    if CHECK_WORKFLOW_PATHS.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_WORKFLOW_PATHS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        workflow_paths_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_WORKFLOW_PATHS} 不存在，跳過 workflow 路徑檢查\n")
-    stream.flush()
-
-    # 讀者語言閘（2026-09-05：內部維運用語外洩到讀者正文；只擋基線外的新增）
-    reader_lang_ok = True
-    if CHECK_READER_LANGUAGE.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_READER_LANGUAGE)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        reader_lang_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_READER_LANGUAGE} 不存在，跳過讀者語言閘\n")
-    stream.flush()
-
-    # 字元上限機械閘（2026-09-05：表格放結論、細節下沉；只擋基線外的新增超限）
-    cell_limits_ok = True
-    if CHECK_CELL_LIMITS.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_CELL_LIMITS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        cell_limits_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_CELL_LIMITS} 不存在，跳過字元上限機械閘\n")
-    stream.flush()
-
-    # skill 指路完整性閘（2026-09-13：SKILL-PRINCIPLES——description ≤100、目錄形狀、references 無孤兒無斷鏈）
-    skill_refs_ok = True
-    if CHECK_SKILL_REFS.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_SKILL_REFS)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        skill_refs_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_SKILL_REFS} 不存在，跳過 skill 指路完整性閘\n")
-    stream.flush()
-
-    # CSS 靜默覆寫閘（2026-09-14：同特異度靠源順序決勝，一輪內命中六次的事故偵測器）
-    css_overrides_ok = True
-    if CHECK_CSS_OVERRIDES.exists():
-        proc = subprocess.run(
-            [sys.executable, str(CHECK_CSS_OVERRIDES)], capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        stream.write("\n" + (proc.stdout or "") + "\n")
-        if proc.stderr:
-            stream.write(proc.stderr + "\n")
-        css_overrides_ok = proc.returncode == 0
-    else:
-        stream.write(f"\nWARN: {CHECK_CSS_OVERRIDES} 不存在，跳過 CSS 覆寫閘\n")
-    stream.flush()
-
-    all_ok = (unit_ok and rules_ok and arch_docs_ok and weekly_ledger_ok
-              and freshness_ok and radar_ok and pending_ok and tools_ok and hierarchy_ok
-              and workflow_paths_ok and reader_lang_ok and cell_limits_ok and skill_refs_ok and css_overrides_ok)
+    all_ok = unit_ok and gates_ok
     if all_ok:
         # 全綠記號：.claude/hooks/check_tests_on_stop.py 用 mtime 比對，
         # 髒檔都比它舊就不必在每次 Stop 重跑整套測試（見 .claude/rules/dev-done.md）
