@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-24"
-last_news_update: "2026-09-24"
+last_updated: "2026-09-25"
+last_news_update: "2026-09-25"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **最新工作流模式**（2026-09-24）
-> - **Skills 設計、創意工具 Agent 整合各添一例**：open-seo-mcp-skills 串真實 GSC／GA4 數據做 SEO 稽核；bang-motion 瀏覽器動態圖形 skill 跨 Claude Code／Codex／Gemini CLI／Cursor。
+> **最新工作流模式**（2026-09-25）
+> - **Multi-agent 架構、記憶與知識管理各添一例**：amux 開源控制平面平行調度 Claude Code／Codex／Gemini worker；second-brain-os 自我維護的 Obsidian＋Claude Code 知識庫。Show HN Whiteboard（YC W26，HN 358 分）讓人類與 agent 共用畫布討論架構。
 
 ---
 
@@ -51,12 +51,12 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-25 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、open-seo-mcp-skills（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-24 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-23 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **記憶與知識管理** | claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code、second-brain-os（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-25 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
-| **記憶與知識管理** | Core Memory Packet、claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-20 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
@@ -162,6 +162,42 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### Show HN: Whiteboard（YC W26）——人類與 agent 共用畫布討論架構，整合既有 CLI coding agent（2026-09-25）
+
+- **主線：** —
+- **核心模式：** 開源桌面應用，讓人類與 agent 共用一塊畫布討論系統架構；直接整合 Claude Code、Codex 等既有 CLI agent，並提供 SDK 讓 agent 把工作畫到畫布上；原型曾用 HTML artifact，因規格圖與程式碼難連動而改建在 CodeOSS 之上；團隊 Sid、Alex、Ketan、Milan；HN 358 分，2 個來源同日報導。
+- **與既有模式的關係：** 現有代表技巧聚焦 agent 之間或 agent 與工具鏈協作，本則是「人類與 agent 共用視覺化畫布」取向，機制不重疊，暫不併入既有列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 358 分、2 個來源同日報導，訊號扎實；GitHub repo 可查，YC W26 團隊具名，未見獨立第三方復現或採用回饋數據。
+- **來源：** Hacker News；[GitHub](https://github.com/devdotfast/whiteboard)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊產品發表，尚無社群採用回饋數據）
+
+#### mixpeek/amux：開源 AI coding agent 控制平面，共享看板調度 Claude Code／Codex／Gemini 平行 worker（2026-09-25）
+
+- **主線：** 並行規模
+- **核心模式：** 開源、單一 Rust 二進位檔的 AI coding agent 控制平面，平行執行 Claude Code、Codex、Gemini worker，共用任務看板、原子任務、排程、循環、來源標記訊息、模型切換與自我修復；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧一個「跨廠商共享看板調度」取向代表技巧，既有做法多鎖定單一 harness，本則橫跨三種 worker；並行 agent 調度屬大型 codebase 特有痛點，主線填並行規模。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/mixpeek/amux)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### undefined-ui/second-brain-os：自我維護的 AI second brain，Claude Code＋Obsidian 自組織知識庫（2026-09-25）
+
+- **主線：** 索引記憶
+- **核心模式：** 「AI second brain that maintains itself」，附完整指南、起始 vault、agent skills 與腳本，在 Claude Code 與 Obsidian 上建立自組織知識庫；GitHub Search 517 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「Obsidian vault 當 Claude Code 記憶層」取向實作，與 2026-08-24 已收「手動維護 Obsidian vault 取代 Claude Code 內建自動記憶」同屬一線、本則號稱自我維護；跨 session 記憶屬大型 codebase 特有痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證；與 [[topics/llm-wiki-pattern]] 現有實作路線同屬 Obsidian vault 取向，是否為新路線待查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/undefined-ui/second-brain-os)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### 同日三款 Claude Code／Codex 用量監控工具：codenotch（macOS 選單列釘選）、Armada（跨帳號側欄）、token-tracker（狀態列＋熱力圖＋成本分析）（2026-09-25）
+
+- **主線：** —
+- **核心模式：** codenotch（macOS app 釘選 Claude Code／Cursor／Codex／Antigravity 用量上限於螢幕邊緣，2,487★）、Armada（macOS 選單列顯示多帳號 session 狀態與配額，HN 1 分）、token-tracker（Claude Code／Codex 本地 token 追蹤，狀態列＋熱力圖＋成本分析，523★）。
+- **與既有模式的關係：** 此類用量監控工具持續每隔數天出現新實作（如 07-03 額度監控工具生態、09-20 Usage-Monitor、09-16 TokenEater），模式概覽表無對應類別收留；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** codenotch 與 token-tracker 有 GitHub Search 星數但無 forks／issues／近期 commit 佐證；Armada 僅 HN 1 分、單一來源，訊號薄弱，僅記錄其存在。
+- **來源：** GitHub Search；[codenotch](https://github.com/vinzdg/codenotch)（2,487★）、[token-tracker](https://github.com/stormzhang/token-tracker)（523★）；Hacker News；[Armada](https://armada.mgcrea.io/)（1 分）
+- **成熟度：** ⏳ 新興（三款皆為本庫近期收錄的同類工具之一，尚無社群採用回饋數據）
 
 #### Ryze-AI-Adgent/open-seo-mcp-skills：免費 SEO MCP 伺服器＋開源 SEO／GEO Claude skills，串真實 GSC／GA4／廣告數據（2026-09-24）
 

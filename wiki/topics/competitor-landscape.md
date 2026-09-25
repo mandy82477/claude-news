@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **本週衝擊**（2026-09-24）
-> - 🔴 **GitHub Copilot 持續加碼企業信任功能**：code review 新增個人化設定＋企業層級預設，全面 GA（09-23）；疊加本地沙箱／OTel／JetBrains 工具核准（09-22），GitHub 官方 changelog——Claude Code 均無對應設定，企業採購比較時會被問到。
+> **本週衝擊**（2026-09-25）
+> - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
 > - 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。
 
 ---
@@ -49,13 +49,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
-| **Microsoft／GitHub** 🏢 | Code review 新增個人化設定＋企業層級預設全面 GA（09-23）；另有本地沙箱／OTel／JetBrains 1.18 工具核准（09-22）→ Claude Code 目前均無對應設定，企業信任功能持續追平 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；HydraFusion 降本宣稱（09-04）仍缺品質基準對照，自研模型取代動機已獲官方高層證實（09-20 查證） |
+| **Microsoft／GitHub** 🏢 | GA 功能於 Business/Enterprise 帳號預設開啟（09-24）；Microsoft 推出 all-in-one Copilot app 劍指 Anthropic／OpenAI（09-25）→ Claude 缺對應統一入口 | 能力 | 🔴 | GitHub 官方 changelog 一手＋CNBC／GeekWire 跨 2 媒體；all-in-one app 整合範疇、上線時程未載 |
 | **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
-| **Google（Gemini）** 🏢 | Gemini 3.8 Live／Extended Thinking 推出語音 agent 與近即時多步推理（09-15）→ 評估語音場景時多一個對照對象；另有低價企業方案劍指 Anthropic（08-27） | 能力 | 🟡 | DeepMind 官方部落格一手；企業方案為 Google Cloud 消費制計費，非固定席位價（2026-09-20 查證 ⟨Q-06⟩，見下方細節） |
+| **Google（Gemini）** 🏢 | Gemini 3.8 Live 新增 Live Avatar 即時視覺化身，鎖定企業客服與互動導覽（09-25）→ Claude 無同類功能，語音場景外再添對照維度 | 能力 | 🟡 | DeepMind 官方部落格一手；Live Avatar 上線時程、定價未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
@@ -151,13 +151,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
-- 09-23：code review 新增個人化設定選項、擴大適用方案，並提供企業層級預設，全面 GA。
-- 09-22／23：本地沙箱（限制未預期指令存取檔案／網路／憑證）、OpenTelemetry 納入企業管理設定、JetBrains 1.18 新增 AI 工具核准與組織共享技能／指令——**Claude Code 目前均無對應設定**。
-- 09-19 code review 改版＋10/19 起停用部分模型；09-17 官方 changelog 三連發：預算增加請求開放、Impact Dashboard、CLI 用量指標——企業管理可見度全面加強。
+- 09-24／25：GA 功能於 Business/Enterprise 帳號推出全域預設開啟政策；同日 Microsoft 推出 all-in-one Copilot app 整合旗下商用 AI，CNBC／GeekWire 稱劍指 Anthropic 與 OpenAI——**Claude Code 目前均無對應設定或統一整合入口**。
+- 09-22／23：本地沙箱（限制未預期指令存取檔案／網路／憑證）、OpenTelemetry 納入企業管理設定、JetBrains 1.18 新增 AI 工具核准與組織共享技能／指令、code review 新增個人化設定選項全面 GA。
 - 已查證（09-20）：自研模型取代已獲官方高層證實動機（首席 AI 官 Suleyman 公開發言），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
 **還沒解決**
-- 沙箱與 OTel 設定細節、JetBrains 版本適用範圍、停用模型清單均未見完整報導。
-- code review 個人化設定的具體項目、擴大後適用哪些方案層級均未見細節。
+- 沙箱與 OTel 設定細節、JetBrains 版本適用範圍、code review 個人化設定具體項目均未見完整報導。
+- all-in-one Copilot app 的整合範疇、定價與上線時程未載；GA 預設開啟政策原文提及「未來兩個」功能尚待補完（截斷）。
 
 ### Zhipu Z.AI
 **現在的答案**
@@ -216,6 +215,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-25
+- **Microsoft／GitHub**：CNBC／GeekWire 報導 Microsoft 推出 all-in-one Copilot app，整合旗下商用 AI 功能，劍指 Anthropic 與 OpenAI，盼加速企業採用；詳見「對手雷達」與「雷達細節」更新（Google News/CNBC；Google News/GeekWire）
+- **Microsoft／GitHub**：GitHub 官方 changelog 宣布 Copilot Business／Enterprise 帳號推出全域預設開啟政策，涵蓋已 GA 功能與支援的用戶端能力；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）
+- **Google（Gemini）**：DeepMind 官方部落格發布 Gemini 3.8 Live 的 Live Avatar 即時視覺化身功能，鎖定企業客服與互動導覽情境；詳見「對手雷達」列更新（Blog/Google DeepMind Blog）
 
 ### 2026-09-23
 - **Microsoft／GitHub**：Copilot code review 新增個人化設定選項、擴大適用方案並提供企業層級預設，全面 GA；詳見「對手雷達」與「雷達細節」更新（Blog/GitHub Copilot Changelog）

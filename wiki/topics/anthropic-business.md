@@ -322,7 +322,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
-- **Akamai**（2026-09-25）：簽署 7 年、116 億美元運算合約，Akamai 供應 CPU 算力；Akamai 同時發出認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股，另有報導稱總值 120 億美元（Hacker News；Google News/Bloomberg.com；Google News/WSJ；Google News/Investor's Business Daily；Reddit/r/ClaudeAI）
+- **Akamai**（2026-09-25）：簽署 7 年、116 億美元運算合約，供應 CPU 算力；認股權證可認購約 770 萬股 Akamai 股票，另有報導稱總值 120 億美元（Bloomberg；WSJ；IBD；Reddit）
 - **Basecamp**（2026-09-24）：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資，用於推進 AI 輔助藥物設計，具體投資額度與角色未見細節（Google News/BioSpace）
 - **Adobe**（2026-09-24）：Adobe 把 Acrobat 帶進 Claude 生態，同批對 Google Gemini 開放存取，具體整合範疇與計費未見報導（Google News/9to5mac.com）
 - **Oracle**（2026-09-23）：Oracle 官方部落格說明如何串接 Claude 至 Oracle Integration 工具，具體功能範疇未見報導（Google News/Oracle Blogs）
@@ -509,7 +509,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ### 2026-09
 
 #### 2026-09-25
-- **[戰略合作] Bloomberg：Anthropic 與 Akamai 簽署 7 年、116 億美元運算合約，取得 CPU 算力**：Akamai 同時發出認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股，另有報導以「120 億美元」總值口徑呈現；詳見「哪個合作會改到你用的 Claude」清單新增列（Hacker News；Google News/Bloomberg.com；Google News/WSJ；Google News/Investor's Business Daily；Reddit/r/ClaudeAI）
+- **[戰略合作] Bloomberg：Anthropic 與 Akamai 簽署 7 年、116 億美元運算合約，取得 CPU 算力**：認股權證可認購約 770 萬股 Akamai 股票，另有報導以「120 億美元」總值呈現；詳見一行制清單（Hacker News；Google News/WSJ；Reddit）
 
 #### 2026-09-24
 - **[戰略合作] BioSpace：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資**：用於推進 AI 輔助藥物設計，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/BioSpace）

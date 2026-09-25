@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
-- **官方文件更新**（2026-09-25）：桌面版文件新增段落——本機與 SSH session 現在會自動載入使用者 claude.ai 帳號已啟用的 skills 與 plugins；桌面版 plugin 瀏覽器在雲端 session 不可用，透過桌面應用安裝的 plugin 也不會同步到雲端 session（[原文](https://code.claude.com/docs/en/desktop.md)）。與 09-17 下方 skills/plugins 載入路徑記錄同屬帳號統一方向的延伸；[[entities/claude-skills]] 同步收錄。
+- **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
 - **官方文件更新**（2026-09-17）：終端機 session 載入 claude.ai 帳號 skills/plugins——本機讀個人 `~/.claude/skills/`，雲端改讀帳號設定，SSH 讀本機路徑（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -729,7 +729,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定、啟動通知、`/status` 異動（原文截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失，見 [[topics/claude-code-experimental]]。桌面版文件新增本機／SSH session 自動載入帳號 skills/plugins、雲端 session 不可見桌面裝的 plugin。 |
+| 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定（截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失。桌面文件：本機/SSH 自動載入帳號 skills/plugins。 |
 | 2026-09-24 | **v2.1.281**：desktop policy 新設定；旗標增 9。新增 #60366（hi 誤判）併入 Usage Policy。互動更新：#63903、#8451、#12925。 |
 | 2026-09-23 | **v2.1.280**：Opus 5.5 成新預設模型。AGENTS.md 補 telemetry 成因（#95690）。修正 v2.1.233 斷句誤導。互動數更新：#4953、#91188。 |
 | 2026-09-20 | 新增已知問題 2 則：Cowork device_bash 失效（#92958）、Plugin4Shell 跨 agent RCE（僅標題可用）。GitSpawn 補記 v2.1.196 部分修補。 |

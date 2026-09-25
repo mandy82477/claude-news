@@ -91,7 +91,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | | v2.1.178：Skills 在巢狀子 Agent 中可正常運作（搭配新版 `Tool(param:value)` permission 語法） | 2026-06-16 |
 | 官方設計指南 | 《Lessons from building Claude Code: How we use skills》——內部數百個 Skills 的實戰心得 | 2026-06-05 |
 | | 《七種指令傳遞方法》——Skills 與 CLAUDE.md/rules/subagents/hooks/output styles/system prompt append 六層控制的定位框架 | 2026-06-21 |
-| 分享／同步機制 | 官方文件索引新增 22 頁、移除 9 頁，新增含「Create a marketplace」「Host and maintain a marketplace」「Plugin dependencies」「Plugin commands reference」等自架市集與 plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
+| 分享／同步機制 | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
 | | ✅ **已有官方市集**（2026-08-08 查證官方文件更正）：`claude-plugins-official`（Anthropic 策展，首次互動啟動時自動註冊）與 `claude-plugins-community`（第三方送審後上架，需自行 `/plugin marketplace add`）；目錄另可於 [claude.com/plugins](https://claude.com/plugins) 瀏覽，送審有自動驗證與安全篩查。**創作者變現機制仍缺** | 市集已就位；變現無官方時程 |
 | | Enterprise 方案可開啟 skill／plugin 安全掃描（beta），第三方 skill／plugin 上傳或編輯時自動檢查惡意內容 | 2026-08-06 |
 | 行為變更 | v2.1.215：`/verify` 與 `/code-review` 兩項官方技能不再由 Claude 自動觸發，須使用者手動呼叫指令才會執行；與上方「機制本身」列所述「依描述語意自動觸發、無需手動呼叫」的通則產生例外，依賴自動驗證/審查的既有工作流需改為顯式呼叫，無過渡期即刻生效。詳見 [[entities/claude-code]] 版本表 | 2026-07-19 |
@@ -125,7 +125,8 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 - [Claude Code v2.1.169 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.169)（2026-06-09）
 - [Claude Code v2.1.178 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.178)（2026-06-16）
 - [Show HN: Claudinho — Find and Install Claude Skills](https://www.claudinho.xyz/)（2026-06-03）
-- [[news/2026-04-27]]、[[news/2026-05-17]]、[[news/2026-05-20]]、[[news/2026-05-24]]、[[news/2026-05-27]]、[[news/2026-05-31]]、[[news/2026-06-05]]、[[news/2026-06-09]]、[[news/2026-06-16]]、[[news/2026-06-21]]、[[news/2026-07-15]]、[[news/2026-08-18]]、[[news/2026-08-19]]、[[news/2026-09-25]]
+- [[news/2026-04-27]]、[[news/2026-05-17]]、[[news/2026-05-20]]、[[news/2026-05-24]]、[[news/2026-05-27]]、[[news/2026-05-31]]、[[news/2026-06-05]]、[[news/2026-06-09]]、[[news/2026-06-16]]、[[news/2026-06-21]]、[[news/2026-07-15]]、[[news/2026-08-18]]、[[news/2026-08-19]]
+- [[news/2026-09-25]]
 
 ## 歷史記錄
 
