@@ -11,6 +11,7 @@
 | 區塊標題 emoji（📌⭐🔧💰📰💬🧭📡） | `build_web.py` SECTION_EMOJI → JSON key（`app.js` 消費的是 key，不是 emoji） | 該區塊整段不進網站，且被吞進前一區的 body |
 | 標頭 `**日期：** … \| **來源：** X/10 \| **文章數：** N \| **更新時間：** …` | `build_web.py` header_re／gen_re／src_count_re | 日期／文章數／來源比全部落空（`test_digest_contract.py` 會擋） |
 | 聚焦行 `- **[標籤]** 說明（[來源名](url)）` | `build_web.py` FOCUS_RE／FOCUS_INLINE_LINK_RE／FOCUS_INLINE_GROUP_RE、`app.js` focus 渲染 | 裸 markdown 上站、badge 全站消失 |
+| 續報標記 `**[持續追蹤]** （續 MM-DD）`（全形括號、「續」後一個半形空格） | `scripts/check_focus.py` CONT_RE | 續報被當成重登擋下 |
 | 條目三行式：`**[標題](url)**`＋說明＋`` `來源` · MM/DD HH:MM UTC``（討論區末加 `情緒：`） | `build_web.py` STORY_RE／SOURCE_RE、3a 自檢 | 條目解析不到，整則消失 |
 | 🧭 行 `- **[標題](url)** — 說明（→ 專頁名）` | `build_web.py` TOPIC_RADAR_RE | 雷達區不進網站 |
 | 📡 表 `\| 來源 \| ✅/❌ \| 條數 \|` | `build_web.py` SOURCE_TABLE_RE、3b 自檢、lint 6e | 來源健康檢查斷炊 |

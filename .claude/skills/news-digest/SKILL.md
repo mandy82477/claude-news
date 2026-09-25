@@ -42,6 +42,14 @@ PYTHON REPO_ROOT\scripts\check_gather_health.py
 
 讀取 `src/gathered_items.json`。
 
+## 1a. 前幾天的聚焦（強制，生成前先做）
+
+```
+PYTHON REPO_ROOT\scripts\check_focus.py TARGET_DATE --list
+```
+
+印出前 5 份日報的聚焦。挑今天聚焦時逐條對照：同一件事（即使換了媒體、換了說法）照 `selection.md`「📌 今日聚焦」的跨日規則處理。
+
 ## 2. 生成
 
 直接用繁體中文生成日報 Markdown（**不呼叫任何外部 API**）：骨架與語氣分寸照 `.claude/skills/news-digest/references/format.md`，各區塊收什麼照 `.claude/skills/news-digest/references/selection.md`。
@@ -63,6 +71,14 @@ grep -cE '^\*\*\[.+\]\(https?://' news/TARGET_DATE.md
 ## 3a-2. 內規外洩自檢（強制）
 
 對 `news/TARGET_DATE.md` 跑 `.claude/skills/news-digest/references/selection.md`「禁詞清單」節的 grep，**應為零命中**；有命中就刪除該段再檢。
+
+## 3a-3. 聚焦跨日重複閘（強制）
+
+```
+PYTHON REPO_ROOT\scripts\check_focus.py TARGET_DATE
+```
+
+exit 0 才往下。列出的每一項照提示改：沒有新進展的移出聚焦，有新進展的改 `[持續追蹤]（續 MM-DD）` 並寫出新在哪，連結標籤改成真正的出處；改完重跑。字面相似抓不到換說法的重登，那部分靠 1a。
 
 ## 3b. 來源狀態表存在性檢查（強制）
 
