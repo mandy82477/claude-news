@@ -104,7 +104,7 @@
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 10 場：5 場還在吵、2 場已有共識、3 場僵住，每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
-| [[topics/llm-wiki-pattern]] | 🌐 社群 | ongoing | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面六種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
+| [[topics/llm-wiki-pattern]] | 🌐 社群 | ongoing | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面八種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]]　↳ 子故事：[[topics/safety-china-trust-dispute-archive]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界，惡意 `.git` 跨廠可觸發程式碼執行　↳ 子故事：[[topics/ai-agent-safety-archive]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動，其中香港存取限制、輸出浮水印、高風險請求換 Opus 4.8 已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |

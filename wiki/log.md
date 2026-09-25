@@ -6818,3 +6818,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 **查明：** Tencent/WeKnora（LLM 知識平台：RAG＋agent＋自維護 Wiki，29.8k★、本週 +3.5k、2025-07 出生）從未進過任何抓料窗口：A／B 窗三條 query 綁 `claude`，C 窗四條 scope 不含它，D 窗需 HN ≥100（它只有 2 分），E 窗星速只算曾被看見的 repo；它提到 Claude 的那句只在 README，GitHub 搜尋不掃 README。規模榜「知識策展」三條 query（`"llm wiki"`／`karpathy wiki`／`documentation … claude`）也撈不到。
 
 **處置：** `--probe` 六條候選（見 `data/skill_interest_watch.json` 該類 `why`），`rag wiki in:description` 辨識力最好（stars≥1000 四筆三切題），上線排第一；快照重跑後 WeKnora 進榜、星數紀錄從此有它（E 窗可算星速）。**未寫進日報或 wiki 頁**：它與 Claude 生態的關係只有「可當 MCP 知識源接進 Claude」，不達收錄範圍；是否以使用者提問通道寫進 [[topics/llm-wiki-pattern]]「外面的實作」待使用者裁示。歸因 `user-query`。
+
+## 2026-09-25 Query：「WeKnora 收進 llm-wiki-pattern 嗎」→ 收，作為第八種路線（對照組）
+
+- `topics/llm-wiki-pattern.md`「外面的實作」補 Tencent/WeKnora（29,861 星／4,013 fork／608 open issues，2025-07-22 建，README 稱 MIT，GitHub API license 欄未判定）：同一文件庫餵 RAG 問答、推理 agent 與自動生成 wiki 三種用法；wiki 層抽人物／產品／概念成頁附引用，支援瀏覽器編輯、diff、回滾；進料走 Feishu／Confluence／GitLab／Notion／RSS 同步。歸入「wiki 是向量 RAG 副產品」的反向路線，「刻意不做向量搜尋」節補它為另一側參照；callout、摘要、時序同步，index 鉤子六種→八種。
+- 使用者裁決：09-25 前一則 Query 留待裁示的「是否以提問通道寫進本頁」，本則裁定收。與 Claude 的接點只有內建 MCP Server，不進日報。
+- 來源：[Tencent/WeKnora README](https://github.com/Tencent/WeKnora)、GitHub REST API repos 端點（皆 2026-09-25 查證）。
+
+**歸因**：`user-query`

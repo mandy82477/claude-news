@@ -3,17 +3,17 @@ page: "topics/llm-wiki-pattern"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-19"
-last_news_update: "2026-09-14"
+last_updated: "2026-09-25"
+last_news_update: "2026-09-25"
 status_main: "ongoing"
-days_since_news: 10
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 10
+days_since_news_subtree: 0
 inbound_links: 3
-attribution_count: 7
-attribution_last: "2026-09-14"
+attribution_count: 8
+attribution_last: "2026-09-25"
 top_source: "user-query"
 pending_count: 0
 pending_overdue: 0
@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** LLM Wiki, Karpathy wiki
 **蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 **開始日期：** 2026-09-12
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-14
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **最新動態**（2026-09-14）
-> Karpathy 四月提出的三層 wiki 模式已長出六種公開實作，最新一種是打包成可安裝 skill 的 Astro-Han/karpathy-llm-wiki（2.2k 星）；本庫對照三層骨架與三個動作齊備——查詢層 `/wiki-query` 已於 09-12 補上，仍缺機器可讀的查證日與信心欄位。
+> **最新動態**（2026-09-25）
+> 第八種路線 Tencent/WeKnora（29.9k 星，這一類最大）走反方向：wiki 由文件庫自動生成、是向量 RAG 的副產品，不是 agent 寫入時合成；與 Claude 只靠內建 MCP Server 相接。
 
 ---
 
 ## 摘要
 
-Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六種路線互異的公開實作，從個人生產版到可安裝的通用 skill。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，2026-09-12 已補上 `/wiki-query`（六路分流、答案契約、答案回流），現在真正缺的是頁面沒有機器讀得懂的查證日與信心欄位。
+Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少八種路線互異的公開實作，從個人生產版、可安裝的通用 skill，到把 wiki 當 RAG 副產品的企業平台。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，2026-09-12 已補上 `/wiki-query`（六路分流、答案契約、答案回流），現在真正缺的是頁面沒有機器讀得懂的查證日與信心欄位。
 
 ## 這個模式長什麼樣
 
@@ -57,7 +57,7 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六�
 
 ## 外面的實作
 
-七種路線各挑一個最有辨識度的設計，細節與出處一起放（除註明者外皆 2026-09-12 查證）：
+八種路線各挑一個最有辨識度的設計，細節與出處一起放（除註明者外皆 2026-09-12 查證）：
 
 - **Karpathy 原始模式**（2026-04 一則 X 貼文＋一份 gist，數日內 5,000+ 星）：規則檔當 schema；三層與三動作都在，但動作全是手動貼 prompt，沒有機制。整理版本見 [Karpathy's pattern for an LLM wiki in production](https://aaronfulkerson.com/2026/04/12/karpathys-pattern-for-an-llm-wiki-in-production/)。
 - **Fulkerson 生產版**（個人生產環境）：學習迴路有「畢業」機制，規則穩定後就從提示裡移出；另四處延伸是即時資料源取代檔案投遞、指令路由取代臨場 prompt、hook 強制、工作流副作用自動增益。作者回頭對照原始 gist 才發現自己缺全庫整理、目錄、活動 log、來源溯源（同上連結）。
@@ -71,6 +71,10 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六�
 - **Astro-Han/karpathy-llm-wiki**（可安裝的 Agent Skill，2,218 星／261 fork，MIT；2026-09-13 查證）：一行 `npx add-skill Astro-Han/karpathy-llm-wiki` 裝進支援 Agent Skills 的工具（[GitHub](https://github.com/Astro-Han/karpathy-llm-wiki)）。
   - `raw/`／`wiki/`／`index.md`／`log.md` 四件套與 Ingest／Query／Lint 三動作都是通用指令；作者自己的 wiki 從 2026-04 維護至今 94 頁／99 個來源。
   - 與前六者的差別是它不是某個人的 wiki，而是任何人拿來起自己 wiki 的殼；README 把自己對比 RAG，知識在寫入時合成而非每次查詢重推。本庫 09-12 的 skill-interest-watch 探針即由它命中，見 [[topics/skill-interest-watch]]。
+
+- **Tencent/WeKnora**（企業知識平台，29.9k 星／4.0k fork，2025-07 建，README 稱 MIT；2026-09-25 查證）：同一批文件同時餵三種用法——帶引用的 RAG 問答、多步推理 agent、**自動生成的 wiki**（[GitHub](https://github.com/Tencent/WeKnora)）。
+  - wiki 層從文件抽出人物、產品、概念成頁並附來源引用，按目錄組織；支援瀏覽器內編輯、版本 diff 與回滾。進料靠 Feishu／Confluence／GitLab／Notion／RSS 自動同步，不是人工投遞。
+  - 與前七者的差別：wiki 是檢索系統的副產品——向量檢索是主路徑，wiki 只是同一份索引的另一種瀏覽面；Karpathy 模式反過來，寫入時合成、查詢不重推。與 Claude 的接點只有內建 MCP Server 可把知識庫發給 Claude 等 MCP 客戶端。本庫規模榜 09-25 起才撈得到它，見 [[topics/skill-interest-watch]]。
 
 這一類現在誰大、誰在漲，本頁不抄榜——見 [[topics/skill-interest-watch]] 的「LLM 知識庫／文件策展／知識傳承」類每日快照。
 
@@ -98,7 +102,7 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六�
 
 **刻意不做的三件**
 
-- **向量搜尋**：Jim Liu 實測 500 頁以下 grep 更快，本庫 70 餘頁遠在那條線以下（2026-09-12 查證）。
+- **向量搜尋**：Jim Liu 實測 500 頁以下 grep 更快，本庫 70 餘頁遠在那條線以下（2026-09-12 查證）。WeKnora 是這條線另一側的參照：企業級文件量、多租戶、wiki 只是向量索引的瀏覽面，那是它需要向量的理由，不是本庫的。
   - 2026-09-14 補了一層**詞彙**檢索（`scripts/wiki_search.py`：BM25＋同義叢集＋wikilink 圖擴散一跳，零依賴）。BM25 是詞彙排序不是語意向量，這條界線沒有移動。
   - 加的理由不是 grep 慢，是挑候選的方式錯：第 2 路原本靠 `index.md` 一句摘要篩頁，摘要不含正文用詞就整頁看不見（問「agent 視覺化」，答案頁寫「可觀測性」，兩輪都答沒有）。
 - **AI-first vault**：Ghelbur 的頁面是寫給模型讀的；本站讀者是人，網站與頁面刻意往相反方向調。
@@ -120,6 +124,10 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少六�
 - [nex-crm/wuphf](https://github.com/nex-crm/wuphf)——多 agent 共腦的出處 metadata（2026-09-12 查證）
 
 ## 時序
+
+### 2026-09-25
+
+- 補第八種路線 Tencent/WeKnora（使用者提問，查證其 README 與 GitHub API）：企業知識平台，wiki 由文件庫自動生成、附引用與版本回滾，是向量 RAG 的副產品；29.9k 星為這一類最大。它與 Claude 生態的關係只有 MCP Server 接點，不進日報，以本頁對照組收錄。
 
 ### 2026-09-14
 
