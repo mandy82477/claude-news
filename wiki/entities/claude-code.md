@@ -625,7 +625,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **CLAUDE.md** — 專案級別的 AI 指令設定
 - **Hooks** — 在特定事件前後注入自定義邏輯（如：修改代碼後強制跑測試）
 - **Skills** — 可複用的任務封裝單元，Claude 透過描述自動觸發；官方產品線與生態詳見 [[entities/claude-skills]]
-- **`/skill-doctor`**（v2.1.252+，查證日 2026-09-25，[官方 skills 文件](https://code.claude.com/docs/en/skills)）— 列出每個 skill 的 context 成本與被叫用次數、標出從未叫用的並告訴你在哪關掉；報告在 `/plugin` 的 Stats 頁（`-p` 模式印文字）。只算用量與成本，**不評 skill 內容好壞**；不含 bundled／enterprise skills；Remote Control 連線不可用；跳過 feature-flag 抓取的 session 也沒有
+- **`/skill-doctor`**（v2.1.252+，查證日 2026-09-25，[官方 skills 文件](https://code.claude.com/docs/en/skills)）— 列出每個 skill 的 context 成本與叫用次數、標出從未叫用的並說在哪關；報告在 `/plugin` Stats 頁。只算用量，不評內容
+  - 不含 bundled／enterprise skills；Remote Control 連線與跳過 feature-flag 抓取的 session 不可用
 - **Agent Teams** — 多 agent 協作，目前僅支援 Claude 實例（社群已有 workaround）
 - **MCP Servers** — 外部工具整合（注意：多個 MCP 可能導致每次訊息消耗 20k+ tokens）
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）

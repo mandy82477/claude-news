@@ -57,7 +57,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 牌價（輸入／輸出，每百萬 token）| $5 ／ $25 | $4 ／ $20（快取讀取 $0.20，為基礎輸入價 5%）| 官方 GitHub changelog；官方 models overview（2026-09-23 查證）|
 | 知識截止 | 2026-05 | 2026-06（官方稱「可靠」知識截止）| 官方 models overview（2026-09-23 查證）|
 | 會不會停掉 | 已改列 Legacy，退役**不早於 2027-07-24**（沿用既有查證值） | 退役**不早於 2027-09-22** | 官方 models overview（2026-09-23 查證）|
-| 從舊代升上去會壞什麼 | —（基準世代） | **thinking 不可再關閉**（官方發布文：「no longer available with 'thinking' mode switched off」）——設定或腳本有關 thinking 的會壞；另 2026-08-31 後建立的 API 帳號套「preserved thinking」反蒸餾機制（2026-09-25 查證）| 官方發布文（2026-09-25 查證）|
+| 從舊代升上去會壞什麼 | —（基準世代） | **thinking 不可再關閉**（官方：no longer available with thinking switched off）；08-31 後新 API 帳號套 preserved thinking 反蒸餾 | 官方發布文（2026-09-25 查證）|
 | 官方推薦拿它做什麼 | 已不再是預設 Opus | 官方稱多數工作表現追平 Fable 5.1；未另列「何時該升 Fable 5.1」的分界 | 官方發布文（2026-09-23 查證）|
 | 我的方案能不能用 | 同右，兩代同一套方案規則 | Pro／Max／Team／Enterprise／API 皆為預設 Opus；Team standard 依 [[entities/pricing]]「同 Pro」慣例推得，官方未逐一列出 | 官方 models overview（2026-09-23 查證）|
 
