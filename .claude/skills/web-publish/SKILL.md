@@ -1,12 +1,12 @@
 ---
 name: web-publish
-description: 每日 pipeline 收尾段：commit wiki、web build gate、單一 push、寫 log；由 /news-pipeline Phase C agent 執行。
+description: 每日 pipeline 收尾段：commit wiki、web build gate、單一 push、寫 log；由 /news-pipeline Phase C（本 session）執行。
 disable-model-invocation: true
 ---
 
 # 收尾與發布（Step 3 / 4 / 5 / 6）
 
-由 `.claude/skills/news-pipeline/SKILL.md` 的 Phase C 背景 agent 讀取執行。REPO_ROOT／PYTHON／TARGET_DATE 由派工 prompt 傳入（值見 `.claude/skills/news-pipeline/references/dispatch.md`）。**本 skill 不 spawn 子 agent。**
+由 `.claude/skills/news-pipeline/SKILL.md` 的 Phase C 執行者讀取執行——2026-09-24 起預設是本 session 自己，備用才派 agent。REPO_ROOT／PYTHON／TARGET_DATE 見 `.claude/skills/news-pipeline/references/dispatch.md`「設定」節。**本 skill 不 spawn 子 agent。** 跑 `run_tests.py` 與 `build_web.py` 時把輸出導進檔案、只讀 exit code 與最後一行，紅了才 grep 那個檔——整包讀進 context 是 Phase C 曾經一天燒 162k token 的原因。
 
 ---
 
@@ -139,7 +139,7 @@ git -C REPO_ROOT push || {
 REPO_ROOT\src\logs\task_scheduler.log
 ```
 
-**本步驟由 Phase C agent 執行**，Step 0/1a/1b（Phase A）與 Step 2（Phase B）的結果由呼叫 session 透過 Phase C 的 spawn prompt「已知結果」欄位傳入（見 `.claude/skills/news-pipeline/references/dispatch.md` Phase C），Phase C agent 不需重新查證，直接引用即可；Step 3/4/5 的結果則是 Phase C agent 自己執行後得知。
+**本步驟由 Phase C 執行者執行**（預設本 session；備用 agent 時 Step 0/1a/1b 與 Step 2 的結果由呼叫 session 透過 spawn prompt「已知結果」欄位傳入（見 `.claude/skills/news-pipeline/references/dispatch.md` Phase C），Phase C agent 不需重新查證，直接引用即可；Step 3/4/5 的結果則是 Phase C agent 自己執行後得知。
 
 **例外：若 Phase A 的 Step 1a 失敗**，pipeline 不會進入 Phase C（見 Phase B 的失敗處理），此時 Step 6 log 改由呼叫 session 直接 append，格式相同。
 

@@ -32,9 +32,9 @@ REPO_ROOT 由 Bash `git rev-parse --show-toplevel` 取；PYTHON 即 PATH 上的 
 
 Phase A agent 完成後自動通知呼叫的 session。
 
-## Phase C 步驟：背景 agent 執行 Step 3–6
+## Phase C 步驟：備用 agent 執行 Step 3–6
 
-Phase B 結束後（成敗皆進入本階段，Step 6 的 log 才寫得成）spawn 第二個背景 agent：
+**2026-09-24 起 Phase C 預設由本 session 直接執行**（`.claude/skills/news-pipeline/SKILL.md` Phase C），本節只在本 session 額度耗盡或環境不允許時才用。Phase B 結束後（成敗皆進入本階段，Step 6 的 log 才寫得成）spawn 第二個背景 agent：
 
 | 參數 | 值 |
 |------|---|

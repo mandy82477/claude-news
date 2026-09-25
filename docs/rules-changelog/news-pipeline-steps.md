@@ -119,3 +119,7 @@
 **連帶：** 實驗功能頁規則加一條「追蹤表有異動的那天，在自介 callout 下面覆寫一段帶 TARGET_DATE 的最新動態」。產生器兩個順手修：未知旗標（如 `--help`）原本會被忽略而直接寫檔，改為印用法 exit 2；凍結模式重跑會把既有頁按 slug 重排（凍結頁沒有 inbound 可比），改為既有頁照原順序、新補的頁排後面，沒變的重跑不再改檔。09-16 漏的三頁由主編補寫 callout 後以凍結模式補進 `daily/2026-09-16.md`。
 
 **同日補強：涵蓋判定搬進產生器。** 第 0 步寫在 SKILL 裡、靠 session 照做，沒有 hook 強制；產生器則每天必跑。判定本體與豁免表改住 `build_reader_digest.py` 的 `coverage_gaps`，`generate()` 每次產出都把漏頁印成 WARN，`check_callout_coverage.py` 退成「會回非零結束碼的入口」——第 0 步就算被跳過，漏頁也會出現在產生器輸出與完成摘要裡。
+
+## 2026-09-24 Phase C 改由本 session 直接執行；run_tests.py 預設安靜
+
+實測 09-23：Phase C 背景 agent 花 162k token，其中約 120k 是把 `run_tests.py` 的 2,072 行輸出（逐案例、check_rules 680 行報告、存量 WARN 清單）整包讀進 context，閘紅重跑再讀一次；而消費端只需要 exit code 與最後一行。兩層修法：`run_tests.py` 預設安靜（閘綠只印最後一行、紅印全文、`--verbose` 保留舊行為，輸出降到 172 行）；news-pipeline Phase C 改由本 session 執行 web-publish Step 3–6，派工 prompt 降為備用。Phase A 仍派背景 agent（抓料與寫日報是真正的工作量）。

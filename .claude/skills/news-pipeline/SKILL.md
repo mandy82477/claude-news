@@ -30,8 +30,8 @@ TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** �
 ## Phase C：收尾與發布（Step 3 / 4 / 5 / 6）
 
 - **做什麼：** commit wiki、建置 web reader、單一 push、寫 `task_scheduler.log`
-- **誰做：** 第二個背景 agent（同 Phase A 的設定）；Phase A／B 結果由本 session 填進派工 prompt 的「已知結果」欄，agent 不必重新查證
-- **失敗怎麼辦：** Phase B 無論成敗都要進入本階段，Step 6 的 log 才寫得成。agent 回報後本 session 彙整三段結果輸出完成摘要（格式見 `.claude/skills/web-publish/SKILL.md`「完成摘要」），**必含「📋 待使用者裁示」區塊**，無未決項也寫「無」
+- **誰做：** **本 session 直接執行**（2026-09-24 起，不再派背景 agent）：Step 3–6 是四段指令加一行 log，派 agent 的成本全在讀測試輸出（實測 162k token），`run_tests.py` 已改安靜模式後本 session 跑約 10k。派工 prompt 留在 `.claude/skills/news-pipeline/references/dispatch.md`「Phase C 步驟」作備用（本 session 額度耗盡或雲端環境才用）
+- **失敗怎麼辦：** Phase B 無論成敗都要進入本階段，Step 6 的 log 才寫得成。Step 3–6 做完後本 session 彙整三段結果輸出完成摘要（格式見 `.claude/skills/web-publish/SKILL.md`「完成摘要」），**必含「📋 待使用者裁示」區塊**，無未決項也寫「無」
 
 ## 規範對照表
 
