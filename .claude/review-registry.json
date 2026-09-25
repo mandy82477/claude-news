@@ -1743,6 +1743,19 @@
         "子頁不入 index"
       ],
       "_note": "2026-09-20：managed-agents（本身是 anthropic-agent-stack 的子頁）長出 -archive 後首次觸發。投影只掃 index 列、而 index 沒有子頁的列，孫子頁因此無列可掛；檢查端卻對每個 hub 都要求投影，兩邊對巢狀的假設相反。"
+    },
+    {
+      "name": "feature-radar 條目範本不得帶 **熱度：**（範本與「熱度只住全覽表」規則矛盾，記者照範本寫就犯規）",
+      "assertion": "max_count",
+      "files": [
+        ".claude/reporter-rules/features/pages.md",
+        ".claude/agents/wiki-reporter-features.md"
+      ],
+      "patterns": [
+        "\\*\\*發布：\\*\\* YYYY-MM-DD（版本號） \\| \\*\\*熱度：\\*\\*"
+      ],
+      "max": 0,
+      "_note": "2026-09-25 批評者稽核：兩份範本標頭都帶熱度，與 pages.md「熱度／試用價值欄」及 check_feature_radar.py 衝突，9 月為熱度副本修了三次（805d7262、ae8bb68f、aba48824）。"
     }
   ],
   "coupling_hints": {

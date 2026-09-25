@@ -28,7 +28,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 ```markdown
 ### 功能名稱
-**發布：** YYYY-MM-DD（版本號） | **熱度：** 🔥🔥🔥 | **試用價值：** ⚡ 有條件推薦 | **狀態：** GA / Preview
+**發布：** YYYY-MM-DD（版本號） | **狀態：** GA / Preview
 
 **是什麼：** 一句話描述功能用途。
 

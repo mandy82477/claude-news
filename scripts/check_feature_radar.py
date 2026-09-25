@@ -125,7 +125,7 @@ def main(argv: list[str]) -> int:
             stream.write(v + "\n")
         stream.write(
             "  修法：熱度與試用價值只寫在 ## 📋 功能全覽表；詳細條目標頭只留「發布」與「狀態」，\n"
-            "        推薦節不寫熱度括號（.claude/reporter-rules/features/daily.md §7(a)）\n"
+            "        推薦節不寫熱度括號（.claude/reporter-rules/features/pages.md「feature-radar」節「熱度／試用價值欄」條）\n"
         )
         stream.flush()
         return 1
