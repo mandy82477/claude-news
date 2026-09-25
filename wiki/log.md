@@ -6812,3 +6812,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 
 **歸因**：`user-query`
 
+
+## 2026-09-25 Query：「WeKnora 這個專案有抓過嗎」→ 全庫零命中，規模榜「知識策展」類加 `rag wiki in:description`
+
+**查明：** Tencent/WeKnora（LLM 知識平台：RAG＋agent＋自維護 Wiki，29.8k★、本週 +3.5k、2025-07 出生）從未進過任何抓料窗口：A／B 窗三條 query 綁 `claude`，C 窗四條 scope 不含它，D 窗需 HN ≥100（它只有 2 分），E 窗星速只算曾被看見的 repo；它提到 Claude 的那句只在 README，GitHub 搜尋不掃 README。規模榜「知識策展」三條 query（`"llm wiki"`／`karpathy wiki`／`documentation … claude`）也撈不到。
+
+**處置：** `--probe` 六條候選（見 `data/skill_interest_watch.json` 該類 `why`），`rag wiki in:description` 辨識力最好（stars≥1000 四筆三切題），上線排第一；快照重跑後 WeKnora 進榜、星數紀錄從此有它（E 窗可算星速）。**未寫進日報或 wiki 頁**：它與 Claude 生態的關係只有「可當 MCP 知識源接進 Claude」，不達收錄範圍；是否以使用者提問通道寫進 [[topics/llm-wiki-pattern]]「外面的實作」待使用者裁示。歸因 `user-query`。
