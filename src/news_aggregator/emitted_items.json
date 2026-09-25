@@ -5258,5 +5258,838 @@
     "first_emitted": "2026-09-24",
     "score_at_emit": 0,
     "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/65697": {
+    "first_emitted": "2026-08-13",
+    "last_emitted": "2026-08-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/62476": {
+    "first_emitted": "2026-07-01",
+    "last_emitted": "2026-07-01",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/16856": {
+    "first_emitted": "2026-07-03",
+    "last_emitted": "2026-07-03",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/74066": {
+    "first_emitted": "2026-07-04",
+    "last_emitted": "2026-07-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/12506": {
+    "first_emitted": "2026-07-04",
+    "last_emitted": "2026-07-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/19673": {
+    "first_emitted": "2026-07-04",
+    "last_emitted": "2026-07-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/24057": {
+    "first_emitted": "2026-07-05",
+    "last_emitted": "2026-07-05",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/14828": {
+    "first_emitted": "2026-08-18",
+    "last_emitted": "2026-08-18",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/2805": {
+    "first_emitted": "2026-08-25",
+    "last_emitted": "2026-08-25",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/14088": {
+    "first_emitted": "2026-07-06",
+    "last_emitted": "2026-07-06",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/13354": {
+    "first_emitted": "2026-08-04",
+    "last_emitted": "2026-08-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/48407": {
+    "first_emitted": "2026-07-07",
+    "last_emitted": "2026-07-07",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/38005": {
+    "first_emitted": "2026-08-05",
+    "last_emitted": "2026-08-05",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/33969": {
+    "first_emitted": "2026-07-07",
+    "last_emitted": "2026-07-07",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/59033": {
+    "first_emitted": "2026-07-08",
+    "last_emitted": "2026-07-08",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/41506": {
+    "first_emitted": "2026-07-08",
+    "last_emitted": "2026-07-08",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/1913": {
+    "first_emitted": "2026-07-09",
+    "last_emitted": "2026-07-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/769": {
+    "first_emitted": "2026-07-17",
+    "last_emitted": "2026-07-17",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/46987": {
+    "first_emitted": "2026-07-09",
+    "last_emitted": "2026-07-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/5088": {
+    "first_emitted": "2026-09-04",
+    "last_emitted": "2026-09-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/49322": {
+    "first_emitted": "2026-07-10",
+    "last_emitted": "2026-07-10",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/34820": {
+    "first_emitted": "2026-08-04",
+    "last_emitted": "2026-08-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/73365": {
+    "first_emitted": "2026-08-10",
+    "last_emitted": "2026-08-10",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/53262": {
+    "first_emitted": "2026-07-11",
+    "last_emitted": "2026-07-11",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/24055": {
+    "first_emitted": "2026-07-11",
+    "last_emitted": "2026-07-11",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/20696": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/1785": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/36168": {
+    "first_emitted": "2026-07-12",
+    "last_emitted": "2026-07-12",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/29006": {
+    "first_emitted": "2026-08-09",
+    "last_emitted": "2026-08-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/38993": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/28322": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/5706": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/28077": {
+    "first_emitted": "2026-07-13",
+    "last_emitted": "2026-07-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/53915": {
+    "first_emitted": "2026-07-14",
+    "last_emitted": "2026-07-14",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/33238": {
+    "first_emitted": "2026-08-22",
+    "last_emitted": "2026-08-22",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/62123": {
+    "first_emitted": "2026-07-21",
+    "last_emitted": "2026-07-21",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/12346": {
+    "first_emitted": "2026-09-04",
+    "last_emitted": "2026-09-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/16446": {
+    "first_emitted": "2026-07-15",
+    "last_emitted": "2026-07-15",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/28300": {
+    "first_emitted": "2026-08-24",
+    "last_emitted": "2026-08-24",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/33932": {
+    "first_emitted": "2026-07-19",
+    "last_emitted": "2026-07-19",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/34229": {
+    "first_emitted": "2026-07-16",
+    "last_emitted": "2026-07-16",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/22543": {
+    "first_emitted": "2026-08-20",
+    "last_emitted": "2026-08-20",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/53940": {
+    "first_emitted": "2026-07-17",
+    "last_emitted": "2026-07-17",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/49268": {
+    "first_emitted": "2026-07-22",
+    "last_emitted": "2026-07-22",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/21151": {
+    "first_emitted": "2026-07-21",
+    "last_emitted": "2026-07-21",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/10238": {
+    "first_emitted": "2026-08-31",
+    "last_emitted": "2026-08-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/26452": {
+    "first_emitted": "2026-09-05",
+    "last_emitted": "2026-09-05",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/8477": {
+    "first_emitted": "2026-07-28",
+    "last_emitted": "2026-07-28",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/8856": {
+    "first_emitted": "2026-09-04",
+    "last_emitted": "2026-09-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/55982": {
+    "first_emitted": "2026-08-12",
+    "last_emitted": "2026-08-12",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/3412": {
+    "first_emitted": "2026-07-31",
+    "last_emitted": "2026-07-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/6457": {
+    "first_emitted": "2026-07-19",
+    "last_emitted": "2026-07-19",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/44243": {
+    "first_emitted": "2026-09-04",
+    "last_emitted": "2026-09-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/44763": {
+    "first_emitted": "2026-07-19",
+    "last_emitted": "2026-07-19",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/49747": {
+    "first_emitted": "2026-07-19",
+    "last_emitted": "2026-07-19",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/29579": {
+    "first_emitted": "2026-07-28",
+    "last_emitted": "2026-07-28",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/62699": {
+    "first_emitted": "2026-09-07",
+    "last_emitted": "2026-09-07",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/79337": {
+    "first_emitted": "2026-09-02",
+    "last_emitted": "2026-09-02",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/69415": {
+    "first_emitted": "2026-08-27",
+    "last_emitted": "2026-08-27",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/39523": {
+    "first_emitted": "2026-07-23",
+    "last_emitted": "2026-07-23",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/37323": {
+    "first_emitted": "2026-08-09",
+    "last_emitted": "2026-08-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/61015": {
+    "first_emitted": "2026-07-23",
+    "last_emitted": "2026-07-23",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/29941": {
+    "first_emitted": "2026-07-24",
+    "last_emitted": "2026-07-24",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/1669": {
+    "first_emitted": "2026-07-26",
+    "last_emitted": "2026-07-26",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/26224": {
+    "first_emitted": "2026-09-08",
+    "last_emitted": "2026-09-08",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/6305": {
+    "first_emitted": "2026-07-31",
+    "last_emitted": "2026-07-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/51183": {
+    "first_emitted": "2026-08-16",
+    "last_emitted": "2026-08-16",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/65833": {
+    "first_emitted": "2026-08-31",
+    "last_emitted": "2026-08-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/20131": {
+    "first_emitted": "2026-08-01",
+    "last_emitted": "2026-08-01",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/55266": {
+    "first_emitted": "2026-08-02",
+    "last_emitted": "2026-08-02",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/28125": {
+    "first_emitted": "2026-08-02",
+    "last_emitted": "2026-08-02",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/52871": {
+    "first_emitted": "2026-09-01",
+    "last_emitted": "2026-09-01",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/2990": {
+    "first_emitted": "2026-08-02",
+    "last_emitted": "2026-08-02",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/1757": {
+    "first_emitted": "2026-09-04",
+    "last_emitted": "2026-09-04",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/47023": {
+    "first_emitted": "2026-08-05",
+    "last_emitted": "2026-08-05",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/13480": {
+    "first_emitted": "2026-08-07",
+    "last_emitted": "2026-08-07",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/23626": {
+    "first_emitted": "2026-08-08",
+    "last_emitted": "2026-08-08",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/34556": {
+    "first_emitted": "2026-08-09",
+    "last_emitted": "2026-08-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/41581": {
+    "first_emitted": "2026-08-09",
+    "last_emitted": "2026-08-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/14227": {
+    "first_emitted": "2026-08-09",
+    "last_emitted": "2026-08-09",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/41788": {
+    "first_emitted": "2026-08-10",
+    "last_emitted": "2026-08-10",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/50246": {
+    "first_emitted": "2026-08-25",
+    "last_emitted": "2026-08-25",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/78431": {
+    "first_emitted": "2026-08-12",
+    "last_emitted": "2026-08-12",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/12513": {
+    "first_emitted": "2026-08-13",
+    "last_emitted": "2026-08-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/20298": {
+    "first_emitted": "2026-08-13",
+    "last_emitted": "2026-08-13",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/61889": {
+    "first_emitted": "2026-08-14",
+    "last_emitted": "2026-08-14",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/30492": {
+    "first_emitted": "2026-08-15",
+    "last_emitted": "2026-08-15",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/26302": {
+    "first_emitted": "2026-09-03",
+    "last_emitted": "2026-09-03",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/47482": {
+    "first_emitted": "2026-08-16",
+    "last_emitted": "2026-08-16",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/81698": {
+    "first_emitted": "2026-08-16",
+    "last_emitted": "2026-08-16",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/32870": {
+    "first_emitted": "2026-08-16",
+    "last_emitted": "2026-08-16",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/27263": {
+    "first_emitted": "2026-08-18",
+    "last_emitted": "2026-08-18",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/13514": {
+    "first_emitted": "2026-08-18",
+    "last_emitted": "2026-08-18",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/8324": {
+    "first_emitted": "2026-08-19",
+    "last_emitted": "2026-08-19",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/27801": {
+    "first_emitted": "2026-08-20",
+    "last_emitted": "2026-08-20",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/10199": {
+    "first_emitted": "2026-08-20",
+    "last_emitted": "2026-08-20",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/40198": {
+    "first_emitted": "2026-08-21",
+    "last_emitted": "2026-08-21",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/4297": {
+    "first_emitted": "2026-08-21",
+    "last_emitted": "2026-08-21",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/42249": {
+    "first_emitted": "2026-08-22",
+    "last_emitted": "2026-08-22",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/19649": {
+    "first_emitted": "2026-08-22",
+    "last_emitted": "2026-08-22",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/86069": {
+    "first_emitted": "2026-08-24",
+    "last_emitted": "2026-08-24",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/63147": {
+    "first_emitted": "2026-08-26",
+    "last_emitted": "2026-08-26",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/62063": {
+    "first_emitted": "2026-08-26",
+    "last_emitted": "2026-08-26",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/32668": {
+    "first_emitted": "2026-08-26",
+    "last_emitted": "2026-08-26",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/10018": {
+    "first_emitted": "2026-08-29",
+    "last_emitted": "2026-08-29",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/61734": {
+    "first_emitted": "2026-08-30",
+    "last_emitted": "2026-08-30",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/85199": {
+    "first_emitted": "2026-08-30",
+    "last_emitted": "2026-08-30",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/9340": {
+    "first_emitted": "2026-08-30",
+    "last_emitted": "2026-08-30",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/83633": {
+    "first_emitted": "2026-08-30",
+    "last_emitted": "2026-08-30",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/66504": {
+    "first_emitted": "2026-08-31",
+    "last_emitted": "2026-08-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/36582": {
+    "first_emitted": "2026-08-31",
+    "last_emitted": "2026-08-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/61869": {
+    "first_emitted": "2026-08-31",
+    "last_emitted": "2026-08-31",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/20697": {
+    "first_emitted": "2026-09-01",
+    "last_emitted": "2026-09-01",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/22931": {
+    "first_emitted": "2026-09-01",
+    "last_emitted": "2026-09-01",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/16550": {
+    "first_emitted": "2026-09-06",
+    "last_emitted": "2026-09-06",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/14131": {
+    "first_emitted": "2026-09-06",
+    "last_emitted": "2026-09-06",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/49917": {
+    "first_emitted": "2026-09-06",
+    "last_emitted": "2026-09-06",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/1935": {
+    "first_emitted": "2026-09-06",
+    "last_emitted": "2026-09-06",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
+  },
+  "https://github.com/anthropics/claude-code/issues/2054": {
+    "first_emitted": "2026-09-07",
+    "last_emitted": "2026-09-07",
+    "last_seen": "2026-09-25",
+    "score_at_emit": null,
+    "digest_confirmed": true
   }
 }

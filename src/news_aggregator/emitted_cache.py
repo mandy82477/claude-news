@@ -10,7 +10,20 @@ An item is re-emitted only on a genuine "re-ignition": current score is
 That signals the story picked up meaningfully more traction, worth a
 second mention. Otherwise it's filtered out.
 
-Cache entries expire after CACHE_TTL_DAYS so the file doesn't grow forever.
+Cache entries expire CACHE_TTL_DAYS after the item was last *seen* (offered by a
+source at all, kept or dropped), not after it was first emitted. Sources that
+re-fetch by activity — GitHub Issues filters on `updated_at`, so an evergreen
+issue with daily comments is fetched every single run — would otherwise expire on
+day 15 and come back as brand new. Measured 2026-09-25: #6235 reached 11 digests,
+#34255 nine, roughly every two weeks since July.
+
+Sources in REFETCHED_SOURCES re-offer unchanged items every run, so for them a
+content key ("<url>#<hash>", see `cache_key`) with no entry of its own is matched
+against a bare-URL entry for the same URL: that entry predates content hashing
+(or was seeded from digest history), so no change can be inferred and the item
+counts as already emitted. The 2026-09-15 switch to content keys skipped this and
+re-emitted 10 old issues on 09-16 as if new. A different *hash* for the same URL
+is a real change and goes through, as change detection intends.
 
 Two-phase commit (digest_confirmed): a `--gather-only` run marks entries it
 emits as digest_confirmed=False — "provisionally emitted, not yet known to
@@ -38,6 +51,9 @@ CACHE_FILE = SRC_DIR / "news_aggregator" / "emitted_items.json"
 CACHE_TTL_DAYS = 14
 REIGNITE_MULTIPLIER = 2
 REIGNITE_MIN_DELTA = 10
+# Sources that re-offer an unchanged item every run. Change-detection sources
+# (official_docs_watch) only emit on a real change, so they are deliberately absent.
+REFETCHED_SOURCES = ("GitHub Issues",)
 
 
 def cache_key(url: str, dedup_key: str = "") -> str:
@@ -69,18 +85,33 @@ def save_cache(cache: dict) -> None:
 
 
 def prune_expired(cache: dict, today: date | None = None) -> dict:
-    """Drop entries older than CACHE_TTL_DAYS (by first_emitted date)."""
+    """Drop entries not seen for CACHE_TTL_DAYS (last_seen, else first_emitted)."""
     today = today or date.today()
     cutoff = today - timedelta(days=CACHE_TTL_DAYS)
     pruned = {}
     for url, entry in cache.items():
         try:
-            first_emitted = date.fromisoformat(entry["first_emitted"])
+            seen = date.fromisoformat(entry.get("last_seen") or entry["first_emitted"])
         except Exception:
             continue  # drop malformed entries
-        if first_emitted >= cutoff:
+        if seen >= cutoff:
             pruned[url] = entry
     return pruned
+
+
+def _bare_entry(cache: dict, key: str, source: str) -> dict | None:
+    """Confirmed bare-URL entry standing in for a content key (see module docstring)."""
+    if "#" not in key or not source.startswith(REFETCHED_SOURCES):
+        return None
+    entry = cache.get(key.split("#", 1)[0])
+    return entry if entry and entry.get("digest_confirmed", False) else None
+
+
+def _reignited(score: int, entry: dict) -> bool:
+    prev = entry.get("score_at_emit")
+    if prev is None:  # seeded from digest history: shown before, score unknown
+        return False
+    return score >= prev * REIGNITE_MULTIPLIER and score - prev >= REIGNITE_MIN_DELTA
 
 
 def filter_new_or_reignited(
@@ -97,37 +128,57 @@ def filter_new_or_reignited(
     - Item in cache and digest_confirmed, current score >= 2x recorded score
       and delta >= 10 -> kept (reignited), cache entry updated and reset to
       digest_confirmed=False pending the next confirm-digest call.
+    - Content-keyed item from REFETCHED_SOURCES with no entry of its own but a
+      confirmed bare-URL entry -> judged against that entry (module docstring).
+    Every item seen refreshes last_seen on its entry, kept or dropped.
     """
     today = today or date.today()
     today_str = today.isoformat()
     updated_cache = dict(cache)
     kept: list[FeedItem] = []
 
+    def emit(key: str, item: FeedItem, existing: dict | None) -> None:
+        kept.append(item)
+        updated_cache[key] = {
+            **(existing or {}),
+            "first_emitted": (existing or {}).get("first_emitted", today_str),
+            "last_emitted": today_str,
+            "last_seen": today_str,
+            "score_at_emit": item.score,
+            "digest_confirmed": False,
+        }
+
     for item in items:
         norm = cache_key(item.url, getattr(item, "dedup_key", ""))
         existing = updated_cache.get(norm)
 
-        if existing is None or not existing.get("digest_confirmed", False):
-            kept.append(item)
-            updated_cache[norm] = {
-                "first_emitted": (existing or {}).get("first_emitted", today_str),
-                "score_at_emit": item.score,
-                "digest_confirmed": False,
-            }
+        if existing is not None and existing.get("digest_confirmed", False):
+            if _reignited(item.score, existing):
+                emit(norm, item, existing)
+            else:
+                seen = {**existing, "last_seen": today_str}
+                if seen.get("score_at_emit") is None:
+                    seen["score_at_emit"] = item.score
+                updated_cache[norm] = seen
             continue
 
-        prev_score = existing.get("score_at_emit", 0)
-        delta = item.score - prev_score
-        reignited = item.score >= prev_score * REIGNITE_MULTIPLIER and delta >= REIGNITE_MIN_DELTA
+        bare = _bare_entry(updated_cache, norm, item.source) if existing is None else None
+        if bare is None:
+            emit(norm, item, existing)
+            continue
 
-        if reignited:
-            kept.append(item)
+        updated_cache[norm.split("#", 1)[0]] = {**bare, "last_seen": today_str}
+        if _reignited(item.score, bare):
+            emit(norm, item, bare)
+        else:
+            # Adopt the content key as the same, already-emitted item.
             updated_cache[norm] = {
-                "first_emitted": existing.get("first_emitted", today_str),
-                "score_at_emit": item.score,
-                "digest_confirmed": False,
+                "first_emitted": bare["first_emitted"],
+                "last_emitted": bare.get("last_emitted") or bare["first_emitted"],
+                "last_seen": today_str,
+                "score_at_emit": item.score if bare.get("score_at_emit") is None else bare["score_at_emit"],
+                "digest_confirmed": True,
             }
-        # else: already emitted & confirmed, no reignition -> drop silently
 
     return kept, updated_cache
 
@@ -156,7 +207,9 @@ def confirm_digest(cache: dict, urls: list, today: date | None = None) -> dict:
             norm = cache_key(entry)
         existing = updated_cache.get(norm, {})
         updated_cache[norm] = {
+            **existing,
             "first_emitted": existing.get("first_emitted", today_str),
+            "last_seen": existing.get("last_seen", today_str),
             "score_at_emit": existing.get("score_at_emit", 0),
             "digest_confirmed": True,
         }
