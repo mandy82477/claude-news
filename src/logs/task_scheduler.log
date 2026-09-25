@@ -869,3 +869,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud watchdog-push STARTED 2026-09-25T01:35:49Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-09-25 12:09:02 UTC]
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-25T12:09:45Z] Step 1a：src/gathered_archive/2026-09-25.json 不存在（cp 失敗），代表當日尚未抓到料 → Step 1b 新鮮度防線中止：ABORTED: gathered_items.json date=2026-09-24 items=68，非目標日期（TARGET_DATE=2026-09-25）的新鮮資料。本班為當日第一班（12:00 UTC），上游 GitHub Actions 抓料延遲屬已知現象，交由下一班（17:00/22:00 UTC）接手
+[cloud daily-news-pipeline-cloud STARTED 2026-09-25T17:09:18Z]
