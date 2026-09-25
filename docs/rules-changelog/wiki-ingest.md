@@ -13,3 +13,7 @@
 ## 2026-08-13（專頁定向條目不得因「跟 Claude 沒關係」而略過）
 
 2026-08-05 Jeff Dean 等人離開 Google 創辦 Discovery Loop，因標題是 Google 視角而被 12 個來源全數漏掉 8 天。專頁定向抓來的條目標題天生不含 Claude／Anthropic——那正是它們被定向抓來的原因，因此收錄判準改用該專頁自己的觸發條件，不套用 Claude／Anthropic 關聯門檻。
+
+## 2026-09-25（節錄來源行標 slug）
+
+步驟 2 節錄格式的來源行加 `（slug：…）`，多來源各標一個；主編依 `data/source_registry.json` 填。目的：把原本住 `shared.md` 的 slug 對照表從八位記者的每日必讀移到主編一次查表，記者照抄。同輪一併把各記者角色檔的 pages.md 改為只讀要動的節，理由與量測見 `docs/rules-changelog/reporter-shared.md` 2026-09-25。

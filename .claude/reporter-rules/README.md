@@ -27,7 +27,7 @@ wiki 記者 subagent 與 ingest／lint 主編**明文 Read** 的規則檔。**�
 
 ## 誰讀哪裡
 
-記者由 `.claude/agents/wiki-reporter-*.md` 的「開始前必讀」清單指名（`shared.md` ＋自己資料夾的 `daily.md`／`pages.md`／`weekly.md`，建頁時另加 `page-templates.md`）；ingest／lint 主編由 `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-lint*/SKILL.md`、`.claude/commands/wiki-backfill.md` 等 command／skill 內文指名（分類與派工正典住 `.claude/skills/wiki-ingest/references/classification.md`，不在本資料夾）。教訓敘事一律住 `docs/rules-changelog/reporter-*.md`，不進 agent 讀取範圍。
+記者由 `.claude/agents/wiki-reporter-*.md` 的「開始前必讀」清單指名（`shared.md` ＋自己資料夾的 `daily.md`／`pages.md`／`weekly.md`，建頁時另加 `page-templates.md`；`pages.md` 一頁一節，只讀本次要動的頁的那幾節，不整檔讀）；ingest／lint 主編由 `.claude/skills/wiki-ingest/SKILL.md`、`.claude/skills/wiki-lint*/SKILL.md`、`.claude/commands/wiki-backfill.md` 等 command／skill 內文指名（分類與派工正典住 `.claude/skills/wiki-ingest/references/classification.md`，不在本資料夾）。教訓敘事一律住 `docs/rules-changelog/reporter-*.md`，不進 agent 讀取範圍。
 
 與 `.claude/rules/` 的分工：那裡放**主 session 自己會用到**、由 `paths:` frontmatter 觸發載入的規則（`claude-md-edit.md`、`web-reader-design.md`、`collection-scope.md`）。
 

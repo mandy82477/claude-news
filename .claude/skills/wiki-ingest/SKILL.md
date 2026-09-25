@@ -63,13 +63,15 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 ## [類別] 條目（共 N 則）
 
 ### [條目標題]
-- **來源：** [媒體/平台]
+- **來源：** [媒體/平台]（slug：[hacker-news]；來源欄含 ＋ 的多來源每個各標一個 slug）
 - **日期：** YYYY-MM-DD
 - **摘要：** [原文關鍵內容，保留數字、版本號、具名企業等細節]
 - **原文重點：** [直接引用日報中的關鍵段落，不壓縮細節]
 
 ### [下一則...]
 ```
+
+來源行的 slug 由主編依 `data/source_registry.json`（`name`↔`slug`）填入，記者照抄進「來源歸因」欄，不再各自查表（表已於 2026-09-25 從 `shared.md` 移出）。
 
 無條目的類別標記「無」，不派工。
 

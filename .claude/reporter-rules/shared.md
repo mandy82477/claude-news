@@ -147,30 +147,11 @@
 slug | 類別 | page路徑 | item_url | item_title
 ```
 
-- `slug`：日報條目結尾的 `` `來源` `` 標記取「/」前半段，對照下表
+- `slug`：主編已標在每則條目節錄的來源行（`slug：…`），照抄；名稱↔slug 的單一真相源是 `data/source_registry.json`，記者不必查表
 - **來源欄含 `＋` 時每個來源各報一筆**：`` `Hacker News ＋Anthropic Blog、Google News / PCMag` `` 代表三個來源都報導了這則，各自轉成一行歸因（`hacker-news`、`anthropic-blog`、`google-news`）。只報勝出來源會讓低流量官方來源在來源記分卡上長期顯示零貢獻——它們幾乎必定在 dedup 輸給 HN／Google News
 - `類別`：你的記者類別（模型/功能/商業/安全政策/社群/人物）
 - `page路徑`：本次寫入的 wiki 相對路徑，不含 `.md`（如 `topics/ai-agent-safety`）
 - `item_url` / `item_title`：日報條目的原始連結與標題
-
-| 日報 `來源` 前綴 | slug |
-|---|---|
-| Hacker News | `hacker-news` |
-| HN Repo Bridge | `hn-repo-bridge` |
-| Reddit | `reddit` |
-| GitHub Issues | `github-issues` |
-| GitHub、GitHub Search | `github` |
-| Google News | `google-news` |
-| dev.to | `devto` |
-| Anthropic Blog | `anthropic-blog` |
-| Anthropic Status | `anthropic-status` |
-| Claude API Release Notes | `claude-api-release-notes` |
-| Topic Watch | `topic-watch` |
-| Official Docs | `official-docs` |
-| Official Skills | `official-skills` |
-| Build Flags | `build-flags` |
-| Blog | `blog` |
-| User Query（使用者提問，主編通道專用，記者不會遇到） | `user-query` |
 
 僅對「今日新增的具體事實」回報歸因，不需回溯補歷史條目；一則事實有多個來源時每個來源各回報一筆。**wiki 正文不加任何 sources wikilink**（來源節點連結機制已於 2026-07-11 撤除）；歸因由主編 append 至 `data/source_attribution.jsonl`，不影響既有 `## 參考來源`（日報連結）寫法。
 
