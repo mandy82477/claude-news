@@ -186,7 +186,7 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 - **主線：** 索引記憶
 - **核心模式：** 「AI second brain that maintains itself」，附完整指南、起始 vault、agent skills 與腳本，在 Claude Code 與 Obsidian 上建立自組織知識庫；GitHub Search 517 星。
 - **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「Obsidian vault 當 Claude Code 記憶層」取向實作，與 2026-08-24 已收「手動維護 Obsidian vault 取代 Claude Code 內建自動記憶」同屬一線、本則號稱自我維護；跨 session 記憶屬大型 codebase 特有痛點，主線填索引記憶。
-- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證；與 [[topics/llm-wiki-pattern]] 現有實作路線同屬 Obsidian vault 取向，是否為新路線待查證。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證；與 [[topics/llm-wiki-pattern]] 現有實作路線同屬 Obsidian vault 取向，是否構成獨立新路線尚無法判斷。
 - **來源：** GitHub Search；[GitHub](https://github.com/undefined-ui/second-brain-os)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
