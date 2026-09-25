@@ -225,3 +225,4 @@
 {"id": "H-2a6440", "opened": "2026-09-23", "from": "模型", "to": "社群", "page": "topics/code-quality-decline", "note": "2026-09-22 Opus 5.5 成為預設 Opus、Opus 5 改列 Legacy；本頁「三條線」與量測段含「Opus 5」為現行模型的敘述，請複查是否需同步換代措辭（哪些是歷史事件不動、哪些是「現在」要改）", "status": "open"}
 {"id": "H-694685", "opened": "2026-09-24", "from": "商業", "to": "安全政策", "page": "topics/recursive-self-improvement", "note": "「3 萬個 agent 同時在 Anthropic 做研究與工程工作」新數字（dev.to 09-18＋Reddit 週熱門兩則，本週重新熱議）；26% 數字已收錄，3 萬 agent 數字尚未比對是否需補列", "status": "open"}
 {"id": "H-2a6440", "closed": "2026-09-24", "status": "done", "by": "社群", "result": "逐字 grep 全頁 20+ 處『Opus 5』均屬明確歷史事件或線名本身，無誤稱現行模型之處，不需因換代改寫；僅新增一筆同期社群觀感時序條目"}
+{"id": "H-e8e1fd", "opened": "2026-09-25", "from": "功能", "to": "模型", "page": "topics/model-task-leaderboard", "note": "GPT-6 Astra vs Fable 評測（09-24 日報，原模型記者回報改投本頁）——週更時比對是否補列；09-24 log 只記了轉知未登帳，09-25 補開", "status": "open"}
