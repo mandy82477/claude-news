@@ -71,7 +71,7 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 ### [下一則...]
 ```
 
-來源行的 slug 由主編依 `data/source_registry.json`（`name`↔`slug`）填入，記者照抄進「來源歸因」欄，不再各自查表（表已於 2026-09-25 從 `shared.md` 移出）。
+來源行的 slug 由主編依 `data/source_registry.json`（`name`↔`slug`）填入，記者照抄進「來源歸因」欄，不再各自查表。
 
 無條目的類別標記「無」，不派工。
 
