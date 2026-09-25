@@ -1065,6 +1065,22 @@ code {
 .weekly-deepdive__body p:last-child { margin-bottom: 0; }
 .weekly-deepdive__body strong { color: var(--ink-1); font-weight: var(--fw-medium); }
 
+/* 本週要動的事 — 深挖之後的行動清單：hairline 上下界，不加底色，與深挖卡片分開 */
+.weekly-actions {
+  border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-2);
+  padding: 18px 0 14px; margin-top: 24px;
+}
+.weekly-actions__kicker {
+  font-family: var(--font-mono); font-size: var(--fs-small);
+  letter-spacing: 0.25em; color: var(--ochre-9);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.weekly-actions__body { font-family: var(--font-cjk); font-size: var(--fs-body); line-height: 1.75; color: var(--ink-1); }
+.weekly-actions__body ul { padding-left: 22px; margin: 0; }
+.weekly-actions__body li { margin: 6px 0; }
+.weekly-actions__body p { margin: 0; }
+.weekly-actions__body strong { color: var(--ink-1); font-weight: var(--fw-medium); }
+
 /* 下週看什麼 → 預告回收帳（bets ledger）— 本頁 signature，視覺重量集中在此 */
 /* 引言段（表格前一句話，如「每條都立了判準…」）— 表格上方一行，非結構化文字 */
 .weekly-ledger__intro {

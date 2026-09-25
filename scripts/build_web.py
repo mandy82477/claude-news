@@ -831,7 +831,7 @@ def parse_weekly(f: Path) -> dict:
 
             elif kind == "discussion":
                 disc = {"title": title, "body": body,
-                        "versionNote": None, "roundup": None, "deepDive": None}
+                        "versionNote": None, "roundup": None, "deepDive": None, "actions": None}
                 try:
                     for sub_title, sub_body in _split_by_heading(body, WEEKLY_H3_RE):
                         sub_body = _weekly_clean_trailing_hr(sub_body)
@@ -839,6 +839,8 @@ def parse_weekly(f: Path) -> dict:
                             disc["versionNote"] = sub_body
                         elif "討論綜述" in sub_title:
                             disc["roundup"] = sub_body
+                        elif "本週要動的事" in sub_title:
+                            disc["actions"] = sub_body
                         elif sub_title.startswith("深挖"):
                             dd_title = re.sub(r'^深挖[：:]\s*', '', sub_title).strip()
                             disc["deepDive"] = {"title": dd_title, "body": sub_body}

@@ -691,6 +691,19 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊"
     },
     {
+      "name": "週報「本週要動的事」小標：契約表、網站解析與渲染、檢查器四端都認得同一個字串（2026-09-25 新增；改名必須四處同步，否則清單不上站或被判缺漏）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/weekly-report/references/contracts.md",
+        ".claude/skills/weekly-report/references/deepdive.md",
+        "scripts/build_web.py",
+        "scripts/check_weekly_ledger.py"
+      ],
+      "patterns": [
+        "本週要動的事"
+      ]
+    },
+    {
       "name": "今日聚焦選材門檻三條存在於 .claude/skills/news-digest/references/selection.md（2026-09-04 起僅「判斷用」一份，檔尾附錄已廢除；門檻消失代表校準機制斷根）",
       "assertion": "min_count",
       "files": [

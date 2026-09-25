@@ -61,7 +61,7 @@ DEEPDIVE_LEVEL = "###"
 # 2026-08-30 W35 踩過：整節寫成三欄表格，五個數字一個都沒上站，是使用者發現的。
 STAT_BULLET_RE = re.compile(r"^-\s*\*\*(.+?)\*\*\s*——\s*(.+)$", re.MULTILINE)
 NUMBERS_HEADING_RE = re.compile(r"^##\s*四、本週數字\s*$", re.MULTILINE)
-STAT_MIN = 3
+STAT_MIN = 2  # 2026-09-25 起只收讀者用得上的數字，淡週 2 個合法
 
 DEEPDIVE_MIN_CHARS = 900
 DEEPDIVE_MAX_CHARS = 1300
@@ -517,6 +517,95 @@ def check_probe_liveness(report: list[str], weekly_dir: Path = WEEKLY_DIR,
     return ok
 
 
+# ── 讀者面三條（規格：headline.md 第 3 條、deepdive.md「本週要動的事」、
+#    forecast.md 回收段與檔尾數字；W39 起生效，舊期凍結不回溯）──────────────
+# 2026-09-25：W36–W38 三期頭條與深挖同題，頭條都寫進了深挖的指令名、官方連結
+# （W36 `/sandbox`、W37 `CLAUDE_CODE_OAUTH_TOKEN`、W38 memory 文件連結）；冷讀者
+# 讀 W38 時說可動作的事散在五處要自己撿，並在回收表的「初版誤判…同日更正」、
+# 本週數字的「109 → 0 逾期待查證」處跳讀——那是編輯台的帳，不是讀者的內容。
+READER_RULES_SINCE = "2026-W39"
+ACTIONS_HEADING_RE = re.compile(r"^###\s*本週要動的事\s*$", re.MULTILINE)
+ACTIONS_NONE = "本週沒有需要動的事"
+URL_RE = re.compile(r"\]\((https?://[^)\s#]+)")
+CODE_RE = re.compile(r"`([^`\n]+)`")
+NUMBER_RE = re.compile(r"\d[\d,.]*\s*(?:%|則|個|美元|萬|億|倍|讚)")
+DESK_WORDS_RE = re.compile(r"初版|同日更正|整期改版|改版一次|待查證|本刊 ?wiki|日報收錄|收錄的文章|來源數")
+SECTION_THREE_RE = re.compile(r"^##\s*三、", re.MULTILINE)
+
+
+def _deepdive_body(text: str) -> str:
+    m = DEEPDIVE_HEADING_RE.search(text)
+    if not m:
+        return ""
+    return re.split(r"^#{2,3}\s", text[m.end():], maxsplit=1, flags=re.MULTILINE)[0]
+
+
+def _section_after(text: str, heading_re: re.Pattern) -> str:
+    m = heading_re.search(text)
+    if not m:
+        return ""
+    return re.split(r"^#{2,3}\s|^---\s*$", text[m.end():], maxsplit=1, flags=re.MULTILINE)[0]
+
+
+def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
+    ok = True
+    files = sorted(weekly_dir.glob("[0-9][0-9][0-9][0-9]-W[0-9][0-9].md")) if weekly_dir.exists() else []
+    for path in files:
+        if path.stem < READER_RULES_SINCE:
+            continue
+        text = path.read_text(encoding="utf-8-sig")
+
+        # 1. 頭條不寫深挖的具體物
+        hm = HEADLINE_SECTION_RE.search(text)
+        deck = (HEADLINE_DECK_RE.search(text) or [None, ""])[1]
+        dd = _deepdive_body(text)
+        if hm and dd:
+            head = hm.group(1)
+            links = set(URL_RE.findall(head)) & set(URL_RE.findall(dd))
+            codes = {c for c in set(CODE_RE.findall(head)) & set(CODE_RE.findall(dd)) if c not in deck}
+            if links or codes:
+                ok = False
+                shared = "、".join(sorted(codes) + sorted(links))
+                report.append(
+                    f"  ❌ {path.stem}：頭條寫進了深挖的具體物（{shared}）——頭條只講這件事為什麼"
+                    "重要、讀者要不要反應；指令、設定名與官方文件引用只放深挖，頭條用一句話指過去"
+                )
+            nums = set(NUMBER_RE.findall(head)) & set(NUMBER_RE.findall(dd))
+            if nums:
+                report.append(f"  ⚠️ {path.stem}：頭條與深挖出現同一個數字（{'、'.join(sorted(nums))}），確認不是同一件事講兩次")
+
+        # 2. 本週要動的事
+        am = ACTIONS_HEADING_RE.search(text)
+        three = SECTION_THREE_RE.search(text)
+        if not am:
+            ok = False
+            report.append(f"  ❌ {path.stem}：缺 `### 本週要動的事`（第二節最後一個小標；沒有就寫「{ACTIONS_NONE}。」）")
+        else:
+            body = _section_after(text, ACTIONS_HEADING_RE)
+            if not re.search(r"^- \S", body, re.MULTILINE) and ACTIONS_NONE not in body:
+                ok = False
+                report.append(f"  ❌ {path.stem}：本週要動的事是空的——列條目，或寫「{ACTIONS_NONE}。」")
+            if three and am.start() > three.start():
+                ok = False
+                report.append(f"  ❌ {path.stem}：本週要動的事要放在第二節（深挖之後、`## 三、` 之前）")
+
+        # 3. 第三、四節與檔尾不放編輯台的帳
+        # 判準欄是凍結的程式契約（deepdive.md「讀者版禁用內部詞」射程），不查
+        tail = text[three.start():] if three else ""
+        prose = [l for l in tail.splitlines() if not l.lstrip().startswith("|")]
+        cells = [c for r in _parse_table(tail, RECAP_HEADER_RE) for c in (r[0], r[-1])]
+        cells += [c for r in _parse_table(tail, FORECAST_HEADER_RE) for c in r[:2]]
+        tail = "\n".join(prose + cells)
+        hits = sorted(set(DESK_WORDS_RE.findall(tail)))
+        if hits:
+            ok = False
+            report.append(
+                f"  ❌ {path.stem}：第三節以後出現編輯台用語（{'、'.join(hits)}）——製作過程、"
+                "收錄量與 wiki 維護指標記進 wiki/log.md，週報只寫讀者要的結果"
+            )
+    return ok
+
+
 def main() -> int:
     report: list[str] = []
     ok = check(report)
@@ -524,6 +613,7 @@ def main() -> int:
     ok = check_deepdive(report) and ok
     ok = check_headline(report) and ok
     ok = check_probe_liveness(report) and ok
+    ok = check_reader_rules(report) and ok
     out = _stdout()
     print("# check_weekly_ledger.py 報告\n", file=out)
     print("\n".join(report) if report else "  （無週報）", file=out)

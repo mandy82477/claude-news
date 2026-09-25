@@ -1178,6 +1178,15 @@
       <div class="weekly-deepdive__body">${mdToHtml(d.deepDive.body)}</div>
     </div>`);
       }
+      // 本週要動的事：把散在頭條收尾、本週版本、綜述、深挖「怎麼用」的動作集中成一張清單
+      //（2026-09-25 冷讀者讀 W38：五處動作點要自己撿，讀完仍得回翻）。W39 起才有。
+      if (d.actions) {
+        parts.push(`
+    <div class="weekly-actions">
+      <div class="weekly-actions__kicker">本週要動的事 · TO DO</div>
+      <div class="weekly-actions__body">${mdToHtml(d.actions)}</div>
+    </div>`);
+      }
       parts.push(`
   </div>`);
     }

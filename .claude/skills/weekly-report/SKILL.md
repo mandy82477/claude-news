@@ -52,9 +52,9 @@ disable-model-invocation: true
 | 段 | 規範檔 |
 |---|---|
 | (1) 頭條敘事（300–500 字，不列清單） | `.claude/skills/weekly-report/references/headline.md` |
-| (2) 技術討論＋深挖（本週版本／討論綜述／深挖 900–1,300 字） | `.claude/skills/weekly-report/references/deepdive.md` |
+| (2) 技術討論＋深挖（本週版本／討論綜述／深挖 900–1,300 字／本週要動的事） | `.claude/skills/weekly-report/references/deepdive.md` |
 | (3) 下週看什麼（新開表在上、回收表在下） | `.claude/skills/weekly-report/references/forecast.md` |
-| (4) 檔尾數字（5 個，條列不得寫成表格） | `.claude/skills/weekly-report/references/forecast.md` |
+| (4) 檔尾數字（2–5 個讀者用得上的數字，條列不得寫成表格） | `.claude/skills/weekly-report/references/forecast.md` |
 
 四段的節標題、表頭、判準尾巴等字串一律照 `.claude/skills/weekly-report/references/contracts.md`，不憑記憶寫。
 
