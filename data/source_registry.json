@@ -38,7 +38,7 @@
     },
     {
       "name": "GitHub",
-      "slug": "github",
+      "slug": "github", "aliases": ["GitHub Search"],
       "active": true,
       "category": "official",
       "score_reliability": "untrusted",
@@ -94,7 +94,7 @@
     },
     {
       "name": "Blogroll",
-      "slug": "blog",
+      "slug": "blog", "aliases": ["Blog"],
       "active": true,
       "category": "community",
       "score_reliability": "none",

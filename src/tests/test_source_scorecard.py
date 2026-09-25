@@ -91,7 +91,7 @@ class TestLoaders(unittest.TestCase):
 
 
 class TestRegistryIntegrity(unittest.TestCase):
-    """registry 是名稱↔slug 的單一真相源：與 main.py 註冊清單、shared.md slug 對照表保持一致。"""
+    """registry 是名稱↔slug 的單一真相源：與 main.py 註冊清單保持一致（記者端的 slug 由 wiki-ingest 步驟 2 節錄照本檔標定，不另抄表）。"""
 
     @classmethod
     def setUpClass(cls):

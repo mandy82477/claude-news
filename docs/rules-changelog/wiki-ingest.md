@@ -17,3 +17,5 @@
 ## 2026-09-25（節錄來源行標 slug）
 
 步驟 2 節錄格式的來源行加 `（slug：…）`，多來源各標一個；主編依 `data/source_registry.json` 填。目的：把原本住 `shared.md` 的 slug 對照表從八位記者的每日必讀移到主編一次查表，記者照抄。同輪一併把各記者角色檔的 pages.md 改為只讀要動的節，理由與量測見 `docs/rules-changelog/reporter-shared.md` 2026-09-25。
+
+自我複核補記：搬表時發現原表帶兩個 registry 沒有的別名（「GitHub Search」→ github、「Blog」→ blog，registry 名為 Blogroll），單靠 registry 主編會標錯或標成未註冊 slug；已在 registry 對應條目加 `aliases` 欄，步驟 2 條文改為對 `name` 或 `aliases`。
