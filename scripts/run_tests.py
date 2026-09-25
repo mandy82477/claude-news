@@ -28,7 +28,7 @@ check_rules（規則一致性）、check_arch_docs（架構文件漂移）、che
 （radar 索引對帳）、check_pending_markers（懸置標記語法）、check_tools_page（決策表契約）、
 check_hierarchy（子故事階層）、check_workflow_paths（GH Actions 指名路徑）、
 check_reader_language（讀者語言閘）、check_cell_limits（字元上限閘）、check_skill_refs
-（skill 指路完整性）、check_css_overrides（CSS 靜默覆寫）。
+（skill 指路完整性）、check_css_overrides（CSS 靜默覆寫）、check_log_handoffs（log 轉知對帳）。
 """
 import argparse
 import io
@@ -57,6 +57,7 @@ GATES: list[tuple[str, str]] = [
     ("check_cell_limits.py", "字元上限機械閘"),
     ("check_skill_refs.py", "skill 指路完整性閘"),
     ("check_css_overrides.py", "CSS 覆寫閘"),
+    ("check_log_handoffs.py", "log 轉知對帳閘"),
 ]
 
 

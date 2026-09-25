@@ -119,6 +119,20 @@ exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正�
 
 收報後把「判讀 N 則／本日無訊號」記入 log.md 本次 ingest 紀錄一行 `market 判讀：…`；記者回報的來源歸因照步驟 4 append 至 `data/source_attribution.jsonl`（slug 用該則日報條目的來源，不是 `user-query`）。
 
+### 4½. 內容閘（主編）
+
+4、4b、4c 全部寫完後、步驟 5 之前跑：
+
+```
+python scripts/ingest_gate.py --date TARGET_DATE
+```
+
+它從 `scripts/run_tests.py` 挑內容類閘來跑（新鮮度、feature-radar 對帳、懸置標記、階層、讀者語言、字元上限、tools 決策表、log 轉知對帳），綠只印末行、紅印全文。**exit 非 0 由主編同輪修到綠才可進步驟 5**——這些紅多半出在本輪剛寫的檔，拖到 Phase C 就變成另一個執行者事後補。
+
+- 修失敗訊息指名的位置、改內容本身；不動 `scripts/check_*.py`
+- 輸出末段列出基線／白名單檔（`data/*baseline*.json`、`data/*-allow.json`）相對 HEAD 的變動：把命中收進基線或白名單也會轉綠，只在確屬誤判時才收，理由寫進 commit 訊息
+- log 轉知對帳紅＝該行沒對上帳本：先照步驟 4 `open` 登帳，把單號補進本輪該行（本輪紀錄尚未 commit）；確實不需登帳的寫「不登帳：<理由>」
+
 ### 5. 完成前強制核對與摘要
 
 **在宣告完成之前**，逐項確認 `.claude/skills/wiki-ingest/references/checklist.md` 的核對清單，再依該檔的摘要表格式輸出完成摘要。
@@ -133,6 +147,6 @@ exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正�
 - `wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl` 皆為 append only，不可修改既有條目。
 - 若日報今日無新內容（來源全部失敗），在 log.md 記錄一筆「無新內容」即可。
 - **收件匣提醒**：ingest 完成後檢查 `wiki/reader-notes.md`，若有狀態 ⏳ 且距今 > 14 天的項目，在完成摘要末尾列出提醒（避免使用者「記一下」的想法積壓無人處理）；無則不提。
-- 驗證閘：核對清單逐項有值、完成摘要已輸出，才算完成。
+- 驗證閘：步驟 4½ `ingest_gate.py` 綠、核對清單逐項有值、完成摘要已輸出，才算完成。
 
 > **沿革檔：** `docs/rules-changelog/wiki-ingest.md`——條文中的教訓敘事住該檔，執行時不必讀。

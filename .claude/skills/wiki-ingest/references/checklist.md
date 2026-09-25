@@ -41,6 +41,8 @@
 **`data/pending-handoffs.jsonl`**（轉知帳本，append only，透過腳本操作）
 - 記者回報「轉知處置」欄的「已處理」→ 逐筆 `python scripts/pending_handoffs.py close H-xxxxxx --by [類別] --result "[一句話]"`；「不適用」→ 判斷：理由成立則 `void`，理由是「不屬我」則保留 open 並改派（重新 `open` 給正確類別後 `void` 原筆）
 - 記者回報「同步自查」欄出現 `⚠️ 需主編轉知[目標類別]記者：…` 且目標是**另一位記者**（非主編自己的彙整工作）→ `python scripts/pending_handoffs.py open --from [來源類別] --to [目標類別] --page [頁面] --note "[要做什麼]"`；今日就能在同一輪派工內解決的（目標記者尚未派出）可直接附進其派工訊息並同時登帳
+- `--page` 填目標記者要動的那頁（不是事實出處頁）：`open` 依 `wiki/index.md` 領域欄（子頁沿 frontmatter `parent`）驗 `--to` 是否該頁負責人，對不上 exit 1 並印出正確負責人，照它改 `--to`；確屬例外（要新建的頁、跨多頁）才 `--force --reason "…"`
+- `wiki/log.md` 寫到轉知的每一行都帶帳本單號 `H-xxxxxx`，或寫「不登帳：<理由>」——log 沒有腳本讀來派工，沒登帳的轉知下一輪沒人收到（步驟 4½ 的 log 轉知對帳看守）
 - 主編自己要做的（feature-radar、index、commitments）不登帳，照步驟 4 做
 
 **`wiki/overview.md`**（視情況）
@@ -57,6 +59,7 @@
 - [ ] 六記者回報的「轉知處置」欄皆有值，且已處理者已 `close`、新轉知已 `open` 登帳（`python scripts/pending_handoffs.py list` 的結果與記者回報一致）
 - [ ] 六記者與分類複核記者回報的「分類回退」項目已全數處理（目標類別原輪已收到者不重派；追加派工按類別合併；一則最多一跳；駁回者記理由）
 - [ ] `data/classification-log.jsonl` 已記本日全部原料，`python scripts/check_classification_log.py --date TARGET_DATE` exit 0（追加派工後補記的類別也已 append）；逾期 backfill 遇 exit 2 者，帳本每行 `reason` 已註明「原料已逾保留窗，未對帳」即算通過
+- [ ] `python scripts/ingest_gate.py --date TARGET_DATE` 綠（摘要附其末行）；基線／白名單有變動者，commit 訊息已寫理由
 - [ ] feature-radar.md 已彙整更新（無新功能則標「本日無新功能」）
 - [ ] wiki/index.md 狀態已全部同步（含所有記者回報的狀態變更）
 - [ ] wiki/log.md 已 append 本次 ingest 紀錄（含品質審查彙整，未修改既有條目）

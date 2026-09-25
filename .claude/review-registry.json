@@ -1756,6 +1756,31 @@
       ],
       "max": 0,
       "_note": "2026-09-25 批評者稽核：兩份範本標頭都帶熱度，與 pages.md「熱度／試用價值欄」及 check_feature_radar.py 衝突，9 月為熱度副本修了三次（805d7262、ae8bb68f、aba48824）。"
+    },
+    {
+      "name": "wiki-ingest SKILL.md 步驟 4½ <-> checklist.md 核對清單：兩端都指名 ingest 內容閘指令",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-ingest/SKILL.md",
+        ".claude/skills/wiki-ingest/references/checklist.md"
+      ],
+      "patterns": [
+        "python scripts/ingest_gate\\.py --date TARGET_DATE"
+      ],
+      "_note": "2026-09-25：內容閘從 Phase C 前移到 ingest 彙整後；步驟端與核對端任一漏掉，主編就會跳過這道閘。"
+    },
+    {
+      "name": "log 轉知契約：checklist.md 寫入規則 <-> scripts/check_log_handoffs.py 看守（帳本單號 H-xxxxxx 或「不登帳：<理由>」）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-ingest/references/checklist.md",
+        "scripts/check_log_handoffs.py"
+      ],
+      "patterns": [
+        "H-xxxxxx",
+        "不登帳：<理由>"
+      ],
+      "_note": "2026-09-25：09-24 log 寫了轉知卻沒登帳，那筆交辦無人接手；規格端與看守端的豁免字樣必須同一個。"
     }
   ],
   "coupling_hints": {

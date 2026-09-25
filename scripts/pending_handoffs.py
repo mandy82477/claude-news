@@ -17,6 +17,12 @@
   python scripts/pending_handoffs.py list --to 功能             # 只印該類別（無則印「無」）
   python scripts/pending_handoffs.py close H-a1b2c3 --by 功能 --result "已補矩陣列"
   python scripts/pending_handoffs.py void  H-a1b2c3 --result "議題已失效"
+  python scripts/pending_handoffs.py open  ... --dry-run          # 只驗負責人、印單號，不寫帳本
+
+open 會驗 --to 是不是 --page 的負責記者：依 `wiki/index.md` 該頁列的「領域」欄推類別；
+頁面不在 index 目錄列（子頁、封存頁）就沿 frontmatter `parent` 往上找。對不上 exit 1 並印出
+正確負責人——轉給不負責那頁的記者，他收到也不會動。確有例外用 `--force --reason "…"`，
+理由寫進帳本。
 
 設計原則：
 1. 只 append 不改寫既有行——結案是新一行，歷史可稽。
@@ -28,6 +34,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -36,6 +43,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LEDGER = REPO_ROOT / "data" / "pending-handoffs.jsonl"
 CATEGORIES = ("模型", "功能", "商業", "安全政策", "社群", "人物", "投資分析", "開發實務")  # 後兩者為衍生記者（.claude/skills/wiki-ingest/references/classification.md 第四步），2026-09-06 加
 STALE_DAYS = 14
+INDEX = REPO_ROOT / "wiki" / "index.md"
+WIKI_DIR = REPO_ROOT / "wiki"
+# index「領域」欄文字 → 記者類別（比對時忽略表情符號）
+DOMAIN_TO_CATEGORY = {"模型": "模型", "工具/功能": "功能", "商業": "商業",
+                      "政策/安全": "安全政策", "社群": "社群", "人物": "人物"}
+# 領域欄推不出真正負責人的頁：market-signals 領域是商業、由投資分析記者維護
+# （.claude/reporter-rules/commercial/daily.md）；feature-radar 不在目錄表，歸功能記者
+OWNER_OVERRIDES = {"topics/market-signals": "投資分析", "feature-radar": "功能"}
+_WIKILINK = re.compile(r"\[\[([^\]|#]+)")
+_PARENT = re.compile(r'^parent:[ \t]*"?([^"\r\n]*?)"?[ \t]*$', re.MULTILINE)
 
 
 def _make_id(opened: str, src: str, dst: str, note: str) -> str:
@@ -70,8 +87,73 @@ def _append(row: dict, path: Path = LEDGER) -> None:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def normalize_page(page: str) -> str:
+    """`[[topics/x]]`、`wiki/topics/x.md`、`topics/x#節` 都正規化成 `topics/x`。"""
+    p = page.strip().strip("[]").split("|")[0].split("#")[0].strip()
+    if p.startswith("wiki/"):
+        p = p[len("wiki/"):]
+    if p.endswith(".md"):
+        p = p[:-3]
+    return p
+
+
+def index_owners(index_path: Path = INDEX) -> dict[str, str]:
+    """讀 wiki/index.md 所有含「領域」表頭的表格，回傳 頁面 → 記者類別。"""
+    owners: dict[str, str] = {}
+    if not index_path.exists():
+        return owners
+    col: int | None = None
+    for line in index_path.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("|"):
+            col = None
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if "領域" in cells:
+            col = cells.index("領域")
+            continue
+        if col is None or col >= len(cells):
+            continue
+        m = _WIKILINK.match(cells[0])
+        if not m:
+            continue
+        for key, cat in DOMAIN_TO_CATEGORY.items():
+            if key in cells[col]:
+                owners[normalize_page(m.group(1))] = cat
+                break
+    return owners
+
+
+def _parent_of(page: str, wiki_dir: Path) -> str | None:
+    f = wiki_dir / f"{page}.md"
+    if not f.exists():
+        return None
+    text = f.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return None
+    end = text.find("\n---", 3)
+    m = _PARENT.search(text[: end if end != -1 else 2000])
+    if not m or m.group(1).strip() in ("", "null", "~"):
+        return None
+    return normalize_page(m.group(1))
+
+
+def owner_of(page: str, index_path: Path = INDEX, wiki_dir: Path = WIKI_DIR) -> tuple[str | None, list[str]]:
+    """回傳 (負責記者類別或 None, 推導路徑)。先查覆寫表與 index，查不到沿 parent 往上。"""
+    owners = index_owners(index_path)
+    cur: str | None = normalize_page(page)
+    trail: list[str] = []
+    while cur and cur not in trail and len(trail) < 6:
+        trail.append(cur)
+        if cur in OWNER_OVERRIDES:
+            return OWNER_OVERRIDES[cur], trail
+        if cur in owners:
+            return owners[cur], trail
+        cur = _parent_of(cur, wiki_dir)
+    return None, trail
+
+
 def open_handoff(src: str, dst: str, page: str, note: str, opened: str | None = None,
-                 path: Path = LEDGER) -> str:
+                 path: Path = LEDGER, extra: dict | None = None) -> str:
     if src not in CATEGORIES or dst not in CATEGORIES:
         raise SystemExit(f"from/to 必須是下列類別之一：{', '.join(CATEGORIES)}")
     if src == dst:
@@ -80,8 +162,10 @@ def open_handoff(src: str, dst: str, page: str, note: str, opened: str | None = 
     hid = _make_id(opened, src, dst, note)
     if hid in load(path):
         return hid  # 冪等：同日同交辦重複開立不重複記
-    _append({"id": hid, "opened": opened, "from": src, "to": dst, "page": page,
-             "note": note, "status": "open"}, path)
+    row = {"id": hid, "opened": opened, "from": src, "to": dst, "page": page,
+           "note": note, "status": "open"}
+    row.update(extra or {})
+    _append(row, path)
     return hid
 
 
@@ -143,6 +227,9 @@ def main(argv: list[str] | None = None) -> int:
     p_open = sub.add_parser("open"); p_open.add_argument("--from", dest="src", required=True)
     p_open.add_argument("--to", required=True); p_open.add_argument("--page", default="—")
     p_open.add_argument("--note", required=True); p_open.add_argument("--date")
+    p_open.add_argument("--force", action="store_true", help="--to 與頁面負責人不符仍開立（須附 --reason）")
+    p_open.add_argument("--reason", help="--force 的理由，寫進帳本")
+    p_open.add_argument("--dry-run", action="store_true", help="只驗負責人並印單號，不寫帳本")
     p_list = sub.add_parser("list"); p_list.add_argument("--to")
     p_close = sub.add_parser("close"); p_close.add_argument("id"); p_close.add_argument("--by", required=True)
     p_close.add_argument("--result", required=True)
@@ -150,7 +237,31 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
 
     if a.cmd == "open":
-        print(open_handoff(a.src, a.to, a.page, a.note, a.date))
+        extra = None
+        if a.force:
+            if not (a.reason or "").strip():
+                print("❌ --force 必須附 --reason「為何轉給非負責記者」", file=sys.stderr)
+                return 1
+            extra = {"force_reason": a.reason.strip()}
+        else:
+            owner, trail = owner_of(a.page)
+            via = " → ".join(trail)
+            if owner is None:
+                print(f"❌ 查不到 `{a.page}` 的負責記者（推導路徑：{via or '—'}；wiki/index.md 無此列、"
+                      "frontmatter 無 parent）。請改填正確頁面，或 --force --reason 說明", file=sys.stderr)
+                return 1
+            if owner != a.to:
+                print(f"❌ `{a.page}` 的負責記者是「{owner}」，不是「{a.to}」（推導路徑：{via}）。"
+                      f"改用 --to {owner}；確有例外用 --force --reason", file=sys.stderr)
+                return 1
+        if a.dry_run:
+            src_ok = a.src in CATEGORIES and a.to in CATEGORIES and a.src != a.to
+            if not src_ok:
+                print("❌ from/to 不合法或相同", file=sys.stderr)
+                return 1
+            print(f"（dry-run，未寫帳本）{_make_id(a.date or date.today().isoformat(), a.src, a.to, a.note)}")
+            return 0
+        print(open_handoff(a.src, a.to, a.page, a.note, a.date, extra=extra))
     elif a.cmd == "list":
         print(render(open_items(to=a.to)))
     elif a.cmd == "close":
