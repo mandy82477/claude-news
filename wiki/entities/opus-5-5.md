@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-09-23"
+last_updated: "2026-09-25"
 last_news_update: "2026-09-23"
 status_main: "active"
 days_since_news: 1
@@ -57,7 +57,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 牌價（輸入／輸出，每百萬 token）| $5 ／ $25 | $4 ／ $20（快取讀取 $0.20，為基礎輸入價 5%）| 官方 GitHub changelog；官方 models overview（2026-09-23 查證）|
 | 知識截止 | 2026-05 | 2026-06（官方稱「可靠」知識截止）| 官方 models overview（2026-09-23 查證）|
 | 會不會停掉 | 已改列 Legacy，退役**不早於 2027-07-24**（沿用既有查證值） | 退役**不早於 2027-09-22** | 官方 models overview（2026-09-23 查證）|
-| 從舊代升上去會壞什麼 | —（基準世代） | 官方未載（2026-09-23 查證，changelog 僅列新增與定價，未提及行為變動）| GitHub `v2.1.280` changelog |
+| 從舊代升上去會壞什麼 | —（基準世代） | **thinking 不可再關閉**（官方發布文：「no longer available with 'thinking' mode switched off」）——設定或腳本有關 thinking 的會壞；另 2026-08-31 後建立的 API 帳號套「preserved thinking」反蒸餾機制（2026-09-25 查證）| 官方發布文（2026-09-25 查證）|
 | 官方推薦拿它做什麼 | 已不再是預設 Opus | 官方稱多數工作表現追平 Fable 5.1；未另列「何時該升 Fable 5.1」的分界 | 官方發布文（2026-09-23 查證）|
 | 我的方案能不能用 | 同右，兩代同一套方案規則 | Pro／Max／Team／Enterprise／API 皆為預設 Opus；Team standard 依 [[entities/pricing]]「同 Pro」慣例推得，官方未逐一列出 | 官方 models overview（2026-09-23 查證）|
 
@@ -71,15 +71,27 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 這些數字是誰量的
 
-> 資料截至 2026-09-23。官方發布文僅給出「多數工作表現追平 Fable 5.1」的定性宣稱，**未見具體命名基準與分數**——這與 Opus 5 發布時官方同批公布 CursorBench／ARC-AGI／OSWorld 等具名基準不同。
+> 資料截至 2026-09-25。**更正（2026-09-25，使用者提問查證）**：本節 09-23 版寫「官方未見具名基準與分數」是錯的——官方發布文有整張基準表，同時列 Fable 5.1、Opus 5、GPT-6 Astra、GPT-5.6 Sol 對照；當日僅讀到媒體轉述，未核對官方原文。
 
-- **官方定性宣稱**：多數工作表現追平 [[entities/fable-5|Fable 5.1]]（Anthropic 官方發布文，2026-09-23）；🔎 **查無官方**（標 2026-09-23｜查 `claude-opus-5-5`、benchmark｜複 2026-10-07）——查證官方發布文與 models overview 後未見具名基準或分數，僅定性描述。
-- **VentureBeat 稱「勝過 Fable 5.1、API 價格便宜 60%」**：媒體轉述，未附基準名稱或分數。
-- **「60%」與官方「40%」口徑不同**：60% 疑指對 Fable 5.1 牌價（$10/$50）的比較，算式吻合；40% 疑指對 Opus 5 執行成本的比較，兩者非同一對照，並陳不選邊。
+| 基準 | Opus 5.5 | Fable 5.1 | Opus 5 |
+|---|---|---|---|
+| Terminal-Bench 4.0 | 66.4% | 55.8% | 52.3% |
+| FrontierCode v1.1（Main） | 54.4% | 50.3% | 48.0% |
+| CursorBench 4.0 | 57.8% | 51.8% | 46.6% |
+| GDPval-AA v2.1（Elo） | 1846 | 1735 | 1708 |
+| AutomationBench | 40.0% | 31.4% | 26.9% |
+| Humanity's Last Exam（tools） | 67.7% | 65.6% | 63.6% |
+| Terminal-Bench-Science 0.1 | 58.7% | 52.6% | 29.0% |
+| OSWorld 2.0（partial） | 81.8% | 80.7% | 74.0% |
+| Chartography（tools） | 89.0% | 88.4% | 83.4% |
+
+- **官方自己的但書**：「leads in agentic coding, computer use, and knowledge work」，但明寫實際使用上與 Fable 5.1 的差距比分數看起來小；另稱輸出比 Opus 5 快 30% 以上（[官方發布文](https://www.anthropic.com/claude-opus-5-5)，2026-09-25 查證）。
+- **VentureBeat 稱「勝過 Fable 5.1、API 價格便宜 60%」**：「勝過」對得上官方表；「60%」是對 Fable 5.1 牌價（$10/$50）的比較，與官方「典型工作負載比 Opus 5 少花 40%」不是同一對照，並陳不選邊。
+- **快取讀取 $0.20 是降 60%**（Opus 5 為 $0.50），與牌價降 20% 分開看。
 - **HN 討論**（1,674 分，7 個來源同日交叉報導，2026-09-22）：屬互動量訊號，非能力數字。
-- **跨家分數不進本頁**：OpenAI 同日發布 GPT-6 Sol／Luna，Fortune 稱 AI 價格戰再度升溫；跨家「誰強」現在的答案見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]，本頁不留跨家分數。
+- **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 
-**所以呢**：官方這次沒有公布具名基準分數，只有定性宣稱與牌價數字；媒體端的「60% 便宜」與官方「40% 少花」算的不是同一件事。下一輪若官方補上具名基準或社群交出獨立複測，優先併入這裡。
+**所以呢**：官方有具名基準表且全項領先前代；要看的是社群獨立複測，目前還沒有。
 
 ---
 

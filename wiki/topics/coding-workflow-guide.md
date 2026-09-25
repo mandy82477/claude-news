@@ -509,7 +509,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ⚠️ **本段只掃過官方文件，社群面未查**——社群的防腐爛機制目前只有二手轉述，一手實作尚未查證。
 
-官方的診斷工具都在回答「**設定有沒有生效**」：`/doctor`（完整體檢且能修，別名 `/checkup`）、`debug-your-config`（症狀對照表）、`--safe-mode`（停用所有客製化以排查）、`/context` 的 Skills 列、`/hooks` 瀏覽器。
+官方的診斷工具都在回答「**設定有沒有生效**」或「**佔了多少**」：`/doctor`（完整體檢且能修，別名 `/checkup`）、`/skill-doctor`（v2.1.252+；每個 skill 的 context 成本與叫用次數，從沒用過的建議關掉——只算用量，不評內容，2026-09-25 查證）、`debug-your-config`（症狀對照表）、`--safe-mode`（停用所有客製化以排查）、`/context` 的 Skills 列、`/hooks` 瀏覽器。
 
 官方也給了 CLAUDE.md 的保鮮做法：**在 PR 裡 review CLAUDE.md 的改動**（當成一般文件變更）；每次大型模型發布後回頭檢視——為繞過舊模型限制而寫的規則，新模型能自己處理之後就該刪。以及診斷語：
 

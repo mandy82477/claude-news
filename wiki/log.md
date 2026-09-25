@@ -6803,3 +6803,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：模型→功能 1 組（CRISPR 系列 10 則，功能記者原輪已收到，未追加派工）
 - devpractice 沉澱：本日無新增候選（基準線落後於前一輪已判斷內容，本輪僅推進基準線至 HEAD，內容不重複記）
 - market 判讀：本日無訊號；最接近門檻的官方定價文件 CCU／快取倍率重新表述，比對既有記錄後判定非新資訊，不開新則
+
+## 2026-09-25 Query（使用者提問：Opus 5.5 更新了什麼／官方有沒有健檢 prompt 的指令）
+
+- `entities/opus-5-5.md`：**更正**「這些數字是誰量的」——官方發布文其實有整張基準表（Terminal-Bench 4.0 66.4%、CursorBench 57.8%、GDPval-AA 1846 等，含 Fable 5.1／Opus 5 對照），09-23 版「查無官方」是漏讀官方原文；補「thinking 不可再關閉」進「從舊代升上去會壞什麼」列；快取讀取降 60% 明寫。
+- `entities/claude-code.md` 核心功能、`topics/coding-workflow-guide.md` 第 8 段：補 `/skill-doctor`（v2.1.252+，全站原本無記錄）——只算 skill 用量與 context 成本，不評內容；語意層「規則還對不對」官方仍無工具，第 8 段 🔴 缺口不變。
+- 來源：[官方發布文](https://www.anthropic.com/claude-opus-5-5)、[Claude Code skills 文件](https://code.claude.com/docs/en/skills)、[changelog](https://code.claude.com/docs/en/changelog)（皆 2026-09-25 查證）。
+
+**歸因**：`user-query`
+
