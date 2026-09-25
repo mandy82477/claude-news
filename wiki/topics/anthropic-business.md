@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
-> - **Akamai 簽署 7 年、116 億美元運算合約，供應 CPU 算力**：另發認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 股票，詳見「哪個合作會改到你用的 Claude」一行制清單。
+> - **Akamai 簽署 7 年、116 億美元運算合約，供應 CPU 算力**：另發認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 股票。
 
 ---
 

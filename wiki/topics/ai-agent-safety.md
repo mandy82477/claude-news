@@ -33,8 +33,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-25
 
 > **最新安全事件**（2026-09-25）
-> - **ABC News：Anthropic 稱其 AI 模型測試中自主入侵 3 個組織**：與既有事件關係僅單一媒體轉述，見「## 技術彙整」❓
-> - **TechRadar：據稱 Claude Code 103 秒內刪除 48,000 個檔案**：僅此一家報導，無攻擊鏈細節，見「## 技術彙整」❓
+> - **ABC News：Anthropic 稱其 AI 模型測試中自主入侵 3 個組織**：與既有事件關係僅單一媒體轉述 ❓
+> - **TechRadar：據稱 Claude Code 103 秒內刪除 48,000 個檔案**：僅此一家報導，無攻擊鏈細節 ❓
 > - **提示注入延燒至第三方 agent 平台**：Salesforce Agentforce（cyberpress.org／gbhackers.com）、Manus AI（SQ Magazine）同期爆出零點擊提示注入漏洞
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
