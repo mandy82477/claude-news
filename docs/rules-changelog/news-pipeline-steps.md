@@ -137,3 +137,11 @@
 **決策：**
 - `selection.md` 聚焦節：只放今天才發生的事；前 5 份登過的故事沒新進展不進聚焦也不進重點話題，有新進展標 `[持續追蹤]（續 MM-DD）`、一天至多一條；標籤照事件性質選；連結標籤要是真出處。禁詞加「同步收錄｜個管道」（09-19 聚焦句把來源計數原樣印出）。
 - 新閘 `scripts/check_focus.py`：寫前 `--list` 印前 5 份聚焦供比對（Step 1a）；寫後擋字面相似 ≥ 0.30 而未標續報者、續報標記與 [持續追蹤] 不一致者、[HN] 標籤連錯者（Step 3a-3）。0.30 以 08-06～09-24 回放校準，命中約九成是真重登；換說法的重登抓不到，靠 1a 人工比對。
+
+## 2026-09-25 GitHub 抓料窗口輪替：A/B per_page 8→30＋「近 14 天抓過就讓位」閘；C 窗加 `skills in:name`、每日 2→3
+
+**起因：** 使用者點名 Tencent/WeKnora（29.8k★）全庫零命中後做盲點探針：GitHub 十條 topic 查詢撈 142 個候選，描述明寫 Claude／Anthropic／skills 的有 45 個，其中 **18 個本庫從未看過**（zeron 2.2k、HolyClaude 2.6k、fable-method 2.3k、claude_codex_bridge 3.5k、anything2explainer 2k；skills 側 ui-ux-pro-max-skill 130k、taste-skill 90k、awesome-openclaw-skills 53k、baoyu-skills 26k、distilly 25k…）。只在 README 提 Claude 或只有 MCP 的 65 個判定不收，正確。
+
+**根因不是關鍵字：** A 窗（90 天內出生、≥100 星、降冪）每條 query 只讀 8 筆，前 8 名天天同一批；B 窗（500–5,000 星、升冪）永遠是剛過 500 的同一批；星史近 7 天每日看見 414 個 repo、7 天聯集只 438 個。已報導閘只擋進了日報的，被選材篩掉的明天又占滿 AB_WINDOW_CAP 的三個位子。C 窗 skills scope 只有 `"agent skills"` 片語，描述寫「AI skill」「Skills for …」的全漏；`skills in:name stars>3000` 探針 30 筆全切題。
+
+**改法：** `AB_SEARCH_PER_PAGE=30`（同一次請求，零額外 API）；新增 `_recently_gathered_repo_urls()` 讀 `src/gathered_archive/` 近 14 天的 GitHub URL，`_window_should_skip()` 讓已抓過的讓位（失效模式回空集合＝回到舊行為，不會灌錯）；`_INVENTORY_SCOPES` 加 `skills in:name`（只進 C 窗，≥3000 星是品質過濾）；`INVENTORY_PER_DAY=3`。測試 `test_ab_window_rotation.py` 10 案例；`collection-scope.md` 同步。pipeline-change-check 基線：09-24 日報 68 則、六區塊 4/4/2/6/8/2，改後 149 份 digest 全數可解析、build 綠；連續 3 天留意 GitHub Search 條目數與新面孔比例。

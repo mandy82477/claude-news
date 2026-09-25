@@ -1,7 +1,9 @@
+import json
 import logging
 import re
 import time
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 import requests
 
@@ -43,6 +45,14 @@ CROSSING_STAR_RANGE = "500..5000"  # B 窗：穿越帶（2026-09-03 上限 3000�
 CROSSING_ACTIVE_DAYS = 30  # B 窗：多久內有 push 才算活躍
 AB_WINDOW_CAP = 3          # A/B 窗每日各自硬上限（2026-09-03）：上限的意義是壞掉時
 #   的爆炸半徑——改版前 A/B 滿載可灌 40 則進日報
+AB_SEARCH_PER_PAGE = 30    # A/B 窗每條 query 讀幾筆（2026-09-25：8→30）。8 筆時 A 窗
+#   90 天內星數前 8 名幾乎天天同一批、B 窗升冪永遠是剛過 500 星的同一批，中段
+#   （2–5k 星、出生一兩個月）結構性隱形：盲點探針抓到 18 個描述明寫 Claude／skills
+#   的 repo 本庫從未看過。多讀是同一次請求，零額外 API 呼叫。
+RECENTLY_GATHERED_DAYS = 14  # A/B 窗「抓過就讓位」閘：近 N 天已進 gathered_archive 的
+#   repo 不再佔 AB_WINDOW_CAP 的位子。已報導閘只擋進了日報的；被日報選材篩掉的
+#   repo 若不擋，明天同一批又占滿三個位子，per_page 放大也白放。與 gathered_archive
+#   保留天數同步（14 天）。
 SOURCE_TOTAL_CAP = 16      # 本來源總回傳硬上限（官方 releases ＋ 各窗合計）
 
 
@@ -65,9 +75,13 @@ _INVENTORY_SCOPES = _REPO_SEARCH_SCOPES + [
     # 分析、logo 產生），工程級框架全部落在 20k 星以上——在這條 scope 上，
     # 星數本身就是品質過濾器。
     '"agent skills" in:name,description',
+    # 2026-09-25 盲點探針：描述寫「AI skill」「Skills for …」而非 "agent skills" 片語的
+    # skills repo（ui-ux-pro-max-skill 130k、taste-skill 90k、baoyu-skills 26k…）12 個
+    # 全漏；`skills in:name` 在 ≥3000 星實測 30 筆全為 skills 生態，無雜訊。
+    'skills in:name',
 ]
 INVENTORY_MIN_STARS = 3000  # C 窗下限＝B 窗上限，兩窗接壤不重疊
-INVENTORY_PER_DAY = 2       # 每日至多吐幾則（防止首日灌入一批人盡皆知的條目）
+INVENTORY_PER_DAY = 3       # 每日至多吐幾則（2026-09-25：2→3，skills scope 加入後積壓 12 個）
 
 
 # ── E 窗吐出端：星速觸發（2026-09-10 Phase 2 上線）─────────────────────────
@@ -158,6 +172,7 @@ class GitHubReleases(BaseSource):
             # ── Community repo search（成長偵測，設計說明見檔頭常數區）──────────
             now = datetime.now(tz=timezone.utc)
             emitted = _emitted_repo_urls()  # 2026-09-03：升為所有窗的共用已報導閘
+            recently = _recently_gathered_repo_urls(now)  # 2026-09-25：A/B 窗「抓過就讓位」閘
             star_seen: dict[str, int] = {}  # E 窗記錄端：本次各窗看到的 repo 星數
             rising_cutoff = (now - timedelta(days=RISING_WINDOW_DAYS)).strftime("%Y-%m-%d")
             active_cutoff = (now - timedelta(days=CROSSING_ACTIVE_DAYS)).strftime("%Y-%m-%d")
@@ -180,7 +195,7 @@ class GitHubReleases(BaseSource):
                             "q": query,
                             "sort": "stars",
                             "order": order,
-                            "per_page": 8,
+                            "per_page": AB_SEARCH_PER_PAGE,
                         },
                     )
                     remaining = int(resp.headers.get("X-RateLimit-Remaining", 999))
@@ -193,7 +208,7 @@ class GitHubReleases(BaseSource):
                         url_key = repo["html_url"].rstrip("/").lower()
                         # 共用已報導閘：日報＋清倉帳本出現過的不再吐（改版前 A/B 只有
                         # 14 天 TTL 的 emitted-cache，清倉後的 repo 會被重吐）
-                        if emitted is not None and url_key in emitted:
+                        if _window_should_skip(url_key, emitted, recently):
                             continue
                         window_pool[window].append(repo)
                 except Exception as e:
@@ -275,6 +290,48 @@ def _emitted_repo_urls() -> "set[str] | None":
         logger.warning("Inventory sweep: cannot read news dir, skipping (%s)", e)
         return None
     return urls
+
+
+def _window_should_skip(url_key: str, emitted: "set[str] | None", recently: "set[str]") -> bool:
+    """A/B 窗兩道閘（純函式，供測試鎖行為）：已報導（日報＋清倉帳本）或近 N 天已抓過
+    （進了 gathered_archive、不論日報有沒有選）都讓位。emitted 為 None 代表日報庫讀不到，
+    此時只靠第二道閘。"""
+    if emitted is not None and url_key in emitted:
+        return True
+    return url_key in recently
+
+
+def _recently_gathered_repo_urls(now: datetime, days: int = RECENTLY_GATHERED_DAYS,
+                                 archive_dir: "Path | None" = None) -> "set[str]":
+    """近 N 天 gathered_archive 裡出現過的 GitHub repo URL（小寫、去尾斜線）。
+
+    讀不到、目錄不存在、檔案壞掉一律回空集合：這道閘的作用是「讓位」不是「守門」，
+    失效的後果只是回到改版前的行為（同一批 repo 重複佔位），不會灌錯東西進日報。
+    """
+    urls: set[str] = set()
+    try:
+        adir = archive_dir or (NEWS_DIR.parent / "src" / "gathered_archive")
+        cutoff = (now - timedelta(days=days)).strftime("%Y-%m-%d")
+        for path in sorted(adir.glob("*.json")):
+            if path.stem < cutoff:
+                continue
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception as e:
+                logger.warning("gathered_archive %s unreadable, skipped: %s", path.name, e)
+                continue
+            items = data.get("items", []) if isinstance(data, dict) else data
+            for it in items or []:
+                u = (it.get("url") or "") if isinstance(it, dict) else ""
+                m = _GH_REPO_URL_RE.match(u)
+                if m:
+                    urls.add(m.group(0).rstrip("/").lower())
+    except Exception as e:
+        logger.warning("recently-gathered gate unavailable: %s", e)
+    return urls
+
+
+_GH_REPO_URL_RE = re.compile(r"https://github\.com/[\w.\-]+/[\w.\-]+")
 
 
 def _record_queue(window: str, queued: int, emitted_n: int, now: datetime, note: str = "ok") -> None:
