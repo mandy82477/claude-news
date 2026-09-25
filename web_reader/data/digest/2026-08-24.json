@@ -416,11 +416,6 @@
       "id": "amir-salek",
       "name": "Amir Salek",
       "pageType": "entity"
-    },
-    {
-      "id": "claude-skills",
-      "name": "Claude Skills",
-      "pageType": "entity"
     }
   ]
 }

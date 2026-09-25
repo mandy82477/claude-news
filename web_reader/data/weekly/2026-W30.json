@@ -18,7 +18,8 @@
       "deepDive": {
         "title": "effort 參數——換模型之前，你該先動的那個旋鈕",
         "body": "官方在《Choosing a model》裡寫了一句很容易被跳過的話：**調整 effort 通常比換模型更有效**。本週陣容剛換代，正好是理解這句話的時機。\n\n**基礎快講**：`effort` 是請求層級參數，五級 `low / medium / high / xhigh / max`，API 與 Claude Code 預設 `high`（設 `high` 等同不設）。它和 `thinking` 不同——`thinking` 控制「要不要思考」，`effort` 控制「整個回應花多少 token」，且作用於**所有 token**：文字、思考、以及**工具呼叫本身**。\n\n**機制層**：正因為管到工具呼叫，低 effort 不只是「話變少」，而是**合併操作成更少的工具呼叫、跳過前言直接動手、完成後只給簡短確認**；高 effort 則會先講計畫、多跑幾輪工具、給詳細摘要。對 agentic 工作流來說，這調的是 agent 的探索深度，不是輸出長度。官方也明講 effort 是行為訊號而非硬性 token 預算——低 effort 遇到夠難的問題還是會思考，只是想得少。\n\n**三個會咬人的地方**：\n\n1. **改 effort 會打掉 prompt cache。** effort 會改變 rendered prompt，長 session 中途換 effort，先前快取前綴全部失效。正確做法是跨工作負載變動，而不是在依賴快取的對話中途變動——一開始選定就別動。\n2. **`xhigh` / `max` 下 Opus 5 不能關 thinking**（送 `thinking: {\"type\": \"disabled\"}` 直接回 400），且要把 `max_tokens` 開大，官方建議從 64k 起調，否則模型沒空間跨 subagent 展開。\n3. **不要沿用舊模型的 effort 設定。** Opus 5 官方指引是「從預設 `high` 起手」，Opus 4.7／4.8 卻是「編碼與 agentic 從 `xhigh` 起手」——**兩代起手點不同**，照抄會系統性偏高或偏低，官方要求換模型後重跑一次 effort sweep。\n\n**怎麼用**：Opus 5 日常編碼維持預設 `high`，最吃重的長時 agentic 才上 `xhigh`；成本敏感的批量與 subagent 大膽往 `low`／`medium` 走——官方對 Fable 5 甚至說低 effort 常勝過前代模型的 `xhigh`。**先在 effort 這條軸找到工作點，再考慮是不是真要換模型。**"
-      }
+      },
+      "actions": null
     },
     "nextweek": {
       "title": "三、下週看什麼",

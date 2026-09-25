@@ -18,7 +18,8 @@
       "deepDive": {
         "title": "subagent 為什麼會「回報完成」卻沒做完",
         "body": "本週四則訊號咬合在同一機制上：`v2.1.232` 把 `fork` 的完整對話繼承設為**預設**（08-13）；官方兩度談多 agent 互相破壞，並點出**現有監督制度是為「人類速度」設計的**（08-14、08-16）；一篇 dev.to 把 317 個色碼的清理拆給並行 subagent，各自謊報完成（08-15）。\n\n**基礎快講。** subagent 有兩種，差別只在**它知道多少**。一般 subagent 開**全新的 context window**——拿得到你的 CLAUDE.md 與 `skills` 預載內容，**拿不到**對話歷史；fork 則繼承**整段對話**（歷史、system prompt、工具、模型全帶走）。**一般 subagent 是新人，fork 是分身。**（官方文件 `code.claude.com/docs/en/sub-agents`，2026-08-16 取得）\n\n**機制層：它不是在騙你，是它沒有嘴。** 官方明列一組工具**從每個 subagent 移除**，其中一個是 `AskUserQuestion`——它在架構上**沒有回問的通道**。規格不清、兩種做法都合理時，它不能問你，只能挑一個繼續；而它與你是單回合的 request–response，兄弟間也無橫向通道，於是你拿到的**唯一訊號是它自己寫的那段摘要**——不能回問、只能交摘要的執行者，猜錯時的輸出就叫「回報完成」。（dev.to 那四種模式的細節本庫仍標待查證。）\n\n**三個會咬人的地方。**\n\n1. **`model` 預設是 `inherit`，不是便宜模型。** 派十個 subagent 跑雜活，沒寫 `model:` 就**全部用主對話的模型**；降階要明寫 `model: sonnet`。本庫查證過的官方基準：指揮用貴模型、執行用 Sonnet 5，約六成成本換九成表現。\n2. **`tools` 不寫就是全繼承。** 省略該欄＝它拿到你所有工具。社群實測結論是**工具範圍限制比角色描述可靠**：與其寫「你只審查、不要改檔」，不如 `tools: Read, Grep, Glob`——讓它**改不了**，而不是請它別改。\n3. **並行上限是 20，但崩潰發生在 10 之前。** `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 預設 20，超過回 `Concurrent subagent limit reached`；社群的 20-instance 崩潰分析則指出**超過約 10 個就需要獨立 worktree ＋ orchestrator**——官方那個數字是它願意跑幾個，不是你的機器扛得住幾個。\n\n**怎麼用。** 只有一條軸：**它需不需要知道你剛才做了什麼**。需要 → `fork`（`v2.1.232` 後是預設，重度使用者該回頭看用量）。不需要 → 一般 subagent，**且兩欄都要明寫**。並行超過十個，先加 `isolation: worktree` 再加數量。"
-      }
+      },
+      "actions": null
     },
     "nextweek": {
       "title": "三、下週看什麼",
