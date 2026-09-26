@@ -4,24 +4,24 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-25"
-last_news_update: "2026-09-25"
+last_updated: "2026-09-26"
+last_news_update: "2026-09-26"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 3
-attribution_count: 9
-attribution_last: "2026-09-25"
+days_since_news_subtree: 0
+inbound_links: 4
+attribution_count: 12
+attribution_last: "2026-09-26"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Science

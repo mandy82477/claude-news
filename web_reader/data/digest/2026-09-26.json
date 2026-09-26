@@ -1,0 +1,530 @@
+{
+  "date": "2026-09-26",
+  "generatedAt": "2026-09-26 05:57 UTC",
+  "articleCount": 68,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Yes, Claude can do nine loops",
+      "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+      "source": "Hacker News ＋Google News / Anthropic、HN Repo Bridge",
+      "time": "09/25 18:11",
+      "sentiment": "",
+      "body": "物理科普作者 Matt von Hippel 向 AI 公司拋出一道他過去研究領域的理論物理問題，一個月後被解出；Anthropic Science 部落格以訪談形式記錄這次挑戰的過程與結果。Hacker News 累積 103 分，4 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-science",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.283",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "09/25 21:50",
+      "sentiment": "",
+      "body": "新增 `x-claude-code-prompt-id` 閘道提示標頭，讓 LLM gateway 能把同一使用者提示產生的多筆請求歸為一組，需設定 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Accenture (ACN) Joins Anthropic's AI Safety Effort. Can it Turn Evaluation into Profits? - finance.yahoo.com",
+      "url": "https://finance.yahoo.com/technology/ai/articles/accenture-acn-joins-anthropic-ai-233631025.html",
+      "source": "Google News / finance.yahoo.com",
+      "time": "09/25 23:36",
+      "sentiment": "",
+      "body": "報導指出 Accenture 加入 Anthropic 的 AI 安全評測合作，並討論 Accenture 能否把安全評測服務轉為新的營收來源。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic investor Lonsdale says AI firms stoking fear to sway policy - Reuters",
+      "url": "https://www.reuters.com/business/media-telecom/anthropic-investor-lonsdale-says-ai-firms-stoking-fear-sway-policy-2026-09-25/",
+      "source": "Google News / Reuters",
+      "time": "09/25 18:55",
+      "sentiment": "",
+      "body": "Anthropic 投資人 Joe Lonsdale 公開表示，AI 公司渲染風險是為了影響政策走向；報導與今日法院維持五角大廈供應鏈風險認定一事同日出現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "joe-lonsdale",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Scoop: Trump allies open new front on Anthropic CEO as face of AI \"doomerism\" - Axios",
+      "url": "https://www.axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei",
+      "source": "Google News / Axios",
+      "time": "09/25 08:47",
+      "sentiment": "",
+      "body": "Axios 獨家報導，川普政府盟友將矛頭指向 Anthropic 執行長 Dario Amodei，稱其為 AI「末日論」的代表人物。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude-Generated Legal Scholarship: An Experiment - Divided Argument | Substack",
+      "url": "https://blog.dividedargument.com/p/claude-generated-legal-scholarship",
+      "source": "Google News / Divided Argument | Substack",
+      "time": "09/25 11:50",
+      "sentiment": "",
+      "body": "法律類 Substack 作者實驗讓 Claude 生成法學論文式內容，記錄這次嘗試的過程與觀察。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[BUG] Cowork: new projects lost \"Choose a folder\" — Context menu replaced with Chat-style upload-only knowledge menu after Chat/Cowork merge",
+      "url": "https://github.com/anthropics/claude-code/issues/76694",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/25 15:10",
+      "sentiment": "",
+      "body": "使用者回報 Chat／Cowork 介面合併後，新建專案的資料夾選擇功能消失，選單被換成僅能上傳檔案的 Chat 風格知識庫選單，累積 30 則反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cowork: Folder does not support UNC under Windows",
+      "url": "https://github.com/anthropics/claude-code/issues/45297",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/25 16:12",
+      "sentiment": "",
+      "body": "另一則回報指出 Windows 下 Cowork 的資料夾功能不支援 UNC 路徑，累積 32 則反應，與上則同屬 Chat／Cowork 合併後的資料夾功能退化。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Jevmem – automatic project memory for Claude Code, built on Jev",
+      "url": "https://github.com/Avinash-jetwani/jevmem",
+      "source": "Hacker News",
+      "time": "09/25 16:04",
+      "sentiment": "",
+      "body": "作者發布 Claude Code 專案記憶自動化工具，但 Hacker News 討論區有留言認為說明文件雖詳盡卻說不清楚核心價值，也有人質疑「舊記錄標記過時但不刪除」的設計會讓 context 累積過期資訊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "The cheap new AI model taking aim at OpenAI and Anthropic - FT",
+      "url": "https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430",
+      "source": "Hacker News ＋Google News / Financial Times",
+      "time": "09/25 17:06",
+      "sentiment": "",
+      "body": "Financial Times 報導一款低價新模型 Jev 意圖挑戰 OpenAI 與 Anthropic，Hacker News 討論區對報導時機與該模型的競爭力各有看法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Yuan1z0825/nature-skills",
+      "url": "https://github.com/Yuan1z0825/nature-skills",
+      "source": "GitHub Search",
+      "time": "09/26 05:49",
+      "sentiment": "",
+      "body": "（2026-04 出生、44,559 星，本庫今日首次收錄）符合 Nature 論文學術表達與科研繪圖規範的 skill。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "emilkowalski/skills",
+      "url": "https://github.com/emilkowalski/skills",
+      "source": "GitHub Search",
+      "time": "09/26 05:49",
+      "sentiment": "",
+      "body": "（2026-03 出生、41,182 星，本庫今日首次收錄）給設計師與工程師使用的 skills 集合。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "美國聯邦上訴法院（DC Circuit）維持五角大廈將 Anthropic 列為「供應鏈風險」的認定，起因是 Anthropic 拒絕依軍方要求為 Claude 啟用特定功能；Hacker News 累積 426 分、3 個來源同日報導。",
+      "ref_urls": [
+        "https://www.reuters.com/world/us-appeals-court-declines-block-pentagons-blacklisting-anthropic-2026-09-25/"
+      ],
+      "ref_names": [
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "資安研究機構 GitGuardian 發布研究，指出 Cursor、Claude Code、GitHub Copilot 與 MCP 等 AI coding agent 存在憑證外洩風險。",
+      "ref_urls": [
+        "https://blog.gitguardian.com/ai-coding-agents-credential-security/"
+      ],
+      "ref_names": [
+        "GitGuardian"
+      ]
+    },
+    {
+      "tag": "[新工具]",
+      "text": "Anthropic 開放 Claude Plugins 目錄的自助提交入口，讓開發者可自行送件上架。",
+      "ref_urls": [
+        "https://www.unite.ai/anthropic-opens-directory-submission-portal-for-claude-plugins/"
+      ],
+      "ref_names": [
+        "Unite.AI"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Another Google Deepmind researcher quits, says building superintelligent AI soon is \"inherently irresponsible\" - the-decoder.com",
+      "url": "https://the-decoder.com/another-google-deepmind-researcher-quits-says-building-superintelligent-ai-soon-is-inherently-irresponsible/",
+      "body": "又一位 Google DeepMind 研究員離職，稱短期內打造超級智慧 AI「本質上不負責任」",
+      "topic": "ai-talent-flow",
+      "topicPage": {
+        "id": "ai-talent-flow",
+        "name": "AI 實驗室人才流動",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 38
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code：v2.1.283：新增 x-claude-code-prompt-id 閘道提示標頭，設 CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 加入，供 LLM gateway 歸組同一提示的請求。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-science",
+      "name": "Claude Science",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-skills",
+      "name": "Claude Skills",
+      "pageType": "entity"
+    },
+    {
+      "id": "joe-lonsdale",
+      "name": "Joe Lonsdale",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-26",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.283**：新增 `x-claude-code-prompt-id` 閘道提示標頭，設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 加入，供 LLM gateway 歸組同一提示的請求。\n- 新增已知問題 2 則：Cowork／Chat 合併後新建專案「選擇資料夾」功能消失（#76694）；Cowork 資料夾功能於 Windows 不支援 UNC 路徑（#45297）。"
+          },
+          {
+            "page": "entities/claude-skills",
+            "name": "Claude Skills",
+            "label": "最新官方動態",
+            "date": "",
+            "body": "Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程未載）；呼應 09-25 文件索引新增的自架市集／plugin 開發文件。"
+          },
+          {
+            "page": "entities/claude-science",
+            "name": "Claude Science",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Anthropic Science：物理學家挑戰題一個月後被解出**：Matt von Hippel 向 AI 公司拋出理論物理問題，Anthropic Science 部落格訪談記錄過程；HN 103 分，4 個來源同日報導。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Claude Code $250 cloud sessions 額度僅限 cloud sessions 使用**：補上 09-23 已知的使用條件缺口，到期日仍未載（BleepingComputer），功能面見 [[entities/claude-code]]。\n- **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：政策細節見 [[topics/anthropic-government-policy]]，未見具名企業因此調整採購。\n- **Accenture 評測合作被問「能否轉化為營收」**：屬 09-19 合作案的商業化角度追問，尚無具體數字。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。\n- 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：又一位 Google DeepMind 研究員離職，稱打造超級智慧 AI「本質上不負責任」",
+            "date": "",
+            "body": "與 09-13 已記錄之對齊風險警告是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- 上訴法院推翻 08-28 有利判決，維持五角大廈認定 Anthropic 為政府採購「供應鏈風險」，起因是 Anthropic 拒絕依軍方要求為 Claude 啟用特定功能；本案不影響一般商用訂閱與 API。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "GitGuardian 研究：Cursor、Claude Code、GitHub Copilot、MCP 等 AI coding agent 存在憑證外洩風險。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          },
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "D.C. 巡迴上訴法院推翻地院裁定，維持五角大廈認定 Anthropic 為供應鏈風險（因拒絕為軍方啟用 Claude 特定功能）。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Multi-agent 架構添四款控制平面**：zeron、claude-ops、VibeAround、coco 皆為跨 Claude Code／Codex／Cursor 等 harness 的編排或調度層。Skills 設計添四款專項合集：nature-skills（Nature 論文）、emilkowalski/skills（設計/工程通用）、drama-skills（AI 短劇）、asd-ste100-skill（簡化技術英文）。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Jevmem 發布引出 HN 兩條質疑：AI 寫的 README 說不清核心價值、「舊記錄不刪除」恐讓 context 累積過期資訊（61 分，單一來源）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/joe-lonsdale",
+            "name": "Joe Lonsdale",
+            "label": "公開評論 AI 公司渲染風險動機",
+            "date": "",
+            "body": "（僅標題可用）\nAnthropic 投資人 Joe Lonsdale 向 Reuters 表示，AI 公司渲染風險是為了影響政策走向；完整政策辯論脈絡見 [[topics/anthropic-government-policy]]。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 13
+  },
+  "readerTopStories": [
+    {
+      "title": "Yes, Claude can do nine loops",
+      "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+      "source": "Hacker News ＋Google News / Anthropic、HN Repo Bridge",
+      "time": "09/25 18:11",
+      "sentiment": "",
+      "body": "物理科普作者 Matt von Hippel 向 AI 公司拋出一道他過去研究領域的理論物理問題，一個月後被解出；Anthropic Science 部落格以訪談形式記錄這次挑戰的過程與結果。Hacker News 累積 103 分，4 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-science",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

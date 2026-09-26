@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 6
+inbound_links: 5
 attribution_count: 8
 attribution_last: "2026-09-25"
 top_source: "build-flags"

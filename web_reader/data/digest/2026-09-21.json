@@ -384,13 +384,7 @@
     }
   ],
   "preview": "Claude Code：新增已知問題：Max Plan 額度觸頂速度異常快（#37394，92 留言、43 讚）。",
-  "sedimentedToday": [
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-21",
     "summary": "",

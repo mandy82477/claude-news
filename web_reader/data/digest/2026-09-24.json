@@ -481,19 +481,9 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
       "id": "sridhar-vembu",
       "name": "Sridhar Vembu",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-talent-flow",
-      "name": "AI 實驗室人才流動",
-      "pageType": "topic"
     },
     {
       "id": "code-quality-decline",

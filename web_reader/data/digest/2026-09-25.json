@@ -437,23 +437,8 @@
   "preview": "Claude Code：v2.1.282：新增 maxProseWidth 設定，限制寬終端機下 Claude 散文輸出的寬度（表格、程式碼區塊維持全寬）；另新增啟動通知，/status 亦有異動（官方原文截斷，細節未載）；build 另新增 8 個功能候選旗標＋2 個代號旗標，CLAUDE_CODE_OCHRE_KI",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-docs",
       "name": "Claude Docs",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-science",
-      "name": "Claude Science",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-skills",
-      "name": "Claude Skills",
       "pageType": "entity"
     },
     {
@@ -467,43 +452,13 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
       "id": "claude-code-experimental",
       "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"
     },
     {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
       "id": "llm-wiki-pattern",
       "name": "Karpathy 式 LLM wiki 模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     },
     {
