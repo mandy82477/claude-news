@@ -486,21 +486,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-docs",
-      "name": "Claude Docs",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-slides",
-      "name": "Claude Slides",
-      "pageType": "entity"
-    },
-    {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "fable-5",
       "name": "Claude Fable 5 與 5.1",
       "pageType": "entity"

@@ -18,7 +18,8 @@
       "deepDive": {
         "title": "別人怎麼花掉你的週用量——session key、OAuth token，和你查不到的那本帳",
         "body": "**為什麼是這週**：額度被偷本週見報，而明天配額就要縮水 17%，你比任何一週都更需要知道「用量到底能被誰動」。\n\n**基礎快講**\n\n三種憑證常被混為一談，被偷的後果卻完全不同。**密碼**是你登入時輸入的東西；**session key** 是登入成功後網站給你的「已登入」憑條；**OAuth token** 是 Claude Code 跟伺服器要模型回應時用的憑證。關鍵差別：密碼只是換取憑條的手段，對方已經有憑條時，**改密碼不會讓那張憑條失效**。這次的攻擊鏈正是走這條路——infostealer 在受害者電腦上撈走 Claude 的登入 session，再用那把 session key 鑄出 Claude Code 的 OAuth token（[TechCrunch](https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/)）。\n\n**機制層**\n\n為什麼一把瀏覽器憑條能換到終端機工具的憑證？因為 Claude Code 的訂閱登入本來就走瀏覽器：你在終端機打 `claude`，它開瀏覽器讓你登入，再把換回來的 OAuth 憑證存到本機（[官方文件](https://code.claude.com/docs/en/iam)）。存哪裡文件寫得很清楚：macOS 進加密的 Keychain，寫不進去時退回 `~/.claude/.credentials.json` 並設成 `0600`；Linux 就是那個檔；**Windows 是 `%USERPROFILE%\\.claude\\.credentials.json`，靠的是使用者目錄本身的存取控制**——任何以你的身分在跑的程式都讀得到它，而 infostealer 正是以你的身分在跑。\n\n**四個陷阱**\n\n1. **改密碼不等於止血**。要作廢的是憑證：`/logout` 移除並撤銷該次登入寫下的憑證，claude.ai 那側要另外「登出所有裝置」，兩邊都做才算關門。\n2. **`claude setup-token` 鑄出的是一年期 token，而且它不存在你的機器上**。官方文件明寫這個指令「不會把 token 存在任何地方」，只印在終端機由你自己貼進 `CLAUDE_CODE_OAUTH_TOKEN`。好處是 CI 好用；壞處是這條授權路徑若被別人走一次，產出的長期憑證你本機翻不到（推論：官方未說明受害案例的 token 是否經此路徑鑄出）。\n3. **環境變數排序高於你的訂閱登入**。官方的憑證優先序裡 `CLAUDE_CODE_OAUTH_TOKEN` 排在訂閱登入之上，且**每開一個新 session 都重讀**，直到你把它從 shell 設定檔或設定檔 `env` 區塊移掉。有人在你的 shell profile 塞一行，你每次開工都在用他的授權路徑。\n4. **`/status` 看得到用哪個憑證，看不到誰在用**。它顯示 Login 行、組織與 email，能回答「這台機器現在拿什麼在跑」，但沒有一處回答「這週的百分比是哪幾台機器吃掉的」。目前唯一的偵測訊號就是受害者用的土法：**我沒工作，但百分比在動**。\n\n**怎麼用**\n\n決策規則只有一條：**沒開工的時段看到用量百分比上升，就當作憑證已外洩處理**——立刻 `/logout`、claude.ai 登出所有裝置、掃一次電腦、檢查 shell 設定檔的 `CLAUDE_CODE_OAUTH_TOKEN`；否則每次換機器後用 `/status` 確認生效的是哪一份憑證就夠了。"
-      }
+      },
+      "actions": null
     },
     "nextweek": {
       "title": "三、下週看什麼",

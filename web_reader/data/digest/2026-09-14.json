@@ -380,13 +380,7 @@
     }
   ],
   "preview": "Claude Code：桌面版新增雲端多 repo 掛載＋disableMobileSimulatorTools 旗標：雲端 session 可同時掛多個 repository；新旗標可封鎖 Claude 控制／擷取 iOS 模擬器裝置。",
-  "sedimentedToday": [
-    {
-      "id": "llm-wiki-pattern",
-      "name": "Karpathy 式 LLM wiki 模式",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-14",
     "summary": "",

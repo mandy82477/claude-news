@@ -18,7 +18,8 @@
       "deepDive": {
         "title": "AGENTS.md 什麼時候會被讀，什麼時候安靜地不讀",
         "body": "**為什麼是這週**：共用設定檔 09-18 出貨，而官方文件同時公布了一整張「哪些情況不讀」的判定表。這題你問過——設定檔的格式規約該怎麼定——這是官方給的第一份答案。\n\n**基礎快講**\n\n`CLAUDE.md` 是 Claude Code 自家的專案指示檔；`AGENTS.md` 是 Codex、Cursor、Amp 等工具共用的同類檔案。差別不在內容怎麼寫，在**誰會讀**。v2.1.277 之前，Claude Code 完全不認 `AGENTS.md`；之後它認了，但預設是「二選一」而不是「都讀」——設定名稱叫 Project instructions，預設值 `claude-md-or-agents-md`，字面就是 or（[官方文件](https://code.claude.com/docs/en/memory)，2026-09-20 取得）。\n\n**機制層**\n\n為什麼關掉遙測會讓它失效？因為這個功能是以內建外掛 `agents-md` 的形式出貨，並且由 Anthropic 端下發的功能旗標控制。session 如果不會去抓功能旗標——用 Amazon Bedrock 或其他第三方供應商、或你關了遙測——就拿不到這個開關，Claude 只讀 `CLAUDE.md`，而且 `/config` 裡**連 Project instructions 這個選項都不會出現**。設了 `disableAllHooks`、`allowManagedHooksOnly`，或在 `/plugin` 停用 `agents-md`，效果一樣。\n\n**四個陷阱**\n\n1. **有 `CLAUDE.md` 就整份不讀。** 「有」的範圍比你想的大：工作目錄**或任何上層目錄**的 `CLAUDE.md`、`.claude/CLAUDE.md`、`CLAUDE.local.md` 都算。反過來，`~/.claude/CLAUDE.md`、組織下發的 managed `CLAUDE.md` 與 `.claude/rules/` 不算，會和 `AGENTS.md` 一起載入。\n2. **`CLAUDE.local.md` 會無聲關掉它。** 你在一個只有 `AGENTS.md` 的專案裡加一份不進版控的 `CLAUDE.local.md` 放私人指示，從那一刻起 `AGENTS.md` 就不讀了。官方給的解法是把設定改成 `claude-md-and-agents-md`。\n3. **升級後的第一個 session 不讀。** 官方明載要到「下一個 session」才開始讀。升完馬上測、發現沒生效，不代表設定錯。\n4. **`.agents/` 整個目錄不讀。** `AGENTS.local.md`、`AGENTS.override.md` 與 `.agents/` 底下的任何東西都不在範圍內。別家工具往這些位置延伸的慣例（如 `.agents/skills`），Claude Code 沒有跟。\n\n**怎麼用**\n\n確認有沒有讀到只看一行：互動 session 開頭會印 `no CLAUDE.md found; AGENTS.md loaded: <路徑>`。決策規則：**只用 Claude Code 的 repo，不要動**；多種工具共用的 repo，讓 `AGENTS.md` 當唯一來源，旁邊放一份只有一行 `@AGENTS.md` 的 `CLAUDE.md`，Claude 專屬的指示接在那行下面——這是唯一在每一種 session（含 Bedrock、關遙測、舊版）都成立的寫法，因為它走的是 `CLAUDE.md` 本來就有的匯入機制，不靠新功能。"
-      }
+      },
+      "actions": null
     },
     "nextweek": {
       "title": "三、下週看什麼",

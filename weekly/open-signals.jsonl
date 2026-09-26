@@ -127,3 +127,8 @@
 {"date": "2026-09-24", "week": "2026-W38", "forecast": "外掛零點擊：Claude Code 已於 v2.1.179 修好，但 Copilot 無修補、Gemini CLI 被停止維護，兩者的既有安裝持續曝險", "origin": "新立", "probe": "Gemini CLI", "entries": []}
 {"date": "2026-09-24", "week": "2026-W38", "forecast": "Projects 的本機端什麼時候有：雲端 agent session 可跨裝置接手長任務，但有媒體指出本機端的對應能力仍要等", "origin": "新立", "probe": "cloud session", "entries": [{"title": "Anthropic launches Claude Code cloud sessions and hands out up to $250 in credit", "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUXdYYWZEdlR2eVNXVlp0UkZUUDRza3B4RExWM0EtUE81cTNTVUZDMUkwbGllRm9kSE5TQXZJNmpUWjVPdWJ5TDRJVXQ0MmMyOHpwNXVFRTRYOVNhblB5eTZqWC03Rko0dHV5dTh1RHJqWDNVcXl5ckkyUHl3dWRKeGVnajdpWUZFdUlRMVNpekowRkE?oc=5"}]}
 {"date": "2026-09-24", "week": "2026-W38", "forecast": "年齡驗證誤判：消費版停止服務未滿 18 歲者，改由第三方 Yoti 驗證，疑似未成年即停用帳號（09-11）", "origin": "續盯", "probe": "停用", "entries": []}
+{"date": "2026-09-25", "week": "2026-W38", "forecast": "外掛零點擊：Claude Code 已於 v2.1.179 修好，但 Copilot 無修補、Gemini CLI 被停止維護，兩者的既有安裝持續曝險", "origin": "新立", "probe": "Copilot", "entries": []}
+{"date": "2026-09-25", "week": "2026-W38", "forecast": "外掛零點擊：Claude Code 已於 v2.1.179 修好，但 Copilot 無修補、Gemini CLI 被停止維護，兩者的既有安裝持續曝險", "origin": "新立", "probe": "plugin", "entries": []}
+{"date": "2026-09-25", "week": "2026-W38", "forecast": "Docs 與 Slides 開到誰：Cowork 併入 Claude 後推出的兩項 beta 只說「Pro、Max 陸續開放」，未給時程與地區條件", "origin": "新立", "probe": "Cowork", "entries": []}
+{"date": "2026-09-25", "week": "2026-W38", "forecast": "Projects 的本機端什麼時候有：雲端 agent session 可跨裝置接手長任務，但有媒體指出本機端的對應能力仍要等", "origin": "新立", "probe": "雲端 session", "entries": []}
+{"date": "2026-09-25", "week": "2026-W38", "forecast": "年齡驗證誤判：消費版停止服務未滿 18 歲者，改由第三方 Yoti 驗證，疑似未成年即停用帳號（09-11）", "origin": "續盯", "probe": "停用", "entries": []}

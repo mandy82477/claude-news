@@ -30,19 +30,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **最新動態**（2026-09-24）
-> - **v2.1.281**：新增 desktop policy 兩項設定（`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`）；build 另新增 9 個功能候選旗標，見 [[topics/claude-code-experimental]]。
-> - **[BUG] 輸入「hi」即誤判違反 Usage Policy（issue #60366，91 則留言，本日互動最高）**：與既有「Usage Policy 隨機拒絕」現象相符，見下方「已知問題」。
-> - **已知問題互動更新**：#63903（記憶體前導文字）、#8451（`ide_selection`）、#12925（Linear，146 讚為本日最高功能請求）。
+> **最新動態**（2026-09-25）
+> - **v2.1.282**：新增 `maxProseWidth` 設定，限制寬終端機下 Claude 散文輸出的寬度（表格、程式碼區塊維持全寬）；另新增啟動通知，`/status` 亦有異動（官方原文截斷，細節未載）；build 另新增 8 個功能候選旗標＋2 個代號旗標，`CLAUDE_CODE_OCHRE_KITE` 消失，見 [[topics/claude-code-experimental]]。
+> - **官方文件更新**：本機與 SSH session 現在會自動載入 claude.ai 帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器在雲端 session 不可用，透過桌面應用安裝的 plugin 也不會同步到雲端 session。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.282**（2026-09-24）：新增 `maxProseWidth` 設定，限制寬終端機下 Claude 散文輸出的段落寬度，表格與程式碼區塊維持全寬；另新增啟動通知，`/status` 亦有異動（官方原文於抓取時截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）。
+  同版 build 另新增 8 個功能候選旗標＋2 個代號旗標，`CLAUDE_CODE_OCHRE_KITE` 從程式本體消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.281**（2026-09-23）：新增 Claude apps gateway desktop policy 兩項設定：`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`；官方原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)）。
   同版 build 另新增 9 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.280**（2026-09-22）：**Claude Opus 5.5 成為新預設模型**——Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 皆改指向 `claude-opus-5-5`（Foundry 仍為 Sonnet 4.5，官方文件 2026-09-23 查）；1M context，$4／$20 每 Mtok。
@@ -57,6 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
 - **官方文件更新**（2026-09-17）：終端機 session 載入 claude.ai 帳號 skills/plugins——本機讀個人 `~/.claude/skills/`，雲端改讀帳號設定，SSH 讀本機路徑（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -467,6 +469,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.282** | 2026-09-24 | 新增 `maxProseWidth` 設定，限制寬終端機下散文輸出寬度（表格／程式碼區塊全寬）；新增啟動通知，`/status` 亦有異動（原文截斷，細節未載，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）|
 | **v2.1.281** | 2026-09-23 | 新增 desktop policy 設定：`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`（gateway，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)）|
 | **v2.1.280** | 2026-09-22 | **Opus 5.5 成新預設模型**（Foundry 仍 Sonnet 4.5，2026-09-23 查證），$4／$20 每 Mtok；全螢幕更多清單支援滑鼠（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)）|
 | **v2.1.278** | 2026-09-19 | Auto mode 預設免計費改用 server-side classifier（API／Enterprise／Bedrock／Vertex／Foundry／閘道器）；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）|
@@ -726,6 +729,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定（截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失。桌面文件：本機/SSH 自動載入帳號 skills/plugins。 |
 | 2026-09-24 | **v2.1.281**：desktop policy 新設定；旗標增 9。新增 #60366（hi 誤判）併入 Usage Policy。互動更新：#63903、#8451、#12925。 |
 | 2026-09-23 | **v2.1.280**：Opus 5.5 成新預設模型。AGENTS.md 補 telemetry 成因（#95690）。修正 v2.1.233 斷句誤導。互動數更新：#4953、#91188。 |
 | 2026-09-20 | 新增已知問題 2 則：Cowork device_bash 失效（#92958）、Plugin4Shell 跨 agent RCE（僅標題可用）。GitSpawn 補記 v2.1.196 部分修補。 |

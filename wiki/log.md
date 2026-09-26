@@ -6826,3 +6826,16 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 來源：[Tencent/WeKnora README](https://github.com/Tencent/WeKnora)、GitHub REST API repos 端點（皆 2026-09-25 查證）。
 
 **歸因**：`user-query`
+
+## 2026-09-25 Ingest
+
+- 來源日報：[[news/2026-09-25]]
+- 更新頁面：wiki/entities/claude-code.md、wiki/entities/claude-skills.md、wiki/entities/cowork.md、wiki/entities/claude-docs.md、wiki/entities/claude-slides.md、wiki/entities/claude-science.md、wiki/topics/claude-code-experimental.md、wiki/topics/anthropic-business.md、wiki/topics/competitor-landscape.md、wiki/topics/anthropic-government-policy.md、wiki/topics/ai-agent-safety.md、wiki/topics/community-tech-patterns.md、wiki/feature-radar.md
+- 新增頁面：無
+- 摘要：Anthropic 與 Akamai 簽 7 年 116 億美元運算合約；白宮令 OpenAI／Anthropic 暫緩向英國測試機構釋出新模型；Claude 發現的類 CRISPR 酶系統延燒多家媒體（New Scientist 審慎、Gizmodo 指 Anthropic 無法說明能力範圍）；Opus 5.5 上線後社群持續討論是否還需要 Fable；Claude Code v2.1.282（maxProseWidth 設定）與多筆官方文件異動（Cowork 擴及所有對話、桌面版 skills/plugins 讀取規則）
+- 呈現品質：全部通過（功能、社群記者過程中曾觸發字元上限／讀者語言閘，已修正重跑至綠燈）
+- 品質備註：[安全政策] 全庫懸置標記舊語法存量 42→43（+1），經核對非該記者所動頁面/行號所致，未查明是哪位記者所留，待 `/wiki-lint` 複查
+- 分類回退：追加派工 1 筆（功能，6 則：CRISPR 系列 5 則原分類「模型」但既有沉澱頁 `entities/claude-science.md` 領域為 🛠️ 功能；Ebola/DRC 案例原分類「商業」不符融資/併購/合作/IPO/財務/風險觸發條件）；駁回 0 筆
+- 轉知：新開 1 筆 H-840cab（功能→商業，claude-science.md 的濕實驗室與 anthropic-business.md 既有 wet lab 條目可能同一設施，待商業記者下輪回補連結）；已結案 2 筆 H-c63724、H-3bf1c7（功能記者核對後維持現狀，前提仍成立）；H-694685（安全政策）今日無新證據，維持待處理
+- devpractice 沉澱：候選 12 筆（maxProseWidth、desktop policy、skills/plugins 本機自動載入、issue #60366「hi」誤拒、Opus 5.5 thinking 不可關、TechRadar 48,000 檔案指控、amux、second-brain-os、Whiteboard、open-seo-mcp-skills、用量監控工具三款、official-community-gap 新增 Linear 缺口列），已 append `data/devpractice-candidates.jsonl` 並推進 `data/devpractice_state.json` 基準線至 f5f81fd
+- market 判讀：2 則（Akamai 116 億美元運算合約附認股權證；白宮據稱要求 OpenAI／Anthropic 暫緩向英國測試機構釋出新模型），皆 wikilink 指回商業／安全政策記者當日事實頁，未複製事實；ABC News「AI 模型自主入侵 3 組織」查證為 07-31 既有揭露事件的媒體重述，不開新則

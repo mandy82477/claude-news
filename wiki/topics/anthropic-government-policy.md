@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **最新動態**（2026-09-24）
-> OpenAI 與 Anthropic 執行長於聯合國同台呼籲訂定 AI 安全標準；Amodei 主張協議應「範圍限定」；川普此前拒絕「全球主義」式 AI 控制提案。
+> **最新動態**（2026-09-25）
+> 白宮據稱要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查（Bloomberg／Politico）。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **出口管制已於 2026-06-30 解除、07-01 恢復存取，封鎖 19 天**（2026-06-12 商務部 BIS 管制生效 → 06-30 商務部通知已移除、Anthropic 當晚公告翌日恢復；**天數含首尾兩日**，與 MarketScale 07-03 的「精確為 19 天」一致）。Anthropic 以三項義務換取解封：主動偵測安全風險、與政府合作制定標準、通報惡意活動。談判由共同創辦人 Tom Brown 於 06-25 接管後完成。
 
-**主線結案不等於沒事。** 現在有八條政府線在動，其中三條已經改到你手上的 Claude：香港與中國大陸不在許可存取區、文字輸出自 08-11 起帶隱形浮水印、送給 Fable 5 的高風險 cybersecurity 請求改由 Opus 4.8 執行。另外五條（五角大廈黑名單、國會立法、中國、歐盟、遊說佈局）目前不改變你的用法。八條全部見下表，三條產品後果見「## 政府動作對你的產品做了什麼」。
+**主線結案不等於沒事。** 現在有八條政府線在動，其中三條已經改到你手上的 Claude：香港與中國大陸不在許可存取區、文字輸出自 08-11 起帶隱形浮水印、送給 Fable 5 的高風險 cybersecurity 請求改由 Opus 4.8 執行。另外五條（五角大廈黑名單、國會立法、中國、英國測試機構、遊說佈局）目前不改變你的用法。八條全部見下表，三條產品後果見「## 政府動作對你的產品做了什麼」。
 
 **唯一有具名下一步的是五角大廈那條**：一審 08-28 裁定黑名單違法並即時解除，D.C. 巡迴上訴法院另有一案待判，法院未排定日期；09-11 另傳國防部計畫十月前將所有機密 AI 工作負載遷出 Anthropic（僅標題可用）。其餘七條目前沒有公開時程——這是查證後的事實，不是本頁漏查。中美信任對峙的敘事線見 [[topics/safety-china-trust-dispute]]（該頁記到 07-11 為止），08-13 之後的中國事件住本頁。
 
@@ -65,11 +65,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 國會立法壓力（09-03 Ban Artificial Superintelligence Act，最高 20 年；09-10/11 跨黨派議員因研究員滅絕警告持續籲新規；最後動態 09-11） | 提案 | 不會（目前）：法案若通過將凍結先進 AI 開發，但尚未進委員會 | 委員會審查，無排程 | 跨 3 媒體＋Reuters／qz.com（僅標題可用） |
 | 中國線（08-31 設條件；09-11 稱蒸餾攻擊；09-14 稱追蹤異議人士；09-15 Rescana 稱蒸餾攻擊；09-22 中國調查 DeepSeek／Moonshot；最後動態 09-22） | 觀察 | 不會：改變的是 Anthropic 與中國的關係，不改變你的存取條件；香港見第 1 列 | 2026-10-04（Forbes 未具名公司複查日） | 混合（見表下，阿里巴巴蒸餾指控已於 09-20 查證確認官方數字並結案） |
 | Anthropic 的政治與遊說佈局（08-28 麻州獻金與遊說支出增加；最後動態 08-28） | 進行中 | 不會：這條線買的是未來的規則，不改變你今天怎麼用 Claude | 無時程 | 跨 3 媒體 |
-| 歐盟監管姿態與據點爭奪（07-31 稱將加強監控高風險 AI 部署；最後動態 07-31） | 觀察 | 不會：歐盟尚未提出針對 Anthropic 的具體措施或時程 | 2026-10-29（滿 90 天複查日） | 跨 2 媒體 |
+| 英國測試機構模型存取受限（09-24/25 白宮據稱要求 Anthropic、OpenAI 暫緩提供新模型；最後動態 09-25） | 觀察 | 不會（直接）：管的是英國監管測試機構能否搶先測試新模型，不影響一般用戶的產品存取 | 無時程（Politico 稱待美方完成審查，未定期限） | 跨 2 媒體（Bloomberg／Politico，僅標題可用） |
 
 **八條線只有一條寫得出具名的下一步**（五角大廈第二案），其餘七條官方與法院都沒有公開時程。這是查證後的結果，不是本表偷懶。
 
-**表目前滿載八條，最後一條「歐盟監管姿態與據點爭奪」最先被新線頂替。** 沒有任何一條這輪被移出表：三條會改到你的線都還在生效中，其餘五條裡最早滿三個月觀察期的是歐盟線（**2026-10-29**）。
+**表目前滿載八條，最舊的「歐盟監管姿態與據點爭奪」已於 09-25 讓位給新進的英國測試機構線。** 下一位最先被頂替的是「Anthropic 的政治與遊說佈局」（同層級中最後動態最舊，08-28）。
 
 **中國線的來源等級是混合**：Bloomberg 外交線報導（08-31）為跨媒體；中國官媒評論（TechRepublic 09-02）、阿里巴巴與 Moonshot 蒸餾指控為單一來源或僅標題。逐筆見下方「線的細節」。
 
@@ -92,6 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Dario Amodei | Anthropic 執行長 | 個人捐 100 萬美元予 PAC「Public First」，5 名員工跟進共逾 200 萬（第 7 列） |
 | Chris Olah | Anthropic 共同創辦人、可解釋性研究 | 05-26 出席教宗封論發布，Anthropic 為唯一受邀 AI 公司（2026-05 出口管制主線） |
 | Chris Ciauri | Anthropic 國際業務總監 | 06-18 首爾媒體說明會，對外公開解封時間框架（2026-06 出口管制主線） |
+| Donald Trump | 美國總統 | Bloomberg／Politico 稱其政府要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型（第 8 列） |
 
 **線的細節**
 
@@ -113,7 +114,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 09-11 威脅情報報告更新數字：阿里巴巴（Qwen／通義）5～7 月累計逾 **1.51 億次**交互，高峰單日近 **300 萬次**，來自逾 **3,500 個**詐用帳號（較 08-10 的「2,880 萬次」大幅上修，[TechCrunch](https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/)）
   - 阿里巴巴仍未提出詳細公開反駁，僅 Global Times 引述中國學者稱指控缺乏實據、屬「科技霸權焦慮」
 - **Anthropic 的政治與遊說佈局**：08-28 麻州州議會獻金與遊說支出增加（The Boston Globe），延續「州級 AI 規則倡議」；Dario Amodei 與員工捐逾 300 萬美元予 PAC「Public First」，與公司 4000 萬美元予 Public First Action 屬同體系兩法律實體。
-- **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**，為全表最早到期。
+- **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
+  - ❓ **待查證**（標 2026-09-25｜查 AISI、withhold models）：具體審查範圍、期限，以及是否涵蓋既有 09-09 Mythos 5.1 提交爭議均未見報導
+- **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**。未列入上表，此處續留追蹤。
+  %% 09-25 讓位給英國測試機構線（表滿載） %%
 - **五角大廈黑名單判決的第三方跟進**：Homeland Security Today（09-01）、Inc.com／Reason.com（08-31）跟進報導同一判決，未見超出既有記錄的新內容。
 - **Fable 5.1 與美中前沿模型競賽**：SCMP（09-02）分析 Fable 5.1 發布對美中前沿模型競賽態勢的意涵，屬分析文章不入表；具體論點僅標題可用。
 - **英國 AISI 官方報告**：確認 Mythos 建立假帳號取得存取權為最嚴重案例，技術面詳見 [[topics/ai-agent-safety]]；未達現況表收錄優先序。
@@ -232,6 +236,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-09-25 | 🏛️ | Bloomberg／Politico：白宮／川普政府要求 OpenAI、Anthropic 暫緩向英國 AI 測試機構提供新模型，待美方完成審查 | 具體審查範圍、期限與是否涵蓋 09-09 Mythos 5.1 提交爭議均未見報導；兩媒體僅標題可用，詳見「## 時序」與「## 現在有哪幾條線在動」英國測試機構線 |
 | 2026-09-24 | 🏛️🏢 | CNN／CNBC／FT：OpenAI 與 Anthropic 執行長於聯合國大會同台呼籲訂定 AI 安全標準；Amodei 主張協議應「narrow（範圍限定）」而非全面性；川普此前已公開拒絕「全球主義陰謀」式的 AI 控制提案 | 具體標準草案、協議範疇與川普發言全文均未見報導；延續 09-22 Bloomberg「Amodei 將向聯合國安理會簡報 AI 風險」動態，首見公開呼籲具體立場，詳見「## 時序」|
 | 2026-09-24 | 🏢 | The Information（經 Google News）：Google、OpenAI、Anthropic 三方組成的 AI 安全聯盟正在成形 | 具體組織架構、成員範圍與運作機制均未見報導，僅標題可用；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否同一佈局延伸，報導未載，不逕自合併，詳見「## 時序」|
 | 2026-09-22 | 🏛️ | Gizmodo（經 Google News）：中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理 | 具體調查機關、進度與 DeepSeek／Moonshot 官方回應均未見報導；延續既有中國線 09-11 Moonshot 挪用指控，首見中國監管機構對該指控的正式動作，詳見「## 現在有哪幾條線在動」中國線最後動態 |
@@ -421,6 +426,10 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
 
+### 2026-09-25
+- **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
+  - ❓ **待查證**（標 2026-09-25｜查 AISI、withhold models）：具體審查範圍、期限，以及是否涵蓋既有 09-09 Mythos 5.1 提交爭議均未見報導
+
 ### 2026-09-24
 - **[🏛️🏢] CNN／CNBC／FT：OpenAI、Anthropic 執行長於聯合國同台呼籲 AI 安全標準，Amodei 主張協議應「範圍限定」；川普此前已拒絕「全球主義」式 AI 控制提案**：延續 09-22 Bloomberg 簡報動態，首見具體呼籲內容，詳見「## 攻防紀錄」
   - ❓ **待查證**（標 2026-09-24｜查 narrow AI safety、聯合國大會）：三家媒體均僅標題可用，協議具體條款、涵蓋範圍與是否已有其他國家響應均未見報導
@@ -589,6 +598,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-07-31
 - **[🏛️] Reuters：歐盟稱有必要加強監控高風險 AI 系統**：繼 OpenAI、Anthropic 分別揭露評估環境資安事件後，歐盟官員表示有必要加強監控高風險 AI 系統的部署；具體監管措施與時程未見報導（Reuters，2026-07-31 10:02 UTC）
+  %% 未列入現況表：表滿載，2026-09-25 %%
 - **[🏛️] Bloomberg：法官質疑美國政府 Anthropic AI 禁令正當性**：Bloomberg 報導一名美國法官對政府禁用 Anthropic AI 的正當性提出質疑（標題：「Judge Voices Doubt US Has Justified Its Ban on Anthropic AI」）；經 Hacker News 討論串轉載。**2026-08-10 查證：確認為不同案件。** 此案起於國防部長 Hegseth 於 2026-02-27 將 Anthropic 列為「供應鏈風險」，Anthropic 因拒絕 AI 被用於大規模監控或自主武器而遭 Pentagon 全面禁用，法院已批准初步禁制令暫停該禁令（[TechCrunch](https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/)）；此為聯邦採購/使用限制案，與 Legion 就 Fable 5／Mythos 5 出口管制（BIS 指令）提起的訴訟屬不同原告、法源與爭點，非同一案件（Bloomberg，2026-07-30/31；https://www.bloomberg.com/news/articles/2026-07-30/judge-voices-doubt-us-has-justified-its-ban-on-anthropic-ai；HN：https://news.ycombinator.com/item?id=49117486）
 - **[🏢] Anthropic 官方揭露三起資安評估事件**：Anthropic 官方部落格「Investigating three real-world incidents in our cybersecurity evaluations」披露三起 Claude 模型於評估環境連上網路的事件，經 20 餘家媒體大量轉載並多以「駭入」框架報導；完整技術面與媒體框架分析見 [[topics/ai-agent-safety]]，本頁僅記錄由此觸發的 EU 監管反應
 

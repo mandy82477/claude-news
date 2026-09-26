@@ -31,19 +31,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-09-24）
-> 2.1.281 新增 9 個第一階旗標：`ARTIFACT_INHERITED_TYPE_GRANT`、`ARTIFACT_TEXT_VARIANT`、`CCR_EARLY_REMOTE_CONNECT`、`COMMIT_BETWEEN_KEYS`、`COORDINATOR_SKILL_GUIDANCE`、`DISABLE_STARTUP_WORK_GATE`、`DISABLE_SUBSTITUTION_RM_PROMPT`、`HOST_GATEWAY_LINEAGE`、`MCP_APPS_HOST`；對帳僅命中來源條目本身，非獨立社群提及，暫不升第二階。
+> **最新動態**（2026-09-25）
+> 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單列 4 階已移除；對帳僅命中來源條目本身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.282（09-25）新增 8 個第一階旗標＋2 個代號旗標**（`ELEGANT_MEADOW`、`SQUISHY_NEWT`，名單見追蹤表）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單升列 4 階已移除；對帳僅命中自身條目，暫不升第二階。
 - **2.1.281（09-24）新增 9 個第一階旗標**（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，暫不升第二階。
 - **2.1.278（2026-09-19）新增 3 個第一階旗標**：`PER_TURN_TIMING`、`SESSION_START_ANNOUNCEMENTS_BEFORE_PROMPT`、代號旗標 `PARSED_WILLOW`；同批消失代號旗標 `DAPPER_LAGOON`；對帳僅命中自身條目，暫不升第二階。
 - **2.1.276（2026-09-18）新增 2 個第一階旗標**：`DISABLE_ATTRIBUTION_CROSS_REPO`、`FORCE_TERMINAL_IMAGES`；同批消失 2 個：`HOLD_UNANSWERED_PARKED_PERMISSION`、`RETIRE_UNANSWERED_PARKED_PERMISSION`；對帳僅命中自身條目，暫不升第二階。
@@ -103,7 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_FOOTER_INDICATOR` | 2.1.274（09-17） | 1 | — | — | 2.1.274 仍在（比對日 09-17） |
 | `CLAUDE_CODE_GATEWAY_HINT_HEADERS` | 2.1.273（09-16） | 1 | — | — | 2.1.273 仍在（比對日 09-16） |
 | `CLAUDE_CODE_MODEL_CAPABILITIES` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
-| `CLAUDE_CODE_OCHRE_KITE` | 2.1.273（09-16） | 1 | — | — | 2.1.273 仍在（比對日 09-16） |
+| `CLAUDE_CODE_OCHRE_KITE` | 2.1.273（09-16） | 4 | — | — | 2.1.282（09-25）消失（來源條目消失清單） |
 | `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_POST_TURN_MEMORY` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_POST_TURN_MEMORY_CONFIG` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
@@ -116,6 +117,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_STARTUP_FAILURE_RESULTS` | 2.1.274（09-17） | 1 | — | — | 2.1.274 仍在（比對日 09-17） |
 | `CLAUDE_CODE_TETHER_LIVE` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
 | `CLAUDE_CODE_WORKFLOW_MAX_CONCURRENT_AGENTS` | 2.1.262–2.1.272（跨版回填） | 1 | — | — | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_DISABLE_ATTRIBUTION_BASELINE_REUSE` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_DISABLE_REFUSAL_RETRY` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_GZIP_REQUEST_BODY_LEVEL` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_PARKED_RUN_BEFORE_CLEAR` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_PROJECTS_SESSION` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_REMOTE_TOOLS_SPECULATIVE_CLASSIFIER` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_WEBSEARCH_CCR_PROXY_FAST` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+| `CLAUDE_CODE_WEB_SEARCH_FAST_ARG` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
 
 ## 代號旗標
 
@@ -123,6 +132,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_ELEGANT_MEADOW` | 2.1.282（09-25）出現 |
+| `CLAUDE_CODE_SQUISHY_NEWT` | 2.1.282（09-25）出現 |
 | `CLAUDE_CODE_PARSED_WILLOW` | 2.1.278（09-19）出現 |
 | `CLAUDE_CODE_POLISHED_DEWDROP` | 2.1.262–2.1.272 之間出現 |
 | `CLAUDE_CODE_SLEEPY_SNOWFLAKE` | 2.1.262–2.1.272 之間出現 |
@@ -152,6 +163,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-09-25 | 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`OCHRE_KITE`（首見 2.1.273）消失，依來源條目消失清單列 4 階；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-24 | 2.1.281 新增 9 個第一階旗標（名單見追蹤表）；同批 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |
 | 2026-09-16 | review 後修正：黏字清理（原「已消失」誤列 `GOAL_CHECKIN_MINUTES0`，實為位元組黏字）、過濾改 token 式、第 3 階列補連結與提及人數 |

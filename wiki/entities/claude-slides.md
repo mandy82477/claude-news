@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-09-17
-**最後更新：** 2026-09-17
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-09-25
+**最後新聞更新：** 2026-09-25
 
-> **最新動態**（2026-09-17）
-> 官方隨 [[entities/cowork|Cowork／Chat 合併]]同步推出，beta，可下載為 PowerPoint／PDF，先開放 Pro、Max 方案。
+> **最新動態**（2026-09-25）
+> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**；範本與協作機制仍未載明。
 
 ---
 
@@ -42,7 +42,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Claude Slides 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方簡報工具（beta）。搭配整合進對話的 [[entities/claude-design|Claude Design]]，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 Pro、Max 方案可用，官方表示未來數週將擴及更多方案。
 
-❓ **待查證**（標 2026-09-17｜查 claude.com/slides、[[entities/claude-docs]]｜複 2026-10-01）｜**Claude Slides 的具體操作路徑、範本與協作機制**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/slides）更新後確認。
+**09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**；範本與協作機制仍未載明。
+
+❓ **待查證**（標 2026-09-17｜查 claude.com/slides、[[entities/claude-docs]]｜複 2026-10-01｜訊 2026-09-25）｜**Claude Slides 的具體操作路徑、範本與協作機制**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/slides）更新後確認。09-25 Help Center release notes 確認可在任何對話（含 Claude Code、Artifact 介面）要求簡報，惟範本與協作機制仍未載明。
 
 ## 熱度與試用價值
 
@@ -72,12 +74,14 @@ Pro／Max 方案使用者於 claude.ai 對話中直接請 Claude 建立或編輯
 
 ## 參考來源
 
+- [Claude Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（官方文件變更偵測，2026-09-25 查，非新聞報導）
 - [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17；HN 討論 226 分；Simon Willison 部落格轉引）
 - Google News／Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld（2026-09-17，同事件媒體報導，僅標題／框架可用）
-- [[news/2026-09-17]]
+- [[news/2026-09-17]]、[[news/2026-09-25]]
 
 ## 歷史記錄
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-25 | Help Center release notes 新增段落：可在任何對話（含 Claude Code、Artifact 介面）直接要求簡報；範本與協作機制仍未載明 |
 | 2026-09-17 | 建頁。官方隨 Cowork／Chat 合併同步推出 Claude Slides（beta），可下載為 PowerPoint／PDF，先開放 Pro、Max 方案 |

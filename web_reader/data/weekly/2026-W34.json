@@ -18,7 +18,8 @@
       "deepDive": {
         "title": "你到底撞到哪一道牆——Claude Code 用量上限的四層結構",
         "body": "**為什麼是這週。** 08-17 到 08-19 連三天有人問額度為什麼燒這麼快，其中一則是排程任務被自動換成 Fable 5、額度歸零。讓這幾件事能一起解釋的拼圖，是庫裡掛了七天的問題——**Opus 5 和 Fable 5 是不是共用同一個週用量池**。這週查到官方原文了。\n\n**基礎快講。** 用量不是一個數字，是**四道獨立的閘**：(1) **5 小時滾動窗**；(2) **週上限**，目前促銷 +50%；(3) **池內天花板**，Max／Team premium 下 Fable 5 最多吃週上限的 50%；(4) **usage credits**，opt-in 的溢出閥。**前三層決定你能用多少，第四層決定用完之後會不會停。**\n\n**機制層：50% 不是加碼，是天花板。** 最貴的誤解在第 3 層。官方寫 Fable 5「draws from your plan's regular weekly usage limits and uses them faster than other Claude models」[¹]。那個 50% 是同一桶水裡「最多舀一半」的上限，不是額外送你半桶。推論下去：Opus 5 把週上限跑滿，Fable 5 那 50% 也一起消失（推論）。08-17 那則「排程任務被切到 Fable 5」之所以致命，正因它吃的是你整週的池子，還吃得比別的模型快。\n\n**四個會咬人的地方。**\n\n1. **「+50%」只加週上限，不動 5 小時窗**——官方原文「5-hour usage limits are not affected by this promotion」[²]。「週額度明明還有一大截卻被擋」幾乎都是撞第 1 層，等 reset 就好，不必買 credits。\n2. **促銷範圍窄在只涵蓋 Claude Code**（Free 與消耗制 Enterprise 席位不適用），**寬在 CLI／IDE／桌面／web 全算**。同頁揭露它自 **2026-05-13** 起就在跑、已延長過：**別算進長期預算。**\n3. **開了 usage credits，週上限就不再是硬停止**——官方寫有餘額時「you can choose to continue working」，之後按標準 API 費率計費[³]。**體感零差別，差別在帳單。** auto-reload 每日贖回上限 $2,000；行動 App 訂閱者只能在網頁版開。\n4. **$100 過渡 credit 的兩個日期不一樣**——領取窗 **08-02 已關**（未領不補發），已領者 **09-17 到期**，且不限 Fable 5[⁴]。手上有這筆的人剩不到四週。\n\n**怎麼用。** 撞牆先問：**是 5 小時窗還是週上限？** 前者 → 等 reset，什麼都別改；後者且在 8/31 前 → 你用的是含 +50% 的額度，9 月起可能回落，長期估算按**沒有促銷**重算。真要跨過週上限才開 credits，並接受一件事：**你關掉的是那道會保護你的牆**。\n\n> 引用（官方說明中心，均 2026-08-22 取得）：[¹](https://support.claude.com/en/articles/15424964) Fable 5 on your plan（頁面更新 07-20）｜[²](https://support.claude.com/en/articles/15910845) weekly limits promotion｜[³](https://support.claude.com/en/articles/12429409) Manage usage credits｜[⁴](https://support.claude.com/en/articles/15862783) one-time free credits"
-      }
+      },
+      "actions": null
     },
     "nextweek": {
       "title": "三、下週看什麼",
