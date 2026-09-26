@@ -874,3 +874,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud STARTED 2026-09-25T22:09:03Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-25T22:09:16Z] Step 0b 冪等閘：news/2026-09-25.md 已存在（TARGET_DATE=2026-09-25），中止，理由 digest already exists — 本班（22:00 UTC）為當日第三班，日報已由較早班次（17:00 UTC）完成並推送
 [cloud weekly-wiki-lint-cloud STARTED 2026-09-26T03:08:10Z]
+[cloud weekly-wiki-lint-cloud OK 2026-09-26T03:49:27Z] Weekly lint OK - 修 24 頁，10 項待確認，測試全綠（gate_web_build 最後一行：測試全綠 - web build 放行）／build OK（62 entities, 42 topics, 150 digests, 9 weekly reports + radar；wikilink 錨點 WARN 0）／單一 push｜A段 6/6 記者一次過、行為層抽驗相符｜5c 雲端首次清零 25→0（查實 12／查無官方 12／失效移除 1）｜5a 降溫 13 條｜5h 結算 7 列（✅2／～5）｜5i 移除 1 列｜5k 退場 2 列改標 9 列｜6k 缺口 16 對處理完畢｜6l 清 2 頁｜5b（egress leaderboard PARTIAL）與 5m（無 gh、GitHub API 範圍不含 anthropics/claude-code）跳過，已寫待辦
