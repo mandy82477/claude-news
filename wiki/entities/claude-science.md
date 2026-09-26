@@ -30,18 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新動態**（2026-09-25）
-> - **CRISPR 發現源自保密濕實驗室**：the-scientist.com 曝光首度公開成果；New Scientist、Gizmodo 對其科學意義與能力範圍表示審慎保留。
-> - **DRC 伊波拉疫情應用**：Anthropic 部落格揭露剛果團隊自 5 月起用 Claude 協助 Bundibugyo 病毒株疫情接觸史記錄。
+> **最新動態**（2026-09-26）
+> - **Anthropic Science：物理學家挑戰題一個月後被解出**：Matt von Hippel 向 AI 公司拋出理論物理問題，Anthropic Science 部落格訪談記錄過程；HN 103 分，4 個來源同日報導。
 
 ---
 
 ## 現況
 
 **CRISPR 特徵酶系統發現：官方公布與媒體跟進（2026-09-24～09-25）：** Anthropic 部落格 09-24 宣布新設生命科學研究團隊，聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統（Hacker News 729 分，4 個來源同日交叉報導，含 Reuters 獨立確認角度）。此團隊／實驗室與本頁所記錄、2026-07-01 發布的 Claude Science app 是否為同一產品線的延伸或另立獨立團隊，官方原文未載明，暫以獨立事件記錄；該酶系統實際用途原文亦未載明（The Next Web 標題稱「功能尚未確定」，僅供旁證）。09-25 the-scientist.com 揭露，這項發現出自 Anthropic 一個先前保密的「AI 驅動濕實驗室」首度曝光的成果，該濕實驗室與 [[topics/anthropic-business]] 09-18 起記錄之自有生物實驗室（AI 藥物開發布局）應屬同一設施，原文未逐字確認；Gizmodo 指出 Anthropic 目前仍無法完整說明酶系統的能力範圍，New Scientist 引述專家審慎看法稱其「充其量只是另一款基因編輯工具」，The New York Times、therundown.ai 同日跟進（Google News 聚合共 5 個來源，除 the-scientist.com 外均僅標題可用）。
+
+**物理學家挑戰題一個月後被解出（2026-09-26）：** Anthropic Science 部落格以訪談形式記錄：理論物理學家、科普作家 Matt von Hippel 向多家 AI 公司拋出一道他過去研究領域的理論物理問題，一個月後被解出。Hacker News 累積 103 分，4 個來源同日報導；具體解題方法與模型版本原文未載（僅標題可用）。
 
 **DRC 伊波拉疫情應用案例（2026-09-25）：** Anthropic 部落格文章指出，剛果民主共和國（DRC）團隊自 5 月起使用 Claude 協助對抗 Bundibugyo（BDBV）伊波拉病毒株疫情，透過健康工作者筆記本記錄接觸史，近 8,000 例確診中近半數死亡，及早發現為存活關鍵。此案例為 Claude 應用於公共衛生現場的產品案例，與本頁記錄的科學家研究工作台（Claude Science app）及生命科學研究團隊屬不同產品線。
 %% 維運備忘：單一來源、低互動（HN 27 分），暫無專屬頁面，記於此頁待後續同類案例累積後再評估是否獨立成頁 %%
@@ -82,6 +83,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 ## 參考來源
 
+- [Anthropic Science: Yes, Claude can do nine loops](https://www.anthropic.com/research/yes-claude-can-do-nine-loops)（2026-09-25，Hacker News 103 分）
 - [Anthropic Blog: Claude discovers a novel enzyme system with CRISPR-like repeats](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system)（2026-09-23）
 - [Anthropic Blog: Claude Science AI Workbench](https://www.anthropic.com/news/claude-science-ai-workbench)（2026-07-01）
 - Google News / the-scientist.com："Anthropic's Secretive AI-Powered Wet Lab Breaks Cover and Makes First Discovery"（2026-09-24，僅標題可用）
@@ -102,6 +104,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-26 | Anthropic Science 部落格訪談：物理學家 Matt von Hippel 拋出理論物理挑戰題，一個月後被解出；HN 103 分，4 個來源同日報導 |
 | 2026-09-25 | the-scientist.com 揭露：CRISPR 發現出自 Anthropic 保密中的「AI 驅動濕實驗室」首度公開成果；New Scientist、Gizmodo 對其科學意義與能力範圍表示保留 |
 | 2026-09-25 | Anthropic 部落格揭露剛果（DRC）團隊自 5 月起用 Claude 協助 Bundibugyo 伊波拉疫情接觸史記錄，近 8000 例確診近半數死亡 |
 | 2026-09-24 | Anthropic 宣布新設生命科學研究團隊與實驗室；早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統，與本頁 Claude Science app 是否同一產品線原文未載明 |

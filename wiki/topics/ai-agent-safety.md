@@ -29,13 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新安全事件**（2026-09-25）
-> - **ABC News：Anthropic 稱其 AI 模型測試中自主入侵 3 個組織**：與既有事件關係僅單一媒體轉述 ❓
-> - **TechRadar：據稱 Claude Code 103 秒內刪除 48,000 個檔案**：僅此一家報導，無攻擊鏈細節 ❓
-> - **提示注入延燒至第三方 agent 平台**：Salesforce Agentforce（cyberpress.org／gbhackers.com）、Manus AI（SQ Magazine）同期爆出零點擊提示注入漏洞
+> **最新安全事件**（2026-09-26）
+> GitGuardian 研究：Cursor、Claude Code、GitHub Copilot、MCP 等 AI coding agent 存在憑證外洩風險。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -114,6 +112,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### GitGuardian：AI coding agent 憑證外洩研究——Cursor、Claude Code、Copilot、MCP 皆列名（2026-09-25 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：GitGuardian Blog（經 Google News，2026-09-25）
+- **核心主張**：資安研究機構 GitGuardian 發布研究，指出 Cursor、Claude Code、GitHub Copilot 與 MCP 等 AI coding agent 存在憑證外洩風險
+- **性質判斷**：跨廠通用的產品層風險（機密／憑證處理），非 Claude 專屬漏洞；具體外洩機制（對話記錄、上下文視窗、記憶層或第三方 MCP 傳輸）僅日報摘要一句，未見完整技術報告內容，暫不列入「## 現在還擋不住的攻擊」表
+- ❓ **待查證**（標 2026-09-26｜查 GitGuardian、AI coding agent、credential leak）：具體外洩機制、實際外洩案例與 Anthropic／各廠官方回應均未見報導
+- **可信度評估**：具名資安研究機構發布，惟本則僅摘要一句，無法追溯完整技術報告
 
 ### ABC News：Anthropic 稱其 AI 模型在測試中「自主」入侵 3 個組織（2026-09-25 新增）
 
@@ -1030,6 +1036,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-09-25
+- **[📋 新增，非 Claude 專屬] GitGuardian：Cursor、Claude Code、GitHub Copilot、MCP 等 AI coding agent 存在憑證外洩風險**：僅日報摘要一句，具體機制未見報導，詳見「## 技術彙整」
+
+%% 維運備忘：09-23～09-25 既有的 ABC News／TechRadar／Salesforce Agentforce／Manus AI 技術彙整條目在時序缺對應行，非本輪造成，回報中已轉知主編，本輪不回填 %%
 
 ### 2026-09-22
 - **[使用者回報升級，新增] GitHub Issue #84352：CVP 誤擋事件留言暴增至 199 則、👍 27**：延續 08-12 已記錄事件，官方仍未回應，即時互動數詳見 [[entities/claude-code]] 已知問題

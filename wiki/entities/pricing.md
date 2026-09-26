@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新計費政策異動**（2026-09-24）
-> - **Claude Code cloud sessions 上線，新用戶最高可領 $250 額度**：3 家媒體同日報導，額度使用條件與到期日未見細節，功能面見 [[entities/claude-code]]。
+> **最新計費政策異動**（2026-09-26）
+> - **Claude Code $250 cloud sessions 額度僅限 cloud sessions 使用**：補上 09-23 已知的使用條件缺口，到期日仍未載（BleepingComputer），功能面見 [[entities/claude-code]]。
 > - **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。
 
 ## 現況
@@ -402,7 +402,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 定價與促銷（模型定價、方案設計）
 
 #### 2026-09-23：Claude Code cloud sessions 上線，新用戶最高可領 $250 額度
-3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]。
+3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]。後續（2026-09-26）：BleepingComputer 報導補上使用條件缺口——此額度僅限 cloud sessions 使用，到期日仍未見報導。
 
 #### ❓ 2026-09-23：Opus 5.5 上線同時傳「實驗性用量上限重置」機制
 ❓ **待查證**（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置｜複 2026-10-08）｜**Claude 是否新增實驗性用量上限重置機制**：Google News／Pasquale Pillitteri 單一來源稱 Opus 5.5 上線同時導入「experimental usage limit resets」，具體機制、適用方案與是否官方確認均未見報導；同一媒體 09-05 曾以「Anthropic Resets Claude Limits」為題報導，09-06 查證結果為價格結構未變（見上方「2026-09-05」條），故本則比照處理，不逕自視為新規則寫入「當前生效的計費規則」。

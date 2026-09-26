@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新動態：慕尼黑人形機器人新創 Vesoma 由前 DeepMind AI 主管領軍走出隱身**（2026-09-24）
-> Vesoma 60 人團隊、DeepMind 淨流失方新增一筆承接紀錄，詳見「對各公司的影響」表新增列；另一則 DeepMind 校友離職專訪僅時序記錄，詳見 [[topics/ai-talent-flow#時序]]。
+> **最新動態：又一位 Google DeepMind 研究員離職，稱打造超級智慧 AI「本質上不負責任」**（2026-09-26）
+> 與 09-13 已記錄之對齊風險警告是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列。
 
 ## 摘要
 
@@ -54,6 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **對各公司的影響細節**
 - **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
+  - **09-25（the-decoder.com）**：又一位研究員離職，稱短期內打造超級智慧 AI「本質上不負責任」；與 09-13 事件是否同一人原文未載明，姓名與職稱均未見報導，僅單一來源標題可用。
   - **09-13**：一名 DeepMind 員工離職，警告 AI「對齊程度」正在下降、五年內恐釀重大傷害；storyboard18.com、Firstpost、Inshorts 三家媒體各自報導同一事件，姓名與職稱均未見報導。
   - **與既有記錄的關係**：與 09-07 Thore Graepel 出走同屬「未流向 Anthropic 等既有前沿實驗室」型態，聚焦公開警告而非新創動向，是否同批未見交叉確認（推論）。
   - **09-07**：研究老將 Thore Graepel 離職，投入一項 AI 推理新創事業。**與既有記錄的關係**：未加入 Anthropic 或其他既有前沿實驗室，屬「自行創業」型態，與 08-05／08-06 Jeff Dean 等人出走創辦 Discovery Loop 同屬一類、非「被 Anthropic 承接」的又一筆淨流失。
@@ -75,6 +76,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-26
+- **the-decoder.com：又一位 Google DeepMind 研究員離職，稱短期內打造超級智慧 AI「本質上不負責任」**：與 09-13 已記錄之對齊風險警告是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列更新（Topic Watch/ai-talent-flow）
 
 #### 2026-09-24
 - **慕尼黑人形機器人新創 Vesoma 走出隱身模式，60 人團隊由前 DeepMind AI 主管領軍**：Dealroom 報導，主管姓名與具體職稱未見報導，詳見「對各公司的影響」表新增 Vesoma 列（Topic Watch/ai-talent-flow）

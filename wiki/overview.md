@@ -7,6 +7,8 @@
 
 ## 當前局勢
 
+**上訴法院維持五角大廈對 Anthropic 的「供應鏈風險」認定**：09-25 DC Circuit 推翻 08-28 地院裁定，維持國防部因 Anthropic 拒絕為 Claude 啟用軍方要求的功能而將其列為供應鏈風險；HN 426 分、十餘家媒體同日報導，同日投資人 [[entities/joe-lonsdale|Joe Lonsdale]] 公開稱 AI 公司渲染風險是為了影響政策。判決細節、攻防紀錄與下一步見 [[topics/anthropic-government-policy]]，商業後果見 [[topics/anthropic-business]]。
+
 **Claude Opus 5.5 發布，成為 Claude Code 預設模型**：09-22 官方發布 Claude 5.5 家族首款 [[entities/opus-5-5]]，牌價 $4／$20 較 Opus 5 降 20%、官方稱多數工作追平 Fable 5.1；Claude Code v2.1.280 同日把 `default` 改指它（Foundry 除外），Pro／Max 用量上限同步調高。同日 OpenAI 推出 GPT-6 Sol／Luna 迎戰，Bloomberg 報導 Anthropic IPO 計畫生變、可能延後。詳見 [[entities/opus-5-5]]、[[entities/pricing]]、[[topics/anthropic-business]]。
 
 **Cowork 與 Chat 合併為單一 Claude，同步推出 Docs／Slides**：09-17 官方把 [[entities/cowork|Claude Cowork]] 併回聊天介面，並推出 [[entities/claude-docs]]、[[entities/claude-slides]]（皆 beta）與整合進對話的 [[entities/claude-design]]，先開放 Pro／Max，是本月至今最大的官方產品異動。隔日 09-18 [[entities/claude-code]] Projects 進入 Beta（雲端並行 agent session，關機後續跑），六家科技媒體同日報導；多 agent 並行會快速衝高方案用量，見 [[feature-radar]] 該條「注意事項」。

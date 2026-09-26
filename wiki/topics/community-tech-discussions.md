@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-21
-**最後新聞更新：** 2026-09-21
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新動態**（2026-09-21）
-> - Skill Atrophy 討論🌋重燃：新進員工吐槽到職半月「沒人真的搞懂系統」，Simon Willison 同日引述同一則推文佐證。
+> **最新動態**（2026-09-26）
+> - Jevmem 發布引出 HN 兩條質疑：AI 寫的 README 說不清核心價值、「舊記錄不刪除」恐讓 context 累積過期資訊（61 分，單一來源）。
 
 ---
 
@@ -267,6 +267,21 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Jevmem 發布引出兩條質疑：AI 寫的 README 說得清細節卻說不清核心價值；「舊記錄標過時不刪除」設計恐讓 context 累積過期資訊（2026-09-26）
+
+- **來源：** Jevmem – automatic project memory for Claude Code, built on Jev — Hacker News（61 分）；[原文](https://github.com/Avinash-jetwani/jevmem)
+- **核心論點：** 作者發布 Claude Code 專案記憶自動化工具 Jevmem；HN 留言認為 AI 寫的 README 常見毛病是鉅細靡遺（旗標、限制、實驗結果）卻說不清工具的核心價值一句話是什麼，另有留言質疑該工具「舊記錄標過時但不刪除」的設計會讓 context 隨時間累積過期資訊
+- **關鍵回響：**
+  - 📝 反駁：留言質疑「標過時不刪除」的記憶設計恐造成 context 長期累積雜訊（Hacker News）
+- **收斂結論：**（無）單一 HN 貼文（61 分），尚無跨平台佐證；質疑聚焦 AI 生成文件的溝通品質與記憶工具的資料生命週期設計，非工具功能本身的錯誤
+
+#### Substack「Divided Argument」實驗：讓 Claude 生成法學論文式內容（2026-09-26）
+
+- **來源：** Claude-Generated Legal Scholarship: An Experiment — Divided Argument / Substack（媒體報導，待社群接力）；[原文](https://blog.dividedargument.com/p/claude-generated-legal-scholarship)
+- **核心論點：** 法律類 Substack 作者實驗讓 Claude 生成法學論文式內容，記錄嘗試過程與觀察
+- **關鍵回響：**（本次摘要未提供留言區細節，暫無可記錄項目）
+- **收斂結論：**（無）單一具名法律部落格作者的一次性實驗記錄，無社群延燒佐證，僅記錄其存在
 
 #### Ask HN：後 AI 時代該怎麼面試工程師——約八成受訪者已改為指揮 agent（2026-09-19）
 

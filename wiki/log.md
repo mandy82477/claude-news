@@ -6839,3 +6839,31 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知：新開 1 筆 H-840cab（功能→商業，claude-science.md 的濕實驗室與 anthropic-business.md 既有 wet lab 條目可能同一設施，待商業記者下輪回補連結）；已結案 2 筆 H-c63724、H-3bf1c7（功能記者核對後維持現狀，前提仍成立）；H-694685（安全政策）今日無新證據，維持待處理
 - devpractice 沉澱：候選 12 筆（maxProseWidth、desktop policy、skills/plugins 本機自動載入、issue #60366「hi」誤拒、Opus 5.5 thinking 不可關、TechRadar 48,000 檔案指控、amux、second-brain-os、Whiteboard、open-seo-mcp-skills、用量監控工具三款、official-community-gap 新增 Linear 缺口列），已 append `data/devpractice-candidates.jsonl` 並推進 `data/devpractice_state.json` 基準線至 f5f81fd
 - market 判讀：2 則（Akamai 116 億美元運算合約附認股權證；白宮據稱要求 OpenAI／Anthropic 暫緩向英國測試機構釋出新模型），皆 wikilink 指回商業／安全政策記者當日事實頁，未複製事實；ABC News「AI 模型自主入侵 3 組織」查證為 07-31 既有揭露事件的媒體重述，不開新則
+
+## 2026-09-26 Ingest
+
+- 來源日報：[[news/2026-09-26]]（15/15 來源正常，68 則；日報收錄 16 則，另 52 則透過 `list_digest_omissions.py` 一併提供給記者判斷；本機執行，Phase A 抓料首次因 enricher 超時例外失敗兩次，修復 commit 1890f286 後現抓成功）
+- 分類派工：模型 4 則、功能 10 則、商業 15 則、安全政策 23 則、社群 22 則、人物 2 則（六類並行 foreground，`subagent_type: general-purpose` + `model: sonnet`；多類別標記 13 則）；排除 3 則（Claude Shannon 影片同名誤判、ISP 測速工具、音樂貼文誤入 r/ClaudeCode），分類複核記者判全數維持排除。本輪首次套用「殼層摘要不得排除」「重複不是分類理由」新閘，對帳 exit 0
+- 更新頁面：
+  - **模型**：無頁面變更（nine loops 未點名具體模型；Jev 為跨家模型不進 model-comparison；Reddit 與 tech-insider 兩則未達門檻）
+  - **功能**：`entities/claude-code.md`（v2.1.283 `x-claude-code-prompt-id` 閘道提示標頭；Cowork 資料夾功能退化兩則 issue #76694／#45297 已知問題）、`entities/claude-skills.md`（Plugins 目錄自助提交入口，僅標題可用待查證）、`entities/claude-science.md`（Anthropic Science「nine loops」理論物理挑戰）
+  - **商業**：`topics/anthropic-business.md`（供應鏈風險判決的商業後果、Accenture 加入安全評測合作、Wash U 捐贈基金投資長評論；H-840cab 回補 wet lab wikilink）、`topics/competitor-landscape.md`（FT 低價新模型 Jev、GitHub Copilot changelog 三則、OpenAI Proaction Codex 案例）、`topics/ai-talent-flow.md`（又一 DeepMind 研究員離職）、`entities/pricing.md`（$250 額度僅限 cloud sessions 限定條件）
+  - **安全政策**：`topics/anthropic-government-policy.md`（DC Circuit 推翻 08-28 地院裁定、維持供應鏈風險認定：callout／摘要／線的細節／攻防紀錄／時序，並回掃 3 處「另有一案待判」舊敘述；Lonsdale 投資人言論入攻防紀錄）、`topics/ai-agent-safety.md`（GitGuardian 憑證外洩研究入技術彙整）
+  - **社群**：`topics/community-tech-patterns.md`（GitHub Search 八個 repo 全數過防刷檢查收錄：nature-skills、emilkowalski/skills、drama-skills、asd-ste100-skill、zeron、claude-ops、VibeAround、coco）、`topics/community-tech-discussions.md`（Jevmem 專案記憶工具 HN 61 分；Divided Argument 法學論文實驗以「媒體報導，待社群接力」🔥 收錄）
+  - **人物**：新頁 `entities/joe-lonsdale.md`（Anthropic 投資人，Reuters 表態，待核實）；dario-amodei 頁 09-24 已記 Axios 報導，今日無新事實未改
+- 新增頁面：`entities/joe-lonsdale.md`
+- feature-radar：新增「x-claude-code-prompt-id 閘道提示標頭」（v2.1.283，🔥 ⏳ 觀望，opt-in）；當月對帳 18 條＝18 列；⭐ 三件未輪替（新條目 🔥 未達門檻、無熱度變動）；⚠️ 升版表無新列（opt-in 非預設值改變）
+- index：新增 joe-lonsdale 列（active（待核實））
+- overview：當前局勢新增「上訴法院維持五角大廈供應鏈風險認定」段
+- 轉知帳本：結案 1（H-840cab 商業，wet lab wikilink 已回補）；未結 2（H-694685 安全政策，今日無 3 萬 agent 數字相關新聞、證據不足不動；H-e8e1fd 模型，model-task-leaderboard 屬週更維護頁，留待 `/wiki-lint` 5b 比對）；新開 1（H-1ae6f5 社群→功能，patterns 新增控制平面工具與 skills 合集，評估 official-community-gap 是否新增列）；安全政策記者「GitGuardian 涉 Claude Code 功能面」轉知功能記者——不登帳：功能記者原輪已收到同一則並判定無具體可操作事實
+- 摘要：DC Circuit 維持五角大廈將 Anthropic 列為供應鏈風險的認定為全站最大新聞（HN 426 分、十餘家媒體）；同日 GitGuardian 揭露 coding agent 憑證外洩風險、Anthropic 開放 Plugins 目錄自助提交、v2.1.283 小版更新
+- 呈現品質：全部通過（六記者＋market 機械自查全綠；主編端 feature-radar 對帳、cell_limits、reader_language、callout 涵蓋 12 頁全綠）
+- 品質備註：[來源] 13 則 Google News 法院判決報導與多數媒體條目僅剩跳轉殼層，記者依標題可用事實下筆並標「僅標題可用」，屬來源結構問題；[安全政策] 記者回報 `topics/ai-agent-safety`「## 時序」缺 09-23～09-25 三天對應條目（技術彙整同期已有），已加 `%% %%` 備忘，本輪未回填——待使用者裁示是否補寫
+- 分類回退：無
+- devpractice 沉澱：本日無候選（基準線 f5f81fdb → 9fca7f25，只涵蓋已 commit 內容；本輪 wiki 改動尚未 commit，留待下輪）
+- market 判讀：1 則（第 5 類：上訴法院維持供應鏈風險黑名單認定；里程碑登記複查 2026-10-10；買得到的標的無）；其餘 18 則未達新資訊門檻
+
+📋 待使用者確認
+- `topics/ai-agent-safety`「## 時序」缺 09-23～09-25 三天條目：由安全政策記者回填，或接受技術彙整已涵蓋、時序不補？
+- `entities/joe-lonsdale` 新頁僅一則、僅標題可用：保留為單一事件人物頁，或併入 anthropic-government-policy 一句點名即可？
+- 內容閘（步驟 4½）：首跑紅 1 道（懸置標記）修 2 處後綠——joe-lonsdale 新頁與 index 列「active（待核實）」改「單一來源」（舊語法存量 43→42）、market-signals 探針「遷出」改「遷出計畫」（<3 字元）；其餘 7 道首跑即綠

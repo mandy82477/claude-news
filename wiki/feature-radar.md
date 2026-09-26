@@ -2,11 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-25
+**最後更新：** 2026-09-26
 
-> **這禮拜動了什麼**（2026-09-23）
-> Claude Opus 5.5 發布並成為 Claude Code 的預設 Opus（v2.1.280）：Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 模型全面改指它，不動設定也會換；牌價 $4／$20 較 Opus 5 降 20%，官方稱多數工作追平 Fable 5.1。跑排程任務的人先 `/model` 看一眼現在實際跑的是哪一個。
-
+> **這禮拜動了什麼**（2026-09-26）
+> v2.1.283 新增 `x-claude-code-prompt-id` 閘道提示標頭：設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 後，自架 LLM gateway 能把同一提示的多筆請求歸為一組；不設不受影響。預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-09-23）
@@ -65,6 +64,20 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### x-claude-code-prompt-id 閘道提示標頭
+**發布：** 2026-09-25（v2.1.283） | **狀態：** 正式發布
+
+**是什麼：** 新增 `x-claude-code-prompt-id` 閘道提示標頭，讓 LLM gateway 能把同一使用者提示產生的多筆請求歸為一組。
+
+**為何熱：** GitHub Release 公告，尚無社群回饋或討論（0 互動）。
+
+**快速上手：**
+```
+export CLAUDE_CODE_GATEWAY_HINT_HEADERS=1
+```
+
+**注意事項：** 選擇加入（opt-in）才生效；只影響自架或第三方 LLM gateway 端的請求分組追蹤，直接用官方 API／CLI 的一般使用者無感。
 
 ### maxProseWidth 設定（限制寬終端機下散文寬度）
 **發布：** 2026-09-24（v2.1.282） | **狀態：** 正式發布
@@ -331,6 +344,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **maxProseWidth 設定**（v2.1.282，限制寬終端機散文寬度） | 2026-09-24 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway desktop policy 支援**（v2.1.281，新版 Desktop 金鑰可設讀取範圍與繞過權限模式） | 2026-09-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Opus 5.5 成為新預設模型**（v2.1.280，除 Foundry 外全通道；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

@@ -30,18 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新動態**（2026-09-25）
-> - **v2.1.282**：新增 `maxProseWidth` 設定，限制寬終端機下 Claude 散文輸出的寬度（表格、程式碼區塊維持全寬）；另新增啟動通知，`/status` 亦有異動（官方原文截斷，細節未載）；build 另新增 8 個功能候選旗標＋2 個代號旗標，`CLAUDE_CODE_OCHRE_KITE` 消失，見 [[topics/claude-code-experimental]]。
-> - **官方文件更新**：本機與 SSH session 現在會自動載入 claude.ai 帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器在雲端 session 不可用，透過桌面應用安裝的 plugin 也不會同步到雲端 session。
+> **最新動態**（2026-09-26）
+> - **v2.1.283**：新增 `x-claude-code-prompt-id` 閘道提示標頭，設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 加入，供 LLM gateway 歸組同一提示的請求。
+> - 新增已知問題 2 則：Cowork／Chat 合併後新建專案「選擇資料夾」功能消失（#76694）；Cowork 資料夾功能於 Windows 不支援 UNC 路徑（#45297）。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.283**（2026-09-25）：新增 `x-claude-code-prompt-id` 閘道提示標頭，讓 LLM gateway 能把同一使用者提示產生的多筆請求歸為一組；需設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)）。
 - **v2.1.282**（2026-09-24）：新增 `maxProseWidth` 設定，限制寬終端機下 Claude 散文輸出的段落寬度，表格與程式碼區塊維持全寬；另新增啟動通知，`/status` 亦有異動（官方原文於抓取時截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）。
   同版 build 另新增 8 個功能候選旗標＋2 個代號旗標，`CLAUDE_CODE_OCHRE_KITE` 從程式本體消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.281**（2026-09-23）：新增 Claude apps gateway desktop policy 兩項設定：`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`；官方原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)）。
@@ -191,8 +192,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（51 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（52 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 34 則留言、30 個讚，2026-09-25）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
 - ❓ **待查證**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-09-25）｜**`/goal` 於複雜多 issue 工作流疑似有 context rot 缺陷（Nightshift 作者具名指出，HN Show HN，2026-09-10）**：未附測試方法或數字，屬單一開發者為自製工具辯護的設計說明，非驗證缺陷回報。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
@@ -317,8 +319,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（70 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（71 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
@@ -469,6 +472,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.283** | 2026-09-25 | 新增 `x-claude-code-prompt-id` 閘道提示標頭，供 LLM gateway 歸組同一提示的多筆請求；需設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)）|
 | **v2.1.282** | 2026-09-24 | 新增 `maxProseWidth` 設定，限制寬終端機下散文輸出寬度（表格／程式碼區塊全寬）；新增啟動通知，`/status` 亦有異動（原文截斷，細節未載，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）|
 | **v2.1.281** | 2026-09-23 | 新增 desktop policy 設定：`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`（gateway，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)）|
 | **v2.1.280** | 2026-09-22 | **Opus 5.5 成新預設模型**（Foundry 仍 Sonnet 4.5，2026-09-23 查證），$4／$20 每 Mtok；全螢幕更多清單支援滑鼠（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)）|
@@ -729,6 +733,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-26 | **v2.1.283**：新增閘道提示標頭 `x-claude-code-prompt-id`。新增已知問題 2 則：Cowork「選擇資料夾」消失（#76694）、Windows UNC 不支援（#45297）。 |
 | 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定（截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失。桌面文件：本機/SSH 自動載入帳號 skills/plugins。 |
 | 2026-09-24 | **v2.1.281**：desktop policy 新設定；旗標增 9。新增 #60366（hi 誤判）併入 Usage Policy。互動更新：#63903、#8451、#12925。 |
 | 2026-09-23 | **v2.1.280**：Opus 5.5 成新預設模型。AGENTS.md 補 telemetry 成因（#95690）。修正 v2.1.233 斷句誤導。互動數更新：#4953、#91188。 |

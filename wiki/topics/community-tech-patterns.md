@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新工作流模式**（2026-09-25）
-> - **Multi-agent 架構、記憶與知識管理各添一例**：amux 開源控制平面平行調度 Claude Code／Codex／Gemini worker；second-brain-os 自我維護的 Obsidian＋Claude Code 知識庫。Show HN Whiteboard（YC W26，HN 358 分）讓人類與 agent 共用畫布討論架構。
+> **最新工作流模式**（2026-09-26）
+> - **Multi-agent 架構添四款控制平面**：zeron、claude-ops、VibeAround、coco 皆為跨 Claude Code／Codex／Cursor 等 harness 的編排或調度層。Skills 設計添四款專項合集：nature-skills（Nature 論文）、emilkowalski/skills（設計/工程通用）、drama-skills（AI 短劇）、asd-ste100-skill（簡化技術英文）。
 
 ---
 
@@ -51,8 +51,8 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-25 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
-| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、hordev、drawio-skill、comet、open-seo-mcp-skills（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-24 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
+| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、drawio-skill、open-seo-mcp-skills、nature-skills（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **記憶與知識管理** | claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code、second-brain-os（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-25 | 跨 session、跨工具、跨機器的持久記憶協定 |
@@ -162,6 +162,33 @@ Multi-agent 架構與 Skills 設計已是社群定案的做法；還在試的十
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### 同日四款多 agent 控制平面／編排工具：zeron、claude-ops、VibeAround、coco（2026-09-26）
+
+- **主線：** 並行規模
+- **核心模式：**
+  - zeron：Claude Code、Codex、Cursor、Devin 等 coding agent 的原生控制平面（2,235★，forks 214，open issues 129 有實質往來）
+  - claude-ops：Claude Code 業務作業系統，57 skills、21 agents、常駐 daemon，整合統一收件匣、自主 PR 合併、全 AWS 監控、營收與電商串接（524★，forks 60）
+  - VibeAround：Claude Code、Codex CLI、Gemini CLI 等從單一介面並排啟動，跨 web／行動／訊息通道連接（523★，forks 55）
+  - coco：把 Claude Code／Cursor／Codex 變成工程部門編排層，226 skills、386 commands、持久狀態，open-core（MIT 核心，Super Intelligence 專有）（502★，forks 12，open issues 71 有實質往來）
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧四個具名實作，共通取向是跨 harness 的控制/編排層；claude-ops 額外擴及業務流程自動化，暫觀察是否構成獨立分支；並行 agent 調度屬大型 codebase 特有痛點，主線填並行規模。
+- **可信度註記：** zeron／claude-ops／VibeAround forks 占星數 8%–12%（正常範圍），皆有 open issues 實質往來。
+  - coco forks 僅占星數約 2.4%（偏低），但 open issues 71 筆有實質往來且近期持續 commit，非「異常高星數無佐證」情況，收錄但保留觀察；四者皆僅 GitHub Search 單一來源，無獨立第三方採用回饋。
+- **來源：** GitHub Search；[zeron](https://github.com/zeronsh/zeron)（2,235★）、[claude-ops](https://github.com/Lifecycle-Innovations-Limited/claude-ops)（524★）、[VibeAround](https://github.com/jazzenchen/VibeAround)（523★）、[coco](https://github.com/coco-research/coco)（502★）
+- **成熟度：** ⏳ 新興（本庫首次收錄，皆為單一團隊工具，尚無社群採用回饋數據）
+
+#### 同日四款專項 Skills 合集：nature-skills、emilkowalski/skills、drama-skills、asd-ste100-skill（2026-09-26）
+
+- **主線：** —
+- **核心模式：**
+  - nature-skills：符合 Nature 論文學術表達與科研繪圖規範的 skill（44,559★，2026-04 出生，本庫今日首次收錄，forks 2,338）
+  - emilkowalski/skills：給設計師與工程師使用的通用 skills 集合（41,183★，2026-03 出生，本庫今日首次收錄，forks 2,340）
+  - drama-skills：開源 AI 短劇／漫劇創作 skill 合集，涵蓋劇本、角色資產、分鏡、圖片／影片提示詞、審查，適配 Claude Code 與 Codex，MIT（2,272★，forks 497）
+  - asd-ste100-skill：把 ASD-STE100 簡化技術英文規則轉為 Claude Code skill，用於改寫模糊的 agent 對話英文（2,241★，forks 125）
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧四個新取向的具名實作——學術寫作、設計/工程通用、創作全流程、語言精簡；前兩款星數異常高卻本庫今日首次收錄，推測受限於 GitHub Search 抓取覆蓋（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 四者 forks 占星數約 5%–22%，皆在 GitHub Search 抓取當日或前兩日內仍有 commit 或 issue 往來，非「異常高星數無佐證」情況。
+- **來源：** GitHub Search；[nature-skills](https://github.com/Yuan1z0825/nature-skills)（44,559★）、[emilkowalski/skills](https://github.com/emilkowalski/skills)（41,183★）、[drama-skills](https://github.com/zenstory-ai/drama-skills)（2,272★）、[asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill)（2,241★）
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### Show HN: Whiteboard（YC W26）——人類與 agent 共用畫布討論架構，整合既有 CLI coding agent（2026-09-25）
 

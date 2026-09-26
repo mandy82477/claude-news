@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新官方動態**（2026-09-25）
-> 官方文件雙軌更新：桌面版文件新增段落，本機／SSH session 起自動載入 claude.ai 帳號已啟用的 skills／plugins，桌面裝的 plugin 不同步雲端 session；文件索引同日新增 22 頁，多為自架市集與 plugin 開發文件（僅標題可用，內容未載）。
+> **最新官方動態**（2026-09-26）
+> Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程未載）；呼應 09-25 文件索引新增的自架市集／plugin 開發文件。
 
 ---
 
@@ -92,6 +92,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | 官方設計指南 | 《Lessons from building Claude Code: How we use skills》——內部數百個 Skills 的實戰心得 | 2026-06-05 |
 | | 《七種指令傳遞方法》——Skills 與 CLAUDE.md/rules/subagents/hooks/output styles/system prompt append 六層控制的定位框架 | 2026-06-21 |
 | 分享／同步機制 | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
+| | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程與審核標準未載） | 2026-09-25 |
 | | ✅ **已有官方市集**（2026-08-08 查證官方文件更正）：`claude-plugins-official`（Anthropic 策展，首次互動啟動時自動註冊）與 `claude-plugins-community`（第三方送審後上架，需自行 `/plugin marketplace add`）；目錄另可於 [claude.com/plugins](https://claude.com/plugins) 瀏覽，送審有自動驗證與安全篩查。**創作者變現機制仍缺** | 市集已就位；變現無官方時程 |
 | | Enterprise 方案可開啟 skill／plugin 安全掃描（beta），第三方 skill／plugin 上傳或編輯時自動檢查惡意內容 | 2026-08-06 |
 | 行為變更 | v2.1.215：`/verify` 與 `/code-review` 兩項官方技能不再由 Claude 自動觸發，須使用者手動呼叫指令才會執行；與上方「機制本身」列所述「依描述語意自動觸發、無需手動呼叫」的通則產生例外，依賴自動驗證/審查的既有工作流需改為顯式呼叫，無過渡期即刻生效。詳見 [[entities/claude-code]] 版本表 | 2026-07-19 |
@@ -132,6 +133,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-26 | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI，僅標題可用） |
 | 2026-09-25 | 桌面版文件新增段落：本機／SSH session 起自動載入帳號 skills／plugins，桌面裝的 plugin 不同步雲端；文件索引新增 22 頁（自架市集、plugin 開發文件，僅標題可用）、移除 9 頁 |
 | 2026-08-24 | 第三方索引工具 SkillWorks（非官方）08-23 揭露其索引規模統計（503,570 listings、392,227 skills、80,636 subagents、23,442 plugins、7,265 marketplaces，48,190 個 skill 無法載入，2026-08-22 rebuilt）；HN 僅 2 分，互動偏低，數字未經官方驗證，供生態規模參考 |
 | 2026-08-19 | 官方技能庫目錄核對：`claude-academy-guide`（08-18 新增）改名為 `academy-guide`，原名同步移除；20 萬 token skill 一案已查實並修復（見「已知問題」） |

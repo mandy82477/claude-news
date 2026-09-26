@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **本週衝擊**（2026-09-25）
+> **本週衝擊**（2026-09-26）
 > - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
-> - 🔴 **OpenAI V7 把機構記憶做成官方案例**：GPT-6 Astra 在最難圖查詢測試拿下 89% 準確率（09-21，OpenAI 官方部落格）——agentic 信任案例首度帶量化數字，長期 context／記憶需求高的人值得追蹤。
+> - 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。
 
 ---
 
@@ -144,7 +144,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
 - 定價面已實際下修：GPT-5.6 Luna 降 80%、Terra 降 20%，Sol 未降價但提速 2.5 倍（07-30 官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
-- GPT-6 Astra 官方自曝案例已升級為兩則：Perplexity 自主寫通訊、改軟體、監控正式環境（09-13）；V7 賦予 agent「機構記憶」，把企業檔案轉為 agent context，最難圖查詢測試達 89% 準確率（09-21）——兩則均直指 Claude Code 的自主任務與長期記憶定位。
+- OpenAI 官方自曝案例已升級為三則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
 - GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
@@ -215,6 +215,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-26
+- **Jev（TypeSafe AI）**：FT 報導低價新模型 Jev 意圖挑戰 OpenAI 與 Anthropic，具體定價與效能數據未見，僅標題與 HN 討論可用（Google News/Financial Times；Hacker News）
+- **OpenAI**：官方發布車隊管理新創 Proaction 導入 Codex 案例，稱月省 40–60 工程時數、銷售成長 60%；詳見「雷達細節」更新（Blog/OpenAI News）
+- **Microsoft／GitHub**：Copilot 新增 enterprise managed settings 驗證器，偵測畸形 JSON、不支援設定與無效團隊對應（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Usage metrics API 新增 pull request review 各階段耗時拆解（`pull_request_review_times`）（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Agentic autofix 導入 Copilot Memory，修復安全告警時可參考既有記憶脈絡（Blog/GitHub Copilot Changelog）
 
 ### 2026-09-25
 - **Microsoft／GitHub**：CNBC／GeekWire 報導 Microsoft 推出 all-in-one Copilot app，整合旗下商用 AI 功能，劍指 Anthropic 與 OpenAI，盼加速企業採用；詳見「對手雷達」與「雷達細節」更新（Google News/CNBC；Google News/GeekWire）

@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **最新動態**（2026-09-25）
-> - **Akamai 簽署 7 年、116 億美元運算合約，供應 CPU 算力**：另發認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 股票。
+> **最新動態**（2026-09-26）
+> - **上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：政策細節見 [[topics/anthropic-government-policy]]，未見具名企業因此調整採購。
+> - **Accenture 評測合作被問「能否轉化為營收」**：屬 09-19 合作案的商業化角度追問，尚無具體數字。
 
 ---
 
@@ -278,6 +279,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Nvidia-Lambda-Anthropic 循環融資質疑**：24/7 Wall St. 發表分析文章，質疑 Nvidia 支持之雲端業者 Lambda 與 Anthropic 簽署的 350 億美元雲端運算合約（見「哪個合作會改到你用的 Claude」表 09-01 列）是否構成循環融資——即 Nvidia 投資／支持的下游業者，反過來以巨額合約向 Anthropic 採購運算力，資金流可能部分回流 Nvidia 生態圈。與既有 07-22 AMD 交易 HN 討論串「ouroboros circle（銜尾蛇循環）」質疑同屬同一類「晶片商與 AI 實驗室互相投資推升彼此估值」商業模式疑慮；具體資金流向證據、Nvidia 於 Lambda 之實際投資規模未見報導，屬單一媒體分析評論，非官方或監理機構調查結論（推論）（Google News/24/7 Wall St.，2026-09-02）。
 - **Nvidia 執行長「後悔」**：Yahoo Finance 報導 Nvidia 傳出將投資 Hugging Face **129 億美元**，執行長黃仁勳同時表示對先前投資 OpenAI、Anthropic 的規模感到「後悔」（regret）。若屬實，反映 Nvidia 作為 Anthropic 重要投資人／算力供應商對既有投資部位規模的內部反思，可能影響後續加碼意願（推論）；惟「傳出」為未經證實的媒體報導，具體後悔緣由（規模過大、報酬率不如預期或策略轉向）未見細節，言論面詳見 [[entities/jensen-huang]]。
 - **創投人士質疑 IPO 前景**：24/7 Wall St. 報導知名創投人 Chamath Palihapitiya 提出「3 個 AI 殺手」警訊，並質疑 Anthropic 傳聞中 2 兆美元 IPO 前景是否可能率先崩盤；與既有 08-15 Steve Eisman 唱空言論同屬市場知名人士公開質疑估值敘事的訊號，且與同日「IPO 走到哪一格」表新增之 30 兆美元 TAM 論戰同源並發（推論）；具體「3 個殺手」論點內容、量化依據未見報導，僅標題可用。
+- **大學校產基金投資長唱空**：Business Insider 報導 Washington University 校產基金投資長公開表示 OpenAI、Anthropic「陷入大麻煩」，屬單一媒體轉述之市場觀感，具體論據未見報導細節，同屬純評論類，不入表（Google News/Business Insider，2026-09-25）。
 - **Claude 浮水印被繞過**：Forbes（08-21）討論 Claude 輸出內容浮水印（為因應歐盟 AI Act 透明度規範，見 [[topics/anthropic-government-policy]]）對企業用戶的實務影響；同期 WIRED（08-20）報導工程師已找到繞過隱形浮水印的方法。若浮水印可被輕易繞過卻仍是企業合規/內容溯源依賴的機制，可能削弱企業客戶對浮水印作為「可信賴內容標示」的信任（推論）；具體實務影響內容、受影響企業類型、Forbes 論點細節均未見報導，僅標題可用（Google News/Forbes；Google News/WIRED）。
 - **音樂出版商著作權訴訟**：The Hollywood Reporter 報導音樂出版商 Round Hill Music 對 Anthropic 提起著作權侵權訴訟，求償 **10 億美元**；Reuters 同期報導另一家音樂出版商對 Anthropic 與 Suno（AI 音樂生成服務）提起類似著作權侵權訴訟。延續本頁的著作權集體訴訟 15 億美元和解案（07-20 核准，見「這些數字是誰說的」表）、UTRF 專利侵權訴訟（07-21），是音樂出版業首度對 Anthropic 提起的具名著作權訴訟，顯示著作權法律風險正從文字出版業擴散至音樂產業；求償金額、具體侵權指控內容、與既有和解案的涵蓋範圍關係（是否涉及音樂作品）均未見報導，兩則均僅標題層級可用（The Hollywood Reporter；Reuters，2026-08-18）。
 - **音樂訴訟升級：Sony Music、Warner 加入提告（08-29）**：TechCrunch、Business Insider 報導 Sony Music、Warner 等唱片公司對 Anthropic 提起訴訟，指控其「大規模非法透過 BT 下載、抓取受版權保護音樂」訓練 Claude 系列模型並藉此牟利，求償**每首歌最高 15 萬美元**。與 08-18 記錄之 Round Hill Music（10 億美元）、另一出版商對 Anthropic/Suno 訴訟同屬音樂出版業著作權侵權求償，但本次原告改為主流大型唱片公司（Sony、Warner），且首度出現「BT 下載盜版」的具體侵權手法指控（先前記錄的 15 億美元著作權和解案指控的是書籍盜版，見「這些數字是誰說的」表）——顯示 Anthropic 訓練資料來源爭議正從書籍出版業擴散至音樂產業的主流廠牌層級，法律風險規模持續擴大（推論：每首歌 15 萬美元的求償上限若涵蓋大量曲目，潛在總求償金額可能達到與書籍和解案相當甚至更高的量級，惟具體涉案曲目數量未見報導）（[TechCrunch](https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/)；[Business Insider](https://www.businessinsider.com/anthropic-claude-training-copyright-music-lyrics-sony-lawsuit-2026-8)，2026-08-29）。08-31 跟進（非新事實，補上具體法律實體名）：technology.org、The Guardian 同步報導同一起訴訟，明確點名原告之一為 **Warner Chappell**（Warner Music 旗下音樂出版部門，而非 Warner Music 集團本身），未見新增求償金額或案情細節（Google News；The Guardian，2026-08-31）。
@@ -508,6 +510,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 ### 2026-09
 
+#### 2026-09-26
+- **[商業風險] 上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：判決與政策細節見 [[topics/anthropic-government-policy]]；未見具名企業因此調整對 Anthropic 採購的報導（Hacker News 426 分；Google News/CNBC）
+- **[戰略合作，跟進] Yahoo Finance：分析 Accenture 能否把加入 Anthropic AI 安全評測合作轉化為新營收線**：與 09-19 已記錄之 Accenture 內嵌評估者合作屬同一事件，本則新增「評測服務能否商業化」角度，具體營收數字未見報導（Google News/finance.yahoo.com）
+
 #### 2026-09-25
 - **[戰略合作] Bloomberg：Anthropic 與 Akamai 簽署 7 年、116 億美元運算合約，取得 CPU 算力**：認股權證可認購約 770 萬股 Akamai 股票，另有報導以「120 億美元」總值呈現；詳見一行制清單（Hacker News；Google News/WSJ；Reddit）
 
@@ -547,6 +553,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 #### 2026-09-18
 - **[生命科學布局] 官方：推出生命科學驗證計畫（LSVP），開放生醫專業人士使用 Mythos、Opus、Sonnet 並放寬部分安全限制，先以機構／團隊 Beta 開放**（Anthropic Blog）
 - **[生命科學布局] Reuters 獨家＋qz.com 跟進：Anthropic 悄悄設立自有生物實驗室（wet lab），加速 AI 藥物開發**（Google News/Reuters；Google News/qz.com）
+  - 後續（2026-09-26）：[[entities/claude-science]] 記錄的 CRISPR 特徵酶系統發現，出自此濕實驗室首度曝光成果，應屬同一設施，原文未逐字確認。
 - **[資本支出] CNBC 引述消息人士：Anthropic 與 OpenAI 同步尋求規模較小的資料中心合作案，加快 AI 運算產能部署**（Google News/CNBC）
 
 #### 2026-09-17
