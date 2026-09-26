@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-24"
 last_news_update: "2026-09-24"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 2
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 2
 inbound_links: 37
 attribution_count: 17
 attribution_last: "2026-09-24"

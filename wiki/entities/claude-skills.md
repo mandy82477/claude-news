@@ -4,24 +4,24 @@ kind: "entity"
 type: "feature"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-20"
-last_news_update: "2026-08-24"
+last_updated: "2026-09-25"
+last_news_update: "2026-09-25"
 status_main: "active"
-days_since_news: 31
+days_since_news: 1
 parent: null
 children: "['entities/claude-skills-archive']"
 page_role: "hub"
-days_since_news_subtree: 31
-inbound_links: 5
-attribution_count: 9
-attribution_last: "2026-08-19"
+days_since_news_subtree: 1
+inbound_links: 6
+attribution_count: 11
+attribution_last: "2026-09-25"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Skills

@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-09-20"
 last_news_update: "2026-05-19"
 status_main: "resolved"
-days_since_news: 128
+days_since_news: 130
 parent: "entities/pricing"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 128
+days_since_news_subtree: 130
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

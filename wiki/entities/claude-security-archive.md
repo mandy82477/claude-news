@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-20"
 last_news_update: "2026-05-28"
 status_main: "resolved"
-days_since_news: 119
+days_since_news: 121
 parent: "entities/claude-security"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 119
+days_since_news_subtree: 121
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

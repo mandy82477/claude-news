@@ -3,19 +3,19 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-24"
-last_news_update: "2026-09-24"
+last_updated: "2026-09-25"
+last_news_update: "2026-09-25"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 96
-attribution_count: 116
-attribution_last: "2026-09-24"
+days_since_news_subtree: 1
+inbound_links: 97
+attribution_count: 118
+attribution_last: "2026-09-25"
 top_source: "google-news"
-pending_count: 12
+pending_count: 14
 pending_overdue: 3
 pending_next_review: "2026-09-29"
 pending_signalled: 1
