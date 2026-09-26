@@ -9,7 +9,8 @@ Priority per item type:
 import html
 import logging
 import re
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FutureTimeout, as_completed
 from dataclasses import replace
 from urllib.parse import urlparse
 
@@ -25,6 +26,13 @@ MAX_SUMMARY_CHARS = 800
 _THIN_THRESHOLD = 120   # existing summary shorter than this → try to enrich
 _WORKERS = 6
 _ARTICLE_TIMEOUT = 8    # per-URL cap for article fetching (trafilatura.fetch_url ignores ours)
+# requests 的 timeout 是「單次 socket 等待」上限，慢速滴流（每幾秒吐一小塊）永遠不會觸發它；
+# 這是整篇文章從開始讀到讀完的總預算，超過就放棄該篇、保留原摘要。
+_READ_DEADLINE_S = _ARTICLE_TIMEOUT * 3
+# 整批 enrichment 的牆鐘預算。到期時未完成的條目一律保留原摘要——enrichment 是加值不是必要，
+# 任何一篇卡住都不得讓抓料整批失敗（2026-09-26 本機兩次連續失敗即此因：as_completed 的
+# TimeoutError 沒被接住，main.py 直接崩潰）。
+_ENRICH_BUDGET_S = 60
 # 單篇文章 HTML 上限。6 個 worker 並行，所以最壞情況是這個數字的 6 倍常駐；
 # 5 MB × 6 = 30 MB，遠低於 runner 記憶體，而正常文章頁只有幾百 KB。
 _MAX_ARTICLE_BYTES = 5 * 1024 * 1024
@@ -62,18 +70,31 @@ _session.mount("https://", _adapter)
 # ── public API ────────────────────────────────────────────────────────────────
 
 def enrich(items: list[FeedItem]) -> list[FeedItem]:
-    """Return items with richer summary fields. Never raises."""
-    with ThreadPoolExecutor(max_workers=_WORKERS) as pool:
-        futures = {pool.submit(_safe_enrich, item): item for item in items}
-        result = {}
-        for fut in as_completed(futures, timeout=60):
+    """Return items with richer summary fields. Never raises.
+
+    到 `_ENRICH_BUDGET_S` 仍未完成的條目保留原摘要；不用 `with`，因為 `__exit__`
+    會等卡死的 worker 收工——改用 shutdown(wait=False) 讓主流程繼續，卡住的執行緒
+    自己到 socket／讀取期限後結束。
+    """
+    result: dict[int, FeedItem] = {}
+    pool = ThreadPoolExecutor(max_workers=_WORKERS)
+    futures = {pool.submit(_safe_enrich, item): item for item in items}
+    try:
+        for fut in as_completed(futures, timeout=_ENRICH_BUDGET_S):
             original = futures[fut]
             try:
                 result[id(original)] = fut.result()
             except Exception:
                 result[id(original)] = original
-    # preserve original order
-    return [result[id(item)] for item in items]
+    except _FutureTimeout:
+        unfinished = [it for fut, it in futures.items() if not fut.done()]
+        logger.warning("enrichment budget %ss exceeded: %d item(s) kept original summary: %s",
+                       _ENRICH_BUDGET_S, len(unfinished),
+                       ", ".join(it.url for it in unfinished[:5]))
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
+    # preserve original order; anything not finished falls back to the original item
+    return [result.get(id(item), item) for item in items]
 
 
 # ── per-item enrichment ───────────────────────────────────────────────────────
@@ -205,7 +226,11 @@ def _read_capped(resp) -> str:
     """
     total = 0
     chunks: list[bytes] = []
+    deadline = time.monotonic() + _READ_DEADLINE_S
     for chunk in resp.iter_content(chunk_size=65536):
+        if time.monotonic() > deadline:
+            logger.debug("article read exceeded %ss, skipping: %s", _READ_DEADLINE_S, resp.url)
+            return ""
         if not chunk:
             continue
         total += len(chunk)

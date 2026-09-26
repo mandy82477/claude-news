@@ -325,7 +325,11 @@ def main() -> None:
         deduped = [it for it in deduped if it.published is None or it.published < until_dt]
         logger.info("Clipped to %s window: %d → %d items", args.date, before_clip, len(deduped))
 
-    enriched = enrich(deduped)
+    try:
+        enriched = enrich(deduped)
+    except Exception:  # enrichment 是加值步驟，任何例外都不得讓抓料整批失敗
+        logger.exception("Enrichment crashed; continuing with un-enriched items")
+        enriched = deduped
     logger.info("Enrichment done: %d items", len(enriched))
 
     filtered = filter_relevant(enriched)
