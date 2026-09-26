@@ -259,11 +259,11 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5l. 模型頁世代表複查（主編親做）
 
-對 `wiki/entities/fable-5.md` 與 `wiki/entities/opus-5.md` 的結論表各跑一次（判準見 `.claude/reporter-rules/models/pages.md`「模型頁兩代對照表」與「entities/opus-5 的兩張表」）：① 兩頁 `## 你現在拿到的是什麼` 表上「資料截至」距今逾 60 天 → WebFetch 官方模型總覽頁重查七列並更新查證日；② fable-5 `## 護欄會怎麼改寫你的請求` 四類是否仍為官方公布的四類；③ opus-5 `## 這些數字是誰量的` 的官方基準是否仍為官方在引用的那幾項，社群側是否首次出現帶測試方法與數字的獨立複測（有則同批改寫導言那句承諾）；④ 兩頁 `## 熱度與試用價值` 對 feature-radar 全覽表對應世代那一列，不一致以 radar 為準覆寫。
+對 `wiki/entities/fable-5.md` 與 `wiki/entities/opus-5.md` 的結論表各跑一次（判準見 `.claude/reporter-rules/models/pages.md`「模型頁兩代對照表」與「entities/opus-5 的兩張表」）：① 兩頁 `## 你現在拿到的是什麼` 表上「資料截至」距今逾 60 天 → WebFetch 官方模型總覽頁重查七列並更新查證日；② fable-5 `## 護欄會怎麼改寫你的請求` 四類是否仍為官方公布的四類；③ opus-5 `## 這些數字是誰量的` 的官方基準是否仍為官方在引用的那幾項，社群側是否首次出現帶測試方法與數字的獨立複測（有則同批改寫導言那句承諾）；④ 兩頁 `## 熱度與試用價值` 對 feature-radar 全覽表對應世代那一列，不一致以 radar 為準覆寫；⑤ 所有 `status_main: active` 且非 Legacy 的模型頁 `## 跟它怎麼說話`（判準見同檔「各現行模型頁共用」節）：缺節或留著「待主編查證」行 → WebFetch 官方 migration guide 對應模型的 prompting 節補寫；查證日距今逾 90 天 → 重查並更新查證日。
 
 **回報格式：**
 ```
-模型頁世代表（5l）：fable-5 資料截至 YYYY-MM-DD（重查 N 列）／護欄四類 一致 or 變動 M 項；opus-5 資料截至 YYYY-MM-DD（重查 N 列）／官方基準 一致 or 變動 K 項／社群獨立複測 無 or 已出現；熱度表 一致 or 已覆寫
+模型頁世代表（5l）：fable-5 資料截至 YYYY-MM-DD（重查 N 列）／護欄四類 一致 or 變動 M 項；opus-5 資料截至 YYYY-MM-DD（重查 N 列）／官方基準 一致 or 變動 K 項／社群獨立複測 無 or 已出現；熱度表 一致 or 已覆寫；跟它怎麼說話 N 頁齊全／補寫 M 頁／重查 K 頁
 ```
 
 ---
