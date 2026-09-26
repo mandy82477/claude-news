@@ -17,6 +17,40 @@ from archive_gathered import archive, prune  # noqa: E402
 
 
 class TestArchive(unittest.TestCase):
+    def _setup(self, d, stamp="2026-09-26", with_digest=True, with_existing=True):
+        src = Path(d) / "gathered_items.json"
+        src.write_text(json.dumps({"date": stamp, "items": ["late-1"]}), encoding="utf-8")
+        out = Path(d) / "archive"; out.mkdir()
+        news = Path(d) / "news"; news.mkdir()
+        if with_existing:
+            (out / f"{stamp}.json").write_text(json.dumps({"date": stamp, "items": ["morning-1", "morning-2"]}),
+                                               encoding="utf-8")
+        if with_digest:
+            (news / f"{stamp}.md").write_text("# digest", encoding="utf-8")
+        return src, out, news
+
+    def test_same_day_regather_after_digest_does_not_overwrite(self):
+        """日報已產出、副本已存在：同日較晚的抓料不得覆寫——副本是那天分類帳的原料，
+        覆寫後 check_classification_log 對該日永遠對不上（2026-09-26 本機提早跑完、
+        GitHub Actions 10:23 UTC 再抓即此情境）。"""
+        with TemporaryDirectory() as d:
+            src, out, news = self._setup(d)
+            self.assertIsNone(archive(src, out, news))
+            kept = json.loads((out / "2026-09-26.json").read_text(encoding="utf-8"))["items"]
+            self.assertEqual(kept, ["morning-1", "morning-2"])
+
+    def test_digest_exists_but_no_copy_yet_still_archives(self):
+        with TemporaryDirectory() as d:
+            src, out, news = self._setup(d, with_existing=False)
+            self.assertIsNotNone(archive(src, out, news))
+
+    def test_no_digest_yet_overwrites_as_before(self):
+        """日報還沒產出時，後一次抓料就是更完整的原料，照舊覆寫。"""
+        with TemporaryDirectory() as d:
+            src, out, news = self._setup(d, with_digest=False)
+            self.assertIsNotNone(archive(src, out, news))
+            self.assertEqual(json.loads((out / "2026-09-26.json").read_text(encoding="utf-8"))["items"], ["late-1"])
+
     def test_archives_under_the_date_inside_the_file(self):
         """檔名取檔案內的 date 欄位，不取系統當下日期——backfill 產生的原料才會
         歸檔到它真正對應的那一天。"""

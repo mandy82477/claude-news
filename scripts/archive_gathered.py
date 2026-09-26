@@ -30,6 +30,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GATHERED = REPO_ROOT / "src" / "gathered_items.json"
 ARCHIVE_DIR = REPO_ROOT / "src" / "gathered_archive"
+NEWS_DIR = REPO_ROOT / "news"
 RETENTION_DAYS = 14
 
 
@@ -52,7 +53,8 @@ def prune(archive_dir: Path = ARCHIVE_DIR, today: date | None = None) -> list[st
     return removed
 
 
-def archive(gathered: Path = GATHERED, archive_dir: Path = ARCHIVE_DIR) -> Path | None:
+def archive(gathered: Path = GATHERED, archive_dir: Path = ARCHIVE_DIR,
+            news_dir: Path = NEWS_DIR) -> Path | None:
     if not gathered.exists():
         print(f"跳過歸檔：{gathered} 不存在")
         return None
@@ -64,6 +66,15 @@ def archive(gathered: Path = GATHERED, archive_dir: Path = ARCHIVE_DIR) -> Path 
         return None
     archive_dir.mkdir(parents=True, exist_ok=True)
     target = archive_dir / f"{stamp}.json"
+    # 當天日報已產出、副本也已存在時，不覆寫：副本是「那天日報與分類帳的原料」，
+    # 之後同日再抓（本機提早跑完後 GitHub Actions 10:23 UTC 再跑、或 watchdog 重跑）
+    # 拿到的是不同視窗、已去掉 emitted-cache 的另一批條目，覆寫會讓
+    # data/classification-log.jsonl 對該日永遠對不上帳（check_classification_log 紅）。
+    # 這批較晚的條目沒進 emitted-cache，會在次日的抓料視窗再被看見，不會遺失。
+    if target.exists() and (news_dir / f"{stamp}.md").exists():
+        print(f"跳過歸檔：{target.relative_to(target.parent.parent)} 已存在且 news/{stamp}.md 已產出，"
+              "不以同日較晚的抓料覆寫日報原料")
+        return None
     shutil.copyfile(gathered, target)
     return target
 
