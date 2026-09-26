@@ -12,8 +12,8 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 4
-attribution_count: 12
+inbound_links: 6
+attribution_count: 13
 attribution_last: "2026-09-26"
 top_source: "google-news"
 pending_count: 0

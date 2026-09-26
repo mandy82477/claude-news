@@ -404,13 +404,7 @@
     }
   ],
   "preview": "Claude Code：新增已知問題：功能請求「串接 Claude.ai Projects 知識庫」（#2511，51 留言、642 讚，本日反應數最高）。",
-  "sedimentedToday": [
-    {
-      "id": "community-tech-tools",
-      "name": "社群工具目錄",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-22",
     "summary": "",

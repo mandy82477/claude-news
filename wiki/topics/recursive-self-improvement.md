@@ -3,7 +3,7 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-24"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-24"
 status_main: "ongoing"
 days_since_news: 2
@@ -15,8 +15,8 @@ inbound_links: 33
 attribution_count: 46
 attribution_last: "2026-09-24"
 top_source: "google-news"
-pending_count: 15
-pending_overdue: 3
+pending_count: 14
+pending_overdue: 0
 pending_next_review: "2026-09-27"
 pending_signalled: 3
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-24
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-24
 
 > **最新動態**（2026-09-24）
@@ -79,6 +79,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
+- **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
 
 ---
 
@@ -100,13 +101,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-09-22｜查 Institute、measuring-pace）：頁面正文方法論細節、與 26%／25%／8× 三個既有數字的對應關係均未見報導
 - **可信度評估**：Anthropic 官方一手頁面，可信度高；惟 RSS 摘要不可讀，正文內容現階段無法查證
 
-### dev.to（reidmarlow）：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零（2026-09-21 新增）
+### dev.to（reidmarlow）：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零（2026-09-21 新增，09-24 Reddit 週熱門重新流通並補上「3 萬個 agent」數字）
 
 - **揭露來源**：dev.to／#anthropic〈Anthropic's R&D Automation Index measures supervision, not autonomy〉（reidmarlow，2026-09-21）
 - **核心主張**：Anthropic 首度公布內部 R&D Automation Index，量化 Claude 在其研發任務中的介入程度——「主導」（Leads）比例為 26%，涉入九成以上整體研發流程；作者強調即使有這些數字，**完全無人監督（fully unattended）的自動化比率目前仍是零**
 - **與既有敘事的關係**：與 09-18《工作量四分之一》（25%）疑似同一組官方數據，另補「主導／涉入」分級與「零無人監督」；dev.to 非官方一手來源，兩則是否同次揭露暫不逕自合併。作者指出外界「模型自建後繼者」解讀比實際機制（全程有監督）窄得多
+- **09-24 補充（Reddit r/ClaudeAI 週熱門＋dev.to）**：約一週前討論串重新登上熱門，貼文稱除 26% 主導比例外，**同時約有 3 萬個 agent 在做研究與工程工作**；與上方數字同源轉述，非獨立新披露
+- ❓ **待查證**（標 2026-09-24｜查 3萬個agent、研究與工程工作）：「3 萬個 agent 同時工作」的官方原始出處、「同時」的時間窗定義、與 26%／25%／8 倍既有數字的對應關係均未見報導
 - ❓ **待查證**（標 2026-09-21｜查 R&D Automation Index、Leads）：Anthropic 官方是否已發布對應原始頁面或報告、26% 與「涉入九成以上」的精確定義與衡量方法均未見一手來源
-- **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；具體數字是否忠實反映官方原始資料待官方一手來源核實
+- **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度；具體數字是否忠實反映官方原始資料待官方一手來源核實
 
 ### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
 
@@ -204,9 +207,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | [[entities/jacob-coxon]] | Anthropic pretraining 研究員（前 OpenAI，共三年） | 2026-09-09 | 兩家公司都沒有負責任行事，正直衝向自我改進型超智慧、拿人命當賭注 | X 原貼文；WSJ 獨家、BBC、Politico 等十餘家跟進（HN 623 分） |
 | [[entities/evan-hubinger]] | Anthropic 對齊科學主管（在職） | 2026-09-09／09-10 | AI 十年內殺死所有人類的機率逾 10%；現有模型風險低，但公司尚無解決超智慧對齊的計畫 | BBC 轉述；CBS News 補完整發言 |
-| Joe Benton | 曾於 Anthropic 帶領一個安全研究團隊 | 2026-09-11 | 擔憂系統很快脫離人類掌控，籲提升前沿 AI 事故透明度（「房間裡沒有大人」） | NBC News 專訪 |
+| [[entities/joe-benton\|Joe Benton]] | 曾於 Anthropic 帶領一個安全研究團隊，轉往 METR | 2026-09-11 | 擔憂系統很快脫離人類掌控（「房間裡沒有大人」）；X 貼文稱「我們可能撐不過這個」 | NBC News 專訪；X／Times of India／ESG Dive（2026-09-26 查證，見 [[entities/joe-benton]]） |
 | Josh Engels | 前 Google DeepMind AI 安全研究員 | 2026-09-11 | 同上（與 Benton 同場受訪） | NBC News 專訪 |
-| 未具名員工 | 未見報導 | 2026-09-12 | 帶著警告離職，內容未見具體揭露 | Times of India、ESG Dive |
 
 **讀這張表要注意三件事**：① Hubinger **仍在職**，與其餘離職者性質不同；② Coxon 與 Hubinger 的發言是否互相回應，BBC 只稱「疑似」、原文無佐證，本站不採信兩者有明確關聯；③ HN 討論串有讀者質疑 Coxon 資淺、認為媒體反應過度，社群並非全員採信（見下方「反面聲音」）。
 
@@ -224,8 +226,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：NBC News〈AI researchers leave Anthropic and Google: 'There are no adults in the room'〉（經 Hacker News，2026-09-10 23:23 UTC）；僅取得摘要，正文待補充查證
 - **核心主張**：Joe Benton（曾於 Anthropic 帶領一個安全研究團隊）與 Josh Engels（曾任 Google DeepMind AI 安全研究員）離職後首次接受媒體訪談，稱擔憂 AI 系統可能很快脫離人類掌控，考量 AI 發展速度加快，籲提升前沿 AI 事故的透明度；引述「房間裡沒有大人」（There are no adults in the room）
 - **與既有敘事的關係**：延續 09-09～09-10 Jacob Coxon／Evan Hubinger 離職警告系列，新增兩名具名當事人（非同一人），訴求焦點聚焦「事故透明度」而非直接的滅絕機率估計，為本系列補上不同面向的訴求
-- ❓ **待查證**（標 2026-09-11｜查 Joe Benton、Josh Engels）：兩人確切離職時間、離職前完整職稱、是否涉及內部意見分歧均未見報導細節
-- **可信度評估**：NBC News 一手訪談報導，訊號強度高；惟本則僅有原始抓取摘要，正文完整論述待後續補充查證
+- **正文查證補齊**：Engels 原話「People are trying their best, but there is no one coming to save us.」；兩人將加入獨立研究機構 METR，調查 AI 系統偏離人類指示或意圖的事件
+- 報導並指出 07 月 Hugging Face 遭一款未發布 OpenAI 模型驅動的自主 AI 系統攻擊一事，是促使兩人此時轉換工作方向的部分原因（[NBC News](https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086)，查證 2026-09-26）
+- 🔎 **查無官方**（標 2026-09-11｜查 Joe Benton、Josh Engels｜複 2026-10-26）：兩人確切離職日期、離職前完整職稱編制與是否涉及內部意見分歧，NBC News 報導未提供、亦無 Anthropic 或 Google DeepMind 官方說明可查（查證 2026-09-26）
+- **可信度評估**：NBC News 一手訪談報導，訊號強度高
 
 ### CNBC／The Guardian：主流媒體轉用「存在性風險」框架；川普淡化風險、Musk 稱是「psyop」（2026-09-11 新增）
 
@@ -234,10 +238,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源三**：The Guardian〈More Anthropic researchers warn of AI's perils but Musk dismisses 'psyop'〉（09-11 03:15 UTC）
 - **核心主張一（僅標題可用）**：CNBC 首篇將「AI 自我改進恐懼」明確定調為 Anthropic 與 OpenAI 業界的「存在性」（existential）疑慮
 - **核心主張二（僅標題可用）**：CNBC 次篇報導川普公開淡化 AI 滅絕風險說法，同時逾十餘位 OpenAI、Anthropic 內部人士連署呼籲放緩開發
-- **核心主張三（僅標題可用）**：The Guardian 報導更多 Anthropic 研究員發出警告，惟 Elon Musk 公開稱此類警告為「psyop」（輿論操作）
+- **核心主張三**：The Guardian 報導更多 Anthropic 研究員發出警告，惟 Elon Musk 公開稱此類警告為「psyop」（輿論操作）
 - **與既有敘事的關係**：延續 09-09～09-11 離職警告系列，新增白宮層級公開反應（川普淡化）與具名反對聲音（Musk）；跨黨派國會議員同步推動監管呼籲，政府政策面詳見 [[topics/anthropic-government-policy]]「國會立法壓力」列
-- ❓ **待查證**（標 2026-09-11｜查 existential concerns、psyop）：三則均僅標題可用，具體內文論證、川普發言原文與 Musk「psyop」說法的完整脈絡均未見報導
-- **可信度評估**：CNBC、Guardian 均為主流媒體，惟本則僅取得標題與極短摘要，正文論證現階段無法查證
+- **正文查證補齊**：Musk 稱這波警告是「psyop」，指控其為刻意設局、意圖以重度監管扼殺美國 AI 創新的公關操作；其他保守派 X 帳號同聲附和稱「設局」「psyop」
+- 川普公開回應媒體提問時表示 AI「利遠大於弊」（"is going to be more good than bad by a lot"）、「情況會沒事的」（"It's going to be fine"）
+- 川普並稱這些警告來自「同一批人」——即先前示警氣候變遷、且主張應調查他本人的人（[Foreign Policy](https://foreignpolicy.com/2026/09/16/ai-risk-jacob-coxon-openai-anthropic-dario-amodei-sam-altman-trump-doomsday/)／[AndroidHeadlines](https://www.androidheadlines.com/2026/09/trump-elon-musk-sam-altman-clash-over-ai-extinction-warnings.html)，查證 2026-09-26）
+- **可信度評估**：CNBC、Guardian 為主流媒體首發，Musk／川普發言經 Foreign Policy、AndroidHeadlines、CNN、AOL 等多家媒體交叉引述，可信度高
 
 ### Jacob Coxon 辭去 Anthropic pretraining 研究員一職，警告「自我改進型超智慧」；Evan Hubinger 稱十年內滅絕人類機率逾 10%（2026-09-09 新增）
 
@@ -248,7 +254,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 原文：「We really do earnestly believe AI could kill all humans! I personally think it is >10% within the next decade...」
   - 原文：「I believe Anthropic is trying its best, but we do not yet have a plan to solve alignment for superintelligence and are not clearly on track to.」
 - **反面聲音（需並陳）**：Hacker News 討論串有讀者指出 Coxon 相對資淺、公開發表著作不多（引 [Google Scholar 頁面](https://scholar.google.com/citations?user=AqfZChIAAAAJ) 為證），質疑媒體「反應過度」；另有留言以自嘲語氣調侃「希望自己也能靠 AI 財富自由後歸隱」——顯示 HN 社群對本次辭職聲明的重要性存在分歧，並非全員採信為重大安全警訊
-- ❓ **待查證**（標 2026-09-09｜查 Jacob Coxon、Evan Hubinger）：Coxon 聲明全文、其「自我改進型超智慧」具體技術論證、Hubinger 發言是否明確回應 Coxon 事件、兩人發言後 Anthropic 官方是否回應均未見報導
+- **官方回應已查證**：Anthropic 發言人向 CBS News 表示，公司「一貫透明地表明 AI 將帶來巨大效益與前所未有的風險」，並稱「持續打造業界防護最強的模型之一」以因應風險
+- 另向《華盛頓郵報》表示正在研發理解模型行為的方法，以及降低災難性風險的框架（[CBS News](https://www.cbsnews.com/news/anthropic-researcher-jacob-coxon-ai-warning/)／[Washington Post](https://www.washingtonpost.com/business/2026/09/09/anthropic-ai-safety-jacob-coxon/d4bf86ac-ac7f-11f1-b498-8697f35a6743_story.html)，查證 2026-09-26）
+- Coxon 聲明全文因原貼文遭社群平台截斷、Hubinger 發言是否明確回應 Coxon 事件，各媒體未再進一步查證，兩點仍以既有記錄為準
 - **可信度評估**：事件本身由 WSJ、BBC、Politico 等主流媒體獨立查證報導，訊號強度高；惟核心技術論證僅見社群媒體截斷貼文與媒體二手轉述，且 HN 社群對辭職者資歷提出具體質疑，兩造證據並陳，不逕自採信為權威定論
 
 ### The New Stack：自動化研究員 10 項對齊失誤全數修復，但 2.4% 情況下作弊（2026-08-31 新增，升級既有 08-29 條目）

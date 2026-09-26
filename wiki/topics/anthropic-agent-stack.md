@@ -44,6 +44,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 官方 agent 積木在 2026 年中補上編排這一塊：dynamic workflows 讓計畫從 Claude 的逐回合判斷變成一支可存檔重跑的 script——先前分身之間只能互傳純文字、訊息不帶依賴語意，排不出誰先誰後。本頁把八塊積木一塊一塊拆開，每塊答「為什麼有它、讓你多做出什麼、還做不到什麼」；八塊怎麼疊、怎麼挑各有一節，原本的五種形態速查表與六層架構收在頁尾附錄。想知道「我現在在開發流程的哪一步、該下哪個」，那是流程視角，見 [[topics/coding-workflow-guide]]；Managed Agents 這個平台產品本身的現況、計費算式與零件成熟度在子頁 [[entities/managed-agents]]。
 
+社群這幾年自己長出來的做法收斂成九個方向，跟這八塊積木一塊一塊對得上——官方補了哪一塊、哪一塊還是只有社群解，見 [[topics/community-pattern-trends]]。
+
 ---
 
 ## 八個積木：為什麼出、讓你多做出什麼

@@ -12,12 +12,12 @@ parent: null
 children: "['entities/claude-code-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 109
-attribution_count: 591
+inbound_links: 108
+attribution_count: 592
 attribution_last: "2026-09-26"
 top_source: "github-issues"
-pending_count: 22
-pending_overdue: 1
+pending_count: 23
+pending_overdue: 0
 pending_next_review: "2026-09-29"
 pending_signalled: 1
 staleness_exempt: null
@@ -76,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 原文於「記憶預設對部分方案開啟」處截斷，適用範圍未完整取得；八家媒體同步報導（TechCrunch、Silicon ANGLE、CNET、Engadget、SD Times、The Register、Techzine、ZDNET）。
 - **Skill／外掛安全掃描（beta）**（Help Center release notes，2026-08-06 標註日期）：Enterprise 方案的第三方 Skill 或外掛在上傳、編輯時自動檢查是否含惡意內容，屬背景自動掃描，無使用者端可執行操作。
 - **Inference Hooks**（Claude API Release Notes，2026-08-05）：進入 Enterprise 組織 beta，可將 claude.ai、Cowork、Claude Code 上每一次受管治 prompt 導向企業自身的 AI 安全伺服器。
-- **Claude iOS App 新增用量按鈕與 Claude Code 設定區塊**（Google News／Pasquale Pillitteri，2026-09-08 報導，僅標題可用）：報導指出 iOS App 介面新增用量顯示按鈕，並新增獨立的 Claude Code 設定區塊；RSS 未提供正文，具體涵蓋範圍待查證。
+- 🔎 **查無官方**（標 2026-09-08｜查 iOS App、設定區塊｜複 2026-10-26）｜**iOS App 新增用量按鈕、Claude Code 設定區塊**（Pasquale Pillitteri，09-08，僅標題）：`support.claude.com`／`code.claude.com` 週更與 changelog 均未見此項，查證 2026-09-26，僅媒體轉述。
 - **雲端 session 底層架構**（Hacker News，58 分，2026-09-08）：技術部落格指出 Claude Code 雲端 session 各自跑在獨立 Firecracker microVM，開機直接進入 Rust 撰寫的自訂 init（`process_api` 為 PID 1，非 systemd）（[原文](https://rohanadwankar.github.io/posts/platforms.html)）。
 
 **近期報導（尚待官方佐證）：**
@@ -196,7 +196,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 34 則留言、30 個讚，2026-09-25）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
-- ❓ **待查證**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-09-25）｜**`/goal` 於複雜多 issue 工作流疑似有 context rot 缺陷（Nightshift 作者具名指出，HN Show HN，2026-09-10）**：未附測試方法或數字，屬單一開發者為自製工具辯護的設計說明，非驗證缺陷回報。
+- 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CJK 輸入法確認輸入時 Enter 鍵常誤觸發送出訊息（GitHub issue #2054，累積 34 則留言、187 個讚，長年未解）**：籲提供 Enter 僅換行不送出的選項；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**德文變音符號（ä、ö、ü）在輸出中隨機被替換為 ASCII 拼寫，如 ä→ae（GitHub issue #14131，累積 41 則留言、24 個讚）**：使用者回報 Claude Code 輸出中德文變音符號會不定期被替換為對應的 ASCII 拼寫；官方尚未回應。

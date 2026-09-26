@@ -3,19 +3,19 @@ page: "topics/community-tech-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-22"
-last_news_update: "2026-09-22"
+last_updated: "2026-09-26"
+last_news_update: "2026-09-26"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
-inbound_links: 45
-attribution_count: 4
-attribution_last: "2026-09-16"
-top_source: "user-query"
+days_since_news_subtree: 0
+inbound_links: 47
+attribution_count: 15
+attribution_last: "2026-09-26"
+top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-22
-**最後新聞更新：** 2026-09-22
+**最後更新：** 2026-09-26
+**最後新聞更新：** 2026-09-26
 
-> **三個首選工具改了名，舊連結靠轉址活著**（2026-09-22）
-> 多 agent 互踩那列的 Harness 已改名 ness、監看那列的 Omar 換了網域與 repo、GUI 主控台 Cockpit 改叫 episko——照舊名搜尋會找不到，連結全部換成現在的位址。決策表同時新增「額度快用完，想在斷線前被提醒」一列。
+> **目錄新增 11 個工具、拿掉 15 個長期沒動靜的舊工具**（2026-09-26）
+> 新增涵蓋 09-20～09-25 新出現的 agent 意圖衝突偵測（foremerge）、多 agent TUI 框架（FrontierAgent）等；拿掉的 15 個都不是任何症狀的首選或次選，長期查無後續動態。決策表首選未變動。
 
 ---
 
@@ -151,10 +151,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 類型 | 採用 | 首次出現 | 簡介 |
 | --- | --- | --- | --- | --- |
+| [**ComposioHQ/awesome-claude-skills**](https://github.com/ComposioHQ/awesome-claude-skills) | Skills | ⏳ | 2026-09-25 | Claude Skills 精選資源與工具清單；75,625 星，2025-10 出生 |
+| [**mattpocock/skills**](https://github.com/mattpocock/skills) | Skills | ⏳ | 2026-09-25 | 作者整理自己 `.agents` 目錄下的 skills 集合；269,509 星（2026-02 出生），增速異常，僅星數佐證，forks／issues 未查 |
+| [**Ryze-AI-Adgent/open-seo-mcp-skills**](https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills) | 領域資料 | ⏳ | 2026-09-24 | 免費 SEO MCP 伺服器與開源 SEO／GEO Claude skills，可用真實 GSC／GA4／廣告數據做關鍵字研究、排名追蹤；1,449 星 |
+| [**bangtutorial/bang-motion**](https://github.com/bangtutorial/bang-motion) | 其他 | ⏳ | 2026-09-24 | 瀏覽器動態圖形 agent skill，產出片頭／宣傳片／動態字卡等五種解說風格，單一 index.html 輸出，相容 Claude Code／Codex／Gemini CLI／Cursor；509 星 |
+| [**Callous-0923/agent-study**](https://github.com/Callous-0923/agent-study) | 其他 | ⏳ | 2026-09-24 | 36 章 AI Agent 全端課程，涵蓋 ReAct 迴圈、Claude Code 逆向、MCP／A2A 協議、RAG、DSPy；500 星 |
+| [**ApodexAI/FrontierAgent**](https://github.com/ApodexAI/FrontierAgent) | 多 Agent | ⏳ | 2026-09-23 | 原生命令列 TUI agent 框架，支援 ReAct 與 Agent Team 模式，一行指令安裝；4,515 星，近 8 天漲 1,403 |
+| [**naw103/foremerge**](https://github.com/naw103/foremerge) | 多 Agent | ⏳ | 2026-09-22 | 疊在 git 之上的協調層，讓多個並行 coding agent 動手前先發布意圖，攔截架構層級的意圖衝突；Show HN，2 個獨立來源同日報導 |
 | [**jens-duttke/usage-monitor-for-claude**](https://github.com/jens-duttke/usage-monitor-for-claude) | 費用監測 | ⏳ | 2026-09-22 | Windows 工作列常駐的額度監看器，可自己設到幾 % 就跳提醒；293 星、53 forks、09-13 仍在更新（查證日 2026-09-22，來自讀者提問） |
 | [**Maciek-roboblog/Claude-Code-Usage-Monitor**](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) | 費用監測 | ⏳ | 2026-09-22 | 跨平台額度監看與用盡時間預測，額度將滿時出警告；8,713 星，2026-07-05 後未更新（查證日 2026-09-22，來自讀者提問） |
 | [**wavever/CCLimitPing**](https://github.com/wavever/CCLimitPing) | 費用監測 | ⏳ | 2026-09-22 | 5 小時限制解除的瞬間自動送出 continue，省掉盯盤等待；45 星、09-14 仍在更新（查證日 2026-09-22，來自讀者提問） |
 | [**bozdemir/claude-usage-widget**](https://github.com/bozdemir/claude-usage-widget) | 費用監測 | ⏳ | 2026-09-22 | 跨平台額度小工具，接近上限時跳提醒；53 星、09-21 仍在更新（查證日 2026-09-22，來自讀者提問） |
+| [**docsagent/docsagent**](https://github.com/docsagent/docsagent) | 整合工具 | ⏳ | 2026-09-21 | MCP 伺服器讓 agent 即時、私有存取個人知識庫（先支援 Zotero），原生 C++ 搜尋核心（BM25＋段落排序，約 15ms）；616 星 |
+| [**michael-denyer/pstack-claude**](https://github.com/michael-denyer/pstack-claude) | 整合工具 | ⏳ | 2026-09-20 | 把 Cursor 的 agent workflow 基礎架構移植給 Claude Code、Codex、opencode 使用；504 星 |
+| [**CodeZeno/Claude-Code-Usage-Monitor**](https://github.com/CodeZeno/Claude-Code-Usage-Monitor) | 費用監測 | ⏳ | 2026-09-20 | Windows 工作列小工具，追蹤 Claude Code、Codex、Cursor 等工具的用量上限與重置時間；500 星（與同名的 Maciek-roboblog 版本非同一專案） |
+| [**aoci-spec/aoci-code**](https://github.com/aoci-spec/aoci-code) | 記憶工具 | ⏳ | 2026-09-20 | 把整個程式庫與資料庫結構做成持久化、Git 版控的索引，供編碼 agent 動手前先讀取；446 星 |
 | [**snyk/agent-scan**](https://github.com/snyk/agent-scan) | 安全工具 | ⏳ | 2026-09-18 | Snyk 出品，掃描 AI agent、MCP 伺服器與 agent skills 的資安工具；3,060 星，2025-04 出生 |
 | [**browserbase/stagehand**](https://github.com/browserbase/stagehand) | 整合工具 | ⏳ | 2026-09-17 | 網頁資料擷取與互動 SDK，可搭配 Claude Code／Codex／Eve／Mastra 使用；24,318 星，2024-03 出生 |
 | [**Nanako0129/sepia**](https://github.com/Nanako0129/sepia) | Skills | ⏳ | 2026-09-16 | 去 AI 化寫作風格修正 skill，相容 77 種以上 Agent Skills 相容 agent，含 Claude Code／Codex；2,640 星 |
@@ -202,16 +213,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**obra/superpowers**](https://github.com/obra/superpowers) | Skills | ⏳ | 2026-08-28 | Agentic skills 框架與軟體開發方法論；累計 27.9 萬星（08-28），2025-10 出生；只有星數佐證，forks／issues 未查，但 Reddit 上已見使用者抱怨，間接說明真有人在用 |
 | [**tare**](https://github.com/kelviq/tare) | 費用監測 | ⏳ | 2026-08-27 | CLI 底部即時顯示 usage/context/model 狀態並配合 hook 監測用量暴增；Show HN score 84 |
 | [**opslane**](https://github.com/opslane/opslane) | 工作流 | ⏳ | 2026-08-27 | 監看 user session 找出真實影響使用者的 bug，僅在能驗證修復後才開 PR；Show HN score 34 |
-| [**rsmdt/the-startup**](https://github.com/rsmdt/the-startup) | 工作流 | ⏳ | 2026-08-25 | 「The Agentic Startup」風格 Claude Code commands／skills／agents 集合；507 星 |
 | [**mindmuxai/brain.md**](https://github.com/mindmuxai/brain.md) | 記憶工具 | ⏳ | 2026-08-25 | 零依賴、檔案式跨 session 持久記憶層，為 coding agent 保存決策／需求／限制的「專案大腦」；504 星 |
-| [**ambient-context**](https://github.com/dragthelake/ambient-context) | 記憶工具 | ⏳ | 2026-08-25 | macOS 選單列 app，透過 Accessibility API 讀取焦點視窗文字寫成逐日 Markdown，供 Claude Code 查詢近況；Show HN score 51，多家報導 |
-| [**l3a0/claude-plugins**](https://github.com/l3a0/claude-plugins) | 其他 | ⏳ | 2026-08-24 | Claude Code Skill 用 OCR 從 Kindle Cloud Reader 復原被限制匯出的畫線筆記；HN score 45 |
 | [**OzBrain**](https://ozbrain.com) | 記憶工具 | ⏳ | 2026-08-21 | agent 與團隊共享的知識庫，取代傳統筆記/任務管理工具；Show HN score 69，多家報導 |
 | [**Proliferate**](https://github.com/proliferate-ai/proliferate) | 多 Agent | ⏳ | 2026-08-21 | YC S25，開源自架 AI IDE，統一操作 Claude Code／Codex／OpenCode／Cursor／Grok；Show HN score 39，多家報導 |
 | [**Frugal Tokens**](https://github.com/dpclark4/frugal-tokens) | 費用監測 | ⏳ | 2026-08-19 | 探索跨 coding agent（含 Claude Code）的成本與用量，含 cache miss 對花費的影響；Show HN score 33，多家報導 |
 | [**Graft**](https://github.com/trailhq/Graft) | 費用監測 | ⚠️ | 2026-08-15 | Claude Code hooks 削減 grep 輸出 token，宣稱降幅 42%（HN 39，跨 2 來源）；HN 討論串質疑 README 的 benchmark 段落疑似 AI 代寫，數字未經第三方覆核 |
-| [**devspace**](https://github.com/Waishnav/devspace) | 整合工具 | ⏳ | 2026-08-11 | 把 ChatGPT 網頁介面／Claude Web 轉換成類 Codex／Claude Code 的操作體驗；3,675 星，已查證非刷星（forks 10.9%） |
-| [**loopx**](https://github.com/huangruiteng/loopx) | 多 Agent | ⏳ | 2026-08-09 | 輕量級 loop 工程狀態核心，持久目標、配額感知自動喚醒、可執行待辦、證據紀錄與可驗證交接，agent-loop agnostic；4,476 星，已查證非刷星（forks 8.6%） |
 | [**HUD**](https://github.com/adrida/hud-mode) | IDE/終端 | ⏳ | 2026-08-07 | 開源極簡終端 UI，支援 Claude Code／Codex／OpenCode；經官方 JSON event stream 運作不額外耗 token；HN 25 |
 | [**omnigent**](https://github.com/omnigent-ai/omnigent) | 多 Agent | ⏳ | 2026-08-05 | harness 無關 meta-harness，換底層 agent（Claude Code／Codex／Cursor／Pi）不必重寫協作邏輯；2026-09-22 查得 10,150 星、forks 15.9% |
 | [**pxpipe**](https://github.com/teamchong/pxpipe) | 費用監測 | ⏳ | 2026-08-05 | 把文字 context 渲染成圖片降低 token 用量，實測約 25,000 text token 壓至 2,700 image token；6,955 星，已查證非刷星（forks 8.5%） |
@@ -242,24 +248,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**PrismoDev**](https://github.com/shanirsh/prismodev) | 搜尋/診斷 | ⚡ | 2026-05-20 | 掃描本地 session log，找出 context bloat 來源（過大 CLAUDE.md、重複 tool output、broad exploration），不需 API key、本地離線；Show HN |
 | [**mdviewer**](https://github.com/rajatarya/mdviewer) | 其他 | ⚡ | 2026-05-20 | 100% 由 AI coding agent 完成的原生 macOS Markdown 閱覽器，支援 Obsidian 延伸語法／Mermaid／數學公式，以 Tauri 2 打造無 Electron 依賴；Show HN |
 | [**cdesktop**](https://www.reddit.com/r/ClaudeAI/comments/1thlxrw/cdesktop_opensource_claude_code_desktop/) | 多 Agent | ⚡ | 2026-05-19 | 開源桌面應用，單一 UI 整合 Claude Code／Codex／Gemini CLI 等 5 個 coding agent，支援 20+ 第三方模型，`npx` 執行 |
-| [**AnyFrame**](https://anyfrm.com) | 安全工具 | ⚡ | 2026-05-18 | 為 Claude Code/Codex 提供微 VM 沙盒環境，一次定義 Agent 並快取映像檔，支援 Python SDK／Web 介面，可整合 Linear/Sentry MCP；Show HN |
 | [**agent-baton**](https://www.reddit.com/r/ClaudeAI/comments/1tgel55/) | 費用監測 | ⚡ | 2026-05-18 | 利用 Anthropic 使用量 API + Claude Code hook，在觸及速率上限前主動發出警告並轉移進行中的工作，解決 Claude Code 靜默中斷的長期痛點 |
 | [**LockedIn**](https://www.reddit.com/r/ClaudeAI/comments/1tg8yg6/) | 記憶工具 | ⚡ | 2026-05-18 | Claude Code 插件（1 路由技能 + 6 子技能），在 session 中持續記錄開發者工作脈絡，下次對話的 Claude 可直接繼承上次進度，無需重新說明背景 |
-| [**CostHawk 排行榜**](https://costhawk.ai/leaderboard) | 費用監測 | ⚡ | 2026-05-16 | 公開 token 消耗排行榜，比較 Claude Code / Codex / Cursor 用戶用量，不儲存 prompt |
-| [**Dragoman**](https://github.com/asakin/dragoman) | 多 Agent | ⚡ | 2026-05-13 | 多模型路由 CLI，依問題類型自動路由至 Perplexity/Gemini/Ollama，支援 4 模型並行 + Claude 彙整 |
-| [**Cocall.ai**](https://www.reddit.com/r/ClaudeAI/comments/1tbz13b/) | 整合工具 | ⚡ | 2026-05-13 | AI 代理撥打外線電話，遇不確定問題自動暫停詢問使用者再繼續，全雙工語音，支援 IVR 導航 |
 | [**Writ**](https://www.reddit.com/r/ClaudeAI/comments/1tb047p/) | 工作流 | ⚡ | 2026-05-12 | Neo4j 知識圖譜 5 階段 Pipeline 自動擷取相關規則集，解決 CLAUDE.md 被忽略 + 無關規則耗 token 雙重問題 |
-| [**ltm**](https://www.reddit.com/r/ClaudeAI/comments/1tb0nwk/) | 記憶工具 | ⚡ | 2026-05-12 | Core Memory Packet JSON 協定，跨編輯器 / 跨機器 / 跨模型的供應商中立 Agent 記憶 |
 | [**Usage4Claude 3.0.0**](https://www.reddit.com/r/ClaudeAI/comments/1tazqpg/) | 費用監測 | ✅ | 2026-05-12 | 開源 macOS 選單列用量追蹤，3.0.0 版新增 Codex 追蹤，憑證存 Keychain |
-| [**BrowserCode**](https://github.com/leaningtech/browsercode) | IDE/終端 | ⚡ | 2026-05-07 | WebAssembly 瀏覽器執行 Claude Code，支援行動裝置，讓 iPad、鎖定設備也能使用 CLI 功能 |
-| [**Claude Relay**](https://www.reddit.com/r/ClaudeAI/comments/1tb0nwk/) | 多 Agent | ⚡ | 2026-05-05 | 讓多個本地 Claude Code session 互相傳訊查詢，省去人工跨 session 複製貼上 |
-| [**Semble**](https://github.com/MinishLab/semble) | 搜尋/診斷 | ⚡ | 2026-05-04 | 專為 Claude Code 等 Agent 優化的程式碼搜尋工具，結合 Model2Vec 靜態嵌入 + BM25 融合檢索，宣稱比 grep 節省 98% token；Show HN 發布 |
 | **claudely** | 多 Agent | ⚡ | 2026-05-04 | 保留 Claude Code 生態的前提下切換至 Ollama/LM Studio/llama.cpp，無需改主配置；2026-09-22 查不到公開 repo 或產品頁 |
 | [**Omar**](https://github.com/omar-os/omar) | 多 Agent | ⚡ | 2026-05-02 | 統一管理多個 Claude Code agent 的編排工具；05-02 收錄時的說法是「TUI 儀表板管到 100 個 agent」，2026-09-22 查得網域改為 omar.rs、repo 48★，自述已改為形式化編排 |
 | [**graphify**](https://github.com/Graphify-Labs/graphify) | 記憶工具 | ✅ | 2026-05-02 | Leiden 偵測建程式碼知識圖譜，作者宣稱 71 倍 token 減少（05-02）；2026-09-22 查得 12.0 萬★、11,626 forks |
-| [**NanoBrain**](https://nanobrain.app/) | 記憶工具 | ⚡ | 2026-05-02 | git-backed Markdown 知識庫，< 50ms append，整合 Gmail/Calendar/Slack |
 | **Caliber** | 工作流 | ⚡ | 2026-05-02 | 跨工具 AI config 統一管理（CLAUDE.md/.cursor/rules/AGENTS.md）；05-02 記到 888 stars，2026-09-22 查不到公開 repo 或產品頁 |
-| [**Governor**](https://github.com/0xhimanshu/governor) | 費用監測 | ⚡ | 2026-05-02 | Token 浪費優化插件；已查證：V2 benchmark 同時量測 token 數與「決策正確度保留率」回應 HN 對基準粗糙的質疑，平均省 45.5% token（2026-08-13 查證） |
 | [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 多 Agent | ⚡ | 2026-04-29 | 多 Git worktree 並行管理多個 Claude Code agent；2026-09-22 查得已改名 ness、99★，自述改為「給 agent 用的 IDE」，README 仍寫可同時跑十個 Claude |
 | [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 工作流 | ⚡ | 2026-04-27 | Stop Hook，強制 Claude 提供可驗證執行證明才能宣告完成 |
 | [**Claude Squad**](https://www.reddit.com/r/ClaudeAI/comments/1svmpkv/) | 多 Agent | ✅ | 2026-04-26 | 多人多 agent 並行開發，orchestrator 分派任務並合併分支 |

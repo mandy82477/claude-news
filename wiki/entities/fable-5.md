@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-09-20"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-17"
 status_main: "active"
 days_since_news: 9
@@ -12,12 +12,12 @@ parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
 days_since_news_subtree: 9
-inbound_links: 57
+inbound_links: 56
 attribution_count: 37
 attribution_last: "2026-09-16"
 top_source: "google-news"
-pending_count: 2
-pending_overdue: 1
+pending_count: 1
+pending_overdue: 0
 pending_next_review: "2026-10-04"
 pending_signalled: 0
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-17
 
 > **最新進展**（2026-09-17）
@@ -79,20 +79,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 護欄會怎麼改寫你的請求
 
-送進去的請求若被前置安全分類器判為高風險，**你會收到通知**，該次請求改由 Opus 4.8 回答，不是安靜地把品質調低（官方 2026-06-30〈Redeploying Claude Fable 5〉：「Users will be notified if a request to Fable 5 is blocked」）。2026-06-09 發布時的「降級且不告知」已於 06-11 由官方道歉撤回。
+送進去的請求若被前置安全分類器判為高風險，**你會收到通知**（回覆上會標出實際作答的模型），不是安靜地把品質調低（官方 2026-06-30〈Redeploying Claude Fable 5〉：「Users will be notified if a request to Fable 5 is blocked」）。2026-06-09 發布時的「降級且不告知」已於 06-11 由官方道歉撤回。
 
-> 下表四個觸發類別是官方針對 **Fable 5** 公布的；Fable 5.1 是否原樣沿用，官方未明說——5.1 發布公告只稱「誤觸更少」，未逐項重申四類是否不變（查證 2026-09-07）。
+**接手的模型分兩路（2026-09-26 查證）**：資安類請求由 **Opus 4.8** 接手，生物、化學與生命科學類請求由 **Opus 5** 接手（官方說明中心〈Why Claude switched models in your conversation with Fable 5〉逐字載明 "the Opus 4.8 for offensive cybersecurity technique requests" 與 "currently Opus 5 for biology, chemistry, and life sciences requests"）。本頁此前只寫「一律改由 Opus 4.8」，已依官方更正。
+
+> 下表四個觸發類別**官方已明載同時適用 Fable 5 與 Fable 5.1**（同一份說明中心文件寫 "Distillation attacks on Fable 5 and Fable 5.1"，2026-09-26 查證）。此前本頁註記「5.1 是否原樣沿用官方未明說」（查證 2026-09-07）已由這份文件解消。
 
 | 會踩到的類別 | 具體是什麼 | 誰最容易誤觸 | 你能先做什麼 |
 |---|---|---|---|
 | 資安（cybersecurity）| 攻擊性資安任務 | **日常 coding 與 debugging 也會較常被誤標**（官方自己寫明的代價）| 看到通知就接受 Opus 4.8 的答案，或把安全審查拆成不觸發的小步驟 |
-| 生物與化學 | 高風險生物、化學請求 | 做相關研究的人 | 2026-08-07 官方更新分類器後生物領域誤判約降 85%，再遇到就換問法 |
+| 生物與化學 | 高風險生物、化學請求（官方現稱涵蓋生命科學）| 做相關研究的人 | 接手的是 Opus 5；2026-08-07 官方更新分類器後生物領域誤判約降 85%，再遇到就換問法 |
 | 模型萃取（distillation）| 取得權重或行為以訓練競品 | 想拿它的輸出訓練自己模型的人 | 沒有繞法 |
 | 窄範圍前沿 LLM 開發 | 分散式訓練基建、ML 加速器設計、非標準晶片的 kernel 開發 | 做這三類工程的人 | 沒有繞法，這類工作改用其他模型 |
 
 **表下細節**
 
-- **5.1 誤觸更少**：官方 2026-09-01 公告把「更少誤判」列為換代理由之一（媒體轉述，2026-09-07 查證）；資安領域是否同步改善，官方仍未逐項說明。
+- **5.1 誤觸更少，資安也已有數字**：官方 2026-09-01 公告把「更少誤判」列為換代理由之一（媒體轉述，2026-09-07 查證）；資安側官方另稱最新護欄的誤判量較前一版少 60%，生物側對基礎生物與醫療類的良性請求少觸發 85%（官方 2026-09-26 查證）。
 - **分類器刻意調得保守**：官方〈Improving Fable 5 Safeguards〉原文寫 deliberately tuned to be cautious，並稱 Amazon 通報的那項特定技術已擋下逾 99%。被擋的比例，官方在 2026-06-09 發布時稱不到 5% 的 session。
 - **這件事對你的產品做了什麼**（政府談判換來的承諾落到你手上長什麼樣）見 [[topics/anthropic-government-policy]]「政府動作對你的產品做了什麼」；那一節也寫出你的選項。
 - **機制沿革**：06-09 發布版對前沿 LLM 開發降級且不告知（System Card），06-11 官方道歉改為可見防護；07-02 隨解禁導入 Defense in Depth 分類器，首日即有合法資安審查被誤攔的公開案例。
@@ -196,7 +198,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **社群觀感：Fable 5.1 在 Claude Code 中回應速度明顯變快（單一來源，無量化數據）**：r/ClaudeCode 使用者發文描述 Fable 5.1 相較先前世代「回應速度明顯變快」，特別針對 scope/mechanism 類任務的完成速度；原文未附具體測試方法、延遲數字或版本對照基準，屬單一使用者主觀觀感，非量化評測（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wdgwnj/is_it_just_me_or_is_fable_51_in_claude_code/)，2026-09-11 13:51 UTC，單一來源、score 恆 0）。
 
 #### 2026-09-10
-❓ 待查證 ⟨Q-06⟩ **FedScoop：Fable 5.1 導入 Claude for Government**：標題稱 Anthropic 將 Fable 5.1 加入 Claude for Government 產品線，僅標題可用，是新增可用性、既有分層變更或單純服務更新未經證實；政府採購角度另見 [[topics/anthropic-business]]（Google News/FedScoop，2026-09-10）（詳見「懸置細節」）
+**Anthropic 公共部門負責人 Teresa Carlson 證實 Fable 5.1 已導入 FedRAMP High 認證的 Claude for Government**：於 Billington Cybersecurity Summit 表示需要 FedRAMP High 的政府機構均可使用；Claude for Government Desktop（含 Claude Code、Cowork）預計數週內轉為正式上線；政府採購角度另見 [[topics/anthropic-business]]（[FedScoop](https://fedscoop.com/anthropic-adds-fable-claude-for-government-carlson/)，2026-09-09；查證 2026-09-26）
 
 #### 2026-09-04
 **費馬最後定理形式化證明（官方 2026-09-07 查證：使用內部研究模型，非 Fable 5 或 5.1）**：
@@ -330,7 +332,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **懸置細節**
 
 - ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-10-04）：Fable 5（$10／$50）與 Opus 5（$5／$25）定價屬實，但 Anthropic 不比較競品定價，GPT-5.6 Sol 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）
-- ⟨Q-06⟩ ❓ **待查證**（標 2026-09-10｜查 FedScoop、Claude for Government｜複 2026-09-24）：FedScoop 標題稱 Anthropic 將 Fable 5.1 加入 Claude for Government，僅標題可用，具體變更內容（新分層／既有服務更新）未經證實（Google News/FedScoop，2026-09-10）
 
 ### 2026-06（發布與出口管制期）
 

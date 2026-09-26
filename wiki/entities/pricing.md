@@ -16,8 +16,8 @@ inbound_links: 159
 attribution_count: 112
 attribution_last: "2026-09-26"
 top_source: "google-news"
-pending_count: 4
-pending_overdue: 2
+pending_count: 3
+pending_overdue: 0
 pending_next_review: "2026-10-04"
 pending_signalled: 0
 staleness_exempt: null
@@ -172,7 +172,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 通路與乘數
 
-上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-09-03**（官方文件查證；本次新增 Fable 5.1／Mythos 5.1 的快取命中特例，其餘與 08-29 一致）。
+上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-09-26**（官方定價頁查證；本次補上 Opus 5.5 的快取命中特例 ×0.05 與 Fast mode $8／$40，通路五條與其餘乘數與 09-03 一致）。
 
 ### 通路：誰定價、怎麼開票
 
@@ -196,19 +196,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 乘數 | 倍率 | 套用範圍 | 觸發條件 |
 |------|------|---------|---------|
-| 快取命中 | ×0.1（Fable 5.1／Mythos 5.1 為 **×0.025**） | 讀取的 token | 命中既有快取 |
+| 快取命中 | ×0.1（Fable 5.1／Mythos 5.1 為 **×0.025**；Opus 5.5 為 **×0.05**） | 讀取的 token | 命中既有快取 |
 | Batch API | ×0.5 | 輸入＋輸出 | 非即時工作負載 |
 | 快取寫入（5 分／1 小時） | ×1.25／×2.0 | 寫入的 token | 建立快取 |
 | 資料落地 | ×1.1 | **輸入、輸出、快取讀寫全部** | `inference_geo:"us"`；Azure 為 US Data Zone Standard；Claude 4.6 以後 |
 | 地區端點 | ×1.1 | 全部 token | Bedrock／Google Cloud 用 regional 或 multi-region 端點 |
 | 長脈絡（Claude 4.6 以後） | ×1.0 | — | **不加價**，900k 與 9k 同費率 |
 | 長脈絡（Sonnet 4／4.5 世代） | ×2.0 輸入／×1.5 輸出 | 僅超過 200K 的請求 | 該世代 1M 為預覽功能 |
-| Fast mode | 改為 $10／$50 | 取代基準費率 | 僅 Opus 5 與 4.8，僅第一方 API |
+| Fast mode | Opus 5.5 改為 $8／$40；Opus 5 與 4.8 改為 $10／$50 | 取代基準費率 | 僅這三款 Opus，僅第一方 API；不能與 Batch 併用 |
 
 **乘數細節**
 
 - **會疊乘**：例如 Batch ×0.5 與資料落地 ×1.1 同時成立時兩者相乘。往下的只有快取命中與 Batch
-- **快取命中的特例**：Fable 5.1／Mythos 5.1 的命中／刷新費率為基準輸入價的 ×0.025（$0.25/Mtok），其餘所有模型維持 ×0.1；快取寫入倍率兩者相同（官方定價頁 Prompt caching 節，2026-09-03 查證）
+- **快取命中的特例（三檔，2026-09-26 官方查證）**：Fable 5.1／Mythos 5.1 為基準輸入價的 ×0.025（$0.25/Mtok）、Opus 5.5 為 ×0.05（$0.20/Mtok），其餘所有模型維持 ×0.1；快取寫入倍率（5 分 ×1.25／1 小時 ×2）三者相同（官方定價頁 Prompt caching 節）
 - **長脈絡的分界是模型世代，不是「1M」這個功能**。Claude 4.6 以後內含 1M 且不加價（官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing) Long context pricing 節）；Sonnet 4／4.5 世代的 1M 為 public preview，[AWS 公告](https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-sonnet-bedrock-expanded-context-window/)明載超過 20 萬 token 的 prompt 約為兩倍輸入價、1.5 倍輸出價。**兩代混用時，兩套規則會出現在同一份帳單上**
 - **診斷法**：價差只在大請求出現 → 舊世代長脈絡溢價；小請求也貴同樣比例 → 資料落地或地區端點
 - 模型之間「同一份工作換個模型差多少」的換算（含 tokenizer 換代的影響）不在本頁，見 [[topics/model-comparison#同一份工作，換設定差多少]]
@@ -279,7 +279,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### 🔴 2026-09-09：TechCrunch 揭露駭客可在不竊取密碼情況下「抽乾」訂閱者用量額度
 
 - **TechCrunch（09-08，跨 3 來源）／Startup Fortune（09-09）**：駭客可不經密碼抽乾訂閱者用量額度；僅標題可用。攻擊手法見 [[topics/ai-agent-safety]]，此處僅記帳單衝擊：讀者「觸頂」未必等於自己實際耗用（推論）（Google News/TechCrunch；Startup Fortune）。
-- ❓ **待查證**（標 2026-09-09｜查 hijack、usage quota｜複 2026-09-23）：攻擊規模、受害帳戶數、官方是否已發布安全公告或補償措施均未見報導。
+- **官方通知：infostealer 竊 session cookie，免密碼就能抽乾額度（2026-08-30）**：官方已強制登出、撤銷竊得 token、刪存卡並退誤扣款；規模與受害戶數未公布。惡意軟體清單與攻擊面見 [[topics/ai-agent-safety]]（查證 2026-09-26）
 
 %% 維運備忘：未列入事故總表，表滿載，2026-09-09 %%
 
@@ -298,7 +298,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有事件的關係（推論，待證實同源）**：症狀與本頁已記錄的多起「用量無明顯使用即耗盡」事故（08-14 Issue #38335 session 額度異常、08-04 Reddit 回報 Max 20x 半小時 0%→100%）同屬「配額計算是否準確」一類，惟本則互動規模遠超其餘各案，且問題描述為「幾乎立即觸頂」而非既有案例的「一段時間內耗盡」，是否同根因未見官方交叉確認，不可合併
 - **後續（2026-09-12）**：#38335 攀升至 850 留言、545 👍，重返事故總表，見上方 09-12 條目。
 - **同日 Reddit 疑似相關回報（單一貼文，score 0，非週熱門，未經證實）**：r/ClaudeCode 貼文稱收到「即將達上限」警告，但實際用量遠未接近門檻，與本則同屬「配額顯示是否準確」討論，惟訊號較弱（score 0、非週熱門標記），僅並列記錄不獨立成案（Reddit）
-- ❓ **待查證**（標 2026-09-07｜查 GitHub #16157、usage limits｜複 2026-09-21）：觸頂成因（配額計算 bug、顯示錯誤或其他）、官方是否已回應或提供修復時程，均未見報導；已掃日報至 2026-09-07 無官方回應，官方頁面未查證
+- 🔎 **查無官方**（標 2026-09-07｜查 GitHub #16157、usage limits｜複 2026-10-26）：官方 09-17 只新增 usage／length limits 的一般性區別，未給觸頂成因或修復時程（2026-09-26 查 `support.claude.com`）
 
 #### 🔴 2026-09-04：GitHub Issue 累積 184 則留言——Max 5x 續訂扣款後帳號遭停用
 
@@ -389,11 +389,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **企業合作層級（Select vs Preferred）資訊不透明**：同日 Reddit r/ClaudeAI 另有使用者詢問 Anthropic 企業認證 Select 與 Preferred 合作層級的具體差異（純提問，無官方或社群解答內容）；此分級用語亦見於 [[topics/anthropic-business]] 6/30 DataArt「精選（Select）合作夥伴」條目，但兩層級的權益/門檻差異目前無公開資料，待補充（Reddit https://www.reddit.com/r/ClaudeAI/comments/1ulj6r4/partnership_levels_select_vs_preferred/）
 - %% 維運備忘：未列入事故總表，表滿載，2026-09-06 %%
 
-#### 🔴 2026-06-24：隱私政策更新 + 帳號盜刷事件
+#### ⏸ 2026-06-24：隱私政策更新 + 帳號盜刷事件
 
 - **隱私政策更新，新增年齡或身份驗證條款**：Anthropic 更新隱私政策，新增年齡或身份驗證相關條款，2026-07-08 正式生效；影響範圍與具體執行細節未完整公開，用戶應於生效前查閱更新版條款
 - **加州用戶帳號遭盜刷，歐元計費未授權費用**：ABC7 報導，加州用戶反映 Claude 帳號遭他人盜用，產生以歐元計費的未授權費用；顯示 Anthropic 計費帳號安全存在漏洞，建議用戶定期檢查帳號活動記錄（ABC7 2026-06-24）
-- （未列入總表：距最後動態 74 天，09-22 起若無新回報轉 ⏸）
+- （未列入總表：距最後動態已逾 90 天〔2026-09-26 查證，已達 94 天〕，本輪已掃日報至 2026-09-25 無新回報，轉 ⏸）
 
 **2026-05 事故**：Claude Code 定價溝通混亂事件（05-20，✅ Simon Willison 分析）、Pro 方案 0% 用量仍遭收費（05-11，⏸ 1M context window 觸發 API 計費通道）、提示快取窗口悄悄縮短（05-05，⏸ 未公告）。完整記錄見 [[entities/pricing-archive#2026-05]]。
 

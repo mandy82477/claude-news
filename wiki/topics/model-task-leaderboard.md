@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 52
-inbound_links: 18
+inbound_links: 17
 attribution_count: 0
 attribution_last: null
 top_source: null

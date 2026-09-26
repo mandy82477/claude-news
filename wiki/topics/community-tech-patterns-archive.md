@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
 days_since_news_subtree: 88
-inbound_links: 5
+inbound_links: 6
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -24,7 +24,7 @@ signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
-# 社群實戰模式庫——原始條目封存
+# 社群實戰做法——早期原始條目
 
 **狀態：** resolved（封存頁）
 **領域：** 🌐 社群

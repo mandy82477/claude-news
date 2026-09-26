@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-20"
+last_updated: "2026-09-26"
 last_news_update: "2026-08-22"
 status_main: "beta"
 days_since_news: 35
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-30
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-08-22
 
 > **最新資安產品動態**（2026-08-21）
@@ -50,7 +50,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥 |
+| 社群熱度 | 🔥🔥🔥 |
 | 試用價值 | ⚡ 有條件推薦 |
 | 最適合 | Enterprise 客戶、需要業務邏輯情境化安全評估的開發團隊 |
 | 不適合 | 個人開發者（目前限 Enterprise 客戶）、僅需傳統 CVE 掃描的場景 |

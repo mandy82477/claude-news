@@ -200,6 +200,118 @@
       ],
       "reviewed": "2026-09-20",
       "why": "2026-09-20 使用者裁示後判定不併：一頁答「官方出了哪八塊積木」（🛠️ 功能記者、吃官方文件），一頁答「社群在大型 repo 怎麼做」（🌐 社群記者、週更沉澱自 community-tech-patterns）；問題、進料與單一維護者都不同，併頁會讓同一頁出現兩個記者。兩頁已互連，那才是正確關係"
+    },
+    {
+      "pages": [
+        "entities/jacob-coxon",
+        "topics/market-signals"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共同落地的是 Coxon 辭職聲明；market-signals 只放該事件的訊號判讀、人物事實的家在 entities/jacob-coxon，該則判讀已 wikilink 指向 topics/recursive-self-improvement（事件的家），再加一條人物頁邊會長出第三份副本"
+    },
+    {
+      "pages": [
+        "entities/jensen-huang",
+        "topics/recursive-self-improvement"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共同落地的是黃仁勳與 AI 減速呼籲的分歧；該事實的家在 entities/jensen-huang，recursive-self-improvement 只在機制敘述中提及，兩頁皆已各自連向 entities/dario-amodei 這個共同節點"
+    },
+    {
+      "pages": [
+        "entities/pricing",
+        "topics/coding-workflow-guide"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共同落地的是官方 usage／length limits 說明文件；guide 回答「怎麼做」、pricing 回答「多少錢」，guide 的額度段已 wikilink 指回 pricing，反向邊會把計價細節拉進操作手冊"
+    },
+    {
+      "pages": [
+        "topics/ai-agent-safety",
+        "topics/code-quality-decline"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共同落地的是 Fable 5.1 遞迴刪檔那則；安全面住 ai-agent-safety 的攻擊面表、品質觀感面住 code-quality-decline，兩頁對同一則各取不同切面，互連會讓讀者以為是同一個結論"
+    },
+    {
+      "pages": [
+        "topics/coding-workflow-guide",
+        "topics/community-tech-discussions"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共同落地的是 AGENTS.md 原生支援；guide 收官方做法、discussions 收社群爭論，guide 已 wikilink 指向 topics/official-community-gap（官方補了沒的家），該頁才是兩者的交會點"
+    },
+    {
+      "pages": [
+        "entities/boris-cherny",
+        "entities/managed-agents"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "共享鄰居全是封存子頁與社群做法頁，屬早期頁被大量引用的結構慣性；Cherny 的公開發言未談 Managed Agents，庫內查無把兩者綁在一起的事實"
+    },
+    {
+      "pages": [
+        "entities/claude-docs",
+        "entities/claude-science"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "只共享 feature-radar 與 overview 兩個樞紐；兩者都是 09 月新產品所以同時進榜，彼此無產品或事件關聯"
+    },
+    {
+      "pages": [
+        "entities/cat-wu",
+        "topics/community-tech-discussions"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "Cat Wu 的「主動性」論述未進任何一場社群爭論；共享鄰居是 boris-cherny 與 patterns 系列，屬人物頁互引的慣性"
+    },
+    {
+      "pages": [
+        "entities/claude-science",
+        "topics/market-lessons"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "claude-science 是產品與研究成果、market-lessons 是判讀課程表；共同鄰居 anthropic-business 才是兩者交會的事實層，已各自連向它"
+    },
+    {
+      "pages": [
+        "entities/claude-science",
+        "entities/claude-slides"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "同為 09 月新上線產品而同時出現在 feature-radar 與 overview，功能面互不相干"
+    },
+    {
+      "pages": [
+        "entities/opus-5",
+        "topics/competitor-landscape"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "跨家比較的家是 topics/model-task-leaderboard；competitor-landscape 規則明文「Anthropic 自己的動作不進本頁」，直接互連會違反該頁的蒐集邊界"
+    },
+    {
+      "pages": [
+        "entities/michael-burry",
+        "entities/simon-willison"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "兩人皆評論過 AI 減速議題但彼此無互動；共享鄰居 dario-amodei 與 recursive-self-improvement 已是該議題的匯流點"
+    },
+    {
+      "pages": [
+        "entities/simon-willison",
+        "entities/sridhar-vembu"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "同上——兩人只是都被同一議題引用，彼此無關聯事實；Vembu 僅一則單一來源發言"
+    },
+    {
+      "pages": [
+        "entities/opus-4-7",
+        "topics/community-tech-discussions"
+      ],
+      "reviewed": "2026-09-26",
+      "why": "Opus 4.7 在爭論頁只以「跨代際重複修辭」被順帶提及，該事實的家是 topics/code-quality-decline，兩頁皆已連向它"
     }
   ]
 }

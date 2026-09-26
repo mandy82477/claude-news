@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-24"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-24"
 status_main: "active"
 days_since_news: 2
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-24
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-24
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-09-24，Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容未見報導。同日 FT「聯合國大會即時報導」提及 Amodei 呼籲 AI 安全協議應「範圍限定」（narrow），與 09-22 預告的聯合國安理會簡報是否同一場合未明；為單一媒體轉述，非逐字引述。
 
-2026-09-17，知名放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 等公司高層的 AI 減速呼籲是「自利」之詞，加入既有反彈陣營，完整脈絡見 [[entities/michael-burry]]。同日 The New York Times 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題可用）；另有 Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，具體內容與因果未見報導（僅標題）。
+知名放空交易員 Michael Burry 於 2026-09-14 公開批評 Amodei 與 OpenAI 等公司高層的 AI 減速呼籲是「自利」之詞（Hacker News 於 09-17 轉載），加入既有反彈陣營，完整脈絡見 [[entities/michael-burry]]。2026-09-17，The New York Times 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題可用）；另有 Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，具體內容與因果未見報導（僅標題）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；惟 Dario 本人與白宮的信任關係修復與否，尚無報導確認。
 
@@ -143,7 +143,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容與參戰人士未見報導（來源：Google News／Axios）
 - 2026-09-24：FT「聯合國大會即時報導」提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，與 09-22 預告的聯合國安理會簡報是否同一場合未明（來源：Google News／Financial Times）
 - 2026-09-22：Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險（僅標題可用）（來源：Google News／Bloomberg）
-- 2026-09-17：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，詳見 [[entities/michael-burry]]（來源：Hacker News／New York Post）
+- 2026-09-14：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，Hacker News 於 09-17 轉載，詳見 [[entities/michael-burry]]（來源：New York Post／Hacker News）
 - 2026-09-17：NYT 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題）（來源：Google News／The New York Times）
 - 2026-09-17：Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，因果未見報導（僅標題）（來源：Google News／Yahoo Finance）
 - 2026-09-16：Meta 執行長 Mark Zuckerberg 在 AI 減速辯論中公開點名批評 Anthropic（僅標題，來源：Google News／The New York Times）

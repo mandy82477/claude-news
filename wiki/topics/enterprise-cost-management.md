@@ -3,7 +3,7 @@ page: "topics/enterprise-cost-management"
 kind: "topic"
 status: "monitoring"
 domain: "💼 商業"
-last_updated: "2026-09-19"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-04"
 status_main: "monitoring"
 days_since_news: 22
@@ -28,11 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-04
 
-> **最新成本管控動態**（2026-09-06）
+> **最新成本管控動態**（2026-09-04）
 > 官方 Spend Controls 的控管粒度已公開：組織層支出上限（75%／90% 警示）、部門層用量報表、每人用量與限額（75%／95% 通知），另有 Admin API。本頁四項缺口中三項因此結案，只剩混合計費管理仍無官方對應。
+>
+> **自 2026-09-04 起沒有新消息**（2026-09-26 核）：上面那一則仍是這條線最新的事實，不是這頁忘了更新。剩下的那一項缺口（混合計費管理）官方到今天為止沒有動作。
 
 ---
 
