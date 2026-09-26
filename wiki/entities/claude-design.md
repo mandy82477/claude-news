@@ -4,7 +4,7 @@ kind: "entity"
 type: "feature"
 status: "active（初期，體驗粗糙）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-17"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-17"
 status_main: "active"
 days_since_news: 9
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（初期，體驗粗糙）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-17
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-17
 
 > **最新工具動態**（2026-09-17）
@@ -54,7 +54,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥 |
+| 社群熱度 | 🔥 |
 | 試用價值 | ❌ 不推薦 |
 | 最適合 | 尚無明確推薦場景 |
 | 不適合 | 正式設計工作流、需忠實呈現用戶品牌風格的場景 |

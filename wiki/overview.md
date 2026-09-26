@@ -1,11 +1,19 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-09-19
+**最後更新：** 2026-09-26
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
+
+**Anthropic 與 Akamai 簽 7 年 116 億美元運算合約**：09-25 Bloomberg／WSJ／IBD 同日報導，Akamai 供應 CPU 算力並取得認股權證；繼 Nscale（450 億美元／460MW）與 Lambda（350 億美元）之後的第三筆巨額算力採購，方向仍是把長期算力鎖進固定合約。詳見 [[topics/anthropic-business]]。
+
+**白宮要求對英國測試機構暫緩釋出新模型**：09-25 Bloomberg／Politico 報導白宮要 OpenAI 與 Anthropic 暫緩把新模型交給英國 AI 測試機構、待美方完成審查。管的是上市前的審查順序，不改變你現在拿得到的 Claude；審查範圍與期限官方均未公布。詳見 [[topics/anthropic-government-policy]]。
+
+**Claude 在僅有高層指引下發現一組類 CRISPR 酶系統，Anthropic 新設生命科學團隊與自有實驗室**：09-24 官方宣布，HN 729 分、Reuters／TechCrunch／The Verge 跟進；09-25 the-scientist.com 進一步揭露成果出自一座此前保密的「AI 驅動濕實驗室」，New Scientist 等則對外部驗證提出保留。詳見 [[entities/claude-science]]。
+
+**Claude Code cloud sessions 上線**：09-24 官方推出雲端 session（新用戶最高 250 美元額度，3 個來源同日報導），同時為 Opus 5.5 使用者導入實驗性用量上限重置機制。詳見 [[entities/claude-code]]。
 
 **Claude Opus 5.5 發布，成為 Claude Code 預設模型**：09-22 官方發布 Claude 5.5 家族首款 [[entities/opus-5-5]]，牌價 $4／$20 較 Opus 5 降 20%、官方稱多數工作追平 Fable 5.1；Claude Code v2.1.280 同日把 `default` 改指它（Foundry 除外），Pro／Max 用量上限同步調高。同日 OpenAI 推出 GPT-6 Sol／Luna 迎戰，Bloomberg 報導 Anthropic IPO 計畫生變、可能延後。詳見 [[entities/opus-5-5]]、[[entities/pricing]]、[[topics/anthropic-business]]。
 
@@ -35,7 +43,7 @@
 
 **跨模型代際「重複修辭套路」問題持續延燒**：GitHub Issue #77136（106 留言／517 反應）跨 Opus 4.7／4.8／5.0 與 Fable 5，尚無官方回應。詳見 [[entities/opus-5]]。
 
-**feature-radar 第四輪熱度降溫**：接續 08-29（57 條）、09-05（17 條）與 09-12（11 條），本輪再降 5 條（keybindingFlavor readline、v2.1.233 GitLab MR、v2.1.224 self-hosted-runner、語音模式模型選擇、Claude Code Artifacts）——判定沿用三輪把關：兩組別名各跑一次 ≥2 詞同日命中，再對零命中者以 `--any` 複驗，只降三輪皆零命中者。
+**feature-radar 第六輪熱度降溫**：接續 08-29（57 條）、09-05（17 條）、09-12（11 條）與 09-19（5 條），本輪檢查 32 條 🔥🔥 以上條目、降 13 條——Claude Code Projects、Model Hardware Standard、跨 session 訊息互通、`/goal`、Claude Security、Claude Fable 5 等；`entities/` 對應頁的「熱度與試用價值」表同步下修 4 處。
 
 ---
 
@@ -48,7 +56,7 @@
 | **Claude Opus 5.5** | 🟢 現行 Opus（2026-09-22 發布）| Claude Code v2.1.280 起為 Pro／Max／Team／Enterprise／API 的 `default` 模型（Foundry 仍 Sonnet 4.5）；$4/$20，官方稱多數工作追平 Fable 5.1 |
 | Claude Opus 5 | ⚠️ 已改列 Legacy（2026-09-22）| 仍可用，$5/$25；預設 Opus 由 Opus 5.5 接手；跨模型代際「重複修辭套路」問題持續（GitHub #77136）|
 | **Claude Sonnet 5** | 🟢 Active（Foundry 通道預設仍 Sonnet 4.5） | 1M context；$2/$10 per Mtok（**標準價，已於 2026-08-10 永久化**，無到期壓力）|
-| Claude Opus 4.8 | ⚠️ 已被取代 | 次旗艦地位已由 Opus 5 接手；feature-radar 熱度本輪降溫（🔥🔥🔥🔥🔥→🔥🔥🔥🔥）|
+| Claude Opus 4.8 | ⚠️ 已被取代 | 次旗艦地位已由 Opus 5 接手；仍是 Fable 5／5.1 資安類請求被護欄攔下時的接手模型（生物／化學類則改由 Opus 5 接手，2026-09-26 官方查證）|
 | Claude Sonnet 4.6 | ✅ Active | 仍可選用 |
 | Claude Haiku 4.5 | ✅ Active | 低延遲／高頻批量任務的現行選項 |
 
@@ -95,16 +103,16 @@
 
 ---
 
-## 近期重大事件（2026-09-12 至 2026-09-18）
+## 近期重大事件（2026-09-19 至 2026-09-25）
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 09-18 | 白帽藉 Claude 存取 OpenAI 內部原始碼獲 6,500 美元；Plugin4Shell 零點擊 RCE 橫跨四家 CLI；Claude Code Projects 進 Beta；Claude 負責內部四分之一開發工作量 | 🔒 安全；🛠️ 功能 |
-| 09-17 | Cowork 與 Chat 合併，Claude Docs／Slides 上線；摩根大通導入並設 2,000 美元上限；私募市場開出逾 2 兆美元估值 | 🛠️ 功能；💼 商業 |
-| 09-16 | 諾和諾德具名採用；Mustafa Suleyman 批評「類人化」論述；黃仁勳反對 AI 安全反壟斷豁免提案 | 💼 商業；⚖️ 爭議 |
-| 09-15 | Claude for Financial Advisors 推出；Rescana 揭露七家中國實驗室規模化蒸餾攻擊；連續第二季獲利；Jack Clark 談緊急關閉開關 | 💼 商業；🔒 安全 |
-| 09-14 | Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Claude 內部使用 | 💼 商業 |
-| 09-12 | 國防部傳十月前遷出全部機密 AI 工作負載；Nvidia 傳洽談投資 Anthropic IPO | 🏛️ 政策 |
+| 09-25 | Anthropic 與 Akamai 簽 7 年 116 億美元 CPU 算力合約（附認股權證）；白宮要求對英國測試機構暫緩釋出新模型；類 CRISPR 酶成果延燒、外部驗證受質疑 | 💼 商業；🏛️ 政策 |
+| 09-24 | Anthropic 新設生命科學團隊與自有實驗室，Claude 發現類 CRISPR 酶系統（HN 729 分）；Claude Code cloud sessions 上線 | 🛠️ 功能；💼 商業 |
+| 09-23 | Claude Opus 5.5 發布（$4/$20，v2.1.280 起為預設 Opus）；OpenAI 同日推 GPT-6 Sol／Luna 迎戰；Bloomberg 報 IPO 計畫生變 | 🤖 模型；💼 商業 |
+| 09-22 | Amodei 將向聯合國安理會簡報 AI 風險；Anthropic 與 OpenAI 同步向澳洲政府陳情鬆綁在地內容訓練禁令；官方稱攔下一起 AI 生物武器濫用意圖 | 🏛️ 政策 |
+| 09-21 | Claude Code 停收 API 使用者的 auto mode 安全檢查費；傳 IPO 推遲；Nscale 1,030 億美元合約中 Anthropic 與 Microsoft 為最大客戶 | 🛠️ 功能；💼 商業 |
+| 09-20 | 反壟斷訴訟指控 Anthropic、OpenAI、SpaceXAI、Google 就「AI 減速」達成非法協議；Anthropic 與 Accenture 合作導入獨立前沿 AI 評估 | ⚖️ 爭議 |
 
 > 完整事件時序見各 topics 頁面「時序」區塊；[[log]] 含每日更新完整紀錄。
 
@@ -112,7 +120,7 @@
 
 ## 社群工具生態
 
-社群工具目錄（[[topics/community-tech-tools]]）本輪（2026-08-29 整理）**新增 9 筆**（tare／opslane／ambient-context／OzBrain／Proliferate／Frugal Tokens／machine0／internet-court-skill／claw-orchestrator）／**淘汰 4 筆**（CodeAlmanac／Claude-thermos／OneCLI／Palmier Pro，逾 30 天無後續）／精選層淘汰 5 換入 5（維持 19 筆上限內）。
+社群工具目錄（[[topics/community-tech-tools]]）本輪（2026-09-26 整理）**新增 11 筆**（pstack-claude／Claude-Code-Usage-Monitor／aoci-code／docsagent／foremerge／FrontierAgent／open-seo-mcp-skills／bang-motion／agent-study／awesome-claude-skills／mattpocock-skills）、**移出 15 筆**（5 筆觀望逾 30 天無後續、10 筆有條件推薦逾 120 天無後續），目錄由 113 列收斂為 109 列；「我卡在這裡」決策表首選本輪未變動。
 
 - 🔥🔥🔥🔥 **跨 Session 記憶層／知識庫（趨勢九，本輪升格成形）** — ltm／OKF／CodeAlmanac／OzBrain／手動 Obsidian vault 取代／mindmuxai brain.md 六個獨立實作跨 105 天，證據已站穩成形
 - 🔥🔥🔥🔥 **規格驅動開發（Spec-Driven Development，趨勢七）** — 已站穩成形趨勢
@@ -125,7 +133,7 @@
 
 ## 商業動態
 
-- **基建與營收**：Nscale 450 億美元／460MW 資料中心協議；Claude 營收年增 1000%（單一來源，待查證）；Meta 對 AI 支出預估上修至 100 億美元；Salesforce Claudeforce 合作深化並補財報面佐證
+- **基建與營收**：Akamai 7 年 116 億美元 CPU 算力合約（09-25，附認股權證）；Nscale 450 億美元／460MW 資料中心協議；Claude 營收年增 1000%（單一來源，待查證）；Meta 對 AI 支出預估上修至 100 億美元
 - **政策**：五角大廈黑名單案終局判決違法即時解除；麻州政治獻金／遊說支出個案新收錄
 - **法律**：Model Hardware Standard（機器人／實驗室儀器操作）研究預覽開啟全新產品線，尚無定價或商業條款
 - **計費**：Sonnet 5 $2/$10 標準價已永久化；**週配額 +50% 促銷延長至 09-13（官方 09-02 更正），09-14 起改永久 +25%（相較促銷水位實際 −17%）**——貼近上限的工作流應提前調整
@@ -140,7 +148,7 @@
 | 功能 | 熱度 | 推薦 |
 |------|------|------|
 | Claude Code Auto 模式 | 🔥🔥🔥🔥 | ✅ 已對 Pro/Max/Team 正式預設化（本輪因安全繞過揭露，建議關注官方修復進度）|
-| Claude Opus 5 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——Max/Pro 已為預設或最強選項，重複修辭問題仍待官方回應 |
+| Claude Opus 5.5（現行 Opus）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——v2.1.280 起為預設，$4/$20 較 Opus 5 降 20%；官方基準表已公布，社群獨立複測尚無 |
 | Claude Sonnet 5（$2/$10，標準價）| 🔥🔥🔥🔥🔥 | ✅ 推薦——成本敏感的常規任務首選；價格已永久化 |
 | SDK files／skills 命名空間（GA）| 🔥🔥 | ⚡ 有條件推薦——以 TypeScript／Python SDK 整合 files/skills 者升級前先確認呼叫寫法 |
 | Model Hardware Standard | 🔥🔥🔥 | ⏳ 觀望——研究預覽階段，一般開發者暫無可用管道 |

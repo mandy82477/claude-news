@@ -3,7 +3,7 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-25"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-25"
 status_main: "ongoing"
 days_since_news: 1
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-25
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-25
 
 > **本週衝擊**（2026-09-25）
@@ -261,7 +261,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Google（Gemini）**：HN 討論稱 Gemini 2.5 Pro／Flash 十月停用、尚無 GA 版 Pro 級後繼；長文件利基（千頁僅需 30 萬 tokens）Anthropic／OpenAI 均無同等方案，代價逾 10 倍 → 需要此利基的工程師暫無替代可轉。僅單一 HN 討論串（19 分），無官方公告佐證（Hacker News）
 
 ### 2026-09-08
-- **Cognition**（Devin 開發商）：The Tech Buzz 報導完成新一輪募資，估值達 480 億美元，AI 編碼賽道戰力升級；僅標題可用，資金用途、投資人名單未見報導（Topic Watch）
+- **Cognition**（Devin 開發商）：The Tech Buzz 報導完成新一輪募資，估值達 480 億美元（Topic Watch）。**2026-09-26 查證**：09-08 完成 20 億美元 Series E，a16z、Accel 等領投；年化營收近 9 億美元（[TechCrunch](https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/)）
 - **Logitech**：推出可自訂快捷鍵的 MX Keypad，鎖定開發者作為多應用 AI 控制中心，廠商自宣性質，無 Claude 對比（Topic Watch）
 
 ### 2026-09-07
@@ -330,9 +330,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-08-13
 - **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
-- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-09-27｜訊 2026-09-07）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
+- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-09-27｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
 - 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
+- **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，詳見「對手雷達」新增列。
 
 ### 2026-08-11
 - **Meta**：CNBC 與 Simon Willison 報導 Meta 宣布開源其最強模型 Muse Glimmer，戰線從產品層擴大至模型層權重（Google News/CNBC；Blog/Simon Willison）

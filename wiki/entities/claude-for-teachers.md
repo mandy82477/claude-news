@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-08-27"
+last_updated: "2026-09-26"
 last_news_update: "2026-07-18"
 status_main: "active"
 days_since_news: 70
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-07-15
-**最後更新：** 2026-08-27
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-07-18
 
 > **最新動態**（2026-07-17）
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥 |
+| 社群熱度 | 🔥 |
 | 試用價值 | ⏳ 觀望 |
 | 最適合 | 美國通過認證的 K-12 教師（一旦驗證流程明朗，可立即免費取用進階功能） |
 | 不適合 | 非美國教師、非 K-12 教育者、一般開發者或企業使用者（無公開一般存取管道） |

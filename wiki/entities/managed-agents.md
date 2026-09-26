@@ -4,7 +4,7 @@ kind: "entity"
 type: "feature"
 status: "beta（所有 API 帳號預設可用，須帶 beta header）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-20"
+last_updated: "2026-09-26"
 last_news_update: "2026-09-16"
 status_main: "beta"
 days_since_news: 10
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-09-16
 
 > **最新動態**（2026-09-16）
@@ -52,7 +52,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥 |
+| 社群熱度 | 🔥 |
 | 試用價值 | ⚡ 有條件推薦 |
 | 最適合 | 要跑數小時以上、跨 session 保留狀態的工作流；需要資料不出境（自架沙箱） |
 | 不適合 | 單次 30 分鐘內做得完、或不需保留跨 session 狀態的任務——`/goal` 就夠 |

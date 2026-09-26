@@ -3,7 +3,7 @@ page: "topics/safety-china-trust-dispute"
 kind: "topic"
 status: "monitoring（核心「後門」敘事自 07-10 雙方首度正面否認後未見新進展，轉低頻觀察；新出現的相關但獨立事件見下方說明）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-20"
+last_updated: "2026-09-26"
 last_news_update: "2026-07-11"
 status_main: "monitoring"
 days_since_news: 77
@@ -19,8 +19,8 @@ pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
-staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+staleness_exempt: "本頁是一條停在 2026-07-11 的故事線——同一批中國相關事實此後改記在 [[topics/anthropic-government-policy]]，本頁的維護規則因此不再推進「最後新聞更新」。它被很多頁引用是舊事件的歷史慣性，不代表有人在等這裡出新消息。 %% 2026-09-26 依 /wiki-lint 5g「連續 2 輪處置皆為 c」宣告；判準不適用本頁型態，不調全域門檻 %%"
+signal: "🗓️ 非新聞驅動"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 中美 AI 工具信任對峙
@@ -28,12 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring（核心「後門」敘事自 07-10 雙方首度正面否認後未見新進展，轉低頻觀察；新出現的相關但獨立事件見下方說明）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-30
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-26
 **最後新聞更新：** 2026-07-11
 
 > **本頁記到 2026-07-11 為止**（2026-07-11）
 > 07-10 Anthropic 首度公開否認中國官方的後門指控，此後該敘事線無新進展。
 > 之後的中國事件見 [[topics/anthropic-government-policy]]。
+
+**新鮮度豁免：** 本頁是一條停在 2026-07-11 的故事線——同一批中國相關事實此後改記在 [[topics/anthropic-government-policy]]，本頁的維護規則因此不再推進「最後新聞更新」。它被很多頁引用是舊事件的歷史慣性，不代表有人在等這裡出新消息。 %% 2026-09-26 依 /wiki-lint 5g「連續 2 輪處置皆為 c」宣告；判準不適用本頁型態，不調全域門檻 %%
 
 ---
 
