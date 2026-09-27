@@ -1822,8 +1822,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "f34f148ab68bb39460d2f70d498d07e54e536bf3be06d96f1cbd9579392ac325",
-    "length": 23095,
+    "hash": "de77385dc594521b60735258f718f5188876e632ba72b12e37d8232c66cb945a",
+    "length": 23096,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1992,6 +1992,7 @@
       "How do I get access to Claude in Amazon Bedrock?",
       "How do I learn more about Amazon and Anthropic’s strategic collaboration?",
       "How do I log out of all active sessions?",
+      "How do I pay for my Claude API usage?",
       "How do I sign up for Claude Pro on Claude for Android?",
       "How do I sign up for Claude Pro on the Claude app for iOS?",
       "How do I sign up for the Max plan?",
