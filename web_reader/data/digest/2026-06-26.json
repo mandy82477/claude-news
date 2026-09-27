@@ -247,6 +247,11 @@
       "pageType": "entity"
     },
     {
+      "id": "john-jumper-archive",
+      "name": "John Jumper · 原始條目",
+      "pageType": "entity"
+    },
+    {
       "id": "john-jumper",
       "name": "John Jumper",
       "pageType": "entity"
