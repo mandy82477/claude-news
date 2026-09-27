@@ -7,11 +7,11 @@ last_updated: "2026-09-27"
 last_news_update: "2026-08-05"
 update_freq: "🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 52
+days_since_news: 53
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 52
+days_since_news_subtree: 53
 inbound_links: 17
 attribution_count: 0
 attribution_last: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **狀態：** ongoing
 **領域：** 🤖 模型
-**蒐集邊界：** 每週抓取 17 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
+**蒐集邊界：** 每週抓取 16 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 **更新頻率：** 🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）
 **新鮮度豁免：** 本頁吃外部榜單而非新聞，週更規則明文不動「最後新聞更新」，以天數判停滯對它恆為真
 **開始日期：** 2026-08-05
@@ -36,7 +36,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-08-05
 
 > **本週快照重點**（2026-09-27）
-> 17 榜全數嘗試（直接抓取 12 榜、媒體轉述 5 榜、無法取得 0 榜）。本週最大的變化是 **Claude Opus 5.5 一上線就在三個榜登頂**：Text Arena（但與第二名差 5 分、誤差 ±12，分不出高下）、WebDev Arena（領先 65 分）、OpenRouter 實際用量。Search Arena 停在 08-24 已 34 天，改記為「榜停更」；EQ-Bench 連續 4 輪同值，列入汰換討論。
+> 16 榜全數嘗試（直接抓取 12 榜、媒體轉述 4 榜、無法取得 0 榜）。本週最大的變化是 **Claude Opus 5.5 一上線就在三個榜登頂**：Text Arena（但與第二名差 5 分、誤差 ±12，分不出高下）、WebDev Arena（領先 65 分）、OpenRouter 實際用量。Search Arena 停在 08-24 已 34 天，改記為「榜停更」；EQ-Bench 連續 4 輪同值，已移出快照表。
 ---
 
 ## 摘要
@@ -66,7 +66,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912）（與上週同值） | 09-27 | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
 | [音樂生成](#eval-music) | Suno v6（1134）> Suno v6-mini（1110）> Mureka V9.5（1098）（新版上榜，名單全換，見註記） | 榜頁未標日期（本次 09-27 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
 | [Embedding（自建 RAG）](#eval-mteb) | KaLM-Gemma3-12B（72.32）> gemini-embedding-001（68.37）> Qwen3-0.6B（64.34）（媒體轉述，榜版不可互比） | 07–09 月（媒體轉述） | [MTEB](https://huggingface.co/spaces/mteb/leaderboard) |
-| [聊天陪伴／情商](#eval-eqbench) | Claude Fable 5（1349.5）> Kimi K3（1349.2）> GPT-5.5（1325.8）（連續 4 輪同值，考慮汰換） | 07-20（媒體轉述） | [EQ-Bench](https://eqbench.com/) |
 | [放多長的任務給 agent](#eval-metr) | Claude Mythos Preview（17.4 小時@50%）（⚠️ 逾官方自陳可信上限，且無完整名次表） | 2026-05（1.1 版，媒體轉述） | [METR](https://metr.org/) |
 | [讀文件不胡說（幻覺率低）](#eval-vectara) | finix_s1_32b（1.8%）> gpt-5.4-nano（3.1%）> gemini-2.5-flash-lite（3.3%） | 09-22（名次同 05-11） | [Vectara 幻覺榜](https://github.com/vectara/hallucination-leaderboard) |
 | [大家實際在用什麼](#eval-openrouter) | Claude Opus 5.5（57.6）> Claude Fable 5.1 與 Qwen 3.8 Max 並列（53.4）（本輪直接抓取） | 09-26 | [OpenRouter](https://openrouter.ai/rankings) |
@@ -77,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Text Arena 前三 1509±12 > 1505±3 > 1504±4，**差距在誤差內，不要拿這個排序當選型依據**；Opus 5.5 票數還少，誤差是其他兩名的三倍。
   - WebDev Arena 領先第二名（Fable 5.1）65 分，是本週唯一差距明顯的一列。
 - **Search Arena 榜停更**：榜頁自標資料日期仍為 **08-24（已 34 天）**；取得沒問題，是榜自己沒動。
-- **EQ-Bench 連續 4 輪同值（07-20）**：頁面為 JS 渲染、直接抓取持續失敗，轉述數字四輪不動，**已不宜作為選型依據，列入汰換討論**。
+- **EQ-Bench 已移出快照表（連續 4 輪同值，停在 07-20）**：頁面為 JS 渲染、直接抓取持續失敗，轉述數字四輪不動，**已於 2026-09-27 移出快照表**；「聊天陪伴／情商」這題目前沒有其他活榜承接，題型與算分方式仍留在頁尾索引供對照。
 - **SWE-bench 本輪二手來源不一致，維持上週值**：本輪抓到的另一組二手數字（聚合站、Pro 首位記為 Fable 5 80.0%）與上週的媒體轉述對不上版本號，判為不同來源的混用；Pro（1,865 題）與 Verified（500 題，已飽和）兩子集仍不可互比。
 - **MTEB 本輪仍不採計**：官方 Space 載入失敗，二手報導指向不同榜版的首位（QZhou-Embedding 75.97），與上週的 KaLM-Gemma3-12B 無交集可比，快照格維持上週值並照舊標二手。
 - **Terminal-Bench 只採 3.0**：榜頁預設已顯示 4.0，本頁仍只採 3.0 一個版本（與 08-28 記錄一致，數字為媒體轉述）。
@@ -183,7 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 特殊機制組——不是傳統分數
 
-- <a id="eval-eqbench"></a>**情商（EQ-Bench）**
+- <a id="eval-eqbench"></a>**情商（EQ-Bench）｜已於 2026-09-27 移出快照表，僅留算分方式供對照**
   - **題目**：120 個各有雷點的虛擬人物——有人重溫暖、有人厭惡虛偽，含刻意刁難場景與權力關係；模型要跟每個人物進行 16 輪對話、建立信任並實際幫上忙。
   - **規模**：120 人物 × 16 輪。
   - **算分**：不同家族的 LLM 分飾人物與評審（防自家互相加分），按六維度打 0–10：建立關係、真誠、感知對方、滿足需求、情緒理解、情緒管理。

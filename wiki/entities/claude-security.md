@@ -7,12 +7,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-26"
 last_news_update: "2026-08-22"
 status_main: "beta"
-days_since_news: 35
+days_since_news: 36
 parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
-days_since_news_subtree: 35
-inbound_links: 11
+days_since_news_subtree: 36
+inbound_links: 12
 attribution_count: 3
 attribution_last: "2026-08-22"
 top_source: "google-news"
