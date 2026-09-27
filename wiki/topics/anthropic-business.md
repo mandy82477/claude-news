@@ -104,7 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
-- **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 報導 Anthropic IPO 估值將直接測試 Amazon 既有持股價值（規模達 $3,000 億美元），與 08-20 Motley Fool 估算之 $4,000 億美元基準不同（不同時間點與估值假設，未必矛盾）；僅標題可用，具體換算基準未見報導（Google News/Yahoo Finance）。
+- **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 稱 IPO 估值將測試 Amazon 持股價值（$3,000 億美元），與 08-20 Motley Fool 估算 $4,000 億美元基準不同（估值假設不同），僅標題可用（Google News/Yahoo Finance）。
 - **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列與 ⟨Q-03⟩（Google News/Bloomberg.com）。
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。

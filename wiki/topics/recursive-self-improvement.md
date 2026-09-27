@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
 **最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-24
+**最後新聞更新：** 2026-09-27
 
-> **最新動態**（2026-09-24）
-> Axios 獨家：川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Vembu 與 HN 社群質疑減速呼籲背後的監管俘獲疑慮。
+> **最新動態**（2026-09-27）
+> Anthropic 與 OpenAI 同步就 AI 安全發出警示、尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（doomers），延續 09-24 政治化框架敘事。
 
 ---
 
@@ -82,6 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
+- **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列，僅標題可用，詳見「## 技術彙整」。
 
 ---
 
@@ -100,6 +101,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（2026-09-27 新增）
+
+- **揭露來源**：TribLive.com／AP News（經 Google News，2 個來源，2026-09-27 14:20 UTC）；WSJ 同日刊出側寫〈'Things Will Never Be Chill Again': The Doomers Who Shaped the AI Safety Freakout〉
+- **核心主張（僅標題可用）**：報導稱 Anthropic 與 OpenAI 同步就 AI 安全風險發出警示，並試圖主導安全規範由誰、如何制定；WSJ 側寫聚焦「doomers」如何形塑當前的 AI 安全論述聲量
+- **與既有敘事的關係**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」政治框架系列，以及 [[topics/anthropic-government-policy]] 09-15 Anthropic／OpenAI 反壟斷豁免提案（自行提名風險評估機構）系列，皆屬「Anthropic 主導安全規範制定權」既有主線；本則是否引入新事實或僅為既有敘事再彙整，報導層級不足以判斷
+- ❓ **待查證**（標 2026-09-27｜查 TribLive、doomers freakout）：報導正文、具體警示內容與「主導規範制定」的具體訴求均未見報導，僅 Google News 標題聚合層級可用
+- **可信度評估**：TribLive／AP News 為主流媒體轉載，惟 RSS 僅提供標題聚合、無正文；WSJ 側寫屬敘事分析文章，非新事實揭露，訊號強度中等偏弱
 
 ### 政治連鎖反應延燒：川普陣營鎖定 Amodei「末日論」人設、企業家與 HN 社群質疑減速動機（2026-09-24 新增）
 
@@ -319,6 +328,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-09-27
+- **[政治框架延續，新增，僅標題可用] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」
+
+%% 維運備忘：時序 09-24（Axios doomer 框架、Institute 頁面補齊前）尚缺對應行，非本輪造成，回報中已轉知主編，本輪不回填 %%
 
 ### 2026-09-22
 - **[官方連結補齊，新增] Anthropic Institute 官方頁面：《Measurements for understanding the pace of AI development inside frontier labs》，2 個來源同日報導**：延續 09-18《工作量四分之一》系列，補齊官方 Institute 頁面連結，惟頁面實質方法論內容仍未見報導，詳見「## 技術彙整」

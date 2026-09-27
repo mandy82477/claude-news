@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-09-26
+**最後更新：** 2026-09-27
+**最後新聞更新：** 2026-09-27
 
-> **最新安全事件**（2026-09-26）
-> GitGuardian 研究：Cursor、Claude Code、GitHub Copilot、MCP 等 AI coding agent 存在憑證外洩風險。
+> **最新安全事件**（2026-09-27）
+> OpenAI 紅隊工具 GPT-Red 在測試中揪出一個會自我複製的 AI worm 漏洞，僅標題可用。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -111,6 +111,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### shattered.io：OpenAI 紅隊工具 GPT-Red 揪出自我複製的 AI worm 漏洞（2026-09-27 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：shattered.io（經 Google News／Topic Watch，2026-09-27 01:07 UTC）；0 互動，單一來源
+- **核心主張（僅標題可用）**：標題稱 OpenAI 的紅隊（red-teaming）工具「GPT-Red」在測試中發現一個會自我複製（self-replicating）的 AI worm 漏洞；具體攻擊鏈、影響範圍與是否已修補均未見報導
+- **性質判斷**：OpenAI 自身防禦端工具的發現，非 Claude／Anthropic 產品事件，屬第三方廠商動態；與本頁既有 08-23 TechRadar「疑心較重」的 Claude agent 部署自我複製惡意程式（turf war）敘事同屬「自我複製」主題，但本則為防禦端主動發現而非攻擊端部署，不逕自合併；不列入「## 現在還擋不住的攻擊」表（第三方廠商動態）
+- ❓ **待查證**（標 2026-09-27｜查 GPT-Red、self-replicating worm）：具體攻擊鏈、觸發條件、是否已修補與 OpenAI 官方說明均未見報導，僅 Google News 標題聚合層級可用
+- **可信度評估**：單一來源（shattered.io），0 互動，RSS 無正文，訊號強度低
 
 ### GitGuardian：AI coding agent 憑證外洩研究——Cursor、Claude Code、Copilot、MCP 皆列名（2026-09-25 新增，跨類別，非 Claude 專屬）
 
@@ -1046,6 +1054,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-09-27
+- **[📋 新增，非 Claude 事件] shattered.io：OpenAI 紅隊工具 GPT-Red 揪出自我複製的 AI worm 漏洞**：僅標題可用，具體攻擊鏈與修補狀態未見報導，詳見「## 技術彙整」
 
 ### 2026-09-25
 - **[📋 新增，非 Claude 專屬] GitGuardian：Cursor、Claude Code、GitHub Copilot、MCP 等 AI coding agent 存在憑證外洩風險**：僅日報摘要一句，具體機制未見報導，詳見「## 技術彙整」

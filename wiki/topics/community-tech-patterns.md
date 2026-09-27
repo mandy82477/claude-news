@@ -30,10 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-26
+**最後新聞更新：** 2026-09-27
 
-> **最新工作流模式**（2026-09-26）
-> - **Multi-agent 架構添四款控制平面**：zeron、claude-ops、VibeAround、coco 皆為跨 Claude Code／Codex／Cursor 等 harness 的編排或調度層。Skills 設計添四款專項合集：nature-skills（Nature 論文）、emilkowalski/skills（設計/工程通用）、drama-skills（AI 短劇）、asd-ste100-skill（簡化技術英文）。
+> **最新工作流模式**（2026-09-27）
+> - **新增類別「Agent 活動可視化」**：claude-office 用即時像素風辦公室模擬顯示 Claude Code 操作，同日另有 The City（機器人城市，來源已下架，僅存標題）走同一構想。
+> - **多類別添新代表技巧**：Skills 設計添 headcount（125+ skills 公司化組織）、personal-os-skills（Obsidian）、reladraw（可控版面圖表語言＋agent skill）；創意工具 Agent 整合添 anything2explainer（主題轉解說影片）、chess-postmortem-skills（棋局賽後分析影片）；記憶與知識管理添 memmy-agent；Plugin/MCP 整合添 agenvoy。
 
 ---
 
@@ -51,16 +52,18 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Skills 設計** | 知識框架化、免 git 雲端硬碟分享、drawio-skill、headcount、personal-os-skills、reladraw（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-27 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
-| **Skills 設計** | 知識框架化、流程 skill 化、免 git 雲端硬碟分享、drawio-skill、open-seo-mcp-skills、nature-skills（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **記憶與知識管理** | claude-mem、OKF、OzBrain、hister、Skillsync、aoci-code、second-brain-os（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-25 | 跨 session、跨工具、跨機器的持久記憶協定 |
-| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、stagehand、docsagent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-21 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、aoci-code、second-brain-os、memmy-agent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode、anything2explainer、chess-postmortem-skills（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **Agent 活動可視化** | claude-office 即時像素風辦公室模擬（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **Agent Loop 終止條件** | Loop exit condition 設計模式（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-19 | 「怎麼停下」比「怎麼跑起來」更難；要有顯式終止條件 |
@@ -69,7 +72,6 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | **架構邊界合約** | ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-12 | 用合約與工業標準定義不可越過的架構規則 |
 | **Agent 版本控制** | ADR 注入、架構決策文件先於實作（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-31 | 決策文件先於實作，降低代理方向偏移 |
 | **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards、agent-scan（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-18 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
-| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode、bang-motion（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 手機當 agent 控制介面，各自選不同傳輸層 |
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）
