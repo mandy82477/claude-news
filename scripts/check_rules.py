@@ -420,7 +420,7 @@ def check_coupling_hints(cfg: dict, sync_pairs_cfg: list, report: Report):
 # ---------------------------------------------------------------------------
 
 def check_personal_paths(cfg: dict, report: Report):
-    """git 追蹤的文字檔不得含使用者本機路徑或個人帳號（repo 公開）。"""
+    """repo 內的文字檔（含尚未 git add 的新檔）不得含使用者本機路徑或個人帳號（repo 公開）。"""
     if not cfg:
         return
     import fnmatch
@@ -432,7 +432,10 @@ def check_personal_paths(cfg: dict, report: Report):
     excludes = cfg.get("exclude_globs", [])
     try:
         out = subprocess.run(
-            ["git", "ls-files", "-z"], cwd=REPO_ROOT, capture_output=True, check=True
+            # --others --exclude-standard：連還沒 git add 的新檔一起掃。只掃 tracked 會讓閘在
+            # commit 前綠、commit 後才紅——新建的測試夾具就是這樣帶著個人路徑進了 repo。
+            ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+            cwd=REPO_ROOT, capture_output=True, check=True
         ).stdout
     except (OSError, subprocess.CalledProcessError) as exc:
         report.add(name, False, [f"git ls-files 失敗：{exc}"])
@@ -455,7 +458,7 @@ def check_personal_paths(cfg: dict, report: Report):
             if any(rx.search(line) for rx in patterns):
                 hits.append(f"{f}:{lineno}: {line.strip()[:100]}")
 
-    details = [f"掃描 {scanned} 個追蹤檔，排除 {excludes}"]
+    details = [f"掃描 {scanned} 個檔（追蹤＋未追蹤未忽略），排除 {excludes}"]
     if hits:
         details.append(
             f"發現 {len(hits)} 處個人路徑／帳號，改用 `git rev-parse --show-toplevel`、PATH 上的 python 或相對路徑："
