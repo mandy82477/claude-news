@@ -1,0 +1,581 @@
+{
+  "date": "2026-09-27",
+  "generatedAt": "2026-09-27 22:30 UTC",
+  "articleCount": 55,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+      "url": "https://github.com/reladraw/reladraw",
+      "source": "Hacker News",
+      "time": "09/26 17:10",
+      "sentiment": "",
+      "body": "作者不滿 Mermaid／Graphviz 等自動排版工具無法控制版面、Draw.io 又太耗時且不利 agent 操作，做出一套可自訂版面配置的圖表描述語言，同時附 npm 套件與可搭配 Claude 等 agent 使用的 skill。Hacker News 累積 351 分，遠高於當日其他討論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [],
+  "mediaReports": [
+    {
+      "title": "Anthropic and OpenAI sound the alarm on AI safety — and seek to shape how it's controlled - TribLIVE.com",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNbFBwY0UxVTRISmNVNnhhYlVkRXBKcUpQZmhiR25uYlRCVzdRYUhSTExoT3M3NHRxcTJpQ2Q0ZFM5VHV6TFkxN0NJbVcya2EyWkhYMWtZTGVyQXV3Sk0zVVlJbC0yZEp6TFRSbnltMDZUcnNSZkVZa3h3WjNLOFYtcGJ6MTdiT0JZeWJIdzBPcXZWem9wSkVBRmU0S1d5RXVoOGZIYnVPT1BlQWRpRl9pV1hJbFh6R21FMXJR?oc=5",
+      "source": "Google News / TribLIVE.com ＋Google News / AP News",
+      "time": "09/27 14:20",
+      "sentiment": "",
+      "body": "報導指出 Anthropic 與 OpenAI 同步就 AI 安全風險發出警示，並試圖主導安全規範由誰、如何制定，2 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's IPO is a $300 billion test for Amazon - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMDJ6SlViYVdlaWtOZlJCRjRPQjJmdWRORFQ2cmZWdk9rTVhYcWdLaWdpZzI0OTM2RDJRVDlLWk5QQ3JaWXhfQS1renp6Tk1JNDNiUmFkZWNUdlZfN3JjYWZkb2QzRnZOM2xHU0xneTZucXpzZkdrTDRnR2t5OHowUm4yQ0dhVVhMZUZnN2ExMWJ4eTdGbi1ZMEQ1TQ?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "09/27 01:47",
+      "sentiment": "",
+      "body": "報導以 Anthropic 潛在 IPO 為切角，分析其市值規模將如何檢驗 Amazon 手中持股與投資佈局的成敗。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "GPT-6 Astra vs Claude Opus 5.5: Benchmarks, Costs and Which to Choose - Kingy AI",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1TYzhYaDdjTzBHV2pnQjBkMi1WYldVMzlLaFVtREd4bjZvWmZhV0xSQlNQNThvb3NESnVLMUNlcmxYYmE2MmNZd2Z4TVdFY3EtY1NpdUwteTVBRWloN0Zwb1liQQ?oc=5",
+      "source": "Google News / Kingy AI",
+      "time": "09/27 03:35",
+      "sentiment": "",
+      "body": "科技媒體對照 GPT-6 Astra 與 Claude Opus 5.5 的效能與價格，供讀者依需求選擇。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[CRITICAL] Subagent spawning and subagent pattern bugs trigger infinite recursion, infinite token usage, grossly inefficient token usage, and lost accumulated subagent work.",
+      "url": "https://github.com/anthropics/claude-code/issues/68619",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/26 14:16",
+      "sentiment": "",
+      "body": "除今日聚焦提到的無限遞迴外，回報者指出過程中會伴隨權限拒絕的連鎖反應，且已累積的子代理工作成果會就此遺失。情緒：😤",
+      "focusTags": [
+        "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[MODEL] Claude verbose code comments by default — ignores instructions to stop.",
+      "url": "https://github.com/anthropics/claude-code/issues/65961",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/27 10:35",
+      "sentiment": "",
+      "body": "使用者回報 Claude 預設會在程式碼中加上大量註解，即使明確指示停止也不受控，該 issue 已累積 248 個反應。情緒：😤",
+      "focusTags": []
+    },
+    {
+      "title": "[FEATURE] Add rules support to Plugins",
+      "url": "https://github.com/anthropics/claude-code/issues/14200",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/26 19:55",
+      "sentiment": "",
+      "body": "社群要求 Claude Code 的 Plugins 機制支援類似 CLAUDE.md 的規則檔設定，該請求已累積 120 個反應、37 則留言。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] CLI output formatting artifacts break copy/paste - workarounds waste tokens",
+      "url": "https://github.com/anthropics/claude-code/issues/15199",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/26 17:48",
+      "sentiment": "",
+      "body": "使用者指出 Claude Code CLI 輸出全面帶有 2 個空格的縮排與約 80 字元處強制換行，破壞複製貼上的排版，該 issue 已累積 106 個反應。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] No Response From API 2.1.181, 2.1.183 (constantly)",
+      "url": "https://github.com/anthropics/claude-code/issues/69358",
+      "source": "GitHub Issues / claude-code",
+      "time": "09/26 14:15",
+      "sentiment": "",
+      "body": "多名使用者回報 Claude Code v2.1.181 與 v2.1.183 版本持續發生 API 無回應，該 issue 已累積 61 個反應。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: A Claude Code skill to analyze your chess games",
+      "url": "https://github.com/brumar/chess-postmortem-skills",
+      "source": "Hacker News",
+      "time": "09/26 15:34",
+      "sentiment": "",
+      "body": "作者做了一套 Claude Code skill，讓 Claude 用視覺（而非棋譜記號）看棋局並結合 Stockfish 解說，再把使用者的語音筆記轉成附講解的棋局影片，作者估算分析一局約耗費 15 美元 API 額度，2 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Aight I get it, Opus 5.5 is actually peak",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "09/26 00:18",
+      "sentiment": "",
+      "body": "一則獲選 r/ClaudeAI 週熱門的貼文，作者表示原本不理解外界討論、實測後認為 Opus 5.5 程式碼品質與可控性優於前代。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "ChatGPT Pro vs Claude Max: Which $100 or $200 Plan Should You Buy? - Kingy AI",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9RWjNyYW51WWNnOEsyckhmQmVnZFZJcFN5bXltek9YUHlveFR0Vk9FM1RiQzg2OUlPa3pQMlJ1aXhvNE1COXNQRGQ1VmtGd2tUNU96R28zcjdRZ0Zo?oc=5",
+      "source": "Google News / Kingy AI",
+      "time": "09/27 08:00",
+      "sentiment": "",
+      "body": "科技媒體針對 ChatGPT Pro（$100/月）與 Claude Max（$200/月）兩檔訂閱方案做選購比較，2 個來源同日報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "澳洲參議院傳喚 OpenAI、Anthropic 執行長出席 AI 調查聽證會，路透、彭博、半島電視台等至少 4 個來源同日報導。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMkgwZG5VR01rUjNsZkNPUkw1TFNEYTY1TGtCa010MUlRVzE2Vy1qaTBMNnJiYXliYlY1MkJONXpValJTRTdQLVNjazhJbGc1RDNVMDdTNU9WZXd3elhRVVBZNEFZLTBER2VfVkdxUW13YXprcnJKc1NjcmFwS0FYRlZYTWtZZWNQQ0pJV3JjVWFkUDZHZDNOT01FSVJOaDZLUU1wa1BFdDZpU2hZ?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZXdVbk9icWx6SFl4QU9wRmd2blc0RTZrZUJ0N1h1czl0OU1xZkQyMXNtbmlFMzRBOFJaTFNTSjRLRjVISEh4dzBCU0tRbHBNbzJrS0FDc18xN2ZVQjNyTkdGa0d3TnljZ2p6c2RHZGJsMDZkVWtxVG5VeGhEb3Ywck1mZ2hLS2JTaU1hOVR1bzRBakcyaFdFaDMweV9mTmJFUU9Id09sQWVTaDdaX0FsM0g3S3M?oc=5"
+      ],
+      "ref_names": [
+        "路透",
+        "彭博"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 調整 Claude API 計費規則，五類拒答（refused）情境中三類起改為收費，非全數免計費。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOTBQdVhFMDNLc2dqZWVvdEpMTlNrYzhXc1BrVXNmQ0FZZm8wNkwwUFFuUlFlZnFhWG1pUjhCaXNpeFhBNk5EQlBhZlRYajl1SkFHd0lXaDFZTTA2a0ZNQlR6S0F5Y2FLMXAyZHBuUFFiUFh5c3pVdm40NjhucHhBZlRaTmxHcDl2SmlFMFNCM1M?oc=5"
+      ],
+      "ref_names": [
+        "MIXED Reality News"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "GitHub 上有使用者回報 Claude Code 子代理（subagent）機制觸發無限遞迴：子代理無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 設定持續向下遞迴生成逾 50 層，並伴隨權限拒絕連鎖觸發，導致 token 用量暴增，官方已標記 CRITICAL，該 issue 累積 33 則留言、22 個反應。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/68619"
+      ],
+      "ref_names": [
+        "GitHub Issues"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Google DeepMind Loses Four Founding-Era Leaders In A Single Day",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rSTlQeFNUM2lsbjRlWnNNejhsV0NQWE14R0c4dXJqWkxvOWVxQ1djVHpsM2UwNWJtTHlvVFJ5MXIwSll0U2hRLUJuSVNfUzQyQlVYVVJEMS02cFpfTFlySFBzLTg1ZUVT?oc=5",
+      "body": "DeepMind 單日流失四位創始期干部，其中一人受訪表示是因無法認同 AI 研發步調過快而離職。",
+      "topic": "ai-talent-flow",
+      "topicPage": {
+        "id": "ai-talent-flow",
+        "name": "AI 實驗室人才流動",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "OpenAI's GPT-Red Finds Self-Replicating AI Worm Bug",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9hbEIyNGZWQXBkMjgycGZZR3NQMlB1VkpPUTV0bmpCcUNOZVF2cURpZ0NQTXJOTXZGV2VkcTg1RWlXeU9DYzFlMEluR0dWb0oyZXo3cW4yUGtac19HV2Etbnh1Yw?oc=5",
+      "body": "OpenAI 紅隊工具 GPT-Red 揪出一個會自我複製的 AI worm 漏洞。",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "AI Coding Agents for Enterprise: IP Indemnity, Data Residency and 500-Seat Cost Compared",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd2xqVjFwbVhKOHBWY1dJa1A5ei1DM0RCTFUwRDlRZHkydHhjaDhaLWxGNzdBamhvdTN6TVU4bjBnUTJ5ZWJhZ01aam9WMk1oMHJTZVphLVlxWjduYzdRNWQtcjRfYm5oSEVGVE1YczJab3dIRTd3d2ZubkVFX0g1cTE3VDlTNGR1OXdDNk1ZdXlOazFIMXNyQ3NCZDZadkx5QnVkclU4NEZPZllkNlNwV1BOY0ZZN2lNMkExVEYyNFdmR2FiQ2fSAcsBQVVfeXFMTkoyOUdmTEtfcS16blZCR0JsWkVNUXlJdzd2UERJTFVVaFAyLVYtMHVrTlFuV0Z3LWxLTUtPaTZfbVpWZUM3X1RWYk1rQ2U3QklCb1ZFQkMtMHBZdXZLZHBOYXF5TW9JU0NGbUtONHRyU01XQVlUR01zRGpQZ0FEOXBRbnU3MWVGZGNTbmxzaXRscGlYRzd5dThmU1RCTGpyeFVCbUdmTDJNcXNiLWk0OXVGOC1DWnpaXzVtbVdScVpDaFRubGVYdko0Ums?oc=5",
+      "body": "商業科技媒體比較企業導入 AI coding agent 時的智財賠償、資料落地與 500 人規模的成本差異。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 19
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code：官方標記 CRITICAL：子代理無視 CLAUDE_CODE_FORK_SUBAGENT=0 遞迴逾 50 層，伴隨權限拒絕連鎖與工作遺失（#68619）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5",
+      "name": "Claude Sonnet 5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-27",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- 官方標記 CRITICAL：子代理無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖與工作遺失（#68619）。\n- 新增已知問題 3 則：Plugins 缺 rules 支援請求（#14200）、CLI 輸出縮排與硬換行破壞複製貼上（#15199）、v2.1.181/183 API 無回應（#69358）。\n- GitHub connector 於 Cowork 顯示已連結卻未暴露工具（#61682），與既有 Google Drive connector 同類問題並列。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "社群觀感",
+            "date": "",
+            "body": "r/ClaudeAI 週熱門貼文稱 Opus 5.5 程式碼品質、可控性優於前代，另兩則以約 $3–4 API 花費重現同類展示；均屬弱訊號、尚無獨立複測。"
+          },
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "16 榜全數嘗試（直接抓取 12 榜、媒體轉述 4 榜、無法取得 0 榜）。本週最大的變化是 **Claude Opus 5.5 一上線就在三個榜登頂**：Text Arena（但與第二名差 5 分、誤差 ±12，分不出高下）、WebDev Arena（領先 65 分）、OpenRouter 實際用量。Search Arena 停在 08-24 已 34 天，改記為「榜停更」；EQ-Bench 連續 4 輪同值，已移出快照表。"
+          },
+          {
+            "page": "entities/sonnet-5",
+            "name": "Claude Sonnet 5",
+            "label": "最新動態",
+            "date": "",
+            "body": "GitHub Issue #65961：Claude 預設程式碼加大量註解、忽略停止指示，累積 248 反應、39 留言，尚無官方回應。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Claude Code $250 cloud sessions 額度資格再添一說：gHacks 稱限 Pro／Max 訂閱戶**：與 09-23「新用戶」說法是否同一資格範圍未見報導釐清，到期日仍未載，功能面見 [[entities/claude-code]]。\n- **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：政策細節見 [[topics/anthropic-government-policy]]，未見具名企業因此調整採購。\n- **Accenture 評測合作被問「能否轉化為營收」**：屬 09-19 合作案的商業化角度追問，尚無具體數字。\n- **Anthropic IPO 被稱為 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 報導，與 08-20 Motley Fool 估算之 4,000 億美元基準不同，僅標題可用。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。\n- 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：조선일보第二家跟進 09-26 事件，改用「AI 步調過快」措辭",
+            "date": "",
+            "body": "與 09-26 the-decoder.com 報導是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- 澳洲參議院傳喚 OpenAI、Anthropic 執行長出席 AI 調查聽證會，跨 4 家媒體同日報導，尚無具體日期與調查範圍。\n- Anthropic 傳將 API 拒答計費規則改版：五類拒答情境中三類起收費，僅單一媒體標題可用，事實頁尚待補列。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "澳洲參議院傳喚 OpenAI、Anthropic 執行長出席 AI 調查聽證會，路透、彭博、半島電視台等至少 4 個來源同日報導。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "OpenAI 紅隊工具 GPT-Red 在測試中揪出一個會自我複製的 AI worm 漏洞，僅標題可用。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 與 OpenAI 同步就 AI 安全發出警示、尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（doomers），延續 09-24 政治化框架敘事。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **新增類別「Agent 活動可視化」**：claude-office 用即時像素風辦公室模擬顯示 Claude Code 操作，同日另有 The City（機器人城市，來源已下架，僅存標題）走同一構想。\n- **多類別添新代表技巧**：Skills 設計添 headcount（125+ skills 公司化組織）、personal-os-skills（Obsidian）、reladraw（可控版面圖表語言＋agent skill）；創意工具 Agent 整合添 anything2explainer（主題轉解說影片）、chess-postmortem-skills（棋局賽後分析影片）；記憶與知識管理添 memmy-agent；Plugin/MCP 整合添 agenvoy。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Show HN: Reladraw（可控版面圖表語言＋Claude agent skill）351 分，本輪最高；Simon Willison 閉幕演講用 Opus 5.5 生成 kākāpō 像素動畫；另一則 Show HN 用視覺＋Stockfish 讓 Claude 分析棋局賽後（74 分，2 來源）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+      "url": "https://github.com/reladraw/reladraw",
+      "source": "Hacker News",
+      "time": "09/26 17:10",
+      "sentiment": "",
+      "body": "作者不滿 Mermaid／Graphviz 等自動排版工具無法控制版面、Draw.io 又太耗時且不利 agent 操作，做出一套可自訂版面配置的圖表描述語言，同時附 npm 套件與可搭配 Claude 等 agent 使用的 skill。Hacker News 累積 351 分，遠高於當日其他討論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

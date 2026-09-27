@@ -493,11 +493,6 @@
   "preview": "Claude Code：v2.1.280：Claude Opus 5.5 成為新預設模型（Pro／Max／Team／Enterprise／API／Bedrock／Vertex；Microsoft Foundry 仍為 Sonnet 4.5），1M context，$4／$20 每 Mtok。",
   "sedimentedToday": [
     {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
-    },
-    {
       "id": "opus-5",
       "name": "Claude Opus 5",
       "pageType": "entity"
