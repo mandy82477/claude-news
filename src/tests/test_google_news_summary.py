@@ -6,7 +6,7 @@ description 是一段 HTML（<a href=news.google.com…>標題</a> <font>出版�
 """
 import unittest
 
-from news_aggregator.sources.google_news import _visible_text
+from news_aggregator.sources.google_news import _description_summary, _visible_text
 
 
 class TestVisibleText(unittest.TestCase):
@@ -22,6 +22,20 @@ class TestVisibleText(unittest.TestCase):
 
     def test_plain_text_passes_through(self):
         self.assertEqual(_visible_text("  plain   text "), "plain text")
+
+
+class TestDescriptionSummary(unittest.TestCase):
+    # 真實形狀（2026-09-27 實抓）：<title> 帶「 - 出版者」尾巴，錨文字只有標題，<font> 是出版者
+    TITLE = "Anthropic Faces Court Setback on US Supply Chain Risk Label - Bloomberg"
+    RAW = ('<a href="https://news.google.com/rss/articles/CBMiabc" target="_blank">'
+           'Anthropic Faces Court Setback on US Supply Chain Risk Label</a>&nbsp;&nbsp;<font color="#6f6f6f">Bloomberg</font>')
+
+    def test_title_echo_becomes_empty_so_enricher_fetches_and_shell_gate_still_fires(self):
+        self.assertEqual(_description_summary(self.RAW, self.TITLE), "")
+
+    def test_real_description_text_is_kept(self):
+        raw = self.RAW + " The appeals court held that the Pentagon's supply-chain designation was within its discretion."
+        self.assertTrue(_description_summary(raw, self.TITLE).startswith("Anthropic Faces"))
 
 
 if __name__ == "__main__":

@@ -78,10 +78,27 @@ def _strip_shell_markers(summary: str) -> str:
     return _shell_marker_re().sub("", summary).strip()
 
 
-def _is_pure_shell(summary: str) -> bool:
-    """整段摘要剝完認得的標記後空無一物，才算「純殼」——只是含有標記但仍有其他
-    文字的摘要不算，那種情況該走一般的太短判斷，不冒用殼層訊息。"""
-    return summary.strip() != "" and _strip_shell_markers(summary) == ""
+_TITLE_ECHO_MAX_REST = 40
+
+
+def _is_pure_shell(summary: str, title: str = "") -> bool:
+    """整段摘要剝完認得的標記後空無一物，或剝掉標題後剩不到 40 字（Google News 的
+    「標題 - 出版者」回聲），才算「純殼」——只是含有標記但仍有其他文字的摘要不算，
+    那種情況該走一般的太短判斷，不冒用殼層訊息。"""
+    s = summary.strip()
+    if s == "":
+        return False
+    if _strip_shell_markers(s) == "":
+        return True
+    t = (title or "").strip()
+    if not t:
+        return False
+    if s in t:  # 摘要只是標題的一部分（Google News 錨文字＝去掉出版者的標題）
+        return True
+    core = t.rsplit(" - ", 1)[0].strip()  # 日報標題常是「標題 - 出版者」，回聲裡沒有那個尾巴
+    if core and core in s and len(s.replace(core, "", 1).strip(" -–—|·")) < _TITLE_ECHO_MAX_REST:
+        return True
+    return False
 
 
 def load_log(path: Path) -> list[dict]:
@@ -141,7 +158,8 @@ def audit(
 
     for r in last.values():
         cats = r["categories"]
-        title = str(r.get("title", "?"))[:60]
+        full_title = str(r.get("title", "?"))
+        title = full_title[:60]  # 只給訊息用；殼層判定要拿完整標題比對
         bad = [c for c in cats if c not in CATEGORIES]
         if bad:
             problems.append(f"未知類別 {bad}：{title}")
@@ -155,7 +173,7 @@ def audit(
             summary = str(r.get("summary") or "")
             if _HTML_RESIDUE.search(summary):
                 problems.append(f"排除條目的 summary 殘留 HTML，複核記者讀不到內文{HTML_HINT}：{title}")
-            elif _is_pure_shell(summary):
+            elif _is_pure_shell(summary, full_title):
                 msg = f"殼層摘要不得當排除依據，請以標題與 URL 判類派出：{title}"
                 (problems if effective_enforce else warnings).append(msg)
             elif len(summary.strip()) < MIN_SUMMARY:

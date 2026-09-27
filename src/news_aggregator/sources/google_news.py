@@ -26,6 +26,20 @@ _URL_RESOLVE_WORKERS = 8
 _TAG_RE = _re.compile(r"<[^>]*>|<[^>]*$")  # 含未閉合的半截標籤（截斷後常見）
 
 
+def _description_summary(raw: str, title: str) -> str:
+    """RSS description 剝完 HTML 通常只剩「標題 - 出版者 出版者」——那不是摘要，是標題回聲。
+    回聲直接給空字串：enricher 會去抓原文；抓不到（付費牆）就維持空，下游的殼層判定
+    （check_classification_log、派工包）才會如實把它標成「無可讀摘要」，而不是拿標題冒充摘要。"""
+    vis = _visible_text(raw)
+    # 真實形狀：<title> 是「標題 - 出版者」，錨文字只有「標題」，<font> 是出版者——比對要用去掉
+    # 「 - 出版者」尾巴的標題核心，不然整個 title 永遠不會出現在 description 裡（2026-09-27 實抓 0/100）。
+    core = title.strip().rsplit(" - ", 1)[0].strip()
+    if not vis or (core and vis in title):
+        return ""
+    rest = vis.replace(core, "", 1).strip(" -–—|·") if core else vis
+    return "" if len(rest) < 40 else vis
+
+
 def _visible_text(raw: str) -> str:
     """Google News RSS 的 description 是一段 HTML（<a href=news.google.com…>標題</a> <font>出版者</font>），
     原樣截 200 字元會留下半截 <a href=…> 標籤：既沒有內容，又因為長度 ≥ enricher 的薄摘要門檻而
@@ -88,7 +102,7 @@ def _fetch_google_query(query: str, cutoff: datetime) -> list[FeedItem]:
                 source=source_name,
                 published=pub or datetime.now(tz=timezone.utc),
                 score=0,
-                summary=_visible_text(entry.get("summary", ""))[:200],
+                summary=_description_summary(entry.get("summary", ""), entry.get("title", ""))[:200],
                 category="media",
             ))
         return result

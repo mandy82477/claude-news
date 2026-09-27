@@ -339,5 +339,22 @@ class TestRealLedger(unittest.TestCase):
             self.assertEqual(problems, [], f"{d}:\n" + "\n".join(problems))
 
 
+class TestTitleEchoIsShell(unittest.TestCase):
+    """Google News 抓原文失敗時摘要是標題回聲（錨文字＝去掉出版者的標題，後接出版者名），必須仍算殼層，否則殼層排除閘靜默失效。"""
+    TITLE = "Anthropic Faces Court Setback on US Supply Chain Risk Label - Bloomberg"
+
+    def test_anchor_text_plus_publisher_is_shell(self):
+        from check_classification_log import _is_pure_shell
+        self.assertTrue(_is_pure_shell("Anthropic Faces Court Setback on US Supply Chain Risk Label Bloomberg", self.TITLE))
+
+    def test_anchor_text_alone_is_shell(self):
+        from check_classification_log import _is_pure_shell
+        self.assertTrue(_is_pure_shell("Anthropic Faces Court Setback on US Supply Chain Risk Label", self.TITLE))
+
+    def test_real_summary_is_not_shell(self):
+        from check_classification_log import _is_pure_shell
+        self.assertFalse(_is_pure_shell("Anthropic Faces Court Setback on US Supply Chain Risk Label. The appeals court held that the Pentagon's designation stands and the company may seek rehearing.", self.TITLE))
+
+
 if __name__ == "__main__":
     unittest.main()
