@@ -23,7 +23,7 @@
 今日日報日期：[YYYY-MM-DD]
 你負責的分類條目原文節錄：
 
-[貼入步驟 2 整理好的該類別條目區塊]
+[貼入 `data/ingest-packets/[YYYY-MM-DD]/[類別].md` 全文；切份者 `[類別]-1.md`、`[類別]-2.md`… 依序貼齊]
 
 你負責頁面今日命中的待查證項目（機械偵測，可能誤判；無則寫「無」）：
 
@@ -38,7 +38,9 @@
 
 記者的角色、規則引用、回報格式只定義在角色檔 `.claude/agents/wiki-reporter-[category].md`（單一來源），由上方角色前導導入；派工 prompt 不重抄規則內文。
 
-**🚫 prompt 內不得臨場加寫「今日順手做 X」「記得同步 Y 頁」這類操作指示**——上方五個區塊（角色前導／日期／條目節錄／待查證命中／轉知待接手）加防偏誤說明即為完整 prompt，不再增加。針對單一條目的事實性提示寫在該條目的 `- **註：**` 行內。理由見 `.claude/skills/wiki-ingest/references/classification.md`「🚫 派工 prompt 不得臨場加寫操作指示」，2026-08-15 教訓見 `docs/rules-changelog/wiki-ingest.md`。
+包檔由 `scripts/build_ingest_packets.py` 產生，原樣貼入、不刪改：包頭「共 N 則（M 組）」與包尾 `END N` 讓記者自己核對有沒有收全，來源 slug、日報段落、`日報未收錄`／`專頁定向` 旗標、同事件聚合與 `已收錄比對` 都在包裡。
+
+**🚫 prompt 內不得臨場加寫「今日順手做 X」「記得同步 Y 頁」這類操作指示**——上方五個區塊（角色前導／日期／條目節錄／待查證命中／轉知待接手）加防偏誤說明即為完整 prompt，不再增加。針對單一條目的事實性提示寫在 routing 該則的 `note`，產包時落在該條目的 `- **註：**` 行內。理由見 `.claude/skills/wiki-ingest/references/classification.md`「🚫 派工 prompt 不得臨場加寫操作指示」，2026-08-15 教訓見 `docs/rules-changelog/wiki-ingest.md`。
 
 ## 4b devpractice 沉澱 prompt 首段
 
@@ -54,7 +56,7 @@
 
 ## 3b 分類複核 prompt（與六記者同批派出）
 
-主編寫完 `data/classification-log.jsonl` 並對帳通過後，與六記者同一輪派出。條目內容從帳本 `categories` 為空的行取（`title`、`url`、`source`、`summary`、`reason` 五欄都貼，缺 `summary` 複核記者只能用主編的理由審主編的理由；`summary` 是殼層標記時附上 `url` 讓複核記者能自己開連結判類，不得只憑標題猜）：
+步驟 2 產包成功（分類帳已寫、對帳已過）後，與六記者同一輪派出。條目內容＝貼入 `data/ingest-packets/[YYYY-MM-DD]/排除.md` 全文——每則已含標題、URL、來源、互動、摘要與主編排除理由（缺摘要複核記者只能用主編的理由審主編的理由；摘要是殼層時 URL 在，複核記者能自己開連結判類，不得只憑標題猜）：
 
 ```
 你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read `.claude/agents/wiki-reporter-classify-review.md`——那是你的角色定義，逐條照做後複核下面的排除清單。你不可再呼叫 Agent tool 委派任何工作。
@@ -62,14 +64,7 @@
 今日日期：[YYYY-MM-DD]
 主編今日排除（未分派給任何記者）的條目，每則附主編的排除理由：
 
-### [標題]
-- **URL：** [url]
-- **來源：** [source]
-- **互動：** [score] [score_unit]
-- **摘要：** [summary]
-- **主編排除理由：** [reason]
-
-### [下一則...]
+[貼入 `data/ingest-packets/[YYYY-MM-DD]/排除.md` 全文]
 ```
 
 當日無排除條目時不派複核記者，完成摘要記「排除 0 則，未派複核」。
@@ -84,7 +79,7 @@
 今日日報日期：[YYYY-MM-DD]
 以下條目原本分類錯誤，今日主編補派（主編已依分類表核對過類別），非原始派工的一部分：
 
-[貼入各則條目的原文節錄，格式同步驟 2，每則標「原分類：[原類別] → [正確類別]（主編已核對）」]
+[從步驟 3b 重產的 `data/ingest-packets/[YYYY-MM-DD]/[正確類別].md` 取出這幾則的條目區塊原樣貼入，每則加一行「原分類：[原類別] → [正確類別]（主編已核對）」]
 
 你負責頁面今日命中的待查證項目：[該類別原輪已派工 → 寫「無（原輪已附）」；原輪未派工 → 貼入掃描器輸出中該類別的區塊]
 轉知待接手：[該類別原輪已派工 → 寫「無（原輪已附）」；原輪未派工 → 貼入 `python scripts/pending_handoffs.py list --to [類別]` 的輸出]

@@ -47,3 +47,19 @@
 **已知缺口。** `data/classification-log.jsonl` 是既有資料，本輪未動它——09-22、09-24 兩個事故日期的舊排除行早於 `ENFORCE_FROM`，預設對帳只降級為警示、不阻斷派工，`TestRealLedger` 因此仍綠；但那兩天的排除理由本身沒有被更正（帳本上仍寫著「無可讀摘要」「重複」），需要主編對這兩天 append 更正行（依分類表補派或改寫排除理由）才是真正修好，本輪權責只在建立偵測機制與生效日門檻，不含歷史資料回填。
 
 **量測。** 以新規則回放帳本既有 115 筆開立，8 筆會被擋：有的是 `--page` 填了事實出處頁而非目標頁（如 H-a8bd29 page 填 community-tech-patterns、實際要動 official-community-gap；H-c773a5 page 填 jensen-huang、實際要動 anthropic-government-policy），2 筆是要新建的頁或一次列多頁（查不到負責人），其餘可能本來就轉錯人（未逐筆裁定）。因此 checklist 同時寫明 `--page` 填目標記者要動的頁，新建頁／跨頁才用 `--force`。
+
+## 2026-09-27 主編派工包與收報落帳改由腳本產生；新增 ingest 量測帳本
+
+**起因：** 09-26 本機手工跑一輪量到：主編每天真正的判斷只有一張「url → 類別／排除理由」表，其餘都是機械搬運——68 行分類帳、六份節錄包（合計約 40K 字元手貼進 7 個 Agent prompt）、49 筆歸因手抄、log 條目、轉知 open／close 指令；手抄歸因最容易錯。安全政策記者收到 23 則，其中 14 則是同一事件（DC Circuit 判決）的不同媒體；另有 5 則是前一兩天已歸因過的同一篇，記者各自 grep 半天才確認。
+
+**改動：**
+- `scripts/build_ingest_packets.py`：主編只寫 routing.json（categories／reason／note／summary_override）。腳本先驗 routing（漏則、多出原料外的 URL、排除沒理由、note 以請／記得／順手／同步起句、來源未註冊），在記憶體模擬對帳，全過才 append 分類帳、內呼 check_classification_log，再產每類一份包與 `排除.md`。包裡帶齊 slug、日報段落原文、日報未收錄／專頁定向旗標、同事件聚合、已收錄比對；包頭「共 N 則（M 組）」、包尾 `END N`，超過 25K 字元切份。
+- `scripts/collect_reporter_reports.py`：解析回報契約。歸因行驗 slug、頁面、當日原料後才 append；「已處理 H-xxxxxx」轉 close；「⚠️ 需主編轉知」印 open 草稿（負責人由 index 推）；包與回報做 URL 對帳並列未回應清單；輸出 log 骨架。預設 dry-run，`--apply` 才寫帳。
+- SKILL.md 步驟 2–4、classification.md 分類紀錄、dispatch.md（條目節錄改貼包檔全文，3b 貼 `排除.md`）、checklist.md 隨之改寫；review-registry 新增 3 組同步配對；`data/ingest-packets/` 不進 git。
+- `scripts/ingest_metrics.py` ＋ `data/ingest-metrics.jsonl`：步驟 5 收尾時從本機 subagent transcript 為每位記者 append 一行（turns、tool_uses、edits、cache_read、output、規則讀取方式與範圍、wiki 整讀、hook 回饋、是否不完整）。口徑：turns 與 token 以 message.id 去重——transcript 把一次回應拆成多筆記錄、usage 重複，逐筆加總約灌大 1.7 倍且倍數隨每輪工具數浮動，09-25 review 引用的 33.1M 即此口徑，去重後為 19.6M。找不到 transcript（雲端 routine）不寫零值行。首批回填 13 個日期、93 行。
+
+**量測（09-26 重跑）：** 各類件數與手工帳完全一致；安全政策 23 則收成 7 組，包從 15.8K 降到 9.1K 字元；已收錄比對標出 09-24／09-25 已歸因的 5 則。
+
+**設計取捨：** 原料的 `dedup_key` 是變更偵測鍵、`contributors` 是已被併掉的來源，靠這兩欄聚不起同一事件，故加上標題顯著詞交集 ≥2 作第三條依據，誤併時同組其他則仍保留標題與日報段落。早期歸因存的是 Google News 跳轉網址，已收錄比對改用文章 id 前綴比對。slug 只認整串相等或「名稱 / 子來源」，否則「GitHub Search」會靠字首 GitHub 蒙混。
+
+**第一輪 review 修正（同日）：** 同事件聚合的標題規則首版（顯著詞 ≥2）在 09-24／25 原料上把 Reddit「prompt injection」貼文與 Salesforce 漏洞、「Opus 5.5 Costs 40% Less」與 Reddit 討論串等四對不同事件併在一起；改為顯著詞 ≥3（互為 contributors 時 ≥2）、詞長 ≥4、含數字與模型名一律不算，並以 09-24～09-26 三天回測人工確認零誤併（釘成測試）；主條目跨包一致（互動最高、同分取最早），同組其他則欄位齊全。收報腳本補全形分隔、段外標題結束欄位、巢狀括號、同批重複 close 去重、未回應清單改以標題／issue 編號比對；registry 兩組會假綠的配對刪除改由測試看守。Google News 摘要剝 HTML 後抓不到原文者會變成「標題 - 出版者」回聲：來源端改為回聲即空摘要、`check_classification_log._is_pure_shell` 加標題回聲判定，殼層排除閘才不會靜默失效。

@@ -16,6 +16,8 @@
 - 彙整所有記者回報的 `新增頁面` 欄位，在對應分類下補上新連結
 
 **`wiki/log.md`**（append only，不可修改既有條目）
+
+收報腳本 stdout 末段的「log 條目骨架」已彙整更新頁面、新增頁面、feature-radar、index、呈現品質、分類回退與轉知；主編補摘要、品質備註、帳本單號後照下列格式 append。
 ```
 ## YYYY-MM-DD Ingest
 
@@ -29,18 +31,18 @@
 ```
 
 **`data/source_attribution.jsonl`**（append only，不可修改既有行）
-- 把所有記者回報的「來源歸因」欄逐筆轉成一行 JSON append，schema：
+- 由 `python scripts/collect_reporter_reports.py --date TARGET_DATE data/ingest-packets/TARGET_DATE/reports/ --apply` 把所有記者回報的「來源歸因」欄逐筆轉成一行 JSON append（先不加 `--apply` 看一遍；slug 未註冊、頁面不存在的行腳本剔除並警示，照警示回頭問記者，不手補），schema：
 
   ```json
   {"date": "<日報日期>", "source": "<slug>", "category": "<六類別>", "page": "<wiki相對路徑不含.md>", "item_url": "...", "item_title": "..."}
   ```
 
   slug 由步驟 2 節錄的來源行標定、記者照抄，單一真相源 `data/source_registry.json`；schema 詳細說明見 `data/README.md`
-- 記者回報「無」則該記者不寫；全部記者皆「無」則不動此檔
+- 記者回報「無」則該記者不寫；全部記者皆「無」則不動此檔；與帳上相同的行腳本略過，重跑不重複
 
 **`data/pending-handoffs.jsonl`**（轉知帳本，append only，透過腳本操作）
-- 記者回報「轉知處置」欄的「已處理」→ 逐筆 `python scripts/pending_handoffs.py close H-xxxxxx --by [類別] --result "[一句話]"`；「不適用」→ 判斷：理由成立則 `void`，理由是「不屬我」則保留 open 並改派（重新 `open` 給正確類別後 `void` 原筆）
-- 記者回報「同步自查」欄出現 `⚠️ 需主編轉知[目標類別]記者：…` 且目標是**另一位記者**（非主編自己的彙整工作）→ `python scripts/pending_handoffs.py open --from [來源類別] --to [目標類別] --page [頁面] --note "[要做什麼]"`；今日就能在同一輪派工內解決的（目標記者尚未派出）可直接附進其派工訊息並同時登帳
+- 記者回報「轉知處置」欄的「已處理」→ 收報腳本印出逐筆 `python scripts/pending_handoffs.py close H-xxxxxx --by [類別] --result "[一句話]"`，`--apply` 時代為執行；「不適用」→ 腳本只列出，由主編判斷：理由成立則 `void`，理由是「不屬我」則保留 open 並改派（重新 `open` 給正確類別後 `void` 原筆）
+- 記者回報「同步自查」欄出現 `⚠️ 需主編轉知[目標類別]記者：…` 且目標是**另一位記者**（非主編自己的彙整工作）→ 收報腳本印出 `python scripts/pending_handoffs.py open --from [來源類別] --to [目標類別] --page [頁面] --note "[要做什麼]"` 草稿（不自動執行，主編核過再跑）；今日就能在同一輪派工內解決的（目標記者尚未派出）可直接附進其派工訊息並同時登帳
 - `--page` 填目標記者要動的那頁（不是事實出處頁）：`open` 依 `wiki/index.md` 領域欄（子頁沿 frontmatter `parent`）驗 `--to` 是否該頁負責人，對不上 exit 1 並印出正確負責人，照它改 `--to`；確屬例外（要新建的頁、跨多頁）才 `--force --reason "…"`
 - `wiki/log.md` 寫到轉知的每一行都帶帳本單號 `H-xxxxxx`，或寫「不登帳：<理由>」——log 沒有腳本讀來派工，沒登帳的轉知下一輪沒人收到（步驟 4½ 的 log 轉知對帳看守）
 - 主編自己要做的（feature-radar、index、commitments）不登帳，照步驟 4 做
@@ -63,7 +65,7 @@
 - [ ] feature-radar.md 已彙整更新（無新功能則標「本日無新功能」）
 - [ ] wiki/index.md 狀態已全部同步（含所有記者回報的狀態變更）
 - [ ] wiki/log.md 已 append 本次 ingest 紀錄（含品質審查彙整，未修改既有條目）
-- [ ] data/source_attribution.jsonl 已 append 所有記者回報的來源歸因（每筆一行 JSON；全部回報「無」則跳過）
+- [ ] data/source_attribution.jsonl 已由 `collect_reporter_reports.py --apply` append 所有記者回報的來源歸因（全部回報「無」則跳過）；它列的警示已處理、未回應清單已追問或記入品質備註
 - [ ] 未在 `CLAUDE_NEWS/wiki/` 以外路徑建立或修改任何 wiki 檔案
 
 ## 完成摘要表

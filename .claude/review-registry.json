@@ -1781,6 +1781,21 @@
         "不登帳：<理由>"
       ],
       "_note": "2026-09-25：09-24 log 寫了轉知卻沒登帳，那筆交辦無人接手；規格端與看守端的豁免字樣必須同一個。"
+    },
+    {
+      "name": "派工包工作目錄：SKILL.md／dispatch.md 指名的路徑 <-> 產包與收報兩支腳本 <-> .gitignore 同一個 data/ingest-packets/",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-ingest/SKILL.md",
+        ".claude/skills/wiki-ingest/references/dispatch.md",
+        "scripts/build_ingest_packets.py",
+        "scripts/collect_reporter_reports.py",
+        ".gitignore"
+      ],
+      "patterns": [
+        "data/ingest-packets/"
+      ],
+      "_note": "2026-09-27：派工 prompt 的條目節錄改為貼入腳本產的包檔；路徑漂一邊，主編會貼到舊包或把工作檔 commit 進 repo。回報欄名與包檔 URL 行的兩端契約改由 src/tests/test_collect_reporter_reports.py（TestContractWithShared）與 src/tests/test_build_ingest_packets.py（TestPacketCollectorRoundTrip）看守——字面在兩檔別處也會出現，all_contain 改壞不紅。"
     }
   ],
   "coupling_hints": {

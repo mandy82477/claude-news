@@ -48,48 +48,38 @@ python scripts/scan_pending_verifications.py TARGET_DATE
 
 ### 2. 分類（主編）
 
-讀完**日報條目 + 上一步列出的未收錄條目**後，依 `.claude/skills/wiki-ingest/references/classification.md` 的分類表為每則新聞標記類別。
-跨類別條目可標多個類別。
+讀完**日報條目 + 上一步列出的未收錄條目**後，依 `.claude/skills/wiki-ingest/references/classification.md` 的分類表為每則新聞標記類別，跨類別條目可標多個。**主編要寫的只有一張 routing 表**（url → 類別或排除理由，schema 見 classification.md「分類紀錄」），先產骨架（每則原料一筆）：
 
-未進日報的條目在原文節錄中標一行 `- **日報未收錄**（僅原始抓取資料，摘要較簡略）`，讓記者知道細節密度不同、判斷時以自己的類別門檻為準。
+```
+python scripts/build_ingest_packets.py --date TARGET_DATE --init --routing data/ingest-packets/TARGET_DATE/routing.json
+```
 
-**專頁定向抓取的條目（`topic` 欄非空）**：`gathered_items.json` 中 `topic` 非空者，是為某個 wiki 專頁定向抓來的（來源標籤 `Topic Watch / <slug>`），**直接路由給該 slug 所屬領域的記者**，不必再走類別判斷。原文節錄中標一行 `- **專頁定向**（目標頁：topics/<slug>；收錄判準為該專頁觸發條件，**不套用 Claude/Anthropic 關聯門檻**）`。
+逐則填 `categories`；排除者填 `reason`；只針對該則的事實性提示寫 `note`；排除條目的摘要是殼層時補 `summary_override`。
+
+**專頁定向抓取的條目（`topic` 欄非空）**：來源標籤 `Topic Watch / <slug>`，是為某個 wiki 專頁定向抓來的，**直接路由給該 slug 所屬領域的記者**，不必再走類別判斷。包裡會自動標 `專頁定向`。
 
 > 這批的標題天生不含 Claude/Anthropic——那正是它們被定向抓來的原因。記者**不得因為「跟 Claude 沒關係」而略過**，但仍須依該專頁自己的觸發條件判斷收不收——不收可以，沒看過不行。
 
-分類完成後，為每個有條目的類別整理原文節錄（格式如下）：
+**分類紀錄、對帳與產包（強制，派工前）：**
 
 ```
-## [類別] 條目（共 N 則）
-
-### [條目標題]
-- **來源：** [媒體/平台]（slug：[hacker-news]；來源欄含 ＋ 的多來源每個各標一個 slug）
-- **日期：** YYYY-MM-DD
-- **摘要：** [原文關鍵內容，保留數字、版本號、具名企業等細節]
-- **原文重點：** [直接引用日報中的關鍵段落，不壓縮細節]
-
-### [下一則...]
+python scripts/build_ingest_packets.py --date TARGET_DATE --routing data/ingest-packets/TARGET_DATE/routing.json --out data/ingest-packets/TARGET_DATE/
 ```
 
-來源行的 slug 由主編依 `data/source_registry.json` 填入（日報來源前綴對 `name` 或 `aliases`，如「GitHub Search」→ `github`、「Blog」→ `blog`），記者照抄進「來源歸因」欄，不再各自查表。
+它依 routing 把當日每則原料 append 進 `data/classification-log.jsonl`、內呼 `python scripts/check_classification_log.py --date TARGET_DATE` 對帳，綠了才產包：每類一份 `<類別>.md`（逾 25K 字元切成 `<類別>-k.md`）與給複核記者的 `排除.md`，印出各包路徑與大小。來源 slug、日報段落原文、`日報未收錄`／`專頁定向` 旗標、同事件聚合、`已收錄比對`（前幾天已歸因到哪頁）都由腳本填，記者照抄 slug 進「來源歸因」欄。無條目的類別不產包、不派工。
 
-無條目的類別標記「無」，不派工。
+- exit 1＝routing 漏則或多了原料外的 URL、排除沒理由、note 是操作指示、來源未註冊、或模擬對帳有阻斷問題：**未寫帳、未產包**，修 routing 重跑。重跑冪等（與帳上同 URL 最後一行相同者不重複 append）；改判就改 routing 重跑，腳本 append 更正行（帳本不改舊行，同 URL 最後一行勝出）。
+- exit 3＝原料或日報缺檔：跑 `python scripts/check_classification_log.py --date TARGET_DATE` 分辨。它 exit 2＝原料已逾 14 天保留窗（逾期 backfill）：無原料可產包，改從 `news/TARGET_DATE.md` 手工整理各類節錄（每則標來源 slug），帳本每行 `reason` 註明「原料已逾保留窗，未對帳」，照常進步驟 3。它 exit 3＝原料在窗內卻缺檔或損毀＝抓料缺件，**不得跳過**，先修抓料（`docs/daily-automation.md`）再回來。
 
-**分類紀錄與對帳（強制，派工前）：** 當日每一則原料各 append 一行到 `data/classification-log.jsonl`，記它分到哪些類別；未分給任何類別的寫理由（格式見 `.claude/skills/wiki-ingest/references/classification.md`「分類紀錄」）。寫完跑：
-
-```
-python scripts/check_classification_log.py --date TARGET_DATE
-```
-
-exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正行修到零才可進步驟 3（帳本不改舊行，同 URL 最後一行勝出；⚠️ 警示行不阻斷）。exit 2＝腳本判定原料已逾 14 天保留窗（逾期 backfill 會遇到）：跳過對帳，帳本每行 `reason` 註明「原料已逾保留窗，未對帳」，照常進步驟 3。exit 3＝原料在窗內卻缺檔或損毀＝抓料缺件，**不得跳過**，先修抓料（`docs/daily-automation.md`）再回來。主編分類是整條鏈唯一沒有第二人把關的一步，這是它唯一的留痕與對帳點。
+主編分類是整條鏈唯一沒有第二人把關的一步，這是它唯一的留痕與對帳點。
 
 ### 3. 派工（Agent tool）
 
-**對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（讀當日 `data/classification-log.jsonl` 中 `categories` 為空的條目，覆核排除判斷，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+**對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（覆核步驟 2 產出的 `排除.md`，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 > ⚠️ **記者 agent 必須以 foreground（同步）方式啟動，不可設 `run_in_background: true`。** 背景記者的完成通知無法回到派工 agent，會造成永久等待。
 
-類別↔角色檔對照表、prompt 五區塊模板與防偏誤說明住 `.claude/skills/wiki-ingest/references/dispatch.md`，逐字照它派。
+每位記者 prompt 的條目節錄＝貼入 `data/ingest-packets/TARGET_DATE/<類別>.md` 全文（切份者依序貼齊，每份末行 `END` 都要在）。類別↔角色檔對照表、prompt 五區塊模板與防偏誤說明住 `.claude/skills/wiki-ingest/references/dispatch.md`，逐字照它派。
 
 ### 3b. 處理分類回退（主編，同輪內處理，不等下一輪）
 
@@ -99,13 +89,21 @@ exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正�
 2. **理由是否成立？** 比對 `.claude/skills/wiki-ingest/references/classification.md`「分類表」與「分流鐵則」。記者／複核記者的判斷多數可採信，主編只擋明顯錯誤；不成立則不派，完成摘要註明理由
 3. **按類別合併追加派工。** 成立的項目依目標類別分組，一類一次呼叫（不是一則一次——每次呼叫都是完整記者啟動，讀角色檔與規則檔就要十幾萬 token），模板見 `.claude/skills/wiki-ingest/references/dispatch.md`「3c」。**同輪內完成**，不登轉知帳本（轉知是「兩面都有事實」，分類回退是主編分錯，責任在主編，當場修）
 4. **一則最多一跳。** 追加派工的記者若再回退，不再派，記入完成摘要待使用者裁示。雲端無人值守，沒有這條會來回乒乓
-5. 追加派工的回報併入步驟 4 彙整，視同該記者原輪就收到；並把該則在 `data/classification-log.jsonl` 的 `categories` 補上目標類別、`reason` 附一句「分類回退自 [原類別]」（append 一行新紀錄，不改舊行）
+5. 追加派工的回報併入步驟 4 彙整，視同該記者原輪就收到；並在 routing 把該則 `categories` 補上目標類別、`reason` 附一句「分類回退自 [原類別]」後重跑步驟 2 的產包指令（腳本 append 更正行，不改舊行；3c 的條目區塊從重產的目標類別包裡取）
 
 無分類回退項目時本步驟略過。
 
 ### 4. 彙整共用檔案（主編）
 
-收到所有記者回報後，統一更新共用檔案：`wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl`，以及視情況更新 `wiki/overview.md`。**逐檔寫入規則見 `.claude/skills/wiki-ingest/references/checklist.md`**，本檔不重述。
+收到所有記者回報後，先把六記者（與 4c 投資分析記者）每份回報的最終訊息原文存成 `data/ingest-packets/TARGET_DATE/reports/<類別>.md`，跑收報腳本：
+
+```
+python scripts/collect_reporter_reports.py --date TARGET_DATE data/ingest-packets/TARGET_DATE/reports/
+```
+
+預設只印不寫：待 append 的歸因行（slug 未註冊、頁面不存在的行已剔除並警示）、轉知 close 指令、open 指令草稿（負責人依 `wiki/index.md` 推）、未回應清單（包裡有、回報沒提到的 URL）與 log 條目骨架。看過警示與未回應清單、該追問的追問完，加 `--apply` 重跑才 append `data/source_attribution.jsonl` 並執行 close。分類複核記者的判定走步驟 3b，不放進此夾。
+
+接著統一更新共用檔案：`wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl`，以及視情況更新 `wiki/overview.md`。**逐檔寫入規則見 `.claude/skills/wiki-ingest/references/checklist.md`**，本檔不重述。
 
 ### 4b. devpractice 沉澱派工（主編）
 
@@ -115,9 +113,9 @@ exit 1＝有原料沒著落、排除沒理由或摘要不可讀，append 更正�
 
 ### 4c. market 判讀派工（主編）
 
-與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後附今日日報條目節錄（與六記者同一份步驟 2 產物，不另篩）。
+與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後依序貼入 `data/ingest-packets/TARGET_DATE/` 六類包檔全文（與六記者同一份步驟 2 產物，不另篩）。
 
-收報後把「判讀 N 則／本日無訊號」記入 log.md 本次 ingest 紀錄一行 `market 判讀：…`；記者回報的來源歸因照步驟 4 append 至 `data/source_attribution.jsonl`（slug 用該則日報條目的來源，不是 `user-query`）。
+收報後把「判讀 N 則／本日無訊號」記入 log.md 本次 ingest 紀錄一行 `market 判讀：…`；記者回報存進步驟 4 的 `reports/` 夾（檔名 `<類別>.md` 同規則）後照步驟 4 跑收報腳本落帳（slug 用該則日報條目的來源，不是 `user-query`）。
 
 ### 4½. 內容閘（主編）
 
@@ -136,6 +134,14 @@ python scripts/ingest_gate.py --date TARGET_DATE
 ### 5. 完成前強制核對與摘要
 
 **在宣告完成之前**，逐項確認 `.claude/skills/wiki-ingest/references/checklist.md` 的核對清單，再依該檔的摘要表格式輸出完成摘要。
+
+**量測帳本（只量不評，不擋 commit）：** log 寫完後跑
+
+```
+python scripts/ingest_metrics.py --date TARGET_DATE
+```
+
+它從本機 subagent transcript 為每位記者 append 一行到 `data/ingest-metrics.jsonl`（併入收尾 commit），並印摘要表（角色／run／turns／tool_uses／edits／cache_read／output／wiki 整讀數／狀態）。看三件事：同角色與前幾天比 turns、cache_read 有沒有明顯跳動；`wiki_full_reads` 有沒有整讀大頁；狀態欄「⚠️ 不完整」的行數字只是下限，不拿來比。找不到 transcript 時（雲端 routine 是否留有 transcript 尚未以探針證實）腳本印「無 transcript」、exit 0、不寫任何行——log 帶一句「本輪無量測」即可，**不手補零值行**。重跑同日冪等。
 
 ---
 

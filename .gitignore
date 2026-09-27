@@ -48,3 +48,6 @@ docs/architecture-evolution-react.bak.html
 # 本機專用雜檔（session 交接筆記等）——不進 repo
 docs/local/
 .claude/tree-claims/
+
+# wiki ingest 當日工作檔（routing、派工包、記者回報）——判斷已落在 data/classification-log.jsonl，不進 repo
+data/ingest-packets/
