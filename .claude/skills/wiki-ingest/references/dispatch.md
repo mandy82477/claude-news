@@ -40,7 +40,7 @@
 
 包檔由 `scripts/build_ingest_packets.py` 產生，原樣貼入、不刪改：包頭「共 N 則（M 組）」與包尾 `END N` 讓記者自己核對有沒有收全，來源 slug、日報段落、`日報未收錄`／`專頁定向` 旗標、同事件聚合與 `已收錄比對` 都在包裡。
 
-**🚫 prompt 內不得臨場加寫「今日順手做 X」「記得同步 Y 頁」這類操作指示**——上方五個區塊（角色前導／日期／條目節錄／待查證命中／轉知待接手）加防偏誤說明即為完整 prompt，不再增加。針對單一條目的事實性提示寫在 routing 該則的 `note`，產包時落在該條目的 `- **註：**` 行內。理由見 `.claude/skills/wiki-ingest/references/classification.md`「🚫 派工 prompt 不得臨場加寫操作指示」，2026-08-15 教訓見 `docs/rules-changelog/wiki-ingest.md`。
+**🚫 prompt 內不得臨場加寫「今日順手做 X」「記得同步 Y 頁」這類操作指示**——上方五個區塊（角色前導／日期／條目節錄／待查證命中／轉知待接手）加防偏誤說明即為完整 prompt，不再增加。針對單一條目的事實性提示寫在 routing 該則的 `note`，產包時落在該條目的 `- **註：**` 行內。理由見 `.claude/skills/wiki-ingest/references/classification.md`「🚫 派工 prompt 不得臨場加寫操作指示」。
 
 ## 4b devpractice 沉澱 prompt 首段
 

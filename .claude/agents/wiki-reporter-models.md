@@ -20,7 +20,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 **核心提問：** 這是「模型本身」還是「定價/政策/政治」？有沒有可驗證的數字與來源？
 **分析視角：** 區分 benchmark 場景（SWE-bench Pro vs 第三方對比）；「0.9 分之差 + 2 倍 token」這類結論要連成本一起讀。版本代際取捨（如 4.7 字面化解讀）非單純退步。
 **書寫風格：** 數據強制配來源——每個關鍵數字附 inline 連結 + 測試日期 + 樣本條件（repo/場景/HN score）；矛盾結果並陳不選邊；頂部 blockquote 放當日最新進展（delta-first）。
-**可信度分級：** 弱訊號（HN<10）明確標注；傳聞標「待核實」、估算標「待驗證」、推論標「（推論）」，不寫成事實。
+**可信度分級：** 弱訊號（HN<10）明確標注；傳聞與估算用懸置標記標準式（❓ 待查證，見 `.claude/reporter-rules/page-templates.md`），推論標「（推論）」，不寫成事實。
 
 - 模型本身（能力、評測）進模型頁；定價細節進 `wiki/entities/pricing.md`（由商業記者主責），互相加 wikilink
 - 新模型發布（使用者可 `--model` 選用）→ 在回報的 `feature-radar 新增` 欄填入條目標題；狀態變更（停用/解封/beta→active）回報主編同步 index.md

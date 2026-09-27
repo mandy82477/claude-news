@@ -9,7 +9,7 @@
 - 只更新 `wiki/` 路徑下的**類別專屬頁面**
 - **不可**碰 `wiki/feature-radar.md`、`wiki/index.md`、`wiki/log.md`（由主編統一處理）
 - **不可**在 `news/` 路徑寫入或修改任何檔案（日報為唯讀原始資料）
-- **不可再委派**：不可呼叫 Agent tool 把任務轉給子 agent——所有頁面工作親自完成（再委派會讓完成通知迷路、品質無人驗收；曾三度導致任務停擺）
+- **不可再委派**：不可呼叫 Agent tool 把任務轉給子 agent——所有頁面工作親自完成（再委派會讓完成通知迷路、品質無人驗收）
 - **🚫 不可執行任何改動工作區全域狀態的 git 指令**：`git stash`（含 `stash pop`／`drop`）、`git checkout -- <path>`、`git restore`、`git reset`、`git clean`、`git pull`／`rebase` 一律禁止。**你是六個並行記者之一，工作區是共用的**——這些指令的作用域是整個工作區，不是你的檔案，執行下去會連同其他記者**當下正在寫的頁面**一起捲走。你只能用 Read／Write／Edit 動自己負責的頁面；**commit 與還原一律屬主編收尾工作，不是你的**。
 
   > 遇到 git 狀態問題（檔案看起來被別人改過、有衝突標記、內容不是你預期的）→ **不要自己動手修**，在回報末尾寫一行「⚠️ 工作區異常：[你觀察到什麼]」交主編處理。
@@ -159,7 +159,7 @@ slug | 類別 | page路徑 | item_url | item_title
 
 ## 互動門檻對照表
 
-來源清單以 `src/news_aggregator/main.py` 的 `sources` 為準（lobste.rs 已於 2026-07-10 移出，18 天 0 命中），各規則檔的互動門檻以下表為準（規則檔寫「高/中/低門檻」即引用此表）；
+來源清單以 `src/news_aggregator/main.py` 的 `sources` 為準，各規則檔的互動門檻以下表為準（規則檔寫「高/中/低門檻」即引用此表）；
 gathered_items.json 的 score_unit 標明單位（分/讚/留言），不可跨單位直接比大小。
 
 | 強度 | HN | Reddit | GitHub Issue | GitHub repo（星）| dev.to | 其他 |

@@ -18,7 +18,7 @@
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 🌐 社群 的所有頁面（含日後新增）皆由本記者負責維護與 lint。
 
-> `wiki/topics/community-tech-tools.md` 已改為 **lint 專用**，每日 ingest 不更新此頁。策展規則見 `.claude/reporter-rules/community/weekly.md`。
+> `wiki/topics/community-tech-tools.md` 為 **lint 專用**，每日 ingest 不更新此頁。策展規則見 `.claude/reporter-rules/community/weekly.md`。
 
 **分流鐵則：** GitHub Issues 條目屬功能記者（claude-code 已知問題）；僅當該 issue 引發跨平台討論（HN/Reddit 也在延燒）才作為 discussions 條目收錄。
 
