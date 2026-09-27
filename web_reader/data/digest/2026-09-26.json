@@ -384,6 +384,11 @@
       "id": "market-signals",
       "name": "投資訊號判讀",
       "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
     }
   ],
   "reader": {

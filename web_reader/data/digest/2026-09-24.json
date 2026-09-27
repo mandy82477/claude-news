@@ -225,6 +225,10 @@
         {
           "id": "claude-code",
           "pageType": "entity"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
         }
       ]
     },
@@ -484,11 +488,6 @@
       "id": "sridhar-vembu",
       "name": "Sridhar Vembu",
       "pageType": "entity"
-    },
-    {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
     },
     {
       "id": "official-community-gap",
