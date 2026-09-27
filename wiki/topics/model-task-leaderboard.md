@@ -53,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
-| [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記；本輪二手來源與此不一致，暫維持） | 09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
+| [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比，見註記；本輪另一組媒體轉述與此不一致，暫維持） | 09-10（媒體轉述） | [SWE-bench](https://www.swebench.com/) |
 | [寫文案、聊天、翻譯](#eval-lmarena) | claude-opus-5.5-high（1509）> claude-opus-4-6-high（1505）> claude-fable-5-high（1504）（差距在誤差內，見註記；Claude 包辦前三） | 09-25（榜頁自標） | [Text Arena](https://arena.ai/leaderboard/text) |
 | [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242）（榜停更，見註記） | 08-24（榜頁自標，已 34 天未更新） | [Search Arena](https://arena.ai/leaderboard/search) |
 | [做網頁／前端](#eval-webdev) | claude-opus-5.5-max（1827）> claude-fable-5.1-max（1762）> gpt-6-sol-max（1681） | 09-25（本次 09-27 抓取） | [WebDev Arena](https://arena.ai/leaderboard) |
@@ -77,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Text Arena 前三 1509±12 > 1505±3 > 1504±4，**差距在誤差內，不要拿這個排序當選型依據**；Opus 5.5 票數還少，誤差是其他兩名的三倍。
   - WebDev Arena 領先第二名（Fable 5.1）65 分，是本週唯一差距明顯的一列。
 - **Search Arena 榜停更**：榜頁自標資料日期仍為 **08-24（已 34 天）**；取得沒問題，是榜自己沒動。
-- **EQ-Bench 連續 4 輪同值（07-20）**：頁面為 JS 渲染、直接抓取持續失敗，二手數字四輪不動，**已不宜作為選型依據，列入汰換討論**（待使用者裁示）。
+- **EQ-Bench 連續 4 輪同值（07-20）**：頁面為 JS 渲染、直接抓取持續失敗，轉述數字四輪不動，**已不宜作為選型依據，列入汰換討論**。
 - **SWE-bench 本輪二手來源不一致，維持上週值**：本輪抓到的另一組二手數字（聚合站、Pro 首位記為 Fable 5 80.0%）與上週的媒體轉述對不上版本號，判為不同來源的混用；Pro（1,865 題）與 Verified（500 題，已飽和）兩子集仍不可互比。
 - **MTEB 本輪仍不採計**：官方 Space 載入失敗，二手報導指向不同榜版的首位（QZhou-Embedding 75.97），與上週的 KaLM-Gemma3-12B 無交集可比，快照格維持上週值並照舊標二手。
 - **Terminal-Bench 只採 3.0**：榜頁預設已顯示 4.0，本頁仍只採 3.0 一個版本（與 08-28 記錄一致，數字為媒體轉述）。
