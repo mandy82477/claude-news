@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（正式發布）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-19
-**最後新聞更新：** 2026-09-03
+**最後更新：** 2026-09-27
+**最後新聞更新：** 2026-09-27
 
-> **最新動態**（2026-09-03）
-> Anthropic Status 通報 Claude Sonnet 5 錯誤率一度升高，12:37 UTC 調查中 → 12:47 UTC 監控修復結果 → 12:56 UTC 已解決，無需採取行動。同日另有一起影響 Fable/Mythos 5.1、Fable/Mythos 5、Opus 5、Opus 4.8、Opus 4.6 的多模型錯誤率事件（獨立事件，同日 16:16 UTC 已解決，2026-09-07 查證），完整記錄見 [[entities/fable-5]]。
+> **最新動態**（2026-09-27）
+> GitHub Issue #65961：Claude 預設程式碼加大量註解、忽略停止指示，累積 248 反應、39 留言，尚無官方回應。
 
 ---
 
 ## 現況
 
-**2026-09-03 最新**：Anthropic Status 通報 Claude Sonnet 5 錯誤率一度升高，12:37 UTC 起調查、12:56 UTC 已解決（約 19 分鐘）；同日另有一起獨立事件影響 Fable/Mythos/Opus 全系列（本頁模型不在受影響清單內），完整記錄見下方「歷史記錄」與 [[entities/fable-5]]。
+**2026-09-27 最新**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
 
 Claude Sonnet 5 於 2026-07-01 正式發布，定位為 Anthropic **最 agentic 的 Sonnet 模型**，在 reasoning、tool use、coding、knowledge work 等多個面向均有顯著提升，效能接近 Opus 4.8。
 
@@ -90,6 +90,7 @@ claude --model claude-sonnet-5-20260701
 
 ## 爭議
 
+- ⚠️ **預設冗語註解、忽略停止指示**：GitHub Issue #65961 回報 Claude 生成程式碼預設加大量註解，即使明示停止仍持續產生；累積 248 反應、39 留言，尚無官方回應（[GitHub Issue #65961](https://github.com/anthropics/claude-code/issues/65961)，2026-09-27）。同屬既有「Claudism」冗語傾向，見 [[topics/community-tech-patterns]]
 - **官方 BrowseComp 對比圖表換版（爭議已落地，2026-08-26 查證）**：Anthropic 於 **2026-06-30 以 changelog 更正**替換了 Sonnet 5 的 BrowseComp 成本效能圖——原圖未套用其標準 agentic-search 方法論，新圖改用 Sonnet 5 system card 設定（10M token 預算、compaction、programmatic tool calling），成本軸上限也從約 $10 拉到 $50。官方定調為**方法論更正**，非挑選有利數據；批評方（[vincentschmalbach.com](https://www.vincentschmalbach.com/anthropic-changed-sonnet-5-chart-after-it-made-sonnet-look-bad/)，HN score 3）認為敘事從「Sonnet 落後 Opus」變成「花得夠多就有用」。**該文未提供修改前後圖表的存檔對照**，換版事實與官方理由則有 changelog 可稽；讀者可自行判斷方法論更正是否合理，本頁不代為裁定
 - ⚠️ **個性/語氣不如 Sonnet 4.6（主觀回饋）**：Reddit 多位使用者反映 Sonnet 5 智力提升但互動個性流失——Sonnet 4.6 原本較有個性、懂得對話節奏、簡短回應精準，Sonnet 5 感覺更像通用「help」助手而非有特色的對話夥伴（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1ulf5xc/something_important_was_lost_between_sonnet_46/)）；屬主觀體驗回饋，非量化評測，與 Fable 5「失去靈魂」討論（見 [[entities/fable-5]] 爭議區）呈現類似的世代模型「個性 vs 能力」取捨模式（推論）
 - ⚠️ **回應內容重複（弱訊號，2026-07-09）**：Reddit r/ClaudeCode 使用者詢問是否也遇到 Sonnet 5 回應內容重複的情形；貼文無 score（Reddit RSS 恆 0，非跨平台佐證），暫僅列為待觀察訊號，不構成已驗證問題。同方向的世代級品質觀感（含 Sonnet 5 在內的第 5 代）整理在 [[topics/code-quality-decline]]
@@ -108,6 +109,9 @@ claude --model claude-sonnet-5-20260701
 - [[news/2026-07-01]]
 
 ## 歷史記錄
+
+### 2026-09-27
+**GitHub Issue #65961：預設冗語註解、忽略停止指示**：使用者回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應（[GitHub Issue #65961](https://github.com/anthropics/claude-code/issues/65961)，2026-09-27）。與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節；本則聚焦「指示不受控」本身，非事後清理方案。
 
 ### 2026-09-03
 **錯誤率一度升高（同日解決，約 19 分鐘）**：Anthropic Status 通報 Claude Sonnet 5 錯誤率升高，官方時序為 12:37 UTC 調查中 → 12:47 UTC 監控修復結果 → 12:56 UTC 已解決，無需採取行動（[Anthropic Status](https://status.claude.com/incidents/288w7p4hk1l1)，2026-09-03）。同日另有一起**獨立**事件影響 Fable/Mythos 5.1、Fable/Mythos 5、Opus 5、Opus 4.8、Opus 4.6，13:41 UTC 已鎖定原因，同日 16:16 UTC 標記已解決（2026-09-07 查證），本頁模型不在受影響清單內，完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)，2026-09-03）。屬穩定性事件，非能力或定價變化。

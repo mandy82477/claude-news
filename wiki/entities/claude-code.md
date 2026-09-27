@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-26
+**最後新聞更新：** 2026-09-27
 
-> **最新動態**（2026-09-26）
-> - **v2.1.283**：新增 `x-claude-code-prompt-id` 閘道提示標頭，設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 加入，供 LLM gateway 歸組同一提示的請求。
-> - 新增已知問題 2 則：Cowork／Chat 合併後新建專案「選擇資料夾」功能消失（#76694）；Cowork 資料夾功能於 Windows 不支援 UNC 路徑（#45297）。
+> **最新動態**（2026-09-27）
+> - 官方標記 CRITICAL：子代理無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖與工作遺失（#68619）。
+> - 新增已知問題 3 則：Plugins 缺 rules 支援請求（#14200）、CLI 輸出縮排與硬換行破壞複製貼上（#15199）、v2.1.181/183 API 無回應（#69358）。
+> - GitHub connector 於 Cowork 顯示已連結卻未暴露工具（#61682），與既有 Google Drive connector 同類問題並列。
 ---
 
 ## 現況
@@ -192,8 +193,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（52 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（55 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**子代理無限遞迴，token 用量暴增（GitHub issue #68619，官方標 CRITICAL，累積 33 則留言、22 個讚，2026-09-26）**：無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖，子代理工作成果遺失；官方尚未給修復時程。
+- 🔴 **未修復**｜**CLI 輸出全帶 2 空格縮排與 80 字元強制換行，破壞複製貼上（GitHub issue #15199，累積 28 則留言、106 個讚，2026-09-26）**：與既有「終端機複製夾帶縮排」（#18170）同類但涵蓋全輸出，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：Plugins 支援類似 CLAUDE.md 的 rules 設定檔（GitHub issue #14200，累積 37 則留言、120 個讚，2026-09-26）**：使用者呼籲讓 Plugins 機制能像 CLAUDE.md 一樣附帶規則檔設定；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 34 則留言、30 個讚，2026-09-25）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
 - 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
@@ -319,8 +323,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（71 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（72 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
@@ -407,8 +412,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（36 條已修復、8 條未修復、1 條查無官方）
+### 🌐 服務穩定性（36 條已修復、9 條未修復、1 條查無官方）
 
+- 🔴 **未修復**｜**v2.1.181、v2.1.183 持續 API 無回應（GitHub issue #69358，累積 27 則留言、61 個讚，2026-09-26）**：與「串流閒置逾時」（#46987）、「Connection closed mid-response」（#69415）同類但版本症狀不同，暫分列；官方尚未回應。
 - ✅ **已修復**｜**Anthropic Status：Opus 5、Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-22 00:50–02:10 UTC，02:35 UTC 監控確認恢復）**：三款模型請求錯誤率升高，官方分批修復後確認恢復正常。[來源](https://status.claude.com/incidents/7g1qpkyz5gxh)
 - ✅ **已修復（約 24 分鐘後解決）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率間歇升高（2026-09-15 10:50 UTC 進入監控 → 11:14 UTC 確認解決）**：與 09-11 同款模型錯誤率事件（見下）為不同起單獨通報事故，暫分列追蹤。[來源](https://status.claude.com/incidents/6304r9jjhj34)
 - 🔴 **未修復（監控中）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-11 14:28 UTC 已部署修復並監控中）**：截至彙整時尚未標記為 resolved。[來源](https://status.claude.com/incidents/t33dncr5ydvl)
@@ -733,6 +739,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-27 | 新增已知問題 5 則：子代理無限遞迴標 CRITICAL（#68619）、CLI 格式破壞複製（#15199）、Plugins 缺 rules（#14200）、GitHub 無工具（#61682）、API 無回應（#69358）。 |
 | 2026-09-26 | **v2.1.283**：新增閘道提示標頭 `x-claude-code-prompt-id`。新增已知問題 2 則：Cowork「選擇資料夾」消失（#76694）、Windows UNC 不支援（#45297）。 |
 | 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定（截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失。桌面文件：本機/SSH 自動載入帳號 skills/plugins。 |
 | 2026-09-24 | **v2.1.281**：desktop policy 新設定；旗標增 9。新增 #60366（hi 誤判）併入 Usage Policy。互動更新：#63903、#8451、#12925。 |
