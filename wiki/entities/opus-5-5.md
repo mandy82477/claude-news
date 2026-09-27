@@ -32,10 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
 **最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-23
+**最後新聞更新：** 2026-09-27
 
-> **最新動態**（2026-09-23）
-> Anthropic 發布 Claude Opus 5.5，Claude Code v2.1.280 起設為預設 Opus；牌價降至 $4／$20 每 Mtok（較 Opus 5 降 20%），官方稱「運算成本降 40%」。同日 OpenAI 發布 GPT-6 Sol／Luna 應戰新一輪價格戰。
+> **社群觀感**（2026-09-27）
+> r/ClaudeAI 週熱門貼文稱 Opus 5.5 程式碼品質、可控性優於前代，另兩則以約 $3–4 API 花費重現同類展示；均屬弱訊號、尚無獨立複測。
 
 ---
 
@@ -89,6 +89,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **VentureBeat 稱「勝過 Fable 5.1、API 價格便宜 60%」**：「勝過」對得上官方表；「60%」是對 Fable 5.1 牌價（$10/$50）的比較，與官方「典型工作負載比 Opus 5 少花 40%」不是同一對照，並陳不選邊。
 - **快取讀取 $0.20 是降 60%**（Opus 5 為 $0.50），與牌價降 20% 分開看。
 - **HN 討論**（1,674 分，7 個來源同日交叉報導，2026-09-22）：屬互動量訊號，非能力數字。
+- **社群反應正向但屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)稱程式碼品質與可控性優於前代；另兩則（[複現實測](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)、[原展示貼文](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)）以約 $3–4 API 花費重現 Opus 5.5 專案。三則皆單則貼文、0 留言、無測試方法或量化指標，不構成獨立複測。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 
 **所以呢**：官方有具名基準表且全項領先前代；要看的是社群獨立複測，目前還沒有。
@@ -141,7 +142,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [The Verge：Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity](https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity)（2026-09-22）
 - [The New York Times：Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate](https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html)（2026-09-22）
 - [Simon Willison：Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war](https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/)（2026-09-22）
+- [Reddit r/ClaudeAI：Aight I get it, Opus 5.5 is actually peak](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)（週熱門，2026-09-26）
+- [Reddit r/ClaudeAI：Jaw literally dropped...](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)（週熱門，2026-09-24）
+- [Reddit r/ClaudeAI：Made entirely with Opus 5.5 + $3.21 of OpenRouter API usage](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)（週熱門，2026-09-23）
 - [[news/2026-09-23]]
+- [[news/2026-09-27]]
 
 ## 歷史記錄
 
