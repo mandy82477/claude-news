@@ -895,3 +895,13 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-27T12:11:22Z] Step 1a：src/gathered_archive/2026-09-27.json 不存在（cp 失敗），代表當日尚未抓到料 → Step 1b 新鮮度防線中止：ABORTED: gathered_items.json date=2026-09-26 items=47，非目標日期（TARGET_DATE=2026-09-27）的新鮮資料。本班為當日第一班（12:00 UTC），上游 GitHub Actions 抓料延遲屬已知現象，交由下一班（17:00/22:00 UTC）接手
 [cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:29Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-09-27T22:10:42Z]
+[Sun 2026/09/27 22:10:00.00] === Agent pipeline start (2026-09-27) ===
+[Sun 2026/09/27 22:10:00.00] Aggregator OK (GitHub Actions daily-gather, replay from src/gathered_archive/2026-09-27.json)
+[Sun 2026/09/27 22:35:00.00] Digest OK (news/2026-09-27.md, 55 items, 15/15 sources healthy)
+[Sun 2026/09/27 23:00:00.00] Wiki ingest OK (6 category reporters + classify-review + devpractice + market, all foreground; 1 分類回退 3則 社群→模型)
+[Sun 2026/09/27 23:05:00.00] Reader digest OK (daily/2026-09-27.md, 14 pages, 3 WARN：2 callout 頁內路標(pricing/ai-talent-flow)、1 頁 callout 未覆寫(code-quality-decline)未上讀者版)
+[Sun 2026/09/27 23:10:00.00] Building web reader...
+[Sun 2026/09/27 23:10:00.00] 測試全綠 - web build 放行
+[Sun 2026/09/27 23:17:00.00] Single push done (news + wiki + web)
+[Sun 2026/09/27 23:17:00.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud OK 2026-09-27T23:17:30Z] TARGET_DATE=2026-09-27｜新鮮度=fresh(55則)｜Step1b=OK｜Step1c=OK(55確認)｜Step2 wiki ingest=OK(6記者+分類複核+devpractice+market，全部foreground完成；分類回退1批3則社群→模型)｜Step2b讀者版=OK(WARN3：2頁callout頁內路標既知問題、1頁code-quality-decline callout未覆寫今日故不上讀者版)｜Step3=OK｜Step4測試=OK(全綠，21處既有斷鏈wikilink WARN非本輪造成)｜Step5=OK單一push｜品質：GitHub Issues 湧現多起 Claude Code 缺陷回報（CRITICAL子代理無限遞迴#68619等）、澳洲參議院傳喚OpenAI/Anthropic CEO；1項📋待查證（Claude API拒答計費規則變動，僅標題可用，egress受限無法WebFetch查證）
