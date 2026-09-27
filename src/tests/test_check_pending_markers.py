@@ -291,6 +291,78 @@ class TestMarkerCountGate(_WikiCase):
         self.assertTrue(ok, "\n".join(report))
 
 
+class TestPageFilter(_WikiCase):
+    """`--page` 只過濾檔案清單，語意同 `check_cell_limits.py --page`（2026-09-27 加入）。"""
+
+    def test_page_filter_matches_full_repo_judgement_for_same_page(self):
+        """對同一頁，`--page` 模式與全庫模式的語法檢查（1–9）判定必須一致。"""
+        self.write(
+            "topics/alpha.md",
+            "❓ **待查證**（標 2026-08-01｜查 Claude）｜**題目**：內文。",
+        )
+        self.write(
+            "topics/bravo.md",
+            "❓ **待查證**（標 2026-08-01｜查 issue-1234、version-string）｜**題目**：內文。",
+        )
+        full_ok, full_report = self.run_check()
+        page_report: list[str] = []
+        page_ok = mod.check(page_report, wiki_dir=self.wiki_dir, today=TODAY, page="alpha")
+
+        self.assertFalse(full_ok)
+        self.assertFalse(page_ok)
+        # alpha 的過寬詞 FAIL 必須在兩種模式都出現，且措辭一致
+        alpha_fail_full = [l for l in full_report if "alpha" in l and "過寬詞" in l]
+        alpha_fail_page = [l for l in page_report if "alpha" in l and "過寬詞" in l]
+        self.assertEqual(alpha_fail_full, alpha_fail_page)
+        # page 模式不得混入 bravo 的內容
+        self.assertFalse(any("bravo" in l for l in page_report))
+
+    def test_page_filter_skips_whole_repo_ratchets_with_explanation(self):
+        """全庫層級的存量棘輪／標記數看守閘是純量統計，套到單頁必然假 FAIL，
+        故 --page 模式應略過並印一行說明，不得因此讓頁面判定變 FAIL。"""
+        self.write(
+            "topics/alpha.md",
+            "❓ **待查證**（標 2026-08-01｜查 issue-1234、version-string）｜**題目**：內文。",
+        )
+        report: list[str] = []
+        ok = mod.check(report, wiki_dir=self.wiki_dir, today=TODAY, page="alpha")
+        self.assertTrue(ok, "\n".join(report))
+        joined = "\n".join(report)
+        self.assertIn("--page 模式", joined)
+        self.assertIn("不在頁面模式下判定", joined)
+
+    def test_page_arg_extraction(self):
+        self.assertIsNone(mod._page_arg([]))
+        self.assertIsNone(mod._page_arg(["--page"]))
+        self.assertIsNone(mod._page_arg(["--page", "  "]))
+        self.assertEqual(mod._page_arg(["--page", "market-signals"]), "market-signals")
+
+    def test_main_page_mode_nonexistent_page_fails_with_clear_message(self):
+        """指到不存在的頁 → 明確訊息、exit 非 0（驗收要求）。"""
+        import io
+        import sys as _sys
+
+        self.write(
+            "topics/alpha.md",
+            "❓ **待查證**（標 2026-08-01｜查 issue-1234、version-string）｜**題目**：內文。",
+        )
+        orig_wiki_dir = mod.WIKI_DIR
+        orig_argv = _sys.argv
+        orig_stdout_fn = mod._stdout
+        mod.WIKI_DIR = self.wiki_dir
+        _sys.argv = ["check_pending_markers.py", "--page", "does-not-exist-xyz"]
+        buf = io.StringIO()
+        mod._stdout = lambda: buf
+        try:
+            rc = mod.main()
+        finally:
+            mod.WIKI_DIR = orig_wiki_dir
+            _sys.argv = orig_argv
+            mod._stdout = orig_stdout_fn
+        self.assertNotEqual(rc, 0)
+        self.assertIn("找不到符合的頁面", buf.getvalue())
+
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -308,6 +308,110 @@ class TestSuppression(_ScanCase):
         self.assertFalse(result["new_records"][0]["suppressed"])
 
 
+class TestDryRunCLI(_ScanCase):
+    """`--dry-run` 的量測用途（2026-09-25 事故：無此旗標時重跑舊日期把假紀錄寫進
+    真帳本）。走 `main()` 端到端驗證：跑前後 jsonl 的 sha256 必須相同，且不帶旗標
+    時行為不受影響（仍會寫入）。"""
+
+    def _sha256(self, path: Path) -> str:
+        import hashlib
+        if not path.exists():
+            return "<missing>"
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
+    def _run_main(self, argv):
+        import io as _io
+        import sys as _sys
+
+        orig_news_dir = mod.NEWS_DIR
+        orig_wiki_dir = mod.WIKI_DIR
+        orig_signals_path = mod.SIGNALS_PATH
+        orig_stdout_fn = mod._stdout
+        orig_argv = _sys.argv
+        mod.NEWS_DIR = self.news_dir
+        mod.WIKI_DIR = self.wiki_dir
+        mod.SIGNALS_PATH = self.jsonl_path
+        mod._stdout = lambda: _io.StringIO()
+        _sys.argv = ["scan_pending_verifications.py", *argv]
+        try:
+            return mod.main()
+        finally:
+            mod.NEWS_DIR = orig_news_dir
+            mod.WIKI_DIR = orig_wiki_dir
+            mod.SIGNALS_PATH = orig_signals_path
+            mod._stdout = orig_stdout_fn
+            _sys.argv = orig_argv
+
+    def _seed(self):
+        self.write_wiki(
+            "topics/example.md",
+            "❓ **待查證**（標 2026-08-01｜查 usage credits、方案分界）"
+            "｜**旗艦分界**：內文。\n",
+        )
+        self.write_digest(
+            "2026-08-10",
+            DIGEST_HEADER +
+            "**[usage credits 方案分界公布](https://example.com/dry-run)**\n"
+            "官方說明。\n"
+            "`來源` · 08/10 00:00 UTC\n",
+        )
+
+    def test_dry_run_leaves_ledger_byte_identical(self):
+        self._seed()
+        self.jsonl_path.parent.mkdir(parents=True, exist_ok=True)
+        self.jsonl_path.write_text("", encoding="utf-8")
+        before = self._sha256(self.jsonl_path)
+
+        rc = self._run_main(["2026-08-10", "--dry-run"])
+
+        self.assertEqual(rc, 0)
+        after = self._sha256(self.jsonl_path)
+        self.assertEqual(before, after, "--dry-run 不得改動 data/pending-signals.jsonl 一個位元組")
+
+    def test_without_dry_run_flag_still_writes_as_before(self):
+        """回歸測試：不帶旗標時行為不變——確認新旗標沒有意外改到預設路徑。"""
+        self._seed()
+        self.assertFalse(self.jsonl_path.exists())
+
+        rc = self._run_main(["2026-08-10"])
+
+        self.assertEqual(rc, 0)
+        self.assertTrue(self.jsonl_path.exists())
+        lines = [l for l in self.jsonl_path.read_text(encoding="utf-8").splitlines() if l]
+        self.assertEqual(len(lines), 1)
+
+    def test_dry_run_still_prints_hit_stats(self):
+        """量測用途要求：不寫檔不等於不出結果，仍要印命中統計供人判讀。"""
+        self._seed()
+        import io as _io
+        import sys as _sys
+
+        orig_news_dir = mod.NEWS_DIR
+        orig_wiki_dir = mod.WIKI_DIR
+        orig_signals_path = mod.SIGNALS_PATH
+        orig_stdout_fn = mod._stdout
+        orig_argv = _sys.argv
+        buf = _io.StringIO()
+        mod.NEWS_DIR = self.news_dir
+        mod.WIKI_DIR = self.wiki_dir
+        mod.SIGNALS_PATH = self.jsonl_path
+        mod._stdout = lambda: buf
+        _sys.argv = ["scan_pending_verifications.py", "2026-08-10", "--dry-run"]
+        try:
+            rc = mod.main()
+        finally:
+            mod.NEWS_DIR = orig_news_dir
+            mod.WIKI_DIR = orig_wiki_dir
+            mod.SIGNALS_PATH = orig_signals_path
+            mod._stdout = orig_stdout_fn
+            _sys.argv = orig_argv
+
+        self.assertEqual(rc, 0)
+        out = buf.getvalue()
+        self.assertIn("命中", out)
+        self.assertFalse(self.jsonl_path.exists())
+
+
 class TestMissingDigest(unittest.TestCase):
     def test_missing_digest_exits_zero(self):
         """找不到日報時 main() 必須 return 0，且不得動 wiki/ 或寫 jsonl。

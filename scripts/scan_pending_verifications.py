@@ -31,7 +31,15 @@
 
 用法：
     python scripts/scan_pending_verifications.py [YYYY-MM-DD]
-    python scripts/scan_pending_verifications.py --dry-run
+    python scripts/scan_pending_verifications.py --dry-run   # 量測用途，見下
+
+`--dry-run` 只供量測／重跑舊日期時使用：照常掃描並印出命中統計，但不 append
+`data/pending-signals.jsonl`，也不動任何帳本。立法依據——2026-09-25 review agent
+為了量測重跑 `scan_pending_verifications.py 2026-09-22`，因為當時沒有這個旗標，
+該次重跑把「今天的 wiki 對照 09-22 日報」的假紀錄寫進了真帳本（3 行，事後人工
+丟棄）；`dedup_key` 是 `marker_id + entry_url` 的雜湊，不含真實掃描時間，事後無法
+單靠帳本內容分辨哪些是量測噪音。**任何非當日、非 pipeline 正式排程的執行，一律
+加 `--dry-run`。**
 """
 from __future__ import annotations
 

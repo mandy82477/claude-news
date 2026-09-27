@@ -7,14 +7,21 @@
 append-append 衝突可以機械聯集，不需要人判斷；讓一個沒有語意衝突的衝突逼整班重跑，
 是把「謹慎」用錯地方。
 
-只解白名單內的 append-only 檔（APPEND_ONLY）；白名單外的衝突一律不碰、exit 1，
-交回人類——那才是需要判斷的。解法用 `git merge-file --union`（三方合併、保留兩側
-hunk、順序保 base→ours→theirs），不是 set 聯集：log.md 的段落順序有意義。
+只解白名單內的 append-only 檔（APPEND_ONLY）；白名單外的衝突一律不碰，交回人類——
+那才是需要判斷的。解法用 `git merge-file --union`（三方合併、保留兩側 hunk、順序保
+base→ours→theirs），不是 set 聯集：log.md 的段落順序有意義。
+
+**2026-09-27 改為部分解**：混合衝突（白名單內＋白名單外同批出現）時，白名單內的
+檔照解並 `git add`，白名單外的列出但不動；整體 exit code 仍以白名單外有無衝突為準
+（有→1，無→0，與改版前一致）。改版理由：09-26 一次 35 檔衝突裡只有 2 個是
+append-only 帳本，舊行為「一個白名單外衝突就整批拒絕」逼主編連這 2 個機械可解的
+帳本也手工 union；解得了的先解掉，人類只需要處理真正需要判斷的那些。
 
 用法（rebase 停在衝突時）：
-    python scripts/resolve_append_only.py          # 解白名單內的衝突檔並 git add，印出結果
+    python scripts/resolve_append_only.py          # 解白名單內的衝突檔並 git add，列出白名單外的，印出結果
     python scripts/resolve_append_only.py --check  # 只列出衝突檔與是否在白名單，不改動
-exit 0＝全部衝突檔都在白名單且已解；1＝有白名單外的衝突（未動任何檔）或無衝突可解。
+exit 0＝全部衝突檔都在白名單且已解；1＝有白名單外的衝突（白名單內的仍會照解並
+git add，但整體判定為未完全解決）或無衝突可解。
 """
 import subprocess
 import sys
@@ -32,6 +39,9 @@ APPEND_ONLY = {
     "weekly/open-signals.jsonl",
     "src/logs/task_scheduler.log",
     "data/build_flags_history.jsonl",
+    "data/classification-log.jsonl",
+    "data/ingest-metrics.jsonl",
+    "data/pending-handoffs.jsonl",
 }
 
 
@@ -82,14 +92,24 @@ def main(argv: list[str]) -> int:
     inside = [p for p in paths if p in APPEND_ONLY]
     for p in paths:
         print(f"  {'✅ append-only，可自解' if p in APPEND_ONLY else '❌ 白名單外，須人工'}：{p}")
-    if outside:
-        print(f"有 {len(outside)} 個白名單外衝突，未動任何檔——交回人工（依 Step 5 規則 abort）")
-        return 1
+
     if check_only:
+        if outside:
+            print(f"有 {len(outside)} 個白名單外衝突，未動任何檔——交回人工（依 Step 5 規則 abort）")
+            return 1
         return 0
+
     for p in inside:
         resolve_union(p)
         print(f"已 union 合併並 git add：{p}")
+
+    if outside:
+        print(
+            f"已解 {len(inside)} 個白名單內衝突並 git add；仍有 {len(outside)} 個白名單外衝突"
+            f"未動，交回人工（依 Step 5 規則 abort）：{'、'.join(outside)}"
+        )
+        return 1
+
     print("下一步：git rebase --continue（或 git -c core.editor=true rebase --continue）")
     return 0
 

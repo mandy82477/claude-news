@@ -145,3 +145,7 @@
 **根因不是關鍵字：** A 窗（90 天內出生、≥100 星、降冪）每條 query 只讀 8 筆，前 8 名天天同一批；B 窗（500–5,000 星、升冪）永遠是剛過 500 的同一批；星史近 7 天每日看見 414 個 repo、7 天聯集只 438 個。已報導閘只擋進了日報的，被選材篩掉的明天又占滿 AB_WINDOW_CAP 的三個位子。C 窗 skills scope 只有 `"agent skills"` 片語，描述寫「AI skill」「Skills for …」的全漏；`skills in:name stars>3000` 探針 30 筆全切題。
 
 **改法：** `AB_SEARCH_PER_PAGE=30`（同一次請求，零額外 API）；新增 `_recently_gathered_repo_urls()` 讀 `src/gathered_archive/` 近 14 天的 GitHub URL，`_window_should_skip()` 讓已抓過的讓位（失效模式回空集合＝回到舊行為，不會灌錯）；`_INVENTORY_SCOPES` 加 `skills in:name`（只進 C 窗，≥3000 星是品質過濾）；`INVENTORY_PER_DAY=3`。測試 `test_ab_window_rotation.py` 10 案例；`collection-scope.md` 同步。pipeline-change-check 基線：09-24 日報 68 則、六區塊 4/4/2/6/8/2，改後 149 份 digest 全數可解析、build 綠；連續 3 天留意 GitHub Search 條目數與新面孔比例。
+
+## 2026-09-27（resolve_append_only 改部分解；scan_pending_verifications --dry-run 補說明與測試）
+
+09-26 合併雲端週更 lint 時 35 檔衝突，僅 2 個是白名單內帳本，舊版「有白名單外衝突就整批拒絕」逼主編連這 2 個機械可解的也手工 union；改為白名單內照解並 `git add`、白名單外原樣列出不動，exit code 仍以白名單外有無衝突為準（純白名單衝突維持 exit 0）。web-publish Step 5 描述句同步。另：09-25 review agent 為量測重跑舊日期掃描，在 `data/pending-signals.jsonl` 留下 3 行標舊日期卻掃當日 wiki 的假紀錄（人工丟棄）——`--dry-run` 旗標其實早已存在，是沒被使用；本次補 docstring 說明量測用途，並加 CLI 端到端測試證明它不動真帳本。

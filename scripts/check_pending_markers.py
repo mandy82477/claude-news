@@ -8,6 +8,15 @@ parser，只做「這筆標記合不合規格」的判定。
 
 用法：
     python scripts/check_pending_markers.py            # 全庫語法檢查
+    python scripts/check_pending_markers.py --page X    # 只看某頁（slug 片段，語意同
+                                                         # check_cell_limits.py --page：只過濾
+                                                         # 檔案清單，語法檢查（下方 1–9）門檻與
+                                                         # 全庫模式同一段程式碼。10「存量棘輪」與
+                                                         # 標記數看守閘是全庫層級純量統計（不像
+                                                         # check_cell_limits／check_reader_language
+                                                         # 的基線是逐頁 keyed），套用到單頁必然假
+                                                         # FAIL，故 --page 模式下略過這兩項、只印
+                                                         # 一行說明
     python scripts/check_pending_markers.py --queue     # 逾期佇列（供 5c 用）
 
 已掛進 `scripts/run_tests.py`（回填完成、全庫 0 FAIL 後掛載），亦可獨立執行供單批
@@ -311,7 +320,7 @@ def _marker_count_gate(report: list[str], wiki_dir: Path, marker_baseline_path: 
 
 
 def check(report: list[str], wiki_dir: Path | None = None, today: date | None = None,
-          marker_baseline_path: Path | None = None) -> bool:
+          marker_baseline_path: Path | None = None, page: str | None = None) -> bool:
     wiki_dir = wiki_dir or WIKI_DIR
     today = today or date.today()
     # 基線路徑預設**相對於傳入的 wiki_dir 所屬 repo 根**解析，不可寫死指向真實 repo
@@ -325,7 +334,11 @@ def check(report: list[str], wiki_dir: Path | None = None, today: date | None = 
     total_legacy = 0
     total_markers = 0
 
-    for path in wiki_pages(wiki_dir):
+    pages = wiki_pages(wiki_dir)
+    if page:
+        pages = [p for p in pages if page in _slug(p, wiki_dir)]
+
+    for path in pages:
         try:
             text = path.read_text(encoding="utf-8-sig")
         except Exception:
@@ -337,6 +350,19 @@ def check(report: list[str], wiki_dir: Path | None = None, today: date | None = 
             ok = False
             report.extend(fails)
         report.extend(warns)
+
+    # --page 模式：10「存量棘輪」與標記數看守閘是全庫層級的純量統計（分別是
+    # 「舊字樣總筆數」「新語法總筆數」），不像 check_cell_limits／
+    # check_reader_language 的基線是逐頁 keyed——套用到單頁子集必然把「基線 142／
+    # 現況 3」判成假 FAIL。語法檢查（1–9，上方迴圈已跑完）本身是逐筆判定，
+    # 不受檔案清單縮小影響，故只在此略過這兩項全庫閘，其餘判定與全庫模式一致。
+    if page:
+        report.append(
+            f"  ℹ️ --page 模式（篩選「{page}」，{len(pages)} 頁）：語法檢查（1–9）已執行；"
+            "存量棘輪與標記數看守閘（10，全庫層級純量統計）不在頁面模式下判定，"
+            "請改用全庫模式（不帶 --page）檢查"
+        )
+        return ok
 
     # ── 存量棘輪：只擋新增，不追殺既有存量 ──────────────────────────────
     #
@@ -591,9 +617,40 @@ def print_queue(out, wiki_dir: Path | None = None, today: date | None = None,
         print("→ 逾期佇列已空，本輪 5c 無待清項（舊語法盲區另見上方，處理端是 3g）", file=out)
 
 
+def _page_arg(args: list[str]) -> str | None:
+    """從 CLI 參數取出 `--page` 的值；缺旗標或缺值一律回 None。"""
+    if "--page" not in args:
+        return None
+    idx = args.index("--page")
+    if idx + 1 >= len(args):
+        return None
+    val = args[idx + 1].strip()
+    return val or None
+
+
 def main() -> int:
     args = sys.argv[1:]
     out = _stdout()
+
+    if "--page" in args:
+        page = _page_arg(args)
+        if not page:
+            print("❌ --page 需要接頁面 slug 片段", file=out)
+            out.flush()
+            return 1
+        matched = [p for p in wiki_pages(WIKI_DIR) if page in _slug(p, WIKI_DIR)]
+        if not matched:
+            print(f"❌ --page 「{page}」找不到符合的頁面（wiki/ 下無 slug 含此片段的頁）", file=out)
+            out.flush()
+            return 1
+        report: list[str] = []
+        ok = check(report, page=page)
+        print(f"# check_pending_markers.py 報告（--page {page}）\n", file=out)
+        print("\n".join(report) if report else "  （無懸置標記）", file=out)
+        print(file=out)
+        print("狀態：" + ("✅ 懸置標記語法檢查通過" if ok else "❌ 懸置標記語法有誤"), file=out)
+        out.flush()
+        return 0 if ok else 1
 
     if "--rebuild-count" in args:
         reason = _rebuild_reason(args)
