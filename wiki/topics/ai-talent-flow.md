@@ -78,8 +78,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-09
 
+#### 2026-09-27
+- **조선일보第二家跟進 09-26 事件，改用「AI's Rapid Pace」措辭**：與 the-decoder.com 報導是否同一人原文未載明，未見新增細節（推論）（Topic Watch/ai-talent-flow）
+
 #### 2026-09-26
 - **the-decoder.com：又一位 Google DeepMind 研究員離職，稱短期內打造超級智慧 AI「本質上不負責任」**：與 09-13 已記錄之對齊風險警告是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列更新（Topic Watch/ai-talent-flow）
+- **yellow.com 再度以「四位創立元老同日離職」為題**：與 09-01 已查證同一 08-05 既有批次事件（Jeff Dean、Ghemawat、Vinyals、Le）的又一次媒體重述，非第三波（推論），僅標題可用（Topic Watch/ai-talent-flow）
 
 #### 2026-09-24
 - **慕尼黑人形機器人新創 Vesoma 走出隱身模式，60 人團隊由前 DeepMind AI 主管領軍**：Dealroom 報導，主管姓名與具體職稱未見報導，詳見「對各公司的影響」表新增 Vesoma 列（Topic Watch/ai-talent-flow）

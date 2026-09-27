@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-09-26
+**最後更新：** 2026-09-27
+**最後新聞更新：** 2026-09-27
 
-> **本週衝擊**（2026-09-26）
+> **本週衝擊**（2026-09-27）
 > - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
 > - 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。
 
@@ -216,7 +216,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-09-27
+- **MarkTechPost**：發表企業導入 AI coding agent 比較文，聚焦智財賠償（IP indemnity）、資料落地與 500 人規模成本差異，未指名具體工具或數字，僅標題可用（Topic Watch/competitor-landscape）
+- **OpenAI（GPT-6 Astra）**：Kingy AI 發表 GPT-6 Astra 與 Claude Opus 5.5 效能與費用比較文，2 個來源同日報導，具體數字未見（Google News/Kingy AI）
+- **OpenAI（ChatGPT Pro）**：Kingy AI 發表 ChatGPT Pro（$100）與 Claude Max（$200）訂閱方案比較文，2 個來源同日報導，具體差異未見報導細節（Google News/Kingy AI）
+
 ### 2026-09-26
+- **Meta（Muse Code）**：tech-insider.org 發表 Muse Code、Claude Code、Cursor 三方比較文，具體數字未見，僅標題可用（Topic Watch/competitor-landscape）
 - **Jev（TypeSafe AI）**：FT 報導低價新模型 Jev 意圖挑戰 OpenAI 與 Anthropic，具體定價與效能數據未見，僅標題與 HN 討論可用（Google News/Financial Times；Hacker News）
 - **OpenAI**：官方發布車隊管理新創 Proaction 導入 Codex 案例，稱月省 40–60 工程時數、銷售成長 60%；詳見「雷達細節」更新（Blog/OpenAI News）
 - **Microsoft／GitHub**：Copilot 新增 enterprise managed settings 驗證器，偵測畸形 JSON、不支援設定與無效團隊對應（Blog/GitHub Copilot Changelog）
