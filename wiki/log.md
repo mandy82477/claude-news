@@ -6965,3 +6965,23 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 判斷類事項（主編裁定）：Codex／Cursor 不建頁（本站以 Claude 生態為主，已由 competitor-landscape 對手雷達承接）；併頁候選 anthropic-agent-stack ↔ community-large-codebase-workflow 不併（兩頁回答不同問題、已互連）；頁面格式模板維持為新頁最低骨架；features/pages.md 規則密度提案不動（教訓行僅 0.7%，行數來自頁面數）；過期規則 42 節不動（年齡本身不是缺陷，交下輪 6d 逐節確認）
 - 需使用者端設定、主編無法代做：5b 榜單網域與 5m `anthropics/claude-code` 存取須在 claude.ai 雲端環境設定開通；未開通前由本機 `/weekly` 步驟 0 承接為常態
 - 另：`data/reader-language-allow.json` 新增一筆誤報豁免（mythos-archive「首爾記者會」）
+
+## 2026-09-27 Ingest
+
+- 來源日報：[[news/2026-09-27]]
+- 更新頁面：
+  - 模型：entities/sonnet-5、entities/opus-5-5
+  - 功能：entities/claude-code
+  - 商業：entities/pricing、topics/anthropic-business、topics/ai-talent-flow、topics/competitor-landscape
+  - 安全政策：topics/anthropic-government-policy、topics/ai-agent-safety、topics/recursive-self-improvement
+  - 社群：topics/community-tech-patterns、topics/community-tech-discussions
+  - 人物：無
+  - 投資分析：topics/market-signals
+- 新增頁面：無
+- 摘要：GitHub Issues 湧現多起 Claude Code 缺陷回報（CRITICAL 子代理無限遞迴 #68619、CLI 格式 #15199、API 無回應 #69358），澳洲參議院傳喚 OpenAI／Anthropic CEO 出席 AI 調查聽證會（4 來源），Anthropic 傳調整 API 拒答請求計費規則（僅標題可用，待官方查證）
+- 呈現品質：全部通過
+- 分類回退：追加派工 1 筆（社群 3 則 r/ClaudeAI 週熱門 Opus 5.5 貼文 → 模型，已收模型記者回報寫入 entities/opus-5-5）；駁回 0 筆
+- devpractice 沉澱：候選 14 筆（entities/claude-code 6、entities/sonnet-5 1、entities/pricing 1、topics/anthropic-business 1、topics/community-tech-patterns 4、topics/community-tech-discussions 1）
+- market 判讀：判讀 2 則（澳洲聽證會、API 拒答計費規則），皆無可交易標的（Anthropic／OpenAI 未上市）
+- 轉知帳本：結案 H-1ae6f5（功能：official-community-gap 官方對應矩陣評估，結論不需新增列）；駁回 H-694685、H-47da1d（理由成立，void）；新開 H-a5c6b1（社群→功能：entities/claude-code，Claude Artifacts 出現負向對照）
+- 📋 待使用者確認：Anthropic Claude API 拒答（refused）請求計費規則是否縮減為五類中三類收費——僅 MIXED Reality News/mixed-news.com 標題可用，五類清單／哪三類收費／生效日均未載；商業記者與投資分析記者皆已標示同一事實待查證，本輪未寫入 entities/pricing.md。雲端環境 egress 受限（Trusted 網域白名單）無法自行 WebFetch 官方說明中心查證，建議下次有網路存取的 session（本機或已開 Custom egress 的雲端）查 support.claude.com／API pricing 文件後補寫
