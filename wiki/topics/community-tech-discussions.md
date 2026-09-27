@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-09-26
+**最後更新：** 2026-09-27
+**最後新聞更新：** 2026-09-27
 
-> **最新動態**（2026-09-26）
-> - Jevmem 發布引出 HN 兩條質疑：AI 寫的 README 說不清核心價值、「舊記錄不刪除」恐讓 context 累積過期資訊（61 分，單一來源）。
+> **最新動態**（2026-09-27）
+> - Show HN: Reladraw（可控版面圖表語言＋Claude agent skill）351 分，本輪最高；Simon Willison 閉幕演講用 Opus 5.5 生成 kākāpō 像素動畫；另一則 Show HN 用視覺＋Stockfish 讓 Claude 分析棋局賽後（74 分，2 來源）。
 
 ---
 
@@ -150,6 +150,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill | 2026-09-26 · 2026-09-26 | 🔥🔥🔥 | ☄️閃現 | 作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 耗時，做出可控版面圖表語言＋agent skill；HN score 351 | reladraw |
 | Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | ☄️閃現 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節） | — |
 | 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | ☄️閃現 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節） | — |
 | Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | ☄️閃現 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記 | — |
@@ -266,6 +267,27 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Simon Willison 閉幕演講用 Opus 5.5 生成像素風動畫紀念 kākāpō 繁殖季（2026-09-26）
+
+- **來源：** Kākāpō Party — Simon Willison's Weblog；[原文](https://simonwillison.net/2026/Sep/26/kakapo-party/)
+- **核心論點：** Simon Willison 為 WeAreDevelopers World Congress North America 發表閉幕演講，援引 2026 年破紀錄的 kākāpō 繁殖季當梗；閉幕投影片用三張真實 kākāpō 照片，讓 Opus 5.5 生成像素風格動畫作紀念
+- **關鍵回響：**（具名表態，無社群延燒；本次摘要未提供留言區細節）
+- **收斂結論：**（無）具名演講記錄，非工具評測，僅記錄 Opus 5.5 用於像素動畫生成的一次示範
+
+#### Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill（2026-09-26）
+
+- **來源：** Show HN: Reladraw – A diagram language where you decide where to place things — Hacker News（351 分）；[原文](https://github.com/reladraw/reladraw)
+- **核心論點：** 作者不滿 Mermaid／Graphviz 等自動排版工具無法控制版面、Draw.io 又太耗時且不利 agent 操作，做出一套可自訂版面配置的圖表描述語言，同時附 npm 套件與可搭配 Claude 等 agent 使用的 skill
+- **關鍵回響：**（本次摘要未提供留言區細節，僅 HN 351 分遠高於當日其他討論）
+- **收斂結論：**（無）單一 HN 貼文，尚無跨平台佐證或留言內容可查；工具本身已同步收錄至 [[topics/community-tech-patterns#2026-09]]「Skills 設計」
+
+#### Show HN: 用視覺（非棋譜）+ Stockfish 讓 Claude 分析棋局賽後（2026-09-26）
+
+- **來源：** Show HN: A Claude Code skill to analyze your chess games — Hacker News（74 分，2 個來源同日報導）；[原文](https://github.com/brumar/chess-postmortem-skills)
+- **核心論點：** 作者實驗讓 Claude 用視覺而非棋譜記號看棋局，證實可行；再讓 Claude 結合 Stockfish 解說對局，也證實可行；最終做出一套系統，輸入語音筆記與「分析我上一場 lichess 對局」之類的模糊指示，即可產出附講解的棋局影片，作者估算一局分析約耗費 15 美元 API 額度
+- **關鍵回響：**（2 個來源同日報導，本次摘要未提供留言區細節）
+- **收斂結論：**（無）單一團隊 skill 發布，尚無社群採用回饋數據；工具本身已同步收錄至 [[topics/community-tech-patterns#2026-09]]「創意工具 Agent 整合」
 
 #### Jevmem 發布引出兩條質疑：AI 寫的 README 說得清細節卻說不清核心價值；「舊記錄標過時不刪除」設計恐讓 context 累積過期資訊（2026-09-26）
 

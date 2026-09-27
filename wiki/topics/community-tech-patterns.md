@@ -164,6 +164,57 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 ### 2026-09
 
+#### 同日三款 Skills 設計新實作：headcount（公司化 agent 組織）、personal-os-skills（Obsidian）、reladraw（可控版面圖表語言＋agent skill）（2026-09-27）
+
+- **主線：** —
+- **核心模式：**
+  - headcount：把 agent 組織成一間公司，15＋部門、125＋個各自可獨立安裝的 skill，每個 skill 附上其依據的標準或監管機構出處；可跑在 Claude Code 與 ChatGPT（1,684★）
+  - personal-os-skills：一套給 Obsidian 用的 Claude Code skills（537★）
+  - reladraw：可自訂版面配置的圖表描述語言，附 npm 套件與可搭配 Claude 等 agent 使用的 skill，作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 太耗時；Hacker News 351 分
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧三個新取向——組織化 skill 目錄（headcount）、Obsidian 整合（personal-os-skills）、圖表描述語言（reladraw，與既有 drawio-skill 同屬圖表類但走描述語言而非工具整合）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** headcount／personal-os-skills 僅有 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證；reladraw 來自 Hacker News，351 分遠高於當日其他討論，惟未見留言數或跨平台佐證。
+- **來源：** GitHub Search；[headcount](https://github.com/cbrock84/headcount)（1,684★）、[personal-os-skills](https://github.com/ArtemXTech/personal-os-skills)（537★）；Hacker News；[reladraw](https://github.com/reladraw/reladraw)（351 分）
+- **成熟度：** ⏳ 新興（三者皆本庫首次收錄，尚無社群採用回饋數據）
+
+#### MemTensor/memmy-agent：跨 AI 共享的本地記憶 hub（2026-09-27）
+
+- **主線：** —
+- **核心模式：** 個人 AI agent 與本地記憶 hub，讓所有 AI agent 共用同一份、完全可控的記憶與持久 context；現支援 Claude Code、Codex、OpenClaw、Hermes Agent 等；GitHub Search 1,988 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「跨工具共享單一記憶庫」取向實作，與既有 claude-mem／second-brain-os 等單工具記憶方案不同之處在於明確主打跨 agent 共用；本質是通用記憶協定，非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,988★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/MemTensor/memmy-agent)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### agenvoy/Agenvoy：自我修復工具的自架 agent harness（2026-09-27）
+
+- **主線：** —
+- **核心模式：** 單一 Go 二進位檔的自架 AI agent harness，自己寫工具、在沙盒測試並修復，讓 Claude Code、Codex 與任何 MCP client 都能建立並共享這些工具；GitHub Search 537 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「agent 自寫並跨 client 共享 MCP 工具」取向實作，既有做法聚焦既有工具鏈整合，本則多了工具自我修復一步；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（537★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/agenvoy/Agenvoy)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### 同日兩款創意工具 Agent 整合：anything2explainer（主題轉解說影片）、chess-postmortem-skills（棋局賽後分析影片）（2026-09-27）
+
+- **主線：** —
+- **核心模式：**
+  - anything2explainer：輸入一個主題，輸出附 TTS 旁白、字幕與章節進度條的黑底動態圖形解說影片，中英文皆可，每一格畫面用 Remotion 以程式碼繪製；Claude Code／Codex skill（2,108★）
+  - chess-postmortem-skills：讓 Claude 用視覺（非棋譜記號）看棋局並結合 Stockfish 解說，再把使用者的語音筆記轉成附講解的棋局影片；作者估算分析一局約耗費 15 美元 API 額度；Hacker News 74 分，2 個來源同日報導
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧兩個新取向——泛用主題轉解說影片（anything2explainer）與棋局賽後分析影片（chess-postmortem-skills），皆延續既有 Palmier Pro／oh-story-claudecode 把 agent 整合擴到影片創作工具鏈的方向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** anything2explainer 僅有 GitHub Search 星數（2,108★），無 forks／issues／近期 commit 佐證可查，未另行查證；chess-postmortem-skills 來自 Hacker News，74 分且 2 個來源同日報導，訊號較扎實。
+- **來源：** GitHub Search；[anything2explainer](https://github.com/Vincentwei1021/anything2explainer)（2,108★）；Hacker News；[chess-postmortem-skills](https://github.com/brumar/chess-postmortem-skills)（74 分，2 來源）
+- **成熟度：** ⏳ 新興（兩者皆本庫首次收錄，單一團隊／個人專案，尚無社群採用回饋數據）
+
+#### paulrobello/claude-office：即時像素風辦公室模擬視覺化 Claude Code 操作（新類別：Agent 活動可視化）（2026-09-27）
+
+- **主線：** —
+- **核心模式：** 即時像素風格辦公室模擬遊戲畫面，把 Claude Code 操作視覺化呈現；GitHub Search 530 星。
+  - 同日 Hacker News 貼文「The City」提出把 Claude Code 視覺化成機器人城市的相近構想，惟該貼文已被下架（flagged），僅存標題與 repo 連結，內容細節與完成度均未見報導。
+- **與既有模式的關係：** 現有 20 類皆無「把 agent 操作映射成空間遊戲視覺化」這個取向，claude-office 本身即可用一句機制成立（把工具呼叫映射成遊戲化空間視覺化），開立新類別「Agent 活動可視化」；The City 僅供參考，不作為判準所需的第二個具名實作；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** claude-office 僅有 GitHub Search 星數（530★），無 forks／issues／近期 commit 佐證可查，未另行查證；The City 僅 HN 標題可讀（貼文已下架），實際功能未經驗證，本節僅記錄其存在。
+- **來源：** GitHub Search；[claude-office](https://github.com/paulrobello/claude-office)（530★）；Hacker News（已下架）；[The City](https://github.com/Slaymish/theCity)
+- **成熟度：** ⏳ 新興（本庫首次收錄，兩者皆單一團隊／個人專案，尚無社群採用回饋數據）
+
 #### 同日四款多 agent 控制平面／編排工具：zeron、claude-ops、VibeAround、coco（2026-09-26）
 
 - **主線：** 並行規模
