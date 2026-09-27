@@ -21,7 +21,28 @@ from tests._helpers import FIXTURES_DIR, REPO_ROOT, load_script_module
 
 mod = load_script_module("ingest_metrics")
 
-PROJECTS = FIXTURES_DIR / "ingest_metrics" / "projects"
+_RAW_PROJECTS = FIXTURES_DIR / "ingest_metrics" / "projects"
+
+
+def _materialize_fixture() -> Path:
+    """夾具裡的絕對路徑寫成 `__REPO_ROOT__` 佔位符（repo 不放個人路徑），載入時代入本機 repo 根
+    （JSON 字串內的跳脫形式），複製到暫存目錄後才餵給腳本。"""
+    tmp = Path(tempfile.mkdtemp(prefix="ingest_metrics_fx_"))
+    esc = json.dumps(str(REPO_ROOT))[1:-1]
+    for src in _RAW_PROJECTS.rglob("*"):
+        dst = tmp / src.relative_to(_RAW_PROJECTS)
+        if src.is_dir():
+            dst.mkdir(parents=True, exist_ok=True)
+            continue
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        if src.suffix == ".jsonl":
+            dst.write_text(src.read_text(encoding="utf-8").replace("__REPO_ROOT__", esc), encoding="utf-8")
+        else:
+            shutil.copy(src, dst)
+    return tmp
+
+
+PROJECTS = _materialize_fixture()
 SUB = PROJECTS / "sess-fixture" / "subagents"
 D = "2026-09-26"
 
@@ -227,8 +248,8 @@ class TestCli(unittest.TestCase):
             self.assertEqual(sorted(r["run_index"] for r in rows), [1, 2])
 
     def test_default_projects_root_encoding(self):
-        p = mod.default_projects_root(Path(r"C:\Users\Mandy\CLAUDE_OBSIDIAN\ObsidianLab\CLAUDE_NEWS"))
-        self.assertEqual(p.name, "C--Users-Mandy-CLAUDE-OBSIDIAN-ObsidianLab-CLAUDE-NEWS")
+        p = mod.default_projects_root(Path(r"D:\work\some proj\CLAUDE_NEWS"))
+        self.assertEqual(p.name, "D--work-some-proj-CLAUDE-NEWS")
 
 
 if __name__ == "__main__":
