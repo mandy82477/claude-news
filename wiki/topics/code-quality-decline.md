@@ -28,8 +28,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-09-27
+**最後新聞更新：** 2026-09-27
 
 > **首度出現正面反轉訊號**（2026-09-24）
 > Reddit 週熱門稱 Claude 終於「像回真正的 Claude」，暗示先前品質觀感失真；單一貼文、無技術細節，與 09-22 Opus 5.5 上線同期，細節見時序。
@@ -48,14 +48,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-09-19。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-09-27。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
-| **token 消耗異常**（2026-09-12） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-08-21） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-09-19） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-12、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-09-10，兩則皆開啟且仍在累積留言：121／13 則） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **token 消耗異常**（2026-09-12） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
+| **Opus 5 上線後的品質觀感**（2026-09-19） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-23、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-09-10，兩則皆開啟：131／13 則留言，09-27 快照） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 
@@ -123,7 +123,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **計費或計量改變**：$62,021 案例與「5x 更貴」報導講的是帳單與配額速度，不是任務品質；cache 命中率若因 context 結構或後端調度而下降，重算的 token 會直接推高帳單，模型能力不必真的變差。
 - **你這端的配置**：multi-agent 與 MCP 工具疊加的成本是 [[topics/community-tech-discussions]] 已記錄的問題；若真是 context 腐蝕或配置問題，理論上調 CLAUDE.md、少一層 subagent 就會緩解，但至今沒有人回報緩解成功。
 
-**目前的說法**：十則回報方向一致、來源獨立，但沒有一則帶測試方法或版本前後對照，三種解釋都排除不掉。官方對這一批沒有專文，[#65687](https://github.com/anthropics/claude-code/issues/65687) 到 2026-08-21 仍開啟。08-25 那則沒有互動數也沒有新機制，只說明現象還在。
+**目前的說法**：十則回報方向一致、來源獨立，但沒有一則帶測試方法或版本前後對照，三種解釋都排除不掉。官方對這一批沒有專文，[#65687](https://github.com/anthropics/claude-code/issues/65687) 到 2026-09-25 仍開啟（最後更新日，09-27 查）。08-25 那則沒有互動數也沒有新機制，只說明現象還在。
 
 ---
 
@@ -172,6 +172,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **只有單一來源的具體宣稱（2026-08-04）：** r/ClaudeCode 一則貼文宣稱以實測記錄四種繞過模型釘選的方式，並稱 Sonnet 4.6 遭無預告移除。該貼文所指的**現象**方向與上述四個節點一致，但貼文獨有的「4 measured bypass vectors」與「Sonnet 4.6 silently removed」**具體技術細節**至今只有這一個來源、無第二來源核對，本頁只採計現象，不採計其量化宣稱（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1vf7uv5/model_pinning_is_completely_broken_in_claude_code/)）。官方 [Model deprecations](https://docs.claude.com/en/docs/about-claude/model-deprecations) 頁面載明：模型退役前至少提前 60 天公告，退役後的請求會直接失敗（回錯誤），而非靜默切換到其他模型——與貼文「Sonnet 4.6 遭無預告移除」的敘事框架不符（查證日 2026-09-20）；「4 measured bypass vectors」的具體清單官方文件未載，且該 Reddit 原始貼文至今仍是唯一來源，無第二來源或官方逐項證實，此節維持不採計。
 
 **這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立（1M 這一項的完整脈絡見 [[topics/long-context-1m]]）。
+
+**同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。單一使用者回報、無官方確認，待查證標記見 [[entities/claude-code]]（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。
 
 ---
 

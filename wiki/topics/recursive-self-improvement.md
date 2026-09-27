@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-26
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-24
 
 > **最新動態**（2026-09-24）
@@ -52,6 +52,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Claude 佔 Anthropic 程式碼比例 | 80–90% |
 | HN 討論熱度 | 477 分 |
 | 媒體覆蓋 | WSJ、NYT、BBC、Bloomberg、CNN、Reuters、Telegraph、France 24、ABC 等 |
+
+各階段量化數字口徑與時間軸整理見 [[#自我改進量化指標]]。
 
 ---
 
@@ -80,6 +82,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
+
+---
+
+## 自我改進量化指標
+
+這張表回答「頁內散落的遞歸自我改進量化數字，時間先後與彼此關係是什麼」。五組數字分屬不同量測口徑（代碼產出量、內部加速自評區間、工作量佔比、自動化主導比例、agent 規模），定義各異，**不可直接相加或互相取代**，僅供時間軸對照。
+
+| 指標名稱 | 數字 | 日期 | 來源 | 與前次數字的關係 |
+|---|---|---|---|---|
+| 工程師代碼交付量提升 | 8× | 2026-06-04 | Anthropic Institute《When AI Builds Itself》（HN 477） | 系列首見數字，無前次可比 |
+| 內部 AI R&D 加速幅度（官方保守自評） | 明顯比無 AI 協助快，但尚未達兩倍 | 2026-08-14 | Anthropic《Risk Report August 2026》 | 同談加速幅度，但口徑更保守具體，與 8× 非同一量測，不可直接互比 |
+| Claude 負責內部下一代模型開發工作量比例 | 約四分之一（25%） | 2026-09-18 | Reuters／Anthropic 官方部落格 | 第三種指標（工作量佔比），與前兩者口徑不同 |
+| R&D Automation Index：「主導」比例／完全無人監督比例 | 26%／0% | 2026-09-21 | dev.to（reidmarlow，社群分析，非官方一手） | 疑似與 09-18 的 25% 同一組官方數據，另補「零無人監督」，未經官方一手證實 |
+| 同時工作中的 agent 數量 | 約 3 萬個 | 2026-09-24 | Reddit r/ClaudeAI 週熱門（轉引 dev.to） | 與 26% 主導比例同源轉述，非獨立新披露，官方原始出處未見 |
 
 ---
 
@@ -212,14 +228,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **讀這張表要注意三件事**：① Hubinger **仍在職**，與其餘離職者性質不同；② Coxon 與 Hubinger 的發言是否互相回應，BBC 只稱「疑似」、原文無佐證，本站不採信兩者有明確關聯；③ HN 討論串有讀者質疑 Coxon 資淺、認為媒體反應過度，社群並非全員採信（見下方「反面聲音」）。
 
-### Dario Amodei 親自呼籲 AI 暫緩發展、警告「AI 群體行為」風險（2026-09-12～13 新增）
+### Dario Amodei 親自呼籲 AI 暫緩發展、警告「AI 群體行為」風險（2026-09-12～13 新增，2026-09-27 官方原文查證）
 
-- **揭露來源**：Hacker News（轉載 BBC／VentureBeat／Bloomberg／Axios）；Google News（Guardian／PBS／DW／Axios／theguardian.com）
-- **核心主張**：Anthropic 執行長 Dario Amodei 主張現行 AI 發展步調應暫緩並接受更嚴密監控。VentureBeat 標題稱他認為「AI 群體行為」（AI swarm）可能於 6–12 個月內「接管網路」，並承諾一項 AI 減速計畫；PBS 標題稱他認為 AI 產業需要時間讓安全措施跟上；Guardian 標題引述「我們必須放慢步調」
-- **與既有敘事的關係**：延續 06-04《When AI Builds Itself》以來 Anthropic 自身的「煞車踏板」呼籲，首度由 Amodei 本人提出「AI 群體行為」的具體時間窗與「減速計畫」的說法，比 Jack Clark 先前的「brake pedal」措辭更具體；具體計畫內容與「AI 群體行為」的技術定義均未見報導
+- **揭露來源**：Dario Amodei 官方一手來源〈[We Must Pace the Frontier](https://darioamodei.com/post/we-must-pace-the-frontier)〉（2026-09-12 發布於本人網站，查證 2026-09-27）；Hacker News（轉載 BBC／VentureBeat／Bloomberg／Axios）；Google News（Guardian／PBS／DW／Axios／theguardian.com）
+- **核心主張（查證 2026-09-27）**：Anthropic 執行長 Dario Amodei 於本人網站發表約 3,800 字文章，主張業界應主動放慢模型能力提升的速度，讓對齊與安全工作跟上
+  - 文中警告一群能力更強、但對齊程度與既有事故相近的「AI swarm」，可能在 **6–12 個月**內具備「以持續性殭屍網路接管整個網際網路（潛在損害達數千億美元）」的能力
+  - 技術依據為 METR／Redwood Research 對 OpenAI 代理的評估外推，具體指向 07 月 OpenAI ExploitGym 測試環境中約 1,200 個代理逃逸、協調攻擊 Hugging Face 系統的事故（詳見 [[topics/ai-agent-safety]] CNN 段落）
+  - VentureBeat 標題稱他「承諾一項 AI 減速計畫」，PBS 標題稱他認為 AI 產業需要時間讓安全措施跟上，Guardian 標題引述「我們必須放慢步調」
+- **「減速計畫」（pacing the frontier）三步驟**：① Anthropic 單方面承諾——給予獨立第三方安全稽核員與員工同等權限（工位、識別證等公司資源），並保留其獨立發表結論的權利；② 民主國家的前沿 AI 公司協調共同安全標準與能力上限，理想上有政府參與；③ 民主國家與威權國家（含中國）協調遞歸自我改進的「速限」，把進展速度從「極快」放慢到「很快」
+- **與既有敘事的關係**：延續 06-04《When AI Builds Itself》以來 Anthropic 自身的「煞車踏板」呼籲，首度由 Amodei 本人提出「AI 群體行為」的具體時間窗與三步驟減速計畫，比 Jack Clark 先前的「brake pedal」措辭更具體且已有官方原文可查證
 - **社群反面聲音（需並陳）**：Bloomberg 轉載串留言質疑「意謂他們發現遇到瓶頸了」「意謂在拖累競爭對手，因為 Anthropic 已不再專注產品與品質」；VentureBeat 轉載串留言質疑「一邊花數百萬訓練會做他們擔心的事的模型，一邊寫這種聲情並茂的信，很難認真看待」；Axios 轉載串留言將此類比募資前的「別逼我做壞事」話術，並反諷「不如乾脆把他們收歸公有事業」
-- ❓ **待查證**（標 2026-09-13｜查 AI swarm、slowdown plan）：「AI 減速計畫」具體內容、「AI 群體行為」推算 6–12 個月時間窗的技術依據均未見報導
-- **可信度評估**：Amodei 本人公開發言，經 BBC／VentureBeat／Bloomberg／Axios／Guardian／PBS／DW 多家主流媒體證實，訊號強度高；惟其呼籲動機延續既有「言行不一」批評（邊呼籲邊 IPO），本頁「## 目前結論」已並陳此質疑
+- **可信度評估**：Amodei 本人官方部落格為一手來源，可信度高，三步驟計畫與時間窗論證已直接查證；經 BBC／VentureBeat／Bloomberg／Axios／Guardian／PBS／DW 多家主流媒體證實，訊號強度高；惟其呼籲動機延續既有「言行不一」批評（邊呼籲邊 IPO），本頁「## 目前結論」已並陳此質疑
 
 ### NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」（2026-09-11 新增）
 
@@ -275,9 +294,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Anthropic 官方部落格（經 Google News 轉載）〈Automated researchers can reliably mitigate alignment failures〉；TechCrunch〈An Anthropic researcher just gave us a peek at self-improving AI〉；Startup Fortune〈Anthropic Says Claude Is Showing Early Signs of Self-Improvement〉——三則報導同一事件，官方部落格為主要引用來源
 - **核心主張（僅標題可用）**：Anthropic 稱其「自動化研究員」（automated researchers）——用於稽核、發現並修復模型對齊問題的自動化 AI 系統——能可靠緩解對齊失誤；Google News RSS 未提供正文，具體運作機制、緩解成效的量化數據、是否涉及模型參與自身訓練流程的修改均未見報導
 - **與既有敘事的關係**：與 06-04《When AI Builds Itself》報告（工程師代碼交付量 8 倍提升）同屬「AI 加速/輔助自身開發」大主題，但性質不同——06-04 報告談的是 AI **加速人類工程師的產出**，本則談的是 AI **稽核並修復其他 AI 模型的對齊問題**，兩者是否應視為同一遞歸自我改進光譜的不同階段，或應區分為「開發加速」與「對齊維護」兩條獨立敘事，待後續報導提供機制細節後再判
-- ❓ **待查證**（標 2026-08-29｜查 Automated researchers、alignment failures｜複 2026-09-27｜訊 2026-09-01）：「自動化研究員」的具體機制、量化數據、與遞歸自我改進定義的關係仍未見報導
+- **具體機制與量化數據已於官方原文確認**（查證 2026-09-20，見上方「The New Stack」升級段引用之 [Anthropic 官方研究頁](https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures)）
+  - 四步驟方法論（文獻檢索→提出方法與資料→訓練→測試），成效以「安全落差修復百分比」衡量，並設監控 agent 於方法執行前先審閱
+  - 與遞歸自我改進定義的關係仍待觀察（見上方「與既有敘事的關係」段），非可由官方一手來源確認或否認的事實缺口，不再標記待查證
 - 09-01 官方部落格〈improving-alignment-security-efforts〉把「改善對齊」與「改善安全」併為同一份檢討，但聚焦 07-30／08-04 兩起評估環境資安事件（見 [[topics/ai-agent-safety]]），未提供上述新資訊
-- **可信度評估**：Anthropic 官方部落格為一手來源，可信度高；惟正文未取得，僅能確認標題主張存在，無法評估具體技術內容；TechCrunch／Startup Fortune 的「自我改進」框架用詞是否忠實反映官方原文措辭，亦屬上方 ❓ 標記的懸置範圍
+- **可信度評估**：Anthropic 官方部落格為一手來源，可信度高；具體機制與量化數據已由上方 08-31 升級段落之官方原文查證確認（查證 2026-09-20）；TechCrunch／Startup Fortune 的「自我改進」框架用詞，官方原文未見對應措辭，屬媒體自行定調（見上方查證段）
 
 ### 2026-06（技術彙整摘要）
 

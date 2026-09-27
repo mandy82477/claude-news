@@ -6928,3 +6928,17 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - `topics/ai-agent-safety`「## 時序」缺 09-23～09-25 三天條目：由安全政策記者回填，或接受技術彙整已涵蓋、時序不補？
 - `entities/joe-lonsdale` 新頁僅一則、僅標題可用：保留為單一事件人物頁，或併入 anthropic-government-policy 一句點名即可？
 - 內容閘（步驟 4½）：首跑紅 1 道（懸置標記）修 2 處後綠——joe-lonsdale 新頁與 index 列「active（待核實）」改「單一來源」（舊語法存量 43→42）、market-signals 探針「遷出」改「遷出計畫」（<3 字元）；其餘 7 道首跑即綠
+
+## 2026-09-27 週度延伸回顧
+
+- 延伸：
+  - `topics/code-quality-decline`「模型釘選」子區塊補 09-24「Opus 5 預設 effort 疑似未隨版更調高」（社群記者；對齊 entities/claude-code 既有 ❓ 標記，不重開）
+  - `topics/recursive-self-improvement` 新開「## 自我改進量化指標」時間軸表（安全政策記者；五列皆取自頁內既有內容，註明口徑不可互比）
+  - `entities/opus-5-5` 移除 ⟨Q-01⟩ 查無官方標記並改寫為事實（官方發布文附具名基準表，2026-09-25 查證），消除與同頁更正段的矛盾（模型記者；懸置標記基線重建 126→125）
+- 使用者跳過項目：`entities/opus-5-5` 加開「Fable 5.1 遷移阻力」子區塊（證據僅 1 則 Reddit 討論串，主編建議不做）；`entities/opus-5` 補 09-24 effort 回報指路（延後，待該則查證後再補）
+- 聚焦校準：非本月首次（9 月已於 09-06 執行，命中率 73.7%），跳過
+- reader-notes：⏳ 三條皆未結——「GPT vs Claude 比較」本週有訊號（Opus 5.5 與 GPT-6 Sol／Luna 同日發布），W39 週報深挖回應定價那一半，實測對照仍缺，維持 ⏳；其餘兩條本週無訊號
+- 本機補跑（/weekly 步驟 0）：
+  - 跨家榜單週更（5b）：已更新 17 榜／0 榜無法取得（直接 12、轉述 5）；SWE-bench、MTEB 本輪二手來源不一致，維持上週值；EQ-Bench 連續 4 輪同值，列入汰換討論（待使用者裁示）
+  - 逾期待查證清算（5c）：盤點 6 筆，清零 ✅；處置 查實 3（ai-agent-safety:340、recursive-self-improvement:221／:278）／依日報收斂 3（ai-agent-safety:455、competitor-landscape:108／:340，複查日延至 10-11）；回掃：入邊 229 處（改 0）＋探針命中 24 處（改 0）；🎯 清到 0（待清 6；近 7 天新增 32）；⚠️ 舊語法盲區 33 筆（前三頁 feature-radar 4、jacob-coxon 3、pricing 3）
+  - code-quality-decline 三條線（5m）：4 列比對／3 列已改（#65687 最後更新 09-25、#77136 09-23 且 131 則留言、#83510 不變；#41930 已結案不變）／資料截至 2026-09-27

@@ -1,7 +1,7 @@
 {
-  "count": 106,
-  "updated": "2026-09-20",
-  "note": "2026-09-20 使用者裁示「先清 0」：六記者依 5c 契約把 109 筆逾期全數結案（查實改寫為主，查無官方者依契約改 🔎 並推複查日）",
+  "count": 125,
+  "updated": "2026-09-27",
+  "note": "opus-5-5 Q-01 查證結案：官方發布文已附具名基準表（2026-09-25 查證），移除查無官方標記，使用者授權主編移除懸置標記",
   "fingerprints": [
     {
       "key": "entities/claude-code::2026-09-18::claude-projects、claude code projects",
@@ -12,12 +12,20 @@
       "label": "entities/claude-code（標 2026-09-16｜查 Configure your agent、agent-sdk/configuration、[[topics/anthropic-agent-stack]]）"
     },
     {
+      "key": "entities/claude-code::2026-09-08::ios app、設定區塊",
+      "label": "entities/claude-code（標 2026-09-08｜查 iOS App、設定區塊）"
+    },
+    {
       "key": "entities/claude-code::2026-09-17::bank account、financial data",
       "label": "entities/claude-code（標 2026-09-17｜查 bank account、financial data）"
     },
     {
       "key": "entities/claude-code::2026-09-15::claude for excel、claude for word",
       "label": "entities/claude-code（標 2026-09-15｜查 Claude for Excel、Claude for Word）"
+    },
+    {
+      "key": "entities/claude-code::2026-09-21::claude in chrome、compliance",
+      "label": "entities/claude-code（標 2026-09-21｜查 Claude in Chrome、compliance）"
     },
     {
       "key": "entities/claude-code::2026-08-28::51,000 token、63903",
@@ -46,6 +54,10 @@
     {
       "key": "entities/claude-code::2026-08-09::[[topics/code-quality-decline]]、記憶過多",
       "label": "entities/claude-code（標 2026-08-09｜查 [[topics/code-quality-decline]]、記憶過多）"
+    },
+    {
+      "key": "entities/claude-code::2026-09-24::effort、pin --effort",
+      "label": "entities/claude-code（標 2026-09-24｜查 effort、pin --effort）"
     },
     {
       "key": "entities/claude-code::2026-08-09::#69238、advisor",
@@ -100,24 +112,12 @@
       "label": "entities/fable-5（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol）"
     },
     {
-      "key": "entities/fable-5::2026-09-10::fedscoop、claude for government",
-      "label": "entities/fable-5（標 2026-09-10｜查 FedScoop、Claude for Government）"
-    },
-    {
-      "key": "entities/jacob-coxon::2026-09-09::coxon、hilbertspaess",
-      "label": "entities/jacob-coxon（標 2026-09-09｜查 Coxon、hilbertspaess）"
-    },
-    {
       "key": "entities/jacob-coxon::2026-09-17::anonymous math geek、hilbertspaess",
       "label": "entities/jacob-coxon（標 2026-09-17｜查 Anonymous Math Geek、hilbertspaess）"
     },
     {
       "key": "entities/jacob-coxon::2026-09-15::doomsday warning、broke through",
       "label": "entities/jacob-coxon（標 2026-09-15｜查 doomsday warning、broke through）"
-    },
-    {
-      "key": "entities/jacob-coxon::2026-09-12::we may not survive this、esg dive",
-      "label": "entities/jacob-coxon（標 2026-09-12｜查 we may not survive this、ESG Dive）"
     },
     {
       "key": "entities/john-jumper::2026-08-10::alphabet、gemini 3.5",
@@ -136,6 +136,10 @@
       "label": "entities/opus-4-7（標 2026-08-26｜查 2604.24827、Incompressible Knowledge Probes）"
     },
     {
+      "key": "entities/opus-5::2026-09-21::opus 5.5、pasquale pillitteri",
+      "label": "entities/opus-5（標 2026-09-21｜查 Opus 5.5、Pasquale Pillitteri）"
+    },
+    {
       "key": "entities/opus-5::2026-09-15::opus 5.2、biggo.com",
       "label": "entities/opus-5（標 2026-09-15｜查 Opus 5.2、biggo.com）"
     },
@@ -148,16 +152,16 @@
       "label": "entities/opus-5（標 2026-08-26｜查 tech-insider.org、$19 Gap）"
     },
     {
-      "key": "entities/pricing::2026-09-09::hijack、usage quota",
-      "label": "entities/pricing（標 2026-09-09｜查 hijack、usage quota）"
-    },
-    {
       "key": "entities/pricing::2026-09-07::github #16157、usage limits",
       "label": "entities/pricing（標 2026-09-07｜查 GitHub #16157、usage limits）"
     },
     {
       "key": "entities/pricing::2026-09-04::max 5x、帳號停用",
       "label": "entities/pricing（標 2026-09-04｜查 Max 5x、帳號停用）"
+    },
+    {
+      "key": "entities/pricing::2026-09-24::pasquale pillitteri、實驗性重置",
+      "label": "entities/pricing（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置）"
     },
     {
       "key": "entities/robert-mahari::2026-09-13::robert mahari、claude for legal",
@@ -168,8 +172,56 @@
       "label": "entities/sonnet-5（標 2026-08-26｜查 tech-insider.org、57 Score）"
     },
     {
+      "key": "entities/sridhar-vembu::2026-09-24::sridhar vembu、ndtv、放慢腳步",
+      "label": "entities/sridhar-vembu（標 2026-09-24｜查 Sridhar Vembu、NDTV、放慢腳步）"
+    },
+    {
+      "key": "entities/teresa-carlson::2026-07-07::teresa carlson、public sector",
+      "label": "entities/teresa-carlson（標 2026-07-07｜查 Teresa Carlson、Public Sector）"
+    },
+    {
       "key": "feature-radar::2026-09-18::claude-projects、claude code projects",
       "label": "feature-radar（標 2026-09-18｜查 claude-projects、Claude Code Projects）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-26::gitguardian、ai coding agent、credential leak",
+      "label": "topics/ai-agent-safety（標 2026-09-26｜查 GitGuardian、AI coding agent、credential leak）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-25::abc news、3 個組織",
+      "label": "topics/ai-agent-safety（標 2026-09-25｜查 ABC News、3 個組織）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-25::techradar、48,000 個檔案",
+      "label": "topics/ai-agent-safety（標 2026-09-25｜查 TechRadar、48,000 個檔案）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-23::the hacker news、restricted actions safety tests",
+      "label": "topics/ai-agent-safety（標 2026-09-23｜查 The Hacker News、restricted actions safety tests）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-22::claude opus 5.5、cybersecurity safeguards",
+      "label": "topics/ai-agent-safety（標 2026-09-22｜查 Claude Opus 5.5、cybersecurity safeguards）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-22::tell hn、signed a contract",
+      "label": "topics/ai-agent-safety（標 2026-09-22｜查 Tell HN、signed a contract）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-22::maxkb、root",
+      "label": "topics/ai-agent-safety（標 2026-09-22｜查 MaxKB、root）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-22::the register、cve pile up",
+      "label": "topics/ai-agent-safety（標 2026-09-22｜查 The Register、CVE pile up）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-22::abc news、bioweapon misuse",
+      "label": "topics/ai-agent-safety（標 2026-09-22｜查 ABC News、bioweapon misuse）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-09-20::조선일보、72 小時",
+      "label": "topics/ai-agent-safety（標 2026-09-20｜查 조선일보、72 小時）"
     },
     {
       "key": "topics/ai-agent-safety::2026-09-18::plugin4shell、zero-click",
@@ -196,24 +248,12 @@
       "label": "topics/ai-agent-safety（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen）"
     },
     {
-      "key": "topics/ai-agent-safety::2026-09-13::escaping containment、rogue ai agents",
-      "label": "topics/ai-agent-safety（標 2026-09-13｜查 escaping containment、rogue AI agents）"
-    },
-    {
       "key": "topics/ai-agent-safety::2026-09-11::deny-list、allow-list",
       "label": "topics/ai-agent-safety（標 2026-09-11｜查 deny-list、allow-list）"
     },
     {
-      "key": "topics/ai-agent-safety::2026-09-09::draining、startup fortune",
-      "label": "topics/ai-agent-safety（標 2026-09-09｜查 Draining、Startup Fortune）"
-    },
-    {
       "key": "topics/ai-agent-safety::2026-08-27::ars technica、unowned code、hermes",
       "label": "topics/ai-agent-safety（標 2026-08-27｜查 Ars Technica、unowned code、Hermes）"
-    },
-    {
-      "key": "topics/ai-agent-safety::2026-09-10::opus 4.6、alignment assessment",
-      "label": "topics/ai-agent-safety（標 2026-09-10｜查 Opus 4.6、alignment assessment）"
     },
     {
       "key": "topics/ai-agent-safety::2026-08-12::deep_think、_can1357",
@@ -236,16 +276,32 @@
       "label": "topics/anthropic-government-policy（標 2026-09-15｜查 Rescana、蒸餾攻擊）"
     },
     {
-      "key": "topics/anthropic-government-policy::2026-09-07::身份管控、臉部掃描",
-      "label": "topics/anthropic-government-policy（標 2026-09-07｜查 身份管控、臉部掃描）"
+      "key": "topics/anthropic-government-policy::2026-09-22::gizmodo、deepseek、moonshot、中國調查",
+      "label": "topics/anthropic-government-policy（標 2026-09-22｜查 Gizmodo、DeepSeek、Moonshot、中國調查）"
+    },
+    {
+      "key": "topics/anthropic-government-policy::2026-09-25::aisi、withhold models",
+      "label": "topics/anthropic-government-policy（標 2026-09-25｜查 AISI、withhold models）"
     },
     {
       "key": "topics/anthropic-government-policy::2026-08-30::偵測 api、殘留率",
       "label": "topics/anthropic-government-policy（標 2026-08-30｜查 偵測 API、殘留率）"
     },
     {
-      "key": "topics/anthropic-government-policy::2026-09-12::defensescoop、classified workloads",
-      "label": "topics/anthropic-government-policy（標 2026-09-12｜查 DefenseScoop、classified workloads）"
+      "key": "topics/anthropic-government-policy::2026-09-26::d.c. circuit、anthropic supply chain risk appeal",
+      "label": "topics/anthropic-government-policy（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal）"
+    },
+    {
+      "key": "topics/anthropic-government-policy::2026-09-26::d.c. circuit、anthropic supply chain risk appeal",
+      "label": "topics/anthropic-government-policy（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal）"
+    },
+    {
+      "key": "topics/anthropic-government-policy::2026-09-25::aisi、withhold models",
+      "label": "topics/anthropic-government-policy（標 2026-09-25｜查 AISI、withhold models）"
+    },
+    {
+      "key": "topics/anthropic-government-policy::2026-09-24::narrow ai safety、聯合國大會",
+      "label": "topics/anthropic-government-policy（標 2026-09-24｜查 narrow AI safety、聯合國大會）"
     },
     {
       "key": "topics/anthropic-government-policy::2026-09-19::反壟斷合謀、spacexai",
@@ -312,6 +368,38 @@
       "label": "topics/competitor-landscape（標 2026-08-13｜查 Grok、SpaceX）"
     },
     {
+      "key": "topics/market-signals::2026-09-26::d.c. circuit、supply chain risk appeal、anthropic petition、遷出計畫",
+      "label": "topics/market-signals（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-25::akamai、10-q、營收指引",
+      "label": "topics/market-signals（標 2026-09-25｜查 Akamai、10-Q、營收指引）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-25::white house、aisi、uk review",
+      "label": "topics/market-signals（標 2026-09-25｜查 White House、AISI、UK review）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-23::gpt-6 sol、毛利率",
+      "label": "topics/market-signals（標 2026-09-23｜查 GPT-6 Sol、毛利率）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-23::bloomberg、derailed",
+      "label": "topics/market-signals（標 2026-09-23｜查 Bloomberg、derailed）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-21::nscale、microsoft、資料中心",
+      "label": "topics/market-signals（標 2026-09-21｜查 Nscale、Microsoft、資料中心）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-20::資料爬取、mashable",
+      "label": "topics/market-signals（標 2026-09-20｜查 資料爬取、Mashable）"
+    },
+    {
+      "key": "topics/market-signals::2026-09-20::書面承認、跨實驗室對話",
+      "label": "topics/market-signals（標 2026-09-20｜查 書面承認、跨實驗室對話）"
+    },
+    {
       "key": "topics/market-signals::2026-09-19::反壟斷合謀、collusion、pacing",
       "label": "topics/market-signals（標 2026-09-19｜查 反壟斷合謀、collusion、pacing）"
     },
@@ -344,10 +432,6 @@
       "label": "topics/market-signals（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
     },
     {
-      "key": "topics/market-signals::2026-09-12::defensescoop、classified workloads、國防部",
-      "label": "topics/market-signals（標 2026-09-12｜查 DefenseScoop、classified workloads、國防部）"
-    },
-    {
       "key": "topics/market-signals::2026-09-12::nvidia、認購方、招股文件",
       "label": "topics/market-signals（標 2026-09-12｜查 Nvidia、認購方、招股文件）"
     },
@@ -356,20 +440,8 @@
       "label": "topics/market-signals（標 2026-09-11｜查 出口管制、國防部）"
     },
     {
-      "key": "topics/market-signals::2026-09-11::moonshot、月之暗面",
-      "label": "topics/market-signals（標 2026-09-11｜查 Moonshot、月之暗面）"
-    },
-    {
-      "key": "topics/market-signals::2026-09-09::[[topics/recursive-self-improvement]]、aisi",
-      "label": "topics/market-signals（標 2026-09-09｜查 [[topics/recursive-self-improvement]]、AISI）"
-    },
-    {
       "key": "topics/market-signals::2026-09-10::american prospect、監控系統",
       "label": "topics/market-signals（標 2026-09-10｜查 American Prospect、監控系統）"
-    },
-    {
-      "key": "topics/market-signals::2026-09-09::cognition、devin",
-      "label": "topics/market-signals（標 2026-09-09｜查 Cognition、Devin）"
     },
     {
       "key": "topics/market-signals::2026-09-04::morgan stanley、goldman sachs",
@@ -382,6 +454,26 @@
     {
       "key": "topics/market-signals::2026-09-08::標普全球、穆迪評等、投資級信評",
       "label": "topics/market-signals（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-09-24::axios、doomerism、regulatory capture",
+      "label": "topics/recursive-self-improvement（標 2026-09-24｜查 Axios、doomerism、regulatory capture）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-09-22::institute、measuring-pace",
+      "label": "topics/recursive-self-improvement（標 2026-09-22｜查 Institute、measuring-pace）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-09-24::3萬個agent、研究與工程工作",
+      "label": "topics/recursive-self-improvement（標 2026-09-24｜查 3萬個agent、研究與工程工作）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-09-21::r&d automation index、leads",
+      "label": "topics/recursive-self-improvement（標 2026-09-21｜查 R&D Automation Index、Leads）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-09-21::stress-test、openai anthropic deal",
+      "label": "topics/recursive-self-improvement（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-09-19::accenture、embedded evaluator",
@@ -408,24 +500,8 @@
       "label": "topics/recursive-self-improvement（標 2026-09-14｜查 川普回絕、冷戰話術）"
     },
     {
-      "key": "topics/recursive-self-improvement::2026-09-13::ai swarm、slowdown plan",
-      "label": "topics/recursive-self-improvement（標 2026-09-13｜查 AI swarm、slowdown plan）"
-    },
-    {
       "key": "topics/recursive-self-improvement::2026-09-11::joe benton、josh engels",
       "label": "topics/recursive-self-improvement（標 2026-09-11｜查 Joe Benton、Josh Engels）"
-    },
-    {
-      "key": "topics/recursive-self-improvement::2026-09-11::existential concerns、psyop",
-      "label": "topics/recursive-self-improvement（標 2026-09-11｜查 existential concerns、psyop）"
-    },
-    {
-      "key": "topics/recursive-self-improvement::2026-09-09::jacob coxon、evan hubinger",
-      "label": "topics/recursive-self-improvement（標 2026-09-09｜查 Jacob Coxon、Evan Hubinger）"
-    },
-    {
-      "key": "topics/recursive-self-improvement::2026-08-29::automated researchers、alignment failures",
-      "label": "topics/recursive-self-improvement（標 2026-08-29｜查 Automated researchers、alignment failures）"
     }
   ]
 }

@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-09-23
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-23
 
 > **最新動態**（2026-09-23）
@@ -149,7 +149,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-23 | 正式發布（官方日期 09-22），取代 Opus 5 成為預設 Opus；牌價降 20%、官方稱運算成本降 40%；具名基準分數 🔎查無官方⟨Q-01⟩ |
+| 2026-09-23 | 正式發布（官方日期 09-22），取代 Opus 5 成為預設 Opus；牌價降 20%、官方稱運算成本降 40%；具名基準表見「這些數字是誰量的」（2026-09-25 查證）|
 
 **歷史記錄細節**
 
@@ -157,4 +157,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 1M context、128K 最大輸出，牌價 $4／$20 每 Mtok、快取讀取 $0.20／Mtok（官方 5%）；Pro／Max 用量上限同步調高（[MIXED Reality News](https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits/)，2026-09-23）
   - 同日 OpenAI 發布 GPT-6 Sol／Luna，Fortune 稱 AI 價格戰再度升溫，跨家比較不進本頁（[Fortune](https://fortune.com/2026/09/22/what-ai-slowdown-openai-anthropic-release-dueling-moreaffordable-models-as-ai-price-wars-heat-up/)，2026-09-22）
   - The Verge 報導隨附資安防護機制強化，NYT 將發布放進近期 AI 安全爭論脈絡報導；機制與爭論細節屬安全政策線，見 [[topics/ai-agent-safety]]（[The Verge](https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity)；[NYT](https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html)，2026-09-22）
-  - ⟨Q-01⟩ 🔎 **查無官方**（標 2026-09-23｜查 `claude-opus-5-5`、benchmark｜複 2026-10-07）｜**具名基準分數未見官方公布**：官方僅稱「多數工作表現追平 Fable 5.1」，未附具名基準或分數，與 Opus 5 發布時同批公布 CursorBench 等做法不同（2026-09-23 查證）
+  - **具名基準表**：官方發布文附完整基準表（Terminal-Bench 4.0、FrontierCode 等九項，全項領先 Opus 5、Fable 5.1），見本頁「這些數字是誰量的」（[Anthropic](https://www.anthropic.com/claude-opus-5-5)，2026-09-25 查證）
