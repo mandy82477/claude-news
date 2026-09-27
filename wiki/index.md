@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-09-26
+**最後更新：** 2026-09-27
 
 ---
 
@@ -101,7 +101,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 每種社群做法的原始證據與採用量，20 類（Multi-agent、Skills、CLAUDE.md、Hooks 四類已定案）；「該怎麼改設定」看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-tech-patterns-archive]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 每種社群做法的原始證據與採用量，21 類（Multi-agent、Skills、CLAUDE.md、Hooks 四類已定案）；「該怎麼改設定」看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-tech-patterns-archive]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 8 場：5 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
