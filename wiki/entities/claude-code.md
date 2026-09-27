@@ -794,15 +794,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-07-01 | **v2.1.197 Sonnet 5 正式成為預設模型**：Claude Code 預設切換至 Claude Sonnet 5，原生支援 1M token context window，促銷定價至 2026-08-31（後續：該到期日已於 2026-08-10 取消，$2/$10 永久化）；使用者升版後無需手動切換即享受完整 1M context（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.197)）|
 | 2026-07-01 | **Enterprise Gateway 發布**：Anthropic 新增 Enterprise Gateway，簡化企業在 AWS 和 Google Cloud 上接入 Claude Code 的流程，降低大型組織的部署門檻（見 [DevOps.com 報導](https://devops.com/anthropic-adds-enterprise-gateway-to-simplify-claude-code-access-on-aws-and-google-cloud/)）|
 | 2026-07-01 | **anthropic-sdk-python v0.115.0**：新增 Managed Agents API 支援，Python 開發者可透過 SDK 直接操作 Managed Agents 框架（見 [[entities/managed-agents]]）|
-| 2026-06-30 | **v2.1.197**（初報）：`/model` 選單出現 Sonnet 5 選項（當時無法選用），社群預測正式發布在即；07-01 官方確認正式切換 |
-| 2026-06-30 | **Explore subagent 鎖定 Haiku 分析**：社群深入分析內建 subagent 類型，發現 Explore subagent 固定使用 Haiku 模型，除錯場景可能因模型能力不足導致問題（見 [[已知問題]]）|
-| 2026-06-30 | **Session 30天自動刪除：Anthropic 拒絕修復**：官方在 GitHub issue #62476 明確表示不修復此行為，社群建議透過 CLAUDE.md + `.claude/changelog` 手動保留記錄 |
-| 2026-06-30 | **36Kr 報導背景任務升級**（2026-06-30 指控，至今無後續）：36Kr 報導 Claude Code 下一重大升級方向為讓系統在背景完成所有任務、同時使用者繼續對話互動；官方尚未正式公告 |
-| 2026-06-29 | **v2.1.196**：新增 org default model 功能，企業管理員在 org console 設定後，使用者在 `/model` 看到「Org default」或「Role default」選項 |
-| 2026-06-25 | **v2.1.191**：新增 `/rewind` 指令，可從 `/clear` 執行前任一對話節點恢復，無需重新輸入指令背景；修正 streaming 捲軸自動跳底部問題（UX 改善）；TypeScript SDK v0.106.0 與 Python SDK v0.112.0 同日發布，新增 `client.system.message` 支援 |
-| 2026-06-24 | **v2.1.187**：新增 `sandbox.credentials` 設定，可阻止沙盒指令讀取憑證檔案與機密環境變數（AWS 金鑰、API token 等），防止沙盒內惡意指令竊取敏感資訊；新增組織層級模型限制功能，企業管理員可統一管控可用模型清單 |
-| 2026-06-22 | **v2.1.186**：新增 `claude mcp login <name>` 與 `claude mcp logout <name>` CLI 指令，可直接從命令列認證 MCP Server，無需進入 `/mcp` 互動選單；`--no-browser` 旗標支援 headless 環境透過 stdin 完成認證；**Extended Thinking 透明度問題社群揭露**（HN score 312）：工程師 Patrick McCanna 分析 session log 發現 thinking blocks 只含推理摘要，完整思考過程由 Anthropic 加密於 600 字元 signature，用戶端無法自行解密，企業審計追蹤承諾受影響（見「已知問題」）|
-| 2026-06-21 | **v2.1.185**：stream-stall 提示文字改為「Waiting for API response · will retry in …」，觸發門檻延長至 20 秒（原 10 秒），reliability 改善；Anthropic 官方博客發布「七種 Claude Code 控制層」決策框架（CLAUDE.md、rules、skills、subagents、hooks、output styles、system prompt append），HN score 4 |
+### 2026-06 時段總結
+- 06-21～06-22：v2.1.185 stream-stall 提示改為 20 秒觸發；官方部落格發布「七種控制層」框架；v2.1.186 新增 `claude mcp login/logout`、`--no-browser`。
+- 06-22（續）：Extended Thinking 透明度問題社群揭露（HN 312 分，thinking blocks 加密簽章影響企業審計，詳見「已知問題」）。
+- 06-24～06-25：v2.1.187 新增 `sandbox.credentials`（阻擋沙盒讀取憑證）與組織層級模型限制；v2.1.191 新增 `/rewind` 指令、修正 streaming 捲軸問題，SDK 同步支援 `client.system.message`。
+- 06-29～06-30：v2.1.196 新增 org default model（見 [[topics/official-community-gap]]）；v2.1.197 初報 Sonnet 5（`/model` 選單先行出現，07-01 正式切換）。
+- 06-29～06-30（續）：Explore subagent 固定用 Haiku 遭社群發現；Session 30 天自動刪除官方拒絕修復（issue #62476）；36Kr 報導背景任務升級傳聞，未經官方證實。
+- 原始條目見 [[entities/claude-code-archive#2026-06]]
+
 ### 2026-05 時段總結
 - 05-02～05-03：AGENTS.md 跨工具互操作缺口浮現（issue #6235，詳見「已知問題」）；GameMaker 正式啟用整合；macOS computer use 上線；社群工具 Governor、Caliber、Omar、graphify 等發布。
 - 05-04～05-06：原始碼外洩 DMCA 風波擴大（詳見「已知問題」）；Cowork/Desktop 悄悄支援第三方 LLM；Claude Connectors 擴及創意軟體；Windows VS Code extension 全面故障（詳見「版本更新」）；Claude Security 進入公開 Beta（見 [[entities/claude-security]]）。

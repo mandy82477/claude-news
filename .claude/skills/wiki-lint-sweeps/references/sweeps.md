@@ -42,7 +42,7 @@
 
 ## 5b. 跨家任務榜單週更（主編派工）
 
-`wiki/topics/model-task-leaderboard.md`（任務 × 跨家模型領先者週快照）由本步驟維護——它吃外部榜單網站而非新聞條目，類別路由接不到，此處為其唯一觸發邊；記者無 web 工具，由主編派工執行。
+`wiki/topics/model-task-leaderboard.md`（任務 × 跨家模型領先者週快照）由本步驟維護——它吃外部榜單網站而非新聞條目，類別路由接不到，此處為其唯一觸發邊；記者的日常派工不查外部來源，由主編派工執行。
 
 **雲端執行時先探測**，見本檔「雲端 egress 探測」表 5b 列。
 
@@ -60,7 +60,7 @@
 
 ## 5c. 逾期待查證清算（清零制，按頁面所有權派六記者並行）
 
-記者 agent 無 web 工具，標下的「待查證」在系統內沒有任何人有能力解。本步驟是唯一的消化端。
+記者在日常派工裡不查外部來源（這是角色規則，不是工具限制），標下的「待查證」只有本步驟能解——本步是唯一的消化端，也是唯一**授權記者查外部來源**的派工：拆給各類別記者時，派工 prompt 須明寫此授權。
 
 **⚠️ 雲端執行時先探測**，見本檔「雲端 egress 探測」表 5c 列（本步需存取 `support.claude.com`／`docs.claude.com`／`anthropic.com`）。
 
@@ -148,7 +148,7 @@
 
 ## 5e. pricing「通路與乘數」複查（主編親查）
 
-`wiki/entities/pricing.md` 的 `## 通路與乘數` 吃的是**官方計價文件**（`platform.claude.com` 與各雲端平台），不是日報——記者無 web 工具，寫成記者責任會製造永遠空著的區塊。依 `.claude/reporter-rules/commercial/weekly.md` 執行：
+`wiki/entities/pricing.md` 的 `## 通路與乘數` 吃的是**官方計價文件**（`platform.claude.com` 與各雲端平台），不是日報——記者的日常派工不查外部來源，寫成記者責任會製造永遠空著的區塊。依 `.claude/reporter-rules/commercial/weekly.md` 執行：
 
 1. 該區塊「資料截至 YYYY-MM-DD」距今 > 30 天 → WebFetch 官方定價頁與平台可用性頁複查；一致則只更新查證日
 2. 本週有新模型世代發布 → 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者走 `data/pending-handoffs.jsonl` 轉知模型記者（`.claude/reporter-rules/models/pages.md` I 條）
@@ -202,7 +202,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5h. 投資訊號回顧環（主編親查）
 
-`wiki/topics/market-signals.md` 的判讀是**預測性宣稱**，本步是它唯一的結算端：對 `## 回顧結算` 表中「兩週後」為 ⏳ 且判讀日距今 ≥ 14 天的列，結兩件事——**催化劑在結算日前出現了沒**（查本庫日報，`scripts/news_mentions.py`，每列都做）與**上市標的的兩週粗方向**（↑／↓／～，只做帶代號的列），回填「兩週後」與「對錯」；接著把本週判讀沉澱進週更教材頁 `wiki/topics/market-lessons.md`（消息線表、課程表含「押對了嗎」、IPO 背景段順檢）。記者無 web 工具，查不了股價，這是本步不派工的唯一理由。
+`wiki/topics/market-signals.md` 的判讀是**預測性宣稱**，本步是它唯一的結算端：對 `## 回顧結算` 表中「兩週後」為 ⏳ 且判讀日距今 ≥ 14 天的列，結兩件事——**催化劑在結算日前出現了沒**（查本庫日報，`scripts/news_mentions.py`，每列都做）與**上市標的的兩週粗方向**（↑／↓／～，只做帶代號的列），回填「兩週後」與「對錯」；接著把本週判讀沉澱進週更教材頁 `wiki/topics/market-lessons.md`（消息線表、課程表含「押對了嗎」、IPO 背景段順檢）。記者的日常派工不查外部來源、查不了股價，這是本步不派工的唯一理由。
 
 **⚠️ 雲端兩半都做、不需探測**，理由見本檔「雲端 egress 探測」節末「5h 不受此限」段。
 
@@ -270,7 +270,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5m. code-quality-decline 三條線 issue 狀態複查（主編親做）
 
-「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者無 web 工具。逐一跑（`gh issue view` 一次只吃一個 issue；本 repo 的 remote 是 `mandy82477/claude-news`，不加 `-R` 會查到錯的 repo）：
+「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者的日常派工不查外部來源。逐一跑（`gh issue view` 一次只吃一個 issue；本 repo 的 remote 是 `mandy82477/claude-news`，不加 `-R` 會查到錯的 repo）：
 
     for n in 41930 65687 77136 83510; do gh issue view $n -R anthropics/claude-code --json number,state,updatedAt; done
 
@@ -287,7 +287,7 @@ code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截�
 
 ## 5n. official-community-gap「官方補了沒」表對官方一手（主編親做）
 
-記者無 web 工具，這一步只能主編做。逐列：
+記者的日常派工不查外部來源，這一步只能主編做。逐列：
 
 1. 表上每個 issue 號只取狀態與官方回覆，不要把整包留言倒進來（#6235 有 405 則）：
    ```

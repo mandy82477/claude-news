@@ -6948,3 +6948,20 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - `topics/model-task-leaderboard`：EQ-Bench 移出快照表（連續 4 輪同值停在 07-20、頁面 JS 渲染直接抓取持續失敗）；涵蓋 17→16 榜，頁尾評比索引保留算分方式並標「已於 2026-09-27 移出快照表」；「聊天陪伴／情商」一題目前無活榜承接
 - `entities/claude-code` `## 歷史記錄` × 2026-05 蒸餾：69 條原文一字不刪搬至 `entities/claude-code-archive` `## 2026-05`（逐列比對一致），主頁換為 8 行時段總結；⟨Q-13⟩ 與細節條目成對搬遷，懸置總數 125 不變；錨點入邊 0、回掃無需改指；主頁 890→830 行
 - 其餘 11 個蒸餾候選時段仍待裁示
+
+## 2026-09-27 裁決：09-26 lint 待裁示事項全數由主編處理（使用者授權「全部自己解決」）
+
+- 蒸餾候選（其餘 11 時段）：
+  - 執行 6：`entities/claude-code` 2026-06（9 條）、`entities/claude-skills` 2026-06（4 條）、`entities/cowork` 2026-05（3 條，新建 cowork-archive）、`entities/mythos` 2026-06（16 條，06-10 一條因 mustafa-suleyman 有 2 處錨點指入依例外留主頁）、`entities/john-jumper` 2026-06（6 條，新建 john-jumper-archive）、`topics/enterprise-tool-tracker` 2026-06；逐行比對原文全數存在於主頁或 archive
+  - 不執行 4：`entities/claude-tag` 2026-06、`entities/claude-design` 2026-04、`entities/bugcrawl` 2026-04（皆僅 1 條且為創頁事件，蒸完主頁更空）；`topics/anthropic-commitments` 2026-06（2 條極短，為此新建 archive 不值得）
+  - 發現：3h 提案未設條目數下限，1–4 條的月份也被提案，蒸完行數反增（claude-skills 159→160、cowork 109→112）——下輪 3h 提案建議只收 ≥5 條的時段
+  - 09-12／09-19 兩輪未裁示的 18、23 個蒸餾時段：由 09-26 提案取代，不另處理
+- 規則矛盾（記者有無 web 工具）：`wiki-lint-sweeps/references/sweeps.md` 六處「記者無 web 工具」改為「記者的日常派工不查外部來源」（角色規則而非工具限制），5c 明寫本步是唯一授權記者查外部來源的派工
+- runbook 標題：`docs/cloud-runbooks/weekly-lint.md` 5c、6l 對齊來源檔標題
+- 社群模式概覽撈法：`community/pages.md`、`weekly.md`「取行號最大者」改為「取日期最新者（即行號最小者）」，與頁面新到舊排序一致
+- 未註冊 slug：`data/source_attribution.jsonl` 三筆 `akamai-deal`→`hacker-news`、`uk-model-hold`→`google-news`（對照 09-25 日報來源行）
+- `topics/community-tech-tools` 逾期候選：重算為 11 筆，移除 1（opslane）；9 筆為決策表首選／次選依規則豁免、Proliferate 有命中保留——09-26 的「16 筆」為高估
+- patterns 淘汰候選 Fast Context Task Router：成熟度改「⏳ 已停擺」並附依據，原始條目保留
+- 判斷類事項（主編裁定）：Codex／Cursor 不建頁（本站以 Claude 生態為主，已由 competitor-landscape 對手雷達承接）；併頁候選 anthropic-agent-stack ↔ community-large-codebase-workflow 不併（兩頁回答不同問題、已互連）；頁面格式模板維持為新頁最低骨架；features/pages.md 規則密度提案不動（教訓行僅 0.7%，行數來自頁面數）；過期規則 42 節不動（年齡本身不是缺陷，交下輪 6d 逐節確認）
+- 需使用者端設定、主編無法代做：5b 榜單網域與 5m `anthropics/claude-code` 存取須在 claude.ai 雲端環境設定開通；未開通前由本機 `/weekly` 步驟 0 承接為常態
+- 另：`data/reader-language-allow.json` 新增一筆誤報豁免（mythos-archive「首爾記者會」）

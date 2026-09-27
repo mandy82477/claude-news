@@ -4,7 +4,7 @@ kind: "entity"
 type: "feature"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-26"
+last_updated: "2026-09-27"
 last_news_update: "2026-09-26"
 status_main: "active"
 days_since_news: 1
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-26
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-26
 
 > **最新官方動態**（2026-09-26）
@@ -139,10 +139,11 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | 2026-08-19 | 官方技能庫目錄核對：`claude-academy-guide`（08-18 新增）改名為 `academy-guide`，原名同步移除；20 萬 token skill 一案已查實並修復（見「已知問題」） |
 | 2026-08-18 | 官方技能庫（anthropics/skills）新增 2 項：`claude-academy-guide`、`discernment-nudge`；官方 repo 未附說明文字，用途待補 |
 | 2026-07-15 | Claude for Teachers 教學技能庫發布，向美國認證 K-12 教師免費開放（詳見 [[entities/claude-for-teachers]]） |
-| 2026-06-21 | 官方部落格《七種指令傳遞方法》，將 Skills 納入 CLAUDE.md／rules／subagents／hooks／output styles／system prompt append 六層控制決策框架 |
-| 2026-06-16 | v2.1.178：Skills 在巢狀子 Agent 中可正常運作，搭配新版 `Tool(param:value)` permission 語法 |
-| 2026-06-09 | v2.1.169：新增 `--safe-mode` 旗標與 `CLAUDE_CODE_SAFE_MODE` 環境變數，一鍵停用含 skills 在內的所有客製化設定 |
-| 2026-06-05 | 官方部落格《Lessons from building Claude Code: How we use skills》，公開內部數百個 Skills 的實戰心得 |
+### 2026-06 時段總結
+- 官方部落格《Lessons from building Claude Code: How we use skills》，公開內部數百個 Skills 的實戰心得（06-05）
+- v2.1.169 新增 `--safe-mode` 旗標／`CLAUDE_CODE_SAFE_MODE` 環境變數，一鍵停用含 skills 在內的所有客製化設定（06-09）；v2.1.178 新增 `Tool(param:value)` permission 語法，Skills 在巢狀子 Agent 中可正常運作（06-16）
+- 官方部落格《七種指令傳遞方法》，將 Skills 納入 CLAUDE.md／rules／subagents／hooks／output styles／system prompt append 六層控制決策框架（06-21）
+- 原始條目見 [[entities/claude-skills-archive#2026-06]]
 
 ### 2026-05 時段總結
 - 官方發布「31 個小企業 Skills」技能包，首日下載 38.2 萬次（05-24）；security-guidance plugin 全面下放所有用戶（05-27）；社群整理出「漸進式揭露」三層架構（05-31）

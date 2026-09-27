@@ -4,13 +4,13 @@ kind: "entity"
 type: "product"
 status: "active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-25"
+last_updated: "2026-09-27"
 last_news_update: "2026-09-25"
 status_main: "active"
 days_since_news: 2
 parent: null
-children: "[]"
-page_role: "root"
+children: "['entities/cowork-archive']"
+page_role: "hub"
 days_since_news_subtree: 2
 inbound_links: 11
 attribution_count: 3
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-09-25
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
@@ -104,6 +104,9 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 | 2026-08-12 | 官方部落格確認 Cowork 可於 Chrome 側邊欄執行，Max／Team 即日、Pro 數週內開放，不支援其他 Chromium 瀏覽器與行動版 |
 | 2026-08-05 | Inference Hooks 進入 Enterprise 組織 beta，可將 claude.ai、Cowork、Claude Code 上受管治 prompt 導向企業自有 AI 安全伺服器 |
 | 2026-07-07 | Cowork 正式擴展至行動裝置與網頁版，首波開放 Max 訂閱用戶，任務可雲端持續執行，涵蓋政府機構客戶 |
-| 2026-05-11 | 社群回報 Claude Code Desktop 與 Cowork 定位混淆，功能高度重疊，官方未公開釐清差異（單一 Reddit 貼文） |
-| 2026-05-04 | Cowork／Desktop 悄悄加入支援任意第三方 LLM 功能，無官方公告，由社群自行發現 |
-| 2026-05-03 | macOS 電腦使用（computer use）功能上線，Cowork 可直接控制桌面滑鼠與鍵盤 |
+
+### 2026-05 時段總結
+- 05-03：macOS 電腦使用（computer use）功能上線，Cowork 可直接控制桌面滑鼠與鍵盤。
+- 05-04：Cowork／Desktop 悄悄加入支援任意第三方 LLM（OpenAI、Gemini、本地模型、企業閘道），無官方公告，社群自行發現。
+- 05-11：社群回報 Claude Code Desktop 與 Cowork 定位混淆、功能高度重疊，官方未公開釐清差異（單一 Reddit 貼文）。
+- 原始條目見 [[entities/cowork-archive#2026-05]]

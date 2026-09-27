@@ -3,7 +3,7 @@ page: "entities/claude-skills-archive"
 kind: "entity"
 status: "resolved（封存頁）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-20"
+last_updated: "2026-09-27"
 last_news_update: "2026-05-31"
 status_main: "resolved"
 days_since_news: 119
@@ -28,12 +28,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** resolved（封存頁）
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-skills]]
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-05-31
 
 > 本頁保存 [[entities/claude-skills]] 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。
 
 ---
+
+## 2026-06
+
+| 日期 | 事件 |
+|------|------|
+| 2026-06-21 | 官方部落格《七種指令傳遞方法》，將 Skills 納入 CLAUDE.md／rules／subagents／hooks／output styles／system prompt append 六層控制決策框架 |
+| 2026-06-16 | v2.1.178：Skills 在巢狀子 Agent 中可正常運作，搭配新版 `Tool(param:value)` permission 語法 |
+| 2026-06-09 | v2.1.169：新增 `--safe-mode` 旗標與 `CLAUDE_CODE_SAFE_MODE` 環境變數，一鍵停用含 skills 在內的所有客製化設定 |
+| 2026-06-05 | 官方部落格《Lessons from building Claude Code: How we use skills》，公開內部數百個 Skills 的實戰心得 |
 
 ## 2026-05
 

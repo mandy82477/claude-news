@@ -137,5 +137,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-05-02 | 社群工具：Omar（100 agent TUI 管理）、graphify（知識圖譜插件 450k+ 下載）、NanoBrain（git-backed 知識庫）、Council（多模型並行 CLI）、Destiny（占卜技能）、Mote（Minecraft agent）|
 | 2026-05-02 | GameMaker 正式啟用 Claude Code 整合（AI 輔助遊戲開發工作流程），iCapital 金融平台採用 Anthropic 技術 |
 
+## 2026-06
+
+| 日期 | 事件 |
+|------|------|
+| 2026-06-30 | **v2.1.197**（初報）：`/model` 選單出現 Sonnet 5 選項（當時無法選用），社群預測正式發布在即；07-01 官方確認正式切換 |
+| 2026-06-30 | **Explore subagent 鎖定 Haiku 分析**：社群深入分析內建 subagent 類型，發現 Explore subagent 固定使用 Haiku 模型，除錯場景可能因模型能力不足導致問題（見 [[已知問題]]）|
+| 2026-06-30 | **Session 30天自動刪除：Anthropic 拒絕修復**：官方在 GitHub issue #62476 明確表示不修復此行為，社群建議透過 CLAUDE.md + `.claude/changelog` 手動保留記錄 |
+| 2026-06-30 | **36Kr 報導背景任務升級**（2026-06-30 指控，至今無後續）：36Kr 報導 Claude Code 下一重大升級方向為讓系統在背景完成所有任務、同時使用者繼續對話互動；官方尚未正式公告 |
+| 2026-06-29 | **v2.1.196**：新增 org default model 功能，企業管理員在 org console 設定後，使用者在 `/model` 看到「Org default」或「Role default」選項 |
+| 2026-06-25 | **v2.1.191**：新增 `/rewind` 指令，可從 `/clear` 執行前任一對話節點恢復，無需重新輸入指令背景；修正 streaming 捲軸自動跳底部問題（UX 改善）；TypeScript SDK v0.106.0 與 Python SDK v0.112.0 同日發布，新增 `client.system.message` 支援 |
+| 2026-06-24 | **v2.1.187**：新增 `sandbox.credentials` 設定，可阻止沙盒指令讀取憑證檔案與機密環境變數（AWS 金鑰、API token 等），防止沙盒內惡意指令竊取敏感資訊；新增組織層級模型限制功能，企業管理員可統一管控可用模型清單 |
+| 2026-06-22 | **v2.1.186**：新增 `claude mcp login <name>` 與 `claude mcp logout <name>` CLI 指令，可直接從命令列認證 MCP Server，無需進入 `/mcp` 互動選單；`--no-browser` 旗標支援 headless 環境透過 stdin 完成認證；**Extended Thinking 透明度問題社群揭露**（HN score 312）：工程師 Patrick McCanna 分析 session log 發現 thinking blocks 只含推理摘要，完整思考過程由 Anthropic 加密於 600 字元 signature，用戶端無法自行解密，企業審計追蹤承諾受影響（見「已知問題」）|
+| 2026-06-21 | **v2.1.185**：stream-stall 提示文字改為「Waiting for API response · will retry in …」，觸發門檻延長至 20 秒（原 10 秒），reliability 改善；Anthropic 官方博客發布「七種 Claude Code 控制層」決策框架（CLAUDE.md、rules、skills、subagents、hooks、output styles、system prompt append），HN score 4 |
+
 **懸置細節**
 - ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-10-18）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。

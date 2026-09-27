@@ -23,7 +23,7 @@
 | `wiki-lint-reporters` `5. 更新 wiki/overview.md` | 自主執行 |
 | `wiki-lint-sweeps` `5a. feature-radar 熱度降溫（主編親做）` | 自主執行（`scripts/news_mentions.py` 純本地比對日報；⏳ 逾期處置照該節三選一） |
 | `wiki-lint-sweeps` `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
-| `wiki-lint-sweeps` `5c. 逾期待查證清算（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5c. 逾期待查證清算（清零制，按頁面所有權派六記者並行）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
 | `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
@@ -40,7 +40,7 @@
 | `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；**發現只回報**——修規則檔屬「要求確認」→ 待辦，並登 `lint_health.py misses` `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
-| `wiki-lint-rules-health` `6l. 讀者語言閘存量清理` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
+| `wiki-lint-rules-health` `6l. 讀者語言存量清理（每輪）` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
 | `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |
 | `wiki-lint-reader-acceptance` `7b. 歷史質疑代打` | 自主執行 `[加入: 2026-09-13]`，但**開工前必須先 `git fetch --unshallow`**：雲端容器是淺 clone，Q1 溯源探針的 `git rev-list --before` 在淺 clone 下靜默回空、看起來像「近 7 天沒有新數字」（2026-09-12 實際踩到）|
 | `wiki-lint` `8. 記錄本次 lint` | 自主執行，待辦清單寫在這裡 |

@@ -3,7 +3,7 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-09-26"
+last_updated: "2026-09-27"
 last_news_update: "2026-09-26"
 status_main: "ongoing"
 days_since_news: 1
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-26
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-26
 
 > **最新工作流模式**（2026-09-26）
@@ -1695,7 +1695,7 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 - **效果：** 使用者聲稱可節省 50–60% context token，代價是整體執行時間增加（本地小模型推論延遲 + 額外一層路由判斷）
 - **來源：** [Why did Microsoft pull Fast Context from public domain?](https://www.reddit.com/r/ClaudeCode/comments/1unz1s5/why_did_microsoft_pull_fast_context_from_public/)（Reddit r/ClaudeCode，07-05）；原專案（Microsoft）含 arXiv 論文、GitHub repo、自訓練模型，現已從公開領域下架，原因不明
 - **與既有模式的關係：** 與「模型使用策略」類別下的分層模型路由（Dragoman / Workweave Router）同屬「依任務複雜度分流降低成本」思路，差異在於此模式分流對象是 context 探索階段而非整個任務執行；下架爭議與機制本身的社群反思見 [[topics/community-tech-discussions]]
-- **成熟度：** ⏳ 新興（原專案已下架，機制僅存社群二手驗證與轉述，缺乏可直接安裝的現行版本，複現性受限）
+- **成熟度：** ⏳ 已停擺（原專案 07-05 下架，逾 60 天無任何後續實作接手，機制僅存本則社群轉述，無可裝的現行版本；官方最接近的替代是 `CLAUDE_CODE_SUBAGENT_MODEL`，見 [[topics/community-pattern-trends]] 趨勢四）
 
 #### 額度監控與自動恢復工具生態（2026-07-03）
 

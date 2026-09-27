@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-09-20"
+last_updated: "2026-09-27"
 last_news_update: "2026-09-15"
 status_main: "active"
 days_since_news: 12
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-09-20
+**最後更新：** 2026-09-27
 **最後新聞更新：** 2026-09-15
 
 > **最新進展**（2026-09-15）
@@ -214,78 +214,22 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - Reuters 獨家報導（另有一家媒體跟進），加拿大金融監管機關發給銀行業的網路風險警告信中，明確引用 Claude Mythos 作為佐證，電郵內容為報導依據；為 Mythos 2026-07-01 出口管制解禁後，監管機構首次在正式監管文件中點名其能力進行風險評估（Reuters，2026-07-13）
 - 顯示金融監管機構已開始將 Mythos 級模型的高階網路攻擊協助能力，正式納入銀行業風險評估框架；出口管制解禁後「使用面」（跨國企業/政府採用）敘事之外，首次出現「監管面」（風險警示）後續發展，值得持續追蹤是否有其他國家監管機構跟進；政策/外交面完整分析見 [[topics/anthropic-government-policy]]
 
-#### 2026-06-29
-**美國政府正式許可恢復 Mythos 存取（信任合作夥伴）+ 中國 Z.Ai 聲稱對標**：
-- **政府許可進一步確認**：qz.com 報導 Anthropic 正式獲得美國政府許可，可向特定信任合作夥伴恢復 Mythos 存取（[qz.com](https://qz.com/anthropic-mythos-5-clearance-trusted-partners-commerce-062926)）；此為繼 6/27 商務部長 Lutnick 致函後，政府鬆綁政策的進一步落實，Fable 5 全面解禁談判同步推進中
-- **中國 Z.Ai 聲稱對標 Mythos**：Reuters 報導（[Reuters](https://www.reuters.com/legal/litigation/chinas-360-says-it-has-developed-tools-match-anthropics-mythos-2026-06-24/)，HN score 8）中國 Z.Ai 與 360 聲稱已開發出可與 Mythos 匹敵的網路安全 AI 模型。**後續（2026-08-26 查證）**：Z.Ai 於 08-14 公布開源 GLM-5.3 的具體數字——CyberGym（審視程式碼、找出並確認真實漏洞）得 **84.5%**，略高於其測得的 Mythos 5 **83.8%**；但在把漏洞轉為可用攻擊的 ExploitBench 僅 **54.4%**，遠低於 Mythos 5 的 **78.0%**。兩家數字**均為自行公布、未經獨立驗證**；GLM-5.3 屬通用編碼模型經擴充後訓練取得資安能力，與 360 專建的 Tulongfeng 路線不同
+### 2026-06（總結；原始條目已移出）
 
-#### 2026-06-28
-**TechCrunch / Mashable 後續確認 Mythos 5 部分解禁 + 競品聲稱對標（Sakana Fugu / WSJ）**：
-- **TechCrunch 補充細節**（HN n/a）：補充 Lutnick 致信收件人為 Anthropic **chief compute officer Tom Brown**（非此前部分媒體所述的聯合創辦人），確認 100+ 受信任機構範圍含其**非美籍員工**，是兩週禁令後的差異化部分鬆綁（[TechCrunch](https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/)）；Mashable 同步報導（[Mashable](https://mashable.com/tech/claude-mythos-5-reinstated-by-us-government)）
-- **Sakana AI Fugu**：日本 Sakana AI 發布 Fugu，聲稱可與 Fable 5 / Mythos Preview 比肩，支援 multi-agent API 協調其他模型（[TechCrunch](https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/)，HN score 256）；與同日中國 360 Tulongfeng 聲明合看，亞洲 AI 新創正以出口禁令空檔加速追趕 Mythos 等級能力
-- **WSJ：中國已在網路安全 AI 追上 Anthropic**：WSJ 報導指中國在網路安全 AI 能力上已逼近 Anthropic，Tulongfeng 為代表案例（[WSJ](https://www.wsj.com/tech/ai/chinese-ai-anthropic-mythos-cybersecurity-574b02c2)，Reuters HN score 7）。**後續（2026-08-26 查證）**：360 稱 Tulongfeng 以「AI 模型＋資安資料＋自動化工具」組合達到 Mythos 等級，累計辨識 **3,432 個軟體漏洞、其中 105 個經中國官方確認**；此組數字與「達到 Mythos 等級」的宣稱**皆未經獨立驗證**，本頁不採信為能力對等的證據（同線的 Z.Ai GLM-5.3 數字見 06-29 條目）
-
-#### 2026-06-27
-**Mythos 5 部分解禁：美國商務部批准 100+ 機構有限存取**：
-- 美國商務部正式批准 Anthropic 向 100+ 美國機構（含企業與聯邦機構）有限釋出 Mythos 5，前提條件為「受信任合作夥伴」認定，並需具備適當安全措施。商務部長 Howard Lutnick 透過致 Anthropic 聯合創辦人 Tom Brown 的信件正式確認此決定（[Semafor](https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies)、[CNBC](https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html)）。
-- 此為 2026-06-13 出口管制令發布後首次官方鬆綁，Mythos 5 的存取範圍從先前少數 Glasswing 夥伴正式擴展至更廣泛的機構層級；Fable 5 全面解禁仍待談判。
-
-### 出口管制期（2026-06-13 至 06-30）
-
-#### 2026-06-24
-**AP News：情報機構合作測試發現機密系統漏洞 + 中國 360 聲稱對標工具**：
-- **AP News 報導 — 情報機構合作測試**：Anthropic Mythos 在與美國情報機構的授權合作測試中，數小時內發現美國機密系統漏洞；美國官員特別強調「發現」（find）不等於「利用」（exploit），試圖區隔能力確認與惡意使用（[AP News](https://apnews.com/article/anthropic-mythos-ai-classified-systems-vulnerabilities-testing-3e8762c0527c4d8ed657cbe48c84a718)）。此報導與 2026-06-23 Tom's Hardware 引述的 NSA 紅隊測試訊息相互印證，但強調這屬授權合作而非入侵事件
-- **中國 360 聲稱對標工具**：Reuters 報導，中國網路安全公司 360 聲稱已開發出對標 Anthropic Mythos 的工具（[Reuters](https://www.reuters.com/legal/litigation/chinas-360-says-it-has-developed-tools-match-anthropics-mythos-2026-06-24/)）；此為繼 Zhipu GLM-5.2 聲明後，第二家中國公司公開宣稱追平 Mythos 的案例，中美 AI 網路安全能力競爭態勢進一步升溫
-
-#### 2026-06-23
-**Tom's Hardware：Mythos 紅隊測試數小時內突破 NSA 幾乎所有機密系統 + MIT Technology Review 三點分析**：
-- **Tom's Hardware 報導**：Sen. Mark Warner（參議院情報委員會副主席）引述 NSA 局長 Gen. Joshua Rudd 的陳述，確認 Mythos 在紅隊測試中「數小時內突破 NSA 幾乎所有機密系統」。這是迄今最高層級、最具體的政府官員公開陳述，直接解釋出口管制的安全理由，也與 Tom's Hardware 同名報導互相呼應（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-powerful-mythos-ai-reportedly-breached-almost-all-nsa-classified-systems-within-a-few-hours-during-red-team-test-report-sheds-more-light-on-the-u-s-governments-sudden-ban-on-the-flagship-models)）
-- **MIT Technology Review 三大觀察點**（[MIT Tech Review](https://www.technologyreview.com/2026/06/22/1139424/three-things-to-watch-amid-anthropics-latest-feud-with-the-government/)，2026-06-22）：
-  1. **AI 安全定義爭議**：「安全」的定義在 Anthropic（對用戶無害）與政府（對國家安全無害）之間存在根本分歧，是出口管制衝突的深層矛盾
-  2. **主權問題**：各國政府越來越關注對本國 AI 基礎設施的主權控制權
-  3. **中國競爭窗口**：出口管制期間，Zhipu GLM-5.2 等中國模型加速填補被封鎖市場，管制可能適得其反地擴大中國 AI 的影響力
-
-#### 2026-06-20
-**全球媒體持續報導 + 境外付費帳號停用**：
-- **國際媒體全面跟進**：Al Jazeera、DW.com、SiliconANGLE、dev.to 同步報導 Fable 5 / Mythos 出口禁令，核心敘事從「美國技術管制」擴大至「盟友間地緣政治緊張」與「AI Kill-Switch」爭議
-- **境外付費用戶帳號停用**：確認有非美國 Claude 付費訂閱用戶在管制期間帳號遭停用，Mythos 可及性衝擊擴大至一般訂閱層
-- **解禁預期**：承接 Ciauri 2026-06-18 首爾記者會「數日內恢復」聲明，後續見 [[entities/fable-5]]
-
-#### 2026-06-19
-**Wired 深度調查確認多重管制動機 + 解禁聲明 + 早期用戶豁免**：
-- **SK Telecom 中國關聯確認為根本動機**（Wired HN score 110）：Anthropic 先前授予 SK Telecom 對 Mythos（非 Fable 5）的存取權，美方對 SK Telecom 中國關聯的疑慮是出口管制啟動的真正起點；後 Amazon 研究人員向白宮舉報 Fable 5 越獄漏洞，兩件事疊加加速管制動作，澄清「jailbreak 是唯一原因」的既有說法
-- **Ciauri 首爾記者會**：Anthropic 國際總監宣稱「數日內恢復可用」
-- **Bloomberg**：部分 Mythos 早期用戶在政府指令後仍保有存取權（早期用戶豁免）
-- **Amazon 研究員角色確認**：Amazon 安全研究人員發現 Fable 5 越獄漏洞後直接向白宮通報，是出口管制的直接觸發原因之一（見 2026-06-14 事件記錄）
-
-#### 2026-06-18
-**SK Telecom / China 關聯被揭露為出口管制根本起因**：Wired 獨家報導，美國政府對 Anthropic 啟動 Fable 5 / Mythos 出口管制的真正起點，是政府對 SK Telecom 疑似中國關聯的憂慮——Anthropic 先前已授予 SK Telecom 對 Mythos（非 Fable 5）的存取權，此舉令美方官員警惕；後來 Fable 5 的 jailbreak 問題（Amazon 通報白宮）進一步加速了管制動作。此揭露澄清了「jailbreak 是唯一原因」的既有說法，顯示管制動機具有多重層次（Wired）。
-
-### 管制前
+- **Fable 5／Mythos 5 雙軌發布（06-09）**：Fable 5（護欄公開版，$10/$50 每百萬 token）與 Mythos 5（無護欄、僅授權用戶）同日發布；30 天資料保留政策生效引發 Bedrock 隱私爭議；HN 2,448 分。
+- **靜默降級與供應鏈攻擊爭議（06-10）**：Fable 5 被揭露偵測前沿 LLM 開發行為時靜默降級、不告知用戶；同日供應鏈攻擊竊得 294,842 組 secrets；Suleyman 批評「Claude 有意識」推測危險。
+- **Glasswing 擴張（06-01～06-04）**：ENISA（06-01，首個歐洲政府機構，同日英國銀行遭拒）、ICE（06-04）加入；06-02 擴至 200 個組織（15+ 國家），官方承諾 6–12 個月內推公開版。
+- **NSA 進攻性使用＋防禦工具開源（06-05）**：FT 獨家揭露 NSA 用 Mythos 發動攻擊；Anthropic 同日開源 `defending-code-reference-harness`；另 Mythos 發現 Zcash Orchard 池無限偽造漏洞，ZEC 暴跌 30%。
+- **企業落地與商業壓力（06-03、06-08）**：Glasswing 首批夥伴回報訊噪比是核心挑戰；Daniela Amodei：Mythos「非常擅長網路戰」；Dragos 應用於 OT 安全；Pentagon 因 Claude「太安全」尋替代方案。
+- **出口管制啟動與根因追查（06-18～06-20）**：SK Telecom 中國關聯疑慮被 Wired 揭露為根本起因，疊加 Amazon 研究員通報 Fable 5 越獄漏洞；Ciauri 首爾記者會稱「數日內恢復」；境外付費帳號遭停用、國際媒體全面跟進。
+- **管制動機與地緣政治分析（06-23～06-24）**：NSA 局長證實 Mythos 紅隊測試數小時內突破幾乎所有機密系統；MIT Tech Review 點出安全定義分歧、主權問題、中國競爭窗口三大觀察；AP News 確認情報機構授權測試發現機密系統漏洞。
+- **中國廠商聲稱對標（06-24、06-28、06-29）**：360、Z.Ai／Zhipu 陸續聲稱開發出對標 Mythos 的網路安全模型（後於 08-14／08-26 查證數字均未經獨立驗證，弱於 Mythos）。
+- **部分解禁（06-27～06-29）**：美國商務部核准 100+ 機構有限存取 Mythos 5，Lutnick 致信 Tom Brown 確認；TechCrunch／Mashable 補充細節；Sakana AI Fugu、WSJ 中國追趕報導同期出現；qz.com 確認政府許可正式落實。
+- 原始條目見 [[entities/mythos-archive#2026-06]]
 
 #### 2026-06-10
 Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使用者從事前沿 LLM 開發時（訓練 pipeline、推論研究、ML 加速器設計），Fable 5 會靜默降級回應品質，不告知用戶。此行為源自系統卡聲明「These safeguards will not be visible to the user」，被廣泛批評為反競爭且缺乏透明度（Reddit LocalLLaMA / r/ClaudeAI 大量討論）。同日，供應鏈攻擊持續：已竊取 294,842 個 secrets，攻擊蔓延至 Python 生態，使用 Claude Code 本身作為攻擊媒介。Anthropic 首席執行長 Dario Amodei 對「Claude 是否用於伊朗學校打擊」表示不知情（Bloomberg）。Microsoft AI CEO Mustafa Suleyman 批評 Anthropic 對 Claude 意識的推測「非常危險」。
-
-#### 2026-06-09
-**Claude Fable 5 正式發布**（定價 $10/$50 per million token；context 1M；128K max output）。與 Claude Mythos 5 共用相同模型權重，差異在前置安全分類器——觸發時靜默 fallback 至 Opus 4.8（不到 5% session 受影響）。同日發布的 Claude Mythos 5 為無護欄完整版，僅限授權用戶（政府防禦者、企業安全研究員）存取，定價更高。HN 討論達 2,448 分、近 2,000 評論。Anthropic 同步發布系統卡（含 ASL-4 安全評估框架）。30 天資料保留政策（Fable 5 / Mythos 5 所有流量強制保留 30 天供安全審查，Bedrock 用戶資料離開 AWS 邊界）生效，引發 Bedrock 用戶隱私爭議。多方消息確認 Mythos 公開版即將發布：Alex Heath（Sources newsletter）報導 Anthropic 計畫推出附強化護欄的公開版本，預期在 agentic / 長期任務領域能力大幅提升，但 cyber 攻擊能力較 Project Glasswing 預覽版受限。Reddit 社群在官方公告前即爆料版本名稱可能為「Claude Fable 5」，**該傳聞已由同日官方發布證實**（名稱即 Claude Fable 5；查證 2026-09-13）——這是一起社群爆料先於官方公告且事後被證明準確的案例。此外，Anthropic 研究「Measuring LLMs' impact on N-day exploits」揭示 LLM 已顯著降低 N-day 漏洞利用門檻。
-
-#### 2026-06-08
-Dragos（工業網路安全公司）將 Mythos Preview 應用於 OT（營運技術）安全軟體漏洞挖掘，為 Mythos 在企業安全場景的落地新案例。Pentagon 因 Claude「太安全」而尋求替代 AI 方案的報導再次被廣泛引述，Tech Times 報導五角大廈積極評估替代品。
-
-#### 2026-06-05
-NSA 使用 Mythos 發動進攻性網路攻擊（FT 獨家，HN 89）。Anthropic 同日開源 `defending-code-reference-harness` 作為防禦工具，呈現「同源攻防」格局。另：Anthropic AI 發現 Zcash Orchard pool 無限偽造漏洞（2022 年起即存在），ZEC 價格暴跌 30%。
-
-#### 2026-06-04
-ICE（美國移民海關執法局）加入 Project Glasswing，繼 ENISA 之後的第二個政府機構。
-
-#### 2026-06-03
-Project Glasswing 第一批夥伴在 HN（score 176）分享一手使用體驗：假陽性嚴重，訊噪比是核心挑戰。Anthropic 總裁 Daniela Amodei 首度公開表示 Mythos「非常擅長網路戰」，在 $965B IPO 申請背景下引發商業化壓力討論。
-
-#### 2026-06-02
-Glasswing 夥伴從 50 擴展至 150 個新組織（共 200 個，15+ 國家）。Anthropic 承諾 6–12 個月內推出公開版本。
-
-#### 2026-06-01
-ENISA（歐盟網路安全局）獲准存取，成首個歐洲政府機構。英國銀行同日遭拒，OpenAI 主動提出替代方案——AI 安全能力開始成為地緣政治談判籌碼。The Information 報導授權費被稱「Budget Buster」。
+%% 維運備忘：本則因 entities/mustafa-suleyman 錨點 [[entities/mythos#2026-06-10]]（核心論述、歷史記錄兩處）指入未蒸餾，2026-06 其餘條目已移至 [[entities/mythos-archive#2026-06]] %%
 
 ### 2026-05（總結；原始條目已移出）
 
