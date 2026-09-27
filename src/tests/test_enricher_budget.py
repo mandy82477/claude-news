@@ -67,5 +67,28 @@ class TestReadDeadline(unittest.TestCase):
                              "<p>x</p><p>x</p>")
 
 
+class TestThinDetectionUsesVisibleText(unittest.TestCase):
+    """薄摘要門檻量的是剝掉 HTML 後的可見文字：半截 <a href=…> 原始長度 200 卻沒有內容，必須觸發抓原文。"""
+
+    def test_unclosed_html_shell_counts_as_thin(self):
+        shell = '<a href="https://news.google.com/rss/articles/' + 'X' * 160
+        self.assertGreaterEqual(len(shell), enricher._THIN_THRESHOLD)
+        self.assertLess(enricher._visible_len(shell), enricher._THIN_THRESHOLD)
+
+    def test_shell_summary_triggers_article_fetch(self):
+        item = _item("https://example.com/story")
+        item = enricher.replace(item, summary='<a href="https://news.google.com/rss/articles/' + 'X' * 160)
+        with mock.patch.object(enricher, "_fetch_article", return_value="real article body " * 20) as fa:
+            out = enricher._enrich_one(item)
+        fa.assert_called_once_with("https://example.com/story")
+        self.assertTrue(out.summary.startswith("real article body"))
+
+    def test_real_long_summary_is_not_refetched(self):
+        item = enricher.replace(_item("https://example.com/story"), summary="內容 " * 100)
+        with mock.patch.object(enricher, "_fetch_article") as fa:
+            enricher._enrich_one(item)
+        fa.assert_not_called()
+
+
 if __name__ == "__main__":
     unittest.main()

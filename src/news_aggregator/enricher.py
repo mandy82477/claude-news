@@ -23,7 +23,8 @@ from news_aggregator.sources.base import FeedItem
 logger = logging.getLogger(__name__)
 
 MAX_SUMMARY_CHARS = 800
-_THIN_THRESHOLD = 120   # existing summary shorter than this → try to enrich
+_THIN_THRESHOLD = 120   # existing summary shorter than this → try to enrich（量的是剝掉 HTML 後的可見文字）
+_TAG_RE = re.compile(r"<[^>]*>|<[^>]*$")  # 含未閉合的半截標籤（截斷後常見）
 _WORKERS = 6
 _ARTICLE_TIMEOUT = 8    # per-URL cap for article fetching (trafilatura.fetch_url ignores ours)
 # requests 的 timeout 是「單次 socket 等待」上限，慢速滴流（每幾秒吐一小塊）永遠不會觸發它；
@@ -99,6 +100,10 @@ def enrich(items: list[FeedItem]) -> list[FeedItem]:
 
 # ── per-item enrichment ───────────────────────────────────────────────────────
 
+def _visible_len(summary: str) -> int:
+    return len(re.sub(r"\s+", " ", html.unescape(_TAG_RE.sub(" ", summary or ""))).strip())
+
+
 def _safe_enrich(item: FeedItem) -> FeedItem:
     try:
         return _enrich_one(item)
@@ -120,7 +125,9 @@ def _enrich_one(item: FeedItem) -> FeedItem:
             return _with_summary(item, text)
 
     # ── Generic articles (only if existing summary is thin) ───────────────────
-    if len(item.summary) < _THIN_THRESHOLD and item.url.startswith("http"):
+    # 量可見文字，不量原始字串：RSS 摘要常是半截 HTML 標籤（Google News 的 <a href=…>），
+    # 原始長度過門檻但沒有一個字是內容，會讓整個來源永遠不被加值。
+    if _visible_len(item.summary) < _THIN_THRESHOLD and item.url.startswith("http"):
         text = _fetch_article(item.url)
         if text:
             return _with_summary(item, text)

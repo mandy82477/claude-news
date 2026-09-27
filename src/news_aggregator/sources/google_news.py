@@ -1,5 +1,7 @@
 import dataclasses
+import html as _html
 import logging
+import re as _re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 
@@ -21,6 +23,16 @@ QUERIES = [
 ]
 
 _URL_RESOLVE_WORKERS = 8
+_TAG_RE = _re.compile(r"<[^>]*>|<[^>]*$")  # 含未閉合的半截標籤（截斷後常見）
+
+
+def _visible_text(raw: str) -> str:
+    """Google News RSS 的 description 是一段 HTML（<a href=news.google.com…>標題</a> <font>出版者</font>），
+    原樣截 200 字元會留下半截 <a href=…> 標籤：既沒有內容，又因為長度 ≥ enricher 的薄摘要門檻而
+    永遠不會去抓原文（2026-09-26 實測：當日 29 則 Google News 經 enricher 後 0 則有可用摘要）。
+    先剝標籤、解實體、壓空白，留下的只有標題與出版者名，enricher 才會判定為薄而去抓原文。"""
+    return _re.sub(r"\s+", " ", _html.unescape(_TAG_RE.sub(" ", raw or ""))).strip()
+
 _URL_RESOLVE_TIMEOUT = 10
 
 
@@ -76,7 +88,7 @@ def _fetch_google_query(query: str, cutoff: datetime) -> list[FeedItem]:
                 source=source_name,
                 published=pub or datetime.now(tz=timezone.utc),
                 score=0,
-                summary=entry.get("summary", "")[:200],
+                summary=_visible_text(entry.get("summary", ""))[:200],
                 category="media",
             ))
         return result
