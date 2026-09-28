@@ -910,3 +910,14 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud STARTED 2026-09-28T17:08:28Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-28T17:09:51Z] Step 1a：src/gathered_archive/2026-09-28.json 不存在（cp 失敗），代表當日尚未抓到料 → Step 1b 新鮮度防線中止：ABORTED: gathered_items.json date=2026-09-27 items=55，非目標日期（TARGET_DATE=2026-09-28）的新鮮資料。本班為 17:00 UTC 第二班，上游 GitHub Actions 抓料延遲屬已知現象（與 12:00 UTC 首班相同狀況），交由最後一班（22:00 UTC）接手
 [cloud daily-news-pipeline-cloud STARTED 2026-09-28T22:09:19Z]
+[Mon 2026/09/28 22:10:00.00] === Agent pipeline start (2026-09-28) ===
+[Mon 2026/09/28 22:10:00.00] Aggregator OK (GitHub Actions daily-gather, replay from src/gathered_archive/2026-09-28.json, 79 items, 15/15 sources healthy)
+[Mon 2026/09/28 22:20:00.00] Digest OK (news/2026-09-28.md, 26 items in digest, focus gate passed after 2 wording fixes for false-positive similarity)
+[Mon 2026/09/28 22:31:00.00] Step1c OK (79 items confirmed)
+[Mon 2026/09/28 23:05:00.00] Wiki ingest OK (6 category reporters + classify-review + devpractice + market, all foreground; 分類回退 3 則追加派工全收，1 則二度回退因「一則最多一跳」未再派工待使用者裁示；新增頁 entities/sonnet-5-5；修復 7 筆新增舊語法懸置標記誤用)
+[Mon 2026/09/28 23:10:00.00] Reader digest OK (daily/2026-09-28.md, 19 pages, WARN 0 after fixing 1 頁內路標 in ai-talent-flow.md)
+[Mon 2026/09/28 23:12:00.00] Building web reader...
+[Mon 2026/09/28 23:12:00.00] 測試全綠 - web build 放行
+[Mon 2026/09/28 23:20:00.00] Single push done (news + wiki + web)
+[Mon 2026/09/28 23:32:00.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud OK 2026-09-28T23:32:09Z] TARGET_DATE=2026-09-28｜新鮮度=fresh(79則)｜Step1b=OK(聚焦3條，忠實度自檢改寫5處)｜Step1c=OK(79確認)｜Step2 wiki ingest=OK(6記者+分類複核+devpractice+market全部foreground完成；分類回退3則追加派工皆收，1則二度回退「THEY FUCKING COOKED YO!」→模型待使用者裁示是否併入entities/opus-5-5；ingest_gate修復7筆新增舊語法懸置標記)｜Step2b讀者版=OK(WARN0)｜Step3=OK｜Step4測試=OK(全綠，21處既有斷鏈wikilink非本輪造成)｜Step5=OK但本輪意外多推送一次（見下）｜品質：Claude Sonnet 5.5發布並取代Sonnet 5成為API預設Sonnet、Trump-Amodei白宮晚餐續09-26、Cycode揭露MCP Python SDK帳號劫持漏洞；5項📋待使用者確認（Sonnet 5 Legacy狀態、CLI預設是否同步、Sonnet 5.5落後Opus 5.5兩分評測全名分數、Manage usage credits頁計費規則變動、feature-radar版本階梯表核對日期已與內容不同步，egress受限無法WebFetch查證）｜⚠️ push次序失誤：Step6 log本應併入Step5單一push，本次因排序疏失已在Step5完成後才寫入，導致本輪額外多一次push（STARTED、Step5、本次log共3次而非既定2次），下次執行請務必在Step5 push前完成log撰寫
