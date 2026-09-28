@@ -225,8 +225,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "69cf35b1259222418bbc2e154b41ffb2e0650e03459b12a2ed84bf0150615565",
-    "length": 83753,
+    "hash": "cebb68fc685792f328ed4870f6f5c9d0aaca1432a17440b9bdbd2a8e75eced47",
+    "length": 83776,
     "segments": [
       "\"args\": [\"--verbose\"],",
       "\"autoPort\": false",
@@ -540,7 +540,7 @@
       "Managed settings override project and user settings and apply to Claude Code sessions in Desktop. You can set these keys in your organization's [managed settings](/docs/en/managed-settings) file or push them remotely through the admin console.",
       "On macOS, computer use can also run in the background: Claude works in the apps you've approved while you keep working.",
       "On macOS, grant two system permissions before the toggle takes effect:",
-      "On models with [adaptive reasoning](/docs/en/model-config#adjust-effort-level), `MAX_THINKING_TOKENS` values other than `0` are ignored because adaptive reasoning controls thinking depth instead. On Opus 4.6 and Sonnet 4.6, set `CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING` to `1` to use a fixed thinking budget; Fable models, Sonnet 5, and Opus 4.7 and later always use adaptive reasoning and have no fixed-budget mode.",
+      "On models with [adaptive reasoning](/docs/en/model-config#adjust-effort-level), `MAX_THINKING_TOKENS` values other than `0` are ignored because adaptive reasoning controls thinking depth instead. On Opus 4.6 and Sonnet 4.6, set `CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING` to `1` to use a fixed thinking budget; Fable models, Sonnet 5 and later, and Opus 4.7 and later always use adaptive reasoning and have no fixed-budget mode.",
       "Once added, the connection appears in the environment dropdown. Select it to start a session on that machine. Claude runs on the remote machine with access to its files and tools.",
       "Once connected, Claude can read your calendar, send messages, create issues, and interact with your tools directly. You can ask Claude what connectors are configured in your session.",
       "Organizations on Team or Enterprise plans can manage desktop app behavior through admin console controls, managed settings files, and device management policies.",
@@ -643,7 +643,7 @@
       "You can send a command while Claude is working, the same as any other message, and the session returns to idle once the turn finishes. Before v2.1.206, a command sent mid-turn could leave the session showing as running and messages you sent afterward weren't delivered.",
       "Your administrator can turn off local sessions with the [`disableDesktopLocalSessions` managed setting](#managed-settings). When they have, **Local** stays in the environment dropdown but is grayed out and can't be selected, with a tooltip saying your organization turned it off, and on Windows the [WSL](/docs/en/desktop-wsl) entry, whose availability on managed devices is [governed separately](/docs/en/admin-setup#wsl-sessions-in-claude-code-desktop), is grayed out the same way. New sessions default to the first SSH connection if one is configured, and Desktop shows a message that local sessions aren't available on this device if you try to continue an existing one. Choose an [SSH](#ssh-sessions) or [cloud](#cloud-sessions) environment instead, or contact your IT team.",
       "[Dispatch](https://support.claude.com/en/articles/13947068) is a persistent conversation with Claude that lives in the [Cowork](https://claude.com/product/cowork) tab. You message Dispatch a task, and it decides how to handle it.",
-      "[Extended thinking](/docs/en/model-config#extended-thinking) is enabled by default, which improves performance on complex reasoning tasks but uses additional tokens. On the Anthropic API, set `MAX_THINKING_TOKENS` to `0` in the local environment editor to turn thinking off; this has no effect on Opus 5.5 or the Fable models, which always use extended thinking. With thinking turned off on the Anthropic API, Claude Code sends effort `high` instead of a higher level to models it knows [don't accept that combination](/docs/en/errors#effort-isnt-available-with-thinking-turned-off), such as Opus 5.",
+      "[Extended thinking](/docs/en/model-config#extended-thinking) is enabled by default, which improves performance on complex reasoning tasks but uses additional tokens. On the Anthropic API, set `MAX_THINKING_TOKENS` to `0` in the local environment editor to turn thinking off; this has no effect on Opus 5.5, Sonnet 5.5, or the Fable models, which always use extended thinking. With thinking turned off on the Anthropic API, Claude Code sends effort `high` instead of a higher level to models it knows [don't accept that combination](/docs/en/errors#effort-isnt-available-with-thinking-turned-off), such as Opus 5.",
       "[Plugins](/docs/en/plugins/overview) are reusable packages that add skills, agents, hooks, MCP servers, and LSP configurations to Claude Code. You can install plugins from the desktop app without using the terminal.",
       "[Skills](/docs/en/skills) extend what Claude can do. Claude loads them automatically when relevant, or you can invoke one directly: type `/` in the prompt box or click the **+** button and select **Slash commands** to browse what's available. This includes [built-in commands](/docs/en/commands), your [custom skills](/docs/en/skills#create-your-first-skill), project skills from your codebase, and skills from any [installed plugins](/docs/en/plugins/install). Select one and it appears highlighted in the input field. Type your task after it and send as usual.",
       "```bash theme={null}",
@@ -754,8 +754,8 @@
     ]
   },
   "https://claude.com/pricing": {
-    "hash": "eaa0d3b390d28d9394bb9387a940a37dda991056c8c93bc7fff25801c9b976fc",
-    "length": 21024,
+    "hash": "a0bd745ad57f0a27440797f075feccbbc5bf8b37de9f6d373e42a625cc58c3d0",
+    "length": 21166,
     "segments": [
       "$0.05 per hour per container",
       "$0.08 per session-hour for active runtime",
@@ -783,8 +783,8 @@
       "Anthropic news",
       "Availability",
       "Balance availability, performance, and predictable costs based on your needs.",
+      "Batch processing Fable 5",
       "Batch processing Fable 5.1",
-      "Batch processing Opus 4.8",
       "Billing and payments",
       "Billing cycle",
       "Browse marketplace Customers Contact sales Resources Insights Blog",
@@ -913,7 +913,7 @@
       "Latest news Claude Cowork is now just Claude.",
       "Learn Claude Academy",
       "Learn more (opens in new tab) Contact sales Standard",
-      "Learn more (opens in new tab) Explore detailed pricing (opens in new tab) Opus 5",
+      "Learn more (opens in new tab) Explore detailed pricing (opens in new tab) Sonnet 5",
       "Learn more (opens in new tab) Managed Agents",
       "Learn more Student and faculty access",
       "Legacy models",
@@ -1028,8 +1028,8 @@
     ]
   },
   "https://platform.claude.com/docs/en/about-claude/pricing": {
-    "hash": "0a3fdf14a4d9a130915bf654846f908af945b7a9ce873999420c4a978ab7738f",
-    "length": 27866,
+    "hash": "f87c0be581efd83ddf955e86f6cd3a233daed0f559cb5a63ce8ce88010a2e0d1",
+    "length": 28038,
     "segments": [
       "\"cache_creation_input_tokens\" : 0 ,",
       "\"cache_creation_input_tokens\" : 7345 ,",
@@ -1079,7 +1079,6 @@
       "Browser use tool ",
       "Build tier: Increased limits for growing applications",
       "CCU price $0.01 per CCU (fixed; discounts apply at token-to-CCU conversion, not to the CCU price)",
-      "CLI, SDKs, and libraries",
       "Cache operation Multiplier Duration",
       "Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1; 0.05x on Claude Opus 5.5) Same duration as the preceding write",
       "Cache read tokens 40,000 × $5 × 0.1 / 1,000,000 $0.02",
@@ -1144,9 +1143,12 @@
       "Claude Sonnet 4.6 $1.50 / MTok $7.50 / MTok",
       "Claude Sonnet 4.6 $3 / MTok $15 / MTok $3.75 / MTok $6 / MTok $0.30 / MTok",
       "Claude Sonnet 4.6 auto , none 497 tokens",
-      "Claude Sonnet 5 The best combination of speed and intelligence $1 / MTok $5 / MTok",
-      "Claude Sonnet 5 The best combination of speed and intelligence $2 / MTok $10 / MTok $2.50 / MTok $4 / MTok $0.20 / MTok",
-      "Claude Sonnet 5 The best combination of speed and intelligence auto , none 354 tokens",
+      "Claude Sonnet 5 $1 / MTok $5 / MTok",
+      "Claude Sonnet 5 $2 / MTok $10 / MTok $2.50 / MTok $4 / MTok $0.20 / MTok",
+      "Claude Sonnet 5 auto , none 354 tokens",
+      "Claude Sonnet 5.5 The best combination of speed and intelligence $1 / MTok $5 / MTok",
+      "Claude Sonnet 5.5 The best combination of speed and intelligence $2 / MTok $10 / MTok $2.50 / MTok $4 / MTok $0.20 / MTok",
+      "Claude Sonnet 5.5 The best combination of speed and intelligence auto , none 286 tokens",
       "Claude in Microsoft Foundry bills through the Azure Marketplace using Claude Consumption Units (CCUs). Anthropic rates your token usage in USD at standard per-model, per-feature rates, applies any negotiated discount, converts the result to CCUs at $0.01 per CCU, and reports the CCU quantity to the Azure Marketplace hourly. Your Azure bill shows a single CCU line item.",
       "Claude in Microsoft Foundry pricing",
       "Claude in Microsoft Foundry pricing ",
@@ -1281,6 +1283,7 @@
       "Responsible Scaling Policy",
       "Responsible disclosure policy",
       "Runtime is measured to the millisecond and accrues only while the session&#x27;s status is running . Time spent idle (waiting for your next message or a tool confirmation), rescheduling , or terminated does not count toward runtime.",
+      "SDKs, CLI, and libraries",
       "SKU Rate Metering",
       "Scale tier: Highest standard limits for production workloads",
       "Scope: This pricing structure applies to Claude Sonnet 4.5, Haiku 4.5, Opus 4.5, and all future models. Earlier models (Claude Opus 4.1 and prior releases) retain their existing pricing.",
@@ -1370,7 +1373,7 @@
       "tool_result content blocks in API requests",
       "tool_use content blocks in API requests and responses",
       " Additional models",
-      " API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.1 Claude Opus 5.5 Claude Sonnet 5 Claude Haiku 4.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
+      " API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.1 Claude Opus 5.5 Claude Sonnet 5.5 Claude Sonnet 5 Claude Haiku 4.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
       " Copy page  Learn about Anthropic&#x27;s pricing structure for models and features",
       " Copy page  This page provides detailed pricing information for Anthropic&#x27;s models and features. All prices are in USD.",
       " Additional notes All other models use the standard 0.1x multiplier. Claude 4.7 and later models and Claude Mythos Preview use a newer tokenizer that contributes to their improved performance on a wide range of tasks. This tokenizer produces approximately 30% more tokens for the same text. The exact increase depends on the content and workload shape. Claude Sonnet 4.6 and earlier models use the previous tokenizer.",
@@ -1415,8 +1418,8 @@
     ]
   },
   "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan": {
-    "hash": "2bb7a46f79ce461e0961bb2117357574248ebfdff45b403eafcf7600b44720ed",
-    "length": 23020,
+    "hash": "8e1fcb8b69e4c3df67ca431dbdf660ea8171eb2ec1845c947abb79b24d78d49c",
+    "length": 23084,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1809,6 +1812,7 @@
       "Who owns and manages the data of my team?",
       "Why Claude switched models in your conversation with Fable 5 or Fable 5.1",
       "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
+      "Why Claude switched models in your conversation with Sonnet 5.5",
       "Why am I being asked to verify my payment method?",
       "Why am I receiving an &#x27;Output blocked by content filtering policy&#x27; error?",
       "Why can’t I see Claude Fable 5 or Fable 5.1?",
@@ -1822,8 +1826,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "de77385dc594521b60735258f718f5188876e632ba72b12e37d8232c66cb945a",
-    "length": 23096,
+    "hash": "6c1dbefe8e927920987b2181551cbe136d651793b19d87f0e88e0a1768159e1f",
+    "length": 23159,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1992,7 +1996,6 @@
       "How do I get access to Claude in Amazon Bedrock?",
       "How do I learn more about Amazon and Anthropic’s strategic collaboration?",
       "How do I log out of all active sessions?",
-      "How do I pay for my Claude API usage?",
       "How do I sign up for Claude Pro on Claude for Android?",
       "How do I sign up for Claude Pro on the Claude app for iOS?",
       "How do I sign up for the Max plan?",
@@ -2237,6 +2240,7 @@
       "Who owns and manages the data of my team?",
       "Why Claude switched models in your conversation with Fable 5 or Fable 5.1",
       "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
+      "Why Claude switched models in your conversation with Sonnet 5.5",
       "Why am I being asked to verify my payment method?",
       "Why am I receiving an &#x27;Output blocked by content filtering policy&#x27; error?",
       "Why is a coupon or promotion not available for my account?",
@@ -2254,8 +2258,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "21d24142634ec710a817f14aa42517e4f026de7722d58c3481615edc6550b718",
-    "length": 22891,
+    "hash": "a522c2f60c047b8b9c88b1ad267e067415ddfc15686370af35f0f2e8a8f577b3",
+    "length": 22955,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2648,6 +2652,7 @@
       "Who owns and manages the data of my team?",
       "Why Claude switched models in your conversation with Fable 5 or Fable 5.1",
       "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
+      "Why Claude switched models in your conversation with Sonnet 5.5",
       "Why am I being asked to verify my payment method?",
       "Why am I receiving an &#x27;Output blocked by content filtering policy&#x27; error?",
       "Why is a coupon or promotion not available for my account?",
@@ -2657,8 +2662,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "c432320fd952721f434a5b67537e6836fd42c61c9f040303dd7f89f5be6fd629",
-    "length": 23307,
+    "hash": "87da10815889a1a44250d3b292293e1be0967c560de5a34c82a771b4310fc6b5",
+    "length": 23371,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -3086,6 +3091,7 @@
       "Who owns and manages the data of my team?",
       "Why Claude switched models in your conversation with Fable 5 or Fable 5.1",
       "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
+      "Why Claude switched models in your conversation with Sonnet 5.5",
       "Why am I being asked to verify my payment method?",
       "Why am I receiving an &#x27;Output blocked by content filtering policy&#x27; error?",
       "Why is a coupon or promotion not available for my account?",
@@ -3095,8 +3101,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "cfcdaffd0a4e26d0fbeb34f68d064dd6f18f543af818fa65fb9bbb7721dc2da5",
-    "length": 46478,
+    "hash": "6080db30b352217316bc481ef9fda0f9585b68aae6af624d9cdf36dec7793400",
+    "length": 46823,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -3233,6 +3239,7 @@
       "Claude Sonnet 4.5 launch",
       "Claude Sonnet 4.6 launch",
       "Claude Sonnet 5 launch",
+      "Claude Sonnet 5.5 launch",
       "Claude Team plan for scientists",
       "Claude can now connect with iOS and Android apps to draft calendar events, help you find locations, and manage reminders (iOS only). See updates to the following two articles for more information:",
       "Claude can now create and edit Excel spreadsheets, PowerPoint slide decks, documents, and PDFs directly in the Claude app. Refer to the following two articles for more information:",
@@ -3284,7 +3291,6 @@
       "Control browser actions from Claude Desktop: Start a task in Claude Desktop and let it handle work in the browser without switching windows.",
       "Control project sharing for your organization",
       "Conversation management Delete or rename a conversation",
-      "Copy for LLM September 2026",
       "Cost and Usage Reporting in the Claude Console",
       "Covered Models",
       "Covered Models under a Business Associate Agreement (BAA)",
@@ -3565,6 +3571,7 @@
       "September 2025",
       "September 22, 2026",
       "September 25, 2026",
+      "September 28, 2026",
       "September 29, 2025",
       "September 3, 2025",
       "September 9, 2025",
@@ -3614,6 +3621,7 @@
       "Understanding your Pro or Max plan invoices",
       "Understanding your Team plan invoices",
       "Understanding your billing address and tax calculation",
+      "Updated in the last 15 minutes Copy for LLM September 2026",
       "Updated memory for Claude",
       "Updates to our Acceptable Use Policy (now “Usage Policy”), Consumer Terms of Service, and Privacy Policy",
       "Upload files to Claude",
@@ -3673,6 +3681,7 @@
       "We introduced the ability to create and schedule both recurring and on-demand tasks in Cowork, as well as a new Customize section in Claude Desktop that groups skills, plugins, and connectors in one place. For more information, see Schedule recurring tasks in Cowork .",
       "We just launched Claude Fable 5.1 and Claude Mythos 5.1, the world’s most advanced models for coding and knowledge work. For more information, see our blog post: Claude Fable 5.1 and Mythos 5.1 .",
       "We just launched Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5. For more information, see our blog post: Introducing Claude Opus 5.5 .",
+      "We just launched Claude Sonnet 5.5, the second model in our Claude 5.5 family. Sonnet 5.5 is a faster, lower-cost complement to Claude Opus 5.5. For more information, see our blog post: Claude Sonnet 5.5 .",
       "We launched Claude Fable 5, a Mythos-class model that we’ve made safe for general use. For more information, see our blog post: Claude Fable 5 and Claude Mythos 5 .",
       "We launched Claude Opus 5, a thoughtful and proactive model that comes close to the frontier intelligence of Claude Fable 5 at half the price. For more information, see our blog post: Claude Opus 5 .",
       "We launched Claude Sonnet 5, our most agentic Sonnet model yet, with substantial improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work. For more information, see our blog post: Introducing Claude Sonnet 5 .",
@@ -3718,6 +3727,7 @@
       "Who owns and manages the data of my team?",
       "Why Claude switched models in your conversation with Fable 5 or Fable 5.1",
       "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
+      "Why Claude switched models in your conversation with Sonnet 5.5",
       "Why am I being asked to verify my payment method?",
       "Why am I receiving an &#x27;Output blocked by content filtering policy&#x27; error?",
       "Why is a coupon or promotion not available for my account?",
