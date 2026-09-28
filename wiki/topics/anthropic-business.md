@@ -28,13 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新動態**（2026-09-27）
-> - **上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：政策細節見 [[topics/anthropic-government-policy]]，未見具名企業因此調整採購。
-> - **Accenture 評測合作被問「能否轉化為營收」**：屬 09-19 合作案的商業化角度追問，尚無具體數字。
-> - **Anthropic IPO 被稱為 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 報導，與 08-20 Motley Fool 估算之 4,000 億美元基準不同，僅標題可用。
+> **最新動態**（2026-09-28）
+> - **Sonnet 5.5 上線，路透與 IPO 籌備進度並列報導**：定價與模型面見 [[entities/pricing]]、[[entities/sonnet-5-5]]，本則未見新增具體 IPO 數字。
+> - **Claude Marketplace 上線逾 2,000 個 connector／plugin，Fabric 同日加入 Partner Network**：具體合作範疇與計費均未見報導。
 
 ---
 
@@ -327,6 +326,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Fabric**（2026-09-28）：加入 Claude Partner Network；同日官方推出 Claude Marketplace，收錄逾 2,000 個 connector 與 plugin，具體合作範疇與計費未見報導（Google News/EIN News；Google News/gHacks）
 - **Akamai**（2026-09-25）：簽署 7 年、116 億美元運算合約，供應 CPU 算力；認股權證可認購約 770 萬股 Akamai 股票，另有報導稱總值 120 億美元（Bloomberg；WSJ；IBD；Reddit）
 - **Basecamp**（2026-09-24）：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資，用於推進 AI 輔助藥物設計，具體投資額度與角色未見細節（Google News/BioSpace）
 - **Adobe**（2026-09-24）：Adobe 把 Acrobat 帶進 Claude 生態，同批對 Google Gemini 開放存取，具體整合範疇與計費未見報導（Google News/9to5mac.com）
@@ -512,6 +512,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-28
+- **[定價，官方一手來源] Anthropic 官方：Claude Sonnet 5.5 上線，取代 Sonnet 5 為 API／Claude Code 預設**：牌價維持 $2/$10 per Mtok，完整定價見 [[entities/pricing]]（Reuters；[Anthropic Blog](https://www.anthropic.com/claude-sonnet-5-5)）
+- **[IPO前瞻] Reuters 將 Sonnet 5.5 上線與 Anthropic IPO 籌備進度並列報導**：未見新增具體 IPO 數字，模型本身見 [[entities/sonnet-5-5]]（Reuters）
+- **[生態合作] 官方推出 Claude Marketplace，收錄逾 2,000 個 connector 與 plugin；同日 Fabric 加入 Claude Partner Network**：具體合作範疇與計費均未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/gHacks；Google News/EIN News）
 
 #### 2026-09-26
 - **[商業風險] 上訴法院維持五角大廈認定 Anthropic 為政府採購供應鏈風險**：判決與政策細節見 [[topics/anthropic-government-policy]]；未見具名企業因此調整對 Anthropic 採購的報導（Hacker News 426 分；Google News/CNBC）

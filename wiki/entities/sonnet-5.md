@@ -30,17 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（正式發布）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新動態**（2026-09-27）
-> GitHub Issue #65961：Claude 預設程式碼加大量註解、忽略停止指示，累積 248 反應、39 留言，尚無官方回應。
+> **最新動態**（2026-09-28）
+> [[entities/sonnet-5-5|Sonnet 5.5]] 發布，成為 Anthropic API 預設 Sonnet；本頁是否比照 Opus 5.5 模式改列 Legacy 尚未見官方公告。
 
 ---
 
 ## 現況
 
-**2026-09-27 最新**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
+**2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。
+
+- ❓ **待查證**（標 2026-09-28｜查 Sonnet 5.5、Legacy、Claude Code CLI）：Sonnet 5.5 是否同步為 Claude Code CLI 本身的預設模型（官方原文僅稱「Anthropic API 預設」），以及本頁（Sonnet 5）是否比照 Opus 5.5 模式正式改列 Legacy，官方原文均未載明
+
+**2026-09-27**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
 
 Claude Sonnet 5 於 2026-07-01 正式發布，定位為 Anthropic **最 agentic 的 Sonnet 模型**，在 reasoning、tool use、coding、knowledge work 等多個面向均有顯著提升，效能接近 Opus 4.8。
 
@@ -97,6 +101,7 @@ claude --model claude-sonnet-5-20260701
 
 ## 相關議題
 
+- [[entities/sonnet-5-5]] — 2026-09-28 發布的新一代，取代本頁成為 Anthropic API 預設 Sonnet
 - [[entities/fable-5]] — 現任最高階公開模型；Sonnet 5 為次階平衡選項，定位差異見上方「現況」
 - [[entities/opus-4-8]] — Opus 4.8 能力對比（Sonnet 5 效能接近 Opus 4.8，Opus 4.8 已於 2026-07-25 被 [[entities/opus-5|Opus 5]] 取代次旗艦地位）
 - [[entities/opus-5]] — 2026-07-25 發布的新次旗艦，與 Sonnet 5 分屬不同定位（次旗艦 vs 主力平衡選項）
@@ -109,6 +114,9 @@ claude --model claude-sonnet-5-20260701
 - [[news/2026-07-01]]
 
 ## 歷史記錄
+
+### 2026-09-28
+**Sonnet 5.5 發布，取代本代成為 Anthropic API 預設 Sonnet**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 API 預設 Sonnet 模型；Terminal-Bench 4.0 由本代 10.3% 升至 70.6%，牌價維持 $2/$10（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。是否同步為 Claude Code CLI 本身的預設、本頁是否比照 Opus 5.5 模式改列 Legacy，官方原文均未載明。
 
 ### 2026-09-27
 **GitHub Issue #65961：預設冗語註解、忽略停止指示**：使用者回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應（[GitHub Issue #65961](https://github.com/anthropics/claude-code/issues/65961)，2026-09-27）。與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節；本則聚焦「指示不受控」本身，非事後清理方案。

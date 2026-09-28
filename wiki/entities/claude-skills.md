@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-26
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新官方動態**（2026-09-26）
-> Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程未載）；呼應 09-25 文件索引新增的自架市集／plugin 開發文件。
+> **最新官方動態**（2026-09-28）
+> 報導稱 Anthropic 正式推出「Claude Marketplace」，收錄逾 2,000 個 connector 與 plugin（Google News 轉述，未附官方公告連結，數字未經官方一手確認）。
 
 ---
 
@@ -91,7 +91,8 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | | v2.1.178：Skills 在巢狀子 Agent 中可正常運作（搭配新版 `Tool(param:value)` permission 語法） | 2026-06-16 |
 | 官方設計指南 | 《Lessons from building Claude Code: How we use skills》——內部數百個 Skills 的實戰心得 | 2026-06-05 |
 | | 《七種指令傳遞方法》——Skills 與 CLAUDE.md/rules/subagents/hooks/output styles/system prompt append 六層控制的定位框架 | 2026-06-21 |
-| 分享／同步機制 | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
+| 分享／同步機制 | Google News 轉述 Claude Marketplace 上線，逾 2,000 個 connector／plugin，無官方公告連結；企業合作面見 [[topics/anthropic-business]] | 2026-09-27 |
+| | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
 | | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程與審核標準未載） | 2026-09-25 |
 | | ✅ **已有官方市集**（2026-08-08 查證官方文件更正）：`claude-plugins-official`（Anthropic 策展，首次互動啟動時自動註冊）與 `claude-plugins-community`（第三方送審後上架，需自行 `/plugin marketplace add`）；目錄另可於 [claude.com/plugins](https://claude.com/plugins) 瀏覽，送審有自動驗證與安全篩查。**創作者變現機制仍缺** | 市集已就位；變現無官方時程 |
 | | Enterprise 方案可開啟 skill／plugin 安全掃描（beta），第三方 skill／plugin 上傳或編輯時自動檢查惡意內容 | 2026-08-06 |

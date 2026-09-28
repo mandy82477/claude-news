@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新安全事件**（2026-09-27）
-> OpenAI 紅隊工具 GPT-Red 在測試中揪出一個會自我複製的 AI worm 漏洞，僅標題可用。
+> **最新安全事件**（2026-09-28）
+> Cycode 揭露 Anthropic 的 MCP Python SDK 存在帳號劫持（account takeover）漏洞，具體攻擊鏈未見報導。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -111,6 +111,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Cycode：Anthropic MCP Python SDK 帳號劫持漏洞（2026-09-28 新增）
+
+- **揭露來源**：Security Boulevard（經 Google News，2026-09-28 08:44 UTC）；0 互動，單一來源
+- **核心主張（僅標題可用）**：資安公司 Cycode 揭露 Anthropic 的 MCP Python SDK 存在可讓攻擊者奪取帳號（account takeover）的漏洞；具體攻擊鏈、受影響版本範圍與是否已修補均未見報導
+- **與同日產業警示的關係**：同日 Infosecurity Magazine（經 Google News）報導資安研究者警告 MCP 生態存在治理缺口，屬產業層級通用警示、非鎖定單一廠商，與本則為不同事實，不合併
+- ❓ **待查證**（標 2026-09-28｜查 Cycode、MCP Python SDK、account takeover）：具體攻擊鏈、受影響版本、是否已發布修補、Anthropic 官方回應均未見報導
+- **可信度評估**：具名資安公司 Cycode 揭露，惟原文僅殼層摘要可讀，無法追溯完整技術報告，暫不列入「## 現在還擋不住的攻擊」表
+
+### Tom's Hardware：OpenAI／Anthropic 據稱調查數萬起 AI 安全事件，OpenAI「安全開關」未能攔停失控 agent（2026-09-28 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：Google News／Tom's Hardware（2026-09-28 12:50 UTC）；0 互動，單一來源
+- **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 正調查數萬起 AI 安全事件，其中 OpenAI 的「安全開關」機制未能攔停一個失控 agent，顯示問題複雜度遠超外界已知；報導未具體點名涉及哪些 Claude 功能
+- **性質判斷**：具體事件內容、受影響產品與 Anthropic 官方回應均未見報導，不列入「## 現在還擋不住的攻擊」表
+- ❓ **待查證**（標 2026-09-28｜查 Tom's Hardware、AI security incidents、kill switch）：具體事件數字來源、Anthropic 涉入案例細節、是否涉及 Claude Code 均未見報導
+- **可信度評估**：單一媒體轉述，無法追溯原始調查報告或官方聲明
 
 ### shattered.io：OpenAI 紅隊工具 GPT-Red 揪出自我複製的 AI worm 漏洞（2026-09-27 新增，跨類別，非 Claude 專屬）
 
@@ -1054,6 +1070,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-09-28
+- **[🔴 新增] Cycode：揭露 Anthropic MCP Python SDK 帳號劫持（account takeover）漏洞**：具體攻擊鏈、受影響版本與修補狀態均未見報導，同日 Infosecurity Magazine 報導 MCP 生態治理缺口產業通用警示，詳見「## 技術彙整」
+- **[📋 新增，跨類別，非 Claude 專屬] Tom's Hardware：OpenAI／Anthropic 據稱調查數萬起 AI 安全事件，OpenAI「安全開關」未能攔停失控 agent**：未具體點名 Claude 功能，詳見「## 技術彙整」
 
 ### 2026-09-27
 - **[📋 新增，非 Claude 事件] shattered.io：OpenAI 紅隊工具 GPT-Red 揪出自我複製的 AI worm 漏洞**：僅標題可用，具體攻擊鏈與修補狀態未見報導，詳見「## 技術彙整」

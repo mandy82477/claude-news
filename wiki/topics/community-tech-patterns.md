@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新工作流模式**（2026-09-27）
-> - **新增類別「Agent 活動可視化」**：claude-office 用即時像素風辦公室模擬顯示 Claude Code 操作，同日另有 The City（機器人城市，來源已下架，僅存標題）走同一構想。
-> - **多類別添新代表技巧**：Skills 設計添 headcount（125+ skills 公司化組織）、personal-os-skills（Obsidian）、reladraw（可控版面圖表語言＋agent skill）；創意工具 Agent 整合添 anything2explainer（主題轉解說影片）、chess-postmortem-skills（棋局賽後分析影片）；記憶與知識管理添 memmy-agent；Plugin/MCP 整合添 agenvoy。
+> **最新工作流模式**（2026-09-28）
+> - **長時任務 harness 新實作**：AMAP-ML/LongHorizon-Harness 讓 agent 跨桌面應用與 CLI 長時間執行並維持可恢復狀態，與既有「MCP 長 Session 穩健化」機制相近但不限 MCP，是否併類待週更判斷。
+> - **多類別添新代表技巧**：模型使用策略添 magpie（選單列切換底層模型）；記憶與知識管理添 agent-memory（純 Markdown 跨工具記憶）；創意工具 Agent 整合添 lemo-opuscar（Opus 5.5 導演影片風格）；Skills 設計添 geo-sleuth（照片地理定位）、3dicon（3D 動態 icon 生成）。
 
 ---
 
@@ -52,17 +52,17 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Skills 設計** | 知識框架化、免 git 雲端硬碟分享、drawio-skill、headcount、personal-os-skills、reladraw（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-27 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | 知識框架化、drawio-skill、headcount、personal-os-skills、reladraw、geo-sleuth、3dicon 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-28 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、aoci-code、second-brain-os、memmy-agent（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、second-brain-os、memmy-agent、agent-memory 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-28 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
-| **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-06 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
+| **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-28 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **創意工具 Agent 整合** | Palmier Pro、oh-story-claudecode、anything2explainer、chess-postmortem-skills（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、chess-postmortem-skills、lemo-opuscar 等（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-28 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
@@ -163,6 +163,45 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### AMAP-ML/LongHorizon-Harness：跨桌面應用與 CLI 的長時任務可恢復 harness（2026-09-28）
+
+- **主線：** —
+- **核心模式：** 長時任務 computer-use harness，讓 agent 跨桌面應用與 CLI 長時間執行並維持任務狀態；核心機制為 fresh-context execution（重置對話避免累積漂移）、可稽核的持久驗證狀態、獨立稽核與可恢復進度，原生支援 Claude；GitHub Search 1,638 星。
+- **與既有模式的關係：** 現有 21 類聚焦 agent 協作、記憶、工具鏈整合等面向，皆非本則核心；概念上與既有「長 Session 穩健化」（原聚焦 MCP 協定失效模式：心跳、重試、快照）相近，皆處理長時任務的可恢復進度與稽核，但本則橫跨任意桌面應用與 CLI、不限 MCP，是否併類或另立新類留待週更判斷；單一 agent 長時延續而非跨 agent 並行痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,638★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/AMAP-ML/LongHorizon-Harness)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### yetone/magpie：選單列一鍵切換底層模型（2026-09-28）
+
+- **主線：** —
+- **核心模式：** 選單列小工具，讓使用者在同一介面切換不同底層模型，例：Claude Code 搭配 Kimi、Codex 搭配 DeepSeek；GitHub Search 1,571 星。
+- **與既有模式的關係：** 補上既有「模型使用策略」代表技巧一個「選單列快速切換底層供應商模型」取向，既有做法多聚焦依任務複雜度自動路由（Workweave Router、Fable 5 編排），本則走使用者手動一鍵切換；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,571★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/yetone/magpie)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### tigerless-labs/agent-memory：純 Markdown 為單一事實來源的跨工具長期記憶（2026-09-28）
+
+- **主線：** 索引記憶
+- **核心模式：** 為 agent 打造的長期記憶執行層，以純 Markdown 作為單一事實來源，本地排序檢索，另有獨立的 sleep-time Manage 層做記憶整理；Claude Code 與 Codex 可共用同一份記憶庫，不需 API key；GitHub Search 1,486 星。
+- **與既有模式的關係：** 補上既有「記憶與知識管理」代表技巧一個「純 Markdown 事實來源＋跨工具共用」取向，與同類 memmy-agent（2026-09-27 新增）皆主打跨 agent 共用記憶，差異在本則明確分離「檢索」與「sleep-time 整理」兩層；agent 記不住跨 session 決策屬大型 codebase 特有痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（1,486★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/tigerless-labs/agent-memory)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### 同日三款 Skills／創意工具新實作：lemo-opuscar（Opus 5.5 導演影片風格）、geo-sleuth（照片地理定位 skill）、3dicon（3D 動態 icon 生成 skill）（2026-09-28）
+
+- **主線：** —
+- **核心模式：**
+  - lemo-opuscar：39 種影片風格，各附可重用風格提示詞，由 Claude Opus 5.5 純程式碼產出樣片，使用者選風格帶入自己的故事讓 agent 導演；GitHub Search 505 星
+  - geo-sleuth：agent skill，綜合 OpenStreetMap 幾何、海拔天際線、衛星影像與街景判斷照片拍攝地並展示推理過程；相容 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、GitHub Copilot；GitHub Search 502 星
+  - 3dicon：Claude Code skill，輸入一段提示即輸出具真實透明度的循環動畫 3D icon；GitHub Search 500 星
+- **與既有模式的關係：** lemo-opuscar 補上「創意工具 Agent 整合」一個「風格化影片導演」取向；geo-sleuth、3dicon 補上「Skills 設計」兩個新取向——跨來源地理定位判讀、3D 動態資產生成；三者皆非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 三者皆僅有 GitHub Search 星數（505★／502★／500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar)（505★）、[geo-sleuth](https://github.com/Oldcircle/geo-sleuth)（502★）、[3dicon](https://github.com/samyost1/3dicon)（500★）
+- **成熟度：** ⏳ 新興（三者皆本庫首次收錄，尚無社群採用回饋數據）
 
 #### 同日三款 Skills 設計新實作：headcount（公司化 agent 組織）、personal-os-skills（Obsidian）、reladraw（可控版面圖表語言＋agent skill）（2026-09-27）
 

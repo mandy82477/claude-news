@@ -236,3 +236,7 @@
 {"id": "H-a5c6b1", "opened": "2026-09-27", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Claude Artifacts 出現負向對照（Show HN「r3, A local alternative to Claude Artifacts」，2026-09-26，證據等級：單一 HN 貼文僅 2 分，未附測試方法），請功能記者評估是否值得記入已知問題或需求追蹤", "status": "open"}
 {"id": "H-694685", "closed": "2026-09-27", "status": "void", "by": "主編", "result": "理由成立：3萬個agent數字已於 topics/recursive-self-improvement 既有內容全數收錄在案，非今日新增，無新日報佐證可比對"}
 {"id": "H-47da1d", "closed": "2026-09-27", "status": "void", "by": "主編", "result": "理由成立：community-tech-tools.md 為 lint 專用頁，daily.md 明文每日 ingest 不更新此頁；且今日條目未達開列門檻，留待 /wiki-lint 週更層再判"}
+{"id": "H-a5c6b1", "closed": "2026-09-28", "status": "done", "by": "功能", "result": "Claude Artifacts 負向對照，已在 entities/claude-code.md 核心功能補一行記錄"}
+{"id": "H-2a2790", "opened": "2026-09-28", "from": "功能", "to": "商業", "page": "topics/anthropic-business", "note": "Claude Marketplace 報導（逾 2,000 個 connector/plugin）與 Fabric 加入 Claude Partner Network 的企業合作角度已留 wikilink 指向 topics/anthropic-business，尚待商業記者補實質內容", "status": "open"}
+{"id": "H-2a2790", "closed": "2026-09-28", "status": "done", "by": "商業", "result": "同輪商業記者已獨立處理，anthropic-business.md 已納入 Claude Marketplace 與 Fabric 合作內容"}
+{"id": "H-fe8019", "opened": "2026-09-28", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "Cycode 揭露 Anthropic MCP Python SDK 帳號劫持漏洞涉及 MCP 功能面（安全面已記於 topics/ai-agent-safety 技術彙整），請功能記者評估是否需在 entities/claude-code.md 已知問題或 SDK 版本表補一行；具體攻擊鏈與修補狀態均未見報導，需後續查證", "status": "open"}

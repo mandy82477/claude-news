@@ -31,19 +31,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-09-25
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-09-25）
-> 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單列 4 階已移除；對帳僅命中來源條目本身，暫不升第二階。
+> **最新動態**（2026-09-28）
+> 2.1.284 新增 4 個第一階旗標＋1 個代號旗標（`WHIMSICAL_ELEPHANT`）；`CLAUDE_CODE_COMMIT_BETWEEN_KEYS`（首見 2.1.281）依來源條目消失清單列 4 階已移除，`CLAUDE_CODE_ENABLE_NARRATION` 同批消失但首見版本早於本頁基線、未曾單獨列於追蹤表；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.284（09-28）新增 4 個第一階旗標＋1 個代號旗標**（`WHIMSICAL_ELEPHANT`）；`COMMIT_BETWEEN_KEYS`（首見 2.1.281）依消失清單升列 4 階，`ENABLE_NARRATION` 同批消失但首見早於本頁基線；對帳僅命中自身條目，暫不升第二階。
 - **2.1.282（09-25）新增 8 個第一階旗標＋2 個代號旗標**（`ELEGANT_MEADOW`、`SQUISHY_NEWT`，名單見追蹤表）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單升列 4 階已移除；對帳僅命中自身條目，暫不升第二階。
 - **2.1.281（09-24）新增 9 個第一階旗標**（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，暫不升第二階。
 - **2.1.278（2026-09-19）新增 3 個第一階旗標**：`PER_TURN_TIMING`、`SESSION_START_ANNOUNCEMENTS_BEFORE_PROMPT`、代號旗標 `PARSED_WILLOW`；同批消失代號旗標 `DAPPER_LAGOON`；對帳僅命中自身條目，暫不升第二階。
@@ -67,10 +68,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_APPEND_PROMPT_HEAD` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
+| `CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
+| `CLAUDE_CODE_RELAUNCH_HOME_TRUST` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
+| `CLAUDE_CODE_SDK_READS_SESSION_STATE` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
 | `CLAUDE_CODE_ARTIFACT_INHERITED_TYPE_GRANT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_ARTIFACT_TEXT_VARIANT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_CCR_EARLY_REMOTE_CONNECT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
-| `CLAUDE_CODE_COMMIT_BETWEEN_KEYS` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
+| `CLAUDE_CODE_COMMIT_BETWEEN_KEYS` | 2.1.281（09-24） | 4 | — | — | 2.1.284（09-28）消失（來源條目消失清單） |
 | `CLAUDE_CODE_COORDINATOR_SKILL_GUIDANCE` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_DISABLE_STARTUP_WORK_GATE` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_DISABLE_SUBSTITUTION_RM_PROMPT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
@@ -132,6 +137,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_WHIMSICAL_ELEPHANT` | 2.1.284（09-28）出現 |
 | `CLAUDE_CODE_ELEGANT_MEADOW` | 2.1.282（09-25）出現 |
 | `CLAUDE_CODE_SQUISHY_NEWT` | 2.1.282（09-25）出現 |
 | `CLAUDE_CODE_PARSED_WILLOW` | 2.1.278（09-19）出現 |
@@ -144,6 +150,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 已消失
 
+- `CLAUDE_CODE_ENABLE_NARRATION`（2.1.283–2.1.284 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
 - `CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_RETIRE_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
@@ -163,6 +170,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-09-28 | 2.1.284 新增 4 個第一階旗標＋代號旗標 `WHIMSICAL_ELEPHANT`（名單見追蹤表）；`COMMIT_BETWEEN_KEYS` 列 4 階、`ENABLE_NARRATION` 消失；不算獨立佐證 |
 | 2026-09-25 | 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`OCHRE_KITE`（首見 2.1.273）消失，依來源條目消失清單列 4 階；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-24 | 2.1.281 新增 9 個第一階旗標（名單見追蹤表）；同批 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-15 | 建頁。基線 2.1.272；回填 2.1.261→2.1.272 十日差；`ENABLE_FUNCTION_HOOKS` 以 issue #91870 為證據列第 3 階 |

@@ -2,19 +2,19 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-26
+**最後更新：** 2026-09-28
 
-> **這禮拜動了什麼**（2026-09-26）
-> v2.1.283 新增 `x-claude-code-prompt-id` 閘道提示標頭：設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 後，自架 LLM gateway 能把同一提示的多筆請求歸為一組；不設不受影響。預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-09-28）
+> v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-09-23）
+## ⭐ 現在值得跟的三件（最後輪替 2026-09-28）
 
-- **Claude Opus 5.5 成為預設模型**：v2.1.280 起 `default` 改指 Opus 5.5（Foundry 仍 Sonnet 4.5），未指定模型的 session 與排程任務會跟著換。**怎麼開始：** `/model` 看現在跑的是哪一個；額度敏感的人用 `/model sonnet` 固定，細節見 [[entities/opus-5-5]]。
+- **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
 - **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
 - **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
 
-%% 09-23 換上 Claude Opus 5.5 預設換代（預設值改變型，依規則固定第一條），讓出 Auto mode 免計費 classifier（09-21 上榜、🔥🔥🔥🔥，被熱度同級但屬「不動也會改變你」型且較新的條目取代）；Fable 5.1 09-01 發布仍在 30 天時間閘內、🔥🔥🔥🔥🔥 留第三 %%
+%% 09-28 換上 Claude Sonnet 5.5 預設換代（預設值改變型，依規則固定第一條，較 09-22 Opus 5.5 換代更新），讓出 Claude Opus 5.5 成為預設模型（🔥🔥🔥🔥，熱度低於 AGENTS.md／Fable 5.1，被擠出前三）；AGENTS.md／Fable 5.1 熱度與試用價值本輪未變動，維持原位 %%
 
 ---
 
@@ -26,6 +26,7 @@
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
 | v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
 | v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
 | v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
@@ -38,7 +39,6 @@
 | v2.1.222 | 移除 ultraplan；Remote Control 不能再由 repo 設定開啟；修掉 worktree 隔離 session 可對主 checkout 下破壞性 git 指令的漏洞 | 破壞性變更＋安全修復 | 用 ultraplan 的人要換做法；靠 repo 設定開 Remote Control 的改用 user 或 managed 設定 |
 | v2.1.215 | `/verify`／`/code-review` 不再自動觸發 | 破壞性變更 | 在 CI 或 hook 補上顯式呼叫 |
 | v2.1.212 | `/fork` 改為複製對話進新背景 session，同 session 子代理改名 `/subtask`；Task 工具 `mode` 參數作廢 | 破壞性變更 | 依賴舊行為的 skill 或 hook 改寫為 `/subtask` |
-| v2.1.207 | auto 模式不再讀 repo 內 `.claude/settings.local.json` 的 `autoMode`；plugin 設定只讀 user／managed | 預設值改變 | 靠 repo 設定開 auto 的人改用 user 或 managed 設定 |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -64,6 +64,23 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Claude Sonnet 5.5 成為 API 預設 Sonnet 模型
+**發布：** 2026-09-28（v2.1.284） | **狀態：** 正式發布
+
+**是什麼：** Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端的預設 Sonnet 模型；速度較前代快逾三成、多數工作成本降低最多三成，Terminal-Bench 4.0 代理編碼評測從 10.3% 拉到 70.6%。模型規格與牌價細節見 [[entities/sonnet-5-5]]。
+
+**為何熱：** 不動手也會改變你行為的預設值變更；路透將此次上線與 Anthropic 上市（IPO）籌備進度並列報導，加上 TechCrunch、VentureBeat 等媒體及 Hacker News、Reddit 社群同日跟進，合計至少 7 個來源同日報導。
+
+**現在要試嗎：** 已是預設，無需主動嘗試；額度敏感或依賴 Sonnet 5 既有行為的排程任務，建議 `/model` 確認實際套用的模型。
+
+**快速上手：**
+```
+/model
+# 檢查目前 session 實際套用的模型
+```
+
+**注意事項：** Claude Code CLI 本身的預設 Sonnet 是否同步換為 5.5、Sonnet 5 是否正式改列 Legacy，見 [[entities/sonnet-5]] 追蹤。
 
 ### x-claude-code-prompt-id 閘道提示標頭
 **發布：** 2026-09-25（v2.1.283） | **狀態：** 正式發布
@@ -344,6 +361,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **maxProseWidth 設定**（v2.1.282，限制寬終端機散文寬度） | 2026-09-24 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway desktop policy 支援**（v2.1.281，新版 Desktop 金鑰可設讀取範圍與繞過權限模式） | 2026-09-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |

@@ -6985,3 +6985,30 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：判讀 2 則（澳洲聽證會、API 拒答計費規則），皆無可交易標的（Anthropic／OpenAI 未上市）
 - 轉知帳本：結案 H-1ae6f5（功能：official-community-gap 官方對應矩陣評估，結論不需新增列）；駁回 H-694685、H-47da1d（理由成立，void）；新開 H-a5c6b1（社群→功能：entities/claude-code，Claude Artifacts 出現負向對照）
 - 📋 待使用者確認：Anthropic Claude API 拒答（refused）請求計費規則是否縮減為五類中三類收費——僅 MIXED Reality News/mixed-news.com 標題可用，五類清單／哪三類收費／生效日均未載；商業記者與投資分析記者皆已標示同一事實待查證，本輪未寫入 entities/pricing.md。雲端環境 egress 受限（Trusted 網域白名單）無法自行 WebFetch 官方說明中心查證，建議下次有網路存取的 session（本機或已開 Custom egress 的雲端）查 support.claude.com／API pricing 文件後補寫
+
+## 2026-09-28 Ingest
+
+- 來源日報：[[news/2026-09-28]]
+- 更新頁面：
+  - 模型：entities/sonnet-5、topics/model-comparison
+  - 功能：entities/claude-code、entities/claude-skills、topics/claude-code-experimental、topics/coding-workflow-guide、entities/claude-science
+  - 商業：entities/pricing、topics/anthropic-business、topics/competitor-landscape、topics/ai-talent-flow
+  - 安全政策：topics/anthropic-government-policy、topics/ai-agent-safety
+  - 社群：topics/community-tech-patterns、topics/community-tech-discussions
+  - 人物：entities/dario-amodei、entities/jensen-huang
+  - 投資分析：topics/market-signals
+  - 主編：feature-radar.md（新增 Sonnet 5.5 條目＋全覽表列＋⭐ 現在值得跟的三件輪替＋版本階梯表新列）、index.md（新增 entities/sonnet-5-5、更新 entities/sonnet-5 摘要）
+- 新增頁面：entities/sonnet-5-5
+- 摘要：Claude Sonnet 5.5 發布並取代 Sonnet 5 成為 API 預設 Sonnet 模型（速度快三成、成本降三成），Claude Code v2.1.284 同步更新；Trump 與 Dario Amodei 白宮晚餐延續 09-26 五角大廈供應鏈風險認定的緊張關係；資安公司 Cycode 揭露 Anthropic MCP Python SDK 帳號劫持漏洞；Anthropic／OpenAI 確認不出席澳洲參議院 10 月 1 日聽證會
+- 呈現品質：全部通過（entities/claude-science 現況段落超字數上限為既有問題，本輪僅追加 1 句未拆分，已記錄待週更處理；topics/model-comparison 條列首版超限已當場縮短修復）
+- 分類回退：追加派工 3 筆（社群 2 則：Show HN OpenAPPA guardrail 工具、Reddit「THEY FUCKING COOKED YO!」→ 皆已收社群記者處理；功能 1 則：NYT CRISPR 酶系統後續報導 → 已收功能記者寫入 entities/claude-science）；二次回退未派 1 筆：「THEY FUCKING COOKED YO! Opus 5.5 is a massive upgrade.」（Reddit r/ClaudeCode）社群記者判定應歸模型記者 entities/opus-5-5，因已達「一則最多一跳」上限不再追加派工，待使用者裁示
+- devpractice 沉澱：候選 6 筆（entities/sonnet-5-5 1、entities/claude-code 2、topics/coding-workflow-guide 1、topics/ai-agent-safety 1、topics/community-tech-patterns 1）
+- market 判讀：判讀 2 則（Sonnet 5.5 定價分層、澳洲聽證會不出席），皆無可交易標的（Anthropic／OpenAI 未上市）
+- 轉知帳本：結案 H-a5c6b1（功能：Claude Artifacts 負向對照，已記入 entities/claude-code）；新開又同輪結案 H-2a2790（功能→商業：Claude Marketplace／Fabric 企業合作角度，商業記者同輪已獨立處理 anthropic-business.md，無需下輪接手）；新開 H-fe8019（安全政策→功能：Cycode MCP Python SDK 帳號劫持漏洞的功能面，entities/claude-code，待下輪接手）
+- 📋 待使用者確認：
+  1. Sonnet 5 是否比照 09-22 Opus 5.5 換代模式正式改列 Legacy；Claude Code CLI 本身的預設 Sonnet 是否也同步換為 5.5（官方原始摘要僅稱「Anthropic API 預設」，未明確涉及 CLI 層）——需查證官方模型總覽頁後回填 entities/sonnet-5-5.md 與 topics/model-comparison.md
+  2. Sonnet 5.5 官方 prompting/migration 指南全文，及官方發布文中「落後 Opus 5.5 兩分」那項評測（疑似 GDPval 系列）的完整名稱與分數——原始摘要截斷，頁面已誠實標示未採信推算
+  3. 「Manage usage credits for paid Claude plans」頁移除「How do I pay for my Claude API usage?」一段是否構成計費規則實質變動——僅有字數差異偵測、無可讀原文，商業記者本輪未寫入 wiki
+  4. 分類回退二次未派項目「THEY FUCKING COOKED YO! Opus 5.5 is a massive upgrade.」是否併入 entities/opus-5-5.md 社群觀感段落（見上方「分類回退」）
+  5. wiki/feature-radar.md「⚠️ 從你現在的版本升上去」表頭注記「核對到 v2.1.269，2026-09-12」已與表格實際內容（已列至今日新增的 v2.1.284）不同步，需具網路存取的 session 重新逐版核對官方 CHANGELOG.md
+  雲端環境 egress 受限（Trusted 網域白名單）無法自行 WebFetch 官方文件查證上述 1、2、3、5 項，建議下次有網路存取的 session 查證後補寫

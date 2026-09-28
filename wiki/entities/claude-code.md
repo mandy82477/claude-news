@@ -30,13 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新動態**（2026-09-27）
-> - 官方標記 CRITICAL：子代理無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖與工作遺失（#68619）。
-> - 新增已知問題 3 則：Plugins 缺 rules 支援請求（#14200）、CLI 輸出縮排與硬換行破壞複製貼上（#15199）、v2.1.181/183 API 無回應（#69358）。
-> - GitHub connector 於 Cowork 顯示已連結卻未暴露工具（#61682），與既有 Google Drive connector 同類問題並列。
+> **最新動態**（2026-09-28）
+> - **v2.1.284**：Sonnet 5.5 成 API 預設 Sonnet 模型；另新增「Yes, but ask」功能，官方原文截斷，具體行為未知。
+> - 新增已知問題 2 則：SSE 串流無逾時＋ESC 無法完全取消（#33949，附根因分析與修復提案）、agent 於約 100 秒內刪除 4.8 萬個檔案後主動道歉（TechRadar 報導，僅標題可用）。
 ---
 
 ## 現況
@@ -193,8 +192,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（55 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（57 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code agent 於約 100 秒內刪除 48,000 個檔案，事後主動道歉（TechRadar，2026-09-27，僅標題可用）**：報導稱使用者的 agent session 極短時間內刪除近五萬檔案並主動致歉；觸發指令與版本未載，官方未回應。與 v2.1.183 破壞性 Git 指令封鎖不同範疇，該防護未涵蓋一般檔案刪除。
 - 🔴 **未修復**｜**子代理無限遞迴，token 用量暴增（GitHub issue #68619，官方標 CRITICAL，累積 33 則留言、22 個讚，2026-09-26）**：無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖，子代理工作成果遺失；官方尚未給修復時程。
 - 🔴 **未修復**｜**CLI 輸出全帶 2 空格縮排與 80 字元強制換行，破壞複製貼上（GitHub issue #15199，累積 28 則留言、106 個讚，2026-09-26）**：與既有「終端機複製夾帶縮排」（#18170）同類但涵蓋全輸出，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Plugins 支援類似 CLAUDE.md 的 rules 設定檔（GitHub issue #14200，累積 37 則留言、120 個讚，2026-09-26）**：使用者呼籲讓 Plugins 機制能像 CLAUDE.md 一樣附帶規則檔設定；官方尚未回應或排入路線圖。
@@ -478,6 +479,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.284** | 2026-09-28 | Claude Sonnet 5.5（`claude-sonnet-5-5`）成 API 預設 Sonnet 模型，見 [[entities/sonnet-5-5]]；新增「Yes, but ask」功能，行為未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)）|
+| **anthropic-sdk-python v1.9.0** | 2026-09-28 | Features：新增 `between_tools` thinking type 的 API 支援（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0)）|
+| **anthropic-sdk-typescript vertex-sdk v0.20.0** | 2026-09-28 | Features：官方 changelog 於「### Feature」處截斷，具體項目未知（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.0)）|
+| **anthropic-sdk-typescript google-cloud-sdk v0.0.15** | 2026-09-28 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.15)）|
 | **v2.1.283** | 2026-09-25 | 新增 `x-claude-code-prompt-id` 閘道提示標頭，供 LLM gateway 歸組同一提示的多筆請求；需設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)）|
 | **v2.1.282** | 2026-09-24 | 新增 `maxProseWidth` 設定，限制寬終端機下散文輸出寬度（表格／程式碼區塊全寬）；新增啟動通知，`/status` 亦有異動（原文截斷，細節未載，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）|
 | **v2.1.281** | 2026-09-23 | 新增 desktop policy 設定：`blockReadsOutsideWorkingDirectories`、`disableBypassPermissionsMode`（gateway，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.281)）|
@@ -643,6 +648,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Agent Teams** — 多 agent 協作，目前僅支援 Claude 實例（社群已有 workaround）
 - **MCP Servers** — 外部工具整合（注意：多個 MCP 可能導致每次訊息消耗 20k+ tokens）
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
+- **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 
 ### Subagent 型別差異對照
@@ -739,6 +745,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-28 | **v2.1.284**：Sonnet 5.5 成 API 預設模型，新增「Yes, but ask」。旗標增4消2，見 [[topics/claude-code-experimental]]。新增已知問題 2 則。 |
 | 2026-09-27 | 新增已知問題 5 則：子代理無限遞迴標 CRITICAL（#68619）、CLI 格式破壞複製（#15199）、Plugins 缺 rules（#14200）、GitHub 無工具（#61682）、API 無回應（#69358）。 |
 | 2026-09-26 | **v2.1.283**：新增閘道提示標頭 `x-claude-code-prompt-id`。新增已知問題 2 則：Cowork「選擇資料夾」消失（#76694）、Windows UNC 不支援（#45297）。 |
 | 2026-09-25 | **v2.1.282**：新增 `maxProseWidth` 設定（截斷）。旗標增 8＋代號 2、`OCHRE_KITE` 消失。桌面文件：本機/SSH 自動載入帳號 skills/plugins。 |

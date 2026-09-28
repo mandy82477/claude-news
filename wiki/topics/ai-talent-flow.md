@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新動態：조선일보第二家跟進 09-26 事件，改用「AI 步調過快」措辭**（2026-09-27）
-> 與 09-26 the-decoder.com 報導是否為同一人，原文未載明，姓名與職稱均未見報導，詳見「對各公司的影響」表 Google DeepMind 列。
+> **最新動態：Inshorts 近乎相同標題再度轉載 09-13 事件**（2026-09-28）
+> 與 09-13 原始報導、09-26 the-decoder.com、09-27 조선일보等既有記錄方向一致，未見新增細節，視為同一事件持續轉載，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 Google DeepMind 列與下方時序。
 
 ## 摘要
 
@@ -77,6 +77,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-28
+- **Inshorts 以與 09-13 幾乎相同標題再度轉載 Google DeepMind 工程師離職事件**：與 09-13 原始報導、09-26 the-decoder.com、09-27 조선일보同屬持續轉載，未見新增細節（推論）（Topic Watch/ai-talent-flow）
 
 #### 2026-09-27
 - **조선일보第二家跟進 09-26 事件，改用「AI's Rapid Pace」措辭**：與 the-decoder.com 報導是否同一人原文未載明，未見新增細節（推論）（Topic Watch/ai-talent-flow）

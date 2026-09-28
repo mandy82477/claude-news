@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **本週衝擊**（2026-09-27）
+> **本週衝擊**（2026-09-28）
 > - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
 > - 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。
+> - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
 
 ---
 
@@ -48,9 +49,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
+| **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
 | **Microsoft／GitHub** 🏢 | GA 功能於 Business/Enterprise 帳號預設開啟（09-24）；Microsoft 推出 all-in-one Copilot app 劍指 Anthropic／OpenAI（09-25）→ Claude 缺對應統一入口 | 能力 | 🔴 | GitHub 官方 changelog 一手＋CNBC／GeekWire 跨 2 媒體；all-in-one app 整合範疇、上線時程未載 |
-| **Meta（Muse Code／Muse Glimmer）** | 結束 beta、三訂閱層主打價格戰（09-01）；旗艦模型 Muse Glimmer 開源（08-11）→ 想比價卻比不了，月費未公布 | 定價 | 🔴 | 跨 2 媒體（The New Stack／Intelligent Living），月費與 20x 層費率均缺 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
@@ -68,7 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
-**未列入上表**（⚪ 級，動態仍記在下方時序）：騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
+**未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
 
 ## 硬答案
 
@@ -125,11 +126,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Meta（Muse Code／Muse Glimmer）
 **現在的答案**
-- 09-01 結束 beta、三訂閱層主打價格戰，但月費未公布——現在算不出跟 Claude 加購方案誰划算，先不必動。
-- 按量計費層已可比價：標準層 $1.25／$4.25，Contributor 層以「資料可能用於訓練 Meta 模型」換 $0.10／$0.20。
+- 09-28 官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務，直接對標 Claude Code 企業定位——服務範圍、定價、客戶名單均未見報導。
+- 09-01 結束 beta、三訂閱層主打價格戰；按量計費層已可比價：標準層 $1.25／$4.25，Contributor 層以「資料可能用於訓練 Meta 模型」換 $0.10／$0.20。
 - 08-11 起旗艦模型 Muse Glimmer 開源，Meta 的戰線同時涵蓋產品層與模型層權重。
 **還沒解決**
-- 三訂閱層費率、「20x」折扣層對應價格、Glimmer 的授權條款與 benchmark 均未見報導。
+- 企業導入規模、成本與 Claude Code 客戶流失情形；三訂閱層費率、「20x」折扣層對應價格均未見報導。
 
 ### DeepSeek
 **現在的答案**
@@ -215,6 +216,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-28
+- **Meta**：官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務；詳見「對手雷達」與「雷達細節」Meta 列更新（Blog/Meta Newsroom）
+- **Base44（Wix）**：官方推出新產品 Base Code，報導定位為直接對標 Claude Code 與 Cursor 的競品；同日 CDOTrends 另一篇報導稱有替代方案以約十二分之一成本達到相近效果，惟未點名具體產品，價格與能力對比均未見報導細節（Google News/calcalistech.com；Google News/CDOTrends）
+- **OpenAI**：官方部落格宣布擴大 Lenfest AI Collaborative 新聞業合作計畫，追加 500 萬美元資金與最高 500 萬美元軟體額度及工程支援，非產品或定價異動（Blog/OpenAI News）
 
 ### 2026-09-27
 - **MarkTechPost**：發表企業導入 AI coding agent 比較文，聚焦智財賠償（IP indemnity）、資料落地與 500 人規模成本差異，未指名具體工具或數字，僅標題可用（Topic Watch/competitor-landscape）

@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
-> **最新計費政策異動**（2026-09-27）
-> - **Claude Code $250 cloud sessions 額度資格再添一說：gHacks 稱限 Pro／Max 訂閱戶**：與 09-23「新用戶」說法是否同一資格範圍未見報導釐清，到期日仍未載，功能面見 [[entities/claude-code]]。
-> - **Opus 5.5 伴隨「實驗性用量重置」機制傳聞**：單一來源（同一媒體此前類似報導曾查證失實），本站暫不採信，標記見下方「定價與促銷」。
+> **最新計費政策異動**（2026-09-28）
+> - **Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 API／Claude Code 預設**：牌價維持 $2/$10 per Mtok，支援 1M context，快取讀取低至 $0.20/Mtok（Reuters；[官方](https://www.anthropic.com/claude-sonnet-5-5)）。
+> - **Plans & Pricing 頁 Batch processing 示範模型換代**：從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5，屬頁面範例更新，非費率變動（Official Docs）。
 
 ## 現況
 
@@ -71,6 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 方案細節
 
+- **09-28 官方 Plans & Pricing 頁 Batch processing 範例模型換代**：頁面把 Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5；屬頁面範例更新，不代表 Batch 折扣費率本身變動（Official Docs）
 - **旗艦分界的官方定義（2026-07-20 生效）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用「至多每週用量上限的 50%」且不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率付費。先前將 Fable 5 納入方案週用量的促銷結束於 **2026-07-19 23:59:59 PT**
 - **Pro／Team standard 過渡 credit（2026-08-22 官方查證，先前懸置已結案）**：金額 **$100**——Pro 為每帳戶 $100，Team 為每購買的 standard seat $100、每組織上限 $2,500。資格以 **2026-07-19 23:59:59 PT** 當下持有合格 Pro／Team standard 方案為準（免費試用不算）。**領取窗已於 2026-08-02 23:59 PT 關閉**，未領者不再補發；已領取的 credits 於 **2026-09-17 23:59 PT 到期**（促銷起算 60 天）。這批 credits **不限 Fable 5**，是一般 usage credits，任何模型都能用、方案用量觸頂時也能墊（來源：[Claude Fable 5 one-time free credits promotion](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。credits 用盡後可續買、改用其他模型、或升級 Max
 - **credits 購買方式歧異（未收斂）**：官方寫「Add funds，自行輸入金額」，XenoSpectrum 則稱為固定包（$45 買 $50、$200 買 $250、$700 買 $1,000）。兩者對不上，媒體數字不採信，以官方為準
@@ -101,7 +102,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |------|--------|------|------|
 | Opus 5 | $0.705 | 約 $62 | 官方算例逐字 |
 | Fable 5.1 | 約 $1.33 | 約 $117 | 推算（$10/$50 牌價代入同一 token 量）|
-| Sonnet 5 | 約 $0.33 | 約 $29 | 推算（$2/$10 牌價代入同一 token 量）|
+| Sonnet 5.5（09-28 起為預設，同 Sonnet 5 價）| 約 $0.33 | 約 $29 | 推算（$2/$10 牌價代入同一 token 量）|
 
 **$100 買得到多少 API 用量**：以上表口徑（透過 Managed Agents 跑），$100 約等於 Fable 5.1 的 **75 小時**、Opus 5 的 **142 小時**；直接呼叫 API 沒有 $0.08 的 session-hour，同一份工作量約 **80 小時**與 **160 小時**。**這不是「訂閱划不划算」的答案**——Max 5x 的 $100 買的是週配額，其中旗艦（Fable 5）只能用到週用量的 50%，超出後一樣按 API 費率扣 usage credits（見上方「我的方案現在有什麼」）。兩種貨幣不可直接相除。
 
@@ -119,7 +120,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 模型 | Input / Output per Mtok | 備注 |
 |------|------|------|
 | Claude Opus 5.5 | **$4 / $20** | 2026-09-22 發布，較 Opus 5 執行成本省 40%；快取讀取 5%（$0.20/Mtok），Batch 5 折。Opus 5、Fable 5 列為 legacy（[官方](https://www.anthropic.com/claude-opus-5-5)） |
-| Claude Sonnet 5 | $2 / $10 | **標準定價（不再是促銷）**：原訂 2026-08-31 到期的入門價已於 2026-08-10 永久化，9/1 漲至 $3/$15 的計畫取消；Claude Code 新預設模型，相較 Opus 4.8 估計省 60% 成本 |
+| Claude Sonnet 5.5 | **$2 / $10** | 2026-09-28 上線，取代 Sonnet 5 為 Claude Code／API 預設；支援 1M context，快取讀取低至 $0.20/Mtok；官方定價頁另列依方案階梯 $1/$5 報價，細節待補（[官方](https://www.anthropic.com/claude-sonnet-5-5)、Reuters） |
+| Claude Sonnet 5 | $2 / $10 | **標準定價**：$2/$10 永久化（2026-08-10）；2026-09-28 起預設改為 Sonnet 5.5（同價），Sonnet 5 仍可用 |
 | Claude Fable 5.1 | **$10 / $50** | 與 Fable 5 同價（官方定價頁 2026-09-03 查證）；**快取命中 ×0.025**（其餘模型 ×0.1），Batch $5/$25。Mythos 5.1 同價但僅限授權機構 |
 | Claude Fable 5 | $10 / $50 | Pro／Team standard 走此費率以 usage credits 計費；Max／Team premium 為標配（週用量 50% 內）。訂閱端分界見上方「我的方案現在有什麼」|
 | Claude Opus 5 | **$5 / $25** | 官方文件逐字確認，與 Opus 4.8 相同；Fast mode 另計 $10/$50 |
@@ -400,6 +402,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-09-28：Claude Sonnet 5.5 上線，牌價 $2/$10 per Mtok，取代 Sonnet 5 為預設
+
+- **官方一手來源＋Reuters**：Anthropic 官方發布 Sonnet 5.5，隨 Claude Code v2.1.284 更新，API 端 Sonnet 系列預設選項換成此版；牌價與前代 Sonnet 5 相同（$2/$10 per Mtok），支援 1M context，快取讀取低至 $0.20/Mtok（[Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5)；Reuters）。
+- 完整定價表見上方「模型 API 定價現況」；模型能力面見 [[entities/sonnet-5-5]]。
+- **Plans & Pricing 頁同步小改**：Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5，屬頁面範例更新，非費率變動（Official Docs）。
 
 #### 2026-09-23：Claude Code cloud sessions 上線，新用戶最高可領 $250 額度
 3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]。後續（2026-09-26）：BleepingComputer 報導補上使用條件缺口——此額度僅限 cloud sessions 使用，到期日仍未見報導。後續（2026-09-27）：gHacks 報導同一額度明確限定 Pro 與 Max 訂閱戶可領，與此前「新用戶」說法是否為同一資格範圍未見報導釐清，僅標題可用（Google News/gHacks）。

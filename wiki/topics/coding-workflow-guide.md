@@ -30,15 +30,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-09-28
+**最後新聞更新：** 2026-09-28
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
 
-> **最新動態**（2026-09-23）
-> 補三個官方缺口：`-p`／SDK 呼叫用 `--bare` 跳過 hooks／skills／CLAUDE.md 等自動發現以省啟動時間（第 2a 段）；session 變笨先打 `/context` 看載入了什麼（第 9 段）；hook 攔截靠的是 `exit 2` 不是 `exit 1`，沒印 JSON 時 `exit 1` 只是 non-blocking（第 1 段）。
+> **最新動態**（2026-09-28）
+> 官方發布 Opus 5.5 專屬提示工程指南，補進「官方文件導讀」：effort calibration、無人值守／多代理任務進度回報、安全拒答等相對 Opus 5 的行為差異與因應寫法（HN 187 分）。
 
 ---
 
@@ -586,6 +586,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 官方文件共 185 頁（完整索引在 [llms.txt](https://code.claude.com/docs/en/llms.txt)，原文已失效），跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
 
+- [prompting-claude-opus-5-5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（2026-09-28 發布，HN 187 分）—— Opus 5.5 相對 Opus 5 的行為差異與因應寫法：effort calibration、無人值守／多代理任務的進度回報、安全拒答、frontend 設計、貼上文字處理等。
 - [large-codebases](https://code.claude.com/docs/en/large-codebases) —— **大 repo／monorepo 該怎麼設定**。全站唯一專門講這件事的一頁，含可貼上就用的 `settings.json`。
 - [memory](https://code.claude.com/docs/en/memory) —— CLAUDE.md 怎麼載入、rules 的 `paths:`、auto memory、`/doctor` 的減法原則。
 - [best-practices](https://code.claude.com/docs/en/best-practices) —— Explore→Plan→Code 四階段、驗證階梯、CLAUDE.md 的 include／exclude 表、五種失敗模式。
