@@ -23,6 +23,14 @@
      「沒跑」和「跑了」在看門狗上長得不一樣。改版日之前的日期不檢查。
   ④ 近 7 天缺口：Step 0 只看昨天，連漏數天時要能一次看到全貌
 
+  ⑥ 中途斷掉的班次：`src/logs/task_scheduler.log` 裡當日有 `[cloud <routine> STARTED …]`
+     卻沒有任何後續結果行（OK／ABORTED／FAILED…）。`_shared.md` 早在 2026-07-27
+     就把「STARTED 無後續＝中途死」定為四態之一，但一直沒有程式去讀它——
+     2026-09-27 17:00 班撞帳號 5 小時用量上限（HTTP 429）後連 ABORTED 都寫不出來，
+     靠 22:00 班補上才沒缺件，事後翻 log 才發現。日報齊全時也要喊：同樣的死法
+     落在當日最後一班就是整天缺件，而且每次都代表用量或環境出了狀況。
+     仍在跑的班次（開跑未滿 ORPHAN_GRACE）不算。
+
 外加一項（`parked_branches()`，只在 CLI 路徑跑、不進 check()）：
   ⑤ 未併分支：雲端 routine push 撞衝突時會把「已做完的成果」停在
      `cloud-daily-YYYY-MM-DD-unmerged` 分支而非併回 master（2026-08-11 實際
@@ -38,7 +46,7 @@
     python scripts/daily_health_check.py --format push    # 一行推播訊息（<200 字元）
     python scripts/daily_health_check.py --date 2026-07-31
 
-exit code：0 = 齊全，1 = 有缺件（近 7 天缺口只提示，不影響 exit code——
+exit code：0 = 齊全，1 = 有缺件、未併分支或中途斷掉的班次（近 7 天缺口只提示，不影響 exit code——
 補歷史洞是另一件事，不該讓今天的告警一直紅著）。
 """
 from __future__ import annotations
@@ -56,6 +64,17 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 READER_DIGEST_SINCE = date(2026, 9, 12)  # 日報改版乙生效日：此日起 daily/<date>.md 為必要產出
 
 
+# 雲端 routine 在 task_scheduler.log 的開跑／結果行：[cloud <routine> <STATE> <UTC 時間戳>…]
+# 時間戳兩種寫法都出現過：2026-09-25T12:09:02Z 與 2026-09-25 12:09:02 UTC。
+CLOUD_LOG_RE = re.compile(
+    r"^\[cloud (?P<name>[\w-]+) (?P<state>[A-Z]+) (?P<ts>\d{4}-\d{2}-\d{2})[T ](?P<hms>\d{2}:\d{2}(?::\d{2})?)")
+# 開跑後多久仍無結果行才算「斷掉」。日更最長實測約 70 分鐘（09-27 22:10→23:17），
+# 週更約 45 分鐘；給足 4 小時，避免 01:00 看門狗把還在跑的 22:00 班誤判成死。
+ORPHAN_GRACE = timedelta(hours=4)
+# 刻意只寫 STARTED 不寫結果的 routine：watchdog-push 的 runbook 規定「產出齊全時不寫 log」
+# （每天一筆平安紀錄會洗掉 log 可讀性），STARTED 無後續是它的正常靜默路徑，不是死掉。
+ORPHAN_EXEMPT = {"watchdog-push"}
+
 # 雲端 routine 停泊未併成果的分支命名慣例。
 PARKED_BRANCH_RE = re.compile(r"cloud-daily-\d{4}-\d{2}-\d{2}-unmerged")
 
@@ -72,7 +91,52 @@ def _use_utf8_stdout() -> None:
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 
-def check(target: date, repo: Path = REPO_ROOT) -> dict:
+def orphan_starts(target: date, repo: Path = REPO_ROOT, now: datetime | None = None) -> list[dict]:
+    """當日開跑卻沒有任何後續結果的雲端班次（⑥）。
+
+    有結果＝以下任一成立：
+      (a) STARTED 行之後、下一個 `[cloud` 行之前夾著任何非空行——結果行格式歷來不一，
+          有時漏了 `[cloud …]` 前綴（09-24 12:08 寫成 `ABORTED: …`），有時整段用本機格式
+          （09-24 17:08 寫成 `[Thu 2026/09/24 …] Pipeline complete`）；只認嚴格格式會把
+          正常跑完的班次誤報成死掉，而誤報會讓人開始忽略通知。
+      (b) 同一 routine 的下一個事件是非 STARTED 狀態（結果行可能落在隔天 UTC，照檔案順序配對）。
+    兩者皆否、且開跑已超過 ORPHAN_GRACE → 斷掉。讀檔失敗一律回 []：附加檢查不得讓看門狗崩掉。
+    """
+    now = now or datetime.now(timezone.utc)
+    log = repo / "src" / "logs" / "task_scheduler.log"
+    try:
+        lines = log.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return []
+    d = target.isoformat()
+    parsed = []  # (line_index, name, state, ts)
+    for idx, line in enumerate(lines):
+        m = CLOUD_LOG_RE.match(line)
+        if not m:
+            continue
+        hms = m.group("hms") if m.group("hms").count(":") == 2 else m.group("hms") + ":00"
+        try:
+            ts = datetime.fromisoformat(f"{m.group('ts')}T{hms}").replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        parsed.append((idx, m.group("name"), m.group("state"), ts))
+    out = []
+    for k, (idx, name, state, ts) in enumerate(parsed):
+        if state != "STARTED" or name in ORPHAN_EXEMPT or ts.date().isoformat() != d:
+            continue
+        # (a) 緊接著的非 [cloud 行區塊
+        block_end = next((j for j in range(idx + 1, len(lines)) if lines[j].startswith("[cloud ")), len(lines))
+        ended = any(lines[j].strip() for j in range(idx + 1, block_end))
+        # (b) 同 routine 的下一個事件
+        if not ended:
+            nxt = next((st for (_, n2, st, _) in parsed[k + 1:] if n2 == name), None)
+            ended = nxt is not None and nxt != "STARTED"
+        if not ended and now - ts >= ORPHAN_GRACE:
+            out.append({"routine": name, "started": ts.strftime("%H:%M")})
+    return out
+
+
+def check(target: date, repo: Path = REPO_ROOT, now: datetime | None = None) -> dict:
     d = target.isoformat()
     # 讀按日分檔的 archive，不讀單槽的 gathered_items.json。
     # 單槽檔會被下一班抓料覆寫：本檢查查的是**前一個 UTC 日**（01:00 執行），
@@ -123,6 +187,7 @@ def check(target: date, repo: Path = REPO_ROOT) -> dict:
         "reader_ok": reader_ok,
         "problems": problems,
         "holes": holes,
+        "orphans": orphan_starts(target, repo, now),
     }
 
 
@@ -162,6 +227,10 @@ def render_md(r: dict) -> str:
         lines.append(f"- ✅ ③b 讀者版已產出：daily/{r['date']}.md" if r.get("reader_ok")
                      else f"- ❌ ③b 讀者版缺件：daily/{r['date']}.md 不存在（Step 2b 漏跑，網站靜默退回舊格式）")
 
+    for o in r.get("orphans", []):
+        lines.append(f"- ⚠️ ⑥ 中途斷掉的班次：{o['routine']} {o['started']} UTC 開跑後沒有任何結果紀錄"
+                     "（常見原因：撞帳號用量上限、session 被終止；用 RemoteTrigger get_run_log 查該班 session）")
+
     parked = r.get("parked", [])
     if parked:
         lines += ["", "### ⚠️ 未併成果分支（成果已完成、push 失敗停在分支）"]
@@ -194,10 +263,18 @@ def render_push(r: dict) -> str:
         b = parked[0]
         extra = f"（另有 {len(parked) - 1} 條）" if len(parked) > 1 else ""
         return f"每日新聞：成果停在未併分支 {b}{extra}，push 曾失敗。用 git 救回勿跑 /news-pipeline 重抓"[:200]
+    orphans = r.get("orphans", [])
+    if r["healthy"] and orphans:
+        o = orphans[0]
+        extra = f"等 {len(orphans)} 班" if len(orphans) > 1 else ""
+        return (f"每日新聞 {r['date']} 產出齊全，但 {o['routine']} {o['started']} UTC 班{extra}開跑後無結果紀錄"
+                "（中途斷，疑撞用量上限），查該班 run log")[:200]
     if r["healthy"]:
         return f"每日新聞 {r['date']} 產出齊全"
     what = "、".join(p[0] for p in r["problems"])
     msg = f"每日新聞 {r['date']} 缺件：{what}。本機跑 /news-pipeline {r['date']} 補"
+    if orphans:
+        msg += f"（另有 {len(orphans)} 班開跑後無結果紀錄）"
     if r["holes"]:
         msg += f"（另有近 7 天 {len(r['holes'])} 個舊缺口）"
     return msg[:200]
@@ -218,7 +295,7 @@ def main() -> int:
 
     print(render_push(r) if args.format == "push" else render_md(r))
     # 未併分支＝有成果被卡住沒整合，即使今天的檔案齊全也該喊——這正是本輪要補的靜默洞
-    return 0 if (r["healthy"] and not r["parked"]) else 1
+    return 0 if (r["healthy"] and not r["parked"] and not r.get("orphans")) else 1
 
 
 if __name__ == "__main__":

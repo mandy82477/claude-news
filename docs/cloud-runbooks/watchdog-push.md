@@ -51,6 +51,18 @@
 
 ---
 
+## 中途斷掉的班次（`[加入: 2026-09-28]`）
+
+`daily_health_check.py` 的第 ⑥ 項讀 `src/logs/task_scheduler.log`：當日某個雲端班次寫了 `[cloud <routine> STARTED …]`，之後卻沒有任何結果（下一個 `[cloud` 行之前沒有夾任何內容，同 routine 的下一筆也不是結果行），且開跑已超過 4 小時 → 判為中途斷掉，exit code 非 0、推播。**日報齊全時也會喊**：這種死法落在當日最後一班就是整天缺件，而且它本身就代表用量上限或環境出了狀況。
+
+`_shared.md` 在 2026-07-27 就把「STARTED 無後續＝中途死」定為四態之一，但一直沒有程式去讀它。2026-09-27 17:00 班撞帳號 5 小時用量上限（HTTP 429），連 ABORTED 都寫不出來，靠 22:00 班補上才沒缺件；上線時回溯 07-27 以來的 log，另外找出 09-02、09-14 兩次同樣死在 17:00 班、當時沒人發現的案例。
+
+收到這種推播時：用 `RemoteTrigger` 的 `list_runs`／`get_run_log` 查那一班的 session，看死因（用量上限、session 被終止、環境錯誤）。日報若已由後面的班次補上，不需要重跑。
+
+`watchdog-push` 自己不在檢查範圍內：本 runbook 規定產出齊全時不寫 log，它留下的 STARTED 無後續是正常的靜默路徑。
+
+---
+
 ## 未併成果分支（`[加入: 2026-08-12]`）
 
 `daily_health_check.py` 除了查缺件，也查遠端有無 `cloud-daily-YYYY-MM-DD-unmerged` 分支——雲端 routine push 撞衝突時會把**已做完的成果**停在這種分支而非併回 master（2026-08-11 實際發生：routine 撞上手動大量推送、rebase 失敗，日報＋wiki ingest 全做完卻停在分支兩天，而 watchdog 原本只會說「日報缺件、跑 `/news-pipeline` 補」——但那是重抓重生，會浪費掉已完成的成果）。

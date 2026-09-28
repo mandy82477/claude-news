@@ -431,3 +431,108 @@ class TestReaderDigestGate(unittest.TestCase):
             r = check(d, repo=self._repo(tmp, d.isoformat(), news=False, reader=False))
             self.assertNotIn("讀者版", [p[0] for p in r["problems"]])
 
+
+
+class TestOrphanStarts(unittest.TestCase):
+    """⑥ 中途斷掉的班次：STARTED 之後沒有任何結果。
+
+    判準的兩個方向都要守：漏報（09-27 17:00 班撞用量上限、連 ABORTED 都寫不出來）
+    與誤報（歷史上結果行格式不一，只認嚴格格式會把正常跑完的班次判成死掉）。
+    """
+    from datetime import datetime as _dt, timezone as _tz
+    D = date(2026, 9, 27)
+    NOW = _dt(2026, 9, 28, 1, 30, tzinfo=_tz.utc)
+
+    def _orphans(self, log: str, now=None):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "src" / "logs").mkdir(parents=True)
+            (root / "src" / "logs" / "task_scheduler.log").write_text(log, encoding="utf-8")
+            return hc.orphan_starts(self.D, repo=root, now=now or self.NOW)
+
+    def test_started_followed_by_next_started_is_orphan(self):
+        log = ("[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:29Z]\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T22:10:42Z]\n"
+               "[cloud daily-news-pipeline-cloud OK 2026-09-27T23:17:30Z] ok\n")
+        self.assertEqual(self._orphans(log), [{"routine": "daily-news-pipeline-cloud", "started": "17:08"}])
+
+    def test_started_as_last_line_past_grace_is_orphan(self):
+        log = "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:29Z]\n"
+        self.assertEqual(len(self._orphans(log)), 1)
+
+    def test_run_still_in_progress_is_not_orphan(self):
+        from datetime import datetime, timezone
+        log = "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T22:10:42Z]\n"
+        self.assertEqual(self._orphans(log, now=datetime(2026, 9, 28, 1, 0, tzinfo=timezone.utc)), [])
+
+    def test_result_on_next_utc_day_counts(self):
+        log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T23:50:00Z]\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-28T00:10:00Z]\n"
+               "[cloud weekly-wiki-lint-cloud OK 2026-09-28T00:40:00Z] ok\n")
+        self.assertEqual(self._orphans(log, now=self.NOW.replace(hour=5)), [])
+
+    def test_result_without_cloud_prefix_counts(self):
+        # 09-24 12:08 實例：結果行漏了 [cloud …] 前綴
+        log = ("[cloud daily-news-pipeline-cloud STARTED 2026-09-27T12:08:58Z]\n"
+               "ABORTED: gathered_items.json date=2026-09-26，非目標日期\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:21Z]\n"
+               "[cloud daily-news-pipeline-cloud OK 2026-09-27T18:00:00Z] ok\n")
+        self.assertEqual(self._orphans(log), [])
+
+    def test_local_format_block_counts(self):
+        # 09-24 17:08 實例：雲端班次整段用本機格式寫結果
+        log = ("[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:21Z]\n"
+               "[Sun 2026/09/27 17:48:30.00] === Pipeline complete (agent) ===\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T22:08:53Z]\n"
+               "[cloud daily-news-pipeline-cloud ABORTED 2026-09-27T22:09:09Z] digest exists\n")
+        self.assertEqual(self._orphans(log), [])
+
+    def test_space_separated_timestamp_is_parsed(self):
+        log = ("[cloud daily-news-pipeline-cloud STARTED 2026-09-27 12:09:02 UTC]\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:09:18Z]\n"
+               "[cloud daily-news-pipeline-cloud OK 2026-09-27T18:00:00Z] ok\n")
+        self.assertEqual(self._orphans(log), [{"routine": "daily-news-pipeline-cloud", "started": "12:09"}])
+
+    def test_watchdog_push_silent_path_is_exempt(self):
+        log = "[cloud watchdog-push STARTED 2026-09-27T01:35:49Z]\n"
+        self.assertEqual(self._orphans(log), [])
+
+    def test_other_dates_are_ignored(self):
+        log = "[cloud daily-news-pipeline-cloud STARTED 2026-09-26T17:08:29Z]\n"
+        self.assertEqual(self._orphans(log), [])
+
+    def test_missing_log_is_failsafe(self):
+        with TemporaryDirectory() as tmp:
+            self.assertEqual(hc.orphan_starts(self.D, repo=Path(tmp), now=self.NOW), [])
+
+    def test_push_mentions_orphan_even_when_healthy(self):
+        r = {"date": "2026-09-27", "healthy": True, "problems": [], "holes": [], "parked": [],
+             "gather_n": 55, "digest_ok": True, "web_ok": True,
+             "orphans": [{"routine": "daily-news-pipeline-cloud", "started": "17:08"}]}
+        msg = render_push(r)
+        self.assertIn("17:08", msg)
+        self.assertLessEqual(len(msg), 200)
+        self.assertIn("⑥ 中途斷掉的班次", render_md(r))
+
+    def test_push_appends_orphan_count_when_unhealthy(self):
+        r = {"date": "2026-09-27", "healthy": False, "problems": [("日報", "x")], "holes": [], "parked": [],
+             "orphans": [{"routine": "daily-news-pipeline-cloud", "started": "17:08"}]}
+        self.assertIn("另有 1 班開跑後無結果紀錄", render_push(r))
+
+    def test_render_without_orphans_key_is_backward_compatible(self):
+        r = {"date": "2026-09-27", "healthy": True, "problems": [], "holes": [], "parked": []}
+        self.assertEqual(render_push(r), "每日新聞 2026-09-27 產出齊全")
+
+    def test_orphan_makes_main_exit_nonzero(self):
+        orig_check, orig_parked, orig_argv = hc.check, hc.parked_branches, sys.argv
+        r = {"date": "2026-09-27", "gather_n": 55, "digest_ok": True, "web_ok": True, "healthy": True,
+             "problems": [], "holes": [], "orphans": [{"routine": "daily-news-pipeline-cloud", "started": "17:08"}]}
+        hc.check = lambda *a, **k: dict(r)
+        hc.parked_branches = lambda *a, **k: []
+        sys.argv = ["daily_health_check.py", "--date", "2026-09-27", "--format", "push"]
+        try:
+            import io as _io, contextlib
+            with contextlib.redirect_stdout(_io.StringIO()):
+                self.assertEqual(hc.main(), 1)
+        finally:
+            hc.check, hc.parked_branches, sys.argv = orig_check, orig_parked, orig_argv
