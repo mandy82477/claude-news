@@ -3,8 +3,8 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-09-27"
-last_news_update: "2026-09-27"
+last_updated: "2026-09-28"
+last_news_update: "2026-09-28"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,13 +12,13 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 11
-attribution_count: 47
-attribution_last: "2026-09-27"
+attribution_count: 49
+attribution_last: "2026-09-28"
 top_source: "google-news"
-pending_count: 24
-pending_overdue: 0
-pending_next_review: "2026-09-28"
-pending_signalled: 3
+pending_count: 26
+pending_overdue: 1
+pending_next_review: "2026-09-30"
+pending_signalled: 4
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"

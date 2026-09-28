@@ -3,15 +3,15 @@ page: "topics/model-comparison"
 kind: "topic"
 status: "ongoing"
 domain: "🤖 模型"
-last_updated: "2026-09-26"
-last_news_update: "2026-09-23"
+last_updated: "2026-09-28"
+last_news_update: "2026-09-28"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
-inbound_links: 41
+days_since_news_subtree: 0
+inbound_links: 43
 attribution_count: 18
 attribution_last: "2026-09-02"
 top_source: "reddit"

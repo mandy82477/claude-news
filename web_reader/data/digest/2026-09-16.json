@@ -582,11 +582,6 @@
   "preview": "Claude Code：Max 方案額度異常耗盡衝上全站互動最高：issue #38335 留言 837→855、👍 543→545，今日全站聚焦頭條。",
   "sedimentedToday": [
     {
-      "id": "jensen-huang",
-      "name": "Jensen Huang",
-      "pageType": "entity"
-    },
-    {
       "id": "managed-agents",
       "name": "Managed Agents",
       "pageType": "entity"

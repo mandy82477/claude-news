@@ -4,17 +4,17 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-09-19"
-last_news_update: "2026-09-16"
+last_updated: "2026-09-28"
+last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 11
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 11
+days_since_news_subtree: 0
 inbound_links: 6
-attribution_count: 3
-attribution_last: "2026-09-16"
+attribution_count: 4
+attribution_last: "2026-09-28"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

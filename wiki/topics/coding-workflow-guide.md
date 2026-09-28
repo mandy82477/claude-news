@@ -3,18 +3,18 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-26"
-last_news_update: "2026-09-23"
+last_updated: "2026-09-28"
+last_news_update: "2026-09-28"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 33
-attribution_count: 3
-attribution_last: "2026-09-19"
+attribution_count: 4
+attribution_last: "2026-09-28"
 top_source: "hacker-news"
 pending_count: 0
 pending_overdue: 0
