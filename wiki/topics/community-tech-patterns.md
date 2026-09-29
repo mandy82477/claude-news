@@ -53,11 +53,11 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Skills 設計** | 知識框架化、drawio-skill、headcount、personal-os-skills、reladraw、geo-sleuth、3dicon、geo-score 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-29 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-sleuth、geo-score 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-29 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **記憶與知識管理** | claude-mem、OKF、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-28 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
@@ -177,7 +177,7 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 #### Paritok-official/paritok-4b-v1：自研 4B 模型驅動的 non-destructive token 壓縮閘道（2026-09-29）
 
 - **主線：** Context 管理
-- **核心模式：** 非破壞性壓縮閘道，宣稱可為 coding agent 省下最多 85% token 費用（長時或飽和 session）、讓同一 context window 容納約 3 倍回合數，以自研開源 code-native 4B 模型驅動；可直接接上 Claude Code、Cursor、Codex、OpenHands 或任何 BASE_URL；GitHub Search 1,453 星。
+- **核心模式：** 非破壞性壓縮閘道，宣稱可為 coding agent 省下最多 85% token 費用（長時或飽和 session）、讓同一 context window 容納約 3 倍回合數，以自研 4B 模型驅動；可接上 Claude Code、Cursor、Codex、OpenHands；GitHub Search 1,453 星。
 - **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧一個「模型驅動的 context 壓縮閘道」取向，與既有 pxpipe（圖片化 context）方向不同、走專用小模型重寫路線；長時 session 的 context window 飽和正是大型 codebase 常見痛點，主線填 Context 管理。
 - **可信度註記：** 僅有 GitHub Search 星數（1,453★），無 forks／issues／近期 commit 佐證可查，未另行查證；「省 85% token」為自述數字，未見第三方獨立複現。
 - **來源：** GitHub Search；[GitHub](https://github.com/Paritok-official/paritok-4b-v1)
