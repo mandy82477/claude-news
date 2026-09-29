@@ -32,8 +32,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-09-29
 
 > **最新動態**（2026-09-29）
-> - **IPO 招股書外流（Reuters 獨家）**：機密遞交文件顯示鉅額虧損與高速營收成長，首度在正式文件中書面警示 AI 存在性風險；至少 8 家媒體同日跟進，詳見「IPO 走到哪一格」。
-> - **OpenEvidence 醫療合作擴大至非洲、亞洲**：偕 Penn Medicine 擴大醫師 AI 取得管道，詳見「哪個合作會改到你用的 Claude」清單。
+> - **IPO 招股書外流（Reuters 獨家）**：機密遞交文件顯示鉅額虧損與高速營收成長，首度在正式文件中書面警示 AI 存在性風險；至少 8 家媒體同日跟進，詳見 [[topics/anthropic-business#IPO 走到哪一格]]。
+> - **OpenEvidence 醫療合作擴大至非洲、亞洲**：偕 Penn Medicine 擴大醫師 AI 取得管道，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
 
 ---
 
