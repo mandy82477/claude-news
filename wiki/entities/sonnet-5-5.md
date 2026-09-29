@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **今日發布**（2026-09-28）
-> Claude 5.5 家族第二款模型；Terminal-Bench 4.0 由 Sonnet 5 的 10.3% 躍升至 70.6%，成為 Anthropic API 預設 Sonnet，牌價維持 $2/$10。
+> **後續反應**（2026-09-29）
+> HN 互動回升至 853 分；Sonnet 5.5 出現與 Opus 5.5 相同的 max effort 渲染 bug；社群測試稱與 Opus 5.5 難分軒輊。
 
 ---
 
@@ -82,8 +82,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **表下細節**
 
 - 官方稱在 GDPval 系列某項評測「落後 Opus 5.5 兩分」，原始摘要於該處截斷，benchmark 全名與雙方分數未見完整記載，本頁不採信推算（官方發布文，2026-09-28）。
-- **互動量偏低**：Hacker News 累計 46 分（2 個來源），遠低於 Opus 5.5 發布當日的 1,674 分；同日另有路透、TechCrunch、VentureBeat、The Decoder、SiliconANGLE 等至少 7 個來源報導，媒體覆蓋廣但社群討論熱度偏弱，訊號強度低。
+- **互動量已回升**：Hacker News 累計 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），較發布當日 46 分明顯回升，惟仍低於 Opus 5.5 發布當日的 1,674 分；同日另有路透、TechCrunch、VentureBeat、The Decoder、SiliconANGLE 等至少 7 個來源報導，媒體覆蓋廣。
 - 路透報導將此次上線與 Anthropic 上市（IPO）籌備進度並列，屬商業脈絡，見 [[topics/anthropic-business]]。
+- **社群實測稱與 Opus 5.5 難以分辨**：同一組 skills 各跑 3 次，發文者稱看不出差異（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)，2026-09-29；0 留言，訊號極弱，未附具體分數）。
 - **跨家分數不進本頁**：見 [[topics/model-task-leaderboard]]。
 
 **所以呢**：官方僅公布 Terminal-Bench 4.0 一項具體對照分數（10.3%→70.6%）；另一項宣稱的「差兩分」數據不完整，社群獨立複測尚未出現。
@@ -94,8 +95,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥（HN 46 分，發布日，訊號偏弱；媒體覆蓋廣）|
-| 試用價值 | ⏳ 剛發布、資料不足（2026-09-28 判定）|
+| 社群熱度 | 🔥🔥🔥🔥🔥（同步 [[feature-radar]]，2026-09-29 查核；HN 互動回升至 853 分，媒體覆蓋廣）|
+| 試用價值 | ⚡ 有條件推薦（同步 [[feature-radar]]，2026-09-29 查核）|
 | 最適合 | 官方稱：界定清楚的日常任務、修 bug、文件／簡報／試算表產出 |
 | 不適合 | 待補 |
 
@@ -133,7 +134,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - [Claude Sonnet 5.5 官方發布文](https://www.anthropic.com/claude-sonnet-5-5)（2026-09-28）
 - [[anthropics/claude-code] v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)（2026-09-28）
+- [Simon Willison：Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)（2026-09-28）
+- [Reddit r/ClaudeAI：Tested Sonnet 5.5 vs Opus 5.5 with the same skills](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)（2026-09-29）
 - [[news/2026-09-28]]
+- [[news/2026-09-29]]
 
 ## 歷史記錄
 
@@ -141,13 +145,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-29 | Reddit 使用者同組 skills 各跑 3 次，稱與 Opus 5.5 難以分辨；HN 互動回升至 853 分 |
 | 2026-09-28 | 正式發布，Claude 5.5 家族第二款模型；Terminal-Bench 4.0 由 10.3%→70.6%；成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10 |
 
 **歷史記錄細節**
 
+- **2026-09-29**：Reddit 使用者以同一組 skills 對 Sonnet 5.5 與 Opus 5.5 各跑 3 次，稱看不出輸出差異（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)，2026-09-29；0 留言，訊號極弱，未附具體分數，不採信推算）
+  - HN 互動累計回升至 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），仍低於 Opus 5.5 發布當日的 1,674 分
 - **2026-09-28**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 同步新增支援並設為 API 預設 Sonnet（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）
   - Terminal-Bench 4.0：70.6%（前代 Sonnet 5 為 10.3%）；官方稱另在 GDPval 系列某評測落後 Opus 5.5 兩分，原文截斷未載完整名稱與分數
   - 牌價維持 $2/$10 每 Mtok、快取讀取 $0.20（標準 0.1 倍）；官方定價頁同步改版，分層費率細節見 [[entities/pricing]]
   - 官方預告 Claude Haiku 5.5 將於未來數週內加入 5.5 家族，尚未發布
   - 路透報導將此次上線與 Anthropic IPO 籌備進度並列；TechCrunch、VentureBeat、The Decoder、SiliconANGLE 及 Hacker News、Reddit 同日跟進，合計至少 7 個來源（Reuters，2026-09-28）
   - HN 互動 46 分（2 個來源），訊號偏弱
+  - Simon Willison 以其慣例「畫一隻騎腳踏車的鵜鶘」測試，稱 Sonnet 5.5 出現與 [[entities/opus-5-5|Opus 5.5]] 相同的 bug：「max」thinking effort 下鵜鶘圖示渲染異常（[Simon Willison](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)，2026-09-28；原始摘要於此處截斷，bug 具體表現未見完整記載，不採信推算）

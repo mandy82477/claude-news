@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **最新動態**（2026-09-28）
-> - **Sonnet 5.5 上線，路透與 IPO 籌備進度並列報導**：定價與模型面見 [[entities/pricing]]、[[entities/sonnet-5-5]]，本則未見新增具體 IPO 數字。
-> - **Claude Marketplace 上線逾 2,000 個 connector／plugin，Fabric 同日加入 Partner Network**：具體合作範疇與計費均未見報導。
+> **最新動態**（2026-09-29）
+> - **IPO 招股書外流（Reuters 獨家）**：機密遞交文件顯示鉅額虧損與高速營收成長，首度在正式文件中書面警示 AI 存在性風險；至少 8 家媒體同日跟進，詳見「IPO 走到哪一格」。
+> - **OpenEvidence 醫療合作擴大至非洲、亞洲**：偕 Penn Medicine 擴大醫師 AI 取得管道，詳見「哪個合作會改到你用的 Claude」清單。
 
 ---
 
@@ -85,7 +85,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
-| 遞件了沒 | 機密遞交草稿已完成，公開版 S-1 未見；兩個遞交日都只有媒體轉述，機密遞交本來就不會有官方公告 | 多家報導（2026-06-01／06-02 兩說） | 一級媒體 |
+| 遞件了沒 | 機密遞交草稿已完成，公開版 S-1 未見；內容經 Reuters 取得外流（財報數字＋存在性風險警語），細節見下方 | 多家報導（2026-06-01／06-02 兩說）；Reuters 獨家外流內容（09-28） | 一級媒體 |
 | 什麼時候上市 | 公司沒給過時程；投資人先前預期 9–10 月，09-07 Forbes 稱延至 10 月中並鎖定 $150 億信用額度，09-08 Yahoo Finance 同步稱延至十月 ❓ 待查證 ⟨Q-03⟩ | FT、Axios（2026-08-13／08-17）；calcalistech（09-06）；Forbes（09-07）；Yahoo Finance（09-08） | 一級媒體引投資人／傳聞（僅標題） |
 | 值多少 | 最後一次定價 $9,650 億；投資人預期 $2 兆 | Series H 公告；FT（2026-05-28／08-13） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
@@ -103,6 +103,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-09-28 機密招股書內容外流，首度書面警示存在性風險**：Reuters 獨家取得 Anthropic 機密遞交的 IPO 招股書，報導財報虧損龐大、營收高速成長，首度在正式文件警示 AI 存在性風險；具體數字未見完整摘要（Reuters）。
+- **09-29 跟進（8 家媒體同日轉述）**：Guardian、euronews、Forbes、CNBC、TechCrunch、Fortune、Yahoo Finance、San Francisco Chronicle 均複述同一份外流文件，未見獨立新增數字（Google News 各家）。
 - **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 稱 IPO 估值將測試 Amazon 持股價值（$3,000 億美元），與 08-20 Motley Fool 估算 $4,000 億美元基準不同（估值假設不同），僅標題可用（Google News/Yahoo Finance）。
 - **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列與 ⟨Q-03⟩（Google News/Bloomberg.com）。
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
@@ -326,13 +328,16 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **ExodusPoint**（2026-09-29）：避險基金加入與 Anthropic 就 AI 合作的機構陣容，延續 08-06 已記錄之 Millennium 案例，具體技術範疇與商業條款未見報導（Google News/Bloomberg.com）
 - **Fabric**（2026-09-28）：加入 Claude Partner Network；同日官方推出 Claude Marketplace，收錄逾 2,000 個 connector 與 plugin，具體合作範疇與計費未見報導（Google News/EIN News；Google News/gHacks）
 - **Akamai**（2026-09-25）：簽署 7 年、116 億美元運算合約，供應 CPU 算力；認股權證可認購約 770 萬股 Akamai 股票，另有報導稱總值 120 億美元（Bloomberg；WSJ；IBD；Reddit）
+- **09-29 跟進（地方媒體角度，非新事實）**：The Boston Globe 稱波士頓少見的 AI 產業利多，未見新增合約細節（Google News/The Boston Globe）
 - **Basecamp**（2026-09-24）：AI 製藥新創 Basecamp 獲 NVIDIA、Anthropic 領投 1.4 億美元融資，用於推進 AI 輔助藥物設計，具體投資額度與角色未見細節（Google News/BioSpace）
 - **Adobe**（2026-09-24）：Adobe 把 Acrobat 帶進 Claude 生態，同批對 Google Gemini 開放存取，具體整合範疇與計費未見報導（Google News/9to5mac.com）
 - **Oracle**（2026-09-23）：Oracle 官方部落格說明如何串接 Claude 至 Oracle Integration 工具，具體功能範疇未見報導（Google News/Oracle Blogs）
 - **Amazon（Seller Assistant／Amazon Quick 外掛）**（2026-09-23）：開放賣家工具予外部 AI 代理人，首波合作對象為 Claude，同步升級 Seller Assistant 並推出結合 Amazon Quick 與 Claude 的新外掛，具體功能與計費未見報導（GeekWire；About Amazon）
 - **OpenEvidence**（2026-09-22）：Reuters 獨家報導 Anthropic 與醫療 AI 服務 OpenEvidence 結盟，計畫將醫療 AI 服務推向全球，合約範疇與費用未見報導（Reuters；PYMNTS）
+- **09-28 追蹤**：Fierce Healthcare 報導擴大偕 Penn Medicine 合作，將醫師 AI 取得管道推向非洲、亞洲，合約細節仍未見報導（Google News/Fierce Healthcare）
 - **未具名資料中心（控制權洽談）**（2026-09-23）：The Information 報導 Anthropic 正洽談加強對更多資料中心的控制權，具體規模、對象未見報導（Google News/The Information）
 - **Palo Alto Networks**（2026-09-22）：推出結合 Claude、GPT 模型的 AI 資安服務，具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）
 - **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
@@ -512,6 +517,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-29
+- **[IPO前瞻] Reuters 獨家：機密 IPO 招股書內容外流，揭露鉅額虧損、高速營收成長，首度書面警示 AI 存在性風險**：至少 8 家媒體同日跟進，詳見「IPO 走到哪一格」表與細節區更新（Google News/Reuters 等）
+- **[戰略合作] Fierce Healthcare：OpenEvidence 偕 Penn Medicine 擴大合作，將醫師 AI 取得管道推向非洲、亞洲**：與 09-22 已記錄之 OpenEvidence 結盟同一事件後續，詳見「哪個合作會改到你用的 Claude」清單更新（Google News/Fierce Healthcare）
+- **[戰略合作] Bloomberg：避險基金 ExodusPoint 加入與 Anthropic 合作的機構陣容**：具體技術範疇與商業條款未見報導，詳見一行制清單新增列（Google News/Bloomberg.com）
+- **[公司動態，僅標題可用] The Boston Globe：地方媒體角度回顧 Anthropic-Akamai 合約對波士頓地區經濟的影響**：未見新增合約細節，屬 09-25 已記錄事件的地方媒體延伸報導（Google News/The Boston Globe）
 
 #### 2026-09-28
 - **[定價，官方一手來源] Anthropic 官方：Claude Sonnet 5.5 上線，取代 Sonnet 5 為 API／Claude Code 預設**：牌價維持 $2/$10 per Mtok，完整定價見 [[entities/pricing]]（Reuters；[Anthropic Blog](https://www.anthropic.com/claude-sonnet-5-5)）

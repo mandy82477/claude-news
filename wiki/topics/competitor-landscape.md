@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **本週衝擊**（2026-09-28）
+> **本週衝擊**（2026-09-29）
 > - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
 > - 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
@@ -216,6 +216,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-09-29
+- **Microsoft／GitHub**：GitHub 官方 changelog 宣布 Claude Sonnet 5.5 全面開放於 GitHub Copilot，供開發者日常編碼工作直接選用，屬 Claude 經競品平台擴大觸及而非競品自身能力異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Meta**：官方部落格推出 Forum，Facebook Groups 專用獨立 app，非 AI 產品或定價異動（Blog/Meta Newsroom）
+- **Meta**：官方部落格擴大 Instagram School Partnership Program，協助青少年掌握資訊安全，非 AI 產品或定價異動（Blog/Meta Newsroom）
+- **Meta（Muse）**：官方推出 Muse for Small Business，為既有個人 AI agent Muse 新增技能與連接器協助中小企業營運，與既有「對手雷達」列之 Muse Code／Muse Glimmer（編碼與影像生成）為不同子產品，暫不更新雷達表（Blog/Meta Newsroom）
+- **OpenAI**：官方部落格就澳洲政府網站相關事故致歉，並說明強化澳洲網路防禦的安全措施，非 AI 產品或定價異動（Blog/OpenAI News）
+- **OpenAI**：官方部落格發布前沿 AI 訓練安全案例（safety cases）初版指引，涵蓋技術防護、營運實務與異常對齊事件調查，非產品或定價異動（Blog/OpenAI News）
 
 ### 2026-09-28
 - **Meta**：官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務；詳見「對手雷達」與「雷達細節」Meta 列更新（Blog/Meta Newsroom）

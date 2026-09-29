@@ -30,12 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **最新動態**（2026-09-28）
-> - **v2.1.284**：Sonnet 5.5 成 API 預設 Sonnet 模型；另新增「Yes, but ask」功能，官方原文截斷，具體行為未知。
-> - 新增已知問題 2 則：SSE 串流無逾時＋ESC 無法完全取消（#33949，附根因分析與修復提案）、agent 於約 100 秒內刪除 4.8 萬個檔案後主動道歉（TechRadar 報導，僅標題可用）。
+> **最新動態**（2026-09-29）
+> - Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。
 ---
 
 ## 現況
@@ -413,8 +412,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（36 條已修復、9 條未修復、1 條查無官方）
+### 🌐 服務穩定性（37 條已修復、9 條未修復、1 條查無官方）
 
+- ✅ **已修復**｜**Anthropic Status：Claude 全面中斷，波及 claude.ai、App、Claude Code、Cowork、API（2026-09-29 14:00–14:59 UTC，16:27 UTC 通報恢復）**：全站中斷約 1 小時，14:59 UTC 恢復正常，觸發數十家美國媒體報導「Is Claude down」。[來源](https://status.claude.com/incidents/4xvtc2gnq73l)
 - 🔴 **未修復**｜**v2.1.181、v2.1.183 持續 API 無回應（GitHub issue #69358，累積 27 則留言、61 個讚，2026-09-26）**：與「串流閒置逾時」（#46987）、「Connection closed mid-response」（#69415）同類但版本症狀不同，暫分列；官方尚未回應。
 - ✅ **已修復**｜**Anthropic Status：Opus 5、Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-22 00:50–02:10 UTC，02:35 UTC 監控確認恢復）**：三款模型請求錯誤率升高，官方分批修復後確認恢復正常。[來源](https://status.claude.com/incidents/7g1qpkyz5gxh)
 - ✅ **已修復（約 24 分鐘後解決）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率間歇升高（2026-09-15 10:50 UTC 進入監控 → 11:14 UTC 確認解決）**：與 09-11 同款模型錯誤率事件（見下）為不同起單獨通報事故，暫分列追蹤。[來源](https://status.claude.com/incidents/6304r9jjhj34)

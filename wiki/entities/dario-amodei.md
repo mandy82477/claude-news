@@ -36,14 +36,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **白宮晚餐：與 Trump 私下互動**（2026-09-28）
-> Amodei 於 09-27 與 Trump 在白宮共進晚餐，緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後；WSJ、華郵、紐約郵報、Axios、半島電視台等至少 5 家媒體同日跟進，談話內容未見報導。政策面攻防見 [[topics/anthropic-government-policy]]。
+> **黃仁勳將加入白宮會晤談 AI 風險**（2026-09-29）
+> 續 09-27 晚餐，Bloomberg 稱黃仁勳將偕 Amodei 再赴白宮；Fox News 引 Trump 談話呼籲美國搶占 AI 競賽。
 
 ---
 
 ## 現況
 
-2026-09-27，Amodei 與 Trump 於白宮共進晚餐，緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後；WSJ、華郵、紐約郵報、Axios、半島電視台等至少 5 家媒體同日跟進報導，談話內容未見報導。政策面攻防見 [[topics/anthropic-government-policy]]。
+2026-09-29，Bloomberg 報導 Nvidia 執行長黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險；Fox News 引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先，談話實質內容未見報導。續 09-27 白宮晚餐（緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後），WSJ、華郵、紐約郵報、Axios、半島電視台等至少 5 家媒體同日跟進。政策面攻防見 [[topics/anthropic-government-policy]]。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，惟關係是否真正修復未見報導證實。
 
@@ -102,6 +102,9 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Nvidia, Anthropic CEOs to Attend Trump Meeting on AI Risks](https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3lickZOd2RkR1RET0xHZmhBNjhkTDdGeEN1SVBHUkZlZl81Vm9xbFFrR2ZFbFFVbWVzbkc1aTMyS1ZYWTJBTUdKZWFENllXdkY4R1d0ajhVbWJ4UldKVlRkMEdwak5aMkE5TmZCTVhHcF9CQkRCQno2SmtDejd1LTZyOVhGWlhBRlBWenI4LUduZk9RSlJ1OFp4SUcwMm5BU3pNYnZkTDRERXVFQ2Y4endQbGg?oc=5) — Google News／Bloomberg，2026-09-29
+- [Trump Set to Host Nvidia, Anthropic CEOs to Discuss AI Risks](https://news.google.com/rss/articles/CBMirwFBVV95cUxNLWxKNkJCQ0VMZTh4eEh5Rkt4ck5ndG1WRDJqRXJWanVtMllrTmZuTEFDYkNMN21hRmVGYWtvazFsVGtBajROUklZaFVvTWZvNzU0RVVqLW81RTkzNWdJRFJTYkpkWGJJb1c0LS1IbGU0OUNLMnloMDhZT1l1NW01UFRWNGxsWE5XVWtkdkN3MGhwT3lJbVVoWmcwRUtsWnNEeXMybjhXRGZzRElTdTlR?oc=5) — Google News／Bloomberg，2026-09-29（同一事件另一篇報導）
+- [Trump pushes US to win AI race in meeting with Anthropic CEO Dario Amodei](https://news.google.com/rss/articles/CBMigAFBVV95cUxQYTJiUlZEa2N3S21hQnVYVjBXeVEyN2ZicERzMWNpUTFFNEFYcGNrSzZjNDh6ZTFqdW9vZDkzbzg1YjhBV1FwVnROQlZNalJjTlFXZXRIdFJRQW81LUV0V1ktb05sZmw0eTVZdUl5aEFDT204T1lMeGRQNjFVY2QwYQ?oc=5) — Google News／Fox News，2026-09-29
 - [Trump and Anthropic CEO Dario Amodei Dine at the White House](https://news.google.com/rss/articles/CBMiogFBVV95cUxQYTB1WUpwQjdzb2QyV1FTT01ydF9WOGVBVGtpeHVZTzFvd19jQXdJeUpJUmV2cW9wX0tKeXJLUXdGM3dVREx5cDd5ZFFPaUdHNDdUTHVqRS1PNEhmZWJ2U2RFeVNENGZSMVhCV1FWSGpaZWk1QXFqWTdjVXRxLTRMd1dlUWJ5ajhta2pGUHFXb25GOEtnX0RqQjFRWUU2bnd2RFE?oc=5) — Google News／WSJ，2026-09-27
 - [Trump dined with the Anthropic CEO who called for AI slowdown](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNVRNY1piYm1ER2dEUVhfTXBYUHBKLXFJc3BfZzBjdDdrRDFQZERZM1JGMHdNekZuNUU1aThLRXJnWDU1aGViQlZOd1hxMU1xbU1pOGZpZVIxVXNhWHF0bXpmdUtZYlplaXVEYVNXcnFIa1NDNE1uMDd6eHVnRkFwX082VkFSd3NEMXRhLUNYM2RoWWI2WW1ZSTJGdEY4TGZUdXVFRmY5TXQ?oc=5) — Google News／The Washington Post，2026-09-28
 - [Trump dines with Anthropic CEO Dario Amodei after months of bitter AI feud](https://news.google.com/rss/articles/CBMitAFBVV95cUxNeFZRWUluVVg0Q1ZoWnRkWF85dUNCdm5hZnZPUDNPWmZYOHlmX1FFZndoRTlYbEJ6WUQtb3E5ZnZDNjF4U1k5aFZyRm1POHI5dFJSRHNTZ2Rqb2YtNXN2eEpjekJpNkVPVmlJM3FJOVlOanVpMUJ5T1VMY1FiQXo5TDVsNzVwLUpoc1hicEVVS1ZLaGlsYlpNelJTVEY5SE9QUDhGZkJWRzhyc2ZiMlVwUFJmR0Q?oc=5) — Google News／New York Post，2026-09-28
@@ -143,6 +146,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-09-29：Bloomberg 稱 Nvidia 執行長黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險；Fox News 引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先，談話實質內容未見報導（來源：Google News／Bloomberg、Google News／Fox News）
 - 2026-09-27：與 Trump 於白宮共進晚餐，緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後；具體談話內容未見報導（來源：Google News／WSJ、華郵、紐約郵報、Axios、半島電視台、KRXI2／KTVL）
 - 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容與參戰人士未見報導（來源：Google News／Axios）
 - 2026-09-24：FT「聯合國大會即時報導」提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，與 09-22 預告的聯合國安理會簡報是否同一場合未明（來源：Google News／Financial Times）

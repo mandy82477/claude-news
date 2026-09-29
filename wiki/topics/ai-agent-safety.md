@@ -29,11 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **最新安全事件**（2026-09-28）
-> Cycode 揭露 Anthropic 的 MCP Python SDK 存在帳號劫持（account takeover）漏洞，具體攻擊鏈未見報導。
+> **最新安全事件**（2026-09-29）
+> - **失控 agent 法律風險**：Yahoo Finance 獨家稱 Anthropic 表示失控（rogue）AI agent 對公司構成不確定法律風險，具體情境未見報導。
+> - **提示注入攻防論述**：NH Business Review 將提示注入類比為新型社交工程並提出防範框架，列入產業級攻擊面訊號表。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -43,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **現在最該知道的：** 官方已把 Auto 模式定性為 best-effort convenience control、不是安全邊界，所以「等官方修到 0%」不會發生。你能動的是隔離環境與監看，不是等修補。下方「現在還擋不住的攻擊」列出十一個面，以及各自能先做的一件事。
 
-**這一個月的方向：** 提示注入已不是單點漏洞——代理讀進來的網頁、`llms.txt`、MCP 回應、記憶層、`.git` 設定檔全都缺信任邊界。2026-08-26～09-25 的 30 天裡有 8 則訊號指向這同一條敘事；最新一則（09-25）顯示戰線已擴及 Salesforce Agentforce、Manus AI 等非 Claude 商用 agent 平台。
+**這一個月的方向：** 提示注入已不是單點漏洞——代理讀進來的網頁、`llms.txt`、MCP 回應、記憶層、`.git` 設定檔全都缺信任邊界。2026-08-27～09-28 的 32 天裡有 8 則訊號指向這同一條敘事；最新一則（09-28）顯示敘事已從技術攻擊面擴展到「如何防範」的產業教育論述層。
 
 **已經分出去的線：** 中美 AI 工具信任對峙（2026-06-30 起）見 [[topics/safety-china-trust-dispute]]，政府與外交面見 [[topics/anthropic-government-policy]]。本頁只留與模型層、產品層漏洞直接相關的部分。
 
