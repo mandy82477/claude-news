@@ -212,21 +212,21 @@
       "https://code.claude.com/docs/en/whats-new/2026-w13.md": "Week 13 · March 23–27, 2026",
       "https://code.claude.com/docs/en/legal-and-compliance.md": "Legal and compliance",
       "https://code.claude.com/docs/_llms/fr.md": "French (209 pages)",
-      "https://code.claude.com/docs/_llms/de.md": "German (207 pages)",
+      "https://code.claude.com/docs/_llms/de.md": "German (210 pages)",
       "https://code.claude.com/docs/_llms/it.md": "Italian (209 pages)",
       "https://code.claude.com/docs/_llms/jp.md": "Japanese (209 pages)",
       "https://code.claude.com/docs/_llms/es.md": "Spanish (209 pages)",
-      "https://code.claude.com/docs/_llms/ko.md": "Korean (209 pages)",
+      "https://code.claude.com/docs/_llms/ko.md": "Korean (210 pages)",
       "https://code.claude.com/docs/_llms/zh-cn.md": "Simplified Chinese (210 pages)",
-      "https://code.claude.com/docs/_llms/zh-tw.md": "Traditional Chinese (209 pages)",
+      "https://code.claude.com/docs/_llms/zh-tw.md": "Traditional Chinese (210 pages)",
       "https://code.claude.com/docs/_llms/ru.md": "Russian (209 pages)",
       "https://code.claude.com/docs/_llms/id.md": "Indonesian (209 pages)",
       "https://code.claude.com/docs/_llms/pt-br.md": "Brazilian Portuguese (208 pages)"
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "cebb68fc685792f328ed4870f6f5c9d0aaca1432a17440b9bdbd2a8e75eced47",
-    "length": 83776,
+    "hash": "cc98093ba7d5901443b74860b183d49745b5861bc7c14224bd44a9d18a76587b",
+    "length": 81064,
     "segments": [
       "\"args\": [\"--verbose\"],",
       "\"autoPort\": false",
@@ -672,14 +672,8 @@
       "| **Plan** | `plan` | Claude reads files and runs commands to explore, then proposes a plan without editing your source code. Good for complex tasks where you want to review the approach first. |",
       "| **Thinking** | Tool calls collapsed into summaries, plus Claude's thinking |",
       "| **Verbose** | Every tool call, file read, and intermediate step Claude takes, plus Claude's thinking |",
-      "| ------------ | -------------------------------------------------------------------------------------- |",
-      "| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |",
-      "| ---------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |",
-      "| ------------------------------------- | -------------------------------- |",
-      "| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |",
-      "| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |",
-      "| ----------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |",
-      "| :----------- | :------------------------------------------------------- | :-------------------------- |",
+      "| - | - | - |",
+      "| :- | :- | :- |",
       "| @mention files | Text-based | With autocomplete; local and SSH sessions only |",
       "| CLI | Desktop equivalent |",
       "| Click only | Click and scroll, but not type or use keyboard shortcuts | Terminals, IDEs |",
@@ -1028,8 +1022,8 @@
     ]
   },
   "https://platform.claude.com/docs/en/about-claude/pricing": {
-    "hash": "f87c0be581efd83ddf955e86f6cd3a233daed0f559cb5a63ce8ce88010a2e0d1",
-    "length": 28038,
+    "hash": "ae7da1f407a5f626f221850a6ecdd005aec0299906b25188c367eda426369dd3",
+    "length": 28022,
     "segments": [
       "\"cache_creation_input_tokens\" : 0 ,",
       "\"cache_creation_input_tokens\" : 7345 ,",
@@ -1373,7 +1367,7 @@
       "tool_result content blocks in API requests",
       "tool_use content blocks in API requests and responses",
       " Additional models",
-      " API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.1 Claude Opus 5.5 Claude Sonnet 5.5 Claude Sonnet 5 Claude Haiku 4.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
+      " API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.1 Claude Opus 5.5 Claude Sonnet 5.5 Claude Haiku 4.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
       " Copy page  Learn about Anthropic&#x27;s pricing structure for models and features",
       " Copy page  This page provides detailed pricing information for Anthropic&#x27;s models and features. All prices are in USD.",
       " Additional notes All other models use the standard 0.1x multiplier. Claude 4.7 and later models and Claude Mythos Preview use a newer tokenizer that contributes to their improved performance on a wide range of tasks. This tokenizer produces approximately 30% more tokens for the same text. The exact increase depends on the content and workload shape. Claude Sonnet 4.6 and earlier models use the previous tokenizer.",
@@ -1826,8 +1820,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "6c1dbefe8e927920987b2181551cbe136d651793b19d87f0e88e0a1768159e1f",
-    "length": 23159,
+    "hash": "a3a9d736eff499e6e4bebaec955f0558f2f4ed56874b8f0b91c1665286f142c6",
+    "length": 23160,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1996,6 +1990,7 @@
       "How do I get access to Claude in Amazon Bedrock?",
       "How do I learn more about Amazon and Anthropic’s strategic collaboration?",
       "How do I log out of all active sessions?",
+      "How do I pay for my Claude API usage?",
       "How do I sign up for Claude Pro on Claude for Android?",
       "How do I sign up for Claude Pro on the Claude app for iOS?",
       "How do I sign up for the Max plan?",
@@ -3101,8 +3096,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "6080db30b352217316bc481ef9fda0f9585b68aae6af624d9cdf36dec7793400",
-    "length": 46823,
+    "hash": "fff215596e4981ca65a72ffad14021afa4a98dbcc27f323162f903bf36d6c434",
+    "length": 46804,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -3291,6 +3286,7 @@
       "Control browser actions from Claude Desktop: Start a task in Claude Desktop and let it handle work in the browser without switching windows.",
       "Control project sharing for your organization",
       "Conversation management Delete or rename a conversation",
+      "Copy for LLM September 2026",
       "Cost and Usage Reporting in the Claude Console",
       "Covered Models",
       "Covered Models under a Business Associate Agreement (BAA)",
@@ -3621,7 +3617,6 @@
       "Understanding your Pro or Max plan invoices",
       "Understanding your Team plan invoices",
       "Understanding your billing address and tax calculation",
-      "Updated in the last 15 minutes Copy for LLM September 2026",
       "Updated memory for Claude",
       "Updates to our Acceptable Use Policy (now “Usage Policy”), Consumer Terms of Service, and Privacy Policy",
       "Upload files to Claude",
@@ -3681,7 +3676,7 @@
       "We introduced the ability to create and schedule both recurring and on-demand tasks in Cowork, as well as a new Customize section in Claude Desktop that groups skills, plugins, and connectors in one place. For more information, see Schedule recurring tasks in Cowork .",
       "We just launched Claude Fable 5.1 and Claude Mythos 5.1, the world’s most advanced models for coding and knowledge work. For more information, see our blog post: Claude Fable 5.1 and Mythos 5.1 .",
       "We just launched Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5. For more information, see our blog post: Introducing Claude Opus 5.5 .",
-      "We just launched Claude Sonnet 5.5, the second model in our Claude 5.5 family. Sonnet 5.5 is a faster, lower-cost complement to Claude Opus 5.5. For more information, see our blog post: Claude Sonnet 5.5 .",
+      "We just launched Claude Sonnet 5.5, the second model in our Claude 5.5 family. Sonnet 5.5 is a faster, lower-cost complement to Claude Opus 5.5. For more information, see our blog post: Introducing Claude Sonnet 5.5 .",
       "We launched Claude Fable 5, a Mythos-class model that we’ve made safe for general use. For more information, see our blog post: Claude Fable 5 and Claude Mythos 5 .",
       "We launched Claude Opus 5, a thoughtful and proactive model that comes close to the frontier intelligence of Claude Fable 5 at half the price. For more information, see our blog post: Claude Opus 5 .",
       "We launched Claude Sonnet 5, our most agentic Sonnet model yet, with substantial improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work. For more information, see our blog post: Introducing Claude Sonnet 5 .",
