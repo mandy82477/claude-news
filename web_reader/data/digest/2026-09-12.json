@@ -403,11 +403,6 @@
       "id": "boris-cherny",
       "name": "Boris Cherny",
       "pageType": "entity"
-    },
-    {
-      "id": "simon-willison",
-      "name": "Simon Willison",
-      "pageType": "entity"
     }
   ],
   "reader": {

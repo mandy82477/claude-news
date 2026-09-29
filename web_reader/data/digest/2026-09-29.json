@@ -1,0 +1,588 @@
+{
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29 22:14 UTC",
+  "articleCount": 82,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "How We Use Claude Code at Serokell",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wteorc/how_we_use_claude_code_at_serokell/",
+      "source": "Reddit / r/ClaudeCode ＋Reddit / r/ClaudeAI",
+      "time": "09/29 16:25",
+      "sentiment": "",
+      "body": "Serokell 分享將內部工程規範轉為 Claude Code skills 的做法，同一貼文同步登上 r/ClaudeCode 與 r/ClaudeAI，2 個來源同日出現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Mistral CEO says U.S. AI safety debate masks competitors' 'negligence'",
+      "url": "https://www.cnbc.com/2026/09/29/mistral-ai-safety-openai-anthropic.html",
+      "source": "Hacker News ＋Google News / CNBC",
+      "time": "09/29 12:01",
+      "sentiment": "",
+      "body": "Mistral 執行長投書 CNBC，指美國的 AI 安全辯論掩蓋了競爭對手（含 Anthropic）的「疏失」，該報導同步登上 Hacker News，2 個來源同日報導。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "Sonnet 5.5 正式收錄進官方文件",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "Claude Help Center release notes 與 API 平台定價文件（Platform Docs）今日完成同步更新，正式記錄 Sonnet 5.5 上線內容，屬官方文件例行同步、非新功能發布。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Is Claude Conscious? Inside Anthropic's Quest to Instill Morality Into Its A.I. Models - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Oem5hSlF0RzhoVzdJVjhkREdkWlo0eWU4VDR3aVRsMXVzT3JuRlV1VGc4UVV2dkpKc28wdFAxY2VkczNXdmFzUWRPUzQ4bFBJVHZFWU8wYnV5RHdBdGpMcHR0aWdwcXBXZVotUHB4R1o2QXNGQV9vMA?oc=5",
+      "source": "Google News / The New York Times",
+      "time": "09/29 13:55",
+      "sentiment": "",
+      "body": "紐約時報深入報導 Anthropic 如何嘗試把道德判斷灌入 Claude 的訓練過程。",
+      "focusTags": []
+    },
+    {
+      "title": "ExodusPoint Joins Hedge Funds Partnering With Anthropic Over AI - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObEdmY3pmb1hFWEZ2VTR3TWRuTzZWU19QZTk0ZEVpcHMxV1hYcVVmN2dqNWpia1FISDR4SmkxUURqU1NVbUhIN1UyZk8tNlJ5cUNPcFZCSGhTX1Azb0hjMC1vV09GVHZPRE9iVFpIcGJHT0Z0Rnphd2Z3ek4tOUtrLU9NV3VBMTZYTEhjc3ltT0JweVlfZTZSSEZNajBIM3pMWmc2d1d1LXRKYVZXSGdHUUdxOTM?oc=5",
+      "source": "Google News / Bloomberg.com",
+      "time": "09/29 13:09",
+      "sentiment": "",
+      "body": "避險基金 ExodusPoint 加入與 Anthropic 就 AI 合作的機構陣容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenEvidence partners with Anthropic, Penn Medicine to expand physician access to AI across Africa and Asia - Fierce Healthcare",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbUZTemxMWjlhcWlCbFd5MC1NMktBcEtxRllhbHlSanVPZjMtVEVkZmxlaTJzcVJVWEthRnNac0JVTFItSnlCeEF0UXNwd2tpN3VIcE5NMjhLd1dTTVk4S2VwOTFRd2tsZUd2Q1dYbTVVQlhiYTlFTFZHSDJqLVR5b2lQQlRZMzBoRXk1WndnMmVTdlhuVzlHalJMY1Q0M09zSVZhNHZfaDhVTXdnTTQwcWs0aVhsTXVFekwzc29VQnhLZw?oc=5",
+      "source": "Google News / Fierce Healthcare",
+      "time": "09/28 17:50",
+      "sentiment": "",
+      "body": "醫療 AI 新創 OpenEvidence 與 Anthropic、賓州大學醫學院合作，擴大非洲與亞洲醫師取得 AI 輔助的管道。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "With Anthropic-Akamai deal, Boston gets a rare AI win - The Boston Globe",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNN1JRNmhNZlhHTVJaVW43UllfUzhhYjBMM2p2TFZudjlYdlk2RVVuSFpjSXkzRE5Ca3NZNENqOXYxVUp1RVR4VWl6ZUdDOFBudzlxRFkyX3AxUlFlbUctQ3JnT19IZjBoRm1zMkxUdjRyR04xdjR2T1FwRXlSSXlFZ3lkRmg?oc=5",
+      "source": "Google News / The Boston Globe",
+      "time": "09/29 10:04",
+      "sentiment": "",
+      "body": "波士頓地方媒體從地區經濟角度回顧本週稍早公布的 Anthropic-Akamai 合約，視其為波士頓少見的 AI 產業利多。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "JohnHeibel/PDoomVideo",
+      "url": "https://github.com/JohnHeibel/PDoomVideo",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "一支以 Claude Opus 5.5 製作的「P(doom)」主題音樂錄影帶原始碼，GitHub 累積 1,496 星。情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "Paritok-official/paritok-4b-v1",
+      "url": "https://github.com/Paritok-official/paritok-4b-v1",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "非破壞性壓縮閘道，宣稱可為 coding agent 省下最多 85% token 費用、以自研 4B 模型驅動，可直接接上 Claude Code、Cursor、Codex，GitHub 累積 1,453 星。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "snflkd/fluent-korean",
+      "url": "https://github.com/snflkd/fluent-korean",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "讓 Claude Code 講出流暢韓文的 output-style 外掛，GitHub 累積 1,349 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "jianruntech/geo-score",
+      "url": "https://github.com/jianruntech/geo-score",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "用自帶 API 金鑰對 OpenAI、Perplexity、Gemini、Claude 做引用追蹤的 GEO（生成式引擎優化）評分 MCP 伺服器，GitHub 累積 616 星。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Nanako0129/coralline",
+      "url": "https://github.com/Nanako0129/coralline",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "仿 Powerlevel10k 風格的 Claude Code 狀態列外掛，貼一段提示詞即由 AI 訪談使用者後自動安裝設定，GitHub 累積 542 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ruc-datalab/EvoOntology",
+      "url": "https://github.com/ruc-datalab/EvoOntology",
+      "source": "GitHub Search",
+      "time": "09/29 16:34",
+      "sentiment": "",
+      "body": "為 Claude Code／Codex 這類資料 agent 打造的自我演化本體層外掛，GitHub 累積 528 星。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Tested Sonnet 5.5 vs Opus 5.5 with the same skills, 3 runs each. I honestly can't tell them apart",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/",
+      "source": "Reddit / r/ClaudeAI",
+      "time": "09/29 16:23",
+      "sentiment": "",
+      "body": "使用者實測 Sonnet 5.5 與 Opus 5.5 搭配同一組 skills 各跑 3 次，表示難以分辨兩者輸出差異。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code AGENTS.md support needs telemetry turned on",
+      "url": "https://dev.to/techaiwire/claude-code-agentsmd-support-needs-telemetry-turned-on-1379",
+      "source": "dev.to / #anthropic",
+      "time": "09/26 19:08",
+      "sentiment": "",
+      "body": "Claude Code 2.1.277 的 AGENTS.md 支援藏在遠端 telemetry feature flag 後，一旦使用者關閉 telemetry 就會靜默失效，一則 GitHub issue 揭露此狀況。情緒：😤",
+      "focusTags": []
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[風險警示]",
+      "text": "Claude 服務全面中斷約 1 小時：Claude.ai、桌機／行動版 App、Claude Code、Claude Cowork 與 API 於 14:00–14:59 UTC 同時受影響，官方狀態頁稍後確認已修復並恢復正常運作；事件觸發數十家美國媒體同步報導「Is Claude down」。",
+      "ref_urls": [
+        "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZUZGeHhCUUctV3ZXZmpFV1NheVhYbFZYZkRPNjY0SWpRMFZGVjg1Zk9HYjRUM2NtRVc0SlVZbE00a1RDT283S1h4NGp3dFlkWUlDMzJKQmZldl9pY2VKejhhaFJBQUk0VGR1NTRoN2tJZ19PaFNoVEJvd3RwTkNoVUNidXM1VGVzTDUwcDQ4MDk0YklLdm5Ia1Bmbw?oc=5"
+      ],
+      "ref_names": [
+        "官方狀態頁",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic IPO 招股書外流：Reuters 取得的文件顯示公司財報虧損龐大、營收高速成長，且首度在公開文件中警示自家 AI 技術可能對人類構成「存在性風險」；Guardian、Fortune、Forbes、TechCrunch、CNBC 等至少 10 個來源同日跟進報導。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVndoU28yRmZKcU1nd1MtOThsNXYtejlvampCQXFwRXIxcUJWdWZ5R0twWnM2czMyMmt3cERxQmhEYk5pWVh0UExTMVEzU3k0Tk5wa3Zkdkxkc0E3aTIzbEhOVmZrWmZPajJJaFRBb2JxUElza0puQW56MGpXM21lMDBSR1BDTkY3Ullja3pTQW1mQ20wWVhDTnMxRHB1MkFyUFQySkoxQldxNmFkNmp1dG95dndFUmZOb2c?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdDd1U3B6WHhqcExpRHVEam1nY3VUZ1lnbmlOXzcya212aExJWDl1R0hiZnZFeTNONzhBNjRQWWo5OXkxTk0zQkI5OE9uekQzbDFkc1VpYmE0NF9SQ19kNnhJZWI2SFhfTFlxejgzRXZ3ZDRfS3FWejRsS0tBejBlT0hZb0c1c2c1cjkwdVJtZ20wdDVfNVFLYmN0eDZ0aFY1XzF5RGR5S0RMeXB0MjRpcVdZR25HMnc?oc=5"
+      ],
+      "ref_names": [
+        "Reuters 獨家",
+        "Guardian"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 09-28）繼白宮晚餐後，Bloomberg 稱輝達執行長黃仁勳將偕同 Dario Amodei 赴白宮與 Trump 進一步會晤、議題聚焦 AI 風險；Fox News 另引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3lickZOd2RkR1RET0xHZmhBNjhkTDdGeEN1SVBHUkZlZl81Vm9xbFFrR2ZFbFFVbWVzbkc1aTMyS1ZYWTJBTUdKZWFENllXdkY4R1d0ajhVbWJ4UldKVlRkMEdwak5aMkE5TmZCTVhHcF9CQkRCQno2SmtDejd1LTZyOVhGWlhBRlBWenI4LUduZk9RSlJ1OFp4SUcwMm5BU3pNYnZkTDRERXVFQ2Y4endQbGg?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYTJiUlZEa2N3S21hQnVYVjBXeVEyN2ZicERzMWNpUTFFNEFYcGNrSzZjNDh6ZTFqdW9vZDkzbzg1YjhBV1FwVnROQlZNalJjTlFXZXRIdFJRQW81LUV0V1ktb05sZmw0eTVZdUl5aEFDT204T1lMeGRQNjFVY2QwYQ?oc=5"
+      ],
+      "ref_names": [
+        "Bloomberg",
+        "Fox News"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Claude Sonnet 5.5 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "body": "GitHub Copilot 全面開放 Claude Sonnet 5.5，供開發者在日常編碼工作中直接選用。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Prompt injection is the new social engineering: what it looks like and how to stop it",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOX1V6Uk5fVHplenFMN3h0ZHRSQU1vYmthczNPcmtRUk9KQlRLX2lMd3dWbDl2WUVwdUJSVHk1WHR6WGplMm5NVEdqbm16QzZ5NXUzSlVOTHcxVnlxN0NHaEJhR3U4Yi1GMFhkYUhSMXRNVU40N25hOVJsQ0tVb3FiRUpmUDk2NzY5VUJiRXZkbnZsTmVvbE1TWkltUHdaRWljVDBaYWhlcFZRUQ?oc=5",
+      "body": "文章將 prompt injection 攻擊比擬為新型態社交工程，並提出防範建議。",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 54
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 8
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code：Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "pageType": "entity"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "thariq-shihipar",
+      "name": "Thariq Shihipar",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-29",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/sonnet-5-5",
+            "name": "Claude Sonnet 5.5",
+            "label": "後續反應",
+            "date": "",
+            "body": "HN 互動回升至 853 分；Sonnet 5.5 出現與 Opus 5.5 相同的 max effort 渲染 bug；社群測試稱與 Opus 5.5 難分軒輊。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **IPO 招股書外流（Reuters 獨家）**：機密遞交文件顯示鉅額虧損與高速營收成長，首度在正式文件中書面警示 AI 存在性風險；至少 8 家媒體同日跟進，詳見 [[topics/anthropic-business#IPO 走到哪一格]]。\n- **OpenEvidence 醫療合作擴大至非洲、亞洲**：偕 Penn Medicine 擴大醫師 AI 取得管道，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。\n- 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- Anthropic 自陳失控 AI agent 對公司構成不確定法律風險，尚無具體案例，或與 IPO 招股書同源待查。\n- Reuters 獨家：IPO 招股書外流，首度書面警示 AI 存在性風險，鉅額虧損與高速成長並陳，具體金額未載。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "續 09-28 白宮晚餐，Bloomberg 稱黃仁勳將偕同 Dario Amodei 赴白宮與 Trump 進一步會晤、聚焦 AI 風險；Fox News 引述會中談話稱 Trump 呼籲美國於 AI 競賽保持領先。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **失控 agent 法律風險**：Yahoo Finance 獨家稱 Anthropic 表示失控（rogue）AI agent 對公司構成不確定法律風險，具體情境未見報導。\n- **提示注入攻防論述**：NH Business Review 將提示注入類比為新型社交工程並提出防範框架，列入產業級攻擊面訊號表。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Token 壓縮添新路線**：paritok-4b 用專用小模型重寫 context，與既有 pxpipe 圖片化路線相對。\n- **Skills 設計添企業案例＋GEO 新取向**：Serokell 把內部工程規範轉為 skills；geo-score 補跨模型引用追蹤。\n- **記憶管理、介面複用各添一取向**：EvoOntology（自我演化本體層）、coralline（AI 訪談式狀態列外掛）。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- 使用者實測 Sonnet 5.5 與 Opus 5.5 搭配同一組 skills 各跑 3 次，回報難以分辨輸出差異（單一貼文，尚待社群覆核）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "黃仁勳將加入白宮會晤談 AI 風險",
+            "date": "",
+            "body": "續 09-27 晚餐，Bloomberg 稱黃仁勳將偕 Amodei 再赴白宮；Fox News 引 Trump 談話呼籲美國搶占 AI 競賽。"
+          },
+          {
+            "page": "entities/jensen-huang",
+            "name": "Jensen Huang",
+            "label": "偕 Amodei 赴白宮談 AI 風險",
+            "date": "",
+            "body": "Bloomberg 稱黃仁勳將加入 Amodei 的白宮會晤；完整脈絡見 [[entities/dario-amodei]]。"
+          },
+          {
+            "page": "entities/simon-willison",
+            "name": "Simon Willison",
+            "label": "Sonnet 5.5 首日實測",
+            "date": "",
+            "body": "發布當日依例以鵜鶘測試，「max」思考強度出現與 Opus 5.5 相同的 bug；完整發布資訊見 [[entities/sonnet-5-5]]。"
+          },
+          {
+            "page": "entities/thariq-shihipar",
+            "name": "Thariq Shihipar",
+            "label": "接受 Latent Space 專訪",
+            "date": "",
+            "body": "（僅標題可用）\nReddit 轉貼 Anthropic Claude Code 團隊成員接受 Latent Space 專訪，主題涵蓋 Claude Code、plugins、Opus/Sonnet 5.5 發布；具體發言未見報導。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 13
+  },
+  "readerTopStories": [
+    {
+      "title": "How We Use Claude Code at Serokell",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wteorc/how_we_use_claude_code_at_serokell/",
+      "source": "Reddit / r/ClaudeCode ＋Reddit / r/ClaudeAI",
+      "time": "09/29 16:25",
+      "sentiment": "",
+      "body": "Serokell 分享將內部工程規範轉為 Claude Code skills 的做法，同一貼文同步登上 r/ClaudeCode 與 r/ClaudeAI，2 個來源同日出現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Mistral CEO says U.S. AI safety debate masks competitors' 'negligence'",
+      "url": "https://www.cnbc.com/2026/09/29/mistral-ai-safety-openai-anthropic.html",
+      "source": "Hacker News ＋Google News / CNBC",
+      "time": "09/29 12:01",
+      "sentiment": "",
+      "body": "Mistral 執行長投書 CNBC，指美國的 AI 安全辯論掩蓋了競爭對手（含 Anthropic）的「疏失」，該報導同步登上 Hacker News，2 個來源同日報導。",
+      "focusTags": []
+    }
+  ]
+}
