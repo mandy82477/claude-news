@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-09-27
+**最後更新：** 2026-09-29
 
 ---
 
@@ -84,6 +84,7 @@
 | [[entities/michael-burry]] | person | 👤 人物 | active | 知名放空交易員（《大賣空》原型人物）；2026-09-17 在 X 批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞 |
 | [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 創辦人，2026-09-23 向 NDTV 稱 OpenAI、Anthropic「可以放慢腳步」（僅標題可用） |
 | [[entities/joe-lonsdale]] | person | 👤 人物 | active（單一來源） | Anthropic 投資人；2026-09-25 向 Reuters 稱 AI 公司渲染風險是為了影響政策走向（僅標題可用） |
+| [[entities/thariq-shihipar]] | person | 👤 人物 | active（單一來源） | Anthropic Claude Code 團隊成員；此前具名證實 Opus 5／Fable 5 系統提示詞精簡、澄清中國偵測機制爭議；2026-09-29 接受 Latent Space 專訪（僅標題可用） |
 
 ---
 
@@ -115,7 +116,7 @@
 | [[topics/coding-workflow-guide]] | 🛠️ 工具/功能 | ongoing | 🗓️ 週更 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |
 | [[topics/enterprise-cost-management]] | 💼 商業 | monitoring | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；08-14 新增成本管控動態　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
-| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：現在的數字、IPO 走到哪一格、合作會不會改到你的帳單；補貼倍數只有社群估算　↳ 子故事：[[topics/anthropic-business-archive]] |
+| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：IPO 招股書外流、首度書面警示 AI 存在性風險；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |
