@@ -30,20 +30,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-08-27
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
 > **「後悔」脈絡已查實**（2026-08-26，2026-09-20 查證）
 > 黃仁勳於 Nvidia 2026 會計年度第二季財報電話會議原話：「I think the only regret that I have is that I didn't invest more and sooner.」——後悔的是投得太少、太晚（錯失更大獲利），而非投資規模本身帶來風險；[CNBC](https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html) 等媒體同日報導。
 
-> **再批 Anthropic／OpenAI 安全示警「odd」**（2026-09-28）
-> 同日 Nvidia 宣布推出 AI 安全平台；僅標題可用，具體發言脈絡與平台內容未見報導。延續 09-15 對 Anthropic 反壟斷豁免提案的批評路線。
+> **偕 Amodei 赴白宮談 AI 風險**（2026-09-29）
+> Bloomberg 稱黃仁勳將加入 Amodei 的白宮會晤；完整脈絡見 [[entities/dario-amodei]]。
 
 ---
 
 ## 現況
 
-2026-09-28，Jensen Huang 稱 Anthropic、OpenAI 的 AI 安全示警「odd」（怪異），同日 Nvidia 宣布推出 AI 安全平台；僅標題可用，具體發言脈絡、平台內容與是否同一場合均未見報導（Yahoo Finance）。延續 09-15 於 Dreamforce 對 Anthropic「AI 安全反壟斷豁免」提案「完全沒必要」的批評路線，完整背景見 [[entities/dario-amodei]]。反壟斷豁免提案本身的攻防紀錄見 [[topics/anthropic-government-policy#攻防紀錄]]。
+2026-09-29，Bloomberg 報導黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險，具體行程與談話內容未見報導；完整脈絡見 [[entities/dario-amodei]]。
+
+2026-09-28，Jensen Huang 稱 Anthropic、OpenAI 的 AI 安全示警「odd」（怪異），同日 Nvidia 宣布推出 AI 安全平台；僅標題可用，具體發言脈絡、平台內容與是否同一場合均未見報導（Yahoo Finance）。延續 09-15 於 Dreamforce 對 Anthropic「AI 安全反壟斷豁免」提案「完全沒必要」的批評路線。反壟斷豁免提案本身的攻防紀錄見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
 ## 相關議題
 
@@ -54,6 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 參考來源
 
+- [Nvidia, Anthropic CEOs to Attend Trump Meeting on AI Risks](https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3lickZOd2RkR1RET0xHZmhBNjhkTDdGeEN1SVBHUkZlZl81Vm9xbFFrR2ZFbFFVbWVzbkc1aTMyS1ZYWTJBTUdKZWFENllXdkY4R1d0ajhVbWJ4UldKVlRkMEdwak5aMkE5TmZCTVhHcF9CQkRCQno2SmtDejd1LTZyOVhGWlhBRlBWenI4LUduZk9RSlJ1OFp4SUcwMm5BU3pNYnZkTDRERXVFQ2Y4endQbGg?oc=5) — Google News／Bloomberg，2026-09-29
 - [Nvidia launches AI safety platform after Jensen Huang calls Anthropic, OpenAI warnings 'odd'](https://news.google.com/rss/articles/CBMi4wFBVV95cUxQeGNaelh2QkxHVU41WVVXMGlUSjBLaTBKeEtUYlNyMUI3M1o2X1lMY1ZPVG5PazNfNFV1OFBEMFFWVkhmVUN4QTZkTk1SSDB5OUpVc2l2VWtFX2ZhRHhaTUZzcmtDNW52TXdXWExqVEdZZGJQRTBTSUJiZDhiazBfcVI2QS1DT01BQi1XR0duTjAwRU9qOFpScEVSMHhhY2JRYU5DbVdSSjFiOXM5X3RWRXFfQXZkQkt1TnNkZlIxekRuLThVZDdRdlUtelRCV0dfSXpSZkdoVUhtdVdtQ19WZnNVcw?oc=5) — Google News／Yahoo Finance，2026-09-28
 - [Nvidia's Huang diverges with CEOs of Anthropic, OpenAI on AI safety at Dreamforce](https://news.google.com/rss/articles/CBMingFBVV95cUxNamhBSWgtcmZwTVRVOXlnbGZMN2R1bDFlMWEtV21wUXFmUGVoWW5vQWNVbU55OEE0T0lWMUFlMXFZVGdvNmN0TElFUGNkQUlwQ01hU09aUEZIZlBjd0lMbGJMOVJHbmhOSTNRaHU0cXBnNmRVQ2lTb21odDUzOGlRQ1phSTRDUDVucThHQjNncjI1Q1pMOVV0WlotdDVpUdIBowFBVV95cUxNQW5ST21vbGJyUWYzcHVFZFJOZUgzTEJ3TWFkS3Y4Nm9fQ2w3c3puMnJqaFBpbl9CVG5Gd1RSZUVGQmJqLVZaN0dBZ0dOWEZNb3IxMDBtaGhWNGllb29aZERqeGxibHhnakZJRDgxeF9oa1NDSGV2YzYwa3plQ0dhZU43aHJNb1MyUlZRRm1hb1BZRVpZRVF4LUd1OWNQXzJpZFpr?oc=5) — Google News/CNBC，2026-09-15
 - [Nvidia's Huang rips Anthropic's proposal for AI safety antitrust waiver: 'Completely unnecessary'](https://news.google.com/rss/articles/CBMie0FVX3lxTE44RHpQWkxyODlqZFVxWEs5TjRrN2ZWMktZUGRyWERQMURrUEZSWk53QXRpRURxcmJtMVJvcmIzWTY5Unk3VVBlRThad2J0YVhJcFRkSVdOUlNvU3Jvbzh1anRPTGU3SGZnUXZOOE5GcWtQOXpPMldaR1hCTdIBgAFBVV95cUxNZ1VaYzZvQzNWOHQwX3Vfc1BraXpSRU91R2E5ZWVoSUhaZjNZQ1BfT1hUaFU5aEI5cF95UHE1V3VWX1ExcGpQR2NXc2JsSUJzWGFGRjU3TC1waW1hM0FmbTNRS2c2UlZVcWk3bmxudUNBbXBVYWJDVHRLRm9meG1zQg?oc=5) — Google News/CNBC，2026-09-15
@@ -61,6 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 歷史記錄
 
+- 2026-09-29：Bloomberg 報導將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險，具體行程與談話內容未見報導；完整脈絡見 [[entities/dario-amodei]]（來源：Google News／Bloomberg）
 - 2026-09-28：稱 Anthropic、OpenAI 的 AI 安全示警「odd」（怪異），同日 Nvidia 宣布推出 AI 安全平台；具體發言脈絡與平台內容未見報導（來源：Google News／Yahoo Finance）
 - 2026-09-15：於 Dreamforce 公開場合與 Anthropic、OpenAI 執行長在 AI 安全立場上出現分歧，並批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」；同場 Amodei 重申 AI 減速呼籲（來源：Google News／CNBC）
 - 2026-08-26：Nvidia 2026 會計年度 Q2 財報電話會議，黃仁勳原話「I think the only regret that I have is that I didn't invest more and sooner.」，指後悔投得太少太晚（已查實，2026-09-20 查證，[CNBC](https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html)）
