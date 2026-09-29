@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-29
+**最後新聞更新：** 2026-09-29
 
-> **最新工作流模式**（2026-09-28）
-> - **長時任務 harness 新實作**：AMAP-ML/LongHorizon-Harness 讓 agent 跨桌面應用與 CLI 長時間執行並維持可恢復狀態，與既有「MCP 長 Session 穩健化」機制相近但不限 MCP，是否併類待週更判斷。
-> - **多類別添新代表技巧**：模型使用策略添 magpie（選單列切換底層模型）；記憶與知識管理添 agent-memory（純 Markdown 跨工具記憶）；創意工具 Agent 整合添 lemo-opuscar（Opus 5.5 導演影片風格）；Skills 設計添 geo-sleuth（照片地理定位）、3dicon（3D 動態 icon 生成）。
+> **最新工作流模式**（2026-09-29）
+> - **Token 壓縮添新路線**：paritok-4b 用專用小模型重寫 context，與既有 pxpipe 圖片化路線相對。
+> - **Skills 設計添企業案例＋GEO 新取向**：Serokell 把內部工程規範轉為 skills；geo-score 補跨模型引用追蹤。
+> - **記憶管理、介面複用各添一取向**：EvoOntology（自我演化本體層）、coralline（AI 訪談式狀態列外掛）。
 
 ---
 
@@ -52,22 +53,22 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Skills 設計** | 知識框架化、drawio-skill、headcount、personal-os-skills、reladraw、geo-sleuth、3dicon 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-28 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | 知識框架化、drawio-skill、headcount、personal-os-skills、reladraw、geo-sleuth、3dicon、geo-score 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-29 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、second-brain-os、memmy-agent、agent-memory 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-28 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **記憶與知識管理** | claude-mem、OKF、hister、Skillsync、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-27 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-28 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
-| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-08 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
+| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | **創意工具 Agent 整合** | Palmier Pro、anything2explainer、chess-postmortem-skills、lemo-opuscar 等（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-28 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **Agent Loop 終止條件** | Loop exit condition 設計模式（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-19 | 「怎麼停下」比「怎麼跑起來」更難；要有顯式終止條件 |
-| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-10 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
+| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-29 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **MCP 長 Session 穩健化** | MCP server 失效模式防護（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-14 | 連線中斷、工具超時、上下文失憶；對應心跳、重試、快照 |
 | **架構邊界合約** | ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-12 | 用合約與工業標準定義不可越過的架構規則 |
 | **Agent 版本控制** | ADR 注入、架構決策文件先於實作（[[topics/community-tech-patterns#2026-07]]） | ⏳ 新興 | 2026-07-31 | 決策文件先於實作，降低代理方向偏移 |
@@ -163,6 +164,60 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### Serokell：把內部工程規範轉為 Claude Code skills（2026-09-29）
+
+- **主線：** —
+- **核心模式：** 工程顧問公司 Serokell 分享把內部工程規範轉成 Claude Code skills 的做法，動機是 coding agent 熟悉語法但不熟悉團隊內部慣例；同一篇同步登上 r/ClaudeCode 與 r/ClaudeAI（2 個來源同日出現）。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧「知識框架化」一個具名真實企業案例——把公司工程規範（而非公開書籍／流程）封裝成 skill；具體轉換機制原文遭截斷未載，暫不確認是否構成新取向。
+- **可信度註記：** Reddit 貼文，0 留言，但 r/ClaudeCode＋r/ClaudeAI 兩個來源同日出現，符合跨來源門檻；內容細節僅摘要可讀，原文被截斷。
+- **來源：** Reddit / r/ClaudeCode ＋ Reddit / r/ClaudeAI；[原文](https://www.reddit.com/r/ClaudeCode/comments/1wteorc/how_we_use_claude_code_at_serokell/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，具名企業案例，尚無社群回饋數據）
+
+#### Paritok-official/paritok-4b-v1：自研 4B 模型驅動的 non-destructive token 壓縮閘道（2026-09-29）
+
+- **主線：** Context 管理
+- **核心模式：** 非破壞性壓縮閘道，宣稱可為 coding agent 省下最多 85% token 費用（長時或飽和 session）、讓同一 context window 容納約 3 倍回合數，以自研開源 code-native 4B 模型驅動；可直接接上 Claude Code、Cursor、Codex、OpenHands 或任何 BASE_URL；GitHub Search 1,453 星。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧一個「模型驅動的 context 壓縮閘道」取向，與既有 pxpipe（圖片化 context）方向不同、走專用小模型重寫路線；長時 session 的 context window 飽和正是大型 codebase 常見痛點，主線填 Context 管理。
+- **可信度註記：** 僅有 GitHub Search 星數（1,453★），無 forks／issues／近期 commit 佐證可查，未另行查證；「省 85% token」為自述數字，未見第三方獨立複現。
+- **來源：** GitHub Search；[GitHub](https://github.com/Paritok-official/paritok-4b-v1)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### jianruntech/geo-score：GEO（生成式引擎優化）評分與跨模型引用追蹤 MCP 伺服器（2026-09-29）
+
+- **主線：** —
+- **核心模式：** 用自帶 API 金鑰對 OpenAI、Perplexity、Gemini、Claude 做引用追蹤，依開放 GEO 準則提供免費 0–100 就緒度評分；零依賴，MCP 伺服器；GitHub Search 616 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有 SEO／GEO 代表技巧（fire-your-seo-agency、open-seo-mcp-skills）一個「跨模型引用追蹤」取向，既有兩例聚焦稽核／優化排名，本則鎖定「AI 引擎有沒有真的引用你的網站」這個量測面；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（616★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/jianruntech/geo-score)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Nanako0129/coralline：仿 Powerlevel10k 風格的 Claude Code 狀態列外掛，貼提示詞由 AI 訪談後自動安裝（2026-09-29）
+
+- **主線：** —
+- **核心模式：** Powerlevel10k 風格的 Claude Code statusline 外掛，使用者貼一段提示詞即由 AI 訪談使用者需求後自動安裝與設定；GitHub Search 542 星。
+- **與既有模式的關係：** 補上「介面元件複用」既有代表技巧（Brainless、statuslin.es、dsh-TUI、better-agent-terminal）一個「AI 訪談式自動安裝設定」取向，既有做法多是預先封裝好的元件庫，本則多了安裝流程本身的 agent 化；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（542★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Nanako0129/coralline)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### ruc-datalab/EvoOntology：為 Claude Code／Codex 資料 agent 打造的自我演化本體層（2026-09-29）
+
+- **主線：** 索引記憶
+- **核心模式：** 為 Claude Code／Codex 這類資料 agent 打造的自我演化本體（ontology）層插件，讓 agent 建立並持續進化結構化知識表示；GitHub Search 528 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「結構化本體隨用隨演化」取向，與既有 OKF（標準化知識格式）方向相近但走本體論路線、且強調自我演化而非靜態格式；跨 session 累積結構化知識屬大型 codebase／資料 agent 常見痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（528★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/ruc-datalab/EvoOntology)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### snflkd/fluent-korean：讓 Claude Code 講出流暢韓文的 output-style 外掛（2026-09-29）
+
+- **主線：** —
+- **核心模式：** Claude Code output-style 外掛，讓輸出使用更清晰道地的韓文；GitHub Search 1,349 星。
+- **與既有模式的關係：** 現有 21 類聚焦工作流／記憶／協作／介面等面向，皆非本則核心；本則是單一語言在地化 output-style 客製，屬單一工具、非可複用機制，暫不併入既有代表技巧列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,349★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/snflkd/fluent-korean)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### AMAP-ML/LongHorizon-Harness：跨桌面應用與 CLI 的長時任務可恢復 harness（2026-09-28）
 
