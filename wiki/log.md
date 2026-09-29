@@ -7012,3 +7012,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   4. 分類回退二次未派項目「THEY FUCKING COOKED YO! Opus 5.5 is a massive upgrade.」是否併入 entities/opus-5-5.md 社群觀感段落（見上方「分類回退」）
   5. wiki/feature-radar.md「⚠️ 從你現在的版本升上去」表頭注記「核對到 v2.1.269，2026-09-12」已與表格實際內容（已列至今日新增的 v2.1.284）不同步，需具網路存取的 session 重新逐版核對官方 CHANGELOG.md
   雲端環境 egress 受限（Trusted 網域白名單）無法自行 WebFetch 官方文件查證上述 1、2、3、5 項，建議下次有網路存取的 session 查證後補寫
+
+## 2026-09-29 Ingest
+
+- 來源日報：[[news/2026-09-29]]
+- 更新頁面：
+  - 模型：entities/sonnet-5-5
+  - 功能：entities/claude-code
+  - 商業：topics/anthropic-business、topics/competitor-landscape
+  - 安全政策：topics/ai-agent-safety、topics/anthropic-government-policy
+  - 社群：topics/community-tech-patterns、topics/community-tech-discussions
+  - 人物：entities/dario-amodei、entities/jensen-huang、entities/simon-willison
+  - 投資分析：topics/market-signals
+  - 主編：index.md（新增 entities/thariq-shihipar、更新 anthropic-business 鉤子反映 IPO 招股書外流、最後更新日期）
+- 新增頁面：entities/thariq-shihipar
+- 摘要：Claude 全站服務今日一度中斷約 1 小時（14:00–14:59 UTC，已修復）；Anthropic IPO 招股書外流，Reuters 獨家披露鉅額虧損、高速成長，首度在正式文件書面警示 AI 存在性風險（至少 10 個來源同日跟進）；續白宮晚餐，Nvidia 執行長黃仁勳偕 Dario Amodei 赴白宮與 Trump 進一步會晤聚焦 AI 風險
+- 呈現品質：全部通過（community-tech-patterns 兩處表格儲存格與一則細節區條列因今日新增內容觸發字元上限，主編同輪縮短修復，ingest_gate 二次跑綠）
+- 分類回退：無
+- devpractice 沉澱：候選 5 筆（topics/community-tech-patterns 2、topics/community-tech-discussions 1、entities/claude-skills 1、entities/sonnet-5-5 1）；附帶發現前一輪（09-28）daily 沉澱的基準線未推進（`devpractice_state.json` 停在 09-28 前一commit），本輪已逐筆比對帳本排除重複後正確推進，原因待查（疑似 09-28 收尾 commit 漏帶該 data 檔）
+- market 判讀：判讀 2 則（IPO 招股書外流、Anthropic 自陳失控 AI agent 法律風險），皆無可交易標的（Anthropic 未上市）
+- 轉知帳本：H-fe8019（Cycode MCP Python SDK 帳號劫持漏洞功能面）、H-e8e1fd（GPT-6 Astra vs Fable 5 評測週榜比對）維持 open——前者因無新技術細節可查證、後者因屬 `/wiki-lint` 5b 週更範疇，皆非本輪可結案，功能／模型記者已各自評估過理由成立不予處理
+- 📋 待使用者確認：無
