@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **後續反應**（2026-09-29）
-> HN 互動回升至 853 分；Sonnet 5.5 出現與 Opus 5.5 相同的 max effort 渲染 bug；社群測試稱與 Opus 5.5 難分軒輊。
+> **後續反應**（2026-09-30）
+> MIXED Reality News 稱升級至 Sonnet 5.5 有 5 處行為差異、1 處靜默失敗，建議升級前先跑回歸測試（原文僅標題可讀，細節未載）。
 
 ---
 
@@ -59,12 +59,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 牌價（輸入／輸出，每百萬 token）| $2 ／ $10 | $2 ／ $10（不變，快取讀取 $0.20＝標準 0.1 倍）| 官方發布文＋GitHub changelog（2026-09-28 查證）|
 | 知識截止 | 官方未載（2026-09-28 查證）| 官方未載（2026-09-28 查證；本站可讀摘要於此節截斷）| 官方發布文（2026-09-28 查證）|
 | 會不會停掉 | 官方未載退役時程（2026-09-28 查證）| 尚無退役時程公告 | 官方發布文（2026-09-28 查證）|
-| 從舊代升上去會壞什麼 | —（基準世代）| 官方 migration guide 尚未見完整記載（原文截斷）| 待補 |
+| 從舊代升上去會壞什麼 | —（基準世代）| 官方 migration guide 尚未見完整記載（原文截斷）；社群回報 5 處行為差異，見表下細節 | 待補 |
 | 官方推薦拿它做什麼 | 已非 API 預設 | 界定清楚的日常任務：修 bug、產出文件／簡報／試算表，設計細節敏銳 | 官方發布文（2026-09-28 查證）|
 | 我的方案能不能用 | 同右，兩代同一套方案規則 | 官方原文僅提及 Anthropic API；Pro／Max／Team／Enterprise 是否同步未載 | 官方發布文（2026-09-28 查證）|
 
 **表下細節**
 
+- **社群回報：升級有 5 處行為差異、1 處靜默失敗（未經官方證實）**：MIXED Reality News 稱從 Sonnet 5 升級至 Sonnet 5.5 在五種情境下出現行為差異，其中一種無錯誤訊息即靜默失敗，建議升級前先跑回歸測試；原文僅標題可讀，具體情境未見完整記載，不採信推算（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30）
 - **牌價完全不變，靠速度換效率**：$2/$10 維持不動，官方以「速度快 30%＋多數工作省最多 30% 成本」表述升級，與 Opus 5.5 那次「牌價降 20%」的換代邏輯不同。
 - **快取讀取 $0.20／Mtok＝基礎輸入價（$2）的標準 0.1 倍**，非 Fable 5.1／Mythos 5.1 的 0.025 倍優惠費率，見 [[entities/pricing]]。
 - 官方發布文提及在另一項評測（疑似 GDPval 系列）「落後 Opus 5.5 兩分」，本站可讀摘要於此處截斷，benchmark 全名與雙方分數皆未見完整記載，不採信推算。
@@ -136,8 +137,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[anthropics/claude-code] v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)（2026-09-28）
 - [Simon Willison：Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)（2026-09-28）
 - [Reddit r/ClaudeAI：Tested Sonnet 5.5 vs Opus 5.5 with the same skills](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)（2026-09-29）
+- [Google News/MIXED Reality News：Claude Sonnet 5.5 breaks Sonnet 5 code in five ways, and one fails silently](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)（2026-09-30）
 - [[news/2026-09-28]]
 - [[news/2026-09-29]]
+- [[news/2026-09-30]]
 
 ## 歷史記錄
 
@@ -145,11 +148,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-30 | MIXED Reality News 稱升級有 5 處行為差異、1 處靜默失敗，未經官方證實 |
 | 2026-09-29 | Reddit 使用者同組 skills 各跑 3 次，稱與 Opus 5.5 難以分辨；HN 互動回升至 853 分 |
 | 2026-09-28 | 正式發布，Claude 5.5 家族第二款模型；Terminal-Bench 4.0 由 10.3%→70.6%；成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10 |
 
 **歷史記錄細節**
 
+- **2026-09-30**：MIXED Reality News 報導稱從 Sonnet 5 升級至 Sonnet 5.5 會在五種情境下出現行為差異，其中一種屬無錯誤訊息的靜默失敗，建議開發者升級前先跑一輪回歸測試（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30；原文僅標題可讀，具體情境未見完整記載，不採信推算）
 - **2026-09-29**：Reddit 使用者以同一組 skills 對 Sonnet 5.5 與 Opus 5.5 各跑 3 次，稱看不出輸出差異（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)，2026-09-29；0 留言，訊號極弱，未附具體分數，不採信推算）
   - HN 互動累計回升至 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），仍低於 Opus 5.5 發布當日的 1,674 分
 - **2026-09-28**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 同步新增支援並設為 API 預設 Sonnet（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）
