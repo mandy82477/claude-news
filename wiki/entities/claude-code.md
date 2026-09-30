@@ -30,17 +30,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新動態**（2026-09-29）
-> - Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。
+> **最新動態**（2026-09-30）
+> - Claude Code v2.1.285 發布：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具、`claude --desktop` 指令，企業管理者可限制可用的 API 供應商。
+> - 桌面版文件補充：終端機關閉 session 後，於桌面版輸入 `/resume` 可接續同一對話（非複本），`claude --resume` 在終端機仍找得到同一 session。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.285**（2026-09-29）：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具；新增 `claude --desktop` 指令，於目前目錄開啟 Claude 桌面版；企業管理者可限制可用的 API 供應商（官方原文截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）。
+  同版 build 另新增 9 個功能候選旗標，另有 7 個舊版旗標（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`）消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.283**（2026-09-25）：新增 `x-claude-code-prompt-id` 閘道提示標頭，讓 LLM gateway 能把同一使用者提示產生的多筆請求歸為一組；需設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)）。
 - **v2.1.282**（2026-09-24）：新增 `maxProseWidth` 設定，限制寬終端機下 Claude 散文輸出的段落寬度，表格與程式碼區塊維持全寬；另新增啟動通知，`/status` 亦有異動（官方原文於抓取時截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.282)）。
   同版 build 另新增 8 個功能候選旗標＋2 個代號旗標，`CLAUDE_CODE_OCHRE_KITE` 從程式本體消失，追蹤見 [[topics/claude-code-experimental]]。
@@ -58,6 +61,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 完整操作流程——在終端機關閉 session 後，於桌面版輸入 `/resume`，Desktop 會列出本機以 CLI 啟動過的 session，選取後即以完整對話紀錄與 context 接續；桌面版接續的是同一個 session 而非複本，`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443），為 09-15 既有 `/resume` 功能的操作細節補充（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
@@ -479,6 +483,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.285** | 2026-09-29 | 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數關閉 WebFetch 工具；新增 `claude --desktop` 指令於目前目錄開啟桌面版；企業管理者可限制可用的 API 供應商（原文截斷，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）|
 | **v2.1.284** | 2026-09-28 | Claude Sonnet 5.5（`claude-sonnet-5-5`）成 API 預設 Sonnet 模型，見 [[entities/sonnet-5-5]]；新增「Yes, but ask」功能，行為未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)）|
 | **anthropic-sdk-python v1.9.0** | 2026-09-28 | Features：新增 `between_tools` thinking type 的 API 支援（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0)）|
 | **anthropic-sdk-typescript vertex-sdk v0.20.0** | 2026-09-28 | Features：官方 changelog 於「### Feature」處截斷，具體項目未知（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.0)）|
