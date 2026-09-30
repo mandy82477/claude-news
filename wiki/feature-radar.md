@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-28
+**最後更新：** 2026-09-30
 
-> **這禮拜動了什麼**（2026-09-28）
-> v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-09-30）
+> v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。v2.1.285 接著新增可關閉 WebFetch 的環境變數、`claude --desktop` 指令、企業 API 供應商限制。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-09-28）
@@ -64,6 +64,23 @@
 ---
 
 ## 🆕 最新功能（2026-09）
+
+### Claude Code v2.1.285：關閉網頁抓取＋`claude --desktop`＋企業 API 供應商限制
+**發布：** 2026-09-29（v2.1.285） | **狀態：** 正式發布
+
+**是什麼：** 新增環境變數 `CLAUDE_CODE_DISABLE_WEB_FETCH` 可關閉 WebFetch 工具；新增 `claude --desktop` 指令，一鍵在目前目錄開啟 Claude 桌面版；企業管理者新增可限制員工可用 API 供應商的設定。
+
+**為何熱：** 官方 GitHub Release 發布後，MIXED Reality News 等媒體同日跟進報導，是今日全站「重大事件」聚焦條目。
+
+**現在要試嗎：** 在意 WebFetch 外連風險（資安敏感環境、沙盒化 CI）的人可立即關閉；一般個人用戶多數情境用不到，企業管理者若需鎖定 API 供應商才需要設定後者。
+
+**快速上手：**
+```
+export CLAUDE_CODE_DISABLE_WEB_FETCH=1   # 關閉 WebFetch 工具
+claude --desktop                          # 在目前目錄開啟桌面版
+```
+
+**注意事項：** 企業 API 供應商限制的具體設定方式，官方原文於抓取時截斷，細節見 [[entities/claude-code]] 版本表與 Release 原文。
 
 ### Claude Sonnet 5.5 成為 API 預設 Sonnet 模型
 **發布：** 2026-09-28（v2.1.284） | **狀態：** 正式發布
@@ -361,6 +378,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **maxProseWidth 設定**（v2.1.282，限制寬終端機散文寬度） | 2026-09-24 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
