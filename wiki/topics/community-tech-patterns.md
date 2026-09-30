@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新工作流模式**（2026-09-29）
-> - **Token 壓縮添新路線**：paritok-4b 用專用小模型重寫 context，與既有 pxpipe 圖片化路線相對。
-> - **Skills 設計添企業案例＋GEO 新取向**：Serokell 把內部工程規範轉為 skills；geo-score 補跨模型引用追蹤。
-> - **記憶管理、介面複用各添一取向**：EvoOntology（自我演化本體層）、coralline（AI 訪談式狀態列外掛）。
+> **最新工作流模式**（2026-09-30）
+> - **Plugin／MCP 整合添廣告數據源**：google-ads-meta-ads-mcp 把 Google Ads、Meta Ads、GA4、Search Console 整進單一免費託管 MCP。
+> - **創意工具、模型路由各添一例**：video-talkcraft（配音驅動動態設計）、jev-router（選最便宜模型）。
+> - **視覺工具箱首見**：agent-vision-toolkit 為純文字模型補圖片問答、截圖 OCR 能力。
 
 ---
 
