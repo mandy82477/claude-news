@@ -750,6 +750,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-30 | 桌面版文件補充 `/resume` 完整流程：終端機關閉 session 後可於桌面版接續同一對話（非複本）。 |
+| 2026-09-29 | **v2.1.285**：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH`、`claude --desktop` 指令，企業管理者可限制 API 供應商。旗標增9（`DISABLE_WEB_FETCH` 已出貨）消7（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`），見 [[topics/claude-code-experimental]]。 |
 | 2026-09-28 | **v2.1.284**：Sonnet 5.5 成 API 預設模型，新增「Yes, but ask」。旗標增4消2，見 [[topics/claude-code-experimental]]。新增已知問題 2 則。 |
 | 2026-09-27 | 新增已知問題 5 則：子代理無限遞迴標 CRITICAL（#68619）、CLI 格式破壞複製（#15199）、Plugins 缺 rules（#14200）、GitHub 無工具（#61682）、API 無回應（#69358）。 |
 | 2026-09-26 | **v2.1.283**：新增閘道提示標頭 `x-claude-code-prompt-id`。新增已知問題 2 則：Cowork「選擇資料夾」消失（#76694）、Windows UNC 不支援（#45297）。 |
