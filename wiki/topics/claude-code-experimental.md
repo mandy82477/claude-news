@@ -161,7 +161,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 已消失
 
-- `CLAUDE_CODE_DIR_SYNC_DISABLE_ANCHORING`、`CLAUDE_CODE_DIR_SYNC_ENGINE`、`CLAUDE_CODE_DIR_SYNC_FFWD`、`CLAUDE_CODE_DIR_SYNC_GIT`、`CLAUDE_CODE_DIR_SYNC_STREAM`、`CLAUDE_CODE_DISABLE_DIR_SYNC`（2.1.284–2.1.285 之間，6 個同屬 `DIR_SYNC` 家族，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
+- `CLAUDE_CODE_DIR_SYNC_DISABLE_ANCHORING`、`CLAUDE_CODE_DIR_SYNC_ENGINE`、`CLAUDE_CODE_DIR_SYNC_FFWD`（2.1.284–2.1.285 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
+- `CLAUDE_CODE_DIR_SYNC_GIT`、`CLAUDE_CODE_DIR_SYNC_STREAM`、`CLAUDE_CODE_DISABLE_DIR_SYNC`（同批消失，同屬 `DIR_SYNC` 家族，首見版本早於本頁追蹤範圍）
 - `CLAUDE_CODE_ENABLE_NARRATION`（2.1.283–2.1.284 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
 - `CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
@@ -182,7 +183,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
-| 2026-09-30 | 2.1.285 新增 9 個候選旗標（名單見追蹤表），`DISABLE_WEB_FETCH` 依官方 Release 升列 4 階已出貨；消失 7 個（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`），皆首見版本早於本頁追蹤範圍 |
+| 2026-09-30 | 2.1.285 新增 9 候選旗標，`DISABLE_WEB_FETCH` 升 4 階已出貨；消失 7 個（`DIR_SYNC` 家族 6＋代號旗標），皆早於追蹤範圍 |
 | 2026-09-28 | 2.1.284 新增 4 個第一階旗標＋代號旗標 `WHIMSICAL_ELEPHANT`（名單見追蹤表）；`COMMIT_BETWEEN_KEYS` 列 4 階、`ENABLE_NARRATION` 消失；不算獨立佐證 |
 | 2026-09-25 | 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`OCHRE_KITE`（首見 2.1.273）消失，依來源條目消失清單列 4 階；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-24 | 2.1.281 新增 9 個第一階旗標（名單見追蹤表）；同批 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，不算獨立佐證 |
