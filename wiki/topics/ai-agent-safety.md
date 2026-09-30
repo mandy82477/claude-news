@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新安全事件**（2026-09-29）
-> - **失控 agent 法律風險**：Yahoo Finance 獨家稱 Anthropic 表示失控（rogue）AI agent 對公司構成不確定法律風險，具體情境未見報導。
-> - **提示注入攻防論述**：NH Business Review 將提示注入類比為新型社交工程並提出防範框架，列入產業級攻擊面訊號表。
+> **最新安全事件**（2026-09-30）
+> - **能力擴散**：Anthropic Frontier Red Team 官方研究稱，中國 GLM-5.3 已能在 4% 試驗中達成完整控制流劫持（Claude Mythos Preview 為 6%），跨越先前模型皆做不到的門檻。
+> - **自我複製提示注入**：The Register 續談自我複製型提示注入，呼應既有自我傳播敘事（專頁定向）。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -112,6 +112,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱進階網路攻擊能力擴散門檻已跨越（2026-09-30 新增）
+
+- **揭露來源**：Anthropic 官方研究〈GLM-5.3 and the spread of advanced cyber capabilities〉（2026-09-29，HN 239 分／4 來源）；Simon Willison 同日引述；SCMP 09-30 跟進
+- **核心主張**：Frontier Red Team 隨機抽樣 100 題內部 Binary Exploitation 基準，GLM-5.3 在 4% 試驗達成完整控制流劫持（Claude Mythos Preview 為 6%）；官方稱已跨越先前 Opus 4.6、GLM-5.2 皆做不到的門檻
+- **性質判斷**：這是進階網路攻擊能力向 Anthropic 以外模型擴散的首個量化證據，屬能力評測研究而非 Claude 產品漏洞，不列入「## 現在還擋不住的攻擊」表；GLM-5.3 模型能力面見模型記者對應頁
+- ❓ **待查證**（標 2026-09-30｜查 Anthropic Frontier Red Team、GLM-5.3、binary exploitation benchmark）：100 題基準的完整方法論、GLM-5.2 與 Opus 4.6 確切失敗率、是否已有在野濫用案例均未見完整揭露（原文摘要遭截斷）
+- **可信度評估**：Anthropic 官方一手研究，可信度高；HN 239 分、4 個來源同日報導，訊號密集
+
+### The Register：自我複製型提示注入續添一則「AI 新憂慮」，呼應既有自我傳播敘事（2026-09-30 新增，專頁定向）
+
+- **揭露來源**：Topic Watch／Google News／The Register〈Add one more AI worry to the nightmare scenario: self-replicating prompt injections〉（2026-09-29 21:34 UTC）；0 互動，單一來源，原文無可讀內文
+- **核心主張（僅標題可用）**：文章探討會自我複製的提示注入攻擊手法；具體技術機制、實測案例與影響範圍均未見報導
+- **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」09-02 teiss「自我傳播機制」條目，與跨類別的 09-27 shattered.io（OpenAI GPT-Red 揪出自我複製 AI worm）同屬自我複製提示注入主題；報導層級不足以判斷是否引入新收斂點，暫不更動該訊號表（已滿 8 列）
+- ❓ **待查證**（標 2026-09-30｜查 The Register、self-replicating prompt injections）：具體技術機制、是否有實測 PoC 或在野案例均未見報導
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低；專頁定向收錄（ai-agent-safety，不套用 Claude/Anthropic 關聯門檻）
 
 ### Yahoo Finance 獨家：Anthropic 稱失控 AI agent 對公司構成不確定法律風險（2026-09-29 新增）
 
@@ -1086,6 +1102,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-09-30
+- **[📋 新增，非 Claude 事件] Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱能力擴散門檻已跨越**：HN 239 分、4 個來源同日報導，GLM-5.3 4% vs Claude Mythos Preview 6%，詳見「## 技術彙整」
+- **[📋 新增，專頁定向] The Register：自我複製型提示注入續添一則「AI 新憂慮」**：僅標題可用，呼應既有自我傳播敘事，詳見「## 技術彙整」
 
 ### 2026-09-29
 - **[📋 新增] Yahoo Finance 獨家：Anthropic 稱失控 AI agent 對公司構成不確定法律風險**：僅標題可用，具體風險情境與官方原文均未見報導，詳見「## 技術彙整」

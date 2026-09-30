@@ -30,13 +30,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-30
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-08-22
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新資安產品動態**（2026-08-21）
-> Anthropic 將 **Claude Mythos 5** 整合進 Claude Security，企業團隊可在**不直接存取模型本身**的前提下取得前沿（frontier）等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進。額度／定價面（Dealroom 提及承諾提供 $35M credits）詳見 [[entities/pricing]]，本頁僅記產品功能面。
+> **最新資安產品動態**（2026-09-30）
+> 多家資安媒體報導 Anthropic 推出「Claude Compliance API」，讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容；官方原文未見，是否為 Claude Security 產品線延伸待查證。
 
 ## 現況
+
+❓ **待查證**（標 2026-09-30｜查 Claude Compliance API）｜**「Claude Compliance API」讓企業資安團隊監控對話、檔案與 Agent 活動**：Security Boulevard 09-29 首發，gbhackers.com、cybersecuritynews.com、Help Net Security 09-30 同日跟進（共 4 個來源）；第三方 DLP 廠商 MIND 已用此 API 強化資料外洩防護（Security Boulevard 報導）。官方原文未見，存取範圍、定價、與既有 Claude Security／Mythos 5 掃描產品線的關係均未載明；僅標題可用。
 
 Anthropic 已將 **Claude Mythos 5**（見 [[entities/mythos]]，目前僅限授權機構的安全模型）整合進 Claude Security，讓企業團隊取得前沿等級漏洞掃描能力，且**不需直接存取 Mythos 5 模型本身**——延續 2026-05-24 曾洩露的「Claude Security 將整合 Mythos 模型」app 字串線索，如今由官方正式產品化（2026-08-21，MarkTechPost 首發，Dealroom／Palo Alto Networks Unit 42／The New Stack 跟進報導）。原文為摘要層級，尚未見具體掃描範圍、與下方既有 Claude Security 掃描機制的技術銜接細節；細節待後續報導或官方文件補齊。
 
@@ -89,11 +91,13 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 - [[news/2026-04-30]]
 - [[news/2026-05-28]]
 - [[news/2026-08-21]]
+- [[news/2026-09-30]]
 
 ## 歷史記錄
 
 | 日期 | 事件 |
 |------|------|
+| 2026-09-29 | ❓ 待查證｜**「Claude Compliance API」曝光**：Security Boulevard 首發，企業資安團隊可監控 Claude 對話、檔案與 Agent 活動；隔日 gbhackers.com、cybersecuritynews.com、Help Net Security 三方跟進；第三方 DLP 廠商 MIND 已採用；官方原文未見（詳見「現況」） |
 | 2026-08-21 | **Claude Mythos 5 整合進 Claude Security**：企業團隊在不直接存取模型本身的前提下取得前沿等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進；額度／定價面（Dealroom 提及 $35M credits 承諾）詳見 [[entities/pricing]]；來源：Google News / MarkTechPost（另有 Dealroom、Palo Alto Networks Unit 42、The New Stack） |
 | 2026-07-24 | **社群反映無 Workflow tool 存取權限**：Reddit 使用者（自稱使用 Claude Code 未滿一個月）反映摸索過程燒費大量 token 才發現 Claude Security 沒有 Workflow tool 的存取權限；查證確認為既有 opt-in 設計限制，非缺陷（見下方 ⟨Q-01⟩）；來源：Reddit / r/ClaudeCode |
 | 2026-08-10 | [[entities/claude-code]] 查證：官方文件確認 Claude Security 的 Workflow 功能需在 `/config` 內另行啟用「dynamic workflows」才可使用，屬 opt-in 設計 |

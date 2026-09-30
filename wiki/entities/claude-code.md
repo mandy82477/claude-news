@@ -61,7 +61,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
-- **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 完整操作流程——在終端機關閉 session 後，於桌面版輸入 `/resume`，Desktop 會列出本機以 CLI 啟動過的 session，選取後即以完整對話紀錄與 context 接續；桌面版接續的是同一個 session 而非複本，`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443），為 09-15 既有 `/resume` 功能的操作細節補充（[原文](https://code.claude.com/docs/en/desktop.md)）。
+- **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 流程——終端機關閉 session 後，桌面版 `/resume` 選取該 session 即可接續同一對話（非複本），`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
@@ -483,7 +483,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
-| **v2.1.285** | 2026-09-29 | 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數關閉 WebFetch 工具；新增 `claude --desktop` 指令於目前目錄開啟桌面版；企業管理者可限制可用的 API 供應商（原文截斷，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）|
+| **v2.1.285** | 2026-09-29 | 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 關閉 WebFetch；新增 `claude --desktop` 開啟桌面版；企業可限制 API 供應商（原文截斷，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）|
 | **v2.1.284** | 2026-09-28 | Claude Sonnet 5.5（`claude-sonnet-5-5`）成 API 預設 Sonnet 模型，見 [[entities/sonnet-5-5]]；新增「Yes, but ask」功能，行為未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)）|
 | **anthropic-sdk-python v1.9.0** | 2026-09-28 | Features：新增 `between_tools` thinking type 的 API 支援（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0)）|
 | **anthropic-sdk-typescript vertex-sdk v0.20.0** | 2026-09-28 | Features：官方 changelog 於「### Feature」處截斷，具體項目未知（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.0)）|
@@ -751,7 +751,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 日期 | 事件 |
 |------|------|
 | 2026-09-30 | 桌面版文件補充 `/resume` 完整流程：終端機關閉 session 後可於桌面版接續同一對話（非複本）。 |
-| 2026-09-29 | **v2.1.285**：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH`、`claude --desktop` 指令，企業管理者可限制 API 供應商。旗標增9（`DISABLE_WEB_FETCH` 已出貨）消7（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`），見 [[topics/claude-code-experimental]]。 |
+| 2026-09-29 | **v2.1.285**：新增 `DISABLE_WEB_FETCH`、`--desktop`；企業可限 API 供應商。旗標增9（1 已出貨）消7，見 [[topics/claude-code-experimental]]。 |
 | 2026-09-28 | **v2.1.284**：Sonnet 5.5 成 API 預設模型，新增「Yes, but ask」。旗標增4消2，見 [[topics/claude-code-experimental]]。新增已知問題 2 則。 |
 | 2026-09-27 | 新增已知問題 5 則：子代理無限遞迴標 CRITICAL（#68619）、CLI 格式破壞複製（#15199）、Plugins 缺 rules（#14200）、GitHub 無工具（#61682）、API 無回應（#69358）。 |
 | 2026-09-26 | **v2.1.283**：新增閘道提示標頭 `x-claude-code-prompt-id`。新增已知問題 2 則：Cowork「選擇資料夾」消失（#76694）、Windows UNC 不支援（#45297）。 |

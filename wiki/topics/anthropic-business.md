@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新動態**（2026-09-29）
-> - **IPO 招股書外流（Reuters 獨家）**：機密遞交文件顯示鉅額虧損與高速營收成長，首度在正式文件中書面警示 AI 存在性風險；至少 8 家媒體同日跟進，詳見 [[topics/anthropic-business#IPO 走到哪一格]]。
-> - **OpenEvidence 醫療合作擴大至非洲、亞洲**：偕 Penn Medicine 擴大醫師 AI 取得管道，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
+> **最新動態**（2026-09-30）
+> - **IPO 招股書再添細節：營收近半來自 Amazon／Google**：calcalistech 揭露；多家媒體續追存在性風險警語，詳見 [[topics/anthropic-business#IPO 走到哪一格]]。
+> - **AWS Bedrock 新增首爾、新加坡境內推論**：企業客戶資料可留在當地處理，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
 
 ---
 
@@ -103,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-09-30 招股書細節持續外流：營收近半來自 Amazon／Google**：calcalistech 指出 Anthropic 近半營收來自 Amazon、Google 兩大雲端夥伴兼股東，為外流文件首度揭露具體客戶集中度數字；The Hill、Los Angeles Times、Yahoo Finance 同日續追既有「存在性風險」書面警語，與 09-29 記錄之 8 家媒體轉述屬同一份文件延燒，未見獨立新增數字（Google News/calcalistech.com；Google News/The Hill；Google News/Los Angeles Times；Google News/Yahoo Finance）。
 - **2026-09-28 機密招股書內容外流，首度書面警示存在性風險**：Reuters 獨家取得 Anthropic 機密遞交的 IPO 招股書，報導財報虧損龐大、營收高速成長，首度在正式文件警示 AI 存在性風險；具體數字未見完整摘要（Reuters）。
 - **09-29 跟進（8 家媒體同日轉述）**：Guardian、euronews、Forbes、CNBC、TechCrunch、Fortune、Yahoo Finance、San Francisco Chronicle 均複述同一份外流文件，未見獨立新增數字（Google News 各家）。
 - **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 稱 IPO 估值將測試 Amazon 持股價值（$3,000 億美元），與 08-20 Motley Fool 估算 $4,000 億美元基準不同（估值假設不同），僅標題可用（Google News/Yahoo Finance）。
@@ -311,7 +312,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|
-| Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用 | 第一方 API 與訂閱席次不受影響 | 2026-09-03 |
+| Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論 | 第一方 API 與訂閱席次不受影響 | 2026-09-30 |
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 | Google Cloud／Vertex AI | 費率由 Google 自訂，與第一方牌價不同；功能可用性看官方平台頁 | — | 2026-09-03 |
 | Enterprise Frontier Safeguards（AWS／Google Cloud／Azure 三雲） | 企業客戶資料改存在自己控制的雲端，EFS 免費，2026 秋季起分階段開放 | 個人 Pro／Max 不在範圍內 | 2026-09-01 |
@@ -328,6 +329,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Pureinsights**（2026-09-30）：Discovery 2.12 版本新增 Claude 整合，涵蓋 ingestion 與 query pipelines，具體功能與計費未見報導（Google News/EIN News）
 - **ExodusPoint**（2026-09-29）：避險基金加入與 Anthropic 就 AI 合作的機構陣容，延續 08-06 已記錄之 Millennium 案例，具體技術範疇與商業條款未見報導（Google News/Bloomberg.com）
 - **Fabric**（2026-09-28）：加入 Claude Partner Network；同日官方推出 Claude Marketplace，收錄逾 2,000 個 connector 與 plugin，具體合作範疇與計費未見報導（Google News/EIN News；Google News/gHacks）
 - **Akamai**（2026-09-25）：簽署 7 年、116 億美元運算合約，供應 CPU 算力；認股權證可認購約 770 萬股 Akamai 股票，另有報導稱總值 120 億美元（Bloomberg；WSJ；IBD；Reddit）
@@ -517,6 +519,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-30
+- **[IPO前瞻] calcalistech：Anthropic 近半營收來自 Amazon、Google 兩大雲端夥伴兼股東**：招股書細節持續外流首度揭露具體客戶集中度數字；The Hill、Los Angeles Times、Yahoo Finance 同日續追既有「存在性風險」書面警語，未見獨立新增數字，詳見「IPO 走到哪一格」表與細節區更新（Google News/calcalistech.com；Google News/The Hill；Google News/Los Angeles Times；Google News/Yahoo Finance）
+- **[戰略合作，官方一手來源] AWS 官方部落格：Amazon Bedrock 新增首爾、新加坡境內推論**：企業客戶資料可留在當地處理，詳見「哪個合作會改到你用的 Claude」表 Amazon Bedrock 列更新（Google News/Amazon Web Services (AWS)）
+- **[生態合作，僅標題可用] EIN News：Pureinsights Discovery 2.12 新增 Claude 整合，涵蓋 ingestion 與 query pipelines**：具體功能與計費未見報導，詳見「哪個合作會改到你用的 Claude」一行制清單新增列（Google News/EIN News）
 
 #### 2026-09-29
 - **[IPO前瞻] Reuters 獨家：機密 IPO 招股書內容外流，揭露鉅額虧損、高速營收成長，首度書面警示 AI 存在性風險**：至少 8 家媒體同日跟進，詳見「IPO 走到哪一格」表與細節區更新（Google News/Reuters 等）

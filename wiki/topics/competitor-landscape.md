@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **本週衝擊**（2026-09-29）
+> **本週衝擊**（2026-09-30）
 > - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
-> - 🔴 **OpenAI 官方 agentic 案例再添一則量化數字**：GPT-6 Astra 89% 準確率（09-21）後，官方發布車隊管理新創 Proaction 導入 Codex 案例，稱銷售成長 60%（09-25，僅官方自報）——長期 context／記憶需求高的人，該追的對手量化案例又多一則。
+> - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
 
 ---
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
 | **Microsoft／GitHub** 🏢 | GA 功能於 Business/Enterprise 帳號預設開啟（09-24）；Microsoft 推出 all-in-one Copilot app 劍指 Anthropic／OpenAI（09-25）→ Claude 缺對應統一入口 | 能力 | 🔴 | GitHub 官方 changelog 一手＋CNBC／GeekWire 跨 2 媒體；all-in-one app 整合範疇、上線時程未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）** 🏢 | V7 賦予 agent「機構記憶」，GPT-6 Astra 於最難圖查詢測試達 89% 準確率（09-21，官方）→ agentic 案例首度升級為量化數字，直指 Claude 長期 context／記憶定位 | 能力 | 🔴 | OpenAI 官方部落格自報準確率，無第三方複現或獨立驗證 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布 ⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
@@ -67,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **懸置細節**
 - ⟨Q-06⟩ 已查證（2026-09-20，[antigravity.google/docs/plans](https://antigravity.google/docs/plans/)）：企業存取走 Gemini Enterprise Agent Platform，Google Cloud 消費制計費，無固定席位價，不支援 BYO-key／合約制組織方案。
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
+- ⟨Q-07⟩ ❓ **待查證**（標 2026-09-30｜查 GPT-6.1 Sol、GPT-6 Astra｜複 2026-10-14）：OpenAI 官方僅揭露相對倍率（Astra 標準價的五分之一）與快取輸入價 $0.10/M tokens，Astra／Sol 絕對牌價未見公布，無法換算 vs Claude 比例。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
 **未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
@@ -140,15 +141,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **還沒解決**
 - V4-Pro 具體費率、Harness 與既有「Deep Code」（07-07）是否同一產品線，報導均未說明。
 
-### OpenAI（Codex CLI／ChatGPT Work・GPT-5.6）
+### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
-- 定價面已實際下修：GPT-5.6 Luna 降 80%、Terra 降 20%，Sol 未降價但提速 2.5 倍（07-30 官方）。
+- 定價面持續下修：GPT-5.6 Luna 降 80%、Terra 降 20%（07-30）；GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
 - OpenAI 官方自曝案例已升級為三則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
-- GPT-6 Astra 全面上線 Pro／Enterprise／API 的具體規格、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
+- GPT-6 Astra／GPT-6.1 Sol 全面上線 Pro／Enterprise／API 的具體規格、絕對牌價、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
 
 ### Microsoft／GitHub
 **現在的答案**
@@ -217,7 +218,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-09-30
+- **Google DeepMind**：發布 SynthID Bio 概念驗證，為 AI 生成蛋白質嵌入浮水印同時保留生物功能；非編碼／模型層競品，不進「對手雷達」表（Blog/Google DeepMind Blog）
+- **OpenAI**：官方部落格宣布與美國 SBDC 合作擴大中小企業 AI 培訓與在地支援，並發布中小企業 AI 使用報告，非產品或定價異動（Blog/OpenAI News）
+
 ### 2026-09-29
+- **OpenAI**：發布 GPT-6.1 Sol，以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens；詳見「對手雷達」與「雷達細節」OpenAI 列更新（Blog/Simon Willison）
+- **Microsoft／GitHub**：GitHub Copilot 官方 changelog 宣布 GPT-6.1 Sol 全面開放，用於 agentic coding 與終端機工作流；詳見「對手雷達」OpenAI 列更新（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：GitHub 官方 changelog 宣布 Claude Sonnet 5.5 全面開放於 GitHub Copilot，供開發者日常編碼工作直接選用，屬 Claude 經競品平台擴大觸及而非競品自身能力異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 - **Meta**：官方部落格推出 Forum，Facebook Groups 專用獨立 app，非 AI 產品或定價異動（Blog/Meta Newsroom）
 - **Meta**：官方部落格擴大 Instagram School Partnership Program，協助青少年掌握資訊安全，非 AI 產品或定價異動（Blog/Meta Newsroom）

@@ -31,19 +31,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-09-28）
-> 2.1.284 新增 4 個第一階旗標＋1 個代號旗標（`WHIMSICAL_ELEPHANT`）；`CLAUDE_CODE_COMMIT_BETWEEN_KEYS`（首見 2.1.281）依來源條目消失清單列 4 階已移除，`CLAUDE_CODE_ENABLE_NARRATION` 同批消失但首見版本早於本頁基線、未曾單獨列於追蹤表；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
+> **最新動態**（2026-09-30）
+> 2.1.285 新增 9 個第一階候選旗標，其中 `CLAUDE_CODE_DISABLE_WEB_FETCH` 依官方 v2.1.285 Release 已確認出貨（第 4 階），其餘 8 個仍第一階；同版消失 7 個：6 個 `DIR_SYNC` 家族旗標＋代號旗標 `PARCHMENT_FERN`，皆首見版本早於本頁追蹤範圍。
 
 ---
 
 ## 摘要
 
+- **2.1.285（09-30 比對）新增 9 個第一階候選旗標**，`CLAUDE_CODE_DISABLE_WEB_FETCH` 依官方 Release 已出貨升列第 4 階，其餘 8 個仍第一階；另 1 個設定類旗標依蒐集邊界不列。同版消失 7 個（`DIR_SYNC` 家族 6＋代號旗標 `PARCHMENT_FERN`），皆早於本頁追蹤範圍；對帳僅命中自身條目，暫不升第二階。
 - **2.1.284（09-28）新增 4 個第一階旗標＋1 個代號旗標**（`WHIMSICAL_ELEPHANT`）；`COMMIT_BETWEEN_KEYS`（首見 2.1.281）依消失清單升列 4 階，`ENABLE_NARRATION` 同批消失但首見早於本頁基線；對帳僅命中自身條目，暫不升第二階。
 - **2.1.282（09-25）新增 8 個第一階旗標＋2 個代號旗標**（`ELEGANT_MEADOW`、`SQUISHY_NEWT`，名單見追蹤表）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單升列 4 階已移除；對帳僅命中自身條目，暫不升第二階。
 - **2.1.281（09-24）新增 9 個第一階旗標**（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，暫不升第二階。
@@ -68,6 +69,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_DISABLE_WEB_FETCH` | 2.1.285（09-29） | 4 | 已出貨：[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285) 明列新增此環境變數關閉 WebFetch 工具 | — | 2.1.285（09-29）官方 Release 確認已出貨 |
+| `CLAUDE_CODE_3P_PROBE_WROTE_HAIKU_DEFAULT` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_3P_SEEDED_OPUS_DEFAULT` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_3P_SEEDED_SONNET_DEFAULT` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_DISABLE_MODEL_ACCESS_FALLBACK` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_HOST_PROMPT_SUPERSEDES_RECORD` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_MCP_SERVE_SETTINGS` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_RESULT_NONCE` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
+| `CLAUDE_CODE_SKIP_MODEL_ACCESS_MEMORY` | 2.1.285（09-30） | 1 | — | — | 2.1.285 仍在（比對日 09-30） |
 | `CLAUDE_CODE_APPEND_PROMPT_HEAD` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
 | `CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
 | `CLAUDE_CODE_RELAUNCH_HOME_TRUST` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
@@ -147,9 +157,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_DAPPER_LAGOON` | 2.1.276–2.1.278 之間消失 |
 | `CLAUDE_CODE_GAULT_KESTREL` | 2.1.262–2.1.272 之間消失 |
 | `CLAUDE_CODE_WALNUT_SPIRE` | 2.1.262–2.1.272 之間消失 |
+| `CLAUDE_CODE_PARCHMENT_FERN` | 2.1.284–2.1.285 之間消失（首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表） |
 
 ## 已消失
 
+- `CLAUDE_CODE_DIR_SYNC_DISABLE_ANCHORING`、`CLAUDE_CODE_DIR_SYNC_ENGINE`、`CLAUDE_CODE_DIR_SYNC_FFWD`、`CLAUDE_CODE_DIR_SYNC_GIT`、`CLAUDE_CODE_DIR_SYNC_STREAM`、`CLAUDE_CODE_DISABLE_DIR_SYNC`（2.1.284–2.1.285 之間，6 個同屬 `DIR_SYNC` 家族，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_ENABLE_NARRATION`（2.1.283–2.1.284 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
 - `CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
@@ -170,6 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-09-30 | 2.1.285 新增 9 個候選旗標（名單見追蹤表），`DISABLE_WEB_FETCH` 依官方 Release 升列 4 階已出貨；消失 7 個（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`），皆首見版本早於本頁追蹤範圍 |
 | 2026-09-28 | 2.1.284 新增 4 個第一階旗標＋代號旗標 `WHIMSICAL_ELEPHANT`（名單見追蹤表）；`COMMIT_BETWEEN_KEYS` 列 4 階、`ENABLE_NARRATION` 消失；不算獨立佐證 |
 | 2026-09-25 | 2.1.282 新增 8 個第一階旗標＋2 個代號旗標（`ELEGANT_MEADOW`、`SQUISHY_NEWT`）；`OCHRE_KITE`（首見 2.1.273）消失，依來源條目消失清單列 4 階；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-24 | 2.1.281 新增 9 個第一階旗標（名單見追蹤表）；同批 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，不算獨立佐證 |

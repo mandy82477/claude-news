@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新動態：Inshorts 近乎相同標題再度轉載 09-13 事件**（2026-09-28）
-> 與 09-13 原始報導、09-26 the-decoder.com、09-27 조선일보等既有記錄方向一致，未見新增細節，視為同一事件持續轉載，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 Google DeepMind 列與下方時序。
+> **最新動態：AMD 以約 82 億美元收購 World Labs，Fei-Fei Li 出任首席科學家**（2026-09-30）
+> 與既有 Google DeepMind／Anthropic／OpenAI 人才流動格局無直接關聯，屬非典型 AI 人才交易個案，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 AMD 列。
 
 ## 摘要
 
@@ -51,6 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **OpenAI** | 次要承接方 | 獲得一名 Google 頂尖研究員（6/23 SEJ 報導，姓名未具名）| 🟡 同步受惠於 Google 人才外流，規模小於 Anthropic |
 | **Meshy**（3D 生成新創，非 Anthropic 生態） | 人才承接方 | 電腦繪圖資深學者童欣（Dr. Xin Tong）加入出任首席科學家（09-09，僅標題可用）| ℹ️ 3D 生成賽道人才強化；與 Google／Anthropic 人才戰無直接關聯，具體職責與履歷未見報導 |
 | **Vesoma**（慕尼黑人形機器人新創，非 Anthropic 生態） | 人才承接方 | 60 人團隊由前 DeepMind AI 主管領軍，走出隱身模式（09-24，Dealroom，僅標題可用）| ℹ️ 人形機器人賽道人才強化；主管姓名、具體職稱與離職時間均未見報導 |
+| **AMD**（非 Google／Anthropic／OpenAI 生態） | 人才與技術承接方 | 以約 82 億美元收購 Fei-Fei Li 創立的 World Labs，Fei-Fei Li 出任 AMD 首席科學家（09-29）| ℹ️ 空間智慧／世界模型技術與頂尖學界人才同步併入 AMD；與既有 Google／Anthropic／OpenAI 人才戰無直接關聯，交易細節與整合規劃未見報導 |
 
 **對各公司的影響細節**
 - **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
@@ -77,6 +78,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-09
+
+#### 2026-09-29
+- **AMD 以約 82 億美元收購 World Labs，創辦人 Fei-Fei Li 出任 AMD 首席科學家**：與既有 Google DeepMind／Anthropic／OpenAI 人才流動格局無直接關聯，屬非典型 AI 人才交易個案；交易細節、World Labs 團隊整合規劃均未見報導，詳見「對各公司的影響」表新增 AMD 列（Topic Watch/ai-talent-flow）
 
 #### 2026-09-28
 - **Inshorts 以與 09-13 幾乎相同標題再度轉載 Google DeepMind 工程師離職事件**：與 09-13 原始報導、09-26 the-decoder.com、09-27 조선일보同屬持續轉載，未見新增細節（推論）（Topic Watch/ai-talent-flow）
