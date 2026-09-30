@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-29
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **最新動態**（2026-09-29）
-> - 使用者實測 Sonnet 5.5 與 Opus 5.5 搭配同一組 skills 各跑 3 次，回報難以分辨輸出差異（單一貼文，尚待社群覆核）。
+> **最新動態**（2026-09-30）
+> - Reddit 流出 OpenAI 內部基準，稱 GPT-6.1 Sol 大幅超越 Opus 5.5，尚無獨立驗證。
+> - Simon Willison 直播花絮：Codex Cloud 故障，改用 Claude Code for web 完成直播工具。
 
 ---
 
@@ -150,6 +151,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Reddit 流出 OpenAI 內部基準：稱 GPT-6.1 Sol 大幅超越 Opus 5.5，Anthropic 追趕吃力 | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | 社群討論流出的 OpenAI 內部基準測試，聲稱 GPT-6.1 Sol 表現大幅超越 Opus 5.5；僅來自流出消息，尚無獨立驗證 | — |
+| Simon Willison OpenAI DevDay 直播花絮：Codex Cloud 故障，改用 Claude Code for web | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | Simon Willison 直播時原想用 Codex Cloud 在手機上處理照片，工具遇問題後改用 Claude Code for web 完成；具名表態，無社群延燒 | — |
 | Show HN: OpenAPPA——開源確定性 guardrail，鎖定多工具連接 agent 的資料外洩風險 | 2026-09-28 · 2026-09-28 | 🔥 | ☄️閃現 | 作者稱工具連接數愈多、agent 失控外洩敏感資料風險愈高，LLM-as-judge 類 guardrail 易受 prompt injection；HN score 22（2 來源） | — |
 | Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill | 2026-09-26 · 2026-09-26 | 🔥🔥🔥 | ☄️閃現 | 作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 耗時，做出可控版面圖表語言＋agent skill；HN score 351 | reladraw |
 | Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | ☄️閃現 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題） | — |
@@ -269,6 +272,20 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-09
+
+#### Reddit 流出「OpenAI 內部基準顯示 GPT-6.1 Sol 大幅超越 Opus 5.5」（2026-09-29）
+
+- **來源：** Open AI's internal benchmarks show GPT-6.1 Sol crushing Opus 5.5, with Anthropic struggling to keep up — Reddit / r/ClaudeAI（週熱門，0 留言）；[原文](https://www.reddit.com/r/ClaudeAI/comments/1wtoi3e/open_ais_internal_benchmarks_show_gpt61_sol/)
+- **核心論點：** 貼文稱流出的 OpenAI 內部基準測試顯示 GPT-6.1 Sol 大幅超越 Opus 5.5，並暗示 Anthropic 追趕吃力
+- **關鍵回響：**（單一貼文，0 留言，本次摘要未見跟進佐證）
+- **收斂結論：**（無）內容僅來自流出消息，無原始基準數據或方法論可查證，亦無獨立第三方覆核；模型面的效能比較見 [[entities/opus-5-5]]
+
+#### Simon Willison OpenAI DevDay 直播花絮：Codex Cloud 故障，改用 Claude Code for web（2026-09-29）
+
+- **來源：** OpenAI DevDay 2026 live blog — Simon Willison's Weblog；[原文](https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/)
+- **核心論點：** Simon Willison 直播 OpenAI DevDay 花絮中提到，原想用 Codex Cloud 在手機上處理直播用照片，工具遇到問題後改用 Claude Code for web 完成
+- **關鍵回響：**（具名表態，無社群延燒；本次摘要未提供留言區細節）
+- **收斂結論：**（無）單一具名部落客現場記錄，非工具評測，僅記錄一次「Codex 故障轉用 Claude Code for web」的實際使用案例
 
 #### 使用者實測 Sonnet 5.5 與 Opus 5.5 搭配同一組 skills，難以分辨輸出差異（2026-09-29）
 

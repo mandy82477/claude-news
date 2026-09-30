@@ -28,11 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-27
+**最後更新：** 2026-09-30
+**最後新聞更新：** 2026-09-30
 
-> **首度出現正面反轉訊號**（2026-09-24）
-> Reddit 週熱門稱 Claude 終於「像回真正的 Claude」，暗示先前品質觀感失真；單一貼文、無技術細節，與 09-22 Opus 5.5 上線同期，細節見時序。
+> **三條線各添新訊號**（2026-09-30）
+> - **A/B 降 effort 疑慮新增 LiveNerf 即時基準**（09-27）：社群工具追蹤 Opus 5.5 是否被降智，訊號群增至 5 則。
+> - **正面反轉訊號再添一例**（09-25）：稱不降規格願續訂多年，呼應 09-24 首度出現的正面轉折。
+> - **Token／限速抱怨延燒**（今日）：又一則「變慢、更易撞額度」回報，無測試方法或版本號。
 
 ---
 
@@ -48,14 +50,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-09-27。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-09-30。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
 | **token 消耗異常**（2026-09-12） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-09-19） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-23、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-09-10，兩則皆開啟：131／13 則留言，09-27 快照） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **Opus 5 上線後的品質觀感**（2026-09-27） | 無官方回應 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 最後更新 2026-09-23、[#83510](https://github.com/anthropics/claude-code/issues/83510) 最後更新 2026-09-10，兩則皆開啟：131／13 則留言，09-27 快照） | 十四則裡十二則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 
@@ -74,6 +76,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **限制先說在前面**：CC-Canary 比的是你自己的歷史，不是「4.7 對 4.8」——版本前後的對照實驗至今沒有工具承接。本站唯一一則第三方連續量測是 2026-05 MarginLab 每日跑 SWE-bench-Pro，對象是 Opus 4.7、不是 Opus 5（原始記錄見 [[topics/code-quality-decline-archive#2026-05]]）。另一條路是人工存證：2026-08-12 起有開發者把 bug、退化與設定異常整理成公開檔案，附上 HackerOne 回報紀錄。
 
 本庫沒有把 CC-Canary 列為推薦工具（社群工具目錄對這個症狀還沒有首選）——它給你的是自己跟自己比的一條線，不是外部基準。
+
+另一條路是 LiveNerf（2026-09-27 首見）：社群針對「Opus 5.5 是否被降智」設計的即時基準測試，持續追蹤模型表現有無隨時間變化。本站尚未查證其方法論與資料來源，同樣不列為推薦工具，僅記錄其存在（[原文](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）。
 
 **🧰 現在就能下的解**：先量 context 組成再怪工具——官方 `/context` 看各類別佔用（[[topics/community-large-codebase-workflow]] 線 2），還不確定誰在撐爆就照 [[topics/community-tech-tools]]「context 一直被工具輸出撐爆」列第三欄先跑 PrismoDev 診斷；決策表沒有專為感覺變笨、想先量測歸因而設的列。%% —（決策表暫無對應列｜候選症狀：感覺變笨，想先量測歸因） %%
 
@@ -105,6 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：訊號表上限 10 列已滿，本則取單一貼文（無互動數）中最舊者讓位給 09-12 新訊號（HN 57 分），見規則檔「code-quality-decline 的三張表」第 2 條 %%
 - **08-25「intentionally burning more tokens」**：質疑近幾個月是否要燒更多 token 才能完成同樣的任務；無數字、無版本號，只說明這個現象還在。
 - **09-10「40% session usage in 30 mins」**：與公司方案的低用量基準形成對比，帶具體百分比與時長，但無互動數可佐證；訊號方向與既有九則一致。
+- **09-30「getting very very slow and running out of limits」**：回應速度變慢、用量更易撞頂的抱怨再現；無數字、無版本號，只說明這個現象還在。
 
 ### 三種解釋，目前各自站在哪
 
@@ -129,7 +134,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **18 則**訊號：下表六種主張收 17 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十六則裡十四則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **21 則**訊號：下表六種主張收 20 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十六則裡十四則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
@@ -138,7 +143,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | **泛化變慢／變囉唆**（不指名模型版本）| 8 | 2026-09-20「It's time to cancel your subscriptions」：指控悄悄調降推理預算 | 單一貼文（HN 25 分）＋七則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
-| **懷疑正在被 A/B 測試降 effort** | 4 | 2026-09-10「did anthropic nerf fable again」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
+| **懷疑正在被 A/B 測試降 effort** | 5 | 2026-09-27「Is Opus 5.5 nerfed? New benchmark called LiveNerf measures this live」 | 單一貼文（其中一則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
 | **二進位對 Opus 5 的硬編碼限制** | 1 | 2026-07-26（已查證屬實，見 [[topics/community-tech-discussions]]）| GitHub issue #80988 |
 | **任務間能力落差不均**（「jagged」，不專指單一模型）| 1 | 2026-09-17「even frontier models have a very jagged range」 | 單一貼文（Reddit r/artificial 週熱門）|
@@ -240,6 +245,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-09
+
+#### 2026-09-30
+- **「Claude code is getting very very slow and running out of limits」：Token 消耗異常訊號群現象延續**：Reddit r/ClaudeCode 使用者回報近期回應明顯變慢、用量更易撞頂，相較先前同類任務耗時大增；單一貼文、0 留言、無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wu8zzp/claude_code_is_getting_very_very_slow_and_running/)）
+
+#### 2026-09-27（週熱門，今日補記）
+- **「Is Opus 5.5 nerfed? New benchmark called LiveNerf measures this live」：「懷疑正在被 A/B 測試降 effort」主張第五則**：社群提出新的即時基準測試 LiveNerf，追蹤 Opus 5.5 表現是否隨時間變化以回應「是否被降智」的疑慮；方向與既有四則一致，另新增一項可供自行量測的社群工具，見「怎麼自己量一次」（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）
+
+#### 2026-09-25（週熱門，今日補記）
+- **「Real talk: If Anthropic never nerfs Opus 5.5, I will keep my Max subscription for years」：正面反轉訊號第二例**：使用者稱 Opus 5.5 表現遠勝過去用過的所有模型，若不被降規格願意續訂多年；方向延續 09-24 首度出現的正面反轉訊號，單一貼文、無技術細節（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wpluhu/real_talk_if_anthropic_never_nerfs_opus_55_i_will/)）
 
 #### 2026-09-24
 - **首度出現正面反轉訊號**：Reddit r/ClaudeAI 週熱門貼文（原發 09-22）稱 Claude 終於「像回真正的 Claude」，暗示 Opus 4.7 起品質觀感失真、現已恢復；單一貼文、無技術細節，方向與既有六則負面主張相反，與 Opus 5.5 上線同期（推論：時間點重疊），尚不足開新列（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wnpit2/claude_is_back/)）

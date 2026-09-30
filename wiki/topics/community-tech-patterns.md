@@ -57,9 +57,9 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **記憶與知識管理** | claude-mem、OKF、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy、google-ads-meta-ads-mcp（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
+| **記憶與知識管理** | claude-mem、OKF、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
@@ -164,6 +164,69 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-09
+
+#### irinabuht12-oss/google-ads-meta-ads-mcp：Google Ads、Meta Ads、GA4、Search Console 整進單一託管 MCP（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 託管遠端 MCP 伺服器，把 Google Ads MCP、Meta Ads（Facebook Ads）MCP、GA4、Search Console 整進單一服務，供 Claude、ChatGPT、Cursor、n8n 使用；號稱 250+ 工具、OAuth 登入免 API 金鑰、寫入動作需人工核准、免費；GitHub Search 3,223 星，近 4 天 +588 星（約 147 星／日）。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy）一個「多廣告／分析數據源整進單一託管 MCP」取向，既有做法多聚焦單一資料源或任務類型，本則把四種廣告與分析資料源整進同一免費託管遠端 MCP；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 星速偵測收錄（近 4 天 +588 星，約 147 星／日），未見 forks／issues／近期 commit 佐證可查，未另行查證；核准層審核寫入動作（approval-gated writes）為專案自述設計，未經第三方驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Vincentwei1021/video-talkcraft：配音驅動動態設計工作室 agent skill（2026-09-30）
+
+- **主線：** —
+- **核心模式：** Agent skill，把 Claude Code／Codex 變成動態設計工作室，產出配音驅動的解說影片；含逐字稿配音同步、109 套運鏡範本卡、反投影片式運鏡系統，以 Remotion 算圖；GitHub Search 1,314 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、anything2explainer、chess-postmortem-skills、lemo-opuscar）一個「配音驅動動態設計」取向，既有做法多聚焦單一風格化影片或棋局分析，本則另附大量運鏡範本卡與逐字稿同步機制；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,314★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Vincentwei1021/video-talkcraft)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Anionex/agent-vision-toolkit：為純文字模型補視覺能力的工具箱與 skill（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 為純文字模型「看圖」設計的視覺工具箱與 skill，支援多圖理解、圖片問答、長截圖 OCR、前端 UI 還原、GUI 自動化，可選接入 Codex、Claude Code、Pi、Oh My Pi、OpenCode，並可直接識別貼上的圖片；GitHub Search 1,219 星。
+- **與既有模式的關係：** 本表既有類別皆未鎖定「替純文字模型補視覺感知能力」這個應用面，與「Skills 設計」相近但服務對象不同——本則補的是模型本身缺的感知能力，不是知識／流程的封裝，暫不併入既有列，留待第二個同類實作出現再判斷是否需要新類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,219★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Anionex/agent-vision-toolkit)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### alexgreensh/attention-span：ADHD 友善輸出風格外掛（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 讓 Claude Code、Codex 等 agent 輸出更「人話」的 ADHD 友善 output-style 外掛；GitHub Search 1,149 星。
+- **與既有模式的關係：** 與既有 2026-09-29 snflkd/fluent-korean（語言在地化 output-style 客製）同屬「輸出風格客製」做法，本則鎖定可讀性／專注力面而非語言；屬單一工具、非可複用機制，暫不併入既有代表技巧列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,149★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/alexgreensh/attention-span)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### ardeyouxipianyi/workbuddy2api-hub：多帳號反向代理閘道（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 國際／國內多帳號反向代理閘道，支援 Codex、Claude Code、DSH 與標準 OpenAI 客戶端；GitHub Search 505 星。
+- **與既有模式的關係：** 本表既有類別聚焦 agent 工作流本身（Skills、Hooks、MCP、記憶、模型路由等），本則是帳號層級的網路代理閘道，機制與既有代表技巧不重疊，暫不併入既有列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（505★），無 forks／issues／近期 commit 佐證可查，未另行查證；「多帳號反代」用途未載明是否涉及規避官方帳號政策，本庫不評論其合規性。
+- **來源：** GitHub Search；[GitHub](https://github.com/ardeyouxipianyi/workbuddy2api-hub)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### decodingai-magazine/building-a-coding-agent-from-scratch-course：從零打造 Claude Code 風格 agent 教學課程（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 用 Python 從零打造 Claude Code 風格編碼 agent 的教學課程，含 8 篇文章、4 支影片與完整程式碼；GitHub Search 501 星。
+- **與既有模式的關係：** 屬課程／教材類資源盤點，非新做法或工具，與 2026-09-24 Callous-0923/agent-study 同屬彙整型教學參考資料，不進模式概覽表；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（501★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/decodingai-magazine/building-a-coding-agent-from-scratch-course)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊教材，尚無社群採用回饋數據）
+
+#### gargpratyush/jev-router：Claude Code 中依任務路由到最便宜模型（2026-09-30）
+
+- **主線：** —
+- **核心模式：** 在 Claude Code 中依任務自動路由到最便宜可用模型的小工具；GitHub Search 500 星。
+- **與既有模式的關係：** 補上既有「模型使用策略」代表技巧（分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie）一個「成本優先路由」取向，既有做法涵蓋複雜度路由與手動切換，本則鎖定單一目標——選最便宜可用模型；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/gargpratyush/jev-router)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### Serokell：把內部工程規範轉為 Claude Code skills（2026-09-29）
 
