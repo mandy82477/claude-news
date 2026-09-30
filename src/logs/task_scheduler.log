@@ -942,3 +942,15 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [週3 2026/09/30 12:09:14.48] ABORTED: gathered_items.json date=2026-09-29 items=82，非目標日期的新鮮資料（今日 archive 尚未由 GitHub Actions 產出，cp src/gathered_archive/2026-09-30.json 失敗，檔案不存在）
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-30T12:09:14Z] TARGET_DATE=2026-09-30｜新鮮度=aborted(gathered_items.json 仍停在 2026-09-29, 82則；今日 archive 未到)｜原因：GitHub Actions 抓料延遲，尚未產出 src/gathered_archive/2026-09-30.json｜本班（12 UTC）不等待，交由後續班次（17/22 UTC）接手；此為設計上的正確行為，非錯誤
 [cloud daily-news-pipeline-cloud STARTED 2026-09-30T17:08:09Z]
+[週3 2026/09/30 17:57:30.00] === Agent pipeline start (2026-09-30) ===
+[週3 2026/09/30 17:57:30.00] Step 0 昨日缺跑檢查 OK（news/2026-09-29.md 存在）
+[週3 2026/09/30 17:57:30.00] Aggregator OK（cp gathered_archive/2026-09-30.json，68 則，15/15 來源健康）
+[週3 2026/09/30 17:57:30.00] Digest OK（news/2026-09-30.md 生成，忠實度自檢通過）
+[週3 2026/09/30 17:57:30.00] emitted-cache confirm OK（68 項）
+[週3 2026/09/30 17:57:30.00] Wiki ingest OK（模型/功能/商業/安全政策/社群/分類複核 六記者＋devpractice/market 全數完成；分類回退 2 則追加派工後判定不收錄；ingest_gate 修復 5 處字元上限後轉綠）
+[週3 2026/09/30 17:57:30.00] Reader digest OK（daily/2026-09-30.md，16 頁，WARN 0）
+[週3 2026/09/30 17:57:30.00] Wiki commit OK
+[週3 2026/09/30 17:57:30.00] Web build gate: 測試全綠 - web build 放行
+[週3 2026/09/30 17:57:30.00] Building web reader... OK（109 wiki 頁、155 digests、10 週報）
+[週3 2026/09/30 17:57:30.00] Single push done (news + wiki + web)
+[週3 2026/09/30 17:57:30.00] === Pipeline complete (agent) ===
