@@ -250,7 +250,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **「Claude code is getting very very slow and running out of limits」：Token 消耗異常訊號群現象延續**：Reddit r/ClaudeCode 使用者回報近期回應明顯變慢、用量更易撞頂，相較先前同類任務耗時大增；單一貼文、0 留言、無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wu8zzp/claude_code_is_getting_very_very_slow_and_running/)）
 
 #### 2026-09-27（週熱門，今日補記）
-- **「Is Opus 5.5 nerfed? New benchmark called LiveNerf measures this live」：「懷疑正在被 A/B 測試降 effort」主張第五則**：社群提出新的即時基準測試 LiveNerf，追蹤 Opus 5.5 表現是否隨時間變化以回應「是否被降智」的疑慮；方向與既有四則一致，另新增一項可供自行量測的社群工具，見「怎麼自己量一次」（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）
+- **「Is Opus 5.5 nerfed? New benchmark called LiveNerf measures this live」：「懷疑正在被 A/B 測試降 effort」主張第五則**：社群提出即時基準測試 LiveNerf，追蹤 Opus 5.5 表現是否隨時間變化；方向與既有四則一致，另提供可自行量測的工具，見「怎麼自己量一次」（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）
 
 #### 2026-09-25（週熱門，今日補記）
 - **「Real talk: If Anthropic never nerfs Opus 5.5, I will keep my Max subscription for years」：正面反轉訊號第二例**：使用者稱 Opus 5.5 表現遠勝過去用過的所有模型，若不被降規格願意續訂多年；方向延續 09-24 首度出現的正面反轉訊號，單一貼文、無技術細節（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wpluhu/real_talk_if_anthropic_never_nerfs_opus_55_i_will/)）

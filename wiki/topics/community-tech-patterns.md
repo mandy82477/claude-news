@@ -57,13 +57,13 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy、google-ads-meta-ads-mcp（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、docsagent、google-ads-meta-ads-mcp（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **記憶與知識管理** | claude-mem、OKF、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、chess-postmortem-skills、lemo-opuscar、video-talkcraft 等（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-30 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、chess-postmortem-skills、video-talkcraft 等（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-30 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
@@ -168,7 +168,7 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 #### irinabuht12-oss/google-ads-meta-ads-mcp：Google Ads、Meta Ads、GA4、Search Console 整進單一託管 MCP（2026-09-30）
 
 - **主線：** —
-- **核心模式：** 託管遠端 MCP 伺服器，把 Google Ads MCP、Meta Ads（Facebook Ads）MCP、GA4、Search Console 整進單一服務，供 Claude、ChatGPT、Cursor、n8n 使用；號稱 250+ 工具、OAuth 登入免 API 金鑰、寫入動作需人工核准、免費；GitHub Search 3,223 星，近 4 天 +588 星（約 147 星／日）。
+- **核心模式：** 託管遠端 MCP 伺服器，整合 Google Ads MCP、Meta Ads MCP、GA4、Search Console，供 Claude、ChatGPT 等多款 agent 使用；號稱 250+ 工具、OAuth 免 API 金鑰、寫入需人工核准、免費；GitHub Search 3,223 星，近 4 天 +588 星（約 147 星／日）。
 - **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（Plugin 反模式整理、Claude Code 作為 MCP 協調中心、XActions、docsagent、agenvoy）一個「多廣告／分析數據源整進單一託管 MCP」取向，既有做法多聚焦單一資料源或任務類型，本則把四種廣告與分析資料源整進同一免費託管遠端 MCP；非大型 codebase 特有痛點，主線填 —。
 - **可信度註記：** 星速偵測收錄（近 4 天 +588 星，約 147 星／日），未見 forks／issues／近期 commit 佐證可查，未另行查證；核准層審核寫入動作（approval-gated writes）為專案自述設計，未經第三方驗證。
 - **來源：** GitHub Search；[GitHub](https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp)

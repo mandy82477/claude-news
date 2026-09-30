@@ -652,7 +652,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 判讀裡「下一個催化劑」的具體事件登記於此，日報出現後續時會被偵測到。每筆怎麼讀：「標」是登記日、「查」是我們在日報裡盯的關鍵字、「複」是複查日、「訊」是日報出現後續的那天。
 
-- ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-10-14）｜**FTC 是否發出正式傳票或公布調查範圍與法源依據**：Reuters、CBS News、CNBC、New York Post、The Hill 等至少 5 家同日報導 FTC 開啟產品風險調查，具體範圍、法源依據與是否已發出傳票均未見報導。
+- ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-10-14）｜**FTC 是否發出正式傳票或公布調查範圍與法源依據**：至少 5 家媒體同日報導 FTC 開啟產品風險調查，具體範圍、法源依據與傳票狀態均未見報導。
 - ❓ **待查證**（標 2026-09-30｜查 Amazon、Google、customer concentration、calcalistech｜複 2026-10-14）｜**公開版 S-1 是否揭露精確的客戶集中度百分比與個別客戶拆分**：calcalistech 揭露招股書外流內容稱營收近半來自 Amazon、Google，僅此一家報導具體數字，精確比例與個別拆分均未見報導。
 - ❓ **待查證**（標 2026-09-29｜查 rogue AI agents、uncertain legal risk｜複 2026-10-13）｜**失控 AI agent 法律風險的具體情境或案例是否被揭露**：Yahoo Finance 獨家報導 Anthropic 自陳法律風險不確定，尚無具體案例或求償對象，亦未見與既有訴訟線或 IPO 招股書的關聯揭露。
 - ❓ **待查證**（標 2026-09-29｜查 Reuters、IPO prospectus、existential risks｜複 2026-10-13）｜**招股書具體財務數字是否有更多來源佐證，公開版 S-1 是否正式遞交**：Reuters 獨家稱鉅額虧損、高速成長、首度書面警示存在性風險，具體金額未載；SEC EDGAR 公開版尚未確認遞交。
