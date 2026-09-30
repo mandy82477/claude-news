@@ -7033,3 +7033,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：判讀 2 則（IPO 招股書外流、Anthropic 自陳失控 AI agent 法律風險），皆無可交易標的（Anthropic 未上市）
 - 轉知帳本：H-fe8019（Cycode MCP Python SDK 帳號劫持漏洞功能面）、H-e8e1fd（GPT-6 Astra vs Fable 5 評測週榜比對）維持 open——前者因無新技術細節可查證、後者因屬 `/wiki-lint` 5b 週更範疇，皆非本輪可結案，功能／模型記者已各自評估過理由成立不予處理
 - 📋 待使用者確認：無
+
+## 2026-09-30 Ingest
+
+- 來源日報：[[news/2026-09-30]]
+- 更新頁面：
+  - 模型：entities/mythos、entities/opus-5-5、entities/sonnet-5-5
+  - 功能：entities/claude-code、topics/claude-code-experimental、entities/claude-science、entities/claude-security
+  - 商業：topics/anthropic-business、topics/competitor-landscape、topics/ai-talent-flow
+  - 安全政策：topics/anthropic-government-policy、topics/ai-agent-safety
+  - 社群：topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline
+  - 投資分析：topics/market-signals
+  - 主編：wiki/feature-radar.md（新增 Claude Code v2.1.285 詳細條目＋全覽表列）、wiki/index.md（更新 entities/mythos、topics/ai-agent-safety、topics/anthropic-government-policy、topics/ai-talent-flow 四頁鉤子）
+- 新增頁面：無
+- 摘要：美國 FTC 對 Anthropic、OpenAI 等 AI 公司開啟產品風險調查；Anthropic Frontier Red Team 研究稱中國 GLM-5.3 網攻能力已逼近 Claude Mythos Preview、跨越先前模型做不到的門檻；Claude Code 2.1.285 正式發布（可關閉網頁抓取、`--desktop` 指令、企業 API 供應商限制）；Anthropic IPO 招股書揭露近半營收來自 Amazon／Google；AMD 以約 82 億美元收購 World Labs、Fei-Fei Li 出任首席科學家；Claude 發現的類 CRISPR 酶系統遭質疑可能借用他人研究成果
+- 呈現品質：全部通過（模型記者 entities/mythos、entities/opus-5-5 初版各觸犯機械閘 1 處，已同輪修復；安全政策記者 topics/ai-agent-safety 初版誤用「專頁定向」「記者」等內部用語觸犯讀者語言閘，已改寫通過；商業記者 anthropic-business 初版「ingestion」誤觸中英文混寫閘、competitor-landscape 懸置標記漏寫前綴，均已同輪修復；社群記者 code-quality-decline 既有子計數與表格總和落差非本輪造成，已記入品質備註待 `/wiki-lint` 深度覆核）
+- 分類回退：追加派工 1 類（社群，2 則：Show HN「SFML」「Groundtrack」原判排除，分類複核記者認定屬技術討論／工作流模式、不受社群工具互動分數門檻限制，主編核對後補派；社群記者依 discussions 收錄門檻複核後判定訊號仍不足，最終未寫入任何頁面）
+- devpractice 沉澱：候選 7 筆（entities/claude-code、entities/sonnet-5-5、topics/anthropic-business、topics/competitor-landscape、topics/community-tech-patterns ×2、topics/community-tech-discussions）
+- market 判讀：判讀 2 則（FTC 產品風險調查、IPO 招股書揭露 Amazon／Google 客戶集中度），Alphabet／Amazon 兩列可交易標的覆寫判讀欄；無新增可交易標的（Anthropic 未上市）
+- 轉知帳本：新開 H-d8087d（商業→人物：Fei-Fei Li 是否達 entities/ 建頁門檻，待評估）、H-7c3708（社群→功能：今日 7 則社群工具是否應列入 official-community-gap 產品化矩陣）；H-fe8019、H-e8e1fd 維持 open（同 09-29，本輪功能／模型記者再次評估理由成立不予處理）
+- 📋 待使用者確認：
+  1. entities/opus-5-5「跟它怎麼說話」節暫放佔位句，需查證官方 Opus 5.5 prompting／migration 一手文件後補寫
+  2. 「GPT-6.1 Sol 基準測試聲稱超越 Opus 5.5」為流出、未經獨立驗證的消息，模型記者建議登記為 topics/model-task-leaderboard 下次週更比對候補
+  3. wiki/feature-radar.md「⚠️ 從你現在的版本升上去」表頭注記「核對到 v2.1.269，2026-09-12」仍與表格實際內容不同步（延續自更早的待辦），雲端環境 egress 受限無法自行 WebFetch 官方 CHANGELOG.md 查證，建議下次有網路存取的 session 逐版核對後補寫
