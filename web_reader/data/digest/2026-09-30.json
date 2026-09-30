@@ -1,0 +1,727 @@
+{
+  "date": "2026-09-30",
+  "generatedAt": "2026-09-30 17:12 UTC",
+  "articleCount": 68,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude Compliance API Lets Security Teams Monitor Chats, Files and Agent Activity - gbhackers.com",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5EU2JJVWQtY0pqdUpzaUxtblZHcUlBT2V1amtXZFBrZHZHdWN3OHZlbkJVX2R4bDhCUkpKY0FHelpFcWRJM1Nuc1U1R1ZZQ3pMZ3cxVUsxONIBXEFVX3lxTE5acTRzVDZyZHJXZm1ZUk03bmtfQW1jcXZSMmRzYWV2WHBjdWZaLXR2WWlDX2hJU0FsZTNYUVRtcDZicTAyS0xvdFExWEFENS0wT2hHTWR0LUdNTEZz?oc=5",
+      "source": "Google News / gbhackers.com",
+      "time": "09/30 13:08",
+      "sentiment": "",
+      "body": "Claude Compliance API（讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容）今日由 gbhackers.com、cybersecuritynews.com、Help Net Security 等 3 個資安媒體同日跟進報導，Security Boulevard 則於前一日（09/29）已先行報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Sonnet 5.5 breaks Sonnet 5 code in five ways, and one fails silently - MIXED Reality News",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5",
+      "source": "Google News / MIXED Reality News",
+      "time": "09/30 11:09",
+      "sentiment": "",
+      "body": "MIXED Reality News 報導指出，升級至 Sonnet 5.5 會讓原本相容 Sonnet 5 的程式碼在五種情境下出現行為差異，其中一種屬於沒有錯誤訊息的靜默失敗，提醒開發者升級前先跑一輪回歸測試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5-5",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "Claude Code 2.1.285 build 新增 9 個功能候選旗標",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.285",
+      "source": "Build Flags",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "本次 build 新增的候選旗標含 `CLAUDE_CODE_DISABLE_WEB_FETCH`、`CLAUDE_CODE_DISABLE_MODEL_ACCESS_FALLBACK` 等 9 項，同時有 7 個舊有的 `DIR_SYNC` 系列旗標消失；build 中出現的旗標不代表會正式上線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "Claude Code 桌面版文件新增說明：在終端機關閉 session 後，可在桌面版輸入 `/resume` 接續同一個對話（非複本），文件字數由 81,064 字增至 82,443 字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic relies on Amazon and Google for nearly half its sales - calcalistech.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5VcDZ4M241bG5YVmZtQWc1dERjSERUVEtkaHZoYVpYMUc4U0hsemQ2N0tqSmZwTnMtZ0NmUTA0bTE3a3g0RWxjNFZxQnBvVVA5T196TWRoTGtVTlpFY2JUT1J2ZVRrZXc?oc=5",
+      "source": "Google News / calcalistech.com",
+      "time": "09/30 13:21",
+      "sentiment": "",
+      "body": "IPO 招股書揭露細節持續延燒：calcalistech 指出 Anthropic 近半營收來自 Amazon 與 Google 兩大雲端夥伴兼股東；Los Angeles Times、The Hill、Yahoo Finance 等同日續追文件中首度出現的「存在性風險」警語。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Introducing Anthropic models on Amazon Bedrock for in-region inference in Seoul and Singapore - Amazon Web Services (AWS)",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWTNtMXgtdWtVVEVOMFNNSll4UHpvS3h6Um9ld3FGVTA2SzF6UnZrWXo0QmdOaWVyV0ttQnc2OGRXSHozWkxMa1B0MlBIT3hhMEN5TkNmdVJMSUJOVXB1N2p3LVI4S0dJdVhZR3pma2JaclMxMTUtS0pneDU0YlRoWlA3Yk1HcGlyd0xLUExTUmtrYVAya1RrNzJkaEZFNmRxNXg3eHB2WWp1V0JyeFIzMDBCaEJGNmh0d2VUXzRTNmo1Wk9seFR6ODRURC04RmV0WDNDWEsyYw?oc=5",
+      "source": "Google News / Amazon Web Services (AWS)",
+      "time": "09/30 01:13",
+      "sentiment": "",
+      "body": "AWS 官方部落格宣布 Anthropic 模型在 Amazon Bedrock 新增首爾與新加坡的區域內推論支援，讓當地企業客戶的資料可留在境內處理。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Claude AI issue knocked out five services for about an hour - The Cryptonomist",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1PQnlOSGl6VnJObzBEUnZWdTB4WDRNajRLempTWC00XzdhMTA4ZHN5TzZUNG4tMG5oVXlnbVpWN3FLREIzNUJxOW1oT3ctVS1tUFNqalFoWFpERlp3d21QSURBbjQwTjVsOE9qUHI4cVNTQQ?oc=5",
+      "source": "Google News / The Cryptonomist",
+      "time": "09/29 17:21",
+      "sentiment": "",
+      "body": "多家媒體（The Cryptonomist、kcra.com、Technext24.com 等）持續報導昨日（09-29）14:00–14:59 UTC 已修復的 Claude 全站中斷事件，內容無新進展。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "irinabuht12-oss/google-ads-meta-ads-mcp",
+      "url": "https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "Google Ads MCP、Meta Ads MCP、GA4、Search Console 整合進單一託管遠端 MCP，支援 Claude、ChatGPT、Cursor、n8n，號稱 250+ 工具且免費；近 4 天增加 588 星（約每日 147 星），GitHub 累積 3,223 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Vincentwei1021/video-talkcraft",
+      "url": "https://github.com/Vincentwei1021/video-talkcraft",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "把 Claude Code／Codex 變成動態設計工作室的 agent skill，支援逐字稿配音同步、109 套運鏡範本與 Remotion 算圖，GitHub 累積 1,314 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anionex/agent-vision-toolkit",
+      "url": "https://github.com/Anionex/agent-vision-toolkit",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "為純文字模型打造的視覺工具箱，支援多圖問答、長截圖 OCR、前端 UI 還原與 GUI 自動化，可選接入 Claude Code 等多款 agent，GitHub 累積 1,219 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "alexgreensh/attention-span",
+      "url": "https://github.com/alexgreensh/attention-span",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "讓 Claude Code、Codex 等 agent 輸出更「人話」的 ADHD 友善輸出風格外掛，GitHub 累積 1,149 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ardeyouxipianyi/workbuddy2api-hub",
+      "url": "https://github.com/ardeyouxipianyi/workbuddy2api-hub",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "面向 Codex／Claude Code 與標準 OpenAI 客戶端的多帳號反向代理閘道，GitHub 累積 505 星。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "decodingai-magazine/building-a-coding-agent-from-scratch-course",
+      "url": "https://github.com/decodingai-magazine/building-a-coding-agent-from-scratch-course",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "從零打造 Claude Code 風格編碼 agent 的 Python 教學課程，含 8 篇文章、4 支影片與完整程式碼，GitHub 累積 501 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "gargpratyush/jev-router",
+      "url": "https://github.com/gargpratyush/jev-router",
+      "source": "GitHub Search",
+      "time": "09/30 16:27",
+      "sentiment": "",
+      "body": "在 Claude Code 中依任務自動路由到最便宜可用模型的小工具，GitHub 累積 500 星。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude code is getting very very slow and running out of limits",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wu8zzp/claude_code_is_getting_very_very_slow_and_running/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/30 16:09",
+      "sentiment": "",
+      "body": "r/ClaudeCode 使用者抱怨近期回應速度變慢、用量限制更容易碰頂，是社群近期反覆出現的抱怨主題。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code projects (beta) for Max users with existing projects",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wu8iki/claude_code_projects_beta_for_max_users_with/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "09/30 15:51",
+      "sentiment": "",
+      "body": "r/ClaudeCode 貼文指出 Claude Code projects（beta）功能已對擁有既有 projects 的 Max 方案用戶開放。情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "Is Opus 5.5 nerfed? New benchmark called LiveNerf measures this live",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "09/27 23:20",
+      "sentiment": "",
+      "body": "r/ClaudeAI 社群質疑 Opus 5.5 是否被「降智」，並提出新的即時基準測試 LiveNerf 來追蹤模型表現是否隨時間變化。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Open AI's internal benchmarks show GPT-6.1 Sol crushing Opus 5.5, with Anthropic struggling to keep up",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wtoi3e/open_ais_internal_benchmarks_show_gpt61_sol/",
+      "source": "Reddit / r/ClaudeAI",
+      "time": "09/29 22:43",
+      "sentiment": "",
+      "body": "r/ClaudeAI 社群討論流出的 OpenAI 內部基準測試，聲稱 GPT-6.1 Sol 表現大幅超越 Opus 5.5，引發 Anthropic 是否追趕不及的擔憂；此說法目前僅來自流出消息，尚無獨立驗證。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI DevDay 2026 live blog",
+      "url": "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/",
+      "source": "Blog / Simon Willison",
+      "time": "09/29 15:55",
+      "sentiment": "",
+      "body": "Simon Willison 在 OpenAI DevDay 直播花絮中提到，原本想用 Codex Cloud 在手機上做直播用的照片處理工具但遇到問題，最終改用 Claude Code for web 完成。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "美國 FTC 對 Anthropic、OpenAI 等 AI 公司開啟產品風險調查，Reuters、CBS News、CNBC、New York Post、The Hill 等至少 5 個來源同日報導。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdzYzcTVSY1JmRld3cFRBRlRaX0w0YVZHTjU3NWVvVG5BcXFIZGFwdXViLXBLNnhJQ3d0RS13T2VURWdNQ19ySkJuVXNlV2NWX0E3LUExYUZQaFBsTTVEaC1NMXJtR0RGYlllQVotQmM3VlRaVmd2em04YWdzTXFkMjhsUlQ0b1JlcVJBRENNRFFBT1NLcU00YUtqU0N5LUlJa0YxaEhzdU1mR1lkUTJ0MFhLMjA3a1FJVlQ5RXpMOEIxdw?oc=5",
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTFBaX3E1SXJOeEJHVWxxNEpSUDZxRmRJZFBTQ3hDU1R2Z3FLT0hOREVTZEQ4eXNQdmRKNkQwMExCXzA0blJRRE5kb3oxb2haU1h0eGFyQ3NrOGxJSjFNYzBIVU1DU1Z1SEhkWExyelZIeHh5amE40gF6QVVfeXFMUEI1a0NEa0xqMTNScWtrWXZjS3ppbE5xVHQyWXJjVWJMQUZDby1HNlE2bG1DNUtFOFgzdDlDXy00QW1VSHJ1RDFaZ1lnUE50b2VSdjI1YlJ6LTdMUktDaWtTdm9JUG5PbDF1dFVXOUNQSFhndHpmWjlMLVE?oc=5"
+      ],
+      "ref_names": [
+        "Reuters",
+        "CNBC"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "Anthropic Frontier Red Team 研究指出，中國 GLM-5.3 模型已能在 4% 的測試案例中完成完整控制流劫持（相較 Claude Mythos Preview 的 6%），是先前模型（如 Claude Opus 4.6、GLM-5.2）皆做不到的能力，顯示進階網路攻擊能力正在向其他模型擴散；Hacker News 累積 239 分、4 個來源同日報導。",
+      "ref_urls": [
+        "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities"
+      ],
+      "ref_names": [
+        "官方研究"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Code 2.1.285 正式發布：新增可關閉網頁抓取的功能與 `--desktop` 指令，企業管理者並能限制可用的 API 供應商；官方 GitHub Release 發布後，MIXED Reality News 等媒體同日跟進報導。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbWI0TFRvWUt6MUo4bnZxQmZaQ2t4NGFUTVJXQTdYRDdoTXNubEJnM3M0YW5EZXk1VWFjYmRQYnVub1R6SlBTekZCcERyaXl6ZGxON0FhejcxTnNGNUFGXy1BcnRDQ0VxZkQ5UEozRE80emhfVlY3cDMxbUNuRm1HSE5NME9yYXpvR1E?oc=5"
+      ],
+      "ref_names": [
+        "官方 Release",
+        "MIXED Reality News"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 09-25）Claude 發現的類 CRISPR 酶系統爭議持續延燒：the-scientist.com 報導質疑這項生物學突破可能借用了另一位科學家的既有研究成果，WIRED 同日以「發現了、然後呢」追問 Anthropic 是否已完整釐清這套系統的能力範圍。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZGNVRW1BbzAzR1RQdm1nWTdDb1pvNUc1bVlLWjI0TmIxRDlrcVJQM0FRbjdmVjZ6S2E1aTl4QnlEeG5DdVJYU1daRWM4VWc4WnZ5TVBBeDRvay01OWpMaWpIRkNhMDc4RzJldWc0N1E0dHFtYlBSYW5DTzFZck9MVmp4dVNZLXZzM095NFBKQThIU2hTeHBnR3BaZDVaSE9CbktNNGk5TjBiaDZSWW8yaQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQM2xTUE0xbzE2VVVLVjNGaUtoM2ZrSzdZWjc3MW1oSkFOclN0OGJ2bkVhaTJmNzM5eG9ObUNkWi1pWkw2cWxsVDZLNDRWTUhiWXhjRU8xeC1tWmlSTVVYRG9MQTZMMzZxaWp1QUZlVDBCNEl2RnV2bUdlTmoydmNnSGd1MHFVTmw4dUM1YUo2ejU?oc=5"
+      ],
+      "ref_names": [
+        "the-scientist",
+        "WIRED"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "GPT-6.1 Sol in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
+      "body": "OpenAI 新款 GPT-6.1 Sol 現已在 GitHub Copilot 全面開放，用於 agentic coding 與終端機工作流，是 Claude 在編碼助理市場的直接競品動態。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "AMD is buying World Labs for about $8.2 billion, and Fei-Fei Li joins as chief scientist",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSndWUWh0amY3RlFrd0xaRlRMZmdfcUNtMjVha3doelFkT0pmX2g0S1J0ak41UDVkc0thRXJWZGxTUERFVGNXN0QyZWQ5Y2pQbThzbUlaZUNJLXlUWmtyeWhuUWJpRkI5SkNyUy02WEV2cWI0Njl1cFdfRkFLNGlqRG1KMjl6cEk?oc=5",
+      "body": "AMD 以約 82 億美元收購 Fei-Fei Li 創立的 World Labs，Fei-Fei Li 並出任 AMD 首席科學家。",
+      "topic": "ai-talent-flow",
+      "topicPage": {
+        "id": "ai-talent-flow",
+        "name": "AI 實驗室人才流動",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Add one more AI worry to the nightmare scenario: self-replicating prompt injections",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdGdvWVNxa3l4d0thZHBoN19PV3VhSUdQTUR6bXBXRG9uc0FjbmZvT0RISDcyd21DNDAtLTdWNWs3amZLdmJwMVpINlpfU2FEX3ZSWXktTkFjWEFnLXB1bVJZUFNUNm1aS2hvM0ZQc3pUVlFFQU1Hb0ZwM2ZMMFdqV200bzRILXNQSkF3aGFkazlTNmthcHhwWndtQ1V4TFBmdGE2b25xcGROeFBUbXZRMm0wckx6TkdJcDRZQ2pIUzdmQ2tibXVSdDFWajQxZ2JNSktuMQ?oc=5",
+      "body": "文章探討會自我複製的 prompt injection 攻擊手法，是提示注入威脅的新型態演化。",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 48
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "preview": "Claude Code：Claude Code v2.1.285 發布：新增 CLAUDE_CODE_DISABLE_WEB_FETCH 環境變數可關閉 WebFetch 工具、claude --desktop 指令，企業管理者可限制可用的 API 供應商。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-science",
+      "name": "Claude Science",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-security",
+      "name": "Claude Security",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-09-30",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Claude Code v2.1.285 發布：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具、`claude --desktop` 指令，企業管理者可限制可用的 API 供應商。\n- 桌面版文件補充：終端機關閉 session 後，於桌面版輸入 `/resume` 可接續同一對話（非複本），`claude --resume` 在終端機仍找得到同一 session。"
+          },
+          {
+            "page": "entities/claude-security",
+            "name": "Claude Security",
+            "label": "最新資安產品動態",
+            "date": "",
+            "body": "多家資安媒體報導 Anthropic 推出「Claude Compliance API」，讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容；官方原文未見，是否為 Claude Security 產品線延伸待查證。"
+          },
+          {
+            "page": "entities/claude-science",
+            "name": "Claude Science",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **CRISPR 酶系統爭議延燒**：the-scientist.com 質疑這項發現可能借用另一科學家既有研究成果，WIRED 同日追問 Anthropic 是否已完整釐清系統能力範圍（皆僅標題可用，延續 09-27 NYT／Benzinga 對原創性的質疑）。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.285 新增 9 個第一階候選旗標，其中 `CLAUDE_CODE_DISABLE_WEB_FETCH` 依官方 v2.1.285 Release 已確認出貨（第 4 階），其餘 8 個仍第一階；同版消失 7 個：6 個 `DIR_SYNC` 家族旗標＋代號旗標 `PARCHMENT_FERN`，皆首見版本早於本頁追蹤範圍。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "最新進展",
+            "date": "",
+            "body": "Anthropic Frontier Red Team 研究：中國 GLM-5.3 在官方二進位漏洞基準測得 4% 完整控制流劫持率（Mythos Preview 同測試 6%），早期模型如 Opus 4.6、GLM-5.2 皆做不到，顯示進階網路攻擊能力正擴散至其他實驗室模型（[官方研究](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。"
+          },
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "寫作風格",
+            "date": "",
+            "body": "VentureBeat 稱 Opus 5.5 回覆的 em-dash 用量降 99%、讀來更像真人，但同一批測試仍測得 2,548 處「AI 寫作特徵」（方法論未載，不採信推算）。"
+          },
+          {
+            "page": "entities/sonnet-5-5",
+            "name": "Claude Sonnet 5.5",
+            "label": "後續反應",
+            "date": "",
+            "body": "MIXED Reality News 稱升級至 Sonnet 5.5 有 5 處行為差異、1 處靜默失敗，建議升級前先跑回歸測試（原文僅標題可讀，細節未載）。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **IPO 招股書再添細節：營收近半來自 Amazon／Google**：calcalistech 揭露；多家媒體續追存在性風險警語，詳見 [[topics/anthropic-business#IPO 走到哪一格]]。\n- **AWS Bedrock 新增首爾、新加坡境內推論**：企業客戶資料可留在當地處理，詳見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態：AMD 以約 82 億美元收購 World Labs，Fei-Fei Li 出任首席科學家",
+            "date": "",
+            "body": "與既有 Google DeepMind／Anthropic／OpenAI 人才流動格局無直接關聯，屬非典型 AI 人才交易個案，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 AMD 列。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- 美國 FTC 首度對 Anthropic、OpenAI 等 AI 公司開啟產品風險調查，調查剛啟動，尚無傳票或執法行動。\n- calcalistech：招股書外流細節首見客戶集中度數字，Anthropic 營收近半來自 Amazon、Google 兩大雲端夥伴兼股東。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "美國 FTC 對 Anthropic、OpenAI 等 AI 公司開啟產品風險調查，Reuters／CBS News／CNBC／New York Post／The Hill 等至少 5 個來源同日報導；具體調查範圍與法源均未見報導，新增為現況表第八線。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **能力擴散**：Anthropic Frontier Red Team 官方研究稱，中國 GLM-5.3 已能在 4% 試驗中達成完整控制流劫持（Claude Mythos Preview 為 6%），跨越先前模型皆做不到的門檻。\n- **自我複製提示注入**：The Register 續談自我複製型提示注入，呼應既有自我傳播敘事。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Plugin／MCP 整合添廣告數據源**：google-ads-meta-ads-mcp 把 Google Ads、Meta Ads、GA4、Search Console 整進單一免費託管 MCP。\n- **創意工具、模型路由各添一例**：video-talkcraft（配音驅動動態設計）、jev-router（選最便宜模型）。\n- **視覺工具箱首見**：agent-vision-toolkit 為純文字模型補圖片問答、截圖 OCR 能力。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Reddit 流出 OpenAI 內部基準，稱 GPT-6.1 Sol 大幅超越 Opus 5.5，尚無獨立驗證。\n- Simon Willison 直播花絮：Codex Cloud 故障，改用 Claude Code for web 完成直播工具。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "三條線各添新訊號",
+            "date": "",
+            "body": "- **A/B 降 effort 疑慮新增 LiveNerf 即時基準**（09-27）：社群工具追蹤 Opus 5.5 是否被降智，訊號群增至 5 則。\n- **正面反轉訊號再添一例**（09-25）：稱不降規格願續訂多年，呼應 09-24 首度出現的正面轉折。\n- **Token／限速抱怨延燒**（今日）：又一則「變慢、更易撞額度」回報，無測試方法或版本號。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 16
+  },
+  "readerTopStories": [
+    {
+      "title": "Claude Compliance API Lets Security Teams Monitor Chats, Files and Agent Activity - gbhackers.com",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5EU2JJVWQtY0pqdUpzaUxtblZHcUlBT2V1amtXZFBrZHZHdWN3OHZlbkJVX2R4bDhCUkpKY0FHelpFcWRJM1Nuc1U1R1ZZQ3pMZ3cxVUsxONIBXEFVX3lxTE5acTRzVDZyZHJXZm1ZUk03bmtfQW1jcXZSMmRzYWV2WHBjdWZaLXR2WWlDX2hJU0FsZTNYUVRtcDZicTAyS0xvdFExWEFENS0wT2hHTWR0LUdNTEZz?oc=5",
+      "source": "Google News / gbhackers.com",
+      "time": "09/30 13:08",
+      "sentiment": "",
+      "body": "Claude Compliance API（讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容）今日由 gbhackers.com、cybersecuritynews.com、Help Net Security 等 3 個資安媒體同日跟進報導，Security Boulevard 則於前一日（09/29）已先行報導。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Sonnet 5.5 breaks Sonnet 5 code in five ways, and one fails silently - MIXED Reality News",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5",
+      "source": "Google News / MIXED Reality News",
+      "time": "09/30 11:09",
+      "sentiment": "",
+      "body": "MIXED Reality News 報導指出，升級至 Sonnet 5.5 會讓原本相容 Sonnet 5 的程式碼在五種情境下出現行為差異，其中一種屬於沒有錯誤訊息的靜默失敗，提醒開發者升級前先跑一輪回歸測試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5-5",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-08-10"
 last_news_update: "2026-06-23"
 status_main: "active"
-days_since_news: 98
+days_since_news: 99
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 98
+days_since_news_subtree: 99
 inbound_links: 7
 attribution_count: 0
 attribution_last: null

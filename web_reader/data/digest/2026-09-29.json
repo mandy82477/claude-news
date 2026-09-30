@@ -354,11 +354,6 @@
   "preview": "Claude Code：Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -374,54 +369,9 @@
       "pageType": "entity"
     },
     {
-      "id": "sonnet-5-5",
-      "name": "Claude Sonnet 5.5",
-      "pageType": "entity"
-    },
-    {
       "id": "thariq-shihipar",
       "name": "Thariq Shihipar",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
-      "pageType": "topic"
     }
   ],
   "reader": {

@@ -297,11 +297,5 @@
     }
   ],
   "preview": "紐約時報報導 Anthropic 據傳評估在 IPO 中募資高達 1000 億美元；CNBC 引述消息人士指出，申報文件將把「AI 反彈情緒」列為風險因素之一；金融時報則整理散戶投資人參與前需留意的重點。",
-  "sedimentedToday": [
-    {
-      "id": "claude-security",
-      "name": "Claude Security",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }
