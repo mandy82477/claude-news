@@ -1105,7 +1105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-09-30
 - **[📋 新增，非 Claude 事件] Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱能力擴散門檻已跨越**：HN 239 分、4 個來源同日報導，GLM-5.3 4% vs Claude Mythos Preview 6%，詳見「## 技術彙整」
-- **[📋 新增，專頁定向] The Register：自我複製型提示注入續添一則「AI 新憂慮」**：僅標題可用，呼應既有自我傳播敘事，詳見「## 技術彙整」
+- **[📋 新增] The Register：自我複製型提示注入續添一則「AI 新憂慮」**：僅標題可用，呼應既有自我傳播敘事，詳見「## 技術彙整」
 
 ### 2026-09-29
 - **[📋 新增] Yahoo Finance 獨家：Anthropic 稱失控 AI agent 對公司構成不確定法律風險**：僅標題可用，具體風險情境與官方原文均未見報導，詳見「## 技術彙整」

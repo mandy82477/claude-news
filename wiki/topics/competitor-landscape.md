@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
 | **Microsoft／GitHub** 🏢 | GA 功能於 Business/Enterprise 帳號預設開啟（09-24）；Microsoft 推出 all-in-one Copilot app 劍指 Anthropic／OpenAI（09-25）→ Claude 缺對應統一入口 | 能力 | 🔴 | GitHub 官方 changelog 一手＋CNBC／GeekWire 跨 2 媒體；all-in-one app 整合範疇、上線時程未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布 ⟨Q-07⟩ |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
