@@ -75,8 +75,10 @@ ORPHAN_GRACE = timedelta(hours=4)
 # （每天一筆平安紀錄會洗掉 log 可讀性），STARTED 無後續是它的正常靜默路徑，不是死掉。
 ORPHAN_EXEMPT = {"watchdog-push"}
 
-# 雲端 routine 停泊未併成果的分支命名慣例。
-PARKED_BRANCH_RE = re.compile(r"cloud-daily-\d{4}-\d{2}-\d{2}-unmerged")
+# 雲端 routine 停泊未併成果的分支。runbook 慣例是 `-unmerged` 結尾，但無人值守的班次會自己
+# 取名：2026-09-29 17:00 班推不上 master，把 commit 停在 `cloud-daily-2026-09-29-fix`，
+# 只認 `-unmerged` 的舊規則看不到它。故認 `cloud-daily-<日期>` 加任意後綴。
+PARKED_BRANCH_RE = re.compile(r"cloud-daily-\d{4}-\d{2}-\d{2}(?:-[\w-]+)?")
 
 
 def _use_utf8_stdout() -> None:

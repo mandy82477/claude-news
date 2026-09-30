@@ -43,6 +43,8 @@ python3 scripts/cloud_bootstrap.py
 
 雲端沙盒預設缺 `python-dotenv`（`main.py` 匯入鏈第一步就撞）、`feedparser`、以及 `sgmllib3k`（其 `setup.py install` 在 Python 3.11 觸發 distutils 相容性錯誤，導致 `pip install -r src/requirements_news.txt` 整包失敗）。這三個缺口自 2026-07-14 起**每次雲端執行都復現**（至少 07-14、07-21、07-22、07-23、07-24 五次），過去都靠當場手動修，容器一回收就沒了。
 
+**它也負責 git 分支歸位 `[加入: 2026-09-30]`**：容器起跑時 `HEAD detached`、本機 `master` 停在舊快取。腳本在任何 commit 之前 fetch 後把 HEAD 歸位到追蹤 `origin/master` 的 `master`——只在工作樹乾淨、且 HEAD 沒有遠端沒有的 commit 時動手，否則只印 `⚠️ git 分支` 不動。**看到 `⚠️ git 分支` 時不要自己 `checkout -B` 或 `push HEAD:master`**（2026-09-29 17:00 班這樣做被 Auto Mode 擋下、整班推不上去），照 `.claude/skills/web-publish/SKILL.md` Step 5 推 `cloud-daily-<日期>-unmerged` 分支保住成果。
+
 上述腳本把那套手動修法固化：冪等（已存在就跳過）、不致命（失敗只印警告、退出碼恆為 0）。**它是 workaround 不是真解**——真解是雲端基礎映像預裝這些套件，見 `docs/workaround-register.md` 對應列。
 
 **egress 限制 `[改版: 2026-09-12]`：** 雲端環境的網路存取分四級（官方文件 `cloud-environments.md#network-access`）：None／**Trusted（預設，約 70 個網域白名單）**／Custom（使用者自填網域）／Full。本專案目前是 **Trusted**，所以 Reddit / HN / Google News / 官方文件站多半回 403 或 `EGRESS_BLOCKED`。這是**使用者可改的環境設定**（在 claude.ai 環境設定改成 Custom 並加入網域），不是永久事實。

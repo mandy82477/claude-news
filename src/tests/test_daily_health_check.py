@@ -536,3 +536,16 @@ class TestOrphanStarts(unittest.TestCase):
                 self.assertEqual(hc.main(), 1)
         finally:
             hc.check, hc.parked_branches, sys.argv = orig_check, orig_parked, orig_argv
+
+
+class TestParkedBranchNaming(unittest.TestCase):
+    def test_self_named_suffix_is_detected(self):
+        # 2026-09-29 17:00 班自取的分支名，不是 runbook 慣例的 -unmerged
+        out = "a" + chr(9) + "refs/heads/master" + chr(10) + "b" + chr(9) + "refs/heads/cloud-daily-2026-09-29-fix" + chr(10)
+        found = sorted({m.group(0) for m in hc.PARKED_BRANCH_RE.finditer(out)})
+        self.assertEqual(found, ["cloud-daily-2026-09-29-fix"])
+
+    def test_unrelated_branches_are_ignored(self):
+        out = chr(10).join(["a" + chr(9) + "refs/heads/master", "b" + chr(9) + "refs/heads/feature-x",
+                            "c" + chr(9) + "refs/heads/cloud-weekly-2026-09-29"])
+        self.assertEqual(list(hc.PARKED_BRANCH_RE.finditer(out)), [])

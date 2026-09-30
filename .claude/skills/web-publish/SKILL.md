@@ -105,7 +105,7 @@ git -C REPO_ROOT push
 push 被拒最常見的原因是 non-fast-forward——GitHub Actions 的 `daily-gather` 或另一個環境在你執行期間也 push 了（Actions 排程實測延遲過 2 小時 42 分，時間緩衝不保證不撞）。**在雲端，未推送的 commit 會隨容器銷毀且下次是全新 checkout，救不回來**；本機雖然 commit 還在，仍應照同樣程序處理，兩邊行為一致。
 
 ```
-git -C REPO_ROOT rev-parse --abbrev-ref HEAD   # 不是 master 就先 git checkout -B master
+git -C REPO_ROOT rev-parse --abbrev-ref HEAD   # 應為 master（雲端由 cloud_bootstrap.py 開跑時歸位）
 git -C REPO_ROOT push || {
   git -C REPO_ROOT pull --rebase origin master && git -C REPO_ROOT push
 }
@@ -122,7 +122,7 @@ git -C REPO_ROOT push || {
   ```
 
   **有交集就停手**：不 merge、不 stash、不 checkout，Step 6 log 記 `Push DEFERRED - dirty overlap`，列出重疊檔名交使用者處理。commit 還在本機不會遺失（雲端無此路徑——雲端是 fresh clone，工作樹本來就乾淨，走原 `pull --rebase` 即可）。
-- 先確認在 master 上：2026-07-14 曾因 session 啟動時 `origin/master` 快取落後而處於 detached HEAD，該狀態下 push 不會更新遠端分支
+- 先確認在 master 上：雲端容器起跑時是 detached HEAD、本機 master 停在舊快取（2026-07-14、2026-09-29 實例），該狀態下 push 不會更新遠端分支。**歸位只在開跑時做**——`scripts/cloud_bootstrap.py` 在任何 commit 之前、只在不會丟東西時自動歸位；到了這一步才發現不在 master，**不要臨場 `checkout -B master` 或 `push HEAD:master`**：09-29 17:00 班這樣修，被 Auto Mode 判為破壞性操作全數擋下。改推 `cloud-daily-TARGET_DATE-unmerged` 分支保住 commit，Step 6 log 記 `Push PARKED - not on master`（看門狗會認出該分支並提醒救回）
 - **允許自動解的衝突只有兩類**：
   1. `src/news_aggregator/emitted_items.json`——此檔有兩個寫者（GitHub Actions 加入未確認條目、pipeline 翻確認欄位）。解法固定：**放棄我方的 confirm commit、保留遠端版本**，因為日報上站遠比確認欄位重要，未確認的條目只會被重新提供一次，是良性退化。處理後標「emitted-cache 確認本次放棄，項目將於次日重新提供」
  2. **append-only 檔的 append-append 衝突**——`wiki/log.md`、`data/source_attribution.jsonl` 等只會在檔尾各自新增的檔（白名單住 `scripts/resolve_append_only.py` 的 `APPEND_ONLY`，不在此重抄）。解法固定：**跑 `python scripts/resolve_append_only.py`**，它以 `git merge-file --union` 三方合併保留兩側新增（順序 base→ours→theirs），只動白名單內的檔並 `git add`；白名單外的衝突原樣列出、不動，只要存在就整體仍 exit 1——此時走下一條 abort（白名單內的已解並 staged，能省去人工路徑重解那幾檔的力氣）。只有白名單內衝突時 exit 0，成功後 `git -c core.editor=true rebase --continue` 再 push。

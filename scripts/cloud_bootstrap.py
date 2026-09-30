@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """cloud_bootstrap.py — 雲端沙盒的環境自備補丁（冪等，可重複執行）。
 
-雲端 routine 每次都是全新容器，而該環境預設缺三個東西：
+雲端 routine 每次都是全新容器。第一件事是把 git 從 detached HEAD 歸位到 master
+（`ensure_on_master()`，理由見該函式）；接著補該環境預設缺的三個東西：
 
   1. `python-dotenv` — `main.py` 匯入鏈的第一步就撞這個
   2. `feedparser`     — 所有 RSS 來源與 blogroll 依賴
@@ -204,9 +205,62 @@ def verify_feedparser_import() -> bool:
         return False
 
 
+def _git(repo: Path, *args: str, timeout: int = 60) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", "-C", str(repo), *args], capture_output=True, text=True,
+                          encoding="utf-8", errors="replace", timeout=timeout)
+
+
+def ensure_on_master(repo: Path) -> str:
+    """把雲端 checkout 從 detached HEAD 歸位到追蹤 origin/master 的本機 master。
+
+    雲端容器起來時是 `HEAD detached`，本機 `master` 卻停在幾天前的快取（2026-09-29 實測
+    停在 09-23）。模型自己臨場修時做法不固定：22:00 班先 fetch 再 `checkout -B master
+    origin/master` 被放行；17:00 班先在 detached HEAD 上 commit 了 STARTED，才用
+    `checkout -B master <本地 commit>` 與 `push origin HEAD:master` 修，被 Auto Mode
+    分類器判為 [Git Destructive] 全數擋下，整班無法推送。臨場判斷的順序決定生死，
+    所以固化在這裡、排在任何 commit 之前。
+
+    **只在不可能丟東西時才動手**：工作樹乾淨，且 HEAD 就是 origin/master 或其祖先（HEAD
+    上沒有遠端沒有的 commit）。其他情況一律不碰、只警告，讓後續步驟自己擋。
+    回傳狀態字串供測試判讀；任何錯誤都不拋出（本腳本不致命）。
+    """
+    try:
+        cur = _git(repo, "symbolic-ref", "-q", "--short", "HEAD")
+        if cur.returncode == 0:
+            name = cur.stdout.strip()
+            if name == "master":
+                print("✅ git 分支：已在 master，跳過")
+                return "on-master"
+            print(f"⚠️ git 分支：目前在 {name}（非 master），不自動切換")
+            return "other-branch"
+        if _git(repo, "status", "--porcelain", "--untracked-files=no").stdout.strip():
+            print("⚠️ git 分支：detached HEAD 且工作樹有未 commit 改動，不自動歸位（先處理改動）")
+            return "dirty"
+        if _git(repo, "fetch", "origin", "master").returncode != 0:
+            print("⚠️ git 分支：fetch origin master 失敗，不自動歸位")
+            return "fetch-failed"
+        head = _git(repo, "rev-parse", "HEAD").stdout.strip()
+        tip = _git(repo, "rev-parse", "origin/master").stdout.strip()
+        behind_ok = head == tip or _git(repo, "merge-base", "--is-ancestor", "HEAD", "origin/master").returncode == 0
+        if not behind_ok:
+            print("⚠️ git 分支：detached HEAD 上有 origin/master 沒有的 commit，不自動歸位（避免丟失）")
+            return "diverged"
+        r = _git(repo, "checkout", "-B", "master", "origin/master")
+        if r.returncode != 0:
+            print(f"⚠️ git 分支：歸位失敗（{(r.stderr or '').strip()[:200]}）")
+            return "checkout-failed"
+        print(f"✅ git 分支：detached HEAD 已歸位到 master（追蹤 origin/master，{tip[:7]}）")
+        return "switched"
+    except Exception as e:  # noqa: BLE001 - 輔助腳本不致命
+        print(f"⚠️ git 分支：檢查失敗（{type(e).__name__}: {e}）")
+        return "error"
+
+
 def main() -> int:
     _use_utf8_stdout()
     print("=== 雲端環境自備補丁（冪等；本機通常全部跳過）===")
+    # 先歸位分支，再做任何事：之後的 STARTED 心跳就是第一個 commit，必須落在 master 上
+    ensure_on_master(Path(__file__).resolve().parent.parent)
     ensure_pip_packages()
 
     # 主路徑：上游 6.0.14 起已自備可正常安裝的 sgmllib，正常裝完就該直接通過。
