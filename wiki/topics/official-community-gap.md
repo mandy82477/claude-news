@@ -10,10 +10,10 @@ days_since_news: 0
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 0
 inbound_links: 40
-attribution_count: 17
-attribution_last: "2026-09-24"
+attribution_count: 18
+attribution_last: "2026-10-01"
 top_source: "github-issues"
 pending_count: 0
 pending_overdue: 0

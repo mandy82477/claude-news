@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-09-26"
 last_news_update: "2026-09-04"
 status_main: "monitoring"
-days_since_news: 26
+days_since_news: 27
 parent: null
 children: "['topics/enterprise-cost-management-archive']"
 page_role: "hub"
-days_since_news_subtree: 26
+days_since_news_subtree: 27
 inbound_links: 31
 attribution_count: 6
 attribution_last: "2026-09-04"

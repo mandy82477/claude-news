@@ -10,17 +10,17 @@ days_since_news: 0
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
-days_since_news_subtree: 28
-inbound_links: 12
-attribution_count: 3
-attribution_last: "2026-09-02"
+days_since_news_subtree: 0
+inbound_links: 13
+attribution_count: 4
+attribution_last: "2026-10-01"
 top_source: "github-issues"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 1M context：加不加價、你能不能關
