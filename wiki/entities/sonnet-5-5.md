@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 是否比照 Opus 5.5 模式列 Legacy 見 [[entities/sonnet-5]]）"
 domain: "🤖 模型"
-last_updated: "2026-09-30"
-last_news_update: "2026-09-30"
+last_updated: "2026-10-01"
+last_news_update: "2026-10-01"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **後續反應**（2026-09-30）
-> MIXED Reality News 稱升級至 Sonnet 5.5 有 5 處行為差異、1 處靜默失敗，建議升級前先跑回歸測試（原文僅標題可讀，細節未載）。
+> **後續反應**（2026-10-01）
+> mixed-news.com 稱 Sonnet 5.5 工作階段可能在使用者未主動輸入特定內容下被自動降回 Sonnet 5，觸發條件原文未載（僅標題可讀）。
 
 ---
 
@@ -65,6 +65,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **表下細節**
 
+- **mixed-news.com：工作階段可能被自動降回 Sonnet 5（細節未載）**：報導稱使用者在未主動輸入特定內容的情況下，Sonnet 5.5 工作階段也可能被自動降回 Sonnet 5；觸發條件、影響範圍與是否可關閉均未見報導，僅標題可讀，不採信推算（[mixed-news.com](https://news.google.com/rss/articles/CBMif0FVX3lxTFBFcVJCd0NrVEZkeDZxTHJsakdDWXJXRVZ4NzVTNTJ5VjhFV0pOZVhsajYtRXR1cERpOWdaZ0lLeXYxQk16T3VORE4ybVVFdUsyemVrUmFTNi13Y2M1SHF1a055M0l4TVlHaEZGdkFuc3JmSkVPX2VZa0owQ2RrQVE?oc=5)，2026-10-01）
 - **社群回報：升級有 5 處行為差異、1 處靜默失敗（未經官方證實）**：MIXED Reality News 稱從 Sonnet 5 升級至 Sonnet 5.5 在五種情境下出現行為差異，其中一種無錯誤訊息即靜默失敗，建議升級前先跑回歸測試；原文僅標題可讀，具體情境未見完整記載，不採信推算（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30）
 - **牌價完全不變，靠速度換效率**：$2/$10 維持不動，官方以「速度快 30%＋多數工作省最多 30% 成本」表述升級，與 Opus 5.5 那次「牌價降 20%」的換代邏輯不同。
 - **快取讀取 $0.20／Mtok＝基礎輸入價（$2）的標準 0.1 倍**，非 Fable 5.1／Mythos 5.1 的 0.025 倍優惠費率，見 [[entities/pricing]]。
@@ -138,9 +139,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Simon Willison：Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)（2026-09-28）
 - [Reddit r/ClaudeAI：Tested Sonnet 5.5 vs Opus 5.5 with the same skills](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)（2026-09-29）
 - [Google News/MIXED Reality News：Claude Sonnet 5.5 breaks Sonnet 5 code in five ways, and one fails silently](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)（2026-09-30）
+- [Google News/mixed-news.com：Claude Sonnet 5.5 can drop you to Sonnet 5 over something you never typed](https://news.google.com/rss/articles/CBMif0FVX3lxTFBFcVJCd0NrVEZkeDZxTHJsakdDWXJXRVZ4NzVTNTJ5VjhFV0pOZVhsajYtRXR1cERpOWdaZ0lLeXYxQk16T3VORE4ybVVFdUsyemVrUmFTNi13Y2M1SHF1a055M0l4TVlHaEZGdkFuc3JmSkVPX2VZa0owQ2RrQVE?oc=5)（2026-10-01）
 - [[news/2026-09-28]]
 - [[news/2026-09-29]]
 - [[news/2026-09-30]]
+- [[news/2026-10-01]]
 
 ## 歷史記錄
 
@@ -148,12 +151,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-01 | mixed-news.com 稱工作階段可能在使用者未主動輸入下被自動降回 Sonnet 5，觸發條件未載 |
 | 2026-09-30 | MIXED Reality News 稱升級有 5 處行為差異、1 處靜默失敗，未經官方證實 |
 | 2026-09-29 | Reddit 使用者同組 skills 各跑 3 次，稱與 Opus 5.5 難以分辨；HN 互動回升至 853 分 |
 | 2026-09-28 | 正式發布，Claude 5.5 家族第二款模型；Terminal-Bench 4.0 由 10.3%→70.6%；成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10 |
 
 **歷史記錄細節**
 
+- **2026-10-01**：mixed-news.com 報導稱使用者在未主動輸入特定內容的情況下，Sonnet 5.5 工作階段也可能被自動降回 Sonnet 5；觸發條件、影響範圍與是否可關閉均未見報導，僅標題可讀，不採信推算（[mixed-news.com](https://news.google.com/rss/articles/CBMif0FVX3lxTFBFcVJCd0NrVEZkeDZxTHJsakdDWXJXRVZ4NzVTNTJ5VjhFV0pOZVhsajYtRXR1cERpOWdaZ0lLeXYxQk16T3VORE4ybVVFdUsyemVrUmFTNi13Y2M1SHF1a055M0l4TVlHaEZGdkFuc3JmSkVPX2VZa0owQ2RrQVE?oc=5)，2026-10-01）
 - **2026-09-30**：MIXED Reality News 報導稱從 Sonnet 5 升級至 Sonnet 5.5 會在五種情境下出現行為差異，其中一種屬無錯誤訊息的靜默失敗，建議開發者升級前先跑一輪回歸測試（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30；原文僅標題可讀，具體情境未見完整記載，不採信推算）
 - **2026-09-29**：Reddit 使用者以同一組 skills 對 Sonnet 5.5 與 Opus 5.5 各跑 3 次，稱看不出輸出差異（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)，2026-09-29；0 留言，訊號極弱，未附具體分數，不採信推算）
   - HN 互動累計回升至 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），仍低於 Opus 5.5 發布當日的 1,674 分

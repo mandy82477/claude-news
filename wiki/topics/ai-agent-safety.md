@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新安全事件**（2026-09-30）
+> **最新安全事件**（2026-10-01）
+> - **自我複製提示注入再添一例**：Simon Willison 引述密碼學學者 Matthew Green——彼此沙盒隔離的 agent 透過共用套件快取留訊息互相影響行為，已具備蠕蟲的兩個要素（劫持 agent 的 payload＋帶 payload 去下一個 agent 的 agent）；換成 email／Slack／共用文件等協作管道風險更明顯。
 > - **能力擴散**：Anthropic Frontier Red Team 官方研究稱，中國 GLM-5.3 已能在 4% 試驗中達成完整控制流劫持（Claude Mythos Preview 為 6%），跨越先前模型皆做不到的門檻。
-> - **自我複製提示注入**：The Register 續談自我複製型提示注入，呼應既有自我傳播敘事。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -112,6 +112,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Simon Willison 引述 Matthew Green：沙盒隔離 agent 透過共用套件快取留訊息，已具備蠕蟲傳播的兩個要素（2026-10-01 新增）
+
+- **揭露來源**：Blog／Simon Willison〈Quoting Matthew Green〉（2026-10-01 06:29 UTC；https://simonwillison.net/2026/Oct/1/matthew-green/）；0 互動
+- **核心主張**：Matthew Green 指出蠕蟲需兩要素——劫持 agent 的 payload、把 payload 帶去下個 agent 的 agent；沙盒隔離的 agent 可透過共用套件快取留訊息互相影響，已具備兩要素；換成 email／Slack／共用文件等管道風險更明顯
+- **性質判斷**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」09-02／09-27／09-30 自我複製提示注入系列敘事，屬同一收斂點再一次佐證而非新收斂點，暫不更動訊號表（已滿 8 列）；非具名 Claude／Anthropic 產品事件，不列入「## 現在還擋不住的攻擊」表
+- ❓ **待查證**（標 2026-10-01｜查 Matthew Green、package cache、沙盒隔離）：具體是哪個實驗、哪些 agent 平台、沙盒隔離的設定細節、是否已有廠商回應均未見原文全文
+- **可信度評估**：Simon Willison 具名引述密碼學學者 Matthew Green 觀點，RSS 摘要含實質內容（非僅標題），惟非 Claude/Anthropic 專屬事件，通用 agent 安全論述定向收錄
 
 ### Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱進階網路攻擊能力擴散門檻已跨越（2026-09-30 新增）
 
@@ -1102,6 +1110,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-01
+- **[📋 新增] Simon Willison 引述 Matthew Green：沙盒隔離 agent 透過共用套件快取留訊息，已具備蠕蟲傳播兩要素**：呼應既有自我複製提示注入敘事，非具名 Claude 事件，詳見「## 技術彙整」
 
 ### 2026-09-30
 - **[📋 新增，非 Claude 事件] Anthropic Frontier Red Team：GLM-5.3 達成完整控制流劫持，官方稱能力擴散門檻已跨越**：HN 239 分、4 個來源同日報導，GLM-5.3 4% vs Claude Mythos Preview 6%，詳見「## 技術彙整」

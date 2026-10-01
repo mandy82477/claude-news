@@ -30,18 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新動態**（2026-09-30）
-> - Claude Code v2.1.285 發布：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具、`claude --desktop` 指令，企業管理者可限制可用的 API 供應商。
-> - 桌面版文件補充：終端機關閉 session 後，於桌面版輸入 `/resume` 可接續同一對話（非複本），`claude --resume` 在終端機仍找得到同一 session。
+> **最新動態**（2026-10-01）
+> - Claude Code v2.1.286 發布：權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援。
+> - 同版 build 新增 8 個功能候選旗標，`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，追蹤見 [[topics/claude-code-experimental]]。
+> - 桌面版文件更新：`claude --desktop` 可於終端機直接開啟桌面版；本機與雲端 session 載入 claude.ai 帳號已啟用的 skills；plugins 可依帳號、專案或僅本機範圍設定。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.286**（2026-09-30）：權限提示堆疊多筆請求時新增「2 of 5」這類計數顯示；全螢幕模式下清單的「N more」列新增滑鼠支援（可點擊展開）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）。
+  同版 build 另新增 8 個功能候選旗標，`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.285**（2026-09-29）：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具；新增 `claude --desktop` 指令，於目前目錄開啟 Claude 桌面版；企業管理者可限制可用的 API 供應商（官方原文截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）。
   同版 build 另新增 9 個功能候選旗標，另有 7 個舊版旗標（6 個 `DIR_SYNC` 家族＋代號旗標 `PARCHMENT_FERN`）消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.283**（2026-09-25）：新增 `x-claude-code-prompt-id` 閘道提示標頭，讓 LLM gateway 能把同一使用者提示產生的多筆請求歸為一組；需設 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.283)）。
@@ -61,6 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-01）：桌面版文件新增說明——終端機執行 `claude --desktop` 可直接開啟桌面版，不先啟動終端機 session；本機與雲端 session 皆載入 claude.ai 帳號已啟用的 skills；plugins 可依使用者帳號、特定專案或僅本機範圍設定（文件字數 82,443→83,575）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 流程——終端機關閉 session 後，桌面版 `/resume` 選取該 session 即可接續同一對話（非複本），`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -84,6 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-10-15）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：單一來源、原文無摘要，產品形式與正式性未見官方佐證。
 - ❓ **待查證**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-01）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**：僅標題可用，產品形式與適用方案未知。
 - ❓ **待查證**（標 2026-09-15｜查 Claude for Excel、Claude for Word｜複 2026-09-29）｜**5 份官方文件同日移除 Claude for Excel／Word／PowerPoint／Outlook／M365 整合段落**：同批新增 Salesforce in Claude（beta）公告，是否代表該批整合已下架尚未見官方佐證。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
@@ -195,8 +200,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（57 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（59 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
+- 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
 - 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code agent 於約 100 秒內刪除 48,000 個檔案，事後主動道歉（TechRadar，2026-09-27，僅標題可用）**：報導稱使用者的 agent session 極短時間內刪除近五萬檔案並主動致歉；觸發指令與版本未載，官方未回應。與 v2.1.183 破壞性 Git 指令封鎖不同範疇，該防護未涵蓋一般檔案刪除。
 - 🔴 **未修復**｜**子代理無限遞迴，token 用量暴增（GitHub issue #68619，官方標 CRITICAL，累積 33 則留言、22 個讚，2026-09-26）**：無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖，子代理工作成果遺失；官方尚未給修復時程。
@@ -273,8 +280,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（11 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（12 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**功能請求：Cowork 專案可移除已加入的本機資料夾（GitHub issue #40043，累積 32 則留言、103 個讚，2026-10-01）**：使用者呼籲 Cowork 專案的 context 能移除已加入的本機資料夾，目前僅能新增無法移除；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後 session 全部消失；#59248 Cursor 擴充套件保留清理悄悄刪光紀錄（累積 47 則留言、36 個讚，2026-09-19 互動數更新）。與「Session 30 天自動刪除」（⛔，有預警）不同；官方尚未回應任一則。
 - 🔴 **未修復**｜**功能請求：刪除 Claude Code session（GitHub issue #13514，累積 47 則留言、110 個讚，2026-08-17）**：使用者呼籲提供刪除既有 session 紀錄的機制，目前僅能保留或 resume，無法主動清除不需要的 session；官方尚未回應或排入路線圖。
 - ⛔ **官方拒修**（NOT_PLANNED，2026-05-25）｜**功能請求：跨 session 持久記憶（GitHub issue #14227，累積 34 則留言、11 個讚，2026-08-09）**：使用者反映 Claude Code 每次啟動皆從零開始，缺乏跨 session 記憶；與跨 compaction 記憶訴求（issue #34556）、彙整提案 #47023 同屬記憶延續性缺口；官方標記 NOT_PLANNED 不排入路線圖。
@@ -327,8 +335,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（72 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（73 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
@@ -483,6 +492,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.286** | 2026-09-30 | 權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）|
+| **anthropic-sdk-python v1.11.0** | 2026-09-30 | Features：新增 list spend limits endpoint，可透過 API 查詢支出限額設定（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0)）|
+| **anthropic-sdk-typescript google-cloud-sdk v0.0.17** | 2026-09-30 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.17)）|
+| **anthropic-sdk-typescript vertex-sdk v0.20.2** | 2026-09-30 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.2)）|
 | **v2.1.285** | 2026-09-29 | 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 關閉 WebFetch；新增 `claude --desktop` 開啟桌面版；企業可限制 API 供應商（原文截斷，見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）|
 | **v2.1.284** | 2026-09-28 | Claude Sonnet 5.5（`claude-sonnet-5-5`）成 API 預設 Sonnet 模型，見 [[entities/sonnet-5-5]]；新增「Yes, but ask」功能，行為未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)）|
 | **anthropic-sdk-python v1.9.0** | 2026-09-28 | Features：新增 `between_tools` thinking type 的 API 支援（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0)）|

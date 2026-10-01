@@ -29,20 +29,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-27
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新企業採用異動**（2026-09-17）
-> - **JPMorgan Chase 美國本部導入 Claude，設 $2,000 支出上限與額外資安控管**：Business Insider 報導，具體工具範疇未見（詳見使用現況表新增列）。
+> **最新企業採用異動**（2026-10-01）
+> - **Barclays 擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%**：2027 年擴及多數軟體工程師，Anthropic 官方、Bloomberg、PYMNTS 同日報導（詳見使用現況表新增列）。
 
 ## 摘要
 
-**目前追蹤 45 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行**（最新異動見頂部 callout，2026-09-15）。
+**目前追蹤 46 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行**（最新異動見頂部 callout，2026-10-01）。
 
 追蹤各大型企業目前正在使用的 AI 編碼工具，以及工具選擇的變化軌跡。資料來源為公開報導與內部消息洩露，僅記錄有明確來源佐證的事實。
 
 **近期新增／擴大採用：**
 
+- **Barclays**：擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師
 - **Google**：開放全體工程師使用 Claude（Business Insider），具體工具範疇未見細節
 - **Rubrik**：發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序
 - **T. Rowe Price**：資產管理公司，擴大在投資流程中使用 Claude 與 Claude Code
@@ -81,6 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
 | JPMorgan Chase（美國本部） | 頂尖 | Claude（未指明是否限 Claude Code） | ✅ | — | Business Insider 報導導入 Claude 並設 $2,000 支出上限與額外資安控管；與香港分行因出口管制退出（見下方 06-18 列）為不同辦公室 | 2026-09-17 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
 | Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；為既有 Claude Code agent（06-30）之外另一產品線，具體效能數字未見報導 | 2026-09-15 |
@@ -135,6 +137,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
+- **Barclays（10-01）**：官方宣布擴大合作導入 Claude 全行，加速軟體開發、現代化系統；目標 2026 年底採用率達開發者族群 50%、2027 年擴及多數工程師，預算未見報導（Anthropic Blog；Bloomberg；PYMNTS）
 - **JPMorgan Chase 美國本部（09-17）**：Business Insider 報導導入 Claude 並設定 $2,000 美元支出上限、額外資安控管；與香港分行因出口管制退出（06-18）屬不同辦公室，具體工具範疇、控管粒度未見報導（Google News/Business Insider）
 - **T. Rowe Price（09-10）**：PR Newswire 官方新聞稿宣布資產管理公司 T. Rowe Price 擴大在投資流程中使用 Claude 與 Claude Code，marketscreener.com 同日獨立跟進報導；僅新聞稿標題層級資訊，具體整合部門、規模、應用場景均未見細節（Google News/PR Newswire）
 - **PicPay（09-04）**：PYMNTS.com 報導巴西金融科技公司 PicPay 宣布導入 Anthropic Claude，用於處理銀行相關客服詢問；是拉丁美洲市場首見具名金融科技公司採用案例，延續本頁既有金融產業具名採用趨勢（Grasshopper Bank、iCapital、Millennium 等），惟具體整合方式（Claude API 直接串接客服系統或透過第三方平台）、涵蓋語言、上線範圍均未見報導細節，僅標題可用（Google News/PYMNTS.com）
@@ -158,7 +161,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
-| Claude Code | 8 使用中（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price）+ 1 縮減中（Uber）+ 2 退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
+| Claude Code | 9 使用中（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price、Barclays）+1縮減中（Uber）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
 | Claude API | 31（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
@@ -183,6 +186,11 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ---
 
 ## 時序
+
+### 2026-10
+
+#### 2026-10-01
+- **[新增具名企業，✅ 使用中] Barclays 擴大導入 Claude Code 全行，目標 2026 年底採用率達 50%**：2027 年擴及多數工程師，詳見上方使用現況表新增列（Anthropic Blog；Bloomberg；PYMNTS）
 
 ### 2026-09
 

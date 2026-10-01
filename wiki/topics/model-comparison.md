@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新對照更新**（2026-09-28）
-> - **主力平衡換代**：[[entities/sonnet-5-5|Sonnet 5.5]] 發布，取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3%→70.6%（官方，2026-09-28）。
-> - **公開陣容**：Fable 5.1 > [[entities/opus-5-5|Opus 5.5]] > [[entities/sonnet-5-5|Sonnet 5.5]] > Sonnet 4.6 > Haiku 4.5；Sonnet 5、Opus 5 / 4.8 / 4.7 皆已被取代。
+> **淘汰通知傳聞**（2026-10-01）
+> 單一來源報導稱 Anthropic 已將 Sonnet 4.5 標記淘汰、給 61 天轉移通知期，僅比最低保留期多 1 天；待官方文件確認，見下方時序。
 
 ---
 
@@ -184,6 +183,7 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 
 ## 時序（陣容變化）
 
+- 2026-10-01：❓ **待查證**（標 2026-10-01｜查 Sonnet 4.5、61 days）｜**Sonnet 4.5 淘汰通知期**：mixed-news.com 報導稱 Anthropic 已將 Sonnet 4.5 標記淘汰，給予 61 天轉移通知期，報導稱僅比官方設定的最低保留期多 1 天；單一來源，待官方文件或 changelog 確認
 - 2026-09-28：**Sonnet 5.5 發布**，取代 Sonnet 5 成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3% 升至 70.6%
 - 2026-09-23：**Opus 5.5 發布**，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價 $4/$20（降 20%），官方稱運算成本降 40%
 - 2026-09-01：**Fable 5.1 發布**，取代 Fable 5.0 成為公開陣容旗艦；Mythos 5.1 同步發布，維持信任機構限定存取

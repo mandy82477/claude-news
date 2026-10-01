@@ -7056,3 +7056,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   1. entities/opus-5-5「跟它怎麼說話」節暫放佔位句，需查證官方 Opus 5.5 prompting／migration 一手文件後補寫
   2. 「GPT-6.1 Sol 基準測試聲稱超越 Opus 5.5」為流出、未經獨立驗證的消息，模型記者建議登記為 topics/model-task-leaderboard 下次週更比對候補
   3. wiki/feature-radar.md「⚠️ 從你現在的版本升上去」表頭注記「核對到 v2.1.269，2026-09-12」仍與表格實際內容不同步（延續自更早的待辦），雲端環境 egress 受限無法自行 WebFetch 官方 CHANGELOG.md 查證，建議下次有網路存取的 session 逐版核對後補寫
+
+## 2026-10-01 Ingest
+
+- 來源日報：[[news/2026-10-01]]
+- 更新頁面：
+  - 模型：entities/sonnet-5-5、entities/opus-5-5、topics/model-comparison
+  - 功能：entities/claude-code、topics/claude-code-experimental、topics/long-context-1m、topics/official-community-gap
+  - 商業：topics/anthropic-business、topics/enterprise-tool-tracker、entities/pricing、topics/competitor-landscape
+  - 安全政策：topics/anthropic-government-policy、topics/ai-agent-safety
+  - 社群：topics/community-tech-patterns、topics/code-quality-decline
+  - 人物：entities/dario-amodei
+  - 投資分析：topics/market-signals
+  - 主編：wiki/index.md（新增 entities/yann-lecun、entities/fei-fei-li 兩列；topics/long-context-1m 狀態 monitoring→ongoing）
+- 新增頁面：entities/yann-lecun、entities/fei-fei-li
+- 摘要：Barclays 宣布擴大導入 Claude（Claude Code 目標 2026 年底涵蓋 50% 開發者）；Reuters 獨家披露 Broadcom 擬貸款 Anthropic 最高 420 億美元租賃晶片（循環投資模式）；AI「教父」Yann LeCun 公開批評 Dario Amodei 看待 AI 風險的方式；GitHub Issue 回報 1M context session 下三種機制會靜默清除工具結果（#42542）
+- 呈現品質：全部通過
+- 分類回退：無
+- devpractice 沉澱：候選 1 筆（topics/code-quality-decline 新增 LiveNerf 即時基準測試，追蹤 Opus 5.5 表現是否隨時間變化；本站尚未查證其方法論）
+- market 判讀：判讀 2 則（Broadcom 擬貸款 Anthropic 420 億美元租賃晶片／類3；Barclays 擴大導入 Claude Code 全行、首見量化採用率目標／類4），新增可交易標的 2 列（NASDAQ:AVGO、NYSE:BCS）
+- 轉知帳本：結案 H-d8087d（人物：已建 entities/fei-fei-li）；新開 H-30f7ac（社群→功能：評估今日 6 則新社群工具是否應列入 official-community-gap 產品化矩陣）、H-7fbb0c（人物→商業：topics/ai-talent-flow.md 待補 [[entities/fei-fei-li]] 正向 wikilink 完成互連）；H-fe8019、H-7c3708、H-e8e1fd 維持 open（功能／模型記者再次評估，理由成立不予處理，詳見各自回報）
+- 品質備註：[人物][商業] 兩位記者回報的「來源歸因」欄各有一行 URL 與原料不符（人物：entities/fei-fei-li 的 Topic Watch URL 誤抄；商業：civilian agencies／The Decoder 的 URL 字首誤植），主編彙整時已對照 `src/gathered_items.json` 核實並訂正後才落帳，兩頁內文本身無誤；[社群] 「Show HN: Loopback proxy for Claude Code」（reflex-router，HN 2 分）記者摘要未逐一點名排除理由，但依其互動門檻判準（社群工具 HN <10 分一般排除）屬同一邏輯下的合理排除，未另行查證
+- 📋 待使用者確認：
+  1. [商業] entities/pricing「當前生效的計費規則」待查證：官方 Manage usage credits 文件新增「How do I pay for my Claude API usage?」段、移除 Public Sector FAQs 與 Team/Enterprise usage analytics 段，具體規則異動內容需查證一手來源後補寫
+  2. [商業] entities/pricing「事故現在還在發生嗎」表已滿載（6/6）且全數活躍，今日 Anthropic Status 新增一筆 credit purchase 入帳延遲通報（🔴）因表滿無法入列；候選讓位者 #5088（最後動態 09-04，距今 27 天、未滿 90 天無後續門檻）暫不可逕自讓位，請裁示處置方式
+  3. [模型] topics/model-comparison 新增 ❓ 待查證標記：mixed-news.com 報導稱 Anthropic 將 Claude Sonnet 4.5 標記淘汰、給予 61 天轉移通知期（僅比最低保留期多 1 天），單一來源，待查證官方 Changelog／Models overview 後三選一處置（複查日 2026-10-15）
+  4. reader-notes.md 有 3 筆 ⏳ 項目已逾 14 天未結案（2026-07-12 GPT-5.6/GPT-6 Astra 跑分對照缺口；2026-08-08 ×2：LLM code review 單位成本、codebase map/agent 記憶格式規約），供下次週度回顧處理

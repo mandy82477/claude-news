@@ -3,10 +3,10 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-26"
-last_news_update: "2026-09-24"
+last_updated: "2026-10-01"
+last_news_update: "2026-10-01"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 0
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
@@ -28,20 +28,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-09-26
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **新增一列：Linear 整合官方仍無對應**（2026-09-24）
-> GitHub issue #12925（指派 Linear 工單給 Claude Code 觸發雲端 agent）累積 146 讚、本日反應數最高功能請求；官方僅支援 GitHub Issues 指派，Linear 尚無原生對應，社群已自接 Linear MCP＋Lanes MCP 橋接。
-> 09-23：`CLAUDE_CODE_SUBAGENT_MODEL` 可統一指定 subagent／teammate／workflow agent 的預設模型，個人端仍只有「固定指定」。
+> **新增一列：Cowork 專案無法移除已加入的本機資料夾**（2026-10-01）
+> GitHub issue #40043 累積 32 則留言、103 個讚；Cowork 專案 context 目前只能新增本機資料夾，無移除機制，官方尚未回應。
 
 ## 摘要
 
-**2026-09-24 新增一列，官方仍無對應**：指派 Linear 工單給 Claude Code 觸發雲端 agent（issue #12925，146 讚）——官方僅 GitHub Issues 支援此模式，Linear 尚無原生對應。
+**2026-10-01 新增一列，官方仍無對應**：Cowork 專案無法移除已加入的本機資料夾（issue #40043，103 個讚）——目前僅能新增，無移除機制。
 
 本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，答案不在本頁**——看 [[topics/community-tech-tools]]「我卡在這裡」；官方積木各自怎麼用、怎麼疊看 [[topics/anthropic-agent-stack]]；學術文獻主張與 Claude Code 現況的落差是另一個視角，見 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]]。
 
-17 個痛點裡，4 個官方目前沒有任何對應、7 個補了一半、6 個已經能直接用。
+18 個痛點裡，5 個官方目前沒有任何對應、7 個補了一半、6 個已經能直接用。
 
 ---
 
@@ -53,6 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你痛的是什麼 | 官方補了沒 | 官方給的是什麼 | 還缺什麼、你現在能怎麼辦 | 核對日 |
 |---|---|---|---|---|
+| Cowork 專案想移除已加入的本機資料夾 | ❌ | 無——Cowork 專案目前只能新增本機資料夾，截至 2026-10-01 官方文件未見移除機制 | 社群提出刪除／重新整理需求待補；issue [#40043](https://github.com/anthropics/claude-code/issues/40043) 累積 32 則留言、103 個讚 | 2026-10-01 |
 | CLAUDE.md 寫了它不聽 | ❌ | 沒有強制生效的機制，只有一支健檢：`/doctor prompt-audit`（v2.1.283）掃 CLAUDE.md／skills／agents／commands，先列失效路徑、失效指令與互相牴觸的指示檔 | 官方給的是「找出哪裡寫壞了」，不是「保證它會照做」；為什麼一直沒補見下一節 | 2026-09-26 |
 | 用 AI 寫久了技能退化、技術債變快 | ❌ | 無——截至 2026-09-19 官方文件未見，官方公開說法的方向與此相反 | 你能做的是自己量，見下一節 | 2026-09-19 |
 | 想在一個地方操作好幾家 agent | ❌ | 無——官方只管 Claude Code 自己的 session，截至 2026-09-19 官方文件未見 | 只有社群工具，08-24 起一個月冒出 10 款 ⟨G-11⟩ | 2026-09-19 |
@@ -194,6 +194,9 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[entities/claude-code]] — Claude Code 現在有哪些毛病、哪些修了，以及每個 issue 的留言與讚數
 
 ## 時序
+
+### 2026-10-01
+- **新增一列：Cowork 專案想移除已加入的本機資料夾**：GitHub issue #40043 累積 32 則留言、103 個讚；Cowork 專案 context 目前僅能新增本機資料夾，無移除機制，官方尚未回應。表由 17 列增為 18 列。
 
 ### 2026-09-24
 - **新增一列：Linear 整合觸發雲端 agent**：GitHub issue #12925 累積 146 讚（本日反應數最高功能請求），僅 GitHub Issues 支援指派觸發雲端工作流，Linear 官方尚無對應；社群已有 Linear 官方 MCP＋本地 Lanes MCP 的橋接做法。表由 16 列增為 17 列。

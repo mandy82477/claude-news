@@ -30,12 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-09-28
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新計費政策異動**（2026-09-28）
-> - **Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 API／Claude Code 預設**：牌價維持 $2/$10 per Mtok，支援 1M context，快取讀取低至 $0.20/Mtok（Reuters；[官方](https://www.anthropic.com/claude-sonnet-5-5)）。
-> - **Plans & Pricing 頁 Batch processing 示範模型換代**：從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5，屬頁面範例更新，非費率變動（Official Docs）。
+> **最新計費政策異動**（2026-10-01）
+> - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見下方「事故現在還在發生嗎」。
 
 ## 現況
 
@@ -256,6 +255,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-10-01：Anthropic Status 官方通報——credit purchase 入帳延遲，部分請求因餘額不足失敗
+
+- **Anthropic Status（[status.claude.com/incidents/k0h22tsvnydg](https://status.claude.com/incidents/k0h22tsvnydg)，2026-10-01 16:20 UTC，Investigating）**：官方通報 Claude API 與 platform.claude.com 效能降級，credit purchase 入帳延遲，造成部分請求因餘額不足失敗；修復時間未載。
+
+%% 維運備忘：未列入總表，表滿載；候選讓位者 #5088（Max 5x 續訂扣款停用，最後動態 09-04，距今 27 天、未滿 90 天無後續門檻）——按規則不得逕自讓位，回報標⚠️計費事故表滿載且全數活躍 %%
 
 #### 🔴 2026-09-21：新 GitHub Issue #37394——Max Plan 用量觸頂速度異常快，與 #16157／#38335 同類回報的第三個獨立 issue
 

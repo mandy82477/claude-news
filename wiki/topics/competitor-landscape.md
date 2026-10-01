@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **本週衝擊**（2026-09-30）
-> - 🔴 **GitHub Copilot GA 功能預設開啟，Microsoft 同步推 all-in-one Copilot app**：企業帳號全域預設開啟（09-24 官方）；新 App 整合商用 AI 劍指 Anthropic／OpenAI（09-25）——Claude 缺對應統一入口，企業採購比較時會被問到。
+> **本週衝擊**（2026-10-01）
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
+> - 🟡 **Google DeepMind 發布 Gemini 4 Argon，主打 agentic software engineering 與資安防禦**（09-30，官方，限量開放）——暫無法直接比較，全面開放後再評估是否影響 Claude Code 選型。
 
 ---
 
@@ -56,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
-| **Google（Gemini）** 🏢 | Gemini 3.8 Live 新增 Live Avatar 即時視覺化身，鎖定企業客服與互動導覽（09-25）→ Claude 無同類功能，語音場景外再添對照維度 | 能力 | 🟡 | DeepMind 官方部落格一手；Live Avatar 上線時程、定價未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
+| **Google（Gemini）** 🏢 | 發布 Gemini 4 Argon，主打 agentic coding／資安防禦，先限量開放 Fairwind Program（09-30）→ 暫無法比較，待全面開放後再評估 | 能力 | 🟡 | DeepMind 官方部落格一手；效能數字、GA 時程、定價均未見公布，僅限量測試者（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
@@ -217,6 +217,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-01
+- **Google DeepMind**：發布新一代前沿模型 Gemini 4 Argon，主打 agentic software engineering、企業知識工作與資安防禦場景，先限量開放 Fairwind Program 予受信任網路防禦者；詳見「對手雷達」Google 列更新（Blog/Google DeepMind Blog）
+- **OpenAI**：發布 Albertsons Cos. 導入 ChatGPT Enterprise 與 OpenAI API 案例，用於加速內部團隊工作與零售流程；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
+- **OpenAI（透過比較報導）**：TechRepublic 發表 Claude Code vs OpenAI Codex 選型比較文，主張優劣不只看跑分；具體論點與數字未見報導，僅標題可用（Google News/TechRepublic）
 
 ### 2026-09-30
 - **Google DeepMind**：發布 SynthID Bio 概念驗證，為 AI 生成蛋白質嵌入浮水印同時保留生物功能；非編碼／模型層競品，不進「對手雷達」表（Blog/Google DeepMind Blog）

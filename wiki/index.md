@@ -85,6 +85,8 @@
 | [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 創辦人，2026-09-23 向 NDTV 稱 OpenAI、Anthropic「可以放慢腳步」（僅標題可用） |
 | [[entities/joe-lonsdale]] | person | 👤 人物 | active（單一來源） | Anthropic 投資人；2026-09-25 向 Reuters 稱 AI 公司渲染風險是為了影響政策走向（僅標題可用） |
 | [[entities/thariq-shihipar]] | person | 👤 人物 | active（單一來源） | Anthropic Claude Code 團隊成員；此前具名證實 Opus 5／Fable 5 系統提示詞精簡、澄清中國偵測機制爭議；2026-09-29 接受 Latent Space 專訪（僅標題可用） |
+| [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune；僅標題可用） |
+| [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
 
 ---
 
@@ -94,7 +96,7 @@
 
 | 頁面 | 領域 | 狀態 | 摘要 |
 |------|------|------|------|
-| [[topics/long-context-1m]] | 🛠️ 工具/功能 | monitoring | 1M context 的計費與控制權：加不加價看模型世代（舊世代 ×2 輸入）、Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失　↳ 子故事：[[topics/long-context-1m-archive]] |
+| [[topics/long-context-1m]] | 🛠️ 工具/功能 | ongoing | 1M context 的計費與控制權：加不加價看模型世代（舊世代 ×2 輸入）、Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失；10-01 新增靜默清除工具結果 bug（#42542）　↳ 子故事：[[topics/long-context-1m-archive]] |
 | [[topics/claude-code-experimental]] | 🛠️ 工具/功能 | ongoing | Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272 |
 | [[topics/model-comparison]] | 🤖 模型 | ongoing | 模型選型對照：「我該用哪個 Claude 模型、換一個實付差多少」單一入口——快速選型表、情境推薦、換代成本換算；跨家排名指向榜單頁 |
 | [[topics/model-task-leaderboard]] | 🤖 模型 | ongoing | 🗓️ 週更 任務 × 跨家模型領先者快照：「做某類任務目前哪家最強」——18 類任務的活榜單每週速讀＋各榜評比方式索引；跨家排名的終點在這頁，Claude 家內選型見模型選型對照 |

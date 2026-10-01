@@ -1,12 +1,12 @@
 ---
 page: "topics/long-context-1m"
 kind: "topic"
-status: "monitoring"
+status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-20"
-last_news_update: "2026-09-02"
-status_main: "monitoring"
-days_since_news: 28
+last_updated: "2026-10-01"
+last_news_update: "2026-10-01"
+status_main: "ongoing"
+days_since_news: 0
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
@@ -25,15 +25,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 1M context：加不加價、你能不能關
 
-**狀態：** monitoring
+**狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **別名：** 1M context window, long context, `[1m]`
 **開始日期：** 2026-04-10
-**最後更新：** 2026-09-20
-**最後新聞更新：** 2026-09-02
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新動態**（2026-09-02）
-> `[1m]` 變體遭覆蓋（#79337）互動數更新至 76 則留言、26 個讚，已持續逾 6 週未解——排除官方 07-20「誤判」定性下應已消退的可能性，「選定狀態保不住」缺口比原先認定的更頑固。此前接續動態：選用 opus-plan 模型時即使已達成 1M context 資格仍被要求另開用量額度（#61869）——「資格達成」與「計費閘門」互相打架的訊號再添一筆，繼「狀態列顯示不準」（08-29，#61734，24 則留言）與「Pro 預設開啟關不掉」（08-25，62 則留言）之後。四者官方均未回應。
+> **最新動態**（2026-10-01）
+> GitHub issue #42542（28 則留言、11 個讚）指出 1M context session 下三種獨立機制（microcompact、cached microcompact、session memory compact）會在未通知使用者的情況下清除工具結果——「你看不出自己在不在 1M 上」的控制權缺口再添一筆：這次連「東西還在不在」都可能被靜默清除而不自知。官方尚未回應。
 
 ---
 
@@ -57,7 +57,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 你控制不了的地方
 
-即使費率不加價，**你是否走在 1M 上這件事本身不完全由你決定**——四條獨立的社群回報指向同一個缺口，而最後一條讓前三條更難自救：**你連自己現在在不在 1M 上都看不準**。
+即使費率不加價，**你是否走在 1M 上這件事本身不完全由你決定**——五條獨立的社群回報指向同一個缺口：**你連自己現在在不在 1M 上都看不準**，最新一條更進一步，連「東西還在不在」都可能被靜默清除而不自知。
 
 | 現象 | 證據 | 狀態 |
 |---|---|---|
@@ -66,8 +66,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **`[1m]` 後綴自成一個模型 id**，會影響配額判定 | 受影響帳號存的是 `claude-fable-5[1m]`；[#79337](https://github.com/anthropics/claude-code/issues/79337) Max 誤判需買 credits，即使 session 已存 `[1m]` 設定仍遭覆蓋 | 官方 07-20 定性為誤判，但問題持續未解，社群回報延燒逾 6 週至 09-02（累積 76 則留言、26 個讚）|
 | **你看不出自己在不在 1M 上**——狀態列對 Sonnet 4.6 顯示 200k，而該模型實際支援 1M | [#61734](https://github.com/anthropics/claude-code/issues/61734)，24 則留言，2026-08-29 | 🔴 官方未回應 |
 | **已達 1M 資格仍要求另開用量額度**（opus-plan 模型）| [#61869](https://github.com/anthropics/claude-code/issues/61869)，2026-08-30 開立 | 🔴 官方未回應 |
+| **工具結果在未通知下被靜默清除**——三種機制（microcompact、cached microcompact、session memory compact）| [#42542](https://github.com/anthropics/claude-code/issues/42542)，28 則留言、11 個讚，2026-10-01 | 🔴 官方未回應 |
 
-各條的完整脈絡：第一、二、四條見 [[entities/claude-code]] 的已知問題，第三條見 [[entities/fable-5]]。模型釘選的跨機制敘事見 [[topics/code-quality-decline#模型釘選：你選的不一定算數（2026-02 起）]]。
+各條的完整脈絡：第一、二、四、五條見 [[entities/claude-code]] 的已知問題，第三條見 [[entities/fable-5]]。模型釘選的跨機制敘事見 [[topics/code-quality-decline#模型釘選：你選的不一定算數（2026-02 起）]]。
 
 > **這件事對成本估算的意義：** 任何「我選了 X 模型所以會花 Y」的估算，都預設了「我選的算數」。上表三條說明這個前提有缺口，估算前先確認釘選是否成立。
 
@@ -91,6 +92,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/code-quality-decline]] — 模型釘選訊號群
 
 ## 時序
+
+### 2026-10-01
+[#42542](https://github.com/anthropics/claude-code/issues/42542)（28 則留言、11 個讚）：回報者整理出三種獨立機制——microcompact、cached microcompact、session memory compact——皆會在未通知使用者的情況下清除 1M context session 中的工具結果，使用者無從得知資料已被移除；官方尚未回應。
 
 ### 2026-09-02
 [#79337](https://github.com/anthropics/claude-code/issues/79337) 互動數更新（76 則留言、26 個讚）：使用者確認即使 session 已存 `claude-fable-5[1m]` 設定，仍會被靜默覆蓋並要求額外 usage credits——排除「使用者未正確設定」的可能，官方 07-20 的「誤判」定性與實際持續時間（逾 6 週）不符，官方尚未再次回應。

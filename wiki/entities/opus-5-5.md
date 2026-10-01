@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-09-30"
-last_news_update: "2026-09-30"
+last_updated: "2026-10-01"
+last_news_update: "2026-10-01"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **寫作風格**（2026-09-30）
-> VentureBeat 稱 Opus 5.5 回覆的 em-dash 用量降 99%、讀來更像真人，但同一批測試仍測得 2,548 處「AI 寫作特徵」（方法論未載，不採信推算）。
+> **社群觀感分歧**（2026-10-01）
+> r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天表現極佳、近日開始在原本能處理的複雜任務上失手；無量化指標，弱訊號。
 
 ---
 
@@ -90,6 +90,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **快取讀取 $0.20 是降 60%**（Opus 5 為 $0.50），與牌價降 20% 分開看。
 - **HN 討論**（1,674 分，7 個來源同日交叉報導，2026-09-22）：屬互動量訊號，非能力數字。
 - **社群反應正向但屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)稱程式碼品質與可控性優於前代；另兩則（[複現實測](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)、[原展示貼文](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)）以約 $3–4 API 花費重現 Opus 5.5 專案。三則皆單則貼文、0 留言、無測試方法或量化指標，不構成獨立複測。
+- **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；貼文未附測試方法或量化指標、0 留言，屬主觀觀感回報，不構成已驗證的能力下降，與上一則正向回饋並陳不選邊。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
 
@@ -154,9 +155,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Reddit r/ClaudeAI：Jaw literally dropped...](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)（週熱門，2026-09-24）
 - [Reddit r/ClaudeAI：Made entirely with Opus 5.5 + $3.21 of OpenRouter API usage](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)（週熱門，2026-09-23）
 - [Google News/VentureBeat：Claude Opus 5.5 uses em-dashes 99% less often and sounds more human — but still exhibits 2,548 AI writing tells](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)（2026-09-30）
+- [Reddit r/ClaudeAI：Opus 5.5 nerfing - how to measure, how to spot, how to sue](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)（週熱門，2026-10-01）
 - [[news/2026-09-23]]
 - [[news/2026-09-27]]
 - [[news/2026-09-30]]
+- [[news/2026-10-01]]
 
 ## 歷史記錄
 
@@ -164,11 +167,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-01 | Reddit 週熱門貼文稱上線前 5–6 天表現佳、近日起在複雜任務上失手，無量化指標，弱訊號 |
 | 2026-09-30 | VentureBeat 稱 em-dash 用量降 99%、仍測得 2,548 處 AI 寫作特徵（方法論未載）|
 | 2026-09-23 | 正式發布（官方日期 09-22），取代 Opus 5 成為預設 Opus；牌價降 20%、官方稱運算成本降 40%；具名基準表見「這些數字是誰量的」（2026-09-25 查證）|
 
 **歷史記錄細節**
 
+- **2026-10-01**：Reddit r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天在複雜任務（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)，2026-10-01；0 留言，無測試方法或量化指標，屬主觀觀感回報，不採信推算是否構成能力下降）
 - **2026-09-30**：VentureBeat 報導稱 Opus 5.5 回覆的 em-dash 用量較前代降 99%、讀起來更像真人，但同一批測試仍測得 2,548 處其他「AI 寫作特徵」（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30；原文僅標題可讀，方法論未見完整記載，不採信推算）
 - **2026-09-23**：Anthropic 發布 Claude Opus 5.5，Claude Code v2.1.280 設為預設 Opus（[Anthropic](https://www.anthropic.com/claude-opus-5-5)；[GitHub](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)，2026-09-23）
   - 1M context、128K 最大輸出，牌價 $4／$20 每 Mtok、快取讀取 $0.20／Mtok（官方 5%）；Pro／Max 用量上限同步調高（[MIXED Reality News](https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits/)，2026-09-23）

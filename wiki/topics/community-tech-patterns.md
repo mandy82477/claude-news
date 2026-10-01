@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-01
+**最後新聞更新：** 2026-10-01
 
-> **最新工作流模式**（2026-09-30）
-> - **Plugin／MCP 整合添廣告數據源**：google-ads-meta-ads-mcp 把 Google Ads、Meta Ads、GA4、Search Console 整進單一免費託管 MCP。
-> - **創意工具、模型路由各添一例**：video-talkcraft（配音驅動動態設計）、jev-router（選最便宜模型）。
-> - **視覺工具箱首見**：agent-vision-toolkit 為純文字模型補圖片問答、截圖 OCR 能力。
+> **最新工作流模式**（2026-10-01）
+> - **記憶與知識管理添兩例**：deja-vu（免 LLM 搜尋既有 session 歷史）、hippo-memory（標記錯誤即停止重複的糾錯型記憶）。
+> - **創意工具 Agent 整合添一例**：universal-modder 把反組譯分析與 fal 生成素材整進遊戲改裝流程。
+> - **跨工具能力宣告、訂閱橋接各一則**：infragate/capa 用單一 YAML 接進 30 餘款 agent；pi-claude-bridge 讓 pi.dev 取用 Claude Code 訂閱額度。
 
 ---
 
@@ -57,13 +57,13 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-08]]） | ✅ 成熟 | 2026-08-04 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、Stop Hook 通知、claude-code-hooks 外掛市集（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-06 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **記憶與知識管理** | claude-mem、OKF、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-01 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、Claude Code 作為 MCP 協調中心、docsagent、google-ads-meta-ads-mcp（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **記憶與知識管理** | claude-mem、OKF、second-brain-os、memmy-agent、agent-memory、EvoOntology 等（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-10 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、chess-postmortem-skills、video-talkcraft 等（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-30 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、video-talkcraft、universal-modder 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-01 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-27 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
@@ -162,6 +162,62 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 ## 技術彙整
 
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
+
+### 2026-10
+
+#### vshulcz/deja-vu：免 LLM 的跨 agent session 歷史搜尋記憶工具（2026-10-01）
+
+- **主線：** 索引記憶
+- **核心模式：** 直接搜尋 Claude Code、Codex、Cursor 等 30 餘款 agent 已存在本機硬碟上的 session 歷史，不呼叫 LLM、單一 Go binary 運作，號稱最準確、最便宜、最快；GitHub Search 1,113 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」一個「免 LLM、純搜尋既有 session 歷史」取向——既有做法多需額外寫入或結構化記憶，本則直接索引硬碟上已有的原始記錄；避免 agent 記不住跨 session 決策，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（1,113★），無 forks／issues／近期 commit 佐證可查，未另行查證；「最準確、最便宜、最快」為自述宣稱，未見第三方獨立複現。
+- **來源：** GitHub Search；[GitHub](https://github.com/vshulcz/deja-vu)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### kitfunso/hippo-memory：會學習「這是錯的」並停止重複犯錯的 agent 記憶系統（2026-10-01）
+
+- **主線：** 索引記憶
+- **核心模式：** 本機 SQLite 儲存＋MCP server，標記某則記憶為錯誤後不再出現、新事實覆蓋舊事實，可跨 session 持久保存；`hippo init` 可接進 Claude Code、Codex、Cursor、OpenClaw、OpenCode、Pi；GitHub Search 769 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「主動糾錯型記憶」取向——既有做法多是單向累積記憶，本則額外補上「標記錯誤即停止重複」的淘汰機制；大型 codebase 下避免 agent 重犯已知錯誤是直接痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（769★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/kitfunso/hippo-memory)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### rehan-remade/universal-modder：讓 Claude Code 改裝任意 PC 遊戲的 skills／工具組合（2026-10-01）
+
+- **主線：** —
+- **核心模式：** 整合 skills、工具與 fal MCP，讓 Claude Code 對任意 PC 遊戲進行偵查、反組譯分析、fal 生成美術／3D／音效、遊戲內測試與成果影片產出；GitHub Search 1,388 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、anything2explainer、chess-postmortem-skills、video-talkcraft）一個「遊戲改裝」取向，既有做法多聚焦單一風格影片或棋局分析，本則把反組譯分析與素材生成整進同一改裝流程；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,388★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/rehan-remade/universal-modder)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Louis-CFM/coucou：macOS 瀏海／Windows 螢幕頂端常駐的 Claude Code session 狀態小工具（2026-10-01）
+
+- **主線：** —
+- **核心模式：** 常駐 macOS 瀏海或 Windows 螢幕頂端的輕量小工具，持續顯示 Claude Code session 執行狀態，不必切回終端機確認進度；GitHub Search 2,268 星。
+- **與既有模式的關係：** 與「Agent 活動可視化」既有代表技巧 claude-office（像素風辦公室模擬）同屬「把 session 狀態搬出終端機」取向，但 coucou 走極簡狀態列而非空間模擬，機制差異較大，暫不併入既有列，留待第二個同形式實作出現再判斷（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（2,268★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Louis-CFM/coucou)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### infragate/capa：單一 capabilities.yaml 把能力宣告接進 30 餘款 AI coding agent（2026-10-01）
+
+- **主線：** —
+- **核心模式：** 用單一 `capabilities.yaml` 一次定義 skills、tools、rules、sub-agents、MCP servers 與 plugins，同步接進 Cursor、Claude Code、Codex、Windsurf、GitHub Copilot 等 30 餘款 AI coding agent，換工具不必重寫設定；GitHub Search 726 星。
+- **與既有模式的關係：** 與「CLAUDE.md 管理」既有代表技巧同屬「設定集中管理」取向，但既有做法鎖定單一工具（Claude Code）的規則品質與防腐爛，本則是跨 30 餘款工具的能力宣告標準化，服務對象不同，暫不併入既有列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（726★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/infragate/capa)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### elidickinson/pi-claude-bridge：讓 pi.dev 用 Claude Code Pro／Max 訂閱當推論來源（2026-10-01）
+
+- **主線：** —
+- **核心模式：** Pi 平台的 inference provider，讓 Claude Code 的 Pro／Max 訂閱額度可供 pi.dev 平台取用；GitHub Search 509 星。
+- **與既有模式的關係：** 本表既有類別聚焦 agent 工作流本身（Skills、Hooks、MCP、記憶、模型路由等），本則是訂閱額度跨平台接入的帳號層級橋接，不是工作流機制，不進模式概覽表；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（509★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始社群情緒標記為中性（😐），非一致正面評價。
+- **來源：** GitHub Search；[GitHub](https://github.com/elidickinson/pi-claude-bridge)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 ### 2026-09
 
