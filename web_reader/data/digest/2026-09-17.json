@@ -504,11 +504,6 @@
       "id": "mustafa-suleyman",
       "name": "Mustafa Suleyman",
       "pageType": "entity"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
     }
   ],
   "reader": {

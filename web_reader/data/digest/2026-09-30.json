@@ -457,11 +457,6 @@
   "preview": "Claude Code：Claude Code v2.1.285 發布：新增 CLAUDE_CODE_DISABLE_WEB_FETCH 環境變數可關閉 WebFetch 工具、claude --desktop 指令，企業管理者可限制可用的 API 供應商。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-science",
       "name": "Claude Science",
       "pageType": "entity"
@@ -477,68 +472,13 @@
       "pageType": "entity"
     },
     {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
-    },
-    {
-      "id": "sonnet-5-5",
-      "name": "Claude Sonnet 5.5",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-talent-flow",
       "name": "AI 實驗室人才流動",
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-discussions",
       "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

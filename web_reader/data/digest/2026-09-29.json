@@ -354,11 +354,6 @@
   "preview": "Claude Code：Anthropic Status：Claude 全面中斷約 1 小時（14:00–14:59 UTC），影響 claude.ai、App、Claude Code、Cowork 與 API，已確認恢復正常。",
   "sedimentedToday": [
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "jensen-huang",
       "name": "Jensen Huang",
       "pageType": "entity"
