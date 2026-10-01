@@ -961,3 +961,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-09-30T22:08:14Z] TARGET_DATE=2026-09-30｜理由=digest already exists（Step 0b 冪等閘）｜17 UTC 班次已完成當日完整 pipeline（Aggregator 68 則、Digest OK、emitted-cache 68 項確認、Wiki ingest 六記者+devpractice/market 全部OK、Reader digest 16 頁 WARN 0、Web build OK、Single push done）｜本班（22 UTC）為設計上第三班次，正確中止，非錯誤，未重跑不會造成 wiki 重複條目風險
 [cloud daily-news-pipeline-cloud STARTED 2026-10-01T12:08:52Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-01T12:09:38Z] TARGET_DATE=2026-10-01｜Step1a：src/gathered_archive/2026-10-01.json 不存在（GitHub Actions daily-gather 尚未落地，cp 失敗）｜新鮮度防線：gathered_items.json date=2026-09-30 items=68，非目標日期的新鮮資料｜本班（12 UTC）為當日第一班，不等待，交由後續班次（17/22 UTC）接手；此為設計上的正確行為，非錯誤
+[cloud daily-news-pipeline-cloud STARTED 2026-10-01T17:07:51Z]
