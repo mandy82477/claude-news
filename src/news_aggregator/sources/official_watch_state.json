@@ -75,10 +75,20 @@
       "https://code.claude.com/docs/en/plugins/publish.md": "Publish and distribute a plugin",
       "https://code.claude.com/docs/en/plugins/measure.md": "Measure plugin cost and usage",
       "https://code.claude.com/docs/en/plugins/cli-hints.md": "Recommend your plugin from your CLI",
+      "https://code.claude.com/docs/en/plugins/mods/overview.md": "Mods overview",
+      "https://code.claude.com/docs/en/plugins/mods/create.md": "Create a mod",
+      "https://code.claude.com/docs/en/plugins/mods/reference.md": "Mods reference",
+      "https://code.claude.com/docs/en/plugins/mods/interface.md": "Draw in the interface with a mod",
+      "https://code.claude.com/docs/en/plugins/mods/gallery.md": "Interface gallery for mods",
+      "https://code.claude.com/docs/en/plugins/mods/events.md": "React to events with a mod",
+      "https://code.claude.com/docs/en/plugins/mods/api.md": "Use the mods API",
+      "https://code.claude.com/docs/en/plugins/mods/test.md": "Test a mod",
+      "https://code.claude.com/docs/en/plugins/mods/troubleshoot.md": "Troubleshoot a mod",
       "https://code.claude.com/docs/en/plugins/create-marketplace.md": "Create a marketplace",
       "https://code.claude.com/docs/en/plugins/host-marketplace.md": "Host and maintain a marketplace",
       "https://code.claude.com/docs/en/plugins/relevance.md": "Recommend plugins for your org",
       "https://code.claude.com/docs/en/plugins/org.md": "Manage Claude Code plugins for your organization",
+      "https://code.claude.com/docs/en/plugins/mods/admin.md": "Manage mods for your organization",
       "https://code.claude.com/docs/en/plugins/troubleshooting.md": "Troubleshoot plugins",
       "https://code.claude.com/docs/en/plugins/loading.md": "Plugin loading reference",
       "https://code.claude.com/docs/en/plugins/manifest-reference.md": "Plugin manifest reference",
@@ -211,22 +221,22 @@
       "https://code.claude.com/docs/en/whats-new/2026-w14.md": "Week 14 · March 30 – April 3, 2026",
       "https://code.claude.com/docs/en/whats-new/2026-w13.md": "Week 13 · March 23–27, 2026",
       "https://code.claude.com/docs/en/legal-and-compliance.md": "Legal and compliance",
-      "https://code.claude.com/docs/_llms/fr.md": "French (209 pages)",
-      "https://code.claude.com/docs/_llms/de.md": "German (210 pages)",
-      "https://code.claude.com/docs/_llms/it.md": "Italian (209 pages)",
-      "https://code.claude.com/docs/_llms/jp.md": "Japanese (209 pages)",
-      "https://code.claude.com/docs/_llms/es.md": "Spanish (209 pages)",
-      "https://code.claude.com/docs/_llms/ko.md": "Korean (210 pages)",
-      "https://code.claude.com/docs/_llms/zh-cn.md": "Simplified Chinese (210 pages)",
-      "https://code.claude.com/docs/_llms/zh-tw.md": "Traditional Chinese (210 pages)",
-      "https://code.claude.com/docs/_llms/ru.md": "Russian (209 pages)",
-      "https://code.claude.com/docs/_llms/id.md": "Indonesian (209 pages)",
-      "https://code.claude.com/docs/_llms/pt-br.md": "Brazilian Portuguese (208 pages)"
+      "https://code.claude.com/docs/_llms/fr.md": "French (220 pages)",
+      "https://code.claude.com/docs/_llms/de.md": "German (220 pages)",
+      "https://code.claude.com/docs/_llms/it.md": "Italian (220 pages)",
+      "https://code.claude.com/docs/_llms/jp.md": "Japanese (219 pages)",
+      "https://code.claude.com/docs/_llms/es.md": "Spanish (220 pages)",
+      "https://code.claude.com/docs/_llms/ko.md": "Korean (220 pages)",
+      "https://code.claude.com/docs/_llms/zh-cn.md": "Simplified Chinese (220 pages)",
+      "https://code.claude.com/docs/_llms/zh-tw.md": "Traditional Chinese (220 pages)",
+      "https://code.claude.com/docs/_llms/ru.md": "Russian (220 pages)",
+      "https://code.claude.com/docs/_llms/id.md": "Indonesian (220 pages)",
+      "https://code.claude.com/docs/_llms/pt-br.md": "Brazilian Portuguese (220 pages)"
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "0a0156c4588d07ceafa4dfd94544bb3e91f9a113c58239ec4e6d0bfb036636ea",
-    "length": 83575,
+    "hash": "313306017db616873b4e52e0e876f0b40cf2c1757caf2692a74d373dfa31ec89",
+    "length": 83588,
     "segments": [
       "\"args\": [\"--verbose\"],",
       "\"autoPort\": false",
@@ -462,6 +472,7 @@
       "Anthropic checks connections to that host against your organization's IP allowlist using the address they arrive from. If your proxy sends traffic for it out through an address that isn't on that allowlist, Claude in Chrome and other features that connect through the bridge stop working while the rest of the app keeps working.",
       "Apps with broad reach, like terminals, Finder or File Explorer, and System Settings or Settings, show an extra warning in the prompt so you know what approving them grants.",
       "Artifacts can also load JavaScript libraries, such as React or a charting package, from `cdnjs.cloudflare.com`, `cdn.jsdelivr.net`, `cdn.tailwindcss.com`, `code.jquery.com`, and `unpkg.com`, and from no other external host. If you block those hosts, the parts of an artifact that depend on a library don't work, and unlike a blocked font, a blocked library has no fallback. Block with a fast rejection here too, so a blocked library request fails at once rather than hanging until it times out.",
+      "Auto mode availability",
       "Auto mode is available to all users on the Anthropic API and requires Claude Opus 4.6 or later, Sonnet 4.6 or later, or a [Fable model](/docs/en/model-config#work-with-fable). Organization administrators can turn auto mode off with the `disableAutoMode` key in [managed settings](#managed-settings).",
       "Auto-verify is on by default. Disable it per-project by adding `\"autoVerify\": false` to `.claude/launch.json`, or toggle it from the server dropdown menu.",
       "Before you send your first message, configure four things in the prompt area:",
@@ -646,7 +657,7 @@
       "Worktrees are stored in ` /.claude/worktrees/` by default. You can change this to a custom directory in Settings → Claude Code under \"Worktree location\". You can also set a branch prefix that gets prepended to every worktree branch name, which is useful for keeping Claude-created branches organized. To remove a worktree when you're done, hover over the session in the sidebar and click the archive icon. To have sessions archive themselves when their pull request merges or closes, turn on **Auto-archive after PR merge or close** in Settings → Claude Code. Auto-archive only applies to local sessions that have finished running.",
       "You can also pick up a CLI session from inside Desktop with `/resume`. The command is available in local sessions, not in SSH, WSL, or cloud sessions.",
       "You can configure two settings in **Settings > General** (under **Desktop app**):",
-      "You can create custom cloud environments with different network access levels and environment variables. When you start a cloud session, open the environment dropdown in the prompt box to manage them:",
+      "You can create custom cloud environments with different network access levels and environment variables. To manage them, open the environment dropdown in the prompt box and select **Cloud**:",
       "You can define multiple configurations to run different servers from the same project, such as a frontend and an API. See the [examples](#examples) below.",
       "You can scope plugins to your user account, a specific project, or local-only. If your organization manages plugins centrally, those plugins are available in desktop sessions the same way they are in the CLI, except the ones the desktop app [withholds under `disableSideloadFlags`](/docs/en/settings-reference#disablesideloadflags).",
       "You can send a command while Claude is working, the same as any other message, and the session returns to idle once the turn finishes. Before v2.1.206, a command sent mid-turn could leave the session showing as running and messages you sent afterward weren't delivered.",
@@ -1391,11 +1402,11 @@
     ]
   },
   "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion": {
-    "hash": "dee15d567ef76cac19cf59571c346928b3d894611d717af881932dfdf15564e4",
-    "length": 2922,
+    "hash": "09b15b164c369f363da1ca8e4820f05ac8184b47c2675c245a80ca5255368e27",
+    "length": 2900,
     "segments": [
+      "Artifact usage promotion",
       "Claude Code May–August 2026 weekly limits promotion | Claude Help Center Skip to main content Claude Code May–August 2026 weekly limits promotion",
-      "Claude Code on Console to Enterprise migration",
       "Claude Enterprise activation promo for Claude Code and Cowork",
       "Claude Fable models on your plan",
       "Did I need to do anything to get the extra usage?",
@@ -1422,8 +1433,8 @@
     ]
   },
   "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan": {
-    "hash": "dc07673f50a0b50c8d9e76d650964022cccbb528872b68e0d45d86a9f2b833cf",
-    "length": 23065,
+    "hash": "c0abd324cb320106cd1c4f8200baa3d4fa92db4ef9f420b7c4a5cc1b87d2a6d4",
+    "length": 23108,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1450,6 +1461,7 @@
       "Anthropic Software Directory Policy",
       "Anthropic Software Directory Terms",
       "Anthropic&#x27;s AI for Science Program",
+      "Artifact usage promotion",
       "Artifacts admin guide for Team and Enterprise plans",
       "Assign a program to workspaces in Claude Console",
       "Assign tasks from anywhere in Claude Cowork",
@@ -1531,7 +1543,6 @@
       "Consumer Terms of Service Updates",
       "Control project sharing for your organization",
       "Conversation management Delete or rename a conversation",
-      "Copy for LLM We previously ran a promotion that allowed you to use up to 50% of your weekly subscription limit on Claude Fable 5 at no extra cost. That promotion ended on July 19, 2026 at 11:59:59 PM PT, and it applied to Fable 5 only. Claude Fable 5.1 was never part of it.",
       "Cost and Usage Reporting in the Claude Console",
       "Covered Models",
       "Covered Models under a Business Associate Agreement (BAA)",
@@ -1714,6 +1725,7 @@
       "Schedule recurring tasks in Claude Cowork",
       "Security and compliance Does Anthropic Act as a Data Processor or Controller?",
       "See your monthly recap",
+      "September 2, 2026 Copy for LLM We previously ran a promotion that allowed you to use up to 50% of your weekly subscription limit on Claude Fable 5 at no extra cost. That promotion ended on July 19, 2026 at 11:59:59 PM PT, and it applied to Fable 5 only. Claude Fable 5.1 was never part of it.",
       "Set a default model for your organization",
       "Set break reminders and quiet hours",
       "Set organization instructions",
@@ -1829,8 +1841,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "db0370919971b081fea10de6516b322cea40aa0e29e9117787a012aad8260f38",
-    "length": 23141,
+    "hash": "0e716fd693a75fb0fdf1700ad9c71e5d5332e49b1542cc6e6045c710430f2abf",
+    "length": 23166,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1857,6 +1869,7 @@
       "Anthropic Software Directory Policy",
       "Anthropic Software Directory Terms",
       "Anthropic&#x27;s AI for Science Program",
+      "Artifact usage promotion",
       "Artifacts admin guide for Team and Enterprise plans",
       "Assign a program to workspaces in Claude Console",
       "Assign tasks from anywhere in Claude Cowork",
@@ -2261,8 +2274,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "c770924ad004c7630880add6a0255e27419a60db4336169aff2edb1e2095f01b",
-    "length": 22936,
+    "hash": "4f27d83505d6ee7ee20d5c0f5cefcb64eb9ad1c2299d24053384a016df9cae5c",
+    "length": 22961,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2289,6 +2302,7 @@
       "Anthropic Software Directory Policy",
       "Anthropic Software Directory Terms",
       "Anthropic&#x27;s AI for Science Program",
+      "Artifact usage promotion",
       "Artifacts admin guide for Team and Enterprise plans",
       "Assign a program to workspaces in Claude Console",
       "Assign tasks from anywhere in Claude Cowork",
@@ -2664,8 +2678,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "f940e400f68edba2ed0e086763e65433d5d0ce3e8691ea583fabb889282d42d5",
-    "length": 23352,
+    "hash": "c60e3cb40d31fb76b56cbce90551ebe07e959e617060da181ff41664073b4682",
+    "length": 23377,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2695,6 +2709,7 @@
       "Anthropic Software Directory Policy",
       "Anthropic Software Directory Terms",
       "Anthropic&#x27;s AI for Science Program",
+      "Artifact usage promotion",
       "Artifacts admin guide for Team and Enterprise plans",
       "Assign a program to workspaces in Claude Console",
       "Assign tasks from anywhere in Claude Cowork",
@@ -3102,8 +3117,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "2218cde59bcf46cefcc18339df8169376c6d0c7dda0e09e5515c45c701f8c70e",
-    "length": 46759,
+    "hash": "467c5446b50dc0abe4247e7791b3931b0394dc7992691e7a4120432f7f09d80d",
+    "length": 46784,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -3152,6 +3167,7 @@
       "April 16, 2026",
       "April 17, 2026",
       "April 9, 2026",
+      "Artifact usage promotion",
       "Artifacts admin guide for Team and Enterprise plans",
       "Assign a program to workspaces in Claude Console",
       "Assign tasks from anywhere in Claude Cowork",
