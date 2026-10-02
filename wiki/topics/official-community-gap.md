@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **新增一列：Cowork 專案無法移除已加入的本機資料夾**（2026-10-01）
-> GitHub issue #40043 累積 32 則留言、103 個讚；Cowork 專案 context 目前只能新增本機資料夾，無移除機制，官方尚未回應。
+> **代表工具更新**（2026-10-02）
+> deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
 
 ## 摘要
 
@@ -110,7 +110,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Dreaming 是 Managed Agents（API 產品）那邊的功能，在 beta 之內還是更受限的研究預覽、須另外申請。
   - 要自己接外部記憶層：`PreCompact`／`PostCompact`（v2.1.76 起）／`SessionStart`／`SessionEnd` 四個 hook 官方確認都有，`SessionStart` 可回傳 `additionalContext` 把記憶注回來。
   - issue #14227（session 間持久記憶）官方 2026-05-25 以 not planned 關閉，見 [[entities/claude-code]]。
-- ⟨G-05b⟩ 社群那邊沒有變少：ltm、VIR、CoreMem、OKF、OzBrain、ambient-context、mindmuxai/brain.md 各走不同路——OKF 跨工具跨模型，OzBrain 鎖團隊共享，ambient-context 走被動螢幕記錄，brain.md 走顯式寫入。
+- ⟨G-05b⟩ 社群那邊沒有變少：ltm、VIR、CoreMem、OKF、OzBrain、ambient-context、mindmuxai/brain.md、deja-vu、hippo-memory 各走不同路——OKF 跨工具跨模型，OzBrain 鎖團隊共享，ambient-context 走被動螢幕記錄，brain.md 走顯式寫入（後兩者 10-01 新收錄）。
   - 它們解的不是 auto memory 解的那一題，所以 auto memory 上線後數量沒有下降。
 - ⟨G-06⟩ 它說做完了，但品質夠不夠：官方的 Outcomes 規格驗證現在標 Beta，跟 Managed Agents 共用同一個 beta header；`/goal` 文件沒有預覽或 beta 標示，但它的 check-ins 要 v2.1.234 以上。`/code-review` 自 v2.1.218 起改在背景以子代理執行。
   - 這幾個答的是「任務條件成不成立」，不是「這段程式碼寫得好不好」。社群的 adamsreview、Mira、Read-Only Reviewer Agent 補的是後者，但「多模型對抗審查抓到更多真 bug」的說法雙方都沒有公開對照數據。
@@ -136,7 +136,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨G-13⟩ 想自己決定哪段用哪個模型、不被鎖住：個人端官方有 `opusplan`（規劃用 Opus、執行換 Sonnet）；另有 `CLAUDE_CODE_SUBAGENT_MODEL` 統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件，2026-09-23 查）。
   - org default model（v2.1.196，2026-06-29）與 `enforceAvailableModels`（v2.1.175）都是企業管理端的設定。
   - 依成本或任務動態挑模型，官方文件未見——model-config 文件明載除上述固定指定機制外並無 automatic difficulty-based model routing。
-  - 代表社群工具：Workweave Router（HN 181，實測降 40%+）、Dragoman、Council、Ungate、Rayline。
+  - 代表社群工具：Workweave Router（HN 181，實測降 40%+）、Dragoman、Council、Ungate、Rayline、jev-router（依任務路由到最便宜模型，2026-09-30 新收錄）。
   - The Information（2026-09-15）與 Dealroom（2026-09-16）均報導開發者正把 Claude Code 接到非 Anthropic 模型後端執行，兩則都沒有規模數字。這件事對 Anthropic 收入的那一面（收不到對應 token 費用）記在 [[topics/anthropic-business]]。
 
 ---
@@ -194,6 +194,8 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[entities/claude-code]] — Claude Code 現在有哪些毛病、哪些修了，以及每個 issue 的留言與讚數
 
 ## 時序
+
+%% 2026-10-02：H-7c3708、H-30f7ac 轉知評估——09-28／10-01 新增 13 款社群工具逐一核對，deja-vu、hippo-memory 併入 G-05b，jev-router 併入 G-13；其餘 10 款不對應本頁既有痛點、亦未達開新列門檻（單一工具，無 ≥2 獨立方案或 ≥100 讚 issue），不開新列 %%
 
 ### 2026-10-01
 - **新增一列：Cowork 專案想移除已加入的本機資料夾**：GitHub issue #40043 累積 32 則留言、103 個讚；Cowork 專案 context 目前僅能新增本機資料夾，無移除機制，官方尚未回應。表由 17 列增為 18 列。

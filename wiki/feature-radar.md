@@ -2,19 +2,19 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-09-30
+**最後更新：** 2026-10-02
 
-> **這禮拜動了什麼**（2026-09-30）
-> v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。v2.1.285 接著新增可關閉 WebFetch 的環境變數、`claude --desktop` 指令、企業 API 供應商限制。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-10-02）
+> v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-09-28）
+## ⭐ 現在值得跟的三件（最後輪替 2026-10-02）
 
 - **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
 - **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
-- **Claude Fable 5.1**：09-01 發布的新一代旗艦，快取讀取費率降至基礎輸入價 0.025 倍。**怎麼開始：** 升到 v2.1.257 以上，Fable 的預設就是 5.1；用 `/model` 確認現在跑的是哪一個。
+- **Claude Mods**：v2.1.287 起外掛可修改 Claude Code 更深層的執行時行為，內建示範 mod「You should know」會在使用者或 Claude 可能忽略某事時主動提醒。**怎麼開始：** 讀官方新十頁 mods 文件（[overview](https://code.claude.com/docs/en/plugins/mods/overview.md)）了解權限範圍後開始開發。
 
-%% 09-28 換上 Claude Sonnet 5.5 預設換代（預設值改變型，依規則固定第一條，較 09-22 Opus 5.5 換代更新），讓出 Claude Opus 5.5 成為預設模型（🔥🔥🔥🔥，熱度低於 AGENTS.md／Fable 5.1，被擠出前三）；AGENTS.md／Fable 5.1 熱度與試用價值本輪未變動，維持原位 %%
+%% 10-02 換上 Claude Mods（🔥🔥🔥🔥，10-01 發布，在 30 天時間閘內達標），擠下 Claude Fable 5.1（09-01 發布，距今 31 天已過 30 天時間閘、本輪熱度與試用價值未變動，依規則移出候選池）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，維持原位，第一條固定為預設值改變型 Sonnet 5.5 %%
 
 ---
 
@@ -60,6 +60,28 @@
 
 > 09-14 的週配額換軌已生效並移出本表：+50% 加成 09-13 到期，標準週配額改為永久 +25%，相對加成期間淨減約 17%，5 小時窗不受影響。官方說明中心當日確認換軌如期發生，完整規則與來源見 [[entities/pricing]]。
 > Fable 免費期限（原訂 7/19）已到期並移出本表；現在是常態分流：Max 與 Team premium 為標配（週用量 50% 內），Pro 與 standard 走 usage credits，5 與 5.1 同規則，詳見 [[entities/pricing]]。
+
+---
+
+## 🆕 最新功能（2026-10）
+
+### Claude Mods
+**發布：** 2026-10-01（v2.1.287） | **狀態：** 正式發布
+
+**是什麼：** Claude Code 外掛新增「Mods」機制，可修改比既有 plugin API 更深層的執行時行為；官方內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。即原「Function Hooks」提案（issue #91870，09-04 即以 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標現身於 build，09-09 官方承諾數週內出貨）本版兌現。
+
+**為何熱：** 官方追蹤 issue #91870 出貨當日累積 233 則留言、218 個讚，官方逐一回應社群回饋；官方文件索引同步新增 10 頁 mods 文件（管理、API、建立、事件、介面、測試、疑難排解等）。mixed-news.com 標題稱 Anthropic 說明 mods 可讀取使用者 API Key（僅標題可讀，未見官方一次原文佐證完整範圍；安全面影響另見 [[topics/ai-agent-safety]]）。
+
+**現在要試嗎：** 想擴充 Claude Code 行為的外掛開發者可試，但建議先讀官方新十頁 mods 文件了解權限範圍；對外掛安全邊界敏感者宜等官方就「是否能讀取 API Key」給出明確澄清再上手。
+
+**快速上手：**
+```
+# 官方文件（建立/測試/疑難排解等十頁）：
+# https://code.claude.com/docs/en/plugins/mods/overview.md
+# https://code.claude.com/docs/en/plugins/mods/create.md
+```
+
+**注意事項：** 官方被報導稱外掛可能讀取使用者 API Key（僅標題可用），安全範圍見 [[topics/ai-agent-safety]]；mod 機制基於先前的 function hooks，深層權限意味外掛信任面擴大。
 
 ---
 
@@ -378,6 +400,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |

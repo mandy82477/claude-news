@@ -31,19 +31,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-01）
-> 2.1.286 新增 8 個第一階候選旗標（名單見追蹤表）；`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，依消失清單列第 4 階；另 2 個設定類旗標依蒐集邊界不列。
+> **最新動態**（2026-10-02）
+> `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 升第 4 階：v2.1.287 正式出貨為「Claude Mods」，已進 [[feature-radar]]。同版 build 新增 7 個第一階候選旗標（名單見追蹤表）。
 
 ---
 
 ## 摘要
 
+- **2.1.287（10-02 比對）新增 7 個第一階候選旗標**（名單見追蹤表）；`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階，≤09-04 即在 build 裡）升第 4 階——官方 v2.1.287 Release 正式出貨為「Claude Mods」，同輪已回報 [[feature-radar]] 新增。
 - **2.1.286（10-01 比對）新增 8 個第一階候選旗標**（名單見追蹤表）；另 2 個設定類旗標依蒐集邊界不列。`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，依消失清單升列第 4 階；對帳僅命中自身條目（來源文章），不算獨立佐證，暫不升第二階。
 - **2.1.285（09-30 比對）新增 9 個第一階候選旗標**，`CLAUDE_CODE_DISABLE_WEB_FETCH` 依官方 Release 已出貨升列第 4 階，其餘 8 個仍第一階；另 1 個設定類旗標依蒐集邊界不列。同版消失 7 個（`DIR_SYNC` 家族 6＋代號旗標 `PARCHMENT_FERN`），皆早於本頁追蹤範圍；對帳僅命中自身條目，暫不升第二階。
 - **2.1.284（09-28）新增 4 個第一階旗標＋1 個代號旗標**（`WHIMSICAL_ELEPHANT`）；`COMMIT_BETWEEN_KEYS`（首見 2.1.281）依消失清單升列 4 階，`ENABLE_NARRATION` 同批消失但首見早於本頁基線；對帳僅命中自身條目，暫不升第二階。
@@ -54,7 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **首批基線 2.1.272（2026-09-14）**：程式本體含 619 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
 - **2.1.273（2026-09-16）新增 3 個第一階旗標**：`CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS`、`CLAUDE_CODE_GATEWAY_HINT_HEADERS`、`CLAUDE_CODE_OCHRE_KITE`；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
 - **2.1.274（2026-09-17）新增 6 個第一階旗標**（名單見下方追蹤表）；同批另有 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
-- **已確認的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階）——官方在 issue #91870 承諾數週內出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
+- **已出貨的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 4 階）——v2.1.287 正式出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
 - **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
 
 ## 怎麼讀這一頁
@@ -70,6 +71,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_CCR_EARLY_SKILLS_SYNC` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_CCR_FOLD_FIRST_TURN_RESCAN` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_CCR_SKIP_FRESH_MIGRATIONS` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_GROWTHBOOK_KICK_FROM_INIT` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_MCP_SERVE_TOOL_OUTPUT` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
+| `CLAUDE_CODE_POLL_EVENT_DECLARATIONS` | 2.1.287（10-02） | 1 | — | — | 2.1.287 仍在（比對日 10-02） |
 | `CLAUDE_CODE_ARTIFACT_SHARE` | 2.1.286（10-01） | 1 | — | — | 2.1.286 仍在（比對日 10-01） |
 | `CLAUDE_CODE_AUTO_MODE_HEARTH_MEMBER_RELAY_ROWS` | 2.1.286（10-01） | 1 | — | — | 2.1.286 仍在（比對日 10-01） |
 | `CLAUDE_CODE_AUTO_MODE_TIER` | 2.1.286（10-01） | 1 | — | — | 2.1.286 仍在（比對日 10-01） |
@@ -100,7 +108,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_DISABLE_SUBSTITUTION_RM_PROMPT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_HOST_GATEWAY_LINEAGE` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_MCP_APPS_HOST` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
-| `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` | ≤2.1.261（09-04） | 3 | 已承認：[issue #91870 本文](https://github.com/anthropics/claude-code/issues/91870) 09-09 改寫「數週內出貨、更名 Claude Mods」，並寫明可用此旗標試玩 | [issue 留言](https://github.com/anthropics/claude-code/issues/91870)：09-04 起 14 人、09-09 官方改寫後 5 人回報用此旗標試玩（2026-09-16 數） | 2.1.272 仍在（比對日 09-14） |
+| `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` | ≤2.1.261（09-04） | 4 | 已出貨：[v2.1.287 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287) 正式更名「Claude Mods」上線，內建示範 mod「You should know」 | [issue #91870](https://github.com/anthropics/claude-code/issues/91870) 追蹤串：出貨當日累積 233 則留言、218 個讚 | 2.1.287（10-01）官方 Release 確認已出貨 |
 | `CLAUDE_CODE_PER_TURN_TIMING` | 2.1.278（09-19） | 1 | — | — | 2.1.278 仍在（比對日 09-19） |
 | `CLAUDE_CODE_SESSION_START_ANNOUNCEMENTS_BEFORE_PROMPT` | 2.1.278（09-19） | 1 | — | — | 2.1.278 仍在（比對日 09-19） |
 | `CLAUDE_CODE_DISABLE_ATTRIBUTION_CROSS_REPO` | 2.1.276（09-18） | 1 | — | — | 2.1.276 仍在（比對日 09-18） |
@@ -192,6 +200,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-02 | `ENABLE_FUNCTION_HOOKS` 升第 4 階：v2.1.287 出貨為「Claude Mods」，已回報 [[feature-radar]] 新增；同版新增 7 個第一階候選旗標（名單見追蹤表） |
 | 2026-10-01 | 2.1.286 新增 8 個第一階候選旗標（名單見追蹤表）；另 2 個設定類旗標依蒐集邊界不列；`AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，列 4 階；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-09-30 | 2.1.285 新增 9 候選旗標，`DISABLE_WEB_FETCH` 升 4 階已出貨；消失 7 個（`DIR_SYNC` 家族 6＋代號旗標），皆早於追蹤範圍 |
 | 2026-09-28 | 2.1.284 新增 4 個第一階旗標＋代號旗標 `WHIMSICAL_ELEPHANT`（名單見追蹤表）；`COMMIT_BETWEEN_KEYS` 列 4 階、`ENABLE_NARRATION` 消失；不算獨立佐證 |

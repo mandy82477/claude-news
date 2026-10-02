@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **最新動態**（2026-10-01）
-> - **Reuters 獨家：Broadcom 考慮貸款 Anthropic 最高 420 億美元租賃晶片**：循環投資疑慮再起，詳見本頁「還沒過去的風險」細節區。
-> - **Barclays 擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%**：完整採用規模見 [[topics/enterprise-tool-tracker]]。
+> **最新動態**（2026-10-02）
+> - **Claude for Government 全面開放美國聯邦機構採用（GA）**：延續聯邦文職機關採用擴大既有脈絡，詳見 [[topics/anthropic-business#時序]] 10-02（TechRepublic）。
+> - **Broadcom 啟動 600 億美元債務融資支應 Anthropic 晶片採購**：規模較 10-01「考慮中 420 億美元貸款」擴大，詳見 [[topics/anthropic-business#還沒過去的風險]] 細節區。
 
 ---
 
@@ -278,6 +278,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
 - **Broadcom 擬貸款 Anthropic 最高 420 億美元租賃晶片（2026-10-01）**：Reuters 獨家引文件；與 07-22 AMD、09-02 Nvidia-Lambda 同屬循環投資疑慮，Barron's 同日報導 Broadcom 股價上漲，條款未見報導（Google News/Reuters；Barron's；Yahoo Finance）。
+- 後續（2026-10-02）：Yahoo Finance、qz.com、Seeking Alpha 報導 Broadcom 已啟動 600 億美元債務融資，規模較 420 億考慮階段擴大，條款未見報導。
 - **反壟斷訴訟指控「踩煞車」呼籲構成合謀（2026-09-19）**：The Hill、Politico、Bloomberg Law News 同日報導新提告，指控 Anthropic 與 OpenAI、SpaceXAI、Google 就「踩煞車」呼籲構成反壟斷合謀；原告身分、求償內容與進度均未見報導細節，僅標題可用。
 - **09-22 跟進（HN 32 分＋AP News）**：具名原告為四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶，主張協議始於 2026-07、降低訂閱者所獲價值；求償金額仍未見報導。
 - **國防部十月前遷出全部機密 AI 工作負載（DefenseScoop，2026-09-11；2026-09-26 查證確認）**：國防部研究工程次長 Emil Michael 證實約 90% 已遷移完成，估十月底前完成全部遷出；驅動因素為 Anthropic 遭列國安供應鏈風險，替代供應商與涉及的 Claude 產品線未見官方點名；影響範圍限於處理美國政府機密資料的用戶。
@@ -521,6 +522,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-02
+- **[戰略合作] TechRepublic：Claude for Government 全面開放，美國聯邦機構可直接採用（GA）**：延續 09-11 持續拓展聯邦文職機關採用、09-09 Fable 5.1 進 FedRAMP High 版後續，具體機關名單與採用規模未見報導，僅標題可用（Google News/TechRepublic）
+- **[商業風險] Broadcom 啟動 600 億美元債務融資支應 Anthropic 晶片採購**：規模較 10-01「考慮中 420 億美元貸款」擴大，詳見「還沒過去的風險」細節區（Yahoo Finance；qz.com；Seeking Alpha）
 
 #### 2026-10-01
 - **[戰略合作] Barclays 擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%**：2027 年擴及多數工程師，完整規模見 [[topics/enterprise-tool-tracker]]（Anthropic Blog；Bloomberg；PYMNTS）

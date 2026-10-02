@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 **開始日期：** 2026-04
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **本週衝擊**（2026-10-01）
+> **本週衝擊**（2026-10-02）
+> - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
-> - 🟡 **Google DeepMind 發布 Gemini 4 Argon，主打 agentic software engineering 與資安防禦**（09-30，官方，限量開放）——暫無法直接比較，全面開放後再評估是否影響 Claude Code 選型。
 
 ---
 
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
-| **Microsoft／GitHub** 🏢 | GA 功能於 Business/Enterprise 帳號預設開啟（09-24）；Microsoft 推出 all-in-one Copilot app 劍指 Anthropic／OpenAI（09-25）→ Claude 缺對應統一入口 | 能力 | 🔴 | GitHub 官方 changelog 一手＋CNBC／GeekWire 跨 2 媒體；all-in-one app 整合範疇、上線時程未載 |
+| **Microsoft／GitHub** 🏢 | Copilot CLI／桌面版公開預覽新增 computer use，可代操作桌面應用程式；同日新增可程式碼定義的動態工作流程編排（10-01）→ Claude Code 尚無對應桌面操作能力 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；兩項功能均為公開預覽／初次發布，缺採用規模與穩定性數據 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
@@ -219,6 +219,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-10-01
+- **Microsoft／GitHub**：GitHub Copilot CLI 與桌面版（macOS／Windows）公開預覽新增 computer use，可代操作桌面應用程式；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot CLI、App 與 SDK 新增可用程式碼定義的動態工作流程編排功能；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：GitHub Copilot in VS Code 9 月彙整（v1.136–v1.140），聚焦從實作到 PR 合併的 agent 導向開發流程精簡，未點名單一新能力，僅彙整層級可用（Blog/GitHub Copilot Changelog）
 - **Google DeepMind**：發布新一代前沿模型 Gemini 4 Argon，主打 agentic software engineering、企業知識工作與資安防禦場景，先限量開放 Fairwind Program 予受信任網路防禦者；詳見「對手雷達」Google 列更新（Blog/Google DeepMind Blog）
 - **OpenAI**：發布 Albertsons Cos. 導入 ChatGPT Enterprise 與 OpenAI API 案例，用於加速內部團隊工作與零售流程；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
 - **OpenAI（透過比較報導）**：TechRepublic 發表 Claude Code vs OpenAI Codex 選型比較文，主張優劣不只看跑分；具體論點與數字未見報導，僅標題可用（Google News/TechRepublic）

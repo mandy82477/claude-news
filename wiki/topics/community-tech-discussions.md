@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-30
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **最新動態**（2026-09-30）
-> - Reddit 流出 OpenAI 內部基準，稱 GPT-6.1 Sol 大幅超越 Opus 5.5，尚無獨立驗證。
-> - Simon Willison 直播花絮：Codex Cloud 故障，改用 Claude Code for web 完成直播工具。
+> **最新動態**（2026-10-02）
+> - Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變。
+> - Show HN：組合語言打造的輕量編輯器 Rhun，內建面板直接接 Claude Code／Codex session。
 
 ---
 
@@ -151,6 +151,9 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN／Reddit：Mods 新 function hooks 讓作者把 statuslin.es 狀態列延伸進 Claude 桌面 App | 2026-10-02 · 2026-10-02 | 🔥 | ☄️閃現 | 作者用新上線的 Mods function hooks，把先前 statuslin.es 專案的狀態列功能延伸進 Claude 桌面 App；HN 2 分＋Reddit r/ClaudeCode 同日轉發（2 來源），訊號薄弱 | statusline-anywhere |
+| Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變 | 2026-10-02 · 2026-10-02 | 🔥 | ☄️閃現 | Matthew Schwartz 延續「Vibe Physics」系列，描述停止直接下指令、改讓 Claude 自主探索後觀察到的研究方法轉變；官方部落格，HN score 27，無社群延燒 | — |
+| Show HN: Rhun——組合語言打造的輕量程式碼編輯器，內建面板直接接 Claude Code／Codex session | 2026-10-01 · 2026-10-01 | 🔥🔥🔥 | ☄️閃現 | 作者以組合語言打造的輕量編輯器，內建面板接 Claude Code／Codex session；HN score 59（2 來源） | — |
 | Reddit 流出 OpenAI 內部基準：稱 GPT-6.1 Sol 大幅超越 Opus 5.5，Anthropic 追趕吃力 | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | 社群討論流出的 OpenAI 內部基準測試，聲稱 GPT-6.1 Sol 表現大幅超越 Opus 5.5；僅來自流出消息，尚無獨立驗證 | — |
 | Simon Willison OpenAI DevDay 直播花絮：Codex Cloud 故障，改用 Claude Code for web | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | Simon Willison 直播時原想用 Codex Cloud 在手機上處理照片，工具遇問題後改用 Claude Code for web 完成；具名表態，無社群延燒 | — |
 | Show HN: OpenAPPA——開源確定性 guardrail，鎖定多工具連接 agent 的資料外洩風險 | 2026-09-28 · 2026-09-28 | 🔥 | ☄️閃現 | 作者稱工具連接數愈多、agent 失控外洩敏感資料風險愈高，LLM-as-judge 類 guardrail 易受 prompt injection；HN score 22（2 來源） | — |
@@ -213,6 +216,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變**：Matthew Schwartz 延續『Vibe Physics』系列，本篇描述他停止直接對 Claude 下指令、改採放手讓其自主探索問題後，觀察到的研究方法轉變；官方部落格文章，HN score 27，未見社群跟進討論；[原文](https://www.anthropic.com/research/claude-shaped-science)（Anthropic Blog／HN）
+- **Show HN: Rhun——組合語言打造的輕量程式碼編輯器**：作者稱已用不到 vim／VS Code 三分之一功能而自製，支援 Linux／Windows／Apple Silicon；內建 Vim 模式、終端機、Git diff，面板可接 Claude Code／Codex session；HN score 59（2 來源）；[原文](https://rhun.app/)（HN）
 - **Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent**：發起人面試時觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正理解自己在做什麼感到不安；HN score 38；與本頁「Skill Atrophy 與技藝認同」長期議題同軸，補上「招募方視角」；[原文](https://news.ycombinator.com/item?id=49768826)（HN）
 - **有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析**：涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制（子 agent 共享 prompt cache 前綴省 95% 成本）；非官方逆向分析，未經 Anthropic 確認；HN score 17；[原文](https://claude-code-from-source.com/)（HN）
 - **Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範**：使用者觀察未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制，主張是否該有額外規範；僅單方觀點，未見反方論述；Reddit r/artificial 週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wirqzs/i_wonder_if_ai_agents_and_ai_usage_should_have/)（Reddit · 週熱門）

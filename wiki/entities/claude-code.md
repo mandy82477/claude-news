@@ -30,19 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **最新動態**（2026-10-01）
-> - Claude Code v2.1.286 發布：權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援。
-> - 同版 build 新增 8 個功能候選旗標，`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，追蹤見 [[topics/claude-code-experimental]]。
-> - 桌面版文件更新：`claude --desktop` 可於終端機直接開啟桌面版；本機與雲端 session 載入 claude.ai 帳號已啟用的 skills；plugins 可依帳號、專案或僅本機範圍設定。
+> **最新動態**（2026-10-02）
+> - Claude Code v2.1.287 發布：**新增「Claude Mods」**——外掛可修改比既有 plugin API 更深層的執行時行為；內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。此前以 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標試玩、09-09 官方承諾數週內出貨，本版兌現，見 [[topics/claude-code-experimental]]。
+> - 同版 build 新增 7 個功能候選旗標（`CLAUDE_CODE_CCR_EARLY_SKILLS_SYNC` 等），追蹤見 [[topics/claude-code-experimental]]。
+> - 官方文件索引新增 10 頁 mods 相關文件（管理、API、建立、事件、介面、測試、疑難排解等）。
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.287**（2026-10-01）：**新增「Claude Mods」**，外掛可修改更深層行為，內建示範 mod「You should know」（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）。即 Function Hooks 提案出貨，詳見「已知問題」🔌 MCP 整合、[[topics/claude-code-experimental]]。
+  同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.286**（2026-09-30）：權限提示堆疊多筆請求時新增「2 of 5」這類計數顯示；全螢幕模式下清單的「N more」列新增滑鼠支援（可點擊展開）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）。
   同版 build 另新增 8 個功能候選旗標，`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.285**（2026-09-29）：新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 環境變數可關閉 WebFetch 工具；新增 `claude --desktop` 指令，於目前目錄開啟 Claude 桌面版；企業管理者可限制可用的 API 供應商（官方原文截斷，完整項目見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.285)）。
@@ -172,10 +174,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 - **Claude Code 新增 Compliance API 與企業安全功能**（查證日 2026-09-20，來源：[Claude Help Center](https://support.claude.com/en/articles/13015708-access-the-compliance-api)、[platform.claude.com](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Compliance API 提供 Enterprise／Claude Console 客戶以程式化方式讀取組織 Activity Feed（含 chat、files、projects、sessions、users），供合規、稽核與治理使用；本機 Cowork／Claude Code session 端點於 2026-08-11 上線、2026-08-26 脫離 beta（遠端 Cowork session 端點則於 08-03 先上線）。與 Claude Enterprise／Claude Code Analytics API（回傳聚合用量與成本）不同，Compliance API 回傳逐事件紀錄。
 
-### 💰 計費與配額（23 條未修復）
+### 💰 計費與配額（24 條未修復）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-10-04）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
 - 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 62 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
@@ -314,7 +317,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
 - 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，1006 讚，全站讚數新高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，963 讚、192 則留言，2026-09-19 互動數更新）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，541 讚、251 則留言，2026-09-18 互動數更新）皆缺多帳號支援；官方尚未回應。
 
-### 🔌 MCP 整合（15 條未修復）
+### 🔌 MCP 整合（14 條未修復、1 條已修復）
 
 - 🔴 **未修復**｜**Google Drive connector 顯示已連結，Cowork 中卻未暴露對應工具（GitHub issue #30457，累積 43 個讚，2026-09-10）**：使用者回報 Google Drive connector 於介面顯示已連結成功，但在 Cowork 中無法呼叫任何對應工具，屬連結狀態與實際可用性不一致的缺口；官方尚未回應。
 
@@ -332,7 +335,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：MCP Sampling 支援以善用 Max 訂閱降低 API 成本（GitHub issue #1785，累積 58 則留言，2026-07-12 回報）**：使用者呼籲支援 MCP Sampling，讓 MCP Server 端運算可透過既有 Claude Max 訂閱額度執行，避免額外 API 計費；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 每輪工具呼叫次數限制回歸，中斷 MCP/SSH agent 工作流（GitHub issue #33969，累積 48 則留言、44 個讚，2026-07-07，regression）**：Claude Desktop 每輪工具呼叫次數限制出現回歸，導致依賴多輪工具呼叫的 MCP／SSH 相關 agent 工作流中斷；官方尚未回應。
 - 🔴 **未修復**｜**MCP servers/hooks/plugins 設定變更需完整重啟 session（GitHub issue #24057，累積 30 則留言、15 個讚，2026-07-05）**：目前修改 MCP server、hooks 或 plugin 設定後必須重啟整個 session 才會生效，無法熱重載，中斷工作流程並遺失既有 context；社群呼籲改為設定變更後自動重載，官方尚未回應。
-- 🔴 **未修復（官方已承諾出貨）**｜**Function Hooks 更名「Claude Mods」，官方 09-09 承諾數週內出貨（issue #91870，184 則留言、180 讚，09-16 更新）**：mod＝用 function hook 的 plugin；09-16 官方僅重申「將有後續」，未再給時程。
+- ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870，追蹤串本日累積 233 則留言、218 個讚）**：mod＝用 function hook 的 plugin。細節見 [[feature-radar]]、[[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
 ### 🔌 平台相容性（73 條未修復、3 條查無官方、3 條已修復）
@@ -383,7 +386,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：Claude Code Desktop 多視窗支援（GitHub issue #30154，累積 61 則留言、249 個讚，首見 2026-07-09，2026-09-11 互動數更新）**：使用者呼籲 Desktop app 支援多視窗同時操作，取代目前單視窗＋側邊欄的 session 管理方式；官方尚未回應。
 - 🔴 **未修復**｜**Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染（GitHub issue #49322，累積 50 則留言、42 個讚，2026-07-09）**：使用者回報使用 Opus 4.7 時，VS Code 擴充套件無法正確渲染 thinking summaries 內容；官方尚未回應。見 [[entities/opus-4-7]]。
 - 🔴 **未修復**｜**VSCode 擴充套件 `ide_selection` 缺失、`ide_opened_file` 回報錯誤（GitHub issue #8451，累積 50 則留言、35 個讚，2026-07-10）**：VSCode 擴充套件未正確回報 `ide_selection`，且 `ide_opened_file` 欄位回傳錯誤檔案資訊，影響依賴這些欄位判斷編輯器狀態的工作流；官方尚未回應。
-- 🔴 **未修復**｜**GitHub Connector 已在 Claude Desktop 連結卻未被識別（GitHub issue #32479，累積 98 則留言、144 個讚，2026-09-16 互動數更新）**：Desktop 完成連結授權後 Claude 仍無法辨識，依賴 GitHub 存取的工作流無法使用；官方尚未回應。
+- 🔴 **未修復**｜**GitHub Connector 已在 Claude Desktop 連結卻未被識別（GitHub issue #32479，累積 100 則留言、149 個讚，2026-10-02 互動數更新）**：Desktop 完成連結授權後 Claude 仍無法辨識，依賴 GitHub 存取的工作流無法使用；官方尚未回應。
 - 🔴 **未修復**｜**VSCode 擴充套件確認變更時未顯示 Edit 預覽/diff（GitHub issue #8660，累積 52 則留言、90 個讚，首見 2026-07-08，2026-09-11 互動數更新，已持續數月未修復）**：確認變更時 diff 畫面未正確顯示，難以於套用前檢視異動；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop/Cowork 缺 RTL（希伯來/阿拉伯文）排版支援（GitHub issue #38005，累積 41 則留言、111 個讚，首見 2026-07-07，2026-08-05 互動數更新，功能請求）**：使用者要求 Claude Desktop 與 Cowork 介面支援 RTL（right-to-left）排版，目前不支援希伯來文、阿拉伯文等 RTL 語言的正確顯示；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Pro：CoworkVMService 因「signature verification initialization failed: failed to get service executable path」無法啟動（GitHub issue #29941，累積 39 則留言，首見 2026-07-23）**：使用者回報 Windows 11 Pro 上 CoworkVMService 因簽章驗證初始化失敗（找不到服務執行檔路徑）而無法啟動，導致 Cowork 功能在該平台完全無法使用；官方尚未回應。
@@ -492,6 +495,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**：外掛可修改更深層行為，內建示範 mod「You should know」（旁觀 agent 主動提醒）；即 Function Hooks 提案（issue #91870）出貨（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）|
 | **v2.1.286** | 2026-09-30 | 權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）|
 | **anthropic-sdk-python v1.11.0** | 2026-09-30 | Features：新增 list spend limits endpoint，可透過 API 查詢支出限額設定（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0)）|
 | **anthropic-sdk-typescript google-cloud-sdk v0.0.17** | 2026-09-30 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.17)）|
@@ -763,6 +767,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-01 | **v2.1.287**：Claude Mods 出貨（#91870 轉✅）。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則，互動更新 1 則。 |
 | 2026-09-30 | 桌面版文件補充 `/resume` 完整流程：終端機關閉 session 後可於桌面版接續同一對話（非複本）。 |
 | 2026-09-29 | **v2.1.285**：新增 `DISABLE_WEB_FETCH`、`--desktop`；企業可限 API 供應商。旗標增9（1 已出貨）消7，見 [[topics/claude-code-experimental]]。 |
 | 2026-09-28 | **v2.1.284**：Sonnet 5.5 成 API 預設模型，新增「Yes, but ask」。旗標增4消2，見 [[topics/claude-code-experimental]]。新增已知問題 2 則。 |

@@ -7082,3 +7082,27 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   2. [商業] entities/pricing「事故現在還在發生嗎」表已滿載（6/6）且全數活躍，今日 Anthropic Status 新增一筆 credit purchase 入帳延遲通報（🔴）因表滿無法入列；候選讓位者 #5088（最後動態 09-04，距今 27 天、未滿 90 天無後續門檻）暫不可逕自讓位，請裁示處置方式
   3. [模型] topics/model-comparison 新增 ❓ 待查證標記：mixed-news.com 報導稱 Anthropic 將 Claude Sonnet 4.5 標記淘汰、給予 61 天轉移通知期（僅比最低保留期多 1 天），單一來源，待查證官方 Changelog／Models overview 後三選一處置（複查日 2026-10-15）
   4. reader-notes.md 有 3 筆 ⏳ 項目已逾 14 天未結案（2026-07-12 GPT-5.6/GPT-6 Astra 跑分對照缺口；2026-08-08 ×2：LLM code review 單位成本、codebase map/agent 記憶格式規約），供下次週度回顧處理
+
+## 2026-10-02 Ingest
+
+- 來源日報：[[news/2026-10-02]]
+- 更新頁面：
+  - 功能：entities/claude-code、topics/claude-code-experimental、topics/official-community-gap
+  - 商業：topics/anthropic-business、topics/competitor-landscape、topics/ai-talent-flow
+  - 安全政策：topics/ai-agent-safety、topics/anthropic-government-policy
+  - 社群：topics/community-tech-patterns、topics/community-tech-discussions
+  - 投資分析：topics/market-signals
+  - 模型：無（今日唯一條目證據過薄，未寫入任何頁面）
+  - 人物：無（今日唯一條目與 2026-10-01 同一事件，無新進展）
+  - 主編：wiki/feature-radar.md（新增 Claude Mods 詳細條目＋全覽表列＋「⭐ 現在值得跟的三件」輪替，Fable 5.1 因超出 30 天時間閘被擠下）
+- 新增頁面：無
+- 摘要：Claude Code v2.1.287 推出「Mods」外掛深層行為修改機制（官方追蹤 issue 233 留言、mixed-news.com 稱 Anthropic 說明外掛可讀取 API Key）；Claude for Government 全面開放美國聯邦機構；Broadcom 對 Anthropic 晶片租賃融資規模由「考慮中 420 億美元」擴大為「啟動 600 億美元債務融資」；兩則高互動 GitHub bug 回報（API Key 覆寫訂閱錯誤 121 留言、GitHub Connector 無法辨識 100 留言）
+- 呈現品質：全部通過
+- 分類回退：無
+- devpractice 沉澱：候選 9 筆（entities/claude-code ×3、topics/ai-agent-safety、topics/community-tech-patterns ×3、topics/model-comparison、entities/sonnet-5-5）
+- market 判讀：判讀 1 則（Broadcom 600 億美元債務融資，晶片商循環融資疑慮線第 2 則），覆寫可交易標的 1 列（AVGO），新增里程碑登記 1 筆（複查 2026-10-16）
+- 轉知帳本：結案 H-7c3708、H-30f7ac（功能）、H-7fbb0c（商業）；新開 H-0ce8c4（社群→功能：評估今日 7 則社群技術彙整節點是否應列入 official-community-gap 產品化矩陣）；H-fe8019、H-e8e1fd 維持 open（功能／模型記者再次評估，理由成立不予處理，詳見各自回報）
+- 品質備註：[社群] 記者回報排除 18 則中有 12 則在收報腳本「未回應清單」未逐一點名 URL（僅概括說明排除邏輯：Reddit 0 留言無週熱門標記、HN ≤2 分 Show HN、純產品推銷稿、[dead] 貼文），經主編對照 `data/ingest-packets/2026-10-02/社群.md` 核對排除邏輯一致，不另行查證；[社群] 另標記 community-tech-discussions.md「## 最近在討論什麼」表已達 60 列，超過上限 50 列達 10 列（含本輪新增 3 列）
+- 📋 待使用者確認：
+  1. [社群] community-tech-discussions.md「最近在討論什麼」表已超載 10 列（60/50），建議下次 `/wiki-lint` 執行滿載讓位清理
+  2. wiki/feature-radar.md「⚠️ 從你現在的版本升上去」表頭注記「核對到 v2.1.269，2026-09-12」仍未同步（延續自 10-01 待辦），雲端 egress 受限無法自行查證官方 CHANGELOG.md，建議下次有網路存取的 session 逐版核對後補寫

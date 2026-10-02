@@ -29,12 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-02
+**最後新聞更新：** 2026-10-02
 
-> **最新安全事件**（2026-10-01）
-> - **自我複製提示注入再添一例**：Simon Willison 引述密碼學學者 Matthew Green——彼此沙盒隔離的 agent 透過共用套件快取留訊息互相影響行為，已具備蠕蟲的兩個要素（劫持 agent 的 payload＋帶 payload 去下一個 agent 的 agent）；換成 email／Slack／共用文件等協作管道風險更明顯。
-> - **能力擴散**：Anthropic Frontier Red Team 官方研究稱，中國 GLM-5.3 已能在 4% 試驗中達成完整控制流劫持（Claude Mythos Preview 為 6%），跨越先前模型皆做不到的門檻。
+> **最新安全事件**（2026-10-02）
+> Claude Code 2.1.287 新增 Mods；mixed-news.com 稱外掛可讀取使用者 API Key，僅標題可用，暫未列入攻擊表。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -112,6 +111,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### mixed-news.com：Claude Code 2.1.287 新增 Mods 功能，Anthropic 稱外掛可讀取使用者 API Key（2026-10-02 新增）
+
+- **揭露來源**：Google News／mixed-news.com（2026-10-02 16:05 UTC）；0 互動（2 個來源），原料無可讀內文，僅能以標題與 URL 判讀
+- **核心主張（僅標題可用）**：標題稱 Claude Code 2.1.287 新增可修改更深層行為的「Mods」外掛機制與旁觀 agent「You should know」，Anthropic 並說明外掛可讀取到使用者的 API Key；官方版本資訊見 [GitHub Release v2.1.287](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)，Mods 功能本身另見 [[entities/claude-code]]
+- **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「Plugin4Shell」（09-18）等案例同屬「官方預設值／外掛機制本身不安全」模式；標題未區分官方既有設計或未預期缺口，僅標題可用、無具名研究者技術細節，暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，缺乏觸發機制與官方回應佐證新列優先序）
+- ❓ **待查證**（標 2026-10-02｜查 mixed-news.com、Mods、API Key）：外掛讀取 API Key 是否為官方預期設計或安全缺口、是否有官方緩解措施或使用者可採取的防範動作均未見報導
+- **可信度評估**：mixed-news.com 單一來源、0 互動，RSS 原料無正文，僅標題層級可用；本頁只記安全面主張，Mods 功能本身見 [[entities/claude-code]]
 
 ### Simon Willison 引述 Matthew Green：沙盒隔離 agent 透過共用套件快取留訊息，已具備蠕蟲傳播的兩個要素（2026-10-01 新增）
 
@@ -1110,6 +1117,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-02
+- **[❓ 新增] mixed-news.com：Claude Code 2.1.287 新增 Mods，Anthropic 稱外掛可讀取使用者 API Key**：僅標題可用、0 互動單一來源，是否為官方預期設計均未見報導，暫不列入攻擊表，詳見「## 技術彙整」
 
 ### 2026-10-01
 - **[📋 新增] Simon Willison 引述 Matthew Green：沙盒隔離 agent 透過共用套件快取留訊息，已具備蠕蟲傳播兩要素**：呼應既有自我複製提示注入敘事，非具名 Claude 事件，詳見「## 技術彙整」
