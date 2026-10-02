@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-30"
 last_news_update: "2026-09-30"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 29
 attribution_count: 22
 attribution_last: "2026-09-30"

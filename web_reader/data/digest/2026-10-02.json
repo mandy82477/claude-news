@@ -1,0 +1,619 @@
+{
+  "date": "2026-10-02",
+  "generatedAt": "2026-10-02 17:12 UTC",
+  "articleCount": 59,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Mods - make Claude 10x more extensible",
+      "url": "https://github.com/anthropics/claude-code/issues/91870",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 13:56",
+      "sentiment": "",
+      "body": "官方在 Mods 功能發布後置頂社群追蹤串，截至目前已累積 233 則留言、218 個讚，官方表示正逐一處理使用者回報的回饋。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[Bug/Documentation] 'Organization has been disabled' error when ANTHROPIC_API_KEY overrides Max/Pro subscription",
+      "url": "https://github.com/anthropics/claude-code/issues/8327",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 10:15",
+      "sentiment": "",
+      "body": "已有效訂閱 Claude Pro／Max 的使用者，一旦設定 `ANTHROPIC_API_KEY` 覆寫訂閱設定，就會收到「組織已停用」錯誤，該回報累積 121 則留言、22 個反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] GitHub Connector connected in Claude Desktop but not recognized by Claude",
+      "url": "https://github.com/anthropics/claude-code/issues/32479",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 09:55",
+      "sentiment": "",
+      "body": "使用者回報已在 Claude Desktop 中連接 GitHub Connector，但 Claude 仍無法辨識該連線已啟用，累積 100 則留言、149 個反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "anthropics/claude-code v2.1.287",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/01 18:00",
+      "sentiment": "",
+      "body": "本次更新新增「Claude Mods」：外掛現在可修改更深層的行為；並內建名為「You should know」的 mod，由旁觀 agent 留意使用者或 Claude 可能漏掉的事項並主動提醒。",
+      "focusTags": [
+        "[重大事件]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）（新增 10 頁）",
+      "url": "https://code.claude.com/docs/llms.txt",
+      "source": "Official Docs",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "新增 10 頁 mods 相關文件，涵蓋管理、API、建立、事件、介面展示、繪製介面、總覽、參考、測試與疑難排解，對應今日 Mods 功能發布。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.287 build 新增 7 個功能候選旗標（自 2.1.286 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.287",
+      "source": "Build Flags",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "新增候選旗標含 `CLAUDE_CODE_CCR_EARLY_SKILLS_SYNC`、`CLAUDE_CODE_GROWTHBOOK_KICK_FROM_INIT`、`CLAUDE_CODE_GZIP_REQUEST_BODY_BLOCKS`、`CLAUDE_CODE_MCP_SERVE_TOOL_OUTPUT` 等 7 項；build 裡出現的旗標不代表會正式上線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Barclays expands Anthropic's Claude Code to support software development and legacy modernisation - The Asian Banker",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMURITlFybklqUDktaUU1QXQzX1FGWjA5WkFneFlVWTJHS0VQX251aXVOVVRlSVNxWEE2enRzNGM3akZ6UERFYUdWb2NzNFNXTl9MXzYyMEU5U2J0N2prUkRRbE9WT3YxV1BRWE0xMURjTGFJSlphVXNVdWJRSk45ZVRtcGNlVEhoVzh3OV81T1hwR0RtNTBRcXI3Y3BYbEVzTkFLY09qT0RfSy1rWGhNenJ2RmFKTUZhRHozWWNfclJoZWwzMW9wRGtOWHZVcXloUXRmaUNFZlhGaG8waTlUUHBBOA?oc=5",
+      "source": "Google News / The Asian Banker",
+      "time": "10/02 13:14",
+      "sentiment": "",
+      "body": "昨日 Barclays 擴大採用 Claude Code 的消息今日持續在財經媒體圈發酵，finextra.com、Resultsense 等至少 3 個來源同日跟進轉述，細節與昨日官方公告一致，無新進展。",
+      "focusTags": []
+    },
+    {
+      "title": "FTC Reportedly Probes OpenAI and Anthropic as Trump Backs AI Self-Regulation - Barron's",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORFg5MlR3NnU2N3lOM2o3TVR2RC1RV3Fpa2FQRVVPbXpiTmhSMWRiQVFlNlUxM19aMVVVRW1iY0pzOHRHYnVlSjJFeUxLMlpvY3Fkajk5d05wTzBQbHYwZ2hieWxSSXQ2cEt0aG12MGZuOUh5ZGpHYWh6S25EWnN6U2hjTDdHODdlck5UR1hWTQ?oc=5",
+      "source": "Google News / Barron's",
+      "time": "10/02 11:25",
+      "sentiment": "",
+      "body": "昨日已報導的 FTC 產品風險調查，今日 Barron's 補充 Trump 同時表態支持 AI 業界自律管理的脈絡，僅單一來源，細節待後續查證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Hong Kong users caught off guard as Anthropic tightens VPN access to Claude - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUlJ1MHRhMUY5YUNJT3pwWDVJc3h0TkhFLUxYd3FUbnQ2SHdTOFpobWZ2VkRXZmhoQW9XV0JlREhwbHo2TWM0eHcydEtQeWtFcDVGN3JZYUZJQmctMnY0Q0RTbklWaEY3NE5XR0QweHJITVZhSWhuckF2TUV3RkRsSURGV0JOTnZkdWxQR0N0U0RDcFJ2aHF6QnlyQ0RSMVZxbUt2dWl0TTVneERvcTZRc0JTZkJVTGpHOHpB0gG7AUFVX3lxTFBjaTQwVU9VRmRSN1hiajZEeFNGbDlQTXF3MmZFU1hqeWNUZFBkV1NaMWFBb2l2OHlLR290a0JNVlc1eHc1TTVaNWp2SkNBdG92V1l1LUhIb1ZQX1Bwd21HWG5Id3ZjM1pkZHAtNF9DNnktV3BnZlhscmM1OEczbEdjRXZ0V3RoM0F5QUlHREtaT25QWDJrV0J6LXhhMEEzU05DUkE5ODEwZkp1X3d1TlhvOHhlMmJWOHZCNHM?oc=5",
+      "source": "Google News / South China Morning Post",
+      "time": "10/02 05:44",
+      "sentiment": "",
+      "body": "南華早報報導，Anthropic 近期收緊 VPN 存取限制，導致部分香港使用者原本可用的 Claude 連線方式突然受影響，用戶多表示事前未收到通知。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Show HN: Rhun, an open-source code editor written in assembly",
+      "url": "https://rhun.app/",
+      "source": "Hacker News",
+      "time": "10/01 20:32",
+      "sentiment": "",
+      "body": "作者以組合語言打造的輕量程式碼編輯器，支援 Linux／Windows／Apple Silicon，內建面板可直接接入 Claude Code 或 Codex session，也能用本機 Ollama 模型或既有 Claude Code／Codex 訂閱草擬 commit 訊息。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude-Shaped Science",
+      "url": "https://www.anthropic.com/research/claude-shaped-science",
+      "source": "Hacker News",
+      "time": "10/02 13:38",
+      "sentiment": "",
+      "body": "Anthropic Science 專欄刊出物理學教授 Matthew Schwartz 的客座文章，延續先前「Vibe Physics」系列，描述他在停止直接下指令、改讓 Claude 自主探索後觀察到的研究方法轉變。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Breadcrumb, record everything on your mac + context manager for AI",
+      "url": "https://innerloop.works/breadcrumb",
+      "source": "Hacker News",
+      "time": "10/01 17:58",
+      "sentiment": "",
+      "body": "作者發布可記錄 Mac 螢幕、會議與 AI 對話紀錄並轉換成可搜尋記憶庫的本機加密工具，相容 Claude Code／Codex／Cursor／opencode，可讓使用者用對話方式教它規則。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AI godfather Yann LeCun: Anthropic CEO deluded, doesn't understand cybersecurity",
+      "url": "https://fortune.com/2026/10/01/yann-lecun-anthropic-ceo-dario-amodei-deluded-crazy-cybersecurity/",
+      "source": "Hacker News",
+      "time": "10/02 06:31",
+      "sentiment": "",
+      "body": "昨日已報導的 LeCun 評論 Dario Amodei 言論，今日在 HN 持續有討論延燒，多為對雙方說法孰是孰非的辯論。情緒：🤔",
+      "focusTags": []
+    },
+    {
+      "title": "kharmanskyi/open-steps",
+      "url": "https://github.com/kharmanskyi/open-steps",
+      "source": "GitHub Search",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "給 Claude Code、Codex、Cursor、Gemini CLI 使用的平實語言 agent skills，產出誠實的 session 報告與直白結論，GitHub 累積 1,078 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Coolver/home-assistant-vibecode-agent",
+      "url": "https://github.com/Coolver/home-assistant-vibecode-agent",
+      "source": "GitHub Search",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "Home Assistant 的 MCP server agent，讓 Claude Code、Cursor、VS Code 等支援 MCP 的 IDE 能用自然語言建立與除錯自動化、設計儀表板、調整主題與設定，GitHub 累積 630 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "UNLINEARITY/CLI-WeChat-Bridge",
+      "url": "https://github.com/UNLINEARITY/CLI-WeChat-Bridge",
+      "source": "GitHub Search",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "將 Codex、Claude Code、OpenCode、Pi Agent 等 CLI 工具原生整合進微信／企業微信機器人，支援雙向對話與檔案傳輸，GitHub 累積 522 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AgentSystemLabs/agent-office",
+      "url": "https://github.com/AgentSystemLabs/agent-office",
+      "source": "GitHub Search",
+      "time": "10/02 16:18",
+      "sentiment": "",
+      "body": "卡通風格 3D 虛擬辦公室，團隊可在其中「雇用」Claude Code 擔任座位上的員工，共享即時終端機、語音對話並追蹤 GitHub issues 與 PR，GitHub 累積 506 星。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Code v2.1.287 正式發布，推出「Mods」功能，外掛可修改更深層的行為，並內建旁觀 agent「You should know」，會在使用者或 Claude 本身可能忽略某些事項時主動提醒；mixed-news.com 同日報導標題並指出，Anthropic 表示外掛可讀取到使用者的 API Key。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTE94VHo1THdydmxIUUUzc1pZNFFQdHk4d2JwazVlbHQ0SjZZZnhCbndpQ09TSXluZ09tMVlMZVQyUXdCc0o0WWMtODB6Qy1tSHlYM2lGVndRcUpOU0VVUWVoWnBDeUVVbEJ5M2ZwaHVDWU5GTGF0eUhtaHpmNHA4QQ?oc=5"
+      ],
+      "ref_names": [
+        "GitHub Release",
+        "mixed-news.com"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Claude for Government 對美國聯邦機構全面開放（正式上線，GA），聯邦文職機關採用 Claude 又進一步擴大。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOXZrcUdfNGNPV2Z0ZWhibTl1UmJKVEZ1YTNxU3luQmJOX0pQc3lsY21vcmxPejFRNkhNTWpkU0FBSEUzQ0M1WEhveWRvczZ0dmM4TkR6eVVMcHpveDE3T1JZcDVrTkFmN0hzY1JvajRXV1FoRHVQdjJPNGhvTW1sbEd1cmx0X0g3cEI5elROUk9pVHRtOEE?oc=5"
+      ],
+      "ref_names": [
+        "TechRepublic"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-01）Broadcom 對 Anthropic 的晶片租賃融資規模持續擴大：日前傳出「最高 420 億美元貸款考慮中」，今日多家財經媒體報導已進一步啟動「600 億美元債務融資」。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUkppVzlmRzV3SGdHWEFRb3ZaU2FSYlE5OWRjZW81OVFVVlprSFBDMTJsek11SWk5Q1plS3hJeXZXVnY2Q3V6MFFVdEFhZHlHVVg4OWNpNThyTjNJbkF4bVpTbWZrLVF2SUp5X182dVR0anQ1ZlIwbzZuT2hDa3A2NFR1UWF1bUN6Zlk5eEMtSEpWbk5FWG4xZzgtZU0?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxOLVZPQXJITDBLcUx4R1AzMEcxeTN5Vm51R2ZETlBZRnVXV3ZjMlMwWUctNmFoT0wyRFlfQmtpb0pkZkhyajl0MVR0Qk9JWHdtdVNFNEo1UWtKcVVUclotSjBhZUp2dnNQSEp1eGdLRk50bTZGdnhtb1dPSmJoZUJCNg?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUi15TnpLM2xBMC10TTRsRGRHOXpVeUVrelZIMXI3SEpuQ2J2SzdOLWtnTzA3dGszS1BVODNTSWFVWWI2XzRkTWVSbFZoMXF6YkNQVDF2cEloLU1vLTcySEoxT2gxVlBLNmdrSWVHem8tRnhwZkhoMUtLLVJ6S2UzQkpPTmdhQ0R1MTd1ZFVYNUtZRllKTzRZODlhMHBVLXdwVHFUdThsM1NVbHQ2U1VBeWZVUGI?oc=5"
+      ],
+      "ref_names": [
+        "Yahoo Finance",
+        "qz.com",
+        "Seeking Alpha"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "GitHub Copilot can now interact with desktop apps with computer use",
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+      "body": "GitHub Copilot CLI 與桌面版（macOS／Windows）公開預覽新增 computer use，可代操作桌面應用程式。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Dynamic workflows in Copilot CLI and the Copilot app",
+      "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app",
+      "body": "Copilot CLI、App 與 SDK 新增可用程式碼定義的動態工作流程編排功能。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 27
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 10
+    }
+  ],
+  "preview": "Claude Code：Claude Code v2.1.287 發布：新增「Claude Mods」——外掛可修改比既有 plugin API 更深層的執行時行為；內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。此前以 CLAUDE_CO",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-02",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Claude Code v2.1.287 發布：**新增「Claude Mods」**——外掛可修改比既有 plugin API 更深層的執行時行為；內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。此前以 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標試玩、09-09 官方承諾數週內出貨，本版兌現，見 [[topics/claude-code-experimental]]。\n- 同版 build 新增 7 個功能候選旗標（`CLAUDE_CODE_CCR_EARLY_SKILLS_SYNC` 等），追蹤見 [[topics/claude-code-experimental]]。\n- 官方文件索引新增 10 頁 mods 相關文件（管理、API、建立、事件、介面、測試、疑難排解等）。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "代表工具更新",
+            "date": "",
+            "body": "deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 升第 4 階：v2.1.287 正式出貨為「Claude Mods」，已進 [[feature-radar]]。同版 build 新增 7 個第一階候選旗標（名單見追蹤表）。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Claude for Government 全面開放美國聯邦機構採用（GA）**：延續聯邦文職機關採用擴大既有脈絡，詳見 [[topics/anthropic-business#時序]] 10-02（TechRepublic）。\n- **Broadcom 啟動 600 億美元債務融資支應 Anthropic 晶片採購**：規模較 10-01「考慮中 420 億美元貸款」擴大，詳見 [[topics/anthropic-business#還沒過去的風險]] 細節區。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- Broadcom 晶片租賃循環融資規模擴大：從「考慮中 420 億美元貸款」(10-01) 到「啟動 600 億美元債務融資」。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **香港 VPN 存取收緊**：南華早報稱 Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用連線方式受影響，事前未獲通知；僅標題可用。\n- **FTC 調查線添脈絡**：Barron's 稱 Trump 同時公開表態支持 AI 業界自律；單一來源，暫不更動現況表。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "Claude Code 2.1.287 新增 Mods；mixed-news.com 稱外掛可讀取使用者 API Key，僅標題可用，暫未列入攻擊表。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **三類添代表技巧**：Skills 設計（open-steps）、Plugin/MCP 整合（home-assistant-vibecode-agent）、Agent 活動可視化（agent-office）。\n- **行動裝置遠端控制、記憶與知識管理各添一例**：CLI-WeChat-Bridge 微信橋接；Breadcrumb 錄製 Mac 螢幕轉記憶庫。\n- **Hooks 與自動化添一例**：dev.to 實測用未公開 function hooks 做精簡輸出與狀態列外掛。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變。\n- Show HN：組合語言打造的輕量編輯器 Rhun，內建面板直接接 Claude Code／Codex session。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 10
+  },
+  "readerTopStories": [
+    {
+      "title": "Mods - make Claude 10x more extensible",
+      "url": "https://github.com/anthropics/claude-code/issues/91870",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 13:56",
+      "sentiment": "",
+      "body": "官方在 Mods 功能發布後置頂社群追蹤串，截至目前已累積 233 則留言、218 個讚，官方表示正逐一處理使用者回報的回饋。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[Bug/Documentation] 'Organization has been disabled' error when ANTHROPIC_API_KEY overrides Max/Pro subscription",
+      "url": "https://github.com/anthropics/claude-code/issues/8327",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 10:15",
+      "sentiment": "",
+      "body": "已有效訂閱 Claude Pro／Max 的使用者，一旦設定 `ANTHROPIC_API_KEY` 覆寫訂閱設定，就會收到「組織已停用」錯誤，該回報累積 121 則留言、22 個反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] GitHub Connector connected in Claude Desktop but not recognized by Claude",
+      "url": "https://github.com/anthropics/claude-code/issues/32479",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/02 09:55",
+      "sentiment": "",
+      "body": "使用者回報已在 Claude Desktop 中連接 GitHub Connector，但 Claude 仍無法辨識該連線已啟用，累積 100 則留言、149 個反應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
