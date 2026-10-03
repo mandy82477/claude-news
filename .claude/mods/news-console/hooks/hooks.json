@@ -1,0 +1,4 @@
+{
+  "description": "news-console: session.start timers fetch origin in the background; prompt.submit adds one context line when behind; ui.render draws the AbovePrompt band and a PromptHint suffix; tool.call hooks on Read (freshness log line), Edit/Write (attribution) and Bash/PowerShell (attribution and the foreign-file stage guard). Every tool.call hook passes next(e) or returns { deny }; none returns { result }.",
+  "modules": ["./register.ts"]
+}

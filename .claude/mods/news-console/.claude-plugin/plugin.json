@@ -1,0 +1,6 @@
+{
+  "name": "news-console",
+  "version": "0.1.0",
+  "description": "CLAUDE_NEWS local console: warns when the local clone is behind origin (band above the prompt with an ff-only pull button, one context line for Claude, real cloud-shift failures), notes wiki page freshness after a Read, and refuses a git add/commit that would stage files another live session changed. Inert outside the CLAUDE_NEWS tree.",
+  "author": { "name": "Mandy" }
+}
