@@ -147,8 +147,6 @@ def check_agent(tool_input: dict, who: str) -> str | None:
             "派工未指定 model：會繼承主 session 模型，六記者並行足以打穿訂閱配額。記者與 pipeline agent 一律明寫 "
             "`model: \"sonnet\"`。規則：.claude/skills/wiki-ingest/SKILL.md 步驟 3。"
         )
-    if is_reporter:
-        _log_agent_payload(tool_input)
     # 只擋「明確設成 true」。2026-10-03 事故：2.1.288 的派工明寫 false，hook 卻沒收到 False，
     # 「is not False」把 pipeline 的七位記者全擋掉；欄位缺席時放行（fail-open），查證中。
     if is_reporter and tool_input.get("run_in_background") is True:
@@ -186,6 +184,9 @@ def main() -> int:
     except Exception:
         return 0
     try:
+        ti = payload.get("tool_input") or {}
+        if payload.get("tool_name") in AGENT_TOOLS and payload.get("session_id") and REPORTER_MARK in str(ti.get("prompt") or ""):
+            _log_agent_payload(ti)  # 只記真的 hook 呼叫（帶 session_id）；單元測試直接呼叫 decide()，不會寫入
         why = decide(payload)
     except Exception:
         return 0
