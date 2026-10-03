@@ -110,6 +110,19 @@ class TestMainPayload(unittest.TestCase):
         self.assertEqual(self.run_hook("git checkout -- wiki/a.md", agent_id="a1", cwd=cwd), 0)
         self.assertEqual(self.run_hook("git stash", agent_id="a1", cwd=cwd), 2)
 
+    def test_pipeline_agent_treated_as_main(self):
+        """/news-pipeline 的 Phase C 備用 agent 照 web-publish 要還原 replay 檔、pull --rebase。"""
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            sub = Path(d) / "sess" / "subagents"
+            sub.mkdir(parents=True)
+            rec = {"message": {"role": "user", "content": "你是 Claude News Pipeline Agent（Phase C）。"}}
+            (sub / "agent-p1.jsonl").write_text(json.dumps(rec, ensure_ascii=False) + "\n", encoding="utf-8")
+            extra = {"agent_id": "p1", "transcript_path": str(Path(d) / "sess.jsonl")}
+            self.assertEqual(self.run_hook("git checkout -- src/gathered_items.json", **extra), 0)
+            self.assertEqual(self.run_hook("git pull --rebase origin master", **extra), 0)
+            self.assertEqual(self.run_hook("git stash", **extra), 2)
+
     def test_non_shell_tools_pass(self):
         payload = {"tool_name": "Read", "tool_input": {"command": "git stash"}}
         old = sys.stdin

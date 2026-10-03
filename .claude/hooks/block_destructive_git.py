@@ -16,7 +16,8 @@ PreToolUse hook: 擋下會捲走共用工作樹或改寫遠端歷史的 git 指�
     git checkout／restore 的 pathspec 是整棵樹（`.`、`:/`、`*`）    git checkout -f／switch -f／--discard-changes
     git push --force／-f／--force-with-lease／--mirror／`+refspec`  git push <非 master>:master（含 HEAD:master）
     git checkout -B master／switch -C master
-子 agent 且在共用工作樹內（payload 有 `agent_id`、cwd 為專案根；`isolation: worktree` 的子 agent 不受此限）：
+子 agent 且在共用工作樹內（payload 有 `agent_id`、cwd 為專案根；`isolation: worktree` 的子 agent 不受此限；
+/news-pipeline 的 Phase A／C 背景 agent 比照主 session——身分判定見 `_identity.py`）：
     另擋 checkout、switch、restore、reset、clean、pull、rebase、merge、cherry-pick、revert、am 全部寫法
     （規則：.claude/reporter-rules/shared.md「不可執行任何改動工作區全域狀態的 git 指令」）
 
@@ -28,10 +29,10 @@ PreToolUse hook: 擋下會捲走共用工作樹或改寫遠端歷史的 git 指�
 import json
 import os
 import sys
-from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _cmdparse import is_whole_tree_spec, iter_git  # noqa: E402
+from _identity import in_shared_tree, role  # noqa: E402
 
 try:
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
@@ -125,16 +126,10 @@ def violation(command: str, is_shared_subagent: bool = False) -> str | None:
 
 
 def _is_shared_subagent(payload: dict) -> bool:
+    """共用樹內、非 pipeline 的子 agent。pipeline 備用 agent 照規則要 push／還原 replay 檔，比照主 session。"""
     if not payload.get("agent_id"):
         return False
-    root = os.environ.get("CLAUDE_PROJECT_DIR")
-    cwd = payload.get("cwd")
-    if not root or not cwd:
-        return True  # 判斷不了就當共用樹——子 agent 這端寧可嚴
-    try:
-        return Path(cwd).resolve() == Path(root).resolve()
-    except (OSError, ValueError):
-        return True
+    return role(payload) in ("reporter", "subagent") and in_shared_tree(payload)
 
 
 def main() -> int:
