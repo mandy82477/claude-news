@@ -1380,7 +1380,15 @@ code {
   font-family: var(--font-sans); font-size: var(--fs-small); color: var(--ink-3);
   margin-bottom: 10px;
 }
-.detail__crumbs .wikilink { font-size: var(--fs-small); }
+/* 麵包屑裡的 .wikilink 是 <button>，全庫沒有 .wikilink 基礎樣式，不重設就是瀏覽器預設的灰框鈕 */
+.detail__crumbs .wikilink {
+  font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-regular);
+  color: var(--ochre-9); background: none; border: 0; border-bottom: 1px solid var(--border-2);
+  border-radius: 0; padding: 0; cursor: pointer;
+}
+.detail__crumbs .wikilink:hover { border-bottom-color: var(--ochre-7); }
+/* 狀態標籤帶註記時可達 40 字，窄幅下不換行會把整頁撐出 viewport */
+.detail__type-row .pill { white-space: normal; text-align: left; }
 .detail__subtopics {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px;
   font-family: var(--font-sans); font-size: var(--fs-small);

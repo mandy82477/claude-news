@@ -1405,22 +1405,12 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     const crumbHtml = crumbs.length
       ? `<div class="detail__crumbs">${crumbs.map(c => `<button class="wikilink" onclick="openWikiPage('${esc(c.id)}','${c._kbBaseType}')">${esc(c.name || c.id)}</button>`).join(' › ')} › <span>${esc(item.name || id)}</span></div>`
       : '';
-    // 子頁分三種，判準同 scripts/gen_wiki_frontmatter.py 的 page_role：
-    //   archive  — slug 含「-archive」→ 正文之後「更早的紀錄」
-    //   redirect — 已併回母頁的殼（正文前 60 行含「已併回」）→ 不顯示，內容已在本頁
+    // 子頁分三種（pageRole 由 build_web.py parse_wiki 算，判準同 gen_wiki_frontmatter.py 的 page_role）：
+    //   archive  — 封存頁 → 正文之後「更早的紀錄」
+    //   redirect — 已併回母頁的殼 → 不顯示，內容已在本頁
     //   其餘     — 真子題 → 正文之前一行精簡連結，不擠掉頁頂 callout
-    // data.js 沒帶 page_role，redirect 只能讀子頁 markdown 判（只抓非封存子頁，通常 0–3 個）
-    const isArchiveKid = k => k.id.includes('-archive');
-    const archiveKids = kids.filter(isArchiveKid);
-    const otherKids = kids.filter(k => !isArchiveKid(k));
-    const redirectFlags = await Promise.all(otherKids.map(async k => {
-      if ((k.status || '').includes('已併回')) return true;
-      try {
-        const kj = await fetchWiki(k.id);
-        return (kj.markdown || '').split('\n').slice(0, 60).join('\n').includes('已併回');
-      } catch (e) { return false; }
-    }));
-    const subKids = otherKids.filter((_, i) => !redirectFlags[i]);
+    const archiveKids = kids.filter(k => k.pageRole === 'archive');
+    const subKids = kids.filter(k => k.pageRole !== 'archive' && k.pageRole !== 'redirect');
     const kidLink = k => `<button class="detail__kid-link" onclick="openWikiPage('${esc(k.id)}','${k._kbBaseType}')">${esc(k.name || k.id)}</button>`;
     const subHtml = subKids.length
       ? `<div class="detail__subtopics"><span class="detail__subtopics-label">本頁的子題</span>${subKids.map(kidLink).join('')}</div>`
@@ -2512,8 +2502,7 @@ ${olderHtml}
     const recs = (me.alsoSee || []).map(r => Object.assign({ shared: r.shared, direct: r.direct }, byId.get(r.id))).filter(r => r && r.name);
     if (recs.length) {
       const kb = Object.fromEntries(buildKbList().map(i => [i.id, i]));
-      const plain = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/[*`]/g, '')
-        .replace(/⟨Q-\d+⟩\s*/g, '').replace(/（標 [^）]*）｜?/g, ' ');   // 待查證的機器括號不上卡片
+      const plain = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/[*`]/g, '');
       host.insertAdjacentHTML('beforeend', `<div class="wiki__section-h" style="margin-top:18px">你可能也想看</div>
 <div class="alsosee">${recs.map(r => {
         const k = kb[r.id] || {};

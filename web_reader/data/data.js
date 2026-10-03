@@ -17,6 +17,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-08-23，The Times of India（經 Google News 轉載）報導 Anthropic 已聘用 Amir Salek，標題稱其為「Google 自研晶片計畫創辦人（founder of Google's custom chip programme）」，僅標題可用、正文未見。**後續**（…",
       "latestHeadline": "citybiz 獨立報導同一任命，標題稱其為「former Google TPU chief」，構成第二來源佐證；細節仍未展開（來源：Google News/citybiz）。後續（2026-09-06 查證）： Bloomberg 補上具體經歷與職掌，見頁首",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -37,6 +38,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Andrej Karpathy 為知名 AI 研究者，已於 2026-05-19 加入 Anthropic pre-training 團隊（本人於 X 宣布，TechCrunch、CNBC、Axios 同日獨立報導，2026-08-13 查證），以 OpenAI 聯合創始人/研究總監及 Tesla AI/Autopil…",
       "latestHeadline": "Karpathy 本人於 X 發文，以 Claude Opus 建構 3D《魔戒》（Lord of the Rings）場景為例（Three.js、約 5,500 行程式碼、成本約 10 美元），並將此類測試定位為「vibe checks」而非「hard benchmarks」（已查實，2026-09-20 查證，見上",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -57,6 +59,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-07-09，Anthropic 官方公告前聯準會主席 Ben Bernanke 加入公司獨立監督機構「長期利益信託」（Long-Term Benefit Trust）董事會。長期利益信託是 Anthropic 治理結構中負責監督公司使命（安全優先於商業利益）的獨立機構，成員具有選任/罷免部分董事會成員的權力。…",
       "latestHeadline": "前聯準會主席 Ben Bernanke 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會，Reuters/CNBC/Bloomberg 同步報導，HN 討論 66 分（來源：Anthropic 官方公告、Reuters、CNBC、Bloomberg）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -77,6 +80,7 @@ window.WIKI_DATA = {
       "parent": "entities/boris-cherny",
       "summary": "本頁保存 boris-cherny 被搬離主頁的原始條目，一字不刪。想知道現況，回主頁「現況」或「公開言論摘要表」。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "👤 人物"
       ]
@@ -97,6 +101,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（Simon Willison 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文…",
       "latestHeadline": "Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -117,6 +122,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "截至 2026-07-10 仍無後續公開資訊，Bugcrawl 自 2026-04-26 首度被 TestingCatalog 報導後維持內部測試狀態。此工具由 Anthropic 開發，專為 Claude Code 提供自動化漏洞偵測功能，強化 AI 輔助開發流程中的程式品質把關，目前尚未正式公開、無公開測試邀請。 …",
       "latestHeadline": "首次被媒體報導（TestingCatalog），確認 Anthropic 正在測試此工具",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -137,6 +143,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-05-14，Cat Wu 在公開訪問中提出 AI 下一個重大躍進是「**主動性（proactivity）**」——AI 代理應能主動完成任務，而非被動等提示才動作。這是 Claude Code 從「互動工具」轉向「自主代理平台」的產品定位宣言，迄今仍是她最後一次公開論述。 Cat Wu 是 Anthropic…",
       "latestHeadline": "「prompt engineering 不那麼重要」發言者查實為 Boris Cherny，非 Cat Wu（2026-07-30 報導，2026-09-02 查證）：Search Engine Journal 原文具名 boris-cherny（YC Diana Hu 訪談）——「不需要花俏的東西，給模型任務、給它驗",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -157,6 +164,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-government-policy",
       "summary": "首爾媒體說明會公開解封時間框架，稱模型將於數日內恢復可用，展示談判進展。",
       "latestHeadline": "",
+      "pageRole": "redirect",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -177,6 +185,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-government-policy",
       "summary": "05-26 出席教宗良十四世《Magnifica Humanitas》封論發布，Anthropic 為唯一受邀 AI 公司，確立國際倫理路線。",
       "latestHeadline": "",
+      "pageRole": "redirect",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -197,6 +206,7 @@ window.WIKI_DATA = {
       "parent": "entities/claude-code",
       "summary": "本頁保存 claude-code 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -217,6 +227,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**最新版本動態：** - **v2.1.287**（2026-10-01）：**新增「Claude Mods」**，外掛可修改更深層行為，內建示範 mod「You should know」（見 Release）。即 Function Hooks 提案出貨，詳見「已知問題」🔌 MCP 整合、claude-code-ex…",
       "latestHeadline": "Cowork 可於 Chrome 側邊欄執行結案（官方 08-12 blog，Max／Team 即日、Pro 數週內，不支援其他 Chromium 瀏覽器與行動版）。",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -237,6 +248,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**09-17 起整合進對話介面：** 官方部落格宣布（隨 Cowork 與 Chat 合併同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；具體是取代或疊加既有獨立設計介面，官方摘要未載明，待後續官方文件確認。 Claude Des…",
       "latestHeadline": "官方部落格宣布（隨 Cowork／Chat 合併同批）Claude Design 整合進對話，可直接編輯、簡報並下載為 PowerPoint／PDF",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -257,6 +269,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Claude Docs 是 Anthropic 於 2026-09-17 隨 Claude Cowork 與 Chat 合併同步推出的官方文件工具（beta），讓使用者可直接在 Claude 對話中建立、編輯文件，不需切換到外部應用程式。首波僅 Pro、Max 方案可用，官方表示未來數週將擴及更多方案；官方部落格摘要未…",
       "latestHeadline": "Help Center release notes 新增段落：可在任何對話（含 Claude Code、Artifact 介面）直接要求文件；輸出格式與跟 Artifacts 邊界仍未載明",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -277,6 +290,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "後續媒體追蹤持續兩條路線：一是評論疑慮（2026-07-17，Education Week 報導部分評論者對「Claude for Teachers」表達疑慮，具體疑慮內容原文未展開），二是地方教育單位實際採用案例（2026-07-17，WDET 101.9 FM 報導 Anthropic 將此教師版 AI 產品導入底…",
       "latestHeadline": "Education Week 報導部分評論者對此產品表達疑慮（具體疑慮內容原文未展開）；WDET 101.9 FM 報導 Anthropic 將此教師版 AI 產品導入底特律課堂，屬地方教育單位採用案例",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -297,6 +311,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**CRISPR 特徵酶系統發現：官方公布與媒體跟進（2026-09-24～09-25）：** Anthropic 部落格 09-24 宣布新設生命科學研究團隊，聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型…",
       "latestHeadline": "the-scientist.com 與 WIRED 同日跟進，延續原創性質疑：the-scientist.com 稱發現可能借用另一科學家既有研究成果，WIRED 追問能力範圍是否已釐清；皆僅標題可用",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -317,6 +332,7 @@ window.WIKI_DATA = {
       "parent": "entities/claude-security",
       "summary": "本頁保存 claude-security 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -337,6 +353,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "❓ **待查證**（標 2026-09-30｜查 Claude Compliance API）｜**「Claude Compliance API」讓企業資安團隊監控對話、檔案與 Agent 活動**：Security Boulevard 09-29 首發，gbhackers.com、cybersecuritynews.…",
       "latestHeadline": "「Claude Compliance API」曝光（懸置，標記見「現況」）：Security Boulevard 首發，企業可監控 Claude 對話／檔案／Agent 活動；4 個來源同日跟進，官方原文未見（詳見「現況」）",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -357,6 +374,7 @@ window.WIKI_DATA = {
       "parent": "entities/claude-skills",
       "summary": "本頁保存 claude-skills 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -377,6 +395,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Anthropic 目前把 Skills 定位為官方六大「控制層」之一：把常用工作流程（如程式碼審查、安全審計、前端設計）封裝成描述文件，Claude 依語意自動判斷何時載入執行，使用者不需手動下指令；**但 2026-07-19（v2.1.215）起 `/verify` 與 `/code-review` 兩項技能改為…",
       "latestHeadline": "Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI，僅標題可用）",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -397,6 +416,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Claude Slides 是 Anthropic 於 2026-09-17 隨 Claude Cowork 與 Chat 合併同步推出的官方簡報工具（beta）。搭配整合進對話的 Claude Design，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 …",
       "latestHeadline": "Help Center release notes 新增段落：可在任何對話（含 Claude Code、Artifact 介面）直接要求簡報；範本與協作機制仍未載明",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -417,6 +437,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**最新動態：** Anthropic Status 確認 Claude Tag 的 GitHub 操作於 2026-07-07 一度出現錯誤率升高，已於同日 15:52 UTC 恢復正常（事故頁：status.claude.com），屬短暫中性事件，細節見下方「穩定性事件」。 Claude Tag 是 Anthrop…",
       "latestHeadline": "Anthropic 正式發布 Claude Tag，進入今日 HN 熱門討論（情緒 😊）；Anthropic 內部 65% 產品程式碼由 Claude Tag 生成（官方公告數據）",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -437,6 +458,7 @@ window.WIKI_DATA = {
       "parent": "entities/cowork",
       "summary": "本頁保存 cowork 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -457,6 +479,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**09-25 官方文件再度確認擴張範圍：** Help Center release notes 新增段落，稱「Claude Cowork comes to every conversation」，可在任何對話直接要求設計、簡報或文件，**含 Claude Code 與 Artifact 介面**；操作截圖或完整說明…",
       "latestHeadline": "Help Center release notes 新增段落確認 Cowork 進駐每個對話，可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -477,6 +500,7 @@ window.WIKI_DATA = {
       "parent": "entities/dario-amodei",
       "summary": "本頁保存 dario-amodei 被搬離主頁的原始條目，一字不刪。想知道現況，回主頁「現況」或「公開立場與言論」表。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "👤 人物"
       ]
@@ -497,6 +521,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-10-01，Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，視為兩人自白宮晚餐以來關係解凍的訊號，續 09-29 黃仁勳偕同赴白宮談 AI 風險、09-27 白宮晚餐；具體談話內容未見報導（僅標題可用）。同日，AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的…",
       "latestHeadline": "Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，為兩人緊張關係釋出解凍訊號，續 09-27 白宮晚餐、09-29 黃仁勳同赴會晤；具體談話內容未見報導（僅標題可用）（來源：Google News／Bloomberg）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -517,6 +542,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "CBS News（經 Hacker News 轉發，46 分，2 個來源）於 2026-09-09 引述 Anthropic 對齊科學主管（Alignment Science Lead）Evan Hubinger 的 X 發文全文：「我們真心相信 AI 可能殺光全人類！我個人認為未來十年內機率超過 10%」，並稱「An…",
       "latestHeadline": "科技作家 Cal Newport 發表部落格評論〈Anthropic Just Threatened to Kill Billions of People. This Is Not Okay〉，引述本人回應全文與 jacob-coxon 辭職聲明，批評相關警告不應被輕描淡寫（Hacker News 討論）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -537,6 +563,7 @@ window.WIKI_DATA = {
       "parent": "entities/fable-5",
       "summary": "本頁是 fable-5 的原始條目封存，現在還成立的答案（哪一代、能不能用、護欄會不會擋你）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -557,6 +584,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "現行世代是 **Fable 5.1**（2026-09-01 GA）；**Fable 5 仍可呼叫但已列為 Legacy**，官方建議遷移。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。 …",
       "latestHeadline": "現行世代是 Fable 5.1（2026-09-01 GA）；Fable 5 仍可呼叫但已列為 Legacy，官方建議遷移。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時會通知你並改由 Opus 4.8 回答。",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -577,6 +605,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-29，AMD 宣布以約 82 億美元收購 Fei-Fei Li 創立的 World Labs，Fei-Fei Li 本人隨之出任 AMD 首席科學家（chief scientist）。此案與既有 Google DeepMind／Anthropic／OpenAI 之間的人才流動格局無直接關聯，屬非典型 A…",
       "latestHeadline": "AMD 以約 82 億美元收購 World Labs，Fei-Fei Li 出任 AMD 首席科學家；交易細節與團隊整合規劃未見報導（來源：Topic Watch／Google News）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -597,6 +626,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-06-22，Fiona Fung 接受 Business Insider 採訪時指出：Claude Code 使 coding 不再是開發瓶頸，但工程師在使用 AI 工具後開始感到孤獨。這是 Anthropic 工程領導層少見的公開論述，點出 AI 編碼工具帶來的社會性副作用。 Fiona Fung 是 An…",
       "latestHeadline": "Business Insider 採訪報導：Claude Code 讓 coding 不再是瓶頸，但工程師開始感到孤獨",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -617,6 +647,7 @@ window.WIKI_DATA = {
       "parent": "entities/google-investment",
       "summary": "本頁是 google-investment 的原始條目封存，重點層（摘要、關鍵細節）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -637,6 +668,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-04-24，Google 宣布以現金與運算資源形式向 Anthropic 投資最高 **400 億美元**，初期承諾 100 億，其餘 300 億視績效目標達成情況追加。此次投資估值 Anthropic 為 **3,500 億美元**，是 AI 領域迄今規模最大的單筆投資之一。**$3,500 億為 2026…",
       "latestHeadline": "Bloomberg 報導 Alphabet 持有 Anthropic 股權市值已跳升至約 1,240 億美元：Bloomberg.com 報導 Alphabet 帳面持有的 Anthropic 股權市值已成長至約 $124 billion。注意：此為股權市值（帳面評估），非新一輪投資金額，與本頁記錄之 2026-04-",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -657,6 +689,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-15，Anthropic 共同創辦人 Jack Clark 同日接受 BBC、NPR 專訪，發表兩則相關表態。向 BBC 表示，可由第三方獨立查核的 AI「緊急關閉開關」未來或許需要強制立法規範；他稱多數實驗室（含 Anthropic）已各自備有「拔插頭」機制，但立法者或許需要強制規範，而非僅靠業界自律…",
       "latestHeadline": "同日接受 BBC、NPR 專訪，稱 AI「緊急關閉開關」未來或需強制立法並由第三方查核，並稱放緩 AI 開發是「集體行動難題」（BBC、NPR）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -677,6 +710,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "WSJ 人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》的主角即本人：WSJ 官方 X 帳號推文以「Jacob Coxon quit his job—and the world freaked out. H…",
       "latestHeadline": "WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物（來源：Google News／WSJ）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -697,6 +731,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-29，Bloomberg 報導黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險，具體行程與談話內容未見報導；完整脈絡見 dario-amodei。 2026-09-28，Jensen Huang 稱 Anthropic、OpenAI 的 AI 安全示警「odd」（怪異），同日 …",
       "latestHeadline": "Bloomberg 報導將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險，具體行程與談話內容未見報導；完整脈絡見 dario-amodei（來源：Google News／Bloomberg）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -717,6 +752,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Benton 於 2026-09-11 在 X 發文（@JoeJBenton）證實已離開 Anthropic 安全研究團隊兩週，稱「AI 公司正競相打造遠比人類聰明的機器，我們可能撐不過這個」，並指將轉往 METR 從事自主性 AI 風險評估（2026-09-26 查證）；此語稍後遭 Times of India、ES…",
       "latestHeadline": "Times of India、ESG Dive 跟進 09-11 的 X 辭職聲明，「我們可能撐不過這個」（2026-09-26 查證：先前未具名，一度誤判可能指 jacob-coxon，現查證確認為本人）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -737,6 +773,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-25，Anthropic 投資人 Joe Lonsdale 向 Reuters 表示，AI 公司渲染風險是為了影響政策走向（僅標題可用：Google News RSS 殼層未解析出正文，具體發言場合與逐字語境未見報導）。此則報導與五角大廈供應鏈風險認定同日見報，屬對 AI 產業政策辯論的外部評論，完整脈…",
       "latestHeadline": "向 Reuters 表示 AI 公司渲染風險是為了影響政策走向，與五角大廈供應鏈風險認定同日見報（僅標題可用）（來源：Google News／Reuters）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -757,6 +794,7 @@ window.WIKI_DATA = {
       "parent": "entities/john-jumper",
       "summary": "本頁為原始條目封存，重點層見 john-jumper。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "👤 人物"
       ]
@@ -777,6 +815,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-06-21，Reuters 正式確認 John Jumper 已離開 Google DeepMind、加入 Anthropic（HN score 77）。他成為一週內出走 Google 加入 Anthropic 的多位頂尖研究員之一，dev.to 報導指此波人才流失連帶造成 Google Alphabet 市…",
       "latestHeadline": "Reuters 獨立確認加入 Anthropic（06-21）：先於 06-19 由 Twitter 傳出，06-21 經 Reuters 正式確認離開 Google DeepMind、加入 Anthropic（HN score 77）；同期另有一位 DeepMind 知名研究者出走。",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -797,6 +836,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "NBC News 於 2026-09-10 刊出對 Josh Engels 的首次專訪，報導稱他曾任 Google DeepMind AI 安全研究員，近期已離職。他向 NBC 表示：「這裡面沒有大人在把關」（\"There are no adults in the room\"），呼籲提高尖端 AI 系統事故的透明度。 …",
       "latestHeadline": "接受 NBC News 首次專訪，稱已離開 Google DeepMind AI 安全研究職務，稱「這裡面沒有大人在把關」（NBC News）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -817,6 +857,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Imperial College London 數學教授，Xena Project 主持人，主持 EPSRC 資助、以 Lean 形式化證明系統將費馬最後定理（Fermat's Last Theorem）完整形式化的五年期計畫（2023 年啟動）。2026-09-04，Anthropic 研究部門公布其內部模型歷時 1…",
       "latestHeadline": "Anthropic 公布其模型完成 FLT 的 Lean 形式化證明後，Buzzard（Xena Project 主持人）於部落格公開回應「被搶先」，並評論此工作對數學本身貢獻有限（部落格原文；2026-09-05 經 Terence Tao 公開貼文確認具名）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -837,6 +878,7 @@ window.WIKI_DATA = {
       "parent": "entities/managed-agents",
       "summary": "本頁保存 managed-agents 被搬離主頁的原始「歷史記錄」條目（含對應歷史細節）。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -857,6 +899,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-agent-stack",
       "summary": "Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（概覽文件）：持久記憶（含 Dreaming 記憶整合）、20 路並行子代理、Outcomes 規格驗證、Proactive Workflows、企業自架沙箱。**狀態為 beta**（自 2026-05-1…",
       "latestHeadline": "anthropic-sdk-python v1.6.0 再擴充 auto mode 工具權限功能，原文截斷、範圍未知（見 Release）",
+      "pageRole": "child",
       "readerDomains": [
         "🛠️ 工具/功能",
         "💻 開發實務"
@@ -878,6 +921,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-14，電影《大賣空》原型人物、知名放空交易員 Michael Burry 在 X 發文批評 OpenAI、Anthropic 等大型科技公司高層近期呼籲放慢 AI 發展腳步是「自利」之詞，New York Post 同日報導；Hacker News 於 2026-09-17 轉載此文並引發討論（18 分…",
       "latestHeadline": "在 X 發文批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞，加入既有反彈陣營；New York Post 同日報導，Hacker News 於 09-17 轉載（來源：New York Post／Hacker News）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -898,6 +942,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-17，BBC 直接引述 Mustafa Suleyman 警告：若無適當防護，不受控的 AI 發展恐催生與人類競爭的「矽基物種」（silicon species），稱此可能帶來「災難性影響」（disastrous impact）。同日 Reuters 跟進報導其對 Anthropic AI 意識論述的批…",
       "latestHeadline": "BBC 直接引述其警告不受控 AI 開發恐催生「矽基物種」；Reuters 同日跟進報導其 AI 意識批評角度；本人部落格〈A warning about model welfare〉首度提供第一手原文，經 Simon Willison 引述（來源：Hacker News／BBC、Google News／Reuters",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -918,6 +963,7 @@ window.WIKI_DATA = {
       "parent": "entities/mythos",
       "summary": "本頁是原始條目的存放處，重點層見 mythos。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -938,6 +984,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：Anthropic 官方研究在內部 Binary Exploitation 基準隨機抽測的 100 項任務中，中國智譜（Zhipu）GLM-5.3 達成完整控制流劫持的比例為 4%，低於 Claude Mythos …",
       "latestHeadline": "2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）：Anthropic 官方研究在內部 Binary Exploitation 基準隨機抽測的 100 項任務中，中國智譜（Zhipu）GLM-5.3 達成完整控制流劫持的比例為 4%，低於 Claude Mythos Prev",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -958,6 +1005,7 @@ window.WIKI_DATA = {
       "parent": "entities/openclaw",
       "summary": "本頁保存 openclaw 被搬離主頁的原始「事件時序」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -978,6 +1026,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：**這些用量全數脫離訂閱方案，改為按完整 API 費率…",
       "latestHeadline": "OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：這些用量全數脫離訂閱方案，改為按完整 API 費率計費",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -998,6 +1047,7 @@ window.WIKI_DATA = {
       "parent": "entities/opencode",
       "summary": "本頁保存 opencode 被搬離主頁的原始「歷史記錄」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1018,6 +1068,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**最新動態（2026-05-22）：** XDA 正式評為 Claude Code 的可行開源替代方案，同期 `OpenCode-power-pack` 完成移植官方 11 個 skills；截至目前（最後新聞更新 2026-05-22）無更新後續報導。 OpenCode 是 Claude Code 的主要開源替代品…",
       "latestHeadline": "XDA 評為 Claude Code 可行替代方案，`OpenCode-power-pack` 完成移植官方 11 個 skills（05-22）；The New Stack 報導 157,000 名開發者轉向里程碑（05-12）",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1038,6 +1089,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**當前狀態：** 已被 Opus 4.8 / Fable 5 取代，現為第三階旗艦；agentic coding 場景仍有口碑，一般對話評價分歧。 Claude Opus 4.7 於 2026-04-24 正式發布，已相繼被 Opus 4.8（2026-05-28）與 Fable 5（2026-06-09）取代，現為…",
       "latestHeadline": "當前狀態： 已被 Opus 4.8 / Fable 5 取代，現為第三階旗艦；agentic coding 場景仍有口碑，一般對話評價分歧。",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1058,6 +1110,7 @@ window.WIKI_DATA = {
       "parent": "entities/opus-4-8",
       "summary": "本頁是原始條目的存放處，重點層見 opus-4-8。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1078,6 +1131,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-08-27 最新**：GitHub Issue #77136 回報 Claude 4.7、4.8、5.0 與 Fable 日益預設輸出重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善，跨模型代際共同問題，已累積 106 則留言、517 個反應，尚無官方回應。完整記錄與最新社群回饋見 opus-5「…",
       "latestHeadline": "GitHub Issue #77136：跨模型代際重複修辭套路問題（詳見上方「現況」與 opus-5）",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1098,6 +1152,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-09-23 最新**：Anthropic 發布 Claude Opus 5.5（API ID `claude-opus-5-5`），Claude Code v2.1.280 已將其設為預設 Opus 模型；Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5…",
       "latestHeadline": "Reddit r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天在複雜任務（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手（Reddit r/ClaudeAI，2026-10-01；0 留言，無測試方法或量化指標，屬主觀觀感回報，不採信推",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1117,7 +1172,8 @@ window.WIKI_DATA = {
       "updateFreq": "",
       "parent": "",
       "summary": "**2026-09-23 最新**：Anthropic 發布 Claude Opus 5.5，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 mode…",
-      "latestHeadline": "⟨Q-04⟩ ❓ 待查證（標 2026-09-21｜查 Opus 5.5、Pasquale Pillitteri｜複 2026-10-05｜訊 2026-09-23）｜單一部落格稱 Opus 5.5 週二發布：稱降價 20%；僅標題可用，無查證方法（Google News/Pasquale Pillitteri，202",
+      "latestHeadline": "❓ 待查證 單一部落格稱 Opus 5.5 週二發布：稱降價 20%；僅標題可用，無查證方法（Google News/Pasquale Pillitteri，2026-09-21）",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1138,6 +1194,7 @@ window.WIKI_DATA = {
       "parent": "entities/pricing",
       "summary": "本頁是 pricing 的原始條目封存，重點層（現行規則、牌價、還在發生的事故）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1158,6 +1215,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**週配額換軌已於 09-14 生效**（官方文件 09-14 同步確認），水位約為加成期間的 83%；5 小時用量上限的計算方式不受影響。同一週還有過渡 credit 09-17 到期，不需要你做任何設定，但會改變這個月能用多少。 **2026-07-20 起，旗艦模型（現為 Fable 5）在訂閱體系中被切成兩層*…",
       "latestHeadline": "週配額換軌已於 09-14 生效（官方文件 09-14 同步確認），水位約為加成期間的 83%；5 小時用量上限的計算方式不受影響。同一週還有過渡 credit 09-17 到期，不需要你做任何設定，但會改變這個月能用多少。",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1178,6 +1236,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Anthropic 於 2026-08-07 任命 Robert Mahari 為新設立「Claude for Legal」部門負責人。Legal IT Insider 與 Law.com 同日各自獨立報導，構成跨來源驗證；本站最初只取得 Google News RSS 轉址的標題層級資訊，**2026-09-13 複…",
       "latestHeadline": "Anthropic 任命 Robert Mahari 出任新設立「Claude for Legal」部門負責人；Legal IT Insider、Law.com 同日獨立報導（2026-09-13 已讀正文，經歷與職掌均確認，僅到任日未見）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1198,6 +1257,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-28（Sonnet 5.5 發布當日），依慣例以「畫一隻騎腳踏車的鵜鶘」測試新模型，發現「max」思考強度下圖示輸出異常。他稱這與 Opus 5.5 那次是同一個 bug，但 **Opus 5.5 那次的具體症狀本庫未見記載**，因此本頁不把它寫成已成立的對照；模型本身的發布細節見 sonnet-5-5…",
       "latestHeadline": "Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；原文稱與 Opus 5.5 那次同一個 bug（Opus 5.5 那次的症狀本庫未見記載，2026-10-03 核）（來源：Blog／Simon Willison）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1218,6 +1278,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-09-28 最新**：Anthropic 發布 Claude Sonnet 5.5（API ID `claude-sonnet-5-5`），為 Claude 5.5 家族第二款模型（首款為 09-22 發布的 Opus 5.5）。官方稱較 Sonnet 5「明顯升級」：速度快逾 30%、多數工作成本省最多…",
       "latestHeadline": "mixed-news.com 報導稱使用者在未主動輸入特定內容的情況下，Sonnet 5.5 工作階段也可能被自動降回 Sonnet 5；觸發條件、影響範圍與是否可關閉均未見報導，僅標題可讀，不採信推算（mixed-news.com，2026-10-01）",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1238,6 +1299,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-09-28 最新**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（…",
       "latestHeadline": "2026-09-28 最新：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 將其設為 Anthropic API 預設 Sonnet 模型；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（官方發布文；Gi",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -1258,6 +1320,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-23，印度企業軟體公司 Zoho 創辦人暨執行長 Sridhar Vembu 向 NDTV 表示，OpenAI、Anthropic 等公司「可以放慢腳步」，沒有人拿槍指著他們要求加速，暗示放緩是可行選項（僅標題可用：Google News RSS 殼層未解析出完整原文，措辭為標題轉述，非確認逐字引述）。…",
       "latestHeadline": "向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步，沒有人拿槍指著他們」，加入 AI 減速爭論的外部評論陣營（僅標題可用，逐字用語未經確認）（來源：Google News／NDTV）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1278,6 +1341,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-07-07，FedScoop 報導 Anthropic 延攬 Teresa Carlson 主導公部門業務。Carlson 曾任職 Microsoft 與 AWS，在雲端服務公部門業務領域有豐富經驗；職稱「Global Head of Public Sector」已由多家具名媒體與本人 LinkedIn 一致…",
       "latestHeadline": "加入 Anthropic，主導公部門業務，此前曾任職 Microsoft、AWS（FedScoop）。後續（2026-09-26 查證）： Anthropic 發言人 Kate Earle Jensen 向 National Security News 證實此次延攬，惟官方新聞稿與到任日期查無，見上方標記",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1298,6 +1362,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-09-29，Reddit r/ClaudeAI 轉貼 Anthropic Claude Code 團隊成員 Thariq Shihipar 接受科技播客 Latent Space 專訪，主題涵蓋 Claude Code、plugins 與 Opus／Sonnet 5.5 發布；原始摘要無可讀內文，具體發言未見…",
       "latestHeadline": "Reddit 轉貼 Anthropic Claude Code 團隊成員 Thariq Shihipar 接受 Latent Space 專訪，主題涵蓋 Claude Code、plugins、Opus/Sonnet 5.5 發布；具體內容未見報導（來源：Reddit／r/ClaudeAI）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1318,6 +1383,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Mariano-Florentino (Tino) Cuéllar 將加入 Anthropic，擔任公司首任 Chief Global Affairs Officer，主導政策（policy）、策略性國際事務（strategic international engagement）與全球政府關係（government r…",
       "latestHeadline": "Anthropic 宣布 Mariano-Florentino (Tino) Cuéllar 加入公司，擔任首任 Chief Global Affairs Officer，主導政策、策略性國際事務與政府關係；加入前曾任 Carnegie Endowment for International Peace 總裁、加州最高",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1338,6 +1404,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-07-13，Tom Blomfield（Monzo、GoCardless 共同創辦人，前 Y Combinator 一般合夥人）本人於 X 宣布請假加入 Anthropic compute 團隊，職稱 Member of Technical Staff，與 Tom Brown 共事（見上方查證），Busine…",
       "latestHeadline": "Business Insider 報導 Blomfield 形容 Anthropic 新同事為「hyper-earnest group of meganerds」且「lack of ego」（來源：Business Insider）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1358,6 +1425,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-government-policy",
       "summary": "The Verge 報導 Mythos 危機持續惡化，Tom Brown 主導的 NSA 談判逾兩週仍無明確解封時程。",
       "latestHeadline": "",
+      "pageRole": "redirect",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1378,6 +1446,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-10-01，Fortune 報導 AI「教父」Yann LeCun 公開批評 Anthropic 執行長 dario-amodei 看待 AI 風險的方式「deluded」（錯亂）、「crazy」（瘋狂），並稱其不懂資安（cybersecurity）；Yahoo Finance 同日跟進報導同一事件。僅標題可…",
       "latestHeadline": "公開批評 Anthropic 執行長 Dario Amodei 看待 AI 風險的方式「deluded」「crazy」，並稱其不懂資安；Fortune 報導，Yahoo Finance 同日跟進（來源：Google News／Fortune、Google News／Yahoo Finance）",
+      "pageRole": "",
       "readerDomains": [
         "👤 人物"
       ]
@@ -1400,6 +1469,7 @@ window.WIKI_DATA = {
       "parent": "topics/ai-agent-safety",
       "summary": "本頁為 ai-agent-safety 的原始條目封存，重點層見主頁。收：時序（2026-05-21 以前，及 2026-09-04 遷入的 2026-06）＋技術彙整（2026-05-18 以前，2026-07-01 遷入；2026-05-25～05-09 五條 2026-09-04 遷入）。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1420,6 +1490,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**現在最該知道的：** 官方已把 Auto 模式定性為 best-effort convenience control、不是安全邊界，所以「等官方修到 0%」不會發生。你能動的是隔離環境與監看，不是等修補。下方「現在還擋不住的攻擊」列出十一個面，以及各自能先做的一件事。 **這一個月的方向：** 提示注入已不是單點漏…",
       "latestHeadline": "現在最該知道的： 官方已把 Auto 模式定性為 best-effort convenience control、不是安全邊界，所以「等官方修到 0%」不會發生。你能動的是隔離環境與監看，不是等修補。下方「現在還擋不住的攻擊」列出十一個面，以及各自能先做的一件事。",
+      "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1440,6 +1511,7 @@ window.WIKI_DATA = {
       "parent": "topics/ai-talent-flow",
       "summary": "本頁是 ai-talent-flow 的原始條目封存，重點層（摘要、對各公司的影響）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1460,6 +1532,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（**數字出自 dev.to 報導標題**；2026-09-13 查證：CNBC 記 07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 $2,…",
       "latestHeadline": "截至 2026-06-29，一週至兩週內 Google DeepMind 連失至少 4–5 位頂尖研究員至 Anthropic，市值蒸發約 $2,700 億美元（數字出自 dev.to 報導標題；2026-09-13 查證：CNBC 記 07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 $2,000 ",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1480,6 +1553,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "官方 agent 積木在 2026 年中補上編排這一塊：dynamic workflows 讓計畫從 Claude 的逐回合判斷變成一支可存檔重跑的 script——先前分身之間只能互傳純文字、訊息不帶依賴語意，排不出誰先誰後。本頁把八塊積木一塊一塊拆開，每塊答「為什麼有它、讓你多做出什麼、還做不到什麼」；八塊怎麼疊、…",
       "latestHeadline": "建頁，選型表與積木架構自 managed-agents 移入並增補；查證來源：workflows、cross-session messaging、agents 總覽。",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -1500,6 +1574,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-business",
       "summary": "本頁是 anthropic-business 的原始條目封存，重點層（現在的數字、IPO 走到哪一格、還沒過去的風險）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1520,6 +1595,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "這家公司沒有公開財報。 下表每一列的最後兩欄告訴你這個數字是誰說的、下一次會有新數字的時點。五種數字量級不同，不可互相替代或加總——年化營收、單季營收、官方估值、IPO 估值預期、市場總量各答各的問題。",
       "latestHeadline": "",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1540,6 +1616,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "本頁回答一個問題：**「Anthropic 說過要做的事，做了嗎？」** 官方每次承諾修復、承諾政策、或明確拒絕時，在此建檔追蹤後續；狀態有變化時會即時更新。已兌現或已死案的條目移入「已結案」。 **狀態符號：** 🔴 未兌現 / 🟡 部分兌現 / ✅ 已兌現 / ⛔ 明確拒絕（不會做）/ ❓ 待官方回應",
       "latestHeadline": "spyware 指控回應再度升級——Anthropic 首度公開反駁中國官方「後門」框架本身（🟡 已回應，爭議持續升級）",
+      "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1560,6 +1637,7 @@ window.WIKI_DATA = {
       "parent": "topics/anthropic-government-policy",
       "summary": "本頁為 anthropic-government-policy 的時序原始條目封存，一字未刪；重點層（時段總結、目前局勢、攻防紀錄）見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1580,6 +1658,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**出口管制已於 2026-06-30 解除、07-01 恢復存取，封鎖 19 天**（2026-06-12 商務部 BIS 管制生效 → 06-30 商務部通知已移除、Anthropic 當晚公告翌日恢復；**天數含首尾兩日**，與 MarketScale 07-03 的「精確為 19 天」一致）。Anthropic…",
       "latestHeadline": "出口管制已於 2026-06-30 解除、07-01 恢復存取，封鎖 19 天（2026-06-12 商務部 BIS 管制生效 → 06-30 商務部通知已移除、Anthropic 當晚公告翌日恢復；天數含首尾兩日，與 MarketScale 07-03 的「精確為 19 天」一致）。Anthropic 以三項義務換取",
+      "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1600,6 +1679,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "- **2.1.287（10-02 比對）新增 7 個第一階候選旗標**（名單見追蹤表）；`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階，≤09-04 即在 build 裡）升第 4 階——官方 v2.1.287 Release 正式出貨為「Claude Mods」，同輪已回報 fe…",
       "latestHeadline": "- 2.1.287（10-02 比對）新增 7 個第一階候選旗標（名單見追蹤表）；`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階，≤09-04 即在 build 裡）升第 4 階——官方 v2.1.287 Release 正式出貨為「Claude Mods」，同輪已回報 featur",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -1620,6 +1700,7 @@ window.WIKI_DATA = {
       "parent": "topics/code-quality-decline",
       "summary": "本頁是原始條目的存放處，重點層見 code-quality-decline。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1640,6 +1721,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "「Claude 變笨了」在本頁拆成三條線分開看：2026-04 那次是真的，官方認了也修了；06 月下旬起的 token 消耗異常與 07-25 起的 Opus 5 品質觀感，官方到今天沒有說法。三條線沒有一條有版本前後的對照實驗，你能拿到最硬的證據是自己的 session log。 **在你量任何東西之前，先知道一件…",
       "latestHeadline": "「Claude 變笨了」在本頁拆成三條線分開看：2026-04 那次是真的，官方認了也修了；06 月下旬起的 token 消耗異常與 07-25 起的 Opus 5 品質觀感，官方到今天沒有說法。三條線沒有一條有版本前後的對照實驗，你能拿到最硬的證據是自己的 session log。",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1660,6 +1742,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "把一條完整的開發流程攤開，逐段回答：官方給了什麼、社群補了什麼、還缺什麼。 敘述順序官方在前——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。",
       "latestHeadline": "",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能",
         "💻 開發實務"
@@ -1681,6 +1764,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁按這四面牆整理社群現在怎麼組做法、做到哪、還缺什麼，每條線的第一條先指官…",
       "latestHeadline": "小專案上好用的做法——單一 CLAUDE.md、單一 session、讀完整檔案——搬進大型 codebase 就開始失靈：並行 agent 互踩、context 被工具輸出撐爆、agent 記不住昨天的架構決策、多 agent 產出沒人把關。本頁按這四面牆整理社群現在怎麼組做法、做到哪、還缺什麼，每條線的第一條先指官",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群",
         "💻 開發實務"
@@ -1702,6 +1786,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "9 月中，社群做法收斂成的九個方向裡，模型路由、手機遠端控制、跨 session 記憶三條官方已有對應零件；模型路由 8/14 之後社群沒有新做法進來，標為淡出。本頁按時間排出每個方向怎麼走到今天，並列出看到這條線，你現有的設計可以回頭檢查什麼。 - **和 community-tech-patterns 差在哪**：…",
       "latestHeadline": "9 月中，社群做法收斂成的九個方向裡，模型路由、手機遠端控制、跨 session 記憶三條官方已有對應零件；模型路由 8/14 之後社群沒有新做法進來，標為淡出。本頁按時間排出每個方向怎麼走到今天，並列出看到這條線，你現有的設計可以回頭檢查什麼。",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1722,6 +1807,7 @@ window.WIKI_DATA = {
       "parent": "topics/community-tech-discussions",
       "summary": "本頁保存 community-tech-discussions 被搬離主頁的原始討論筆記，一字不刪。想知道現在吵到哪，回主頁的「現在吵到哪」。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1742,6 +1828,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "社群現在有五場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的——「規格驅動還是 vibe coding」逾 90 天無新反方證據，本輪移出表。最新一則證據是 09-21 一則新進員工吐槽沒人搞懂系統的貼文，讓「AI 輔助會不會讓人能力退化」這場爭論重燃。本頁只記「該怎麼想這件事」的碰撞：什…",
       "latestHeadline": "Cache miss 12.5 倍成本首次量化（Reddit）；686 skills 向量索引實測 progressive disclosure 機制（Reddit）；JSONL session 知識化討論（57MB/1026 sessions，Reddit + CC-Wiki 工具）",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1762,6 +1849,7 @@ window.WIKI_DATA = {
       "parent": "topics/community-tech-patterns",
       "summary": "本頁保存 community-tech-patterns 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳。條目一字不刪，只是搬離主頁讓主頁讀得動。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1782,6 +1870,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在試的十六類裡，最近兩週（2026-09-19 起）有新動靜的有九類，其餘最後動態在九月中旬以前。本頁把社群玩出來的做法逐則收下來，並標明每一類最後一次有人動它是什麼時候。 本頁是每一種做法的原始證據，模式概覽表標每一類的成熟度與最後動態；已…",
       "latestHeadline": "Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在試的十六類裡，最近兩週（2026-09-19 起）有新動靜的有九類，其餘最後動態在九月中旬以前。本頁把社群玩出來的做法逐則收下來，並標明每一類最後一次有人動它是什麼時候。",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1802,6 +1891,7 @@ window.WIKI_DATA = {
       "parent": "topics/community-tech-patterns-archive",
       "summary": "已併回 community-tech-patterns-archive——2026-04-25～05-22 的原始時序條目全部搬到那裡，之後的社群做法見 community-tech-patterns。",
       "latestHeadline": "",
+      "pageRole": "redirect",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -1822,6 +1912,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**我卡住了，社群有什麼能救？** 本頁把社群工具依「症狀」排列：每個症狀給一個先裝的、一條「什麼時候該改裝別的」的分界，以及這個判斷是哪天下的、最近一次確認這個專案還在不在是哪天。有一個症狀我們認為答案是機制不是工具，那一格就誠實空著。 按開發流程階段找官方做法見 coding-workflow-guide；做法背後…",
       "latestHeadline": "我卡住了，社群有什麼能救？ 本頁把社群工具依「症狀」排列：每個症狀給一個先裝的、一條「什麼時候該改裝別的」的分界，以及這個判斷是哪天下的、最近一次確認這個專案還在不在是哪天。有一個症狀我們認為答案是機制不是工具，那一格就誠實空著。",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群",
         "💻 開發實務"
@@ -1843,6 +1934,7 @@ window.WIKI_DATA = {
       "parent": "topics/competitor-landscape",
       "summary": "本頁為 competitor-landscape 的時序原始條目封存，一字未刪；重點層（時段總結、競品定價對照、主要競品追蹤）見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1863,6 +1955,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "競爭的主戰場已從「誰更強」移到「誰更便宜」：Meta 以三層訂閱打價格戰、Google 推低價企業方案、中國市場出現「免費夠用」的論述。同一時間開源陣營把旗艦模型的權重也放了出來，低價層第一次同時具備可用的工具與可用的模型。對用 Claude 的人，眼前要判斷的不是換不換，而是自己所在的那一層有沒有出現可比的價格或能力…",
       "latestHeadline": "Microsoft／GitHub：GitHub Copilot CLI 與桌面版（macOS／Windows）公開預覽新增 computer use，可代操作桌面應用程式；詳見「對手雷達」列更新（Blog/GitHub Copilot Changelog）",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1883,6 +1976,7 @@ window.WIKI_DATA = {
       "parent": "topics/enterprise-cost-management",
       "summary": "本頁是 enterprise-cost-management 的原始條目封存，重點層（缺口表、企業案例、因應策略）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1903,6 +1997,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "大型組織採用 Claude Code 後，成本結構挑戰迅速浮現。Uber 四個月耗盡全年 AI 預算（Forbes，2026-05-17）是本頁最早的公開案例，揭示企業在缺乏細粒度使用量控管工具的情況下，AI 工具成本極易失控。此議題已從開發者社群的個人抱怨升級至 Forbes、Business Insider 等主流…",
       "latestHeadline": "大型組織採用 Claude Code 後，成本結構挑戰迅速浮現。Uber 四個月耗盡全年 AI 預算（Forbes，2026-05-17）是本頁最早的公開案例，揭示企業在缺乏細粒度使用量控管工具的情況下，AI 工具成本極易失控。此議題已從開發者社群的個人抱怨升級至 Forbes、Business Insider 等主流",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1923,6 +2018,7 @@ window.WIKI_DATA = {
       "parent": "topics/enterprise-tool-tracker",
       "summary": "本頁是 enterprise-tool-tracker 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1943,6 +2039,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**目前追蹤 46 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行**（最新異動見頂部 callout，2026-10-01）。 追蹤各大型企業目前正在使用的 …",
       "latestHeadline": "目前追蹤 46 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、1 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從單一「成本」擴散為「出口管制」與「安全疑慮」三軌並行（最新異動見頂部 callout，2026-10-01）。",
+      "pageRole": "",
       "enterpriseTracker": {
         "enterprises": [
           {
@@ -3169,6 +3266,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少八種路線互異的公開實作，從個人生產版、可安裝的通用 skill，到把 wiki 當 RAG 副產品的企業平台。本頁把那些實作的設計並排，再拿本庫自己對一次。對照結果：三層骨架與三個動作本庫全有，甚至多數更嚴；查詢原本沒有自己的流程，202…",
       "latestHeadline": "補第八種路線 Tencent/WeKnora（使用者提問，查證其 README 與 GitHub API）：企業知識平台，wiki 由文件庫自動生成、附引用與版本回滾，是向量 RAG 的副產品；29.9k 星為這一類最大。它與 Claude 生態的關係只有 MCP Server 接點，不進日報，以本頁對照組收錄。",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群"
       ]
@@ -3189,6 +3287,7 @@ window.WIKI_DATA = {
       "parent": "topics/long-context-1m",
       "summary": "本頁保存 long-context-1m 被搬離主頁的原始「時序」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -3209,6 +3308,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "官方說 Claude 4.6 以後的 1M context **不加價**——這句話是對的，但它只回答了三個問題裡的一個。另外兩個是「**我手上是不是舊世代**」（舊世代超過 200K 要付兩倍輸入價）與「**我能不能決定要不要開**」（Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失）。 本頁把這三件事收在一…",
       "latestHeadline": "官方說 Claude 4.6 以後的 1M context 不加價——這句話是對的，但它只回答了三個問題裡的一個。另外兩個是「我手上是不是舊世代」（舊世代超過 200K 要付兩倍輸入價）與「我能不能決定要不要開」（Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失）。",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -3229,6 +3329,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "這頁答「讀了那些判讀之後，我到底學到什麼」。每日的逐則判讀、能買的標的、催化劑登記與結算表都在 market-signals；這裡只放沉澱過的東西：IPO 這條線要先懂的背景、買不到的消息線各自走到哪、以及一課一課攤開的課程表。每週更新一次，兩週後結算的對錯會回填到「押對了嗎」欄。 ---",
       "latestHeadline": "這頁答「讀了那些判讀之後，我到底學到什麼」。每日的逐則判讀、能買的標的、催化劑登記與結算表都在 market-signals；這裡只放沉澱過的東西：IPO 這條線要先懂的背景、買不到的消息線各自走到哪、以及一課一課攤開的課程表。每週更新一次，兩週後結算的對錯會回填到「押對了嗎」欄。",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -3249,6 +3350,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "每則判讀照分析師看消息的六個問題寫：**這是新資訊嗎、動到哪個數字、誰的口袋會有感、可信到什麼程度、下一個會讓答案變清楚的事件是什麼、所以我做什麼**；前四題壓成第一行「一眼」，要學的東西在每則最後的「一課」。先看「買得到的標的」，那是這頁裡你真的能交易的東西；沉澱過的課程表、未上市消息線的走向與 IPO 背景知識在週…",
       "latestHeadline": "每則判讀照分析師看消息的六個問題寫：這是新資訊嗎、動到哪個數字、誰的口袋會有感、可信到什麼程度、下一個會讓答案變清楚的事件是什麼、所以我做什麼；前四題壓成第一行「一眼」，要學的東西在每則最後的「一課」。先看「買得到的標的」，那是這頁裡你真的能交易的東西；沉澱過的課程表、未上市消息線的走向與 IPO 背景知識在週更的 m",
+      "pageRole": "",
       "readerDomains": [
         "💼 商業"
       ]
@@ -3269,6 +3371,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**現行公開陣容：Fable 5.1 > Opus 5.5 > Sonnet 5.5 > Sonnet 4.6 > Haiku 4.5**（Sonnet 5 已被 5.5 取代；Opus 5 / 4.8 / 4.7 已被取代；Fable 5.0 於 2026-09-01 由 5.1 取代；Mythos 5.1 僅限授權…",
       "latestHeadline": "現行公開陣容：Fable 5.1 > Opus 5.5 > Sonnet 5.5 > Sonnet 4.6 > Haiku 4.5（Sonnet 5 已被 5.5 取代；Opus 5 / 4.8 / 4.7 已被取代；Fable 5.0 於 2026-09-01 由 5.1 取代；Mythos 5.1 僅限授權機構）。",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -3289,6 +3392,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**跨家模型的「誰強」到這一頁為止；跨工具（Codex CLI、OpenCode 這類 harness）本站目前答不了，原因見下方第一點**——本頁回答「做某類任務，目前哪家模型最強？」，按任務類型列出各活榜單的本週領先者快照，涵蓋跨家模型（OpenAI、Google、開源等）與非文字生成（畫圖、影片、語音）。每列標資…",
       "latestHeadline": "跨家模型的「誰強」到這一頁為止；跨工具（Codex CLI、OpenCode 這類 harness）本站目前答不了，原因見下方第一點——本頁回答「做某類任務，目前哪家模型最強？」，按任務類型列出各活榜單的本週領先者快照，涵蓋跨家模型（OpenAI、Google、開源等）與非文字生成（畫圖、影片、語音）。每列標資料日期；",
+      "pageRole": "",
       "readerDomains": [
         "🤖 模型"
       ]
@@ -3309,6 +3413,7 @@ window.WIKI_DATA = {
       "parent": "topics/official-community-gap",
       "summary": "本頁保存 official-community-gap 被搬離主頁的原始 `## 時序` 條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -3329,6 +3434,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "**2026-10-01 新增一列，官方仍無對應**：Cowork 專案無法移除已加入的本機資料夾（issue #40043，103 個讚）——目前僅能新增，無移除機制。 本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，答案不在本頁**——看 comm…",
       "latestHeadline": "新增一列：Cowork 專案想移除已加入的本機資料夾：GitHub issue #40043 累積 32 則留言、103 個讚；Cowork 專案 context 目前僅能新增本機資料夾，無移除機制，官方尚未回應。表由 17 列增為 18 列。",
+      "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
       ]
@@ -3349,6 +3455,7 @@ window.WIKI_DATA = {
       "parent": "topics/recursive-self-improvement",
       "summary": "本頁為 recursive-self-improvement 的時序／技術彙整原始條目封存，一字未刪；重點層（摘要、目前結論）見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -3369,6 +3476,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "2026-06-04，Anthropic Institute 發布《When AI Builds Itself: Our progress toward recursive self-improvement》報告（HN 477），首次系統性披露 AI 加速自身開發的進展：Anthropic 工程師平均每人可交付的程式碼…",
       "latestHeadline": "[政治框架延續，新增，僅標題可用] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」",
+      "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -3389,6 +3497,7 @@ window.WIKI_DATA = {
       "parent": "topics/safety-china-trust-dispute",
       "summary": "本頁為 safety-china-trust-dispute 的時序原始條目封存，一字未刪；重點層（摘要、敘事五階段、技術指控線）見主頁。",
       "latestHeadline": "",
+      "pageRole": "archive",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -3409,6 +3518,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "本頁追蹤 2026-06-30 起延燒的「中美 AI 工具信任對峙」：一條由社群逆向工程指控起頭、逐步升級至中國政府正式警示、企業連鎖禁用、最終由 Anthropic 公開否認的敘事線。核心矛盾是**雙方均提出未經第三方驗證的技術指控**——社群/中國官方稱 Claude Code 內建「秘密追蹤中國使用者並回傳資料」…",
       "latestHeadline": "Anthropic 首度公開否認中國官方「後門」指控（多家獨立媒體報導）；同日發布「Inviting hard questions」聲明，兩者關聯屬推論，尚未見官方證實或否證",
+      "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -3429,6 +3539,7 @@ window.WIKI_DATA = {
       "parent": "",
       "summary": "榜依 GitHub 描述機械比對，偶有跨類誤收（同一 repo 出現在兩類、或非本類工具混入）；星數與分類皆非推薦。",
       "latestHeadline": "",
+      "pageRole": "",
       "readerDomains": [
         "🌐 社群",
         "💻 開發實務"

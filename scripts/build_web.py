@@ -163,8 +163,12 @@ def latest_headline(raw: str) -> str:
         text = re.sub(r'^\*{0,2}\d{4}-\d{2}-\d{2}\*{0,2}\s*.?\s*', '', text)  # strip date (bold or plain) + any colon
         text = re.sub(r'^\*\*\[[^\]]*\]\*\*\s*', '', text)       # strip **[tag]**
         text = re.sub(r'\*{1,3}([^*\n]+)\*{1,3}', r'\1', text)  # strip bold/italic
+        # 懸置標記的機器括號（⟨Q-nn⟩、「（標 …｜查 …｜複 …）」）是給掃描器與記者看的，
+        # 卡片與列表只留「待查證」＋題目（正文另由 app.js collapsePendingMeta 摺疊）
+        text = re.sub(r'⟨Q-\d+⟩\s*', '', text)
+        text = re.sub(r'（標 [^）]*）[｜:：]?\s*', ' ', text)
         text = readable_inline(text)
-        return text.strip()[:160]
+        return re.sub(r'\s{2,}', ' ', text).strip()[:160]
 
     # Pattern 1: ## 歷史記錄 — "- YYYY-MM-DD：text"
     hist_m = re.search(r'##\s*歷史記錄\s*\n([\s\S]*?)(?:\n##|\n---|\Z)', raw)
@@ -965,6 +969,15 @@ def parse_wiki(f: Path, page_type: str) -> dict:
     meta["summary"] = raw_summary[:160] + ("…" if len(raw_summary) > 160 else "")
     meta["latestHeadline"] = latest_headline(raw)
     meta["pill"] = pill_class(meta["status"])
+    # 階層角色給前端分流（判準同 scripts/gen_wiki_frontmatter.py 的 page_role）：
+    # redirect＝已併回母頁的殼（詳頁不列、推薦不推）、archive＝封存頁、child＝真子題
+    _head60 = "\n".join(lines[:60])
+    if meta["parent"] and "已併回" in _head60:
+        meta["pageRole"] = "redirect"
+    elif "-archive" in entity_id:
+        meta["pageRole"] = "archive"
+    else:
+        meta["pageRole"] = "child" if meta["parent"] else ""
 
     # ── 防呆：缺少領域欄位、或領域值不在六個標準值內 ──────────────────────────
     if not meta["domain"]:
@@ -1667,9 +1680,8 @@ def build():
                 _src_totals[_k] = _src_totals.get(_k, 0) + _v
         # 你可能也想看：與本頁最相關的頁（scripts/wiki_graph.py related_pages；直接互引也算，2026-10-03）
         _slug_of = {n["id"]: n["slug"] for n in _nodes}
-        # 併回殼不推（點進去只會被指回母頁）；判準同 gen_wiki_frontmatter.py 的 page_role=redirect
-        _shells = {s for s, f in _pages.items()
-                   if "已併回" in "\n".join(f.read_text(encoding="utf-8-sig").split("\n")[:60])}
+        # 併回殼不推（點進去只會被指回母頁）；pageRole 由 parse_wiki 算
+        _shells = {s for s in _pages if (_by_id.get(s.split("/")[-1]) or {}).get("pageRole") == "redirect"}
         _is_arch = lambda sl: bool(_g._ARCHIVE_RE.search(sl))
         for _n in _nodes:
             # 上下層不推：麵包屑與「本頁的子題」已經給了
