@@ -1,5 +1,5 @@
 import { expect, mock, test } from 'claude-code/testing'
-import { basename, onStage, pixels, reporterOf, toRows, EDITOR, LINGER_MS, SPRITE_H, SPRITE_W } from '../hooks/lib.ts'
+import { basename, onStage, pixels, reporterOf, sleepingPixels, toRows, EDITOR, LINGER_MS, SPRITE_H, SPRITE_W } from '../hooks/lib.ts'
 
 const ROOT = '/work/claude-news'
 const BAND = {
@@ -93,4 +93,25 @@ test('passes tool calls through untouched', async ($, on) => {
   await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
   const r = await $.tool.call({ tool: 'Edit', file_path: ROOT + '/x.md', old_string: 'a', new_string: 'b' })
   expect(r).toEqual({ result: 'ok' })
+})
+
+test('idle: the editor naps in two rows, and wakes up full size when writing', async ($, on) => {
+  mock.clock(on, { now: 1000 })
+  stubs(on)
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  const idle = await $.ui.mount(BAND)
+  expect(await idle.find({ type: 'Text', text: '主編 zZ' })).toBeDefined()
+  expect(await idle.find({ type: 'Text', text: 'other mods' })).toBeDefined()
+  await idle.unmount()
+
+  await $.tool.call({ tool: 'Write', file_path: ROOT + '/wiki/log.md', content: 'x' })
+  const awake = await $.ui.mount(BAND)
+  expect(await awake.find({ type: 'Text', text: '主編 zZ' })).toBeUndefined()
+  expect(await awake.find({ type: 'Text', text: '🖋️ 主編' })).toBeDefined()
+})
+
+test('sleeping sprite is 2 text rows wide enough to stay out of the way', async () => {
+  const rows = toRows(sleepingPixels(EDITOR, 0))
+  expect(rows.length).toBe(2)
+  expect(JSON.stringify(sleepingPixels(EDITOR, 0))).not.toBe(JSON.stringify(sleepingPixels(EDITOR, 3)))
 })

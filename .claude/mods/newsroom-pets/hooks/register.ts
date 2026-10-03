@@ -3,7 +3,7 @@
 // 只觀察、不干預：agent.spawn 與 tool.call 一律 next(e) 原樣放行並回傳 next 的結果，
 // 不改派工、不改輸入、不擋任何呼叫。只在 CLAUDE_NEWS 樹上作用。
 
-import { basename, EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, pixels, reporterOf, SPRITE_W, toRows } from './lib.ts'
+import { basename, EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, pixels, reporterOf, SLEEP_FRAME_MS, sleepingPixels, SPRITE_W, toRows } from './lib.ts'
 import type { Desk, Who } from './lib.ts'
 
 let active = false
@@ -17,17 +17,22 @@ function whoFor(agentId: string | undefined): Who {
   return agents.get(agentId) ?? HELPER
 }
 
-async function animate($: any) {
-  if (timer) return
-  timer = $.clock.every(FRAME_MS, async () => {
+// 一支計時器、兩種速度：有人在寫用 FRAME_MS 打字，沒人在寫就降到 SLEEP_FRAME_MS 讓主編睡覺
+let speed = 0
+
+function startClock($: any, ms: number) {
+  if (timer && speed === ms) return
+  timer?.cancel()
+  speed = ms
+  timer = $.clock.every(ms, async () => {
     tick += 1
     $.ui.invalidate('ui.render')
-    // 沒人在台上就停表，平常零重畫
-    if (!onStage(desks, await $.clock.now()).length && timer) {
-      timer.cancel()
-      timer = null
-    }
+    if (speed === FRAME_MS && !onStage(desks, await $.clock.now()).length) startClock($, SLEEP_FRAME_MS)
   })
+}
+
+async function animate($: any) {
+  startClock($, FRAME_MS)
 }
 
 export function register(on: any) {
@@ -35,6 +40,7 @@ export function register(on: any) {
     try {
       const root = await $.session.root()
       active = (await $.fs.exists(root + '/scripts/ingest_gate.py')) && (await $.fs.exists(root + '/wiki/log.md'))
+      if (active) startClock($, SLEEP_FRAME_MS)
     } catch {
       active = false
     }
@@ -67,7 +73,6 @@ export function register(on: any) {
   on('ui.render', { component: 'AbovePrompt' }, async ($: any, e: any, next: any) => {
     if (!active || e.props.hasSurvey) return next(e)
     const stage = onStage(desks, await $.clock.now())
-    if (!stage.length) return next(e)
     const { Box, Text } = $.ui.resolve(e)
     const width = SPRITE_W + 2
     const fit = Math.max(1, Math.floor((e.props.bodyColumns ?? 80) / width))
@@ -83,6 +88,22 @@ export function register(on: any) {
           return Text(props)
         }),
       })
+    if (!stage.length) {
+      // 平常：主編縮成 2 行蜷在右下角睡覺
+      const nap = Box({
+        key: 'nap',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        columnGap: 1,
+        children: [
+          Text({ dimColor: true, children: [EDITOR.name + ' zZ'] }),
+          Box({ key: 'nap-px', flexDirection: 'column', children: toRows(sleepingPixels(EDITOR, tick)).map(line) }),
+        ],
+      })
+      const theirs = await next(e)
+      return Box({ flexDirection: 'column', children: theirs ? [nap, theirs] : [nap] })
+    }
     const cards = stage.slice(0, fit).map((d) =>
       Box({
         key: 'desk-' + d.who.id,

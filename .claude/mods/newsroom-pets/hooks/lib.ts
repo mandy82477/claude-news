@@ -2,6 +2,7 @@
 
 export const LINGER_MS = 3500 // 寫完後角色多留一下，連續 Edit 之間才不會一閃一閃
 export const FRAME_MS = 320
+export const SLEEP_FRAME_MS = 900 // 睡覺時 zZ 慢慢飄，重畫少
 
 export type Who = { id: string; name: string; badge: string; color: string; hat?: string }
 
@@ -76,6 +77,25 @@ export function pixels(who: Who, tick: number, writing: boolean): Px[][] {
     g[0][10] = tick % 8 < 4 ? PAPER : _
     g[0][11] = tick % 8 >= 4 ? PAPER : _
   }
+  return g
+}
+
+const ZZZ = '#B4B2A9'
+
+/** 平常的睡姿：10×4 像素（2 行半格方塊字），蜷著、戴帽子，頭頂 z 一上一下飄。 */
+export function sleepingPixels(who: Who, tick: number): Px[][] {
+  const _ = null
+  const C = who.color
+  const H = who.hat ?? C
+  const g: Px[][] = [
+    [_, _, _, _, _, _, _, _, _, _],
+    [_, _, H, H, H, H, _, _, _, _],
+    [_, C, C, C, C, C, C, _, _, _],
+    [DESK, C, C, C, C, C, C, C, DESK, _],
+  ]
+  const k = tick % 6
+  if (k < 3) g[0][7 + (k % 2)] = ZZZ
+  else g[1][8 + (k % 2)] = ZZZ
   return g
 }
 
