@@ -11,7 +11,7 @@ parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 111
+inbound_links: 110
 attribution_count: 161
 attribution_last: "2026-10-03"
 top_source: "google-news"

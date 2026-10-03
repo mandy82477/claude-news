@@ -13,7 +13,7 @@ children: "['entities/claude-code-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 116
-attribution_count: 629
+attribution_count: 630
 attribution_last: "2026-10-03"
 top_source: "github-issues"
 pending_count: 21
