@@ -151,6 +151,19 @@ class TestH7H8Agent(_Env):
         self.assertIsNone(mod.decide(self.main_payload("Agent", {"prompt": "找出所有 hook", "subagent_type": "Explore"})))
 
 
+class TestH7Web(_Env):
+    def test_reporter_web_blocked(self):
+        for tool, ti in (("WebFetch", {"url": "https://platform.claude.com/pricing"}), ("WebSearch", {"query": "x"})):
+            with self.subTest(tool=tool):
+                self.assertIsNotNone(mod.decide(self.subagent_payload(REPORTER_PROMPT, tool, ti)))
+
+    def test_main_and_other_subagents_web_ok(self):
+        """主編層查證（/wiki-lint 5e、5h）由主 session 做；研究型子 agent 不在記者規則內。"""
+        ti = {"url": "https://platform.claude.com/pricing"}
+        self.assertIsNone(mod.decide(self.main_payload("WebFetch", ti)))
+        self.assertIsNone(mod.decide(self.subagent_payload("查官方文件", "WebFetch", ti, "a9")))
+
+
 class TestMainContract(_Env):
     def test_exit_codes(self):
         def run(payload):

@@ -15,6 +15,8 @@ H6 閘腳本、存量基線、白名單、known-test-gaps——對象是**子 ag
     一定不是開發的兩種身分。棘輪測試 test_baseline_ratchet.py 是另一道（只守基線變鬆）。
 H7 不可再委派——子 agent 呼叫 Agent／Task 一律擋（shared.md「不可再委派」、
     page-audit-review「所有 agent：不可再委派」、pipeline 派工 prompt「也不呼叫 Agent tool」）。
+    記者另擋 WebFetch／WebSearch：各類 reporter-rules 都寫「記者無 web 工具」，需要官方查證的
+    標「⚠️ 需主編查證」交主編。主編層的 web 查證（/wiki-lint 5e、5h）由主 session 做，不受影響。
 H8 派工參數——主 session 派記者時必須明寫 `model` 與 `run_in_background: false`；
     派 pipeline agent 必須明寫 `model`（wiki-ingest SKILL 步驟 3：未指定會繼承主 session
     模型，六記者並行足以打穿配額；背景記者的完成通知回不來）。
@@ -41,6 +43,7 @@ except (AttributeError, ValueError):
 WRITE_TOOLS = {"Edit", "Write", "NotebookEdit", "MultiEdit"}
 SHELL_TOOLS = {"Bash", "PowerShell"}
 AGENT_TOOLS = {"Agent", "Task"}
+WEB_TOOLS = {"WebFetch", "WebSearch"}
 
 GATE_FILES = (
     "scripts/check_*.py", "scripts/run_tests.py", "scripts/gate_web_build.py",
@@ -57,6 +60,12 @@ WHY_H6 = (
 WHY_H5 = (
     "news/ 是唯讀原料：記者與其他子 agent 只讀日報、不寫日報。日報有錯，在回報裡寫明交主 session 處理。"
     "規則：wiki/CLAUDE.md、.claude/reporter-rules/shared.md「邊界限制」。"
+)
+
+
+WHY_WEB = (
+    "記者無 web 工具：需要官方查證的事實，在回報寫「⚠️ 需主編查證：[議題＋建議查證頁]」交主編，"
+    "不得自行上網補。規則：.claude/reporter-rules/commercial/daily.md 等各類 daily.md「無 web 工具」。"
 )
 
 
@@ -138,9 +147,11 @@ def check_agent(tool_input: dict, who: str) -> str | None:
 def decide(payload: dict) -> str | None:
     tool = payload.get("tool_name")
     ti = payload.get("tool_input") or {}
-    if tool not in WRITE_TOOLS | SHELL_TOOLS | AGENT_TOOLS:
+    if tool not in WRITE_TOOLS | SHELL_TOOLS | AGENT_TOOLS | WEB_TOOLS:
         return None
     who = role(payload)
+    if tool in WEB_TOOLS:
+        return WHY_WEB if who == "reporter" else None
     if who in ("reporter", "subagent") and not in_shared_tree(payload) and tool in WRITE_TOOLS:
         # worktree 隔離的子 agent：不碰共用樹的 news/，只受 H6（它不是開發身分）
         rel = rel_to_project(ti.get("file_path") or ti.get("notebook_path") or "", payload.get("cwd"))
