@@ -985,3 +985,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-02T22:08:16Z] TARGET_DATE=2026-10-02 (22 UTC shift) reason=digest already exists (Step 0b 冪等閘，news/2026-10-02.md 已存在，非 backfill 模式)
 [cloud weekly-wiki-lint-cloud STARTED 2026-10-03T03:09:26Z]
 [週六 2026/10/03 03:57:20.00] Weekly lint OK (cloud) - 修 116 頁 wiki，9 項待確認，測試全綠／gate 放行「測試全綠 - web build 放行」／build OK（69 entities、42 topics、157 digests）／渲染層驗收 overview＋recursive-self-improvement 產物皆含本輪改動／單一 push 待執行｜重點：5c 首次單輪清零 36→0、5l 四個現行模型頁「跟它怎麼說話」依官方 prompting 指南首次補齊、Sonnet 5 與 Opus 4.7 更正為 Legacy、5a 降溫 7 條、5h 結算 8 列（✅2／～仍懸 6）、死鏈 9 條全處置、6j 月度對抗輪 19 項規則檔缺陷只回報｜⚠️ 5b 因 egress leaderboard PARTIAL 跳過；5m／5n 因本 session repo 授權僅含 mandy82477/claude-news（GitHub MCP 拒 anthropics/claude-code、GH_TOKEN 失效）無法執行，非 egress 問題
+[cloud daily-news-pipeline-cloud STARTED 2026-10-03T12:10:21Z]
