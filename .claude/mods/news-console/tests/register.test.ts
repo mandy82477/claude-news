@@ -24,7 +24,8 @@ function stubCommon(on: any, saved: Map<string, unknown>, inTree = true) {
   on('session.start', () => ({ cwd: ROOT }))
   on('session.root', () => ({ value: ROOT }))
   on('session.id', () => ({ value: 'me' }))
-  on('fs.exists', ($: any, e: any) => ({ value: inTree && /ingest_gate\.py$|wiki\/log\.md$/.test(e.path) }))
+  // e.path 由 engine 轉成絕對路徑，Windows 上是反斜線
+  on('fs.exists', ($: any, e: any) => ({ value: inTree && /ingest_gate\.py$|wiki[\\/]log\.md$/.test(e.path) }))
   on('store.get', ($: any, e: any) => ({ value: saved.get(e.key) }))
   on('store.set', ($: any, e: any) => {
     saved.set(e.key, e.value)
