@@ -526,6 +526,35 @@ const SCENES = [
     text('Claude News・給需要深度與穩定資訊的工程師', W / 2, 340, { size: 40, align: 'center', color: COL.mut, alpha: ease(seg(t, 1.4, 2.4)) })
   } },
 ]
+// ── 配時：劇本照原本的時間軸寫（約 2 分半），這裡壓成約 1 分鐘 ─────────
+// 查證與退案是重點：四個橋段各自用折線對應，每段字幕至少停留約 3 秒。
+const RETIME = {
+  '開場': { dur: 4 }, '01 抓料': { dur: 5 }, '02 派工': { dur: 5.5 }, '03 寫 wiki': { dur: 5 },
+  '04 查證': { dur: 18, knots: [[0, 0], [4.5, 10], [9, 21], [15, 33], [18, 38]] },
+  '05 退案': { dur: 16, knots: [[0, 0], [4.5, 9], [8, 16], [12, 24], [16, 36]] },
+  '06 上線': { dur: 4 }, '收尾': { dur: 3.5 },
+}
+// SHORT 由產生器注入：精簡版（約 1 分鐘）才重新配時，完整版照原劇本時間軸
+if (SHORT) {
+  let acc = 0
+  for (const sc of SCENES) {
+    const od = sc.end - sc.start
+    const r = RETIME[sc.label]
+    sc.knots = r.knots ?? [[0, 0], [r.dur, od]]
+    sc.start = acc
+    acc += r.dur
+    sc.end = acc
+  }
+}
+// 新時間軸的場內時間 → 劇本原本的場內時間（折線內插）
+function scriptTime(sc, u) {
+  if (!sc.knots) return u
+  const k = sc.knots
+  for (let i = 1; i < k.length; i++) {
+    if (u <= k[i][0]) return lerp(k[i - 1][1], k[i][1], (u - k[i - 1][0]) / (k[i][0] - k[i - 1][0]))
+  }
+  return k[k.length - 1][1]
+}
 const TOTAL = SCENES[SCENES.length - 1].end
 
 // ── 播放器 ──────────────────────────────────────────────────────
@@ -543,7 +572,7 @@ function render() {
   ctx.fillStyle = COL.stage
   ctx.fillRect(0, 0, W, H)
   const tick = Math.floor(T * 3)
-  sc.draw(T - sc.start, tick)
+  sc.draw(scriptTime(sc, T - sc.start), tick)
   // 場景交界淡入
   const k = 1 - seg(T - sc.start, 0, 0.35)
   if (k > 0 && sc.start > 0) { ctx.fillStyle = `rgba(247,243,232,${k})`; ctx.fillRect(0, 0, W, H) }

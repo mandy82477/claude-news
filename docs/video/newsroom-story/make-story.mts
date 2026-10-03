@@ -1,7 +1,7 @@
 // 「小編輯部」介紹動畫的產生器：角色、帽子、道具的像素由 mod 實際的 lib.ts／actions.ts 算出，
 // 劇本與場景在 story-runtime.js。跑法（Node 22+）：
 //   node --experimental-strip-types docs/video/newsroom-story/make-story.mts
-// 產出：docs/video/newsroom-story/newsroom-story.html（單檔、雙擊即可播放）
+// 產出：newsroom-story.html（完整版約 2 分半）與 newsroom-story-1min.html（精簡版約 1 分鐘），單檔、雙擊即可播放
 
 import { readFileSync, writeFileSync } from 'node:fs'
 import { actionPixels, VERB } from '../../../.claude/mods/newsroom-pets/hooks/actions.ts'
@@ -41,11 +41,11 @@ for (const a of Object.keys(VERB) as Action[]) {
 }
 
 const runtime = readFileSync(new URL('./story-runtime.js', import.meta.url), 'utf8')
-const html = `<!doctype html>
+const page = (short: boolean) => `<!doctype html>
 <html lang="zh-Hant">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Claude News 小編輯部</title>
+<title>Claude News 小編輯部${short ? '（1 分鐘版）' : ''}</title>
 <style>
 :root{--bg:#f4f1e8;--fg:#1f1e1d;--mut:#5f5e5a;--line:#d8d4c8;--btn:#ffffff}
 @media (prefers-color-scheme:dark){:root{--bg:#1c1b19;--fg:#f0eee6;--mut:#b4b2a9;--line:#3d3c38;--btn:#2a2927}}
@@ -66,12 +66,13 @@ input[type=range]{flex:1;min-width:220px;accent-color:#D85A30}
 </style>
 <main>
 <h1>Claude News 小編輯部：一份日報怎麼變成會查證的知識庫</h1>
-<p class="lead">約 2 分半。主角是本機 mod「newsroom-pets」裡的同一批角色。空白鍵播放／暫停，左右鍵跳 5 秒。</p>
+<p class="lead">${short ? '約 1 分鐘精簡版' : '約 2 分半完整版'}。主角是本機 mod「newsroom-pets」裡的同一批角色。空白鍵播放／暫停，左右鍵跳 5 秒。</p>
 <div class="stage"><canvas id="cv" width="1920" height="1080" aria-label="小編輯部介紹動畫"></canvas></div>
 <div class="bar"><button id="pp">⏸ 暫停</button><input type="range" id="sl" min="0" max="1000" value="0" aria-label="進度"><span id="clock"></span></div>
 <div class="chapters" id="ch"></div>
 </main>
 <script>
+const SHORT=${short};
 const PALETTE=${JSON.stringify(palette)};
 const CHARS=${JSON.stringify(chars)};
 const PROPS=${JSON.stringify(props)};
@@ -79,5 +80,6 @@ ${runtime}
 </script>
 </html>
 `
-writeFileSync(new URL('./newsroom-story.html', import.meta.url), html)
-console.log(`OK: newsroom-story.html（${Object.keys(chars).length} 個角色、${Object.keys(props).length} 種道具、${palette.length} 色）`)
+writeFileSync(new URL('./newsroom-story.html', import.meta.url), page(false))
+writeFileSync(new URL('./newsroom-story-1min.html', import.meta.url), page(true))
+console.log(`OK: newsroom-story.html＋newsroom-story-1min.html（${Object.keys(chars).length} 個角色、${Object.keys(props).length} 種道具、${palette.length} 色）`)
