@@ -1,0 +1,6 @@
+{
+  "name": "newsroom-pets",
+  "version": "0.1.0",
+  "description": "CLAUDE_NEWS newsroom pets: while the editor (main session) or a reporter subagent writes a file with Edit/Write, a small typing character with its name and the file appears in the band above the prompt, and lingers a few seconds after. Observes only: agent.spawn and tool.call always pass through next(e). Inert outside the CLAUDE_NEWS tree.",
+  "author": { "name": "Mandy" }
+}

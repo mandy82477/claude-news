@@ -163,7 +163,9 @@ export function register(on: any) {
     }
     if (sync.shiftAlert) rows.push(Text({ color: 'red', wrap: 'truncate-end', children: [sync.shiftAlert] }))
     if (sync.error) rows.push(Text({ dimColor: true, children: [sync.error] }))
-    return Box({ flexDirection: 'column', children: rows })
+    // 提示列是所有 mod 共用的：把排在後面的 mod（例如 newsroom-pets）畫的東西一起放進來
+    const theirs = await next(e)
+    return Box({ flexDirection: 'column', children: theirs ? [...rows, theirs] : rows })
   })
 
   // ── 1. 平常：提示行尾端一段暗色「已同步　日報 MM-DD」────────

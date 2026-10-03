@@ -1,0 +1,4 @@
+{
+  "description": "newsroom-pets: agent.spawn maps a reporter's agentId from its dispatch prompt; tool.call on Edit/Write/NotebookEdit/MultiEdit marks who is writing and starts a 300 ms frame timer that stops when nobody is on stage; ui.render on AbovePrompt draws the desks and keeps what later mods draw. Every hook passes next(e) through unchanged.",
+  "modules": ["./register.ts"]
+}
