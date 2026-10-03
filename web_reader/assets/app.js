@@ -1394,7 +1394,7 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
       trackerHtml = renderEnterpriseMatrix(item.enterpriseTracker);
     }
 
-    // ── 子故事階層：麵包屑（往上）＋子頁卡（往下）——子頁不在列表，只從這裡到 ──
+    // ── 子故事階層：麵包屑（往上）＋子頁連結（往下）——子頁不在列表，只從這裡到 ──
     const kbAll = buildKbList();
     const byId = Object.fromEntries(kbAll.map(i => [i.id, i]));
     const crumbs = [];
@@ -1405,13 +1405,31 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     const crumbHtml = crumbs.length
       ? `<div class="detail__crumbs">${crumbs.map(c => `<button class="wikilink" onclick="openWikiPage('${esc(c.id)}','${c._kbBaseType}')">${esc(c.name || c.id)}</button>`).join(' › ')} › <span>${esc(item.name || id)}</span></div>`
       : '';
-    const kidsHtml = kids.length
-      ? `<div class="detail__children"><div class="wiki__section-h">子故事（${kids.length}）</div>${kids.map(k =>
-          `<div class="entity-row entity-row--${k._kbBaseType}" onclick="openWikiPage('${esc(k.id)}','${k._kbBaseType}')" role="button" tabindex="0">
-  <div class="entity-row__name"><span class="entity-row__zh">${esc(k.name || k.id)}</span><span class="entity-row__slug">${esc(k.id)}</span></div>
-  <div class="entity-row__summary">${esc(k.latestHeadline || k.summary || '')}</div>
-  <div class="entity-row__updated">${esc(k.lastNewsUpdate || k.lastUpdated || '')}</div>
-</div>`).join('')}</div>`
+    // 子頁分三種，判準同 scripts/gen_wiki_frontmatter.py 的 page_role：
+    //   archive  — slug 含「-archive」→ 正文之後「更早的紀錄」
+    //   redirect — 已併回母頁的殼（正文前 60 行含「已併回」）→ 不顯示，內容已在本頁
+    //   其餘     — 真子題 → 正文之前一行精簡連結，不擠掉頁頂 callout
+    // data.js 沒帶 page_role，redirect 只能讀子頁 markdown 判（只抓非封存子頁，通常 0–3 個）
+    const isArchiveKid = k => k.id.includes('-archive');
+    const archiveKids = kids.filter(isArchiveKid);
+    const otherKids = kids.filter(k => !isArchiveKid(k));
+    const redirectFlags = await Promise.all(otherKids.map(async k => {
+      if ((k.status || '').includes('已併回')) return true;
+      try {
+        const kj = await fetchWiki(k.id);
+        return (kj.markdown || '').split('\n').slice(0, 60).join('\n').includes('已併回');
+      } catch (e) { return false; }
+    }));
+    const subKids = otherKids.filter((_, i) => !redirectFlags[i]);
+    const kidLink = k => `<button class="detail__kid-link" onclick="openWikiPage('${esc(k.id)}','${k._kbBaseType}')">${esc(k.name || k.id)}</button>`;
+    const subHtml = subKids.length
+      ? `<div class="detail__subtopics"><span class="detail__subtopics-label">本頁的子題</span>${subKids.map(kidLink).join('')}</div>`
+      : '';
+    const olderHtml = archiveKids.length
+      ? `<section class="detail__older"><div class="wiki__section-h">更早的紀錄</div>
+<p class="detail__older-note">從本頁搬出的原始條目，一字未刪，只是不放在主頁上。</p>
+<ul class="detail__older-list">${archiveKids.map(k =>
+          `<li>${kidLink(k)}${k.lastNewsUpdate ? `<span class="detail__older-date">條目記到 ${esc(k.lastNewsUpdate)}</span>` : ''}</li>`).join('')}</ul></section>`
       : '';
 
     $('#detail-content').innerHTML = `
@@ -1424,8 +1442,9 @@ ${crumbHtml}
 <h1 class="detail__h1">${esc(item.name)}</h1>
 ${metaRows.length ? `<div class="detail__meta">${metaHtml}</div>` : ''}
 ${trackerHtml}
-${kidsHtml}
+${subHtml}
 <div class="detail__body">${bodyHtml}</div>
+${olderHtml}
 <div class="detail__minimap" id="detail-minimap"></div>`;
     renderMiniMap(id, $('#detail-minimap'));
     makeTablesSortable($('#detail-content'));
