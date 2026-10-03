@@ -4815,6 +4815,11 @@ window.WIKI_DATA = {
   ],
   "weeklyIndex": [
     {
+      "id": "2026-W40",
+      "name": "CLAUDE NEWS 週報 · 2026-W40",
+      "preview": "本期起頭條敘事換成兩篇記者專文：第一篇由功能記者寫機制，第二篇由社群記者寫怎麼量，各約三分鐘，都在第二節。"
+    },
+    {
       "id": "2026-W39",
       "name": "CLAUDE NEWS 週報 · 2026-W39",
       "preview": "Anthropic 發布 Opus 5.5，Claude Code 同一天推出的新版就把它設為預設的 Opus（官方發布文，09-22）。本刊把這條線稱為預設換模型：沒改過設定的人，下一個 session 用的就是它。價格往下走——每百萬 token 的輸入價 4 美元、輸出價 20 美元，都比 Opus 5 降兩成，"
