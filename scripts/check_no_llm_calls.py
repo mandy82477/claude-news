@@ -42,10 +42,7 @@ ALLOW: dict[str, str] = {
     "src/tests/test_settings_hooks.py": "用 settings.json 原樣指令實跑 hook 的測試案例",
 }
 # 已知存量：不擋但每次印出，直到使用者裁決
-KNOWN: dict[str, str] = {
-    "src/news_aggregator/analyzer.py": "有 ANTHROPIC_API_KEY 時走 anthropic SDK 的舊路徑；"
-                                       "移除或保留待使用者裁決（2026-10-03 列入）",
-}
+KNOWN: dict[str, str] = {}  # 2026-10-03 analyzer.py 的 SDK 路徑經使用者裁決移除後清空
 
 _CMD_STR_RE = re.compile(
     r"^\s*(?:npx\s+@anthropic-ai/claude-code\S*|claude(?:\.exe|\.cmd)?)\s+(?:.*\s)?(?:-p|--print)(?:\s|=|$)"

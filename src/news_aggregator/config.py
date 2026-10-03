@@ -21,6 +21,5 @@ REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET", "")
 
 REQUEST_TIMEOUT = 15
 MAX_ITEMS_PER_SOURCE = 20
-HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
 SEEN_CACHE_FILE = Path(__file__).parent / "seen_urls.json"  # src/news_aggregator/seen_urls.json
