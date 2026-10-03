@@ -29,8 +29,8 @@ prompt 上方的提示列裡住著一間小編輯部：主編（主 session）�
 | 整理書架 | 整理書架 index.md | Edit `wiki/index.md` |
 | 雷達掃描 | 雷達掃描 feature-radar | Edit `wiki/feature-radar.md` |
 | 印報 | 印報 … | Write `news/*.md`、跑 `build_web.py`／`news_aggregator` 等 |
-| 翻閱 | 翻閱 檔名 | Read |
-| 搜尋 | 搜尋 … | Grep／Glob／`wiki_search.py` |
+| 翻閱（戴眼鏡） | 翻閱 檔名 | Read |
+| 搜尋（戴眼鏡） | 搜尋 … | Grep／Glob／`wiki_search.py` |
 | 打電話查證 | 打電話查證 網域 | WebFetch／WebSearch |
 | 吹哨派工 | 派工 … | 呼叫 Agent |
 | 檢查打勾 | 檢查中 腳本 | `run_tests.py`／`ingest_gate.py`／`check_*.py`／`gate_web_build.py` |

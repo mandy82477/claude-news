@@ -182,7 +182,8 @@ function generatedProp(action: Action, t: number): string[] | null {
 /** 一隻角色做某個動作的第 tick 格（18×8 像素）：左邊本體（揮手或靜坐），右邊道具。 */
 export function actionPixels(who: Who, action: Action, tick: number): Px[][] {
   const waving = action !== 'read' && action !== 'search' && action !== 'phone' && action !== 'red' && action !== 'sweat'
-  const body = bodyPixels(who, tick, waving)
+  const glasses = action === 'read' || action === 'search'
+  const body = bodyPixels(who, tick, waving, false, glasses)
   const frames = PROPS[action]
   const propRows = generatedProp(action, tick) ?? (frames ? frames[tick % frames.length] : Array(8).fill('........'))
   const prop = art(propRows)

@@ -48,6 +48,10 @@ test('every action draws a full-size sprite that splits into 4 half-block rows',
     }
   }
   expect(toRows(thinkingPixels(EDITOR, 0)).length).toBe(2)
+  // 讀書、搜尋時戴眼鏡：眼睛那列（第 3 列）出現淡藍鏡片；寫字時沒有
+  expect(actionPixels(EDITOR, 'read', 1)[3]).toContain('#B5D4F4')
+  expect(actionPixels(EDITOR, 'search', 1)[3]).toContain('#B5D4F4')
+  expect(actionPixels(EDITOR, 'write', 1)[3]).not.toContain('#B5D4F4')
 })
 
 const ROOT = '/work/claude-news'

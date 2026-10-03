@@ -56,7 +56,7 @@ export const SPRITE_H = 8 // 像素列；畫成 4 行半格方塊字
 export const PALETTE: Record<string, string> = {
   E: '#2C2C2A', k: '#2C2C2A', K: '#444441', W: '#F1EFE8', g: '#B4B2A9', D: '#888780', S: '#5F5E5A',
   B: '#378ADD', b: '#0C447C', P: '#185FA5', R: '#E24B4A', G: '#639922', L: '#97C459', Y: '#EF9F27',
-  O: '#854F0B', o: '#BA7517', p: '#D4537E', q: '#ED93B1',
+  O: '#854F0B', o: '#BA7517', p: '#D4537E', q: '#ED93B1', Q: '#B5D4F4',
 }
 
 /** 字元圖 → 像素列。'.'＝透明；不在調色盤的字母從 extra 找。 */
@@ -82,14 +82,17 @@ const HATS: Record<HatId, string[]> = {
 /**
  * 角色本體：10×8 像素。上兩列帽子，下面頭、眼睛、身體、揮動的雙手、腳。
  * wave 時雙手上下交替；blink 由 tick 決定（每 9 格眨一次）。
+ * glasses 時眼睛那列換成眼鏡：深灰鏡框＋淡藍鏡片，鏡片每 4 格反光一次（讀書、搜尋時戴）。
  */
-export function bodyPixels(who: Who, tick: number, wave: boolean, eyesClosed = false): Px[][] {
+export function bodyPixels(who: Who, tick: number, wave: boolean, eyesClosed = false, glasses = false): Px[][] {
   const up = wave && tick % 2 === 0
   const eye = eyesClosed || tick % 9 === 0 ? 'C' : 'E'
+  const lens = tick % 4 === 0 ? 'W' : 'Q'
+  const eyeRow = glasses ? `.K${lens}KKK${lens}KC.` : `.C${eye}CCC${eye}CC.`
   const rows = [
     ...HATS[who.hat],
     '.CCCCCCCC.',
-    `.C${eye}CCC${eye}CC.`,
+    eyeRow,
     '.CCCCCCCC.',
     `${up ? 'C' : '.'}CCCCCCCC${up ? '.' : 'C'}`,
     `${up ? '.' : 'C'}CCCCCCCC${up ? 'C' : '.'}`,
