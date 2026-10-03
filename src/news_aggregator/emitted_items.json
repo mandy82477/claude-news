@@ -6998,7 +6998,7 @@
   "https://news.google.com/rss/articles/CBMifkFVX3lxTE94VHo1THdydmxIUUUzc1pZNFFQdHk4d2JwazVlbHQ0SjZZZnhCbndpQ09TSXluZ09tMVlMZVQyUXdCc0o0WWMtODB6Qy1tSHlYM2lGVndRcUpOU0VVUWVoWnBDeUVVbEJ5M2ZwaHVDWU5GTGF0eUhtaHpmNHA4QQ?oc=5": {
     "first_emitted": "2026-10-02",
     "last_emitted": "2026-10-02",
-    "last_seen": "2026-10-02",
+    "last_seen": "2026-10-03",
     "score_at_emit": 0,
     "digest_confirmed": true
   },
@@ -7012,7 +7012,7 @@
   "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNHZiQ3ZEdGxmQ0JJQXByOGltWWJKNUFBV3p6WDljSGhLWG0xekpLNkZzOEgzc3RDU1ktQVZqVkNEZl9xbHlHcjVqNGVETzh3TTBMSzRGMy1lLXRaQ2tZdnZ1NnJxRjZKalc5dWNKSVN6UFF0QktUSlZvTjNnTXppeVM1aUt2aG0zZ1Z5VlZzOHR1Rk1hcDVyeExR?oc=5": {
     "first_emitted": "2026-10-02",
     "last_emitted": "2026-10-02",
-    "last_seen": "2026-10-02",
+    "last_seen": "2026-10-03",
     "score_at_emit": 0,
     "digest_confirmed": true
   },
@@ -7061,7 +7061,7 @@
   "https://news.google.com/rss/articles/CBMiakFVX3lxTE5VelRDM0dFQ0JnUmk5VEhwc3BpY1hEbG9hbmtpT0RYOHoyOFBiS3ItRDFvc3M5WXRGOUdvNGhNUklBZGJzU09mZ2hjdU9aSk51SkxtcThERjRKcmFqRGNmQ0lWQXgybDhZVUE?oc=5": {
     "first_emitted": "2026-10-02",
     "last_emitted": "2026-10-02",
-    "last_seen": "2026-10-02",
+    "last_seen": "2026-10-03",
     "score_at_emit": 0,
     "digest_confirmed": true
   },
@@ -7582,5 +7582,194 @@
     "last_seen": "2026-10-03",
     "score_at_emit": 0,
     "digest_confirmed": true
+  },
+  "https://github.com/activeing123/mcptoon": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 207,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwoxzr/claude_for_linkedin": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwovbm/built_a_classical_music_site_for_studying_with": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwoqzh/i_built_an_orb_personal_assistant_connect_to_your": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwopz3/disappointed_with_every_pdf_reader_i_tried_so_i": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNVhWRTAtT2tmQVExQ2xpOUFSODhHYko1MVBuSy1WaDM1SEVXT2VoX3hPMzZkdjU4cXM5NmFac3VQVjYwS0JBU1ppbldrT1BHaWVIemdHUnRveGxsZGd2TE0yTm9jLTZnUlloVDVOeFowNTM2d0FUOW5aNmdoanJGV2dibUtlRU5VYzFDZ1YwR3dYYmdoVy1VY2F5YkpUMDVDQ2xpWjRyT1ZMcWxLczZOeg?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdEFWRzRGOV9xaGRVZlB1eXp2Vzd5dVVfSDVybWpmaXZnZG96TkZKSFh0VE9vTmdiek1ZSFRhQWlfYWh4X2FJaE5NNDdxdnpCbkxieXN3WWlfUTRqaTMtbVl5TGxDVm1yRHgyWFcwNmdIWmgwNXRTaVVaNGdEUlBUSjBQeFV1MFJCYmxqcWR2Vk9jUm9WRGF4V3VHalNpanUwbGlaRFVpUmxkRE9CVkQxWlpoVXlaYjQ5MEpWbVFlbHg?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwogi8/paper_clips": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1wwo7rt/claudeassisted_video_editing": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMifkFVX3lxTFB6QjZxOGc2cmdaanpKcWxEdTFQSlF2cTF6cmM1UGQ3ckxhOG9keVhOdEdWbW9qOGNTRUlJZnZNbEJhSkMwV2tJZTBmMTFmSURXTEFrRzVjNmVfRDFFUTBGRmR4OG1lTF84SWFVTmhHWmVVbWlXZWZGS0lFZTQ1Zw?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1wwk49n/the_ultimate_guide_to_multiharness_rl": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxQN1dyMFpjMzV4a1ByT19sZ20yS1pYdzFrLWF2STREVExubnJGeGg2c2I2QXdGcTdXV1JVVzV4QzJZbVE4SXR1LUJyRVpOa195QmdLaDRheVpkTGtFR3YzM0N6c2lhd0pIY0lhOXJfQURPT1NBcjgyZHJBcjVKdl9iMnBR?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5jMVNnR0YwX2pXNmkzbHFlQ09MWWVad1hSOV9wZjFtclR1Vm0tcGZORURNUTN3bFlCT25ZTlNRM3VTR3dtalhSb0czVHZmU0wxSDVvQ2ctVFZFQTdzdEVN?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxOT21JUF93bkl1WXRMMUZWZk5LM204Z3ZsM0pKbUZvcTh0ZFllbF9IaV94RDVSV3JicFN1aWFPU3FRRV9jN1lZZVpid1JhcFJBZTQ0c012SzlEVnNvMmptWVNlUlpjNkViSmxmLW5HbnYyM19zYWx1RndvS3d2VEJEeUVESXFhc2tLY1E4OE1RdXNKOHl0aUl0QXBFblU?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9rUEZRYzJQa3pnZW94ZTgwbkVfNHExamktQ3l5NVhhdDBWWmJtYUxNTl9tWkdJZGxxSWM5RTBXMXpDZ0lyelU0Y0lHYXF2UmxuR1VVN2FwejVFVTZvcmh2V2NVZUJNdC16?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcnJkUXllNG5UUlJxVGJBekhEYkxEdVRBRzZ1WGdWTDVNeHhxRHJHc1VxVlNRWUpDRGJXSnVVVUo1RWhsU1J5czVQV3k3WE1DbVlXX1lPWFAxLW1GR3hjMGN3S2NGaVlwd1hUeVJnU1YtX193MkFPV3NOdXk2TkpvSy1hc0xRNEp3SUVTSU5ubno2LUYwU0J6VjU4T3ZnUE85NlREWlJRMVo1NklfUXNfOWZB?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM3J2OUV2TU9GTFg0ZlZKazBraHpjN2xoc1pwcEI4N3BnZVJnZmQxVzVhd0xkY3RyaGNiR2ItOE1NTUpzZFIzc0VnbTRIOXdxcFZuWUNBVEtTYXgtTnpBQVB6NWRNRnI1cWxGbXRoMmZjTGlsampPdjd4WVlfQlNyMVZIdjVib3ZkQ2t4YVU5Yy1CSms?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9FNlFxVHBSRkl5bVF0c253UE5sUEFac3dDZmQ4bzFjc2lER0hNcjFmUUxPVFI5T0xQcldFTXhsd1diR2h4UUVoRnl4TWxEVnp5WXpCMFdkZHNKdlA1bFV4QTVqUDI?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbTMwcUFXcnVmOFE0c2J6YThsYVpNVDBibTdSWC15VFZOem1CSy0xZkhVNlhmTWp6Y3dCbUhhYWpnSzktOFF3RjZDTGt2bUJQLVJvSDMtLW5OM1VmQ2ZhWXRzNGEzWFE5MFU5dUt5OVlTTy10TTI4ZUJyczY2NTlpZkptYVlBeXZlNWl3UzBBS0pFUGpNdlRxbw?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1ww6750/i_spent_3_weeks_testing_local_qwen38_on_the_new": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVm1HckNWcGppajhJRHZBMjRwTk8yRVB1QnZnUm1XTXZpUW9TWDNRWWJWcTYzWElTWjIybWNzWWlseWZoekQxSVl4QlRxcE1zTWpSdEs2aldnTnMySVBHMGJyal8yRjVxSjM1bVR1cF9fQWpoTnRpT09uTUJZa29sMDQ5NTR3a1EtVktqdmhocHBuWUp5S09QaUxSQQ?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxNc0VyVzRrRmNEN2NIRVpSUlRjLW41RDlOdFlzOUtDV0tvQ1ZjVGJOUXMwaFVaZGNWbXJMaVVhODdzcUZKY0dYdk9PQm9xOUQ5LW9hVFdwZDlUcmNSWkhsUG1FcmxuSS1zcmltN3Vnc0ZPRnBCNU52cW0yUWNreTY0eGVrZDZVRVhiczNjR1I2emc1dHVxOTJGa3l4alfSAaIBQVVfeXFMTWRBZndla2REclF0bUR3dTdZcWs2ZEdqLXdwNHEya1BSeXRNZXVEUWE1VkdCWUFQcFJWSk5Ec1U0QnF6VEhDQTlQRlUzTDhCc3ZONHE1SEVOMmVtTFNOM2laLXRKQnRWRkhjQk5ObzJSeERNZFBsQ1pjaEpiUFQzbk5Ga202WUVDMmNZZVhFRWNkRGx6aDRYMXY0b2c2QzFFSFpn?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR09PU3pzNWVwOE1jeVdZX0pwdTdTNHFNZHNNR1lWX0VzeURoRnBmdjJLQ0c0VEg1Q1RJYUlacFRJQVZ5UkVYSmx2Y3A2SFBTYzlsVzBQOXUzSGxybFkxSElkdzRVbllfQ1c2QTVWWlc5cGhZM3JhVmYtazMzQVVDeEFlUDZONURHc3F2S0FoTEJDQmhSWHU2cUZwN1NtZzVMZUE?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOV25WaFN6UWY0RHVyM0I2MElUYTcwQjdtRHB4ZGJLUnFEemp5dmtWNk16Vk1VMmEwSmg1T3Jtc3JrMzJBbXZhV3RZX09aTENSalJiR0pKOVhuSllVcjJaWjVhRUtwZFphdEZOM01kRmdDZ2k2YnJXdVpVWm1NT2JGZmJ1Q0czNkV0Yzd1dU1oaDZrQ0w5ZXZQamgxVHJ1cGRwZHBHaDR1VER5dw?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNaXZSQTRtdnplY1RxeUZCZGoxZF9BZURNRXFoaTV5Y2FnZVZ6Y0dVTFlHR2RNeWVKR3BJdEVLTllqSVZZdUVZLW83NGZLd0h4N1VwRWx0OWlfa1BMeDNpR1dnbElwRUN4akQ3UFVTVU16RktsblZnOUR3RzIxYjlIZnRNQTdCNU9BUXozMWZaQ0cyTG8teG5nXzIxMWU1eXVpMWtIdnMxUXdnSjlRUEJqRmptWjhpeG5nV2U3VE11NktHNUJLdlBZTjU2QVFTT3NpVmRRRtIB2gFBVV95cUxQQlJsa1Z1UGlqbDZILXl3ZEtxWUVDNlN0MU80SjFHZHphUmJlRl9uUG1wOHRfWnJ2YVN4TWtzZ3d4V0FuM2RPY210RjhJeFZRTXVjVWZHSTVvRmN3Zi1QZ3hVbzRoUlliVGVLNHVnck1Xd0F4cTNlWmhpUGtCaXVrMEJCMmxnWlZnZFQxWXo3Z0UzdlRVMTdMcHRieUF2MmhPUXpYaExjVkRaRU9YZnY2UlczNlI5QzBOUGJUSV9kc0dlN2dfZTFqNTVGWTh2TVNtdlZLbTdQMldRUQ?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUk83bVFSQWdpM2N2eXFCRlhJQkVxOWo3V3p1UUFBMDJ2ZWdnRWhqWUNKWXJ2UnljVkFySHdfWF8tcGlRMC0yeWRxY2kyVHZ0ZC1pbXd0dFd5YWpYQ1hxYU1NaTNZem1TR3dEbjYtUHJDWlF6ZzNXbGFzcjNMYXhIWFVrOFk?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
+  },
+  "https://news.google.com/rss/articles/CBMilgFBVV95cUxPenN5SVloamF3enAxemVhek1BX2c5Qjg0bWNOd25TQ1oxZUh5VXdMMk9VNGloRG55SjhnajR2WkphQnRzM29HQmJQby1tUG0zRWxlanhQYWlTSUlJckRhVTRPcjE3c21DeW1PUk1vVTVnZUl5bHRZU2g3TFpYRVkyVU1OYXBMYlNHN1BLcG9TUDVoeFV3dVE?oc=5": {
+    "first_emitted": "2026-10-03",
+    "last_emitted": "2026-10-03",
+    "last_seen": "2026-10-03",
+    "score_at_emit": 0,
+    "digest_confirmed": false
   }
 }
