@@ -20,6 +20,8 @@ function fakeGit(state: { behind: number; dirty: string[]; staged?: string[]; lo
   }
 }
 
+const statusLines: unknown[] = []
+
 function stubCommon(on: any, saved: Map<string, unknown>, inTree = true) {
   on('session.start', () => ({ cwd: ROOT }))
   on('session.root', () => ({ value: ROOT }))
@@ -37,7 +39,10 @@ function stubCommon(on: any, saved: Map<string, unknown>, inTree = true) {
   })
   on('store.keys', () => ({ value: [...saved.keys()] }))
   on('ui.toast', () => ({ value: undefined }))
-  on('ui.status', () => ({ value: undefined }))
+  on('ui.status', ($: any, e: any) => {
+    statusLines.push(e.text)
+    return { value: undefined }
+  })
   on('ui.log', () => ({ value: undefined }))
   on('tool.call', () => ({ result: 'ok' }))
 }
@@ -129,4 +134,14 @@ test('outside the CLAUDE_NEWS tree the mod is inert', async ($, on) => {
   const r: any = await $.tool.call({ tool: 'Bash', command: 'git add .' })
   expect(r).toEqual({ result: 'ok' })
   expect(saved.size).toBe(0)
+})
+
+test('status line always says where sync stands', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 3, 9) })
+  const saved = new Map<string, unknown>()
+  stubCommon(on, saved)
+  on('process.run', fakeGit({ behind: 0, dirty: [] }))
+  await $.session.start({ surface: 'terminal', isInteractive: true, cwd: ROOT })
+  await clock.advance(2000)
+  expect(statusLines.at(-1)).toBe('news ✓ 已同步　日報 10-02')
 })

@@ -53,6 +53,13 @@ async function checkOrigin($: any) {
     error: fetched.exitCode === 0 ? null : 'git fetch 失敗，落後筆數可能過時',
     checkedAt: now,
   }
+  // 狀態列常駐一行：同步時也看得到 mod 活著（提示列與提示行只在出事時顯眼）
+  $.ui.status(
+    sync.error ? 'news ⚠ ' + sync.error
+      : sync.behind > 0 ? `news ⚠ 落後 origin ${sync.behind} 筆`
+      : sync.shiftAlert ? 'news ⚠ 雲端班次失敗'
+      : 'news ✓ 已同步' + (sync.digest ? '　日報 ' + sync.digest.slice(5) : ''),
+  )
   $.ui.invalidate('ui.render')
 }
 
