@@ -77,7 +77,7 @@ python scripts/build_ingest_packets.py --date TARGET_DATE --routing data/ingest-
 
 **對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（覆核步驟 2 產出的 `排除.md`，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
-> ⚠️ **記者 agent 必須以 foreground（同步）方式啟動：每個呼叫明寫 `run_in_background: false`**（Agent 工具未指定時預設背景；`.claude/hooks/guard_roles.py` 擋下漏寫的派工）。背景記者的完成通知無法回到派工 agent，會造成永久等待。
+> ⚠️ **記者的完成通知只回得到最上層 session**：派工者必須是最上層 session（本機主 session 或雲端頂層），不可由背景 agent 代派。Agent 工具還有 `run_in_background` 參數時明寫 `false`；2.1.288 起已無此參數、子 agent 一律背景，等完成通知即可。`.claude/hooks/guard_roles.py` 只擋明確設 `true` 的派工。
 
 每位記者 prompt 的條目節錄＝貼入 `data/ingest-packets/TARGET_DATE/<類別>.md` 全文（切份者依序貼齊，每份末行 `END` 都要在）。類別↔角色檔對照表、prompt 五區塊模板與防偏誤說明住 `.claude/skills/wiki-ingest/references/dispatch.md`，逐字照它派。
 

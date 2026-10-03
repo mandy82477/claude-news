@@ -135,12 +135,14 @@ class TestH7H8Agent(_Env):
                 p = self.subagent_payload(prompt, "Agent", {"prompt": "幫我做", "model": "haiku"})
                 self.assertIsNotNone(mod.decide(p))
 
-    def test_reporter_dispatch_needs_model_and_foreground(self):
+    def test_reporter_dispatch_needs_model_and_not_explicit_background(self):
+        """2026-10-03 事故：2.1.288 的 Agent 工具已無 run_in_background 參數，hook 收不到 False，
+        舊版「沒寫 false 就擋」把 pipeline 七位記者全擋掉。現在只擋明確設 true，欄位缺席放行。"""
         base = {"prompt": REPORTER_PROMPT, "subagent_type": "general-purpose"}
-        self.assertIsNotNone(mod.decide(self.main_payload("Agent", {**base, "run_in_background": False})))
-        self.assertIsNotNone(mod.decide(self.main_payload("Agent", {**base, "model": "sonnet"})))
+        self.assertIsNotNone(mod.decide(self.main_payload("Agent", {**base, "run_in_background": False})))  # 缺 model
         self.assertIsNotNone(mod.decide(self.main_payload("Agent", {**base, "model": "sonnet", "run_in_background": True})))
         self.assertIsNone(mod.decide(self.main_payload("Agent", {**base, "model": "sonnet", "run_in_background": False})))
+        self.assertIsNone(mod.decide(self.main_payload("Agent", {**base, "model": "sonnet"})))  # 2.1.288 的形狀
 
     def test_pipeline_dispatch_needs_model_background_ok(self):
         base = {"prompt": PIPELINE_PROMPT, "run_in_background": True}

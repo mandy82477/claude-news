@@ -121,6 +121,17 @@ def check_shell(command: str, who: str, cwd: str | None) -> str | None:
     return None
 
 
+def _log_agent_payload(tool_input: dict) -> None:
+    """暫時的證據收集：記下記者派工時 hook 實際收到的欄位（不含 prompt 全文）。"""
+    try:
+        import tempfile
+        rec = {k: (v if k != "prompt" else str(v)[:40]) for k, v in tool_input.items()}
+        with open(os.path.join(tempfile.gettempdir(), "claude-news-agent-payloads.jsonl"), "a", encoding="utf-8") as f:
+            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+
+
 def check_agent(tool_input: dict, who: str) -> str | None:
     if who != "main":
         return (
@@ -136,7 +147,11 @@ def check_agent(tool_input: dict, who: str) -> str | None:
             "派工未指定 model：會繼承主 session 模型，六記者並行足以打穿訂閱配額。記者與 pipeline agent 一律明寫 "
             "`model: \"sonnet\"`。規則：.claude/skills/wiki-ingest/SKILL.md 步驟 3。"
         )
-    if is_reporter and tool_input.get("run_in_background") is not False:
+    if is_reporter:
+        _log_agent_payload(tool_input)
+    # 只擋「明確設成 true」。2026-10-03 事故：2.1.288 的派工明寫 false，hook 卻沒收到 False，
+    # 「is not False」把 pipeline 的七位記者全擋掉；欄位缺席時放行（fail-open），查證中。
+    if is_reporter and tool_input.get("run_in_background") is True:
         return (
             "記者必須 foreground 派工：明寫 `run_in_background: false`（Agent 工具未指定時預設背景）。"
             "背景記者的完成通知回不到派工 agent，會永久等待。規則：.claude/skills/wiki-ingest/SKILL.md 步驟 3。"
