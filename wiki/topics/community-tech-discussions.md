@@ -39,7 +39,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-社群現在有五場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的——「規格驅動還是 vibe coding」逾 90 天無新反方證據，本輪移出表。最新一則證據是 09-21 一則新進員工吐槽沒人搞懂系統的貼文，讓「AI 輔助會不會讓人能力退化」這場爭論重燃。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
+社群現在有六場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的——「規格驅動還是 vibe coding」逾 90 天無新反方證據，本輪移出表。最新一則證據是 09-21 一則新進員工吐槽沒人搞懂系統的貼文，讓「AI 輔助會不會讓人能力退化」這場爭論重燃。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
 
 做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；社群做法收斂成哪幾個方向、各自怎麼走到今天，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
 
@@ -56,6 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-14「Notes on」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **auto 模式算不算一道安全邊界** | 還在吵 | 2026-09-02「Show HN: Aura——SRE」（[[topics/community-tech-discussions#2026-09]]） | 官方文件 ＋ 社群單則實作經驗 | 官方：由第二個分類器模型逐一審動作，但對話裡設的邊界可能因壓縮而遺失，要硬保證得改用 deny 規則 |
 | **輸出浮水印與帳號執法透明到什麼程度才夠** | 還在吵 | 2026-09-02「付費帳號無預警遭停權」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名評論人 ＋ 四家媒體同日跟進 | 官方 2026-08-11 公告浮水印政策，適用全產品線且不可退出；停權申訴管道未見官方說明 |
+| **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-02「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
 | **AI 該寫多少程式碼、該不該把工作改寫成 loop** | 僵住 | 2026-06-24「立場收縮」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名表態，社群兩極化 | 無公司層說法；創始人本人言論軌跡見 [[entities/boris-cherny]] |
 | **thinking 內容能不能自己核驗** | 僵住 | 2026-06-23「Extended Thinking 為摘要」（[[topics/community-tech-discussions#2026-06]]） | 官方文件 ＋ 單次高互動討論 | 官方文件：5 世代預設不回思考內容、只回加密簽名，需要完整輸出得另行洽談（2026-09-06 查證） |
 | **HTML 還是 Markdown 當輸出格式** | 僵住 | 首見 2026-05-09「HTML 取代 Markdown 作為」，最後證據 2026-05-20 官方 Blog 背書（同一則條目內，見[[topics/community-tech-discussions#2026-05]]） | 單次高互動討論 ＋ 官方部落格一則 | 無官方立場 |

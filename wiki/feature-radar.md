@@ -20,25 +20,23 @@
 
 ## ⚠️ 從你現在的版本升上去，會遇到什麼
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.269，2026-09-12），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.288，2026-10-03），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code#版本更新]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.285 | 背景 Bash／PowerShell 指令加上時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守的 session | 預設值改變 | 無人值守跑長建置或測試的，用 `timeout` 參數明設時限 |
 | v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
+| v2.1.283 | 沒設權限模式時，互動 session 一律從 auto 模式開始（2.1.283 擴及第三方供應商與關 telemetry，2.1.284 擴及所有方案） | 預設值改變 | 要每步手動確認的人，在設定寫 `permissions.defaultMode` |
 | v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
+| v2.1.277 | 移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效；背景任務輸出改用 Read 讀檔 | 破壞性變更 | 引用 TaskOutput 的 hook、skill 或權限規則要改寫 |
 | v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
 | v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
 | v2.1.257 | 預設 Fable 模型換成 5.1；auto 模式新增 Containment Escape 規則 | 預設值改變 | Pro／Team standard 的 Fable 走 usage credits，升完看一次帳單通道；雲端 CI 若需抓 metadata／執行對外連線，在環境標記為預期用途，否則 auto 不再自動核准 |
 | v2.1.243 | 沙盒 Bash 提示不再列出允許網域；`CLAUDE_CODE_SUBAGENT_MODEL` 由「覆蓋全部」改為「預設值」 | 預設值改變 | 靠該變數強制全部子代理用同一模型的人，改在呼叫子代理時逐次指定 |
 | v2.1.239 | 成本估算對「資料常駐工作區」計入 1.1 倍純美國推理附加費 | 預設值改變 | 不在資料常駐工作區的人不受影響；在的人 `/cost` 數字會變高，不是你多花了錢 |
 | v2.1.234 | `/config` 移除「Default teammate model」，隊友改用主導者的模型 | 預設值改變 | 靠該設定讓隊友跑不同模型的流程要改寫 |
-| v2.1.233 | Todo／Task 追蹤工具在 Opus 4.8、Sonnet 5、Fable 5 上被拿掉 | 預設值改變 | 依賴 TodoWrite 的 hook 或 skill：設 `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` 找回 |
-| v2.1.232 | Subagent forking 預設開啟；互動 session 中非隊友的代理生成改為背景執行 | 預設值改變 | 要乾淨脈絡的委派改用非 fork 型別；靠前景輸出接結果的流程改看背景 session |
-| v2.1.222 | 移除 ultraplan；Remote Control 不能再由 repo 設定開啟；修掉 worktree 隔離 session 可對主 checkout 下破壞性 git 指令的漏洞 | 破壞性變更＋安全修復 | 用 ultraplan 的人要換做法；靠 repo 設定開 Remote Control 的改用 user 或 managed 設定 |
-| v2.1.215 | `/verify`／`/code-review` 不再自動觸發 | 破壞性變更 | 在 CI 或 hook 補上顯式呼叫 |
-| v2.1.212 | `/fork` 改為複製對話進新背景 session，同 session 子代理改名 `/subtask`；Task 工具 `mode` 參數作廢 | 破壞性變更 | 依賴舊行為的 skill 或 hook 改寫為 `/subtask` |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -46,7 +44,8 @@
 
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
-- **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251）與三個月前的破壞性變更（2.1.160 `workflow` 更名 `ultracode`）見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)；逐版異動見 [[entities/claude-code#版本更新]]。
+- **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
+- **因上限 12 列移出的較舊門檻**：2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；逐版見 [[entities/claude-code#版本更新]]。
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 

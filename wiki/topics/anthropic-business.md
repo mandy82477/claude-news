@@ -538,7 +538,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **[商業風險] Broadcom 啟動 600 億美元債務融資支應 Anthropic 晶片採購**：規模較 10-01「考慮中 420 億美元貸款」擴大，詳見「還沒過去的風險」細節區（Yahoo Finance；qz.com；Seeking Alpha）
 
 #### 2026-10-01
-- **[戰略合作，單一社群來源] dev.to（5 讚）：Claude for Government 在 FedRAMP High 下對美國聯邦與州政府機關 GA，無席次費、設硬性支出上限**：計費細節未經官方一手核對，政策面見 [[topics/anthropic-government-policy]]（dev.to/#anthropic）
+- **[戰略合作，已查證] Claude for Government 09-30 對聯邦與州政府機關 GA**：FedRAMP High；無席次費，按固定額度購買用量並設不可超過的上限；Claude Code CLI 與 Claude for Microsoft 365 搶先體驗（[官方](https://claude.com/blog/claude-for-government-is-now-generally-available)，查證 10-03）
 - **[戰略合作] Barclays 擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%**：2027 年擴及多數工程師，完整規模見 [[topics/enterprise-tool-tracker]]（Anthropic Blog；Bloomberg；PYMNTS）
 - **[商業風險] Reuters 獨家：Broadcom 考慮貸款 Anthropic 最高 420 億美元租賃晶片**：循環投資疑慮再起，Barron's 同日報導 Broadcom 股價應聲上漲，詳見「還沒過去的風險」細節區（Google News/Reuters；Google News/Barron's；Google News/Yahoo Finance）
 - **[戰略合作，僅標題可用] The Decoder：Anthropic 持續拓展聯邦文職機關採用，五角大廈供應鏈風險認定爭議未解**：具體機關名單與規模未見報導；供應鏈風險認定與判決細節見 [[topics/anthropic-government-policy]]（Google News/The Decoder）

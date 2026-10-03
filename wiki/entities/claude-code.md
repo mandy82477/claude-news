@@ -447,6 +447,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 🌐 服務穩定性（37 條已修復、9 條未修復、1 條查無官方）
 
 - ✅ **已修復**｜**Anthropic Status：Claude 全面中斷，波及 claude.ai、App、Claude Code、Cowork、API（2026-09-29 14:00–14:59 UTC，16:27 UTC 通報恢復）**：全站中斷約 1 小時，14:59 UTC 恢復正常，觸發數十家美國媒體報導「Is Claude down」。[來源](https://status.claude.com/incidents/4xvtc2gnq73l)
+  - 10-03 補：Anthropic 表示 14:00–14:59 UTC 間送出的部分訊息可能沒有被儲存；那段時間的對話或 Claude Code session 若有缺漏，要自己重送（[mixed-news.com](https://mixed-news.com/en/anthropic-claude-september-29-outage-messages-may-not-have-been-saved/)）
 - 🔴 **未修復**｜**v2.1.181、v2.1.183 持續 API 無回應（GitHub issue #69358，累積 27 則留言、61 個讚，2026-09-26）**：與「串流閒置逾時」（#46987）、「Connection closed mid-response」（#69415）同類但版本症狀不同，暫分列；官方尚未回應。
 - ✅ **已修復**｜**Anthropic Status：Opus 5、Mythos 5.1、Fable 5.1 錯誤率升高（2026-09-22 00:50–02:10 UTC，02:35 UTC 監控確認恢復）**：三款模型請求錯誤率升高，官方分批修復後確認恢復正常。[來源](https://status.claude.com/incidents/7g1qpkyz5gxh)
 - ✅ **已修復（約 24 分鐘後解決）**｜**Anthropic Status：Claude Mythos 5.1、Fable 5.1 錯誤率間歇升高（2026-09-15 10:50 UTC 進入監控 → 11:14 UTC 確認解決）**：與 09-11 同款模型錯誤率事件（見下）為不同起單獨通報事故，暫分列追蹤。[來源](https://status.claude.com/incidents/6304r9jjhj34)

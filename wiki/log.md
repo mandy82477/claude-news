@@ -7200,3 +7200,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [商業／market] Claude for Government「FedRAMP High GA、無席次費、硬性支出上限」只有 dev.to 單一來源，未查證官方一手
   - [安全政策] ai-agent-safety 摘要寫「十一個面」，攻擊表實為 10 列，舊數字未改
   - [社群] Claude 意識爭議是否併入「現在吵到哪」表（與 entities/mustafa-suleyman 同一條線），需主編查官方說法
+
+## 2026-10-03 Query（主編收尾：當日待裁示全數處理）
+
+- 9/29 中斷「部分訊息可能沒存到」：補進 [[entities/claude-code]] 既有 09-29 中斷條目（同一事件的家），歸因 google-news／功能
+- Claude for Government：官方一手查證（claude.com 部落格 2026-09-30：FedRAMP High、無席次費、按固定額度購買用量並設上限、Claude Code CLI 與 Microsoft 365 搶先體驗），[[topics/anthropic-business]]、[[topics/anthropic-government-policy]] 三處「單一社群來源」改為已查證
+- [[topics/ai-agent-safety]] 摘要「十一個面」更正為「十個面」（攻擊表實際 10 列）
+- [[feature-radar]] 升版表：官方 CHANGELOG 由 v2.1.270 逐版核對到 v2.1.288，新增 v2.1.285（背景指令時限）、v2.1.283（未設權限模式一律從 auto 開始）、v2.1.277（移除 TaskOutput）三列；為守 12 列上限移出 2.1.212／215／222／232／233，表下收尾句改指官方 changelog
+- [[topics/community-tech-discussions]]「現在吵到哪」新增「Claude 可能有意識嗎」列（還在吵；官方憲章 2026-01 表態不確定），摘要與 index 鉤子同步為 6 場還在吵
+- reader-notes：「GPT vs Claude 比較」結案（官方 Opus 5.5 發布文已並列 GPT-6 Astra／GPT-5.6 Sol，對照寫入 [[topics/competitor-landscape]]）；「LLM code review 成本」新增 1 節點、「記憶格式規約」無新節點，兩筆維持 ⏳

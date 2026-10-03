@@ -144,6 +144,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
+- **Anthropic 官方對照（Opus 5.5 發布文，09-22）**：Terminal-Bench 4.0 Opus 5.5 66.4%、GPT-6 Astra 57.9%、GPT-5.6 Sol 37.3%；FrontierCode 54.4／53.3／47.5%。
+- 同表 AutomationBench（41.4% vs 40.0%）與 Terminal-Bench-Science（64.6% vs 58.7%）GPT-6 Astra 領先；GPT 分數為 OpenAI 自報，TB 4.0 Opus 用 xhigh、Astra 用 high（[官方](https://www.anthropic.com/claude-opus-5-5)，查證 10-03）。
 - 定價面持續下修：GPT-5.6 Luna 降 80%、Terra 降 20%（07-30）；GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
 - OpenAI 官方自曝案例已升級為三則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
