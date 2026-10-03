@@ -3,7 +3,7 @@ page: "topics/anthropic-agent-stack"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-23"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-23"
 status_main: "ongoing"
 days_since_news: 10
@@ -11,7 +11,7 @@ parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
 days_since_news_subtree: 10
-inbound_links: 12
+inbound_links: 11
 attribution_count: 4
 attribution_last: "2026-09-10"
 top_source: "user-query"

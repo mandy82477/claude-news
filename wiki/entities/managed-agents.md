@@ -12,12 +12,12 @@ parent: "topics/anthropic-agent-stack"
 children: "['entities/managed-agents-archive']"
 page_role: "hub+child"
 days_since_news_subtree: 17
-inbound_links: 31
+inbound_links: 33
 attribution_count: 6
 attribution_last: "2026-09-16"
 top_source: "github"
-pending_count: 2
-pending_overdue: 2
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null

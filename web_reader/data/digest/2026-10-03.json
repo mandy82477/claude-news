@@ -1,0 +1,689 @@
+{
+  "date": "2026-10-03",
+  "generatedAt": "2026-10-03 13:55 UTC",
+  "articleCount": 52,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Anthropic Launches $100M Academy to Train 10,000 AI Engineers - Benzinga",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62151067/anthropic-100-million-claude-frontier-academy",
+      "source": "Google News / Benzinga ＋Anthropic Blog",
+      "time": "10/03 08:50",
+      "sentiment": "",
+      "body": "官方 Blog、Google News 多家媒體等 3 個來源同日報導；Benzinga 將這項計畫與 Anthropic 接近預期的首次公開募股（IPO）放在一起看，CRN 另訪問 Anthropic 的 Steve Corfield，談為何要自己培養部署工程師。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.288",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/02 20:19",
+      "sentiment": "",
+      "body": "更新內容含給 mods 用的 `$.ui.selection()`，可回傳使用者在全螢幕模式最後選取的文字；另新增內建 `gh` 相關功能（原始摘要在此截斷）。",
+      "focusTags": [
+        "[風險警示]"
+      ],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.288 build 新增 7 個功能候選旗標（自 2.1.287 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.288",
+      "source": "Build Flags",
+      "time": "10/03 13:48",
+      "sentiment": "",
+      "body": "新增 7 個環境變數旗標，包括 `CLAUDE_CODE_CONFIG_WATCH_EVENTS`、`CLAUDE_CODE_HOST_WORKTREE`、`CLAUDE_CODE_HOST_WORKTREE_FENCE`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS` 等；build 裡出現旗標不代表會上線。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        },
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Claude Code, Codex, and Antigravity built the same Android app in under 30 minutes and here's which one I'd use again - MakeUseOf",
+      "url": "https://www.makeuseof.com/claude-code-codex-antigravity-android-app-test/",
+      "source": "Google News / MakeUseOf",
+      "time": "10/03 13:00",
+      "sentiment": "",
+      "body": "作者以自己經營的獨旅網站為題材，讓 Claude Code、Codex、Antigravity 各做一個 Android app，比較三者表現並說出最想再用哪一個。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic's answer to Dots and Muse is already inside Claude - The New Stack",
+      "url": "https://thenewstack.io/claude-answer-to-dots-muse/",
+      "source": "Google News / The New Stack",
+      "time": "10/03 10:13",
+      "sentiment": "",
+      "body": "The New Stack 的每週 AI 整理專欄，主張 Anthropic 對 Dots、Muse 這類工作型 AI 產品的回應已經內建在 Claude 之中。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code's new Mods system lets developers rewrite the AI coding tool from the inside - the-decoder.com",
+      "url": "https://the-decoder.com/claude-codes-new-mods-system-lets-developers-rewrite-the-ai-coding-tool-from-the-inside/",
+      "source": "Google News / the-decoder.com",
+      "time": "10/03 07:17",
+      "sentiment": "",
+      "body": "the-decoder 說明 Mods 是以 JavaScript／TypeScript 函式掛接工具呼叫、使用者提示與 UI 渲染等事件；Mods 以使用者權限執行、未經沙箱隔離，Anthropic 提醒只安裝可信來源，/diff 等內建功能本身就是用 Mods 寫成。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic vs. the pope: The AI consciousness debate, explained - vox.com",
+      "url": "https://www.vox.com/today-explained-newsletter/504966/anthropic-claude-consciousness-pope-leo",
+      "source": "Google News / vox.com",
+      "time": "10/02 22:10",
+      "sentiment": "",
+      "body": "Vox 延續本週紐約時報的報導，整理 Anthropic 與宗教界人士討論 Claude 是否可能具意識的爭議，以及天主教會的不同看法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia's Jensen Huang, Other CEOs Privately Confront Anthropic's Dario Amodei Over AI Doomsday Warnings Amid Trump's Tech... - Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-jensen-huang-other-ceos-213019720.html",
+      "source": "Google News / Yahoo Finance",
+      "time": "10/02 21:30",
+      "sentiment": "",
+      "body": "依華爾街日報報導，黃仁勳等數位 AI 業者主管在川普與約 24 位科技 CEO 的午宴後，私下就 Amodei 對 AI 風險的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        },
+        {
+          "id": "jensen-huang",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic co-founder reportedly told religious leaders he fears having created something that \"suffers perpetually\" - the-decoder.com",
+      "url": "https://the-decoder.com/anthropic-co-founder-reportedly-told-religious-leaders-he-fears-having-created-something-that-suffers-perpetually/",
+      "source": "Google News / the-decoder.com",
+      "time": "10/02 19:42",
+      "sentiment": "",
+      "body": "the-decoder 引述報導指 Anthropic 共同創辦人曾對宗教界人士表達，擔心自己創造出的東西會「永遠受苦」。",
+      "focusTags": []
+    },
+    {
+      "title": "Commvault looking after Claude agent configs - Blocks & Files",
+      "url": "https://www.blocksandfiles.com/ai-ml/2026/10/02/commvault-looking-after-claude-agent-configs/5300884",
+      "source": "Google News / Blocks & Files",
+      "time": "10/02 18:45",
+      "sentiment": "",
+      "body": "Commvault 的 AgentRecover 讓 IT 團隊能探索、保護並還原 Claude Cowork、Claude Code 等工具的 agent 設定與累積脈絡，換機或遺失筆電時不必重建。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Why does Anthropic's IPO feel so weird? - Financial Times",
+      "url": "https://www.ft.com/content/69d2d0ec-c0d4-444f-84c5-4ca4f64b7899?syn-25a6b1a6=1",
+      "source": "Google News / Financial Times",
+      "time": "10/02 15:21",
+      "sentiment": "",
+      "body": "金融時報以標題提問：為何 Anthropic 的 IPO 讓人覺得特別奇怪（原始資料僅有標題）。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "How China's Token Resellers Create an Anthropic Gray Market - The Information",
+      "url": "https://www.theinformation.com/articles/chinas-token-resellers-create-anthropic-gray-market",
+      "source": "Google News / The Information",
+      "time": "10/02 13:00",
+      "sentiment": "",
+      "body": "The Information 報導中國的 token 轉售商如何形成 Anthropic 服務的灰色市場（原始資料僅有標題）。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Show HN: Made an open-source Lego AI generator",
+      "url": "https://github.com/anteloc/ldraw-nova",
+      "source": "Hacker News",
+      "time": "10/02 20:00",
+      "sentiment": "😊",
+      "body": "作者自去年 12 月起讓 ChatGPT 與 Claude 以 LDraw（描述樂高積木組裝的低階語言）產生程式碼，並開源成果；HN 123 分，2 個來源同日出現。",
+      "focusTags": []
+    },
+    {
+      "title": "Feature Request: Session Handoff / Continuity Support",
+      "url": "https://github.com/anthropics/claude-code/issues/11455",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/03 09:53",
+      "sentiment": "🤔",
+      "body": "Claude Code 的功能請求 issue，希望支援跨 session 的交接與延續，目前有 37 則留言、25 個 👍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Ask HN: Is anybody producing good code with coding agents?",
+      "url": "https://news.ycombinator.com/item?id=49934037",
+      "source": "Hacker News",
+      "time": "10/02 14:38",
+      "sentiment": "😤",
+      "body": "發問者轉述資深工程師的抱怨：AI 產出的程式碼品質差、讀起來很累，詢問有沒有人真的靠 coding agent 寫出好程式；HN 26 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Offrun – manage every coding agent from one workspace",
+      "url": "https://offrun.dev/",
+      "source": "Hacker News",
+      "time": "10/03 08:40",
+      "sentiment": "😐",
+      "body": "在同一個工作區並排管理 Claude Code、Codex、AGY、Grok Build，每個 agent 各用獨立 git worktree 避免互踩檔案；HN 22 分，2 個來源同日出現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Is Claude Conscious?",
+      "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
+      "source": "Hacker News",
+      "time": "10/03 02:43",
+      "sentiment": "🤔",
+      "body": "HN 轉貼紐約時報報導，留言在討論要如何定義意識，以及怎樣的設計「技術上符合定義但不過關」；HN 10 分。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Television – an open source GUI for your agent harness",
+      "url": "https://television.run/",
+      "source": "Hacker News",
+      "time": "10/02 23:25",
+      "sentiment": "😐",
+      "body": "Telepath 團隊把已有數百位 alpha 使用者測試的開源 agent harness 圖形介面對外開源；HN 6 分。",
+      "focusTags": []
+    },
+    {
+      "title": "Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock",
+      "url": "https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d",
+      "source": "dev.to / #anthropic",
+      "time": "09/30 16:40",
+      "sentiment": "🤔",
+      "body": "livenerf 針對 Claude Opus 5.5 的「變笨」傳言建立第 0 天基準線，並連續測 30 天，最早可下結論的時間約在 10 月 24 日；dev.to 3 讚。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "How I Built a Deploy Gate So My Autonomous Coding Agent Can Ship to Prod Safely",
+      "url": "https://dev.to/yureki_lab/how-i-built-a-deploy-gate-so-my-autonomous-coding-agent-can-ship-to-prod-safely-1egb",
+      "source": "dev.to / #claudecode",
+      "time": "10/01 14:32",
+      "sentiment": "😐",
+      "body": "作者讓以 Claude Code 為基礎的自主 agent 自行合併並部署 PR，第一次就讓結帳端點掛了 11 分鐘，因此加上三段式部署閘（預檢契約、帶硬指標門檻的 canary、自動回滾）；dev.to 2 讚。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Juggling Two 20$ accounts vs 1 Max Plan",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wwmjvj/juggling_two_20_accounts_vs_1_max_plan/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/03 12:54",
+      "sentiment": "🤔",
+      "body": "發文者 95% 用量都在 Claude Code，詢問該維持兩個 20 美元方案還是升級單一 Max 方案。",
+      "focusTags": []
+    },
+    {
+      "title": "How do you track cost and outcome across parallel Claude Code subagent runs?",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wwlwys/how_do_you_track_cost_and_outcome_across_parallel/",
+      "source": "Reddit / r/ClaudeAI",
+      "time": "10/03 12:21",
+      "sentiment": "🤔",
+      "body": "發文者同時跑多個 Claude Code subagent，詢問如何追蹤每批執行的成本與成果。",
+      "focusTags": []
+    },
+    {
+      "title": "yacuo/check-cc",
+      "url": "https://github.com/yacuo/check-cc",
+      "source": "GitHub Search",
+      "time": "10/03 13:47",
+      "sentiment": "😐",
+      "body": "一個檢測 Claude 運行環境並分析帳號風險的工具，面向註冊 Claude 帳號、訂閱 Pro、使用 Claude Code 或擔心帳號受限的使用者（1,064 星）。",
+      "focusTags": []
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 推出 Claude Frontier Academy，承諾投入 1 億美元、在 2027 年底前培訓 10,000 名「Frontier Deployed Engineers」；首批學員來自 Accenture、Bain、Capgemini、澳洲聯邦銀行、Deloitte、McKinsey、Morgan Stanley、Novo Nordisk 等企業。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/claude-frontier-academy",
+        "https://www.cnbc.com/2026/10/02/anthropic-to-invest-100-million-to-train-ai-engineer-talent.html",
+        "https://www.businessinsider.com/anthropic-will-train-10-000-ai-engineers-boost-enterprise-adoption-2026-10"
+      ],
+      "ref_names": [
+        "官方",
+        "CNBC",
+        "Business Insider"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "Claude Code 2.1.288 修正一項防護缺口：在 bypassPermissions 模式或 shell 允許規則下，包在 `bash -c`／`sh -c` 裡的危險 `rm`（如針對根目錄或家目錄）原本會繞過檢查；mixed-news.com 同時指出 stable 標籤仍停在 2.1.285，固定用 stable 的人尚未拿到修正。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.288",
+        "https://mixed-news.com/en/claude-code-2-1-288-dangerous-rm-bash-c-wrapper-stable-channel/"
+      ],
+      "ref_names": [
+        "GitHub Release",
+        "mixed-news.com"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 09-29）新增細節：Anthropic 表示 9 月 29 日 14:00–14:59 UTC 中斷期間，部分送出的 Claude 訊息可能沒有被儲存；該事件到 16:27 UTC 才標記為已解決，比服務恢復晚約一個半小時。",
+      "ref_urls": [
+        "https://mixed-news.com/en/anthropic-claude-september-29-outage-messages-may-not-have-been-saved/"
+      ],
+      "ref_names": [
+        "mixed-news.com"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Copilot code review: API support and new default effort level",
+      "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level",
+      "body": "Copilot code review 可透過 REST 與 GraphQL API 請求並逐次設定 effort 等級，Balanced 成為新預設。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Selected models in GitHub Copilot deprecated",
+      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "body": "GitHub 自 10 月 2 日起在所有 Copilot 介面停用部分模型。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 24
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 16
+    }
+  ],
+  "preview": "Claude Code：v2.1.288 發布：修正 bash -c／sh -c 內危險 rm 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-lessons",
+      "name": "投資判讀教材（週更）",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-03",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- v2.1.288 發布：修正 `bash -c`／`sh -c` 內危險 `rm` 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。\n- 新增 `/code-review --max-findings`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`、mods 的 `$.ui.selection()`；旗標追蹤見 [[topics/claude-code-experimental]]。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "v2.1.288 build 新增 7 個旗標；`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS` 依官方 Release 列第 4 階，其餘 6 個仍第一階。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "「降智」說法有了查證時程",
+            "date": "",
+            "body": "livenerf 已建立 Opus 5.5 第 0 天基準線並連測 30 天，最早約 10-24 才能下結論；在那之前，10-01 週熱門貼文的「近日失手」仍只是無量化指標的觀感。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Claude Frontier Academy 啟動：1 億美元、2027 年底前培訓 10,000 名部署工程師**（10-02，官方）：首批學員來自 Accenture、Deloitte、McKinsey 等，詳見 [[topics/anthropic-business#時序]] 10-02。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/market-lessons",
+            "name": "投資判讀教材（週更）",
+            "label": "本週沉澱",
+            "date": "",
+            "body": "新增 18 課（含補登 09-19 至 09-25 判讀漏列的 6 課；本週新判讀 12 課）；消息線表由 14 條增為 19 條（新增五角大廈供應鏈風險黑名單、澳洲參議院聽證會、美國 FTC 調查、AI agent 法律風險、晶片商循環融資）；IPO、定價改版、企業採用三條線續增；本輪結算 8 列，2 列 ✅（反壟斷訴訟、Accenture 合作）、6 列仍懸。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Claude for Government 正式開放**：dev.to 稱已在 FedRAMP High 下對美國聯邦與州政府機關 GA，無席位費、設硬性支出上限；單一小型來源，現況表不動。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "Claude Code 2.1.288 修正包在 `bash -c` 裡的危險 `rm` 可繞過防護；stable 標籤仍在 2.1.285，尚未拿到修正。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **記憶與創意工具各添例**：projectmem 記下失敗嘗試、在 agent 重蹈覆轍前警告；reelmimic、comfyui-mcp 把 agent 接進影片與 ComfyUI 創作鏈。\n- **多 agent 並行與額度可見各添一例**：Offrun 並排管理多款 agent、各用獨立 worktree；Pulse 彙整 70 餘款工具剩餘額度。\n- **安全架構添一例**：自主 agent 部署閘，回滾權留在 agent 碰不到的地方。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Claude 是否有意識：HN 轉貼 NYT 報導並辯論意識定義（10 分）；Vox 同題整理 Anthropic 與天主教會立場分歧。\n- Ask HN：發問者轉述資深工程師抱怨 AI 產出程式碼難讀、品質差，詢問有沒有人真能用 coding agent 寫出好程式（HN 26 分）。"
+          },
+          {
+            "page": "topics/community-tech-tools",
+            "name": "社群工具目錄",
+            "label": "目錄新增 31 個工具、拿掉 13 個長期沒動靜的舊工具",
+            "date": "",
+            "body": "新增涵蓋 09-25～10-02 的 Show HN 與 GitHub 新品，含檢查 agent 有沒有守 CLAUDE.md 的 RuleReceipt、五個新記憶工具；拿掉的 13 個都不是任何症狀的首選或次選。決策表首選未變動。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "LiveNerf 開始 30 天量測",
+            "date": "",
+            "body": "- dev.to 貼文稱 livenerf 已替 Opus 5.5 建立第 0 天基準線，連續測 30 天，最早約 10-24 才能下結論。\n- 這是量測才剛開始，不是結果；在那之前「被降智」仍只有單一貼文的觀感。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "黃仁勳等 CEO 私下質疑 Amodei 的 AI 風險警告",
+            "date": "",
+            "body": "據華爾街日報（經 Yahoo Finance 轉述），Trump 與約 24 位科技 CEO 午宴後，黃仁勳等人私下就 Amodei 的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。"
+          },
+          {
+            "page": "entities/jensen-huang",
+            "name": "Jensen Huang",
+            "label": "私下質疑 Amodei 的 AI 風險警告",
+            "date": "",
+            "body": "據華爾街日報（Yahoo Finance 轉述），黃仁勳等數位 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後，私下向 Amodei 提出質疑；完整脈絡見 [[entities/dario-amodei]]。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "Anthropic Launches $100M Academy to Train 10,000 AI Engineers - Benzinga",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62151067/anthropic-100-million-claude-frontier-academy",
+      "source": "Google News / Benzinga ＋Anthropic Blog",
+      "time": "10/03 08:50",
+      "sentiment": "",
+      "body": "官方 Blog、Google News 多家媒體等 3 個來源同日報導；Benzinga 將這項計畫與 Anthropic 接近預期的首次公開募股（IPO）放在一起看，CRN 另訪問 Anthropic 的 Steve Corfield，談為何要自己培養部署工程師。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

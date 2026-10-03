@@ -584,18 +584,8 @@
   "preview": "Claude Code：Claude Code v2.1.286 發布：權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援。",
   "sedimentedToday": [
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "fei-fei-li",
       "name": "Fei-Fei Li",
-      "pageType": "entity"
-    },
-    {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
       "pageType": "entity"
     },
     {
@@ -612,11 +602,6 @@
       "id": "yann-lecun",
       "name": "Yann LeCun",
       "pageType": "entity"
-    },
-    {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
     },
     {
       "id": "enterprise-tool-tracker",

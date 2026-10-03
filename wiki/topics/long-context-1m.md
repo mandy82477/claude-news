@@ -11,7 +11,7 @@ parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 13
+inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-10-01"
 top_source: "github-issues"

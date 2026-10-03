@@ -11,7 +11,7 @@ parent: null
 children: "['topics/ai-talent-flow-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 21
+inbound_links: 22
 attribution_count: 24
 attribution_last: "2026-09-30"
 top_source: "topic-watch"

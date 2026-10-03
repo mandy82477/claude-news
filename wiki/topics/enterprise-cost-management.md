@@ -3,7 +3,7 @@ page: "topics/enterprise-cost-management"
 kind: "topic"
 status: "monitoring"
 domain: "💼 商業"
-last_updated: "2026-09-26"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-04"
 status_main: "monitoring"
 days_since_news: 29

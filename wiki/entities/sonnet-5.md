@@ -2,9 +2,9 @@
 page: "entities/sonnet-5"
 kind: "entity"
 type: "model"
-status: "active（正式發布）"
+status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-09-28"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-28"
 status_main: "active"
 days_since_news: 5
@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 5
-inbound_links: 24
+inbound_links: 25
 attribution_count: 3
 attribution_last: "2026-07-31"
 top_source: "google-news"

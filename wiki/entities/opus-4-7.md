@@ -2,9 +2,9 @@
 page: "entities/opus-4-7"
 kind: "entity"
 type: "model"
-status: "active（已被取代，第三階旗艦）"
+status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-09-05"
+last_updated: "2026-10-03"
 last_news_update: "2026-08-27"
 status_main: "active"
 days_since_news: 37

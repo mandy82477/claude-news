@@ -11,7 +11,7 @@ parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 40
+inbound_links: 39
 attribution_count: 18
 attribution_last: "2026-10-01"
 top_source: "github-issues"
