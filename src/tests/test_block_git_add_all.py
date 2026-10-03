@@ -26,6 +26,43 @@ class TestBlockGitAddAll(unittest.TestCase):
             with self.subTest(cmd=cmd):
                 self.assertTrue(mod.is_add_all(cmd))
 
+    def test_blocks_variants_found_2026_10_03(self):
+        """2026-10-03 盤點實測舊 regex 版放行的寫法——每一條都是側門。"""
+        for cmd in (
+            "git add ./",
+            'git add "."',
+            "git add -u",
+            "git add *",
+            "git add :/",
+            "git commit -am x",
+            "git commit -a -m x",
+            "git commit --all -m x",
+            "git commit -m x -- .",
+            "git -c core.autocrlf=false add .",
+            "git stage .",
+            'bash -c "git add ."',
+        ):
+            with self.subTest(cmd=cmd):
+                self.assertTrue(mod.is_add_all(cmd))
+
+    def test_repo_root_path_counts_as_all(self):
+        root = str(HOOK.parent.parent.parent)
+        self.assertTrue(mod.is_add_all(f'git add "{root}"', cwd=root))
+        self.assertTrue(mod.is_add_all(f"git add {root}", cwd=root))
+        self.assertFalse(mod.is_add_all(f'git add "{root}/wiki"', cwd=root))
+
+    def test_mentions_in_messages_not_blocked(self):
+        """舊版把 commit 訊息裡 `;` 之後與 heredoc 裡的字面當成指令，誤擋過。"""
+        for cmd in (
+            'git commit -m "fix; git add . later"',
+            "git commit -F- <<'EOF'\nhook 改版\ngit add . 現在會被擋\nEOF",
+            "git commit -m @'\ngit add -A\n'@",
+            "git add -u wiki/",
+            "git commit -m 'x' wiki/a.md",
+        ):
+            with self.subTest(cmd=cmd):
+                self.assertFalse(mod.is_add_all(cmd))
+
     def test_allows_named_paths(self):
         """指名路徑是本專案唯一合法的 add 形式，不得被誤擋。"""
         for cmd in (

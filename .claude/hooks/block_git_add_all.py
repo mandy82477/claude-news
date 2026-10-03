@@ -12,43 +12,69 @@ agent 剛好記得時生效。2026-08-29 一個訊息為「fix: 目標日期取�
 - 其餘一律 exit 0 放行
 - 任何解析錯誤 → exit 0（hook 壞掉不可把使用者卡死）
 
-命中樣式（`git add` 之後、任何旗標之間，出現裸 `.` / `-A` / `--all`）：
-    git add -A          git add --all        git add .
-    git add -A -- .     git add -v --all     git -C <path> add .
-不命中：`git add wiki/`、`git add ./scripts/x.py`、`git add -p`、`git add --dry-run wiki/`、
-    以及只在字串裡提到的字面（`git commit -m 'ban git add -A'`、`echo git add -A`、`grep 'git add .'`）
-已知邊界（刻意不擋）：`git stage -A`；tool_name 非 Bash／PowerShell 的 shell 工具一律放行
+命中樣式（2026-10-03 改走 `_cmdparse.py` 的 token 解析；原 regex 版漏了 `./`、`"."`、
+`-u`、`-c a=b`、`commit -a` 等寫法）：
+    git add -A / --all / . / ./ / "." / :/ / * / ..      git add -u（無 pathspec）
+    git -c a=b add .     git -C <path> add .     git stage .（stage 是 add 的別名）
+    git commit -a / -am / --all       git commit -- .（pathspec 等於整棵樹）
+    bash -c "git add ."（殼包一層也展開）     指名路徑其實就是 repo 根
+不命中：`git add wiki/`、`git add ./scripts/x.py`、`git add -p`、`git add -u wiki/`、
+    `git commit -m x`、以及只在字串或 heredoc 裡提到的字面（commit 訊息、echo、grep 的引數）
+已知邊界（刻意不擋）：git alias、寫進腳本再執行、變數展開——靜態解析看不到
 """
-import io
 import json
-import re
+import os
 import sys
+from pathlib import Path
 
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _cmdparse import is_whole_tree_spec, iter_git  # noqa: E402
+
+try:
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except (AttributeError, ValueError):
+    pass
 
 TOOLS = {"Bash", "PowerShell"}
 
-# `git ... add` 之後的引數列；只看到下一個 `;` `&&` `||` `|` 為止。
-# `git` 必須位於指令起點（行首／`;`／`&&`／`||`／`|`／`then`／`do`／`$(`／反引號之後），
-# 句中字面（commit 訊息、echo、grep 的引數）不命中。
-ADD_RE = re.compile(
-    r"(?:^|[;&|\n(`]|\bthen\b|\bdo\b)\s*"
-    r"\bgit\b(?P<pre>(?:\s+-[-\w]+(?:=\S+)?|\s+-C\s+\S+)*)\s+add\b(?P<args>[^;&|\n)`]*)"
-)
-ALL_TOKEN_RE = re.compile(r"(?:^|\s)(?:-A|--all|\.)(?:\s|$)")
-
 REASON = (
-    "🚫 擋下 `git add -A` / `git add --all` / `git add .`。\n"
+    "🚫 擋下全加寫法（`git add -A`／`.`／`./`／`-u`、`git commit -a` 等）。\n"
     "本專案一律指名路徑（如 `git add wiki/ .claude/`）——commit 訊息說不出某個檔案"
     "為什麼在裡面，它就不該在這個 commit 裡。\n"
     "規則與立法依據：.claude/rules/dev-done.md 第 2 條＋ docs/rules-changelog/CLAUDE.md 2026-08-29。"
 )
 
 
-def is_add_all(command: str) -> bool:
-    for m in ADD_RE.finditer(command):
-        if ALL_TOKEN_RE.search(m.group("args")):
-            return True
+def _is_root_path(spec: str, cwd: str | None) -> bool:
+    """指名路徑其實就是 repo 根（`git add C:/…/CLAUDE_NEWS`）也算全加。"""
+    if not cwd:
+        return False
+    try:
+        root = os.environ.get("CLAUDE_PROJECT_DIR") or cwd
+        target = Path(spec) if Path(spec).is_absolute() else Path(cwd) / spec
+        return target.resolve() == Path(root).resolve()
+    except (OSError, ValueError):
+        return False
+
+
+def is_add_all(command: str, cwd: str | None = None) -> bool:
+    for g in iter_git(command):
+        if g.sub in ("add", "stage"):
+            if g.has_flag("-A", "--all"):
+                return True
+            specs = g.positionals()
+            if any(is_whole_tree_spec(s) or _is_root_path(s, cwd) for s in specs):
+                return True
+            if g.has_flag("-u", "--update") and not specs:
+                return True
+        elif g.sub == "commit":
+            if g.has_flag("-a", "--all"):
+                return True
+            # `-m`/`-F`/`-C` 等吃引數的旗標，其引數不是 pathspec；只看 `--` 之後
+            if "--" in g.args:
+                after = g.args[g.args.index("--") + 1:]
+                if any(is_whole_tree_spec(s) or _is_root_path(s, cwd) for s in after):
+                    return True
     return False
 
 
@@ -60,7 +86,7 @@ def main() -> int:
     if payload.get("tool_name") not in TOOLS:
         return 0
     command = (payload.get("tool_input") or {}).get("command") or ""
-    if not isinstance(command, str) or not is_add_all(command):
+    if not isinstance(command, str) or not is_add_all(command, payload.get("cwd")):
         return 0
     sys.stderr.write(REASON + "\n")
     return 2

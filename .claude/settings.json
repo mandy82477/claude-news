@@ -1,5 +1,5 @@
 {
-  "_doc": "可共享的專案設定：hooks（Stop 擋規則檔未驗證與程式改動測試未綠、SessionStart 提醒未 commit、PostToolUse wiki lint、PreToolUse 擋 git add -A、擋掃到別 session 宣告中的路徑、大檔讀取觀測）。路徑用 $CLAUDE_PROJECT_DIR，任何 clone 都能跑。個人權限允許清單住 settings.local.json（已 gitignore）。",
+  "_doc": "可共享的專案設定：hooks（Stop 擋規則檔未驗證與程式改動測試未綠、SessionStart 提醒未 commit、PostToolUse wiki lint、PreToolUse 擋 git add 全加變體／claude -p／破壞性 git 指令、擋掃到別 session 宣告中的路徑、大檔讀取觀測）。路徑用 $CLAUDE_PROJECT_DIR，任何 clone 都能跑。hook 指令一律先找 python 再退 python3（雲端 Linux 可能只有 python3；本機 python3 是 Store 假檔）。個人權限允許清單住 settings.local.json（已 gitignore）。",
   "hooks": {
     "PostToolUse": [
       {
@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/lint_wiki_if_wiki.py\""
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/lint_wiki_if_wiki.py\""
           }
         ]
       }
@@ -28,12 +28,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_rules_on_stop.py\"",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_rules_on_stop.py\"",
             "timeout": 15
           },
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_tests_on_stop.py\"",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_tests_on_stop.py\"",
             "timeout": 180
           }
         ]
@@ -45,12 +45,22 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_git_add_all.py\"",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_git_add_all.py\"",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_foreign_stage.py\"",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_claude_print.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_destructive_git.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/block_foreign_stage.py\"",
             "timeout": 15
           }
         ]
@@ -60,7 +70,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/observe_large_reads.py\"",
+            "command": "P=python; command -v python >/dev/null 2>&1 || P=python3; \"$P\" \"$CLAUDE_PROJECT_DIR/.claude/hooks/observe_large_reads.py\"",
             "timeout": 10
           }
         ]
