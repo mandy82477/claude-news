@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-28"
 last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 24
 attribution_count: 3
 attribution_last: "2026-07-31"
@@ -27,10 +27,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Sonnet 5
 
 **類型：** model
-**狀態：** active（正式發布）
+**狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-09-28
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）

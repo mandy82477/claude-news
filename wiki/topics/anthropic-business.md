@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-10-02"
 last_news_update: "2026-10-02"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 124
 attribution_count: 339
 attribution_last: "2026-10-02"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-02
 
 > **最新動態**（2026-10-02）
@@ -63,7 +63,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：指標表本輪 10/10 滿載。2026-09-07 換手一列：「定價談判力」（無下一個時點、資料日期最舊 05-13）讓位給新進的「算力交易總額（11個月）」（一級媒體、雖無時點但資料日期最新），已移入細節區並註記讓位日。下一個新指標進來時依留表優先序判斷，現存最舊/最弱者待評估。 %%
 
 **數字細節**
-- **Accenture 內嵌評估者，承諾 10 億美元（2026-09-19）**：Anthropic 宣布由 Accenture 出任首位「內嵌評估者」，回應 CEO「We Must Pace the Frontier」承諾；Washington Post 報導同步承諾投入 10 億美元，用途、分期未見官方細節（[Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)；WaPo）。
+- **Accenture 內嵌評估者，承諾 10 億美元（2026-09-19）**：Anthropic 宣布由 Accenture 出任首位「內嵌評估者」，回應 CEO「We Must Pace the Frontier」承諾；Washington Post 報導同步承諾投入 10 億美元（WaPo）
+  - 官方原文（2026-10-03 查證）載為 Anthropic 與 Accenture 合計至少 10 億美元、五年期，用於內嵌評估能力建設，Anthropic 直接資助 Accenture 的工作（[Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)）
 - **官方估值**：$9,650 億是 2026-05-28 Series H 的投後估值，募資 $650 億，是史上最大單輪 AI 融資。更早的 $3,500 億是 2026-04-24 Google 投資那一輪的估值，**已是歷史值**，完整脈絡見 [[entities/google-investment]]。
 - **IPO 估值預期**：FT 2026-08-13 報導投資人預期 10 月上市時估值 2 兆以上，同日 qz、Fortune、PYMNTS 跟進；**報導同時寫明公司高層未設這個目標**。次級市場 2026-07-09 曾報到 $1.2 兆，但幾乎無人願賣，那個價格反映的是稀缺不是共識。
 - **企業採用率**：Ramp 8 月指數（7 月資料，2026-08-12 發布）為 Anthropic 43.5%、OpenAI 39.7%、xAI 4%，原文寫「extended its gains as the leader」。**2026-05-15 的 34.4% vs 32.3% 是首度超越那一次的歷史數字**，不是現況。
@@ -154,7 +155,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-07-09 三巨頭市值總和**：TechCrunch：Anthropic、OpenAI、SpaceX 三家私人公司市值總和超越過去 25 年美國科技業所有 IPO / 併購退場交易總和。以宏觀尺度佐證當前 AI 三巨頭私募市場估值空前規模，同時放大「這些估值能否被公開市場實際兌現」的懸念（推論）。
 - **2026-07-09 早期投資人意外之財**：Yahoo Finance：Anthropic IPO 若成真，將為三家早期投資人帶來可觀「意外之財」（windfall profits）。具體點名早期投資人受益方，首次從「公司估值」視角轉向「投資人回報兌現」視角，暗示 IPO 時程已進入市場具體討論階段。
 - **2026-07-15 投資人會議三方同步**：Yahoo Finance、CNBC（雙重來源確認）、Bloomberg（雙重來源確認）三家財經媒體同步報導 Anthropic 據稱正安排 IPO 前一系列投資人會議，銀行家已介入協調。三家獨立財經媒體同日同步報導、CNBC/Bloomberg 各自另標記獨立來源同步跟進，是本鏈條目前訊號最密集的一次跨媒體同步報導，顯示 IPO 進程已從「市場臆測」推進至「具體事前準備動作」階段；惟三則報導均僅標題可用，無官方 S-1 或明確時程確認（推論）。
-- **2026-07-10 Bernanke 加入信託董事會**：前聯準會主席 Ben Bernanke 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會（Reuters、CNBC、Bloomberg 同步報導）。治理公信力面的具體回應動作：FT（07-06）點出的治理架構/雙軌結構等上市機制質疑，正是機構投資人 S-1 審查焦點；延攬具公信力外部監督成員強化「獨立監督具公信力」敘事，是本鏈中首個從公司側主動補強治理面的事件（推論）；人物背景見 [[entities/bernanke]]。
+- **2026-07-09 Bernanke 加入信託董事會**：前聯準會主席 Ben Bernanke 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會（Reuters、CNBC、Bloomberg 同步報導）；人物背景見 [[entities/bernanke]]
+  - 治理公信力面的具體回應動作：FT（07-06）點出的治理架構/雙軌結構等上市機制質疑，正是機構投資人 S-1 審查焦點
+  - 延攬具公信力外部監督成員強化「獨立監督具公信力」敘事，是本鏈中首個從公司側主動補強治理面的事件（推論）
 
 ---
 
@@ -205,7 +208,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 訊號 | 說明 | 來源 | 來源等級 |
 |------|------|------|------|
-| Anthropic 承諾投入 10 億美元支持 Accenture 內嵌評估者計畫 | 選定 Accenture 為首位獨立評估前沿 AI 安全的「內嵌評估者」，回應 CEO「We Must Pace the Frontier」一文承諾 | [Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)；Google News/The Washington Post，2026-09-19 | 官方一手／一級媒體引公司 |
+| Anthropic 與 Accenture 合計承諾五年至少 10 億美元於內嵌評估能力建設（Anthropic 直接資助 Accenture 的工作）| 選定 Accenture 為首位獨立評估前沿 AI 安全的「內嵌評估者」，回應 CEO「We Must Pace the Frontier」一文承諾；非排他，官方稱未來數週再宣布其他評估者 | [Anthropic Blog](https://www.anthropic.com/news/accenture-embedded-evaluation)，2026-09-18（查證 2026-10-03）| 官方一手 |
 | Futurism：獲利宣稱「未計入模型開發成本」 | 評論文章，與 09-14 已記錄之 HN 討論同一批評角度，非新增數字 | Google News/Futurism，2026-09-15 | 一級媒體 |
 | Anthropic 啟動 500 萬美元身心福祉評測獎助計畫 | 官方部落格：資助獨立研究團隊開發開源評測工具，衡量 AI 對使用者身心福祉的影響 | [Anthropic Blog](https://www.anthropic.com/news/wellbeing-research-grants)，2026-08-26 | 官方一手 |
 | CNBC：Anthropic 超越 OpenAI 成最熱門 AI 新創 | 分析相應股市贏家輸家；與同日 The Information 報導方向一致 | Google News/CNBC，2026-08-19 | 一級媒體 |
@@ -311,7 +314,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **這張表只列會改到你拿得到什麼、或付多少的合作。** 其餘合作是公司擴張的紀錄，在下方一行制清單裡。
 
-**通路差異資料截至 2026-09-03，以 [[entities/pricing#通路：誰定價、怎麼開票]] 為準。**
+**通路差異資料截至 2026-09-26，以 [[entities/pricing#通路：誰定價、怎麼開票]] 為準**（與 pricing「通路與乘數」同批；該頁 09-26 查證明載通路五條與 09-03 一致）。
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|
@@ -490,10 +493,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 人 | 是誰 | 他做的那一件事 |
 |---|---|---|
-| [[entities/bernanke\|Ben Bernanke]] | 前美國聯準會主席 | 2026-07-10 加入長期利益信託董事會，是公司側首個補強治理公信力的動作 |
+| [[entities/bernanke\|Ben Bernanke]] | 前美國聯準會主席 | 2026-07-09 加入長期利益信託董事會，是公司側首個補強治理公信力的動作 |
 | [[entities/jensen-huang\|Jensen Huang]] | Nvidia 執行長 | 2026-08-26 財報電話會議原話「唯一的後悔是投得不夠多、不夠早」——後悔的是**投資規模太小**，不是後悔投了（2026-09-20 查實，見 [[entities/jensen-huang]]） |
 | [[entities/robert-mahari\|Robert Mahari]] | 法律科技學者，Claude for Legal 負責人 | 2026-08-07 出任新設 Claude for Legal 部門負責人 |
-| [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 加入 compute 團隊，向 James Bradbury 匯報；到任日未公開 |
+| [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 經 Bloomberg 報導加入 compute 團隊，向 James Bradbury 匯報；實際到任日官方未公開 |
 
 %% 維運備忘：裁決點 1（四人物頁併入本頁）未回覆，依保守預設「不併」——四頁維持獨立，本表以 wikilink 指過去。若日後裁決「併」，四頁各留 redirect 殼，本表改為純文字並補一句「他這個動作對讀者意味什麼」。 %%
 
@@ -609,7 +612,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 #### 2026-09-16
 - **[戰略合作] Reuters／Bloomberg／WSJ／politico.eu：Novo Nordisk 與 Anthropic 合作，用 Claude 加速藥物研發**：四家媒體同步報導（Ozempic 藥廠），合約範疇與費用未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列
-- **[基礎設施，僅標題可用] finance.yahoo.com：Anthropic 簽署首份澳洲資料中心協議**：資料中心版圖首次擴及大洋洲，具體規模與合作夥伴未見報導
+- **[基礎設施] finance.yahoo.com：Anthropic 簽署首份澳洲資料中心協議**：資料中心版圖首次擴及大洋洲。媒體稱（Real Estate Source、Converge Digest、ABC，2026-10-03 查證）首期租約位於昆士蘭 Western Downs Digital Park
+  - 媒體稱該園區由 Zerra DC 開發、Macquarie Capital 與 Dexus 參與，園區峰值 2.16GW、總額約 319 億屬園區開發規模，**不是 Anthropic 的承諾金額**；Anthropic 官方站未載此協議（僅 2026-03-10 雪梨辦公室公告稱「探索」資料中心）
 - **[市場策略，僅標題可用] Business Insider：Anthropic 全力衝刺把 Claude 賣進中小企業市場**：具體通路、方案與預算未見報導
 - **[商業風險] Dealroom（2 源）：開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：若官方為堵漏收緊政策，重度混用第三方模型的用戶路由彈性可能受限（推論）；讀者端見 [[topics/official-community-gap#🧪 部分對應：多模型路由 / 鎖定防禦]]
 
@@ -622,7 +626,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **[財務狀況] Reuters 引 FT：Anthropic 向投資人表示將連續第二季獲利**：未載具體金額，詳見「現在的數字」表「獲利」列更新；HN 討論質疑「不計訓練成本的獲利」意涵有限（Hacker News／Google News/Reuters）
 - **[戰略合作] Bloomberg／Business Wire／Yahoo Finance：Charles Schwab、Orion 同日宣布導入 Claude，鎖定 RIA 通路**：跨入財務顧問通路，具體合約條件、費率未見報導，僅標題層級可用
 - **[產品線擴張，僅標題可用] TestingCatalog AI News：據報 Anthropic 籌備個人理財工具「Claude Money」**：與同日 Schwab／Orion 金融顧問通路布局呼應，顯示金融領域產品線持續擴張，上線時間、功能範疇均未見報導
-- **[商業風險，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：具體限縮範圍、是否涉及 Claude Code 或 API 未見報導；安全政策面另見 [[topics/ai-agent-safety]]，本頁不展開安全機制細節
+- **[商業風險，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：背景對上官方 06-09 起 covered models 30 天保留政策（2026-10-03 查證）
+  - 各家限縮範圍見 [[topics/ai-agent-safety]]；安全政策面另見 [[topics/ai-agent-safety]]，本頁不展開安全機制細節
 - **[公司動態，僅標題可用] ChannelE2E：Claude 合作夥伴訓練計畫新增安全性相關認證課程**：具體課程內容、通路夥伴規模未見報導
 
 #### 2026-09-12
@@ -980,7 +985,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **[生命科學拓展] Anthropic 宣布將自行開發藥物，Claude Science 切入生命科學**：STAT News 報導 Anthropic 宣布以 Claude Science 作為科學工作台，自行進入藥物開發領域。**對商業的意涵**：若 Anthropic 自行開發藥物（非僅提供工具），代表商業版圖從 AI 工具供應商向垂直產業直接參與者延伸，估值邏輯可能轉變；此為今日首見，具體管線規模與合作夥伴未公開，明日再評估是否建頁（STAT News https://www.statnews.com/2026/06/30/anthropic-ai-drug-development/）
 - **[資本市場連動] Fable 5 解禁消息推動 Amazon 和 Broadcom 股價上漲**：Barron's 報導 Fable 5 出口管制解除後，Amazon（AWS 為 Anthropic 主要算力合作夥伴）和 Broadcom（AI 晶片供應商）股價受到正面帶動；顯示 Anthropic 商業前景的改善已直接傳導至生態合作夥伴的資本市場估值（Barron's https://www.barrons.com/articles/amazon-stock-broadcom-anthropic-fable-mythos-0edab4a7）
 
-### 2026-06（已封存）
+### 2026-06（精簡摘要）
 
 - Series H 於 05-29 完成：$650 億募資、投後估值 $9,650 億，超越 OpenAI 成全球最大 AI 新創。
 - 出口管制在 06-12 生效、06-30 解除、07-01 恢復存取；Mythos 5 於 06-27／06-28 分兩批向 100+ 美國機構解禁。
@@ -989,7 +994,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - 合作面單月密集擴張：Micron 多年記憶體協議＋入股、加州州政府協議、Globant／DataArt／Okta／Rubrik 單日四項。
 - 原始條目見 [[topics/anthropic-business-archive#2026-06]]
 
-### 2026-06-14 以前（已封存）
+### 2026-06-14 以前（精簡摘要）
 
 - IPO 法定程序於 2026-06-01／06-02 起跑（兩說皆為媒體轉述）：向 SEC 機密遞交 S-1 草稿，Economist／NYT／Reuters／FT／WSJ 同步報導。
 - 估值質疑同時成形：Michael Burry 稱不值 $1 兆；S&P 500 拒為 SpaceX 破例的獲利要求同樣適用於 Anthropic。

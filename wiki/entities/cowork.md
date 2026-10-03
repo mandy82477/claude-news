@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-27"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-25"
 status_main: "active"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "['entities/cowork-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 11
 attribution_count: 3
 attribution_last: "2026-09-25"
@@ -31,21 +31,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-09-27
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
-> Help Center release notes 新增段落確認「Cowork 進駐每個對話」：可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件；背景執行、VM 沙箱是否原樣保留仍待查證。
+> Help Center release notes 新增段落確認「Cowork 進駐每個對話」：可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件；背景執行、VM 沙箱是否原樣保留，官方文件尚未載明。
 
 ---
 
 ## 現況
 
-**09-25 官方文件再度確認擴張範圍：** Help Center release notes 新增段落，稱「Claude Cowork comes to every conversation」，可在任何對話直接要求設計、簡報或文件，**含 Claude Code 與 Artifact 介面**；操作截圖或完整說明頁仍未見，見下方待查證標記。
+**09-25 官方文件再度確認擴張範圍：** Help Center release notes 新增段落，稱「Claude Cowork comes to every conversation」，可在任何對話直接要求設計、簡報或文件，**含 Claude Code 與 Artifact 介面**；操作截圖或完整說明頁仍未見，見下方標記段落。
 
 **09-17 起 Cowork 併入單一 Claude 介面：** 官方部落格宣布 Claude Cowork 與 claude.ai 聊天介面自即日起合併，使用者不需再先決定「這個任務該開 Cowork 還是開對話」。同批推出 Claude Docs、Claude Slides（皆 beta）與整合進對話的 Claude Design，可直接在對話中編輯文件簡報並下載為 PowerPoint／PDF，先於 Pro、Max 方案開放（HN 226 分；Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld 等媒體同日跟進，均僅標題／框架可用）。**下方「跟 Claude Code 差在哪」與「現在能不能用」兩節記錄的是合併前的介面型態，合併後操作路徑見下方標記段落。**
 
-❓ **待查證**（標 2026-09-17｜查 聊天介面合併、[[entities/claude-docs]]｜複 2026-10-01｜訊 2026-09-25）｜**合併後 Cowork 既有能力（背景持續執行、獨立 VM 沙箱）如何呈現在合併後的介面**：官方部落格摘要僅說明「不必再選介面」，未載明背景執行、VM 沙箱等既有 Cowork 特徵是否原樣保留、UI 入口如何呈現；待官方文件（Help Center／desktop.md）更新後確認。09-25 Help Center release notes 新增段落確認「everything Claude Cowork does」現可從任何對話取用，惟仍未具體點名背景執行、VM 沙箱是否原樣保留。
+❓ **待查證**（標 2026-09-17｜查 聊天介面合併、[[entities/claude-docs]]｜複 2026-10-17｜訊 2026-09-25）｜**合併後 Cowork 既有能力（背景持續執行、獨立 VM 沙箱）如何呈現在合併後的介面**：官方部落格摘要僅說明「不必再選介面」，未載明背景執行、VM 沙箱等既有 Cowork 特徵是否原樣保留、UI 入口如何呈現；待官方文件（Help Center／desktop.md）更新後確認。09-25 Help Center release notes 新增段落確認「everything Claude Cowork does」現可從任何對話取用，惟仍未具體點名背景執行、VM 沙箱是否原樣保留。（依 2026-09-25 日報收斂；2026-10-03 清算未另查官方。）
 
 Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放，首波僅限 Max 訂閱戶（詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
 

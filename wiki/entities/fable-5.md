@@ -7,17 +7,17 @@ domain: "🤖 模型"
 last_updated: "2026-09-26"
 last_news_update: "2026-09-17"
 status_main: "active"
-days_since_news: 15
+days_since_news: 16
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 15
+days_since_news_subtree: 16
 inbound_links: 54
 attribution_count: 37
 attribution_last: "2026-09-16"
 top_source: "google-news"
-pending_count: 1
-pending_overdue: 0
+pending_count: 2
+pending_overdue: 1
 pending_next_review: "2026-10-04"
 pending_signalled: 0
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-26
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-17
 
 > **最新進展**（2026-09-17）
@@ -99,6 +99,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **這件事對你的產品做了什麼**（政府談判換來的承諾落到你手上長什麼樣）見 [[topics/anthropic-government-policy]]「政府動作對你的產品做了什麼」；那一節也寫出你的選項。
 - **機制沿革**：06-09 發布版對前沿 LLM 開發降級且不告知（System Card），06-11 官方道歉改為可見防護；07-02 隨解禁導入 Defense in Depth 分類器，首日即有合法資安審查被誤攔的公開案例。
 - **「靜默」在本頁有兩個不同意思，別搞混**：護欄被觸發時**你會收到通知**（上表機制）；下方「歷史記錄」與「爭議」節提到的「靜默降級至 Opus 4.8」（GitHub #79337）指的是另一件事——一起計費/存取層的誤判缺陷，不是護欄機制本身不通知你。
+
+## 跟它怎麼說話
+
+官方 prompting 指南：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)（同一份涵蓋 [[entities/mythos]] 的 Mythos 5.1；查證 2026-10-03）。
+
+- **effort 預設 `high`，但級距跨代不等量，要重跑一次 sweep**：官方明寫 effort 級名在不同模型間不對應同樣的思考量，`medium` 大致追平 Fable 5 而更便宜，`low` 常在「成本／分數」上勝過 Opus 與 Sonnet——沿用 Fable 5 的 effort 值，換到的是白花的錢。
+- **要刪「hold all findings for the final response」這類抑制敘述的舊句，並把 `thinking.display` 設 `updates`**：它比 Fable 5 更少主動寫進度，不刪不設的話長工具鏈會整段靜默好幾分鐘。
+- **要加「你在自主執行、使用者不在旁邊」那段**：少了它，模型會用「Next, I'll …」描述下一步就結束回合，或為原請求已涵蓋的步驟回頭問「Shall I apply this?」；官方說開頭那句承載大部分效果。
+- **要刪舊的反格式化規則**：那些是為了壓住前代濫用 bullet 與 bold 寫的，Fable 5.1 偏向用得太少，改寫成「什麼時候該用清單」才對得上它。
+- **`low` effort 下它比 Fable 5 更少呼叫搜尋工具、更傾向憑記憶回答**：這幾個回合改用 per-message effort 調高，或加官方那句「不確定的名字本身就是要查的東西」。
+
+**表下細節**
+
+- 與相鄰世代相反的那一邊：[[entities/opus-5-5]] 要**刪**系統提示裡「think carefully」那類句子（它自己決定想多久），而本頁要**加**自主執行段。
+- [[entities/sonnet-5-5]] 在 `low` effort 會跳過驗證、需要補一段驗證指令，本頁的 `low` 問題則在搜尋觸發。effort 旋鈕的通用建議見 [[topics/model-comparison]]「Effort dial 細節」。
+- 寫作面：官方說它的散文比 Fable 5 更密（句子更長、分段更少），對策是定義反面模式（mannered prose）而不是喊「寫簡單一點」；摘要文件時也更容易把原文整段複述而不標引號，官方建議在系統提示放一個完整正確範例。
+---
 
 ## 使用指南
 
@@ -185,9 +202,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **Reddit：Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪除（單一使用者回報，無量化數據）**：r/ClaudeCode 使用者回報 Fable 5.1 執行任務過程中把本地資料庫用 `rm -rf` 刪除；單一貼文、無週熱門標記，score 恆 0，未見官方回應或其他來源佐證。破壞性操作與程式碼品質觀感的完整脈絡見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/)，2026-09-17）。
 
 #### 2026-09-16
-**Scientific American：稱 Anthropic AI 打破數學家最複雜曲線紀錄（僅標題可用，未指名模型版本）**：Google News 轉載 Scientific American 標題〈Anthropic's AI steals mathematicians' record for most complicated curve〉，RSS 僅提供標題與轉址連結，無正文可查證曲線類型、原紀錄保持者或複雜度定義，亦未指明所用模型（Fable 5.1 產品版，或如上方 09-04 費馬定理案例的內部研究模型）。與上方 09-04 費馬最後定理形式化、08-11 黎曼假設 zeta 函數下界紀錄同屬 Anthropic 前沿數學研究能力宣稱，本頁僅作參考記錄，不代表 Fable 5／5.1 產品能力（Google News/Scientific American，社群互動趨近零、僅單一媒體來源，2026-09-16）。
+**Scientific American：稱 Anthropic AI 打破數學家最複雜曲線紀錄**：Google News 轉載 Scientific American 標題〈Anthropic's AI steals mathematicians' record for most complicated curve〉，RSS 當日僅提供標題；2026-10-03 查證補述見下，所用為內部未發布版本，非產品版。與上方 09-04 費馬最後定理形式化、08-11 黎曼假設 zeta 函數下界紀錄同屬 Anthropic 前沿數學研究能力宣稱，本頁僅作參考記錄，不代表 Fable 5／5.1 產品能力（Google News/Scientific American，社群互動趨近零、僅單一媒體來源，2026-09-16）。
 
-❓ 待查證（標 2026-09-16｜查 complicated curve、Scientific American）｜**曲線紀錄具體內容與所用模型**：僅標題可用，曲線類型、原紀錄保持者、複雜度定義與所用模型版本均未見報導
+**查證補述（2026-10-03）**：媒體稱（Scientific American、Epoch AI 題庫頁）曲線指橢圓曲線的 rank 紀錄：Anthropic 數學家 Levent Alpöge 與密碼學者 Ava Howell 用 Claude 於數日內先後提交 rank ≥30 與 ≥31（8 月 23 日）的橢圓曲線，此前由 rank 28 到 29 耗時逾 18 年；所用為 Anthropic 內部未發布版本，非 Fable 5／5.1 產品版（[Scientific American](https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/)；[Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank)，查證 2026-10-03；Scientific American 本環境 egress 被擋，內容取自搜尋摘要）。
+
+🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-10-26）｜**官方未載該紀錄所用模型版本**：查證 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：

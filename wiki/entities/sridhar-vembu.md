@@ -2,16 +2,16 @@
 page: "entities/sridhar-vembu"
 kind: "entity"
 type: "person"
-status: "active（待核實）"
+status: "active（單一來源）"
 domain: "👤 人物"
-last_updated: "2026-09-24"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-24"
 status_main: "active"
-days_since_news: 8
+days_since_news: 9
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 8
+days_since_news_subtree: 9
 inbound_links: 1
 attribution_count: 1
 attribution_last: "2026-09-24"
@@ -27,10 +27,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Sridhar Vembu
 
 **類型：** person
-**狀態：** active（待核實）
+**狀態：** active（單一來源）
 **領域：** 👤 人物
 **首次出現：** 2026-09-24
-**最後更新：** 2026-09-24
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-24
 
 > **公開評論 AI 減速爭論**（2026-09-24，僅標題可用）

@@ -312,6 +312,62 @@
       ],
       "reviewed": "2026-09-26",
       "why": "Opus 4.7 在爭論頁只以「跨代際重複修辭」被順帶提及，該事實的家是 topics/code-quality-decline，兩頁皆已連向它"
+    },
+    {
+      "pages": [
+        "entities/opus-5",
+        "entities/sonnet-5-5"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "Opus 5 是已列 Legacy 的前代、Sonnet 5.5 是另一條產品線的新代；兩頁都已連向 model-comparison、各自的現代繼任頁，讀者要比的是 Opus 5.5 與 Sonnet 5.5，不是這一對，共享鄰居是模型樞紐效應"
+    },
+    {
+      "pages": [
+        "entities/thariq-shihipar",
+        "topics/anthropic-commitments"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "Thariq 頁只有一則僅標題可用的專訪轉貼，不含任何 Anthropic 承諾或兌現事實；共享鄰居來自兩者被同一批頁引用，屬樞紐效應"
+    },
+    {
+      "pages": [
+        "entities/managed-agents",
+        "topics/community-tech-discussions"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "爭論頁全文沒有任何 Managed Agents 討論，社群對該產品的回饋住 topics/community-tech-patterns 與 official-community-gap，兩頁都已連過去；直接互連沒有可寫的語意句"
+    },
+    {
+      "pages": [
+        "topics/community-tech-discussions",
+        "topics/model-task-leaderboard"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "榜單頁只收第三方榜單領先者、爭論頁收社群對話，全文無互相引用的事實；共享鄰居是模型頁樞紐，不是缺漏"
+    },
+    {
+      "pages": [
+        "topics/code-quality-decline",
+        "topics/llm-wiki-pattern"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "一頁講品質下降主張、一頁講知識庫寫法，內容無交集；共享鄰居來自 community 樞紐頁"
+    },
+    {
+      "pages": [
+        "entities/opus-5-5",
+        "topics/market-lessons"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "market-lessons 的課程表事實住 topics/market-signals 該則判讀（已連 opus-5-5），教材頁只指向判讀頁；直接連模型頁會在教材頁長出事實副本"
+    },
+    {
+      "pages": [
+        "entities/chris-olah",
+        "entities/tom-brown"
+      ],
+      "reviewed": "2026-10-03",
+      "why": "兩頁都是已併回 topics/anthropic-government-policy 的轉址殘頁，只剩一則最後動態，彼此無關聯事實；共享鄰居就是共同上層頁"
     }
   ]
 }

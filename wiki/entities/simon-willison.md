@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-09-29"
 last_news_update: "2026-09-29"
 status_main: "active"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 3
 attribution_count: 2
 attribution_last: "2026-09-29"
@@ -32,20 +32,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** simonwillison.net
 **蒐集邊界：** 本站只收錄他與 Claude／Anthropic 生態相關的公開發言——部落格對其他人聲明的轉引、模型實測心得、AI agent 資安事件的具名轉載。不收錄他的個人生活，也不收錄他在 Claude／Anthropic 之外的其他技術工作（如 Datasette、SQLite 相關獨立專案）。
 **首次出現：** 2026-05-20
-**最後更新：** 2026-09-29
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-29
 
 > **本站引用最多的第一手觀點來源**（2026-09-13 建頁）
 > 庫內 114 次提及、橫跨 15 頁，多數不是他本人的新聞事件，而是本站取得 Boris Cherny、Dario Amodei 等人公開發言原文與時間戳的轉載管道。
 
-> **Sonnet 5.5 首日實測**（2026-09-29）
-> 發布當日依例以鵜鶘測試，「max」思考強度出現與 Opus 5.5 相同的 bug；完整發布資訊見 [[entities/sonnet-5-5]]。
+> **Sonnet 5.5 首日實測**（2026-09-28）
+> 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；**他稱與 Opus 5.5 那次同一個 bug，但那次的具體症狀本庫未見記載，故不引為對照**。完整發布資訊見 [[entities/sonnet-5-5]]。
 
 ---
 
 ## 現況
 
-2026-09-28（Sonnet 5.5 發布當日），依慣例以「畫一隻騎腳踏車的鵜鶘」測試新模型，發現「max」思考強度呈現與 Opus 5.5 相同的圖示 bug；模型本身的發布細節見 [[entities/sonnet-5-5]]。
+2026-09-28（Sonnet 5.5 發布當日），依慣例以「畫一隻騎腳踏車的鵜鶘」測試新模型，發現「max」思考強度下圖示輸出異常。他稱這與 Opus 5.5 那次是同一個 bug，但 **Opus 5.5 那次的具體症狀本庫未見記載**，因此本頁不把它寫成已成立的對照；模型本身的發布細節見 [[entities/sonnet-5-5]]。
 
 Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極少是新聞事件的主角，卻是本庫全站被引用次數最多的名字：114 次提及、橫跨 15 個頁面（每週整理時的全庫盤點統計，2026-09-06）。他在本庫的價值不是「他說了什麼」，而是「他讓誰的話有了可查證的原文與時間戳」——多數條目是他部落格轉引 Boris Cherny、Dario Amodei 等人在 X 上的發言，本站藉此取得逐字引文而非二手改寫。
 
@@ -76,7 +76,7 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 - [[topics/ai-agent-safety]]（多起資安事件的轉載或查證來源）
 - [[entities/claude-code]]（Rust Bun runtime 查證）
 - [[entities/fable-5]]（新模型首日實測）
-- [[entities/sonnet-5-5]]（2026-09-29 首日鵜鶘測試）
+- [[entities/sonnet-5-5]]（2026-09-28 首日鵜鶘測試）
 
 ## 參考來源
 
@@ -88,7 +88,7 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 歷史記錄
 
-- 2026-09-28：Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度出現與 Opus 5.5 相同的 bug（來源：Blog／Simon Willison）
+- 2026-09-28：Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；原文稱與 Opus 5.5 那次同一個 bug（Opus 5.5 那次的症狀本庫未見記載，2026-10-03 核）（來源：Blog／Simon Willison）
 - 2026-09-13：連續兩週的每週整理提出建頁候選後，裁決建立本頁（114 次提及／15 頁）
 - 2026-09-11：轉引 Boris Cherny「Production code written by Claude should have a higher bar than if it was written by a human」，原文於部落格處被截斷
 - 2026-08-27～08-31：轉載 embracethered 對 Claude Code Opus 5 Auto Mode 安全機制繞過的技術揭露，與 07-25 轉引 Cherny「最難被提示注入攻破」說法形成對照

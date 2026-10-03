@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-10-01"
 last_news_update: "2026-10-01"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 167
 attribution_count: 117
 attribution_last: "2026-10-01"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-01
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-01
 
 > **最新計費政策異動**（2026-10-01）
@@ -86,6 +86,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Enterprise 附加功能**：含 Compliance API、Enterprise Gateway 等；合作分級 Select／Preferred 差異未公開。Team 方案於 2026-06-19 官方速率翻倍時同步適用
 - **usage credits 僅可在網頁版開通（2026-08-11 官方查證）**：官方說明中心 usage-credits 條目載明，行動 App（iOS／Android）訂閱者無法直接於 App 內開啟 usage credits，須改至網頁版 `Settings > Usage` 操作；額度用盡後可切換按量計費（API 標準費率）不中斷服務。此為既有「credits 為 opt-in、預設關閉」規則（見上方 2026-08-08 條目）的補充限制（來源：support.claude.com usage-credits 條目，2026-08-11）
 - **09-17 官方 Plans & Pricing 頁大改版**：新增 Claude Academy、Docs／Slides（beta）／Design 說明；移除舊版 token 定價與 context window 對照，均為前代模型過期資訊（Official Docs，09-17）
+- **Design／Slides／Docs 是方案內含功能，沒有獨立定價（2026-10-03 官方定價頁查證）**：Pro、Max、Team、Enterprise 皆內含，Free 不含；官方未對這三項列出任何單獨費率或加購項，因此它們不會在帳單上獨立出現一列（來源：[claude.com/pricing](https://claude.com/pricing)）
 - **Free 不含 Opus 5.5、Pro 可用（2026-09-24，單一弱來源）**：shattered.io 稱 Free 不提供 Opus 5.5、Pro 可用；方向與官方 Opus 5.5 取代 Opus 5 的既有分界一致，惟本則單一低知名度來源，未經官方原文比對（shattered.io）
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
 

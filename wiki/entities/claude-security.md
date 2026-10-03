@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-30"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-30"
 status_main: "beta"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 12
 attribution_count: 7
 attribution_last: "2026-09-30"
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-30
-**最後更新：** 2026-09-30
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-30
 
 > **最新資安產品動態**（2026-09-30）
-> 多家資安媒體報導 Anthropic 推出「Claude Compliance API」，讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容；官方原文未見，是否為 Claude Security 產品線延伸待查證。
+> 多家資安媒體報導 Anthropic 推出「Claude Compliance API」，讓企業資安團隊監控 Claude 對話、檔案與 Agent 活動內容；官方原文未見，是否為 Claude Security 產品線延伸，官方未載明。
 
 ## 現況
 
@@ -52,7 +52,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥 |
+| 社群熱度 | 🔥🔥 |
 | 試用價值 | ⚡ 有條件推薦 |
 | 最適合 | Enterprise 客戶、需要業務邏輯情境化安全評估的開發團隊 |
 | 不適合 | 個人開發者（目前限 Enterprise 客戶）、僅需傳統 CVE 掃描的場景 |
@@ -97,7 +97,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 | 日期 | 事件 |
 |------|------|
-| 2026-09-29 | ❓ 待查證｜**「Claude Compliance API」曝光**：Security Boulevard 首發，企業可監控 Claude 對話／檔案／Agent 活動；4 個來源同日跟進，官方原文未見（詳見「現況」） |
+| 2026-09-29 | **「Claude Compliance API」曝光（懸置，標記見「現況」）**：Security Boulevard 首發，企業可監控 Claude 對話／檔案／Agent 活動；4 個來源同日跟進，官方原文未見（詳見「現況」） |
 | 2026-08-21 | **Claude Mythos 5 整合進 Claude Security**：企業團隊在不直接存取模型本身的前提下取得前沿等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進；額度／定價面（Dealroom 提及 $35M credits 承諾）詳見 [[entities/pricing]]；來源：Google News / MarkTechPost（另有 Dealroom、Palo Alto Networks Unit 42、The New Stack） |
 | 2026-07-24 | **社群反映無 Workflow tool 存取權限**：Reddit 使用者（自稱使用 Claude Code 未滿一個月）反映摸索過程燒費大量 token 才發現 Claude Security 沒有 Workflow tool 的存取權限；查證確認為既有 opt-in 設計限制，非缺陷（見下方 ⟨Q-01⟩）；來源：Reddit / r/ClaudeCode |
 | 2026-08-10 | [[entities/claude-code]] 查證：官方文件確認 Claude Security 的 Workflow 功能需在 `/config` 內另行啟用「dynamic workflows」才可使用，屬 opt-in 設計 |

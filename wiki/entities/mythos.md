@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-30"
 last_news_update: "2026-09-30"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 29
 attribution_count: 22
 attribution_last: "2026-09-30"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-09-30
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-30
 
 > **最新進展**（2026-09-30）
@@ -48,6 +48,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Claude Mythos 是 Anthropic 的高能力 AI 模型家族，已確認具備**自主發現並武器化軟體漏洞、生成可執行 exploit** 的能力，是 AI 安全領域的重大里程碑。2026-06-09 起分為兩個版本：**Claude Fable 5**（以 Mythos 架構為核心、附加安全護欄的公開版，史上首款向大眾開放的 Mythos 級模型，見 [[entities/fable-5]]）與 **Claude Mythos 5**（無護欄完整版，僅限信任機構存取）。**2026-09-01 起兩者皆迭代至 5.1 版**——Fable 5.1 GA、Mythos 5.1 維持信任機構限定存取（見上方「現況」），存取模式的區隔本身未變。
 
+---
+
+## 跟它怎麼說話
+
+官方 prompting 指南與 [[entities/fable-5]] 共用一份：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)，標題明載涵蓋 Claude Mythos 5.1（查證 2026-10-03）。官方未另出 Mythos 專屬 prompting 頁。
+
+- **措辭面的調整與 Fable 5.1 同一套**：effort 要重跑 sweep、要刪「hold all findings for the final response」並設 `thinking.display: updates`、要加「你在自主執行」那段。
+- 同一套之二：要刪舊的反格式化規則、`low` effort 下搜尋觸發變少——逐條見 [[entities/fable-5]]「跟它怎麼說話」，本頁不複製。
+- **本頁專屬的那一格是存取而非措辭**：Mythos 只開放給信任機構，拿不到模型的人不需要調 prompt；存取條件見下方「政策與存取管控」。
 ---
 
 ## 核心能力

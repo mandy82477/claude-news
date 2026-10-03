@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-25"
 last_news_update: "2026-09-25"
 status_main: "beta"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 5
 attribution_count: 2
 attribution_last: "2026-09-25"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-09-17
-**最後更新：** 2026-09-25
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
@@ -44,7 +44,7 @@ Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與
 
 **09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**；輸出格式與跟既有 Artifacts 文字輸出的功能邊界仍未載明。
 
-❓ **待查證**（標 2026-09-17｜查 claude.com/docs、[[entities/claude-slides]]｜複 2026-10-01｜訊 2026-09-25）｜**Claude Docs 的具體操作路徑、輸出格式與跟 Artifacts 的功能邊界**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/docs）更新後確認。09-25 Help Center release notes 確認可在任何對話（含 Claude Code、Artifact 介面）要求文件，惟輸出格式與跟 Artifacts 邊界仍未載明。
+❓ **待查證**（標 2026-09-17｜查 claude.com/docs、[[entities/claude-slides]]｜複 2026-10-17｜訊 2026-09-25）｜**Claude Docs 的具體操作路徑、輸出格式與跟 Artifacts 的功能邊界**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/docs）更新後確認。09-25 Help Center release notes 確認可在任何對話（含 Claude Code、Artifact 介面）要求文件，惟輸出格式與跟 Artifacts 邊界仍未載明。（依 2026-09-25 日報收斂；2026-10-03 清算未另查官方。）
 
 ## 熱度與試用價值
 

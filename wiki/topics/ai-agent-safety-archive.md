@@ -7,11 +7,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-04"
 last_news_update: "2026-06-27"
 status_main: "resolved"
-days_since_news: 97
+days_since_news: 98
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 97
+days_since_news_subtree: 98
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
@@ -301,7 +301,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-06-26
 - **[蒸餾攻擊] 阿里巴巴透過 25,000 假帳號發動 2,880 萬次 Claude 模型交換**：Anthropic 致函美參議院（2026-06-10），正式指控阿里巴巴在 2026-04-22 至 2026-06-05 期間，透過約 25,000 個假帳號系統性發動 2,880 萬次模型交換，目的是蒸餾提取 Claude AI 能力；為已知最大規模 AI 蒸餾攻擊；阿里巴巴截至報導日無公開回應（視為單一聲稱）；政策面詳見 [[topics/anthropic-government-policy]]（CNBC，2026-06-24；https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html）
-- **[威脅情報] Anthropic 公開 MITRE ATT&CK 網路威脅情報報告**：Anthropic 公開一年份威脅情報分析，對 832 個遭封鎖帳號的惡意行為進行 MITRE ATT&CK 框架對應；首次官方大規模惡意使用行為分類報告，為 AI 安全威脅標準化描述提供參照基礎；分析文章指出獨立 AI 開發者面臨相同的攻擊面，MITRE 對應表可作為 agent 設計階段的威脅模型工具（dev.to；https://dev.to/pat9000/what-anthropics-mitre-attck-report-means-for-solo-ai-builders-2dlo）
+- **[威脅情報] Anthropic 公開 MITRE ATT&CK 網路威脅情報報告**：Anthropic 公開一年份威脅情報分析，對 832 個遭封鎖帳號的惡意行為進行 MITRE ATT&CK 框架對應；首次官方大規模惡意使用行為分類報告，為 AI 安全威脅標準化描述提供參照基礎；分析文章指出獨立 AI 開發者面臨相同的攻擊面，MITRE 對應表可作為 agent 設計階段的威脅模型工具（dev.to；https://dev.to/pat9000/what-anthropics-mitre-attck-report-means-for-solo-ai-builders-2dlo（原文已失效））
 
 ### 2026-06-24
 - **[授權測試] Mythos 情報機構合作測試發現機密系統漏洞**：AP News 報導 Anthropic Mythos 在與美國情報機構的正式合作測試中，數小時內發現美國機密系統漏洞；美國官員明確區分「發現」與「利用」，強調屬授權防禦評估；此條目與 2026-06-22 Security Affairs「入侵」框架構成互補詮釋，「政府一邊合作測試一邊實施出口管制」的矛盾在此最為清晰（AP News，2026-06-24；https://apnews.com/article/anthropic-mythos-ai-classified-systems-vulnerabilities-testing-3e8762c0527c4d8ed657cbe48c84a718）
@@ -398,7 +398,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Anthropic MITRE ATT&CK 網路威脅情報報告（2026-06-26 新增）
 
-- **揭露來源**：Anthropic 官方報告（2026-06-26 公開）；dev.to 分析文章（https://dev.to/pat9000/what-anthropics-mitre-attck-report-means-for-solo-ai-builders-2dlo）
+- **揭露來源**：Anthropic 官方報告（2026-06-26 公開）；dev.to 分析文章（https://dev.to/pat9000/what-anthropics-mitre-attck-report-means-for-solo-ai-builders-2dlo（原文已失效））
 - **報告範圍**：一年份網路威脅情報，分析 832 個遭封鎖帳號的惡意行為模式，對應至 MITRE ATT&CK 企業框架（Enterprise ATT&CK）
 - **意義**：首次由 Anthropic 官方對外公開的大規模惡意使用行為分類報告；將 AI 平台上的攻擊行為納入既有網路安全框架，為 AI 安全威脅的標準化描述提供參照
 - **對獨立開發者的實際意涵**：開發者自建 AI agent 時面臨相同的攻擊面；MITRE ATT&CK 對應表可作為 agent 設計階段的威脅模型基礎

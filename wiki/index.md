@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-09-29
+**最後更新：** 2026-10-03
 
 ---
 
@@ -38,13 +38,13 @@
 | 頁面 | 類型 | 領域 | 狀態 | 摘要 |
 |------|------|------|------|------|
 | [[entities/sonnet-5-5]] | model | 🤖 模型 | active | Claude Sonnet 5.5：2026-09-28 發布，取代 Sonnet 5 成為 API 預設 Sonnet，Terminal-Bench 4.0 由 10.3%→70.6%，牌價維持 $2/$10 |
-| [[entities/sonnet-5]] | model | 🤖 模型 | active | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位 |
+| [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位 |
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | active | Claude Science：科學家專用 AI 工作台，整合研究工具套件、可稽核 artifact、彈性運算資源；Anthropic 宣布自行開發藥物 |
 | [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]] |
 | [[entities/opus-5-5]] | model | 🤖 模型 | active | Claude Opus 5.5：2026-09-22 發布的現行 Opus，$4/$20、快取讀取 $0.20，官方稱多數工作追平 Fable 5.1；v2.1.280 起為 Claude Code 預設模型 |
 | [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手 |
 | [[entities/opus-4-8]] | model | 🤖 模型 | active（Legacy） | Opus 4.8：SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用；官方已列 Legacy、退役不早於 2027-05-28，建議遷移至 [[entities/opus-5]]　↳ 子故事：[[entities/opus-4-8-archive]] |
-| [[entities/opus-4-7]] | model | 🤖 模型 | active（已被取代）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |
+| [[entities/opus-4-7]] | model | 🤖 模型 | active（Legacy）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |
 | [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案、牌價與乘數、計費規則現況；09-14 起週配額換軌、還在發生的計費事故　↳ 子故事：[[entities/pricing-archive]] |
 | [[entities/mythos]] | model | 🤖 模型 | active（已解禁） | 高能力安全模型；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview（4% vs 6% 控制流劫持），跨越先前模型做不到的門檻　↳ 子故事：[[entities/mythos-archive]] |
 | [[entities/bugcrawl]] | feature | 🛠️ 工具/功能 | beta | Anthropic 測試中的 Claude Code 漏洞偵測工具 |
@@ -71,7 +71,7 @@
 | [[entities/tom-blomfield]] | person | 👤 人物 | active| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（2026-09-20 查證確認到任與職稱）|
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
 | [[entities/tino-cuellar]] | person | 👤 人物 | active | Anthropic 首任 Chief Global Affairs Officer（2026-08-05 到任），前 Carnegie Endowment for International Peace 總裁、加州最高法院大法官 |
-| [[entities/robert-mahari]] | person | 👤 人物 | active | Anthropic「Claude for Legal」負責人（2026-08-07 任命；哈佛／MIT JD-PhD、史丹佛 CodeX 副主任、Akiva AI 創辦人，職掌為法律垂直的 GTM，2026-09-13 查證）|
+| [[entities/robert-mahari]] | person | 👤 人物 | active（待核實）| Anthropic「Claude for Legal」負責人（2026-08-07 任命；哈佛／MIT JD-PhD、史丹佛 CodeX 副主任、Akiva AI 創辦人，職掌為法律垂直的 GTM，2026-09-13 查證）|
 | [[entities/jensen-huang]] | person | 👤 人物 | active | Nvidia 執行長；2026-08-26 財報電話會議說對投資 OpenAI／Anthropic「唯一的後悔是投得不夠多、不夠早」（已查實）|
 | [[entities/amir-salek]] | person | 👤 人物 | active | Google TPU 專案創辦人（2013–2022，經手前七代）；2026-08 加入 Anthropic compute 團隊，向 James Bradbury 匯報（Bloomberg 查證 2026-09-06）|
 | [[entities/evan-hubinger]] | person | 👤 人物 | active | Anthropic 安全研究員；2026-09-09 公開估計 AI 十年內導致人類全滅機率逾 10%（BBC 具名報導） |
@@ -105,7 +105,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 每種社群做法的原始證據與採用量，21 類（Multi-agent、Skills、CLAUDE.md、Hooks 四類已定案）；「該怎麼改設定」看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-tech-patterns-archive]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 每種社群做法的原始證據與採用量，20 類（Multi-agent、Skills、CLAUDE.md、Hooks 四類已定案）；「該怎麼改設定」看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-tech-patterns-archive]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 8 場：5 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |

@@ -6,18 +6,18 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-27"
 last_news_update: "2026-09-27"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 34
 attribution_count: 47
 attribution_last: "2026-09-27"
 top_source: "google-news"
 pending_count: 13
-pending_overdue: 5
-pending_next_review: "2026-10-03"
+pending_overdue: 6
+pending_next_review: "2026-10-05"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-09-27
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-27
 
 > **最新動態**（2026-09-27）
@@ -73,9 +73,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-11，NBC News：Joe Benton 與 Josh Engels 離職示警「房間裡沒有大人」**：兩位分別曾任 Anthropic 安全研究團隊負責人與 Google DeepMind 安全研究員的離職研究員首次受訪，籲提升前沿 AI 事故透明度；為 Coxon／Hubinger 系列新增具名當事人。
 - **同日，CNBC／Guardian**：CNBC 報導川普公開淡化 AI 滅絕風險、逾十餘位業界人士連署籲放緩；Guardian 報導 Musk 稱相關警告為「psyop」，詳見「## 技術彙整」。
 - **2026-09-12～13，Dario Amodei 本人首度直接呼籲業界暫緩發展步調**：較 06-04《When AI Builds Itself》的「煞車踏板」呼籲更具體——首次提出「AI 群體行為 6–12 個月內接管網路」的時間窗，並稱已承諾一項 AI 減速計畫；具體計畫內容未見報導。HN 社群對此呼籲懷疑聲量高，質疑動機為競爭策略或募資話術而非安全考量，詳見「## 技術彙整」。
-- **2026-09-14，政治連鎖反應：川普公開回絕、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，川普表態不需更多 AI 監管，北京官媒反擊為「冷戰」話術；均僅標題可用，詳見「## 技術彙整」。
+- **2026-09-14，政治連鎖反應：川普公開回絕、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，川普表態不需更多 AI 監管，北京官媒反擊為「冷戰」話術；2026-10-03 已由具名媒體查證發言與社論內容，詳見「## 技術彙整」。
 - **2026-09-15，Jack Clark（BBC／NPR）首見具體治理機制提案：「緊急關閉開關」立法化＋「集體行動難題」框架**：延續 06-04 起「煞車踏板」呼籲與 09-12～13 Amodei 親自呼籲減速系列，首見具體機制名稱而非泛稱警告；同日 Guardian／Willison 對 09-09 Coxon 事件的媒體/業界反思延續既有敘事，詳見「## 技術彙整」。
-- **2026-09-17，產業批評與反彈聲浪並起**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線；Michael Burry 批評減速呼籲「自利」；Politico 稱 Anthropic 政策長主張贏得 AI 競賽即確保安全（發言人身分未見於標題），詳見「## 技術彙整」。
+- **2026-09-17，產業批評與反彈聲浪並起**：微軟 AI 執行長 Suleyman 警告 AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線；Michael Burry 批評減速呼籲「自利」；Politico 稱 Anthropic 政策長主張贏得 AI 競賽即確保安全（發言人經查證為政策長 Sarah Heck，非 Jack Clark），詳見「## 技術彙整」。
 - **2026-09-18，量化數字與治理提案並進**：Anthropic／Reuters 揭露 Claude 已負責公司內部下一代模型開發工作量的四分之一，與既有 8 倍、尚未達兩倍兩數字為不同指標；多位專家聯署公開信呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構，首見聚焦「第三方評測」這一項具體機制，詳見「## 技術彙整」。
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
@@ -123,7 +123,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)（經 Google News，2026-09-22 15:32 UTC，2 個來源）
 - **核心內容**：09-18 條目已記錄的同名官方說明文章，其正式 Institute 頁面連結今日曝光，說明如何衡量前緣實驗室內部「AI 開發 AI」的進度；RSS 原文摘要不可讀，僅標題與連結可用，具體衡量方法論、與「工作量四分之一」數字的對應關係仍未見報導
 - **與既有敘事的關係**：即 09-18 條目引用的同一份官方說明文件，非新事件，本則補上可直接查證的官方連結
-- ❓ **待查證**（標 2026-09-22｜查 Institute、measuring-pace）：頁面正文方法論細節、與 26%／25%／8× 三個既有數字的對應關係均未見報導
+- **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：正文已查實——以 Epoch AI 自動化等級 AL0～AL5 與人時加權衡量，2026-08 Claude「主導」（AL4）占 26%，與 09-18 條目的「四分之一」同源、精確值為 26%；與 06-04 的 8×、08-14「尚未達兩倍」仍是不同指標，細節見上方 09-18 條目的官方說明
 - **可信度評估**：Anthropic 官方一手頁面，可信度高；惟 RSS 摘要不可讀，正文內容現階段無法查證
 
 ### dev.to（reidmarlow）：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零（2026-09-21 新增，09-24 Reddit 週熱門重新流通並補上「3 萬個 agent」數字）
@@ -133,7 +133,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：與 09-18《工作量四分之一》（25%）疑似同一組官方數據，另補「主導／涉入」分級與「零無人監督」；dev.to 非官方一手來源，兩則是否同次揭露暫不逕自合併。作者指出外界「模型自建後繼者」解讀比實際機制（全程有監督）窄得多
 - **09-24 補充（Reddit r/ClaudeAI 週熱門＋dev.to）**：約一週前討論串重新登上熱門，貼文稱除 26% 主導比例外，**同時約有 3 萬個 agent 在做研究與工程工作**；與上方數字同源轉述，非獨立新披露
 - ❓ **待查證**（標 2026-09-24｜查 3萬個agent、研究與工程工作）：「3 萬個 agent 同時工作」的官方原始出處、「同時」的時間窗定義、與 26%／25%／8 倍既有數字的對應關係均未見報導
-- ❓ **待查證**（標 2026-09-21｜查 R&D Automation Index、Leads）：Anthropic 官方是否已發布對應原始頁面或報告、26% 與「涉入九成以上」的精確定義與衡量方法均未見一手來源
+- **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：26% 即官方 AL4「主導」比例（2026-08），「涉入九成以上」對應 AL3（協作）以上占 90% 以上，另載未測得任何 AL5 完全自主的子集；衡量方法（任務籃、人時加權）見上方 09-18 條目的官方說明
 - **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度；具體數字是否忠實反映官方原始資料待官方一手來源核實
 
 ### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
@@ -149,26 +149,34 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/accenture-embedded-evaluation)（2026-09-19）；Washington Post〈Anthropic picks consulting firm to monitor AI safety, pledges to spend $1 billion〉（經 Google News）；CNBC 同日跟進（僅標題可用）
 - **核心主張**：Anthropic 宣布由顧問公司 Accenture 出任首位「內嵌評估者」，獨立評估前沿 AI 安全，呼應 Dario Amodei「We Must Pace the Frontier」一文承諾；Washington Post 報導同時承諾投入 10 億美元資金
 - **與既有敘事的關係**：直接回應上方 09-18 條目「CNBC：多位專家呼籲獨立安全評測機構」——本則首次具體指名機構並附金額，是本頁治理提案系列首見落地案例；Accenture 由 Anthropic 自行選定，是否真正獨立仍待觀察，本頁不代為下結論
-- **09-20 補充（官方原文細節）**：官方部落格全文說明合作由 **Faculty**（Accenture 旗下專責 AI 業務單位）主導，工作範圍包含評估與 red-team 模型；其餘工作項目官方原文尚有列舉，本頁僅取得部分摘要，不逕自補全
-- ❓ **待查證**（標 2026-09-19｜查 Accenture、embedded evaluator｜訊 2026-09-20）：獨立性保障機制（能否否決或僅出具報告）、10 億美元資金的具體用途與時程均未見報導；評估範圍部分已知含評估與 red-team 模型（見上方 09-20 補充），完整項目清單仍未見報導
-- **可信度評估**：Anthropic 官方部落格一手發布＋Washington Post、CNBC 主流媒體跟進，訊號強度高；惟 Washington Post／CNBC 條目均經 Google News 轉載僅標題可用，10 億美元數字僅見 Washington Post 標題引述，未見官方原文同一數字
+- **09-20 補充（官方原文細節）**：官方部落格全文說明合作由 **Faculty**（Accenture 旗下專責 AI 業務單位）主導，工作範圍包含評估與 red-team 模型；其餘工作項目（對齊評估、測試模型防護措施）已於 2026-10-03 查官方原文補全，見下方官方說明
+- **官方說明（2026-10-03 查證，[Anthropic 官方公告](https://www.anthropic.com/news/accenture-embedded-evaluation)）**：由 Accenture 旗下 Faculty 主導，非營利評估者 METR 亦有參與，安排為非排他——「Anthropic 將於未來數週宣布其他評估者」
+- **內嵌評估者權限（同公告）**：享有員工級權限、可觀察模型開發、訓練決策與部署實務，能「找出盲點」並「回報事件」；官方文未載否決或核准權，角色限於評估與回報
+- **責任歸屬（同公告）**：官方稱「內嵌獨立評估者不減損我們的責任，而是讓它更可驗證」；工作範圍含評估與 red-team 模型、對齊評估與測試模型防護措施
+- **資金（同公告）**：Anthropic 與 Accenture 合計承諾未來五年至少投入 10 億美元於此領域能力建設；Anthropic 直接資助 Accenture 的工作並探索與非營利評估者的其他資金來源，長期設想政府或集資來源
+- **可信度評估**：Anthropic 官方部落格一手發布＋Washington Post、CNBC 主流媒體跟進，訊號強度高
+- **措辭落差**：Washington Post／CNBC 條目均經 Google News 轉載僅標題可用；10 億美元官方原文載為 Anthropic 與 Accenture 合計至少 10 億美元、五年（見官方說明），Washington Post 標題的「Anthropic 承諾」與官方措辭略有出入
 
 ### Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一（2026-09-18 新增）
 
 - **揭露來源**：Reuters〈Claude now leads a quarter of work〉（09-17）；Anthropic 官方部落格〈Measurements for understanding the pace of AI development〉（09-18，經 Google News 轉載）——說明衡量方法，與 Reuters 數字同屬一組
-- **核心主張**：Anthropic 揭露 Claude 目前已負責公司內部下一代模型開發工作量的四分之一（25%）；官方同日部落格另文說明如何衡量前沿實驗室內部「AI 開發 AI」的進度
+- **核心主張**：Anthropic 揭露 Claude 目前已負責公司內部下一代模型開發工作量的四分之一（Reuters 稱四分之一；官方精確數字為 26%，見下方官方說明）；官方同日部落格另文說明如何衡量前沿實驗室內部「AI 開發 AI」的進度
 - **與既有敘事的關係**：與 06-04《When AI Builds Itself》代碼交付量 8 倍（代碼產出比例）、08-14《Risk Report》尚未達兩倍（保守自評）為三個不同指標，定義各異不宜直接相加或取代
-- ❓ **待查證**（標 2026-09-18｜查 quarter of work、frontier labs｜訊 2026-09-22）：官方 Institute 頁面連結今日經 2 個來源確認（見上方 09-22 條目），惟「工作量四分之一」具體衡量定義與方法論細節仍未見頁面正文佐證
-- **可信度評估**：Reuters 一手報導＋Anthropic 官方部落格同日發布方法論說明，訊號強度高；惟具體衡量方法僅標題層級可用，與既有 8× 及「尚未達兩倍」兩數字的可比性未見官方說明
+- **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：衡量以 Epoch AI 的自動化等級 AL0（無 AI）～AL5（完全自主）為尺度，Claude「主導」（AL4：模型依高層提示端到端完成多數任務、人類監督）的比例於 2026-08 為 **26%**（Reuters 標題寫「四分之一」）
+- **工作量方法（同文）**：以人時加權——2026-07 每週抽樣 20% 員工，由 Slack 與內部文件歸納約 15,000 個細項任務，整理為 542 節點、378 個葉類別的階層樹，每項任務依人時分配取權重
+- **其他結果（同文）**：AL3（協作）以上占 90% 以上，未測得任何 AL5 完全自主的子集；Anthropic 預定定期發布、重建任務籃並由內嵌第三方評估者驗證
+- **可信度評估**：Reuters 一手報導＋Anthropic 官方部落格同日發布方法論說明，訊號強度高；惟衡量方法官方頁面已載（見上方官方說明），與既有 8× 及「尚未達兩倍」兩數字的可比性官方未另行說明
 
 ### CNBC：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構（2026-09-18 新增）
 
 - **揭露來源**：Google News／CNBC〈Anthropic and OpenAI need truly independent safety evaluators, experts say in public letter〉（2026-09-18 13:00 UTC）
-- **核心主張（僅標題可用）**：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 都需要真正獨立的安全評測機構把關；具名連署人、信件完整訴求與是否提出具體機制均未見報導
+- **核心主張（僅標題可用）**：多位專家聯署公開信，呼籲 Anthropic 與 OpenAI 都需要真正獨立的安全評測機構把關；連署人與訴求見下方查證結果
 - **與既有敘事的關係**：延續本頁既有治理提案系列——09-15 Jack Clark 提出「緊急關閉開關」立法化與「集體行動難題」框架、08-10 Sanders 國會層級暫停呼籲；本則首見具體聚焦「第三方獨立評測機構」這一項機制，訴求對象同時點名 OpenAI，非僅 Anthropic 單方
   - 與 [[topics/anthropic-government-policy#攻防紀錄]] 09-16 CNBC 質疑自行提名評測機構公信力互為因果：16 日先質疑自提名公信力，18 日即有專家聯署要求換真獨立機構
-- ❓ **待查證**（標 2026-09-18｜查 independent safety evaluators、public letter）：連署專家名單、信件完整訴求、Anthropic／OpenAI 官方是否回應均未見報導
-- **可信度評估**：CNBC 為主流媒體報導，惟僅標題層級可用，公開信原文未見引用
+- **查證結果（2026-10-03，具名媒體）**：公開信由 AI Evaluator Forum 聯盟發起，逾 100 位 AI 研究者與安全專家連署（含 Geoffrey Hinton、Stuart Russell，成員含 Johns Hopkins、Stanford 與非營利評估機構 METR；CNBC 2026-09-18）
+- **公開信訴求**：外部評估者須具科學客觀性、透明、獨立與強健保護——對方法與結論有控制權、可深度接觸前沿系統、無利益衝突、可直接向董事會溝通並公開發布發現、免於報復；針對 Amodei 與 Altman 歡迎「內嵌評估者、員工級權限」的承諾提出最低條件
+- **Anthropic 側**：[官方公告](https://www.anthropic.com/news/accenture-embedded-evaluation)稱將於數週內宣布其他評估者、並與 METR 等非營利評估機構洽談；官方未針對該公開信另行回應；信件全文僅取搜尋摘要
+- **可信度評估**：CNBC 為主流媒體報導，惟僅標題層級可用，公開信原文本頁未直接引用
 
 ### Mustafa Suleyman（微軟 AI 執行長）：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線「misguided」（2026-09-17 新增，09-18 補上 The Verge 跟進來源）
 
@@ -187,20 +195,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵（2026-09-17 新增）
 
-- **揭露來源**：Google News／politico.com〈Anthropic policy chief says winning AI race key for safety〉（僅標題可用，人物姓名未見於標題）
+- **揭露來源**：Google News／politico.com〈Anthropic policy chief says winning AI race key for safety〉（原僅標題可用；發言人經 2026-10-03 查證為 Sarah Heck）
 - **核心主張（僅標題可用）**：Anthropic 政策長主張贏得 AI 競賽本身就是確保安全的關鍵；具體論證未見報導
-- **與既有敘事的關係**：Anthropic 政策主管為 [[entities/jack-clark|Jack Clark]]（本頁 06-04「煞車踏板」呼籲、09-15 BBC／NPR「緊急關閉開關」訪談當事人），惟標題未具名，無法確認是否同一人
-- **潛在張力**：若發言人確為 Jack Clark，「贏得競賽＝安全」與 09-15「集體行動難題」框架是否為一貫立場，須見原文才能判斷
-- ❓ **待查證**（標 2026-09-17｜查 Politico、winning AI race）：發言人身分是否為 Jack Clark、完整論證與是否回應兩立場張力均未見報導
-- **可信度評估**：僅標題可用，人物身分未確認，暫不併入 Jack Clark 既有系列
+- **與既有敘事的關係**：Anthropic 政策主管為 [[entities/jack-clark|Jack Clark]]（本頁 06-04「煞車踏板」呼籲、09-15 BBC／NPR「緊急關閉開關」訪談當事人），惟經查證發言人為政策長 Sarah Heck，非 Jack Clark（見下方查證結果）
+- **潛在張力**：發言人經查證為 Sarah Heck 而非 Jack Clark，「贏得競賽＝安全」與 09-15 Jack Clark「集體行動難題」框架屬不同人表述，是否為一貫立場另議
+- **查證結果（2026-10-03，具名媒體）**：發言人為 Anthropic 政策長 Sarah Heck，非 Jack Clark（媒體稱：CNBC 2026-09-16〈Anthropic policy chief says AI companies can't operate on 'honor code'〉、POLITICO Decoded 峰會報導）
+- **發言內容（同上媒體）**：她於 09-16 稱美國須在 AI 上保持領先，「你不可能從第二名做安全」，同時主張政府針對生存風險訂規則，反對共和黨國會領袖倚賴的自律路線（「不能只靠榮譽制度、不能自己檢查自己的作業」）
+- **未決與限制**：與 09-15 Jack Clark「集體行動難題」框架是否為一貫立場，官方未另行說明，本頁不代為下結論；原文僅取搜尋摘要（CNBC／POLITICO egress 封鎖）
+- **可信度評估**：人物身分已查證為 Sarah Heck，不併入 Jack Clark 既有系列
 
 ### WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物（2026-09-17 新增）
 
 - **揭露來源**：Google News／WSJ〈The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety〉（僅標題可用）
 - **核心主張（僅標題可用）**：WSJ 人物報導稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題的代表性人物
-- **與既有敘事的關係**：內容特徵（匿名、數學／pretraining 背景、因離職警告成為代表性人物）與本頁既有 [[entities/jacob-coxon|Jacob Coxon]]（09-09 辭職警告，HN 623 分，本頁議題迄今單日媒體聲量最大者）高度吻合，惟標題未點名，無法逐字確認為同一人
-- ❓ **待查證**（標 2026-09-17｜查 Anonymous Math Geek、Face of AI Safety）：報導主角是否即 Jacob Coxon、WSJ 正文論證均未見報導
-- **可信度評估**：WSJ 為主流媒體一手人物報導，惟僅標題可用，人物身分未見具名
+- **與既有敘事的關係**：內容特徵（匿名、數學／pretraining 背景、因離職警告成為代表性人物）與本頁既有 [[entities/jacob-coxon|Jacob Coxon]]（09-09 辭職警告，HN 623 分，本頁議題迄今單日媒體聲量最大者）高度吻合，WSJ 官方 X 帳號推文已直接點名 Jacob Coxon（[WSJ on X](https://x.com/WSJ/status/2100543615709646901)，2026-10-03 查證），確認為同一人
+- **查證結果（2026-10-03，具名媒體）**：報導主角確為 Jacob Coxon（WSJ 人物報導，標題經 Benton Institute 轉載為〈Jacob Coxon, the Anonymous Math Geek Who Quit Anthropic and Became the Face of AI Safety〉）
+- **人物與立場（搜尋摘要）**：Coxon 為 27 歲英國研究者、劍橋數學背景、倫敦「理性主義」社群成員，先前匿名；他對 WSJ 稱離開是不願參與業界打造可自我改進 AI 的競賽、憂其失控毀滅人類，並認為沒有任何公司能在缺乏政府介入或協調下負責任地發展 AGI；WSJ 全文未能直讀（egress 封鎖），論證僅取搜尋摘要
+- **可信度評估**：WSJ 為主流媒體一手人物報導，惟僅標題可用；人物身分已由 WSJ 官方 X 帳號點名為 Coxon
 
 ### Jack Clark（BBC／NPR）：AI「緊急關閉開關」或需強制立法；減速是「集體行動難題」（2026-09-15 新增）
 
@@ -221,7 +232,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Reuters／Yahoo／CNBC／NPR／ABC7（經 Google News 轉載，2026-09-14）
 - **核心主張**：Dario Amodei 09-12～13 呼籲業界減速一事引發政治連鎖反應——川普公開回絕，表示不需要更多 AI 監管；北京官方媒體則反擊此類呼籲為「冷戰」話術
 - **與既有敘事的關係**：延續 09-12～13 已記錄的 Amodei 親自呼籲事件；09-11 CNBC 已報導川普「淡化 AI 滅絕風險」，本則的「公開回絕」是否為同一發言的不同措辭轉述、或新的獨立表態，因多來源均僅標題可用，暫不逕自合併判斷；北京官媒「冷戰」框架為本系列首見中國官方直接回應
-- ❓ **待查證**（標 2026-09-14｜查 川普回絕、冷戰話術）：川普回絕發言全文與時間點、北京官媒具體評論內容與媒體名稱均未見報導；與上方 09-13 標記的「AI 減速計畫」「AI 群體行為」懸置為同一事件的政治反應，惟未回答該懸置的技術依據問題，不視為其後續，標記維持不動
+- **查證結果（2026-10-03，具名媒體；非 Anthropic 官方事項，無官方一手來源）**：媒體稱（Al Jazeera 09-14、Dataconomy 09-14、Rest of World、NBC News）中國外交部發言人郭嘉昆 09-11 稱 Amodei 的呼籲為「製造恐慌、對抗與惡性競爭」
+- **官媒（媒體稱）**：環球時報社論〈Targeting China's AI: U.S. 'tech right' unfolds Cold War playbook〉稱其「真實議程」是以技術壁壘與監管壟斷遏制中國 AI、維持華府壟斷、把中國排除於 AI 治理之外
+- **川普側（媒體稱）**：Rest of World、The Rundown 稱川普拒絕減速，曾稱 AI 毀滅警告為「騙局（HOAX）」並稱「whoever wins AI wins」；09-28 川普於白宮與 Amodei 會面仍主張美國贏得 AI 競賽（technology.org、Fox News）
+- **限制與關係**：發言精確時點與全文僅取搜尋摘要（多數原文 egress 封鎖）；與 09-13 標記的「AI 減速計畫」「AI 群體行為」懸置為同一事件的政治反應，惟未回答該懸置的技術依據問題，不視為其後續
 - **可信度評估**：五家主流媒體同步報導，訊號強度高；惟均僅取得標題層級摘要，具體發言原文與脈絡待後續補充
 
 ### 這波離職示警，誰說了什麼（2026-09-13 彙整）
@@ -355,8 +369,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-09-17
 - **[產業批評，09-18 補 The Verge 跟進] Suleyman：AI 恐催生失控「矽基物種」，批評 Anthropic 擬人化路線**：BBC／Reuters 報導，Willison 引原文；The Verge 用詞升級為「making it worse」，詳見「## 技術彙整」
 - **[反彈聲浪，新增] Michael Burry：OpenAI、Anthropic 呼籲放慢 AI 是「自利」之詞**：新增具名金融界批評者，詳見「## 技術彙整」
-- **[官方立場，新增，僅標題可用] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**：發言人是否為 Jack Clark 未見於標題，詳見「## 技術彙整」
-- **[人物側寫，新增，僅標題可用] WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物**：內容特徵疑似指向 09-09 Jacob Coxon，惟標題未點名，詳見「## 技術彙整」
+- **[官方立場，新增，僅標題可用] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**：發言人經 2026-10-03 查證為政策長 Sarah Heck、非 Jack Clark，詳見「## 技術彙整」
+- **[人物側寫，新增，僅標題可用] WSJ：離開 Anthropic 的匿名數學研究者成為 AI 安全議題代表性人物**：WSJ 官方 X 帳號已點名主角即 09-09 Jacob Coxon（2026-10-03 查證），詳見「## 技術彙整」
 
 ### 2026-09-15
 - **[產業分歧，新增] Nvidia CEO 黃仁勳於 Dreamforce 與 Anthropic、OpenAI 執行長就 AI 安全公開分歧**：延續 09-12～13 Amodei 減速呼籲後的產業反應系列；具體爭點為兩家提出的 AI 安全反壟斷豁免提案，內容與豁免範圍見 [[topics/anthropic-government-policy#攻防紀錄]]，不重複記述
@@ -364,7 +378,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[媒體反思，新增] The Guardian／Simon Willison：離職警告「破圈」原因分析與「恐懼擴散」業界反思**：對 09-09 Coxon 事件的二次評論，非新事實，詳見「## 技術彙整」
 
 ### 2026-09-14
-- **[政治反應，新增] 川普公開回絕 Amodei 減速呼籲、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，均僅標題可用，詳見「## 技術彙整」
+- **[政治反應，新增] 川普公開回絕 Amodei 減速呼籲、北京官媒批評為「冷戰」話術**：延續 09-12～13 Amodei 呼籲事件，2026-10-03 已由具名媒體查證，詳見「## 技術彙整」
 
 ### 2026-09-12～13
 - **[官方減速呼籲，新增] Dario Amodei 親自呼籲 AI 暫緩發展，警告「AI 群體行為」6–12 個月內恐接管網路**：延續 06-04《When AI Builds Itself》「煞車踏板」呼籲，首度提出具體時間窗與「AI 減速計畫」；HN 社群留言普遍質疑動機為競爭策略或募資話術，詳見「## 技術彙整」

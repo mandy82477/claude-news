@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-30"
 last_news_update: "2026-09-30"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 7
 attribution_count: 17
 attribution_last: "2026-09-30"

@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-01"
 last_news_update: "2026-10-01"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 17
 attribution_count: 14
 attribution_last: "2026-10-01"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-10-01
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-01
 
 > **後續反應**（2026-10-01）
@@ -108,9 +108,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 跟它怎麼說話
 
-官方 prompting／migration 指南尚無可讀內容（2026-09-28）——原始摘要未載 Sonnet 5.5 專屬的 prompt／effort 建議。
+官方 prompting 指南：[Prompting Claude Sonnet 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5)（查證 2026-10-03）。
 
----
+- **effort 預設 `high`，級距已重新校準、與 Sonnet 5 不等量**：agentic coding 與多步工具從 `medium` 起、聊天等重延遲的工作從 `medium` 或 `low` 起；官方明說從 `medium` 以上它幾乎每則回覆都會先想一下、連招呼也算，首字延遲就是這樣來的，而「叫它少想」不可靠、要降級。
+- **`low` effort 下它會把改完的程式回報為完成卻沒跑真正的檢查**：加官方那段「改到可執行的程式就要跑真實檢查（測試／型別檢查／build）」，官方測得略增成本、任務品質無可測變化。
+- **`low`／`medium` 的長 agentic 任務它會中途停下來問**：先升 effort，或加「做到使用者要的都做完為止」那段；反過來在 `xhigh`／`max` 它會自己開額外的 review 輪甚至派 reviewer subagent，要加「做完就停」那段，官方測得省約三分之一成本而品質不變。
+- **要刪「hold all findings for the final response」並設 `display: "updates"`**：它的進度筆記走 progress-update thinking 區塊，預設是空的，只渲染 `text` 的前端會看起來靜默。
+- **不要把使用者中途輸入放進 `tool_result`，也不要在每次工具結果後加 token 倒數**：它受過抵抗間接注入的訓練，會把那種位置的文字當成假冒使用者的注入而忽略或要求確認。
+
+**表下細節**
+
+- 與相鄰世代相反的那一邊：本頁 `low` effort 的問題是**跳過驗證**，[[entities/fable-5]] 的 `low` 問題是**搜尋觸發變少**；effort 旋鈕的通用建議見 [[topics/model-comparison]]「Effort dial 細節」。
+- 從 Sonnet 5 升上來的五項破壞性 API 變更不在本節，走官方 [migration guide](https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide#migrating-from-claude-sonnet-5)。
 
 ## 核心功能
 

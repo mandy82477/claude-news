@@ -3,22 +3,22 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-02"
+last_updated: "2026-10-03"
 last_news_update: "2026-10-02"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 105
+days_since_news_subtree: 1
+inbound_links: 106
 attribution_count: 186
 attribution_last: "2026-10-02"
 top_source: "google-news"
 pending_count: 27
 pending_overdue: 6
 pending_next_review: "2026-10-04"
-pending_signalled: 1
+pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-02
 
 > **最新安全事件**（2026-10-02）
@@ -310,9 +310,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
 - **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號；Startup Fortune（09-19）跟進報導，未提供新技術細節
-- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；具體觸發機制、是否已通報官方、修補時程均未見報導
-- **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因僅標題可用、無具名研究者技術細節，暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
-- ❓ **待查證**（標 2026-09-18｜查 Plugin4Shell、zero-click）：具體觸發機制、是否已有修補時程、在野利用情況均未見報導
+- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；觸發機制與修補狀態見下方 🔎 標記的媒體摘要（官方未載）
+- **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因當時僅標題可用、無具名研究者技術細節（觸發機制已由後續媒體摘要補上，見上方標記），暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
+- 🔎 **查無官方**（標 2026-09-18｜查 Plugin4Shell、zero-click｜訊 2026-09-19｜複 2026-10-17）：2026-10-03 查 Claude Code GitHub Releases v2.1.179 與 claude-code Security Advisories 首頁，均無對應條目；官方修補聲明與 CVE 未見
+  - 媒體稱（Help Net Security、CyberSecurityNews 等；Air Security 原文 egress 封鎖未能直讀）：Air Security 於 2026-09-17 披露，攻擊者控制插件 repo 時可建立與 pinned commit 雜湊同名的 git 分支，使 agent 檢出惡意內容卻仍顯示符合 SHA 釘選
+  - 媒體稱（續）：插件自動更新（Claude Code、Codex 預設開啟）使其零點擊；Claude Code 2.1.179 與 Codex 0.146.0 已修補、Copilot 發稿時未修、Gemini CLI 已棄用；AIR 稱未見在野利用，2026-05 發現、06 通報廠商
 - **可信度評估**：CyberSecurityNews 與 The Information 皆為資安／科技媒體，惟均僅標題層級可用，無具名研究者原始披露文章或 CVE 編號
 
 ### Anthropic 官方：生命科學驗證計畫（LSVP）放寬生醫專業人士的部分安全限制（2026-09-18 新增）
@@ -346,9 +348,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理（2026-09-17 新增）
 
 - **揭露來源**：Hacker News〈With 1 Extension: $20K in Bounties from Anthropic, Perplexity, Google, Microsoft〉（10 分）
-- **核心內容**：資安研究團隊揭露透過瀏覽器內建 AI 助理（Claude in Chrome、Chrome／Edge／Opera 內建 AI、Perplexity Comet）進行的「bragjack」劫持技術，稱已成功攻陷 5 款主流瀏覽器；Anthropic、Perplexity、Google、Microsoft 等廠商懸賞金額合計 2 萬美元；具體攻擊手法、觸發條件與是否已修補均未見報導
+- **核心內容**：資安研究團隊揭露透過瀏覽器內建 AI 助理（Claude in Chrome、Chrome／Edge／Opera 內建 AI、Perplexity Comet）的「bragjack」劫持技術，稱已攻陷 5 款主流瀏覽器；Anthropic、Perplexity、Google、Microsoft 等廠商懸賞合計 2 萬美元；手法與修補狀態見下方 🔎 標記（官方未載）
 - **性質判斷**：與本頁既有「Claude for Chrome 兩項權限缺陷」（合成點擊、skipPermissions）屬不同技術手法，暫無足夠細節確認是否為同一攻擊面的延伸，故不併入該列；具名安全研究、有具體懸賞金額佐證，訊號強度高於一般論述文章
-- ❓ **待查證**（標 2026-09-17｜查 bragjack、Claude in Chrome）：具體攻擊手法、觸發條件、是否已有修補或官方回應均未見報導
+- 🔎 **查無官方**（標 2026-09-17｜查 bragjack、Claude in Chrome｜複 2026-10-17）：2026-10-03 查 support.claude.com「Use Claude in Chrome safely」等官方頁與 Anthropic 提示注入防禦文章，均未載 BragJack；官方聲明與修補版本未見
+  - 媒體稱（BleepingComputer、GBHackers 等；多數原文 egress 封鎖僅取搜尋摘要）：Forever Security 的 Gal Weizman 於 2026-09-16 公布，惡意擴充套件以 declarativeNetRequest 加 content script 劫持 AI 助理與其特權元件間的通道（「prompt forcing」，不經提示注入、繞過模型層過濾）
+  - 媒體稱（續）：安裝後無需點擊，可讀本機檔案、截圖並可能觸及相機麥克風；波及 Chrome（Gemini）、Edge（Copilot）、Opera Neon、Perplexity Comet 與 Claude in Chrome
+  - 媒體稱（修補）：Chrome（CVE-2026-0628，7,000 美元）與 Edge（CVE-2026-55945）已修補；Anthropic 據稱修補了 Claude in Chrome 的特定弱點並付 600 美元獎金，合計獎金逾 2 萬美元
 - **可信度評估**：具名資安研究團隊與具體懸賞金額為佐證，惟未見獨立媒體交叉確認，攻擊技術細節僅有標題摘要
 
 ### Rubrik 推出 Code Guardian 並支援 MCP，供 AI agent 使用（2026-09-16 新增，產業動態）
@@ -363,7 +368,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Reddit r/ClaudeAI〈Opus 5 is flagging all my messages even though I'm in the CVP〉（原始貼文，來源標記無「週熱門」，score 不可信）
 - **核心內容**：一名資安研究者稱本人已通過 Anthropic 的 Cyber Verification Program（CVP）白名單審核，但 Opus 5 仍持續標記其研究相關訊息；未提供官方回應
 - **性質判斷**：屬產品層安全（誤攔／過度審查），非攻擊事件——呼應本頁「模型層安全≠產品層安全」框架，本則呈現分類器誤判合法白名單使用者的落差，與 [[topics/anthropic-government-policy]] 07-02 已記錄的 Fable 5 高風險請求誤攔案例性質相近
-- ❓ **待查證**（標 2026-09-15｜查 Cyber Verification Program）：CVP 白名單生效範圍、誤攔是否為已知限制、官方申訴或修復管道均未見報導
+- **官方說明（2026-10-03 查證，[support.claude.com](https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude)）**：CVP 適用 Opus／Sonnet 級模型，核可綁定特定 organization ID、不跨 workspace 轉移，ZDR 組織不符資格，並提供「回報／申訴表單」；文章未明載 Claude Code 是否套用白名單，也未把「已核可仍被攔」列為已知限制
+- **後續（09-22）**：GitHub Issue #84352 回報已通過 CVP 審核的組織在 Claude Code 仍遭 cyber-safeguard 封鎖（199 則留言），同類 Issue 另有 #85222、#84689、#86352，顯示非單一個案；官方尚未公開修復時程
 - **可信度評估**：單一 Reddit 貼文，無「週熱門」標記，score 不可信；未見其他研究者附議或官方回應，非攻擊面，不列入「## 現在還擋不住的攻擊」表
 
 ### SitePoint：TypeScript 中防範 AI Agent Context Injection 教學（2026-09-15 新增，跨類別，非 Claude 專屬）
@@ -383,25 +389,34 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### Rescana 揭露攻擊鏈：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證（2026-09-14 新增）
 
 - **揭露來源**：Rescana（經 Google News 轉載，2026-09-14）
-- **核心主張（僅標題／摘要可用）**：資安業者 Rescana 揭露具體攻擊鏈，稱攻擊者利用 Claude AI 從 180 萬個 Android App 中大規模萃取憑證，發動竊密行動；報導未提供完整技術細節
-- **與既有敘事的關係**：延續本頁既有「Claude 被進攻性濫用」脈絡（08-18 勒索軟體操作者利用 Claude Code 竊取 LDAP 密碼、Poison Claude 等），惟本則規模遠大於既往任何單一濫用案例，若屬實將是迄今最大規模的 Claude 濫用攻擊鏈
-- ❓ **待查證**（標 2026-09-14｜查 Rescana、Android App）：攻擊鏈具體技術手法（Claude 是否被用於自動化逆向工程、憑證擷取，或僅作輔助工具）、180 萬數字的驗證方法、是否已有受害者通報、Anthropic 官方是否回應均未見報導
-- **可信度評估**：Rescana 為資安業者一手揭露，惟經 Google News 轉載僅摘要可用，正文技術細節與獨立第三方驗證均待查證
+- **核心主張（僅標題／摘要可用）**：資安業者 Rescana 揭露具體攻擊鏈，稱攻擊者利用 Claude AI 從 180 萬個 Android App 中大規模萃取憑證，發動竊密行動；報導未提供完整技術細節（官方報告校正見下方）
+- **與既有敘事的關係**：延續本頁既有「Claude 被進攻性濫用」脈絡（08-18 勒索軟體操作者利用 Claude Code 竊取 LDAP 密碼、Poison Claude 等），惟本則規模遠大於既往單一案例
+- **規模敘事的保留**：官方報告顯示 180 萬 APK 的掃描主要靠 TruffleHog，Claude 的角色是 API／token 與批次匯出工具（見下方官方說明），不宜直接等同「Claude 自動化萃取」
+- **官方說明（2026-10-03 查證，[Anthropic 威脅情報報告 2026-09](https://www.anthropic.com/threat-intelligence-report-september-2026)）**：ShinyHunters 關聯操作者「frkoo」以 10 台 AWS EC2 節點從多個 app store 下載 180 萬個 Android APK，反編譯後以 TruffleHog 掃描硬編碼憑證，驗證過的憑證即時轉送 Telegram 群組並分類，為其多數已確認入侵的初始存取來源
+- **Claude 的角色（同報告）**：協助識別／使用開發者與認證 API、建立與轉換特權 token、打造批次匯出與跨租戶資料蒐集工具，**掃描本身由 TruffleHog 執行**，並未稱 Claude 自動化逆向工程
+- **官方處置（同報告）**：Anthropic 已封鎖相關帳號、部署偵測並通報當局、產業夥伴與受害者；受害者數量官方未載
+- **二手摘要落差**：Rescana「利用 Claude 萃取 180 萬 App 憑證」為二手摘要，把 Claude 的角色寫得比官方報告更大
+- **可信度評估**：Anthropic 官方威脅情報報告為一手來源（見上方官方說明）；Rescana 為二手分析，Claude 的角色描述較官方報告放大
 
 ### Reddit／r/artificial 週熱門：Anthropic、Google、OpenAI 官方 GitHub Actions 預設範本同款 RCE 瑕疵（2026-09-14 新增，跨類別）
 
 - **揭露來源**：Reddit r/artificial（週熱門排序，[原貼文](https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/)，2026-09-14 02:33 UTC）
 - **核心主張**：資安研究者揭露 Anthropic Claude Code、Google Gemini CLI、OpenAI Codex 三家官方發布的 GitHub Actions 預設設定範本，皆存在可導致遠端程式碼執行（RCE）的同款設定缺陷；三家 coding agent 官方 CI 範本同步中招，非單一廠商個案
 - **與既有敘事的關係**：與本頁「## 現在還擋不住的攻擊」表既有多項信任邊界缺口（`llms.txt`、`.git` 設定檔、deny-list 繞過）同屬「官方預設值本身不安全」的模式，惟本則首見三大廠商官方範本同款瑕疵，性質更接近產業共通設計缺陷；產品化面向見其他分類頁面
-- ❓ **待查證**（標 2026-09-14｜查 GitHub Actions、預設範本）：具體瑕疵技術細節、Anthropic／Google／OpenAI 是否已修補或發布時程、是否已有在野利用均未見報導，僅有單一 Reddit 貼文可查
+- 🔎 **查無官方**（標 2026-09-14｜查 GitHub Actions、預設範本｜複 2026-10-17）：2026-10-03 查 claude-code-action 與 claude-code Security Advisories，均無對應條目（前者僅 GHSA-8q5r-mmjf-575q，2026-05-20，PR 惡意 MCP 設定致 RCE／密鑰外洩）
+  - 可能相關但未確認為同一事件：媒體稱（Hackread、Cloud Security Alliance 研究筆記等）Novee Security 於 Black Hat USA 2026（08-05）披露 Claude Code、Gemini CLI、Codex 的 GitHub 工作流程缺陷——無權限帳號開一則 GitHub Issue 即可觸及 CI 密鑰
+  - 媒體稱（續）：Claude Code Action 歷經三輪修補（claude-code-action v1.0.94、Claude Code 2.1.163，CVE-2026-54316）；Novee 原文 egress 封鎖僅取搜尋摘要，Reddit 貼文與其是否同一事件未確認
 - **可信度評估**：Reddit r/artificial 為週熱門排序貼文，惟為單一社群來源，未見具名研究者披露文章、CVE 編號或廠商官方公告，暫不列入「## 現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏官方或具名研究者一手來源佐證新列優先序）
 
 ### The Information：資料外洩疑慮促使 Nvidia、Palantir、Booz Allen 限縮 Anthropic 模型內部使用範圍（2026-09-14 新增，跨類別）
 
 - **揭露來源**：The Information（經 Google News 轉載，2026-09-14 13:00 UTC）
-- **核心主張（僅標題可用）**：報導稱因憂心資料外洩風險，Nvidia、Palantir、Booz Allen 等企業客戶已限縮對 Anthropic 模型的內部使用範圍；Google News RSS 未提供正文，具體限縮措施與觸發此決策的具體事件均未見報導
+- **核心主張（僅標題可用）**：報導稱因憂心資料外洩風險，Nvidia、Palantir、Booz Allen 等企業客戶已限縮對 Anthropic 模型的內部使用範圍；Google News RSS 未提供正文，具體限縮措施見下方官方說明與媒體轉述
 - **與既有敘事的關係**：與本頁「## 官方現在擋到哪（整頁層）」既有 Enterprise Frontier Safeguards（2026-09-01 公告，監看憑證外洩跡象）形成對照——企業客戶自行限縮使用，可能反映 EFS 上路前的過渡期信任缺口；企業採用面與定價影響見 [[topics/anthropic-business]]
-- ❓ **待查證**（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen｜複 2026-09-28）：三家企業具體限縮的使用範圍、觸發此決策的具體資料外洩事件（若有）、Anthropic 官方是否回應均未見報導
+- **官方說明（2026-10-03 查證，[support.claude.com](https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models)）**：觸發背景可對上官方政策——自 2026-06-09 起 covered models（Mythos 級及後續同等模型；搜尋結果稱 Fable 5.1 亦須）的 prompt 與輸出保留 30 天供安全分析，ZDR 工作區亦適用
+- **官方說明（續）**：30 天後自動刪除（遭自動系統標記或法律要求者除外）；官方並以 [Enterprise Frontier Safeguards](https://www.anthropic.com/news/enterprise-frontier-safeguards) 讓資料存於客戶自控雲端
+- **媒體稱（The Information 經多家轉述）**：Nvidia 將 Anthropic 限於較不敏感任務、內部改用自家 Nemotron；Palantir 要求不可撤銷的零資料保留保證才上架；Booz Allen 禁止員工以其商用模型處理專有資安工作
+- **Anthropic 公開說法（媒體轉述）**：預設不以企業客戶資料訓練；官方未針對這三家個案公開回應
 
 ### CNN 獨家／Dario Amodei 官方原文：Anthropic CEO 回應「AI agent 脫離控制範圍」，證實所指為 OpenAI 7 月代理逃逸事件（2026-09-13 新增，2026-09-27 官方原文查證）
 
@@ -1029,7 +1044,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **參考來源**：[The New Stack 報導](https://thenewstack.io/agentjacking-sentry-mcp-attack/)；[dev.to 防禦設定指南](https://dev.to/jovan_chan_9500711396d4e6/agentjacking-2026-how-a-fake-sentry-error-hijacks-cursor-claude-code-and-cline-and-the-5a2h)
 - %% 未列入現況表：最後動態 2026-06-27，逾 90 天且本輪無新回報，2026-09-26 依退場條文移出 %%
 
-### 2026-06 條目封存總結（技術彙整）
+### 2026-06 條目摘要（技術彙整）
 
 - **提示注入取得完整系統控制**：Mozilla 0din 演示乾淨 GitHub repo 即可注入（06-28），The Decoder 06-29 定性為「無驗證直接執行」，四個第三方來源跟進；Anthropic 當月未回應。
 - **能力與越獄**：Mythos 於情報機構授權測試入侵幾乎所有 NSA 機密系統（06-23～06-24，官員強調「發現不等於利用」）；Fable 5 三詞越獄「Fix this code」曝光（06-22）。
@@ -1039,7 +1054,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 原始條目見 [[topics/ai-agent-safety-archive#2026-06]]
 
-### 2026-05 條目封存總結（技術彙整）
+### 2026-05 條目摘要（技術彙整）
 
 - **v2.1.150 遠端系統提示注入機制**（2026-05-25）：Bootstrap API 與功能旗標 `tengu_heron_brook` 兩個端點可在 session 執行中動態注入系統提示，使用者不會收到通知；HN score 10，Anthropic 未回應。
 - **RCE 復現與跨工具傳播**（2026-05-23）：joernchen 揭露的 `startsWith` 解析缺陷經獨立復現，Cursor 與 Continue.dev 存在同一缺陷（DevOps.com）。
@@ -1086,7 +1101,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### (5) 官方政策收緊
 
 > 2026-06 的官方政策收緊條目（Persona 年齡驗證、Bedrock 推論資料共享）見 [[topics/ai-agent-safety-archive#2026-06]]。
-> 2026-05 的官方政策收緊條目（Sandboxing 官方文件 2026-05-10、v2.1.136 安全機制 2026-05-09）已封存，重點見上方「2026-05 條目封存總結（技術彙整）」，原文見 [[topics/ai-agent-safety-archive#2026-05]]。
+> 2026-05 的官方政策收緊條目（Sandboxing 官方文件 2026-05-10、v2.1.136 安全機制 2026-05-09）重點見上方「2026-05 條目摘要（技術彙整）」，完整記錄見 [[topics/ai-agent-safety-archive#2026-05]]。
 > 「憑證安全」（2026-04-30）條目已遷移至 [[topics/ai-agent-safety-archive]]。
 
 ---
@@ -1162,26 +1177,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-09-18
 - **[📋 新增] WSJ 獨家／十餘家媒體：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其原始碼，獲 6,500 美元**：HN 討論質疑「入侵」標題誇大，稱系統照設計運作，詳見「## 技術彙整」
-- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：僅標題可用，觸發機制與修補時程未見報導，詳見「## 技術彙整」
+- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：觸發機制與修補狀態僅有媒體摘要、官方未載（2026-10-03 查證），詳見「## 技術彙整」
 - **[🛠️ 新增] Anthropic 官方：LSVP 放寬生醫專業人士的部分生物安全限制**：先以 Beta 開放已完成早期存取的機構，詳見「## 技術彙整」
 - **[📋 新增] Simon Willison：agent 自產的對話壓縮摘要可能藏有自我觸發的提示注入**：轉引 OpenAI 對齊團隊發現，未確認是否影響 Claude Code，詳見「## 技術彙整」
 - **[📋 新增，跨類別] Startup Fortune：剖析提示注入在 AI Agent 中的運作機制與新創企業中招原因**：未指名特定廠商，詳見「## 技術彙整」
 
 ### 2026-09-17
 - **[🔴 新增] Reddit：Fable 5.1 一句指令又刪除本地資料庫**：延續既有遞迴強制刪檔模式的最新一起，僅標題與截圖可用，詳見「## 技術彙整」
-- **[新增，技術細節不足] 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理**：Anthropic 等廠商懸賞合計 2 萬美元，攻擊手法細節未見報導，詳見「## 技術彙整」
+- **[新增，技術細節不足] 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理**：Anthropic 等廠商懸賞合計 2 萬美元，攻擊手法與修補狀態僅有媒體摘要、官方未載（2026-10-03 查證），詳見「## 技術彙整」
 
 > **中美 AI 工具信任對峙**（06-30～07-10：中國代理偵測程式碼、隱寫術指控、Alibaba/Meta 禁用、中國官方後門警示、Anthropic 首度否認）完整逐日時序已整合至 [[topics/safety-china-trust-dispute]]，此處不再重複條目，僅保留與本頁漏洞/提示注入主線相關者。
 
 ### 2026-09-15
-- **[❓ 待查證，新增] Reddit：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息**：單一貼文，CVP 機制細節未見報導，詳見「## 技術彙整」
+- **[新增，懸置標記見技術彙整] Reddit：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息**：單一貼文；2026-10-03 查官方 CVP 說明，後續 Issue 顯示非單一個案，詳見「## 技術彙整」
 - **[🌐 跨類別，新增] SitePoint：TypeScript 中防範 AI Agent Context Injection 教學**：通用防護教學，非 Claude 專屬，詳見「## 技術彙整」
 - **[🟡 產業對照，新增] TechCrunch：Anthropic 早期員工與前 METR COO 創業，開發約束失控 agent 方案**：僅標題可用，詳見「## 技術彙整」
 
 ### 2026-09-14
-- **[🔴 新增] Rescana：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證**：資安業者揭露具體攻擊鏈，惟正文技術細節未見報導，詳見「## 技術彙整」
-- **[🔴 新增，跨類別] Reddit 週熱門：Anthropic、Google、OpenAI 官方 GitHub Actions 預設範本同款 RCE 瑕疵**：三家 coding agent 官方 CI 範本同步中招，具體修補狀態未見報導，詳見「## 技術彙整」
-- **[🟡 產業對照，新增，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：僅標題可用，具體限縮措施未見報導，詳見「## 技術彙整」
+- **[🔴 新增] Rescana：攻擊者利用 Claude 從 180 萬個 Android App 大規模萃取憑證**：資安業者摘要；2026-10-03 查官方威脅情報報告：180 萬 APK 掃描由 TruffleHog 執行，Claude 角色為 API／token 與批次匯出工具，詳見「## 技術彙整」
+- **[🔴 新增，跨類別] Reddit 週熱門：Anthropic、Google、OpenAI 官方 GitHub Actions 預設範本同款 RCE 瑕疵**：三家 coding agent 官方 CI 範本同步中招，官方 advisories 未見對應條目（2026-10-03 查證），詳見「## 技術彙整」
+- **[🟡 產業對照，新增，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：2026-10-03 對上官方 06-09 起 30 天保留政策，詳見「## 技術彙整」
 
 ### 2026-09-13
 - **[📋 論述或情資通報，新增] CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法**：僅標題可用，具體事件內容未見報導，詳見「## 技術彙整」
@@ -1370,7 +1385,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 2026-07-01
 - **[CVE 披露] CVE-2026-55407：Anthropic buffa Rust Protobuf DoS 漏洞**：Endor Labs AI SAST 引擎首次發現並披露 CVE-2026-55407，Anthropic Rust protobuf 函式庫 buffa 的 unknown-field decoder 存在缺陷，攻擊者可透過 wire data 觸發約 22 倍記憶體放大（OOM），導致 DoS；HN score 5（Endor Labs：https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-zero-day-cve-2026-55407-buffa）。✅ 2026-08-10 查證：**已修補於 buffa 與 connectrpc 0.8.0**，加入可設定的單訊息 unknown-field 數量上限（預設 100 萬欄，開銷上限約 40 MB）；CVSS 4.0 評 6.3（Moderate），預設 `preserve_unknown_fields=true` 者受影響
 
-### 2026-06（封存總結）
+### 2026-06（摘要）
 
 - **提示注入取得完整系統控制**：Mozilla 0din 演示乾淨 GitHub repo 即可注入（06-28，Tom's Hardware），The Decoder 06-29 定性為「無驗證直接執行」，Cybernews／Developer Tech News／Korben 06-29～06-30 跟進，共四個第三方來源；Anthropic 當月未回應。
 - **在野濫用成規模**：OALABS 蜜罐取得逾 1,000 個攻擊 session 日誌、確認 14 家企業被入侵（06-20）；官方 MITRE ATT&CK 報告分析 832 個封鎖帳號（06-26）；阿里巴巴 25,000 假帳號、2,880 萬次模型交換的蒸餾指控經 CNBC 報導（06-26）。

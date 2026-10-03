@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-01"
 last_news_update: "2026-10-01"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 25
 attribution_count: 17
 attribution_last: "2026-10-01"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-01
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-01
 
 > **社群觀感分歧**（2026-10-01）
@@ -90,7 +90,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **快取讀取 $0.20 是降 60%**（Opus 5 為 $0.50），與牌價降 20% 分開看。
 - **HN 討論**（1,674 分，7 個來源同日交叉報導，2026-09-22）：屬互動量訊號，非能力數字。
 - **社群反應正向但屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)稱程式碼品質與可控性優於前代；另兩則（[複現實測](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)、[原展示貼文](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)）以約 $3–4 API 花費重現 Opus 5.5 專案。三則皆單則貼文、0 留言、無測試方法或量化指標，不構成獨立複測。
-- **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；貼文未附測試方法或量化指標、0 留言，屬主觀觀感回報，不構成已驗證的能力下降，與上一則正向回饋並陳不選邊。
+- **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；未附測試方法或量化指標、0 留言，屬主觀觀感，不構成已驗證的能力下降；同類主張累計見 [[topics/code-quality-decline]]。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
 
@@ -113,10 +113,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 跟它怎麼說話
 
-官方 prompting／migration 指南尚無可讀內容（2026-09-30）——Reddit 同日出現官方指南貼文，但原文僅標題可讀，無具體 prompt／effort 建議可填。
-%% 維運備忘：2026-09-30 Reddit 出現「Claude Opus 5.5 official prompting guide」貼文（0 留言，僅標題可讀，無正文），待查證官方 prompting／migration 一手文件後填寫本節 %%
+官方 prompting 指南：[Prompting Claude Opus 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（查證 2026-10-03）。
 
----
+- **effort 預設 `medium`（Opus 5 是 `high`），且同一級它比 Opus 5 想更多**：官方測試 `medium` 追平或超過 Opus 5 的 `high`，而沿用 Opus 5 的 effort 值換到的是更長的回合與更多 output token；要少想就降級，官方明說降 effort 比用提示叫它少想可靠。
+- **要刪系統提示裡「think carefully before answering」這類句子**：模型自己決定想多久，官方在聊天產品實測刪掉該行讓回覆更早開始、品質無明顯下降。
+- **原本跑 `thinking: disabled` 的整合要改從 `low` 起量，並刪掉「把推理寫進回覆」當替代品的指令**：那類提示會吃 `reasoning_extraction` 拒答，改設 `display: "summarized"` 從 thinking 區塊讀。
+- **非監督 agent 迴圈要把「只有文字、沒有 tool call」的回合當成報告而不是完工**：它會邊做邊回報、而那種回合的 `stop_reason` 是 `end_turn`，把它當結束的 harness 會停在半路；官方建議在系統提示末端點名你不要的那幾種提早收手。
+- **使用者貼進來的文字要用帶同一組隨機 id 的 `<pasted_content>` 標記並在系統提示說明**：它對間接注入的抵抗力強過任何前代 Opus，但貼上內容這一塊要靠這個標記才吃得到。
+
+**表下細節**
+
+- 與相鄰世代相反的那一邊：本頁要**刪**「think carefully」，[[entities/fable-5]] 則要**加**「你在自主執行」那段；effort 旋鈕的通用建議見 [[topics/model-comparison]]「Effort dial 細節」。
+- 從 Opus 5 升上來的四項破壞性 API 變更不在本節，走官方 [migration guide](https://platform.claude.com/docs/en/models/opus-5-5/migration-guide#migrating-from-claude-opus-5)。
 
 ## 核心功能
 

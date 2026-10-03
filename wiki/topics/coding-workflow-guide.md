@@ -3,15 +3,15 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-28"
+last_updated: "2026-10-03"
 last_news_update: "2026-09-28"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 33
 attribution_count: 4
 attribution_last: "2026-09-28"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-09-28
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-28
 
 > **本頁在回答什麼**（重寫 2026-08-08）
@@ -44,16 +44,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 本週 coding 亮點
 
-- **Opus 5.5 成為新預設 Opus**——v2.1.280 起 Pro/Max/Team/Enterprise/API/Bedrock/Vertex 不動設定也會換（Foundry 除外），選型表隨之換代，升上去後 thinking 無法再關閉，見 [[entities/opus-5-5]]
-- **Agent tool 平行 subagent 上限明文為 20 路**（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 可調），與 dynamic workflows 16/256 路、Managed Agents 20 路是三個不互通數字；worktree 隔離兩種下法一併補齊，見 [[topics/anthropic-agent-stack]]
-- **skillcrossroads 稽核 216 個公開 skill**：69% 的 description 觸發條件判定不可靠；另稽核 87 個 subagent，57% 未宣告 tools 清單，見 [[topics/community-tech-patterns]]
-- **三個決策表首選換了門牌**——Harness→ness、Omar→omar-os、Cockpit→episko，舊網址目前仍轉址但作者關閉後即失效，見 [[topics/community-tech-tools]]
-- **AGENTS.md 讀不到成因查明**：關閉 telemetry 時載入器卡在遠端 feature flag 且無警告，官方已標記修復，見 [[entities/claude-code]]
-- **GitSpawn `.git` 設定檔攻擊仍有一條路徑未修補**——限定以保留 `.git` 目錄形式接收 repo（壓縮包／USB／同步資料夾），一般 `git clone` 不觸發，見 [[topics/ai-agent-safety]]
-- **Claude Code 103 秒內刪除 48,000 個檔案（單一來源，第 4 起同型事件）**——自然語言刪除指令仍是高風險操作，見 [[topics/ai-agent-safety]]
-- **本機／SSH session 起改讀 claude.ai 帳號啟用的 skills/plugins**，不再只讀本機路徑，跨裝置維護要分清楚讀哪一份，見 [[entities/claude-skills]]
-- **花費估不準新增一段**：官方 `/usage` 只拆到 skill／子代理／MCP 層級，給不出單次請求實際金額，見 [[topics/official-community-gap]]
-- **FrontierAgent：免強制 Docker 的多 agent CLI 框架**——ReAct／Agent Team 雙模式，本週治理類工具星數增量最大（+900），見 [[topics/community-tech-patterns]]
+- **Sonnet 5.5 取代 Sonnet 5 成為 API 預設 Sonnet**——牌價維持 $2/$10；Claude Code CLI 是否同步預設官方未載，另有未證實回報稱升級後有靜默失敗情境，升前先跑回歸，見 [[entities/sonnet-5-5]]
+- **v2.1.285 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 與 `claude --desktop`**，企業管理者可限制員工可用的 API 供應商，沙盒化 CI 能直接關掉 WebFetch 外連，見 [[entities/claude-code]]
+- **`CLAUDE_CODE_FORK_SUBAGENT=0` 擋不住子代理遞迴**——issue #68619 標 CRITICAL，遞迴逾 50 層，官方未給修復時程，重度編排者先自行加層數上限，見 [[entities/claude-code]]
+- **1M context 下三種機制會靜默清掉工具結果**（issue #42542，官方未回應），長任務無法確認資料是否還在，見 [[entities/claude-code]]
+- **快取命中倍率開始分檔**：Opus 5.5 ×0.05、Fable 5.1／Mythos 5.1 ×0.025、其餘 ×0.1；Fast mode 僅三款 Opus、僅第一方 API，舊試算表不能沿用，見 [[entities/pricing]]
+- **走 Bedrock 與第一方 API 不是功能對等**：Bedrock 無 50% Batch 折扣，compaction、context editing、task budgets 皆不可用，見 [[topics/anthropic-business]]
+- **anthropic-sdk-python 兩版新增**：v1.9.0 `between_tools` thinking type、v1.11.0 可 API 查詢支出限額，見 [[entities/claude-code]]
+- **把團隊工程規範封裝成 skill**：Serokell 的具名案例（r/ClaudeCode、r/ClaudeAI 同日），理由是 agent 懂語法但不懂團隊慣例；單一案例，見 [[topics/community-tech-patterns]]
+- **本週新出的記憶類工具只有星數或單一討論**：agent-memory、deja-vu、hippo-memory 皆無第三方採用回饋；Jevmem 遭質疑「只標過時不刪」會累積過期 context，見 [[topics/community-tech-tools]]
+- **彼此沙盒隔離的 agent 仍可經共用套件快取互相影響**（Matthew Green 觀點，Simon Willison 引述，原文細節未見），見 [[topics/ai-agent-safety]]
 
 ---
 
@@ -73,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 動手前要不要先寫規格、該拆多細               | [第 3 段](#3-規劃改動-先寫規格還是直接開工已深查)            |
 | 怎麼讓它照專案規矩寫，它老是不聽              | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)     |
 | 怎麼 code review，太貴怎麼辦          | [第 5 段](#5-code-review-該用哪個入口怎麼審得起已深查)        |
-| 改動之後怎麼讓 CLAUDE.md 跟上          | [第 7 段](#7-改動之後怎麼讓既有規則跟上社群面待補) |
+| 改動之後怎麼讓 CLAUDE.md 跟上          | [第 7 段](#7-改動之後怎麼讓既有規則跟上已補庫內證據) |
 | 規則怎麼不腐爛                       | [第 8 段](#8-規則怎麼不腐爛已補庫內證據)          |
 | 怎麼讓它照專案規矩寫、錯誤何時才被攔 | [第 4 段](#4-實際動手寫-錯誤何時被攔已補庫內證據) |
 | 測試策略要不要跟著變、上線前檢查什麼 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你已補庫內證據) |
@@ -94,13 +94,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [4 實際動手寫](#4-實際動手寫-錯誤何時被攔已補庫內證據)                          | ✅ LSP、security-guidance | 🟡    | 新規則該留 CLAUDE.md 還是升級成 hook，無事前判準 |
 | [5 Code review](#5-code-review-該用哪個入口怎麼審得起已深查)             | ✅ 六個入口，含明價              | 🟢    | 分層審查省多少，無人量測           |
 | [6 測試與上線](#6-測試與上線-怎麼讓它自己驗完再交給你已補庫內證據)                            | ✅ 驗證階梯四級                | 🟢    | 用了 Claude Code 之後測試涵蓋率／型態該不該變，社群無解 |
-| [7 讓 CLAUDE.md 跟上改動](#7-改動之後怎麼讓既有規則跟上社群面待補) | ⚠️ 有掛點無判準               | 🟡    | 什麼改動算讓規則過期             |
+| [7 讓 CLAUDE.md 跟上改動](#7-改動之後怎麼讓既有規則跟上已補庫內證據) | ⚠️ 有掛點無判準               | 🟡    | 什麼改動算讓規則過期，官方與社群皆無判準 |
 | [8 長期維護](#8-規則怎麼不腐爛已補庫內證據)                      | ⚠️ 只診斷設定                | 🟡    | 規則是否仍與現狀相符，無機制         |
 | [9 除錯](#9-除錯-怎麼知道它真的做了已補庫內證據)                             | ✅ 驗證階梯＋失敗模式命名           | 🟢    | 評估者不跑工具，看不到 Claude 沒說的 |
 
 **兩欄怎麼讀。** 官方欄：✅ 有明文機制／⚠️ 有但不完整／❌ 無。「能照著做嗎」是官方加社群之後、讀者實際拿不拿得到可執行答案：🟢 拿得到／🟡 部分拿得到／🔴 拿不到。評的是同一件事，九段用同一把尺——所以第 5 段官方雖厚仍有「缺什麼」，第 6 段社群雖空但官方夠用仍是 🟢。
 
-⚠️ **證據深度不平均，讀「缺什麼」欄前先看這段。** 第 2、3、5 段做過專題查證（社群、學術、GitHub、HN 多輪交叉，含反證與量測數字），標 `[已深查]`；**第 7 段目前只掃過官方文件**，社群面未查，標 `[社群面待補]` 並在段首列出缺什麼。第 9 段（2026-09-02）、第 4 段（2026-09-03）、第 6 段（2026-09-12）與第 8 段（2026-09-26）的社群面標 `[已補：庫內證據]`，來自既有 `community-tech-patterns`／`community-tech-tools` 條目的萃取，非新一輪查證——第 8 段查到的兩個機制（Patina retro loop、語意層漂移 CI 測試）皆只是沾邊，核心缺口仍未解，見該段「還沒解掉的那一塊」。第 1 段官方面查得完整，社群面只有 14 個 repo 的一手觀察。
+⚠️ **證據深度不平均，讀「缺什麼」欄前先看這段。** 第 2、3、5 段做過專題查證（社群、學術、GitHub、HN 多輪交叉，含反證與量測數字），標 `[已深查]`；九段的社群面皆已補齊，無剩餘 `[社群面待補]`。第 9 段（2026-09-02）、第 4 段（2026-09-03）、第 6 段（2026-09-12）、第 8 段（2026-09-26）與第 7 段（2026-10-03）的社群面標 `[已補：庫內證據]`，來自既有 `community-tech-patterns`／`community-tech-tools` 條目的萃取，非新一輪查證——第 7、8 段查到的機制（CodeAlmanac `garden`、Patina retro loop、語意層漂移 CI 測試）皆只是沾邊，核心缺口仍未解，見第 8 段「還沒解掉的那一塊」。第 1 段官方面查得完整，社群面只有 14 個 repo 的一手觀察。
 本欄的限制：本庫日報收錄自 2026-04-25 起，來源以 HN／Reddit／dev.to／GitHub 與官方管道為主；更早的官方發布（如 2026-03-09 的 Code Review 功能）結構性收不到，本頁官方部分改以直接查證官方文件補足，查證日記於各段。
 
 **串起來的樣子：**
@@ -483,11 +483,9 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ---
 
-## 7. 改動之後，怎麼讓既有規則跟上　`[社群面待補]`
+## 7. 改動之後，怎麼讓既有規則跟上　`[已補：庫內證據]`
 
 **官方給了掛點，但沒給判準。**
-
-⚠️ **本段只掃過官方文件，社群面未查**——有沒有人做出「什麼改動算讓規則過期」的判準或工具，尚未查證。
 
 **常撞到的問題**：文件與現實脫節，但沒人知道是什麼時候脫節的。
 
@@ -500,7 +498,14 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 **缺口 🔴**：判準無人談——「改到什麼程度才算讓既有規則過期」，官方與社群都沒有。掛點有了，觸發條件要自己定義。
 
-社群這邊只有 CodeAlmanac 一個案例（07-22，HN 54 分，YC S26），把 codebase wiki 做成隨對話自動更新，取代手動 `MANUAL.md`／`DESIGN.md`；是工具不是規約，無第二個獨立案例佐證。
+**社群面（2026-10-03 補，庫內證據）：** 全庫沒有任何一個把「什麼改動算讓規則過期」說成判準的案例，只有三種沾邊做法：
+
+- **隨對話增量改文件**：CodeAlmanac（07-22，HN 54 分，YC S26）從對話紀錄與 diff、PR 增量寫入 codebase wiki，`garden` 指令修過期、斷鏈、重複與無據主張（2026-09-12 查證，見 [[topics/llm-wiki-pattern]]）。
+- CodeAlmanac 以對話為觸發，不是以程式碼改動為觸發；本庫 08-29 因 30 天無後續採用回饋已自 [[topics/community-tech-tools]] 移除追蹤。
+- **定期回顧**：Patina 的 retro loop 與語意層漂移 CI 測試，見第 8 段。
+- **記憶工具的過期處理**：Jevmem 發布後被留言質疑，「舊記錄只標過時不刪」會讓 context 逐步混入過期資訊（HN，2026-09-26，單一留言意見）；hippo-memory 走相反設計，標記某則記憶為錯後不再出現、新事實覆蓋舊事實（GitHub 769 星，僅星數佐證）。兩者處理的是 agent 記憶，不是 CLAUDE.md 條文。
+
+訊號強度：皆單一團隊或單一討論，無第二個獨立案例。官方的兩個掛點仍是唯一可直接用的機制，觸發條件要自己定義。
 
 ---
 
@@ -584,7 +589,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 官方文件導讀：想深入該讀哪一頁
 
-官方文件共 185 頁（完整索引在 [llms.txt](https://code.claude.com/docs/en/llms.txt)，原文已失效），跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
+官方文件共 185 頁（完整索引在 [llms.txt](https://code.claude.com/docs/llms.txt)，原文已失效），跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
 
 - [prompting-claude-opus-5-5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（2026-09-28 發布，HN 187 分）—— Opus 5.5 相對 Opus 5 的行為差異與因應寫法：effort calibration、無人值守／多代理任務的進度回報、安全拒答、frontend 設計、貼上文字處理等。
 - [large-codebases](https://code.claude.com/docs/en/large-codebases) —— **大 repo／monorepo 該怎麼設定**。全站唯一專門講這件事的一頁，含可貼上就用的 `settings.json`。

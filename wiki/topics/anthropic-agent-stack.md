@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-23"
 last_news_update: "2026-09-23"
 status_main: "ongoing"
-days_since_news: 9
+days_since_news: 10
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 9
+days_since_news_subtree: 10
 inbound_links: 12
 attribution_count: 4
 attribution_last: "2026-09-10"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-09-23
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-23
 
 > **這頁在回答什麼**
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 八個積木：為什麼出、讓你多做出什麼
 
-按你多半會撞上的順序排。指令與 prompt 都取自官方文件，可以直接貼上改字。社群拿這些積木玩出什麼配置，逐則記錄在 [[topics/community-tech-patterns]]，本頁不重述。
+按你多半會撞上的順序排。指令與 prompt 都取自官方文件，可以直接貼上改字。社群拿這些積木玩出什麼配置，逐則記錄在 [[topics/community-tech-patterns]]，現成的編排器與監看工具見 [[topics/community-tech-tools]]，本頁不重述。
 
 ### 一、`/goal`：讓它自己跑到條件成立
 
@@ -246,7 +246,7 @@ claude self-hosted-runner
 3. **把編排寫成程式**（dynamic workflows）——**依 script 排定的依賴順序流動**：上游 agent 的輸出直接成為下游的輸入，也能讓獨立 agent 對抗式互審彼此的發現再回報。判斷式：**這個編排下週還會照原樣再跑一次嗎？** 會就寫成 workflow 存起來，不會就讓 Claude 臨場派 subagent。
 4. **分身開始互相講話**（`ListAgents`＋`SendMessage`、agent teams）——**點對點傳訊**：只傳純文字，**傳訊層自身仍無編排**，要排先後仍得回到第三層。
 5. **跨機器與跨工具**（self-hosted runner、MCP 隧道〔研究預覽，須申請〕、經 Remote Control 對另一台機器或網頁版 session 開話，v2.1.225 起）——跨機器的協定級互通（A2A）仍缺席。
-6. **跨時間：狀態不隨 session 消失**（Managed Agents 的持久記憶〔beta〕與 Dreaming〔研究預覽，須申請〕；本機側的 `claude --resume` 與 subagent 續用）——**agent 與過去的自己互動**。
+6. **跨時間：狀態不隨 session 消失**（Managed Agents 的持久記憶〔beta〕與 Dreaming〔研究預覽，須申請〕；本機側的 `claude --resume` 與 subagent 續用）——**agent 與過去的自己互動**；社群把這層做成可讀知識庫的路線見 [[topics/llm-wiki-pattern]]。
 
 **穿過所有層的一件事：hooks。** `PreModelSwitch`／`PostModelSwitch`（v2.1.251）這類事件讓你在既有架構的接縫上插手——攔截、確認或標註，它本身不是新的一層。判斷式：**你要的是多一個 agent，還是要在現有 agent 的某個動作前後插一句話？** 後者用 hook，別開分身。
 

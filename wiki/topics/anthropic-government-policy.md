@@ -3,21 +3,21 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-02"
+last_updated: "2026-10-03"
 last_news_update: "2026-10-02"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 113
 attribution_count: 160
 attribution_last: "2026-10-02"
 top_source: "google-news"
 pending_count: 15
-pending_overdue: 1
-pending_next_review: "2026-10-03"
+pending_overdue: 2
+pending_next_review: "2026-10-04"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-02
 
 > **最新動態**（2026-10-02）
@@ -107,8 +107,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **中國線**：08-31 官方表態不滿、設條件；09-02 官媒指控雙重標準，並陳不合併。併入阿里巴巴蒸餾指控（滿 90 天為 2026-11-08）與 Moonshot 蒸餾指控。08-13 後見「## 時序」；07-11 前見 [[topics/safety-china-trust-dispute]]。
 - **09-11 中國線新增**：Anthropic 威脅情報報告指控中國 AI 實驗室非法蒸餾，稱 Moonshot 暗中導流用戶請求至 Claude；與 07-22 指控不同（挪用非訓練），實驗室名單未見報導。**2026-09-26 查證**：Moonshot 否認、稱將提告已報警；商務部稱美方指控無據（[BeInCrypto](https://beincrypto.com/kimi-k3-moonshot-police-report-distillation/)）。
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。
-- **09-15 中國線新增**：Rescana 發布事件分析報告，稱七家中國 AI 實驗室對 Claude 發動「規模化」模型蒸餾攻擊；與既有 06-10 阿里巴巴、07-22 Moonshot 指控性質相近，惟本則首見具名資安機構（非 Anthropic 自陳）對多家實驗室的技術分析。
-  - ❓ **待查證**（標 2026-09-15｜查 Rescana、蒸餾攻擊）：七家實驗室的具體名單、攻擊技術手法、是否經 Anthropic 官方證實均未見報導。
+- **09-15 中國線新增**：Rescana 發布事件分析報告，稱七家中國 AI 實驗室對 Claude 發動「規模化」模型蒸餾攻擊；與既有 06-10 阿里巴巴、07-22 Moonshot 指控性質相近，Rescana 為二手分析；2026-10-03 查得 Anthropic 官方 2026-09 威脅情報報告自有蒸餾專節，見下方官方查證。
+  - **2026-10-03 官方查證**：Anthropic 官方 [2026-09 威脅情報報告](https://www.anthropic.com/threat-intelligence-report-september-2026)設「Illicit distillation」專節，並自述除一起蒸餾案外，所有濫用案例均未涉 Fable／Mythos 級模型
+  - **媒體稱**（The Hacker News 等稱「Anthropic 表示」）：七家中國實驗室為 Alibaba、Moonshot AI、DeepSeek、Zhipu（Z.ai）、MiniMax、Xiaomi、SenseTime，2026-05～07 約 1.9 億次交換（Alibaba 約 1.51 億、Moonshot 逾 2,300 萬、Zhipu 6 月 10 天逾 300 萬）
+  - **手法（媒體稱）**：詐欺帳號與代理網路；DeepSeek、小米、Moonshot 將自家模型與用戶的對話餵給 Claude 並以回應作訓練資料
+  - **來源限制**：官方專節正文因擷取受限未能逐字取得，名單與數字為搜尋摘要；Rescana 為二手分析，不再作為來源
 - **09-22 中國線新增**：Gizmodo（經 Google News）報導中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 先前指控兩者暗中轉發用戶請求給 Claude（見上方 09-11 指控）。
   - ❓ **待查證**（標 2026-09-22｜查 Gizmodo、DeepSeek、Moonshot、中國調查）：具體調查機關、進度與兩家公司官方回應均未見報導，僅 Google News 轉載層級可用。
 - **查證更新**（查證 2026-09-20）：**Anthropic 官方已表態，惟阿里巴巴官方仍未回應**。Anthropic 發言人向美國參議院銀行委員會致函，稱打擊非法蒸餾需政府與產業協作（[CNBC](https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html)）
@@ -272,12 +275,12 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-09-22 | 🌐 | Tom's Hardware：反壟斷合謀訴訟補上原告身分——四名訂閱戶指控四家業者協議放慢 AI 發展速度以減少消費者從付費訂閱中獲得的價值 | 延續 09-19 已記錄提告，補上原告身分（消費者集體訴訟）與具體主張，求償範圍仍未見報導，詳見「## 時序」09-19 懸置標記（已標訊） |
 | 2026-09-21 | 🌐 | Politico（經 Hacker News，11 分）：長文分析白宮力推 AI 發展與 Anthropic 主張監理間的緊張關係，引述涉入其中的白宮官員談「問責」為監理底線 | HN 留言解讀為政治卸責語言（CYA）；具體政策內容與官員身分僅標題/摘要可用，非具名政府動作，不入「## 現在有哪幾條線在動」 |
 | 2026-09-19 | 🏛️ | Mashable（經 Google News）：聯邦法官裁定 Reddit 對 Anthropic 資料爬取／授權訴訟大部分可繼續進行 | 具體裁定理由、被駁回部分與下一步程序僅標題可用；與下方反壟斷合謀訴訟屬不同案件，不合併 |
-| 2026-09-19 | 🏢 | The Independent 反壟斷合謀提告報導提及：Anthropic 執行長曾承認跨實驗室協調步調可能觸及反壟斷問題，稱若美國政府居中協調或至少促成對話願提供協助 | 該發言出處與是否即訴狀引用內容未見報導；原告身分與求償範圍仍未見報導，詳見「## 時序」09-19 ❓ 待查證 |
+| 2026-09-19 | 🏢 | The Independent 反壟斷合謀提告報導提及：Anthropic 執行長曾承認跨實驗室協調步調可能觸及反壟斷問題，稱若美國政府居中協調或至少促成對話願提供協助 | 該發言出處與是否即訴狀引用內容未見報導；原告身分與求償範圍仍未見報導，詳見「## 時序」09-19 條目的懸置標記 |
 | 2026-09-19 | 🌐 | NY Post：業界人士稱 OpenAI 與 Anthropic 誇大資安事件以促使聯邦監管、變相排擠未來競爭者 | 單一媒體匿名業界說法，未經證實；技術面完整記錄見 [[topics/ai-agent-safety#技術彙整]] |
 | 2026-09-19 | 🌐 | The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀 | 具體原告身分、訴狀內容與求償範圍僅標題可用；是否與 09-15 反壟斷豁免提案為同一爭議延伸未見報導，不逕自合併 |
 | 2026-09-16 | 🌐 | CNBC 質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力問題 | 延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮；具體評估機構人選未見報導 |
 | 2026-09-15 | 🏢 | Anthropic 與 OpenAI 提出 AI 安全反壟斷豁免提案，擬自行提名風險評估機構；Nvidia CEO 黃仁勳於 Dreamforce 公開反對，稱「完全沒必要」 | 提案內容與豁免範圍僅標題可用；黃仁勳並與 Anthropic、OpenAI 執行長在 AI 安全整體立場上公開分歧 |
-| 2026-09-15 | 🌐 | Rescana：七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊，發布事件分析報告 | 延續中國線既有蒸餾指控（阿里巴巴、Moonshot），首見具名資安機構對多家實驗室的系統性技術分析；僅標題可用 |
+| 2026-09-15 | 🌐 | Rescana：七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊，發布事件分析報告 | 延續中國線既有蒸餾指控（阿里巴巴、Moonshot），Rescana 是第三方轉述、非一手當事方，Anthropic 官方威脅情報報告另有蒸餾專節（2026-10-03 查證，見「## 現在有哪幾條線在動」中國線） |
 | 2026-09-14 | 🏛️ | Cybernews：Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士 | 延續 09-11 威脅情報報告系列揭露案例，見「## 現在有哪幾條線在動」中國線最後動態 |
 | 2026-09-12 | 🌐 | WSJ／Reuters／Guardian 等媒體：俄羅斯開發者疑似利用 Claude 打造能自主選擇目標的神風無人機 | 屬同一份威脅情報報告揭露案例，與既有 09-11 記錄的俄羅斯線（自動化調整惡意軟體規避防毒）為不同案例，同屬傳統武器研發領域 |
 | 2026-09-11 | 🏛️ | DefenseScoop：國防部傳計畫十月前將所有機密 AI 工作負載自 Anthropic 遷出 | 具體範圍、驅動因素與承接廠商僅標題可用；詳見「## 三個戰場」🪖 軍事合約段落，商業投資人意涵見 [[topics/anthropic-business]] |
@@ -504,7 +507,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - **[🏢] The Independent：反壟斷合謀提告報導提及 Anthropic 執行長曾承認跨實驗室協調步調可能觸及反壟斷問題**：稱若美國政府居中協調或至少促成對話願提供協助，發言出處未見報導，詳見「## 攻防紀錄」
 - **[🌐] NY Post：業界人士稱 OpenAI、Anthropic 誇大資安事件以促使聯邦監管、排擠競爭者**：單一匿名說法，未經證實，技術面見 [[topics/ai-agent-safety#技術彙整]]，詳見「## 攻防紀錄」
 - **[🌐] The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀**：三媒體同日報導，具體原告身分與訴狀內容僅標題可用；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否互為因果，報導未載，本頁不代為推論，詳見「## 攻防紀錄」
-  - ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、SpaceXAI｜訊 2026-09-22）：原告身分已補（Tom's Hardware 09-22：四名訂閱戶消費者集體訴訟，指控放慢 AI 發展以減少付費訂閱價值），訴狀完整主張與求償範圍仍未見報導
+  - ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、SpaceXAI｜訊 2026-09-22｜複 2026-10-17）：原告身分已補（Tom's Hardware 09-22：四名訂閱戶消費者集體訴訟，指控放慢 AI 發展以減少付費訂閱價值），訴狀完整主張與求償範圍仍未見報導（2026-10-03 依日報複查：09-23～10-02 日報無後續，未查官方／法院文件）
 
 ### 2026-09-16
 - **[🌐] CNBC：質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力**：延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮，具體人選未見報導，詳見「## 攻防紀錄」
@@ -512,7 +515,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-15
 - **[🏢] Anthropic／OpenAI 提出 AI 安全反壟斷豁免提案，擬自行提名風險評估機構；Nvidia CEO 黃仁勳於 Dreamforce 公開反對，稱「完全沒必要」**：提案內容與豁免範圍僅標題可用；黃仁勳並與 Anthropic、OpenAI 執行長在 AI 安全整體立場上公開分歧，詳見「## 攻防紀錄」
-- **[🌐] Rescana：七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊，發布事件分析報告**：延續中國線既有蒸餾指控（阿里巴巴、Moonshot），首見具名資安機構對多家實驗室的技術分析，僅標題可用，詳見「## 現在有哪幾條線在動」中國線、「## 攻防紀錄」
+- **[🌐] Rescana：七家中國 AI 實驗室對 Claude 發動規模化模型蒸餾攻擊，發布事件分析報告**：延續中國線既有蒸餾指控（阿里巴巴、Moonshot），Rescana 為二手分析，官方威脅情報報告另有蒸餾專節（2026-10-03 查證），詳見「## 現在有哪幾條線在動」中國線、「## 攻防紀錄」
 
 ### 2026-09-14
 - **[🏛️] Cybernews：Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士**：延續 09-11 威脅情報報告系列揭露案例，詳見「## 現在有哪幾條線在動」中國線、「## 攻防紀錄」

@@ -4,22 +4,22 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-02"
+last_updated: "2026-10-03"
 last_news_update: "2026-10-02"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 114
 attribution_count: 625
 attribution_last: "2026-10-02"
 top_source: "github-issues"
-pending_count: 23
+pending_count: 24
 pending_overdue: 4
 pending_next_review: "2026-10-04"
-pending_signalled: 1
+pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-02
 
 > **最新動態**（2026-10-02）
@@ -70,12 +70,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 流程——終端機關閉 session 後，桌面版 `/resume` 選取該 session 即可接續同一對話（非複本），`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
 - **官方文件更新**（2026-09-19）：Claude Code 桌面版新增 Thinking／Verbose 兩種 Transcript 檢視模式——Thinking 讓推理過程展開、工具呼叫仍維持摺疊；Verbose 用於除錯，顯示更多細節（[原文](https://code.claude.com/docs/en/desktop.md)）。
-- ❓ **待查證**（標 2026-09-18｜查 claude-projects、Claude Code Projects｜複 2026-10-02）｜**Claude Code Projects 進入 Beta**（[原文](https://code.claude.com/docs/en/claude-projects.md)）：六家科技媒體同日報導雲端多 agent 協調工作區；本機能力、用量衝擊、與 [[topics/anthropic-agent-stack]] 積木關係皆未經原文查證。
+- **Claude Code Projects 進入 Beta**（[官方文件](https://code.claude.com/docs/en/claude-projects.md)，查證 2026-10-03）：Pro、Max 公開 beta、逐步開放，先從用過雲端 session 且在 claude.ai chat／Cowork 沒有既有 projects 的帳號開始，Team／Enterprise 尚未提供。
+- Projects 運作：一個專案是一段持續對話，Claude 當協調者、每個任務開一條 thread（多為雲端 session，必要時可經 Remote Control 改派到自己的電腦）；用量計入與其他 Claude Code session 相同的方案額度且耗得更快，每天最多 200 個新 thread。
+- 六家科技媒體 2026-09-17 同日報導；09-30 r/ClaudeCode 貼文稱已對「擁有既有 projects 的 Max 用戶」開放，與官方文件的開放順序（先從沒有既有 projects 的帳號）不一致，以官方為準、單一貼文未獨立證實。
+- 與 [[topics/anthropic-agent-stack]] 積木的關係官方文件未專文論述。
 - **官方文件更新**（2026-09-17）：終端機 session 載入 claude.ai 帳號 skills/plugins——本機讀個人 `~/.claude/skills/`，雲端改讀帳號設定，SSH 讀本機路徑（[原文](https://code.claude.com/docs/en/desktop.md)）。
   - 與同日 [[entities/cowork|Cowork／Chat 合併]] 同屬帳號統一方向；同批移除 1 段舊版說明。
 - **官方文件更新**（2026-09-17）：「Use Claude Code with your Pro or Max plan」頁內容變動（23117→23163 字），移除「Choose a Claude plan」段；與同日方案與定價文件大改版（見下方「市場與競爭」與 [[entities/pricing]]）同批發生，具體異動內容未完整取得。
 - **官方文件更新**（2026-09-16）：桌面版新增雲端 session 接手本地工作、桌面推送分支、「Code in the web」組織開關等能力，為 09-14 已收錄功能的擴充，細節見 [[feature-radar]]（[原文](https://code.claude.com/docs/en/desktop.md)）。
-- ❓ **待查證**（標 2026-09-16｜查 Configure your agent、agent-sdk/configuration、[[topics/anthropic-agent-stack]]）｜**llms.txt 新增 Agent SDK 設定頁**：內容未知，待查證是否為新設定項。
+- **官方文件更新**（2026-09-16）：llms.txt 新增 Agent SDK「[Configure your agent](https://code.claude.com/docs/en/agent-sdk/configuration.md)」頁——依官方索引描述，說明如何組合 options 物件、設定 model、環境與上限，並指向各功能選項頁（查證 2026-10-03）；SDK 全貌見 [[topics/anthropic-agent-stack]]。
 - **官方文件更新**（2026-09-15）：桌面版新增 `/resume` 接續既有 CLI session；macOS 背景執行 computer use 時，Claude 只在已核准的 App 內作業，不再連帶隱藏其他視窗（行為變更）（[原文](https://code.claude.com/docs/en/desktop.md)）。
   - diff／終端機等面板可拉出成獨立視窗；同時移除 3 段舊版說明，含舊版 hide-windows 行為描述與 `--resume`／`--continue` 對照表列。
 - **官方文件更新**（2026-09-14）：桌面版文件新增雲端 session 可同時掛載多個 repository（選擇雲端環境後點擊「+」新增），以及 `disableMobileSimulatorTools` 設定旗標，可封鎖 Claude 控制與擷取 iOS 模擬器裝置的工具（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -91,10 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-10-15）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：單一來源、原文無摘要，產品形式與正式性未見官方佐證。
-- ❓ **待查證**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-01）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**：僅標題可用，產品形式與適用方案未知。
-- ❓ **待查證**（標 2026-09-15｜查 Claude for Excel、Claude for Word｜複 2026-09-29）｜**5 份官方文件同日移除 Claude for Excel／Word／PowerPoint／Outlook／M365 整合段落**：同批新增 Salesforce in Claude（beta）公告，是否代表該批整合已下架尚未見官方佐證。
+- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-17）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
+- 媒體為 BleepingComputer、gHacks、TechRepublic；該 Money 分頁可連結銀行帳戶並詢問支出與計畫，多數用戶尚未開放。
+- 查證 2026-10-03：anthropic.com／support.claude.com 搜尋均未見官方公告，支援銀行、連結方式、適用方案與上線日皆未載。
+- **官方頁未見 Claude for Excel／Word／PowerPoint／Outlook 下架**（查證 2026-10-03）：[Claude for Microsoft 365](https://claude.com/claude-for-microsoft-365) 頁載明 Excel、PowerPoint、Word 在所有付費方案正式可用，Outlook 在所有付費方案 beta，無下架聲明。
+- support.claude.com 仍有獨立文章（[Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)、[Word](https://support.claude.com/en/articles/14465370-use-claude-for-word)）。09-15 五份文件移除相關段落的原因官方未說明，僅確認產品仍在架。
+- 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
 - ❓ **待查證**（標 2026-09-21｜查 Claude in Chrome、compliance｜複 2026-10-05）｜**Claude in Chrome 操作紀錄據稱開放企業合規團隊調閱（beta）**（MIXED Reality News，2026-09-21，僅標題）：存取方式與適用方案層級未見報導。
+- ❓ **待查證**（標 2026-10-03｜查 Cycode、MCP Python SDK、account takeover）｜**Cycode 揭露 Anthropic MCP Python SDK 帳號劫持漏洞**（Security Boulevard，2026-09-28，僅標題）：攻擊鏈、受影響版本與修補狀態均未見報導；安全面見 [[topics/ai-agent-safety]]。
 - **Anthropic 為 Claude Desktop 開發的「類 Slack」功能已確認為 Claude Code Projects**（查證日 2026-09-20）：TestingCatalog（2026-08-16）原始報導所稱「built-in Slack」，經比對官方文件（[Projects](https://code.claude.com/docs/en/claude-projects.md)，2026-09-18 進入 Beta）確認為同一功能——一個對話統籌多個雲端 session（thread），可平行執行並跨裝置查看，形式類似頻道／討論串而非傳統聊天室；惟目前為 Pro／Max 方案的個人帳號功能（逐步開放中），並非 Team／Enterprise 的多人協作聊天室，TestingCatalog 原文強調的「多人協作」定位官方文件尚未載明。
 
 其餘六則傳聞已於 2026-09-06 查證，結果見下方「歷史記錄」（五則結案、一則改列「已下架，原因未載」）。
@@ -148,8 +156,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 🛡️ 安全與隱私（16 條未修復、3 條已修復、1 條拒修、1 條❓）
 
-- 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews，2026-09-18）**：僅標題可用，觸發機制與修補時程未見報導。詳見 [[topics/ai-agent-safety]]
+- 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews，2026-09-18）**：媒體稱（2026-10-03 查證）Air Security 09-17 披露：插件 SHA 釘選未驗證檢出內容、加自動更新致零點擊，Claude Code 2.1.179 已修補。
+- 官方 v2.1.179 release notes 與 Security Advisories 未載，狀態待官方確認。詳見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**GitHub Actions 預設範本三家 AI coding agent 通用 RCE 缺陷（Reddit r/artificial 週熱門，2026-09-14）**：Claude Code、Gemini CLI、Codex 官方 Actions 範本皆傳有同款可致 RCE 的設定缺陷。
+- 2026-10-03 查 claude-code-action 與 claude-code 官方 Security Advisories 無對應「預設範本」條目；可能相關的 Novee Black Hat 披露見 [[topics/ai-agent-safety]]。
   - 僅見 Reddit 轉載，未附具名研究者、CVE 或官方回應，受影響版本與修復狀態未知，待原始來源或官方公告確認；跨產品面另見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**安裝安全警示：Google 搜尋廣告曾出現仿冒官方安裝包**（多家資安媒體同步報導）：假冒包植入 Trojan:Win32/Kepavll!rfn，透過 IElevator 機制竊取瀏覽器 Cookie 與機密憑證；**務必僅從官方來源安裝：`github.com/anthropics/claude-code`**。
 - 🔴 **未修復（08-31 補上量化數字，嚴重度升級）**｜**Opus 5 Auto Mode 安全機制遭具名研究者繞過，並有實際惡意程式碼利用案例（embracethered／Simon Willison／Cybernews／The Register，2026-08-27～08-31）**：資安研究者 embracethered（經 simonwillison.net 轉載，2026-08-27）公布可繞過 Claude Code Opus 5「Auto Mode」（低監督／高自動化預設權限模式）安全機制、誘使 agent 在未經授權情況下執行任意程式碼的攻擊手法；Cybernews（2026-08-28）補充至少一起實際遭惡意程式碼利用的在野案例，**在野案例中 Claude 曾嘗試修復被植入的惡意程式碼，但修復動作遭拒絕執行**。**08-31（embracethered／The Register）補上量化數字**：小樣本測試中僅需請 Claude Code 摘要一個網頁即可觸發，提示注入攻擊成功率達 **60–80%**，與 Anthropic 委託第三方針對 Auto Mode 的評測宣稱 **0%** 形成明顯落差（兩個數字並陳，不擇一；樣本規模與雙方評測方法論均未見完整揭露）。屬產品層安全（權限／沙箱繞過）問題，非模型層問題；官方尚未公開回應或就實測數字提出說明。**Tech Times／The Next Web（2026-09-01～09-02 轉載跟進）** 重申「僅需請 Auto Mode 摘要一個網頁即可劫持該次執行」並稱**官方目前尚無修復計畫**——此為媒體轉述而非 GitHub issue 上的官方明確回覆，故仍標 🔴 未修復而非 ⛔ 官方拒修。與既有 v2.1.216／v2.1.223 修補的 Auto Mode 繞過（見下方「已修復」條目）屬相關但不同批次的發現。事件完整分析見 [[topics/ai-agent-safety]]
@@ -157,7 +167,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：報導揭露惡意撰寫的 `.git` 設定檔（如 core.fsmonitor、hooks 相關設定）可誘使 Claude Code、Codex、Cursor 等多款 AI coding agent 在讀取該 repo 時執行攻擊者指定的程式碼，非 Claude Code 單一產品缺陷，而是多款 agent 共通的信任邊界問題（clone／開啟不明來源 repo 即可能觸發）；與上列 llms.txt 信任邊界問題同屬「開啟不明來源內容即可能觸發非預期執行」的同類攻擊面，但觸發媒介為 repo 內的 `.git` 設定而非網頁內容，暫分列追蹤；官方尚未回應。事件完整分析見 [[topics/ai-agent-safety]]
   - **v2.1.196 部分修補**；Manifold Security 2026-09-01 覆測，一條執行路徑仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，累積 199 則留言、27 個讚，2026-08-12 首見，2026-09-22 互動數更新，今日全站已知問題互動量最高）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
+- 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，2026-08-12 首見）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效。
+- 該 issue 累積 199 則留言、27 個讚（2026-09-22 互動數更新），為今日全站已知問題互動量最高；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
+- 官方說明（2026-10-03 查證，support.claude.com）載 CVP 核可綁定 organization ID、可提交申訴表單，未載 Claude Code 適用範圍，亦未列此為已知限制。
   - 09-15（Reddit r/ClaudeAI）一名資安研究者反映已通過 CVP 審核，Opus 5 仍持續標記其研究相關訊息，與本則模式相符；惟未載明是否發生於 Claude Code，僅供旁證。
 - 🔴 **未修復**｜**Claude Code 送出的 User-Agent 字串夾帶使用者真實 email（GitHub Issue #78431，經 Hacker News 轉發 38 分，2026-08-11）**：2026-08-22 直查 issue 頁確認——回報**已補上可重現條件**：v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，回報者標明為**回歸**（舊版本無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤。**但 issue 仍為 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復**。此前本頁對此事件真實性持保留態度——現已可確認事件為真、標籤獲官方分類，未解的是修復進度而非事件本身（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。
 - ✅ **已修復 v2.1.163**｜**Claude Code 與 Gemini CLI「Comment and Control」漏洞：GitHub Issue 內容可觸及 CI workflow secrets**（2026-08-07 報導，2026-08-10 查證）：研究團隊 Novee Security 在 Black Hat USA（08-05）發表「Comment and Control」技術，證實無倉庫權限的帳號僅需開一則 GitHub Issue，內容經 prompt injection 即可在 Claude Code Security Review、Gemini CLI Action、GitHub Copilot Agent 的 CI runner 上執行任意程式碼，進而取得 `GITHUB_TOKEN`、`ANTHROPIC_API_KEY` 等 workflow secrets；Claude Code 端漏洞另利用 Hugging Face 公開下載計數器作為側通道，逐字元外洩 API 金鑰。受影響版本 v0.2.54–v2.1.162，已於 **v2.1.163** 修復；Gemini CLI 端另一漏洞獲 CVSS 10.0 滿分評級。見 [The Hacker News](https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html)；事件細節另見 [[topics/ai-agent-safety]]

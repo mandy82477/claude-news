@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-01"
 last_news_update: "2026-10-01"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 13
 attribution_count: 4
 attribution_last: "2026-10-01"
@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-01
 
 > **最新動態**（2026-10-01）
-> GitHub issue #42542（28 則留言、11 個讚）指出 1M context session 下三種獨立機制（microcompact、cached microcompact、session memory compact）會在未通知使用者的情況下清除工具結果——「你看不出自己在不在 1M 上」的控制權缺口再添一筆：這次連「東西還在不在」都可能被靜默清除而不自知。官方尚未回應。
+> GitHub issue #42542（28 則留言、11 個讚）指出 1M context session 下三種獨立機制（microcompact、cached microcompact、session memory compact）會在未通知使用者的情況下清除工具結果——「你看不出自己在不在 1M 上」的控制權缺口再添一筆：這次連「東西還在不在」都可能被靜默清除而不自知。官方尚未回應，**社群也還沒提出可靠的規避做法**——所以現階段能做的只有「別預設工具結果會留到 session 結束」：重要的中間產物自己落地成檔案，不要只靠對話脈絡保存。
 
 ---
 

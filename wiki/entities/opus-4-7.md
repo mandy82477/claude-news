@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-09-05"
 last_news_update: "2026-08-27"
 status_main: "active"
-days_since_news: 36
+days_since_news: 37
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 36
+days_since_news_subtree: 37
 inbound_links: 12
 attribution_count: 5
 attribution_last: "2026-08-27"
@@ -27,10 +27,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Opus 4.7
 
 **類型：** model
-**狀態：** active（已被取代，第三階旗艦）
+**狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-04-24
-**最後更新：** 2026-09-05
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-08-27
 
 > **最新能力觀察**（2026-08-27，前代 Opus 4.6）

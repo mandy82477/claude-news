@@ -6,18 +6,18 @@ domain: "💼 商業"
 last_updated: "2026-10-02"
 last_news_update: "2026-10-02"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 13
 attribution_count: 56
 attribution_last: "2026-10-01"
 top_source: "google-news"
 pending_count: 33
-pending_overdue: 6
-pending_next_review: "2026-10-03"
+pending_overdue: 8
+pending_next_review: "2026-10-04"
 pending_signalled: 4
 staleness_exempt: null
 signal: "健康"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 **開始日期：** 2026-09-05
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-03
 **最後新聞更新：** 2026-10-02
 
 > ⚠️ **教學型事件研究，非投資建議**
@@ -61,7 +61,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Nvidia（NASDAQ: NVDA） | 既有投資人＋硬體供應商，傳洽談加碼投資 IPO；持股佔市值極小 | 09-12 Nvidia 洽談投資 IPO 一則 | 〰 未定 | Nvidia 官方證實／否認；公開版 S-1 揭露認購方名單 |
 | Novo Nordisk（NYSE: NVO） | 具名客戶，採用 Claude 加速藥物研發，合約範疇與費用未揭露 | 09-16 諾和諾德具名採用一則 | 〰 未定 | 合約範疇與費用披露；財報是否提及成本效益 |
 | JPMorgan Chase（NYSE: JPM） | 具名客戶，導入 Claude 並設 2,000 美元支出上限與額外安全管控 | 09-17 摩根大通導入一則 | 〰 未定 | 更多受監管金融機構是否跟進；上限適用範圍與席位數是否披露 |
-| Accenture（NYSE: ACN） | 09-19 獲選為 Anthropic 首位「內嵌評估者」，協助落實安全放緩提案，涉 10 億美元（資金流向未明） | 09-19 Accenture 內嵌評估者一則 | 〰 未定 | 10 億美元資金流向與用途披露；Accenture 財報是否揭露合作金額 |
+| Accenture（NYSE: ACN） | 09-19 獲選為 Anthropic 首位「內嵌評估者」，協助落實安全放緩提案，雙方各預期投入至少 10 億美元／五年、Anthropic 出資支應 Accenture 工作（官方稿，查證 2026-10-03） | 09-19 Accenture 內嵌評估者一則 | 〰 未定 | 合約條款與付款時程披露；Accenture 財報是否揭露合作金額 |
 | Microsoft（NASDAQ: MSFT） | Nscale 資料中心合約中與 Anthropic 並列最大兩家客戶（非投資人關係，此為獨立的算力採購方身分） | 09-21 Nscale 算力合約規模一則 | 〰 未定 | Anthropic／Microsoft 各自在 1,030 億美元合約中的拆分金額披露 |
 | Akamai（NASDAQ: AKAM） | 供應商，簽 7 年 116 億美元運算合約供應 CPU 算力，並發行認股權證讓 Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股 | 09-25 Akamai 算力合約一則 | 📈 正面，動到未來多年期營收承諾 | 下一份財報／10-Q 是否揭露此合約認列時程或上修全年指引 |
 | Broadcom（NASDAQ: AVGO） | 已啟動 600 億美元債務融資支應 Anthropic 晶片租賃，規模較 10-01「考慮中 420 億美元貸款」擴大，循環投資模式與 07-22 AMD、09-02 Nvidia-Lambda 同屬一類 | 10-01 開線、10-02 第 2 則 | ⚖️ 兩面，交易落地機率上升 vs 槓桿同步墊高 | 600 億美元債務融資是否完成定價發行、資金是否綁定晶片採購合約 |
@@ -190,9 +190,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **下一個催化劑**：官方定价頁補齊「哪個方案對應哪一階梯報價」的詳細對照表；下一份財報或 S-1 是否揭露分層定价對整體 ARPU 的實際影響。
 
-**你的選項**：(a) 什麼都不做，方案對照細節未揭露前無法判斷淨效果方向；(b) 現有 API 用量計費的讀者，比對自己方案的實際帳單費率，確認落在哪一階梯。
+**你的選項**：(a) 什麼都不做，方案對照細節未揭露前無法判斷淨效果方向；(b) 現有 API 用量計費的讀者，比對自己方案的實際帳單費率，確認落在哪一階梯；換模型實付差多少見 [[topics/model-comparison]]。
 
-**一課｜牌价未变结构可能已变**
+**一課｜牌價未變，結構可能已變**
 - 概念：模型換代時官方標榜的「牌价」沒變，不代表背後的定价結構沒有跟著變。
 - 機制：同一個 headline price 之下疊加依方案分層的報價，不同客群實際負擔的費率各自不同，總體營收效果要看客群分布才算得出來。
 - 下次怎麼認：看到「牌价維持不變」卻同時出現「依方案階梯」字樣，先問哪個方案對應哪個價位，再判斷是不是真的沒變。
@@ -291,7 +291,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：📈 正面（數字型，動到毛利率假設）｜誰有感：無（未上市）｜硬度：官方一手（Anthropic Blog＋GitHub release notes）｜線：定價改版 ▸ 第 2 則
 
-**為什麼這樣判**：新資訊是本線首見具體費率數字——Opus 5.5 官方牌價 $4/$20 per Mtok，較 Opus 5（$5/$25）降 20%，官方口徑同時稱運算成本降 40%；09-17 那則官方大改版定價文件時尚無具體數字，本則首次補上。判正面是因為成本降幅大於售價降幅，若屬實代表單位毛利率上升，不是單純讓利。同日 OpenAI 推出 GPT-6 Sol、GPT-6 Luna 應戰，Fortune 稱價格戰再度升溫；VentureBeat 稱 Opus 5.5 API 價格較 Anthropic 自家 Fable 5.1（$10/$50）便宜 60%，比較基準是自家另一款模型、不是對手降價，兩個百分比不可互換引用，詳見 [[entities/pricing]]。（這一版的能力與官方基準見 [[entities/opus-5-5]]，牌價與乘數見 [[entities/pricing]]）
+**為什麼這樣判**：新資訊是本線首見具體費率數字——Opus 5.5 官方牌價 $4/$20 per Mtok，較 Opus 5（$5/$25）降 20%，官方口徑同時稱運算成本降 40%；09-17 那則官方大改版定價文件時尚無具體數字，本則首次補上。判正面是因為成本降幅大於售價降幅，若屬實代表單位毛利率上升，不是單純讓利。同日 OpenAI 推出 GPT-6 Sol、GPT-6 Luna 應戰，Fortune 稱價格戰再度升溫；VentureBeat 稱 Opus 5.5 API 價格較 Anthropic 自家 Fable 5.1（$10/$50，見 [[entities/fable-5]]）便宜 60%，比較基準是自家另一款模型、不是對手降價，兩個百分比不可互換引用，詳見 [[entities/pricing]]。（這一版的能力與官方基準見 [[entities/opus-5-5]]，牌價與乘數見 [[entities/pricing]]）
 
 **下一個催化劑**：下一份財報或 S-1 是否揭露模型定價下修對整體毛利率的實際影響；OpenAI GPT-6 Sol／Luna 正式定價公告是否進一步壓縮價差。
 
@@ -672,14 +672,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-09-21 | Nscale 算力合約規模 | 本體不可買；MSFT 間接關聯 〰 | Anthropic／Microsoft 拆分金額披露（10-05） | ⏳ | ⏳ |
 | 2026-09-20（09-19 那則） | Reddit 資料訴訟 | RDDT ⚖️ | 裁定理由披露或雙方進入和解談判（10-04） | ⏳ | ⏳ |
 | 2026-09-20（09-19 那則） | 反壟斷訴訟 | 本體不可買；GOOGL 間接關聯 📉（第 2 則） | 書面陳述出處揭露或美國政府回應協調提議（10-04） | ⏳ | ⏳ |
-| 2026-09-19 | 反壟斷訴訟 | 本體不可買；GOOGL 間接關聯 📉 | 官方回應或法院受理排審（10-03） | ⏳ | ⏳ |
-| 2026-09-19 | 安全與治理爭議 | 本體不可買；ACN 間接關聯 ～ | 資金流向與用途揭露或 Accenture 財報提及合作金額（10-03） | ⏳ | ⏳ |
-| 2026-09-17 | 企業採用 | 本體不可買；JPM 間接關聯 ⚖️ | 更多金融機構跟進或上限適用範圍披露（10-01） | ⏳ | ⏳ |
-| 2026-09-17 | 定價改版 | 本體不可買；間接曝險 ～ | 新方案定價揭露或財報／S-1 提及 ARPU 影響（10-01） | ⏳ | ⏳ |
-| 2026-09-16 | 企業採用 | 本體不可買；NVO 間接關聯 ～ | 合約細節披露或其他藥廠跟進採用（09-30） | ⏳ | ⏳ |
-| 2026-09-16 | 多模型路由收入外流 | 本體不可買；間接曝險 ～ | 官方回應或具體規模數字揭露（09-30） | ⏳ | ⏳ |
-| 2026-09-16 | 澳洲算力布局 | 本體不可買；間接曝險 ～ | 合作夥伴身分與規模揭露（09-30） | ⏳ | ⏳ |
-| 2026-09-14 | 企業資料疑慮限縮使用 | 本體不可買；間接曝險 ～ | Anthropic 官方回應或三家公司證實限縮範圍（09-28） | ⏳ | ⏳ |
+| 2026-09-19 | 反壟斷訴訟 | 本體不可買；GOOGL 間接關聯 📉 | 官方回應或法院受理排審（10-03） | 出現（09-20 日報：官方回應；法院受理仍未見）｜GOOGL ↑ +3.8%，**與當時 📉 判讀相反**（細節見下） | ✅ |
+| 2026-09-19 | 安全與治理爭議 | 本體不可買；ACN 間接關聯 ～ | 資金流向與用途揭露或 Accenture 財報提及合作金額（10-03） | 出現（10-03 查證官方公告：合計至少 10 億美元、五年期；Accenture 財報未提金額）｜ACN ～ +1.2%（細節見下） | ✅ |
+| 2026-09-17 | 企業採用 | 本體不可買；JPM 間接關聯 ⚖️ | 更多金融機構跟進或上限適用範圍披露（10-01） | 未出現（2026-10-03 查證：近兩週日報零命中「JPMorgan／摩根大通」，無其他金融機構跟進、亦無上限適用範圍披露）｜JPM ↓（09-17 $349.31 → 10-01 $330.83，−5.3%） | ～ 仍懸 |
+| 2026-09-17 | 定價改版 | 本體不可買；間接曝險 ～ | 新方案定價揭露或財報／S-1 提及 ARPU 影響（10-01） | 未出現（2026-10-03 查證：近兩週日報零命中「ARPU／方案定價」，官方未揭露新方案定價，亦未見財報或 S-1 提及 ARPU 影響） | ～ 仍懸 |
+| 2026-09-16 | 企業採用 | 本體不可買；NVO 間接關聯 ～ | 合約細節披露或其他藥廠跟進採用（09-30） | 未出現（10-03 查證：無合約金額與其他藥廠跟進）｜NVO ↓（細節見下） | ～ 仍懸 |
+| 2026-09-16 | 多模型路由收入外流 | 本體不可買；間接曝險 ～ | 官方回應或具體規模數字揭露（09-30） | 未出現（2026-10-03 查證：近兩週日報唯一「Dealroom」命中為慕尼黑人形機器人新創，屬假命中；官方 Claude Code 文件僅載不支援經 gateway 導向非 Claude 模型，未回應營收外流，無規模數字） | ～ 仍懸 |
+| 2026-09-16 | 澳洲算力布局 | 本體不可買；間接曝險 ～ | 合作夥伴身分與規模揭露（09-30） | 未出現（結算日 09-30 前日報零命中；10-03 查證媒體稱已公開，但晚於結算日，細節見下） | ～ 仍懸 |
+| 2026-09-14 | 企業資料疑慮限縮使用 | 本體不可買；間接曝險 ～ | Anthropic 官方回應或三家公司證實限縮範圍（09-28） | 未出現（2026-10-03 查證：近兩週日報零命中「Booz Allen／Palantir」；官方僅有一般性說明——covered models 自 2026-06-09 起保留 30 天——未針對三家個案回應，三家亦未證實限縮範圍） | ～ 仍懸 |
 | 2026-09-12 | 政府客戶流失 | 本體不可買；間接曝險 ～ | 官方證實／否認遷出計畫或十月遷出完成與否（09-26） | 出現（2026-09-26 查證：DefenseScoop 引國防部研究工程次長 Emil Michael 證實約 90% 機密工作負載已遷出、估十月底完成） | ✅ |
 | 2026-09-12 | IPO 進程 | 本體不可買；間接曝險 ～ | Nvidia 官方證實／否認或 S-1 揭露認購方（09-26） | 未出現（2026-09-26 查證：多家媒體仍引匿名消息，Nvidia 與 Anthropic 皆未證實） | ～ 仍懸 |
 | 2026-09-11 | 安全與治理爭議 | 本體不可買；間接曝險 ～ | 美國政府正式調查或新管制（09-25） | 未出現（2026-09-26 查證：官方威脅情報報告本身未提調查，亦未見新管制） | ～ 仍懸 |
@@ -694,6 +694,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-09-05（08-13 那則） | IPO 進程 | 本體不可買；間接曝險 ～ | 公開版 S-1（09-19） | 未出現（2026-09-19 查證） | ～ 仍懸 |
 
 > **09-05（08-26 那則）結算細節**：09-15 Salesforce 與 Anthropic 擴大 Claudeforce 合作（Demand Gen Report），但那是合作範圍擴大、不是季報把 Claudeforce 拆分揭露，催化劑未成立。股價半邊查不到 09-05 基準收盤，只取得 09-15 收 $255.65、09-18 $238.73，無法算滿兩週粗方向，故記不可驗證。
+
+**2026-10-03 結算細節**（上表「兩週後」欄原文，搬位置不刪）
+- **結算 2026-09-19 反壟斷訴訟（GOOGL）**：出現——2026-09-20 日報：AP News 報導 Anthropic CEO 已書面承認潛在反壟斷風險、表示若美國政府願意協調會配合跨實驗室對話＝官方回應
+  - 法院受理排審仍未見，09-22 Tom's Hardware 稱「指控仍待法院審理」
+  - GOOGL ↑（09-18 $325.73 → 10-01 $338.24，+3.8%，**與當時 📉 的間接關聯判讀相反**；該期間漲幅主因未見歸因於本案）
+- **結算 2026-09-19 安全與治理爭議（ACN）**：出現——2026-10-03 查證官方公告：Anthropic 與 Accenture 合計至少 10 億美元、五年期，用於內嵌評估能力建設，Anthropic 直接資助 Accenture 的工作，非排他；Accenture 財報尚未提及金額
+  - ACN ～（09-18 $181.29 → 09-30 $183.37，+1.2%，在 ±3% 內；結算日 10-03 收盤未取得，以 09-30 為窗口末端）
+- **結算 2026-09-16 企業採用（NVO）**：未出現——2026-10-03 查證：09-22 Yahoo Finance 僅重述「擴大合作、AI 更深入藥物開發」，無合約金額、費用或期間；官方站亦未載，見本頁該則 🔎；無其他藥廠跟進
+  - NVO ↓（09-25 $38.62 → 09-30 $37.91，該週另跌約 10.7%；媒體歸因於 GLP-1 競爭與 Ozempic 專利到期，**非本則訊號**）
+- **結算 2026-09-16 澳洲算力布局**：未出現（結算日 09-30 前日報零命中）。**遲到的揭露**：2026-10-03 查證發現媒體稱（Real Estate Source／Converge Digest／ABC）夥伴與規模已公開，但晚於結算日，且 Anthropic 官方站仍未載，故本列仍記未出現
+  - 媒體稱公開內容：昆士蘭 Western Downs Digital Park、Zerra DC 開發、Macquarie Capital 與 Dexus 參與、峰值 2.16GW；背景見 [[topics/anthropic-business]]
 
 ---
 
@@ -720,14 +731,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-09-21｜查 Nscale、Microsoft、資料中心｜複 2026-10-05）｜**Anthropic 與 Microsoft 在 Nscale 1,030 億美元合約中的個別拆分金額是否披露**：Bloomberg 首度揭露合約總值與客戶排名，具體拆分、Anthropic 自身 450 億美元承諾是否變動均未見報導。
 - ❓ **待查證**（標 2026-09-20｜查 資料爬取、Mashable｜複 2026-10-04）｜**Reddit 對 Anthropic 資料爬取訴訟的具體裁定理由是否披露**：聯邦法官裁定大部分可續行，僅 Mashable 單一媒體轉載，被駁回部分與下一步程序均未見報導。
 - ❓ **待查證**（標 2026-09-20｜查 書面承認、跨實驗室對話｜複 2026-10-04）｜**Anthropic 執行長書面承認反壟斷風險的原始出處是否披露**：AP News、The Independent 同日報導執行長曾承認跨實驗室協調步調可能觸及反壟斷問題，發言出處未見報導。
-- ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、collusion、pacing｜複 2026-10-03｜訊 2026-09-22）｜**AI 步調合謀訴訟是否進入官方回應或法院受理階段**：09-22 Tom's Hardware 揭露原告為四名 Claude／ChatGPT／Grok／Gemini 訂閱戶，主張協議降低訂閱者所獲價值；求償金額、受理狀態與官方回應仍未見報導。
-- ❓ **待查證**（標 2026-09-19｜查 Accenture、embedded evaluator、10億美元｜複 2026-10-03）｜**Accenture「內嵌評估者」10 億美元的資金流向是否披露**：Anthropic 官方部落格宣布，Washington Post、CNBC 同日跟進，付費方向與合作條款均未見報導。
-- ❓ **待查證**（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限｜複 2026-10-01）｜**是否有更多受監管金融機構跟進導入 Claude，或 JPMorgan 合約規模／席位數被進一步披露**：兩家媒體轉述、僅 Business Insider 具名，合約規模與費用結構均未見報導。
-- ❓ **待查證**（標 2026-09-17｜查 Claude Design、Claude Slides、usage credits｜複 2026-10-01）｜**新方案（Design／Slides／Docs）是否有獨立定價，或下一份財報／S-1 是否揭露對 ARPU 的影響**：官方文件同日大改版，新增 41 段、移除 48 段舊版逐 token 定價，未說明是否代表實際費率變動。
-- ❓ **待查證**（標 2026-09-16｜查 Novo Nordisk、諾和諾德｜複 2026-09-30）｜**諾和諾德與 Anthropic 合作的合約範疇、費用是否披露**：Reuters、Bloomberg、WSJ、Politico 四家媒體同日報導，均未揭露財務數字，尚無後續細節。
-- ❓ **待查證**（標 2026-09-16｜查 Dealroom、token 費用外流｜複 2026-09-30）｜**Anthropic 官方是否回應開發者繞道非官方模型導致 token 費用流失**：Dealroom 2 個來源報導趨勢，未附具體規模數字，官方尚無回應。
-- ❓ **待查證**（標 2026-09-16｜查 澳洲資料中心、Macquarie｜複 2026-09-30）｜**澳洲資料中心協議的合作夥伴、規模與金額是否披露**：Yahoo Finance 僅標題可用，尚無後續報導。
-- ❓ **待查證**（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩｜複 2026-09-28）｜**Anthropic 官方是否回應三家企業限縮內部使用 Claude 的報導**：The Information 經 Google News 單一轉載，具體限縮範圍、是否涉及 Claude Code 或 API 未見報導，Anthropic 尚無回應。
+- ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、collusion、pacing｜複 2026-10-17｜訊 2026-09-22）｜**AI 步調合謀訴訟是否進入官方回應或法院受理階段**：依 2026-09-22 日報（Tom's Hardware）：原告為四名訂閱戶，對 Anthropic、OpenAI、SpaceXAI、Google 提起集體訴訟，
+  - 指控四家協議放慢 AI 發展速度以減少訂閱者所獲價值、違反反壟斷法；日報稱指控仍待法院審理、細節未定。求償金額、受理狀態與官方回應仍未見報導。
+- 已查證（2026-10-03，[Anthropic](https://www.anthropic.com/news/accenture-embedded-evaluation)）｜**Accenture「內嵌評估者」10 億美元：官方稱雙方各預期投入至少 10 億美元、為期五年建置此領域能量，並由 Anthropic 出資支應 Accenture 的內嵌評估工作**：
+  - 官方稿（2026-09-18）未載合約條款、付款時程、費用或人數；合作為非排他，
+  - Anthropic 另與 METR 等非營利評估機構對話、對方以自有資金參與。「各 10 億美元」是預期投入，並非 Accenture 向 Anthropic 收取的合約金額。
+- 🔎 **查無官方**（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限｜複 2026-10-31）｜**JPMorgan 合約規模／席位數與更多受監管金融機構跟進，官方未載**：查證 2026-10-03，Anthropic 官方站（anthropic.com、claude.com）搜尋未見 JPMorgan 導入、合約規模或席位數的說明。
+  - 媒體稱（Business Insider，經 Newsquawk 等轉述）部分工程師設每月 2,000 美元 Claude Code 支出上限、約 8,000 人持授權，均為媒體數字，非官方。
+- 已查證（2026-10-03，[Claude 方案與定價](https://claude.com/pricing)）｜**Claude Design／Slides／Docs 無獨立定價，內含於付費方案**：官方定價頁列為 Pro、Max、Team、Enterprise 方案內建功能，Free 方案不含，非另購附加。對 ARPU 的影響官方文件未載。
+- 🔎 **查無官方**（標 2026-09-16｜查 Novo Nordisk、諾和諾德｜複 2026-10-31）｜**諾和諾德與 Anthropic 合作的合約費用，官方未載財務條款**：查證 2026-10-03，官方說法僅限範疇——Novo 以 Anthropic 模型與 Claude Science 試行 R&D 工作流程、並以 Anthropic 模型強化軟體開發，設資料治理與人工監督。
+  - 官方未載金額、費用或期間。
+  - 來源範圍：anthropic.com 無對應公告頁，[claude.com 客戶案例](https://claude.com/customers/novo-nordisk)亦未提；Novo 官網新聞稿僅經搜尋摘要所見，直接開啟遭 egress 封鎖。
+- 🔎 **查無官方**（標 2026-09-16｜查 Dealroom、token 費用外流｜複 2026-10-31）｜**Anthropic 官方未回應「開發者繞道非官方模型致 token 費用流失」**：查證 2026-10-03，官方一手來源（[Claude Code 文件](https://code.claude.com/docs/en/llm-gateway)）未提營收外流。
+  - 官方僅載明 Anthropic 不支援經任何 gateway 將 Claude Code 導向非 Claude 模型；使用 gateway 憑證時流量按 token 計費給憑證持有者。規模數字仍無官方說法；Dealroom 原文直接開啟遭 egress 封鎖。
+- 🔎 **查無官方**（標 2026-09-16｜查 澳洲資料中心、Macquarie｜複 2026-10-31）｜**澳洲資料中心協議的夥伴、規模與金額，Anthropic 官方站未載**：查證 2026-10-03，anthropic.com 僅有 2026-03-10 [雪梨辦公室公告](https://www.anthropic.com/news/sydney-fourth-office-asia-pacific)稱「探索」透過第三方夥伴擴充澳洲算力，未載夥伴、容量或金額。
+  - 媒體稱（Real Estate Source、Converge Digest、ABC 等）：首期租約在昆士蘭 Western Downs Digital Park，由 Zerra DC 開發、Macquarie Capital 與 Dexus 旗下 Australian Data Centres 參與，規劃峰值 2.16GW，須經外國投資審查委員會等核准；
+  - 園區總額約 319 億（各報幣別不一）為開發端口徑，非 Anthropic 承諾金額。Macquarie 官網稿因 egress 封鎖未能開啟。
+- 🔎 **查無官方**（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩｜複 2026-10-31）｜**Anthropic 官方未就三家企業限縮使用個案回應**：查證 2026-10-03，官方一手來源（[Covered Models 資料保留說明](https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models)、[Enterprise Frontier Safeguards](https://www.anthropic.com/news/enterprise-frontier-safeguards)）均未點名三家。
+  - 官方一般性說法：自 2026-06-09 起 Covered Models（Fable／Mythos 5 系列）的 prompts 與輸出保留 30 天，ZDR 組織須在 workspace 啟用保留；
+  - 09-01 官方稱許多受監管客戶因隱私反對此政策，故推出 EFS（資料存客戶自有雲、客戶管金鑰、僅自動監控），預計今秋起分階段推出。
+  - 媒體稱（PYMNTS、Yahoo Finance 等）三家限縮與此保留政策有關：Nvidia 限低風險任務、Palantir 要求不保留承諾、Booz Allen 限專有資安工作；因果為媒體說法，非官方。
 - 已查證（2026-09-26，[DefenseScoop](https://defensescoop.com/2026/09/11/dod-poised-to-move-all-classified-ai-workloads-off-anthropic-by-october/)）｜**國防部證實近全數機密工作負載已遷出**：次長 Emil Michael 稱約 90% 已遷移完成，估十月底前完成全部遷出；因 Anthropic 遭列國安供應鏈風險。
 - 🔎 **查無官方**（標 2026-09-12｜查 Nvidia、認購方、招股文件｜複 2026-10-26）｜**Nvidia 洽談投資 IPO 未經官方證實**：查證 2026-09-26，媒體稱擬投最高 100 億美元，均引匿名消息，Nvidia、Anthropic 均未證實。
 - 🔎 **查無官方**（標 2026-09-11｜查 出口管制、國防部｜複 2026-10-26）｜**威脅情報報告未見政府調查或出口管制回應**：查證 2026-09-26，官方報告本身未提及；09-01 國會聽證早於報告發布，未見掛鉤動作。
