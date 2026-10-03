@@ -106,7 +106,7 @@ def main(argv: list[str] | None = None) -> int:
     base = args.base or default_base()
     bad = check(base)
     if bad:
-        stream.write("❌ append-only 檔在檔尾以外的位置新增了內容（或整檔被刪）：\n")
+        stream.write("❌ append-only 檔把新紀錄寫在檔頭（第一則既有紀錄之前），或整檔被刪：\n")
         for rel, hits in bad:
             where = "檔案不見了" if hits == [0] else "新版第 " + "、".join(map(str, hits[:5])) + " 行起"
             stream.write(f"  {rel}：{where}\n")

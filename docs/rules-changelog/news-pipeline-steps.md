@@ -4,6 +4,14 @@
 
 本檔是**歷史敘事，不是待執行步驟**——步驟已在上方，執行 pipeline 時不必讀本檔。存放於此的原因：步驟本身已能獨立執行，敘事只在有人想問「為什麼有這條」時才需要。考古鏈為 `[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 
+## 2026-10-03
+
+**內容閘紅就不准 wiki 進 master（web-publish Step 3、news-pipeline「閘與退路」）**。使用者裁決：閘紅時擋 wiki commit，取代原本「閘紅照樣 commit wiki、只跳過 web build」。
+
+改版前三處條文互相矛盾：news-pipeline「閘與退路」寫 web build gate「不過就不 build、不 push」；web-publish 邊界節寫擋下時「仍須執行 Step 5 的統一 push」；web-publish Step 4 末行寫 build 失敗「跳過推送」，同檔 Step 6 與邊界節卻寫「pushing news/wiki only」。統一成：內容閘（`scripts/ingest_gate.py`）守 wiki 進 master，由 `.claude/hooks/gate_wiki_commit.py` 在 PreToolUse 強制；web build gate 只守 build，已 commit 的 news／wiki 照推。
+
+停泊分支是刻意留的出口：只擋 commit 不給出口的話，雲端修不好的那天 wiki 成果隨容器消失（下一班因日報已存在而冪等中止，不會重做）。`cloud-daily-<日期>-*` 分支本來就由 `scripts/daily_health_check.py` 認得並提醒救回；Pages 是 legacy build、只從 master 部署，推停泊分支不觸發部署，不違反單一 push 的理由。
+
 ## 2026-09-12
 
 **日報改版「乙」：讀者版從「今天發生什麼」改成「今天 wiki 學到什麼」**（`Step 2b：讀者版日報` 的立法依據）。

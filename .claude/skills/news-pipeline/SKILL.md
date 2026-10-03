@@ -45,4 +45,4 @@ TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** �
 
 ## 閘與退路
 
-唯一的閘是 web build gate，住 `.claude/skills/web-publish/SKILL.md` Step 4：不過就不 build、不 push；Step 1a 失敗停在 Phase A；Step 2b 失敗不阻斷，照樣進 Phase C。
+閘有兩道，都住 `.claude/skills/web-publish/SKILL.md`：Step 3 內容閘紅就不准 wiki 進 master（修不好停泊分支）；Step 4 web build gate 不過就不 build，已 commit 的 news／wiki 照推；Step 1a 失敗停在 Phase A；Step 2b 失敗不阻斷，照樣進 Phase C。

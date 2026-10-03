@@ -12,6 +12,16 @@ disable-model-invocation: true
 
 ## Step 3：Commit Wiki 變更（不 push）
 
+**commit 前先跑內容閘**（閘紅時 `.claude/hooks/gate_wiki_commit.py` 會擋下 master 上任何含 `wiki/` 的 commit）：
+
+```
+PYTHON REPO_ROOT\scripts\ingest_gate.py --date TARGET_DATE
+```
+
+- exit 0 → 照下方 commit
+- exit 非 0 → 依 Step 4「gate 擋下時的修復迴圈」的允許清單與硬性禁止修內容，至多 2 輪、每輪重跑本閘；轉綠後照下方 commit
+- 2 輪後仍紅 → 停泊：`git -C REPO_ROOT switch -c cloud-daily-TARGET_DATE-unmerged`，照下方 add／commit，再 `git -C REPO_ROOT switch master`。master 只帶 news 進 Step 4／5；Step 5 推完 master 後另推 `git -C REPO_ROOT push origin cloud-daily-TARGET_DATE-unmerged`，Step 6 log 記 `Wiki PARKED - content gate red` 並抄閘的最後一行
+
 用 Bash 執行（**先不 push**，於 Step 5 統一推送）：
 
 ```
@@ -77,7 +87,7 @@ PYTHON REPO_ROOT\scripts\build_web.py
 - 前兩支皆為冪等的衍生資料重算，失敗不擋 build：
   - `enrich_attribution_publisher.py` 補當日新歸因的 `publisher` 欄位（記者回報的 slug 只有斜線前半段，`google-news` 底下實際有 250+ 家出版者）
   - `gen_wiki_frontmatter.py` 重算頁面 frontmatter（入鏈數、供料數、停滯天數、signal），供 Obsidian Bases 查詢；不跑則 `wiki/_views/wiki-health.base` 的數字會停在上次生成日
-- `build_web.py` 成功後繼續；若失敗，回報錯誤並跳過推送
+- `build_web.py` 成功後繼續；若失敗，跳過 web commit，仍執行 Step 5 推送已完成的 news／wiki commit
 
 ---
 
@@ -160,6 +170,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 - Step 2 失敗時，寫 `Wiki ingest FAILED`
 - Step 2b 失敗時，寫 `Reader digest FAILED - falling back to news/`
 - Step 4 gate 判定時，抄 `scripts/gate_web_build.py` 輸出的最後一行摘要（放行與擋下都要寫，例如 `測試全綠 - web build 放行`／`測試失敗含未登記案例（...）- web build 擋下`）
+- Step 3 內容閘修不好而停泊時，寫 `Wiki PARKED - content gate red` 加閘的最後一行
 - Step 4 build_web 失敗時，寫 `build_web FAILED - pushing news/wiki only`
 - Step 5 push 失敗時，寫 `Push FAILED`
 - 時間戳使用系統當前時間（`Get-Date` 或 `date` 指令取得），格式 `[週X YYYY/MM/DD HH:MM:SS.SS]`
@@ -197,6 +208,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 ## 本 skill 的邊界
 
 - 所有 Bash 指令使用絕對路徑，不依賴 PATH 環境變數
+- Step 3 內容閘紅且修不好時，wiki 停泊到 `cloud-daily-TARGET_DATE-unmerged`，不進 master（hook 強制）
 - Step 4 web build gate（`scripts/gate_web_build.py`）擋下時跳過 web build 與 web commit，仍須執行 Step 5 的統一 push；gate 放行（含「失敗全屬已登記缺口」）時照常 build
 - Step 4（web build）失敗時跳過 web commit，但仍須執行 Step 5 的統一 push（推送已完成的 news / wiki commit）
 - **所有 git push 集中在 Step 5 一次完成**；中途步驟（1b、3）一律只 commit 不 push，避免 Pages 部署並發競爭
