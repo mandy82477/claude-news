@@ -2768,7 +2768,9 @@ code {
 .alsosee__card { text-align: left; background: transparent; border: 1px solid var(--border-2); border-radius: 2px; padding: 10px 12px; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
 .alsosee__card:hover { background: var(--bg-1); border-color: var(--border-strong); }
 .alsosee__name { font-family: var(--font-display); font-size: var(--fs-body); color: var(--ink-1); }
-.alsosee__why { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--ink-3); line-height: 1.5; }
+.alsosee__gist { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--ink-2); line-height: 1.55; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.alsosee__why { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--ink-3); line-height: 1.5; margin-top: auto; }
+.alsosee__date { font-family: var(--font-mono); margin-right: 8px; }
 
 /* ── 懸置標記：機器區摺疊（2026-09-05）────────────────────────────────────
    `❓ **待查證**（標 …｜查 …｜複 …）` 的括號是給掃描器與記者看的 metadata，

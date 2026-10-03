@@ -2508,13 +2508,23 @@ ${olderHtml}
         label.attr('x', n => n.x).attr('y', n => n.y);
       });
     // 你可能也想看：不直接相連但共享鄰居多的頁（build 端算好；達不到門檻就不顯示，不湊數）
+    // 卡片主文是那一頁自己的最新一句（讀者要的是「那頁在講什麼」），圖的理由只當底部輔助行
     const recs = (me.alsoSee || []).map(r => Object.assign({ shared: r.shared }, byId.get(r.id))).filter(r => r && r.name);
     if (recs.length) {
+      const kb = Object.fromEntries(buildKbList().map(i => [i.id, i]));
+      const plain = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/[*`]/g, '');
       host.insertAdjacentHTML('beforeend', `<div class="wiki__section-h" style="margin-top:18px">你可能也想看</div>
-<div class="alsosee">${recs.map(r => `<button type="button" class="alsosee__card" onclick="openWikiPage('${esc(r.id)}','${esc(r.pageType)}')">
+<div class="alsosee">${recs.map(r => {
+        const k = kb[r.id] || {};
+        const gist = plain(k.latestHeadline || k.summary);
+        const date = k.lastNewsUpdate || r.lastNewsUpdate || '';
+        const shared = (r.shared || []).map(x => (byId.get(x) || {}).name || x).join('、');
+        return `<button type="button" class="alsosee__card" onclick="openWikiPage('${esc(r.id)}','${esc(r.pageType)}')">
   <span class="alsosee__name">${esc(r.name)}</span>
-  <span class="alsosee__why">和本頁一起被 ${esc((r.shared || []).map(x => (byId.get(x) || {}).name || x).join('、'))} 引用，但兩頁互不相連</span>
-</button>`).join('')}</div>`);
+  ${gist ? `<span class="alsosee__gist">${esc(gist)}</span>` : ''}
+  <span class="alsosee__why">${date ? `<span class="alsosee__date">${esc(date)}</span>` : ''}${shared ? `都談到 ${esc(shared)}` : ''}</span>
+</button>`;
+      }).join('')}</div>`);
     }
   }
 
