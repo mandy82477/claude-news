@@ -4,8 +4,8 @@
 
 **最後更新：** 2026-10-03
 
-> **這禮拜動了什麼**（2026-10-02）
-> v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-10-03）
+> v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-10-02）
@@ -65,6 +65,23 @@
 
 ## 🆕 最新功能（2026-10）
 
+### Claude Code v2.1.288：`--max-findings`＋`claude purge`＋危險 `rm` 防護修正
+**發布：** 2026-10-02（v2.1.288） | **狀態：** 正式發布
+
+**是什麼：** `/code-review --max-findings <n>|all` 調整回報的發現數量，選擇會沿用到你改回 `default`；`claude purge` 取代 `claude project purge`（舊名仍可用，會印提示）；`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS=1` 讓不接受 structured outputs 的閘道（如 Mantle）關掉該功能。
+
+**為何熱：** 同版修正 bypassPermissions 或 shell 允許規則下，包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；mixed-news.com 指出 stable 標籤仍停在 2.1.285。
+
+**現在要試嗎：** 開 bypassPermissions 或寬鬆 shell 允許規則跑代理的人應盡快升到 2.1.288，不要等 stable；只用預設權限模式的人可照常等 stable。
+
+**快速上手：**
+```
+/code-review --max-findings all   # 回報全部發現
+claude purge                      # 原 claude project purge
+```
+
+**注意事項：** 防護缺口的攻擊面與 stable 落後的影響見 [[topics/ai-agent-safety]]；版本細節見 [[entities/claude-code#版本更新]]。
+
 ### Claude Mods
 **發布：** 2026-10-01（v2.1.287） | **狀態：** 正式發布
 
@@ -81,7 +98,7 @@
 # https://code.claude.com/docs/en/plugins/mods/create.md
 ```
 
-**注意事項：** 官方被報導稱外掛可能讀取使用者 API Key（僅標題可用），安全範圍見 [[topics/ai-agent-safety]]；mod 機制基於先前的 function hooks，深層權限意味外掛信任面擴大。
+**注意事項：** 官方被報導稱外掛可能讀取使用者 API Key（僅標題可用），安全範圍見 [[topics/ai-agent-safety]]；mod 機制基於先前的 function hooks，深層權限意味外掛信任面擴大。10-02～10-03 the-decoder、The New Stack、mixed-news.com 三家報導一致：Mods 以使用者權限執行、未經沙箱隔離，Anthropic 提醒只裝可信來源。
 
 ---
 
@@ -400,6 +417,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

@@ -31,18 +31,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-02
+**最後新聞更新：** 2026-10-03
 
-> **最新動態**（2026-10-02）
-> - Claude Code v2.1.287 發布：**新增「Claude Mods」**——外掛可修改比既有 plugin API 更深層的執行時行為；內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。此前以 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標試玩、09-09 官方承諾數週內出貨，本版兌現，見 [[topics/claude-code-experimental]]。
-> - 同版 build 新增 7 個功能候選旗標（`CLAUDE_CODE_CCR_EARLY_SKILLS_SYNC` 等），追蹤見 [[topics/claude-code-experimental]]。
-> - 官方文件索引新增 10 頁 mods 相關文件（管理、API、建立、事件、介面、測試、疑難排解等）。
+> **最新動態**（2026-10-03）
+> - v2.1.288 發布：修正 `bash -c`／`sh -c` 內危險 `rm` 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。
+> - 新增 `/code-review --max-findings`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`、mods 的 `$.ui.selection()`；旗標追蹤見 [[topics/claude-code-experimental]]。
+
 ---
 
 ## 現況
 
 **最新版本動態：**
 
+- **v2.1.288**（2026-10-02）：新增 `/code-review --max-findings <n>|all`、`claude purge`（取代 `claude project purge`）、Ctrl+C 清空提示後按 ↑ 取回草稿、MCP 要求更多 OAuth scope 時提示重新驗證、mods 的 `$.ui.selection()`。
+- **v2.1.288 修正與設定**：新增 `CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`（閘道用）；修正 `bash -c`／`sh -c` 內危險 `rm` 在 bypassPermissions 或 shell 允許規則下免提示執行（#96300）；背景指令時限改為僅無人值守 session 適用（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）。
+  同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.287**（2026-10-01）：**新增「Claude Mods」**，外掛可修改更深層行為，內建示範 mod「You should know」（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）。即 Function Hooks 提案出貨，詳見「已知問題」🔌 MCP 整合、[[topics/claude-code-experimental]]。
   同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.286**（2026-09-30）：權限提示堆疊多筆請求時新增「2 of 5」這類計數顯示；全螢幕模式下清單的「N more」列新增滑鼠支援（可點擊展開）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）。
@@ -295,8 +298,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（12 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（13 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**功能請求：跨 session 交接與延續（GitHub issue #11455，累積 37 則留言、25 個讚，2026-10-03）**：提案者希望 Claude Code 支援 session 交接，讓工作能在新 session 接續；本站來源未見官方回應。與跨 session 記憶（#14227）同屬延續性缺口。
 - 🔴 **未修復**｜**功能請求：Cowork 專案可移除已加入的本機資料夾（GitHub issue #40043，累積 32 則留言、103 個讚，2026-10-01）**：使用者呼籲 Cowork 專案的 context 能移除已加入的本機資料夾，目前僅能新增無法移除；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後 session 全部消失；#59248 Cursor 擴充套件保留清理悄悄刪光紀錄（累積 47 則留言、36 個讚，2026-09-19 互動數更新）。與「Session 30 天自動刪除」（⛔，有預警）不同；官方尚未回應任一則。
 - 🔴 **未修復**｜**功能請求：刪除 Claude Code session（GitHub issue #13514，累積 47 則留言、110 個讚，2026-08-17）**：使用者呼籲提供刪除既有 session 紀錄的機制，目前僅能保留或 resume，無法主動清除不需要的 session；官方尚未回應或排入路線圖。
@@ -507,6 +511,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.288** | 2026-10-02 | 新增 `--max-findings`、`claude purge`；修正 `bash -c` 內危險 `rm` 繞過檢查（#96300）；stable 仍在 2.1.285（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）|
 | **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**：外掛可修改更深層行為，內建示範 mod「You should know」（旁觀 agent 主動提醒）；即 Function Hooks 提案（issue #91870）出貨（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）|
 | **v2.1.286** | 2026-09-30 | 權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）|
 | **anthropic-sdk-python v1.11.0** | 2026-09-30 | Features：新增 list spend limits endpoint，可透過 API 查詢支出限額設定（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0)）|
@@ -779,6 +784,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-03 | **v2.1.288**：`rm` 防護缺口修正、`--max-findings`、`claude purge`。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則。 |
 | 2026-10-01 | **v2.1.287**：Claude Mods 出貨（#91870 轉✅）。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則，互動更新 1 則。 |
 | 2026-09-30 | 桌面版文件補充 `/resume` 完整流程：終端機關閉 session 後可於桌面版接續同一對話（非複本）。 |
 | 2026-09-29 | **v2.1.285**：新增 `DISABLE_WEB_FETCH`、`--desktop`；企業可限 API 供應商。旗標增9（1 已出貨）消7，見 [[topics/claude-code-experimental]]。 |

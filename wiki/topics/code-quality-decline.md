@@ -3,8 +3,8 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-10-01"
-last_news_update: "2026-10-01"
+last_updated: "2026-10-03"
+last_news_update: "2026-10-03"
 status_main: "ongoing"
 days_since_news: 2
 parent: null
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-03
+**最後新聞更新：** 2026-10-03
 
-> **A/B 降 effort 疑慮延燒至第六則**（2026-10-01）
-> - r/ClaudeAI 使用者稱 Opus 5.5 上線前 5–6 天表現極佳，近日開始在原本能處理的複雜任務上失手，延續「懷疑正在被 A/B 測試降 effort」這條主張。
-> - 單一貼文、無測試方法或版本前後對照，只說明這個現象還在。
+> **LiveNerf 開始 30 天量測**（2026-10-03）
+> - dev.to 貼文稱 livenerf 已替 Opus 5.5 建立第 0 天基準線，連續測 30 天，最早約 10-24 才能下結論。
+> - 這是量測才剛開始，不是結果；在那之前「被降智」仍只有單一貼文的觀感。
 
 ---
 
@@ -76,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本庫沒有把 CC-Canary 列為推薦工具（社群工具目錄對這個症狀還沒有首選）——它給你的是自己跟自己比的一條線，不是外部基準。
 
-另一條路是 LiveNerf（2026-09-27 首見）：社群針對「Opus 5.5 是否被降智」設計的即時基準測試，持續追蹤模型表現有無隨時間變化。本站尚未查證其方法論與資料來源，同樣不列為推薦工具，僅記錄其存在（[原文](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）。
+另一條路是 LiveNerf（2026-09-27 首見）：社群針對「Opus 5.5 是否被降智」設計的即時基準測試，持續追蹤模型表現有無隨時間變化。本站尚未查證其方法論與資料來源，同樣不列為推薦工具，僅記錄其存在（[原文](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）。dev.to 後續貼文（2026-09-30）稱已建立第 0 天基準線、連測 30 天，最早約 10-24 才有結論（[原文](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)）；模型面見 [[entities/opus-5-5]]。
 
 **🧰 現在就能下的解**：先量 context 組成再怪工具——官方 `/context` 看各類別佔用（[[topics/community-large-codebase-workflow]] 線 2），還不確定誰在撐爆就照 [[topics/community-tech-tools]]「context 一直被工具輸出撐爆」列第三欄先跑 PrismoDev 診斷；決策表沒有專為感覺變笨、想先量測歸因而設的列。%% —（決策表暫無對應列｜候選症狀：感覺變笨，想先量測歸因） %%
 
@@ -244,6 +244,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-10
+
+#### 2026-10-03
+- **「Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock」：LiveNerf 量測啟動**：dev.to（3 讚，09-30）稱 livenerf 為 Opus 5.5 建立第 0 天基準線、每日測 30 天，最早約 10-24 下結論；方法論未查證，不計入「懷疑 A/B 降 effort」則數（來源：[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)）
 
 #### 2026-10-01
 - **「Opus 5.5 nerfing - how to measure, how to spot, how to sue」：「懷疑正在被 A/B 測試降 effort」主張第六則**：r/ClaudeAI 使用者稱 Opus 5.5 上線前 5–6 天表現極佳，近日在原本能處理的複雜任務上開始失手；單一貼文，方向與既有五則一致，只說明現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)）

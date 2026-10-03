@@ -30,10 +30,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 **開始日期：** 2026-04-27
 **最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-02
+**最後新聞更新：** 2026-10-03
 
-> **最新安全事件**（2026-10-02）
-> Claude Code 2.1.287 新增 Mods；mixed-news.com 稱外掛可讀取使用者 API Key，僅標題可用，暫未列入攻擊表。
+> **最新安全事件**（2026-10-03）
+> Claude Code 2.1.288 修正包在 `bash -c` 裡的危險 `rm` 可繞過防護；stable 標籤仍在 2.1.285，尚未拿到修正。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -59,6 +59,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Auto 模式：只要請它讀一個網址，注入的指令就能取得程式碼執行權 | 開 Auto 模式、且會讓 Claude Code 讀網頁或外部檔案的人 | 🔴 | 官方定性 Auto 模式是 best-effort convenience control、不是安全邊界，該揭露結案為 informative；官方稱擋下 89%（2026-08-07 blog）危險指令 | 讀外部內容時關掉 Auto，或改在隔離容器裡跑。實測成功率 60–80%，官方委託評測 0%，兩個數字並陳 |
 | 惡意 `.git` 設定檔可誘使 agent 執行攻擊者指定的程式碼，跨廠通用 | clone 或開啟他人 repo 的人（Claude、Codex、Cursor 都中） | ❓ | 無回應（2026-09-02 披露；觸發機制與是否已在野利用未見報導） | clone 完先自己看一遍 `.git/config` 有沒有不是你加的設定，再讓 agent 進去 |
 | deny-list 型權限設定可被繞過，只有 allow-list 型設定擋得住 | 用 deny-list（黑名單）方式設定 Claude Code 權限的人 | 🔴 | 無回應（2026-09-11 Show HN 揭露，公開 repo 展示 8 種繞過手法） | 改用 allow-list（白名單）方式設定權限，不要只靠 deny-list |
+| 用 `bash -c`／`sh -c` 包住的危險 `rm`（針對根目錄、家目錄）可繞過刪除防護 | 開 bypassPermissions 或設了 shell 允許規則、且停在 stable（2.1.285）的人 | 🔴 | 2.1.288 已修（2026-10-02 官方 Release）；stable 標籤仍指 2.1.285（mixed-news.com 單一來源） | 升到 2.1.288 以上；修好前不開 bypassPermissions，允許規則別放 `bash -c` 這類通用包裝 |
 | 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見技術彙整） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款 |
@@ -111,6 +112,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Claude Code 2.1.288 修正 `bash -c` 包裝繞過危險 `rm` 防護，stable 標籤仍停在 2.1.285（2026-10-03 新增）
+
+- **揭露來源**：官方 [GitHub Release v2.1.288](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)（2026-10-02 20:19 UTC）；mixed-news.com（2026-10-03 07:04 UTC，稱 2.1.288 於 10-02 18:30 UTC 上 npm）
+- **核心主張**：bypassPermissions 模式或 shell 允許規則下，包在 `bash -c`／`sh -c` 裡的危險 `rm`（如針對根目錄或家目錄）原本會繞過檢查，2.1.288 修正；mixed-news.com 稱 stable 標籤仍指 2.1.285，固定用 stable 的人尚未拿到修正（單一來源）
+- **性質判斷**：產品層防護缺口，與「遞迴刪檔」列同屬誤刪風險但機制不同（防護被包裝繞過，而非指令模糊）；已官方修補，故讀者影響限於停在 stable 者。功能面細節見 [[entities/claude-code]]
+- ❓ **待查證**（標 2026-10-03｜查 stable 標籤、2.1.288、bash -c）：stable 何時追上 2.1.288、是否有在野誤刪案例均未見報導
 
 ### mixed-news.com：Claude Code 2.1.287 新增 Mods 功能，Anthropic 稱外掛可讀取使用者 API Key（2026-10-02 新增）
 
@@ -1132,6 +1140,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-03
+- **[🔴 新增] Claude Code 2.1.288 修正 `bash -c` 包裝繞過危險 `rm` 防護**：官方 Release 確認，stable 仍停 2.1.285（mixed-news.com 單一來源），已列入攻擊表，詳見「## 技術彙整」
 
 ### 2026-10-02
 - **[❓ 新增] mixed-news.com：Claude Code 2.1.287 新增 Mods，Anthropic 稱外掛可讀取使用者 API Key**：僅標題可用、0 互動單一來源，是否為官方預期設計均未見報導，暫不列入攻擊表，詳見「## 技術彙整」

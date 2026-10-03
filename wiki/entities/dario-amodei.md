@@ -30,18 +30,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-03
+**最後新聞更新：** 2026-10-03
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **Trump 稱喜歡 Amodei，釋出關係解凍訊號**（2026-10-01）
-> Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，續 09-27 白宮晚餐、09-29 黃仁勳同赴會晤；同日 Yann LeCun 公開批評 Amodei「deluded」「crazy」，兩則均僅標題可用。
+> **黃仁勳等 CEO 私下質疑 Amodei 的 AI 風險警告**（2026-10-03）
+> 據華爾街日報（經 Yahoo Finance 轉述），Trump 與約 24 位科技 CEO 午宴後，黃仁勳等人私下就 Amodei 的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。
 
 ---
 
 ## 現況
+
+2026-10-03，Yahoo Finance 轉述華爾街日報：黃仁勳等數位 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後，私下就 Amodei 對 AI 風險的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。單一轉述來源，細節見 [[entities/jensen-huang]]。
 
 2026-10-01，Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，視為兩人自白宮晚餐以來關係解凍的訊號，續 09-29 黃仁勳偕同赴白宮談 AI 風險、09-27 白宮晚餐；具體談話內容未見報導（僅標題可用）。同日，AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的方式「deluded」「crazy」且不懂資安，僅標題可用，詳見 [[entities/yann-lecun]]。政策面攻防見 [[topics/anthropic-government-policy]]。
 
@@ -103,6 +105,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Nvidia's Jensen Huang, Other CEOs Privately Confront Anthropic's Dario Amodei Over AI Doomsday Warnings](https://finance.yahoo.com/technology/ai/articles/nvidias-jensen-huang-other-ceos-213019720.html) — Google News／Yahoo Finance，2026-10-02
 - [Trump Says He Liked Anthropic's Amodei in Sign of Detente](https://news.google.com/rss/articles/CBMirAFBVV95cUxPQWlRNjM2WjFWSTRxc3FJM2c4S0F4RlF4WXdxZ0FGT1FWWmRuVWljV0lMajdYeXhxdWlLMW9YRGhjSkZGYjVrWVI2TkZabFhxX1A3dGhMc1FjdWM3d2F4ek1zQ3FqaDMyQnQwSmx2X2VtOFFxZS1NYk1FeVAwZFNEendOcS14dWZHb2Z3R1ZQM0JndkJsV3E1SENvYmhMUTdTcDlfUlhLN190WmFU?oc=5) — Google News／Bloomberg.com，2026-10-01（僅標題可用）
 - [Nvidia, Anthropic CEOs to Attend Trump Meeting on AI Risks](https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3lickZOd2RkR1RET0xHZmhBNjhkTDdGeEN1SVBHUkZlZl81Vm9xbFFrR2ZFbFFVbWVzbkc1aTMyS1ZYWTJBTUdKZWFENllXdkY4R1d0ajhVbWJ4UldKVlRkMEdwak5aMkE5TmZCTVhHcF9CQkRCQno2SmtDejd1LTZyOVhGWlhBRlBWenI4LUduZk9RSlJ1OFp4SUcwMm5BU3pNYnZkTDRERXVFQ2Y4endQbGg?oc=5) — Google News／Bloomberg，2026-09-29
 - [Trump Set to Host Nvidia, Anthropic CEOs to Discuss AI Risks](https://news.google.com/rss/articles/CBMirwFBVV95cUxNLWxKNkJCQ0VMZTh4eEh5Rkt4ck5ndG1WRDJqRXJWanVtMllrTmZuTEFDYkNMN21hRmVGYWtvazFsVGtBajROUklZaFVvTWZvNzU0RVVqLW81RTkzNWdJRFJTYkpkWGJJb1c0LS1IbGU0OUNLMnloMDhZT1l1NW01UFRWNGxsWE5XVWtkdkN3MGhwT3lJbVVoWmcwRUtsWnNEeXMybjhXRGZzRElTdTlR?oc=5) — Google News／Bloomberg，2026-09-29（同一事件另一篇報導）
@@ -148,6 +151,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-10-03：據華爾街日報（Yahoo Finance 轉述），黃仁勳等 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後私下質疑 Amodei 的 AI 風險警告；Amodei 呼籲同業對模型能力保持透明誠實，詳見 [[entities/jensen-huang]]（來源：Google News／Yahoo Finance）
 - 2026-10-01：Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，為兩人緊張關係釋出解凍訊號，續 09-27 白宮晚餐、09-29 黃仁勳同赴會晤；具體談話內容未見報導（僅標題可用）（來源：Google News／Bloomberg）
 - 2026-10-01：AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的方式「deluded」「crazy」，並稱其不懂資安，詳見 [[entities/yann-lecun]]（來源：Google News／Fortune、Google News／Yahoo Finance）
 - 2026-09-29：Bloomberg 稱 Nvidia 執行長黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險；Fox News 引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先，談話實質內容未見報導（來源：Google News／Bloomberg、Google News／Fox News）

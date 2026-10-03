@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-02"
-last_news_update: "2026-10-02"
+last_updated: "2026-10-03"
+last_news_update: "2026-10-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -30,18 +30,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-02
+**最後新聞更新：** 2026-10-03
 
-> **最新工作流模式**（2026-10-02）
-> - **三類添代表技巧**：Skills 設計（open-steps）、Plugin/MCP 整合（home-assistant-vibecode-agent）、Agent 活動可視化（agent-office）。
-> - **行動裝置遠端控制、記憶與知識管理各添一例**：CLI-WeChat-Bridge 微信橋接；Breadcrumb 錄製 Mac 螢幕轉記憶庫。
-> - **Hooks 與自動化添一例**：dev.to 實測用未公開 function hooks 做精簡輸出與狀態列外掛。
+> **最新工作流模式**（2026-10-03）
+> - **記憶與創意工具各添例**：projectmem 記下失敗嘗試、在 agent 重蹈覆轍前警告；reelmimic、comfyui-mcp 把 agent 接進影片與 ComfyUI 創作鏈。
+> - **多 agent 並行與額度可見各添一例**：Offrun 並排管理多款 agent、各用獨立 worktree；Pulse 彙整 70 餘款工具剩餘額度。
+> - **安全架構添一例**：自主 agent 部署閘，回滾權留在 agent 碰不到的地方。
 
 ---
 
 ## 摘要
 
-Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在試的十六類裡，最近兩週（2026-09-19 起）有新動靜的有九類，其餘最後動態在九月中旬以前。本頁把社群玩出來的做法逐則收下來，並標明每一類最後一次有人動它是什麼時候。
+Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在試的十六類裡，最近兩週（2026-09-19 起）有新動靜的有十類，其餘最後動態在九月中旬以前。本頁把社群玩出來的做法逐則收下來，並標明每一類最後一次有人動它是什麼時候。
 
 本頁是每一種做法的原始證據，模式概覽表標每一類的成熟度與最後動態；已經收斂成方向的做法怎麼一步步走到今天、你現有設計可以回頭檢查什麼，見 [[topics/community-pattern-trends]]。工具該裝哪個見 [[topics/community-tech-tools]]，**社群在吵哪些觀念、哪些吵出共識**見 [[topics/community-tech-discussions]]「現在吵到哪」，大型 codebase 的四條主線見 [[topics/community-large-codebase-workflow]]。
 
@@ -53,21 +53,21 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-03 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-02 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、zeron 等（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-26 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、claude-code-hooks 外掛市集、精簡輸出外掛（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-22 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b、Pulse（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、MCP 協調中心、docsagent、home-assistant-vibecode-agent（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-02 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
-| **記憶與知識管理** | claude-mem、OKF、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-01 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 即時取回優於預先載入；避免 context 過早飽和 |
-| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **創意工具 Agent 整合** | Palmier Pro、reelmimic、comfyui-mcp、anything2explainer、video-talkcraft 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-03 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、Security Cards、agent-scan、自主 agent 部署閘（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-03 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬、agent-office 3D 卡通辦公室（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator、CLI-WeChat-Bridge（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 手機當 agent 控制介面，各自選不同傳輸層 |
-| **創意工具 Agent 整合** | Palmier Pro、anything2explainer、video-talkcraft、universal-modder 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-01 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-29 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
-| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、語意層漂移 CI 測試、Security Cards、agent-scan（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-18 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent Loop 終止條件** | Loop exit condition 設計模式（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-19 | 「怎麼停下」比「怎麼跑起來」更難；要有顯式終止條件 |
@@ -163,6 +163,60 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### riponcm/projectmem：記錄失敗嘗試、在 agent 重蹈覆轍前先警告的本機記憶 MCP server（2026-10-03）
+
+- **主線：** 索引記憶
+- **核心模式：** 開源 coding agent 記憶工具，記下問題、嘗試、修法與決策，agent 要重走一條已失敗的路時先出聲警告；原生 MCP server，支援 Claude Code、Cursor、Antigravity、Codex；全本機、無雲端、無遙測，MIT 授權；GitHub Search 849 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（OKF、deja-vu、Breadcrumb 等）一個「記失敗路徑」取向——既有做法多存對話歷史或知識，本則專記已否決方案，對應該列「已否決方案未結構化記錄會讓 agent 重做被殺掉的方案」的痛點；跨 session 決策記憶，主線填索引記憶。
+- **可信度註記：** GitHub API 查得 849★、46 forks、0 open issues、最近 commit 2026-10-03（2026-10-03 查）；forks 約星數 5%，低於 1/10 的常態，issues 無往來，採信度中等。
+- **來源：** GitHub Search；[GitHub](https://github.com/riponcm/projectmem)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### edenfunf/reelmimic：給一支喜歡的影片、由 Claude Code 或 Codex 團隊規劃並產出同風格新影片（2026-10-03）
+
+- **主線：** —
+- **核心模式：** 輸入一支喜歡的影片，AI 團隊（Claude Code 或 Codex）與使用者一起規劃、製作並審查出風格相同的新影片；GitHub Search 1,023 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、video-talkcraft 等）一個「以參考影片定風格」取向，並含規劃、製作、審查三段分工；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub API 查得 1,026★、132 forks、26 open issues、最近 commit 2026-10-02，建立於 2026-09-28——五天內衝到千星但 forks 與 issues 都有真實往來（2026-10-03 查）。
+- **來源：** GitHub Search；[GitHub](https://github.com/edenfunf/reelmimic)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### artokun/comfyui-mcp：ComfyUI 的本機優先 MCP server＋側欄 agent，以自然語言產圖影音並編輯 workflow（2026-10-03）
+
+- **主線：** —
+- **核心模式：** 本機優先的 ComfyUI 控制層，MCP server 加側欄 agent，以自然語言生成圖像、影片、音訊，撰寫並執行 workflow、編輯即時節點圖；不綁模型（Claude、ChatGPT、Gemini、離線 Ollama 皆可）；專案自述 178 個工具、36 個 AI skills；GitHub Search 780 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、universal-modder 等）一個「節點式生成工具」取向，與 Plugin / MCP 整合同屬「以 MCP 接外部專業軟體」；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub API 查得 780★、134 forks、76 open issues、最近 commit 2026-10-02，2026-02 建立（2026-10-03 查）；forks 與 issues 往來充足，採信度高。
+- **來源：** GitHub Search；[GitHub](https://github.com/artokun/comfyui-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具；工具與 skills 數量為專案自述）
+
+#### Show HN: Offrun——在同一個工作區並排管理 Claude Code、Codex、AGY、Grok Build（2026-10-03）
+
+- **主線：** 並行規模
+- **核心模式：** Mac（Apple Silicon）桌面應用，並排執行多款 coding agent，顯示誰在工作、誰在等你、各帳號剩餘額度；每個 agent 在專案內各用獨立 git worktree，兩個 agent 改同一個 repo 也不碰同一批檔案；HN 22 分，2 個來源同日出現。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有代表技巧（Claude Squad、amux 等「獨立 git worktree」做法）一個「跨廠商 agent 統一面板」取向，並把帳號額度顯示併入；多 agent 互踩檔案是並行規模下的直接痛點，主線填並行規模。
+- **可信度註記：** HN 22 分、2 個來源；worktree 隔離與額度顯示為產品頁自述，未經第三方驗證。
+- **來源：** Hacker News；[原文](https://offrun.dev/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### qunqin24/Pulse：macOS 邊緣常駐監視器，顯示 Claude Code、Codex、Cursor、Copilot 等 70 餘款 AI 工具剩餘額度（2026-10-03）
+
+- **主線：** —
+- **核心模式：** 免費開源 macOS 監視器，貼在螢幕邊緣，彙整 Claude Code、Codex、Cursor、Copilot 等 70 餘款 AI coding 工具的剩餘額度；GitHub Search 501 星。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧一個「額度可見」取向——既有做法多在降低用量，本則讓用量先看得見；與 Offrun 的帳號額度顯示同屬一個需求（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub API 查得 501★、54 forks、2 open issues、最近 commit 2026-10-03，建立於 2026-08-30（2026-10-03 查）；forks 約星數 11%，屬正常。
+- **來源：** GitHub Search；[GitHub](https://github.com/qunqin24/Pulse)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### 自主 coding agent 的部署閘：預檢契約、帶硬門檻的 canary、agent 無法推翻的自動回滾（2026-10-01）
+
+- **主線：** 除錯分工
+- **核心模式：** 作者讓以 Claude Code 為基礎的自主 agent 自行合併並部署 PR，第一次就讓結帳端點掛了 11 分鐘，因此加上三段式部署閘：預檢契約、帶硬指標門檻的 canary、agent 無法推翻的自動回滾；作者自述六個月、340 餘次正式部署、零次人工呼叫。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（OneCLI、Spare Mac 隔離環境等）一個「出貨前閘門」取向——既有做法多限制 agent 能做什麼，本則放行 agent 出貨，但把回滾權留在 agent 碰不到的地方；多 agent 產出誰把關，主線填除錯分工。
+- **可信度註記：** dev.to 第一手實作文，2 讚；事故時長與部署次數為作者自述，無 repo 或指標可複核。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/yureki_lab/how-i-built-a-deploy-gate-so-my-autonomous-coding-agent-can-ship-to-prod-safely-1egb)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者自述，尚無社群採用回饋數據）
 
 #### kharmanskyi/open-steps：給 Claude Code、Codex、Cursor、Gemini CLI 的平實語言 agent skills（2026-10-02）
 

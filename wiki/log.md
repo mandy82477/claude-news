@@ -7171,3 +7171,32 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   7. **⏳ 已擱置 ~4 週（2026-09-02 首次揭露，本輪 7b Q2 重現）｜`src/gathered_archive/` 只存刊出條目，被擋條目無處可考**。實測 2026-10-02：funnel 記 gathered 99／emitted 59，archive 檔正好 59 筆——40 筆被擋條目完全不在檔內，所以 7b 的 Q2（缺席偵測）結構上永遠做不到第 4 步「逐條判斷被擋條目擋得對嗎」，只能停在數字層。**建議**：`archive_gathered.py` 改存全部 gathered（含被擋者與擋下理由），保留窗仍 14 天。**為什麼需要人判斷：** 要動抓料管線與磁碟用量
   8. **⏳ 已擱置 0 週（本輪新增）｜「⏳ 觀望」標籤的承諾正在空轉**。6g 月度採用驗證率 1/74＝1.4%：radar 面 09-19 的 23 條 ⏳ 只升級 1 條，tools 目錄 51 條 ⏳ 升級 0 條、卻有 15 條因逾期被移出。也就是說「還在看、之後會有結論」目前主要靠汰除兌現。5a 的 ⏳ 逾期規則只在 radar 面、且門檻 90 天。**建議**：評估是否把 tools 目錄的 ⏳ 也納入逾期處置，或把 radar 的 90 天門檻下調。**為什麼需要人判斷：** 門檻與承諾措辭屬立法
   9. **⏳ 已擱置 0 週（本輪新增）｜冷讀者對抗輪（6j-A／6j-B）的日報與週報呈現缺陷，全部只回報**。日報三件最值得改：每則重點缺一行「所以呢」（影響誰／該做什麼／為什麼是今天）；同一事實重複（10-02 的 Mods 在同一檔出現五處、L9 與 L30 幾乎逐字相同）；版式不穩（區塊會消失或膨脹 2.4 倍，同一條線索跨日換區塊）。另抓到一個**數字對不攏**：10-02 表頭「文章數 59」但來源表相加 99（10-01 是 70 vs 112）——那正是 emitted 與 gathered 兩個口徑擺在同一張表，且表格說 dev.to 12／Reddit 10 條但全文 0 則。週報最值得改：第三節「判準」欄的派工指令與關鍵字清單（「→ 寫進 ai-agent-safety」「｜查證：…」）是全刊最大的內部語言外洩，而該節正是週報唯一的獨家資產（W38→W39 八條預告逐條認帳）。wiki 三頁（擲骰抽中 simon-willison／fable-5／yann-lecun）共通問題：**前 160 字全被欄位列與收錄政策吃掉**，真正的「他是誰／這是什麼」排在第 50 行。**為什麼需要人判斷：** 日報與週報的版面規格、以及頁面模板的欄位位置都屬立法（本輪只修了其中可查證的事實缺陷，見「修正矛盾」）
+
+## 2026-10-03 Ingest
+
+- 來源日報：[[news/2026-10-03]]
+- 更新頁面：
+  - **模型**：entities/opus-5-5（livenerf 30 天基準線）
+  - **功能**：entities/claude-code（v2.1.288 版本列、#11455 Session Handoff 功能請求）、topics/claude-code-experimental（7 個新旗標，`DISABLE_STRUCTURED_OUTPUTS` 列第 4 階已出貨）
+  - **商業**：topics/anthropic-business（Frontier Academy、Commvault、Broadcom 貸款通路觀點、FT IPO、Claude for Government）、topics/competitor-landscape（Copilot code review API、Copilot 停用部分模型）
+  - **安全政策**：topics/ai-agent-safety（攻擊表第 10 列：`bash -c` 包住危險 `rm` 繞過，2.1.288 修）、topics/anthropic-government-policy（Claude for Government FedRAMP High GA）
+  - **社群**：topics/community-tech-patterns（6 則新節點）、topics/community-tech-discussions（Ask HN 好程式；Claude 意識爭議，補派）、topics/code-quality-decline（livenerf）
+  - **人物**：entities/dario-amodei、entities/jensen-huang（黃仁勳等 CEO 私下質疑 Amodei 的 AI 風險警告）
+  - **主編**：feature-radar（新增 v2.1.288 條目與全覽表列、Mods 注意事項補三家報導、頂部 callout）
+- 新增頁面：無
+- feature-radar：新增「Claude Code v2.1.288」（🔥🔥／⚡）；⭐ 三件不輪替（新條目未達 🔥🔥🔥🔥）；⚠️ 升版表不動（v2.1.288 無破壞性變更或預設值改變）；⏰ 倒數中不新增（Frontier Academy「2027 年底前培訓 10,000 人」是 Anthropic 自己的目標，讀者沒有要在截止前做的決定）
+- index：無狀態變更
+- 摘要：Anthropic 推出 1 億美元 Claude Frontier Academy；Claude Code 2.1.288 修正 `bash -c` 包住危險 `rm` 的繞過，但 stable 仍停在 2.1.285
+- 呈現品質：全部通過
+- 品質備註：
+  - [主編] 4c market 派工的條目節錄是精簡版，未逐字貼六類包全文（prompt 內指路包檔目錄供核對）；記者回報已檢視約 60 則，判讀未受影響
+  - [主編] 首次派工七位記者被 `guard_roles.py` H8 全數擋下（Claude Code 2.1.288 的 Agent 工具不再帶 `run_in_background` 欄位，舊判準要求明寫 false 永遠不過）；使用者修 hook 後（80d5b26c）重派
+- 分類回退：追加派工 1 類 2 則（NYT〈Is Claude Conscious?〉、Vox〈Anthropic vs. the pope〉安全政策 → 社群，Claude 意識爭議屬技術討論）；不重派 4 則（the-decoder〈suffers perpetually〉人物原輪已收到、The Information 灰市商業原輪已收到、FTC 與 2.1.287 mods 為記者判斷無新事實，非分類錯誤）
+- 分類複核：排除 2 則，全數維持
+- 轉知帳本：新開 H-b59a96（社群→功能，official-community-gap 評估 Offrun 與部署閘）；不登帳 8 筆：功能↔安全政策 2.1.288 兩面、商業→安全政策 FedRAMP／灰市、商業→人物 Corfield、人物→安全政策 the-decoder、模型→社群 livenerf、社群→安全政策／人物（意識爭議）——目標記者本輪已處理或判定不收；不適用保留 open 3 筆（H-fe8019、H-0ce8c4、H-e8e1fd，今日無新證據）
+- devpractice 沉澱：候選 7 筆
+- market 判讀：本日無訊號
+- 主編待辦：
+  - [商業／market] Claude for Government「FedRAMP High GA、無席次費、硬性支出上限」只有 dev.to 單一來源，未查證官方一手
+  - [安全政策] ai-agent-safety 摘要寫「十一個面」，攻擊表實為 10 列，舊數字未改
+  - [社群] Claude 意識爭議是否併入「現在吵到哪」表（與 entities/mustafa-suleyman 同一條線），需主編查官方說法
