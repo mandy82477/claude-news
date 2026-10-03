@@ -29,7 +29,7 @@ check_rules（規則一致性）、check_arch_docs（架構文件漂移）、che
 check_hierarchy（子故事階層）、check_workflow_paths（GH Actions 指名路徑）、
 check_reader_language（讀者語言閘）、check_cell_limits（字元上限閘）、check_skill_refs
 （skill 指路完整性）、check_css_overrides（CSS 靜默覆寫）、check_log_handoffs（log 轉知對帳）、
-check_no_llm_calls（程式碼不得呼叫 `claude -p` 或 LLM SDK）。
+check_no_llm_calls（程式碼不得呼叫 `claude -p` 或 LLM SDK）、check_append_only（log／帳本不得寫在檔頭）。
 """
 import argparse
 import io
@@ -60,6 +60,7 @@ GATES: list[tuple[str, str]] = [
     ("check_css_overrides.py", "CSS 覆寫閘"),
     ("check_log_handoffs.py", "log 轉知對帳閘"),
     ("check_no_llm_calls.py", "LLM 呼叫靜態閘"),
+    ("check_append_only.py", "append-only 檔頭插入閘"),
 ]
 
 

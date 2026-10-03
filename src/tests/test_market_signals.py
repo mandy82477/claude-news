@@ -96,6 +96,20 @@ class TestRealPage(unittest.TestCase):
         self.assertIsNotNone(sig, "正式頁有 ### 💰 標題卻解析不出——標題形狀已漂")
         self.assertRegex(sig["date"], r"^\d{4}-\d{2}-\d{2}$")
 
+    def test_disclaimer_callout_is_first_callout(self):
+        """頁首免責 callout 常駐、不得移除（.claude/reporter-rules/market/daily.md「定位與禁止指令措辭」）。
+
+        2026-10-03 前這條只有文字。禁詞（買進／加碼／布局…）刻意不做機械掃描：規則本身豁免
+        「引用他人行為的事實敘述」，當天正式頁 9 處命中全是這類（Nvidia 加碼投資、算力布局），
+        掃了只會誤報。
+        """
+        page = REPO_ROOT / "wiki" / "topics" / "market-signals.md"
+        if not page.exists():
+            self.skipTest("market-signals.md 不存在")
+        body = page.read_text(encoding="utf-8").split("\n# ", 1)[-1]
+        first_callout = next((ln for ln in body.splitlines() if ln.startswith(">")), "")
+        self.assertIn("非投資建議", first_callout)
+
 
 if __name__ == "__main__":
     unittest.main()

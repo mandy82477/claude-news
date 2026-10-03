@@ -38,6 +38,7 @@ CONTENT_GATES = (
     "check_cell_limits.py",
     "check_tools_page.py",
     "check_log_handoffs.py",
+    "check_append_only.py",
 )
 DATED_GATES = {"check_log_handoffs.py"}  # 接受 --date 的閘
 BASELINE_GLOBS = ("*baseline*.json", "*-allow.json")
