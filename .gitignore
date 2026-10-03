@@ -51,3 +51,6 @@ docs/local/
 
 # wiki ingest 當日工作檔（routing、派工包、記者回報）——判斷已落在 data/classification-log.jsonl，不進 repo
 data/ingest-packets/
+
+# Cygwin／Git Bash 當機紀錄（bash.exe.stackdump），不是專案檔
+*.stackdump

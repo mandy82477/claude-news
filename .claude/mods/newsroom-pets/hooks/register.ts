@@ -1,25 +1,39 @@
-// newsroom-pets：主編或記者用 Edit／Write 寫檔時，在 prompt 上方的提示列畫一隻打字的小角色。
+// newsroom-pets：主編與記者每做一種 wiki 操作，就在 prompt 上方的提示列做對應的小動作；
+// 平常主編縮成 2 行睡覺，Claude 在想事情時醒著坐在角落。
 //
-// 只觀察、不干預：agent.spawn 與 tool.call 一律 next(e) 原樣放行並回傳 next 的結果，
-// 不改派工、不改輸入、不擋任何呼叫。只在 CLAUDE_NEWS 樹上作用。
+// 只觀察、不干預：agent.spawn 與 tool.call 一律回傳 next(e) 的結果，不改派工、不改輸入、
+// 不擋任何呼叫。只在 CLAUDE_NEWS 樹上作用。動作對照見 actions.ts 與 README。
 
-import { basename, EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, pixels, reporterOf, SLEEP_FRAME_MS, sleepingPixels, SPRITE_W, toRows } from './lib.ts'
+import { actionOf, actionPixels, outcomeOf, thinkingPixels, VERB } from './actions.ts'
+import type { Action } from './actions.ts'
+import { EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, reporterOf, SLEEP_FRAME_MS, sleepingPixels, SPRITE_W, toRows } from './lib.ts'
 import type { Desk, Who } from './lib.ts'
 
+type Stage = Desk & { action: Action }
+
 let active = false
+let root = ''
 const agents = new Map<string, Who>() // agentId → 記者
-const desks = new Map<string, Desk>() // who.id → 桌上在寫什麼
+const desks = new Map<string, Stage>() // who.id → 正在做什麼
 let tick = 0
 let timer: { cancel(): void } | null = null
+let speed = 0
 
 function whoFor(agentId: string | undefined): Who {
   if (!agentId) return EDITOR
   return agents.get(agentId) ?? HELPER
 }
 
-// 一支計時器、兩種速度：有人在寫用 FRAME_MS 打字，沒人在寫就降到 SLEEP_FRAME_MS 讓主編睡覺
-let speed = 0
+function relOf(path: unknown): string | null {
+  if (typeof path !== 'string' || !path) return null
+  const norm = (p: string) => p.replace(/\\/g, '/').replace(/\/+$/, '')
+  const p = norm(path)
+  const r = norm(root)
+  if (!/^([A-Za-z]:)?\//.test(p)) return p.replace(/^\.\//, '')
+  return p.toLowerCase().startsWith(r.toLowerCase() + '/') ? p.slice(r.length + 1) : null
+}
 
+// 一支計時器、兩種速度：有人在台上用 FRAME_MS，沒人就降到 SLEEP_FRAME_MS
 function startClock($: any, ms: number) {
   if (timer && speed === ms) return
   timer?.cancel()
@@ -31,14 +45,10 @@ function startClock($: any, ms: number) {
   })
 }
 
-async function animate($: any) {
-  startClock($, FRAME_MS)
-}
-
 export function register(on: any) {
   on('session.start', async ($: any, e: any, next: any) => {
     try {
-      const root = await $.session.root()
+      root = await $.session.root()
       active = (await $.fs.exists(root + '/scripts/ingest_gate.py')) && (await $.fs.exists(root + '/wiki/log.md'))
       if (active) startClock($, SLEEP_FRAME_MS)
     } catch {
@@ -55,27 +65,43 @@ export function register(on: any) {
     return result
   })
 
-  on('tool.call', { tool: ['Edit', 'Write', 'NotebookEdit', 'MultiEdit'] }, async ($: any, e: any, next: any) => {
+  // 每一次工具呼叫：開始時上台做動作，結束後依結果（被擋、閘紅綠）換成結果動作再停留一下
+  on('tool.call', async ($: any, e: any, next: any) => {
     if (!active) return next(e)
     const who = whoFor(e.agentId)
-    desks.set(who.id, { who, file: basename(String(e.file_path ?? e.notebook_path ?? '')), until: 0, writing: true })
-    $.ui.invalidate('ui.render')
-    await animate($)
+    let start: { action: Action; label: string }
     try {
-      return await next(e)
+      start = actionOf(String(e.tool ?? ''), e, relOf(e.file_path ?? e.notebook_path))
+    } catch {
+      return next(e)
+    }
+    desks.set(who.id, { who, file: start.label, until: 0, writing: true, action: start.action })
+    $.ui.invalidate('ui.render')
+    startClock($, FRAME_MS)
+    let result: any
+    try {
+      result = await next(e)
+      return result
     } finally {
-      const desk = desks.get(who.id)
-      if (desk) desks.set(who.id, { ...desk, writing: false, until: (await $.clock.now()) + LINGER_MS })
-      $.ui.invalidate('ui.render')
+      try {
+        const after = outcomeOf(start.action, result)
+        const now = await $.clock.now()
+        const cur = desks.get(who.id)
+        // 同一角色可能已開始下一個動作；只收尾自己這一個
+        if (cur && cur.action === start.action && cur.file === start.label) {
+          desks.set(who.id, { ...cur, writing: false, until: now + LINGER_MS, action: after ?? start.action })
+        }
+        $.ui.invalidate('ui.render')
+      } catch {
+        // 動畫收尾失敗不影響工具結果
+      }
     }
   })
 
   on('ui.render', { component: 'AbovePrompt' }, async ($: any, e: any, next: any) => {
     if (!active || e.props.hasSurvey) return next(e)
-    const stage = onStage(desks, await $.clock.now())
+    const stage = onStage(desks, await $.clock.now()) as Stage[]
     const { Box, Text } = $.ui.resolve(e)
-    const width = SPRITE_W + 2
-    const fit = Math.max(1, Math.floor((e.props.bodyColumns ?? 80) / width))
     // 一行半格方塊字＝一串 Text 片段；undefined 的顏色欄不放進 props（多餘的鍵會讓整張圖被退回）
     const line = (segs: { text: string; color?: string; backgroundColor?: string }[], k: number) =>
       Box({
@@ -88,42 +114,45 @@ export function register(on: any) {
           return Text(props)
         }),
       })
+    const theirs = await next(e)
+    const withTheirs = (mine: any) => Box({ flexDirection: 'column', children: theirs ? [mine, theirs] : [mine] })
+
     if (!stage.length) {
-      // 平常：主編縮成 2 行蜷在右下角睡覺
-      const nap = Box({
+      // 沒人在做事：Claude 在工作就醒著想事情，否則睡覺。都只佔 2 行、靠右
+      const thinking = !!e.props.isWorking
+      const px = thinking ? thinkingPixels(EDITOR, tick) : sleepingPixels(EDITOR, tick)
+      return withTheirs(Box({
         key: 'nap',
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         columnGap: 1,
         children: [
-          Text({ dimColor: true, children: [EDITOR.name + ' zZ'] }),
-          Box({ key: 'nap-px', flexDirection: 'column', children: toRows(sleepingPixels(EDITOR, tick)).map(line) }),
+          Text({ dimColor: true, children: [EDITOR.name + (thinking ? ' …' : ' zZ')] }),
+          Box({ key: 'nap-px', flexDirection: 'column', children: toRows(px).map(line) }),
         ],
-      })
-      const theirs = await next(e)
-      return Box({ flexDirection: 'column', children: theirs ? [nap, theirs] : [nap] })
+      }))
     }
+
+    const width = SPRITE_W + 4
+    const fit = Math.max(1, Math.floor((e.props.bodyColumns ?? 80) / width))
     const cards = stage.slice(0, fit).map((d) =>
       Box({
         key: 'desk-' + d.who.id,
         flexDirection: 'column',
         width,
         children: [
-          ...toRows(pixels(d.who, tick, d.writing)).map(line),
+          ...toRows(actionPixels(d.who, d.action, tick)).map(line),
           Text({ bold: true, wrap: 'truncate-end', children: [d.who.badge + ' ' + d.who.name] }),
-          Text({ dimColor: true, wrap: 'truncate-end', children: [d.writing ? '✎ ' + d.file : '寫好了'] }),
+          Text({ dimColor: true, wrap: 'truncate-end', children: [VERB[d.action] + (d.file ? ' ' + d.file : '')] }),
         ],
       }),
     )
     const more = stage.length - cards.length
-    const room = Box({
+    return withTheirs(Box({
       key: 'newsroom',
       flexDirection: 'row',
       children: more > 0 ? [...cards, Text({ dimColor: true, children: [`…還有 ${more} 位`] })] : cards,
-    })
-    // 提示列是所有 mod 共用的：把排在後面的 mod 畫的東西一起放進來，不蓋掉它們
-    const theirs = await next(e)
-    return Box({ flexDirection: 'column', children: theirs ? [room, theirs] : [room] })
+    }))
   })
 }

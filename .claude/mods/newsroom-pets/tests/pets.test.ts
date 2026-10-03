@@ -60,7 +60,7 @@ test('a reporter writing shows up, keeps other mods, and leaves after lingering'
 
   const ui = await $.ui.mount(BAND)
   expect(await ui.find({ type: 'Text', text: '🛠️ 功能記者' })).toBeDefined()
-  expect(await ui.find({ type: 'Text', text: '寫好了' })).toBeDefined()
+  expect(await ui.find({ type: 'Text', text: '✎ claude-code.md' })).toBeDefined()
   expect(await ui.find({ type: 'Text', text: 'other mods' })).toBeDefined()
   await ui.unmount()
 

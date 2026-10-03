@@ -60,6 +60,22 @@ class TestCheckMods(unittest.TestCase):
         self.assertIn(["plugin", "validate"], calls)
         self.assertIn(["plugin", "test"], calls)
 
+    def test_turned_off_is_reported_as_skipped_not_passed(self):
+        """2026-10-03：開關關著時舊版最後一行仍印「全過」，run_tests 安靜模式只印最後一行，跳過被說成通過。"""
+        def fake_run(args, cwd=None):
+            if args[1] == "--version":
+                return mock.Mock(stdout="2.1.288 (Claude Code)", stderr="", returncode=0)
+            if args[1:3] == ["plugin", "test"]:
+                return mock.Mock(stdout="claude plugin test: hooks modules are turned off in this process", stderr="", returncode=1)
+            return mock.Mock(stdout="ok", stderr="", returncode=0)
+
+        buf = io.StringIO()
+        with mock.patch.dict(os.environ, {"CLAUDE_CODE_REMOTE": ""}),                 mock.patch.object(mod.shutil, "which", return_value="claude"),                 mock.patch.object(mod, "_run", side_effect=fake_run),                 contextlib.redirect_stdout(buf):
+            self.assertEqual(mod.main(), 0)
+        last = [ln for ln in buf.getvalue().splitlines() if ln.strip()][-1]
+        self.assertIn("跳過", last)
+        self.assertNotIn("全過", last)
+
 
 if __name__ == "__main__":
     unittest.main()

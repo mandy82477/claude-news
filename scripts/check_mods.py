@@ -63,6 +63,7 @@ def main() -> int:
         return 0
 
     failed = []
+    skipped = []
     for mod in mods:
         rel = mod.relative_to(ROOT).as_posix()
         v = _run([claude, "plugin", "validate", "--strict", str(mod)])
@@ -72,6 +73,7 @@ def main() -> int:
         t = _run([claude, "plugin", "test", str(mod)], cwd=mod)
         if "hooks modules are turned off" in (t.stdout + t.stderr):
             out.write(f"WARN: check_mods — {rel}：此環境不允許載入 mod，跳過 plugin test\n")
+            skipped.append(rel)
             continue
         if t.returncode != 0:
             failed.append((rel, "plugin test", t.stdout + t.stderr))
@@ -80,6 +82,11 @@ def main() -> int:
             out.write(f"❌ {rel}：{step} 失敗\n{text}\n")
         out.write(f"FAIL: check_mods — {len(failed)} 個 mod 未過\n")
         return 1
+    # 最後一行是 run_tests 安靜模式唯一印出的一行：跳過必須寫在這裡，不可被說成「全過」
+    if skipped:
+        out.write(f"WARN: check_mods — {len(mods)} 個 mod validate --strict 通過；plugin test 跳過 {len(skipped)} 個"
+                  f"（mod 遠端開關未開，測試未執行）\n")
+        return 0
     out.write(f"OK: check_mods — {len(mods)} 個 mod validate --strict 與 plugin test 全過\n")
     return 0
 
