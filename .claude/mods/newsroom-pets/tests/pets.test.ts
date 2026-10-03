@@ -14,10 +14,15 @@ const DEVPRACTICE = '你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）
 const CLASSIFY = '你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read'
 
 test('reporters are recognised from the real dispatch preambles', async () => {
-  expect(reporterOf(FEATURES)).toEqual({ id: 'reporter:功能', name: '功能記者', badge: '🛠️', color: '#378ADD' })
+  expect(reporterOf(FEATURES)).toEqual({ id: 'reporter:功能', name: '功能記者', badge: '🛠️', color: '#378ADD', hat: 'hardhat', hatColor: '#EF9F27' })
   expect(reporterOf(DEVPRACTICE)?.name).toBe('開發實務記者')
   expect(reporterOf(CLASSIFY)?.badge).toBe('🔍')
   expect(reporterOf('找出所有 hook 檔')).toBe(null)
+  // 每一類記者一頂專屬帽子：帽子那兩列像素彼此都不同，也和主編不同
+  const cats = ['功能', '模型', '商業', '安全政策', '社群', '人物', '投資分析', '開發實務', '分類複核']
+  const hats = cats.map((c) => JSON.stringify(pixels(reporterOf(`你是 CLAUDE_NEWS wiki 的「${c}」記者`)!, 1, false).slice(0, 2)))
+  hats.push(JSON.stringify(pixels(EDITOR, 1, false).slice(0, 2)))
+  expect(new Set(hats).size).toBe(hats.length)
   expect(basename('C:\\repo\\wiki\\entities\\claude-code.md')).toBe('claude-code.md')
 })
 

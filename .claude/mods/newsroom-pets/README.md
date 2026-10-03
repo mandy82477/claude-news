@@ -2,6 +2,24 @@
 
 prompt 上方的提示列裡住著一間小編輯部：主編（主 session）與記者（依派工 prompt 認出的子 agent）每做一種 wiki 操作，就做對應的彩色像素小動作。只觀察、不干預——`agent.spawn` 與 `tool.call` 一律回傳 `next(e)` 的結果。只在 CLAUDE_NEWS 樹上作用。
 
+## 角色與帽子（住 `hooks/lib.ts` 的 CAST 與 HATS）
+
+每個角色寬 10 格（2 列帽子＋身體），右邊 8 格是道具區，共 18×8 像素、4 行半格方塊字。
+
+| 角色 | 帽子 |
+|---|---|
+| 🖋️ 主編 | 深色紳士帽 |
+| 🛠️ 功能記者 | 黃色工地安全帽 |
+| 🤖 模型記者 | 機器人天線 |
+| 💼 商業記者 | 高禮帽 |
+| 🏛️ 安全政策記者 | 警帽＋金徽章 |
+| 🌐 社群記者 | 反戴棒球帽 |
+| 👤 人物記者 | 報童帽＋記者證 |
+| 💰 投資分析記者 | 會計遮陽帽 |
+| 📓 開發實務記者 | 毛帽＋紅毛球 |
+| 🔍 分類複核記者 | 偵探帽 |
+| 🧰 小幫手（認不出的子 agent） | 頭帶 |
+
 ## 動作對照（判斷邏輯住 `hooks/actions.ts`）
 
 | 動作 | 名牌下方 | 什麼時候 |
@@ -29,6 +47,8 @@ prompt 上方的提示列裡住著一間小編輯部：主編（主 session）�
 結束後停留 3.5 秒；同時在台上的角色並排，放不下顯示「…還有 N 位」。提示列被收合（Ctrl+X Ctrl+A 或 `[-]`）時 mod 看不到也無法展開，再按一次即可。
 
 ## Demo
+
+`node --experimental-strip-types demo/make-gallery.mts` 產出 `demo/gallery.html`：全部角色帽子與動作道具的圖鑑。
 
 `node --experimental-strip-types demo/make-demo.mts` 用本 mod 實際的 `actions.ts` 模擬一輪 `/news-pipeline`，產出 `demo/pipeline-demo.html`（雙擊開啟）。
 

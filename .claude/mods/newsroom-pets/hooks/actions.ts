@@ -1,6 +1,6 @@
 // 每種 wiki 操作的動作：從工具呼叫本身（工具名、碰的檔、指令、結果）認出來，不靠猜。
 
-import { basename, pixels, SPRITE_W } from './lib.ts'
+import { art, basename, bodyPixels, PALETTE } from './lib.ts'
 import type { Who } from './lib.ts'
 
 export type Action =
@@ -76,94 +76,122 @@ export function outcomeOf(action: Action, result: any): Action | null {
 }
 
 // ── 像素 ────────────────────────────────────────────────────────
+// 角色本體 10 格寬（lib 的 bodyPixels，含專屬帽子），右邊 8×8 道具區畫清楚的道具，
+// 多數 2 格交替動畫。字元對照見 lib 的 PALETTE（'.' 透明、W 紙、g 淺灰、K 深灰、D 桌…）。
 
 type Px = string | null
-const W = '#F1EFE8', P = '#185FA5', R = '#E24B4A', G = '#639922', Y = '#EF9F27', S = '#B4B2A9'
-const B = '#378ADD', K = '#444441', D = '#888780'
 
-function put(g: Px[][], pts: [number, number][], c: Px) {
-  for (const [r, x] of pts) if (g[r] && x >= 0 && x < SPRITE_W) g[r][x] = c
+// 每個道具 1～2 格；'D' 開頭的最後一列是桌面
+const PROPS: Partial<Record<Action, string[][]>> = {
+  write: [
+    ['.DDDDD..', '.DWWWD..', '.DSSWD..', '.DWWWD.P', '.DSSSDP.', '.DDDDD..', '........', 'KKKKKKKK'],
+    ['.DDDDD..', '.DWWWD..', '.DSSSD..', '.DWWWD..', '.DSSWD.P', '.DDDDDP.', '........', 'KKKKKKKK'],
+  ],
+  read: [
+    ['DDDDDDD.', 'DWWWWWD.', 'DSSWSSD.', 'DWWWWWD.', 'DSSWSSD.', 'DSSWSSD.', 'DDDDDDD.', '........'],
+    ['DDDD....', 'DWWWDDD.', 'DSSWDSD.', 'DWWWDWD.', 'DSSWDSD.', 'DSSWDDD.', 'DDDD....', '........'],
+  ],
+  search: [
+    ['........', '.KKKK...', 'KBBBBK..', 'KBWBBK..', '.KKKK...', '....KK..', '.....KK.', '........'],
+    ['........', '...KKKK.', '..KBBBBK', '..KBWBBK', '...KKKK.', '......KK', '.......K', '........'],
+  ],
+  log: [
+    ['.....W..', '....WP..', '...WP...', '..P.....', 'YWWWWWWY', 'YWggWggY', 'YYYYYYYY', 'DDDDDDDD'],
+    ['......W.', '.....WP.', '....WP..', '...P....', 'YWWWWWWY', 'YWgWWggY', 'YYYYYYYY', 'DDDDDDDD'],
+  ],
+  press: [
+    ['KKKKKK..', 'KYYYYK..', 'KKKKKK..', 'KK..KK..', '.DDDD...', '.DSSD...', '........', 'KKKKKKKK'],
+    ['KKKKKK..', 'KYYYYK..', 'KKKKKK..', 'KK..KK..', '........', '.DDDD...', '.DSSD...', 'KKKKKKKK'],
+  ],
+  phone: [
+    ['KK......', 'KKK..B..', '.KK.B...', '..K..B..', '..KK....', '...KKK..', '....KK..', '........'],
+    ['KK....B.', 'KKK..B.B', '.KK.B..B', '..K..B.B', '..KK..B.', '...KKK..', '....KK..', '........'],
+  ],
+  whistle: [
+    ['....Y...', '...YY.S.', 'KYYYY...', 'KYYYY.S.', '...YY...', '....Y...', '........', '........'],
+    ['....Y...', '...YY..S', 'KYYYY.S.', 'KYYYY..S', '...YY.S.', '....Y...', '........', '........'],
+  ],
+  thumbs: [
+    ['........', '......GG', '.....GG.', 'GG..GG..', '.GGGG...', '..GG....', '........', '........'],
+    ['Y.......', '......GG', '.....GG.', 'GG..GG.Y', '.GGGG...', '..GG....', '.....Y..', '........'],
+  ],
+  red: [
+    ['RR....RR', '.RR..RR.', '..RRRR..', '...RR...', '..RRRR..', '.RR..RR.', 'RR....RR', '........'],
+    ['........', '.RR..RR.', '..RRRR..', '...RR...', '..RRRR..', '.RR..RR.', '........', '........'],
+  ],
+  sweat: [
+    ['..RRRR..', '.RRRRRR.', 'RRRRRRRR', 'RWWWWWWR', 'RRRRRRRR', '.RRRRRR.', '..RRRR..', '...KK...'],
+    ['..RRRR..', '.RRRRRR.', 'RRRRRRRR', 'RWWWWWWR', 'RRRRRRRR', '.RRRRRR.', '..RRRR..', '...KK...'],
+  ],
+  stamp: [
+    ['..KKKK..', '...KK...', '..RRRR..', '........', '.DDDDDD.', '.DWWWWD.', '.DDDDDD.', 'KKKKKKKK'],
+    ['........', '..KKKK..', '...KK...', '..RRRR..', '.DRRRRD.', '.DWWWWD.', '.DDDDDD.', 'KKKKKKKK'],
+  ],
+  sweep: [
+    ['.....O..', '....O...', '...O....', '..O.....', '.YYY....', 'YYYYY.S.', '......SS', 'DDDDDDDD'],
+    ['..O.....', '...O....', '....O...', '.....O..', '....YYY.', '.S.YYYYY', 'SS......', 'DDDDDDDD'],
+  ],
+  busy: [
+    ['........', '.KKKKKK.', '.KBBBBK.', '.KBLBBK.', '.KBBBBK.', '.KKKKKK.', 'KKKKKKKK', '........'],
+    ['........', '.KKKKKK.', '.KBBBBK.', '.KBBBBK.', '.KBLBBK.', '.KKKKKK.', 'KKKKKKKK', '........'],
+  ],
 }
 
-/** 一隻角色做某個動作的第 tick 格（12×8 像素）。身體沿用 lib 的 pixels，再疊道具。 */
-export function actionPixels(who: Who, action: Action, tick: number): Px[][] {
-  const typing = action === 'write' || action === 'log' || action === 'press' || action === 'stamp' || action === 'busy'
-  const g = pixels(who, tick, typing || action === 'shelf' || action === 'whistle' || action === 'plane')
-  // 預設 pixels 會畫桌子和紙；不需要桌子的動作先清掉最後一列與道具欄
-  const clearProps = () => { for (let r = 0; r < 8; r++) for (const x of [10, 11]) g[r][x] = null }
-  const t = tick
-  switch (action) {
-    case 'write': case 'busy':
-      break
-    case 'read':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[4, 9], [4, 10], [5, 9], [5, 10], [6, 9], [6, 10]], W); put(g, [[4 + (t % 3), 11]], t % 2 ? S : W)
-      break
-    case 'search': {
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      const x = t % 4 < 2 ? 9 : 10
-      put(g, [[3, x], [3, x + 1], [4, x], [4, x + 1]], B); put(g, [[5, Math.min(11, x + 1)]], K)
-      break
-    }
-    case 'log':
-      clearProps(); put(g, [[6, 9], [6, 10], [6, 11]], Y); put(g, [[5, 10 + (t % 2)]], P)
-      break
-    case 'shelf': {
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      const col = [R, B, G, Y]
-      for (let i = 0; i < 4; i++) put(g, [[i <= t % 5 ? 4 : 6, Math.min(11, 8 + i)]], i <= t % 5 ? col[i] : null)
-      put(g, [[7, 8], [7, 9], [7, 10], [7, 11]], D)
-      break
-    }
-    case 'radar': {
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      const ring: [number, number][] = [[0, 10], [0, 11], [1, 11], [2, 11], [2, 10], [1, 10]]
-      put(g, [ring[t % 6], [1, 10]], G)
-      break
-    }
-    case 'press':
-      clearProps(); put(g, [[3, 10], [3, 11], [4, 10], [4, 11]], K); put(g, [[5 - (t % 3), 11]], W)
-      break
-    case 'phone':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[1, 9], [2, 9], [3, 9]], K); put(g, t % 2 ? [[0, 10], [1, 11]] : [[1, 10], [0, 11]], S)
-      break
-    case 'whistle':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[3, 9], [3, 10]], Y); put(g, [[2 + (t % 2), 11]], S)
-      break
-    case 'check':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[3, 9], [3, 10], [4, 9], [4, 10], [5, 9], [5, 10]], W)
-      if (t % 4 > 0) put(g, [[4, 9]], G)
-      if (t % 4 > 1) put(g, [[3, 10]], G)
-      break
-    case 'thumbs':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[2, 10], [3, 10], [3, 11], [4, 10], [4, 11]], G)
-      break
-    case 'sweat': case 'red':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[1, 10], [2, 10]], t % 2 ? B : null); put(g, [[3, 10], [3, 11], [4, 10], [4, 11]], R)
-      break
-    case 'stamp':
-      clearProps(); put(g, [[t % 2 ? 4 : 5, 10], [t % 2 ? 4 : 5, 11]], R); put(g, [[6, 10], [6, 11]], W)
-      break
-    case 'plane':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[Math.max(0, 3 - (t % 4)), Math.min(11, 8 + (t % 4))]], W)
-      break
-    case 'sweep':
-      clearProps(); for (let x = 0; x < 10; x++) g[7][x] = null
-      put(g, [[4, 9], [5, 10], [6, t % 2 ? 11 : 10]], Y); put(g, [[7, (t % 3) + 8]], S)
-      break
+// 會隨 tick 變化的道具：用程式算
+function generatedProp(action: Action, t: number): string[] | null {
+  if (action === 'shelf') {
+    // 書架：書一本本排上去
+    const colors = 'RBGYpKBR'
+    const n = t % 9
+    const row = (from: number) => 'O' + [...Array(6)].map((_, i) => (from + i < n ? colors[(from + i) % colors.length] : '.')).join('') + 'O'
+    return ['OOOOOOOO', row(0), row(0), 'OOOOOOOO', row(6), row(6), 'OOOOOOOO', '........']
   }
-  return g
+  if (action === 'radar') {
+    // 雷達：綠色圓框，掃描線繞圈
+    const g = ['..GGGG..', '.G....G.', 'G......G', 'G......G', 'G......G', 'G......G', '.G....G.', '..GGGG..'].map((r) => [...r])
+    const sweeps: [number, number][][] = [
+      [[3, 4], [2, 4], [1, 4]], [[3, 4], [2, 5], [1, 6]], [[4, 4], [4, 5], [4, 6]], [[4, 4], [5, 5], [6, 6]],
+      [[4, 3], [5, 3], [6, 3]], [[4, 3], [5, 2], [6, 1]], [[3, 3], [3, 2], [3, 1]], [[3, 3], [2, 2], [1, 1]],
+    ]
+    for (const [r, c] of sweeps[t % 8]) g[r][c] = 'L'
+    if (t % 3 === 0) g[2][5] = 'Y' // 偵測到新功能的光點
+    return g.map((r) => r.join(''))
+  }
+  if (action === 'check') {
+    // 夾板：一項項打勾
+    const n = t % 4
+    const line = (i: number) => (i < n ? 'OWGWSSWO' : 'OWSWSSWO')
+    return ['..KKKK..', 'OOOOOOOO', line(0), 'OWWWWWWO', line(1), 'OWWWWWWO', line(2), 'OOOOOOOO']
+  }
+  if (action === 'plane') {
+    // 紙飛機：由左下往右上飛出
+    const pos = t % 6
+    const g = [...Array(8)].map(() => [...'........'])
+    const x0 = pos, y0 = 6 - pos
+    const shape: [number, number][] = [[0, 0], [0, 1], [1, 1], [1, 2], [1, 3], [2, 0], [2, 1]]
+    for (const [dy, dx] of shape) {
+      const y = y0 + dy - 1, x = x0 + dx
+      if (y >= 0 && y < 8 && x >= 0 && x < 8) g[y][x] = 'B'
+    }
+    if (x0 > 0 && y0 + 1 < 8) g[y0 + 1][Math.max(0, x0 - 1)] = 'S' // 尾跡
+    return g.map((r) => r.join(''))
+  }
+  return null
+}
+
+/** 一隻角色做某個動作的第 tick 格（18×8 像素）：左邊本體（揮手或靜坐），右邊道具。 */
+export function actionPixels(who: Who, action: Action, tick: number): Px[][] {
+  const waving = action !== 'read' && action !== 'search' && action !== 'phone' && action !== 'red' && action !== 'sweat'
+  const body = bodyPixels(who, tick, waving)
+  const frames = PROPS[action]
+  const propRows = generatedProp(action, tick) ?? (frames ? frames[tick % frames.length] : Array(8).fill('........'))
+  const prop = art(propRows)
+  return body.map((row, r) => [...row, ...prop[r]])
 }
 
 /** Claude 在工作、但還沒碰到任何工具：主編醒著坐在角落想事情（2 行，與睡姿同大小）。 */
 export function thinkingPixels(who: Who, tick: number): Px[][] {
-  const _ = null, C = who.color, H = who.hat ?? C, E = '#2C2C2A'
+  const _ = null, C = who.color, H = who.hatColor, E = PALETTE.E, D = PALETTE.D, S = PALETTE.g
   const e = tick % 9 === 0 ? C : E
   const g: Px[][] = [
     [_, _, H, H, H, H, _, _, _, _],
@@ -171,6 +199,6 @@ export function thinkingPixels(who: Who, tick: number): Px[][] {
     [_, C, C, C, C, C, C, _, _, _],
     [D, C, C, C, C, C, C, C, D, _],
   ]
-  put(g, [[0, 7 + (tick % 3)]], S)
+  g[0][7 + (tick % 3)] = S
   return g
 }

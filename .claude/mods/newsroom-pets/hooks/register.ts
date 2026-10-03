@@ -134,7 +134,7 @@ export function register(on: any) {
       }))
     }
 
-    const width = SPRITE_W + 4
+    const width = SPRITE_W + 2
     const fit = Math.max(1, Math.floor((e.props.bodyColumns ?? 80) / width))
     const cards = stage.slice(0, fit).map((d) =>
       Box({
