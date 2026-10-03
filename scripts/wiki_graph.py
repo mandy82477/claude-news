@@ -440,6 +440,42 @@ def similar_pages(target: str, pages, links, top: int = 3, min_score: float = 0.
     return out[:top]
 
 
+def related_pages(target: str, pages, links, top: int = 3, min_score: float = 0.1, exclude=()):
+    """回傳 [(slug, score, shared_neighbors, direct)]：與 target 最相關的頁（網站「你可能也想看」）。
+
+    與 similar_pages 的差別：那個找「該連而沒連」的缺口，刻意排除已相連的頁；這個給讀者用，
+    直接互相引用正是最強的相關證據，所以算進來。
+    分數＝閉鄰域加權 Jaccard（自己也算自己的鄰居，直連因此加分；權重 1/度數，樞紐不霸榜）
+          ×（1＋log2(1＋正文互引次數)）。
+    封存頁、根層頁（radar／overview）與 exclude（呼叫端給：併回殼、上下層）不推。
+    """
+    import math
+    adj, _ = _neighbor_sets(links, pages)
+    direct: dict = defaultdict(int)
+    for l in links:
+        if l.zone in ("樣板", "階層") or l.src == l.dst:
+            continue
+        if target in (l.src, l.dst):
+            direct[l.dst if l.src == target else l.src] += 1
+    w = lambda n: 1.0 / max(1, len(adj.get(n, ())))
+    mine = adj.get(target, set()) | {target}
+    out = []
+    for other in pages:
+        if other == target or other in exclude or "/" not in other or _ARCHIVE_RE.search(other):
+            continue
+        d = direct.get(other, 0)
+        shared = adj.get(target, set()) & adj.get(other, set())
+        if not d and len(shared) < MIN_SHARED:
+            continue
+        theirs = adj.get(other, set()) | {other}
+        union = sum(w(n) for n in mine | theirs)
+        s = (sum(w(n) for n in mine & theirs) / union if union else 0.0) * (1 + math.log2(1 + d))
+        if s >= min_score:
+            out.append((other, s, sorted(shared), d))
+    out.sort(key=lambda x: (-x[1], x[0]))
+    return out[:top]
+
+
 def load_ignored(ignore_path=None) -> set:
     """已審、無需連結的頁對（gaps 與 co-landed 共用同一份 data/graph_gap_ignore.json）。"""
     import json

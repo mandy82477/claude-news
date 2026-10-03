@@ -1665,15 +1665,21 @@ def build():
         for _n in _nodes:
             for _k, _v in _n["sources"].items():
                 _src_totals[_k] = _src_totals.get(_k, 0) + _v
-        # 你可能也想看：與本頁不直接相連但共享鄰居多的頁（scripts/wiki_graph.py similar_pages）
-        _doms = {s: n["domain"] for s, n in ((nn["slug"], nn) for nn in _nodes)}
+        # 你可能也想看：與本頁最相關的頁（scripts/wiki_graph.py related_pages；直接互引也算，2026-10-03）
         _slug_of = {n["id"]: n["slug"] for n in _nodes}
+        # 併回殼不推（點進去只會被指回母頁）；判準同 gen_wiki_frontmatter.py 的 page_role=redirect
+        _shells = {s for s, f in _pages.items()
+                   if "已併回" in "\n".join(f.read_text(encoding="utf-8-sig").split("\n")[:60])}
+        _is_arch = lambda sl: bool(_g._ARCHIVE_RE.search(sl))
         for _n in _nodes:
-            # 門檻 0.15：樞紐頁（pricing、claude-code）拿不到有意義的間接關聯就誠實不顯示，不湊數
-            _recs = _g.similar_pages(_n["slug"], _pages, _links, top=3, min_score=0.15, doms=_doms)
+            # 上下層不推：麵包屑與「本頁的子題」已經給了
+            _family = {_n["parent"]} | {m["slug"] for m in _nodes if m["parent"] == _n["slug"]}
+            _recs = _g.related_pages(_n["slug"], _pages, _links, top=3, min_score=0.1, exclude=_shells | _family)
             _deg = lambda sl: sum(1 for e in _edges.values() if e["body"] and sl.split("/")[-1] in (e["s"], e["d"]))
-            _n["alsoSee"] = [{"id": r[0].split("/")[-1],
-                              "shared": [x.split("/")[-1] for x in sorted(r[2], key=_deg)[:3]]}   # 最具體的共享鄰居優先，不列樞紐
+            _n["alsoSee"] = [{"id": r[0].split("/")[-1], "direct": r[3],
+                              # 最具體的共享鄰居優先，不列樞紐；封存頁與併回殼對讀者是雜訊，不列
+                              "shared": [x.split("/")[-1] for x in sorted(
+                                  (x for x in r[2] if not _is_arch(x) and x not in _shells), key=_deg)[:3]]}
                              for r in _recs]
         _latest = max((n["lastNewsUpdate"] for n in _nodes if n["lastNewsUpdate"]), default="")
         _graph = {"generated": str(_today), "latestNews": _latest, "nodes": _nodes,

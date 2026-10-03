@@ -97,6 +97,19 @@ class SimilarityAndGaps(unittest.TestCase):
         self.assertNotIn("arch/old-archive", recs)
         self.assertEqual([r[0] for r in g.similar_pages("x", pages, links, top=5, min_score=0.0)], [])
 
+    def test_related_直連算相關_互引多者優先_封存根層與排除名單不推(self):
+        import wiki_graph as g
+        pages = {"t/me", "t/often", "t/once", "t/far", "t/z", "t/shell", "t/me-archive", "overview"}
+        L = lambda s, d, z="正文": g.Link(s, d, 1, "", z)
+        links = [L("t/me", "t/often")] * 4 + [
+            L("t/me", "t/once"), L("t/me", "t/shell"), L("t/me", "t/me-archive"), L("t/me", "overview"),
+            L("t/far", "t/often"), L("t/z", "t/once"),  # far、z 只共享一個鄰居、又不直連 → 不推
+            L("t/me", "t/often", "樣板"),               # 樣板邊不算互引次數
+        ]
+        recs = g.related_pages("t/me", pages, links, top=5, min_score=0.0, exclude={"t/shell"})
+        self.assertEqual([r[0] for r in recs], ["t/often", "t/once"])
+        self.assertEqual(recs[0][3], 4)
+
     def test_gaps_排除已相連與封存(self):
         g, pages, links = self._toy()
         rows, _ = g.gap_pairs(pages, links, top=10, min_score=0.0)
