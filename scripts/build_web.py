@@ -154,7 +154,9 @@ _INDEX_ROW_RE = re.compile(r"^\|\s*\[\[(?:[^\]|]*/)?([^\]|/]+)\]\]\s*\|(.*)\|\s*
 SUMMARY_HEADERS = ["## 現況", "## 摘要"]
 
 # 六個標準領域值（見 .claude/reporter-rules/page-templates.md「命名與分類規則」）
-VALID_DOMAINS = {"🤖 模型", "🛠️ 工具/功能", "👤 人物", "💼 商業", "🏛️ 政策/安全", "🌐 社群"}
+# 💻 開發實務＝開發實務記者認領的頁（coding-workflow-guide，2026-10-04 起；手冊 10-04 移交後領域欄跟著改，
+# 否則它同時出現在「工具/功能」與「開發實務」兩個分頁）
+VALID_DOMAINS = {"🤖 模型", "🛠️ 工具/功能", "👤 人物", "💼 商業", "🏛️ 政策/安全", "🌐 社群", "💻 開發實務"}
 
 
 def readable_inline(text: str) -> str:
@@ -1048,7 +1050,7 @@ def parse_wiki(f: Path, page_type: str) -> dict:
     if not meta["domain"]:
         print(f"  WARN: {page_type}/{f.name} 缺少「領域」欄位")
     elif meta["domain"] not in VALID_DOMAINS:
-        print(f"  WARN: {page_type}/{f.name} 領域值不在標準六選一內：{meta['domain']!r}")
+        print(f"  WARN: {page_type}/{f.name} 領域值不在標準七選一內：{meta['domain']!r}")
 
     return meta
 

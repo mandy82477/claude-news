@@ -98,6 +98,7 @@ DOMAIN_TO_REPORTER = {
     "🏛️ 政策/安全": "wiki-reporter-safety-policy",
     "🌐 社群": "wiki-reporter-community",
     "👤 人物": "wiki-reporter-people",
+    "💻 開發實務": "wiki-reporter-devpractice",
 }
 
 # ── 分類線索（僅 audit 使用）──────────────────────────────────────────────

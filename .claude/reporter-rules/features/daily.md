@@ -8,7 +8,7 @@
 
 ## 負責頁面
 
-> **例外：`wiki/topics/coding-workflow-guide.md`**——該頁領域雖為 🛠️ 工具/功能，但由**開發實務記者**維護（`.claude/reporter-rules/devpractice/pages.md`），你不寫該頁。官方使用指南（無新指令旗標）在分類層直接派給他；他需要你同步 `entities/claude-skills` 或 `official-community-gap` 時，會經轉知帳本來。
+> **不是你的頁：`wiki/topics/coding-workflow-guide.md`**——領域已改為 💻 開發實務，由**開發實務記者**維護（`.claude/reporter-rules/devpractice/pages.md`），你不寫該頁。官方使用指南（無新指令旗標）在分類層直接派給他；他需要你同步 `entities/claude-skills` 或 `official-community-gap` 時，會經轉知帳本來。
 
 | 頁面 | 觸發條件 |
 |------|---------|

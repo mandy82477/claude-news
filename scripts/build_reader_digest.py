@@ -90,6 +90,8 @@ H1_RE = re.compile(r"^#\s+(.+?)\s*$", re.M)
 # build_web.READER_DOMAIN_SECTIONS／check_reader_digest.DOMAIN_LABELS 同源）
 DOMAIN_TO_SECTION = {
     "🛠️ 工具/功能": "🛠️ 功能",
+    # 開發實務記者的頁（手冊）不另開一節：讀者版固定六節是契約，手冊更新併入功能節
+    "💻 開發實務": "🛠️ 功能",
     "🤖 模型":      "🤖 模型",
     "💼 商業":      "💼 商業",
     "🏛️ 政策/安全": "🏛️ 安全政策",

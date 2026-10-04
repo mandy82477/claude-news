@@ -2,7 +2,7 @@
 page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
-domain: "🛠️ 工具/功能"
+domain: "💻 開發實務"
 last_updated: "2026-10-03"
 last_news_update: "2026-09-28"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **狀態：** ongoing
 **開始日期：** 2026-08-08
-**領域：** 🛠️ 工具/功能
+**領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
 **最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-28

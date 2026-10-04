@@ -1913,7 +1913,7 @@ window.WIKI_DATA = {
       "name": "程式開發實戰手冊",
       "entityType": "",
       "status": "ongoing",
-      "domain": "🛠️ 工具/功能",
+      "domain": "💻 開發實務",
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-08-08",
@@ -1925,7 +1925,6 @@ window.WIKI_DATA = {
       "latestHeadline": "",
       "pageRole": "",
       "readerDomains": [
-        "🛠️ 工具/功能",
         "💻 開發實務"
       ]
     },
