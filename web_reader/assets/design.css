@@ -1064,6 +1064,17 @@ code {
 .weekly-deepdive__body p { margin: 0 0 14px; }
 .weekly-deepdive__body p:last-child { margin-bottom: 0; }
 .weekly-deepdive__body strong { color: var(--ink-1); font-weight: var(--fw-medium); }
+/* 專文標題（`#### 專欄｜標題`）：上方專欄名、下方標題，篇與篇之間 hairline 分隔 */
+.weekly-deepdive__body h4 {
+  font-family: var(--font-display); font-size: var(--fs-lead); font-weight: var(--fw-medium);
+  line-height: 1.5; color: var(--ink-1);
+  margin: 26px 0 12px; padding-top: 22px; border-top: 1px solid var(--border-2);
+}
+.weekly-desk__name {
+  display: block; font-family: var(--font-cjk); font-size: var(--fs-small);
+  letter-spacing: 0.2em; color: var(--ochre-9); margin-bottom: 4px;
+}
+.weekly-desk__title { display: block; }
 
 /* 本週要動的事 — 深挖之後的行動清單：hairline 上下界，不加底色，與深挖卡片分開 */
 .weekly-actions {

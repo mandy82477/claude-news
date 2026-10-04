@@ -1261,6 +1261,13 @@
   }
 
   // 純內文片段（無 H1／無 meta 前綴）→ HTML，供週報期刊版面各段落使用
+  // 週報專文（W40 起深挖改為多篇記者專文，每篇是 `#### 專欄｜標題`）：把專欄名拆成上方小字，
+  // 讀者一眼看出這篇是哪位記者的。沒有「｜」的 h4 原樣保留（舊期單篇深挖不受影響）。
+  function weeklyDeskHeads(html) {
+    return html.replace(/<h4([^>]*)>([^<｜]{1,12})｜([\s\S]*?)<\/h4>/g,
+      (m, attrs, desk, title) => `<h4${attrs} class="weekly-desk"><span class="weekly-desk__name">${desk.trim()}</span><span class="weekly-desk__title">${title.trim()}</span></h4>`);
+  }
+
   function mdToHtml(md) {
     if (!md) return '';
     if (typeof marked === 'undefined') {
@@ -1511,7 +1518,7 @@
     <div class="weekly-deepdive">
       <div class="weekly-deepdive__kicker">深挖專欄 · DEEP DIVE</div>
       <h3 class="weekly-deepdive__title">${esc(d.deepDive.title)}</h3>
-      <div class="weekly-deepdive__body">${mdToHtml(d.deepDive.body)}</div>
+      <div class="weekly-deepdive__body">${weeklyDeskHeads(mdToHtml(d.deepDive.body))}</div>
     </div>`);
       }
       // 本週要動的事：把散在頭條收尾、本週版本、綜述、深挖「怎麼用」的動作集中成一張清單
