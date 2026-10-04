@@ -7260,3 +7260,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - inquiry Q2 探針改讀 `blocked_items`（依 `blocked_by` 分流、舊副本只驗數字）；`check_classification_log.py` 註明 `blocked_items` 不在對帳範圍
 - 撞到的第二個問題：news-console mod 誤擋本 session 的 commit。根因（以 `$.store` 實證）：記帳整份陣列 get→set，並行記者互蓋、本 session 改過的檔從帳上消失；另一 session 的 Bash 髒檔比對同時把這些檔記成它的。改一檔一把 key，回歸測試舊碼 3 紅、新碼全綠
 - 仍未做：[[entities/dario-amodei]] 批評者對照表與 LeCun／Vembu／Lonsdale 一手補全、`page-templates.md`「H1 下先放一句這是誰／這是什麼」——人物頁 session 進行中（宣告未釋出），依使用者指示不干擾
+
+## 2026-10-04 Query（使用者：W40 重寫、人物頁補完）
+
+- [[weekly/2026-W40]] 重寫（同日）：討論綜述 Mods 改用官方文件說法（mod 讀得到 API Key、無沙箱，屬設計）、新增拒答計費三類（官方文件查證）、降智條補 #77136 10-03 由發文者自關且官方未修；本週要動的事補 mod 一條；新開表查證線索改 HTML 註解；檔尾興趣題更新（GPT 對照已結案）。npm stable 仍 2.1.285（10-04）
+- [[entities/dario-amodei]] 新增「公開批評者對照」（六人）；[[entities/yann-lecun]]、[[entities/sridhar-vembu]]、[[entities/joe-lonsdale]] 撤「僅標題可用」補原文（LeCun 以 Fortune 原文逐句核對，「worst marketing campaign」只見 TNW 轉述）；[[entities/jensen-huang]] 09-28「odd」補原話、09-29 白宮午宴與 WSJ 報導合併為同一場；index 四列鉤子同步
+- page-templates：非人物頁 H1 下加一句「這是什麼」、蒐集邊界移到欄位最後（10 頁搬位）；[[entities/fable-5]] 補第一句
+- 歸因 user-query／人物

@@ -28,10 +28,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **別名：** LLM Wiki, Karpathy wiki
-**蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 **開始日期：** 2026-09-12
 **最後更新：** 2026-09-25
 **最後新聞更新：** 2026-09-25
+**蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 
 > **最新動態**（2026-09-25）
 > 第八種路線 Tencent/WeKnora（29.9k 星，這一類最大）走反方向：wiki 由文件庫自動生成、是向量 RAG 的副產品，不是 agent 寫入時合成；與 Claude 只靠內建 MCP Server 相接。

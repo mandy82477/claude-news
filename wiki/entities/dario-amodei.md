@@ -47,9 +47,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-2026-10-03，Yahoo Finance 轉述華爾街日報：黃仁勳等數位 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後，私下就 Amodei 對 AI 風險的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。單一轉述來源，細節見 [[entities/jensen-huang]]。
+2026-10-03，Yahoo Finance 轉述華爾街日報：黃仁勳等數位 AI 業者主管在 09-29 白宮午宴（Trump 與約 24 位科技 CEO）後，私下就 Amodei 對 AI 風險的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。單一轉述來源，細節見 [[entities/jensen-huang]]。
 
-2026-10-01，Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，視為兩人自白宮晚餐以來關係解凍的訊號，續 09-29 黃仁勳偕同赴白宮談 AI 風險、09-27 白宮晚餐；具體談話內容未見報導（僅標題可用）。同日，AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的方式「deluded」「crazy」且不懂資安，僅標題可用，詳見 [[entities/yann-lecun]]。政策面攻防見 [[topics/anthropic-government-policy]]。
+2026-10-01，Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，視為兩人自白宮晚餐以來關係解凍的訊號，續 09-29 黃仁勳偕同赴白宮談 AI 風險、09-27 白宮晚餐；具體談話內容未見報導（僅標題可用）。同日，Yann LeCun 接受 Fortune 專訪，稱 Amodei「completely deluded」，詳見 [[entities/yann-lecun]]。政策面攻防見 [[topics/anthropic-government-policy]]。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -87,6 +87,19 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - ⟨Q-01⟩ **已查實（2026-09-06）**：沒有公開場合與逐字稿——此為 Amodei 對同事的內部談話，由 Axios 引述知情人士轉述，並非公開發言（[The Next Web](https://thenextweb.com/news/ai-talent-wars-loyalty-money-mission-anthropic)、[Fortune](https://fortune.com/2026/08/25/anthropic-ipo-could-create-millionaires-but-company-worried-about-money-over-mission-ai-firm-ceo-dario-amodei/)）
 - ⟨Q-02⟩ **已查實（2026-09-20）**：場合為 2026-08-26 CNBC 專訪，Marc Benioff 在場，原話「We're not interested in destroying anyone...We think of this as a very positive sum thing, right?」
 
+## 公開批評者對照
+
+| 誰 | 何時 | 批評什麼 | 利益關係 |
+|---|---|---|---|
+| [[entities/mustafa-suleyman]] | 09-16 | 稱 Anthropic 把 Claude「類人化」、談 AI 意識有「災難性影響」風險 | Microsoft AI 執行長，同業 |
+| [[entities/michael-burry]] | 09-14（HN 09-17 轉載） | 稱 OpenAI、Anthropic 等高層呼籲減速是「自利」 | 放空交易員，外部觀察者 |
+| [[entities/sridhar-vembu]] | 09-23 | 批「要別人停、自己繼續投資」；稱它們可以自己放慢 | Zoho 共同創辦人，無已知投資或競爭關係 |
+| [[entities/joe-lonsdale]] | 09-25 | 稱 AI 公司渲染恐懼以左右政策，不要寡頭控制政策 | Anthropic 投資人，Palantir、8VC 創辦人 |
+| [[entities/jensen-huang]] | 09-28、09-29 | 稱要求減速者是建最多算力的人，「odd」；午宴後私下質問言論為何如此警世 | Nvidia 執行長，Nvidia 投資 Anthropic |
+| [[entities/yann-lecun]] | 10-01 | 稱 Amodei「completely deluded」；批把沙盒設計不良說成 AI 危險 | AMI Labs 創辦人，Meta 前首席 AI 科學家 |
+
+各人原話與來源見各人物頁；論述層（減速呼籲與反彈聲浪）見 [[topics/recursive-self-improvement]]。
+
 ## 在 Anthropic 的角色與影響
 
 - **Anthropic 創辦人背景：** 前 OpenAI VP of Research，與 [[entities/chris-olah|Chris Olah]] 等人共同創立 Anthropic，定位「安全優先」AI 公司
@@ -102,10 +115,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - [[entities/fable-5]] — 2026 旗艦模型（個人出席大會宣布相關政策）
 - [[entities/bernanke]] — 前聯準會主席，2026-07-09 加入監督 Amodei 執行方向的「長期利益信託」董事會
 - [[entities/jensen-huang]] — Nvidia 執行長，2026-09-15 於 Dreamforce 與 Amodei 就 AI 安全立場出現分歧，並批評 Anthropic 反壟斷豁免提案
-- [[entities/mustafa-suleyman]] — Microsoft AI 執行長，同期另一則批評 Anthropic「類人化」論述的具名聲量
-- [[entities/michael-burry]] — 知名放空交易員，2026-09-17 公開批評其 AI 減速呼籲是「自利」之詞
-- [[entities/sridhar-vembu]] — Zoho 創辦人，2026-09-23 向 NDTV 表示 OpenAI、Anthropic「可以放慢腳步」，加入減速爭論的外部評論聲量
-- [[entities/yann-lecun]] — AI「教父」，2026-10-01 公開批評其看待 AI 風險的方式「deluded」「crazy」，並稱其不懂資安
+- [[entities/mustafa-suleyman]]、[[entities/michael-burry]]、[[entities/sridhar-vembu]]、[[entities/joe-lonsdale]]、[[entities/yann-lecun]] — 公開批評者，見上方「公開批評者對照」
 
 ## 參考來源
 

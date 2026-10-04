@@ -26,6 +26,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Fable 5 與 5.1
 
+Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現行的 Fable 5.1。
+
 **類型：** model
 **狀態：** active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）
 **領域：** 🤖 模型

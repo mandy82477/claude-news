@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** product
 **狀態：** active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）
 **領域：** 🛠️ 工具/功能
-**蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
 **最後更新：** 2026-10-03
 **最後新聞更新：** 2026-09-25
+**蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
 > **最新動態**（2026-09-25）
 > Help Center release notes 新增段落確認「Cowork 進駐每個對話」：可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件；背景執行、VM 沙箱是否原樣保留，官方文件尚未載明。

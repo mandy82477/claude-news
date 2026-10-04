@@ -58,7 +58,7 @@
 | [[entities/cat-wu]] | person | 👤 人物 | active | Claude Code 產品負責人，「AI 下一步是主動性（proactivity）」論述 |
 | [[entities/andrej-karpathy]] | person | 👤 人物 | active | 近期加入 Anthropic，CLAUDE.md 四條規則、「最小必要 context」費用控管原則 |
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
-| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：政府監管立場、企業文化論述、Code with Claude 大會現場宣布速率政策　↳ 子故事：[[entities/dario-amodei-archive]] |
+| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：AI 風險論述與政府監管立場；九、十月六位公開批評者（黃仁勳、LeCun、Lonsdale 等）對照見頁內　↳ 子故事：[[entities/dario-amodei-archive]] |
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（待核實）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
 | [[entities/opencode]] | product | 💼 商業 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills　↳ 子故事：[[entities/opencode-archive]] |
@@ -82,10 +82,10 @@
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
 | [[entities/mustafa-suleyman]] | person | 👤 人物 | active | Microsoft AI 執行長；2026-09-16 批評 Anthropic 對 Claude「類人化」論述有「災難性影響」風險，並抨擊其 AI 意識說法（Bloomberg／BBC／Axios）|
 | [[entities/michael-burry]] | person | 👤 人物 | active | 知名放空交易員（《大賣空》原型人物）；2026-09-17 在 X 批評 OpenAI、Anthropic 等公司高層呼籲放慢 AI 發展是「自利」之詞 |
-| [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 創辦人，2026-09-23 向 NDTV 稱 OpenAI、Anthropic「可以放慢腳步」（僅標題可用） |
-| [[entities/joe-lonsdale]] | person | 👤 人物 | active（單一來源） | Anthropic 投資人；2026-09-25 向 Reuters 稱 AI 公司渲染風險是為了影響政策走向（僅標題可用） |
+| [[entities/sridhar-vembu]] | person | 👤 人物 | active（單一來源） | Zoho 共同創辦人；2026-09-23 稱 Anthropic 等「可以自己放慢」，批的是要別人停、自己照投（Economic Times 轉載） |
+| [[entities/joe-lonsdale]] | person | 👤 人物 | active（單一來源） | Anthropic 投資人；2026-09-25 稱 OpenAI 與 Anthropic 渲染風險是為了影響政策，同時說以投資 Anthropic 為榮（Reuters） |
 | [[entities/thariq-shihipar]] | person | 👤 人物 | active（單一來源） | Anthropic Claude Code 團隊成員；此前具名證實 Opus 5／Fable 5 系統提示詞精簡、澄清中國偵測機制爭議；2026-09-29 接受 Latent Space 專訪（僅標題可用） |
-| [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune；僅標題可用） |
+| [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune 專訪） |
 | [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
 
 ---

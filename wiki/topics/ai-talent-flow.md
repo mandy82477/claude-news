@@ -27,10 +27,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **狀態：** ongoing
 **領域：** 💼 商業
-**蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 **開始日期：** 2026-06-21
 **最後更新：** 2026-10-02
 **最後新聞更新：** 2026-09-30
+**蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
 > **最新動態：AMD 以約 82 億美元收購 World Labs，[[entities/fei-fei-li|Fei-Fei Li]] 出任首席科學家**（2026-09-30）
 > 與既有 Google DeepMind／Anthropic／OpenAI 人才流動格局無直接關聯，屬非典型 AI 人才交易個案，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 AMD 列。
