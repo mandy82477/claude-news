@@ -11,6 +11,35 @@ export function parseAheadBehind(stdout: string): { ahead: number; behind: numbe
   return m ? { ahead: Number(m[1]), behind: Number(m[2]) } : null
 }
 
+/**
+ * 落後時的那一行說明。本機另有未推的 commit（ahead > 0）時已經分岔，ff-only 不可能成功，
+ * 按鈕不該出現——2026-10-04 提示列寫「落後 1 筆」配「拉取（ff-only）」，按了只回一行看不懂的錯。
+ */
+export function syncSummary(ahead: number, behind: number): { text: string; canFastForward: boolean } {
+  if (behind > 0 && ahead > 0) {
+    return {
+      text: `本機與 origin 分岔：遠端多 ${behind} 筆、本機有 ${ahead} 筆未推。ff-only 拉不了，請請 Claude 合併`,
+      canFastForward: false,
+    }
+  }
+  return { text: `本機落後 origin ${behind} 筆`, canFastForward: behind > 0 }
+}
+
+/** git pull 失敗時，從 stderr 挑出真正的原因並翻成一句人話（git 第一行常是 hint，不是原因） */
+export function explainPullFailure(stderr: string): string {
+  if (/would be overwritten by merge|Your local changes/i.test(stderr)) {
+    return '工作樹有未 commit 的檔和遠端改到同一批，先 commit 或捨棄那些檔'
+  }
+  if (/Not possible to fast-forward|divergent|Diverging/i.test(stderr)) {
+    return '本機有未推的 commit，和遠端分岔了，ff-only 拉不了'
+  }
+  if (/untracked working tree files would be/i.test(stderr)) {
+    return '有未追蹤的檔和遠端新增的檔同名'
+  }
+  const line = stderr.split('\n').map((l) => l.trim()).find((l) => /^(fatal|error):/.test(l))
+  return line ?? (stderr.split('\n').map((l) => l.trim()).find(Boolean) || '原因不明')
+}
+
 /** `git ls-tree --name-only origin/master news/` → 最新日報日期 YYYY-MM-DD */
 export function latestDigest(stdout: string): string | null {
   const dates = stdout

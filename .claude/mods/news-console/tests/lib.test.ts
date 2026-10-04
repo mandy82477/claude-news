@@ -1,7 +1,7 @@
 import { expect, test } from 'claude-code/testing'
 import {
-  classifyShift, foreignHits, freshness, gitStageCalls, latestDigest, parseAheadBehind,
-  parsePorcelain, relTo, underSpec,
+  classifyShift, explainPullFailure, foreignHits, freshness, gitStageCalls, latestDigest, parseAheadBehind,
+  parsePorcelain, relTo, syncSummary, underSpec,
 } from '../hooks/lib.ts'
 
 const NOW = Date.UTC(2026, 9, 3, 9, 0, 0) // 2026-10-03T09:00Z
@@ -10,6 +10,19 @@ test('ahead/behind and latest digest parse git output', async () => {
   expect(parseAheadBehind('0\t54\n')).toEqual({ ahead: 0, behind: 54 })
   expect(parseAheadBehind('fatal: bad revision')).toBe(null)
   expect(latestDigest('news/2026-09-30.md\nnews/2026-10-02.md\nnews/README.md\n')).toBe('2026-10-02')
+})
+
+test('a diverged clone gets no ff-only button, and pull errors say why', async () => {
+  expect(syncSummary(0, 1)).toEqual({ text: '本機落後 origin 1 筆', canFastForward: true })
+  const diverged = syncSummary(2, 1)
+  expect(diverged.canFastForward).toBe(false)
+  expect(diverged.text).toContain('分岔')
+  // 2026-10-04 實際的 stderr：第一行是 hint，不是原因
+  expect(explainPullFailure('hint: Diverging branches can\'t be fast-forwarded\nfatal: Not possible to fast-forward, aborting.'))
+    .toBe('本機有未推的 commit，和遠端分岔了，ff-only 拉不了')
+  expect(explainPullFailure('error: Your local changes to the following files would be overwritten by merge:\n\tsrc/gathered_items.json'))
+    .toContain('未 commit')
+  expect(explainPullFailure('hint: something\nfatal: unable to access remote')).toBe('fatal: unable to access remote')
 })
 
 test('designed aborts stay quiet', async () => {

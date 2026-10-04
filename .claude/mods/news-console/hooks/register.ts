@@ -7,8 +7,8 @@
 // 不改寫工具輸入；不用 $.model、不起 agent；不自動 pull；按鈕不用數字熱鍵；預設 fail-open。
 
 import {
-  classifyShift, foreignHits, freshness, gitStageCalls, isWikiPage, latestDigest,
-  LIVE_MS, parseAheadBehind, parsePorcelain, relTo, underSpec,
+  classifyShift, explainPullFailure, foreignHits, freshness, gitStageCalls, isWikiPage, latestDigest,
+  LIVE_MS, parseAheadBehind, parsePorcelain, relTo, syncSummary, underSpec,
 } from './lib.ts'
 
 type Sync = {
@@ -56,7 +56,7 @@ async function checkOrigin($: any) {
   // 狀態列常駐一行：同步時也看得到 mod 活著（提示列與提示行只在出事時顯眼）
   $.ui.status(
     sync.error ? 'news ⚠ ' + sync.error
-      : sync.behind > 0 ? `news ⚠ 落後 origin ${sync.behind} 筆`
+      : sync.behind > 0 ? 'news ⚠ ' + syncSummary(sync.ahead, sync.behind).text.split('：')[0]
       : sync.shiftAlert ? 'news ⚠ 雲端班次失敗'
       : 'news ✓ 已同步' + (sync.digest ? '　日報 ' + sync.digest.slice(5) : ''),
   )
@@ -126,9 +126,12 @@ export function register(on: any) {
   // ── 1. 只給 Claude 的一行警告 ───────────────────────────────
   on('prompt.submit', async ($: any, e: any, next: any) => {
     if (!active || !sync || sync.behind === 0) return next(e)
-    const line =
-      `⚠️ 本機 clone 落後 origin/master ${sync.behind} 筆（最新：${sync.subject}）。` +
-      '回答 wiki／日報的現況前，先請使用者按提示列的「拉取」或自己 git pull --ff-only；否則你讀到的是舊版。'
+    const s = syncSummary(sync.ahead, sync.behind)
+    const line = s.canFastForward
+      ? `⚠️ 本機 clone 落後 origin/master ${sync.behind} 筆（最新：${sync.subject}）。` +
+        '回答 wiki／日報的現況前，先請使用者按提示列的「拉取」或自己 git pull --ff-only；否則你讀到的是舊版。'
+      : `⚠️ 本機 clone 與 origin/master 分岔（遠端多 ${sync.behind} 筆，最新：${sync.subject}；本機 ${sync.ahead} 筆未推）。` +
+        'ff-only 拉不了；回答 wiki／日報的現況前要先合併，否則你讀到的是舊版。'
     return next({ ...e, context: [...(e.context ?? []), line] })
   })
 
@@ -139,13 +142,14 @@ export function register(on: any) {
     const { Box, Text, Button } = $.ui.resolve(e)
     const rows: any[] = []
     if (sync.behind > 0) {
+      const s = syncSummary(sync.ahead, sync.behind)
       rows.push(Box({
         key: 'behind',
         flexDirection: 'row',
         columnGap: 2,
         children: [
-          Text({ color: 'yellow', wrap: 'truncate-end', children: [`本機落後 origin ${sync.behind} 筆 · ${sync.subject}`] }),
-          Button({
+          Text({ color: 'yellow', wrap: 'truncate-end', children: [s.canFastForward ? `${s.text} · ${sync.subject}` : s.text] }),
+          s.canFastForward && Button({
             key: 'pull',
             label: pulling ? '拉取中…' : '拉取（ff-only）',
             onPress: async () => {
@@ -154,11 +158,11 @@ export function register(on: any) {
               $.ui.invalidate('ui.render')
               const r = await git($, ['pull', '--ff-only', '--quiet'], 120_000)
               pulling = false
-              $.ui.toast(r.exitCode === 0 ? '已拉取到最新' : '拉取失敗：' + (r.stderr.split('\n')[0] || r.exitCode))
+              $.ui.toast(r.exitCode === 0 ? '已拉取到最新' : '拉取失敗：' + explainPullFailure(r.stderr || String(r.exitCode)))
               await checkOrigin($)
             },
           }),
-        ],
+        ].filter(Boolean),
       }))
     }
     if (sync.shiftAlert) rows.push(Text({ color: 'red', wrap: 'truncate-end', children: [sync.shiftAlert] }))
