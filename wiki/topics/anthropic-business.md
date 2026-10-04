@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-04
 
 > **最新動態**（2026-10-04）
-> - **SpaceX 與 Anthropic 簽署大型 AI 運算合作**（10-03，Barchart）：合作方向、金額、算力規模均未見報導，詳見「算力與資金從哪來」表。
+> - **SpaceX 與 Anthropic 簽署大型 AI 運算合作**（10-03，Barchart）：合作方向、金額、算力規模均未見報導，詳見 [[topics/anthropic-business#算力與資金從哪來]]。
 
 ---
 

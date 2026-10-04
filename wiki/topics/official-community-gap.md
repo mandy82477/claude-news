@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-04
 
 > **代表工具更新**（2026-10-04）
-> Offrun（跨 harness 統一面板）併入「想在一個地方操作好幾家 agent」⟨G-11⟩，狀態不變（❌）；deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
+> Offrun（跨 harness 統一面板）併入「想在一個地方操作好幾家 agent」，狀態不變（❌）；deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
 
 ## 摘要
 

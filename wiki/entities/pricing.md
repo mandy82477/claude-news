@@ -34,8 +34,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-04
 
 > **最新計費政策異動**（2026-10-04）
-> - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見下方「事故現在還在發生嗎」。
-> - **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見「當前生效的計費規則」。
+> - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見 [[entities/pricing#事故現在還在發生嗎]]。
+> - **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見 [[entities/pricing#當前生效的計費規則]]。
 
 ## 現況
 
