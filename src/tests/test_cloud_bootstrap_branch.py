@@ -71,13 +71,28 @@ class TestEnsureOnMaster(unittest.TestCase):
             self.assertEqual(cb.ensure_on_master(clone), "diverged")
             self.assertEqual(git(clone, "rev-parse", "HEAD"), mine)
 
-    def test_dirty_tree_is_left_alone(self):
+    def test_uncommitted_append_is_carried_onto_master(self):
+        # 2026-10-03：雲端探針 hook 在 bootstrap 之前往 task_scheduler.log 寫一行，舊判準
+        # 「工作樹髒就不歸位」讓 17Z、22Z、隔天 watchdog 三班卡在 detached HEAD、全推不上 master
         with TemporaryDirectory() as t:
             clone, _ = cloud_like_clone(Path(t))
-            (clone / "old").write_text("edited", encoding="utf-8")
+            (clone / "new").write_text("new\n[cloud hooks-probe ACTIVE x]\n", encoding="utf-8")
+            self.assertEqual(cb.ensure_on_master(clone), "switched")
+            self.assertEqual(git(clone, "symbolic-ref", "--short", "HEAD"), "master")
+            self.assertIn("hooks-probe", (clone / "new").read_text(encoding="utf-8"))
+
+    def test_dirty_file_that_origin_would_overwrite_is_left_alone(self):
+        # HEAD 落後 origin、且改動的檔 origin 也改過：checkout 會拒絕，改動與 HEAD 都不得被動
+        with TemporaryDirectory() as t:
+            clone, work = cloud_like_clone(Path(t))
+            (work / "new").write_text("origin moved", encoding="utf-8")
+            git(work, "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qam", "move")
+            git(work, "push", "-q", str(Path(t) / "origin.git"), "master")
+            (clone / "new").write_text("my edit", encoding="utf-8")
             head = git(clone, "rev-parse", "HEAD")
             self.assertEqual(cb.ensure_on_master(clone), "dirty")
             self.assertEqual(git(clone, "rev-parse", "HEAD"), head)
+            self.assertEqual((clone / "new").read_text(encoding="utf-8"), "my edit")
 
     def test_already_on_master_is_noop(self):
         with TemporaryDirectory() as t:

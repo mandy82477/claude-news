@@ -220,8 +220,11 @@ def ensure_on_master(repo: Path) -> str:
     分類器判為 [Git Destructive] 全數擋下，整班無法推送。臨場判斷的順序決定生死，
     所以固化在這裡、排在任何 commit 之前。
 
-    **只在不可能丟東西時才動手**：工作樹乾淨，且 HEAD 就是 origin/master 或其祖先（HEAD
-    上沒有遠端沒有的 commit）。其他情況一律不碰、只警告，讓後續步驟自己擋。
+    **只在不可能丟東西時才動手**：HEAD 就是 origin/master 或其祖先（HEAD 上沒有遠端沒有的
+    commit）。工作樹有未 commit 改動時照樣歸位、把改動帶過去——`git checkout -B` 遇到會被覆蓋的
+    改動會整個拒絕，改動原封不動，這時才回 "dirty"。2026-10-03 起雲端探針 hook 在 bootstrap
+    之前往 task_scheduler.log 寫了一行，舊判準「工作樹不乾淨就不歸位」讓三班全卡在 detached HEAD、
+    推不上 master。其他情況一律不碰、只警告，讓後續步驟自己擋。
     回傳狀態字串供測試判讀；任何錯誤都不拋出（本腳本不致命）。
     """
     try:
@@ -233,9 +236,6 @@ def ensure_on_master(repo: Path) -> str:
                 return "on-master"
             print(f"⚠️ git 分支：目前在 {name}（非 master），不自動切換")
             return "other-branch"
-        if _git(repo, "status", "--porcelain", "--untracked-files=no").stdout.strip():
-            print("⚠️ git 分支：detached HEAD 且工作樹有未 commit 改動，不自動歸位（先處理改動）")
-            return "dirty"
         if _git(repo, "fetch", "origin", "master").returncode != 0:
             print("⚠️ git 分支：fetch origin master 失敗，不自動歸位")
             return "fetch-failed"
@@ -246,6 +246,9 @@ def ensure_on_master(repo: Path) -> str:
             print("⚠️ git 分支：detached HEAD 上有 origin/master 沒有的 commit，不自動歸位（避免丟失）")
             return "diverged"
         r = _git(repo, "checkout", "-B", "master", "origin/master")
+        if r.returncode != 0 and "overwritten" in (r.stderr or ""):
+            print("⚠️ git 分支：未 commit 的改動會被 origin/master 覆蓋，不自動歸位（改動原封不動）")
+            return "dirty"
         if r.returncode != 0:
             print(f"⚠️ git 分支：歸位失敗（{(r.stderr or '').strip()[:200]}）")
             return "checkout-failed"

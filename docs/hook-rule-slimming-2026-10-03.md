@@ -10,7 +10,7 @@
 |---|---|
 | 本機 hook 真的擋 | ✅ 每支都在本 session 實測過（主 session 與子 agent 兩種身分） |
 | hook 指令在雲端找得到 python | ⏳ `src/tests/test_settings_hooks.py` 會在下一班雲端 `run_tests` 原樣執行 settings 指令；要先 push |
-| 雲端 session 真的會執行專案 settings hook | ⏳ 官方文件沒寫。使用者 2026-10-03 選被動探針：`.claude/hooks/probe_cloud_hooks.py` 在雲端每 session 第一個 Bash 前寫 `[cloud hooks-probe ACTIVE …]` 進 `task_scheduler.log`。origin 上出現這行＝證實；某班 STARTED 前沒有這行＝該班 hook 沒跑 |
+| 雲端 session 真的會執行專案 settings hook | ✅ 被動探針在 2026-10-03 17Z（session 5394a437）與 22Z（session 14e24ce9）兩班都寫下 `[cloud hooks-probe ACTIVE …]`，已併入 master 的 `task_scheduler.log`。探針 2026-10-04 移除：它在雲端第一個 Bash（`cloud_bootstrap.py`）前寫 tracked 檔，工作樹一髒 bootstrap 就不把 detached HEAD 歸位到 master，害 10-03 17Z、22Z 與 10-04 watchdog 三班推不上 master、全停泊 |
 
 所以下表「建議」欄全部是**候選**，等第三列變 ✅ 才執行。驗證做法見文末。
 
