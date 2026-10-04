@@ -3,21 +3,21 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 110
-attribution_count: 161
-attribution_last: "2026-10-03"
+inbound_links: 120
+attribution_count: 162
+attribution_last: "2026-10-04"
 top_source: "google-news"
 pending_count: 13
-pending_overdue: 0
-pending_next_review: "2026-10-04"
+pending_overdue: 3
+pending_next_review: "2026-10-06"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

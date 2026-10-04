@@ -1,3 +1,29 @@
+---
+page: "entities/claude-mods"
+kind: "entity"
+type: "feature"
+status: "active（v2.1.287 起正式發布，預設開啟）"
+domain: "🛠️ 工具/功能"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
+status_main: "active"
+days_since_news: 0
+parent: "entities/claude-code"
+children: "[]"
+page_role: "child"
+days_since_news_subtree: 0
+inbound_links: 6
+attribution_count: 4
+attribution_last: "2026-10-04"
+top_source: "google-news"
+pending_count: 0
+pending_overdue: 0
+pending_next_review: null
+pending_signalled: 0
+staleness_exempt: null
+signal: "健康"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Claude Mods
 
 **類型：** feature

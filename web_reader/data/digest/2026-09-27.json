@@ -344,13 +344,7 @@
     }
   ],
   "preview": "Claude Code：官方標記 CRITICAL：子代理無視 CLAUDE_CODE_FORK_SUBAGENT=0 遞迴逾 50 層，伴隨權限拒絕連鎖與工作遺失（#68619）。",
-  "sedimentedToday": [
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-27",
     "summary": "",

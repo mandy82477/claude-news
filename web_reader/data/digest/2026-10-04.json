@@ -1,0 +1,715 @@
+{
+  "date": "2026-10-04",
+  "generatedAt": "2026-10-04 17:14 UTC",
+  "articleCount": 49,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+      "source": "Hacker News",
+      "time": "10/03 18:29",
+      "sentiment": "",
+      "body": "官方教學文談如何在 Claude 與 Claude Code 中發揮 Opus 5.5：它比前代 Opus 更能長時間獨立完成多段任務、且每次回覆前都會思考，建議一次給完整任務描述讓它自行跑完；HN 單日 224 分，熱度高。",
+      "focusTags": []
+    },
+    {
+      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+      "source": "Hacker News",
+      "time": "10/03 17:44",
+      "sentiment": "",
+      "body": "圖靈獎得主 Yann LeCun 公開表示對 AI 滅絕人類「零擔憂」，並稱 Anthropic CEO Dario Amodei 等人持續示警的做法「適得其反」；HN 單日 247 分，為今日社群熱度最高的單則討論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "yann-lecun",
+          "pageType": "entity"
+        },
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "CC v2.1.100+ inflates cache_creation by ~20K tokens vs v2.1.98 — same payload, server-side",
+      "url": "https://github.com/anthropics/claude-code/issues/46917",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/03 18:02",
+      "sentiment": "",
+      "body": "GitHub 回報指出 Claude Code v2.1.100 之後版本，同樣的請求內容在伺服器端卻多計入約 2 萬 tokens 的 `cache_creation` 用量，累積 42 則留言討論；用量計費對不上的人可留意版本號是否踩在這個區間。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Inline KaTeX math ($...$) no longer renders in chat output — only block ($$...$$) works (regression)",
+      "url": "https://github.com/anthropics/claude-code/issues/65632",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/04 11:19",
+      "sentiment": "",
+      "body": "另一則回歸性 bug：聊天輸出中的行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，累積 33 則留言；常寫數學公式或技術筆記的用戶會撞到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "10/04 15:26",
+      "sentiment": "",
+      "body": "桌面版文件改版：新增「選 Cloud 把本機 session 接續到雲端」「開啟電腦使用需到 設定 > 本機電腦 > 系統」等說明，同時移除舊版「推分支到雲端繼續」與舊版電腦使用開關路徑的描述，顯示設定選單路徑已調整。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic's super bug-hunting model Mythos is hardcore good at math, as latest vuln under attack shows - The Register",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5",
+      "source": "Google News / The Register",
+      "time": "10/03 15:27",
+      "sentiment": "",
+      "body": "The Register 報導指出，Anthropic 的資安研究模型 Mythos 在數學能力上特別突出，一起正遭實際攻擊的漏洞案例正好驗證了這點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic says Claude can work with Android apps now, so I tested it against Gemini - MakeUseOf",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBiVGZwU29XazRFNnJXREdtc1BMUUhLcDUwVjRPMUxWNklxRWVlR3B5ZklVeXh2T2JHNEdYMnppbFRnQlFSeHRCVmFnTlNPa3duVUhTcFlpbEV5V3ZNTTEycVRMUWFFR1E?oc=5",
+      "source": "Google News / MakeUseOf",
+      "time": "10/03 17:30",
+      "sentiment": "",
+      "body": "MakeUseOf 實測 Anthropic 稱 Claude 現在能操作 Android 應用程式的說法，並拿來與 Gemini 對照評比。",
+      "focusTags": []
+    },
+    {
+      "title": "Former Anthropic security leader warns AI agents are becoming too autonomous for humans to keep them in check - Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPemJIM1RfS0l6SDBQY29CRUNuNWNVaE9JTEdDdXVueWc4dXo3eUZ4UzA0QVdpcWFydFB1U1BRYVd0V1gxQWhZZU1LTERTMmt3a3FzTm1QbWFTYWY3R0lNc0VLbFFRMnNMU2FKWVloclBLQWR4bDZmRS1GeTE0S2w4a1dvaklkWXhkeVlOUzRfc1cyTFZTVVlMQnhXZTkteUp2M25KSUI0UG54a2tvQkxXT3hkc1ptdXNrcmF30gHAAUFVX3lxTE4wcmtnRFY5cF9KMnFwLTdacndfMi1tVTFyYXotTHdsOGxoYnRpX0NwWnQ4dlRlcjRJd2RMOEtIWTNLRWplcHNLZHU2QUlWQWc0cWhwUkVOUUFYRWxwT3BwTGQ2TW5xTWFvaGtuS01yS0tEQzFjNDVtVkJVd2JyOGRPU1Q2bUhRLVFXcVlrM21nc2xXTjgxSDI2dkFsa19GUEJwYXVYR19uV09qemtxZVktMlk4MjVsMVloRlE1SFVseg?oc=5",
+      "source": "Google News / Fox News",
+      "time": "10/03 17:26",
+      "sentiment": "",
+      "body": "Fox News 引述一位離職的 Anthropic 資安主管警告，AI agent 的自主程度正快速提高到人類難以持續監管的地步。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Black Market for Blocked AI Claude Thrives in China - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORTlPOTNyWnBwZ1RxdENJN0doQVZBNWF1S25ibUlGUkd1aWt0V29BdkhOSzRTZGZ3NjVadmNBUWxRWWlCZGRXZFpUcTg4MkZ3bUJBSGU0MlJMZUlXUExIWFVvNHhEQXduQkFjNzNxaTJNM2VtaUtlV01ZVUNkckxmSUxBMHJQeXVP?oc=5",
+      "source": "Google News / 조선일보",
+      "time": "10/04 13:04",
+      "sentiment": "",
+      "body": "南韓媒體報導，中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未能完全阻絕當地用戶需求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "DeepSeek Harness v0.2.1-alpha.1 Adds Experimental Claude Code Mods Compatibility Layer - Pandaily",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcGdoZzFOdXpJNmlkNnlrQ2FONUltaTc2aHVNbEZVdlNyNHM1MkNVT011S1lGaHVnT2lvOUx1Mm1jSkZWWWdzT3NxeEV4WlVLZHRmYnY4ZENtYmFTc1RoQ1NmU0VhTERSeUpva1djdUROc1hMOGxiRzFEY3BXNjBiaEVNbFRoNkVaTWNCc3U5VjNYejA?oc=5",
+      "source": "Google News / Pandaily",
+      "time": "10/04 10:38",
+      "sentiment": "",
+      "body": "Pandaily 報導，競品 DeepSeek Harness 新版實驗性支援 Claude Code 的 Mods 相容層，顯示 Claude Code 的 Mods 外掛機制已開始被競品模仿對接。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
+        },
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code vs Codex CLI: Scores and Task Costs - quasa.io",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaDJmN3BWbWpOUVZ1OWZXbHhkajVHaDFYN0xFY3BnQnA4ZnMySXFVUXhGajFoOWdXTlBDc0x4RGYybVB0M004UWtKN0lwcVVKazdud2RoQ3pjWXh2b0RGZS03YWRxMEJickRMM1NNcGFvVFB1SE54dUphLWo3S1d2bTFsLWQ3VmFIcDY5YzltbENJb3pkd3FQN2p3?oc=5",
+      "source": "Google News / quasa.io",
+      "time": "10/04 01:04",
+      "sentiment": "",
+      "body": "quasa.io 以分數與任務成本對照 Claude Code 與 Codex CLI 兩款編碼代理工具的實測表現。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "ThinkWatchProject/ThinkWatch-Lite",
+      "url": "https://github.com/ThinkWatchProject/ThinkWatch-Lite",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "本機閘道工具，讓 Claude Code、Codex 等 AI 客戶端可在不改用戶端設定下切換上游供應商，並攔截惡意工具呼叫、追蹤每次請求；1,050 星。適合想自管多供應商金鑰與稽核紀錄的團隊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "RandallLiuXin/GodotMaker",
+      "url": "https://github.com/RandallLiuXin/GodotMaker",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "由 Claude Code、Codex、Opencode 驅動的 Godot 自動文字轉遊戲產線；549 星，適合想用 agent 自動產生遊戲雛型的開發者。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "techjarves/Mobile-Harness",
+      "url": "https://github.com/techjarves/Mobile-Harness",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "在 Android 上跑 Claude Code 的行動端 IDE，免 root 即可聊天下指令、跑 Linux 指令、改檔與看 diff；506 星，適合想在手機上延續編碼 session 的人。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "spaceamoeba-t/tapq",
+      "url": "https://github.com/spaceamoeba-t/tapq",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "多模態語音代理，可用語音與 Claude Code、Codex 等 agent 互動、回答提示或了解它做了什麼；503 星，適合不想一直打字盯螢幕的用戶。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "activeing123/mcptoon",
+      "url": "https://github.com/activeing123/mcptoon",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "零依賴 CLI，整合管理所有 MCP 伺服器與 agent skill，宣稱能把工具發現成本從 71,929 token 壓到 581 token（降 99.2%）；207 星，適合 MCP 工具掛得多、想省 context 的人。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Heyosseus/sloppy",
+      "url": "https://github.com/Heyosseus/sloppy",
+      "source": "GitHub Search",
+      "time": "10/04 15:26 UTC ·",
+      "sentiment": "😐",
+      "body": "針對 AI agent 在 PHP 留下技術債的靜態分析工具，含 26 條規則、Claude Code hooks、git-diff 審查與 CI 標註，全程本機跑不碰 LLM；146 星，適合用 Claude Code 寫 PHP 又在意債務累積的團隊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "GPT vs Claude today",
+      "url": "https://www.reddit.com/r/artificial/comments/1wvlfmw/gpt_vs_claude_today/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "10/02 05:19 UTC ·",
+      "sentiment": "😐",
+      "body": "r/artificial 本週熱門討論串比較 GPT 與 Claude 現況使用體驗，適合在兩者間猶豫的用戶參考社群意見。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude vs ChatGPT for a student",
+      "url": "https://www.reddit.com/r/artificial/comments/1wv3y33/claude_vs_chatgpt_for_a_student/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "10/01 16:24 UTC ·",
+      "sentiment": "😐",
+      "body": "一名學生在 r/artificial 詢問該選 Claude 或 ChatGPT，串內多為付費方案在學習用途上的比較意見，討論進入本週熱門。",
+      "focusTags": []
+    },
+    {
+      "title": "Google cooked OpenAI and Anthropic with Gemini 4 Argon",
+      "url": "https://www.reddit.com/r/artificial/comments/1wufikm/google_cooked_openai_and_anthropic_with_gemini_4/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "09/30 20:13 UTC ·",
+      "sentiment": "🤔",
+      "body": "r/artificial 本週熱門討論認為 Gemini 4 Argon 的表現讓 OpenAI 與 Anthropic 都相形見絀，反映部分社群對 Claude 競爭力的疑慮。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic is opening AI interviews to public release. How should we account for the missing voices?",
+      "url": "https://www.reddit.com/r/artificial/comments/1wtxx2h/anthropic_is_opening_ai_interviews_to_public/",
+      "source": "Reddit / r/artificial · 週熱門",
+      "time": "09/30 06:46 UTC ·",
+      "sentiment": "🤔",
+      "body": "r/artificial 本週熱門討論質疑 Anthropic 公開 AI 訪談研究的受訪者代表性，認為應正視哪些聲音被排除在外。",
+      "focusTags": []
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[風險警示]",
+      "text": "Claude Max 方案用戶回報 session 額度自 3 月以來異常快速耗盡，GitHub bug 累積 874 則留言，是近期單一回報互動量最高的一筆，直接衝擊訂閱用戶的可用額度。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/38335"
+      ],
+      "ref_names": [
+        "GitHub Issue"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-03）Claude Code v2.1.289 發布，修正巢狀 shell 複合指令中 deny/ask 規則未對使用者安裝的 mod 核准生效的漏洞，接續昨日 v2.1.288 修正 `rm` 權限繞過後的第二道權限防護修補。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.289"
+      ],
+      "ref_names": [
+        "官方 Release"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "SpaceX 與 Anthropic 簽署大型 AI 運算合作，報導聚焦此舉對 SpaceX 股票（SPCX）的影響；對用 Claude 的工程師而言，這類大型運算採購關係到未來容量與可用性。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVmJyVkNiT2hCdmFVRkVTY2JrN2VPTXVYMkdtbjBoMDNSeXVHMk0xNXJ2S2d5WW1CcGdyeHFDSXVMUldZWkN2VHhfdWhkWnlfUUFrYmM2ajhiSm1uSjFnUkV0NEtrT2prWjdEbEF2NTRDZmR1MVhlVFBDSjBZaFlaby1US3BnemJjSGtjVlprWm5oX1RkZmw0c1JyWU8teG1MMXU4Tl93UmpoUjVUSWdqcnJ0cWxnVG9Fb1FwanFMejQtQWs?oc=5"
+      ],
+      "ref_names": [
+        "Barchart"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "How to Price an AI Coding Agent Subscription Without Losing Money",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQlZ2RXNmTzRZY3ZxM2NHOWFSTnZkNl9Ta1YyZ0tETGI5djdzN2I2bVFGdXVhQ3d6QUd4SDY0WDE2Y1BvRHJ0SE5URVcxOWRnQmVJRnBKQnpjbEJOM1NiU2d3TFJVNE5sTVktRzlCYlY4c3QtTXV5MWp3dm1LSmFvTzB0YjBTRkVJRHJNQS0xMl9NeTA1WEhIYw?oc=5",
+      "body": "分析 AI 編碼代理訂閱如何定價才不會賠本，點出重度使用者的用量成本對供應商毛利的壓力",
+      "topic": "競爭格局",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "preview": "Claude Code：v2.1.289 發布：修正巢狀 shell 複合指令 deny/ask 規則未對 mod 核准生效的漏洞，接續 v2.1.288 權限補丁；另修正短指令終端機凍結。",
+  "sedimentedToday": [
+    {
+      "id": "chris-olah",
+      "name": "Chris Olah",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-mods",
+      "name": "Claude Mods",
+      "pageType": "entity"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "pageType": "entity"
+    },
+    {
+      "id": "joe-lonsdale",
+      "name": "Joe Lonsdale",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "sridhar-vembu",
+      "name": "Sridhar Vembu",
+      "pageType": "entity"
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "pageType": "entity"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-04",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- v2.1.289 發布：修正巢狀 shell 複合指令 deny/ask 規則未對 mod 核准生效的漏洞，接續 v2.1.288 權限補丁；另修正短指令終端機凍結。\n- 桌面版文件改版：電腦使用開關搬到「設定 > 本機電腦 > 系統」，舊「Continue in」選單拆成個別選項。\n- 新增已知問題 2 則：v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens（#46917）；行內 KaTeX 數學式不再渲染（#65632）。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "代表工具更新",
+            "date": "",
+            "body": "Offrun（跨 harness 統一面板）併入「想在一個地方操作好幾家 agent」⟨G-11⟩，狀態不變（❌）；deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。"
+          },
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方部落格教學文談怎麼在 Claude／Claude Code 發揮 Opus 5.5：給完整任務描述讓它自己跑，完工後核對它的摘要是否符合你要的（HN 224 分）。"
+          },
+          {
+            "page": "entities/claude-mods",
+            "name": "Claude Mods",
+            "label": "最新判讀",
+            "date": "",
+            "body": "mod 是跑在 Claude Code 行程內的 plugin，官方文件明載它讀得到環境變數與設定檔裡的 API key、不受沙箱隔離；這是設計能力，不是漏洞。裝之前先 `claude plugin validate`，只裝可信來源。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "最新進展",
+            "date": "",
+            "body": "The Register：Mythos 數學能力佐證一起正遭實際攻擊的漏洞案例（僅標題可讀，弱訊號）（Google News/The Register，2026-10-03）。"
+          },
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "16 榜全數嘗試（直接抓取 12 榜、媒體轉述 4 榜、無法取得 0 榜）。本週最大的變化是 **Text Arena 換成 Gemini 4 Argon 登頂**，領先 20 分、超出誤差；Opus 5.5 仍守住 WebDev Arena 與 OpenRouter 實際用量第一，但 WebDev 領先幅度從 65 分縮到 27 分。AA 影片榜改版為 v2.0，分數不能與上週比；Search Arena 停在 08-24 已 41 天。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見下方「事故現在還在發生嗎」。\n- **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見「當前生效的計費規則」。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **SpaceX 與 Anthropic 簽署大型 AI 運算合作**（10-03，Barchart）：合作方向、金額、算力規模均未見報導，詳見「算力與資金從哪來」表。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **조선일보：中國黑市交易規避封鎖使用 Claude**：延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導，第三則第三方媒體確認同一現象，僅標題可用，現況表第 1 列更新。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "圖靈獎得主 LeCun 公開稱對 AI 滅絕人類「零擔憂」，稱 Amodei 等業界示警「適得其反」，為三位圖靈獎得主中唯一此立場；另有報導稱一名離職 Anthropic 資安主管（姓名未公開）示警 agent 自主程度已超出人類可控範圍。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **安全架構添一例**：ThinkWatch-Lite 讓多款 AI 客戶端共用一個閘道切換上游、留住金鑰、擋惡意工具呼叫。\n- **行動與創意場景各添一例**：Mobile-Harness 把 Claude Code 搬上免 root Android；GodotMaker 用三款 agent 驅動文字轉 Godot 遊戲產線。\n- **Hooks 與 Token 優化各添一例**：sloppy 鎖定 PHP 的 AI 技術債、全程不碰 LLM；mcptoon 宣稱把 MCP 工具發現成本壓低 99.2%（自測）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/chris-olah",
+            "name": "Chris Olah",
+            "label": "Telegraph 點名：遊說教廷主張 AI 可能有意識",
+            "date": "",
+            "body": "Telegraph 報導指 Olah 是遊說教廷的 Anthropic 共同創辦人；教宗封論《Magnifica Humanitas》最終駁斥 AI 可能有意識的主張，NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、會受苦。"
+          },
+          {
+            "page": "entities/yann-lecun",
+            "name": "Yann LeCun",
+            "label": "HN 247 分：對 AI 滅絕人類、rogue 事件皆「零擔憂」",
+            "date": "",
+            "body": "同篇 Fortune 專訪 10-03 登上 Hacker News（247 分，本站當日最高單則），LeCun 稱業界示警「misguided and counterproductive」。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+      "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5/",
+      "source": "Hacker News",
+      "time": "10/03 18:29",
+      "sentiment": "",
+      "body": "官方教學文談如何在 Claude 與 Claude Code 中發揮 Opus 5.5：它比前代 Opus 更能長時間獨立完成多段任務、且每次回覆前都會思考，建議一次給完整任務描述讓它自行跑完；HN 單日 224 分，熱度高。",
+      "focusTags": []
+    },
+    {
+      "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
+      "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
+      "source": "Hacker News",
+      "time": "10/03 17:44",
+      "sentiment": "",
+      "body": "圖靈獎得主 Yann LeCun 公開表示對 AI 滅絕人類「零擔憂」，並稱 Anthropic CEO Dario Amodei 等人持續示警的做法「適得其反」；HN 單日 247 分，為今日社群熱度最高的單則討論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "yann-lecun",
+          "pageType": "entity"
+        },
+        {
+          "id": "recursive-self-improvement",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "CC v2.1.100+ inflates cache_creation by ~20K tokens vs v2.1.98 — same payload, server-side",
+      "url": "https://github.com/anthropics/claude-code/issues/46917",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/03 18:02",
+      "sentiment": "",
+      "body": "GitHub 回報指出 Claude Code v2.1.100 之後版本，同樣的請求內容在伺服器端卻多計入約 2 萬 tokens 的 `cache_creation` 用量，累積 42 則留言討論；用量計費對不上的人可留意版本號是否踩在這個區間。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Inline KaTeX math ($...$) no longer renders in chat output — only block ($$...$$) works (regression)",
+      "url": "https://github.com/anthropics/claude-code/issues/65632",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/04 11:19",
+      "sentiment": "",
+      "body": "另一則回歸性 bug：聊天輸出中的行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，累積 33 則留言；常寫數學公式或技術筆記的用戶會撞到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

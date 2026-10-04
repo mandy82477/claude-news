@@ -3,16 +3,16 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-10-03"
-last_news_update: "2026-09-28"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
-inbound_links: 33
+days_since_news_subtree: 0
+inbound_links: 34
 attribution_count: 4
 attribution_last: "2026-09-28"
 top_source: "hacker-news"

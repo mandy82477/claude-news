@@ -6,12 +6,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-01"
 last_news_update: "2026-10-01"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 15
+days_since_news_subtree: 3
+inbound_links: 16
 attribution_count: 4
 attribution_last: "2026-10-01"
 top_source: "github-issues"

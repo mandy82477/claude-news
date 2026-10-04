@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active（單一來源）"
 domain: "👤 人物"
-last_updated: "2026-09-29"
+last_updated: "2026-10-04"
 last_news_update: "2026-09-29"
 status_main: "active"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 0
 attribution_count: 1
 attribution_last: "2026-09-29"
