@@ -994,3 +994,9 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [Sat 2026/10/03 22:37:38.00] Building web reader...
 [Sat 2026/10/03 22:37:38.00] Single push done (news + wiki + web)
 [Sat 2026/10/03 22:37:38.00] === Pipeline complete (agent) ===
+[cloud hooks-probe ACTIVE 2026-10-03T17:07:59Z] settings hooks 在雲端執行（session 5394a437）
+[cloud daily-news-pipeline-cloud STARTED 2026-10-03T17:08:55Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-10-03T17:10:29Z] TARGET_DATE=2026-10-03 reason=digest already exists (Step 0b 冪等閘，news/2026-10-03.md 已存在，非 backfill 模式)｜origin/master 已含完整當日 pipeline（data gather + wiki ingest + web rebuild，見 69099fa/d2b7026/7cfe092）｜本班（17 UTC 班次附近）為當日後續班，非最後一班，正確中止
+[cloud hooks-probe ACTIVE 2026-10-03T22:07:35Z] settings hooks 在雲端執行（session 14e24ce9）
+[cloud daily-news-pipeline-cloud STARTED 2026-10-03T22:08:02Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-10-03T22:08:47Z] TARGET_DATE=2026-10-03 (22 UTC shift) reason=digest already exists (Step 0b 冪等閘，news/2026-10-03.md 已存在，非 backfill 模式；該日報與 wiki/web 已於本日稍早完成並推送，HEAD 與 origin/master 皆在 69099fa，無待推送內容)
