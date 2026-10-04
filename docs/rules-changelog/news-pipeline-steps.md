@@ -4,6 +4,10 @@
 
 本檔是**歷史敘事，不是待執行步驟**——步驟已在上方，執行 pipeline 時不必讀本檔。存放於此的原因：步驟本身已能獨立執行，敘事只在有人想問「為什麼有這條」時才需要。考古鏈為 `[加入: 日期]` → 本檔 → `wiki/log.md` 同日 Query 條目。
 
+## 2026-10-04
+
+**本機跑過 Step 1a 時，抓料產出跟著 Step 1c 一起 commit（news-gather Step 1c）**。10-03 GitHub Actions 抓料延遲到 14:48 UTC，12Z 雲端班等料中止，使用者改在本機 13:50 UTC 跑完整條 pipeline：本機抓 52 則、ingest、推上 wiki，但抓料產出沒 commit（Step 1c 只 add `emitted_items.json`）。14:48 UTC GitHub Actions 再抓一次，拿到另外 27 則；`scripts/archive_gathered.py` 本有「當日日報已產出且副本存在就不覆寫」的防護，可是全新 checkout 裡看不到本機那份沒進 repo 的副本，防護失效，同名 `2026-10-03.json` 被 27 則版本寫進 repo，分類帳本對帳紅。本機遺留的 10 個抓料檔又和 GitHub Actions 的 commit 撞同一批檔，本機 `git pull --ff-only` 失敗。10-04 手動合併：原料副本還原成實際 ingest 的版本、三份歷史檔補回本機獨有列。
+
 ## 2026-10-03
 
 **內容閘紅就不准 wiki 進 master（web-publish Step 3、news-pipeline「閘與退路」）**。使用者裁決：閘紅時擋 wiki commit，取代原本「閘紅照樣 commit wiki、只跳過 web build」。

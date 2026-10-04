@@ -111,6 +111,7 @@ PYTHON -m news_aggregator.main --confirm-digest --date TARGET_DATE
   git -C REPO_ROOT add src/news_aggregator/emitted_items.json
   git -C REPO_ROOT commit -m "data: confirm emitted-cache TARGET_DATE"
   ```
+- **本次 Step 1a 在本機跑過抓料時，抓料產出也要進同一個 commit**（雲端跳過 1a，不適用）：把 `.github/workflows/daily-gather.yml` 的 `GATHER_PATHS` 逐筆 `git add`（不存在的略過），一起 commit。`src/gathered_archive/` 裡當日的原料副本不進 repo，之後的 GitHub Actions 抓料看不到它，就會用另一批條目覆寫同名副本，分類帳本對該日永遠對不上；其餘狀態檔留在工作樹，會擋住下一次拉取。
   （無變更則跳過。**不要單獨 push**，一律留給 Step 5。這樣「日報上站」與「快取確認」同批推送，要嘛一起成功、要嘛一起回到未確認狀態，不會出現「確認了但日報沒上站」的不一致）
 - 漏做的實際後果見沿革檔 2026-07-24
 
