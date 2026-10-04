@@ -30,11 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-04
+**最後新聞更新：** 2026-10-04
 
 > **最新計費政策異動**（2026-10-01）
 > - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見下方「事故現在還在發生嗎」。
+> - **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見「當前生效的計費規則」。
 
 ## 現況
 
@@ -142,6 +143,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
+## 還沒確定的計費變動
+
+**下列四項尚無官方一手文件可寫進「當前生效的計費規則」，各自的完整脈絡在下方事件流。**
+
+| 項目 | 現況 | 下一個時點 |
+|------|------|-----------|
+| Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
+| Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
+| 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
+| 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
+
+---
+
 ## 當前生效的計費規則
 
 計費事故與爭議見下方「事故現在還在發生嗎」。
@@ -159,9 +173,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Managed Agents 框架整體仍 beta**（須 `managed-agents-2026-04-01` header；[overview](https://platform.claude.com/docs/en/managed-agents/overview)，2026-09-06 查證）；選型與零件成熟度見 [[entities/managed-agents]]
 - **✅ 2026-07-20 生效｜旗艦模型的訂閱分界（官方文件已確認）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用至多**每週用量上限的 50%**，不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率（$10/$50 per Mtok）付費。合格 Pro 與 Team standard seats 另有**一次性過渡 credit $100**（Team 每 standard seat $100、每組織上限 $2,500），領取窗已於 2026-08-02 關閉、已領 credits 於 2026-09-17 到期，且可用於任何模型（[官方促銷條目](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。先前將 Fable 5 納入方案週用量的促銷結束於 2026-07-19 23:59:59 PT（來源：[Claude Fable 5 on your plan](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)，2026-08-08 查證）
 - **⚠️ usage credits 開啟後，方案用量上限不再是硬停止**：credits 為 opt-in、預設關閉，於 `Settings > Usage` 開關，可設 auto-reload（每日兌換上限 $2,000）。開啟後 Claude 會在額度用盡後繼續回答並從 credits 扣款，體感與額度內無異，但每則超額回應皆計費——靠方案硬上限控管支出者需主動確認此開關（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-08-08 查證）
+- **✅ 安全分類器拒答的計費（官方文件，2026-10-04 查證）**：適用 Fable 5.1／Fable 5／Opus 5.5／Opus 5／Sonnet 5.5，拒答回 `stop_reason: "refusal"`（[Refusals and fallback](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback)「How refusals are billed」）
+- 上條計費範圍：輸出前的拒答**只有 `bio`、`frontier_llm`、`reasoning_extraction` 三類計費**，`cyber`、`general_harms` 不計；串流途中拒答計已送出的輸入與輸出——證實 09-27 MIXED「五類中三類收費」的標題
+- 上條 fallback：觸發的拒答若屬計費類或發生在串流中也照計，Fallback credit 可補償重複的 prompt cache 成本；適用 Claude API、Bedrock、Claude Platform on AWS、Google Cloud、Microsoft Foundry
+- 上條類別清單官方稱可能隨 Anthropic 量測誤判率調整，現行三類不是定案
+- **✅ usage credits 說明頁現行版只有 9 節（官方文件，2026-10-04 查證）**：是什麼、怎麼運作、啟用、設上限、定價、管理、省錢提示、與其他功能的互動、FAQ（[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)）
+- 上條已移除：「How do I pay for my Claude API usage?」、Public Sector FAQs、usage analytics 三段；日報 09-28／10-01 偵測到的異動屬實
 - **訂閱配額制維持**：原定 2026-06-15 生效的 Agent SDK／`claude -p` 計費切割已於 2026-06-16 暫停，重新推行時間未定；Agent SDK、`claude -p`、第三方 Agent SDK app 用量持續計入訂閱配額，無需額外信用池（來源：2026-06-16、2026-06-18 DevOps.com）
 - **1M context window 觸發獨立 API 計費通道**：即使儀表板顯示 0% 訂閱用量，1M context window 仍會產生額外費用（實例：2026-05-11 用戶 0% 用量下遭收取 $3.37 Extra Usage）。1M 的世代分界與控制權缺口見 [[topics/long-context-1m]]
-- **`ANTHROPIC_API_KEY` 環境變數陷阱**：雲端環境（CI/CD、Docker、K8s）若設置此環境變數，所有 Claude Code 呼叫自動改走 API 計費通道而非訂閱配額（來源：2026-04-30）
+- **`ANTHROPIC_API_KEY` 環境變數陷阱**：雲端環境（CI/CD、Docker、K8s）若設置此環境變數，所有 Claude Code 呼叫自動改走 API 計費通道而非訂閱配額（來源：2026-04-30）；2026-10-02 另有設定後被擋下的回報，見事件流 10-02 條
 - **企業支出控管功能上線（2026-07-04）**：具體控管粒度（部門／團隊層級、per-user、即時警報）尚未公開（來源：2026-07-04 Tech Times）
 - **印度盧比在地化定價生效（2026-07-13）**：Pro 方案 **Rs 2,000／月**，為美國以外最大市場首次官方在地化定價；Max／Team／Enterprise 是否同步在地化未見報導（來源：2026-07-13～14 TechCrunch、NDTV、Times of India、bestmediainfo.com）
 - **Max 用量上限爭議進入司法程序**：2026-06-16 集體訴訟指控 Max 5x／Max 20x 實際限制遠低於廣告宣稱（Max 20x 實測僅 Pro 的 6–8 倍），訴訟結果將影響方案信任度與可能的退款／調整義務（來源：2026-06-16 CNET、Decrypt）
@@ -231,7 +251,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | HERMES.md 字串觸發靜默切 API 計費 | ⛔ 官方拒修 | 2026-04-25，官方確認為 bug 但拒絕退款 | commit 訊息避開該大寫字串；已被扣費者官方不退 |
 | Anthropic 證實 $16.6M 帳務錯誤、企業多收 $1.7M（含南韓 $16.7M 個案） | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；退款與補救官方未載明 |
 | Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-09-09，四家媒體跟進（Verge／Startup Fortune／The New Stack／Engadget），首度點名「20 倍」實為週用量上限機制 | 依現況估算用量，不要以「20 倍」為預算基準 |
-| Max 5x 續訂扣款完成後帳號遭停用 | 🔴 未解 | 2026-09-04，GitHub Issue #5088 累積 184 則留言 | 續訂後立刻確認帳號可用，留下扣款紀錄 |
+| Anthropic Status 通報：credit purchase 入帳延遲，部分請求因餘額不足失敗 | 🔴 未解 | 2026-10-01，官方 Investigating，修復時間未載 | 失敗請求稍後重試；充值後先核對餘額再跑長任務 |
 | Max 方案 session 額度自 3 月起異常加速耗盡 | 🔴 未解 | 2026-09-16，Issue #38335 累積 855 留言、545 👍，跨 2 則 Reddit 佐證 | 留意消耗速率，於 `Settings > Usage` 核對走勢是否異常 |
 | Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-17，Issue #16157 累積 1,495 則留言、725 👍，本頁互動量最高 | 官方新增說明：用量與長度是兩種限制，先關閉不需要的工具／連接器省用量；並查 `Settings > Usage` 是否真的觸頂 |
 
@@ -257,11 +277,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
 
+#### 🔴 2026-10-02：GitHub Issue #8327——設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「組織已停用」擋下
+
+- **GitHub Issue #8327（121 則留言、22 個反應，2026-10-02）**：已有效訂閱 Pro／Max 的使用者設了 `ANTHROPIC_API_KEY` 後收到「Organization has been disabled」錯誤；日報未見官方回應（[GitHub #8327](https://github.com/anthropics/claude-code/issues/8327)）。
+- **與既有規則的關係**：同一個變數蓋過訂閱路徑，但現象不同——規則區那條是改走 API 計費，本則是請求被擋；機制面見 [[entities/claude-code]] 已知問題。你能先做的：改用訂閱登入時取消該環境變數。
+
+%% 未列入總表：表滿載，2026-10-04；單一社群回報型 🔴 %%
+
 #### 🔴 2026-10-01：Anthropic Status 官方通報——credit purchase 入帳延遲，部分請求因餘額不足失敗
 
 - **Anthropic Status（[status.claude.com/incidents/k0h22tsvnydg](https://status.claude.com/incidents/k0h22tsvnydg)，2026-10-01 16:20 UTC，Investigating）**：官方通報 Claude API 與 platform.claude.com 效能降級，credit purchase 入帳延遲，造成部分請求因餘額不足失敗；修復時間未載。
 
-%% 維運備忘：未列入總表，表滿載；候選讓位者 #5088（Max 5x 續訂扣款停用，最後動態 09-04，距今 27 天、未滿 90 天無後續門檻）——按規則不得逕自讓位，回報標⚠️計費事故表滿載且全數活躍 %%
+%% 維運備忘：2026-10-04 起列入總表，讓位者為 #5088（單一社群回報型 🔴，最後動態 09-04）%%
 
 #### 🔴 2026-09-21：新 GitHub Issue #37394——Max Plan 用量觸頂速度異常快，與 #16157／#38335 同類回報的第三個獨立 issue
 
@@ -315,6 +342,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有事故的關係**：與 08-12 Issue #55982（升級流程 PaymentIntent 遭提前作廢）同屬「付款/帳務基礎設施層故障」而非「用量計費異常」，惟本則更嚴重——付款已扣款成功、帳號卻遭停用，使用者付了錢反而喪失服務存取權，是本頁目前記錄最直接侵害付費用戶權益的計費事故型態（推論）；機制面／官方是否回應修復詳見 [[entities/claude-code]] 已知問題，此處僅記計費/帳務面
 - 🔎 **查無官方**（標 2026-09-04｜查 Max 5x、帳號停用｜複 2026-10-04）：[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088) 現況（2026-09-20）——仍為 open，無 Anthropic 人員留言、無成因說明，支援信件與退款申請均未見回覆。
 - 已確認屬「付款成功後帳號隨即遭停用」的重複模式（另見 #80872、#64480、#90531），惟仍無官方就根因或修復時程表態。
+
+%% 未列入總表：表滿載，2026-10-04 %%
 
 #### ⚖️ 2026-08-31：HN 質疑「20x」用量宣稱的實質定義——只放大 5 小時視窗、非週上限，呼應既有 Max 20x 集體訴訟
 

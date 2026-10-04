@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
-**最後更新：** 2026-10-02
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-10-02
 
 > **代表工具更新**（2026-10-02）
@@ -67,7 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 別家 agent 的 AGENTS.md，它讀不讀 | ✅ | v2.1.277（2026-09-18）起原生讀 `AGENTS.md`；v2.1.281 起 Bedrock／Vertex／Foundry／LLM gateway／關閉遙測的 session 也讀得到 | 只剩預設順序這一項：有 `CLAUDE.md` 時預設只讀 `CLAUDE.md`，要兩者並讀在 `/config` 設 `claude-md-and-agents-md` ⟨G-08⟩ | 2026-09-26 |
 | 它需要你輸入時會不會叫你 | ✅ | 接上 Remote Control 可推手機通知、桌面閒置通知、`Notification` hook、`waitingFor` 可見性 | 社群補的是終端機標籤變色、實體燈號這類形式 ⟨G-03⟩ | 2026-09-19 |
 | 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-09-19 |
-| 它會不會跑出破壞性指令 | ✅ | 破壞性 git 指令自動封鎖（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222） | git 層已完整；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | — |
+| 它會不會跑出破壞性指令 | ✅ | auto mode 下破壞性 git 指令自動封鎖（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222） | git 層已完整；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | 2026-10-04 |
 | Slack 裡要一個 AI 隊友 | ✅ | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack 原生） | 這一列的社群前驅稀薄、官方主導色彩強，放在這裡只供對照 | 2026-09-19 |
 | 把 Linear 工單指派給 Claude Code 就觸發雲端 agent | ❌ | 無——僅 GitHub Issues 可指派觸發雲端工作流；截至 2026-09-24 官方文件未見 Linear 對應支援，issue 見 [[entities/claude-code]] | 社群自接官方 Linear MCP＋本地 Lanes MCP 橋接 issue-to-code；官方尚未排入路線圖，issue #12925 累積 146 讚 | 2026-09-24 |
 
@@ -167,6 +167,8 @@ Claude Code 自己的官方記憶是 auto memory（依你的更正與偏好自�
 **2026-08-04 社群訴求成型：** GitHub issue [#47023](https://github.com/anthropics/claude-code/issues/47023)「Expose compact/session lifecycle hooks for external memory layers」彙整 5 個既有開放 issue（#14227、#32627、#34192、#34556、#46138），指出社群已自行拼湊三層式 markdown 架構、知識圖譜等替代方案，訴求官方開放 compact／session 生命週期 hook 供外部記憶層串接——這是社群首次把散落的持久化記憶需求收斂為單一具體 API 訴求（hook 介面），而非各自繼續造輪子；#47023 已於 2026-08-17 CLOSED／COMPLETED，官方答四個 hook（`PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd`）今天都有；彙整清單中的 #14227 為 CLOSED／NOT_PLANNED（2026-05-25）。
 
 **2026-08-09 缺口的兩個切面各自累積：** #47023 彙整清單中的兩個成員本日各自延燒——跨 session 記憶訴求 [#14227](https://github.com/anthropics/claude-code/issues/14227) 累積至 34 則留言、跨 compaction 記憶訴求 #34556 累積至 62 則留言，合計 96 則留言；兩者訴求範圍不同（跨 session vs. 單一 session 內跨壓縮），但同屬本缺口，官方仍無回應，狀態不變。
+
+**2026-10-04 補兩筆證據：** 功能請求 [#11455](https://github.com/anthropics/claude-code/issues/11455)（Session Handoff／Continuity，10-03）累積 37 則留言、25 個讚，要的是新 session 能接續上一個 session 的工作；[#42542](https://github.com/anthropics/claude-code/issues/42542)（10-01）累積 28 則留言，回報 1M context 下三種機制靜默清除工具結果，同一個 session 內的脈絡也留不住（細節見 [[topics/long-context-1m]]）。兩筆本站來源均未見官方回應，狀態不變。
 
 ### 🧪 部分對應：平台可及性
 

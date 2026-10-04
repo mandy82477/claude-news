@@ -7209,3 +7209,38 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - [[feature-radar]] 升版表：官方 CHANGELOG 由 v2.1.270 逐版核對到 v2.1.288，新增 v2.1.285（背景指令時限）、v2.1.283（未設權限模式一律從 auto 開始）、v2.1.277（移除 TaskOutput）三列；為守 12 列上限移出 2.1.212／215／222／232／233，表下收尾句改指官方 changelog
 - [[topics/community-tech-discussions]]「現在吵到哪」新增「Claude 可能有意識嗎」列（還在吵；官方憲章 2026-01 表態不確定），摘要與 index 鉤子同步為 6 場還在吵
 - reader-notes：「GPT vs Claude 比較」結案（官方 Opus 5.5 發布文已並列 GPT-6 Astra／GPT-5.6 Sol，對照寫入 [[topics/competitor-landscape]]）；「LLM code review 成本」新增 1 節點、「記憶格式規約」無新節點，兩筆維持 ⏳
+
+## 2026-10-04 週度延伸回顧
+
+- 本機補跑（/weekly 步驟 0）：
+  - 跨家榜單週更（5b）：已更新 16 榜／0 榜無法取得；抓榜 agent 的 WebDev 第三名報錯，主編直接抓官網更正為 claude-sonnet-5.5-xhigh；Text Arena 換 gemini-4-argon-high 登頂；AA 影片榜改版 v2.0
+  - code-quality-decline 三條線（5m）：4 列比對／1 列已改／資料截至 2026-10-04（#77136 於 10-03 由發文者自行關閉、非官方修復，維持「還在」；原表「無官方回應」更正為 Boris Cherny 08-17 回覆「屬模型行為、已轉模型調校」，摘要、目前結論、index 鉤子同步）
+  - 官方補了沒表（5n）：18 列比對／1 列已改／核對日逾 30 天 0 列（「破壞性指令」列補核對日，註明封鎖只在 auto mode）
+  - 5c：雲端 10-03 已清零，不重跑（今日新到期 27 筆留下輪）
+- 延伸：
+  - 新建 [[entities/claude-mods]]（功能）：官方文件 2026-10-04 查證，mod 讀得到 API key、不受沙箱隔離屬設計能力；feature-radar、overview 的「官方未澄清」改寫；ai-agent-safety 的 Mods ❓ 由主編查實結案
+  - [[entities/claude-code]] 新增「發布通道（stable／latest）」小節（功能）
+  - [[topics/official-community-gap]] 跨 session 記憶補 #11455、#42542（功能）
+  - [[topics/model-comparison]] 新增「升級與退役風險」，Haiku 4.5 補退役不早於 2026-10-15（模型）；overview 的 Haiku 列改為「不設專頁、見 model-comparison」（10-03 lint 待裁示第 6 項結案）
+  - [[entities/pricing]]：拒答計費三類（bio／frontier_llm／reasoning_extraction）與 usage credits 說明頁三段移除，官方查證寫入；事故表 #5088 讓位給 10-01 credit purchase 延遲；新增「還沒確定的計費變動」（商業）
+  - [[topics/anthropic-business]] 新增「算力與資金從哪來」表（商業）
+  - [[topics/ai-agent-safety]] 新增「自我複製／蠕蟲化」與「模型網攻能力與防護」；[[topics/anthropic-government-policy]] 軍事合約段收成時間表；[[topics/recursive-self-improvement]] 互指（安全政策）
+  - [[topics/community-tech-patterns]] 新增「把關層」區塊、「信任與驗證層」改「部分補上」、成本列補「並行用量歸因」缺口（社群）
+  - reader-notes：兩條 ⏳ 補第三輪查核、維持 ⏳；09-03 星圖雜記逾 30 天清除
+- 使用者跳過項目：[[entities/dario-amodei]]「公開批評者對照表」與 LeCun／Vembu／Lonsdale 一手補全——人物頁改版 session 進行中，使用者指示不干擾，順延
+- 聚焦校準：39.3%（11/28；回看 08-29~09-04 → 30 天，部分命中計 0.5；按故事去重 9/23）；偏誤：同一事件重複登聚焦（Sony 案連三天，4 組 9 條）、單次官方公告／狀態頁事件標重大事件 0/4、版本小功能 0/2；漏報五角大廈供應鏈風險線、Meta Muse Code（重複漏報）。選材修正（selection.md 重複登不進聚焦、單次公告門檻、版本小功能歸 🔧）經使用者確認已套用
+- 待查證結案：ai-agent-safety「Mods 讀 API Key」查實（官方 Mods overview，2026-10-04）
+- 歸因 user-query／功能、商業
+
+## 2026-10-04 裁決：10-03 lint 待裁示 9 項（使用者「都改吧」，人物頁不干擾）
+
+- 第 1 項（6j-C 規則檔缺陷）：(a) log-format 補 5d/5e/5f/5n、5c 改清零制、成長迴路移 A 段；(b) 查無——946d0ff5（10-03）已修；(c) adversarial 月度判斷改讀 metrics.md；(d) 6j 口徑四處統一（wiki 事實當場修；規則檔本機經確認後修、雲端只回報且須附修訂文字原文）；(e) C 段自我掃描納入五個 references；(f) 六處 `CLAUDE_NEWS/` 舊根改相對 repo 根；(g) weekly.md 收尾改走 gate_web_build.py、指回 web-publish Step 4/5；🟡 egress 表補 5e、web-publish 3g 清單自跑 scan_expiring_deadlines.py、inquiry 下限 8（含測試）、dev-done 第 2 條 hook 措辭照實、weekly.md 子 skill 改 Read 照做；其餘 🟡 約 6 項因原報告未保存找不到
+- 第 2 項（features/pages.md 蒸餾）：暫緩——要搬教訓到 `docs/rules-changelog/`，該目錄被人物頁 session 宣告中；登記 workaround-register
+- 第 3 項：(a) 雲端 repo 授權不擴（本機 /weekly 用 gh 承接，本輪已補做 5m／5n）；(b) sweeps.md 新增「repo 授權不足，跳過，留待本機 /weekly」分支，runbook 與 weekly-local-catchup 同步
+- 第 4 項：community/pages.md 補「主線 tag 不算類別關係」；討論表同日多列去留序（熱度 > 官方回應 > 原表順序）
+- 第 5 項：(a) 3g 每輪至少回填 15 筆舊語法、前三頁優先、收報後重跑驗收；(b) ai-agent-safety 攻擊表下補維運備忘「套件供應鏈列最後動態 2026-08-29」，safety-policy/pages.md 定義列內無日期時的最後動態；(c) wiki_graph.py gaps 排除 `page_role: redirect`（改前 top50 有 chris-olah × jensen-huang，改後 0；新增測試）
+- 第 6 項：Haiku 4.5 不建專頁，見上一筆
+- 第 7 項：gathered_archive 改存被擋條目（`blocked_items`，帶 blocked_by／blocked_detail；根因：gathered_items.json 只寫 dedup／relevance／emitted-cache 三層之後的 filtered，三層丟棄只進日誌）；items 格式不變；磁碟約 +33 KB／日；inquiry Q2 改用 blocked_items 的建議待下次 lint 套用
+- 第 8 項：tools 目錄的 ⏳ 改走 radar 同一張三選一表（30 天門檻不變，先加註「此後未見後續報導」、再 30 天才移除並寫結論）；radar 90 天不下調
+- 第 9 項：日報 format 加「所以呢」與「版式穩定」兩節、selection「聚焦防重複」擴為跨區塊一件事只講一次、新閘 check_digest_layout.py（漢字連續 12 字判重述，62 份回溯校準）、來源表改由 digest_source_table.py 產生（抓到／進候選／刊出三欄）；週報判準不寫 wiki 頁名、查證線索 W41 起改 `<!-- 查證：… -->`（消費端兩支新舊形都收，build_web 讀檔即剝 HTML 註解）；wiki 頁開頭被欄位吃掉一項涉 page-templates.md（人物頁 session 宣告中），只留提案：H1 下先放一句「這是誰／這是什麼」
+- 待補（被宣告擋住，登記 workaround-register 2026-10-07 複查）：沿革段寫入 `docs/rules-changelog/`、registry sync_pairs 六組（web build gate 舊措辭 max_count 加 weekly.md；log-format↔sweeps 標籤；repo 授權不足三處；6j「修訂文字原文」三處；C 段五 references；3g 舊語法回填；日報來源表三口徑；版式穩定；check_digest_layout 指名；digest_source_table 指名；週報 HTML 註解探針四處）

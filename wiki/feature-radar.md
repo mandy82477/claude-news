@@ -86,9 +86,9 @@ claude purge                      # 原 claude project purge
 
 **是什麼：** Claude Code 外掛新增「Mods」機制，可修改比既有 plugin API 更深層的執行時行為；官方內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。即原「Function Hooks」提案（issue #91870，09-04 即以 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標現身於 build，09-09 官方承諾數週內出貨）本版兌現。
 
-**為何熱：** 官方追蹤 issue #91870 出貨當日累積 233 則留言、218 個讚，官方逐一回應社群回饋；官方文件索引同步新增 10 頁 mods 文件（管理、API、建立、事件、介面、測試、疑難排解等）。mixed-news.com 標題稱 Anthropic 說明 mods 可讀取使用者 API Key（僅標題可讀，未見官方一次原文佐證完整範圍；安全面影響另見 [[topics/ai-agent-safety]]）。
+**為何熱：** 官方追蹤 issue #91870 出貨當日累積 233 則留言、218 個讚，官方逐一回應社群回饋；官方文件索引同步新增 10 頁 mods 文件（管理、API、建立、事件、介面、測試、疑難排解等）。mixed-news.com 標題稱 Anthropic 說明 mods 可讀取使用者 API Key，官方文件已明載此為設計能力（2026-10-04 查證，見 [[entities/claude-mods]]；安全面報導另見 [[topics/ai-agent-safety]]）。
 
-**現在要試嗎：** 想擴充 Claude Code 行為的外掛開發者可試，但建議先讀官方新十頁 mods 文件了解權限範圍；對外掛安全邊界敏感者宜等官方就「是否能讀取 API Key」給出明確澄清再上手。
+**現在要試嗎：** 想擴充 Claude Code 行為的外掛開發者可試。依官方文件（2026-10-04 查證），mod 以你的權限執行、讀得到環境變數與設定檔裡的 API key、不受沙箱隔離：只裝可信來源，裝前跑 `claude plugin validate ./some-mod`，並知道這些權限會全交給它；詳見 [[entities/claude-mods]]。
 
 **快速上手：**
 ```
@@ -97,7 +97,7 @@ claude purge                      # 原 claude project purge
 # https://code.claude.com/docs/en/plugins/mods/create.md
 ```
 
-**注意事項：** 官方被報導稱外掛可能讀取使用者 API Key（僅標題可用），安全範圍見 [[topics/ai-agent-safety]]；mod 機制基於先前的 function hooks，深層權限意味外掛信任面擴大。10-02～10-03 the-decoder、The New Stack、mixed-news.com 三家報導一致：Mods 以使用者權限執行、未經沙箱隔離，Anthropic 提醒只裝可信來源。
+**注意事項：** 官方文件明載 mod 可讀取使用者 API Key、代為核准 tool call（可越過 ask 規則與自訂 PreToolUse hook），完整權限範圍與關閉方式見 [[entities/claude-mods]]；mod 機制基於先前的 function hooks，外掛信任面隨之擴大。10-02～10-03 the-decoder、The New Stack、mixed-news.com 三家報導一致：Mods 以使用者權限執行、未經沙箱隔離，Anthropic 提醒只裝可信來源。
 
 ---
 

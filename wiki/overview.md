@@ -7,7 +7,7 @@
 
 ## 當前局勢
 
-**Claude Mods 出貨，但「外掛讀不讀得到你的 API Key」官方還沒講清楚**：10-01 Claude Code v2.1.287 推出 Mods——外掛可修改比既有 plugin API 更深層的執行時行為，官方追蹤 issue #91870 當日累積 233 則留言、文件索引一次新增 10 頁。問題在於 mixed-news.com 稱 Anthropic 說明 mods 可讀取使用者 API Key，而這句**只有標題層級可讀、官方未給完整權限範圍**。對外掛信任邊界敏感的人，等官方澄清再上手。詳見 [[feature-radar]] 該條「注意事項」與 [[topics/ai-agent-safety]]。
+**Claude Mods 出貨，官方明說外掛讀得到你的 API Key**：10-01 Claude Code v2.1.287 推出 Mods——外掛以 JS／TS 在 Claude Code 行程內執行，可改寫 prompt、tool call 與介面，官方追蹤 issue #91870 當日累積 233 則留言。官方文件（2026-10-04 查證）明載 mod 以你的權限執行、讀得到環境變數與設定檔裡的 API key、不受沙箱隔離——這是設計，不是漏洞。只裝可信來源，裝前先跑 `claude plugin validate`。詳見 [[entities/claude-mods]]。
 
 **Claude Sonnet 5.5 接手 API 預設 Sonnet，Sonnet 5 轉 Legacy**：09-28 發布，Terminal-Bench 4.0 由 10.3% 跳到 70.6%，牌價維持 $2/$10；v2.1.284 起 Anthropic API 端的 Sonnet 系列預設改指它。同批官方模型總覽頁（2026-10-03 查證）把 **Sonnet 5 與 Opus 4.7 都列進 Legacy**，本庫兩頁狀態已同步更正。詳見 [[entities/sonnet-5-5]]、[[entities/sonnet-5]]、[[topics/model-comparison]]。
 
@@ -46,7 +46,7 @@
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 5／5.1 **資安類**請求被護欄攔下時的接手模型（生物／化學／生命科學類改由 Opus 5 接手）|
 | Claude Opus 4.7 | ⚠️ Legacy（2026-10-03 官方總覽頁查證）| 本輪由「已被取代」更正為 Legacy |
 | Claude Sonnet 4.6 | ⚠️ Legacy | 仍可選用 |
-| Claude Haiku 4.5 | ✅ Active | 低延遲／高頻批量任務的現行選項；**本庫尚無專頁** |
+| Claude Haiku 4.5 | ✅ Active | 低延遲／高頻批量任務的現行選項，退役不早於 2026-10-15；沒有獨立新聞可寫，不設專頁，規格與選型見 [[topics/model-comparison]] |
 
 > 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**
 > 四個現行模型頁（Fable 5.1、Mythos 5.1、Opus 5.5、Sonnet 5.5）的「跟它怎麼說話」節已於 2026-10-03 從官方 prompting 指南補齊——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。
@@ -65,8 +65,8 @@
    - 近半營收來自 Amazon／Google；Broadcom 晶片租賃融資 420 億 → 600 億美元
 4. **[[topics/long-context-1m]] — 1M session 會靜默清除工具結果，無已知規避做法**
    - GitHub #42542（三種機制），官方未回應；控制權缺口第五條
-5. **[[entities/claude-code]] — Mods 出貨，但外掛權限範圍未澄清**
-   - 「外掛可讀取 API Key」僅標題層級可讀；Mods 深層權限意味外掛信任面擴大
+5. **[[entities/claude-mods]] — Mods 出貨，外掛讀得到 API Key 且不受沙箱隔離**
+   - 官方文件明載為設計能力；防範只能靠來源信任與裝前 `claude plugin validate`
 
 ### 🟡 持續追蹤
 
@@ -87,7 +87,7 @@
 | 日期 | 事件 | 影響 |
 |------|------|------|
 | 10-02 | Claude for Government 全面開放美國聯邦機構；Broadcom 晶片租賃融資擴大為 600 億美元債務融資；SCMP 稱香港 VPN 存取收緊 | 🏛️ 政策；💼 商業 |
-| 10-01 | Claude Code v2.1.287 推出 Mods（媒體稱外掛可讀 API Key）；Barclays 訂年底 50% 開發者目標；Broadcom 擬貸 420 億美元；1M context 靜默清除工具結果（#42542）| 🛠️ 功能；💼 商業 |
+| 10-01 | Claude Code v2.1.287 推出 Mods（官方明載外掛可讀 API Key）；Barclays 訂年底 50% 開發者目標；Broadcom 擬貸 420 億美元；1M context 靜默清除工具結果（#42542）| 🛠️ 功能；💼 商業 |
 | 09-30 | 美國 FTC 對 Anthropic、OpenAI 開啟產品風險調查（5+ 媒體同日）；Anthropic 研究稱 GLM-5.3 網攻能力逼近 Mythos Preview；Claude Code v2.1.285 發布 | 🏛️ 政策；🛠️ 功能 |
 | 09-29 | IPO 招股書外流：近半營收來自 Amazon／Google、首度書面警示 AI 存在性風險（Reuters 獨家）；AMD 以約 82 億美元收購 World Labs | 💼 商業 |
 | 09-28 | **Claude Sonnet 5.5 發布並取代 Sonnet 5 成為 API 預設 Sonnet**（Terminal-Bench 4.0 10.3% → 70.6%，牌價不變）| 🤖 模型 |
@@ -130,7 +130,7 @@
 |------|------|------|
 | Claude Sonnet 5.5（API 預設 Sonnet）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——牌價不變、Terminal-Bench 大幅躍升；effort 級距已重新校準，**換過來要重跑一次 sweep** |
 | Claude Code 讀取 AGENTS.md（v2.1.277）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——無 CLAUDE.md 時原生改讀，回應 #6235 |
-| Claude Mods（v2.1.287）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——**先讀官方新十頁 mods 文件確認權限範圍**；在意外掛能否讀 API Key 的人等官方澄清 |
+| Claude Mods（v2.1.287）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——**mod 讀得到你的 API Key、不受沙箱隔離**（官方明載）；只裝可信來源，裝前 `claude plugin validate` |
 | Auto mode 免計費 server-side classifier（v2.1.278）| 🔥🔥🔥🔥 | ✅ 強烈推薦——API／Enterprise／閘道器用戶不再被收分類器費用 |
 | Claude Opus 5.5（現行 Opus）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——$4/$20；預設 effort 從 `high` 降為 `medium`，沿用 Opus 5 的設定會換到更長的回合 |
 | Claude Fable 5.1（旗艦）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——長時 agentic 工作流首選；`low` effort 下搜尋觸發會變少 |
@@ -144,5 +144,5 @@
 - HN 討論熱度：🔥🔥🔥🔥 高（Mods 外掛權限、Opus 5.5 降智觀感、IPO 招股書外流）
 - Reddit 情緒：😤 額度／成本焦慮持續；模型品質退化疑慮跨代際延燒
 - 開發者工具活躍度：📈 升溫（本輪策展新增 31 筆，記憶類工具一次三個，但皆無第三方使用回報）
-- 信任指標：↘ 走弱（Mods 權限範圍未澄清、1M 靜默清除工具結果無解法、提示注入已產業級）
+- 信任指標：↘ 走弱（Mods 外掛權限面大且無沙箱、1M 靜默清除工具結果無解法、提示注入已產業級）
 - 競爭壓力：🟡 中（Meta 三層訂閱、中國陣營「免費夠用」、開源旗艦權重釋出）

@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-10-03
 
 > **最新工作流模式**（2026-10-03）
@@ -83,6 +83,7 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 - **Hooks 與自動化**：Stop Hook 要求可驗證完成證明；Pre-completion Hook 防模糊結束；hooks 可感知 agent 活躍狀態驅動環境副作用（螢幕喚醒、實體燈光顏色，見 Adrafinil、氛圍狀態燈）
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）
 - **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認，OpenAI、Nvidia、GitHub 開發者使用；claude-thermos 以保活請求維持快取不過期，但引發「成本轉嫁其他用戶」爭議；pxpipe 反其道而行，把文字 context 渲染成圖片傳遞以降低 token 用量；`claude -p` 未加 `--bare` 冷啟動實測約耗 15 萬 token
+- **並行用量與成本歸因（缺口）**：Pulse、Offrun、[Usage Updates](https://usageupdates.com/)（Show HN，10-01）只顯示帳號額度與重置，不給每批並行 subagent 的成本；r/ClaudeAI 10-03 [提問](https://www.reddit.com/r/ClaudeAI/comments/1wwlwys/how_do_you_track_cost_and_outcome_across_parallel/)庫內無解答；遞迴失控見 [#68619](https://github.com/anthropics/claude-code/issues/68619)
 - **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
 - **安全架構**：Grepathy 偵測、追蹤 agent 自主做出但未經人工核准的決策行為；Spare Mac 隔離環境以備用實體裝置作為 agent 全權控制沙箱，降低主力工作機風險（`--dangerously-skip-permissions` 風險隔離）；OneCLI 在網路層攔截請求並代換真實憑證，agent 本身全程不接觸密鑰
@@ -90,6 +91,21 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 **查證備註**
 - 「Claude 審查 Codex 通過率 71.6%→89.7%」已查得學術來源：[Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?](https://arxiv.org/abs/2607.21656)（arXiv 2607.21656）——116 則 LiveCodeBench 中／難題，六種條件對照，reviewer 只見題目與 writer 草稿、不能執行測試，近似真實 code review 流程；反向（Codex 審查 Claude）則使通過率從 91.4% 降至 82.8%，顯示審查方向有明顯不對稱效應，並非任一模型互審都有效（2026-08-13 查證）
+
+**把關層彙整（2026-10-04）**
+
+> 「它做完了、守規矩了嗎」目前有兩種把關：**檢查型**事後比對、不擋它；**強制型**由 agent 碰不到的一層直接擋或回滾。社群這一週的例子各有破口。
+
+| 工具／事件 | 類型 | 怎麼把關 | 已知破口 |
+|---|---|---|---|
+| RuleReceipt（09-30） | 檢查型 | 比對 agent 有沒有守 CLAUDE.md／AGENTS.md | 討論串有人質疑 agent 能關掉檢查 hook；趕工時最常繞過規則；無使用回報 |
+| Perspica（09-30） | 檢查型（輔助人審） | 審閱大型 AI PR 的語意化 diff，可選不靠 LLM 的機械分組 | 只幫人讀、不攔合併（推論）；LLM 分組模式仍靠模型判斷；無使用回報 |
+| 自主 agent 部署閘（10-01） | 強制型 | 預檢契約、帶硬門檻的 canary、agent 無法推翻的自動回滾 | 作者自述 340 餘次部署、零人工呼叫，無 repo 或指標可複核；閘是事故後才加 |
+| 刪除 48,000 檔事件（09-25，TechRadar） | 強制型缺位的個案 | 報導未提任何攔截層 | 僅標題可用、單一媒體；備份、指令與版本均未見報導，不當作定論 |
+
+- **檢查型的共同破口**：被檢查的 agent 與檢查器同處一個環境時，agent 可能動到檢查本身；強制型把關住在 agent 碰不到的地方，這是兩型的分界（推論）。
+- **兩型都沒回答的是品質**：Ask HN〈Is anybody producing good code with coding agents?〉（HN 26 分，10-02）轉述資深工程師抱怨 AI 程式碼難讀、品質差；守規則與能安全出貨，不等於寫得好。
+- 來源：[RuleReceipt](https://github.com/rulereceipt/rulereceipt)、[Perspica](https://github.com/sshah03/perspica)（Show HN，日報 2026-10-01）；[部署閘](https://dev.to/yureki_lab/how-i-built-a-deploy-gate-so-my-autonomous-coding-agent-can-ship-to-prod-safely-1egb)；[Ask HN](https://news.ycombinator.com/item?id=49934037)；[TechRadar 報導](https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnRRdGtkRlpCQjlEQTR5bnd6MTRudlA3dWVubjZISzBGZng5eVg5NlBjcTdVRHdobXB5bDlfb1BncldYc2lUWVUzY0s2RkFZZmxpdFN2ZlNBU2huNzRIYUtEUGszYldjMksyS3ZXd0dwdFh2b1I3ZEQ2cFVuXzFKRVhlWGNUVC1ISkhvazJOYTZ0emtJR3FKUzBGR1JlMHdSekowekRDSzRZTmhGalZyWHZsdlVvQ1dHQVdWQ3lhWV9VakVFWUM2YkFDdUw0cXZUUEd2dmVSYnlldTAxeVVULUd0NjdqMTVXd2J5NUV3RjNYRHVmZjdFaWJRTHNPU2V0Mw?oc=5)（日報 2026-09-25；庫內條目見 [[topics/ai-agent-safety]]）；RuleReceipt 工具選型見 [[topics/community-tech-tools]]。
 
 ---
 
@@ -137,7 +153,7 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 ### 缺口追蹤：文獻主張 × Claude Code 現況
 
-**資料截至 2026-09-06**（官方文件查證）。狀態三值：已補／部分補上／未補。
+**資料截至 2026-09-06**（官方文件查證；「信任與驗證層」一列為 2026-10-04）。狀態三值：已補／部分補上／未補。
 
 | 缺口 | 文獻主張 | 現況 | 狀態 |
 |---|---|---|---|
@@ -147,7 +163,13 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | 動態粒度 | 拆分粒度應按執行者能力當場調整 | 官方只有工作流大小三檔靜態旋鈕，截至查證日未見動態粒度 | 未補（2026-09-06 查證） |
 | 共享計畫的雙向編輯 | 人類應能在共享計畫上持續協調並中途糾錯 | 可中途插話，但沒有雙方都能編輯的計畫載體 | 未補 |
 | 協調與衝突解決 | 多 agent 併行需要協調衝突的機制 | 官方答案是 git worktree 隔離——用不共用工作區迴避協調，不是解決協調 | 未補 |
-| 信任與驗證層 | 多 agent 產出需要信任與驗證機制 | 官方仍是空白，社群工具正長在這個缺口上 | 未補 |
+| 信任與驗證層 | 多 agent 產出需要信任與驗證機制 | 官方已有完成判定與攔截零件，仍無跨 agent 產出的信任機制，也不保證品質；零件與理由見下方細節 | 部分補上（2026-10-04 查證） |
+
+**信任與驗證層（2026-10-04 查證）**
+- 官方零件：`/goal` 判完成條件、`/code-review`（v2.1.218 起背景執行，v2.1.288 加 `--max-findings`）。
+- v2.1.287 Mods 可掛旁觀 agent，內建 `cc-plugin-you-should-know`，預設停用。
+- 判「部分補上」：先前說的空白已不成立；但這些答的是做完沒、能不能攔，不保證品質，也沒有跨 agent 的信任機制。
+- `/code-review` 自 v2.1.215 起不自動觸發（見下方倒退項）。社群工具見上方「把關層彙整」。
 
 **一項倒退：** v2.1.215（2026-07-19）起 `/verify` 與 `/code-review` 不再自動觸發，評估與改進的迴路從自動降為手動（見下方懸置細節 ⟨Q-07⟩ 已查證：未恢復）。
 

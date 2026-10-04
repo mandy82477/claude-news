@@ -30,10 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-04
+**最後新聞更新：** 2026-10-04
 
-> **最新動態**（2026-10-03）
+> **最新動態**（2026-10-04）
+> - Mods 有了專頁：官方文件明載 mod 讀得到你的 API key、不受沙箱隔離，裝前先 `claude plugin validate`，見 [[entities/claude-mods]]。新增「發布通道」小節：stable 晚約一週，套件管理器安裝不會自動更新。
 > - v2.1.288 發布：修正 `bash -c`／`sh -c` 內危險 `rm` 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。
 > - 新增 `/code-review --max-findings`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`、mods 的 `$.ui.selection()`；旗標追蹤見 [[topics/claude-code-experimental]]。
 
@@ -46,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **v2.1.288**（2026-10-02）：新增 `/code-review --max-findings <n>|all`、`claude purge`（取代 `claude project purge`）、Ctrl+C 清空提示後按 ↑ 取回草稿、MCP 要求更多 OAuth scope 時提示重新驗證、mods 的 `$.ui.selection()`。
 - **v2.1.288 修正與設定**：新增 `CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`（閘道用）；修正 `bash -c`／`sh -c` 內危險 `rm` 在 bypassPermissions 或 shell 允許規則下免提示執行（#96300）；背景指令時限改為僅無人值守 session 適用（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）。
   同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
-- **v2.1.287**（2026-10-01）：**新增「Claude Mods」**，外掛可修改更深層行為，內建示範 mod「You should know」（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）。即 Function Hooks 提案出貨，詳見「已知問題」🔌 MCP 整合、[[topics/claude-code-experimental]]。
+- **v2.1.287**（2026-10-01）：**新增「Claude Mods」**（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)），機制、權限與安全見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
   同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.286**（2026-09-30）：權限提示堆疊多筆請求時新增「2 of 5」這類計數顯示；全螢幕模式下清單的「N more」列新增滑鼠支援（可點擊展開）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）。
   同版 build 另新增 8 個功能候選旗標，`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，追蹤見 [[topics/claude-code-experimental]]。
@@ -351,7 +352,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：MCP Sampling 支援以善用 Max 訂閱降低 API 成本（GitHub issue #1785，累積 58 則留言，2026-07-12 回報）**：使用者呼籲支援 MCP Sampling，讓 MCP Server 端運算可透過既有 Claude Max 訂閱額度執行，避免額外 API 計費；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 每輪工具呼叫次數限制回歸，中斷 MCP/SSH agent 工作流（GitHub issue #33969，累積 48 則留言、44 個讚，2026-07-07，regression）**：Claude Desktop 每輪工具呼叫次數限制出現回歸，導致依賴多輪工具呼叫的 MCP／SSH 相關 agent 工作流中斷；官方尚未回應。
 - 🔴 **未修復**｜**MCP servers/hooks/plugins 設定變更需完整重啟 session（GitHub issue #24057，累積 30 則留言、15 個讚，2026-07-05）**：目前修改 MCP server、hooks 或 plugin 設定後必須重啟整個 session 才會生效，無法熱重載，中斷工作流程並遺失既有 context；社群呼籲改為設定變更後自動重載，官方尚未回應。
-- ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870，追蹤串本日累積 233 則留言、218 個讚）**：mod＝用 function hook 的 plugin。細節見 [[feature-radar]]、[[topics/claude-code-experimental]]。
+- ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
 ### 🔌 平台相容性（73 條未修復、3 條查無官方、3 條已修復）
@@ -506,6 +507,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 版本更新
 
+### 發布通道（stable／latest）
+
+官方安裝文件（[setup](https://code.claude.com/docs/en/setup)，2026-10-04 查證）：Claude Code 有 latest 與 stable 兩條通道，stable 約晚一週。stable 缺的權限修正與切換建議見 2026-W40 週報開發實務專文。
+
+- **誰會落在 stable**：自己把 `autoUpdatesChannel` 設成 `"stable"`；用 Homebrew 的 `claude-code` cask（`claude-code@latest` 才是 latest）；照官方文件用 apt、dnf、apk 安裝。原生安裝的 `autoUpdatesChannel` 預設是 latest。
+- **套件管理器安裝不會自己更新**：Homebrew、apt、dnf、apk 都要手動升級，落在 stable 又沒升級的人版本會比預期更舊。
+- **升版前先查**：`claude --version` 看現在跑哪一版，設定檔裡的 `autoUpdatesChannel` 看跟哪條通道。
+- **`minimumVersion` 的限制**：只讓自動更新不裝比它舊的版本；官方文件沒說它會把 stable 拉高，不能拿來補 stable 的落差。
+- **stable 目前落差**：stable 標籤停在 2.1.285（mixed-news.com，10-03），權限修正在 2.1.287–2.1.289；何時追上官方未說。
+
 ### 最新版本
 
 > 本表只收本庫日報報導過的版本。**v2.1.242–244 與 v2.1.252–257 未見報導，不代表未發布。** 破壞性變更與預設值改變見 [[feature-radar]]「從你現在的版本升上去，會遇到什麼」。
@@ -513,7 +524,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 版本 | 發布日 | 重點 |
 |------|------|------|
 | **v2.1.288** | 2026-10-02 | 新增 `--max-findings`、`claude purge`；修正 `bash -c` 內危險 `rm` 繞過檢查（#96300）；stable 仍在 2.1.285（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）|
-| **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**：外掛可修改更深層行為，內建示範 mod「You should know」（旁觀 agent 主動提醒）；即 Function Hooks 提案（issue #91870）出貨（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)）|
+| **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)），細節見 [[entities/claude-mods]] |
 | **v2.1.286** | 2026-09-30 | 權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）|
 | **anthropic-sdk-python v1.11.0** | 2026-09-30 | Features：新增 list spend limits endpoint，可透過 API 查詢支出限額設定（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.11.0)）|
 | **anthropic-sdk-typescript google-cloud-sdk v0.0.17** | 2026-09-30 | 例行維護性版本更新，官方 changelog 未列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.17)）|

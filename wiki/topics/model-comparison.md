@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-01
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-10-01
 
 > **淘汰通知傳聞**（2026-10-01）
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[entities/opus-5-5\|Opus 5.5]] | 次旗艦（Pro／Max／Team／Enterprise／API 預設 Opus，2026-09-23 起） | $4 / $20（官方確認）· 1M | 數小時無人盯著的編碼任務、跨數十檔 refactor、複雜系統工程 |
 | [[entities/sonnet-5-5\|Sonnet 5.5]] | 主力平衡（現行 Sonnet，API 預設，2026-09-28 起） | $2 / $10（快取讀取 $0.20）· 1M | 日常規模開發（分鐘～1 小時級）、修 bug、文件/簡報/試算表產出、tool use 密集 |
 | Sonnet 4.6 | 前代主力 | $3 / $15（官方確認）· 1M | 已驗證穩定、尚未遷移的既有工作流 |
-| Haiku 4.5 | 輕量 worker | $1 / $5（官方確認）· 200K | 即時互動、高頻批量分類、延遲與成本敏感的 sub-agent |
+| Haiku 4.5 | 輕量 worker（退役不早於 2026-10-15） | $1 / $5（官方確認）· 200K | 即時互動、高頻批量分類、延遲與成本敏感的 sub-agent |
 
 **不進表的選項：** [[entities/opus-5|Opus 5]]、[[entities/opus-4-8|Opus 4.8]]、[[entities/opus-4-7|Opus 4.7]] 皆已被取代，新採用一律改用 Opus 5.5（Fast Mode 已非 4.8 獨佔優勢）；[[entities/fable-5|Fable 5.0]] 已被 5.1 取代，新採用一律改用 5.1；[[entities/sonnet-5|Sonnet 5]] 已被 5.5 取代（Legacy 與否見 [[entities/sonnet-5]]），新採用一律改用 5.5；[[entities/mythos|Mythos 5.1]] 為非公開陣容（僅限信任機構的無護欄安全研究），一般開發用途改選 Fable 5.1。六者的細節見下方「選型細節」。「不適合」的判準亦全數列於選型細節，每個模型一條。
 
@@ -63,6 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Sonnet 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，新採用一律改用 Sonnet 5.5。見 [[entities/sonnet-5]]。
 - **Sonnet 4.6**：**$3 / $15 per Mtok、1M context、128k 輸出**（官方模型總覽頁，2026-08-20 查證；legacy 仍可用）。適合既有穩定工作流；不適合新專案——Sonnet 5.5 更便宜且效能更高，新專案一律選 Sonnet 5.5。見 [[entities/pricing]]。
 - **Haiku 4.5**：官方定位 real-time applications／sub-agent tasks（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)），**$1/$5 per Mtok、200K context**（2026-08-20 查證）；不適合多步驟推理，200K 明顯低於其餘模型的 1M。見 [[topics/long-context-1m]]。
+- **Haiku 4.5 退役**：官方載明退役不早於 2026-10-15，是下限而非確定停用日（[官方模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-10-03 查證）。
 - **Opus 4.8 / Opus 4.7（已被取代）**：僅適合尚未遷移者的既有工作流延續，不建議新採用——次旗艦地位已由 Opus 5 接手，Fast Mode 亦非 4.8 獨佔優勢（官方文件確認 Opus 5 與 4.8 皆支援 fast mode）。Opus 4.7 另有 200K context 上限與思考深度議題，見 [[entities/opus-4-7]]。
 - **Mythos 5.1（非公開陣容，2026-09-01 取代 5.0）**：無護欄完整版，僅供信任機構的安全研究、滲透測試；一般使用者取不到，不可作為公開陣容模型的淘汰基準——公開陣容資安首選為 Fable 5.1。與 Fable 5.1 為同一模型的不同防護層級，存取模式（信任機構限定）自 5.0 起未變，詳見 [[entities/mythos]]。
 - **定價備注**：Opus 5.5 為 **$4 / $20 per Mtok**（官方 models overview（2026-09-23 查證）），較 Opus 5 的 $5 / $25 降 20%。Opus 5 已改列 Legacy，沿用原定價未變。沿革見 [[entities/pricing#模型 API 定價現況]]。
@@ -137,6 +138,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **使用限制：** 上表為 +30% 概值下的換算，非實測。**遷移前應以 `count_tokens` 對自己真實的 prompt 對目標模型量一次**，不可沿用對舊模型量過的數字——官方明載工作型態會改變增幅。乘數（快取命中 ×0.1，**Fable 5.1／Mythos 5.1 為 ×0.025**，2026-09-02 官方定價頁查證、Batch ×0.5、`inference_geo:"us"` ×1.1、地區端點 ×1.1）與通路差異見 [[entities/pricing]]。
 
 > **選了不一定算數。** 上表假設你實際跑在你選的模型上，但這件事本身有已佐證的缺口：`--model` 不接受版本 pin（[GitHub #27892](https://github.com/anthropics/claude-code/issues/27892)，官方 not planned 關閉）、1M context 變體會從 model picker 消失且選定狀態無法保持（#46221）。成本估算前先確認釘選是否成立，見 [[topics/code-quality-decline]] 的「模型釘選／靜默降級 訊號群」。
+
+## 升級與退役風險
+
+換模型的風險不只在牌價，還在**舊模型何時停、新模型升上去會不會壞、跑的是不是你選的那一個**。下表把散在各頁的四類風險收成一張對照，只放結論與出口；前三列都是單一來源報導，官方沒有出面確認，不當事實用。Haiku 4.5 的退役下限見快速選型表與選型細節。
+
+| 風險 | 目前說法與證據強度 | 來源（日期） | 出口與建議 |
+|------|------------------|-------------|-----------|
+| Sonnet 4.5 退役通知期 | 報導稱已標淘汰、通知期 61 天；單一來源，官方文件沒有寫 | mixed-news.com（2026-10-01） | 懸置標記見 [[#時序（陣容變化）]]；仍用 4.5 者先查官方退役日 |
+| Sonnet 5→5.5 升級行為差異 | 稱五種情境有差異、一種無錯誤訊息靜默失敗；原文僅標題可讀 | MIXED Reality News（2026-09-30） | 情境未載，升級前跑自己的回歸；見 [[entities/sonnet-5-5#你現在拿到的是什麼]] |
+| Sonnet 5.5 工作階段被降回 Sonnet 5 | 稱未主動輸入也可能被降回；觸發條件、範圍、可否關閉皆未載 | mixed-news.com（2026-10-01） | 核對實際跑的模型；釘選不一定成立，見 [[topics/code-quality-decline]] |
+| 換代的實付成本 | Claude 4.7 起新 tokenizer 約多 30% token，牌價相同花費不同 | 官方定價頁（2026-08-29 查證） | 成本表在 [[#換代的實付成本：牌價相同不等於花費相同]]，遷移前用 `count_tokens` 量 |
+
+**表下細節**
+
+- **Sonnet 4.5 通知期**：官方 Models overview 與 changelog 尚未見載明，故退役日不可由「61 天」反推。Microsoft Foundry 的 Claude Code `default` 仍指 Sonnet 4.5（官方文件，2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
+- **升級行為差異與降回**：兩則皆只有標題可讀，Sonnet 5.5 頁各存一筆原文連結與日期；官方 migration guide 對 5→5.5 的記載尚不完整，本頁不推算具體情境。
 
 ## 外部評測榜單
 
