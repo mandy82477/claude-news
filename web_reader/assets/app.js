@@ -587,6 +587,14 @@
     const filtered = activeDomain === 'all' ? roots
       : activeDomain === 'weekly' ? roots.filter(i => !!i.updateFreq && !/每日/.test(i.updateFreq))
       : roots.filter(i => readerDomains(i).includes(activeDomain));
+    // 人物領域：接管列表區（人物總覽／議題陣容）；其他領域還原表格列
+    const pplSortBar = document.getElementById('sort-bar-kb');
+    if (activeDomain === PPL_DOMAIN) {
+      renderPeople(container, filtered.filter(i => i._kbBaseType === 'entity' && (i.anthropicRel || i.identity)));
+      return;
+    }
+    container.classList.remove('ppl-host');
+    if (pplSortBar) pplSortBar.style.display = '';
     // 週更篩選時置頂一行說明：日期停留數天是策展節奏，不是漏更新
     const weeklyNote = activeDomain === 'weekly'
       ? '<div class="kb-filter-note">這些頁面採每週策展維護，更新日期停留數天屬正常節奏，並非漏更新。</div>'
@@ -609,6 +617,334 @@
 </div>`;
     }).join('');
   }
+
+  // ── 人物領域：人物總覽（圈層圖＋分區卡片）／議題陣容（F1/F2）─────────────────────
+  // 只在「人物」領域接管 #wiki-kb；其他領域與「全部」仍走原本的表格列。
+  // 殘頁排除：列表只收根頁（!parent，與 renderKbRows 同判準），再要求有 anthropicRel 或 identity
+  // （已併回議題頁的 chris-olah／chris-ciauri／tom-brown 兩者皆 null，因此落在外）。
+  const PPL_DOMAIN = '👤 人物';
+  const PPL_REL_ORDER = ['創辦團隊', '治理', '現任', '前員工', '投資人', '同業', '外部觀察者'];
+  const PPL_REL_LABEL = { '創辦團隊': 'Anthropic 創辦團隊', '治理': 'Anthropic 治理層', '現任': 'Anthropic 現任', '前員工': 'Anthropic 前員工', '投資人': 'Anthropic 投資人', '同業': '同業', '外部觀察者': '外部觀察者', '未分類': '未分類' };
+  const PPL_FUNC_ORDER = ['經營者', '研究者', '工程產品', '政策治理', '投資人', '評論媒體', '其他'];
+  const PPL_RINGS = [
+    { name: '創辦／治理', rels: ['創辦團隊', '治理'] },
+    { name: '現任', rels: ['現任'] },
+    { name: '前員工／投資人', rels: ['前員工', '投資人'] },
+    { name: '同業／外部', rels: ['同業', '外部觀察者'] },
+  ];
+  const PPL_ISSUE_SHORT = {
+    'ai-agent-safety': 'Agent 安全', 'ai-talent-flow': '人才流動', 'anthropic-business': '商業健康度',
+    'anthropic-government-policy': '政府與軍事', 'community-tech-discussions': '社群討論',
+    'community-tech-patterns': '社群工作流', 'recursive-self-improvement': 'AI 自我改進',
+    'safety-china-trust-dispute': '中美信任', 'market-signals': '投資訊號', 'code-quality-decline': '效能退步',
+  };
+  const PPL_ORBIT_KEY = 'claude-news-ppl-orbit';
+  const ppl = { view: 'overview', group: 'rel', filter: null, sel: null, people: [], issueSel: null, issueData: null, host: null };
+
+  function pplOrbitOpen() {
+    try { return localStorage.getItem(PPL_ORBIT_KEY) !== '0'; } catch (e) { return true; }
+  }
+  function pplOrbitSave(open) {
+    try { localStorage.setItem(PPL_ORBIT_KEY, open ? '1' : '0'); } catch (e) { /* 無痕模式等：略過 */ }
+  }
+  const pplRingOf = p => PPL_RINGS.findIndex(r => r.rels.includes(p.anthropicRel));
+  const pplSecOf = p => PPL_FUNC_ORDER.indexOf(p.func);
+  const pplDate = p => p.lastNewsUpdate || p.lastUpdated || p.startDate || p.firstSeen || '';
+
+  function renderPeople(container, people) {
+    ppl.people = people;
+    ppl.host = container;
+    if (ppl.sel && !people.some(p => p.id === ppl.sel)) ppl.sel = null;
+    container.classList.add('ppl-host');
+    container.innerHTML =
+      `<div class="ppl-views" role="tablist" aria-label="人物檢視">
+         <button class="ppl-view" role="tab" data-ppl-view="overview">人物總覽</button>
+         <button class="ppl-view" role="tab" data-ppl-view="issues">議題陣容</button>
+       </div><div class="ppl-body"></div>`;
+    pplRenderBody();
+  }
+
+  function pplRenderBody() {
+    const host = ppl.host;
+    if (!host) return;
+    host.querySelectorAll('.ppl-view').forEach(b => {
+      const on = b.dataset.pplView === ppl.view;
+      b.classList.toggle('ppl-view--active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    const sortBar = document.getElementById('sort-bar-kb');
+    if (sortBar) sortBar.style.display = ppl.view === 'overview' ? '' : 'none';
+    const body = host.querySelector('.ppl-body');
+    if (ppl.view === 'overview') {
+      body.innerHTML = '<section class="ppl-orbit" id="ppl-orbit"></section><div class="ppl-listbar" id="ppl-listbar"></div><div class="ppl-cards" id="ppl-cards"></div>';
+      pplRenderOrbit();
+      pplRenderCards();
+    } else {
+      body.innerHTML = '<div class="ppl-issues" id="ppl-issues"><p class="ppl-muted">載入中…</p></div>';
+      pplRenderIssues();
+    }
+  }
+
+  // 圈層圖座標：圈＝與 Anthropic 關係（合成四圈）、扇區＝職能（七扇）；同格多人依序平分角度並錯開半徑
+  function pplLayout(people) {
+    const CX = 200, CY = 200, R = [62, 98, 134, 170];
+    const span = 2 * Math.PI / PPL_FUNC_ORDER.length;
+    const cells = {};
+    people.forEach(p => {
+      const ri = pplRingOf(p), si = pplSecOf(p);
+      if (ri < 0 || si < 0) return;
+      (cells[ri + ':' + si] = cells[ri + ':' + si] || []).push(p);
+    });
+    const pos = {};
+    Object.entries(cells).forEach(([k, arr]) => {
+      const [ri, si] = k.split(':').map(Number);
+      arr.sort((a, b) => a.id.localeCompare(b.id)).forEach((p, i) => {
+        const a = -Math.PI / 2 + si * span + span * (i + 1) / (arr.length + 1);
+        const r = R[ri] + (arr.length > 3 ? (i % 2 ? 8 : -8) : 0);
+        pos[p.id] = { x: CX + r * Math.cos(a), y: CY + r * Math.sin(a), ri, si };
+      });
+    });
+    return { pos, CX, CY, R, span };
+  }
+
+  function pplInFilter(p) {
+    const f = ppl.filter;
+    if (!f) return true;
+    if (f.kind === 'ring') return PPL_RINGS[f.val].rels.includes(p.anthropicRel);
+    return p.func === f.val;
+  }
+
+  function pplRenderOrbit() {
+    const el = document.getElementById('ppl-orbit');
+    if (!el) return;
+    const open = pplOrbitOpen();
+    const people = ppl.people;
+    const { pos, CX, CY, R, span } = pplLayout(people);
+    const off = people.length - people.filter(p => pos[p.id]).length;
+    const f = ppl.filter;
+    let svg = '';
+    if (open) {
+      const n = PPL_FUNC_ORDER.length;
+      const wedge = i => {
+        const a0 = -Math.PI / 2 + i * span, a1 = a0 + span, ri = 40, ro = 190;
+        const pt = (r, a) => `${(CX + r * Math.cos(a)).toFixed(1)} ${(CY + r * Math.sin(a)).toFixed(1)}`;
+        return `M${pt(ri, a0)}L${pt(ro, a0)}A${ro} ${ro} 0 0 1 ${pt(ro, a1)}L${pt(ri, a1)}A${ri} ${ri} 0 0 0 ${pt(ri, a0)}Z`;
+      };
+      const secOn = i => f && f.kind === 'sec' && f.val === PPL_FUNC_ORDER[i];
+      svg += '<svg class="ppl-svg" viewBox="-90 -30 580 460" role="img" aria-label="人物關係圈層圖：圈為與 Anthropic 的關係，扇區為職能">';
+      for (let i = 0; i < n; i++) {
+        svg += `<path class="ppl-wedge${secOn(i) ? ' is-on' : ''}" d="${wedge(i)}" data-sec="${esc(PPL_FUNC_ORDER[i])}"><title>${esc(PPL_FUNC_ORDER[i])}</title></path>`;
+      }
+      R.forEach((r, i) => { svg += `<circle class="ppl-ring${f && f.kind === 'ring' && f.val === i ? ' is-on' : ''}" cx="${CX}" cy="${CY}" r="${r}"/>`; });
+      for (let i = 0; i < n; i++) {
+        const a = -Math.PI / 2 + i * span;
+        svg += `<line class="ppl-spoke" x1="${(CX + 40 * Math.cos(a)).toFixed(1)}" y1="${(CY + 40 * Math.sin(a)).toFixed(1)}" x2="${(CX + 190 * Math.cos(a)).toFixed(1)}" y2="${(CY + 190 * Math.sin(a)).toFixed(1)}"/>`;
+        const m = a + span / 2, lr = 194;
+        const lx = CX + lr * Math.cos(m), ly = CY + lr * Math.sin(m);
+        const anchor = Math.cos(m) > 0.3 ? 'start' : Math.cos(m) < -0.3 ? 'end' : 'middle';
+        const dy = Math.sin(m) > 0.5 ? 16 : Math.sin(m) < -0.5 ? -5 : 6;
+        svg += `<text class="ppl-sec-label${secOn(i) ? ' is-on' : ''}" x="${lx.toFixed(1)}" y="${(ly + dy).toFixed(1)}" text-anchor="${anchor}" data-sec="${esc(PPL_FUNC_ORDER[i])}">${esc(PPL_FUNC_ORDER[i])}</text>`;
+      }
+      R.forEach((r, i) => { svg += `<circle class="ppl-ringhit" cx="${CX}" cy="${CY}" r="${r}" data-ring="${i}"><title>${esc(PPL_RINGS[i].name)}</title></circle>`; });
+      svg += `<circle class="ppl-core" cx="${CX}" cy="${CY}" r="36"/><text class="ppl-core-t" x="${CX}" y="${CY + 5}" text-anchor="middle">Anthropic</text>`;
+      let selSvg = '';
+      people.filter(p => pos[p.id]).forEach(p => {
+        const q = pos[p.id], isSel = p.id === ppl.sel, dim = !pplInFilter(p);
+        if (isSel) {
+          const right = q.x < 300;
+          selSvg = `<circle class="ppl-dot ppl-dot--sel" cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="8"/>` +
+            `<text class="ppl-me-label" x="${(q.x + (right ? 13 : -13)).toFixed(1)}" y="${(q.y + 6).toFixed(1)}" text-anchor="${right ? 'start' : 'end'}">${esc(p.name || p.id)}</text>`;
+        }
+        svg += `<g class="ppl-dotg${dim ? ' is-dim' : ''}" data-id="${esc(p.id)}"><circle class="ppl-dothit" cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="11"/><circle class="ppl-dot" cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="5"><title>${esc(p.name || p.id)}</title></circle></g>`;
+      });
+      svg += selSvg + '</svg>';
+    }
+    const sel = ppl.people.find(p => p.id === ppl.sel);
+    const ringChips = PPL_RINGS.map((r, i) => {
+      const on = f && f.kind === 'ring' && f.val === i;
+      return `<button class="ppl-chip${on ? ' is-on' : ''}" data-ring="${i}" aria-pressed="${!!on}">${esc(r.name)}</button>`;
+    }).join('');
+    const whyHtml = sel
+      ? `<div class="ppl-why__head"><b>${esc(sel.name || sel.id)}</b><span>${esc(sel.identity || '')}</span></div>
+         <p class="ppl-why__t">${esc(sel.why || '（尚無「為何追蹤」）')}</p>
+         <button class="ppl-link" data-open="${esc(sel.id)}">看人物頁 →</button>`
+      : '<p class="ppl-muted">點圖上的點，看他為什麼出現在本站；點圈、扇區或下方標籤，篩選下方卡片。</p>';
+    el.innerHTML =
+      `<div class="ppl-orbit__bar"><span class="ppl-orbit__t">關係圈層圖</span>
+         <span class="ppl-muted ppl-orbit__hint">圈＝與 Anthropic 的關係（內→外）　扇區＝職能</span>
+         <button class="ppl-toggle" data-orbit-toggle aria-expanded="${open}">${open ? '收合' : '展開'}</button></div>` +
+      (open
+        ? `<div class="ppl-orbit__body">${svg}
+             <div class="ppl-chips" role="group" aria-label="依圈層篩選"><span class="ppl-muted">圈層</span>${ringChips}</div>
+             <div class="ppl-why" aria-live="polite">${whyHtml}</div>
+             ${off ? `<p class="ppl-muted">另有 ${off} 人缺關係或職能欄位，未上圖，見下方「未分類」。</p>` : ''}
+           </div>`
+        : '');
+  }
+
+  function pplCardHtml(p) {
+    // 分組維度已在區標題說明，卡片腳註放另一個維度，避免同一件事講兩次
+    const tag = ppl.group === 'rel' ? (p.func || '職能未填') : (PPL_REL_LABEL[p.anthropicRel] || '關係未填');
+    return `<button class="ppl-card" data-card="${esc(p.id)}">
+  <span class="ppl-card__name">${esc(p.name || p.id)}</span>
+  <span class="ppl-card__id">${esc(p.identity || '')}</span>
+  <span class="ppl-card__foot"><span class="ppl-card__tag">${esc(tag)}</span><span class="ppl-card__date">${esc(pplDate(p))}</span></span>
+</button>`;
+  }
+
+  function pplRenderCards() {
+    const bar = document.getElementById('ppl-listbar');
+    const box = document.getElementById('ppl-cards');
+    if (!bar || !box) return;
+    const f = ppl.filter;
+    const fLabel = f ? (f.kind === 'ring' ? `圈層：${PPL_RINGS[f.val].name}` : `職能：${f.val}`) : '';
+    bar.innerHTML =
+      `<div class="ppl-group" role="group" aria-label="卡片分區">
+         <span class="ppl-muted">分區</span>
+         <button class="ppl-chip${ppl.group === 'rel' ? ' is-on' : ''}" data-group="rel" aria-pressed="${ppl.group === 'rel'}">依與 Anthropic</button>
+         <button class="ppl-chip${ppl.group === 'func' ? ' is-on' : ''}" data-group="func" aria-pressed="${ppl.group === 'func'}">依職能</button>
+       </div>` +
+      (f ? `<button class="ppl-cond" data-clear-filter aria-label="取消條件：${esc(fLabel)}">${esc(fLabel)} <span aria-hidden="true">×</span></button>` : '');
+    const list = ppl.people.filter(pplInFilter);
+    const keyOf = ppl.group === 'rel' ? (p => p.anthropicRel) : (p => p.func);
+    const order = (ppl.group === 'rel' ? PPL_REL_ORDER : PPL_FUNC_ORDER).concat('未分類');
+    const label = k => ppl.group === 'rel' ? PPL_REL_LABEL[k] : k;
+    box.innerHTML = order.map(k => {
+      const g = list.filter(p => (keyOf(p) || '未分類') === k);
+      if (!g.length) return '';
+      return `<section class="ppl-sec"><div class="ppl-sec__h"><span class="ppl-sec__t">${esc(label(k))}</span><span class="ppl-sec__n">${g.length}</span></div><div class="ppl-tiles">${g.map(pplCardHtml).join('')}</div></section>`;
+    }).join('') || '<p class="ppl-muted">沒有符合條件的人物。</p>';
+  }
+
+  function pplSelect(id) {
+    ppl.sel = ppl.sel === id ? null : id;
+    if (ppl.sel && ppl.filter && !pplInFilter(ppl.people.find(p => p.id === id))) {
+      ppl.filter = null;
+      pplRenderCards();
+    }
+    pplRenderOrbit();
+    if (!ppl.sel) return;
+    const card = document.querySelector(`.ppl-card[data-card="${CSS.escape(id)}"]`);
+    if (!card) return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    card.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+    card.classList.remove('ppl-flash');
+    void card.offsetWidth;
+    card.classList.add('ppl-flash');
+  }
+
+  function pplSetFilter(kind, val) {
+    const f = ppl.filter;
+    ppl.filter = (f && f.kind === kind && f.val === val) ? null : { kind, val };
+    pplRenderOrbit();
+    pplRenderCards();
+  }
+
+  // ── 議題陣容 ──────────────────────────────────────────────────────────────────
+  // 資料沿用 graph.json 邊 {s,d,body}：s 為人物（kb 人物根頁）、d 為議題且 body>0；
+  // -archive 以節點 parent 併回母頁；同人同議題累加；至少 2 人連到的議題才成欄。
+  function pplBuildIssues(g) {
+    const byId = {}; g.nodes.forEach(n => { byId[n.id] = n; });
+    const ids = new Set(ppl.people.map(p => p.id));
+    const topicName = {};
+    ((window.WIKI_DATA || {}).topics || []).forEach(t => { topicName[t.id] = t.name || t.id; });
+    const m = new Map();
+    g.edges.forEach(e => {
+      if (!(e.body > 0)) return;
+      const s = byId[e.s], d = byId[e.d];
+      if (!s || !d || d.pageType !== 'topic') return;
+      const pid = s.parent || s.id, tid = d.parent || d.id;
+      if (!ids.has(pid)) return;
+      if (!m.has(tid)) m.set(tid, new Map());
+      m.get(tid).set(pid, (m.get(tid).get(pid) || 0) + e.body);
+    });
+    return [...m.entries()].filter(([, v]) => v.size >= 2)
+      .map(([id, v]) => ({ id, name: topicName[id] || (byId[id] && byId[id].name) || id, links: v }))
+      .sort((a, b) => b.links.size - a.links.size || a.name.localeCompare(b.name));
+  }
+  const pplShort = c => PPL_ISSUE_SHORT[c.id] || (c.name.length > 7 ? c.name.slice(0, 7) + '…' : c.name);
+
+  function pplRenderIssues() {
+    const el = document.getElementById('ppl-issues');
+    if (!el) return;
+    if (ppl.issueData) { pplDrawIssues(el); return; }
+    loadGraph().then(g => {
+      ppl.issueData = pplBuildIssues(g);
+      const again = document.getElementById('ppl-issues');
+      if (again && ppl.view === 'issues') pplDrawIssues(again);
+    }).catch(() => { el.innerHTML = '<p class="ppl-muted">議題資料載入失敗，請重新整理。</p>'; });
+  }
+
+  function pplDrawIssues(el) {
+    const cols = ppl.issueData || [];
+    if (!cols.length) { el.innerHTML = '<p class="ppl-muted">目前沒有被至少 2 位人物談到的議題。</p>'; return; }
+    const sel = cols.find(c => c.id === ppl.issueSel) || null;
+    if (!sel) ppl.issueSel = null;
+    const nT = p => cols.filter(c => c.links.has(p.id)).length;
+    const INSIDE = new Set(['創辦團隊', '治理', '現任']);
+    const col = r => INSIDE.has(r)
+      ? `color-mix(in srgb, var(--ochre-9) ${100 - PPL_REL_ORDER.indexOf(r) * 22}%, transparent)`
+      : `color-mix(in srgb, var(--ink-2) ${100 - Math.max(0, PPL_REL_ORDER.indexOf(r) - 3) * 20}%, transparent)`;
+    let summary;
+    if (!sel) {
+      summary = `<h2 class="ppl-sum__h">還沒選議題</h2>點表頭任一欄，看這個議題由哪些人組成。目前 ${ppl.people.length} 人、${cols.length} 個議題（至少 2 人談到才列欄）。`;
+    } else {
+      const ps = ppl.people.filter(p => sel.links.has(p.id));
+      const cnt = PPL_REL_ORDER.map(r => [r, ps.filter(p => p.anthropicRel === r).length]).filter(x => x[1]);
+      const other = ps.filter(p => !p.anthropicRel).length;
+      const inN = ps.filter(p => INSIDE.has(p.anthropicRel)).length;
+      summary = `<h2 class="ppl-sum__h">${esc(sel.name)}</h2>${ps.length} 人參與：Anthropic 這邊 ${inN} 人、以外 ${ps.length - inN} 人。
+        <div class="ppl-compo">${cnt.map(([r, k]) => `<span style="flex:${k};background:${col(r)}" title="${esc(PPL_REL_LABEL[r])} ${k}"></span>`).join('')}${other ? `<span style="flex:${other};background:var(--ink-4)"></span>` : ''}</div>
+        <div class="ppl-compo-l">${cnt.map(([r, k]) => `<span><i style="background:${col(r)}"></i>${esc(PPL_REL_LABEL[r])} ${k}</span>`).join('')}${other ? `<span><i style="background:var(--ink-4)"></i>未分類 ${other}</span>` : ''}</div>`;
+    }
+    const groups = PPL_REL_ORDER.concat('未分類').map(r => ({
+      g: PPL_REL_LABEL[r],
+      ps: ppl.people.filter(p => (p.anthropicRel || '未分類') === r).sort((a, b) => nT(b) - nT(a) || (a.name || a.id).localeCompare(b.name || b.id)),
+    })).filter(x => x.ps.length);
+    let h = `<div class="ppl-sumbox">${summary}</div>
+      <div class="ppl-legend"><span><i class="ppl-lg ppl-lg--on"></i>正文談到 2 處以上</span><span><i class="ppl-lg ppl-lg--lo"></i>正文談到 1 處</span></div>
+      <div class="ppl-mx" style="--nc:${cols.length}">
+      <div class="ppl-mx__row ppl-mx__head"><span class="ppl-muted">人物 ＼ 議題</span>${cols.map(c => `<button class="ppl-colh${sel && sel.id === c.id ? ' is-sel' : ''}" aria-pressed="${!!(sel && sel.id === c.id)}" data-issue="${esc(c.id)}" title="${esc(c.name)}">${esc(pplShort(c))}</button>`).join('')}</div>`;
+    groups.forEach(({ g, ps }) => {
+      const vis = ps.filter(p => !sel || sel.links.has(p.id));
+      if (!vis.length) return;
+      h += `<div class="ppl-mx__grp">${esc(g)}</div>`;
+      vis.forEach(p => {
+        h += `<div class="ppl-mx__row"><button class="ppl-nm" data-open="${esc(p.id)}">${esc(p.name || p.id)}</button>${cols.map(c => {
+          const w = c.links.get(p.id);
+          const on = sel && sel.id === c.id;
+          return `<span class="ppl-cell${on ? ' is-col' : ''}">${w ? `<i class="${w > 1 ? 'ppl-b2' : 'ppl-b1'}${on ? ' is-sel' : ''}"></i>` : '<i class="ppl-b0"></i>'}</span>`;
+        }).join('')}</div>`;
+      });
+    });
+    el.innerHTML = h + '</div>';
+  }
+
+  function pplOnClick(e) {
+    const t = e.target;
+    const view = t.closest('[data-ppl-view]');
+    if (view) { ppl.view = view.dataset.pplView; pplRenderBody(); return; }
+    if (t.closest('[data-orbit-toggle]')) { pplOrbitSave(!pplOrbitOpen()); pplRenderOrbit(); return; }
+    const dot = t.closest('[data-id]');
+    if (dot) { pplSelect(dot.dataset.id); return; }
+    const sec = t.closest('[data-sec]');
+    if (sec) { pplSetFilter('sec', sec.dataset.sec); return; }
+    const ring = t.closest('[data-ring]');
+    if (ring) { pplSetFilter('ring', Number(ring.dataset.ring)); return; }
+    if (t.closest('[data-clear-filter]')) { ppl.filter = null; pplRenderOrbit(); pplRenderCards(); return; }
+    const grp = t.closest('[data-group]');
+    if (grp) { ppl.group = grp.dataset.group; pplRenderCards(); return; }
+    const card = t.closest('[data-card]');
+    if (card) { window.openWikiPage(card.dataset.card, 'entity'); return; }
+    const open = t.closest('[data-open]');
+    if (open) { window.openWikiPage(open.dataset.open, 'entity'); return; }
+    const iss = t.closest('[data-issue]');
+    if (iss) { ppl.issueSel = ppl.issueSel === iss.dataset.issue ? null : iss.dataset.issue; pplRenderIssues(); }
+  }
+  document.addEventListener('click', e => {
+    const host = document.getElementById('wiki-kb');
+    if (host && host.classList.contains('ppl-host') && host.contains(e.target)) pplOnClick(e);
+  });
 
   function renderWiki() {
     const data = window.WIKI_DATA || { entities: [], topics: [] };
@@ -1373,9 +1709,11 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     // strip H1 + front-matter metadata, render markdown + wikilinks
     const bodyHtml = renderMarkdownBody(item.markdown || '');
 
+    // 人物頁：build 端只給人物頁 anthropicRel 這個 key（值可為 null）；子頁（有 parent）不算
+    const isPerson = isPersonPage(item);
     const metaRows = [];
-    if (item.entityType) metaRows.push({ label: '類型',     val: item.entityType });
-    if (item.status)     metaRows.push({ label: '狀態',     val: statusLabelFull(item.status) });
+    if (item.entityType && !isPerson) metaRows.push({ label: '類型',     val: item.entityType });
+    if (item.status && !isPerson)     metaRows.push({ label: '狀態',     val: statusLabelFull(item.status) });
     if (item.firstSeen)  metaRows.push({ label: '首次出現', val: item.firstSeen });
     if (item.startDate)  metaRows.push({ label: '開始日期', val: item.startDate });
     if (item.lastUpdated)metaRows.push({ label: '最後更新', val: item.lastUpdated });
@@ -1425,18 +1763,19 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
     $('#detail-content').innerHTML = `
 <div class="detail__type-row">
   ${item.status ? `<span class="pill pill--${item.pill}">${esc(statusLabelFull(item.status))}</span>` : ''}
-  <span class="pill pill--gray">${esc(item.entityType || typeLabel)}</span>
+  <span class="pill pill--gray">${esc(isPerson ? '人物' : (item.entityType || typeLabel))}</span>
   ${item.updateFreq ? `<span class="pill pill--weekly">🗓️ ${/每日/.test(item.updateFreq) ? '每日' : '週更'}</span>` : ''}
 </div>
 ${crumbHtml}
 <h1 class="detail__h1">${esc(item.name)}</h1>
-${metaRows.length ? `<div class="detail__meta">${metaHtml}</div>` : ''}
+${isPerson ? personHeadHtml(item) : (metaRows.length ? `<div class="detail__meta">${metaHtml}</div>` : '')}
 ${trackerHtml}
 ${subHtml}
 <div class="detail__body">${bodyHtml}</div>
 ${olderHtml}
 <div class="detail__minimap" id="detail-minimap"></div>`;
-    renderMiniMap(id, $('#detail-minimap'));
+    if (isPerson) renderPersonRel(id, $('#detail-minimap'));
+    else renderMiniMap(id, $('#detail-minimap'));
     makeTablesSortable($('#detail-content'));
     enhanceCallout($('#detail-content'));
     if (id === 'community-tech-tools') injectToolsInsights($('#detail-content'));
@@ -2447,14 +2786,554 @@ ${olderHtml}
   }
   window.openMapAt = function (id) {
     switchView('map', document.querySelector('[data-view=map]'));
+    pnetSetMode('star');
     if (mapState && mapState.nodeG) setTimeout(() => mapApplyRequest({ select: id }), 50);
     else { mapState = mapState || {}; mapState.pendingSelect = { select: id }; }
   };
   window.openMapSet = function (ids, label) {
     switchView('map', document.querySelector('[data-view=map]'));
+    pnetSetMode('star');
     if (mapState && mapState.nodeG) setTimeout(() => mapApplyRequest({ ids, label }), 50);
     else { mapState = mapState || {}; mapState.pendingSelect = { ids, label }; }
   };
+
+  // ── 地圖：人物關係網（F4）─────────────────────────────────────────────────
+  // 自寫力導向（不用 d3）。窗格寬 0（隱藏／尚未排版）時不建圖，等 ResizeObserver／IntersectionObserver／
+  // visibilitychange／輪詢任一個回報寬度 > 0 才畫；隱藏時前兩者不會觸發，所以另有常駐輪詢兜底。
+  const PNET_RELS = ['創辦團隊', '治理', '現任', '前員工', '投資人', '同業', '外部觀察者'];
+  const PNET_IN = new Set(['創辦團隊', '治理', '現任']);
+  const PNET_FILTERS = [['all', '全部'], ['in', '這邊'], ['out', '以外']];
+  let pnet = null;
+
+  const pnetTone = n => { const i = PNET_RELS.indexOf(n.anthropicRel); return i < 0 ? 'x' : String(i); };
+  const pnetIsIn = n => PNET_IN.has(n.anthropicRel);
+  const pnetFinite = v => typeof v === 'number' && isFinite(v);
+
+  function pnetSetMode(mode) {
+    const people = mode === 'people';
+    const star = $('#map-star'), box = $('#map-people');
+    if (!star || !box) return;
+    star.hidden = people; box.hidden = !people;
+    const sub = $('#map-sub'); if (sub) sub.hidden = people;   // 星圖專用說明；人物關係網有自己的導言
+    $$('#map-modes [data-map-mode]').forEach(b => {
+      const on = b.dataset.mapMode === mode;
+      b.classList.toggle('domain-chip--active', on); b.setAttribute('aria-pressed', String(on));
+    });
+    if (people) pnetOpen();
+  }
+  document.addEventListener('click', ev => {
+    const b = ev.target.closest && ev.target.closest('#map-modes [data-map-mode]');
+    if (b) pnetSetMode(b.dataset.mapMode);
+  });
+
+  async function pnetOpen() {
+    if (pnet && pnet.host) { pnetSync(); return; }
+    if (pnet && pnet.loading) return;
+    const box = $('#map-people');
+    pnet = { loading: true };
+    box.innerHTML = '<div class="map__loading">載入人物關係網…</div>';
+    let data;
+    try { data = await loadGraph(); } catch (e) {
+      pnet = null; box.innerHTML = `<div class="map__loading">人物關係網暫時無法載入（${esc(e.message)}）。</div>`; return;
+    }
+    // 節點：人物（有 anthropicRel 欄位、非 archive 子頁）；議題：至少連到 2 位人物者
+    const all = new Map(data.nodes.map(n => [n.id, n]));
+    const bySlug = new Map(data.nodes.map(n => [n.slug, n.id]));
+    const root = id => { const n = all.get(id); return n && n.parent && bySlug.has(n.parent) ? bySlug.get(n.parent) : id; };   // parent 是母頁 slug，不是 id
+    const people = data.nodes.filter(n => 'anthropicRel' in n && !n.parent);
+    const nodes = people.map(p => ({ id: p.id, kind: 'p', p, name: p.name, r: 5 + Math.sqrt(p.inBody || 0) * 1.7 }));
+    const NI = Object.fromEntries(nodes.map(n => [n.id, n]));
+    const pw = new Map(), pt = new Map();
+    data.edges.forEach(e => {
+      if (!(e.body > 0)) return;
+      const s = root(e.s), d = root(e.d), sn = all.get(s), dn = all.get(d);
+      if (!sn || !dn || s === d) return;
+      if (NI[s] && NI[d]) { const k = s < d ? s + '|' + d : d + '|' + s; pw.set(k, (pw.get(k) || 0) + e.body); }
+      else if (NI[s] && dn.pageType === 'topic') { const k = s + '|' + d; pt.set(k, (pt.get(k) || 0) + e.body); }
+      else if (NI[d] && sn.pageType === 'topic') { const k = d + '|' + s; pt.set(k, (pt.get(k) || 0) + e.body); }
+    });
+    const tcount = new Map();
+    [...pt.keys()].forEach(k => { const t = k.split('|')[1]; tcount.set(t, (tcount.get(t) || 0) + 1); });
+    const topics = [...tcount.entries()].filter(([, c]) => c >= 2).map(([id]) => {
+      const t = all.get(id); return { id: 't:' + id, tid: id, kind: 't', name: t.name, r: 7 };
+    });
+    topics.forEach(t => { NI[t.id] = t; });
+    const allNodes = nodes.concat(topics);
+    const edges = [];
+    pw.forEach((w, k) => { const [a, b] = k.split('|'); edges.push({ a: NI[a], b: NI[b], w, kind: 'pp' }); });
+    pt.forEach((w, k) => { const [a, t] = k.split('|'); if (NI['t:' + t]) edges.push({ a: NI[a], b: NI['t:' + t], w, kind: 'pt' }); });
+    const adj = new Map(allNodes.map(n => [n, new Set()]));
+    edges.forEach(e => { adj.get(e.a).add(e.b); adj.get(e.b).add(e.a); });
+    const big = new Set([...nodes].sort((a, b) => (b.p.inBody || 0) - (a.p.inBody || 0)).slice(0, 10).map(n => n.id));
+    const big6 = new Set([...big].slice(0, 6));
+
+    Object.assign(pnet, { loading: false, nodes: allNodes, NI, edges, adj, big, big6, showTopics: false, filt: 'all', focus: null,
+                          W: 0, H: 0, laid: false, svg: null });
+    pnetBuildShell(box);
+    pnetStartWatch();
+    pnetSync();
+  }
+
+  function pnetBuildShell(box) {
+    const dot = (cls, t) => `<span class="pnet__lg"><i class="pnet__dot pnet-t--${cls}"></i>${esc(t)}</span>`;
+    box.innerHTML = `
+      <p class="pnet__lead">點一個人，會亮出跟他互相引用的人；拖曳可以把節點拉開，點空白處取消選取。</p>
+      <div class="pnet__bar">
+        <div class="pnet__chips" id="pnet-filters" role="group" aria-label="篩選人物（這邊＝創辦團隊、治理、現任）">
+          ${PNET_FILTERS.map(([k, t]) => `<button type="button" class="pnet-chip" data-pnet-f="${k}">${t}</button>`).join('')}
+          <button type="button" class="pnet-chip" data-pnet-f="topics">顯示議題</button>
+          <button type="button" class="pnet-chip pnet-chip--ghost" id="pnet-relayout">重新排列</button>
+        </div>
+      </div>
+      <div class="pnet__legend" aria-label="圖例">
+        <span class="pnet__lg-group"><b>Anthropic 這邊</b>${PNET_RELS.slice(0, 3).map((r, i) => dot(i, r)).join('')}</span>
+        <span class="pnet__lg-group"><b>以外</b>${PNET_RELS.slice(3).map((r, i) => dot(i + 3, r)).join('')}${dot('x', '未分類')}</span>
+        <span class="pnet__lg"><i class="pnet__dot pnet__dot--topic"></i>議題</span>
+        <span class="pnet__lg">圓大小＝被正文引用頁數</span>
+      </div>
+      <div class="pnet__stage">
+        <div class="pnet__canvas" id="pnet-canvas"></div>
+        <aside class="pnet__sheet" id="pnet-sheet" hidden></aside>
+      </div>
+      <p class="pnet__hint" id="pnet-hint" aria-live="polite"></p>`;
+    pnet.host = $('#pnet-canvas');
+    const fEl = $('#pnet-filters');
+    fEl.addEventListener('click', ev => {
+      const c = ev.target.closest('[data-pnet-f]'); if (!c) return;
+      if (c.dataset.pnetF === 'topics') pnetSetTopics(!pnet.showTopics);
+      else pnet.filt = c.dataset.pnetF;
+      pnetSyncChips(); pnetPaint();
+    });
+    $('#pnet-relayout').addEventListener('click', () => {
+      pnet.nodes.forEach(n => { n.fixed = false; });
+      if (pnet.W > 0 && pnet.H > 0) { pnetSeed(); pnetSettle(); pnetPaint(); }
+    });
+    $('#pnet-sheet').addEventListener('click', ev => {
+      const go = ev.target.closest('[data-pnet-go]');
+      if (go) { const n = pnet.NI[go.dataset.pnetGo]; if (n) pnetSelect(n); return; }
+      const tp = ev.target.closest('[data-pnet-topic]');
+      if (tp) { pnetSetTopics(true); pnetSyncChips(); const n = pnet.NI['t:' + tp.dataset.pnetTopic]; if (n) pnetSelect(n); return; }
+      const op = ev.target.closest('[data-pnet-open]');
+      if (op) { openWikiPage(op.dataset.pnetOpen, op.dataset.pnetType || 'entity'); return; }
+      if (ev.target.closest('.pnet__sheet-close')) { pnet.focus = null; pnetCloseSheet(); pnetPaint(); }
+    });
+    pnetSyncChips();
+  }
+  function pnetSyncChips() {
+    $$('#pnet-filters [data-pnet-f]').forEach(c => {
+      const k = c.dataset.pnetF;
+      c.setAttribute('aria-pressed', String(k === 'topics' ? pnet.showTopics : k === pnet.filt));
+    });
+  }
+  function pnetSetTopics(on) {
+    pnet.showTopics = on;
+    if (!on && pnet.focus && pnet.focus.kind === 't') { pnet.focus = null; pnetCloseSheet(); }
+    pnet.nodes.forEach(n => { n.fixed = false; });
+    if (pnet.W > 0 && pnet.H > 0) pnetSettle(160);
+  }
+  function pnetCloseSheet() { const s = $('#pnet-sheet'); if (s) { s.hidden = true; s.innerHTML = ''; } }
+
+  // 寬度監看：ResizeObserver（可見時）＋IntersectionObserver＋visibilitychange＋resize＋常駐輪詢
+  function pnetStartWatch() {
+    const sync = () => pnetSync();
+    if (window.ResizeObserver) new ResizeObserver(sync).observe(pnet.host);
+    if (window.IntersectionObserver) new IntersectionObserver(sync).observe(pnet.host);
+    document.addEventListener('visibilitychange', sync);
+    addEventListener('resize', () => { clearTimeout(pnet._rt); pnet._rt = setTimeout(sync, 120); });
+    pnet.timer = setInterval(sync, 500);   // 常駐輪詢：只讀一次 clientWidth；RO 在隱藏／被節流時不會回報
+  }
+  function pnetSync() {
+    const P = pnet; if (!P || !P.host || !P.nodes) return;
+    const w = Math.floor(P.host.clientWidth);
+    if (!(w > 0)) return;                       // 隱藏中：不畫，等下一次回報
+    if (P.svg && w === P.W) return;
+    const ow = P.W, oh = P.H;
+    P.W = w; P.H = w < 600 ? Math.round(w * 1.3) : 560;
+    if (!P.laid || !(ow > 0) || !(oh > 0)) { pnetSeed(); pnetSettle(); P.laid = true; }
+    else P.nodes.forEach(n => { n.x *= P.W / ow; n.y *= P.H / oh; });
+    pnetSanitize();
+    P.host.innerHTML = `<svg viewBox="0 0 ${P.W} ${P.H}" width="${P.W}" height="${P.H}" role="img" aria-label="人物關係網"><g id="pnet-eg"></g><g id="pnet-ng"></g></svg>`;
+    P.svg = P.host.querySelector('svg');
+    pnetBind();
+    pnetPaint();
+  }
+  // 任何非有限數值（NaN／Infinity）一律重排，不讓壞座標進 DOM
+  function pnetSanitize() {
+    const P = pnet;
+    if (P.nodes.every(n => pnetFinite(n.x) && pnetFinite(n.y))) return;
+    pnetSeed(); pnetSettle();
+    P.nodes.forEach(n => { if (!pnetFinite(n.x) || !pnetFinite(n.y)) { n.x = P.W / 2; n.y = P.H / 2; } });
+  }
+
+  function pnetSeed() {
+    const { W, H } = pnet;
+    pnet.nodes.forEach((n, i) => {
+      const a = i * 2.39996, rr = 40 + (i % 9) * 14, inside = n.kind === 'p' && pnetIsIn(n.p);
+      const cx = n.kind === 't' ? W / 2 : inside ? W * .35 : W * .65;
+      const cy = n.kind === 't' ? H / 2 : inside ? H * .4 : H * .6;
+      n.x = cx + Math.cos(a) * rr; n.y = cy + Math.sin(a) * rr; n.vx = n.vy = 0; n.fixed = false;
+    });
+  }
+  const pnetActive = n => n.kind === 'p' || pnet.showTopics;
+  function pnetTick(alpha) {
+    const { W, H, edges } = pnet, A = pnet.nodes.filter(pnetActive);
+    for (let i = 0; i < A.length; i++) for (let j = i + 1; j < A.length; j++) {
+      const a = A[i], b = A[j]; let dx = b.x - a.x, dy = b.y - a.y; const d2 = dx * dx + dy * dy + .01;
+      const f = 2400 * alpha / d2, d = Math.sqrt(d2); dx /= d; dy /= d;
+      a.vx -= dx * f; a.vy -= dy * f; b.vx += dx * f; b.vy += dy * f;
+    }
+    edges.forEach(e => {
+      if (!pnetActive(e.a) || !pnetActive(e.b)) return;
+      const L = e.kind === 'pp' ? 62 : 86, k = (e.kind === 'pp' ? .05 : .025) * Math.min(e.w, 3);
+      let dx = e.b.x - e.a.x, dy = e.b.y - e.a.y; const d = Math.sqrt(dx * dx + dy * dy) || 1, f = (d - L) * k * alpha;
+      dx /= d; dy /= d; e.a.vx += dx * f; e.a.vy += dy * f; e.b.vx -= dx * f; e.b.vy -= dy * f;
+    });
+    A.forEach(n => {
+      n.vx += (W / 2 - n.x) * .006 * alpha; n.vy += (H / 2 - n.y) * .006 * alpha;
+      if (n.fixed) { n.vx = n.vy = 0; return; }
+      n.x += n.vx; n.y += n.vy; n.vx *= .55; n.vy *= .55;
+      n.x = Math.max(n.r + 4, Math.min(W - n.r - 4, n.x)); n.y = Math.max(n.r + 4, Math.min(H - n.r - 4, n.y));
+    });
+  }
+  function pnetSettle(k = 360) {
+    if (!(pnet.W > 0 && pnet.H > 0)) return;
+    for (let i = 0; i < k; i++) pnetTick(1 - i / k * .9);
+    pnetFit();
+  }
+  // 收斂後等比放大到填滿畫布（留 26px 給標籤）
+  function pnetFit() {
+    const { W, H } = pnet, A = pnet.nodes.filter(pnetActive); if (!A.length) return;
+    const pad = 26;
+    const x0 = Math.min(...A.map(n => n.x - n.r)), x1 = Math.max(...A.map(n => n.x + n.r));
+    const y0 = Math.min(...A.map(n => n.y - n.r)), y1 = Math.max(...A.map(n => n.y + n.r));
+    const k = Math.min((W - 2 * pad) / ((x1 - x0) || 1), (H - 2 * pad) / ((y1 - y0) || 1));
+    if (!pnetFinite(k) || k <= 0) return;
+    const ox = (W - (x1 - x0) * k) / 2, oy = (H - (y1 - y0) * k) / 2;
+    A.forEach(n => { n.x = ox + (n.x - x0) * k; n.y = oy + (n.y - y0) * k; });
+  }
+
+  function pnetOk(n) {
+    if (n.kind === 't' || pnet.filt === 'all') return true;
+    return (pnet.filt === 'in') === pnetIsIn(n.p);
+  }
+  function pnetPaint() {
+    const P = pnet; if (!P || !P.svg) return;
+    const { focus, adj, W } = P, nb = focus ? adj.get(focus) : null;
+    const f1 = v => (pnetFinite(v) ? v : 0).toFixed(1);
+    P.svg.querySelector('#pnet-eg').innerHTML = P.edges.filter(e => pnetActive(e.a) && pnetActive(e.b)).map(e => {
+      const hi = focus && (e.a === focus || e.b === focus);
+      const dim = (focus && !hi) || !pnetOk(e.a) || !pnetOk(e.b);
+      return `<line class="pnet-e${e.kind === 'pt' ? ' pnet-e--pt' : ''}${hi ? ' pnet-e--hi' : ''}" style="${dim ? 'opacity:.15' : ''}${e.kind === 'pp' && !hi ? `;stroke-width:${(Math.min(e.w, 3) * .8).toFixed(1)}` : ''}" x1="${f1(e.a.x)}" y1="${f1(e.a.y)}" x2="${f1(e.b.x)}" y2="${f1(e.b.y)}"/>`;
+    }).join('');
+    P.svg.querySelector('#pnet-ng').innerHTML = P.nodes.filter(pnetActive).map(n => {
+      const isF = n === focus, isN = nb && nb.has(n);
+      const cls = ['pnet-n', n.kind === 't' ? 'pnet-n--topic' : `pnet-t--${pnetTone(n.p)}`, isF ? 'pnet-n--focus' : '',
+        focus && !isF && !isN ? 'pnet-n--dim' : '', !pnetOk(n) ? 'pnet-n--off' : ''].filter(Boolean).join(' ');
+      const shape = n.kind === 't'
+        ? `<rect x="${f1(n.x - n.r)}" y="${f1(n.y - n.r)}" width="${n.r * 2}" height="${n.r * 2}"/>`
+        : `<circle cx="${f1(n.x)}" cy="${f1(n.y)}" r="${n.r.toFixed(1)}"/>`;
+      const showL = isF || isN || (!focus && (n.kind === 'p' && ((W < 600 ? P.big6 : P.big).has(n.id) || W >= 720)));
+      const nm = n.name.length > 12 ? n.name.slice(0, 11) + '…' : n.name;
+      const lw = [...nm].reduce((t, c) => t + (c.charCodeAt(0) > 255 ? 13 : 7.2), 0);   // 估標籤寬，放不下右側就改放左側
+      const right = n.x + n.r + 4 + lw <= W - 4 || n.x - n.r - 4 - lw < 4;
+      return `<g class="${cls}" data-id="${esc(n.id)}">${shape}${showL ? `<text x="${f1(n.x + (right ? n.r + 4 : -n.r - 4))}" y="${f1(n.y + 4)}" text-anchor="${right ? 'start' : 'end'}">${esc(nm)}</text>` : ''}</g>`;
+    }).join('');
+    const hint = $('#pnet-hint');
+    if (hint) hint.textContent = focus
+      ? `${focus.name}：連到 ${[...adj.get(focus)].filter(pnetActive).length} 個${P.showTopics ? '節點' : '人'}`
+      : '點一個節點看他的連結；較大的節點才顯示名字，其他點選後顯示。';
+  }
+
+  function pnetBind() {
+    const P = pnet, svg = P.svg;
+    let drag = null, moved = false, sx = 0, sy = 0;
+    const pt = e => {
+      const r = svg.getBoundingClientRect(); if (!(r.width > 0 && r.height > 0)) return [sx, sy];
+      return [(e.clientX - r.left) * P.W / r.width, (e.clientY - r.top) * P.H / r.height];
+    };
+    svg.addEventListener('pointerdown', e => {
+      const g = e.target.closest('.pnet-n'); [sx, sy] = pt(e); moved = false;
+      if (g && P.NI[g.dataset.id]) { drag = P.NI[g.dataset.id]; try { svg.setPointerCapture(e.pointerId); } catch (_) {} e.preventDefault(); }
+    });
+    svg.addEventListener('pointermove', e => {
+      if (!drag) return; const [x, y] = pt(e);
+      if (!moved && Math.hypot(x - sx, y - sy) < 5) return;
+      moved = true; drag.fixed = true; drag.x = x; drag.y = y;
+      for (let i = 0; i < 3; i++) pnetTick(.25);
+      pnetPaint();
+    });
+    svg.addEventListener('pointerup', e => {
+      if (drag && !moved) pnetSelect(drag);
+      else if (!drag) { const [x, y] = pt(e); if (Math.hypot(x - sx, y - sy) < 5) { P.focus = null; pnetCloseSheet(); pnetPaint(); } }
+      drag = null;
+    });
+    svg.addEventListener('pointercancel', () => { drag = null; });
+  }
+
+  function pnetSelect(n) {
+    const P = pnet; P.focus = n; pnetPaint();
+    const sheet = $('#pnet-sheet'); if (!sheet) return;
+    const nbs = [...P.adj.get(n)];
+    const wOf = m => (P.edges.find(e => (e.a === n && e.b === m) || (e.b === n && e.a === m)) || {}).w || 1;
+    const close = '<button type="button" class="pnet__sheet-close" aria-label="關閉">×</button>';
+    let html;
+    if (n.kind === 'p') {
+      const ppl = nbs.filter(m => m.kind === 'p').map(m => ({ m, w: wOf(m) })).sort((a, b) => b.w - a.w);
+      const tps = nbs.filter(m => m.kind === 't');
+      const meta = [n.p.anthropicRel || '未分類', n.p.func].filter(Boolean).join(' · ');
+      html = `${close}<div class="pnet__sheet-kicker">${esc(meta)}</div>
+        <h3 class="pnet__sheet-title">${esc(n.name)}</h3>
+        ${n.p.identity ? `<p class="pnet__sheet-id">${esc(n.p.identity)}</p>` : ''}
+        <div class="pnet__sheet-h">互相引用的人（${ppl.length}）</div>
+        <ul class="pnet__sheet-list">${ppl.map(({ m, w }) => `<li><button type="button" class="pnet__link" data-pnet-go="${esc(m.id)}">${esc(m.name)}</button><span class="pnet__sheet-note">${esc(m.p.anthropicRel || '未分類')} · ${w} 次</span></li>`).join('') || '<li class="pnet__sheet-note">沒有直接連到其他人物</li>'}</ul>
+        ${tps.length ? `<div class="pnet__sheet-h">所屬議題</div><ul class="pnet__sheet-list">${tps.map(m => `<li><button type="button" class="pnet__link" data-pnet-topic="${esc(m.tid)}">${esc(m.name)}</button></li>`).join('')}</ul>` : ''}
+        <button type="button" class="pnet__open" data-pnet-open="${esc(n.id)}" data-pnet-type="entity">進人物頁 →</button>`;
+    } else {
+      html = `${close}<div class="pnet__sheet-kicker">議題 · ${nbs.length} 位人物</div>
+        <h3 class="pnet__sheet-title">${esc(n.name)}</h3>
+        <ul class="pnet__sheet-list">${nbs.map(m => `<li><button type="button" class="pnet__link" data-pnet-go="${esc(m.id)}">${esc(m.name)}</button><span class="pnet__sheet-note">${esc(m.p.anthropicRel || '未分類')}</span></li>`).join('')}</ul>
+        <button type="button" class="pnet__open" data-pnet-open="${esc(n.tid)}" data-pnet-type="topic">進議題頁 →</button>`;
+    }
+    sheet.innerHTML = html; sheet.hidden = false; sheet.scrollTop = 0;
+    sheet.classList.toggle('pnet__sheet--l', n.x >= P.W / 2);   // 桌機抽屜讓開被選節點所在的半邊
+    if (!window.matchMedia('(min-width: 720px)').matches) sheet.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  // ── 人物詳頁（F3）：標頭三欄＋以本人為中心的關聯圖 ───────────────────────────────
+  // 人物頁判定：build 端只給人物頁 anthropicRel 這個 key（值可為 null）；有 parent 的是併回殼／封存子頁，不算。
+  const PP_REL_ORDER = ['創辦團隊', '治理', '現任', '前員工', '投資人', '同業', '外部觀察者'];
+  const PP_REL_LONG = { '創辦團隊': 'Anthropic 創辦團隊', '治理': 'Anthropic 治理層', '現任': 'Anthropic 現任', '前員工': 'Anthropic 前員工', '投資人': 'Anthropic 投資人', '同業': '同業（其他 AI 公司）', '外部觀察者': '外部觀察者' };
+  const PP_REL_SHORT = { '創辦團隊': '創辦', '治理': '治理', '現任': '現任', '前員工': '前員工', '投資人': '投資人', '同業': '同業', '外部觀察者': '外部' };
+  const ppRelRank = r => { const i = PP_REL_ORDER.indexOf(r); return i < 0 ? 99 : i; };
+  const ppRelLong = r => (r ? (PP_REL_LONG[r] || r) : '');
+  const ppRelShort = r => (r ? (PP_REL_SHORT[r] || r) : '未分類');
+  function isPersonPage(item) {
+    return !!item && Object.prototype.hasOwnProperty.call(item, 'anthropicRel') && !item.parent;
+  }
+  const ppIsPerson = n => !!n && Object.prototype.hasOwnProperty.call(n, 'anthropicRel') && !n.parent;
+
+  // 標頭：名字下方三欄（身分／與 Anthropic／職能）＋一句為何追蹤；任一欄 null 就不顯示該欄
+  function personHeadHtml(item) {
+    const rows = [];
+    if (item.identity) {
+      const auto = item.identitySource === 'index' ? '<span class="pp-fields__auto">自動擷取</span>' : '';
+      rows.push(['身分', `<span class="pp-fields__v pp-fields__v--id">${esc(item.identity)}${auto}</span>`]);
+    }
+    if (item.anthropicRel) rows.push(['與 Anthropic', `<span class="pp-fields__v">${esc(ppRelLong(item.anthropicRel))}</span>`]);
+    if (item.func) rows.push(['職能', `<span class="pp-fields__v">${esc(item.func)}</span>`]);
+    if (item.why) rows.push(['為何追蹤', `<span class="pp-fields__v pp-fields__v--why">${esc(item.why)}</span>`]);
+    const fields = rows.length
+      ? `<div class="pp-fields">${rows.map(r => `<div class="pp-fields__row"><span class="pp-fields__k">${r[0]}</span>${r[1]}</div>`).join('')}</div>`
+      : '';
+    const meta = [];
+    if (item.firstSeen)   meta.push(`<span>首次出現<b>${esc(item.firstSeen)}</b></span>`);
+    if (item.lastUpdated) meta.push(`<span>最後更新<b>${esc(item.lastUpdated)}</b></span>`);
+    return fields + (meta.length ? `<div class="pp-meta">${meta.join('')}</div>` : '');
+  }
+
+  // graph.json 鄰接索引（只建一次）：body 邊數按無向配對加總
+  function ppIndex(data) {
+    if (data._pp) return data._pp;
+    const N = new Map(data.nodes.map(n => [n.id, n])), nb = new Map(), body = new Map();
+    const add = (a, b) => { if (!nb.has(a)) nb.set(a, new Set()); nb.get(a).add(b); };
+    data.edges.forEach(e => {
+      if (!N.has(e.s) || !N.has(e.d)) return;
+      add(e.s, e.d); add(e.d, e.s);
+      const k = e.s < e.d ? e.s + '|' + e.d : e.d + '|' + e.s;
+      body.set(k, (body.get(k) || 0) + (e.body || 0));
+    });
+    const visible = id => { const n = N.get(id); return !!n && !n.parent && !id.startsWith('news'); };
+    data._pp = { N, nb, body, visible };
+    return data._pp;
+  }
+  // 一跳鄰居：人物（互相引用 N 處／都談到 X）＋非人物議題（只做圖下標籤）
+  function ppNeighbors(ix, p) {
+    const people = [], chips = [];
+    const mine = ix.nb.get(p) || new Set();
+    [...mine].sort().forEach(q => {
+      if (q === p || !ix.visible(q)) return;
+      const nq = ix.N.get(q);
+      if (ppIsPerson(nq)) {
+        const common = [...mine].filter(x => (ix.nb.get(q) || new Set()).has(x) && ix.visible(x));
+        const spec = (a, b) => (ix.N.get(a).inBody || 0) - (ix.N.get(b).inBody || 0);   // 最具體的（被引用少的）先列，不列樞紐
+        const shared = common.filter(x => !ppIsPerson(ix.N.get(x)) && !['overview', 'log', 'index'].includes(x)).sort(spec).slice(0, 3).map(x => ix.N.get(x).name);
+        const sharedP = common.filter(x => ppIsPerson(ix.N.get(x))).slice(0, 3).map(x => ix.N.get(x).name);
+        people.push({ id: q, direct: ix.body.get(p < q ? p + '|' + q : q + '|' + p) || 0, shared, sharedP });
+      } else if (!['overview', 'log', 'index'].includes(q)) {
+        chips.push({ id: q, name: nq.name, pageType: nq.pageType });
+      }
+    });
+    people.sort((a, b) => ppRelRank(ix.N.get(a.id).anthropicRel) - ppRelRank(ix.N.get(b.id).anthropicRel) || b.direct - a.direct || ix.N.get(a.id).name.localeCompare(ix.N.get(b.id).name));
+    return { people, chips };
+  }
+  function ppReason(nb) {
+    const bits = [];
+    if (nb.direct) bits.push(`互相引用 ${nb.direct} 處`);
+    if (nb.shared.length) bits.push(`都談到 ${nb.shared.join('、')}`);
+    else if (nb.sharedP.length) bits.push(`都連到 ${nb.sharedP.join('、')}`);
+    if (!bits.length) bits.push('只在「相關議題」互列');
+    return bits.join(' · ');
+  }
+  // 字寬估算（中文 14、拉丁 7.8），名字太長時只在空白處換行，不截斷
+  const ppTw = s => [...s].reduce((w, ch) => w + (/[⺀-鿿＀-￯]/.test(ch) ? 14 : 7.8), 0);
+  function ppWrapName(name, avail) {
+    if (ppTw(name) <= avail || !name.includes(' ')) return [name];
+    const lines = []; let cur = '';
+    name.split(' ').forEach(w => { const t = cur ? cur + ' ' + w : w; if (ppTw(t) <= avail || !cur) cur = t; else { lines.push(cur); cur = w; } });
+    if (cur) lines.push(cur);
+    return lines;
+  }
+  // 固定規則排位（不模擬力學、不用 d3）：依「與 Anthropic」分扇區，從正上方順時針，組間留 0.6 格空隙
+  function ppSvg(ix, center, people, W) {
+    const n = people.length, mobile = W < 520, N = ix.N, me = N.get(center);
+    const rx = mobile ? Math.min(78, W * 0.22) : Math.min(210, W * 0.27);
+    const ry = n <= 2 ? 70 : Math.min(mobile ? 175 : 150, 40 + n * (mobile ? 12 : 9));
+    const H = Math.round(2 * ry + 84), cx = W / 2, cy = H / 2 + 4;
+    const groups = [];
+    people.forEach(nb => { const r = N.get(nb.id).anthropicRel || null; const g = groups[groups.length - 1]; if (g && g.rel === r) g.items.push(nb); else groups.push({ rel: r, items: [nb] }); });
+    const GAP = groups.length > 1 ? 0.6 : 0, slots = n + GAP * groups.length, unit = 2 * Math.PI / Math.max(slots, 1);
+    let a = -Math.PI / 2 - (groups.length > 1 ? GAP * unit / 2 : unit / 2) + (n === 1 ? Math.PI / 2 : 0);
+    let s = `<svg class="pp-rel__svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(me.name)} 的一跳人物關聯">`;
+    const placed = []; let sec = '';
+    const meW = ppTw(me.name) * 15 / 14 + 8;
+    const boxes = [[cx - meW / 2, cy + 12, cx + meW / 2, cy + 36], [cx - 14, cy - 14, cx + 14, cy + 14]];
+    groups.forEach(g => {
+      const a0 = a; a += GAP * unit / 2;
+      g.items.forEach(nb => { placed.push({ nb, t: a + unit / 2 }); a += unit; });
+      a += GAP * unit / 2;
+      if (groups.length > 1) {
+        s += `<line class="pp-rel__spoke" x1="${(cx + rx * .32 * Math.cos(a0)).toFixed(1)}" y1="${(cy + ry * .32 * Math.sin(a0)).toFixed(1)}" x2="${(cx + rx * 1.12 * Math.cos(a0)).toFixed(1)}" y2="${(cy + ry * 1.12 * Math.sin(a0)).toFixed(1)}"/>`;
+      }
+      const mid = (a0 + a) / 2, lab = ppRelShort(g.rel);
+      const sx = cx + rx * .62 * Math.cos(mid), sy = cy + ry * .62 * Math.sin(mid) + 4, bw = ppTw(lab) * 13 / 14 + 6;
+      const box = [sx - bw / 2, sy - 13, sx + bw / 2, sy + 4];
+      // 扇區字互撞或撞到中心名字就不畫（關係仍寫在圖下清單）
+      if (n > 2 && !boxes.some(b => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) {
+        boxes.push(box); sec += `<text class="pp-rel__sector" x="${sx.toFixed(1)}" y="${sy.toFixed(1)}" text-anchor="middle">${esc(lab)}</text>`;
+      }
+    });
+    placed.forEach(({ nb, t }) => {
+      const x = cx + rx * Math.cos(t), y = cy + ry * Math.sin(t), w = 1 + Math.min(nb.direct, 8) * 0.45;
+      s += `<line class="pp-rel__edge ${nb.direct ? '' : 'pp-rel__edge--weak'}" data-e="${esc(nb.id)}" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke-width="${w.toFixed(2)}"><title>${esc(ppReason(nb))}</title></line>`;
+    });
+    s += sec;
+    placed.forEach(({ nb, t }) => {
+      const p = N.get(nb.id), x = cx + rx * Math.cos(t), y = cy + ry * Math.sin(t), r = 5 + Math.min(Math.sqrt(p.inBody || 0) * 1.3, 7);
+      const cs = Math.cos(t), sn = Math.sin(t);
+      let anchor, lx, ly, avail;
+      if (cs > 0.28) { anchor = 'start'; lx = x + r + 6; avail = W - lx - 6; }
+      else if (cs < -0.28) { anchor = 'end'; lx = x - r - 6; avail = lx - 6; }
+      else { anchor = 'middle'; lx = x; avail = Math.min(W - 12, 2 * Math.min(x, W - x) - 12); }
+      const lines = ppWrapName(p.name, avail), lh = 17;
+      if (anchor === 'middle') ly = sn < 0 ? y - r - 6 - (lines.length - 1) * lh : y + r + 15;
+      else ly = y + 5 - (lines.length - 1) * lh / 2;
+      s += `<g class="pp-rel__node" data-id="${esc(nb.id)}" tabindex="0" role="button" aria-label="${esc(p.name)}：${esc(ppReason(nb))}">
+<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}"/>
+<circle class="hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="20"/>
+<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}">${lines.map((l, i) => `<tspan x="${lx.toFixed(1)}" dy="${i ? lh : 0}">${esc(l)}</tspan>`).join('')}</text>
+<title>${esc(p.name)}｜${esc(ppReason(nb))}</title></g>`;
+    });
+    s += `<g class="pp-rel__me"><circle cx="${cx}" cy="${cy}" r="11"/><text x="${cx}" y="${cy + 30}" text-anchor="middle">${esc(me.name)}</text></g>`;
+    return s + '</svg>';
+  }
+
+  // 頁底關聯（人物頁專用，非人物頁仍走 renderMiniMap）。
+  // 窗格寬 0 時載入（預覽窗格隱藏）：不畫圖、不除以 0；寬度回來靠四道保險補畫——
+  //   ResizeObserver(host)＋IntersectionObserver(host)＋visibilitychange，再加 300ms 輪詢兜底
+  //   （隱藏時瀏覽器暫停渲染，前三者可能遲遲不觸發）。輪詢只在「首次就是 0」時跑，host 離開 DOM 即停。
+  async function renderPersonRel(id, host) {
+    if (!host) return;
+    let data;
+    try { data = await loadGraph(); } catch (e) { host.remove(); return; }
+    const ix = ppIndex(data), N = ix.N, me = N.get(id);
+    if (!me) { host.remove(); return; }
+    host.classList.add('pp-rel');
+    const st = { stack: [id], lastW: -1, timer: 0 };
+    const nbOf = c => ppNeighbors(ix, c);
+    const recs = (me.alsoSee || []).map(r => ({ r, n: N.get(r.id) })).filter(x => x.n && x.n.name);
+    const first = nbOf(id);
+    if (!first.people.length && !first.chips.length && !recs.length) { host.remove(); return; }
+
+    function draw() {
+      const center = st.stack[st.stack.length - 1], c = N.get(center), R = nbOf(center);
+      const W = Math.round(host.clientWidth || 0);
+      st.lastW = W;
+      const crumbs = st.stack.map((x, i) => i === st.stack.length - 1
+        ? `<span class="cur">${esc(N.get(x).name)}</span>`
+        : `<button type="button" data-pop="${i}">${esc(N.get(x).name)}</button>`).join('<span aria-hidden="true">›</span>');
+      const prevNb = st.stack.length > 1 ? nbOf(st.stack[st.stack.length - 2]).people.find(x => x.id === center) : null;
+      let h = `<div class="wiki__section-h">關聯<button class="map__link-btn" type="button" onclick="openMapAt('${esc(id)}')">在星圖上看 →</button></div>
+<div class="pp-rel__crumbs">${st.stack.length > 1 ? `中心：${crumbs}<button class="pp-rel__back" type="button" data-back="1">← 退回</button>` : '<span>點外圈的人可以把他換到中間</span>'}</div>`;
+      if (center !== id) {
+        const line2 = [ppRelLong(c.anthropicRel), c.func].filter(Boolean).join(' · ');
+        h += `<div class="pp-rel__card"><b>${esc(c.name)}</b>${c.identity ? `　${esc(c.identity)}` : ''}${line2 ? `<br>${esc(line2)}` : ''}
+${prevNb ? `<br><span style="color:var(--ink-3)">和 ${esc(N.get(st.stack[st.stack.length - 2]).name)}：${esc(ppReason(prevNb))}</span>` : ''}
+<br><button class="pp-rel__go" type="button" data-go="${esc(center)}">進他的人物頁 →</button></div>`;
+      }
+      if (R.people.length) {
+        h += `<div class="pp-rel__svgwrap">${W ? ppSvg(ix, center, R.people, W - 2) : '<div class="pp-rel__miss"></div>'}</div>
+<div class="pp-rel__legend"><span><i style="background:var(--ochre-9)"></i>中心</span><span><i style="background:var(--ink-3)"></i>相連人物</span><span>線越粗＝互相引用越多；虛線＝只在相關議題互列</span></div>`;
+      }
+      h += `<ul class="pp-rel__list">${R.people.map(nb => {
+        const p = N.get(nb.id), g = [ppRelLong(p.anthropicRel), p.identity].filter(Boolean).join(' · ');
+        return `<li data-id="${esc(nb.id)}" tabindex="0"><span class="n">${esc(p.name)}</span><span class="r">${esc(ppReason(nb))}</span>${g ? `<span class="g">${esc(g)}</span>` : ''}</li>`;
+      }).join('') || '<li style="cursor:default"><span class="r">沒有直接相連的人物</span></li>'}</ul>
+${R.chips.length ? `<div class="pp-rel__chips"><span class="lbl">相關議題與產品</span>${R.chips.map(x => `<span class="pp-rel__chip">${esc(x.name)}</span>`).join('')}</div>` : ''}`;
+      // 你可能也想看：跟著頁面本人，不跟著關聯中心。人物卡主文寫身分句，非人物卡維持「那頁最新一句＋日期」
+      if (recs.length) {
+        const kb = Object.fromEntries(buildKbList().map(i => [i.id, i]));
+        const plain = s => String(s || '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/[*`]/g, '');
+        h += `<div class="wiki__section-h" style="margin-top:22px">你可能也想看</div><div class="alsosee">${recs.map(({ r, n }) => {
+          const person = ppIsPerson(n), k = kb[r.id] || {};
+          const gist = person ? (n.identity || '') : plain(k.latestHeadline || k.summary);
+          const date = person ? '' : (k.lastNewsUpdate || n.lastNewsUpdate || '');
+          const shared = (r.shared || []).map(x => (N.get(x) || {}).name || x).join('、');
+          return `<button type="button" class="alsosee__card" data-go="${esc(r.id)}" data-type="${esc(n.pageType)}">
+  <span class="alsosee__name">${esc(n.name)}</span>
+  ${gist ? `<span class="alsosee__gist">${esc(gist)}</span>` : ''}
+  <span class="alsosee__why">${date ? `<span class="alsosee__date">${esc(date)}</span>` : ''}${r.direct ? `與本頁互相引用 ${r.direct} 處` : shared ? `都談到 ${esc(shared)}` : ''}</span>
+</button>`;
+        }).join('')}</div>`;
+      }
+      host.innerHTML = h;
+    }
+
+    // 寬度回來（含 0 → 有寬度）才補畫；已畫過的圖在窗格再度隱藏（寬 0）時保留原樣
+    let ro = null, io = null;
+    function cleanup() { clearTimeout(st.timer); if (ro) ro.disconnect(); if (io) io.disconnect(); document.removeEventListener('visibilitychange', check); }
+    function check() {
+      if (!host.isConnected) { cleanup(); return; }
+      const W = Math.round(host.clientWidth || 0);
+      if (W && W !== st.lastW) draw();
+    }
+    if (window.ResizeObserver) { ro = new ResizeObserver(check); ro.observe(host); }
+    if (window.IntersectionObserver) { io = new IntersectionObserver(check); io.observe(host); }
+    document.addEventListener('visibilitychange', check);
+    draw();
+    if (!st.lastW) {
+      const tick = () => { if (!host.isConnected) { cleanup(); return; } check(); if (!st.lastW) st.timer = setTimeout(tick, 300); };
+      st.timer = setTimeout(tick, 300);
+    }
+
+    const hi = (pid, on) => host.querySelectorAll(`.pp-rel__node[data-id="${pid}"], .pp-rel__edge[data-e="${pid}"], .pp-rel__list li[data-id="${pid}"]`).forEach(el => el.classList.toggle('is-hi', on));
+    const recenter = pid => { if (!N.has(pid) || pid === st.stack[st.stack.length - 1]) return; st.stack.push(pid); draw(); };
+    host.addEventListener('click', e => {
+      const go = e.target.closest('[data-go]');
+      if (go) { e.preventDefault(); openWikiPage(go.dataset.go, go.dataset.type || 'entity'); return; }
+      const pop = e.target.closest('[data-pop]');
+      if (pop) { st.stack = st.stack.slice(0, +pop.dataset.pop + 1); draw(); return; }
+      if (e.target.closest('[data-back]')) { st.stack.pop(); draw(); return; }
+      const node = e.target.closest('.pp-rel__node, .pp-rel__list li[data-id]');
+      if (node) recenter(node.dataset.id);
+    });
+    host.addEventListener('keydown', e => {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.pp-rel__node, .pp-rel__list li[data-id]')) { e.preventDefault(); recenter(e.target.dataset.id); }
+    });
+    ['mouseover', 'mouseout', 'focusin', 'focusout'].forEach(t => host.addEventListener(t, e => {
+      const el = e.target.closest && e.target.closest('.pp-rel__node, .pp-rel__list li[data-id]');
+      if (el) hi(el.dataset.id, t === 'mouseover' || t === 'focusin');
+    }));
+  }
 
   // ── 詳頁小星圖：這頁＋一跳鄰居，點鄰居直接跳頁 ─────────────────────────────
   async function renderMiniMap(id, host) {
