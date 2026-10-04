@@ -4825,7 +4825,7 @@ window.WIKI_DATA = {
     {
       "id": "2026-W40",
       "name": "CLAUDE NEWS 週報 · 2026-W40",
-      "preview": "最要緊的兩件事：選了穩定版的人切到 latest；用 Pro 或 Max 訂閱的人檢查 shell 裡有沒有殘留 `ANTHROPIC_API_KEY`。其餘要做的事收在第二節最後。本期兩篇專文，開發實務講上面第一件，財經講一份外流文件裡哪些數字是新的，各約兩分鐘。"
+      "preview": "原生安裝會自動更新到最新版，但照官方文件用 Homebrew、apt、dnf、apk 裝的預設跟的是晚一週的穩定版，而且不會自己更新。打一次 `claude --version`，和本週版本段的 2.1.289 比一比。另一件便宜的事：用 Pro 或 Max 訂閱的人檢查 shell 裡有沒有殘留 `ANTHROPIC"
     },
     {
       "id": "2026-W39",
