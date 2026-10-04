@@ -1,6 +1,6 @@
 {
- "version": "2.1.288",
- "checked": "2026-10-03",
+ "version": "2.1.289",
+ "checked": "2026-10-04",
  "flags": [
   "CLAUDE_CODE_3P_PROBE_WROTE_HAIKU_DEFAULT",
   "CLAUDE_CODE_3P_PROBE_WROTE_OPUS_DEFAULT",
