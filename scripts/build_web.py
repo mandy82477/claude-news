@@ -135,7 +135,21 @@ META_RE = {
     "lastNewsUpdate": re.compile(r"\*\*最後新聞更新[：:]\*\*\s*(.+)"),
     "updateFreq":     re.compile(r"\*\*更新頻率[：:]\*\*\s*(.+)"),
     "parent":         re.compile(r"\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)\]\]"),  # 子故事階層（2026-09-03）
+    # 人物頁標頭四欄（只對 類型＝person 有意義；其他頁型 parse_wiki 會把這四個 key 移除、輸出端不帶）
+    "identity":     re.compile(r"\*\*身分[：:]\*\*\s*(.+)"),
+    "anthropicRel": re.compile(r"\*\*與 ?Anthropic[：:]\*\*\s*(.+)"),
+    "func":         re.compile(r"\*\*職能[：:]\*\*\s*(.+)"),
+    "why":          re.compile(r"\*\*為何追蹤[：:]\*\*\s*(.+)"),
 }
+
+PERSON_FIELDS = ("identity", "anthropicRel", "func", "why")
+
+# 人物頁列舉（字面值契約）。不在內 → null＋WARN，不 fail build
+VALID_ANTHROPIC_RELS = ("創辦團隊", "治理", "現任", "前員工", "投資人", "同業", "外部觀察者")
+VALID_PERSON_FUNCS = ("經營者", "研究者", "工程產品", "政策治理", "投資人", "評論媒體", "其他")
+
+_IDENTITY_CUT_RE = re.compile(r"[，；。（(]|\s*↳")
+_INDEX_ROW_RE = re.compile(r"^\|\s*\[\[(?:[^\]|]*/)?([^\]|/]+)\]\]\s*\|(.*)\|\s*$")
 
 SUMMARY_HEADERS = ["## 現況", "## 摘要"]
 
@@ -154,6 +168,35 @@ def readable_inline(text: str) -> str:
     text = re.sub(r'\[\[([^\]]+)\]\]', lambda m: m.group(1).split('/')[-1], text)
     text = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', text)
     return text
+
+
+def identity_from_index_desc(desc: str) -> str:
+    """index.md 描述欄 → 人物身分句：去 wikilink 語法後，在第一個 ，；。（( 之前切
+    （另在「↳ 子故事」前切，那是階層註記不是身分）。"""
+    text = readable_inline(desc or "").strip()
+    return _IDENTITY_CUT_RE.split(text, maxsplit=1)[0].strip()
+
+
+_INDEX_DESC_CACHE: dict | None = None
+
+
+def index_descriptions() -> dict:
+    """slug → wiki/index.md 該列描述欄（第五欄；描述內若含 | 則併回）。"""
+    global _INDEX_DESC_CACHE
+    if _INDEX_DESC_CACHE is None:
+        out: dict[str, str] = {}
+        try:
+            for line in (WIKI_DIR / "index.md").read_text(encoding="utf-8-sig").splitlines():
+                m = _INDEX_ROW_RE.match(line.rstrip("\r"))
+                if not m:
+                    continue
+                cells = [c.strip() for c in m.group(2).split("|")]
+                if len(cells) >= 4:
+                    out.setdefault(m.group(1), "|".join(cells[3:]).strip())
+        except OSError:
+            pass
+        _INDEX_DESC_CACHE = out
+    return _INDEX_DESC_CACHE
 
 
 def latest_headline(raw: str) -> str:
@@ -979,6 +1022,28 @@ def parse_wiki(f: Path, page_type: str) -> dict:
     else:
         meta["pageRole"] = "child" if meta["parent"] else ""
 
+    # ── 人物頁新欄位：只給 類型＝person；其餘頁型把 key 拿掉（輸出端不帶，非 null）──
+    if meta["entityType"].strip().lower().startswith("person"):
+        rel, fn = meta.get("anthropicRel") or None, meta.get("func") or None
+        if rel is not None and rel not in VALID_ANTHROPIC_RELS:
+            print(f"  WARN: {page_type}/{f.name} 「與 Anthropic」值不在七選一內：{rel!r}（改為 null）")
+            rel = None
+        if fn is not None and fn not in VALID_PERSON_FUNCS:
+            print(f"  WARN: {page_type}/{f.name} 「職能」值不在七選一內：{fn!r}（改為 null）")
+            fn = None
+        meta["anthropicRel"], meta["func"] = rel, fn
+        meta["why"] = meta.get("why") or None
+        ident = meta.get("identity") or None
+        if ident:
+            meta["identitySource"] = "page"
+        else:
+            ident = identity_from_index_desc(index_descriptions().get(entity_id, "")) or None
+            meta["identitySource"] = "index" if ident else None
+        meta["identity"] = ident
+    else:
+        for k in PERSON_FIELDS:
+            meta.pop(k, None)
+
     # ── 防呆：缺少領域欄位、或領域值不在六個標準值內 ──────────────────────────
     if not meta["domain"]:
         print(f"  WARN: {page_type}/{f.name} 缺少「領域」欄位")
@@ -1638,9 +1703,12 @@ def build():
                     _days = (_today - datetime.strptime(_lnu[:10], "%Y-%m-%d").date()).days
                 except ValueError:
                     _days = None
-            _nodes.append({"id": _pid, "slug": _slug, "name": _name, "domain": _dom, "tags": _tags,
-                           "pageType": _ptype, "daysSinceNews": _days, "parent": _parent,
-                           "lines": sum(1 for _ in _f.open(encoding="utf-8-sig"))})
+            _node = {"id": _pid, "slug": _slug, "name": _name, "domain": _dom, "tags": _tags,
+                     "pageType": _ptype, "daysSinceNews": _days, "parent": _parent,
+                     "lines": sum(1 for _ in _f.open(encoding="utf-8-sig"))}
+            if _it and "identity" in _it:  # 人物節點（類型＝person）才帶；地圖人物關係網／關聯圖用
+                _node.update({k: _it[k] for k in ("identity", "identitySource", "anthropicRel", "func")})
+            _nodes.append(_node)
         for _l in _links:
             if _l.src == _l.dst:
                 continue

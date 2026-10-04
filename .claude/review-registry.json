@@ -1543,6 +1543,21 @@
       "_note": "2026-09-13 丙-2 加入。使用者：「日報我還是想要本日聚焦和重點話題」。daily/ 檔為 Obsidian 讀者搬入這兩節；網站上兩節資料仍取自 news/ 解析（focus 帶標籤與 ref_urls），只是 ⭐ 改用 readerTopStories 剔掉聚焦已講過的。格式閘若不認得這兩節會把整份檔判成「不在六領域內」。"
     },
     {
+      "name": "人物頁標頭列舉（記者規則 <-> 建置端）：page-templates.md「人物頁（類型 person）」的「與 Anthropic」「職能」七選一字面值，必須與 build_web.py 的 VALID_ANTHROPIC_RELS／VALID_PERSON_FUNCS 一致（只改一側，記者寫的值會被網站當成沒填，人物落進「未分類」）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/reporter-rules/page-templates.md",
+        "scripts/build_web.py"
+      ],
+      "patterns": [
+        "創辦團隊.{1,4}治理.{1,4}現任.{1,4}前員工.{1,4}投資人.{1,4}同業.{1,4}外部觀察者",
+        "經營者.{1,4}研究者.{1,4}工程產品.{1,4}政策治理.{1,4}投資人.{1,4}評論媒體.{1,4}其他",
+        "VALID_ANTHROPIC_RELS",
+        "VALID_PERSON_FUNCS"
+      ],
+      "_note": "2026-10-04 加入（人物頁改版）。使用者裁決：扇區由「本站角色」改為「職能」，分類不得帶支持／反對立場。"
+    },
+    {
       "name": "頁頂 callout 首行形狀（記者規則 <-> 讀者版產出端 <-> 解析端 <-> 格式閘 <-> 階層檢查）：`> **標籤**（YYYY-MM-DD）` 是四支腳本共同 regex 的形狀，記者規則改外殼而腳本沒跟，該頁永遠進不了讀者版",
       "assertion": "all_contain",
       "files": [
