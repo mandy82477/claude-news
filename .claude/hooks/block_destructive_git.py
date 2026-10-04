@@ -97,8 +97,11 @@ def violation(command: str, is_shared_subagent: bool = False) -> str | None:
             if g.args[:1] and g.args[0] in ("list", "show"):
                 continue
             return "`git stash` 會把整個工作區的未 commit 改動收走。" + WHY_SHARED
-        if sub == "reset" and g.has_flag("--hard", "--merge", "--keep"):
+        if sub == "reset" and g.has_flag("--hard"):
             return "`git reset --hard` 丟棄整個工作區的未 commit 改動。" + WHY_SHARED
+        if sub == "reset" and g.has_flag("--merge", "--keep"):
+            # --keep／--merge 不會丟未 commit 的改動，擋的理由是分支整個被移走（2026-10-04 訊息誤寫成 --hard）
+            return "`git reset --keep`／`--merge` 會把目前分支移到另一個 commit，同一工作樹上的其他 session 會連帶換了 HEAD。" + WHY_SHARED
         if sub == "clean" and not g.has_flag("-n", "--dry-run"):
             return "`git clean` 永久刪除未追蹤檔（含別人剛建的新檔）。" + WHY_SHARED
         if sub in ("checkout", "restore"):
