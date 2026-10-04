@@ -7267,3 +7267,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - [[entities/dario-amodei]] 新增「公開批評者對照」（六人）；[[entities/yann-lecun]]、[[entities/sridhar-vembu]]、[[entities/joe-lonsdale]] 撤「僅標題可用」補原文（LeCun 以 Fortune 原文逐句核對，「worst marketing campaign」只見 TNW 轉述）；[[entities/jensen-huang]] 09-28「odd」補原話、09-29 白宮午宴與 WSJ 報導合併為同一場；index 四列鉤子同步
 - page-templates：非人物頁 H1 下加一句「這是什麼」、蒐集邊界移到欄位最後（10 頁搬位）；[[entities/fable-5]] 補第一句
 - 歸因 user-query／人物
+
+## 2026-10-04 Query（使用者：W40 開發實務專文重選題）
+
+- 使用者問「為什麼開發實務是選 stable」：原題與頭條（套件管理器安裝跟穩定版、不自動更新）同一條線，且中招條件窄（需 bypassPermissions＋`bash -c` 包 `rm`）。開發實務記者重選題為「Claude Code 的 Sonnet 換成 5.5，長任務可能做到一半就停下來問你」
+- 主編官方查證（10-04）：Claude Code 模型設定文件載明 Sonnet 5.5 在 Claude Code 預設 effort 為 medium（API 為 high）——記者原稿推論「互動模式預設 high、可以不急」不成立，已改寫；提示指南確認 low 時「有時」會沒跑檢查就回報完成、low／medium 長任務易中途停下、「做完就停」省約三分之一是在 max 測得；遷移指南確認 Sonnet 5 → 5.5 的變更多半回 400，唯一不報錯的是工具呼叫之間的文字改放 thinking 區塊
+- 週報同步：頭條收尾、本週版本（保留 stable 缺 2.1.288 修正一句）、深挖導言、討論綜述 Sonnet 條、本週要動的事（刪 stable 兩條改一條、新增 Sonnet 5.5 無人值守一條）、素材涵蓋窗
