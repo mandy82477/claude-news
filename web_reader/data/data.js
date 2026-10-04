@@ -1027,8 +1027,7 @@ window.WIKI_DATA = {
       "latestHeadline": "anthropic-sdk-python v1.6.0 再擴充 auto mode 工具權限功能，原文截斷、範圍未知（見 Release）",
       "pageRole": "child",
       "readerDomains": [
-        "🛠️ 工具/功能",
-        "💻 開發實務"
+        "🛠️ 工具/功能"
       ]
     },
     {
@@ -1736,7 +1735,8 @@ window.WIKI_DATA = {
       "latestHeadline": "建頁，選型表與積木架構自 managed-agents 移入並增補；查證來源：workflows、cross-session messaging、agents 總覽。",
       "pageRole": "",
       "readerDomains": [
-        "🛠️ 工具/功能"
+        "🛠️ 工具/功能",
+        "💻 開發實務"
       ]
     },
     {
@@ -3732,7 +3732,7 @@ window.WIKI_DATA = {
       "skill-interest-watch",
       "community-tech-tools",
       "community-large-codebase-workflow",
-      "managed-agents"
+      "anthropic-agent-stack"
     ]
   },
   "digestIndex": [

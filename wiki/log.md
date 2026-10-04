@@ -7283,3 +7283,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 使用者問「Boris 不是（創辦團隊）嗎」：Boris Cherny 是 Claude Code 的打造者，不是 Anthropic 共同創辦人，「與 Anthropic」維持 現任。[[entities/boris-cherny]] 身分與 index 鉤子由「Claude Code 創始人」改為「Claude Code 的打造者與負責人」，避免誤讀成公司創辦人
 - 推翻 2026-09-06 併頁裁決（使用者）：[[entities/chris-olah]]、[[entities/tom-brown]]、[[entities/chris-ciauri]] 由轉址殼轉回完整人物頁（以併頁前 a2e16168 原文為底套新人物頁格式，領域改 👤 人物，Olah／Brown 為創辦團隊、Ciauri 為現任）；事件經過的家仍是 [[topics/anthropic-government-policy]]，人物表三列改回 wikilink；index 補回三列
 - [[entities/mythos-archive]] 更正：TechCrunch 稱 Tom Brown 為 chief compute officer 是現職，原寫「非聯合創辦人」不實（他同時是共同創辦人）
+
+## 2026-10-04 Query（使用者：agent 積木頁該不該搬到開發實務）
+
+- 使用者問 [[topics/anthropic-agent-stack]] 是否該從功能領域移到開發實務：**領域不搬**——同日手冊移交時已評估不搬（該頁只收官方原句，餵料是每日功能新聞，開發實務記者不收這類條目）
+- 查到的真問題：網站 💻 開發實務 tab 掛在子頁 [[entities/managed-agents]] 而非母頁。根因：09-09 掛標籤時 managed-agents 還是 agent 選型頁，09-10 選型內容升格到母頁、子頁降為只收產品事實與計費，`data/reader-tags.json` 名單沒跟著換，造成 index 開發實務入口指向母頁「你該用哪個」、tab 卻沒有母頁
+- 使用者裁決：標籤由 managed-agents 換成 anthropic-agent-stack；`src/tests/test_reader_tags.py` 名單同步並把 managed-agents 列入不列清單防回流；網站重建。歸因 slug `user-query`

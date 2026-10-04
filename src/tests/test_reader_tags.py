@@ -83,6 +83,7 @@ class TestDecidedExclusions(unittest.TestCase):
         "pricing": "答的是「要花多少」，不是「怎麼做」",
         "ai-agent-safety": "答的是「有什麼風險」，不是「怎麼做」",
         "anthropic-government-policy": "答的是「管制怎麼走」，不是「怎麼做」",
+        "managed-agents": "2026-09-10 起只收代管平台產品事實與計費（答「要花多少」）；agent 選型已升格到母頁 anthropic-agent-stack",
     }
 
     HOW_TO_PAGES = {
@@ -90,11 +91,11 @@ class TestDecidedExclusions(unittest.TestCase):
         "skill-interest-watch",
         "community-tech-tools",  # 2026-09-23 使用者裁決：撤回 09-03「tools 退出 tab」，「卡住了先裝什麼」的家
         "community-large-codebase-workflow",
-        "managed-agents",
+        "anthropic-agent-stack",  # 2026-10-04 使用者裁決：「agent 該用哪種形態跑」的家，取代 09-10 降為子頁的 managed-agents
     }
 
     def test_decided_exclusions_stay_out(self):
-        """2026-09-09 使用者裁決不列的十五頁，不得悄悄回到名單。"""
+        """2026-09-09 使用者裁決不列的十五頁（＋10-04 managed-agents），不得悄悄回到名單。"""
         pages = _cfg()["tags"]["💻 開發實務"]["pages"]
         for slug, why in self.EXCLUDED.items():
             self.assertNotIn(slug, pages, f"{slug} 不算開發實務：{why}")
