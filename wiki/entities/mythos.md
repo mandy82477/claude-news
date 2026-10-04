@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：Anthropic 官方研究在內部 Binary Exploitation 基準隨機抽測的 100 項任務中，中國智譜（Zhipu）GLM-5.3 達成完整控制流劫持的比例為 4%，低於 Claude Mythos Preview 同測試的 6%，但研究明確指出「已清楚跨越一道有意義的門檻」——更早的模型如 Claude Opus 4.6、GLM-5.2 皆完全無法做到；顯示高階網路攻擊能力正擴散至 Anthropic 以外的模型。完整經過見下方「時序」09-29 條目，政策與擴散風險分析見 [[topics/anthropic-government-policy]]（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
+**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：官方研究測得 GLM-5.3 完整控制流劫持 4%、Mythos Preview 同測 6%，Opus 4.6、GLM-5.2 做不到——Mythos 的網攻能力領先幅度正在縮小。量測方法、擴散脈絡與防護見 [[topics/ai-agent-safety#模型網攻能力與防護]]（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
 
 **2026-09-01（Mythos 5.1 發布，仍限信任機構存取）**：Anthropic 正式發布 Claude Mythos 5.1，與同日發布的 Claude Fable 5.1 為**同一模型的不同防護層級**——Mythos 5.1 護欄「專為資安與生命科學工作設計」，維持僅開放信任機構存取，並非全面公開；新增反萃取（anti-distillation）機制。此舉為 2026-07-25 Mashable 標題「Claude Mythos, or a model like it, to get public release」傳聞的**部分證實**：版本確實推出新一代，但存取模式未變為公開，與該標題字面暗示的「公開發布」有落差（詳見下方「時序」07-25 條目）；能力評測、System Card 與定價變動等細節見 [[entities/fable-5]]（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）。
 
@@ -135,13 +135,9 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 解禁後（2026-06-27 起）
 
 #### 2026-09-29
-**Anthropic Frontier Red Team：GLM-5.3 跨越完整控制流劫持門檻，顯示網路攻擊能力正外溢至其他實驗室**：
-- Anthropic 官方研究在內部 Binary Exploitation 基準隨機抽測的 100 項任務中，中國智譜（Zhipu）GLM-5.3 達成完整控制流劫持（full control flow hijack）比例為 4%，Claude Mythos Preview 同測試為 6%（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）
-- 研究指出「GLM-5.3 分數雖低於 Mythos Preview，但已清楚跨越一道有意義的門檻」——更早的模型如 Claude Opus 4.6、GLM-5.2 皆完全無法達成完整控制流劫持
-- Simon Willison 同日轉述並引用原文數字，未附加其他分析（[Simon Willison](https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/)，2026-09-29）
-- 南華早報（SCMP）09-30 跟進報導此研究，聚焦「Anthropic 對中國 GLM-5.3 駭客能力提出警示」角度；RSS 原文無可讀內文，僅標題可判讀，細節以官方研究為準（Google News/SCMP，2026-09-30）
-- Hacker News 累計 239 分、4 個來源同日跟進，互動量中高
-- **模型面意義**：這是首度有官方測試證實非 Anthropic 模型跨越「完整控制流劫持」這條能力門檻，Mythos Preview 的能力領先幅度正在縮小；政策與擴散風險的完整分析見 [[topics/anthropic-government-policy]]
+**Anthropic Frontier Red Team：GLM-5.3 跨越完整控制流劫持門檻**：
+- GLM-5.3 4% 對 Mythos Preview 6%（100 題 Binary Exploitation 抽樣）；首度有官方測試證實非 Anthropic 模型跨過這條門檻（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29；Simon Willison 同日轉述、SCMP 09-30 跟進，HN 239 分）
+- 事件全貌與擴散脈絡的家在 [[topics/ai-agent-safety#模型網攻能力與防護]]，政策面見 [[topics/anthropic-government-policy]]
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：

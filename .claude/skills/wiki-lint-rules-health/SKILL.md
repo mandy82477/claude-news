@@ -8,9 +8,9 @@ disable-model-invocation: true
 
 由 `.claude/skills/wiki-lint/SKILL.md` 帶起。**這一段檢查的是規則本身，不是 wiki 內容。**
 
-開工前讀取 `wiki/CLAUDE.md`、`.claude/skills/wiki-ingest/references/classification.md`、`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/shared.md`，以及 **`/wiki-lint` 自己的五個 skill 檔**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 與本檔），依序執行下列各項。
+開工前讀取 `wiki/CLAUDE.md`、`.claude/skills/wiki-ingest/references/classification.md`、`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/shared.md`，以及 **`/wiki-lint` 自己的五個 skill 檔與五個 references**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md`、本檔；`.claude/skills/wiki-lint/references/log-format.md`、`.claude/skills/wiki-lint-reporters/references/dispatch.md`、`.claude/skills/wiki-lint-sweeps/references/sweeps.md`、`.claude/skills/wiki-lint-rules-health/references/adversarial.md`、`.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md`），依序執行下列各項。
 
-> `/wiki-lint` 自己的 skill 檔必須在掃描範圍內：**檢查者把自己排除在檢查範圍外，是這類缺陷的共同形狀。**（沿革檔 2026-08-28 D）
+> `/wiki-lint` 自己的 skill 檔必須在掃描範圍內：**檢查者把自己排除在檢查範圍外，是這類缺陷的共同形狀。** 判準本體多住 references，只掃 SKILL.md 等於只看目錄。（沿革檔 2026-08-28 D）
 
 各項回報行原樣填進步驟 8 的 lint 紀錄（模板見 `.claude/skills/wiki-lint/references/log-format.md`）。
 
@@ -185,7 +185,7 @@ python scripts/lint_health.py hits report     # 各步驟連續零命中輪數�
 
 ## 6j. 對抗輪（月度）
 
-每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/skills/wiki-lint-rules-health/references/adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。發現逐項修到「無阻擋意見」，並依該檔「收報後」登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
+每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/skills/wiki-lint-rules-health/references/adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。處置照該檔「收報後」：wiki 事實缺陷當場修；規則檔缺陷本機經使用者確認後逐項修到「無阻擋意見」、雲端只回報並附修訂文字原文；兩種環境都登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
 
 ## 6k. 連結缺口偵測（每輪）
 
@@ -232,7 +232,7 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）執行；6l 的改寫可派 agent，其餘親做。
-- **凡本節標明「向使用者確認」者（6a、6c、6d、6f、6h、6j 的規則改動）一律只回報**，寫進步驟 8 的待使用者確認區，不自行改規則檔。
+- **凡本節標明「向使用者確認」者（6a、6c、6d、6f、6h、6j 的規則改動）不自行改規則檔**：雲端只回報，寫進步驟 8 的待使用者確認區；本機當輪呈給使用者，確認後才改（6j 的修訂文字原文須隨待辦保存，見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
 - 改任何 `.claude/` 下的規則檔依 `.claude/rules/claude-md-edit.md` 流程，完成後 `python scripts/check_rules.py` 必須零 ❌。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - 驗證閘：十三行回報（6a–6l ＋漏抓帳／規則版本戳）全部有值，且本段若動過規則檔則 `check_rules.py` 綠，才算完。

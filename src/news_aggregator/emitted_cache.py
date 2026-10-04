@@ -115,7 +115,8 @@ def _reignited(score: int, entry: dict) -> bool:
 
 
 def filter_new_or_reignited(
-    items: list[FeedItem], cache: dict, today: date | None = None
+    items: list[FeedItem], cache: dict, today: date | None = None,
+    dropped: list | None = None,
 ) -> tuple[list[FeedItem], dict]:
     """Return (items to keep, updated cache — not yet saved).
 
@@ -131,6 +132,9 @@ def filter_new_or_reignited(
     - Content-keyed item from REFETCHED_SOURCES with no entry of its own but a
       confirmed bare-URL entry -> judged against that entry (module docstring).
     Every item seen refreshes last_seen on its entry, kept or dropped.
+
+    If `dropped` is a list, each dropped item is appended as
+    `(item, "emitted_cache", "<first_emitted>")` — the date it was first emitted.
     """
     today = today or date.today()
     today_str = today.isoformat()
@@ -156,6 +160,8 @@ def filter_new_or_reignited(
             if _reignited(item.score, existing):
                 emit(norm, item, existing)
             else:
+                if dropped is not None:
+                    dropped.append((item, "emitted_cache", existing.get("first_emitted", "")))
                 seen = {**existing, "last_seen": today_str}
                 if seen.get("score_at_emit") is None:
                     seen["score_at_emit"] = item.score
@@ -171,6 +177,8 @@ def filter_new_or_reignited(
         if _reignited(item.score, bare):
             emit(norm, item, bare)
         else:
+            if dropped is not None:
+                dropped.append((item, "emitted_cache", bare.get("first_emitted", "")))
             # Adopt the content key as the same, already-emitted item.
             updated_cache[norm] = {
                 "first_emitted": bare["first_emitted"],

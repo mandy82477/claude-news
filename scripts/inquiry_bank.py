@@ -54,7 +54,10 @@ BANK = [
             "**先確認該日期還在 src/gathered_archive/ 的保留窗內（14 天，見 archive_gathered.py）**"
             "——funnel 的三個數字永久保留，但逐條原料只留 14 天。落在窗外時本題只做得到數字層，"
             "回報必須寫明「原料已過保留窗，只驗數字不驗逐條」，不得當成完整通過",
-            "開當日 src/gathered_archive/ 對應檔，逐條判斷被擋條目「擋得對嗎」（對照收錄門檻，不可只看數字就結案）",
+            "開當日 src/gathered_archive/ 對應檔：先看有無 archive_schema 鍵——沒有（2026-10-04 以前的舊副本）就只存刊出條目，"
+            "回報必須寫明「該日原料無被擋記錄，只驗數字」，不得當成完整通過",
+            "有 archive_schema 時逐條看 blocked_items，依 blocked_by 分流：dedup_url／dedup_title 看 blocked_detail 指的留下條目、"
+            "emitted_cache 看首次刊出日，對得上即可；pr_wire／gnews_off_topic 是規則判斷、才可能擋錯，至少抽 3 條對照收錄門檻判「擋得對嗎」",
             "發現該收未收 → 走補跑流程並記 log；判斷模稜 → 記待辦回報使用者",
         ],
     },
@@ -128,14 +131,19 @@ BANK = [
 ]
 
 
+# 題數下限＝現有模式數（八種，見 references/inquiry.md）。加題時一併調高，
+# 否則下限落後於題數，刪掉一題自檢照樣放行（2026-10-03 對抗輪抓到 <7 對 8 題）。
+MIN_BANK_SIZE = 8
+
+
 class BankIntegrityError(RuntimeError):
     """題庫自檢失敗。刻意不吞——一支代打質疑的腳本自己壞掉還印題目，就是它要治的病。"""
 
 
 def check_integrity(bank=None) -> None:
     bank = BANK if bank is None else bank
-    if len(bank) < 7:
-        raise BankIntegrityError(f"題庫只剩 {len(bank)} 題（<7）——刪題須經使用者確認並同步七模式文件")
+    if len(bank) < MIN_BANK_SIZE:
+        raise BankIntegrityError(f"題庫只剩 {len(bank)} 題（<{MIN_BANK_SIZE}）——刪題須經使用者確認並同步模式文件")
     ids = [q["id"] for q in bank]
     if len(set(ids)) != len(ids):
         raise BankIntegrityError(f"題目 id 重複：{ids}")

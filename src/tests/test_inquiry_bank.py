@@ -1,7 +1,7 @@
 """inquiry_bank.py（質疑題庫）的回歸測試。
 
 題庫是 `/wiki-lint` 7b 的抽問來源，它的三個承諾各對應一組斷言：
-  1. 七種模式一題不少、欄位齊全（自檢會擋，這裡驗自檢本身沒被弄鈍）
+  1. 八種模式一題不少、欄位齊全（自檢會擋，這裡驗自檢本身沒被弄鈍）
   2. 抽選是程式擲骰且同週決定性——「隨機是自由心證」正是這支腳本要治的病
   3. 探針引用的檔案路徑真實存在——探針指向不存在的檔，等於題目作廢還顯示綠燈
 """
@@ -20,9 +20,14 @@ import inquiry_bank  # noqa: E402
 
 
 class TestBankIntegrity(unittest.TestCase):
-    def test_至少七題且欄位齊全(self):
+    def test_至少八題且欄位齊全(self):
         inquiry_bank.check_integrity()  # 不拋即過
-        self.assertGreaterEqual(len(inquiry_bank.BANK), 7)
+        self.assertGreaterEqual(len(inquiry_bank.BANK), inquiry_bank.MIN_BANK_SIZE)
+        self.assertEqual(inquiry_bank.MIN_BANK_SIZE, 8)
+
+    def test_少一題就被自檢擋下(self):
+        with self.assertRaises(inquiry_bank.BankIntegrityError):
+            inquiry_bank.check_integrity(inquiry_bank.BANK[:-1])
 
     def test_模式名各就各位(self):
         names = {q["name"] for q in inquiry_bank.BANK}

@@ -149,7 +149,7 @@ python scripts/ingest_metrics.py --date TARGET_DATE
 
 - 由主 session（本機）或頂層 session（雲端）執行並 foreground 派工；記者不可再呼叫 Agent tool 委派工作。
 - 繁體中文為主，英文術語保留英文。
-- 所有 wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/` 路徑下；`news/` 目錄唯讀，不可修改日報內容。
+- 所有 wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內；`news/` 目錄唯讀，不可修改日報內容。
 - `wiki/log.md`、`data/source_attribution.jsonl`、`data/pending-handoffs.jsonl` 皆為 append only，不可修改既有條目。
 - 若日報今日無新內容（來源全部失敗），在 log.md 記錄一筆「無新內容」即可。
 - **收件匣提醒**：ingest 完成後檢查 `wiki/reader-notes.md`，若有狀態 ⏳ 且距今 > 14 天的項目，在完成摘要末尾列出提醒（避免使用者「記一下」的想法積壓無人處理）；無則不提。

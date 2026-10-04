@@ -2,7 +2,7 @@
 
 週報第 (3) 段是一本可證偽預告的帳，回收發生在一週後。若回收時才憑記憶重讀七天日報，
 漏收幾乎是必然的（2026-W31 實際漏了三條）。這支腳本把偵測前移到每天：日報寫完後，
-用未結案預告判準裡的「｜查證：關鍵字」對當日內容做字串比對，命中就記一行到
+用未結案預告判準裡的查證關鍵字（新形 `<!-- 查證：… -->`、舊形 `｜查證：…`）對當日內容做字串比對，命中就記一行到
 `weekly/open-signals.jsonl`，下期 /weekly-report 直接讀這個檔。
 
 三條刻意的設計界線：
@@ -34,7 +34,8 @@ SIGNALS_PATH = WEEKLY_DIR / "open-signals.jsonl"
 RECAP_HEADER_RE = re.compile(r"^\|\s*上週預告\s*\|\s*判準\s*\|\s*本週結果\s*\|\s*$", re.MULTILINE)
 FORECAST_HEADER_RE = re.compile(r"^\|\s*類型\s*\|\s*預告\s*\|\s*判準\s*\|\s*$", re.MULTILINE)
 SEPARATOR_RE = re.compile(r"^\|[-: |]+\|$")
-PROBE_RE = re.compile(r"｜\s*查證[：:]\s*(.+?)\s*$")
+# 新立判準（W41 起）把線索藏進 HTML 註解；回收表沿用的舊判準仍是 `｜查證：`，兩形都收
+PROBE_RE = re.compile(r"(?:｜\s*查證[：:]\s*(.+?)|<!--\s*查證[：:]\s*(.+?)\s*-->)\s*$")
 OPEN_MARKS = ("⏳", "🟡", "⏰")
 
 # 日報條目：標題行為 **[標題](url)**，其後為說明句
@@ -90,7 +91,7 @@ def open_forecasts() -> tuple[str, list[dict]]:
 
     for it in items:
         m = PROBE_RE.search(it["criterion"])
-        it["probes"] = [p.strip() for p in re.split(r"[、,，]", m.group(1)) if p.strip()] if m else []
+        it["probes"] = [p.strip() for p in re.split(r"[、,，]", m.group(1) or m.group(2)) if p.strip()] if m else []
     return latest.stem, items
 
 

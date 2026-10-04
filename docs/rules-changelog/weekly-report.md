@@ -50,3 +50,7 @@
 - forecast.md：本週數字改 2–5 個讀者用得上的數字、不收本刊產製指標；回收摘要的「判錯」只指上期判斷事後被證明錯，不寫撰稿過程的改稿。
 - 看守：`check_weekly_ledger.py` `check_reader_rules()`，W39 起生效、舊期不回溯；以 W35–W38 改名回放：W35（不同題）只給共用數字提醒，W36–W38 三期頭條越界全數擋下，W38 第三節以後七個編輯台用語全抓到。STAT_MIN 3 → 2。
 - 網站：`build_web.py` 解析為 `discussion.actions`，`app.js` 在深挖後渲染 `.weekly-actions`（hairline 上下界、ochre mono 小標）；暗色、亮色、375px 三種預覽驗過，無橫向溢出，粗體壓回 500。
+
+## 2026-10-04（判準欄去內部語言：查證線索改 HTML 註解）
+
+冷讀者對抗輪判第三節判準欄的派工語（「→ 寫進 ai-agent-safety」）與 `｜查證：` 關鍵字清單是全刊最大的內部語言外洩，而該節正是週報唯一的獨家資產。forecast.md 規定判準分支只寫讀者會看到的結果、不寫 wiki 頁名；查證線索 W41 起改寫成 `<!-- 查證：… -->`（Obsidian／GitHub 不顯示，`build_web.read_md` 讀檔即剝 HTML 註解），`scan_open_forecasts.py` 與 `check_weekly_ledger.py` 新舊兩形都收（回收表逐字沿用 W40 以前判準時必然出現舊形），並從 W41 起硬擋新立判準裡的英文 slug 與 `[[…]]`。規格、契約表、兩支消費端必須同套，否則新形探針會被活性檢查靜默略過。

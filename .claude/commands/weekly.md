@@ -19,9 +19,9 @@ argument-hint: [YYYY-Wnn]
 ## 使用方式
 
 - `/weekly`：跑本週（今日所在 ISO 週）
-- `/weekly 2026-W30`：指定週次，`$ARGUMENTS` 原樣傳給 `/weekly-report`；`/wiki-weekly-review` 不吃週次參數，一律以今日為準
+- `/weekly 2026-W30`：指定週次，`$ARGUMENTS` 原樣作為步驟 1 讀 `.claude/skills/weekly-report/SKILL.md` 時的週次參數；`.claude/skills/wiki-weekly-review/SKILL.md` 不吃週次參數，一律以今日為準
 
-只想跑其中一段時，直接下該子指令（`/weekly-report` 或 `/wiki-weekly-review`），它們各自的收尾步驟會自己負責。
+兩個子 skill 都是 `disable-model-invocation`——**本指令執行時一律 Read 它們的 SKILL.md 照步驟做，不用 Skill tool 呼叫**。只想跑其中一段時，由使用者自己在對話框輸入該 slash 指令（`/weekly-report` 或 `/wiki-weekly-review`），它們各自的收尾步驟會自己負責。
 
 ---
 
@@ -58,12 +58,12 @@ argument-hint: [YYYY-Wnn]
 兩段都跑完後才執行。`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`）：
 
 0. **重掃涵蓋窗與預告探針（在 commit 之前，不可略過）**——重列一次 `news/` 目錄，與步驟 1 寫進週報檔尾的涵蓋窗比對：
-   - **有新日報**（開工後才產出者）→ 對這幾份補跑第 (3) 段所有續盯／新開條的 `｜查證：` 關鍵字 grep。命中且足以改變某列判定 → **改判該列，並在該列與檔尾標明更正緣由**；命中但不足以改判 → 檔尾註明已補掃。**選題與深挖不回頭改**（`.claude/skills/weekly-report/SKILL.md` 步驟 5 凍結原則），補掃只修正「會讓讀者被誤導的事實判定」
+   - **有新日報**（開工後才產出者）→ 對這幾份補跑第 (3) 段所有續盯／新開條的查證關鍵字（`<!-- 查證：… -->`，W40 以前為 `｜查證：…`）grep。命中且足以改變某列判定 → **改判該列，並在該列與檔尾標明更正緣由**；命中但不足以改判 → 檔尾註明已補掃。**選題與深挖不回頭改**（`.claude/skills/weekly-report/SKILL.md` 步驟 5 凍結原則），補掃只修正「會讓讀者被誤導的事實判定」
    - **無新日報** → 什麼都不做，繼續第 1 步
 1. commit 範圍與訊息（無變更則跳過）：`git -C REPO_ROOT add weekly/ wiki/ data/source_attribution.jsonl` → `git -C REPO_ROOT commit -m "weekly: YYYY-Wnn 週報＋週度延伸回顧"`；web commit 訊息用 `"web: rebuild YYYY-Wnn（週報＋週度回顧上站）"`
-2. **其餘照 `.claude/skills/web-publish/SKILL.md` 的 `Step 4`／`Step 5` 形狀做，不另寫一套**：測試閘（`run_tests.py` 失敗 → 跳過 build 與 web commit，仍推送已完成的 commit，回報標「Tests FAILED - build skipped」）、`build_web.py` → add `web_reader/` → commit、**單一 push**、push 失敗重試（`pull --rebase` 上限 2 次）
+2. **其餘照 `.claude/skills/web-publish/SKILL.md` 的 `Step 4`／`Step 5` 做，本檔不另寫一套**：build 前的閘是 `PYTHON REPO_ROOT\scripts\gate_web_build.py`（**不另外自己跑 `run_tests.py` 再判斷**），擋下時走該檔「gate 擋下時的修復迴圈」、放行後的衍生資料重算與 build、web commit、**單一 push** 與 push 失敗重試，全部以該檔為準；完成回報的 gate 欄抄 gate 輸出的最後一行摘要，不自己改寫措辭
 
-- **`pull --rebase` 若帶進新的 `news/*.md`，回第 0 步重跑補掃**——rebase 正是新日報最常進入本機的路徑（W34 病例見沿革檔 `docs/rules-changelog/weekly.md` 2026-08-22）
+- **Step 5 的 push 重試若帶進新的 `news/*.md`，回第 0 步重跑補掃**——rebase 正是新日報最常進入本機的路徑（W34 病例見沿革檔 `docs/rules-changelog/weekly.md` 2026-08-22）
 - **與排程的關係**：本指令無雲端排程。`weekly/` 不與任何排程重疊；`wiki/` 會與 `weekly-wiki-lint-cloud`（每週六 03:00 UTC（台北 11:00））及 `daily-news-pipeline-cloud`（每日 12/17/22 UTC 三班，涵蓋台北 20:00 至隔日 06:00）競爭，靠上述 push 重試化解
 
 ---
@@ -77,7 +77,7 @@ argument-hint: [YYYY-Wnn]
 - 延伸回顧：執行 N 項 / 使用者跳過 M 項
 - 聚焦校準：（月度才有，或「非本月首次，跳過」）
 - 開放迴路：需收尾 N／已跳票 M／存量遷移 K（人類質疑時效燈：✅／⚠️ N 天）
-- 收尾：涵蓋窗補掃（新日報 N 份／無）｜測試 ✅／❌｜build ✅／跳過｜push ✅
+- 收尾：涵蓋窗補掃（新日報 N 份／無）｜gate：（`gate_web_build.py` 最後一行摘要）｜build ✅／跳過｜push ✅
 ```
 
 ---

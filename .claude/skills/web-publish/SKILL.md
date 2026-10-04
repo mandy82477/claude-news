@@ -199,7 +199,7 @@ REPO_ROOT\src\logs\task_scheduler.log
 
 作法：Grep `wiki/log.md` 中 TARGET_DATE 該次 ingest 紀錄的「📋 待使用者確認」段落，逐條轉貼成一行摘要（`- [頁面/主題]：一句話問題`）。同時 Grep 前 14 天的 ingest 紀錄，**同一議題重複出現者標「⏳ 已擱置 N 天」**置頂。
 
-**另必接 Step 1b-3g 的截止日複查清單：** 若 3g（見 `.claude/skills/news-digest/SKILL.md`）有命中（已過期或 7 天內到期），逐個截止日轉成一行 `- ⏰ [YYYY-MM-DD]（剩 N 天，M 處引用）：[事件]——需查官方原文確認日期是否仍有效`。這批與 log.md 的裁示不同源，**不可因為 log.md 沒有對應段落就省略**；3g 印「無需複查的截止日」時整段省略。
+**另必接 Step 1b-3g 的截止日複查清單：** Phase A 的回報不帶 3g 輸出，寫摘要的人看不到它——**寫本區前由本步執行者自己重跑 `PYTHON REPO_ROOT\scripts\scan_expiring_deadlines.py`**（唯讀、exit 恆 0，見 `.claude/skills/news-digest/SKILL.md` 3g），以這次的輸出為準。有命中（已過期或 7 天內到期）時，逐個截止日轉成一行 `- ⏰ [YYYY-MM-DD]（剩 N 天，M 處引用）：[事件]——需查官方原文確認日期是否仍有效`。這批與 log.md 的裁示不同源，**不可因為 log.md 沒有對應段落就省略**；3g 印「無需複查的截止日」時整段省略。
 
 無任何未決項時寫 `- 無`，不可省略此區塊。
 

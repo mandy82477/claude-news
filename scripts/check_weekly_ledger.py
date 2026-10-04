@@ -233,11 +233,11 @@ def check(report: list[str]) -> bool:
     if not (MIN_FORECASTS <= n <= MAX_FORECASTS):
         report.append(f"  ❌ {curr_id}：新開 {n} 條，規格為 {MIN_FORECASTS}–{MAX_FORECASTS} 條（寧缺勿湊）")
         ok = False
-    missing_probe = [r[1] for r in curr_forecasts if "查證：" not in r[2]]
+    missing_probe = [r[1] for r in curr_forecasts if not PROBE_TAIL_RE.search(r[2])]
     if missing_probe:
         for forecast in missing_probe:
             report.append(
-                f"  ❌ {curr_id}：判準缺查證線索（結尾需「｜查證：關鍵字1、關鍵字2」）——「{forecast[:36]}」"
+                f"  ❌ {curr_id}：判準缺查證線索（結尾需「<!-- 查證：關鍵字1、關鍵字2 -->」）——「{forecast[:36]}」"
             )
         ok = False
 
@@ -464,7 +464,17 @@ def check_headline(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
 # （W36 沙箱、W37 額度被偷／配額換軌）後來全數以「零命中」收場，其中配額換軌那條
 # 實際有 5 則相關日報條目，是判錯。W31–W35 無一條全滅，零誤擋。
 PROBE_LIVENESS_SINCE = "2026-W39"
-PROBE_TAIL_RE = re.compile(r"｜查證：(.+?)\s*$")
+# 兩種形狀都收：W41 起新立判準用 HTML 註解（讀者在 Obsidian／GitHub 看不到）；
+# 舊形 `｜查證：` 仍會出現——回收表逐字沿用 W40 以前立案的判準。
+PROBE_TAIL_RE = re.compile(r"(?:｜查證[：:]\s*(.+?)|<!--\s*查證[：:]\s*(.+?)\s*-->)\s*$")
+
+
+def probe_keywords(cell: str) -> list[str]:
+    """判準儲存格 → 查證關鍵字清單（無線索回空 list）。"""
+    m = PROBE_TAIL_RE.search(cell)
+    if not m:
+        return []
+    return [x.strip() for x in re.split(r"[、,，]", m.group(1) or m.group(2)) if x.strip()]
 NEWS_DIR = REPO_ROOT / "news"
 
 
@@ -501,10 +511,9 @@ def check_probe_liveness(report: list[str], weekly_dir: Path = WEEKLY_DIR,
     for row in _parse_table(curr.read_text(encoding="utf-8-sig"), FORECAST_HEADER_RE):
         if len(row) < 3:
             continue
-        tail = PROBE_TAIL_RE.search(row[2])
-        if not tail:
+        probes = probe_keywords(row[2])
+        if not probes:
             continue  # 缺線索由 check() 另行硬擋
-        probes = [x.strip() for x in re.split(r"[、,，]", tail.group(1)) if x.strip()]
         if probes and not any(p.lower() in hay for p in probes):
             ok = False
             report.append(
@@ -531,6 +540,10 @@ CODE_RE = re.compile(r"`([^`\n]+)`")
 NUMBER_RE = re.compile(r"\d[\d,.]*\s*(?:%|則|個|美元|萬|億|倍|讚)")
 DESK_WORDS_RE = re.compile(r"初版|同日更正|整期改版|改版一次|待查證|本刊 ?wiki|日報收錄|收錄的文章|來源數")
 SECTION_THREE_RE = re.compile(r"^##\s*三、", re.MULTILINE)
+# 2026-10-04：W36–W38 新立判準一再寫「→ 寫入 claude-code」「→ 升為 anthropic-business 風險表列」，
+# 冷讀者對抗輪（10-03）判為全刊最大的內部語言外洩。英文 slug 形狀回溯 W30–W40 零誤擋。
+DISPATCH_SINCE = "2026-W41"
+SLUG_RE = re.compile(r"(?<![\w./-])[a-z][a-z0-9]*(?:-[a-z0-9]+)+(?![\w-])")
 
 
 def _deepdive_body(text: str) -> str:
@@ -603,6 +616,18 @@ def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool
                 f"  ❌ {path.stem}：第三節以後出現編輯台用語（{'、'.join(hits)}）——製作過程、"
                 "收錄量與 wiki 維護指標記進 wiki/log.md，週報只寫讀者要的結果"
             )
+
+        # 4. 新立判準不寫派工指令與 wiki 頁名（W41 起；已立判準凍結不查）
+        if path.stem >= DISPATCH_SINCE:
+            for row in _parse_table(text, FORECAST_HEADER_RE):
+                body = PROBE_TAIL_RE.sub("", row[2])
+                slugs = sorted(set(SLUG_RE.findall(body))) + (["[[…]]"] if "[[" in body else [])
+                if slugs:
+                    ok = False
+                    report.append(
+                        f"  ❌ {path.stem}：新立判準寫了 wiki 頁名（{'、'.join(slugs)}）——「{_strip_bold(row[1])[:30]}」。"
+                        "分支的「則」寫讀者會看到的結果（「本刊改寫自保建議」），不寫記到哪一頁"
+                    )
     return ok
 
 

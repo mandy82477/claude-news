@@ -31,3 +31,7 @@
 | **帳本獨立性** | 週報「下週看什麼」的帳本有機械檢查（`scripts/check_weekly_ledger.py`）與反確認偏誤護欄。策展若先知道本週開了哪些預告，會傾向加碼「能讓預告成真」的主題——與 `.claude/skills/news-digest/SKILL.md` Step 3e 對選材的警告同源 |
 
 > 判斷式：**這一步會不會讓後面那步「已經知道答案」？** 會 → 順序錯了。
+
+## 2026-10-04（收尾改走 web build gate；子 skill 寫明用 Read）
+
+10-03 對抗輪指出 weekly.md 步驟 3 自己跑 `run_tests.py`，措辭「Tests FAILED - build skipped」又剛好躲過 registry 看守 pattern（看守的是多一個 `web` 字的版本），且 weekly.md 不在 gate 那組看守清單內。改成走 `gate_web_build.py`，修復迴圈、build、push 重試全部指回 web-publish Step 4／5，回報抄 gate 最後一行；registry 同步把 weekly.md 納入兩組 gate 看守。另外兩個子 skill 皆 `disable-model-invocation`，條文原寫「下子指令」不成立，改為 Read 其 SKILL.md 照步驟做。補掃的查證關鍵字同步支援週報新形 `<!-- 查證：… -->`。

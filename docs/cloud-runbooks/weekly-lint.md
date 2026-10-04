@@ -33,12 +33,12 @@
 | `wiki-lint-sweeps` `5j. 商業健康度四表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
 | `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 明寫 `model` |
 | `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
-| `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
-| `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`／`gh api`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
+| `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；探測通了但 `anthropics/claude-code` 未授權（MCP 回 not configured、`gh` token 失效）→ 寫「repo 授權不足，跳過」，不擴權 |
+| `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`／`gh api`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；repo 未授權同 5m 列 |
 | `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
 | `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
-| `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；**發現只回報**——修規則檔屬「要求確認」→ 待辦，並登 `lint_health.py misses` `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；wiki 頁面的事實缺陷照常當場修；**規則檔缺陷只回報**——修規則檔屬「要求確認」→ 待辦，**每項附 reviewer 的修訂文字原文**（不得只留摘要），並登 `lint_health.py misses`（口徑同 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」） `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6l. 讀者語言存量清理（每輪）` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
 | `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |

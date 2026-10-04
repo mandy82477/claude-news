@@ -64,8 +64,8 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）執行；雲端的環境差異與待辦寫法見 `docs/cloud-runbooks/weekly-lint.md`，行為本體一律以四個子 skill 為準。
-- 四段的「需使用者確認」項目一律只回報，收斂進步驟 8 的待使用者確認區，不自行動手。
-- `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/` 路徑下。
+- 四段的「需使用者確認」項目一律不自行動手，收斂進步驟 8 的待使用者確認區；本機執行時使用者在場，可當輪呈報、確認後再動（6j 的分流見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
+- `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 驗證閘：步驟 8 的 log 每一欄都有值、`gate_web_build.py` 綠（或已走完至多 2 輪修復迴圈並在心跳寫明）、單一 push 成功，才算完。
 
 > **沿革檔：** `docs/rules-changelog/wiki-lint.md`——條文中「沿革檔 YYYY-MM-DD」皆指該檔對應段（歷史敘事不進 agent 讀取範圍，）

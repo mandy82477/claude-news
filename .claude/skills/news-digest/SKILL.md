@@ -56,7 +56,13 @@ PYTHON REPO_ROOT\scripts\check_focus.py TARGET_DATE --list
 
 ## 3. 寫入
 
-寫入 `news/TARGET_DATE.md`（完整 Markdown）。
+寫入 `news/TARGET_DATE.md`（完整 Markdown）。📡 來源狀態表不手寫，寫完正文後由腳本產生並就地寫入（規格見 `format.md`「📡 來源狀態」）：
+
+```
+PYTHON REPO_ROOT\scripts\digest_source_table.py TARGET_DATE --write
+```
+
+非零退出 → 讀輸出：exit 2 是找不到當日 gathered 資料或日報檔（回第 0-1 步）；exit 1 是 `gathered_items.json` 自身的候選數與 `article_count` 不符，照寫入、在 Step 6 log 記一行交人查抓料端。
 
 ## 3a. 格式自檢（強制）
 
@@ -79,6 +85,14 @@ PYTHON REPO_ROOT\scripts\check_focus.py TARGET_DATE
 ```
 
 exit 0 才往下。列出的每一項照提示改：沒有新進展的移出聚焦，有新進展的改 `[持續追蹤]（續 MM-DD）` 並寫出新在哪，連結標籤改成真正的出處；改完重跑。字面相似抓不到換說法的重登，那部分靠 1a。
+
+## 3a-4. 跨區塊重述與版式閘（強制）
+
+```
+PYTHON REPO_ROOT\scripts\check_digest_layout.py TARGET_DATE
+```
+
+exit 0 才往下。三類違規照提示改，改完重跑：跨區塊重述（規則見 `selection.md`「聚焦防重複」）→ 後出現的那句改寫成只講增量，寫不出增量就整則移除；常設區塊缺席或超過上限（`format.md`「版式穩定」）→ 補 `> 本日無……` 行或依今日訊號砍到上限；標頭文章數與來源表「進候選」合計不符 → 標頭照抄 `article_count`，表重跑 `digest_source_table.py --write`。刪改條目後也要重跑 `digest_source_table.py --write`（「刊出」欄會變）。
 
 ## 3b. 來源狀態表存在性檢查（強制）
 
@@ -104,7 +118,7 @@ grep -c "^| .* | [✅❌] | [0-9]" news/TARGET_DATE.md
 PYTHON REPO_ROOT\scripts\scan_open_forecasts.py TARGET_DATE
 ```
 
-- 讀 `weekly/` 最新一期的未結案預告，取其判準結尾的「｜查證：關鍵字」對今日日報做字串比對，命中則 append 至 `weekly/open-signals.jsonl`，供下期 `/weekly-report` 回收時取用（免去憑記憶重讀七天日報）
+- 讀 `weekly/` 最新一期的未結案預告，取其判準結尾的查證關鍵字（`<!-- 查證：… -->`，舊期為 `｜查證：…`）對今日日報做字串比對，命中則 append 至 `weekly/open-signals.jsonl`，供下期 `/weekly-report` 回收時取用（免去憑記憶重讀七天日報）
 - **純字串比對，不做判斷、不改日報**；命中與否都不影響本日產出，失敗只記錄不阻斷 pipeline
 - ⚠️ **此步驟必須留在選材與寫入之後**：若讓選材階段知道週報正在賭什麼，會產生確認偏誤——選材傾向撿能證實預告的條目，命中率虛高，並連帶破壞每月聚焦校準的獨立性（校準量測的正是選材品質，兩者不得互相知情）。規格見 `.claude/skills/weekly-report/references/forecast.md` 第 (3) 段
 

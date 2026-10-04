@@ -487,11 +487,24 @@ def load_ignored(ignore_path=None) -> set:
     return ignored
 
 
+_REDIRECT_RE = re.compile(r'^page_role:\s*"?redirect"?\s*$', re.MULTILINE)
+
+
+def _is_redirect(f) -> bool:
+    """轉址殘頁（frontmatter `page_role: redirect`）不進缺口候選：它本來就只剩一行指路，
+    跟本尊頁共享鄰居必然高分，每週重現卻永遠不該補連結。"""
+    try:
+        return bool(_REDIRECT_RE.search(Path(f).read_text(encoding="utf-8-sig")[:2000]))
+    except OSError:
+        return False
+
+
 def gap_pairs(pages, links, top: int = 10, min_score: float = 0.15):
     ignored = load_ignored()
     adj, linked = _neighbor_sets(links, pages)
     out = []
-    slugs = sorted(pages)
+    # pages 可為 {slug: Path}（實跑）或純 slug 集合（測試玩具圖，無檔可讀）
+    slugs = sorted(s for s in pages if not (isinstance(pages, dict) and _is_redirect(pages[s])))
     for i, a in enumerate(slugs):
         for b in slugs[i + 1:]:
             key = frozenset((a, b))

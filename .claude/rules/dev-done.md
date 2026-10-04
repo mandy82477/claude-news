@@ -20,4 +20,4 @@ paths:
 
 > **判斷式：** 這個 commit 的訊息，說得出裡面每一個檔案為什麼在嗎？說不出，你 add 太多了。
 
-第 1、2 條有 hook 兜底，第 3 條只有人能判斷。沿革見 `docs/rules-changelog/CLAUDE.md` 2026-09-13。
+第 1 條有 Stop hook 兜底（擋收工）；第 2 條的 hook 只管 commit 的**形狀**（指名路徑、不掃別人宣告的路徑），沒有 hook 擋「沒 commit 就收工」，只有 SessionStart 提醒——收工前自己 `git status` 確認；第 3 條只有人能判斷。沿革見 `docs/rules-changelog/CLAUDE.md` 2026-09-13。

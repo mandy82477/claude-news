@@ -25,3 +25,11 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 動到根目錄 `./CLAUDE.md` Query 條、`wiki/CLAUDE.md`「搜尋策略」第 2 路、`.claude/skills/wiki-query/`。2026-09-14 上線的同義詞表（data 目錄下的 search_aliases.json，8 組 70 詞，人工登記）三天後由使用者裁定拿掉：「我不想多維護 table」。判斷依據是全庫只有 `scripts/wiki_search.py` 讀它，而跑這支腳本的永遠是 Claude session——語意它本來就懂，靜態詞表只是多一份沒人看守、會靜默過期的資料。改法：session 先把問句改寫成二到四種說法，連同原句當參數傳入；腳本每種說法各跑一次 BM25，分數除以該說法最高分後跨說法加總。
 
 改前改後拿真實 wiki 對照三題（多 agent 視覺化、省 token 費用、長跑 agent 忘事）。第一版融合取「各說法最好的那一次」，結果 `topics/community-pattern-trends` 與 `topics/enterprise-cost-management` 兩個正解掉出前八——只在一種說法裡第一名的頁把名額佔滿；改成加總後回來。同一輪對照還抓到一個被詞表掩蓋的舊問題：虛字表含「用」，查詢端剔除任何含虛字的 bigram，於是「費用」「用量」整個消失，「怎麼省 token 費用」只剩 `token` 一個詞；舊版靠詞表對原句做子字串比對繞過了這件事。修法是「用」只在落單時當虛字。設計取捨與剩餘缺口見 `docs/wiki-ingest-query-design.md` 第 5 節。
+
+## 2026-10-04：dev-done「第 1、2 條有 hook 兜底」照實改寫
+
+查 `.claude/hooks/` 與 settings：第 1 條有 Stop hook 擋收工；第 2 條只有管 commit 形狀的 hook（`block_git_add_all`、`block_foreign_stage`）加 SessionStart 提醒，沒有任何 hook 擋「沒 commit 就收工」。措辭照實寫，並要求收工前自己 `git status`。
+
+## 2026-10-04：news-console mod 的工作樹記帳改一檔一把 key
+
+/weekly 收尾時 commit 守門連續誤擋本 session 自己的檔。查 `$.store` 實證兩個根因：(1) 記帳是整份 `touched:<sid>` 陣列 get→add→set，五位記者並行 Edit（共用同一個 sessionId）互相覆蓋，本 session 改過的檔從帳上消失；(2) 另一個 session 的 Bash 前後髒檔比對，會把那段時間裡別人改髒的檔記成自己的（人物頁 session 的帳上記了約 100 個本 session 的檔）。(1) 才是誤擋的觸發條件——只要真正的作者也有記錄，`foreignHits` 就會略過。修法：一檔一把 `p:<sid>:<path>`、只 set 不讀，舊陣列照讀，死 session 的 key 開場清掉；回歸測試在舊程式碼上 3 紅、新程式碼全綠。(2) 是 Bash 推斷歸屬的本質限制，留著：它只會多記、不會讓真作者漏記。

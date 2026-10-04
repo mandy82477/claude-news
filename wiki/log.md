@@ -7244,3 +7244,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 第 8 項：tools 目錄的 ⏳ 改走 radar 同一張三選一表（30 天門檻不變，先加註「此後未見後續報導」、再 30 天才移除並寫結論）；radar 90 天不下調
 - 第 9 項：日報 format 加「所以呢」與「版式穩定」兩節、selection「聚焦防重複」擴為跨區塊一件事只講一次、新閘 check_digest_layout.py（漢字連續 12 字判重述，62 份回溯校準）、來源表改由 digest_source_table.py 產生（抓到／進候選／刊出三欄）；週報判準不寫 wiki 頁名、查證線索 W41 起改 `<!-- 查證：… -->`（消費端兩支新舊形都收，build_web 讀檔即剝 HTML 註解）；wiki 頁開頭被欄位吃掉一項涉 page-templates.md（人物頁 session 宣告中），只留提案：H1 下先放一句「這是誰／這是什麼」
 - 待補（被宣告擋住，登記 workaround-register 2026-10-07 複查）：沿革段寫入 `docs/rules-changelog/`、registry sync_pairs 六組（web build gate 舊措辭 max_count 加 weekly.md；log-format↔sweeps 標籤；repo 授權不足三處；6j「修訂文字原文」三處；C 段五 references；3g 舊語法回填；日報來源表三口徑；版式穩定；check_digest_layout 指名；digest_source_table 指名；週報 HTML 註解探針四處）
+
+## 2026-10-04 收尾補完（使用者「都修到好」）
+
+- 沿革段寫入 `docs/rules-changelog/`（wiki-lint、news-pipeline-steps、weekly、weekly-report、claude-md-edit、CLAUDE、reporter-community、reporter-safety-policy、wiki-ingest、wiki-ingest-features）；registry 新增 10 組 sync_pairs、web build gate 兩組納入 weekly.md 並放寬舊措辭 pattern，`check_rules.py` 全綠；workaround-register 該列結案刪除
+- lint 待裁示第 2 項：`features/pages.md` 熱度降溫與 ⏳ 觀望兩節的理由下沉沿革檔（278→272 行，`lint_health density` 無檔超標）
+- [[entities/mythos]] GLM-5.3 重複敘述收成摘要＋指路 [[topics/ai-agent-safety#模型網攻能力與防護]]
+- inquiry Q2 探針改讀 `blocked_items`（依 `blocked_by` 分流、舊副本只驗數字）；`check_classification_log.py` 註明 `blocked_items` 不在對帳範圍
+- 撞到的第二個問題：news-console mod 誤擋本 session 的 commit。根因（以 `$.store` 實證）：記帳整份陣列 get→set，並行記者互蓋、本 session 改過的檔從帳上消失；另一 session 的 Bash 髒檔比對同時把這些檔記成它的。改一檔一把 key，回歸測試舊碼 3 紅、新碼全綠
+- 仍未做：[[entities/dario-amodei]] 批評者對照表與 LeCun／Vembu／Lonsdale 一手補全、`page-templates.md`「H1 下先放一句這是誰／這是什麼」——人物頁 session 進行中（宣告未釋出），依使用者指示不干擾

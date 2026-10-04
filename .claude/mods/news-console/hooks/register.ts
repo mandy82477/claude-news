@@ -63,30 +63,35 @@ async function checkOrigin($: any) {
   $.ui.invalidate('ui.render')
 }
 
-async function touchedOf($: any, sid: string): Promise<Set<string>> {
+async function touchedOf($: any, sid: string, keys?: string[]): Promise<Set<string>> {
+  // 舊格式 `touched:<sid>` 陣列照讀（升級前的記錄），新格式一檔一把 `p:<sid>:<path>`
   const v = await $.store.get('touched:' + sid)
-  return new Set(Array.isArray(v) ? v : [])
+  const out = new Set<string>(Array.isArray(v) ? v : [])
+  const prefix = 'p:' + sid + ':'
+  for (const k of keys ?? (await $.store.keys())) if (k.startsWith(prefix)) out.add(k.slice(prefix.length))
+  return out
 }
 
 async function addTouched($: any, paths: string[]) {
   if (!paths.length || !sessionId) return
-  // 每 session 一把 key，避免跨 session 的 get→set 競爭；寫前重讀
-  const cur = await touchedOf($, sessionId)
-  for (const p of paths) cur.add(p)
-  await $.store.set('touched:' + sessionId, [...cur].slice(-2000))
+  // 一檔一把 key、只 set 不先 get：同 session 的並行子代理（同一個 sessionId）各自寫入互不覆蓋。
+  // 舊做法是整份陣列 get→add→set，五位記者並行時互相蓋掉，本 session 改過的檔從帳上消失，
+  // 換成別的 session 的誤記（它 Bash 前後比對時剛好看到這些檔變髒）擋下自己的 commit。
+  for (const p of paths) await $.store.set('p:' + sessionId + ':' + p, 1)
   await $.store.set('alive:' + sessionId, await $.clock.now())
 }
 
 async function liveForeign($: any): Promise<Map<string, Set<string>>> {
   const now = await $.clock.now()
   const out = new Map<string, Set<string>>()
-  for (const key of await $.store.keys()) {
+  const keys = await $.store.keys()
+  for (const key of keys) {
     if (!key.startsWith('alive:')) continue
     const sid = key.slice(6)
     if (sid === sessionId) continue
     const at = Number(await $.store.get(key))
     if (now - at > LIVE_MS) continue
-    out.set(sid, await touchedOf($, sid))
+    out.set(sid, await touchedOf($, sid, keys))
   }
   return out
 }
@@ -106,12 +111,18 @@ export function register(on: any) {
         const now = await $.clock.now()
         await $.store.set('alive:' + sessionId, now)
         // 清掉一天沒心跳的 session，store 上限 4 MiB
-        for (const key of await $.store.keys()) {
+        const keys = await $.store.keys()
+        const dead = new Set<string>()
+        for (const key of keys) {
           if (!key.startsWith('alive:')) continue
           if (now - Number(await $.store.get(key)) > 24 * 3600_000) {
+            dead.add(key.slice(6))
             await $.store.delete(key)
             await $.store.delete('touched:' + key.slice(6))
           }
+        }
+        for (const key of keys) {
+          if (key.startsWith('p:') && dead.has(key.slice(2, key.indexOf(':', 2)))) await $.store.delete(key)
         }
         // fetch 不可擋住開場：延後在背景跑，之後每 10 分鐘一次
         $.clock.after(1500, () => checkOrigin($))

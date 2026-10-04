@@ -66,7 +66,7 @@
 - [ ] wiki/index.md 狀態已全部同步（含所有記者回報的狀態變更）
 - [ ] wiki/log.md 已 append 本次 ingest 紀錄（含品質審查彙整，未修改既有條目）
 - [ ] data/source_attribution.jsonl 已由 `collect_reporter_reports.py --apply` append 所有記者回報的來源歸因（全部回報「無」則跳過）；它列的警示已處理、未回應清單已追問或記入品質備註
-- [ ] 未在 `CLAUDE_NEWS/wiki/` 以外路徑建立或修改任何 wiki 檔案
+- [ ] 未在 `wiki/`（repo 根下）以外路徑建立或修改任何 wiki 檔案
 
 ## 完成摘要表
 

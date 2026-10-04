@@ -92,7 +92,7 @@ grep -rn "要改的字串" scripts/ web_reader/assets/ src/tests/
   ```
 
 - **範圍＝消費這份規則的場景會讀到的檔案**（負責頁面、看守腳本、資料帳本）。寧可略寬也不要漏——漏了會讓該場景失去規則。
-- glob 相對專案根（`CLAUDE_NEWS/`），支援 `**` 與 `{a,b}`。
+- glob 相對 repo 根（`git rev-parse --show-toplevel`），支援 `**` 與 `{a,b}`。
 - **載入靠明文 Read，不靠自動載入**：記者由角色檔（`.claude/agents/wiki-reporter-*.md`）列規則清單、主編由 command 內文指名，`paths:` 只是縮小無條件載入量。
 - **只給記者／主編明文 Read 的規則放 `.claude/reporter-rules/`，不放本資料夾**——那裡沒有自動載入機制，不需要也不應該帶 `paths:`（帶了只是裝飾）。本資料夾只留主 session 自己會用到的規則。
 - 由 `src/tests/test_rules_frontmatter.py` 看守：缺 `paths:`、空清單、glob 在庫內零匹配、或 frontmatter 後未緊接 `# 標題` 皆 FAIL（只掃 `.claude/rules/*.md`）。

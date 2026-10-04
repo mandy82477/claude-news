@@ -35,12 +35,12 @@ disable-model-invocation: true
 - **5e 與 5j 同批看 pricing 的「資料截至」**：5j 核對合作表快照日時以 5e 更新後的值為準。
 - 5n 與 5a 同批看官方 CHANGELOG：5a 抓下來的全文可直接給 5n grep，不必抓兩次。
 - 其餘各步互不相依，單步失敗只影響該步，其餘照跑。
-- 雲端執行 5b／5c／5m／5n 前先跑 egress 探測（**不得未探測就跳過**）；5h 不需探測。5n 吃 GitHub，走 `--group github`，與 5m 同組。判斷表見 `.claude/skills/wiki-lint-sweeps/references/sweeps.md`「雲端 egress 探測」節。
+- 雲端執行 5b／5c／5e／5m／5n 前先跑 egress 探測（**不得未探測就跳過**）；5h 不需探測。5n 吃 GitHub，走 `--group github`，與 5m 同組；探測通了但 repo 未授權時照該節「repo 授權不足」段寫。判斷表見 `.claude/skills/wiki-lint-sweeps/references/sweeps.md`「雲端 egress 探測」節。
 
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）執行；派工一律 foreground 且帶明確 `model`，記者不可再呼叫 Agent tool 委派。
-- `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/` 路徑下。
+- `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 需使用者確認的項目（5a ⏳ 逾期以外的結構性改動、5g 連續 2 輪門檻調整、5k 滿載讓位）一律只回報、寫進步驟 8 的待使用者確認區。
 - 驗證閘：十四行回報全部有值（跳過者寫明跳過理由）才算完。
 

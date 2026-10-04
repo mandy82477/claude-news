@@ -43,3 +43,13 @@
 - **月度判斷法統一為 metrics.md 口徑 `[改版: 2026-09-13]`**：lint 端原本判「`wiki/log.md` 本月尚無 `Lint` 記錄」（判執行記錄），`/wiki-weekly-review` 判「`wiki/metrics.md` 本月無數值」（判產出物）並明寫前者踩過的坑——同一個月裡兩套口徑可以給出相反答案（lint 跑了但月度項整段跳過時，log 有記錄而 metrics 沒數值）。本次統一為 metrics.md 的「採用驗證率」欄，總指揮開一節「月度判斷法」，A 段月度蒸餾與 C 段 6g 指標二／6j 共用。
 - **跨檔重複收斂**：六記者派工表與角色前導的家收斂到 `.claude/skills/wiki-ingest/references/dispatch.md`（lint 端只留 lint 專屬段）；雲端 egress 探測樣板 5b／5c／5m 三抄合一；步驟 10 的 gate 修復迴圈、push 重試改指 `.claude/skills/web-publish/SKILL.md` Step 4／Step 5（commit 路徑與訊息保留在本地）；`news/` 唯讀／`log.md` only append／繁中三條改指 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - **機械檢查射程**：`bare_references`／`path_existence`／`coupling_hints` 的掃描 glob 補上 `.claude/skills/**/*.md`——前三批搬出去的 skill 檔原本全在射程外，等於搬一次就少一層看守。
+
+## 2026-10-04（10-03 對抗輪 6j-C 只回報項目全數處置）
+
+- **log-format**：模板缺 5d/5e/5f/5n 四行、5c 停在已廢除的額度制、「成長迴路」錯放 C 段——B 段驗證閘因此每輪宣告做不到的條件。補齊四行、5c 改清零制格式（含 🎯、📈 與舊語法盲區），月度蒸餾移成 A 段獨立一行；sweeps.md 補 5e、5f 回報格式並統一標籤，兩檔逐行對應。
+- **6j 口徑**：「逐項修」與「只回報」在四處有三種答案。統一為：wiki 事實缺陷兩種環境都當場修；規則檔缺陷本機經使用者確認後修並複審，雲端只回報、且必須附 reviewer 的修訂文字原文——起因是 10-03 的 8 項 🔴 修訂文字只留摘要，本機承接時得重寫。月度判斷改讀 `wiki/metrics.md` 產出物，不讀 log 執行記錄。
+- **C 段自我掃描**：原只含五個 SKILL.md，10-03 的 8 個 🔴 有 3 個住在 references；五個 references 逐一列名納入。
+- **egress 探測**：探測表漏 5e，補上；新增「探測通了但 repo 未授權」分支（10-03 雲端 5m／5n 就是 GitHub MCP 只授權本 repo、`gh` token 失效），寫「repo 授權不足，跳過，留待本機 `/weekly`」，不擴權，本機用 `gh` 承接。
+- **3g 舊語法回填配額**：舊語法盲區 33→41 筆只增不減（5c 查證散文持續寫出舊字樣）。每輪派工前跑 `--queue` 算配額，至少回填 15 筆、前三頁優先，收報後重跑驗收——取 15 不取 10：上週 5c 就新增約 8 筆，10 筆淨減僅約 2 筆／週。原條文叫 5c 在 3g 派工時指定，但 3g（A 段）排在 5c（B 段）之前，時序做不到，一併改正。
+- **7b 題庫下限**：自檢門檻 `<7` 落後實際 8 題，改 8 並加少一題即紅的測試。
+- **6k 缺口偵測**：`wiki_graph.py gaps` 把 `page_role: redirect` 轉址殘頁列進候選，每週重現（改前 top50 有 chris-olah × jensen-huang）。gap_pairs 排除轉址頁並補測試，改後 0 對。

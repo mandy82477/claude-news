@@ -45,11 +45,14 @@ def _is_pr_wire(url: str) -> bool:
     return any(host == d or host.endswith("." + d) for d in _PR_WIRE_DOMAINS)
 
 
-def filter_relevant(items: list[FeedItem], min_score: int = 3) -> list[FeedItem]:
+def filter_relevant(items: list[FeedItem], min_score: int = 3,
+                    dropped_out: list | None = None) -> list[FeedItem]:
     """Drop loosely-matched Google News items whose title lacks any relevant keyword,
     and drop items from press-release wire domains regardless of source.
 
     `min_score` is kept in the signature for call-site compatibility; it is unused.
+    If `dropped_out` is a list, each dropped item is appended as `(item, "pr_wire" |
+    "gnews_off_topic", "")`.
     """
     if not items:
         return items
@@ -60,6 +63,8 @@ def filter_relevant(items: list[FeedItem], min_score: int = 3) -> list[FeedItem]
     for item in items:
         if _is_pr_wire(item.url):
             dropped_pr += 1
+            if dropped_out is not None:
+                dropped_out.append((item, "pr_wire", ""))
             logger.debug("Rule filter dropped (PR wire domain): %s", item.title)
             continue
         # Topic-watch items are fetched *for a named wiki page*, and their whole point
@@ -70,6 +75,8 @@ def filter_relevant(items: list[FeedItem], min_score: int = 3) -> list[FeedItem]
             title = item.title.lower()
             if not any(kw in title for kw in _TITLE_KEYWORDS):
                 dropped += 1
+                if dropped_out is not None:
+                    dropped_out.append((item, "gnews_off_topic", ""))
                 logger.debug("Rule filter dropped (no keyword in title): %s", item.title)
                 continue
         kept.append(item)

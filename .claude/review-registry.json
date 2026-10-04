@@ -613,12 +613,13 @@
       "assertion": "all_contain",
       "files": [
         ".claude/skills/web-publish/SKILL.md",
-        ".claude/skills/wiki-lint/SKILL.md"
+        ".claude/skills/wiki-lint/SKILL.md",
+        ".claude/commands/weekly.md"
       ],
       "patterns": [
         "scripts.gate_web_build\\.py"
       ],
-      "_note": "2026-08-01 加入。web build 的放行判準集中在腳本裡；任一處退回自己跑 run_tests.py 再判斷，兩處就會失步（日更放行、週更擋下之類）。"
+      "_note": "2026-08-01 加入。web build 的放行判準集中在腳本裡；任一處退回自己跑 run_tests.py 再判斷，兩處就會失步（日更放行、週更擋下之類）。 2026-10-04 加入 weekly.md（/weekly 收尾原自寫一套繞過 gate）。"
     },
     {
       "name": "weekly-report/references/contracts.md 第(3)段兩張表的欄名 <-> build_web.py 解析錨點（欄名改動會讓該表整張不進 JSON、在網站上靜默消失）",
@@ -722,13 +723,14 @@
       "assertion": "max_count",
       "files": [
         ".claude/skills/web-publish/SKILL.md",
-        ".claude/skills/wiki-lint/SKILL.md"
+        ".claude/skills/wiki-lint/SKILL.md",
+        ".claude/commands/weekly.md"
       ],
       "patterns": [
-        "Tests FAILED - web build skipped"
+        "Tests FAILED - (web )?build skipped"
       ],
       "max": 0,
-      "_note": "2026-08-01 加入。舊 log 措辭對應「測試失敗一律跳過 build」的舊規則，留著會讓 agent 抄回舊行為。"
+      "_note": "2026-08-01 加入。舊 log 措辭對應「測試失敗一律跳過 build」的舊規則，留著會讓 agent 抄回舊行為。 2026-10-04 pattern 放寬為 (web )? 並納入 weekly.md：weekly.md 用「Tests FAILED - build skipped」少一個 web 字而躲過看守。"
     },
     {
       "name": "wiki/index.md 為純路由表：異動日誌區塊不得再長回來（2026-08-02 瘦身：83% 是 log.md 的重複副本，路由成本 42k→8k）",
@@ -1811,6 +1813,141 @@
         "data/ingest-packets/"
       ],
       "_note": "2026-09-27：派工 prompt 的條目節錄改為貼入腳本產的包檔；路徑漂一邊，主編會貼到舊包或把工作檔 commit 進 repo。回報欄名與包檔 URL 行的兩端契約改由 src/tests/test_collect_reporter_reports.py（TestContractWithShared）與 src/tests/test_build_ingest_packets.py（TestPacketCollectorRoundTrip）看守——字面在兩檔別處也會出現，all_contain 改壞不紅。"
+    },
+    {
+      "name": "log-format <-> sweeps.md：B 段回報行標籤逐字相符",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint/references/log-format.md",
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
+      ],
+      "patterns": [
+        "歸因忠實度抽查（5d）",
+        "pricing 通路與乘數（5e）",
+        "devpractice 週彙整（5f）",
+        "高引用停滯（5g）",
+        "官方補了沒表（5n）",
+        "清零 ✅"
+      ],
+      "_note": "2026-10-04 加入：10-03 對抗輪發現 log 模板缺 5d/5e/5f/5n、標籤與 sweeps 回報格式對不上。"
+    },
+    {
+      "name": "repo 授權不足跳過分支：規格端、雲端 runbook、本機承接端",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-sweeps/references/sweeps.md",
+        "docs/cloud-runbooks/weekly-lint.md",
+        ".claude/skills/weekly-local-catchup/SKILL.md"
+      ],
+      "patterns": [
+        "repo 授權不足"
+      ],
+      "_note": "2026-10-04 加入：雲端 5m/5n 探測通了但 repo 未授權時，三處須同一措辭，本機 /weekly 才接得住。"
+    },
+    {
+      "name": "6j 處置口徑同步：雲端只回報須附修訂文字原文",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-rules-health/references/adversarial.md",
+        ".claude/skills/wiki-lint-rules-health/SKILL.md",
+        "docs/cloud-runbooks/weekly-lint.md"
+      ],
+      "patterns": [
+        "修訂文字原文"
+      ],
+      "_note": "2026-10-04 加入：10-03 的 8 項 🔴 修訂文字只留摘要，本機承接時得重寫。"
+    },
+    {
+      "name": "C 段自我掃描含五個 references",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-rules-health/SKILL.md"
+      ],
+      "patterns": [
+        "wiki-lint/references/log-format\\.md",
+        "wiki-lint-reporters/references/dispatch\\.md",
+        "wiki-lint-sweeps/references/sweeps\\.md",
+        "wiki-lint-rules-health/references/adversarial\\.md",
+        "wiki-lint-reader-acceptance/references/inquiry\\.md"
+      ],
+      "_note": "2026-10-04 加入：10-03 的 8 個 🔴 有 3 個住在 references，原自掃範圍漏掉。"
+    },
+    {
+      "name": "3g 舊語法回填配額：派工端與 prompt 端",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint-reporters/SKILL.md",
+        ".claude/skills/wiki-lint-reporters/references/dispatch.md"
+      ],
+      "patterns": [
+        "舊語法回填"
+      ],
+      "_note": "2026-10-04 加入。"
+    },
+    {
+      "name": "日報來源表三口徑：規格 format.md <-> 產出 digest_source_table.py <-> 對帳 check_digest_layout.py",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/news-digest/references/format.md",
+        "scripts/digest_source_table.py",
+        "scripts/check_digest_layout.py"
+      ],
+      "patterns": [
+        "進候選",
+        "抓到"
+      ],
+      "_note": "2026-10-04 加入：10-02 表頭 59（候選）對來源表 99（原始抓取）口徑混用。"
+    },
+    {
+      "name": "日報版式穩定：常設區塊空白行與每區上限，規格與閘同在",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/news-digest/references/format.md",
+        "scripts/check_digest_layout.py"
+      ],
+      "patterns": [
+        "本日無",
+        "版式穩定"
+      ],
+      "_note": "2026-10-04 加入。"
+    },
+    {
+      "name": "跨區塊重述閘：selection.md 與 news-digest SKILL 3a-4 都指名 check_digest_layout.py",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/news-digest/references/selection.md",
+        ".claude/skills/news-digest/SKILL.md"
+      ],
+      "patterns": [
+        "check_digest_layout\\.py"
+      ],
+      "_note": "2026-10-04 加入。"
+    },
+    {
+      "name": "來源表產生器：format.md 與 news-digest SKILL 第 3 步都指名 digest_source_table.py",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/news-digest/references/format.md",
+        ".claude/skills/news-digest/SKILL.md"
+      ],
+      "patterns": [
+        "digest_source_table\\.py"
+      ],
+      "_note": "2026-10-04 加入。"
+    },
+    {
+      "name": "週報查證線索新形（HTML 註解）：規格兩檔與兩支消費端同在",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/weekly-report/references/contracts.md",
+        ".claude/skills/weekly-report/references/forecast.md",
+        "scripts/scan_open_forecasts.py",
+        "scripts/check_weekly_ledger.py"
+      ],
+      "patterns": [
+        "<!--\\s*查證|<!-- 查證"
+      ],
+      "_note": "2026-10-04 加入：只改規格不改閘，新形探針會被活性檢查靜默略過。"
     }
   ],
   "coupling_hints": {

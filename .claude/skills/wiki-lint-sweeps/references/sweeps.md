@@ -6,18 +6,21 @@
 
 ---
 
-## 雲端 egress 探測（5b／5c／5m／5n 共用）
+## 雲端 egress 探測（5b／5c／5e／5m／5n 共用）
 
-雲端執行這三步前先跑對應組的探測，依印出的摘要行決定做或不做。**不得在未探測的情況下直接跳過**——網路白名單是使用者可改的環境設定（Trusted → Custom，見 `docs/cloud-runbooks/_shared.md`「egress 限制」），寫死跳過的條文在環境改好之後也不會自己好起來。
+雲端執行這五步前先跑對應組的探測，依印出的摘要行決定做或不做。**不得在未探測的情況下直接跳過**——網路白名單是使用者可改的環境設定（Trusted → Custom，見 `docs/cloud-runbooks/_shared.md`「egress 限制」），寫死跳過的條文在環境改好之後也不會自己好起來。
 
 | 步驟 | 探測指令 | 印這行 → 照該節本機步驟執行 | `PARTIAL`／`BLOCKED` → 跳過並寫這條待辦 |
 |---|---|---|---|
 | 5b | `python scripts/cloud_egress_check.py --group leaderboard` | `EGRESS: leaderboard OK` | 「跨家榜單週更因雲端 egress 未開（leaderboard）跳過，留待本機 `/weekly`」 |
 | 5c | `python scripts/cloud_egress_check.py --group official` | `EGRESS: official OK` | 「逾期待查證清算因雲端 egress 未開（official）跳過，留待本機 `/weekly`」；**整步不查證、不改動任何頁面，Lane A 不例外** |
+| 5e | `python scripts/cloud_egress_check.py --group official` | `EGRESS: official OK` | 「pricing 通路與乘數複查因雲端 egress 未開（official）跳過，留待本機 `/weekly`」 |
 | 5m | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「code-quality-decline issue 狀態複查因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 | 5n | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「official-community-gap「官方補了沒」表對官方一手因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 
 待辦一律進 log 的待使用者確認區；該步回報那一行寫「雲端 egress 未開，跳過」。
+
+**探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。實際呼叫時 GitHub MCP 回 `repository not configured for this session`，或 `gh auth status` 報 token 失效 → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，待辦寫「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
 
 **5h 不受此限、不需探測**：催化劑那一半純查本庫日報；股價那一半用 **WebSearch**，由 Anthropic 端執行、不經沙盒 egress（`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空，恆印 `EGRESS: market OK`）。唯一例外是該環境根本沒有 WebSearch 工具可用——此時才寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」並列入待使用者確認區；日後若本步改用 WebFetch 直抓行情站，須同步把那些網域填進 market 組並改回探測式。
 
@@ -35,7 +38,7 @@
 
 **回報格式：**
 ```
-熱度降溫：檢查 N 條，降 M 條（列出 條目名 舊→新），同步 entities 頁 M 處；⏳ 逾期：K 條，處置（升 a／降 b／加註 c）
+熱度降溫（5a）：檢查 N 條，降 M 條（列出 條目名 舊→新），同步 entities 頁 M 處；⏳ 逾期：K 條，處置（升 a／降 b／加註 c）
 ```
 
 ---
@@ -75,7 +78,7 @@
 
  完整報告的 **WARN 逐條處置，不得略過**：語意反轉殘留（同行出現「解除／結案」與 ✅）、探針偵測力退化等。屬本步可解者當場改；屬記者頁面者轉知對應類別記者。WARN 條數與處置寫進本步回報。
 
- 佇列部分：`--queue` 輸出**兩條分流**與**產消對帳**（）：
+ 佇列部分：`--queue` 輸出**兩條分流**與「🎯 本輪目標」「📈 趨勢」兩行：
 
    - **Lane A**：記者已標 `訊`，代表日報裡已有後續證據——**多數可免 web**，但探針是機械比對、會假命中，須逐筆確認該日條目是否真指此事實；確認不了就退回 Lane B（見步驟 2）。**探測判為未開時整個 5c 跳過**，本區不例外
  - **Lane B**：需 WebFetch 官方一手來源查證，受 egress 與成本限制
@@ -89,7 +92,7 @@
  > 待清量超過 60 筆時腳本會多印一行提醒：**清零照做**，但那一輪之後回頭看一次記者端標記門檻是不是鬆了（正常週進料約 20–35 筆）。門檻與額度是兩件事，不要用「調額度」回應進料變多。
 **`data/pending_queue_history.csv` 每輪會被 append 一列（同日 upsert），須併入步驟 10 的單一 push**——不 push 的話序列會在雲端與本機之間斷掉，趨勢行就失去意義。
 
- **輸出末尾的「⚠️ 舊語法盲區」不是裝飾**——那是佇列撈不到的存量與其頁面分佈；「總逾期數 0」只代表新語法那半乾淨了。把盲區筆數與前三頁抄進本步回報，並在 3g 派工時優先指定那幾頁回填
+ **輸出末尾的「⚠️ 舊語法盲區」不是裝飾**——那是佇列撈不到的存量與其頁面分佈；「總逾期數 0」只代表新語法那半乾淨了。把盲區筆數與前三頁抄進本步回報；回填是 A 段 3g 的配額（算法見 `.claude/skills/wiki-lint-reporters/SKILL.md` 步驟 2），本步只負責讓下一輪看得到這組數字
 
 2. **查證**（兩條 Lane 走不同路徑）：
 
@@ -124,7 +127,7 @@
 
 **回報格式：**
 ```
-逾期待查證清算（5c）：盤點 N 筆，清零 ✅／剩餘 M 筆（列出剩哪幾頁與卡在哪）；處置 查實 A／確認官方未載 B／失效移除 C／依日報收斂 D，結案回掃上修 E 頁／雲端 egress 未開，跳過
+逾期待查證清算（5c）：盤點 N 筆，清零 ✅／剩餘 M 筆（列出剩哪幾頁與卡在哪）；處置 查實 A／確認官方未載 B／失效移除 C／依日報收斂 D，結案回掃上修 E 頁；🎯 本輪目標行與 📈 趨勢行原樣抄；⚠️ 舊語法盲區 N 筆＋前三頁／雲端 egress 未開，跳過
 ```
 
 ---
@@ -141,7 +144,7 @@
 
 **回報格式：**
 ```
-歸因抽查（5d）：抽 5 筆，相符 A／修正漂移 B（頁名 list）／未刊出抓取條目 D／無對應 C
+歸因忠實度抽查（5d）：抽 5 筆，相符 A／修正漂移 B（頁名 list）／未刊出抓取條目 D／無對應 C
 ```
 
 ---
@@ -155,6 +158,13 @@
 3. 商業記者本週回報「⚠️ 需主編查證官方計價文件」→ 逐筆查證後寫入，標來源連結與查證日
 4. 本區塊為非新聞性維護：只更新 pricing 的「最後更新」，**不動「最後新聞更新」**
 
+**雲端執行時先探測**，見本檔「雲端 egress 探測」表 5e 列。
+
+**回報格式：**
+```
+pricing 通路與乘數（5e）：資料截至 YYYY-MM-DD（距今 N 天，逾 30 天已重查 or 未逾不觸發）；新世代發布確認 一致 or 改 M 項 or 本週無新世代；商業記者轉來 K 筆查證／雲端 egress 未開，跳過
+```
+
 ---
 
 ## 5f. devpractice 週彙整（主編派工）
@@ -165,7 +175,12 @@
 你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **weekly 彙整**（兩件事：手冊週更、coding 跨頁對帳）。今日日期：[YYYY-MM-DD]。
 ```
 
-收報後：「⚠️ 需主編轉知」逐筆登 `data/pending-handoffs.jsonl`；回報摘要記入 Step 8 log 一行 `devpractice 週彙整：…`。
+收報後：「⚠️ 需主編轉知」逐筆登 `data/pending-handoffs.jsonl`。記者回報欄位見 `.claude/reporter-rules/devpractice/weekly.md`「欄位與回報」，主編濃縮成一行：
+
+**回報格式：**
+```
+devpractice 週彙整（5f）：候選 落地 a／不寫 b；本週亮點 N 條；缺口回訪 補了哪段 or 無；跨頁對帳 ✅ 一致 or ⚠️ 失步 M 處；⚠️ 需主編轉知 K 筆
+```
 
 ---
 
@@ -195,7 +210,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 **回報格式：**（`c` 只在該頁確實仍是該主題的正確落點、且停滯已在頁面上寫明時才可用，並附一句理由）
 ```
-高引用停滯：N 頁（處置：派記者確認 a／改引用方連結 b／確認無誤留原狀 c）
+高引用停滯（5g）：N 頁（處置：派記者確認 a／改引用方連結 b／確認無誤留原狀 c）
 ```
 
 ---
@@ -280,7 +295,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 **回報格式：**
 ```
-code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截至 YYYY-MM-DD ／雲端 egress 未開，跳過
+code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截至 YYYY-MM-DD ／雲端 egress 未開，跳過 ／ repo 授權不足，跳過
 ```
 
 ---
@@ -302,5 +317,5 @@ code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截�
 
 **回報格式：**
 ```
-官方補了沒表：N 列比對／M 列已改／核對日逾 30 天 K 列
+官方補了沒表（5n）：N 列比對／M 列已改／核對日逾 30 天 K 列 ／雲端 egress 未開，跳過 ／ repo 授權不足，跳過
 ```

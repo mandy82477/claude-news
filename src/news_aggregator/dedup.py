@@ -73,7 +73,10 @@ def _merge_contributors(winner: FeedItem, loser: FeedItem) -> None:
     winner.contributors = tuple(sorted(names))
 
 
-def deduplicate(items: list[FeedItem]) -> list[FeedItem]:
+def deduplicate(items: list[FeedItem], dropped: list | None = None) -> list[FeedItem]:
+    """Merge duplicate items. If `dropped` is a list, every merged-away item is
+    appended as `(item, "dedup_url" | "dedup_title", surviving_url)` so callers can
+    keep the reason a copy never reached the output (gathered_archive blocked_items)."""
     seen_urls: dict[str, FeedItem] = {}
     result: list[FeedItem] = []
 
@@ -88,11 +91,15 @@ def deduplicate(items: list[FeedItem]) -> list[FeedItem]:
             ):
                 _inherit_merge_fields(item, existing)
                 item.source_count = merged_count
+                if dropped is not None:
+                    dropped.append((existing, "dedup_url", item.url))
                 seen_urls[norm] = item
                 result = [item if i is existing else i for i in result]
             else:
                 _inherit_merge_fields(existing, item)
                 existing.source_count = merged_count
+                if dropped is not None:
+                    dropped.append((item, "dedup_url", existing.url))
         else:
             seen_urls[norm] = item
             result.append(item)
@@ -111,10 +118,14 @@ def deduplicate(items: list[FeedItem]) -> list[FeedItem]:
                 ):
                     _inherit_merge_fields(item, kept)
                     item.source_count = merged_count
+                    if dropped is not None:
+                        dropped.append((kept, "dedup_title", item.url))
                     final[idx] = item
                 else:
                     _inherit_merge_fields(kept, item)
                     kept.source_count = merged_count
+                    if dropped is not None:
+                        dropped.append((item, "dedup_title", kept.url))
                 duplicate = True
                 break
         if not duplicate:

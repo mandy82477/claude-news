@@ -32,7 +32,7 @@
 
 - 題庫內容**單一來源住 `scripts/inquiry_bank.py`**（探針要跟指令住在一起），本檔只放機制與判準，不重抄題目——兩處抄寫必然漂移
 - **加題條件**：`wiki/log.md` 出現新 Query、且其質疑模式不屬現有模式 → 主編提案（模式名＋操作化探針），**經使用者確認後**加入腳本並補 `src/tests/test_inquiry_bank.py` 對應斷言
-- **刪題須經使用者確認**：腳本自檢會擋題數 <7
+- **刪題須經使用者確認**：腳本自檢會擋題數 <8（八模式各一題；加題時一併調高下限）
 - 題庫的抽選指令與 `.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 7b 的指令**必須一致**（已登記 `.claude/review-registry.json` sync_pair，`scripts/check_rules.py` 會驗）
 
 ## 人類質疑時效燈（可見性，處理端不在本步驟）

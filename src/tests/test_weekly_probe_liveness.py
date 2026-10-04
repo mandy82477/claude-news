@@ -63,6 +63,20 @@ class TestProbeLiveness(unittest.TestCase):
         ok, _ = self._run("2026-W39", [row])
         self.assertTrue(ok)
 
+    def test_hidden_comment_form_is_read(self):
+        """W41 起新立判準把線索寫成 HTML 註解；活性檢查要讀得到，不得當成「沒線索」靜默略過。"""
+        dead = DEAD.replace("｜查證：週配額、weekly limit、17%、撞上限", "<!-- 查證：週配額、撞上限 -->")
+        live = LIVE.replace("｜查證：Plugin4Shell、Copilot", "<!-- 查證：Plugin4Shell -->")
+        ok, out = self._run("2026-W41", [live, dead], news_date="2026-10-07")
+        self.assertFalse(ok)
+        self.assertIn("週配額", out)
+        self.assertNotIn("外掛漏洞", out)
+
+    def test_probe_keywords_both_forms(self):
+        self.assertEqual(ledger.probe_keywords("若 X → A｜查證：a、b"), ["a", "b"])
+        self.assertEqual(ledger.probe_keywords("若 X → A<!-- 查證：a、b -->"), ["a", "b"])
+        self.assertEqual(ledger.probe_keywords("若 X → A；若兩週無事 → 結案"), [])
+
     def test_frozen_issues_are_not_retro_checked(self):
         """生效閘：W38 以前已凍結，回溯只會產出永遠不修的 ❌。"""
         ok, out = self._run("2026-W38", [DEAD], news_date="2026-09-16")

@@ -8,7 +8,7 @@
 |---|---|---|
 | 落後 origin | 開場後 1.5 秒起每 10 分鐘背景 `git fetch`；落後時 prompt 上方提示列顯示筆數與「拉取（ff-only）」按鈕（按了才拉，不自動）、送出 prompt 時附一行只有 Claude 讀得到的警告；同列報雲端班次真失敗（只讀 `origin/master` 的 `task_scheduler.log` 與 `cloud-daily-*` 分支，12Z／17Z 等料中止與冪等中止不出聲）；平常只在提示行尾端加「已同步　日報 MM-DD」 | 提示列、提示行 |
 | wiki 新鮮度 | Read `wiki/**/*.md` 後在 transcript 記一行 `last_news_update` 與距今天數（不下「過期」判定，門檻待使用者裁決） | transcript 暗色行（Claude 不讀） |
-| 工作樹歸屬 | Edit／Write 成功與 Bash 前後新增的髒檔記進 `$.store` 的 `touched:<sessionId>`；`git add`／`commit` 會納入別的活著（90 分鐘內有心跳）session 動過、本 session 沒動過的檔就 deny，只給數量、不列別人檔名 | deny 訊息、狀態行 |
+| 工作樹歸屬 | Edit／Write 成功與 Bash 前後新增的髒檔記進 `$.store`，一檔一把 `p:<sessionId>:<path>`（只 set 不先 get，同 session 並行子代理不互蓋；舊格式 `touched:<sessionId>` 陣列照讀）；`git add`／`commit` 會納入別的活著（90 分鐘內有心跳）session 動過、本 session 沒動過的檔就 deny，只給數量、不列別人檔名 | deny 訊息、狀態行 |
 
 ## 守則
 

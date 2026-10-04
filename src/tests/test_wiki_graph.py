@@ -118,6 +118,20 @@ class SimilarityAndGaps(unittest.TestCase):
         self.assertFalse(any("archive" in p for pr in pairs for p in pr))
         self.assertNotIn(frozenset(("a", "c")), pairs)   # 已相連
 
+    def test_gaps_排除轉址殘頁(self):
+        import tempfile
+        g, pages, links = self._toy()
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = {}
+            for slug in pages:
+                f = Path(tmp) / (slug.replace("/", "_") + ".md")
+                role = 'page_role: "redirect"\n' if slug == "b" else ""
+                f.write_text(f"---\n{role}---\n# {slug}\n", encoding="utf-8")
+                paths[slug] = f
+            rows, _ = g.gap_pairs(paths, links, top=10, min_score=0.0)
+        pairs = {frozenset((a, b)) for a, b, *_ in rows}
+        self.assertNotIn(frozenset(("a", "b")), pairs)   # b 是轉址頁，不得成為候選
+
 
 class CoLanded(unittest.TestCase):
     """co-landed：同一則新聞落地兩頁卻不互連。

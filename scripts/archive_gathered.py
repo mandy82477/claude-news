@@ -14,6 +14,17 @@
 
 保留天數與 emitted-cache 的 TTL 一致（14 天）。
 
+副本含「全部抓到的條目」而不只是通過管線的那批（2026-10-04 起）：
+- `items`        通過 dedup／relevance filter／emitted-cache 的條目，也就是送進主編分類的
+                 那批（與舊格式完全相同，既有讀者照舊只讀它）；每筆補 `emitted: true`、
+                 `blocked_by: null`。
+- `blocked_items` 抓到卻被擋下的條目（舊檔沒有這個 key），每筆帶 `emitted: false`、
+                 `blocked_by`（層名，見 news_aggregator.main.BLOCKED_LAYERS）、
+                 `blocked_detail`（留下那筆的 URL／首次刊出日）。
+- `archive_schema: 2` 標記此檔有記錄被擋條目；缺這個 key 的舊檔無從得知被擋了什麼，
+  與「沒有條目被擋」要分開看。
+此處的 emitted 指「通過抓料管線」，不是「被日報選入」——後者是主編／記者的編輯判斷。
+
 用法：
     python scripts/archive_gathered.py            # 歸檔 + 清理過期
     python scripts/archive_gathered.py --prune-only
@@ -22,7 +33,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -32,6 +42,27 @@ GATHERED = REPO_ROOT / "src" / "gathered_items.json"
 ARCHIVE_DIR = REPO_ROOT / "src" / "gathered_archive"
 NEWS_DIR = REPO_ROOT / "news"
 RETENTION_DAYS = 14
+
+
+ARCHIVE_SCHEMA = 2
+
+
+def annotate(data: dict) -> dict:
+    """為副本補上「是否通過管線」與「被擋理由」欄位（只加欄位，不刪不改既有欄位）。
+    items 內若不是 dict（舊測試夾具）就原樣保留。"""
+    for it in data.get("items") or []:
+        if isinstance(it, dict):
+            it.setdefault("emitted", True)
+            it.setdefault("blocked_by", None)
+    if "blocked_items" in data:
+        for it in data.get("blocked_items") or []:
+            if isinstance(it, dict):
+                it["emitted"] = False
+                it.setdefault("blocked_by", None)  # 管線沒記到理由時為 null
+                it.setdefault("blocked_detail", "")
+        data["archive_schema"] = ARCHIVE_SCHEMA
+        data["gathered_total"] = len(data.get("items") or []) + len(data.get("blocked_items") or [])
+    return data
 
 
 def prune(archive_dir: Path = ARCHIVE_DIR, today: date | None = None) -> list[str]:
@@ -59,7 +90,8 @@ def archive(gathered: Path = GATHERED, archive_dir: Path = ARCHIVE_DIR,
         print(f"跳過歸檔：{gathered} 不存在")
         return None
     try:
-        stamp = json.loads(gathered.read_text(encoding="utf-8"))["date"]
+        data = json.loads(gathered.read_text(encoding="utf-8"))
+        stamp = data["date"]
         date.fromisoformat(stamp)  # 驗證格式
     except Exception as e:
         print(f"跳過歸檔：無法從 {gathered.name} 讀出合法的 date 欄位（{e}）")
@@ -75,7 +107,7 @@ def archive(gathered: Path = GATHERED, archive_dir: Path = ARCHIVE_DIR,
         print(f"跳過歸檔：{target.relative_to(target.parent.parent)} 已存在且 news/{stamp}.md 已產出，"
               "不以同日較晚的抓料覆寫日報原料")
         return None
-    shutil.copyfile(gathered, target)
+    target.write_text(json.dumps(annotate(data), ensure_ascii=False, indent=2), encoding="utf-8")
     return target
 
 

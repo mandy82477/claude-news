@@ -13,7 +13,7 @@ from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "scripts"))
 
-from archive_gathered import archive, prune  # noqa: E402
+from archive_gathered import archive, prune, annotate  # noqa: E402
 
 
 class TestArchive(unittest.TestCase):
@@ -78,6 +78,52 @@ class TestArchive(unittest.TestCase):
             src = Path(d) / "gathered_items.json"
             src.write_text(json.dumps({"items": []}), encoding="utf-8")
             self.assertIsNone(archive(src, Path(d) / "archive"))
+
+
+class TestBlockedItems(unittest.TestCase):
+    """2026-10-04：副本要含被擋條目與理由，Q2 缺席偵測才能逐條判斷「擋得對嗎」。
+    2026-10-02 實測 funnel gathered 99／emitted 59，舊副本正好 59 筆。"""
+
+    def _archive(self, d, payload):
+        src = Path(d) / "gathered_items.json"
+        src.write_text(json.dumps(payload), encoding="utf-8")
+        target = archive(src, Path(d) / "archive")
+        return json.loads(target.read_text(encoding="utf-8"))
+
+    def test_blocked_items_kept_with_reason_and_flags(self):
+        with TemporaryDirectory() as d:
+            out = self._archive(d, {
+                "date": "2026-10-02", "article_count": 1,
+                "items": [{"url": "u1", "title": "a"}],
+                "blocked_items": [
+                    {"url": "u2", "title": "b", "blocked_by": "emitted_cache", "blocked_detail": "2026-09-30"},
+                    {"url": "u3", "title": "c", "blocked_by": "pr_wire"},
+                ],
+            })
+            self.assertEqual(out["archive_schema"], 2)
+            self.assertEqual(out["gathered_total"], 3)
+            self.assertEqual([i["url"] for i in out["items"]], ["u1"])
+            self.assertTrue(out["items"][0]["emitted"])
+            self.assertIsNone(out["items"][0]["blocked_by"])
+            self.assertEqual([(b["emitted"], b["blocked_by"]) for b in out["blocked_items"]],
+                             [(False, "emitted_cache"), (False, "pr_wire")])
+            self.assertEqual(out["blocked_items"][1]["blocked_detail"], "")
+
+    def test_old_format_stays_readable_and_unmarked(self):
+        """沒有 blocked_items 的舊格式：items 不變、不偽稱 schema 2（無從得知被擋什麼）。"""
+        with TemporaryDirectory() as d:
+            out = self._archive(d, {"date": "2026-10-02", "items": [{"url": "u1"}]})
+            self.assertNotIn("archive_schema", out)
+            self.assertNotIn("blocked_items", out)
+            self.assertEqual(out["items"][0]["url"], "u1")
+
+    def test_annotate_does_not_touch_existing_fields(self):
+        data = {"date": "x", "items": [{"url": "u", "emitted": True, "score": 5}]}
+        self.assertEqual(annotate(data)["items"][0]["score"], 5)
+
+    def test_unreasoned_blocked_item_gets_null_reason(self):
+        out = annotate({"items": [], "blocked_items": [{"url": "u"}]})
+        self.assertIsNone(out["blocked_items"][0]["blocked_by"])
 
 
 class TestPrune(unittest.TestCase):

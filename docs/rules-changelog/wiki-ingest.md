@@ -63,3 +63,7 @@
 **設計取捨：** 原料的 `dedup_key` 是變更偵測鍵、`contributors` 是已被併掉的來源，靠這兩欄聚不起同一事件，故加上標題顯著詞交集 ≥2 作第三條依據，誤併時同組其他則仍保留標題與日報段落。早期歸因存的是 Google News 跳轉網址，已收錄比對改用文章 id 前綴比對。slug 只認整串相等或「名稱 / 子來源」，否則「GitHub Search」會靠字首 GitHub 蒙混。
 
 **第一輪 review 修正（同日）：** 同事件聚合的標題規則首版（顯著詞 ≥2）在 09-24／25 原料上把 Reddit「prompt injection」貼文與 Salesforce 漏洞、「Opus 5.5 Costs 40% Less」與 Reddit 討論串等四對不同事件併在一起；改為顯著詞 ≥3（互為 contributors 時 ≥2）、詞長 ≥4、含數字與模型名一律不算，並以 09-24～09-26 三天回測人工確認零誤併（釘成測試）；主條目跨包一致（互動最高、同分取最早），同組其他則欄位齊全。收報腳本補全形分隔、段外標題結束欄位、巢狀括號、同批重複 close 去重、未回應清單改以標題／issue 編號比對；registry 兩組會假綠的配對刪除改由測試看守。Google News 摘要剝 HTML 後抓不到原文者會變成「標題 - 出版者」回聲：來源端改為回聲即空摘要、`check_classification_log._is_pure_shell` 加標題回聲判定，殼層排除閘才不會靜默失效。
+
+## 2026-10-04（ingest checklist 專案根）
+
+checklist 強制核對項與 SKILL 內一處仍寫 `CLAUDE_NEWS/wiki/`，改為「repo 根下的 `wiki/`」。見 claude-md-edit 沿革同日段。

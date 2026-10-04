@@ -122,7 +122,39 @@ test('a stale session no longer blocks, and edits are recorded as mine', async (
   expect(ok.deny).toBeUndefined()
 
   await $.tool.call({ tool: 'Edit', file_path: ROOT + '/wiki/new.md', old_string: 'a', new_string: 'b' })
-  expect(saved.get('touched:me')).toContain('wiki/new.md')
+  expect(saved.get('p:me:wiki/new.md')).toBe(1)
+})
+
+test('parallel edits in one session are all recorded (no read-modify-write loss)', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 3, 9) })
+  const saved = new Map<string, unknown>([
+    ['alive:other', Date.UTC(2026, 9, 3, 8, 50)],
+    // 另一個 session 的 Bash 前後比對把本 session 子代理改的檔誤記成它的
+    ['touched:other', ['wiki/a.md', 'wiki/b.md', 'wiki/c.md']],
+  ])
+  stubCommon(on, saved)
+  on('process.run', fakeGit({ behind: 0, dirty: ['wiki/a.md', 'wiki/b.md', 'wiki/c.md'] }))
+
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  await clock.advance(10)
+  // 三位記者同一時刻各自 Edit（同一個 sessionId）
+  await Promise.all(['a', 'b', 'c'].map((n) =>
+    $.tool.call({ tool: 'Edit', file_path: ROOT + '/wiki/' + n + '.md', old_string: 'x', new_string: 'y' })))
+  const ok: any = await $.tool.call({ tool: 'Bash', command: 'git add wiki/a.md wiki/b.md wiki/c.md && git commit -m x' })
+  expect(ok.deny).toBeUndefined()
+})
+
+test('per-file keys of a session dead for a day are pruned at start', async ($, on) => {
+  mock.clock(on, { now: Date.UTC(2026, 9, 5, 9) })
+  const saved = new Map<string, unknown>([
+    ['alive:gone', Date.UTC(2026, 9, 3, 9)],
+    ['p:gone:wiki/x.md', 1],
+  ])
+  stubCommon(on, saved)
+  on('process.run', fakeGit({ behind: 0, dirty: [] }))
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  expect(saved.has('p:gone:wiki/x.md')).toBe(false)
+  expect(saved.has('alive:gone')).toBe(false)
 })
 
 test('outside the CLAUDE_NEWS tree the mod is inert', async ($, on) => {

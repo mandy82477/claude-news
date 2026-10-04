@@ -136,6 +136,37 @@ def _map_prefix_to_registered(prefix: str, registered: list[str]) -> str | None:
     return None
 
 
+BLOCKED_SUMMARY_MAX = 500
+
+# 被擋理由的層（blocked_by）。每層對應管線一個會丟條目的步驟：
+#   dedup_url / dedup_title  去重合併（detail = 留下那筆的 URL）
+#   after_window             補跑時發布時間晚於目標日（detail = ""）
+#   pr_wire / gnews_off_topic  filter.py 規則（detail = ""）
+#   emitted_cache            先前日報已刊出且分數未重燃（detail = 首次刊出日）
+BLOCKED_LAYERS = ("dedup_url", "dedup_title", "after_window", "pr_wire",
+                  "gnews_off_topic", "emitted_cache")
+
+
+def blocked_record(item, layer: str, detail: str = "") -> dict:
+    """One gathered item that never reached `gathered_items.json["items"]`.
+
+    Persisted under the additive top-level key `blocked_items`, so the archive can
+    answer "擋得對嗎" item by item (Q2 缺席偵測)."""
+    summary = item.summary or ""
+    return {
+        "title": item.title,
+        "url": item.url,
+        "source": item.source,
+        "published": item.published.strftime("%m/%d %H:%M UTC") if item.published else "",
+        "score": item.score,
+        "score_unit": item.score_unit,
+        "summary": summary[:BLOCKED_SUMMARY_MAX],
+        "dedup_key": item.dedup_key,
+        "blocked_by": layer,
+        "blocked_detail": detail,
+    }
+
+
 def write_funnel_record(path, date, mode, lookback_hours, source_status,
                         filtered_items, emitted_items) -> None:
     """Append one JSON line of per-source funnel stats to `path`.
@@ -316,13 +347,17 @@ def main() -> None:
                 source_status[name] = {"ok": False, "count": 0}
                 logger.warning("%s: fetch raised unexpected exception: %s", name, e)
 
-    deduped = deduplicate(all_items)
+    blocked: list[tuple] = []  # (item, layer, detail) — 每個丟條目的步驟都記一筆
+    deduped = deduplicate(all_items, dropped=blocked)
     logger.info("After dedup: %d items (was %d)", len(deduped), len(all_items))
 
     # Backfill: drop articles published AFTER the target day ends
     if until_dt is not None:
         before_clip = len(deduped)
-        deduped = [it for it in deduped if it.published is None or it.published < until_dt]
+        kept_in_window = [it for it in deduped if it.published is None or it.published < until_dt]
+        _kept_ids = {id(it) for it in kept_in_window}
+        blocked.extend((it, "after_window", "") for it in deduped if id(it) not in _kept_ids)
+        deduped = kept_in_window
         logger.info("Clipped to %s window: %d → %d items", args.date, before_clip, len(deduped))
 
     try:
@@ -332,7 +367,7 @@ def main() -> None:
         enriched = deduped
     logger.info("Enrichment done: %d items", len(enriched))
 
-    filtered = filter_relevant(enriched)
+    filtered = filter_relevant(enriched, dropped_out=blocked)
     logger.info("After relevance filter: %d items", len(filtered))
     relevance_filtered = filtered  # snapshot for funnel stats (pre emitted-cache)
 
@@ -346,7 +381,8 @@ def main() -> None:
         if args.gather_only and not args.date:
             emitted = prune_expired(load_cache(), today=target_date)
             before_cache = len(filtered)
-            filtered, updated_cache = filter_new_or_reignited(filtered, emitted, today=target_date)
+            filtered, updated_cache = filter_new_or_reignited(
+                filtered, emitted, today=target_date, dropped=blocked)
             logger.info("Emitted-cache filter: %d → %d items", before_cache, len(filtered))
         else:
             logger.info("Emitted-cache filter: skipped for backfill (--date %s)", args.date)
@@ -384,6 +420,10 @@ def main() -> None:
                 }
                 for it in filtered
             ],
+            # Additive: every item gathered but NOT in `items`, with the layer that
+            # blocked it. `items` stays exactly the to-classify list (readers such as
+            # check_classification_log iterate it); this key is for audit only.
+            "blocked_items": [blocked_record(it, layer, detail) for it, layer, detail in blocked],
         }
         gather_path = LOG_DIR.parent / "gathered_items.json"
         gather_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")

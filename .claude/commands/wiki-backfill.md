@@ -54,7 +54,7 @@ argument-hint: YYYY-MM-DD [YYYY-MM-DD]
 
 ## 注意事項
 
-- 所有 wiki 檔案只能建立或修改在 `CLAUDE_NEWS/wiki/` 路徑下
+- 所有 wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內
 - `log.md` 只能 append，不可修改既有條目
 - `news/` 目錄唯讀，不可修改
 - 每次修改頁面都必須更新「最後更新」欄位

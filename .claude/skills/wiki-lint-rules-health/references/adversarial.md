@@ -1,6 +1,6 @@
 # Wiki Lint — 對抗輪（月度）派工範本
 
-`/wiki-lint` 步驟 6j 由**主編**於每月首次 lint 載入（判斷方式同月度蒸餾：`wiki/log.md` 本月尚無 `Lint` 記錄）。其餘週次不讀此檔。
+`/wiki-lint` 步驟 6j 由**主編**於每月首次 lint 載入（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」：讀 `wiki/metrics.md` 產出物，不讀 `wiki/log.md` 執行記錄）。其餘週次不讀此檔。
 
 ---
 
@@ -38,6 +38,8 @@ wiki 三頁用 `python -c "import random;random.seed('YYYY-Wnn');..."` 從 `wiki
 
 ## 收報後
 
-- 🔴🟡 逐項修，修完**用原 agent（SendMessage）複審**直到「無阻擋意見」——不重派，保留上下文
+- **處置依環境分兩種，四處同一口徑**（本檔、`.claude/skills/wiki-lint-rules-health/SKILL.md` 6j 與邊界節、`docs/cloud-runbooks/weekly-lint.md`）：
+  - **wiki 頁面的事實缺陷**（冷讀者抓到的錯日期、斷言無據）：本機與雲端都當場修，記進步驟 8「修正矛盾」
+  - **規則檔缺陷（🔴🟡）**：**本機**（使用者在場的 `/wiki-lint`、`/weekly`）逐項呈給使用者、確認後修，修完**用原 agent（SendMessage）複審**直到「無阻擋意見」——不重派，保留上下文；**雲端無人值守只回報**，不改 `.claude/`，每項連同 reviewer 給的**修訂文字原文**寫進步驟 8 的待使用者確認區（只留摘要，本機接手時就得從頭重寫修法）
 - 每項發現判斷：既有檢查該抓而沒抓 → `lint_health.py misses add --why 考卷內抽樣不足|檢查失效`；沒有對應檢查 → `--why 無對應檢查`，並評估是否值得加機械檢查或題庫加題
 - 對抗輪結果寫入步驟 8 的 `對抗輪（6j）` 行；本輪發現的類型分佈附一句（「規格改了機器沒跟 5／新舊打架 2／…」）
