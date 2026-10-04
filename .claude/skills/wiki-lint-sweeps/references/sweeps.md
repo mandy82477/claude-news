@@ -159,10 +159,10 @@
 
 ## 5f. devpractice 週彙整（主編派工）
 
-六記者收報**之後**（功能記者的 guide 清冊週更、社群記者的 tools 策展已完成，寫入不會互踩），派 devpractice 記者做週彙整。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段：
+六記者收報**之後**（社群記者的 tools 策展與 patterns 更新已完成），派 devpractice 記者做週彙整。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段：
 
 ```
-你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **weekly 彙整**（三件事：本週 coding 亮點、guide 社群面待補逐段深查、coding 跨頁對帳）。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **weekly 彙整**（兩件事：手冊週更、coding 跨頁對帳）。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
 ```
 
 收報後：「⚠️ 需主編轉知」逐筆登 `data/pending-handoffs.jsonl`；回報摘要記入 Step 8 log 一行 `devpractice 週彙整：…`。

@@ -810,7 +810,7 @@
       "name": "coding-workflow-guide 觸發邊與軸線鐵則（吃技能清冊非新聞，類別路由接不到；且不得改以開發領域分欄——官方技能本身不按領域切，照領域組織會產出大量空格）",
       "assertion": "all_contain",
       "files": [
-        ".claude/reporter-rules/features/pages.md"
+        ".claude/reporter-rules/devpractice/pages.md"
       ],
       "patterns": [
         "coding-workflow-guide",
@@ -895,7 +895,7 @@
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-ingest/references/classification.md",
-        ".claude/reporter-rules/features/pages.md",
+        ".claude/reporter-rules/devpractice/pages.md",
         ".claude/reporter-rules/community/daily.md"
       ],
       "patterns": [

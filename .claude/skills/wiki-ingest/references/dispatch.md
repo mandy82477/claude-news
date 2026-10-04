@@ -48,6 +48,8 @@
 你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **daily 沉澱**。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
 ```
 
+當日有 `data/ingest-packets/[YYYY-MM-DD]/開發實務.md` 時，首段之後原樣貼入該包全文（末行 `END` 要在）；沒有就只給首段。
+
 ## 4c market 判讀 prompt 首段
 
 ```

@@ -53,7 +53,7 @@ RECENT_DAYS = 14
 # rule 欄位＝該頁觸發邊的明文出處，登記時必須填得出來，否則不得列入。
 DERIVED_PAGES = {
     "topics/coding-workflow-guide":
-        ".claude/reporter-rules/features/daily.md（週更，吃官方技能清冊與社群工具策展，非新聞條目）",
+        ".claude/reporter-rules/devpractice/pages.md（開發實務記者週更，吃候選帳本、官方技能清冊與社群工具策展）",
     "topics/community-tech-tools":
         ".claude/reporter-rules/community/weekly.md（週策展，讀近 7–14 天日報）",
     "topics/community-pattern-trends":

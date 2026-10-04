@@ -46,6 +46,10 @@ REGISTRY = ROOT / "data" / "source_registry.json"
 ATTRIBUTION = ROOT / "data" / "source_attribution.jsonl"
 
 CATEGORY_ORDER = ("模型", "功能", "商業", "安全政策", "社群", "人物")
+# 衍生記者也收派工包的類別：官方使用指南的家是 coding-workflow-guide，由開發實務記者維護。
+# 六類 prompt 不含它——這份包隨 4b 派出（.claude/skills/wiki-ingest/SKILL.md）。
+DERIVED_ROUTED = ("開發實務",)
+ROUTABLE = (*CATEGORY_ORDER, *DERIVED_ROUTED)
 EXCLUDED_NAME = "排除"
 MAX_CHARS = 25_000
 SUMMARY_MAX = 240
@@ -386,7 +390,7 @@ def validate_routing(routing: dict, items: list[dict], entries) -> list[str]:
         if not isinstance(cats, list):
             problems.append(f"categories 必須是陣列：{u}")
             continue
-        bad = [c for c in cats if c not in CATEGORY_ORDER]
+        bad = [c for c in cats if c not in ROUTABLE]
         if bad:
             problems.append(f"未知類別 {bad}：{u}")
         if not cats and not str(v.get("reason") or "").strip():
@@ -563,7 +567,7 @@ def build_packets(date: str, items: list[dict], routing: dict, digest_text: str,
     routed = [it for it in items if routing[it["url"]].get("categories")]
     groups = [(g, pick_main(g)) for g in group_items(routed)]
     out: dict[str, list[str]] = {}
-    for cat in CATEGORY_ORDER:
+    for cat in ROUTABLE:
         blocks = []
         n_items = 0
         for g, main in groups:
@@ -586,7 +590,7 @@ def packet_filenames(name: str, n_parts: int) -> list[str]:
 
 def write_packets(out_dir: Path, packets: dict[str, list[str]]) -> list[tuple[Path, int, str]]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    for name in (*CATEGORY_ORDER, EXCLUDED_NAME):  # 清掉上一輪同名包，免得切份數變了留下舊份
+    for name in (*ROUTABLE, EXCLUDED_NAME):  # 清掉上一輪同名包，免得切份數變了留下舊份
         for old in [out_dir / f"{name}.md", *out_dir.glob(f"{name}-*.md")]:
             if old.exists():
                 old.unlink()

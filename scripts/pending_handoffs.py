@@ -50,7 +50,8 @@ DOMAIN_TO_CATEGORY = {"模型": "模型", "工具/功能": "功能", "商業": "
                       "政策/安全": "安全政策", "社群": "社群", "人物": "人物"}
 # 領域欄推不出真正負責人的頁：market-signals 領域是商業、由投資分析記者維護
 # （.claude/reporter-rules/commercial/daily.md）；feature-radar 不在目錄表，歸功能記者
-OWNER_OVERRIDES = {"topics/market-signals": "投資分析", "feature-radar": "功能"}
+OWNER_OVERRIDES = {"topics/market-signals": "投資分析", "feature-radar": "功能",
+                   "topics/coding-workflow-guide": "開發實務"}
 _WIKILINK = re.compile(r"\[\[([^\]|#]+)")
 _PARENT = re.compile(r'^parent:[ \t]*"?([^"\r\n]*?)"?[ \t]*$', re.MULTILINE)
 

@@ -75,7 +75,7 @@ python scripts/build_ingest_packets.py --date TARGET_DATE --routing data/ingest-
 
 ### 3. 派工（Agent tool）
 
-**對每個有條目的類別，呼叫 Agent tool**，同批**加派分類複核記者**（覆核步驟 2 產出的 `排除.md`，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+**對六類中每個有條目的類別，呼叫 Agent tool**（`開發實務.md` 不在這一步派，見 4b），同批**加派分類複核記者**（覆核步驟 2 產出的 `排除.md`，prompt 見 `.claude/skills/wiki-ingest/references/dispatch.md`「3b」；當日排除 0 則則不派，完成摘要記「排除 0 則，未派複核」）。有多個類別時，在同一訊息中同時發出所有 Agent 呼叫（並行執行）。每個呼叫一律 **`subagent_type: "general-purpose"` + `model: "sonnet"`**（本機與雲端唯一正典派工路徑，理由見 `.claude/skills/wiki-ingest/references/classification.md`「派工方式」；sonnet 因分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 > ⚠️ **記者的完成通知只回得到最上層 session**：派工者必須是最上層 session（本機主 session 或雲端頂層），不可由背景 agent 代派。Agent 工具還有 `run_in_background` 參數時明寫 `false`；2.1.288 起已無此參數、子 agent 一律背景，等完成通知即可。`.claude/hooks/guard_roles.py` 只擋明確設 `true` 的派工。
 
@@ -107,7 +107,7 @@ python scripts/collect_reporter_reports.py --date TARGET_DATE data/ingest-packet
 
 ### 4b. devpractice 沉澱派工（主編）
 
-彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他不吃日報條目，吃**本輪 ingest 寫進 wiki 的 diff**，所以必須排在彙整之後。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`。
+彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他吃**其他記者寫進 wiki 的新增行**，所以必須排在彙整之後。當日派工包目錄 `data/ingest-packets/TARGET_DATE/` 裡有 `開發實務.md`（官方使用指南條目）時，prompt 首段之後貼入該包全文，他會把這幾則寫進 `wiki/topics/coding-workflow-guide.md`；回報存進步驟 4 的 `reports/` 夾並重跑收報腳本落帳。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`。
 
 收報後把「候選 N 筆／本日無候選」記入 log.md 本次 ingest 紀錄一行 `devpractice 沉澱：…`；`data/devpractice-candidates.jsonl` 與 `data/devpractice_state.json` 併入收尾 commit（雲端與本機共用同一條 diff 基準線，不 commit 會斷）。
 

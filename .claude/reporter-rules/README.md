@@ -6,14 +6,14 @@ wiki 記者 subagent 與 ingest／lint 主編**明文 Read** 的規則檔。**�
 
 | 記者 | daily | weekly | pages | 負責頁數 |
 |---|---|---|---|---|
-| features（🛠️ 工具/功能） | ✅ | —（週更動作寫在 pages.md 的 coding-workflow-guide 節） | ✅ 7 節 | 12 |
+| features（🛠️ 工具/功能） | ✅ | — | ✅ 6 節 | 11 |
 | community（🌐 社群） | ✅ | ✅ | ✅ 3 節 | 6 |
 | commercial（💼 商業） | ✅ | ✅（主編層：pricing 通路與乘數） | ✅ 6 節 | 6 |
 | models（🤖 模型） | ✅ | — | ✅ 3 節 | 7 |
 | market（投資分析，不在分類路由內） | ✅ | ✅（主編層：回顧結算＋教材頁） | ✅ 1 節 | 1 |
 | people（👤 人物） | ✅ | — | —（無結論表） | 4 |
 | safety-policy（🏛️ 政策/安全） | ✅ | — | ✅ 2 節 | 3 |
-| devpractice（開發實務，不在分類路由內） | ✅ | ✅ | —（每日不寫頁） | 0（週更寫 guide 一節） |
+| devpractice（開發實務，只收官方使用指南一種條目） | ✅ | ✅ | ✅ 1 節 | 1（coding-workflow-guide，領域欄為工具/功能的例外） |
 
 「負責頁數」是 `daily.md`「負責頁面」表的明列頁數；每位記者實際認領的是 `wiki/index.md` 中領域等於自己那一組的所有頁面（含子頁與日後新增）。
 

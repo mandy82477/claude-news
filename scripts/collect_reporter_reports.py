@@ -48,8 +48,9 @@ PACKETS = ROOT / "data" / "ingest-packets"
 
 CATEGORIES = ("模型", "功能", "商業", "安全政策", "社群", "人物")
 MARKET = "投資分析"  # 4c 衍生記者：不吃分類路由、沒有派工包、回報少「分類回退」欄，歸因類別寫「投資分析」
-REPORTERS = (*CATEGORIES, MARKET)
-HANDOFF_CATEGORIES = (*CATEGORIES, MARKET, "開發實務")
+DEVPRACTICE = "開發實務"  # 4b 衍生記者：有官方使用指南條目時才有派工包；回報沒有「分類回退」欄
+REPORTERS = (*CATEGORIES, MARKET, DEVPRACTICE)
+HANDOFF_CATEGORIES = REPORTERS
 CORE_FIELDS = ("更新頁面", "feature-radar 新增", "index.md 狀態變更", "新增頁面", "同步自查",
                "待查證命中處置", "轉知處置", "分類回退", "來源歸因")
 # 投資分析記者的專屬欄（.claude/reporter-rules/market/daily.md）也要認得，否則會被併進上一欄
@@ -504,7 +505,7 @@ def main(argv: list[str] | None = None) -> int:
 
     for r in reports:
         cat, fields = r["category"], r["fields"]
-        required = [f for f in CORE_FIELDS if not (cat == MARKET and f == "分類回退")]
+        required = [f for f in CORE_FIELDS if not (cat in (MARKET, DEVPRACTICE) and f == "分類回退")]
         missing = [f for f in required if f not in fields]
         if missing:
             warns.append(f"[{cat}] 回報缺欄：{'、'.join(missing)}（{r['file'].name}）")
@@ -551,6 +552,8 @@ def main(argv: list[str] | None = None) -> int:
         if cat == MARKET:
             continue  # 投資分析記者吃整份日報、沒有派工包，不做 URL 對帳
         pk = packet_entries(packet_dir, cat)
+        if pk is None and cat == DEVPRACTICE:
+            continue  # 當日沒有官方使用指南條目就沒有包，不是缺包
         if pk is None:
             warns.append(f"[{cat}] 找不到派工包 {packet_dir}/{cat}.md，URL 對帳略過")
             continue

@@ -14,6 +14,8 @@
 用法：
     python scripts/devpractice_diff.py show   # 印出上次以來 wiki/ 的新增行（依檔案分組）
     python scripts/devpractice_diff.py mark   # 把基準線推進到目前 HEAD
+    python scripts/devpractice_diff.py pending  # 列出還沒寫進手冊的候選（不看日期，看游標）
+    python scripts/devpractice_diff.py consume  # 把游標推到帳本尾端（處理完才跑）
 
 失敗模式處理：
 - 狀態檔缺失／sha 已不在歷史中（rebase、force push）→ 退回「48 小時前的 commit」
@@ -29,7 +31,9 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 STATE = ROOT / "data" / "devpractice_state.json"
 # log.md 是編輯部日誌、index.md 是路由層——都不是新聞內容，撿了只會混入雜訊
-EXCLUDE = ("wiki/log.md", "wiki/index.md")
+# coding-workflow-guide 是本記者自己寫的頁——不排除的話，今天寫進去的明天會被自己再撿一次
+EXCLUDE = ("wiki/log.md", "wiki/index.md", "wiki/topics/coding-workflow-guide.md")
+LEDGER = ROOT / "data" / "devpractice-candidates.jsonl"
 MAX_LINES_PER_FILE = 120  # 單檔新增行上限，防單頁大改版灌爆輸出
 
 
@@ -111,11 +115,57 @@ def mark():
         print("⚠️ 取不到 HEAD")
         return 1
     STATE.parent.mkdir(parents=True, exist_ok=True)
-    STATE.write_text(json.dumps({
-        "last_sha": head,
-        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    state = _load_state()
+    state["last_sha"] = head
+    state["updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    _save_state(state)
     print(f"基準線已推進：{head[:10]}")
+    return 0
+
+
+def _load_state() -> dict:
+    if STATE.exists():
+        try:
+            data = json.loads(STATE.read_text(encoding="utf-8"))
+            if isinstance(data, dict):
+                return data
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {}
+
+
+def _save_state(state: dict) -> None:
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def _ledger_lines() -> list[str]:
+    if not LEDGER.exists():
+        return []
+    return [ln for ln in LEDGER.read_text(encoding="utf-8").splitlines() if ln.strip()]
+
+
+def pending():
+    """帳本裡游標之後的候選。游標記的是「已處理到第幾行」，不是日期——
+    哪一週沒跑，下次照樣從上次停下的地方讀，不會落在七天窗外。"""
+    lines = _ledger_lines()
+    done = int(_load_state().get("consumed_lines") or 0)
+    if done > len(lines):  # 帳本被截短（不該發生）→ 全部重讀，寧可重看不可漏看
+        done = 0
+    rest = lines[done:]
+    print(f"候選帳本 {len(lines)} 行，已處理 {done} 行，待處理 {len(rest)} 行")
+    for ln in rest:
+        print(ln)
+    return 0
+
+
+def consume():
+    n = len(_ledger_lines())
+    state = _load_state()
+    state["consumed_lines"] = n
+    state["consumed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    _save_state(state)
+    print(f"候選游標已推到第 {n} 行")
     return 0
 
 
@@ -129,6 +179,10 @@ def main():
         return show()
     if cmd == "mark":
         return mark()
+    if cmd == "pending":
+        return pending()
+    if cmd == "consume":
+        return consume()
     print(__doc__)
     return 2
 

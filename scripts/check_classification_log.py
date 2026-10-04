@@ -40,7 +40,7 @@ LOG = ROOT / "data" / "classification-log.jsonl"
 ARCHIVE = ROOT / "src" / "gathered_archive"
 RETENTION_DAYS = 14  # 與 scripts/archive_gathered.py 的保留窗一致
 
-CATEGORIES = {"模型", "功能", "商業", "安全政策", "社群", "人物"}
+CATEGORIES = {"模型", "功能", "商業", "安全政策", "社群", "人物", "開發實務"}
 _DATE_IN_RAW = re.compile(r'"date"\s*:\s*"(\d{4}-\d{2}-\d{2})"')
 # 只認原料摘要實際會殘留的標籤形態（HN／Reddit／Google News RSS 的 HTML），不認任意
 # 標籤名：摘要正當談到 <canvas>、<div> 是本站題材常態，不能被當成殘留擋掉

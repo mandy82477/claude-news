@@ -62,6 +62,7 @@ GATES: list[tuple[str, str]] = [
     ("check_no_llm_calls.py", "LLM 呼叫靜態閘"),
     ("check_append_only.py", "append-only 檔頭插入閘"),
     ("check_mods.py", "本機 mod 驗證閘"),
+    ("check_devpractice_state.py", "開發實務狀態檔進 git 閘"),
 ]
 
 
