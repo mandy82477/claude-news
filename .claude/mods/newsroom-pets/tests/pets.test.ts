@@ -104,7 +104,9 @@ test('idle: the editor naps in two rows, and wakes up full size when writing', a
   mock.clock(on, { now: 1000 })
   stubs(on)
   await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
-  const idle = await $.ui.mount(BAND)
+  // BAND 預設 isWorking: true（Claude 在想事情時主編醒著）；睡覺要模擬 Claude 沒在工作
+  const IDLE = { ...BAND, props: { ...BAND.props, isWorking: false } }
+  const idle = await $.ui.mount(IDLE)
   expect(await idle.find({ type: 'Text', text: '主編 zZ' })).toBeDefined()
   expect(await idle.find({ type: 'Text', text: 'other mods' })).toBeDefined()
   await idle.unmount()

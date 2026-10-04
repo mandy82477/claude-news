@@ -54,7 +54,8 @@ export function actionOf(tool: string, input: any, rel: string | null): { action
 
 function hostOf(url: unknown): string {
   try {
-    return new URL(String(url)).host.slice(0, 16)
+    // 只去掉 www.，不截斷：截成 16 字會變成 'platform.claude.'，看不出是哪個站；卡片寬度由 Text 的 truncate-end 處理
+    return new URL(String(url)).host.replace(/^www\./, '')
   } catch {
     return 'web'
   }
@@ -68,7 +69,9 @@ export function outcomeOf(action: Action, result: any): Action | null {
   if (!result) return null
   if (result.deny || result.isError) return 'sweat'
   if (action !== 'check') return null
-  const text = [result.stdout, result.stderr, typeof result.result === 'string' ? result.result : '']
+  // tool.call 的 next(e) 回 { result: <工具結果> }；Bash 的工具結果是 { stdout, stderr } 物件，要往內拆一層
+  const inner = result.result && typeof result.result === 'object' ? result.result : {}
+  const text = [result.stdout, result.stderr, inner.stdout, inner.stderr, typeof result.result === 'string' ? result.result : '']
     .filter((x) => typeof x === 'string').join('\n')
   if (/FAIL|❌|FAILED|exit=?1\b/.test(text)) return 'red'
   if (/\bOK\b|✅|全數通過|全綠/.test(text)) return 'thumbs'

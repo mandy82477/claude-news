@@ -35,6 +35,9 @@ test('outcomes: blocked sweats, red gate says 閘紅, green gate gives a thumbs 
   expect(outcomeOf('check', { stdout: 'OK: 1162 個測試案例全數通過' })).toBe('thumbs')
   expect(outcomeOf('write', { stdout: 'FAIL in content' })).toBe(null)
   expect(outcomeOf('check', undefined)).toBe(null)
+  // tool.call 的 next(e) 實際回的形狀：工具結果包在 result 裡
+  expect(outcomeOf('check', { result: { stdout: 'FAILED: 1 個失敗', stderr: '' } })).toBe('red')
+  expect(outcomeOf('check', { result: { stdout: 'OK: 全數通過', stderr: '' } })).toBe('thumbs')
 })
 
 test('every action draws a full-size sprite that splits into 4 half-block rows', async () => {
@@ -65,7 +68,7 @@ test('main session running scripts wakes the editor with the right verb', async 
   mock.clock(on, { now: 1000 })
   on('session.start', () => ({ cwd: ROOT }))
   on('session.root', () => ({ value: ROOT }))
-  on('fs.exists', ($: any, e: any) => ({ value: /ingest_gate\.py$|wiki[\/]log\.md$/.test(e.path) }))
+  on('fs.exists', ($: any, e: any) => ({ value: /ingest_gate\.py$|wiki[\\/]log\.md$/.test(e.path) }))
   on('tool.call', ($: any, e: any) => ({ result: e.tool === 'Bash' ? { stdout: 'OK: 全數通過', stderr: '' } : 'ok' }))
   on('ui.render', () => ({ type: 'Text', props: {}, children: ['other mods'] }))
   await $.session.start({ surface: 'terminal', isInteractive: true, cwd: ROOT })
