@@ -36,7 +36,7 @@ python scripts/list_digest_omissions.py --date TARGET_DATE
 python scripts/scan_pending_verifications.py TARGET_DATE
 ```
 
-輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。規格見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
+輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。「開發實務」組隨 4b 附給開發實務記者。規格見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
 
 **再取轉知待接手清單：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
 
@@ -109,7 +109,7 @@ python scripts/collect_reporter_reports.py --date TARGET_DATE data/ingest-packet
 
 彙整完成後（wiki 檔案已定稿），派 devpractice 記者做每日沉澱——他吃**其他記者寫進 wiki 的新增行**，所以必須排在彙整之後。當日派工包目錄 `data/ingest-packets/TARGET_DATE/` 裡有 `開發實務.md`（官方使用指南條目）時，prompt 首段之後貼入該包全文，他會把這幾則寫進 `wiki/topics/coding-workflow-guide.md`；回報存進步驟 4 的 `reports/` 夾並重跑收報腳本落帳。以 `subagent_type: "general-purpose"` + 明寫 `model` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`。
 
-收報後把「候選 N 筆／本日無候選」記入 log.md 本次 ingest 紀錄一行 `devpractice 沉澱：…`；`data/devpractice-candidates.jsonl` 與 `data/devpractice_state.json` 併入收尾 commit（雲端與本機共用同一條 diff 基準線，不 commit 會斷）。
+收報後把「候選 N 筆／本日無候選；手冊寫入 M 則」記入 log.md 本次 ingest 紀錄一行 `devpractice 沉澱：…`；`data/devpractice-candidates.jsonl` 與 `data/devpractice_state.json` 併入收尾 commit（雲端與本機共用同一條 diff 基準線，不 commit 會斷）。
 
 ### 4c. market 判讀派工（主編）
 

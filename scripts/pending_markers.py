@@ -508,7 +508,14 @@ def page_domain(path: Path) -> str | None:
     return m.group(1).strip() if m else None
 
 
+# 領域欄推不出真正負責人的頁（同 pending_handoffs.OWNER_OVERRIDES）：手冊領域是工具/功能、由開發實務記者維護
+PAGE_TO_REPORTER = {"topics/coding-workflow-guide": "wiki-reporter-devpractice"}
+
+
 def reporter_of(path: Path) -> str | None:
+    override = PAGE_TO_REPORTER.get(page_slug(path))
+    if override:
+        return override
     domain = page_domain(path)
     return DOMAIN_TO_REPORTER.get(domain) if domain else None
 

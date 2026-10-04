@@ -22,6 +22,8 @@ collect = load_script_module("collect_reporter_reports")
 ph = load_script_module("pending_handoffs")
 diff = load_script_module("devpractice_diff")
 gate = load_script_module("check_devpractice_state")
+pm = load_script_module("pending_markers")
+spv = load_script_module("scan_pending_verifications")
 
 GUIDE_URL = "https://docs.test/usage-guide"
 
@@ -90,6 +92,12 @@ class TestOwner(unittest.TestCase):
     def test_guide_owner_is_devpractice_despite_domain_column(self):
         self.assertEqual(ph.OWNER_OVERRIDES.get("topics/coding-workflow-guide"), "開發實務")
         self.assertEqual(ph.owner_of("topics/coding-workflow-guide")[0], "開發實務")
+
+    def test_pending_hits_on_guide_go_to_devpractice(self):
+        guide = pm.WIKI_DIR / "topics" / "coding-workflow-guide.md"
+        self.assertEqual(pm.reporter_of(guide), "wiki-reporter-devpractice")
+        self.assertEqual(spv.REPORTER_LABEL[pm.reporter_of(guide)], "開發實務")
+        self.assertEqual(pm.reporter_of(pm.WIKI_DIR / "entities" / "claude-code.md"), "wiki-reporter-features")
 
 
 def _git(repo, *args):

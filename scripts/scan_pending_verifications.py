@@ -79,6 +79,7 @@ REPORTER_LABEL = {
     "wiki-reporter-safety-policy": "安全政策",
     "wiki-reporter-community": "社群",
     "wiki-reporter-people": "人物",
+    "wiki-reporter-devpractice": "開發實務",
 }
 # 顯示順序依 DOMAIN_TO_REPORTER 的 domain 插入順序（模型/功能/商業/安全政策/社群/人物），
 # 但要轉成中文標籤——`DOMAIN_TO_REPORTER.values()` 是 reporter slug 不是標籤，

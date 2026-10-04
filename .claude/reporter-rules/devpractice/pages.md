@@ -24,11 +24,11 @@
 
 **週更動作：**
 
-1. **候選落地**：`python scripts/devpractice_diff.py pending` 列出的每一筆，問「它改變了哪個流程階段的做法」。答得出 → 改那一段，事實細節仍以 wikilink 指回原頁；答不出 → 不寫。全部看完才跑 `python scripts/devpractice_diff.py consume`。
+1. **候選落地**：`python scripts/devpractice_diff.py pending` 列出的每一筆，問「它改變了哪個流程階段的做法」。答得出 → 先開候選的原頁確認現況（issue 可能已修、說法可能已被更正，帳本那一句是撿到當天的狀態），再改那一段，事實細節以 wikilink 指回原頁；答不出、或原頁已不支持 → 不寫。全部看完才跑 `python scripts/devpractice_diff.py consume`。
 2. **技能清冊**：讀 `Official Skills` 來源近 7 天條目（`src/news_aggregator/sources/official_skills_repos.py` 偵測到的清冊異動）。屬工程流程階段的新 skill 補入流程表；屬產出物格式補入格式表；屬非工程用途不進本頁。清冊有增減時，同步自查寫「⚠️ 需主編轉知功能記者：`entities/claude-skills` 生態動態」。
 3. **官方涵蓋不到的地方**：已被新官方 skill 覆蓋的列移除，同步自查寫「⚠️ 需主編轉知功能記者：`official-community-gap` 矩陣」。
 4. **「深入」節的技巧回訪**：比對近 7 天 `community-tech-patterns` 新節點，判斷有無解掉、取代或補強「探索時常撞到的問題」表中某一列。有則更新該列，無則不動。
-5. **「社群面待補」段**：候選最多的那一段優先補，用庫內證據（候選帳本、`community-tech-patterns`、`community-tech-tools`、近 30 天 `news/*.md`）。有證據就補並標來源與日期，該段標記升為 `[已補：庫內證據]`；查無就不動，回報寫已查範圍。
+5. **缺口回訪**：段內寫著「還沒解掉」「缺什麼」的缺口，本週候選或 `community-tech-patterns` 有對應證據才補，補了標來源與日期；沒有就不動，不拿通用工程常識填。
 6. **本週 coding 亮點**：覆寫，至多三條，只放本週真的改了正文的地方，每條一句加指向該段的錨點。本週正文沒動就留一行 `> 本週無新亮點（YYYY-MM-DD 檢查）`。
 7. 清冊查證日更新於「參考來源」。清冊性更新不動「最後新聞更新」；當日有官方使用指南寫入時才動。
 
