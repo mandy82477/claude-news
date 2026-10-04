@@ -90,6 +90,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 - **issue #91870**：官方追蹤串（原提案「Mods - make Claude 10x more extensible」），出貨當日累積 233 則留言、218 個讚，官方表示逐一處理使用者回饋。
 - **statuslin.es**：Show HN 的 Claude Code status line 樣式庫，收錄見 [[topics/community-tech-patterns]]。
 - **statuslin.es 作者的 mod**：10-02 用 Mods 的 function hooks 把狀態列延伸進 Claude 桌面 App；HN 2 分＋Reddit r/ClaudeCode 轉發，訊號薄弱，見 [[topics/community-tech-discussions]]。
+- **競品相容層**：Pandaily（經 Google News 轉載，2026-10-04，僅標題可用）報導競品 DeepSeek Harness v0.2.1-alpha.1 新增實驗性 Claude Code Mods 相容層；相容範圍與技術細節未見報導，單一來源。
 
 ## 相關議題
 

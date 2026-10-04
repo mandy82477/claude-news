@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-04
+**最後新聞更新：** 2026-10-04
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-03）
+> **本週衝擊**（2026-10-04）
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
 | **Microsoft／GitHub** 🏢 | Copilot CLI／桌面版公開預覽新增 computer use，可代操作桌面應用程式；同日新增可程式碼定義的動態工作流程編排（10-01）→ Claude Code 尚無對應桌面操作能力 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；兩項功能均為公開預覽／初次發布，缺採用規模與穩定性數據 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
-| **DeepSeek** 🏢 | Harness 開源＋V4-Pro 上線（08-14）、中國市場「免費夠用」論述（08-31）→ 低價層已有可用替代 | 定價 | 🔴 | VentureBeat 2 來源；V4-Pro 費率已查證 ⟨Q-01⟩（見下方細節與「競品定價對照」） |
+| **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
@@ -135,11 +135,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### DeepSeek
 **現在的答案**
+- Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04），相容範圍與穩定性未載（Pandaily）。
 - 低價層已有可用替代：開源工具 Harness 正式定名上線（08-14），與 V4-Pro 模型同步。
 - V4-Pro 費率未載，只知高於 V4 Flash；V4 Flash 側僅有「較 Claude API 降低逾 100 倍」的定性描述。
-- 中國市場已出現「免費 Harness 夠用、付費訂閱是否值得」的公開質疑（08-31，36Kr）。
 **還沒解決**
-- V4-Pro 具體費率、Harness 與既有「Deep Code」（07-07）是否同一產品線，報導均未說明。
+- V4-Pro 具體費率、Harness 與既有「Deep Code」（07-07）是否同一產品線，報導均未說明；Mods 相容層的相容範圍與是否進入正式版亦未見報導。
 
 ### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
@@ -219,6 +219,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-04
+- **DeepSeek**：Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性）；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Pandaily）
+- **OpenAI（透過比較報導）**：quasa.io 發表 Claude Code 與 Codex CLI 分數與任務成本對照文，具體數字未見報導，僅標題可用（Google News/quasa.io）
+- **Startup Fortune**：發表 AI 編碼代理訂閱定價分析，點出重度使用者用量成本對供應商毛利的壓力，未點名具體工具或數字，僅標題可用（Topic Watch/competitor-landscape）
 
 ### 2026-10-02
 - **Microsoft／GitHub**：Copilot code review 可透過 REST 與 GraphQL API 請求並逐次設定 effort 等級，Balanced 成為新預設（Blog/GitHub Copilot Changelog）

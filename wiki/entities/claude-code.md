@@ -34,9 +34,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-04
 
 > **最新動態**（2026-10-04）
-> - Mods 有了專頁：官方文件明載 mod 讀得到你的 API key、不受沙箱隔離，裝前先 `claude plugin validate`，見 [[entities/claude-mods]]。新增「發布通道」小節：stable 晚約一週，套件管理器安裝不會自動更新。
-> - v2.1.288 發布：修正 `bash -c`／`sh -c` 內危險 `rm` 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。
-> - 新增 `/code-review --max-findings`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`、mods 的 `$.ui.selection()`；旗標追蹤見 [[topics/claude-code-experimental]]。
+> - v2.1.289 發布：修正巢狀 shell 複合指令 deny/ask 規則未對 mod 核准生效的漏洞，接續 v2.1.288 權限補丁；另修正短指令終端機凍結。
+> - 桌面版文件改版：電腦使用開關搬到「設定 > 本機電腦 > 系統」，舊「Continue in」選單拆成個別選項。
+> - 新增已知問題 2 則：v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens（#46917）；行內 KaTeX 數學式不再渲染（#65632）。
 
 ---
 
@@ -44,6 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.289**（2026-10-03）：修正巢狀 shell 複合指令中 deny／ask 規則未對使用者安裝的 mod 核准生效的漏洞；修正短指令造成終端機凍結；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.289)）。
 - **v2.1.288**（2026-10-02）：新增 `/code-review --max-findings <n>|all`、`claude purge`（取代 `claude project purge`）、Ctrl+C 清空提示後按 ↑ 取回草稿、MCP 要求更多 OAuth scope 時提示重新驗證、mods 的 `$.ui.selection()`。
 - **v2.1.288 修正與設定**：新增 `CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`（閘道用）；修正 `bash -c`／`sh -c` 內危險 `rm` 在 bypassPermissions 或 shell 允許規則下免提示執行（#96300）；背景指令時限改為僅無人值守 session 適用（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）。
   同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
@@ -70,6 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-04）：桌面版文件改版——電腦使用（Computer use）開關從「設定 > 一般」搬到「設定 > 本機電腦 > 系統」；舊版「Continue in」單一選單拆成個別選項，可選「Cloud」把本機 session 接續到雲端，或選已安裝的編輯器／檔案管理器直接開啟該 session 資料夾（文件字數 83,588→83,682）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-01）：桌面版文件新增說明——終端機執行 `claude --desktop` 可直接開啟桌面版，不先啟動終端機 session；本機與雲端 session 皆載入 claude.ai 帳號已啟用的 skills；plugins 可依使用者帳號、特定專案或僅本機範圍設定（文件字數 82,443→83,575）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 流程——終端機關閉 session 後，桌面版 `/resume` 選取該 session 即可接續同一對話（非複本），`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-25）：本機與 SSH session 現在自動載入帳號已啟用的 skills／plugins；桌面版 plugin 瀏覽器雲端 session 不可用，桌面裝的 plugin 不同步雲端（[原文](https://code.claude.com/docs/en/desktop.md)）。詳見 [[entities/claude-skills]]。
@@ -190,10 +192,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 - **Claude Code 新增 Compliance API 與企業安全功能**（查證日 2026-09-20，來源：[Claude Help Center](https://support.claude.com/en/articles/13015708-access-the-compliance-api)、[platform.claude.com](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Compliance API 提供 Enterprise／Claude Console 客戶以程式化方式讀取組織 Activity Feed（含 chat、files、projects、sessions、users），供合規、稽核與治理使用；本機 Cowork／Claude Code session 端點於 2026-08-11 上線、2026-08-26 脫離 beta（遠端 Cowork session 端點則於 08-03 先上線）。與 Claude Enterprise／Claude Code Analytics API（回傳聚合用量與成本）不同，Compliance API 回傳逐事件紀錄。
 
-### 💰 計費與配額（24 條未修復）
+### 💰 計費與配額（25 條未修復）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
 - 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-10-04）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
@@ -209,7 +212,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**圖片處理失敗導致 token 大量浪費（GitHub issue #60334，累積 72 則留言、19 個讚，首見 2026-07-12，2026-08-09 互動數更新）**：使用者回報一次圖片處理失敗即耗掉五小時額度約 70%；Anthropic API 端圖片處理錯誤直接反映為使用者額度損失，官方尚未回應。
 - 🔴 **未修復**｜**功能請求：印度地區專屬定價方案（INR 計價）（GitHub issue #17432，累積 212 則留言、613 個讚［讚數未更新］，首見 2026-07-10，2026-08-17 留言數更新）**：使用者要求提供印度盧比計價的地區專屬訂閱方案，降低匯率轉換造成的實際負擔，類似 OpenAI（ChatGPT）與 Google（Gemini）已提供的方案；官方尚未回應。定價/計費層面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**付款訂閱 Max 5x 方案後帳號反遭停用（GitHub issue #5088，累積 184 則留言、65 個讚，2026-07-10 首見，2026-09-04 留言數更新）**：使用者回報完成 Claude Code Max 5x 方案付款訂閱後，帳號反而遭到停用；官方尚未回應，定價/帳務退款層面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**Max 方案額度自 3 月起異常快速耗盡（GitHub issue #38335，855 則留言、545 讚，2026-09-16 更新，今日全站互動最高）**：Max 方案 session 額度自 2026-03-23 起消耗異常加快（CLI 情境）；官方尚未回應。定價面另見 [[entities/pricing]]。
+- 🔴 **未修復**｜**Max 方案額度自 3 月起異常快速耗盡（GitHub issue #38335，874 則留言、545 讚，2026-10-04 更新，今日全站互動最高）**：Max 方案 session 額度自 2026-03-23 起消耗異常加快（CLI 情境）；官方尚未回應。定價面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**HERMES.md 計費路由 bug（GitHub issue #53262，累積 93 則留言、533 個讚，2026-07-11 再度延燒）**：git commit 歷史中含大小寫敏感字串「HERMES.md」會觸發靜默切換至 API 額外計費，完全繞過 Max 方案內含額度；問題自 2026-04-25 首次回報以來持續未解，2026-07-11 以正式 issue 形式重新獲得大量社群回響；Anthropic 先前確認為 bug 但拒絕退款，修復狀態不明，已知損失達 $200。見 [[entities/pricing]]、[[topics/anthropic-commitments]]
 - 🔴 **未修復**｜**OpenClaw 異常計費行為**（2026-04-30，HN 近千則討論）：若 Git 提交訊息或文件內容中含特定 JSON 格式的 "OpenClaw" 字串，Claude Code 會直接拒絕請求，或將帳單 Extra Usage 衝至 100%；表明 Claude Code 正主動掃描 repo 內容並據此改變計費策略，Anthropic 至今未公開說明
 - 🔴 **未修復**｜**ANTHROPIC_API_KEY 雲端計費陷阱**（2026-04-30）：雲端環境設置此環境變數時，所有呼叫自動改走 API 計費通道，見 [[entities/pricing]]
@@ -219,8 +222,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（59 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（60 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 33 則留言、91 個讚，2026-10-04）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
 - 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
 - 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
@@ -299,8 +303,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（13 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（14 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**Routines 每次執行留下一個 session，Desktop app 僅能逐一刪除**（[naw103/claude-routine-cleanup](https://github.com/naw103/claude-routine-cleanup)，2026-10-03）：單一使用者回報一個 routine 累積 618 個未清理 session；社群 skill 用官方工具批次刪（每批 25 筆走核准卡）繞過；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨 session 交接與延續（GitHub issue #11455，累積 37 則留言、25 個讚，2026-10-03）**：提案者希望 Claude Code 支援 session 交接，讓工作能在新 session 接續；本站來源未見官方回應。與跨 session 記憶（#14227）同屬延續性缺口。
 - 🔴 **未修復**｜**功能請求：Cowork 專案可移除已加入的本機資料夾（GitHub issue #40043，累積 32 則留言、103 個讚，2026-10-01）**：使用者呼籲 Cowork 專案的 context 能移除已加入的本機資料夾，目前僅能新增無法移除；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**靜默資料遺失：session 紀錄無預警消失、不可復原**：#22931 Cowork 存檔後對話消失；#26452 Desktop 登出重啟後 session 全部消失；#59248 Cursor 擴充套件保留清理悄悄刪光紀錄（累積 47 則留言、36 個讚，2026-09-19 互動數更新）。與「Session 30 天自動刪除」（⛔，有預警）不同；官方尚未回應任一則。
@@ -796,6 +801,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-04 | **v2.1.289**：deny/ask 規則與終端機凍結修正；桌面文件 Computer use 設定搬遷。新增已知問題 2 則，互動更新 1 則。 |
 | 2026-10-03 | **v2.1.288**：`rm` 防護缺口修正、`--max-findings`、`claude purge`。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則。 |
 | 2026-10-01 | **v2.1.287**：Claude Mods 出貨（#91870 轉✅）。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則，互動更新 1 則。 |
 | 2026-09-30 | 桌面版文件補充 `/resume` 完整流程：終端機關閉 session 後可於桌面版接續同一對話（非複本）。 |

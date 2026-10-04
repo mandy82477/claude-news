@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-04
 **最後新聞更新：** 2026-10-04
 
-> **最新計費政策異動**（2026-10-01）
+> **最新計費政策異動**（2026-10-04）
 > - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見下方「事故現在還在發生嗎」。
 > - **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見「當前生效的計費規則」。
 
@@ -271,6 +271,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 灰色市場與轉售現象
 
+- 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。
 - 灰市管道「Poison Claude」已被兩獨立媒體證實會讓中間營運者讀取客戶傳送的全部 prompt——安全事件細節與可信度評估見 [[topics/ai-agent-safety]]。
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
