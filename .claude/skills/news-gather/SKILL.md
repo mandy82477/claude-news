@@ -78,7 +78,6 @@ PYTHON REPO_ROOT\scripts\archive_gathered.py
 **1. 別把 `src/gathered_items.json` commit 上去。** 補跑會**覆寫**這個檔（它沒有按日期分檔），寫進去的是補跑那天的資料。這個檔同時是雲端 routine 的輸入——雲端啟動時讀到的若不是當日資料，新鮮度防線會中止當天執行。也就是**一次本機補跑可能連帶讓當天的雲端排程空跑**。
 - 只有 GitHub Actions 的 `daily-gather` 該 commit 這個檔
 - 還原動作與**時機**見 `.claude/skills/web-publish/SKILL.md` `Step 5` 的「replay 路徑收尾」，此處不重複——時機是有講究的（太早會讓 Step 1c、Step 2 讀到錯的日期，太晚會讓 push 重試失效），兩處各寫一份就會失步，而失步的那一份會在無人值守時生效
-- 絕不要在補跑流程裡用 `git add -A` / `git add .`
 
 **2. 先找當日原料副本，找不到才重抓。** `src/gathered_archive/<date>.json` 是抓料當下存的原料副本（保留 14 天，由 GitHub Actions 與本機 Step 1a 各自寫入）：
 

@@ -1,18 +1,18 @@
-# 規則精簡對照表（hook 上線後，2026-10-03 草案，待使用者裁決）
+# 規則精簡對照表（hook 上線後，2026-10-03 草案；2026-10-04 使用者裁決「都修掉」後執行）
 
-**還沒動任何規則檔。** 本表只列「哪條禁令現在由誰硬擋、在哪裡重複、建議縮成什麼」。
+**2026-10-04 已執行**：git add 全加、破壞性 git 指令、checkout -B／push HEAD:master、記者改基線、派工範本的「不可再委派」五列的可刪部分已刪（9 檔 −15／+14 行，`run_tests` 1171 案例綠）。`claude -p`（已是單一家）、`news/` 唯讀、記者 web 工具、append-only（hook 不擋主 session 或條文帶替代流程）照表維持；H8「須明寫 sonnet」需另行裁決是否收緊 hook，未動。
 
-## 先決條件：沒有一條已達「可刪」
+## 先決條件
 
 刪字的門檻是**本機與雲端都確認擋得住**。目前狀態：
 
 | 證據 | 狀態 |
 |---|---|
 | 本機 hook 真的擋 | ✅ 每支都在本 session 實測過（主 session 與子 agent 兩種身分） |
-| hook 指令在雲端找得到 python | ⏳ `src/tests/test_settings_hooks.py` 會在下一班雲端 `run_tests` 原樣執行 settings 指令；要先 push |
+| hook 指令在雲端找得到 python | ✅ 探針本身就是經同一行 `P=python … || P=python3` 啟動式在雲端跑起來的（10-03 17Z、22Z、10-04 01:35Z 三班都有 ACTIVE 紀錄） |
 | 雲端 session 真的會執行專案 settings hook | ✅ 被動探針在 2026-10-03 17Z（session 5394a437）與 22Z（session 14e24ce9）兩班都寫下 `[cloud hooks-probe ACTIVE …]`，已併入 master 的 `task_scheduler.log`。探針 2026-10-04 移除：它在雲端第一個 Bash（`cloud_bootstrap.py`）前寫 tracked 檔，工作樹一髒 bootstrap 就不把 detached HEAD 歸位到 master，害 10-03 17Z、22Z 與 10-04 watchdog 三班推不上 master、全停泊 |
 
-所以下表「建議」欄全部是**候選**，等第三列變 ✅ 才執行。驗證做法見文末。
+三列皆 ✅，下表「建議」欄已於 2026-10-04 執行（見檔首）。
 
 ## 對照表
 

@@ -18,7 +18,7 @@
 每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + `model: "sonnet"`。prompt 傳入以下五個區塊（第一段角色前導不可省略——它是記者拿到規則的唯一途徑）：
 
 ```
-你是 CLAUDE_NEWS wiki 的「[類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義（含「開始前必讀」規則清單與回報契約），逐條照做後再處理下面的任務。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的「[類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義（含「開始前必讀」規則清單與回報契約），逐條照做後再處理下面的任務。
 
 今日日報日期：[YYYY-MM-DD]
 你負責的分類條目原文節錄：
@@ -45,7 +45,7 @@
 ## 4b devpractice 沉澱 prompt 首段
 
 ```
-你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **daily 沉澱**。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **daily 沉澱**。今日日期：[YYYY-MM-DD]。
 ```
 
 當日有 `data/ingest-packets/[YYYY-MM-DD]/開發實務.md` 時，首段之後原樣貼入該包全文（末行 `END` 要在）；沒有就只給首段。
@@ -53,7 +53,7 @@
 ## 4c market 判讀 prompt 首段
 
 ```
-你是 CLAUDE_NEWS wiki 的「投資分析（market）」記者。開工前先 Read `.claude/agents/wiki-reporter-market.md`——那是你的角色定義，逐條照做後執行 **daily 判讀**。今日日期：[YYYY-MM-DD]。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的「投資分析（market）」記者。開工前先 Read `.claude/agents/wiki-reporter-market.md`——那是你的角色定義，逐條照做後執行 **daily 判讀**。今日日期：[YYYY-MM-DD]。
 ```
 
 ## 3b 分類複核 prompt（與六記者同批派出）
@@ -61,7 +61,7 @@
 步驟 2 產包成功（分類帳已寫、對帳已過）後，與六記者同一輪派出。條目內容＝貼入 `data/ingest-packets/[YYYY-MM-DD]/排除.md` 全文——每則已含標題、URL、來源、互動、摘要與主編排除理由（缺摘要複核記者只能用主編的理由審主編的理由；摘要是殼層時 URL 在，複核記者能自己開連結判類，不得只憑標題猜）：
 
 ```
-你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read `.claude/agents/wiki-reporter-classify-review.md`——那是你的角色定義，逐條照做後複核下面的排除清單。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的分類複核記者。開工前先 Read `.claude/agents/wiki-reporter-classify-review.md`——那是你的角色定義，逐條照做後複核下面的排除清單。
 
 今日日期：[YYYY-MM-DD]
 主編今日排除（未分派給任何記者）的條目，每則附主編的排除理由：
@@ -76,7 +76,7 @@
 六記者或分類複核記者回報「分類回退」、主編依 SKILL.md 步驟 3b 核對後，**依目標類別分組、一類一次呼叫**（每次呼叫都是完整記者啟動，一則一次會把成本翻倍），**不等下一輪**：
 
 ```
-你是 CLAUDE_NEWS wiki 的「[正確類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義，逐條照做後再處理下面的任務。你不可再呼叫 Agent tool 委派任何工作。
+你是 CLAUDE_NEWS wiki 的「[正確類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義，逐條照做後再處理下面的任務。
 
 今日日報日期：[YYYY-MM-DD]
 以下條目原本分類錯誤，今日主編補派（主編已依分類表核對過類別），非原始派工的一部分：
