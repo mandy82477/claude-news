@@ -14,7 +14,7 @@ description: 系統架構變動時，快速同步更新架構文件（Design Dia
 ## 分工（省 token）
 
 - **主 session 只做判斷性工作**：判斷變更範圍（步驟 1）、改事實來源 `src/DesignDocument/Design Diagram.md`（步驟 2）。
-- **機械式 HTML 鏡射交給 sonnet agent**：`Design Diagram.md` 定稿後，把「照 Design Diagram.md 更新 `docs/architecture-current.html` 對應 panel／`docs/architecture-evolution.html` 對應事件卡」派給 `model: "sonnet"` 的 agent 執行（步驟 3、4）——這是照抄既有 class 寫法的機械式編輯，不需要旗艦模型判斷。
+- **機械式 HTML 鏡射交給 agent**：`Design Diagram.md` 定稿後，把「照 Design Diagram.md 更新 `docs/architecture-current.html` 對應 panel／`docs/architecture-evolution.html` 對應事件卡」派給 明寫 `model` 的 agent 執行（步驟 3、4）——這是照抄既有 class 寫法的機械式編輯，不需要旗艦模型判斷。
 - **主 session 最後重驗 disk 上的最終檔**：無論步驟 3/4 是自己做還是派工，commit 前都必須親自跑 `python scripts/check_arch_docs.py` 與步驟 5 的驗證。
 
 ---
@@ -67,7 +67,7 @@ python scripts/check_arch_docs.py
 1. **charset meta 必備**：每個 HTML 檔 `<html>` 後必須有 `<meta charset="utf-8">`。
 2. **設計 token 單一來源**：顏色/字體/圓角只在 `architecture.css` 的 `:root` 改；HTML 內不寫死色碼。
 3. **獨立驗證**：改完一定親自查渲染後的實際值，不靠肉眼、不靠「已完成」回報。
-4. **派工要重驗最終狀態**：把機械式 HTML 編輯派給 sonnet agent 時，主 session 必須在最後重新驗證 disk 上的最終檔。
+4. **派工要重驗最終狀態**：把機械式 HTML 編輯派給 agent 時，主 session 必須在最後重新驗證 disk 上的最終檔。
 5. **先事實來源、後 HTML**：永遠先改 `Design Diagram.md`，HTML 跟著它。
 6. **原 React 備份唯讀**：`docs/architecture-evolution-react.bak.html` 不當範本、不修改。
 
@@ -75,6 +75,6 @@ python scripts/check_arch_docs.py
 
 ## 邊界
 
-- 由主 session 執行；步驟 3／4 的機械式 HTML 鏡射可派 `model: "sonnet"` agent，判斷與驗證不外包。
+- 由主 session 執行；步驟 3／4 的機械式 HTML 鏡射可派 agent，判斷與驗證不外包。
 - 截圖工具此環境會逾時，不要用 screenshot，一律 eval/inspect。
 - `python scripts/check_arch_docs.py` 零錯誤＋步驟 5 的 A 或 B 全項通過才算完成，否則不得 commit。

@@ -228,7 +228,7 @@
       "_note": "2026-07-25 由 min_count/min:0 改為 max_count/max:0——前者的條件是 count < min 才失敗，min:0 恆為真，這條「不該出現」的檢查一直是假綠。"
     },
     {
-      "name": "wiki-ingest dispatch.md / references/classification.md：六類記者角色檔名一致 + 正典派工路徑（general-purpose + 角色前導 + model: \"sonnet\"）；2026-09-13 起 /wiki-lint 派工前綴改指 dispatch.md，不再是第三份副本",
+      "name": "wiki-ingest dispatch.md / references/classification.md：六類記者角色檔名一致 + 正典派工路徑（general-purpose + 角色前導 + 明寫 model）；2026-09-13 起 /wiki-lint 派工前綴改指 dispatch.md，不再是第三份副本",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/wiki-ingest/references/dispatch.md",
@@ -243,7 +243,7 @@
         "wiki-reporter-safety-policy",
         "wiki-reporter-community",
         "wiki-reporter-people",
-        "model: \"sonnet\""
+        "明寫 `model`"
       ]
     },
     {

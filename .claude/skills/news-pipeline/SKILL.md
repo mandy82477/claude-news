@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 ## 怎麼用
 
-`/news-pipeline` 跑今天，`/news-pipeline 2026-09-01` 補跑指定日。**要準備什麼：** 無，設定值由派工 prompt 自帶。**會被問什麼：** 完成摘要末尾的「📋 待使用者裁示」區會把當日待確認事項接出來等你回覆。**拿到什麼：** 當日日報、更新過的 wiki、讀者版日報、重建並推送的網站，加一份完成摘要。**成本：** 兩個 Sonnet 背景 agent（Phase A、Phase C）＋本 session 前景跑六記者 ingest。
+`/news-pipeline` 跑今天，`/news-pipeline 2026-09-01` 補跑指定日。**要準備什麼：** 無，設定值由派工 prompt 自帶。**會被問什麼：** 完成摘要末尾的「📋 待使用者裁示」區會把當日待確認事項接出來等你回覆。**拿到什麼：** 當日日報、更新過的 wiki、讀者版日報、重建並推送的網站，加一份完成摘要。**成本：** 兩個背景 agent（Phase A、Phase C）＋本 session 前景跑六記者 ingest。
 
 TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** 雲端 routine 用的就是 UTC，本機時區的「今天」會與雲端對不上（`docs/cloud-runbooks/daily.md`）。
 
@@ -18,7 +18,7 @@ TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** �
 ## Phase A：抓料與日報（Step 0 / 0b / 1a / 1b / 1c）
 
 - **做什麼：** 抓當日新聞、寫 `news/TARGET_DATE.md` 日報並 commit
-- **誰做：** 背景 agent（Agent tool，`model: sonnet`、`run_in_background: true`），完成後自動通知本 session
+- **誰做：** 背景 agent（Agent tool，明寫 `model`、`run_in_background: true`），完成後自動通知本 session
 - **失敗怎麼辦：** Step 1a 失敗（agent 回報「Aggregator FAILED」）就停在 Phase A，本 session 依 `.claude/skills/web-publish/SKILL.md` Step 6 格式對 `src/logs/task_scheduler.log` append 一行 `Aggregator FAILED - stopping`，完成摘要把 Step 2 以後全標 ⏭️，結束
 
 ## Phase B：wiki ingest 與讀者版日報（Step 2 / 2b）

@@ -18,7 +18,7 @@ REPO_ROOT 由 Bash `git rev-parse --show-toplevel` 取；PYTHON 即 PATH 上的 
 |------|---|
 | description | `News pipeline Phase A {TARGET_DATE}` |
 | run_in_background | `true` |
-| model | `sonnet` |
+| model | 明寫（hook 強制） |
 
 **prompt**（`{TARGET_DATE}` 替換為實際日期）：
 
@@ -40,7 +40,7 @@ Phase A agent 完成後自動通知呼叫的 session。
 |------|---|
 | description | `News pipeline Phase C {TARGET_DATE}` |
 | run_in_background | `true` |
-| model | `sonnet` |
+| model | 明寫（hook 強制） |
 
 **prompt**（`{PHASE_A_RESULT}`／`{PHASE_B_RESULT}` 替換為本 session 已知的 Phase A、Phase B 結果摘要）：
 

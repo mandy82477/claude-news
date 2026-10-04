@@ -10,14 +10,14 @@
 
 ## 執行原則
 
-**模型 `[改版: 2026-09-04]`：** 主編（本 routine 的 session）為 `claude-opus-5`——6 系列規則健檢、7b 質疑代打、6k 處置判斷是「判斷淺」最吃虧的地方，一週一次換旗艦配額影響小（使用者裁決）。記者派工仍一律 `model: "sonnet"`，不隨主編升級。trigger 設定的副本在 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json`，改模型要用 RemoteTrigger 改雲端本體再同步副本，只改副本不生效。
+**模型 `[改版: 2026-09-04]`：** 主編（本 routine 的 session）為 `claude-opus-5`——6 系列規則健檢、7b 質疑代打、6k 處置判斷是「判斷淺」最吃虧的地方，一週一次換旗艦配額影響小（使用者裁決）。記者派工仍一律 明寫 `model`，不隨主編升級。trigger 設定的副本在 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json`，改模型要用 RemoteTrigger 改雲端本體再同步副本，只改副本不生效。
 
 規範來源是 `.claude/skills/wiki-lint/SKILL.md` 與它帶起的四個子 skill（步驟細節不在本檔重複）。下表以 **skill 名＋步驟編號** 為 key，**用標題找步驟，不要用編號或子項字母推測範圍**：
 
 | skill ＋步驟標題 | 雲端如何處理 |
 |------|------|
 | `wiki-lint-reporters` `1. 載入 wiki 全貌` | 自主執行 |
-| `wiki-lint-reporters` `2. 並行派工（六位記者同時執行）` | 自主執行，派工帶 `model: "sonnet"`；含記者職責內的矛盾修正、孤立連結、狀態更新、呈現品質、待查證回訪，以及社群記者的 community-tech-tools 策展 |
+| `wiki-lint-reporters` `2. 並行派工（六位記者同時執行）` | 自主執行，派工帶 明寫 `model`；含記者職責內的矛盾修正、孤立連結、狀態更新、呈現品質、待查證回訪，以及社群記者的 community-tech-tools 策展 |
 | `wiki-lint-reporters` `3. 處理語意分岔／死案歸檔候選（需使用者確認）` | **只回報，不動手** → 寫入待辦 |
 | `wiki-lint-reporters` `4. 建議並建立新實體頁` | **只回報，不動手** → 寫入待辦 |
 | `wiki-lint-reporters` `5. 更新 wiki/overview.md` | 自主執行 |
@@ -26,12 +26,12 @@
 | `wiki-lint-sweeps` `5c. 逾期待查證清算（清零制，按頁面所有權派六記者並行）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
 | `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
-| `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 `model: "sonnet"`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
+| `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 明寫 `model`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
 | `wiki-lint-sweeps` `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
 | `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過寫待辦 |
 | `wiki-lint-sweeps` `5i. 安全政策兩頁結論表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
 | `wiki-lint-sweeps` `5j. 商業健康度四表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
-| `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 `model: "sonnet"` |
+| `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 明寫 `model` |
 | `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
 | `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |
 | `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`／`gh api`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦 |

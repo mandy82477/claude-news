@@ -145,7 +145,7 @@ def check_agent(tool_input: dict, who: str) -> str | None:
     if (is_reporter or is_pipeline) and not tool_input.get("model"):
         return (
             "派工未指定 model：會繼承主 session 模型，六記者並行足以打穿訂閱配額。記者與 pipeline agent 一律明寫 "
-            "`model: \"sonnet\"`。規則：.claude/skills/wiki-ingest/SKILL.md 步驟 3。"
+            "`model`。規則：.claude/skills/wiki-ingest/SKILL.md 步驟 3。"
         )
     # 只擋「明確設成 true」。2026-10-03 事故：2.1.288 的派工明寫 false，hook 卻沒收到 False，
     # 「is not False」把 pipeline 的七位記者全擋掉；欄位缺席時放行（fail-open），查證中。

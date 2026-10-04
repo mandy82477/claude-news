@@ -159,7 +159,7 @@
 
 ## 5f. devpractice 週彙整（主編派工）
 
-六記者收報**之後**（社群記者的 tools 策展與 patterns 更新已完成），派 devpractice 記者做週彙整。以 `subagent_type: "general-purpose"` + `model: "sonnet"` 派出，prompt 首段：
+六記者收報**之後**（社群記者的 tools 策展與 patterns 更新已完成），派 devpractice 記者做週彙整。以 `subagent_type: "general-purpose"` + 明寫 `model` 派出，prompt 首段：
 
 ```
 你是 CLAUDE_NEWS wiki 的「開發實務（devpractice）」記者。開工前先 Read `.claude/agents/wiki-reporter-devpractice.md`——那是你的角色定義，逐條照做後執行 **weekly 彙整**（兩件事：手冊週更、coding 跨頁對帳）。今日日期：[YYYY-MM-DD]。

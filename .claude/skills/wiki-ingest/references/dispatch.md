@@ -15,7 +15,7 @@
 
 ## 六記者派工 prompt（步驟 3）
 
-每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + `model: "sonnet"`。prompt 傳入以下五個區塊（第一段角色前導不可省略——它是記者拿到規則的唯一途徑）：
+每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + 明寫 `model`。prompt 傳入以下五個區塊（第一段角色前導不可省略——它是記者拿到規則的唯一途徑）：
 
 ```
 你是 CLAUDE_NEWS wiki 的「[類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義（含「開始前必讀」規則清單與回報契約），逐條照做後再處理下面的任務。

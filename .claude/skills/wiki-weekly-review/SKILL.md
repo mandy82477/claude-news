@@ -31,7 +31,7 @@ disable-model-invocation: true
 
 ### 2. 六位記者並行判斷（同一訊息中平行呼叫全部）
 
-沿用 `.claude/skills/wiki-ingest/references/dispatch.md` 的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須帶 `model: "sonnet"`（lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+沿用 `.claude/skills/wiki-ingest/references/dispatch.md` 的類別對應表與派工方式（`subagent_type: "general-purpose"`＋prompt 首段角色前導導向 `.claude/agents/wiki-reporter-[category].md`）。每個 Agent 呼叫必須明寫 `model`（未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「六記者派工 prompt」。
 
@@ -39,7 +39,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 **每月執行一次**（判斷方式：`wiki/metrics.md` 的「聚焦命中率」欄**本月尚無數值** → 執行；已有數值 → 輸出「本月聚焦校準已執行，跳過」並跳過本節）。判斷產出物而非執行記錄（立法理由見沿革檔 `docs/rules-changelog/wiki-weekly-review.md` 2026-07-16）。
 
-執行時派一個 Sonnet agent（`model: "sonnet"`），規格與輸出表見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「月度聚焦校準」。命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
+執行時派一個 agent（明寫 `model`），規格與輸出表見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「月度聚焦校準」。命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
 
 ### 3. 彙整回報給使用者確認
 
@@ -53,7 +53,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 ### 4. 依確認執行
 
-使用者確認後，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/page-templates.md` 頁面格式模板。此階段派工同樣沿用 `model: "sonnet"`。
+使用者確認後，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/page-templates.md` 頁面格式模板。此階段派工同樣沿用 明寫 `model`。
 
 ### 5. 記錄
 
@@ -76,7 +76,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 ## 邊界
 
-- 由主 session 執行並派工六記者（`model: "sonnet"`）；記者只回報，不直接修改頁面。
+- 由主 session 執行並派工六記者（明寫 `model`）；記者只回報，不直接修改頁面。
 - 繁體中文為主；`wiki/log.md` 只能 append，不可修改既有條目；`news/` 唯讀。
 - 本 skill 產出的建議屬主觀判斷，**未經使用者確認一律不得執行修改**。
 - 單獨執行時步驟 6 的 `run_tests.py` 綠了才 build web；由 `/weekly` 帶起時步驟 6 跳過，收尾由總指揮負責。

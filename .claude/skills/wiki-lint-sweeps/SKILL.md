@@ -19,7 +19,7 @@ disable-model-invocation: true
 | 5c | 逾期待查證清算（Lane A／Lane B、結案回掃） | 主編親查 |
 | 5d | 歸因忠實度抽查（近 60 天 5 筆） | 主編親做 |
 | 5e | pricing「通路與乘數」複查 | 主編親查 |
-| 5f | devpractice 週彙整 | 主編派 devpractice 記者（`model: "sonnet"`） |
+| 5f | devpractice 週彙整 | 主編派 devpractice 記者（明寫 `model`） |
 | 5g | 高引用但停滯（frontmatter signal 消費端） | 主編親做，逐頁二選一時派對應記者 |
 | 5h | 投資訊號回顧環（催化劑＋兩週方向結算） | 主編親查 |
 | 5i | 安全政策兩頁結論表退場複查 | 主編親做 |

@@ -217,7 +217,7 @@ python scripts/check_reader_language.py --list   # 禁詞清單＋讀者語言�
 python scripts/check_reader_language.py --page <slug>   # 單頁清單
 ```
 
-- 讀 WARN 摘要，從命中最多的頁取 **2 頁**，派 `subagent_type: "general-purpose"` + `model: "sonnet"`（機械式改寫，不需旗艦模型）逐條處理，每條三選一：**改寫成讀者語言**（用 `--list` 的替代詞）／**移進 `%% … %%` 維運備忘**（見 `.claude/reporter-rules/shared.md`「維運備忘的家」）／**登記 `data/reader-language-allow.json`**（附理由；page 與 term 不得同時填 `*`）
+- 讀 WARN 摘要，從命中最多的頁取 **2 頁**，派 `subagent_type: "general-purpose"` + 明寫 `model`逐條處理，每條三選一：**改寫成讀者語言**（用 `--list` 的替代詞）／**移進 `%% … %%` 維運備忘**（見 `.claude/reporter-rules/shared.md`「維運備忘的家」）／**登記 `data/reader-language-allow.json`**（附理由；page 與 term 不得同時填 `*`）
 - 清完該頁後從 `data/reader-language-baseline.json` 的 `pages` **移除該頁整筆**——棘輪只能往下轉，不得為了轉綠把新命中加回基線
 - 禁詞清單住 `scripts/check_reader_language.py` 頂部常數（單一來源），要增刪禁詞改那裡，不在規則檔另抄一份
 - 回報：`讀者語言（6l）：基線剩 N 頁，本輪清 M 頁，新增命中 K`——**K > 0 代表機械閘擋下了新外洩**，在回報寫出是哪頁哪句
@@ -231,7 +231,7 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 
 ## 邊界
 
-- 由主編（本機主 session 或雲端頂層 session）執行；6l 的改寫可派 `model: "sonnet"` agent，其餘親做。
+- 由主編（本機主 session 或雲端頂層 session）執行；6l 的改寫可派 agent，其餘親做。
 - **凡本節標明「向使用者確認」者（6a、6c、6d、6f、6h、6j 的規則改動）一律只回報**，寫進步驟 8 的待使用者確認區，不自行改規則檔。
 - 改任何 `.claude/` 下的規則檔依 `.claude/rules/claude-md-edit.md` 流程，完成後 `python scripts/check_rules.py` 必須零 ❌。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」。

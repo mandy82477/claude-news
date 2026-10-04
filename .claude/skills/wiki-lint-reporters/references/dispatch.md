@@ -6,7 +6,7 @@
 
 **類別↔角色檔對照表**與**第一段角色前導**（記者拿到規則的唯一途徑）住 `.claude/skills/wiki-ingest/references/dispatch.md`——ingest 與 lint 共用同一份，本檔不另抄。派工時取該檔的角色前導那一段，接上以下 lint 專屬段組成完整 prompt。
 
-每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + `model: "sonnet"`（sonnet 因 lint 與策展為有界判斷任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
+每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + 明寫 `model`（未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
 > **頁面範圍為動態認領，不是寫死清單：** 每位記者的負責頁面＝`wiki/index.md` 中「領域」欄等於自己那一組的所有 entities/ 與 topics/ 頁面（含近期新增），開工前先讀 index.md 認領清單，再加上自己規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。這樣新增頁面不需要回頭改派工表。
 

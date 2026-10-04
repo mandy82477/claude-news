@@ -73,7 +73,7 @@ python scripts/check_classification_log.py --date TARGET_DATE
 
 ## 派工方式（本機與雲端唯一正典路徑）
 
-每位記者一律以 **`subagent_type: "general-purpose"` + `model: "sonnet"`** 派出（分類與頁面更新為有界任務，不需旗艦模型；未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額），prompt **第一段固定為角色前導**，把記者導向自己的角色檔：
+每位記者一律以 **`subagent_type: "general-purpose"` + 明寫 `model`** 派出（未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額），prompt **第一段固定為角色前導**，把記者導向自己的角色檔：
 
 ```
 你是 CLAUDE_NEWS wiki 的「[類別]」記者。開工前先 Read `.claude/agents/wiki-reporter-[category].md`——那是你的角色定義（含「開始前必讀」規則清單與回報契約），逐條照做後再處理下面的任務。

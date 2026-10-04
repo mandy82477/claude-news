@@ -1,6 +1,6 @@
 # 規則精簡對照表（hook 上線後，2026-10-03 草案；2026-10-04 使用者裁決「都修掉」後執行）
 
-**2026-10-04 已執行**：git add 全加、破壞性 git 指令、checkout -B／push HEAD:master、記者改基線、派工範本的「不可再委派」五列的可刪部分已刪（9 檔 −15／+14 行，`run_tests` 1171 案例綠）。`claude -p`（已是單一家）、`news/` 唯讀、記者 web 工具、append-only（hook 不擋主 session 或條文帶替代流程）照表維持；H8「須明寫 sonnet」需另行裁決是否收緊 hook，未動。
+**2026-10-04 已執行**：git add 全加、破壞性 git 指令、checkout -B／push HEAD:master、記者改基線、派工範本的「不可再委派」五列的可刪部分已刪（9 檔 −15／+14 行，`run_tests` 1171 案例綠）。`claude -p`（已是單一家）、`news/` 唯讀、記者 web 工具、append-only（hook 不擋主 session 或條文帶替代流程）照表維持；H8：使用者 2026-10-04 裁決「把必須是 sonnet 都刪掉」——規則檔與 hook 訊息只要求明寫 `model`，不再指定 sonnet（15 個 skill／runbook、registry、`guard_roles.py` 訊息）。
 
 ## 先決條件
 
