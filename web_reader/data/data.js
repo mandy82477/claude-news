@@ -3533,8 +3533,8 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-09-02",
-      "lastUpdated": "2026-10-02",
-      "lastNewsUpdate": "2026-10-02",
+      "lastUpdated": "2026-10-03",
+      "lastNewsUpdate": "2026-10-03",
       "updateFreq": "🗓️ 每日快照（機器產出；「本週竄升」以七日星數差計）",
       "parent": "",
       "summary": "榜依 GitHub 描述機械比對，偶有跨類誤收（同一 repo 出現在兩類、或非本類工具混入）；星數與分類皆非推薦。",
@@ -4825,7 +4825,7 @@ window.WIKI_DATA = {
     {
       "id": "2026-W40",
       "name": "CLAUDE NEWS 週報 · 2026-W40",
-      "preview": "Claude Code v2.1.284 起，API 端的 sonnet 別名指向 Sonnet 5.5，沒改設定的自動化流程已經在跑新模型。MIXED Reality News 稱 Sonnet 5 的程式碼換到 5.5 有五種行為差異，其中一種沒有錯誤訊息，細節見討論綜述。你該做的事：靠別名跑自動化的人先跑一輪回歸"
+      "preview": "最要緊的兩件事：選了穩定版的人切到 latest；用 Pro 或 Max 訂閱的人檢查 shell 裡有沒有殘留 `ANTHROPIC_API_KEY`。其餘要做的事收在第二節最後。本期兩篇專文，開發實務講上面第一件，財經講一份外流文件裡哪些數字是新的，各約兩分鐘。"
     },
     {
       "id": "2026-W39",
