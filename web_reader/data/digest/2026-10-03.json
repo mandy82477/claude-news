@@ -93,7 +93,13 @@
       "time": "10/03 07:17",
       "sentiment": "",
       "body": "the-decoder 說明 Mods 是以 JavaScript／TypeScript 函式掛接工具呼叫、使用者提示與 UI 渲染等事件；Mods 以使用者權限執行、未經沙箱隔離，Anthropic 提醒只安裝可信來源，/diff 等內建功能本身就是用 Mods 寫成。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "Anthropic vs. the pope: The AI consciousness debate, explained - vox.com",
@@ -462,18 +468,8 @@
   "preview": "Claude Code：v2.1.288 發布：修正 bash -c／sh -c 內危險 rm 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
-      "id": "jensen-huang",
-      "name": "Jensen Huang",
       "pageType": "entity"
     },
     {

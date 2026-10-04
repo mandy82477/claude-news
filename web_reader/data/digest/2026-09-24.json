@@ -478,13 +478,7 @@
     }
   ],
   "preview": "Claude Code：v2.1.281：新增 desktop policy 兩項設定（blockReadsOutsideWorkingDirectories、disableBypassPermissionsMode）；build 另新增 9 個功能候選旗標，見 topics/claude-code-experimen",
-  "sedimentedToday": [
-    {
-      "id": "sridhar-vembu",
-      "name": "Sridhar Vembu",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-24",
     "summary": "",

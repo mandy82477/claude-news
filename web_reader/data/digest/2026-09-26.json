@@ -314,13 +314,7 @@
     }
   ],
   "preview": "Claude Code：v2.1.283：新增 x-claude-code-prompt-id 閘道提示標頭，設 CLAUDE_CODE_GATEWAY_HINT_HEADERS=1 加入，供 LLM gateway 歸組同一提示的請求。",
-  "sedimentedToday": [
-    {
-      "id": "joe-lonsdale",
-      "name": "Joe Lonsdale",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-26",
     "summary": "",

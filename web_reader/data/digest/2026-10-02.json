@@ -21,6 +21,10 @@
         {
           "id": "claude-code-experimental",
           "pageType": "topic"
+        },
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
         }
       ]
     },
@@ -35,6 +39,10 @@
       "sedimented": [
         {
           "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
           "pageType": "entity"
         }
       ]
@@ -542,6 +550,10 @@
         {
           "id": "claude-code-experimental",
           "pageType": "topic"
+        },
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
         }
       ]
     },
@@ -556,6 +568,10 @@
       "sedimented": [
         {
           "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
           "pageType": "entity"
         }
       ]
