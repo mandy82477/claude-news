@@ -53,11 +53,13 @@
 | [[entities/openclaw]] | product | 💼 商業 | active | 第三方 agentic 工具，歷經禁令後 6/15 起恢復允許但改走信用池 API 費率計費　↳ 子故事：[[entities/openclaw-archive]] |
 | [[entities/google-investment]] | event | 💼 商業 | resolved | Google 投資 400 億美元歷史記錄，含循環算力交易結構　↳ 子故事：[[entities/google-investment-archive]] |
 | [[entities/bernanke]] | person | 👤 人物 | active | 前聯準會主席，2026-07-09 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會 |
-| [[entities/boris-cherny]] | person | 👤 人物 | active | Claude Code 創始人，「Loops 是未來」設計哲學；07-17 稱同時執行數千個 Claude Code agent（出處已查實）　↳ 子故事：[[entities/boris-cherny-archive]] |
+| [[entities/boris-cherny]] | person | 👤 人物 | active | Claude Code 打造者與負責人，「Loops 是未來」設計哲學；07-17 稱同時執行數千個 Claude Code agent（出處已查實）　↳ 子故事：[[entities/boris-cherny-archive]] |
 | [[entities/john-jumper]] | person | 👤 人物 | active | 諾貝爾化學獎得主（AlphaFold），2026-06-19 離開 Google DeepMind 加入 Anthropic（Reuters 確認）　↳ 子故事：[[entities/john-jumper-archive]] |
 | [[entities/cat-wu]] | person | 👤 人物 | active | Claude Code 產品負責人，「AI 下一步是主動性（proactivity）」論述 |
 | [[entities/andrej-karpathy]] | person | 👤 人物 | active | 近期加入 Anthropic，CLAUDE.md 四條規則、「最小必要 context」費用控管原則 |
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
+| [[entities/chris-olah]] | person | 👤 人物 | active | Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講 |
+| [[entities/chris-ciauri]] | person | 👤 人物 | active | Anthropic 國際業務總監；首爾記者會稱出口管制「數日內」解禁（2026-06-18，07-01 解除） |
 | [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：AI 風險論述與政府監管立場；九、十月六位公開批評者（黃仁勳、LeCun、Lonsdale 等）對照見頁內　↳ 子故事：[[entities/dario-amodei-archive]] |
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（待核實）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
@@ -68,6 +70,7 @@
 | [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | beta | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；先開放 Pro、Max 方案 |
 | [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | beta | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；先開放 Pro、Max 方案 |
 | [[entities/fable-5]] | model | 🤖 模型 | active | 現行旗艦 5.1（09-01 GA）；5 轉 Legacy，退役不早於 2027-06-09；兩代同價；護欄擋什麼、被擋會不會知道　↳ 子故事：[[entities/fable-5-archive]] |
+| [[entities/tom-brown]] | person | 👤 人物 | active | Anthropic 共同創辦人（GPT-3 共同作者）、算力負責人；2026-06-25 接管與白宮的出口管制談判，促成 Mythos 5 解封 |
 | [[entities/tom-blomfield]] | person | 👤 人物 | active| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（2026-09-20 查證確認到任與職稱）|
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
 | [[entities/tino-cuellar]] | person | 👤 人物 | active | Anthropic 首任 Chief Global Affairs Officer（2026-08-05 到任），前 Carnegie Endowment for International Peace 總裁、加州最高法院大法官 |

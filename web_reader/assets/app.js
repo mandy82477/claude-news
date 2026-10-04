@@ -621,7 +621,7 @@
   // ── 人物領域：人物總覽（圈層圖＋分區卡片）／議題陣容（F1/F2）─────────────────────
   // 只在「人物」領域接管 #wiki-kb；其他領域與「全部」仍走原本的表格列。
   // 殘頁排除：列表只收根頁（!parent，與 renderKbRows 同判準），再要求有 anthropicRel 或 identity
-  // （已併回議題頁的 chris-olah／chris-ciauri／tom-brown 兩者皆 null，因此落在外）。
+  // （轉址殼頁兩者皆 null，因此落在外）。
   const PPL_DOMAIN = '👤 人物';
   const PPL_REL_ORDER = ['創辦團隊', '治理', '現任', '前員工', '投資人', '同業', '外部觀察者'];
   const PPL_REL_LABEL = { '創辦團隊': 'Anthropic 創辦團隊', '治理': 'Anthropic 治理層', '現任': 'Anthropic 現任', '前員工': 'Anthropic 前員工', '投資人': 'Anthropic 投資人', '同業': '同業', '外部觀察者': '外部觀察者', '未分類': '未分類' };

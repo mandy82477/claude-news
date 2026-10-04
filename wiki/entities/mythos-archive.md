@@ -87,7 +87,7 @@ TechCrunch：Sam Altman 批評 Mythos 限制後，旋即宣布 OpenAI GPT-5.5 Cy
 
 #### 2026-06-28
 **TechCrunch / Mashable 後續確認 Mythos 5 部分解禁 + 競品聲稱對標（Sakana Fugu / WSJ）**：
-- **TechCrunch 補充細節**（HN n/a）：補充 Lutnick 致信收件人為 Anthropic **chief compute officer Tom Brown**（非此前部分媒體所述的聯合創辦人），確認 100+ 受信任機構範圍含其**非美籍員工**，是兩週禁令後的差異化部分鬆綁（[TechCrunch](https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/)）；Mashable 同步報導（[Mashable](https://mashable.com/tech/claude-mythos-5-reinstated-by-us-government)）
+- **TechCrunch 補充細節**（HN n/a）：補充 Lutnick 致信收件人為 Anthropic **chief compute officer Tom Brown**（TechCrunch 用的是他的現職；他同時是 Anthropic 共同創辦人，見 [[entities/tom-brown]]），確認 100+ 受信任機構範圍含其**非美籍員工**，是兩週禁令後的差異化部分鬆綁（[TechCrunch](https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/)）；Mashable 同步報導（[Mashable](https://mashable.com/tech/claude-mythos-5-reinstated-by-us-government)）
 - **Sakana AI Fugu**：日本 Sakana AI 發布 Fugu，聲稱可與 Fable 5 / Mythos Preview 比肩，支援 multi-agent API 協調其他模型（[TechCrunch](https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/)，HN score 256）；與同日中國 360 Tulongfeng 聲明合看，亞洲 AI 新創正以出口禁令空檔加速追趕 Mythos 等級能力
 - **WSJ：中國已在網路安全 AI 追上 Anthropic**：WSJ 報導指中國在網路安全 AI 能力上已逼近 Anthropic，Tulongfeng 為代表案例（[WSJ](https://www.wsj.com/tech/ai/chinese-ai-anthropic-mythos-cybersecurity-574b02c2)，Reuters HN score 7）。**後續（2026-08-26 查證）**：360 稱 Tulongfeng 以「AI 模型＋資安資料＋自動化工具」組合達到 Mythos 等級，累計辨識 **3,432 個軟體漏洞、其中 105 個經中國官方確認**；此組數字與「達到 Mythos 等級」的宣稱**皆未經獨立驗證**，本頁不採信為能力對等的證據（同線的 Z.Ai GLM-5.3 數字見 06-29 條目）
 

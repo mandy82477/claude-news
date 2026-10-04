@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
-**身分：** Anthropic Claude Code 創始人與負責人
+**身分：** Claude Code 的打造者與負責人（Anthropic）
 **與 Anthropic：** 現任
 **職能：** 工程產品
 **為何追蹤：** Claude Code 設計理念與工程實務最主要的公開發言來源
@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（[[entities/simon-willison|Simon Willison]] 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文僅標題可用（Business Insider，2026-09-12）。
 
-Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
+Boris Cherny 是 Anthropic Claude Code 的打造者與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 
 **立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類。逐條見下方核心論述表。
 

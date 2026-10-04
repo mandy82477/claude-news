@@ -8,7 +8,7 @@ last_news_update: "2026-10-03"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
-children: "['entities/chris-ciauri', 'entities/chris-olah', 'entities/tom-brown', 'topics/anthropic-government-policy-archive']"
+children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 110
@@ -88,10 +88,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Pete Hegseth | 美國國防部長 | 判決認定其對報復性列入黑名單有責（第 4 列） |
 | Bernie Sanders／Greg Casar | 參議員／眾議員 | 09-03 共同提出 Ban Artificial Superintelligence Act（第 5 列） |
 | Michael Kratsios | 白宮科技顧問 | 07-22 指控 Moonshot 蒸餾 Fable，財政部揚言制裁（第 6 列） |
-| Tom Brown | Anthropic 共同創辦人 | 06-25 接管白宮談判，06-27 取得 Mythos 5 有限解封（2026-06 出口管制主線） |
+| [[entities/tom-brown\|Tom Brown]] | Anthropic 共同創辦人 | 06-25 接管白宮談判，06-27 取得 Mythos 5 有限解封（2026-06 出口管制主線） |
 | Dario Amodei | Anthropic 執行長 | 個人捐 100 萬美元予 PAC「Public First」，5 名員工跟進共逾 200 萬（第 7 列） |
-| Chris Olah | Anthropic 共同創辦人、可解釋性研究 | 05-26 出席教宗封論發布，Anthropic 為唯一受邀 AI 公司（2026-05 出口管制主線） |
-| Chris Ciauri | Anthropic 國際業務總監 | 06-18 首爾媒體說明會，對外公開解封時間框架（2026-06 出口管制主線） |
+| [[entities/chris-olah\|Chris Olah]] | Anthropic 共同創辦人、可解釋性研究 | 05-26 出席教宗封論發布，Anthropic 為唯一受邀 AI 公司（2026-05 出口管制主線） |
+| [[entities/chris-ciauri\|Chris Ciauri]] | Anthropic 國際業務總監 | 06-18 首爾媒體說明會，對外公開解封時間框架（2026-06 出口管制主線） |
 | Donald Trump | 美國總統 | Bloomberg／Politico 稱其政府要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型（第 8 列） |
 
 **線的細節**
@@ -236,7 +236,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 面對政府市場持續碰壁，Anthropic 選擇強化其他方向而非妥協：
 
-- **梵蒂岡路線**（5/26）：Chris Olah（見 [[#誰在動這幾條線]]）出席教宗封論揭幕，成為唯一受邀 AI 公司，確立國際倫理框架定位
+- **梵蒂岡路線**（5/26）：[[entities/chris-olah|Chris Olah]]（見 [[#誰在動這幾條線]]）出席教宗封論揭幕，成為唯一受邀 AI 公司，確立國際倫理框架定位
 - **IPO 路線**：650 億估值融資、遞交 IPO 文件，均在出口管制前完成
 - **企業市場**：五月企業市佔首超 OpenAI（Ramp 數據），「被美國政府打壓」在國際市場可能是同情紅利
 

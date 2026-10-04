@@ -7277,3 +7277,9 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 ## 2026-10-04 Query（使用者：手冊仍出現在工具／功能分頁）
 
 - [[topics/coding-workflow-guide]] 領域由 🛠️ 工具/功能 改為 💻 開發實務（手冊 10-04 已移交開發實務記者，領域欄是記者認領欄）；網站分頁、懸置標記派工、讀者版日報（併入功能節）、地圖色同步；index 領域欄同步
+
+## 2026-10-04 Query（使用者：Boris 說法、併入議題頁的人物轉回）
+
+- 使用者問「Boris 不是（創辦團隊）嗎」：Boris Cherny 是 Claude Code 的打造者，不是 Anthropic 共同創辦人，「與 Anthropic」維持 現任。[[entities/boris-cherny]] 身分與 index 鉤子由「Claude Code 創始人」改為「Claude Code 的打造者與負責人」，避免誤讀成公司創辦人
+- 推翻 2026-09-06 併頁裁決（使用者）：[[entities/chris-olah]]、[[entities/tom-brown]]、[[entities/chris-ciauri]] 由轉址殼轉回完整人物頁（以併頁前 a2e16168 原文為底套新人物頁格式，領域改 👤 人物，Olah／Brown 為創辦團隊、Ciauri 為現任）；事件經過的家仍是 [[topics/anthropic-government-policy]]，人物表三列改回 wikilink；index 補回三列
+- [[entities/mythos-archive]] 更正：TechCrunch 稱 Tom Brown 為 chief compute officer 是現職，原寫「非聯合創辦人」不實（他同時是共同創辦人）
