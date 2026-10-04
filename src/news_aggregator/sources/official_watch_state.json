@@ -769,8 +769,8 @@
     ]
   },
   "https://claude.com/pricing": {
-    "hash": "a0bd745ad57f0a27440797f075feccbbc5bf8b37de9f6d373e42a625cc58c3d0",
-    "length": 21166,
+    "hash": "62c0b51d148549145e76cc1d063f07c0e5aac5c0e9c9183b3277a7228b112b83",
+    "length": 21200,
     "segments": [
       "$0.05 per hour per container",
       "$0.08 per session-hour for active runtime",
@@ -890,6 +890,7 @@
       "For teams of 2 to 150",
       "For workloads that need to run in the US, US-only inference is available at 1.1x pricing for input and output tokens. Learn more .",
       "Free for everyone",
+      "Frontier Academy",
       "Get Enterprise plan Chat with buying specialist Seat price + usage at API rates",
       "Get Team plan Standard seat",
       "Get a comprehensive university‐wide plan for an institution, including its students, faculty, and staff.",
@@ -1433,8 +1434,8 @@
     ]
   },
   "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan": {
-    "hash": "c0abd324cb320106cd1c4f8200baa3d4fa92db4ef9f420b7c4a5cc1b87d2a6d4",
-    "length": 23108,
+    "hash": "c5c280e47a09a688c0dba5f3a6395ac3024b6ce55b6075c4b9d608271a50c004",
+    "length": 23154,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -1777,6 +1778,7 @@
       "Use Claude app intents, shortcuts, and widgets on iOS",
       "Use Claude for Education at your university",
       "Use Claude in Chrome safely",
+      "Use Claude in Google Docs, Sheets, and Slides",
       "Use Claude in Microsoft Foundry",
       "Use Claude in Xcode",
       "Use Claude with Android apps",
@@ -1841,8 +1843,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans": {
-    "hash": "0e716fd693a75fb0fdf1700ad9c71e5d5332e49b1542cc6e6045c710430f2abf",
-    "length": 23166,
+    "hash": "1586af1a3c4ba8f07defe559726a6dab91db3f6832d41d7b1f74226abf8e202f",
+    "length": 23212,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2202,6 +2204,7 @@
       "Use Claude app intents, shortcuts, and widgets on iOS",
       "Use Claude for Education at your university",
       "Use Claude in Chrome safely",
+      "Use Claude in Google Docs, Sheets, and Slides",
       "Use Claude in Microsoft Foundry",
       "Use Claude in Xcode",
       "Use Claude with Android apps",
@@ -2274,8 +2277,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "4f27d83505d6ee7ee20d5c0f5cefcb64eb9ad1c2299d24053384a016df9cae5c",
-    "length": 22961,
+    "hash": "0e42b65258b815d5f3daa1587fb63cbd77fab5cb450a36a990ced0aa306e799e",
+    "length": 23007,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -2615,6 +2618,7 @@
       "Use Claude app intents, shortcuts, and widgets on iOS",
       "Use Claude for Education at your university",
       "Use Claude in Chrome safely",
+      "Use Claude in Google Docs, Sheets, and Slides",
       "Use Claude in Microsoft Foundry",
       "Use Claude in Xcode",
       "Use Claude with Android apps",
@@ -2678,8 +2682,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "c60e3cb40d31fb76b56cbce90551ebe07e959e617060da181ff41664073b4682",
-    "length": 23377,
+    "hash": "aa31c04d311baeea7fb5723efde46b50f52b77aadcb6c617170d339a4fcf72e8",
+    "length": 23423,
     "segments": [
       "API FAQ Can I have a Claude account and a Console account?",
       "API Key Best Practices: Keeping Your Keys Safe and Secure",
@@ -3050,6 +3054,7 @@
       "Use Claude for Education at your university",
       "Use Claude for writing, research, analysis, and more—at work and at home.",
       "Use Claude in Chrome safely",
+      "Use Claude in Google Docs, Sheets, and Slides",
       "Use Claude in Microsoft Foundry",
       "Use Claude in Xcode",
       "Use Claude with Android apps",
@@ -3117,8 +3122,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "467c5446b50dc0abe4247e7791b3931b0394dc7992691e7a4120432f7f09d80d",
-    "length": 46784,
+    "hash": "d4bb4964582bff377e0196f94c861e458164cb143e7d45f5c64716f6d5670d97",
+    "length": 46866,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -3655,6 +3660,7 @@
       "Use Claude for Education at your university",
       "Use Claude for Excel and PowerPoint with an LLM gateway",
       "Use Claude in Chrome safely",
+      "Use Claude in Google Docs, Sheets, and Slides",
       "Use Claude in Microsoft Foundry",
       "Use Claude in Xcode",
       "Use Claude with Android apps",
