@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Imperial College London 數學教授、Xena Project 主持人
+**與 Anthropic：** 外部觀察者
+**職能：** 研究者
+**為何追蹤：** 回應 Anthropic 模型搶先完成費馬最後定理的 Lean 形式化
 **首次出現：** 2026-09-04
-**最後更新：** 2026-09-05
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-09-04
 
 > **最新表態**（2026-09-04）

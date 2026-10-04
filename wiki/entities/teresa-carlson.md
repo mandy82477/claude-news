@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active（待核實）
 **領域：** 👤 人物
+**身分：** Anthropic 全球公部門負責人（前 Microsoft、AWS 高管）
+**與 Anthropic：** 現任
+**職能：** 經營者
+**為何追蹤：** 2026-07 加入 Anthropic 主導公部門業務
 **首次出現：** 2026-07-07
-**最後更新：** 2026-09-26
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-07-07
 
 > **加入 Anthropic**（2026-07-07 報導）：Teresa Carlson（曾任職 Microsoft、AWS）出任 Anthropic **Global Head of Public Sector**（全球公部門負責人），為該公司首任此職。職稱已由多家具名產業媒體與本人 LinkedIn 檔案一致載明（[FedScoop](https://fedscoop.com/anthropic-taps-microsoft-aws-teresa-carlson-lead-public-sector/)、[Nextgov/FCW](https://www.nextgov.com/people/2026/07/anthropic-taps-teresa-calrson-public-sector-lead/414604/)、[Washington Technology](https://www.washingtontechnology.com/companies/2026/07/anthropic-hires-teresa-carlson-public-sector-lead/414605/)、[ExecutiveBiz](https://www.executivebiz.com/articles/teresa-carlson-anthropic-global-head-public-sector)、[GovConWire](https://www.govconwire.com/articles/teresa-carlson-anthropic-public-sector-global-head)；2026-09-20 查證），**已非單一來源**。

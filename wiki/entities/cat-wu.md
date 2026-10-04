@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic Claude Code 產品負責人
+**與 Anthropic：** 現任
+**職能：** 工程產品
+**為何追蹤：** Claude Code 產品方向（AI 主動性）的公開論述
 **首次出現：** 2026-05-14
-**最後更新：** 2026-09-05
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-07-31
 
 > **最新動態**（2026-06-22）
@@ -46,17 +50,7 @@ Cat Wu 是 Anthropic Claude Code 產品負責人（Head of Claude Code Products�
 
 ---
 
-## 與 Boris Cherny 的分工
-
-| | Cat Wu | Boris Cherny |
-|--|--|--|
-| 角色 | Head of Claude Code Products | Claude Code 創始人 |
-| 代表主張 | AI 主動性（proactivity）是下一躍進 | Loops 是 AI 編碼未來；coding is solved |
-| 公開場域 | 訪問報導 | Podcast、大會、媒體 |
-
----
-
-## 公開言論
+## 核心論述
 
 ### 「AI 下一步是主動性（Proactivity）」（2026-05-14）
 
@@ -71,12 +65,23 @@ Cat Wu 接受公開訪問，指出：
 
 ---
 
-## 相關實體
+## 與 Boris Cherny 的分工
+
+| | Cat Wu | Boris Cherny |
+|--|--|--|
+| 角色 | Head of Claude Code Products | Claude Code 創始人 |
+| 代表主張 | AI 主動性（proactivity）是下一躍進 | Loops 是 AI 編碼未來；coding is solved |
+| 公開場域 | 訪問報導 | Podcast、大會、媒體 |
+
+---
+
+## 相關議題
 
 - [[entities/claude-code]]（主導的產品）
 - [[entities/boris-cherny]]（Claude Code 創始人，共同塑造產品方向）
 - [[entities/managed-agents]]（proactivity 願景的具體實現）
 - [[entities/fiona-fung]]（「工程師更孤獨」論述的具名發言人）
+- [[topics/community-tech-patterns]]（主動性論述對應的社群工具設計哲學）
 
 ## 參考來源
 

@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** AI 研究者、Meta 前首席 AI 科學家
+**與 Anthropic：** 同業
+**職能：** 研究者
+**為何追蹤：** 公開批評 Dario Amodei 看待 AI 風險的方式
 **首次出現：** 2026-10-01
-**最後更新：** 2026-10-01
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-10-01
 
 > **公開批評 Dario Amodei「deluded」「crazy」**（2026-10-01）

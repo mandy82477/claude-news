@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic compute 團隊技術人員（Monzo 共同創辦人）
+**與 Anthropic：** 現任
+**職能：** 工程產品
+**為何追蹤：** 2026-07 自 YC 請假加入 Anthropic compute 團隊
 **首次出現：** 2026-07-13
-**最後更新：** 2026-09-04
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-09-02
 
 > **加入 Anthropic 已確認**（2026-07-13，2026-09-20 查證）
@@ -58,6 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/bernanke]] — 近期同批加入 Anthropic 治理/顧問層的知名外部人士案例
 - [[entities/teresa-carlson]] — 近期同批加入 Anthropic 的知名外部高管案例
 - [[entities/tino-cuellar]] — 近期同批加入 Anthropic 的知名外部人士案例（2026-08-05，首任 Chief Global Affairs Officer）
+- [[topics/anthropic-business]] — Anthropic 延攬人事與 compute 布局的商業面紀錄
 
 ## 參考來源
 

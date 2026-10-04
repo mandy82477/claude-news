@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic 研究者（前 Google DeepMind，諾貝爾化學獎得主）
+**與 Anthropic：** 現任
+**職能：** 研究者
+**為何追蹤：** 從 Google DeepMind 轉投 Anthropic 的人才流動指標案例
 **首次出現：** 2026-06-19（Twitter 傳出，06-21 經 Reuters 獨立確認）
-**最後更新：** 2026-09-27
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-06-26
 
 > 🔎 **查無官方**（標 2026-08-10｜查 Alphabet、Gemini 3.5｜複 2026-11-13）｜**人才出走潮市場影響推論**（2026-06-26 報導）：dev.to 多篇報導總結 Google AI 人才出走潮，稱一週內 4 位頂尖研究員離開 Google DeepMind 加入 Anthropic（含 Jumper），並將 Alphabet 市值蒸發與 Gemini 3.5 延期歸因於此波出走。**2026-09-13 查證結果：這條因果鏈從未出自官方之口，且市值數字各家互不相同。** Google 官方僅確認 Gemini 3.5 Pro 仍在與夥伴測試中，媒體報導的延期原因是**程式能力未達內部預期**，官方從未把延期歸因於研究員離職（[CNBC](https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html)）。市值面：07-16 延期消息當日 Alphabet 收跌 4.4%、蒸發約 **2,000 億美元**（CNBC）；其他媒體另給 2,250 億與「整段事件累計 4,250 億」等數字；本站原記的 2,700 億出自 dev.to 該篇報導自己的標題（270B wiped），與主流財經媒體的當日數字不同口徑。單日股價反應與「人才出走造成市值蒸發」是兩回事，後者屬推論，非事實。Jumper 本人加入一事已於 2026-06-21 經 Reuters 獨立確認，不屬本則懸置範圍。
@@ -48,13 +52,13 @@ John Jumper 是 2024 年諾貝爾化學獎得主，因 AlphaFold 蛋白質結構
 
 ---
 
-## 核心研究背景
+## 背景
 
 John Jumper 以 AlphaFold 系列模型的開發著稱，AlphaFold 2 解決了困擾生物學界數十年的蛋白質結構預測問題，被視為計算生物學的里程碑成就。2024 年諾貝爾化學獎一半授予 Demis Hassabis 與 John Jumper，肯定其在蛋白質結構預測領域的根本性貢獻。
 
 ---
 
-## 相關實體
+## 相關議題
 
 - [[topics/ai-talent-flow]] — Google DeepMind 至 Anthropic 人才流動潮
 - [[topics/anthropic-business]] — 人才招募、與 DeepMind 人才競爭

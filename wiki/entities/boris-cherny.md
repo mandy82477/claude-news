@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic Claude Code 創始人與負責人
+**與 Anthropic：** 現任
+**職能：** 工程產品
+**為何追蹤：** Claude Code 設計理念與工程實務最主要的公開發言來源
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-09-20
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-09-12
 
 > **Boris Cherny 親自回信「AI slop」質疑者**（2026-09-12）：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。
@@ -43,11 +47,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 
-**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類。逐條見下方言論摘要表。
+**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類。逐條見下方核心論述表。
 
 ---
 
-## 公開言論摘要表
+## 核心論述
 
 | 日期 | 主題分類 | 一句話論述 | 立場延續/轉折 |
 |------|---------|-----------|--------------|
@@ -71,8 +75,6 @@ Boris Cherny 是 Anthropic Claude Code 的創始人與負責人（Head of Claude
 | 2026-04-23 | 操作 | Claude Code 效能退步事件確認後發布事後報告，承諾超過 50 項修復 | — |
 
 ---
-
-## 公開言論與主張
 
 ### 回應「AI slop」批評與 production code 品質門檻聲明（2026-09-11／09-12）
 
@@ -172,7 +174,7 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 
 ---
 
-## 相關實體
+## 相關議題
 
 - [[entities/opus-5]]（其提示注入抵抗力公開評論之對象模型）
 - [[entities/claude-code]]（Boris Cherny 主導的產品）
@@ -182,22 +184,9 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 - [[topics/community-tech-patterns]]（設計哲學：Loops、vibe coding 反思）
 - [[entities/fiona-fung]]（「工程師更孤獨」論述具名發言人，曾誤列為候選）
 - [[entities/cat-wu]]（「Head of Claude Code」5 種員工原型論述另一候選人；查證狀態見該頁標記）
-
-## 歷史記錄
-
-- 2026-09-12：Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）
-- 2026-09-11：Simon Willison 部落格引述其發言，稱 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫，並提及 Anthropic 內部設有多項相關指引（原文於此處截斷）（simonwillison.net，2026-09-11）
-- 2026-08-03：於 YC Startup School 2026 訪談中表示，引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」（「verification 大概是人們最容易做錯的一件事」），並以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例（daringfireball.net 轉引 John Gruber，Hacker News 69 分，2026-08-02）。**後續（2026-09-02）**：重寫細節查實為改寫成 Swift 原生版、以逐像素比對自我驗證
-- 2026-07-27：Business Insider 報導呼籲使用者停止「微管理」（micromanaging）AI，延續其「Loops 是未來」設計哲學；原文正文未能擷取，僅標題可確認核心主張（查證狀態見「呼籲停止微管理」段落標記）（Google News / Business Insider，2026-07-27）
-- 2026-07-25：Boris Cherny 公開表示 Opus 5 是目前最難被提示注入攻破的模型（Simon Willison 部落格轉引 X 貼文，https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything）
-- 2026-07-20：Bloomberg 發布影片／報導「Watch The Creator of Claude Code on The Hottest Piece of Software in the World」，標題未具名，佐以 Bloomberg 7/16 特稿與多平台「Creator of Claude Code」慣稱推測極可能為本人（Google News / Bloomberg.com，2026-07-20）。**後續（2026-09-03）**：Bloomberg 影片頁面明列受訪者為 Boris Cherny，身分懸置解除
-- 2026-07-17：Startup Fortune 報導其表示現在同時執行數千個 Claude Code agent，呼應 5/13 揭露的夜間數千子代理工作流，（Google News / Startup Fortune，2026-07-17）。**後續（2026-09-03）**：出處查實為 Fortune Brainstorm Tech 2026-06-08 演講，詳見上方「現在同時執行數千個 Claude Code agent」節
-- 2026-07-08：inc.com 報導「Head of Claude Code」談新創公司需具備的 5 種員工原型（Prototyper／Builder／Sweeper／Grower／Maintainer）——**發言人經查證即 Boris Cherny 本人**（原文引述其 X 貼文；[inc.com，2026-07-07](https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409)，2026-09-03 查證）；先前「可能為 [[entities/cat-wu]]」的懸置已解除
-- 2026-06（總結）：「AI 寫 100% 程式碼正在變得有問題」立場轉變（06-24）、13 個日常使用技巧公開（06-28）、AI ROI 與實驗平衡論述（06-23）、Loop 工程哲學名言（06-20）；「工程師更孤獨」一說後續確認為 Fiona Fung 非本人（06-22）。原始條目見 [[entities/boris-cherny-archive#2026-06]]
-- 2026-05（總結）：「Loops 是未來」（05-05）→「軟體工程已死」（05-06）→「coding is solved」（05-08）→ 數千子代理夜間工作流（05-13）→ Platformer 專訪（05-27），是其設計哲學系列宣言的奠基月。原始條目見 [[entities/boris-cherny-archive#2026-05]]
-- 2026-04（總結）：效能退步事件事後報告承諾 50+ 項修復（04-23）；The Verge 報導聲明訂閱方案非為第三方 agentic 工具而設計（04-25）。原始條目見 [[entities/boris-cherny-archive#2026-04]]
-
----
+- [[topics/ai-agent-safety]]（Opus 5 抗提示注入評論的安全面對照）
+- [[topics/community-tech-discussions]]（「AI slop」品質爭議與回信）
+- [[topics/coding-workflow-guide]]（反 vibe coding、spec-driven 與「沿途驗證」心法的實務落地）
 
 ## 參考來源
 
@@ -222,3 +211,17 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 - [[news/2026-08-04]]
 - [[news/2026-09-11]]
 - [[news/2026-09-12]]
+
+## 歷史記錄
+
+- 2026-09-12：Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）
+- 2026-09-11：Simon Willison 部落格引述其發言，稱 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫，並提及 Anthropic 內部設有多項相關指引（原文於此處截斷）（simonwillison.net，2026-09-11）
+- 2026-08-03：於 YC Startup School 2026 訪談中表示，引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」（「verification 大概是人們最容易做錯的一件事」），並以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例（daringfireball.net 轉引 John Gruber，Hacker News 69 分，2026-08-02）。**後續（2026-09-02）**：重寫細節查實為改寫成 Swift 原生版、以逐像素比對自我驗證
+- 2026-07-27：Business Insider 報導呼籲使用者停止「微管理」（micromanaging）AI，延續其「Loops 是未來」設計哲學；原文正文未能擷取，僅標題可確認核心主張（查證狀態見「呼籲停止微管理」段落標記）（Google News / Business Insider，2026-07-27）
+- 2026-07-25：Boris Cherny 公開表示 Opus 5 是目前最難被提示注入攻破的模型（Simon Willison 部落格轉引 X 貼文，https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything）
+- 2026-07-20：Bloomberg 發布影片／報導「Watch The Creator of Claude Code on The Hottest Piece of Software in the World」，標題未具名，佐以 Bloomberg 7/16 特稿與多平台「Creator of Claude Code」慣稱推測極可能為本人（Google News / Bloomberg.com，2026-07-20）。**後續（2026-09-03）**：Bloomberg 影片頁面明列受訪者為 Boris Cherny，身分懸置解除
+- 2026-07-17：Startup Fortune 報導其表示現在同時執行數千個 Claude Code agent，呼應 5/13 揭露的夜間數千子代理工作流，（Google News / Startup Fortune，2026-07-17）。**後續（2026-09-03）**：出處查實為 Fortune Brainstorm Tech 2026-06-08 演講，詳見上方「現在同時執行數千個 Claude Code agent」節
+- 2026-07-08：inc.com 報導「Head of Claude Code」談新創公司需具備的 5 種員工原型（Prototyper／Builder／Sweeper／Grower／Maintainer）——**發言人經查證即 Boris Cherny 本人**（原文引述其 X 貼文；[inc.com，2026-07-07](https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409)，2026-09-03 查證）；先前「可能為 [[entities/cat-wu]]」的懸置已解除
+- 2026-06（總結）：「AI 寫 100% 程式碼正在變得有問題」立場轉變（06-24）、13 個日常使用技巧公開（06-28）、AI ROI 與實驗平衡論述（06-23）、Loop 工程哲學名言（06-20）；「工程師更孤獨」一說後續確認為 Fiona Fung 非本人（06-22）。原始條目見 [[entities/boris-cherny-archive#2026-06]]
+- 2026-05（總結）：「Loops 是未來」（05-05）→「軟體工程已死」（05-06）→「coding is solved」（05-08）→ 數千子代理夜間工作流（05-13）→ Platformer 專訪（05-27），是其設計哲學系列宣言的奠基月。原始條目見 [[entities/boris-cherny-archive#2026-05]]
+- 2026-04（總結）：效能退步事件事後報告承諾 50+ 項修復（04-23）；The Verge 報導聲明訂閱方案非為第三方 agentic 工具而設計（04-25）。原始條目見 [[entities/boris-cherny-archive#2026-04]]

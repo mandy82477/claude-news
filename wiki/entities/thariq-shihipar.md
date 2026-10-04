@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active（單一來源）
 **領域：** 👤 人物
+**身分：** Anthropic Claude Code 團隊成員
+**與 Anthropic：** 現任
+**職能：** 工程產品
+**為何追蹤：** 具名說明 Claude Code 系統提示詞、偵測機制等官方細節
 **首次出現：** 2026-09-29
-**最後更新：** 2026-09-29
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-09-29
 
 > **接受 Latent Space 專訪**（2026-09-29，僅標題可用）

@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic pre-training 團隊研究員（前 OpenAI 共同創辦人）
+**與 Anthropic：** 現任
+**職能：** 研究者
+**為何追蹤：** 2026-05 加入 Anthropic；其 CLAUDE.md 規則被社群引為 context 費用控管依據
 **首次出現：** 2026-05-17（CLAUDE.md 維護討論中被引用）
-**最後更新：** 2026-09-04
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-08-02
 
 > **加入 Anthropic 已確認**（2026-05-19，2026-08-13 查證）
@@ -65,6 +69,8 @@ Andrej Karpathy 為知名 AI 研究者，已於 2026-05-19 加入 Anthropic pre-
 
 - [[topics/enterprise-cost-management]]（費用控管社群共識）
 - [[entities/claude-code]]（CLAUDE.md 文化）
+- [[topics/ai-talent-flow]]（2026-05 加入 Anthropic 的人才流動案例）
+- [[topics/community-tech-discussions]]（HN 討論 CLAUDE.md 維護時引用其設定）
 
 ## 參考來源
 

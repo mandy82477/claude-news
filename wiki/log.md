@@ -7210,6 +7210,13 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - [[topics/community-tech-discussions]]「現在吵到哪」新增「Claude 可能有意識嗎」列（還在吵；官方憲章 2026-01 表態不確定），摘要與 index 鉤子同步為 6 場還在吵
 - reader-notes：「GPT vs Claude 比較」結案（官方 Opus 5.5 發布文已並列 GPT-6 Astra／GPT-5.6 Sol，對照寫入 [[topics/competitor-landscape]]）；「LLM code review 成本」新增 1 節點、「記憶格式規約」無新節點，兩筆維持 ⏳
 
+## 2026-10-04 Query（使用者提問：人物頁看不出角色 → 人物頁結構統一）
+
+- 27 個人物頁標頭加 `**身分：**`、`**與 Anthropic：**`（七選一）、`**職能：**`（七選一）、`**為何追蹤：**` 四欄，供網站人物總覽、議題陣容、人物關係網與人物頁關聯圖使用；格式見 `.claude/reporter-rules/page-templates.md`「人物頁（類型 person）」
+- 段名統一：[[entities/boris-cherny]]、[[entities/cat-wu]]、[[entities/dario-amodei]] 的「他說了什麼」段改名核心論述；[[entities/john-jumper]]「核心研究背景」改為專有段「背景」；三頁「相關實體」改為相關議題；Boris 頁參考來源移到歷史記錄之前
+- 補相關議題連結：7 頁共 11 條（amir-salek、andrej-karpathy、bernanke、boris-cherny、cat-wu、mustafa-suleyman、tom-blomfield）；[[entities/kevin-buzzard]] 找不到收錄 FLT 形式化的議題頁，未補
+- 歸因 user-query／人物
+
 ## 2026-10-04 週度延伸回顧
 
 - 本機補跑（/weekly 步驟 0）：

@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Microsoft AI 執行長
+**與 Anthropic：** 同業
+**職能：** 經營者
+**為何追蹤：** 公開評論 Anthropic 對 Claude 類人化與 AI 意識的說法
 **首次出現：** 2026-09-16
-**最後更新：** 2026-09-19
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-09-17
 
 > **矽基物種警告＋第一手原文**（2026-09-17）
@@ -57,6 +61,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/dario-amodei]] — Anthropic 執行長，本頁批評對象；同期另有 Nvidia 執行長黃仁勳就 Anthropic 政策提案提出批評
 - [[entities/jensen-huang]] — Nvidia 執行長，2026-09-15／16 同期另一則針對 Anthropic 的產業批評
 - [[entities/mythos]] — Claude Mythos／Fable 5 系列，Suleyman 2026-06-10 首次批評的原始脈絡
+- [[topics/recursive-self-improvement]] — AI 遞歸自我改進與全球暫停呼籲，本人「矽基物種」警告所屬的反彈聲浪脈絡
 
 ## 參考來源
 

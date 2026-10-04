@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** 前聯準會主席，Anthropic 長期利益信託董事
+**與 Anthropic：** 治理
+**職能：** 政策治理
+**為何追蹤：** 2026-07 加入 Anthropic 長期利益信託董事會
 **首次出現：** 2026-07-10
-**最後更新：** 2026-08-22
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-07-10
 
 > **最新動態**（2026-07-09）
@@ -54,6 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/teresa-carlson]] — 近期同批加入 Anthropic 的外部高管案例（2026-07-07，公部門業務；查證狀態見該頁標記）
 - [[entities/tom-blomfield]] — 近期同批加入 Anthropic 的知名外部人士案例（2026-07-13；查證狀態見該頁標記）
 - [[entities/tino-cuellar]] — 近期同批加入 Anthropic 治理/顧問層的知名外部人士案例（2026-08-05，首任 Chief Global Affairs Officer）
+- [[topics/anthropic-business]] — 長期利益信託董事會成員與公司治理動態
 
 ## 參考來源
 

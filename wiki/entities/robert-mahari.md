@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active（待核實）
 **領域：** 👤 人物
+**身分：** Anthropic「Claude for Legal」負責人
+**與 Anthropic：** 現任
+**職能：** 經營者
+**為何追蹤：** 2026-08 獲任命，主導 Claude 在法律垂直市場的推廣
 **首次出現：** 2026-08-08
-**最後更新：** 2026-09-07
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-08-08
 
 > **Robert Mahari 出任 Claude for Legal 負責人**（2026-08-07 報導，2026-09-13 查證正文）：Anthropic 任命 Robert Mahari 出任「Claude for Legal」負責人（head of Claude for Legal）。**過往經歷已確認**：哈佛法學院與 MIT Media Lab 的 JD-PhD（研究主題即法律 AI）、史丹佛 CodeX 法律資訊學中心副主任，並創辦法律 AI 新創 Akiva AI。**職掌範圍已確認**：帶法律事務所、企業法務與法律科技公司「從產品走到 GTM」，與既有負責法律垂直產品的 Mark Pike 分工。此任命發生在 Claude for Legal 推出約三個月後，該產品上線時附 20 個 MCP connector 串接事務所既有軟體（[Legal IT Insider](https://legaltechnology.com/anthropic-hires-robert-mahari-as-head-of-claude-for-legal/)、[Artificial Lawyer](https://www.artificiallawyer.com/2026/08/07/anthropic-hires-head-of-claude-for-legal/)）。

@@ -29,8 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
+**身分：** Anthropic compute 團隊成員（前 Google TPU 專案創辦人）
+**與 Anthropic：** 現任
+**職能：** 工程產品
+**為何追蹤：** 2026-08 自 Google 加入 Anthropic compute 團隊，涉及其晶片布局
 **首次出現：** 2026-08-23
-**最後更新：** 2026-09-12
+**最後更新：** 2026-10-04
 **最後新聞更新：** 2026-08-24
 
 > **Anthropic 延攬 Amir Salek 進 compute 團隊**（2026-08-21 報導）
@@ -50,6 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - [[topics/ai-talent-flow]] — AI 實驗室間人才流動、對公司硬體佈局意涵的商業面追蹤
 - [[entities/dario-amodei]] — Anthropic CEO
+- [[topics/anthropic-business]] — Anthropic 硬體／晶片布局與延攬人事的商業面紀錄
 
 ## 參考來源
 
