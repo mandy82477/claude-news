@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-04）
+> **本週衝擊**（2026-10-05）
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
@@ -53,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Microsoft／GitHub** 🏢 | Copilot CLI／桌面版公開預覽新增 computer use，可代操作桌面應用程式；同日新增可程式碼定義的動態工作流程編排（10-01）→ Claude Code 尚無對應桌面操作能力 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；兩項功能均為公開預覽／初次發布，缺採用規模與穩定性數據 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
-| **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體（The Register／VentureBeat），無方法論、無 benchmark 數字 |
+| **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書 ❓ 待查證⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
 | **Google（Gemini）** 🏢 | 發布 Gemini 4 Argon，主打 agentic coding／資安防禦，先限量開放 Fairwind Program（09-30）→ 暫無法比較，待全面開放後再評估 | 能力 | 🟡 | DeepMind 官方部落格一手；效能數字、GA 時程、定價均未見公布，僅限量測試者（企業方案計費見 ⟨Q-06⟩ 下方細節） |
@@ -68,6 +68,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-06⟩ 已查證（2026-09-20，[antigravity.google/docs/plans](https://antigravity.google/docs/plans/)）：企業存取走 Gemini Enterprise Agent Platform，Google Cloud 消費制計費，無固定席位價，不支援 BYO-key／合約制組織方案。
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
 - ⟨Q-07⟩ ❓ **待查證**（標 2026-09-30｜查 GPT-6.1 Sol、GPT-6 Astra｜複 2026-10-14）：OpenAI 官方僅揭露相對倍率（Astra 標準價的五分之一）與快取輸入價 $0.10/M tokens，Astra／Sol 絕對牌價未見公布，無法換算 vs Claude 比例。
+- ⟨Q-08⟩ ❓ **待查證**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-10-19）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；「Anthropic 背書競品模型」與其一貫定位不符，單一財經聚合媒體來源，未見其他媒體或官方佐證。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
 **未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
@@ -219,6 +220,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-05
+- **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書，待查證見「對手雷達」⟨Q-08⟩（Topic Watch/competitor-landscape）
+- **OpenAI**：官方部落格說明因應歐盟文字來源標示規則的作法，聚焦浮水印適用範圍與偵測機制（Blog/OpenAI News）
+- **OpenAI**：官方部落格推出 ChatGPT 新視覺廣告格式，並擴充衡量工具與品牌歸因合作（Blog/OpenAI News）
+- **產業趨勢**：fortune.com 報導 OpenAI、Anthropic 因資料隱私爭議促使更多企業轉向開源模型與「主權 AI」，未點名具體企業或數字（Google News/fortune.com）
 
 ### 2026-10-04
 - **DeepSeek**：Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性）；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Pandaily）

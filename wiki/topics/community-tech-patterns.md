@@ -29,13 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新工作流模式**（2026-10-04）
-> - **安全架構添一例**：ThinkWatch-Lite 讓多款 AI 客戶端共用一個閘道切換上游、留住金鑰、擋惡意工具呼叫。
-> - **行動與創意場景各添一例**：Mobile-Harness 把 Claude Code 搬上免 root Android；GodotMaker 用三款 agent 驅動文字轉 Godot 遊戲產線。
-> - **Hooks 與 Token 優化各添一例**：sloppy 鎖定 PHP 的 AI 技術債、全程不碰 LLM；mcptoon 宣稱把 MCP 工具發現成本壓低 99.2%（自測）。
+> **最新工作流模式**（2026-10-05）
+> - **Plugin / MCP 整合添三例**：solomd 把筆記編輯器變 MCP 橋接；Atlassian、Desktop Commander 各自發布官方 remote MCP server。
+> - **安全架構再添一例**：WaLiAPI 本機 LLM API 閘道，統一三協議轉換，呼應 10-04 的 ThinkWatch-Lite。
 
 ---
 
@@ -57,14 +56,14 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-03 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-02 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
+| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-05 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-04 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | 跨 session、跨工具、跨機器的持久記憶協定 |
-| **Plugin / MCP 整合** | Plugin 反模式整理、MCP 協調中心、docsagent、home-assistant-vibecode-agent（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-02 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **安全架構** | Grepathy、OneCLI、agent-scan、自主 agent 部署閘、ThinkWatch-Lite、WaLiAPI（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-05 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **創意工具 Agent 整合** | Palmier Pro、reelmimic、comfyui-mcp、video-talkcraft、GodotMaker 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
-| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、agent-scan、自主 agent 部署閘、ThinkWatch-Lite（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、CLI-WeChat-Bridge、Mobile-Harness（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 手機當 agent 控制介面，各自選不同傳輸層 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬、agent-office 3D 卡通辦公室（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-29 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
@@ -185,6 +184,60 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### nykooi1/vibe-wise：陪使用者一起學系統設計的 Claude Code 外掛（2026-10-05）
+
+- **主線：** —
+- **核心模式：** Claude Code 外掛，在 AI 寫程式的同時向使用者解釋設計決策，目標是讓委託 AI 寫程式的人同步學會怎麼建構系統；GitHub Search 1,599 星。
+- **與既有模式的關係：** 本表既有類別多聚焦「讓 agent 做得更好」，本則是少見的「讓人在旁邊跟著學」取向，與現有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,599★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/nykooi1/vibe-wise)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### zhitongblog/solomd：本地優先 markdown 編輯器，內建 MCP 橋接 Claude Code／Codex／Cursor（2026-10-05）
+
+- **主線：** —
+- **核心模式：** 本地優先、MIT 授權 markdown 編輯器（約 15MB），內建 MCP server 讓 Claude Code、Codex、Cursor 直接操作筆記庫，支援 14 家 LLM 供應商自帶金鑰；GitHub Search 1,167 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（docsagent 等）一個「筆記應用本身即 MCP 橋接」取向——把既有編輯器變成 agent 可直接操作的資料層，而非另建獨立記憶服務。
+- **可信度註記：** 僅有 GitHub Search 星數（1,167★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/zhitongblog/solomd)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### atlassian/atlassian-mcp-server：Atlassian 官方 remote MCP server，串 Jira／Confluence／Bitbucket（2026-10-05）
+
+- **主線：** —
+- **核心模式：** Atlassian 官方推出的 remote MCP server，讓 Claude、ChatGPT、Cursor、VS Code 等工具以 OAuth 2.1 或 API token 直接存取 Jira、Confluence、Jira Service Management、Bitbucket、Compass；GitHub Search 1,084 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「供應商官方自建 remote MCP」取向——不是社群拼裝，是廠商自己發布的正式整合層。
+- **可信度註記：** 僅有 GitHub Search 星數（1,084★），無 forks／issues／近期 commit 佐證可查，未另行查證；官方供應商發布，造假誘因低於個人開發者項目（推論）。
+- **來源：** GitHub Search；[GitHub](https://github.com/atlassian/atlassian-mcp-server)
+- **成熟度：** ⏳ 新興（本庫首次收錄，官方供應商發布，尚無社群採用回饋數據）
+
+#### sadjow/claude-code-nix：隨 Anthropic 原生發布每小時自動更新的 Claude Code Nix 套件（2026-10-05）
+
+- **主線：** —
+- **核心模式：** Nix 套件，每小時輪詢 Anthropic 原生發布並自動同步最新版本，免去手動包裝 Claude Code 版本落後的問題；GitHub Search 500 星。
+- **與既有模式的關係：** 本表既有類別未涵蓋「套件分發自動化」這個切面，與現有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/sadjow/claude-code-nix)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### fuzhengwei/WaLiAPI：本機運行的 LLM API 閘道桌面軟體，統一三協議轉換（2026-10-05）
+
+- **主線：** —
+- **核心模式：** 本機運行的 LLM API 閘道桌面軟體（Tauri 2＋React＋Rust），統一 Chat Completions／Responses／Anthropic Messages 三協議轉換，內建安全審計引擎、RAG 知識庫與 29 工具 MCP Server；GitHub Search 138 星。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（ThinkWatch-Lite 等，[[topics/community-tech-patterns#2026-10]]）一個「桌面閘道＋協議轉換」取向——ThinkWatch-Lite 聚焦金鑰留在閘道與惡意呼叫攔截，本則額外做三協議互轉與內建知識庫；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（138★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/fuzhengwei/WaLiAPI)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### desktop-commander/remote-desktop-commander：Desktop Commander 官方 remote MCP server，OAuth 連回自己的電腦（2026-10-05）
+
+- **主線：** —
+- **核心模式：** Desktop Commander 官方 remote MCP server，讓 claude.ai、ChatGPT、Cursor 等用戶端透過 OAuth 連回使用者自己的電腦執行操作；GitHub Search 137 星。
+- **與既有模式的關係：** 與本則同批的 atlassian-mcp-server 同屬「供應商官方自建 remote MCP」取向，併入「Plugin / MCP 整合」既有代表技巧。
+- **可信度註記：** 僅有 GitHub Search 星數（137★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/desktop-commander/remote-desktop-commander)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### ThinkWatchProject/ThinkWatch-Lite：本機閘道統一管理 Claude Code、Codex 等多款 AI 客戶端的上游供應商與金鑰（2026-10-04）
 

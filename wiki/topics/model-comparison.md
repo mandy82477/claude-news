@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **淘汰通知傳聞**（2026-10-01）
-> 單一來源報導稱 Anthropic 已將 Sonnet 4.5 標記淘汰、給 61 天轉移通知期，僅比最低保留期多 1 天；待官方文件確認，見下方時序。
+> **Sonnet 4.5 退役日已官方查證：2026-11-30**（2026-10-05）
+> 官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)確認：`claude-sonnet-4-5-20250929` 2026-09-30 公告棄用、2026-11-30 退役，建議遷移至 Sonnet 5.5；詳見 [[topics/model-comparison#時序（陣容變化）]]。
 
 ---
 
@@ -141,18 +141,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 升級與退役風險
 
-換模型的風險不只在牌價，還在**舊模型何時停、新模型升上去會不會壞、跑的是不是你選的那一個**。下表把散在各頁的四類風險收成一張對照，只放結論與出口；前三列都是單一來源報導，官方沒有出面確認，不當事實用。Haiku 4.5 的退役下限見快速選型表與選型細節。
+換模型的風險不只在牌價，還在**舊模型何時停、新模型升上去會不會壞、跑的是不是你選的那一個**。下表把散在各頁的三類風險收成一張對照，只放結論與出口；下列皆為單一來源報導，官方沒有出面確認，不當事實用（Sonnet 4.5 退役日已於 2026-10-05 經官方查證，見下方時序，不再列入本表）。Haiku 4.5 的退役下限見快速選型表與選型細節。
 
 | 風險 | 目前說法與證據強度 | 來源（日期） | 出口與建議 |
 |------|------------------|-------------|-----------|
-| Sonnet 4.5 退役通知期 | 報導稱已標淘汰、通知期 61 天；單一來源，官方文件沒有寫 | mixed-news.com（2026-10-01） | 懸置標記見 [[#時序（陣容變化）]]；仍用 4.5 者先查官方退役日 |
 | Sonnet 5→5.5 升級行為差異 | 稱五種情境有差異、一種無錯誤訊息靜默失敗；原文僅標題可讀 | MIXED Reality News（2026-09-30） | 情境未載，升級前跑自己的回歸；見 [[entities/sonnet-5-5#你現在拿到的是什麼]] |
 | Sonnet 5.5 工作階段被降回 Sonnet 5 | 稱未主動輸入也可能被降回；觸發條件、範圍、可否關閉皆未載 | mixed-news.com（2026-10-01） | 核對實際跑的模型；釘選不一定成立，見 [[topics/code-quality-decline]] |
 | 換代的實付成本 | Claude 4.7 起新 tokenizer 約多 30% token，牌價相同花費不同 | 官方定價頁（2026-08-29 查證） | 成本表在 [[#換代的實付成本：牌價相同不等於花費相同]]，遷移前用 `count_tokens` 量 |
 
 **表下細節**
 
-- **Sonnet 4.5 通知期**：官方 Models overview 與 changelog 尚未見載明，故退役日不可由「61 天」反推。Microsoft Foundry 的 Claude Code `default` 仍指 Sonnet 4.5（官方文件，2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
+- **Sonnet 4.5 退役**：2026-11-30 退役已官方確認（見上方 callout 與下方時序），仍用 4.5 者應儘速遷移。Foundry 的 `default` 仍指 Sonnet 4.5（2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
 - **升級行為差異與降回**：兩則皆只有標題可讀，Sonnet 5.5 頁各存一筆原文連結與日期；官方 migration guide 對 5→5.5 的記載尚不完整，本頁不推算具體情境。
 
 ## 外部評測榜單
@@ -200,7 +199,7 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 
 ## 時序（陣容變化）
 
-- 2026-10-01：❓ **待查證**（標 2026-10-01｜查 Sonnet 4.5、61 days）｜**Sonnet 4.5 淘汰通知期**：mixed-news.com 報導稱 Anthropic 已將 Sonnet 4.5 標記淘汰，給予 61 天轉移通知期，報導稱僅比官方設定的最低保留期多 1 天；單一來源，待官方文件或 changelog 確認
+- 2026-09-30：**Sonnet 4.5 公告棄用，2026-11-30 退役**（官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證，與 mixed-news.com、dev.to 先行報導一致）：建議遷移至 `claude-sonnet-5-5`；Bedrock、GCP 另訂時程
 - 2026-09-28：**Sonnet 5.5 發布**，取代 Sonnet 5 成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3% 升至 70.6%
 - 2026-09-23：**Opus 5.5 發布**，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價 $4/$20（降 20%），官方稱運算成本降 40%
 - 2026-09-01：**Fable 5.1 發布**，取代 Fable 5.0 成為公開陣容旗艦；Mythos 5.1 同步發布，維持信任機構限定存取

@@ -34,17 +34,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 2026-09 辭職並公開示警 AI 風險，成為主流媒體報導焦點
 **首次出現：** 2026-09-09
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **WSJ 人物報導：匿名數學怪咖成 AI 安全代表人物**（2026-09-17）
-> WSJ 稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物；WSJ 官方 X 帳號已點名主角即本人（2026-10-03 查證），詳見「爭議」節。
+> **紐約市聽證會重申警告**（2026-10-05）
+> Coxon 出庭紐約市 AI 安全聽證會，重申辭職時的警告，稱業界做法「極度魯莽」；延續 09-09 辭職聲明立場，細節見 [[entities/jacob-coxon#核心論述]]。
 
 ---
 
 ## 現況
 
-WSJ 人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》的主角即本人：WSJ 官方 X 帳號推文以「Jacob Coxon quit his job—and the world freaked out. How an anonymous math whiz became the face of the AI apocalypse」引導該文（[WSJ on X](https://x.com/WSJ/status/2100543615709646901)），報導轉載頁標題亦直接寫 Jacob Coxon（2026-10-03 查證，僅讀到搜尋摘要，WSJ 全文有付費牆未讀）。
+Coxon 於 2026-10-05 出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（[NY Post](https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmUzVVVySnJtNFBUYlhrMWlxY0xOMEVySFZTMzFlR25La0ZqSU00TlEtWTRMT3Z1ZE85S3dwTXg0LXZTV2JmeDZ5R1RYaU9qVGFtYzZrNnV4YXZMSEZ1bW5YUEFCQkZpV0t4V1NaRTI2VldmRGFwWEFLNkhzbzU0Nk9sQUpPRmVDNjg4YVBpMm5rR2hLR0FSYlhjZEhWemN2dHVWTW9mLS1mekdmU1RuSTBma2sta3B4T2p1Y3VmWUZnaG0zMmVNRENEOXZjZw?oc=5)／[Axios](https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ2dacmRIYW4xWGNpRkNvNE9VWGJvU1o3RFV2c0taOUl5UmNOTmxkczJNV0tiLTF3QlpWd01JZ2piczhRRUc4ZVNkMDZmQVZkRVVma0wzZk9NNV9kTFAxLWpPVEJSUzdYY0tvTGEtUWR6bTBybVJkREZqNUdwVTB6Si1MbnFvV0N4SHo0LTBlS09NOVFNVzJDSzZscE1YNE10bkZfRw?oc=5)，經 Google News，2026-10-05）。Bloomberg News 於前一日（10-04）先行報導本人將出庭作證（經 [Reuters](https://news.google.com/rss/articles/CBMivgFBVV95cUxORnR5cUVLZE91ckU2X0sxOGNzbjA4SjU4MFhiUXNvb0E4M1FLTldoT3d0b3BDUmU3NFVxOUk1eURXMmhEVExrQTNKT3d2LXY2emNNSUo0Nzd0Vkp0WmxiTDh0MVhhM2h1NnRIZnVnZmRNcmJNNmlCajkxN1U2ZGJBZHlLNEVYanF6c2lBc0pVOHh2a1h4QWs0Yngxc0RYX3pOS2NDUGZRRjRKQmtLbnpxZk5QNjljNjJVSkNQRVNn?oc=5)／Google News，2026-10-04）。
 
 Jacob Coxon 於 2026-09-09 在 X 發文宣布辭去 Anthropic 職務，自述過去三年在 OpenAI 與 Anthropic 從事 pretraining 研究，指控兩家公司「都沒有負責任行事，正直衝向自我改進的超級智能，拿我們的生命當賭注」；貼文經 Hacker News 轉發，互動量達 623 分，為當日全庫最高互動條目，另有 WSJ 獨家報導跟進。
 
@@ -52,6 +52,7 @@ Coxon 的資歷經具名媒體獨立查證（2026-09-26 查證）：英國劍橋
 
 ## 核心論述
 
+- **聽證會重申警告**（紐約市 AI 安全聽證會，2026-10-05，經 NY Post／Axios）：出庭作證重申辭職時立場，稱業界做法「極度魯莽」。
 - **辭職聲明**（X，2026-09-09，經 HN 轉發 623 分）：稱已辭去 Anthropic 職務，過去三年於 OpenAI／Anthropic 從事 pretraining 研究，指控兩家公司「不負責任地衝向自我改進超級智能，拿我們的生命當賭注」（原文見細節區）。
 
 **細節：** 原文——I resigned from Anthropic today. I spent the last three years doing pretraining research at both OpenAI and Anthropic. Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.
@@ -78,6 +79,9 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 參考來源
 
+- [Anthropic whistleblower Jacob Coxon doubles down on AI warnings at NYC hearing: 'Extremely reckless'](https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmUzVVVySnJtNFBUYlhrMWlxY0xOMEVySFZTMzFlR25La0ZqSU00TlEtWTRMT3Z1ZE85S3dwTXg0LXZTV2JmeDZ5R1RYaU9qVGFtYzZrNnV4YXZMSEZ1bW5YUEFCQkZpV0t4V1NaRTI2VldmRGFwWEFLNkhzbzU0Nk9sQUpPRmVDNjg4YVBpMm5rR2hLR0FSYlhjZEhWemN2dHVWTW9mLS1mekdmU1RuSTBma2sta3B4T2p1Y3VmWUZnaG0zMmVNRENEOXZjZw?oc=5) — Google News／New York Post，2026-10-05
+- [同場聽證會報導](https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ2dacmRIYW4xWGNpRkNvNE9VWGJvU1o3RFV2c0taOUl5UmNOTmxkczJNV0tiLTF3QlpWd01JZ2piczhRRUc4ZVNkMDZmQVZkRVVma0wzZk9NNV9kTFAxLWpPVEJSUzdYY0tvTGEtUWR6bTBybVJkREZqNUdwVTB6Si1MbnFvV0N4SHo0LTBlS09NOVFNVzJDSzZscE1YNE10bkZfRw?oc=5) — Google News／Axios，2026-10-05（原標題未附於抓取節錄，僅連結可用）
+- [Former Anthropic researcher Coxon to testify at New York City AI hearing, Bloomberg News reports](https://news.google.com/rss/articles/CBMivgFBVV95cUxORnR5cUVLZE91ckU2X0sxOGNzbjA4SjU4MFhiUXNvb0E4M1FLTldoT3d0b3BDUmU3NFVxOUk1eURXMmhEVExrQTNKT3d2LXY2emNNSUo0Nzd0Vkp0WmxiTDh0MVhhM2h1NnRIZnVnZmRNcmJNNmlCajkxN1U2ZGJBZHlLNEVYanF6c2lBc0pVOHh2a1h4QWs0Yngxc0RYX3pOS2NDUGZRRjRKQmtLbnpxZk5QNjljNjJVSkNQRVNn?oc=5) — Google News／Reuters，2026-10-04
 - [The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety](https://news.google.com/rss/articles/CBMifkFVX3lxTFBfZ1ZRUnVkR2YwbU50cWVaYVhxNEd2YnZ2ZVMzdlJWa1NvTXg3NUEzcEVfOWZ1Z2JuVlRlVVdfbm1HQXBKNEFNNjFJSmJra2FMMU9HZ014ekttTE0wQlJNYktqWFdNNF9YanJuR0NjaThSdk9zRnVVdzEwNTV2Zw?oc=5) — Google News／WSJ，2026-09-17（僅標題可用；身分未直接點名，查證狀態見上方標記）
 - 「AI staff 'genuinely frightened' for humanity's future, ex-Anthropic researcher tells BBC」— Google News／BBC，2026-09-13（僅標題可用，原始連結未附）
 - [I resigned from Anthropic today](https://twitter.com/hilbertspaess/status/2097476196791709843#m) — Hacker News/Twitter，2026-09-09（WSJ 另有獨家報導跟進，連結未取得）
@@ -99,6 +103,8 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
+- 2026-10-05：出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（來源：Google News／New York Post、Axios）
+- 2026-10-04：Bloomberg News 報導本人將於紐約市 AI 安全聽證會作證（來源：Google News／Reuters）
 - 2026-09-17：WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物（來源：Google News／WSJ）
 - 2026-09-17 補註：主角即本人（2026-10-03 查證：WSJ 官方 X 帳號點名，見「爭議」節）
 - 2026-09-15：CNN 刊出本人對 Anderson Cooper 專訪 Anthropic CEO Dario Amodei 的反應評論；專訪本身內容未載，僅標題可用（來源：CNN，經 Google News；Amodei 背景見 [[entities/dario-amodei]]）

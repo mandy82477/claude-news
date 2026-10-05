@@ -103,7 +103,7 @@
 | [[topics/claude-code-experimental]] | 🛠️ 工具/功能 | ongoing | Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272 |
 | [[topics/model-comparison]] | 🤖 模型 | ongoing | 模型選型對照：「我該用哪個 Claude 模型、換一個實付差多少」單一入口——快速選型表、情境推薦、換代成本換算；跨家排名指向榜單頁 |
 | [[topics/model-task-leaderboard]] | 🤖 模型 | ongoing | 🗓️ 週更 任務 × 跨家模型領先者快照：「做某類任務目前哪家最強」——18 類任務的活榜單每週速讀＋各榜評比方式索引；跨家排名的終點在這頁，Claude 家內選型見模型選型對照 |
-| [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | monitoring | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
+| [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | ongoing | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
 | [[topics/code-quality-decline]] | 🌐 社群 | ongoing | 「變笨了」三條線：04 月那次官方已結案，06 月起 token 異常官方沒說法、Opus 5 品質觀感官方只說轉給模型調校；先知道你釘不住你選的模型　↳ 子故事：[[topics/code-quality-decline-archive]] |
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |

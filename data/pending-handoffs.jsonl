@@ -260,3 +260,6 @@
 {"id": "H-b59a96", "closed": "2026-10-04", "status": "done", "by": "功能", "result": "Offrun 併入既有 ⟨G-11⟩；三段式部署閘因僅單一作者部落格自述、無 repo 或指標可複核，未達開新列門檻，本輪不動"}
 {"id": "H-0ce8c4", "closed": "2026-10-04", "status": "done", "by": "功能", "result": "2026-10-04 逐一核對七類（Skills設計/Plugin-MCP/Agent活動可視化/行動裝置遠端控制/記憶與知識管理/Hooks與自動化/Multi-agent架構），既有列已覆蓋或不符入列門檻，表18/18滿載，不開新列"}
 {"id": "H-0fe9d9", "opened": "2026-10-04", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 topics/official-community-gap 產品化矩陣新增列（本次新增 6 則工具節點，含 1 則具體機制較可複用的 PHP hooks 工具 sloppy）", "status": "open"}
+{"id": "H-0fe9d9", "closed": "2026-10-05", "status": "done", "by": "功能", "result": "功能記者 2026-10-05 ingest 回報已處理"}
+{"id": "H-fe8019", "closed": "2026-10-05", "status": "done", "by": "功能", "result": "功能記者 2026-10-05 ingest 回報已處理"}
+{"id": "H-66f5c2", "opened": "2026-10-05", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估產品化矩陣新增列：今日同時出現 Atlassian、Desktop Commander 兩家官方供應商自建 remote MCP server（皆用 OAuth 2.1），建議評估是否影響 official-community-gap.md", "status": "open"}

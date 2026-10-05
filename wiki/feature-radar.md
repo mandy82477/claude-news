@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-05
 
 > **這禮拜動了什麼**（2026-10-03）
 > v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -55,7 +55,9 @@
 
 ## ⏰ 倒數中
 
-> 目前沒有已知的截止日。
+| 日期 | 事件 | 到期後 | 你該做的決定 |
+|------|------|--------|------|
+| **2026-11-30** | Sonnet 4.5（`claude-sonnet-4-5-20250929`）API 退役 | 請求該模型將失敗 | 遷移至 `claude-sonnet-5-5`；Bedrock／GCP 另訂時程，詳見 [[entities/pricing]] |
 
 > 09-14 的週配額換軌已生效並移出本表：+50% 加成 09-13 到期，標準週配額改為永久 +25%，相對加成期間淨減約 17%，5 小時窗不受影響。官方說明中心當日確認換軌如期發生，完整規則與來源見 [[entities/pricing]]。
 > Fable 免費期限（原訂 7/19）已到期並移出本表；現在是常態分流：Max 與 Team premium 為標配（週用量 50% 內），Pro 與 standard 走 usage credits，5 與 5.1 同規則，詳見 [[entities/pricing]]。
@@ -63,6 +65,21 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Code HIPAA-ready 組織本地模式部署
+**發布：** 2026-10-05（官方文件揭露） | **狀態：** 正式發布（Enterprise HIPAA 組織）
+
+**是什麼：** 官方文件新增專屬指南與兩個組織管理開關，讓啟用 HIPAA 合規的 Enterprise 組織能以 local mode 部署 Claude Code：「Desktop」開關控制桌面版存取（HIPAA 組織預設關閉，須 Owner 手動開啟），另有「雲端 session」開關控制是否開放雲端 session。
+
+**為何熱：** 官方文件首次揭露，尚無社群討論或工具跟進（互動 0）。
+
+**快速上手：**
+```
+組織管理後台 → 設定 → Desktop／Cloud sessions 開關（需 Owner 權限）
+指南：https://code.claude.com/docs/en/hipaa-setup.md
+```
+
+**注意事項：** 僅影響啟用 HIPAA 合規的 Enterprise 組織；一般使用者無感知差異；具體啟用流程與限制未見進一步報導。
 
 ### Claude Code v2.1.288：`--max-findings`＋`claude purge`＋危險 `rm` 防護修正
 **發布：** 2026-10-02（v2.1.288） | **狀態：** 正式發布
@@ -416,6 +433,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code HIPAA-ready 組織本地模式部署**（Enterprise HIPAA 組織，Desktop／Cloud sessions 管理開關） | 2026-10-05 | 🔥 | ⏳ 觀望 | 正式發布（Enterprise HIPAA 組織） |
 | **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

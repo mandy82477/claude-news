@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-10-02
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
-> **最新動態：AMD 以約 82 億美元收購 World Labs，[[entities/fei-fei-li|Fei-Fei Li]] 出任首席科學家**（2026-09-30）
-> 與既有 Google DeepMind／Anthropic／OpenAI 人才流動格局無直接關聯，屬非典型 AI 人才交易個案，詳見 [[topics/ai-talent-flow#對各公司的影響]] 表 AMD 列。
+> **最新動態**（2026-10-05）
+> WinBuzzer 綜合分析近期研究人員離開 OpenAI、Anthropic、Google DeepMind 的原因，未點名具體人物或流向；既有格局（Google DeepMind 淨流失、Anthropic 主要承接）不變，詳見 [[topics/ai-talent-flow#時序]]。
 
 ## 摘要
 
@@ -76,6 +76,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 人才流動為**雙向洗牌**（Google 同期亦失人至 OpenAI），非單向崩塌。
 
 ## 時序
+
+### 2026-10
+
+#### 2026-10-05
+- **WinBuzzer 綜合分析近期 AI 研究人員離開 OpenAI、Anthropic、Google DeepMind 的原因**：泛論性分析文章，未點名具體人物或流向，與既有 Google DeepMind 淨流失／Anthropic 承接格局方向一致，具體論點未見報導，僅標題可用（Topic Watch/ai-talent-flow）
 
 ### 2026-09
 

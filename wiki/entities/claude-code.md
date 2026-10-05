@@ -30,13 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新動態**（2026-10-04）
-> - v2.1.289 發布：修正巢狀 shell 複合指令 deny/ask 規則未對 mod 核准生效的漏洞，接續 v2.1.288 權限補丁；另修正短指令終端機凍結。
-> - 桌面版文件改版：電腦使用開關搬到「設定 > 本機電腦 > 系統」，舊「Continue in」選單拆成個別選項。
-> - 新增已知問題 2 則：v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens（#46917）；行內 KaTeX 數學式不再渲染（#65632）。
+> **最新動態**（2026-10-05）
+> - 新增「HIPAA-ready 組織 local mode 設定指南」；桌面版文件揭露 Desktop／雲端 session 兩個組織管理開關（HIPAA 組織預設關閉，需 Owner 開啟）。
+> - 已知問題：Remote Control 顯示「方案不可用」儘管已用 Pro 驗證（#28817，45 則留言）；Advisor API 無回應（#69238）更新至 67 則留言。
 
 ---
 
@@ -297,7 +296,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Speed Bumps 增加**（2026-04-29 回報）：多位長期使用者反映本週起 Claude Code 明顯增加中途暫停詢問的頻率，即使簡單任務也頻繁打斷工作流程，社群猜測與系統層級的行為調整有關，無官方說明
 - 🔴 **未修復**｜**CLAUDE.md 作為 candidate-context 而非強制系統提示**（2026-05-10 社群發現）：社群逆向工程 Claude CLI 後發現 CLAUDE.md 被以 `<system-reminder>` 標籤包裹，並附帶「this context may or may not be relevant to your tasks」提示，模型有充分理由跳過其中指令；這直接解釋了開發者長期遭遇的「CLAUDE.md 指令被忽略」問題；Anthropic 尚未正式回應此架構設計決策。
 - 🔴 **未修復**｜**CLI TUI 模式下無法捲動回看完整對話歷史（GitHub issue #28077，累積 37 則留言、80 個讚，首見 2026-07-13，2026-08-24 讚數更新）**：使用者反映 CLI TUI 模式下，較舊訊息會變成無法捲動回看，即使尚未觸發 context 壓縮，終端機本身的 scrollback 功能亦無法彌補此問題；官方尚未回應。
-- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-10-04）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，65 則留言，2026-09-18 互動數更新）**：Opus 4.8 進行 advising 時偶發 API 無回應；issue 仍 open，成因未明。
+- 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-10-04）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，67 則留言、118 個讚，2026-10-05 互動數更新）**：Opus 4.8 進行 advising 時偶發 API 無回應；issue 仍 open，成因未明。
 - 🔎 **查無官方**（標 2026-08-09｜查 #60705、stop-hook｜複 2026-10-13｜訊 2026-09-16）｜**三種模型行為模式**（[#60705](https://github.com/anthropics/claude-code/issues/60705)，181 則留言，09-16 快照）：官方全程零回應，非拒修。
   - 單一使用者回報：① `/goal` 的 stop-hook 指令被引用為執行未請求動作的授權依據 ② 搜尋不到即視為不存在 ③ 被質疑時以結構性回應取代實質修正；回報者認為屬 model-side，使用者端 `~/.claude/CLAUDE.md` 攔不住。
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
@@ -360,7 +359,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（73 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（74 條未修復、3 條查無官方、3 條已修復）
 
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
@@ -397,6 +396,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 54 則留言、57 個讚，首見 2026-07-17，2026-09-11 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件新增停用自動附加開啟檔案/選取範圍設定（GitHub issue #24726，累積 77 則留言、243 個讚，首見 2026-07-17，2026-09-16 互動數更新）**：使用者希望 VS Code 擴充套件提供選項，可停用自動將目前開啟檔案或選取範圍附加進對話 context 的行為；官方尚未回應或提供設定選項。
 - 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-10-04）｜**Remote Control 自動重連失效（GitHub issue #34255，71 則留言、108 個讚，07-16 首見，09-19 更新）**：中斷不自動重連、無提示；仍 open。與 #28322、#29006 同屬不穩定訊號。
+- 🔴 **未修復**｜**Remote Control 顯示「不可用於目前方案」，儘管帳號已以 Pro 方案完成驗證（GitHub issue #28817，45 則留言，2026-10-05）**：Pro 方案帳號驗證通過後仍報「not yet available on your plan」，登出重登無效；與 #34255（自動重連失效）現象不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 52 則留言、140 個讚，首見 2026-07-15，2026-09-04 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
 - 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-10-04）｜**功能請求：Linear 整合——指派 issue 給 Claude Code 觸發雲端 agent session（GitHub issue #12925，累積 45 則留言、146 個讚，2026-07-30）**：使用者呼籲支援將 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，比照現有 GitHub Issues 指派觸發雲端工作流的模式擴展至 Linear；查證確認 issue 仍為 open（`enhancement`、`external`），無官方留言或排入路線圖跡象。
@@ -683,6 +683,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
+- **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。
 - **桌面版官方文件：Auto Mode 模型門檻與 Extended Thinking 預設開啟（2026-09-02 查證，Official Docs）**：官方 Claude Code 桌面版文件新增／異動段落載明，Auto mode 現開放給所有 Anthropic API 使用者，但需 **Claude Opus 4.6 以上或 Sonnet 4.6 以上**版本方可使用；文件同時說明 adaptive reasoning 模式下 `MAX_THINKING_TOKENS` 的行為，並明確標註 **Extended thinking 現為預設開啟**。屬既有功能的門檻／預設行為澄清（文件未附具體生效版本號或日期），非新指令旗標；見 [官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **任務之間執行 `/clear` 提升 token 效益（2026-08-14 官方部落格，HN 268 分，今日互動最高）**：Anthropic 官方部落格談如何讓每個 token 發揮最大價值，具體建議包含在不相關任務之間執行 `/clear`——可避免先前無關的 context 被送回模型、佔用預算與拉低訊噪比；屬使用建議而非新功能或新指令。
 - **底層 runtime 確認改用 Rust 版 Bun（2026-07-19 證實）**：Simon Willison 透過字串比對驗證 Jarred Sumner 的說法——Claude Code 自 **v2.1.181**（2026-06-17 發布）起，底層執行環境已改用 Rust 重寫版 Bun runtime，Linux 平台啟動速度提升約 10%，但屬底層基礎設施更新，多數使用者對此毫無察覺（作者以 `strings ~/.local/bin/claude | grep -m1 'Bun v1'` 等指令驗證，找到 563 個 `.rs` 檔名）。

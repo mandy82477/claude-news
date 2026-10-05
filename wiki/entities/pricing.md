@@ -30,12 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新計費政策異動**（2026-10-04）
-> - **官方通報：credit purchase 入帳延遲，部分請求因餘額不足失敗**：Anthropic Status 調查中，修復時間未載，詳見 [[entities/pricing#事故現在還在發生嗎]]。
-> - **官方文件查證（2026-10-04）：安全分類器拒答只有 bio、frontier_llm、reasoning_extraction 三類計費**，見 [[entities/pricing#當前生效的計費規則]]。
+> **最新計費政策異動**（2026-10-05）
+> - **Sonnet 4.5（claude-sonnet-4-5-20250929）官方退役日查證為 2026-11-30**（與 dev.to 轉述一致）：官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)載明 09-30 已公告棄用、11-30 退役，建議遷移至 Sonnet 5.5；此日期適用 Claude API／AWS Claude Platform／Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的時程。詳見 [[entities/pricing#模型 API 定價現況]]。
 
 ## 現況
 
@@ -137,6 +136,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **本表數字之官方查證（2026-08-20）**：Fable 5 $10/$50、Opus 5 與 Opus 4.8 $5/$25、Sonnet 5 $2/$10、Sonnet 4.6 $3/$15、Haiku 4.5 $1/$5，均與官方模型總覽頁一致（[Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-08-20 查證）。**（2026-08-28 更正）** 此註原寫「8/31 之後的 $3/$15 走向待定」——該說法在寫下時就已過期：官方早於 **2026-08-10** 宣布 $2/$10 永久化、9/1 漲價取消。已無到期日可等。
 
 **Fable 5.1／Mythos 5.1 快取費率新增（2026-09-02）**：官方定價文件載明兩版本的快取讀取／刷新費率為**標準輸入價的 0.025 倍**（標準快取命中乘數為 0.1 倍，見下方「通路與乘數」），長對話快取成本較前代最多省 75%。**（2026-09-03 更正）** 官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)已載兩版本基礎定價 **$10 / $50 per Mtok**（與 Fable 5／Mythos 5 相同；Batch $5 / $25），上表已補列；長脈絡仍不加價、tokenizer 仍為 Claude 4.7 起導入的版本（尚無新世代 tokenizer 公告）。版本能力見 [[entities/fable-5]]。
+
+**Sonnet 4.5 官方退役日 2026-11-30（2026-10-05，已查證）**：dev.to 報導 Sonnet 5.5 於 Terminal-Bench 4.0 拿下 70.6% 分、牌價為 Opus 5.5 一半（$2/$10 per Mtok，與本表既有 Sonnet 5.5 牌價一致），同篇稱 Sonnet 4.5 將於 **2026-11-30** 退役——**經官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證，此日期正確**：`claude-sonnet-4-5-20250929` 於 09-30 公告棄用、11-30 退役，建議遷移至 `claude-sonnet-5-5`；此日期適用 Claude API、AWS 上的 Claude Platform、Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的生命週期時程，退役日可能不同。
 
 > 模型能力與**同一份工作的實付換算**見 [[topics/model-comparison]]；此表只列牌價。
 > **tokenizer 換代讓成本比較變難的具體數字**（約 +30% token）見 [[topics/model-comparison#同一份工作，換設定差多少]]，本頁不重複列。
@@ -438,6 +439,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-10-05：Sonnet 4.5 退役日 2026-11-30 經官方查證屬實
+
+- dev.to 報導 Sonnet 5.5 在 Terminal-Bench 4.0 拿下 70.6% 分、牌價為 Opus 5.5 一半（$2/$10 per Mtok，與本頁既有 Sonnet 5.5 牌價一致），同篇稱 Sonnet 4.5 將於 2026-11-30 退役。
+- 經[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證屬實：09-30 公告棄用、11-30 退役，建議遷移至 `claude-sonnet-5-5`；Bedrock、Google Cloud 另訂時程。
 
 #### 2026-09-28：Claude Sonnet 5.5 上線，牌價 $2/$10 per Mtok，取代 Sonnet 5 為預設
 

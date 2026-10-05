@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新進展**（2026-10-04）
-> The Register：Mythos 數學能力佐證一起正遭實際攻擊的漏洞案例（僅標題可讀，弱訊號）（Google News/The Register，2026-10-03）。
+> **最新進展**（2026-10-05）
+> Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘，已解決；完整記錄見 [[entities/fable-5]]。
 
 ---
 
@@ -133,6 +133,10 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-05
+**Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：
+- 官方 13:05 UTC 標記 Investigating、13:21 UTC 標記已解決；影響期間 05:40–06:10 PT（12:40–13:10 UTC），僅波及 Mythos 5.1 與 Fable 5.1 兩者；屬穩定性事件，非能力或存取政策變化，完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/bhphxz3vr58g)，2026-10-05）
 
 #### 2026-10-03
 **The Register：Mythos 數學能力佐證一起正遭實際攻擊的漏洞案例（僅標題可讀，弱訊號）**：

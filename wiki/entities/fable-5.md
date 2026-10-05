@@ -33,12 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-09-17
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新進展**（2026-09-17）
-> - **Reddit：Fable 5.1 執行時把本地資料庫 `rm -rf` 刪除**：單一使用者回報、無量化數據；同類討論見 [[topics/code-quality-decline]]。
-> - **現行旗艦仍是 Fable 5.1**（09-01 GA）：與 5.0 同價、快取讀取便宜 75%；Fable 5 已列 Legacy，退役不早於 2027-06-09。
+> **最新進展**（2026-10-05）
+> Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘（05:40–06:10 PT），已解決；屬穩定性事件，非能力變化。
 
 ---
 
@@ -199,6 +198,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-10-05
+**Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：
+- 官方 13:05 UTC 標記 Investigating、13:21 UTC 標記已解決；影響期間 05:40–06:10 PT（12:40–13:10 UTC），僅波及 Mythos 5.1 與 Fable 5.1 兩者（[Anthropic Status](https://status.claude.com/incidents/bhphxz3vr58g)，2026-10-05）
+- 屬穩定性事件，非能力或存取政策變化；與 09-15 為不同起事件，Mythos 面記錄見 [[entities/mythos]]
 
 #### 2026-09-17
 **Reddit：Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪除（單一使用者回報，無量化數據）**：r/ClaudeCode 使用者回報 Fable 5.1 執行任務過程中把本地資料庫用 `rm -rf` 刪除；單一貼文、無週熱門標記，score 恆 0，未見官方回應或其他來源佐證。破壞性操作與程式碼品質觀感的完整脈絡見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/)，2026-09-17）。

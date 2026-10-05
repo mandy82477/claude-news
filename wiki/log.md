@@ -7309,3 +7309,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 使用者問 [[topics/anthropic-agent-stack]] 是否該從功能領域移到開發實務：**領域不搬**——同日手冊移交時已評估不搬（該頁只收官方原句，餵料是每日功能新聞，開發實務記者不收這類條目）
 - 查到的真問題：網站 💻 開發實務 tab 掛在子頁 [[entities/managed-agents]] 而非母頁。根因：09-09 掛標籤時 managed-agents 還是 agent 選型頁，09-10 選型內容升格到母頁、子頁降為只收產品事實與計費，`data/reader-tags.json` 名單沒跟著換，造成 index 開發實務入口指向母頁「你該用哪個」、tab 卻沒有母頁
 - 使用者裁決：標籤由 managed-agents 換成 anthropic-agent-stack；`src/tests/test_reader_tags.py` 名單同步並把 managed-agents 列入不列清單防回流；網站重建。歸因 slug `user-query`
+
+## 2026-10-05 Ingest
+
+- 來源日報：[[news/2026-10-05]]
+- 更新頁面：
+  - **人物**：entities/jacob-coxon.md
+  - **功能**：entities/claude-code.md
+  - **商業**：entities/pricing.md、topics/anthropic-business.md、topics/enterprise-tool-tracker.md、topics/competitor-landscape.md、topics/ai-talent-flow.md
+  - **安全政策**：topics/anthropic-government-policy.md、topics/ai-agent-safety.md、topics/recursive-self-improvement.md、topics/anthropic-commitments.md
+  - **模型**：entities/fable-5.md、entities/mythos.md、topics/model-comparison.md
+  - **社群**：topics/community-tech-patterns.md
+  - **投資分析**：topics/market-signals.md
+  - 主編彙整：feature-radar.md（新增 1 條＋⏰ 倒數中新增 1 列）、index.md（anthropic-commitments 狀態同步）
+- 新增頁面：無
+- feature-radar：新增 1 條（Claude Code HIPAA-ready 組織本地模式部署，🔥，⏳ 觀望，正式發布 Enterprise HIPAA 組織）；⏰ 倒數中新增 Sonnet 4.5（2026-11-30）API 退役列（主編官方查證，見下方品質備註）
+- index：topics/anthropic-commitments: monitoring → ongoing（「解禁三承諾」之「通報惡意活動」項今日首見具體公開案例）
+- 摘要：Meta／Microsoft 縮減內部使用 Claude、五角大廈停用 Anthropic 工具、NYC AI 安全聽證會（Coxon 警告 vs GOP 參議員批評）、佛州 Claude「日記」威脅案通報警方（本院追蹤系列第三起）並列今日聚焦；Sonnet 4.5 退役日、HIPAA-ready 部署為其餘重點
+- 呈現品質：全部通過
+- 品質備註：
+  - 主編官方查證（WebSearch＋WebFetch `platform.claude.com/docs/en/about-claude/model-deprecations`）：Sonnet 4.5（`claude-sonnet-4-5-20250929`）2026-09-30 公告棄用、**2026-11-30 退役**，確認 dev.to 原報導日期正確（查證過程一度誤信其他來源的 2026-11-24，已更正）；已回掃 entities/pricing.md、topics/model-comparison.md 所有「待查證／推算」引用並改寫為確認事實，topics/model-comparison.md 的 ❓ 待查證標記（標 2026-10-01）已依查證結果移除並改寫
+  - [社群] ⚠️ 查證：irinabuht12-oss/marketing-skills（3,573★，星速異常偵測 +404 星/2 天）因無法驗證 forks／issues／commit 防刷佐證，本輪未收錄，留待後續查證
+  - [投資分析] ⚠️ 查證：PitchBook／Morningstar 外流財報估值分析具體數字與方法、五角大廈停用 Claude 的具體範圍是否與既有政府客戶流失線同一事件、Meta／Microsoft 限縮內部使用的具體政策內容，皆僅標題可用，待後續報導補充
+- 分類回退：1 筆（[功能] The Mac Observer「Anthropic Now Asks Claude Users to Share Voice Data for AI Training」→ 安全政策，同輪補派處理，原料僅殼層摘要證據不足未收錄）
+- 轉知帳本：結案 H-0fe9d9（功能）、H-fe8019（功能）；新開 H-66f5c2（社群→功能：評估 Atlassian／Desktop Commander 官方 remote MCP server 是否影響 official-community-gap.md 產品化矩陣）
+- devpractice 沉澱：本日無候選（當日無官方使用指南類條目，無 開發實務.md 派工包）
+- market 判讀：判讀 3 則（Meta/Microsoft 內部使用限縮、五角大廈停用 Claude、PitchBook 外流財報估值分析）

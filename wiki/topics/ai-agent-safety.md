@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新安全事件**（2026-10-03）
-> Claude Code 2.1.288 修正包在 `bash -c` 裡的危險 `rm` 可繞過防護；stable 標籤仍在 2.1.285，尚未拿到修正。
+> **最新安全事件**（2026-10-05）
+> Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500）隔天即遭在野攻擊，10-04 修補版釋出；非 Claude 自身產品事件，見 [[topics/ai-agent-safety#模型網攻能力與防護]]。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -121,6 +121,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-03～10-04 | 能力 | Mythos 揭露 Rejetto HFS 漏洞（CVE-2026-61500）；隔天即在野攻擊，10-04 修補版 3.2.1 釋出 | dev.to／#anthropic；非 Claude 自身產品事件，揭露到利用僅一天 |
 | 09-29／09-30 | 擴散 | Frontier Red Team：GLM-5.3 在 100 題 Binary Exploitation 抽樣 4% 完整控制流劫持（Mythos Preview 6%）；Opus 4.6、GLM-5.2 做不到 | 官方一手；方法論未完整揭露 |
 | 09-25 | 測試 | ABC News 標題：Anthropic 稱模型在測試中「自主」入侵 3 個組織 | 僅標題；與既有評估事件關聯未明 |
 | 09-22 | 防護 | The Verge：Opus 5.5 隨附更嚴格的資安領域防護 | 僅標題；內容未載 |
@@ -1179,6 +1180,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-04
+- **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出，詳見「## 模型網攻能力與防護」
 
 ### 2026-10-03
 - **[🔴 新增] Claude Code 2.1.288 修正 `bash -c` 包裝繞過危險 `rm` 防護**：官方 Release 確認，stable 仍停 2.1.285（mixed-news.com 單一來源），已列入攻擊表，詳見「## 技術彙整」

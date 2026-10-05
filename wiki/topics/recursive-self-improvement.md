@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-05
+**最後新聞更新：** 2026-10-05
 
-> **最新動態**（2026-10-04）
-> 圖靈獎得主 LeCun 公開稱對 AI 滅絕人類「零擔憂」，稱 Amodei 等業界示警「適得其反」，為三位圖靈獎得主中唯一此立場；另有報導稱一名離職 Anthropic 資安主管（姓名未公開）示警 agent 自主程度已超出人類可控範圍。
+> **最新動態**（2026-10-05）
+> Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告；同場共和黨參議員批評 Anthropic 的安全論述態度為「危言聳聽」。
 
 ---
 
@@ -84,7 +84,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
 - **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列，僅標題可用，詳見「## 技術彙整」。
 - **2026-10-03，LeCun 公開稱對 AI 滅絕人類「零擔憂」，批評 Amodei 等業界示警適得其反**：三位圖靈獎得主（LeCun／Hinton／Bengio）中唯一不深度擔憂 AI 風險者，為既有「反面聲音」系列首見「圖靈獎同儕內部分裂」框架，詳見「## 技術彙整」。
-- **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」。
+- **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」
+- **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告，共和黨參議員的批評為既有「反面聲音」系列首見國會議員層級反駁，詳見「## 技術彙整」。
 
 ---
 
@@ -103,6 +104,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### NY Post／axios：紐約市 AI 安全聽證會，Jacob Coxon 重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」（2026-10-05 新增）
+
+- **揭露來源**：NY Post（經 Google News，僅標題可用）；axios.com（經 Google News，同場聽證會，僅標題可用）；Fox News／qz.com（經 Google News）同日報導 Google、Meta、OpenAI、Anthropic 均出席作證；Reuters 10-04 已預告 Coxon 將依 Bloomberg News 報導出席
+- **核心主張（僅標題可用）**：前 Anthropic 研究員 [[entities/jacob-coxon|Jacob Coxon]] 在紐約市一場 AI 安全聽證會上重申警告，稱業界做法「極度魯莽」（extremely reckless）；同場聽證會上一名共和黨參議員則批評 Anthropic 的安全論述態度為「危言聳聽」（alarmist）
+- **與既有敘事的關係**：延續本頁既有「離職示警」系列（09-09 辭職警告、09-17 WSJ 人物側寫確認身分），Coxon 首次在正式聽證會場合公開重申警告，從個人聲明升級為聽證證詞
+- **反面聲音新進展**：共和黨參議員「危言聳聽」批評延續既有系列（川普淡化、北京官媒「冷戰」、10-03 LeCun「適得其反」），首見國會議員層級反駁；聽證會政府面詳見 [[topics/anthropic-government-policy#攻防紀錄]]
+- ❓ **待查證**（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist）：聽證會主辦單位、具體議程與 Coxon 證詞全文均未見報導，四則來源均僅 Google News 標題聚合層級可用
+- **可信度評估**：四則來源（NY Post／axios／Fox News／qz.com）均經 Google News 轉載，僅標題可用，無正文佐證
 
 ### Fortune／Hacker News：圖靈獎得主 LeCun 稱對 AI 滅絕人類「零擔憂」，批評 Amodei 示警「適得其反」（2026-10-03 新增）
 
@@ -360,6 +370,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-10-05
+- **[離職示警升級，新增，僅標題可用] NY Post／axios：紐約市 AI 安全聽證會，Jacob Coxon 重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：延續 09-09 辭職警告系列，首見正式聽證會場合重申，詳見「## 技術彙整」
+
+%% 維運備忘：時序 09-24～10-03 多則「## 技術彙整」條目尚缺對應行，非本輪造成，沿用既有缺口，本輪不回填 %%
 
 ### 2026-09-27
 - **[政治框架延續，新增，僅標題可用] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」
