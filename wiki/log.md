@@ -7335,3 +7335,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-0fe9d9（功能）、H-fe8019（功能）；新開 H-66f5c2（社群→功能：評估 Atlassian／Desktop Commander 官方 remote MCP server 是否影響 official-community-gap.md 產品化矩陣）
 - devpractice 沉澱：本日無候選（當日無官方使用指南類條目，無 開發實務.md 派工包）
 - market 判讀：判讀 3 則（Meta/Microsoft 內部使用限縮、五角大廈停用 Claude、PitchBook 外流財報估值分析）
+
+## 2026-10-05 Ingest 補充（devpractice 沉澱更正）
+
+- 上則「devpractice 沉澱：本日無候選」記錄有誤——主編原漏派工開發實務記者（誤判為「無開發實務.md 派工包即不派工」，實際上該記者的沉澱來源是獨立的 git diff 掃描，不依賴分類包）。補派後更正：候選 7 筆（entities/claude-code：v2.1.289 deny/ask 規則漏洞＋終端機凍結修復、cache_creation 計費 bug #46917、Max 額度異常消耗 #38335、Routines session 堆積社群繞過 skill；topics/community-tech-patterns：sloppy PHP 技術債靜態分析、mcptoon MCP 工具發現 token 壓縮、atlassian-mcp-server 官方 remote MCP）；手冊寫入 0 則（今日無官方使用指南類條目）；基準線 8e8e1e22→ee0abe4d
