@@ -7284,6 +7284,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 推翻 2026-09-06 併頁裁決（使用者）：[[entities/chris-olah]]、[[entities/tom-brown]]、[[entities/chris-ciauri]] 由轉址殼轉回完整人物頁（以併頁前 a2e16168 原文為底套新人物頁格式，領域改 👤 人物，Olah／Brown 為創辦團隊、Ciauri 為現任）；事件經過的家仍是 [[topics/anthropic-government-policy]]，人物表三列改回 wikilink；index 補回三列
 - [[entities/mythos-archive]] 更正：TechCrunch 稱 Tom Brown 為 chief compute officer 是現職，原寫「非聯合創辦人」不實（他同時是共同創辦人）
 
+## 2026-10-04 Ingest
+
+- 來源日報：[[news/2026-10-04]]
+- 更新頁面：
+  - **人物**：entities/yann-lecun.md、entities/chris-olah.md
+  - **功能**：entities/claude-code.md、entities/claude-mods.md、topics/official-community-gap.md
+  - **商業**：entities/pricing.md、topics/competitor-landscape.md、topics/anthropic-business.md
+  - **安全政策**：topics/anthropic-government-policy.md、topics/recursive-self-improvement.md
+  - **模型**：entities/mythos.md
+  - **社群**：topics/community-tech-patterns.md
+- 新增頁面：無
+- feature-radar：本日無新功能
+- index：無
+- 摘要：Max 方案 session 額度異常消耗（874 則留言）與 v2.1.289 權限修正並列今日聚焦；SpaceX×Anthropic 運算合作、LeCun 公開唱反調、6 款社群周邊工具同日亮相為其餘重點
+- 呈現品質：全部通過
+- 分類回退：2 筆，同輪補派處理完畢——[功能→社群] Claude Android app 測評文（MakeUseOf）審查後不收錄；[排除→功能] Claude Code Routine Session Cleanup Skill（618 個未清理 session 的資源洩漏缺陷）已記入 entities/claude-code.md 已知問題
+- 轉知帳本：結案 H-b59a96（功能）、H-0ce8c4（功能，官方查證：七類逐一核對不符入列門檻）；新開 H-0fe9d9（社群→功能：評估 official-community-gap 產品化矩陣新增列，本次 6 則工具節點）
+- devpractice 沉澱：候選 5 筆（entities/claude-mods：mod 讀得到 API key、不受沙箱隔離、四層關閉手段；entities/claude-code：stable 通道落後約一週＋套件管理器不自動更新＋v2.1.288 rm 繞過修正；topics/community-tech-patterns：把關機制分「檢查型／強制型」兩類與已知破口、信任與驗證層官方零件補全；topics/model-comparison：Haiku 4.5 官方退役下限 2026-10-15）；手冊寫入 1 則（Opus 5.5 提示建議，topics/coding-workflow-guide）；基準線 50173813aa→8e8e1e227b
+- market 判讀：本日無訊號（已檢視 31 條，去重後；最接近門檻者 SpaceX×Anthropic 運算合作與中國 Claude 黑市，皆缺具體數字或一手揭露，未開新判讀，⚠️ 已標主編待查證）
+
 ## 2026-10-04 Query（使用者：agent 積木頁該不該搬到開發實務）
 
 - 使用者問 [[topics/anthropic-agent-stack]] 是否該從功能領域移到開發實務：**領域不搬**——同日手冊移交時已評估不搬（該頁只收官方原句，餵料是每日功能新聞，開發實務記者不收這類條目）

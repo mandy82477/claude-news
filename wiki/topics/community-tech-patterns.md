@@ -3,21 +3,21 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 64
-attribution_count: 240
-attribution_last: "2026-10-03"
+days_since_news_subtree: 1
+inbound_links: 67
+attribution_count: 246
+attribution_last: "2026-10-04"
 top_source: "github"
 pending_count: 3
-pending_overdue: 0
-pending_next_review: "2026-10-04"
+pending_overdue: 1
+pending_next_review: "2026-10-20"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-03
+**最後新聞更新：** 2026-10-04
 
-> **最新工作流模式**（2026-10-03）
-> - **記憶與創意工具各添例**：projectmem 記下失敗嘗試、在 agent 重蹈覆轍前警告；reelmimic、comfyui-mcp 把 agent 接進影片與 ComfyUI 創作鏈。
-> - **多 agent 並行與額度可見各添一例**：Offrun 並排管理多款 agent、各用獨立 worktree；Pulse 彙整 70 餘款工具剩餘額度。
-> - **安全架構添一例**：自主 agent 部署閘，回滾權留在 agent 碰不到的地方。
+> **最新工作流模式**（2026-10-04）
+> - **安全架構添一例**：ThinkWatch-Lite 讓多款 AI 客戶端共用一個閘道切換上游、留住金鑰、擋惡意工具呼叫。
+> - **行動與創意場景各添一例**：Mobile-Harness 把 Claude Code 搬上免 root Android；GodotMaker 用三款 agent 驅動文字轉 Godot 遊戲產線。
+> - **Hooks 與 Token 優化各添一例**：sloppy 鎖定 PHP 的 AI 技術債、全程不碰 LLM；mcptoon 宣稱把 MCP 工具發現成本壓低 99.2%（自測）。
 
 ---
 
@@ -53,20 +53,20 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、claude-code-hooks 外掛市集、精簡輸出外掛、sloppy（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-04 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-03 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-02 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、claude-code-hooks 外掛市集、精簡輸出外掛（[[topics/community-tech-patterns#2026-09]]） | ✅ 成熟 | 2026-09-22 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
+| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-04 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | 跨 session、跨工具、跨機器的持久記憶協定 |
-| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、paritok-4b、Pulse（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Plugin / MCP 整合** | Plugin 反模式整理、MCP 協調中心、docsagent、home-assistant-vibecode-agent（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-02 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **創意工具 Agent 整合** | Palmier Pro、reelmimic、comfyui-mcp、anything2explainer、video-talkcraft 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-03 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
-| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、Security Cards、agent-scan、自主 agent 部署閘（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-03 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
+| **創意工具 Agent 整合** | Palmier Pro、reelmimic、comfyui-mcp、video-talkcraft、GodotMaker 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **安全架構** | Grepathy、Spare Mac 隔離環境、OneCLI、agent-scan、自主 agent 部署閘、ThinkWatch-Lite（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
+| **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、CLI-WeChat-Bridge、Mobile-Harness（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 手機當 agent 控制介面，各自選不同傳輸層 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬、agent-office 3D 卡通辦公室（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
-| **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、Orchestrator、CLI-WeChat-Bridge（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 手機當 agent 控制介面，各自選不同傳輸層 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-29 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
@@ -185,6 +185,60 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### ThinkWatchProject/ThinkWatch-Lite：本機閘道統一管理 Claude Code、Codex 等多款 AI 客戶端的上游供應商與金鑰（2026-10-04）
+
+- **主線：** —
+- **核心模式：** 本機閘道工具，讓 Claude Code、Codex 等 AI 客戶端在不改用戶端設定下切換上游供應商，將 API 金鑰留在閘道、不經中繼站外流，並攔截惡意工具呼叫、記錄每次請求的追蹤軌跡；GitHub Search 1,050 星。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（OneCLI 等）一個「多客戶端統一閘道」取向——OneCLI 聚焦單一憑證替換機制，本則額外整合上游切換與惡意工具呼叫攔截，服務對象從單一 agent 擴到多款 AI 客戶端；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,050★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/ThinkWatchProject/ThinkWatch-Lite)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### RandallLiuXin/GodotMaker：由 Claude Code、Codex、Opencode 驅動的 Godot 自動文字轉遊戲產線（2026-10-04）
+
+- **主線：** —
+- **核心模式：** 自主文字轉遊戲產線，由 Claude Code、Codex、Opencode 共同驅動，依文字描述自動產出 Godot 遊戲雛型；GitHub Search 549 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（universal-modder 等）一個「從零產生新遊戲」取向——universal-modder 改裝既有遊戲，本則從文字描述直接產出新 Godot 專案；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（549★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/RandallLiuXin/GodotMaker)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### techjarves/Mobile-Harness：免 root 的 Android 版 Claude Code 行動端 IDE（2026-10-04）
+
+- **主線：** —
+- **核心模式：** 在 Android 上跑 Claude Code 的行動端 IDE，免 root 即可聊天下指令、執行 Linux 指令、改檔、看 diff 並預覽 web app；GitHub Search 506 星。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（ccgram、Android Remote Control MCP、Shellular、Orchestrator、CLI-WeChat-Bridge）一個「原生 Android IDE」取向——既有做法多把手機當遠端控制介面橋接回主機，本則讓 Claude Code 直接在手機上執行；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（506★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/techjarves/Mobile-Harness)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### spaceamoeba-t/tapq：用語音與 Claude Code、Codex 等 agent 互動的多模態語音代理（2026-10-04）
+
+- **主線：** —
+- **核心模式：** 多模態語音代理，讓使用者以語音與 Claude Code、Codex 等 coding agent 互動——用語音回答 agent 的提示、下達指令、詢問 agent 剛才做了什麼，或只需點頭確認；GitHub Search 503 星。
+- **與既有模式的關係：** 本表既有類別多在文字或視覺介面上做文章（「介面元件複用」封裝終端機美學、「行動裝置遠端控制」橋接手機傳輸層），本則把互動模態換成語音，與既有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（503★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/spaceamoeba-t/tapq)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### activeing123/mcptoon：零依賴 CLI 把 MCP 工具發現與 schema 成本壓到最低（2026-10-04）
+
+- **主線：** —
+- **核心模式：** 零依賴 CLI，整合管理所有 MCP 伺服器與 agent skill，宣稱可把工具發現成本從 71,929 token 壓到 581 token（降 99.2%，作者自測），schema 不進 context；單一設定檔適用 Claude Code、Codex、Cursor 等各家 agent；341KB、純 Python；GitHub Search 207 星。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧（MCP Code Execution、Pulse 等）一個「MCP 工具發現壓縮」取向——既有做法多壓縮對話或輸出內容，本則鎖定 MCP schema 本身的 context 佔用；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 99.2% 降幅為作者自測數字，無第三方覆核；僅有 GitHub Search 星數（207★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/activeing123/mcptoon)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Heyosseus/sloppy：針對 AI agent 在 PHP 留下技術債的靜態分析工具，全程本機不碰 LLM（2026-10-04）
+
+- **主線：** 除錯分工
+- **核心模式：** PHP 靜態分析工具，專找 AI coding agent 留下的技術債，含 26 條規則、Claude Code hooks、git-diff 審查、Rector／Pint 自動修復、Pest expectations、CI 標註與 MCP server；全程本機確定性執行，不呼叫 LLM；GitHub Search 146 星。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧（PostToolUse 稽核、Git Hooks 品質門等）一個「PHP 專用債務掃描」取向——既有做法多泛用於任意語言的強制規則，本則鎖定 PHP 生態並針對「AI agent 特有」的技術債模式；多 agent 產出誰把關，主線填除錯分工。
+- **可信度註記：** 僅有 GitHub Search 星數（146★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Heyosseus/sloppy)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### riponcm/projectmem：記錄失敗嘗試、在 agent 重蹈覆轍前先警告的本機記憶 MCP server（2026-10-03）
 

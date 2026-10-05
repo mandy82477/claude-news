@@ -3,21 +3,21 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 124
-attribution_count: 349
-attribution_last: "2026-10-03"
+days_since_news_subtree: 1
+inbound_links: 125
+attribution_count: 350
+attribution_last: "2026-10-04"
 top_source: "google-news"
 pending_count: 2
-pending_overdue: 0
-pending_next_review: "2026-10-04"
+pending_overdue: 2
+pending_next_review: null
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
 **最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-03
+**最後新聞更新：** 2026-10-04
 
-> **最新動態**（2026-10-03）
-> - **Claude Frontier Academy 啟動：1 億美元、2027 年底前培訓 10,000 名部署工程師**（10-02，官方）：首批學員來自 Accenture、Deloitte、McKinsey 等，詳見 [[topics/anthropic-business#時序]] 10-02。
+> **最新動態**（2026-10-04）
+> - **SpaceX 與 Anthropic 簽署大型 AI 運算合作**（10-03，Barchart）：合作方向、金額、算力規模均未見報導，詳見 [[topics/anthropic-business#算力與資金從哪來]]。
 
 ---
 
@@ -317,6 +317,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | 對手方 | 金額與結構 | 日期與來源 | 對工程師的可見後果 |
 |---|---|---|---|
 | Broadcom | 貸款租賃晶片：10-01 報最高 $420 億（考慮中），10-02 報已啟動 $600 億債務融資；條款未見報導 | 2026-10-01／10-02；Reuters 獨家引文件；Yahoo Finance、qz.com | 目前無可見後果。下一個觸發點：條款或交付時程公開 |
+| SpaceX | 大型 AI 運算合作；合作方向、金額、算力規模均未見報導，僅標題可用 | 2026-10-03；Google News/Barchart.com | 目前無可見後果。下一個觸發點：合作細節公開 |
 | Nvidia（經 Lambda） | Nvidia 支持的 Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆 | 2026-09-01／09-02；多家媒體；24/7 Wall St. 質疑循環融資（評論） | 目前無可見後果。下一個觸發點：新容量上線公告、合約條款 |
 | AMD | 投資最高 $50 億，並簽晶片暨投資協議；供應規模、股權比例未見 | 2026-07-22；Reuters、WSJ | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務的報導）。下一個觸發點：供應規模公開 |
 | AWS | 承諾金額逾 $1,000 億，屬 $5,170 億算力總額的分項（推論）；招股書可能揭露更多 | 2026-09-06；Currently.com、The Information | 承諾金額本身無價格後果；通路有：Bedrock 無 50% Batch 折扣，見下方合作表與 [[entities/pricing#通路：誰定價、怎麼開票]] |
@@ -327,7 +328,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **目前唯一寫得出的算力吃緊後果**：07-18 Startup Fortune 稱 Anthropic 因運算資源吃緊收緊 Fable 5 存取；本站查證的官方文件只寫方案分界、未載原因，見 [[entities/pricing]]「當前生效的計費規則」07-20 條。各列共同的下一個觸發點是公開版 S-1。
 
-%% 維運備忘：2026-10-04 首次彙整；共八列。新合約出現時先判斷「可見後果」欄寫不寫得出，寫不出就寫「目前無可見後果」；各交易原始細節的家仍是下方合作表一行制清單與 ## 時序 %%
+%% 維運備忘：2026-10-04 首次彙整；共九列。新合約出現時先判斷「可見後果」欄寫不寫得出，寫不出就寫「目前無可見後果」；各交易原始細節的家仍是下方合作表一行制清單與 ## 時序 %%
 
 ## 哪個合作會改到你用的 Claude
 
@@ -545,6 +546,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-04
+- **[戰略合作，僅標題可用] Barchart：SpaceX 與 Anthropic 簽署大型 AI 運算合作**：報導聚焦對 SpaceX 股票（SPCX）影響，合作方向、金額與算力規模均未見報導（Google News/Barchart.com）
 
 #### 2026-10-02
 - **[戰略合作，官方一手] Anthropic 推出 Claude Frontier Academy：投入 1 億美元，2027 年底前培訓 10,000 名「Frontier Deployed Engineers」**：學員自 Claude Partner Network 成員遴選，首批含 Accenture、Deloitte、McKinsey（Anthropic Blog；CNBC）

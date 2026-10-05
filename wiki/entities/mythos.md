@@ -4,21 +4,21 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-10-03"
-last_news_update: "2026-09-30"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "active"
-days_since_news: 3
+days_since_news: 1
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
-inbound_links: 30
-attribution_count: 22
-attribution_last: "2026-09-30"
+days_since_news_subtree: 1
+inbound_links: 34
+attribution_count: 23
+attribution_last: "2026-10-04"
 top_source: "google-news"
 pending_count: 1
-pending_overdue: 0
-pending_next_review: "2026-10-04"
+pending_overdue: 1
+pending_next_review: null
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-04
+**最後新聞更新：** 2026-10-04
 
-> **最新進展**（2026-09-30）
-> Anthropic Frontier Red Team 研究：中國 GLM-5.3 在官方二進位漏洞基準測得 4% 完整控制流劫持率（Mythos Preview 同測試 6%），早期模型如 Opus 4.6、GLM-5.2 皆做不到，顯示進階網路攻擊能力正擴散至其他實驗室模型（[官方研究](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
+> **最新進展**（2026-10-04）
+> The Register：Mythos 數學能力佐證一起正遭實際攻擊的漏洞案例（僅標題可讀，弱訊號）（Google News/The Register，2026-10-03）。
 
 ---
 
@@ -133,6 +133,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-03
+**The Register：Mythos 數學能力佐證一起正遭實際攻擊的漏洞案例（僅標題可讀，弱訊號）**：
+- Google News 轉載 The Register 標題「Mythos is hardcore good at math, as latest vuln under attack shows」（[Google News/The Register](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5)）；RSS 僅提供標題，無正文與漏洞編號，無法確認與既有能力評測的關聯
+- 互動數 0、單一來源，列為弱訊號，不展開分析；漏洞攻擊面細節見 [[topics/ai-agent-safety]]
 
 #### 2026-09-29
 **Anthropic Frontier Red Team：GLM-5.3 跨越完整控制流劫持門檻**：
@@ -296,3 +301,5 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [[news/2026-09-01]]
 - [[news/2026-09-02]]
 - [[news/2026-09-30]]
+- [Google News/The Register：Anthropic's super bug-hunting model Mythos is hardcore good at math, as latest vuln under attack shows](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5)（2026-10-03，僅標題可用，無漏洞編號／細節，弱訊號；完整記錄見「時序」2026-10-03 條目）
+- [[news/2026-10-04]]

@@ -3,21 +3,21 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-03"
-last_news_update: "2026-09-27"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 1
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
-inbound_links: 32
-attribution_count: 47
-attribution_last: "2026-09-27"
+days_since_news_subtree: 1
+inbound_links: 35
+attribution_count: 49
+attribution_last: "2026-10-04"
 top_source: "google-news"
-pending_count: 5
-pending_overdue: 0
-pending_next_review: "2026-10-05"
+pending_count: 6
+pending_overdue: 1
+pending_next_review: "2026-10-08"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
 **最後更新：** 2026-10-04
-**最後新聞更新：** 2026-09-27
+**最後新聞更新：** 2026-10-04
 
-> **最新動態**（2026-09-27）
-> Anthropic 與 OpenAI 同步就 AI 安全發出警示、尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（doomers），延續 09-24 政治化框架敘事。
+> **最新動態**（2026-10-04）
+> 圖靈獎得主 LeCun 公開稱對 AI 滅絕人類「零擔憂」，稱 Amodei 等業界示警「適得其反」，為三位圖靈獎得主中唯一此立場；另有報導稱一名離職 Anthropic 資安主管（姓名未公開）示警 agent 自主程度已超出人類可控範圍。
 
 ---
 
@@ -83,6 +83,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
 - **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列，僅標題可用，詳見「## 技術彙整」。
+- **2026-10-03，LeCun 公開稱對 AI 滅絕人類「零擔憂」，批評 Amodei 等業界示警適得其反**：三位圖靈獎得主（LeCun／Hinton／Bengio）中唯一不深度擔憂 AI 風險者，為既有「反面聲音」系列首見「圖靈獎同儕內部分裂」框架，詳見「## 技術彙整」。
+- **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」。
 
 ---
 
@@ -101,6 +103,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Fortune／Hacker News：圖靈獎得主 LeCun 稱對 AI 滅絕人類「零擔憂」，批評 Amodei 示警「適得其反」（2026-10-03 新增）
+
+- **揭露來源**：Fortune（經 Hacker News，247 分，當日全站互動最高）；原文經 [archive.ph](https://archive.ph/TyDPf) 轉存
+- **核心主張**：2018 圖靈獎得主（與 Hinton、Bengio 同屆）、Meta 前首席 AI 科學家 Yann LeCun 公開表示對 AI 滅絕人類「零擔憂」，對近期「rogue」AI 事件同樣「零擔憂」；他認為包括 Anthropic CEO Dario Amodei 等業界高層的示警「適得其反」（counterproductive）
+- **與既有敘事的關係**：延續本頁既有「反面聲音」系列（Musk「psyop」、Burry「自利」、Suleyman 批評擬人化）；LeCun 是三位圖靈獎得主中唯一不深度擔憂 AI 風險者，為本系列首見「圖靈獎同儕內部分裂」框架，而非單純業界外部批評；人物角度另見 [[entities/dario-amodei]]
+- **可信度評估**：Fortune 一手報導＋Hacker News 247 分（當日互動最高），惟具體所指「rogue AI 事件」案例與 LeCun 完整論證僅取 archive 轉存，原文細節有限
+
+### Fox News：前 Anthropic 資安主管警告 AI agent 自主程度已超出人類可控範圍（2026-10-03 新增，姓名未公開）
+
+- **揭露來源**：Fox News（經 Google News，僅標題可用）
+- **核心主張（僅標題可用）**：報導稱一位離職的 Anthropic 資安主管警告，AI agent 的自主程度正快速提高到人類難以持續監管的地步；具體姓名、原任職稱與警告的技術依據均未見報導
+- **與既有敘事的關係**：若屬實，延續本頁既有「離職示警」系列（Jacob Coxon／Evan Hubinger／Joe Benton／Josh Engels）；惟既有當事人背景均為研究／對齊團隊，本則首見「資安」（security）職能背景的離職警告，是否為同一波離職潮的新面向待後續查證
+- ❓ **待查證**（標 2026-10-04｜查 Fox News、former Anthropic security、AI agents autonomous）：當事人身分、原職稱與警告的具體技術依據均未見報導，僅 Google News 標題聚合層級可用
+- **可信度評估**：Fox News 經 Google News 轉載，僅標題層級，單一來源，訊號強度弱
 
 ### TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（2026-09-27 新增）
 

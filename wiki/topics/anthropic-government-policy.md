@@ -3,21 +3,21 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 110
-attribution_count: 161
-attribution_last: "2026-10-03"
+days_since_news_subtree: 1
+inbound_links: 120
+attribution_count: 162
+attribution_last: "2026-10-04"
 top_source: "google-news"
 pending_count: 13
-pending_overdue: 0
-pending_next_review: "2026-10-04"
+pending_overdue: 3
+pending_next_review: "2026-10-06"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
 **最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-03
+**最後新聞更新：** 2026-10-04
 
-> **最新動態**（2026-10-03）
-> - **Claude for Government 正式開放**：官方 09-30 宣布在 FedRAMP High 下對美國聯邦與州政府機關 GA，無席位費、用量設不可超過的上限（10-03 查證）；現況表不動。
+> **最新動態**（2026-10-04）
+> - **조선일보：中國黑市交易規避封鎖使用 Claude**：延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導，第三則第三方媒體確認同一現象，僅標題可用，現況表第 1 列更新。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 線 | 狀態 | 會不會改到你用的 Claude | 下一個時點 | 來源等級 |
 |---|---|---|---|---|
-| 香港與中國大陸不在許可存取區（高盛、OKX、VPN 存取；最後動態 10-02） | 定案 | 會：兩地帳號不在許可區，10-02 SCMP 另稱收緊 VPN 存取、用戶稱未經預告。高盛查出合約不涵蓋香港後自行切斷；OKX 企業帳號停權後恢復，港籍員工請求改導向其他模型 | 無時程 | Bloomberg 08-19＋SCMP 10-02＋Anthropic 區域政策 |
+| 香港與中國大陸不在許可存取區（高盛、OKX、VPN 存取；10-04 조선일보稱黑市規避封鎖；最後動態 10-04） | 定案 | 會：兩地帳號不在許可區，10-02 SCMP 另稱收緊 VPN 存取、用戶稱未經預告。高盛查出合約不涵蓋香港後自行切斷；OKX 企業帳號停權後恢復，港籍員工請求改導向其他模型 | 無時程 | Bloomberg 08-19＋SCMP 10-02＋Anthropic 區域政策 |
 | 文字輸出帶隱形浮水印（08-11 上線，法源為歐盟 AI Act 透明度規範；最後動態 08-25） | 進行中 | 會：所有新產生的文字在模型層加浮水印，隨複製貼上而走，輕度編輯多半移除不掉，逐字重寫才會 | 無時程（偵測 API 官方稱即將提供，未給日期） | 官方一手 |
 | 三項承諾落實：高風險請求換模型（06-30 官方公告 Defense in Depth；最後動態 07-02） | 進行中 | 會：送給 Fable 5 的高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋時會收到通知；官方明認日常 coding 與 debugging 會較常被誤攔。**只寫 Fable 5，5.1 是否沿用官方未說明** | 無時程 | 官方一手 |
 | 五角大廈供應鏈風險黑名單（08-28 一審裁定違法、即時解除；09-07 國防部維持立場；09-11 傳十月前遷出、09-26 官方證實約 90% 已遷出；09-25 D.C. 巡迴上訴法院推翻一審、維持認定；最後動態 09-26） | 進行中 | 不會：本案管的是聯邦機構採購與使用，不及於商用訂閱與 API | 2026-10（DOD 官方證實約 90% 已遷出，估十月底前完成，查證 2026-09-26）；是否上訴更高審級未見報導 | 法院文件＋跨 10+ 媒體（Reuters／WaPo／Bloomberg／Ars Technica 等）＋DefenseScoop＋國防部官方聲明 |
@@ -232,6 +232,8 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 **2026-08-23，the-decoder.com：灰色市場轉售 Claude API token（僅標題可用）：** the-decoder.com 報導中國存在灰色市場，以遠低於官方定價的價格轉售 Claude API token 額度；延續上述 VPN／境外 SIM／第三方 API wrapper 繞過現象，從「繞過存取限制」進一步延伸至「商業化轉售」層級，可能反映官方定價與灰市定價間存在套利空間（推論）。具體轉售規模、價格倍數與額度來源（是否為境外帳號批量取得後轉賣）均未見報導細節。
 
+**2026-10-04，조선일보（經 Google News）：中國境內黑市交易規避封鎖使用 Claude（僅標題可用）：** 南韓媒體報導中國境內存在規避封鎖使用 Claude 的黑市交易；延續 08-13 VPN／境外 SIM 繞過查證與 08-23 灰色市場轉售 API token 報導，為同一「繞過存取限制」現象的第三則第三方媒體確認，具體交易形式、規模與是否即 08-23 所述 API token 轉售同一市場均未見報導細節。
+
 ### 🌍 策略選擇：Anthropic 換戰場而非退讓
 
 面對政府市場持續碰壁，Anthropic 選擇強化其他方向而非妥協：
@@ -258,6 +260,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-10-04 | 🌐 | 조선일보（經 Google News）：中國境內存在規避封鎖使用 Claude 的黑市交易 | 延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導，第三則第三方媒體確認；具體交易形式、規模與是否為同一市場均未見報導，詳見「## 現在有哪幾條線在動」第 1 列、「三個戰場」出口管制段落 |
 | 2026-10-02 | 🏢 | 南華早報：Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用連線方式受影響（經 Google News） | 延續既有「香港與中國大陸不在許可存取區」線，首見 VPN 存取面的收緊動作；具體技術手段與收緊範圍均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 1 列、「## 政府動作對你的產品做了什麼」第 1 項 |
 | 2026-10-02 | 🏛️ | Barron's：FTC 對 OpenAI、Anthropic 的產品風險調查報導中，補述 Trump 同時公開表態支持 AI 業界自律（經 Google News） | 單一來源，是否影響 FTC 調查走向、Trump 發言全文均未見報導，暫不更動現況表 FTC 線之狀態與時程，詳見「## 現在有哪幾條線在動」第 8 列 |
 | 2026-09-30 | 🏢 | Claude for Government 在 FedRAMP High 下對美國聯邦與州政府機關 GA，無席位費、用量設上限 | 已查證（[官方](https://claude.com/blog/claude-for-government-is-now-generally-available)，10-03）；機關名單未載，商業面見 [[topics/anthropic-business]] |
@@ -462,6 +465,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-10-04
+- **[🌐] 조선일보（經 Google News）：中國境內存在規避封鎖使用 Claude 的黑市交易**：延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導的既有「繞過管制」敘事，具體交易形式與規模均未見報導，僅標題可用，詳見「## 攻防紀錄」、「三個戰場」出口管制段落
 
 ### 2026-10-02
 - **[🏢] 南華早報：Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用連線方式受影響**：事前未獲通知，具體技術手段與範圍均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 1 列

@@ -257,3 +257,6 @@
 {"id": "H-dc2017", "closed": "2026-10-03", "status": "done", "by": "主編", "result": "5c 回掃代為處置：anthropic-business:612 已補媒體稱細節（Western Downs Digital Park／Zerra DC／Macquarie Capital／Dexus／峰值 2.16GW），並標明園區約 319 億非 Anthropic 承諾金額、官方站未載"}
 {"id": "H-a5f8d4", "closed": "2026-10-03", "status": "done", "by": "主編", "result": "5c 回掃代為處置：entities/pricing 已補「Design／Slides／Docs 內含於 Pro／Max／Team／Enterprise、Free 不含、無獨立定價」（官方 2026-10-03 查證）。claude-slides:47 的懸置標記問的是操作路徑／範本／協作機制，定價頁答不了，標記保留不結案"}
 {"id": "H-b59a96", "opened": "2026-10-03", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "10-03 patterns 新增 Offrun（多 agent 並排、各用獨立 worktree、帳號額度顯示）與自主 agent 三段式部署閘（預檢契約、canary 硬門檻、自動回滾），請評估產品化矩陣是否新增列", "status": "open"}
+{"id": "H-b59a96", "closed": "2026-10-04", "status": "done", "by": "功能", "result": "Offrun 併入既有 ⟨G-11⟩；三段式部署閘因僅單一作者部落格自述、無 repo 或指標可複核，未達開新列門檻，本輪不動"}
+{"id": "H-0ce8c4", "closed": "2026-10-04", "status": "done", "by": "功能", "result": "2026-10-04 逐一核對七類（Skills設計/Plugin-MCP/Agent活動可視化/行動裝置遠端控制/記憶與知識管理/Hooks與自動化/Multi-agent架構），既有列已覆蓋或不符入列門檻，表18/18滿載，不開新列"}
+{"id": "H-0fe9d9", "opened": "2026-10-04", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估 topics/official-community-gap 產品化矩陣新增列（本次新增 6 則工具節點，含 1 則具體機制較可複用的 PHP hooks 工具 sloppy）", "status": "open"}

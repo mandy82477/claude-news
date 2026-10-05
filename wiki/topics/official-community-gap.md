@@ -3,8 +3,8 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-02"
-last_news_update: "2026-10-02"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **開始日期：** 2026-05-17
 **最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-02
+**最後新聞更新：** 2026-10-04
 
-> **代表工具更新**（2026-10-02）
-> deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
+> **代表工具更新**（2026-10-04）
+> Offrun（跨 harness 統一面板）併入「想在一個地方操作好幾家 agent」，狀態不變（❌）；deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
 
 ## 摘要
 
@@ -131,6 +131,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 仍未涵蓋：issue #28300 要的 MCP 為底共享頻道／工作區（A2A 協定），文件只給純文字點對點訊息；自動依賴排序也沒有（`ListAgents`／`SendMessage` 僅是原語），故狀態維持 🧪 部分產品化。
   - 2026-08-24 issue #86069（Windows/MSIX 1.28929.0）：訊息送進目標 session 輸入框卻不會自動送出、該 session 無回應；文件載明原生 Windows 自 v2.1.234 起支援，但未載明桌面 MSIX 版是否適用，見 [[entities/claude-code]] 已知問題。
 - ⟨G-11⟩ 跨 harness 統一操作層：缺執行期統一操作面，非設定檔互通（⟨G-08⟩）。08-24 起密集湧現，官方僅涵蓋 CC 自身 session。09-10 再添 avibe、ccteam；09-12 再添 orca（ADE，7 天 +4,966★，日增最快），官方狀態不變，見 [[topics/community-tech-tools]]「多 agent 協調混亂」。
+  - 10-03 再添 Offrun：跨廠商 agent 統一面板＋額度顯示，HN 22 分，官方狀態不變。
 
 - ⟨G-12⟩ Agent 跟 agent 做生意、吵架怎麼判：目前只有 internet-court-skill 一個社群方案在談這件事（自然語言協議＋ERC-7710 委任權限＋x402 支付＋履約爭議仲裁），證據還撐不起單獨成一列，工具本身見 [[topics/community-tech-tools]]。
 - ⟨G-13⟩ 想自己決定哪段用哪個模型、不被鎖住：個人端官方有 `opusplan`（規劃用 Opus、執行換 Sonnet）；另有 `CLAUDE_CODE_SUBAGENT_MODEL` 統一指定 subagent／teammate／workflow agent 的預設模型（官方 model-config 文件，2026-09-23 查）。

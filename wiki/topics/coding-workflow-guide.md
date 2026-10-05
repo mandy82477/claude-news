@@ -3,16 +3,16 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-10-03"
-last_news_update: "2026-09-28"
+last_updated: "2026-10-04"
+last_news_update: "2026-10-04"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
-inbound_links: 33
+days_since_news_subtree: 1
+inbound_links: 34
 attribution_count: 4
 attribution_last: "2026-09-28"
 top_source: "hacker-news"
@@ -30,15 +30,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-09-28
+**最後更新：** 2026-10-04
+**最後新聞更新：** 2026-10-04
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
 
-> **最新動態**（2026-09-28）
-> 官方發布 Opus 5.5 專屬提示工程指南，補進「官方文件導讀」：effort calibration、無人值守／多代理任務進度回報、安全拒答等相對 Opus 5 的行為差異與因應寫法（HN 187 分）。
+> **最新動態**（2026-10-04）
+> 官方部落格教學文談怎麼在 Claude／Claude Code 發揮 Opus 5.5：給完整任務描述讓它自己跑，完工後核對它的摘要是否符合你要的（HN 224 分）。
 
 ---
 
@@ -541,6 +541,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 > **Have Claude show evidence rather than asserting success**: the test output, the command it ran and what it returned, or a screenshot of the result.
 
+**Opus 5.5 的提示建議（官方部落格，2026-10-03，HN 224 分）**：它比前代更能自主跑長任務、完工時會主動講清楚做了什麼、且每次回覆前都會思考。官方建議一次把整個任務講完、點名明確的收尾狀態（如「測試全過」），再放手讓它跑；**完工後核對它的摘要跟你原本要的是否一致**——它主動報告不代表報告就是對的，trust-then-verify 的核對動作不因此省掉。
+
 其餘見第 6 段的驗證階梯——`/goal` 與驗證 subagent 的重點都是**把裁決權從執行者手上拿走**。
 
 除錯本身：`/engineering:debug` 提供重現 → 隔離 → 診斷 → 修復的流程；官方 recipe 建議**直接告訴 Claude 重現指令並給它 stack trace**、說明錯誤是間歇還是穩定發生。無法在本機重現的場景（硬體在迴路、生產限定），這流程第一步就會卡住。
@@ -592,6 +594,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 官方文件共 185 頁（完整索引在 [llms.txt](https://code.claude.com/docs/llms.txt)，原文已失效），跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
 
 - [prompting-claude-opus-5-5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（2026-09-28 發布，HN 187 分）—— Opus 5.5 相對 Opus 5 的行為差異與因應寫法：effort calibration、無人值守／多代理任務的進度回報、安全拒答、frontend 設計、貼上文字處理等。
+- [Getting the most out of Opus 5.5 in Claude and Claude Code](https://claude.dev/blog/getting-the-most-out-of-opus-5-5/)（2026-10-03，HN 224 分）—— 在 Claude 與 Claude Code 怎麼提示它、怎麼放手讓它跑長任務、完工後怎麼核對結果；重點見第 9 段「Opus 5.5 的提示建議」。
 - [large-codebases](https://code.claude.com/docs/en/large-codebases) —— **大 repo／monorepo 該怎麼設定**。全站唯一專門講這件事的一頁，含可貼上就用的 `settings.json`。
 - [memory](https://code.claude.com/docs/en/memory) —— CLAUDE.md 怎麼載入、rules 的 `paths:`、auto memory、`/doctor` 的減法原則。
 - [best-practices](https://code.claude.com/docs/en/best-practices) —— Explore→Plan→Code 四階段、驗證階梯、CLAUDE.md 的 include／exclude 表、五種失敗模式。

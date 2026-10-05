@@ -419,11 +419,6 @@
       "id": "sonnet-5",
       "name": "Claude Sonnet 5",
       "pageType": "entity"
-    },
-    {
-      "id": "coding-workflow-guide",
-      "name": "程式開發實戰手冊",
-      "pageType": "topic"
     }
   ],
   "reader": {
