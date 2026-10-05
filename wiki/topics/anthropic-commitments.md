@@ -1,26 +1,26 @@
 ---
 page: "topics/anthropic-commitments"
 kind: "topic"
-status: "monitoring"
+status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-19"
-last_news_update: "2026-09-01"
-status_main: "monitoring"
-days_since_news: 34
+last_updated: "2026-10-05"
+last_news_update: "2026-10-05"
+status_main: "ongoing"
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 34
+days_since_news_subtree: 0
 inbound_links: 10
-attribution_count: 0
-attribution_last: null
-top_source: null
+attribution_count: 2
+attribution_last: "2026-10-05"
+top_source: "hacker-news"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 承諾兌現追蹤

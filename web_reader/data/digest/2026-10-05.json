@@ -1,0 +1,742 @@
+{
+  "date": "2026-10-05",
+  "generatedAt": "2026-10-05 22:20 UTC",
+  "articleCount": 77,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] No response from API error when Advisor is triggered",
+      "url": "https://github.com/anthropics/claude-code/issues/69238",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/05 03:20",
+      "sentiment": "",
+      "body": "GitHub Issues 回報 Claude Code 的 Advisor 功能被觸發時，API 完全沒有回應，累積 67 則留言討論；有開啟 Advisor 功能的用戶可留意是否撞上同一狀況。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Bug] Remote Control unavailable despite Pro plan authentication",
+      "url": "https://github.com/anthropics/claude-code/issues/28817",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/05 14:21",
+      "sentiment": "",
+      "body": "另一則回報指出，即使 Pro 方案帳號驗證通過，Remote Control 功能仍顯示不可用，累積 45 則留言；用 Pro 方案搭配手機遠端操控 Claude Code 的人可能受影響。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "官方文件同步揭露 HIPAA 合規功能擴大：桌面版文件新增「Desktop」管理開關（HIPAA 啟用的組織預設關閉，需 Owner 開啟）與雲端 session 開關說明；文件索引同時新增一頁「為 HIPAA-ready 組織設定 local mode 版 Claude Code」的指南，顯示官方正擴充受管制產業的合規部署路徑。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Use Claude Code with your Pro or Max plan",
+      "url": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+      "source": "Official Docs",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "Help Center 多個消費端方案頁面（本頁、用量上限說明、使用額度管理、Claude Fable 5 方案說明等）同步大幅精簡，拿掉舊版「API FAQ」「API Key 安全建議」等開發者向 API 文件的導覽連結，顯示官方正把消費端方案說明與開發者 API 文件的站內導覽分開維護，內容本身未見實質改動。",
+      "focusTags": []
+    },
+    {
+      "title": "[Status] Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "url": "https://status.claude.com/incidents/bhphxz3vr58g",
+      "source": "Anthropic Status",
+      "time": "10/05 13:21",
+      "sentiment": "",
+      "body": "官方狀態頁記錄 Claude Mythos 5.1 與 Claude Fable 5.1 一度錯誤率升高，影響約 05:40–06:10 PT（12:40–13:10 UTC），30 分鐘內即標記解決。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic expected to IPO despite market uncertainty, AI slowdown calls - CNN",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1BdEczbUY5VGdZTlMtYm9HeVFjZWlfZzZrYTd3ZE1ydl9hNDA2bFRDR0FQV3lfTzRoQ3lxQlRRM0dJY1E5NENuVVFzT3c2ZU9iZktHLWdZbnJ3bmdNREJpd01Ua0Z3Vl8xVFJPS2JrM3UxYTI5?oc=5",
+      "source": "Google News / CNN",
+      "time": "10/05 09:00",
+      "sentiment": "",
+      "body": "CNN 報導，即使市場對 AI 熱潮降溫已有疑慮，Anthropic 預期仍將推進 IPO，2 個來源同日提及此一動向。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AWS Details Claude Code Deployment on Amazon Bedrock in GovCloud (US) - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQWhtUUktOURCSHowdS11WGVVSXBGczJoaEF4YXo2eUNxQ2tZM2FGSy11MkEtSEVVSUZBM3FobzJRY19TRkxpeEVvQkdQbmhIMmN2dll6WHFjMFFjVXJyQ2xTTlhoWEJyOXdyNnZQVjMxQk93aTFiSHNEY0dfclYwejBKUjJmV0xvZEVQN0dSY2VTTzg?oc=5",
+      "source": "Google News / Unite.AI",
+      "time": "10/05 17:45",
+      "sentiment": "",
+      "body": "Unite.AI 詳述 Claude Code 在 Amazon Bedrock GovCloud（US）的部署細節，承上本日稍早 Pentagon 停用 Anthropic 工具的報導，顯示聯邦體系內不同單位對 Claude 的採用狀態並不一致。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Open Source Mod Brings Rate Limits, Costs and CI Status Into View for Claude Code Users - DevOps.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPT3Z6N2RBbGsxaG1TeENwUndhTHVQbFhrdDkzZWpKcFdKcXlPSzYxenJfc1kxZXBTY1YzUHphQjR2RW9jZzFXajFIakZUVVpzMUdoeUdfYjJqZnU0MnNjajRZYzlIYkxGVEd6UTMzUnVlOGkxbm5SSktoTmY4Zlg5QzU3a3JTV3pDWDBZZ3pocFJCT1FfekoxSzQxXzNyS3lvNjYwSWJLemhGdw?oc=5",
+      "source": "Google News / DevOps.com",
+      "time": "10/05 15:52",
+      "sentiment": "",
+      "body": "DevOps.com 報導，有開發者利用 Claude Code 新推出的 Mods 外掛機制，做出可在介面內即時查看速率限制、花費與 CI 狀態的開源 mod，是 Mods 生態圈上線後第一批被媒體報導的實際應用。",
+      "focusTags": []
+    },
+    {
+      "title": "Talent Gap: Why is Anthropic Investing US$100m in Engineers? - AI Magazine",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdmxFaTRxb3pSUEw0NC1qT0lIMU9wY1ducjF3SkZEXzJpT2M3MGdHbWNOZVM3QlFZVkRDZ29pSEV0TmU0dURxWkZPNWNRTXAwUURhaXdMb0E1OGsxWlRUOTVjdC02OFFINGdndW1lb2U4c0FWT2x3cnlmZFVQR0xSQlN4NWFURW1fLW5N?oc=5",
+      "source": "Google News / AI Magazine",
+      "time": "10/05 15:24",
+      "sentiment": "",
+      "body": "AI Magazine 分析本週稍早公布的 Claude Frontier Academy 一億美元培訓計畫，指出其背後反映的是業界工程人才缺口。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.289 closes a second route past its rm guard, and stable is four builds behind - mixed-news.com",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5",
+      "source": "Google News / mixed-news.com",
+      "time": "10/05 11:37",
+      "sentiment": "",
+      "body": "mixed-news.com 重申 Claude Code v2.1.289 已修補第二條繞過 `rm` 防護的路徑，stable 版標籤仍落後 4 個版本（停在 2.1.285），對此無新進展。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic, AWS step up FDE push - Channel Dive",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNN010d19ybmZfQS1PcUZEZ3UxTzlCYjJSdERfZXphTU9GUmVSVXpMMFh6aXJ2Nm5jX0dORHNMYWdkS0x2SUhYN2Q0eDJaR0N5cnJNNGF5OHZfZUVRYmxDRlZtYzlxLXpwMUYxckt0WnV0TFljRUU3bVp5Zi12ZTNpMmxPS3RaYUpPbW1EWjJILVFWQ3gzMFlTQUJTSQ?oc=5",
+      "source": "Google News / Channel Dive",
+      "time": "10/05 19:06",
+      "sentiment": "",
+      "body": "Channel Dive 報導 Anthropic 與 AWS 攜手加碼推動 Frontier Deployed Engineers（FDE）方案，延續本週稍早公布的企業培訓計畫。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Rejetto HFS CVE-2026-61500 exploited a day after write-up",
+      "url": "https://dev.to/techaiwire/rejetto-hfs-cve-2026-61500-exploited-a-day-after-write-up-35oc",
+      "source": "dev.to / #anthropic",
+      "time": "10/04 18:33",
+      "sentiment": "",
+      "body": "Rejetto HFS 3.0.0–3.2.0 版因用 `Math.random()` 簽署登入憑證而存在漏洞，正是 Anthropic 的資安研究模型 Mythos 發現並寫成報告；攻擊在報告發布隔天（10/3）就開始，3.2.1 版已修補。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Sonnet 5.5 nears Opus 5.5 at half the price",
+      "url": "https://dev.to/techaiwire/claude-sonnet-55-nears-opus-55-at-half-the-price-4hoj",
+      "source": "dev.to / #anthropic",
+      "time": "10/03 17:58",
+      "sentiment": "",
+      "body": "dev.to 文章指出 Claude Sonnet 5.5 在 Terminal-Bench 4.0 拿下 70.6% 分數，價格僅 Opus 5.5 的一半（$2/$10 每百萬 token）；Sonnet 4.5 將於 2026 年 11 月 30 日退役。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic: Is Russia using AI for disinformation in Africa?",
+      "url": "https://www.dw.com/en/anthropic-report-is-russia-using-ai-for-disinformation-in-the-central-african-republic-and-elsewhere/a-79476947",
+      "source": "Hacker News",
+      "time": "10/04 18:04",
+      "sentiment": "",
+      "body": "Anthropic 發布報告指出，俄羅斯特工疑似在中非共和國班基等地利用 AI 散布不實資訊，HN 討論累積 11 分。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic wants your thoughts on AI",
+      "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+      "source": "Hacker News",
+      "time": "10/05 12:21",
+      "sentiment": "",
+      "body": "Anthropic 推出名為 Anthropic Interviewer 的新研究計畫，邀請用戶分享使用 AI 的經驗並可選擇公開訪談內容，供其他實驗室與政策制定者參考，HN 累積 26 分。情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "I made a plugin that fixes copy-paste from the Claude Code terminal (no more gutter bar and broken lines)",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wyfyz8/i_made_a_plugin_that_fixes_copypaste_from_the/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/05 18:12",
+      "sentiment": "",
+      "body": "開發者做了一個外掛，修正從 Claude Code 全螢幕 TUI 複製文字時會帶出左側邊欄與斷行的問題，常從終端機複製程式碼的用戶可留意。情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "irinabuht12-oss/marketing-skills",
+      "url": "https://github.com/irinabuht12-oss/marketing-skills",
+      "source": "GitHub Search",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "Claude skills 與 MCP 合集，近 2 天星數暴增 404 顆（約每日 202 顆），提供 49 個免費行銷類 skill（Google Ads、Meta Ads、SEO 等）；目前累積 3,573 星。情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "atlassian/atlassian-mcp-server",
+      "url": "https://github.com/atlassian/atlassian-mcp-server",
+      "source": "GitHub Search",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "Atlassian 官方推出的 MCP server，讓 Claude、ChatGPT、Cursor 等工具透過 OAuth 2.1 或 API token 直接存取 Jira、Confluence、Jira Service Management 與 Bitbucket，累積 1,084 星。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "nykooi1/vibe-wise",
+      "url": "https://github.com/nykooi1/vibe-wise",
+      "source": "GitHub Search",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "Claude Code 外掛，讓使用者在 AI 寫程式的同時學習怎麼建構系統，累積 1,599 星。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "zhitongblog/solomd",
+      "url": "https://github.com/zhitongblog/solomd",
+      "source": "GitHub Search",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "本地優先、MIT 授權的 markdown 編輯器，內建 MCP server 讓 Claude Code、Codex、Cursor 可直接操作筆記庫，支援 14 家 LLM 供應商自帶金鑰，累積 1,167 星。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "sadjow/claude-code-nix",
+      "url": "https://github.com/sadjow/claude-code-nix",
+      "source": "GitHub Search",
+      "time": "10/05 19:25",
+      "sentiment": "",
+      "body": "隨 Anthropic 原生發布每小時自動更新的 Claude Code Nix 套件，累積 500 星。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "The Information 報導，Meta、Microsoft 正要求員工減少內部使用 Anthropic 的 Claude，Seeking Alpha、Yahoo Finance、marketscreener.com 等至少 5 家媒體同日跟進；這與 Barclays 本週稍早宣布擴大導入 Claude 的動向恰成對比，反映大型企業對 Claude 的內部採用立場並不一致。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpVcFVhSDFxejVlaUt2WWdBeFIxU0Z4bmVqVFVPZHJTVDc1VzQ3SjA2a1JzTTViLUlwTjRZSWFXLTZFWGZGZ09wM1JVUnJ3NnlIaTBKdXRTQ3JScURTMUw0UVQ2Uzl6aUw1dnJ4ZHBpWGYtX1AwOVhxMmQ4dGNKYlBjTjJaSFlYVm54S3JCb3Z0QQ?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDd1S0xXV3o1YV9HTFVETHpnMHZad3lFSVktaXp3d25FMnU4emNBQlNvVTNaaFM5LUhETEp3VU51cER1SVRlUl93VU84eEdfeEk2SXlpUnBUeEpSbXdDeTRrNFNnYWpJbjFVa2dNemZTa1Fjb25qMEFVbEpZX1ZUR19zbkJGV25BWkpTbE9DQ0xCMHo5blR6bW9xemF3Vjg?oc=5"
+      ],
+      "ref_names": [
+        "The Information",
+        "Yahoo Finance"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "BBC 報導，美國國防部（Pentagon）在把 Anthropic 列入黑名單後已停用其 AI 工具；同日 AWS 另一邊卻公布 Claude Code 在 Amazon Bedrock GovCloud（US）上的部署細節，顯示聯邦體系內部對 Claude 的可用性判斷並不統一，用 Claude 服務政府客戶的工程師應留意這層落差。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5lT2E0bGxnU0ZWQURWQjZCU3BVX2RMSFN2RF85eW5OemNNMzVLdVdzNUJTcEo4eHduYm40R3BLVEh4ZEtoNzJ2Zml6dFFaS0lEOFRheDdtcmZRM1lnRVE?oc=5"
+      ],
+      "ref_names": [
+        "BBC"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "佛州一名女子把 Claude 當「日記」寫下攻擊警長辦公室的計畫，經人工複核後被通報警方並遭重罪起訴；Tom's Hardware 指出這已是 8 月以來至少第三起類似案例被送交執法單位，顯示 Claude 的安全審核流程已實際介入多起真實案件。",
+      "ref_urls": [
+        "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+        "https://news.google.com/rss/articles/CBMi2wJBVV95cUxNVG9jblNUZGpsTGFUdmlUOVBldWktSUt3VUhZakZmMXRXclZ1bnhuYlJmTXdlUXRPbEhLeGlLMFlNZDFfb2tqZDA4RkJYYXBlZ29zSmNhY1NuSWxOUXE0dXlXM1ZZRmVZVzlCTllHSlYtR2tmX2t0X25CWlpSVjNlSmxJckhFb3JHbFNBY3E3bjFkQmplbDV3WE9HSmNCSDhsVGtwT0k4bWdCZXZUN183N1puMTllX1A5SmZNZmlPZmwtd05QTnhDTllXaE5WaW52blBUV0tPR05ZY084dzc5VHFMaFVtMGdxVUNhVVZWZ0N1ODhIRF8wV0lTVWVxN2ppX1FkcGNUMk4xM1hfUExBcE5fOGIwVmJpQU1nUnNKTTBrRE93OU9ZcU0xckY5NVVSbFd1anVwUE0tZjRvYUl5VlVxaFBHQjBtdF9Ucy1pWExmY21HR19SbmNfVQ?oc=5"
+      ],
+      "ref_names": [
+        "Techspot",
+        "Tom's Hardware"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "前 Anthropic 研究員、吹哨人 Jacob Coxon 在紐約市 AI 安全聽證會上重申警告，稱業界做法「極度魯莽」；同場聽證會上共和黨參議員則批評 Anthropic 的態度是「危言聳聽」，OpenAI、Google、Meta 也一同出席作證。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmUzVVVySnJtNFBUYlhrMWlxY0xOMEVySFZTMzFlR25La0ZqSU00TlEtWTRMT3Z1ZE85S3dwTXg0LXZTV2JmeDZ5R1RYaU9qVGFtYzZrNnV4YXZMSEZ1bW5YUEFCQkZpV0t4V1NaRTI2VldmRGFwWEFLNkhzbzU0Nk9sQUpPRmVDNjg4YVBpMm5rR2hLR0FSYlhjZEhWemN2dHVWTW9mLS1mekdmU1RuSTBma2sta3B4T2p1Y3VmWUZnaG0zMmVNRENEOXZjZw?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ2dacmRIYW4xWGNpRkNvNE9VWGJvU1o3RFV2c0taOUl5UmNOTmxkczJNV0tiLTF3QlpWd01JZ2piczhRRUc4ZVNkMDZmQVZkRVVma0wzZk9NNV9kTFAxLWpPVEJSUzdYY0tvTGEtUWR6bTBybVJkREZqNUdwVTB6Si1MbnFvV0N4SHo0LTBlS09NOVFNVzJDSzZscE1YNE10bkZfRw?oc=5"
+      ],
+      "ref_names": [
+        "NY Post",
+        "axios"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "The Mac Observer 報導，Anthropic 開始要求 Claude 用戶分享語音資料供 AI 訓練使用；有使用語音功能的用戶應留意這項新的資料蒐集範圍並檢視自己的隱私設定。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ3VzWC1KVGZBOEFEVFNFcjdHM2VOdndLYVN6VXF3LUtzOVMzT3J2MXJ2OXoxck9nRWlyVklwYmdUU0gwZ250SDBrVWlfeGpnVGdxOXBGQk1DWDZSejVLQkZva1NOZF9jd1oybVNwWWl2VmVZU0Y4UGVOdTRNNXpGeG1tN3l0QlVMZ3o4M1M2cWUwY1BxOTBkbHJKVlgtdGlRVWE4?oc=5"
+      ],
+      "ref_names": [
+        "The Mac Observer"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Why AI Researchers Are Leaving OpenAI, Anthropic and Google DeepMind - WinBuzzer",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOS01wUm02eUVDd3JnYnN4bmZtWk92bXJCWVVKTWVEVGtnY1lPa0pVVVc5TGUwRjRsdm1aRmpFZ2ttTDFJdm9lcDh2WEppcWZHakwwS0JCUWxkWUlwUjZWTVEwOEhlZldrOVFvUlVmUVJpMG5nOC1RU01vdDlyY0dESVdGbVBibVhWaXdzdDBZdnBsVjR0QWctOW9wMGY2QXdvbWdj?oc=5",
+      "body": "分析 AI 研究人員近期離開 OpenAI、Anthropic、Google DeepMind 的原因。",
+      "topic": "ai-talent-flow",
+      "topicPage": {
+        "id": "ai-talent-flow",
+        "name": "AI 實驗室人才流動",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Zhipu's Hong Kong Shares Surge Over 6% as GLM-5.3 Earns Dual Endorsement from Cursor and Anthropic - finance.biggo.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1wN1dxcUEyQlRCX085ZWFOdjR6alBnVnVmQlg0ZXBNZmFVSTFCa2kta05uY2swUklmVm9sVlYydldodk1ueVdoWmkyY2RtcVVKTHFjczRucWpHTFJ5SkppWFhoQnR3dEk3S1I2cDNEUmNPenVjMUE?oc=5",
+      "body": "財經媒體報導，Zhipu 旗下 GLM-5.3 同日獲 Cursor 與 Anthropic 雙重背書，帶動 Zhipu 香港股價單日上漲逾 6%。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 39
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 8
+    }
+  ],
+  "preview": "Claude Code：新增「HIPAA-ready 組織 local mode 設定指南」；桌面版文件揭露 Desktop／雲端 session 兩個組織管理開關（HIPAA 組織預設關閉，需 Owner 開啟）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5 與 5.1",
+      "pageType": "entity"
+    },
+    {
+      "id": "jacob-coxon",
+      "name": "Jacob Coxon",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-commitments",
+      "name": "Anthropic 承諾兌現追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "enterprise-tool-tracker",
+      "name": "大型企業 AI 編碼工具使用追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "model-comparison",
+      "name": "Claude 模型選型對照",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-05",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- 新增「HIPAA-ready 組織 local mode 設定指南」；桌面版文件揭露 Desktop／雲端 session 兩個組織管理開關（HIPAA 組織預設關閉，需 Owner 開啟）。\n- 已知問題：Remote Control 顯示「方案不可用」儘管已用 Pro 驗證（#28817，45 則留言）；Advisor API 無回應（#69238）更新至 67 則留言。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5 與 5.1",
+            "label": "最新進展",
+            "date": "",
+            "body": "Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘（05:40–06:10 PT），已解決；屬穩定性事件，非能力變化。"
+          },
+          {
+            "page": "topics/model-comparison",
+            "name": "Claude 模型選型對照",
+            "label": "Sonnet 4.5 退役日已官方查證：2026-11-30",
+            "date": "",
+            "body": "官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)確認：`claude-sonnet-4-5-20250929` 2026-09-30 公告棄用、2026-11-30 退役，建議遷移至 Sonnet 5.5；詳見 [[topics/model-comparison#時序（陣容變化）]]。"
+          },
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "最新進展",
+            "date": "",
+            "body": "Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘，已解決；完整記錄見 [[entities/fable-5]]。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Sonnet 4.5（claude-sonnet-4-5-20250929）官方退役日查證為 2026-11-30**（與 dev.to 轉述一致）：官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)載明 09-30 已公告棄用、11-30 退役，建議遷移至 Sonnet 5.5；此日期適用 Claude API／AWS Claude Platform／Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的時程。詳見 [[entities/pricing#模型 API 定價現況]]。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Meta、Microsoft 被曝持續要求員工減少內部使用 Claude**：The Information 報導，≥5 家媒體同日跟進，與同週 Barclays 擴大導入形成對比，詳見 [[topics/enterprise-tool-tracker]]。\n- **BBC：五角大廈在把 Anthropic 列入黑名單後已停用其 AI 工具**：同日 AWS 另公布 Claude Code 於 Bedrock GovCloud(US) 部署細節，聯邦體系內部立場不一，詳見 [[topics/anthropic-business#還沒過去的風險]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/enterprise-tool-tracker",
+            "name": "大型企業 AI 編碼工具使用追蹤",
+            "label": "最新企業採用異動",
+            "date": "",
+            "body": "- **Meta、Microsoft 被曝持續要求員工減少內部使用 Claude**：The Information 報導，≥5 家媒體同日跟進；與同週 Barclays 擴大導入形成對比（詳見使用現況表 Meta／Microsoft 列）。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態",
+            "date": "",
+            "body": "WinBuzzer 綜合分析近期研究人員離開 OpenAI、Anthropic、Google DeepMind 的原因，未點名具體人物或流向；既有格局（Google DeepMind 淨流失、Anthropic 主要承接）不變，詳見 [[topics/ai-talent-flow#時序]]。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- Meta、Microsoft 傳要求員工減少內部使用 Claude，與同週 Barclays 擴大導入形成對比。\n- 五角大廈黑名單後停用 Claude；PitchBook 分析外流財報稱估值不到 2 兆美元。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **BBC：五角大廈證實已停用 Anthropic 工具**；同日 AWS 曝 Claude Code 聯邦 GovCloud 部署細節，兩單位採用狀態不一。\n- **紐約市 AI 安全聽證會**：Google／Meta／OpenAI／Anthropic 出席；前研究員 Coxon 重申警告，共和黨參議員批評「危言聳聽」。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500）隔天即遭在野攻擊，10-04 修補版釋出；非 Claude 自身產品事件，見 [[topics/ai-agent-safety#模型網攻能力與防護]]。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告；同場共和黨參議員批評 Anthropic 的安全論述態度為「危言聳聽」。"
+          },
+          {
+            "page": "topics/anthropic-commitments",
+            "name": "Anthropic 承諾兌現追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "「解禁三承諾」之「通報惡意活動」項首見具體案例：佛州一女子把 Claude 當日記寫下攻擊警長辦公室計畫，經人工複核通報警方並遭重罪起訴，Tom's Hardware 稱為 8 月以來至少第三起。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-patterns",
+            "name": "Claude Code 社群工作流模式",
+            "label": "最新工作流模式",
+            "date": "",
+            "body": "- **Plugin / MCP 整合添三例**：solomd 把筆記編輯器變 MCP 橋接；Atlassian、Desktop Commander 各自發布官方 remote MCP server。\n- **安全架構再添一例**：WaLiAPI 本機 LLM API 閘道，統一三協議轉換，呼應 10-04 的 ThinkWatch-Lite。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/jacob-coxon",
+            "name": "Jacob Coxon",
+            "label": "紐約市聽證會重申警告",
+            "date": "",
+            "body": "Coxon 出庭紐約市 AI 安全聽證會，重申辭職時的警告，稱業界做法「極度魯莽」；延續 09-09 辭職聲明立場，細節見 [[entities/jacob-coxon#核心論述]]。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 16
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] No response from API error when Advisor is triggered",
+      "url": "https://github.com/anthropics/claude-code/issues/69238",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/05 03:20",
+      "sentiment": "",
+      "body": "GitHub Issues 回報 Claude Code 的 Advisor 功能被觸發時，API 完全沒有回應，累積 67 則留言討論；有開啟 Advisor 功能的用戶可留意是否撞上同一狀況。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Bug] Remote Control unavailable despite Pro plan authentication",
+      "url": "https://github.com/anthropics/claude-code/issues/28817",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/05 14:21",
+      "sentiment": "",
+      "body": "另一則回報指出，即使 Pro 方案帳號驗證通過，Remote Control 功能仍顯示不可用，累積 45 則留言；用 Pro 方案搭配手機遠端操控 Claude Code 的人可能受影響。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

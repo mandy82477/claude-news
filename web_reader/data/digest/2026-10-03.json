@@ -478,11 +478,6 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "claude-code-experimental",
       "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"

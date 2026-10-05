@@ -3,19 +3,19 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-04"
-last_news_update: "2026-10-04"
+last_updated: "2026-10-05"
+last_news_update: "2026-10-05"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 64
-attribution_count: 156
-attribution_last: "2026-10-04"
+attribution_count: 160
+attribution_last: "2026-10-05"
 top_source: "google-news"
-pending_count: 4
+pending_count: 5
 pending_overdue: 1
 pending_next_review: "2026-10-11"
 pending_signalled: 2

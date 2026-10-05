@@ -3,19 +3,19 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-02"
+last_updated: "2026-10-05"
+last_news_update: "2026-10-05"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 14
 attribution_count: 56
 attribution_last: "2026-10-01"
 top_source: "google-news"
-pending_count: 31
+pending_count: 34
 pending_overdue: 5
 pending_next_review: "2026-10-07"
 pending_signalled: 4
