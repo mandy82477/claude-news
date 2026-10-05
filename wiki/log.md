@@ -7339,3 +7339,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 ## 2026-10-05 Ingest 補充（devpractice 沉澱更正）
 
 - 上則「devpractice 沉澱：本日無候選」記錄有誤——主編原漏派工開發實務記者（誤判為「無開發實務.md 派工包即不派工」，實際上該記者的沉澱來源是獨立的 git diff 掃描，不依賴分類包）。補派後更正：候選 7 筆（entities/claude-code：v2.1.289 deny/ask 規則漏洞＋終端機凍結修復、cache_creation 計費 bug #46917、Max 額度異常消耗 #38335、Routines session 堆積社群繞過 skill；topics/community-tech-patterns：sloppy PHP 技術債靜態分析、mcptoon MCP 工具發現 token 壓縮、atlassian-mcp-server 官方 remote MCP）；手冊寫入 0 則（今日無官方使用指南類條目）；基準線 8e8e1e22→ee0abe4d
+
+## 2026-10-05 Ingest 補充（📋 待使用者確認彙整）
+
+- 📋 待使用者確認：
+  1. [社群] irinabuht12-oss/marketing-skills（GitHub，3,573★，星速異常偵測近 2 天 +404 星）未收錄進 wiki——星數防刷規則需 forks／issues／commit 佐證，雲端 egress 受限無法查證，且同作者 09-30 已收錄另一支急漲 MCP repo 形成重複模式；建議下次有網路存取的 session 查證後決定是否收錄
+  2. [投資分析] PitchBook／Morningstar「Anthropic 外流財報反映快速成長但不足 2 兆美元估值」僅標題可用，具體數字與估值方法論待補
+  3. [投資分析] 五角大廈（Pentagon）停用 Anthropic AI 工具一事，與既有 09-12／09-26 已證實「約 90% 機密工作負載遷出」是否為同一事件待釐清
+  4. [投資分析] Meta、Microsoft 限縮員工內部使用 Claude 的具體政策內容與原因（資料疑慮／成本／其他）僅標題可用，待後續報導補充
