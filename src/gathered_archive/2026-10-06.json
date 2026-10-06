@@ -76,7 +76,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.291#2.1.291",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "官方文件更新：方案與定價（Plans & Pricing）",
@@ -90,7 +92,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "https://claude.com/pricing#ae5f2f215657fd48",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "官方文件更新：Claude Code 桌面版",
@@ -104,7 +108,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "https://code.claude.com/docs/en/desktop.md#c80634abd78802ac",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[Status] Elevated errors for Claude Opus 5.5",
@@ -118,7 +124,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[anthropics/claude-code] v2.1.291",
@@ -132,7 +140,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "pipeboard-co/meta-ads-mcp",
@@ -146,7 +156,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "open-mercato/cezar",
@@ -160,7 +172,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "raine/claude-history",
@@ -174,7 +188,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "livetennisapi/livetennisapi-mcp",
@@ -188,7 +204,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "with-pebbly/aseprite-ai-artist",
@@ -202,7 +220,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "pueschel88/Tradingview-MCP",
@@ -216,7 +236,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI",
@@ -233,7 +255,9 @@
       "contributors": [
         "Google News / SemiAnalysis",
         "Reddit / r/ClaudeAI"
-      ]
+      ],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Engineer says Claude Code has made his job \"soul-sucking\"",
@@ -247,7 +271,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Feature: Parse compound Bash commands and match each component against permissions",
@@ -261,7 +287,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/16561#32cfa9fb00ff527d",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent",
@@ -275,7 +303,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
@@ -291,7 +321,9 @@
       "dedup_key": "",
       "contributors": [
         "Google News / BBC"
-      ]
+      ],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: I recreated \"Crazy Ones\" ad as an animated web tribute to Steve Jobs",
@@ -305,7 +337,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Self-bench – benchmark coding agents on real-world software",
@@ -319,7 +353,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Ototo: Offload code exploration to a smaller model from Claude et al.",
@@ -333,7 +369,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Agent Squad – Be the CEO of a Claude Code Agent Team",
@@ -347,7 +385,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Popular Claude Code skills vs. a placebo: 2 beat it, 1 did worse",
@@ -361,7 +401,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Open-source iPhone app that streams Claude like the Siri app",
@@ -375,7 +417,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Code Quality?",
@@ -389,7 +433,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Expands Claude Startups Program With New Founder Benefits - Unite.AI",
@@ -403,7 +449,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Jamie Dimon warns Anthropic's Mythos AI raised cyber risk 10-fold - Quartz",
@@ -417,7 +465,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic expands Claude Startups program with credits and perks - Quartz",
@@ -431,7 +481,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "comparison between first impression and now",
@@ -445,7 +497,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Running 10 remote desktops full of AI agent swarms from one browser",
@@ -459,7 +513,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "I was the clipboard between Claude Code and Codex, so I let them write to each other",
@@ -473,7 +529,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "How I Made a Polished Promo Video with Claude Code",
@@ -487,7 +545,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "ClaudeTerm: a Windows terminal built around Claude Code's hooks and statusLine (image panel, context/limits/subagents bar, per-tab session resume)",
@@ -501,7 +561,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic expands Claude Startups program in bid to snag founders and fast-growing companies - CNBC",
@@ -515,7 +577,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic is giving startups a free year of Claude Team and $1,000 in credits - TechCrunch",
@@ -529,7 +593,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
@@ -543,7 +609,9 @@
       "category": "media",
       "topic": "competitor-landscape",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "OpenAI and Anthropic Face Rising Price Pressure From Big AI Users - Bloomberg.com",
@@ -557,7 +625,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "\"I'm just a meat proxy hitting 'Enter' for Claude\"",
@@ -571,7 +641,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Scrimshaw Jukebox",
@@ -585,7 +657,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Will Claude Desktop eventually remove the local Cowork Linux VM, so we can reclaim its huge disk space automatically?",
@@ -599,7 +673,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Code vs Codex: Benchmarks, Pricing [2026] - https://tech-insider.org/",
@@ -613,7 +689,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "EXCLUSIVE: Anthropic's Amodei made $18 million last year, middle of the tech CEO pack - Reuters",
@@ -627,7 +705,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Nimble.LA Achieves Select Partner Status in Anthropic's Claude Partner Network - PR Newswire",
@@ -641,7 +721,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Discussion Hub for new Claude incident: Elevated errors for Claude Opus 5.5 on Oct 6, 2026",
@@ -655,7 +737,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "A New Open-Weight Challenger to Anthropic, Reflection, Emerges - The New York Times",
@@ -669,7 +753,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "OpenAI and Anthropic are backing mandatory AI breach disclosure laws in Australia - Quartz",
@@ -683,7 +769,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Meta and Microsoft are Actively Cutting Employee Use of Claude AI - CyberSecurityNews",
@@ -697,7 +785,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic says AI agents didn’t breach Australian government websites – video - The Guardian",
@@ -711,7 +801,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "How Meta and Microsoft’s ‘Claude message’ to employees show Anthropic has a ‘complicated problem’ - The Times of India",
@@ -725,7 +817,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Opus 5.5 API Setup: 13 Steps, $4/$20 per 1M [2026] - https://tech-insider.org/",
@@ -739,7 +833,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Design: How to Create On-Brand Visuals With AI - Social Media Examiner",
@@ -753,7 +849,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic reported a user to the police over a chat with Claude - Українські Національні Новини (УНН)",
@@ -767,7 +865,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "What Anthropic’s AI biology experiment actually showed - IBM",
@@ -781,7 +881,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Sonnet 5.5 Migration: Fix API Errors & Tool Calls - Kingy AI",
@@ -795,7 +897,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Sonnet 5.5 Medium vs High vs Max: Which Effort Setting Is Worth the Cost? - Kingy AI",
@@ -809,7 +913,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Microsoft (MSFT) and Meta Scale Back Employee Use of ‘Claude Code’ - TipRanks",
@@ -823,7 +929,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Security researchers say Anthropic's MCP protocol puts 200,000 servers at risk - Startup Fortune",
@@ -837,7 +945,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Reports User to the Police - Futurism",
@@ -851,7 +961,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "OpenAI, Anthropic tell Australia they would welcome data breach rules - Reuters",
@@ -865,7 +977,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "What is Codemode",
@@ -879,7 +993,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Quoting Felix Rieseberg",
@@ -893,7 +1009,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Meta And Microsoft Reportedly Trim Anthropic Reliance as Internal AI Tools Take Center Stage - Yahoo Finance",
@@ -907,7 +1025,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode - MarkTechPost",
@@ -921,7 +1041,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Microsoft and Meta Steer Staff From Anthropic Claude to In-House AI - PYMNTS.com",
@@ -935,7 +1057,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Wall Street banks launch record $60bn chip deal for Broadcom and Anthropic - Financial Times",
@@ -949,7 +1073,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Y'all this is a sexy paper; context language models",
@@ -963,7 +1089,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Supercharge regulated workloads with Claude Code and Amazon Bedrock | Amazon Web Services - Amazon Web Services (AWS)",
@@ -977,7 +1105,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Which model, which harness? I have data for you.",
@@ -991,7 +1121,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Fully local little parkour sim",
@@ -1005,7 +1137,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "The ultimate guide to multi-harness RL",
@@ -1019,7 +1153,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "We benchmarked 18 RAG pipelines against an agent loop on Google's FRAMES. The best pipeline hit 78.9%. The agent loop hit 92.7%.",
@@ -1033,7 +1169,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     }
   ],
   "blocked_items": [
@@ -1047,7 +1185,8 @@
       "summary": "HN discussion: https://news.ycombinator.com/item?id=49969927（HN 討論 1 則）",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x"
+      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x",
+      "emitted": false
     },
     {
       "title": "Show HN: Ototo: Offload code exploration to a smaller model from Claude et al.",
@@ -1059,7 +1198,8 @@
       "summary": "HN discussion: https://news.ycombinator.com/item?id=49971028",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://ototo.dev/"
+      "blocked_detail": "https://ototo.dev/",
+      "emitted": false
     },
     {
       "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent",
@@ -1071,7 +1211,8 @@
       "summary": "HN discussion: https://news.ycombinator.com/item?id=49979793（HN 討論 1 則）",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://github.com/longsurf-ai/openchart"
+      "blocked_detail": "https://github.com/longsurf-ai/openchart",
+      "emitted": false
     },
     {
       "title": "Microsoft Slashes Internal Claude Spending by a Third - The Information",
@@ -1083,7 +1224,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpVcFVhSDFxejVlaUt2WWdBeFIxU0Z4bmVqVFVPZHJTVDc1VzQ3SjA2a1JzTTViLUlwTjRZSWFXLTZFWGZGZ09wM1JVUnJ3NnlIaTBKdXRTQ3JScURTMUw0UVQ2Uzl6aUw1dnJ4ZHBpWGYtX1AwOVhxMmQ4dGNKYlBjTjJaSFlYVm54S3JCb3Z0QQ?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpVcFVhSDFxejVlaUt2WWdBeFIxU0Z4bmVqVFVPZHJTVDc1VzQ3SjA2a1JzTTViLUlwTjRZSWFXLTZFWGZGZ09wM1JVUnJ3NnlIaTBKdXRTQ3JScURTMUw0UVQ2Uzl6aUw1dnJ4ZHBpWGYtX1AwOVhxMmQ4dGNKYlBjTjJaSFlYVm54S3JCb3Z0QQ?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic expands Claude Startups program in bid to snag founders and fast-growing companies - CNBC",
@@ -1095,7 +1237,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBrMXU1ams3ZHlMaE4yVnNKLUFKUEREMjJGRkVJQ09UVHRYbzBiXzdQSlFqS2lsY3dtSWZmLUpoZFRkb0tEZHh4YlBvbUVVQVBCcUFQMlVyNTJuOVdscHhabW5SY1oyRzZLU2ZsT1BwSlJoUHRiYVNrSmlR0gF_QVVfeXFMUFlncV9mdTFCd3ZGSVZqeGVEUVVfVl9mRzc0UzhEQ2dncnNRN1Y0NE9LWHpvREFYcVljSG90RXl3UGRIVnVhaEc3NldUSjlZSTdDTHJSRGxEekZXQUJaejVWSGtiOW45RHZuZHA0RlFzVzdGa3M4NEIySjJEWWdIdw?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBrMXU1ams3ZHlMaE4yVnNKLUFKUEREMjJGRkVJQ09UVHRYbzBiXzdQSlFqS2lsY3dtSWZmLUpoZFRkb0tEZHh4YlBvbUVVQVBCcUFQMlVyNTJuOVdscHhabW5SY1oyRzZLU2ZsT1BwSlJoUHRiYVNrSmlR0gF_QVVfeXFMUFlncV9mdTFCd3ZGSVZqeGVEUVVfVl9mRzc0UzhEQ2dncnNRN1Y0NE9LWHpvREFYcVljSG90RXl3UGRIVnVhaEc3NldUSjlZSTdDTHJSRGxEekZXQUJaejVWSGtiOW45RHZuZHA0RlFzVzdGa3M4NEIySjJEWWdIdw?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic is giving startups a free year of Claude Team and $1,000 in credits - TechCrunch",
@@ -1107,7 +1250,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOOUw1T3diMDBtTXdtdnJ1bk5DdUpfUWtuYzJaVjF2M0lUMjJkeXYxZUN0bEQ5bU45OGM5OXZXUzJGZFJKSHhRaHRlbk80dnZlMEpNaGZfT1JfWmhnRmtpMGJ0dWNlaFRNd0FWVUNQVGRoeVhJVmk5clNPMkRZWmNnLUZSRmlZeXN5bEtvNW51WmlSazMxcHhPODdIV2lZYnNyWDBRUk1nRW5KMklkaHpwSFQ5M0NOS2l2dlow?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOOUw1T3diMDBtTXdtdnJ1bk5DdUpfUWtuYzJaVjF2M0lUMjJkeXYxZUN0bEQ5bU45OGM5OXZXUzJGZFJKSHhRaHRlbk80dnZlMEpNaGZfT1JfWmhnRmtpMGJ0dWNlaFRNd0FWVUNQVGRoeVhJVmk5clNPMkRZWmNnLUZSRmlZeXN5bEtvNW51WmlSazMxcHhPODdIV2lZYnNyWDBRUk1nRW5KMklkaHpwSFQ5M0NOS2l2dlow?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Reports User to the Police - Futurism",
@@ -1119,7 +1263,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeVZhcEE5ekpMNDRiUlliNWhPZzE5OHJEM25OYm4xQWlOblZkelpUNnVZY21WOWM5aUhTNjFPaWc1djFJZnBlcFhScmpUdGg0Z3JfTkRxTjg2dWx0UHU5dGRrcDdrbFdIaVZnR2cyY3Npb1VJWDlTc2t3M0hVdWVqcmhmN3ZQdkFJbTJsUFBkdjBOMVZ6VHdxazNINA?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeVZhcEE5ekpMNDRiUlliNWhPZzE5OHJEM25OYm4xQWlOblZkelpUNnVZY21WOWM5aUhTNjFPaWc1djFJZnBlcFhScmpUdGg0Z3JfTkRxTjg2dWx0UHU5dGRrcDdrbFdIaVZnR2cyY3Npb1VJWDlTc2t3M0hVdWVqcmhmN3ZQdkFJbTJsUFBkdjBOMVZ6VHdxazNINA?oc=5",
+      "emitted": false
     },
     {
       "title": "OpenAI, Anthropic tell Australia they would welcome data breach rules - Reuters",
@@ -1131,7 +1276,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPakluaktNLUFlZk8zejE5LUV6VWYtdkphTjB0UVpiYjJ2WVYwd2lXUC0xMTdPcFJXYUNMajk5MlMtcmNlSUxiUGY3T0plNzYxMG02X09jbkNlcDBldEdueENYdXhHVnd6TkVmVExyZGtzN0hqdUF5X2VsaEVMX3hWT21ob3VvWWE5UlNqbnZLb24yTXJlYWJiZGl1cjRWNnNad1ljTlF4WTVJREEza2Y0SmlmX0E0QzJfeVZjU1hFOXdYeDU2bEE?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPakluaktNLUFlZk8zejE5LUV6VWYtdkphTjB0UVpiYjJ2WVYwd2lXUC0xMTdPcFJXYUNMajk5MlMtcmNlSUxiUGY3T0plNzYxMG02X09jbkNlcDBldEdueENYdXhHVnd6TkVmVExyZGtzN0hqdUF5X2VsaEVMX3hWT21ob3VvWWE5UlNqbnZLb24yTXJlYWJiZGl1cjRWNnNad1ljTlF4WTVJREEza2Y0SmlmX0E0QzJfeVZjU1hFOXdYeDU2bEE?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI - SemiAnalysis",
@@ -1143,7 +1289,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1obmlsblJmOTI4SDVYR1hzd3lzNEVkM0JONGV0ZUJjZXpWRjdzaW85cjNIclpLZXJVbzQyU0VkbFVzX3VuM0M5VkZ2MlowRG1DaVc0ZllobllaLTBDaFlrSllvRmpqZVBMS0E2b1NNRkdwMkNnT0xxSFhn?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1obmlsblJmOTI4SDVYR1hzd3lzNEVkM0JONGV0ZUJjZXpWRjdzaW85cjNIclpLZXJVbzQyU0VkbFVzX3VuM0M5VkZ2MlowRG1DaVc0ZllobllaLTBDaFlrSllvRmpqZVBMS0E2b1NNRkdwMkNnT0xxSFhn?oc=5",
+      "emitted": false
     },
     {
       "title": "Microsoft Slashes Internal Claude Spending by a Third - The Information",
@@ -1155,7 +1302,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpVcFVhSDFxejVlaUt2WWdBeFIxU0Z4bmVqVFVPZHJTVDc1VzQ3SjA2a1JzTTViLUlwTjRZSWFXLTZFWGZGZ09wM1JVUnJ3NnlIaTBKdXRTQ3JScURTMUw0UVQ2Uzl6aUw1dnJ4ZHBpWGYtX1AwOVhxMmQ4dGNKYlBjTjJaSFlYVm54S3JCb3Z0QQ?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpVcFVhSDFxejVlaUt2WWdBeFIxU0Z4bmVqVFVPZHJTVDc1VzQ3SjA2a1JzTTViLUlwTjRZSWFXLTZFWGZGZ09wM1JVUnJ3NnlIaTBKdXRTQ3JScURTMUw0UVQ2Uzl6aUw1dnJ4ZHBpWGYtX1AwOVhxMmQ4dGNKYlBjTjJaSFlYVm54S3JCb3Z0QQ?oc=5",
+      "emitted": false
     },
     {
       "title": "Microsoft and Meta Steer Staff From Anthropic Claude to In-House AI - PYMNTS.com",
@@ -1167,7 +1315,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRG5VX3ZDVEZPNVFaYzBXaEh4N2hDWmdLRF9vNkVPRXl4NUZCaXVQNmFyRGZlVkFEVXQ4TGdEVmczcFZndGRTc3F0ZVhaMDZZa2JEeDE4S1EtOTAxZzdqWlNHXzF1SngzOGFURDkwVnVLQ2ViVXlQdmp2VVo2Q0dnWkxvRl9oN216eEJSV3Vva0l1cUItb0p1TUcxcUd5a0hDX255ZVU5c2ZBNWtVamk2SkpZMGswOWhnYUE?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRG5VX3ZDVEZPNVFaYzBXaEh4N2hDWmdLRF9vNkVPRXl4NUZCaXVQNmFyRGZlVkFEVXQ4TGdEVmczcFZndGRTc3F0ZVhaMDZZa2JEeDE4S1EtOTAxZzdqWlNHXzF1SngzOGFURDkwVnVLQ2ViVXlQdmp2VVo2Q0dnWkxvRl9oN216eEJSV3Vva0l1cUItb0p1TUcxcUd5a0hDX255ZVU5c2ZBNWtVamk2SkpZMGswOWhnYUE?oc=5",
+      "emitted": false
     },
     {
       "title": "Meta and Microsoft scale back internal use of Anthropic’s Claude, report says - Yahoo Finance",
@@ -1179,7 +1328,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDd1S0xXV3o1YV9HTFVETHpnMHZad3lFSVktaXp3d25FMnU4emNBQlNvVTNaaFM5LUhETEp3VU51cER1SVRlUl93VU84eEdfeEk2SXlpUnBUeEpSbXdDeTRrNFNnYWpJbjFVa2dNemZTa1Fjb25qMEFVbEpZX1ZUR19zbkJGV25BWkpTbE9DQ0xCMHo5blR6bW9xemF3Vjg?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSDd1S0xXV3o1YV9HTFVETHpnMHZad3lFSVktaXp3d25FMnU4emNBQlNvVTNaaFM5LUhETEp3VU51cER1SVRlUl93VU84eEdfeEk2SXlpUnBUeEpSbXdDeTRrNFNnYWpJbjFVa2dNemZTa1Fjb25qMEFVbEpZX1ZUR19zbkJGV25BWkpTbE9DQ0xCMHo5blR6bW9xemF3Vjg?oc=5",
+      "emitted": false
     },
     {
       "title": "How Meta and Microsoft’s ‘Claude message’ to employees show Anthropic has a ‘complicated problem’ - The Times of India",
@@ -1191,7 +1341,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPaDVIRVVOaEE1b2FFSmIyQWs5NThScG9NSWdCS0tJUUNINFVJSmRGUWFHbE5lWUJsbFlfUnlFb2FwRG03ekFLOGVpUVpUSjNXRUhCZlF6S2RVMTE1eGRsWW94R3BEa0F2SWdGNWR0QnltN3FMQXRLM2o4WFVJMThTUUk0VmtvOUY5d1FsblpBUWMyTFVXTjFFeEg4RHVkVThRMmpXbzhWZ3JBcUFfSFN1ODhneFpObHVINFVvVGt4VmQxNGZtaWh2SDNWaVRDNjA1UWxfOG96b2Nzc0dCSVJLSXdwMGVfMG1iMEVMbEk2YlZyRE14WkpZekNwbGc4dUhJMVVtQU1B0gGLAkFVX3lxTE1fWGk2b1ktYjZtWHRNdXJwcnduMk1FbUxwNDQyV05hWjRXSlFlODdLd2hMa3BCS2hvUEtnbmkzTHdiaHB2cHlnbjRKVGtBcEFDWjQyZ1JEQWo4dDBMa2JRUjNSVnlpa2hnSzN0cWJsYk9UTDNvQkFjdjMwd3pTakczaVNjSjZUa285U21wUGFlVjBZc0U0ZDFETUtCd1FNUjQ1ZW1KWE80YmdNNk5JeTZfRl82cTFKNDB3clhkaVpwdDVHb1hUcnZkaUM4TjdyaVJPYS1GU3lYSGdOeWxXV0JNWVBSRVAwZ0pfbU5xYklDZVpRVk9sRUY1Qm5CYW9jS1MwSExxTFc2Qm9aaw?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPaDVIRVVOaEE1b2FFSmIyQWs5NThScG9NSWdCS0tJUUNINFVJSmRGUWFHbE5lWUJsbFlfUnlFb2FwRG03ekFLOGVpUVpUSjNXRUhCZlF6S2RVMTE1eGRsWW94R3BEa0F2SWdGNWR0QnltN3FMQXRLM2o4WFVJMThTUUk0VmtvOUY5d1FsblpBUWMyTFVXTjFFeEg4RHVkVThRMmpXbzhWZ3JBcUFfSFN1ODhneFpObHVINFVvVGt4VmQxNGZtaWh2SDNWaVRDNjA1UWxfOG96b2Nzc0dCSVJLSXdwMGVfMG1iMEVMbEk2YlZyRE14WkpZekNwbGc4dUhJMVVtQU1B0gGLAkFVX3lxTE1fWGk2b1ktYjZtWHRNdXJwcnduMk1FbUxwNDQyV05hWjRXSlFlODdLd2hMa3BCS2hvUEtnbmkzTHdiaHB2cHlnbjRKVGtBcEFDWjQyZ1JEQWo4dDBMa2JRUjNSVnlpa2hnSzN0cWJsYk9UTDNvQkFjdjMwd3pTakczaVNjSjZUa285U21wUGFlVjBZc0U0ZDFETUtCd1FNUjQ1ZW1KWE80YmdNNk5JeTZfRl82cTFKNDB3clhkaVpwdDVHb1hUcnZkaUM4TjdyaVJPYS1GU3lYSGdOeWxXV0JNWVBSRVAwZ0pfbU5xYklDZVpRVk9sRUY1Qm5CYW9jS1MwSExxTFc2Qm9aaw?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic expands Claude Startups program with credits and perks - Quartz",
@@ -1203,7 +1354,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0tOXNuT0szYmp5c01VRTRkZmI5eU9URGZBMXFjd2M3QnctNFM4ekdjb3JDOFpMdkRXaFFHWl9XaERJZ1RreDZZSjdkd01XUUtyWmlGemU5a2o0UDllRHpJQklOWFhQVHBfTUN0MVNlVnVHNDQ?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0tOXNuT0szYmp5c01VRTRkZmI5eU9URGZBMXFjd2M3QnctNFM4ekdjb3JDOFpMdkRXaFFHWl9XaERJZ1RreDZZSjdkd01XUUtyWmlGemU5a2o0UDllRHpJQklOWFhQVHBfTUN0MVNlVnVHNDQ?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI - SemiAnalysis",
@@ -1215,7 +1367,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1obmlsblJmOTI4SDVYR1hzd3lzNEVkM0JONGV0ZUJjZXpWRjdzaW85cjNIclpLZXJVbzQyU0VkbFVzX3VuM0M5VkZ2MlowRG1DaVc0ZllobllaLTBDaFlrSllvRmpqZVBMS0E2b1NNRkdwMkNnT0xxSFhn?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1obmlsblJmOTI4SDVYR1hzd3lzNEVkM0JONGV0ZUJjZXpWRjdzaW85cjNIclpLZXJVbzQyU0VkbFVzX3VuM0M5VkZ2MlowRG1DaVc0ZllobllaLTBDaFlrSllvRmpqZVBMS0E2b1NNRkdwMkNnT0xxSFhn?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI - SemiAnalysis",
@@ -1227,7 +1380,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x"
+      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x",
+      "emitted": false
     },
     {
       "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told - BBC",
@@ -1239,7 +1393,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o"
+      "blocked_detail": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o",
+      "emitted": false
     },
     {
       "title": "Four Debian 13 Boxes, One Brief: 1,923 Packages on Metal, 328 in the Cloud",
@@ -1251,7 +1406,8 @@
       "summary": "The same Debian 13 on a laptop and on AWS, GCE and Azure. The cloud images ship 328-350 packages against 1,923 on metal, no firmware package at all, and no tool to read the NVMe they all boot from. Ea",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://dev.to/gde/four-debian-13-boxes-one-brief-1923-packages-on-metal-328-in-the-cloud-and-the-backup-gpt-cc2"
+      "blocked_detail": "https://dev.to/gde/four-debian-13-boxes-one-brief-1923-packages-on-metal-328-in-the-cloud-and-the-backup-gpt-cc2",
+      "emitted": false
     },
     {
       "title": "[anthropics/claude-code] v2.1.290",
@@ -1263,7 +1419,8 @@
       "summary": "## What's changed  - Added `serverToolUses` to the result of a mod's `turn.step` hook: the tool calls the API ran itself (the advisor), each with its id, name, input, start and end - Added `agentId` t",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://github.com/anthropics/claude-code/releases/tag/v2.1.291"
+      "blocked_detail": "https://github.com/anthropics/claude-code/releases/tag/v2.1.291",
+      "emitted": false
     },
     {
       "title": "Anthropic Subscriptions Offer 5x+ More Value Than OpenAI",
@@ -1275,7 +1432,8 @@
       "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ClaudeAI/comments/1wz02ul/anthropic_subscriptions_offer_5x_more_value_than/\"> <img alt=\"Anthropic Subscriptions Offer 5x+ More Value Than OpenAI\" src",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x"
+      "blocked_detail": "https://newsletter.semianalysis.com/p/anthropic-subscriptions-offer-5x",
+      "emitted": false
     },
     {
       "title": "AI companies stop short of guaranteeing agents will always obey safeguards - Fox News",
@@ -1287,7 +1445,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "gnews_off_topic",
-      "blocked_detail": ""
+      "blocked_detail": "",
+      "emitted": false
     },
     {
       "title": "What the Reports Actually Say - https://tech-insider.org/",
@@ -1299,7 +1458,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "gnews_off_topic",
-      "blocked_detail": ""
+      "blocked_detail": "",
+      "emitted": false
     },
     {
       "title": "OpenAI has ‘work to do to rebuild trust’ in Australia, executive tells AI inquiry - The Guardian",
@@ -1311,7 +1471,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "gnews_off_topic",
-      "blocked_detail": ""
+      "blocked_detail": "",
+      "emitted": false
     },
     {
       "title": "VoltAgent/awesome-openclaw-skills",
@@ -1323,7 +1484,8 @@
       "summary": "[存量盤點｜2026-01-25 出生、本庫今日首次收錄] The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-25"
+      "blocked_detail": "2026-09-25",
+      "emitted": false
     },
     {
       "title": "openai/skills",
@@ -1335,7 +1497,8 @@
       "summary": "[存量盤點｜2025-11-25 出生、本庫今日首次收錄] Skills Catalog for Codex",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "JimLiu/baoyu-skills",
@@ -1347,7 +1510,8 @@
       "summary": "[存量盤點｜2026-01-13 出生、本庫今日首次收錄] ",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "danyuchn/asd-ste100-skill",
@@ -1359,7 +1523,8 @@
       "summary": "[星速偵測｜近 8 天 +1,598 星（約 200 星/日）] ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewriting ambiguous agent-facing English.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "edenfunf/reelmimic",
@@ -1371,7 +1536,8 @@
       "summary": "[星速偵測｜近 3 天 +457 星（約 152 星/日）] Show it a video you love. Get a new video in the same style. An AI crew (Claude Code or Codex) plans, builds and reviews it with you.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "Bring Back Buddy — A Consolidated Plea from the Community",
@@ -1383,7 +1549,8 @@
       "summary": "## The Situation\n\nOn April 9, `/buddy` vanished from Claude Code v2.1.97. No changelog mention. No farewell. One day we had a companion — the next, `Unknown skill: buddy`.\n\nThousands of developers ope（👍 2098 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/45596#2317d3fee0152791",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-19"
+      "blocked_detail": "2026-09-19",
+      "emitted": false
     },
     {
       "title": "Mods - make Claude 10x more extensible",
@@ -1395,7 +1562,8 @@
       "summary": "## Community Micro-Update: Oct 1, 2026\n\nWe're live! We're rapidly working down the latest elements of feedback folks have posted. Thank you all again for being amazing stewards of this new extensibili（👍 221 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/91870#62e74cf8a4f355fb",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
@@ -1407,7 +1575,8 @@
       "summary": "## Summary\n\nSingle-session observations of three repeating Claude Code model behaviors that user-side rules in `~/.claude/CLAUDE.md` did not catch. Reporting because the patterns appear to be model-si",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/60705#1da9ff890975cd9d",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "[BUG] Claude Code Desktop fails to Relaunch on Windows due to orphaned process file lock",
@@ -1419,7 +1588,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 98 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/42776#6a33452835190f06",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "[BUG] Claude Desktop (Windows 11): main window stays always-on-top of other applications, with no setting to disable it",
@@ -1431,7 +1601,8 @@
       "summary": "## Summary\n\nOn Windows 11, the Claude Desktop window behaves as a topmost window: it stays drawn above other applications even after another window is focused and brought over it. There is no in-app s（👍 286 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/85891#28309332dc321e20",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "[BUG] Advisor always \"unavailable\" with Fable 5 advisor (Opus 4.8 main) across all sessions (v2.1.198)",
@@ -1443,7 +1614,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 178 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/73365#57586e5519d36b54",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-08-10"
+      "blocked_detail": "2026-08-10",
+      "emitted": false
     },
     {
       "title": "[FEATURE] VS Code extension: add setting to disable auto-attach of open file / selection",
@@ -1455,7 +1627,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet\n- [x]（👍 260 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/24726#12814eface2d2cdb",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "User feedback: Recurring errors documented over months of daily Claude Code use",
@@ -1467,7 +1640,8 @@
       "summary": "## Context / Hintergrund\n\nI am a daily Claude Code user who has been systematically documenting recurring errors, failures, and patterns over several months. This file is my personal feedback document",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/69044#ef5799bf24b54d9c",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "Feature Request: Option to disable paste text collapse in input field",
@@ -1479,7 +1653,8 @@
       "summary": "## Summary\n\nWhen pasting multi-line text into the Claude Code prompt input, the UI collapses it showing `[Pasted text #N +X lines]`. While this is a nice space-saving feature, it makes it difficult to（👍 166 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/23134#300db493636436f8",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-22"
+      "blocked_detail": "2026-09-22",
+      "emitted": false
     },
     {
       "title": "[FEATURE] Sync Skills between Claude Desktop and Claude Code CLI",
@@ -1491,7 +1666,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet\n- [x]（👍 168 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/20697#2d47855e11ae7762",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-01"
+      "blocked_detail": "2026-09-01",
+      "emitted": false
     },
     {
       "title": "v2.1.150: scroll wheel no longer scrolls conversation — sends arrow keys instead",
@@ -1503,7 +1679,8 @@
       "summary": "## Bug description\n\nAfter updating to v2.1.150, the mouse scroll wheel no longer scrolls through the conversation output inside the Claude Code TUI. Instead, it sends arrow keys, which cycles through （👍 117 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/65833#caf93670ab1e959b",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-08-31"
+      "blocked_detail": "2026-08-31",
+      "emitted": false
     },
     {
       "title": "[BUG] Text cannot be copied from Claude Code's output using `Ctrl+Shift+C` or right-click context menu.",
@@ -1515,7 +1692,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 75 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/62699#118d8018b7b2603c",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-07"
+      "blocked_detail": "2026-09-07",
+      "emitted": false
     },
     {
       "title": "RTL (Right-to-Left) Support for Hebrew & Arabic in Claude Desktop / Cowork",
@@ -1527,7 +1705,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet\n- [x]（👍 120 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/38005#8810427842b35fb5",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-08-05"
+      "blocked_detail": "2026-08-05",
+      "emitted": false
     },
     {
       "title": "[MODEL] Claude verbose code comments by default — ignores instructions to stop.",
@@ -1539,7 +1718,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Amodel) for similar behavior reports\n- [x] This r（👍 250 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/65961#4b9eeaec19d7b27e",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-27"
+      "blocked_detail": "2026-09-27",
+      "emitted": false
     },
     {
       "title": "Nano Banana 2 Lite, Revisited: MCP 2.0, the New Interactions API, and Three Agent CLIs",
@@ -1551,7 +1731,8 @@
       "summary": "The Nano Banana 2 Lite MCP server from July, updated: FastMCP is now MCPServer, google-genai 1.x gets a 400 from the Interactions API, and one server now runs in Claude Code, Codex and Antigravity CLI",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-14"
+      "blocked_detail": "2026-09-14",
+      "emitted": false
     },
     {
       "title": "Four Debian 13 Boxes, One Brief: 1,923 Packages on Metal, 328 in the Cloud",
@@ -1563,7 +1744,8 @@
       "summary": "The same Debian 13 on a laptop and on AWS, GCE and Azure. The cloud images ship 328-350 packages against 1,923 on metal, no firmware package at all, and no tool to read the NVMe they all boot from. Ea",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-25"
+      "blocked_detail": "2026-09-25",
+      "emitted": false
     },
     {
       "title": "How I Built a Task Spec Contract Between My Planner and Implementer Agents",
@@ -1575,7 +1757,8 @@
       "summary": "TL;DR\nMy fully autonomous implementation system splits work between a planner agent and a fleet of implementer sub-agents that start with zero context. For months, roughly one in three implementer runs solved the wrong problem, even though the planner's prose instructions looked fine to me. The fix was not a better prompt. It was a task spec contract: a small, structured schema the planner must emit and the implementer must echo back before touching code. Retries dropped from 31% to 7%, and I go",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "GPT-6 Astra scores 95% on one robot task, 10% on another",
@@ -1587,7 +1770,8 @@
       "summary": "Robocurve ran GPT-6 Astra and Claude Fable 5.1 on real robot arms. Astra hit 19 of 20 on the easy task and 2 of 20 on the hard one.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-24"
+      "blocked_detail": "2026-09-24",
+      "emitted": false
     },
     {
       "title": "Rejetto HFS CVE-2026-61500 exploited a day after write-up",
@@ -1599,7 +1783,8 @@
       "summary": "HFS 3.0.0 to 3.2.0 signs logins with Math.random(), a flaw Anthropic's Mythos found. Attacks began October 3, a day after the write-up. 3.2.1 fixes it.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Claude Sonnet 5.5 nears Opus 5.5 at half the price",
@@ -1611,7 +1796,8 @@
       "summary": "Claude Sonnet 5.5 scores 70.6% on Terminal-Bench 4.0 at $2/$10 per million tokens, half Opus 5.5's price. Sonnet 4.5 retires on November 30, 2026.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Claude for Government reaches GA under FedRAMP High",
@@ -1623,7 +1809,8 @@
       "summary": "Anthropic's Claude for Government is generally available to U.S. federal and state agencies under FedRAMP High, with no seat fees and hard spending caps.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "Harness Engineering 101: How Coding Agents Actually Work",
@@ -1635,7 +1822,8 @@
       "summary": "What an agent harness is, and why the same model solved 43 tasks in one harness and 72 in another. With Claude Code, Codex and six more coding agents compared.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Anthropic's AI formalizes Fermat's Last Theorem in Lean",
@@ -1647,7 +1835,8 @@
       "summary": "Anthropic says an internal model wrote 13 million lines of Lean in 11 days, producing a complete machine-checked proof of Fermat's Last Theorem.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-12"
+      "blocked_detail": "2026-09-12",
+      "emitted": false
     },
     {
       "title": "Show HN: Flash-Agents – DSH as MCP for Claude",
@@ -1659,7 +1848,8 @@
       "summary": "I do a lot of work using claude and codex. I use plenty of sub-agents. But nothing balances bang for the buck as good as deepseek v4.1 flash for me. So I thought, why not use the deepseek harness as MCP and drive it from claude as an orchestrator. I am probably not alone with this idea, but I haven't found something comparable. I wanted to fan out sub-agents and get back meaningful results. Well, say hello to flash-agents. With ollama as a backend driver no more training on my data (I think), an",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Show HN: Codex and Claude subscriptions pooled together with whoever you trust",
@@ -1671,7 +1861,8 @@
       "summary": "💬 Interesting idea. Does this only work with CLI?",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-29"
+      "blocked_detail": "2026-09-29",
+      "emitted": false
     },
     {
       "title": "Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock",
@@ -1683,7 +1874,8 @@
       "summary": "Claude Opus 5.5 nerf claims finally meet a day-0 baseline: livenerf tests it daily for 30 days. First possible call: around October 24.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "Making Claude Code concise without making it dumber: the engineering behind two open-source plugins",
@@ -1695,7 +1887,8 @@
       "summary": "Claude Code talks too much, and its status bar tells you nothing. So I built two open-source plugins to fix both — and a third, experimental one that redraws the transcript itself. This is the engineering: how the conciseness layer works, how it's measured, why the status bar is architected the way it is, and what building on Claude Code's undocumented function hooks actually looks like.\nEverything here is in clear-claude on GitHub, MIT licensed. Every number below is a measured one; where the m",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Anthropic's R&D Automation Index measures supervision, not autonomy",
@@ -1707,7 +1900,8 @@
       "summary": "Anthropic published its first internal R&D Automation Index, stating that Claude leads 26 percent of its artificial intelligence research and development tasks, with the model involved in over 90 percent of overall R&D workflows.\nThe disclosure produced an immediate round of headlines claiming models are building their own successors. When you look at how the lab defined its tiers, the operational reality is much narrower: the fully unattended automation rate inside Anthropic is currently zero.\n",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-21"
+      "blocked_detail": "2026-09-21",
+      "emitted": false
     },
     {
       "title": "Why More Than 30 Skills Kill Your AI Agent",
@@ -1719,7 +1913,8 @@
       "summary": "The more skills an agent has, the better it should work. That is the intuition. It is wrong. Past thirty or so skills or tools, adding one more capability often degrades the agent instead of improving it. And the problem is not the one you would expect: it is not the context bloating up, it is the routing breaking down.\nI have about fifty skills installed in my Claude Code setup. This article explains why that is already in the red zone, what the measurements say, and how to take back control.\nT",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "The Desktop Looked Right: 2,093 Parse Errors a Boot, and 10.9 Seconds That Weren't Doing Anything",
@@ -1731,7 +1926,8 @@
       "summary": "A Debian desktop that looked and behaved correctly was throwing 2,093 CSS parse errors per boot and spending 10.9 seconds of a 39-second boot waiting on nothing. Neither is visible on screen. Both are",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-11"
+      "blocked_detail": "2026-09-11",
+      "emitted": false
     },
     {
       "title": "Show HN: Usermods, an extension that runs an a coding agent to build userscripts",
@@ -1743,7 +1939,8 @@
       "summary": "I built Usermods to make it easy to fix or improve any site on the fly. Remove any user-unfriendly annoyances, get past modal signup screens, or access some sites that otherwise require signup to view content they leave open to be indexed. Or, restyle a site to not look like it’s from last century. Usermods is a browser extension from Chrome, Safari, and iOS that puts a coding agent in your sidebar. Chat with it like you would with Claude and it live automates or edits the site, and saves it as ",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Show HN: Postquel, a Free Mac Postgres Client with Claude Code and Codex",
@@ -1755,7 +1952,8 @@
       "summary": "💬 [flagged]",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Show HN: Abralo - Open source Slack for agents and people",
@@ -1767,7 +1965,8 @@
       "summary": "Hi guys, Posted this ( https://news.ycombinator.com/item?id=48832797 ) on HN a few months ago when it was a different product (and closed source). It was originally a way of managing multiple agents in parallel (like TMUX, but with a nicer chat UI). But I found that I was only able to work with 3 or 4 agents simultaneously without information overload, so I decided to morph it into something which resembles Slack, where you can either privately speak to agents or address a room (like a channel) ",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "GOP senator warns Anthropic of \"alarmist\" approach to AI - Axios",
@@ -1779,7 +1978,8 @@
       "summary": "GOP senator warns Anthropic of \"alarmist\" approach to AI Axios Anthropic expected to IPO despite market uncertainty, AI slowdown calls CNN What Anthropic’s ‘Existential Risks’ Tell IPO Investors Bloom",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Anthropic whistleblower Jacob Coxon doubles down on AI warnings at NYC hearing: 'Extremely reckless' - New York Post",
@@ -1791,7 +1991,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Why AI Researchers Are Leaving OpenAI, Anthropic and Google DeepMind - WinBuzzer",
@@ -1803,7 +2004,8 @@
       "summary": "【專頁定向抓取：ai-talent-flow】本條的收錄判準是「對該 wiki 專頁有無價值」，不套用 Claude/Anthropic 關聯門檻。",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Meta and Microsoft scale back internal use of Anthropic’s Claude, report says - Yahoo Finance",
@@ -1815,7 +2017,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Microsoft Slashes Internal Claude Spending by a Third - The Information",
@@ -1827,7 +2030,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "AWS Details Claude Code Deployment on Amazon Bedrock in GovCloud (US) - Unite.AI",
@@ -1839,7 +2043,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Anthropic Adds Persistent JavaScript Mods to Claude Code - Geeky Gadgets",
@@ -1851,7 +2056,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Our approach to EU text provenance rules",
@@ -1863,7 +2069,8 @@
       "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Two 96 GB Ascend cards crun Qwen3.8-flash-next hardware notes, vLLM work, benchmarks, and what is next",
@@ -1875,7 +2082,10 @@
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have been building a somewhat unusual local inference machine around two Huawei Atlas 300I Duo cards. They are relatively inexpensive, passive, dual-accelerator PCI",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     }
-  ]
+  ],
+  "archive_schema": 2,
+  "gathered_total": 139
 }
