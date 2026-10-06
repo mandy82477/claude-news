@@ -1,5 +1,5 @@
 import { expect, mock, test } from 'claude-code/testing'
-import { basename, onStage, pixels, reporterOf, sleepingPixels, toRows, EDITOR, LINGER_MS, SPRITE_H, SPRITE_W } from '../hooks/lib.ts'
+import { basename, onStage, pixels, reporterOf, sleepingPixels, toRows, toSvg, EDITOR, LINGER_MS, SPRITE_H, SPRITE_W } from '../hooks/lib.ts'
 
 const ROOT = '/work/claude-news'
 const BAND = {
@@ -36,6 +36,10 @@ test('pixel sprites: right size, animate while writing, half-block rows join cle
   expect(rows.length).toBe(SPRITE_H / 2)
   for (const segs of rows) expect(segs.map((x) => x.text).join('').length).toBe(SPRITE_W)
   expect(rows.flat().some((x) => x.color === '#378ADD')).toBe(true)
+  // SVG 版：每像素一個等大方塊，尺寸＝格數×邊長，透明格不畫
+  const svg = toSvg(g, 6)
+  expect(svg).toContain(`width="${SPRITE_W * 6}" height="${SPRITE_H * 6}"`)
+  expect((svg.match(/<rect /g) ?? []).length).toBe(g.flat().filter(Boolean).length)
   const desks = new Map([
     ['reporter:社群', { who: { id: 'reporter:社群', name: '社群記者', badge: '🌐' }, file: 'a.md', until: 0, writing: true }],
     ['editor', { who: EDITOR, file: 'log.md', until: 5000, writing: false }],
@@ -69,14 +73,21 @@ test('a reporter writing shows up, keeps other mods, and leaves after lingering'
   expect(await ui.find({ type: 'Text', text: 'other mods' })).toBeDefined()
   await ui.unmount()
 
-  // 色碼要能通過兩種畫面的繪圖驗證：不合法的 prop 會讓整張圖被退回成 engine 自己的版本
-  for (const surface of ['terminal', 'desktop'] as const) {
-    const u = await $.ui.mount({ ...BAND, surface })
-    const px: any = await u.find({ type: 'Text', text: /^▀+$/ })
-    expect(px).toBeDefined()
-    expect(String(px.props.color)).toMatch(/^#[0-9A-F]{6}$/)
-    await u.unmount()
-  }
+  // 終端機：半格方塊字，色碼要能通過繪圖驗證（不合法的 prop 會讓整張圖被退回成 engine 自己的版本）
+  const term = await $.ui.mount({ ...BAND, surface: 'terminal' })
+  const px: any = await term.find({ type: 'Text', text: /^▀+$/ })
+  expect(px).toBeDefined()
+  expect(String(px.props.color)).toMatch(/^#[0-9A-F]{6}$/)
+  await term.unmount()
+
+  // 桌面版沒有等寬字格，方塊字會一列列錯開：改畫成一張 SVG，不再出現方塊字
+  const desk = await $.ui.mount({ ...BAND, surface: 'desktop' })
+  const svg: any = await desk.find({ type: 'Svg' })
+  expect(svg).toBeDefined()
+  expect(svg.props.source).toContain('fill="#378ADD"')
+  expect(svg.props.alt).toContain('功能記者')
+  expect(await desk.find({ type: 'Text', text: /▀|▄/ })).toBeUndefined()
+  await desk.unmount()
 
   await clock.advance(LINGER_MS + 1000)
   const later = await $.ui.mount(BAND)

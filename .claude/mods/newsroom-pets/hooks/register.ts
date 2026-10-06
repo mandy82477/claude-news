@@ -6,7 +6,8 @@
 
 import { actionOf, actionPixels, outcomeOf, thinkingPixels, VERB } from './actions.ts'
 import type { Action } from './actions.ts'
-import { EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, reporterOf, SLEEP_FRAME_MS, sleepingPixels, SPRITE_W, toRows } from './lib.ts'
+import { EDITOR, FRAME_MS, HELPER, LINGER_MS, onStage, reporterOf, SLEEP_FRAME_MS, sleepingPixels, SPRITE_W, toRows, toSvg } from './lib.ts'
+import type { Px } from './lib.ts'
 import type { Desk, Who } from './lib.ts'
 
 type Stage = Desk & { action: Action }
@@ -18,6 +19,7 @@ const desks = new Map<string, Stage>() // who.id → 正在做什麼
 let tick = 0
 let timer: { cancel(): void } | null = null
 let speed = 0
+const PX_SIZE = 6 // 桌面版 SVG 每像素幾個 CSS px
 
 function whoFor(agentId: string | undefined): Who {
   if (!agentId) return EDITOR
@@ -101,7 +103,8 @@ export function register(on: any) {
   on('ui.render', { component: 'AbovePrompt' }, async ($: any, e: any, next: any) => {
     if (!active || e.props.hasSurvey) return next(e)
     const stage = onStage(desks, await $.clock.now()) as Stage[]
-    const { Box, Text } = $.ui.resolve(e)
+    const els = $.ui.resolve(e)
+    const { Box, Text } = els
     // 一行半格方塊字＝一串 Text 片段；undefined 的顏色欄不放進 props（多餘的鍵會讓整張圖被退回）
     const line = (segs: { text: string; color?: string; backgroundColor?: string }[], k: number) =>
       Box({
@@ -114,6 +117,12 @@ export function register(on: any) {
           return Text(props)
         }),
       })
+    // 終端機以外的介面（桌面版等）沒有等寬字格，半格方塊字會一列列錯開：整張像素圖畫成一張 SVG。
+    // 用 surface 判斷而非 els.Svg：終端機的元件表也給 Svg，但畫出來是空的
+    const sprite = (px: Px[][], key: string, alt: string) =>
+      e.surface !== 'terminal' && els.Svg
+        ? Box({ key, children: [els.Svg({ source: toSvg(px, PX_SIZE), alt })] })
+        : Box({ key, flexDirection: 'column', children: toRows(px).map(line) })
     const theirs = await next(e)
     const withTheirs = (mine: any) => Box({ flexDirection: 'column', children: theirs ? [mine, theirs] : [mine] })
 
@@ -129,7 +138,7 @@ export function register(on: any) {
         columnGap: 1,
         children: [
           Text({ dimColor: true, children: [EDITOR.name + (thinking ? ' …' : ' zZ')] }),
-          Box({ key: 'nap-px', flexDirection: 'column', children: toRows(px).map(line) }),
+          sprite(px, 'nap-px', EDITOR.name + (thinking ? '在想事情' : '在睡覺')),
         ],
       }))
     }
@@ -142,7 +151,7 @@ export function register(on: any) {
         flexDirection: 'column',
         width,
         children: [
-          ...toRows(actionPixels(d.who, d.action, tick)).map(line),
+          sprite(actionPixels(d.who, d.action, tick), 'px-' + d.who.id, d.who.name + ' ' + VERB[d.action]),
           Text({ bold: true, wrap: 'truncate-end', children: [d.who.badge + ' ' + d.who.name] }),
           Text({ dimColor: true, wrap: 'truncate-end', children: [VERB[d.action] + (d.file ? ' ' + d.file : '')] }),
         ],

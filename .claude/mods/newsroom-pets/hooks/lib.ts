@@ -126,6 +126,22 @@ export function sleepingPixels(who: Who, tick: number): Px[][] {
   return g
 }
 
+/**
+ * 像素格 → 一張 SVG（每像素一個 size×size 方塊）。給沒有等寬字格的介面（桌面版）用：
+ * 那裡的空白字與 ▀ 不等寬、行高又比字高，半格方塊字會一列列錯開並露出橫縫。
+ */
+export function toSvg(g: Px[][], size: number): string {
+  const w = (g[0]?.length ?? 0) * size
+  const h = g.length * size
+  const rects: string[] = []
+  g.forEach((row, y) =>
+    row.forEach((c, x) => {
+      if (c) rects.push(`<rect x="${x * size}" y="${y * size}" width="${size}" height="${size}" fill="${c}"/>`)
+    }),
+  )
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" shape-rendering="crispEdges">${rects.join('')}</svg>`
+}
+
 export type Seg = { text: string; color?: string; backgroundColor?: string }
 
 /**
