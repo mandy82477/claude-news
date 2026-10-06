@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 
-> **最新動態**（2026-10-05）
-> - **BBC：五角大廈證實已停用 Anthropic 工具**；同日 AWS 曝 Claude Code 聯邦 GovCloud 部署細節，兩單位採用狀態不一。
-> - **紐約市 AI 安全聽證會**：Google／Meta／OpenAI／Anthropic 出席；前研究員 Coxon 重申警告，共和黨參議員批評「危言聳聽」。
+> **最新動態**（2026-10-07）
+> - **AWS 證實 Sonnet 5 在 GovCloud 仍持 DoD IL4／IL5 授權（已查證）**：與五角大廈停用並存——授權不等於採購。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -193,7 +192,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 事件 | 對 Claude 可用性的影響 | 待決事項 |
 |---|---|---|---|
-| 10-05 | BBC：五角大廈證實已停用 Anthropic AI 工具（列入黑名單後）；同日 AWS 詳述 Claude Code 在 Bedrock GovCloud（US）的部署細節（Unite.AI） | 聯邦體系內文職機關（GovCloud）與國防部對 Claude 可用性認定不一致，呼應 10-01 既有觀察 | 具體機關名單、停用範圍與時間點均未見報導，僅標題可用 |
+| 10-05 | BBC：五角大廈證實已停用 Anthropic AI 工具（列入黑名單後）；同日 AWS 部落格載明 Claude 模型在 GovCloud（US）的 FedRAMP 與 DoD 授權（已查證 2026-10-07） | 授權≠採購：Sonnet 5 在 GovCloud 持 DoD IL4／IL5，國防部仍選擇不用；細節見表下 10-07 查證 | 停用範圍與時間點均未見官方數字，BBC 僅標題可用 |
 | 10-01 | The Decoder／Yahoo Tech：Anthropic 持續把 Claude 推向更多聯邦文職機關（僅標題） | 文職機關部署持續擴大；與黑名單的因果關聯未載 | 機關名單與採購規模未見報導 |
 | 10-01 | Bloomberg：Trump 公開稱喜歡 Amodei，稱關係出現「detente」訊號（僅標題） | 未見黑名單鬆動報導 | 發言全文、是否觸及黑名單或遷出未載 |
 | 09-27～09-28 | Trump 與 Amodei 白宮晚餐（WSJ 首報；Axios、紐約郵報等至少 5 個來源） | 晚餐本身不改變黑名單狀態 | 會談內容未載 |
@@ -206,6 +205,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 - **08-28 判決理由**：政府因 Anthropic 拒絕放寬 Claude 軍事用途限制而報復，侵犯第一修正案與正當程序，國防部長 Hegseth 被點名；The Register 稱黑名單所依據的 Claude「能力」實際不存在，呼應「根本矛盾」所述（安全論述曾被援引為干預正當性，未通過司法審查）。
 - **09-26 查證**（[DefenseScoop](https://defensescoop.com/2026/09/11/dod-poised-to-move-all-classified-ai-workloads-off-anthropic-by-october/)）：研究工程次長 Emil Michael 證實約 90% 已遷出（Maven Smart Systems／Palantir 相關工作數月前即轉出）；驅動因素是國防部將 Anthropic 列為供應鏈風險，因其拒絕開放模型供全部合法政府用途無限制存取；與同日威脅情報報告無官方所稱關聯。
+- **10-07 查證 AWS 授權**（[AWS ML Blog](https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/) 10-05）：Opus 5.5、Sonnet 5.5 在 Bedrock GovCloud（US）持 FedRAMP Class D（原 High）；Sonnet 5 另持 DoD IL4／IL5。
+- AWS 建議需 IL4／IL5 的工作負載預設用 Sonnet 5，定位為受監管與 ITAR 工作負載的 AI 輔助開發入口；前例見 [2025-05-23 公告](https://aws.amazon.com/about-aws/whats-new/2025/05/amazon-bedrock-models-fedramp-high-dod-il-4-5-govcloud/)（Claude 3.5 Sonnet v1、3 Haiku）。
+- **授權不等於採購**：IL4／IL5 是雲端合規資格，黑名單是國防部採購決定，兩者並存不衝突；同一套授權存在，國防部選擇不用（後者依 BBC 標題）。
 
 **待查後續：** ❓ **待查證**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal）：① Anthropic 是否上訴更高審級（判決推理全文亦未見）；② 國防部是否因 09-25 判決暫緩十月遷出計畫。兩者均未見報導。
 
@@ -263,7 +265,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
 | 2026-10-05 | 🏛️ | BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具 | 與 09-26 DefenseScoop 查證約 90% 已遷出同方向；具體時間點、是否達 100% 均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 4 列、「## 三個戰場」🪖 軍事合約段落 |
-| 2026-10-05 | 🏢 | Unite.AI：AWS 詳述 Claude Code 在 Amazon Bedrock GovCloud（US）的部署細節 | 承上，聯邦文職機關（GovCloud）與國防部對 Claude 可用性認定不一致；具體機關與對照細節未見報導，詳見「## 三個戰場」🪖 軍事合約段落 |
+| 2026-10-05 | 🌐 | AWS ML Blog：Opus 5.5、Sonnet 5.5 在 Bedrock GovCloud（US）持 FedRAMP Class D；Sonnet 5 另持 DoD IL4／IL5（已查證 2026-10-07） | 授權≠採購：IL4／IL5 資格仍有效，與同日 BBC 稱國防部已停用並存；詳見「## 三個戰場」🪖 軍事合約段落 |
 | 2026-10-05 | 🏛️ | 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證（NY Post／axios／Fox News／qz.com） | Coxon 重申警告「極度魯莽」，共和黨參議員批評「危言聳聽」；僅標題可用，未入下表，詳見 [[topics/recursive-self-improvement]] |
 | 2026-10-04 | 🌐 | DW（經 Hacker News）：Anthropic 09 月威脅情報報告案例補充——俄羅斯特工疑似在中非共和國班基利用 Claude 散布親俄不實資訊 | 延續 09-11 威脅情報報告「影響行動」危害領域，首見具體國家案例；監控反對派政治人物等細節均未見完整報導，詳見「## 時序」09-11 |
 | 2026-10-04 | 🌐 | 조선일보（經 Google News）：中國境內存在規避封鎖使用 Claude 的黑市交易 | 延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導，第三則第三方媒體確認；具體交易形式、規模與是否為同一市場均未見報導，詳見「## 現在有哪幾條線在動」第 1 列、「三個戰場」出口管制段落 |
@@ -474,7 +476,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-10-05
 - **[🏛️] BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具**：與 09-26 DefenseScoop 查證約 90% 已遷出同方向，具體時間點與是否達 100% 均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 4 列
-- **[🏢] Unite.AI：AWS 詳述 Claude Code 在 Amazon Bedrock GovCloud（US）部署細節**：與同日 BBC 報導並陳，顯示聯邦體系內文職機關與國防部對 Claude 可用性認定不一致，詳見「## 三個戰場」🪖 軍事合約段落
+- **[🌐] AWS ML Blog：Sonnet 5 在 GovCloud 持 FedRAMP Class D 加 DoD IL4／IL5**：授權是雲端合規資格，與同日 BBC 的國防部停用並存（已查證 2026-10-07），詳見「## 三個戰場」🪖 軍事合約段落
 - **[🏛️] 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證**：前研究員 Coxon 重申警告，共和黨參議員批評「危言聳聽」；僅標題可用，詳見「## 攻防紀錄」、[[topics/recursive-self-improvement]]
 
 ### 2026-10-04

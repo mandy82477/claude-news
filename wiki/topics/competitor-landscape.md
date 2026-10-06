@@ -3,7 +3,7 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-05"
+last_updated: "2026-10-07"
 last_news_update: "2026-10-05"
 status_main: "ongoing"
 days_since_news: 0
@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-05）
+> **本週衝擊**（2026-10-07）
+> - 🟡 **Meta 內部 Muse Code 逾 6,000 人、MetaCode 逾 3 萬人在用**（已查證）——自家工具正在接手原本的 Claude Code 用量。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
@@ -128,6 +129,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Meta（Muse Code／Muse Glimmer）
 **現在的答案**
+- Meta 內部使用（已查證 2026-10-07，The Information）：Muse Code 內部逾 6,000 使用者；另有內部專用工具 MetaCode 逾 3 萬，兩者是不同工具。詳見 [[topics/enterprise-tool-tracker#企業工具使用現況]]。
 - 09-28 官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務，直接對標 Claude Code 企業定位——服務範圍、定價、客戶名單均未見報導。
 - 09-01 結束 beta、三訂閱層主打價格戰；按量計費層已可比價：標準層 $1.25／$4.25，Contributor 層以「資料可能用於訓練 Meta 模型」換 $0.10／$0.20。
 - 08-11 起旗艦模型 Muse Glimmer 開源，Meta 的戰線同時涵蓋產品層與模型層權重。

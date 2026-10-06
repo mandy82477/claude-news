@@ -7347,3 +7347,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   2. [投資分析] PitchBook／Morningstar「Anthropic 外流財報反映快速成長但不足 2 兆美元估值」僅標題可用，具體數字與估值方法論待補
   3. [投資分析] 五角大廈（Pentagon）停用 Anthropic AI 工具一事，與既有 09-12／09-26 已證實「約 90% 機密工作負載遷出」是否為同一事件待釐清
   4. [投資分析] Meta、Microsoft 限縮員工內部使用 Claude 的具體政策內容與原因（資料疑慮／成本／其他）僅標題可用，待後續報導補充
+
+## 2026-10-07 Query（使用者：Meta／Microsoft 減用 Claude 的查證與修正）
+
+- 主編 web 查證（10-07）：The Information 原文〈Microsoft Slashes Internal Claude Spending by a Third〉付費牆，內容經 the-decoder、Yahoo Finance、PYMNTS、GuruFocus 二手轉述交叉一致——Meta **Claude Code** 使用者約 6 萬→約 3 萬（裁員只解釋一部分）、MetaCode 內部逾 3 萬、Muse Code 內部逾 6,000、近 28 天仍花逾 1.05 億美元；Microsoft 內部支出砍逾三分之一、人均月預算 10 萬→約 1 萬美元、改用 Copilot CLI；兩家未取消合約，無公司回應
+- Moomoo「腰斬」標題＝上述 6 萬→3 萬的轉述，口徑釐清；原「MetaCode／Muse Code 命名不一」不是錯，兩者是內部與對外兩個工具
+- AWS ML Blog（10-05，一手）：Opus 5.5／Sonnet 5.5 在 GovCloud 持 FedRAMP Class D，Sonnet 5 另持 DoD IL4／IL5——「聯邦體系兩種答案」由推論升為已查證，口徑定為「授權≠採購」
+- 派記者修正：商業（[[topics/enterprise-tool-tracker]] 口徑統一、媒體數改 4 家跟進、計數口徑說明、退出理由補區域存取與自家競品並分兩類；[[topics/competitor-landscape]] Meta 段補內部使用數）、投資分析（[[topics/market-signals]] 改歸新線「大型科技公司自建替代」、升第 4 類並明寫未取消合約）、安全政策（[[topics/anthropic-government-policy]] GovCloud 三處改寫）
+- 未結：market-signals 對應 ❓ 只加訊（官方回應仍未見，結案留 `/wiki-lint`）；`market-lessons` 線列表需於週更新增「大型科技公司自建替代」；Suleyman 原話、JPMorgan $2,000 上限口徑未查
+- 歸因 user-query／商業、投資分析、安全政策

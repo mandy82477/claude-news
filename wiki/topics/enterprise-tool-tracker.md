@@ -3,7 +3,7 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-05"
+last_updated: "2026-10-07"
 last_news_update: "2026-10-05"
 status_main: "ongoing"
 days_since_news: 0
@@ -28,16 +28,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-05）
-> - **Meta、Microsoft 被曝持續要求員工減少內部使用 Claude**：The Information 報導，≥5 家媒體同日跟進；與同週 Barclays 擴大導入形成對比（詳見使用現況表 Meta／Microsoft 列）。
+> **最新企業採用異動**（2026-10-07）
+> - **Meta、Microsoft 縮減內部使用 Claude（已查證）**：Meta 的 Claude Code 使用者約 6 萬降至 3 萬，Microsoft 內部支出砍逾三分之一；4 家媒體跟進（詳見使用現況表）。
 
 ## 摘要
 
-**目前追蹤 47 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至母公司政策性降低依賴**（最新異動見頂部 callout，2026-10-05）。
+**目前追蹤 47 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-05）。
+
+**退出理由分兩類：** 客戶自己選的是成本、安全疑慮、自家有競品（Meta、Microsoft，10-05 已查證）；別人劃線的是出口管制、區域存取（Goldman、OKX，2026-08-19/20，Anthropic 區域存取政策，與出口管制無關，見 ⟨Q-03⟩）、Pentagon 黑名單，詳見 [[topics/anthropic-government-policy]]。
 
 追蹤各大型企業目前正在使用的 AI 編碼工具，以及工具選擇的變化軌跡。資料來源為公開報導與內部消息洩露，僅記錄有明確來源佐證的事實。
 
@@ -67,6 +69,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Goldman Sachs、OKX**（❌ 已退出）：於香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 案不同源（已查證 ⟨Q-03⟩，見下表）
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
+
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，故為 47；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -100,8 +104,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Cognizant | 頂尖 | Claude API | ✅ | 2026-07-28 | 官方公告擴大合作，Claude 嵌入商業/工程平台，升級 Global Premier Partner，打造 Frontier Certified 人才梯隊 | 2026-07-28 |
 | Grasshopper Bank | 中型（銀行，聚焦金融科技產業）| Claude API（MCP 整合） | ✅ | 2026-07-15 | 首家列入 Anthropic MCP 目錄的銀行；具體整合規模、應用場景未見細節 | 2026-07-15 |
 | Alberta 省政府（加拿大） | 政府（省級） | Claude Code | ✅ | 2025 | 自 2025 年起用 Claude Code 審查系統；20 小時內掃描 4.66 億行程式碼完成資安盤點與修補 | 2026-07-07 |
-| Meta | 頂尖 | Claude | ⚠️ | — | 限制工程師使用 Claude 屬實，已查證（詳見「懸置細節」⟨Q-02⟩）；The Information 10-05 報導持續要求員工減少內部使用，與 Barclays 擴大導入形成對比 | 2026-10-05（首見 2026-07-06）|
-| Microsoft | 頂尖 | Claude（泛指內部整體使用，非僅 Claude Code） | ⚠️ | — | The Information 10-05 報導持續要求員工減少內部使用 Claude；≥5 家媒體跟進；與 06-21 已停用 Claude Code、09-20 查實改採自研模型降本同屬一脈延伸 | 2026-10-05 |
+| Meta | 頂尖 | Claude Code | ⚠️ | — | 限制使用屬實（⟨Q-02⟩）；10-05 報導 Claude Code 使用者約 6 萬→約 3 萬，已查證 2026-10-07，細節見下方 | 2026-10-05（首見 2026-07-06）|
+| Microsoft | 頂尖 | Claude（泛指內部整體使用，非僅 Claude Code） | ⚠️ | — | 10-05 報導原估逾 10 億美元的內部支出砍逾三分之一，已查證 2026-10-07；與 06-21 停用 Claude Code、09-20 自研模型降本同屬一脈 | 2026-10-05 |
 | Alibaba | 頂尖 | Claude Code → Qoder（內部工具） | ❌ | 2026-07-10 | 「疑似後門風險」/資安疑慮禁用 Claude Code，改用 Qoder，生效 07-10；三方媒體確認替代方案；封鎖成因已查證見下方 ⟨Q-01⟩ | 2026-07-07 |
 | Lindy | 中型（AI 新創） | Claude API → DeepSeek | 🔄 | 2026-06-29 | CEO 宣告 100% 流量切至 DeepSeek，每月省數百萬美元；最具名成本敏感案例（見 [[topics/enterprise-cost-management]]） | 2026-06-29 |
 | 加州州政府 | 政府（州級） | Claude API | ✅ | 2026-06-29 | 州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例（詳見 [[topics/anthropic-business]]） | 2026-06-29 |
@@ -138,7 +142,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
-- **Meta、Microsoft（10-05）**：The Information 報導兩家要求員工減少內部使用 Claude；≥5 家媒體跟進。Moomoo 稱 Meta 使用者數已腰斬，口徑未見報導；與既有 06-21／09-20 自研模型降本一脈，範圍擴大至「整體使用」。與同週 Barclays 擴大導入並陳（The Information）
+- **Meta 使用量（10-05，已查證 2026-10-07）**：The Information 報導 Claude Code 使用者由今年稍早約 6 萬降至約 3 萬；春季裁員約 10%（7.8 萬人）只解釋一部分，動機為推自家工具；近 28 天仍花逾 1.05 億美元（The Information）
+- **Meta 自家工具（10-05，已查證 2026-10-07）**：MetaCode 是內部專用工具，使用者逾 3 萬；Muse Code 是 8 月起測試的對外產品、Claude Code 競品，內部使用者逾 6,000。兩者是不同工具，見 [[topics/competitor-landscape#Meta（Muse Code／Muse Glimmer）]]
+- **Microsoft 支出（10-05，已查證 2026-10-07）**：原估逾 10 億美元的內部 Claude 支出砍逾三分之一；雲端部門人均月預算由 10 萬降至約 1 萬美元；動機為成本與推自家工具（The Information；PYMNTS）
+- **Microsoft 改用工具（10-05，已查證 2026-10-07）**：Scott Guthrie、Jay Parikh 指示改用 GitHub Copilot／OpenAI 模型；Experiences and Devices 部門工程師遷往 GitHub Copilot CLI，見 [[topics/competitor-landscape#Microsoft／GitHub]]
+- **兩家共通（10-05，已查證 2026-10-07）**：均未取消與 Anthropic 的合約，縮減只限員工內部工具；經 Microsoft 平台賣給客戶的 Anthropic 用量仍在成長；報導未見兩家或 Anthropic 回應（the-decoder；Yahoo Finance；GuruFocus）
 - **Barclays（10-01）**：官方宣布擴大合作導入 Claude 全行，加速軟體開發、現代化系統；目標 2026 年底採用率達開發者族群 50%、2027 年擴及多數工程師，預算未見報導（Anthropic Blog；Bloomberg；PYMNTS）
 - **JPMorgan Chase 美國本部（09-17）**：Business Insider 報導導入 Claude 並設定 $2,000 美元支出上限、額外資安控管；與香港分行因出口管制退出（06-18）屬不同辦公室，具體工具範疇、控管粒度未見報導（Google News/Business Insider）
 - **T. Rowe Price（09-10）**：PR Newswire 官方新聞稿宣布資產管理公司 T. Rowe Price 擴大在投資流程中使用 Claude 與 Claude Code，marketscreener.com 同日獨立跟進報導；僅新聞稿標題層級資訊，具體整合部門、規模、應用場景均未見細節（Google News/PR Newswire）
@@ -163,11 +171,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
-| Claude Code | 9 使用中（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price、Barclays）+1縮減中（Uber）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
+| Claude Code | 9 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price、Barclays）+2縮減（Uber、Meta）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
 | Claude API | 31（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
 | Cursor | 1（Uber） | ⚠️ 新創份額下滑 | 成本管控困難；企業級功能不如 Claude Code |
+
+> 本表按「企業×工具」計：Microsoft 的 10-05 縮減屬 Claude 整體使用、不計入 Claude Code 縮減數；Claude Code 退出 2 家＝Microsoft、Alibaba。Meta 與 Microsoft 同為 Claude Code 競品供應商（Muse Code；GitHub Copilot），見 [[topics/competitor-landscape]]。
 
 **採用企業清單（Claude API，31）**：Apple、KPMG、iCapital、哈佛、Fujitsu、Travelport、Nimble Gravity、ZoomInfo、LG Group、AppFolio、Salesforce Claude API、TCS、DXC Technology、Atlassian、JPMorgan Chase 美國本部、Charleston Hospitality Group、Notion、加州州政府、Globant、DataArt、Okta、Grasshopper Bank、Cognizant、ICON、Payward、Duke University、PicPay、T. Rowe Price、Google、Rubrik（Code Guardian）
 
@@ -192,7 +202,7 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ### 2026-10
 
 #### 2026-10-05
-- **[⚠️ 縮減中，狀態更新] The Information：Meta、Microsoft 持續要求員工減少內部使用 Claude**：≥5 家媒體同日跟進；Moomoo 稱 Meta 的 Claude Code 使用者數已腰斬，口徑未見報導；與同週 Barclays 擴大導入對比，詳見上方使用現況表（The Information）
+- **[⚠️ 縮減中，狀態更新] The Information：Meta 的 Claude Code 使用者約 6 萬降至約 3 萬，Microsoft 內部 Claude 支出砍逾三分之一**：4 家媒體跟進，兩家均未取消合約；與同週 Barclays 擴大導入對比，已查證 2026-10-07，詳見上方使用現況細節（The Information）
 
 #### 2026-10-01
 - **[新增具名企業，✅ 使用中] Barclays 擴大導入 Claude Code 全行，目標 2026 年底採用率達 50%**：2027 年擴及多數工程師，詳見上方使用現況表新增列（Anthropic Blog；Bloomberg；PYMNTS）
