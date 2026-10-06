@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/enterprise-tool-tracker]]
 **開始日期：** 2026-05-26
-**最後更新：** 2026-09-27
+**最後更新：** 2026-10-07
 **最後新聞更新：** 2026-05-27
 
 > 本頁是 [[topics/enterprise-tool-tracker]] 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。
@@ -109,7 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Salesforce 宣布停招工程師**：Salesforce 宣布 2027 年起不新增軟體工程師，Claude Code 壓縮系統移轉成本為具名原因；是首家公開宣布 AI 工具取代工程師招募的頂尖科技企業
 
 #### 2026-06-04
-- **Microsoft AI 主管批 Anthropic 太貴（Bloomberg）**：Kevin Scott（Microsoft AI 主管）公開表示 Anthropic 定價過高；是繼 6/30 退出決定後，Microsoft 官方對 Anthropic 定價的首次直接點名
+- **Microsoft AI 主管批 Anthropic 太貴（Bloomberg）**：Mustafa Suleyman（Microsoft AI 執行長）在 Bloomberg 專訪（2026-06-04）公開表示 Anthropic 太貴；時間早於 6/21 加速退出與 6/30 原訂停用日，是 Microsoft 高層對 Anthropic 定價的首次直接點名
 
 #### 2026-06-03
 - **Uber 用量上限確認（Bloomberg 獨家）**：Bloomberg 報導 Uber 已正式對 Claude Code 等 AI 工具設定用量上限；是首個明確執行用量管控的大型具名企業

@@ -7356,3 +7356,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 派記者修正：商業（[[topics/enterprise-tool-tracker]] 口徑統一、媒體數改 4 家跟進、計數口徑說明、退出理由補區域存取與自家競品並分兩類；[[topics/competitor-landscape]] Meta 段補內部使用數）、投資分析（[[topics/market-signals]] 改歸新線「大型科技公司自建替代」、升第 4 類並明寫未取消合約）、安全政策（[[topics/anthropic-government-policy]] GovCloud 三處改寫）
 - 未結：market-signals 對應 ❓ 只加訊（官方回應仍未見，結案留 `/wiki-lint`）；`market-lessons` 線列表需於週更新增「大型科技公司自建替代」；Suleyman 原話、JPMorgan $2,000 上限口徑未查
 - 歸因 user-query／商業、投資分析、安全政策
+
+## 2026-10-07 Query（使用者：Meta／Microsoft 減用 Claude 第二輪——補派三線＋查證題 4–5）
+
+- 補派模型／社群／人物三位記者只調查不寫頁：模型線查無 Muse Code、MetaCode、MAI 編碼基準，Microsoft 退出（05 月起）早於 Muse Code 發布，「自研夠強所以退」撐不住；社群線庫內與 HN 搜尋皆無 10-05 這則討論；人物線抓出 Suleyman 原話無出處、06-04 發言者誤植 Kevin Scott
+- 主編 web 查證：Suleyman「降低並最終消除付給 Anthropic 的成本」出自 2026-06-04 Bloomberg 專訪，專指 Anthropic，06-04「Microsoft AI 主管」即 Suleyman；JPMorgan 為 Claude Code **每月** $2,000、只限部分工程師、可申請提高，8 月約 8,000 人持授權、約 1,900 人在 Devspace 沙箱
+- 派記者回寫：商業（[[topics/anthropic-business]] 出處與職稱、[[topics/enterprise-tool-tracker-archive]] Kevin Scott→Suleyman 與時序、[[topics/enterprise-tool-tracker]] JPMorgan、[[topics/competitor-landscape]] 出處與 Sonnet 5.5 倍數基準、[[topics/enterprise-cost-management]] 06-30 停用並陳 10-05）、人物（[[entities/mustafa-suleyman]] 補成本立場）
+- 主編收尾：anthropic-business、mustafa-suleyman 最後新聞更新與 callout 改 10-07（前者 callout 原寫「≥5 家」「聯邦立場不一」，已過時）；[[reader-notes]] 新增 W41 三切角條目
+- 未結：competitor-landscape 其餘幾列仍寫「對 Sonnet 5」（同價、倍數不變），留週更統一；anthropic-business:306 查證日 09-20 與發言日 06-04 並存未改
+- 歸因 user-query／商業、人物

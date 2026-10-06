@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-07
 **最後新聞更新：** 2026-09-04
 
 > **最新成本管控動態**（2026-09-04）
@@ -143,6 +143,7 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ### Microsoft — 停用 Claude Code（原訂 6/30，2026-06-21 加速退出）
 - **來源**：Cybernews（2026-05-25）；早期確認：多家媒體（2026-05-15）；加速退出確認：MSN / Google News（2026-06-21）、The Jerusalem Post（2026-06-22）
 - **情況**：去年 12 月起向數千名員工（工程師、PM、設計師）開放 Claude Code。2026-05-15 陸續取消授權、改推 GitHub Copilot CLI；2026-05-25 宣布原訂 2026-06-30 完全停用，原因是數月內燒完整年 AI 預算；**2026-06-21 最新**：Fable 5 封鎖期間 Microsoft 宣布逐步停止內部使用、退出進度加快，系統性降低對 Claude 依賴（狀態詳見 [[topics/enterprise-tool-tracker]]）
+- **後續（2026-10-05，已查證 2026-10-07）**：上列範圍是 Claude Code 授權；The Information 另報 Microsoft 內部 Claude 整體支出砍逾三分之一、未取消與 Anthropic 的合約，見 [[topics/enterprise-tool-tracker]]
 - **意義**：繼 Uber 後第二個有具名的 Claude Code 成本失控企業案例；「燒完全年預算」而非「成本偏高」代表問題已達無法繼續的臨界點；大型企業 AI 工具採購決策將面臨更嚴格的 ROI 審查
 
 ### Amazon — 雙品牌並行採用

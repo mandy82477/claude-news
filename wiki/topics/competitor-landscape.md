@@ -92,7 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具/模型 | 定價 | vs Claude | vs Claude 定位 | 來源日期 |
 |---------|------|-----------|--------------|---------|
-| Muse Code / Muse Spark 1.2 / Muse Glimmer（Meta）| 按量計費：標準層 $1.25／$4.25、Contributor 層 $0.10／$0.20（每 M token）；Glimmer 開源免費 | 標準層≈0.43×、Contributor 層≈0.02×（對 Sonnet 5 $10/Mtok 輸出）；Glimmer 免費 | 明確對標 Claude Code 與 Codex，第一步策略是價格而非能力 | 2026-09-01（定價數字為媒體整理，2026-08-13 查證）|
+| Muse Code / Muse Spark 1.2 / Muse Glimmer（Meta）| 按量計費：標準層 $1.25／$4.25、Contributor 層 $0.10／$0.20（每 M token）；Glimmer 開源免費 | 標準層≈0.43×、Contributor 層≈0.02×（對 Sonnet 5.5 $10/Mtok 輸出）；Glimmer 免費 | 明確對標 Claude Code 與 Codex，第一步策略是價格而非能力 | 2026-09-01（定價數字為媒體整理，2026-08-13 查證）|
 | DeepSeek（V4-Pro／V4 Flash／Lindy 案例）| 官方查證：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，每 M token，快取未命中；尖峰時段雙倍）；V4 Flash（官方頁列「DeepSeek-Flash」）輸入 $0.15／輸出 $0.60（離峰） | V4-Pro 輸出≈0.198×、V4 Flash 輸出≈0.06×（對 Sonnet 5 $10/Mtok 輸出，離峰價） | 低價 Flash／高價 Pro 雙軌已證實；Lindy 全量切換每月省數百萬美元 | 2026-08-14 上線（Google News/VentureBeat）；定價 2026-09-20 查證（[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）|
 | Alibaba Qwen3.8-Max（已查證 ⟨Q-03⟩）| 免費開放權重（Hugging Face／ModelScope） | 免費（無倍數可算） | 2.4 兆參數（95B 啟用），Terminal-Bench 2.1 得 86.6（Opus 4.8／Fable 5 同 84.6），細節見下方 | 2026-08-04 首報；08-03 發布＋benchmark 09-20 查證 |
 | Kiro（AWS） | Free（50 credits）／Pro $20／Pro+ $40／Pro Max $100／Power $200，每人每月 | —（訂閱制，非按 token 計費，不可比） | AWS 旗下 spec-driven 編碼 agent（IDE/CLI/Web）；$200 為其自身頂層方案，非跨產品比較 | 2026-08-03（[kiro.dev](https://kiro.dev/)，2026-08-13 查證定價）|
@@ -160,7 +160,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **現在的答案**
 - 09-24／25：GA 功能於 Business/Enterprise 帳號推出全域預設開啟政策；同日 Microsoft 推出 all-in-one Copilot app 整合旗下商用 AI，CNBC／GeekWire 稱劍指 Anthropic 與 OpenAI——**Claude Code 目前均無對應設定或統一整合入口**。
 - 09-22／23：本地沙箱（限制未預期指令存取檔案／網路／憑證）、OpenTelemetry 納入企業管理設定、JetBrains 1.18 新增 AI 工具核准與組織共享技能／指令、code review 新增個人化設定選項全面 GA。
-- 已查證（09-20）：自研模型取代已獲官方高層證實動機（首席 AI 官 Suleyman 公開發言），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
+- 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
 **還沒解決**
 - 沙箱與 OTel 設定細節、JetBrains 版本適用範圍、code review 個人化設定具體項目均未見完整報導。
 - all-in-one Copilot app 的整合範疇、定價與上線時程未載；GA 預設開啟政策原文提及「未來兩個」功能尚待補完（截斷）。
