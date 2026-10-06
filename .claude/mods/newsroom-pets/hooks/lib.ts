@@ -26,17 +26,37 @@ const CAST: Record<string, { badge: string; color: string; hat: HatId; hatColor:
   分類複核: { badge: '🔍', color: '#993556', hat: 'deerstalker', hatColor: '#854F0B' },
 }
 
+// agent 類型（.claude/agents/wiki-reporter-<slug>.md）→ 類別名
+const AGENT_TYPES: Record<string, string> = {
+  features: '功能',
+  models: '模型',
+  commercial: '商業',
+  'safety-policy': '安全政策',
+  community: '社群',
+  people: '人物',
+  market: '投資分析',
+  devpractice: '開發實務',
+  'classify-review': '分類複核',
+}
+
+function castOf(key: string): Who {
+  const c = CAST[key] ?? { badge: '📰', color: '#888780', hat: 'band' as HatId, hatColor: '#B4B2A9' }
+  return { id: 'reporter:' + key, name: key + '記者', ...c }
+}
+
 /**
- * 從派工 prompt 認出記者。派工範本（wiki-ingest/references/dispatch.md）的開頭是
- * 「你是 CLAUDE_NEWS wiki 的「功能」記者」或「…的分類複核記者」；認不出回 null。
+ * 認出記者。先看 agent 類型（`wiki-reporter-<slug>`，派工用什麼 prompt 都認得）；
+ * 沒有或不是記者類型，再看派工 prompt——範本（wiki-ingest/references/dispatch.md）的開頭是
+ * 「你是 CLAUDE_NEWS wiki 的「功能」記者」或「…的分類複核記者」。兩邊都認不出回 null。
  */
-export function reporterOf(prompt: string): Who | null {
+export function reporterOf(prompt: string, subagentType?: string): Who | null {
+  const slug = subagentType?.match(/^(?:[^:]+:)?wiki-reporter-(.+)$/)?.[1]
+  if (slug && AGENT_TYPES[slug]) return castOf(AGENT_TYPES[slug])
   const m = prompt.match(/你是 CLAUDE_NEWS wiki 的(?:「([^」]+)」|(分類複核))記者/)
   if (!m) return null
   const raw = (m[1] ?? m[2]).replace(/（.*?）/g, '').trim()
   const key = Object.keys(CAST).find((k) => raw.startsWith(k)) ?? raw
-  const c = CAST[key] ?? { badge: '📰', color: '#888780', hat: 'band' as HatId, hatColor: '#B4B2A9' }
-  return { id: 'reporter:' + key, name: key + '記者', ...c }
+  return castOf(key)
 }
 
 export function basename(path: string): string {

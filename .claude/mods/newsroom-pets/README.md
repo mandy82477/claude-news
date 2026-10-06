@@ -1,6 +1,6 @@
 # newsroom-pets（本機 mod）
 
-prompt 上方的提示列裡住著一間小編輯部：主編（主 session）與記者（依派工 prompt 認出的子 agent）每做一種 wiki 操作，就做對應的彩色像素小動作。只觀察、不干預——`agent.spawn` 與 `tool.call` 一律回傳 `next(e)` 的結果。只在 CLAUDE_NEWS 樹上作用。
+prompt 上方的提示列裡住著一間小編輯部：主編（主 session）與記者（先依 agent 類型 `wiki-reporter-<slug>` 認、認不出再看派工 prompt 開頭句的子 agent）每做一種 wiki 操作，就做對應的彩色像素小動作。只觀察、不干預——`agent.spawn` 與 `tool.call` 一律回傳 `next(e)` 的結果。只在 CLAUDE_NEWS 樹上作用。
 
 ## 角色與帽子（住 `hooks/lib.ts` 的 CAST 與 HATS）
 
@@ -18,7 +18,7 @@ prompt 上方的提示列裡住著一間小編輯部：主編（主 session）�
 | 💰 投資分析記者 | 會計遮陽帽 |
 | 📓 開發實務記者 | 毛帽＋紅毛球 |
 | 🔍 分類複核記者 | 偵探帽 |
-| 🧰 小幫手（認不出的子 agent） | 頭帶 |
+| 🧰 小幫手（不是記者類型、prompt 也沒有範本開頭句的子 agent） | 頭帶 |
 
 ## 動作對照（判斷邏輯住 `hooks/actions.ts`）
 

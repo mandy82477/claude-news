@@ -18,6 +18,12 @@ test('reporters are recognised from the real dispatch preambles', async () => {
   expect(reporterOf(DEVPRACTICE)?.name).toBe('開發實務記者')
   expect(reporterOf(CLASSIFY)?.badge).toBe('🔍')
   expect(reporterOf('找出所有 hook 檔')).toBe(null)
+  // agent 類型優先：臨時派工的 prompt 沒有範本開頭句，照樣認得（2026-10-07 之前會被當成小幫手）
+  expect(reporterOf('這是一次「只調查、不寫頁」的任務。', 'wiki-reporter-commercial')?.name).toBe('商業記者')
+  expect(reporterOf('', 'wiki-reporter-safety-policy')?.badge).toBe('🏛️')
+  expect(reporterOf('', 'some-plugin:wiki-reporter-market')?.name).toBe('投資分析記者')
+  expect(reporterOf('找出所有 hook 檔', 'general-purpose')).toBe(null)
+  expect(reporterOf(FEATURES, 'general-purpose')?.name).toBe('功能記者')
   // 每一類記者一頂專屬帽子：帽子那兩列像素彼此都不同，也和主編不同
   const cats = ['功能', '模型', '商業', '安全政策', '社群', '人物', '投資分析', '開發實務', '分類複核']
   const hats = cats.map((c) => JSON.stringify(pixels(reporterOf(`你是 CLAUDE_NEWS wiki 的「${c}」記者`)!, 1, false).slice(0, 2)))

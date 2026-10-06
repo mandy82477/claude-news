@@ -59,10 +59,10 @@ export function register(on: any) {
     return next(e)
   })
 
-  // 派工時記下哪個 agentId 是哪類記者（只讀 prompt，不改）
+  // 派工時記下哪個 agentId 是哪類記者（只讀 agent 類型與 prompt，不改）
   on('agent.spawn', async ($: any, e: any, next: any) => {
     const result = await next(e)
-    const who = active ? reporterOf(String(e.prompt ?? '')) : null
+    const who = active ? reporterOf(String(e.prompt ?? ''), e.subagentType) : null
     if (who && result?.agentId) agents.set(result.agentId, who)
     return result
   })
