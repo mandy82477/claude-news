@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 status_main: "active"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
-inbound_links: 25
-attribution_count: 18
-attribution_last: "2026-10-03"
+days_since_news_subtree: 0
+inbound_links: 24
+attribution_count: 19
+attribution_last: "2026-10-06"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 
-> **「降智」說法有了查證時程**（2026-10-03）
-> livenerf 已建立 Opus 5.5 第 0 天基準線並連測 30 天，最早約 10-24 才能下結論；在那之前，10-01 週熱門貼文的「近日失手」仍只是無量化指標的觀感。
+> **社群測試：文字格式配樂生成**（2026-10-06）
+> Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）
 
 ---
 
@@ -166,10 +166,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Google News/VentureBeat：Claude Opus 5.5 uses em-dashes 99% less often and sounds more human — but still exhibits 2,548 AI writing tells](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)（2026-09-30）
 - [Reddit r/ClaudeAI：Opus 5.5 nerfing - how to measure, how to spot, how to sue](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)（週熱門，2026-10-01）
 - [dev.to：Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)（2026-09-30）
+- [Simon Willison：Scrimshaw Jukebox](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)（2026-10-06）
 - [[news/2026-09-23]]
 - [[news/2026-09-27]]
 - [[news/2026-09-30]]
 - [[news/2026-10-01]]
+- [[news/2026-10-06]]
 
 ## 歷史記錄
 
@@ -177,6 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-06 | Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）|
 | 2026-10-03 | livenerf 為「降智」說法建立第 0 天基準線，連測 30 天，最早約 10-24 下結論（日報 09-30 貼文）|
 | 2026-10-01 | Reddit 週熱門貼文稱上線前 5–6 天表現佳、近日起在複雜任務上失手，無量化指標，弱訊號 |
 | 2026-09-30 | VentureBeat 稱 em-dash 用量降 99%、仍測得 2,548 處 AI 寫作特徵（方法論未載）|
@@ -184,6 +187,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **歷史記錄細節**
 
+- **2026-10-06**：Simon Willison 測試讓 Claude Opus 5.5 設計一套文字格式的遊戲配樂並生成可播放的 artifact，風格接近《猴島小英雄》原聲帶；Willison 認為可能是文字模型新近出現的能力，但未與舊模型對照確認（推論，單一部落格貼文，0 互動）（[Simon Willison](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)，2026-10-06）
 - **2026-10-03**：dev.to 貼文（09-30 發）稱 livenerf 針對 Opus 5.5「變笨」傳言建立第 0 天基準線，連續測 30 天，最早約 10-24 可下結論（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30；3 讚，題組與評分方法未見載，尚無結果）
 - **2026-10-01**：Reddit r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天在複雜任務（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)，2026-10-01；0 留言，無測試方法或量化指標，屬主觀觀感回報，不採信推算是否構成能力下降）
 - **2026-09-30**：VentureBeat 報導稱 Opus 5.5 回覆的 em-dash 用量較前代降 99%、讀起來更像真人，但同一批測試仍測得 2,548 處其他「AI 寫作特徵」（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30；原文僅標題可讀，方法論未見完整記載，不採信推算）

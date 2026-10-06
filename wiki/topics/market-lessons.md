@@ -7,11 +7,11 @@ last_updated: "2026-10-03"
 last_news_update: "2026-10-03"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 5
 attribution_count: 0
 attribution_last: null

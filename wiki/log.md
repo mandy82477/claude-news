@@ -7365,3 +7365,27 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編收尾：anthropic-business、mustafa-suleyman 最後新聞更新與 callout 改 10-07（前者 callout 原寫「≥5 家」「聯邦立場不一」，已過時）；[[reader-notes]] 新增 W41 三切角條目
 - 未結：competitor-landscape 其餘幾列仍寫「對 Sonnet 5」（同價、倍數不變），留週更統一；anthropic-business:306 查證日 09-20 與發言日 06-04 並存未改
 - 歸因 user-query／商業、人物
+
+## 2026-10-06 Ingest
+
+- 來源日報：[[news/2026-10-06]]（69 則原料，日報收錄 27 則）
+- 更新頁面：
+  - **人物**：entities/dario-amodei
+  - **功能**：entities/claude-code、topics/claude-code-experimental、entities/cowork、entities/claude-science
+  - **商業**：entities/pricing、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **模型**：entities/opus-5-5
+  - **社群**：topics/community-tech-patterns、topics/community-tech-discussions
+  - **投資分析**：topics/market-signals（SemiAnalysis 訂閱補貼估算開新線；Broadcom 晶片融資案升級至銀行正式 launch 辛迪加發售階段）
+- 新增頁面：entities/jamie-dimon（摩根大通執行長，第三度具名評論 Mythos AI 風險，滿足建頁門檻）
+- feature-radar：本日無新增（v2.1.291 為回歸修復、桌面文件為既有設定改名，皆不構成新功能）
+- 分類回退：1 筆（模型→功能：「What Anthropic's AI biology experiment actually showed」判為 entities/claude-science 既有 CRISPR 爭議後續，已於本輪補派處理完畢）
+- 分類複核：排除 10 則中 4 則誤排除（主編採信，見下）→ 商業 2 則、功能 1 則（另 1 則由模型記者分類回退併入功能）補派後，功能收錄 1 則（IBM 生物實驗報導）、商業／功能其餘 3 則記者判定不收錄（第三方 SEO 導流內容，互動 0，不構成收錄門檻）
+- 轉知「不適用」：[功能] H-66f5c2（Atlassian／Desktop Commander remote MCP 今日無相關條目）、[模型] H-e8e1fd（GPT-6 Astra vs Fable 評測今日條目無關）
+- ⚠️ 日期體系落差（已處置）：`topics/anthropic-government-policy.md`、`topics/market-signals.md` 開工前已被前一輪互動 session（Taipei 本地時間 2026-10-07 00:39，實際早於本輪 UTC 17:08 開跑）寫入 2026-10-07 標頭與歸因；本輪雲端 routine 用 UTC 日期（2026-10-06），兩位記者各自把頁面標頭改成今日（10-06）後與既有 10-07 歸因／里程碑產生新舊倒置，`check_wiki_freshness.py` 紅燈。主編核對後依該閘「補為最新歸因日報日期」的修法，將兩頁標頭、callout 統一改回 2026-10-07（與既有查證內容一致），今日新增內容不變、僅日期標籤對齊；根因是本庫無統一的「排程用 UTC、互動用本地時區」換算規則，記入待辦
+- 📋 待使用者確認：
+  1. [功能] `official-community-gap.md` 已達 18 列上限，GH Issue #16561（複合 Bash 指令權限逐段比對，176 讚）符合開新列三條判準但表滿，需查證退場哪一列（5n 官方一手查證）或記錄為容量議題
+  2. [商業] Claude Startups 計畫（免費一年 Claude Team＋$1,000 額度）的官方資格門檻與適用席位層級，媒體報導僅標題層級，待查證後補列 entities/pricing「我的方案現在有什麼」表
+  3. [流程] 上述「日期體系落差」：雲端排程（UTC 日期）與互動 session（本地時區日期）在日界附近會寫出相差一天的標頭，建議統一換算規則或在 runbook 補一條判準，而非每次靠 check_wiki_freshness 事後抓
+  4. ⚠️ **[商業] `topics/anthropic-business.md` 疑似資料遺失**：commit `c2203e7`（2026-10-06 16:39 UTC，訊息聲稱僅改 Suleyman 出處與 JPMorgan 口徑）淨刪該檔 1021 行、僅新增 9 行，現僅餘 frontmatter＋3 行 callout；`topics/anthropic-business-archive.md` 同時段未被該 commit 觸碰，已查證排除「蒸餾搬移」可能。舊內容仍完整存在於該 commit 的父版本（blob `365bd65`），可用 `git show <父commit>:wiki/topics/anthropic-business.md` 取回。本輪因此頁內容消失，暫緩寫入 4 則本該入頁事實（Broadcom $60bn 晶片融資案升級、Amodei 薪酬揭露、SemiAnalysis 訂閱補貼分析、Pentagon 停用後續），待頁面修復後補寫。
+- 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群、投資分析

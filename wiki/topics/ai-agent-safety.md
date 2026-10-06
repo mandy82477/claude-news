@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-05"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
 children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 115
-attribution_count: 189
-attribution_last: "2026-10-05"
+inbound_links: 111
+attribution_count: 191
+attribution_last: "2026-10-06"
 top_source: "google-news"
-pending_count: 23
-pending_overdue: 1
-pending_next_review: "2026-10-06"
+pending_count: 25
+pending_overdue: 6
+pending_next_review: "2026-10-07"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -28,12 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新安全事件**（2026-10-05）
-> Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500）隔天即遭在野攻擊，10-04 修補版釋出；非 Claude 自身產品事件，見 [[topics/ai-agent-safety#模型網攻能力與防護]]。
+> **最新安全事件**（2026-10-06）
+> - **MCP 協定風險**：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險，細節待查。
+> - **澳洲政府網站**：Anthropic 否認其 AI agent 入侵澳洲政府網站，同日澳洲另有資安揭露法規報導。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -149,6 +150,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險（2026-10-06 新增）
+
+- **核心主張（僅標題可用）**：Startup Fortune（經 Google News）報導標題稱，資安研究者指出 Anthropic 的 MCP（Model Context Protocol）存在缺陷，使約 20 萬台伺服器面臨風險；具體攻擊鏈、是否為協定規格本身缺陷（而非特定實作）、受影響版本範圍均未見報導
+- **與既有 MCP 系列條目的關係**：本頁已有 08-27／28（gbhackers、Wiz，查證為 LiteLLM 特定實作缺陷）與 09-28（Cycode：MCP Python SDK 帳號劫持）兩起 MCP 相關揭露，查證後均非協定規格本身問題；本則聲稱規模達 20 萬台若屬實將是本系列最大規模的一則，惟目前僅標題可用，是否重疊既有缺陷或為新發現未明
+- ❓ **待查證**（標 2026-10-06｜查 Startup Fortune、200,000 servers、MCP protocol）：攻擊鏈細節、是否為協定規格缺陷、受影響版本、Anthropic 官方回應均未見報導
+
+### The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站（2026-10-06 新增）
+
+- **核心主張（僅標題／影片可用）**：The Guardian（經 Google News）報導 Anthropic 澄清其 AI agent 並未入侵澳洲政府網站；指控來源、涉及哪些網站與時間點均未見報導
+- **與既有澳洲事件的關係**：07-15 條目（駭客利用 Claude Code）查證後屬既有中國行動區域解讀，非新漏洞；本則為官方否認非揭露，兩者是否相關未見報導，另見 [[topics/anthropic-government-policy]]
+- ❓ **待查證**（標 2026-10-06｜查 Australian government websites、didn't breach）：指控來源、具體網站範圍、Anthropic 回應全文均未見報導
 
 ### Claude Code 2.1.288 修正 `bash -c` 包裝繞過危險 `rm` 防護，stable 標籤仍停在 2.1.285（2026-10-03 新增）
 
@@ -1180,6 +1193,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-06
+- **[📋 新增，待查證] Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險**：具體攻擊鏈、是否為協定規格缺陷均未見報導，僅標題可用，詳見「## 技術彙整」
+- **[📋 新增，官方聲明] The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站**：指控來源與具體範圍未見報導；同日 Reuters／Quartz 報導 Anthropic 向澳洲政府表態支持資安漏洞揭露法規，政府互動面詳見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」
 
 ### 2026-10-04
 - **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出，詳見「## 模型網攻能力與防護」

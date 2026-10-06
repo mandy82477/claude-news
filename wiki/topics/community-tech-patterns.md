@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-05"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/community-tech-patterns-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 67
-attribution_count: 252
-attribution_last: "2026-10-05"
+attribution_count: 257
+attribution_last: "2026-10-06"
 top_source: "github"
 pending_count: 3
 pending_overdue: 1
@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 
-> **最新工作流模式**（2026-10-05）
-> - **Plugin / MCP 整合添三例**：solomd 把筆記編輯器變 MCP 橋接；Atlassian、Desktop Commander 各自發布官方 remote MCP server。
-> - **安全架構再添一例**：WaLiAPI 本機 LLM API 閘道，統一三協議轉換，呼應 10-04 的 ThinkWatch-Lite。
+> **最新工作流模式**（2026-10-06）
+> - **Multi-agent 架構添新例**：open-mercato/cezar，開源 orchestrator 平行跑 Claude Code、Codex、OpenCode、Pi。
+> - **記憶與知識管理添 claude-history**：窄化到 Claude Code 單一 agent 的對話歷史模糊搜尋工具。
+> - **Armin Ronacher 重申 Codemode**：別把工具塞進 context，改讓模型寫程式碼呼叫工具。
 
 ---
 
@@ -52,21 +53,21 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-06 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、claude-code-hooks 外掛市集、精簡輸出外掛、sloppy（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-04 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-03 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-02 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-05 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
-| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-04 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
-| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-03 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander、pipeboard 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
+| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline、ClaudeTerm（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-06 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **安全架構** | Grepathy、OneCLI、agent-scan、自主 agent 部署閘、ThinkWatch-Lite、WaLiAPI（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-05 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **創意工具 Agent 整合** | Palmier Pro、reelmimic、comfyui-mcp、video-talkcraft、GodotMaker 等（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、Shellular、CLI-WeChat-Bridge、Mobile-Harness（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-04 | 手機當 agent 控制介面，各自選不同傳輸層 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬、agent-office 3D 卡通辦公室（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-02 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
-| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-29 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-16 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **規格驅動開發** | spec-kit（[[topics/community-tech-patterns#2026-09]]） | ⏳ 新興 | 2026-09-12 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **Agent Loop 終止條件** | Loop exit condition 設計模式（[[topics/community-tech-patterns#2026-08]]） | ⏳ 新興 | 2026-08-19 | 「怎麼停下」比「怎麼跑起來」更難；要有顯式終止條件 |
@@ -184,6 +185,51 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### open-mercato/cezar：開源協調器，平行執行 Claude Code、Codex、OpenCode、Pi 等多款 agent（2026-10-06）
+
+- **主線：** 並行規模
+- **核心模式：** 開源 orchestrator 與 ADE，可平行執行 Claude Code、Codex、OpenCode、Pi 等多個 AI 編碼 agent，支援本機或自架伺服器 24/7 運行；GitHub Search 508 星。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有 orchestrator 分派技巧（OtoDock、omnigent 等）一個新具名實作，同屬跨 harness 協調層取向；24/7 自架伺服器運行多個並行 agent 正是大型 codebase 下的直接痛點，主線填並行規模。
+- **可信度註記：** 僅有 GitHub Search 星數（508★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/open-mercato/cezar)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### raine/claude-history：模糊搜尋 Claude Code 對話歷史的 CLI 工具（2026-10-06）
+
+- **主線：** 索引記憶
+- **核心模式：** CLI 工具，對本機已存的 Claude Code 對話歷史做模糊搜尋（fuzzy search）；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧一個「窄化到 Claude Code 單一 agent、模糊搜尋介面」取向——deja-vu（2026-10-01）已覆蓋跨 30 餘款 agent 的免 LLM 純搜尋，本則鎖定 Claude Code 自身並強調 fuzzy search 查詢體驗；避免人／agent 記不住跨 session 內容，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證；僅標題與簡短描述可用，具體搜尋機制未見細節。
+- **來源：** GitHub Search；[GitHub](https://github.com/raine/claude-history)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### pipeboard-co/meta-ads-mcp：Meta 廣告 MCP server，Pipeboard 五平台家族的 Meta 節點（2026-10-06）
+
+- **主線：** —
+- **核心模式：** Meta 廣告 MCP server，支援 Claude、ChatGPT、Perplexity、Cursor；屬 Pipeboard 五平台 MCP 家族（另含 Google、TikTok、Snap、Reddit）的 Meta 節點，託管免自架、免費方案；GitHub Search 1,293 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（atlassian-mcp-server 等官方自建 remote MCP）之外一個「第三方託管、多平台家族、免自架」取向——既有做法是供應商自建或本機工具橋接，本則是獨立公司把同一套託管模式複製到五個廣告平台；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,293★），無 forks／issues／近期 commit 佐證可查，未另行查證；Meta Business Partner 標章為自述。
+- **來源：** GitHub Search；[GitHub](https://github.com/pipeboard-co/meta-ads-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一公司產品家族，尚無社群採用回饋數據）
+
+#### ClaudeTerm：圍繞 Claude Code hooks 與 statusLine 打造的 Windows 終端機（2026-10-06）
+
+- **主線：** —
+- **核心模式：** Windows 終端機，圍繞 Claude Code 的 hooks 與 statusLine 打造圖片面板、context／額度／subagent 狀態列，並支援分頁 session 續接。
+- **與既有模式的關係：** 補上「介面元件複用」一個「Windows 原生終端機整合」取向——既有做法多是跨平台前端元件或 TUI，本則專注 Windows、直接消化 hooks／statusLine 輸出；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Reddit r/ClaudeCode 貼文，互動數未見報導，僅憑作者自述功能清單，未經第三方驗證。
+- **來源：** Reddit / r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1wz6fvl/claudeterm_a_windows_terminal_built_around_claude/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Armin Ronacher〈What is Codemode〉：重申別把工具塞進 context，改用程式碼呼叫工具（2026-10-06）
+
+- **主線：** —
+- **核心模式：** 部落格文章，重申作者一年多前「別把自訂工具或 MCP server 定義直接塞進模型 context」的主張，並說明「Codemode」——讓模型寫程式碼去呼叫工具，取代逐次把工具定義塞進提示詞——這個替代做法的設計理由。
+- **與既有模式的關係：** 與「Token / 成本優化」既有代表技巧「MCP Code Execution」同屬同一機制，本則是具名部落客對該機制一年多來立場的重申與補充說明，未提出新機制；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 具名部落客個人論述，無第三方實測數據，屬立場闢述而非量化結果。
+- **來源：** Blog / Armin Ronacher；[原文](https://lucumr.pocoo.org/2026/10/6/codemode/)
+- **成熟度：** ⚡ 活躍（沿用「Token / 成本優化」既有活躍分類，本則為既有機制的立場重申，非新工具）
 
 #### nykooi1/vibe-wise：陪使用者一起學系統設計的 Claude Code 外掛（2026-10-05）
 

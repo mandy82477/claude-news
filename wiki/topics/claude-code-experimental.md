@@ -3,18 +3,18 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-03"
-last_news_update: "2026-10-03"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 16
-attribution_count: 17
-attribution_last: "2026-10-03"
+attribution_count: 18
+attribution_last: "2026-10-06"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0
@@ -30,20 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-09-15
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-03）
-> v2.1.288 build 新增 7 個旗標；`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS` 依官方 Release 列第 4 階，其餘 6 個仍第一階。
+> **最新動態**（2026-10-06）
+> 2.1.289–2.1.291 累積新增 18 個候選旗標（5 個代號、13 個一般候選），皆第一階；對帳僅命中自身條目，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.289–2.1.291（10-06 比對）累積新增 18 個候選旗標**：5 個代號旗標（見代號旗標表）＋13 個一般候選（見追蹤表）；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.288（10-03 比對）新增 7 個候選旗標**：`DISABLE_STRUCTURED_OUTPUTS` 依[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288) 升第 4 階已出貨，其餘 6 個仍第一階（名單見追蹤表）；對帳僅命中自身條目，暫不升第二階。
 - **2.1.287（10-02 比對）新增 7 個第一階候選旗標**（名單見追蹤表）；`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階，≤09-04 即在 build 裡）升第 4 階——官方 v2.1.287 Release 正式出貨為「Claude Mods」，同輪已回報 [[feature-radar]] 新增。
 - **2.1.286（10-01 比對）新增 8 個第一階候選旗標**（名單見追蹤表）；另 2 個設定類旗標依蒐集邊界不列。`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，依消失清單升列第 4 階；對帳僅命中自身條目（來源文章），不算獨立佐證，暫不升第二階。
@@ -72,6 +73,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_DISABLE_PROACTIVITY` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_HOSTED_DESKTOP` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_RELAUNCH_PROACTIVITY_BASELINE` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_RELAUNCH_PROACTIVITY_DECIDED` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_RELAUNCH_PROACTIVITY_EVER_ON` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_RELAUNCH_PROACTIVITY_LEVEL` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_REMOTE_TOOLS_HOST_ALLOWS_UNATTENDED` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_REMOVE_PROMPT_STRINGS` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_RESUME_TOLERATES_CONTEXT_SEEDS` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_STREAMED_BUMBLEBEE_TEXT` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06，與代號旗標 `STREAMED_BUMBLEBEE` 同批） |
+| `CLAUDE_CODE_SUBAGENT_PROMPT_SNAPSHOT` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
+| `CLAUDE_CODE_WEB_SEARCH_REFILLS_PER_HOUR` | 2.1.289–2.1.291（跨版回填） | 1 | — | — | 2.1.291 仍在（比對日 10-06） |
 | `CLAUDE_CODE_CONFIG_WATCH_EVENTS` | 2.1.288（10-03） | 1 | — | — | 2.1.288 仍在（比對日 10-03） |
 | `CLAUDE_CODE_DISABLE_INLINE_SHELL_RM_PROMPT` | 2.1.288（10-03） | 1 | — | — | 2.1.288 仍在（比對日 10-03） |
 | `CLAUDE_CODE_GROWTHBOOK_KICK_ON_WARM_CACHE` | 2.1.288（10-03） | 1 | — | — | 2.1.288 仍在（比對日 10-03） |
@@ -172,6 +186,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_CALM_MOCHI` | 2.1.289–2.1.291（跨版回填）出現 |
+| `CLAUDE_CODE_CURRIED_TRINKET` | 2.1.289–2.1.291（跨版回填）出現 |
+| `CLAUDE_CODE_HARMONIC_RIDDLE` | 2.1.289–2.1.291（跨版回填）出現 |
+| `CLAUDE_CODE_RIPPLING_TULIP` | 2.1.289–2.1.291（跨版回填）出現 |
+| `CLAUDE_CODE_STREAMED_BUMBLEBEE` | 2.1.289–2.1.291（跨版回填）出現 |
 | `CLAUDE_CODE_WHIMSICAL_ELEPHANT` | 2.1.284（09-28）出現 |
 | `CLAUDE_CODE_ELEGANT_MEADOW` | 2.1.282（09-25）出現 |
 | `CLAUDE_CODE_SQUISHY_NEWT` | 2.1.282（09-25）出現 |
@@ -208,6 +227,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-06 | 2.1.289–2.1.291（跨版回填比對）累積新增 18 個旗標（5 代號＋13 一般候選，名單見追蹤表）；`build_flags_mentions.py` 對帳 18 個，命中僅來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-03 | 2.1.288 新增 7 個旗標；`DISABLE_STRUCTURED_OUTPUTS` 升第 4 階已出貨；其餘 6 個第一階（名單見追蹤表）；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-10-02 | `ENABLE_FUNCTION_HOOKS` 升第 4 階：v2.1.287 出貨為「Claude Mods」，已回報 [[feature-radar]] 新增；同版新增 7 個第一階候選旗標（名單見追蹤表） |
 | 2026-10-01 | 2.1.286 新增 8 個第一階候選旗標（名單見追蹤表）；另 2 個設定類旗標依蒐集邊界不列；`AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，列 4 階；對帳僅命中自身條目，不算獨立佐證 |

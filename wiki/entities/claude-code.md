@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-05"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 status_main: "active"
 days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 117
-attribution_count: 640
-attribution_last: "2026-10-05"
+inbound_links: 116
+attribution_count: 644
+attribution_last: "2026-10-06"
 top_source: "github-issues"
 pending_count: 21
 pending_overdue: 10
@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 
-> **最新動態**（2026-10-05）
-> - 新增「HIPAA-ready 組織 local mode 設定指南」；桌面版文件揭露 Desktop／雲端 session 兩個組織管理開關（HIPAA 組織預設關閉，需 Owner 開啟）。
-> - 已知問題：Remote Control 顯示「方案不可用」儘管已用 Pro 驗證（#28817，45 則留言）；Advisor API 無回應（#69238）更新至 67 則留言。
+> **最新動態**（2026-10-06）
+> - v2.1.291 修正兩項回歸：雲端 session 可能遺失權限提示答案（源自 v2.1.290）、對話尾端訊息可能遺失（源自 v2.1.288）。
+> - 新增已知問題：功能請求——複合 Bash 指令（`&&`／`|`／`;`／`||`）權限比對應逐段核對（#16561，176 讚）。
 
 ---
 
@@ -43,6 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.291**（2026-10-06）：修正兩項回歸缺陷——雲端 session 可能遺失使用者對權限提示的回答（源自 v2.1.290）、對話尾端訊息在特定情境下可能遺失（源自 v2.1.288）；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）。
 - **v2.1.289**（2026-10-03）：修正巢狀 shell 複合指令中 deny／ask 規則未對使用者安裝的 mod 核准生效的漏洞；修正短指令造成終端機凍結；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.289)）。
 - **v2.1.288**（2026-10-02）：新增 `/code-review --max-findings <n>|all`、`claude purge`（取代 `claude project purge`）、Ctrl+C 清空提示後按 ↑ 取回草稿、MCP 要求更多 OAuth scope 時提示重新驗證、mods 的 `$.ui.selection()`。
 - **v2.1.288 修正與設定**：新增 `CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`（閘道用）；修正 `bash -c`／`sh -c` 內危險 `rm` 在 bypassPermissions 或 shell 允許規則下免提示執行（#96300）；背景指令時限改為僅無人值守 session 適用（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）。
@@ -70,6 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-06）：桌面版文件重新命名既有設定項，非新功能——Auto-fix／Auto-merge 補充說明文字、SSH 欄位由大寫改小寫，邏輯未變（文件字數 84,136→84,975）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-04）：桌面版文件改版——電腦使用（Computer use）開關從「設定 > 一般」搬到「設定 > 本機電腦 > 系統」；舊版「Continue in」單一選單拆成個別選項，可選「Cloud」把本機 session 接續到雲端，或選已安裝的編輯器／檔案管理器直接開啟該 session 資料夾（文件字數 83,588→83,682）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-01）：桌面版文件新增說明——終端機執行 `claude --desktop` 可直接開啟桌面版，不先啟動終端機 session；本機與雲端 session 皆載入 claude.ai 帳號已啟用的 skills；plugins 可依使用者帳號、特定專案或僅本機範圍設定（文件字數 82,443→83,575）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-09-30）：桌面版文件補充 `/resume` 流程——終端機關閉 session 後，桌面版 `/resume` 選取該 session 即可接續同一對話（非複本），`claude --resume` 在終端機仍找得到（文件字數 81,064→82,443）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -93,6 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 原文於「記憶預設對部分方案開啟」處截斷，適用範圍未完整取得；八家媒體同步報導（TechCrunch、Silicon ANGLE、CNET、Engadget、SD Times、The Register、Techzine、ZDNET）。
 - **Skill／外掛安全掃描（beta）**（Help Center release notes，2026-08-06 標註日期）：Enterprise 方案的第三方 Skill 或外掛在上傳、編輯時自動檢查是否含惡意內容，屬背景自動掃描，無使用者端可執行操作。
 - **Inference Hooks**（Claude API Release Notes，2026-08-05）：進入 Enterprise 組織 beta，可將 claude.ai、Cowork、Claude Code 上每一次受管治 prompt 導向企業自身的 AI 安全伺服器。
+- **Anthropic Status**（2026-10-06）：Claude Opus 5.5 錯誤率升高（12:37–12:43 UTC），6 分鐘內已解決，重要性低未列入已知問題。
 - 🔎 **查無官方**（標 2026-09-08｜查 iOS App、設定區塊｜複 2026-10-26）｜**iOS App 新增用量按鈕、Claude Code 設定區塊**（Pasquale Pillitteri，09-08，僅標題）：`support.claude.com`／`code.claude.com` 週更與 changelog 均未見此項，查證 2026-09-26，僅媒體轉述。
 - **雲端 session 底層架構**（Hacker News，58 分，2026-09-08）：技術部落格指出 Claude Code 雲端 session 各自跑在獨立 Firecracker microVM，開機直接進入 Rust 撰寫的自訂 init（`process_api` 為 PID 1，非 systemd）（[原文](https://rohanadwankar.github.io/posts/platforms.html)）。
 
@@ -221,8 +224,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（60 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（61 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
 - 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 33 則留言、91 個讚，2026-10-04）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
 - 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
@@ -528,6 +532,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.291** | 2026-10-06 | 修正兩項回歸：雲端 session 遺失權限提示答案（源自 v2.1.290）、對話尾端訊息遺失（源自 v2.1.288）；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）|
 | **v2.1.288** | 2026-10-02 | 新增 `--max-findings`、`claude purge`；修正 `bash -c` 內危險 `rm` 繞過檢查（#96300）；stable 仍在 2.1.285（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）|
 | **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)），細節見 [[entities/claude-mods]] |
 | **v2.1.286** | 2026-09-30 | 權限提示堆疊多筆請求時新增「2 of 5」計數顯示；全螢幕模式清單「N more」列新增滑鼠點擊展開支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.286)）|
@@ -802,6 +807,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-06 | **v2.1.291**：兩項回歸修正（權限提示答案遺失、訊息遺失）；桌面文件重命名 Auto-fix/Auto-merge。新增已知問題 1 則（#16561）。 |
 | 2026-10-04 | **v2.1.289**：deny/ask 規則與終端機凍結修正；桌面文件 Computer use 設定搬遷。新增已知問題 2 則，互動更新 1 則。 |
 | 2026-10-03 | **v2.1.288**：`rm` 防護缺口修正、`--max-findings`、`claude purge`。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則。 |
 | 2026-10-01 | **v2.1.287**：Claude Mods 出貨（#91870 轉✅）。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則，互動更新 1 則。 |

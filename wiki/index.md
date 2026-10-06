@@ -90,6 +90,7 @@
 | [[entities/thariq-shihipar]] | person | 👤 人物 | active（單一來源） | Anthropic Claude Code 團隊成員；此前具名證實 Opus 5／Fable 5 系統提示詞精簡、澄清中國偵測機制爭議；2026-09-29 接受 Latent Space 專訪（僅標題可用） |
 | [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune 專訪） |
 | [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
+| [[entities/jamie-dimon]] | person | 👤 人物 | active | 摩根大通執行長；2026-10-06 警告 Anthropic 的 Mythos AI 讓網路風險提高 10 倍，彙整 07-16／08-10／10-06 三次公開表態 |
 
 ---
 

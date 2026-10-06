@@ -4,17 +4,17 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-05"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-06"
+last_news_update: "2026-10-06"
 status_main: "active"
 days_since_news: 0
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 167
-attribution_count: 122
-attribution_last: "2026-10-05"
+inbound_links: 137
+attribution_count: 126
+attribution_last: "2026-10-06"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 1
@@ -30,10 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-05
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-06
+**最後新聞更新：** 2026-10-06
 
-> **最新計費政策異動**（2026-10-05）
+> **最新計費政策異動**（2026-10-06）
+> - **Anthropic 擴大 Claude Startups 計畫（媒體稱）**：合格新創可領一年免費 Claude Team＋$1,000 額度，官方資格門檻未見查證。
 > - **Sonnet 4.5（claude-sonnet-4-5-20250929）官方退役日查證為 2026-11-30**（與 dev.to 轉述一致）：官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)載明 09-30 已公告棄用、11-30 退役，建議遷移至 Sonnet 5.5；此日期適用 Claude API／AWS Claude Platform／Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的時程。詳見 [[entities/pricing#模型 API 定價現況]]。
 
 ## 現況
@@ -439,6 +440,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-10-06：Anthropic 擴大 Claude Startups 計畫，媒體稱合格新創可領一年免費 Team＋$1,000 額度
+
+- **媒體稱**：TechCrunch、CNBC、Quartz、Unite.AI 等至少 4 家同日報導 Anthropic 擴大 Claude Startups 計畫，合格早期新創可獲一年免費 Claude Team 方案＋$1,000 額度；官方計畫頁、資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium）均未見本站查證，不得視為官方數字。
+%% 維運備忘：Team 分層官方資格與席位細節未經查證，暫不列入「我的方案現在有什麼」表，待官方說明中心或公告確認後補列 %%
 
 #### 2026-10-05：Sonnet 4.5 退役日 2026-11-30 經官方查證屬實
 

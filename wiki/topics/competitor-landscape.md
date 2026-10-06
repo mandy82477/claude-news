@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-10-07"
-last_news_update: "2026-10-05"
+last_news_update: "2026-10-07"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: -1
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 64
-attribution_count: 160
-attribution_last: "2026-10-05"
+days_since_news_subtree: -1
+inbound_links: 44
+attribution_count: 164
+attribution_last: "2026-10-07"
 top_source: "google-news"
 pending_count: 5
 pending_overdue: 1
@@ -72,7 +72,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-08⟩ ❓ **待查證**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-10-19）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；「Anthropic 背書競品模型」與其一貫定位不符，單一財經聚合媒體來源，未見其他媒體或官方佐證。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
-**未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）；AgentConnect（新聞稿自宣）依准入不入表。
+**未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）、Reflection（10-06，開源權重新創，NYT 稱崛起為 Anthropic 新挑戰者，模型與數字未見）；AgentConnect（新聞稿自宣）依准入不入表。
 
 ## 硬答案
 
@@ -222,6 +222,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-06
+- **OpenAI**：與 Atlassian 擴大合作，將前沿模型接入 Jira、Confluence 等企業知識庫協助團隊規劃與交付（Blog/OpenAI News）
+- **Reflection**：紐約時報報導開源權重模型新創崛起為 Anthropic 新挑戰者，具體模型規格與數字未見報導（Google News/The New York Times）
 
 ### 2026-10-05
 - **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書，待查證見「對手雷達」⟨Q-08⟩（Topic Watch/competitor-landscape）

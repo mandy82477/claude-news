@@ -3,21 +3,21 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-05"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-07"
+last_news_update: "2026-10-07"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: -1
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 122
-attribution_count: 167
-attribution_last: "2026-10-05"
+days_since_news_subtree: -1
+inbound_links: 119
+attribution_count: 171
+attribution_last: "2026-10-07"
 top_source: "google-news"
 pending_count: 13
-pending_overdue: 3
-pending_next_review: "2026-10-06"
+pending_overdue: 4
+pending_next_review: "2026-10-08"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-07
 
 > **最新動態**（2026-10-07）
-> - **AWS 證實 Sonnet 5 在 GovCloud 仍持 DoD IL4／IL5 授權（已查證）**：與五角大廈停用並存——授權不等於採購。
+> OpenAI、Anthropic 向澳洲政府表態支持強制性 AI 資安漏洞揭露法規；同日 Anthropic 否認其 AI agent 入侵澳洲政府網站。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -264,6 +264,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-10-06 | 🏢 | OpenAI、Anthropic 向澳洲政府表態支持強制性 AI 資安漏洞揭露法規（Reuters／Quartz） | 延續既有澳洲監管互動（07-13 著作權遊說、10-01 opt-out），首見資安漏洞揭露法規立場，僅標題可用；同日另否認 agent 入侵澳洲政府網站，詳見 [[topics/ai-agent-safety]] |
 | 2026-10-05 | 🏛️ | BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具 | 與 09-26 DefenseScoop 查證約 90% 已遷出同方向；具體時間點、是否達 100% 均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 4 列、「## 三個戰場」🪖 軍事合約段落 |
 | 2026-10-05 | 🌐 | AWS ML Blog：Opus 5.5、Sonnet 5.5 在 Bedrock GovCloud（US）持 FedRAMP Class D；Sonnet 5 另持 DoD IL4／IL5（已查證 2026-10-07） | 授權≠採購：IL4／IL5 資格仍有效，與同日 BBC 稱國防部已停用並存；詳見「## 三個戰場」🪖 軍事合約段落 |
 | 2026-10-05 | 🏛️ | 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證（NY Post／axios／Fox News／qz.com） | Coxon 重申警告「極度魯莽」，共和黨參議員批評「危言聳聽」；僅標題可用，未入下表，詳見 [[topics/recursive-self-improvement]] |
@@ -473,6 +474,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-10-06
+- **[🏢] OpenAI、Anthropic 向澳洲政府表態支持強制性 AI 資安漏洞揭露法規**：Reuters／Quartz 報導，延續既有澳洲監管互動（07-13 著作權遊說、10-01 opt-out），首見具體立場，僅標題可用；同日另否認 agent 入侵澳洲政府網站，詳見 [[topics/ai-agent-safety]]
 
 ### 2026-10-05
 - **[🏛️] BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具**：與 09-26 DefenseScoop 查證約 90% 已遷出同方向，具體時間點與是否達 100% 均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 4 列
