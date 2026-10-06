@@ -7388,4 +7388,5 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   2. [商業] Claude Startups 計畫（免費一年 Claude Team＋$1,000 額度）的官方資格門檻與適用席位層級，媒體報導僅標題層級，待查證後補列 entities/pricing「我的方案現在有什麼」表
   3. [流程] 上述「日期體系落差」：雲端排程（UTC 日期）與互動 session（本地時區日期）在日界附近會寫出相差一天的標頭，建議統一換算規則或在 runbook 補一條判準，而非每次靠 check_wiki_freshness 事後抓
   4. ⚠️ **[商業] `topics/anthropic-business.md` 疑似資料遺失**：commit `c2203e7`（2026-10-06 16:39 UTC，訊息聲稱僅改 Suleyman 出處與 JPMorgan 口徑）淨刪該檔 1021 行、僅新增 9 行，現僅餘 frontmatter＋3 行 callout；`topics/anthropic-business-archive.md` 同時段未被該 commit 觸碰，已查證排除「蒸餾搬移」可能。舊內容仍完整存在於該 commit 的父版本（blob `365bd65`），可用 `git show <父commit>:wiki/topics/anthropic-business.md` 取回。本輪因此頁內容消失，暫緩寫入 4 則本該入頁事實（Broadcom $60bn 晶片融資案升級、Amodei 薪酬揭露、SemiAnalysis 訂閱補貼分析、Pentagon 停用後續），待頁面修復後補寫。
+- devpractice 沉澱：候選 5 筆（v2.1.291 回歸修復、GH #16561 複合 Bash 權限、open-mercato/cezar、raine/claude-history、ClaudeTerm）；手冊寫入 0 則（候選等週更落地）；基準線 ee0abe4→5d29656
 - 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群、投資分析
