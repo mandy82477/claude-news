@@ -19,7 +19,7 @@ const desks = new Map<string, Stage>() // who.id → 正在做什麼
 let tick = 0
 let timer: { cancel(): void } | null = null
 let speed = 0
-const PX_SIZE = 6 // 桌面版 SVG 每像素幾個 CSS px
+const PX_SIZE = 8 // 桌面版 SVG 每像素幾個 CSS px，約與終端機半格方塊同大
 
 function whoFor(agentId: string | undefined): Who {
   if (!agentId) return EDITOR
