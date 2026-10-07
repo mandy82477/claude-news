@@ -17,6 +17,10 @@
         {
           "id": "market-signals",
           "pageType": "topic"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
         }
       ]
     },
@@ -111,6 +115,10 @@
         {
           "id": "dario-amodei",
           "pageType": "entity"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
         }
       ]
     },
@@ -186,7 +194,13 @@
       "time": "10/05 20:07",
       "sentiment": "",
       "body": "承上 10/05 已報導的美國國防部停用 Anthropic 工具一事，BBC 原始報導今日在 HN 累積 12 分討論，未見新進展。情緒：😐",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "\"I'm just a meat proxy hitting 'Enter' for Claude\"",
@@ -643,6 +657,10 @@
       "sedimented": [
         {
           "id": "market-signals",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-business",
           "pageType": "topic"
         }
       ]
