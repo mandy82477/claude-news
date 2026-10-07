@@ -7390,3 +7390,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   4. ⚠️ **[商業] `topics/anthropic-business.md` 疑似資料遺失**：commit `c2203e7`（2026-10-06 16:39 UTC，訊息聲稱僅改 Suleyman 出處與 JPMorgan 口徑）淨刪該檔 1021 行、僅新增 9 行，現僅餘 frontmatter＋3 行 callout；`topics/anthropic-business-archive.md` 同時段未被該 commit 觸碰，已查證排除「蒸餾搬移」可能。舊內容仍完整存在於該 commit 的父版本（blob `365bd65`），可用 `git show <父commit>:wiki/topics/anthropic-business.md` 取回。本輪因此頁內容消失，暫緩寫入 4 則本該入頁事實（Broadcom $60bn 晶片融資案升級、Amodei 薪酬揭露、SemiAnalysis 訂閱補貼分析、Pentagon 停用後續），待頁面修復後補寫。
 - devpractice 沉澱：候選 5 筆（v2.1.291 回歸修復、GH #16561 複合 Bash 權限、open-mercato/cezar、raine/claude-history、ClaudeTerm）；手冊寫入 0 則（候選等週更落地）；基準線 ee0abe4→5d29656
 - 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群、投資分析
+
+## 2026-10-06 Ingest 補充（anthropic-business 正文復原＋商業補寫）
+
+- 處置上方 📋 第 4 項：`c2203e7` 把 `topics/anthropic-business.md` 寫成只剩頁首與最新動態；`bf28ec7` 接回父版本第 37 行起的正文（純新增 1011 行，頁首與 10-07 callout 保留）。修前 `build_web.py` exit 1／錨點 WARN 18，修後 exit 0／0；`e6a51e8` 補建 10-06 網站。
+- **商業**：topics/anthropic-business（補寫 10-06 暫緩的 4 則：Broadcom 600 億美元晶片融資案進入銀行正式 launch、SemiAnalysis 訂閱價值比 5 倍以上、Reuters 揭露 Amodei 去年薪酬 1,800 萬美元、BBC 五角大廈停用後續無新進展；後二者在「還沒過去的風險」加 `訊 2026-10-06`）。entities/pricing、topics/competitor-landscape 前一輪已寫，未重寫。頁首日期維持 10-07。
+- 派工包由 `data/classification-log.jsonl` 的 10-06 分類重建（分類帳未變動），歸因 append 7 行。
+- 歸因 news-pipeline／商業
