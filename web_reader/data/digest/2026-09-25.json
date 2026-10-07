@@ -447,11 +447,6 @@
       "pageType": "entity"
     },
     {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "llm-wiki-pattern",
       "name": "Karpathy 式 LLM wiki 模式",
       "pageType": "topic"

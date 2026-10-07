@@ -468,28 +468,8 @@
   "preview": "Claude Code：v2.1.288 發布：修正 bash -c／sh -c 內危險 rm 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。",
   "sedimentedToday": [
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
       "pageType": "topic"
     },
     {

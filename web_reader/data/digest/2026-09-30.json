@@ -457,11 +457,6 @@
   "preview": "Claude Code：Claude Code v2.1.285 發布：新增 CLAUDE_CODE_DISABLE_WEB_FETCH 環境變數可關閉 WebFetch 工具、claude --desktop 指令，企業管理者可限制可用的 API 供應商。",
   "sedimentedToday": [
     {
-      "id": "claude-science",
-      "name": "Claude Science",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-security",
       "name": "Claude Security",
       "pageType": "entity"
