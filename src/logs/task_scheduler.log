@@ -1041,3 +1041,11 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud STARTED 2026-10-07T17:08:39Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-07T17:09:18Z] TARGET_DATE=2026-10-07（17 UTC 班）reason=gather archive missing（src/gathered_archive/2026-10-07.json 不存在，GitHub Actions daily-gather 尚未產出或仍在延遲中；cp 失敗；ABORTED: gathered_items.json date=2026-10-06 items=69，非目標日期的新鮮資料，Step 0-1 新鮮度防線正確擋下，不生成假日報；昨日（2026-10-06）日報已存在無缺跑；交由 22 UTC 班次接手，無需人工介入）
 [cloud daily-news-pipeline-cloud STARTED 2026-10-07T22:08:33Z]
+[週三 2026/10/07 22:08:33.00] === Agent pipeline start (2026-10-07) ===
+[週三 2026/10/07 22:08:39.00] Aggregator OK (cloud replay: cp src/gathered_archive/2026-10-07.json)
+[週三 2026/10/07 22:46:00.00] WARN: confirm-digest FAILED - ModuleNotFoundError: No module named 'requests'（python3/pip 解讀環境不同一支，cloud_bootstrap.py 未涵蓋此缺口；不影響已完成的 news commit）
+[週三 2026/10/07 23:07:00.00] Wiki ingest OK（6 類記者 + 分類複核 + devpractice + market 共 9 agent，分類帳 78/78 全數對上，ingest_gate 9 道內容閘全綠）
+[週三 2026/10/07 23:21:00.00] 測試失敗含未登記案例（tests.test_ab_window_rotation, tests.test_blocked_items, tests.test_blogroll, tests.test_build_flags_watch, tests.test_change_detection_cache, tests.test_discovery_windows, tests.test_enricher_budget, tests.test_enricher_size_cap, tests.test_gap_lookback, tests.test_github_inventory_sweep, tests.test_github_issues_dedup_key, tests.test_google_news_summary, tests.test_hn_dwindow, tests.test_official_docs_watch, tests.test_official_skills_repos, tests.test_official_watch_diff, tests.test_skill_interest, tests.test_source_funnel, tests.test_topic_watch）- web build 擋下。根因：ModuleNotFoundError: No module named 'requests'（同一支 python3/pip 環境缺口，見上行），屬環境依賴缺失，不在 gate 修復迴圈允許清單內，未修改任何 check_*.py／run_tests.py
+[週三 2026/10/07 23:24:00.00] build_web FAILED - pushing news/wiki only
+[週三 2026/10/07 23:24:30.00] Single push done (news + wiki; web build skipped)
+[週三 2026/10/07 23:24:30.00] === Pipeline complete (agent) ===
