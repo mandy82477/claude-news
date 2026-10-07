@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-10-03
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 
-> **LiveNerf 開始 30 天量測**（2026-10-03）
-> - dev.to 貼文稱 livenerf 已替 Opus 5.5 建立第 0 天基準線，連續測 30 天，最早約 10-24 才能下結論。
-> - 這是量測才剛開始，不是結果；在那之前「被降智」仍只有單一貼文的觀感。
+> **A/B 降效能懷疑再添一例**（2026-10-07）
+> - r/ClaudeCode 週熱門貼文稱 Opus 5.5 上線六天表現優異，近日忽然「不對了」，為該主張第七則（本頁累積 23 則訊號）。
+> - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
 
 ---
 
@@ -133,7 +133,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **22 則**訊號：下表六種主張收 21 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **23 則**訊號：下表六種主張收 22 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
@@ -142,7 +142,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | **泛化變慢／變囉唆**（不指名模型版本）| 8 | 2026-09-20「It's time to cancel your subscriptions」：指控悄悄調降推理預算 | 單一貼文（HN 25 分）＋七則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
-| **懷疑正在被 A/B 測試降 effort** | 6 | 2026-10-01「Opus 5.5 nerfing - how to measure, how to spot, how to sue」 | 單一貼文（其中兩則登上該週熱門榜，查證過程無法覆核）|
+| **懷疑正在被 A/B 測試降 effort** | 7 | 2026-10-01「Opus 5.5 nerfing - how to measure, how to spot, how to sue」 | 單一貼文（其中三則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
 | **二進位對 Opus 5 的硬編碼限制** | 1 | 2026-07-26（已查證屬實，見 [[topics/community-tech-discussions]]）| GitHub issue #80988 |
 | **任務間能力落差不均**（「jagged」，不專指單一模型）| 1 | 2026-09-17「even frontier models have a very jagged range」 | 單一貼文（Reddit r/artificial 週熱門）|
@@ -250,6 +250,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-10-01
 - **「Opus 5.5 nerfing - how to measure, how to spot, how to sue」：「懷疑正在被 A/B 測試降 effort」主張第六則**：r/ClaudeAI 使用者稱 Opus 5.5 上線前 5–6 天表現極佳，近日在原本能處理的複雜任務上開始失手；單一貼文，方向與既有五則一致，只說明現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)）
+- **「Mmmkay...something is suddenly off with Opus 5.5」：「懷疑正在被 A/B 測試降 effort」第七則**：r/ClaudeCode 使用者稱 Opus 5.5 上線前六天表現優異，近日忽然「不對了」；週熱門標記，單一貼文、0 留言，方向與既有六則一致（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wurd3e/mmmkay_i_didnt_believe_others_at_first_but/)）
 
 ### 2026-09
 

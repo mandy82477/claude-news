@@ -34,6 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **最新動態**（2026-10-07）
 > - **Meta、Microsoft 縮減內部 Claude 用量（已查證）**：Microsoft 支出砍逾三分之一、Meta 使用者約減半，皆未取消合約，詳見 [[topics/enterprise-tool-tracker]]。
 > - **Suleyman「消除付給 Anthropic 的成本」出處補齊**：2026-06-04 Bloomberg 專訪，專指 Anthropic。
+> - **xAI 旗下 Grok Bot 整合 Anthropic Claude、Midjourney、Suno**：競爭對手在自家產品採用 Claude（The Next Web；9to5Mac）。
 
 ---
 
@@ -333,10 +334,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | Amazon／Google 營收集中 | 招股書外流：近半營收來自這兩家；比例與口徑未見，細節見「IPO 走到哪一格」 | 2026-09-30；calcalistech；Reuters 09-28 外流報導 | 目前無可見後果。下一個觸發點：公開版 S-1 的客戶集中度與承諾金額 |
 | 新興算力供應商 | Nscale $450 億、Fluidstack $500 億、TeraWulf $190 億、Akamai $116 億、Volta $100 億、Riot $90 億，多為多年租約或建置案 | 2026-07-06 至 09-25；各案見合作表一行制清單 | 目前無可見後果；單月承諾量級逼近年化營收（本頁 08-29 算術），風險面見上方風險表 |
 | 股權與信貸 | Series H 募資 $650 億；上市前信用額度傳逾 $100 億（08-18）；資料中心私募信貸 $13 億（08-19） | 2026-05-28 官方；Bloomberg；Yahoo Finance | 目前無可見後果。下一個觸發點：公開版 S-1 |
+| Samsung Foundry | 代工 Anthropic 設計 AI ASIC，採 2 奈米製程；較 07-02／07-06 洽談階段具體化，金額與產能規模未見報導 | 2026-10-07；TechPowerUp | 目前無可見後果（未見 Claude 改在該晶片上服務的時程）。下一個觸發點：合約金額或交付時程公開 |
 
 **目前唯一寫得出的算力吃緊後果**：07-18 Startup Fortune 稱 Anthropic 因運算資源吃緊收緊 Fable 5 存取；本站查證的官方文件只寫方案分界、未載原因，見 [[entities/pricing]]「當前生效的計費規則」07-20 條。各列共同的下一個觸發點是公開版 S-1。
 
-%% 維運備忘：2026-10-04 首次彙整；共九列。新合約出現時先判斷「可見後果」欄寫不寫得出，寫不出就寫「目前無可見後果」；各交易原始細節的家仍是下方合作表一行制清單與 ## 時序 %%
+%% 維運備忘：2026-10-04 首次彙整；2026-10-07 加入 Samsung Foundry 列，現共十列。新合約出現時先判斷「可見後果」欄寫不寫得出，寫不出就寫「目前無可見後果」；各交易原始細節的家仍是下方合作表一行制清單與 ## 時序 %%
 
 ## 哪個合作會改到你用的 Claude
 
@@ -363,6 +365,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **xAI（Grok Bot）**（2026-10-07）：Grok Bot 整合 Anthropic Claude、Midjourney、Suno 模型以提升回應品質，具體整合範疇與計費未見報導（The Next Web；9to5Mac）
+- **Intuitive.ai**（2026-10-07）：Anthropic 將其列為 Claude Partner Network 優先夥伴，資格門檻與具體權益未見報導（Yahoo Finance；GlobeNewswire）
+- **Momentic**（2026-10-06）：Microsoft 官方案例研究，描述其透過 Microsoft Foundry 使用 Claude 將自然語言需求轉換為通過測試，具體整合規模未見報導（Microsoft）
 - **Commvault**（2026-10-02）：AgentRecover 可探索、保護並還原 Claude Cowork、Claude Code 的 agent 設定與累積脈絡，涵蓋員工 Windows 與 macOS 端點，定價未見報導（Google News/Blocks & Files）
 - **Pureinsights**（2026-09-30）：Discovery 2.12 版本新增 Claude 整合，涵蓋文件擷取與查詢管線，具體功能與計費未見報導（Google News/EIN News）
 - **ExodusPoint**（2026-09-29）：避險基金加入與 Anthropic 就 AI 合作的機構陣容，延續 08-06 已記錄之 Millennium 案例，具體技術範疇與商業條款未見報導（Google News/Bloomberg.com）
@@ -554,6 +559,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-07
+- **[戰略合作] The Next Web／9to5Mac：xAI 旗下 Grok Bot 整合 Anthropic Claude、Midjourney、Suno 模型**：競爭對手在自家產品採用 Claude 以提升回應品質，具體範疇與計費未見報導，詳見「哪個合作會改到你用的 Claude」一行制清單（Google News/The Next Web；Google News/9to5Mac）
+- **[戰略合作] TechPowerUp：三星晶圓代工將以 2 奈米製程生產 Anthropic 設計 AI ASIC 晶片**：較 07-02／07-06 代工洽談階段具體化，詳見「算力與資金從哪來」新增列（Google News/TechPowerUp）
+- **[戰略合作，僅標題可用] Yahoo Finance／GlobeNewswire：Anthropic 將 Intuitive.ai 列為 Claude Partner Network 優先夥伴**：資格門檻與具體權益未見報導，詳見「哪個合作會改到你用的 Claude」一行制清單（Google News/Yahoo Finance；Google News/GlobeNewswire）
 
 #### 2026-10-06
 - **[商業風險] Financial Times：華爾街銀行啟動 600 億美元晶片融資案，Broadcom 與 Anthropic 為對象**：由 10-01「考慮中貸款」、10-02「啟動債務融資」升級為銀行正式 launch；條款與交付時程未見報導，僅標題可用，詳見「還沒過去的風險」細節區（Google News/Financial Times）

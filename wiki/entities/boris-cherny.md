@@ -34,20 +34,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Claude Code 設計理念與工程實務最主要的公開發言來源
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-09-12
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 
-> **Boris Cherny 親自回信「AI slop」質疑者**（2026-09-12）：身為 Claude Code 負責人正面回應品質下滑爭議，詳見 [[topics/community-tech-discussions]]。
+> **分享 3 個提示技巧，主張視 Claude 為同事而非下指令**（2026-10-07）：Business Insider 與 Times of India 同日報導，技巧細節未載（僅標題可用）。
 
 ---
 
 ## 現況
 
-**截至 2026-09-11（本頁記錄的最近一次公開發言）**，Boris Cherny 回應「AI slop」（AI 產出程式碼品質下滑）爭議，重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫（[[entities/simon-willison|Simon Willison]] 轉引，2026-09-11）；翌日一名開發者就此議題致信並獲其親自回信，惟原文僅標題可用（Business Insider，2026-09-12）。
+**截至 2026-10-07（本頁記錄的最近一次公開發言）**，Business Insider 與 Times of India 同日報導 Boris Cherny 分享 3 個提示技巧，主張把 Claude 當同事對話而非下指令；技巧細節未載，僅標題可用。此前於 09-11／09-12 曾因「AI slop」品質爭議公開回應並親自回信開發者，詳見歷史記錄。
 
 Boris Cherny 是 Anthropic Claude Code 的打造者與負責人（Head of Claude Code），也是產品方向最主要的公開代言人；其高頻率的公開聲明與工程分享長期引發開發者社群討論，被視為 Anthropic 技術文化的外部窗口。
 
-**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類。逐條見下方核心論述表。
+**立場軌跡：** 2026-05-08「coding is solved」→ 06-24 承認「AI 寫 100% 程式碼正在變得有問題」→ 06-28 公開個人 setup（同時開 5 個並行實例，強調「surprisingly vanilla」）→ 07-27 呼籲停止微管理 AI → 09-11 重申正式環境程式碼品質門檻應高於人類 → 10-07 分享提示技巧，主張視 Claude 為同事而非下指令。逐條見下方核心論述表。
 
 ---
 
@@ -55,6 +55,7 @@ Boris Cherny 是 Anthropic Claude Code 的打造者與負責人（Head of Claude
 
 | 日期 | 主題分類 | 一句話論述 | 立場延續/轉折 |
 |------|---------|-----------|--------------|
+| 2026-10-07 | 方法論 | Business Insider／Times of India 同日報導分享 3 個提示技巧，主張把 Claude 當同事對話而非下指令（僅標題可用，技巧細節未載） | 延續——與 07-27「停止微管理」、06-20「我寫 loop 讓 loop 去 prompt Claude」一脈相承的對話式哲學 |
 | 2026-09-12 | 商業/社群 | 一名開發者為「AI slop」問題致信 Boris Cherny，他親自回信（原文僅標題可用） | 延續——與 09-11 品質門檻聲明呼應同一場「AI slop」討論 |
 | 2026-09-11 | 方法論 | 重申 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫；Anthropic 內部設有多項相關指引 | 延續——呼應 06-24「AI 寫 100% 程式碼正在變得有問題」的品質疑慮，具體化為可操作的品質門檻主張 |
 | 2026-08-03 | 方法論 | 引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」；以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例 | 深化——將「Loops 是未來」的自主執行哲學具體化為可操作的「驗證優先」方法論 |
@@ -214,6 +215,7 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 
 ## 歷史記錄
 
+- 2026-10-07：Business Insider 與 Times of India 同日報導分享 3 個提示技巧，主張把 Claude 當同事對話而非下指令；技巧細節未載，僅標題可用（Google News / Business Insider ＋ Google News / The Times of India，2026-10-07）
 - 2026-09-12：Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）
 - 2026-09-11：Simon Willison 部落格引述其發言，稱 Claude 撰寫的正式環境程式碼品質門檻應高於人類撰寫，並提及 Anthropic 內部設有多項相關指引（原文於此處截斷）（simonwillison.net，2026-09-11）
 - 2026-08-03：於 YC Startup School 2026 訪談中表示，引導 Claude 完成困難任務的關鍵已從 prompt engineering 轉向「讓 Claude 能沿途驗證自己的工作」（「verification 大概是人們最容易做錯的一件事」），並以團隊嘗試用 Claude 重寫 Electron 版 Claude 桌面應用為例（daringfireball.net 轉引 John Gruber，Hacker News 69 分，2026-08-02）。**後續（2026-09-02）**：重寫細節查實為改寫成 Swift 原生版、以逐像素比對自我驗證

@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-06
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 
-> **最新動態**（2026-10-06）
-> - v2.1.291 修正兩項回歸：雲端 session 可能遺失權限提示答案（源自 v2.1.290）、對話尾端訊息可能遺失（源自 v2.1.288）。
-> - 新增已知問題：功能請求——複合 Bash 指令（`&&`／`|`／`;`／`||`）權限比對應逐段核對（#16561，176 讚）。
+> **最新動態**（2026-10-07）
+> - v2.1.292 新增 `claude plugin install --marketplace <source>`，安裝外掛時可一併加入所需市集來源。
+> - 新增已知問題：`.claude.json` 對話歷史無上限累積，拖慢啟動並膨脹至數百 MB（issue #5024，55 則留言、50 個讚）。
 
 ---
 
@@ -43,6 +43,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.292**（2026-10-06）：`claude plugin install` 新增 `--marketplace <source>`，裝外掛可一併加入市集來源，沿用 `marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）。另有未經證實的 stdio MCP 協定異動報導，見下方「🔌 MCP 整合」已知問題。
+  同版 build 另新增 4 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.291**（2026-10-06）：修正兩項回歸缺陷——雲端 session 可能遺失使用者對權限提示的回答（源自 v2.1.290）、對話尾端訊息在特定情境下可能遺失（源自 v2.1.288）；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）。
 - **v2.1.289**（2026-10-03）：修正巢狀 shell 複合指令中 deny／ask 規則未對使用者安裝的 mod 核准生效的漏洞；修正短指令造成終端機凍結；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.289)）。
 - **v2.1.288**（2026-10-02）：新增 `/code-review --max-findings <n>|all`、`claude purge`（取代 `claude project purge`）、Ctrl+C 清空提示後按 ↑ 取回草稿、MCP 要求更多 OAuth scope 時提示重新驗證、mods 的 `$.ui.selection()`。
@@ -306,8 +308,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（14 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（15 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**`.claude.json` 持續累積每個專案的對話歷史，無上限，檔案膨脹至數百 MB 以上（GitHub issue #5024，累積 55 則留言、50 個讚，2026-10-07）**：使用者回報該檔案不斷累積歷史紀錄，導致啟動變慢、效能下降；官方尚未回應或提供自動清理機制。
 - 🔴 **未修復**｜**Routines 每次執行留下一個 session，Desktop app 僅能逐一刪除**（[naw103/claude-routine-cleanup](https://github.com/naw103/claude-routine-cleanup)，2026-10-03）：單一使用者回報一個 routine 累積 618 個未清理 session；社群 skill 用官方工具批次刪（每批 25 筆走核准卡）繞過；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨 session 交接與延續（GitHub issue #11455，累積 37 則留言、25 個讚，2026-10-03）**：提案者希望 Claude Code 支援 session 交接，讓工作能在新 session 接續；本站來源未見官方回應。與跨 session 記憶（#14227）同屬延續性缺口。
 - 🔴 **未修復**｜**功能請求：Cowork 專案可移除已加入的本機資料夾（GitHub issue #40043，累積 32 則留言、103 個讚，2026-10-01）**：使用者呼籲 Cowork 專案的 context 能移除已加入的本機資料夾，目前僅能新增無法移除；官方尚未回應或排入路線圖。
@@ -342,7 +345,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
 - 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，1006 讚，全站讚數新高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，963 讚、192 則留言，2026-09-19 互動數更新）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，541 讚、251 則留言，2026-09-18 互動數更新）皆缺多帳號支援；官方尚未回應。
 
-### 🔌 MCP 整合（14 條未修復、1 條已修復）
+### 🔌 MCP 整合（14 條未修復、1 條已修復、1 條❓）
+
+❓ **待查證**（標 2026-10-07｜查 stdio、v2.1.292｜複 2026-10-21）｜**v2.1.292 是否已將 stdio 型 MCP server 切換至新協定**：MIXED Reality News 報導 v2.1.292 把 stdio 型 MCP server 切換到新協定，但官方文件與 v2.1.292 release notes 仍寫「選用（opt-in）」，兩者不一致；用 stdio 型 MCP server 的使用者升級後可留意行為是否改變。
 
 - 🔴 **未修復**｜**Google Drive connector 顯示已連結，Cowork 中卻未暴露對應工具（GitHub issue #30457，累積 43 個讚，2026-09-10）**：使用者回報 Google Drive connector 於介面顯示已連結成功，但在 Cowork 中無法呼叫任何對應工具，屬連結狀態與實際可用性不一致的缺口；官方尚未回應。
 
@@ -363,8 +368,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（74 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（75 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援刪除與重新命名對話（GitHub issue #10747，累積 42 則留言、52 個讚，2026-10-07）**：VS Code 擴充套件目前無法刪除或重新命名既有對話，長期管理多個對話的使用者只能任由清單累積；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
@@ -379,7 +385,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 64 則留言、243 個讚，2026-08-25）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，為更新後效能退化（GitHub issue #26302，累積 44 則留言、44 個讚，2026-08-21，版本更新後新出現的效能回歸）**：使用者回報升級至 Claude Desktop 1.1.3189 後，Windows 上出現嚴重 UI 延遲與滑鼠卡頓，屬更新後的效能退化（regression）；官方尚未回應。
-- 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 70 則留言、62 個讚，首見 2026-08-19，2026-09-22 互動數更新）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
+- 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 72 則留言、64 個讚，首見 2026-08-19，2026-10-07 互動數更新）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
 
 > Windows 上 Cowork VM 啟動失敗於 8 天內至少 5 起獨立事件湧現：#29941 Windows 11 Pro CoworkVMService 簽章驗證初始化失敗（07-23）、#74649 缺少 HCS vfpext 服務導致無法運作（07-27～07-29）、#27801 workspace 啟動顯示「VM service not running」、重開機亦無法解決（07-28）、#40198 Windows ARM64（Snapdragon）無法啟動（07-28）、#40175 Cowork Global instructions 儲存後靜默還原舊版本（08-01）；五起成因各異（簽章驗證、服務缺失、VM 啟動、架構相容、設定持久化），疑指向 Cowork Windows VM 層本身不穩定，而非個別 driver 問題；官方尚未回應或確認共同成因，此為推論。
 
@@ -454,8 +460,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（37 條已修復、9 條未修復、1 條查無官方）
+### 🌐 服務穩定性（38 條已修復、10 條未修復、1 條查無官方）
 
+- 🔴 **未修復（監控中，緩解措施已部分生效）**｜**Anthropic Status：platform.claude.com Usage／Rate limits、Admin API usage report 錯誤率持續升高（10-07 16:36 UTC 更新，與下則不同事故）**：仰賴這些頁面查用量的使用者這幾天數據可能不準。[來源](https://status.claude.com/incidents/978mjkgw6mh7)
+- ✅ **已修復（約 1 小時 40 分後解決）**｜**Anthropic Status：platform.claude.com 用量資料讀取錯誤升高（2026-10-06 17:00–18:40 PT，10-07 02:33 UTC 確認解決）**：Usage 頁面讀取出現大量錯誤，僅影響用量儀表板顯示，不影響 Claude 本身使用。[來源](https://status.claude.com/incidents/wf2v8ms031sx)
 - ✅ **已修復**｜**Anthropic Status：Claude 全面中斷，波及 claude.ai、App、Claude Code、Cowork、API（2026-09-29 14:00–14:59 UTC，16:27 UTC 通報恢復）**：全站中斷約 1 小時，14:59 UTC 恢復正常，觸發數十家美國媒體報導「Is Claude down」。[來源](https://status.claude.com/incidents/4xvtc2gnq73l)
   - 10-03 補：Anthropic 表示 14:00–14:59 UTC 間送出的部分訊息可能沒有被儲存；那段時間的對話或 Claude Code session 若有缺漏，要自己重送（[mixed-news.com](https://mixed-news.com/en/anthropic-claude-september-29-outage-messages-may-not-have-been-saved/)）
 - 🔴 **未修復**｜**v2.1.181、v2.1.183 持續 API 無回應（GitHub issue #69358，累積 27 則留言、61 個讚，2026-09-26）**：與「串流閒置逾時」（#46987）、「Connection closed mid-response」（#69415）同類但版本症狀不同，暫分列；官方尚未回應。
@@ -532,6 +540,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.292** | 2026-10-06 | 新增 `claude plugin install --marketplace <source>`，裝外掛時一併加入所需市集來源，沿用 `claude plugin marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）|
 | **v2.1.291** | 2026-10-06 | 修正兩項回歸：雲端 session 遺失權限提示答案（源自 v2.1.290）、對話尾端訊息遺失（源自 v2.1.288）；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）|
 | **v2.1.288** | 2026-10-02 | 新增 `--max-findings`、`claude purge`；修正 `bash -c` 內危險 `rm` 繞過檢查（#96300）；stable 仍在 2.1.285（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）|
 | **v2.1.287** | 2026-10-01 | **新增「Claude Mods」**（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.287)），細節見 [[entities/claude-mods]] |

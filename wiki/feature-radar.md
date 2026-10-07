@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-05
+**最後更新：** 2026-10-07
 
 > **這禮拜動了什麼**（2026-10-03）
 > v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -65,6 +65,22 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### `claude plugin install --marketplace`
+**發布：** 2026-10-06（v2.1.292） | **狀態：** GA
+
+**是什麼：** `claude plugin install` 新增 `--marketplace <source>`，安裝外掛時若尚未加入所需市集來源會自動補上（沿用 `claude plugin marketplace add` 相同的政策檢查），省去先手動 `marketplace add` 的步驟。
+
+**為何熱：** 官方 release notes 單一條目，目前無社群回饋；同版另有 MIXED Reality News（單一來源）指出 stdio 型 MCP server 已切換到新協定，但官方文件與本版 release notes 仍寫「選用」，兩者不一致——已於 [[entities/claude-code]]「🔌 MCP 整合」標記為懸置事項，與本旗標本身無直接關聯。
+
+**現在要試嗎：** 常裝外掛又手動管市集來源的人可省一步；一般使用者無感知差異。
+
+**快速上手：**
+```
+claude plugin install <plugin> --marketplace <source>
+```
+
+**注意事項：** 沿用 `claude plugin marketplace add` 的政策檢查，不繞過組織的市集核准規則。
 
 ### Claude Code HIPAA-ready 組織本地模式部署
 **發布：** 2026-10-05（官方文件揭露） | **狀態：** 正式發布（Enterprise HIPAA 組織）
@@ -433,6 +449,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **`claude plugin install --marketplace`**（安裝外掛時自動補上所需市集來源，省去先手動 `marketplace add`） | 2026-10-06 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code HIPAA-ready 組織本地模式部署**（Enterprise HIPAA 組織，Desktop／Cloud sessions 管理開關） | 2026-10-05 | 🔥 | ⏳ 觀望 | 正式發布（Enterprise HIPAA 組織） |
 | **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

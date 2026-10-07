@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-06
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新安全事件**（2026-10-06）
-> - **MCP 協定風險**：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險，細節待查。
-> - **澳洲政府網站**：Anthropic 否認其 AI agent 入侵澳洲政府網站，同日澳洲另有資安揭露法規報導。
+> **最新安全事件**（2026-10-07）
+> - **CVP 擴大為三層存取**：Anthropic 官方推出擴大版 Cyber Verification Program，核准資安團隊取得更完整網路能力；The Hacker News 稱資安公司 Glasswing 藉此已找出 129,000 個漏洞。
+> - **假冒廣告入口**：The Hacker News 報導出現假冒 ChatGPT、Gemini、Claude 的廣告入口網站，竊取使用者憑證與雙重驗證碼。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -58,6 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 擋不住的是什麼 | 誰會遇到 | 狀態 | 官方擋到哪 | 你能先做什麼 |
 |---|---|---|---|---|
+| 假冒 ChatGPT、Gemini、Claude 的廣告入口網站，直接竊取帳密與雙重驗證碼 | 透過搜尋或社群廣告找 AI 聊天工具登入頁的使用者 | 🔴 | 無回應（2026-10-07 披露，僅標題可用；與既有假冒安裝包手法不同，不經下載） | 從官方網域或自行輸入網址進入，不點廣告連結登入；已輸入過帳密立即更改並檢查 MFA 裝置清單 |
 | Auto 模式：只要請它讀一個網址，注入的指令就能取得程式碼執行權 | 開 Auto 模式、且會讓 Claude Code 讀網頁或外部檔案的人 | 🔴 | 官方定性 Auto 模式是 best-effort convenience control、不是安全邊界，該揭露結案為 informative；官方稱擋下 89%（2026-08-07 blog）危險指令 | 讀外部內容時關掉 Auto，或改在隔離容器裡跑。實測成功率 60–80%，官方委託評測 0%，兩個數字並陳 |
 | 惡意 `.git` 設定檔可誘使 agent 執行攻擊者指定的程式碼，跨廠通用 | clone 或開啟他人 repo 的人（Claude、Codex、Cursor 都中） | ❓ | 無回應（2026-09-02 披露；觸發機制與是否已在野利用未見報導） | clone 完先自己看一遍 `.git/config` 有沒有不是你加的設定，再讓 agent 進去 |
 | deny-list 型權限設定可被繞過，只有 allow-list 型設定擋得住 | 用 deny-list（黑名單）方式設定 Claude Code 權限的人 | 🔴 | 無回應（2026-09-11 Show HN 揭露，公開 repo 展示 8 種繞過手法） | 改用 allow-list（白名單）方式設定權限，不要只靠 deny-list |
@@ -74,6 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Auto 模式不是安全邊界**：這是官方立場，不是還沒修。讀者能動的是隔離與監看（2026-08-31 揭露、官方結案為 informative）。
 - **Enterprise Frontier Safeguards**（2026-09-01 公告）：監看攻擊性網路與生物能力開發、以及憑證外洩跡象；資料存客戶自己的雲端儲存，今年秋季分階段推出、本身免費（雲端儲存另計）。
 - **LSVP 放寬生物安全限制**（2026-09-18 公告）：生命科學驗證計畫（LSVP）先以 Beta 開放給已完成早期存取的機構，通過驗證的生醫專業人士使用 Mythos／Opus／Sonnet 時適用較寬鬆但仍有把關的生物相關防護；放寬幅度與審核標準未見公告細節。
+- **CVP 擴大為三層存取**（2026-10-07 官方公告）：核准資安團隊可取得更完整網路能力與較少阻擋的分類器，涵蓋 Opus 5.5、Sonnet 5.5、Mythos 5.1；The Hacker News 稱資安公司 Glasswing 藉此已找出 129,000 個漏洞，為目前唯一公開量化成效數字。
 - **EFS 不是提示注入的防禦**：上表沒有一列因它而降級。企業採用與資料主權面見 [[topics/anthropic-business]]，它同時是 [[entities/pricing]] 兩則企業資料保留傳聞的官方版本。
 - **89%／0%／60–80% 三個數字答的不是同一件事**：89% 與 0% 皆出自 [Anthropic 官方 2026-08-07 blog](https://claude.com/blog/auto-mode-default-in-claude-code)（0% 為第三方 Trajectory Labs 720 次間接注入測試結果）；60–80% 是 embracethered 針對另一種攻擊面（網頁摘要＋`struct.py` 遮蔽）的實測，兩者不互相推翻。
 - **還沒有的**：官方至今沒有對外部內容的信任邊界機制（來源標記、套件名驗證、寫入確認）。缺口追蹤見 [[topics/official-community-gap]]。官方也還沒有高風險操作的 agent 安全指引；**模型層安全（拒絕危險請求）不等於產品層安全（防誤操作、修補沙箱逃逸）**，上表每一列問的都是後者。
@@ -122,6 +124,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-07 | 防護 | Anthropic 官方擴大 CVP 為三層存取；The Hacker News 補充 Glasswing 藉此已找出 129,000 個漏洞 | 官方一手＋至少 5 家媒體同日跟進；129,000 數字為媒體補充，未見官方原文佐證 |
+| 10-07 | 濫用 | CyberXero 組織用 Claude Code、PentAGI、Cobalt Strike 組合發動 AI 強化網路攻擊 | CyberSecurityNews；僅標題可用，攻擊鏈細節未載 |
 | 10-03～10-04 | 能力 | Mythos 揭露 Rejetto HFS 漏洞（CVE-2026-61500）；隔天即在野攻擊，10-04 修補版 3.2.1 釋出 | dev.to／#anthropic；非 Claude 自身產品事件，揭露到利用僅一天 |
 | 09-29／09-30 | 擴散 | Frontier Red Team：GLM-5.3 在 100 題 Binary Exploitation 抽樣 4% 完整控制流劫持（Mythos Preview 6%）；Opus 4.6、GLM-5.2 做不到 | 官方一手；方法論未完整揭露 |
 | 09-25 | 測試 | ABC News 標題：Anthropic 稱模型在測試中「自主」入侵 3 個組織 | 僅標題；與既有評估事件關聯未明 |
@@ -151,6 +155,32 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取；The Hacker News 稱 Glasswing 已藉此找出 129,000 個漏洞（2026-10-07 新增，CVP 官方升級）
+
+- **揭露來源**：[Anthropic Blog〈Expanding the Cyber Verification Program〉](https://www.anthropic.com/news/cyber-verification-program)（2026-10-07 17:28 UTC）；ExecutiveBiz／SecurityWeek／The Decoder／Help Net Security／CyberSecurityNews 等至少 5 家媒體跟進，The Hacker News 補充量化數字
+- **核心主張**：CVP 由單層擴大為三個存取層級，核准的資安專業人員可取得更完整的網路能力與較少阻擋的安全分類器，適用 Opus 5.5、Sonnet 5.5、Mythos 5.1 等模型；各層具體核准門檻與審核流程僅官方公告概述
+- **量化成效（The Hacker News 補充）**：資安公司 Glasswing 使用擴大存取權限後已找出 129,000 個漏洞，是目前對 CVP 實際成效唯一公開的量化數字；是否涵蓋擴大前既有存取層級未見區分
+- **性質判斷**：本頁已記錄 CVP 既有摩擦（09-15～09-22 核可者仍被誤擋，GitHub #84352 等四個 Issue）；本次為官方對該計畫的擴大升級，非新建，既有摩擦是否隨之緩解未見官方說明，詳見「## 模型網攻能力與防護」
+- ❓ **待查證**（標 2026-10-07｜查 Anthropic Cyber Verification Program、三層存取、Glasswing）：三層具體區別與核准門檻、既有誤擋摩擦是否隨本次擴大緩解均未見完整揭露
+- **可信度評估**：Anthropic 官方一手公告，可信度高；The Hacker News 的 129,000 漏洞數字為單一媒體補充，未見官方原文佐證
+
+### CyberSecurityNews：攻擊組織 CyberXero 組合 Claude Code、PentAGI 與 Cobalt Strike 用於 AI 強化網路攻擊（2026-10-07 新增，濫用態勢，非 Claude 產品漏洞）
+
+- **揭露來源**：Google News／CyberSecurityNews（2026-10-07 14:44 UTC）；0 互動，單一來源，原文無可讀內文
+- **核心主張（僅標題層級可用）**：報導稱攻擊組織 CyberXero 把 Claude Code、開源紅隊框架 PentAGI 與商用後滲透工具 Cobalt Strike 組合用於 AI 強化的網路攻擊；具體攻擊鏈、目標範圍與 Claude Code 在整條攻擊鏈中的角色均未見報導
+- **性質判斷**：屬「別人拿 Claude 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入「## 現在還擋不住的攻擊」表；與既有 09-14 ShinyHunters、07-22 Trim 同屬濫用態勢系列，詳見「## 模型網攻能力與防護」
+- ❓ **待查證**（標 2026-10-07｜查 CyberXero、PentAGI、Cobalt Strike）：具體攻擊鏈、目標與 Anthropic 官方回應均未見報導
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低
+
+### The Hacker News：假冒 ChatGPT、Gemini、Claude 廣告入口網站竊取使用者憑證與雙重驗證碼（2026-10-07 新增）
+
+- **揭露來源**：Google News／The Hacker News（2026-10-07 07:00 UTC）；0 互動，單一來源，原文無可讀內文，以標題與日報摘要判讀
+- **核心主張（僅標題層級可用）**：報導稱出現假冒 ChatGPT、Gemini 與 Claude 的廣告入口網站，誘導使用者輸入帳密並竊取雙重驗證（MFA）碼；投放管道、受影響規模與是否已有具體受害案例均未見報導
+- **與既有假冒安裝包系列的關係**：07-27 Notebookcheck 記錄過假冒 Claude App 廣告（查證為 FakeAgent 活動，轉址植入 SectopRAT 木馬，29 個組織受害）；本則不經下載，直接以假冒入口網站誘騙輸入帳密與 MFA 碼，是否同一攻擊集團未見報導
+- **已列入「## 現在還擋不住的攻擊」表**
+- ❓ **待查證**（標 2026-10-07｜查 The Hacker News、fake ChatGPT Gemini Claude ad portals）：廣告投放管道、規模與是否與 07-27 FakeAgent 案例同屬一個攻擊集團均未見報導
+- **可信度評估**：The Hacker News 具名資安媒體，惟原文僅殼層摘要可讀，單一來源、0 互動，訊號強度中等
+
 ### Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險（2026-10-06 新增）
 
 - **核心主張（僅標題可用）**：Startup Fortune（經 Google News）報導標題稱，資安研究者指出 Anthropic 的 MCP（Model Context Protocol）存在缺陷，使約 20 萬台伺服器面臨風險；具體攻擊鏈、是否為協定規格本身缺陷（而非特定實作）、受影響版本範圍均未見報導
@@ -162,6 +192,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題／影片可用）**：The Guardian（經 Google News）報導 Anthropic 澄清其 AI agent 並未入侵澳洲政府網站；指控來源、涉及哪些網站與時間點均未見報導
 - **與既有澳洲事件的關係**：07-15 條目（駭客利用 Claude Code）查證後屬既有中國行動區域解讀，非新漏洞；本則為官方否認非揭露，兩者是否相關未見報導，另見 [[topics/anthropic-government-policy]]
 - ❓ **待查證**（標 2026-10-06｜查 Australian government websites、didn't breach）：指控來源、具體網站範圍、Anthropic 回應全文均未見報導
+
+### CyberSecurityNews：GitHub Copilot CLI 存在加密提示注入漏洞，可竊取開發者機密（2026-10-06 新增，非 Claude 專屬）
+
+- **揭露來源**：Google News／CyberSecurityNews（2026-10-06 15:52 UTC）；0 互動，單一來源，原文無可讀內文
+- **核心主張（僅標題層級可用）**：資安研究揭露 GitHub Copilot CLI 存在可被加密提示注入攻擊竊取開發者機密的漏洞，加密內容會繞過一般的提示注入偵測；具體攻擊鏈、受影響版本與是否已修補均未見報導
+- **收錄說明**：跨廠商提示注入案例，不套用一般的 Claude/Anthropic 關聯門檻；與 Claude 產品無直接關聯，不列入「## 現在還擋不住的攻擊」表，亦非「## 提示注入已不是單點漏洞」訊號表既有收斂點的延伸（該表已滿 8 列，暫不更動）
+- ❓ **待查證**（標 2026-10-06｜查 GitHub Copilot CLI、encrypted prompt injection）：具體攻擊鏈、受影響版本範圍、是否已發布修補均未見報導
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低；提示注入主題定向補抓收錄
 
 ### Claude Code 2.1.288 修正 `bash -c` 包裝繞過危險 `rm` 防護，stable 標籤仍停在 2.1.285（2026-10-03 新增）
 
@@ -1194,9 +1232,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-10-07
+- **[🛠️ 新增，官方升級] Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取**：The Hacker News 稱 Glasswing 藉此已找出 129,000 個漏洞，為唯一公開量化成效數字；既有 CVP 誤擋摩擦是否緩解未見官方說明，詳見「## 技術彙整」
+- **[📋 新增，濫用態勢，非 Claude 產品漏洞] CyberSecurityNews：攻擊組織 CyberXero 組合 Claude Code、PentAGI、Cobalt Strike 用於 AI 強化網路攻擊**：僅標題可用，攻擊鏈細節未載，詳見「## 技術彙整」
+- **[🔴 新增，已列入攻擊表] The Hacker News：假冒 ChatGPT、Gemini、Claude 廣告入口網站竊取使用者憑證與雙重驗證碼**：與既有 07-27 假冒 Claude App 廣告案例機制不同，不經惡意軟體下載，詳見「## 技術彙整」
+
 ### 2026-10-06
 - **[📋 新增，待查證] Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險**：具體攻擊鏈、是否為協定規格缺陷均未見報導，僅標題可用，詳見「## 技術彙整」
 - **[📋 新增，官方聲明] The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站**：指控來源與具體範圍未見報導；同日 Reuters／Quartz 報導 Anthropic 向澳洲政府表態支持資安漏洞揭露法規，政府互動面詳見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」
+- **[🔴 新增，非 Claude 專屬] CyberSecurityNews：GitHub Copilot CLI 存在加密提示注入漏洞，可竊取開發者機密**：加密內容繞過一般提示注入偵測，具體攻擊鏈與修補狀態未見報導，詳見「## 技術彙整」
 
 ### 2026-10-04
 - **[📋 新增，非 Claude 事件] dev.to／#anthropic：Mythos 揭露第三方軟體 Rejetto HFS 漏洞（CVE-2026-61500），報告發布隔天即遭在野攻擊**：10-03 開始攻擊，10-04 修補版 3.2.1 釋出，詳見「## 模型網攻能力與防護」

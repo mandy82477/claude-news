@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-06
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-07
+**最後新聞更新：** 2026-10-07
 
-> **最新工作流模式**（2026-10-06）
-> - **Multi-agent 架構添新例**：open-mercato/cezar，開源 orchestrator 平行跑 Claude Code、Codex、OpenCode、Pi。
-> - **記憶與知識管理添 claude-history**：窄化到 Claude Code 單一 agent 的對話歷史模糊搜尋工具。
-> - **Armin Ronacher 重申 Codemode**：別把工具塞進 context，改讓模型寫程式碼呼叫工具。
+> **最新工作流模式**（2026-10-07）
+> - **記憶與知識管理添 token-savior**：結構化程式碼導覽＋持久記憶，作者自測編碼基準達 97.9%、token 降 80%。
+> - **Plugin / MCP 整合添豆包搜索、瑞士求職 CLI**：分別補國產模型連網能力、求職流程 MCP 化。
+> - **機器人控制、依賴地圖首次出現**：ros-mcp-server（1,488★）接 ROS、mellos-mapping 畫即時依賴地圖，皆單一實作新切面。
 
 ---
 
@@ -53,15 +53,15 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-07 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、FrontierAgent、amux、Offrun 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-06 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、claude-code-hooks 外掛市集、精簡輸出外掛、sloppy（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-04 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-02 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-tech-patterns#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander、pipeboard 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander、pipeboard 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-07 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-07 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-07 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
-| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-tech-patterns#2026-10]]） | ⚡ 活躍 | 2026-10-06 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-29 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-tech-patterns#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline、ClaudeTerm（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-06 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **安全架構** | Grepathy、OneCLI、agent-scan、自主 agent 部署閘、ThinkWatch-Lite、WaLiAPI（[[topics/community-tech-patterns#2026-10]]） | ⏳ 新興 | 2026-10-05 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
@@ -185,6 +185,78 @@ Multi-agent 架構與 Skills 設計等四類已是社群定案的做法；還在
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### robotmcp/ros-mcp-server：MCP server 串接 Claude、GPT 與 ROS 機器人（2026-10-07）
+
+- **主線：** —
+- **核心模式：** MCP server 讓 Claude、GPT 等模型透過 MCP 協定與 ROS（Robot Operating System）串接，操控實體機器人；GitHub Search 1,488 星。
+- **與既有模式的關係：** 本表既有類別皆聚焦軟體開發或創作工具鏈，本則首次把 agent 整合延伸到實體機器人控制，與現有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,488★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/robotmcp/ros-mcp-server)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Mibayy/token-savior：結構化程式碼導覽＋持久記憶引擎，自稱將 Claude 編碼基準成績推到 97.9%（2026-10-07）
+
+- **主線：** 索引記憶
+- **核心模式：** MCP server 以結構化程式碼導覽加持久記憶引擎，作者自測在實測編碼基準讓 Claude 達 97.9%（188/192），相較原生 78.3%；同時宣稱有效 token 用量降 80%、耗時降 83%；相容所有 MCP client；GitHub Search 1,165 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（OKF、projectmem 等）一個「結構化導覽＋記憶、附量化基準數字」取向——既有做法多描述機制本身，本則額外給出具體基準成績；跨 session 記憶降低重複探索成本，主線填索引記憶。
+- **可信度註記：** 97.9%／-80%／-83% 均為作者自測數字，無第三方覆核；基準名稱、測試環境與對照方法均未見細節；僅有 GitHub Search 星數（1,165★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Mibayy/token-savior)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### emotixco/claude-skills-founder：給創業者的 Claude Code Skills，從終端機產出產品簡報、競品分析、定價策略、募資 deck 與 GTM 計畫（2026-10-07）
+
+- **主線：** —
+- **核心模式：** 一套 Claude Code skills，鎖定創業者族群，從終端機直接產出產品簡報、競品分析、定價策略、募資 pitch deck 與 go-to-market 計畫；GitHub Search 507 星。
+- **與既有模式的關係：** 為「Skills 設計」補上「創業商業面」這個垂直領域——既有 rsmdt/the-startup 訴求工程面「生產級」技能集合，本則改鎖定非工程的商業產出（簡報、定價、GTM），兩者取向不同、不合併；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（507★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/emotixco/claude-skills-founder)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### alchaincyf/huashu-doubao-search：用豆包搜索補上國產模型版 Claude Code 缺少的連網能力（2026-10-07）
+
+- **主線：** —
+- **核心模式：** MCP server 以豆包搜索（字節系信源）替國產模型版 Claude Code 補上連網搜尋能力，每月 500 次免費額度；GitHub Search 105 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「特定供應商連網能力補位」取向——針對換成國產模型後遺失的官方連網功能，用第三方搜尋 MCP 補回；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（105★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/alchaincyf/huashu-doubao-search)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Stupidoodle/swissdevjobs-cli：零依賴 Python CLI＋MCP server＋Claude Code 外掛，供 agent 搜尋並應徵跨 7 國的透明薪資職缺（2026-10-07）
+
+- **主線：** —
+- **核心模式：** 零依賴 Python CLI，搭配 MCP server 與 Claude Code 外掛，讓終端機或 AI agent 搜尋並應徵約 4,700 個跨 7 國（瑞士、德國、英國、美國、加拿大、荷蘭、法國）的薪資透明技術職缺；GitHub Search 102 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「垂直應用三件套（CLI＋MCP＋plugin）」取向——把特定領域（求職）包成可讓 agent 直接操作的完整工具鏈，而非開發流程本身的輔助；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（102★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Stupidoodle/swissdevjobs-cli)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### GuangminJu/mellos-mapping：由下而上開發用的即時分層依賴地圖，先畫藍圖再隨建置點亮節點（2026-10-07）
+
+- **主線：** —
+- **核心模式：** MCP server＋終端機面板，為 Claude Code、Codex CLI 與任何 MCP client 提供即時分層依賴地圖；設計先以「鬼影」畫出完整架構，節點隨實際建置與驗證通過才點亮；GitHub Search 100 星。
+- **與既有模式的關係：** 本表既有類別未涵蓋「開發進度對照架構圖」這個切面，與現有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（100★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/GuangminJu/mellos-mapping)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### 〈Claude Code Context Is Like a Fridge〉：主對話容量有限，判斷何時該把工作移到 subagent、第二個 session 或 headless 迴圈（2026-10-06）
+
+- **主線：** Context 管理
+- **核心模式：** 文章把主對話比喻成容量有限的冰箱，只放「易腐」的當下工作；提出判斷依據：何時該把工作留在主對話，何時該移到 subagent、第二個 session 或 headless 迴圈執行。
+- **與既有模式的關係：** 補上「Context 管理」既有代表技巧（Just-in-Time @-file、Repo-as-Memory 等）一個「任務分流判斷框架」取向——既有做法多解決「怎麼少佔 context」，本則解決「哪些工作根本不該留在主對話」；context 被工具輸出撐爆是大型 codebase 直接痛點，主線填 Context 管理。
+- **可信度註記：** 作者第一手實作心得，無量化數據佐證，屬方法論而非工具。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/iggredible/claude-code-context-is-like-a-fridge-put-only-perishable-items-in-it-f1p)
+- **成熟度：** ⚡ 活躍（沿用「Context 管理」既有分類，本則補充任務分流判斷框架）
+
+#### 〈How I Made My Autonomous Coding Agent Survive API Rate Limits and Outages〉：錯誤分類器＋抖動重試預算＋跨 agent 斷路器＋存檔暫停，取代直接崩潰（2026-10-06）
+
+- **主線：** —
+- **核心模式：** 作者記錄讓 24/7 執行的自動化編碼 agent 系統挺過 API 429 與過載錯誤的做法：錯誤分類器區分可重試與不可重試錯誤、帶隨機抖動的重試預算、跨平行 agent 共用的斷路器，以及「存檔後暫停」取代直接崩潰。
+- **與既有模式的關係：** 本表既有類別中雖有處理長時間執行穩健性的做法，但鎖定協定層的連線與工具呼叫；本則處理的是模型 API 本身的限流與過載，機制（斷路器、重試預算、跨 agent 共享狀態）不同，與現有類別重疊不足半數，暫不併入既有列；目前僅此一個實作，留待第二個同形式實作出現再判斷是否另立類別（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 作者第一手實作心得，無量化數據或第三方驗證，屬方法論而非工具。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/yureki_lab/how-i-made-my-autonomous-coding-agent-survive-api-rate-limits-and-outages-3912)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者方法論，尚無社群採用回饋數據）
 
 #### open-mercato/cezar：開源協調器，平行執行 Claude Code、Codex、OpenCode、Pi 等多款 agent（2026-10-06）
 

@@ -7397,3 +7397,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **商業**：topics/anthropic-business（補寫 10-06 暫緩的 4 則：Broadcom 600 億美元晶片融資案進入銀行正式 launch、SemiAnalysis 訂閱價值比 5 倍以上、Reuters 揭露 Amodei 去年薪酬 1,800 萬美元、BBC 五角大廈停用後續無新進展；後二者在「還沒過去的風險」加 `訊 2026-10-06`）。entities/pricing、topics/competitor-landscape 前一輪已寫，未重寫。頁首日期維持 10-07。
 - 派工包由 `data/classification-log.jsonl` 的 10-06 分類重建（分類帳未變動），歸因 append 7 行。
 - 歸因 news-pipeline／商業
+
+## 2026-10-07 Ingest
+
+- 來源日報：[[news/2026-10-07]]（78 則原料，日報收錄 28 則）
+- 更新頁面：
+  - **人物**：entities/boris-cherny、entities/jamie-dimon
+  - **功能**：entities/claude-code、topics/claude-code-experimental
+  - **商業**：topics/anthropic-business、entities/pricing、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **模型**：無（今日 2 則 Grok/Claude 整合條目經分類回退改判純商業面，已由商業記者原輪處理）
+  - **社群**：topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline
+- 新增頁面：無
+- 摘要：Pentagon 法院維持對 Anthropic 的供應鏈風險認定、xAI Grok 整合 Claude 模型、CVP 資安驗證計畫擴大為三層存取，是今日三條主線；功能面以 v2.1.292（`--marketplace` 旗標）與三則高互動 GitHub Issue（Termux 失效、`.claude.json` 膨脹、VS Code 刪除對話）為主。
+- 呈現品質：全部通過
+- 品質備註：無
+- 分類回退：追加派工 0 筆、駁回 0 筆——模型記者提出 2 筆回退（Grok 整合兩則應屬商業），核對 `data/classification-log.jsonl` 確認 categories 已含「商業」且商業記者原輪已處理（寫入 topics/anthropic-business），不追加派工，記「已由原輪商業記者處理」
+- 轉知：結案 2 筆（H-66f5c2、H-e8e1fd，皆主編核可「不適用」並 void，理由見帳本）；新開 1 筆 H-ba9d72（社群→功能，entities/claude-code，token-savior 自述基準對原生編碼表現的負向對照，待下輪功能記者查證）
+- devpractice 沉澱：候選 0 筆（今日無官方使用指南類條目）；手冊寫入 0 則
+- market 判讀：判讀 1 則（xAI Grok Bot 整合 Claude／Midjourney／Suno，歸「競品採購 Claude API」新線；其餘今日高曝光條目——DOD 停用、CVP 擴大、Claude Startups、Samsung Foundry、$25B competitor、The Register、Jamie Dimon、Intuitive.ai——逐項核對後皆未達「動到數字／新資訊」門檻，未收）
+- 📋 待使用者確認：
+  1. [商業] Claude for Startups 計畫（免費一年 Claude Team＋$1,000 額度）的官方資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium），累積兩日、10+ 家媒體同口徑報導仍無官方一手頁面佐證，建議查 Anthropic 官方 Claude for Startups 計畫頁
+- 歸因 news-pipeline／人物、功能、商業、安全政策、社群、投資分析

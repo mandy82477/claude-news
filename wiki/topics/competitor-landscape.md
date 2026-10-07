@@ -223,6 +223,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-10-07
+- **Microsoft／GitHub**：Copilot 更新 IDE 修復 agent 活動誤算進用量指標下滑的問題，屬統計修正，非能力或定價變動（Blog/GitHub Copilot Changelog）
+
 ### 2026-10-06
 - **OpenAI**：與 Atlassian 擴大合作，將前沿模型接入 Jira、Confluence 等企業知識庫協助團隊規劃與交付（Blog/OpenAI News）
 - **Reflection**：紐約時報報導開源權重模型新創崛起為 Anthropic 新挑戰者，具體模型規格與數字未見報導（Google News/The New York Times）
