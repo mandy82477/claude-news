@@ -236,8 +236,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "c80634abd78802ac487c3e642a45ce4f2dc6a24dcc4d6b2fb2ca63075ae42ed0",
-    "length": 84975,
+    "hash": "80269c3846e86ba94d631a75b5a96a656c82cd9fa9adbd8c59a8c9f75ee8132c",
+    "length": 84982,
     "segments": [
       "\"args\": [\"--verbose\"],",
       "\"autoPort\": false",
@@ -389,7 +389,7 @@
       "* **Third-party providers**: Desktop connects to Anthropic's API by default. To route Desktop through a gateway, or to run the Code tab on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry, or a self-hosted LLM gateway, follow the links in the [Third-party providers row](#feature-comparison).",
       "* **Unhide apps when Claude finishes**: when computer use isn't running in the background, Claude hides your other windows while it works so it interacts with only the approved app. When Claude finishes, hidden windows are restored unless you turn this setting off.",
       "* **WSL** (Windows): runs inside a [WSL 2 distribution](/docs/en/desktop-wsl) on your machine, using its Linux toolchain and native paths",
-      "* **Windows**: click **Help**, then **About**",
+      "* **Windows**: click **Help**, then **About Claude**",
       "* **Windows**: configure via registry at `SOFTWARE\\Policies\\Claude`",
       "* **Windows**: deploy via the MSIX package. See [Deploy Claude Desktop for Windows](https://support.claude.com/en/articles/12622703-deploy-claude-desktop-for-windows) for enterprise deployment options including silent installation",
       "* **Windows**: press **Ctrl+Enter**",
@@ -773,7 +773,7 @@
     ]
   },
   "https://claude.com/pricing": {
-    "hash": "ae5f2f215657fd48c8485c82dd5530301110997da3c3e057f201f723a540c8c8",
+    "hash": "a5ef131dd1049a39a56a3248c88eb6f323133d1b2d8945b5df38d16ce4faed0d",
     "length": 21281,
     "segments": [
       "$0.05 per hour per container",
@@ -967,7 +967,7 @@
       "Per month with annual subscription discount ( $200 billed up front). $20 if billed monthly.",
       "Per seat / month if billed annually. $125 if billed monthly. Claude Code and Claude Cowork",
       "Per seat / month if billed annually. $25 if billed monthly. Premium seat",
-      "Plans &amp; Pricing | Claude by Anthropic",
+      "Plans &amp; pricing | Claude by Anthropic",
       "Plans and usage Billing and payments Managing your plan Plans and usage",
       "Policy on the AI Exponential",
       "Powered by Claude",
@@ -1048,8 +1048,8 @@
     ]
   },
   "https://platform.claude.com/docs/en/about-claude/pricing": {
-    "hash": "ae7da1f407a5f626f221850a6ecdd005aec0299906b25188c367eda426369dd3",
-    "length": 28022,
+    "hash": "2033fb9c82bf97645e988bd935be934f0c6447a04e02b7563a0d95e03dee7fc0",
+    "length": 28036,
     "segments": [
       "\"cache_creation_input_tokens\" : 0 ,",
       "\"cache_creation_input_tokens\" : 7345 ,",
@@ -1100,7 +1100,7 @@
       "Build tier: Increased limits for growing applications",
       "CCU price $0.01 per CCU (fixed; discounts apply at token-to-CCU conversion, not to the CCU price)",
       "Cache operation Multiplier Duration",
-      "Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1; 0.05x on Claude Opus 5.5) Same duration as the preceding write",
+      "Cache read (hit) 0.1x base input price (0.025x on Claude Fable 5.1 and Claude Mythos 5.1; 0.05x on Claude Opus 5.5 ) Same duration as the preceding write",
       "Cache read tokens 40,000 × $5 × 0.1 / 1,000,000 $0.02",
       "Cache write tokens are charged when content is first stored. Cache read tokens are charged when a subsequent request retrieves the cached content. A cache hit costs 10% of the standard input price, which means caching pays off after one cache read for the 5-minute duration (1.25x write), or after two cache reads for the 1-hour duration (2x write). On Claude Fable 5.1 and Claude Mythos 5.1, a cache hit costs 2.5% of the standard input price ($0.25 USD per million tokens). On Claude Opus 5.5, a cache hit costs 5% of the standard input price ($0.20 USD per million tokens).",
       "Claude 4.6 and later models and Claude Mythos Preview include the full 1M token context window at standard pricing. (A 900k-token request is billed at the same per-token rate as a 9k-token request.) Prompt caching and batch processing discounts apply at standard rates across the full context window.",
@@ -1306,7 +1306,7 @@
       "SDKs, CLI, and libraries",
       "SKU Rate Metering",
       "Scale tier: Highest standard limits for production workloads",
-      "Scope: This pricing structure applies to Claude Sonnet 4.5, Haiku 4.5, Opus 4.5, and all future models. Earlier models (Claude Opus 4.1 and prior releases) retain their existing pricing.",
+      "Scope: This pricing structure applies to Claude Sonnet 4.5 (deprecated), Haiku 4.5, Opus 4.5, and all future models. Earlier models (Claude Opus 4.1 and prior releases) retain their existing pricing.",
       "Screenshot and zoom images returned in tool results, billed as image input (see Vision pricing )",
       "Security and compliance",
       "See tool use pricing for complete pricing details.",
