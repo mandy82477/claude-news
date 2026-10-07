@@ -7,12 +7,12 @@ domain: "💼 商業"
 last_updated: "2026-10-06"
 last_news_update: "2026-10-06"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 137
+days_since_news_subtree: 1
+inbound_links: 168
 attribution_count: 126
 attribution_last: "2026-10-06"
 top_source: "google-news"

@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-04"
 last_news_update: "2026-06-30"
 status_main: "resolved"
-days_since_news: 98
+days_since_news: 99
 parent: "topics/anthropic-government-policy"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 98
+days_since_news_subtree: 99
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
