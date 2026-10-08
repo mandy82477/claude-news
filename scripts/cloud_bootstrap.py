@@ -2,7 +2,8 @@
 """cloud_bootstrap.py — 雲端沙盒的環境自備補丁（冪等，可重複執行）。
 
 雲端 routine 每次都是全新容器。第一件事是把 git 從 detached HEAD 歸位到 master
-（`ensure_on_master()`，理由見該函式）；接著補該環境預設缺的三個東西：
+（`ensure_on_master()`，理由見該函式）；接著把 `src/requirements_news.txt` 裡缺的套件
+裝齊（2026-10-07 起映像連 requests 都不帶），以及歷史上最難裝的三個：
 
   1. `python-dotenv` — `main.py` 匯入鏈的第一步就撞這個
   2. `feedparser`     — 所有 RSS 來源與 blogroll 依賴
@@ -32,6 +33,7 @@ from __future__ import annotations
 import builtins
 import importlib.util
 import io
+import re
 import subprocess
 import sys
 import sysconfig
@@ -56,13 +58,35 @@ def print(*args, **kwargs):  # noqa: A001 - 蓋掉內建 print，確保永不因
     except UnicodeEncodeError:
         builtins.print(*(str(a).encode("ascii", "replace").decode() for a in args), **kwargs)
 
-PIP_PACKAGES = [
-    ("dotenv", "python-dotenv"),
-    # feedparser 6.0.14 起把依賴從壞掉的 sgmllib3k 換成正常出 wheel 的
-    # feedparser-sgmllib（見 ensure_pip_packages 說明），所以這裡鎖下界並讓 pip
-    # 正常解析依賴，不再 --no-deps
-    ("feedparser", "feedparser>=6.0.14"),
-]
+REQUIREMENTS = Path(__file__).resolve().parent.parent / "src" / "requirements_news.txt"
+
+# 套件名與 import 名不同的才列；其餘取套件名（- 換 _）
+_IMPORT_NAME = {"python-dotenv": "dotenv"}
+
+
+def _requirements(path: Path = REQUIREMENTS) -> list[tuple[str, str]]:
+    """需求清單的單一來源是 src/requirements_news.txt，回傳 [(import 名, pip 規格)]。
+
+    2026-10-07 雲端映像不再預裝 `requests`：本檔當時只寫死 dotenv、feedparser 兩項，
+    `--confirm-digest` 撞 ModuleNotFoundError、測試套件大片紅、網站跳過。寫死清單
+    會跟需求檔失步，所以改為直接讀需求檔。讀不到時退回最小清單。
+    feedparser 在需求檔鎖 >=6.0.14（上游換掉壞掉的 sgmllib3k，見 ensure_pip_packages）。
+    """
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return [("dotenv", "python-dotenv"), ("feedparser", "feedparser>=6.0.14")]
+    out: list[tuple[str, str]] = []
+    for raw in lines:
+        spec = raw.split("#", 1)[0].strip()
+        if not spec:
+            continue
+        name = re.split(r"[<>=!~\[; ]", spec, 1)[0].strip()
+        out.append((_IMPORT_NAME.get(name.lower(), name.lower().replace("-", "_")), spec))
+    return out
+
+
+PIP_PACKAGES = _requirements()
 
 
 def _have(module: str) -> bool:
