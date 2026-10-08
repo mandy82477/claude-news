@@ -73,7 +73,7 @@ python -c "import io,re;t=io.open('wiki/topics/community-tech-patterns.md',encod
 
 ### 9. 技術彙整書寫規則
 
-**月份分組（patterns / discussions 兩頁的 `## 技術彙整` 皆適用）：** 條目按 `### YYYY-MM` 月份標題分組，條目本身用 `####` 層級。此分組提供跳轉導航，是「頁面不拆分」前提下的替代方案。
+**月份分組（patterns / discussions 兩頁的 `## 技術彙整` 皆適用）：** 條目按 `### YYYY-MM` 月份標題分組，條目本身用 `####` 層級。此分組只提供跳轉導航；頁面拆不拆依 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」（正文逾 600 行須交代切法，依節點類別分群、不按月切）。
 
 **格式：**
 ```markdown
@@ -145,7 +145,7 @@ python -c "import io,re;t=io.open('wiki/topics/community-tech-patterns.md',encod
 
   重燃偵測：直接查日期欄點前那個日期，不需讀取 log.md。
 
-- **技術彙整保留**：條目長期保留於原頁（月份分組即入口層，見 `.claude/reporter-rules/page-lifecycle.md`「頁面拆分原則」）；收斂月份的減重走時段蒸餾機制，不再歸檔至獨立時序頁；封存一律走 `topics/community-tech-discussions-archive`。
+- **技術彙整保留**：條目長期保留於 patterns 這棵樹（母頁或依類別拆出的子頁，見 `.claude/reporter-rules/page-lifecycle.md`「頁面拆分原則」）；收斂月份的減重走時段蒸餾機制，不再歸檔至獨立時序頁；封存一律走 `topics/community-tech-discussions-archive`。
 
 ### 3. community-tech-discussions 的 index 鉤子失效轉知
 

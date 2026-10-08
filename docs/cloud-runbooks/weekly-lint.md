@@ -34,6 +34,7 @@
 | `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 明寫 `model` |
 | `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
 | `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；探測通了但 `anthropics/claude-code` 未授權（MCP 回 not configured、`gh` token 失效）→ 寫「repo 授權不足，跳過」，不擴權 |
+| `wiki-lint-sweeps` `5o. 厚頁清單（主編親做）` | 照做（純本機讀檔，不需 egress）；待拆頁只進待使用者確認區，雲端不開拆頁波 |
 | `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh issue view`／`gh api`；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；repo 未授權同 5m 列 |
 | `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
 | `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
