@@ -1,3 +1,29 @@
+---
+page: "entities/haiku-5-5"
+kind: "entity"
+type: "model"
+status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
+domain: "🤖 模型"
+last_updated: "2026-10-08"
+last_news_update: "2026-10-08"
+status_main: "active"
+days_since_news: 0
+parent: null
+children: "[]"
+page_role: "root"
+days_since_news_subtree: 0
+inbound_links: 15
+attribution_count: 13
+attribution_last: "2026-10-08"
+top_source: "google-news"
+pending_count: 1
+pending_overdue: 0
+pending_next_review: "2026-10-22"
+pending_signalled: 0
+staleness_exempt: null
+signal: "健康"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Claude Haiku 5.5
 
 **類型：** model

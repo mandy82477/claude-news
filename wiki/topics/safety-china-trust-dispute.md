@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-09-26"
 last_news_update: "2026-07-11"
 status_main: "monitoring"
-days_since_news: 88
+days_since_news: 89
 parent: null
 children: "['topics/safety-china-trust-dispute-archive']"
 page_role: "hub"
-days_since_news_subtree: 88
+days_since_news_subtree: 89
 inbound_links: 18
 attribution_count: 0
 attribution_last: null

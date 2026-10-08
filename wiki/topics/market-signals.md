@@ -12,10 +12,10 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 15
-attribution_count: 63
+attribution_count: 65
 attribution_last: "2026-10-07"
 top_source: "google-news"
-pending_count: 35
+pending_count: 38
 pending_overdue: 7
 pending_next_review: "2026-10-09"
 pending_signalled: 6

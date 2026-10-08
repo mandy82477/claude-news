@@ -3,8 +3,8 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-06"
-last_news_update: "2026-10-06"
+last_updated: "2026-10-07"
+last_news_update: "2026-10-07"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/community-tech-patterns-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 67
-attribution_count: 257
-attribution_last: "2026-10-06"
+attribution_count: 265
+attribution_last: "2026-10-07"
 top_source: "github"
 pending_count: 3
 pending_overdue: 1

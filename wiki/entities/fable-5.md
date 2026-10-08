@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-05"
 last_news_update: "2026-10-05"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 64
 attribution_count: 38
 attribution_last: "2026-10-05"
