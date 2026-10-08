@@ -4,10 +4,10 @@
 
 | 契約字串 | 消費端 | 改壞的後果 |
 |---|---|---|
-| 頭條標題 `## 一、頭條敘事：<一句話>`（`頭條敘事` 四字不可省——`build_web.py` 以 `"頭條" in title` 認節；冒號後為標題本體） | `check_weekly_ledger.py` HEADLINE_DECK_RE（硬擋，W36 起）、`build_web.py` 節切分、`app.js` `weeklyHeadlineDeck()` 渲染副標 | 缺冒號後半 → 硬擋；`頭條敘事` 被拿掉 → 整節不進 JSON |
+| 頭條標題 `## 一、頭條敘事：<一句話>`（冒號後 ≤60 字；`頭條敘事` 四字不可省——`build_web.py` 以 `"頭條" in title` 認節；冒號後為標題本體） | `check_weekly_ledger.py` HEADLINE_DECK_RE／HEADLINE_DECK_MAX（硬擋，W36 起）、`build_web.py` 節切分、`app.js` `weeklyHeadlineDeck()` 渲染副標 | 缺冒號後半 → 硬擋；`頭條敘事` 被拿掉 → 整節不進 JSON |
 | ~~`> **本週一句話**：`~~（**2026-09-06 退場**，併入上一列） | `build_web.py` WEEKLY_LEDE_RE 仍在（W30–W34 已凍結期數要渲染） | 新期不再寫；程式不刪，刪了舊期副標會消失 |
-| 節標題 `## 一、…`／`## 四、本週數字`（編號＋字面） | `check_weekly_ledger.py` HEADLINE_SECTION_RE、NUMBERS_HEADING_RE | 頭條十條規則與數字檢查**靜默跳過**（不報錯） |
-| 討論段子標題 `### 本週版本`／`### 討論綜述`／`### 深挖：本期記者專文`（底下每篇 `#### 專欄名｜標題`） | `build_web.py` 討論子段切分（h3）、`check_weekly_ledger.py` check_deepdive | versionNote／roundup／deepDive 變 None，內容被併進整段 body |
+| 節標題 `## 一、…`／`## 四、本週數字`（編號＋字面） | `check_weekly_ledger.py` HEADLINE_DECK_RE、NUMBERS_HEADING_RE | 頭條標題與數字檢查**靜默跳過**（不報錯） |
+| 討論段子標題 `### 本週版本`／`### 討論綜述`／`### 深挖：`（契約只到冒號，冒號後自由；底下每篇 `#### 專欄名｜標題`） | `build_web.py` 討論子段切分（h3）、`check_weekly_ledger.py` check_deepdive | versionNote／roundup／deepDive 變 None，內容被併進整段 body |
 | 行動清單小標 `### 本週要動的事`（第二節最後一個 h3，選用）；無事時內文 `本週沒有需要動的事` | `build_web.py` 討論子段切分 → `discussion.actions`、`app.js` `.weekly-actions` | 清單不上站 |
 | 新開表頭 `\| 類型 \| 預告 \| 判準 \|` | `build_web.py` WEEKLY_FORECAST_HEADER_RE、`check_weekly_ledger.py` FORECAST_HEADER_RE | 新開表整張不進 JSON，條數與查證線索檢查全部落空 |
 | 新開小標 `### 下週值得關注：新開 N 條` | `check_weekly_ledger.py` 導言檢查（`build_web` 不認此小標） | 導言缺漏檢查失效（⚠️ 級） |

@@ -437,7 +437,7 @@ def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool
         three = SECTION_THREE_RE.search(text)
 
         # 第三、四節與檔尾不放編輯台的帳
-        # 判準欄是凍結的程式契約（deepdive.md「讀者版禁用內部詞」射程），不查
+        # 判準欄是凍結的程式契約（columns.md「全篇通則」讀者語言的射程），不查
         tail = text[three.start():] if three else ""
         prose = [l for l in tail.splitlines() if not l.lstrip().startswith("|")]
         cells = [c for r in _parse_table(tail, RECAP_HEADER_RE) for c in (r[0], r[-1])]

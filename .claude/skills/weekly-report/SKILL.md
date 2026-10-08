@@ -49,7 +49,7 @@ disable-model-invocation: true
 
 | 段 | 規範檔 |
 |---|---|
-| (1) 頭條（本週最多讀者在意的一件事，300–500 字） | `.claude/skills/weekly-report/references/headline.md` |
+| (1) 頭條（給誰看、怎麼選、字數都住右欄） | `.claude/skills/weekly-report/references/headline.md` |
 | (2) 技術討論＋專欄（本週版本／討論綜述／記者專欄三取二／本週要動的事） | `.claude/skills/weekly-report/references/columns.md` |
 | (3) 下週看什麼（新開表在上、回收表在下） | `.claude/skills/weekly-report/references/forecast.md` |
 | (4) 檔尾數字（2–5 個讀者用得上的數字，條列不得寫成表格） | `.claude/skills/weekly-report/references/forecast.md` |
@@ -58,7 +58,7 @@ disable-model-invocation: true
 
 ### 5. 凍結存檔
 
-寫入 `weekly/YYYY-Wnn.md` 後視為當週凍結版本，不因後續 ingest 回頭修改（下週報若要回收上週對錯，於新一期第 (3) 段處理，不修舊檔）。唯一例外：同日發現、同日改的可讀性缺陷（見 `.claude/skills/weekly-report/references/headline.md`）。
+寫入 `weekly/YYYY-Wnn.md` 後視為當週凍結版本，不因後續 ingest 回頭修改（下週報若要回收上週對錯，於新一期第 (3) 段處理，不修舊檔）。唯一例外：同日發現、同日改的可讀性缺陷——凍結擋的是「因後續 ingest 回頭改事實」，不是「讀者說看不懂而改寫法」；事實一個字都沒動時，當天可以改寫。
 
 ### 6. 收尾閉迴路
 
