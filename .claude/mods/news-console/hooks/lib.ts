@@ -187,9 +187,12 @@ function tokens(seg: string): string[] {
   return out
 }
 
-/** 指令裡每個 git add／commit：{ sub, pathspecs }。git 必須是該段的程式名。 */
-export function gitStageCalls(command: string): { sub: 'add' | 'commit'; pathspecs: string[] }[] {
-  const out: { sub: 'add' | 'commit'; pathspecs: string[] }[] = []
+/**
+ * 指令裡每個 git add／commit：{ sub, pathspecs, all }。git 必須是該段的程式名。
+ * all：commit 帶 -a／--all（含 -am 這類合寫），會把所有改過的追蹤檔一起 commit。
+ */
+export function gitStageCalls(command: string): { sub: 'add' | 'commit'; pathspecs: string[]; all: boolean }[] {
+  const out: { sub: 'add' | 'commit'; pathspecs: string[]; all: boolean }[] = []
   for (const t of commands(command)) {
     if (!/(^|[\\/])git(\.exe)?$/.test(t[0])) continue
     let i = 1
@@ -201,7 +204,9 @@ export function gitStageCalls(command: string): { sub: 'add' | 'commit'; pathspe
     const specs = sub === 'commit'
       ? (dd >= 0 ? rest.slice(dd + 1) : [])
       : rest.filter((a, k) => (dd >= 0 && k > dd) || !a.startsWith('-'))
-    out.push({ sub: sub === 'commit' ? 'commit' : 'add', pathspecs: specs })
+    const flags = dd >= 0 ? rest.slice(0, dd) : rest
+    const all = sub === 'commit' && flags.some((a) => a === '--all' || /^-[A-Za-z]*a/.test(a))
+    out.push({ sub: sub === 'commit' ? 'commit' : 'add', pathspecs: specs, all })
   }
   return out
 }
@@ -214,7 +219,8 @@ export function underSpec(path: string, spec: string): boolean {
 
 /**
  * 這次 add／commit 會納入、屬於別的活著的 session、本 session 沒動過的檔。
- * candidates：已 staged ＋ add 點名範圍內的髒檔。
+ * candidates：會被帶走的 staged（有不點名的 commit 才算）＋ add／commit 點名範圍內的髒檔
+ * ＋ commit -a 時的全部髒檔。
  */
 export function foreignHits(candidates: string[], mine: Set<string>, foreign: Map<string, Set<string>>) {
   const hits = new Set<string>()

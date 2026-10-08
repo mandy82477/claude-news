@@ -35,8 +35,11 @@ async function git($: any, args: string[], timeoutMs = 25_000) {
   }
 }
 
-async function checkOrigin($: any) {
-  const fetched = await git($, ['fetch', '--quiet', 'origin'])
+// fetch=false：只用本機 refs 重算（不連網、很快）。push／merge／pull 之後與送出 prompt 前用它，
+// 否則狀態要等下一次 10 分鐘的背景 fetch 才更新——2026-10-08 本 session 合併並推送後，
+// 提示列與給 Claude 的警告還停在「分岔：遠端多 2 筆、本機 1 筆未推」。
+async function checkOrigin($: any, fetch = true) {
+  const fetched = fetch ? await git($, ['fetch', '--quiet', 'origin']) : null
   const counts = parseAheadBehind((await git($, ['rev-list', '--left-right', '--count', 'HEAD...origin/master'])).stdout)
   const subject = (await git($, ['log', '-1', '--format=%s', 'origin/master'])).stdout.trim()
   const digest = latestDigest((await git($, ['ls-tree', '--name-only', 'origin/master', 'news/'])).stdout)
@@ -50,7 +53,7 @@ async function checkOrigin($: any) {
     subject,
     digest,
     shiftAlert: classifyShift(log.split('\n').slice(-400).join('\n'), parked, now).alert,
-    error: fetched.exitCode === 0 ? null : 'git fetch 失敗，落後筆數可能過時',
+    error: fetched ? (fetched.exitCode === 0 ? null : 'git fetch 失敗，落後筆數可能過時') : (sync?.error ?? null),
     checkedAt: now,
   }
   // 狀態列常駐一行：同步時也看得到 mod 活著（提示列與提示行只在出事時顯眼）
@@ -137,6 +140,13 @@ export function register(on: any) {
   // ── 1. 只給 Claude 的一行警告 ───────────────────────────────
   on('prompt.submit', async ($: any, e: any, next: any) => {
     if (!active || !sync || sync.behind === 0) return next(e)
+    // 警告前先用本機 refs 重算：使用者或 Claude 可能剛拉取、合併、推送過
+    try {
+      await checkOrigin($, false)
+    } catch {
+      // 重算失敗就沿用上次結果
+    }
+    if (sync.behind === 0) return next(e)
     const s = syncSummary(sync.ahead, sync.behind)
     const line = s.canFastForward
       ? `⚠️ 本機 clone 落後 origin/master ${sync.behind} 筆（最新：${sync.subject}）。` +
@@ -224,9 +234,15 @@ export function register(on: any) {
     if (calls.length) {
       const foreign = await liveForeign($)
       if (foreign.size) {
-        const staged = (await git($, ['diff', '--cached', '--name-only'])).stdout.split('\n').filter(Boolean)
+        // 點名路徑的 commit（`commit -- <路徑>`）只帶走點名的檔，別人放在暫存區的不會跟著進去；
+        // 只有不點名的 commit 才會把整個暫存區帶走。commit -a 則帶走所有改過的檔
+        const wholeIndex = calls.some((c) => c.sub === 'commit' && !c.pathspecs.length)
+        const staged = wholeIndex
+          ? (await git($, ['diff', '--cached', '--name-only'])).stdout.split('\n').filter(Boolean)
+          : []
         const named = calls.flatMap((c) => c.pathspecs)
-        const candidates = [...new Set([...staged, ...[...before].filter((p) => named.some((s) => underSpec(p, s)))])]
+        const swept = calls.some((c) => c.all) ? [...before] : [...before].filter((p) => named.some((s) => underSpec(p, s)))
+        const candidates = [...new Set([...staged, ...swept])]
         const mine = await touchedOf($, sessionId)
         const hit = foreignHits(candidates, mine, foreign)
         if (hit.files) {
@@ -248,6 +264,14 @@ export function register(on: any) {
       await addTouched($, fresh)
     } catch {
       // 歸屬記帳失敗不影響指令結果
+    }
+    // 會移動 HEAD 或 origin/master 的 git 指令跑完，馬上重算落後／分岔（不 fetch）
+    if (sync && /\bgit\b[^\n]*\b(push|pull|merge|rebase|reset|fetch|commit|cherry-pick|checkout|switch)\b/.test(command)) {
+      try {
+        await checkOrigin($, false)
+      } catch {
+        // 重算失敗不影響指令結果
+      }
     }
     return result
   })

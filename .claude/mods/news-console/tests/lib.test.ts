@@ -66,12 +66,16 @@ test('paths: relTo, porcelain, pathspecs', async () => {
 
 test('git add/commit calls are found only at command start', async () => {
   expect(gitStageCalls('git add wiki/ data/x.jsonl && git commit -m "x"')).toEqual([
-    { sub: 'add', pathspecs: ['wiki/', 'data/x.jsonl'] },
-    { sub: 'commit', pathspecs: [] },
+    { sub: 'add', pathspecs: ['wiki/', 'data/x.jsonl'], all: false },
+    { sub: 'commit', pathspecs: [], all: false },
   ])
-  expect(gitStageCalls('git -C "D:/r" add -- wiki/a.md')).toEqual([{ sub: 'add', pathspecs: ['wiki/a.md'] }])
+  expect(gitStageCalls('git -C "D:/r" add -- wiki/a.md')).toEqual([{ sub: 'add', pathspecs: ['wiki/a.md'], all: false }])
   expect(gitStageCalls('echo "git add wiki/"; grep "git commit" x')).toEqual([])
-  expect(gitStageCalls('git commit -m "fix; git add . later"')).toEqual([{ sub: 'commit', pathspecs: [] }])
+  expect(gitStageCalls('git commit -m "fix; git add . later"')).toEqual([{ sub: 'commit', pathspecs: [], all: false }])
+  // -a／--all／-am 都會帶走所有改過的追蹤檔
+  expect(gitStageCalls('git commit -am "x"')[0].all).toBe(true)
+  expect(gitStageCalls('git commit --all -m x')[0].all).toBe(true)
+  expect(gitStageCalls('git commit -m x -- wiki/a.md')).toEqual([{ sub: 'commit', pathspecs: ['wiki/a.md'], all: false }])
 })
 
 test('foreign hits count files and sessions, never mine', async () => {

@@ -3,12 +3,12 @@ import { expect, mock, test } from 'claude-code/testing'
 const ROOT = '/work/claude-news'
 
 // 一個假的 git：依 argv 回答，讓測試決定落後幾筆、髒檔有哪些
-function fakeGit(state: { behind: number; dirty: string[]; staged?: string[]; log?: string }) {
+function fakeGit(state: { behind: number; ahead?: number; dirty: string[]; staged?: string[]; log?: string }) {
   return ($: any, e: any) => {
     const a = e.argv.slice(1).join(' ')
     const out = (stdout: string) => ({ value: { exitCode: 0, stdout, stderr: '' } })
     if (a.startsWith('fetch')) return out('')
-    if (a.startsWith('rev-list')) return out(`0\t${state.behind}\n`)
+    if (a.startsWith('rev-list')) return out(`${state.ahead ?? 0}\t${state.behind}\n`)
     if (a.startsWith('log -1')) return out('wiki: auto-ingest 2026-10-02\n')
     if (a.startsWith('ls-tree')) return out('news/2026-10-01.md\nnews/2026-10-02.md\n')
     if (a.startsWith('show')) return out(state.log ?? '')
@@ -176,4 +176,80 @@ test('status line always says where sync stands', async ($, on) => {
   await $.session.start({ surface: 'terminal', isInteractive: true, cwd: ROOT })
   await clock.advance(2000)
   expect(statusLines.at(-1)).toBe('news ✓ 已同步　日報 10-02')
+})
+
+test('after merging and pushing, the diverged warning clears at once (no 10-minute wait)', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 8, 12) })
+  const saved = new Map<string, unknown>()
+  stubCommon(on, saved)
+  const state = { behind: 2, ahead: 1, dirty: [] as string[] }
+  on('process.run', fakeGit(state))
+  on('prompt.submit', ($: any, e: any) => ({ text: e.text, context: e.context }))
+  on('ui.render', () => ({ type: 'Text', props: {}, children: ['engine'] }))
+
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  await clock.advance(2000)
+  const first: any = await $.prompt.submit({ text: 'x' })
+  expect(String(first.context)).toMatch(/分岔/)
+
+  // Claude 在 Bash 合併並推送：refs 變了，背景 fetch 還要 10 分鐘才會跑
+  state.behind = 0
+  state.ahead = 0
+  await $.tool.call({ tool: 'Bash', command: 'git merge -q --no-edit origin/master && git push -q' })
+  const ui = await $.ui.mount(BAND)
+  expect(await ui.find({ type: 'Text', text: /分岔/ })).toBeUndefined()
+  expect(statusLines.at(-1)).toBe('news ✓ 已同步　日報 10-02')
+  const after: any = await $.prompt.submit({ text: 'y' })
+  expect(String(after.context ?? '')).not.toMatch(/分岔|落後/)
+})
+
+test('refs changed outside Claude (terminal pull) are rechecked before warning', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 8, 12) })
+  const saved = new Map<string, unknown>()
+  stubCommon(on, saved)
+  const state = { behind: 3, dirty: [] as string[] }
+  on('process.run', fakeGit(state))
+  on('prompt.submit', ($: any, e: any) => ({ text: e.text, context: e.context }))
+
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  await clock.advance(2000)
+  state.behind = 0 // 使用者自己在終端機 git pull
+  const sent: any = await $.prompt.submit({ text: 'x' })
+  expect(String(sent.context ?? '')).not.toMatch(/落後/)
+})
+
+test('a commit naming its own paths is not blocked by another session\'s staged file', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 8, 12) })
+  const saved = new Map<string, unknown>([
+    ['alive:other', Date.UTC(2026, 9, 8, 11, 50)],
+    ['p:other:skills/deepdive.md', 1],
+    ['p:me:hooks/register.ts', 1],
+  ])
+  stubCommon(on, saved)
+  // 另一個 session 把刪檔放進了共用暫存區
+  on('process.run', fakeGit({ behind: 0, dirty: ['hooks/register.ts', 'skills/deepdive.md'], staged: ['skills/deepdive.md'] }))
+
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  await clock.advance(10)
+  // 不點名的 commit 會把整個暫存區帶走：擋
+  const whole: any = await $.tool.call({ tool: 'Bash', command: 'git add hooks/register.ts && git commit -m x' })
+  expect(String(whole.deny)).toMatch(/1 個別的 session/)
+  // 點名路徑的 commit 只帶走點名的檔：放行
+  const only: any = await $.tool.call({ tool: 'Bash', command: 'git commit -m x -- hooks/register.ts' })
+  expect(only.deny).toBeUndefined()
+})
+
+test('commit -a sweeps every dirty file, so another session\'s edits block it', async ($, on) => {
+  const clock = mock.clock(on, { now: Date.UTC(2026, 9, 8, 12) })
+  const saved = new Map<string, unknown>([
+    ['alive:other', Date.UTC(2026, 9, 8, 11, 50)],
+    ['p:other:wiki/their.md', 1],
+  ])
+  stubCommon(on, saved)
+  on('process.run', fakeGit({ behind: 0, dirty: ['wiki/their.md', 'wiki/mine.md'] }))
+
+  await $.session.start({ surface: 'desktop', isInteractive: true, cwd: ROOT })
+  await clock.advance(10)
+  const r: any = await $.tool.call({ tool: 'Bash', command: 'git commit -am "x"' })
+  expect(String(r.deny)).toMatch(/1 個別的 session/)
 })
