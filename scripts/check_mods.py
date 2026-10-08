@@ -24,6 +24,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MODS = ROOT / ".claude" / "mods"
 MIN_VERSION = (2, 1, 287)
+RUNNER_DIED = "ended without a report"  # claude plugin test 執行器被殺的簽名（exit code 9／3，無任何測試結果）
+RUNNER_RETRIES = 2
 
 
 def _run(args: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess:
@@ -71,6 +73,13 @@ def main() -> int:
             failed.append((rel, "validate --strict", v.stdout + v.stderr))
             continue
         t = _run([claude, "plugin", "test", str(mod)], cwd=mod)
+        # 測試執行器在 CPU 吃緊時會直接死掉（「its run ended without a report (exit code 9)」），
+        # 單跑三次全綠、run_tests 裡接在整套 unittest 後面就偶爾紅——是執行器的事不是 mod 的事。
+        # 只對這個簽名重試，真正的測試失敗（有 report 的 fail）一次就報。
+        for _ in range(RUNNER_RETRIES):
+            if t.returncode == 0 or RUNNER_DIED not in (t.stdout + t.stderr):
+                break
+            t = _run([claude, "plugin", "test", str(mod)], cwd=mod)
         if "hooks modules are turned off" in (t.stdout + t.stderr):
             out.write(f"WARN: check_mods — {rel}：此環境不允許載入 mod，跳過 plugin test\n")
             skipped.append(rel)
