@@ -50,7 +50,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
    - **雲端**（無瀏覽器）：`Read` 該頁的 build 產物（`web_reader/data/wiki/<slug>.json`），確認本輪改動的段落確實出現在產物中、且沒有被解析器吞掉
    - 發現渲染層問題 → 修 `web_reader/` 或改 wiki 寫法後重跑 build；修不掉則記入待確認區
 
- > **為什麼不能只信 build 綠燈**：`build_web.py` 只證明「資料層對」，不證明「讀者看到的東西對」；全域 `REVIEW-PRINCIPLES.md` 第 11 條明言 DOM／資料斷言不可替代眼睛驗收。（沿革檔 2026-08-09）
+ > **為什麼不能只信 build 綠燈**：`build_web.py` 只證明「資料層對」，不證明「讀者看到的東西對」；全域 `REVIEW-PRINCIPLES.md` 第 9 條明言 DOM／資料斷言不可替代眼睛驗收。（沿革檔 2026-08-09）
 
 4. **心跳紀錄（無論成功／no-op／中止都必須寫）**：append 一行結果到 `src/logs/task_scheduler.log`（格式沿用該檔既有慣例，如 `[週六 YYYY/MM/DD hh:mm:ss.00] Weekly lint OK - 修 N 頁，M 項待確認，測試/build/push 結果`；no-op 寫 `Weekly lint OK (no-op) - 無頁面需修正`；中途失敗寫 `Weekly lint FAILED - <卡在哪一步>`）→ `git -C REPO_ROOT add src/logs/task_scheduler.log` → `git -C REPO_ROOT commit -m "chore: weekly lint heartbeat YYYY-MM-DD"`。**這一步是本步驟序列中唯一保證產生 commit 的步驟**——目的是讓「跑了但無事可改」與「靜默死亡」在 GitHub 上可分辨。對應每日 pipeline 的 `.claude/skills/web-publish/SKILL.md`「Step 6」（無論前面成敗都必須寫），本機與雲端行為一致。
 4b. **命中帳（每輪必記）**：`python scripts/lint_health.py hits record --date YYYY-MM-DD --rules-rev <規則版本> --step 3a=N --step 3b=N … --step 7b=N`——每個執行過的步驟各一筆命中數（0 也要記，零命中才是訊號），`data/lint_step_hits.jsonl` 併入本步 push
