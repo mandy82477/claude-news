@@ -1,0 +1,825 @@
+{
+  "date": "2026-10-08",
+  "generatedAt": "2026-10-08 22:15 UTC",
+  "articleCount": 85,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Anthropic's new budget model gets much better at ignoring hidden commands",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5aQlFGYTQwWEp6TkhTZnc2Q2hEQ2MyZGV6RkJNTWNwenVqYUxROVhtTjU5LXpxRXplYnlkZEFfbzllQldCQnZOWUJjS1ZEWDZSRTQyQzh3Q3F6VWw5MGY1anpCQWcxVm44QS1JUEVqYkdmdWZpeF8zREJB?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "10/08 11:24",
+      "sentiment": "",
+      "body": "承上，Help Net Security 等 3 家媒體同日另指出，Claude Haiku 5.5 在抵抗隱藏指令注入（prompt injection）上的防禦力比前代顯著提升；把 Haiku 用在處理不受信任外部內容（如網頁、檔案）流程的團隊可留意這項安全性增益。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "haiku-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Gives Vetted Defenders Fewer Claude Guardrails",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdlJ3aHNaMlhXUDN5UmQ2dzFhQzJNVWxiY3MzcXlNS1Q4ekRiSkRRQVJlX0d2TzBiR0gtTnlxbkpLMlpJeDJqQjZkUTMyVVRFMUZXNGdxZ1ozdU5abG5UYURGM3Q1OHNTcU94WXNxcEd2UmJXNHN5Z1BDN200NkIwMHhnTWE3eUtGTldzLXhPR2cwNWxCRnhmSFRLMVA?oc=5",
+      "source": "Google News / Dark Reading",
+      "time": "10/07 21:09",
+      "sentiment": "",
+      "body": "Dark Reading 與另一家媒體同日報導，Anthropic 針對通過審核的資安防禦團隊放寬部分 Claude 安全護欄限制，讓這些團隊能做更接近攻擊者視角的測試；這是與今日使用政策全面收緊相反的另一條路線，替特定資安客戶另開通道。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic commits $150M to U.S. AI science initiative",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQSWpOVzZyNnRYS2puaDdpVXE1VW55eV9zczJQcHY4eVlhZFA1eGlfd2pZTWJ5MmFSQjYzaVd5emFIUldWZHB1U0d6aXhGQWpDX1k3TTBFbzZUVU9Kb1dOa2dvdWhBdTlZV1I3T1U4X0preFRJNUVZQ190QUJ3NXJ5Rm05YTZMQ1hsemg0REZ1VFg1S3I0Y01CNXlGWjN3eEZ6X2tfVWVOYXBiTzZ0eTA1V2JqWnBoNXEyUTdKVFBpRmF4MmhLdHA1bWdfRFVHWXg3ZFl0bkNid0lObEdYSHRySEpn?oc=5",
+      "source": "Google News / TradingView",
+      "time": "10/08 15:29",
+      "sentiment": "",
+      "body": "TradingView 與另一家媒體同日報導，Anthropic 承諾投入 1.5 億美元支持美國 AI 科學研究計畫，是繼年初 Claude Frontier Academy 之後另一筆具體金額的公益性投入；關注 Anthropic 商業與公益佈局平衡的讀者可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude states the reason its current analysis is unfounded, then completes the analysis in the same response — self-identified blocking gaps do not gate output",
+      "url": "https://github.com/anthropics/claude-code/issues/60226",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/08 09:10",
+      "sentiment": "",
+      "body": "該 issue 指出 Claude 會先自己承認分析依據不足，卻接著在同一回覆裡完成並輸出那份分析，等於自我識別的阻斷訊號沒有真正擋下輸出，累積 50 則留言；仰賴 Claude 自我把關正確性的工作流程應留意這個落差，必要時另加外部驗證步驟。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/07 19:32",
+      "sentiment": "",
+      "body": "該 issue 累積 40 則留言與 16 個 👍 反應，回報雲端／Cowork session 的 git proxy 現在會擋下所有非「session 授權清單內」repo 的 push，連使用者自帶 PAT 也失效；在雲端 session 工作、需要推送到清單外 repo 的團隊目前應留意這項限制是否已影響自己的流程。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.294",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/08 05:03",
+      "sentiment": "",
+      "body": "新版修正把 `prompt`／`agent` hook 寫成「封鎖做 X 的指令」這類自然語言指示時，實際上擋不住它該擋的內容的問題，並改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為；自訂 hook 寫成指示句的使用者升級後可重新驗證是否真的生效。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.294 build 新增 1 個功能候選旗標（自 2.1.292 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.294",
+      "source": "Build Flags",
+      "time": "10/08 17:27",
+      "sentiment": "",
+      "body": "功能候選 1 個：`CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，疑似與桌面版的技能開關介面有關；build 裡出現的旗標不代表會上線，想搶先一窺桌面版走向的使用者可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-python] v1.12.1",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "10/08 03:41",
+      "sentiment": "",
+      "body": "Python SDK 發布 v1.12.1，同日 `anthropic-sdk-typescript` 也分別更新 `google-cloud-sdk-v0.0.19` 與 `vertex-sdk-v0.20.4`；三者皆為例行性 chore（CI 檢查 PR 是否更新 changelog、文件註明 Console spend limits 列表功能屬早期存取等），無功能性變動。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Status] Issue with spend limits",
+      "url": "https://status.claude.com/incidents/vmys9qn874h4",
+      "source": "Anthropic Status",
+      "time": "10/07 21:23",
+      "sentiment": "",
+      "body": "官方狀態頁記錄部分組織曾被錯誤判定為已達花費上限而遭暫停、導致 Claude 請求被拒，已於 10/7 21:23 UTC 標記解決；設有組織層花費上限的團隊若當天曾遇到請求被拒，現在應已恢復正常。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5",
+      "source": "Google News / Reuters",
+      "time": "10/07 18:07",
+      "sentiment": "",
+      "body": "Reuters 把 Haiku 5.5 放進「Anthropic 第三款 5.5 系列模型、在籌備 IPO 前擴充產品線」的敘事框架裡報導，將發布時機與上市計畫連結；關注 Anthropic 上市前產品節奏的讀者可留意這個角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "haiku-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic will be 'most ridiculous IPO' of year, analyst says - CNBC",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd2dKUllnNVk3MmI2SFFNYUV4cm1jd3Z4VVJCcEJGclVRTDlSOE5NSkV2NjRBVm1PTEthM2tlVEUtNmZLV0UtMm5RY09IY1R2TFFpRkJhbDcwZ2F0allhc0lWNFNXS2V3UmVmdS1BdEtLY2g2WEk4aXlSSkR1Yjh3eFloUHVEVFhKR0k0eEdxY1dUcWRzeVA0UW9HVdIBoAFBVV95cUxOSnd6UVJsLTE4Rjc1dHE0bE9uMUZ1MnR1VnpvN2Y2M19mMkp1MVd2c1pBZUpQejhONC12REdXOHRuaGNuX0VaMkQwRW5jWTRvZGFUOEZNTlp1YnFXZmhSUEFtclRNZTNhVVg2TmtlNC0zWnBQOFF5dGZZM0QxdnlfclVsZGJCVnFPdU1xWUhuUGFZcUI4VXF1dEtSZ1A5ZEN3?oc=5",
+      "source": "Google News / CNBC",
+      "time": "10/07 22:29",
+      "sentiment": "",
+      "body": "CNBC 引述分析師評論，稱 Anthropic 將是今年「最荒謬的 IPO」，意指市場對其估值與獲利路徑的質疑；評估是否參與相關投資討論的讀者可留意這類分析師觀點作為對照。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic IPO Investors Struggle to Put a Price on Rogue AI Risk - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOME9TY0hsNDBoX2Y5UmhoWkZKYlJTUTRHeWhqR3ZRQnhrc3FIZDFVRUhDY1V1N2p4dGJycnViMGxUb3JkSUhTWktYNnZfMGdrbWdRQWxuejIxM2ZZanEydWpTNzFwRU9TVURiZlUteXFvaExLd0V5dC1PZFoyVkVGQURCWHMzRU9XcmMzdUEtS1NkaFZVTXlfQ0dwd2RpZ3cyd2Y3N2c5U3hFT3BwM0k5UFVVWHhOQQ?oc=5",
+      "source": "Google News / Bloomberg.com",
+      "time": "10/08 12:00",
+      "sentiment": "",
+      "body": "Bloomberg 報導，考慮參與 Anthropic IPO 的投資人正設法替「失控 AI 風險」這項難以量化的變數定價，反映市場對 AI 安全事故外部性的估值方法尚未成熟；關注 AI 產業估值邏輯的讀者可留意這個新興議題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's Claude AI gets Chinese-language options settings - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxON00yLUpMU1k3YUhfS3lOQ2xZd3VTN0JKMm1Gd2NNcXF1bHhTSHE3aS1TTW9FWFlzczZFNnprOFFhTnNjNEtfM3BDbWQxOWdNcE5IT0hzMExMUWh5X1AxZmVmY0FfQmtCOUx0cnoyclJUUWRnQ1B5V3lNcEdrZ05mR0NGQmZHVE1IQUpNSVFRaTN5RGNjb0kyZENZOTZfMWgwdG52YXUyQ2lCV1hVUmQ3bVgtWGVGZEZKTU9v0gG7AUFVX3lxTE41Smp1dmNVS19kUDd6UDlJdVdTS1JHT1pFcFNEejNld2xuLVlMOHJkaDVPd1M2WFpYOTIyU3RnTk01dWZUYVcxREhYT1NMaGIzcm9BdEJrNUhhQ0lTbmhJODFqRkRsTHJ1eS1WUlQ2dmdmeFhlTWVjQkxLSGFqeHVCbUE0YURMWl8yQlhiOXdRTlJINFBjNVp5dUNWUGhTbkpwVjg2MzYxMlFtTWhkc3ZBM2RfQkNPU3J0Q00?oc=5",
+      "source": "Google News / South China Morning Post",
+      "time": "10/08 07:38",
+      "sentiment": "",
+      "body": "南華早報報導，Claude 新增繁簡中文介面選項設定；使用中文介面的使用者可在設定頁留意這項新選項。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic expands cybersecurity verification tools, invites hospitals to apply - Healthcare IT News",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWVRDY0dncklTdloxNlZlNnFsWDJlWVNDTUdySzh6V0Q3SWR5OXhjaVB3RThRb3g0cjhwTkFCMlRXNkdzb2hXSXpzcDJDUVh3NFNubjNTQ0NCQ1dhekFzZU5vX0FraVZlM1ljaklBYTVuaDNqcERMcUc4THVQRHh0SlY5Z2twb1gyc0VjVmtvdkg0SE56UGVoaGxrU2NNajd4QjRKNGNESHVTOXQ4X2hkMDNn?oc=5",
+      "source": "Google News / Healthcare IT News",
+      "time": "10/08 15:58",
+      "sentiment": "",
+      "body": "Healthcare IT News 報導，Anthropic 擴大 10/7 推出的網路安全驗證計畫（CVP）適用範圍，開放醫院機構申請加入；醫療體系的資安團隊若有意申請可留意管道。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Aditi Consulting Achieves Anthropic Select Tier After Putting Claude Into Production Across Its Business and Client Environments - DevOps.com",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQSWpOVzZyNnRYS2puaDdpVXE1VW55eV9zczJQcHY4eVlhZFA1eGlfd2pZTWJ5MmFSQjYzaVd5emFIUldWZHB1U0d6aXhGQWpDX1k3TTBFbzZUVU9Kb1dOa2dvdWhBdTlZV1I3T1U4X0preFRJNUVZQ190QUJ3NXJ5Rm05YTZMQ1hsemg0REZ1VFg1S3I0Y01CNXlGWjN3eEZ6X2tfVWVOYXBiTzZ0eTA1V2JqWnBoNXEyUTdKVFBpRmF4MmhLdHA1bWdfRFVHWXg3ZFl0bkNid0lObEdYSHRySEpn?oc=5",
+      "source": "Google News / DevOps.com",
+      "time": "10/08 16:36",
+      "sentiment": "",
+      "body": "DevOps.com 報導，顧問公司 Aditi Consulting 已在自家業務與客戶環境全面導入 Claude 投入生產，達成 Anthropic「Select Tier」夥伴資格；評估企業整合商選擇的團隊可留意這張夥伴名單的變化。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Feature request: Claude Code profiles with isolated memory, commands, hooks, and settings",
+      "url": "https://github.com/anthropics/claude-code/issues/7075",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/08 14:15",
+      "sentiment": "",
+      "body": "使用者反映 Claude Code 生態系已長出一堆各帶自己的 context 與 subagent 庫的框架，彼此混用時容易衝突，提議官方原生支援可切換的「profile」，隔離各自的記憶、指令、hook 與設定；累積 32 則留言與 58 個 👍 反應。情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] - Add Setting to Disable Automatic IDE Selection Context",
+      "url": "https://github.com/anthropics/claude-code/issues/20944",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/08 14:18",
+      "sentiment": "",
+      "body": "使用者要求新增設定項，關閉 Claude Code 自動把 IDE 目前選取內容塞進 context 的行為，認為這在大檔案或非相關選取時反而干擾；累積 29 則留言與 98 個 👍 反應，是今日反應數最高的功能請求。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Context compaction erases .claude/project-context.md instructions",
+      "url": "https://github.com/anthropics/claude-code/issues/9796",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/08 14:13",
+      "sentiment": "",
+      "body": "使用者回報對話觸發 context compaction（壓縮）後，`.claude/project-context.md` 裡寫的專案指引會被一併抹掉，等於長任務跑到一半規則憑空消失；累積 30 則留言。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+      "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+      "source": "Hacker News",
+      "time": "10/08 07:07",
+      "sentiment": "",
+      "body": "使用者在 Reddit 分享用 Claude Code 輔助分析資料後疑似發現一顆先前未知的行星，HN 討論累積 67 分；留言區也有人提到用類似的自主 AI 研究流程在超導材料上有新進展，顯示業餘者用 Claude 做科學探索的案例正在增加。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
+      "url": "https://agent.reviews/",
+      "source": "Hacker News",
+      "time": "10/07 16:59",
+      "sentiment": "",
+      "body": "開發者推出 Agent.reviews，讓 AI agent（包含 Claude）能像人類在 G2／Trustpilot 上那樣，針對用過的工具與 MCP 留下可供其他 agent 參考的評價，宣稱已從 5 萬多個 agent session 中觀察到重複踩坑的模式；HN 討論累積 64 分。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "HOLY ULTRA OUTPUT TOKENS BATMAN! WHAT ARE THEY SMOKING OVER THERE?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wz2p4d/holy_ultra_output_tokens_batman_what_are_they/",
+      "source": "Reddit / r/ClaudeCode · 週熱門",
+      "time": "10/06 13:32",
+      "sentiment": "",
+      "body": "r/ClaudeCode 本週熱門貼文，使用者對某次任務異常暴增的輸出 token 量表達驚訝與不滿；留意自己帳單與用量配額的使用者可一併檢視類似情境是否也發生在自己身上。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "We have successfully automated the process of making things complicated",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wxzlpg/we_have_successfully_automated_the_process_of/",
+      "source": "Reddit / r/ClaudeCode · 週熱門",
+      "time": "10/05 04:37",
+      "sentiment": "",
+      "body": "r/ClaudeCode 本週熱門貼文，以自嘲語氣調侃團隊把「自動化」做成了另一層複雜度，而非真正簡化流程；常把 Claude Code 導入既有自動化鏈的團隊可能會心一笑。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "hashgraph-online/awesome-ai-plugins",
+      "url": "https://github.com/hashgraph-online/awesome-ai-plugins",
+      "source": "GitHub Search",
+      "time": "10/08 17:27",
+      "sentiment": "",
+      "body": "一份整理給 Claude Code、OpenAI Codex、Gemini 等各家 AI 助理用的外掛精選清單，累積 502 星；想找現成外掛而不想重新造輪子的使用者可參考。情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "bvisible/mcp-ssh-manager",
+      "url": "https://github.com/bvisible/mcp-ssh-manager",
+      "source": "GitHub Search",
+      "time": "10/08 17:27",
+      "sentiment": "",
+      "body": "MCP SSH 伺服器，提供 37 個工具供遠端 SSH 管理，涵蓋 DevOps 自動化、備份、資料庫操作與健康監控，支援 Claude Code 與 OpenAI Codex，累積 500 星；需要讓 Claude 直接操作遠端機器的團隊可留意。情緒：😐",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "10/08 17:27",
+      "sentiment": "",
+      "body": "承上，官方同步把 Claude Sonnet 5.5 的快取讀取（cache read）價格砍半，定價頁另新增依 prompt 長度分級（如逾 10 萬 token 另計費率）的多段費率；用快取功能壓低成本的 Sonnet 5.5 使用者可重新核對帳單。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Max and Team plans now include API credits you cannot spend on Claude Code - MIXED Reality News",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQXU2YTFTUklZUG95RUN1Y2tKcHBPVWtNcXhuZFFyUUNCeE9EbEI5cjgzSjJ2WXVYVTdXeU9WUDZNRUN4cXlCOXhwU0FoQzNoeGh4MGtlZjJ6azRvdE5wUG1TbzhNVzFBS2NZdnJuNmFrcE9XZXBJbTJMV3BRdmY3aG94NFE?oc=5",
+      "source": "Google News / MIXED Reality News",
+      "time": "10/08 02:35",
+      "sentiment": "",
+      "body": "承上述每月 API credits，MIXED Reality News 點出關鍵限制：這筆額度只能用在 Claude Platform 上自建的 App 與 Agent，不能拿來抵 Claude Code 或 Claude App 本身的額外用量；誤以為能抵 Claude Code 帳單的使用者應留意這個落差。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic Announces Up to $500 a Month in API Credits for Claude Max and Team - Pasquale Pillitteri",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNc1FlUzdBeXNtS1Jud0pEVU1WaUNEQlBjZlF6S2NXa3Rpai1TV2Y3Z183bkt5TVA0dnZ1QmRRcDhjcWRMOUlUVXM4SFN0NnZnSS1tSDZPZ09DZ1ZDa1lUT3YxMTR5cWpzdEhNT0RZSzV5dzZnMUVpTXhSVnB6RzFlS3V2TVlYbkFG?oc=5",
+      "source": "Google News / Pasquale Pillitteri",
+      "time": "10/08 06:42",
+      "sentiment": "",
+      "body": "承上，這篇報導標題引用的月度上限是 $500，與另一家媒體標題引用的 $200 不一致；兩篇報導的具體方案階層（Max 個人版／Team）描述得不夠精確，金額口徑建議以官方帳務頁面實際入帳數字為準，訂閱 Max 或 Team 的使用者下個計費週期可自行核對。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 發布 Claude Haiku 5.5，官方稱是目前最快、最具成本效益的小型模型，平均執行成本比 Haiku 4.5 低約 75%；VentureBeat 報導其 API 定價降幅達 90%、已可與 GPT-6 Luna 看齊（兩個百分比口徑不同，以官方頁面為準），AWS、GitHub Copilot 同日同步上架，重度使用 Haiku 子代理的開發者可留意新成本結構。",
+      "ref_urls": [
+        "https://www.anthropic.com/claude-haiku-5-5",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTFMTVFQOTJ2SmdCSGdjR2Z4Q2ZYMF9ncldZM3NUNTlEWUVOUERVUVVpdHdfQno4c3F3aWJ1WnIybnpYNGxnMmk5d3FCaUlkdkhCeHpPMENmRG81MEpBcGx5Y1kxY25GY3oxb3gzNGk1bDdOS0JwMkxFZ1hkUFI2M21GMWowTzc4VVJaLUNaajc5MGJrMTdtcXNJem93Q2lpSGFvYXJCbEFwN2hMTnY4bzcxdEswa29DWFE?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "VentureBeat"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 為 Max 與 Team 方案新增每月 API credits，用於在 Claude Platform 上自建 App 與 Agent，但不可用於 Claude Code 或 Claude App 本身；多家媒體標題引用的月度上限不一（XenoSpectrum 寫 Max 最高 $200），Pro 用戶目前未納入這項福利。",
+      "ref_urls": [
+        "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+        "https://news.google.com/rss/articles/CBMickFVX3lxTFBOSGVyRGU4TTgtWDhLVl9memU1cDZKMkF4Z3ZwRU1jbWxlNWJaODE0dFZzWl93Ri1GS18wbmNlaTlCdzhqVk1WbkhlQjZiU3JaanJKYTFwdlZxd1pPaHN0YmJvR05lNFdDbFhGTkduTWxsdw?oc=5"
+      ],
+      "ref_names": [
+        "官方文件",
+        "XenoSpectrum"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 發布 2026 年度使用政策更新，依近一年觀察到的輿論操弄、武器研發、監控等濫用模式修訂規則；The Verge 報導，當中首次新增禁止「持續且無謂虐待或殘酷對待」Claude 的條款，但終止對話仍是主要執行手段。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/2026-usage-policy-update",
+        "https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude"
+      ],
+      "ref_names": [
+        "Anthropic Blog",
+        "The Verge"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "資安公司 CrowdStrike 指出，疑似與中國有關的黑客利用 Anthropic 的 Claude AI agent 竊取南韓銀行資料；具體攻擊鏈細節尚未完整揭露，為金融機構提供服務時用到 Claude 相關工具的團隊可留意此案後續。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcUw2bmsxdHlrQzExbzJvX1BaT05xSmVwMDlUa2VMVldfOW5paWtGLUJjaTIwby1PUldNUVhXME0yUWpTQ3UxRXlEY21CQXotVWdJTFJDS2NzT0l0TFk2UkpCM2xwVy1UYUxUTVZ3Q2RndUs5X3N5Z0NyOFVqVk4yRTlEQkxpcy1FSXZwWDdjYmsyanR6aExNMU0xYTRpN3BKWlBiVkdGTzNoT0k?oc=5"
+      ],
+      "ref_names": [
+        "Benzinga"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "CNN、WCPO 等多家外媒報導，Anthropic 宣稱由 Claude 主導、類似 CRISPR 基因編輯技術的生物學發現引發科學界質疑其真實性與嚴謹度；具體發現內容與爭議細節尚待後續報導厘清，關注 Anthropic 科學研究聲量與可信度的讀者可留意。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMifkFVX3lxTFBzUzRFekFCZGVRTWVpRExUVWJkYTVGeFYxekkxMkpmYnRJSF9sNXdOd3BGd0NZVnhzakp0eWwxR3hTX2tqdUdOZXd3WjVZRlhZaDFkOHpoVElnanRZZXhwaEdweDRCTlVPVHEzRmxUWUpPVTU5Y0NTRHpJam5zZw?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdHdZVGd2blAwdlJ6dHdjeDhaYWVqSW96a0F0d3lCMGJYWjlpTHhfU2hnNzBWaWltZGQ4aTNiTWgxaEpkQUhwcG1UcTFxZXpBRHVzbDVzNjJyUENBblNrclBXaHhweW5xaTZrUjhDMHhrYnVCN2l1Y2JncDZUQjA3UVJ2RlRMR1VpM3k3UUQxRjRlNDJRQVBLRkN3ZlRJSl82WFI3VUt6bjR1MFZDbmlLX3lDbDI?oc=5"
+      ],
+      "ref_names": [
+        "CNN",
+        "WCPO"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Claude Haiku 5.5 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+      "body": "Claude Haiku 5.5 已在 GitHub Copilot 全面上線，官方定位為快速子代理、快速編輯與終端機任務之用，同日即隨 Anthropic 自家發布同步上架。",
+      "topic": "coding-workflow-guide",
+      "topicPage": {
+        "id": "coding-workflow-guide",
+        "name": "程式開發實戰手冊",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Purpose-built model for leaked secret detection",
+      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection",
+      "body": "GitHub Copilot 新增專門偵測外洩機密的模型，屬 Copilot 目前的差異化功能之一。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Local sandboxing for GitHub Copilot now generally available",
+      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available",
+      "body": "GitHub Copilot CLI、桌面版與 VS Code Agent Host 的本機沙盒功能正式 GA，提供安全執行環境；評估 Claude Code 與 Copilot 沙盒能力落差的工程師可留意。",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 49
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 8
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "preview": "Claude Code：v2.1.294 修正 prompt／agent hook 寫成自然語言指示（如「封鎖做 X 的指令」）時擋不住該指令的漏洞，並改善 Stop／SubagentStop 上 prompt hook 的行為。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "model-comparison",
+      "name": "Claude 模型選型對照",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-08",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- v2.1.294 修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時擋不住該指令的漏洞，並改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為。\n- 新增已知問題：Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，使用者自帶 PAT 亦失效（issue #76248，40 則留言、16 個讚）。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.294 新增 1 個候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，第一階；對帳 2 筆，皆來源條目與日報鏡像，暫不升第二階。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "topics/model-comparison",
+            "name": "Claude 模型選型對照",
+            "label": "Haiku 5.5 發布，取代 Haiku 4.5",
+            "date": "",
+            "body": "2026-10-07 官方發布：最便宜、最快、最具能力的小型模型，成本比 Haiku 4.5 降約 75%，精確牌價另見 [[entities/haiku-5-5]]。"
+          },
+          {
+            "page": "entities/haiku-5-5",
+            "name": "Claude Haiku 5.5",
+            "label": "Haiku 5.5 發布",
+            "date": "",
+            "body": "2026-10-07 官方發布：最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；精確牌價官方發布文未附具體數字，見 [[entities/haiku-5-5#你現在拿到的是什麼]]。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Anthropic Status：組織花費上限誤判暫停事故已解決**（10-07 21:23 UTC）：該日曾遇請求被拒的組織層花費上限團隊現在應已恢復正常。\n- **Max／Team 新增「每月 API credits」，但不可用於 Claude Code／Claude App**：確切金額官方未附數字，媒體口徑不一，見 [[entities/pricing#還沒確定的計費變動]]。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**，CNBC 分析師稱將是今年「最荒謬的 IPO」——估值懷疑系列再添兩筆。\n- **Aditi Consulting、Hexaware 同日達成 Anthropic 夥伴分級資格**（Select Tier／Preferred Partner），具體權益未見報導。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。\n- 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。\n- 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Haiku 5.5 定價**：官方稱成本降約 75%，VentureBeat 稱 API 價格降 90% 與 GPT-6 Luna 看齊，兩口徑不可互換引用。\n- **Max/Team 新增 API credits**：官方文件確認新增月度額度但不可用於 Claude Code 本身，金額媒體引用 $200 與 $500 兩版本，官方未確認。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新安全事件",
+            "date": "",
+            "body": "- **年度使用政策更新**：Anthropic 發布 2026 年度使用政策，首次禁止持續虐待／殘酷對待 Claude；終止對話仍是官方「主要執行手段」，同日另擴大 CVP 開放醫院機構申請。\n- **Claude agent 遭濫用竊取南韓銀行資料**：CrowdStrike 稱疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料，攻擊鏈細節未揭露。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **業餘科學應用案例增多**：使用者稱用 Claude Code 輔助分析找到疑似未知行星，HN 67 分。\n- **Agent 互評生態起步**：Show HN Agent.reviews 讓 AI agent 互相留下工具評價，HN 64 分。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Token 消耗訊號再添一筆",
+            "date": "",
+            "body": "- r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量暴增引發不滿，無具體數字或版本號，屬「現象還在」類。\n- 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 11
+  },
+  "readerTopStories": [
+    {
+      "title": "Anthropic's new budget model gets much better at ignoring hidden commands",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5aQlFGYTQwWEp6TkhTZnc2Q2hEQ2MyZGV6RkJNTWNwenVqYUxROVhtTjU5LXpxRXplYnlkZEFfbzllQldCQnZOWUJjS1ZEWDZSRTQyQzh3Q3F6VWw5MGY1anpCQWcxVm44QS1JUEVqYkdmdWZpeF8zREJB?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "10/08 11:24",
+      "sentiment": "",
+      "body": "承上，Help Net Security 等 3 家媒體同日另指出，Claude Haiku 5.5 在抵抗隱藏指令注入（prompt injection）上的防禦力比前代顯著提升；把 Haiku 用在處理不受信任外部內容（如網頁、檔案）流程的團隊可留意這項安全性增益。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "haiku-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Gives Vetted Defenders Fewer Claude Guardrails",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdlJ3aHNaMlhXUDN5UmQ2dzFhQzJNVWxiY3MzcXlNS1Q4ekRiSkRRQVJlX0d2TzBiR0gtTnlxbkpLMlpJeDJqQjZkUTMyVVRFMUZXNGdxZ1ozdU5abG5UYURGM3Q1OHNTcU94WXNxcEd2UmJXNHN5Z1BDN200NkIwMHhnTWE3eUtGTldzLXhPR2cwNWxCRnhmSFRLMVA?oc=5",
+      "source": "Google News / Dark Reading",
+      "time": "10/07 21:09",
+      "sentiment": "",
+      "body": "Dark Reading 與另一家媒體同日報導，Anthropic 針對通過審核的資安防禦團隊放寬部分 Claude 安全護欄限制，讓這些團隊能做更接近攻擊者視角的測試；這是與今日使用政策全面收緊相反的另一條路線，替特定資安客戶另開通道。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic commits $150M to U.S. AI science initiative",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQSWpOVzZyNnRYS2puaDdpVXE1VW55eV9zczJQcHY4eVlhZFA1eGlfd2pZTWJ5MmFSQjYzaVd5emFIUldWZHB1U0d6aXhGQWpDX1k3TTBFbzZUVU9Kb1dOa2dvdWhBdTlZV1I3T1U4X0preFRJNUVZQ190QUJ3NXJ5Rm05YTZMQ1hsemg0REZ1VFg1S3I0Y01CNXlGWjN3eEZ6X2tfVWVOYXBiTzZ0eTA1V2JqWnBoNXEyUTdKVFBpRmF4MmhLdHA1bWdfRFVHWXg3ZFl0bkNid0lObEdYSHRySEpn?oc=5",
+      "source": "Google News / TradingView",
+      "time": "10/08 15:29",
+      "sentiment": "",
+      "body": "TradingView 與另一家媒體同日報導，Anthropic 承諾投入 1.5 億美元支持美國 AI 科學研究計畫，是繼年初 Claude Frontier Academy 之後另一筆具體金額的公益性投入；關注 Anthropic 商業與公益佈局平衡的讀者可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude states the reason its current analysis is unfounded, then completes the analysis in the same response — self-identified blocking gaps do not gate output",
+      "url": "https://github.com/anthropics/claude-code/issues/60226",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/08 09:10",
+      "sentiment": "",
+      "body": "該 issue 指出 Claude 會先自己承認分析依據不足，卻接著在同一回覆裡完成並輸出那份分析，等於自我識別的阻斷訊號沒有真正擋下輸出，累積 50 則留言；仰賴 Claude 自我把關正確性的工作流程應留意這個落差，必要時另加外部驗證步驟。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/07 19:32",
+      "sentiment": "",
+      "body": "該 issue 累積 40 則留言與 16 個 👍 反應，回報雲端／Cowork session 的 git proxy 現在會擋下所有非「session 授權清單內」repo 的 push，連使用者自帶 PAT 也失效；在雲端 session 工作、需要推送到清單外 repo 的團隊目前應留意這項限制是否已影響自己的流程。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
