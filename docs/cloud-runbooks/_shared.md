@@ -45,6 +45,8 @@ python3 scripts/cloud_bootstrap.py
 
 **它也負責 git 分支歸位 `[加入: 2026-09-30]`**：容器起跑時 `HEAD detached`、本機 `master` 停在舊快取。腳本在任何 commit 之前 fetch 後把 HEAD 歸位到追蹤 `origin/master` 的 `master`——只在 HEAD 沒有遠端沒有的 commit 時動手（未 commit 的改動會帶過去，會被覆蓋時才放棄），否則只印 `⚠️ git 分支` 不動。看到 `⚠️ git 分支` 時照 `.claude/skills/web-publish/SKILL.md` Step 5 推 `cloud-daily-<日期>-unmerged` 分支保住成果。
 
+**第一道防線是雲端環境的「設定指令碼」`[加入: 2026-10-08]`**：claude.ai 雲端環境 Default 已填入 `pip install` `src/requirements_news.txt` 的四個套件，環境建立時就裝好並快取（2026-10-07 映像不再預裝 `requests` 後補上）；需求檔增減套件時要同步改那一欄。bootstrap 照需求檔補裝，是第二道防線。
+
 上述腳本把那套手動修法固化：冪等（已存在就跳過）、不致命（失敗只印警告、退出碼恆為 0）。**它是 workaround 不是真解**——真解是雲端基礎映像預裝這些套件，見 `docs/workaround-register.md` 對應列。
 
 **egress 限制 `[改版: 2026-09-12]`：** 雲端環境的網路存取分四級（官方文件 `cloud-environments.md#network-access`）：None／**Trusted（預設，約 70 個網域白名單）**／Custom（使用者自填網域）／Full。本專案目前是 **Trusted**，所以 Reddit / HN / Google News / 官方文件站多半回 403 或 `EGRESS_BLOCKED`。這是**使用者可改的環境設定**（在 claude.ai 環境設定改成 Custom 並加入網域），不是永久事實。
