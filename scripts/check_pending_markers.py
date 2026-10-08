@@ -267,6 +267,9 @@ def _do_rebuild(reason: str, wiki_dir: Path, baseline_path: Path, today: date | 
         raise ValueError("--rebuild-count 需要非空的 --reason")
     today = today or date.today()
     entries = _marker_fingerprints(wiki_dir)
+    old = _load_marker_baseline(baseline_path) or {}
+    old_keys = {e.get("key") for e in old.get("fingerprints", [])}
+    new_keys = {e["key"] for e in entries}
     data = {
         "count": len(entries),
         "updated": today.isoformat(),
@@ -275,6 +278,10 @@ def _do_rebuild(reason: str, wiki_dir: Path, baseline_path: Path, today: date | 
     }
     baseline_path.parent.mkdir(parents=True, exist_ok=True)
     baseline_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    # 差集不進檔（基線檔只存現況），由 CLI 印出：rebuild 的理由只解釋「少了的」，
+    # 「多了的」也要讓人看一眼
+    data["added"] = [e["label"] for e in entries if e["key"] not in old_keys]
+    data["removed"] = [e.get("label", e.get("key")) for e in old.get("fingerprints", []) if e.get("key") not in new_keys]
     return data
 
 
@@ -298,6 +305,17 @@ def _marker_count_gate(report: list[str], wiki_dir: Path, marker_baseline_path: 
     base_count = baseline.get("count", 0)
     if current_count >= base_count:
         report.append(f"  ℹ️ 懸置標記 {current_count} 筆（基線 {base_count}，未低於）")
+        # 增加不擋，但不能靜默：基線只在 --rebuild-count 時抬，之間新開的標記若被溶掉，
+        # 總數回到基線也看不出來（第 11 波評審實測：rebuild 順帶吸收 2 筆未審新增）。
+        # 列出來，讓 rebuild 的人知道自己在把哪幾筆併進基線。
+        base_keys = {e.get("key") for e in baseline.get("fingerprints", [])}
+        added = [e for e in current_entries if e["key"] not in base_keys]
+        if added:
+            report.append(f"  ℹ️ 其中 {len(added)} 筆尚未入基線（下次 --rebuild-count 併入；確認是新開的標記，不是舊筆改寫指紋）：")
+            for e in added[:20]:
+                report.append(f"     新：{e['label']}")
+            if len(added) > 20:
+                report.append(f"     …另 {len(added) - 20} 筆")
         return True
 
     base_entries = baseline.get("fingerprints", [])
@@ -667,6 +685,10 @@ def main() -> int:
             f"✅ 懸置標記基線已重建：{data['count']} 筆（{data['updated']}｜{reason}）",
             file=out,
         )
+        for label in data.get("added", []):
+            print(f"   ＋ {label}", file=out)
+        for label in data.get("removed", []):
+            print(f"   － {label}", file=out)
         out.flush()
         return 0
 

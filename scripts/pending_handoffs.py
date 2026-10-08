@@ -41,7 +41,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 LEDGER = REPO_ROOT / "data" / "pending-handoffs.jsonl"
-CATEGORIES = ("模型", "功能", "商業", "安全政策", "社群", "人物", "投資分析", "開發實務")  # 後兩者為衍生記者（.claude/skills/wiki-ingest/references/classification.md 第四步），2026-09-06 加
+CATEGORIES = ("模型", "功能", "商業", "安全政策", "社群", "人物", "投資分析", "開發實務", "主編")  # 投資分析／開發實務為衍生記者（.claude/skills/wiki-ingest/references/classification.md 第四步），2026-09-06 加；主編＝index／log／overview／radar 等主 session 彙整頁的接手人，2026-10-09 加（page-audit 第 15 波 `--to 主編` 撞 SystemExit）
 STALE_DAYS = 14
 INDEX = REPO_ROOT / "wiki" / "index.md"
 WIKI_DIR = REPO_ROOT / "wiki"
@@ -201,7 +201,7 @@ def render(rows: list[dict], today: date | None = None) -> str:
         group = by_to.get(dst)
         if not group:
             continue
-        out.append(f"### 轉知待接手 → {dst} 記者（{len(group)} 筆）")
+        out.append(f"### 轉知待接手 → {dst}{'' if dst == '主編' else ' 記者'}（{len(group)} 筆）")
         for r in group:
             try:
                 age = (today - datetime.strptime(r["opened"], "%Y-%m-%d").date()).days
@@ -244,6 +244,8 @@ def main(argv: list[str] | None = None) -> int:
                 print("❌ --force 必須附 --reason「為何轉給非負責記者」", file=sys.stderr)
                 return 1
             extra = {"force_reason": a.reason.strip()}
+        elif a.to == "主編":
+            pass  # 主編的頁（index／log／overview／radar）不在 index 負責人欄，不做負責人核對
         else:
             owner, trail = owner_of(a.page)
             via = " → ".join(trail)

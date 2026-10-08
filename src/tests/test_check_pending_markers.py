@@ -256,6 +256,9 @@ class TestMarkerCountGate(_WikiCase):
         ok, report = self.run_check()
         self.assertTrue(ok, "\n".join(report))
         self.assertIn("懸置標記 2 筆", "\n".join(report))
+        # 增加不擋，但要指名哪一筆還沒入基線（不能靜默）
+        self.assertIn("1 筆尚未入基線", "\n".join(report))
+        self.assertIn("新：topics/bravo", "\n".join(report))
         # check() 本身不改基線檔——只有 --rebuild-count 才能動它。
         self.assertEqual(self.baseline_path.read_text(encoding="utf-8"), original)
 
@@ -275,6 +278,18 @@ class TestMarkerCountGate(_WikiCase):
         )
         with self.assertRaises(ValueError):
             mod._do_rebuild("", self.wiki_dir, self.baseline_path)
+
+    def test_rebuild_reports_added_and_removed_against_old_baseline(self):
+        self._write_marker("topics/alpha.md")
+        entries = mod._marker_fingerprints(self.wiki_dir)
+        self.baseline_path.write_text(
+            json.dumps({"count": 1, "updated": "2026-08-01", "note": "t", "fingerprints": entries}), encoding="utf-8")
+        (self.wiki_dir / "topics" / "alpha.md").write_text("alpha 已結案。\n", encoding="utf-8")
+        self._write_marker("topics/charlie.md", marked="2026-08-07")
+        data = mod._do_rebuild("alpha 查證結案、charlie 新開", self.wiki_dir, self.baseline_path, today=TODAY)
+        self.assertEqual([x[:14] for x in data["added"]], ["topics/charlie"])
+        self.assertEqual([x[:12] for x in data["removed"]], ["topics/alpha"])
+        self.assertNotIn("added", json.loads(self.baseline_path.read_text(encoding="utf-8")))
 
     def test_rebuild_with_reason_writes_baseline_with_current_state(self):
         self._write_marker("topics/alpha.md")

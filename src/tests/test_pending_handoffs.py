@@ -54,6 +54,9 @@ class TestLedger(unittest.TestCase):
         self.assertEqual(text.count("⚠️ 逾 14 天"), 1)
         only = ph.render(ph.open_items(self.path, to="人物"))
         self.assertEqual(only, "無")
+        # 主編是接手人不是記者：標籤不加「記者」
+        ph.open_handoff("社群", "主編", "wiki/index.md", "首屏路由列改句", opened="2026-08-14", path=self.path)
+        self.assertIn("→ 主編（1 筆）", ph.render(ph.open_items(self.path, to="主編"), today=date(2026, 8, 15)))
 
 
 INDEX = """## Entities
@@ -141,6 +144,13 @@ class TestOpenCli(unittest.TestCase):
     def test_right_owner_dry_run_passes(self):
         code, out, _ = self.run_cli("--from", "功能", "--to", "模型", "--page",
                                     "topics/model-task-leaderboard", "--note", "x", "--dry-run")
+        self.assertEqual(code, 0)
+        self.assertIn("dry-run", out)
+
+    def test_to_editor_skips_owner_check(self):
+        # index／log 不在 index 負責人欄，轉給主編不做負責人核對（第 15 波 `--to 主編` 曾直接 SystemExit）
+        code, out, _ = self.run_cli("--from", "功能", "--to", "主編", "--page", "wiki/index.md",
+                                    "--note", "x", "--dry-run")
         self.assertEqual(code, 0)
         self.assertIn("dry-run", out)
 
