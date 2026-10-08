@@ -692,13 +692,12 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬，收緊"
     },
     {
-      "name": "週報「本週要動的事」小標：契約表、網站解析與渲染、檢查器四端都認得同一個字串（2026-09-25 新增；改名必須四處同步，否則清單不上站或被判缺漏）",
+      "name": "週報「本週要動的事」小標：契約表、規格、網站解析與渲染都認得同一個字串（改名必須同步，否則清單不上站）",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/weekly-report/references/contracts.md",
-        ".claude/skills/weekly-report/references/deepdive.md",
-        "scripts/build_web.py",
-        "scripts/check_weekly_ledger.py"
+        ".claude/skills/weekly-report/references/columns.md",
+        "scripts/build_web.py"
       ],
       "patterns": [
         "本週要動的事"
@@ -919,10 +918,10 @@
       "_mutate_note": "2026-09-04 mutate 判 ＋ 過寬，改為與「來源」鄰接"
     },
     {
-      "name": "深挖專欄的三邊耦合：規格（weekly-report/references/deepdive.md）、解析器（build_web.py 以 h3 抽 deepDive 元件）、檢查器（check_weekly_ledger.py 擋非 ### 層級）",
+      "name": "深挖專欄的三邊耦合：規格（weekly-report/references/columns.md）、解析器（build_web.py 以 h3 抽 deepDive 元件）、檢查器（check_weekly_ledger.py 擋非 ### 層級）",
       "assertion": "all_contain",
       "files": [
-        ".claude/skills/weekly-report/references/deepdive.md",
+        ".claude/skills/weekly-report/references/columns.md",
         "scripts/check_weekly_ledger.py"
       ],
       "patterns": [
@@ -983,31 +982,14 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬（散文即可滿足），收緊"
     },
     {
-      "name": "weekly-report/references/headline.md 頭條敘事規則 <-> check_weekly_ledger.py 機械檢查：規格與檢查器同進退",
-      "assertion": "all_contain",
-      "files": [
-        ".claude/skills/weekly-report/references/headline.md"
-      ],
-      "patterns": [
-        "入口讀者裁定",
-        "編線准入",
-        "前情錨",
-        "固定稱呼",
-        "收束預算",
-        "冷讀者三問",
-        "W35 起生效"
-      ]
-    },
-    {
-      "name": "check_weekly_ledger.py 存在頭條檢查與生效閘（規格帶 🔧 的規則有實作對應）",
+      "name": "check_weekly_ledger.py 存在頭條標題檢查（網站副標的來源，≤60 字）",
       "assertion": "all_contain",
       "files": [
         "scripts/check_weekly_ledger.py"
       ],
       "patterns": [
         "def check_headline",
-        "HEADLINE_RULES_SINCE",
-        "把\\[一二三四五六七八九十"
+        "HEADLINE_DECK_MAX"
       ]
     },
     {

@@ -62,9 +62,7 @@ DEEPDIVE_LEVEL = "###"
 STAT_BULLET_RE = re.compile(r"^-\s*\*\*(.+?)\*\*\s*——\s*(.+)$", re.MULTILINE)
 NUMBERS_HEADING_RE = re.compile(r"^##\s*四、本週數字\s*$", re.MULTILINE)
 STAT_MIN = 2  # 2026-09-25 起只收讀者用得上的數字，淡週 2 個合法
-
-DEEPDIVE_MIN_CHARS = 900
-DEEPDIVE_MAX_CHARS = 1300
+NUMBERS_RULES_SINCE = "2026-W35"  # 舊期凍結不回溯
 
 # 只數「讀者讀得到的字」：URL、wikilink 路徑、程式碼反引號、粗體星號都不是。
 # 2026-08-30 校準：舊版連 markup 一起數，佔比在 5%–20% 之間浮動（W31 5%、W34 20%），
@@ -258,7 +256,7 @@ def check_weekly_numbers(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bo
     ok = True
     files = sorted(weekly_dir.glob("[0-9][0-9][0-9][0-9]-W[0-9][0-9].md")) if weekly_dir.exists() else []
     for path in files:
-        if path.stem < HEADLINE_RULES_SINCE:
+        if path.stem < NUMBERS_RULES_SINCE:
             continue
         text = path.read_text(encoding="utf-8-sig")
         m = NUMBERS_HEADING_RE.search(text)
@@ -277,10 +275,9 @@ def check_weekly_numbers(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bo
 
 
 def check_deepdive(report: list[str]) -> bool:
-    """深挖專欄的小標層級與篇幅。
+    """深挖（專欄）小標層級：錯了網站上專欄元件整個消失（見 DEEPDIVE_HEADING_RE 註解），故硬擋。
 
-    層級錯誤會讓網站上的專欄元件整個消失（見 DEEPDIVE_HEADING_RE 註解），故硬擋；
-    篇幅只 WARN——那是編輯判斷，且本專案不用「數字只准往某方向走」的機械棘輪。
+    篇幅與寫法是編輯判斷，不機械檢查。
     """
     ok = True
     for path in _issues():
@@ -316,142 +313,35 @@ def check_deepdive(report: list[str]) -> bool:
             if gap and not gap.group(1).strip():
                 report.append(f"  ⚠️ {path.stem}：{label}小標與表格之間缺導言一行（{why}）")
 
-        start = text.index(matches[0][1]) if matches[0][1] else 0
-        body = re.split(r"^#{2,3}\s", text[start:], maxsplit=1, flags=re.MULTILINE)[0]
-        n = deepdive_visible_len(body)
-        if not (DEEPDIVE_MIN_CHARS <= n <= DEEPDIVE_MAX_CHARS):
-            report.append(
-                f"  ⚠️ {path.stem}：深挖 {n} 字（可見字數，不含連結與標記），規格為 "
-                f"{DEEPDIVE_MIN_CHARS}–{DEEPDIVE_MAX_CHARS}（提醒，不擋）"
-            )
     return ok
 
 
-# ── 頭條敘事規則（規格：weekly-report.md 第 (1) 段，W35 起生效）───────────────
-#
-# 舊期（W30–W34）在規則立下前寫成，已凍結——回溯檢查只會產出一批永遠不修的
-# ❌，把真訊號淹掉，故以期號閘門排除。字串比較對 YYYY-Wnn 格式即字典序即時序。
-HEADLINE_RULES_SINCE = "2026-W35"
-
-# 規則 0：頭條標題（h2 冒號後那句）。W30–W34 五期都有、渲染層 weeklyHeadlineDeck()
-# 也一直支援，但**規格從未寫下它**——於是 W35 一漏，沒有任何東西擋得住，W36 補回的
-# 也只有另立的「本週一句話」callout。2026-09-06 合併兩者：句子住 h2，callout 退場。
-# 這條檢查存在的唯一理由，就是「上一次它是靠沒人注意而死的」。
+# ── 頭條標題（W36 起）──────────────────────────────────────────────────────
+# 只看網站需要的：`## 一、頭條敘事：<一句話>`，冒號後那句渲染成頭條副標，≤60 字。
+# 寫法（日期位置、粗體、句型）是編輯判斷，2026-10-08 起不再機械檢查。
 HEADLINE_DECK_SINCE = "2026-W36"
 HEADLINE_DECK_RE = re.compile(r"^##\s*一、頭條敘事[：:]\s*(\S.*?)\s*$", re.MULTILINE)
 HEADLINE_DECK_MAX = 60
 
-# 頭條節＝「## 一、…」到下一個 ## 之間。
-HEADLINE_SECTION_RE = re.compile(r"^##\s*一、[^\n]*\n(.*?)(?=^##\s)", re.MULTILINE | re.DOTALL)
-
-# 規則 7：跨期收束模板。連兩期命中同一句型骨架才算違規（單期首次使用合法）。
-COLLAPSE_TEMPLATE_RE = re.compile(r"把[一二三四五六七八九十\d]+條線並排")
-
-# 規則 9：日期句首與段內遞增。只認 MM-DD 形式（08-17），不碰 8/31 這類到期日寫法。
-DATE_LEAD_RE = re.compile(r"^\s*\d{2}-\d{2}")
-DATE_RE = re.compile(r"\b(\d{2})-(\d{2})\b")
-
-# 規則 10：粗體預算。
-HEADLINE_BOLD_MAX = 2
-HEADLINE_BOLD_SPAN_MAX = 15
-
-# 規則 8：同段 ≥2 個同單位金額時，每個數字 ±12 字內要有角色詞。
-MONEY_RE = re.compile(r"\d[\d,.]*\s*[億兆]")
-ROLE_WORDS = ("已實現", "年化", "單季", "預測", "估值", "額度", "一次性", "合約總額", "收購價")
-ROLE_WINDOW = 12
-
-
-def _headline_paragraphs(text: str) -> list[str]:
-    m = HEADLINE_SECTION_RE.search(text)
-    if not m:
-        return []
-    return [p.strip() for p in re.split(r"\n\s*\n", m.group(1)) if p.strip() and not p.strip().startswith(("|", ">"))]
-
 
 def check_headline(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
-    """頭條敘事的機械規則（規格第 (1) 段帶 🔧 者）。
-
-    硬擋（❌）只留誤判率低的三項：跨期模板、日期句首、粗體數量；
-    段內日期遞增與角色詞誤判空間較大（前情錨合法回指、金額語境多樣），只 WARN。
-    """
+    """頭條標題存在且 ≤60 字（網站副標的來源）。"""
     ok = True
     files = sorted(weekly_dir.glob("[0-9][0-9][0-9][0-9]-W[0-9][0-9].md")) if weekly_dir.exists() else []
-    for i, path in enumerate(files):
-        if path.stem < HEADLINE_RULES_SINCE:
+    for path in files:
+        if path.stem < HEADLINE_DECK_SINCE:
             continue
         text = path.read_text(encoding="utf-8-sig")
-        paras = _headline_paragraphs(text)
-        if not paras:
-            report.append(f"  ⚠️ {path.stem}：找不到「## 一、」頭條節，頭條規則未檢查")
-            continue
-        section = "\n\n".join(paras)
-
-        # 規則 0：h2 冒號後必須有頭條標題，且 ≤60 字
-        if path.stem >= HEADLINE_DECK_SINCE:
-            dm = HEADLINE_DECK_RE.search(text)
-            if not dm:
-                report.append(
-                    f"  ❌ {path.stem}：`## 一、頭條敘事` 後缺頭條標題"
-                    "（格式 `## 一、頭條敘事：<一句話>`；規格見 weekly-report.md 第 (1) 段）"
-                )
-                ok = False
-            elif len(dm.group(1)) > HEADLINE_DECK_MAX:
-                report.append(
-                    f"  ❌ {path.stem}：頭條標題 {len(dm.group(1))} 字，上限 {HEADLINE_DECK_MAX}"
-                )
-                ok = False
-
-        # 規則 7：與上一期（不受生效閘限制——上期是比對基準，不是受檢對象）同構
-        if i > 0 and COLLAPSE_TEMPLATE_RE.search(section):
-            prev_text = files[i - 1].read_text(encoding="utf-8-sig")
-            if COLLAPSE_TEMPLATE_RE.search(prev_text):
-                report.append(
-                    f"  ❌ {path.stem}：收束句型「把 N 條線並排」與上期（{files[i - 1].stem}）同構"
-                    f"——換一種收束方式（時間因果鏈／反問／直接給結論）"
-                )
-                ok = False
-
-        for n, para in enumerate(paras, 1):
-            # 規則 9a：每段日期開頭句 ≤1
-            sentences = [s for s in re.split(r"[。；]", para) if s.strip()]
-            leads = sum(1 for s in sentences if DATE_LEAD_RE.match(s))
-            if leads > 1:
-                report.append(
-                    f"  ❌ {path.stem}：頭條第 {n} 段有 {leads} 句以日期開頭（上限 1）"
-                    f"——其餘句事件先行、日期後置"
-                )
-                ok = False
-            # 規則 9b：段內日期非遞減（WARN——前情錨回指上週屬合法例外）
-            dates = [(int(a), int(b)) for a, b in DATE_RE.findall(para)]
-            if any(dates[j] > dates[j + 1] for j in range(len(dates) - 1)):
-                report.append(
-                    f"  ⚠️ {path.stem}：頭條第 {n} 段日期非由早到晚（{['-'.join(f'{x:02d}' for x in d) for d in dates]}）"
-                    f"——若非前情錨回指，代表混了兩條時間線，建議拆段"
-                )
-            # 規則 8：同段 ≥2 個金額，每個 ±12 字內要有角色詞（WARN）
-            monies = list(MONEY_RE.finditer(para))
-            if len(monies) >= 2:
-                for m2 in monies:
-                    ctx = para[max(0, m2.start() - ROLE_WINDOW): m2.end() + ROLE_WINDOW]
-                    if not any(w in ctx for w in ROLE_WORDS):
-                        report.append(
-                            f"  ⚠️ {path.stem}：頭條第 {n} 段「{m2.group()}」缺角色詞"
-                            f"（已實現／年化／單季／預測／估值／額度…）——同段多金額時讀者無從比較"
-                        )
-
-        # 規則 10：粗體預算
-        bolds = re.findall(r"\*\*([^*]+)\*\*", section)
-        if len(bolds) > HEADLINE_BOLD_MAX:
+        dm = HEADLINE_DECK_RE.search(text)
+        if not dm:
             report.append(
-                f"  ❌ {path.stem}：頭條粗體 {len(bolds)} 處（上限 {HEADLINE_BOLD_MAX}）——只標數字／專名"
+                f"  ❌ {path.stem}：`## 一、頭條敘事` 後缺頭條標題"
+                "（格式 `## 一、頭條敘事：<一句話>`，見 weekly-report/references/contracts.md）"
             )
             ok = False
-        for b in bolds:
-            if len(b) > HEADLINE_BOLD_SPAN_MAX:
-                report.append(
-                    f"  ⚠️ {path.stem}：頭條粗體「{b[:20]}…」長 {len(b)} 字（上限 {HEADLINE_BOLD_SPAN_MAX}）"
-                    f"——整句判斷加粗是把金句感用字重再放大一次"
-                )
+        elif len(dm.group(1)) > HEADLINE_DECK_MAX:
+            report.append(f"  ❌ {path.stem}：頭條標題 {len(dm.group(1))} 字，上限 {HEADLINE_DECK_MAX}")
+            ok = False
     return ok
 
 
@@ -526,38 +416,14 @@ def check_probe_liveness(report: list[str], weekly_dir: Path = WEEKLY_DIR,
     return ok
 
 
-# ── 讀者面三條（規格：headline.md 第 3 條、deepdive.md「本週要動的事」、
-#    forecast.md 回收段與檔尾數字；W39 起生效，舊期凍結不回溯）──────────────
-# 2026-09-25：W36–W38 三期頭條與深挖同題，頭條都寫進了深挖的指令名、官方連結
-# （W36 `/sandbox`、W37 `CLAUDE_CODE_OAUTH_TOKEN`、W38 memory 文件連結）；冷讀者
-# 讀 W38 時說可動作的事散在五處要自己撿，並在回收表的「初版誤判…同日更正」、
-# 本週數字的「109 → 0 逾期待查證」處跳讀——那是編輯台的帳，不是讀者的內容。
+# ── 讀者面（W39 起生效，舊期凍結不回溯）：第三節以後不放編輯台的帳、新立判準不寫 wiki 頁名
 READER_RULES_SINCE = "2026-W39"
-ACTIONS_HEADING_RE = re.compile(r"^###\s*本週要動的事\s*$", re.MULTILINE)
-ACTIONS_NONE = "本週沒有需要動的事"
-URL_RE = re.compile(r"\]\((https?://[^)\s#]+)")
-CODE_RE = re.compile(r"`([^`\n]+)`")
-NUMBER_RE = re.compile(r"\d[\d,.]*\s*(?:%|則|個|美元|萬|億|倍|讚)")
 DESK_WORDS_RE = re.compile(r"初版|同日更正|整期改版|改版一次|待查證|本刊 ?wiki|日報收錄|收錄的文章|來源數")
 SECTION_THREE_RE = re.compile(r"^##\s*三、", re.MULTILINE)
 # 2026-10-04：W36–W38 新立判準一再寫「→ 寫入 claude-code」「→ 升為 anthropic-business 風險表列」，
 # 冷讀者對抗輪（10-03）判為全刊最大的內部語言外洩。英文 slug 形狀回溯 W30–W40 零誤擋。
 DISPATCH_SINCE = "2026-W41"
 SLUG_RE = re.compile(r"(?<![\w./-])[a-z][a-z0-9]*(?:-[a-z0-9]+)+(?![\w-])")
-
-
-def _deepdive_body(text: str) -> str:
-    m = DEEPDIVE_HEADING_RE.search(text)
-    if not m:
-        return ""
-    return re.split(r"^#{2,3}\s", text[m.end():], maxsplit=1, flags=re.MULTILINE)[0]
-
-
-def _section_after(text: str, heading_re: re.Pattern) -> str:
-    m = heading_re.search(text)
-    if not m:
-        return ""
-    return re.split(r"^#{2,3}\s|^---\s*$", text[m.end():], maxsplit=1, flags=re.MULTILINE)[0]
 
 
 def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
@@ -568,41 +434,9 @@ def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool
             continue
         text = path.read_text(encoding="utf-8-sig")
 
-        # 1. 頭條不寫深挖的具體物
-        hm = HEADLINE_SECTION_RE.search(text)
-        deck = (HEADLINE_DECK_RE.search(text) or [None, ""])[1]
-        dd = _deepdive_body(text)
-        if hm and dd:
-            head = hm.group(1)
-            links = set(URL_RE.findall(head)) & set(URL_RE.findall(dd))
-            codes = {c for c in set(CODE_RE.findall(head)) & set(CODE_RE.findall(dd)) if c not in deck}
-            if links or codes:
-                ok = False
-                shared = "、".join(sorted(codes) + sorted(links))
-                report.append(
-                    f"  ❌ {path.stem}：頭條寫進了深挖的具體物（{shared}）——頭條只講這件事為什麼"
-                    "重要、讀者要不要反應；指令、設定名與官方文件引用只放深挖，頭條用一句話指過去"
-                )
-            nums = set(NUMBER_RE.findall(head)) & set(NUMBER_RE.findall(dd))
-            if nums:
-                report.append(f"  ⚠️ {path.stem}：頭條與深挖出現同一個數字（{'、'.join(sorted(nums))}），確認不是同一件事講兩次")
-
-        # 2. 本週要動的事
-        am = ACTIONS_HEADING_RE.search(text)
         three = SECTION_THREE_RE.search(text)
-        if not am:
-            ok = False
-            report.append(f"  ❌ {path.stem}：缺 `### 本週要動的事`（第二節最後一個小標；沒有就寫「{ACTIONS_NONE}。」）")
-        else:
-            body = _section_after(text, ACTIONS_HEADING_RE)
-            if not re.search(r"^- \S", body, re.MULTILINE) and ACTIONS_NONE not in body:
-                ok = False
-                report.append(f"  ❌ {path.stem}：本週要動的事是空的——列條目，或寫「{ACTIONS_NONE}。」")
-            if three and am.start() > three.start():
-                ok = False
-                report.append(f"  ❌ {path.stem}：本週要動的事要放在第二節（深挖之後、`## 三、` 之前）")
 
-        # 3. 第三、四節與檔尾不放編輯台的帳
+        # 第三、四節與檔尾不放編輯台的帳
         # 判準欄是凍結的程式契約（deepdive.md「讀者版禁用內部詞」射程），不查
         tail = text[three.start():] if three else ""
         prose = [l for l in tail.splitlines() if not l.lstrip().startswith("|")]
@@ -617,7 +451,7 @@ def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool
                 "收錄量與 wiki 維護指標記進 wiki/log.md，週報只寫讀者要的結果"
             )
 
-        # 4. 新立判準不寫派工指令與 wiki 頁名（W41 起；已立判準凍結不查）
+        # 新立判準不寫派工指令與 wiki 頁名（W41 起；已立判準凍結不查）
         if path.stem >= DISPATCH_SINCE:
             for row in _parse_table(text, FORECAST_HEADER_RE):
                 body = PROBE_TAIL_RE.sub("", row[2])

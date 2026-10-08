@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""週報讀者面三條（W39 起）：頭條不寫深挖的具體物、本週要動的事、第三節以後不放編輯台的帳。
+"""週報讀者面（W39 起）：第三節以後不放編輯台的帳；本週要動的事上站解析。
+
+2026-10-08 起頭條與深挖分工、本週要動的事必填兩條不再機械檢查。
 
 2026-09-25：W36–W38 頭條與深挖同題，頭條都寫進了深挖的指令名與官方連結；冷讀者讀 W38
 說可動作的事散在五處要自己撿，並在「初版誤判…同日更正」「109 → 0 逾期待查證」處跳讀。
@@ -83,23 +85,10 @@ class ReaderRules(unittest.TestCase):
         ok, report = self._run(_issue())
         self.assertTrue(ok, report)
 
-    def test_頭條寫進深挖的設定名被擋(self):
-        ok, report = self._run(_issue(headline="預設值 `claude-md-or-agents-md` 代表二選一。"))
-        self.assertFalse(ok)
-        self.assertIn("claude-md-or-agents-md", report[0])
-
-    def test_頭條引用深挖的官方連結被擋(self):
-        ok, _ = self._run(_issue(headline="官方寫明預設規則（[官方文件](https://code.claude.com/docs/en/memory)）。"))
-        self.assertFalse(ok)
-
-    def test_頭條標題裡的詞不算越界(self):
-        ok, report = self._run(_issue(headline="`AGENTS.md` 出貨了，見本期深挖。"))
-        self.assertTrue(ok, report)
-
-    def test_缺本週要動的事被擋(self):
+    def test_缺本週要動的事不擋(self):
+        """本週要動的事是選用段，2026-10-08 起不硬擋。"""
         ok, report = self._run(_issue(actions=""))
-        self.assertFalse(ok)
-        self.assertTrue(any("本週要動的事" in r for r in report))
+        self.assertTrue(ok, report)
 
     def test_沒事可動寫一行即合格(self):
         ok, report = self._run(_issue(actions="### 本週要動的事\n\n本週沒有需要動的事。\n"))
