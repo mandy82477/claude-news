@@ -464,11 +464,6 @@
   "preview": "Claude Code：v2.1.291 修正兩項回歸：雲端 session 可能遺失權限提示答案（源自 v2.1.290）、對話尾端訊息可能遺失（源自 v2.1.288）。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-science",
       "name": "Claude Science",
       "pageType": "entity"
@@ -484,44 +479,9 @@
       "pageType": "entity"
     },
     {
-      "id": "jamie-dimon",
-      "name": "Jamie Dimon",
-      "pageType": "entity"
-    },
-    {
       "id": "opus-5-5",
       "name": "Claude Opus 5.5",
       "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
-      "pageType": "topic"
     }
   ],
   "reader": {

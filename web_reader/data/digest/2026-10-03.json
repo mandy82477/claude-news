@@ -468,11 +468,6 @@
   "preview": "Claude Code：v2.1.288 發布：修正 bash -c／sh -c 內危險 rm 繞過檢查（#96300）；stable 標籤仍在 2.1.285（mixed-news.com）。",
   "sedimentedToday": [
     {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
       "id": "market-lessons",
       "name": "投資判讀教材（週更）",
       "pageType": "topic"
