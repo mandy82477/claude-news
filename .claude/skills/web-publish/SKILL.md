@@ -144,7 +144,15 @@ git -C REPO_ROOT push || {
 
 ## Step 6：寫入 task_scheduler.log
 
-整個 pipeline 結束後，**無論成功或失敗**，都必須 append 執行記錄至：
+整個 pipeline 結束後，**無論成功或失敗**，都必須 append 執行記錄至下方路徑；寫完後**放 pipeline 鎖**（`.claude/skills/news-digest/SKILL.md` 0-3 取得的；本輪沒取得時腳本自動略過，照跑無妨）：
+
+```
+PYTHON REPO_ROOT\scripts\pipeline_lock.py release
+```
+
+放鎖推的是 `pipeline-lock` 分支、不是 master，不違反「單一 push」（不觸發網站部署）。放鎖失敗只印警告、不阻斷，鎖會自行逾時。
+
+log 路徑：
 
 ```
 REPO_ROOT\src\logs\task_scheduler.log

@@ -32,6 +32,9 @@ test('designed aborts stay quiet', async () => {
   const wait12 = '[cloud daily-news-pipeline-cloud STARTED 2026-10-02T12:08:33Z]\n' +
     '[cloud daily-news-pipeline-cloud ABORTED 2026-10-02T12:09:15Z] Step 1a：src/gathered_archive/2026-10-02.json 不存在'
   expect(classifyShift(wait12, [], NOW).alert).toBe(null)
+  const locked = '[cloud daily-news-pipeline-cloud STARTED 2026-10-02T17:08:00Z]\n' +
+    '[cloud daily-news-pipeline-cloud ABORTED 2026-10-02T17:09:00Z] ABORTED: pipeline lock held by local@pc'
+  expect(classifyShift(locked, [], NOW).alert).toBe(null)
   const done = '[cloud daily-news-pipeline-cloud STARTED 2026-10-02T17:07:58Z]\n[x] Single push done\n[x] === Pipeline complete (agent) ==='
   expect(classifyShift(done, [], NOW).alert).toBe(null)
 })

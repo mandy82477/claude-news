@@ -38,6 +38,22 @@ PYTHON REPO_ROOT\scripts\check_gather_health.py
 
 門檻與校準依據寫在腳本內（依 07-10~07-24 實績設定），要調整改腳本常數，不要在這裡另寫一套數字。
 
+## 0-3. Pipeline 互斥鎖（強制，動筆前）
+
+本機與雲端共用一把遠端鎖，同一時間只有一個執行者產日報與 wiki：
+
+```
+PYTHON REPO_ROOT\scripts\pipeline_lock.py acquire --date TARGET_DATE --require-absent news/TARGET_DATE.md
+```
+
+backfill 模式（明確覆寫既有日報）不帶 `--require-absent`。
+
+- **exit 0** → 繼續（輸出 ⚠️「無法驗證、放行」時照常進行，Step 6 log 抄那一行）
+- **exit 1** → 別的執行者持有中：**中止**，Step 6 log 抄腳本輸出的 `ABORTED: pipeline lock held by …`，結束（未取得鎖，不必放）
+- **exit 4** → 日報已在 origin（腳本已放鎖）：**中止**，Step 6 log 寫 `ABORTED: digest already exists (after lock)`，結束
+
+取得鎖之後，**任何結束路徑**（完成、中止、失敗）都要在 `.claude/skills/web-publish/SKILL.md` Step 6 寫完 log 後放鎖；漏放會讓下一個執行者卡到逾時（3 小時）。機制與逾時判準見腳本開頭說明。
+
 ## 1. 讀料
 
 讀取 `src/gathered_items.json`。

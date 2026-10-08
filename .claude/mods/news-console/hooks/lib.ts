@@ -84,7 +84,8 @@ export function classifyShift(
   if (/FAILED/.test(after)) return { alert: `雲端 ${label}失敗：${firstLine(after, /FAILED/)}` }
   if (/Pipeline complete/.test(after)) return { alert: null }
   if (/ABORTED/.test(after)) {
-    if (/冪等|already exists/.test(after)) return { alert: null }
+    // 冪等中止與「鎖被另一個執行者持有」（scripts/pipeline_lock.py）都是設計內的讓位
+    if (/冪等|already exists|pipeline lock held/.test(after)) return { alert: null }
     if (/不存在|尚未落地|延遲/.test(after)) {
       return hour >= 22 ? { alert: `雲端 ${label}（最後一班）仍等不到抓料：當日缺報` } : { alert: null }
     }

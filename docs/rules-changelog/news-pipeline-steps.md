@@ -169,3 +169,10 @@
 - **gathered_archive 存被擋條目**：缺席偵測（inquiry Q2）結構上無法逐條判「擋得對嗎」。根因不在 `archive_gathered.py`（它忠實複製），而在上游：`gathered_items.json` 只寫過完 dedup／relevance filter／emitted-cache 三層後的條目，三層丟棄只進日誌。三層各加選用 `dropped` 出參，`main.py` 寫 `blocked_items`（帶 `blocked_by`／`blocked_detail`），歸檔補 `archive_schema: 2`；`items` 格式不變，約 +33 KB／日。10-04 以前舊副本無此欄，Q2 只能驗數字。
 - **web-publish 3g 清單**：Phase A 回報不帶 3g 輸出，完成摘要的清單無輸入來源；改由寫摘要者自己重跑 `scan_expiring_deadlines.py`（唯讀、exit 恆 0）。
 - **聚焦選材校準**（2026-10 月度校準，回看 08-29~09-04）：命中率 39.3%（11/28），前兩次 76%／73.7%。主因是同一事件重複登聚焦（Sony 案 08-30、08-31、09-01 連三天，後續 30 天 0 件；4 組共 9 條）與單次官方公告標重大事件（0/4 存活）、版本小功能（0/2）。selection.md 加三條：無新數字／新動作的重述不進聚焦（連 [持續追蹤] 也不行）、[重大事件] 單次公告／狀態頁事件門檻、版本小功能歸 🔧。下輪複核：若「重複登聚焦」仍 >2 條／週，判為流程執行問題而非判準不足。
+
+## 2026-10-08（pipeline 跨機互斥鎖）
+
+- **起因**：使用者問「手動跑 pipeline 會不會影響雲端排程」。`Step 0b：冪等閘` 只在開跑瞬間看日報存在與否；本機跑到一半時雲端班次開跑（12／17／22 UTC），兩邊都判「還沒有」，各產一份日報與 wiki，後推者撞衝突、wiki 重複條目要人工挑。使用者裁示做雙向 mutex。
+- **做法**：`scripts/pipeline_lock.py`，鎖放在遠端分支 `pipeline-lock`（非 master，不觸發網站部署）。搶鎖／放鎖各推一筆空樹 commit，靠 git 快轉檢查當 compare-and-swap（同時搶時後推者 non-fast-forward 被拒），不用 force、不刪分支（專案 hook 禁止）。HELD 逾 3 小時視為死班可接手（與 news-console 死班判準同值）。搶到後再看一次 origin/master 的 `news/<日期>.md`，別人剛做完就放鎖回 4。不做同 clone 重入：同一 clone 可能開兩個本機 session、共用權杖檔。
+- **接點**：`news-digest` 0-3（新鮮度與原料健檢之後、動筆前取得；等料中止的班次不碰鎖）、`web-publish` Step 6（寫完 log 放鎖，所有結束路徑）。news-console 把 `pipeline lock held` 中止視為設計內讓位、不亮紅燈。
+- **驗證**：`src/tests/test_pipeline_lock.py` 7 案（bare 遠端＋兩 clone：持有擋、放了可搶、逾時接手、同時搶後推者輸、日報已在 origin 回 4、未持有 release 不動遠端、非鎖訊息不解析）；對真實 GitHub 遠端煙霧測試 acquire→二次 acquire 被擋→release 通過。
