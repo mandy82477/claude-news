@@ -266,3 +266,4 @@
 {"id": "H-66f5c2", "closed": "2026-10-07", "status": "void", "by": "主編", "result": "今日功能條目無涉及 Atlassian／Desktop Commander 自建 remote MCP server 的新聞，且該事實性質屬第三方供應商生態動態而非官方補社群痛點，不符 official-community-gap.md 入口判準②，未開新列"}
 {"id": "H-e8e1fd", "closed": "2026-10-07", "status": "void", "by": "主編", "result": "今日 Grok Bot 兩則條目與 GPT-6 Astra／Fable 5 評測無關，不構成 model-task-leaderboard 週更可用後續，該頁依規則僅由 /wiki-lint 5b 抓取維護"}
 {"id": "H-ba9d72", "opened": "2026-10-07", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Claude Code 原生編碼表現（token-savior 自述「78.3% plain」基準）出現負向對照（來源：Mibayy/token-savior GitHub repo 自述，2026-10-07，證據等級：作者自測基準，無第三方覆核方法論或測試環境細節）", "status": "open"}
+{"id": "H-ba9d72", "closed": "2026-10-08", "status": "done", "by": "功能", "result": "寫入 claude-code.md 開發者須知，含證據等級與缺項"}

@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-08
 **最後新聞更新：** 2026-10-01
 
 > **後續反應**（2026-10-01）
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-09-28 最新**：Anthropic 發布 Claude Sonnet 5.5（API ID `claude-sonnet-5-5`），為 Claude 5.5 家族第二款模型（首款為 09-22 發布的 [[entities/opus-5-5|Opus 5.5]]）。官方稱較 Sonnet 5「明顯升級」：速度快逾 30%、多數工作成本省最多 30%（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)，2026-09-28）。隨 Claude Code v2.1.284 更新，Sonnet 5.5 成為 **Anthropic API 預設 Sonnet 模型**；是否同步為 Claude Code CLI 本身的預設、[[entities/sonnet-5|Sonnet 5]] 是否比照 Opus 5.5 模式列為 Legacy，官方原文均未載明（[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。
 
-官方定位：Opus 5.5 面向需審慎判斷的複雜工作，Sonnet 5.5 專攻「界定清楚的日常任務」——修 bug、產出文件／簡報／試算表，並對設計細節敏銳；官方另預告 **Claude Haiku 5.5**（面向高流量、成本敏感場景）將於未來數週內加入 5.5 家族，尚未發布。
+官方定位：Opus 5.5 面向需審慎判斷的複雜工作，Sonnet 5.5 專攻「界定清楚的日常任務」——修 bug、產出文件／簡報／試算表，並對設計細節敏銳；**Claude Haiku 5.5**（面向高流量、成本敏感場景）已於 2026-10-07 發布，加入 5.5 家族，細節見 [[entities/haiku-5-5]]。
 
 定價分層細節見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
@@ -174,7 +174,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-28**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 同步新增支援並設為 API 預設 Sonnet（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）
   - Terminal-Bench 4.0：70.6%（前代 Sonnet 5 為 10.3%）；官方稱另在 GDPval 系列某評測落後 Opus 5.5 兩分，原文截斷未載完整名稱與分數
   - 牌價維持 $2/$10 每 Mtok、快取讀取 $0.20（標準 0.1 倍）；官方定價頁同步改版，分層費率細節見 [[entities/pricing]]
-  - 官方預告 Claude Haiku 5.5 將於未來數週內加入 5.5 家族，尚未發布
+  - 官方預告 Claude Haiku 5.5 將於未來數週內加入 5.5 家族，尚未發布。**後續（2026-10-07）**：Haiku 5.5 已發布，見 [[entities/haiku-5-5]]
   - 路透報導將此次上線與 Anthropic IPO 籌備進度並列；TechCrunch、VentureBeat、The Decoder、SiliconANGLE 及 Hacker News、Reddit 同日跟進，合計至少 7 個來源（Reuters，2026-09-28）
   - HN 互動 46 分（2 個來源），訊號偏弱
   - Simon Willison 以其慣例「畫一隻騎腳踏車的鵜鶘」測試，稱 Sonnet 5.5 出現與 [[entities/opus-5-5|Opus 5.5]] 相同的 bug：「max」thinking effort 下鵜鶘圖示渲染異常（[Simon Willison](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)，2026-09-28；原始摘要於此處截斷，bug 具體表現未見完整記載，不採信推算）

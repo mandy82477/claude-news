@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-08
+**最後新聞更新：** 2026-10-08
 
-> **最新動態**（2026-10-07）
-> - v2.1.292 新增 `claude plugin install --marketplace <source>`，安裝外掛時可一併加入所需市集來源。
-> - 新增已知問題：`.claude.json` 對話歷史無上限累積，拖慢啟動並膨脹至數百 MB（issue #5024，55 則留言、50 個讚）。
+> **最新動態**（2026-10-08）
+> - v2.1.294 修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時擋不住該指令的漏洞，並改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為。
+> - 新增已知問題：Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，使用者自帶 PAT 亦失效（issue #76248，40 則留言、16 個讚）。
 
 ---
 
@@ -43,6 +43,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.294**（2026-10-08）：修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時，實際上擋不住該指令的問題；改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)）。
+  同版 build 另新增 1 個功能候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.292**（2026-10-06）：`claude plugin install` 新增 `--marketplace <source>`，裝外掛可一併加入市集來源，沿用 `marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）。另有未經證實的 stdio MCP 協定異動報導，見下方「🔌 MCP 整合」已知問題。
   同版 build 另新增 4 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.291**（2026-10-06）：修正兩項回歸缺陷——雲端 session 可能遺失使用者對權限提示的回答（源自 v2.1.290）、對話尾端訊息在特定情境下可能遺失（源自 v2.1.288）；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）。
@@ -73,6 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-08）：桌面版文件新增 SSH session 連線管理說明，可從連結開啟 SSH session，分「已有連線」與「新連線」；另新增跨裝置控制 session 可見度的設定（新增 60 段、移除 13 段）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-06）：桌面版文件重新命名既有設定項，非新功能——Auto-fix／Auto-merge 補充說明文字、SSH 欄位由大寫改小寫，邏輯未變（文件字數 84,136→84,975）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-04）：桌面版文件改版——電腦使用（Computer use）開關從「設定 > 一般」搬到「設定 > 本機電腦 > 系統」；舊版「Continue in」單一選單拆成個別選項，可選「Cloud」把本機 session 接續到雲端，或選已安裝的編輯器／檔案管理器直接開啟該 session 資料夾（文件字數 83,588→83,682）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-01）：桌面版文件新增說明——終端機執行 `claude --desktop` 可直接開啟桌面版，不先啟動終端機 session；本機與雲端 session 皆載入 claude.ai 帳號已啟用的 skills；plugins 可依使用者帳號、特定專案或僅本機範圍設定（文件字數 82,443→83,575）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -164,8 +167,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（16 條未修復、3 條已修復、1 條拒修、1 條❓）
+### 🛡️ 安全與隱私（16 條未修復、4 條已修復、1 條拒修、1 條❓）
 
+- ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
 - 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews，2026-09-18）**：媒體稱（2026-10-03 查證）Air Security 09-17 披露：插件 SHA 釘選未驗證檢出內容、加自動更新致零點擊，Claude Code 2.1.179 已修補。
 - 官方 v2.1.179 release notes 與 Security Advisories 未載，狀態待官方確認。詳見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**GitHub Actions 預設範本三家 AI coding agent 通用 RCE 缺陷（Reddit r/artificial 週熱門，2026-09-14）**：Claude Code、Gemini CLI、Codex 官方 Actions 範本皆傳有同款可致 RCE 的設定缺陷。
@@ -226,8 +230,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（61 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（63 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**功能請求：Ctrl+Enter 換行快捷鍵與一般應用程式慣例衝突，應可自訂（GitHub issue #5064，累積 33 則留言、58 個讚，2026-10-08）**：使用者反映 Ctrl+Enter 用於換行與多數應用程式慣例衝突，呼籲新增可自訂快捷鍵設定；官方尚未回應或提供設定選項。
+- 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
 - 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 33 則留言、91 個讚，2026-10-04）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
 - 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
@@ -264,7 +270,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Code 經常誤判所在工作目錄（GitHub issue #1669，2026-07-25 回報）**：使用者回報 Claude Code 經常誤判自己目前所在的工作目錄，導致指令執行失敗，且需經過多輪自我排查才能發現問題根源；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：訊息佇列模式——排入佇列而非中斷進行中任務（GitHub issue #50246，累積 67 則留言、236 個讚，首見 2026-07-25，2026-08-25 互動數更新，今日全站互動量次高）**：使用者反映 Claude 進行中任務時，目前唯一選項是中斷，若使用者想追加後續指令，只能打斷現有工作或事後另尋方式協調；呼籲新增訊息佇列機制，讓後續指令排隊等候而非強制中斷；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Opus 5 xhigh 推理強度於 Claude Code Desktop 失效，因思考功能被強制關閉（Reddit r/ClaudeCode，2026-07-25，Opus 5 上線當天新增問題，單一來源待更多佐證）**：使用者回報 Claude Code Desktop 上將 Opus 5 設為 xhigh 推理強度時功能失效，追查發現是思考（thinking）功能被強制關閉所致；此為 Opus 5 於 Claude Code 上線當天即浮現的新 regression，目前僅單一 Reddit 貼文回報、尚無 GitHub Issue 或跨平台佐證，暫列待更多來源確認；官方尚未回應。
-- 🔴 **未修復**｜**Claude 自陳分析依據不足，卻仍在同一回應中完成該分析——自我識別的阻擋性缺口未真正阻止輸出（GitHub issue #60226，累積 47 則留言，2026-07-24）**：使用者回報 Claude 會在回應中明確指出目前分析依據不足（unfounded），卻在同一則回應裡繼續完成該分析並輸出結論，顯示模型自我識別的「阻擋性缺口」（blocking gap）並未真正阻擋輸出行為；官方尚未回應。
+- 🔴 **未修復**｜**Claude 自陳分析依據不足，卻仍在同一回應中完成該分析——自我識別的阻擋性缺口未真正阻止輸出（GitHub issue #60226，累積 50 則留言，2026-07-24，10-08 更新）**：使用者回報 Claude 明確指出分析依據不足（unfounded），卻在同一回應中繼續完成該分析並輸出結論；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--screen-reader` 模式改善 NVDA／JAWS 無障礙體驗（GitHub issue #11002，65 則留言、38 讚，首見 2026-07-21，09-16 更新）**：v2.1.218 changelog 曾提及螢幕報讀相關改善，惟原文截斷、範圍未知，暫不視為正式回應。
 - 🔴 **未修復**｜**無法用 `Ctrl+Shift+C` 或右鍵選單複製輸出文字（GitHub issue #62699，累積 42 則留言、68 個讚，2026-09-06 更新）**：與「終端機複製夾帶多餘縮排」（#18170）現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**［META］`bypassPermissions` 模式並未真正略過權限檢查——9 個月未解、12+ 則重複回報（GitHub issue #39523，累積 33 則留言、18 個讚，首見 2026-07-23）**：回報者指出 `bypassPermissions` 模式並未如預期真正跳過權限檢查，此問題已延續 9 個月，累積 12 則以上重複回報仍無解決；與既有「`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效」（issue #36168）同屬權限跳過機制失效訴求但涵蓋範圍不同（此則為長期 META 彙整回報），暫分列追蹤；官方尚未回應。
@@ -308,8 +314,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（15 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（17 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**context compaction 後會抹除 `.claude/project-context.md` 的專案指引（GitHub issue #9796，累積 30 則留言、4 個讚，2026-10-08）**：使用者回報壓縮後專案指引遭清空；與跨 compaction 記憶缺口（#34556）同類但聚焦該檔案本身，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：原生支援可切換的 Claude Code「profile」，隔離記憶、指令、hook 與設定（GitHub issue #7075，累積 32 則留言、58 個讚，2026-10-08）**：生態系框架各帶自己的 context／subagent 庫，混用易衝突，呼籲官方原生支援；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**`.claude.json` 持續累積每個專案的對話歷史，無上限，檔案膨脹至數百 MB 以上（GitHub issue #5024，累積 55 則留言、50 個讚，2026-10-07）**：使用者回報該檔案不斷累積歷史紀錄，導致啟動變慢、效能下降；官方尚未回應或提供自動清理機制。
 - 🔴 **未修復**｜**Routines 每次執行留下一個 session，Desktop app 僅能逐一刪除**（[naw103/claude-routine-cleanup](https://github.com/naw103/claude-routine-cleanup)，2026-10-03）：單一使用者回報一個 routine 累積 618 個未清理 session；社群 skill 用官方工具批次刪（每批 25 筆走核准卡）繞過；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨 session 交接與延續（GitHub issue #11455，累積 37 則留言、25 個讚，2026-10-03）**：提案者希望 Claude Code 支援 session 交接，讓工作能在新 session 接續；本站來源未見官方回應。與跨 session 記憶（#14227）同屬延續性缺口。
@@ -368,8 +376,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（75 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（77 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 40 則留言、16 個讚，2026-10-07）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
+- 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援刪除與重新命名對話（GitHub issue #10747，累積 42 則留言、52 個讚，2026-10-07）**：VS Code 擴充套件目前無法刪除或重新命名既有對話，長期管理多個對話的使用者只能任由清單累積；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
@@ -540,6 +550,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.294** | 2026-10-08 | 修正 `prompt`／`agent` hook 寫成自然語言指示時擋不住該指令的問題；改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)）|
+| **anthropic-sdk-python v1.12.1** | 2026-10-08 | Chores：CI 新增檢查 PR 是否更新 changelog、補充 Claude Console 查詢支出限額仍屬 early access、內部對齊 uv.lock 版本號，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1)）|
+| **anthropic-sdk-typescript google-cloud-sdk-v0.0.19** | 2026-10-08 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19)）|
+| **anthropic-sdk-typescript vertex-sdk-v0.20.4** | 2026-10-08 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.20.4)）|
 | **v2.1.292** | 2026-10-06 | 新增 `claude plugin install --marketplace <source>`，裝外掛時一併加入所需市集來源，沿用 `claude plugin marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）|
 | **v2.1.291** | 2026-10-06 | 修正兩項回歸：雲端 session 遺失權限提示答案（源自 v2.1.290）、對話尾端訊息遺失（源自 v2.1.288）；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）|
 | **v2.1.288** | 2026-10-02 | 新增 `--max-findings`、`claude purge`；修正 `bash -c` 內危險 `rm` 繞過檢查（#96300）；stable 仍在 2.1.285（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288)）|
@@ -697,6 +711,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
+- **社群工具 token-savior 自測宣稱優於 Claude Code 原生編碼表現（2026-10-07，Mibayy/token-savior GitHub repo 自述）**：作者自測稱 Claude Code 原生（plain）基準正確率 78.3%，低於其工具版本；證據等級僅作者自測，未附第三方覆核方法論或測試環境細節，僅供參考。
 - **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。
 - **桌面版官方文件：Auto Mode 模型門檻與 Extended Thinking 預設開啟（2026-09-02 查證，Official Docs）**：官方 Claude Code 桌面版文件新增／異動段落載明，Auto mode 現開放給所有 Anthropic API 使用者，但需 **Claude Opus 4.6 以上或 Sonnet 4.6 以上**版本方可使用；文件同時說明 adaptive reasoning 模式下 `MAX_THINKING_TOKENS` 的行為，並明確標註 **Extended thinking 現為預設開啟**。屬既有功能的門檻／預設行為澄清（文件未附具體生效版本號或日期），非新指令旗標；見 [官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **任務之間執行 `/clear` 提升 token 效益（2026-08-14 官方部落格，HN 268 分，今日互動最高）**：Anthropic 官方部落格談如何讓每個 token 發揮最大價值，具體建議包含在不相關任務之間執行 `/clear`——可避免先前無關的 context 被送回模型、佔用預算與拉低訊噪比；屬使用建議而非新功能或新指令。
@@ -816,6 +831,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-08 | **v2.1.294**：hook 自然語言封鎖指示修正。旗標增 1，見 [[topics/claude-code-experimental]]。新增已知問題 6 則，互動更新 1 則。 |
 | 2026-10-06 | **v2.1.291**：兩項回歸修正（權限提示答案遺失、訊息遺失）；桌面文件重命名 Auto-fix/Auto-merge。新增已知問題 1 則（#16561）。 |
 | 2026-10-04 | **v2.1.289**：deny/ask 規則與終端機凍結修正；桌面文件 Computer use 設定搬遷。新增已知問題 2 則，互動更新 1 則。 |
 | 2026-10-03 | **v2.1.288**：`rm` 防護缺口修正、`--max-findings`、`claude purge`。旗標增 7，見 [[topics/claude-code-experimental]]。新增已知問題 1 則。 |

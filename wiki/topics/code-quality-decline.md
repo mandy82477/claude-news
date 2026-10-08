@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-08
+**最後新聞更新：** 2026-10-08
 
-> **A/B 降效能懷疑再添一例**（2026-10-07）
-> - r/ClaudeCode 週熱門貼文稱 Opus 5.5 上線六天表現優異，近日忽然「不對了」，為該主張第七則（本頁累積 23 則訊號）。
+> **Token 消耗訊號再添一筆**（2026-10-08）
+> - r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量暴增引發不滿，無具體數字或版本號，屬「現象還在」類。
 > - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
 
 ---
@@ -109,6 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **08-25「intentionally burning more tokens」**：質疑近幾個月是否要燒更多 token 才能完成同樣的任務；無數字、無版本號，只說明這個現象還在。
 - **09-10「40% session usage in 30 mins」**：與公司方案的低用量基準形成對比，帶具體百分比與時長，但無互動數可佐證；訊號方向與既有九則一致。
 - **09-30「getting very very slow and running out of limits」**：回應速度變慢、用量更易撞頂的抱怨再現；無數字、無版本號，只說明這個現象還在。
+- **10-06「HOLY ULTRA OUTPUT TOKENS BATMAN! WHAT ARE THEY SMOKING OVER THERE?」**：r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量異常暴增，引發不滿；無測試方法或版本號，只說明這個現象還在。
 
 ### 三種解釋，目前各自站在哪
 
@@ -244,6 +245,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-10
+
+#### 2026-10-06
+- **「HOLY ULTRA OUTPUT TOKENS BATMAN! WHAT ARE THEY SMOKING OVER THERE?」：Token 消耗異常訊號群現象延續**：r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量異常暴增，引發不滿；單一貼文、無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wz2p4d/holy_ultra_output_tokens_batman_what_are_they/)）
 
 #### 2026-10-03
 - **「Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock」：LiveNerf 量測啟動**：dev.to（3 讚，09-30）稱 livenerf 為 Opus 5.5 建立第 0 天基準線、每日測 30 天，最早約 10-24 下結論；方法論未查證，不計入「懷疑 A/B 降 effort」則數（來源：[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)）

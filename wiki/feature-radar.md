@@ -2,19 +2,19 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-07
+**最後更新：** 2026-10-08
 
-> **這禮拜動了什麼**（2026-10-03）
-> v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-10-08）
+> Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-10-02）
+## ⭐ 現在值得跟的三件（最後輪替 2026-10-08）
 
 - **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
+- **Claude Haiku 5.5 可選用**：Claude 5.5 家族第三款模型，官方稱成本比前代降約 75%，適合高流量成本敏感任務。**怎麼開始：** `/model claude-haiku-5-5`，細節見 [[entities/haiku-5-5]]。
 - **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
-- **Claude Mods**：v2.1.287 起外掛可修改 Claude Code 更深層的執行時行為，內建示範 mod「You should know」會在使用者或 Claude 可能忽略某事時主動提醒。**怎麼開始：** 讀官方新十頁 mods 文件（[overview](https://code.claude.com/docs/en/plugins/mods/overview.md)）了解權限範圍後開始開發。
 
-%% 10-02 換上 Claude Mods（🔥🔥🔥🔥，10-01 發布，在 30 天時間閘內達標），擠下 Claude Fable 5.1（09-01 發布，距今 31 天已過 30 天時間閘、本輪熱度與試用價值未變動，依規則移出候選池）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，維持原位，第一條固定為預設值改變型 Sonnet 5.5 %%
+%% 10-08 換上 Claude Haiku 5.5（🔥🔥🔥🔥🔥，10-07 發布，在 30 天時間閘內達標，與 AGENTS.md 同熱度但發布日較新，依規則排序優先），擠下 Claude Mods（🔥🔥🔥🔥，10-01 發布，熱度較低）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，第一條固定為預設值改變型 Sonnet 5.5 %%
 
 ---
 
@@ -65,6 +65,22 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Haiku 5.5 可選用
+**發布：** 2026-10-07 | **狀態：** 正式發布
+
+**是什麼：** Anthropic 發布 Claude Haiku 5.5（API ID `claude-haiku-5-5`），為 Claude 5.5 家族第三款模型，官方定位為「目前最便宜、最快、最具能力的小型模型」，平均執行成本比 Haiku 4.5 低約 75%。精確牌價官方發布文未附具體數字，模型規格細節見 [[entities/haiku-5-5]]。
+
+**為何熱：** Hacker News＋Blog／Simon Willison＋HN Repo Bridge 合計 1,005 分（3 個來源，2026-10-08 查核），是今日單一條目互動量最高的訊號；AWS、GitHub Copilot 同日同步上架。
+
+**現在要試嗎：** 高流量、成本敏感的工作（摘要、壓縮、資料庫查詢、分類）適合換過去；與 Opus 5.5／Sonnet 5.5 搭配作編碼 subagent 效果好。是否已成為各方案預設 worker，官方發布文未提及。
+
+**快速上手：**
+```
+/model claude-haiku-5-5
+```
+
+**注意事項：** 精確 $/Mtok 牌價與 1M context 上限聲稱僅見媒體標題，官方發布文未附具體數字，見 [[entities/haiku-5-5]] ⟨Q-01⟩。
 
 ### `claude plugin install --marketplace`
 **發布：** 2026-10-06（v2.1.292） | **狀態：** GA
@@ -449,6 +465,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Haiku 5.5 可選用**（成本比前代降約 75%，高流量成本敏感任務；模型本身見 [[entities/haiku-5-5]]） | 2026-10-07 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **`claude plugin install --marketplace`**（安裝外掛時自動補上所需市集來源，省去先手動 `marketplace add`） | 2026-10-06 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code HIPAA-ready 組織本地模式部署**（Enterprise HIPAA 組織，Desktop／Cloud sessions 管理開關） | 2026-10-05 | 🔥 | ⏳ 觀望 | 正式發布（Enterprise HIPAA 組織） |
 | **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

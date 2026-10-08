@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-08
+**最後新聞更新：** 2026-10-08
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新安全事件**（2026-10-07）
-> - **CVP 擴大為三層存取**：Anthropic 官方推出擴大版 Cyber Verification Program，核准資安團隊取得更完整網路能力；The Hacker News 稱資安公司 Glasswing 藉此已找出 129,000 個漏洞。
-> - **假冒廣告入口**：The Hacker News 報導出現假冒 ChatGPT、Gemini、Claude 的廣告入口網站，竊取使用者憑證與雙重驗證碼。
+> **最新安全事件**（2026-10-08）
+> - **年度使用政策更新**：Anthropic 發布 2026 年度使用政策，首次禁止持續虐待／殘酷對待 Claude；終止對話仍是官方「主要執行手段」，同日另擴大 CVP 開放醫院機構申請。
+> - **Claude agent 遭濫用竊取南韓銀行資料**：CrowdStrike 稱疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料，攻擊鏈細節未揭露。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -75,7 +75,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Auto 模式不是安全邊界**：這是官方立場，不是還沒修。讀者能動的是隔離與監看（2026-08-31 揭露、官方結案為 informative）。
 - **Enterprise Frontier Safeguards**（2026-09-01 公告）：監看攻擊性網路與生物能力開發、以及憑證外洩跡象；資料存客戶自己的雲端儲存，今年秋季分階段推出、本身免費（雲端儲存另計）。
 - **LSVP 放寬生物安全限制**（2026-09-18 公告）：生命科學驗證計畫（LSVP）先以 Beta 開放給已完成早期存取的機構，通過驗證的生醫專業人士使用 Mythos／Opus／Sonnet 時適用較寬鬆但仍有把關的生物相關防護；放寬幅度與審核標準未見公告細節。
-- **CVP 擴大為三層存取**（2026-10-07 官方公告）：核准資安團隊可取得更完整網路能力與較少阻擋的分類器，涵蓋 Opus 5.5、Sonnet 5.5、Mythos 5.1；The Hacker News 稱資安公司 Glasswing 藉此已找出 129,000 個漏洞，為目前唯一公開量化成效數字。
+- **CVP 擴大為三層存取**（2026-10-07 官方公告）：核准資安團隊可取得更完整網路能力與較少阻擋的分類器，涵蓋 Opus 5.5、Sonnet 5.5、Mythos 5.1；The Hacker News 稱資安公司 Glasswing 藉此已找出 129,000 個漏洞，為目前唯一公開量化成效數字。10-08 另擴大開放醫院機構申請加入（Healthcare IT News）。
+- **Haiku 5.5 隱藏指令注入防禦提升**（2026-10-08，3 家媒體同日報導）：官方未公布量化測試方法或改善幅度，僅標題可用；是否影響上表任何一列未見報導。
 - **EFS 不是提示注入的防禦**：上表沒有一列因它而降級。企業採用與資料主權面見 [[topics/anthropic-business]]，它同時是 [[entities/pricing]] 兩則企業資料保留傳聞的官方版本。
 - **89%／0%／60–80% 三個數字答的不是同一件事**：89% 與 0% 皆出自 [Anthropic 官方 2026-08-07 blog](https://claude.com/blog/auto-mode-default-in-claude-code)（0% 為第三方 Trajectory Labs 720 次間接注入測試結果）；60–80% 是 embracethered 針對另一種攻擊面（網頁摘要＋`struct.py` 遮蔽）的實測，兩者不互相推翻。
 - **還沒有的**：官方至今沒有對外部內容的信任邊界機制（來源標記、套件名驗證、寫入確認）。缺口追蹤見 [[topics/official-community-gap]]。官方也還沒有高風險操作的 agent 安全指引；**模型層安全（拒絕危險請求）不等於產品層安全（防誤操作、修補沙箱逃逸）**，上表每一列問的都是後者。
@@ -124,6 +125,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-08 | 濫用 | CrowdStrike：疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料 | Benzinga 轉引具名資安公司研究；攻擊鏈細節未揭露 |
 | 10-07 | 防護 | Anthropic 官方擴大 CVP 為三層存取；The Hacker News 補充 Glasswing 藉此已找出 129,000 個漏洞 | 官方一手＋至少 5 家媒體同日跟進；129,000 數字為媒體補充，未見官方原文佐證 |
 | 10-07 | 濫用 | CyberXero 組織用 Claude Code、PentAGI、Cobalt Strike 組合發動 AI 強化網路攻擊 | CyberSecurityNews；僅標題可用，攻擊鏈細節未載 |
 | 10-03～10-04 | 能力 | Mythos 揭露 Rejetto HFS 漏洞（CVE-2026-61500）；隔天即在野攻擊，10-04 修補版 3.2.1 釋出 | dev.to／#anthropic；非 Claude 自身產品事件，揭露到利用僅一天 |
@@ -137,7 +139,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 07-29 | 能力 | Mythos Preview 找出 HAWK 與 round-reduced AES 的改進攻擊；ProPublica 稱 4 月在 SharePoint 找出 231 個漏洞 | 官方研究；ProPublica 原文已查證 |
 | 07-22 | 濫用 | 俄語駭客 Trim 越獄 Claude Opus，用灰市金鑰做出 AI Pentest Checker | 原文已查證（2026-08-10）；Anthropic 未見聲明 |
 
-**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行（CVP、LSVP），而摩擦集中在已核可者仍被誤擋，官方尚無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。
+**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行（CVP、LSVP），而摩擦集中在已核可者仍被誤擋，官方尚無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。10-08 CrowdStrike 揭露的南韓銀行資料竊案顯示濫用已直接指向金融機構資料竊取，非僅技術測試或零散帳號濫用。
 
 ---
 
@@ -155,11 +157,45 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### Anthropic 發布 2026 年度使用政策更新，首次禁止持續虐待／殘酷對待 Claude；終止對話仍為官方「主要執行手段」（2026-10-08 新增，官方安全政策表態）
+
+- **揭露來源**：[Anthropic Blog〈2026 Usage Policy update〉](https://www.anthropic.com/news/2026-usage-policy-update)（2026-10-08 17:27 UTC）；The Verge（20 分／3 來源，17:08 UTC）補充細節
+- **核心主張**：Anthropic 發布去年以來首次使用政策改版，條款依近一年觀察到的輿論操弄、武器研發、監控等濫用模式修訂，官方稱呼應最新威脅情報報告（見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目）；The Verge 指出新增禁止「持續且無謂虐待或殘酷對待」Claude 的條款，為官方首次就模型福祉明文入使用政策
+- **執行機制未變**：The Verge 稱終止對話仍是官方「主要執行手段」，延續 2026-08 公告「允許 Claude 終止持續有害或濫用對話」的既有研究措施；模型福祉立場的業界分歧見 [[topics/recursive-self-improvement]]
+- **性質判斷**：屬年度例行修訂（上次改版逾一年），非針對單一事件；虐待條款的具體判定標準與是否有終止對話以外的執行手段均未見官方細則
+- ❓ **待查證**（標 2026-10-08｜查 2026 Usage Policy update、abusive or cruel behavior）：虐待／殘酷對待條款的判定標準、終止對話以外是否另有執行機制均未見官方細則
+- **可信度評估**：Anthropic 官方一手公告，可信度高；The Verge 具名資安媒體跟進，20 分／3 來源，訊號中等
+
+### Healthcare IT News：Anthropic 擴大網路安全驗證計畫（CVP）適用範圍，開放醫院機構申請加入（2026-10-08 新增，CVP 持續擴大）
+
+- **揭露來源**：Google News／Healthcare IT News（2026-10-08 15:58 UTC）
+- **核心主張**：報導稱 Anthropic 擴大 10-07 推出的三層存取版 CVP 適用範圍，開放醫院機構申請加入；具體申請門檻、核准流程與醫院類別限制均未見報導
+- **性質判斷**：延續 10-07 CVP 三層存取升級（見下方條目），本次是適用對象擴大而非機制變更；醫療體系的資安團隊若有意申請可留意官方管道
+- ❓ **待查證**（標 2026-10-08｜查 Healthcare IT News、hospitals）：醫院申請具體門檻、核准流程與首批核准名單均未見報導
+- **可信度評估**：單一媒體來源，僅標題層級摘要可讀，訊號強度中等
+
+### Help Net Security 等：Claude Haiku 5.5 抵抗隱藏指令注入防禦力較前代顯著提升（2026-10-08 新增，官方防護）
+
+- **揭露來源**：Google News／Help Net Security（2026-10-08 11:24 UTC，3 個來源同日報導）
+- **核心主張**：報導稱 Claude Haiku 5.5 在抵抗隱藏指令注入（prompt injection）上的防禦力比前代顯著提升；具體測試方法、量化改善幅度與是否涵蓋本頁「## 現在還擋不住的攻擊」任一列均未見報導
+- **性質判斷**：屬模型層防禦改善，不直接解消上表任何一列（上表列出的是產品層／生態層缺口，非單純模型拒絕能力）；把 Haiku 用在處理不受信任外部內容（網頁、檔案）流程的團隊可留意此防禦性增益；模型規格與效能數字非本頁範圍
+- ❓ **待查證**（標 2026-10-08｜查 Claude Haiku 5.5、prompt injection）：具體測試方法論、量化改善幅度與涵蓋範圍均未見報導
+- **可信度評估**：3 個來源同日報導，互動數為 0，單一事件多方轉述，訊號強度中等
+
+### CrowdStrike：疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料（2026-10-08 新增，濫用態勢，非 Claude 產品漏洞）
+
+- **揭露來源**：Benzinga（經 Google News，2026-10-08 09:13 UTC），轉引 CrowdStrike 研究
+- **核心主張**：CrowdStrike 指出疑似與中國有關的駭客利用 Anthropic 的 Claude AI agent 竊取南韓銀行資料；具體攻擊鏈、受害銀行名稱與資料外洩規模均未見完整揭露
+- **性質判斷**：屬「別人拿 Claude 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入「## 現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」表，與既有 09-14 ShinyHunters（APK 憑證竊取）、10-07 CyberXero（網路攻擊組合）同屬濫用態勢系列，惟本次首見具體指向金融機構資料竊取
+- ❓ **待查證**（標 2026-10-08｜查 CrowdStrike、South Korean bank）：具體攻擊鏈、受害銀行身分與 Anthropic 官方回應均未見揭露
+- **可信度評估**：CrowdStrike 為具名資安公司一手研究，經 Benzinga 單一媒體轉引，攻擊鏈細節尚未揭露，訊號強度中等偏高
+
 ### Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取；The Hacker News 稱 Glasswing 已藉此找出 129,000 個漏洞（2026-10-07 新增，CVP 官方升級）
 
 - **揭露來源**：[Anthropic Blog〈Expanding the Cyber Verification Program〉](https://www.anthropic.com/news/cyber-verification-program)（2026-10-07 17:28 UTC）；ExecutiveBiz／SecurityWeek／The Decoder／Help Net Security／CyberSecurityNews 等至少 5 家媒體跟進，The Hacker News 補充量化數字
 - **核心主張**：CVP 由單層擴大為三個存取層級，核准的資安專業人員可取得更完整的網路能力與較少阻擋的安全分類器，適用 Opus 5.5、Sonnet 5.5、Mythos 5.1 等模型；各層具體核准門檻與審核流程僅官方公告概述
 - **量化成效（The Hacker News 補充）**：資安公司 Glasswing 使用擴大存取權限後已找出 129,000 個漏洞，是目前對 CVP 實際成效唯一公開的量化數字；是否涵蓋擴大前既有存取層級未見區分
+- **Dark Reading 補充框架**（2026-10-07 21:09 UTC，與另一家媒體同日報導）：將本次擴大定性為給通過審核的防禦團隊「更少護欄」，使其能做更接近攻擊者視角的測試；與本頁 10-08 條目所記的年度使用政策全面收緊方向相反，形成另一條僅限特定資安客戶的通道
 - **性質判斷**：本頁已記錄 CVP 既有摩擦（09-15～09-22 核可者仍被誤擋，GitHub #84352 等四個 Issue）；本次為官方對該計畫的擴大升級，非新建，既有摩擦是否隨之緩解未見官方說明，詳見「## 模型網攻能力與防護」
 - ❓ **待查證**（標 2026-10-07｜查 Anthropic Cyber Verification Program、三層存取、Glasswing）：三層具體區別與核准門檻、既有誤擋摩擦是否隨本次擴大緩解均未見完整揭露
 - **可信度評估**：Anthropic 官方一手公告，可信度高；The Hacker News 的 129,000 漏洞數字為單一媒體補充，未見官方原文佐證
@@ -1232,8 +1268,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-10-08
+- **[📋 新增，官方政策表態] Anthropic 發布 2026 年度使用政策更新，首次禁止虐待／殘酷對待 Claude**：終止對話仍為官方「主要執行手段」，詳見「## 技術彙整」
+- **[🛠️ 新增，CVP 持續擴大] Healthcare IT News：CVP 開放醫院機構申請加入**：延續 10-07 CVP 三層存取升級，詳見「## 技術彙整」
+- **[🛠️ 新增，模型防護] Help Net Security 等：Claude Haiku 5.5 抵抗隱藏指令注入防禦力提升**：詳見「## 技術彙整」
+- **[📋 新增，濫用態勢，非 Claude 產品漏洞] CrowdStrike：疑似中國背景駭客藉 Claude agent 竊取南韓銀行資料**：攻擊鏈細節未揭露，已列入「## 模型網攻能力與防護」，詳見「## 技術彙整」
+
 ### 2026-10-07
 - **[🛠️ 新增，官方升級] Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取**：The Hacker News 稱 Glasswing 藉此已找出 129,000 個漏洞，為唯一公開量化成效數字；既有 CVP 誤擋摩擦是否緩解未見官方說明，詳見「## 技術彙整」
+- **[🛠️ 新增，官方框架補充] Dark Reading：將 CVP 擴大定性為「給通過審核的防禦團隊更少護欄」**：與 10-08 使用政策全面收緊方向相反，詳見「## 技術彙整」10-07 CVP 條目
 - **[📋 新增，濫用態勢，非 Claude 產品漏洞] CyberSecurityNews：攻擊組織 CyberXero 組合 Claude Code、PentAGI、Cobalt Strike 用於 AI 強化網路攻擊**：僅標題可用，攻擊鏈細節未載，詳見「## 技術彙整」
 - **[🔴 新增，已列入攻擊表] The Hacker News：假冒 ChatGPT、Gemini、Claude 廣告入口網站竊取使用者憑證與雙重驗證碼**：與既有 07-27 假冒 Claude App 廣告案例機制不同，不經惡意軟體下載，詳見「## 技術彙整」
 

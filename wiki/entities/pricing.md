@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-08
+**最後新聞更新：** 2026-10-08
 
-> **最新計費政策異動**（2026-10-07）
-> - **Anthropic 擴大 Claude Startups 計畫（媒體稱，今日再獲至少 6 家媒體跟進）**：合格新創可領一年免費 Claude Team＋$1,000 額度，官方資格門檻仍未見查證。
-> - **Sonnet 4.5（claude-sonnet-4-5-20250929）官方退役日查證為 2026-11-30**（與 dev.to 轉述一致）：官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)載明 09-30 已公告棄用、11-30 退役，建議遷移至 Sonnet 5.5；此日期適用 Claude API／AWS Claude Platform／Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的時程。詳見 [[entities/pricing#模型 API 定價現況]]。
+> **最新計費政策異動**（2026-10-08）
+> - **Anthropic Status：組織花費上限誤判暫停事故已解決**（10-07 21:23 UTC）：該日曾遇請求被拒的組織層花費上限團隊現在應已恢復正常。
+> - **Max／Team 新增「每月 API credits」，但不可用於 Claude Code／Claude App**：確切金額官方未附數字，媒體口徑不一，見 [[entities/pricing#還沒確定的計費變動]]。
 
 ## 現況
 
@@ -147,14 +147,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 還沒確定的計費變動
 
-**下列四項尚無官方一手文件可寫進「當前生效的計費規則」，各自的完整脈絡在下方事件流。**
+**下列五項尚無官方一手文件可寫進「當前生效的計費規則」，各自的完整脈絡在下方事件流。**
 
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
+| Max／Team 新增「每月 API credits」 | 官方說明中心新增此項目；不可用於 Claude Code 或 Claude App；金額上限未定，見下方細節 | 官方說明中心查證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
 | Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
+
+**Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得。
 
 ---
 
@@ -279,6 +282,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### ✅ 2026-10-07：Anthropic Status 官方通報——部分組織被誤判已達花費上限而遭暫停
+
+- **Anthropic Status（[status.claude.com/incidents/vmys9qn874h4](https://status.claude.com/incidents/vmys9qn874h4)，2026-10-07 21:23 UTC，Resolved）**：部分設有組織層花費上限的組織曾被系統誤判已達上限而遭暫停、Claude 請求被拒；官方已於 21:23 UTC 標記解決，當天受影響的團隊現在應已恢復正常。
 
 #### 🔴 2026-10-02：GitHub Issue #8327——設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「組織已停用」擋下
 

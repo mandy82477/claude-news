@@ -7419,3 +7419,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 📋 待使用者確認：
   1. [商業] Claude for Startups 計畫（免費一年 Claude Team＋$1,000 額度）的官方資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium），累積兩日、10+ 家媒體同口徑報導仍無官方一手頁面佐證，建議查 Anthropic 官方 Claude for Startups 計畫頁
 - 歸因 news-pipeline／人物、功能、商業、安全政策、社群、投資分析
+
+## 2026-10-08 Ingest
+
+- 來源日報：[[news/2026-10-08]]（85 則原料，日報收錄 38 則）
+- 更新頁面：
+  - **功能**：entities/claude-code、topics/claude-code-experimental
+  - **商業**：entities/pricing、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety
+  - **模型**：entities/haiku-5-5（新建）、topics/model-comparison、entities/sonnet-5-5（事實更正）
+  - **社群**：topics/code-quality-decline、topics/community-tech-discussions
+  - **投資分析**：topics/market-signals
+- 新增頁面：wiki/entities/haiku-5-5.md
+- 摘要：Claude Haiku 5.5 發布（HN＋Blog 合計 1,005 分，今日最高訊號）、Max/Team 新增每月 API credits（金額官方未確認）、2026 使用政策更新新增禁止虐待 Claude 條款，是今日三條主線；另有 CrowdStrike 稱疑似中國黑客用 Claude agent 竊取南韓銀行資料、Anthropic「Claude 主導」CRISPR 式發現遭科學界質疑兩則風險警示。
+- 呈現品質：全部通過
+- 品質備註：`check_pending_markers.py` 全庫懸置標記語法閘首次在雲端 routine 實際跑到（前幾班多於 Step 1b 之前因資料未到齊中止，未曾走到這一關），曝光 2026-09-09 基線設定後約一個月累積、從未被量測過的既有舊語法存量（分佈於 market-signals／ai-agent-safety／sonnet-5-5／pricing／index／overview／anthropic-government-policy／jacob-coxon／coding-workflow-guide，標記日多在 10-03～10-07，非本輪新增）；本輪另有 5 處今日新增的冗餘提示詞（「待核實」「未經官方確認」等，與同頁已有的正式懸置標記重複）已改寫為讀者語言消除，閘轉綠未動基線檔（`data/pending-legacy-baseline.json` 仍 42，未調整）。既有存量債務待 `/wiki-lint` 3g 逐筆補探針清償。
+- 分類回退：無
+- 轉知：結案 1 筆（H-ba9d72，功能記者寫入 claude-code.md「開發者須知」，含證據等級與缺項）
+- devpractice 沉澱：候選 6 筆（已 append `data/devpractice-candidates.jsonl`，待週度landing）；今日無官方使用指南類條目，手冊整頁未寫
+- market 判讀：判讀 2 則（Haiku 5.5 定價改版線第 5 則；Max/Team 新增月度 API credits 開新線），回顧結算 ⏳ 2 列（判讀日 10-08，結算日 10-22）
+- feature-radar：新增 Claude Haiku 5.5（🔥🔥🔥🔥🔥，正式發布）；「⭐ 現在值得跟的三件」輪替——Haiku 5.5 擠下 Claude Mods（同熱度 AGENTS.md 因發布日較舊排第三，Sonnet 5.5 仍固定第一）
+- index：新增 entities/haiku-5-5 一列（🤖 模型，精確牌價標 ❓）
+- 📋 待使用者確認：
+  1. [商業] Max／Team 每月 API credits 確切月度金額——官方三篇文件（Help Center release notes／Use Claude Code with Pro or Max plan／Manage usage credits）與官方定價頁皆未附具體數字，WebFetch 直接查證仍讀不到金額；媒體標題互相矛盾（XenoSpectrum 稱 Max 最高 $200，Pasquale Pillitteri 稱最高 $500），建議查官方帳務頁面實際入帳數字或等下一次官方文件更新
+  2. [模型] Claude Haiku 5.5 精確 $/Mtok 牌價與 1M context 上限——官方發布文僅稱「平均執行成本降約 75%」未附具體數字；MarkTechPost／shattered.io／tech-insider.org 三家標題稱 input $0.10／Mtok、1M context，VentureBeat 稱降幅 90%，各口徑不一致且僅標題可讀，建議待官方定價頁正式列出 Haiku 5.5 費率後核對
+  3. [模型/投資分析] VentureBeat 稱 Haiku 5.5 定價已與 GPT-6 Luna「看齊」——僅 VentureBeat 一家媒體提及，OpenAI 官方未見對應說法，建議查 OpenAI 官方定價頁或 GPT-6 Luna 發布文核對是否屬實
+- 歸因 news-pipeline／功能、商業、安全政策、模型、社群、投資分析

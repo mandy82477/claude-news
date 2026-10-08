@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-08
+**最後新聞更新：** 2026-10-08
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-07）
-> - 🟡 **Meta 內部 Muse Code 逾 6,000 人、MetaCode 逾 3 萬人在用**（已查證）——自家工具正在接手原本的 Claude Code 用量。
+> **本週衝擊**（2026-10-08）
+> - 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Meta 推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務**（09-28，官方）——與 Claude Code 企業市場定位重疊，企業採購比較又多一個對手要比。
@@ -223,7 +223,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-10-08
+- **OpenAI（透過比較報導）**：WSJ 稱 AI 定價戰加劇，OpenAI 在對 Anthropic 的競爭中逐漸追上，具體數字與方法論未見報導，僅標題可用（Google News/WSJ）
+- **OpenAI**：官方部落格說明阻止兩起冒用新聞機構／智庫身分散布地緣政治訊息的 AI 影響力操弄行動，非編碼工具或定價異動（openai.com）
+- **Meta**：官方部落格反駁資料中心常見迷思（用水、耗能等），非 AI 編碼工具競品異動（about.fb.com）
+- **Meta**：捐贈 1,000 支 AI 眼鏡予新加坡失能者社群，非 AI 編碼工具競品異動（about.fb.com）
+
 ### 2026-10-07
+- **Microsoft／GitHub**：Claude Haiku 5.5 全面上線 GitHub Copilot，定位快速子代理、快速編輯與終端機任務；屬 Claude 經競品平台擴大觸及而非競品自身能力異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot 新增專門偵測外洩機密的模型，屬 Copilot 目前差異化功能之一，具體偵測範圍與準確率未見報導（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Copilot CLI、桌面版與 VS Code Agent Host 的本機沙盒功能正式 GA，提供安全執行環境，與 09-22／23 已記錄之本地沙箱 GA 範圍差異未見報導（Blog/GitHub Copilot Changelog）
+- **Meta**：基礎架構負責人談資料中心在 AI 佈局中的重要性，非 AI 編碼工具競品異動（about.fb.com）
 - **Microsoft／GitHub**：Copilot 更新 IDE 修復 agent 活動誤算進用量指標下滑的問題，屬統計修正，非能力或定價變動（Blog/GitHub Copilot Changelog）
 
 ### 2026-10-06
