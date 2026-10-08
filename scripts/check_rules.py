@@ -5,13 +5,15 @@ check_rules.py — 通用規則一致性檢查引擎（取代 /review-commands �
 只用標準庫（re / json / pathlib），不 subprocess 呼叫 grep（跨平台考量）。
 讀取 REPO_ROOT/.claude/review-registry.json，對 .claude/commands/、.claude/rules/、
 .claude/reporter-rules/
-（或 registry 指定的其他 glob）執行五類確定性檢查：
+（或 registry 指定的其他 glob）執行下列確定性檢查：
 
     1. bare_references   — 裸露引用（如無路徑前綴的 CLAUDE.md）
     2. path_existence     — backtick 路徑存在性
     3. anchors             — 錨點字串必須存在於指定檔案
     4. sync_pairs           — 同步配對斷言（all_contain / equal_values / min_count）
     5. coupling_hints（warn-only）— 高頻互相引用但未登記 sync_pair 的檔案對提示
+    6. personal_paths     — 個人路徑／帳號外洩
+    7. script_symbols     — 規則檔指到的腳本符號（`FOO_RE`、`bar()`）必須存在
 
 用法：
     python scripts/check_rules.py
@@ -469,6 +471,80 @@ def check_personal_paths(cfg: dict, report: Report):
     report.add(name, not hits, details)
 
 
+_SCRIPT_MENTION_RE = re.compile(r"[\w./-]*?([\w-]+\.(?:py|js))\b")
+_SYMBOL_HOMES = ("scripts/*.py", "src/news_aggregator/**/*.py", ".claude/hooks/*.py", "web_reader/assets/*.js")
+_UPPER_SYMBOL_RE = re.compile(r"\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)+\b")
+_CALL_SYMBOL_RE = re.compile(r"\b([A-Za-z_][A-Za-z0-9_]*)\(\)")
+
+
+def _resolve_script(mention: str, basename: str, cache: dict) -> Path | None:
+    """規則檔裡提到的 `x.py`：先照寫的路徑找，再找 scripts/、src/、.claude/hooks/，最後全庫找同名唯一檔。"""
+    if basename in cache:
+        return cache[basename]
+    found: Path | None = None
+    for cand in (REPO_ROOT / mention, REPO_ROOT / "scripts" / basename, REPO_ROOT / ".claude" / "hooks" / basename,
+                 REPO_ROOT / "src" / "news_aggregator" / basename, REPO_ROOT / "web_reader" / "assets" / basename):
+        if cand.is_file():
+            found = cand
+            break
+    if found is None:
+        hits = [p for p in REPO_ROOT.rglob(basename) if ".git" not in p.parts and "node_modules" not in p.parts]
+        found = hits[0] if len(hits) == 1 else None
+    cache[basename] = found
+    return found
+
+
+def check_script_symbols(cfg: dict, report: Report):
+    """規則檔同一行同時提到腳本檔名與符號（`FOO_RE`、`bar()`）時，該符號必須真的存在於那支腳本。
+
+    契約表右欄寫「`check_x.py` FOO_RE」就是在對執行者保證那支腳本有這個名字；腳本改名、
+    規則沒跟上，執行者會照舊名找不到還以為檢查壞了。這類漂移 registry 的 sync_pairs 要人工
+    登記才抓得到，這裡不用登記：掃到就查。
+
+    只擋「全庫都沒有這個符號」：契約表常見一列只寫一次腳本名、後面幾列只寫符號，
+    符號住在同表另一支腳本裡是版面省略，不是漂移。
+    """
+    if not cfg:
+        return
+    name = "檢查 7：規則檔指到的腳本符號存在（script_symbols）"
+    globs = cfg.get("globs", [])
+    ignore = set(cfg.get("ignore_symbols", []))
+    cache: dict = {}
+    files: list[Path] = []
+    for g in globs:
+        files.extend(resolve_glob(g))
+    everywhere = "\n".join(read_text(p) for g in cfg.get("symbol_homes", _SYMBOL_HOMES) for p in resolve_glob(g))
+    hits: list[str] = []
+    scanned = 0
+    for md in sorted(set(files)):
+        text = read_text(md)
+        scanned += 1
+        for lineno, line in enumerate(text.splitlines(), start=1):
+            mentions = [(m.group(0), m.group(1)) for m in _SCRIPT_MENTION_RE.finditer(line)]
+            if not mentions:
+                continue
+            symbols = set(_UPPER_SYMBOL_RE.findall(line)) | set(_CALL_SYMBOL_RE.findall(line))
+            symbols -= ignore
+            if not symbols:
+                continue
+            scripts = [(_resolve_script(m, b, cache), b) for m, b in mentions]
+            texts = {b: read_text(p) for p, b in scripts if p}
+            if not texts:
+                continue
+            for sym in sorted(symbols):
+                rx = re.compile(r"\b" + re.escape(sym) + r"\b")
+                if any(rx.search(t) for t in texts.values()) or rx.search(everywhere):
+                    continue
+                hits.append(f"{rel(md)}:{lineno}: `{sym}` 不在 {'／'.join(sorted(texts))} 裡，全庫腳本也沒有")
+    details = [f"掃描 {scanned} 個規則檔；同一行提到 `.py`／`.js` 與 `UPPER_SNAKE`／`name()` 符號者逐一核對"]
+    if hits:
+        details.append(f"發現 {len(hits)} 處指到不存在的符號（腳本改名後規則沒跟上，改規則或登記 ignore_symbols）：")
+        details.extend(f"  - {h}" for h in hits)
+    else:
+        details.append("無")
+    report.add(name, not hits, details)
+
+
 def main() -> int:
     stream = _stdout()
     registry = load_registry()
@@ -480,6 +556,7 @@ def main() -> int:
     check_sync_pairs(registry.get("sync_pairs"), report)
     check_coupling_hints(registry.get("coupling_hints"), registry.get("sync_pairs"), report)
     check_personal_paths(registry.get("personal_paths"), report)
+    check_script_symbols(registry.get("script_symbols"), report)
 
     stream.write(report.render() + "\n")
     stream.flush()

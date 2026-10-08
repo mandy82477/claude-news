@@ -9,3 +9,9 @@
 ## 2026-10-04（專案根改相對 repo 根）
 
 六處規則檔（含 claude-md-edit 的 glob 說明、ingest checklist 強制核對項）仍以 09-12 分割前的 `CLAUDE_NEWS/` 為專案根，照字面找會落空。改為相對 repo 根（`git rev-parse --show-toplevel`）。
+
+## 2026-10-08：check_rules 檢查 7（規則檔指到的腳本符號）
+
+weekly-report 契約表的右欄指著 `check_weekly_ledger.py` 已改名的 `HEADLINE_SECTION_RE`，`sync_pairs` 沒人登記這一組，靠派 reviewer 人工對照才抓到。這類漂移有固定形狀：規則檔同一行同時寫腳本檔名與 `UPPER_SNAKE`／`name()`。`check_rules.py` 新增 `script_symbols`：掃 `.claude/**/*.md` 與雲端 runbook，命中就查符號存不存在（先查該行點名的腳本，再查全庫腳本——契約表常一列寫腳本名、後幾列只寫符號），全庫都沒有才 FAIL。registry `script_symbols.ignore_symbols` 放 runbook 佔位符（`TARGET_DATE`、`REPO_ROOT`）。初次全庫掃描 0 命中（修完契約表後）。
+
+沒有機械化的三件事，仍靠派 reviewer：同一事實兩個家其中一個過時、「見 X.md」指到已刪的句子、刪 reference 檔後其內容有沒有新家。刪 reference 檔或搬動整節時，派 reviewer 拿舊檔逐段問「有沒有新家」。

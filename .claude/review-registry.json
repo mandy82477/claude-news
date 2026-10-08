@@ -1972,6 +1972,21 @@
       ".claude/review-registry.json"
     ]
   },
+  "script_symbols": {
+    "_doc": "檢查 7：規則檔同一行提到 `x.py`／`x.js` 與 `UPPER_SNAKE`／`name()` 符號時，該符號必須存在於那支腳本或全庫任一腳本（symbol_homes 預設 scripts/、src/news_aggregator/、.claude/hooks/、web_reader/assets/）。ignore_symbols 是 runbook 佔位符，不是符號。2026-10-08 contracts.md 指著已改名的 HEADLINE_SECTION_RE，靠人工 review 才抓到。不需逐筆登記；真的不是符號的字串放 ignore_symbols。",
+    "globs": [
+      ".claude/skills/**/*.md",
+      ".claude/commands/*.md",
+      ".claude/rules/*.md",
+      ".claude/reporter-rules/**/*.md",
+      ".claude/agents/*.md",
+      "docs/cloud-runbooks/*.md"
+    ],
+    "ignore_symbols": [
+      "TARGET_DATE",
+      "REPO_ROOT"
+    ]
+  },
   "css_overrides": {
     "_note": "CSS 靜默覆寫閘的掃描範圍（scripts/check_css_overrides.py）。存量基線在 data/css-override-baseline.json。",
     "enabled": true,
