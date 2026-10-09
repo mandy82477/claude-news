@@ -481,11 +481,6 @@
   "preview": "Claude Code：桌面版終端機 session 改讀 claude.ai 帳號的 skills/plugins：本機 session 讀個人 ~/.claude/skills/，雲端 session 改讀該帳號啟用的 skills/plugins，SSH session 仍讀本機路徑。",
   "sedimentedToday": [
     {
-      "id": "claude-design",
-      "name": "Claude Design",
-      "pageType": "entity"
-    },
-    {
       "id": "michael-burry",
       "name": "Michael Burry",
       "pageType": "entity"

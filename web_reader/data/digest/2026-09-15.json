@@ -392,13 +392,7 @@
     }
   ],
   "preview": "Claude Code：桌面版新增 /resume 接續 CLI session、diff／終端機面板可拉出成獨立視窗：macOS 背景執行 computer use 時，Claude 改為只在已核准的 App 內作業，不再連帶隱藏其他視窗（行為變更）。",
-  "sedimentedToday": [
-    {
-      "id": "jack-clark",
-      "name": "Jack Clark",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-09-15",
     "summary": "",

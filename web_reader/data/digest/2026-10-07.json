@@ -454,11 +454,6 @@
   "preview": "Claude Code：v2.1.292 新增 claude plugin install --marketplace <source>，安裝外掛時可一併加入所需市集來源。",
   "sedimentedToday": [
     {
-      "id": "boris-cherny",
-      "name": "Boris Cherny",
-      "pageType": "entity"
-    },
-    {
       "id": "jamie-dimon",
       "name": "Jamie Dimon",
       "pageType": "entity"
@@ -469,23 +464,8 @@
       "pageType": "entity"
     },
     {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
       "id": "community-integrations",
       "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"
     },
     {
@@ -496,11 +476,6 @@
     {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
       "pageType": "topic"
     }
   ],

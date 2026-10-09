@@ -425,11 +425,6 @@
   "preview": "Claude Code：v2.1.289 發布：修正巢狀 shell 複合指令 deny/ask 規則未對 mod 核准生效的漏洞，接續 v2.1.288 權限補丁；另修正短指令終端機凍結。",
   "sedimentedToday": [
     {
-      "id": "chris-olah",
-      "name": "Chris Olah",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-mods",
       "name": "Claude Mods",
       "pageType": "entity"

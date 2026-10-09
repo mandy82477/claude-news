@@ -255,11 +255,6 @@
       "id": "john-jumper",
       "name": "John Jumper",
       "pageType": "entity"
-    },
-    {
-      "id": "tom-brown",
-      "name": "Tom Brown",
-      "pageType": "entity"
     }
   ]
 }
