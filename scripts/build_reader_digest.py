@@ -178,6 +178,9 @@ def top_stories_minus_focus(top_lines: list[str], focus_urls: set[str], limit: i
     return stories[:limit]
 
 
+PARENT_LINE_RE = re.compile(r"^\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)", re.M)
+
+
 def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list[dict]], list[str]]:
     """回傳 ({節名: [item…]}, warnings)。item = {page, name, lines, inbound}。"""
     sections: dict[str, list[dict]] = {s: [] for s in SECTION_ORDER}
@@ -211,6 +214,17 @@ def collect(target_date: str, wiki_dir: Path = WIKI_DIR) -> tuple[dict[str, list
                 "inbound": int(im.group(1)) if im else 0,
                 "raw": raw,
             })
+    # 母頁 callout 若只是轉述子頁當日新做法（callout 內連到同日也有 callout 的子頁），略過母頁那一項，
+    # 免得讀者版同一件事印兩次；母頁自己的新聞（不連子頁）照收
+    parent_of = {}
+    for items in sections.values():
+        for it in items:
+            pm = PARENT_LINE_RE.search(it["raw"])
+            if pm:
+                parent_of[it["page"]] = pm.group(1).strip()
+    for sec, items in sections.items():
+        sections[sec] = [it for it in items if not any(
+            par == it["page"] and f"[[{kid}" in "\n".join(it["lines"]) for kid, par in parent_of.items())]
     for items in sections.values():
         items.sort(key=lambda it: (-it["inbound"], it["page"]))
     return sections, warnings

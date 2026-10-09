@@ -10,7 +10,7 @@
 
 | 頁面 | 觸發條件 |
 |------|---------|
-| `wiki/topics/community-tech-patterns.md` | 工作流模式、multi-agent 設計、最佳實踐 |
+| `wiki/topics/community-tech-patterns.md`（母頁）＋七個子頁 | 工作流模式、multi-agent 設計、最佳實踐。**節點寫進子頁**：依節點「與既有模式的關係」第一個寫出的類別，查 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 0 條路由表；判不出寫母頁 `### 未歸類`。寫了節點的子頁覆寫它的 callout（括號日期＝TARGET_DATE），母頁 callout 同批覆寫成當天各子頁新做法的一句總覽並連子頁——母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py`（L137）會紅。母頁其餘只准動路由表「最後動態」欄與既有懸置標記加 `訊`，「最後新聞更新」不動（page-lifecycle 母頁契約）。來源歸因的 page 一律填節點所在的子頁；母頁 callout 只是轉述，不報歸因（報了，`scripts/check_wiki_freshness.py` 第 1 類判母頁漏更）。例：同一則新聞改了子頁節點也改了母頁 callout → 歸因 1 筆，page 填子頁 |
 | `wiki/topics/community-tech-discussions.md` | HN / Reddit 熱門技術討論 |
 | `wiki/topics/code-quality-decline.md` | 「Claude 變笨了」的三條線：官方已結案的 2026-03～04 退步、06 月起的 token 消耗異常、Opus 5 上線後的品質觀感；以及模型釘選與自我量測。**單一模型自身的社群觀感歸模型記者的 [[entities/opus-5]]，逐個 issue 的缺陷歸功能記者的 [[entities/claude-code]]，本頁只記「線」的狀態** |
 | `wiki/topics/community-large-codebase-workflow.md` | 🗓️ **週更，每日 ingest 不寫此頁**——每日只在 patterns 節點標 `**主線：**` tag（見下方「主線 tag 規則」）；週更整線重寫規則見 `.claude/reporter-rules/community/weekly.md` |
@@ -24,11 +24,11 @@
 
 **官方內容不是你的禁區：** 「社群」是內容型態的類別名，不是出處篩選器——官方部落格、官方文件、Anthropic 員工具名發言，只要談的是技術討論或工作流模式，一樣是你的條目（discussions 的收錄門檻本就明列「重要人士具名表態」；patterns 的觸發條件從未限制出處）。與功能記者的界線依**它給讀者什麼**分：官方提出**可被複用的新工作流模式／agent 設計** → 你收進 patterns 並標明官方出處，與社群模式並列比較；官方講**怎麼用既有功能**（省 token、session 經營、設定建議） → 那是功能記者的 `topics/coding-workflow-guide`，你不寫。完整對照表見 `.claude/skills/wiki-ingest/references/classification.md`「分流鐵則：官方內容不是社群類的禁區」。
 
-**產品化矩陣轉知：** 發現新的 agent 工作模式（patterns 頁新增條目）時，在回報中註明「請主編轉知功能記者評估產品化矩陣新增列」；`wiki/topics/official-community-gap.md` 的矩陣由功能記者維護，社群記者不直接寫該頁。
+**產品化矩陣轉知：** 發現新的 agent 工作模式（patterns 子頁新增節點）時，在回報中註明「請主編轉知功能記者評估產品化矩陣新增列」；`wiki/topics/official-community-gap.md` 的矩陣由功能記者維護，社群記者不直接寫該頁。
 
 **dev.to 條目以內容判斷、不看讚數：** dev.to 走 `top=30` 抓法（過去 30 天高互動文章），但**讚數在 dev.to 幾乎不能當品質指標**——最有價值的第一手實作文讚數常只有 2–3，反而 SEO 農場文有 5–6 讚。因此 dev.to 條目一律**用內容判斷收錄，不套互動門檻對照表的數字**：
 
-- ✅ **優先收**：「我做了 X、這是怎麼運作 / 踩了什麼坑」的第一手實作、可複用 pattern、具體工具或量化實測（歸 `community-tech-patterns.md`）
+- ✅ **優先收**：「我做了 X、這是怎麼運作 / 踩了什麼坑」的第一手實作、可複用 pattern、具體工具或量化實測（歸 patterns 子頁，路由見 pages.md 第 0 條）
 - ❌ **排除**：`Complete Guide` / `Everything you need to know` 型 SEO 農場文（常來自 `ai_made_tools`、`tokenmixai` 等內容農場帳號）；純新聞轉述（定價、發布、事件解釋——這些已由媒體/HN 來源覆蓋，dev.to 版本無獨特價值）；純帶貨 / growth hacking 自我推銷
 
 > 判斷原則：dev.to 的獨特價值是「工程師第一手實作經驗」，不是新聞或教學索引。內容答不出「作者具體做了什麼、學到什麼機制」→ 不收。
@@ -62,7 +62,7 @@
 
 `community-large-codebase-workflow.md` 是把 patterns 節點沉澱成四條主線的**週更**頁；patterns 收「節點」（每日 append），主線頁每週從 patterns **整線重寫**（規則見 `.claude/reporter-rules/community/weekly.md`）。**每日 ingest 不寫主線頁**——每天只看一個節點的記者，結構上只做得到「往段尾加一句」，縫合需要看完整條線再重寫，那是週更的事。
 
-**每次為 `community-tech-patterns.md` 新增節點時，多填一個欄位：**
+**每次為 patterns 子頁新增節點時，多填一個欄位：**
 
 ```
 - **主線：** 並行規模 ／ Context 管理 ／ 索引記憶 ／ 除錯分工 ／ —

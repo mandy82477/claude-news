@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-06"
 last_news_update: "2026-10-06"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/cowork-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 10
 attribution_count: 5
 attribution_last: "2026-10-06"

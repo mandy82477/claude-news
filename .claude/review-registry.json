@@ -33,6 +33,11 @@
         "pattern": "CLAUDE\\.md 論述"
       },
       {
+        "file": ".claude/reporter-rules/community/pages.md",
+        "pattern": "CLAUDE\\.md 管理",
+        "_note": "patterns 模式概覽的類別名「CLAUDE.md 管理」逐字進歸群表（2026-10-09 第 18 波拆頁）；是 wiki 類別名不是規則檔引用，且 patterns_tree_audit.py 按逐字比對，不可改寫"
+      },
+      {
         "file": "docs/cloud-runbooks/probe-custom-subagent-2026-09-12.md",
         "pattern": "New skills discovered|子目錄的 `CLAUDE\\.md`|載入該目錄的 `CLAUDE\\.md`"
       },

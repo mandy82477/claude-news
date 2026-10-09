@@ -258,9 +258,9 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5k. 社群三張結論表退場複查（主編派社群記者）
 
-`wiki/topics/community-tech-patterns.md` 的 `## 模式概覽`（上限 21 列）、`### 誰負責拆分`（五列固定）與 `### 缺口追蹤`（上限 8 列）的退場、補位、留表優先序條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/community/weekly.md`「community-tech-patterns 模式概覽週更」。
+`wiki/topics/community-tech-patterns.md` 的 `## 模式概覽`（上限 21 列）與 `wiki/topics/community-multi-agent.md` 的 `### 誰負責拆分`（五列固定）、`### 缺口追蹤`（上限 8 列）的退場、補位、留表優先序條文，本步即其週更觸發邊，複查規則見 `.claude/reporter-rules/community/weekly.md`「community-tech-patterns 模式概覽週更」。
 
-派社群記者執行該節三步：重算「最後動態」（兩段式撈法覆寫日期欄與全頁式錨點）、跑退場與補位（逾 60 天或算不出日期者移出、剛跨線當週處理、表未滿載時從表下補位）、跑合併（代表技巧重疊過半者合併）；同批補填主線 tag（每週 20 則，從最新往回補，累計進度寫進回報）。上限滿載時的讓位交回主編裁決，不由記者自行決定。
+派社群記者執行該節四步：重算「最後動態」（兩段式撈法覆寫日期欄與全頁式錨點）、跑退場與補位（逾 60 天或算不出日期者移出、剛跨線當週處理、表未滿載時從表下補位）、跑合併（代表技巧重疊過半者合併）；同批補填主線 tag（每週 20 則，從最新往回補，累計進度寫進回報）。上限滿載時的讓位交回主編裁決，不由記者自行決定；第 4 步重寫子頁與母頁的結論層。
 
 `wiki/topics/community-tech-discussions.md` 的 `## 現在吵到哪`（上限 10 列）與 `## 最近在討論什麼`（上限 50 列）同批處理：重算每一列的最後動態與最後一則證據日期、依狀態三值重判、跑退場與補位、把逾 45 天的 🌊延燒 改標 🌙靜候、把逾 90 天的 🌙靜候 移出表。條文見 `.claude/reporter-rules/community/pages.md`「community-tech-discussions 的兩張結論表」。
 

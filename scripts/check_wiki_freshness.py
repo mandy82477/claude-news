@@ -12,6 +12,8 @@
                  把欄位填成事件發生日 07-13，而非日報日 07-14，規則要的是後者）
   2. 無從對照  頁面宣稱近期有新聞更新，歸因卻從無任何一筆
                → 要嘛記者漏報歸因，要嘛這頁根本不吃新聞（衍生頁，須明文宣告）
+               有上層的頁，若上層某筆歸因的網址出現在本頁、且宣稱日不晚於那筆的日期，
+               也算有對照（拆頁搬下來的節點，歸因記在上層）
   3. 欄位缺失  標頭根本沒有「最後新聞更新」
 
 第 2 類的白名單即**觸發邊清冊的機器可讀版本**：一個頁面若不吃新聞條目，它就必須吃
@@ -116,6 +118,22 @@ def load_last_attribution() -> dict[str, str]:
     return last
 
 
+def load_attribution_urls() -> dict[str, list[tuple[str, str]]]:
+    """每頁的 (日報日, item_url) 清單；給「上層歸因」比對網址用。"""
+    out: dict[str, list[tuple[str, str]]] = {}
+    if not ATTRIBUTION.exists():
+        return out
+    with ATTRIBUTION.open(encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if row.get("page") and row.get("date"):
+                out.setdefault(row["page"], []).append((row["date"], row.get("item_url") or ""))
+    return out
+
+
 UPDATE_FREQ_RE = re.compile(r"^\*\*更新頻率：\*\*", re.MULTILINE)
 
 
@@ -158,7 +176,7 @@ def main(argv: list[str]) -> int:
     missing_field: list[str] = []
 
     # 階層（2026-09-03）：母頁（有子頁者）的歸因會落在子頁——第 2 類對母頁改看子樹歸因，
-    # 否則母頁 bump 日期就紅、擋 web build（母不落後子 × 唯讀 × 本檢查三者互斥，reviewer B1）。
+    # 否則母頁 bump 日期就紅、擋 web build（母不落後子 × 唯讀 × 本檢查三者互斥，reviewer B1）；第 1 類只看自己。
     parent_re = re.compile(r"^\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)", re.MULTILINE)
     children: dict[str, list[str]] = {}
     for sub in ("entities", "topics"):
@@ -176,21 +194,45 @@ def main(argv: list[str]) -> int:
             stack.extend(children.get(k, []))
         return best
 
+    parent_of = {k: p for p, ks in children.items() for k in ks}
+
+    att_urls = load_attribution_urls()
+
+    def ancestor_att(slug: str) -> str:
+        """上層的歸因只在「那則新聞的網址現在住在本頁」時才算數（拆頁搬下來的節點）。
+        不比網址的話，任何有上層、上層天天有歸因的新子頁漏報歸因都會被放過。"""
+        text = (WIKI_DIR / f"{slug}.md").read_text(encoding="utf-8")
+        best, cur, guard = "", parent_of.get(slug), 0
+        while cur and guard < 50:
+            for d, url in att_urls.get(cur, ()):
+                if url and url in text:
+                    best = max(best, d)
+            cur, guard = parent_of.get(cur), guard + 1
+        return best
+
     for slug, last_news in scan_pages():
         if last_news is None:
             missing_field.append(slug)
             continue
 
-        att = last_att.get(slug)
-        if slug in children:
-            att = subtree_att(slug) or None
-        if att:
-            # 1. 漏更：歸因記錄比頁面宣稱新
-            if last_news < att:
-                stale_updates.append(
-                    f"{slug}：頁面宣稱 {last_news}，但 {att} 日報有條目落地此頁"
-                )
-        elif last_news >= max(recent_cutoff, ATTRIBUTION_START) and slug not in DERIVED_PAGES:
+        own = last_att.get(slug)
+        # 1. 漏更：只比「自己」的歸因。母頁「最後新聞更新」不因子頁動（page-lifecycle 母頁契約）；
+        #    拿子樹歸因來比，子頁一進新聞母頁就紅，逼人去動母頁不該動的欄位
+        if own and last_news < own:
+            stale_updates.append(
+                f"{slug}：頁面宣稱 {last_news}，但 {own} 日報有條目落地此頁"
+            )
+        # 2. 無從對照：自己、子樹、上層三處都找不到撐得住這個日期的歸因。
+        #    子樹＝母頁的新聞落在子頁；上層＝拆頁時節點從母頁搬下來，拆出前的歸因記在母頁
+        #    （帳本 append-only，不改寫舊行的 page）——只認「宣稱日不晚於上層最後一筆歸因」
+        cover = own or (subtree_att(slug) if slug in children else "")
+        if not cover:
+            anc = ancestor_att(slug)
+            if anc and last_news <= anc:
+                cover = anc
+        if cover:
+            continue
+        if last_news >= max(recent_cutoff, ATTRIBUTION_START) and slug not in DERIVED_PAGES:
             # 2. 無從對照：宣稱近期有新聞更新，卻從無任何歸因
             unverifiable.append(
                 f"{slug}：頁面宣稱 {last_news} 有新聞更新，但歸因記錄從無此頁"

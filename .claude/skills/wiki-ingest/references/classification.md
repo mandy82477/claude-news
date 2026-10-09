@@ -64,7 +64,7 @@ python scripts/check_classification_log.py --date TARGET_DATE
 | 官方內容的型態 | 類別 | 落點 | 判準 |
 |---|---|---|---|
 | **怎麼用既有功能**（省 token、session 經營、設定建議，無新指令旗標） | 開發實務 | `topics/coding-workflow-guide` 對應流程階段節 | 讀者拿它去**改自己的做法**，不是去用新東西 |
-| **官方提出的新工作流模式 / agent 設計** | 社群 | `topics/community-tech-patterns`，出處標明官方 | 它是一個**可被複用的模式**，與社群模式並列比較才有價值 |
+| **官方提出的新工作流模式 / agent 設計** | 社群 | `topics/community-tech-patterns` 樹（節點依 `.claude/reporter-rules/community/pages.md` 第 0 條路由表寫進子頁），出處標明官方 | 它是一個**可被複用的模式**，與社群模式並列比較才有價值 |
 | **有新指令 / 旗標 / SDK 變更 / Breaking change** | 功能 | `entities/claude-code` + feature-radar | 已有既有規則，不走本表 |
 
 > 分類層與頁面層**兩邊都要留得住這種內容**：分類表若讀起來像「社群＝社群產出」而功能類只列版本／指令／旗標，官方使用指南在分類層就沒有落點。

@@ -6,12 +6,12 @@ domain: "🌐 社群"
 last_updated: "2026-10-08"
 last_news_update: "2026-10-08"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 53
+days_since_news_subtree: 1
+inbound_links: 54
 attribution_count: 170
 attribution_last: "2026-10-08"
 top_source: "hacker-news"
@@ -311,14 +311,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **來源：** Show HN: Reladraw – A diagram language where you decide where to place things — Hacker News（351 分）；[原文](https://github.com/reladraw/reladraw)
 - **核心論點：** 作者不滿 Mermaid／Graphviz 等自動排版工具無法控制版面、Draw.io 又太耗時且不利 agent 操作，做出一套可自訂版面配置的圖表描述語言，同時附 npm 套件與可搭配 Claude 等 agent 使用的 skill
 - **關鍵回響：**（本次摘要未提供留言區細節，僅 HN 351 分遠高於當日其他討論）
-- **收斂結論：**（無）單一 HN 貼文，尚無跨平台佐證或留言內容可查；工具本身已同步收錄至 [[topics/community-tech-patterns#2026-09]]「Skills 設計」
+- **收斂結論：**（無）單一 HN 貼文，尚無跨平台佐證或留言內容可查；工具本身已同步收錄至 [[topics/community-skills#2026-09]]「Skills 設計」
 
 #### Show HN: 用視覺（非棋譜）+ Stockfish 讓 Claude 分析棋局賽後（2026-09-26）
 
 - **來源：** Show HN: A Claude Code skill to analyze your chess games — Hacker News（74 分，2 個來源同日報導）；[原文](https://github.com/brumar/chess-postmortem-skills)
 - **核心論點：** 作者實驗讓 Claude 用視覺而非棋譜記號看棋局，證實可行；再讓 Claude 結合 Stockfish 解說對局，也證實可行；最終做出一套系統，輸入語音筆記與「分析我上一場 lichess 對局」之類的模糊指示，即可產出附講解的棋局影片，作者估算一局分析約耗費 15 美元 API 額度
 - **關鍵回響：**（2 個來源同日報導，本次摘要未提供留言區細節）
-- **收斂結論：**（無）單一團隊 skill 發布，尚無社群採用回饋數據；工具本身已同步收錄至 [[topics/community-tech-patterns#2026-09]]「創意工具 Agent 整合」
+- **收斂結論：**（無）單一團隊 skill 發布，尚無社群採用回饋數據；工具本身已同步收錄至 [[topics/community-integrations#2026-09]]「創意工具 Agent 整合」
 
 #### Jevmem 發布引出兩條質疑：AI 寫的 README 說得清細節卻說不清核心價值；「舊記錄標過時不刪除」設計恐讓 context 累積過期資訊（2026-09-26）
 
@@ -855,7 +855,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 ## 時序
 
-完整日常事件時序見 [[topics/community-tech-patterns#技術彙整]]。以下為本頁討論議題的關鍵發生日期：
+社群做法的逐則證據依類別分住七個子頁，入口見 [[topics/community-tech-patterns#每一類做法住哪一頁]]。以下為本頁討論議題的關鍵發生日期：
 
 | 日期 | 討論事件 |
 |------|---------|

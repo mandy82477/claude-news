@@ -7,11 +7,11 @@ last_updated: "2026-10-08"
 last_news_update: "2026-10-08"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 19
 attribution_count: 20
 attribution_last: "2026-10-08"

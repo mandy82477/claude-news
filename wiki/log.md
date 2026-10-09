@@ -7445,3 +7445,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   2. [模型] Claude Haiku 5.5 精確 $/Mtok 牌價與 1M context 上限——官方發布文僅稱「平均執行成本降約 75%」未附具體數字；MarkTechPost／shattered.io／tech-insider.org 三家標題稱 input $0.10／Mtok、1M context，VentureBeat 稱降幅 90%，各口徑不一致且僅標題可讀，建議待官方定價頁正式列出 Haiku 5.5 費率後核對
   3. [模型/投資分析] VentureBeat 稱 Haiku 5.5 定價已與 GPT-6 Luna「看齊」——僅 VentureBeat 一家媒體提及，OpenAI 官方未見對應說法，建議查 OpenAI 官方定價頁或 GPT-6 Luna 發布文核對是否屬實
 - 歸因 news-pipeline／功能、商業、安全政策、模型、社群、投資分析
+
+## 2026-10-09 Query（使用者：patterns 太厚要不要拆——第 18 波拆頁）
+
+- [[topics/community-tech-patterns]] 拆成母頁＋七子頁：[[topics/community-multi-agent]]（多 agent 分工，含學術對照、誰負責拆分、缺口追蹤三節）、[[topics/community-memory]]（記憶、CLAUDE.md、Context 管理）、[[topics/community-cost]]（token 與成本、模型使用策略）、[[topics/community-skills]]（Skills 設計：慣例與地雷統整）、[[topics/community-guardrails]]（規則、把關、安全）、[[topics/community-integrations]]（Plugin／MCP）、[[topics/community-interfaces]]（介面與遠端）。251 則節點一則不改字、依類別搬入子頁原月份分組；母頁 205 行留摘要、模式概覽（改子頁路由）、收斂結論、路由表。2,461 行逐行對帳相等（107 留／2,289 原樣／37 改連結／16 刪包裝／12 改寫）。
+- 主編官方查證：學術對照、誰負責拆分、缺口追蹤三節對 sub-agents／agent-teams 一手——0 條事實錯；「官方建議隊友用 Sonnet」改「官方範例」（只是示範 prompt）；補 subagent 預設巢狀三層（v2.1.219）、agent teams 無隔離只能自己分檔；資料截至改 2026-10-09。
+- 冷讀者首測：Q1 多 agent 3 跳拿到、Q2 記憶 3 跳拿到（皆繞 trends／LCW）、Q3 skill 慣例 5 跳半、Q4 九月自動化 4 跳半——卡點都是「散在 2,486 行型錄要自己拼」。複驗另派。
+- 轉知：[社群→開發實務] H-fc0960（coding-workflow-guide L478 錨點改指子頁、L669 查證備註搬 guardrails）；[社群→功能] H-9d1672（official-community-gap L41 錨點改指 multi-agent 子頁）；[社群→功能] H-817203（claude-skills L116 改指 skills 子頁；「74 個 skill 只有 3 個改變行為」全樹查無出處；L45／L97 官方市集互斥）。
+- 機制：`check_wiki_freshness.py` 上層歸因只在該則網址在本頁時借用（評審第五案改壞驗紅）；新增 `scripts/patterns_tree_audit.py` 掛週更步驟 4；`build_reader_digest.py` 母頁轉述子頁 callout 不重複；`daily.md` 歸因一律記子頁。母頁兩個佔位標題（`### 2026-07`、`### 缺口追蹤…`）待轉知結案／本月蒸餾後刪。
+- 歸因 user-query／社群

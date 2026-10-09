@@ -2,8 +2,8 @@
   "_note": "字元上限機械閘的存量基線（頁 → [{kind, anchor, max_len}]）。check_cell_limits.py 以「同頁同類型同錨點且長度 ≤ max_len」判存量，其餘判新增 FAIL。只准變緊：--rebuild 只能移除或收緊條目；要新增必須 --allow-grow --reason 並寫入 data/baseline-changes.jsonl，src/tests/test_baseline_ratchet.py 以 HEAD 版比對看守。記者不得 rebuild。",
   "_format": 2,
   "_baseline_set": "2026-09-05",
-  "_pages": 34,
-  "_hits": 915,
+  "_pages": 40,
+  "_hits": 852,
   "_migrated": "2026-09-25",
   "_migrated_from_hits": 915,
   "pages": {
@@ -213,11 +213,6 @@
         "kind": "list_item",
         "anchor": "Claude Projects 對話消失（202",
         "max_len": 464
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude 自陳分析依據不足，卻仍在同一回應中",
-        "max_len": 216
       },
       {
         "kind": "list_item",
@@ -466,11 +461,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "⟨Q-13⟩ 🔎 查無官方（標 2026-08-",
-        "max_len": 384
-      },
-      {
-        "kind": "list_item",
         "anchor": "⟨Q-14⟩ anthropic-sdk-pyt",
         "max_len": 393
       },
@@ -622,7 +612,7 @@
       {
         "kind": "list_item",
         "anchor": "已通過 CVP 審核的組織在 Claude Co",
-        "max_len": 316
+        "max_len": 226
       },
       {
         "kind": "list_item",
@@ -708,221 +698,6 @@
         "kind": "list_item",
         "anchor": "［META］bypassPermissions",
         "max_len": 313
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-02#c2",
-        "max_len": 134
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-02#c2",
-        "max_len": 123
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-04#c2",
-        "max_len": 192
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-04#c2",
-        "max_len": 123
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-05#c2",
-        "max_len": 153
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-06#c2",
-        "max_len": 169
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-06#c2",
-        "max_len": 155
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-07#c2",
-        "max_len": 136
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-07#c2",
-        "max_len": 136
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-07#c2",
-        "max_len": 132
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-08#c2",
-        "max_len": 142
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-08#c2",
-        "max_len": 130
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-09#c2",
-        "max_len": 160
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-10#c2",
-        "max_len": 154
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-10#c2",
-        "max_len": 153
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-11#c2",
-        "max_len": 135
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-12#c2",
-        "max_len": 152
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-13#c2",
-        "max_len": 198
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-13#c2",
-        "max_len": 178
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-13#c2",
-        "max_len": 142
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-14#c2",
-        "max_len": 231
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-14#c2",
-        "max_len": 217
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-15#c2",
-        "max_len": 244
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-15#c2",
-        "max_len": 200
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-16#c2",
-        "max_len": 160
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-16#c2",
-        "max_len": 137
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-16#c2",
-        "max_len": 135
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-17#c2",
-        "max_len": 227
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-17#c2",
-        "max_len": 188
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-17#c2",
-        "max_len": 145
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-17#c2",
-        "max_len": 133
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-19#c2",
-        "max_len": 243
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-19#c2",
-        "max_len": 236
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-19#c2",
-        "max_len": 128
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-21#c2",
-        "max_len": 181
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-21#c2",
-        "max_len": 131
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-22#c2",
-        "max_len": 423
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-27#c2",
-        "max_len": 267
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-05-28#c2",
-        "max_len": 312
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-06-21#c2",
-        "max_len": 239
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-06-22#c2",
-        "max_len": 337
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-06-24#c2",
-        "max_len": 127
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-06-25#c2",
-        "max_len": 174
       },
       {
         "kind": "table_cell",
@@ -1539,16 +1314,6 @@
         "kind": "list_item",
         "anchor": "Oxide 加入 Project Glasswi",
         "max_len": 251
-      },
-      {
-        "kind": "list_item",
-        "anchor": "WSJ：中國已在網路安全 AI 追上 Anthr",
-        "max_len": 299
-      },
-      {
-        "kind": "list_item",
-        "anchor": "中國 Z.Ai 聲稱對標 Mythos",
-        "max_len": 357
       },
       {
         "kind": "list_item",
@@ -2594,11 +2359,6 @@
     "topics/anthropic-business": [
       {
         "kind": "list_item",
-        "anchor": "2026-07-10 Bernanke 加入信託",
-        "max_len": 269
-      },
-      {
-        "kind": "list_item",
         "anchor": "2026-07-15 投資人會議三方同步",
         "max_len": 250
       },
@@ -2845,11 +2605,6 @@
       {
         "kind": "list_item",
         "anchor": "Nscale（08-28）",
-        "max_len": 271
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Nvidia 執行長「後悔」",
         "max_len": 271
       },
       {
@@ -3759,6 +3514,350 @@
         "max_len": 202
       }
     ],
+    "topics/community-cost": [
+      {
+        "kind": "list_item",
+        "anchor": "Token / 成本優化",
+        "max_len": 205
+      },
+      {
+        "kind": "list_item",
+        "anchor": "來源： GitHub Search（今日日報「⭐",
+        "max_len": 204
+      },
+      {
+        "kind": "list_item",
+        "anchor": "來源： 「claude -p: what hea",
+        "max_len": 312
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「Token / 成",
+        "max_len": 211
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 為「Token / 成本優化",
+        "max_len": 230
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 直接對應本頁「Token /",
+        "max_len": 215
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補充「Token / 成本優",
+        "max_len": 338
+      }
+    ],
+    "topics/community-guardrails": [
+      {
+        "kind": "list_item",
+        "anchor": "「Claude 審查 Codex 通過率 71.",
+        "max_len": 310
+      },
+      {
+        "kind": "list_item",
+        "anchor": "來源： 「Claude Code plugin",
+        "max_len": 259
+      },
+      {
+        "kind": "list_item",
+        "anchor": "來源： 「I built a Mac notch",
+        "max_len": 249
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： Boris Cherny 在 YC",
+        "max_len": 204
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： Reddit 貼文指出，讓 Clau",
+        "max_len": 271
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： YC S26 新創 machine0",
+        "max_len": 247
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： thephw/claude-mese",
+        "max_len": 223
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 作者撰寫完整步驟教學，示範如何把備用",
+        "max_len": 209
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應 topics/comm",
+        "max_len": 247
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 延伸既有「Stop Hook",
+        "max_len": 216
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 為本頁「多代理 PR Rev",
+        "max_len": 237
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與本頁「安全架構」類別（CL",
+        "max_len": 209
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上「常駐雲端運算基礎設施」",
+        "max_len": 273
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁尚未涵蓋的「模糊敘述",
+        "max_len": 214
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補足本頁「安全架構」/「Ag",
+        "max_len": 224
+      }
+    ],
+    "topics/community-integrations": [
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 開發者釋出 Agentty，一款以",
+        "max_len": 234
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「Plugin /",
+        "max_len": 262
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 為本頁補上「agent 間商",
+        "max_len": 212
+      }
+    ],
+    "topics/community-interfaces": [
+      {
+        "kind": "list_item",
+        "anchor": "來源： Show HN: I built a w",
+        "max_len": 217
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與 ccgram（2026-",
+        "max_len": 216
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與 topics/commu",
+        "max_len": 202
+      }
+    ],
+    "topics/community-memory": [
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 作者指出 CLAUDE.md 會被自",
+        "max_len": 218
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 作者指出「Claude Code 忽",
+        "max_len": 249
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 開發者釋出應用程式，讓使用者能從任一",
+        "max_len": 216
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應「記憶與知識管理」類別既",
+        "max_len": 228
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「CLAUDE.md",
+        "max_len": 259
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
+        "max_len": 274
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
+        "max_len": 259
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
+        "max_len": 218
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與本頁 2026-08-07",
+        "max_len": 213
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
+        "max_len": 377
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
+        "max_len": 257
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
+        "max_len": 208
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補充「記憶與知識管理」類別既",
+        "max_len": 259
+      }
+    ],
+    "topics/community-multi-agent": [
+      {
+        "kind": "list_item",
+        "anchor": "LLM-Based Multi-Agent Or",
+        "max_len": 211
+      },
+      {
+        "kind": "list_item",
+        "anchor": "來源： GitHub Search（今日日報「⭐",
+        "max_len": 246
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： GitHub Issue #5691",
+        "max_len": 313
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： GitHub Search 同日抓到",
+        "max_len": 273
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 延續 08-05 omnigent、",
+        "max_len": 378
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁 2026-08-2",
+        "max_len": 223
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「Multi-age",
+        "max_len": 411
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 屬本頁已記錄三波的「meta",
+        "max_len": 223
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與本頁「Multi-agen",
+        "max_len": 226
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 若機制屬實，將是本頁「並行",
+        "max_len": 269
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上「跨 harness 協",
+        "max_len": 284
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁「角色分工型 sub",
+        "max_len": 207
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補充本頁「Agent 規模化",
+        "max_len": 258
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補充本頁「Multi-age",
+        "max_len": 218
+      }
+    ],
+    "topics/community-skills": [
+      {
+        "kind": "list_item",
+        "anchor": "星數真實性（2026-08-13 查證，GitH",
+        "max_len": 462
+      },
+      {
+        "kind": "list_item",
+        "anchor": "星數與聲稱真實性（2026-08-13 查證）",
+        "max_len": 348
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： GitHub Search 今日同批",
+        "max_len": 384
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： GitHub Search 熱門清單",
+        "max_len": 627
+      },
+      {
+        "kind": "list_item",
+        "anchor": "核心模式： 作者說明 Claude Code 在",
+        "max_len": 267
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 呼應本頁「Skills 設計",
+        "max_len": 243
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 屬本頁既有「利用 OCR／視",
+        "max_len": 256
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 為本頁「Skills 設計」",
+        "max_len": 310
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 直接回應 topics/co",
+        "max_len": 250
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 與本頁 2026-07-01",
+        "max_len": 461
+      },
+      {
+        "kind": "list_item",
+        "anchor": "與既有模式的關係： 補上本頁「Skills 設計",
+        "max_len": 249
+      }
+    ],
     "topics/community-tech-discussions": [
       {
         "kind": "list_item",
@@ -3774,11 +3873,6 @@
         "kind": "list_item",
         "anchor": "Ask HN：如何戒除 Claude Code「",
         "max_len": 297
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude Code AskUserQuest",
-        "max_len": 747
       },
       {
         "kind": "list_item",
@@ -3807,11 +3901,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "GitHub Issue",
-        "max_len": 342
-      },
-      {
-        "kind": "list_item",
         "anchor": "HN 討論質疑 AISLE「curl 六個 CV",
         "max_len": 275
       },
@@ -3833,22 +3922,7 @@
       {
         "kind": "list_item",
         "anchor": "Reddit r/ClaudeAI 週熱門",
-        "max_len": 316
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeAI 週熱門",
         "max_len": 263
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeCode 週熱門",
-        "max_len": 265
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeCode 週熱門",
-        "max_len": 230
       },
       {
         "kind": "list_item",
@@ -3859,11 +3933,6 @@
         "kind": "list_item",
         "anchor": "Show HN：以 JPEG gain-map",
         "max_len": 311
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Simon Willison × Claire",
-        "max_len": 202
       },
       {
         "kind": "list_item",
@@ -3887,16 +3956,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "What We Learned Moving O",
-        "max_len": 263
-      },
-      {
-        "kind": "list_item",
-        "anchor": "arXiv 論文主張不應將模型解答前的中間 to",
-        "max_len": 277
-      },
-      {
-        "kind": "list_item",
         "anchor": "⟨Q-03⟩ 已查證（2026-08-13）",
         "max_len": 270
       },
@@ -3904,11 +3963,6 @@
         "kind": "list_item",
         "anchor": "「Anthropic's War on open",
         "max_len": 326
-      },
-      {
-        "kind": "list_item",
-        "anchor": "「一週改用 Codex 多過 Claude」個人",
-        "max_len": 368
       },
       {
         "kind": "list_item",
@@ -4014,338 +4068,6 @@
         "kind": "table_cell",
         "anchor": "Claude Session URL 預設寫入 #c5",
         "max_len": 139
-      }
-    ],
-    "topics/community-tech-patterns": [
-      {
-        "kind": "list_item",
-        "anchor": "LLM-Based Multi-Agent Or",
-        "max_len": 211
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Token / 成本優化",
-        "max_len": 205
-      },
-      {
-        "kind": "list_item",
-        "anchor": "「Claude 審查 Codex 通過率 71.",
-        "max_len": 310
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： GitHub Search（今日日報「⭐",
-        "max_len": 246
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： GitHub Search（今日日報「⭐",
-        "max_len": 204
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： Show HN: I built a w",
-        "max_len": 217
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： 「Claude Code plugin",
-        "max_len": 259
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： 「I built a Mac notch",
-        "max_len": 249
-      },
-      {
-        "kind": "list_item",
-        "anchor": "來源： 「claude -p: what hea",
-        "max_len": 312
-      },
-      {
-        "kind": "list_item",
-        "anchor": "星數真實性（2026-08-13 查證，GitH",
-        "max_len": 462
-      },
-      {
-        "kind": "list_item",
-        "anchor": "星數與聲稱真實性（2026-08-13 查證）",
-        "max_len": 348
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： Boris Cherny 在 YC",
-        "max_len": 204
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： GitHub Issue #5691",
-        "max_len": 313
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： GitHub Search 今日同批",
-        "max_len": 384
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： GitHub Search 同日抓到",
-        "max_len": 273
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： GitHub Search 熱門清單",
-        "max_len": 627
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： Reddit 貼文指出，讓 Clau",
-        "max_len": 271
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： YC S26 新創 machine0",
-        "max_len": 247
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： thephw/claude-mese",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 作者指出 CLAUDE.md 會被自",
-        "max_len": 218
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 作者指出「Claude Code 忽",
-        "max_len": 249
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 作者撰寫完整步驟教學，示範如何把備用",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 作者說明 Claude Code 在",
-        "max_len": 267
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 延續 08-05 omnigent、",
-        "max_len": 378
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 開發者釋出 Agentty，一款以",
-        "max_len": 234
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心模式： 開發者釋出應用程式，讓使用者能從任一",
-        "max_len": 216
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應 topics/comm",
-        "max_len": 247
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應「記憶與知識管理」類別既",
-        "max_len": 228
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁 2026-08-2",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「CLAUDE.md",
-        "max_len": 259
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「Multi-age",
-        "max_len": 411
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「Plugin /",
-        "max_len": 262
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「Skills 設計",
-        "max_len": 243
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「Token / 成",
-        "max_len": 211
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
-        "max_len": 274
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
-        "max_len": 259
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 呼應本頁「記憶與知識管理」類",
-        "max_len": 218
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 屬本頁已記錄三波的「meta",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 屬本頁既有「利用 OCR／視",
-        "max_len": 256
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 延伸既有「Stop Hook",
-        "max_len": 216
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 為「Token / 成本優化",
-        "max_len": 230
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 為本頁「Skills 設計」",
-        "max_len": 310
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 為本頁「多代理 PR Rev",
-        "max_len": 237
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 為本頁補上「agent 間商",
-        "max_len": 212
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 直接回應 topics/co",
-        "max_len": 250
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 直接對應本頁「Token /",
-        "max_len": 215
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與 ccgram（2026-",
-        "max_len": 216
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與 topics/commu",
-        "max_len": 202
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與本頁 2026-07-01",
-        "max_len": 461
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與本頁 2026-08-07",
-        "max_len": 213
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與本頁「Multi-agen",
-        "max_len": 226
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 與本頁「安全架構」類別（CL",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 若機制屬實，將是本頁「並行",
-        "max_len": 269
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上「常駐雲端運算基礎設施」",
-        "max_len": 273
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上「跨 harness 協",
-        "max_len": 284
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁「Skills 設計",
-        "max_len": 249
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁「角色分工型 sub",
-        "max_len": 207
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
-        "max_len": 377
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
-        "max_len": 257
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁「記憶與知識管理」類",
-        "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補上本頁尚未涵蓋的「模糊敘述",
-        "max_len": 214
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補充「Token / 成本優",
-        "max_len": 338
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補充「記憶與知識管理」類別既",
-        "max_len": 259
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補充本頁「Agent 規模化",
-        "max_len": 258
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補充本頁「Multi-age",
-        "max_len": 218
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有模式的關係： 補足本頁「安全架構」/「Ag",
-        "max_len": 224
       }
     ],
     "topics/community-tech-tools": [
@@ -4460,26 +4182,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Lindy 100% 流量從 Claude 切換",
-        "max_len": 234
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Microsoft 減少 Claude 依賴——",
-        "max_len": 232
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Notion 整合 Claude Agents",
-        "max_len": 255
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Partner Network 單日四項擴張",
-        "max_len": 394
-      },
-      {
-        "kind": "list_item",
         "anchor": "PicPay（09-04）",
         "max_len": 244
       },
@@ -4487,11 +4189,6 @@
         "kind": "list_item",
         "anchor": "Samsung（08-15，首見 08-14）",
         "max_len": 583
-      },
-      {
-        "kind": "list_item",
-        "anchor": "TCS Global Premier Partn",
-        "max_len": 228
       },
       {
         "kind": "list_item",

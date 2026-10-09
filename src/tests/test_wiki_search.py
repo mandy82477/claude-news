@@ -254,7 +254,14 @@ class TestRealWikiRegression(unittest.TestCase):
 
     def test_expand_on_real_graph_tags_sources_and_keeps_seeds_first(self):
         r = mod.search(self.queries, self.idx, top=12, expand=True)
-        self.assertEqual(r["pages"][0]["source"], "字面命中")
+        # 種子（字面／改寫命中）排在所有圖擴散頁之前；字面與改寫之間按相對分數排，
+        # 哪個第一隨語料變（2026-10-09 patterns 拆成七子頁後，改寫命中的 archive 頁領先）
+        sources = [e["source"] for e in r["pages"]]
+        self.assertIn(sources[0], ("字面命中", "改寫命中"))
+        self.assertIn("字面命中", sources)
+        # search() 的排序契約：found 的種子 → 圖擴散 → 未達門檻的弱命中（wiki_search.py ranked=）
+        first_expanded = next((i for i, s in enumerate(sources) if s == "圖擴散"), len(sources))
+        self.assertTrue(all(e["found"] and s != "圖擴散" for s, e in zip(sources[:first_expanded], r["pages"][:first_expanded])))
         for e in r["pages"]:
             if e["source"] == "圖擴散":
                 self.assertTrue(e["via"])

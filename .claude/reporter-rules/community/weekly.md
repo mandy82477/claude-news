@@ -1,6 +1,6 @@
 # Wiki Ingest — 社群記者指南（weekly／lint）
 
-`/wiki-lint` 時由社群記者載入，處理三項任務：`community-tech-tools.md` 策展 + `community-tech-patterns.md` 模式淘汰審查 + `community-pattern-trends.md` 趨勢頁週更。每日 ingest 不需讀此檔（每日規則見 `.claude/reporter-rules/community/daily.md`，表格契約見 `.claude/reporter-rules/community/pages.md`）。
+`/wiki-lint` 時由社群記者載入，處理三項任務：`community-tech-tools.md` 策展 + patterns 樹（`community-tech-patterns.md` 母頁＋七個子頁，路由見 `.claude/reporter-rules/community/pages.md` 第 0 條）模式概覽週更與結論層重寫 + `community-pattern-trends.md` 趨勢頁週更。每日 ingest 不需讀此檔（每日規則見 `.claude/reporter-rules/community/daily.md`，表格契約見 `.claude/reporter-rules/community/pages.md`）。
 
 ---
 
@@ -51,11 +51,12 @@
 
 ## community-tech-patterns 模式概覽週更
 
-每次 `/wiki-lint` 對 `## 模式概覽` 執行三步，**不再產出 dry run 提案等人確認**——退場與合併的判準已寫進 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 1 條，符合判準即直接執行並在回報列出，只有**上限 21 列滿載時的讓位**才回報主編裁決。
+每次 `/wiki-lint` 對母頁 `## 模式概覽` 與各子頁結論層執行四步，**不再產出 dry run 提案等人確認**——退場與合併的判準已寫進 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 1 條，符合判準即直接執行並在回報列出，只有**上限 21 列滿載時的讓位**才回報主編裁決。
 
-1. **重算「最後動態」**：照該檔第 1 條的兩段式撈法——先撈全頁 `**與既有模式的關係：**` 行，再挑逐字含該類別名者，取日期最新者所屬節點的日期（技術彙整新條目在上、月份新到舊，即行號最小者），覆寫日期欄與全頁式錨點。
+1. **重算「最後動態」**：照該檔第 1 條的兩段式撈法——先撈母頁與七個子頁的 `**與既有模式的關係：**` 行（八個檔，指令同 pages.md 第 5 條的檔案清單），再挑逐字含該類別名者，取日期最新者所屬節點的日期（技術彙整新條目在上、月份新到舊，即行號最小者），覆寫日期欄與錨點（指那一則所在子頁的 `#YYYY-MM`）。
 2. **跑退場與補位**：逾 60 天或算不出最後動態者移出表、降表下一段；剛跨 60 天的列當次處理不留到下週；表未滿載時從表下挑最後動態最新者補回。✅／⚡ 逾 60 天者重判成熟度是否降級。
 3. **跑合併**：兩列的代表技巧重疊過半即合併，被併者的代表技巧併入留下的那一列並在回報寫明。
+4. **結論層重寫（page-lifecycle 母頁契約的週更觸發邊）**：先跑 `python scripts/patterns_tree_audit.py`，exit 1 就照輸出把節點搬到它該住的子頁（逐字搬）或把回流母頁的節點下沉，再做下列重寫。本週有新節點的子頁，重寫它的 `## 目前結論`（≤5 條，覆寫不 append，最後一條是「你的選項」或「接下來看什麼」）與頂部導言的結論句；再重寫母頁 `## 現在收斂到哪、哪些還在試` 該群那一句（只寫結論變了沒並指子頁，不抄子頁數字）、`## 摘要` 第二段的計數句（定案幾類、還在試幾類、YYYY-MM-DD 起有新動靜幾類，寫絕對日期），並照 pages.md 第 0 條重抄路由表「最後動態」與「收哪幾類」兩欄；`### 未歸類` 有節點就照第 0 條分派到子頁。沒有新節點的子頁不動。最後處理母頁兩個過渡標題：`python scripts/wiki_graph.py explain topics/community-tech-patterns --section "缺口追蹤：文獻主張 × Claude Code 現況"` 入邊為 0 就刪那個 h3；`### 2026-07` 在 2026-07 蒸餾時照 pages.md 第 8 條改成指 archive 的一行（本月已達門檻）。
 
 **官方化的處理不在本節**：某類做法被官方功能取代時，該類仍留表（社群做法還在被人用），改在「核心概念」欄末加一句指向官方對應，並在回報寫 `⚠️ 需主編轉知功能記者：[做法名] 已被 [官方功能] 取代`。整類刪除只在該類的代表技巧全部下架時才做，且屬使用者裁決事項。
 
@@ -66,6 +67,8 @@
 退場 M 列（列名＋最後動態）／補位 K 列／合併 J 組（誰併進誰）
 主線 tag 補填：本週 20 則（累計 N/M，M＝該輪現算的節點總數，見 `.claude/reporter-rules/community/pages.md` 第 5 條的計數指令；**不得沿用前一輪的分母**）
 滿載讓位：無 ／ ⚠️ 需裁決（讓位候選＋理由）
+patterns_tree_audit：OK ／ ❌ N 則（落點錯 a、母頁回流 b、母頁超 300 行 c）→ 已修
+結論層重寫：子頁 N 頁（slug）／母頁收斂句 N 句／未歸類分派 K 則／過渡標題：留（入邊 n）或已刪
 ```
 
 ---
@@ -80,7 +83,7 @@
 
 `community-large-codebase-workflow.md` 是**週更**頁（每日 ingest 只在 patterns 節點標 `**主線：**` tag，不寫此頁——規則見 `.claude/reporter-rules/community/daily.md`「主線 tag 規則」）。每次 `/wiki-lint`：
 
-1. **撈料**：`Grep "\*\*主線：\*\* [^—]" wiki/topics/community-tech-patterns.md`，取節點標題日期不早於本頁 `%%` 維運備忘「週更已收至 YYYY-MM-DD」前 3 天的帶 tag 節點（日報晚 26–30 小時，節點會晚到；名字已在本頁的跳過）——不用固定 7 天窗，也不用「最後更新」（非週更的修改也會推動它）；另掃同期填 `—` 的節點，照 `.claude/reporter-rules/community/daily.md`「主線 tag 規則」的判準與反例重判一次。代表實作的名字與數字若已不在 patterns 本體（月度封存搬走），去 [[topics/community-tech-patterns-archive]] 找
+1. **撈料**：對 pages.md 第 5 條指令列的八個檔 `Grep "\*\*主線：\*\* [^—]"`，取節點標題日期不早於本頁 `%%` 維運備忘「週更已收至 YYYY-MM-DD」前 3 天的帶 tag 節點（日報晚 26–30 小時，節點會晚到；名字已在本頁的跳過）——不用固定 7 天窗，也不用「最後更新」（非週更的修改也會推動它）；另掃同期填 `—` 的節點，照 `.claude/reporter-rules/community/daily.md`「主線 tag 規則」的判準與反例重判一次。代表實作的名字與數字若已不在 patterns 母頁或子頁（月度封存搬走），去 [[topics/community-tech-patterns-archive]] 找
 2. **整線重寫，不 append**：對每條有新節點的線（並行規模／Context 管理／索引記憶／除錯分工），讀該線現有全文＋新節點，**重寫**該線；沒新節點的線不動
 3. **每條線固定四層、≤ 30 行**（硬上限，逼「換掉舊結論」而非「往下加」）：
 
@@ -102,7 +105,7 @@
 
    已鋪 spoke：large-codebase（4 線）、enterprise-cost-management、code-quality-decline；其他問題頁由對應記者按上述格式自行補（guide 屬功能記者，其「缺什麼」欄位形態不同，是否鋪由功能記者評估）。
 
-   - 「代表實作」欄放工具／文章名，每格 ≤ 3 個，多的以「等，見 [[…]]」收尾，連到那些名字真正住的頁（patterns 本體、archive 或 trends）；「證據強度」一格一個值，只用 `多來源／單一實測／單一深度分析／已成趨勢／推論` 五值，不加附註、不用「＋」複合——同列混了不同強度的來源，取撐起「社群走到哪」那一句的那一個
+   - 「代表實作」欄放工具／文章名，每格 ≤ 3 個，多的以「等，見 [[…]]」收尾，連到那些名字真正住的頁（patterns 子頁、archive 或 trends）；「證據強度」一格一個值，只用 `多來源／單一實測／單一深度分析／已成趨勢／推論` 五值，不加附註、不用「＋」複合——同列混了不同強度的來源，取撐起「社群走到哪」那一句的那一個
    - 散文段不得出現日期開頭條列（`- 05-06 …`）或 `### YYYY-MM-DD`；日期只在需要錨定時括號附註
    - 工具星數不寫在本頁，規模見 [[topics/community-tech-tools]]；趨勢批次與數量見 [[topics/community-pattern-trends]]，本頁只寫「見 X 頁」
    - 「已成趨勢」列 60 天沒有新代表實作 → 降為「多來源」，並在「社群走到哪」寫最後一次出現的月份；散文與表格不寫「今日」「本輪」「第 N 波」這類相對詞，寫日期
@@ -118,7 +121,7 @@
 
 **通用契約住 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」**——對象判準、≥ 3 個月門檻、三條例外、≤ 15 行時段總結、archive 子頁規格、引用回掃、每頁至多 2 個時段、只動「最後更新」，全部照該節，本節不重抄（條文複製到六份規則檔必然漂移）。以下只列社群兩頁的特有部分。
 
-**這兩頁的 archive 頁：** `topics/community-tech-patterns-archive`／`topics/community-tech-discussions-archive`；時段單位就是技術彙整的 `### YYYY-MM` 月份分組，條目為其下 `####`。
+**archive 頁：** patterns 樹（母頁＋七個子頁）共用 `topics/community-tech-patterns-archive`（掛母頁下，規格見 pages.md 第 8 條）；discussions 用 `topics/community-tech-discussions-archive`。時段單位是技術彙整的 `### YYYY-MM` 月份分組，條目為其下 `####`。
 
 **引用檢查看哪三處（通用例外 2「唯一細節出處」在社群線的具體形態）：** 主線頁「代表實作」欄、趨勢頁演進節點、討論表「衍生」欄——任一指向該月條目即不蒸；🌊延燒／🌋重燃討論的歷史月份照通用例外 3 一律不蒸。
 
@@ -132,7 +135,7 @@
 
 ## community-pattern-trends 趨勢頁週更
 
-每次 `/wiki-lint` 時更新 `wiki/topics/community-pattern-trends.md`（週更，非每日）。本頁回答「社群做法往哪幾個方向收斂、每個方向怎麼走到今天、你現有設計可以回頭檢查什麼」；每種做法的證據與採用成熟度（✅⚡⏳）住 `community-tech-patterns`，本頁不另判採用量、不寫 ✅⚡⏳。
+每次 `/wiki-lint` 時更新 `wiki/topics/community-pattern-trends.md`（週更，非每日）。本頁回答「社群做法往哪幾個方向收斂、每個方向怎麼走到今天、你現有設計可以回頭檢查什麼」；每種做法的採用成熟度（✅⚡⏳）住 patterns 母頁的模式概覽表、逐則證據住七個子頁，本頁不另判採用量、不寫 ✅⚡⏳。
 
 **方向成立門檻（同時滿足，才列入「已收斂的方向」）：**
 - ≥ 3 個獨立來源（不同社群帳號、不同媒體、不同工具）
@@ -155,7 +158,7 @@
 | 九 跨 Session 記憶層 | `記憶與知識管理` |
 
 **更新步驟：**
-1. **撈料**：`Grep "\*\*與既有模式的關係：\*\*" wiki/topics/community-tech-patterns.md`，挑逐字含上表類別名、且節點日期不早於本頁 `%%`「週更已收至 YYYY-MM-DD」前 3 天者為候選（日報晚 26–30 小時，節點會晚到；名字已在本頁的跳過）。推進該方向的（新取向、新證據、第 N 個獨立實作）才寫成節點；只是同類再多一個工具的不寫。
+1. **撈料**：對 pages.md 第 5 條指令列的八個檔 `Grep "\*\*與既有模式的關係：\*\*"`，挑逐字含上表類別名、且節點日期不早於本頁 `%%`「週更已收至 YYYY-MM-DD」前 3 天者為候選（日報晚 26–30 小時，節點會晚到；名字已在本頁的跳過）。推進該方向的（新取向、新證據、第 N 個獨立實作）才寫成節點；只是同類再多一個工具的不寫。
 2. **節點格式**：`- 🔥…（估） **名稱**（M/D，來源平台）：一句推進了什麼`。有 HN 分數的寫 `HN nn`、照頁面摘要的 🔥 圖例分級、不加「（估）」；沒有的加「（估）」。每條 ≤ 200 字元；不寫「本線」「節點」「本週」「GitHub Search」這類維運字眼。
 3. **標題**：``### 趨勢N：名稱　`方向已收斂`　最近一次動靜 YYYY-MM-DD``，日期＝該條演進最後一個節點的日期，每次週更重算。
 4. **淡出檢查（每條每週都跑）**：「最近一次動靜」距今逾 30 天 → 先看上表對應類別在 patterns 模式概覽表的「最後動態」：30 天內有 → 打開那幾則節點，推進本方向的照第 2 步補進演進（屬漏收），不推進的在本頁 `%%` 記一句為何不收；補完仍逾 30 天 → 標題日期前加「↘ 淡出・」。重新有節點進來即拿掉。淡出只是標記，不移出頁面；整條移除屬使用者裁決。

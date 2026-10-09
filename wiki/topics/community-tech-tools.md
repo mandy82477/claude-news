@@ -7,12 +7,12 @@ last_updated: "2026-10-03"
 last_news_update: "2026-10-02"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
-inbound_links: 51
+days_since_news_subtree: 7
+inbound_links: 55
 attribution_count: 15
 attribution_last: "2026-09-26"
 top_source: "github"

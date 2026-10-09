@@ -233,6 +233,38 @@ NEWS = """# 日報
 """
 
 
+class TestParentCalloutNotDuplicated(unittest.TestCase):
+    """母頁 callout 只是轉述同日子頁新做法（連到子頁）時不重複進讀者版；母頁自己的新聞照收。"""
+
+    @staticmethod
+    def _pg(title, callout, parent=None):
+        up = f"**上層：** [[{parent}]]\n" if parent else ""
+        return (f'---\ndomain: "🌐 社群"\ninbound_links: 5\n---\n# {title}\n\n**狀態：** ongoing\n'
+                f"**領域：** 🌐 社群\n{up}\n> **最新做法**（2026-10-10）\n> - {callout}\n\n---\n")
+
+    def setUp(self):
+        self._td = tempfile.TemporaryDirectory()
+        w = Path(self._td.name)
+        (w / "entities").mkdir()
+        (w / "topics").mkdir()
+        (w / "topics" / "hub.md").write_text(self._pg("母", "Skills 添 X，見 [[topics/kid]]"), encoding="utf-8")
+        (w / "topics" / "kid.md").write_text(self._pg("子", "X 的細節", "topics/hub"), encoding="utf-8")
+        (w / "topics" / "hub2.md").write_text(self._pg("母2", "母頁自己的新聞"), encoding="utf-8")
+        (w / "topics" / "kid2.md").write_text(self._pg("子2", "子2 的新聞", "topics/hub2"), encoding="utf-8")
+        secs, _ = gen.collect("2026-10-10", w)
+        self.pages = sorted(it["page"] for v in secs.values() for it in v)
+
+    def tearDown(self):
+        self._td.cleanup()
+
+    def test_parent_callout_linking_same_day_child_is_skipped(self):
+        self.assertNotIn("topics/hub", self.pages)
+        self.assertIn("topics/kid", self.pages)
+
+    def test_parent_with_own_news_not_linking_child_is_kept(self):
+        self.assertEqual(self.pages, ["topics/hub2", "topics/kid", "topics/kid2"])
+
+
 class TestTopSectionsFromNews(unittest.TestCase):
     """丙-2：daily/ 頂部搬 news/ 的 📌 今日聚焦；⭐ 重點話題剔掉聚焦已講過的 URL，最多 5 則。"""
 

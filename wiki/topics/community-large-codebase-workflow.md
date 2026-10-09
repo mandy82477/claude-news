@@ -7,12 +7,12 @@ last_updated: "2026-09-23"
 last_news_update: "2026-09-23"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 15
+days_since_news: 16
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 15
-inbound_links: 53
+days_since_news_subtree: 16
+inbound_links: 55
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
@@ -69,7 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化；官方也已內建 | Claudette、Superset、cc-fleet 等，見 [[topics/community-tech-patterns-archive]] | 多來源 |
 | 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；另有單一長 session 前後動用 147 個 subagent、24 天完成移植（09-04） | 《Why 20 Instances Break Down》、F-Zero X 移植 | 單一深度分析 |
-| 統一容器 | 08-05 起一批接一批，已有 OS、團隊、平台、IDE 化幾種取向；換底層 agent 不必重寫協作邏輯 | omnigent、loopx、proliferate 等，見 [[topics/community-tech-patterns]] | 已成趨勢 |
+| 統一容器 | 08-05 起一批接一批，已有 OS、團隊、平台、IDE 化幾種取向；換底層 agent 不必重寫協作邏輯 | omnigent、loopx、proliferate 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
 | 任務脈絡互通 | 不取代底層 agent，讓多個獨立 agent 共享任務脈絡；09-16 出現跨終端互相傳訊的第二例 | Concord（MCP）、hcom | 單一實測 |
 | 可觀測性 | 多款獨立儀表板，分「讀官方 event stream」與「自解析 transcript」兩路 | HUD、episko（原名 Cockpit）等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
 | 落地整合 | 本地合併佇列讓 commit 依序落地（4–5 agent／日 90 commit／8GB 筆電） | Claude Code Merge Queue | 單一實測 |
@@ -92,7 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
-| 按需取回 | 預先 @-mention 定為反模式；讀取上限＋索引層；不裁剪會 O(N²)（62.8–85.9% 額外 token）；nightshift 疊三層因應多 issue context rot | Just-in-Time Retrieval、Compact Memory、nightshift 等，見 [[topics/community-tech-patterns]] | 多來源 |
+| 按需取回 | 預先 @-mention 定為反模式；讀取上限＋索引層；不裁剪會 O(N²)（62.8–85.9% 額外 token）；nightshift 疊三層因應多 issue context rot | Just-in-Time Retrieval、Compact Memory、nightshift 等，見 [[topics/community-memory]] | 多來源 |
 | MCP 成本 | 9 個 server ≈ 每輪 38k token 冷啟動；設計（描述長度、回傳格式）實測有差 | MCP 信任邊界審查、隱藏成本實測 | 多來源 |
 | 極簡輸出 | 單次回覆 70→20 token；65% 降耗；企業已當降本策略 | Caveman Skill、404 Media 報導 | 多來源 |
 | CLAUDE.md 取捨 | 四層寄放地依觸發頻率；載入順序（CLAUDE.local.md 後載、受管理原則檔各 OS 路徑不同，與官方文件一致） | 「該裝什麼」「載入順序」兩篇 | 單一深度分析 |
@@ -119,11 +119,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 統一框架 | Repo-as-Memory：決策外化；跨 repo 依賴圖需另注入（`nx graph` 等） | Repo-as-Memory、Cross-repo Blast Radius | 單一深度分析 |
-| 本地索引 | 向量 DB（39ms 檢索）／圖資料庫／SQLite session 索引／Markdown+git，各走一路；圖譜路線採用量最大（graphify） | Memex、session-indexer、cpr-compress-preserve-resume 等，見 [[topics/community-tech-patterns]] | 多來源 |
+| 本地索引 | 向量 DB（39ms 檢索）／圖資料庫／SQLite session 索引／Markdown+git，各走一路；圖譜路線採用量最大（graphify） | Memex、session-indexer、cpr-compress-preserve-resume 等，見 [[topics/community-memory]] | 多來源 |
 | 零依賴檔案式 | 決策／需求／限制三類專案層級資訊，CLI 直存檔案不依賴外部服務 | brain.md | 單一實測 |
 | 取代官方記憶 | 主張使用者手動策展比官方 auto memory 更可控、更可信賴 | 手動維護 Obsidian vault（[[topics/llm-wiki-pattern]] 形式） | 單一實測 |
 | 團隊共享 | 鎖定「跟著使用者走」而非留在人類設計的筆記/任務管理系統 | OzBrain（HN 69）| 單一實測 |
-| 可攜性 | Markdown 規則檔不跨工具 → JSON 協定或格式規約；claude-mem／gentle-ai 規模大但沒有實測 | ltm、OKF、claude-mem 等，見 [[topics/community-tech-patterns]] | 單一實測 |
+| 可攜性 | Markdown 規則檔不跨工具 → JSON 協定或格式規約；claude-mem／gentle-ai 規模大但沒有實測 | ltm、OKF、claude-mem 等，見 [[topics/community-memory]] | 單一實測 |
 | 文件自動維護 | codebase wiki 隨對話自動更新，取代手維護 MANUAL.md | CodeAlmanac | 單一實測 |
 | 否決方案索引 | 「已被否決」只在人腦或討論串 → 隱形重工；8/31 補上「否決紀錄本身須可驗證、防竄改」 | 兩則概念性觀察（8/7、8/31）| 推論 |
 
@@ -146,7 +146,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 邊界規則 | 11 條多 agent CLAUDE.md 規則（工作區邊界、禁改共享狀態、merge 責任）；PostToolUse 稽核日誌 | Multi-agent 衝突防範、稽核日誌模式 | 多來源 |
-| 對抗式審查 | 計畫前／程式碼後兩做法；唯讀審查者；跨模型交叉審查（論文，解題測試）；另有把審查意見刻意「降階」以免過度採信的單一提案 | Read-Only Reviewer、Agent-plan-review-loop、interns-review-plugin 等，見 [[topics/community-tech-patterns]] | 多來源 |
+| 對抗式審查 | 計畫前／程式碼後兩做法；唯讀審查者；跨模型交叉審查（論文，解題測試）；另有把審查意見刻意「降階」以免過度採信的單一提案 | Read-Only Reviewer、Agent-plan-review-loop、interns-review-plugin 等，見 [[topics/community-guardrails]] | 多來源 |
 | 規劃分層 | 規劃層「做什麼」／執行層「怎麼做」；把關前移 | beads 兩層架構、品質把關前移 | 單一實測 |
 | 長 session 穩健化 | 心跳／超時重試／狀態快照，從 MCP 層擴到 session（工具失敗、API 500、用量限制各有自動接續） | auto-undo、nightshift、resume-on-ratelimit | 多來源 |
 | 回報驗證 | 靜默失敗案例 → 證據紀錄＋可驗證交接 | 「Subagent 在騙你」、Groundtruth、loopx | 單一實測 |
