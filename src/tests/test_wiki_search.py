@@ -259,9 +259,12 @@ class TestRealWikiRegression(unittest.TestCase):
         sources = [e["source"] for e in r["pages"]]
         self.assertIn(sources[0], ("字面命中", "改寫命中"))
         self.assertIn("字面命中", sources)
-        # search() 的排序契約：found 的種子 → 圖擴散 → 未達門檻的弱命中（wiki_search.py ranked=）
-        first_expanded = next((i for i, s in enumerate(sources) if s == "圖擴散"), len(sources))
-        self.assertTrue(all(e["found"] and s != "圖擴散" for s, e in zip(sources[:first_expanded], r["pages"][:first_expanded])))
+        # wiki_search.py ranked=：found 的種子與圖擴散頁一起按 rel 排（圖擴散可以贏過弱種子），
+        # 未達門檻的弱命中一律殿後；本測只守「第一筆是找到的種子」「found 在非 found 之前」
+        self.assertTrue(r["pages"][0]["found"])
+        first_weak = next((i for i, e in enumerate(r["pages"]) if not e["found"]), len(r["pages"]))
+        self.assertTrue(all(e["found"] for e in r["pages"][:first_weak]))
+        self.assertTrue(all(not e["found"] for e in r["pages"][first_weak:]))
         for e in r["pages"]:
             if e["source"] == "圖擴散":
                 self.assertTrue(e["via"])

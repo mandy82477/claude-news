@@ -31,6 +31,7 @@
 | code review 該用哪個入口、怎麼審得起（本庫刻意不推薦單一社群工具，官方六個入口＋明價） | [[topics/coding-workflow-guide]] 第 5 段 |
 | 大型 codebase 的做法主線（並行／context／記憶／把關） | [[topics/community-large-codebase-workflow]] |
 | 多個 agent 怎麼分工、隔離，隔離之後誰先合併、誰驗收（官方三條路對照與缺口） | [[topics/community-multi-agent]] |
+| 跨 session 讓 Claude 記得專案脈絡（記憶、CLAUDE.md、context）：最常見的做法是什麼、收斂了沒 | [[topics/community-memory]]「目前結論」 |
 | 我想寫一個 skill：description 怎麼寫才會觸發、社群踩過哪些地雷 | [[topics/community-skills]]「慣例與地雷」 |
 
 ---
