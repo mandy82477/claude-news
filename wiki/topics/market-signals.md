@@ -28,16 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-10-08）
-> - **Haiku 5.5 定價**：官方稱成本降約 75%，VentureBeat 稱 API 價格降 90% 與 GPT-6 Luna 看齊，兩口徑不可互換引用。
-> - **Max/Team 新增 API credits**：官方文件確認新增月度額度但不可用於 Claude Code 本身，金額媒體引用 $200 與 $500 兩版本，官方未確認。
+> **最新判讀**（2026-10-09）
+> - **Microsoft／Anthropic 轉售帳務爭議**：新創經 Azure Marketplace 用 Claude 收到約 1.76 萬美元帳單，雙方互踢計費責任。
 
 ---
 
@@ -63,13 +62,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Novo Nordisk（NYSE: NVO） | 具名客戶，採用 Claude 加速藥物研發，合約範疇與費用未揭露 | 09-16 諾和諾德具名採用一則 | 〰 未定 | 合約範疇與費用披露；財報是否提及成本效益 |
 | JPMorgan Chase（NYSE: JPM） | 具名客戶，導入 Claude 並設 2,000 美元支出上限與額外安全管控 | 09-17 摩根大通導入一則 | 〰 未定 | 更多受監管金融機構是否跟進；上限適用範圍與席位數是否披露 |
 | Accenture（NYSE: ACN） | 09-19 獲選為 Anthropic 首位「內嵌評估者」，協助落實安全放緩提案，雙方各預期投入至少 10 億美元／五年、Anthropic 出資支應 Accenture 工作（官方稿，查證 2026-10-03） | 09-19 Accenture 內嵌評估者一則 | 〰 未定 | 合約條款與付款時程披露；Accenture 財報是否揭露合作金額 |
-| Microsoft（NASDAQ: MSFT） | Nscale 資料中心合約中與 Anthropic 並列最大兩家客戶（算力採購方身分）；10-05 另被曝內部 Claude 支出砍逾三分之一、改用 Copilot CLI，未取消合約（已查證 2026-10-07） | 09-21 Nscale 算力合約規模一則；10-05 內部用量縮減一則 | ⚖️ 兩面（算力採購方身分未定、內部用戶身分轉負面） | Anthropic／Microsoft 合約拆分金額披露；官方是否證實縮減金額口徑 |
+| Microsoft（NASDAQ: MSFT） | 算力採購方，Nscale 合約最大兩家客戶之一；內部用戶縮減三分之一（已查證 2026-10-07）；10-09 另曝 Azure 轉售帳務爭議，細節見下 | 09-21 Nscale 算力合約規模一則；10-05 內部用量縮減一則；10-09 Marketplace 帳務爭議一則 | ⚖️ 兩面（算力採購方身分未定、內部用戶與轉售通路身分皆轉負面） | Anthropic／Microsoft 合約拆分金額披露；官方是否證實縮減金額口徑；Marketplace 轉售帳務責任歸屬是否釐清 |
 | Meta（NASDAQ: META） | 具名企業，Claude Code 使用者約 6 萬降至約 3 萬，轉用自家 MetaCode，近 28 天仍花逾 1.05 億美元（已查證 2026-10-07） | 10-05 內部用量縮減一則 | 📉 負面 | Meta 或 Anthropic 官方是否回應並證實金額口徑 |
 | Akamai（NASDAQ: AKAM） | 供應商，簽 7 年 116 億美元運算合約供應 CPU 算力，並發行認股權證讓 Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股 | 09-25 Akamai 算力合約一則 | 📈 正面，動到未來多年期營收承諾 | 下一份財報／10-Q 是否揭露此合約認列時程或上修全年指引 |
 | Broadcom（NASDAQ: AVGO） | 銀行已正式對外 launch 600 億美元晶片融資案（辛迪加階段），金額與 10-02「啟動」階段相同，循環投資模式與 07-22 AMD、09-02 Nvidia-Lambda 同屬一類 | 10-01 開線、10-02 第 2 則、10-05 第 3 則 | ⚖️ 兩面，市場發售階段推進 vs 槓桿規模未變 | 600 億美元融資是否完成定價發行、承銷團名單與利率是否披露 |
 | Barclays（NYSE: BCS） | 具名客戶，官方宣布擴大導入 Claude Code 全行，首度提出可驗證的量化採用率目標 | 10-01 Barclays 擴大導入一則 | 📈 正面，動到可驗證的滲透率目標 | 2026 年底開發者採用率 50% 目標是否達成並獲證實 |
 
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
+
+**細節（Microsoft 列）**：10-09 The Register 報導，一家經 Azure AI Foundry Marketplace 使用 Claude 的新創，原以為受 Azure 贊助額度涵蓋，卻收到約 1.76 萬美元帳單；Microsoft 稱 Marketplace 合作夥伴收費無法調整，要新創直接找 Anthropic，雙方互踢責任，爭議是否解決未見報導。
 
 ---
 
@@ -78,6 +79,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 每則五段：**一眼**（正負、誰有感、硬度、線）／**為什麼這樣判**（新資訊在哪、動到哪個數字）／**下一個催化劑**／**你的選項**／**一課**。有關聯的前一則在「為什麼這樣判」裡順手提；各則的「一課」彙整成課程表在 [[topics/market-lessons]]。
 
 第一行怎麼讀——方向：📈 正面／📉 負面／⚖️ 兩面（好壞同時成立）／〰 未定；「數字型」＝動到財報或估值數字，「敘事型」＝只改故事。硬度是「這消息有多可信」：官方一手（公司自己說的）＞官方文件（公開申報）＞跨媒體與社群多來源（很多家報，但都是轉述）＞具名表態（某個人說的）＞單一標題（只有一家、只看到標題）。線：同一條消息線的第幾則，「開線」＝第一則。
+
+### 💰 The Register：Microsoft 與 Anthropic 為新創 1.76 萬美元 Claude 帳單互踢責任（2026-10-09）
+
+**一眼**：⚖️ 兩面（數字型，動到 Azure Marketplace 轉售通路的計費歸屬與客戶信任）｜誰有感：Microsoft（NASDAQ: MSFT）｜硬度：單一標題（The Register）｜線：Azure Marketplace 轉售帳務爭議 ▸ 開線
+
+**為什麼這樣判**：新資訊是一宗具體帳務爭議首次曝光——一家加入 Microsoft for Startups 的新創經 Azure AI Foundry Marketplace 使用 Claude，原以為受 Azure 贊助額度涵蓋，卻收到約 1.76 萬美元帳單；Microsoft 稱 Marketplace 合作夥伴收費無法調整、要新創直接找 Anthropic，雙方互踢責任。此前 Microsoft 與 Anthropic 的關係只記過兩種身分——09-21 算力採購方（Nscale 合約並列最大客戶）、10-05 內部用戶縮減使用——本則首次揭露第三種身分：Azure Marketplace 的轉售通路，且通路計費責任歸屬不清。判兩面是因為這類帳務爭議若普遍存在，會侵蝕新創客戶透過雲端市集間接採購 Claude 的信任，是這條潛在獲客通路的負向訊號；但目前僅一家新創、一則報導、金額約 1.76 萬美元，規模遠小於足以動到任一方財報的量級，也不代表 Nscale 等主力合約受影響。僅 The Register 單一媒體報導，爭議是否已解決、帳單最終由誰承擔均未見報導。事實見 [[topics/anthropic-business]]、[[topics/enterprise-tool-tracker]]。
+
+**下一個催化劑**：Microsoft 或 Anthropic 官方是否回應並說明 Marketplace 轉售的計費責任歸屬；是否有其他新創提出類似帳務爭議。
+
+**你的選項**：(a) 什麼都不做，單一案例、金額遠低於重大性門檻；(b) 透過 Microsoft for Startups 或 Azure Marketplace 使用 Claude 的團隊，在用量衝高前先以書面向雙方確認計費範圍與責任方，不要假設贊助額度一定涵蓋 Marketplace 轉售的 Claude 用量。
+
+**一課｜轉售通路的計費責任，平台與供應商常各說各話**
+- 概念：透過雲端市集轉售的產品出帳爭議時，平台方與實際供應商可能互推責任，中間的客戶最容易承受兩邊都不認帳的空窗。
+- 機制：Marketplace 模式下平台賺的是上架抽成、供應商賺的是用量費，雙方對「誰該吸收認知落差造成的帳單」沒有預先講清楚時，客訴會卡在兩方之間。
+- 下次怎麼認：看到「A 平台與 B 供應商為客戶帳單互踢皮球」，先問這是平台抽成模式還是直售模式，轉售的計費責任界線通常就是爭議點。
 
 ### 💰 Haiku 5.5 定價：官方稱成本降 75%、VentureBeat 稱 API 價格降 90% 與 GPT-6 Luna 看齊（2026-10-08）
 
@@ -773,6 +789,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-10-09 | Azure Marketplace 轉售帳務爭議 | MSFT 間接關聯 ⚖️（開線） | Microsoft 或 Anthropic 官方回應並說明計費責任歸屬（10-23） | ⏳ | ⏳ |
 | 2026-10-08 | 定價改版 | 本體不可買；間接曝險 📈（第 5 則） | 官方定價頁公布 Haiku 5.5 逐 token 費率或 OpenAI 證實／否認對齊 GPT-6 Luna（10-22） | ⏳ | ⏳ |
 | 2026-10-08 | 訂閱方案新增 API credits | 本體不可買；間接曝險 〰（開線） | 官方帳務頁面實際入帳數字公布，確認金額口徑（10-22） | ⏳ | ⏳ |
 | 2026-10-07 | 競品採購 Claude API | 本體不可買；間接曝險 📈（開線） | Anthropic 或 xAI／Grok 官方證實整合細節與範圍（10-21） | ⏳ | ⏳ |
@@ -841,6 +858,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 判讀裡「下一個催化劑」的具體事件登記於此，日報出現後續時會被偵測到。每筆怎麼讀：「標」是登記日、「查」是我們在日報裡盯的關鍵字、「複」是複查日、「訊」是日報出現後續的那天。
 
+- ❓ **待查證**（標 2026-10-09｜查 Azure Marketplace、17,600｜複 2026-10-23）｜**Microsoft／Anthropic 是否回應 Marketplace 轉售帳務爭議**：The Register 報導新創經 Azure Marketplace 用 Claude 收約 1.76 萬美元帳單，雙方互踢計費責任，爭議解決與否未見報導。
 - ❓ **待查證**（標 2026-10-08｜查 Haiku 5.5、GPT-6 Luna｜複 2026-10-22）｜**Haiku 5.5 逐 token 費率是否公布並與 GPT-6 Luna 對齊**：官方稱成本降約 75%，VentureBeat 稱降 90% 看齊 GPT-6 Luna，兩口徑不同，具體費率與 OpenAI 官方表態均未見報導。
 - ❓ **待查證**（標 2026-10-08｜查 API credits、月度上限｜複 2026-10-22）｜**Max／Team 新增 API credits 的實際月度金額是否經官方帳務頁面確認**：XenoSpectrum 稱 Max 最高 $200，另一報導稱最高 $500，官方文件僅確認新增額度本身與排除 Claude Code／Claude App 用量，未載具體金額。
 - ❓ **待查證**（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節｜複 2026-10-21）｜**Grok Bot 整合 Claude／Midjourney／Suno 的範圍是否獲官方證實**：The Next Web、9to5Mac 報導，僅標題可用，範圍與用量規模均未見報導，官方未回應。

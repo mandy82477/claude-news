@@ -7473,5 +7473,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：追加派工 2 筆（Vincentwei1021/mg-styles-15、Reddit「I made this with opus 5.5」由社群回退至模型，模型記者補派後收錄前者、排除後者）；駁回 2 筆（UV 全天圖研究成果無強替代類別，由日報 ⭐ 覆蓋；漏洞掃描器已由安全政策記者原輪處理，不重派）
 - 轉知：結案 2 筆（H-9d1672、H-817203，功能記者本輪處理 official-community-gap／claude-skills 錨點修正）；新開 3 筆——H-1ffd23（商業→人物，entities/john-jumper 補 Demis Hassabis 讚許細節，低優先）、H-ad36ff（商業→功能，topics/long-context-1m 補 244/325 token 門檻差異）、H-51df5d（社群→功能，topics/official-community-gap 評估 zhikuncode／big-arrow-on-the-screen 產品化矩陣新列）
 - 懸置標記：本輪新增 7 筆皆用新語法（haiku-5-5 ⟨Q-01⟩ 補訊、claude-design／pricing／chris-olah／jack-clark／tom-brown／ai-agent-safety 各一）；index.md 三處初稿誤用裸露「待查證」字樣觸發舊語法棘輪，已改寫為「詳見頁內標記」消除
+- devpractice 沉澱：候選 11 筆（已 append `data/devpractice-candidates.jsonl`，待週度落地）；今日無官方使用指南類條目，手冊整頁未寫，基準線推進至 68b92aed
+- market 判讀：判讀 1 則（The Register：Microsoft／Anthropic 就新創 $17,600 Claude 帳單互踢責任，開新線「Azure Marketplace 轉售帳務爭議」於 topics/market-signals「Microsoft」列），回顧結算 ⏳ 1 列（判讀日 10-09，結算日 10-23）
 - ingest_gate：9 道內容閘全綠
-- 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群
+- 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群、投資分析
