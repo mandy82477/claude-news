@@ -8,15 +8,15 @@
 
 | 頁 | 正文行 | 正文字元 | 其中 `## 技術彙整` 之前 |
 |---|---|---|---|
-| community-tech-patterns | 180 | 11,045 | 101 |
-| community-multi-agent | 477 | 34,188 | 109 |
-| community-memory | 385 | 26,829 | 36 |
-| community-cost | 375 | 25,187 | 37 |
-| community-skills | 431 | 31,432 | 42 |
+| community-tech-patterns | 180 | 11,050 | 101 |
+| community-multi-agent | 494 | 35,676 | 109 |
+| community-memory | 367 | 25,175 | 36 |
+| community-cost | 392 | 26,649 | 37 |
+| community-skills | 403 | 29,313 | 42 |
 | community-guardrails | 348 | 24,761 | 54 |
-| community-integrations | 383 | 24,583 | 30 |
-| community-interfaces | 231 | 13,686 | 30 |
-| 合計 | 2810 | 191,711 | |
+| community-integrations | 387 | 24,994 | 30 |
+| community-interfaces | 239 | 14,103 | 30 |
+| 合計 | 2810 | 191,721 | |
 | （拆前 community-tech-patterns） | 2461 | 180,329 | |
 
 母頁 ≤300 行：實數正文 180 行（含 frontmatter 205 行）。＝原文 128＋新寫 52。八頁合計比拆前多 349 行＝新寫 296（母頁 52、七子頁 244）＋子頁重建的月份標題與懸置標頭 81，減去丟棄的包裝 16 與改寫掉的 12（`out\accounting.txt`）。
@@ -134,7 +134,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   **接下來看什麼：** 各子頁之後的新做法是否還在複述這幾句，複述停了就是真的定案。
 - **多 agent**：隔離已定案，隔離之後誰先合併、誰驗收還沒有官方答案，社群自己補。見 [[topics/community-multi-agent]]「目前結論」。
 - **記憶、CLAUDE.md 與 context**：方向收斂成兩層（官方 auto memory＋把決策寫回 repo），工具與格式還沒收斂。見 [[topics/community-memory]]「目前結論」。
-- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-memory#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-cost#2026-09]]）。
+- **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-multi-agent#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-cost#2026-09]]）。
   - 同一個問題兩個相反答案，還沒收斂。官方數量級參照見 ⟨Q-06⟩：多 agent 系統約耗一般對話 15 倍 token。
 - **Skills**：觸發寫法是最大的地雷，慣例與地雷整理在 [[topics/community-skills]]「慣例與地雷」。
 - **規則、把關與安全**：強制勝過建議；「檢查型」與「強制型」把關的分界與各自破口見 [[topics/community-guardrails]]「目前結論」。
@@ -328,7 +328,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **社群這邊實際跑出來的三則：**
 - 單一長 session 加 147 個 subagent、24 天完成一次移植（[[topics/community-multi-agent#2026-09]]）——證明「一個人拆、模型執行」在超長專案上撐得住。
-- 四個平行子代理耗掉約 200 萬 token，疑似每次工具呼叫都重送整段歷史（[[topics/community-memory#2026-08]]）——動態拆分的成本上限還沒有人量出來。
+- 四個平行子代理耗掉約 200 萬 token，疑似每次工具呼叫都重送整段歷史（[[topics/community-multi-agent#2026-08]]）——動態拆分的成本上限還沒有人量出來。
 - 分層做法：Opus 當腦、Sonnet 當手，加一份持久狀態檔（[[topics/community-multi-agent#2026-08]]）——社群自己補官方沒給的分模型編排。
 
 **文獻怎麼說（截至 2026-07-22）：** 拆分才是瓶頸，弱的拆分者卡死全系統而強的執行者補不回，且拆分只佔約 20% token（PEAR）；粒度應按執行者能力當場調整（ADaPT、Coarse-to-Fine）；人類介入的正確形式是在共享計畫上持續協調並中途糾錯，不是交一份完稿（Cocoa）；重複性任務把規格與拆法凍結成 skill。
@@ -374,7 +374,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 40 則節點，月份分組 2026-10 2 則、2026-09 23 則、2026-08 10 則、2026-07 5 則⟫
+⟪由 split_patterns.py 填入：本群 42 則節點，月份分組 2026-10 2 則、2026-09 23 則、2026-08 11 則、2026-07 6 則⟫
 ````
 
 ## 3. 子頁 B：`wiki/topics/community-memory.md`
@@ -393,7 +393,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 4
+inbound_links: 3
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -402,7 +402,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 社群做法：記憶、CLAUDE.md 與 context
@@ -444,7 +444,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 39 則節點，月份分組 2026-10 8 則、2026-09 14 則、2026-08 11 則、2026-07 6 則⟫
+⟪由 split_patterns.py 填入：本群 37 則節點，月份分組 2026-10 8 則、2026-09 13 則、2026-08 10 則、2026-07 6 則⟫
 ````
 
 ## 4. 子頁 C：`wiki/topics/community-cost.md`
@@ -515,7 +515,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 38 則節點，月份分組 2026-10 4 則、2026-09 12 則、2026-08 8 則、2026-07 14 則；懸置細節 Q-05 放在所屬月份分組末，技術彙整標題下帶原 L185 說明一行⟫
+⟪由 split_patterns.py 填入：本群 40 則節點，月份分組 2026-10 4 則、2026-09 13 則、2026-08 9 則、2026-07 14 則；懸置細節 Q-05 放在所屬月份分組末，技術彙整標題下帶原 L185 說明一行⟫
 ````
 
 ## 5. 子頁 D：`wiki/topics/community-skills.md`
@@ -553,7 +553,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
-**開始日期：** 2026-07-11
+**開始日期：** 2026-07-12
 **最後更新：** 2026-10-09
 **最後新聞更新：** 2026-10-07
 
@@ -591,7 +591,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 42 則節點，月份分組 2026-10 2 則、2026-09 23 則、2026-08 10 則、2026-07 7 則⟫
+⟪由 split_patterns.py 填入：本群 39 則節點，月份分組 2026-10 2 則、2026-09 22 則、2026-08 9 則、2026-07 6 則⟫
 ````
 
 ## 6. 子頁 E：`wiki/topics/community-guardrails.md`
@@ -743,7 +743,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 38 則節點，月份分組 2026-10 15 則、2026-09 15 則、2026-08 2 則、2026-07 6 則；懸置細節 Q-02 放在所屬月份分組末，技術彙整標題下帶原 L185 說明一行⟫
+⟪由 split_patterns.py 填入：本群 38 則節點，月份分組 2026-10 15 則、2026-09 16 則、2026-08 2 則、2026-07 5 則；懸置細節 Q-02 放在所屬月份分組末，技術彙整標題下帶原 L185 說明一行⟫
 ````
 
 ## 8. 子頁 F2：`wiki/topics/community-interfaces.md`
@@ -807,7 +807,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-⟪由 split_patterns.py 填入：本群 22 則節點，月份分組 2026-10 7 則、2026-09 9 則、2026-08 1 則、2026-07 5 則⟫
+⟪由 split_patterns.py 填入：本群 23 則節點，月份分組 2026-10 7 則、2026-09 9 則、2026-08 1 則、2026-07 6 則⟫
 ````
 
 ---
@@ -837,7 +837,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > | `topics/community-interfaces` | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 |
 >
 > - 關係行沒有逐字寫出任何類別名：依它補的是哪一種做法判最近的子頁（額度監控、帳號橋接、看見實際送出的內容→`topics/community-cost`；課程與合輯→`topics/community-skills`）；判不出就寫進母頁 `## 技術彙整` 的 `### 未歸類`，週更時分派。不設預設子頁（`.claude/reporter-rules/page-lifecycle.md`「路由」條）。
+> - 比對口徑同第 1 條：只去空白、全形斜線轉半形；同義說法不算；「主線填…」「歸入主線…」到句末那一段是主線 tag，不算類別。例：關係行「補上「Context 管理」…，也呼應「Skills 設計」；主線填 Token / 成本優化」→ 住 `topics/community-memory`。
 > - 一則節點只住一頁；別頁要提它就寫 `[[topics/<子頁>#YYYY-MM]]`。
+> - 母頁路由表「最後動態」＝該子頁標頭「最後新聞更新」，照抄不另算；「收哪幾類」＝本表該列裡、目前在 `## 模式概覽` 表上的類別，週更照抄。
+> - 落點與母頁契約的機械自查：`python scripts/patterns_tree_audit.py`（直接讀本表，唯讀、不擋 build；週更第 4 步跑）。
 > - 新類別入 `## 模式概覽` 的同一輪加進本表某一列；某一群自己長出第二個故事、子故事三題答得齊，才開新子頁，屬裁決事項。
 
 **A3. L29「最後動態」定義：**
@@ -875,7 +878,7 @@ L60「而週更整線重寫只撈填了非 `—` 的那 11 則」→「而週更
 
 **A12. L99 之後加新條「### 11. community-skills 的 `## 慣例與地雷`」：**
 
-> 兩組條列（慣例／地雷），各 ≤5 條，每條一句機制＋「出處：〈節點標題〉（日期，見哪個月份或哪個子頁）」，最後一行寫證據強度。入口只有一種：Skills 設計或可靠性測試出現**新的觸發機制或靜默失效條件**；同類工具再多一個不加條。滿 5 條時換掉證據最弱的一條。只能引本樹既有節點或已查證的官方文件，不寫社群轉述的通則。週更時與第 1 條同批複查。
+> 兩組條列（慣例／地雷），各 ≤5 條，每條一句機制＋「出處：〈節點標題〉（日期，見哪個月份或哪個子頁）」，最後一行寫證據強度。入口只有一種：Skills 設計或可靠性測試出現**新的觸發機制或靜默失效條件**；同類工具再多一個不加條。滿 5 條時換掉證據最弱的一條。只能引本樹既有節點、已查證的官方文件，或 `topics/community-tech-discussions`「現在吵到哪」已列為不再爭的結論，不寫社群轉述的通則。週更時與第 1 條同批複查。
 
 ## B. `.claude/reporter-rules/community/weekly.md`
 
@@ -884,9 +887,9 @@ L60「而週更整線重寫只撈填了非 `—` 的那 11 則」→「而週更
 - **L56 第 1 步**：「先撈全頁 `**與既有模式的關係：**` 行」→「先撈母頁與七個子頁的 `**與既有模式的關係：**` 行（八個檔，指令同 pages.md 第 5 條的檔案清單）」；「覆寫日期欄與全頁式錨點」→「覆寫日期欄與錨點（指那一則所在子頁的 `#YYYY-MM`）」。
 - **L58 之後加第 4 步：**
 
-> 4. **結論層重寫（page-lifecycle 母頁契約的週更觸發邊）**：本週有新節點的子頁，重寫它的 `## 目前結論`（≤5 條，覆寫不 append，最後一條是「你的選項」或「接下來看什麼」）與頂部導言的結論句；再重寫母頁 `## 現在收斂到哪、哪些還在試` 該群那一句（只寫結論變了沒並指子頁，不抄子頁數字）、`## 摘要` 第二段的計數句（定案幾類、還在試幾類、YYYY-MM-DD 起有新動靜幾類，寫絕對日期），並重算路由表「最後動態」欄；`### 未歸類` 有節點就照 pages.md 第 0 條分派到子頁。沒有新節點的子頁不動。
+> 4. **結論層重寫（page-lifecycle 母頁契約的週更觸發邊）**：先跑 `python scripts/patterns_tree_audit.py`，exit 1 就照輸出把節點搬到它該住的子頁（逐字搬）或把回流母頁的節點下沉，再做下列重寫。本週有新節點的子頁，重寫它的 `## 目前結論`（≤5 條，覆寫不 append，最後一條是「你的選項」或「接下來看什麼」）與頂部導言的結論句；再重寫母頁 `## 現在收斂到哪、哪些還在試` 該群那一句（只寫結論變了沒並指子頁，不抄子頁數字）、`## 摘要` 第二段的計數句（定案幾類、還在試幾類、YYYY-MM-DD 起有新動靜幾類，寫絕對日期），並照 pages.md 第 0 條重抄路由表「最後動態」與「收哪幾類」兩欄；`### 未歸類` 有節點就照第 0 條分派到子頁。沒有新節點的子頁不動。最後處理母頁兩個過渡標題：`python scripts/wiki_graph.py explain topics/community-tech-patterns --section "缺口追蹤：文獻主張 × Claude Code 現況"` 入邊為 0 就刪那個 h3；`### 2026-07` 在 2026-07 蒸餾時照 pages.md 第 8 條改成指 archive 的一行（本月已達門檻）。
 
-- **L65 回報格式加一行**：`結論層重寫：子頁 N 頁（slug）／母頁收斂句 N 句／未歸類分派 K 則`。
+- **L65 回報格式加兩行**：`patterns_tree_audit：OK ／ ❌ N 則（落點錯 a、母頁回流 b、母頁超 300 行 c）→ 已修` 與 `結論層重寫：子頁 N 頁（slug）／母頁收斂句 N 句／未歸類分派 K 則／過渡標題：留（入邊 n）或已刪`。
 - **L83**：「`Grep "\*\*主線：\*\* [^—]" wiki/topics/community-tech-patterns.md`」→「對 pages.md 第 5 條指令列的八個檔 `Grep "\*\*主線：\*\* [^—]"`」；「若已不在 patterns 本體（月度封存搬走）」→「若已不在 patterns 母頁或子頁（月度封存搬走）」。
 - **L105**：「（patterns 本體、archive 或 trends）」→「（patterns 子頁、archive 或 trends）」。
 - **L121**：整句換成「**archive 頁：** patterns 樹（母頁＋七個子頁）共用 `topics/community-tech-patterns-archive`（掛母頁下，規格見 pages.md 第 8 條）；discussions 用 `topics/community-tech-discussions-archive`。時段單位是技術彙整的 `### YYYY-MM` 月份分組，條目為其下 `####`。」
@@ -898,7 +901,7 @@ L60「而週更整線重寫只撈填了非 `—` 的那 11 則」→「而週更
 
 - **L13 負責頁面列換成：**
 
-> | `wiki/topics/community-tech-patterns.md`（母頁）＋七個子頁 | 工作流模式、multi-agent 設計、最佳實踐。**節點寫進子頁**：依節點「與既有模式的關係」第一個寫出的類別，查 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 0 條路由表；判不出寫母頁 `### 未歸類`。寫了節點的子頁覆寫它的 callout（括號日期＝TARGET_DATE），母頁 callout 同批覆寫成當天各子頁新做法的一句總覽並連子頁——母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py`（L137）會紅。母頁其餘只准動路由表「最後動態」欄與既有懸置標記加 `訊`，「最後新聞更新」不動（page-lifecycle 母頁契約） |
+> | `wiki/topics/community-tech-patterns.md`（母頁）＋七個子頁 | 工作流模式、multi-agent 設計、最佳實踐。**節點寫進子頁**：依節點「與既有模式的關係」第一個寫出的類別，查 `.claude/reporter-rules/community/pages.md`「topics/community-tech-patterns」第 0 條路由表；判不出寫母頁 `### 未歸類`。寫了節點的子頁覆寫它的 callout（括號日期＝TARGET_DATE），母頁 callout 同批覆寫成當天各子頁新做法的一句總覽並連子頁——母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py`（L137）會紅。母頁其餘只准動路由表「最後動態」欄與既有懸置標記加 `訊`，「最後新聞更新」不動（page-lifecycle 母頁契約）。來源歸因的 page 一律填節點所在的子頁；母頁 callout 只是轉述，不報歸因（報了，`scripts/check_wiki_freshness.py` 第 1 類判母頁漏更）。例：同一則新聞改了子頁節點也改了母頁 callout → 歸因 1 筆，page 填子頁 |
 
 - **L27**：「（patterns 頁新增條目）」→「（patterns 子頁新增節點）」。
 - **L31**：「（歸 `community-tech-patterns.md`）」→「（歸 patterns 子頁，路由見 pages.md 第 0 條）」。
@@ -912,29 +915,58 @@ L60「而週更整線重寫只撈填了非 `—` 的那 11 則」→「而週更
 - `.claude/review-registry.json`：**不需改**——`anchors` 沒有登記本頁節名；`sync_pairs[39]` 的兩個 pattern 改後仍在 daily／weekly；`bare_name_search_dirs` 只需既有的 `community-tech-patterns.md`（新子頁一律寫路徑）。
 - `.claude/reporter-rules/shared.md` L33「典型大型頁面」清單、`data/reader-tags.json`：不改（子頁從母頁下鑽，不入標籤；page-lifecycle L43）。
 
-## E. 資料檔（`data/`）
+## E. 資料檔（`data/`；三檔都是閘檔，**主 session 改**，`.claude/hooks/guard_roles.py` L48–53、L76–77 擋子 agent）
 
 - `data/reader-language-allow.json`：`line_contains` 為 `shadcn-ui/lint` 的那筆 `page` 改 `topics/community-guardrails`；`個人化覆寫` 那筆改 `topics/community-memory`（副本：不改＝3 筆新增 FAIL，改後 0）。`非預期覆寫` 那筆指母頁、母頁早已無此句，不動。
-- `data/cell-limit-baseline.json`：八頁落地後跑 `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 18 波 patterns 拆頁：母頁 66 筆存量隨節點原文搬到 7 子頁（錨點與長度不變）"`。副本輸出「新增 66」、帳本 `added` 66 筆全在七子頁（guardrails 15／memory 14／multi-agent 13／skills 11／cost 7／integrations 3／interfaces 3）、`removed` 含母頁 66。新增若不是恰 66 或出現七子頁以外的頁，停下回報——那是別的 session 的改動被吸進基線。
+- `data/cell-limit-baseline.json`：八頁落地後跑 `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 18 波 patterns 拆頁：母頁 66 筆存量隨節點原文搬到 7 子頁（錨點與長度不變）"`。副本輸出「新增 66」、帳本 `added` 66 筆全在七子頁（guardrails 15／memory 14／multi-agent 13／skills 11／cost 7／integrations 3／interfaces 3）、`removed` 含母頁 66。新增若不是恰 66 或出現七子頁以外的頁，停下回報——那是別的 session 的改動被吸進基線。印出的 removed 中七子頁與母頁以外的條目（副本是 claude-code 46、discussions 9、enterprise-tool-tracker 5、mythos 2、anthropic-business 2）要逐筆是「現況已無命中」；commit 訊息寫明「順帶收緊 N 頁 M 筆」。
 - `data/pending-marker-count.json`：不 rebuild（見 proposal §8）。
 
-## F. `scripts/check_wiki_freshness.py` 修法（L179–193 換掉；L194–197 原樣保留在新 `if` 底下）
+## F. `scripts/check_wiki_freshness.py` 修法（第二輪：採評審 v2；**主 session 改**，閘檔子 agent 改不了）
+
+逐字來源 `scratchpad\w18\review\check_wiki_freshness_v2.py`，對現檔三處改動：
+
+1. **L118 之後新增**（`load_last_attribution()` 之後）：
+
+```python
+def load_attribution_urls() -> dict[str, list[tuple[str, str]]]:
+    """每頁的 (日報日, item_url) 清單；給「上層歸因」比對網址用。"""
+    out: dict[str, list[tuple[str, str]]] = {}
+    if not ATTRIBUTION.exists():
+        return out
+    with ATTRIBUTION.open(encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if row.get("page") and row.get("date"):
+                out.setdefault(row["page"], []).append((row["date"], row.get("item_url") or ""))
+    return out
+```
+
+2. **L178（`subtree_att()` 結尾）之後新增**：
 
 ```python
     parent_of = {k: p for p, ks in children.items() for k in ks}
 
+    att_urls = load_attribution_urls()
+
     def ancestor_att(slug: str) -> str:
+        """上層的歸因只在「那則新聞的網址現在住在本頁」時才算數（拆頁搬下來的節點）。
+        不比網址的話，任何有上層、上層天天有歸因的新子頁漏報歸因都會被放過。"""
+        text = (WIKI_DIR / f"{slug}.md").read_text(encoding="utf-8")
         best, cur, guard = "", parent_of.get(slug), 0
         while cur and guard < 50:
-            best = max(best, last_att.get(cur, ""))
+            for d, url in att_urls.get(cur, ()):
+                if url and url in text:
+                    best = max(best, d)
             cur, guard = parent_of.get(cur), guard + 1
         return best
+```
 
-    for slug, last_news in scan_pages():
-        if last_news is None:
-            missing_field.append(slug)
-            continue
+3. **L184–193 換成**（L194–197 原樣保留，縮排不變，落在新 `if` 底下）：
 
+```python
         own = last_att.get(slug)
         # 1. 漏更：只比「自己」的歸因。母頁「最後新聞更新」不因子頁動（page-lifecycle 母頁契約）；
         #    拿子樹歸因來比，子頁一進新聞母頁就紅，逼人去動母頁不該動的欄位
@@ -955,25 +987,73 @@ L60「而週更整線重寫只撈填了非 `—` 的那 11 則」→「而週更
         if last_news >= max(recent_cutoff, ATTRIBUTION_START) and slug not in DERIVED_PAGES:
 ```
 
-- 檔頭 docstring 第 2 類說明句末加：「有上層的頁，宣稱日不晚於上層最後一筆歸因也算有對照（拆頁搬下來的節點，歸因記在上層）。」L160–161 註解「第 2 類對母頁改看子樹歸因」後加「；第 1 類只看自己」。
-- 新增測試 `src/tests/test_wiki_freshness_hierarchy.py`：逐字取自 `scratchpad\w18\patch\test_wiki_freshness_hierarchy.py`（四案；現版 2 FAIL、修後 4 OK，已實跑）。
-- 已驗：套用後現行全庫（未拆）`2026-10-09`、`2026-10-15` 兩天結果與修前相同（exit 0）。
+- docstring 第 2 類說明句末加：「有上層的頁，若上層某筆歸因的網址出現在本頁、且宣稱日不晚於那筆的日期，也算有對照（拆頁搬下來的節點，歸因記在上層）。」L160–161 註解後加「；第 1 類只看自己」。
+- **測試** `src/tests/test_wiki_freshness_hierarchy.py`：逐字取 `scratchpad\w18\review\test_wiki_freshness_hierarchy_v2.py`，唯一改動是 L4 `SCRIPT = Path(os.environ["FRESHNESS_SCRIPT"])` 換成 `SCRIPT = Path(os.environ.get("FRESHNESS_SCRIPT", Path(__file__).resolve().parents[2] / "scripts" / "check_wiki_freshness.py"))`。五案：
+  1. 拆頁當天：子頁零歸因、母頁有一筆歸因且其網址在子頁正文 → 綠
+  2. 子頁宣稱日晚於母頁那筆歸因 → 紅
+  3. 子頁進新聞（自己有歸因）、母頁「最後新聞更新」不動 → 母頁不判漏更、綠
+  4. 無上層、零歸因、宣稱近期 → 紅（原行為）
+  5. **新子頁漏報歸因、上層同日有自己的歸因，但那則網址不在子頁** → 紅。這是第一輪補丁放過的洞：任何掛在活躍母頁下的新子頁漏報歸因都會被當成有對照；v2 要求網址真的搬到子頁才借用上層歸因。
+- 已驗（我重跑）：現版 2 FAIL、第一輪補丁 1 FAIL（案 5）、v2 5 OK；第二輪副本八頁全閘用 v2 跑 exit 0（`w18\final_validate.log`）。
 
 ## G. 轉知帳本（`python scripts/pending_handoffs.py open`；先 `--dry-run`，再去掉跑一次）
 
 ```
-python scripts/pending_handoffs.py open --from 社群 --to 開發實務 --page topics/coding-workflow-guide --note "L478 錨點 [[topics/community-tech-patterns#2026-07]]（本地合併佇列）改指 [[topics/community-multi-agent#2026-07]]：patterns 第 18 波拆成七個子頁，那一則住多 agent 子頁；母頁 ### 2026-07 是過渡錨點，改完回報即可刪"
+python scripts/pending_handoffs.py open --from 社群 --to 開發實務 --page topics/coding-workflow-guide --note "L478 錨點 [[topics/community-tech-patterns#2026-07]]（本地合併佇列）改指 [[topics/community-multi-agent#2026-07]]：patterns 第 18 波拆成七個子頁，那一則住多 agent 子頁；母頁 ### 2026-07 是過渡錨點，改完回報即可刪；L669 的 2026-08-13 查證備註搬到 [[topics/community-guardrails]]「查證備註」，可一併改指"
 python scripts/pending_handoffs.py open --from 社群 --to 功能 --page topics/official-community-gap --note "L41 錨點 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]] 改指 [[topics/community-multi-agent#缺口追蹤：文獻主張 × Claude Code 現況]]：缺口表隨 patterns 第 18 波拆頁搬到多 agent 子頁；母頁同名 h3 是過渡指路，改完回報即可刪"
 python scripts/pending_handoffs.py open --from 社群 --to 功能 --page entities/claude-skills --note "L116 改指 [[topics/community-skills]]「慣例與地雷」（patterns 第 18 波拆出 Skills 子頁）；同句「74 個 skill 只有 3 個真正改變行為」在 patterns 母頁、七個子頁與 archive 皆查無此筆，請查出處或刪；另 L45「尚未提供正式…市集」與 L97「已有官方市集」互斥（第 18 波冷讀者撐不起 #1、#2）"
 ```
 
 `wiki/log.md` 的 Query 條目寫到這三筆時帶單號（`scripts/check_log_handoffs.py` 只放行帶 `H-xxxxxx` 的「轉知」行）。
 
-## H. 實作者跑閘的順序（我只在 `scratchpad\w18\tmprepo` 副本跑過，結果在 `final_validate.log`）
+## I. `scripts/build_reader_digest.py`：母頁轉述的 callout 不重複進讀者版（第二輪新增；不是閘檔，實作者可做）
 
-1. 跑 `split_patterns.py` 後把 `out\` 八頁複製進 `wiki/topics/`（母頁覆蓋、七子頁新增），改 discussions 三處、LCW 五處、index 三處（逐字見 proposal §7 與 map 第三節）。
-2. 改 `scripts/check_wiki_freshness.py`（§F）並加測試；改規則檔 A–D；改 `data/reader-language-allow.json` 兩筆（§E）。
-3. `python scripts/gen_wiki_frontmatter.py`（全庫寫入；只 `git add` 本波八頁、index、鄰居兩頁，其餘頁的 frontmatter 漂移不收）。
-4. `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "…"`（§E），核對新增恰 66。
-5. 逐支：`check_hierarchy.py`、`check_pending_markers.py`（預期「152 筆／其中 3 筆尚未入基線」類訊息，不 rebuild）、`check_wiki_freshness.py`、`check_reader_language.py`、`check_cell_limits.py`、`check_rules.py`、`build_web.py`（尾行錨點 WARN 與改前同數）；最後 `run_tests.py` exit 0。
-6. 主 session：commit 後 `python scripts/devpractice_diff.py mark`（搬家 diff 不得被當新料，page-lifecycle L69）、§G 三筆轉知、`wiki/log.md` Query 條目、ledger 定稿列；同一個 commit push。
+`collect()` 會收每一頁當日 callout、不看階層（L181–216）；新的 daily 規則要母頁每天跟著子頁寫當日 callout（`check_hierarchy.py` L137 也逼它），同一件事會在社群節印兩次。
+
+1. L181 `def collect` 之前加一行：
+
+```python
+PARENT_LINE_RE = re.compile(r"^\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)", re.M)
+```
+
+2. L214（`for items in sections.values():` 排序那段）之前加：
+
+```python
+    # 母頁 callout 若只是轉述子頁當日新做法（callout 內連到同日也有 callout 的子頁），略過母頁那一項，
+    # 免得讀者版同一件事印兩次；母頁自己的新聞（不連子頁）照收
+    parent_of = {}
+    for items in sections.values():
+        for it in items:
+            pm = PARENT_LINE_RE.search(it["raw"])
+            if pm:
+                parent_of[it["page"]] = pm.group(1).strip()
+    for sec, items in sections.items():
+        sections[sec] = [it for it in items if not any(
+            par == it["page"] and f"[[{kid}" in "\n".join(it["lines"]) for kid, par in parent_of.items())]
+```
+
+- 只略過「callout 連到同日也有 callout 的子頁」的母頁項；母頁自己的新聞（不連子頁）照收，所以不影響 anthropic-agent-stack 這類有自己新聞的母頁。前提是 daily.md L13 新句「母頁 callout…並連子頁」。
+- 已驗（`w18\patch2/t_digest.py`，合成資料）：修前收 hub、hub2、kid、kid2 四項；修後收 hub2、kid、kid2——連到子頁的 hub 被略過，不連子頁的 hub2 保留。實作者在 `src/tests/test_build_web_reader_digest.py` 補這兩案，`python -m unittest src.tests.test_build_web_reader_digest` 綠才交件；沒跑過整支 digest 對真資料，實作單第 8 步要再用 `python scripts/build_reader_digest.py <拆頁後第一個 ingest 日> --stdout` 看社群節只出現子頁。
+
+## H. 實作單（定稿；照評審 14 步，第 8 步換成 §I 的收窄版）
+
+「誰」欄：**主 session** 的步驟動到閘檔（`scripts/check_*.py`、`data/*-allow.json`、`data/*baseline*.json`、`data/baseline-changes.jsonl`）或帶 `--rebuild`／`--allow-grow`，`.claude/hooks/guard_roles.py` L48–53、L76–77 擋子 agent；git 也屬主 session。
+
+| 步 | 誰 | 做什麼 | 驗 |
+|---|---|---|---|
+| 1 | 設計者（第二輪已完成） | 照評審 🔴1 改 `w18\split_patterns.py` 歸群（`first_cat()`）、SUBS[139]／SUBS[2434] 改指 A、`tpl\D.md` 開始日期 07-12；重跑 `split_patterns.py`、`verify_split.py`、gen 重產 `out\generated\` | 節點 A42／B37／C40／D39／E32／F1 38／F2 23；`review\patterns_tree_audit.py` 印 OK（`final_validate.log`） |
+| 2 | 設計者（第二輪已完成） | proposal、map、draft 同批改 | 本檔 |
+| 3 | 實作者 | `w18\out\` 八頁複製進 `wiki/topics/`（母頁覆蓋、七子頁新增；frontmatter 由第 11 步 gen 生成） | `wc -l` 母頁＝`out\community-tech-patterns.md` 行數（205） |
+| 4 | 實作者 | discussions L314／L321／L858、LCW L72／L95／L122／L126／L149、index L69／L113／L32 後兩列，逐字照 proposal §7 與 map 第三節 | `git diff --stat` 只動這三檔 11 處 |
+| 5 | 實作者 | 規則檔 A–D 逐條改 | `PYTHONIOENCODING=utf-8 python scripts/check_rules.py` exit 0 |
+| 6 | 實作者 | 新增 `scripts/patterns_tree_audit.py`（照抄 `w18\review\patterns_tree_audit.py`） | `python scripts/patterns_tree_audit.py` 印 OK、exit 0 |
+| 7 | 實作者 | 新增 `src/tests/test_wiki_freshness_hierarchy.py`（§F，`SCRIPT` 預設值改指 `scripts/check_wiki_freshness.py`） | 此時預期 2 FAIL，第 9 步後 5 OK |
+| 8 | 實作者 | `scripts/build_reader_digest.py` 加 §I 兩段，`src/tests/test_build_web_reader_digest.py` 補兩案；交件 | `python -m unittest src.tests.test_build_web_reader_digest` 綠 |
+| 9 | **主 session** | `scripts/check_wiki_freshness.py` 照 §F 三處改（v2） | `python -m unittest src.tests.test_wiki_freshness_hierarchy` 5 OK；`python scripts/check_wiki_freshness.py` exit 0 |
+| 10 | **主 session** | `data/reader-language-allow.json` 兩筆 `page` 改子頁（§E） | `python scripts/check_reader_language.py` 無新增 |
+| 11 | **主 session** | `python scripts/gen_wiki_frontmatter.py`，再 `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 18 波 patterns 拆頁：母頁 66 筆存量隨節點原文搬到 7 子頁（錨點與長度不變）"` | 新增恰 66、全在七子頁；removed 裡別頁條目逐筆是現況已無命中（§E） |
+| 12 | **主 session** | `python scripts/check_hierarchy.py && python scripts/check_pending_markers.py && python scripts/check_wiki_freshness.py && python scripts/check_cell_limits.py && python scripts/check_rules.py && python scripts/build_web.py && python scripts/run_tests.py`；另跑 `python scripts/build_reader_digest.py <最近一個 ingest 日> --stdout` 看社群節沒有母頁與子頁重複 | 全部 exit 0；`build_web` 尾行錨點 WARN 與改前同數 |
+| 13 | **主 session** | 只 `git add` 本波八頁、index、discussions、LCW、規則檔、`scripts/check_wiki_freshness.py`、`scripts/patterns_tree_audit.py`、`scripts/build_reader_digest.py`、兩個測試檔、`data/` 三檔（allowlist、cell 基線、baseline-changes.jsonl）；commit 訊息寫「順帶收緊 N 頁 M 筆」；commit 後 `python scripts/devpractice_diff.py mark` | `git status` 無本波殘留 |
+| 14 | **主 session** | §G 三筆轉知（先 `--dry-run`）、`wiki/log.md` Query 條目帶單號、ledger 定稿列；`git fetch` 無新 commit 才同一 commit push；派新冷讀者原四題複驗 | `scripts/check_log_handoffs.py` 綠 |
+
+母頁兩個過渡標題的退場：`### 缺口追蹤：…` 由社群記者在週更第 4 步檢查，入邊為 0（H-9d1672 結案、功能記者改了 official-community-gap L41）就刪；`### 2026-07` 不等轉知，2026-07 蒸餾時（本月已達門檻）照 pages.md 第 8 條改成指 archive 的一行，coding-workflow-guide 的舊錨仍落得到。
