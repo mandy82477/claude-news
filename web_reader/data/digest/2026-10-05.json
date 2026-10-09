@@ -491,6 +491,11 @@
       "pageType": "topic"
     },
     {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
       "id": "recursive-self-improvement",
       "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"
