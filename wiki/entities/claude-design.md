@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-09
 
 > **最新工具動態**（2026-10-09）
-> 官方「方案與定價」頁今日新增「Claude Dashboards (beta)」與「Claude Design」段落；Reuters、XDA 同日報導 Claude 可把資料轉成即時互動儀表板與動畫輸出（見下方「Claude Dashboards」）。
+> 官方「方案與定價」頁今日新增「Claude Dashboards (beta)」與「Claude Design」段落；Reuters、XDA 同日報導 Claude 可把資料轉成即時互動儀表板與動畫輸出，產品形式與操作方式尚未見報導。
 
 ---
 

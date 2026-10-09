@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **最新動態**（2026-10-09）
 > - v2.1.295 新增 hook `onFailure: "block"`：command／HTTP hook 若無法啟動、逾時或退出碼異常，動作直接阻擋，不再放行；Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API（需額外授予 `bedrock:CountTokens` 權限）；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
-> - MIXED Reality News 指出官方文件目前仍寫「不要只依賴 hook 做安全防護」，與上述新行為有落差（見「開發者須知」）。
+> - MIXED Reality News 指出官方文件目前仍寫「不要只依賴 hook 做安全防護」，與上述新行為有落差，官方尚未就此表態。
 
 ---
 

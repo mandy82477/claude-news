@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **最新計費政策異動**（2026-10-09）
 > - **官方說明中心三頁同步改版**：usage credits 說明移除「過渡計費需明確同意」與「購買用量包」措辭，改寫為額度用盡後可直接繼續使用；Max／Pro 用戶應重新確認 `Settings > Usage` 開關現況。
-> - **Claude Startups 計畫疑似上線數日後暫停（僅標題可用）**：Forbes 報導方案暫停，原文未見，見下方「定價與促銷」10-06 條目後續。
+> - **Claude Startups 計畫疑似上線數日後暫停（僅標題可用）**：Forbes 報導方案暫停，原文未見，暫停原因與影響範圍均未見報導。
 
 ## 現況
 
