@@ -29,13 +29,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-09-23）
+> **最近變動**（2026-10-09）
+> Managed Agents 一節：anthropic-sdk-python v1.13.0／anthropic-sdk-typescript sdk-v0.133.0 同步新增 workflows、多代理設定（multiagent configuration）與 thread 狀態過濾型別，官方僅列型別名稱，具體可操作的 API 用法未載，詳見 [[entities/managed-agents]]。
+
+> **較早變動**（2026-09-23）
 > 補齊兩個常被混淆的官方上限與指令：同一 session 內用 Agent tool 平行開 subagent 上限 20 路（`CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 可調），與第三節 workflows 的 16／256 路、Managed Agents 的 20 路子代理是三個不互通的數字（第二節）；worktree 隔離的實際下法是 `claude --worktree <name>` 或角色檔 `isolation: worktree`（「你該用哪個」第 3 問）。
 
 ---

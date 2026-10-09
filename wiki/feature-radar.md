@@ -2,10 +2,10 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-08
+**最後更新：** 2026-10-09
 
-> **這禮拜動了什麼**（2026-10-08）
-> Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-10-09）
+> v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
 ---
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-10-08）
@@ -20,12 +20,13 @@
 
 ## ⚠️ 從你現在的版本升上去，會遇到什麼
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.288，2026-10-03），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.295，2026-10-09；v2.1.289–v2.1.294 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code#版本更新]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.295 | Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API | 預設值改變 | 用這三個通道的企業管理者需額外授予 `bedrock:CountTokens` IAM 權限，否則計數功能可能受影響 |
 | v2.1.285 | 背景 Bash／PowerShell 指令加上時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守的 session | 預設值改變 | 無人值守跑長建置或測試的，用 `timeout` 參數明設時限 |
 | v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
 | v2.1.283 | 沒設權限模式時，互動 session 一律從 auto 模式開始（2.1.283 擴及第三方供應商與關 telemetry，2.1.284 擴及所有方案） | 預設值改變 | 要每步手動確認的人，在設定寫 `permissions.defaultMode` |
@@ -65,6 +66,47 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Hook `onFailure: "block"`
+**發布：** 2026-10-08（v2.1.295） | **狀態：** 正式發布
+
+**是什麼：** command／HTTP hook 新增 `onFailure: "block"` 選項，hook 無法啟動、逾時或以非預期代碼結束時，會直接阻擋該動作，而不是像過去那樣放行。
+
+**為何熱：** GitHub Release v2.1.295 單一來源；同日 MIXED Reality News 報導指出，官方文件目前仍寫「不要只依賴 hook 做安全防護」，與這項新行為形成落差，尚無社群實測回報。
+
+**現在要試嗎：** 已經用 hook 做可靠性防護（例如 pre-commit 檢查、權限審核腳本）的人可直接受益；把 hook 當成唯一安全防線的人，不要因為這個選項就放鬆其他防護層。
+
+**快速上手：**
+```json
+{
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Bash",
+      "hooks": [{ "type": "command", "command": "your-check.sh", "onFailure": "block" }]
+    }]
+  }
+}
+```
+（官方 release note 未附完整 schema，上例依既有 hooks 設定慣例推演，正式欄位請以官方 hooks 文件為準）
+
+**注意事項：** 官方尚未就「hook 不應是唯一安全防線」這個既有建議與新行為的落差表態，見 [[entities/claude-code]]。
+
+### Bedrock／Vertex／Foundry token 計數改用 AWS CountTokens API
+**發布：** 2026-10-08（v2.1.295） | **狀態：** 正式發布
+
+**是什麼：** Claude apps gateway 在 Amazon Bedrock（以及 Vertex、Foundry）上的 token 計數，改用 AWS 官方 CountTokens API，不再用一次性模型請求估算。
+
+**為何熱：** ⚠️ 需額外授予 `bedrock:CountTokens` IAM 權限才能正常運作，屬企業部署的設定面變更；GitHub Release v2.1.295 單一來源，官方未附遷移時程或缺權限時的確切報錯行為。
+
+**現在要試嗎：** 用 Bedrock／Vertex／Foundry 部署 Claude Code 的企業管理者應盡快檢查並補上該 IAM 權限；個人直接用官方 API 的使用者不受影響。
+
+**快速上手：**
+```
+# AWS IAM 政策需新增：
+bedrock:CountTokens
+```
+
+**注意事項：** 官方 release note 未附完整遷移指引，建議先在測試環境確認缺權限時的實際行為再推上生產環境。
 
 ### Claude Haiku 5.5 可選用
 **發布：** 2026-10-07 | **狀態：** 正式發布
@@ -465,6 +507,8 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Hook `onFailure: "block"`**（v2.1.295，command／HTTP hook 失敗即阻擋） | 2026-10-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Bedrock/Vertex/Foundry CountTokens API**（v2.1.295，⚠️ 需授予 `bedrock:CountTokens` 權限） | 2026-10-08 | 🔥 | ⚡ 有條件推薦（企業先授權） | 正式發布 |
 | **Claude Haiku 5.5 可選用**（成本比前代降約 75%，高流量成本敏感任務；模型本身見 [[entities/haiku-5-5]]） | 2026-10-07 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **`claude plugin install --marketplace`**（安裝外掛時自動補上所需市集來源，省去先手動 `marketplace add`） | 2026-10-06 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code HIPAA-ready 組織本地模式部署**（Enterprise HIPAA 組織，Desktop／Cloud sessions 管理開關） | 2026-10-05 | 🔥 | ⏳ 觀望 | 正式發布（Enterprise HIPAA 組織） |

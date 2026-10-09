@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-06
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **社群測試：文字格式配樂生成**（2026-10-06）
-> Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）
+> **社群展示：單一提示生成 15 種動態設計風格**（2026-10-09）
+> GitHub repo 收錄 15 種動態設計風格，皆由 Opus 5.5 讀一個提示直接寫程式完成，附影片與原始提示（550 星，forks／issues 未查證）
 
 ---
 
@@ -167,11 +167,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Reddit r/ClaudeAI：Opus 5.5 nerfing - how to measure, how to spot, how to sue](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)（週熱門，2026-10-01）
 - [dev.to：Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)（2026-09-30）
 - [Simon Willison：Scrimshaw Jukebox](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)（2026-10-06）
+- [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15)（GitHub Search，550 星，2026-10-09）
 - [[news/2026-09-23]]
 - [[news/2026-09-27]]
 - [[news/2026-09-30]]
 - [[news/2026-10-01]]
 - [[news/2026-10-06]]
+- [[news/2026-10-09]]
 
 ## 歷史記錄
 
@@ -179,6 +181,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-09 | GitHub repo `mg-styles-15` 收錄 15 種動態設計風格，皆由 Opus 5.5 單一提示直接生成程式碼（550 星，forks／issues 未查證）|
 | 2026-10-06 | Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）|
 | 2026-10-03 | livenerf 為「降智」說法建立第 0 天基準線，連測 30 天，最早約 10-24 下結論（日報 09-30 貼文）|
 | 2026-10-01 | Reddit 週熱門貼文稱上線前 5–6 天表現佳、近日起在複雜任務上失手，無量化指標，弱訊號 |
@@ -187,6 +190,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **歷史記錄細節**
 
+- **2026-10-09**：GitHub repo [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) 收錄 15 種動態設計風格，皆由 Claude Opus 5.5 讀取單一提示直接生成程式碼完成，附影片與完整原始提示（550 星；fork／issue／近期 commit 活躍度未查證，依弱訊號處理）（GitHub Search，2026-10-09）
 - **2026-10-06**：Simon Willison 測試讓 Claude Opus 5.5 設計一套文字格式的遊戲配樂並生成可播放的 artifact，風格接近《猴島小英雄》原聲帶；Willison 認為可能是文字模型新近出現的能力，但未與舊模型對照確認（推論，單一部落格貼文，0 互動）（[Simon Willison](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)，2026-10-06）
 - **2026-10-03**：dev.to 貼文（09-30 發）稱 livenerf 針對 Opus 5.5「變笨」傳言建立第 0 天基準線，連續測 30 天，最早約 10-24 可下結論（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30；3 讚，題組與評分方法未見載，尚無結果）
 - **2026-10-01**：Reddit r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天在複雜任務（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)，2026-10-01；0 留言，無測試方法或量化指標，屬主觀觀感回報，不採信推算是否構成能力下降）

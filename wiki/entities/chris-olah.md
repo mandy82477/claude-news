@@ -34,15 +34,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 梵蒂岡封論現場代表 Anthropic 發言；可解釋性研究是其安全論述的根基
 **首次出現：** 2026-05-26
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **Telegraph 點名：遊說教廷主張 AI 可能有意識**（2026-10-04）
-> Telegraph 報導指 Olah 是遊說教廷的 Anthropic 共同創辦人；教宗封論《Magnifica Humanitas》最終駁斥 AI 可能有意識的主張，NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、會受苦。
+> **WSJ 側寫匿名共同創辦人修補「覺醒」形象**（2026-10-09）
+> 本人列為候選對象之一，身分未定；另見 [[entities/jack-clark]]、[[entities/tom-brown]]（候選名單，待具名來源收斂）。
 
 ---
 
 ## 現況
+
+2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；報導未具名，Chris Olah 列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]，待具名來源出現後收斂。
 
 Telegraph 2026-10-02 報導點名 Olah 是遊說教廷主張 AI 可能有意識的 Anthropic 共同創辦人；教宗良十四世 2026-05 發布的封論《Magnifica Humanitas》最終駁斥 AI 可能有意識的主張。NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、可能會受苦，與封論立場相反。AI 是否有意識的社群辯論持續，見 [[topics/community-tech-discussions]]。
 
@@ -79,6 +81,7 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 - [[topics/anthropic-government-policy]] — 梵蒂岡路線改變 Anthropic 的倫理定位
 - [[topics/community-tech-discussions]] — Claude 是否可能有意識的社群辯論
 - [[entities/mythos]] — Anthropic 安全研究的延伸
+- [[entities/jack-clark]]、[[entities/tom-brown]] — WSJ「另一位共同創辦人修補覺醒形象」報導的候選對象，身分未定
 
 ## 參考來源
 
@@ -86,9 +89,11 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 - [[news/2026-05-26]]
 - [Chris Olah's Remarks on Pope Leo XIV's "Magnifica Humanitas"](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) — Anthropic Blog
 - [Anthropic's Olah says AI must be guided from outside Big Tech](https://www.reuters.com/world/europe/anthropics-olah-says-ai-must-be-guided-outside-big-tech-2026-05-25/) — Reuters
+- [[news/2026-10-09]]
 
 ## 歷史記錄
 
+- 2026-10-09：❓ **待查證**（標 2026-10-09｜查 woke、另一位共同創辦人）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：報導未具名，本人為候選之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]（WSJ，2026-10-09）
 - 2026-10-02：Telegraph 報導點名 Olah 為遊說教廷主張 AI 可能有意識的 Anthropic 共同創辦人，教宗封論最終駁斥該主張；NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、會受苦（來源：Telegraph、NYT 轉述）
 - 2026-05-29：Wired 長文《The Vatican's Man Inside Anthropic》深度側寫 Olah 在梵蒂岡事件中的角色，Guardian 同日質疑「Vatican-washing」（來源：Wired、Guardian）
 - 2026-05-26：受邀出席梵蒂岡，為教宗良十四世首份 AI 封論《Magnifica Humanitas》揭幕演講，成為唯一受邀的 AI 公司代表（來源：Anthropic Blog、Reuters）

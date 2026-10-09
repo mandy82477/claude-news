@@ -7454,3 +7454,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知：[社群→開發實務] H-fc0960（coding-workflow-guide L478 錨點改指子頁、L669 查證備註搬 guardrails）；[社群→功能] H-9d1672（official-community-gap L41 錨點改指 multi-agent 子頁）；[社群→功能] H-817203（claude-skills L116 改指 skills 子頁；「74 個 skill 只有 3 個改變行為」全樹查無出處；L45／L97 官方市集互斥）。
 - 機制：`check_wiki_freshness.py` 上層歸因只在該則網址在本頁時借用（評審第五案改壞驗紅）；新增 `scripts/patterns_tree_audit.py` 掛週更步驟 4；`build_reader_digest.py` 母頁轉述子頁 callout 不重複；`daily.md` 歸因一律記子頁。母頁兩個佔位標題（`### 2026-07`、`### 缺口追蹤…`）待轉知結案／本月蒸餾後刪。
 - 歸因 user-query／社群
+
+## 2026-10-09 Ingest
+
+- 來源日報：[[news/2026-10-09]]
+- 更新頁面：
+  - **人物**：entities/boris-cherny、entities/jack-clark、entities/chris-olah、entities/tom-brown
+  - **功能**：entities/claude-code、topics/claude-code-experimental、entities/managed-agents、entities/claude-design、entities/claude-skills（錨點修正）、topics/official-community-gap（錨點修正）
+  - **商業**：entities/pricing、topics/anthropic-business、topics/enterprise-tool-tracker、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **模型**：entities/haiku-5-5、entities/opus-5-5（分類回退補派新建條目）
+  - **社群**：topics/community-multi-agent、topics/community-interfaces、topics/community-cost、topics/community-memory、topics/community-tech-patterns（僅路由表＋母頁 callout）、topics/code-quality-decline
+  - **主編彙整**：wiki/index.md（john-jumper/jack-clark/chris-olah/tom-brown 狀態列、最後更新日）、wiki/feature-radar.md（新增 2 則詳細條目＋全覽表列、版本階梯新增 v2.1.295、這禮拜動了什麼）、topics/anthropic-agent-stack（hub callout 跟上 managed-agents 子頁異動）
+- 新增頁面：無
+- 摘要：Anthropic 推出長期資安計畫「Cyber Mission」（CIDP 關鍵基礎設施防禦＋開源漏洞掃描）、Claude Code v2.1.295 新增 hook `onFailure: "block"` 與 Bedrock CountTokens API 變更、官方「方案與定價」頁新增 Dashboards（beta）／Claude Design，是今日三條主線；另有 Microsoft／Anthropic 就新創 $17,600 帳單互踢責任、WSJ 側寫匿名「另一位共同創辦人」修補「覺醒」形象（候選：jack-clark／chris-olah／tom-brown，待查證）。昨日「Anthropic 禁止虐待 Claude」政策引發 11+ 家媒體接力報導，純轉載不構成新增條目。
+- 呈現品質：全部通過（community-memory 記者自行修復讀者語言閘「覆寫」禁詞後轉綠）
+- 品質備註：[功能] 回報「feature-radar 新增」欄位格式未照契約（多餘括註）、來源歸因多筆漏填完整 URL，主編彙整時已補正；[商業] 回報漏附「來源歸因」欄，主編依原始回報內容補寫；多筆 Google News URL 的 `?oc=5` 查詢字串在主編彙整時遺失又補回——日後派工 prompt 應提醒記者貼整段 URL 不截斷
+- 分類回退：追加派工 2 筆（Vincentwei1021/mg-styles-15、Reddit「I made this with opus 5.5」由社群回退至模型，模型記者補派後收錄前者、排除後者）；駁回 2 筆（UV 全天圖研究成果無強替代類別，由日報 ⭐ 覆蓋；漏洞掃描器已由安全政策記者原輪處理，不重派）
+- 轉知：結案 2 筆（H-9d1672、H-817203，功能記者本輪處理 official-community-gap／claude-skills 錨點修正）；新開 3 筆——H-1ffd23（商業→人物，entities/john-jumper 補 Demis Hassabis 讚許細節，低優先）、H-ad36ff（商業→功能，topics/long-context-1m 補 244/325 token 門檻差異）、H-51df5d（社群→功能，topics/official-community-gap 評估 zhikuncode／big-arrow-on-the-screen 產品化矩陣新列）
+- 懸置標記：本輪新增 7 筆皆用新語法（haiku-5-5 ⟨Q-01⟩ 補訊、claude-design／pricing／chris-olah／jack-clark／tom-brown／ai-agent-safety 各一）；index.md 三處初稿誤用裸露「待查證」字樣觸發舊語法棘輪，已改寫為「詳見頁內標記」消除
+- ingest_gate：9 道內容閘全綠
+- 歸因 news-pipeline／人物、功能、商業、安全政策、模型、社群

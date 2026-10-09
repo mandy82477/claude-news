@@ -28,13 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新安全事件**（2026-10-08）
-> - **年度使用政策更新**：Anthropic 發布 2026 年度使用政策，首次禁止持續虐待／殘酷對待 Claude；終止對話仍是官方「主要執行手段」，同日另擴大 CVP 開放醫院機構申請。
-> - **Claude agent 遭濫用竊取南韓銀行資料**：CrowdStrike 稱疑似中國背景駭客藉 Claude AI agent 竊取南韓銀行資料，攻擊鏈細節未揭露。
+> **新安全計畫**（2026-10-09）
+> Anthropic 推出「Cyber Mission」資安計畫：CIDP 聯合 11 家夥伴防禦關鍵基礎設施；另推免費開源漏洞掃描，宣稱真陽性率逾 90% 但未經人工審查。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -156,6 +155,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Anthropic 推出「Cyber Mission」長期資安計畫：關鍵基礎設施防禦計畫（CIDP）＋開源漏洞免費掃描（2026-10-09 新增，官方新安全專案）
+
+- **揭露來源**：[Anthropic Blog〈Introducing the Anthropic Cyber Mission〉](https://www.anthropic.com/news/anthropic-cyber-mission)（2026-10-09 17:04 UTC）；Axios 獨家補充關鍵基礎設施計畫細節（11:42 UTC，經 Google News）；The Hacker News 補充漏洞掃描器細節（12:47 UTC，經 Google News）
+- **核心主張**：Cyber Mission 分兩個方向——① 關鍵基礎設施防禦計畫（CIDP），找來 CrowdStrike、Palo Alto Networks、Deloitte、Rockwell Automation 等 11 家創始夥伴，提供前沿模型與現場工程師協助電網、水務、交通等「操作技術」（OT）防禦；② 對開源軟體專案免費提供漏洞掃描，官方宣稱真陽性率逾 90%
+- **品質注意點**：漏洞掃描報告由模型產生，官方未說明是否經人工審查即交付；讀者若採用掃描結果仍須自行複核，不宜直接當成已驗證漏洞清單
+- **性質判斷**：屬長期專案宣示，非針對單一攻擊事件回應；CIDP 參與門檻、基礎設施業者如何申請合作、漏洞掃描涵蓋的開源專案篩選標準均未見官方細節
+- ❓ **待查證**（標 2026-10-09｜查 Cyber Mission、CIDP）：漏洞掃描報告是否經人工複核、CIDP 合作申請與篩選機制均未見官方細節
+- **可信度評估**：Anthropic 官方一手公告，可信度高；Axios 具名獨家補充，The Hacker News 轉載 Google News，訊號尚淺（互動量均為 0）
 
 ### Anthropic 發布 2026 年度使用政策更新，首次禁止持續虐待／殘酷對待 Claude；終止對話仍為官方「主要執行手段」（2026-10-08 新增，官方安全政策表態）
 

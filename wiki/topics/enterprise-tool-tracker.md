@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-07
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-07）
-> - **Meta、Microsoft 縮減內部使用 Claude（已查證）**：Meta 的 Claude Code 使用者約 6 萬降至 3 萬，Microsoft 內部支出砍逾三分之一；4 家媒體跟進（詳見使用現況表）。
+> **最新企業採用異動**（2026-10-09）
+> - **Rubrik Code Guardian 併入「Project Hourglass」計畫**：Business Wire 稱為既有資安產品擴大的一環，效能數字未見報導（詳見使用現況表 Rubrik 列）。
 
 ## 摘要
 
@@ -89,7 +89,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
 | JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07 | 2026-09-17 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
-| Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；為既有 Claude Code agent（06-30）之外另一產品線，具體效能數字未見報導 | 2026-09-15 |
+| Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；10-09 Business Wire 稱屬「Project Hourglass」計畫擴大的一環，具體效能數字未見報導 | 2026-09-15（擴大報導 2026-10-09）|
 | T. Rowe Price | 大型（全球資產管理公司） | Claude API + Claude Code | ✅ | — | 官方新聞稿宣布擴大在投資流程中使用 Claude 與 Claude Code；具體整合範疇、涵蓋部門未見報導細節 | 2026-09-10 |
 | PicPay | 大型（巴西金融科技公司） | Claude API（對話式 AI 金融服務） | ✅ | 2026-09-04 | 導入 Claude 處理銀行客服詢問，09-07 FF News 稱擴大為對話式 AI 金融服務；拉美市場首見具名金融科技採用案例，具體整合範疇未見報導 | 2026-09-07（首見 2026-09-04）|
 | Shopify | 頂尖 | Claude Code | ❓ | — | 執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節） | Google News/analyticsindiamag.com；Google News/The New Stack |
@@ -201,6 +201,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-09
+- **[既有企業新產品線，補充來源] Business Wire：Rubrik 擴大「Project Hourglass」計畫，納入 Rubrik Code Guardian**：與 09-15 首發同一產品，本則首次點名所屬計畫名稱，未見額外效能數字，詳見上方使用現況表 Rubrik 列（Google News/Business Wire）
 
 #### 2026-10-05
 - **[⚠️ 縮減中，狀態更新] The Information：Meta 的 Claude Code 使用者約 6 萬降至約 3 萬，Microsoft 內部 Claude 支出砍逾三分之一**：4 家媒體跟進，兩家均未取消合約；與同週 Barclays 擴大導入對比，已查證 2026-10-07，詳見上方使用現況細節（The Information）

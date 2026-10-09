@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **最新動態**（2026-10-08）
-> - v2.1.294 修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時擋不住該指令的漏洞，並改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為。
-> - 新增已知問題：Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，使用者自帶 PAT 亦失效（issue #76248，40 則留言、16 個讚）。
+> **最新動態**（2026-10-09）
+> - v2.1.295 新增 hook `onFailure: "block"`：command／HTTP hook 若無法啟動、逾時或退出碼異常，動作直接阻擋，不再放行；Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API（需額外授予 `bedrock:CountTokens` 權限）；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
+> - MIXED Reality News 指出官方文件目前仍寫「不要只依賴 hook 做安全防護」，與上述新行為有落差（見「開發者須知」）。
 
 ---
 
@@ -43,6 +43,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.295**（2026-10-08）：command／HTTP hook 新增 `onFailure: "block"`——hook 無法啟動、逾時或退出碼異常時，動作直接被阻擋，不再放行（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）。
+  Bedrock、Vertex、Foundry 的 token 計數改用 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
+  同版 build 另新增 5 個功能候選旗標，消失 2 個（`ARTIFACT_FIVE_CLASS_ASKS`、`INTRO_FRAME`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.294**（2026-10-08）：修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時，實際上擋不住該指令的問題；改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)）。
   同版 build 另新增 1 個功能候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.292**（2026-10-06）：`claude plugin install` 新增 `--marketplace <source>`，裝外掛可一併加入市集來源，沿用 `marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）。另有未經證實的 stdio MCP 協定異動報導，見下方「🔌 MCP 整合」已知問題。
@@ -75,6 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-09）：桌面版文件新增說明——Code 分頁的本機 session 現顯示獨立版本號；側邊欄「+ New session」或 macOS `Cmd+N`／Windows `Ctrl+N` 可開新 session，同時處理多項工作（文件字數 93,648→94,202）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-08）：桌面版文件新增 SSH session 連線管理說明，可從連結開啟 SSH session，分「已有連線」與「新連線」；另新增跨裝置控制 session 可見度的設定（新增 60 段、移除 13 段）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-06）：桌面版文件重新命名既有設定項，非新功能——Auto-fix／Auto-merge 補充說明文字、SSH 欄位由大寫改小寫，邏輯未變（文件字數 84,136→84,975）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-04）：桌面版文件改版——電腦使用（Computer use）開關從「設定 > 一般」搬到「設定 > 本機電腦 > 系統」；舊版「Continue in」單一選單拆成個別選項，可選「Cloud」把本機 session 接續到雲端，或選已安裝的編輯器／檔案管理器直接開啟該 session 資料夾（文件字數 83,588→83,682）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -550,6 +554,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.295** | 2026-10-08 | 新增 hook `onFailure: "block"`；Bedrock/Vertex/Foundry token 計數改用 CountTokens API；MCP 工具描述上限 2,048→16,384 字元（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）|
+| **anthropic-sdk-typescript sdk-v0.133.0** | 2026-10-09 | 新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.133.0)）|
+| **anthropic-sdk-python v1.13.0** | 2026-10-09 | 同步新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾，細節見 [[entities/managed-agents]]（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|
 | **v2.1.294** | 2026-10-08 | 修正 `prompt`／`agent` hook 寫成自然語言指示時擋不住該指令的問題；改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)）|
 | **anthropic-sdk-python v1.12.1** | 2026-10-08 | Chores：CI 新增檢查 PR 是否更新 changelog、補充 Claude Console 查詢支出限額仍屬 early access、內部對齊 uv.lock 版本號，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1)）|
 | **anthropic-sdk-typescript google-cloud-sdk-v0.0.19** | 2026-10-08 | Chores：例行維護，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19)）|
@@ -711,6 +718,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
+- **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：v2.1.295 新增此設定可阻擋失敗 hook，但官方文件仍寫「不要只依賴 hook 做安全防護」，兩者並存。用 hook 做權限防護的工程師應重新檢視設定，不可把「失敗即阻擋」當成安全保證；單一媒體來源。
 - **社群工具 token-savior 自測宣稱優於 Claude Code 原生編碼表現（2026-10-07，Mibayy/token-savior GitHub repo 自述）**：作者自測稱 Claude Code 原生（plain）基準正確率 78.3%，低於其工具版本；證據等級僅作者自測，未附第三方覆核方法論或測試環境細節，僅供參考。
 - **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。
 - **桌面版官方文件：Auto Mode 模型門檻與 Extended Thinking 預設開啟（2026-09-02 查證，Official Docs）**：官方 Claude Code 桌面版文件新增／異動段落載明，Auto mode 現開放給所有 Anthropic API 使用者，但需 **Claude Opus 4.6 以上或 Sonnet 4.6 以上**版本方可使用；文件同時說明 adaptive reasoning 模式下 `MAX_THINKING_TOKENS` 的行為，並明確標註 **Extended thinking 現為預設開啟**。屬既有功能的門檻／預設行為澄清（文件未附具體生效版本號或日期），非新指令旗標；見 [官方文件](https://code.claude.com/docs/en/desktop.md)。
@@ -831,6 +839,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-09 | **v2.1.295**：hook `onFailure: "block"` 與官方安全建議有落差。旗標增 5 消 2，見 [[topics/claude-code-experimental]]。 |
 | 2026-10-08 | **v2.1.294**：hook 自然語言封鎖指示修正。旗標增 1，見 [[topics/claude-code-experimental]]。新增已知問題 6 則，互動更新 1 則。 |
 | 2026-10-06 | **v2.1.291**：兩項回歸修正（權限提示答案遺失、訊息遺失）；桌面文件重命名 Auto-fix/Auto-merge。新增已知問題 1 則（#16561）。 |
 | 2026-10-04 | **v2.1.289**：deny/ask 規則與終端機凍結修正；桌面文件 Computer use 設定搬遷。新增已知問題 2 則，互動更新 1 則。 |

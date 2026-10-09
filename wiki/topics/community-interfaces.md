@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
 **最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-07
+**最後新聞更新：** 2026-10-09
 
-> **最新做法**（2026-10-07）
+> **最新做法**（2026-10-09）
+> - **agent 畫到桌面螢幕上**：big-arrow-on-the-screen 讓 agent 疊加箭頭與文字，社群同時示警恐遮蔽權限彈窗。
 > - **先畫依賴地圖再開工**：mellos-mapping 先畫分層藍圖，建置時逐一點亮，目前只有這一個實作。
-> - **圍繞 hooks 打造的終端機**：10-06 ClaudeTerm 用 hooks 與 statusLine 做出 Windows 終端機；10-04 Mobile-Harness 是免 root 的 Android 版行動端 IDE。
 
 ---
 
@@ -57,6 +57,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### franzenzenhofer/big-arrow-on-the-screen：讓 agent 在使用者桌面螢幕疊加箭頭、方框與文字（2026-10-09）
+
+- **主線：** —
+- **核心模式：** 讓 AI agent 在使用者實際桌面螢幕（非僅終端機內）疊加畫出箭頭、方框與文字，作即時視覺指引；HN 278 分＋HN Repo Bridge 同日轉載，2 個來源，本輪社群條目最高互動量。
+- **與既有模式的關係：** 與「Agent 活動可視化」既有代表技巧（claude-office 等「把 agent 活動搬出終端機」取向）同屬一類，本則把可視化管道換成直接疊加桌面螢幕的繪圖層；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 社群同時提出安全疑慮——若 agent 能疊加繪圖，是否也能疊加方框遮住「拒絕」按鈕、竄改「核准」文字以誘導誤按權限彈窗；HN 留言未見開發者回應或修補說明。
+- **來源：** Hacker News；[GitHub](https://github.com/franzenzenhofer/big-arrow-on-the-screen)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，安全疑慮尚無解方）
 
 #### GuangminJu/mellos-mapping：由下而上開發用的即時分層依賴地圖，先畫藍圖再隨建置點亮節點（2026-10-07）
 

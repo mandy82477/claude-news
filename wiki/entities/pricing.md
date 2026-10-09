@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **最新計費政策異動**（2026-10-08）
-> - **Anthropic Status：組織花費上限誤判暫停事故已解決**（10-07 21:23 UTC）：該日曾遇請求被拒的組織層花費上限團隊現在應已恢復正常。
-> - **Max／Team 新增「每月 API credits」，但不可用於 Claude Code／Claude App**：確切金額官方未附數字，媒體口徑不一，見 [[entities/pricing#還沒確定的計費變動]]。
+> **最新計費政策異動**（2026-10-09）
+> - **官方說明中心三頁同步改版**：usage credits 說明移除「過渡計費需明確同意」與「購買用量包」措辭，改寫為額度用盡後可直接繼續使用；Max／Pro 用戶應重新確認 `Settings > Usage` 開關現況。
+> - **Claude Startups 計畫疑似上線數日後暫停（僅標題可用）**：Forbes 報導方案暫停，原文未見，見下方「定價與促銷」10-06 條目後續。
 
 ## 現況
 
@@ -90,6 +90,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Design／Slides／Docs 是方案內含功能，沒有獨立定價（2026-10-03 官方定價頁查證）**：Pro、Max、Team、Enterprise 皆內含，Free 不含；官方未對這三項列出任何單獨費率或加購項，因此它們不會在帳單上獨立出現一列（來源：[claude.com/pricing](https://claude.com/pricing)）
 - **Free 不含 Opus 5.5、Pro 可用（2026-09-24，單一弱來源）**：shattered.io 稱 Free 不提供 Opus 5.5、Pro 可用；方向與官方 Opus 5.5 取代 Opus 5 的既有分界一致，惟本則單一低知名度來源，未經官方原文比對（shattered.io）
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
+- **Plans & Pricing 頁新增「Claude Dashboards（beta）」（2026-10-09）**：Reuters、XDA 同日報導可將資料轉為即時互動儀表板。比照 Design／Slides／Docs，官方未列獨立費率，不會獨立出現在帳單
 
 ---
 
@@ -147,7 +148,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 還沒確定的計費變動
 
-**下列五項尚無官方一手文件可寫進「當前生效的計費規則」，各自的完整脈絡在下方事件流。**
+**下列六項尚無官方一手文件可寫進「當前生效的計費規則」，各自的完整脈絡在下方事件流。**
 
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
@@ -156,8 +157,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
+| Haiku 5.5 精確 $/Mtok 牌價 | 官方稱降 75%、VentureBeat 稱降 90%，口徑不一，見下方細節 | 官方定價頁全文查證 |
 
 **Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得。
+
+**Haiku 5.5 定價細節**：官方定價頁 2026-10-09 查證已新增「依 prompt 長度分級計費，逾 10 萬 token 的請求適用更高價格」原文，確認分級計費機制存在；惟分級後的具體 $/Mtok 數字未見本站取得全文，3 家媒體標題稱 $0.10/Mtok、官方發布文稱降 75%、VentureBeat 稱降 90%，三者互相矛盾不採信推算，完整脈絡見 [[entities/haiku-5-5]]。
 
 ---
 
@@ -178,6 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Managed Agents 框架整體仍 beta**（須 `managed-agents-2026-04-01` header；[overview](https://platform.claude.com/docs/en/managed-agents/overview)，2026-09-06 查證）；選型與零件成熟度見 [[entities/managed-agents]]
 - **✅ 2026-07-20 生效｜旗艦模型的訂閱分界（官方文件已確認）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用至多**每週用量上限的 50%**，不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率（$10/$50 per Mtok）付費。合格 Pro 與 Team standard seats 另有**一次性過渡 credit $100**（Team 每 standard seat $100、每組織上限 $2,500），領取窗已於 2026-08-02 關閉、已領 credits 於 2026-09-17 到期，且可用於任何模型（[官方促銷條目](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。先前將 Fable 5 納入方案週用量的促銷結束於 2026-07-19 23:59:59 PT（來源：[Claude Fable 5 on your plan](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)，2026-08-08 查證）
 - **⚠️ usage credits 開啟後，方案用量上限不再是硬停止**：credits 為 opt-in、預設關閉，於 `Settings > Usage` 開關，可設 auto-reload（每日兌換上限 $2,000）。開啟後 Claude 會在額度用盡後繼續回答並從 credits 扣款，體感與額度內無異，但每則超額回應皆計費——靠方案硬上限控管支出者需主動確認此開關（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-08-08 查證）
+- **（2026-10-09 更新）** 官方同批改版拿掉「過渡到 API 額度計費需使用者明確同意」與「購買用量包」措辭，詳見下方「重要政策變動紀錄」10-09 條目
 - **✅ 安全分類器拒答的計費（官方文件，2026-10-04 查證）**：適用 Fable 5.1／Fable 5／Opus 5.5／Opus 5／Sonnet 5.5，拒答回 `stop_reason: "refusal"`（[Refusals and fallback](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback)「How refusals are billed」）
 - 上條計費範圍：輸出前的拒答**只有 `bio`、`frontier_llm`、`reasoning_extraction` 三類計費**，`cyber`、`general_harms` 不計；串流途中拒答計已送出的輸入與輸出——證實 09-27 MIXED「五類中三類收費」的標題
 - 上條 fallback：觸發的拒答若屬計費類或發生在串流中也照計，Fallback credit 可補償重複的 prompt cache 成本；適用 Claude API、Bedrock、Claude Platform on AWS、Google Cloud、Microsoft Foundry
@@ -448,10 +453,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 定價與促銷（模型定價、方案設計）
 
+#### 2026-10-09：官方說明中心三頁同步改版——usage credits 機制拿掉「需明確同意」與「購買用量包」措辭
+
+- **Official Docs 同日三頁同步變動**：[Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)、[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)、[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，字數均增長（各頁 +100～1,100 字）。
+- **改版內容**：三頁均移除「過渡到 API 額度計費需使用者明確同意」的敘述，也拿掉「Buy usage bundles（購買用量包）」選項，改寫為「啟用 usage credits 後，額度用盡仍可繼續使用」。
+- **對讀者的意涵**：既有「usage credits 是用量上限失效開關」規則不變，拿掉「需同意」措辭後，Max／Pro 用戶應重新至 `Settings > Usage` 確認開關現況，避免額度用盡後被動改走計費而不自知。
+- **Manage usage credits 頁新增 15 段 FAQ**：含「能否在觸及週用量上限後繼續使用」，重申 session／weekly 兩種限制並存，與既有規則一致，未見新數字。
+
 #### 2026-10-06：Anthropic 擴大 Claude Startups 計畫，媒體稱合格新創可領一年免費 Team＋$1,000 額度
 
 - **媒體稱**：TechCrunch、CNBC、Quartz、Unite.AI 等至少 4 家同日報導 Anthropic 擴大 Claude Startups 計畫，合格早期新創可獲一年免費 Claude Team 方案＋$1,000 額度；官方計畫頁、資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium）均未見本站查證，不得視為官方數字。
 - **後續（2026-10-07）**：Android Headlines、Tech Edition（＋TechCrunch）、Dataconomy、Techish Kenya、Konsulteer 等至少 6 家媒體同步跟進報導同一方案，數字（一年免費 Team＋$1,000 額度）一致，資格門檻與席位層級細節仍未見官方頁面補齊。
+- ❓ **待查證**（標 2026-10-09｜查 Claude Startups、Forbes｜複 2026-10-23）｜**Claude Startups 免費方案是否已暫停**：Forbes 稱方案上線數日後遭暫停，原文未能取得，暫停原因與影響範圍均未見報導（僅標題可用）。
 %% 維運備忘：Team 分層官方資格與席位細節未經查證，暫不列入「我的方案現在有什麼」表，待官方說明中心或公告確認後補列 %%
 
 #### 2026-10-05：Sonnet 4.5 退役日 2026-11-30 經官方查證屬實

@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-10-01 新增一列，官方仍無對應**：Cowork 專案無法移除已加入的本機資料夾（issue #40043，103 個讚）——目前僅能新增，無移除機制。
 
-本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，答案不在本頁**——看 [[topics/community-tech-tools]]「我卡在這裡」；官方積木各自怎麼用、怎麼疊看 [[topics/anthropic-agent-stack]]；學術文獻主張與 Claude Code 現況的落差是另一個視角，見 [[topics/community-tech-patterns#缺口追蹤：文獻主張 × Claude Code 現況]]。
+本頁只答一件事：社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補，沒補的你現在有什麼選項。**要裝哪個社群工具，答案不在本頁**——看 [[topics/community-tech-tools]]「我卡在這裡」；官方積木各自怎麼用、怎麼疊看 [[topics/anthropic-agent-stack]]；學術文獻主張與 Claude Code 現況的落差是另一個視角，見 [[topics/community-multi-agent#缺口追蹤：文獻主張 × Claude Code 現況]]。
 
 18 個痛點裡，5 個官方目前沒有任何對應、7 個補了一半、6 個已經能直接用。
 

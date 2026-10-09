@@ -32,11 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
 **最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-06
+**最後新聞更新：** 2026-10-09
 
-> **最新做法**（2026-10-06）
+> **最新做法**（2026-10-09）
+> - **並行成本歸因有人量了一次**：有人逐 session 拆帳一個月，量出 subagent 吃掉週額度 48%，首次補上這個缺口的一個樣本。
+> - **Haiku 5.5 價格閘門**：送出前依 prompt 長度先算計價級距，避開逾 10 萬 token 的更高價格。
 > - **別把工具塞進 context**：Armin Ronacher〈What is Codemode〉重申改用程式碼呼叫工具；10-04 mcptoon 把 MCP 工具發現與 schema 的成本壓到最低。
-> - **額度看得見**：10-03 Pulse 在 macOS 邊緣常駐，顯示 70 餘款 AI 工具的剩餘額度。
 
 ---
 
@@ -66,6 +67,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### aidiveyt：逐 session 拆帳一個月用量，量出 subagent 吃掉週額度 48%（2026-10-08）
+
+- **主線：** —
+- **核心模式：** 作者懷疑 9 月 14 日用量政策讓自己提早用完週額度，逐一分析 `~/.claude/projects/` 下一個月的 session 記錄（455 個 session、63,000 次請求，排除 session 與 subagent 重複計費後），量出「砍掉重練」佔整週用量 17%，其中 subagent 呼叫又佔這些重工用量的 48%。
+- **與既有模式的關係：** 回應「並行成本歸因是缺口」既有機制細節——既有監控工具只顯示帳號額度與重置時間，答不出「這一批 subagent 花了多少」；本則是量測方法論而非工具，首次把個人用量拆到這個顆粒度，但僅一人一月樣本，未見覆核；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 讚數低（9 讚）但屬第一手量化實測，附具體 session／request 數字與計費陷阱說明，非 SEO 農場文；單一作者樣本，無第三方覆核或對照組。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n)
+- **成熟度：** ⏳ 新興（本庫首次收錄這類量測方法論，單一樣本，尚無覆核）
+
+#### Claude Haiku 5.5 Is Cheap Until 100k Tokens：送出前用 TypeScript 價格閘門先算計價級距（2026-10-08）
+
+- **主線：** —
+- **核心模式：** 針對 Haiku 5.5 官方已確認「逾 10 萬 token 請求適用更高價格」的分級計價機制（見 [[entities/haiku-5-5]]），作者寫一段小型 TypeScript 函式，在送出前依 prompt 長度先判斷會落在哪個計價級距，不需 API key 即可試算。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有做法一個「送出前價格試算」取向——既有做法多在輸出內容本身省 token，本則針對 Haiku 5.5 特有的 token 級距定價規則做前置判斷；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 讚數低（1 讚）但屬第一手可執行程式碼範例，非行銷稿；僅單一作者樣本，未見第三方採用。
+- **來源：** dev.to / #anthropic；[原文](https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Armin Ronacher〈What is Codemode〉：重申別把工具塞進 context，改用程式碼呼叫工具（2026-10-06）
 

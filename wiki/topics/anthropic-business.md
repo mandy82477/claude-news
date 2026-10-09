@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **最新動態**（2026-10-08）
-> - **Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**，CNBC 分析師稱將是今年「最荒謬的 IPO」——估值懷疑系列再添兩筆。
-> - **Aditi Consulting、Hexaware 同日達成 Anthropic 夥伴分級資格**（Select Tier／Preferred Partner），具體權益未見報導。
+> **最新動態**（2026-10-09）
+> - **Microsoft／Azure Marketplace 贊助額度爭議**：新創經 Marketplace 用 Claude，原以為受贊助涵蓋卻收 $17,600 帳單，雙方互踢責任（The Register）。
 
 ---
 
@@ -286,6 +285,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 %% 維運備忘：2026-09-18 新風險「Claude Code Projects 多 agent 併發推高用量」（The New Stack，⚠️ 中）進表，表滿載觸發讓位，依留表優先序（ℹ️ 低最先）讓位者為「雲端夥伴以自研模型替代」，已移出表、細節區加註未列入標記。餘五列本輪到期檢查：開源分流 09-04（2026-12-03）、音樂訴訟（不適用 90 天）、企業因成本退出 07-23（2026-10-21）、補貼倍數 09-06（2026-12-05）、UTRF（訴訟，不適用）。表 6 列滿載，最早到期為企業因成本退出 2026-10-21。 %%
 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
+
+- **Azure Marketplace 贊助額度未必涵蓋 Claude 帳單（2026-10-09）**：The Register 報導一家 Microsoft for Startups 新創經 Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，收到約 $17,600 帳單。
+- Microsoft 稱 Marketplace 夥伴收費無法調整、要新創直接找 Anthropic，雙方互踢責任；單一案例，未見官方回應或其他媒體佐證規模（Google News/The Register）。
+- **你能先做什麼**：透過 Azure 新創額度跑 Claude 的團隊，應在用量衝高前先向雙方書面確認計費範圍，不可假設贊助額度涵蓋。
 
 - **Broadcom 貸款租賃晶片（2026-10-01／10-02）**：與 07-22 AMD、09-02 Nvidia-Lambda 同屬循環投資疑慮；Barron's 報導 Broadcom 股價同日上漲。金額與結構見 [[#算力與資金從哪來]]（Google News/Reuters；Barron's；Yahoo Finance）。
 - **訊 2026-10-06 追蹤**：Financial Times 報導華爾街銀行已正式 launch 600 億美元晶片融資案，由「考慮中」「啟動」進入執行階段；條款與 Anthropic 運算產能的到位時程未見報導（Google News/Financial Times）。
@@ -564,6 +567,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-09
+- **[商業風險] The Register：Microsoft 與 Anthropic 就新創 $17,600 Claude 帳單互踢責任**：新創經 Microsoft for Startups／Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，詳見「還沒過去的風險」細節區（Google News/The Register）
 
 #### 2026-10-08
 - **[IPO前瞻，僅標題可用] Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**：反映市場對 AI 安全事故外部性的估值方法尚未成熟，詳見「IPO 走到哪一格」細節區（Google News/Bloomberg.com）

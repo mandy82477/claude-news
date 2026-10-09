@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
 **最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-07
+**最後新聞更新：** 2026-10-09
 
-> **最新做法**（2026-10-07）
+> **最新做法**（2026-10-09）
+> - **防規劃文件隨檔案遺失**：有作者提出 AGENTS.md 片段，強制把 agent 產出發布到可持久連結，不讓它只活在一個會被取代的 `.md` 檔裡。
 > - **記憶工具添 token-savior**：結構化程式碼導覽＋持久記憶，作者自測編碼基準 97.9%、token 降 80%，尚無第三方覆核。
-> - **context 該移到哪**：10-06〈Claude Code Context Is Like a Fridge〉談主對話容量有限時，何時把工作移到 subagent、第二個 session 或 headless。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Your coding agent's work is lost in .md file：三個 AGENTS.md 片段防規劃文件隨檔案遺失（2026-10-08）
+
+- **主線：** —
+- **核心模式：** 作者指出 coding agent 產出的規劃文件（rollout plan、函式庫比較、遷移檢查清單）常只存在單一 `.md` 檔案裡，檔案被取代或遺失後脈絡一併消失、隔日 session 從零開始；提出三個 AGENTS.md 修補片段，本則僅確認其一：強制把產出發布到可持久引用的連結（gist、靜態站台或 agent 內建分享），其餘未載。
+- **與既有模式的關係：** 補上「Agent 記憶保護」既有做法一個「輸出持久化」取向——既有做法多討論模型怎麼記得決策，本則處理 agent 寫出的文件本身怎麼不因檔案被取代而遺失；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 作者第一手實作心得（dev.to，3 讚），原文截斷，僅查得三個修補片段中的第一個。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/anupa/your-coding-agents-work-is-lost-in-md-file-4emd)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者方法論，尚無社群採用回饋數據）
 
 #### Mibayy/token-savior：結構化程式碼導覽＋持久記憶引擎，自稱將 Claude 編碼基準成績推到 97.9%（2026-10-07）
 

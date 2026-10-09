@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-09
 
 ---
 
@@ -62,7 +62,7 @@
 | [[entities/cat-wu]] | person | 👤 人物 | active | Claude Code 產品負責人，「AI 下一步是主動性（proactivity）」論述 |
 | [[entities/andrej-karpathy]] | person | 👤 人物 | active | 近期加入 Anthropic，CLAUDE.md 四條規則、「最小必要 context」費用控管原則 |
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
-| [[entities/chris-olah]] | person | 👤 人物 | active | Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講 |
+| [[entities/chris-olah]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/chris-ciauri]] | person | 👤 人物 | active | Anthropic 國際業務總監；首爾記者會稱出口管制「數日內」解禁（2026-06-18，07-01 解除） |
 | [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：AI 風險論述與政府監管立場；九、十月六位公開批評者（黃仁勳、LeCun、Lonsdale 等）對照見頁內　↳ 子故事：[[entities/dario-amodei-archive]] |
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（待核實）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
@@ -74,7 +74,7 @@
 | [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | beta | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；先開放 Pro、Max 方案 |
 | [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | beta | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；先開放 Pro、Max 方案 |
 | [[entities/fable-5]] | model | 🤖 模型 | active | 現行旗艦 5.1（09-01 GA）；5 轉 Legacy，退役不早於 2027-06-09；兩代同價；護欄擋什麼、被擋會不會知道　↳ 子故事：[[entities/fable-5-archive]] |
-| [[entities/tom-brown]] | person | 👤 人物 | active | Anthropic 共同創辦人（GPT-3 共同作者）、算力負責人；2026-06-25 接管與白宮的出口管制談判，促成 Mythos 5 解封 |
+| [[entities/tom-brown]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人（GPT-3 共同作者）、算力負責人；2026-06-25 接管與白宮的出口管制談判，促成 Mythos 5 解封；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/tom-blomfield]] | person | 👤 人物 | active| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（2026-09-20 查證確認到任與職稱）|
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
 | [[entities/tino-cuellar]] | person | 👤 人物 | active | Anthropic 首任 Chief Global Affairs Officer（2026-08-05 到任），前 Carnegie Endowment for International Peace 總裁、加州最高法院大法官 |
@@ -82,7 +82,7 @@
 | [[entities/jensen-huang]] | person | 👤 人物 | active | Nvidia 執行長；2026-08-26 財報電話會議說對投資 OpenAI／Anthropic「唯一的後悔是投得不夠多、不夠早」（已查實）|
 | [[entities/amir-salek]] | person | 👤 人物 | active | Google TPU 專案創辦人（2013–2022，經手前七代）；2026-08 加入 Anthropic compute 團隊，向 James Bradbury 匯報（Bloomberg 查證 2026-09-06）|
 | [[entities/evan-hubinger]] | person | 👤 人物 | active | Anthropic 安全研究員；2026-09-09 公開估計 AI 十年內導致人類全滅機率逾 10%（BBC 具名報導） |
-| [[entities/jack-clark]] | person | 👤 人物 | active | Anthropic 共同創辦人；2026-09-15 向 BBC 稱 AI「緊急關閉開關」未來或需強制、向 NPR 稱放緩開發是「集體行動難題」|
+| [[entities/jack-clark]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人；2026-09-15 向 BBC 稱 AI「緊急關閉開關」未來或需強制、向 NPR 稱放緩開發是「集體行動難題」；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/jacob-coxon]] | person | 👤 人物 | active（待核實）| 前 OpenAI／剛離職 Anthropic pretraining 研究員；2026-09-09 辭職聲明指控兩家公司「不負責任衝向自我改進超級智能」（HN 623 分；資歷已由具名媒體查證，官方未證實）|
 | [[entities/joe-benton]] | person | 👤 人物 | active | 前 Anthropic 安全研究團隊負責人；2026-09-10 接受 NBC News 首次專訪，警告先進 AI 研究進展恐失控 |
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|

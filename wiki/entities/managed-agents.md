@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-10-03
-**最後新聞更新：** 2026-09-16
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **最新動態**（2026-09-16）
-> anthropic-sdk-python v1.6.0 再次擴充 auto mode 工具權限功能（09-11 v1.5.0 之後第二筆），官方原文於此處截斷，完整範圍與行為仍待官方文件補充。
+> **最新動態**（2026-10-09）
+> anthropic-sdk-python v1.13.0／anthropic-sdk-typescript sdk-v0.133.0 同步新增 Managed Agents 的 workflows、多代理設定（multiagent configuration）與 thread 狀態過濾型別支援；官方 release note 僅列型別新增，具體可操作的 API 用法未載。
 
 ---
 
@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽文件](https://platform.claude.com/docs/en/managed-agents/overview)）：持久記憶（含 Dreaming 記憶整合）、20 路並行子代理、Outcomes 規格驗證、Proactive Workflows、企業自架沙箱。**狀態為 beta**（自 2026-05-11 起，所有 API 帳號預設可用，須帶 `managed-agents-2026-04-01` beta header）——各零件成熟度不一：只有 `/goal` 已達正式發布，Dreaming 與 Agent View 仍是 research preview（Dreaming 另需申請並帶 `dreaming-2026-04-21` header），Proactive Workflows 官方以 Routines（research preview）落地，Capability Curve 則是 Code w/ Claude 演講主題而非產品功能（見零件表，查證 2026-10-03）。Outcomes 讓規格文件成為執行時的強制依據（官方語「Specs become load-bearing」）。
 
-實質新功能停在 2026-05-22；此後多筆為 SDK 版號擴充，多數官方 changelog 未列細節，2026-09-11 的 anthropic-sdk-python v1.5.0 首度列出具體項目——新增 auto mode 工具權限設定；2026-09-15 的 v1.6.0 再擴充同一功能線，原文同樣截斷，行為細節仍待官方文件補充。獨立第三方生產環境回饋至今為零——本頁引用到的兩則使用案例，一則用的是自組架構、一則來自 Claude Code 創始人。
+實質新功能停在 2026-05-22；此後多筆為 SDK 版號擴充，多數官方 changelog 未列細節，2026-09-11 的 anthropic-sdk-python v1.5.0 首度列出具體項目——新增 auto mode 工具權限設定；2026-09-15 的 v1.6.0 再擴充同一功能線，原文同樣截斷。2026-10-09 的 anthropic-sdk-python v1.13.0／anthropic-sdk-typescript sdk-v0.133.0 新增 workflows、多代理設定（multiagent configuration）與 thread 狀態過濾三項型別支援，官方 changelog 僅列項目名稱，具體可操作的 API 用法與對應產品介面（是否即「各零件現在到哪」表中的 Proactive Workflows）仍待官方文件補充。獨立第三方生產環境回饋至今為零——本頁引用到的兩則使用案例，一則用的是自組架構、一則來自 Claude Code 創始人。
 
 ---
 
@@ -131,6 +131,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-09 | **anthropic-sdk-python v1.13.0** 新增 Managed Agents 的 workflows、多代理設定與 thread 過濾型別，用法未載（TS SDK 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|
 | 2026-09-15 | **anthropic-sdk-python v1.6.0** 再擴充 auto mode 工具權限功能，原文截斷、範圍未知（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0)）|
 | 2026-09-11 | **anthropic-sdk-python v1.5.0** 新增 Managed Agents auto mode 工具權限設定，changelog 首度列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0)）|
 | 2026-09-03 | Reddit 貼文宣稱自建開源 agent 框架以同一模型達同準度、成本低最多 75%，未附測試方法與資料集（[原文](https://www.reddit.com/r/LocalLLaMA/comments/1w65ise/we_built_an_opensource_modelneutral_agent_harness/)）|

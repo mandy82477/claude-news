@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
 **最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-06
+**最後新聞更新：** 2026-10-09
 
-> **最新做法**（2026-10-06）
+> **最新做法**（2026-10-09）
+> - **自架開源框架再添一款**：zhikuncode 疊加多代理協作、國產模型路由、8 層沙箱與跨會話記憶。
 > - **跨廠商協調器再添一款**：open-mercato/cezar 平行執行 Claude Code、Codex、OpenCode、Pi 等多款 agent。
-> - **同一工作區並排管理多款 agent**：Offrun（10-03，Show HN）把 Claude Code、Codex、AGY、Grok Build 放進同一個工作區。
 
 ---
 
@@ -136,6 +136,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### zhikunqingtao/zhikuncode：開源 CLI／Web 雙入口多代理框架，原生接千問／DeepSeek，含 8 層沙箱（2026-10-09）
+
+- **主線：** 並行規模
+- **核心模式：** 開源 Codex／Claude Code／Cursor 增強版，主打一句話完成長程任務，CLI 與 Web UI 雙入口供團隊瀏覽器（含手機）協作；原生直連千問／DeepSeek 等國產模型，Docker 一鍵自架、8 層安全沙箱、跨會話記憶；GitHub Search 513 星。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有跨廠商整合取向（OtoDock、omnigent、cezar 等）一個自架開源版本，額外疊加模型路由與沙箱；多人瀏覽器協作共用長程任務是並行規模下的直接痛點，主線填並行規模。
+- **可信度註記：** 僅有 GitHub Search 星數（513★），無 forks／issues／近期 commit 佐證可查，未另行查證；條目行銷語氣明顯（「零鎖定」「MIT 開源」），原始情緒標記為中性（😐）。
+- **來源：** GitHub Search；[GitHub](https://github.com/zhikunqingtao/zhikuncode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### open-mercato/cezar：開源協調器，平行執行 Claude Code、Codex、OpenCode、Pi 等多款 agent（2026-10-06）
 

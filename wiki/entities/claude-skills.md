@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-09-28
+**最後更新：** 2026-10-09
 **最後新聞更新：** 2026-09-28
 
 > **最新官方動態**（2026-09-28）
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Anthropic 目前把 Skills 定位為官方六大「控制層」之一：把常用工作流程（如程式碼審查、安全審計、前端設計）封裝成描述文件，Claude 依語意自動判斷何時載入執行，使用者不需手動下指令；**但 2026-07-19（v2.1.215）起 `/verify` 與 `/code-review` 兩項技能改為例外**，不再自動觸發，須使用者手動呼叫指令才會執行（詳見下方「官方 Skills 生態一覽」）。2026-06-21 官方部落格《七種指令傳遞方法》正式將其納入決策框架，釐清 Skills 與 CLAUDE.md、rules、subagents、hooks、output styles、system prompt append 之間的定位差異。
 
-官方近期最大手筆是 2026-05-24 發布的「31 個小企業 Skills」技能包，首日下載達 38.2 萬次，顯示 Skills 生態已從工程師專屬工具擴張至一般商業使用者；2026-06-05 官方部落格《Lessons from building Claude Code: How we use skills》進一步公開內部數百個 Skills 的實戰心得（什麼值得做成 skill、如何結構化、何時分享），是目前最權威的官方 Skills 設計指南。**官方目前尚未提供正式的 skill 分享／同步平台或市集機制**——現有的技能發現與安裝介面（如 Claudinho）都是第三方工具，社群也曾提出「Anthropic 建了 skill runtime 卻沒有創作者變現機制」的落差（見下方第三方生態動態）。
+官方近期最大手筆是 2026-05-24 發布的「31 個小企業 Skills」技能包，首日下載達 38.2 萬次，顯示 Skills 生態已從工程師專屬工具擴張至一般商業使用者；2026-06-05 官方部落格《Lessons from building Claude Code: How we use skills》進一步公開內部數百個 Skills 的實戰心得（什麼值得做成 skill、如何結構化、何時分享），是目前最權威的官方 Skills 設計指南。**官方已有正式市集**（`claude-plugins-official`／`claude-plugins-community`，2026-08-08 查證官方文件更正，詳見下方「官方 Skills 生態一覽」）；現有的技能發現與安裝介面（如 Claudinho）仍是第三方工具，創作者變現機制也仍缺，自製 skill 只能免費開源分享（見下方第三方生態動態）。
 
 ## 熱度與試用價值
 
@@ -113,7 +113,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 - [[topics/coding-workflow-guide]] — 開發流程各階段該下哪個 skill、探索 codebase 與寫下結果的實戰對照
 
-- [[topics/community-tech-patterns]]（skill 設計模式、踩坑經驗與社群自製 skill 案例——如何寫 skill、何時該封裝、實測「74 個 skill 只有 3 個真正改變行為」等一手心得皆記錄於該頁，本頁不重複收錄）
+- [[topics/community-skills#慣例與地雷]]（skill 設計模式、踩坑經驗與社群自製 skill 案例——如何寫 skill、何時該封裝等一手心得皆記錄於該頁，本頁不重複收錄）
 - [[entities/claude-code]]（Skills 為六大控制層之一；版本更新與已知問題見該頁版本表）
 - [[entities/opencode]]（OpenCode-power-pack 移植官方 skills 案例）
 - [[entities/claude-for-teachers]]（教學技能庫）

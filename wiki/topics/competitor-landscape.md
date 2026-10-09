@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-08）
+> **本週衝擊**（2026-10-09）
 > - 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
@@ -151,7 +151,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 同表 AutomationBench（41.4% vs 40.0%）與 Terminal-Bench-Science（64.6% vs 58.7%）GPT-6 Astra 領先；GPT 分數為 OpenAI 自報，TB 4.0 Opus 用 xhigh、Astra 用 high（[官方](https://www.anthropic.com/claude-opus-5-5)，查證 10-03）。
 - 定價面持續下修：GPT-5.6 Luna 降 80%、Terra 降 20%（07-30）；GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）。
 - 企業側戰線已擴至資料隱私：08-20「零資料保留」承諾明確定位為爭奪 Anthropic 企業客戶。
-- OpenAI 官方自曝案例已升級為三則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
+- OpenAI 官方自曝案例已累積至少五則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25；Oracle 全流程導入 10-08；Sophos 資安調查時間降 96% 10-09）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
 - GPT-6 Astra／GPT-6.1 Sol 全面上線 Pro／Enterprise／API 的具體規格、絕對牌價、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
@@ -223,7 +223,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 時序
 
+### 2026-10-09
+- **OpenAI**：發布 Sophos 導入 Daybreak 案例，資安威脅調查時間降 96%、52% MDR 案件自動化處理並保留人工監督；廠商自宣客戶案例，具體規模與效益數字未經第三方驗證，不進「對手雷達」（Blog/OpenAI News）
+
 ### 2026-10-08
+- **OpenAI**：發布 Oracle 導入 ChatGPT Work 與 Codex 案例，涵蓋招募、工程、營運流程效率提升；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
 - **OpenAI（透過比較報導）**：WSJ 稱 AI 定價戰加劇，OpenAI 在對 Anthropic 的競爭中逐漸追上，具體數字與方法論未見報導，僅標題可用（Google News/WSJ）
 - **OpenAI**：官方部落格說明阻止兩起冒用新聞機構／智庫身分散布地緣政治訊息的 AI 影響力操弄行動，非編碼工具或定價異動（openai.com）
 - **Meta**：官方部落格反駁資料中心常見迷思（用水、耗能等），非 AI 編碼工具競品異動（about.fb.com）

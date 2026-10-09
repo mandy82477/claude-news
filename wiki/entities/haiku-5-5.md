@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-08
-**最後新聞更新：** 2026-10-08
+**最後更新：** 2026-10-09
+**最後新聞更新：** 2026-10-09
 
-> **Haiku 5.5 發布**（2026-10-08）
-> 2026-10-07 官方發布：最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；精確牌價官方發布文未附具體數字，見 [[entities/haiku-5-5#你現在拿到的是什麼]]。
+> **牌價細節見 ⟨Q-01⟩**（2026-10-09）
+> dev.to 社群文稱 Haiku 5.5 逾 10 萬 token 轉為較高定價，單一來源未見官方佐證；精確 $/Mtok 牌價與 1M context 上限仍見下方「歷史記錄」⟨Q-01⟩。
 
 ---
 
@@ -117,7 +117,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Google News/MIXED Reality News：Claude Haiku 5.5 replaces Haiku 4.5, but Priority Tier does not come with it](https://news.google.com/rss/articles/CBMihwFBVV95cUxOZ005N19yTVQzUzA1dVlocUJVaEczR0Vwb05tMlZHNVRKakVQN0lBVGplZG5od1gtU014dmVuWG4tMjFHeUZYYlQ2bDg5QWJfSUdEdURsV1pPR2RlTUFWemVicnlldzhUbkxuazhPa3FnMkJnNzYxUXhUSnUzS3JMVFFEYWU1QXM?oc=5)（2026-10-08）
 - [Google News/shattered.io：Claude Haiku 5.5: Anthropic Cuts API Costs 75%](https://news.google.com/rss/articles/CBMid0FVX3lxTE9Xdk8tc0NrZDY2LWdtbVhkZEg4SEJBYk9NZEozSFZsV3RJZXBBZjRzRnVlVlVVR2VWRDNMa3lxRUhEZGVJOGg0c3ZKMWZ6cXNSUlJhVi1GV1lVa3ZmcjVZbUhic0g4ZkFnUWNYMzlnMERzeEpPUm84?oc=5)（2026-10-07）
 - [Google News/tech-insider.org：Claude Haiku 5.5 Slashes Price 75% to $0.10/M](https://news.google.com/rss/articles/CBMidkFVX3lxTE9SZEdHdzY1TDBveFYtWmI1WFA5MEZLaWtONVNIV0txTE1xOEwzZUF2T013WG1hc0ctSjRjM3ZoeV9zZDdKVXNTejdPeDVTLV84VHliVmM0VDFHMGR1ZkhKeUtPUWppTGtrZm9rRmpBdFBpdkVYLWc?oc=5)（2026-10-07）
+- [dev.to／bobbyhalljr：Claude Haiku 5.5 Is Cheap Until 100k Tokens](https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4)（2026-10-08）
 - [[news/2026-10-08]]
+- [[news/2026-10-09]]
 
 ## 歷史記錄
 
@@ -125,14 +127,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-09 | dev.to 單一來源稱逾 10 萬 token 轉為較高定價，未見官方佐證（併入下方 ⟨Q-01⟩） |
 | 2026-10-08 | Help Net Security 等 3 家媒體稱抵抗隱藏指令注入能力比前代提升（僅標題可讀）；精確牌價與 1M context 聲稱 ❓待查證⟨Q-01⟩ |
 | 2026-10-07 | 正式發布，Claude 5.5 家族第三款模型；官方稱成本比 Haiku 4.5 降約 75%；AWS、GitHub Copilot 同日上架；Reuters 將發布放進 IPO 前產品線擴張敘事 |
 
 **歷史記錄細節**
 
+- **2026-10-09**：[dev.to 社群文](https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4)（10/08 21:40 UTC）稱 Haiku 5.5 逾 10 萬 token 的 prompt 轉為較高定價，單一來源未見官方佐證；併入 ⟨Q-01⟩（見下）。
 - **2026-10-08**：Help Net Security 等 3 個來源（Google News，10/08 11:24 UTC）報導 Haiku 5.5 抵抗隱藏指令注入（prompt injection）的防禦力比前代顯著提升；原文僅標題可讀，具體測試方法與數字未見完整記載，不採信推算。完整安全框架分析見 [[topics/ai-agent-safety]]。
-  - ⟨Q-01⟩ ❓ **待查證**（標 2026-10-08｜查 [[entities/haiku-5-5]]、0.10｜複 2026-10-22）｜**精確 $/Mtok 牌價與 1M context 官方發布文未附具體數字**：官方僅稱降約 75%；VentureBeat 稱降 90%；3 家標題稱 input $0.10／Mtok、1M context，皆僅標題可讀，口徑不一，不採信推算。
+  - ⟨Q-01⟩ ❓ **待查證**（標 2026-10-08｜查 [[entities/haiku-5-5]]、0.10｜複 2026-10-22｜訊 2026-10-09）｜**精確 $/Mtok 牌價與 1M context 未載**：官方稱降75%；VentureBeat稱降90%；3家標題稱 $0.10/Mtok、1M context，僅標題可讀，口徑不一，不採信推算。
   - VentureBeat 稱定價已與 GPT-6 Luna 看齊，屬跨家比較，本頁不展開，相關快照見 [[topics/competitor-landscape]]；精確牌價更新見 [[entities/pricing]]。
+  - dev.to 社群文（10/08）另稱逾 10 萬 token 轉為較高定價，單一來源未見官方佐證，併入本則 ⟨Q-01⟩。
 - **2026-10-07**：Anthropic 發布 Claude Haiku 5.5（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）。
   - 官方定位：最便宜、最快、最具能力的小型模型，面向高流量成本敏感任務（摘要、壓縮、DB 查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼 subagent；平均執行成本比 Haiku 4.5 降約 75%
   - 同批官方將 Sonnet 5.5 快取讀取價砍半，屬 Sonnet 定價事件，細節見 [[entities/sonnet-5-5]]、[[entities/pricing]]
