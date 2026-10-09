@@ -166,3 +166,30 @@
 12. **主 session**：依序跑閘 `python scripts/check_hierarchy.py && python scripts/check_pending_markers.py && python scripts/check_wiki_freshness.py && python scripts/check_cell_limits.py && python scripts/check_rules.py && python scripts/build_web.py`（尾行錨點 WARN 與改前同數）`&& python scripts/run_tests.py`，結束碼為 0 才往下。
 13. **主 session**：只 `git add` 本波的八頁、index、discussions、LCW、規則檔、`scripts/check_wiki_freshness.py`、`scripts/patterns_tree_audit.py`、`scripts/build_reader_digest.py`、兩個測試檔、`data/` 三檔；commit 後跑 `python scripts/devpractice_diff.py mark`。
 14. **主 session**：§G 三筆轉知（先 `--dry-run` 再實跑）、`wiki/log.md` Query 條目帶單號、ledger 定稿列；`git fetch` 確認沒有新 commit，再同一 commit push。之後派新冷讀者用原四題複驗。
+
+## 實作複核（2026-10-09，commit 7fdb05af／18622713／a3e859b7）
+
+重跑結果（原樣）：`patterns_tree_audit.py` → `OK: patterns 樹母頁契約與節點落點無異常`，exit 0；`check_wiki_freshness.py` → `OK: wiki 新鮮度檢查通過（121 頁；衍生頁 11 頁已宣告觸發邊）`，exit 0；`cd src && python -m unittest tests.test_wiki_freshness_hierarchy tests.test_build_web_reader_digest tests.test_wiki_search` → `Ran 81 tests … OK`；`check_cell_limits.py` → `OK: 字元上限機械閘 — 無新增超限`。
+抽驗：子頁三則改派節點（ccteams→multi-agent、Agenta→interfaces、Paritok→cost）跟拆前原文逐字相同（7／7／8 行）；母頁路由表 multi-agent、skills、interfaces 三列跟 draft 逐字相同；兩處「200 萬 token」都已改指 `community-multi-agent#2026-08`；D 的開始日期是 2026-07-12。
+
+| 步 | 判定 | 說明 |
+|---|---|---|
+| 1–2 設計者改分群與三件文件 | 照做 | 落點 audit OK；A2 比對口徑（pages.md L36）、最後動態定義＋收哪幾類（L38）、A12 討論頁入口、§G 那則 L669 都在 |
+| 3–4 八頁＋鄰居 11 處 | 照做 | 抽驗見上；錨點 WARN 0→0（commit 訊息自報，web a3e859b7 已上站） |
+| 5 規則檔＋check_rules | 偏離，合理 | 「CLAUDE.md 管理」是 wiki 類別名，audit 要逐字比對，不能改寫；在 `line_allowlist` 加一筆、附理由，範圍只限 pages.md，比改類別名對 |
+| 6 audit 腳本 | 照做 | weekly.md L59 第 4 步先跑它，回報格式有 `patterns_tree_audit：OK／❌` |
+| 7 freshness 測試 | 照做 | 5 案在 81 案裡全綠 |
+| 8 digest 去重 | 偏離，合理 | 實作版只在母頁 callout 內連到同日也有 callout 的子頁時才略過母頁，比我的 children 版窄：母頁自己的新聞照收。兩案測試；驗證指令改用 `cd src` 是對的 |
+| 9 主 session 換 v2＋docstring | 照做 | |
+| 10 allowlist 兩筆 | 照做 | 閘綠 |
+| 11 cell rebuild | 照做 | 新增 66 全在七子頁。各頁分布和我評審時的版本不同（memory 13／multi-agent 14），是改派 7 則的結果，總數對；移除 129＋收緊 1 是現況已無命中的槽位，棘輪允許 |
+| 12 閘＋run_tests | 照做＋一處測試改寫，不算放水 | 見下 |
+| 13 git add 範圍 | 偏離，無害 | 142 個檔，其中約 100 頁只有 gen 漂移。抽 6 頁看，diff 都只有 `days_since_news`／`pending_*`／`inbound_links`／`signal`，沒有正文；draft §H 原本寫「其餘頁 frontmatter 漂移不收」。沒有混進他 session 的正文改動，不要求回退 |
+| 14 轉知＋log＋ledger | 照做 | H-fc0960 開發實務／coding-workflow-guide、H-9d1672 功能／official-community-gap、H-817203 功能／claude-skills，類別與頁都對；H-fc0960 note 含 L669 |
+
+**test_wiki_search 改寫，不算放水，但註解要修：**
+- 舊斷言「第一筆是字面命中」綁的是語料，拆頁讓 archive 頁的改寫命中分數領先，屬於正常變動。新斷言保留「有字面命中」，另外加「圖擴散頁之前全是 found 種子」，比舊的更嚴。
+- 註解寫「search() 的排序契約：found 的種子 → 圖擴散」不準。`scripts/wiki_search.py` L296 是把種子和擴散頁合在一起按 `rel` 排序；擴散頁的 `rel`＝`EXPAND_WEIGHT×Σ(seed rel/√deg)`，可能高過弱種子。所以這是現況剛好成立，不是程式保證的契約，日後可能 flaky。
+- 修法：註解改成「現況斷言：擴散權重下種子目前都排在擴散頁前；L296 是合併排序，此條紅時先查 EXPAND_WEIGHT 是否變了，再決定改斷言或改權重」。
+
+**放行**：條件都已滿足；上面那句註解是下一批順手修的小事，不擋。冷讀者用原四題複驗照流程第 6 步另派。
