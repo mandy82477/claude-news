@@ -592,11 +592,6 @@
       "id": "sonnet-5-5",
       "name": "Claude Sonnet 5.5",
       "pageType": "entity"
-    },
-    {
-      "id": "long-context-1m",
-      "name": "1M context：加不加價、你能不能關",
-      "pageType": "topic"
     }
   ],
   "reader": {

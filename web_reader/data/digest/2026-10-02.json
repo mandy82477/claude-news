@@ -414,13 +414,7 @@
     }
   ],
   "preview": "Claude Code：Claude Code v2.1.287 發布：新增「Claude Mods」——外掛可修改比既有 plugin API 更深層的執行時行為；內建示範 mod「You should know」，由旁觀 agent 在使用者或 Claude 本身可能忽略某件事時主動提醒。此前以 CLAUDE_CO",
-  "sedimentedToday": [
-    {
-      "id": "community-tech-tools",
-      "name": "社群工具目錄",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-02",
     "summary": "",
