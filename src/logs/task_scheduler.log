@@ -1077,3 +1077,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [週五 2026/10/09 18:17:09.00] === Pipeline complete (agent) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-10-09T22:07:52Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-09T22:08:34Z] ABORTED: digest already exists (news/2026-10-09.md)，TARGET_DATE=2026-10-09 為今日（排程模式），Step 0b 冪等閘中止不重跑；判斷依據：17:00 UTC 班次已完整跑完整條 pipeline（見本檔 17:08:28–18:17:09 記錄，含 aggregator/digest/confirm-digest/wiki ingest/reader digest/web build/push 全部 OK）
+[cloud weekly-wiki-lint-cloud STARTED 2026-10-10T03:09:28Z]
