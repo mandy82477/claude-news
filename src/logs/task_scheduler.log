@@ -1078,3 +1078,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud STARTED 2026-10-09T22:07:52Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-09T22:08:34Z] ABORTED: digest already exists (news/2026-10-09.md)，TARGET_DATE=2026-10-09 為今日（排程模式），Step 0b 冪等閘中止不重跑；判斷依據：17:00 UTC 班次已完整跑完整條 pipeline（見本檔 17:08:28–18:17:09 記錄，含 aggregator/digest/confirm-digest/wiki ingest/reader digest/web build/push 全部 OK）
 [cloud weekly-wiki-lint-cloud STARTED 2026-10-10T03:09:28Z]
+[週六 2026/10/10 04:04:41.00] Weekly lint OK (cloud) - 修 21 頁，12 項待確認，測試全綠（1249 案例）/ build OK（斷鏈 WARN 22、錨點 0）/ push 1 次；5c 58→33 未清零（guard_roles H7 擋記者 web 工具，與 5c 條文衝突，已登漏抓帳＋列待裁示第 1 項）；5m/5n 因 anthropics/claude-code 未授權跳過；5b 因 egress leaderboard PARTIAL 跳過
