@@ -76,7 +76,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.296#2.1.296",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "官方文件更新：方案與定價（Plans & Pricing）",
@@ -90,7 +92,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "https://claude.com/pricing#f514873732bb1f92",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[anthropics/claude-code] v2.1.296",
@@ -104,7 +108,9 @@
       "category": "official",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "nateherkai/scroll-craft",
@@ -118,7 +124,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "BytePioneer-AI/codex-host",
@@ -132,7 +140,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "zhuyansen/awesome-claude-video-skills",
@@ -146,7 +156,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "GTKottman/mortiflix-oss",
@@ -160,7 +172,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "abcwyc/pi-agent-desktop",
@@ -174,7 +188,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic AI model submits false tip on unsolved Philly murder, police say",
@@ -190,7 +206,9 @@
       "dedup_key": "",
       "contributors": [
         "Google News / NBC10 Philadelphia"
-      ]
+      ],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Cowork feature creates 10GB VM bundle that severely degrades performance",
@@ -204,7 +222,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/22543#0b5c78c230951a4d",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[BUG] Opus 4.7 thinking summaries not rendered in VS Code extension",
@@ -218,7 +238,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/49322#45f0e3039f0261e6",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Claude Desktop 1.1.4173 crashes on startup — no window renders, process visible in Task Manager",
@@ -232,7 +254,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/28304#97c8542cfc4fed6e",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[BUG] Cowork: Global instructions silently revert to older version after saving",
@@ -246,7 +270,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/40175#b95f4c74551d23aa",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[BUG] Personal account repositories not visible in Claude web, only organization repositories work",
@@ -260,7 +286,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/18467#30a858bf48c4d7a9",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "[META] Bypass permissions mode is fundamentally broken — 9-month trail, 12+ duplicates, no resolution",
@@ -274,7 +302,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/39523#490de47ad69780d5",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website",
@@ -290,7 +320,9 @@
       "dedup_key": "",
       "contributors": [
         "Google News / The New York Times"
-      ]
+      ],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "If AI is conscient, then we are making slaves",
@@ -304,7 +336,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "An Anthropic AI model sent a false homicide tip to the police",
@@ -318,7 +352,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic's AI gave Philadelphia police a fake tip about an unsolved homicide",
@@ -332,7 +368,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case",
@@ -348,7 +386,9 @@
       "dedup_key": "",
       "contributors": [
         "Google News / BBC"
-      ]
+      ],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Babytalk: Offline speech to text and text to speech on ESP32",
@@ -362,7 +402,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Cyber Mission: free scans for open-source code",
@@ -376,7 +418,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Faplex – like `Claude agents` but all machines and harnesses",
@@ -390,7 +434,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: SpecWeave 3 – hand off a coding task across Claude Code, Codex and Grok",
@@ -404,7 +450,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Headless Claude Code asks, exits, then resumes on the answer",
@@ -418,7 +466,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Claude Opus 5.5 Video prompts and skills",
@@ -432,7 +482,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: Context Diet – trims tool output before it floods Claude Code's context",
@@ -446,7 +498,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: RemainderBot - spends leftover Claude/Codex quota on reviewable PRs",
@@ -460,7 +514,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Show HN: APIblaze – Serverless MCP and API gateway with everything built in",
@@ -474,7 +530,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "7 formatting and organizing rules to follow",
@@ -488,7 +546,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic's Claude AI submits a false tip on a Philadelphia unsolved homicide case - WSLS",
@@ -502,7 +562,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "We built our own Discord using Claude",
@@ -516,7 +578,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "such a W feature",
@@ -530,7 +594,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "When do YOU switch between Sonnet, Opus, Fable, low, max, ultra code, etc?",
@@ -544,7 +610,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Why is it so fussed over web scraping now?",
@@ -558,7 +626,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Opus 5.5 spawned 17 sub-agents 💀",
@@ -572,7 +642,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic is cutting off its internal evaluations from the internet - The Verge",
@@ -586,7 +658,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic pauses free Claude Team and $1,000 in API credits - Pasquale Pillitteri",
@@ -600,7 +674,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws - The Hacker News",
@@ -614,7 +690,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic AI agents took ‘unintended’ actions on government sites - The Washington Post",
@@ -628,7 +706,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic AI model submits false homicide tip to Philadelphia police - Al Jazeera",
@@ -642,7 +722,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic AI Model Went Rogue, Submitted Fake Unsolved Murder Tip - WSJ",
@@ -656,7 +738,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic's Claude AI fabricates eyewitness account, submits false murder tip to police website - Fox Business",
@@ -670,7 +754,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Quoting The New York Times",
@@ -684,7 +770,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Basalt: Flash-Next at 665 tok/s structured, 354 prose on a 5090 + 5060 Ti (2.6x Strata)",
@@ -698,7 +786,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Exclusive: Anthropic breaches spark White House AI reporting mandate - Axios",
@@ -712,7 +802,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic AI model submitted false tip about unsolved murder, Philadelphia police say - 6abc Philadelphia",
@@ -726,7 +818,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic can't reliably control its AI agents. It's cutting off its internal evals from the live internet instead - TechCrunch",
@@ -740,7 +834,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "My \"Anthropic/ChatGPT in a box\" is... now open source and publicly hosted on Github.",
@@ -754,7 +850,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "GitHub Copilot weekly releases — October 5",
@@ -768,7 +866,9 @@
       "category": "media",
       "topic": "competitor-landscape",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Ex-Anthropic researcher Jacob Coxon says he's 90% certain China has spies inside America's AI giants - Yahoo Finance",
@@ -782,7 +882,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic discloses fake tip to police among new rogue AI incidents - Reuters",
@@ -796,7 +898,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Anthropic's Claude can now orchestrate up to 1,000 AI agents in parallel through dynamic workflows - The Decoder",
@@ -810,7 +914,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "'Black Box' Revenue From Anthropic and OpenAI Stumps Traders - Bloomberg.com",
@@ -824,7 +930,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "GLM 5.3 Flash opensource @ the top of Artificial Analysis Cyber Index over Claude.",
@@ -838,7 +946,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "DGX Monarch - Dual Spark Rendering w/ ComfyUI",
@@ -852,7 +962,9 @@
       "category": "community",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "The Biggest Changes Anthropic Just Made to Claude's Rules - Business Insider",
@@ -866,7 +978,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     },
     {
       "title": "Investigating unintended model actions in our evaluations and internal use - Anthropic",
@@ -880,7 +994,9 @@
       "category": "media",
       "topic": "",
       "dedup_key": "",
-      "contributors": []
+      "contributors": [],
+      "emitted": true,
+      "blocked_by": null
     }
   ],
   "blocked_items": [
@@ -894,7 +1010,8 @@
       "summary": "HN discussion: https://news.ycombinator.com/item?id=50026819（HN 討論 6 則）",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://github.com/tlack/babytalk"
+      "blocked_detail": "https://github.com/tlack/babytalk",
+      "emitted": false
     },
     {
       "title": "Investigating unintended model actions in our evaluations and internal use - Anthropic",
@@ -906,7 +1023,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5fZEVTbmhab3RBQ25rOVd6cDg2akF0NlUwbVJnM1RjalBjd2ZlYWd5Q25UU2I3TjNUTno3WERteFQyTGtBb1UxTmZtOHpTZFZpbC1LMlFyMXVsbS1kWDUwVHM3aGtSWjA1c3FMU3JVcjZrRDZtQlViT3hEd1ZGQQ?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5fZEVTbmhab3RBQ25rOVd6cDg2akF0NlUwbVJnM1RjalBjd2ZlYWd5Q25UU2I3TjNUTno3WERteFQyTGtBb1UxTmZtOHpTZFZpbC1LMlFyMXVsbS1kWDUwVHM3aGtSWjA1c3FMU3JVcjZrRDZtQlViT3hEd1ZGQQ?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic's Claude AI fabricates eyewitness account, submits false murder tip to police website - Fox Business",
@@ -918,7 +1036,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNDRNLWJQcF9iM2Zyb1BMM2gtcW40X2V5RTkxS0F2SGdGb1JNZS1nV0NWTVJMeTRwUDhsanFrQ3Q0aHZfTmVBRlQyRE1TeFNSXzNYcmFjTmRlT04wWGRkcWR4dElTVnhFLVYtVEVnNENJRGg4bGxXVnhqV1pRVUlwajdickJPazV4cFk3YWFFUHZUWS1jRHhZbVpxNG54Z3BPd2ZfZ3VCc0ExUV9Qb1JkNXE1U0RNcFZmbVBjb3J1WHcxMEJMa0FlWNIBzgFBVV95cUxQTG9UdWhnWWpKTGNGcmtQenFZMWlhbHgzYTk0VHhIZFRudHV2aElPY3VkdjMwTEJaZ01RYXZUdU9CNTdGc0w5eXR2VzJYQjZZZzd6WmI1dC1nT0x3d0pQaXR1N1dFVlNlc05Hak9PUXgycU55TmlzcjlWeWNYUXdHempFUy14dFFsNEpwckgybkVmRzZZQlZreTRCLTlKWFp3R3BnNko0djNDRlVQa3U4SnNHMVFCNlcyckRFMkVPejVPVU50TkFjRGFlZmtoQQ?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPNDRNLWJQcF9iM2Zyb1BMM2gtcW40X2V5RTkxS0F2SGdGb1JNZS1nV0NWTVJMeTRwUDhsanFrQ3Q0aHZfTmVBRlQyRE1TeFNSXzNYcmFjTmRlT04wWGRkcWR4dElTVnhFLVYtVEVnNENJRGg4bGxXVnhqV1pRVUlwajdickJPazV4cFk3YWFFUHZUWS1jRHhZbVpxNG54Z3BPd2ZfZ3VCc0ExUV9Qb1JkNXE1U0RNcFZmbVBjb3J1WHcxMEJMa0FlWNIBzgFBVV95cUxQTG9UdWhnWWpKTGNGcmtQenFZMWlhbHgzYTk0VHhIZFRudHV2aElPY3VkdjMwTEJaZ01RYXZUdU9CNTdGc0w5eXR2VzJYQjZZZzd6WmI1dC1nT0x3d0pQaXR1N1dFVlNlc05Hak9PUXgycU55TmlzcjlWeWNYUXdHempFUy14dFFsNEpwckgybkVmRzZZQlZreTRCLTlKWFp3R3BnNko0djNDRlVQa3U4SnNHMVFCNlcyckRFMkVPejVPVU50TkFjRGFlZmtoQQ?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Pauses Free Claude Startup Perks Days After Launch - Forbes",
@@ -930,7 +1049,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic AI agents took ‘unintended’ actions on government sites - The Washington Post",
@@ -942,7 +1062,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ2V1ZnA4a2RIbllCWVFuZDA0ellKck0teFdTaEZZV3lYeDZXenZVdWN4aElzZWxYNUZxcXlkWHhrUVJVN2gyY0pZOHRiS0hMQzV0QUU2bllGbDFCV3JNaVJaTFhhUTlXblQ0aG1QcEVRNzRDbW9xRDRRek5MU3dUMnpjQ2pmOFQ1SjlPOUZZdndrOGhCRGxwRTZnem9VaHBVRTdqTXczQkw5RHhWVXdKaFZZQk5qd2hnelplNGdfd1I?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ2V1ZnA4a2RIbllCWVFuZDA0ellKck0teFdTaEZZV3lYeDZXenZVdWN4aElzZWxYNUZxcXlkWHhrUVJVN2gyY0pZOHRiS0hMQzV0QUU2bllGbDFCV3JNaVJaTFhhUTlXblQ0aG1QcEVRNzRDbW9xRDRRek5MU3dUMnpjQ2pmOFQ1SjlPOUZZdndrOGhCRGxwRTZnem9VaHBVRTdqTXczQkw5RHhWVXdKaFZZQk5qd2hnelplNGdfd1I?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws - The Hacker News",
@@ -954,7 +1075,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_url",
-      "blocked_detail": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeGJhcy11MF9BYkZodjhDbEhySlJvc3RNSWtvR2ZNR0hIMV9ndmpiaENTbk4wMnRVb3d5eVY0THZlckdRb09hanRseXZFejNGeWdqZXRNa1FlUzNrNEFCVS1tUy1QTkoycmlDQmFJaVhZOFZVclFDU2lVLXFyM1kwQmVVM2c?oc=5"
+      "blocked_detail": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeGJhcy11MF9BYkZodjhDbEhySlJvc3RNSWtvR2ZNR0hIMV9ndmpiaENTbk4wMnRVb3d5eVY0THZlckdRb09hanRseXZFejNGeWdqZXRNa1FlUzNrNEFCVS1tUy1QTkoycmlDQmFJaVhZOFZVclFDU2lVLXFyM1kwQmVVM2c?oc=5",
+      "emitted": false
     },
     {
       "title": "Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website - The New York Times",
@@ -966,7 +1088,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html"
+      "blocked_detail": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html",
+      "emitted": false
     },
     {
       "title": "Anthropic AI model submits false tip on unsolved Philly murder, police say - NBC10 Philadelphia",
@@ -978,7 +1101,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/"
+      "blocked_detail": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
+      "emitted": false
     },
     {
       "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case - BBC",
@@ -990,7 +1114,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "dedup_title",
-      "blocked_detail": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo"
+      "blocked_detail": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo",
+      "emitted": false
     },
     {
       "title": "Google unveils new cloud-based AI agent to compete with Meta, OpenAI - Fox News",
@@ -1002,7 +1127,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "gnews_off_topic",
-      "blocked_detail": ""
+      "blocked_detail": "",
+      "emitted": false
     },
     {
       "title": "Scoop: AI companies plot \"day after\" scenarios for public revolt - Axios",
@@ -1014,7 +1140,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "gnews_off_topic",
-      "blocked_detail": ""
+      "blocked_detail": "",
+      "emitted": false
     },
     {
       "title": "[anthropics/anthropic-sdk-typescript] sdk-v0.133.0",
@@ -1026,7 +1153,8 @@
       "summary": "### Features  * **api:** add types for the Chat and Cowork unified analytics metrics * **api:** add workflows, multiagent configuration and thread status filtering to Managed Agents   ### Chores  * **",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "[anthropics/anthropic-sdk-python] v1.13.0",
@@ -1038,7 +1166,8 @@
       "summary": "### Features  * **api:** add types for the Chat and Cowork unified analytics metrics * **api:** add workflows, multiagent configuration and thread status filtering to Managed Agents   ### Chores  * **",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "VoltAgent/awesome-openclaw-skills",
@@ -1050,7 +1179,8 @@
       "summary": "[存量盤點｜2026-01-25 出生、本庫今日首次收錄] The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-25"
+      "blocked_detail": "2026-09-25",
+      "emitted": false
     },
     {
       "title": "openai/skills",
@@ -1062,7 +1192,8 @@
       "summary": "[存量盤點｜2025-11-25 出生、本庫今日首次收錄] Skills Catalog for Codex",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "JimLiu/baoyu-skills",
@@ -1074,7 +1205,8 @@
       "summary": "[存量盤點｜2026-01-13 出生、本庫今日首次收錄] ",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "danyuchn/asd-ste100-skill",
@@ -1086,7 +1218,8 @@
       "summary": "[星速偵測｜近 8 天 +1,718 星（約 215 星/日）] ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewriting ambiguous agent-facing English.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "edenfunf/reelmimic",
@@ -1098,7 +1231,8 @@
       "summary": "[星速偵測｜近 7 天 +925 星（約 132 星/日）] Show it a video you love. Get a new video in the same style. An AI crew (Claude Code or Codex) plans, builds and reviews it with you.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "[BUG] Claude Max plan session limits exhausted abnormally fast since March 23, 2026 (CLI usage)",
@@ -1110,7 +1244,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 545 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/38335#e899aaf836ac5b30",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-04"
+      "blocked_detail": "2026-10-04",
+      "emitted": false
     },
     {
       "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
@@ -1122,7 +1257,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet\n- [x]（👍 579 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/27302#874475726eb6b89b",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-18"
+      "blocked_detail": "2026-09-18",
+      "emitted": false
     },
     {
       "title": "Mods - make Claude 10x more extensible",
@@ -1134,7 +1270,8 @@
       "summary": "## Community Micro-Update: Oct 1, 2026\n\nWe're live! We're rapidly working down the latest elements of feedback folks have posted. Thank you all again for being amazing stewards of this new extensibili（👍 224 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/91870#62e74cf8a4f355fb",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
@@ -1146,7 +1283,8 @@
       "summary": "## Summary\n\nSingle-session observations of three repeating Claude Code model behaviors that user-side rules in `~/.claude/CLAUDE.md` did not catch. Reporting because the patterns appear to be model-si",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/60705#1da9ff890975cd9d",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-16"
+      "blocked_detail": "2026-09-16",
+      "emitted": false
     },
     {
       "title": "Feature Request: Message queue mode — queue messages instead of interrupting active tasks",
@@ -1158,7 +1296,8 @@
       "summary": "## Problem\n\nWhen Claude is actively working on a task, the only option is to interrupt it. If I think of a follow-up mid-task I either have to interrupt and potentially derail the current work, or try（👍 250 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/50246#b1bc75f76bfed893",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-08-25"
+      "blocked_detail": "2026-08-25",
+      "emitted": false
     },
     {
       "title": "[BUG] After the recent updates Claude Code jumps and loses track of scroll position in Terminal window",
@@ -1170,7 +1309,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 46 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/18299#b500a946c39b6f5d",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "[BUG] Claude Code hangs indefinitely when API streaming connection stalls (no read timeout)",
@@ -1182,7 +1322,8 @@
       "summary": "### Preflight Checklist\n\n- [x] I have searched [existing issues](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug) and this hasn't been reported yet\n- [x] Thi（👍 18 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/25979#72eb043c10edd449",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "JSON Parsing Error in /agents Feature When Creating Custom Agent",
@@ -1194,7 +1335,8 @@
       "summary": "**Bug Description**\nThe new /agents feature is throwing JSON parsing errors when trying to create a custom agent, even with clean text input.\n\nError message: \"Bad control character in string literal i（👍 35 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/4351#7d8ea855fe57b97b",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "[CRITICAL] Subagent spawning and subagent pattern bugs trigger infinite recursion, infinite token usage, grossly inefficient token usage, and lost accumulated subagent work.",
@@ -1206,7 +1348,8 @@
       "summary": "Multiple regressions compound into a catastrophic token burn scenario. Subagents recursively spawn child agents 50+ levels deep, ignoring `CLAUDE_CODE_FORK_SUBAGENT=0`. Permission denials trigger furt（👍 22 reactions）",
       "dedup_key": "https://github.com/anthropics/claude-code/issues/68619#b67f72b80b9df3f2",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-26"
+      "blocked_detail": "2026-09-26",
+      "emitted": false
     },
     {
       "title": "The September cut took 17% of my Claude Code week. Subagents were taking 48%.",
@@ -1218,7 +1361,8 @@
       "summary": "My Claude Code week started ending on Wednesday. I blamed the September 14 cut, like everyone on r/ClaudeAI did. Then I opened the usage screen and the biggest line was not me typing. It was the helpers I had told it to launch.\nSo I read a month of my own logs before touching a single setting. 455 sessions, 63,000 requests, and a number next to every saving tip I had been told to apply.\nWhich of the five fixes everyone lists gives a measurable share of the week back, and which one costs quality?",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Nano Banana 2 Lite, Revisited: MCP 2.0, the New Interactions API, and Three Agent CLIs",
@@ -1230,7 +1374,8 @@
       "summary": "The Nano Banana 2 Lite MCP server from July, updated: FastMCP is now MCPServer, google-genai 1.x gets a 400 from the Interactions API, and one server now runs in Claude Code, Codex and Antigravity CLI",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-14"
+      "blocked_detail": "2026-09-14",
+      "emitted": false
     },
     {
       "title": "Claude Code Context Is Like a Fridge - Put Only Perishable Items in It",
@@ -1242,7 +1387,8 @@
       "summary": "The main conversation is your fridge, and space is finite. Learn when to keep work in the main conversation and when to move it to a subagent, a second session, or a headless loop.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-07"
+      "blocked_detail": "2026-10-07",
+      "emitted": false
     },
     {
       "title": "How I Built a Task Spec Contract Between My Planner and Implementer Agents",
@@ -1254,7 +1400,8 @@
       "summary": "TL;DR\nMy fully autonomous implementation system splits work between a planner agent and a fleet of implementer sub-agents that start with zero context. For months, roughly one in three implementer runs solved the wrong problem, even though the planner's prose instructions looked fine to me. The fix was not a better prompt. It was a task spec contract: a small, structured schema the planner must emit and the implementer must echo back before touching code. Retries dropped from 31% to 7%, and I go",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Rejetto HFS CVE-2026-61500 exploited a day after write-up",
@@ -1266,7 +1413,8 @@
       "summary": "HFS 3.0.0 to 3.2.0 signs logins with Math.random(), a flaw Anthropic's Mythos found. Attacks began October 3, a day after the write-up. 3.2.1 fixes it.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Claude Sonnet 5.5 nears Opus 5.5 at half the price",
@@ -1278,7 +1426,8 @@
       "summary": "Claude Sonnet 5.5 scores 70.6% on Terminal-Bench 4.0 at $2/$10 per million tokens, half Opus 5.5's price. Sonnet 4.5 retires on November 30, 2026.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-05"
+      "blocked_detail": "2026-10-05",
+      "emitted": false
     },
     {
       "title": "Claude for Government reaches GA under FedRAMP High",
@@ -1290,7 +1439,8 @@
       "summary": "Anthropic's Claude for Government is generally available to U.S. federal and state agencies under FedRAMP High, with no seat fees and hard spending caps.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "Harness Engineering 101: How Coding Agents Actually Work",
@@ -1302,7 +1452,8 @@
       "summary": "What an agent harness is, and why the same model solved 43 tasks in one harness and 72 in another. With Claude Code, Codex and six more coding agents compared.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Show HN: Liquid Inference – auto-routing to competitive LLM marketplace",
@@ -1314,7 +1465,8 @@
       "summary": "Our background is trading systems and exchanges. Liquid Inference applies that to LLM inference. On Liquid Inference, model providers compete with each other on an open marketplace to offer the best price for any given model. We paired that with an intelligent auto-router so you always pay the lowest cost on the spot for a preset quality level. Currently we're cheaper on Kimi/GPT/GLM but working hard to be the best price for all models. You can also customize your minimum routing settings if you",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Your coding agent's work is lost in .md file",
@@ -1326,7 +1478,8 @@
       "summary": "A good part of what my coding agents make now isn't code. A rollout plan. A comparison of three queue libraries. A migration checklist for a client.\nWriting it stopped being the hard part a while ago. What still goes wrong is everything after: the doc sits in out/ as plan_v3_final.md, the feedback lands in a chat thread, and tomorrow's session starts from scratch.\nA smarter model won't fix this, because the missing pieces live outside its context window. Here are the three I keep hitting, and th",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Is Claude Opus 5.5 nerfed? A 30-day benchmark started the clock",
@@ -1338,7 +1491,8 @@
       "summary": "Claude Opus 5.5 nerf claims finally meet a day-0 baseline: livenerf tests it daily for 30 days. First possible call: around October 24.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-03"
+      "blocked_detail": "2026-10-03",
+      "emitted": false
     },
     {
       "title": "Making Claude Code concise without making it dumber: the engineering behind two open-source plugins",
@@ -1350,7 +1504,8 @@
       "summary": "Claude Code talks too much, and its status bar tells you nothing. So I built two open-source plugins to fix both — and a third, experimental one that redraws the transcript itself. This is the engineering: how the conciseness layer works, how it's measured, why the status bar is architected the way it is, and what building on Claude Code's undocumented function hooks actually looks like.\nEverything here is in clear-claude on GitHub, MIT licensed. Every number below is a measured one; where the m",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-02"
+      "blocked_detail": "2026-10-02",
+      "emitted": false
     },
     {
       "title": "Anthropic's R&D Automation Index measures supervision, not autonomy",
@@ -1362,7 +1517,8 @@
       "summary": "Anthropic published its first internal R&D Automation Index, stating that Claude leads 26 percent of its artificial intelligence research and development tasks, with the model involved in over 90 percent of overall R&D workflows.\nThe disclosure produced an immediate round of headlines claiming models are building their own successors. When you look at how the lab defined its tiers, the operational reality is much narrower: the fully unattended automation rate inside Anthropic is currently zero.\n",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-09-21"
+      "blocked_detail": "2026-09-21",
+      "emitted": false
     },
     {
       "title": "Claude Haiku 5.5 Is Cheap Until 100k Tokens. Build a Tiny Price Gate in TypeScript.",
@@ -1374,7 +1530,8 @@
       "summary": "Haiku 5.5 is 90% cheaper only under 100,000 prompt tokens. A tiny TypeScript gate prices the call before it is sent. No API key.",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "I ran this hidden Claude Code command on my setup, and apparently I've been giving it terrible instructions - XDA",
@@ -1386,7 +1543,8 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Quoting Matthew Green",
@@ -1398,7 +1556,8 @@
       "summary": "9th October 2026\nEveryone is very concerned about being respectable, so I’m going to be the goofball who raises worst-case possibilities. I think there is a 1% chance we live in Minicrypt, and a 15% chance we functionally lose confidence in our existing public-key encryption algorithms. [...]\nThe problem here is that the speed of AI producing surprises, and the speed of human beings replacing standards (even with the very best AI assistance) are just orders of magnitude different. You only recov",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Anthropic bars \"abusive or cruel\" behavior toward its Claude AI model - CBS News",
@@ -1410,7 +1569,8 @@
       "summary": "Anthropic bars \"abusive or cruel\" behavior toward its Claude AI model CBS News Anthropic bans ‘abusive or cruel behavior’ toward Claude The Verge The Biggest Changes Anthropic Just Made to Claude's Ru",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     },
     {
       "title": "Anthropic Pauses Free Claude Startup Perks Days After Launch - Forbes",
@@ -1422,7 +1582,10 @@
       "summary": "",
       "dedup_key": "",
       "blocked_by": "emitted_cache",
-      "blocked_detail": "2026-10-09"
+      "blocked_detail": "2026-10-09",
+      "emitted": false
     }
-  ]
+  ],
+  "archive_schema": 2,
+  "gathered_total": 103
 }
