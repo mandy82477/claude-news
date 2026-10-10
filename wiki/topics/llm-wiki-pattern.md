@@ -1,16 +1,16 @@
 ---
 page: "topics/llm-wiki-pattern"
 kind: "topic"
-status: "monitoring"
+status: "monitoring（2026-09-25 後日報無新的 LLM wiki 實作或設計討論，轉低頻觀察；有新實作入日報即回升 ongoing）"
 domain: "🌐 社群"
 last_updated: "2026-10-10"
 last_news_update: "2026-09-25"
 status_main: "monitoring"
-days_since_news: 14
+days_since_news: 15
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 14
+days_since_news_subtree: 15
 inbound_links: 6
 attribution_count: 8
 attribution_last: "2026-09-25"

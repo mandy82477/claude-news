@@ -112,7 +112,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]]、[[topics/community-tech-patterns-archive]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |

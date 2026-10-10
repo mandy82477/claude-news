@@ -4,21 +4,21 @@ kind: "entity"
 type: "model"
 status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-10-03"
+last_updated: "2026-10-10"
 last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 11
+days_since_news_subtree: 12
 inbound_links: 25
 attribution_count: 3
 attribution_last: "2026-07-31"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
-pending_next_review: "2026-10-12"
+pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

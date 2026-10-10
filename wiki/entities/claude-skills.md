@@ -4,14 +4,14 @@ kind: "entity"
 type: "feature"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-28"
+last_updated: "2026-10-09"
 last_news_update: "2026-09-28"
 status_main: "active"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "['entities/claude-skills-archive']"
 page_role: "hub"
-days_since_news_subtree: 11
+days_since_news_subtree: 12
 inbound_links: 7
 attribution_count: 13
 attribution_last: "2026-09-28"

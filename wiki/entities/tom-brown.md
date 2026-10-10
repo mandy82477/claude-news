@@ -4,24 +4,24 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-04"
-last_news_update: "2026-06-26"
+last_updated: "2026-10-09"
+last_news_update: "2026-10-09"
 status_main: "active"
-days_since_news: 105
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 105
-inbound_links: 3
-attribution_count: 0
-attribution_last: null
-top_source: null
-pending_count: 0
+days_since_news_subtree: 1
+inbound_links: 10
+attribution_count: 1
+attribution_last: "2026-10-09"
+top_source: "google-news"
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-10-23"
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Tom Brown

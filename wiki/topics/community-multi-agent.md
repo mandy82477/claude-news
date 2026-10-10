@@ -3,24 +3,24 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-09"
-last_news_update: "2026-10-06"
+last_updated: "2026-10-10"
+last_news_update: "2026-10-09"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
-inbound_links: 2
-attribution_count: 0
-attribution_last: null
-top_source: null
+days_since_news_subtree: 1
+inbound_links: 4
+attribution_count: 1
+attribution_last: "2026-10-09"
+top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 社群做法：多 agent 怎麼分工與協調

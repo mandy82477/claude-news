@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-27"
 last_news_update: "2026-05-31"
 status_main: "resolved"
-days_since_news: 131
+days_since_news: 132
 parent: "entities/claude-skills"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 131
+days_since_news_subtree: 132
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

@@ -4,24 +4,24 @@ kind: "entity"
 type: "feature"
 status: "beta（所有 API 帳號預設可用，須帶 beta header）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-03"
-last_news_update: "2026-09-16"
+last_updated: "2026-10-09"
+last_news_update: "2026-10-09"
 status_main: "beta"
-days_since_news: 23
+days_since_news: 1
 parent: "topics/anthropic-agent-stack"
 children: "['entities/managed-agents-archive']"
 page_role: "hub+child"
-days_since_news_subtree: 23
-inbound_links: 33
-attribution_count: 6
-attribution_last: "2026-09-16"
+days_since_news_subtree: 1
+inbound_links: 34
+attribution_count: 8
+attribution_last: "2026-10-09"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Managed Agents

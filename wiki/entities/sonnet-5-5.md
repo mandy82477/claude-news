@@ -4,21 +4,21 @@ kind: "entity"
 type: "model"
 status: "active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 是否比照 Opus 5.5 模式列 Legacy 見 [[entities/sonnet-5]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-08"
+last_updated: "2026-10-10"
 last_news_update: "2026-10-01"
 status_main: "active"
-days_since_news: 8
+days_since_news: 9
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 8
-inbound_links: 26
+days_since_news_subtree: 9
+inbound_links: 27
 attribution_count: 14
 attribution_last: "2026-10-01"
 top_source: "google-news"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
