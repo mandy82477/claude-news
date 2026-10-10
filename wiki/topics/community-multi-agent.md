@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **最新做法**（2026-10-09）
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-multi-agent#2026-07]]）自己排序，或維持人工把關，或等官方補。
 - **開到多大**：超過 10 個並行 agent 要獨立 worktree 加一層協調；官方 session 預設同時跑到 20 個 subagent 時再開新的會失敗，上限可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（官方 sub-agents 文件，2026-10-09 查證）。
 - **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），還在試。
-- **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較。
+- **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較；2026-10-09 新增的自架框架 zhikuncode 也走同一路，尚無第二方實測。
 
 **機制細節**
 - **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器；omnigent 把協調邏輯與底層 harness（Claude Code／Codex／Cursor／Pi）解耦，換 harness 不必重寫協作邏輯
@@ -498,6 +498,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 平行 Agent 即時對話地圖：讀取本機 JSONL Transcript 的可觀測性工具（2026-07-06）
 
+- **主線：** 並行規模
 - **核心模式：** 讀取 Claude Code / Codex 在本機留下的 JSONL transcript 檔案，即時解析並以視覺化「地圖」呈現多個平行 agent 的當前狀態與對話進度，解決「開了多個平行 agent 後不知道彼此進度」的協調痛點
 - **解決的問題：** 呼應既有「20-instance 崩潰分析」（2026-06-26）與「1000 Subagents Fan-out」（2026-07-01）已指出的規模化痛點——當平行 agent 數量增加，人工逐一切換視窗確認進度的成本迅速上升；此工具提供集中式可觀測層，補足官方尚未內建的多 agent 協調可視化
 - **與既有模式的關係：** 與「Agent 規模化」類別下既有子模式互補：既有模式聚焦「如何讓多 agent 穩定運作」（worktree 隔離、budget enforcement），此模式聚焦「運作中如何被人類即時看懂」；與 Grafana + Prometheus 企業監控（費用/用量導向）不同層次，此工具聚焦單機開發者的即時對話狀態，不涉及計費指標
@@ -506,6 +507,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Claude Code 動態工作流與 1000 Subagents Fan-out（2026-07-01）
 
+- **主線：** 並行規模
 - **核心模式：** 以 Claude Code 為主協調器，動態生成大量 subagent 並行執行子任務（宣稱可達 1000 個子代理級別）；fan-out 模式讓任務分解從靜態預設走向執行時動態派發，協調器根據任務複雜度即時決定分支數量
 - **實作方向：**
   - 主 agent 先分析任務複雜度，動態決定分支數量與各子任務邊界
@@ -518,6 +520,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Git Worktree 多 Agent 並行：新佐證教學（2026-07-01）
 
+- **主線：** 並行規模
 - **核心模式：** 此為 git worktree 多 agent 並行模式的新佐證教學（既有模式見 2026-05-23「Git Worktrees 作為多 Agent 隔離原語」與 2026-06-24「Multi-agent 工作流轉型指南」），dev.to 教學文章提供具體步驟，使此模式從「社群實踐」進一步強化為「有文件可循的標準做法」
 - **新增細節：**
   - 明確的 worktree 創建指令序列（`git worktree add`）與 Claude Code session 綁定方法

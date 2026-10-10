@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-10-08
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-01
 
 > **後續反應**（2026-10-01）
@@ -55,20 +55,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 這一格 | Sonnet 5（前代） | Sonnet 5.5（現行） | 官方出處（查證日）|
 |---|---|---|---|
-| 現在誰是預設 | 曾為 Claude Code CLI 預設（v2.1.197 起）| Anthropic API 預設 Sonnet；是否同步為 CLI 預設官方未載 | GitHub v2.1.284 changelog（2026-09-28 查證）|
-| 牌價（輸入／輸出，每百萬 token）| $2 ／ $10 | $2 ／ $10（不變，快取讀取 $0.20＝標準 0.1 倍）| 官方發布文＋GitHub changelog（2026-09-28 查證）|
-| 知識截止 | 官方未載（2026-09-28 查證）| 官方未載（2026-09-28 查證；本站可讀摘要於此節截斷）| 官方發布文（2026-09-28 查證）|
-| 會不會停掉 | 官方未載退役時程（2026-09-28 查證）| 尚無退役時程公告 | 官方發布文（2026-09-28 查證）|
+| 現在誰是預設 | 曾為 Claude Code CLI 預設（v2.1.197 起）| Anthropic API 預設 Sonnet；是否同步為 CLI 預設 🔎 查無官方 ⟨Q-01⟩ | GitHub v2.1.284 changelog（2026-09-28 查證）|
+| 牌價（輸入／輸出，每百萬 token）| $2 ／ $10（快取讀取 $0.20＝標準 ×0.1）| $2 ／ $10（不變，但**快取讀取降為 $0.10＝×0.05**）| 官方 Sonnet 5.5／Sonnet 5 模型頁（2026-10-10 查證）|
+| 知識截止 | Jan 2026（可靠知識截止＝訓練資料截止）| Jun 2026（可靠知識截止＝訓練資料截止）| 官方 models overview／Sonnet 5 頁（2026-10-10 查證）|
+| 會不會停掉 | 仍 active（legacy），退役不早於 2027-06-30 | 仍 active，退役不早於 2027-09-28 | 官方 model deprecations 表（2026-10-10 查證）|
 | 從舊代升上去會壞什麼 | —（基準世代）| 官方 migration guide 尚未見完整記載（原文截斷）；社群回報 5 處行為差異，見表下細節 | 待補 |
 | 官方推薦拿它做什麼 | 已非 API 預設 | 界定清楚的日常任務：修 bug、產出文件／簡報／試算表，設計細節敏銳 | 官方發布文（2026-09-28 查證）|
 | 我的方案能不能用 | 同右，兩代同一套方案規則 | 官方原文僅提及 Anthropic API；Pro／Max／Team／Enterprise 是否同步未載 | 官方發布文（2026-09-28 查證）|
+
+
+**懸置細節**
+- ⟨Q-01⟩ 🔎 **查無官方**（標 2026-09-28｜查 v2.1.284、Claude Code CLI 預設｜複 2026-11-10）｜**Sonnet 5.5 是否同步為 Claude Code CLI 預設**：官方只說「Anthropic API 預設 Sonnet」。
+  - 2026-10-10 查官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)、[model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations) 與 [Claude Code settings reference](https://code.claude.com/docs/en/settings-reference)，三處都沒有說哪個模型是 CLI 預設——官方文件不載 CLI 預設模型這件事
 
 **表下細節**
 
 - **mixed-news.com：工作階段可能被自動降回 Sonnet 5（細節未載）**：報導稱使用者在未主動輸入特定內容的情況下，Sonnet 5.5 工作階段也可能被自動降回 Sonnet 5；觸發條件、影響範圍與是否可關閉均未見報導，僅標題可讀，不採信推算（[mixed-news.com](https://news.google.com/rss/articles/CBMif0FVX3lxTFBFcVJCd0NrVEZkeDZxTHJsakdDWXJXRVZ4NzVTNTJ5VjhFV0pOZVhsajYtRXR1cERpOWdaZ0lLeXYxQk16T3VORE4ybVVFdUsyemVrUmFTNi13Y2M1SHF1a055M0l4TVlHaEZGdkFuc3JmSkVPX2VZa0owQ2RrQVE?oc=5)，2026-10-01）
 - **社群回報：升級有 5 處行為差異、1 處靜默失敗（未經官方證實）**：MIXED Reality News 稱從 Sonnet 5 升級至 Sonnet 5.5 在五種情境下出現行為差異，其中一種無錯誤訊息即靜默失敗，建議升級前先跑回歸測試；原文僅標題可讀，具體情境未見完整記載，不採信推算（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30）
 - **牌價完全不變，靠速度換效率**：$2/$10 維持不動，官方以「速度快 30%＋多數工作省最多 30% 成本」表述升級，與 Opus 5.5 那次「牌價降 20%」的換代邏輯不同。
-- **快取讀取 $0.20／Mtok＝基礎輸入價（$2）的標準 0.1 倍**，非 Fable 5.1／Mythos 5.1 的 0.025 倍優惠費率，見 [[entities/pricing]]。
+- **快取讀取 $0.10／Mtok＝基礎輸入價（$2）的 ×0.05**，與 Opus 5.5 同屬 5% 優惠檔，比前代 Sonnet 5 的 $0.20（×0.1）**便宜一半**（官方 [Sonnet 5.5 模型頁](https://platform.claude.com/docs/en/models/sonnet-5-5/overview) Pricing 表，2026-10-10 查證）；Fable 5.1／Mythos 5.1 另為 ×0.025。費率全表見 [[entities/pricing]]。
+  > 本庫原記為「$0.20＝標準 ×0.1」，2026-10-10 對官方模型頁更正；同一錯誤同批已在 [[topics/model-comparison]] 與 [[entities/pricing]] 乘數表上修。
 - 官方發布文提及在另一項評測（疑似 GDPval 系列）「落後 Opus 5.5 兩分」，本站可讀摘要於此處截斷，benchmark 全名與雙方分數皆未見完整記載，不採信推算。
 
 ---
@@ -173,7 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - HN 互動累計回升至 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），仍低於 Opus 5.5 發布當日的 1,674 分
 - **2026-09-28**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 同步新增支援並設為 API 預設 Sonnet（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）
   - Terminal-Bench 4.0：70.6%（前代 Sonnet 5 為 10.3%）；官方稱另在 GDPval 系列某評測落後 Opus 5.5 兩分，原文截斷未載完整名稱與分數
-  - 牌價維持 $2/$10 每 Mtok、快取讀取 $0.20（標準 0.1 倍）；官方定價頁同步改版，分層費率細節見 [[entities/pricing]]
+  - 牌價維持 $2/$10 每 Mtok；快取讀取**$0.10（×0.05）**——本庫當日依發布文記為 $0.20（×0.1），2026-10-10 對官方模型頁更正；官方定價頁同步改版，分層費率細節見 [[entities/pricing]]
   - 官方預告 Claude Haiku 5.5 將於未來數週內加入 5.5 家族，尚未發布。**後續（2026-10-07）**：Haiku 5.5 已發布，見 [[entities/haiku-5-5]]
   - 路透報導將此次上線與 Anthropic IPO 籌備進度並列；TechCrunch、VentureBeat、The Decoder、SiliconANGLE 及 Hacker News、Reddit 同日跟進，合計至少 7 個來源（Reuters，2026-09-28）
   - HN 互動 46 分（2 個來源），訊號偏弱

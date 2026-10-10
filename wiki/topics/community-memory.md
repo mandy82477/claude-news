@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **最新做法**（2026-10-09）
@@ -51,6 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **記憶**：官方 auto memory＋把決策寫回 repo 是現在的底；社群工具（claude-mem、projectmem、brain.md、token-savior 等）各走一路，還沒收斂。**接下來看什麼：** 有沒有人拿兩三個工具在同一個專案上做比較。
+- **Agent 寫出的文件**：2026-10-08 有人提出把規劃文件發布到可持久引用的連結，避免檔案被取代後脈絡消失；單一作者做法，還在試。
 - **CLAUDE.md**：寫成規則而不是建議，違反架構的改動交給 CI 或 hook 攔；要 100% 遵守的規則不該只放 CLAUDE.md，見 [[topics/community-guardrails]]。
 - **Context**：即時取回優於預先載入；官方 2026-07-26 移除逾 80% Claude Code 系統提示詞，是這條路唯一的廠商一手依據（見下方 2026-07）。
 - **你的選項：** 先用官方 auto memory，決策寫進 repo；要團隊共享或跨工具攜帶時才加社群工具，並記得它們都還沒有第二方驗證。

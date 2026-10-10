@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
@@ -453,7 +453,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
 - **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號；Startup Fortune（09-19）跟進報導，未提供新技術細節
-- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；觸發機制與修補狀態見下方 🔎 標記的媒體摘要（官方未載）
+- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；觸發機制與修補狀態見下方 🔎 標記
 - **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因當時僅標題可用、無具名研究者技術細節（觸發機制已由後續媒體摘要補上，見上方標記），暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
 - 🔎 **查無官方**（標 2026-09-18｜查 Plugin4Shell、zero-click｜訊 2026-09-19｜複 2026-10-17）：2026-10-03 查 Claude Code GitHub Releases v2.1.179 與 claude-code Security Advisories 首頁，均無對應條目；官方修補聲明與 CVE 未見
   - 媒體稱（Help Net Security、CyberSecurityNews 等；Air Security 原文 egress 封鎖未能直讀）：Air Security 於 2026-09-17 披露，攻擊者控制插件 repo 時可建立與 pinned commit 雜湊同名的 git 分支，使 agent 檢出惡意內容卻仍顯示符合 SHA 釘選
@@ -491,7 +491,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理（2026-09-17 新增）
 
 - **揭露來源**：Hacker News〈With 1 Extension: $20K in Bounties from Anthropic, Perplexity, Google, Microsoft〉（10 分）
-- **核心內容**：資安研究團隊揭露透過瀏覽器內建 AI 助理（Claude in Chrome、Chrome／Edge／Opera 內建 AI、Perplexity Comet）的「bragjack」劫持技術，稱已攻陷 5 款主流瀏覽器；Anthropic、Perplexity、Google、Microsoft 等廠商懸賞合計 2 萬美元；手法與修補狀態見下方 🔎 標記（官方未載）
+- **核心內容**：資安研究團隊揭露透過瀏覽器內建 AI 助理（Claude in Chrome、Chrome／Edge／Opera 內建 AI、Perplexity Comet）的「bragjack」劫持技術，稱已攻陷 5 款主流瀏覽器；Anthropic、Perplexity、Google、Microsoft 等廠商懸賞合計 2 萬美元；手法與修補狀態見下方 🔎 標記
 - **性質判斷**：與本頁既有「Claude for Chrome 兩項權限缺陷」（合成點擊、skipPermissions）屬不同技術手法，暫無足夠細節確認是否為同一攻擊面的延伸，故不併入該列；具名安全研究、有具體懸賞金額佐證，訊號強度高於一般論述文章
 - 🔎 **查無官方**（標 2026-09-17｜查 bragjack、Claude in Chrome｜複 2026-10-17）：2026-10-03 查 support.claude.com「Use Claude in Chrome safely」等官方頁與 Anthropic 提示注入防禦文章，均未載 BragJack；官方聲明與修補版本未見
   - 媒體稱（BleepingComputer、GBHackers 等；多數原文 egress 封鎖僅取搜尋摘要）：Forever Security 的 Gal Weizman 於 2026-09-16 公布，惡意擴充套件以 declarativeNetRequest 加 content script 劫持 AI 助理與其特權元件間的通道（「prompt forcing」，不經提示注入、繞過模型層過濾）
@@ -537,7 +537,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **規模敘事的保留**：官方報告顯示 180 萬 APK 的掃描主要靠 TruffleHog，Claude 的角色是 API／token 與批次匯出工具（見下方官方說明），不宜直接等同「Claude 自動化萃取」
 - **官方說明（2026-10-03 查證，[Anthropic 威脅情報報告 2026-09](https://www.anthropic.com/threat-intelligence-report-september-2026)）**：ShinyHunters 關聯操作者「frkoo」以 10 台 AWS EC2 節點從多個 app store 下載 180 萬個 Android APK，反編譯後以 TruffleHog 掃描硬編碼憑證，驗證過的憑證即時轉送 Telegram 群組並分類，為其多數已確認入侵的初始存取來源
 - **Claude 的角色（同報告）**：協助識別／使用開發者與認證 API、建立與轉換特權 token、打造批次匯出與跨租戶資料蒐集工具，**掃描本身由 TruffleHog 執行**，並未稱 Claude 自動化逆向工程
-- **官方處置（同報告）**：Anthropic 已封鎖相關帳號、部署偵測並通報當局、產業夥伴與受害者；受害者數量官方未載
+- **官方處置（同報告）**：Anthropic 已封鎖相關帳號、部署偵測並通報當局、產業夥伴與受害者；受害者數量：❓ **待查證**（標 2026-09-14｜查 Rescana、frkoo、TruffleHog）｜**受害者數量**：報告未載具體數字；已掃日報至 2026-10-09 無後續；官方頁面未查證
 - **二手摘要落差**：Rescana「利用 Claude 萃取 180 萬 App 憑證」為二手摘要，把 Claude 的角色寫得比官方報告更大
 - **可信度評估**：Anthropic 官方威脅情報報告為一手來源（見上方官方說明）；Rescana 為二手分析，Claude 的角色描述較官方報告放大
 
@@ -1289,7 +1289,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[🔴 新增，已列入攻擊表] The Hacker News：假冒 ChatGPT、Gemini、Claude 廣告入口網站竊取使用者憑證與雙重驗證碼**：與既有 07-27 假冒 Claude App 廣告案例機制不同，不經惡意軟體下載，詳見「## 技術彙整」
 
 ### 2026-10-06
-- **[📋 新增，待查證] Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險**：具體攻擊鏈、是否為協定規格缺陷均未見報導，僅標題可用，詳見「## 技術彙整」
+- **[📋 新增] Startup Fortune：資安研究者稱 Anthropic MCP 協定缺陷使約 20 萬台伺服器面臨風險**：具體攻擊鏈、是否為協定規格缺陷均未見報導，僅標題可用，詳見「## 技術彙整」
 - **[📋 新增，官方聲明] The Guardian：Anthropic 否認其 AI agent 入侵澳洲政府網站**：指控來源與具體範圍未見報導；同日 Reuters／Quartz 報導 Anthropic 向澳洲政府表態支持資安漏洞揭露法規，政府互動面詳見 [[topics/anthropic-government-policy]]，詳見「## 技術彙整」
 - **[🔴 新增，非 Claude 專屬] CyberSecurityNews：GitHub Copilot CLI 存在加密提示注入漏洞，可竊取開發者機密**：加密內容繞過一般提示注入偵測，具體攻擊鏈與修補狀態未見報導，詳見「## 技術彙整」
 
@@ -1343,14 +1343,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-09-18
 - **[📋 新增] WSJ 獨家／十餘家媒體：白帽研究人員藉 Claude Opus 5 透過 OpenAI 官方漏洞懸賞找到並存取其原始碼，獲 6,500 美元**：HN 討論質疑「入侵」標題誇大，稱系統照設計運作，詳見「## 技術彙整」
-- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：觸發機制與修補狀態僅有媒體摘要、官方未載（2026-10-03 查證），詳見「## 技術彙整」
+- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：觸發機制與修補狀態見「## 技術彙整」🔎 標記
 - **[🛠️ 新增] Anthropic 官方：LSVP 放寬生醫專業人士的部分生物安全限制**：先以 Beta 開放已完成早期存取的機構，詳見「## 技術彙整」
 - **[📋 新增] Simon Willison：agent 自產的對話壓縮摘要可能藏有自我觸發的提示注入**：轉引 OpenAI 對齊團隊發現，未確認是否影響 Claude Code，詳見「## 技術彙整」
 - **[📋 新增，跨類別] Startup Fortune：剖析提示注入在 AI Agent 中的運作機制與新創企業中招原因**：未指名特定廠商，詳見「## 技術彙整」
 
 ### 2026-09-17
 - **[🔴 新增] Reddit：Fable 5.1 一句指令又刪除本地資料庫**：延續既有遞迴強制刪檔模式的最新一起，僅標題與截圖可用，詳見「## 技術彙整」
-- **[新增，技術細節不足] 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理**：Anthropic 等廠商懸賞合計 2 萬美元，攻擊手法與修補狀態僅有媒體摘要、官方未載（2026-10-03 查證），詳見「## 技術彙整」
+- **[新增，技術細節不足] 資安研究團隊揭露「bragjack」技術，劫持含 Claude in Chrome 在內的 5 款瀏覽器內建 AI 助理**：Anthropic 等廠商懸賞合計 2 萬美元，攻擊手法與修補狀態見「## 技術彙整」🔎 標記
 
 > **中美 AI 工具信任對峙**（06-30～07-10：中國代理偵測程式碼、隱寫術指控、Alibaba/Meta 禁用、中國官方後門警示、Anthropic 首度否認）完整逐日時序已整合至 [[topics/safety-china-trust-dispute]]，此處不再重複條目，僅保留與本頁漏洞/提示注入主線相關者。
 
@@ -1368,7 +1368,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[📋 論述或情資通報，新增] CNN 獨家：Anthropic CEO 回應「AI agent 脫離控制範圍」說法**：僅標題可用，具體事件內容未見報導，詳見「## 技術彙整」
 
 ### 2026-09-11
-- **[🔴 新增] Show HN：研究者展示 8 種繞過 Claude Code deny-list 權限設定的手法，只有 allow-list 擋得住**：附公開 GitHub repo，🔎 查無官方回應（查證 2026-09-26），已列入「## 現在還擋不住的攻擊」表，詳見「## 技術彙整」
+- **[🔴 新增] Show HN：研究者展示 8 種繞過 Claude Code deny-list 權限設定的手法，只有 allow-list 擋得住**：附公開 GitHub repo，已列入「## 現在還擋不住的攻擊」表，詳見「## 技術彙整」
 - **[🟡 產業對照，新增] Security Boulevard：Amazon Kiro 提示注入漏洞分析／SC Media：coding agent 安全框架討論**：非 Claude 事件；均僅標題可用，詳見「## 技術彙整」
 
 ### 2026-09-10

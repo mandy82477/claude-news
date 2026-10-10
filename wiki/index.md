@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 
 ---
 
@@ -42,7 +42,7 @@
 |------|------|------|------|------|
 | [[entities/sonnet-5-5]] | model | 🤖 模型 | active | Claude Sonnet 5.5：2026-09-28 發布，取代 Sonnet 5 成為 API 預設 Sonnet，Terminal-Bench 4.0 由 10.3%→70.6%，牌價維持 $2/$10 |
 | [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位 |
-| [[entities/haiku-5-5]] | model | 🤖 模型 | active | Claude Haiku 5.5：2026-10-07 發布，取代 Haiku 4.5，官方稱最便宜最快最具能力的小型模型，成本降約 75%；精確牌價 ❓ |
+| [[entities/haiku-5-5]] | model | 🤖 模型 | active | Claude Haiku 5.5：2026-10-07 發布，取代 Haiku 4.5，官方稱最便宜最快最具能力的小型模型，成本降約 75%；牌價 From $0.10/$0.50、1M context（已查實） |
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | active | Claude Science：科學家專用 AI 工作台，整合研究工具套件、可稽核 artifact、彈性運算資源；Anthropic 宣布自行開發藥物 |
 | [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-mods]] |
 | [[entities/opus-5-5]] | model | 🤖 模型 | active | Claude Opus 5.5：2026-09-22 發布的現行 Opus，$4/$20、快取讀取 $0.20，官方稱多數工作追平 Fable 5.1；v2.1.280 起為 Claude Code 預設模型 |
@@ -113,14 +113,14 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：20 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]]、[[topics/community-tech-patterns-archive]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]]、[[topics/community-tech-patterns-archive]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
-| [[topics/llm-wiki-pattern]] | 🌐 社群 | ongoing | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面八種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
+| [[topics/llm-wiki-pattern]] | 🌐 社群 | monitoring | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面八種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]]　↳ 子故事：[[topics/safety-china-trust-dispute-archive]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界；Anthropic 研究稱進階網攻能力正擴散至 GLM-5.3 等他家模型　↳ 子故事：[[topics/ai-agent-safety-archive]] |
-| [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動，FTC 新對 Anthropic／OpenAI 開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
+| [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動——五角大廈供應鏈風險黑名單上訴法院維持（09-25）、FTC 新開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
 | [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |

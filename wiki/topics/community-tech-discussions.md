@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-08
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-08
 
 > **最新動態**（2026-10-08）
@@ -56,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-14「Notes on」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **auto 模式算不算一道安全邊界** | 還在吵 | 2026-09-02「Show HN: Aura——SRE」（[[topics/community-tech-discussions#2026-09]]） | 官方文件 ＋ 社群單則實作經驗 | 官方：由第二個分類器模型逐一審動作，但對話裡設的邊界可能因壓縮而遺失，要硬保證得改用 deny 規則 |
 | **輸出浮水印與帳號執法透明到什麼程度才夠** | 還在吵 | 2026-09-02「付費帳號無預警遭停權」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名評論人 ＋ 四家媒體同日跟進 | 官方 2026-08-11 公告浮水印政策，適用全產品線且不可退出；停權申訴管道未見官方說明 |
-| **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-02「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
+| **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-03「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
 | **AI 該寫多少程式碼、該不該把工作改寫成 loop** | 僵住 | 2026-06-24「立場收縮」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名表態，社群兩極化 | 無公司層說法；創始人本人言論軌跡見 [[entities/boris-cherny]] |
 | **thinking 內容能不能自己核驗** | 僵住 | 2026-06-23「Extended Thinking 為摘要」（[[topics/community-tech-discussions#2026-06]]） | 官方文件 ＋ 單次高互動討論 | 官方文件：5 世代預設不回思考內容、只回加密簽名，需要完整輸出得另行洽談（2026-09-06 查證） |
 | **HTML 還是 Markdown 當輸出格式** | 僵住 | 首見 2026-05-09「HTML 取代 Markdown 作為」，最後證據 2026-05-20 官方 Blog 背書（同一則條目內，見[[topics/community-tech-discussions#2026-05]]） | 單次高互動討論 ＋ 官方部落格一則 | 無官方立場 |
@@ -169,13 +169,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill | 2026-09-26 · 2026-09-26 | 🔥🔥🔥 | ☄️閃現 | 作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 耗時，做出可控版面圖表語言＋agent skill；HN score 351 | reladraw |
 | Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | ☄️閃現 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題） | — |
 | Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | ☄️閃現 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節） | — |
-| 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | ☄️閃現 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節） | — |
-| Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | ☄️閃現 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記 | — |
-| Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；Reddit r/artificial 週熱門標記（詳見細節） | — |
-| Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌 | 2026-09-14 · 2026-09-14 | 🔥 | ☄️閃現 | Laurie Voss：寫程式成本快速下降，但後續審查、修復與維運工作的成本也同步下降；具名表態，無社群延燒（詳見細節） | — |
-| Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者 | 2026-09-12 · 2026-09-12 | 🔥🔥 | ☄️閃現 | 開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述（詳見細節） | — |
-| HN 討論「AI 解數學難題也可能助長濫用」：留言呈現風險當真與質疑聳動兩極 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | WSJ 報導 AI 解數學難題與濫用風險；HN 留言兩極：一稱已居家合成病毒結構，一批報導標題聳動（詳見細節） | — |
-| 開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt，工作流程已重構三次 | 2026-09-12 · 2026-09-12 | 🔥 | ☄️閃現 | 開發者分享兩年用 agent 經驗，工作流程重構三次；「垂直切片」vs「整包功能」提示結構尚無共識（詳見細節） | — |
+| 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | 🌙靜候 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節）（最後動態 2026-09-18） | — |
+| Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | 🌙靜候 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記（最後動態 2026-09-17） | — |
+| Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | 🌙靜候 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；週熱門標記（詳見細節；最後動態 2026-09-14） | — |
+| Simon Willison 引述 Laurie Voss：寫程式成本崩跌的同時，審查／修復／維運成本也在崩跌 | 2026-09-14 · 2026-09-14 | 🔥 | 🌙靜候 | Laurie Voss：寫程式成本快速下降，但後續審查、修復與維運工作的成本也同步下降；具名表態，無社群延燒（詳見細節）（最後動態 2026-09-14） | — |
+| Boris Cherny 親自回信一名質疑「AI 產出程式碼品質下滑」的開發者 | 2026-09-12 · 2026-09-12 | 🔥🔥 | 🌙靜候 | 開發者質疑 AI 產出程式碼品質下滑，Boris Cherny 親自回覆；登 Business Insider，Simon Willison 引述（詳見細節）（最後動態 2026-09-12） | — |
+| HN 討論「AI 解數學難題也可能助長濫用」：留言呈現風險當真與質疑聳動兩極 | 2026-09-12 · 2026-09-12 | 🔥 | 🌙靜候 | WSJ 報導 AI 解數學難題與濫用風險；HN 留言兩極：一稱已居家合成病毒結構，一批報導標題聳動（詳見細節）（最後動態 2026-09-12） | — |
+| 開發者兩年 LLM coding agent 心得：該用「垂直切片」還是「整包功能」下 prompt，工作流程已重構三次 | 2026-09-12 · 2026-09-12 | 🔥 | 🌙靜候 | 開發者分享兩年用 agent 經驗，工作流程重構三次；「垂直切片」vs「整包功能」提示結構尚無共識（詳見細節）（最後動態 2026-09-12） | — |
 | 作者放棄用 Claude 開發新版 app、改回手寫，對照職場全面依賴 LLM 寫程式的現況 | 2026-09-09 · 2026-09-09 | 🔥🔥 | 🌙靜候 | 作者有一款自建、擁有穩定用戶群的成功 app，過去約六個月斷續用 Claude 開發新版本後決定放棄、改回手寫；同時提及自己工作場所全面依賴 LLM 寫程式；HN score 48 | — |
 | Reddit r/ClaudeCode：反駁額度抱怨聲浪，資深後端工程師稱半年僅遇限額約一次 | 2026-09-06 · 2026-09-06 | 🔥 | 🌙靜候 | 針對本週一片抱怨用量限制的貼文，作者稱自己資深後端、用 Claude Code 半年很少碰到上限，主張問題出在工作流而非額度；無「週熱門」標記，score 不可信 | — |
 | Simon Willison：OpenAI 面向開發者發布 GPT-6 Astra | 2026-09-05 · 2026-09-05 | 🔥 | 🌙靜候 | Simon Willison 部落格記錄 OpenAI 面向開發者發布 GPT-6 Astra；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/)（Blog） | — |
@@ -198,11 +198,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Simon Willison 引述 Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要 | 2026-08-23 · 2026-08-23 | 🔥 | 🌙靜候 | Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要（Simon Willison 轉引） | — |
 | Reddit r/MachineLearning 週熱門：實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 先前浮水印表態 | 2026-08-23 · 2026-08-23 | 🔥 | 🌙靜候 | 作者實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 浮水印表態（Reddit 週熱門） | — |
 | Show HN：以 JPEG gain-map 技術讓 Logo 在 HDR 螢幕呈現額外高亮效果，作者稱與 Claude Code 協作開發 | 2026-08-22 · 2026-08-22 | 🔥🔥🔥 | 🌙靜候 | 開發者以 JPEG gain-map 技術讓 Logo 於 HDR 螢幕額外高亮，稱與 Claude Code 協作開發；HN score 62 | — |
-| Simon Willison 引述 Linus Torvalds commit 訊息：「enormously helped by an AI doing much of the grunt-work」，原文未點名具體 AI 工具 | 2026-08-22 · 2026-08-22 | 🔥 | 🌙靜候 | Linus Torvalds commit 訊息稱「AI 大幅協助除錯」，**未指名工具**，不應臆測為 Claude（Simon Willison 轉引） | — |
-| Simon Willison：善用 coding agent 的核心技能是精準下達修改指令並確信驗證變更已如預期套用 | 2026-08-22 · 2026-08-22 | 🔥 | 🌙靜候 | Simon Willison 部落格主張，使用 coding agent 的關鍵技能並非傳統程式碼審查，而是「能自信地指示 agent 如何修改，並自信地驗證變更確實已依預期套用」；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Aug/22/more-than-just-code-review/)（Blog） | — |
-| Geeky Gadgets 教學文：面對新一代 Anthropic 模型，精簡提示詞優於逐步微觀管理 | 2026-08-22 · 2026-08-22 | 🔥 | 🌙靜候 | Geeky Gadgets 教學文：面對新一代 Anthropic 模型，精簡提示詞優於逐步微觀管理（媒體報導，待社群接力） | — |
 | Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌊延燒 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
-| 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌊延燒 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
+| 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌙靜候 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌊延燒 | 額度焦慮系列延燒，08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
 | 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-09-14 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT、09-14 preprompt 遷移 Ollama 筆記（HN 59）皆為新訊號 | Recall |
 | AI Skill Atrophy：「做更多、理解更少」 | 2026-06-10 · 2026-10-06 | 🔥🔥🔥🔥 | 🌋重燃 | HN Ask：Prompt-Then-Review 迴圈讓能力侵蝕；社群無共識但警覺度升高（重燃原因：10-06「按 Enter 的人該負多少」接力 10-05 soul-sucking 自白＋09-21 新進員工吐槽，見上方長期議題） | — |
@@ -214,7 +211,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
-- **Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者**：部落格作者觀察到 Claude Code 事後跳出的「建議訊息」常是作者自己不想要的改動（如「還原這個改動」），認為這類訊息本質上是說給模型自己看、不是給使用者看，並以餵給 LLM 以「start of user」結尾的提示詞會自行接續對話為例類推其機制；HN score 255；[原文](https://www.zohaib.cc/blog/smartest-claude-code-feature)（HN）
+- **Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者**：部落格作者觀察到 Claude Code 事後跳出的「建議訊息」常是作者自己不想要的改動（如「還原這個改動」），認為這類訊息本質上是說給模型自己看、不是給使用者看，並以餵給 LLM 以「start of user」結尾的提示詞會自行接續對話為例類推其機制；HN score 255；
+  - [原文](https://www.zohaib.cc/blog/smartest-claude-code-feature)（原文已失效，2026-10-09 連結健檢回 404；URL 保留供追溯）（HN）
 - **Claude 是否可能有意識：NYT 報導引 HN 辯論定義，Vox 整理 Anthropic 與天主教會的分歧**：HN 轉貼 NYT 報導（10 分），留言構想一個「技術上符合意識定義、但說不過去」的假設：聊天 session 搭配定時心跳腳本輪詢感測器並逐次回應；[NYT](https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html)（HN）
 - **Vox 延續同題：Anthropic 與教宗之爭**：Vox 電子報稱 Claude 的開發者擔心它可能有意識，天主教會持相反看法；單一媒體報導，未見社群延燒；[原文](https://www.vox.com/today-explained-newsletter/504966/anthropic-claude-consciousness-pope-leo)（Google News／vox.com）
 - **Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變**：Matthew Schwartz 延續『Vibe Physics』系列，本篇描述他停止直接對 Claude 下指令、改採放手讓其自主探索問題後，觀察到的研究方法轉變；官方部落格文章，HN score 27，未見社群跟進討論；[原文](https://www.anthropic.com/research/claude-shaped-science)（Anthropic Blog／HN）
@@ -241,8 +239,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **Simon Willison 引述 Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要**：Simon Willison 部落格引述 Drew Breunig 文章〈Fable: The End of Moore's Law〉觀點：在 Fable 推出之前，投入大量心力優化 coding harness 或 context 策略顯得沒有必要，暗示 Fable 的出現改變了這個判斷；完整論證未見於摘要，原文以「摩爾定律終結」為喻；具名表態（Simon Willison／Drew Breunig），無社群延燒；[原文](https://simonwillison.net/2026/Aug/23/drew-breunig/)（Blog）
 - **Reddit r/MachineLearning 週熱門：實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 先前浮水印表態**：作者釋出 SynthID-Text 風格語言模型浮水印機制的實作教學專案，內文提及呼應 Anthropic 先前公開表態將為模型輸出加入浮水印機制的方向；與本頁 08-11「隱形浮水印政策引發社群反彈」🌊延燒議題軸線相關——本則從技術實作角度補充浮水印機制本身如何運作，非政策反彈角度；Reddit r/MachineLearning 週熱門標記；[原文](https://www.reddit.com/r/MachineLearning/comments/1vw18ys/implementing_watermarking_for_language_models_p/)（Reddit · 週熱門）
 - **Show HN：以 JPEG gain-map 技術讓 Logo 在 HDR 螢幕呈現額外高亮效果，作者稱與 Claude Code 協作開發**：開發者釋出瀏覽器端小工具（免註冊），透過 JPEG gain-map 技術讓 Logo 在支援 HDR 的螢幕上呈現一般螢幕看不到的額外高亮效果；作者原文明確提及「I worked with Claude Code to turn it into a little browser-based utility」；HN score 62，跨來源佐證；屬「用 Claude Code 快速做出小型 demo 型工具」案例，呼應本頁長期收錄的創意應用案例系列；[原文](https://www.soverybright.com/)（HN）
-- **Simon Willison 引述 Linus Torvalds commit 訊息：「enormously helped by an AI doing much of the grunt-work」，原文未點名具體 AI 工具**：Simon Willison 部落格引述 Linus Torvalds 在一則 Linux kernel commit 訊息中的話：「And this was a debug session from hell, enormously helped by an AI doing much of the grunt-work.」；**原始抓取片段未指名具體使用哪一款 AI 工具**，不應臆測為 Claude；具名表態（Linus Torvalds），無社群延燒；[原文](https://simonwillison.net/2026/Aug/22/linus-torvalds/)（Blog）
-- **Geeky Gadgets 教學文：面對新一代 Anthropic 模型，精簡提示詞優於逐步微觀管理**：Geeky Gadgets 教學文章主張，面對新一代 Anthropic 模型時，精簡的提示詞比逐步微觀管理更能發揮效果；具體論據與實測方法未見於本次日報摘要（僅 HTML 片段）；重要媒體單一報導，無社群延燒佐證（媒體報導，待社群接力）；，另有一來源同步報導；[原文](https://news.google.com/rss/articles/CBMiakFVX3lxTE5UVVVkcGdQaXByLXdiWW1uMW1GanZIRm1oQUNfeldkcUo2MXptSndsNHlBbzE1TWJCdUgwWDRlcDF2UmoxcnFhZFRvX2JhTC1LVlpuaGc2TDQ3dlpHd3NsZG82Ymt3SWJTUFE?oc=5)（Google News）
 - **Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天**：Hacker News 熱門討論（連結至 [GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)）批評 Claude 4.7、4.8、5.0 與 Fable 模型輸出用詞浮誇，充斥「行話」（blast radius、earned its keep、spine 等被列入禁用詞清單的用語）且難以維持連貫散文，即使給出明確風格指示仍難改善；留言指出負責回覆此 issue 的 Anthropic 工程師疑似用 Claude 代寫回應，而該回覆本身仍帶有被抱怨的同類「Claude-isms」，引發讀者兩極反應（此為留言區質疑，未經官方證實）；HN score 181；08-20 Reddit r/ClaudeCode 貼文聚焦「官方回覆疑似 Claude 代寫」爭點延燒次日，跨平台佐證（）；截至 08-27 該 issue 已累積 106 則留言、517 個反應，8 天內持續增溫，符合 🌊延燒（3 天以上持續延燒）條件，由 ☄️閃現 升格；與本頁 08-10「把 Claude 式用語翻譯成一般英文的 plugin」同屬「Claude 制式措辭／行話」議題軸線；[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)（HN／Reddit／GitHub Issues）
 - **「Anthropic's War on open source AI」批評文於 HN 引發熱議，留言區另質疑該文本身是否由 AI（疑似 Grok 假扮 Claude）代筆**：一篇批評 Anthropic 對開源 AI 生態立場的貼文（以 X/Twitter 貼文形式流傳）於 Hacker News 引發熱議；HN 留言區除討論原文論點外，另有一派留言質疑該文字風格疑似非人類撰寫，懷疑是 Grok 冒充 Claude 語氣代筆，使討論分岔為「Anthropic 開源立場評價」與「AI 生成內容可信度」兩條並行爭論；HN score 146，單平台高互動、議題共鳴深，尚無跨平台佐證；原文具體論據未見於本次摘要，需讀者自行查閱；[原文](https://twitter.com/TheAhmadOsman/status/2065307070044234186)（HN）
 - **Show HN：show-me — 讓 coding agent 以精簡視覺化取代大量文字輸出的 agent skill**：`npx skills add humanlayer/skills --skill show-me` 安裝；HN score 10；與「現在吵到哪」第 10 列「HTML 還是 Markdown」同屬輸出格式議題軸線後續訊號；[原文](https://www.humanlayer.com/blog/show-me-skill)（HN）
@@ -271,7 +267,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 #### Claude Code 的「建議訊息」功能，實際上是說給模型自己聽（2026-10-06）
 
-- **來源：** Claude Code's suggested message feature: I think the real customer is the model — Hacker News（255 分）；[原文](https://www.zohaib.cc/blog/smartest-claude-code-feature)
+- **來源：** Claude Code's suggested message feature: I think the real customer is the model — Hacker News（255 分）；[原文](https://www.zohaib.cc/blog/smartest-claude-code-feature)（原文已失效，2026-10-09 連結健檢回 404；URL 保留供追溯）
 - **核心論點：** 部落格認為 Claude Code 事後跳出的「建議訊息」實際上是講給模型自己看、不是講給使用者看，並以餵給 LLM 以「start of user」結尾的提示詞會自行接續對話的現象類推這個機制
 - **關鍵回響：**（本次摘要未提供留言區細節，HN 255 分為近期單篇互動量最高的技術評論之一）
 - **收斂結論：**（無）作者對功能設計意圖的個人解讀，無官方回應或第三方驗證；僅標題與摘要可用，留言區正反意見未見細節

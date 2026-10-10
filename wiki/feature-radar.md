@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 
 > **這禮拜動了什麼**（2026-10-09）
 > v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -522,32 +522,32 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Opus 5.5 成為新預設模型**（v2.1.280，除 Foundry 外全通道；模型本身見 [[entities/opus-5-5]]） | 2026-09-22 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 免計費 server-side classifier**（v2.1.278，`/status` 新增顯示列） | 2026-09-19 | 🔥🔥🔥🔥 | ✅ 強烈推薦 | 正式發布 |
 | **Claude Code 讀取 AGENTS.md**（v2.1.277，無 CLAUDE.md 時原生改讀，回應 #6235） | 2026-09-18 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥🔥 | ⏳ 觀望 | Beta |
+| **Claude Code Projects**（雲端並行 agent session，協調多執行緒，Beta） | 2026-09-17 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Cowork 與 Chat 合併＋Claude Docs／Slides 上線**（Design 整合進對話，可輸出 PPT／PDF） | 2026-09-17 | 🔥🔥🔥🔥 | ⏳ 觀望 | Beta |
 | **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code 桌面版雲端 session**（多 repo 掛載＋`disableMobileSimulatorTools`；09-16 再擴充：本地接手雲端、Desktop 推分支、組織開關） | 2026-09-14 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
-| **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
+| **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Smart Reports**（Beta，團隊用量分析報表：使用狀況、完成工作與成本） | 2026-09-10 | 🔥 | ⏳ 觀望 | Beta |
 | **maxEffortLevel 推理努力上限設定**（v2.1.267，跨供應商統一設定 effort 上限，含 Bedrock/Vertex/Foundry） | 2026-09-09 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **managedMcpServers 管理設定**（v2.1.259，組織可統一佈署 HTTP/SSE MCP 伺服器） | 2026-09-02 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Fable 5.1**（新一代旗艦，取代 5.0；同步發布信任機構限定 Mythos 5.1） | 2026-09-01 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **使用者個人資料 API**（Beta，TS sdk-v0.123.0／Python v1.3.0，含 `external_user_onboarding` 欄位） | 2026-09-01 | 🔥 | ⏳ 觀望 | Beta |
-| **PreModelSwitch／PostModelSwitch Hook 事件**（v2.1.251，可攔截/確認/標註模型切換，SessionStart resume 回傳新鮮度） | 2026-08-28 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **PreModelSwitch／PostModelSwitch Hook 事件**（v2.1.251，可攔截/確認/標註模型切換，SessionStart resume 回傳新鮮度） | 2026-08-28 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **SDK files／skills 命名空間轉正**（TypeScript sdk-v0.122.0／Python v1.2.0，beta 介面形狀改為 GA） | 2026-08-27 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **SendFeedback 工具**（v2.1.247，session 出錯時 Claude 草擬回報，經 `/feedback` 檢視後送出；可用 `feedbackDisabled` 關閉） | 2026-08-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Model Hardware Standard**（統一介面供 Claude 代理人操作機器人與科學實驗室儀器，Bloomberg／Ars Technica／FT 三方跟進） | 2026-08-27 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Cowork 記憶功能整合**（設定 > Memory > Topics，跨 web/App/Cowork 共用記憶，敏感主題預設關閉） | 2026-08-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **anthropic-sdk-python 1.0.0**（httpx2 Breaking Change，⚠️ 無過渡期） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **keybindingFlavor readline 模式**（v2.1.238，可選提示列刪除鍵行為；v2.1.261 起失效） | 2026-08-20 | 🔥 | ❌ 暫不推薦 | 正式發布 |
 | **Concise 輸出風格**（v2.1.237 新增內建 output style，省略前言與敘述性文字） | 2026-08-20 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Managed Agents Web Search 設定**（anthropic-sdk-python v0.125.0 新增 SDK 層設定支援） | 2026-08-19 | 🔥 | ⏳ 觀望 | Beta（SDK 層；框架整體仍 beta）|
 | **spellcheck 輸入框拼字檢查**（v2.1.235，需本機 aspell／hunspell／ispell） | 2026-08-18 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **自訂專案 Transcript 目錄短名稱**（`CLAUDE_CODE_PROJECT_DIR_NAME` 環境變數，v2.1.234） | 2026-08-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.233**（`--worktree`／`claude agents` 視圖支援 GitLab MR URL，MR 顯示為 `!N`；另有 opt-in `forward_user_identity` 設定） | 2026-08-14 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code Auto 模式預設化**（⚠️ Breaking change：8/14 起 auto 成為 Pro／Max／Team 預設權限模式；免收分類器 token 費；Enterprise 與雲端平台仍選用制） | 2026-08-14 生效（08-07 公告，08-10 官方部落格確認） | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code 跨 session 訊息互通**（v2.1.224+，Windows v2.1.234+；`ListAgents` 探索 session、`SendMessage` 指名傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code Auto 模式預設化**（⚠️ Breaking change：8/14 起 auto 成為 Pro／Max／Team 預設權限模式；免收分類器 token 費；Enterprise 與雲端平台仍選用制） | 2026-08-14 生效（08-07 公告，08-10 官方部落格確認） | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code 跨 session 訊息互通**（v2.1.224+，Windows v2.1.234+；`ListAgents` 探索 session、`SendMessage` 指名傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.232**（Subagent forking 預設開啟，`subagent_type: "fork"` 繼承完整對話與 prompt cache；派工行為亦調整，原文截斷） | 2026-08-13 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **API Inference Hooks**（Enterprise 組織 beta，claude.ai／Cowork／Claude Code 上受管治 prompt 可導向企業自有 AI 安全伺服器） | 2026-08-05 | 🔥 | ⏳ 觀望 | Beta（Enterprise） |
@@ -595,7 +595,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **OTEL metrics + claude agents 改善**（v2.1.161） | 2026-06-03 | 🔥 | ✅ 推薦 | 正式發布 |
 | **workflow → ultracode 重命名**（⚠️ Breaking Change, v2.1.160） | 2026-06-02 | 🔥 | ✅ 推薦 | 正式發布 |
 | **Claude Code v2.1.158**（Auto mode on Bedrock/Vertex/Foundry） | 2026-05-30 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Claude Opus 4.8**（SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用） | 2026-05-28 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Opus 4.8**（SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用） | 2026-05-28 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Dynamic Workflows**（最多 1,000 平行子代理，UltraCode 1.7M token bug 無退款） | 2026-05-28 | 🔥 | ❌ 暫不推薦 | 全部付費方案（Pro 在 `/config` 開）；2026-05-28 首發時為研究預覽。積木定位見 [[topics/anthropic-agent-stack]] |
 | **`skipLfs` 選項 + npm 版本通知**（v2.1.153） | 2026-05-28 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Coordinator 模式 + `/code-review --fix`**（v2.1.152） | 2026-05-27 | 🔥 | ✅ 推薦 | 正式發布 |
@@ -604,18 +604,18 @@ npm install @anthropic-ai/sdk@0.123.0
 | **`claude agents --json`**（v2.1.145） | 2026-05-20 | 🔥 | ✅ 推薦 | 正式發布 |
 | **自架沙箱 + MCP 隧道**（完整文件） | 2026-05-22 | 🔥 | ⚡ 有條件推薦 | 公開測試 |
 | **`/resume` 背景 session 擴展**（v2.1.144） | 2026-05-19 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Proactive Workflows**（2026-05-18 公告；官方以 Routines 落地，見 [[entities/managed-agents]]） | 2026-05-18 | 🔥 | ⏳ 觀望 | Routines 研究預覽 |
-| **Capability Curve**（Code w/ Claude 演講主題，非產品功能，見 [[entities/managed-agents]]） | 2026-05-18 | 🔥 | ⏳ 觀望 | 演講主題 |
+| **Proactive Workflows**（2026-05-18 公告；官方以 Routines 落地，見 [[entities/managed-agents]]）（2026-05-18 公告，此後未見後續報導） | 2026-05-18 | 🔥 | ⏳ 觀望 | Routines 研究預覽 |
+| **Capability Curve**（Code w/ Claude 演講主題，非產品功能，見 [[entities/managed-agents]]）（2026-05-18 公告，此後未見後續報導） | 2026-05-18 | 🔥 | ⏳ 觀望 | 演講主題 |
 | **Plugin 依賴關係強制執行**（v2.1.143） | 2026-05-16 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`claude agents` 細粒度旗標**（v2.1.142） | 2026-05-14 | 🔥 | ⚡ 有條件 | 正式發布 |
 | **`/loop`・`/batch`・`/background`** | 2026-05-14 | 🔥 | ✅ 推薦 | 正式發布 |
-| **`/goal` 指令** | 2026-05-12 | 🔥🔥🔥 | ✅ 推薦 | 正式發布 |
+| **`/goal` 指令** | 2026-05-12 | 🔥🔥 | ✅ 推薦 | 正式發布 |
 | **Agent View** | 2026-05-12 | 🔥 | ⚡ 有條件 | Research Preview |
 | **Managed Agents**（全套；官方仍標 beta，須 `managed-agents-2026-04-01` header） | 2026-05-11 | 🔥 | ⚡ 有條件 | Beta（所有 API 帳號預設可用） |
 | **macOS Computer Use** | 2026-05-03 | 🔥🔥 | ✅ 推薦 | 正式發布 |
 | **Claude Code Sandboxing** | 2026-05-10 | 🔥 | ⚡ 有條件 | 正式發布 |
 | **操作安全 + `hard_deny`** | 2026-05-09 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Claude Security**（公開 Beta） | 2026-05-06 | 🔥🔥 | ⚡ 有條件推薦 | 公開測試 |
+| **Claude Security**（公開 Beta） | 2026-05-06 | 🔥 | ⚡ 有條件推薦 | 公開測試 |
 | **Claude Connectors 創意工作** | 2026-05-04 | 🔥 | ⚡ 有條件 | 正式發布 |
 | **MCP `alwaysLoad`** | 2026-04-28 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`worktree.baseRef` 設定** | 2026-05-08 | 🔥 | ⚡ 有條件 | 正式發布 |

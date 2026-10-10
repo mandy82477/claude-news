@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
-> **牌價仍無確切數字**（2026-10-09）
-> dev.to 社群文稱 Haiku 5.5 逾 10 萬 token 轉為較高定價，單一來源未見官方佐證；精確 $/Mtok 牌價與 1M context 上限官方仍未公布具體數字。
+> **牌價已查實，分層級距仍未載**（2026-10-10）
+> 官方 models overview 載明 **From $0.10／From $0.50 每 Mtok、1M context**；但「From」底下的級距表官方沒給，dev.to 稱逾 10 萬 token 轉較高定價仍是單一來源、未獲官方佐證。
 
 ---
 
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-10-07 最新**：Anthropic 發布 Claude Haiku 5.5（API ID `claude-haiku-5-5`），為 Claude 5.5 家族第三款模型，繼 Opus 5.5（09-22）、Sonnet 5.5（09-28）之後。官方定位為「目前最便宜、最快、最具能力的小型模型」，面向高流量、成本敏感的工作（摘要、壓縮、資料庫查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼任務的 subagent 效果好；官方稱它也是迄今最快的模型，適合即時客服、瀏覽器操作等延遲敏感場景。平均執行成本比 Haiku 4.5 低約 75%（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）。同批官方也將 Claude Sonnet 5.5 的快取讀取價砍半，定價細節見 [[entities/pricing]]。
 
-精確 $/Mtok 牌價與 context 上限，官方發布文摘要未附具體數字，詳見下方「歷史記錄」⟨Q-01⟩；AWS、GitHub Copilot 同日同步上架（Reuters／VentureBeat，2026-10-07）。
+牌價已查實：**From $0.10／From $0.50 每 Mtok**、**1M context、128K 最大輸出、預設 effort `medium`、可靠知識截止 Jun 2026、退役不早於 2027-10-07**（官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)、2026-10-10 查證）。AWS、GitHub Copilot 同日同步上架（Reuters／VentureBeat，2026-10-07）。
 
 ---
 
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 這一格 | Haiku 4.5（前代） | Haiku 5.5（現行） | 官方出處（查證日）|
 |---|---|---|---|
 | 現在誰是預設 | 輕量 worker，退役下限 2026-10-15 | 現行 Haiku；是否已成為各方案預設 worker，原文未提及 | 官方發布文（2026-10-07 查證）|
-| 牌價（輸入／輸出，每百萬 token）| $1 ／ $5（官方確認，2026-08-20 查證） | 原文未附具體金額，僅稱「平均執行成本降約 75%」；精確值見⟨Q-01⟩ | 官方發布文（2026-10-07 查證）|
+| 牌價（輸入／輸出，每百萬 token）| $1 ／ $5（官方確認，2026-08-20 查證） | **From $0.10 ／ From $0.50**（官方表以 From 標示，非單一費率）| 官方 models overview（2026-10-10 查證）|
 | 知識截止 | 原文未提及 | 原文未提及（2026-10-07 查證） | 官方發布文（2026-10-07 查證）|
 | 會不會停掉 | 退役下限 2026-10-15（非確定停用日） | 尚無退役時程公告 | [[topics/model-comparison]]（2026-10-03 查證）|
 | 從舊代升上去會壞什麼 | —（基準世代）| 官方發布文未提及破壞性變更；migration guide 待查 | 待補 |
@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **表下細節**
 
-- context 上限：三家媒體標題稱 1M（MarkTechPost、shattered.io、tech-insider.org），與 Haiku 4.5 的 200K 不同；僅標題可讀，無法讀取完整內文，官方發布文摘要未見此數字，不採信推算，見⟨Q-01⟩。
+- context 上限：**官方已載 1M tokens**（官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)、2026-10-10 查證），與 Haiku 4.5 的 200K 不同；三家媒體標題（MarkTechPost、shattered.io、tech-insider.org）的 1M 說法因此獲官方佐證。
 - 官方同批宣布 Sonnet 5.5 快取讀取價砍半，屬 Sonnet 定價事件非 Haiku 本身，細節見 [[entities/sonnet-5-5]]、[[entities/pricing]]。
 
 ---
@@ -135,7 +135,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **2026-10-09**：[dev.to 社群文](https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4)（10/08 21:40 UTC）稱 Haiku 5.5 逾 10 萬 token 的 prompt 轉為較高定價，單一來源未見官方佐證；併入 ⟨Q-01⟩（見下）。
 - **2026-10-08**：Help Net Security 等 3 個來源（Google News，10/08 11:24 UTC）報導 Haiku 5.5 抵抗隱藏指令注入（prompt injection）的防禦力比前代顯著提升；原文僅標題可讀，具體測試方法與數字未見完整記載，不採信推算。完整安全框架分析見 [[topics/ai-agent-safety]]。
-  - ⟨Q-01⟩ ❓ **待查證**（標 2026-10-08｜查 [[entities/haiku-5-5]]、0.10｜複 2026-10-22｜訊 2026-10-09）｜**精確 $/Mtok 牌價與 1M context 未載**：官方稱降75%；VentureBeat稱降90%；3家標題稱 $0.10/Mtok、1M context，僅標題可讀，口徑不一，不採信推算。
+  - ⟨Q-01⟩ 🔎 **查無官方**（標 2026-10-08｜查 [[entities/haiku-5-5]]、分層定價、10 萬 token｜複 2026-11-10｜訊 2026-10-09）｜**仍未載的是「From」底下的分層級距**：牌價與 context 已查實（From $0.10／$0.50、1M）。
+    - 官方只給下限值、不給級距表；dev.to 稱逾 10 萬 token 轉較高定價仍是單一來源、未獲官方佐證。
+    - 原記「官方稱降75%；VentureBeat稱降90%；3家標題稱 $0.10/Mtok、1M context，僅標題可讀，口徑不一，不採信推算。
   - VentureBeat 稱定價已與 GPT-6 Luna 看齊，屬跨家比較，本頁不展開，相關快照見 [[topics/competitor-landscape]]；精確牌價更新見 [[entities/pricing]]。
   - dev.to 社群文（10/08）另稱逾 10 萬 token 轉為較高定價，單一來源未見官方佐證，併入本則 ⟨Q-01⟩。
 - **2026-10-07**：Anthropic 發布 Claude Haiku 5.5（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）。

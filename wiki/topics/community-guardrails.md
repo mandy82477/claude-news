@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-05
 
 > **最新做法**（2026-10-05）
@@ -351,6 +351,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Agent-plan-review-loop：對抗式 Claude Reviewer 逐步挑戰實作計畫（2026-07-10）
 
+- **主線：** 除錯分工
 - **核心模式：** 開發者開源 agent-plan-review-loop，讓一個預設「這個計畫是錯的」的對抗式 Claude reviewer 讀取真實 codebase，反覆挑戰待審計畫直到通過審查才放行，解決 LLM 審查者過度樂觀、容易對計畫照單全收的問題
 - **與既有模式的關係：** 與既有「多代理 PR Review」類別中「對抗性審查（計畫前 + 程式碼後）」（2026-05-12／06-25）同屬同一模式家族，此案例是該模式在「計畫審查」階段的具體開源實作，reviewer 明確讀取實際 codebase 而非僅憑計畫文字判斷
 - **來源：** 「I built a multi-agent loop where an adversarial Claude reviewer reads your actual codebase before approving plans」— dev.to（作者 execute25，#claudeai，原文發布 06-25）
@@ -358,6 +359,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 氛圍狀態燈：Hooks 驅動實體 LED 燈號提示 Agent 狀態（2026-07-02）
 
+- **主線：** —
 - **核心模式：** 用 ESP32 + WS2812 LED 燈條（跑 WLED 韌體，約 $10 材料成本）搭配 Claude Code hooks，在 session 各階段觸發燈光顏色變化，將 agent 狀態從螢幕通知延伸為實體環境訊號
 - **狀態對應：** 藍色＝執行中、琥珀色呼吸＝需要輸入/授權、綠色＝完成、紅色＝失敗
 - **解決的問題：** 長時間背景執行 agent 時容易忘記回頭查看是否卡在等待輸入，實體燈光比螢幕通知更不容易被忽略，尤其適合多視窗/多螢幕工作環境

@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **持續追蹤**（2026-10-09）
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | 香港與中國大陸不在許可存取區（高盛、OKX、VPN 存取；10-04 조선일보稱黑市規避封鎖；最後動態 10-04） | 定案 | 會：兩地帳號不在許可區，10-02 SCMP 另稱收緊 VPN 存取、用戶稱未經預告。高盛查出合約不涵蓋香港後自行切斷；OKX 企業帳號停權後恢復，港籍員工請求改導向其他模型 | 無時程 | Bloomberg 08-19＋SCMP 10-02＋Anthropic 區域政策 |
 | 文字輸出帶隱形浮水印（08-11 上線，法源為歐盟 AI Act 透明度規範；最後動態 08-25） | 進行中 | 會：所有新產生的文字在模型層加浮水印，隨複製貼上而走，輕度編輯多半移除不掉，逐字重寫才會 | 無時程（偵測 API 官方稱即將提供，未給日期） | 官方一手 |
-| 三項承諾落實：高風險請求換模型（06-30 官方公告 Defense in Depth；最後動態 07-02） | 進行中 | 會：送給 Fable 5 的高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋時會收到通知；官方明認日常 coding 與 debugging 會較常被誤攔。**只寫 Fable 5，5.1 是否沿用官方未說明** | 無時程 | 官方一手 |
+| 三項承諾落實：高風險請求換模型（06-30 官方公告 Defense in Depth；最後動態 07-02） | 進行中 | 會：Fable 5／5.1 的高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋會收到通知；官方明認日常 coding 較常被誤攔（09-26 查證，詳見產品節第 3 項） | 無時程 | 官方一手 |
 | 五角大廈供應鏈風險黑名單（08-28 一審裁定違法、即時解除；09-07 國防部維持立場；09-11 傳十月前遷出、09-26 官方證實約 90% 已遷出；09-25 D.C. 巡迴上訴法院推翻一審、維持認定；最後動態 10-07） | 進行中 | 不會：本案管的是聯邦機構採購與使用，不及於商用訂閱與 API | 2026-10（DOD 官方證實約 90% 已遷出，估十月底前完成，查證 2026-09-26；10-05～10-07 BBC／Homeland Security Today 稱已停用，僅標題可用，未見官方數字） | 法院文件＋跨 10+ 媒體＋DefenseScoop＋國防部官方聲明＋BBC／Homeland Security Today／Legis1（10-05～10-07，僅標題可用） |
 | 澳洲參議院AI調查聽證會（09-27 傳喚 OpenAI、Anthropic 執行長出席；09-28 兩公司確認不出席 10 月 1 日聽證會；最後動態 09-28） | 觀察 | 不會（目前）：確認不出席聽證會，尚未涉及具體規範或產品限制 | 2026-10-01（聽證會日期；Anthropic、OpenAI 確認不出席） | 跨 5+ 媒體（Reuters／Bloomberg／Al Jazeera／Anadolu Ajansı／The Guardian，僅標題可用） |
 | 英國測試機構模型存取受限（09-24/25 白宮據稱要求 Anthropic、OpenAI 暫緩提供新模型；最後動態 09-25） | 觀察 | 不會（直接）：管的是英國監管測試機構能否搶先測試新模型，不影響一般用戶的產品存取 | 無時程（Politico 稱待美方完成審查，未定期限） | 跨 2 媒體（Bloomberg／Politico，僅標題可用） |
@@ -120,7 +120,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   %% 09-27 讓位給澳洲參議院AI調查聽證會線（表滿載） %%
 - **澳洲參議院AI調查聽證會**：09-27 至少 4 個來源報導傳喚 OpenAI、Anthropic 執行長出席聽證會；09-28 Reuters／The Guardian 報導兩公司確認不出席 10 月 1 日聽證會，衛報將此與 OpenAI 遭駭事件餘波並提；具體法律強制力與衛報所稱關聯均未見報導。與既有「澳洲著作權遊說」線（07-13 起）當事國相同、議題不同，是否同一佈局待後續釐清。
 - **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
-  - ❓ **待查證**（標 2026-09-25｜查 AISI、withhold models）：具體審查範圍、期限，以及是否涵蓋既有 09-09 Mythos 5.1 提交爭議均未見報導
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就此發布任何說明**。
+    - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
+    - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
 - **歐盟監管姿態與據點爭奪**：07-31 歐盟稱將加強監控高風險 AI 系統部署，尚未提出針對 Anthropic 的具體措施；奧地利已向歐盟提案邀請 Anthropic 設立歐盟據點（06-28）。距今最後動態 07-31，滿 90 天為 **2026-10-29**。未列入上表，此處續留追蹤。
   %% 09-25 讓位給英國測試機構線（表滿載） %%
 - **五角大廈黑名單判決的第三方跟進**：Homeland Security Today（09-01）、Inc.com／Reason.com（08-31）跟進報導同一判決，未見超出既有記錄的新內容。
@@ -210,7 +212,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - AWS 建議需 IL4／IL5 的工作負載預設用 Sonnet 5，定位為受監管與 ITAR 工作負載的 AI 輔助開發入口；前例見 [2025-05-23 公告](https://aws.amazon.com/about-aws/whats-new/2025/05/amazon-bedrock-models-fedramp-high-dod-il-4-5-govcloud/)（Claude 3.5 Sonnet v1、3 Haiku）。
 - **授權不等於採購**：IL4／IL5 是雲端合規資格，黑名單是國防部採購決定，兩者並存不衝突；同一套授權存在，國防部選擇不用（後者依 BBC 標題）。
 
-**待查後續：** ❓ **待查證**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal）：① Anthropic 是否上訴更高審級（判決推理全文亦未見）；② 國防部是否因 09-25 判決暫緩十月遷出計畫。兩者均未見報導。
+**待查後續：** 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就本案發布任何說明**。判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。**仍未有答案的**：是否已正式提出全院複審或上訴最高法院（查無聲請紀錄）；國防部十月遷出計畫是否因本判決暫緩。
 
 ### 🚫 出口管制：誰來管最強的模型
 
@@ -369,7 +371,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-07-29 | 🌐 | Nextgov/FCW：「Anthropic calls for threading the needle on open-source AI」報導跟進 | 延續 07-27～07-28 Amodei「Our position on open-weights models」聲明的媒體跟進系列，僅標題可用，未提供超出既有共識的新細節 |
 | 2026-07-28 | 🏢 | Amodei 官方部落格聲明否認曾主張禁止開源權重模型（HN 972 分，全站互動最高）。 | 首度正面回應 07-23～07-26 延燒的「Nvidia 開放權重連署缺席」爭議；Amodei 主張無危險能力的開源模型屬公共財，但呼籲加強對中國晶片出口管制與安全測試；立場從「未表態」轉為「公開澄清＋提出替代訴求」 |
 | 2026-07-28 | 🌐 | Axios 等 6 家媒體跟進 Amodei 聲明，聚焦「不禁開源但抑制中國」框架。 | Yahoo Tech 特別指出 Anthropic 因此立場受業界批評，被視為「唯一不支持開源模型的主要 AI 實驗室」；顯示聲明未完全平息「矽谷分裂」敘事，反而具體化 Anthropic 的孤立位置 |
-| 2026-07-26 | 🌐 | India Today：矽谷對中國 AI 模型立場分裂，Nvidia 等主張開放存取，Anthropic 推動禁令 | 整合 07-23／07-25 訊號為陣營對立框架；🔎 查無官方回應此框架本身。 |
+| 2026-07-26 | 🌐 | India Today：矽谷對中國 AI 模型立場分裂，Nvidia 等主張開放存取，Anthropic 推動禁令 | 整合 07-23／07-25 訊號；🔎 **查無官方**（標 2026-07-26｜查 India Today、矽谷對中國 AI 模型｜複 2026-11-10）：10-10 查官方新聞室無此表述，**框架是本庫推論** |
 | 2026-07-25 | 🌐 | Forbes：Nvidia 開放權重連署擴大至 50 家企業，Amazon 與 Anthropic 未加入 | 🔎 已查證：連署名單已公開，涵蓋 AMD／Meta／Microsoft 等逾 50 家企業。 |
 | 2026-07-23 | 🏛️🌐 | BBC（另一媒體同步報導）：白宮「川普科技顧問」指控中國 Moonshot AI 從 Anthropic 竊取技術，確認並補足 07-22 TechCrunch/南華早報標題式報導 | **2026-08-10 查證**：顧問身分確認為白宮科技顧問 **Michael Kratsios**；財政部長 Scott Bessent 稱制裁「仍在考慮之中」，尚未正式對 Moonshot 祭出制裁（[TechCrunch](https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/)） |
 | 2026-07-23 | 🌐 | The Information（經 Google News 轉載，僅標題可用）：矽谷科技業界聯合反對 Anthropic 對中國 AI 的限制立場 | 出口管制主線落幕後首見「業界」層級對 Anthropic 對中立場的集體反彈訊號；具體反對名單、訴求焦點與後續行動均未見報導，待原文確認 |
@@ -526,10 +528,15 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-25
 - **[🏛️] D.C. 巡迴上訴法院推翻地院判決，維持五角大廈供應鏈風險認定**：起因為 Anthropic 拒絕依軍方要求為 Claude 啟用特定功能；Reuters／WaPo／Ars Technica／Bloomberg 等跨十餘家媒體同日報導，HN 426 分，詳見「## 攻防紀錄」、「## 三個戰場」🪖 軍事合約段落
-  - ❓ **待查證**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal）：判決推理全文、是否上訴更高審級均未見報導
+  - 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就本案發布任何說明**。
+    - 判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。
+    - 公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。
+    - **仍未有答案的**：是否已正式提出全院複審或上訴最高法院（查無聲請紀錄）；國防部十月遷出計畫是否因本判決暫緩
 - **[🌐] Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向**：與同日法院裁定同日出現，詳見「## 攻防紀錄」
 - **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
-  - ❓ **待查證**（標 2026-09-25｜查 AISI、withhold models）：具體審查範圍、期限，以及是否涵蓋既有 09-09 Mythos 5.1 提交爭議均未見報導
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就此發布任何說明**。
+    - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
+    - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
 
 ### 2026-09-24
 - **[🏛️🏢] CNN／CNBC／FT：OpenAI、Anthropic 執行長於聯合國同台呼籲 AI 安全標準，Amodei 主張協議應「範圍限定」；川普此前已拒絕「全球主義」式 AI 控制提案**：延續 09-22 Bloomberg 簡報動態，首見具體呼籲內容，詳見「## 攻防紀錄」

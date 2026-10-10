@@ -1,11 +1,17 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-10
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
+
+**Claude Haiku 5.5 上線，牌價本輪查實為 From $0.10／$0.50、1M context**：10-07 發布，官方稱最便宜最快最具能力的小型模型、成本降約 75%。本輪（2026-10-10）對官方 models overview 查實：牌價以 **From** 標示（$0.10 輸入／$0.50 輸出每 Mtok）、1M context、128K 最大輸出、預設 effort `medium`、可靠知識截止 Jun 2026、退役不早於 2027-10-07。**「From」底下的分層級距官方沒給**——社群稱逾 10 萬 token 轉較高定價仍是單一來源。詳見 [[entities/haiku-5-5]]、[[topics/model-comparison]]。
+
+**官方同週連出三份資安文件，但都不是對社群既有缺口的回答**：10-06 擴大 Cyber Verification Program（三層存取）、10-08 發布 Anthropic Cyber Mission 與 2026 年度使用政策更新。方向是把資安能力包成受驗證的通道，而非補上 agent 安全那 11 個仍擋不住的攻擊面——後者本輪複查 11 列全數維持。詳見 [[topics/ai-agent-safety]]、[[topics/anthropic-government-policy]]。
+
+**Sonnet 5.5 的快取讀取其實是 $0.10，不是 $0.20——本輪更正**：官方 Sonnet 5.5 模型頁與 models overview 均載明快取讀取為基礎輸入價的 **5%**（$0.10／Mtok），與 Opus 5.5 同檔；本庫此前四處寫成「$0.20＝標準 ×0.1」，已於 [[entities/sonnet-5-5]]、[[entities/pricing]]、[[topics/model-comparison]] 同批上修。帳單相關的數字錯一半，是本輪最值得記的一筆。
 
 **Claude Mods 出貨，官方明說外掛讀得到你的 API Key**：10-01 Claude Code v2.1.287 推出 Mods——外掛以 JS／TS 在 Claude Code 行程內執行，可改寫 prompt、tool call 與介面，官方追蹤 issue #91870 當日累積 233 則留言。官方文件（2026-10-04 查證）明載 mod 以你的權限執行、讀得到環境變數與設定檔裡的 API key、不受沙箱隔離——這是設計，不是漏洞。只裝可信來源，裝前先跑 `claude plugin validate`。詳見 [[entities/claude-mods]]。
 
@@ -29,7 +35,9 @@
 
 **Yann LeCun 公開批評 Dario Amodei 看待 AI 風險的方式**：10-01 Fortune 報導，用語為「deluded」「crazy」且稱其不懂資安（僅標題可用）。詳見 [[entities/yann-lecun]]、[[entities/dario-amodei]]。
 
-**本週站內新補的東西**：四個現行模型頁（[[entities/fable-5]]、[[entities/mythos]]、[[entities/opus-5-5]]、[[entities/sonnet-5-5]]）的「跟它怎麼說話」節**首次有了實際內容**——此前四頁都只寫著「官方指南尚無可讀內容」，本週已依官方 prompting 指南補齊「換代時哪幾句 prompt 要加、哪幾句要刪」。另有 36 筆原本標著「待查證」的條目完成查核（19 筆查到官方說法、11 筆確認官方未公開、6 筆依日報收斂），站內目前沒有逾期未查的懸置項目。
+**本週站內新補的東西**：Sonnet 5／5.5 的知識截止（Jan 2026／Jun 2026）、Sonnet 5 的退役日（不早於 2027-06-30）與 Legacy 身分、Opus 5 的預設 effort（`high`，未被悄悄調高）、Haiku 5.5 的牌價與 context 上限，都在本輪對官方文件查實後從「待查證」變成事實。
+
+**⚠️ 本週「待查證」沒有清空**：站內標著待查證的條目本週盤點 58 筆、處理掉 25 筆，**還剩 33 筆**。原因是本站查證外部來源的自動化流程本週被環境設定擋住，只能以人工補查一部分；哪幾頁還剩哪幾筆、以及這個限制怎麼解，記在 [[log]] 本週紀錄裡。
 
 ---
 
@@ -40,13 +48,14 @@
 | **Claude Fable 5.1** | 🟢 旗艦（2026-09-01 發布，取代 Fable 5）| 反萃取機制；快取讀取費率 0.025x（約省 75%）；官方 prompting 指南 2026-10-03 查證補進頁內 |
 | **Claude Mythos 5.1** | 🟢 政策限定（2026-09-01 發布）| 僅限信任機構；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview |
 | **Claude Opus 5.5** | 🟢 現行 Opus（2026-09-22 發布）| Claude Code v2.1.280 起為 `default`（Foundry 除外）；$4/$20；預設 effort 為 `medium`（Opus 5 為 `high`）|
-| **Claude Sonnet 5.5** | 🟢 現行 Sonnet（2026-09-28 發布）| v2.1.284 起為 API 端預設 Sonnet；Terminal-Bench 4.0 由 10.3% → 70.6%；牌價維持 $2/$10 |
-| Claude Opus 5 | ⚠️ Legacy（2026-09-22 起）| 仍可用，$5/$25；跨模型代際「重複修辭套路」問題持續（GitHub #77136）|
-| Claude Sonnet 5 | ⚠️ Legacy（2026-10-03 官方總覽頁查證）| 仍可用，$2/$10；預設地位已由 Sonnet 5.5 接手 |
+| **Claude Sonnet 5.5** | 🟢 現行 Sonnet（2026-09-28 發布）| v2.1.284 起為 API 端預設 Sonnet；Terminal-Bench 4.0 由 10.3% → 70.6%；牌價維持 $2/$10，**快取讀取 $0.10（×0.05，本輪更正）**；退役不早於 2027-09-28 |
+| Claude Opus 5 | ⚠️ Legacy（2026-09-22 起）| 仍可用，$5/$25、快取讀取 $0.50；**預設 effort `high`**（本輪查實，未被調高）、退役不早於 2027-07-24；跨代「重複修辭套路」問題持續（GitHub #77136）|
+| Claude Sonnet 5 | ⚠️ Legacy（官方 2026-10-10 複查）| 仍可用，$2/$10、快取讀取 $0.20；**退役不早於 2027-06-30**、知識截止 Jan 2026（本輪查實）；預設地位已由 Sonnet 5.5 接手 |
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 5／5.1 **資安類**請求被護欄攔下時的接手模型（生物／化學／生命科學類改由 Opus 5 接手）|
 | Claude Opus 4.7 | ⚠️ Legacy（2026-10-03 官方總覽頁查證）| 本輪由「已被取代」更正為 Legacy |
 | Claude Sonnet 4.6 | ⚠️ Legacy | 仍可選用 |
-| Claude Haiku 4.5 | ✅ Active | 低延遲／高頻批量任務的現行選項，退役不早於 2026-10-15；沒有獨立新聞可寫，不設專頁，規格與選型見 [[topics/model-comparison]] |
+| **Claude Haiku 5.5** | 🟢 現行 Haiku（2026-10-07 發布）| From $0.10／$0.50、1M context、預設 effort `medium`；退役不早於 2027-10-07（官方 2026-10-10 查證）|
+| Claude Haiku 4.5 | ⚠️ 即將退役 | 退役不早於 2026-10-15（**約一週內**）；現行選項已是 Haiku 5.5，規格與選型見 [[topics/model-comparison]] |
 
 > 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**
 > 四個現行模型頁（Fable 5.1、Mythos 5.1、Opus 5.5、Sonnet 5.5）的「跟它怎麼說話」節已於 2026-10-03 從官方 prompting 指南補齊——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。

@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-04
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-04
 
 > **本頁在回答什麼**（重寫 2026-08-08）
@@ -44,16 +44,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 本週 coding 亮點
 
-- **Sonnet 5.5 取代 Sonnet 5 成為 API 預設 Sonnet**——牌價維持 $2/$10；Claude Code CLI 是否同步預設官方未載，另有未證實回報稱升級後有靜默失敗情境，升前先跑回歸，見 [[entities/sonnet-5-5]]
-- **v2.1.285 新增 `CLAUDE_CODE_DISABLE_WEB_FETCH` 與 `claude --desktop`**，企業管理者可限制員工可用的 API 供應商，沙盒化 CI 能直接關掉 WebFetch 外連，見 [[entities/claude-code]]
-- **`CLAUDE_CODE_FORK_SUBAGENT=0` 擋不住子代理遞迴**——issue #68619 標 CRITICAL，遞迴逾 50 層，官方未給修復時程，重度編排者先自行加層數上限，見 [[entities/claude-code]]
-- **1M context 下三種機制會靜默清掉工具結果**（issue #42542，官方未回應），長任務無法確認資料是否還在，見 [[entities/claude-code]]
-- **快取命中倍率開始分檔**：Opus 5.5 ×0.05、Fable 5.1／Mythos 5.1 ×0.025、其餘 ×0.1；Fast mode 僅三款 Opus、僅第一方 API，舊試算表不能沿用，見 [[entities/pricing]]
-- **走 Bedrock 與第一方 API 不是功能對等**：Bedrock 無 50% Batch 折扣，compaction、context editing、task budgets 皆不可用，見 [[topics/anthropic-business]]
-- **anthropic-sdk-python 兩版新增**：v1.9.0 `between_tools` thinking type、v1.11.0 可 API 查詢支出限額，見 [[entities/claude-code]]
-- **把團隊工程規範封裝成 skill**：Serokell 的具名案例（r/ClaudeCode、r/ClaudeAI 同日），理由是 agent 懂語法但不懂團隊慣例；單一案例，見 [[topics/community-tech-patterns]]
-- **本週新出的記憶類工具只有星數或單一討論**：agent-memory、deja-vu、hippo-memory 皆無第三方採用回饋；Jevmem 遭質疑「只標過時不刪」會累積過期 context，見 [[topics/community-tech-tools]]
-- **彼此沙盒隔離的 agent 仍可經共用套件快取互相影響**（Matthew Green 觀點，Simon Willison 引述，原文細節未見），見 [[topics/ai-agent-safety]]
+- **hook 可設 `onFailure: "block"`**（v2.1.295）：自配的硬性攔截不會因 hook 掛掉而默默放行，但官方文件措辭仍有落差，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
+- **skill／subagent 的公開稽核數字**：69% 的 skill description 不能可靠觸發、57% 的 subagent 沒宣告 tools，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
+- **Sonnet 5.5 `low` effort 會報完成卻沒跑檢查**，需補驗證指令，見 [第 6 段](#6-測試與上線--怎麼讓它自己驗完再交給你)
+
+> 檢查日 2026-10-10；其餘候選（用量異常 issue、工具星數類）屬他頁，不入本段。
 
 ---
 
@@ -400,12 +395,14 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；但同日有媒體指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差，見 [[entities/claude-code]]、[[feature-radar]]。
 
 **社群面（2026-09-03 補，庫內證據）：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 
 - **CLAUDE.md 規則遷移到 hooks 強制執行**（06-23 首次收錄，08-25 dev.to 第一手實測追加）：判準是「LLM 偶爾遵守」的留在 CLAUDE.md、「必須 100% 執行」的遷到 hooks（PreToolUse 攔部署指令、PostToolUse 強制跑 formatter）；08-25 案例作者報告規則遵循率從機率性變成 100%，副作用是遵循率提升後改用較便宜的 Haiku 當 builder 也不再顯得冒險。與 [[topics/community-tech-tools]] 決策表「CLAUDE.md 寫了它不聽」列同一結論（該列標「答案是機制不是工具」）。
 - **語意化規則注入取代整份塞給模型**（Writ，05-12）：每次工具呼叫前只注入與當前任務語意相關的規則子集，解的是「規則太多、全量載入既耗 token 又稀釋精準度」——是強制層之外的另一個失效點。
+- **自己寫 skill／subagent 前先看錯誤率**（Show HN skillcrossroads，2026-09，單一稽核來源）：對 216 個公開 skill 做靜態稽核，69% 的 description 寫法判定不能可靠觸發；87 個 subagent 中 57% 沒宣告 tools 清單，加計裸 Bash／萬用字元後 85% 不符最小權限。
+  - 做法上等於：description 寫到能觸發、subagent 一律明列 tools，見 [[topics/community-guardrails#2026-09]]。
 - **開工前先訪談**（dev.to，06-25，單一經驗談）：動手寫之前先讓 Claude 反問 3–5 個關鍵問題確認方向，可視為第 3 段規格的輕量版；防的是「方向錯了才被攔」，比 hooks 更早一步。
 - **Repo 慣例自動注入**（Reddit，06-25，單一經驗談）：plugin 靜態分析既有程式碼萃取 convention（愛用哪個 library、命名風格），在每次 Edit/Write 前注入，取代手動維護 CLAUDE.md 慣例段落。
 
@@ -435,6 +432,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 **官方給了至少七個成本收斂旋鈕**：觸發模式選 Manual／Once（「Reviewing on every push runs the most reviews and costs the most」）；`REVIEW.md` 設 skip rules 與 re-review 收斂（官方講理由時原話是「stops a one-line fix from reaching round seven on style alone」）；降 effort（`low`／`medium` 只報最有信心的，是少誤報而非少覆蓋）；月支出上限；per-repo 均價監看；security-guidance 分層關閉。
 
 > **Length has a cost: a long `REVIEW.md` dilutes the rules that matter most.**
+
+`/code-review` 自 v2.1.288 起可加 `--max-findings <n>|all` 限制回報條數，是本機入口多一個收斂旋鈕（見 [[entities/claude-code]]）。
 
 **一個官方沒標的坑**：Code Review 產品讀 `REVIEW.md`，本機 `/code-review` 不讀（它只跟 `CLAUDE.md`）。「本機先審再上 PR」時兩邊校準不同步。
 
@@ -469,13 +468,15 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 其餘：`/engineering:testing-strategy` 決定測什麼；`/engineering:deploy-checklist` 驗證 CI、依賴並要求**事先寫下 rollback 觸發條件**；官方 recipe 明說 Claude 會照著你既有測試檔的風格與框架寫。
 
+**用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下會把改完的程式回報為完成卻沒跑真正的檢查；在指示裡加「改到可執行的程式就要跑真實檢查（測試／型別檢查／build）」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
+
 `/goal` 只管單一 session；要跨 session 保留狀態或 20 路並行，官方的另一格是 Managed Agents——各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」。
 
 **社群面（2026-09-12 補，庫內證據）：** 官方沒回答的問題——「規則寫了 Claude 真的會照做嗎」——社群有一份量化答案，且是負面的：**即使 CLAUDE.md 明寫 `## TDD First` 六行規則，30 天提交審計顯示 60% 的情況 Claude Code 仍先寫程式碼、事後才補測試**（規則遵守率僅 40%；dev.to「I Told Claude Code to Do TDD. It Wrote the Test AFTER the Code 6 Out of 10 Times.」，2026-05-25，原始條目見 [[topics/community-tech-discussions-archive#2026-05]]）。這與第 4 段「CLAUDE.md 規則遷移到 hooks 強制執行」是同一個機率性遵守問題的測試版本。
 
 **社群目前的結構性做法是把 TDD 從「寫在規則裡」改成「寫進流程指令裡」**：Pilot Shell 的 `/spec` 指令把完整 TDD 流程做成單一指令觸發，不依賴 Claude 自己記得規則（2026-05-04）；EvanFlow 的 TDD 驅動迴圈進一步在每個步驟設人工確認節點、不自動 commit，用人在迴圈中把關取代對規則遵守率的信任（2026-04-27）。兩者細節見 [[topics/community-tech-tools]] 工具目錄。
 
-**規模化之後，測試瓶頸從「測不測」轉移到「CI 撐不撐得住」**：多個平行 Claude Code agent 同時觸發建置與測試，會拖垮低規格機器、推高 CI 帳單（作者實測 4–5 個平行 agent 每天推近 90 次 commit）；社群做法是本地合併佇列——commit 排隊逐一完整測試後才合併，取代各分支各自即時觸發 CI（Hacker News「A local merge queue for parallel Claude Code agents」，2026-07-30，見 [[topics/community-tech-patterns#2026-07]]）。
+**規模化之後，測試瓶頸從「測不測」轉移到「CI 撐不撐得住」**：多個平行 Claude Code agent 同時觸發建置與測試，會拖垮低規格機器、推高 CI 帳單（作者實測 4–5 個平行 agent 每天推近 90 次 commit）；社群做法是本地合併佇列——commit 排隊逐一完整測試後才合併，取代各分支各自即時觸發 CI（Hacker News「A local merge queue for parallel Claude Code agents」，2026-07-30，見 [[topics/community-multi-agent#2026-07]]）。
 
 訊號強度：TDD 審計為單一作者、單一 30 天樣本，量化但未見第三方複測；merge queue 為今日首見單一開發者工具，尚待社群採用回饋；Pilot Shell／EvanFlow 為既有工具的既定設計，非針對本問題的新實測。
 
@@ -666,5 +667,5 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 - [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-08-08 查證
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
-- [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-tech-patterns]] 2026-08-13 查證
+- [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節

@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** 1M context window, long context, `[1m]`
 **開始日期：** 2026-04-10
-**最後更新：** 2026-10-01
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-09
 
 > **最新動態**（2026-10-01）
 > GitHub issue #42542（28 則留言、11 個讚）指出 1M context session 下三種獨立機制（microcompact、cached microcompact、session memory compact）會在未通知使用者的情況下清除工具結果——「你看不出自己在不在 1M 上」的控制權缺口再添一筆：這次連「東西還在不在」都可能被靜默清除而不自知。官方尚未回應，**社群也還沒提出可靠的規避做法**——所以現階段能做的只有「別預設工具結果會留到 session 結束」：重要的中間產物自己落地成檔案，不要只靠對話脈絡保存。
@@ -52,6 +52,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Haiku 4.5 | 不適用——上限 200K | 官方模型總覽頁（2026-08-20 查證）|
 
 **分界是模型世代，不是「1M」這個功能。** 這也是為什麼在 Amazon Bedrock 的模型清單裡，同一個家族會同時出現 1M 與 200K 兩種條目並列——那不是兩個等級的方案，是兩個世代的模型放在同一頁。兩代混用時，**兩套規則會出現在同一份帳單上**。
+
+**token 計數門檻另按模型世代分列**：官方 API 定價頁 2026-10-09 更新，context-1m 門檻的 token 數 Claude 4.6 及更早為 244 tokens、4.7 以後與 Mythos Preview 為 325 tokens（日報摘要轉述，門檻在計費上的確切作用未載）；跨世代混用 1M 的人重算成本時兩套數字分開代。費率面見 [[entities/pricing]]。
 
 乘數全表（快取、Batch、資料落地、地區端點如何互相疊乘）見 [[entities/pricing]] 的「通路與乘數」；「換個模型同一份工作差多少」見 [[topics/model-comparison#同一份工作，換設定差多少]]。
 
@@ -92,6 +94,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/code-quality-decline]] — 模型釘選訊號群
 
 ## 時序
+
+### 2026-10-09
+官方 API 定價頁更新：context-1m 門檻的 token 計數依世代分列——Claude 4.6 及更早 244 tokens、4.7 以後與 Mythos Preview 325 tokens（`Official Docs`，日報摘要；原頁欄位定義未讀）。
 
 ### 2026-10-01
 [#42542](https://github.com/anthropics/claude-code/issues/42542)（28 則留言、11 個讚）：回報者整理出三種獨立機制——microcompact、cached microcompact、session memory compact——皆會在未通知使用者的情況下清除 1M context session 中的工具結果，使用者無從得知資料已被移除；官方尚未回應。

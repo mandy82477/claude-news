@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **最新動態**（2026-10-09）
@@ -110,7 +110,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
-- ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-10-15）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：單一來源、原文無摘要，產品形式與正式性未見官方佐證。
+- ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-10-15｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：單一來源、原文無摘要，產品形式與正式性未見官方佐證。
+  - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。
 - 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-17）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
 - 媒體為 BleepingComputer、gHacks、TechRepublic；該 Money 分頁可連結銀行帳戶並詢問支出與計畫，多數用戶尚未開放。
 - 查證 2026-10-03：anthropic.com／support.claude.com 搜尋均未見官方公告，支援銀行、連結方式、適用方案與上線日皆未載。
@@ -230,6 +231,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**ANTHROPIC_API_KEY 雲端計費陷阱**（2026-04-30）：雲端環境設置此環境變數時，所有呼叫自動改走 API 計費通道，見 [[entities/pricing]]
 - 🔴 **未修復**｜**額度顯示 84% 卻收到「You've hit your limit」（GitHub issue #19673，累積反應 75，2026-07-04）**：使用者反映用量儀表板顯示尚餘額度（僅用 84%）情況下即收到「已達額度上限」提示，質疑額度計算邏輯是否準確或存在顯示與實際計算不同步的問題；官方尚未回應
 - 🔴 **未修復**｜**Session 額度上限時無法順暢接續／功能請求自動續行（GitHub issue #13354，累積 80 則留言、193 個讚，首見 2026-07-07，2026-08-04 互動數更新，今日互動最高功能請求之一）**：使用者希望 session 達到額度上限時能有更順暢的接續機制（如自動排隊、無縫轉續、自動恢復），而非直接中斷工作流程；2026-08-04 日報標記此為當日互動最高功能請求之一，與同日「瞬間打到用量上限」抱怨（issue #16157）呼應；官方尚未回應或提供替代方案。（此前曾被誤列為兩則獨立條目，本次合併統一追蹤）**Reddit r/ClaudeAI 回報屬實：Claude Code 已新增「額度重置後自動繼續」（Auto-continue when limits reset）功能**（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）：Claude Code 於用量上限重置後自動接續 session，可於 `/config`「Continue automatically at usage limit」關閉，v2.1.234（2026-08-17）起預設開啟；桌面版另有獨立的 session-limit 卡片勾選框，週限額卡片不提供此選項（見 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33)）。功能請求 #13354 可改列 ✅ 已修復。
+  - **官方已出一半，但只在 Desktop、且不是預設（2026-10-10 查證）**：官方 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33)（v2.1.225→233，08-10～14）載明 Desktop 的 Code 分頁撞到 session 上限時，卡片會出現 **Auto-continue when limits reset** 核取方塊。
+    - 勾選後 Desktop 會在額度重置後重試被中斷的那一輪，卡片顯示 `Auto-resuming at` 與重置時間。
+    - **三個限制讓本則不改列已修復**：① 只在 Desktop，終端機版此週報未載；② 是使用者勾選的 opt-in，不是預設開啟；③ **週額度卡片不提供此選項**，只有 session 上限卡片有。
+    - ⚠️ 社群 09-20 流傳的「v2.1.234 新增、預設開啟、可在 `/config` 關閉」與官方週報三處皆不符（版本區間為 v2.1.225–233、非預設、週報未提 `/config`），**不採信**。
 - 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 25 個讚，2026-07-18）**：使用者回報升級訂閱方案時付款流程失敗，`PaymentIntent` 在確認（confirm）尚未完成前就被 `void_invoice` 動作立即作廢，導致升級無法完成；官方尚未回應。定價/計費層面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
@@ -307,7 +312,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（三項各自獨立的修法）**｜**2026 年 4 月效能退步事件**：官方 04-23 說明三件工程變更各自修復——effort（v2.1.116）、thinking 清除（v2.1.101）、prompt 長度（04-20 服務端回復）；另兩批訊號見 [[topics/code-quality-decline]]
 - 🔴 **未修復**｜**Usage Policy 隨機拒絕**（Opus 4.7 以來）：Claude Code 頻繁出現無明確觸發條件的 Usage Policy 拒絕；官方建議切換至 `/model claude-sonnet-4-20250514` 作為緩解手段；見 [[entities/opus-4-7]]
   - 09-24 新增具體重現案例：僅輸入「hi」等問候即觸發此拒絕（GitHub issue #60366，91 則留言、28 個讚，本日互動最高）；官方尚未回應。
-- ❓ **待查證**（標 2026-09-24｜查 effort、pin --effort｜複 2026-10-08）｜**Opus 5 預設 effort 疑似未隨版更即悄悄調高（Reddit，2026-09-24）**：自建工具跑 33 題基準測試（各三次），籲測試時 `--effort` 釘住等級。
+- **Opus 5 預設 effort 官方為 `high`，未調高（2026-10-10 查證）**：官方 [effort 文件](https://platform.claude.com/docs/en/build-with-claude/effort)「Recommended effort levels for Claude Opus 5」明寫 *The API default is `high`*，[Opus 5 模型頁](https://platform.claude.com/docs/en/models/opus-5/overview) 規格表的 Default effort 同為 `high`；
+  - 官方另說明**換代才會降級**——Opus 5.5 與 Haiku 5.5 預設改為 `medium`，所以「省略 effort 的請求在 Opus 5.5 上比 Opus 5 低一級」。原 Reddit（2026-09-24）疑似「悄悄調高」未獲官方佐證，其建議仍成立：測試時用 `--effort` 釘住等級，避免跨模型預設差異污染比較。
   - 單一使用者自製工具測試，無官方確認；與既有「疑降 effort」訊號方向相反（本則疑升），見 [[topics/code-quality-decline]]。
 - 🔴 **未修復**｜**Speed Bumps 增加**（2026-04-29 回報）：多位長期使用者反映本週起 Claude Code 明顯增加中途暫停詢問的頻率，即使簡單任務也頻繁打斷工作流程，社群猜測與系統層級的行為調整有關，無官方說明
 - 🔴 **未修復**｜**CLAUDE.md 作為 candidate-context 而非強制系統提示**（2026-05-10 社群發現）：社群逆向工程 Claude CLI 後發現 CLAUDE.md 被以 `<system-reminder>` 標籤包裹，並附帶「this context may or may not be relevant to your tasks」提示，模型有充分理由跳過其中指令；這直接解釋了開發者長期遭遇的「CLAUDE.md 指令被忽略」問題；Anthropic 尚未正式回應此架構設計決策。
@@ -550,7 +556,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 最新版本
 
-> 本表只收本庫日報報導過的版本。**v2.1.242–244 與 v2.1.252–257 未見報導，不代表未發布。** 破壞性變更與預設值改變見 [[feature-radar]]「從你現在的版本升上去，會遇到什麼」。
+> 本表只收本庫日報報導過的版本。**v2.1.242–244 與 v2.1.253–257 未見報導，不代表未發布。** 破壞性變更與預設值改變見 [[feature-radar]]「從你現在的版本升上去，會遇到什麼」。
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|

@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **最新做法**（2026-10-09）
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂。**接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
-- **介面與可視化**：各自單一實作居多，還在試。
+- **介面與可視化**：各自單一實作居多，還在試；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
 
 ---
@@ -252,6 +252,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Devthropology：GitHub Repo 貢獻者互動與程式碼健康度視覺化（2026-07-10）
 
+- **主線：** —
 - **核心模式：** Show HN 工具 Devthropology 分析 GitHub PR 資料，提供貢獻者互動關係與程式碼健康度的視覺化洞察，供團隊了解協作模式與潛在瓶頸
 - **與 Claude Code 生態的關係：** 非 Claude Code 專屬工具，但屬於「AI 輔助開發團隊如何觀察協作健康度」的鄰接工具類別，可作為 agent 大量產出 PR 後的團隊層可觀測性補充（推論）
 - **來源：** [Show HN: Devthropology – Better Insights for GitHub Repos](https://devthropology.com/demo)（原文已失效）（Hacker News Show HN，34 分）
@@ -259,6 +260,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### AI 思考表徵編輯器：視覺化並編輯模型回答前的內部推理（2026-07-10）
 
+- **主線：** —
 - **核心模式：** 開發者受 Anthropic 論文《Verbalizable Representations Form a Global Workspace in Language Models》啟發，做出可視覺化並編輯開源模型內部推理表徵（thinking representation）的網頁工具，讓使用者在模型正式作答前介入調整其「思考」內容
 - **與既有模式的關係：** 呼應既有「Extended Thinking 為摘要而非真實推理」討論（見 [[topics/community-tech-discussions]]）對「thinking blocks 究竟代表什麼」的持續關注；此工具提供社群一個實驗性介面直接操作內部表徵，而非僅停留在文本層辯論
 - **來源：** [Show HN: I built a web tool to see and edit what an AI thinks before it answers](https://lucid.earthpilot.ai)（Hacker News Show HN，31 分）；相關論文亦見於同日 MIT Technology Review 報導「Anthropic found a hidden space where Claude puzzles over concepts」
@@ -266,6 +268,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Shellular：從手機遠端操作本機 Claude Code / Codex Session（2026-07-08）
 
+- **主線：** —
 - **核心模式：** 開發者發布 Shellular，讓使用者從手機遠端連線至自有機器，操作正在執行的 Claude Code、Codex 等 coding agent 與終端機、開發伺服器
 - **與既有模式的關係：** 與 ccgram（2026-06-28，透過 Telegram 遠端控制 Claude Code）、Android Remote Control MCP（Plugin 設計模式一節）同屬「行動裝置遠端操作 agent session」模式家族的第三個獨立實作；三者共同顯示「手機作為 agent 控制介面」是社群反覆出現的需求，各自選擇不同傳輸層（Telegram bot、MCP、專屬 web app）
 - **來源：** [Show HN: Shellular – run Claude Code, Codex, Pi from your phone](https://shellular.dev/)（Hacker News Show HN，32 分，跨 2 來源報導）

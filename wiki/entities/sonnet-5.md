@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）
@@ -42,7 +42,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。
 
-- ❓ **待查證**（標 2026-09-28｜查 Sonnet 5.5、Legacy、Claude Code CLI）：Sonnet 5.5 是否同步為 Claude Code CLI 本身的預設模型（官方原文僅稱「Anthropic API 預設」），以及本頁（Sonnet 5）是否比照 Opus 5.5 模式正式改列 Legacy，官方原文均未載明
+- **本頁已是官方 Legacy（2026-10-10 查證）**：官方 [Sonnet 5 模型頁](https://platform.claude.com/docs/en/models/sonnet-5/overview) 頁首標 **Legacy**、狀態欄寫 `Active (legacy)`，[models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 也把它列在「Legacy models (still available)」；
+  - 發布日 2026-06-30、退役不早於 **2027-06-30**（[model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations)）。
+  - 可靠知識截止與訓練資料截止皆為 **Jan 2026**，預設 effort `high`，牌價 $2／$10、快取讀取 $0.20。
+- 🔎 **查無官方**（標 2026-09-28｜查 Sonnet 5.5、Claude Code CLI 預設｜複 2026-11-10）｜**Sonnet 5.5 是否同步為 Claude Code CLI 本身的預設模型**：官方只說「Anthropic API 預設 Sonnet」。
+  - 2026-10-10 查官方 models overview、model deprecations 與 [Claude Code settings reference](https://code.claude.com/docs/en/settings-reference) 三處皆未載 CLI 預設模型，同一題見 [[entities/sonnet-5-5]] ⟨Q-01⟩
 
 **2026-09-27**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
 

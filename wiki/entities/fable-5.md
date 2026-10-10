@@ -356,7 +356,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 **懸置細節**
 
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-10-04）：Fable 5（$10／$50）與 Opus 5（$5／$25）定價屬實，但 Anthropic 不比較競品定價，GPT-5.6 Sol 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）
+- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol｜複 2026-11-10）：Fable 5（$10／$50）與 Opus 5（$5／$25）定價屬實，但 Anthropic 不比較競品定價，GPT-5.6 Sol 價格與計算基準非官方所載（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，查證 2026-09-20）
 
 ### 2026-06（發布與出口管制期）
 

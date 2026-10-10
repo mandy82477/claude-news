@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-06
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-06
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -176,11 +176,11 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容與參戰人士未見報導（來源：Google News／Axios）
 - 2026-09-24：FT「聯合國大會即時報導」提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，與 09-22 預告的聯合國安理會簡報是否同一場合未明（來源：Google News／Financial Times）
 - 2026-09-22：Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險（僅標題可用）（來源：Google News／Bloomberg）
-- 2026-09-14：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，Hacker News 於 09-17 轉載，詳見 [[entities/michael-burry]]（來源：New York Post／Hacker News）
 - 2026-09-17：NYT 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題）（來源：Google News／The New York Times）
 - 2026-09-17：Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，因果未見報導（僅標題）（來源：Google News／Yahoo Finance）
 - 2026-09-16：Meta 執行長 Mark Zuckerberg 在 AI 減速辯論中公開點名批評 Anthropic（僅標題，來源：Google News／The New York Times）
 - 2026-09-15：於 Dreamforce 現場重申全球 AI 減速呼籲，與 Nvidia 執行長黃仁勳主張加速形成對比；黃仁勳同時批評 Anthropic 所提「AI 安全反壟斷豁免」提案「完全沒必要」，完整交鋒見 [[entities/jensen-huang]]（來源：Google News／The Guardian、CNBC）
+- 2026-09-14：放空交易員 Michael Burry 公開批評 Amodei 與 OpenAI 高層的 AI 減速呼籲是「自利」之詞，Hacker News 於 09-17 轉載，詳見 [[entities/michael-burry]]（來源：New York Post／Hacker News）
 - 2026-09-14：Trump 公開回絕 Amodei 的減速呼籲；中國官方媒體批評此舉是「冷戰」話術；同日 AI 類股應聲下跌（來源：Reuters／Yahoo、Yahoo Finance，2026-09-14）
 - 2026-09-13：接受 CNBC 專訪稱中國是其所提 AI 減速方案中「最棘手的兩難」（來源：Hacker News（10分）／CNBC）
 - 2026-09-13：公開撰文呼籲全球暫緩 AI 模型能力提升步調並密切監控，警告「AI 群體行為」恐於 6–12 個月內危及網路安全；Musk、Altman 相繼表態支持暫緩，安全治理角度完整討論見 [[topics/recursive-self-improvement]]（來源：Hacker News／BBC、VentureBeat，2026-09-13）

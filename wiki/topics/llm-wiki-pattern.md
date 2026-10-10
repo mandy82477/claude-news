@@ -1,11 +1,11 @@
 ---
 page: "topics/llm-wiki-pattern"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "🌐 社群"
-last_updated: "2026-09-25"
+last_updated: "2026-10-10"
 last_news_update: "2026-09-25"
-status_main: "ongoing"
+status_main: "monitoring"
 days_since_news: 14
 parent: null
 children: "[]"
@@ -25,11 +25,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Karpathy 式 LLM wiki 模式
 
-**狀態：** ongoing
+**狀態：** monitoring（2026-09-25 後日報無新的 LLM wiki 實作或設計討論，轉低頻觀察；有新實作入日報即回升 ongoing）
 **領域：** 🌐 社群
 **別名：** LLM Wiki, Karpathy wiki
 **開始日期：** 2026-09-12
-**最後更新：** 2026-09-25
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-09-25
 **蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 

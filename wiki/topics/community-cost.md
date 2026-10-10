@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-10-09
 
 > **最新做法**（2026-10-09）
@@ -393,6 +393,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Local Reverse Proxy：攔截並檢視 Claude Code 實際送出的請求內容（2026-07-10）
 
+- **主線：** —
 - **核心模式：** 因 Claude Code 不遵守 HTTP_PROXY 環境變數設定，作者自建一個跑在 loopback 的本地反向代理，即時攔截並檢視每次請求送往 Anthropic 的完整 prompt、token 用量與花費，補足官方缺乏的請求層可觀測性
 - **與既有模式的關係：** 與既有「費用可觀測性工具」類別（成本追蹤/預算工具）互補，差異在於此工具聚焦「請求內容本身」的透明度而非僅統計費用數字；也呼應 07-01「Claude Code 隱寫術」信任危機事件後，社群對「Claude Code 究竟送了什麼出去」的關注升高（見 [[topics/community-tech-discussions]]）
 - **來源：** 「I built a local reverse proxy to see what Claude Code actually sends to Anthropic」— dev.to（作者 houleixx，#claudecode，原文發布 06-10）
@@ -400,6 +401,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### InstantVideos：Claude + GLM-5.2 + Nano Banana 2 Lite + ffmpeg 多模型短影音自動化 pipeline（2026-07-07）
 
+- **主線：** —
 - **核心模式：** 開發者以 Claude（腳本/協調邏輯）搭配 GLM-5.2（文案/對話生成）、Nano Banana 2 Lite（圖像/畫面素材生成）與 ffmpeg（影片合成輸出）組成端到端自動化短影音生成與發布 pipeline，宣稱 30 秒內可產出一支短片
 - **與既有模式的關係：** 屬「模型使用策略」類別下的多模型路由思路在**內容生成領域**的新應用——既有 Dragoman / Workweave Router 聚焦編碼任務的成本路由，此案例改為依「任務類型」（文字/圖像/影音合成）分派給各自最擅長的專門模型，而非單一模型包辦全流程；反映多模型編排正從程式碼領域擴散至內容生產領域
 - **來源：** [Show HN: InstantVideos](https://instantvideos.org/)（Hacker News Show HN，23 分，跨 2 個獨立來源提及）
@@ -407,6 +409,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### CaveMan Skill：單次回覆 Token 從 70 降至 20 的極簡輸出模式新實作（2026-07-06）
 
+- **主線：** —
 - **核心模式：** 開源 Claude Code skill「CaveMan」透過強制模型以極簡風格回應，聲稱可將單次回覆 token 使用量從約 70 降至約 20（降幅約 71%），延續「穴居人模式」（極簡輸出降低 token 消耗）的既有思路
 - **與既有模式的關係：** 與 2026-05-05 已記錄的「Caveman Skill 實測 65% 降耗」、2026-07-01「企業穴居人模式採用確認」（404 Media：OpenAI、Nvidia、GitHub 開發者採用）同屬同一模式家族的新實作版本；顯示極簡輸出降耗已從單一實測案例演變為社群持續產出的多個獨立實作
 - **來源：** [Claude Code with CaveMan (opensource skill) cuts token usage per response from 70 to 20](https://www.reddit.com/r/ClaudeCode/comments/1uox6ko/claude_code_with_cavemanopensoure_skill_cuts/)（Reddit r/ClaudeCode，07-06）
@@ -414,6 +417,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 本地小模型分流節省 Context：Fast Context Task Router 機制觀察（2026-07-05）
 
+- **主線：** Context 管理
 - **核心模式：** 將程式碼探索（code exploration）工作委派給本地執行的小型 LLM（local-Ollama task router）分流處理，僅將篩選後的精簡結果送回主 agent，藉此降低主 context window 的 token 消耗
 - **效果：** 使用者聲稱可節省 50–60% context token，代價是整體執行時間增加（本地小模型推論延遲 + 額外一層路由判斷）
 - **來源：** [Why did Microsoft pull Fast Context from public domain?](https://www.reddit.com/r/ClaudeCode/comments/1unz1s5/why_did_microsoft_pull_fast_context_from_public/)（Reddit r/ClaudeCode，07-05）；原專案（Microsoft）含 arXiv 論文、GitHub repo、自訓練模型，現已從公開領域下架，原因不明
@@ -422,6 +426,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 額度監控與自動恢復工具生態（2026-07-03）
 
+- **主線：** —
 - **核心模式：** 針對 Fable 5 額度限制帶來的使用者焦慮，社群自發出現兩類輔助工具：① 自動恢復型——限制解除瞬間自動送出 continue，減少手動盯盤等待（呼應 06-27 已記錄的「quota 重置後需手動 continue」automation gap 痛點）；② 監控可視化型——在作業系統選單列即時顯示剩餘額度與使用比例，讓使用者在額度耗盡前主動調節任務節奏
 - **代表工具：**
   - [CCLimitPing](https://github.com/wavever/CCLimitPing)（Show HN score 2）：5 小時限制解除的瞬間自動觸發 continue

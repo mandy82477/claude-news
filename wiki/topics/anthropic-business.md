@@ -118,7 +118,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列與 ⟨Q-03⟩（Google News/Bloomberg.com）。
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。
-- ⟨Q-03⟩ ❓ **待查證**（標 2026-09-06｜查 calcalistech、IPO 延後｜複 2026-10-04｜訊 2026-09-22）｜**IPO 時程是否已延後**：calcalistech 標題稱 IPO 已延後，同日 ETF Trends 標題卻暗示已有 S-1 可解讀。
+- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-09-06｜查 calcalistech、IPO 延後｜複 2026-11-10｜訊 2026-09-22）｜**IPO 時程是否已延後**：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言。
+  - **官方唯一確認過的是 2026-06-01 向 SEC 機密送交 S-1 草案**（不設股數與價格、明載仍視市況）；「十月上市」「延後」「路演」全屬媒體推估且彼此不一致，2026-10-10 重查仍無公開版 S-1、也無公司時程公告。calcalistech 與 ETF Trends 的標題分歧因此無從裁決——**兩邊都不採信為事實**。
   - **矛盾已偏向前者**：09-07 Forbes、09-08 Financial Times 與 Yahoo Finance 三家均稱延至十月，ETF Trends 一說未獲後續報導支持。仍無官方確認，兩家原文均未能取得。
 - **訊 2026-09-07 追蹤**：Forbes 報導 IPO 延至 10 月中，同步鎖定 $150 億信用額度（此前 08-18 報導規模為「逾 100 億」，本次更具體）；仍為單一媒體來源，未見官方確認，詳見「IPO 走到哪一格」表。
 - **訊 2026-09-08 追蹤**：Yahoo Finance 同日再稱 IPO 延至十月，與 09-07 Forbes 說法一致但仍為單一媒體轉述；同日 Banking Exchange 報導 Anthropic 就潛在 $2 兆 IPO 案即將敲定承銷銀行名單，兩者均未見官方確認，詳見「IPO 走到哪一格」表。
@@ -318,7 +319,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **和解金分配方式引發原告陣營內鬥（2026-09-06／07）**：NDTV、TechCrunch 報導 15 億美元著作權和解金分配方式引發爭議——出版商、經紀人與作者陣營各執一詞，作者方已公開反彈（Google News/NDTV；Google News/TechCrunch）。
 - 與既有「和解案執行細節」（91% 賠付申請率，見「這些數字是誰說的」表）不同：本則是**誰能分到多少**的陣營內部爭議，屬和解案後續新面向（推論，具體分配公式未見報導）。
 - **著作權訴訟疑似重複報導**：The Post-Crescent 報導 Anthropic 因訓練 AI 使用受版權保護書籍遭提告；同期查無其他獨立媒體報導有別於既有 15 億美元著作權集體訴訟和解案（見「這些數字是誰說的」表）的新訴訟。
-- 🔎 **查無官方**（標 2026-08-13｜查 Post-Crescent、著作權訴訟｜複 2026-10-04）｜**是否為獨立新訴訟**：延伸查證僅得 Bartz v. Anthropic 和解案官方／法院文件，未查得 Post-Crescent 具名的獨立新案號；維持「高度疑似地方報重提既有和解案」判斷。
+- 🔎 **查無官方**（標 2026-08-13｜查 Post-Crescent、著作權訴訟｜複 2026-11-10）｜**是否為獨立新訴訟**：延伸查證僅得 Bartz v. Anthropic 和解案官方／法院文件，未查得 Post-Crescent 具名的獨立新案號；維持「高度疑似地方報重提既有和解案」判斷。
 - **知名放空投資人唱空估值敘事**：Yahoo Finance 報導「Big Short」原型投資人 Steve Eisman 公開表示 Anthropic 與 OpenAI 是整體 AI 交易的「阿基里斯腱」（Achilles' heel）；屬市場觀察類評論，非官方財務數據或公司聲明，具體論據、部位規模未見報導。與同日出現的 CFO 早期 IPO 會議、投資人估值上看 2 兆美元等籌備信號同期並存，形成「籌備動作推進 vs 知名空頭唱空」的敘事張力（推論）。
   - **09-24 跟進**：Yahoo Finance 報導 Eisman 改稱 AI CEO 們在「假造」末日危機敘事，同時指 Anthropic 可能仍在加速布局；屬同一人物的市場評論延續，具體論據未見報導（Google News/Yahoo Finance）。
 

@@ -30,10 +30,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-04-25
-**最後更新：** 2026-09-06
+**最後更新：** 2026-10-10
 **最後新聞更新：** 2026-06-30
 
-> 本頁保存 [[topics/community-tech-patterns]] 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳。條目一字不刪，只是搬離主頁讓主頁讀得動。
+> 本頁保存 [[topics/community-tech-patterns]] 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳（舊時序頁 [[topics/community-tech-timeline]] 已併回此處）。條目一字不刪，只是搬離主頁讓主頁讀得動。
 
 ---
 
