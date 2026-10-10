@@ -1,6 +1,6 @@
 {
-  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。最後同步：2026-08-29",
-  "id": "trig_01E41amaGSNuL8jeUhCR8iUw",
+  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。⚠️ 2026-10-10 lint 7b-Q6 核對發現本檔 id 與雲端實況不符（舊 id 已不存在），已依 list_triggers 更新。最後同步：2026-10-10｜前次：2026-08-29",
+  "id": "trig_01RphSQ52ZSpWgNsqDHNGmFr",
   "name": "weekly-wiki-lint-cloud",
   "cron_expression": "0 3 * * 6",
   "_cron_note": "UTC，= 台北每週六 11:00。原為 01:00，2026-08-29 每日 routine 由 13:00 移到 22:00 UTC 後，01:30 的 daily-watchdog-push 會與它同時在推——兩個雲端 routine 並發 push 同一 repo 會撞非快轉。錯開到 03:00，與 22:00 的每日 routine 也不重疊。",

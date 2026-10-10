@@ -368,6 +368,150 @@
       ],
       "reviewed": "2026-10-03",
       "why": "兩頁都是已併回 topics/anthropic-government-policy 的轉址殘頁，只剩一則最後動態，彼此無關聯事實；共享鄰居就是共同上層頁"
+    },
+    {
+      "pages": [
+        "entities/claude-design",
+        "entities/pricing"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "共同落地的是 10-09 官方「方案與定價」文件更新；該事實的家是 pricing，claude-design 只是被列在方案層級裡，互連會長出第三份副本"
+    },
+    {
+      "pages": [
+        "entities/claude-design",
+        "topics/market-signals"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同為 10-09 定價文件；市場判讀的家是 market-signals，產品頁不反向連判讀（本頁只放產品事實）"
+    },
+    {
+      "pages": [
+        "entities/claude-code",
+        "entities/haiku-5-5"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "共同落地的是同一份 Claude Help Center release notes；一份官方文件掃到多個功能，不代表功能之間有關"
+    },
+    {
+      "pages": [
+        "entities/claude-docs",
+        "entities/haiku-5-5"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：共同來源是同一份官方 release notes，非主題關聯"
+    },
+    {
+      "pages": [
+        "entities/claude-slides",
+        "entities/haiku-5-5"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：共同來源是同一份官方 release notes，非主題關聯"
+    },
+    {
+      "pages": [
+        "entities/cowork",
+        "entities/haiku-5-5"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：共同來源是同一份官方 release notes，非主題關聯"
+    },
+    {
+      "pages": [
+        "entities/claude-mods",
+        "topics/competitor-landscape"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "共同落地為 DeepSeek Harness 加入 Claude 支援；competitor-landscape 規則明文「Anthropic 自己的動作不進本頁」"
+    },
+    {
+      "pages": [
+        "entities/mustafa-suleyman",
+        "topics/competitor-landscape"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "2026-10-10 已在人物頁補上指向 competitor-landscape 的連結；單向足夠，對手雷達頁不收人物"
+    },
+    {
+      "pages": [
+        "entities/claude-science",
+        "entities/jensen-huang"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "相似度來自共同鄰居（dario-amodei、anthropic-business），兩者本身無直接關係"
+    },
+    {
+      "pages": [
+        "entities/yann-lecun",
+        "topics/market-lessons"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "相似度來自共同鄰居（overview、market-signals）；人物批評與投資判讀教材無直接關係"
+    },
+    {
+      "pages": [
+        "topics/community-integrations",
+        "topics/community-interfaces"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同為 community-tech-patterns 的七個子頁；母頁路由表即它們的連結層，子頁互連會讓七子頁退化成全連通圖"
+    },
+    {
+      "pages": [
+        "topics/community-cost",
+        "topics/community-interfaces"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：patterns 七子頁之間不互連，連結層在母頁路由表"
+    },
+    {
+      "pages": [
+        "topics/community-cost",
+        "topics/community-integrations"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：patterns 七子頁之間不互連，連結層在母頁路由表"
+    },
+    {
+      "pages": [
+        "topics/community-interfaces",
+        "topics/community-multi-agent"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：patterns 七子頁之間不互連，連結層在母頁路由表"
+    },
+    {
+      "pages": [
+        "topics/community-multi-agent",
+        "topics/community-skills"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：patterns 七子頁之間不互連，連結層在母頁路由表"
+    },
+    {
+      "pages": [
+        "topics/anthropic-agent-stack",
+        "topics/skill-interest-watch"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "官方積木頁與社群規模榜刻意分層；官方↔社群的對照家在 official-community-gap"
+    },
+    {
+      "pages": [
+        "topics/anthropic-agent-stack",
+        "topics/community-multi-agent"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：官方積木與社群做法分層，對照家在 official-community-gap"
+    },
+    {
+      "pages": [
+        "topics/anthropic-agent-stack",
+        "topics/community-memory"
+      ],
+      "reviewed": "2026-10-10",
+      "why": "同上：官方積木與社群做法分層，對照家在 official-community-gap"
     }
   ]
 }

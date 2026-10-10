@@ -1,6 +1,6 @@
 {
-  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。最後同步：2026-08-29",
-  "id": "trig_01FqjE53JVAKTnPxnt8iJCb6",
+  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。⚠️ 2026-10-10 lint 7b-Q6 核對發現本檔 id 與雲端實況不符（舊 id 已不存在），已依 list_triggers 更新。最後同步：2026-10-10｜前次：2026-08-29",
+  "id": "trig_0165p9RZ55p2SdSAcFSV5gDN",
   "name": "daily-watchdog-push",
   "cron_expression": "30 1 * * *",
   "_cron_note": "01:30 UTC。原為 23:00 UTC，與 routine 改點後的時間相撞會在 pipeline 還沒跑完時誤報。查的是**前一個 UTC 日**的產出。",
