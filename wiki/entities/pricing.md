@@ -31,11 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
 **最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後新聞更新：** 2026-10-10
 
-> **最新計費政策異動**（2026-10-09）
-> - **官方說明中心三頁同步改版**：usage credits 說明移除「過渡計費需明確同意」與「購買用量包」措辭，改寫為額度用盡後可直接繼續使用；Max／Pro 用戶應重新確認 `Settings > Usage` 開關現況。
-> - **Claude Startups 計畫疑似上線數日後暫停（僅標題可用）**：Forbes 報導方案暫停，原文未見，暫停原因與影響範圍均未見報導。
+> **最新計費政策異動**（2026-10-10）
+> 官方 Plans & Pricing 頁新增「$100–$200/月 API 額度」段落、移除金融服務產業段；同日有報導稱已暫停免費 Team 試用＋$1,000 額度，確切生效與範圍未載。
 
 ## 現況
 
@@ -152,14 +151,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
-| Max／Team 新增「每月 API credits」 | 官方說明中心新增此項目；不可用於 Claude Code 或 Claude App；金額上限未定，見下方細節 | 官方說明中心查證 |
+| Max／Team 新增「每月 API credits」 | 官方說明中心新增此項目；不可用於 Claude Code 或 Claude App；金額上限未定（10-10 Plans & Pricing 頁新增 $100–$200/月字樣，diff 片段待全文查證），見下方細節 | 官方頁全文查證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
 | Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
 | Haiku 5.5 精確 $/Mtok 牌價 | 官方稱降 75%、VentureBeat 稱降 90%，口徑不一，見下方細節 | 官方定價頁全文查證 |
 
-**Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得。
+**Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得。**（2026-10-10 補充）** 官方 Plans & Pricing 頁改版偵測到新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文），數字落在 XenoSpectrum 一端，惟完整段落、適用方案層級與是否已暫停均未查證，見下方 10-10 條目。
 
 **Haiku 5.5 定價細節**：官方定價頁 2026-10-09 查證已新增「依 prompt 長度分級計費，逾 10 萬 token 的請求適用更高價格」原文，確認分級計費機制存在；惟分級後的具體 $/Mtok 數字未見本站取得全文，3 家媒體標題稱 $0.10/Mtok、官方發布文稱降 75%、VentureBeat 稱降 90%，三者互相矛盾不採信推算，完整脈絡見 [[entities/haiku-5-5]]。
 
@@ -458,6 +457,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 定價與促銷（模型定價、方案設計）
 
+#### 2026-10-10：官方 Plans & Pricing 頁新增「$100–$200/月 API 額度」段落，同日傳出免費 Team 試用與額度優惠暫停
+
+- **Official Docs 異動**：claude.com/pricing 頁字數增至 22,083 字（+273），新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文）；同時移除「Industries: Financial services」段。
+- **Google News／Pasquale Pillitteri**：稱 Anthropic 今日暫停先前上線的免費 Claude Team 試用與每月 $1,000 API 額度優惠；此來源過往曾被查出以同網域發多語言重複報導（見下方 09-23 條），單一來源，不採信為定案。
+- **方向一致但未證實**：官方頁新增的 $100–$200/月字樣與上方「還沒確定的計費變動」既有懸置項（媒體曾稱 $200／$500 互相矛盾）方向相符，惟官方原文完整段落、適用方案層級、是否暫停及生效時間均未查證。
+
 #### 2026-10-09：官方說明中心三頁同步改版——usage credits 機制拿掉「需明確同意」與「購買用量包」措辭
 
 - **Official Docs 同日三頁同步變動**：[Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)、[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)、[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，字數均增長（各頁 +100～1,100 字）。
@@ -469,7 +474,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **媒體稱**：TechCrunch、CNBC、Quartz、Unite.AI 等至少 4 家同日報導 Anthropic 擴大 Claude Startups 計畫，合格早期新創可獲一年免費 Claude Team 方案＋$1,000 額度；官方計畫頁、資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium）均未見本站查證，不得視為官方數字。
 - **後續（2026-10-07）**：Android Headlines、Tech Edition（＋TechCrunch）、Dataconomy、Techish Kenya、Konsulteer 等至少 6 家媒體同步跟進報導同一方案，數字（一年免費 Team＋$1,000 額度）一致，資格門檻與席位層級細節仍未見官方頁面補齊。
-- ❓ **待查證**（標 2026-10-09｜查 Claude Startups、Forbes｜複 2026-10-23）｜**Claude Startups 免費方案是否已暫停**：Forbes 稱方案上線數日後遭暫停，原文未能取得，暫停原因與影響範圍均未見報導（僅標題可用）。
+- ❓ **待查證**（標 2026-10-09｜查 Claude Startups、Forbes｜訊 2026-10-10｜複 2026-10-23）｜**Claude Startups 免費方案是否已暫停**：Forbes 稱方案上線數日後遭暫停，原文未能取得，暫停原因與影響範圍均未見報導（僅標題可用）。
+- **訊 2026-10-10 追蹤**：Google News／Pasquale Pillitteri（單一來源）稱已暫停免費 Team 試用與每月 $1,000 額度優惠，與同日官方 Plans & Pricing 頁新增 API 額度段落方向相符，但官方頁未明寫暫停與生效時間。
 %% 維運備忘：Team 分層官方資格與席位細節未經查證，暫不列入「我的方案現在有什麼」表，待官方說明中心或公告確認後補列 %%
 
 #### 2026-10-05：Sonnet 4.5 退役日 2026-11-30 經官方查證屬實

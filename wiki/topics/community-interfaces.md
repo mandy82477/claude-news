@@ -32,11 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
 **最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後新聞更新：** 2026-10-10
 
-> **最新做法**（2026-10-09）
-> - **agent 畫到桌面螢幕上**：big-arrow-on-the-screen 讓 agent 疊加箭頭與文字，社群同時示警恐遮蔽權限彈窗。
-> - **先畫依賴地圖再開工**：mellos-mapping 先畫分層藍圖，建置時逐一點亮，目前只有這一個實作。
+> **最新做法**（2026-10-10）
+> - **免終端機的桌面殼層同日出現兩款**：codex-host 把 Claude Code 嵌進 Codex Desktop，pi-agent-desktop 自成獨立桌面 app，皆免環境設定。
 
 ---
 
@@ -57,6 +56,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### BytePioneer-AI/codex-host：在 Codex Desktop 裡直接跑 Pi 與 Claude Code（2026-10-10）
+
+- **主線：** —
+- **核心模式：** 讓 Pi 與 Claude Code 直接在 Codex Desktop（OpenAI Codex 的桌面應用）裡執行，免另開終端機；GitHub Search 2,797 星。
+- **與既有模式的關係：** 補上「介面元件複用」一個「跨 agent 生態桌面宿主」取向——既有做法多是終端機美學或狀態列外掛，本則把 Claude Code 嵌進另一個 coding agent（Codex）的桌面殼層執行；與同日 pi-agent-desktop 同屬「免終端機跑 Claude Code」趨勢，宿主殼層不同；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（2,797★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/BytePioneer-AI/codex-host)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### abcwyc/pi-agent-desktop：免終端機、免環境設定的跨平台 Claude Code 桌面殼層（2026-10-10）
+
+- **主線：** —
+- **核心模式：** Pi——跨平台 AI coding agent 桌面應用，把 Claude Code 體驗搬進桌面：不必設定環境、不必下終端機指令，下載即可開始寫程式；GitHub Search 500 星。
+- **與既有模式的關係：** 與同日 BytePioneer-AI/codex-host 同屬「免終端機跑 Claude Code」取向，本則自成獨立桌面 app（非寄居其他 agent 的殼層），與既有「介面元件複用」做法（Brainless、statuslin.es 等終端機美學外掛）不同之處在於整個換掉終端機，改用圖形化桌面應用；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/abcwyc/pi-agent-desktop)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### franzenzenhofer/big-arrow-on-the-screen：讓 agent 在使用者桌面螢幕疊加箭頭、方框與文字（2026-10-09）
 

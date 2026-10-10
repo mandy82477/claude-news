@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-10
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-09）
+> **本週衝擊**（2026-10-10）
 > - 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
@@ -222,6 +222,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-10
+- **Microsoft／GitHub**：Copilot 週報彙整（10/5 週）——多帳號、多環境切換更簡便，擴大使用者對 agent 可存取範圍與工作方式的控制；內容提及 Claude Haiku 但完整細節未揭露，僅彙整層級可用，不列入「對手雷達」（Blog/GitHub Copilot Changelog）
 
 ### 2026-10-09
 - **OpenAI**：發布 Sophos 導入 Daybreak 案例，資安威脅調查時間降 96%、52% MDR 案件自動化處理並保留人工監督；廠商自宣客戶案例，具體規模與效益數字未經第三方驗證，不進「對手雷達」（Blog/OpenAI News）

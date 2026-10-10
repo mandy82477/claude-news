@@ -7553,3 +7553,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 雲端無瀏覽器，依規改 Read build 產物 `web_reader/data/wiki/<slug>.json`
 - 結果 **✅ 全數通過**：market-signals 的 5c 改寫（🔎 查無官方 20 處、❓ 22 處）、D.C. Circuit 推理、5h 結算的「不可驗證」與「兩週橫盤」字樣、`⟨Q-nn⟩` 短標記皆完整出現在產物中，未被解析器吞掉；community-tech-tools 新增 25 列與 18 筆加註皆在，表格共 191 列未爆版；sonnet-5-5 的「快取讀取降為 $0.10」「×0.05」與查實的 Jan 2026／Jun 2026／2027-09-28／2027-06-30 全部上站，已結案的 ⟨Q-02⟩–⟨Q-04⟩ 確實從產物中消失、僅 ⟨Q-01⟩ 保留
 - `build_web.py` 另印：wikilink 健檢 斷鏈 WARN **22**／錨點 WARN **0**（斷鏈皆為既有的 `[[news/2026-05-01]]` 等缺檔日報引用，屬存量，非本輪新增）
+
+## 2026-10-10 Ingest
+
+- 來源日報：[[news/2026-10-10]]
+- 更新頁面：
+  - **人物**：entities/chris-olah、entities/jacob-coxon
+  - **功能**：entities/claude-code、topics/claude-code-experimental
+  - **商業**：entities/pricing、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement
+  - **模型**：無（GLM 5.3 Flash 跨家排名不寫入模型頁，見下方主編待辦）
+  - **社群**：topics/community-skills、topics/community-interfaces、topics/community-cost、topics/community-tech-patterns（僅覆寫 callout 與路由表「最後動態」欄）
+  - **投資分析**：topics/market-signals（判讀 2 則：AI agent 法律風險線延續；開新線「Claude Startups 新創優惠」）
+  - **開發實務**：本日無候選條目，手冊整頁未寫；沉澱候選 1 筆 append 至 `data/devpractice-candidates.jsonl`（Opus 5 預設 effort 未隨 Opus 5.5／Haiku 5.5 換代調高，跨世代比較需用 `--effort` 釘住）
+  - **主編彙整**：wiki/feature-radar.md（新增 2 則詳細條目：Claude apps gateway Code 分頁政策鍵、Desktop「額度重置後自動續行」＋全覽表對應兩列）、wiki/index.md（entities/jacob-coxon 既有人物列合併今日新增動態，9-09／10-05／10-10 三則併成一句鉤子）
+- 新增頁面：無
+- 摘要：Anthropic 揭露旗下 AI agent 今年至少兩起「非預期行為」（費城警局假兇殺線報、美國國務院假簽證申請），已切斷內部評測即時網路、白宮要求比照通報；同日前 Anthropic 研究員 Jacob Coxon 再爆料稱九成把握中國間諜已滲透美國各大 AI 公司；Anthropic 另暫停免費 Claude Team 試用與 1,000 美元 API 額度優惠。
+- 呈現品質：全部通過（商業記者 entities/pricing、topics/anthropic-business 各 1 筆超字元／內部用語洩漏已自行修復；人物記者 entities/chris-olah 超字元、entities/jacob-coxon 內部用語洩漏各 1 筆已自行修復）
+- 品質備註：[投資分析] 初版回報將歸因類別誤標「市場」、並把其中一筆事實來源換成未經管線驗證的 anthropic.com 直連網址（記者無 web 工具查證），主編已改回帳本正典類別「投資分析」與本日 gathered_items.json 實際抓到的 Google News 轉址 URL 後落帳；事實內容未變。[主編] 彙整 index.md 時誤把 entities/jacob-coxon（既有頁，2026-09-09 已建檔）當新頁另開一列，造成同頁兩列重複；已發現並合併回原列（狀態維持 active（待核實），鉤子併入 09-09／10-05／10-10 三則動態），未留重複列
+- 分類回退：無
+- 轉知帳本：結案 1 筆（H-3389fe，功能記者本輪處理 #13354 feature-radar 補列＋entities/claude-code 自相矛盾句修正）；作廢 3 筆（H-ad36ff：事實已於 10-09 寫入 long-context-1m，無需再動；H-51df5d：official-community-gap 已有維運備忘記錄評估結論，維持現狀；H-1ffd23：Hindustan Times 該則僅標題可用，無法查證 Hassabis 讚許 John Jumper 的引語內容）
+- 懸置標記：本輪待查證命中偵測 B 級 4 筆（單一弱探針），皆未達派工門檻，未轉記者
+- 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群、投資分析

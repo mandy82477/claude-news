@@ -32,12 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
 **最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後新聞更新：** 2026-10-10
 
-> **最新做法**（2026-10-09）
-> - **並行成本歸因有人量了一次**：有人逐 session 拆帳一個月，量出 subagent 吃掉週額度 48%，首次補上這個缺口的一個樣本。
-> - **Haiku 5.5 價格閘門**：送出前依 prompt 長度先算計價級距，避開逾 10 萬 token 的更高價格。
-> - **別把工具塞進 context**：Armin Ronacher〈What is Codemode〉重申改用程式碼呼叫工具；10-04 mcptoon 把 MCP 工具發現與 schema 的成本壓到最低。
+> **最新做法**（2026-10-10）
+> - **headless 等人決策不空等**：需要人類決定時把問題寫進 ticket、結束當前回合，答案來了再用 `claude -p --resume` 接續，不留 process 輪詢。
 
 ---
 
@@ -67,6 +65,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Headless Claude Code asks, exits, then resumes on the answer：用 `claude -p --resume` 讓 agent 等人決定時結束當前回合，不佔用程序輪詢（2026-10-05）
+
+- **主線：** —
+- **核心模式：** 當 headless Claude Code 需要人類決定時，把問題寫進 ticket 並直接結束當前回合（不留 process 輪詢等待），待人類回覆後用 `claude -p --resume` 接續執行，取代「開一個進程空等答案」的做法。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有做法在「長任務中斷後怎麼接續」面向的另一種實作——既有 resume-on-ratelimit.sh（2026-08-04）解決限速中斷自動重試，本篇解決「需要人類決策」的非故障性中斷，兩者皆「不留程序空等、靠外部事件觸發 resume」；非大型 codebase 特有痛點，主線填 —。
+- **來源：** dev.to（4 讚；依 dev.to 內容判斷原則收錄：第一手 headless 自動化流程設計，非讚數）；[原文](https://dev.to/panthpatel/headless-claude-code-asks-exits-then-resumes-on-the-answer-54j3)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實作心得，尚無第三方複現）
 
 #### aidiveyt：逐 session 拆帳一個月用量，量出 subagent 吃掉週額度 48%（2026-10-08）
 

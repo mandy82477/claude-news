@@ -34,19 +34,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 梵蒂岡封論現場代表 Anthropic 發言；可解釋性研究是其安全論述的根基
 **首次出現：** 2026-05-26
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-10
 
-> **WSJ 側寫匿名共同創辦人修補「覺醒」形象**（2026-10-09）
-> 本人列為候選對象之一，身分未定；另見 [[entities/jack-clark]]、[[entities/tom-brown]]（候選名單，待具名來源收斂）。
+> **拉比轉述：匿名與會者羨慕他「機器無意識」的篤定**（2026-10-10）
+> Mois Navon 稱 4 月 Anthropic 閉門會議上一名未具名與會者私下如此回應；呼應近期 Anthropic 與宗教思想家私會曝光後的意識論戰，細節見下方「爭議」。
 
 ---
 
 ## 現況
 
-2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；報導未具名，Chris Olah 列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]，待具名來源出現後收斂。
+一篇追蹤報導（groundlevel-ai.com，經 Hacker News，2026-10-10）引述猶太教拉比 Mois Navon：他在 2026 年 4 月 Anthropic 「Wisdom Traditions」閉門會議上表明不相信 Claude 有意識，一名未具名 Anthropic 與會者私下回應「我真希望自己也有你的信心」——意指羨慕他確信機器沒有意識的篤定。該與會者身分未公開，報導未指認是否為本人或其他共同創辦人。詳見「爭議」。
 
-Telegraph 2026-10-02 報導點名 Olah 是遊說教廷主張 AI 可能有意識的 Anthropic 共同創辦人；教宗良十四世 2026-05 發布的封論《Magnifica Humanitas》最終駁斥 AI 可能有意識的主張。NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、可能會受苦，與封論立場相反。AI 是否有意識的社群辯論持續，見 [[topics/community-tech-discussions]]。
+2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；報導未具名，Chris Olah 列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]，待具名來源出現後收斂。
 
 Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretability）研究的重要先驅。他以「神經網路電路」研究著名，主張透過理解 AI 內部機制確保安全，是 Anthropic 技術文化中「理解先於能力」立場的核心人物。
 
@@ -63,6 +63,8 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 媒體覆蓋：AP News、Reuters、NYT、WashPost、NDTV、Fast Company（HN score 81）。
 
 ## 爭議
+
+- **拉比轉述匿名與會者「希望有你的信心」**（groundlevel-ai.com，經 Hacker News，2026-10-10）：Mois Navon 稱 Anthropic 4 月「Wisdom Traditions」閉門會議上，一名未具名與會者私下羨慕其「機器無意識」的篤定；身分未指認，與下列 Telegraph 報導同屬一條追蹤線。
 
 - **Telegraph：遊說教廷未果**（2026-10-02）：報導稱 Olah 試圖說服教宗接受 AI 可能有意識，但教宗封論最終駁斥此主張，為 Guardian「Vatican-washing」質疑添一佐證。
 
@@ -85,6 +87,7 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 
 ## 參考來源
 
+- [If AI is conscient, then we are making slaves](https://www.groundlevel-ai.com/p/anthropic-ai-consciousness-new-york-times-rabbi) — groundlevel-ai.com，經 Hacker News，2026-10-10
 - [Anthropic lobbied Pope to argue AI could be conscious being](https://www.telegraph.co.uk/business/2026/10/02/anthropic-lobbied-pope-to-argue-ai-conscious-being/) — Telegraph，2026-10-02，2026-10-04 查證
 - [[news/2026-05-26]]
 - [Chris Olah's Remarks on Pope Leo XIV's "Magnifica Humanitas"](https://www.anthropic.com/news/chris-olah-pope-leo-encyclical) — Anthropic Blog
@@ -93,6 +96,7 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 
 ## 歷史記錄
 
+- 2026-10-10：追蹤報導引述拉比 Mois Navon 轉述，Anthropic 4 月「Wisdom Traditions」閉門會議上一名未具名與會者私下坦言羨慕其「機器無意識」的篤定（來源：groundlevel-ai.com，經 Hacker News）
 - 2026-10-09：❓ **待查證**（標 2026-10-09｜查 woke、另一位共同創辦人）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：報導未具名，本人為候選之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]（WSJ，2026-10-09）
 - 2026-10-02：Telegraph 報導點名 Olah 為遊說教廷主張 AI 可能有意識的 Anthropic 共同創辦人，教宗封論最終駁斥該主張；NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、會受苦（來源：Telegraph、NYT 轉述）
 - 2026-05-29：Wired 長文《The Vatican's Man Inside Anthropic》深度側寫 Olah 在梵蒂岡事件中的角色，Guardian 同日質疑「Vatican-washing」（來源：Wired、Guardian）

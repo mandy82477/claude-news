@@ -83,7 +83,7 @@
 | [[entities/amir-salek]] | person | 👤 人物 | active | Google TPU 專案創辦人（2013–2022，經手前七代）；2026-08 加入 Anthropic compute 團隊，向 James Bradbury 匯報（Bloomberg 查證 2026-09-06）|
 | [[entities/evan-hubinger]] | person | 👤 人物 | active | Anthropic 安全研究員；2026-09-09 公開估計 AI 十年內導致人類全滅機率逾 10%（BBC 具名報導） |
 | [[entities/jack-clark]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人；2026-09-15 向 BBC 稱 AI「緊急關閉開關」未來或需強制、向 NPR 稱放緩開發是「集體行動難題」；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
-| [[entities/jacob-coxon]] | person | 👤 人物 | active（待核實）| 前 OpenAI／剛離職 Anthropic pretraining 研究員；2026-09-09 辭職聲明指控兩家公司「不負責任衝向自我改進超級智能」（HN 623 分；資歷已由具名媒體查證，官方未證實）|
+| [[entities/jacob-coxon]] | person | 👤 人物 | active（待核實）| 前 OpenAI／Anthropic pretraining 研究員；2026-09-09 指控兩家公司衝向自我改進超級智能，2026-10-10 稱九成把握中國間諜已滲透美國 AI 公司 |
 | [[entities/joe-benton]] | person | 👤 人物 | active | 前 Anthropic 安全研究團隊負責人；2026-09-10 接受 NBC News 首次專訪，警告先進 AI 研究進展恐失控 |
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
@@ -95,7 +95,6 @@
 | [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune 專訪） |
 | [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
 | [[entities/jamie-dimon]] | person | 👤 人物 | active | 摩根大通執行長；2026-10-06 警告 Anthropic 的 Mythos AI 讓網路風險提高 10 倍，彙整 07-16／08-10／10-06 三次公開表態 |
-
 ---
 
 ## Topics（進行中議題）

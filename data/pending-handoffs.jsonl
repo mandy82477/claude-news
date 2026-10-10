@@ -276,3 +276,7 @@
 {"id": "H-ad36ff", "opened": "2026-10-09", "from": "商業", "to": "功能", "page": "topics/long-context-1m", "note": "entities/pricing 新增 Claude 4.6 以前／4.7 以後長文本 token 計數門檻差異（244 vs 325 tokens），屬本頁範疇，商業記者未寫入", "status": "open"}
 {"id": "H-51df5d", "opened": "2026-10-09", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "zhikuncode（community-multi-agent）、big-arrow-on-the-screen（community-interfaces）為新 agent 工作模式節點，請評估產品化矩陣新增列", "status": "open"}
 {"id": "H-3389fe", "opened": "2026-10-10", "from": "開發實務", "to": "功能", "page": "entities/claude-code", "note": "主編 2026-10-10 已就 #13354 查證官方 Week 33 週報並寫入頁面（Desktop-only、opt-in、週額度卡片不提供），維持 🔴 未修復。請功能記者評估是否另在 feature-radar 補一列「Desktop 額度重置後自動續行」（v2.1.225-233 區間、Desktop 限定），以及社群 09-20「v2.1.234 預設開啟」說法是否需在頁面留反駁註記", "status": "open"}
+{"id": "H-3389fe", "closed": "2026-10-10", "status": "done", "by": "功能", "result": "已補 feature-radar 第 2 則（Desktop Code 分頁額度重置後自動續行，回應 #13354），並修正 entities/claude-code.md 自相矛盾句（移除過時『v2.1.234 預設開啟／可改列已修復』斷言）"}
+{"id": "H-ad36ff", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "查證發現事實已於 2026-10-09 寫入 topics/long-context-1m.md，entities/pricing 範疇內無需再動"}
+{"id": "H-51df5d", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "查證發現 2026-10-10 official-community-gap 已有維運備忘記錄評估結論（兩者皆單一工具，未達開新列門檻，維持現狀）"}
+{"id": "H-1ffd23", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "Hindustan Times 該則僅標題可用，未見 Hassabis 讚許 John Jumper 的原文字句，記者無 web 工具無法查證引語內容，不動 entities/john-jumper.md"}

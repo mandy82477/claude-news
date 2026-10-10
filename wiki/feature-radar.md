@@ -67,6 +67,17 @@
 
 ## 🆕 最新功能（2026-10）
 
+### Claude apps gateway 新增 Code 分頁政策鍵
+**發布：** 2026-10-09（v2.1.296） | **狀態：** 正式發布
+
+**是什麼：** `managed.policies[]` 新增 `code` 鍵，套用與 `cli` 相同的政策設定，獨立套用到 Claude Desktop 的「Code」分頁（原本僅 `desktop` 鍵涵蓋其餘功能）。
+
+**為何熱：** GitHub Release 首發，僅官方一個來源，面向企業 IT 管理員的窄眾功能，尚無社群實測或討論。
+
+**現在要試嗎：** 用 Claude Desktop 管理政策的企業 IT 管理員可評估是否要為 Code 分頁另訂規則；一般使用者不受影響。
+
+**注意事項：** 與既有 `desktop`／`cli` 政策鍵的實際生效範圍差異，release note 未進一步展開，管理員套用前建議先在測試環境確認效果。
+
 ### Hook `onFailure: "block"`
 **發布：** 2026-10-08（v2.1.295） | **狀態：** 正式發布
 
@@ -507,6 +518,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude apps gateway Code 分頁政策鍵**（v2.1.296，`managed.policies[].code` 比照 `cli` 政策套用到 Desktop Code 分頁） | 2026-10-09 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Hook `onFailure: "block"`**（v2.1.295，command／HTTP hook 失敗即阻擋） | 2026-10-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Bedrock/Vertex/Foundry CountTokens API**（v2.1.295，⚠️ 需授予 `bedrock:CountTokens` 權限） | 2026-10-08 | 🔥 | ⚡ 有條件推薦（企業先授權） | 正式發布 |
 | **Claude Haiku 5.5 可選用**（成本比前代降約 75%，高流量成本敏感任務；模型本身見 [[entities/haiku-5-5]]） | 2026-10-07 | 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
@@ -549,6 +561,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code Auto 模式預設化**（⚠️ Breaking change：8/14 起 auto 成為 Pro／Max／Team 預設權限模式；免收分類器 token 費；Enterprise 與雲端平台仍選用制） | 2026-08-14 生效（08-07 公告，08-10 官方部落格確認） | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code 跨 session 訊息互通**（v2.1.224+，Windows v2.1.234+；`ListAgents` 探索 session、`SendMessage` 指名傳訊，亦適用 subagent 與隊友） | 2026-08-08 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.232**（Subagent forking 預設開啟，`subagent_type: "fork"` 繼承完整對話與 prompt cache；派工行為亦調整，原文截斷） | 2026-08-13 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Desktop Code 分頁「額度重置後自動續行」**（v2.1.225–233，Desktop 限定 opt-in，回應 issue #13354） | 2026-08-10 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布（Desktop 限定）|
 | **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **API Inference Hooks**（Enterprise 組織 beta，claude.ai／Cowork／Claude Code 上受管治 prompt 可導向企業自有 AI 安全伺服器） | 2026-08-05 | 🔥 | ⏳ 觀望 | Beta（Enterprise） |
 | **Claude Code v2.1.222**（安全修復：worktree 隔離 session 及其 subagent 可對主 checkout 執行破壞性 git 指令的漏洞，隔離範圍擴及檔案編輯與 Bash 執行） | 2026-08-04 | 🔥 | ✅ 建議升級 | 正式發布（安全修復） |
@@ -879,6 +892,19 @@ claude --worktree <GitLab-MR-URL>
 **現在要試嗎：** 依賴 `subagent_type: "fork"` 的既有工作流會自動獲得完整對話/cache 繼承，屬行為預設變更而非選用功能；重度使用 fork 的使用者應留意 context／cache 用量是否隨之增加。
 
 **注意事項：** 官方原文截斷處未知的「非 teammate agent 派工行為調整」細節待補；是否有 opt-out 設定亦未知。
+
+---
+
+### Desktop Code 分頁「額度重置後自動續行」
+**發布：** 2026-08-10～14 生效（Week 33, v2.1.225→233 之間） | **狀態：** 正式發布（Desktop 限定）
+
+**是什麼：** Claude Desktop 的 Code 分頁撞到 session 用量上限時，卡片新增 **Auto-continue when limits reset** 核取方塊；勾選後額度重置時自動重試被中斷的那一輪，顯示 `Auto-resuming at` 與重置時間。
+
+**為何熱：** 對應長年功能請求 [issue #13354](https://github.com/anthropics/claude-code/issues/13354)（累積 80 則留言、193 個讚）；官方 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33) 首度證實部分補上；社群 09-20 曾誤傳「v2.1.234 新增、預設開啟」，經查證與官方週報不符。
+
+**現在要試嗎：** 只在 Desktop 的 Code 分頁可用，終端機／CLI 未見此選項；是使用者需手動勾選的 opt-in，非預設開啟；**週額度卡片不提供此選項**，僅 session 上限卡片有——靠週額度續行的人這個功能幫不上忙。
+
+**注意事項：** 版本區間為 v2.1.225–233（2026-08-10～14），非社群流傳的 v2.1.234；完整限制與查證見 [[entities/claude-code]]「💰 計費與配額」。
 
 ---
 

@@ -30,20 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-09-15
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-10
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-09）
-> 2.1.295 新增 5 個候選旗標（名單見追蹤表），皆第一階；`CLAUDE_CODE_ARTIFACT_FIVE_CLASS_ASKS` 消失升列第 4 階，另一個消失的 `CLAUDE_CODE_INTRO_FRAME` 首見版本早於本頁追蹤範圍；對帳僅命中來源條目與日報鏡像，暫不升第二階。
+> **最新動態**（2026-10-10）
+> 2.1.296 新增 4 個候選旗標：3 個進追蹤表（`AGENT_PROGRESS_SUMMARIES`、`WEBSEARCH_CITATIONS_DECLARED`、`WORKFLOW_SUBAGENT_MODEL`），代號旗標 `SNAPPY_PELICAN` 1 個；`CLAUDE_CODE_ARTIFACT_TEXT_VARIANT` 消失升列第 4 階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.296（10-10 比對）新增 4 個候選旗標**：3 個第一階（`AGENT_PROGRESS_SUMMARIES`、`WEBSEARCH_CITATIONS_DECLARED`、`WORKFLOW_SUBAGENT_MODEL`）＋代號旗標 `SNAPPY_PELICAN`；`ARTIFACT_TEXT_VARIANT` 消失升第 4 階；另 3 個設定類旗標不列；暫不升第二階。
 - **2.1.295（10-09 比對）新增 5 個候選旗標**（名單見追蹤表），皆第一階；另 2 個設定類旗標依蒐集邊界不列。`ARTIFACT_FIVE_CLASS_ASKS`（首見 2.1.262–2.1.272）消失升列第 4 階，`INTRO_FRAME` 同批消失但首見早於追蹤範圍；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.294（10-08 比對）新增 1 個候選旗標**：`CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.292（10-07 比對）新增 4 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
@@ -76,6 +77,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_AGENT_PROGRESS_SUMMARIES` | 2.1.296（10-10） | 1 | — | — | 2.1.296 仍在（比對日 10-10） |
+| `CLAUDE_CODE_WEBSEARCH_CITATIONS_DECLARED` | 2.1.296（10-10） | 1 | — | — | 2.1.296 仍在（比對日 10-10） |
+| `CLAUDE_CODE_WORKFLOW_SUBAGENT_MODEL` | 2.1.296（10-10） | 1 | — | — | 2.1.296 仍在（比對日 10-10） |
 | `CLAUDE_CODE_AUTOUPDATER_DISABLED_BY_HOST` | 2.1.295（10-09） | 1 | — | — | 2.1.295 仍在（比對日 10-09） |
 | `CLAUDE_CODE_RESTRICT_PERSONAL_CONFIG` | 2.1.295（10-09） | 1 | — | — | 2.1.295 仍在（比對日 10-09） |
 | `CLAUDE_CODE_SLEEP_COMPACT` | 2.1.295（10-09） | 1 | — | — | 2.1.295 仍在（比對日 10-09） |
@@ -135,7 +139,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_RELAUNCH_HOME_TRUST` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
 | `CLAUDE_CODE_SDK_READS_SESSION_STATE` | 2.1.284（09-28） | 1 | — | — | 2.1.284 仍在（比對日 09-28） |
 | `CLAUDE_CODE_ARTIFACT_INHERITED_TYPE_GRANT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
-| `CLAUDE_CODE_ARTIFACT_TEXT_VARIANT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
+| `CLAUDE_CODE_ARTIFACT_TEXT_VARIANT` | 2.1.281（09-24） | 4 | — | — | 2.1.296（10-10）消失（來源條目消失清單） |
 | `CLAUDE_CODE_CCR_EARLY_REMOTE_CONNECT` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
 | `CLAUDE_CODE_COMMIT_BETWEEN_KEYS` | 2.1.281（09-24） | 4 | — | — | 2.1.284（09-28）消失（來源條目消失清單） |
 | `CLAUDE_CODE_COORDINATOR_SKILL_GUIDANCE` | 2.1.281（09-24） | 1 | — | — | 2.1.281 仍在（比對日 09-24） |
@@ -199,6 +203,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_SNAPPY_PELICAN` | 2.1.296（10-10）出現 |
 | `CLAUDE_CODE_CALM_MOCHI` | 2.1.289–2.1.291（跨版回填）出現 |
 | `CLAUDE_CODE_CURRIED_TRINKET` | 2.1.289–2.1.291（跨版回填）出現 |
 | `CLAUDE_CODE_HARMONIC_RIDDLE` | 2.1.289–2.1.291（跨版回填）出現 |
@@ -241,6 +246,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-10 | 2.1.296 新增 4 候選旗標：3 第一階（名單見追蹤表）＋代號旗標 `SNAPPY_PELICAN`；`ARTIFACT_TEXT_VARIANT`（首見 2.1.281）消失，列 4 階；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-09 | 2.1.295 新增 5 個候選旗標（見追蹤表）；`ARTIFACT_FIVE_CLASS_ASKS` 消失列 4 階、`INTRO_FRAME` 同批消失；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-10-08 | 2.1.294 新增 1 個第一階候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`；`build_flags_mentions.py` 對帳 2 筆，命中僅來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-07 | 2.1.292 新增 4 個第一階候選旗標（名單見追蹤表）；`build_flags_mentions.py` 對帳 4 個，命中僅來源條目與日報鏡像，不算獨立佐證 |

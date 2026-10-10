@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後新聞更新：** 2026-10-10
 
-> **最新動態**（2026-10-09）
-> - v2.1.295 新增 hook `onFailure: "block"`：command／HTTP hook 若無法啟動、逾時或退出碼異常，動作直接阻擋，不再放行；Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API（需額外授予 `bedrock:CountTokens` 權限）；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
-> - MIXED Reality News 指出官方文件目前仍寫「不要只依賴 hook 做安全防護」，與上述新行為有落差，官方尚未就此表態。
+> **最新動態**（2026-10-10）
+> - v2.1.296：Claude apps gateway `managed.policies[]` 新增 `code` 鍵，IT 可比照 CLI 政策，獨立套用到 Claude Desktop「Code」分頁。
+> - 新增已知問題：Claude Desktop 1.1.4173 啟動後無視窗渲染（#28304）；個人帳號 GitHub repo 在 Claude web 完全不顯示、僅組織帳號正常（#18467）。
+> - Cowork 10GB VM bundle 效能退化（#22543，今日互動最高）等 4 則既有已知問題互動數同步更新。
 
 ---
 
@@ -230,7 +231,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**OpenClaw 異常計費行為**（2026-04-30，HN 近千則討論）：若 Git 提交訊息或文件內容中含特定 JSON 格式的 "OpenClaw" 字串，Claude Code 會直接拒絕請求，或將帳單 Extra Usage 衝至 100%；表明 Claude Code 正主動掃描 repo 內容並據此改變計費策略，Anthropic 至今未公開說明
 - 🔴 **未修復**｜**ANTHROPIC_API_KEY 雲端計費陷阱**（2026-04-30）：雲端環境設置此環境變數時，所有呼叫自動改走 API 計費通道，見 [[entities/pricing]]
 - 🔴 **未修復**｜**額度顯示 84% 卻收到「You've hit your limit」（GitHub issue #19673，累積反應 75，2026-07-04）**：使用者反映用量儀表板顯示尚餘額度（僅用 84%）情況下即收到「已達額度上限」提示，質疑額度計算邏輯是否準確或存在顯示與實際計算不同步的問題；官方尚未回應
-- 🔴 **未修復**｜**Session 額度上限時無法順暢接續／功能請求自動續行（GitHub issue #13354，累積 80 則留言、193 個讚，首見 2026-07-07，2026-08-04 互動數更新，今日互動最高功能請求之一）**：使用者希望 session 達到額度上限時能有更順暢的接續機制（如自動排隊、無縫轉續、自動恢復），而非直接中斷工作流程；2026-08-04 日報標記此為當日互動最高功能請求之一，與同日「瞬間打到用量上限」抱怨（issue #16157）呼應；官方尚未回應或提供替代方案。（此前曾被誤列為兩則獨立條目，本次合併統一追蹤）**Reddit r/ClaudeAI 回報屬實：Claude Code 已新增「額度重置後自動繼續」（Auto-continue when limits reset）功能**（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）：Claude Code 於用量上限重置後自動接續 session，可於 `/config`「Continue automatically at usage limit」關閉，v2.1.234（2026-08-17）起預設開啟；桌面版另有獨立的 session-limit 卡片勾選框，週限額卡片不提供此選項（見 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33)）。功能請求 #13354 可改列 ✅ 已修復。
+- 🔴 **未修復**｜**Session 額度上限時無法順暢接續／功能請求自動續行（GitHub issue #13354，累積 80 則留言、193 個讚，首見 2026-07-07，2026-08-04 互動數更新，今日互動最高功能請求之一）**：使用者希望 session 達到額度上限時能有更順暢的接續機制（如自動排隊、無縫轉續、自動恢復），而非直接中斷工作流程；2026-08-04 日報標記此為當日互動最高功能請求之一，與同日「瞬間打到用量上限」抱怨（issue #16157）呼應；官方尚未回應或提供替代方案。（此前曾被誤列為兩則獨立條目，本次合併統一追蹤）**Reddit r/ClaudeAI 回報屬實：Claude Code 已新增「額度重置後自動繼續」（Auto-continue when limits reset）功能**（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）：Claude Code 於用量上限重置後自動接續 session，可於 `/config`「Continue automatically at usage limit」關閉；桌面版另有獨立的 session-limit 卡片勾選框，週限額卡片不提供此選項（見 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33)）。上線版本與是否預設開啟，依下方 2026-10-10 查證結果為準，本則維持 🔴 未修復。
   - **官方已出一半，但只在 Desktop、且不是預設（2026-10-10 查證）**：官方 [Week 33 週報](https://code.claude.com/docs/en/whats-new/2026-w33)（v2.1.225→233，08-10～14）載明 Desktop 的 Code 分頁撞到 session 上限時，卡片會出現 **Auto-continue when limits reset** 核取方塊。
     - 勾選後 Desktop 會在額度重置後重試被中斷的那一輪，卡片顯示 `Auto-resuming at` 與重置時間。
     - **三個限制讓本則不改列已修復**：① 只在 Desktop，終端機版此週報未載；② 是使用者勾選的 opt-in，不是預設開啟；③ **週額度卡片不提供此選項**，只有 session 上限卡片有。
@@ -282,7 +283,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude 自陳分析依據不足，卻仍在同一回應中完成該分析——自我識別的阻擋性缺口未真正阻止輸出（GitHub issue #60226，累積 50 則留言，2026-07-24，10-08 更新）**：使用者回報 Claude 明確指出分析依據不足（unfounded），卻在同一回應中繼續完成該分析並輸出結論；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--screen-reader` 模式改善 NVDA／JAWS 無障礙體驗（GitHub issue #11002，65 則留言、38 讚，首見 2026-07-21，09-16 更新）**：v2.1.218 changelog 曾提及螢幕報讀相關改善，惟原文截斷、範圍未知，暫不視為正式回應。
 - 🔴 **未修復**｜**無法用 `Ctrl+Shift+C` 或右鍵選單複製輸出文字（GitHub issue #62699，累積 42 則留言、68 個讚，2026-09-06 更新）**：與「終端機複製夾帶多餘縮排」（#18170）現象不同，暫分列；官方尚未回應。
-- 🔴 **未修復**｜**［META］`bypassPermissions` 模式並未真正略過權限檢查——9 個月未解、12+ 則重複回報（GitHub issue #39523，累積 33 則留言、18 個讚，首見 2026-07-23）**：回報者指出 `bypassPermissions` 模式並未如預期真正跳過權限檢查，此問題已延續 9 個月，累積 12 則以上重複回報仍無解決；與既有「`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效」（issue #36168）同屬權限跳過機制失效訴求但涵蓋範圍不同（此則為長期 META 彙整回報），暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**［META］`bypassPermissions` 模式未真正略過權限檢查，9 個月未解、12+ 重複回報（GitHub issue #39523，37 則留言、19 個讚，首見 2026-07-23，2026-10-10 更新）**：回報者指出該模式並未如預期跳過權限檢查；官方尚未回應。
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 47 則留言，首見 2026-07-23，2026-09-24 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 54 則留言，2026-09-08 首見，2026-09-23 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
@@ -413,15 +414,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：獨立 macOS 介面提供關閉自動建立 worktree 的選項，方便獨立開發者使用（GitHub issue #12513，累積 47 則留言、80 個讚，2026-08-12）**：獨立開發者反映獨立 macOS 介面會自動建立 worktree，希望提供選項可關閉此行為；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Cowork 無法加入私有 GitHub marketplace（GitHub issue #28125，累積 35 個讚，2026-08-02）**：使用者回報 Cowork 功能無法加入私有（private）GitHub marketplace；官方尚未回應。
 - 🔴 **未修復**｜**Bedrock：Claude Opus 4.7 回傳 permission_error，儘管帳號權限狀態顯示 AUTHORIZED（GitHub issue #51183，累積 39 則留言、12 個讚，首見 2026-07-31，2026-08-16 互動數更新）**：在 AWS Bedrock 環境下，即使帳號權限狀態顯示為 AUTHORIZED（已授權），呼叫 Opus 4.7 仍回傳 permission_error 錯誤；回報者已確認搜尋過現有 issue 未見重複回報；與既有「Bedrock 功能相容性落差（持續）」同屬 Bedrock 接入層問題，官方尚未回應。
-- 🔴 **未修復**｜**Cowork：儲存 Global instructions 後靜默還原成舊版本（GitHub issue #40175，累積 30 則留言、20 個讚，2026-08-01）**：在 Cowork 中儲存 Global instructions（全域指示）後，會靜默還原成較舊版本，使用者不會收到任何警告或錯誤提示，屬資料遺失類 bug；官方尚未回應。
+- 🔴 **未修復**｜**Cowork：儲存 Global instructions 後靜默還原成舊版本（GitHub issue #40175，38 則留言、23 個讚，首見 2026-08-01，2026-10-10 更新）**：儲存後會悄悄退回舊版本，不會跳出任何警示，屬資料遺失類 bug；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 68 則留言、447 個讚，2026-09-12 互動數更新）**：快取與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG 標準路徑；官方尚未回應。
 - 🔴 **未修復**｜**Dispatch 主對話持續顯示離線，儘管 Cowork 任務正常運作（GitHub issue #45937，累積 37 則留言，2026-07-26）**：使用者回報 Dispatch 主對話在行動裝置端持續顯示「This desktop appears offline」，即使直接從桌面端發起提示也一樣；然而個別 Cowork 任務仍能正常運作，顯示問題限於主對話的連線狀態顯示；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援終端機 CLI 已有的 `/btw` 指令（GitHub issue #37323，累積 35 則留言、216 個讚，首見 2026-07-23，2026-08-09 互動數更新，今日日報互動量最高）**：使用者呼籲 VS Code 擴充套件比照終端機 CLI 版本支援 `/btw` 指令；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**GitHub connector 可連結帳號內所有 repository 卻無法讀取任何內容，回報為近期功能退化（GitHub issue #71542，累積 63 則留言、69 個讚，首見 2026-07-18，2026-09-16 互動數更新）**：帳號全域皆受影響，公開與私有 repo 皆然；官方尚未回應。
   - 標題明確標註為近期發生的功能退化（regression）；與既有「GitHub Connector 已在 Claude Desktop 連結卻未被識別」（issue #32479）同屬 GitHub connector 可靠性問題但現象不同，暫分列追蹤。
+- 🔴 **未修復**｜**個人帳號（非組織）GitHub repo 不顯示於 Claude web，僅組織帳號正常（GitHub issue #18467，38 則留言、86 個讚，2026-10-09）**：個人帳號名下 repo 在 claude.ai/code 清單中不會出現，組織帳號正常；獨立開發者會直接撞到此限制；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：對話訊息加上時間戳記，方便監控長時間背景 agent 工作進度（GitHub Issues，累積 36 則留言、66 個讚，2026-07-18）**：使用者希望能在使用者與 assistant 訊息上顯示時間戳記，便於監控長時間執行的背景 worker 進度；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**工作目錄追蹤暫存檔從未清理，`/tmp/claude-*-cwd` 持續累積（GitHub issue #8856，累積 71 個 reactions、111 則留言，首見 2026-07-17，2026-09-04 互動數更新）**：Claude Code 用來追蹤 Bash 執行間工作目錄變化的暫存檔（`/tmp/claude-*-cwd`）從未被清理，長期執行後持續累積佔用磁碟空間；官方尚未回應。
-- 🔴 **未修復**｜**Cowork 建立 10GB VM bundle 導致效能持續惡化（GitHub issue #22543，累積 76 則留言、259 個讚，2026-07-15 首見，2026-08-19 讚數更新）**：使用者回報使用 Cowork 功能後 Claude Desktop 建立高達 10GB 的 VM bundle，導致啟動變慢、UI 延遲，回應速度隨時間持續下降，即使在單一 session 內效能也會惡化；官方尚未回應。
+- 🔴 **未修復**｜**Cowork 建立 10GB VM bundle 導致效能持續惡化（GitHub issue #22543，78 則留言、271 個讚，首見 2026-07-15，2026-10-10 更新，今日互動量最高）**：使用 Cowork 後 Desktop 啟動變慢、UI 延遲，效能隨時間持續惡化；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Edit/Write 工具因緩衝區容量上限靜默截斷檔案（byte-conservation buffer cap，GitHub issue #53940，累積 44 則留言／16 個讚，原始回報 2026-04-27，2026-07-16 為作者持續維護的長篇更新摘要）**：使用者回報 Cowork 的 Edit/Write 工具會因緩衝區容量上限機制靜默截斷檔案內容，且此問題具確定性、在任何檔案大小下皆會觸發，並非邊緣情況；屬嚴重的資料完整性缺陷；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 54 則留言、57 個讚，首見 2026-07-17，2026-09-11 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件新增停用自動附加開啟檔案/選取範圍設定（GitHub issue #24726，累積 77 則留言、243 個讚，首見 2026-07-17，2026-09-16 互動數更新）**：使用者希望 VS Code 擴充套件提供選項，可停用自動將目前開啟檔案或選取範圍附加進對話 context 的行為；官方尚未回應或提供設定選項。
@@ -436,7 +438,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Environment Contributions 警告訊息持續重複出現（GitHub issue #3301，累積 47 則留言、86 個讚，2026-09-18 互動數更新）**：每次開啟 Cursor／VS Code IDE 皆重複出現，Claude Code Status v1.0.25；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Visual Studio 2026 整合支援（GitHub issue #15942，累積 154 則留言、556 個讚，首見 2026-07-09，2026-09-21 互動數更新）**：使用者要求 Claude Code 支援 Visual Studio 2026 整合；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：Claude Code Desktop 多視窗支援（GitHub issue #30154，累積 61 則留言、249 個讚，首見 2026-07-09，2026-09-11 互動數更新）**：使用者呼籲 Desktop app 支援多視窗同時操作，取代目前單視窗＋側邊欄的 session 管理方式；官方尚未回應。
-- 🔴 **未修復**｜**Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染（GitHub issue #49322，累積 50 則留言、42 個讚，2026-07-09）**：使用者回報使用 Opus 4.7 時，VS Code 擴充套件無法正確渲染 thinking summaries 內容；官方尚未回應。見 [[entities/opus-4-7]]。
+- 🔴 **未修復**｜**Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染（GitHub issue #49322，52 則留言、43 個讚，首見 2026-07-09，2026-10-10 更新）**：VS Code 擴充套件無法正確渲染 thinking summaries；官方尚未回應。見 [[entities/opus-4-7]]。
 - 🔴 **未修復**｜**VSCode 擴充套件 `ide_selection` 缺失、`ide_opened_file` 回報錯誤（GitHub issue #8451，累積 50 則留言、35 個讚，2026-07-10）**：VSCode 擴充套件未正確回報 `ide_selection`，且 `ide_opened_file` 欄位回傳錯誤檔案資訊，影響依賴這些欄位判斷編輯器狀態的工作流；官方尚未回應。
 - 🔴 **未修復**｜**GitHub Connector 已在 Claude Desktop 連結卻未被識別（GitHub issue #32479，累積 100 則留言、149 個讚，2026-10-02 互動數更新）**：Desktop 完成連結授權後 Claude 仍無法辨識，依賴 GitHub 存取的工作流無法使用；官方尚未回應。
 - 🔴 **未修復**｜**VSCode 擴充套件確認變更時未顯示 Edit 預覽/diff（GitHub issue #8660，累積 52 則留言、90 個讚，首見 2026-07-08，2026-09-11 互動數更新，已持續數月未修復）**：確認變更時 diff 畫面未正確顯示，難以於套用前檢視異動；官方尚未回應。
@@ -472,6 +474,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
 - 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop 1.1.4173 啟動後無視窗渲染，工作管理員仍可見進程（GitHub issue #28304，41 則留言、31 個讚，2026-10-09）**：更新至 1.1.4173 後啟動無畫面，但背景進程仍在執行；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
 - ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：Claude Desktop App 遠端控制 Claude Code session（GitHub issue #29006，累積 36 則留言、158 個讚，首見 2026-07-12）**：官方答遠端控制已可用，在「設定 > Claude Code > 預設啟用遠端控制」打開。
 - ✅ **已修復**（2026-08-19 官方關閉）｜**既有 session 中 `/remote-control`（`/rc`）未被識別為內建指令（GitHub issue #28322，2026-07-13 回報）**：官方答 v2.1.76 修好「Unknown skill」、v2.1.206 起 `/remote-control` 一律解析得到。
@@ -560,6 +563,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.296** | 2026-10-09 | Claude apps gateway `managed.policies[]` 新增 `code` 鍵：套用與 `cli` 相同設定，獨立套用到 Claude Desktop 的「Code」分頁（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.296)）|
 | **v2.1.295** | 2026-10-08 | 新增 hook `onFailure: "block"`；Bedrock/Vertex/Foundry token 計數改用 CountTokens API；MCP 工具描述上限 2,048→16,384 字元（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）|
 | **anthropic-sdk-typescript sdk-v0.133.0** | 2026-10-09 | 新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.133.0)）|
 | **anthropic-sdk-python v1.13.0** | 2026-10-09 | 同步新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾，細節見 [[entities/managed-agents]]（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|

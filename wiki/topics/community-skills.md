@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-10
 
-> **最新做法**（2026-10-07）
-> - **把創業流程封裝成 skill**：claude-skills-founder 從終端機產出產品簡報、競品分析、定價策略與募資 deck。
-> - **平實語言寫的 skill**：10-02 open-steps 給 Claude Code、Codex、Cursor、Gemini CLI 共用。
+> **最新做法**（2026-10-10）
+> - **三個新垂直領域 skill 同日出現**：scroll-craft 做滾動視差網站、mortiflix-oss 逐階段產影片待人核准、awesome-claude-video-skills 彙整 180 個影片生成 skill 倉庫。
 
 ---
 
@@ -69,6 +68,33 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### nateherkai/scroll-craft：打造高質感 scroll-driven 網站的 agent skill，相容 Claude Code、Codex，另有 plugin 版（2026-10-10）
+
+- **主線：** —
+- **核心模式：** Agent skill，用來產生高質感、滾動視差（scroll-driven）的沉浸式網站，相容 Claude Code、Codex 等 coding agent，同時提供 Claude Code plugin 版本；GitHub Search 3,027 星，24 小時內衝上榜，為本輪社群條目星數成長最快者。
+- **與既有模式的關係：** 為「Skills 設計」補上「網站視覺設計」這個垂直領域——既有做法多鎖定知識框架化、創業商業產出或程式碼品質，本則把 skill 的服務對象換成前端視覺／動效設計；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（3,027★），24 小時內暴衝，無 forks／issues／近期 commit 佐證可查，未另行查證，列為需留意的星數異常訊號。
+- **來源：** GitHub Search；[GitHub](https://github.com/nateherkai/scroll-craft)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### GTKottman/mortiflix-oss：本機跑的動態設計工作室，Claude 逐階段產出影片、每階段待人核准（2026-10-10）
+
+- **主線：** —
+- **核心模式：** 在使用者自己機器上跑的 motion design studio，由 Claude 逐步驟產出影片，每個階段都需使用者核准才進入下一步；需自備 Claude Code 或 API key；GitHub Search 516 星。
+- **與既有模式的關係：** 為「Skills 設計」補上「影片／動態設計」垂直領域，並帶一個新機制——逐階段人工核准（而非一次性生成）；既有做法（知識框架化、商業產出、程式碼品質等）多是一次性或連續執行，本則把人類核准點嵌進多階段生成流程；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（516★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/GTKottman/mortiflix-oss)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### zhuyansen/awesome-claude-video-skills：180 個「讓 coding agent 做影片」skill／工具倉庫的分類清單，各附安全評級（2026-10-10）
+
+- **主線：** —
+- **核心模式：** 彙整讓 Claude Code、Codex 等 coding agent 製作影片的開源 skills／工具包，依類型分類收錄 180 個 repo，每個附安全評級，提供中英雙語；GitHub Search 525 星。
+- **與既有模式的關係：** 屬策展型資源清單，與既有「課程／教材類資源盤點」同類，但聚焦「影片生成」skill 生態而非教學課程；本則為清單彙整、非單一工具，不進模式概覽表；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（525★），無 forks／issues／近期 commit 佐證可查，未另行查證；清單安全評級由該 repo 作者自評，未經本庫查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/zhuyansen/awesome-claude-video-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，策展型資源清單，尚無社群採用回饋數據）
 
 #### emotixco/claude-skills-founder：給創業者的 Claude Code Skills，從終端機產出產品簡報、競品分析、定價策略、募資 deck 與 GTM 計畫（2026-10-07）
 

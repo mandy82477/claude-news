@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-10
+**最後新聞更新：** 2026-10-10
 
-> **最新動態**（2026-10-09）
-> - **Microsoft／Azure Marketplace 贊助額度爭議**：新創經 Marketplace 用 Claude，原以為受贊助涵蓋卻收 $17,600 帳單，雙方互踢責任（The Register）。
+> **最新動態**（2026-10-10）
+> Bloomberg 報導 Anthropic 與 OpenAI 營收認列方式對外不透明，市場交易員難判讀真實財務體質，與既有 IPO 估值質疑系列同源。
 
 ---
 
@@ -104,6 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-10-09 Bloomberg：營收認列「黑盒」難倒交易員**：Anthropic 與 OpenAI 營收認列方式不透明，交易員難判真實財務體質；與既有 Damodaran 門檻、PitchBook 洩露財報同屬估值懷疑系列，數字未見完整轉載，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-08 Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**：考慮參與 Anthropic IPO 的投資人正設法替這項難以量化的變數定價，反映市場對 AI 安全事故外部性的估值方法尚未成熟；具體模型與數字未見報導，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-07 CNBC：分析師稱將是今年「最荒謬的 IPO」**：與既有 Damodaran 營收門檻（08-23）、PitchBook 洩露財報質疑（10-05）同屬估值懷疑系列，具體論點未見完整轉載，僅標題可用（Google News/CNBC）。
 - **2026-10-07 Reuters：Haiku 5.5 發布框進「IPO 前擴充產品線」敘事**：Reuters 將 Haiku 5.5（第三款 5.5 系列模型）發布時機與籌備中的 IPO 連結報導，模型本身細節見 [[entities/haiku-5-5]]；未見新增估值或時程數字，僅標題可用（Google News/Reuters）。
