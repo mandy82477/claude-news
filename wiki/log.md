@@ -7603,3 +7603,21 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 未查到：MakeUseOf 10-04 所稱「Claude 可操作 Android 應用程式」查無官方公告，不寫入；方案頁另見 Claude Security（beta，Enterprise），發布日未查，未寫入
 - 另：`guard_roles.py` H7 加 5c 授權標記（commit 003f899b），10-10 lint 待裁示第 1 項結案
 - 歸因 user-query／功能、商業
+
+## 2026-10-11 Ingest
+
+- 來源日報：[[news/2026-10-11]]
+- 更新頁面：
+  - **人物**：entities/tom-brown
+  - **功能**：entities/claude-code
+  - **商業**：topics/anthropic-business、entities/pricing
+  - **安全政策**：topics/ai-agent-safety
+  - **社群**：topics/community-memory、topics/community-integrations、topics/community-tech-patterns、topics/community-tech-discussions
+- 新增頁面：無
+- 摘要：Anthropic 虐待禁令生效日（11-12）曝光引專家批評；共同創辦人 Tom Brown 牽線每月 1.25B 美元 SpaceX 運算交易；Claude Code 新增兩起社群回報 bug（圖片處理耗費額度、autoAllowBashIfSandboxed 沙箱繞過）。
+- 呈現品質：全部通過（功能記者 entities/pricing 細節區條列 1 筆超字元，主編本輪已修復並改寫，見下）
+- 品質備註：[主編] 功能記者寫入 entities/pricing.md 的「Auto mode classifier billing」說明超出細節區 200 字元上限（229 字元），主編已改寫縮短至 176 字元、事實內容未變
+- 分類回退：無
+- 轉知帳本：不登帳：安全政策記者回報「需轉知功能」GitHub Issue #43713，但功能記者本輪同時被派工同一則、已自行處理「是否為產品 bug」判定，目標類別原輪已收到不追加轉知
+- 懸置標記：本輪商業記者待查證命中 1 筆（topics/market-signals「Broadcom 貸款 Anthropic 420 億美元是否正式簽署」）證據不足不動；安全政策記者依規則自主為 2 筆既有標記（費城線報事件、虐待禁令）加「訊 2026-10-11」
+- 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群

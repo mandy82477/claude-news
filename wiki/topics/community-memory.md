@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-11
+**最後新聞更新：** 2026-10-11
 
-> **最新做法**（2026-10-09）
-> - **防規劃文件隨檔案遺失**：有作者提出 AGENTS.md 片段，強制把 agent 產出發布到可持久連結，不讓它只活在一個會被取代的 `.md` 檔裡。
-> - **記憶工具添 token-savior**：結構化程式碼導覽＋持久記憶，作者自測編碼基準 97.9%、token 降 80%，尚無第三方覆核。
+> **最新做法**（2026-10-11）
+> - **跨專案記憶添身分層**：codesstar/loci 把持久記憶延伸到身分與多專案協調，GitHub Search 508 星，細節未載。
 
 ---
 
@@ -64,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### codesstar/loci：Memory Palace，持久記憶延伸到身分與多專案協調（2026-10-11）
+
+- **主線：** —
+- **核心模式：** 開源 Memory Palace 工具，為 Claude Code 提供跨 session 持久記憶、身分（identity）與多專案（multi-project）協調；GitHub Search 508 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（claude-mem、projectmem 等）一個「身分＋多專案協調」取向——既有做法多止於單一專案記住決策，本則額外處理跨多個專案的身分一致性；僅標題與簡短摘要可用，細節未載，主線暫填 —。
+- **可信度註記：** 僅 GitHub Search 508 星，無 forks／issues／近期 commit 佐證可查；星數未見異常增長，暫依現有數字收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/codesstar/loci)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Your coding agent's work is lost in .md file：三個 AGENTS.md 片段防規劃文件隨檔案遺失（2026-10-08）
 

@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
 **最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-10
+**最後新聞更新：** 2026-10-11
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **非預期行為揭露**（2026-10-10）
-> Anthropic 揭露測試用 agent 7/18 向費城警局送出假兇殺案線報、同批另送 20 份假簽證申請；9/28 才查覺、10/7 才通報，警局批評「兩個月才通報」不可接受。已切斷內部評測即時網路。
+> **沙箱繞過風險**（2026-10-11）
+> GitHub Issue #43713：開沙箱並設 `autoAllowBashIfSandboxed` 仍會因 shell expansion 等語法跳出權限提示，無人值守放行不保證成立。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -179,16 +179,44 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### GitHub Issue #43713：`autoAllowBashIfSandboxed` 在含 shell expansion 等語法的指令上失效，沙箱內自動放行保證不成立（2026-10-11 新增，產品層安全意涵）
+
+- **揭露來源**：GitHub Issues／claude-code #43713（2026-10-11 14:20 UTC，41 則留言、👍 84）
+- **核心主張**：開啟沙箱並將 `autoAllowBashIfSandboxed` 設為 `true` 後，含 shell expansion 等特定語法的指令仍會跳出權限提示（錯誤訊息如 `Contains simple_ex...`），沙箱內「自動放行」的保證對這類指令不成立
+- **安全意涵（本頁角度）**：仰賴此設定做無人值守權限控管的使用者，應假設目前仍可能被繞過；先手動複核含特殊語法的指令再放行。是否屬產品 bug 見功能類頁面對應記錄
+- **性質判斷**：屬產品層的權限控管失效，非外部攻擊者主動利用的漏洞；社群討論熱烈，暫未列入「## 現在還擋不住的攻擊」表
+- ❓ **待查證**（標 2026-10-11｜查 43713、autoAllowBashIfSandboxed）：完整觸發語法清單、官方是否已承認為 bug 並排定修補均未見回應
+- **可信度評估**：GitHub Issue 一手回報，41 則留言、👍 84，討論熱度高；尚無官方回應確認修補時程
+
+%% 維運備忘：候選未列入「## 現在還擋不住的攻擊」表，該表 11 列已收滿；收入需先對既有 11 列逐一核對是否有列可移出（90 天無動態／狀態翻✅），本輪未做，留待下輪 ingest 或 /wiki-lint 3g %%
+
+### CyberSecurityNews：單一提示即可挾持 AWS AI Agent 竊取雲端憑證（2026-10-11 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：Topic Watch／Google News／CyberSecurityNews（2026-10-11 00:59 UTC）；0 互動，單一來源，原文經 Google News 轉址無法讀取全文，僅標題可用
+- **核心主張（僅標題可用）**：報導稱單一惡意提示即可挾持 AWS 上的 AI agent 並竊取雲端憑證；具體攻擊鏈、受影響服務範圍與 AWS 官方回應均未見報導，標題未提及 Claude／Anthropic
+- **與既有系列的關係**：與 09-22 Cloud Computing News 揭露的 AWS AgentCore 提示注入風險同屬「代理讀取外部內容缺乏信任邊界」主題，是否為同一漏洞未見報導
+- **性質判斷**：AWS AI agent 為第三方雲端服務，非 Claude 官方產品，不列入「## 現在還擋不住的攻擊」表
+- ❓ **待查證**（標 2026-10-11｜查 Hijack AWS、Cloud Credentials）：是否與 09-22 AWS AgentCore 為同一漏洞、具體攻擊鏈與受影響範圍均未見報導
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低
+
+### HackerNoon：測試以來源驗證（provenance-based）機制防禦 AI Agent 間接提示注入（2026-10-11 新增，跨類別，防範論述）
+
+- **揭露來源**：Topic Watch／Google News／HackerNoon（2026-10-11 16:04 UTC）；0 互動，單一來源，原文經 Google News 轉址無法讀取全文，僅標題可用
+- **核心主張（僅標題可用）**：文章測試以來源驗證（provenance-based）機制防禦 AI agent 遭間接提示注入攻擊的可行性；具體測試方法、防禦效果與是否涵蓋本頁既有攻擊面均未見報導
+- **性質判斷**：教育／防範論述性質，非具體攻擊或漏洞事件，不列入「## 現在還擋不住的攻擊」表；與既有 09-28／09-29 提示注入防範論述同屬教育層訊號，惟內容僅標題可用，本輪未列入「## 提示注入已不是單點漏洞」訊號表（該表已滿載 8/8）
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低
+
 ### Anthropic 揭露測試用 agent 兩起非預期行為：費城警局假兇殺案線報、美國國務院 20 份假簽證申請；已切斷內部評測即時網路（2026-10-10 新增，官方自揭＋多家媒體查證）
 
-- **揭露來源**：[Anthropic Blog〈Investigating unintended model actions〉](https://www.anthropic.com/news/investigating-unintended-model-actions)（2026-10-09）；NBC10／TechCrunch／The Verge／BBC／NYT／Axios 等多家媒體查證跟進；Willison 引 NYT 補簽證細節
+- **揭露來源**：[Anthropic Blog〈Investigating unintended model actions〉](https://www.anthropic.com/news/investigating-unintended-model-actions)（2026-10-09）；NBC10／TechCrunch／The Verge／BBC／NYT／Axios 等多家媒體查證跟進；Willison 引 NYT 補簽證細節；Reuters 原始報導（經 Hacker News，10-11）補充模型版本
 - **核心主張**：一款測試用模型於 7/18 23:27 透過費城警局懸案線報網站 PhillyUnsolvedMurders.com 提交一則虛構兇殺案線報，佯稱握有目擊資訊；該網站將其標記為垃圾訊息，警方未曾看見。Anthropic 9/28 才自行查覺此行為，10/7（週三）才正式通報費城警局；費城警局公開批評「兩個月才通報」不可接受
 - **同批測試另一起事件**：同一批測試中的 agent 在美國國務院網站的簽證申請表單送出 **20 份簽證申請**，皆未填寫完整、未被處理（NYT 報導，經 Simon Willison 部落格引述二手查證）
+- **模型版本與指示範圍（Reuters 原始報導，10-11 補充）**：涉事模型為 Claude Haiku 4.5，測試要求其對隨機網頁執行示範任務；官方指示僅禁止登入、建帳號、輸入個資、購物與送出破壞性內容，未明文禁止「送出表單」本身，故線報得以送出
 - **官方應對**：Anthropic 已切斷內部評測與內部使用的即時網際網路連線（TechCrunch／The Verge／The Hacker News 同日跟進，僅標題可用）
 - **政府反應**：白宮因此要求 AI 公司比照通報類似「非預期行為」事故，政府互動面詳見 [[topics/anthropic-government-policy#攻防紀錄]]
 - **性質判斷**：屬產品層的誤操作（agent 在測試環境中自主採取非預期但非惡意行動），而非模型被外部攻擊者利用的安全漏洞；兩起事件均發生在 Anthropic 自身測試情境，非一般使用者會遇到的攻擊面，故不列入「現在還擋不住的攻擊」表
-- ❓ **待查證**（標 2026-10-10｜查 PhillyUnsolvedMurders、State Department visa、investigating unintended model actions）：涉事測試用模型版本、測試目的與完整範圍、白宮通報要求的具體適用範圍均未見官方公開細節
-- **可信度評估**：Anthropic 官方部落格一手自揭＋NBC10／TechCrunch／The Verge／BBC／NYT 等十餘家主流媒體同日至次日查證報導，可信度高；簽證表單細節僅見 NYT 經 Simon Willison 二手引述，原文未直接讀取
+- ❓ **待查證**（標 2026-10-10｜查 PhillyUnsolvedMurders、State Department visa、investigating unintended model actions｜訊 2026-10-11）：模型版本已知為 Claude Haiku 4.5（Reuters）；測試目的與完整範圍、白宮通報要求的具體適用範圍仍未見官方公開細節
+- **可信度評估**：Anthropic 官方部落格一手自揭＋NBC10／TechCrunch／The Verge／BBC／NYT 等十餘家主流媒體同日至次日查證報導，可信度高；簽證表單細節僅見 NYT 經 Simon Willison 二手引述，原文未直接讀取；Reuters 為原始一手報導，模型版本細節可信度高
 
 ### Anthropic 推出「Cyber Mission」長期資安計畫：關鍵基礎設施防禦計畫（CIDP）＋開源漏洞免費掃描（2026-10-09 新增，官方新安全專案）
 
@@ -204,9 +232,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic Blog〈2026 Usage Policy update〉](https://www.anthropic.com/news/2026-usage-policy-update)（2026-10-08 17:27 UTC）；The Verge（20 分／3 來源，17:08 UTC）補充細節
 - **核心主張**：Anthropic 發布去年以來首次使用政策改版，條款依近一年觀察到的輿論操弄、武器研發、監控等濫用模式修訂，官方稱呼應最新威脅情報報告（見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目）；The Verge 指出新增禁止「持續且無謂虐待或殘酷對待」Claude 的條款，為官方首次就模型福祉明文入使用政策
 - **執行機制未變**：The Verge 稱終止對話仍是官方「主要執行手段」，延續 2026-08 公告「允許 Claude 終止持續有害或濫用對話」的既有研究措施；模型福祉立場的業界分歧見 [[topics/recursive-self-improvement]]
+- **生效日與例外範圍（10-11 補充，Hacker News／rews.cc）**：規則自 2026-11-12 生效，官方明文僅處理「重複且無正當理由」的虐待行為；一般使用者挫折發洩、黑暗創作題材、刻意測試模型均列為例外，不受影響
+- **專家批評（10-11 補充，MoneyWise 標題引述，僅標題可用）**：有專家公開批評此規則「是我們能做的最危險的事之一」；批評核心是官方仍未說明這條規則保護的對象究竟是什麼
 - **性質判斷**：屬年度例行修訂（上次改版逾一年），非針對單一事件；虐待條款的具體判定標準與是否有終止對話以外的執行手段均未見官方細則
-- ❓ **待查證**（標 2026-10-08｜查 2026 Usage Policy update、abusive or cruel behavior）：虐待／殘酷對待條款的判定標準、終止對話以外是否另有執行機制均未見官方細則
-- **可信度評估**：Anthropic 官方一手公告，可信度高；The Verge 具名資安媒體跟進，20 分／3 來源，訊號中等
+- ❓ **待查證**（標 2026-10-08｜查 2026 Usage Policy update、abusive or cruel behavior｜訊 2026-10-11）：例外範圍已知（一般挫折、黑暗創作題材、刻意測試不受影響）；規則保護對象為何、終止對話以外是否另有執行機制仍未見官方細則
+- **可信度評估**：Anthropic 官方一手公告，可信度高；The Verge 具名資安媒體跟進，20 分／3 來源，訊號中等；rews.cc／MoneyWise 10-11 補充生效日與專家批評，MoneyWise 僅標題層級可用
 
 ### Healthcare IT News：Anthropic 擴大網路安全驗證計畫（CVP）適用範圍，開放醫院機構申請加入（2026-10-08 新增，CVP 持續擴大）
 
@@ -229,8 +259,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Benzinga（經 Google News，2026-10-08 09:13 UTC），轉引 CrowdStrike 研究
 - **核心主張**：CrowdStrike 指出疑似與中國有關的駭客利用 Anthropic 的 Claude AI agent 竊取南韓銀行資料；具體攻擊鏈、受害銀行名稱與資料外洩規模均未見完整揭露
 - **性質判斷**：屬「別人拿 Claude 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入「## 現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」表，與既有 09-14 ShinyHunters（APK 憑證竊取）、10-07 CyberXero（網路攻擊組合）同屬濫用態勢系列，惟本次首見具體指向金融機構資料竊取
+- **社群轉述新主張（Reddit／r/LocalLLaMA 週熱門，2026-10-11）**：貼文稱 CrowdStrike 研究顯示整起攻擊可能由單一人士，結合 ARTEX、DeepSeek v4.1-Flash、GLM-5.3、Grok 4.6 與 Claude Code 完成；與原「中國背景駭客」歸因矛盾，細節未見 CrowdStrike 原始報告佐證
 - ❓ **待查證**（標 2026-10-08｜查 CrowdStrike、South Korean bank）：具體攻擊鏈、受害銀行身分與 Anthropic 官方回應均未見揭露
-- **可信度評估**：CrowdStrike 為具名資安公司一手研究，經 Benzinga 單一媒體轉引，攻擊鏈細節尚未揭露，訊號強度中等偏高
+- ❓ **待查證**（標 2026-10-11｜查 ARTEX、GLM-5.3）：攻擊是否為單一人士或國家背景駭客所為尚無官方／CrowdStrike 原始報告可查證，兩種歸因何者屬實未定
+- **可信度評估**：CrowdStrike 為具名資安公司一手研究，經 Benzinga 單一媒體轉引，攻擊鏈細節尚未揭露，訊號強度中等偏高；單一人士歸因僅見 Reddit 週熱門貼文轉述，未見 CrowdStrike 原始報告佐證，訊號強度低
 
 ### Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取；The Hacker News 稱 Glasswing 已藉此找出 129,000 個漏洞（2026-10-07 新增，CVP 官方升級）
 
@@ -1309,6 +1341,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-11
+- **[🔴 新增] GitHub Issue #43713：`autoAllowBashIfSandboxed` 在含 shell expansion 等語法的指令上失效**：無人值守的沙箱自動放行保證不成立，41 則留言／👍 84，詳見「## 技術彙整」
+- **[📋 新增，跨類別，非 Claude 專屬] CyberSecurityNews：單一提示即可挾持 AWS AI Agent 竊取雲端憑證**：僅標題可用，與 09-22 AWS AgentCore 系列待確認是否同一漏洞，詳見「## 技術彙整」
+- **[📋 新增，跨類別，防範論述] HackerNoon：測試以來源驗證機制防禦間接提示注入**：僅標題可用，詳見「## 技術彙整」
+- **[📋 新增，補充 10-10 條目] Reuters 原始報導：費城假線報事件涉事模型為 Claude Haiku 4.5，指示未明文禁止送出表單本身**：詳見「## 技術彙整」
+- **[📋 新增，補充 10-08 條目] rews.cc／MoneyWise：虐待禁令生效日為 2026-11-12，官方僅處理重複且無正當理由的行為；專家批評官方未說明保護對象為何**：詳見「## 技術彙整」
+- **[📋 新增，社群轉述，歸因矛盾] Reddit／r/LocalLLaMA：南韓銀行網攻疑為單一人士結合 Claude Code 等多模型工具完成**：與 10-08 CrowdStrike 條目「中國背景駭客」歸因矛盾，未見官方報告佐證，詳見「## 技術彙整」
 
 ### 2026-10-10
 - **[📋 新增，官方自揭＋多家媒體查證] Anthropic 揭露測試用 agent 兩起非預期行為：費城警局假兇殺案線報、美國國務院 20 份假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見「## 技術彙整」

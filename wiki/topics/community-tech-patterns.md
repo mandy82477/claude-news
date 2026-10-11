@@ -29,13 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-11
 **最後新聞更新：** 2026-10-07
 
-> **三個子頁各添新做法**（2026-10-10）
-> - **Skills 設計添三個垂直領域**：scroll-craft（滾動視差網站）、mortiflix-oss（逐階段核准產影片）、awesome-claude-video-skills（180 個影片 skill 清單），見 [[topics/community-skills#2026-10]]。
-> - **介面添兩款免終端機桌面殼層**：codex-host 把 Claude Code 嵌進 Codex Desktop、pi-agent-desktop 自成獨立桌面 app，見 [[topics/community-interfaces#2026-10]]。
-> - **成本添 headless 等人決策不空等**：用 `claude -p --resume` 讓 agent 結束回合、答案來再接續，見 [[topics/community-cost#2026-10]]。
+> **兩個子頁各添新做法**（2026-10-11）
+> - **記憶添跨專案身分層**：codesstar/loci 把持久記憶延伸到身分與多專案協調，見 [[topics/community-memory#2026-10]]。
+> - **MCP 整合添程式碼智能**：Muvon/octocode 單一 Rust 執行檔語意搜尋＋知識圖譜＋內建 MCP server，見 [[topics/community-integrations#2026-10]]。
 
 ---
 
@@ -54,11 +53,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、Agent Loop 終止條件 | 2026-10-09 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-09 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-11 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略 | 2026-10-10 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-10 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-10-05 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、MCP 長 Session 穩健化、創意工具 Agent 整合 | 2026-10-07 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、MCP 長 Session 穩健化、創意工具 Agent 整合 | 2026-10-11 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-10 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。

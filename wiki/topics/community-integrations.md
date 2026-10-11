@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-10-11
+**最後新聞更新：** 2026-10-11
 
-> **最新做法**（2026-10-07）
-> - **國產模型補連網、求職流程 MCP 化**：huashu-doubao-search 用豆包搜索補連網能力；swissdevjobs-cli 讓 agent 搜尋並應徵瑞士等 7 國的職缺。
-> - **接上實體機器人**：ros-mcp-server（1,488★）透過 MCP 串接 ROS，目前只有這一個實作。
+> **最新做法**（2026-10-11）
+> - **程式碼智能併入 MCP**：Muvon/octocode 單一 Rust 執行檔提供語意搜尋＋知識圖譜內建 MCP server，GitHub Search 505 星。
 
 ---
 
@@ -59,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Muvon/octocode：單一 Rust 執行檔的結構化程式碼智能，語意搜尋＋知識圖譜＋內建 MCP server（2026-10-11）
+
+- **主線：** 索引記憶
+- **核心模式：** 單一 Rust 執行檔提供語意搜尋、知識圖譜與內建 MCP server，讓 Claude、Cursor 等任何 MCP client 對程式碼庫有結構化理解；GitHub Search 505 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「程式碼結構智能」取向——既有 MCP 整合多接外部服務或創作工具，本則把 MCP 用在程式碼庫本身的語意搜尋與知識圖譜；大型 codebase 建立跨檔案理解是直接痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（505★），無 forks／issues／近期 commit 佐證可查；星數未見異常增長，暫依現有數字收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/Muvon/octocode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### robotmcp/ros-mcp-server：MCP server 串接 Claude、GPT 與 ROS 機器人（2026-10-07）
 
