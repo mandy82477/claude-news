@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-09"
 last_news_update: "2026-10-09"
 status_main: "beta"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/anthropic-agent-stack"
 children: "['entities/managed-agents-archive']"
 page_role: "hub+child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 34
 attribution_count: 8
 attribution_last: "2026-10-09"

@@ -6,12 +6,12 @@ domain: "💼 商業"
 last_updated: "2026-10-10"
 last_news_update: "2026-10-10"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 130
+days_since_news_subtree: 1
+inbound_links: 131
 attribution_count: 380
 attribution_last: "2026-10-10"
 top_source: "google-news"
