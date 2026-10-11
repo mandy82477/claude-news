@@ -7621,3 +7621,6 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：不登帳：安全政策記者回報「需轉知功能」GitHub Issue #43713，但功能記者本輪同時被派工同一則、已自行處理「是否為產品 bug」判定，目標類別原輪已收到不追加轉知
 - 懸置標記：本輪商業記者待查證命中 1 筆（topics/market-signals「Broadcom 貸款 Anthropic 420 億美元是否正式簽署」）證據不足不動；安全政策記者依規則自主為 2 筆既有標記（費城線報事件、虐待禁令）加「訊 2026-10-11」
 - 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群
+- devpractice 沉澱：候選 7 筆／本日無「開發實務」派工條目，未寫入 topics/coding-workflow-guide（基準線已推進至 e18c0e5）
+- market 判讀：新增 1 則（第 4 類：Tom Brown／SpaceX 每月 12.5 億美元運算容量交易）；里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列
+- 歸因（補）news-pipeline（cloud）／投資分析
