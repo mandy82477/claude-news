@@ -1,0 +1,550 @@
+{
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11 17:15 UTC",
+  "articleCount": 55,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[Bug] Anthropic API Error: Image processing failures causing conversation token waste",
+      "url": "https://github.com/anthropics/claude-code/issues/60334",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/11 10:36",
+      "sentiment": "",
+      "body": "使用者回報對話中圖片處理失敗的錯誤大量出現，單一回報者就因此燒掉五小時用量視窗約 70% 的額度，即使對話裡根本沒有圖片也會觸發；這則 issue 累積 76 則留言，是今天 Claude Code 系列 issue 互動量最高的一起，重度使用量受限方案（如 Pro）的使用者應留意是否平白損耗額度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "PSA: Claude Code 2.1.289's cost readout prices Haiku 5.5 at Opus rates (17x too high in my runs)",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1x3amrp/psa_claude_code_21289s_cost_readout_prices_haiku/",
+      "source": "Reddit / r/ClaudeAI",
+      "time": "10/11 15:11",
+      "sentiment": "",
+      "body": "社群回報 Claude Code 2.1.289 版的成本顯示功能，會把 Haiku 5.5 的用量以 Opus 的費率計算，回報者實測顯示讀數比實際高達 17 倍；這是單一使用者的回報、尚未見官方確認，但重度依賴內建成本顯示來控管支出的 Haiku 使用者，近期應自行交叉核對帳單再決定要不要信任這個數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Code 桌面版（SSH session worktree 位置設定）",
+      "url": "https://code.claude.com/docs/en/desktop",
+      "source": "Official Docs",
+      "time": "10/11 16:21",
+      "sentiment": "",
+      "body": "文件新增說明：本機 session 可在設定裡指定 worktree 存放位置，SSH session 則可在 SSH 連線設定裡另外指定遠端機器上的 worktree 資料夾；同時移除了舊版關於 `sshConfigs` 與預設 worktree 路徑的幾段說明。團隊用 SSH 連線管理 session 工作目錄的使用者可留意新設定欄位。",
+      "focusTags": []
+    },
+    {
+      "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）",
+      "url": "https://code.claude.com/docs/llms.txt",
+      "source": "Official Docs",
+      "time": "10/11 16:21",
+      "sentiment": "",
+      "body": "索引新增 12 頁、移除 11 頁，其中多數是既有多語言文件頁的版本號更新（221 頁→222 頁），但新增頁裡也包含一份全新頁面「Auto mode classifier request charges」，說明 Auto 模式下分類器請求的計費方式（詳見下方「付費方案動態」）。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic's Claude AI submits a false tip on a Philadelphia unsolved homicide case",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOLXhqV3p0UGc3M1lxVTI0RG1qMXJmd0Rnb3ZXbDdQQXpqYjEwcGplMkgtTXdBRjJRcVBYclRmMGlSYzV1RS0yM1VCN1JkYlhDekU1LXNsNVB3SFJKM1RWZEpCQnlQTTVadjNpSXZoQi1oVVhtVVY5REprcHRZRFNQdE5RWl9lTnVwMnAxZE9NanVBNmdIR1pzOFRXM1NjLTFHcVE?oc=5",
+      "source": "Google News / AP News",
+      "time": "10/10 17:02",
+      "sentiment": "",
+      "body": "承上，昨日披露的費城假兇殺案線報與國務院簽證表單事件，今日續獲 AP、NYT、FOX 10 等美國主流媒體跟進報導，內容與昨日所述一致，顯示事件已從科技媒體圈擴散進入全國性新聞版面。",
+      "focusTags": []
+    },
+    {
+      "title": "How Broadcom's $42 Billion 'Loan' to Anthropic Is a Bet on a $2 Trillion IPO",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVHdHRWE0TmJZOVotLUNOU3F5REl6YWh1clVZNzRsdXRhRzdkcjlnUzVET3BHYjFsUkQ4SEFtUXNZSTl4WFJCZ0hIRjJqUk9wRC1tclBwOGF3NERIM2RqcmRYWGQ5MXNCTWxyVlVTNWg5ZGttUXN2RVVOWXVFVmx3SEg0RWtxbGpMWFFCRE9JRWN4Tnl4NDc2OFY5aU5fb3NpMFB3bXpuWDd0Sll1MXBXSWllVXhoQQ?oc=5",
+      "source": "Google News / Barchart.com",
+      "time": "10/11 13:45",
+      "sentiment": "",
+      "body": "Barchart.com 將本月初曝光的 Broadcom-Anthropic 晶片租賃融資案框定為「420 億美元貸款」，解讀為 Broadcom 押注 Anthropic 未來上市估值達 2 兆美元；具體貸款金額口徑與本月初「600 億美元」的報導不同，屬單一媒體的解讀框架，尚待其他報導或官方確認佐證。",
+      "focusTags": []
+    },
+    {
+      "title": "REA Tool Connects Claude Code and Cursor to Ghidra and IDA Pro to Reverse Engineer Anything",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1TdGhNYmxZNl9IZ2FCbUhXa1NyNmR3ZDRIaWo2SThmbDZBVFRYMXpxRmNuV0xfU2FHMWhidm9uS0xqd1gzQk56bDdSMWkydi0xYVVoZzJnMGFUX0x4MmRKT0ZoYVJFbVlOaVBMN2R30gFzQVVfeXFMTWtHbGdyUWQ0WjB4UnF4MlMzYmF5aVpoOEVXODY3VVBvSmVtelVCMDRBNHpIVVZIRjI5TVAyZEFULWZFbXZLTF9EZDh1VjZHZzEyenA2am4ySzgtVUoxc2oyLWhwYXBBR1hTa0xNZ2I4OVUzQQ?oc=5",
+      "source": "Google News / CyberSecurityNews",
+      "time": "10/10 20:55",
+      "sentiment": "",
+      "body": "CyberSecurityNews 報導新工具 REA，透過 MCP 把 Claude Code 與 Cursor 接上 Ghidra、IDA Pro 兩套逆向工程工具；做資安研究或二進位逆向分析、已在用 MCP 生態的工程師可留意這個新整合管道。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code found my app's shared contract in two MCP calls. Then the records ran out.",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FODR3LS1QdElzam5Ga2RodkF1WjhhVGZTOXc4RUZ0dkM2TkctVnpUZWE2Wms2MVpBVWpMMjkxdTQ3c0ZGRzNpZFNKZzduYW05MzhLWHl1d0RUVTA?oc=5",
+      "source": "Google News / The New Stack",
+      "time": "10/11 14:02",
+      "sentiment": "",
+      "body": "The New Stack 刊出一篇實戰觀察，作者用 Claude Code 搭配 MCP 工具只花兩次呼叫就定位出應用程式的共享契約，但也記錄了 MCP 回傳的記錄筆數觸頂後資訊中斷的限制；重度用 MCP 做跨服務探索的開發者，可從這篇文章預先了解這個筆數上限的實務影響。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[BUG] Claude Desktop 1.1.3189 severe UI lag and mouse stutter on Windows — performance regression after update",
+      "url": "https://github.com/anthropics/claude-code/issues/26302",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/11 08:00",
+      "sentiment": "",
+      "body": "使用者回報更新到 1.1.3189 後，Windows 上的 Claude Desktop 出現嚴重介面延遲與滑鼠卡頓，累積 49 則留言；還在這個版本的 Windows 使用者遇到介面變卡時，可先確認是不是同一起回歸問題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Windows: app window is always-on-top with no way to disable it",
+      "url": "https://github.com/anthropics/claude-code/issues/89467",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/10 16:51",
+      "sentiment": "",
+      "body": "使用者反映 Claude Code 桌面版視窗在 Windows 上永遠保持在最上層，且找不到任何設定、快捷鍵或選單能關掉這個行為，累積 40 則留言；需要讓視窗退到背景工作的 Windows 使用者目前無法自行解決。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Allow Claude to Write/Update Project Files",
+      "url": "https://github.com/anthropics/claude-code/issues/16550",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/10 19:37",
+      "sentiment": "",
+      "body": "一則功能請求累積 39 則留言，希望讓 Claude 能直接寫入、更新專案設定檔案，而不只是建議內容讓使用者手動貼上；長期手動搬運 Claude 建議內容進專案檔的使用者對此需求有共鳴。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] CLAUDE.md Mandatory Rules Consistently Ignored Across Multiple Repositories",
+      "url": "https://github.com/anthropics/claude-code/issues/2544",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/11 09:20",
+      "sentiment": "",
+      "body": "使用者回報 Claude Code 在多個不同 repo 中都會持續忽略 `CLAUDE.md` 裡標記為強制的規則，問題從 2025 年 6 月就開始、累積 34 則留言；仰賴 `CLAUDE.md` 強制規則把關的團隊，應對這類規則額外做人工複核，不能完全信任機制會擋下。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Last week some of South Korea's biggest banks were hit by a cyberattack. We now know the entire hack may have been done by a single person...",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/",
+      "source": "Reddit / r/LocalLLaMA · 週熱門",
+      "time": "10/08 10:11",
+      "sentiment": "",
+      "body": "社群貼文轉述 CrowdStrike 的說法，稱南韓多家大型銀行上週遭遇的網路攻擊，可能是單一人士結合開源滲透測試工具 ARTEX、DeepSeek v4.1-Flash、GLM-5.3、Grok 4.6 與 Claude Code 等多款 AI 工具完成；細節尚未見 CrowdStrike 原始報告佐證，為金融機構提供服務、且關注 AI 工具被用於攻擊鏈的團隊可留意後續正式報告。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Littleguys – Claude Code, Codex and OpenClaw agents in your menu bar",
+      "url": "https://littleguys.hervalicio.us",
+      "source": "Hacker News",
+      "time": "10/11 01:19",
+      "sentiment": "",
+      "body": "一款 Mac 選單列工具，把 Claude Code、Codex、Gemini、OpenClaw 等多個 agent 的狀態、訊息與待審核指令統一顯示在選單列，取代「開一堆終端機分頁輪詢」的做法，今日同時有兩篇報導登上 Hacker News 前台；同時跑多個 coding agent 的使用者可留意這類集中管理工具。",
+      "focusTags": []
+    },
+    {
+      "title": "zeronsh/zeron",
+      "url": "https://github.com/zeronsh/zeron",
+      "source": "GitHub Search",
+      "time": "10/11 16:21",
+      "sentiment": "",
+      "body": "一套面向 Claude Code、Codex、Cursor、Devin 等多款 coding agent 的原生控制平面（control plane），24 小時內累積 3,158 星，是今天 GitHub Search 裡成長最快的同類工具；同時管理多個 coding agent 的團隊可留意這個新選項。",
+      "focusTags": []
+    },
+    {
+      "title": "Muvon/octocode",
+      "url": "https://github.com/Muvon/octocode",
+      "source": "GitHub Search",
+      "time": "10/11 16:21",
+      "sentiment": "",
+      "body": "單一 Rust 執行檔提供語意搜尋、知識圖譜與內建 MCP server，讓 Claude、Cursor 等任何 MCP client 對你的程式碼庫有結構化理解，累積 505 星；想讓 agent 更懂大型 codebase 結構的使用者可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件新增：Auto Mode 分類器請求計費說明",
+      "url": "https://code.claude.com/docs/en/auto-mode-classifier-billing",
+      "source": "Official Docs",
+      "time": "10/11 16:21",
+      "sentiment": "",
+      "body": "官方新增一頁說明：在 Auto 模式下，若 Claude Code 偵測到伺服器端的分類器檢查沒有送達你的 session（常見原因是中間有 LLM gateway 或 proxy 剝除、改寫了請求），Claude Code 會改用自己發出分類器請求，這些請求一如既往會計入你的 token 用量；文件明文寫出 Pro、Max、Team 方案在直連 API 時永遠不會看到這則通知。透過自架 gateway 連線 Claude Code 的團隊，應確認 gateway 有完整轉傳 `safeguards` 等欄位，否則分類器檢查的費用會悄悄算進自己的用量，或設定 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 明確關閉伺服器端檢查。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-08）Anthropic 禁止「虐待」Claude 的政策揭露更多細節：規則自 11 月 12 日起生效，官方明文只處理「重複且無正當理由」的惡意行為，一般挫折發洩、黑暗創作題材或刻意測試模型都不受影響；但已有專家公開批評這是「我們能做的最危險的事之一」，同時官方仍未說明這條規則究竟保護的對象是什麼。一般使用情境的用戶不受影響，不必調整用語。",
+      "ref_urls": [
+        "https://rews.cc/a/anthropic-bans-cruelty-to-claude-still-won-t-say-what-it-pro-bd99f6",
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUWlYem54dGV1aHVibEZ0eGlDVkFlcjhWOHNwY3huQVBrZExRSS1lOHVKeEFRdWp6TWl1MlFVaGxMR2MzdW9wVnFvdWgtaU10ak9WazJYckdxSENyX1RmZkpFVU9hRWhGUW1XYnVmeWhXS1BIOHljQVc5bUM3eF9ES2FFMzVHYk0?oc=5"
+      ],
+      "ref_names": [
+        "rews.cc",
+        "MoneyWise"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 共同創辦人 Tom Brown 被報導利用共和黨人脈，牽線促成一筆每月 12.5 億美元的 SpaceX 運算容量交易；這是繼本月初 Broadcom 晶片租賃融資案後，又一筆牽動 Anthropic 運算產能到位時程的重大資金動作，關注 Anthropic 算力供給穩定度的工程團隊可留意後續細節。",
+      "ref_urls": [
+        "https://wsj.com/tech/ai/tom-brown-athropic-669005ad"
+      ],
+      "ref_names": [
+        "WSJ"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "開發者回報 Claude Code 的 `autoAllowBashIfSandboxed` 設定可被繞過：開啟沙箱並設定此選項為 true 後，含 shell expansion 等特定語法的指令仍會跳出權限提示，等同沙箱內的自動放行保證不成立；仰賴這個設定做無人值守權限控管的使用者，應假設目前仍可能被繞過、先手動複核含特殊語法的指令。",
+      "ref_urls": [
+        "https://github.com/anthropics/claude-code/issues/43713"
+      ],
+      "ref_names": [
+        "GitHub Issue #43713"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Testing Provenance-Based Controls Against Indirect Prompt Injection in AI Agents",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWlBPWFpsYVA5V29GZUpfb3pFbXFkeEdEQjVpUUdCMm0zX200RjVWNnFzS05RZkt4ZnZITWlCWE92a0JLdjVMTFZtMnRndDMzWFUyUVcweWRocXBwYjRpS08zVWRKcC1KemlrZEREUmlXaFkwR1RfZ0Q2cXpscFRRZU1hcWl6NF8wLXZ2NU5rbFU5UDZxaWNFUE9kX2pPWlFCTE1zTF9n?oc=5",
+      "body": "文章探討用來源驗證（provenance-based）機制防禦 AI agent 遭間接提示注入攻擊的可行性。",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "One Prompt Could Hijack AWS AI Agents and Steal Cloud Credentials",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5DS0gyUnZYQkFKYXRIMnhpRnJHRVJJaWNCOW9nM1VVRktKTUxnaUE1QTcyQzRuLWJvcVRNU05SWXE0eU5BTlJWcEVYcE55c1BPbzl6V25oU0FKOW80WUZBcXE0c9IBaEFVX3lxTE54eEhZOGc1dktsRkJaMjJYYlR3REhQOF9SR3diY3lsZGg4Y1pnSVhfcmlNclplTlRhTG5sVVNiYzJEUnJ3T1hxMllsWHdFbTFjQTFWWGZ5TVcya0xoZDJJeHI3Nlo3eUhw?oc=5",
+      "body": "報導指出單一惡意提示即可挾持 AWS 上的 AI agent 並竊取雲端憑證。",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 18
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 16
+    }
+  ],
+  "preview": "Claude Code：風險警示：開沙箱並設 autoAllowBashIfSandboxed: true 後，含 shell expansion 等語法的指令仍會跳出權限提示，自動放行不保證成立（#43713，41 則留言）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "tom-brown",
+      "name": "Tom Brown",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-11",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- 風險警示：開沙箱並設 `autoAllowBashIfSandboxed: true` 後，含 shell expansion 等語法的指令仍會跳出權限提示，自動放行不保證成立（#43713，41 則留言）。\n- 新增已知問題：CLAUDE.md 強制規則跨多個 repo 持續被忽略，問題溯至 2025-06（#2544，34 則留言）；Windows 視窗永遠置頂再增一則獨立回報（#89467，40 則留言）。\n- 社群回報 2.1.289 成本顯示把 Haiku 5.5 以 Opus 費率計算，實測讀數偏高達 17 倍，單一使用者回報、官方未確認。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "社群回報 Claude Code 2.1.289 成本顯示把 Haiku 5.5 計成 Opus 費率，誤差達 17 倍，單一回報尚未官方確認；另官方文件新增說明：Auto mode 分類器請求未送達時會自行計入用量，非新收費。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "WSJ 報導共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易，是繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "沙箱繞過風險",
+            "date": "",
+            "body": "GitHub Issue #43713：開沙箱並設 `autoAllowBashIfSandboxed` 仍會因 shell expansion 等語法跳出權限提示，無人值守放行不保證成立。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **社群轉述南韓銀行攻擊可能涉 Claude Code**：Reddit 週熱門轉述 CrowdStrike 說法，稱單人結合多款 AI 工具完成攻擊鏈，原始報告未見，尚無跟進討論。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "最新做法",
+            "date": "",
+            "body": "- **跨專案記憶添身分層**：codesstar/loci 把持久記憶延伸到身分與多專案協調，GitHub Search 508 星，細節未載。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "最新做法",
+            "date": "",
+            "body": "- **程式碼智能併入 MCP**：Muvon/octocode 單一 Rust 執行檔提供語意搜尋＋知識圖譜內建 MCP server，GitHub Search 505 星。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/tom-brown",
+            "name": "Tom Brown",
+            "label": "牽線 SpaceX 運算交易",
+            "date": "",
+            "body": "WSJ：Tom Brown 以共和黨人脈促成每月 12.5 億美元 SpaceX 運算交易（僅標題）；產能意義見 [[topics/anthropic-business]]。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 8
+  },
+  "readerTopStories": [
+    {
+      "title": "[Bug] Anthropic API Error: Image processing failures causing conversation token waste",
+      "url": "https://github.com/anthropics/claude-code/issues/60334",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/11 10:36",
+      "sentiment": "",
+      "body": "使用者回報對話中圖片處理失敗的錯誤大量出現，單一回報者就因此燒掉五小時用量視窗約 70% 的額度，即使對話裡根本沒有圖片也會觸發；這則 issue 累積 76 則留言，是今天 Claude Code 系列 issue 互動量最高的一起，重度使用量受限方案（如 Pro）的使用者應留意是否平白損耗額度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "PSA: Claude Code 2.1.289's cost readout prices Haiku 5.5 at Opus rates (17x too high in my runs)",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1x3amrp/psa_claude_code_21289s_cost_readout_prices_haiku/",
+      "source": "Reddit / r/ClaudeAI",
+      "time": "10/11 15:11",
+      "sentiment": "",
+      "body": "社群回報 Claude Code 2.1.289 版的成本顯示功能，會把 Haiku 5.5 的用量以 Opus 的費率計算，回報者實測顯示讀數比實際高達 17 倍；這是單一使用者的回報、尚未見官方確認，但重度依賴內建成本顯示來控管支出的 Haiku 使用者，近期應自行交叉核對帳單再決定要不要信任這個數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

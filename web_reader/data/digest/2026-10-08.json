@@ -566,11 +566,6 @@
   "preview": "Claude Code：v2.1.294 修正 prompt／agent hook 寫成自然語言指示（如「封鎖做 X 的指令」）時擋不住該指令的漏洞，並改善 Stop／SubagentStop 上 prompt hook 的行為。",
   "sedimentedToday": [
     {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
       "id": "model-comparison",
       "name": "Claude 模型選型對照",
       "pageType": "topic"

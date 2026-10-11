@@ -543,11 +543,6 @@
       "pageType": "entity"
     },
     {
-      "id": "tom-brown",
-      "name": "Tom Brown",
-      "pageType": "entity"
-    },
-    {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
       "pageType": "topic"
@@ -555,11 +550,6 @@
     {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"
     },
     {

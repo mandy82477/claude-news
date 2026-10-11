@@ -464,11 +464,6 @@
       "pageType": "entity"
     },
     {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
