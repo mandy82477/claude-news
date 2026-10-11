@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-11
+**最後新聞更新：** 2026-10-11
 
-> **最新計費政策異動**（2026-10-10）
-> 官方 Plans & Pricing 頁新增「$100–$200/月 API 額度」段落、移除金融服務產業段；同日有報導稱已暫停免費 Team 試用＋$1,000 額度，確切生效與範圍未載。
+> **最新計費政策異動**（2026-10-11）
+> 社群回報 Claude Code 2.1.289 成本顯示把 Haiku 5.5 計成 Opus 費率，誤差達 17 倍，單一回報尚未官方確認；另官方文件新增說明：Auto mode 分類器請求未送達時會自行計入用量，非新收費。
 
 ## 現況
 
@@ -171,6 +171,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
 - **✅ 2026-09-19 生效｜Auto mode 改用 server-side classifier，分類器耗用不計費**：適用 Claude API、Enterprise，以及 Bedrock／Vertex／Foundry／閘道器用戶；可設 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退回舊行為（來源：[v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)，2026-09-19）
+- **✅ 官方文件新增說明（2026-10-11）｜server-side classifier 檢查未送達時改計入用量**：常見因中間 LLM gateway／proxy 剝除請求；Pro、Max、Team 直連 API 不受影響（來源：[文件索引](https://code.claude.com/docs/llms.txt)，2026-10-11）
 - **✅ 2026-09-19 生效｜Claude Code Projects：工作與計費事項可並行**：專案內處理計費相關事項不再阻擋工作進行，兩者可同時進行；具體涵蓋範圍未見官方文件細節（來源：The Register，2026-09-19）
 - **✅ 2026-09-13 到期（更正：非如期於 08-31 終止）｜Claude Code 週用量 +50% 促銷**：此促銷原訂 2026-05-13 起，歷經 06-22→07-07→07-12→07-19→08-18→**09-02（本次更正）**多次延長。08-29 官方公告曾記為「08-31 到期、不再延長」，但官方說明中心 **2026-09-02** 更新原文——「We've extended this promotion. Increased weekly limits now run through September 13, 2026.」——實際延長至 **2026-09-13**；09-14 起銜接下方「標準週配額永久 +25%」，兩者不留缺口。適用 **Pro、Max、Team**（來源：[Claude Code May–August 2026 Weekly Limits Promotion](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，2026-09-02 查證）
 - **✅ 2026-09-14 已生效（官方文件確認）｜標準週配額永久調高 25%，但取消 +50% 加成 → 相較「加成期間」水位實際減少約 17%**：官方公告（Bluesky @anthropicbot，2026-08-29）自 2026-09-14 起將 Claude Code 標準週配額**永久**調高 **25%**，適用 **Pro、Max、Team 與座位制 Enterprise**；上方 +50% 促銷 09-13 屆滿後由本規則接手，不留缺口。換算 `1.25 ÷ 1.50 ≈ 0.833`——09-14 起實際可用週配額約為加成期間的 83%，**減少約 17%**（BleepingComputer〈Anthropic is cutting Claude Code's current weekly limits by 17 percent〉即以此為框架）。**你該做的事**：工作流若貼近週配額上限，09-14 起應預期可用量下降，評估調整用量節奏或方案層級（來源：[Bluesky @anthropicbot](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)、[BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/)，2026-08-29）
@@ -303,6 +304,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-10-11：Reddit 回報 Claude Code 2.1.289 成本顯示把 Haiku 5.5 計成 Opus 費率
+
+- **Reddit/r/ClaudeAI（0 留言，2026-10-11）**：使用者回報 Claude Code 2.1.289 版的內建成本顯示（cost readout）把 Haiku 5.5 用量以 Opus 費率計算，實測讀數比實際金額高達 17 倍；單一使用者回報，官方未確認，日報未見其他來源佐證。
+- **你能先做什麼**：倚賴內建成本顯示控管 Haiku 5.5 支出的使用者，近期應自行核對帳單金額，不要只信這個讀數。
+
+%% 未列入總表：表滿載，2026-10-11；單一社群回報型🔴，0 留言無跨來源佐證，優先序低於現有 6 列，無可讓位對象 %%
 
 #### ✅ 2026-10-07：Anthropic Status 官方通報——部分組織被誤判已達花費上限而遭暫停
 

@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-11
+**最後新聞更新：** 2026-10-11
 
-> **最新動態**（2026-10-10）
-> Bloomberg 報導 Anthropic 與 OpenAI 營收認列方式對外不透明，市場交易員難判讀真實財務體質，與既有 IPO 估值質疑系列同源。
+> **最新動態**（2026-10-11）
+> WSJ 報導共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易，是繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作。
 
 ---
 
@@ -333,7 +333,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | 對手方 | 金額與結構 | 日期與來源 | 對工程師的可見後果 |
 |---|---|---|---|
 | Broadcom | 貸款租賃晶片：10-01 報最高 $420 億（考慮中），10-02 報已啟動 $600 億債務融資；條款未見報導 | 2026-10-01／10-02；Reuters 獨家引文件；Yahoo Finance、qz.com | 目前無可見後果。下一個觸發點：條款或交付時程公開 |
-| SpaceX | 大型 AI 運算合作；合作方向、金額、算力規模均未見報導，僅標題可用 | 2026-10-03；Google News/Barchart.com | 目前無可見後果。下一個觸發點：合作細節公開 |
+| SpaceX | 每月 $12.5 億運算容量合作；WSJ稱由共同創辦人 Tom Brown 透過共和黨人脈牽線促成，具體範圍未見報導 | 2026-10-03／10-10；Google News/Barchart.com；Hacker News/WSJ | 目前無可見後果。下一個觸發點：合作細節或算力規模公開 |
 | Nvidia（經 Lambda） | Nvidia 支持的 Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆 | 2026-09-01／09-02；多家媒體；24/7 Wall St. 質疑循環融資（評論） | 目前無可見後果。下一個觸發點：新容量上線公告、合約條款 |
 | AMD | 投資最高 $50 億，並簽晶片暨投資協議；供應規模、股權比例未見 | 2026-07-22；Reuters、WSJ | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務的報導）。下一個觸發點：供應規模公開 |
 | AWS | 承諾金額逾 $1,000 億，屬 $5,170 億算力總額的分項（推論）；招股書可能揭露更多 | 2026-09-06；Currently.com、The Information | 承諾金額本身無價格後果；通路有：Bedrock 無 50% Batch 折扣，見下方合作表與 [[entities/pricing#通路：誰定價、怎麼開票]] |
@@ -541,6 +541,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | [[entities/jensen-huang\|Jensen Huang]] | Nvidia 執行長 | 2026-08-26 財報電話會議原話「唯一的後悔是投得不夠多、不夠早」——後悔的是**投資規模太小**，不是後悔投了（2026-09-20 查實，見 [[entities/jensen-huang]]） |
 | [[entities/robert-mahari\|Robert Mahari]] | 法律科技學者，Claude for Legal 負責人 | 2026-08-07 出任新設 Claude for Legal 部門負責人 |
 | [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 經 Bloomberg 報導加入 compute 團隊，向 James Bradbury 匯報；實際到任日官方未公開 |
+| [[entities/tom-brown\|Tom Brown]] | Anthropic 共同創辦人 | 2026-10-10 WSJ 報導其利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易（僅標題與 HN 摘要可用，WSJ 原文付費牆） |
 
 %% 維運備忘：裁決點 1（四人物頁併入本頁）未回覆，依保守預設「不併」——四頁維持獨立，本表以 wikilink 指過去。若日後裁決「併」，四頁各留 redirect 殼，本表改為純文字並補一句「他這個動作對讀者意味什麼」。 %%
 
@@ -569,6 +570,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-10
+- **[戰略合作] WSJ：共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易**（Hacker News 135 分）：繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作，詳見「算力與資金從哪來」表 SpaceX 列更新；WSJ 原文付費牆，僅標題與 HN 摘要可用（Hacker News/WSJ）
 
 #### 2026-10-09
 - **[商業風險] The Register：Microsoft 與 Anthropic 就新創 $17,600 Claude 帳單互踢責任**：新創經 Microsoft for Startups／Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，詳見「還沒過去的風險」細節區（Google News/The Register）
