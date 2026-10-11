@@ -282,12 +282,12 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "2026-04-27",
       "startDate": "",
-      "lastUpdated": "2026-10-09",
+      "lastUpdated": "2026-10-11",
       "lastNewsUpdate": "2026-10-09",
       "updateFreq": "",
       "parent": "",
-      "summary": "**09-17 起整合進對話介面：** 官方部落格宣布（隨 Cowork 與 Chat 合併同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；具體是取代或疊加既有獨立設計介面，官方摘要未載明，待後續官方文件確認。 Claude Des…",
-      "latestHeadline": "官方「方案與定價」頁新增「Claude Dashboards (beta)」與「Claude Design」段落；Reuters、XDA 同日報導 Claude 可把資料轉成即時互動儀表板，內容細節未載（詳見上方標記）",
+      "summary": "**09-17 起整合進對話介面：** 官方部落格宣布（隨 Cowork 與 Chat 合併同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；獨立設計介面保留到 2026-12-14 後關閉，見下方「Docs、Slides、Desig…",
+      "latestHeadline": "官方發布 Claude Dashboards 與 Claude Motion（beta）；Design、Docs、Slides 脫離 beta；獨立站訂 2026-12-14 關閉（2026-10-11 查證）",
       "pageRole": "",
       "readerDomains": [
         "🛠️ 工具/功能"
