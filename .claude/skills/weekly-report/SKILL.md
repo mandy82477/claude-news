@@ -50,7 +50,7 @@ disable-model-invocation: true
 | 段 | 規範檔 |
 |---|---|
 | (1) 頭條（給誰看、怎麼選、字數都住右欄） | `.claude/skills/weekly-report/references/headline.md` |
-| (2) 技術討論＋專欄（本週版本／討論綜述／記者專欄三取二／本週要動的事） | `.claude/skills/weekly-report/references/columns.md` |
+| (2) 技術討論＋專欄（本週官方出了什麼／討論綜述／記者專欄三取二／本週要動的事） | `.claude/skills/weekly-report/references/columns.md` |
 | (3) 下週看什麼（新開表在上、回收表在下） | `.claude/skills/weekly-report/references/forecast.md` |
 | (4) 檔尾數字（2–5 個讀者用得上的數字，條列不得寫成表格） | `.claude/skills/weekly-report/references/forecast.md` |
 

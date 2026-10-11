@@ -1509,6 +1509,14 @@
       <div class="weekly-version__text">${mdToHtml(d.versionNote)}</div>
     </div>`);
       }
+      // W41 起「本週版本」改題為「本週官方出了什麼」：新功能與新產品有固定位置，升版建議是其中一行
+      if (d.official) {
+        parts.push(`
+    <div class="weekly-official">
+      <div class="weekly-official__kicker">本週官方出了什麼 · SHIPPED</div>
+      <div class="weekly-official__body">${mdToHtml(d.official)}</div>
+    </div>`);
+      }
       if (d.roundup) {
         parts.push(`
     <div class="weekly-roundup">${mdToHtml(d.roundup)}</div>`);

@@ -465,6 +465,60 @@ def check_reader_rules(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool
     return ok
 
 
+# ── 篇幅形狀（W41 起，舊期凍結不回溯）──────────────────────────────
+# 2026-10-11：W41 第一版八項功能更新只寫進兩項，討論綜述卻有八條。四段裡沒有一段的題目是
+# 「官方出了什麼」，功能只能靠搶到頭條進週報；其餘各段只有下限沒有上限，素材有多少就長多少。
+SHAPE_SINCE = "2026-W41"
+OFFICIAL_HEADING_RE = re.compile(r"^###\s*本週官方出了什麼\s*$", re.MULTILINE)
+OFFICIAL_MAX = 6
+ROUNDUP_MAX = 4
+ACTIONS_MAX = 4
+RECAP_RESULT_MAX = 80
+
+
+def _h3_body(text: str, title: str) -> str | None:
+    m = re.search(rf"^###\s*{re.escape(title)}[^\n]*\n(.*?)(?=^#{{2,3}}\s|\Z)", text, re.MULTILINE | re.DOTALL)
+    return m.group(1) if m else None
+
+
+def _bullets(body: str | None) -> int:
+    return sum(1 for l in (body or "").splitlines() if l.startswith("- "))
+
+
+def _visible(cell: str) -> str:
+    cell = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", cell)
+    return re.sub(r"[*`]", "", cell).strip()
+
+
+def check_shape(report: list[str], weekly_dir: Path = WEEKLY_DIR) -> bool:
+    ok = True
+    files = sorted(weekly_dir.glob("[0-9][0-9][0-9][0-9]-W[0-9][0-9].md")) if weekly_dir.exists() else []
+    for path in files:
+        if path.stem < SHAPE_SINCE:
+            continue
+        text = path.read_text(encoding="utf-8-sig")
+        if not OFFICIAL_HEADING_RE.search(text):
+            ok = False
+            report.append(
+                f"  ❌ {path.stem}：缺 `### 本週官方出了什麼`——新功能與新產品的固定位置；"
+                "沒有就寫一行「本週官方沒有出新東西」，不可整段省略"
+            )
+        for title, cap in (("本週官方出了什麼", OFFICIAL_MAX), ("討論綜述", ROUNDUP_MAX), ("本週要動的事", ACTIONS_MAX)):
+            n = _bullets(_h3_body(text, title))
+            if n > cap:
+                ok = False
+                report.append(f"  ❌ {path.stem}：「{title}」{n} 條，上限 {cap} 條——挑讀者會因此改做法的，其餘不寫")
+        for row in _parse_table(text, RECAP_HEADER_RE):
+            n = len(_visible(row[-1]))
+            if n > RECAP_RESULT_MAX:
+                ok = False
+                report.append(
+                    f"  ❌ {path.stem}：回收結果欄 {n} 字（上限 {RECAP_RESULT_MAX}）——「{_strip_bold(row[0])[:24]}」。"
+                    "只寫還要不要盯與一句為什麼，查證過程不寫"
+                )
+    return ok
+
+
 def main() -> int:
     report: list[str] = []
     ok = check(report)
@@ -473,6 +527,7 @@ def main() -> int:
     ok = check_headline(report) and ok
     ok = check_probe_liveness(report) and ok
     ok = check_reader_rules(report) and ok
+    ok = check_shape(report) and ok
     out = _stdout()
     print("# check_weekly_ledger.py 報告\n", file=out)
     print("\n".join(report) if report else "  （無週報）", file=out)

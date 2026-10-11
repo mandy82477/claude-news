@@ -880,11 +880,14 @@ def parse_weekly(f: Path) -> dict:
 
             elif kind == "discussion":
                 disc = {"title": title, "body": body,
-                        "versionNote": None, "roundup": None, "deepDive": None, "actions": None}
+                        "versionNote": None, "official": None, "roundup": None, "deepDive": None,
+                        "actions": None}
                 try:
                     for sub_title, sub_body in _split_by_heading(body, WEEKLY_H3_RE):
                         sub_body = _weekly_clean_trailing_hr(sub_body)
-                        if "本週版本" in sub_title:
+                        if "本週官方出了什麼" in sub_title:  # W41 起；舊期用下一支
+                            disc["official"] = sub_body
+                        elif "本週版本" in sub_title:
                             disc["versionNote"] = sub_body
                         elif "討論綜述" in sub_title:
                             disc["roundup"] = sub_body

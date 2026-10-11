@@ -1040,6 +1040,19 @@ code {
 .weekly-version__text { font-family: var(--font-cjk); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-1); }
 .weekly-version__text p { margin: 0; }
 
+/* 本週官方出了什麼 — 清單，hairline 下界，與下方討論綜述分開 */
+.weekly-official { padding-bottom: 14px; margin-bottom: 20px; border-bottom: 1px solid var(--border-1); }
+.weekly-official__kicker {
+  font-family: var(--font-mono); font-size: var(--fs-small);
+  letter-spacing: 0.25em; color: var(--ochre-9);
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.weekly-official__body { font-family: var(--font-cjk); font-size: var(--fs-body); line-height: 1.75; color: var(--ink-1); }
+.weekly-official__body ul { padding-left: 22px; margin: 0 0 10px; }
+.weekly-official__body li { margin: 6px 0; }
+.weekly-official__body p { margin: 0; }
+.weekly-official__body strong { color: var(--ink-1); font-weight: var(--fw-medium); }
+
 .weekly-roundup { font-family: var(--font-cjk); font-size: var(--fs-body); line-height: 1.8; color: var(--ink-2); margin-bottom: 8px; }
 .weekly-roundup ul, .weekly-roundup ol { padding-left: 22px; margin: 8px 0; }
 .weekly-roundup li { margin: 8px 0; }
