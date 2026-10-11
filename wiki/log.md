@@ -7594,3 +7594,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 聚焦校準：非本月首次（10-04 已執行 39.3%），跳過
 - 流程變更：使用者裁定「必做的以後都不要問」——`.claude/skills/wiki-weekly-review/SKILL.md` 步驟 3 改為清單先標必做／可選，必做直接執行；沿革見 `docs/rules-changelog/wiki-weekly-review.md` 2026-10-11
 - 歸因 user-query／社群、安全政策、模型、商業、功能、人物
+
+## 2026-10-11 Query（使用者：W41 週報沒提到 Claude 的新產品）
+
+- 問題：W41 初版只寫 Claude Code 版本線，漏了 10-08 的產品發布（日報 10-09 聚焦條已登，wiki 仍掛 ❓）
+- 查證（官方公告 claude.com/resources/articles/dashboards-and-motion、說明中心 17454700、claude.com/pricing，2026-10-11）：Claude Dashboards（beta，Pro／Max／Team／Enterprise，算進方案用量）、Claude Motion（beta，Team／Enterprise，`/motion`，非影片生成）、Docs／Slides／Design 脫離 beta（所有方案，組織 10-15 預設開）、claude.ai/design 獨立站 2026-12-14 關閉
+- 寫入：[[entities/claude-design]]「Claude Dashboards 與 Claude Motion」節改寫為已查證（❓ 結案 1 筆）、新增「Docs、Slides、Design 脫離 beta」；[[entities/pricing]] Dashboards 列補「算進方案用量」；index 該列摘要更新；`weekly/2026-W41.md` 依新結構重寫（「本週版本」改題為「本週官方出了什麼」、綜述與要動的事各限 4 條、回收結果欄限 80 字、數字換選法；規則與 `check_shape()` 同批落地，沿革見 `docs/rules-changelog/weekly-report.md` 2026-10-11）
+- 未查到：MakeUseOf 10-04 所稱「Claude 可操作 Android 應用程式」查無官方公告，不寫入；方案頁另見 Claude Security（beta，Enterprise），發布日未查，未寫入
+- 另：`guard_roles.py` H7 加 5c 授權標記（commit 003f899b），10-10 lint 待裁示第 1 項結案
+- 歸因 user-query／功能、商業

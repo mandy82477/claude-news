@@ -4,7 +4,7 @@ kind: "entity"
 type: "feature"
 status: "active（初期，體驗粗糙）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-09"
+last_updated: "2026-10-11"
 last_news_update: "2026-10-09"
 status_main: "active"
 days_since_news: 2
@@ -12,13 +12,13 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 2
-inbound_links: 10
+inbound_links: 11
 attribution_count: 5
 attribution_last: "2026-10-09"
 top_source: "google-news"
-pending_count: 1
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-10-23"
+pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（初期，體驗粗糙）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-11
 **最後新聞更新：** 2026-10-09
 
-> **最新工具動態**（2026-10-09）
-> 官方「方案與定價」頁今日新增「Claude Dashboards (beta)」與「Claude Design」段落；Reuters、XDA 同日報導 Claude 可把資料轉成即時互動儀表板與動畫輸出，產品形式與操作方式尚未見報導。
+> **最新工具動態**（2026-10-08 發布，2026-10-11 查證）
+> Claude Dashboards 與 Claude Motion 進 beta；Design、Docs、Slides 脫離 beta、所有方案可用。**獨立站 claude.ai/design 於 2026-12-14 關閉**，有專案或團隊 design system 的人要先搬。
 
 ---
 
 ## 現況
 
-**09-17 起整合進對話介面：** 官方部落格宣布（隨 [[entities/cowork|Cowork 與 Chat 合併]]同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；具體是取代或疊加既有獨立設計介面，官方摘要未載明，待後續官方文件確認。
+**09-17 起整合進對話介面：** 官方部落格宣布（隨 [[entities/cowork|Cowork 與 Chat 合併]]同批），Claude Design 現整合進 claude.ai 對話中，可直接編輯、展示簡報，並下載為 PowerPoint／PDF；獨立設計介面保留到 2026-12-14 後關閉，見下方「Docs、Slides、Design 脫離 beta」。
 
 Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude 具備輔助 UI／視覺設計的能力。目前處於初期階段，社群評價以負面為主——幻覺嚴重、工具錯誤頻繁，且輸出設計風格過度貼近 Anthropic 自家品牌，忽略用戶提供的設計素材。初期問題是否已改善未見官方說明，但產品本身持續迭代（見下段官方同步能力）。
 
@@ -50,9 +50,26 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ---
 
-## Claude Dashboards（beta，新產品，待補）
+## Claude Dashboards 與 Claude Motion（beta，2026-10-08 發布）
 
-❓ **待查證**（標 2026-10-09｜查 Claude Dashboards、interactive dashboard｜複 2026-10-23）｜**官方「方案與定價」頁新增「Claude Dashboards (beta)」段落**：同日 Reuters、XDA 報導 Claude 可把資料轉成即時互動儀表板，與同批新增的動畫輸出工具並列；官方頁僅新增章節標題與「More information」連結，本站原料無可讀內文，Reuters／XDA 條目亦僅標題可用，產品形式、操作方式與是否與本頁 Claude Design 同源皆未見報導。
+官方公告與說明中心 2026-10-11 查證（[公告](https://claude.com/resources/articles/dashboards-and-motion)、[Dashboards 說明](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)）：
+
+- **Claude Dashboards（beta）**：Pro／Max／Team／Enterprise 可用。用白話提問，Claude 為每張圖寫 SQL、對資料來源執行，做成會更新的儀表板。
+- **資料來源**：Amazon Redshift、BigQuery、ClickHouse、Databricks、Snowflake，以及已連上 Claude 的其他應用（如 Salesforce）。
+- **可稽核**：每張圖顯示背後的查詢與上次更新時間；點數字看查詢，也可請 Claude 解釋。
+- **用量**：算進方案用量上限。定位是快速探索型問題，深入分析官方建議送到別的工具。
+- **交接對象**：Amplitude、Grafana、Hex、Mixpanel、Omni、PostHog、Sigma 等；Looker、monday.com、Tableau 標「即將推出」。
+- **Claude Motion（beta）**：Team／Enterprise 可用，訊息框輸入 `/motion`。Claude 寫程式碼把文字、圖表、圖形做成短動畫，可下載 MP4。
+- **Motion 不是影片生成**：官方明說不使用影片生成模型，沒有生成畫面或 AI 人物；字、數字、時間點都可改。
+- **管理員開關**：Enterprise 預設關閉，擁有者到 Organization settings > Artifacts 開，可用自訂角色限定群組。
+- **未載**：資料量或圖表數上限、分享後對方的權限，說明中心都沒寫。
+
+### Docs、Slides、Design 脫離 beta（同日）
+
+- 三者所有方案含免費版皆可用；組織帳號 2026-10-15 起預設開啟，管理員可提前開。
+- **獨立站關閉**：claude.ai/design 保留到 **2026-12-14**。關站後站內的聊天、專案留言與公開連結失效。
+- **搬遷**：團隊 design system 從 Artifacts 頁的「Migrate team design systems」搬，原件在關站前不變（[搬遷指南](https://support.claude.com/en/articles/17440474)）。
+- 企業面：artifact 支援 CMEK，管理員可選組織使用的 artifact 範本；簡報可匯出 PowerPoint／PDF 或送到 Google Slides。
 
 ---
 
@@ -86,7 +103,8 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 歷史記錄
 
-- 2026-10-09：官方「方案與定價」頁新增「Claude Dashboards (beta)」與「Claude Design」段落；Reuters、XDA 同日報導 Claude 可把資料轉成即時互動儀表板，內容細節未載（詳見上方標記）
+- 2026-10-08：官方發布 Claude Dashboards 與 Claude Motion（beta）；Design、Docs、Slides 脫離 beta；獨立站訂 2026-12-14 關閉（2026-10-11 查證）
+- 2026-10-09：官方「方案與定價」頁新增「Claude Dashboards (beta)」段落；Reuters、XDA 同日報導
 - 2026-09-17：官方部落格宣布（隨 [[entities/cowork|Cowork／Chat 合併]]同批）Claude Design 整合進對話，可直接編輯、簡報並下載為 PowerPoint／PDF
 - 2026-08-17（v2.1.234）：`/design` skill 上線（research preview），將 Claude Design 的 artboard 工作流程帶入 Claude Code CLI 與 Desktop，確認與本頁 Claude Design 同源（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）
 - 2026-09-06：官方說明中心確認 `/design-sync` 可自本機程式碼庫匯入 design system，並支援 Claude Design ↔ Claude Code 雙向同步（[官方說明中心](https://support.claude.com/en/articles/14604416-get-started-with-claude-design)，文件 2026-08-06 更新）——2026-07-16 dev.to 教學文章提及的同步能力至此獲官方佐證
@@ -104,6 +122,8 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 參考來源
 
+- [官方公告：Build live dashboards and animate explainers with Claude](https://claude.com/resources/articles/dashboards-and-motion)（2026-10-08，2026-10-11 取得）
+- [官方說明中心：Get started with Claude Dashboards](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)（2026-10-11 取得）
 - [官方方案與定價頁](https://claude.com/pricing)（2026-10-09，Claude Dashboards／Claude Design 段落新增）
 - [[news/2026-10-09]]
 - [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17，Claude Design 整合進對話段落）

@@ -89,7 +89,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Design／Slides／Docs 是方案內含功能，沒有獨立定價（2026-10-03 官方定價頁查證）**：Pro、Max、Team、Enterprise 皆內含，Free 不含；官方未對這三項列出任何單獨費率或加購項，因此它們不會在帳單上獨立出現一列（來源：[claude.com/pricing](https://claude.com/pricing)）
 - **Free 不含 Opus 5.5、Pro 可用（2026-09-24，單一弱來源）**：shattered.io 稱 Free 不提供 Opus 5.5、Pro 可用；方向與官方 Opus 5.5 取代 Opus 5 的既有分界一致，惟本則單一低知名度來源，未經官方原文比對（shattered.io）
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
-- **Plans & Pricing 頁新增「Claude Dashboards（beta）」（2026-10-09）**：Reuters、XDA 同日報導可將資料轉為即時互動儀表板。比照 Design／Slides／Docs，官方未列獨立費率，不會獨立出現在帳單
+- **Plans & Pricing 頁新增「Claude Dashboards（beta）」（2026-10-09）**：無獨立費率，但官方說明中心載明算進方案用量上限（2026-10-11 查證），見 [[entities/claude-design]]
 
 ---
 

@@ -52,7 +52,7 @@
 | [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案、牌價與乘數、計費規則現況；09-14 起週配額換軌、還在發生的計費事故　↳ 子故事：[[entities/pricing-archive]] |
 | [[entities/mythos]] | model | 🤖 模型 | active（已解禁） | 高能力安全模型；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview（4% vs 6% 控制流劫持），跨越先前模型做不到的門檻　↳ 子故事：[[entities/mythos-archive]] |
 | [[entities/bugcrawl]] | feature | 🛠️ 工具/功能 | beta | Anthropic 測試中的 Claude Code 漏洞偵測工具 |
-| [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active（初期）| Anthropic AI 設計工具，首日社群反映幻覺多、風格偏移、Claude Code 整合差 |
+| [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active | Anthropic AI 設計工具（10-08 脫離 beta、獨立站 12-14 關）；同頁收 Claude Dashboards 與 Motion（beta） |
 | [[entities/claude-security]] | product | 🛠️ 工具/功能 | beta | Claude Security 資安產品，情境化安全評估，整合於 Claude Code 開發環境　↳ 子故事：[[entities/claude-security-archive]] |
 | [[entities/openclaw]] | product | 💼 商業 | active | 第三方 agentic 工具，歷經禁令後 6/15 起恢復允許但改走信用池 API 費率計費　↳ 子故事：[[entities/openclaw-archive]] |
 | [[entities/google-investment]] | event | 💼 商業 | resolved | Google 投資 400 億美元歷史記錄，含循環算力交易結構　↳ 子故事：[[entities/google-investment-archive]] |
