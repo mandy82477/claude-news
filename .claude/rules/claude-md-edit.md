@@ -2,12 +2,14 @@
 paths:
   - "CLAUDE.md"
   - "wiki/CLAUDE.md"
-  - ".claude/**/*.md"
+  - ".claude/rules/**/*.md"
+  - ".claude/skills/**/*.md"
+  - ".claude/commands/**/*.md"
   - ".claude/review-registry.json"
 ---
 # CLAUDE.md 及規則檔修改規則
 
-修改根目錄 `CLAUDE.md`、`wiki/CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/**/*.md`、`.claude/agents/*.md`、`.claude/review-registry.json` 前必須讀取此檔案（與檔首 `paths:` 同範圍）。
+修改根目錄 `CLAUDE.md`、`wiki/CLAUDE.md`、`.claude/commands/*.md`、`.claude/rules/*.md`、`.claude/reporter-rules/**/*.md`、`.claude/agents/*.md`、`.claude/review-registry.json` 前必須讀取此檔案。檔首 `paths:` 刻意不含 `.claude/agents/`、`.claude/reporter-rules/`（記者每次派工都讀那裡，自動塞本檔是白吃 context），改這兩處的檔前明文 Read 本檔；`.claude/hooks/` 沒有 `.md`，不列。
 
 ---
 

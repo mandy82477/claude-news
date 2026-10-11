@@ -4,7 +4,7 @@
 
 ## 六記者派工 prompt（步驟 2）
 
-每個 Agent 呼叫的 prompt：
+每個 Agent 呼叫的 prompt（`[類別]` 用類別中文，三個 `[貼入…]` 由主編跑指令後貼輸出）：
 
 ```
 今日日期：[YYYY-MM-DD]
@@ -15,9 +15,18 @@
 - 該在既有頁面加開新子區塊（目前分散在時序各處，缺乏彙整）
 - 該提升熱度/優先度（目前標示的重要性明顯低估近期訊號量）
 
-另外讀 `wiki/reader-notes.md`，找屬於你領域、狀態為 ⏳ 的 🔍 興趣主題（使用者主動表達想多看的主題）——這是**需求面證據**：使用者問過但現有覆蓋不足，也算加碼理由，即使本週新聞訊號不強。回報時註明該建議來自 reader-notes 哪一條。
+審視範圍只有兩樣（不讀 `news/*.md` 與 `wiki/log.md`）：
+- 近 7 天你類別的原料包 `data/ingest-packets/<日期>/[類別].md`（切份者 `[類別]-k.md`；某天沒有該檔＝當天你類別無條目）
+- 你負責頁面近 7 天的變動：一次跑 `git diff --stat $(git rev-list -1 --before="7 days ago" HEAD) -- $(python scripts/reporter_pages.py --category [類別])`，只對列出有變動的頁再看 `git diff`
 
-判斷標準先 Read `.claude/rules/collection-scope.md`，對照其「目標讀者」（Claude Code 重度使用者 / AI 系統開發者 / Anthropic 生態追蹤者）與檔首的唯一判準——這份延伸能幫助這些讀者更了解 Claude/Anthropic 生態系嗎？若否，不建議。
+你負責的頁面：
+[貼入 `python scripts/reporter_pages.py --category [類別]` 的輸出]
+
+讀者筆記待處理項：
+[貼入 `python scripts/reader_notes.py --pending --category [類別]` 的輸出]
+其中 🔍 興趣主題（使用者主動表達想多看的主題）是**需求面證據**：使用者問過但現有覆蓋不足，也算加碼理由，即使本週新聞訊號不強。要看全文照行號讀 `wiki/reader-notes.md` 那一行；回報時註明該建議來自哪一條（行號＋日期）。
+
+判斷標準：判準與三類目標讀者見 `.claude/rules/collection-scope.md` 檔首；延伸建議過不了那句判準就不建議。
 
 給 0-3 條具體建議（沒有就寫「無」），格式：
 ## [頁面路徑/新主題名稱]

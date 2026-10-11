@@ -2,7 +2,13 @@
 paths:
   - "src/**"
   - "scripts/**"
-  - ".claude/**"
+  - ".claude/rules/**"
+  - ".claude/skills/**"
+  - ".claude/commands/**"
+  - ".claude/hooks/**"
+  - ".claude/mods/**"
+  - ".claude/settings.json"
+  - ".claude/review-registry.json"
   - "web_reader/assets/**"
   - ".github/workflows/**"
 ---

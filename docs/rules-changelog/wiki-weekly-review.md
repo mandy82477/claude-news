@@ -6,6 +6,8 @@
 
 **確認閘改為只管可選項：** W41 回顧清單 8 項裡有 1 項是事實錯誤（community-cost 把週額度削減 17% 讀成重工比例）、3 項時效強（Haiku 4.5 退役倒數、agent 失控事故年表），主編仍逐項問使用者。使用者裁定「必做的以後都不要問我」：步驟 3 清單先標必做／可選，必做（事實錯誤、距官方期限不到兩週）直接執行，可選才問。理由：確認閘是為主觀加碼設的，事實錯誤與到期事項沒有「要不要」可選，問了只是把決定權推回去。
 
+**六記者派工改吃切好的料：** 量測記者子代理讀進去卻用不到的東西——`wiki/reader-notes.md` 47 行 30 KB（單行最長約 4 千字元）整份讀、`.claude/rules/collection-scope.md` 4 KB 六人各讀一次只為一句判準、審視「本週新增」靠讀七份日報與 log.md。改法：reader-notes 換成 `scripts/reader_notes.py --pending --category <類別>` 的 ⏳ 短版（社群一份約 0.5 KB）；判準句直接寫進 prompt；審視範圍改成 `data/ingest-packets/` 近 7 天本類別包＋負責頁近 7 天 `git diff`，負責頁清單由 `scripts/reporter_pages.py` 依頁面 domain 列出。原料包因此改進版控，`build_ingest_packets.py` 產包時清掉 7 天外的日期目錄。
+
 ## 2026-09-13
 
 `/wiki-weekly-review` 從舊 command 檔 .claude/commands/wiki-weekly-review.md 轉成 skill（`.claude/skills/wiki-weekly-review/`）。步驟語意與判準逐字不動，只換家：六記者派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整確認清單格式、log 條目模板移入同目錄 `dispatch.md`；月度校準判斷方式的教訓敘事移入本檔。`.claude/commands/weekly.md` 與當時的週報規格檔（今 `.claude/skills/weekly-report/SKILL.md`）的路徑引用、`.claude/review-registry.json` 的一組 sync_pair 同步改指新家；bare_references 的舊檔 line_allowlist 條目失效刪除（該檔本來就沒有裸露的根目錄規則檔引用）。

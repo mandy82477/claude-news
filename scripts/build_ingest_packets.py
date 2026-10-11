@@ -20,6 +20,10 @@ routing 檔（主編唯一要寫的檔，JSON）：
   2. 在記憶體裡模擬 append 後跑 check_classification_log.audit；有阻斷問題就不寫
   3. append 分類帳（與同 URL 最後一行完全相同者跳過，重跑冪等），再跑一次對帳 CLI 當閘
   4. 產包：每類一份 `<類別>.md`（>25K 字元切 `<類別>-k.md`）＋`排除.md`，印路徑與大小
+  5. 輸出目錄是 `<根>/<date>/` 版型時，刪掉同根下早於「--date 往前 7 天（含當天）」的日期目錄
+     （以日報日期為基準，凌晨跑也是滿 7 天）。
+     包進版控供 /weekly 記者讀近 7 天本類別原料；routing.json（重產包要用）與 reports/
+     （collect_reporter_reports.py 的輸入）隨日期目錄一起留、一起刪
 
 exit 0 產包完成｜1 routing／來源／對帳有阻斷問題｜3 原料或日報缺檔
 
@@ -30,10 +34,12 @@ exit 0 產包完成｜1 routing／來源／對帳有阻斷問題｜3 原料或�
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import importlib.util
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -54,6 +60,8 @@ EXCLUDED_NAME = "排除"
 MAX_CHARS = 25_000
 SUMMARY_MAX = 240
 PACKET_SUMMARY_MAX = 400
+KEEP_DAYS = 7
+DATE_DIR_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def _load_ccl():
@@ -603,6 +611,26 @@ def write_packets(out_dir: Path, packets: dict[str, list[str]]) -> list[tuple[Pa
     return written
 
 
+def prune_packet_dirs(root: Path, ref: dt.date, keep_days: int = KEEP_DAYS,
+                      protect: tuple[str, ...] = ()) -> list[Path]:
+    """刪 root 下早於 ref-(keep_days-1) 的 YYYY-MM-DD 目錄；非日期名、protect 內的不碰。"""
+    if not root.is_dir():
+        return []
+    cutoff = ref - dt.timedelta(days=keep_days - 1)
+    removed = []
+    for d in sorted(root.iterdir()):
+        if not d.is_dir() or not DATE_DIR_RE.match(d.name) or d.name in protect:
+            continue
+        try:
+            day = dt.date.fromisoformat(d.name)
+        except ValueError:
+            continue
+        if day < cutoff:
+            shutil.rmtree(d)
+            removed.append(d)
+    return removed
+
+
 # ── CLI ──────────────────────────────────────────────────────────────────
 
 def _use_utf8_stdout() -> None:
@@ -702,6 +730,10 @@ def main(argv: list[str] | None = None) -> int:
         print("無條目、不派工：" + "、".join(missing))
     if EXCLUDED_NAME not in packets:
         print("排除 0 則，未派複核")
+    if out_dir.name == args.date:
+        removed = prune_packet_dirs(out_dir.parent, dt.date.fromisoformat(args.date), protect=(args.date,))
+        if removed:
+            print(f"清掉 {KEEP_DAYS} 天外的舊包：" + "、".join(d.name for d in removed))
     if shells:
         print(f"\n殼層摘要 {len(shells)} 則（包內已標註；需要時在 routing 補 summary_override 後重跑）")
     return 0

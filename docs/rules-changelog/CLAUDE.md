@@ -33,3 +33,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-04：news-console mod 的工作樹記帳改一檔一把 key
 
 /weekly 收尾時 commit 守門連續誤擋本 session 自己的檔。查 `$.store` 實證兩個根因：(1) 記帳是整份 `touched:<sid>` 陣列 get→add→set，五位記者並行 Edit（共用同一個 sessionId）互相覆蓋，本 session 改過的檔從帳上消失；(2) 另一個 session 的 Bash 前後髒檔比對，會把那段時間裡別人改髒的檔記成自己的（人物頁 session 的帳上記了約 100 個本 session 的檔）。(1) 才是誤擋的觸發條件——只要真正的作者也有記錄，`foreignHits` 就會略過。修法：一檔一把 `p:<sid>:<path>`、只 set 不讀，舊陣列照讀，死 session 的 key 開場清掉；回歸測試在舊程式碼上 3 紅、新程式碼全綠。(2) 是 Bash 推斷歸屬的本質限制，留著：它只會多記、不會讓真作者漏記。
+
+## 2026-10-11：規則檔 paths 排除記者讀的檔
+
+量測記者子代理的 context：讀 `.claude/` 下任何 `.md`（角色檔、`.claude/reporter-rules/`）都會被路徑規則自動塞進 `claude-md-edit.md`（6.7 KB）與 `dev-done.md`（2.3 KB），每次派工約 5 千 token，而記者永遠不改規則也不開發。改法：`claude-md-edit.md` 的 `.claude/**/*.md` 改列舉 `rules/`、`skills/`、`commands/`；`dev-done.md` 的 `.claude/**` 改列舉 `rules/`、`skills/`、`commands/`、`hooks/`、`mods/` 與 `settings.json`、`review-registry.json`。兩者都刻意不含 `agents/`、`reporter-rules/`，改那兩處的人照 `claude-md-edit.md` 正文明文 Read。`.claude/hooks/` 沒有 `.md`，列進 `claude-md-edit.md` 會讓 `test_rules_frontmatter` 的零匹配檢查紅，故不列。

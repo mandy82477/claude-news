@@ -5,6 +5,7 @@
 所有寫檔都在暫存目錄——真帳本 data/classification-log.jsonl 只讀不寫。
 """
 import contextlib
+import datetime as dt
 import hashlib
 import importlib.util
 import io
@@ -486,6 +487,79 @@ class TestRealData0926(unittest.TestCase):
         feat = (self.dir / "功能.md").read_text(encoding="utf-8")
         ns = next(b for b in feat.split("\n### ") if "newscientist.com" in b)
         self.assertIn("2026-09-25 已歸因至 entities/claude-science", ns)
+
+
+
+class TestPrunePacketDirs(unittest.TestCase):
+    """包進版控只留 7 天：清太少會讓 repo 越長越肥，清太多會讓 /weekly 記者缺料。"""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+
+    def make(self, name, with_reports=True):
+        d = self.root / name
+        (d / "reports").mkdir(parents=True)
+        (d / "routing.json").write_text("{}", encoding="utf-8")
+        (d / "功能.md").write_text("x", encoding="utf-8")
+        if with_reports:
+            (d / "reports" / "功能.md").write_text("r", encoding="utf-8")
+        return d
+
+    def test_keeps_seven_days_including_today(self):
+        today = dt.date(2026, 10, 11)
+        for n in range(0, 9):
+            self.make((today - dt.timedelta(days=n)).isoformat())
+        removed = mod.prune_packet_dirs(self.root, today)
+        self.assertEqual(sorted(d.name for d in removed), ["2026-10-03", "2026-10-04"])
+        kept = sorted(d.name for d in self.root.iterdir())
+        self.assertEqual(kept[0], "2026-10-05")
+        self.assertEqual(len(kept), 7)
+
+    def test_keeps_routing_and_reports_inside_window(self):
+        today = dt.date(2026, 10, 11)
+        d = self.make("2026-10-05")
+        mod.prune_packet_dirs(self.root, today)
+        self.assertTrue((d / "routing.json").exists())
+        self.assertTrue((d / "reports" / "功能.md").exists())
+
+    def test_ignores_non_date_names_future_and_protected(self):
+        today = dt.date(2026, 10, 11)
+        self.make("notes")
+        self.make("2026-13-40")
+        self.make("2026-10-20")
+        self.make("2026-01-01")
+        (self.root / "2025-01-01.md").write_text("file, not dir", encoding="utf-8")
+        removed = mod.prune_packet_dirs(self.root, today, protect=("2026-01-01",))
+        self.assertEqual(removed, [])
+        self.assertEqual(len(list(self.root.iterdir())), 5)
+
+    def test_missing_root_is_noop(self):
+        self.assertEqual(mod.prune_packet_dirs(self.root / "nope", dt.date(2026, 10, 11)), [])
+
+    def test_cli_prunes_siblings_only_for_date_layout(self):
+        # 基準是 --date（日報日期）而非執行當天：固定用遠離今天的日期，確保不是靠 date.today() 過關
+        today = dt.date(2026, 1, 2)
+        items, routing = small_case()
+        sb = Sandbox(items, routing, date=today.isoformat())
+        self.addCleanup(sb.close)
+        packets = sb.dir / "packets"
+        old = (today - dt.timedelta(days=7)).isoformat()
+        edge = (today - dt.timedelta(days=6)).isoformat()
+        for name in (old, edge):
+            (packets / name).mkdir(parents=True)
+        rc, out = run(sb.argv("--out", str(packets / today.isoformat())))
+        self.assertEqual(rc, 0, out)
+        self.assertFalse((packets / old).exists(), out)
+        self.assertTrue((packets / edge).exists())
+        self.assertTrue((packets / today.isoformat() / "功能.md").exists())
+        self.assertIn(old, out)
+        # 非 <根>/<date>/ 版型（--out 指到別處）不清任何東西
+        (packets / old).mkdir()
+        rc, out = run(sb.argv("--out", str(packets / "scratch")))
+        self.assertEqual(rc, 0, out)
+        self.assertTrue((packets / old).exists())
 
 
 if __name__ == "__main__":

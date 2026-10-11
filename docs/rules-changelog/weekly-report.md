@@ -24,6 +24,8 @@
 
 修法：(1) 版本段換題目，素材指定從功能總覽表當週列與日報聚焦區的官方發布拿，升版建議降為其中一行；(2) 上限——官方 6 條、綜述 4 條、要動的事 4 條、回收結果欄 80 字，`check_shape()` 自 W41 硬擋；(3) 數字節保留（使用者：「本週數字很酷」），互動數整節至多一個。使用者定的原則：有增加就要減少，所以是換題目不是加段。
 
+**專欄料改給類別原料包：** 量測 `/weekly` 十個讀者各讀七份日報（合計約 10.8 萬字元）。每日 ingest 已有按類別切好的 `data/ingest-packets/<日期>/<類別>.md`，原本被 `.gitignore` 排除、本機只剩一天份；改為進版控、產包時只留 7 天。`columns.md` 專欄記者的料改成近 7 天該類別的包（財經＝商業、社群＝社群、開發實務＝開發實務＋社群），reader-notes 改給 `scripts/reader_notes.py` 的 ⏳ 短版。
+
 ## 2026-09-13（轉 skill 與敘事搬家）
 
 `/weekly-report` 從舊 command 檔轉成 skill（`.claude/skills/weekly-report/`）。步驟語意、契約字串與判準逐字不動，只換家：機械契約字串表移入 `contracts.md`；第 (1) 段全部規則移入 `headline.md`；第 (2) 段移入 `deepdive.md`；第 (3)(4) 段移入 `forecast.md`。步驟 6 的 commit／測試閘／build／push／重試不再自抄一份，改指 `.claude/skills/web-publish/SKILL.md` 的 Step 4／Step 5 形狀；「週報先、策展後」三個理由只留 `.claude/commands/weekly.md` 一處，本規格只留一句結論。下列三次修稿病例與各條規則的正反例全文移入本檔，reference 每條只留一句 ≤20 字的界標。`.claude/review-registry.json` 十五組 sync_pair 的 `files` 隨 pattern 改指新家。

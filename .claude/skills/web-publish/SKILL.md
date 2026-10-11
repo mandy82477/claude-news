@@ -25,7 +25,7 @@ PYTHON REPO_ROOT\scripts\ingest_gate.py --date TARGET_DATE
 用 Bash 執行（**先不 push**，於 Step 5 統一推送）：
 
 ```
-git -C REPO_ROOT add wiki/ daily/TARGET_DATE.md data/source_attribution.jsonl data/pending-handoffs.jsonl data/classification-log.jsonl data/ingest-metrics.jsonl data/devpractice-candidates.jsonl data/devpractice_state.json
+git -C REPO_ROOT add wiki/ daily/TARGET_DATE.md data/source_attribution.jsonl data/pending-handoffs.jsonl data/classification-log.jsonl data/ingest-metrics.jsonl data/devpractice-candidates.jsonl data/devpractice_state.json data/ingest-packets/
 git -C REPO_ROOT commit -m "wiki: auto-ingest TARGET_DATE"
 ```
 

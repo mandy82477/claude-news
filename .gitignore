@@ -49,8 +49,11 @@ docs/architecture-evolution-react.bak.html
 docs/local/
 .claude/tree-claims/
 
-# wiki ingest 當日工作檔（routing、派工包、記者回報）——判斷已落在 data/classification-log.jsonl，不進 repo
-data/ingest-packets/
+# wiki ingest 派工包（data/ingest-packets/<date>/）進 repo：/weekly 記者讀近 7 天本類別原料，
+# build_ingest_packets.py 每次產包順手刪 7 天外的日期目錄
 
 # Cygwin／Git Bash 當機紀錄（bash.exe.stackdump），不是專案檔
 *.stackdump
+
+# 記者批次修補檔（apply_edits.py 的輸入，見 .claude/reporter-rules/batch-edit.md）——當日工作檔，不進 repo
+data/edit-batches/
