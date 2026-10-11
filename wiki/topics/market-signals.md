@@ -910,7 +910,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-09-29｜查 Reuters、IPO prospectus、existential risks｜複 2026-10-13）｜**招股書具體財務數字是否有更多來源佐證，公開版 S-1 是否正式遞交**：Reuters 獨家稱鉅額虧損、高速成長、首度書面警示存在性風險，具體金額未載；SEC EDGAR 公開版尚未確認遞交。
 - ❓ **待查證**（標 2026-09-28｜查 Sonnet 5.5、分層費率｜複 2026-10-12）｜**Sonnet 5.5 依方案階梯定价（$1–$2 input／$5–$10 output）的方案對照細節是否公布**：官方定价頁與 Platform Docs 同日新增分層費率區間，未載明哪個訂閱方案對應哪一價位。
 - ❓ **待查證**（標 2026-09-28｜查 Australian senate、will not attend、October 1｜複 2026-10-12）｜**澳洲參議院對 Anthropic、OpenAI 拒絕出席 10-01 聽證會是否採取後續行動**：Reuters、The Guardian 同日報導確認不出席，參議院後續是否發出正式異議或動用強制到場程序均未見報導。
-- ❓ **待查證**（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date｜複 2026-10-11｜訊 2026-09-28）｜**澳洲參議院 AI 調查聽證會的具體日期與調查範圍是否公布**：09-28 Reuters、The Guardian 確認聽證會日期為 10 月 1 日、雙方不出席，調查範圍仍未見報導。
+- ❓ **待查證**（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date｜複 2026-11-11｜訊 2026-09-28）｜**澳洲參議院 AI 調查聽證會的具體日期與調查範圍是否公布**：09-28 Reuters、The Guardian 確認聽證會日期為 10 月 1 日、雙方不出席，調查範圍仍未見報導。
 - ❓ **待查證**（標 2026-09-27｜查 refused requests、拒答計費、MIXED Reality｜複 2026-10-11）｜**Anthropic API 拒答計費規則改版的五類分類與費率是否有官方文件或第二家媒體佐證**：僅 MIXED Reality News／mixed-news.com 單一媒體家族報導，五類分類定義與具體費率均未見報導。
 - 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫｜複 2026-11-10）｜**判決全文推理、是否上訴更高審級、國防部十月遷出計畫是否受影響**：2026-10-10 查官方新聞室 9–10 月全部貼文，官方未就本案發言。
   - 推理已由具名媒體補上（2:1、主筆 Katsas、Henderson 異議），公司只說「評估所有選項，包括進一步審理」；是否已正式聲請複審、以及國防部十月遷出是否暫緩，仍查無紀錄。細節見 [[topics/anthropic-government-policy]]。

@@ -4,8 +4,8 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-04"
-last_news_update: "2026-09-29"
+last_updated: "2026-10-11"
+last_news_update: "2026-10-06"
 status_main: "active"
 days_since_news: 11
 parent: null
@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 評論媒體
 **為何追蹤：** 多位 Anthropic 人士發言原文經他部落格逐字轉引，並做模型首日實測
 **首次出現：** 2026-05-20
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-09-29
+**最後更新：** 2026-10-11
+**最後新聞更新：** 2026-10-06
 **蒐集邊界：** 本站只收錄他與 Claude／Anthropic 生態相關的公開發言——部落格對其他人聲明的轉引、模型實測心得、AI agent 資安事件的具名轉載。不收錄他的個人生活，也不收錄他在 Claude／Anthropic 之外的其他技術工作（如 Datasette、SQLite 相關獨立專案）。
 
 > **本站引用最多的第一手觀點來源**（2026-09-13 建頁）
@@ -81,6 +81,8 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 - [[entities/claude-code]]（Rust Bun runtime 查證）
 - [[entities/fable-5]]（新模型首日實測）
 - [[entities/sonnet-5-5]]（2026-09-28 首日鵜鶘測試）
+- [[entities/opus-5-5]]（2026-10-06 配樂 artifact 實測）
+- [[entities/cowork]]（2026-10-06 轉引 Felix Rieseberg 說明架構轉雲端）
 
 ## 參考來源
 
@@ -92,6 +94,8 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 歷史記錄
 
+- 2026-10-06：部落格〈Scrimshaw Jukebox〉測試 Claude Opus 5.5 設計文字格式遊戲配樂並生成可播放 artifact；是否為新進能力他未對照舊模型，內容見 [[entities/opus-5-5]]（來源：Blog／Simon Willison）
+- 2026-10-06：轉引 Anthropic 工程師 Felix Rieseberg 說明 Cowork 本機 VM 架構轉雲端的原因，細節與社群追問見 [[entities/cowork]]（來源：Blog／Simon Willison）
 - 2026-09-28：Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；原文稱與 Opus 5.5 那次同一個 bug（Opus 5.5 那次的症狀本庫未見記載，2026-10-03 核）（來源：Blog／Simon Willison）
 - 2026-09-13：連續兩週的每週整理提出建頁候選後，裁決建立本頁（114 次提及／15 頁）
 - 2026-09-11：轉引 Boris Cherny「Production code written by Claude should have a higher bar than if it was written by a human」，原文於部落格處被截斷

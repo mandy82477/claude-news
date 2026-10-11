@@ -371,5 +371,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
   - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
   - 12 條具體錯誤內容仍無法查證。
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-10-04｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
+- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-11-11｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
   - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對

@@ -109,7 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-01⟩ 已查證（2026-09-20，[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，快取未命中）；V4 Flash 輸入 $0.15／輸出 $0.60（離峰）。
 - V4-Pro 輸出約為 V4 Flash 的 3.3 倍，確認雙軌定價策略屬實；尖峰時段（UTC 01:00–04:00、06:00–10:00 週一至五）雙倍。
 - **DeepSeek 雙軌與對比對象**：V4-Pro 隨開源工具 Harness 同步上線，API 定價較 V4 Flash 高，可能為「低價 Flash／高價 Pro」雙軌策略（推論）；KuCoin「逼近 Claude 3 Opus」是 DeepSeek 對 Claude 的比較，與內部兩模型互比不可混用。
-- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-10-11｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
+- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-11-11｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
 - **Lindy 案例（06-29，CNBC）**：AI 新創 Lindy 100% 流量自 Claude 切至 DeepSeek，每月省下數百萬美元，屬企業級大規模用量的相對節省，非單一訂閱價格對比。
 - **Muse Code 定價來源**：定價數字為媒體整理（Wavect、The New Stack），Meta 官方獨立掛牌頁未見（2026-08-13 查證）；09-01 三訂閱層與「20x」折扣層的實際費率均未公布。
 - ⟨Q-03⟩ 已查證（2026-09-20）：08-04 Decrypt 所稱「免費最強模型」即 08-03 正式發布的 **Qwen3.8-Max**——2.4 兆參數（95B 啟用）MoE、1M context，權重開源。
@@ -416,7 +416,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-08-13
 - **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
-- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-10-11｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
+- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-11-11｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
+  - 09-21 日報：Grok 4.7 已上線 GitHub Copilot（GitHub changelog），主打 agentic coding——新版確有發布，能力數字仍未見
 - 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
 - **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，詳見「對手雷達」新增列。

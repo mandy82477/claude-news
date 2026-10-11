@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-10"
+last_updated: "2026-10-11"
 last_news_update: "2026-10-06"
 status_main: "active"
 days_since_news: 4
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-11
 **最後新聞更新：** 2026-10-06
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -109,6 +109,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 相關議題
 
+- [[entities/yann-lecun]] — 10-04 起在 Hacker News 擴散（247 分）的公開路線對立：LeCun 公開批評 Amodei 的風險示警，原話與查證見該頁
 - [[topics/anthropic-government-policy]] — 政府 AI 監管立場
 - [[topics/anthropic-business]] — 企業策略與商業動態
 - [[topics/recursive-self-improvement]] — 遞歸自我改進公開討論

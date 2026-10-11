@@ -395,7 +395,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；但同日有媒體指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差，見 [[entities/claude-code]]、[[feature-radar]]。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；媒體轉述的「官方文件寫不要只依賴 hook 做安全防護」經 2026-10-11 查證不見於官方 hooks 文件，官方原意是 `if` 過濾器為盡力比對、硬性允許／拒絕請用權限系統——hook 是保險絲不是門鎖；用 `prompt`／`agent` hook 寫「封鎖 X」的人升到 v2.1.294 以上後應重新驗證。彙整見 [[entities/claude-code]]「hooks：事件、失效模式與能不能當防線」。
 
 **社群面（2026-09-03 補，庫內證據）：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 

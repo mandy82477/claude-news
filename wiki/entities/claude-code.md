@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-11
 **最後新聞更新：** 2026-10-10
 
 > **最新動態**（2026-10-10）
@@ -728,7 +728,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
-- **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：v2.1.295 新增此設定可阻擋失敗 hook，但官方文件仍寫「不要只依賴 hook 做安全防護」，兩者並存。用 hook 做權限防護的工程師應重新檢視設定，不可把「失敗即阻擋」當成安全保證；單一媒體來源。
+- **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：媒體轉述的「不要只依賴 hook 做安全防護」不見於官方 hooks 文件（2026-10-11 查證）；官方原意見「hooks：事件、失效模式與能不能當防線」。
 - **社群工具 token-savior 自測宣稱優於 Claude Code 原生編碼表現（2026-10-07，Mibayy/token-savior GitHub repo 自述）**：作者自測稱 Claude Code 原生（plain）基準正確率 78.3%，低於其工具版本；證據等級僅作者自測，未附第三方覆核方法論或測試環境細節，僅供參考。
 - **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。
 - **桌面版官方文件：Auto Mode 模型門檻與 Extended Thinking 預設開啟（2026-09-02 查證，Official Docs）**：官方 Claude Code 桌面版文件新增／異動段落載明，Auto mode 現開放給所有 Anthropic API 使用者，但需 **Claude Opus 4.6 以上或 Sonnet 4.6 以上**版本方可使用；文件同時說明 adaptive reasoning 模式下 `MAX_THINKING_TOKENS` 的行為，並明確標註 **Extended thinking 現為預設開啟**。屬既有功能的門檻／預設行為澄清（文件未附具體生效版本號或日期），非新指令旗標；見 [官方文件](https://code.claude.com/docs/en/desktop.md)。
@@ -754,6 +754,39 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
+
+### hooks：事件、失效模式與能不能當防線
+
+> 本節只彙整與導覽，細節留在原處：版本表（`onFailure`、`PreModelSwitch`）、「已知問題」各組、「開發者須知」。官方 hooks 文件 2026-10-11 查證。
+
+**一、事件與近期新增**
+
+| 事件／能力 | 狀態 | 去哪看 |
+|---|---|---|
+| `PreToolUse`／`PostToolUse` | 既有；觸發可靠性見下節 | 已知問題 #6305 |
+| `Stop`／`SubagentStop` | 既有；v2.1.294 改善 `prompt` hook 行為 | 版本表 v2.1.294 |
+| `PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` | 官方確認四個都有（#47023 已關閉，2026-08-17） | 已知問題 #47023 |
+| `PreModelSwitch`／`PostModelSwitch` | v2.1.251 新增，可攔截、確認或標註模型切換 | 版本表 v2.1.251 |
+| Claude Mods（原 Function Hooks） | v2.1.287 出貨，取代 function hooks | 已知問題 #91870、[[entities/claude-mods]] |
+| 使用者中斷時觸發的 hook | 尚無，功能請求未獲回應 | 已知問題 #9516 |
+
+**二、失效模式**
+
+| 失效模式 | 狀態 | 修於 |
+|---|---|---|
+| Pre／PostToolUse 未觸發（#6305） | 🔴 open；官方協作者稱改 Settings JSON 後須 `/hooks` 確認或開新 session | 未修 |
+| Stop hooks 被忽略（2026-04-24 回報） | 🔴 | 未修 |
+| 改 hooks／MCP／plugin 設定要重啟 session（#24057） | 🔴 | 未修 |
+| 中斷時無 hook 可用（#9516） | 🔴 | 未修 |
+| 無法為不同情境隔離 hook 與設定（#7075 profile） | 🔴 | 未修 |
+| `prompt`／`agent` hook 以自然語言寫「封鎖 X」實際擋不住 | ✅ | v2.1.294 |
+| hook 起不來、逾時或退出碼異常時動作被放行 | ✅ 可選擇改為阻擋 | v2.1.295 起 `onFailure: "block"`（預設 `continue`） |
+
+**三、能不能當安全控制**
+
+- **官方立場**（2026-10-11 查證）：`if` 過濾器是盡力比對（best-effort），要硬性允許或拒絕請用權限系統而不是 hook。官方文件沒有「不要只依賴 hook 做安全防護」這句，MIXED Reality News 的轉述不準（見「開發者須知」該條）。
+- **社群實測**：上表五個 🔴 都是 hook 靜默不作用的路徑；v2.1.294 修的那條更是「寫了封鎖卻沒擋住」。
+- **結論：hook 是保險絲不是門鎖，硬擋用權限系統。** `onFailure: "block"` 只補「hook 自己壞掉」那一種缺口，補不到比對漏掉與設定未生效。
 
 ### Subagent 型別差異對照
 

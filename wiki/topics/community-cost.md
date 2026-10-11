@@ -53,6 +53,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **並行成本歸因是缺口**：額度監控工具都有，「這一批 subagent 花了多少、做出了什麼」沒有人答得出來（見下方機制細節）。
 - **你的選項：** 先量再省——用額度監控工具看清楚是哪一類工作在燒；再挑上面三路之一，路由給便宜模型的降幅目前最高，但只有單一團隊的數字。
 
+### 用量去向歸因
+
+- ⏳ **量測方法：** aidiveyt 翻 `~/.claude/projects/` 逐 session 拆帳，把「額度被誰吃掉」從感覺變成可重算的比例（見下方〈aidiveyt〉條目）；現有額度監控工具做不到這個顆粒度。
+- ⏳ **context 與 subagent 的取捨：** 何時把工作移出主對話，見 [[topics/community-memory]] 10-06〈Context Is Like a Fridge〉；但 subagent 本身可能是最大用量來源（上列 48.1%），移出去不等於省（推論）。
+- ⏳ **計價端的分段門檻：** Haiku 5.5 的 prompt 超過 10 萬 token 後單價跳五倍（$0.10／$0.50 → $0.50／$2.50），見 [[entities/haiku-5-5#實付成本]]。
+- ⏳ **事前試算：** 送出前先估成本——mcptoon（10-04）壓縮 MCP schema 的 context 佔用，條目見本頁〈activeing123/mcptoon〉；Haiku 價格閘門見本頁〈Claude Haiku 5.5 Is Cheap Until 100k Tokens〉。
+- **證據強度：** 單人一月樣本，尚無覆核；各節點細節以所在頁為準，此處只彙整歸因脈絡。
+
 **機制細節**
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）
 - **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認，OpenAI、Nvidia、GitHub 開發者使用；claude-thermos 以保活請求維持快取不過期，但引發「成本轉嫁其他用戶」爭議；pxpipe 反其道而行，把文字 context 渲染成圖片傳遞以降低 token 用量；`claude -p` 未加 `--bare` 冷啟動實測約耗 15 萬 token
@@ -74,12 +82,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **來源：** dev.to（4 讚；依 dev.to 內容判斷原則收錄：第一手 headless 自動化流程設計，非讚數）；[原文](https://dev.to/panthpatel/headless-claude-code-asks-exits-then-resumes-on-the-answer-54j3)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實作心得，尚無第三方複現）
 
-#### aidiveyt：逐 session 拆帳一個月用量，量出 subagent 吃掉週額度 48%（2026-10-08）
+#### aidiveyt：逐 session 拆帳一個月用量，量出 subagent 佔全部 token 48.1%、寫了 64% 的輸出（2026-10-08）
 
 - **主線：** —
-- **核心模式：** 作者懷疑 9 月 14 日用量政策讓自己提早用完週額度，逐一分析 `~/.claude/projects/` 下一個月的 session 記錄（455 個 session、63,000 次請求，排除 session 與 subagent 重複計費後），量出「砍掉重練」佔整週用量 17%，其中 subagent 呼叫又佔這些重工用量的 48%。
+- **核心模式：** 週額度 150→125（約減 17%，官方換軌見 [[entities/pricing]]）後，作者翻 `~/.claude/projects/` 一個月紀錄逐 session 拆帳（455 個 session、2,631 次 subagent 執行），量出 **subagent 佔全部 token 的 48.1%、寫了 64% 的輸出**。
 - **與既有模式的關係：** 回應「並行成本歸因是缺口」既有機制細節——既有監控工具只顯示帳號額度與重置時間，答不出「這一批 subagent 花了多少」；本則是量測方法論而非工具，首次把個人用量拆到這個顆粒度，但僅一人一月樣本，未見覆核；非大型 codebase 特有痛點，主線填 —。
-- **可信度註記：** dev.to 讚數低（9 讚）但屬第一手量化實測，附具體 session／request 數字與計費陷阱說明，非 SEO 農場文；單一作者樣本，無第三方覆核或對照組。
+- **可信度註記：** dev.to 讚數待核，但屬第一手量化實測，附具體 session／request 數字與計費陷阱說明，非 SEO 農場文；單一作者樣本，無第三方覆核或對照組。
 - **來源：** dev.to / #claudecode；[原文](https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n)
 - **成熟度：** ⏳ 新興（本庫首次收錄這類量測方法論，單一樣本，尚無覆核）
 

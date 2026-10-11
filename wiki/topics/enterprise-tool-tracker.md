@@ -147,6 +147,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Microsoft 支出（10-05，已查證 2026-10-07）**：原估逾 10 億美元的內部 Claude 支出砍逾三分之一；雲端部門人均月預算由 10 萬降至約 1 萬美元；動機為成本與推自家工具（The Information；PYMNTS）
 - **Microsoft 改用工具（10-05，已查證 2026-10-07）**：Scott Guthrie、Jay Parikh 指示改用 GitHub Copilot／OpenAI 模型；Experiences and Devices 部門工程師遷往 GitHub Copilot CLI，見 [[topics/competitor-landscape#Microsoft／GitHub]]
 - **兩家共通（10-05，已查證 2026-10-07）**：均未取消與 Anthropic 的合約，縮減只限員工內部工具；經 Microsoft 平台賣給客戶的 Anthropic 用量仍在成長；報導未見兩家或 Anthropic 回應（the-decoder；Yahoo Finance；GuruFocus）
+- **主詞與基期（2026-10-11 註記）**：Meta 的數字是 Claude Code 使用人數（約 6 萬→3 萬）、Microsoft 的是全部 Claude 花費（金額），主詞不同；Meta 同期裁員約一成，人數降幅含裁員效應，兩家不可混比。
 - **Barclays（10-01）**：官方宣布擴大合作導入 Claude 全行，加速軟體開發、現代化系統；目標 2026 年底採用率達開發者族群 50%、2027 年擴及多數工程師，預算未見報導（Anthropic Blog；Bloomberg；PYMNTS）
 - **JPMorgan Chase 美國本部（09-17，已查證 2026-10-07）**：Claude Code 每月 $2,000 美元支出上限，只套用於部分工程師，每月重置、可申請提高；與香港分行退出（06-18）屬不同辦公室（Business Insider；[Newsquawk](https://www.newsquawk.com/headlines/jpmorgan-jpm-introduced-usd-2k-monthly-claude-code-spending-limits-for-some-engineers-and-is-rolling-out-a-more-secure-devspace-environment-business-insider-reports)）
 - **JPMorgan Devspace（09-17，已查證 2026-10-07）**：AWS 上的容器化沙箱，隔離員工憑證與內部系統；8 月約 8,000 人持 Claude 授權，約 1,900 人在 Devspace 測試組（[Crypto Briefing](https://cryptobriefing.com/jpmorgan-claude-code-spending-limits/)）

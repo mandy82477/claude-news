@@ -7575,3 +7575,22 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 1 筆（H-3389fe，功能記者本輪處理 #13354 feature-radar 補列＋entities/claude-code 自相矛盾句修正）；作廢 3 筆（H-ad36ff：事實已於 10-09 寫入 long-context-1m，無需再動；H-51df5d：official-community-gap 已有維運備忘記錄評估結論，維持現狀；H-1ffd23：Hindustan Times 該則僅標題可用，無法查證 Hassabis 讚許 John Jumper 的引語內容）
 - 懸置標記：本輪待查證命中偵測 B 級 4 筆（單一弱探針），皆未達派工門檻，未轉記者
 - 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群、投資分析
+
+## 2026-10-11 週度延伸回顧
+
+- 本機補跑（/weekly 步驟 0）：
+  - 跨家榜單週更（5b）：直接抓取 10 榜／無法取得 6 榜（WebDev、Terminal-Bench、SWE-bench、MTEB、METR、OpenRouter 用量，皆維持上週值並在列內標明）；**上週 OpenRouter 列記錯**（寫入的是 AA 智慧指數分數，不是用量排名）已撤回並註記；Text Arena 榜首維持 gemini-4-argon-high、Opus 5.5 回到第二；AA TTS 榜首換 Eleven v4 Turbo（誤差內）；Search Arena 連續第 2 週停更（48 天），下週仍停即移出
+  - 5c：本輪起始 40 筆（Lane A 6／Lane B 34）；Lane A 依日報收斂 5 筆（guardrails Q-04 08-15、ai-agent-safety 08-29、competitor 09-06 與 09-21 Grok 4.7 上 Copilot、market-signals 09-28，皆維持 ❓／🔎、複查日推至 11-11、09-21 那筆補內文），Vembu 1 筆退回 Lane B；Lane B 34 筆未清（記者 web 工具被 `guard_roles.py` H7 擋、主編本輪無餘裕親查）。🎯 本輪目標：清到 0（待清 35 筆；近 7 天新增 31 筆）｜📈 趨勢：2026-10-10 33 筆 → 今日 35 筆（+2）｜⚠️ 舊語法盲區：41 筆未回填
+  - 5m／5n：`anthropics/claude-code` 未授權本 session，跳過
+- 延伸（使用者「請全做」，8 項全執行）：
+  - [[topics/community-cost]]：aidiveyt 拆帳條目**事實修正**（17% 是週額度 150→125 的削減幅度、48.1% 是 subagent 佔全部 token 的比例，原條目兩處讀反；日報 10-09 摘要本身即錯）；新增「用量去向歸因」子區塊，標 ⏳ 單人樣本（社群）
+  - [[topics/ai-agent-safety]]：新增「官方自揭的 agent 失控事故年表」8 列（09-25／28／29 三列待確認）；「模型網攻能力與防護」時序表補 4 列，結論收斂「驗證身分後放行」主線（安全政策）
+  - [[entities/haiku-5-5]] 新增「實付成本」（≤100K $0.10／$0.50、>100K $0.50／$2.50、快取 $0.01／$0.05、Explore 要自己蓋；官方定價頁與 subagent 文件 2026-10-11 查證），⟨Q-01⟩ 結案；[[topics/model-comparison]] 退役表加 Haiku 4.5 倒數（下限 10-15）、Effort dial 補 Haiku 5.5 預設 `medium`（模型）
+  - [[entities/pricing]] 新增「額度與通路的帳務坑」（Max $100／Max 20x $200／Team $500 月 API credits 不能付 Claude Code、Azure 市集 $17,600 案、Startups 暫停待查證）；「還沒確定的計費變動」收掉 credits 與 Haiku 5.5 牌價兩項；[[topics/enterprise-tool-tracker]] 補「主詞與基期」一句（商業）
+  - [[entities/claude-code]] 新增「hooks：事件、失效模式與能不能當防線」彙整區塊（事件 6／失效模式 7／能不能當防線 3）；**更正**：媒體轉述的「官方文件寫不要只依賴 hook 做安全防護」不見於官方 hooks 文件（2026-10-11 查證），官方原意是 `if` 過濾器為盡力比對、硬擋用權限系統——10-09 Ingest 那列「與官方安全建議有落差」的判斷據此修正；[[topics/coding-workflow-guide]] 同句由主編同步更正（功能）
+  - [[entities/simon-willison]] 補 10-06 兩次被引用；[[entities/dario-amodei]] 補 LeCun 反向連結（人物）
+  - reader-notes：10-07「三個切角」✅（W41 財經專文）；10-06「工程師怎麼改用法」✅（部分，跨廠商宿主線交 community-multi-agent 承接）；08-08 兩條本週無新節點，維持 ⏳
+- 使用者跳過項目：無（記者建議暫不開的 MCP context 成本、跨廠商宿主、GLM-5.3 榜單、創辦人匿名敘事線為記者自判觀察，非使用者跳過）
+- 聚焦校準：非本月首次（10-04 已執行 39.3%），跳過
+- 流程變更：使用者裁定「必做的以後都不要問」——`.claude/skills/wiki-weekly-review/SKILL.md` 步驟 3 改為清單先標必做／可選，必做直接執行；沿革見 `docs/rules-changelog/wiki-weekly-review.md` 2026-10-11
+- 歸因 user-query／社群、安全政策、模型、商業、功能、人物
