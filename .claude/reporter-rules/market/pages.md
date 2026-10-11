@@ -24,4 +24,4 @@
 
 ### `## 追蹤中的里程碑`
 
-每則判讀的「下一個催化劑」依 `.claude/reporter-rules/page-templates.md`「懸置標記語法」登記一筆，探針寫得出可在 `news/*.md` grep 到的字串；日報出現後續時只能加 `訊 YYYY-MM-DD`，結案屬主編。
+每則判讀的「下一個催化劑」依 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」登記一筆，探針寫得出可在 `news/*.md` grep 到的字串；日報出現後續時只能加 `訊 YYYY-MM-DD`，結案屬主編。

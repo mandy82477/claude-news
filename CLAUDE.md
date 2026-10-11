@@ -37,5 +37,5 @@
 
 ## 開發完工定義
 
-改 pipeline、script、hook、規則檔或 web reader 程式時，怎樣才算完成見 `.claude/rules/dev-done.md`（碰這些目錄自動載入；測試綠與 commit 範圍由 hook 強制）。
+改 pipeline、script、hook、規則檔或 web reader 程式時，怎樣才算完成見 `.claude/rules/dev-done.md`（改 pipeline、script、hook、skill／command 時自動載入；改 `.claude/reporter-rules/` 規則檔與 `.claude/agents/` 角色檔不會自動載入，要明文 Read；測試綠與 commit 範圍由 hook 強制）。
 

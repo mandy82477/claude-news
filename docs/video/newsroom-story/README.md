@@ -30,7 +30,7 @@ node --experimental-strip-types docs/video/newsroom-story/make-story.mts
 | 02 派工 | 0:20／0:09 | 主編戴眼鏡讀日報、吹哨，九類記者點名 | `.claude/skills/wiki-ingest/SKILL.md` 步驟 3、`references/dispatch.md` |
 | 03 寫 wiki | 0:35／0:14 | 記者寫負責頁，主編寫日誌、整理索引 | `wiki/CLAUDE.md`（每個事實一個家、log 只能 append） |
 | 04 查證① | 0:50／0:19 | 記者電話被鎖（無 web 工具），貼「⚠️ 需主編查證」 | `.claude/reporter-rules/commercial/daily.md` 等「無 web 工具」；`guard_roles.py` H7 |
-| 04 查證② | 1:00／0:24 | ❓ 懸置標記；兩個探針命中日報→蓋「訊」；逾期分 Lane A／B | `.claude/reporter-rules/page-templates.md` 懸置標記；`shared.md` 待查證命中處置；`wiki-lint-sweeps/references/sweeps.md` 5c |
+| 04 查證② | 1:00／0:24 | ❓ 懸置標記；兩個探針命中日報→蓋「訊」；逾期分 Lane A／B | `.claude/reporter-rules/daily-contracts.md` 懸置標記；`shared-when.md` 待查證命中處置；`wiki-lint-sweeps/references/sweeps.md` 5c |
 | 04 查證③ | 1:11／0:28 | 主編照優先序查一手來源：事實／🔎 查無官方／媒體稱 | `sweeps.md` 5c 查證優先序 |
 | 04 查證④ | 1:23／0:34 | 每週擲骰抽題，每題帶回證據行 | `wiki-lint-reader-acceptance/SKILL.md` 7b |
 | 05 退案① | 1:28／0:37 | 複核記者翻排除區，「誤排除」改派；一則最多回退一次 | `.claude/agents/wiki-reporter-classify-review.md`；`wiki-ingest/SKILL.md` 3b |

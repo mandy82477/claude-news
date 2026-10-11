@@ -8,7 +8,7 @@
 
 每個 Agent 呼叫一律 `subagent_type: "general-purpose"` + 明寫 `model`（未指定會繼承主 session 模型，六記者並行足以打穿訂閱配額）。
 
-> **頁面範圍為動態認領，不是寫死清單：** 每位記者的負責頁面＝`wiki/index.md` 中「領域」欄等於自己那一組的所有 entities/ 與 topics/ 頁面（含近期新增），開工前先讀 index.md 認領清單，再加上自己規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。這樣新增頁面不需要回頭改派工表。
+> **頁面範圍為動態認領，不是寫死清單：** 每位記者的負責頁面＝`python scripts/reporter_pages.py --category [類別]` 列出的 entities/ 與 topics/ 頁面（依頁面 frontmatter `domain`，與 index 領域欄同口徑、另含子頁與近期新增；主編貼進 prompt），再加上自己規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。這樣新增頁面不需要回頭改派工表。
 
 > **社群記者額外任務：** `community-tech-tools.md` 已脫離每日 ingest，是 **lint 專用策展頁**。除 3a–3g 品質檢查外，須額外依 `.claude/reporter-rules/community/weekly.md` 的「策展規則」與「決策表驗收：3 跳自檢題」執行：讀取近 7–14 天 `news/*.md` 萃取達標新工具、汰除過氣條目、依新證據同步「我卡在這裡」決策表、收工前重跑 3 跳自檢題。派工 prompt 須附上「今日日期」供記者計算 news/ 範圍。
 
@@ -24,9 +24,10 @@
 舊語法回填配額（主編依 `--queue` 舊語法盲區分配；無則寫「無」）：
 [頁 slug：N 筆 …，合計 M 筆]
 
-你的負責頁面＝`wiki/index.md` 中領域為 [對應領域] 的所有頁面（含近期新增），開工前先讀 index.md 認領清單，再加上你規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面。
+你的負責頁面＝下列清單，再加上你規則檔（`.claude/reporter-rules/[category]/daily.md`）觸發條件表中列出的頁面：
+[貼入 `python scripts/reporter_pages.py --category [類別]` 的輸出]
 
-讀取 `.claude/reporter-rules/page-templates.md`，然後對每個頁面依序執行：
+讀取 `.claude/reporter-rules/page-templates.md` 與 `.claude/reporter-rules/daily-contracts.md`，然後對每個頁面依序執行：
 
 **3a 矛盾偵測**
 同一事件的描述若與其他已知頁面矛盾（日期不同、結論相反）→ 以日報原文為準修正，兩頁互加 wikilink。
@@ -48,7 +49,7 @@ topics/ 頁面狀態為 `ongoing`，且「**最後新聞更新**」距今超過 
 topics/ 狀態為 `resolved` → 確認「目前結論」已填寫、頂部 callout 註明已結案。**留在原路徑不遷移**（一頁一故事，遷移會斷 wikilink 與讀者動線）。
 
 **3e 呈現品質審查**
-依 `.claude/reporter-rules/page-templates.md`「Wiki 頁面呈現品質標準」掃描：
+依 `.claude/reporter-rules/daily-contracts.md`「Wiki 頁面呈現品質標準」掃描：
 必須修復：摘要可獨立閱讀、關鍵資訊前置、無 LLM 專屬指令
 警示觸發：頁面 > 200 行、連續 8+ 個無分組日期條目、方案比較未用表格
 
@@ -58,7 +59,7 @@ topics/ 狀態為 `resolved` → 確認「目前結論」已填寫、頂部 call
 
 **3g 待查證回訪**
 對你負責的頁面 grep「待查證」「單方指控」「無官方證實」「待核實」等懸置標記。
-標記語法與各角色可動範圍見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
+標記語法與各角色可動範圍見 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」節。
 
 已是新語法的標記（帶 `（標 YYYY-MM-DD｜查 …）`）：
 - 比對近 14 天 `news/*.md`，有後續 → **只加 `｜訊 YYYY-MM-DD`** 並更新題目後的內文

@@ -84,7 +84,7 @@ python -c "import io,re;fs=['wiki/topics/community-tech-patterns.md']+['wiki/top
 
 ### 7. 懸置標記的條列變體
 
-同 `.claude/reporter-rules/page-templates.md`「懸置標記語法 → 表格變體」，容器由儲存格換成條列：條列只留短標記，完整標準式放**該月份 `### YYYY-MM` 分組最末**的「懸置細節」區。**短標記形式不變**（狀態符號＋類別詞＋`⟨Q-nn⟩`，缺一不可）。**同一則節點的同一個事實只標一次**——成熟度欄與核心模式欄不得各標一份。patterns 樹的短標記與它的細節區必須住同一個子頁（`scripts/check_pending_markers.py` 檢查 6 逐頁對帳，L186）。
+同 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法 → 表格變體」，容器由儲存格換成條列：條列只留短標記，完整標準式放**該月份 `### YYYY-MM` 分組最末**的「懸置細節」區。**短標記形式不變**（狀態符號＋類別詞＋`⟨Q-nn⟩`，缺一不可）。**同一則節點的同一個事實只標一次**——成熟度欄與核心模式欄不得各標一份。patterns 樹的短標記與它的細節區必須住同一個子頁（`scripts/check_pending_markers.py` 檢查 6 逐頁對帳，L186）。
 
 ### 8. 蒸餾
 

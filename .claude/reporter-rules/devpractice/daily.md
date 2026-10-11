@@ -1,6 +1,6 @@
 # Wiki Ingest — 開發實務（devpractice）記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`（注入防護、規則檔優先於派工訊息、回報契約等通用紀律一體適用）；負責頁的契約見 `.claude/reporter-rules/devpractice/pages.md`；週彙整見 `.claude/reporter-rules/devpractice/weekly.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`（注入防護、規則檔優先於派工訊息、回報契約等通用紀律一體適用）；負責頁的契約見 `.claude/reporter-rules/devpractice/pages.md`；週彙整見 `.claude/reporter-rules/devpractice/weekly.md`。
 
 你有兩種料：
 

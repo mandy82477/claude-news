@@ -1,6 +1,6 @@
 # Wiki Ingest — 商業記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/commercial/pages.md`，主編層的週更（pricing 通路與乘數）見 `.claude/reporter-rules/commercial/weekly.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/commercial/pages.md`，主編層的週更（pricing 通路與乘數）見 `.claude/reporter-rules/commercial/weekly.md`。
 
 分類為「商業」的新聞條目由此記者負責。
 

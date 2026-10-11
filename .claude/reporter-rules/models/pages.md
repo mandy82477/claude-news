@@ -72,7 +72,7 @@ python -c "import re,datetime as d;t=d.date.today();[print(n,m.group(1)) for n,l
 
 #### G. 儲存格短語化
 
-全站規則住 `.claude/reporter-rules/page-templates.md`「表格只在有得比時才用」與「表格放結論，細節下沉」兩列（儲存格 ≤120 字元、細節下沉表下、純引用格豁免、細節條列 ≤200），機械閘 `python scripts/check_cell_limits.py`。本頁專屬：
+全站規則住 `.claude/reporter-rules/daily-contracts.md`「表格只在有得比時才用」與「表格放結論，細節下沉」兩列（儲存格 ≤120 字元、細節下沉表下、純引用格豁免、細節條列 ≤200），機械閘 `python scripts/check_cell_limits.py`。本頁專屬：
 
 - C 條「數字必須進頁面」與 D 條「決策層必須歸因」的落點是**表格下方的細節區**，不是儲存格；下沉是搬位置不是刪除
 - 細節條目開頭用表內關鍵詞錨定，讀者從表列能對上細節（先例：快速選型表的「選型細節」區）

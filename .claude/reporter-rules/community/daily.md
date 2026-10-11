@@ -1,6 +1,6 @@
 # Wiki Ingest — 社群記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/community/pages.md`，週更（lint）工作見 `.claude/reporter-rules/community/weekly.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/community/pages.md`，週更（lint）工作見 `.claude/reporter-rules/community/weekly.md`。
 
 分類為「社群」的新聞條目由此記者負責。
 

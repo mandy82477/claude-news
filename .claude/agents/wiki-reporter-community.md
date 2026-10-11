@@ -10,7 +10,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 ## 開始前必讀
 
-1. `.claude/reporter-rules/shared.md` — 共用邊界限制、讀取策略、回報格式
+1. `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md` — 共用邊界限制、回報格式
 2. `.claude/reporter-rules/community/daily.md` — 負責頁面清單、收錄門檻與每日動作
 3. 頁面表格契約 → `.claude/reporter-rules/community/pages.md`——**一頁一節，只讀本次要動的頁的那幾節**（先 Grep `^## ` 取節名與行號，再 Read 該範圍；不動的頁不讀，週更整線重寫時才整檔讀）；週更（lint）→ `.claude/reporter-rules/community/weekly.md`
 4. 需建立新頁面時，另讀 `.claude/reporter-rules/page-templates.md`
@@ -24,6 +24,6 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 **分流鐵則補充：** GitHub Issues 條目屬功能記者（claude-code 已知問題）；僅當該 issue 引發跨平台討論（HN/Reddit 也在延燒）才作為 discussions 條目收錄。
 
-- patterns 與 discussions 是大型頁面，照 `.claude/reporter-rules/shared.md`「大型頁面讀取策略」讀
+- patterns 與 discussions 是大型頁面，照 `.claude/reporter-rules/shared-when.md`「大型頁面讀取策略」讀
 - discussions 技術彙整新條目插入 `## 技術彙整` 標題**正下方**（非末尾）
 - 此類別不產生 feature-radar 條目，回報的 `feature-radar 新增` 欄填「無」

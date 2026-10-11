@@ -936,10 +936,10 @@
       "_mutate_note": "2026-09-04 lint_health mutate 判過寬（散文即可滿足），收緊"
     },
     {
-      "name": "懸置標記的定義處 <-> 唯一結案處：page-templates.md「誰可以動這個標記」與 wiki-lint.md 5c 必須同步（format 定語法與權限、5c 是唯一有權移除標記並回掃引用方的角色；只改一側會讓權限表指向不存在的步驟，或讓結案少掉回掃這一半）",
+      "name": "懸置標記的定義處 <-> 唯一結案處：daily-contracts.md「誰可以動這個標記」與 wiki-lint.md 5c 必須同步（format 定語法與權限、5c 是唯一有權移除標記並回掃引用方的角色；只改一側會讓權限表指向不存在的步驟，或讓結案少掉回掃這一半）",
       "assertion": "all_contain",
       "files": [
-        ".claude/reporter-rules/page-templates.md",
+        ".claude/reporter-rules/daily-contracts.md",
         ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
@@ -1242,10 +1242,10 @@
       ]
     },
     {
-      "name": "回掃入邊必查名單（規格端）：shared.md「事實更正必回掃」與 wiki-lint 5c 結案回掃，兩處都必須以 explain --section 為第一步（2026-09-04 改版；只改一處會讓兩條回掃路徑一新一舊，而 5c 正是引用 shared.md 那套語意）",
+      "name": "回掃入邊必查名單（規格端）：shared-when.md「事實更正必回掃」與 wiki-lint 5c 結案回掃，兩處都必須以 explain --section 為第一步（2026-09-04 改版；只改一處會讓兩條回掃路徑一新一舊，而 5c 正是引用 shared.md 那套語意）",
       "assertion": "all_contain",
       "files": [
-        ".claude/reporter-rules/shared.md",
+        ".claude/reporter-rules/shared-when.md",
         ".claude/skills/wiki-lint-sweeps/references/sweeps.md"
       ],
       "patterns": [
@@ -1399,10 +1399,10 @@
       "_note": "2026-09-05 加入。alternation 兩支各對應一端：規格端釘判讀標題原形（機械契約字串表），程式端釘 regex 常數名；第二個 pattern 釘兩端都得認得同一份來源頁。"
     },
     {
-      "name": "懸置標記渲染契約（規格端）：page-templates.md 四段形狀",
+      "name": "懸置標記渲染契約（規格端）：daily-contracts.md 四段形狀",
       "assertion": "all_contain",
       "files": [
-        ".claude/reporter-rules/page-templates.md"
+        ".claude/reporter-rules/daily-contracts.md"
       ],
       "patterns": [
         "待查證",
@@ -1550,7 +1550,7 @@
       "name": "頁頂 callout 首行形狀（記者規則 <-> 讀者版產出端 <-> 解析端 <-> 格式閘 <-> 階層檢查）：`> **標籤**（YYYY-MM-DD）` 是四支腳本共同 regex 的形狀，記者規則改外殼而腳本沒跟，該頁永遠進不了讀者版",
       "assertion": "all_contain",
       "files": [
-        ".claude/reporter-rules/page-templates.md",
+        ".claude/reporter-rules/daily-contracts.md",
         ".claude/skills/reader-digest/references/format.md",
         "scripts/build_reader_digest.py",
         "scripts/build_web.py",

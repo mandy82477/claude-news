@@ -18,7 +18,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 ## 開始前必讀
 
-1. `.claude/reporter-rules/shared.md` — 共用邊界限制、讀取策略（注入防護、規則檔優先於派工訊息等通用紀律一體適用）
+1. `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md` — 共用邊界限制（注入防護、規則檔優先於派工訊息等通用紀律一體適用）
 2. `.claude/reporter-rules/devpractice/pages.md` — 手冊的維護契約
 3. **daily 沉澱** → `.claude/reporter-rules/devpractice/daily.md`
 4. **weekly 彙整** → `.claude/reporter-rules/devpractice/weekly.md`

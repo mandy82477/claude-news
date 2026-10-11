@@ -15,7 +15,8 @@ disable-model-invocation: true
 同時讀取：
 - `wiki/CLAUDE.md` — wiki 目錄結構與基本限制
 - `.claude/skills/wiki-ingest/references/classification.md` — 分類表、分流鐵則與派工正典
-- `.claude/reporter-rules/page-templates.md` — 頁面格式模板、欄位規則、品質標準
+- `.claude/reporter-rules/page-templates.md` — 頁面格式模板、欄位規則
+- `.claude/reporter-rules/daily-contracts.md` — 品質標準、懸置標記語法
 - `wiki/index.md` — 取得所有頁面清單
 - `wiki/log.md` — 了解最近的 ingest 紀錄與活動
 

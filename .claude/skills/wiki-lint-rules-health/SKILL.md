@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 由 `.claude/skills/wiki-lint/SKILL.md` 帶起。**這一段檢查的是規則本身，不是 wiki 內容。**
 
-開工前讀取 `wiki/CLAUDE.md`、`.claude/skills/wiki-ingest/references/classification.md`、`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/shared.md`，以及 **`/wiki-lint` 自己的五個 skill 檔與五個 references**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md`、本檔；`.claude/skills/wiki-lint/references/log-format.md`、`.claude/skills/wiki-lint-reporters/references/dispatch.md`、`.claude/skills/wiki-lint-sweeps/references/sweeps.md`、`.claude/skills/wiki-lint-rules-health/references/adversarial.md`、`.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md`），依序執行下列各項。
+開工前讀取 `wiki/CLAUDE.md`、`.claude/skills/wiki-ingest/references/classification.md`、`.claude/reporter-rules/page-templates.md`、`.claude/reporter-rules/daily-contracts.md`、`.claude/reporter-rules/shared.md`、`.claude/reporter-rules/shared-when.md`，以及 **`/wiki-lint` 自己的五個 skill 檔與五個 references**（`.claude/skills/wiki-lint/SKILL.md`、`.claude/skills/wiki-lint-reporters/SKILL.md`、`.claude/skills/wiki-lint-sweeps/SKILL.md`、`.claude/skills/wiki-lint-reader-acceptance/SKILL.md`、本檔；`.claude/skills/wiki-lint/references/log-format.md`、`.claude/skills/wiki-lint-reporters/references/dispatch.md`、`.claude/skills/wiki-lint-sweeps/references/sweeps.md`、`.claude/skills/wiki-lint-rules-health/references/adversarial.md`、`.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md`），依序執行下列各項。
 
 > `/wiki-lint` 自己的 skill 檔必須在掃描範圍內：**檢查者把自己排除在檢查範圍外，是這類缺陷的共同形狀。** 判準本體多住 references，只掃 SKILL.md 等於只看目錄。（沿革檔 2026-08-28 D）
 
@@ -29,7 +29,7 @@ disable-model-invocation: true
 ```
 → **向使用者確認後再修改**，不自行決定保留哪條規則。
 
-> 修完矛盾後**必須回掃**：依 `.claude/reporter-rules/shared.md`「事實更正必回掃」，拿該事實的關鍵字 grep 全庫，把仍在講舊說法的引用方一併上修。3a 判矛盾時「以較嚴謹者為準」會把結論**下修**到低確信度頁面，而事後那個結論被查實**上修**時，被下修過的引用方不會自己回來——同步是雙向的，但機制原本只有單向。
+> 修完矛盾後**必須回掃**：依 `.claude/reporter-rules/shared-when.md`「事實更正必回掃」，拿該事實的關鍵字 grep 全庫，把仍在講舊說法的引用方一併上修。3a 判矛盾時「以較嚴謹者為準」會把結論**下修**到低確信度頁面，而事後那個結論被查實**上修**時，被下修過的引用方不會自己回來——同步是雙向的，但機制原本只有單向。
 
 ## 6b. 規則引用驗證
 

@@ -36,7 +36,7 @@ python scripts/list_digest_omissions.py --date TARGET_DATE
 python scripts/scan_pending_verifications.py TARGET_DATE
 ```
 
-輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。「開發實務」組隨 4b 附給開發實務記者。規格見 `.claude/reporter-rules/page-templates.md`「懸置標記語法」節。
+輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。「開發實務」組隨 4b 附給開發實務記者。規格見 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」節。
 
 **再取轉知待接手清單：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
 

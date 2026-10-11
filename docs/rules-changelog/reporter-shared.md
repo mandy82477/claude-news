@@ -4,6 +4,9 @@
 
 （2026-09-13 由 原 `wiki-reporter-shared.md` 條文旁的敘事搬入；條文本身未改一字。）
 
+**2026-10-11**（記者規則拆「每日必讀」與「碰到才讀」）：近 14 天 120 次記者派工量測：`page-templates.md`（20 KB）被讀 130 次、`shared.md`（21 KB）121 次。角色檔明寫 page-templates「建頁時另讀」，記者卻每次都讀，因為其他規則指向它的「懸置標記語法」「Wiki 頁面呈現品質標準」兩節；shared.md 裡「大型頁面讀取策略」「事實更正必回掃」「待查證命中處置」「轉知接手處置」則是碰到才需要。讀進來的規則之後每一回合都被重算。
+處置：那兩節原文搬到 `.claude/reporter-rules/daily-contracts.md`、那四節原文搬到 `.claude/reporter-rules/shared-when.md`，原處只留指路，條文一字未改；角色檔「開始前必讀」改為 shared.md ＋ daily-contracts.md，page-templates 回到建頁時才讀。每日固定讀量由約 41 KB 降到約 27 KB（shared.md 16 KB ＋ daily-contracts.md 11 KB）。
+
 **2026-10-04**（派工不再指定 sonnet，使用者裁決「把必須是 sonnet 都刪掉」）：`guard_roles.py` H8 一直只要求派記者與 pipeline agent 時「有寫 model」，規則檔卻在 15 個 skill／runbook 寫死 `model: "sonnet"` 與「不需旗艦模型」的理由。全部改成「明寫 `model`」，保留「未指定會繼承主 session 模型、六記者並行足以打穿訂閱配額」這句理由；registry 的 sync_pair 與 hook 訊息同步。
 
 **2026-10-04**（hook 已硬擋的禁令從規則檔縮掉，使用者裁決「都修掉」）：改動工作區的 git 指令、改基線與 `--rebuild`、再委派都已由 `.claude/hooks/block_destructive_git.py`、`guard_roles.py` 在本機與雲端擋下（雲端執行證據：10-03 17Z、22Z 與 10-04 01:35Z 的探針紀錄）。本檔兩條縮成一行並保留替代行為（「⚠️ 工作區異常」交主編）；派工範本裡的「你不可再呼叫 Agent tool 委派任何工作。」七處刪除，角色檔與本檔各留一處。逐條對照見 `docs/hook-rule-slimming-2026-10-03.md`。

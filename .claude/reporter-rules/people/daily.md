@@ -1,6 +1,6 @@
 # Wiki Ingest — 人物記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`。本記者的負責頁無結論表契約，故無 `pages.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`。本記者的負責頁無結論表契約，故無 `pages.md`。
 
 分類為「人物」的新聞條目由此記者負責。
 
@@ -31,7 +31,7 @@
 
 **相關議題連結：** 人物的事件屬於某個 `wiki/topics/` 議題時，`## 相關議題` 要連到該議題頁。網站人物篩選頁的「議題陣容」只從這些正文連結算出每個人捲進哪些議題，漏連的人不會出現在那個議題欄。
 
-**尚未核實的資訊：** 用懸置標記標準式（`.claude/reporter-rules/page-templates.md`「懸置標記語法」），不得寫成事實；索引欄「狀態」寫 `active（單一來源）`。
+**尚未核實的資訊：** 用懸置標記標準式（`.claude/reporter-rules/daily-contracts.md`「懸置標記語法」），不得寫成事實；索引欄「狀態」寫 `active（單一來源）`。
 
 ---
 

@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 APP_JS = ROOT / "web_reader" / "assets" / "app.js"
-SPEC = ROOT / ".claude" / "reporter-rules" / "page-templates.md"
+SPEC = ROOT / ".claude" / "reporter-rules" / "daily-contracts.md"
 
 
 def _spec_section() -> str:

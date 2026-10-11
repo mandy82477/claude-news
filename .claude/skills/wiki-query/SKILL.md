@@ -39,7 +39,7 @@ Query 是本庫三個動作之一（寫入／查詢／整理，見 `./CLAUDE.md`
 wiki 裡沒有、或使用者點名要查證的事實，走這條通道——**查證是入場券**：
 
 1. 以 WebFetch／WebSearch 查**一手來源**（官方文件、官方公告、原始 repo、原始貼文）。查不到一手來源 → 只能標懸置，不得寫成事實。
-2. 寫進事實該在的那一頁（判斷落點看 `.claude/reporter-rules/<類別>/daily.md` 的負責頁面表），**必標查證日＋來源連結**；寫頁前先讀 `.claude/reporter-rules/page-templates.md`（頁面格式、懸置標記語法、表格上限）與 `.claude/reporter-rules/shared.md`（書寫風格硬上限、讀者語言禁詞）。紀律見 `./CLAUDE.md`「使用者提問通道」與 `.claude/rules/collection-scope.md`。
+2. 寫進事實該在的那一頁（判斷落點看 `.claude/reporter-rules/<類別>/daily.md` 的負責頁面表），**必標查證日＋來源連結**；寫頁前先讀 `.claude/reporter-rules/page-templates.md`（頁面格式）、`.claude/reporter-rules/daily-contracts.md`（懸置標記語法、表格上限）與 `.claude/reporter-rules/shared.md`（書寫風格硬上限、讀者語言禁詞）。紀律見 `./CLAUDE.md`「使用者提問通道」與 `.claude/rules/collection-scope.md`。
 3. `wiki/log.md` append 一筆 Query 條目（append only，模板見 `.claude/skills/wiki-query/references/contract.md`）。
 4. `data/source_attribution.jsonl` append 一行，`source` 為 `user-query`，schema 見 `data/README.md`。
 

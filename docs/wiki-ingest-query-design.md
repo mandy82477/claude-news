@@ -173,5 +173,5 @@ Ingest 每一種產物，被 Query 的哪一路讀、以什麼方式讀：
 - `scripts/wiki_search.py` 的門檻常數（`MIN_COVERAGE`、`MIN_MATCHED`、`RUNNER_UP_WEIGHT`、`SEED_TOP`、`EXPAND_WEIGHT`）、虛字表（`STOP_CHARS`、`STOP_UNIGRAMS`）、跨說法融合方式或 `EXCLUDE_PAGES` → 第 3.1、4、5 節
 - `scripts/wiki_graph.py` 的節點衛生規則（樞紐排除、樣板區 zone） → 第 4、5 節
 - `.claude/skills/news-pipeline/SKILL.md` 的 Phase 切法、`.claude/skills/wiki-ingest/SKILL.md` 的步驟或彙整檔案清單 → 第 2 節
-- `.claude/reporter-rules/page-templates.md` 的頁面標頭欄位或 callout 格式 → 第 4 節
+- `.claude/reporter-rules/page-templates.md` 的頁面標頭欄位或 `.claude/reporter-rules/daily-contracts.md` 的 callout 格式 → 第 4 節
 - `docs/architecture-archify/` 兩份 workflow JSON 的 lane／phase 命名 → 第 2 節（本檔的圖以它們為準，不另創名詞）

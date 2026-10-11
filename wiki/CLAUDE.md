@@ -2,7 +2,7 @@
 
 一般 wiki 查詢時自動載入。**執行 ingest / lint 操作時，必須同時讀取 `.claude/skills/wiki-ingest/references/classification.md`**（分類標準與派工流程）。頁面格式模板見 `.claude/reporter-rules/page-templates.md`。
 
-**直接編輯任何 wiki 頁面前**（不限 ingest／lint，臨時改一頁也算），先讀 `.claude/reporter-rules/page-templates.md`（表格儲存格上限、懸置標記語法）與 `.claude/reporter-rules/shared.md`（書寫風格硬上限、讀者語言禁詞）——這兩份不再自動載入，機械閘只在 `run_tests` 時才紅。
+**直接編輯任何 wiki 頁面前**（不限 ingest／lint，臨時改一頁也算），先讀 `.claude/reporter-rules/daily-contracts.md`（表格儲存格上限、懸置標記語法）與 `.claude/reporter-rules/shared.md`（書寫風格硬上限、讀者語言禁詞）——這兩份不再自動載入，機械閘只在 `run_tests` 時才紅。
 
 ---
 

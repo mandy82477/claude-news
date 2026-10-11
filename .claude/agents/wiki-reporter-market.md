@@ -20,7 +20,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 ## 開始前必讀
 
-1. `.claude/reporter-rules/shared.md` — 共用邊界限制、讀取策略、注入防護、規則檔優先於派工訊息、書寫風格上限、回報契約
+1. `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md` — 共用邊界限制、注入防護、規則檔優先於派工訊息、書寫風格上限、回報契約
 2. `.claude/reporter-rules/market/daily.md` — 六類消息判準（正面表列）、「新資訊」門檻、六問判讀格式（含機械契約字串）、兩張結論表、每日動作與回報格式
 3. `wiki/topics/market-signals.md` — 你唯一負責的頁面（動筆前先讀現況）
 

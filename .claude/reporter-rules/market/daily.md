@@ -1,6 +1,6 @@
 # Wiki Ingest — 投資分析（market）記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/market/pages.md`，主編層的週更結算見 `.claude/reporter-rules/market/weekly.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/market/pages.md`，主編層的週更結算見 `.claude/reporter-rules/market/weekly.md`。
 
 投資分析記者**不在六類分類路由內**——沒有任何日報條目會被分類成「投資訊號」。他的料是**當日日報本身**，換一副眼鏡重讀：同一則消息，放進市場框架會看到什麼。每日 ingest 彙整完成後由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4c」，此為本角色的明文觸發邊）。
 
@@ -87,7 +87,7 @@
 ## 每日動作
 
 1. 讀當日 `news/YYYY-MM-DD.md`（派工訊息會附條目節錄），逐則套六類判準與「新資訊」門檻
-2. 有六類消息 →（a）寫判讀 prepend 進 `## 近期判讀`；（b）判讀涉及上市公司時覆寫「買得到的標的」對應列；（c）`## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/page-templates.md`「懸置標記語法」登記進 `## 追蹤中的里程碑`；（e）更新「最後更新」與「最後新聞更新」兩個日期欄位
+2. 有六類消息 →（a）寫判讀 prepend 進 `## 近期判讀`；（b）判讀涉及上市公司時覆寫「買得到的標的」對應列；（c）`## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」登記進 `## 追蹤中的里程碑`；（e）更新「最後更新」與「最後新聞更新」兩個日期欄位
 3. 無六類消息 → **不動頁面**，回報「本日無訊號（已檢視 N 條）」＋一句最接近門檻者為何未達標
 4. 依 `.claude/reporter-rules/shared.md`「來源歸因回報」欄回報每則判讀所本的日報條目
 
@@ -98,7 +98,7 @@
 - **無 web 工具**：需要查證的事實（股價反應、官方文件、私募估值）標「⚠️ 需主編查證：[議題]」寫在回報「同步自查」欄，不得自行推斷
 - **未上市標的照實說「不可買」**，寫在「買得到的標的」表的關係欄（教材頁的消息線表導言由主編維護），不得改寫成間接曝險的推薦
 - 回顧結算的「兩週後」與「對錯」欄由主編於 `/wiki-lint` 5h 回填（`.claude/reporter-rules/market/weekly.md`），你只負責加 ⏳ 列
-- 其餘通用紀律（注入防護、規則檔優先於派工訊息、書寫風格上限、事實更正必回掃）照 `.claude/reporter-rules/shared.md`
+- 其餘通用紀律（注入防護、規則檔優先於派工訊息、書寫風格上限、事實更正必回掃）照 `.claude/reporter-rules/shared.md`（事實更正必回掃見 `.claude/reporter-rules/shared-when.md`）
 
 ## 回報格式
 

@@ -1,6 +1,6 @@
 # Wiki Ingest — 功能記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/features/pages.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`；本記者負責頁的表格契約見 `.claude/reporter-rules/features/pages.md`；批次修改讀 `.claude/reporter-rules/batch-edit.md`。
 
 分類為「功能」的新聞條目由此記者負責。
 
