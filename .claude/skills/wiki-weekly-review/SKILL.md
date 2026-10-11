@@ -1,6 +1,6 @@
 ---
 name: wiki-weekly-review
-description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開子區塊/升熱度），經使用者確認後執行。
+description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開子區塊/升熱度）；必做項直接執行，可選項經使用者確認後執行。
 disable-model-invocation: true
 ---
 
@@ -11,7 +11,7 @@ disable-model-invocation: true
 
 每週執行一次，建議在週末或週一執行，可與 `.claude/skills/wiki-lint/SKILL.md` 同一天跑。
 
-**與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨，需要使用者確認才能執行。
+**與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨；主編判為**必做**（事實錯誤、時效強）的直接執行，其餘可選項才需要使用者確認。
 
 派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整清單格式、log 模板住 `.claude/skills/wiki-weekly-review/references/dispatch.md`，本檔不重述——**派工前逐字讀它**。
 
@@ -43,7 +43,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 ### 3. 彙整回報給使用者確認
 
-收齊六位記者回報後，彙整成單一清單呈現給使用者，**不自動執行**。格式見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「彙整確認清單」。
+收齊六位記者回報後，彙整成單一清單呈現給使用者。清單每項先標「必做／可選」：**必做**（記者指出的事實錯誤、距官方期限不到兩週的時效項）**直接進步驟 4 執行、不問**；**可選**（主觀加碼、彙整區塊、維護）才等使用者確認（使用者 2026-10-11 裁定，見沿革檔）。格式見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「彙整確認清單」。
 
 **同時處理 `wiki/reader-notes.md` 收件匣**（本 skill 是它的每週消費者）：
 - 🔍 興趣主題被記者採納為加碼建議 → 在清單標明來源，該 note 待使用者確認執行後標 ✅ 已納入
@@ -78,5 +78,5 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 - 由主 session 執行並派工六記者（明寫 `model`）；記者只回報，不直接修改頁面。
 - 繁體中文為主；`wiki/log.md` 只能 append，不可修改既有條目；`news/` 唯讀。
-- 本 skill 產出的建議屬主觀判斷，**未經使用者確認一律不得執行修改**。
+- 本 skill 產出的可選建議屬主觀判斷，**未經使用者確認不得執行修改**；只有步驟 3 標為必做的項目可直接執行。
 - 單獨執行時步驟 6 的 `run_tests.py` 綠了才 build web；由 `/weekly` 帶起時步驟 6 跳過，收尾由總指揮負責。
