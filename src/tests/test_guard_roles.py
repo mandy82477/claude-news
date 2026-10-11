@@ -159,6 +159,31 @@ class TestH7Web(_Env):
             with self.subTest(tool=tool):
                 self.assertIsNotNone(mod.decide(self.subagent_payload(REPORTER_PROMPT, tool, ti)))
 
+    def test_reporter_with_5c_mark_web_ok(self):
+        """/wiki-lint 5c 是唯一授權記者查外部來源的派工：派工 prompt 帶標記才放行。
+        2026-10-10 lint：hook 無條件擋記者 web，六記者全被擋、5c 連兩輪清不了零。"""
+        prompt = REPORTER_PROMPT + "\n" + mod.WEB_AUTH_MARK + " 本輪清你領域的逾期待查證。"
+        for tool, ti in (("WebFetch", {"url": "https://support.claude.com/x"}), ("WebSearch", {"query": "x"})):
+            with self.subTest(tool=tool):
+                self.assertIsNone(mod.decide(self.subagent_payload(prompt, tool, ti, "a5")))
+
+    def test_mark_does_not_lift_other_rules(self):
+        """標記只開 web：帶標記的記者照樣不能寫 news/、不能再委派、不能改閘。"""
+        prompt = REPORTER_PROMPT + "\n" + mod.WEB_AUTH_MARK
+        self.assertIsNotNone(mod.decide(self.subagent_payload(prompt, "Write", {"file_path": str(REPO / "news" / "x.md")}, "a6")))
+        self.assertIsNotNone(mod.decide(self.subagent_payload(prompt, "Agent", {"prompt": "x"}, "a6")))
+        self.assertIsNotNone(mod.decide(self.subagent_payload(
+            prompt, "Write", {"file_path": str(REPO / "scripts" / "check_cell_limits.py")}, "a6")))
+
+    def test_mark_in_later_turn_does_not_count(self):
+        """只認派工 prompt（transcript 第一則 user 訊息）；後續訊息出現標記不算——記者自己加不了授權。"""
+        p = self.subagent_payload(REPORTER_PROMPT, "WebFetch", {"url": "https://x"}, "a7")
+        f = Path(self.tmp.name) / "sess" / "subagents" / "agent-a7.jsonl"
+        later = {"type": "user", "message": {"role": "user", "content": mod.WEB_AUTH_MARK}}
+        with open(f, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps(later, ensure_ascii=False) + "\n")
+        self.assertIsNotNone(mod.decide(p))
+
     def test_main_and_other_subagents_web_ok(self):
         """主編層查證（/wiki-lint 5e、5h）由主 session 做；研究型子 agent 不在記者規則內。"""
         ti = {"url": "https://platform.claude.com/pricing"}

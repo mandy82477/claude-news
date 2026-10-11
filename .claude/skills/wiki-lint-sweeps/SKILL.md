@@ -16,7 +16,7 @@ disable-model-invocation: true
 |---|---|---|
 | 5a | feature-radar 熱度降溫 ＋ ⏳ 逾期處置 | 主編親做 |
 | 5b | 跨家任務榜單週更（`topics/model-task-leaderboard`） | 主編派 `general-purpose` ＋ `model: "haiku"` |
-| 5c | 逾期待查證清算（Lane A／Lane B、結案回掃） | 主編親查 |
+| 5c | 逾期待查證清算（Lane A／Lane B、結案回掃） | 主編按頁面所有權派六記者並行（明寫 `model`，prompt 帶 `【5c 查證授權】`） |
 | 5d | 歸因忠實度抽查（近 60 天 5 筆） | 主編親做 |
 | 5e | pricing「通路與乘數」複查 | 主編親查 |
 | 5f | devpractice 週彙整 | 主編派 devpractice 記者（明寫 `model`） |
