@@ -1099,3 +1099,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud STARTED 2026-10-11T22:08:21Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-11T22:08:21Z] TARGET_DATE=2026-10-11（22 UTC 班）reason=digest already exists (Step 0b 冪等閘，news/2026-10-11.md 已存在，非 backfill 模式；該日報與 wiki/web 已於 17:07:58Z 班次完成並推送，見本檔 OK 2026-10-11T17:57:28Z 記錄：55 則文章、六記者+分類複核+devpractice+market 全部完成、ingest_gate 全綠、測試 1300 全過、web build 成功；HEAD 與 origin/master 皆在 305568f，無待推送內容)
 [cloud daily-news-pipeline-cloud STARTED 2026-10-12T12:08:35Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-10-12T12:09:38Z] TARGET_DATE=2026-10-12（12 UTC 班）reason=Step 0-1 新鮮度防線：src/gathered_archive/2026-10-12.json 不存在（cp 失敗），src/gathered_items.json 仍是昨日殘留 date=2026-10-11 items=55，非目標日期的新鮮資料，代表 GitHub Actions 當日抓料尚未完成或延遲。不生成假日報，不自動重抓（雲端 egress 設計上不抓料）。留待資料到齊的那一班（17 或 22 UTC）接手，或等候下次排程。
