@@ -1,0 +1,364 @@
+{
+  "https://code.claude.com/docs/en/desktop.md": {
+    "title": "官方文件更新：Claude Code 桌面版",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/danyuchn/asd-ste100-skill": {
+    "title": "danyuchn/asd-ste100-skill",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/oil-oil/oil-motion": {
+    "title": "oil-oil/oil-motion",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/Vincentwei1021/anything2explainer": {
+    "title": "Vincentwei1021/anything2explainer",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/Oldcircle/geo-sleuth": {
+    "title": "Oldcircle/geo-sleuth",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "摘要含星速偵測標記：近 4 天 +747 星（約 187 星/日），非出生日追蹤的存量盤點格式"
+  },
+  "https://github.com/ArtemXTech/personal-os-skills": {
+    "title": "ArtemXTech/personal-os-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin": {
+    "title": "EpicGames/unreal-engine-skills-for-claude-code-plugin",
+    "source": "GitHub Search",
+    "categories": [
+      "社群",
+      "商業"
+    ],
+    "reason": "",
+    "note": "Epic Games 官方帳號釋出，可能構成具名企業採用訊號，供商業記者判斷是否列入 enterprise-tool-tracker"
+  },
+  "https://github.com/karanb192/awesome-claude-code-mods": {
+    "title": "karanb192/awesome-claude-code-mods",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html": {
+    "title": "Research Firm Calls Anthropic's IPO 'Unprecedented Test of Investor Gullibity'",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "原文 10/07 發布，今日經 HN 討論重新浮上（233 分），非今日首發事件"
+  },
+  "https://micahflee.com/just-say-no-to-openai-and-anthropic/": {
+    "title": "Just say no to OpenAI and Anthropic",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/92984": {
+    "title": "[BUG] Cowork (Windows): all Plan9 shares fail with \"Plan9 mount failed: invalid argument\" after Windows update KB5124008 (26200.9445) — uninstalling the KB fixes it",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/34556": {
+    "title": "Feature Request: Persistent Memory Across Context Compactions (59 compactions, built our own)",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/11315": {
+    "title": "Critical Memory Leak: Claude Code Consumed 129GB RAM and Caused System Freeze",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50059096": {
+    "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/14131": {
+    "title": "[BUG] German umlauts (ä, ö, ü) randomly replaced with ASCII substitutes (ae, oe, ue)",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/50674": {
+    "title": "Cowork fails on ARM64 (Snapdragon X) despite passing readiness check",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/SaarthurR/atticus-mac": {
+    "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code": {
+    "title": "Linus Torvalds Working on a Hefty Linux Kernel Improvement with Claude Code",
+    "source": "Hacker News",
+    "categories": [
+      "人物",
+      "社群"
+    ],
+    "reason": "",
+    "note": "Linus Torvalds 具名使用 Claude Code 開發 Linux kernel 分支"
+  },
+  "https://dair-community.social/@emilymbender/117412868905734653": {
+    "title": "Anthropic is out with new nonsense about Claude",
+    "source": "Hacker News",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "Emily M. Bender（知名 LLM 批評學者）具名評論 Claude"
+  },
+  "https://news.ycombinator.com/item?id=50047627": {
+    "title": "Show HN: I Cut my Agent Tokens By 50%",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://airlock.sorrel.systems": {
+    "title": "Show HN: I built Airlock, to sandbox your AI agent and know what it's doing",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/agustind/dbjoy": {
+    "title": "Show HN: DBJoy – An open-source AI-first PostgreSQL client for macOS",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://stan-stani.github.io/jeomsim-bangsong/": {
+    "title": "Show HN: Vibecoded top-down game for learning vocab from a Korean webtoon",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://ensomethod.org/": {
+    "title": "Show HN: Enso Method – agent skills for building software for someone else",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://authrot.app": {
+    "title": "Show HN: Authrot – extract your story elements out of chapters and graph them",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://tellcut.app/studio": {
+    "title": "Show HN: Tellcut – motion videos written as code by Claude, edited by chat",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/DragosMocrii/proc-stats": {
+    "title": "Show HN: Proc-stats – a task manager for Claude Code sessions",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/phalladar/tracon": {
+    "title": "Show HN: Tracon (air traffic control for subagents)",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/rbinar/cli-dispatch": {
+    "title": "Show HN: CLI-Dispatch – Delegate Claude Code Tasks to Codex, Gemini, DeepSeek",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 討論串已被標記 [flagged]，摘要僅剩殼層；依標題與 URL 判類為多 CLI 代理派工工具"
+  },
+  "https://dev.to/trustboundary/anthropics-sandbox-was-open-one-model-knew-and-kept-going-96j": {
+    "title": "Anthropic's sandbox was open. One model knew, and kept going.",
+    "source": "dev.to / #anthropic",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "原文發布於 09/21，內容與 10-10 日報已報導之 Anthropic 非預期行為事件（費城警局線報、國務院簽證表單）可能部分重疊，請安全政策記者核對是否為同一批事件的不同描述"
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4bnke/how_to_use_claude_code_efficiently/": {
+    "title": "How to use Claude Code Efficiently",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [],
+    "reason": "開放式新手提問，無具體事實或模式可沉澱，非新聞事件",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4bloo/accidentally_opened_vscode_and_got_a_tutorial/": {
+    "title": "Accidentally opened VSCode and got a tutorial popup 😅",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [],
+    "reason": "純趣聞貼文、無技術內容，非新聞事件",
+    "note": "",
+    "summary_override": "Reddit 貼文僅附一張截圖，標題敘述使用者意外開啟 VSCode 跳出新手教學彈窗的趣聞，無具體技術內容或事件可沉澱。"
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4bie7/agent_and_adhd_whats_your_strategy_and_hows_it/": {
+    "title": "Agent and ADHD: what’s your strategy, and how’s it working out?",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [],
+    "reason": "開放式提問討論，無具體事實或模式可沉澱，非新聞事件",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4be4d/i_reverseengineered_the_tapo_smart_home_app_so/": {
+    "title": "I reverse-engineered the Tapo smart home app so Claude can run my house, and now it builds a 3D map of my home",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4bco5/i_kept_missing_the_moment_claude_code_asked_me/": {
+    "title": "I kept missing the moment Claude Code asked me something, so I built a window that shows which agent is waiting",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x4bb56/thanks_to_haiku_55_i_can_do_hundreds_of_agents/": {
+    "title": "Thanks to Haiku 5.5, I can do hundreds of agents without blowing through my 20X sub instantly.",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群",
+      "商業"
+    ],
+    "reason": "",
+    "note": "使用者實測案例延續 10-08 Haiku 5.5 成本數字，供商業記者判斷是否補充實測佐證"
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x49pmn/qwen3827b_vs_frontier_vs_others/": {
+    "title": "Qwen3.8-27B vs Frontier vs Others",
+    "source": "Reddit / r/LocalLLaMA",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯的通用開源模型比較，非專頁定向抓取",
+    "note": "",
+    "summary_override": "Reddit 貼文僅附預覽圖，標題為 Qwen3.8-27B 與前沿模型及其他開源模型的比較討論，與 Claude/Anthropic 無直接關聯。"
+  },
+  "https://simonwillison.net/2026/Oct/12/python-3-15/": {
+    "title": "Hello Python 3.15, goodbye 3.10, and now I can use 3.11",
+    "source": "Blog / Simon Willison",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯的通用 Python release note",
+    "note": ""
+  },
+  "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/": {
+    "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+    "source": "Blog / Meta Newsroom",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "topic=competitor-landscape 專頁定向條目，已於日報🧭區收錄"
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x3mit8/how_can_opensource_models_ever_catch_up_random/": {
+    "title": "How can open-source models ever catch up? (random shower thoughts)",
+    "source": "Reddit / r/LocalLLaMA",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯的通用開源模型討論",
+    "note": ""
+  },
+  "https://dev.to/uehara/claude-max-and-team-plans-now-get-api-credits-every-month-200-every-month-on-max-20x-4k1n": {
+    "title": "Claude Max and Team Plans Now Get API Credits Every Month — $200 Every Month on Max 20x",
+    "source": "dev.to / #anthropic",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "內容與 10-08 已報導之 Max/Team API credits 政策數字一致，未見新資訊"
+  }
+}
