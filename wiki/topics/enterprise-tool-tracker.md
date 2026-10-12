@@ -3,17 +3,17 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-09"
-last_news_update: "2026-10-09"
+last_updated: "2026-10-12"
+last_news_update: "2026-10-12"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/enterprise-tool-tracker-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 43
-attribution_count: 41
-attribution_last: "2026-10-09"
+attribution_count: 42
+attribution_last: "2026-10-12"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -145,7 +145,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **使用現況細節**
 - **Meta 使用量（10-05，已查證 2026-10-07）**：The Information 報導 Claude Code 使用者由今年稍早約 6 萬降至約 3 萬；春季裁員約 10%（7.8 萬人）只解釋一部分，動機為推自家工具；近 28 天仍花逾 1.05 億美元（The Information）
-- **Meta 自家工具（10-05，已查證 2026-10-07）**：MetaCode 是內部專用工具，使用者逾 3 萬；Muse Code 是 8 月起測試的對外產品、Claude Code 競品，內部使用者逾 6,000。兩者是不同工具，見 [[topics/competitor-landscape#Meta（Muse Code／Muse Glimmer）]]
+- **Meta 自家工具（10-05，已查證 2026-10-07）**：MetaCode 是內部專用工具，使用者逾 3 萬；Muse Code 是 8 月起測試的對外產品、Claude Code 競品，內部使用者逾 6,000。兩者是不同工具，見 [[topics/competitor-landscape#Meta（Muse Code／Muse Glimmer／Muse Wonder）]]
 - **Microsoft 支出（10-05，已查證 2026-10-07）**：原估逾 10 億美元的內部 Claude 支出砍逾三分之一；雲端部門人均月預算由 10 萬降至約 1 萬美元；動機為成本與推自家工具（The Information；PYMNTS）
 - **Microsoft 改用工具（10-05，已查證 2026-10-07）**：Scott Guthrie、Jay Parikh 指示改用 GitHub Copilot／OpenAI 模型；Experiences and Devices 部門工程師遷往 GitHub Copilot CLI，見 [[topics/competitor-landscape#Microsoft／GitHub]]
 - **兩家共通（10-05，已查證 2026-10-07）**：均未取消與 Anthropic 的合約，縮減只限員工內部工具；經 Microsoft 平台賣給客戶的 Anthropic 用量仍在成長；報導未見兩家或 Anthropic 回應（the-decoder；Yahoo Finance；GuruFocus）
