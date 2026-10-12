@@ -7644,3 +7644,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 歸因 news-pipeline（cloud）／人物、功能、商業、社群
 - devpractice 沉澱：本日無「開發實務」派工條目，未派工
 - market 判讀：本日無訊號（已檢視 38 條，最接近門檻者為 Anthropic IPO 批評報導與 Meta Muse Wonder 發布，皆未達開新則門檻）
+- 追記（devpractice 候選流程，前行寫於該流程完成前，資訊不完整）：devpractice 記者仍照常跑每日候選撿選（與「開發實務」派工包是否存在無關），候選 2 筆（topics/community-cost：Atticus 本機優先＋`claude -p` 複雜任務才分流；topics/community-guardrails：awesome-claude-code-mods 第三方 mod 安裝前權限審計目錄），已 append `data/devpractice-candidates.jsonl`；手冊正文本次未寫（候選待週度落地）；基準線推進至 d71f264
