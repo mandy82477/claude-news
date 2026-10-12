@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新做法**（2026-10-05）
-> - **本機閘道管金鑰**：WaLiAPI 在本機統一三種 API 協議並內建安全審計；10-04 ThinkWatch-Lite 讓金鑰只留在閘道。
-> - **專抓 AI 留下的技術債**：10-04 sloppy 對 PHP 做靜態分析，全程不碰 LLM。
+> **mods 安裝前先看權限範圍**（2026-10-12）
+> - **awesome-claude-code-mods**：社群掃描公開 Claude Code mods 的讀寫執行網路權限並建成目錄，526 星。
 
 ---
 
@@ -83,6 +82,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### karanb192/awesome-claude-code-mods：社群掃描公開 Claude Code mods 的讀寫執行網路權限並建目錄（2026-10-12）
+
+- **主線：** —
+- **核心模式：** 掃描 GitHub 上公開的 Claude Code mods（function hooks），逐一列出每個 mod 能讀、寫、執行或對外傳送哪些內容，建成可瀏覽目錄（mods.aidojo.si）；GitHub Search 526 星。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（ThinkWatch-Lite、OneCLI 等）一個「第三方 mod 安裝前權限審計」取向——既有做法聚焦金鑰留在閘道或攔截惡意呼叫，本則在安裝前先攤開每個 mod 的讀寫執行網路權限範圍；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（526★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/karanb192/awesome-claude-code-mods)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者目錄工具，尚無社群採用回饋數據）
 
 #### fuzhengwei/WaLiAPI：本機運行的 LLM API 閘道桌面軟體，統一三協議轉換（2026-10-05）
 

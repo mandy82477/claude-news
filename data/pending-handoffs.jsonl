@@ -280,3 +280,4 @@
 {"id": "H-ad36ff", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "查證發現事實已於 2026-10-09 寫入 topics/long-context-1m.md，entities/pricing 範疇內無需再動"}
 {"id": "H-51df5d", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "查證發現 2026-10-10 official-community-gap 已有維運備忘記錄評估結論（兩者皆單一工具，未達開新列門檻，維持現狀）"}
 {"id": "H-1ffd23", "closed": "2026-10-10", "status": "void", "by": "主編", "result": "Hindustan Times 該則僅標題可用，未見 Hassabis 讚許 John Jumper 的原文字句，記者無 web 工具無法查證引語內容，不動 entities/john-jumper.md"}
+{"id": "H-b7ca6a", "opened": "2026-10-12", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 子頁 2026-10-12 新增 4 則代表技巧節點（oil-motion、unreal-engine-skills-for-claude-code-plugin、awesome-claude-code-mods、Atticus/atticus-mac），請評估 official-community-gap.md 產品化矩陣是否新增列", "status": "open"}

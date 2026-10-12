@@ -28,16 +28,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-09）
-> - **Rubrik Code Guardian 併入「Project Hourglass」計畫**：Business Wire 稱為既有資安產品擴大的一環，效能數字未見報導（詳見使用現況表 Rubrik 列）。
+> **最新企業採用異動**（2026-10-12）
+> - **Epic Games 官方釋出 Unreal Engine skills 供 Claude Code 外掛使用**（527 星，生態系支持信號，內部採用規模未見；詳見使用現況表新增列）。
 
 ## 摘要
 
-**目前追蹤 47 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-05）。
+**目前追蹤 48 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-12）。
 
 **退出理由分兩類：** 客戶自己選的是成本、安全疑慮、自家有競品（Meta、Microsoft，10-05 已查證）；別人劃線的是出口管制、區域存取（Goldman、OKX，2026-08-19/20，Anthropic 區域存取政策，與出口管制無關，見 ⟨Q-03⟩）、Pentagon 黑名單，詳見 [[topics/anthropic-government-policy]]。
 
@@ -45,6 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期新增／擴大採用：**
 
+- **Epic Games**：官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用（527 星），生態系支持信號，內部採用規模未見報導
 - **Barclays**：擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師
 - **Google**：開放全體工程師使用 Claude（Business Insider），具體工具範疇未見細節
 - **Rubrik**：發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序
@@ -70,7 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
-**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，故為 47；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計新增 Epic Games 故為 48；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -86,6 +87,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code | ✅ | 2026-10-12 | 官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用，527 星；生態系整合信號，內部採用規模未見報導 | 2026-10-12 |
 | Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
 | JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07 | 2026-09-17 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
@@ -173,7 +175,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
-| Claude Code | 9 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce、Alberta、Samsung、T. Rowe Price、Barclays）+2縮減（Uber、Meta）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
+| Claude Code | 10 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce 等，詳見上方使用現況表）+2縮減（Uber、Meta）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
 | Claude API | 31（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
@@ -202,6 +204,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-12
+- **[新增具名企業，✅ 使用中] Epic Games 官方 GitHub 帳號釋出 Unreal Engine skills，供 Claude Code 外掛使用**：527 星，遊戲引擎廠商官方生態系支持信號；內部採用規模、使用範疇未見報導細節，詳見上方使用現況表新增列（GitHub Search）
 
 #### 2026-10-09
 - **[既有企業新產品線，補充來源] Business Wire：Rubrik 擴大「Project Hourglass」計畫，納入 Rubrik Code Guardian**：與 09-15 首發同一產品，本則首次點名所屬計畫名稱，未見額外效能數字，詳見上方使用現況表 Rubrik 列（Google News/Business Wire）

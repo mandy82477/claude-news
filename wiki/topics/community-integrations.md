@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新做法**（2026-10-11）
-> - **程式碼智能併入 MCP**：Muvon/octocode 單一 Rust 執行檔提供語意搜尋＋知識圖譜內建 MCP server，GitHub Search 505 星。
+> **創意工具再添兩個**（2026-10-12）
+> - **oil-motion**：做跟著捲動與滑鼠移動的網頁動態效果，GitHub Search 2,575 星。
+> - **Epic Games 官方 Unreal Engine skills**：供 Claude Code 外掛在 Unreal Engine 專案中使用，527 星。
 
 ---
 
@@ -58,6 +59,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### oil-oil/oil-motion：網頁動畫 skill，做出跟著捲動與滑鼠移動的網頁動態效果（2026-10-12）
+
+- **主線：** —
+- **核心模式：** Claude Code 與 Codex 共用的網頁動畫 skill，協助產生跟隨捲動（scroll-driven）與跟隨滑鼠移動的網頁動態效果；GitHub Search 2,575 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、reelmimic、GodotMaker 等）一個「網頁互動動畫」取向——既有做法多聚焦影片或遊戲產出，本則鎖定網頁捲動／滑鼠互動效果這個前端細分場景；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（2,575★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述僅標題可用（殼層摘要）。
+- **來源：** GitHub Search；[GitHub](https://github.com/oil-oil/oil-motion)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### EpicGames/unreal-engine-skills-for-claude-code-plugin：Epic Games 官方釋出 Unreal Engine skills，供 Claude Code 外掛使用（2026-10-12）
+
+- **主線：** —
+- **核心模式：** Epic Games 官方帳號釋出一組 Unreal Engine skills，供 Claude Code 外掛在 Unreal Engine 專案中使用；GitHub Search 527 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（GodotMaker 等）一個「官方遊戲引擎廠商自建」取向——GodotMaker 是社群把 Claude Code 接上 Godot，本則是遊戲引擎廠商自己發布 Unreal Engine 的官方整合；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 原始描述僅標題可用（殼層摘要），依日報段落判讀；僅有 GitHub Search 星數（527★），無 forks／issues 佐證可查；官方遊戲引擎廠商帳號發布，造假誘因低於個人開發者項目（推論）。
+- **來源：** GitHub Search；[GitHub](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin)
+- **成熟度：** ⏳ 新興（本庫首次收錄，官方遊戲引擎廠商發布，尚無社群採用回饋數據）
 
 #### Muvon/octocode：單一 Rust 執行檔的結構化程式碼智能，語意搜尋＋知識圖譜＋內建 MCP server（2026-10-11）
 

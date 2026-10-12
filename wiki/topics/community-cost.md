@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新做法**（2026-10-10）
-> - **headless 等人決策不空等**：需要人類決定時把問題寫進 ticket、結束當前回合，答案來了再用 `claude -p --resume` 接續，不留 process 輪詢。
+> **本機優先、只在必要時才吃訂閱額度**（2026-10-12）
+> - **Atticus**：macOS 語音助理，簡單操作本機處理，複雜任務才用 `claude -p` 吃既有 Pro／Max 訂閱，不需 API key。
 
 ---
 
@@ -73,6 +73,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### SaarthurR/atticus-mac：按住說話的 macOS 語音助理，簡單操作本機處理、複雜任務靠 `claude -p` 吃既有訂閱（2026-10-12）
+
+- **主線：** —
+- **核心模式：** macOS 語音助理，按住快捷鍵說話；簡單操作（開啟 App、播放音樂）本機 0.08 秒內處理完畢不碰 AI，複雜任務才透過 `claude -p` 轉給 Claude，吃既有 Claude Pro／Max 訂閱額度、不需另外申請 API key；作者自述為國中生（9th grade）。
+- **與既有模式的關係：** 補上「模型使用策略」既有代表技巧（分層模型、多模型路由等）一個「本機啟發式優先、只在必要時才吃訂閱額度」取向——既有做法多在多個雲端模型間路由，本則先用本機規則擋掉大多數請求，只有真正複雜的任務才送一次 `claude -p`；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News 36 分（2 個討論串同日出現），作者第一手專案發布，無第三方量測覆核本機 0.08 秒處理的數字。
+- **來源：** Hacker News；[GitHub](https://github.com/SaarthurR/atticus-mac)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Headless Claude Code asks, exits, then resumes on the answer：用 `claude -p --resume` 讓 agent 等人決定時結束當前回合，不佔用程序輪詢（2026-10-05）
 

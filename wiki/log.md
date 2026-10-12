@@ -7624,3 +7624,23 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 7 筆／本日無「開發實務」派工條目，未寫入 topics/coding-workflow-guide（基準線已推進至 e18c0e5）
 - market 判讀：新增 1 則（第 4 類：Tom Brown／SpaceX 每月 12.5 億美元運算容量交易）；里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列
 - 歸因（補）news-pipeline（cloud）／投資分析
+
+## 2026-10-12 Ingest
+
+- 來源日報：[[news/2026-10-12]]
+- 更新頁面：
+  - **人物**：無（本次為純新建頁，未修改既有人物頁）
+  - **功能**：entities/claude-code
+  - **商業**：topics/enterprise-tool-tracker、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：無
+  - **社群**：topics/community-tech-patterns、topics/community-integrations、topics/community-guardrails、topics/community-cost、topics/community-tech-discussions
+- 新增頁面：entities/linus-torvalds
+- 摘要：Linux 創造者 Linus Torvalds 被發現用 Claude Code 開發 kernel 分支；Cowork（Windows）Plan9 掛載因 KB5124008 全數失敗、Claude Code 記憶體洩漏至 129GB 兩起風險警示為今日互動最高條目。
+- 呈現品質：全部通過（商業記者「可信度存疑」用語觸發懸置標記舊語法棘輪，主編已改寫為「過往紀錄欠佳」；feature-radar 全覽表一筆儲存格超 120 字元，主編已縮短並把細節留在詳細條目區）
+- 品質備註：無
+- 分類回退：無
+- 轉知帳本：新開 H-b7ca6a（社群→功能）：patterns 子頁本次新增 4 則代表技巧節點，請評估 official-community-gap.md 產品化矩陣是否新增列
+- 懸置標記：本輪各記者待查證命中皆為無；商業記者標記既有 topics/competitor-landscape 一筆逾期懸置（已逾期 8 天，複查日 2026-10-04），非本輪範圍未動，留待 `/wiki-lint`
+- 歸因 news-pipeline（cloud）／人物、功能、商業、社群
+- devpractice 沉澱：本日無「開發實務」派工條目，未派工
+- market 判讀：本日無訊號（已檢視 38 條，最接近門檻者為 Anthropic IPO 批評報導與 Meta Muse Wonder 發布，皆未達開新則門檻）

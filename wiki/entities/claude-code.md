@@ -30,13 +30,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新動態**（2026-10-11）
-> - 風險警示：開沙箱並設 `autoAllowBashIfSandboxed: true` 後，含 shell expansion 等語法的指令仍會跳出權限提示，自動放行不保證成立（#43713，41 則留言）。
-> - 新增已知問題：CLAUDE.md 強制規則跨多個 repo 持續被忽略，問題溯至 2025-06（#2544，34 則留言）；Windows 視窗永遠置頂再增一則獨立回報（#89467，40 則留言）。
-> - 社群回報 2.1.289 成本顯示把 Haiku 5.5 以 Opus 費率計算，實測讀數偏高達 17 倍，單一使用者回報、官方未確認。
+> **最新動態**（2026-10-12）
+> - 風險警示：Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗，累積 120 則留言，今日全站互動最高；解除安裝該 KB 可恢復（#92984）。
+> - 風險警示：單一 session 記憶體洩漏至 129GB 拖垮整機當機，累積 66 則留言（#11315）；長時間掛 session 者留意記憶體用量。
+> - 桌面版官方文件新增關閉本機 session、改走指定 SSH host 的組織設定（`disableDesktopLocalSessions`／`sshHost`）。
 
 ---
 
@@ -260,7 +260,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CJK 輸入法確認輸入時 Enter 鍵常誤觸發送出訊息（GitHub issue #2054，累積 34 則留言、187 個讚，長年未解）**：籲提供 Enter 僅換行不送出的選項；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**德文變音符號（ä、ö、ü）在輸出中隨機被替換為 ASCII 拼寫，如 ä→ae（GitHub issue #14131，累積 41 則留言、24 個讚）**：使用者回報 Claude Code 輸出中德文變音符號會不定期被替換為對應的 ASCII 拼寫；官方尚未回應。
+- 🔴 **未修復**｜**德文變音符號（ä、ö、ü）在輸出中隨機被替換為 ASCII 拼寫，如 ä→ae（GitHub issue #14131，累積 45 則留言、26 個讚，2026-10-12 互動數更新）**：使用者回報 Claude Code 輸出中德文變音符號會不定期被替換為對應的 ASCII 拼寫；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：開放 Claude 直接寫入／更新專案檔案的權限模式（GitHub issue #16550，累積 39 則留言、82 個讚，2026-10-11 互動數更新）**：使用者呼籲提供讓 Claude 可直接寫入或更新專案檔案的權限模式，而非只能建議內容讓使用者手動貼上；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**`autoAllowBashIfSandboxed: true` 仍可被含 shell expansion 的指令繞過（GitHub issue #43713，累積 41 則留言、84 個讚，2026-10-11）**：沙箱自動放行保證不成立；與 #39523、#36168 同屬權限自動化失效但設定項不同，暫分列；應手動複核含特殊語法的指令；官方尚未回應。
 - 🔴 **未修復**｜**CLAUDE.md 標記為強制的規則在多個 repo 中持續被忽略（GitHub issue #2544，累積 34 則留言、45 個讚，問題溯至 2025-06）**：與既有「CLAUDE.md 為 candidate-context 而非強制系統提示」（05-10 社群發現）同屬此現象成因；仰賴強制規則的團隊應加人工複核；官方尚未回應。
@@ -344,7 +344,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Session 重新命名後，第二次退出即消失，僅第一次 resume 正常顯示（GitHub issue #25090，累積 32 則留言、29 個讚，2026-08-01）**：使用者為 session 重新命名後，第一次 resume 該 session 時名稱正常顯示，但第二次退出後名稱又消失，回報者已確認搜尋過現有 issue 未見重複回報；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CLI 與 Desktop app 間同步對話歷史（GitHub issue #28791，累積 30 則留言、131 個讚，2026-08-01）**：使用者呼籲 Claude Code CLI 與 Claude Code Desktop app 之間能同步對話歷史，目前兩端各自獨立、無法互通；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：串接 Claude Code 與 Claude.ai Projects 知識庫（GitHub issue #2511，累積 49 則留言、635 個讚，2026-07-29 首見，2026-09-11 互動數更新，今日全站互動量最高）**：呼籲 Claude Code 存取 Claude.ai Projects 知識庫，避免同一參考資料重複維護；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：跨 context compaction 的持久記憶（回報者已自建 59 次 compaction 的替代方案）（GitHub issue #34556，累積 62 則留言、6 個讚，首見 2026-07-25，2026-08-09 互動數更新）**：使用者反映 context compaction 之間缺乏持久記憶機制，每次壓縮都會遺失外部未儲存的資訊；回報者表示已自行建構經歷 59 次 compaction 迭代的替代方案因應此缺口；與既有 Auto Compact 失效、多 session 直接通訊、跨 session 持久記憶（issue #14227）等需求同屬 context/記憶延續性缺口，暫分列追蹤；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：跨 compaction 持久記憶（已自建 59 次 compaction 替代方案）（GitHub issue #34556，累積 114 則留言、6 個讚，首見 2026-07-25，2026-10-12 更新）**：每次壓縮遺失未外部保存內容；同屬記憶延續性缺口，見 [[topics/official-community-gap]]；官方未回應。
 - 🔴 **未修復**｜**對話壓縮（compaction）間歇性失敗或卡死（GitHub issue #20696，累積 61 則留言，2026-07-12 回報，regression）**：claude.ai 網頁版／行動版對話壓縮功能自 2026-01-15 起偶發失敗或卡死，回報者稱此為回歸性問題（先前版本未見）；官方尚未回應。與已列「Auto Compact 失效」為不同介面（此為 claude.ai web/mobile，另一為 Claude Code CLI），暫分列追蹤。
 - ✅ **已修復 v2.1.224**｜**功能請求：多 Claude session 間直接通訊（GitHub issue #24798，累積 75 則留言、21 個讚，首見 2026-07-08，2026-08-15 互動數更新）**：使用者呼籲支援 multi-Claude 工作流中大型專案裡各自獨立執行的工作流程能有更直接的溝通機制以串接依賴關係排序，避免需透過檔案系統或外部工具中繼協調；與 [issue #28300](https://github.com/anthropics/claude-code/issues/28300)（跨機器多 agent 協作 A2A 協定）同屬 agent 間直接通訊缺口，本則同機 session 訴求已由官方對應；**2026-08-15 更新：** issue 留言持續累積，內容顯示社群訴求未止於「能傳訊」本身——原始請求的核心是「依相依性排序高階流程步驟」，屬工作流編排（orchestration），而 `ListAgents`／`SendMessage` 提供的僅是點對點訊息傳遞原語，尚未涵蓋自動依賴排序；此缺口與 [[topics/official-community-gap]] 「Agent 間直接通訊協定」列既有的 🧪 部分產品化判定一致，✅ 已修復狀態僅適用於「同機 session 可互相傳訊」此一子項，編排層仍待官方對應。
 %% 2026-08-08：五家媒體同步報導跨 session 訊息互通功能，狀態暫懸置。2026-08-09：官方文件（code.claude.com/docs/en/cross-session-messaging）確認，工具為 ListAgents＋SendMessage，狀態轉為已修復。2026-09-19 查證：v2.1.224 release notes（2026-08-07）本就載明 cross-session SendMessage，08-08「changelog 未見對應」為當時漏看；macOS／Linux 自 v2.1.224、他機 session 主動發起自 v2.1.225、原生 Windows 自 v2.1.234（2026-08-17） %%
@@ -391,7 +391,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（79 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（80 條未修復、3 條查無官方、3 條已修復）
 
 - 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 40 則留言、16 個讚，2026-10-07）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
@@ -401,7 +401,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
-- 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，117 則留言、61 讚，09-16 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
+- 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，120 則留言、61 讚，10-12 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
@@ -455,6 +455,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Desktop（Windows 11）主視窗持續蓋在其他應用程式最上層，無設定可關閉（issue #85891，103 則留言、259 讚，09-16 更新）**：類似強制「always on top」，影響多視窗工作流程；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code Web 支援從非預設分支啟動 session（GitHub issue #10018，累積 59 則留言、162 個讚，2026-08-29，今日全站互動量最高功能請求）**：使用者呼籲 Claude Code Web 支援從 default branch 以外的分支啟動 session，目前僅能從預設分支開始；與既有「功能請求：支援與 main 以外分支進行 diff 比較」（issue #23626，聚焦比較差異而非啟動 session）同屬「非預設分支」相關訴求但層面不同，暫分列追蹤；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
+- 🔴 **未修復**｜**Cowork 在 ARM64（Snapdragon X）裝置上，即使通過環境就緒檢查仍失敗（GitHub issue #50674，累積 44 則留言，2026-10-11）**：與上列 #40198 同屬 Windows ARM64／Snapdragon 相容性問題，此則回報環境已通過 readiness check 仍失敗，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**Cowork 工作區啟動失敗「Failed to start Claude's workspace」，VM service not running，重開機後問題依然存在（GitHub issue #27801，累積 73 則留言、41 個讚，2026-07-28 首見，2026-08-19 互動數更新）**：使用者回報 Cowork 嘗試啟動工作區時失敗，顯示 VM service not running 錯誤，即便重新開機仍無法解決；與既有 Windows 平台 Cowork 啟動障礙（issue #29941、#74649、#40198）同屬 Cowork VM 啟動失敗但成因與平台細節不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
@@ -465,7 +466,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 36 則留言、1 個讚，2026-08-16）**：Windows 桌面應用（Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080）發生 GPU process crash（exit code 101457950），導致整個應用程式與所有執行中的 session 一併中斷；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Windows/MSIX 1.28929.0：跨 session 訊息會送進目標 session 輸入框卻不會自動送出，該 session 從此無回應（GitHub issue #86069，累積 8 個讚，2026-08-23）**：使用者回報在 Windows MSIX 版本（1.28929.0）下，透過跨 session 訊息互通功能（見上方「功能請求：多 Claude session 間直接通訊」issue #24798 已修復條目）傳送的訊息會正確出現在目標 session 的輸入框中，但不會如預期自動送出，導致目標 session 完全無回應；與既有跨 session 訊息互通功能同源但屬 Windows/MSIX 平台特有的送出步驟缺陷，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 98 則留言、77 個讚，2026-09-22 互動數更新）**：Claude Code 進程持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。
-- 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 65 則留言、57 個讚，2026-09-19）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 66 則留言、58 個讚，2026-09-19 首見，2026-10-12 互動數更新）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**macOS 持續性 ECONNRESET 連線錯誤（GitHub issue #5674，累積 54 則留言、54 個讚，首見 2026-07-06，2026-09-21 互動數更新）**：僅在 macOS 上出現的持續性連線中斷問題（ECONNRESET），連線中斷導致任務被打斷，Windows 環境未見同樣狀況，疑為平台特定的網路層處理差異；官方尚未回應。
 - 🔴 **未修復**｜**Linux 上持續產生 Windows 換行（CRLF）檔案（GitHub issue #2805，累積 52 則留言、35 個讚，首見 2026-07-06，2026-08-25 互動數更新）**：即便 CLAUDE.md 已明確指示使用 LF 換行，Claude Code 在 Ubuntu Linux 上仍持續產生 CRLF 換行的檔案，跨平台團隊協作時易引發不必要的 diff 雜訊；官方尚未回應。
 - 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 62 則留言、36 個讚，首見 2026-07-06，2026-08-17 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
@@ -733,6 +734,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.121** | 2026-04-28 | MCP `alwaysLoad` 選項；`claude plugin prune` |
 
 ### 開發者須知（評註型提示，非單一事件，不併入歷史記錄）
+- **桌面版官方文件新增關閉本機 session、改走指定 SSH host 的組織設定（2026-10-12 查證，Official Docs）**：新增 `disableDesktopLocalSessions` 與 `sshHost`／`sshHostAllowlist`，供組織關閉本機 session、集中走指定 SSH host；雲端 session 不受影響。見[官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：媒體轉述的「不要只依賴 hook 做安全防護」不見於官方 hooks 文件（2026-10-11 查證）；官方原意見「hooks：事件、失效模式與能不能當防線」。
 - **社群工具 token-savior 自測宣稱優於 Claude Code 原生編碼表現（2026-10-07，Mibayy/token-savior GitHub repo 自述）**：作者自測稱 Claude Code 原生（plain）基準正確率 78.3%，低於其工具版本；證據等級僅作者自測，未附第三方覆核方法論或測試環境細節，僅供參考。
 - **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。
@@ -887,6 +889,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-12 | 桌面版文件新增 SSH host 組態設定。新增已知問題 1 則（#50674 ARM64）。互動數更新 4 則：#92984（今日全站最高）、#34556、#11315、#14131。 |
 | 2026-10-09 | **v2.1.295**：hook `onFailure: "block"` 與官方安全建議有落差。旗標增 5 消 2，見 [[topics/claude-code-experimental]]。 |
 | 2026-10-08 | **v2.1.294**：hook 自然語言封鎖指示修正。旗標增 1，見 [[topics/claude-code-experimental]]。新增已知問題 6 則，互動更新 1 則。 |
 | 2026-10-06 | **v2.1.291**：兩項回歸修正（權限提示答案遺失、訊息遺失）；桌面文件重命名 Auto-fix/Auto-merge。新增已知問題 1 則（#16561）。 |

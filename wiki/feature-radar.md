@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-12
 
 > **這禮拜動了什麼**（2026-10-09）
 > v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -396,11 +396,11 @@ Claude 設定 > Connectors／外掛頁面啟用「Salesforce in Claude」，依�
 ### Claude Code 桌面版：雲端 session 多 repo 掛載＋`disableMobileSimulatorTools`
 **發布：** 2026-09-14（官方文件更新） | **狀態：** 正式發布
 
-**是什麼：** 桌面版雲端 session 功能持續擴充。09-14 先加了多 repo 掛載與 `disableMobileSimulatorTools` 旗標；09-16 文件再新增「Run long-running tasks in the cloud」段落：Claude Code on the Web 可接手本地 session 到雲端繼續執行，Desktop 端可推送分支，「Code in the web」可讓組織開關雲端 session 功能，並可選在本機／雲端／SSH 三種環境執行。
+**是什麼：** 桌面版雲端 session 功能持續擴充。09-14 先加了多 repo 掛載與 `disableMobileSimulatorTools` 旗標；09-16 文件再新增「Run long-running tasks in the cloud」段落：Claude Code on the Web 可接手本地 session 到雲端繼續執行，Desktop 端可推送分支，「Code in the web」可讓組織開關雲端 session 功能，並可選在本機／雲端／SSH 三種環境執行；10-12 文件再新增「Turn off local sessions and distribute SSH connections」段落，補上具體設定鍵：`disableDesktopLocalSessions`（關閉本機 session）、`sshHost`／`sshHostAllowlist`（集中走指定 SSH host），皆為組織層設定，雲端 session 不受影響。
 
-**為何熱：** 官方文件連續兩天（09-14、09-16）擴充同一條雲端 session 功能線，顯示這不是單次文件微調而是持續在建的功能；仍只有官方文件一個來源，尚無社群實測或官方部落格佐證，熱度略升一格。
+**為何熱：** 官方文件三度（09-14、09-16、10-12）擴充同一條雲端 session 功能線，顯示持續在建；仍只有官方文件一個來源，尚無社群實測或官方部落格佐證。
 
-**現在要試嗎：** 跨 repo 改動要一次看完的人可以試多 repo 掛載；做 iOS 開發又不想讓 Claude 碰模擬器的人，那個旗標是現成的關法。
+**現在要試嗎：** 跨 repo 改動要一次看完的人可以試多 repo 掛載；需要集中管理團隊 SSH 連線、或想關掉本機 session 只留雲端／SSH 路徑的組織管理者可留意新設定鍵。
 
 **快速上手：**
 ```
@@ -408,9 +408,14 @@ Claude 設定 > Connectors／外掛頁面啟用「Salesforce in Claude」，依�
 
 # 封鎖模擬器工具（設定檔）
 disableMobileSimulatorTools: true
+
+# 組織層：關閉本機 session、集中走指定 SSH host
+"disableDesktopLocalSessions": true,
+"sshHost": "dev.example.com",
+"sshHostAllowlist": ["dev.example.com"]
 ```
 
-**注意事項：** 純文件更新，沒有對應版本號可核對。多 repo 掛載的上限數量、旗標該寫進哪一層設定檔，官方文件都沒寫明，實際用之前建議自己查一次 [desktop.md](https://code.claude.com/docs/en/desktop.md)。
+**注意事項：** 純文件更新，沒有對應版本號可核對。多 repo 掛載上限、旗標該寫進哪一層設定檔，官方文件都沒寫明；實際用之前建議自己查一次 [desktop.md](https://code.claude.com/docs/en/desktop.md)。
 
 ### `claude plugin eval`：外掛自動化評測
 **發布：** 2026-09-11（v2.1.269） | **狀態：** 正式發布
@@ -539,7 +544,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code v2.1.274**（記憶體用量警示；`CLAUDE_CODE_MCP_STARTUP_WAIT_MS` 旗標） | 2026-09-17 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Salesforce in Claude**（beta，整合銷售機會、客戶帳號與 pipeline 資料進 Claude 對話） | 2026-09-15 | 🔥 | ⏳ 觀望 | Beta |
 | **Claude Code 桌面版 `/resume`＋面板獨立視窗**（`/resume` 接續 CLI session；diff／終端機可拉出獨立視窗；macOS 背景 computer use 不再隱藏其他視窗） | 2026-09-15 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Claude Code 桌面版雲端 session**（多 repo 掛載＋`disableMobileSimulatorTools`；09-16 再擴充：本地接手雲端、Desktop 推分支、組織開關） | 2026-09-14 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
+| **Claude Code 桌面版雲端 session**（多 repo 掛載；10-12 再補組織層 SSH 設定，細節見上方） | 2026-09-14 | 🔥🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **`claude plugin eval`**（外掛評測 CLI，v2.1.269，6 種 grader＋no-plugin baseline，含 CI gate） | 2026-09-11 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Smart Reports**（Beta，團隊用量分析報表：使用狀況、完成工作與成本） | 2026-09-10 | 🔥 | ⏳ 觀望 | Beta |
 | **maxEffortLevel 推理努力上限設定**（v2.1.267，跨供應商統一設定 effort 上限，含 Bedrock/Vertex/Foundry） | 2026-09-09 | 🔥 | ⏳ 觀望 | 正式發布 |

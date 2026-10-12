@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新動態**（2026-10-11）
-> WSJ 報導共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易，是繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作。
+> **最新動態**（2026-10-12）
+> HN 今日 233 分熱議重提 10/07 CNBC 報導：研究機構 New Constructs 批 Anthropic IPO「史上最荒謬」；留言指出該機構曾誤判看空 Spotify、Uber 等後皆大漲的 IPO，過往紀錄欠佳。
 
 ---
 
@@ -106,7 +106,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **IPO 細節**
 - **2026-10-09 Bloomberg：營收認列「黑盒」難倒交易員**：Anthropic 與 OpenAI 營收認列方式不透明，交易員難判真實財務體質；與既有 Damodaran 門檻、PitchBook 洩露財報同屬估值懷疑系列，數字未見完整轉載，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-08 Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**：考慮參與 Anthropic IPO 的投資人正設法替這項難以量化的變數定價，反映市場對 AI 安全事故外部性的估值方法尚未成熟；具體模型與數字未見報導，僅標題可用（Google News/Bloomberg.com）。
-- **2026-10-07 CNBC：分析師稱將是今年「最荒謬的 IPO」**：與既有 Damodaran 營收門檻（08-23）、PitchBook 洩露財報質疑（10-05）同屬估值懷疑系列，具體論點未見完整轉載，僅標題可用（Google News/CNBC）。
+- **2026-10-07 CNBC（10-12 經 HN 233 分重新浮上，今日互動最高）：研究機構 New Constructs 稱將是今年「對投資人輕信程度史上最離譜的一次測試」**：HN 留言指出該機構過去對 Spotify、Uber、CrowdStrike 等後皆大漲的 IPO 同樣看空且預測有誤，過往紀錄欠佳（Hacker News，233 分；Google News/CNBC）。
 - **2026-10-07 Reuters：Haiku 5.5 發布框進「IPO 前擴充產品線」敘事**：Reuters 將 Haiku 5.5（第三款 5.5 系列模型）發布時機與籌備中的 IPO 連結報導，模型本身細節見 [[entities/haiku-5-5]]；未見新增估值或時程數字，僅標題可用（Google News/Reuters）。
 - **2026-10-05 CNN：儘管市場降溫疑慮，投資人圈仍預期推進 IPO**：CNN 報導即使 AI 熱潮降溫疑慮升高，市場仍預期 Anthropic 推進 IPO；2 個來源同日提及，未見新時程或估值數字，回答的是「是否仍會上市」而非⟨Q-03⟩「何時上市」，兩個問題不互相解消（推論）；僅標題可用（Google News/CNN）。
 - **2026-10-05 PitchBook（經 Morningstar 轉載）：洩露財報顯示成長快，但撐不起 2 兆美元估值**：與既有 Damodaran「營收門檻」質疑同路線，首度以洩露財報本身為依據；具體數字與方法論未見完整轉載，僅標題可用（Google News/Morningstar）。

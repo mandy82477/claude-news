@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 
-> **最新動態**（2026-10-11）
-> - **社群轉述南韓銀行攻擊可能涉 Claude Code**：Reddit 週熱門轉述 CrowdStrike 說法，稱單人結合多款 AI 工具完成攻擊鏈，原始報告未見，尚無跟進討論。
+> **兩則新訊號：倫理批判與高調具名使用**（2026-10-12）
+> - **資安工程師呼籲拒用 OpenAI 與 Anthropic**：引《End Times Fascism》批評前沿實驗室「打造機器神」；HN 141 分，今日互動量第二高，尚無社群正反交鋒細節。
+> - **Linus Torvalds 具名用 Claude Code 開發 Linux kernel 分支**：Phoronix 報導，意外發現新分支打破他只推主線的慣例；人物背景見 [[entities/linus-torvalds]]。
 
 ---
 
@@ -153,6 +154,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
+| Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-12 | 🔥 | ☄️閃現 | Phoronix 報導其 repo 多出新分支 `noref-filemap-read-with-llm`，打破他只在主線推 master 的慣例；HN score 25（具名表態，無社群延燒） | — |
 | Reddit 使用者稱用 Claude Code 輔助分析找到疑似未知行星，留言提及類似自主流程已用於超導材料研究 | 2026-10-08 · 2026-10-08 | 🔥🔥🔥 | ☄️閃現 | 使用者稱用 Claude Code 輔助分析資料找到疑似未知行星；留言稱類似自主 agent 研究流程已在超導材料系統上有新進展；HN score 67（原帖為 Reddit） | — |
 | 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成 | 2026-10-08 · 2026-10-08 | 🔥 | ☄️閃現 | Reddit 週熱門轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成；0 留言，報告未見（媒體轉述，待社群接力） | — |
 | Show HN: Agent.reviews——讓 AI agent 互相留下工具使用評價 | 2026-10-07 · 2026-10-07 | 🔥🔥🔥 | ☄️閃現 | 開發者推出平台讓 AI agent（含 Claude）像人類留評價般評比用過的工具與 MCP；稱已從逾 5 萬個 agent session 觀察到重複踩坑模式；HN score 64（2 來源） | — |
@@ -195,9 +198,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | WSJ 報導 Anthropic 稱潛在市場規模達 30 兆美元；HN 留言（score 39）指出這是產業 TAM 估計，非營收承諾 | — |
 | Simon Willison 引述 Paul Dix：AI 寫了 100 萬行程式碼，仍需花數月精煉才能產出可靠軟體 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | Paul Dix：AI 一次寫出 100 萬行程式碼，仍需數月精煉才能產出可靠軟體（Simon Willison 轉引） | — |
 | Reddit r/ClaudeAI 週熱門：配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘 | 2026-08-24 · 2026-08-24 | 🔥 | 🌙靜候 | 使用者稱配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘（Reddit r/ClaudeAI 週熱門） | — |
-| Simon Willison 引述 Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要 | 2026-08-23 · 2026-08-23 | 🔥 | 🌙靜候 | Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要（Simon Willison 轉引） | — |
-| Reddit r/MachineLearning 週熱門：實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 先前浮水印表態 | 2026-08-23 · 2026-08-23 | 🔥 | 🌙靜候 | 作者實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 浮水印表態（Reddit 週熱門） | — |
-| Show HN：以 JPEG gain-map 技術讓 Logo 在 HDR 螢幕呈現額外高亮效果，作者稱與 Claude Code 協作開發 | 2026-08-22 · 2026-08-22 | 🔥🔥🔥 | 🌙靜候 | 開發者以 JPEG gain-map 技術讓 Logo 於 HDR 螢幕額外高亮，稱與 Claude Code 協作開發；HN score 62 | — |
 | Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌊延燒 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌙靜候 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌊延燒 | 額度焦慮系列延燒，08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
@@ -236,9 +236,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾**：WSJ 報導 Anthropic 準備向投資人簡報時宣稱潛在市場規模上看 30 兆美元，為可能的創紀錄 IPO 鋪路；HN 討論（score 39）留言區隨即有人指出，該數字是「AI 服務整體潛在市場總量（TAM）」的產業估計，並非 Anthropic 宣稱自己能實際拿下的營收，提醒讀者不要把潛在市場規模與實際財測數字混為一談；Reuters 另有一篇同主題報導（僅為重複報導同一商業事實，非社群延燒佐證）；商業面（融資動機、IPO 佈局）見 [[topics/anthropic-business]]，本頁僅記錄社群對數字本身的質疑角度；[原文](https://www.wsj.com/tech/ai/anthropic-expected-to-tell-investors-it-sees-over-30-trillion-in-potential-revenue-a611efea)（HN）
 - **Simon Willison 引述 Paul Dix：AI 寫了 100 萬行程式碼，仍需花數月精煉才能產出可靠軟體**：Simon Willison 部落格引述 Paul Dix（InfluxDB 創辦人）觀點：AI 一次寫出 100 萬行程式碼，隨後花費接下來幾個月時間加以精煉，才產出一套可靠軟體；凸顯「AI 寫得快」與「AI 寫得可靠」之間仍有落差，需大量人工後製；具名表態（Paul Dix／Simon Willison），無社群延燒；[原文](https://simonwillison.net/2026/Aug/26/paul-dix/)（Blog）
 - **Reddit r/ClaudeAI 週熱門：配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘**：使用者描述配偶懷孕期間遭 Indeed 資遣後，用 Claude 打造一個求職平台作為競品，貼文標題稱已促成三人成功獲聘；具體平台名稱、技術架構與媒合機制未見於本次摘要；呼應本頁既有「用 Claude 打造具體產品」系列案例（撲克 app、GTA6 demo 等），本則是該系列首度出現「已產生可驗證外部成效（實際招聘）」的敘事；Reddit r/ClaudeAI 週熱門標記；[原文](https://www.reddit.com/r/ClaudeAI/comments/1vx4kn7/indeed_laid_off_my_pregnant_wife_so_i_built_a_job/)（Reddit · 週熱門）
-- **Simon Willison 引述 Drew Breunig：Fable 推出前，優化 coding harness／context 策略顯得沒必要**：Simon Willison 部落格引述 Drew Breunig 文章〈Fable: The End of Moore's Law〉觀點：在 Fable 推出之前，投入大量心力優化 coding harness 或 context 策略顯得沒有必要，暗示 Fable 的出現改變了這個判斷；完整論證未見於摘要，原文以「摩爾定律終結」為喻；具名表態（Simon Willison／Drew Breunig），無社群延燒；[原文](https://simonwillison.net/2026/Aug/23/drew-breunig/)（Blog）
-- **Reddit r/MachineLearning 週熱門：實作 SynthID-Text 風格語言模型浮水印教學專案，呼應 Anthropic 先前浮水印表態**：作者釋出 SynthID-Text 風格語言模型浮水印機制的實作教學專案，內文提及呼應 Anthropic 先前公開表態將為模型輸出加入浮水印機制的方向；與本頁 08-11「隱形浮水印政策引發社群反彈」🌊延燒議題軸線相關——本則從技術實作角度補充浮水印機制本身如何運作，非政策反彈角度；Reddit r/MachineLearning 週熱門標記；[原文](https://www.reddit.com/r/MachineLearning/comments/1vw18ys/implementing_watermarking_for_language_models_p/)（Reddit · 週熱門）
-- **Show HN：以 JPEG gain-map 技術讓 Logo 在 HDR 螢幕呈現額外高亮效果，作者稱與 Claude Code 協作開發**：開發者釋出瀏覽器端小工具（免註冊），透過 JPEG gain-map 技術讓 Logo 在支援 HDR 的螢幕上呈現一般螢幕看不到的額外高亮效果；作者原文明確提及「I worked with Claude Code to turn it into a little browser-based utility」；HN score 62，跨來源佐證；屬「用 Claude Code 快速做出小型 demo 型工具」案例，呼應本頁長期收錄的創意應用案例系列；[原文](https://www.soverybright.com/)（HN）
 - **Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天**：Hacker News 熱門討論（連結至 [GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)）批評 Claude 4.7、4.8、5.0 與 Fable 模型輸出用詞浮誇，充斥「行話」（blast radius、earned its keep、spine 等被列入禁用詞清單的用語）且難以維持連貫散文，即使給出明確風格指示仍難改善；留言指出負責回覆此 issue 的 Anthropic 工程師疑似用 Claude 代寫回應，而該回覆本身仍帶有被抱怨的同類「Claude-isms」，引發讀者兩極反應（此為留言區質疑，未經官方證實）；HN score 181；08-20 Reddit r/ClaudeCode 貼文聚焦「官方回覆疑似 Claude 代寫」爭點延燒次日，跨平台佐證（）；截至 08-27 該 issue 已累積 106 則留言、517 個反應，8 天內持續增溫，符合 🌊延燒（3 天以上持續延燒）條件，由 ☄️閃現 升格；與本頁 08-10「把 Claude 式用語翻譯成一般英文的 plugin」同屬「Claude 制式措辭／行話」議題軸線；[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)（HN／Reddit／GitHub Issues）
 - **「Anthropic's War on open source AI」批評文於 HN 引發熱議，留言區另質疑該文本身是否由 AI（疑似 Grok 假扮 Claude）代筆**：一篇批評 Anthropic 對開源 AI 生態立場的貼文（以 X/Twitter 貼文形式流傳）於 Hacker News 引發熱議；HN 留言區除討論原文論點外，另有一派留言質疑該文字風格疑似非人類撰寫，懷疑是 Grok 冒充 Claude 語氣代筆，使討論分岔為「Anthropic 開源立場評價」與「AI 生成內容可信度」兩條並行爭論；HN score 146，單平台高互動、議題共鳴深，尚無跨平台佐證；原文具體論據未見於本次摘要，需讀者自行查閱；[原文](https://twitter.com/TheAhmadOsman/status/2065307070044234186)（HN）
 - **Show HN：show-me — 讓 coding agent 以精簡視覺化取代大量文字輸出的 agent skill**：`npx skills add humanlayer/skills --skill show-me` 安裝；HN score 10；與「現在吵到哪」第 10 列「HTML 還是 Markdown」同屬輸出格式議題軸線後續訊號；[原文](https://www.humanlayer.com/blog/show-me-skill)（HN）
@@ -264,6 +261,20 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」（2026-10-12）
+
+- **來源：** Just say no to OpenAI and Anthropic — Hacker News（141 分）；[原文](https://micahflee.com/just-say-no-to-openai-and-anthropic/)
+- **核心論點：** 作者 Micah Lee 自述為資安工程師，讀完 Naomi Klein 與 Astra Taylor 合著《End Times Fascism》後主張，美國前沿實驗室由「不惜燒掉世界也要打造機器神」的創辦團隊主導，呼籲工程師拒絕使用 OpenAI 與 Anthropic 的產品
+- **關鍵回響：**（本次摘要未提供留言區細節，HN 141 分為今日互動量第二高）
+- **收斂結論：**（無）具名資安工程師個人立場文，無社群正反交鋒細節可查，亦無 Anthropic 官方回應；本頁僅記錄這則倫理批判在社群本身的熱度，不代表本庫對其論點背書
+
+#### Linus Torvalds 被發現用 Claude Code 開發 Linux kernel 新分支（2026-10-12）
+
+- **來源：** Linus Torvalds Working on a Hefty Linux Kernel Improvement with Claude Code — Hacker News（25 分）；[原文](https://www.phoronix.com/news/Linus-Torvalds-Claude-Code)
+- **核心論點：** Phoronix 報導 Linus Torvalds 整理 `torvalds/linux.git` 時意外發現自己 repo 多了新分支 `noref-filemap-read-with-llm`，打破他只在主線推 master 的慣例，判讀為正用 Claude Code 開發這項 kernel 新功能
+- **關鍵回響：**（本次摘要未提供留言區細節，HN 25 分）
+- **收斂結論：**（無）具名表態／使用案例，無社群延燒細節可查；Linus Torvalds 本人背景與完整發言見 [[entities/linus-torvalds]]，本頁僅記錄這則「重要人士具名使用」訊號
 
 #### 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成（2026-10-08）
 

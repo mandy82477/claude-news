@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-12
+**最後新聞更新：** 2026-10-12
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-10）
+> **本週衝擊**（2026-10-12）
+> - 🟡 **Meta 發布新前沿模型 Muse Wonder／Muse Wonder Full，宣稱具 frontier coding 能力**（10-12，官方）——模型層再添一位對手，尚無 benchmark 或定價可比。
 > - 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
@@ -50,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **Meta（Muse Code／Muse Glimmer）** | Meta Enterprise Platform 上線，將 Muse Code 導入企業客戶服務（09-28）→ 與 Claude Code 企業市場定位直接重疊 | 生態 | 🔴 | Meta 官方部落格一手；具體導入規模、定價與 Claude Code 客戶重疊度均未見 |
+| **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **Microsoft／GitHub** 🏢 | Copilot CLI／桌面版公開預覽新增 computer use，可代操作桌面應用程式；同日新增可程式碼定義的動態工作流程編排（10-01）→ Claude Code 尚無對應桌面操作能力 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；兩項功能均為公開預覽／初次發布，缺採用規模與穩定性數據 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
@@ -127,14 +128,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 只為衝擊度 🔴 的對手開節，每節只寫「現在」；軌跡看下方「時序」。
 
-### Meta（Muse Code／Muse Glimmer）
+### Meta（Muse Code／Muse Glimmer／Muse Wonder）
 **現在的答案**
+- 10-12 官方推出新前沿模型 Muse Wonder／Muse Wonder Full，主打法律、金融、健康等專業 agentic 任務，並宣稱具備「frontier coding performance」；與既有編碼產品 Muse Code／模型層 Muse Glimmer 為不同子產品，官方未說明彼此關係
 - Meta 內部使用（已查證 2026-10-07，The Information）：Muse Code 內部逾 6,000 使用者；另有內部專用工具 MetaCode 逾 3 萬，兩者是不同工具。詳見 [[topics/enterprise-tool-tracker#企業工具使用現況]]。
 - 09-28 官方推出 Meta Enterprise Platform，將 Muse Code 導入企業客戶服務，直接對標 Claude Code 企業定位——服務範圍、定價、客戶名單均未見報導。
 - 09-01 結束 beta、三訂閱層主打價格戰；按量計費層已可比價：標準層 $1.25／$4.25，Contributor 層以「資料可能用於訓練 Meta 模型」換 $0.10／$0.20。
 - 08-11 起旗艦模型 Muse Glimmer 開源，Meta 的戰線同時涵蓋產品層與模型層權重。
 **還沒解決**
 - 企業導入規模、成本與 Claude Code 客戶流失情形；三訂閱層費率、「20x」折扣層對應價格均未見報導。
+- Muse Wonder／Muse Wonder Full 的 benchmark 數字、定價、是否取代或併入 Muse Code 均未見官方說明。
 
 ### DeepSeek
 **現在的答案**
@@ -222,6 +225,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-12
+- **Meta**：官方推出新前沿模型 Muse Wonder／Muse Wonder Full，主打法律、金融、健康等專業 agentic 任務並宣稱具「frontier coding performance」；詳見「對手雷達」與「雷達細節」Meta 列更新（Blog/Meta Newsroom）
 
 ### 2026-10-10
 - **Microsoft／GitHub**：Copilot 週報彙整（10/5 週）——多帳號、多環境切換更簡便，擴大使用者對 agent 可存取範圍與工作方式的控制；內容提及 Claude Haiku 但完整細節未揭露，僅彙整層級可用，不列入「對手雷達」（Blog/GitHub Copilot Changelog）

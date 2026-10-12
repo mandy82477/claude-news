@@ -95,6 +95,7 @@
 | [[entities/yann-lecun]] | person | 👤 人物 | active | AI「教父」、Meta 前首席 AI 科學家；2026-10-01 公開批評 [[entities/dario-amodei]] 看待 AI 風險的方式「deluded」「crazy」且不懂資安（Fortune 專訪） |
 | [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
 | [[entities/jamie-dimon]] | person | 👤 人物 | active | 摩根大通執行長；2026-10-06 警告 Anthropic 的 Mythos AI 讓網路風險提高 10 倍，彙整 07-16／08-10／10-06 三次公開表態 |
+| [[entities/linus-torvalds]] | person | 👤 人物 | active（單一來源） | Linux 創造者；2026-10-12 被發現用 Claude Code 開發新 kernel 分支 `noref-filemap-read-with-llm`（Phoronix） |
 ---
 
 ## Topics（進行中議題）
