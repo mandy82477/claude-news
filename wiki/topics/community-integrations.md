@@ -3,18 +3,18 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-09"
-last_news_update: "2026-10-07"
+last_updated: "2026-10-12"
+last_news_update: "2026-10-12"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 1
-attribution_count: 0
-attribution_last: null
-top_source: null
+attribution_count: 3
+attribution_last: "2026-10-12"
+top_source: "github"
 pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-10-20"
