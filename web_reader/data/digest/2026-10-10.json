@@ -376,11 +376,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
       "id": "community-interfaces",
       "name": "社群做法：手機遠端、介面與 agent 可視化",
       "pageType": "topic"
@@ -388,11 +383,6 @@
     {
       "id": "community-skills",
       "name": "社群做法：Skills 怎麼寫",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {

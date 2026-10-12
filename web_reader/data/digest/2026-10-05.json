@@ -484,11 +484,6 @@
       "id": "anthropic-commitments",
       "name": "Anthropic 承諾兌現追蹤",
       "pageType": "topic"
-    },
-    {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
     }
   ],
   "reader": {
