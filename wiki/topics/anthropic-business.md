@@ -3,8 +3,8 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-12"
-last_news_update: "2026-10-12"
+last_updated: "2026-10-13"
+last_news_update: "2026-10-13"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-12
-**最後新聞更新：** 2026-10-12
+**最後更新：** 2026-10-13
+**最後新聞更新：** 2026-10-13
 
-> **最新動態**（2026-10-12）
-> HN 今日 233 分熱議重提 10/07 CNBC 報導：研究機構 New Constructs 批 Anthropic IPO「史上最荒謬」；留言指出該機構曾誤判看空 Spotify、Uber 等後皆大漲的 IPO，過往紀錄欠佳。
+> **最新動態**（2026-10-13）
+> CTech：Anthropic 退出收購 Decart 談判，Amazon 可能以 55 億美元接手；同日 Quartz 報導 Q3 財務投資人說明會為 IPO 鋪路。
 
 ---
 
@@ -104,6 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-10-13 Q3 財務投資人說明會**：Quartz 報導 Anthropic 舉行第三季財務投資人說明會，為可能的 IPO 鋪路；延續 07-15／08-14 等既有投資人會議系列信號，本次首次點名「第三季財務」為會議主題；具體與會者、揭露數字均未見報導，僅標題可用（Google News/Quartz）。
 - **2026-10-09 Bloomberg：營收認列「黑盒」難倒交易員**：Anthropic 與 OpenAI 營收認列方式不透明，交易員難判真實財務體質；與既有 Damodaran 門檻、PitchBook 洩露財報同屬估值懷疑系列，數字未見完整轉載，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-08 Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**：考慮參與 Anthropic IPO 的投資人正設法替這項難以量化的變數定價，反映市場對 AI 安全事故外部性的估值方法尚未成熟；具體模型與數字未見報導，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-07 CNBC（10-12 經 HN 233 分重新浮上，今日互動最高）：研究機構 New Constructs 稱將是今年「對投資人輕信程度史上最離譜的一次測試」**：HN 留言指出該機構過去對 Spotify、Uber、CrowdStrike 等後皆大漲的 IPO 同樣看空且預測有誤，過往紀錄欠佳（Hacker News，233 分；Google News/CNBC）。
@@ -570,6 +571,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-13
+- **[併購，僅標題可用] CTech：Amazon 可能以 55 億美元收購 Decart，稱 Anthropic 已退出該筆收購談判**：具體退出原因、交易條款與結案時程均未見報導（Google News/CTech）
+- **[IPO前瞻，僅標題可用] Quartz：Anthropic 舉行第三季財務投資人說明會，為可能的 IPO 鋪路**：詳見「IPO 走到哪一格」細節區（Google News/Quartz）
 
 #### 2026-10-10
 - **[戰略合作] WSJ：共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易**（Hacker News 135 分）：繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作，詳見「算力與資金從哪來」表 SpaceX 列更新；WSJ 原文付費牆，僅標題與 HN 摘要可用（Hacker News/WSJ）

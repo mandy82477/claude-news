@@ -12,11 +12,14 @@
     {
       "name": "Anthropic Blog",
       "slug": "anthropic-blog",
+      "aliases": [
+        "Anthropic Engineering"
+      ],
       "active": true,
       "category": "official",
       "score_reliability": "none",
       "curation_mode": "whitelist",
-      "notes": "官方一手源，無互動分數；收錄即過。"
+      "notes": "官方一手源，無互動分數；收錄即過。「Anthropic Engineering」為 anthropic.com/engineering/ 路徑下文章的 contributor 標籤別名（2026-10-13 發現未註冊，同一官方部落格）。"
     },
     {
       "name": "Anthropic Status",

@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`
 **上層：** [[entities/claude-code]]
 **首次出現：** 2026-09-04
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-13
+**最後新聞更新：** 2026-10-13
 
-> **最新判讀**（2026-10-04）
-> mod 是跑在 Claude Code 行程內的 plugin，官方文件明載它讀得到環境變數與設定檔裡的 API key、不受沙箱隔離；這是設計能力，不是漏洞。裝之前先 `claude plugin validate`，只裝可信來源。
+> **最新判讀**（2026-10-13）
+> MIXED Reality News 報導官方已把九個政策相關變數獨立於外掛可改寫範圍外；原文無可讀內文、單一來源，數字與機制待其他來源佐證。
 
 ---
 
@@ -89,6 +89,8 @@ claude --safe-mode
 
 mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-decoder、The New Stack（10-03）報導 mods 以使用者權限執行、未經沙箱隔離。官方文件已把這些列為 mod 的明載能力，所以「mod 能讀 API key」是設計，不是未公開的漏洞；風險在於裝了不可信的 mod，等於把上述權限全交給它。
 
+- **MIXED Reality News（2026-10-13）**：報導稱官方已將九個政策相關變數（policy variables）隔離於外掛可更動範圍外，裝好的外掛無法直接改寫這些設定；原文無法取得完整內容，具體變數清單與官方文件連結未見報導，單一來源待佐證。
+
 **關閉與管控**：
 
 - 單一 mod：在 `/plugin` 停用。
@@ -117,6 +119,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 - **statuslin.es**：Show HN 的 Claude Code status line 樣式庫，收錄見 [[topics/community-tech-patterns]]。
 - **statuslin.es 作者的 mod**：10-02 用 Mods 的 function hooks 把狀態列延伸進 Claude 桌面 App；HN 2 分＋Reddit r/ClaudeCode 轉發，訊號薄弱，見 [[topics/community-tech-discussions]]。
 - **競品相容層**：Pandaily（經 Google News 轉載，2026-10-04，僅標題可用）報導競品 DeepSeek Harness v0.2.1-alpha.1 新增實驗性 Claude Code Mods 相容層；相容範圍與技術細節未見報導，單一來源。
+- **XDA（2026-10-13，僅標題可用）**：以「像改電玩一樣改 Claude Code」為題，報導外掛／skill 生態系讓使用者客製化介面與行為的玩法；原文無可讀內文，具體 mod 或工具未見報導。
 
 ## 相關議題
 
@@ -135,6 +138,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-13 | MIXED Reality News（單一來源，僅標題）報導九個政策變數隔離於外掛可改寫範圍外；XDA（僅標題）報導外掛／skill 客製化玩法。 |
 | 2026-10-04 | 建頁；依官方 overview 文件整理權限範圍、關閉方式與內建 mods |
 | 2026-10-03 | the-decoder、The New Stack 報導以使用者權限執行、無沙箱；v2.1.288 加入 `$.ui.selection()` |
 | 2026-10-01 | v2.1.287 正式出貨，預設開啟 |

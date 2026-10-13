@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-12
-**最後新聞更新：** 2026-10-12
+**最後更新：** 2026-10-13
+**最後新聞更新：** 2026-10-13
 
-> **本機優先、只在必要時才吃訂閱額度**（2026-10-12）
-> - **Atticus**：macOS 語音助理，簡單操作本機處理，複雜任務才用 `claude -p` 吃既有 Pro／Max 訂閱，不需 API key。
+> **本機優先的用量儀表板再添一款**（2026-10-13）
+> - **tokentab**：免帳號免 API key，本機讀取 Claude Code／Codex／Gemini CLI session log 算用量成本。
 
 ---
 
@@ -73,6 +73,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### yakuikai/tokentab：本機優先、免 API key 讀取三款 CLI session 算用量與成本（2026-10-13）
+
+- **主線：** —
+- **核心模式：** 本機 CLI＋網頁儀表板，直接讀取 Claude Code、Codex、Gemini CLI 的 session log，依模型、專案、日期與活動類型拆算 token 用量與成本；免帳號、免 API key，資料不離開使用者機器；GitHub Search 530 星。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧（MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Pulse、mcptoon、Haiku 5.5 價格閘門）一個「跨三款 CLI 統一讀取、全本機無需任何帳號或金鑰」取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（530★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[tokentab](https://github.com/yakuikai/tokentab)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### SaarthurR/atticus-mac：按住說話的 macOS 語音助理，簡單操作本機處理、複雜任務靠 `claude -p` 吃既有訂閱（2026-10-12）
 

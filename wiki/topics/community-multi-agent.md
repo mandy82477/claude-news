@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-13
+**最後新聞更新：** 2026-10-13
 
-> **最新做法**（2026-10-09）
-> - **自架開源框架再添一款**：zhikuncode 疊加多代理協作、國產模型路由、8 層沙箱與跨會話記憶。
-> - **跨廠商協調器再添一款**：open-mercato/cezar 平行執行 Claude Code、Codex、OpenCode、Pi 等多款 agent。
+> **Agent 規模化添淘汰賽選答案做法**（2026-10-13）
+> - **arena-skill**：同一任務跑 100 個策略變體，以淘汰賽（bracket）篩出單一答案。
 
 ---
 
@@ -136,6 +135,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Jakeschincariol/arena-skill：100 個策略變體淘汰賽選答案的可靠性做法（2026-10-13）
+
+- **主線：** —
+- **核心模式：** Claude Code skill，針對同一任務生成 100 個不同策略的回答版本，以賽制淘汰（bracket）兩兩對決篩選，最終留下一個答案；免費 skill，GitHub Search 534 星。
+- **與既有模式的關係：** 補上「Agent 規模化」既有代表技巧（20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels）一個「單任務大量平行策略變體＋淘汰賽選答案」取向，既有做法多聚焦多 agent 規模化時的資源競爭與通訊，本則把規模化用在同一題的答案品質上；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（534★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[arena-skill](https://github.com/Jakeschincariol/arena-skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### zhikunqingtao/zhikuncode：開源 CLI／Web 雙入口多代理框架，原生接千問／DeepSeek，含 8 層沙箱（2026-10-09）
 

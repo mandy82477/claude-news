@@ -1,0 +1,612 @@
+{
+  "https://github.com/wheresryan22/anatomy": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/lemomo-ai/lemo-opuscar": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/MemTensor/memmy-agent": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/cbrock84/headcount": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/MioMioOS/MioIsland": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/Jakeschincariol/arena-skill": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/yakuikai/tokentab": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.ycombinator.com/item?id=50059096": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/20571": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/bherbruck/solidcraft": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.anthropic.com/research/self-replicating-ai": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.anthropic.com/engineering/redesigning-source-control": {
+    "categories": [
+      "社群",
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/1669": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/2254": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.anthropic.com/research/distillation-defenses": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reuters.com/business/ai-models-may-soon-self-replicate-without-access-data-centers-anthropic-warns-2026-10-13/": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/QingYunA/answer-me-with-html": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/onlyilkr/claude-migrate": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://autographmusic.com": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://getret.app/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/selfishprimate/seekter": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/SamHasler/skills/blob/main/plugins/reference-points/skills/reference-points/README.md": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://dev.to/axrisi/claude-code-and-linus-torvalds-the-linux-patch-tradeoffs-299j": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/josefchen/muster": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/AGGIB/Stroq": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/fdietze/pi-infinite-context": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/prokopai/prokop": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://check-forkcast.tizzy.dev/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/bhurghundii/vibecheck.dev": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0clhORHdTaW1wR01YczJZRXA4aVlwUkVCQTZSSmNyUXFBajFrekFPYWlvNTlQeldXSW9JODduTUU0X0diM2tYelkwb2h5WjV2aXpaN2U4ZW9FU3Q4WHEzRmpYMkx0SENXY1Fj?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x52zi6/simplest_way_to_use_2x_20_accounts_at_once/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x52ti3/i_ported_fsearch_to_windows_wholedisk_file_search/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x52i1r/saw_the_lg_guy_fix_plex_on_his_tv_so_i_fixed_it/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x52hjo/how_do_you_get_claude_opus_55_to_write_simple/": {
+    "categories": [
+      "社群",
+      "模型"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdkZhZFhGT0xoaHUyRy03THJjVlJ4cFl0WUpKTWdqbzZVejdmTmdhbWx2RDB5VDVoX2czeVVPYzBfdEhhWnJROHl1SGpUZDVxSDBwRW5Bc3VVVkVnZDNrYW5DWHVLTjRUdnlUOWlBS1pQbjVjMGc1X1ZmYURwTHZITW41aWRWRHk1RVk4T25R?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x51z0p/anyone_else_lost_in_their_pinned_chats_in_claude/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbHF3OVMzM2VHU2dMOXhSeWUyNGIxLS1CYUFEaHhTZExmanZRQzBFRV90Z3FQUkZ6dXVmNTQ3STBPaEhtNTRKcFMyancyTFFydy16TENCVENTOHhTMEZ5MmhrVnZqWVVWbmlUcFJLZGFSY0dkVXhjd0NpRGRFOE14LTlMNTZpN0FBU2k3LTd1R0J6aWJpOGc?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1x51txi/my_claude_code_setup_persistent_memory_recursive/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMikAFBVV95cUxObFNJd2V3RUJkS1B4Tl84YkxtTHZGdmpKQ0o2aDM2QWdjeldUMEdUMVFuZ2E1cjd4UjZxeDIyRjVnaDltcTR1aXdRSzE0REU1SG1EQkdoTXBLT2V5QWFxMWFYU3c2aHFvYURJWXJ1bmdVQlZKM1RJdDAxNTRUMU5sdTZ0X3JMUlQ5OUFvdDFWZ3Q?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxPVnFYNHhjN2R0R0ZqY0E4UFRTXy00UWZPSkZUbEtsdjNwelBEU1ByRXhUSWp1OGFsOTlUT3ktQ1pMOVpkdGJUeWtEaEhvSi1aTEJNMEdEMjBuYW1lNEhZR0lJUU83cGhCUUprMXY0S3NzaVdlUENRRkY3M20yX0c5ZTRxV2wtTlFzUlE?oc=5": {
+    "categories": [
+      "功能",
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://deepmind.google/blog/gemini-4-argon-for-robotics/": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://deepmind.google/blog/introducing-gemini-4-argon/": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://about.fb.com/news/2026/10/introducing-your-algorithm-facebook/": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMickFVX3lxTFBNcTg4NnNUeEtENXZkNnJySVFIdXJ2R2JkQzJIZ083TmxwTGtoMk02QjVwUi1LbDRjdldYRjc4VjRGTmRYazR0elhHMU9tZ2ZsLTVjUFBVbER1UjZSWkZrYnpJVkg3V01Zbm5QY1d6WnNQZw?oc=5": {
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://about.fb.com/news/2026/10/announcing-the-official-selection-for-the-edits-film-festival/": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wcml0ZF9DMjFHbUtsV1FVek1PRERfQ3l1X2YzWDJhQ1JRMkdFcTF6clBDMGRlcm1GeVRfV0U1Wmg0dk96VXJQT1ZmU09JVmp0cmNpVl9sRzloVUFUQlVLdk1UN3RBZ0RhSTZ0U201cw?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://about.fb.com/news/2026/10/meta-tech-companies-law-enforcement-crackdown-global-scam-networks/": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMilwJBVV95cUxQYmZ2N0NpVXhpQmc3X04zWURQNDAyS3JBclBBZTZ2eWl3bGRVVXRJTGp1NFZhZm56a2FoWXVCWjJISXc3OVluSkREa1hoUWJqNFBLQ0JZaTR1V0N2VDlONzJ5OTlWd0owdVAzaGQ1QmI3eHZoRE43SVg3U0xFZWxXM01uY2xsU1hwZXAzMjRKY1h2ek1xVVprSlZnREd5S0tZQmlWSl9BMTlGWVU1S2dVaWY2Ymo0NGRrd2FnMEgteS1DOHJCV2dTd2Z4YjNkVVlIYlBtRzRjUDB3NThneDhRLTNESG9YTm5ZR01mekVpa0xXTTZRb2N4a19XdFRueWNMZlNySmozVUJhM2FkeU56aXAyelQ1eTQ?oc=5": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiakFVX3lxTE1sODRWV0xaSlhXWENPX21oRldwWmFwVnlxSUI0NDRtMWFiUThzdk1PbERIUjU1Y29paXI3TDRjQ1lqNHJ0U215alF3SEV3SVhqNlVyNGhiVEhJME1JcVl5MWZGM0QycWxvMGc?oc=5": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x4wcnn/is_everyone_in_here_buying_up_smart_tvs_now/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2MUJHazNFM3pfVGQ4U3BEZ3JYaFJ5NXRrY0FWU1JIRG4teUFjNlI4MDVLYk01UXBERzVHVy1FdC1jRTEyakhHS2I3aElLczZtd1N4R0RzOHhpWEE?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObHZpY3YzZElQTTJvbVJFTWRIaFJocF93Z3dETm9BUTBOVENPYnVMRFNJWWt1LVFSQ0NqS3Jwekl1a1hCX0g2bTFlQUJGbUdXQ1JvNVgtVUF2WU1pUHp0M2F0b0UwZFl1N0pGNWx2cU9UTU5QcTRQQXJGSHZVdnRyc1BobjFEOFVo0gGOAUFVX3lxTE1MUlFFTWpjNHFKTFRZWnVPdDR3RElBRUJndEllRXhpQnhJczFjYWtLbXFKQzkyY0RZcUYtRE00TUJtR19iUEJJU2NVVGV2STEtY3JnNGhrc28zQXF1a3RQWkh0RXlkRTVSVlBoVWlLMHkwbGxqY1ZuMjA3ZkRVV2E1b0E4NUdOYUUwLWU2Tnc?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMHBQNEJ3X0lTUndEVGc5Zm9UWk9ELWFxSjUwLTcxSERrV2x6RkF0ZEJSNWJfUWd3RHduUlR5aFdjcm9HeVFOSjA3b3VLaVJqeC1jSU5LRGNKRUM2MWpaYzdLVVJuUWtwWllfWWNncDBtS2gtSkVFWEQ4TnRsWkJTenJnSFBrY2JKX21idkNmUQ?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMizwFBVV95cUxObDFIVHFpeHdyaFNHR192aEFSU2Y0RjRhYktNYU1rNHJaYkMxYjlIaTYzU0RwSDY1T3BhRVVZVEx5c0xocHV1cVF4bkhpY2txVjF0OXI4ckczZmVTYVk4NVhuT0x2U0ZheEZEdkNzTUc4dENTOEtrdFJKODdObU0xYTNpaGtKUE03YjMzb1YwQ3ZwcEZBX1dQWGZVUWh4UG9oc08zV0dTV3hfa0IyYkxETG42WUNoQ1FRbkZJUUFkRHFKOUlOMUxTZ0NKODYyNWc?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9NN1FuaVRxX09XNVg2NE1CcDdCdnZVcE1mbGppeEhBeTFZM3FQeTU5WXpyRkREZWRIQ0M1ZnItaTlxWVlyWm54cy1QY2ZqSklhcHBNV0dJUnNnRHJ2QjNDQjByWGU5c2M?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVFZnZHFlY0QxWV9XbURPeDVpQnlMcWFqaTlDMHRjcWhhLXRhR1hfbTdNeVl3c3dyR3V6V211Wmp5aXNZT1VpN1kwdUs3ZFdBTXB5Z2tEN1JfV2FnUk5FRHpVa2lfRWxENndHaDdNWmRZVUJfQkFody00VG1BNk8wb29Sel9Wd011ampEWXlOQk9xM2x0bkVwTXBib0hEMndtOWNuZXdDWFlEcTRuZzVLRDYxUDFfek9XRTNna3dhZw?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxOX1dFSkRhSXFFR0ZqWklHQnJ4Q3F2MU14Y3dWOGx5SmdubVBsYkVpdG9qblF5VEJfcmVONUlmbHRjSkpxTTlGd1F1YnJlN1FGWGdFTnNMaGNva3Vlc0dvT0JKZURjYWQ0ME1MdlRpUVVJdXlwZUNxZi1uZmwwN2RwZHBFSHpfb1Fsc3d6ZU1Rc016Zw?oc=5": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbTQtSVRsM0pUQnVLVnNvQ1Z5NnlkY2g5UEhDNVZhWnlPaUVsNHhGWm5YY043c3NXZ3hMbm4xcGU4em1zX0h1QW54c2NIWGc0WnpHNG5mX0VUYXBpTFJGOWhrRmZEVmZlRUd3UVg4S3J1S1ZibVZlMzdLUEpoRVRXQlRsaFV6X1dOY2xQN3FjUVhUN3pyeGxTZHlwQ1U1UTgzQW81RnBma3BzWUJqb0lXTEN1MNIBuAFBVV95cUxQRlpTeUFPMnBnakFFSEU0MEFPaHY4czE1RHdrWE1xQkZyc0ZzdFRwRV9WQXF5OWh5VElfN3NlU0FyREMtYl9sUkw2TXN5bUthZWtTWlRxeTRtOFBWdGVBY1VtWnpsdVBITERral9wTVd1aG5vN01WTDhfblIyWmdOWlhuRzJxRk5CeDJCanJQWFZUNlZFU2RNOUxwNFVLdGpwR0RxVjRvYkNEX1V4dldvMGNSWFM3bXMy?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONklPLW0zSkxacTRrcTNjaGhJX1dzcEQyVllUWnctczV3RjdBOWFjQWw1SzB3VUVEWnZDbWk2ZFFOenBrWHpfMkxtanFzNkM4V1Rzb3MwVnp2Sm1LOGgxc3FTYjBjS3pqMWJwd2lfRXoydUZySU1qWXlyR096Zm9qTDh3NWFmSjdfS1V4eWkzT3NDQW9hT0s2VkhoLXFHYk43eV9rMndweU4yQQ?oc=5": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTE9MYmZBV2dtaDZoMUZfVnV0YVpwN1BNb29qckhtZ3lJU3VPNTdxQ0Nrb0tPM2YySlFaMk9yNkFPeTAxQUh3bTNSQkJ0VFNXQXppdTZMa2duTHl6N2xpTEtNUnNXVExkNDdFa2dqMEtwSHdoekhZUHIyWg?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNS1pBZXFfUThVbzNtcUNUUkhFdV9yRGxlNG8yZFo4MEo5QXFzN0NSckVjbEN5MHRqRkV6VnJUeHlzMXJnVHg0LVp2QUxUdVdIV2pWVmRLeVdUNUM1LVhNNHE0N1NDY2FtdjJwS0xEQVpXVldJOXZQNXB6RWdpaFRUdHJwNWxET24xRy1adFJXZUFvcFQtRXZCTDZnTlJ2b2d5elJQTU9vVEQ2Nm02LUhkMDZFb3YtRGQ2Q1RSaUxNM3FmX0VIN0hXVW5aMWZuY1V6WmszLTZZUFJWMG5HLTFxbXRPTFoxYmtINTRLT9IB8gFBVV95cUxQeG5CVG1jZVlJa2ZDdUdFZFN3ZVIxQ2FZYi1Ia21LbHA0VjAtYVdYZi12Sl9BSVZ6c1RUM0lwU2VWWW9sLXBLUGtRelRIaFFKOFpUWWhFa2xrRHVlNFFNOVdSdUViYXhUdF9HSnFyYzhpR0IyalVYbEpVSWxRWUlFMDRwY015QjRtUDRHTWRKZmV5ekdiZUJCQ0tTOVhPT0kxdTFycDVodTNXdldqRXVVejU1Z1lpRHd5TXk1a1YwVldBUF9uUEJNVEphUFpFLXZmVm40amZmdGljQ1AzZ0l3R2RIN0NBcE1fMmJuNlRBR3RKQQ?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQUNzWFVPeTBFYUlOem4zVTRhXzdNSmV4aEx3WDZQZWtiLWlFb09DM1JqT3RqQXhVVjQ2N2U5eWdVbWJvbVZacDdHWG5pZjdteFAzOVRtRkdtSWQxUlBWbkdYRGw3Y1ZaQWdKTmlad1c3Nk1VdUZ1RHRVTzA5SkdBRS03amhzY1VaNW5yN0VWSWNzdWZ2ZC1pNzAyU0pRYTZyVzJvU1Y1YjdsUlJuNnREdGh4WmlpZWRFV1B0U1hR?oc=5": {
+    "categories": [
+      "商業",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x4ii8e/anthropic_is_doing_free_publicity_for_glm_again/": {
+    "categories": [
+      "商業",
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRlVwVUoxaEpsS3JtdXJYM2ZIaUo4ZW9qRVhlWmhRQVFWNzc0UlhIMXNlQ3J1RXMwZ0tMRVQ4blQyR2h6bUhHSzBlYXRfZTNYR2NNQlo0ckFLcEtXbzE4d2dJRUs0eUVnaUFqWk9sR095UHlYYXFKUjNwM0k4ZzZabHBpN0xjNVg1bUZmUQ?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYXhMZEtUN05OU3M4b29fSWNGa09OSFJEXzg2OEFOWGFqVGN2TDFvSXJrNEJzSW5WeTlpcDRWZHpPZmZPZGN1dHpjVHAxNWMyWGU1TVJBOFM3bmFMS2tlVTBPSUJCT2F5ZlpkdHBCRDkxeDhJOU1wXzN4V2hSYnVoN1lacWdrcnlI?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQzZRRWRDWVBHNVVDeTFsT2ZGSGI4bENQT21fd0JDaUkwajhXT3BWRVh0VWN6Q0l6bk5GUnRpMjI2Z05rM1NhZm96NHB3TVRMenowS2k0TURsZ1ljSXpmMW5iZUpkS1lxbGRiYmZNYXpmTk80bmZ4a29SODVXeFhnREtUSHhpUQ?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x4cm73/once_again_anthropic_doing_free_marketing_for/": {
+    "categories": [
+      "商業",
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUEw1Q3g2dXRaQm5YVTlxSU1YMG05ZUNNRzB5U1oyUEdfS28yNEV4dDBEUng5dGo5YUVLUmZSZl9ReEt4d0lFTlEwM0NhVWlDSWFIWHFXR3lZS004YkZ0VDRpeF9jWVVldWtYNHRoOERFOVZKd1hLZ2lIdXNnMzlzTThWcEhsWFctS2U3LVRvMF8xVG9iZzZv?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSER5ZlJwUTROcmZEaU9pY3l3TVh6ZHpCUFcwTElGR0g2dnBicDItUDdrVTBmZnhKTVdiZGYzUmZrUG1GdEstVi1HNmlQN2Q0RHRtWkNhZFlJb3VuNHVwWUNPQk5QYUsySGdGXzJUQlltTDVhNmF2YU5XUjJuQ0g4QzBSYjdyMnhtSlVFYzM5OGJLbkZuX2Zkd19zVThHMFdMVGtZTk5mV0JsN0VPSFg1OXp3OXczdw?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMid0FVX3lxTE50WlVKQWVQZDJBOUh3M29URVE3aERKWG9CUVNtQjk1eDdKTmN2Sl8wamZQeDRPNEltbU1EelhDWWt5VEtyVFVVUkRJQTJNbWFwcnp1UkVTaU90Vkw4R0pKT0gwN1A1cHZ4Tzg0YkJpVlVZNUJGbnRR?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://simonwillison.net/2026/Oct/12/web-edit/": {
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無關（全文談 Codex 與 GPT-6 Astra Extra High，未提及 Claude/Anthropic）",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1x3fxzj/strata_for_glm53_flash_is_here_for_some_project/": {
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無關（全文談 GLM5.3 Flash 與 Project Maya 本地模型效能，未提及 Claude/Anthropic）",
+    "note": "",
+    "summary_override": ""
+  }
+}

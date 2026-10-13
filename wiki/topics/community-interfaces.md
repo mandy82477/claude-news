@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-13
+**最後新聞更新：** 2026-10-13
 
-> **最新做法**（2026-10-10）
-> - **免終端機的桌面殼層同日出現兩款**：codex-host 把 Claude Code 嵌進 Codex Desktop，pi-agent-desktop 自成獨立桌面 app，皆免環境設定。
+> **瀏海狀態小工具再添一款，加上核准互動**（2026-10-13）
+> - **MioIsland**：macOS Dynamic Island 即時監看並核准 Claude Code session，可直接跳轉對應視窗。
 
 ---
 
@@ -56,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### MioMioOS/MioIsland：macOS Dynamic Island 介面監控並核准 Claude Code session（2026-10-13）
+
+- **主線：** —
+- **核心模式：** 利用 macOS Dynamic Island（瀏海）介面即時監看、核准並跳轉到對應的 Claude Code session，不必切到終端機視窗；GitHub Search 539 星。
+- **與既有模式的關係：** 與「Agent 活動可視化」既有代表技巧 coucou（瀏海狀態小工具，2026-10-01）同屬「瀏海／選單列常駐」取向，本則多了核准與跳轉的雙向互動；與 coucou 是否併為同一代表技巧，或與 claude-office 等空間視覺化算不同取向，留待週更判斷（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（539★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[MioIsland](https://github.com/MioMioOS/MioIsland)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### BytePioneer-AI/codex-host：在 Codex Desktop 裡直接跑 Pi 與 Claude Code（2026-10-10）
 
