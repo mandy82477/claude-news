@@ -12,8 +12,8 @@ children: "['topics/anthropic-business-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 135
-attribution_count: 382
-attribution_last: "2026-10-12"
+attribution_count: 384
+attribution_last: "2026-10-13"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
