@@ -7666,3 +7666,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 歸因 news-pipeline（cloud）／功能、商業、安全政策、社群、投資分析
 - devpractice 沉澱：本日無「開發實務」派工條目，未派工
 - market 判讀：新增 1 則（Gemini 4 Argon 全面開放，定價與基準排名過新資訊門檻）；Quartz IPO 投資人會議與 CTech Decart 併購傳聞皆因無具體數字／未直接動到 Anthropic 自身財務數字，未開新則
+- 追記（devpractice 候選流程，前行寫於該流程完成前，資訊不完整）：devpractice 記者仍照常跑每日候選撿選（與「開發實務」派工包是否存在無關），候選 5 筆（entities/claude-code：#20571 VS Code 擴充套件 400 錯誤變通；topics/community-cost：tokentab 本機用量儀表板；topics/community-interfaces：MioIsland macOS 瀏海核准介面；topics/community-multi-agent：arena-skill 淘汰賽選答案；topics/competitor-landscape：Gemini 4 Argon 定價打平 Sonnet 5），已 append `data/devpractice-candidates.jsonl`；手冊正文本次未寫（候選待週度落地）；基準線推進至 5f22905
