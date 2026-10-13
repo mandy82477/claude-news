@@ -7645,3 +7645,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無「開發實務」派工條目，未派工
 - market 判讀：本日無訊號（已檢視 38 條，最接近門檻者為 Anthropic IPO 批評報導與 Meta Muse Wonder 發布，皆未達開新則門檻）
 - 追記（devpractice 候選流程，前行寫於該流程完成前，資訊不完整）：devpractice 記者仍照常跑每日候選撿選（與「開發實務」派工包是否存在無關），候選 2 筆（topics/community-cost：Atticus 本機優先＋`claude -p` 複雜任務才分流；topics/community-guardrails：awesome-claude-code-mods 第三方 mod 安裝前權限審計目錄），已 append `data/devpractice-candidates.jsonl`；手冊正文本次未寫（候選待週度落地）；基準線推進至 d71f264
+
+## 2026-10-13 Ingest
+
+- 來源日報：[[news/2026-10-13]]
+- 更新頁面：
+  - **功能**：entities/claude-code、entities/claude-mods
+  - **商業**：topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement（僅回掃更正「六階→七階」交叉引用，無新聞）
+  - **模型**：無（兩則條目證據強度不足，未動任何頁面）
+  - **社群**：topics/community-tech-discussions、topics/community-multi-agent、topics/community-cost、topics/community-interfaces、topics/community-tech-patterns（母頁：路由表＋模式概覽表三類代表技巧）
+  - **投資分析**：topics/market-signals
+- 新增頁面：無
+- 摘要：Anthropic 同日發布兩篇官方研究（物聯網裝置自我複製風險評估、蒸餾攻擊防禦成效 90–99%）與一篇工程部落格（內部合併規模衝上每日 3 萬次）；Linus Torvalds 把協作 kernel 分支正式送交 Linux 核心信件列表；Google Gemini 4 Argon 全面開放、定價追平 Sonnet 5，為今日最大競品動態。
+- 呈現品質：全部通過（主編修過 2 輪機械閘：功能記者的「覆寫」用語外洩與一筆超限表格儲存格；社群記者一則細節區條列超限、兩筆代表技巧表格儲存格超限，皆已縮短修復，不變更事實）
+- 品質備註：無
+- 分類回退：1 筆駁回——分類複核記者判定「web-edit 0.1a0」誤排除應歸社群，主編核對後維持原排除（該文全文談 Codex／GPT-6 Astra，未提及 Claude/Anthropic，不符 collection-scope.md 基本關聯門檻；複核記者引用的「分流鐵則」管的是官方內容的類別歸屬，不豁免此門檻）
+- 轉知帳本：H-b7ca6a（社群→功能，2026-10-12 新開）本輪功能記者再次確認仍受阻——official-community-gap 矩陣已滿 18/18 列，退場比較需 web 查證與編輯裁量，記者無 web 工具無法完成，維持 open，留待 `/wiki-lint` 5n 或主編查證後處置
+- 懸置標記：本輪各記者待查證命中皆為無（機械掃描 167 筆存量標記，命中 S:0 A:0 B:6，B 級弱訊號依規則不進派工附件）；安全政策記者標 2 筆 ❓ 待查證（Houthis 試射細節是否為新揭露；MCP SDK 漏洞是否與既有 09-28 Cycode 揭露同一漏洞），market 記者另提醒既有 4 筆 ❓ 標記已逾複查日，均非今日命中，留待 `/wiki-lint` 5c
+- 歸因 news-pipeline（cloud）／功能、商業、安全政策、社群、投資分析
+- devpractice 沉澱：本日無「開發實務」派工條目，未派工
+- market 判讀：新增 1 則（Gemini 4 Argon 全面開放，定價與基準排名過新資訊門檻）；Quartz IPO 投資人會議與 CTech Decart 併購傳聞皆因無具體數字／未直接動到 Anthropic 自身財務數字，未開新則
