@@ -367,11 +367,6 @@
   "preview": "Claude Code：風險警示：開沙箱並設 autoAllowBashIfSandboxed: true 後，含 shell expansion 等語法的指令仍會跳出權限提示，自動放行不保證成立（#43713，41 則留言）。",
   "sedimentedToday": [
     {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
       "id": "tom-brown",
       "name": "Tom Brown",
       "pageType": "entity"

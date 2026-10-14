@@ -462,11 +462,6 @@
       "id": "mustafa-suleyman",
       "name": "Mustafa Suleyman",
       "pageType": "entity"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
     }
   ],
   "reader": {
