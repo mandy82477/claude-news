@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-12
-**最後新聞更新：** 2026-10-12
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **創意工具再添兩個**（2026-10-12）
-> - **oil-motion**：做跟著捲動與滑鼠移動的網頁動態效果，GitHub Search 2,575 星。
-> - **Epic Games 官方 Unreal Engine skills**：供 Claude Code 外掛在 Unreal Engine 專案中使用，527 星。
+> **第三款遊戲引擎整合補齊 Unity**（2026-10-14）
+> - **AnkleBreaker-Studio/unity-mcp-server**：MCP server 讓 Claude、Cursor 等 client 連上 Unity Editor，268 個工具涵蓋場景管理、Shader Graph、動畫與多人連線；GitHub Search 504 星，補齊 Godot（GodotMaker）、Unreal（EpicGames 官方）後第三個主流引擎。
 
 ---
 
@@ -59,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### AnkleBreaker-Studio/unity-mcp-server：Unity MCP Server，268 個工具支援 AI 輔助遊戲開發（2026-10-14）
+
+- **主線：** —
+- **核心模式：** MCP server 讓 Claude、Cursor 等任何 MCP client 連上 Unity Editor／Unity Hub，提供 268 個工具涵蓋場景管理、GameObject／元件、建置、效能分析、Shader Graph、Amplify、地形、物理、NavMesh、動畫與 MPPM 多人連線；免費開源；GitHub Search 504 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（GodotMaker、EpicGames Unreal Engine skills）第三款引擎整合，補齊 Unity；三者工具形態不同，暫各自列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 經查 forks 65（約星數 12.9%，高於 1/10 健康區間）；開發方為具名遊戲工作室組織帳號（非個人），倉庫 10-06 仍有實質 push。
+- **來源：** GitHub Search；[GitHub](https://github.com/AnkleBreaker-Studio/unity-mcp-server)
+- **成熟度：** ⏳ 新興（本庫首次收錄，具名工作室開發，尚無社群採用回饋數據）
 
 #### oil-oil/oil-motion：網頁動畫 skill，做出跟著捲動與滑鼠移動的網頁動態效果（2026-10-12）
 

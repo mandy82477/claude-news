@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **最新動態**（2026-10-13）
-> - 風險警示：VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤，CLI 版不受影響，可暫時切換至 CLI 版；短時間內累積 133 則留言、183 個讚（#20571）。
+> **最新動態**（2026-10-14）
+> v2.1.299 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`：開啟後 `@` 檔案提及只傳路徑、交既有工具讀取，不再直接灌入檔案全文。
 
 ---
 
@@ -42,6 +42,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.299**（2026-10-14）：新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS` 環境變數——開啟後 Claude 僅取得 `@` 檔案提及的路徑，交既有檔案工具讀取，不再直接把檔案內容灌入 context；另提及新增 idle compaction 相關改動，官方原文截斷、細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）。
+  同版 build 另新增 13 個功能候選旗標（自 2.1.296 起累積），`CLAUDE_CODE_WEBSEARCH_CITATIONS_DECLARED` 消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.295**（2026-10-08）：command／HTTP hook 新增 `onFailure: "block"`——hook 無法啟動、逾時或退出碼異常時，動作直接被阻擋，不再放行（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）。
   Bedrock、Vertex、Foundry 的 token 計數改用 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
   同版 build 另新增 5 個功能候選旗標，消失 2 個（`ARTIFACT_FIVE_CLASS_ASKS`、`INTRO_FRAME`），追蹤見 [[topics/claude-code-experimental]]。
@@ -77,6 +79,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-14）：桌面版文件大幅擴充（99,435→122,477 字，新增 122 段、移除 6 段），集中於 SSH 遠端工作流程——連線遠端機器的需求、macOS／Linux 沿用既有 SSH 設定、Windows 遠端機器支援，以及 Desktop 離線時任務在背景持續執行、連回後處理期間送達的請求（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-11）：桌面版文件新增說明——本機 session 在**設定 > Claude Code**設 Worktree location；SSH session 則在連線設定 Worktree folder（遠端路徑，如 `~/worktrees`）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-09）：桌面版文件新增說明——Code 分頁的本機 session 現顯示獨立版本號；側邊欄「+ New session」或 macOS `Cmd+N`／Windows `Ctrl+N` 可開新 session，同時處理多項工作（文件字數 93,648→94,202）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-08）：桌面版文件新增 SSH session 連線管理說明，可從連結開啟 SSH session，分「已有連線」與「新連線」；另新增跨裝置控制 session 可見度的設定（新增 60 段、移除 13 段）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -320,7 +323,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 單一使用者自製工具測試，無官方確認；與既有「疑降 effort」訊號方向相反（本則疑升），見 [[topics/code-quality-decline]]。
 - 🔴 **未修復**｜**Speed Bumps 增加**（2026-04-29 回報）：多位長期使用者反映本週起 Claude Code 明顯增加中途暫停詢問的頻率，即使簡單任務也頻繁打斷工作流程，社群猜測與系統層級的行為調整有關，無官方說明
 - 🔴 **未修復**｜**CLAUDE.md 作為 candidate-context 而非強制系統提示**（2026-05-10 社群發現）：社群逆向工程 Claude CLI 後發現 CLAUDE.md 被以 `<system-reminder>` 標籤包裹，並附帶「this context may or may not be relevant to your tasks」提示，模型有充分理由跳過其中指令；這直接解釋了開發者長期遭遇的「CLAUDE.md 指令被忽略」問題；Anthropic 尚未正式回應此架構設計決策。
-- 🔴 **未修復**｜**CLI TUI 模式下無法捲動回看完整對話歷史（GitHub issue #28077，累積 37 則留言、80 個讚，首見 2026-07-13，2026-08-24 讚數更新）**：使用者反映 CLI TUI 模式下，較舊訊息會變成無法捲動回看，即使尚未觸發 context 壓縮，終端機本身的 scrollback 功能亦無法彌補此問題；官方尚未回應。
+- 🔴 **未修復**｜**CLI TUI 模式下無法捲動回看完整對話歷史（GitHub issue #28077，累積 45 則留言、80 個讚，首見 2026-07-13，2026-10-14 留言數更新）**：使用者反映 CLI TUI 模式下，較舊訊息會變成無法捲動回看，即使尚未觸發 context 壓縮，終端機本身的 scrollback 功能亦無法彌補此問題；官方尚未回應。
 - 🔎 **查無官方**（標 2026-08-09｜查 #69238、Advisor｜複 2026-10-04）｜**Advisor 觸發時偶發「No response from API」錯誤（issue #69238，67 則留言、118 個讚，2026-10-05 互動數更新）**：Opus 4.8 進行 advising 時偶發 API 無回應；issue 仍 open，成因未明。
 - 🔎 **查無官方**（標 2026-08-09｜查 #60705、stop-hook｜複 2026-10-13｜訊 2026-09-16）｜**三種模型行為模式**（[#60705](https://github.com/anthropics/claude-code/issues/60705)，181 則留言，09-16 快照）：官方全程零回應，非拒修。
   - 單一使用者回報：① `/goal` 的 stop-hook 指令被引用為執行未請求動作的授權依據 ② 搜尋不到即視為不存在 ③ 被質疑時以結構性回應取代實質修正；回報者認為屬 model-side，使用者端 `~/.claude/CLAUDE.md` 攔不住。
@@ -468,7 +471,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 66 則留言、58 個讚，2026-09-19 首見，2026-10-12 互動數更新）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**macOS 持續性 ECONNRESET 連線錯誤（GitHub issue #5674，累積 54 則留言、54 個讚，首見 2026-07-06，2026-09-21 互動數更新）**：僅在 macOS 上出現的持續性連線中斷問題（ECONNRESET），連線中斷導致任務被打斷，Windows 環境未見同樣狀況，疑為平台特定的網路層處理差異；官方尚未回應。
 - 🔴 **未修復**｜**Linux 上持續產生 Windows 換行（CRLF）檔案（GitHub issue #2805，累積 52 則留言、35 個讚，首見 2026-07-06，2026-08-25 互動數更新）**：即便 CLAUDE.md 已明確指示使用 LF 換行，Claude Code 在 Ubuntu Linux 上仍持續產生 CRLF 換行的檔案，跨平台團隊協作時易引發不必要的 diff 雜訊；官方尚未回應。
-- 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 62 則留言、36 個讚，首見 2026-07-06，2026-08-17 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
+- 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 65 則留言、38 個讚，首見 2026-07-06，2026-10-14 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
 - 🔴 **未修復**｜**mapped drives / OneDrive 專案對話歷史無法保存（GitHub issue #14088，累積 39 則留言、13 個讚，2026-07-06）**：存放在網路磁碟機或 OneDrive 路徑下的專案，對話歷史無法正確保存，可能與路徑格式或雲端同步鎖定機制衝突；官方尚未回應。
 - 🔴 **未修復**｜**Windows IDE 擴充套件全面無法載入**（2026-05-09 UTC 00:24）：更新版本將 Linux 路徑硬編碼進擴充套件，導致 VS Code 等 IDE 在 Windows 上全面無法啟動，官方已確認並在狀態頁追蹤；臨時解法：降版至前一版本；此為第二次 Windows 平台相容性重大事故（見 2026-05-06 v2.1.131 緊急修復）。
 - 🔴 **未修復**｜**Bedrock 功能相容性落差（持續）**（2026-05-07 再次回報）：Claude Code 透過 AWS Bedrock 接入時功能異常，社群指出 Bedrock 與 Anthropic 直接服務的新功能同步速度慣常落後，每次新功能發布後的相容性落差問題已成常態。
@@ -568,6 +571,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.299** | 2026-10-14 | 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS` 環境變數：開啟後 `@` 檔案提及只傳路徑交既有工具讀取，不直接讀入檔案內容；另提及新增 idle compaction，原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）|
 | **v2.1.296** | 2026-10-09 | Claude apps gateway `managed.policies[]` 新增 `code` 鍵：套用與 `cli` 相同設定，獨立套用到 Claude Desktop 的「Code」分頁（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.296)）|
 | **v2.1.295** | 2026-10-08 | 新增 hook `onFailure: "block"`；Bedrock/Vertex/Foundry token 計數改用 CountTokens API；MCP 工具描述上限 2,048→16,384 字元（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）|
 | **anthropic-sdk-typescript sdk-v0.133.0** | 2026-10-09 | 新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.133.0)）|
@@ -888,6 +892,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-14 | **v2.1.299**：新增 `DISABLE_FILE_MENTIONS`；旗標增 13 消 1，見 [[topics/claude-code-experimental]]。桌面文件擴充 122 段（SSH）。 |
 | 2026-10-13 | 新增已知問題 1 則（#20571 VS Code 擴充套件 400 錯誤，133 則留言，今日全站最高）。互動數更新 2 則：#2254（151 讚、47 則留言）、#1669（51 則留言、86 讚）。 |
 | 2026-10-12 | 桌面版文件新增 SSH host 組態設定。新增已知問題 1 則（#50674 ARM64）。互動數更新 4 則：#92984（今日全站最高）、#34556、#11315、#14131。 |
 | 2026-10-09 | **v2.1.295**：hook `onFailure: "block"` 與官方安全建議有落差。旗標增 5 消 2，見 [[topics/claude-code-experimental]]。 |

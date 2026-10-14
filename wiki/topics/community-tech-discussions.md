@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **Linus Torvalds 正式送出 kernel patch**（2026-10-13）
-> 從「意外發現分支」升級為正式送交 patch 並親自聲明；人物背景見 [[entities/linus-torvalds]]。
+> **官方部落格「重新設計原始碼控制」延燒進第二天**（2026-10-14）
+> Anthropic 工程部落格文章登上 HN 熱門，835 分、6 個來源轉載；內容本身非新事實，商業面意涵見 [[topics/anthropic-business]]。
 
 ---
 
@@ -153,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Anthropic 工程部落格「重新設計原始碼控制」登 HN 熱門，延燒進第二天 | 2026-10-13 · 2026-10-14 | 🔥🔥🔥🔥🔥 | ☄️閃現 | 835 分、6 個來源跨平台轉載；內容已於 10-13 報導完整，本則記延燒（見 [[topics/community-tech-discussions#2026-10]]） | — |
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
 | Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-13 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch 並親自聲明由 Claude Code 完成，dev.to 指出有 regression 權衡（2 來源） | — |
 | Reddit 使用者稱用 Claude Code 輔助分析找到疑似未知行星，留言提及類似自主流程已用於超導材料研究 | 2026-10-08 · 2026-10-08 | 🔥🔥🔥 | ☄️閃現 | 使用者稱用 Claude Code 輔助分析資料找到疑似未知行星；留言稱類似自主 agent 研究流程已在超導材料系統上有新進展；HN score 67（原帖為 Reddit） | — |
@@ -260,6 +261,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### Anthropic 工程部落格「重新設計原始碼控制」登上 HN 熱門，熱度延燒進第二天（2026-10-14）
+
+- **來源：** Redesigning source control at Anthropic — Hacker News ＋ Blog / Simon Willison、Google News / Anthropic、HN Repo Bridge（835 分，6 個來源）；[原文](https://www.anthropic.com/engineering/redesigning-source-control)
+- **核心論點：** Anthropic 工程部落格文章談為因應 Claude 自主產出程式碼規模暴增而重新設計原始碼控制系統；文章 10-13 發布，10-14（第二天）登上 HN 熱門榜，累計拿下 835 分、被 6 個不同來源轉載討論。商業面意涵見 [[topics/anthropic-business]]，本頁僅記錄其在社群本身的討論熱度。
+- **關鍵回響：**（本次摘要未提供留言區正反意見細節，僅見跨平台轉載規模）
+- **收斂結論：**（無）文章內容本身已於 [[news/2026-10-13]] 完整報導；本則只記錄熱度延燒到第二天，非新事實
 
 #### Linus Torvalds 把 Claude Code 協作的 kernel 分支正式送出 patch，親自聲明程式碼由 LLM 完成（2026-10-13）
 

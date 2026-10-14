@@ -31,11 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **最新做法**（2026-10-10）
-> - **三個新垂直領域 skill 同日出現**：scroll-craft 做滾動視差網站、mortiflix-oss 逐階段產影片待人核准、awesome-claude-video-skills 彙整 180 個影片生成 skill 倉庫。
+> **一次收兩款高星 UI 設計 skill，另補測試與研究垂直領域**（2026-10-14）
+> - **taste-skill（96,073★）與 oil-ui（1,466★）同日出現**：皆鎖定「給 agent 用的 UI／前端視覺判斷」，前者走藝術指導＋瀏覽器自檢，後者走多方案並排比較＋截圖細修。
+> - **可靠性測試垂直領域回補一例**：proffesor-for-testing/agentic-qe 是多 agent QA／QE 測試艦隊，500★、100 forks、74 個開放 issue。
+> - **學術研究審查 skill 合集**：claesbackman/AI-research-feedback，500★。
 
 ---
 
@@ -68,6 +70,42 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Leonxlnx/taste-skill：給 coding agent 加上「品味」的 agent skill——藝術指導、參考圖片比對與瀏覽器自檢，取代泛用 AI 風格頁面（2026-10-14）
+
+- **主線：** —
+- **核心模式：** Agent skill 讓 coding agent 產出網頁前先建立藝術指導（art direction）、比對參考圖片，再用瀏覽器實際檢視渲染結果，取代直接生成「一看就是 AI 做的」泛用頁面樣式；GitHub Search 96,073 星（存量盤點，2026-02-19 建倉，本庫首次收錄）。
+- **與既有模式的關係：** 為「Skills 設計」補上「視覺品味／防 AI 樣板感」取向，與同日 oil-oil/oil-ui（見下）同鎖定 UI／前端視覺，差異在本則走「藝術指導＋參考圖比對＋瀏覽器自檢」，oil-ui 走「多方案並排比較＋截圖細修」，方法不同暫不合併；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 經查 forks 6,535（約星數 6.8%，接近 1/10 健康區間），倉庫今日仍有 push 活動，非純刷星空殼；open issues 為 0，無法排除低活躍度。
+- **來源：** GitHub Search；[GitHub](https://github.com/Leonxlnx/taste-skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### oil-oil/oil-ui：給 AI Agent 用的 UI 設計 skill——探索多個設計方向、並排比較、依真實截圖細修（2026-10-14）
+
+- **主線：** —
+- **核心模式：** UI 設計 skill，給 Claude Code、Codex 等 coding agent 用：先產生多個風格迥異的設計方向，再並排比較，最後依實際截圖反覆細修；GitHub Search 1,466 星。
+- **與既有模式的關係：** 與上則 Leonxlnx/taste-skill 同屬「Skills 設計」補上的 UI／前端視覺取向，差異見上；兩套機制不同，暫不合併為一列（推論：此垂直細分可能持續出現多個競品）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** forks 僅 79（約星數 5.4%，低於 1/10 健康區間），但 2026-09-30 建倉、10-14 已破千星成長快速，倉庫今日仍有 push 活動；單一訊號不足判定造假，列為需留意的星數成長速度。
+- **來源：** GitHub Search；[GitHub](https://github.com/oil-oil/oil-ui)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### claesbackman/AI-research-feedback：給學術研究審查用的 Claude Code Skills 合集（2026-10-14）
+
+- **主線：** —
+- **核心模式：** 一組 Claude Code skills，供學術研究論文審查流程使用，由作者 Claes Bäckman 開發；GitHub Search 500 星。
+- **與既有模式的關係：** 為「Skills 設計」再補一個垂直領域——學術研究審查，與既有創業商業（emotixco/claude-skills-founder）、金融分析（RKiding/Awesome-finance-skills）等領域垂直合集同類，服務對象換成學術審稿；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 經查 forks 93（約星數 18.6%，高於 1/10 健康區間），倉庫今日仍有 push 活動。
+- **來源：** GitHub Search；[GitHub](https://github.com/claesbackman/AI-research-feedback)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### proffesor-for-testing/agentic-qe：Agentic QE Fleet，給 Coding Agent 用的開源 AI QA／QE 測試平台（2026-10-14）
+
+- **主線：** —
+- **核心模式：** 開源 AI 驅動 QA／QE 平台，設計給 coding agent 使用（與 Claude Code 搭配最佳），內建一組專職 agent 與 skill，支援產品 SDLC 各階段的測試活動；基於作者先前的 Agentic QE Framework；GitHub Search 500 星、100 forks、74 個開放 issue。
+- **與既有模式的關係：** 為「可靠性測試」補上「多 agent 測試艦隊」取向——既有該類別做法多是單一 linter／pass@k 量測工具（Caliper、Skill Linter），本則把測試活動拆給多個專職 agent 執行；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** forks/星數比約 20%（100/500），74 個開放 issue 顯示有真實使用者互動，非純刷星空殼。
+- **來源：** GitHub Search；[GitHub](https://github.com/proffesor-for-testing/agentic-qe)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，有真實 issue 互動但尚無社群採用回饋數據）
 
 #### nateherkai/scroll-craft：打造高質感 scroll-driven 網站的 agent skill，相容 Claude Code、Codex，另有 plugin 版（2026-10-10）
 

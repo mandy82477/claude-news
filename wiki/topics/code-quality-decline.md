@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **Token 消耗訊號再添一筆**（2026-10-09）
-> - r/ClaudeCode 貼文稱週配額重置 24 小時後已耗用 30%，無互動數佐證，訊號方向與既有九則一致。
+> **新增一種自己量的角度：量「加了多少程式碼」**（2026-10-14）
+> - 開源 benchmark Parsimony 拿既有 benchmark 的 patch 數 coding units，衡量模型解題時加了多少額外程式碼，跨模型比較、非 Claude 前後對照；HN score 72。
 > - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
 
 ---
@@ -77,6 +77,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 本庫沒有把 CC-Canary 列為推薦工具（社群工具目錄對這個症狀還沒有首選）——它給你的是自己跟自己比的一條線，不是外部基準。
 
 另一條路是 LiveNerf（2026-09-27 首見）：社群針對「Opus 5.5 是否被降智」設計的即時基準測試，持續追蹤模型表現有無隨時間變化。本站尚未查證其方法論與資料來源，同樣不列為推薦工具，僅記錄其存在（[原文](https://www.reddit.com/r/ClaudeAI/comments/1wryrwx/is_opus_55_nerfed_new_benchmark_called_livenerf/)）。dev.to 後續貼文（2026-09-30）稱已建立第 0 天基準線、連測 30 天，最早約 10-24 才有結論（[原文](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)）；模型面見 [[entities/opus-5-5]]。
+
+**另一個方向：量「加了多少程式碼」而非「對不對」**：Parsimony（2026-10-14 首見）是開源 benchmark，拿 DeepSWE、SWE-bench Verified／Live 等既有 benchmark 已公開的 patch，數「coding units」（語句、呼叫、命名等語法元素），衡量模型解題時額外加了多少程式碼而非只看解題率；跨模型比較，不是你自己的 session 前後對照，可用來對照 Claude 的程式碼精簡度，長期維護成本高、不想讓 agent 把 codebase 越寫越肥的團隊可參考；HN score 72（[原文](https://parsimony.lasu.dev/)）。
 
 **🧰 現在就能下的解**：先量 context 組成再怪工具——官方 `/context` 看各類別佔用（[[topics/community-large-codebase-workflow]] 線 2），還不確定誰在撐爆就照 [[topics/community-tech-tools]]「context 一直被工具輸出撐爆」列第三欄先跑 PrismoDev 診斷；決策表沒有專為感覺變笨、想先量測歸因而設的列。%% —（決策表暫無對應列｜候選症狀：感覺變笨，想先量測歸因） %%
 
@@ -247,6 +249,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-10
+
+#### 2026-10-14
+- **Show HN: Parsimony——開源 benchmark 衡量 AI 模型解題時額外加了多少程式碼**：數既有 benchmark patch 的「coding units」，衡量模型是否把 codebase 越寫越肥；跨模型比較、非 Claude 前後對照，詳見「怎麼自己量一次」（來源：[原文](https://parsimony.lasu.dev/)，HN 72 分）
 
 #### 2026-10-06
 - **「HOLY ULTRA OUTPUT TOKENS BATMAN! WHAT ARE THEY SMOKING OVER THERE?」：Token 消耗異常訊號群現象延續**：r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量異常暴增，引發不滿；單一貼文、無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wz2p4d/holy_ultra_output_tokens_batman_what_are_they/)）

@@ -28,11 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **最新動態**（2026-10-13）
-> CTech：Anthropic 退出收購 Decart 談判，Amazon 可能以 55 億美元接手；同日 Quartz 報導 Q3 財務投資人說明會為 IPO 鋪路。
+> **最新動態**（2026-10-14）
+> - **戰略擴張**：Anthropic 新加坡開設亞太第五辦公室並與當地政府簽署 MOU，點名 GovTech、Grab、DBS 為既有客戶。
+> - **夥伴網路**：Tenth Revolution Group 取得 Claude Partner Network Select 資格，延續近期認證潮。
+> - **IPO前瞻**：CNBC 稱 Anthropic 將揭露新營收數字，具體數字未見報導。
 
 ---
 
@@ -105,6 +107,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **IPO 細節**
 - **2026-10-13 Q3 財務投資人說明會**：Quartz 報導 Anthropic 舉行第三季財務投資人說明會，為可能的 IPO 鋪路；延續 07-15／08-14 等既有投資人會議系列信號，本次首次點名「第三季財務」為會議主題；具體與會者、揭露數字均未見報導，僅標題可用（Google News/Quartz）。
+- **2026-10-13 CNBC：隨 AI 實驗室財務漸成科技業焦點，Anthropic 擬揭露新營收數字**：具體數字、揭露範疇與時程均未見報導，與既有營收認列「黑盒」（10-09 Bloomberg）同屬財務透明度系列，僅標題可用（Google News/CNBC）。
 - **2026-10-09 Bloomberg：營收認列「黑盒」難倒交易員**：Anthropic 與 OpenAI 營收認列方式不透明，交易員難判真實財務體質；與既有 Damodaran 門檻、PitchBook 洩露財報同屬估值懷疑系列，數字未見完整轉載，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-08 Bloomberg：IPO 投資人設法替「失控 AI 風險」定價**：考慮參與 Anthropic IPO 的投資人正設法替這項難以量化的變數定價，反映市場對 AI 安全事故外部性的估值方法尚未成熟；具體模型與數字未見報導，僅標題可用（Google News/Bloomberg.com）。
 - **2026-10-07 CNBC（10-12 經 HN 233 分重新浮上，今日互動最高）：研究機構 New Constructs 稱將是今年「對投資人輕信程度史上最離譜的一次測試」**：HN 留言指出該機構過去對 Spotify、Uber、CrowdStrike 等後皆大漲的 IPO 同樣看空且預測有誤，過往紀錄欠佳（Hacker News，233 分；Google News/CNBC）。
@@ -373,6 +376,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Anthropic（新加坡辦公室）**（2026-10-14）：於新加坡開設亞太區第五個辦公室，並與新加坡數位發展與資訊部簽署 MOU；官方點名 GovTech Singapore、Grab、DBS 為既有 Claude 使用方，具體採用規模與產品線未見報導（Anthropic Blog）
+- **Tenth Revolution Group**（2026-10-14）：取得 Claude Partner Network「Select」夥伴資格，延續 Fabric（09-28）、IPC Global（10-05）、Nimble.LA（10-06）、Intuitive.ai（10-07）同系列夥伴認證，具體權益未見報導（Google News/HRTech Series）
 - **Aditi Consulting**（2026-10-08）：達成 Anthropic「Select Tier」夥伴資格，稱已在自家業務與客戶環境全面導入 Claude 投入生產，具體權益與資格門檻未見報導（Google News/DevOps.com）
 - **Hexaware**（2026-10-08）：成為 Anthropic Preferred Partner，將 Claude 導入其 AI-native 平台核心，具體權益未見報導（Google News/PR Newswire）
 - **OutSystems**（2026-10-08）：Agent Experience 平台開放支援 Claude Code 與 Cursor，具體整合範疇未見報導（Google News/Techzine Global）
@@ -572,9 +577,14 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 ### 2026-10
 
+#### 2026-10-14
+- **[戰略合作，官方一手] Anthropic 在新加坡開設亞太區第五個辦公室，並與新加坡數位發展與資訊部簽署 MOU**：官方點名 GovTech Singapore、Grab、DBS 為既有 Claude 使用方，具體採用規模與產品線未見報導，詳見「哪個合作會改到你用的 Claude」一行制清單（Anthropic Blog）
+- **[戰略合作，僅標題可用] Tenth Revolution Group 取得 Anthropic Claude Partner Network「Select」夥伴資格**：延續近期 Fabric、IPC Global、Nimble.LA、Intuitive.ai 同系列夥伴認證公告，詳見「哪個合作會改到你用的 Claude」一行制清單（Google News/HRTech Series）
+
 #### 2026-10-13
 - **[併購，僅標題可用] CTech：Amazon 可能以 55 億美元收購 Decart，稱 Anthropic 已退出該筆收購談判**：具體退出原因、交易條款與結案時程均未見報導（Google News/CTech）
 - **[IPO前瞻，僅標題可用] Quartz：Anthropic 舉行第三季財務投資人說明會，為可能的 IPO 鋪路**：詳見「IPO 走到哪一格」細節區（Google News/Quartz）
+- **[IPO前瞻，僅標題可用] CNBC：隨 AI 實驗室財務漸成科技業焦點，Anthropic 擬揭露新營收數字**：具體數字、揭露範疇與時程均未見報導，詳見「IPO 走到哪一格」細節區（Google News/CNBC）
 
 #### 2026-10-10
 - **[戰略合作] WSJ：共同創辦人 Tom Brown 利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易**（Hacker News 135 分）：繼 Broadcom 晶片租賃融資案後又一筆牽動算力到位時程的資金動作，詳見「算力與資金從哪來」表 SpaceX 列更新；WSJ 原文付費牆，僅標題與 HN 摘要可用（Hacker News/WSJ）

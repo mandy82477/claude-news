@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 
-> **最新計費政策異動**（2026-10-11）
-> 社群回報 Claude Code 2.1.289 成本顯示把 Haiku 5.5 計成 Opus 費率，誤差達 17 倍，單一回報尚未官方確認；另官方文件新增說明：Auto mode 分類器請求未送達時會自行計入用量，非新收費。
+> **最新計費政策異動**（2026-10-14）
+> 官方 API 定價頁 Managed Agents 範例模型從 Opus 5 換成 Opus 5.5：同情境（40k／50k 輸入走快取）總成本由 $0.525 降至 $0.428；無快取版本同步確認由 $0.705 降至 $0.58（2026-10-14 WebFetch 查證）。
 
 ## 現況
 
@@ -97,13 +97,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本頁給的是「一小時多少」，[[topics/model-comparison#同一份工作，換設定差多少]] 給的是「這一件工作多少」。
 
-> 本表假設：**一小時 agent 工作 ＝ 50k 輸入 ＋ 15k 輸出 token ＋ 一個 session-hour**，取自官方 Managed Agents 算例。只有 Opus 5 那列是官方算的，其餘是同一份工作量代入各自牌價的推算，**不是實測**。資料截至 2026-09-06（Managed Agents 為 beta，須 beta header）。
+> 本表假設：**一小時 agent 工作 ＝ 50k 輸入 ＋ 15k 輸出 token ＋ 一個 session-hour**，取自官方 Managed Agents 算例。**2026-10-14 官方範例模型已從 Opus 5 換成 Opus 5.5**（WebFetch 官方定價頁逐字查證），下表數字除另註明外皆為推算，**不是實測**。資料截至 2026-10-14（Managed Agents 為 beta，須 beta header）。
 
 | 模型 | 一小時 | 一個月（每天 4 小時 × 22 天） | 這個數字哪來的 |
 |------|--------|------|------|
-| Opus 5 | $0.705 | 約 $62 | 官方算例逐字 |
+| Opus 5.5 | 約 $0.58 | 約 $51 | **官方算例逐字確認**（input $0.20＋output $0.30＋session-hour $0.08，2026-10-14 WebFetch 查證）|
 | Fable 5.1 | 約 $1.33 | 約 $117 | 推算（$10/$50 牌價代入同一 token 量）|
 | Sonnet 5.5（09-28 起為預設，同 Sonnet 5 價）| 約 $0.33 | 約 $29 | 推算（$2/$10 牌價代入同一 token 量）|
+
+**已查證的官方新數字（2026-10-14，WebFetch 逐字核對官方定價頁）**：官方算例確認無快取情境總成本為 **$0.58**（input $0.20＋output $0.30＋session-hour $0.08），40k／50k 輸入走快取情境下總成本為 **$0.428**（uncached input $0.04＋cache read $0.008＋output $0.30＋session-hour $0.08），兩者皆較 Opus 5 時代同情境下降：Opus 5 無快取 $0.705、快取 $0.525（已被取代，供對照）。
 
 **$100 買得到多少 API 用量**：以上表口徑（透過 Managed Agents 跑），$100 約等於 Fable 5.1 的 **75 小時**、Opus 5 的 **142 小時**；直接呼叫 API 沒有 $0.08 的 session-hour，同一份工作量約 **80 小時**與 **160 小時**。**這不是「訂閱划不划算」的答案**——Max 5x 的 $100 買的是週配額，其中旗艦（Fable 5）只能用到週用量的 50%，超出後一樣按 API 費率扣 usage credits（見上方「我的方案現在有什麼」）。兩種貨幣不可直接相除。
 
@@ -178,7 +180,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **✅ 官方說明中心 2026-09-14 確認換軌如期發生，5 小時上限計算方式不受影響**：促銷 09-13 到期、週用量自 09-14 起回復標準額度（即上方 +25% 永久規則）；澄清見「重要政策變動紀錄」09-14 條目（[來源](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)）
 - **✅ Managed Agents 計費＝token＋session runtime（官方定價頁，2026-09-06 查證）**：token 依模型牌價（快取乘數、web search $10／1,000 次、`inference_geo` 1.1×、fast mode 溢價皆照 API 規則）；runtime **$0.08／session-hour**，只計 `running`
 - 上條來源：[Managed Agents pricing](https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing)；`idle`／`rescheduling`／`terminated` 不計時，毫秒計量
-- **Managed Agents 不適用 Batch 折扣與 partner 雲端**（Bedrock／Vertex 無此產品）；runtime 取代 code execution 的 container-hour，不重複收。官方算例：Opus 5 跑 1 小時、50k 輸入／15k 輸出 ≈ **$0.705**，40k 輸入走快取 ≈ $0.525
+- **Managed Agents 不適用 Batch 折扣與 partner 雲端**（Bedrock／Vertex 無此產品）；runtime 取代 code execution 的 container-hour，不重複收
+- **官方算例已換模型（2026-10-14 WebFetch 逐字查證）**：現以 Opus 5.5 為例，1 小時、50k 輸入／15k 輸出，無快取 ≈ **$0.58**、40k 輸入走快取 ≈ **$0.428**（舊版 Opus 5 同情境分別為 $0.705／$0.525，已被取代），見「一小時／一個月大概多少」表
 - **Managed Agents 框架整體仍 beta**（須 `managed-agents-2026-04-01` header；[overview](https://platform.claude.com/docs/en/managed-agents/overview)，2026-09-06 查證）；選型與零件成熟度見 [[entities/managed-agents]]
 - **✅ 2026-07-20 生效｜旗艦模型的訂閱分界（官方文件已確認）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用至多**每週用量上限的 50%**，不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率（$10/$50 per Mtok）付費。合格 Pro 與 Team standard seats 另有**一次性過渡 credit $100**（Team 每 standard seat $100、每組織上限 $2,500），領取窗已於 2026-08-02 關閉、已領 credits 於 2026-09-17 到期，且可用於任何模型（[官方促銷條目](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。先前將 Fable 5 納入方案週用量的促銷結束於 2026-07-19 23:59:59 PT（來源：[Claude Fable 5 on your plan](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)，2026-08-08 查證）
 - **⚠️ usage credits 開啟後，方案用量上限不再是硬停止**：credits 為 opt-in、預設關閉，於 `Settings > Usage` 開關，可設 auto-reload（每日兌換上限 $2,000）。開啟後 Claude 會在額度用盡後繼續回答並從 credits 扣款，體感與額度內無異，但每則超額回應皆計費——靠方案硬上限控管支出者需主動確認此開關（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-08-08 查證）
@@ -477,6 +480,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-10-14：官方 API 定價頁 Managed Agents 範例模型從 Opus 5 換成 Opus 5.5
+
+- **Official Docs 異動（diff 偵測）**：platform.claude.com/docs/en/about-claude/pricing 新增 6 段、移除 7 段，範例標題由「...using Claude Opus 5」改為「...using Claude Opus 5.5」；新增段落含快取讀取、輸入、輸出三行計算與總額 **$0.428**。
+- **確認事實**：40k／50k 輸入走快取情境下，總成本由 Opus 5 時代的 $0.525 降至 Opus 5.5 的 $0.428，對應上方「一小時／一個月大概多少」表與上方 Managed Agents 計費規則同步更新。
+- **無快取情境已補查證（2026-10-14 當日 WebFetch 官方定價頁逐字核對）**：無快取總成本同步由 Opus 5 時代的 $0.705 降至 Opus 5.5 的 **$0.58**（input $0.20＋output $0.30＋session-hour $0.08），官方頁面兩套算例（無快取／快取）皆保留，diff 偵測當時未列全只是摘要截斷，非官方拿掉無快取版本。
 
 #### 2026-10-10：官方 Plans & Pricing 頁新增「$100–$200/月 API 額度」段落，同日傳出免費 Team 試用與額度優惠暫停
 

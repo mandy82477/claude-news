@@ -7667,3 +7667,28 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無「開發實務」派工條目，未派工
 - market 判讀：新增 1 則（Gemini 4 Argon 全面開放，定價與基準排名過新資訊門檻）；Quartz IPO 投資人會議與 CTech Decart 併購傳聞皆因無具體數字／未直接動到 Anthropic 自身財務數字，未開新則
 - 追記（devpractice 候選流程，前行寫於該流程完成前，資訊不完整）：devpractice 記者仍照常跑每日候選撿選（與「開發實務」派工包是否存在無關），候選 5 筆（entities/claude-code：#20571 VS Code 擴充套件 400 錯誤變通；topics/community-cost：tokentab 本機用量儀表板；topics/community-interfaces：MioIsland macOS 瀏海核准介面；topics/community-multi-agent：arena-skill 淘汰賽選答案；topics/competitor-landscape：Gemini 4 Argon 定價打平 Sonnet 5），已 append `data/devpractice-candidates.jsonl`；手冊正文本次未寫（候選待週度落地）；基準線推進至 5f22905
+
+## 2026-10-14 Ingest
+
+- 來源日報：[[news/2026-10-14]]
+- 更新頁面：
+  - **人物**：entities/linus-torvalds
+  - **功能**：entities/claude-code、topics/claude-code-experimental
+  - **商業**：entities/pricing、topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **模型**：無（唯一候選條目經判斷屬功能面而非模型面，見下方分類回退）
+  - **社群**：topics/community-skills、topics/community-integrations、topics/community-tech-patterns、topics/community-tech-discussions、topics/code-quality-decline
+  - **開發實務**：無（本日無候選）
+  - **投資分析**：無（本日無訊號）
+- 新增頁面：無
+- feature-radar：新增「Claude Code 停用 @ 檔案提及自動讀取內容（CLAUDE_CODE_DISABLE_FILE_MENTIONS）」，v2.1.299，熱度 🔥、試用價值 ⏳ 觀望
+- 摘要：官方 API 定價頁把試算範例從 Opus 5 換成 Opus 5.5（無快取 $0.705→$0.58、快取 $0.525→$0.428，已 WebFetch 逐字查證）；Claude Code Desktop 同日傳出兩起獨立安全揭露（Noma Labs CVSS 8.7、CSO Online 256KB 預覽窗格洩漏機密）；Anthropic 開新加坡辦公室；Linus Torvalds 協作 kernel 分支效能傳出「3 倍」說法（單一中國媒體未證實）。
+- 呈現品質：全部通過（主編修過 2 輪機械閘：topics/ai-agent-safety 與 topics/anthropic-government-policy 完稿時曾出現維運術語與內規門檻字眼外洩，已請該記者自行改寫過；收尾彙整時另修 2 項——entities/linus-torvalds 「現況」段落誤用舊語法懸置關鍵字「待查證」導致舊語法存量棘輪 +1，已改寫措辭；topics/community-tech-patterns 母頁「最後新聞更新」未隨當日新增的「未歸類」條目同步更新，已補上 2026-10-14）
+- 品質備註：[開發實務] 對唯一派工條目（Official Docs《How do usage and length limits work?》）判斷不屬本頁範疇、建議轉交商業/pricing 記者比對，已登記轉知 H-fba90b，非記者品質問題
+- 分類回退：無——Scientific American「CRISPR-like DNA pattern」條目同時派給模型與功能記者，兩位記者各自判斷均無本類視角可寫（非功能異動、非模型能力變更，且此story自 09-24 起已多次報導、今日無新進展），非分類錯誤，純屬雙派後兩邊都無新東西可寫
+- 轉知帳本：結案 H-b7ca6a（功能，official-community-gap 矩陣判斷不新增列）；新開 H-64ce29（安全政策→功能，CVSS 8.7／256KB 兩起漏洞請功能記者視需要同步 claude-code 已知問題）、H-8973bb（社群→功能，5 個新 skill/整合節點請評估 official-community-gap 矩陣）、H-fba90b（開發實務→商業，usage/length limits 文件再更新請比對 pricing 既有追蹤）
+- 懸置標記：本輪六記者待查證命中皆為無（機械掃描 171 筆存量標記，命中 S:0 A:0 B:3，B 級弱訊號依規則不進派工附件）；安全政策、人物記者本輪各自新增 ❓ 待查證標記（CVSS 8.7 攻擊鏈細節、256KB 瑕疵觸發條件、The Register 批評論點、36Kr「3 倍效能」數字），均依規範使用新語法標記，留待後續查證
+- 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群
+- devpractice 沉澱：本日無候選（已檢視 121 頁新增行，皆為 frontmatter 機械統計或頁面自身快照機制產出，非敘事性新做法）；唯一派工條目判斷不屬本頁範疇，已轉知 H-fba90b（開發實務→商業）
+- market 判讀：本日無訊號（已檢視日報全部刊出條目與六類派工包全文；最接近門檻者為 Anthropic 新加坡辦公室開幕點名 GovTech/Grab/DBS，但三者皆既有客戶、無新合約數字，未達「新資訊」門檻）
+- 查證補充：商業記者提出的「官方定價頁無快取情境總額」疑問，主編已 WebFetch 官方頁逐字核對，確認為 $0.58（input $0.20＋output $0.30＋session-hour $0.08），已回填 entities/pricing.md 三處「待查證」字樣

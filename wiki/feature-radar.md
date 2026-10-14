@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-12
+**最後更新：** 2026-10-14
 
 > **這禮拜動了什麼**（2026-10-09）
 > v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -66,6 +66,22 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Code 停用 @ 檔案提及自動讀取內容（CLAUDE_CODE_DISABLE_FILE_MENTIONS）
+**發布：** 2026-10-14（v2.1.299） | **狀態：** 正式發布
+
+**是什麼：** 設定此環境變數後，Claude 讀取 `@` 檔案提及時只取得檔案路徑，改由既有檔案工具（Read／Grep 等）自行讀取，不再把檔案全文直接灌入 context。
+
+**為何熱：** 官方 GitHub Release v2.1.299 明文列出（非僅出現在 build，屬真實出貨），同版 build 另有 13 個仍處第一階的候選旗標，見 [[topics/claude-code-experimental]]；尚無社群實測或討論。
+
+**現在要試嗎：** 大量依賴 `@` 提及嵌入長檔案的工作流程可一試，但讀取方式改走檔案工具呼叫，建議先觀察工具呼叫次數與權限提示是否增加；官方未說明預設值，一般使用者可先觀望。
+
+**快速上手：**
+```
+export CLAUDE_CODE_DISABLE_FILE_MENTIONS=1
+```
+
+**注意事項：** 大量依賴 `@` 提及嵌入長檔案的工作流程，開啟後讀取方式改變，需留意工具呼叫次數與權限提示是否增加；官方未說明預設值。
 
 ### Claude apps gateway 新增 Code 分頁政策鍵
 **發布：** 2026-10-09（v2.1.296） | **狀態：** 正式發布
@@ -523,6 +539,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code 停用 @ 檔案提及自動讀取內容**（v2.1.299，`CLAUDE_CODE_DISABLE_FILE_MENTIONS`，只取路徑不灌入內容） | 2026-10-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway Code 分頁政策鍵**（v2.1.296，`managed.policies[].code` 比照 `cli` 政策套用到 Desktop Code 分頁） | 2026-10-09 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Hook `onFailure: "block"`**（v2.1.295，command／HTTP hook 失敗即阻擋） | 2026-10-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Bedrock/Vertex/Foundry CountTokens API**（v2.1.295，⚠️ 需授予 `bedrock:CountTokens` 權限） | 2026-10-08 | 🔥 | ⚡ 有條件推薦（企業先授權） | 正式發布 |

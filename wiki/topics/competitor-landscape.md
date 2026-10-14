@@ -28,14 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-14
+**最後新聞更新：** 2026-10-14
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-13）
-> - 🔴 **Google Gemini 4 Argon 全面開放，定價與 Sonnet 5 同價，官方稱 Vals Index 多項財金/法務/程式基準第一**（10-13，官方）——首見可比價格與能力宣稱的直接對手。
-> - 🟡 **Meta 發布新前沿模型 Muse Wonder／Muse Wonder Full，宣稱具 frontier coding 能力**（10-12，官方）——模型層再添一位對手，尚無 benchmark 或定價可比。
-> - 🟡 **GitHub Copilot 同日新增機密偵測模型、本機沙盒 GA，Claude Haiku 5.5 同步上架**（10-07，官方）——差異化安全功能持續堆疊，暫不改變既有選型判斷。
+> **本週衝擊**（2026-10-14）
+> - 🔴 **Google Gemini 4 Argon 全面開放後，今日再 GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
 > - 🔴 **GitHub Copilot CLI／桌面版新增 computer use，可代操作桌面應用程式；同日新增動態工作流程編排**（10-01，官方）——Claude Code 尚無對應的桌面操作能力，選型時又多一層要比。
 > - 🔴 **GPT-6.1 Sol 以五分之一價格逼近 Astra 智能，同步全面開放 GitHub Copilot**（09-29，官方）——低價層追近旗艦智能，壓縮 Claude 中階模型的性價比優勢。
 
@@ -51,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **Google（Gemini）** 🏢 | 今日全面開放，定價 $2／$10 per Mtok（同 Sonnet 5），官方稱 Vals Index 多項財金/法務/程式基準第一（10-13）→ 首見可比價格＋能力宣稱的直接對手 | 能力 | 🔴 | DeepMind 官方一手；Vals Index 為第三方基準，惟對比哪個 Claude 模型未載，社群尚未實測驗證（企業方案計費見 ⟨Q-06⟩ 下方細節） |
+| **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **Microsoft／GitHub** 🏢 | Copilot CLI／桌面版公開預覽新增 computer use，可代操作桌面應用程式；同日新增可程式碼定義的動態工作流程編排（10-01）→ Claude Code 尚無對應桌面操作能力 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；兩項功能均為公開預覽／初次發布，缺採用規模與穩定性數據 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | GPT-6.1 Sol 以 Astra 五分之一標準價逼近其智能水準，快取輸入降至 $0.10/M tokens，同步全面開放 GitHub Copilot（09-29，官方）→ 低價層追近旗艦智能，壓縮 Claude 中階模型性價比空間 | 定價 | 🔴 | OpenAI 官方部落格＋GitHub 官方 changelog 雙重一手；Astra／Sol 絕對牌價未見公布，❓ 待查證⟨Q-07⟩ |
@@ -135,8 +133,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 10-13 官方 Gemini 4 Argon 全面開放（API／AI Studio／Gemini app 等管道），定價 $2／$10 per Mtok，與 Sonnet 5 同價。
 - 官方稱於 Vals Index 多項財金、法務、程式基準排名第一；評測方法論與對比的 Claude 模型均未載。
 - 09-30 先限量開放 Fairwind Program 予受信任網路防禦者的既有信號，本次正式轉為全面可用。
+- 10-14 進一步 GA 上架 GitHub Copilot（官方 changelog），從純 API／AI Studio 擴大進入企業主流 IDE，直接進入 Claude Code 既有優勢的工具層戰場。
 **還沒解決**
 - Vals Index 排名的具體方法論、對比基準模型、第三方複測均未見報導。
+- GitHub Copilot 內 Gemini 4 Argon 的定價是否與 $2／$10 per Mtok API 牌價一致未見官方說明。
 
 ### Meta（Muse Code／Muse Glimmer／Muse Wonder）
 **現在的答案**
@@ -235,6 +235,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-14
+- **Google**：Gemini 4 Argon 今日 GA 上架 GitHub Copilot，DeepMind 另發表模型負責任開發與安全說明文章；詳見「對手雷達」與「雷達細節」Google 列更新（Blog/GitHub Copilot Changelog；Blog/Google DeepMind Blog）
+- **OpenAI（分析文，非競品動態）**：官方部落格發表「The EU's next chapter in AI is agentic」，分析歐盟企業 agentic AI 採用趨勢，未直接對比 Claude，屬廠商自宣分析文，不列入「對手雷達」表（Blog/OpenAI News）
 
 ### 2026-10-13
 - **Google**：DeepMind 官方推出 Gemini 4 Argon 全面開放，定價 $2／$10 per Mtok，另一篇聚焦機器人應用場景；詳見「對手雷達」與「雷達細節」Google 列更新（Blog/Google DeepMind Blog ×2）
