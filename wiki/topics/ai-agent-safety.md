@@ -28,12 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **兩起獨立桌面版安全揭露**（2026-10-14）
-> Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7 漏洞；CSO Online 另揭露 256KB 瑕疵可洩漏機密至預覽窗格，兩者均僅有標題、未見修補資訊。
+> **今日雙線**（2026-10-15）
+> - **Noma Labs 攻擊鏈公開**：Claude Code 桌面版偽裝覆蓋率報告的惡意 HTML 繞過預覽沙盒執行 JS，可任意讀檔，官方尚未修補
+> - **期中選舉防護報告**：Anthropic 政治中立性評測 99%，已封鎖境外假新聞網站，10 月下旬起依州別提供投票資訊
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -54,6 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 只列**現在還擋不住**的攻擊面，不收論述、教學與產業對照。狀態符號與 [[entities/claude-code]] 相同，語意在本頁是「現在仍會發生」：🔴 仍會發生／✅ 已修或官方已處置／⛔ 官方認定不修／❓ 待查證／🔎 查無官方。依「誰會遇到」的範圍由寬到窄；寫「所有人」的一律在最上。
 %% 維運備忘：本表上限 11 列，退場與補位判準見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」節第 2 條 %%
 %% 最後動態（列內無日期者）：套件供應鏈列＝2026-08-29（Alon Hertz `llms.txt` 揭露；前一則 Keyv npm 蠕蟲 2026-08-04），90 天退場判定日 2026-11-27 %%
+%% 10-15 候選列：Noma Labs 完整攻擊鏈公開後已符合三條判準（誰會遇到／你能先做什麼可答），但表已滿 11 列且本輪無列達退場條件，待下次有列退場時優先補位 %%
 
 | 擋不住的是什麼 | 誰會遇到 | 狀態 | 官方擋到哪 | 你能先做什麼 |
 |---|---|---|---|---|
@@ -125,6 +127,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-15 | 防護 | Bank of America 雇用 1000 名約聘人員，修補 Mythos 掃出的軟體漏洞 | CNBC 單一來源；Hacker News 討論 35 分，對是否為 Jevons paradox 案例意見兩極，另稱 Mythos 後續在新修補裡又找到新漏洞 |
 | 10-09 | 防護 | Anthropic Cyber Mission：關鍵基礎設施防禦計畫（CIDP，11 家創始夥伴）＋對開源專案免費漏洞掃描（官方稱真陽性率逾 90%） | 官方一手（2026-10-09 Anthropic Blog）；Axios、The Hacker News 補充；掃描是否經人工複核未載 |
 | 10-08 | 防護 | 對通過審核的防禦團隊放寬護欄（Dark Reading 對 CVP 擴大的定性；原報導為 UTC 10-07 21:09） | Dark Reading，單一媒體框架；與官方公告同源，見 10-07 列 |
 | 10-08 | 防護 | CVP 開放醫院機構申請加入 | Healthcare IT News 單一來源；申請門檻與核准流程未載 |
@@ -143,7 +146,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 07-29 | 能力 | Mythos Preview 找出 HAWK 與 round-reduced AES 的改進攻擊；ProPublica 稱 4 月在 SharePoint 找出 231 個漏洞 | 官方研究；ProPublica 原文已查證 |
 | 07-22 | 濫用 | 俄語駭客 Trim 越獄 Claude Opus，用灰市金鑰做出 AI Pentest Checker | 原文已查證（2026-08-10）；Anthropic 未見聲明 |
 
-**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行：09-18 LSVP 放寬生醫專業人士、10-07 CVP 擴為三層（10-08 再開放醫院機構）、10-09 Cyber Mission 把關鍵基礎設施防守方與開源維護者納入。摩擦集中在 09-15～09-22 通過 CVP 仍被誤擋（GitHub #84352 等），三項擴大是否緩解未見官方說明，也無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。10-08 CrowdStrike 揭露的南韓銀行資料竊案顯示濫用已直接指向金融機構資料竊取，非僅技術測試或零散帳號濫用。
+**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行：09-18 LSVP 放寬生醫專業人士、10-07 CVP 擴為三層（10-08 再開放醫院機構）、10-09 Cyber Mission 把關鍵基礎設施防守方與開源維護者納入。摩擦集中在 09-15～09-22 通過 CVP 仍被誤擋（GitHub #84352 等），三項擴大是否緩解未見官方說明，也無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。10-08 CrowdStrike 揭露的南韓銀行資料竊案顯示濫用已直接指向金融機構資料竊取，非僅技術測試或零散帳號濫用。10-15 Bank of America 雇用千人修補 Mythos 掃出漏洞，是 CVP／Glasswing 數字以外首見企業端實際修補成本的具體案例。
 
 ---
 
@@ -180,14 +183,31 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
-### Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7（Critical）漏洞，攻擊鏈細節未載（2026-10-14 新增，獨立於同日 CSO Online 揭露）
+### Anthropic 發布 2026 美國期中選舉防護措施報告：抽樣 25 萬則對話，政治中立性評測 99% 為最中立版本（2026-10-15 新增，官方安全政策表態）
+
+- **官方一手來源**：Anthropic Blog〈Preparing for the 2026 US midterms〉（2026-10-15 15:09 UTC；https://www.anthropic.com/news/2026-us-midterms）
+- **抽樣數字**：2026-09-21～27 隨機抽取 25 萬則美國 Claude.ai 消費者對話；政治相關對話占 5.75%、選舉投票相關占 0.51%、要求推薦投票對象占 0.01%、違反選舉誠信政策占 0.002%
+- **政治中立性評測**：Claude Opus 5.5／Sonnet 5.5／Haiku 5.5 得分 99%，官方稱為目前最中立的版本；三個獨立外部審查團體：范德堡大學 The Future of Free Speech、Foundation for American Innovation、Collective Intelligence Project
+- **已查獲並封鎖的濫用**：一個境外營運、利用 Claude 製作偏向俄伊朝立場假新聞內容的網站；另有行為者以選舉牟利製造虛構新聞吸廣告收入，帳號已封鎖
+- **新功能**：10 月下旬起，美國使用者詢問投票地點或所需證件時依州別顯示官方資訊（資料來自 Democracy Works）；新增分類器偵測多步驟濫用（假社群帳號、假新聞網站、財務動機選舉詐騙）
+- **性質判斷**：官方一手濫用防範數字發布，非漏洞或攻擊事件；聚焦選舉誠信，與「## 模型網攻能力與防護」的網路攻擊防護主軸性質不同，另起一節記錄
+
+### The Register／HiddenLayer：決策模型 Jev 僅輸出預定選項仍可被 prompt injection 攻破，27 次測試 25 次成功翻轉決策（2026-10-15 新增，跨類別，非 Claude 專屬）
+
+- **背景**：Jev 為 TypeSafe AI 的「決策模型」，設計上只輸出預定選項、不產生自由文字，用以降低提示注入風險
+- **測試結果**：Check Point 測試 27 次攻擊，25 次成功翻轉決策（The Register，經 Topic Watch／ai-agent-safety 定向抓取，2026-10-15 06:28 UTC）
+- **同組報導**：news.lavx.hu〈HiddenLayer finds Jev decision model vulnerable to prompt injection attacks〉（2026-10-15 06:40 UTC）跟進同一揭露
+- **性質判斷**：非 Claude／Anthropic 產品，屬跨類別延伸記錄；呼應本頁「## 提示注入已不是單點漏洞，是產業級攻擊面」的收斂觀察——即使限制輸出形式（僅選項、非自由文字）仍無法阻絕提示注入
+
+### Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7（Critical）漏洞，攻擊鏈細節已公開（2026-10-14 新增，獨立於同日 CSO Online 揭露，2026-10-15 升級：完整攻擊鏈公開）
 
 - **揭露來源**：VMblog（經 Google News，2026-10-14 15:04 UTC）；0 互動，單一來源，原文經 Google News 轉址無法讀取全文，僅標題可用
 - **核心主張（僅標題可用）**：資安業者 Noma Labs 揭露 Claude Code 桌面版存在一項 CVSS 8.7（Critical 等級）漏洞；具體攻擊鏈、觸發條件與是否已修補均未見報導
 - **與同日另一則揭露的關係**：同日另有 CSO Online 報導 Claude Code 桌面版 256KB 限制相關瑕疵（見下則），兩者均為獨立的 Claude Code Desktop 安全揭露，無證據顯示為同一漏洞
-- **性質判斷**：僅有嚴重度分數、無攻擊鏈細節，暫不列入「## 現在還擋不住的攻擊」表（該表 11 列已收滿）
-- ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7）：攻擊鏈、觸發條件、官方是否已修補均未見報導
-- **可信度評估**：單一媒體來源，0 互動，RSS 無正文，訊號強度低；CVSS 分數為資安業者評分，非官方確認
+- **10-15 升級（Noma Labs 原文可讀，Hacker News 15 分）**：攻擊鏈公開——攻擊者在公開 repo 放入偽裝成測試覆蓋率報告的惡意 HTML，繞過 Claude Code Desktop 預覽沙盒、在無 CSP 限制下執行 JavaScript，達成任意檔案讀取；官方尚未發布修補或回應（[Noma Labs](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)）
+- **性質判斷（10-15 更新）**：誰會遇到（開啟不明 repo 覆蓋率報告預覽的使用者）與你能先做什麼（避免開啟）均已答得出，符合「## 現在還擋不住的攻擊」表入口判準；該表現仍滿載 11 列且本輪無列達退場條件，暫留技術彙整追蹤待補位
+- ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7｜訊 2026-10-15）：攻擊鏈與觸發條件已於 10-15 公開（見上），官方是否已修補仍未見報導
+- **可信度評估**：Noma Labs 原文直接來源（10-15），較 10-14 VMblog 轉述可信度提升；CVSS 分數仍為資安業者評分，非官方確認
 
 ### CSO Online 揭露 Claude Code 桌面版 256KB 大小限制瑕疵，機密資料可外洩至預覽窗格（2026-10-14 新增，獨立於同日 Noma Labs 揭露）
 
@@ -1397,6 +1417,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-15
+- **[📋 新增，官方自揭＋量化數據] Anthropic 發布 2026 美國期中選舉防護措施報告**：抽樣 25 萬則對話，政治中立性評測 99%，已封鎖境外假新聞網站，10 月下旬起依州別提供投票資訊，詳見「## 技術彙整」
+- **[🔴 升級，新增] Noma Labs 公開 Claude Code 桌面版 CVSS 8.7 漏洞完整攻擊鏈**：偽裝覆蓋率報告的惡意 HTML 繞過預覽沙盒執行 JS，官方尚未修補，詳見「## 技術彙整」
+- **[📋 新增，跨類別，非 Claude 專屬] The Register／HiddenLayer：決策模型 Jev 可被 prompt injection 攻破，27 次攻擊 25 次成功翻轉決策**：僅輸出預定選項仍防不住，詳見「## 技術彙整」
+- **[🛠️ 新增，防護能力佐證] CNBC：Bank of America 雇用 1000 名約聘人員修補 Mythos 掃出的軟體漏洞**：已列入「## 模型網攻能力與防護」
 
 ### 2026-10-14
 - **[📋 新增] Noma Labs：Claude Code 桌面版 CVSS 8.7（Critical）漏洞**：僅有嚴重度分數，攻擊鏈與修補狀態未載，詳見「## 技術彙整」

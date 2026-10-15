@@ -30,20 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-09-15
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-14）
-> 2.1.299（自 2.1.296 起比對）新增 13 個候選旗標；`DISABLE_FILE_MENTIONS` 同版官方 Release 已明列出貨，直接升第 4 階；`WEBSEARCH_CITATIONS_DECLARED` 消失，同升第 4 階。
+> **最新動態**（2026-10-15）
+> 2.1.300（自 2.1.299 起比對）新增 4 個候選旗標，皆與 PDF 讀取頁數上限、隱藏回覆伺服器名稱、訊息提示快取 TTL 有關；`FORCE_SANDBOX` 消失。
 
 ---
 
 ## 摘要
 
+- **2.1.300（10-15，自 2.1.299 起）新增 4 個候選旗標**：PDF 讀取頁數上限（單訊息／單輪）、隱藏回覆伺服器名稱、訊息提示快取 TTL，皆第一階；`FORCE_SANDBOX` 消失；對帳僅命中來源條目，暫不升第二階。
 - **2.1.299（10-14，自 2.1.296 起）新增 13 個候選旗標**（名單見追蹤表）；`DISABLE_FILE_MENTIONS` 同版 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299) 已出貨升第 4 階。
 - `WEBSEARCH_CITATIONS_DECLARED`（首見 2.1.296）消失升列第 4 階；另 2 個設定類旗標不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.296（10-10 比對）新增 4 個候選旗標**：3 個第一階（`AGENT_PROGRESS_SUMMARIES`、`WEBSEARCH_CITATIONS_DECLARED`、`WORKFLOW_SUBAGENT_MODEL`）＋代號旗標 `SNAPPY_PELICAN`；`ARTIFACT_TEXT_VARIANT` 消失升第 4 階；另 3 個設定類旗標不列；暫不升第二階。
@@ -79,6 +80,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_FILE_READ_MAX_PDF_PAGES_PER_MESSAGE` | 2.1.300（10-15） | 1 | — | — | 2.1.300 仍在（比對日 10-15） |
+| `CLAUDE_CODE_FILE_READ_MAX_PDF_PAGES_PER_TURN` | 2.1.300（10-15） | 1 | — | — | 2.1.300 仍在（比對日 10-15） |
+| `CLAUDE_CODE_HIDE_REPLY_SERVER_NAME` | 2.1.300（10-15） | 1 | — | — | 2.1.300 仍在（比對日 10-15） |
+| `CLAUDE_CODE_MESSAGES_PROMPT_CACHE_TTL` | 2.1.300（10-15） | 1 | — | — | 2.1.300 仍在（比對日 10-15） |
 | `CLAUDE_CODE_DISABLE_FILE_MENTIONS` | 2.1.299（10-14） | 4 | 已出貨：[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299) 明列新增此環境變數，Claude 取得 `@` 檔案提及的路徑交既有檔案工具讀取，不直接讀入檔案內容 | — | 2.1.299（10-14）官方 Release 確認已出貨 |
 | `CLAUDE_CODE_ARTIFACT_PUBLISH_EDITS` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
 | `CLAUDE_CODE_AUTO_MODE_COMPACT_THREAD_RULE` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
@@ -238,6 +243,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 已消失
 
+- `CLAUDE_CODE_FORCE_SANDBOX`（2.1.299–2.1.300 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_INTRO_FRAME`（2.1.294–2.1.295 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_DIR_SYNC_DISABLE_ANCHORING`、`CLAUDE_CODE_DIR_SYNC_ENGINE`、`CLAUDE_CODE_DIR_SYNC_FFWD`（2.1.284–2.1.285 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_DIR_SYNC_GIT`、`CLAUDE_CODE_DIR_SYNC_STREAM`、`CLAUDE_CODE_DISABLE_DIR_SYNC`（同批消失，同屬 `DIR_SYNC` 家族，首見版本早於本頁追蹤範圍）
@@ -261,6 +267,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-15 | 2.1.300 新增 4 候選旗標（PDF 頁數上限、隱藏伺服器名稱、訊息快取 TTL）；`FORCE_SANDBOX` 消失；對帳僅命中來源條目，不算獨立佐證 |
 | 2026-10-10 | 2.1.296 新增 4 候選旗標：3 第一階（名單見追蹤表）＋代號旗標 `SNAPPY_PELICAN`；`ARTIFACT_TEXT_VARIANT`（首見 2.1.281）消失，列 4 階；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-09 | 2.1.295 新增 5 個候選旗標（見追蹤表）；`ARTIFACT_FIVE_CLASS_ASKS` 消失列 4 階、`INTRO_FRAME` 同批消失；對帳僅命中自身條目，不算獨立佐證 |
 | 2026-10-08 | 2.1.294 新增 1 個第一階候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`；`build_flags_mentions.py` 對帳 2 筆，命中僅來源條目與日報鏡像，不算獨立佐證 |

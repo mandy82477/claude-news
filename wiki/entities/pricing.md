@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
-> **最新計費政策異動**（2026-10-14）
-> 官方 API 定價頁 Managed Agents 範例模型從 Opus 5 換成 Opus 5.5：同情境（40k／50k 輸入走快取）總成本由 $0.525 降至 $0.428；無快取版本同步確認由 $0.705 降至 $0.58（2026-10-14 WebFetch 查證）。
+> **最新計費政策異動**（2026-10-15）
+> 官方「方案與定價」頁把 Team 方案年繳條件從「每席每月 $20，按年計費」改成「每席每月 $20，按年計費，最低 20 席」，新增過去沒有的席次下限（Official Docs，2026-10-15）。
 
 ## 現況
 
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Pro | $20（年繳 $17／月）| 全模型，**Fable 旗艦除外**（免另計費最強為 Opus 5.5，取代 Opus 5）| **Fable 5／5.1** — $10/$50 per Mtok，走 usage credits | **已截止**：一次性 $100 過渡 credit 領取窗於 2026-08-02 關閉 | 已領者記得在 09-17 到期前用掉；至 `Settings > Usage` 確認 auto-reload 未開 |
 | Max 5x | $100 | 全模型；**旗艦（Fable 5／5.1）上限為週用量 50%** | 超出後走 usage credits | — | 留意旗艦誤要求購點問題（見事故區）|
 | Max 20x | $200 | 同上，額度更高 | 同上 | — | 用量上限集體訴訟進行中 |
-| Team standard seat | $20（年繳）／$25（月繳）每席 | 同 Pro | 同 Pro | 同 Pro | 同 Pro |
+| Team standard seat | $20（年繳）／$25（月繳）每席 | 同 Pro | 同 Pro | 同 Pro | 年繳需達最低 20 席（2026-10-15 新增門檻）|
 | Team premium seat | $100（年繳）／$125（月繳）每席 | 同 Max | 同 Max | — | — |
 | Enterprise | 未公開報價 | 舊制席位制比照 standard／premium 分層 | 同對應層 | — | 2026-07-04 起可用支出控管 |
 
@@ -70,6 +70,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 方案細節
 
+- **Team 方案年繳新增 20 席下限（2026-10-15 官方 diff 偵測）**：官方「方案與定價」頁原文由「US$20/seat/month, billed annually」改為「US$20/seat/month, billed annually, 20 seat minimum」；考慮以年繳方式導入 Team 方案的小型團隊，應先確認是否達到新門檻（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測 2026-10-15 15:09 UTC）
 - **09-28 官方 Plans & Pricing 頁 Batch processing 範例模型換代**：頁面把 Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5；屬頁面範例更新，不代表 Batch 折扣費率本身變動（Official Docs）
 - **旗艦分界的官方定義（2026-07-20 生效）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用「至多每週用量上限的 50%」且不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率付費。先前將 Fable 5 納入方案週用量的促銷結束於 **2026-07-19 23:59:59 PT**
 - **Pro／Team standard 過渡 credit（2026-08-22 官方查證，先前懸置已結案）**：金額 **$100**——Pro 為每帳戶 $100，Team 為每購買的 standard seat $100、每組織上限 $2,500。資格以 **2026-07-19 23:59:59 PT** 當下持有合格 Pro／Team standard 方案為準（免費試用不算）。**領取窗已於 2026-08-02 23:59 PT 關閉**，未領者不再補發；已領取的 credits 於 **2026-09-17 23:59 PT 到期**（促銷起算 60 天）。這批 credits **不限 Fable 5**，是一般 usage credits，任何模型都能用、方案用量觸頂時也能墊（來源：[Claude Fable 5 one-time free credits promotion](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。credits 用盡後可續買、改用其他模型、或升級 Max
@@ -172,6 +173,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-10-15 生效｜Team 方案年繳新增 20 席下限**：官方「方案與定價」頁將 Team annual billing 條件新增「20 seat minimum」，此前無此門檻（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-15）
 - **✅ 2026-09-19 生效｜Auto mode 改用 server-side classifier，分類器耗用不計費**：適用 Claude API、Enterprise，以及 Bedrock／Vertex／Foundry／閘道器用戶；可設 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退回舊行為（來源：[v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)，2026-09-19）
 - **✅ 官方文件新增說明（2026-10-11）｜server-side classifier 檢查未送達時改計入用量**：常見因中間 LLM gateway／proxy 剝除請求；Pro、Max、Team 直連 API 不受影響（來源：[文件索引](https://code.claude.com/docs/llms.txt)，2026-10-11）
 - **✅ 2026-09-19 生效｜Claude Code Projects：工作與計費事項可並行**：專案內處理計費相關事項不再阻擋工作進行，兩者可同時進行；具體涵蓋範圍未見官方文件細節（來源：The Register，2026-09-19）
@@ -712,6 +714,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-05 定價與促銷**：模型別名退役警示＋Max 方案實質差異說明（05-23）、Anthropic 定價主導權強勁（05-13）。完整記錄見 [[entities/pricing-archive#2026-05]]。
 
 ### 配額與速率
+
+#### 2026-10-14：官方再次更新《How do usage and length limits work?》——觸頂後續說明改為「升級方案後新上限立即生效」
+
+- **Official Docs 變更偵測（2026-10-14 15:16 UTC）**：原文「you can wait for it to reset or upgrade your plan. With usage credits ena[bled]…」改為「…upgrade your plan. If you upgrade, your n[ew limit applies immediately]…」（頁面字數 6964→7021）。
+- **讀者判讀**：新措辭把「升級方案」的效果單獨講清楚——升級後新上限立即生效，不必依賴 usage credits；與 2026-10-09 三頁同步改版（移除「過渡到額度計費需明確同意」措辭，見下方 10-09 條目）屬同一份文件的持續調整，非新規則。
 
 #### 2026-09-06：Mashable 引述 Reddit：多則貼文稱付費方案可用量遠低於宣傳（媒體＋多則社群回報，官方頁面未查證）
 

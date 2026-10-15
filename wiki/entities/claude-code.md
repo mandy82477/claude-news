@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
-> **最新動態**（2026-10-14）
-> v2.1.299 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`：開啟後 `@` 檔案提及只傳路徑、交既有工具讀取，不再直接灌入檔案全文。
+> **最新動態**（2026-10-15）
+> v2.1.300 新增 `virtualText`（mod 裝飾文字）與 OTel 快取用量拆分欄位；2.1.299 已補修 gateway API 金鑰外洩與排程夏令時間重複觸發兩個問題。
 
 ---
 
@@ -42,7 +42,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
-- **v2.1.299**（2026-10-14）：新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS` 環境變數——開啟後 Claude 僅取得 `@` 檔案提及的路徑，交既有檔案工具讀取，不再直接把檔案內容灌入 context；另提及新增 idle compaction 相關改動，官方原文截斷、細節未知（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）。
+- **v2.1.300**（2026-10-15）：新增 `virtualText`——mod 可在提示框內畫裝飾文字，不會進入草稿或送出的提示內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量的欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）。
+  同版 build 另新增 4 個功能候選旗標（PDF 讀取頁數上限、隱藏回覆伺服器名稱、訊息提示快取 TTL），消失 1 個（`CLAUDE_CODE_FORCE_SANDBOX`），追蹤見 [[topics/claude-code-experimental]]。
+- **v2.1.299**（2026-10-14）：修復 gateway API key 外洩與排程夏令時間重複觸發兩項問題；新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`，`@` 檔案提及只傳路徑（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）。
   同版 build 另新增 13 個功能候選旗標（自 2.1.296 起累積），`CLAUDE_CODE_WEBSEARCH_CITATIONS_DECLARED` 消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.295**（2026-10-08）：command／HTTP hook 新增 `onFailure: "block"`——hook 無法啟動、逾時或退出碼異常時，動作直接被阻擋，不再放行（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）。
   Bedrock、Vertex、Foundry 的 token 計數改用 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限；MCP 工具描述截斷上限由 2,048 提高到 16,384 字元。
@@ -113,6 +115,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-10-15｜查 nested sessions、saved environments）｜**Claude Code 桌面版傳推出巢狀對話與已儲存環境設定**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；官方未見對應版本號。
+- ❓ **待查證**（標 2026-10-15｜查 Noma Labs、CVSS 8.7）｜**Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7 漏洞**：攻擊鏈與修補狀態未見報導，詳見 [[topics/ai-agent-safety]]。
+- ❓ **待查證**（標 2026-10-15｜查 CSO Online、256KB）｜**CSO Online：Claude Code 桌面版 256KB 限制瑕疵外洩機密至預覽窗格**：觸發條件與修補狀態未見報導，詳見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-10-15｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：單一來源、原文無摘要，產品形式與正式性未見官方佐證。
   - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。
 - 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-10-17）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
@@ -379,7 +384,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**MCP servers 於 Claude Code 結束時未被正確終止，留下孤兒行程（GitHub issue #1935，累積 43 則留言、18 個讚，環境：Anthropic API／Claude CLI v1.0.18）**：使用者回報 Claude Code 結束時未正確終止其啟動的 MCP server 行程，留下孤兒行程持續佔用系統資源；官方尚未回應。
 - 🔴 **未修復**｜**宣告 draft-07 `outputSchema` 的 MCP server 完全無法使用（issue #86142，53 則留言，2026-09-18 互動數更新）**：送出前就被判定「unsupported dialect」拒絕，官方未回應。
-- 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 41 則留言、28 個讚，首見 2026-08-02，2026-09-01 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
+- 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 50 則留言、31 個讚，首見 2026-08-02，2026-10-15 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
 - 🔴 **未修復**｜**Microsoft 365 Connector 僅限 Team／Enterprise 方案，Max 個人版無法使用（GitHub issue #20469，累積 60 則留言、105 個讚，2026-07-26）**：使用者反映 Microsoft 365 connector 目前僅開放 Team／Enterprise 方案使用，訂閱 Max 方案（月費 $100 或 $200）的個人使用者即使付費仍無法存取此整合；官方尚未回應或說明是否將開放個人方案。
 - 🔴 **未修復**｜**macOS：Claude Desktop 對官方 Filesystem extension 從未送出 `tools/call`（GitHub issue #80002，累積 64 則留言、27 個讚，首見 2026-07-23，2026-09-21 留言數更新）**：`tools/list` 正常但工具從未實際觸發，log 無紀錄；官方尚未回應。
 - 🔴 **未修復**｜**排程 routine 對 custom connector 呼叫任何 MCP 工具皆顯示「MCP tool call requires approval」（GitHub issue #61015，累積 40 則留言、52 個讚，首見 2026-07-23，回報者指出約 2026-05-20 出現回歸）**：使用者回報排定執行的 routine 在呼叫 custom connector 上的任何 MCP 工具時，一律被要求「MCP tool call requires approval」而無法自動執行，回報者指出此問題約於 2026-05-20 開始出現，屬回歸性問題；官方尚未回應。
@@ -411,7 +416,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Desktop（Windows）反覆當機，須進「進階選項→修復」才能恢復（GitHub issue #85199，累積 40 則留言，2026-08-30）**：使用者回報 Windows 版 Claude Desktop 反覆當機，每次都須進入「進階選項→修復」才能恢復使用，屬穩定性問題；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--quiet`（或 `--minimal-output`）旗標抑制互動模式工具呼叫輸出（GitHub issue #9340，累積 32 則留言、47 個讚，2026-08-29）**：社群呼籲新增 `--quiet` 旗標，讓互動模式下的工具呼叫輸出可被抑制、僅顯示精簡進度，方便長時間執行時減少畫面雜訊；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 64 則留言、243 個讚，2026-08-25）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 65 則留言、241 個讚，2026-10-15）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，為更新後效能退化（GitHub issue #26302，累積 49 則留言、47 個讚，2026-10-11 互動數更新）**：使用者回報升級後出現嚴重 UI 延遲與滑鼠卡頓，屬效能退化（regression）；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 72 則留言、64 個讚，首見 2026-08-19，2026-10-07 互動數更新）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
 
@@ -571,7 +576,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
-| **v2.1.299** | 2026-10-14 | 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS` 環境變數：開啟後 `@` 檔案提及只傳路徑交既有工具讀取，不直接讀入檔案內容；另提及新增 idle compaction，原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）|
+| **v2.1.300** | 2026-10-15 | 新增 `virtualText`：mod 提示框內裝飾文字，不進入草稿或送出內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）|
+| **anthropic-sdk-typescript vertex-sdk-v0.21.0** | 2026-10-14 | 新增 `execution_identity`；client 原生支援 OpenTelemetry tracing（已註冊 tracer provider 時自動匯出 span）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0)）|
+| **anthropic-sdk-python v1.14.0** | 2026-10-14 | 同步新增 `execution_identity`；另新增花費上限錯誤類型 `organization_type_not_supported`、telemetry destination 測試端點（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
+| **v2.1.299** | 2026-10-14 | 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`：`@` 檔案提及只傳路徑不灌入內容；同版修復 gateway API key 外洩與排程夏令時間重複觸發（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）|
 | **v2.1.296** | 2026-10-09 | Claude apps gateway `managed.policies[]` 新增 `code` 鍵：套用與 `cli` 相同設定，獨立套用到 Claude Desktop 的「Code」分頁（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.296)）|
 | **v2.1.295** | 2026-10-08 | 新增 hook `onFailure: "block"`；Bedrock/Vertex/Foundry token 計數改用 CountTokens API；MCP 工具描述上限 2,048→16,384 字元（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.295)）|
 | **anthropic-sdk-typescript sdk-v0.133.0** | 2026-10-09 | 新增 Chat/Cowork 分析指標型別；新增 Managed Agents workflows、多代理設定與 thread 過濾（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.133.0)）|
@@ -892,6 +900,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；安全待查證2則。 |
 | 2026-10-14 | **v2.1.299**：新增 `DISABLE_FILE_MENTIONS`；旗標增 13 消 1，見 [[topics/claude-code-experimental]]。桌面文件擴充 122 段（SSH）。 |
 | 2026-10-13 | 新增已知問題 1 則（#20571 VS Code 擴充套件 400 錯誤，133 則留言，今日全站最高）。互動數更新 2 則：#2254（151 讚、47 則留言）、#1669（51 則留言、86 讚）。 |
 | 2026-10-12 | 桌面版文件新增 SSH host 組態設定。新增已知問題 1 則（#50674 ARM64）。互動數更新 4 則：#92984（今日全站最高）、#34556、#11315、#14131。 |

@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-10-09
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
-> **最新動態**（2026-10-09）
-> anthropic-sdk-python v1.13.0／anthropic-sdk-typescript sdk-v0.133.0 同步新增 Managed Agents 的 workflows、多代理設定（multiagent configuration）與 thread 狀態過濾型別支援；官方 release note 僅列型別新增，具體可操作的 API 用法未載。
+> **最新動態**（2026-10-15）
+> anthropic-sdk-python v1.14.0／anthropic-sdk-typescript vertex-sdk-v0.21.0 同步新增 Managed Agents 的 `execution_identity`；官方 release note 僅列欄位新增，具體可操作的 API 用法未載。
 
 ---
 
@@ -131,6 +131,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-15 | **anthropic-sdk-python v1.14.0** 新增 Managed Agents 的 `execution_identity`，用法未載（TS vertex-sdk v0.21.0 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
 | 2026-10-09 | **anthropic-sdk-python v1.13.0** 新增 Managed Agents 的 workflows、多代理設定與 thread 過濾型別，用法未載（TS SDK 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|
 | 2026-09-15 | **anthropic-sdk-python v1.6.0** 再擴充 auto mode 工具權限功能，原文截斷、範圍未知（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0)）|
 | 2026-09-11 | **anthropic-sdk-python v1.5.0** 新增 Managed Agents auto mode 工具權限設定，changelog 首度列出具體項目（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0)）|

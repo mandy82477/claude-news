@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
-> **瀏海狀態小工具再添一款，加上核准互動**（2026-10-13）
-> - **MioIsland**：macOS Dynamic Island 即時監看並核准 Claude Code session，可直接跳轉對應視窗。
+> **VS Code 橋接 Claude CLI，解四個編輯器痛點**（2026-10-15）
+> - **VS Code Bridge**：擴充套件橋接 Claude CLI 與編輯器 context／指令，解決選取內容傳不進去、CLI 拿不到編輯器狀態等四個痛點。
 
 ---
 
@@ -56,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Klaster1/vscode-bridge-for-claude-code：VS Code 擴充套件橋接 Claude CLI，解決四個編輯器內使用痛點（2026-10-14）
+
+- **主線：** —
+- **核心模式：** 作者打造 VS Code 擴充套件＋Claude CLI 整合，解決四個痛點：①無法傳送 Markdown 編輯器選取內容或預覽中的檔案給 Claude；②CLI 本身拿不到編輯器 context；③Claude 無法呼叫 VS Code 指令，因此無法依使用情境調整編輯器；④聊天視窗的檔案連結不依使用者設定的編輯器開啟，一律當純文字開啟。
+- **與既有模式的關係：** 補上「介面元件複用」既有代表技巧（Brainless、statuslin.es 等多止於外觀／狀態列封裝）一個「雙向橋接 CLI 與編輯器 context／指令」取向——既有做法多止於視覺介面複用，本則讓 Claude 讀寫編輯器狀態、呼叫編輯器指令；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News 2 分（2 個來源），單一互動量不足，但有公開 repo 可查證四項具體痛點與對應修復，依「跨來源 source_count ≥2＋複現性（repo）」收錄。
+- **來源：** Hacker News（2 分，2 個來源）；[GitHub](https://github.com/Klaster1/vscode-bridge-for-claude-code)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### MioMioOS/MioIsland：macOS Dynamic Island 介面監控並核准 Claude Code session（2026-10-13）
 
@@ -83,6 +92,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/abcwyc/pi-agent-desktop)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### Reddit：把多個 Claude Code subagent 輸出做成「視訊通話」介面，追蹤並行進度（2026-10-10）
+
+- **主線：** 並行規模
+- **核心模式：** 使用者把多個 Claude Code subagent 的輸出做成「視訊通話」風格介面，意外發現這是他找到最容易同時掌握多個並行 agent 進度的方式。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office 像素風辦公室、agent-office 3D 辦公室、MioIsland 瀏海核准）一個「視訊通話介面」取向——既有做法多走空間模擬或核准互動，本則借「多視窗同時顯示」的視訊通話直覺，解決多 agent 並行時「誰在做什麼」的追蹤痛點，與 agent-office 同屬並行規模下的進度可視化需求。
+- **可信度註記：** Reddit r/ClaudeAI 週熱門標記（視為達低門檻），0 留言，僅標題與日報摘要可用，具體實作細節未載。
+- **來源：** Reddit / r/ClaudeAI · 週熱門；[原文](https://www.reddit.com/r/ClaudeAI/comments/1x2f59x/i_made_my_claude_code_subagents_a_video_call/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一使用者心得，尚無社群採用回饋數據）
 
 #### franzenzenhofer/big-arrow-on-the-screen：讓 agent 在使用者桌面螢幕疊加箭頭、方框與文字（2026-10-09）
 

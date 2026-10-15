@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-11
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
-> **最新做法**（2026-10-11）
-> - **跨專案記憶添身分層**：codesstar/loci 把持久記憶延伸到身分與多專案協調，GitHub Search 508 星，細節未載。
+> **最新做法**（2026-10-15）
+> - **Context 管理添反面診斷清單**：dev.to 文章整理四種會污染 context 的壞習慣與對應解法（`/clear`、`/rewind`、拆 subagent、精簡 CLAUDE.md）。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Avoid These 4 Claude Code Context Antipatterns：四種會污染 context 的壞習慣與對應解法（2026-10-13）
+
+- **主線：** Context 管理
+- **核心模式：** 文章整理四種會悄悄污染 Claude Code context 的壞習慣，並給出對應解法：用 `/clear` 清空、用 `/rewind` 回溯、拆成 subagent 隔離、寫精簡的 CLAUDE.md。
+- **與既有模式的關係：** 補上「Context 管理」既有代表技巧（Just-in-Time @-file、Repo-as-Memory 等）一個「反面診斷清單」取向——既有做法多講「該怎麼做」，本則從常見壞習慣倒過來列出四個具體 antipattern 與各自解法；context 被工具輸出撐爆是大型 codebase 的典型痛點，主線填 Context 管理。
+- **可信度註記：** 作者第一手實戰整理（dev.to，3 讚），無量化數據佐證，屬方法論彙整；同作者前作見下方 2026-10-06「冰箱」比喻一則。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/iggredible/avoid-these-4-claude-code-context-antipatterns-27e2)
+- **成熟度：** ⚡ 活躍（沿用「Context 管理」既有分類，本則補充四種反面診斷清單）
 
 #### codesstar/loci：Memory Palace，持久記憶延伸到身分與多專案協調（2026-10-11）
 
