@@ -7692,3 +7692,28 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無候選（已檢視 121 頁新增行，皆為 frontmatter 機械統計或頁面自身快照機制產出，非敘事性新做法）；唯一派工條目判斷不屬本頁範疇，已轉知 H-fba90b（開發實務→商業）
 - market 判讀：本日無訊號（已檢視日報全部刊出條目與六類派工包全文；最接近門檻者為 Anthropic 新加坡辦公室開幕點名 GovTech/Grab/DBS，但三者皆既有客戶、無新合約數字，未達「新資訊」門檻）
 - 查證補充：商業記者提出的「官方定價頁無快取情境總額」疑問，主編已 WebFetch 官方頁逐字核對，確認為 $0.58（input $0.20＋output $0.30＋session-hour $0.08），已回填 entities/pricing.md 三處「待查證」字樣
+
+## 2026-10-15 Ingest
+
+- 來源日報：[[news/2026-10-15]]
+- 更新頁面：
+  - **人物**：wiki/entities/linus-torvalds.md
+  - **功能**：entities/claude-code、topics/claude-code-experimental、entities/managed-agents
+  - **商業**：entities/pricing、topics/enterprise-cost-management、topics/anthropic-business、topics/competitor-landscape、entities/openclaw
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **社群**：topics/community-tech-discussions、topics/community-memory、topics/community-interfaces、topics/community-tech-patterns（母頁，僅 callout／路由表「最後動態」／模式概覽三類代表技巧與最後動態）
+  - **開發實務**：topics/coding-workflow-guide
+  - **投資分析**：topics/market-signals
+- 新增頁面：無
+- feature-radar：新增「Claude API 原生 OpenTelemetry Tracing」（vertex-sdk v0.21.0／python v1.14.0，Public Beta），熱度 🔥🔥、試用價值 ⚡ 有條件推薦
+- index：topics/enterprise-cost-management: monitoring → ongoing；topics/enterprise-cost-management 與 topics/anthropic-business 鉤子句同步更新為今日重點
+- 摘要：Anthropic 公布 Q3 營收年增至 168 億美元（季增放緩至 46%），IPO 前最後一次財報揭露，引發 AI 概念股下跌、紐約市主計官要求暫緩 IPO；FTC 正式對 Anthropic、OpenAI 發出傳票，調查本月稍早揭露的安全事故；Anthropic 發布 2026 美國期中選舉防護措施報告（政治中立性評測 99%、已查封一個境外假新聞網站）；Noma Labs 公開 Claude Code 桌面版 preview pane 漏洞完整攻擊鏈細節；Hacker News 395 分熱議 Anthropic 新原始碼控制系統「Scion」與 Meta/Oxide Mononoke 的相似性。
+- 呈現品質：全部通過（主編修過 2 輪機械閘：topics/ai-agent-safety 兩處維運術語外洩〔Topic Watch 抓取管道名、表格入口判準內規〕、topics/community-interfaces 兩處收錄門檻字眼外洩〔source_count、門檻〕，均已改寫為讀者語言；topics/community-tech-discussions 與 topics/community-tech-patterns 各一筆表格儲存格超限已縮短；entities/claude-code 時間軸一行誤用舊語法關鍵字「待查證」導致舊語法存量棘輪 +1，已改寫；topics/anthropic-agent-stack 母頁 callout 落後子頁 entities/managed-agents 當日新聞，已覆寫同步）
+- 品質備註：無
+- 分類回退：追加派工 2 筆（人物：GBHackers／The New Stack 兩則 Linus Torvalds 條目，延續既有人物敘事）＋駁回 0 筆；另 2 筆（third-party app ban 相關）已由原輪商業記者處理，不重派；1 筆（Phoronix 逆向工程條目）追加派給社群記者後判斷不收錄
+- 轉知帳本：結案 H-64ce29（功能）、H-8973bb（功能）、H-fba90b（商業）；新開 H-000c52（開發實務→功能，Claude Code 桌面版 SSH／TLS 代理文件擴充請併入 entities/claude-code 既有記錄）
+- 懸置標記：安全政策記者本輪既有 ⟨A⟩ 待查證（Noma Labs CVSS 8.7）今日命中新進展，已加訊並更新內文為攻擊鏈已公開、修補狀態仍未定案；投資分析記者既有里程碑（FTC 傳票）今日命中，已加訊並補查證摘要；人物記者既有 ❓ 待查證（36Kr 3 倍效能聲明）今日條目未構成佐證或反證，依規則不動
+- 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、社群、開發實務、投資分析
+- devpractice 沉澱：候選 7 筆（entities/claude-code、topics/community-memory、topics/community-skills、topics/community-interfaces、topics/code-quality-decline 各 1～3 筆）已 append `data/devpractice-candidates.jsonl`；手冊正文寫入 1 則（Pro/Max 五小時 session 額度用盡時可能繼續完成回應）；Claude Code 桌面版 SSH 文件擴充判斷不落本頁任一流程階段，已轉知功能記者（H-000c52）
+- market 判讀：新增 3 則（Q3 營收 168 億美元年增 46%、紐約市主計官要求暫緩 IPO、FTC 正式發出傳票）；Startup Fortune 訂閱留存優惠單一來源無機制細節、third-party app ban 相關兩則已知為 10/7 舊異動的延遲報導、Bank of America 約聘人員成本非 Anthropic 自身財報數字，三者均未達新資訊門檻，未開新則
+- 查證補充：主編以 WebSearch 查證 entities/openclaw 的第三方工具政策待查證標記，補充次級部落格報導（約 10/7 官方支援頁更新讓 Agent SDK 第三方工具動用訂閱額度）佐證今日兩則標題疑為延遲報導，但官方一手原文仍未見，標記維持 ❓ 未結案；社群記者回報 4 則 GitHub Search 高星 repo（api.github.com 對本 session 回 403 無法查證 forks/issues/commit）中，主編以 WebSearch 核實 2 則（ffmpeg-skill、claude-motion-design）確有第三方 forks 佐證、1 則（dontbemichael）查無任何佐證，另 1 則（qwen21-nsfw-pose-skill）內容範疇不符收錄範圍；四則本輪皆未收錄，留待後續 ingest 或 `/wiki-lint` 複核
