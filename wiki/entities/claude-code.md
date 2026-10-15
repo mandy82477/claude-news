@@ -900,7 +900,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；安全待查證2則。 |
+| 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；新增2則安全揭露指標，見下方「近期報導」。 |
 | 2026-10-14 | **v2.1.299**：新增 `DISABLE_FILE_MENTIONS`；旗標增 13 消 1，見 [[topics/claude-code-experimental]]。桌面文件擴充 122 段（SSH）。 |
 | 2026-10-13 | 新增已知問題 1 則（#20571 VS Code 擴充套件 400 錯誤，133 則留言，今日全站最高）。互動數更新 2 則：#2254（151 讚、47 則留言）、#1669（51 則留言、86 讚）。 |
 | 2026-10-12 | 桌面版文件新增 SSH host 組態設定。新增已知問題 1 則（#50674 ARM64）。互動數更新 4 則：#92984（今日全站最高）、#34556、#11315、#14131。 |

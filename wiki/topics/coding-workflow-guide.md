@@ -3,8 +3,8 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-10-10"
-last_news_update: "2026-10-04"
+last_updated: "2026-10-15"
+last_news_update: "2026-10-15"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
 days_since_news: 10
@@ -30,15 +30,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-15
+**最後新聞更新：** 2026-10-15
 
 > **本頁在回答什麼**（重寫 2026-08-08）
 > 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
 > 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
 
-> **最新動態**（2026-10-04）
-> 官方部落格教學文談怎麼在 Claude／Claude Code 發揮 Opus 5.5：給完整任務描述讓它自己跑，完工後核對它的摘要是否符合你要的（HN 224 分）。
+> **最新動態**（2026-10-15）
+> 官方文件補充：Pro／Max 方案五小時 session 額度用盡時，若 Claude Code 正在產生回應，該次回應仍會做完，不會被硬性截斷。
 
 ---
 
@@ -280,7 +280,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 7 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
 
-官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。
+官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。另一份官方文件〈[Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)〉（2026-10-15 文件更新）補充：**五小時 session 額度用盡的當下若 Claude Code 正在產生回應，該次回應仍會做完**，不會被硬性截斷。
 
 **腳本／SDK 呼叫場景的省法：** 官方 headless 文件（2026-09-23 查）記載 `--bare` 旗標——「Add `--bare` to reduce startup time by skipping auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md」；官方稱這是 script 與 SDK 呼叫的建議模式，未來會成為 `-p` 的預設值。這與上方「分層 CLAUDE.md」「`claudeMdExcludes`」等互動式 session 的省法不同層級——後者省的是載入內容的量，`--bare` 省的是連自動發現這個動作本身都跳過，只適合不需要專案客製化行為的一次性腳本呼叫。
 

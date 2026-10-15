@@ -80,7 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander、pipeboard 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-07 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **記憶與知識管理** | claude-mem、projectmem、second-brain-os、agent-memory、deja-vu、hippo-memory 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-07 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin（[[topics/community-guardrails#2026-09]]） | ⚡ 活躍 | 2026-09-05 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、better-agent-terminal、coralline、ClaudeTerm、vscode-bridge（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
+| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、vscode-bridge 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **Agent 活動可視化** | claude-office 即時像素風辦公室模擬、agent-office 3D 卡通辦公室、MioIsland 瀏海核准互動、視訊通話介面追蹤多 agent（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-13 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels、arena-skill 淘汰賽選答案（[[topics/community-multi-agent#2026-10]]） | ⏳ 新興 | 2026-10-13 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **安全架構** | Grepathy、OneCLI、agent-scan、ThinkWatch-Lite、WaLiAPI、awesome-claude-code-mods 等（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-12 | AI 加速開發下的系統性防線；CI 攔截語義退化 |

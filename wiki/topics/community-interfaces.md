@@ -62,7 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **主線：** —
 - **核心模式：** 作者打造 VS Code 擴充套件＋Claude CLI 整合，解決四個痛點：①無法傳送 Markdown 編輯器選取內容或預覽中的檔案給 Claude；②CLI 本身拿不到編輯器 context；③Claude 無法呼叫 VS Code 指令，因此無法依使用情境調整編輯器；④聊天視窗的檔案連結不依使用者設定的編輯器開啟，一律當純文字開啟。
 - **與既有模式的關係：** 補上「介面元件複用」既有代表技巧（Brainless、statuslin.es 等多止於外觀／狀態列封裝）一個「雙向橋接 CLI 與編輯器 context／指令」取向——既有做法多止於視覺介面複用，本則讓 Claude 讀寫編輯器狀態、呼叫編輯器指令；非大型 codebase 特有痛點，主線填 —。
-- **可信度註記：** Hacker News 2 分（2 個來源），單一互動量不足，但有公開 repo 可查證四項具體痛點與對應修復，依「跨來源 source_count ≥2＋複現性（repo）」收錄。
+- **可信度註記：** Hacker News 2 分，單一互動量不足，但有 2 個來源同日報導、且公開 repo 可查證四項具體痛點與對應修復。
 - **來源：** Hacker News（2 分，2 個來源）；[GitHub](https://github.com/Klaster1/vscode-bridge-for-claude-code)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
@@ -98,7 +98,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **主線：** 並行規模
 - **核心模式：** 使用者把多個 Claude Code subagent 的輸出做成「視訊通話」風格介面，意外發現這是他找到最容易同時掌握多個並行 agent 進度的方式。
 - **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office 像素風辦公室、agent-office 3D 辦公室、MioIsland 瀏海核准）一個「視訊通話介面」取向——既有做法多走空間模擬或核准互動，本則借「多視窗同時顯示」的視訊通話直覺，解決多 agent 並行時「誰在做什麼」的追蹤痛點，與 agent-office 同屬並行規模下的進度可視化需求。
-- **可信度註記：** Reddit r/ClaudeAI 週熱門標記（視為達低門檻），0 留言，僅標題與日報摘要可用，具體實作細節未載。
+- **可信度註記：** Reddit r/ClaudeAI 週熱門貼文，0 留言，僅標題與日報摘要可用，具體實作細節未載。
 - **來源：** Reddit / r/ClaudeAI · 週熱門；[原文](https://www.reddit.com/r/ClaudeAI/comments/1x2f59x/i_made_my_claude_code_subagents_a_video_call/)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一使用者心得，尚無社群採用回饋數據）
 

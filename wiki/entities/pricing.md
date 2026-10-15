@@ -70,7 +70,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 方案細節
 
-- **Team 方案年繳新增 20 席下限（2026-10-15 官方 diff 偵測）**：官方「方案與定價」頁原文由「US$20/seat/month, billed annually」改為「US$20/seat/month, billed annually, 20 seat minimum」；考慮以年繳方式導入 Team 方案的小型團隊，應先確認是否達到新門檻（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測 2026-10-15 15:09 UTC）
+- **Team 方案年繳新增 20 席下限（2026-10-15 diff 偵測）**：年繳條件從「每席每月 $20」變「每席每月 $20，最低 20 席」；小型團隊年繳前應先確認席數達標（[claude.com/pricing](https://claude.com/pricing)）
 - **09-28 官方 Plans & Pricing 頁 Batch processing 範例模型換代**：頁面把 Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5；屬頁面範例更新，不代表 Batch 折扣費率本身變動（Official Docs）
 - **旗艦分界的官方定義（2026-07-20 生效）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用「至多每週用量上限的 50%」且不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率付費。先前將 Fable 5 納入方案週用量的促銷結束於 **2026-07-19 23:59:59 PT**
 - **Pro／Team standard 過渡 credit（2026-08-22 官方查證，先前懸置已結案）**：金額 **$100**——Pro 為每帳戶 $100，Team 為每購買的 standard seat $100、每組織上限 $2,500。資格以 **2026-07-19 23:59:59 PT** 當下持有合格 Pro／Team standard 方案為準（免費試用不算）。**領取窗已於 2026-08-02 23:59 PT 關閉**，未領者不再補發；已領取的 credits 於 **2026-09-17 23:59 PT 到期**（促銷起算 60 天）。這批 credits **不限 Fable 5**，是一般 usage credits，任何模型都能用、方案用量觸頂時也能墊（來源：[Claude Fable 5 one-time free credits promotion](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。credits 用盡後可續買、改用其他模型、或升級 Max
@@ -154,6 +154,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
+| 是否新增訂閱留存優惠應對競品追近 | 單一來源（Startup Fortune，2026-10-15）稱官方「現在付費留住訂閱者」，具體機制、金額與適用方案均未見，僅標題可用 | 官方公告或第二來源佐證 |
 | Max／Team 新增「每月 API credits」 | ✅ 2026-10-11 查證：Max 5x $100、Max 20x $200、Team 每席最高 $500／月；**不可用於 Claude Code 或 Claude apps**。細節見「額度與通路的帳務坑」 | 已查證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
 | Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
@@ -717,7 +718,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-10-14：官方再次更新《How do usage and length limits work?》——觸頂後續說明改為「升級方案後新上限立即生效」
 
-- **Official Docs 變更偵測（2026-10-14 15:16 UTC）**：原文「you can wait for it to reset or upgrade your plan. With usage credits ena[bled]…」改為「…upgrade your plan. If you upgrade, your n[ew limit applies immediately]…」（頁面字數 6964→7021）。
+- **Official Docs 變更偵測（2026-10-14）**：觸頂後續說明從「可升級方案，搭配 usage credits…」改為「升級後新上限立即生效」（頁面字數 6964→7021）。
 - **讀者判讀**：新措辭把「升級方案」的效果單獨講清楚——升級後新上限立即生效，不必依賴 usage credits；與 2026-10-09 三頁同步改版（移除「過渡到額度計費需明確同意」措辭，見下方 10-09 條目）屬同一份文件的持續調整，非新規則。
 
 #### 2026-09-06：Mashable 引述 Reddit：多則貼文稱付費方案可用量遠低於宣傳（媒體＋多則社群回報，官方頁面未查證）

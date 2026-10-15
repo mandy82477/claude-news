@@ -195,7 +195,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### The Register／HiddenLayer：決策模型 Jev 僅輸出預定選項仍可被 prompt injection 攻破，27 次測試 25 次成功翻轉決策（2026-10-15 新增，跨類別，非 Claude 專屬）
 
 - **背景**：Jev 為 TypeSafe AI 的「決策模型」，設計上只輸出預定選項、不產生自由文字，用以降低提示注入風險
-- **測試結果**：Check Point 測試 27 次攻擊，25 次成功翻轉決策（The Register，經 Topic Watch／ai-agent-safety 定向抓取，2026-10-15 06:28 UTC）
+- **測試結果**：Check Point 測試 27 次攻擊，25 次成功翻轉決策（The Register，2026-10-15 06:28 UTC）
 - **同組報導**：news.lavx.hu〈HiddenLayer finds Jev decision model vulnerable to prompt injection attacks〉（2026-10-15 06:40 UTC）跟進同一揭露
 - **性質判斷**：非 Claude／Anthropic 產品，屬跨類別延伸記錄；呼應本頁「## 提示注入已不是單點漏洞，是產業級攻擊面」的收斂觀察——即使限制輸出形式（僅選項、非自由文字）仍無法阻絕提示注入
 
@@ -205,7 +205,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：資安業者 Noma Labs 揭露 Claude Code 桌面版存在一項 CVSS 8.7（Critical 等級）漏洞；具體攻擊鏈、觸發條件與是否已修補均未見報導
 - **與同日另一則揭露的關係**：同日另有 CSO Online 報導 Claude Code 桌面版 256KB 限制相關瑕疵（見下則），兩者均為獨立的 Claude Code Desktop 安全揭露，無證據顯示為同一漏洞
 - **10-15 升級（Noma Labs 原文可讀，Hacker News 15 分）**：攻擊鏈公開——攻擊者在公開 repo 放入偽裝成測試覆蓋率報告的惡意 HTML，繞過 Claude Code Desktop 預覽沙盒、在無 CSP 限制下執行 JavaScript，達成任意檔案讀取；官方尚未發布修補或回應（[Noma Labs](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)）
-- **性質判斷（10-15 更新）**：誰會遇到（開啟不明 repo 覆蓋率報告預覽的使用者）與你能先做什麼（避免開啟）均已答得出，符合「## 現在還擋不住的攻擊」表入口判準；該表現仍滿載 11 列且本輪無列達退場條件，暫留技術彙整追蹤待補位
+- **性質判斷（10-15 更新）**：開啟不明 repo 覆蓋率報告預覽的使用者會遇到此攻擊鏈，先避免開啟不明來源的預覽即可規避；官方尚未發布修補，持續在本節追蹤
 - ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7｜訊 2026-10-15）：攻擊鏈與觸發條件已於 10-15 公開（見上），官方是否已修補仍未見報導
 - **可信度評估**：Noma Labs 原文直接來源（10-15），較 10-14 VMblog 轉述可信度提升；CVSS 分數仍為資安業者評分，非官方確認
 

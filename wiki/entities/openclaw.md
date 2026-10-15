@@ -33,8 +33,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-15
 **最後新聞更新：** 2026-10-15
 
-> **待查證的新動態**（2026-10-15）
-> BigGo Finance／36 Kr 兩則標題稱官方進一步開放第三方工具存取或解除第三方 App 禁令，與既有 2026-05-14 政策（允許但走信用池計費）是否為同一事或新一輪鬆綁未經官方查證，詳見下方「事件時序」待查證標記。
+> **疑似新政策動態**（2026-10-15）
+> BigGo Finance／36 Kr 兩則標題稱官方進一步開放第三方工具存取或解除第三方 App 禁令，是否屬實、是否與既有 2026-05-14 政策（允許但走信用池計費）同一事，詳見下方「事件時序」標記。
 
 ---
 
@@ -66,6 +66,10 @@ OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude
 - [[news/2026-04-30]]
 
 ## 事件時序
+
+### 2026-10-15：兩則標題稱官方進一步鬆綁第三方工具政策（未經官方查證）
+
+❓ **待查證**（標 2026-10-15｜查 Third-Party Access、Third-Party App Ban｜複 2026-10-29）｜**Claude 是否已進一步鬆綁第三方工具政策**：BigGo Finance「Anthropic Opens Third-Party Access, Expanding the Claude Subscription Ecosystem」與 36 Kr「Claude Fully Lifts Third-Party App Ban Immediately」兩則標題稱官方進一步開放或解除第三方工具限制，與本頁已載 2026-05-14 恢復允許（仍走信用池計費）是否為同一政策或新一輪鬆綁，官方原文未見，僅標題可用。次級部落格報導（未經官方一手文件核實）稱官方支援頁約 10/7 曾更新，讓用 Claude Agent SDK 開發的第三方工具可動用訂閱方案額度，兩則今日標題疑為對該次異動的延遲報導而非今日新異動，仍待官方原文確認。
 
 ### 2026-08-10：使用者操作的 OpenClaw agent 利用健身房 API 授權漏洞取消他人預約
 

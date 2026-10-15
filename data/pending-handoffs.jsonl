@@ -285,3 +285,7 @@
 {"id": "H-64ce29", "opened": "2026-10-14", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "Noma Labs（CVSS 8.7）與 CSO Online（256KB 預覽窗格洩漏機密）兩起獨立 Claude Code Desktop 安全揭露涉及 Claude Code 功能面，請功能記者視需要同步 entities/claude-code 已知問題", "status": "open"}
 {"id": "H-8973bb", "opened": "2026-10-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 Skills 設計／創意工具整合新增 5 個新節點（taste-skill、oil-ui、AI-research-feedback、agentic-qe、unity-mcp-server），請評估 official-community-gap.md 產品化矩陣是否新增列", "status": "open"}
 {"id": "H-fba90b", "opened": "2026-10-14", "from": "開發實務", "to": "商業", "page": "entities/pricing", "note": "Official Docs《How do usage and length limits work?》2026-10-14 再度更新（觸及上限後等待重置或升級方案、usage credits 啟用後行為的措辭），請比對是否已涵蓋在既有 pricing 文件追蹤系列中", "status": "open"}
+{"id": "H-64ce29", "closed": "2026-10-15", "status": "done", "by": "功能", "result": "功能記者 2026-10-15 ingest 回報已處理"}
+{"id": "H-8973bb", "closed": "2026-10-15", "status": "done", "by": "功能", "result": "功能記者 2026-10-15 ingest 回報已處理"}
+{"id": "H-fba90b", "closed": "2026-10-15", "status": "done", "by": "商業", "result": "商業記者 2026-10-15 ingest 回報已處理"}
+{"id": "H-000c52", "opened": "2026-10-15", "from": "開發實務", "to": "功能", "page": "entities/claude-code", "note": "官方文件更新：Claude Code 桌面版（2026-10-15 新增 SSH／TLS 代理疑難排解章節，含 HTTPS_PROXY／NODE_EXTRA_CA_CERTS 設定）屬同系列文件延續 2026-10-14 已記錄的桌面版 SSH 擴充，請併入 entities/claude-code.md 對應段落", "status": "open"}

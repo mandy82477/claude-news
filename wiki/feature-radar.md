@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-14
+**最後更新：** 2026-10-15
 
 > **這禮拜動了什麼**（2026-10-09）
 > v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -66,6 +66,24 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude API 原生 OpenTelemetry Tracing
+**發布：** 2026-10-14（anthropic-sdk-typescript vertex-sdk-v0.21.0／anthropic-sdk-python v1.14.0） | **狀態：** Public Beta
+
+**是什麼：** Claude API／SDK 原生支援 OpenTelemetry 追蹤——應用程式已註冊全域 tracer provider 時，SDK 升級後自動建立並匯出呼叫的 span，免改程式碼。
+
+**為何熱：** 2 家科技媒體（Pasquale Pillitteri、Unite.AI）同日報導；TS／Python SDK 同步出貨。
+
+**現在要試嗎：** 已有可觀測性基礎設施（已註冊 tracer provider）的團隊可直接升級取得 Claude API 呼叫的追蹤資料；尚未導入 OpenTelemetry 的團隊可先觀望。
+
+**快速上手：**
+```
+# 升級 anthropic-sdk-python ≥ v1.14.0 或 anthropic-sdk-typescript ≥ vertex-sdk-v0.21.0
+# 應用程式已有全域 tracer provider 時自動建立並匯出 span
+# 關閉：client 建構子帶 open_telemetry=False
+```
+
+**注意事項：** 公開測試階段；需應用程式自行先註冊全域 tracer provider 才會生效；支援的 exporter 清單官方未列。
 
 ### Claude Code 停用 @ 檔案提及自動讀取內容（CLAUDE_CODE_DISABLE_FILE_MENTIONS）
 **發布：** 2026-10-14（v2.1.299） | **狀態：** 正式發布
@@ -539,6 +557,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude API 原生 OpenTelemetry Tracing**（SDK 自動建立/匯出 span，免改程式碼；vertex-sdk v0.21.0／python v1.14.0） | 2026-10-14 | 🔥🔥 | ⚡ 有條件推薦 | Beta（公開測試） |
 | **Claude Code 停用 @ 檔案提及自動讀取內容**（v2.1.299，`CLAUDE_CODE_DISABLE_FILE_MENTIONS`，只取路徑不灌入內容） | 2026-10-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway Code 分頁政策鍵**（v2.1.296，`managed.policies[].code` 比照 `cli` 政策套用到 Desktop Code 分頁） | 2026-10-09 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Hook `onFailure: "block"`**（v2.1.295，command／HTTP hook 失敗即阻擋） | 2026-10-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

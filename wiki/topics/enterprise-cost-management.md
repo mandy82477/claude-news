@@ -104,7 +104,7 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 - **情況**：Bank of America 雇用 1000 名約聘人員，修補 Anthropic 網路安全 AI 工具 Mythos 掃描後揪出的軟體漏洞；具體修補規模、費用與時程未見報導細節
 - **與既有案例的區別**：本頁其餘案例多屬「Claude 本身的 token／訂閱計費造成預算失控」，本則成本來源不同——是採用 Anthropic 安全工具後發現既有技術債、產生的修補人力成本，屬 Mythos 產品效能面的下游商業影響，非 inference 計費問題（推論，具體金額未見報導）
 - **社群觀點分歧（Hacker News，35 分）**：部分留言視為 Jevons paradox 案例；另有留言戲稱 Mythos 之後又在新修補中找到新漏洞，形成遞迴修補循環
-- Mythos 的安全能力面見 [[topics/ai-agent-safety]]（安全政策記者負責）
+- Mythos 的安全能力面見 [[topics/ai-agent-safety]]
 
 ### Spotify — 內部工具 Portal 路由「純 I/O」工作，Claude Code token 用量降低 90%（2026-09-04 新增）
 - **來源**：Spotify Engineering 官方部落格（經 Hacker News，2026-09-04）
@@ -217,7 +217,7 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ### 2026-10
 
 #### 2026-10-15
-- **[新類型成本案例，非 inference 計費] CNBC／Hacker News（35 分）：Bank of America 雇用 1000 名約聘人員修補 Mythos 掃出的軟體漏洞**：詳見「企業案例」新增段落。**對本頁的意涵**：首個「採用 Anthropic 安全工具後衍生修補成本」的案例類型，區別於既有 token／訂閱計費失控案例；具體金額未見報導（Hacker News／CNBC）
+- **[新類型成本案例] CNBC／HN（35 分）：Bank of America 雇用千名約聘人員修補 Mythos 揭出的漏洞**：詳見「企業案例」新增段落，首個安全工具衍生修補成本案例，具體金額未見報導（Hacker News／CNBC）
 
 ### 2026-09
 
