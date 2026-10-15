@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-15
 
 > **最新成本案例**（2026-10-15）
-> Bank of America 雇用千名約聘人員修補 Mythos 揭出的軟體漏洞——首見「安全工具衍生修補成本」案例類型，不同於既有 token／訂閱計費失控案例（CNBC／Hacker News 35 分）。
+> Bank of America 雇用千名約聘人員修補 Anthropic 網路安全 AI 工具 Mythos 揭出的軟體漏洞——這是安全工具揭露漏洞後衍生修補人力成本的案例，不同於既有 token／訂閱計費失控案例（CNBC／Hacker News 35 分）。
 
 ---
 
