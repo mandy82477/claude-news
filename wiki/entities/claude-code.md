@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-14"
-last_news_update: "2026-10-14"
+last_updated: "2026-10-15"
+last_news_update: "2026-10-15"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -13,12 +13,12 @@ children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 120
-attribution_count: 696
-attribution_last: "2026-10-14"
+attribution_count: 707
+attribution_last: "2026-10-15"
 top_source: "github-issues"
-pending_count: 21
-pending_overdue: 11
-pending_next_review: "2026-10-15"
+pending_count: 24
+pending_overdue: 12
+pending_next_review: "2026-10-17"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"

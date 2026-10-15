@@ -4,24 +4,24 @@ kind: "entity"
 type: "product（第三方工具）"
 status: "active（信用池計費，不含訂閱）"
 domain: "💼 商業"
-last_updated: "2026-09-20"
-last_news_update: "2026-08-10"
+last_updated: "2026-10-15"
+last_news_update: "2026-10-15"
 status_main: "active"
-days_since_news: 65
+days_since_news: 0
 parent: null
 children: "['entities/openclaw-archive']"
 page_role: "hub"
-days_since_news_subtree: 65
+days_since_news_subtree: 0
 inbound_links: 9
-attribution_count: 1
-attribution_last: "2026-08-10"
-top_source: "blog"
-pending_count: 0
+attribution_count: 3
+attribution_last: "2026-10-15"
+top_source: "google-news"
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-10-29"
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # OpenClaw

@@ -385,11 +385,5 @@
     }
   ],
   "preview": "Anthropic 官方確認 Claude Code 的 Auto Mode 將於 8 月 14 日起正式成為 Pro、Max、Team 方案新 session 的預設值（已自行設定過預設或釘選預設者不受影響），並宣布即日起不再對 auto 分類器產生的額外 token 用量收費；社群流傳一項對 1,053 名付費測試",
-  "sedimentedToday": [
-    {
-      "id": "openclaw",
-      "name": "OpenClaw",
-      "pageType": "entity"
-    }
-  ]
+  "sedimentedToday": []
 }

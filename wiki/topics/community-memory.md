@@ -3,17 +3,17 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-11"
-last_news_update: "2026-10-11"
+last_updated: "2026-10-15"
+last_news_update: "2026-10-15"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 4
-attribution_count: 2
-attribution_last: "2026-10-11"
+attribution_count: 3
+attribution_last: "2026-10-15"
 top_source: "devto"
 pending_count: 0
 pending_overdue: 0

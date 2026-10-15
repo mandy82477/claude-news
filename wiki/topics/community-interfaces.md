@@ -3,17 +3,17 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-13"
-last_news_update: "2026-10-13"
+last_updated: "2026-10-15"
+last_news_update: "2026-10-15"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 0
-attribution_count: 5
-attribution_last: "2026-10-13"
+attribution_count: 7
+attribution_last: "2026-10-15"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

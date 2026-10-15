@@ -370,11 +370,6 @@
       "id": "tom-brown",
       "name": "Tom Brown",
       "pageType": "entity"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
     }
   ],
   "reader": {
