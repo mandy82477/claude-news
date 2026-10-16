@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **第三款遊戲引擎整合補齊 Unity**（2026-10-14）
-> - **AnkleBreaker-Studio/unity-mcp-server**：MCP server 讓 Claude、Cursor 等 client 連上 Unity Editor，268 個工具涵蓋場景管理、Shader Graph、動畫與多人連線；GitHub Search 504 星，補齊 Godot（GodotMaker）、Unreal（EpicGames 官方）後第三個主流引擎。
+> **兩款新 MCP 整合：對話畫圖與資安情報查詢**（2026-10-16）
+> - **DayuanJiang/next-ai-draw-io**：聊天方式畫、編輯 draw.io 流程圖，含網頁版、桌面版與 MCP 伺服器；GitHub Search 36,275 星（存量盤點）。
+> - **mukul975/cve-mcp-server**：MCP 伺服器讓 Claude 透過 21 個 API 使用 27 項資安情報工具（CVE、EPSS、CISA KEV、MITRE ATT&CK 等）；GitHub Search 1,624 星。
 
 ---
 
@@ -58,6 +59,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### DayuanJiang/next-ai-draw-io：透過對話畫與編輯 draw.io 流程圖，含網頁版、桌面版與多工具 MCP 伺服器（2026-10-16）
+
+- **主線：** —
+- **核心模式：** 透過與 AI 對話畫與編輯 draw.io 流程圖；提供網頁版、桌面版，並附一個可供 Claude Code、Cursor、Codex、VS Code 使用的 MCP 伺服器；GitHub Search 累積 36,275 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「對話式繪圖應用＋MCP」取向——與「Skills 設計」類別既有的 drawio-skill（程式碼/規格轉 draw.io 架構圖、走 CI 同步）、reladraw（圖表描述語言）不同形態，本則是完整網頁／桌面應用，MCP 伺服器只是其中一個介面；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 存量盤點條目，2025-03 出生、本庫今日首次收錄，累積時間跨度逾一年半；僅取得 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search（存量盤點）；[GitHub](https://github.com/DayuanJiang/next-ai-draw-io)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### mukul975/cve-mcp-server：MCP 伺服器讓 Claude 透過 21 個 API 使用 27 項資安情報工具（2026-10-16）
+
+- **主線：** —
+- **核心模式：** 生產級 MCP 伺服器，讓 Claude 透過 21 個外部 API 使用 27 項資安情報工具，涵蓋 CVE 查詢、EPSS 評分、CISA KEV、MITRE ATT&CK、Shodan、VirusTotal 等；GitHub Search 1,624 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「資安情報垂直整合」取向——既有代表技巧多接生產力或創作服務，本則把多個外部資安資料源整進單一 MCP 供 Claude 直接查詢，而非防護 Claude Code 自身（那是「安全架構」類別，Grepathy、agent-scan 等）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅取得 GitHub Search 星數（1,624★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/mukul975/cve-mcp-server)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### AnkleBreaker-Studio/unity-mcp-server：Unity MCP Server，268 個工具支援 AI 輔助遊戲開發（2026-10-14）
 

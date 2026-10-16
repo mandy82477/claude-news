@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **最新動態**（2026-10-15）
-> v2.1.300 新增 `virtualText`（mod 裝飾文字）與 OTel 快取用量拆分欄位；2.1.299 已補修 gateway API 金鑰外洩與排程夏令時間重複觸發兩個問題。
+> **最新動態**（2026-10-16）
+> Claude Code 的 Code Review 功能正式轉為正式發布（GA）；v2.1.301 新增無人值守重試逾時上限旗標。
 
 ---
 
@@ -42,6 +42,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.301**（2026-10-15）：新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，讓無人值守重試模式（`CLAUDE_CODE_RETRY_WATCHDOG`）在額度重置時間太久遠時直接結束請求，不再乾等（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）。
+  同版 build 另新增 1 個第一階候選旗標 `CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA`＋代號旗標 `DAPPER_CUPCAKE`，代號旗標 `SQUISHY_NEWT` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.15.0／anthropic-sdk-typescript sdk-v0.135.0 同步發布：thinking 類型新增 `between_tools`、Messages 新增 `speed` 參數與 `usage.speed`、可讀取 Console 組織用量等級，見下方「版本更新」表。
 - **v2.1.300**（2026-10-15）：新增 `virtualText`——mod 可在提示框內畫裝飾文字，不會進入草稿或送出的提示內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量的欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）。
   同版 build 另新增 4 個功能候選旗標（PDF 讀取頁數上限、隱藏回覆伺服器名稱、訊息提示快取 TTL），消失 1 個（`CLAUDE_CODE_FORCE_SANDBOX`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.299**（2026-10-14）：修復 gateway API key 外洩與排程夏令時間重複觸發兩項問題；新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`，`@` 檔案提及只傳路徑（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）。
@@ -81,6 +83,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-16）：文件索引新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解），呼應 Code Review 功能同日轉為正式發布（GA），詳見 [[feature-radar]]（[索引](https://code.claude.com/docs/llms.txt)）。
+- **官方文件更新**（2026-10-15）：桌面版文件新增 SSH／TLS 代理疑難排解章節，涵蓋 `HTTPS_PROXY`、`NODE_EXTRA_CA_CERTS` 等設定，延續 10-14 的 SSH 遠端工作流程擴充（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-14）：桌面版文件大幅擴充（99,435→122,477 字，新增 122 段、移除 6 段），集中於 SSH 遠端工作流程——連線遠端機器的需求、macOS／Linux 沿用既有 SSH 設定、Windows 遠端機器支援，以及 Desktop 離線時任務在背景持續執行、連回後處理期間送達的請求（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-11）：桌面版文件新增說明——本機 session 在**設定 > Claude Code**設 Worktree location；SSH session 則在連線設定 Worktree folder（遠端路徑，如 `~/worktrees`）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-09）：桌面版文件新增說明——Code 分頁的本機 session 現顯示獨立版本號；側邊欄「+ New session」或 macOS `Cmd+N`／Windows `Ctrl+N` 可開新 session，同時處理多項工作（文件字數 93,648→94,202）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -221,7 +225,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-10-04）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
-- 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 62 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
+- 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 63 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 - 🔴 **未修復**｜**Max 20（$200/月）方案升級至 v2.1.198 後，額度重置僅約 70 分鐘即 100% 用盡，此前版本未曾發生（GitHub issue #41788，累積 60 則留言，2026-08-09）**：使用者回報升級至 v2.1.198 後，5 小時額度重置僅約 70 分鐘就被 100% 用盡，且回報者指出前一批版本（2.1.86～2.1.88）從未發生此現象，屬版本更新後的回歸性配額消耗異常；官方尚未回應。與既有多起額度異常消耗回報（issue #38335、#16157 等）同屬配額爭議但版本觸發點不同，暫分列追蹤。定價/計費政策面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**Max 訂閱在使用者未做任何操作下被自動降級為 Free 方案（GitHub issue #41581，累積 39 則留言、9 個讚，2026-08-08）**：使用者回報自己的 Max 訂閱在未進行任何操作的情況下被降級為 Free 方案，屬訂閱計費異常 bug（非官方計費規則調整）；官方尚未回應。
 - 🔴 **未修復**｜**Max 5x 升級至 Max 20x 失敗，顯示「Unable to update subscription」，回報者稱與 #10832、#50710、#43118 同屬相同模式（GitHub issue #55266，累積 39 則留言、1 個讚，2026-08-02）**：使用者回報將訂閱方案從 Max 5x 升級至 Max 20x 時失敗，出現「Unable to update subscription」錯誤；回報者指出此與此前三則已回報問題（#10832、#50710、#43118）呈現相同模式，暗示屬持續未解的訂閱升級系統性 bug（此為回報者主張，本站未逐一查證前三則 issue 內容）；與既有「升級方案付款失敗 `PaymentIntent` 遭 `void_invoice` 作廢」（issue #55982）、「付款訂閱 Max 5x 方案後帳號反遭停用」（issue #5088）同屬訂閱升級／付款流程不穩定的訊號，暫分列追蹤；官方尚未回應。定價/計費政策面另見 [[entities/pricing]]。
@@ -265,7 +269,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
 - 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：CJK 輸入法確認輸入時 Enter 鍵常誤觸發送出訊息（GitHub issue #2054，累積 34 則留言、187 個讚，長年未解）**：籲提供 Enter 僅換行不送出的選項；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：CJK 輸入法確認輸入時 Enter 鍵常誤觸發送出訊息（GitHub issue #2054，累積 37 則留言、196 個讚，長年未解，2026-10-16 互動數更新）**：籲提供 Enter 僅換行不送出的選項；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**德文變音符號（ä、ö、ü）在輸出中隨機被替換為 ASCII 拼寫，如 ä→ae（GitHub issue #14131，累積 45 則留言、26 個讚，2026-10-12 互動數更新）**：使用者回報 Claude Code 輸出中德文變音符號會不定期被替換為對應的 ASCII 拼寫；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：開放 Claude 直接寫入／更新專案檔案的權限模式（GitHub issue #16550，累積 39 則留言、82 個讚，2026-10-11 互動數更新）**：使用者呼籲提供讓 Claude 可直接寫入或更新專案檔案的權限模式，而非只能建議內容讓使用者手動貼上；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**`autoAllowBashIfSandboxed: true` 仍可被含 shell expansion 的指令繞過（GitHub issue #43713，累積 41 則留言、84 個讚，2026-10-11）**：沙箱自動放行保證不成立；與 #39523、#36168 同屬權限自動化失效但設定項不同，暫分列；應手動複核含特殊語法的指令；官方尚未回應。
@@ -397,8 +401,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（81 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（85 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
+- 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、56 個讚，2026-10-15）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
+- 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 39 則留言、48 個讚，2026-10-15）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
+- 🔴 **未修復**｜**Windows 11 Insider（MSIX）Cowork VM 完全無法使用，EXDEV 跨裝置重新命名錯誤未解（v1.1.4010，GitHub issue #27897，累積 36 則留言、15 個讚，2026-10-16）**：MSIX 封裝 EXDEV rename 錯誤，與既有 Cowork VM 啟動失敗同屬平台不穩定訊號；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤（GitHub issue #20571，累積 133 則留言、183 個讚，2026-10-13）**：VS Code 版擴充套件近期更新後，每次工具呼叫皆觸發 API 400 錯誤；CLI 版不受影響；可暫時切換至 CLI 版繞過；官方尚未回應。
 - 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 40 則留言、16 個讚，2026-10-07）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
@@ -547,7 +555,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析（GitHub issue #33238，累積 153 則留言、47 個讚，2026-07-14 首次記錄，2026-07-21 留言數更新）**：使用者回報 Claude Code OAuth 登入逾時失敗，`auth.anthropic.com` 網域完全無法透過 DNS 解析，導致使用者完全無法完成驗證流程；官方尚未回應。
 - 🔴 **未修復**｜**claude.ai visualize 功能故障，claudemcpcontent.com 無法連線（DNS_PROBE_FINISHED_NXDOMAIN）（GitHub issue #34820，累積 96 則留言、39 個讚，首見 2026-07-10，2026-08-04 互動數更新）**：使用者回報 claude.ai 的 visualize 功能故障，依賴的 claudemcpcontent.com 網域無法解析（DNS 錯誤）；官方尚未回應。
 - 🔴 **未修復**｜**API Error: 串流閒置逾時，僅收到部分回應（GitHub issue #46987，累積 184 則留言、197 個讚，2026-07-09）**：使用者回報今日多次遇到串流閒置逾時（stream idle timeout）的 API 錯誤，僅收到部分回應即中斷；官方尚未回應或說明成因。
-- 🔴 **未修復**｜**API Error: Connection closed mid-response——頻繁發生到讓 Claude Code 幾乎無法用於任何任務（GitHub issue #69415，累積 55 則留言、91 個讚，首見 2026-07-23，2026-08-27 互動數更新，今日全站已知問題互動量最高）**：使用者回報連線在回應中途遭關閉（Connection closed mid-response）的 API 錯誤發生頻率極高，嚴重到使 Claude Code 幾乎無法用於任何任務；與既有「串流閒置逾時」（issue #46987）同屬串流連線可靠性問題但錯誤訊息不同，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**API Error: Connection closed mid-response——頻繁發生到讓 Claude Code 幾乎無法用於任何任務（GitHub issue #69415，累積 56 則留言、95 個讚，首見 2026-07-23，2026-10-16 互動數更新，今日全站已知問題互動量最高）**：使用者回報連線在回應中途遭關閉（Connection closed mid-response）的 API 錯誤發生頻率極高，嚴重到使 Claude Code 幾乎無法用於任何任務；與既有「串流閒置逾時」（issue #46987）同屬串流連線可靠性問題但錯誤訊息不同，暫分列追蹤；官方尚未回應。
 - ✅ **已修復（服務已恢復）**｜**Claude API / Claude Code 529 過載（2026-06-21 至 06-22 多波中斷）**：Anthropic 確認 Claude API 與 Claude Code 的 Opus 及 Sonnet 模型發生部分服務中斷，Max plan 用戶反映第一條 prompt 即觸發 529 Overloaded 錯誤，影響持續約 90 分鐘後於 UTC 19:34 恢復服務；06-22 又發生新一波激增，確認受影響模型：Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6；CyberSecurityNews 等多家媒體追蹤報導（見 [HN 討論](https://news.ycombinator.com/item?id=48624168)）
 - ✅ **已修復（服務已恢復）**｜**Anthropic API 大規模 500 Internal Server Error**（2026-05-16 UTC 18:08）：Anthropic 官方狀態頁確認多模型請求出現「Elevated error rates」，Claude Code 使用者陸續回報 500 錯誤，為近期少見的多模型服務中斷事件，影響範圍跨越多個模型；GitHub Issue #59743 有大量開發者回報。
 - 🔎 **查無官方**（標 2026-08-09｜查 claude update、版本回退｜複 2026-10-18）｜**版本管理不透明**（2026-04-27 指控）：執行 `claude update` 後版本從 2.1.120 降回 2.1.119，疑似靜默撤版，官方 changelog 與索引資訊不一致。查證確認社群已彙整 v2.1.119／v2.1.120 在 24 小時內連續出包（含靜默模型切換、UI 重複顯示等多項回歸），並建議暫時鎖版至 v2.1.117 因應，惟此為社群自建的 gist 彙整，Anthropic 未曾就此版本序號異動或 changelog 不一致提供官方說明。2026-09-20 複查：同一份 gist 彙整仍是網路上最完整的記錄，未見官方 postmortem 或 changelog 回頭說明這次 24 小時內兩版本的異動與回退原因。
@@ -576,6 +584,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v1.15.0** | 2026-10-15 | thinking 類型新增 `between_tools`；Messages 新增 `speed` 參數與對應 `usage.speed`；可讀取 Console 組織用量等級（usage-tier）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0)）|
+| **anthropic-sdk-typescript sdk-v0.135.0** | 2026-10-15 | 同步 Python v1.15.0：thinking 新增 `between_tools`、Messages 新增 `speed`／`usage.speed`、Console 組織用量等級（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0)）|
+| **v2.1.301** | 2026-10-15 | 新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`：無人值守重試模式於額度重置過久時主動結束請求（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）|
 | **v2.1.300** | 2026-10-15 | 新增 `virtualText`：mod 提示框內裝飾文字，不進入草稿或送出內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）|
 | **anthropic-sdk-typescript vertex-sdk-v0.21.0** | 2026-10-14 | 新增 `execution_identity`；client 原生支援 OpenTelemetry tracing（已註冊 tracer provider 時自動匯出 span）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0)）|
 | **anthropic-sdk-python v1.14.0** | 2026-10-14 | 同步新增 `execution_identity`；另新增花費上限錯誤類型 `organization_type_not_supported`、telemetry destination 測試端點（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
@@ -900,6 +911,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-16 | **v2.1.301**：新增重試逾時旗標＋SDK speed／usage-tier；文件新增 6 頁 Code Review（轉 GA）；已知問題 4 則、互動更新 3 則。 |
 | 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；新增2則安全揭露指標，見下方「近期報導」。 |
 | 2026-10-14 | **v2.1.299**：新增 `DISABLE_FILE_MENTIONS`；旗標增 13 消 1，見 [[topics/claude-code-experimental]]。桌面文件擴充 122 段（SSH）。 |
 | 2026-10-13 | 新增已知問題 1 則（#20571 VS Code 擴充套件 400 錯誤，133 則留言，今日全站最高）。互動數更新 2 則：#2254（151 讚、47 則留言）、#1669（51 則留言、86 讚）。 |

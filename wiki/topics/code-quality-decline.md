@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **新增一種自己量的角度：量「加了多少程式碼」**（2026-10-14）
-> - 開源 benchmark Parsimony 拿既有 benchmark 的 patch 數 coding units，衡量模型解題時加了多少額外程式碼，跨模型比較、非 Claude 前後對照；HN score 72。
+> **LiveNerf 30 天量測進度來到第 20 天**（2026-10-16）
+> - Reddit 週熱門貼文回報 LiveNerf（10-03 啟動的每日基準測試）第 20 天進度，方法論仍未查證，約 10-24 才有 30 天結論。
 > - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
 
 ---
@@ -56,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
 | **token 消耗異常**（2026-10-09） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-10-03） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 於 2026-10-03 由發文者自行關閉，官方沒有修復說明，關閉後當天仍有人回報 Sonnet 5.5 一樣；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 2026-09-10；138／13 則留言，10-04 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **Opus 5 上線後的品質觀感**（2026-10-16） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 於 2026-10-03 由發文者自行關閉，官方沒有修復說明，關閉後當天仍有人回報 Sonnet 5.5 一樣；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 2026-09-10；138／13 則留言，10-04 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 
@@ -249,6 +249,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-10
+
+#### 2026-10-16
+- **「Livenerf Day 20 update」：LiveNerf 第 20 天進度**：延續 10-03 啟動的每日基準測試，預計約 10-24 得 30 天結論；Reddit 週熱門，0 留言，方法論仍未查證，不計入則數（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)）
 
 #### 2026-10-14
 - **Show HN: Parsimony——開源 benchmark 衡量 AI 模型解題時額外加了多少程式碼**：數既有 benchmark patch 的「coding units」，衡量模型是否把 codebase 越寫越肥；跨模型比較、非 Claude 前後對照，詳見「怎麼自己量一次」（來源：[原文](https://parsimony.lasu.dev/)，HN 72 分）

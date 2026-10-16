@@ -31,13 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-14
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **一次收兩款高星 UI 設計 skill，另補測試與研究垂直領域**（2026-10-14）
-> - **taste-skill（96,073★）與 oil-ui（1,466★）同日出現**：皆鎖定「給 agent 用的 UI／前端視覺判斷」，前者走藝術指導＋瀏覽器自檢，後者走多方案並排比較＋截圖細修。
-> - **可靠性測試垂直領域回補一例**：proffesor-for-testing/agentic-qe 是多 agent QA／QE 測試艦隊，500★、100 forks、74 個開放 issue。
-> - **學術研究審查 skill 合集**：claesbackman/AI-research-feedback，500★。
+> **兩款新 skill：SEO 全流程與 JSON 規格動態圖表**（2026-10-16）
+> - **Illyism/seo-skills（506★）**：給 Claude Code、Cursor、Codex 的 SEO 全流程 skill 組，涵蓋自動巡檢、標題優化、backlink、文案等。
+> - **Aryanutkarsh/SeeCode（515★）**：由簡短 JSON 規格產生動畫、可互動探索的圖表，供 coding agent 使用。
 
 ---
 
@@ -70,6 +69,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Illyism/seo-skills：給 Claude Code、Cursor、Codex 的 SEO 全流程 skill 組（2026-10-16）
+
+- **主線：** —
+- **核心模式：** 一組 SEO 相關 agent skills，涵蓋 SEO 自動巡檢、標題標籤優化、部落格內容更新、backlink、顧客旅程分析、影片逐字稿與文案撰寫；GitHub Search 506 星。
+- **與既有模式的關係：** 補上「Skills 設計」一個「SEO 垂直領域全流程」取向——與既有 open-steps（平實語言報告）、headcount（組織化 skill 目錄）不同領域，本則把 SEO 工作流拆成多個可組合 skill；SEO 工作與 codebase 規模無關，暫填 —。
+- **可信度註記：** 僅取得 GitHub Search 星數（506★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Illyism/seo-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Aryanutkarsh/SeeCode：給 Claude 與其他 coding agent 的動態可互動圖表，由簡短 JSON 規格產生（2026-10-16）
+
+- **主線：** —
+- **核心模式：** 從一份簡短 JSON 規格產生動畫、可互動探索的圖表，供 Claude 與其他 coding agent 使用；GitHub Search 515 星。
+- **與既有模式的關係：** 補上「Skills 設計」一個「圖表規格語言」取向，與既有 reladraw（可自訂版面配置的圖表描述語言）、drawio-skill（程式碼/規格轉 draw.io 圖）同屬圖表類但走「JSON 規格＋動畫可互動探索」而非靜態 draw.io 輸出；原始描述簡略，分類暫依與既有圖表類做法最接近者歸入，週更時可再判。
+- **可信度註記：** 原始描述僅一句話可用，依日報段落判讀；僅取得 GitHub Search 星數（515★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Aryanutkarsh/SeeCode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Leonxlnx/taste-skill：給 coding agent 加上「品味」的 agent skill——藝術指導、參考圖片比對與瀏覽器自檢，取代泛用 AI 風格頁面（2026-10-14）
 

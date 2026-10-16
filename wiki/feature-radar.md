@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-15
+**最後更新：** 2026-10-16
 
 > **這禮拜動了什麼**（2026-10-09）
 > v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
@@ -15,6 +15,7 @@
 - **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
 
 %% 10-08 換上 Claude Haiku 5.5（🔥🔥🔥🔥🔥，10-07 發布，在 30 天時間閘內達標，與 AGENTS.md 同熱度但發布日較新，依規則排序優先），擠下 Claude Mods（🔥🔥🔥🔥，10-01 發布，熱度較低）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，第一條固定為預設值改變型 Sonnet 5.5 %%
+%% 10-16：本週無新達標功能（Code Review GA 僅 🔥🔥🔥，未達 🔥🔥🔥🔥 替補門檻），維持上週推薦（最後輪替：2026-10-08） %%
 
 ---
 
@@ -66,6 +67,56 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Code Review 正式發布（GA）
+**發布：** 2026-10-15 | **狀態：** 正式發布
+
+**是什麼：** Claude Code 的 GitHub App Code Review（PR 開啟／每次 push／`@claude review` 觸發自動審查）正式轉為全面上線（GA），伴隨官方 $50,000 美元點數方案；官方文件索引同日新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解）。
+
+**為何熱：** The Next Web、Unite.AI 同日報導，日報列為當日「重大事件」。
+
+**現在要試嗎：** 已在用 GitHub PR 流程審查的團隊可規劃正式導入；點數方案與費用細節屬商業角度，見 [[entities/pricing]]（2026-10-16 查證：官方 code-review／code-review-costs 頁未提及此點數方案，細節仍未見官方一手確認）。
+
+**快速上手：**
+```
+GitHub repo 設定 → 啟用 Claude Code Review App
+PR 留言 @claude review 觸發即時審查
+```
+
+**注意事項：** 與 CLI `/code-review`（本機／背景 subagent 審查，已有獨立 radar 條目）為不同介面、互補關係；用量費用細節見官方 [Code Review costs and usage](https://code.claude.com/docs/en/code-review-costs.md)。
+
+### Claude API Messages 新增 speed 參數
+**發布：** 2026-10-15（anthropic-sdk-python v1.15.0／sdk-typescript v0.135.0） | **狀態：** 正式發布
+
+**是什麼：** Messages API 新增 `speed` 參數與對應的 `usage.speed`；thinking 類型新增 `between_tools`；另可讀取 Console 組織的用量等級（usage-tier）。
+
+**為何熱：** 兩個 SDK 同日同步發布，官方 release notes 列為 Features。
+
+**現在要試嗎：** 在意回應速度與用量分層設定的 API／SDK 開發者可直接升級查閱；一般 CLI 使用者無感知差異。
+
+**快速上手：**
+```
+pip install -U anthropic   # v1.15.0 起支援 speed 參數
+```
+
+**注意事項：** `speed` 參數具體可選值與對計費的影響，官方 release notes 未展開。
+
+### Claude Code 無人值守重試逾時上限
+**發布：** 2026-10-15（v2.1.301） | **狀態：** 正式發布
+
+**是什麼：** 新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，讓無人值守重試模式（`CLAUDE_CODE_RETRY_WATCHDOG`）在額度重置時間太久遠時直接結束請求，不再乾等。
+
+**為何熱：** 官方 release notes 單一改動項目，0 互動；修正既有無人值守排程重試功能的邊界情況。
+
+**現在要試嗎：** 用無人值守排程重試、擔心 session 卡死等重置的使用者可設定此上限；一般互動式使用者無感知差異。
+
+**快速上手：**
+```
+export CLAUDE_CODE_RETRY_WATCHDOG=1
+export CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS=600000   # 範例：10 分鐘
+```
+
+**注意事項：** 須先啟用 `CLAUDE_CODE_RETRY_WATCHDOG` 才有意義；單位與預設值官方原文未載。
 
 ### Claude API 原生 OpenTelemetry Tracing
 **發布：** 2026-10-14（anthropic-sdk-typescript vertex-sdk-v0.21.0／anthropic-sdk-python v1.14.0） | **狀態：** Public Beta
@@ -557,6 +608,9 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Code Review（GitHub App）正式發布（GA）**（PR 審查，$50,000 點數方案，官方文件新增 6 頁） | 2026-10-15 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Messages API speed 參數＋usage-tier**（anthropic-sdk-python v1.15.0／typescript sdk-v0.135.0） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **無人值守重試逾時上限**（`CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，v2.1.301） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude API 原生 OpenTelemetry Tracing**（SDK 自動建立/匯出 span，免改程式碼；vertex-sdk v0.21.0／python v1.14.0） | 2026-10-14 | 🔥🔥 | ⚡ 有條件推薦 | Beta（公開測試） |
 | **Claude Code 停用 @ 檔案提及自動讀取內容**（v2.1.299，`CLAUDE_CODE_DISABLE_FILE_MENTIONS`，只取路徑不灌入內容） | 2026-10-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway Code 分頁政策鍵**（v2.1.296，`managed.policies[].code` 比照 `cli` 政策套用到 Desktop Code 分頁） | 2026-10-09 | 🔥 | ⏳ 觀望 | 正式發布 |

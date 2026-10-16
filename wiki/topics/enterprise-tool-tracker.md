@@ -3,14 +3,14 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-12"
-last_news_update: "2026-10-12"
+last_updated: "2026-10-16"
+last_news_update: "2026-10-16"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "['topics/enterprise-tool-tracker-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 43
 attribution_count: 42
 attribution_last: "2026-10-12"
@@ -28,16 +28,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-12
-**最後新聞更新：** 2026-10-12
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-12）
-> - **Epic Games 官方釋出 Unreal Engine skills 供 Claude Code 外掛使用**（527 星，生態系支持信號，內部採用規模未見；詳見使用現況表新增列）。
+> **最新企業採用異動**（2026-10-16）
+> - **Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費達 $1,000**（多家媒體同日跟進，詳見使用現況表新增列與 [[topics/enterprise-cost-management]]）。
+> - **美國參議院準備讓幕僚開始使用 Claude**（Bloomberg Government，尚未確認已上線）。
 
 ## 摘要
 
-**目前追蹤 48 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-12）。
+**目前追蹤 50 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-16）。
 
 **退出理由分兩類：** 客戶自己選的是成本、安全疑慮、自家有競品（Meta、Microsoft，10-05 已查證）；別人劃線的是出口管制、區域存取（Goldman、OKX，2026-08-19/20，Anthropic 區域存取政策，與出口管制無關，見 ⟨Q-03⟩）、Pentagon 黑名單，詳見 [[topics/anthropic-government-policy]]。
 
@@ -45,6 +46,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期新增／擴大採用：**
 
+- **Accenture**：將員工使用 Claude 由公司報銷的支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；仍屬使用中，詳見下方細節與 [[topics/enterprise-cost-management]]
+- **美國參議院**（❓ 未確認）：Bloomberg Government 報導準備讓幕僚開始使用 Claude，尚未確認已上線
 - **Epic Games**：官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用（527 星），生態系支持信號，內部採用規模未見報導
 - **Barclays**：擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師
 - **Google**：開放全體工程師使用 Claude（Business Insider），具體工具範疇未見細節
@@ -71,7 +74,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
-**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計新增 Epic Games 故為 48；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture 與美國參議院故為 50；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -87,6 +90,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
+| 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
 | Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code | ✅ | 2026-10-12 | 官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用，527 星；生態系整合信號，內部採用規模未見報導 | 2026-10-12 |
 | Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
 | JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07 | 2026-09-17 |
@@ -144,6 +149,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
+- **Accenture 支出上限（10-16，3 家媒體）**：將員工可報銷的 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000；是否限 Claude Code 未見細節，成本面見 [[topics/enterprise-cost-management]]
+- **美國參議院（10-15）**：Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude；僅標題可用，具體時程、涵蓋部門與資料存取規範均未見報導
 - **Meta 使用量（10-05，已查證 2026-10-07）**：The Information 報導 Claude Code 使用者由今年稍早約 6 萬降至約 3 萬；春季裁員約 10%（7.8 萬人）只解釋一部分，動機為推自家工具；近 28 天仍花逾 1.05 億美元（The Information）
 - **Meta 自家工具（10-05，已查證 2026-10-07）**：MetaCode 是內部專用工具，使用者逾 3 萬；Muse Code 是 8 月起測試的對外產品、Claude Code 競品，內部使用者逾 6,000。兩者是不同工具，見 [[topics/competitor-landscape#Meta（Muse Code／Muse Glimmer／Muse Wonder）]]
 - **Microsoft 支出（10-05，已查證 2026-10-07）**：原估逾 10 億美元的內部 Claude 支出砍逾三分之一；雲端部門人均月預算由 10 萬降至約 1 萬美元；動機為成本與推自家工具（The Information；PYMNTS）
@@ -204,6 +211,12 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-16
+- **[新增具名企業，✅ 使用中] Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000**：詳見上方使用現況表新增列與 [[topics/enterprise-cost-management]]（Google News/Startup Fortune；24/7 Wall St.；The Times of India）
+
+#### 2026-10-15
+- **[新增具名機構，❓ 未確認] Bloomberg Government：美國參議院準備讓幕僚開始使用 Claude**：尚未確認已上線，詳見上方使用現況表新增列（Google News/Bloomberg Government News）
 
 #### 2026-10-12
 - **[新增具名企業，✅ 使用中] Epic Games 官方 GitHub 帳號釋出 Unreal Engine skills，供 Claude Code 外掛使用**：527 星，遊戲引擎廠商官方生態系支持信號；內部採用規模、使用範疇未見報導細節，詳見上方使用現況表新增列（GitHub Search）

@@ -29,8 +29,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** 1M context window, long context, `[1m]`
 **開始日期：** 2026-04-10
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
 > **最新動態**（2026-10-01）
 > GitHub issue #42542（28 則留言、11 個讚）指出 1M context session 下三種獨立機制（microcompact、cached microcompact、session memory compact）會在未通知使用者的情況下清除工具結果——「你看不出自己在不在 1M 上」的控制權缺口再添一筆：這次連「東西還在不在」都可能被靜默清除而不自知。官方尚未回應，**社群也還沒提出可靠的規避做法**——所以現階段能做的只有「別預設工具結果會留到 session 結束」：重要的中間產物自己落地成檔案，不要只靠對話脈絡保存。
@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 現象 | 證據 | 狀態 |
 |---|---|---|
-| **預設開啟、找不到關閉方式**（Pro）| 62 則留言、44 個讚，2026-08-25 | 🔴 官方未回應 |
+| **預設開啟、找不到關閉方式**（Pro）| 63 則留言、44 個讚，2026-08-25 | 🔴 官方未回應 |
 | **選定狀態保不住**——1M 變體從 model picker 消失，session 中途被降級 | [#46221](https://github.com/anthropics/claude-code/issues/46221)，2026-04-10 開立 | ❓ 以 duplicate 關閉（關聯 #45978），全程無官方留言確認修復 |
 | **`[1m]` 後綴自成一個模型 id**，會影響配額判定 | 受影響帳號存的是 `claude-fable-5[1m]`；[#79337](https://github.com/anthropics/claude-code/issues/79337) Max 誤判需買 credits，即使 session 已存 `[1m]` 設定仍遭覆蓋 | 官方 07-20 定性為誤判，但問題持續未解，社群回報延燒逾 6 週至 09-02（累積 76 則留言、26 個讚）|
 | **你看不出自己在不在 1M 上**——狀態列對 Sonnet 4.6 顯示 200k，而該模型實際支援 1M | [#61734](https://github.com/anthropics/claude-code/issues/61734)，24 則留言，2026-08-29 | 🔴 官方未回應 |

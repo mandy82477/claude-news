@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-15
+**最後更新：** 2026-10-16
 **最後新聞更新：** 2026-10-14
 
-> **Memory 與 Interfaces 兩子頁各添新做法**（2026-10-15）
-> - **Context 管理添反面診斷清單**：dev.to 文章整理四種 context 污染壞習慣與解法，見 [[topics/community-memory#2026-10]]。
-> - **介面元件複用再添一款，外加並行可視化新取向**：VS Code Bridge 橋接 Claude CLI 與編輯器；Reddit 使用者把多個 subagent 輸出做成視訊通話介面追蹤進度，見 [[topics/community-interfaces#2026-10]]。
+> **Integrations 與 Skills 兩子頁各添新做法**（2026-10-16）
+> - **對話畫圖與資安情報查詢**：next-ai-draw-io（聊天畫 draw.io 流程圖）、cve-mcp-server（27 項資安情報工具），見 [[topics/community-integrations#2026-10]]。
+> - **SEO 全流程與 JSON 規格動態圖表 skill**：seo-skills、SeeCode 兩款新 skill，見 [[topics/community-skills#2026-10]]。
 
 ---
 
@@ -55,9 +55,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、Agent Loop 終止條件 | 2026-10-13 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-15 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略 | 2026-10-13 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-14 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-16 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-10-12 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、MCP 長 Session 穩健化、創意工具 Agent 整合 | 2026-10-14 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、MCP 長 Session 穩健化、創意工具 Agent 整合 | 2026-10-16 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-15 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。

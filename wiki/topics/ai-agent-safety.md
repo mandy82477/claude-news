@@ -28,13 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **今日雙線**（2026-10-15）
-> - **Noma Labs 攻擊鏈公開**：Claude Code 桌面版偽裝覆蓋率報告的惡意 HTML 繞過預覽沙盒執行 JS，可任意讀檔，官方尚未修補
-> - **期中選舉防護報告**：Anthropic 政治中立性評測 99%，已封鎖境外假新聞網站，10 月下旬起依州別提供投票資訊
+> **最新動態**（2026-10-16）
+> The Register 報導間接提示注入開始出現在網頁 HTTP 標頭，不再只藏在可見內容裡——攻擊面持續擴張，延續本頁提示注入系列敘事。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -183,6 +182,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### The Register：間接提示注入開始出現在網頁 HTTP 標頭中，不限於可見內容（2026-10-16 新增，跨類別）
+
+- **揭露來源**：Google News／The Register（2026-10-15 20:04 UTC，互動 0）
+- **核心主張（僅標題可用）**：報導稱間接提示注入（indirect prompt injection）攻擊開始出現在網頁的 HTTP 標頭（headers）中，不再只藏在頁面可見內容裡；具體攻擊案例、受影響的 AI agent 產品與是否波及 Claude 均未見報導
+- **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂敘事——可信輸入的邊界已依序擴至網頁內容、`llms.txt`、MCP 回應、記憶層、`.git` 設定檔，本則再擴至 HTTP 標頭本身；該訊號表已滿 8 列，本輪未列入
+- **收錄說明**：跨廠商提示注入案例，不套用一般 Claude／Anthropic 關聯門檻
+- ❓ **待查證**（標 2026-10-16｜查 The Register、HTTP header、prompt injection）：具體攻擊案例、受影響產品與是否波及 Claude 均未見報導，僅 Google News 標題聚合層級可用
+- **可信度評估**：單一來源（The Register 經 Google News 轉載），僅標題可用，互動 0，訊號強度低
+
 ### Anthropic 發布 2026 美國期中選舉防護措施報告：抽樣 25 萬則對話，政治中立性評測 99% 為最中立版本（2026-10-15 新增，官方安全政策表態）
 
 - **官方一手來源**：Anthropic Blog〈Preparing for the 2026 US midterms〉（2026-10-15 15:09 UTC；https://www.anthropic.com/news/2026-us-midterms）
@@ -208,6 +216,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **性質判斷（10-15 更新）**：開啟不明 repo 覆蓋率報告預覽的使用者會遇到此攻擊鏈，先避免開啟不明來源的預覽即可規避；官方尚未發布修補，持續在本節追蹤
 - ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7｜訊 2026-10-15）：攻擊鏈與觸發條件已於 10-15 公開（見上），官方是否已修補仍未見報導
 - **可信度評估**：Noma Labs 原文直接來源（10-15），較 10-14 VMblog 轉述可信度提升；CVSS 分數仍為資安業者評分，非官方確認
+%% 維運備忘：Cybernews〈Claude Code preview pane flaw could leak developer secrets〉（2026-10-16，經 Google News，0 互動，僅標題）經核對與本則為同一漏洞（Noma Labs 原文 URL 即含「preview-pane...exfiltrate」），非新事實，未另立條目 %%
 
 ### CSO Online 揭露 Claude Code 桌面版 256KB 大小限制瑕疵，機密資料可外洩至預覽窗格（2026-10-14 新增，獨立於同日 Noma Labs 揭露）
 
@@ -245,6 +254,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **性質判斷**：屬前瞻能力評估（數月內可能具備），非現在已發生的攻擊，不列入「## 現在還擋不住的攻擊」表；物聯網或邊緣裝置導入 AI agent 的團隊可留意此風險評估
 - ❓ **待查證**（標 2026-10-13｜查 self-replicating-ai、IoT devices）：具體月數估計、受測 9 種硬體類型全名單與是否已有緩解措施均未見官方全文細節
 - **可信度評估**：Anthropic 官方一手研究，可信度高；Hacker News 95 分，Reuters 等多家主流媒體同日轉述，訊號強
+%% 維運備忘：Fox Business〈Anthropic warns of self-replicating artificial intelligence models as AI arms race heats up〉（2026-10-16，經 Google News，0 互動，僅標題）經核對與本則為同一篇 10-12 官方研究的後續轉載，非新事實，未另立條目 %%
 
 ### IT Brief UK：Anthropic MCP SDK 漏洞可讓攻擊者劫持登入狀態，與既有 09-28 Cycode 揭露疑為同一漏洞的後續報導（2026-10-13 新增）
 

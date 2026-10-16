@@ -4,8 +4,8 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-15"
-last_news_update: "2026-10-15"
+last_updated: "2026-10-16"
+last_news_update: "2026-10-16"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **最新計費政策異動**（2026-10-15）
-> 官方「方案與定價」頁把 Team 方案年繳條件從「每席每月 $20，按年計費」改成「每席每月 $20，按年計費，最低 20 席」，新增過去沒有的席次下限（Official Docs，2026-10-15）。
+> **最新計費政策異動**（2026-10-16）
+> 官方 API 定價頁格式改版：Fast mode 說明拿掉「research preview」標籤，數字（$10/$50、$8/$40）不變（Official Docs，2026-10-16）。
 
 ## 現況
 
@@ -135,7 +135,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **Opus 5.5「省 40%」與「省 60%」不是同一個比較（2026-09-23）**：官方「40%」比的是 Opus 5.5 對 Opus 5 的執行成本（$5/$25 → $4/$20）；VentureBeat 報導的「60%」比的是 Opus 5.5 對 Fable 5.1 的 API 定價（$10/$50 → $4/$20）。兩者基準模型不同，不可互換引用。
 
-**Opus 5 定價「歧異」已解消（2026-08-08 官方查證）**：官方文件載明 **$5 / $25 per Mtok，「unchanged from Claude Opus 4.8」**。此前兩種說法其實同時成立——「為 Fable 5 的一半」（$5 vs $10）與 MarkTechPost「維持原 Opus 定價」（與 4.8 相同）是同一組數字的兩個對照對象。Fast mode（research preview，僅 Claude API）另計 **$10 / $50**（來源：[What's new in Claude Opus 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5)）。能力細節見 [[entities/opus-5]]、[[topics/model-comparison]]。
+**Opus 5 定價「歧異」已解消（2026-08-08 官方查證）**：官方文件載明 **$5 / $25 per Mtok，「unchanged from Claude Opus 4.8」**。此前兩種說法其實同時成立——「為 Fable 5 的一半」（$5 vs $10）與 MarkTechPost「維持原 Opus 定價」（與 4.8 相同）是同一組數字的兩個對照對象。Fast mode（僅 Claude API，2026-10-16 查證已不再標記「research preview」）另計 **$10 / $50**（來源：[What's new in Claude Opus 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5)）。能力細節見 [[entities/opus-5]]、[[topics/model-comparison]]。
 
 **本表數字之官方查證（2026-08-20）**：Fable 5 $10/$50、Opus 5 與 Opus 4.8 $5/$25、Sonnet 5 $2/$10、Sonnet 4.6 $3/$15、Haiku 4.5 $1/$5，均與官方模型總覽頁一致（[Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-08-20 查證）。**（2026-08-28 更正）** 此註原寫「8/31 之後的 $3/$15 走向待定」——該說法在寫下時就已過期：官方早於 **2026-08-10** 宣布 $2/$10 永久化、9/1 漲價取消。已無到期日可等。
 
@@ -161,6 +161,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
 | Haiku 5.5 精確 $/Mtok 牌價 | ✅ 已查證（2026-10-11 官方定價頁）：輸入／輸出 $0.10／$0.50（prompt ≤100K）、$0.50／$2.50（>100K），快取讀取 $0.01／$0.05；「降 75%」是官方平均值 | — |
+| Claude Code Code Review GA 附帶 $50,000 美元點數方案 | 媒體稱 Code Review 2026-10-15 轉 GA 附帶 $50,000 點數方案；2026-10-16 查證官方 code-review／code-review-costs 頁僅載計費機制，均未提及此點數方案 | 官方點數方案細節公告 |
 
 **Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得（**2026-10-11 已由編輯部查證收斂：兩數字分屬不同方案層級，見上表**）。**（2026-10-10 補充）** 官方 Plans & Pricing 頁改版偵測到新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文），數字落在 XenoSpectrum 一端，惟完整段落、適用方案層級與是否已暫停均未查證，見下方 10-10 條目。
 
@@ -174,6 +175,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-10-16 查證｜Fast mode 不再標記「research preview」**：官方定價頁拿掉「in research preview」字樣，價格數字不變（來源：[官方定價頁](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測）
 - **✅ 2026-10-15 生效｜Team 方案年繳新增 20 席下限**：官方「方案與定價」頁將 Team annual billing 條件新增「20 seat minimum」，此前無此門檻（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-15）
 - **✅ 2026-09-19 生效｜Auto mode 改用 server-side classifier，分類器耗用不計費**：適用 Claude API、Enterprise，以及 Bedrock／Vertex／Foundry／閘道器用戶；可設 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退回舊行為（來源：[v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)，2026-09-19）
 - **✅ 官方文件新增說明（2026-10-11）｜server-side classifier 檢查未送達時改計入用量**：常見因中間 LLM gateway／proxy 剝除請求；Pro、Max、Team 直連 API 不受影響（來源：[文件索引](https://code.claude.com/docs/llms.txt)，2026-10-11）
@@ -483,6 +485,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **2026-04 事故**：Token 費用預估靜默翻倍（04-29，⏸ 逾 90 天無後續）、Opus「圍牆內圍牆」事件已修正（04-28，✅）、HERMES.md 靜默計費 bug 官方確認但拒絕退款（04-25，⛔）。原始條目見 [[entities/pricing-archive#2026-04]]。
 
 ### 定價與促銷（模型定價、方案設計）
+
+#### 2026-10-16：官方 API 定價頁格式改版，Fast mode 拿掉「research preview」標籤
+
+- **Official Docs 異動（diff 偵測）**：platform.claude.com/docs/en/about-claude/pricing 新增 3 段、移除 4 段；Opus 5／4.8／5.5 的 Fast mode 價格數字不變（$10/$50、$8/$40），新增段落僅格式補上「USD」單位標示。
+- **非純格式的部分**：移除段落原文帶「in research preview」，新增段落已不再出現此字樣——Fast mode 的「研究預覽」標籤已從官方頁拿掉；同時移除「Fast mode 不適用於 Opus 4.7／4.6」的舊限制語句，兩款模型已非現行陣容，屬清理舊版文字，非新增限制。
+%% 維運備忘：下方「模型 API 定價現況」Opus 5 細節原載「Fast mode（research preview，僅 Claude API）」（來源日 2026-08-08），已同批依本次官方文字更正 %%
 
 #### 2026-10-14：官方 API 定價頁 Managed Agents 範例模型從 Opus 5 換成 Opus 5.5
 

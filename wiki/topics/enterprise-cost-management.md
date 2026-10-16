@@ -3,8 +3,8 @@ page: "topics/enterprise-cost-management"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-15"
-last_news_update: "2026-10-15"
+last_updated: "2026-10-16"
+last_news_update: "2026-10-16"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **最新成本案例**（2026-10-15）
-> Bank of America 雇用千名約聘人員修補 Anthropic 網路安全 AI 工具 Mythos 揭出的軟體漏洞——這是安全工具揭露漏洞後衍生修補人力成本的案例，不同於既有 token／訂閱計費失控案例（CNBC／Hacker News 35 分）。
+> **最新成本案例**（2026-10-16）
+> Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000——繼 JPMorgan（每月 $2,000 上限）後另一起頂尖企業設定個人支出天花板的具名案例（Startup Fortune／24/7 Wall St.／The Times of India）。
 
 ---
 
@@ -40,9 +40,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 大型組織採用 Claude Code 後，成本結構挑戰迅速浮現。Uber 四個月耗盡全年 AI 預算（Forbes，2026-05-17）是本頁最早的公開案例，揭示企業在缺乏細粒度使用量控管工具的情況下，AI 工具成本極易失控。此議題已從開發者社群的個人抱怨升級至 Forbes、Business Insider 等主流財經媒體的報導層級，成為企業 CTO 層級必須正視的採購決策問題。
 
-| 指標 | 現況（2026-09-06 更新）|
+| 指標 | 現況（2026-10-16 更新）|
 |------|------|
-| 公開企業案例數 | 13 個（正面優化 1、縮減或切換 5、採用或並行 3、單點失控 4）|
+| 公開企業案例數 | 15 個（正面優化 1、縮減或切換 5、採用或並行 3、單點失控 4、新類型〈下游修補／個人支出上限〉2）%% 新類型 2 筆為本輪新增，舊 13 筆分類沿用 2026-09-06 整理，待下次週整理覆核 %%|
 | 官方企業成本工具 | 組織／部門／每人三層皆有，混合計費管理仍缺 |
 | 已量化的訂閱與 API 價差 | 社群估算 13–40 倍（三方法論）；44 倍是月費暴增倍數，非補貼倍數 |
 | 社群因應工具 | 個人視角為主（tare、engram、CostHawk 等），無部門層方案 |
@@ -98,6 +98,12 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ---
 
 ## 企業案例
+
+### Accenture — 員工 Claude 支出上限設為每月 $29，此前單月花費高達 $1,000（2026-10-16 新增）
+- **來源**：Startup Fortune（經 Google News，2026-10-16），同日 24/7 Wall St.、The Times of India 跟進
+- **情況**：Accenture 將員工可由公司報銷的 Claude 支出上限設在每月 **$29**；此前已有員工單月花費高達 **$1,000**。具體是否限 Claude Code 或泛指所有 Claude 使用、上限生效日期均未見報導細節
+- **與既有案例的區別**：與 JPMorgan Chase（每月 $2,000 上限，見 [[topics/enterprise-tool-tracker]]）同屬「設定個人支出天花板」的企業回應模式，惟 Accenture 的上限數字（$29）遠低於 JPMorgan（$2,000），且觸發前的單月峰值（$1,000）與上限的落差達 **34 倍**，是本頁目前量化落差最大的具名企業案例
+- **意義**：Accenture 同時是 Anthropic「內嵌評估者」夥伴（承諾五年至少 $10 億美元，見 [[topics/anthropic-business]]），顯示同一企業在「公司層級戰略合作」與「員工個人層級成本控管」上採取不同力度的因應（推論，兩者是否有政策關聯未見報導）
 
 ### Bank of America — 雇用 1000 名約聘人員修補 Mythos 揭出的軟體漏洞（2026-10-15 新增）
 - **來源**：CNBC（經 Hacker News，35 分，2026-10-14）
@@ -215,6 +221,9 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-16
+- **[新增具名企業] Accenture 將員工 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000**：詳見「企業案例」新增段落（Google News/Startup Fortune；24/7 Wall St.；The Times of India）
 
 #### 2026-10-15
 - **[新類型成本案例] CNBC／HN（35 分）：Bank of America 雇用千名約聘人員修補 Mythos 揭出的漏洞**：詳見「企業案例」新增段落，首個安全工具衍生修補成本案例，具體金額未見報導（Hacker News／CNBC）

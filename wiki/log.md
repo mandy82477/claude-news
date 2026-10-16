@@ -7717,3 +7717,28 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 7 筆（entities/claude-code、topics/community-memory、topics/community-skills、topics/community-interfaces、topics/code-quality-decline 各 1～3 筆）已 append `data/devpractice-candidates.jsonl`；手冊正文寫入 1 則（Pro/Max 五小時 session 額度用盡時可能繼續完成回應）；Claude Code 桌面版 SSH 文件擴充判斷不落本頁任一流程階段，已轉知功能記者（H-000c52）
 - market 判讀：新增 3 則（Q3 營收 168 億美元年增 46%、紐約市主計官要求暫緩 IPO、FTC 正式發出傳票）；Startup Fortune 訂閱留存優惠單一來源無機制細節、third-party app ban 相關兩則已知為 10/7 舊異動的延遲報導、Bank of America 約聘人員成本非 Anthropic 自身財報數字，三者均未達新資訊門檻，未開新則
 - 查證補充：主編以 WebSearch 查證 entities/openclaw 的第三方工具政策待查證標記，補充次級部落格報導（約 10/7 官方支援頁更新讓 Agent SDK 第三方工具動用訂閱額度）佐證今日兩則標題疑為延遲報導，但官方一手原文仍未見，標記維持 ❓ 未結案；社群記者回報 4 則 GitHub Search 高星 repo（api.github.com 對本 session 回 403 無法查證 forks/issues/commit）中，主編以 WebSearch 核實 2 則（ffmpeg-skill、claude-motion-design）確有第三方 forks 佐證、1 則（dontbemichael）查無任何佐證，另 1 則（qwen21-nsfw-pose-skill）內容範疇不符收錄範圍；四則本輪皆未收錄，留待後續 ingest 或 `/wiki-lint` 複核
+
+## 2026-10-16 Ingest
+
+- 來源日報：[[news/2026-10-16]]
+- 更新頁面：
+  - **人物**：無（唯一條目判斷不收錄）
+  - **功能**：entities/claude-code、topics/claude-code-experimental、topics/long-context-1m
+  - **商業**：topics/anthropic-business、topics/enterprise-tool-tracker、topics/enterprise-cost-management、topics/competitor-landscape、entities/pricing
+  - **安全政策**：topics/recursive-self-improvement、topics/ai-agent-safety
+  - **模型**：entities/opus-5-5
+  - **社群**：topics/community-tech-patterns、topics/community-integrations、topics/community-skills、topics/community-tech-discussions、topics/code-quality-decline
+  - **開發實務**：無（本日無分類派工包；候選 1 筆存入 `data/devpractice-candidates.jsonl` 留待週更）
+  - **投資分析**：topics/market-signals
+- 新增頁面：無
+- feature-radar：新增 3 則——Code Review（GitHub App）正式發布 GA（🔥🔥🔥、⚡ 有條件推薦）、Messages API speed 參數＋usage-tier（🔥、⏳ 觀望）、無人值守重試逾時上限（🔥、⏳ 觀望）；「⭐ 現在值得跟的三件」本輪無新達標替補（均未達 🔥🔥🔥🔥），維持 2026-10-08 推薦不動
+- index：topics/anthropic-business 鉤子句同步更新為「投資人因營收成長放緩下修 IPO 估值預期」
+- 摘要：Claude Code 的 Code Review 功能正式轉 GA（附 $50,000 點數方案，官方未證實）；Accenture 將員工 Claude 月費上限設為 $29（此前有人月花 $1,000）；上週「Scion 抄襲 Mononoke」爭議由 Anthropic 員工在 HN 回應並補上歸因；投資人因營收成長放緩下修 Anthropic IPO 估值預期。
+- 呈現品質：全部通過
+- 分類回退：無；另有兩則排除說明（非回退，商業記者判斷後不收）：ai-talent-flow 專頁定向的生技人事異動（不符該頁「AI 實驗室人才流動」主題門檻）、CoreWeave 股價拋售潮報導（屬 market-signals 範疇非商業記者頁，已由投資分析記者同日收錄）
+- 轉知帳本：結案 H-000c52（功能，桌面版 SSH 文件擴充已併入 claude-code.md）、H-fc0960（開發實務，查核 coding-workflow-guide 現有錨點已是目標狀態，確認無需再編輯）；新開 H-987f57（社群→功能，4 個新 MCP/Skills 節點〔next-ai-draw-io、cve-mcp-server、seo-skills、SeeCode〕請功能記者評估 official-community-gap 矩陣是否加列）
+- 懸置標記：六記者待查證命中皆為無命中（機械掃描日報 21 則條目對 181 筆存量標記，僅 B 級弱訊號 10 筆、依規則不進派工附件）；安全政策記者查明 2 則媒體報導為既有揭露（Noma Labs CVSS 8.7、官方自我複製研究）的重複轉載，未新增標記
+- 歸因 news-pipeline（cloud）／人物、功能、商業、安全政策、模型、社群、投資分析
+- devpractice 沉澱：候選 1 筆（Noma Labs 攻擊鏈細節，留待週更落地到除錯／實際動手寫階段）；手冊正文寫入 0 則（今日無開發實務分類派工包）
+- market 判讀：新增 3 則（Accenture 支出上限案例、Reuters 投資人下修 IPO 估值預期、美國參議院準備導入 Claude）；⚠️ 投資分析記者提出 Financial Times「Anthropic 6 月已取得最高垂圾債信評」與本頁既有里程碑（2026-09-26 查證：信評機構尚未決定）方向矛盾；主編已用 WebSearch 查證，搜尋結果混雜（一說 Anthropic 取得 AIR 評等機構 BBB 投資級、另一說仍在爭取投資級評等中），未找到 FT 原文佐證「六月已取得junk評等」一說，無法判斷孰是孰非，milestone 維持原狀，留待後續查證
+- 查證補充：主編以 WebFetch 查證商業記者提出的 Code Review GA $50,000 點數方案疑問，官方 `code-review`／`code-review-costs` 兩頁均未提及此方案，已回填 `entities/pricing.md`「還沒確定的計費變動」表與 `feature-radar.md` 條目兩處，註明「查證官方頁未載」

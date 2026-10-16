@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-10
+**最後更新：** 2026-10-16
+**最後新聞更新：** 2026-10-16
 
-> **最新動態**（2026-10-10）
-> Jacob Coxon 稱九成把握中國間諜已滲透美國各大 AI 公司，較 10-05 聽證會「極度魯莽」泛稱更進一步，首度點出具體機率數字。
+> **最新動態**（2026-10-16）
+> Anthropic 公布已給予 METR 團隊員工級系統存取權，SecureBio、Accenture 同列評估者，呼應上月簽署的白宮超級智慧協議。
 
 ---
 
@@ -87,6 +87,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」
 - **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告，共和黨參議員的批評為既有「反面聲音」系列首見國會議員層級反駁，詳見「## 技術彙整」。
 - **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，單一來源僅標題可用，詳見「## 技術彙整」。
+- **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 
 ---
 
@@ -105,6 +106,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio、Accenture 同列評估者，呼應上月簽署白宮超級智慧協議（2026-10-16 新增，官方一手）
+
+- **官方一手來源**：[Anthropic Blog〈An update on independent evaluators〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)（2026-10-16 14:56 UTC）
+- **核心主張**：Anthropic 宣布已開始給予非營利評估機構 METR 的團隊類似員工等級的系統存取權；METR 將公開發布其風險評估結果
+- **同列評估者**：SecureBio 與 Accenture 同列評估者，官方並稱正與包括 Hugging Face 在內的多個組織洽談中
+- **與既有敘事的關係**：延續下方 09-19 條目「Anthropic 指定 Accenture 為首位內嵌評估者」——當時官方已稱 METR「亦有參與」，本次是 METR 角色的具體落實（由「參與」升級為「員工級存取權」），非全新機制
+- **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作；本頁首次記錄此協議名稱，確切簽署日期尚未見官方公告
+- ❓ **待查證**（標 2026-10-16｜查 METR、SecureBio、White House Accord）：METR 員工級存取權的具體範圍（能否公開中止部署、是否有否決權）、風險評估結果發布時程，以及白宮超級智慧協議的確切簽署日期與條款均未見報導
+- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；惟存取權具體範圍與協議細節尚待官方進一步說明
 
 ### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增，單一來源僅標題可用）
 
