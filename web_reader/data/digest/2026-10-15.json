@@ -485,11 +485,6 @@
   "preview": "Claude Code：v2.1.300 新增 virtualText（mod 裝飾文字）與 OTel 快取用量拆分欄位；2.1.299 已補修 gateway API 金鑰外洩與排程夏令時間重複觸發兩個問題。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "linus-torvalds",
       "name": "Linus Torvalds",
       "pageType": "entity"
@@ -505,33 +500,13 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-government-policy",
       "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"
     },
     {
@@ -547,31 +522,6 @@
     {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "enterprise-cost-management",
-      "name": "企業規模 Claude 成本管理",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

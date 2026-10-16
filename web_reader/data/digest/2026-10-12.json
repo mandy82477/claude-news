@@ -314,11 +314,6 @@
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
       "pageType": "topic"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
     }
   ],
   "reader": {

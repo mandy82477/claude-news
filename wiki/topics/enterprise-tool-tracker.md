@@ -11,9 +11,9 @@ parent: null
 children: "['topics/enterprise-tool-tracker-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 43
-attribution_count: 42
-attribution_last: "2026-10-12"
+inbound_links: 45
+attribution_count: 46
+attribution_last: "2026-10-16"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
