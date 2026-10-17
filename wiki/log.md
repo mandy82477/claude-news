@@ -7841,3 +7841,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-987f57（功能，4 個新 MCP/Skills 節點不開新矩陣列，備忘存查）；新開 H-280b61（社群→功能，patterns 新增「Anthropic 官方審查機制」節點，請功能記者評估是否影響 official-community-gap 矩陣）
 - 主編查證：商業記者提出 claude.com/pricing 原始擷取「Free 方案含 Claude Design, Slides, Docs」字樣與既有 2026-10-03 查證（Free 不含）衝突；主編以 WebFetch 直接查核官方定價頁確認屬實（Free 現已新增這三項），已於 entities/pricing.md 補一筆更正條目（2026-10-17 查證），不影響付費方案
 - 📋 待使用者裁示：功能記者回報 issue #15942（Visual Studio 2026 整合，👍 587、今日最高單日漲幅 +31）已達 official-community-gap.md 矩陣「≥100 讚」開列門檻，但矩陣已滿 18 列；是否與現有最弱一列比較後納入，留待 `/weekly` 或使用者裁示
+- devpractice 沉澱：候選 3 筆（#22264 平行工具呼叫批錯、Claude Code 團隊自曝審查機制、dev.to routines 無人值守自動化範本），留待週更落地；手冊正文寫入 0 則（今日無開發實務分類派工包）；⚠️ 記者回報 `data/devpractice_state.json` 原記錄 last_sha 在本機歷史中缺失（疑似淺層 clone），已 fallback 48 小時比對並以 `git diff` 額外核對無影響判斷
