@@ -7821,3 +7821,23 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 結果 **✅ 兩頁皆通過**：overview 的 Q3 營收、FTC 取證、Accenture 29 美元上限、Haiku 5.5 prompting 指南、Linus、工具目錄 164 列、7 條降溫說明與 10-15／10-16 兩列事件表皆出現在產物中，`lastUpdated` 為 2026-10-17，wikilink 未變成裸字串；ai-agent-safety 的 `🔎 查無官方`、「10-17 已查證見下」、Frontier Red Team／自我複製階梯／VulnCheck／MaxKB／48,000 檔案各段皆在，`## 現在還擋不住的攻擊` 五欄表頭與分隔列完整未爆版
 - 一處需說明：產物中查無 `⟨Q-01⟩` 與「懸置細節」——核對源檔後確認**源檔本身也已無這兩者**（安全政策記者 3g 輪新增的三筆短標記，於同輪 5c 查實後整個移除），非解析器吞掉。源檔 171,499 字元 vs 產物 169,685，差額為 frontmatter，比例正常
 - `build_web.py` 另印：wikilink 健檢 斷鏈 WARN **23**／錨點 WARN **0**——較上輪 22 增 1。逐條核對後確認**全為存量**：`wiki/CLAUDE.md` 的 8 筆是語法示例（`[[entities/x]]`、`[[頁面]]`、`[[圖片.png]]`）、`wiki/log.md` 的 2 筆是歷史條目（`[[entities/stainless]]`、`[[wikilink]]`），其餘為缺檔日報引用（`[[news/2026-05-01]]` 等）。本輪新增的 7 條 wikilink 全數解析成功
+
+## 2026-10-17 Ingest
+
+- 來源日報：[[news/2026-10-17]]
+- 更新頁面：
+  - **人物**：wiki/entities/jack-clark.md
+  - **功能**：wiki/entities/claude-code.md、wiki/topics/claude-code-experimental.md、wiki/topics/official-community-gap.md（備忘）
+  - **商業**：wiki/entities/pricing.md、wiki/topics/anthropic-business.md、wiki/topics/enterprise-tool-tracker.md、wiki/topics/competitor-landscape.md
+  - **安全政策**：wiki/topics/ai-agent-safety.md、wiki/topics/anthropic-government-policy.md
+  - **模型**：無（ECDSA／量子電路兩則研究判定不構成建頁門檻，比照 2026-08-12 Riemann zeta 案例處置，僅留存於日報）
+  - **社群**：wiki/topics/community-guardrails.md、wiki/topics/community-tech-discussions.md、wiki/topics/community-tech-patterns.md
+- 新增頁面：無
+- feature-radar：本日無新功能
+- index：無狀態變更
+- 摘要：Anthropic 用 Claude 解開 NIST ECDSA 曲線種子 25 年懸案、並設計出比已發表最佳方案精簡一個數量級以上的量子電路；Anthropic 被曝悄悄向國會遊說自家 AI 安全法案；Claude Code 桌面版漏洞正式命名「SneakPeek」；Anthropic IPO 估值傳出可能再砍 5000 億美元。
+- 呈現品質：全部通過（`python scripts/ingest_gate.py --date 2026-10-17` 9 道內容閘全綠；過程中修正 3 筆字元上限超限儲存格，記者端另有數筆自行於機械自查後修正）
+- 分類回退：1 筆確認已由原輪處理，0 筆追加派工——[安全政策] 回退「Claude reveals ECDSA curve origins」一組 4 則 → 模型，查 `data/classification-log.jsonl` 該組已含「模型」類別且模型記者本輪已處理（判定不建頁），依規不追加派工
+- 轉知帳本：結案 H-987f57（功能，4 個新 MCP/Skills 節點不開新矩陣列，備忘存查）；新開 H-280b61（社群→功能，patterns 新增「Anthropic 官方審查機制」節點，請功能記者評估是否影響 official-community-gap 矩陣）
+- 主編查證：商業記者提出 claude.com/pricing 原始擷取「Free 方案含 Claude Design, Slides, Docs」字樣與既有 2026-10-03 查證（Free 不含）衝突；主編以 WebFetch 直接查核官方定價頁確認屬實（Free 現已新增這三項），已於 entities/pricing.md 補一筆更正條目（2026-10-17 查證），不影響付費方案
+- 📋 待使用者裁示：功能記者回報 issue #15942（Visual Studio 2026 整合，👍 587、今日最高單日漲幅 +31）已達 official-community-gap.md 矩陣「≥100 讚」開列門檻，但矩陣已滿 18 列；是否與現有最弱一列比較後納入，留待 `/weekly` 或使用者裁示

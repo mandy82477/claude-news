@@ -88,6 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **usage credits 僅可在網頁版開通（2026-08-11 官方查證）**：官方說明中心 usage-credits 條目載明，行動 App（iOS／Android）訂閱者無法直接於 App 內開啟 usage credits，須改至網頁版 `Settings > Usage` 操作；額度用盡後可切換按量計費（API 標準費率）不中斷服務。此為既有「credits 為 opt-in、預設關閉」規則（見上方 2026-08-08 條目）的補充限制（來源：support.claude.com usage-credits 條目，2026-08-11）
 - **09-17 官方 Plans & Pricing 頁大改版**：新增 Claude Academy、Docs／Slides（beta）／Design 說明；移除舊版 token 定價與 context window 對照，均為前代模型過期資訊（Official Docs，09-17）
 - **Design／Slides／Docs 是方案內含功能，沒有獨立定價（2026-10-03 官方定價頁查證）**：Pro、Max、Team、Enterprise 皆內含，Free 不含；官方未對這三項列出任何單獨費率或加購項，因此它們不會在帳單上獨立出現一列（來源：[claude.com/pricing](https://claude.com/pricing)）
+- **更正（2026-10-17 官方定價頁查證）：Free 現已含 Design／Slides／Docs**：官方定價頁 Free 方案條列已新增「Claude Design, Slides, Docs」，與上方 2026-10-03 查證的「Free 不含」結論不再成立；Pro 條列仍列出相同三項，故此變動不影響付費方案（來源：[claude.com/pricing](https://claude.com/pricing)）
 - 已查證（2026-10-17，[claude.com/pricing](https://claude.com/pricing)）｜**Free 不含 Opus、Pro 可用**：官方方案表 Opus 列 Free 為 No，Pro、Max 5x／20x、Team、Enterprise 皆為 Yes，與 shattered.io 的說法一致。
   - 方案表只寫 Opus、未逐版本標示；[Opus 5.5 發布稿](https://www.anthropic.com/claude-opus-5-5)（09-22）也未逐方案列出可用範圍。
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）

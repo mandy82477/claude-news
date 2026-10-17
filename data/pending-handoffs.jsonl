@@ -291,3 +291,5 @@
 {"id": "H-000c52", "opened": "2026-10-15", "from": "開發實務", "to": "功能", "page": "entities/claude-code", "note": "官方文件更新：Claude Code 桌面版（2026-10-15 新增 SSH／TLS 代理疑難排解章節，含 HTTPS_PROXY／NODE_EXTRA_CA_CERTS 設定）屬同系列文件延續 2026-10-14 已記錄的桌面版 SSH 擴充，請併入 entities/claude-code.md 對應段落", "status": "open"}
 {"id": "H-987f57", "opened": "2026-10-16", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "新增節點 next-ai-draw-io、cve-mcp-server、seo-skills、SeeCode 皆為 Plugin/MCP 或 Skills 新做法，建議功能記者評估 official-community-gap 產品化矩陣是否需加列", "status": "open"}
 {"id": "H-000c52", "closed": "2026-10-16", "status": "done", "by": "功能", "result": "2026-10-15 開發實務記者轉知的桌面版 SSH／TLS 代理疑難排解文件擴充，已併入 entities/claude-code.md 近期平台與文件異動清單"}
+{"id": "H-280b61", "opened": "2026-10-17", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 新增「Anthropic 官方審查機制」節點（Claude Code 團隊自曝審查流程），評估是否影響 official-community-gap.md 產品化矩陣。", "status": "open"}
+{"id": "H-987f57", "closed": "2026-10-17", "status": "done", "by": "功能", "result": "功能記者 2026-10-17 ingest 回報已處理"}
