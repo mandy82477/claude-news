@@ -526,11 +526,6 @@
       "id": "haiku-5-5",
       "name": "Claude Haiku 5.5",
       "pageType": "entity"
-    },
-    {
-      "id": "jack-clark",
-      "name": "Jack Clark",
-      "pageType": "entity"
     }
   ],
   "reader": {

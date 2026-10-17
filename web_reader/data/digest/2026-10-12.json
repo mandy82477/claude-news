@@ -309,13 +309,7 @@
     }
   ],
   "preview": "Claude Code：風險警示：Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗，累積 120 則留言，今日全站互動最高；解除安裝該 KB 可恢復（#92984）。",
-  "sedimentedToday": [
-    {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-12",
     "summary": "",
