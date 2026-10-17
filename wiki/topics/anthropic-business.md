@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 
 > **最新動態**（2026-10-16）
@@ -122,7 +122,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-05 PitchBook（經 Morningstar 轉載）：洩露財報顯示成長快，但撐不起 2 兆美元估值**：與既有 Damodaran「營收門檻」質疑同路線，首度以洩露財報本身為依據；具體數字與方法論未見完整轉載，僅標題可用（Google News/Morningstar）。
 - **2026-10-02 Financial Times 提問「為何 Anthropic 的 IPO 讓人覺得特別奇怪」**：僅標題可用，論點與數字未見報導（Google News/Financial Times）。
 - **2026-09-30 評論：敘事是「獨力勝過整個產業」而非「眾多同業之一」**：John Gruber 評論 Reuters 09-28 外流招股書報導，認為 Anthropic 的 IPO 敘事邏輯預設自己將獨力勝過整個產業；屬評論文章，未見新增財務數字（Hacker News，67 分；daringfireball.net）。
-- **2026-09-30 招股書細節外流：營收近半來自 Amazon／Google**：calcalistech 揭露客戶集中度數字；The Hill、LA Times、Yahoo Finance 續追存在性風險警語，未見新增數字（Google News 各家）。
+- **2026-09-30 招股書細節外流：近半營收經 Amazon／Google 雲端市集銷售**：calcalistech 揭露客戶集中度數字；The Hill、LA Times、Yahoo Finance 續追存在性風險警語，未見新增數字（Google News 各家）。
+  - **10-17 查證更正口徑**：Reuters 的說法是 2025 年**經這兩家雲端市集銷售**約 21.6 億美元、占營收 47%（2023 年 11%、2024 年 32%），不是「營收來自這兩個客戶」——市集是通路，買方另有其人。兩家另代收應收帳款的 60%；另有兩家未具名客戶各占 12%。CryptoBriefing 稱兩家合計約四分之一，與 Reuters 不符，本頁不採。
 - **2026-09-28 機密招股書內容外流，首度書面警示存在性風險**：Reuters 獨家取得 Anthropic 機密遞交的 IPO 招股書，報導財報虧損龐大、營收高速成長，首度在正式文件警示 AI 存在性風險；具體數字未見完整摘要（Reuters）。
 - **09-29 跟進（8 家媒體同日轉述）**：Guardian、euronews、Forbes、CNBC、TechCrunch、Fortune、Yahoo Finance、San Francisco Chronicle 均複述同一份外流文件，未見獨立新增數字（Google News 各家）。
 - **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 稱 IPO 估值將測試 Amazon 持股價值（$3,000 億美元），與 08-20 Motley Fool 估算 $4,000 億美元基準不同（估值假設不同），僅標題可用（Google News/Yahoo Finance）。
@@ -305,7 +306,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Broadcom 貸款租賃晶片（2026-10-01／10-02）**：與 07-22 AMD、09-02 Nvidia-Lambda 同屬循環投資疑慮；Barron's 報導 Broadcom 股價同日上漲。金額與結構見 [[#算力與資金從哪來]]（Google News/Reuters；Barron's；Yahoo Finance）。
 - **訊 2026-10-06 追蹤**：Financial Times 報導華爾街銀行已正式 launch 600 億美元晶片融資案，由「考慮中」「啟動」進入執行階段；條款與 Anthropic 運算產能的到位時程未見報導（Google News/Financial Times）。
 - 後續（2026-10-02）：CRN 引 VMware 夥伴 11:11 CRO Dante Orsini 稱，VCF 與 Anthropic 前沿模型的整合在推動私有雲 AI 專案；屬通路夥伴觀點，非條款資訊。
-- **反壟斷訴訟指控「踩煞車」呼籲構成合謀（2026-09-19）**：The Hill、Politico、Bloomberg Law News 同日報導新提告，指控 Anthropic 與 OpenAI、SpaceXAI、Google 就「踩煞車」呼籲構成反壟斷合謀；原告身分、求償內容與進度均未見報導細節，僅標題可用。
+- **反壟斷訴訟指控「踩煞車」呼籲構成合謀（2026-09-19）**：The Hill、Politico、Bloomberg Law News 同日報導新提告，指控 Anthropic 與 OpenAI、SpaceXAI、Google 就「踩煞車」呼籲構成反壟斷合謀。
+  - 10-17 查證：四名訂閱戶 09-18 於加州北區聯邦法院提起擬議集體訴訟，主張違反 Sherman Act 第 1 條（媒體稱），被告未公開回應、未見裁定。
 - **09-22 跟進（HN 32 分＋AP News）**：具名原告為四名 Claude／ChatGPT／Grok／Gemini 訂閱用戶，主張協議始於 2026-07、降低訂閱者所獲價值；求償金額仍未見報導。
 - **國防部十月前遷出全部機密 AI 工作負載（DefenseScoop，2026-09-11；2026-09-26 查證確認）**：國防部研究工程次長 Emil Michael 證實約 90% 已遷移完成，估十月底前完成全部遷出；驅動因素為 Anthropic 遭列國安供應鏈風險，替代供應商與涉及的 Claude 產品線未見官方點名；影響範圍限於處理美國政府機密資料的用戶。
 - **訊 2026-10-05 追蹤**：BBC 報導國防部在把 Anthropic 列入黑名單後已停用其 AI 工具；同日 AWS 官方部落格詳述 Claude Code 於 Bedrock GovCloud（US）部署細節，聯邦體系內部對 Claude 可用性的判斷並不統一（BBC；Unite.AI）。
@@ -348,7 +350,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | AMD | 投資最高 $50 億，並簽晶片暨投資協議；供應規模、股權比例未見 | 2026-07-22；Reuters、WSJ | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務的報導）。下一個觸發點：供應規模公開 |
 | AWS | 承諾金額逾 $1,000 億，屬 $5,170 億算力總額的分項（推論）；招股書可能揭露更多 | 2026-09-06；Currently.com、The Information | 承諾金額本身無價格後果；通路有：Bedrock 無 50% Batch 折扣，見下方合作表與 [[entities/pricing#通路：誰定價、怎麼開票]] |
 | Google | 直接投資最高 $400 億（04-24）；FT 報近 $2,000 億華爾街融資機制，結構未見（推論） | 2026-04-24；2026-08-04 FT；見 [[entities/google-investment]] | 融資機制無可見後果；Vertex AI 通路費率由 Google 自訂，與第一方牌價不同 |
-| Amazon／Google 營收集中 | 招股書外流：近半營收來自這兩家；比例與口徑未見，細節見「IPO 走到哪一格」 | 2026-09-30；calcalistech；Reuters 09-28 外流報導 | 目前無可見後果。下一個觸發點：公開版 S-1 的客戶集中度與承諾金額 |
+| Amazon／Google 通路集中 | 招股書外流：2025 年近半營收（約 21.6 億美元、47%）經這兩家雲端市集銷售——是通路集中不是客戶集中（10-17 查證更正口徑）；細節見「IPO 走到哪一格」 | 2026-09-30；calcalistech；Reuters 09-28 外流報導 | 目前無可見後果。下一個觸發點：公開版 S-1 的客戶集中度與承諾金額 |
 | 新興算力供應商 | Nscale $450 億、Fluidstack $500 億、TeraWulf $190 億、Akamai $116 億、Volta $100 億、Riot $90 億，多為多年租約或建置案 | 2026-07-06 至 09-25；各案見合作表一行制清單 | 目前無可見後果；單月承諾量級逼近年化營收（本頁 08-29 算術），風險面見上方風險表 |
 | 股權與信貸 | Series H 募資 $650 億；上市前信用額度傳逾 $100 億（08-18）；資料中心私募信貸 $13 億（08-19） | 2026-05-28 官方；Bloomberg；Yahoo Finance | 目前無可見後果。下一個觸發點：公開版 S-1 |
 | Samsung Foundry | 代工 Anthropic 設計 AI ASIC，採 2 奈米製程；較 07-02／07-06 洽談階段具體化，金額與產能規模未見報導 | 2026-10-07；TechPowerUp | 目前無可見後果（未見 Claude 改在該晶片上服務的時程）。下一個觸發點：合約金額或交付時程公開 |

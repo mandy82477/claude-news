@@ -3,7 +3,7 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-10-15"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-15"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-15
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-15
 
 > **本頁在回答什麼**（重寫 2026-08-08）
@@ -44,11 +44,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 本週 coding 亮點
 
-- **hook 可設 `onFailure: "block"`**（v2.1.295）：自配的硬性攔截不會因 hook 掛掉而默默放行，但官方文件措辭仍有落差，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
-- **skill／subagent 的公開稽核數字**：69% 的 skill description 不能可靠觸發、57% 的 subagent 沒宣告 tools，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
-- **Sonnet 5.5 `low` effort 會報完成卻沒跑檢查**，需補驗證指令，見 [第 6 段](#6-測試與上線--怎麼讓它自己驗完再交給你)
+- **跨模型比較先釘 `--effort`**：Opus 5.5／Haiku 5.5 預設降為 `medium`，見 [第 6 段](#6-測試與上線--怎麼讓它自己驗完再交給你)
+- **沙箱自動放行與「強制」CLAUDE.md 規則都有未修復 issue**：強制性請落在 hook，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
+- **`CLAUDE_CODE_DISABLE_FILE_MENTIONS`**：`@` 只傳路徑省 context，見 [第 2a 段](#2a-怎麼讀得省)
 
-> 檢查日 2026-10-10；其餘候選（用量異常 issue、工具星數類）屬他頁，不入本段。
+> 檢查日 2026-10-17；其餘候選（用量與定價、工具星數類、單一作者做法）屬他頁，不入本段。
 
 ---
 
@@ -207,7 +207,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 **exit code 語意**（官方 hooks 文件，2026-09-23 查）：`exit 2` 才是硬攔截——「Exit 2 means a blocking error… exit 2 blocks whether or not you print JSON」。沒印出合法 JSON 到 stdout 時，`exit 1` 只會被當成 non-blocking error，Claude 照常放行該動作。`Stop` hook 的 `exit 2` 語意不同——不是攔阻工具呼叫，而是「Prevents Claude from stopping, continues the conversation」。
 
-另有兩層容易被忽略：`.claude/agent-memory/`（subagent 專屬記憶，**與主 session 的 auto memory 是不同東西**）、以及 skill frontmatter 內可寫 `hooks:`，scoped 到該 skill 的生命週期。
+另有兩層容易被忽略：`.claude/agent-memory/`（subagent 專屬記憶，**與主 session 的 auto memory 是不同東西**）、以及 skill frontmatter 內可寫 `hooks:`，scoped 到該 skill 的生命週期。（社群怎麼做跨 session 記憶、收斂到哪，見 [[topics/community-memory]]「目前結論」。）
 
 ### `paths:` 省了 context，代價是什麼
 
@@ -281,6 +281,8 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 7 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
 
 官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。另一份官方文件〈[Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)〉（2026-10-15 文件更新）補充：**五小時 session 額度用盡的當下若 Claude Code 正在產生回應，該次回應仍會做完**，不會被硬性截斷。
+
+**`@` 提及不灌全文：** v2.1.299（2026-10-14）新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`，開啟後 `@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
 
 **腳本／SDK 呼叫場景的省法：** 官方 headless 文件（2026-09-23 查）記載 `--bare` 旗標——「Add `--bare` to reduce startup time by skipping auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md」；官方稱這是 script 與 SDK 呼叫的建議模式，未來會成為 `-p` 的預設值。這與上方「分層 CLAUDE.md」「`claudeMdExcludes`」等互動式 session 的省法不同層級——後者省的是載入內容的量，`--bare` 省的是連自動發現這個動作本身都跳過，只適合不需要專案客製化行為的一次性腳本呼叫。
 
@@ -395,7 +397,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；媒體轉述的「官方文件寫不要只依賴 hook 做安全防護」經 2026-10-11 查證不見於官方 hooks 文件，官方原意是 `if` 過濾器為盡力比對、硬性允許／拒絕請用權限系統——hook 是保險絲不是門鎖；用 `prompt`／`agent` hook 寫「封鎖 X」的人升到 v2.1.294 以上後應重新驗證。彙整見 [[entities/claude-code]]「hooks：事件、失效模式與能不能當防線」。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；媒體轉述的「官方文件寫不要只依賴 hook 做安全防護」經 2026-10-11 查證不見於官方 hooks 文件，官方原意是 `if` 過濾器為盡力比對、硬性允許／拒絕請用權限系統——hook 是保險絲不是門鎖；權限自動放行也不是絕對的——開沙箱並設 `autoAllowBashIfSandboxed: true` 後，含 shell expansion 的指令仍會跳權限提示（issue #43713，2026-10-11，官方未回應），無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略也是長期未解的已知問題（issue #2544，溯至 2025-06），強制性請落在 hook 而非措辭，見 [[entities/claude-code]]；用 `prompt`／`agent` hook 寫「封鎖 X」的人升到 v2.1.294 以上後應重新驗證。彙整見 [[entities/claude-code]]「hooks：事件、失效模式與能不能當防線」。
 
 **社群面（2026-09-03 補，庫內證據）：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 
@@ -469,6 +471,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 其餘：`/engineering:testing-strategy` 決定測什麼；`/engineering:deploy-checklist` 驗證 CI、依賴並要求**事先寫下 rollback 觸發條件**；官方 recipe 明說 Claude 會照著你既有測試檔的風格與框架寫。
 
 **用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下會把改完的程式回報為完成卻沒跑真正的檢查；在指示裡加「改到可執行的程式就要跑真實檢查（測試／型別檢查／build）」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
+
+**跨模型比較表現前先釘 effort**：Opus 5 預設 `high`，Opus 5.5 與 Haiku 5.5 換代後預設降為 `medium`（官方頁 2026-10-10／10-11 查證），省略 effort 的請求在新世代低一級；懷疑新模型變笨前，先用 `--effort` 把兩邊釘在同一檔，見 [[entities/claude-code]]、[[topics/model-comparison]]。
 
 `/goal` 只管單一 session；要跨 session 保留狀態或 20 路並行，官方的另一格是 Managed Agents——各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」。
 

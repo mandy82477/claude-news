@@ -137,6 +137,12 @@
       "term": "門檻",
       "line_contains": "最低門檻的實用應用",
       "reason": "「hooks 最低門檻的實用應用案例」指上手難度，非本庫收錄判準（2026-09-26 6l 存量清理）"
+    },
+    {
+      "page": "entities/claude-code",
+      "term": "封存",
+      "line_contains": "封存後完全消失",
+      "reason": "描述的是 Claude Code 自己的 session 封存行為（v2.1.252 修復的 bug：session 封存後找不回），是讀者會遇到的產品行為，不是本庫把頁面移進 archive 的維運動作（2026-10-17 6l 存量清理判讀）"
     }
   ]
 }

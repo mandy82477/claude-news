@@ -512,6 +512,78 @@
       ],
       "reviewed": "2026-10-10",
       "why": "同上：官方積木與社群做法分層，對照家在 official-community-gap"
+    },
+    {
+      "pages": [
+        "topics/community-integrations",
+        "topics/community-multi-agent"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "兩頁同為 community-tech-patterns 的子頁，母頁已把七個子頁互相串起；子頁之間再互連會把母頁的路由責任複製成 21 條邊"
+    },
+    {
+      "pages": [
+        "topics/community-cost",
+        "topics/community-guardrails"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "同上，兩頁都是 patterns 母頁的子頁，路由由母頁負責；成本與把關回答的是不同問題，無共同事實"
+    },
+    {
+      "pages": [
+        "topics/community-integrations",
+        "topics/community-skills"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "同上，patterns 子頁之間的結構相似來自共用母頁與工具目錄，不是漏連結"
+    },
+    {
+      "pages": [
+        "topics/community-cost",
+        "topics/community-multi-agent"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "同上，patterns 子頁；多 agent 的成本面已由 community-cost 收，兩頁無需互指"
+    },
+    {
+      "pages": [
+        "topics/anthropic-agent-stack",
+        "topics/community-interfaces"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "官方積木總覽與社群介面做法分屬官方／社群兩軸，共享鄰居來自 claude-code 與 patterns 樹；互連會讓官方頁長出社群工具敘事"
+    },
+    {
+      "pages": [
+        "topics/community-multi-agent",
+        "topics/skill-interest-watch"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "skill-interest-watch 是機器產出的星數快照頁，刻意只被工具目錄引用；任何主題頁直連它都會把「規模」誤讀成「推薦」"
+    },
+    {
+      "pages": [
+        "entities/mustafa-suleyman",
+        "topics/market-lessons"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "market-lessons 是判讀教材頁，只收課名與例題，不收人物；Suleyman 的表態住 market-signals 與人物頁，教材頁指過去即可"
+    },
+    {
+      "pages": [
+        "entities/claude-skills",
+        "entities/pricing"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "共同落地的是同一則 llms.txt 文件索引異動，但兩頁各取不同面向（skills 文件新增 vs 計價文件），無同一事實的兩份副本"
+    },
+    {
+      "pages": [
+        "topics/ai-agent-safety",
+        "topics/claude-code-experimental"
+      ],
+      "reviewed": "2026-10-17",
+      "why": "共同落地的 v2.1.288 在兩頁各講不同事：安全頁講 bash -c 刪除防護修補，實驗頁講旗標出現與消失，不是同一事實"
     }
   ]
 }

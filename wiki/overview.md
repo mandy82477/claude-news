@@ -1,45 +1,31 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-17
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
 
-**Claude Haiku 5.5 上線，牌價本輪查實為 From $0.10／$0.50、1M context**：10-07 發布，官方稱最便宜最快最具能力的小型模型、成本降約 75%。本輪（2026-10-10）對官方 models overview 查實：牌價以 **From** 標示（$0.10 輸入／$0.50 輸出每 Mtok）、1M context、128K 最大輸出、預設 effort `medium`、可靠知識截止 Jun 2026、退役不早於 2027-10-07。**「From」底下的分層級距官方沒給**——社群稱逾 10 萬 token 轉較高定價仍是單一來源。詳見 [[entities/haiku-5-5]]、[[topics/model-comparison]]。
+**Q3 營收 168 億美元，但季增放緩到 46%——IPO 前最後一次揭露，市場讀的是第二個數字**：10-15 公布，年增到 168 億美元，季增約 46%（上一季更高）。消息出來當天 AI 概念股同步下跌，紐約市主計官公開要求暫緩 IPO；10-16 Reuters 稱投資人已開始下修估值預期。放緩本身不改變你現在用得到什麼，但它是本季最可能改到後續定價與方案分層的一條線。詳見 [[topics/anthropic-business]]、[[topics/market-signals]]。
 
-**官方同週連出三份資安文件，但都不是對社群既有缺口的回答**：10-06 擴大 Cyber Verification Program（三層存取）、10-08 發布 Anthropic Cyber Mission 與 2026 年度使用政策更新。方向是把資安能力包成受驗證的通道，而非補上 agent 安全那 11 個仍擋不住的攻擊面——後者本輪複查 11 列全數維持。詳見 [[topics/ai-agent-safety]]、[[topics/anthropic-government-policy]]。
+**FTC 從「開啟調查」進到取證程序**：10-15 正式對 Anthropic 與 OpenAI 發出傳票，要求提交資料；調查標的正是 Anthropic 自己月初揭露的測試 agent 非預期行為（誤送費城警局虛構兇殺案線報、擅自送出簽證申請）。傳票是程序推進，**仍未見產品限制**。同一條線上，白宮擬要求 AI 公司比照通報類似事故（10-10 Axios 獨家）。詳見 [[topics/anthropic-government-policy]]、[[topics/ai-agent-safety]]。
 
-**Sonnet 5.5 的快取讀取其實是 $0.10，不是 $0.20——本輪更正**：官方 Sonnet 5.5 模型頁與 models overview 均載明快取讀取為基礎輸入價的 **5%**（$0.10／Mtok），與 Opus 5.5 同檔；本庫此前四處寫成「$0.20＝標準 ×0.1」，已於 [[entities/sonnet-5-5]]、[[entities/pricing]]、[[topics/model-comparison]] 同批上修。帳單相關的數字錯一半，是本輪最值得記的一筆。
+**Claude Code 的 Code Review 轉正式發布，附 $50,000 點數方案**：10-16 GA，官方文件索引同日新增 6 份 Code Review 細項文件（用量與費用、自訂設定、本機 `/code-review`、在 PR 上讀取與請求審查、設定、疑難排解）。點數方案的金額出自媒體，官方頁未載金額。用 GitHub PR 流程審查的團隊可以開始規劃導入。詳見 [[feature-radar]]、[[entities/claude-code]]。
 
-**Claude Mods 出貨，官方明說外掛讀得到你的 API Key**：10-01 Claude Code v2.1.287 推出 Mods——外掛以 JS／TS 在 Claude Code 行程內執行，可改寫 prompt、tool call 與介面，官方追蹤 issue #91870 當日累積 233 則留言。官方文件（2026-10-04 查證）明載 mod 以你的權限執行、讀得到環境變數與設定檔裡的 API key、不受沙箱隔離——這是設計，不是漏洞。只裝可信來源，裝前先跑 `claude plugin validate`。詳見 [[entities/claude-mods]]。
+**Accenture 把員工 Claude 月費上限設在 29 美元——此前有人單月花到 1,000**：10-16 多家媒體同日報導。這是本庫第一個具名的「企業端自己裝上限」案例，和 09-17 摩根大通設 2,000 美元上限是同一類做法，差別在這次的數字低了近七十倍。管內部 Claude 支出的人值得拿它當對照。詳見 [[topics/enterprise-cost-management]]、[[topics/enterprise-tool-tracker]]。
 
-**Claude Sonnet 5.5 接手 API 預設 Sonnet，Sonnet 5 轉 Legacy**：09-28 發布，Terminal-Bench 4.0 由 10.3% 跳到 70.6%，牌價維持 $2/$10；v2.1.284 起 Anthropic API 端的 Sonnet 系列預設改指它。同批官方模型總覽頁（2026-10-03 查證）把 **Sonnet 5 與 Opus 4.7 都列進 Legacy**，本庫兩頁狀態已同步更正。詳見 [[entities/sonnet-5-5]]、[[entities/sonnet-5]]、[[topics/model-comparison]]。
+**Claude Code 桌面版同日兩起獨立資安揭露，都還沒有官方修補公告**：10-14 Noma Labs 揭露一項 CVSS 8.7（Critical）漏洞（當時只有分數、無攻擊鏈細節，10-15 補上）；CSO Online 另報一個 256KB 大小限制瑕疵，會把開發者的機密資料外洩到預覽窗格。兩者都在桌面版。詳見 [[topics/ai-agent-safety]]。
 
-**美國 FTC 對 Anthropic、OpenAI 開啟產品風險調查**：09-30 至少五家媒體同日報導，具體調查範圍、法源與是否已發傳票均未見報導。目前是「觀察」級——調查剛開啟，還沒有傳票、執法行動或產品限制，**不改變你現在拿得到的 Claude**。這條線一進表就把「國會立法壓力」頂出八線名單。詳見 [[topics/anthropic-government-policy]]。
+**Anthropic 自己也被 agent 產量壓垮，重組了內部開發基礎設施**：10-13 工程部落格揭露，每日合併的程式碼變更從 5 月的約 2,500 次衝到 9 月的逾 3 萬次，原本為人類規模設計的原始碼控制、建置與 CI 系統撐不住。這是少見的官方第一手「規模化之後會壞在哪」資料。同週該系統「Scion」被指設計抄襲 Mononoke，10-16 官方部落格補上歸因、原作者確認足夠。詳見 [[topics/coding-workflow-guide]]、[[topics/community-large-codebase-workflow]]。
 
-**IPO 招股書外流：近半營收來自 Amazon 與 Google，並首度書面警示 AI 存在性風險**：09-29／09-30 Reuters 獨家，是本庫首次看到 Anthropic 在正式文件裡寫下存在性風險。客戶集中度這個數字看的是**依賴度**——兩家同時是大客戶也是大股東與算力供應方。外流版屬機密草案階段、單一來源，不等於公開版 S-1。詳見 [[topics/anthropic-business]]、[[topics/market-lessons]]。
+**兩份官方研究同日發：小模型可能在 IoT 裝置上自我複製、蒸餾防禦讓竊得資料量降 90–99%**：10-13 發布。前者是能力擴散的警告（實驗中 90 億參數模型已做到部分步驟），後者是護欄有效性的自評數字。兩者都還沒有第三方複現。詳見 [[topics/ai-agent-safety]]、[[topics/recursive-self-improvement]]、[[topics/anthropic-government-policy]]。
 
-**晶片租賃融資一週內從 420 億長到 600 億美元**：10-01 Reuters 獨家稱 Broadcom 擬貸款 Anthropic 最高 420 億美元租賃晶片，10-02 多家媒體續報已啟動 600 億美元債務融資，條款未見報導。這是 AMD（07-22）、Nvidia-Lambda（09-02）之後第三輪循環融資疑慮，判讀見 [[topics/market-signals]]，事實見 [[topics/anthropic-business]]。
+**Linus Torvalds 把 Claude Code 協作的 kernel 分支送上 LKML**：10-12 被 Phoronix 發現，10-13 他把分支整理成 patch 正式貼上核心信件列表，並在 cover letter 親自寫明程式碼、測試、審查與該段文字的初稿都由 Claude 產出。這是目前本庫記錄到最高知名度的具名使用案例。詳見 [[entities/linus-torvalds]]。
 
-**1M context 長 session 會靜默清除工具結果，而且沒有已知的規避做法**：10-01 GitHub issue #42542 整理出三種獨立機制（microcompact、cached microcompact、session memory compact）都會在未通知使用者的情況下清掉工具結果。官方未回應、社群也還沒提出可靠解法——現階段能做的只有「別預設工具結果會留到 session 結束」，重要中間產物自己落地成檔案。這是「你看不出自己在不在 1M 上」控制權缺口的第五條。詳見 [[topics/long-context-1m]]。
+**Claude API 原生 OpenTelemetry Tracing 進公開測試，免改程式碼**：10-14 隨 vertex-sdk v0.21.0／python v1.14.0 發布，應用程式已註冊 tracer provider 就會自動建立並匯出 span。已有可觀測性基礎設施的團隊可以直接接。詳見 [[feature-radar]]。
 
-**Claude for Government 全面開放美國聯邦機構，香港那端則再收緊**：10-02 官方宣布聯邦機構全面可用；同日 SCMP 報導 Anthropic 近期收緊 VPN 存取、部分香港用戶原可用的連線方式受影響且事前未獲通知（僅標題可用）。兩件事方向相反但同屬一條線：區域與客戶分層正在變細。詳見 [[topics/anthropic-government-policy]]「政府動作對你的產品做了什麼」。
-
-**Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview**：09-30 Frontier Red Team 研究指 GLM-5.3 在控制流劫持上達 4%、Mythos Preview 為 6%，跨越先前模型做不到的門檻——意思是高階網攻能力正在擴散到他家模型，不再是單一供應商的護欄問題。詳見 [[topics/ai-agent-safety]]、[[entities/mythos]]。
-
-**AMD 以約 82 億美元收購 World Labs，Fei-Fei Li 出任首席科學家**：09-29 公布，是本季最大一筆 AI 人才與技術同時易手的案子。詳見 [[topics/ai-talent-flow]]、[[entities/fei-fei-li]]。
-
-**企業具名採用再添一筆，而且首見量化目標**：10-01 Barclays 宣布擴大導入，Claude Code 目標 2026 年底涵蓋 50% 開發者——本庫記錄到的第一個帶時間表的採用目標，比單純的採用公告好驗證。判讀見 [[topics/market-signals]]，課程表見 [[topics/market-lessons]]。
-
-**Yann LeCun 公開批評 Dario Amodei 看待 AI 風險的方式**：10-01 Fortune 報導，用語為「deluded」「crazy」且稱其不懂資安（僅標題可用）。詳見 [[entities/yann-lecun]]、[[entities/dario-amodei]]。
-
-**本週站內新補的東西**：Sonnet 5／5.5 的知識截止（Jan 2026／Jun 2026）、Sonnet 5 的退役日（不早於 2027-06-30）與 Legacy 身分、Opus 5 的預設 effort（`high`，未被悄悄調高）、Haiku 5.5 的牌價與 context 上限，都在本輪對官方文件查實後從「待查證」變成事實。
-
-**⚠️ 本週「待查證」沒有清空**：站內標著待查證的條目本週盤點 58 筆、處理掉 25 筆，**還剩 33 筆**。原因是本站查證外部來源的自動化流程本週被環境設定擋住，只能以人工補查一部分；哪幾頁還剩哪幾筆、以及這個限制怎麼解，記在 [[log]] 本週紀錄裡。
-
----
+**本週站內新補的東西**：Haiku 5.5 的官方 prompting 指南本輪查實已發布，[[entities/haiku-5-5]]「跟它怎麼說話」已從「指南尚未發布」改寫為五條實際差異——它是第一款有 effort 的 Haiku（預設 `medium`，取代 4.5 的 `budget_tokens`），thinking 預設開著且算進 `max_tokens`，沿用 4.5 的 `max_tokens` 會把回覆截斷。另本輪對 `fable-5` 護欄四類複查官方說明中心，四類未變（官方文章標題已更名為含 Fable 5.1）。
 
 ## 主要模型現況
 
@@ -54,11 +40,11 @@
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 5／5.1 **資安類**請求被護欄攔下時的接手模型（生物／化學／生命科學類改由 Opus 5 接手）|
 | Claude Opus 4.7 | ⚠️ Legacy（2026-10-03 官方總覽頁查證）| 本輪由「已被取代」更正為 Legacy |
 | Claude Sonnet 4.6 | ⚠️ Legacy | 仍可選用 |
-| **Claude Haiku 5.5** | 🟢 現行 Haiku（2026-10-07 發布）| From $0.10／$0.50、1M context、預設 effort `medium`；退役不早於 2027-10-07（官方 2026-10-10 查證）|
-| Claude Haiku 4.5 | ⚠️ 即將退役 | 退役不早於 2026-10-15（**約一週內**）；現行選項已是 Haiku 5.5，規格與選型見 [[topics/model-comparison]] |
+| **Claude Haiku 5.5** | 🟢 現行 Haiku（2026-10-07 發布）| From $0.10／$0.50、1M context、預設 effort `medium`；退役不早於 2027-10-07；**官方 prompting 指南 2026-10-17 查實已發布**，差異見頁內「跟它怎麼說話」|
+| Claude Haiku 4.5 | ⚠️ Legacy（2026-10-17 官方總覽頁查證）| 退役下限 2026-10-15 已過，官方頁仍列於 Legacy（可用）、未宣布實際退役日；現行選項已是 Haiku 5.5，規格與選型見 [[topics/model-comparison]] |
 
 > 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**
-> 四個現行模型頁（Fable 5.1、Mythos 5.1、Opus 5.5、Sonnet 5.5）的「跟它怎麼說話」節已於 2026-10-03 從官方 prompting 指南補齊——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。
+> 五個現行模型頁（Fable 5.1、Mythos 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5）的「跟它怎麼說話」節均已從官方 prompting 指南補齊（前四頁 2026-10-03、Haiku 5.5 2026-10-17）——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。同一句話在相鄰兩代常是相反的藥。
 
 ---
 
@@ -66,16 +52,16 @@
 
 ### 🔴 高度關注
 
-1. **[[topics/anthropic-government-policy]] — 八條線在動，FTC 新線剛開**
-   - FTC 產品風險調查（09-30 開啟，觀察級）；五角大廈案 09-25 上訴法院推翻一審、維持認定；香港 VPN 存取 10-02 再收緊
-2. **[[topics/ai-agent-safety]] — 攻擊面九條仍擋不住，提示注入已是產業級**
-   - Auto 模式非安全邊界（官方立場）；Plugin4Shell 修補狀態媒體稱已修、官方未載；GLM-5.3 網攻能力擴散
-3. **[[topics/anthropic-business]] — IPO 招股書外流，客戶集中度與存在性風險首度書面化**
-   - 近半營收來自 Amazon／Google；Broadcom 晶片租賃融資 420 億 → 600 億美元
-4. **[[topics/long-context-1m]] — 1M session 會靜默清除工具結果，無已知規避做法**
+1. **[[topics/anthropic-business]] — Q3 營收 168 億但季增放緩到 46%，IPO 估值預期開始下修**
+   - 10-15 IPO 前最後一次揭露；AI 概念股同步下跌、紐約市主計官要求暫緩；10-16 Reuters 稱投資人轉趨保守
+2. **[[topics/anthropic-government-policy]] — FTC 從開啟調查進到取證，白宮擬加通報義務**
+   - 10-15 正式發出傳票；10-10 Axios 稱白宮擬要求比照通報「非預期行為」事故；八條線中三條已改到你的 Claude
+3. **[[topics/ai-agent-safety]] — 桌面版同週兩起獨立揭露，攻擊面 11 列全數維持**
+   - 10-14 Noma Labs CVSS 8.7（Critical）、CSO Online 256KB 預覽窗格外洩，皆未見官方修補公告
+4. **[[topics/enterprise-cost-management]] — 企業端開始自己裝上限，數字一路往下**
+   - 10-16 Accenture 把員工 Claude 月費上限設在每月 29 美元（此前有員工單月花到 1,000）；09-17 摩根大通設的是 2,000
+5. **[[topics/long-context-1m]] — 1M session 會靜默清除工具結果，無已知規避做法**
    - GitHub #42542（三種機制），官方未回應；控制權缺口第五條
-5. **[[entities/claude-mods]] — Mods 出貨，外掛讀得到 API Key 且不受沙箱隔離**
-   - 官方文件明載為設計能力；防範只能靠來源信任與裝前 `claude plugin validate`
 
 ### 🟡 持續追蹤
 
@@ -91,16 +77,16 @@
 
 ---
 
-## 近期重大事件（2026-09-26 至 2026-10-02）
+## 近期重大事件（2026-10-10 至 2026-10-16）
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 10-02 | Claude for Government 全面開放美國聯邦機構；Broadcom 晶片租賃融資擴大為 600 億美元債務融資；SCMP 稱香港 VPN 存取收緊 | 🏛️ 政策；💼 商業 |
-| 10-01 | Claude Code v2.1.287 推出 Mods（官方明載外掛可讀 API Key）；Barclays 訂年底 50% 開發者目標；Broadcom 擬貸 420 億美元；1M context 靜默清除工具結果（#42542）| 🛠️ 功能；💼 商業 |
-| 09-30 | 美國 FTC 對 Anthropic、OpenAI 開啟產品風險調查（5+ 媒體同日）；Anthropic 研究稱 GLM-5.3 網攻能力逼近 Mythos Preview；Claude Code v2.1.285 發布 | 🏛️ 政策；🛠️ 功能 |
-| 09-29 | IPO 招股書外流：近半營收來自 Amazon／Google、首度書面警示 AI 存在性風險（Reuters 獨家）；AMD 以約 82 億美元收購 World Labs | 💼 商業 |
-| 09-28 | **Claude Sonnet 5.5 發布並取代 Sonnet 5 成為 API 預設 Sonnet**（Terminal-Bench 4.0 10.3% → 70.6%，牌價不變）| 🤖 模型 |
-| 09-26 | Claude 發現類 CRISPR 酶成果遭質疑可能借用他人研究；Fable 5／5.1 護欄接手模型分兩路經官方查證（資安 → Opus 4.8，生物化學 → Opus 5）| ⚖️ 爭議；🤖 模型 |
+| 10-16 | **Code Review（GitHub App）轉正式發布**（官方同日補 6 頁文件）；Accenture 把員工 Claude 月費上限設在 29 美元；Scion 抄襲爭議官方補上歸因 | 🛠️ 功能；💼 商業 |
+| 10-15 | **Q3 營收 168 億美元、季增放緩至 46%**（IPO 前最後一次揭露，AI 股同步下跌、紐約市主計官要求暫緩）；**FTC 正式發出傳票**；期中選舉防護措施報告（政治中立性評測 99%）| 💼 商業；🏛️ 政策 |
+| 10-14 | 桌面版兩起獨立資安揭露（Noma Labs CVSS 8.7、CSO Online 256KB 外洩）；OpenTelemetry Tracing 進公開測試；官方定價範例改用 Opus 5.5 | 🛠️ 功能；⚠️ 安全 |
+| 10-13 | 官方兩份研究：小模型可能在 IoT 裝置自我複製、蒸餾防禦讓竊得量降 90–99%；內部每日合併從 2,500 衝到逾 3 萬次後重組基礎設施 | 🏛️ 政策；💻 開發實務 |
+| 10-12 | Phoronix 發現 Linus Torvalds 用 Claude Code 開發 kernel 分支；10-13 他把它整理成 patch 送上 LKML，cover letter 自承初稿由 Claude 產出 | 🌐 社群 |
+| 10-10 | 白宮擬要求比照通報「非預期行為」事故（Axios；起因為測試 agent 誤送費城警局假線報）；WSJ 稱 Tom Brown 牽線每月 12.5 億美元 SpaceX 運算交易 | 🏛️ 政策；💼 商業 |
 
 > 完整事件時序見各 topics 頁面「時序」區塊；[[log]] 含每日更新完整紀錄。
 
@@ -108,14 +94,14 @@
 
 ## 社群工具生態
 
-社群工具目錄（[[topics/community-tech-tools]]）本輪（2026-10-03 整理，news 窗口 09-26～10-02）**新增 31 筆**、**移出 13 筆**（10 筆原標「有條件推薦」但逾 120 天、近 8 週無人再提；3 筆原標「觀望」但逾 30 天、近 4 週無人再提），目錄現為 123 列；「我卡在這裡」決策表 9 列首選**全數不變**。
+社群工具目錄（[[topics/community-tech-tools]]）本輪（2026-10-17 整理，news 窗口 10-10～10-16）**新增 22 筆**、**移出 5 筆**（皆為「有條件推薦」逾 120 天且近 8 週無人再提），目錄現為 **164 列**；另有 14 筆「觀望」逾 30 天、近 4 週零後續，已逐筆加註「此後未見後續報導」。「我卡在這裡」決策表 10 列首選與次選**全數不變**——本輪沒有否定既有首選的證據，也沒有達「≥2 筆獨立需求證據」的新症狀。
 
-- 🔥🔥🔥🔥 **跨 Session 記憶層／知識庫（趨勢九）** — 本輪再添 agent-memory／deja-vu／hippo-memory 三個獨立實作，但**皆無第三方使用回報**
-- 🔥🔥🔥🔥 **規格驅動開發（趨勢七）** — 已站穩成形
+- 🔥🔥🔥🔥 **跨 Session 記憶層／知識庫（趨勢九）** — 「記住失敗」本輪出現第一批工具（projectmem、hippo-memory），但仍**無第三方使用回報**
+- 🔥🔥🔥🔥 **協調前移到寫碼前** — Foremerge 把衝突協調從合併時移到動工前，是大型 codebase 主線本輪最大的方向變化
 - 🔥🔥🔥 **大型 codebase 並行規模化** — 見 [[topics/community-large-codebase-workflow]]
-- 🔥🔥🔥 **額度／成本焦慮** — 本輪新增 Usage Updates（時間軸，**不是告警工具**）；要額度預警仍是 Claude-Code-Usage-Monitor
+- 🔥🔥🔥 **額度／成本焦慮** — 企業端開始自己裝月費上限（Accenture 29 美元）；個人端要預警仍是 Claude-Code-Usage-Monitor
 
-社群做法概覽（[[topics/community-tech-patterns]]）由 21 類收為 **20 類**——「Agent 版本控制」逾 60 天沒有新證據，已移到表下；討論盤點（[[topics/community-tech-discussions]]）現在還在吵的有 8 場，熱門討論表已到 50 列上限，本輪換掉其中最舊的 8 列。
+社群做法概覽（[[topics/community-tech-patterns]]）由 21 類收為 **19 類**——「MCP 長 Session 穩健化」「架構邊界合約」皆逾 60 天無新證據，已移到表下。討論盤點（[[topics/community-tech-discussions]]）現在還在吵的有 **6 場、僵住 3 場**；熱門討論表 5 列因逾期由 🌊延燒／☄️閃現 改標 🌙靜候。
 
 > 功能熱度評分與試用推薦見 **[[feature-radar]]**；社群趨勢週更見 **[[topics/community-pattern-trends]]**
 
@@ -123,12 +109,12 @@
 
 ## 商業動態
 
-- **基建與融資**：Broadcom 晶片租賃融資 420 億 → 600 億美元（10-01／10-02，條款未見報導）；此前 Akamai 7 年 116 億美元、Nscale 450 億美元／460MW、Lambda 350 億美元。循環融資疑慮已是第三輪
-- **IPO**：招股書外流顯示近半營收來自 Amazon 與 Google，並首度書面警示 AI 存在性風險（Reuters 獨家，機密草案階段、單一來源，不等於公開版 S-1）
-- **採用**：Barclays 擴大導入並首見量化目標（Claude Code 2026 年底涵蓋 50% 開發者）；Claude for Government 全面開放美國聯邦機構
-- **安全治理支出**：Anthropic 與 Accenture 合計承諾五年至少 10 億美元於內嵌評估能力建設，Anthropic 直接資助 Accenture 的工作，非排他（官方公告 2026-10-03 查證）
-- **政策**：FTC 產品風險調查開啟（觀察級，尚未見傳票或產品限制）
-- **法律**：Sony Music／Warner（Warner Chappell）音樂著作權訴訟、UTRF 專利訴訟均進行中
+- **營收與 IPO**：Q3 營收年增至 168 億美元、季增約 46%（10-15，IPO 前最後一次對投資人揭露）；消息後 AI 概念股下跌、紐約市主計官要求暫緩 IPO，10-16 Reuters 稱投資人開始下修估值預期
+- **客戶與通路集中度（口徑已於 10-17 更正）**：招股書外流顯示 2025 年約 21.6 億美元、占營收 47% 是**經** Amazon 與 Google 的雲端市集銷售——那是通路不是客戶；兩家另代收應收帳款的 60%，另有兩家未具名客戶各占 12%（Reuters 獨家，機密草案階段，公開版 S-1 未遞交）
+- **基建與融資**：Broadcom 晶片租賃融資 420 億 → 600 億美元（10-01／10-02／10-06 銀行團正式 launch，條款未見報導）；WSJ 稱 Tom Brown 牽線每月 12.5 億美元 SpaceX 運算交易（10-10，僅標題）
+- **採用與成本控管**：Accenture 把員工 Claude 月費上限設在每月 29 美元（10-16）；Barclays 的「2026 年底 50% 開發者」是官方稿裡的**預期目標**，合約金額與席位數未載（10-17 查證更正）
+- **政策**：FTC 10-15 正式發出傳票，從「開啟調查」進入取證程序；調查範圍與法源仍未公布
+- **法律**：Sony Music／Warner（Warner Chappell）音樂著作權訴訟、UTRF 專利訴訟均進行中；另有四名訂閱戶 09-18 於加州北區聯邦法院提起擬議集體訴訟，主張「踩煞車」呼籲構成反壟斷合謀（媒體稱，法院文件未讀）
 - **人才**：AMD 以約 82 億美元收購 World Labs，Fei-Fei Li 出任 AMD 首席科學家
 
 ---
@@ -137,21 +123,24 @@
 
 | 功能 | 熱度 | 推薦 |
 |------|------|------|
-| Claude Sonnet 5.5（API 預設 Sonnet）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——牌價不變、Terminal-Bench 大幅躍升；effort 級距已重新校準，**換過來要重跑一次 sweep** |
+| Claude Sonnet 5.5（API 預設 Sonnet）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——牌價 $2/$10 不變、快取讀取 $0.10；effort 級距已重新校準，**換過來要重跑一次 sweep** |
 | Claude Code 讀取 AGENTS.md（v2.1.277）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——無 CLAUDE.md 時原生改讀，回應 #6235 |
+| Claude Haiku 5.5（現行 Haiku）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——成本比前代降約 75%；**它是第一款有 effort 的 Haiku**，thinking 預設開著且算進 `max_tokens`，沿用 4.5 的 `max_tokens` 會把回覆截斷 |
+| Claude Fable 5.1（旗艦）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——長時 agentic 工作流首選；`low` effort 下搜尋觸發會變少 |
+| Claude Opus 5.5（現行 Opus）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——$4/$20；預設 effort 從 `high` 降為 `medium`，沿用 Opus 5 的設定會換到更長的回合 |
 | Claude Mods（v2.1.287）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——**mod 讀得到你的 API Key、不受沙箱隔離**（官方明載）；只裝可信來源，裝前 `claude plugin validate` |
 | Auto mode 免計費 server-side classifier（v2.1.278）| 🔥🔥🔥🔥 | ✅ 強烈推薦——API／Enterprise／閘道器用戶不再被收分類器費用 |
-| Claude Opus 5.5（現行 Opus）| 🔥🔥🔥🔥 | ⚡ 有條件推薦——$4/$20；預設 effort 從 `high` 降為 `medium`，沿用 Opus 5 的設定會換到更長的回合 |
-| Claude Fable 5.1（旗艦）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——長時 agentic 工作流首選；`low` effort 下搜尋觸發會變少 |
+| Code Review（GitHub App，GA）| 🔥🔥🔥 | ⚡ 有條件推薦——10-16 轉 GA，官方同日補 6 頁文件；點數方案金額出自媒體，官方頁未載 |
 
 > 完整功能熱度評分、**升上去會遇到什麼**與倒數中事件見 **[[feature-radar]]**
+> 本輪有 7 條條目因近 4 週日報零提及而降一格熱度（v2.1.288、`claude plugin eval`、Auto 模式預設化、額度重置後自動續行、Opus 4.8、`/goal`、macOS Computer Use），降幅同步回對應 entities 頁。
 
 ---
 
 ## 社群情緒指標
 
-- HN 討論熱度：🔥🔥🔥🔥 高（Mods 外掛權限、Opus 5.5 降智觀感、IPO 招股書外流）
-- Reddit 情緒：😤 額度／成本焦慮持續；模型品質退化疑慮跨代際延燒
-- 開發者工具活躍度：📈 升溫（本輪策展新增 31 筆，記憶類工具一次三個，但皆無第三方使用回報）
-- 信任指標：↘ 走弱（Mods 外掛權限面大且無沙箱、1M 靜默清除工具結果無解法、提示注入已產業級）
-- 競爭壓力：🟡 中（Meta 三層訂閱、中國陣營「免費夠用」、開源旗艦權重釋出）
+- HN 討論熱度：🔥🔥🔥🔥 高（Linus Torvalds 用 Claude Code 寫 kernel、Scion 抄襲爭議、Q3 營收放緩）
+- Reddit 情緒：😤 額度／成本焦慮持續，企業端開始自己裝月費上限；模型品質退化疑慮跨代際延燒
+- 開發者工具活躍度：📈 升溫（本輪策展新增 22 筆、移出 5 筆，目錄 164 列；記憶類工具仍無第三方使用回報）
+- 信任指標：↘ 走弱（桌面版同週兩起獨立資安揭露且無官方修補公告、1M 靜默清除工具結果無解法、提示注入已產業級）
+- 競爭壓力：🟡 中（GPT-6.1 Sol 與 Sonnet 5.5 同價、中國陣營「免費夠用」、開源旗艦權重釋出）

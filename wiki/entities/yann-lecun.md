@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 公開批評 Dario Amodei 看待 AI 風險的方式
 **首次出現：** 2026-10-01
-**最後更新：** 2026-10-04
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-04
 
 > **HN 247 分：對 AI 滅絕人類、rogue 事件皆「零擔憂」**（2026-10-04）
@@ -68,6 +68,8 @@ LeCun 現為巴黎 AI 新創 AMI Labs 創辦人、Meta 前首席 AI 科學家（
 - [Anthropic CEO Dario Amodei is warning about AI risks the wrong way: Meta's former CTO](https://news.google.com/rss/articles/CBMi2wFBVV95cUxQZ0czQzBvbWlTc0pQUHEteEowRDM3UE1NVEg0LU4ta3F3ZG5jYjZuc2FqRDNtS0VRNXlXWTNXS1VudE0xVEpyamFrSWpjMGFidlZ0YVp5WVNVV3lndS1hLVdCUnNHMGxXZUJUU25kcmE2aWJieGt0ZldjcXpaaHJQRjhoRTBEeW9uS3Jralk2Wl8zTEhTaGt2ZGRjZ3FvaTZlZHpyRDd6Skw0cTRmLUhJMkZZYloycXhkNmxQdFRFUGc4UFU3TzZMS2JRbFFnaXlkVXpBUUdLWTlQcUU?oc=5) — Google News／Yahoo Finance，2026-10-01（僅標題可用；標題稱「Meta 前 CTO」屬誤植）
 
 ## 歷史記錄
+
+> 這幾則都落在「AI 風險論述該不該放緩」這條線上，該線的整體追蹤見 [[topics/recursive-self-improvement]]。
 
 - 2026-10-03：同篇 Fortune 專訪經 Hacker News 重新討論（247 分，本站當日最高單則），新增「對 AI 滅絕人類、rogue AI 事件皆零擔憂」「業界示警適得其反」等語（來源：Hacker News／Fortune）
 - 2026-10-02：TNW 轉述其稱滅絕警告是「the worst marketing campaign」、監管呼籲會造成 regulatory capture；Fortune 原文未見這兩點（來源：The Next Web）

@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 
 > **Scion／Mononoke 爭議落幕：Anthropic 已補歸因，原作者確認足夠**（2026-10-16）
@@ -170,8 +170,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Simon Willison OpenAI DevDay 直播花絮：Codex Cloud 故障，改用 Claude Code for web | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | Simon Willison 直播時原想用 Codex Cloud 在手機上處理照片，工具遇問題後改用 Claude Code for web 完成；具名表態，無社群延燒 | — |
 | Show HN: OpenAPPA——開源確定性 guardrail，鎖定多工具連接 agent 的資料外洩風險 | 2026-09-28 · 2026-09-28 | 🔥 | ☄️閃現 | 作者稱工具連接數愈多、agent 失控外洩敏感資料風險愈高，LLM-as-judge 類 guardrail 易受 prompt injection；HN score 22（2 來源） | — |
 | Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill | 2026-09-26 · 2026-09-26 | 🔥🔥🔥 | ☄️閃現 | 作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 耗時，做出可控版面圖表語言＋agent skill；HN score 351 | reladraw |
-| Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | ☄️閃現 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題） | — |
-| Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | ☄️閃現 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節） | — |
+| Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | 🌙靜候 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題，最後動態 2026-09-22） | — |
+| Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | 🌙靜候 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節，最後動態 2026-09-19） | — |
 | 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | 🌙靜候 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節）（最後動態 2026-09-18） | — |
 | Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範，年齡驗證機制近乎空白 | 2026-09-17 · 2026-09-17 | 🔥 | 🌙靜候 | 討論未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制；Reddit r/artificial 週熱門標記（最後動態 2026-09-17） | — |
 | Reddit r/artificial 週熱門：COBRA-Skills 提出用 contextual bandits 取代 generate-execute-analyze-refine 迴圈來優化 Agent Skill | 2026-09-14 · 2026-09-14 | 🔥 | 🌙靜候 | 開源專案主張既有 Agent Skill 優化多走 generate-execute-analyze-refine 迴圈，改用 contextual bandits 提升效率；週熱門標記（詳見細節；最後動態 2026-09-14） | — |
@@ -194,13 +194,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Simon Willison 轉介 Anil Madhavapeddy：僅憑漏洞傳聞就足以讓資安研究者鎖定並找到可利用漏洞 | 2026-08-28 · 2026-08-28 | 🔥 | 🌙靜候 | Anil Madhavapeddy 觀察筆記：僅漏洞傳聞已足以讓資安研究者鎖定並找到可利用漏洞，呼應近期多起 AI coding agent 資安事件（具名表態，無社群延燒）；[原文](https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/)（Blog） | — |
 | 社群長期呼籲 Claude Code 支援 AGENTS.md 標準格式，跨平台已成競品共識 | 2026-08-27 · 2026-09-19 | 🔥🔥🔥🔥 | 🌋重燃 | [GitHub Issue #6235] 累積 385 則留言、6525 個 👍（重燃原因：2.1.277 正式上線 AGENTS.md 支援，HN 683 分討論指出缺 `.agents/skills`，2026-09-19） | — |
 | Reddit r/artificial 週熱門：新基準 HarnessOpt-Bench 測試前沿 LLM 改寫其他 agent harness 的能力並防作弊 | 2026-08-27 · 2026-08-27 | 🔥 | 🌙靜候 | 社群發布 HarnessOpt-Bench，測試 5 款前沿 LLM 改寫其他 agent harness 的能力，並設計防作弊機制；Reddit r/artificial 週熱門標記 | — |
-| 用量限制驅動的「規劃用 Claude Code、實作交給本地模型」混合工作流小趨勢 | 2026-08-21 · 2026-08-27 | 🔥🔥 | 🌊延燒 | 近一週至少三則案例（Reddit×2＋XDA）主張因用量限制而分流；最後動態 2026-08-27（XDA 報導） | — |
+| 用量限制驅動的「規劃用 Claude Code、實作交給本地模型」混合工作流小趨勢 | 2026-08-21 · 2026-08-27 | 🔥🔥 | 🌙靜候 | 近一週至少三則案例（Reddit×2＋XDA）主張因用量限制而分流；最後動態 2026-08-27（XDA 報導） | — |
 | Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | WSJ 報導 Anthropic 稱潛在市場規模達 30 兆美元；HN 留言（score 39）指出這是產業 TAM 估計，非營收承諾 | — |
 | Simon Willison 引述 Paul Dix：AI 寫了 100 萬行程式碼，仍需花數月精煉才能產出可靠軟體 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | Paul Dix：AI 一次寫出 100 萬行程式碼，仍需數月精煉才能產出可靠軟體（Simon Willison 轉引） | — |
 | Reddit r/ClaudeAI 週熱門：配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘 | 2026-08-24 · 2026-08-24 | 🔥 | 🌙靜候 | 使用者稱配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘（Reddit r/ClaudeAI 週熱門） | — |
-| Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌊延燒 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
+| Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌙靜候 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌙靜候 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
-| 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌊延燒 | 額度焦慮系列延燒，08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
+| 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌙靜候 | 額度焦慮系列，最後動態 2026-08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
 | 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-09-14 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT、09-14 preprompt 遷移 Ollama 筆記（HN 59）皆為新訊號 | Recall |
 | AI Skill Atrophy：「做更多、理解更少」 | 2026-06-10 · 2026-10-06 | 🔥🔥🔥🔥 | 🌋重燃 | HN Ask：Prompt-Then-Review 迴圈讓能力侵蝕；社群無共識但警覺度升高（重燃原因：10-06「按 Enter 的人該負多少」接力 10-05 soul-sucking 自白＋09-21 新進員工吐槽，見上方長期議題） | — |
 | 工具生態發現性問題 | 2026-05-15 · 2026-09-02 | 🔥 | 🌙靜候 | Skills/MCP 散落各處，缺乏集中發現機制；2026-09-02 skilldock 針對此痛點推出集中管理桌面應用，惟生態層級的發現機制本身仍未解決，維持靜候 | skilldock |

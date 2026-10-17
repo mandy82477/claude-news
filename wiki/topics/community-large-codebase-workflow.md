@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-05-02
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-10-17
+**最後新聞更新：** 2026-10-17
 
-> **四面牆，官方都已給了起點**（2026-09-23）
-> 每個 agent 一個 worktree、腳本呼叫加 `--bare`、跨 session 的 auto memory、用 Stop hook 擋住「說做完卻沒做」——四面牆官方都已給了零件；Claude Code 一個 session 預設最多同時跑 20 個 subagent，那是上限，不是「20 個都跑得穩」。四條線的「現在的答案」第一條因此都改成官方零件在哪，社群做法接在後面。
+> **協調開始前移到寫碼前，「記住失敗」有了第一批工具**（2026-10-17）
+> 並行線出現 Foremerge：agent 動手前先廣播意圖，在寫碼前偵測架構層級衝突，git 要改到同一行才看得到。記憶線有 projectmem、hippo-memory 兩個本機工具做「記下失敗、重走時先警告」，兩者都沒有第三方使用回報。
 
 ---
 
@@ -69,12 +69,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化；官方也已內建 | Claudette、Superset、cc-fleet 等，見 [[topics/community-tech-patterns-archive]] | 多來源 |
 | 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；另有單一長 session 前後動用 147 個 subagent、24 天完成移植（09-04） | 《Why 20 Instances Break Down》、F-Zero X 移植 | 單一深度分析 |
-| 統一容器 | 08-05 起一批接一批，已有 OS、團隊、平台、IDE 化幾種取向；換底層 agent 不必重寫協作邏輯 | omnigent、loopx、proliferate 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
-| 任務脈絡互通 | 不取代底層 agent，讓多個獨立 agent 共享任務脈絡；09-16 出現跨終端互相傳訊的第二例 | Concord（MCP）、hcom | 單一實測 |
-| 可觀測性 | 多款獨立儀表板，分「讀官方 event stream」與「自解析 transcript」兩路 | HUD、episko（原名 Cockpit）等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
-| 落地整合 | 本地合併佇列讓 commit 依序落地（4–5 agent／日 90 commit／8GB 筆電） | Claude Code Merge Queue | 單一實測 |
+| 統一容器 | 08-05 起一批接一批，至 10-06 仍有新品（控制平面、IDE 化、24/7 自架）；換底層 agent 不必重寫協作邏輯 | omnigent、zeron、cezar 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
+| 任務脈絡互通 | 讓獨立 agent 共享任務脈絡；09-16 有跨終端傳訊第二例，09-20 另有「planner 先產結構化規格合約」的交接做法 | Concord（MCP）、hcom | 單一實測 |
+| 可觀測性 | 多款儀表板分「讀官方 event stream」與「自解析 transcript」兩路；10-03～10-10 再添並排 worktree 管理與視訊通話介面 | HUD、episko（原名 Cockpit）等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
+| 落地整合 | 兩個時點：寫完後本地合併佇列讓 commit 依序落地（4–5 agent／日 90 commit）；寫碼前先廣播意圖偵測衝突（09-22，HN 44） | Merge Queue、Foremerge | 單一實測 |
 
-**為什麼會這樣**：規模一大，共享資源（git、DB）與 context 邊界最先破，所以隔離原語最早收斂；協調層本身正在分岔成「統一容器」與「脈絡互通」兩條互補而非互斥的路線；人工盯進度撐不住，才催生一批儀表板。
+**為什麼會這樣**：規模一大，共享資源（git、DB）與 context 邊界最先破，所以隔離原語最早收斂；協調層分岔成「統一容器」與「脈絡互通」兩條互補的路線；git 只在改到同一行才發現衝突，才有人把偵測前移到寫碼前；人工盯進度撐不住，才催生一批儀表板。
 
 ---
 
@@ -84,6 +84,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **官方已給**：腳本或 SDK 呼叫加 `--bare`，跳過 hooks、skills、MCP server、auto memory、CLAUDE.md 等自動載入（[官方文件](https://code.claude.com/docs/en/headless)）；單次讀取量官方也已設上限——見 [[topics/coding-workflow-guide]]
 - 不預先 @ 一堆檔案、按需取回；長 session 退化的解法是裁剪輸入，不是加 context
 - 「變笨」先量 context 組成再怪工具——官方 `/context` 列出各類別即時佔用與優化建議（[官方文件](https://code.claude.com/docs/en/context-window)），還不確定誰在撐爆就先跑 PrismoDev（🧰 行那列第三欄）；越跑越笨見 [[topics/community-tech-discussions]]，換版變差見 [[topics/code-quality-decline]]
+- 長對話的整理手段官方都給了：`/clear` 清空、`/rewind` 回溯、拆 subagent；社群 10-06、10-13 兩篇同向，主張易腐的當下工作留主對話、其餘移出去，皆無數據
 - CLAUDE.md 每行都是對每個請求課的「context 稅」：依觸發頻率決定放 CLAUDE.md／skill／hook／docs 哪一層（官方建議同方向）
 
 **🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——「context 一直被工具輸出撐爆」列（首選 pxpipe）與「帳單爆了，看不到錢花在哪」列（首選 tare）
@@ -97,8 +98,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 極簡輸出 | 單次回覆 70→20 token；65% 降耗；企業已當降本策略 | Caveman Skill、404 Media 報導 | 多來源 |
 | CLAUDE.md 取捨 | 四層寄放地依觸發頻率；載入順序（CLAUDE.local.md 後載、受管理原則檔各 OS 路徑不同，與官方文件一致） | 「該裝什麼」「載入順序」兩篇 | 單一深度分析 |
 | 固定成本量測 | `claude -p` 未加 `--bare` 冷啟動約 15 萬 token，多 agent pipeline 反覆呼叫會放大；官方沒給數字 | headless 冷啟動實測 | 單一實測 |
-| 工具輸出裁剪 | grep 搜尋輸出宣稱可削減 42% token，但只測 50 題一次、p 值 0.22，benchmark 段落遭質疑 AI 代寫 | Graft | 單一實測 |
+| 工具輸出裁剪 | grep 輸出宣稱削減 42% token，但只測 50 題一次、p 值 0.22，benchmark 遭質疑 AI 代寫；09-29 另有壓縮閘道自述省 85% | Graft、paritok | 單一實測 |
 | fork 子代理的歷史 | fork 子代理繼承父對話（官方證實）；社群回報四個平行子代理耗約 200 萬 token，官方沒給數字 | Reddit 回報 | 單一實測 |
+| 對話整理 | 兩篇 dev.to 同向：依易腐程度決定留主對話或移到 subagent、第二 session、headless；另列四個污染 context 的壞習慣 | 「冰箱」比喻、4 Context Antipatterns | 單一深度分析 |
 | 非主流方向 | 清程式碼內 AI 殘留註解（CCN，2,700 次迭代自陳）；文字 context 渲染成圖片（pxpipe） | CCN、pxpipe | 推論 |
 
 **為什麼會這樣**：大 repo 的檔案量與工具輸出量本身就超過 context，任何「多讀一點保險」的直覺都會撐爆；於是社群的每一步都是在把「哪裡吃了 token」變成可量測的數字，再針對數字最大的那塊裁——但量測本身的可信度也需要驗證，不是每個宣稱的百分比都經得起檢視。
@@ -114,18 +116,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——接手大 repo 讓 agent 讀懂走「接手沒碰過的大 repo，agent 讀不懂」列（首選 graphify）；跨 session 記憶走「每開新 session 都要重講一遍」列（首選 brain.md，零依賴檔案式；團隊共享與 Obsidian 路線的分界在同列第三欄）
 
-**還沒解決**：跨工具可攜、codebase 文件自動維護、「內建記憶到底解決了什麼」都只有一兩個案例，三條近期實作路線（零依賴檔案式、手動策展取代官方、團隊共享）各走各的，沒有交叉比較。「已否決方案要不要記」仍停在問題點名，沒有工具實作。
+**還沒解決**：跨工具可攜、codebase 文件自動維護、「內建記憶到底解決了什麼」都只有一兩個案例，三條近期實作路線（零依賴檔案式、手動策展取代官方、團隊共享）各走各的，沒有交叉比較。「已否決方案要不要記」已有兩個本機工具實作（見下表），但都沒有第三方使用回報，也沒人比較過警告的誤報率。
 
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 統一框架 | Repo-as-Memory：決策外化；跨 repo 依賴圖需另注入（`nx graph` 等） | Repo-as-Memory、Cross-repo Blast Radius | 單一深度分析 |
-| 本地索引 | 向量 DB（39ms 檢索）／圖資料庫／SQLite session 索引／Markdown+git，各走一路；圖譜路線採用量最大（graphify） | Memex、session-indexer、cpr-compress-preserve-resume 等，見 [[topics/community-memory]] | 多來源 |
-| 零依賴檔案式 | 決策／需求／限制三類專案層級資訊，CLI 直存檔案不依賴外部服務 | brain.md | 單一實測 |
+| 本地索引 | 向量 DB／圖資料庫／SQLite／Markdown+git 各走一路，圖譜路線採用量最大（graphify）；10 月起新品多為免 LLM 的 session 歷史搜尋 | graphify、deja-vu、claude-history 等，見 [[topics/community-memory]] | 多來源 |
+| 零依賴檔案式 | 決策／需求／限制三類資訊直存檔案；09-28 起另有純 Markdown 為單一事實來源、Claude Code 與 Codex 共用一庫 | brain.md、agent-memory | 單一實測 |
 | 取代官方記憶 | 主張使用者手動策展比官方 auto memory 更可控、更可信賴 | 手動維護 Obsidian vault（[[topics/llm-wiki-pattern]] 形式） | 單一實測 |
 | 團隊共享 | 鎖定「跟著使用者走」而非留在人類設計的筆記/任務管理系統 | OzBrain（HN 69）| 單一實測 |
 | 可攜性 | Markdown 規則檔不跨工具 → JSON 協定或格式規約；claude-mem／gentle-ai 規模大但沒有實測 | ltm、OKF、claude-mem 等，見 [[topics/community-memory]] | 單一實測 |
 | 文件自動維護 | codebase wiki 隨對話自動更新，取代手維護 MANUAL.md | CodeAlmanac | 單一實測 |
-| 否決方案索引 | 「已被否決」只在人腦或討論串 → 隱形重工；8/31 補上「否決紀錄本身須可驗證、防竄改」 | 兩則概念性觀察（8/7、8/31）| 推論 |
+| 否決方案索引 | 8/7、8/31 兩則概念觀察後，10-01、10-03 出現兩個本機工具：記下失敗嘗試，agent 重走同一條路時先警告 | hippo-memory、projectmem | 單一實測 |
 
 **為什麼會這樣**：跑了數月、數百 session 的 repo，agent 每次重「猜」已知答案既費 token 又重蹈覆轍；社群的共同答案是把記憶從模型搬到 repo 與本地索引，差別只在用什麼形式存、跨不跨工具、以及要不要索性繞過官方記憶機制。
 
@@ -149,7 +151,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對抗式審查 | 計畫前／程式碼後兩做法；唯讀審查者；跨模型交叉審查（論文，解題測試）；另有把審查意見刻意「降階」以免過度採信的單一提案 | Read-Only Reviewer、Agent-plan-review-loop、interns-review-plugin 等，見 [[topics/community-guardrails]] | 多來源 |
 | 規劃分層 | 規劃層「做什麼」／執行層「怎麼做」；把關前移 | beads 兩層架構、品質把關前移 | 單一實測 |
 | 長 session 穩健化 | 心跳／超時重試／狀態快照，從 MCP 層擴到 session（工具失敗、API 500、用量限制各有自動接續） | auto-undo、nightshift、resume-on-ratelimit | 多來源 |
-| 回報驗證 | 靜默失敗案例 → 證據紀錄＋可驗證交接 | 「Subagent 在騙你」、Groundtruth、loopx | 單一實測 |
+| 回報驗證 | 靜默失敗 → 證據紀錄＋可驗證交接；另有外部看板加「每項宣稱重驗」、三段式部署閘（預檢、canary、自動回滾） | Groundtruth、Chief of Staff、loopx | 單一實測 |
+| 確定性把關 | 不呼叫 LLM 的靜態分析，專抓 AI agent 留下的技術債（26 條規則、可掛 hooks） | sloppy（PHP） | 單一實測 |
 | 相鄰案例 | 六秒 CI 測語意漂移；同形狀 bug 跨 repo 批修 28 PR；PR 協作健康度視覺化 | 語意漂移 CI、批量 OSS 修復、Devthropology | 推論 |
 
 **為什麼會這樣**：單一 Claude 自審自批會照單全收（affirmative bias），多 agent 又需要一致邊界，所以社群先用「權限」而非「人設」約束；Boris Cherny 的心法「給它略難的任務、確保它能沿途驗證自己」（[[entities/boris-cherny]]）是這些做法的上位原則——而「回報是否屬實」是沿途驗證裡最後一塊還沒補上的（推論）。
@@ -160,9 +163,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 四條線的共同做法是把小專案已驗證的原則（隔離、精簡、對抗式審查、決策外化）**加碼到更大的規模**，而非發明新機制；四條線官方都已給了起點，社群做的多是在官方零件之上加協調、量測與把關。
 - 收斂最高的是「除錯與分工」（唯讀＋工具範圍）；「並行規模」的上限沒有定論，可觀測性與落地整合正在補位；「索引與記憶」幾條路線各走各的，還沒有交叉比較。
-- **與官方做法頁說法不同的兩處**：[[topics/coding-workflow-guide]] 不再推薦「自己加讀取上限」（官方已內建上限）與「已否決方案索引」（對應官方 issue 已關閉、零回應）；分界是那頁只收官方機制撐得起的做法、本頁記社群走到哪。社群這兩條也只到個別做法與概念觀察，撐不起可執行結論，所以只留在子問題表。
+- **與官方做法頁說法不同的兩處**：[[topics/coding-workflow-guide]] 不再推薦「自己加讀取上限」（官方已內建上限）與「已否決方案索引」（對應官方 issue 已關閉、零回應）；分界是那頁只收官方機制撐得起的做法、本頁記社群走到哪。社群這兩條也只到個別做法與單一工具（已否決方案索引在 10 月才有兩個、都沒有使用回報），撐不起可執行結論，所以只留在子問題表。
 - **你的選項**：官方零件（worktree 隔離、腳本加 `--bare`、auto memory）都是現成的，可以先開起來，撞到哪面牆再照該線的 🧰 行找社群工具；打算跑 10 個以上 agent，可以一段一段加、每段自己量——官方上限與社群崩潰點之間沒有驗證數據。
-- **接下來看什麼**：隔離之後的協調（誰先合併、寫碼前就偵測衝突）是並行線最新的方向；fork 子代理的 token 累積有沒有第二則量測，會決定規模上限那一格要不要改寫。
+- **接下來看什麼**：隔離之後的協調有「寫碼前偵測意圖衝突」與「寫完後依序落地」兩個時點，各只有一則單一案例；fork 子代理的 token 累積有沒有第二則量測，會決定規模上限那一格要不要改寫。
 
 **查過的數字**
 - **fork 子代理會不會讓 token 暴增**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫都重送整段對話歷史，四個平行子代理耗約 200 萬 token。
@@ -188,7 +191,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/managed-agents]]（各功能的版本紀錄與已知問題；Managed Agents 是平台代管的另一個產品）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
 
-%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-09-16 %%
+%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-10-16 %%
 
 ## 參考來源
 

@@ -2,7 +2,7 @@
 page: "entities/teresa-carlson"
 kind: "entity"
 type: "person"
-status: "active（待核實）"
+status: "active（單一來源）"
 domain: "👤 人物"
 last_updated: "2026-10-04"
 last_news_update: "2026-07-07"
@@ -27,7 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Teresa Carlson
 
 **類型：** person
-**狀態：** active（待核實）
+**狀態：** active（單一來源）
 **領域：** 👤 人物
 **身分：** Anthropic 全球公部門負責人（前 Microsoft、AWS 高管）
 **與 Anthropic：** 現任

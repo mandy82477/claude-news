@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-11
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-09
 
 > **牌價與 100K 分段已查實**（官方頁 2026-10-11 查證）
@@ -78,7 +78,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 跟它怎麼說話
 
-官方 prompting 指南尚未發布。本次更新未見官方 prompting／migration 內容，待後續更新補上官方 [choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model) 與 migration guide 的 Haiku 5.5 專屬段落。
+官方 prompting 指南：[Prompting Claude Haiku 5.5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-haiku-5-5)（查證 2026-10-17）。
+
+- **effort 預設 `medium`，取代 Haiku 4.5 的 `budget_tokens`，thinking 預設開著並算進 `max_tokens`**：沿用 4.5 那套、沒留 thinking 空間的 `max_tokens` 會把回覆截斷。
+  - 要少想就降 effort，官方明說在提示裡叫它「直接回答」擋不住；`thinking: {"type": "disabled"}` 只有 `low`／`medium`／`high` 吃，`xhigh`／`max` 送出會回 400。
+- **給它搜尋工具就要一起給今天的日期**：系統提示或工具描述寫入 `The current date is {{current_date}}.`。
+  - `low` effort 或長系統提示下它仍會漏搜，官方補丁是在日期後接一段「你的訓練資料截止在今天之前……先搜再答」，對本來不需搜尋的題目只多搜 0–3%。
+  - 反過來，「不管多有把握都要搜」這種全域指令官方實測會讓一半不需搜尋的題目也去搜、答對率沒變，要刪。
+- **thinking 關掉又要 structured outputs 的 JSON 時，它會跳過該呼叫的工具**：改用 adaptive thinking（省略 `thinking` 欄）最省事；非關不可就加一句「JSON 格式只適用最終答案，需要工具先呼叫、呼叫前不要寫字」。
+- **長 coding agent 系統提示在 `low` effort 會提早收手把任務丟回來**：加官方那段「做完使用者要的才停、不自行加功能」可壓下來；只把 effort 從 `low` 升到 `medium` 也能減半，代價是每次嘗試的 output token 翻倍。
+- **`low`／`medium` effort 下它會把改完的程式回報成完工卻沒跑檢查**：補一段「可執行／可建置／可型別檢查的改動，回報前要跑一次真的會動到該改動的檢查」，官方測試加了之後查核率與表現都上升、token 變多。
+
+**表下細節**
+
+- 與相鄰世代相反的那一邊：[[entities/opus-5-5]] 要**刪**系統提示裡的「think carefully」，本頁反而要**加**催搜與驗證那兩段——同一句話在兩代是相反的藥。effort 旋鈕的通用建議見 [[topics/model-comparison]]「Effort dial 細節」。
+- 本節只寫措辭面；從 Haiku 4.5 升上來的 API 破壞性變更走官方 [migration guide](https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide)。
+- 三項部署面注意事項不佔正文句：使用者中途插話不可塞進 `tool_result`（會被當成注入而忽略）；chatbot 要加「使用者爭辯或反覆要求時仍守系統提示」那段；安全分類器會回 `stop_reason: "refusal"`，本模型無 server-side fallback，要自己在 client 處理。
 
 ---
 
@@ -107,6 +122,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 相關議題
 
 - [[topics/model-comparison]] — 這份工作該用哪個模型、Haiku 4.5 退役下限與選型細節
+- [[topics/model-task-leaderboard]] — 同一類任務跨家目前誰領先（Claude 家內選型看上一列，跨家看這頁）
 - [[entities/sonnet-5-5]] — 同批官方砍半快取讀取價的模型
 - [[entities/opus-5-5]] — 官方稱可與之搭配作編碼 subagent 的旗艦
 - [[entities/pricing]] — 精確牌價與分層費率

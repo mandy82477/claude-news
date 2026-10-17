@@ -2,7 +2,7 @@
 page: "entities/jacob-coxon"
 kind: "entity"
 type: "person"
-status: "active（待核實）"
+status: "active（單一來源）"
 domain: "👤 人物"
 last_updated: "2026-10-10"
 last_news_update: "2026-10-10"
@@ -27,14 +27,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Jacob Coxon
 
 **類型：** person
-**狀態：** active（待核實）
+**狀態：** active（單一來源）
 **領域：** 👤 人物
 **身分：** 前 OpenAI、Anthropic pretraining 研究員
 **與 Anthropic：** 前員工
 **職能：** 研究者
 **為何追蹤：** 2026-09 辭職並公開示警 AI 風險，成為主流媒體報導焦點
 **首次出現：** 2026-09-09
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-10
 
 > **稱九成把握中國間諜已滲透美國 AI 公司**（2026-10-10）
@@ -48,7 +48,7 @@ Yahoo Finance（2026-10-09 22:00 UTC，經 Google News）報導 Coxon 稱他有�
 
 Coxon 於 2026-10-05 出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（[NY Post](https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmUzVVVySnJtNFBUYlhrMWlxY0xOMEVySFZTMzFlR25La0ZqSU00TlEtWTRMT3Z1ZE85S3dwTXg0LXZTV2JmeDZ5R1RYaU9qVGFtYzZrNnV4YXZMSEZ1bW5YUEFCQkZpV0t4V1NaRTI2VldmRGFwWEFLNkhzbzU0Nk9sQUpPRmVDNjg4YVBpMm5rR2hLR0FSYlhjZEhWemN2dHVWTW9mLS1mekdmU1RuSTBma2sta3B4T2p1Y3VmWUZnaG0zMmVNRENEOXZjZw?oc=5)／[Axios](https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ2dacmRIYW4xWGNpRkNvNE9VWGJvU1o3RFV2c0taOUl5UmNOTmxkczJNV0tiLTF3QlpWd01JZ2piczhRRUc4ZVNkMDZmQVZkRVVma0wzZk9NNV9kTFAxLWpPVEJSUzdYY0tvTGEtUWR6bTBybVJkREZqNUdwVTB6Si1MbnFvV0N4SHo0LTBlS09NOVFNVzJDSzZscE1YNE10bkZfRw?oc=5)，經 Google News，2026-10-05）。Bloomberg News 於前一日（10-04）先行報導本人將出庭作證（經 [Reuters](https://news.google.com/rss/articles/CBMivgFBVV95cUxORnR5cUVLZE91ckU2X0sxOGNzbjA4SjU4MFhiUXNvb0E4M1FLTldoT3d0b3BDUmU3NFVxOUk1eURXMmhEVExrQTNKT3d2LXY2emNNSUo0Nzd0Vkp0WmxiTDh0MVhhM2h1NnRIZnVnZmRNcmJNNmlCajkxN1U2ZGJBZHlLNEVYanF6c2lBc0pVOHh2a1h4QWs0Yngxc0RYX3pOS2NDUGZRRjRKQmtLbnpxZk5QNjljNjJVSkNQRVNn?oc=5)／Google News，2026-10-04）。
 
-Coxon 的資歷經具名媒體獨立查證（2026-09-26 查證）：英國劍橋大學數學系畢業、國際數學奧林匹亞（IMO）得主，2020 年加入 OpenAI 任 Member of Technical Staff、參與 GPT-4o 開發，2024 年轉任 Anthropic 資深 pretraining 研究員（[Time](https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/)、[Fortune](https://fortune.com/2026/09/10/anthropic-jacob-coxon-gambling-with-lives-destroy-humanity/)）；[Axios](https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview) 另報導其為此放棄未歸屬股權離職。Anthropic、OpenAI 均未回應部分媒體的置評請求；另據 CNN 報導（2026-10-03 經 WebSearch 摘要，原文未開），Anthropic 發言人僅泛稱公司「一向坦承 AI 將帶來巨大益處與前所未有的風險」，並未就本人指控個案表態。公司官方未證實其指控（僅媒體查證，非官方一手來源）。事件的機制與政策面（自我改進超級智能爭論）見 [[topics/recursive-self-improvement]]，本頁僅記錄此人此言與其可信度爭議。
+Coxon 的資歷經具名媒體獨立查證（2026-09-26 查證）：英國劍橋大學數學系畢業、國際數學奧林匹亞（IMO）得主，2020 年加入 OpenAI 任 Member of Technical Staff、參與 GPT-4o 開發，2024 年轉任 Anthropic 資深 pretraining 研究員（[Time](https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/)、[Fortune](https://fortune.com/2026/09/10/anthropic-jacob-coxon-gambling-with-lives-destroy-humanity/)）；[Axios](https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview) 另報導其為此放棄未歸屬股權離職。Anthropic、OpenAI 均未回應部分媒體的置評請求；另據 CNN 報導（2026-10-03 經 WebSearch 摘要，原文未開），Anthropic 發言人僅泛稱公司「一向坦承 AI 將帶來巨大益處與前所未有的風險」，並未就本人指控個案表態。🔎 **查無官方**（標 2026-09-26｜查 Jacob Coxon、hilbertspaess｜複 2026-11-14）｜**Anthropic 官方是否證實其指控**（2026-10-17 查證）：anthropic.com 新聞室無相關聲明，本人 X 貼文原文因站外連線受限未能開啟；僅有媒體查證，非官方一手來源。事件的機制與政策面（自我改進超級智能爭論）見 [[topics/recursive-self-improvement]]，本頁僅記錄此人此言與其可信度爭議。
 
 ## 核心論述
 
@@ -62,7 +62,7 @@ Coxon 的資歷經具名媒體獨立查證（2026-09-26 查證）：英國劍橋
 
 **WSJ 人物報導的主角即本人**（WSJ，2026-09-17 刊出；2026-10-03 查證）：報導稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題的代表性人物；WSJ 官方 X 帳號以「Jacob Coxon quit his job…How an anonymous math whiz became the face of the AI apocalypse」導引該文（[WSJ on X](https://x.com/WSJ/status/2100543615709646901)），身分已由 WSJ 自行點名，不再是推論。本人 X 帳號 hilbertspaess 即其辭職貼文帳號。報導正文因付費牆未讀，內容細節以媒體摘要為準。
 
-Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開發表著作不多」，質疑此番言論的份量是否足以佐證「pretraining 研究員」的頭銜（HN 討論，2026-09-09）。**並非全體讀者採信此番警告的重要性**，本頁不單方陳述其警告，兩面並陳。**後續（2026-09-26 查證）：** Time、Fortune 等具名媒體已獨立查證 Coxon 曾任 OpenAI Member of Technical Staff（參與 GPT-4o 開發），2024 年轉任 Anthropic 資深 pretraining 研究員，資歷非空言；惟 Anthropic／OpenAI 官方仍未證實。
+Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開發表著作不多」，質疑此番言論的份量是否足以佐證「pretraining 研究員」的頭銜（HN 討論，2026-09-09）。**並非全體讀者採信此番警告的重要性**，本頁不單方陳述其警告，兩面並陳。**後續（2026-09-26 查證）：** Time、Fortune 等具名媒體已獨立查證 Coxon 曾任 OpenAI Member of Technical Staff（參與 GPT-4o 開發），2024 年轉任 Anthropic 資深 pretraining 研究員，資歷非空言；惟 🔎 **查無官方**（標 2026-09-09｜查 Jacob Coxon、GPT-4o｜複 2026-11-14）｜**Anthropic／OpenAI 官方是否證實其任職與指控**（2026-10-17 查證）：anthropic.com 新聞室與搜尋均無相關聲明，OpenAI 亦未見；任職僅靠具名媒體。
 
 另有 Forbes 報導（2026-09-10，僅標題可用）稱馬斯克公開嘲諷一名「前 Anthropic 員工」對 AI 滅絕風險的警告「看起來像是一場設局」；該報導未點名對象，研判可能即針對本人一系列表態，惟未經證實。The Guardian 於 2026-09-11（僅標題可用）延續報導馬斯克的嘲諷，標題改稱「更多 Anthropic 研究員」示警並遭馬斯克斥為「psyop」，涵蓋範圍研判已擴及本波多名離職研究員（見 [[entities/joe-benton]]、[[entities/josh-engels]]），非僅針對本人。
 

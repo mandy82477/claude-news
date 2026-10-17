@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-09-23
-**最後新聞更新：** 2026-09-23
+**最後更新：** 2026-10-17
+**最後新聞更新：** 2026-10-17
 
-> **最新趨勢觀察**（2026-09-23）
-> - **Hook 要回 exit 2 才擋得住**：官方 hooks 文件寫明 exit 2 才會攔下工具呼叫，exit 1 只算非阻擋錯誤、動作照跑；本頁趨勢一先前寫成「exit 1 硬攔截」，已更正。
-> - **三條方向官方已有對應**：模型路由（`opusplan`）、手機遠端控制、跨 session 記憶（auto memory），各條先看官方給了什麼；模型路由 8/14 之後社群沒有新做法進來。
-> - **新做法**：規格驅動多了 GitHub 的 spec-kit（9/12），跨 session 記憶多了 Skillsync、hister（9/17–9/18），多 agent 互通多了 hcom（9/16）。
+> **最新趨勢觀察**（2026-10-17）
+> - **模型路由重新有新做法**：jev-router（9/30）、atticus-mac（10/12）進來，不再標淡出；強制層、對抗性設計、規格驅動三條已逾 30 天沒有新做法，改標淡出。
+> - **多 agent 的衝突偵測前移到寫碼前**：Foremerge（9/22）在寫碼前偵測意圖衝突，補在本地合併佇列「寫完後落地」之前。
+> - **跨 session 記憶出現「記失敗」工具**：hippo-memory、projectmem 把 8/31 的否決記錄概念做成工具；另有額度可見（Pulse）與手機端（Mobile-Harness、微信橋接）新做法。
 
 ---
 
 ## 摘要
 
-9 月中，社群做法收斂成的九個方向裡，模型路由、手機遠端控制、跨 session 記憶三條官方已有對應零件；模型路由 8/14 之後社群沒有新做法進來，標為淡出。本頁按時間排出每個方向怎麼走到今天，並列出看到這條線，你現有的設計可以回頭檢查什麼。
+10 月中，社群做法收斂成的九個方向裡，模型路由、手機遠端控制、跨 session 記憶三條官方已有對應零件；強制層、對抗性設計、規格驅動三條已逾 30 天沒有新做法，標為淡出。本頁按時間排出每個方向怎麼走到今天，並列出看到這條線，你現有的設計可以回頭檢查什麼。
 
 - **和 [[topics/community-tech-patterns]] 差在哪**：那頁是每一種做法的原始證據型錄，模式概覽表標出每一類的成熟度與最後動態；本頁只挑已經收斂成方向的，按時間排、講回頭檢查什麼。
 - **其他鄰居**：大 repo 四面牆現在該怎麼做、官方零件在哪，見 [[topics/community-large-codebase-workflow]]；觀念爭論見 [[topics/community-tech-discussions]]；7 月以前的最早出處見 [[topics/community-tech-patterns-archive]]。
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 已收斂的方向
 
-### 趨勢一：強制層取代建議層　`方向已收斂`　最近一次動靜 2026-09-06
+### 趨勢一：強制層取代建議層　`方向已收斂`　↘ 淡出・最近一次動靜 2026-09-06
 
 **演進：**
 - 🔥🔥（估） **Hooks 強制執行機制**（5/06）：用 Hooks 在工具呼叫前後攔截行為，而非只在 CLAUDE.md 寫「請不要…」
@@ -88,7 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢二：Multi-agent 隔離工程化　`方向已收斂`　最近一次動靜 2026-09-16
+### 趨勢二：Multi-agent 隔離工程化　`方向已收斂`　最近一次動靜 2026-10-06
 
 **演進：**
 - 🔥（估） **零星嘗試**（4/26）：多 agent 概念出現，但還沒解決「互相踩到彼此檔案」的問題
@@ -102,6 +102,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥（估） **統一容器路線第四波（avibe／ccteam／agent-orchestrator／OtoDock）**（9/9–9/10）：avibe（本機常駐 Agent OS）、ccteam（跨廠商團隊整編）、agent-orchestrator（全流程平台，11,149★）三種取向湧現；OtoDock 同期定位為「公司作業系統」，統一容器路線分化出 OS／團隊／平台三層
 - 🔥（估） **proliferate：統一容器再添「IDE 化」取向**（9/13）：把多 agent 平行執行包進開源 AI IDE 介面，OS／團隊／平台三層之外的第四種取向；僅星數佐證，尚無採用回饋
 - 🔥（估） **hcom：任務脈絡互通第二例**（9/16）：跨終端機讓 8 種 coding agent CLI 互相傳訊、監看、生成彼此，走 Concord 那條「不統一容器、只互通脈絡」的路；僅星數佐證
+- 🔥🔥🔥 **Foremerge：衝突偵測前移到寫碼前**（9/22，Show HN，HN 44）：疊在 git worktree 上的意圖廣播層，agent 動手前先宣告變更範圍，寫碼前就偵測架構層級衝突；合併佇列管寫完後落地，這則管寫之前會不會撞；尚無獨立覆核
+- 🔥（估） **統一容器路線第五波（zeron／amux／cezar 等）**（9/25–10/6）：zeron、claude-ops、VibeAround 等控制平面與 amux、cezar 同期出現，跨 harness 編排層持續有新品；皆僅星數佐證，尚無採用回饋
 
 **代表模式：**
 - **Git Worktrees 隔離原語**：多 agent 各持獨立 worktree，根除共享目錄的覆蓋衝突
@@ -110,12 +112,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **套件化 Subagent 團隊（ccteams）／伺服器化團隊部署（OtoDock）**：把已驗證的 subagent 組合封裝成可安裝套件或常駐服務，降低每個新專案重新手寫協作邏輯的重複勞動
 - **本地合併佇列（Claude Code Merge Queue）**：多平行 agent 的 commit 依序落地並完整測試後才合併，取代各分支即時觸發 CI 的做法，緩解資源競爭與費用暴增
 - **跨代理統一容器 / 任務脈絡互通**：omnigent／loopx／claw-orchestrator 讓單一 orchestration 層可替換底層 agent（Claude Code／Codex／Cursor 等）；Concord、hcom 走互補路線，不統一底層卻讓各自獨立的 agent 共享任務脈絡
+- **寫碼前衝突偵測（Foremerge）**：agent 動手前先廣播變更意圖，在寫碼前偵測架構層級衝突，補在合併佇列之前
 
 **對現有設計的啟示：** 回頭檢查三件事：多個 agent 是不是共用同一個工作目錄（10 個 agent 同時改 `utils.py`，後寫的蓋掉前寫的，錯誤還不可復現）；「只能看不能改」是寫在角色描述裡，還是真的沒掛 Edit／Write 工具（模型能無視身份，但叫不動沒掛載的工具）；平行產出的 commit 是各自觸發 CI，還是排隊依序落地。現在該怎麼做、官方已內建哪些零件，見 [[topics/community-large-codebase-workflow]]。
 
 ---
 
-### 趨勢三：Context 主權爭奪　`方向已收斂`　最近一次動靜 2026-09-10
+### 趨勢三：Context 主權爭奪　`方向已收斂`　最近一次動靜 2026-10-06
 
 **演進：**
 - 🔥🔥🔥（估） **Context 是核心瓶頸**（5/12）：確認大型專案的真正天花板是 context 管理，而非程式碼生成品質
@@ -129,6 +132,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥🔥 **grep 輸出裁剪（Graft）**（8/15，HN 39，多家報導）：「context 精簡」家族補上第四條路徑——不裁剪檔案內容或轉換媒介，而是直接攔截並精簡 grep 搜尋本身的輸出，宣稱降幅 42%；但 HN 討論質疑其 benchmark 段落疑似 AI 代寫，是本頁少見「機制方向成立、量化宣稱本身未經第三方驗證」的案例
 - 🔥（估） **子代理歷史重送疑慮**（8/27，Reddit）：「裁剪什麼」四條路徑之外的新警訊——四個平行 fork 子代理共耗約 200 萬 token；官方證實 fork 會繼承父對話，每次重送、累積多快只有這則單一回報（見 [[topics/community-large-codebase-workflow]]）
 - 🔥（估） **nightshift：DAG 調度＋三層 context 管理疊加**（9/10，Show HN）：不限廠商 Rust CLI，以任務相依圖調度協調 GitHub Issues，疊 PCC 記憶＋本地向量 RAG＋滑動視窗三層因應多 issue 工作流的 context rot；作者具名指出官方 `/goal` 有相同架構缺陷改自製，屬單一開發者對官方功能的負向對照，未經獨立覆核
+- 🔥（估） **MCP 工具定義移出 context**（10/4、10/6）：mcptoon 壓縮 MCP 工具發現與 schema 的 context 佔用；Armin Ronacher 重申別把工具塞進 context、改用程式碼呼叫工具；兩者同一機制，皆無量化對照
 
 **代表模式：**
 - **Context 裁剪 Tool Output**：主動截斷或摘要化工具回應，而非全量塞入 context
@@ -144,9 +148,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢四：模型路由自動化　`方向已收斂`　↘ 淡出・最近一次動靜 2026-08-14
-
-> patterns 那頁的「模型路由」類 09-06 仍標活躍，那兩則是模型切換事件的攔截與成本監看，不是新的路由做法；本方向 8/14 之後沒有新做法進來，故標淡出。
+### 趨勢四：模型路由自動化　`方向已收斂`　最近一次動靜 2026-10-12
 
 **演進：**
 - 🔥（估） **Dragoman 多模型路由**（5/13）：早期單一分享，用顯式規則手動指定哪個任務走哪個模型
@@ -157,6 +159,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥🔥（估） **社群轉載量化數字（Fable 5 Orchestrates, Cheap Models Execute）**（7/14）：編排者-執行者分工宣稱 46% 成本下達 96% 效能；社群分層路由思路首次有具體數字佐證。09-07 更正：原始官方連結未見，改列社群轉載，見 [[entities/fable-5]]
 - 🔥（估） **只在需要頂尖判斷力任務用 Fable 5**（7/26）：上述社群轉載數字出現後的社群實踐案例——把「編排者-執行者」思路收斂為個人可執行的簡單守則：只有真正需要頂尖判斷力的任務交給 Fable 5，其餘交給便宜 subagent 執行以控制成本
 - 🔥（估） **分層 Opus「大腦」＋Sonnet「工人」提案**（8/14，GitHub Issue #56913）：把模型分層從成本路由延伸到長時間自主運行——Opus 決策監督、Sonnet 執行、持久化狀態記進度；官方已於 2026-09-15 關閉，標為不做
+- 🔥（估） **jev-router：依任務路由到最便宜模型**（9/30）：Claude Code 內依任務自動選最便宜模型，延續 Workweave Router 的自動降階路線；單一來源，無使用回饋
+- 🔥🔥🔥 **atticus-mac：模型之前先分流**（10/12，Show HN，HN 36）：簡單操作在本機處理，複雜任務才經 `claude -p` 吃既有訂閱額度；分流發生在選模型之前，與雲端模型間的路由不同
 
 **代表模式：**
 - **Workweave Router**：嵌入 Claude Code / Codex / Cursor 的成本感知路由，依難度自動降階（裝哪個見 [[topics/community-tech-tools]]）
@@ -180,7 +184,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢五：對抗性設計　`方向已收斂`　最近一次動靜 2026-09-05
+### 趨勢五：對抗性設計　`方向已收斂`　↘ 淡出・最近一次動靜 2026-09-05
 
 **演進：**
 - 🔥（估） **零星出現**（4/26）：對抗性審查概念初現，尚未系統化
@@ -208,7 +212,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-09-10
+### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-10-03
 
 **演進：**
 - 🔥（估） **live-log-viewer-next**（7/6）：讀取本機 JSONL transcript，呈現多個平行 agent 即時對話地圖，此線最早的獨立實作
@@ -219,6 +223,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥 **HUD**（8/7，HN 25，多家報導）：開源極簡終端 UI，同時支援 Claude Code／Codex／OpenCode，透過官方 CLI JSON event stream 運作，UserPromptSubmit hook 取狀態不額外耗 token
 - 🔥🔥（估） **Clinch／Voidleap Code／DocStash／Csift 同日亮相**（8/19，Hacker News）：管理多 repo session（Clinch）、對話中途換模型的 IDE（Voidleap Code）、agent 產出直接發布成網頁（DocStash）、整理 JSONL session 檔（Csift），「怎麼管理與觀察 session」成了穩定賽道
 - 🔥（估） **dsh-TUI／better-agent-terminal**（9/10）：介面元件化的延伸——dsh-TUI（中國社群「DSH」官方收錄的 Claude Code 風格 TUI 元件市集）、better-agent-terminal（多工作區終端聚合），從獨立看板再細分出「可複用介面元件」
+- 🔥（估） **額度可見：TokenEater／Pulse**（9/16、10/3）：用量額度做進原生 macOS App 與邊緣常駐監視器，Offrun 也並排顯示各帳號剩餘額度；觀測對象從「誰在做什麼」延伸到「額度剩多少」，皆僅星數或單一討論
 
 **代表模式：**
 - **JSONL Transcript 讀取型**（live-log-viewer-next）：解析本機 session 逐字稿檔案重建對話地圖，不需官方額外介面支援
@@ -229,7 +234,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢七：規格驅動開發（Spec-Driven Development）　`方向已收斂`　最近一次動靜 2026-09-12
+### 趨勢七：規格驅動開發（Spec-Driven Development）　`方向已收斂`　↘ 淡出・最近一次動靜 2026-09-12
 
 **演進：**
 - 🔥（估） **opsx spec-driven-development-toolkit**（6/19）：CLI 工具強制要求先寫規格文件才能執行 AI 代碼生成，早期單一嘗試，已被 HN flagged，社群接受度尚待觀察
@@ -248,7 +253,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢八：行動裝置遠端控制　`方向已收斂`　最近一次動靜 2026-09-10
+### 趨勢八：行動裝置遠端控制　`方向已收斂`　最近一次動靜 2026-10-04
 
 **演進：**
 - 🔥（估） **ccgram**（6/28）：Telegram bot 遠端控制本機 Claude Code session，早期單一嘗試
@@ -256,15 +261,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥🔥 **Shellular**（7/8，HN 32）：專屬 web-app，從手機遠端操作本機 Claude Code / Codex session
 - 🔥（估） **Relay**（8/19，Hacker News）：讓家用主機上已裝的 Claude Code／Codex／OpenCode 可從任何裝置遠端操作，這條線第 4 個獨立實作
 - 🔥（估） **Orchestrator**（9/10，Show HN）：這條線第 5 個獨立實作——手機遠端生成、下指令、終止並管理多個 Claude Code 實例，關閉 App 後任務仍在背景執行
+- 🔥（估） **CLI-WeChat-Bridge**（10/2）：把 Codex、Claude Code、OpenCode 等 CLI 接進微信／企業微信機器人，雙向對話與檔案傳輸；bot 路徑第二例，僅星數佐證
+- 🔥（估） **Mobile-Harness**（10/4）：免 root 在 Android 上直接跑 Claude Code，下指令、改檔、看 diff；不是遙控本機而是把執行端搬到手機；僅星數佐證
 
 **代表模式：**
 - **行動裝置作為控制介面**（ccgram、Shellular、Orchestrator 等）：手機／任意裝置透過 bot、MCP 或專屬 web-app，遠端下達指令或監看本機 Claude Code session 狀態
 
-**對現有設計的啟示：** 先看官方給了什麼：Claude Desktop 可以遠端控制 Claude Code session，官方已確認可用（2026-08-17 關閉對應功能請求），怎麼開見 [[entities/claude-code]]——先試官方。回頭檢查：你的工作流是不是綁死在單一終端機前；「本機常駐、行動裝置遙控」已是社群反覆走過的形態。社群五個實作走 bot、MCP、web-app 三種路徑，本頁沒有它們與官方的逐項比較。與趨勢六互補——趨勢六解決「怎麼看」，這條線解決「不在電腦前時怎麼看、怎麼下指令」。
+**對現有設計的啟示：** 先看官方給了什麼：Claude Desktop 可以遠端控制 Claude Code session，官方已確認可用（2026-08-17 關閉對應功能請求），怎麼開見 [[entities/claude-code]]——先試官方。回頭檢查：你的工作流是不是綁死在單一終端機前；「本機常駐、行動裝置遙控」已是社群反覆走過的形態。社群七個實作走 bot、MCP、web-app 與手機本機執行四種路徑，本頁沒有它們與官方的逐項比較。與趨勢六互補——趨勢六解決「怎麼看」，這條線解決「不在電腦前時怎麼看、怎麼下指令」。
 
 ---
 
-### 趨勢九：跨 Session 記憶層／知識庫　`方向已收斂`　最近一次動靜 2026-09-18
+### 趨勢九：跨 Session 記憶層／知識庫　`方向已收斂`　最近一次動靜 2026-10-03
 
 **演進：**
 - 🔥（估） **跨環境 Agent 記憶協定（ltm）**（5/12）：Core Memory Packet JSON 協定，主張跨編輯器／跨機器／跨模型的供應商中立記憶格式，早期單一嘗試
@@ -277,16 +284,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **gentle-ai／cpr-compress-preserve-resume**（9/6）：格式標準化再添兩例——gentle-ai（6,304★）打包記憶／規格驅動／skill 為跨 4 種 agent CLI 的單一設定層；cpr（508★）走「壓縮—保存—還原」三段式跨 session 記憶；皆僅星數佐證
 - 🔥🔥🔥 **Skillsync**（9/17，Launch HN 59）：YC W26 新創把整段 session（訊息、推理、工具呼叫）在不同 coding agent 之間搬遷延續，訴求不被單一供應商鎖住；機制細節未見完整技術文件
 - 🔥🔥🔥（估） **hister**（9/18）：把瀏覽紀錄、書籤、本機檔案建成離線個人搜尋索引，另附 MCP 端點給 agent 查；作者在 Hacker News 現身回答提問，記憶對象從專案延伸到個人知識
+- 🔥（估） **memmy-agent／agent-memory**（9/27、9/28）：跨工具共用單一記憶庫的兩個實作——memmy-agent 為使用者掌控的記憶中樞，agent-memory 以純 Markdown 為單一事實來源、Claude Code 與 Codex 共用；皆僅星數佐證
+- 🔥（估） **hippo-memory／projectmem**（10/1、10/3）：8/31 起「記住這條路已被否決」從概念變成工具——hippo-memory 標記錯誤後不再出現，projectmem 記下失敗嘗試並在重走時警告；皆無使用回饋
+- 🔥（估） **deja-vu／claude-history**（10/1、10/6）：免 LLM、直接搜尋硬碟上已有的 session 歷史，deja-vu 涵蓋 30 餘款 agent；不新寫記憶、只索引既有紀錄的第三種取向
 
 **代表模式：**
 - **格式標準化**（ltm、OKF）：定義可攜的記憶資料格式，目標是跨工具/跨模型可讀，但兩個協定互不相容，尚未收斂到單一標準
 - **codebase 文件自動化**（CodeAlmanac）：記憶對象從「agent 決策」擴大到「專案文件本身」，但 30 天無後續已顯示此路線目前僅一例、缺乏採用驗證
 - **團隊共享知識庫**（OzBrain）：記憶範疇從單一使用者延伸到團隊，主張取代而非補充現有筆記工具
 - **零依賴檔案式**（mindmuxai/brain.md）：不依賴外部服務或資料庫，直接以檔案存決策/需求/限制
+- **記失敗路徑**（hippo-memory、projectmem）：把「這條路已被否決」寫進本機記憶，agent 重走同一條路時先警告
 
 **這條路線怎麼設計：** Karpathy 式 LLM wiki 的三層模式、外面幾種公開實作的並排對照見 [[topics/llm-wiki-pattern]]。
 
-**對現有設計的啟示：** 先看官方給了什麼：auto memory 讓 Claude Code 跨 session 自己記筆記，每個 session 載入前 200 行或 25KB。回頭檢查：你跨 session 要保留的架構決策，是交給內建記憶，還是外化成你自己讀得到的檔案（Markdown／JSON）。社群 5 月起用協定、文件自動化、團隊共享、手動策展、零依賴檔案、跨 agent 搬遷幾種路線在解同一件事，至今沒有一個經第二方採用驗證或有量化數據，選型前先問「這個格式會不會只有我一個人在用」。官方與社群做法現在怎麼接，見 [[topics/community-large-codebase-workflow]]。
+**對現有設計的啟示：** 先看官方給了什麼：auto memory 讓 Claude Code 跨 session 自己記筆記，每個 session 載入前 200 行或 25KB。回頭檢查：你跨 session 要保留的架構決策，是交給內建記憶，還是外化成你自己讀得到的檔案（Markdown／JSON）。社群 5 月起用協定、文件自動化、團隊共享、手動策展、零依賴檔案、跨 agent 搬遷、記失敗路徑幾種路線在解同一件事，至今沒有一個經第二方採用驗證或有量化數據，選型前先問「這個格式會不會只有我一個人在用」。官方與社群做法現在怎麼接，見 [[topics/community-large-codebase-workflow]]。
 
 ---
 
@@ -299,7 +310,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **你的選項**：拿自己的設計對各條「對現有設計的啟示」逐條檢查；撞到的是大 repo 的四面牆，照 [[topics/community-large-codebase-workflow]] 的現在答案做；模型路由、手機遠端、跨 session 記憶三條先開官方零件，再看社群工具。
-- **接下來看什麼**：官方把「Opus 大腦＋Sonnet 工人」提案標為不做（9/15）之後，模型路由還有沒有新做法；spec-kit 之後規格驅動有沒有第一手使用心得；官方遠端控制可用之後，社群的手機遙控工具還有沒有新的。
+- **接下來看什麼**：jev-router、atticus-mac 之後模型路由有沒有第三個獨立做法；Foremerge 的寫碼前衝突偵測有沒有第二個實作；強制層、對抗性設計、規格驅動三條淡出的方向有沒有新做法回來。
 
 ---
 
@@ -321,4 +332,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]（多數趨勢圍繞的官方產品）
 - [[entities/boris-cherny]]（Loops 哲學影響多條趨勢的設計取向）
 
-%% 週更撈料水位：週更已收至 2026-09-19（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 %%
+%% 週更撈料水位：週更已收至 2026-10-16（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。  %%

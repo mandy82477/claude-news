@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 
 > **兩款新 MCP 整合：對話畫圖與資安情報查詢**（2026-10-16）
@@ -102,7 +102,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** Epic Games 官方帳號釋出一組 Unreal Engine skills，供 Claude Code 外掛在 Unreal Engine 專案中使用；GitHub Search 527 星。
 - **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（GodotMaker 等）一個「官方遊戲引擎廠商自建」取向——GodotMaker 是社群把 Claude Code 接上 Godot，本則是遊戲引擎廠商自己發布 Unreal Engine 的官方整合；非大型 codebase 特有痛點，主線填 —。
 - **可信度註記：** 原始描述僅標題可用（殼層摘要），依日報段落判讀；僅有 GitHub Search 星數（527★），無 forks／issues 佐證可查；官方遊戲引擎廠商帳號發布，造假誘因低於個人開發者項目（推論）。
-- **來源：** GitHub Search；[GitHub](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin)
+- **來源：** GitHub Search；[GitHub](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin)；企業採用面見 [[topics/enterprise-tool-tracker]]
 - **成熟度：** ⏳ 新興（本庫首次收錄，官方遊戲引擎廠商發布，尚無社群採用回饋數據）
 
 #### Muvon/octocode：單一 Rust 執行檔的結構化程式碼智能，語意搜尋＋知識圖譜＋內建 MCP server（2026-10-11）

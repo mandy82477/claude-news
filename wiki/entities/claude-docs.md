@@ -30,21 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-09-17
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
-> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**；輸出格式與跟 Artifacts 的邊界仍未載明。
+> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**。
 
 ---
 
 ## 現況
 
-Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方文件工具（beta），讓使用者可直接在 Claude 對話中建立、編輯文件，不需切換到外部應用程式。首波僅 Pro、Max 方案可用，官方表示未來數週將擴及更多方案；官方部落格摘要未載明與既有 Artifacts 文字輸出、Claude Design 之間的功能邊界，待後續官方文件補齊。
+Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方文件工具（2026-10-08 起已脫離 beta，見 [[entities/claude-design]]），讓使用者可直接在 Claude 對話中建立、編輯文件，不需切換到外部應用程式。首波僅 Pro、Max 方案可用（2026-10-17 查官方說明頁已改載所有方案、預設開啟，見下方）；與既有 Artifacts 的功能邊界見下方 2026-10-17 查證段。
 
-**09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**；輸出格式與跟既有 Artifacts 文字輸出的功能邊界仍未載明。
+**09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**；輸出格式與 Artifacts 邊界已由 2026-10-17 查證補齊，見下段。
 
-❓ **待查證**（標 2026-09-17｜查 claude.com/docs、[[entities/claude-slides]]｜複 2026-10-17｜訊 2026-09-25）｜**Claude Docs 的具體操作路徑、輸出格式與跟 Artifacts 的功能邊界**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/docs）更新後確認。09-25 Help Center release notes 確認可在任何對話（含 Claude Code、Artifact 介面）要求文件，惟輸出格式與跟 Artifacts 邊界仍未載明。（依 2026-09-25 日報收斂；2026-10-03 清算未另查官方。）
+**官方說明頁確認操作路徑、匯出與 Artifacts 邊界（2026-10-17 查證）：** 依 [Help Center〈What are artifacts〉](https://support.claude.com/en/articles/17153992-what-are-artifacts)，Docs 是「與 Claude 及團隊即時共同撰寫的 living documents」。建立：在任何對話要求、於訊息框選 Output 後挑 Docs 範本，或從 Artifacts 分頁開始。編輯：直接打字，或選取文字按「Edit with Claude」，Claude 只改標記段落。匯出：Word、PDF、Markdown、Google Docs。與 Artifacts 的邊界：Docs／Slides／Design 是現行的「範本型」artifact；2026-09-16 前在對話建立的屬 legacy artifact，仍可發佈分享但不能再新建。方案：所有方案、預設開啟（Enterprise 自 2026-10-15 預設開啟，owner 可提早啟用）。
 
 ## 熱度與試用價值
 

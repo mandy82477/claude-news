@@ -81,6 +81,7 @@ Cat Wu 接受公開訪問，指出：
 - [[entities/boris-cherny]]（Claude Code 創始人，共同塑造產品方向）
 - [[entities/managed-agents]]（proactivity 願景的具體實現）
 - [[entities/fiona-fung]]（「工程師更孤獨」論述的具名發言人）
+- [[entities/thariq-shihipar]]（Claude Code 團隊成員，2026-07 與本人同場爐邊對談）
 - [[topics/community-tech-patterns]]（主動性論述對應的社群工具設計哲學）
 
 ## 參考來源

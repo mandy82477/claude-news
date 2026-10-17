@@ -220,7 +220,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 **CNBC：Fed 對銀行示警 Mythos 風險，自己卻數月拿不到該模型**（2026-08-26 查證）：
 - Google News 轉載 CNBC 標題「The Fed rang the alarm about Anthropic's Mythos AI model — but had to go months without it」（[Google News/CNBC](https://news.google.com/rss/articles/CBMikgFBVV95cUxOejZuVHE3NHBKYnY4N0VFS0U3M3JXd3pQeEJBemUyQ21BRTF6U3Vvc2JWVXdQQkdlUDVPYnN0OUZJRnpUNVh4NkhTUTRNT3NyTlhwaTJ1YmpBcm1PSUF5MUZhNjU0SnlLZ3VwdWR4X1MzalF1UDRjcWszR0daUmVtV01ibDQ1MWxBaVFfTWhJWmVpZ9IBlwFBVV95cUxPSmNOa05qbkpGTjB1YkFBZE5rNEZaMFcteW81SlRldGFvckpHRE0tdVI3RHlEa1FSWDVFSnRNbnNLSTBjQlRJSWpJZTZOSEhwU09lb1paM051X2k3ZzcyWXNPYTRrai1tRHdFSndVbS15MUlVWXNFQWtFZGNwM0ZIUVcxTmdPNUVWY2FrS0RWajJucGpDSk9v?oc=5)）；RSS 僅提供標題與轉址連結，無正文摘要，無法取得具體警示內容、發布時間點、延遲原因或影響範圍。已掃日報至 2026-08-21 無後續；官方頁面未查證
 - **查證結果**：Fed 與財政部於 4 月與主要銀行執行長召開特別會議示警 Mythos 級能力可能讓網路攻擊更頻繁且更具破壞性；但 Fed 自該次示警後**至少三個月未取得 Mythos Preview 存取權**，截至 2026-07-15 仍在爭取——即央行一邊要求金融機構修補 AI 找出的漏洞，一邊被排除在其他銀行正在使用的同一工具之外（[CNBC](https://www.cnbc.com/2026/07/21/fed-mythos-ai-cybersecurity-banks-project-glasswing.html)；Bloomberg 2026-05-19 另報導監管機關因 Mythos 延後美國銀行網攻演練）
-- 監管關注鏈條因此確立：加拿大金融監管機關（07-13）→ 摩根大通 Dimon 公開表態（07-16）→ 美國聯準會層級（本則），非同一事件的重複報導
+- 監管關注鏈條因此確立：加拿大金融監管機關（07-13）→ 摩根大通 [[entities/jamie-dimon|Dimon]] 公開表態（07-16）→ 美國聯準會層級（本則），非同一事件的重複報導
 
 #### 2026-07-20
 **csoonline.com：Mythos FAQ 專文**（能力／存取／競爭者／影響）：

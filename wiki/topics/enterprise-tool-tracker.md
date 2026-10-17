@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
@@ -48,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Accenture**：將員工使用 Claude 由公司報銷的支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；仍屬使用中，詳見下方細節與 [[topics/enterprise-cost-management]]
 - **美國參議院**（❓ 未確認）：Bloomberg Government 報導準備讓幕僚開始使用 Claude，尚未確認已上線
-- **Epic Games**：官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用（527 星），生態系支持信號，內部採用規模未見報導
+- **Epic Games**：官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用（527 星），生態系支持信號，內部採用規模未見報導；該 skills 包的社群做法面見 [[topics/community-integrations]]
 - **Barclays**：擴大導入 Claude Code 全行，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師
 - **Google**：開放全體工程師使用 Claude（Business Insider），具體工具範疇未見細節
 - **Rubrik**：發布 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序

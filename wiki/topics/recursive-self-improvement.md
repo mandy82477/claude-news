@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 
 > **最新動態**（2026-10-16）
@@ -79,10 +79,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-18，量化數字與治理提案並進**：Anthropic／Reuters 揭露 Claude 已負責公司內部下一代模型開發工作量的四分之一，與既有 8 倍、尚未達兩倍兩數字為不同指標；多位專家聯署公開信呼籲 Anthropic 與 OpenAI 需要真正獨立的安全評測機構，首見聚焦「第三方評測」這一項具體機制，詳見「## 技術彙整」。
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
-- **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源、細節未證實，詳見「## 技術彙整」。
+- **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源，詳見「## 技術彙整」。
+  - 🔎 **查無官方**（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試｜複 2026-11-14）｜**OpenAI 與 Anthropic 互測協議**：2026-10-17 查官方 10-15〈An update on independent evaluators〉，列 METR、SecureBio 等夥伴，未提與 OpenAI 互測；雙方均未證實
+  - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：雙方曾洽談具法律效力的互測協議，各自取得對方已商用模型的 API 存取（不含未發布模型）、不留存對方資料；是否已簽署不明，消息來自知情人士
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
-- **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列，僅標題可用，詳見「## 技術彙整」。
+- **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列；原文未取得（10-17 查證），詳見「## 技術彙整」。
 - **2026-10-03，LeCun 公開稱對 AI 滅絕人類「零擔憂」，批評 Amodei 等業界示警適得其反**：三位圖靈獎得主（LeCun／Hinton／Bengio）中唯一不深度擔憂 AI 風險者，為既有「反面聲音」系列首見「圖靈獎同儕內部分裂」框架，詳見「## 技術彙整」。
 - **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」
 - **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告，共和黨參議員的批評為既有「反面聲音」系列首見國會議員層級反駁，詳見「## 技術彙整」。
@@ -154,7 +156,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：TribLive.com／AP News（經 Google News，2 個來源，2026-09-27 14:20 UTC）；WSJ 同日刊出側寫〈'Things Will Never Be Chill Again': The Doomers Who Shaped the AI Safety Freakout〉
 - **核心主張（僅標題可用）**：報導稱 Anthropic 與 OpenAI 同步就 AI 安全風險發出警示，並試圖主導安全規範由誰、如何制定；WSJ 側寫聚焦「doomers」如何形塑當前的 AI 安全論述聲量
 - **與既有敘事的關係**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」政治框架系列，以及 [[topics/anthropic-government-policy]] 09-15 Anthropic／OpenAI 反壟斷豁免提案（自行提名風險評估機構）系列，皆屬「Anthropic 主導安全規範制定權」既有主線；本則是否引入新事實或僅為既有敘事再彙整，報導層級不足以判斷
-- ❓ **待查證**（標 2026-09-27｜查 TribLive、doomers freakout）：報導正文、具體警示內容與「主導規範制定」的具體訴求均未見報導，僅 Google News 標題聚合層級可用
+- 🔎 **查無官方**（標 2026-09-27｜查 TribLive、doomers freakout｜複 2026-11-14）：2026-10-17 公開檢索未見 AP／TribLive／WSJ 原文，亦無 Anthropic 官方對應聲明
+  - 同期背景（Reuters）：OpenAI 推動強制性全國 AI 安全要求、Altman 稱 2026 不上市、Anthropic 研究員警告滅絕風險（09-10）；「主導規範制定」是否即指此為推論
 - **可信度評估**：TribLive／AP News 為主流媒體轉載，惟 RSS 僅提供標題聚合、無正文；WSJ 側寫屬敘事分析文章，非新事實揭露，訊號強度中等偏弱
 
 ### 政治連鎖反應延燒：川普陣營鎖定 Amodei「末日論」人設、企業家與 HN 社群質疑減速動機（2026-09-24 新增）
@@ -162,7 +165,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Axios（獨家，經 Google News）；NDTV〈Vembu 訪談〉；NPR（經 Hacker News，10 分，低互動）〈AI freeze〉
 - **核心主張**：Axios 稱川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Zoho 創辦人 Vembu 向 NDTV 表示 OpenAI、Anthropic 可放慢腳步，「沒有人拿槍指著他們」；NPR 報導「AI 凍結」恐讓大型 AI 公司更大、傷害小公司，HN 討論聚焦「監管俘獲」疑慮
 - **與既有敘事的關係**：延續 09-12～13 Amodei 呼籲減速、09-14 政治連鎖反應系列，Axios 為新升級（從川普回絕到陣營攻擊 CEO 人設）；Vembu／NPR 提出「監管俘獲」框架，是「言行不一」批評外的第二種質疑；人物角度見 [[entities/dario-amodei]]
-- ❓ **待查證**（標 2026-09-24｜查 Axios、doomerism、regulatory capture）：Axios「新戰線」具體操作手法、NPR／HN 討論串具體論點、Vembu 完整訪談內容均未見報導
+- **查證（2026-10-17，媒體稱）**：[Axios 獨家 09-24](https://axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei) 的「新戰線」手法是一份在白宮內部流傳的備忘錄，作者為白宮以外的川普政治顧問，稱有效利他主義「打造了 AI 末日論管線」，點名 Dario 與 Daniela Amodei
+  - 匿名消息人士稱 Amodei 代表與「美國優先」相悖的全球主義路線；時間點在 Amodei 向聯合國安理會視訊簡報（09-23）的隔天；Anthropic 方面否認有效利他主義定義公司。「監管俘獲」框架不出自 Axios，見下兩項
+  - [NPR 09-23](https://www.kuow.org/npr-news/2026-09-23/how-an-ai-freeze-could-make-big-ai-companies-bigger-and-hurt-smaller-firms)：批評者（Bellamy、前 FTC 委員 Bedoya）稱「AI 凍結」鞏固頭部實驗室、壓垮小公司，並質疑無中國配合難以執行
+  - [YourStory](https://yourstory.com/2026/09/zoho-sridhar-vembu-big-tech-push-slow-ai-development-cynical)：Vembu 稱大公司可自行放慢、卻不能要求整個產業放慢，對減速呼籲抱「cynicism」；NDTV 原訪談與「沒有人拿槍指著他們」原句本輪未取得
 - **可信度評估**：Axios 獨家、NDTV 一手受訪，惟均僅標題或摘要可用；NPR／HN 互動極低（10 分），訊號強度弱，暫列入觀察
 
 ### Anthropic Institute：官方頁面〈Measurements for understanding the pace of AI development inside frontier labs〉曝光，2 個來源同日報導（2026-09-22 新增，延續 09-18 條目）
@@ -179,7 +185,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：Anthropic 首度公布內部 R&D Automation Index，量化 Claude 在其研發任務中的介入程度——「主導」（Leads）比例為 26%，涉入九成以上整體研發流程；作者強調即使有這些數字，**完全無人監督（fully unattended）的自動化比率目前仍是零**
 - **與既有敘事的關係**：與 09-18《工作量四分之一》（25%）疑似同一組官方數據，另補「主導／涉入」分級與「零無人監督」；dev.to 非官方一手來源，兩則是否同次揭露暫不逕自合併。作者指出外界「模型自建後繼者」解讀比實際機制（全程有監督）窄得多
 - **09-24 補充（Reddit r/ClaudeAI 週熱門＋dev.to）**：約一週前討論串重新登上熱門，貼文稱除 26% 主導比例外，**同時約有 3 萬個 agent 在做研究與工程工作**；與上方數字同源轉述，非獨立新披露
-- ❓ **待查證**（標 2026-09-24｜查 3萬個agent、研究與工程工作）：「3 萬個 agent 同時工作」的官方原始出處、「同時」的時間窗定義、與 26%／25%／8 倍既有數字的對應關係均未見報導
+- **查證（2026-10-17，[Anthropic Institute 官方頁](https://www.anthropic.com/institute/measuring-pace-of-ai-development)，2026-08）**：官方原文為「approximately 30,000 agents doing research and engineering work at Anthropic at any one time」，限定「our most-used internal platform」，並稱量測僅涵蓋該平台
+  - 官方頁載 26%（Claude「leads」，AL4）；頁面**未載** 25% 與 8 倍，兩數字來源另見上方 09-18 條目的官方說明
 - **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：26% 即官方 AL4「主導」比例（2026-08），「涉入九成以上」對應 AL3（協作）以上占 90% 以上，另載未測得任何 AL5 完全自主的子集；衡量方法（任務籃、人時加權）見上方 09-18 條目的官方說明
 - **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度；具體數字是否忠實反映官方原始資料待官方一手來源核實
 
@@ -188,7 +195,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：The Information（經 Google News）〈OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI〉（2026-09-21，RSS 僅提供跳轉連結，無正文）
 - **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 一度接近達成協議，讓雙方互相對彼此的 AI 模型進行壓力測試；具體協議內容、進度與是否已生效均未見報導
 - **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-19 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
-- ❓ **待查證**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal）：協議具體範圍、進度與是否已簽署均未見報導，僅 The Information 單一來源
+- 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-11-14）：2026-10-17 查 Anthropic 官方站，10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均未證實；進度與是否簽署不明
+  - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：洽談範圍為互相取得對方已商用模型的 API 存取、不含未發布模型，並約定不留存對方資料；部分報導稱洽談早於 OpenAI 近期資安事件，是否仍在進行不明
 - **可信度評估**：僅單一媒體來源（The Information），RSS 摘要無正文，訊號強度低，暫不視為與 09-19 Accenture 內嵌評估者同一量級進展
 
 ### Anthropic Blog／Washington Post／CNBC：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元獨立評估前沿 AI 安全（2026-09-19 新增）
@@ -367,7 +375,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：與 06-04《When AI Builds Itself》報告（工程師代碼交付量 8 倍提升）同屬「AI 加速/輔助自身開發」大主題，但性質不同——06-04 報告談的是 AI **加速人類工程師的產出**，本則談的是 AI **稽核並修復其他 AI 模型的對齊問題**，兩者是否應視為同一遞歸自我改進光譜的不同階段，或應區分為「開發加速」與「對齊維護」兩條獨立敘事，待後續報導提供機制細節後再判
 - **具體機制與量化數據已於官方原文確認**（查證 2026-09-20，見上方「The New Stack」升級段引用之 [Anthropic 官方研究頁](https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures)）
   - 四步驟方法論（文獻檢索→提出方法與資料→訓練→測試），成效以「安全落差修復百分比」衡量，並設監控 agent 於方法執行前先審閱
-  - 與遞歸自我改進定義的關係仍待觀察（見上方「與既有敘事的關係」段），非可由官方一手來源確認或否認的事實缺口，不再標記待查證
+  - 與遞歸自我改進定義的關係仍待觀察（見上方「與既有敘事的關係」段），非可由官方一手來源確認或否認的事實缺口，不列為懸置項
 - 09-01 官方部落格〈improving-alignment-security-efforts〉把「改善對齊」與「改善安全」併為同一份檢討，但聚焦 07-30／08-04 兩起評估環境資安事件（見 [[topics/ai-agent-safety]]），未提供上述新資訊
 - **可信度評估**：Anthropic 官方部落格為一手來源，可信度高；具體機制與量化數據已由上方 08-31 升級段落之官方原文查證確認（查證 2026-09-20）；TechCrunch／Startup Fortune 的「自我改進」框架用詞，官方原文未見對應措辭，屬媒體自行定調（見上方查證段）
 
@@ -400,7 +408,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：時序 09-24～10-03 多則「## 技術彙整」條目尚缺對應行，非本輪造成，沿用既有缺口，本輪不回填 %%
 
 ### 2026-09-27
-- **[政治框架延續，新增，僅標題可用] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」
+- **[政治框架延續，新增，原文未取得] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」系列，詳見「## 技術彙整」
 
 %% 維運備忘：時序 09-24（Axios doomer 框架、Institute 頁面補齊前）尚缺對應行，非本輪造成，回報中已轉知主編，本輪不回填 %%
 
@@ -416,7 +424,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-09-19
 - **[治理落地，新增] Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾投入 10 億美元**：回應 09-18 獨立評測機構呼籲，詳見「## 技術彙整」
-- **[外部因應，新增，僅標題可用] Anthropic、OpenAI、SpaceXAI、Google 遭控反壟斷合謀（因「踩煞車」呼籲）**：主線記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁僅摘要並陳
+- **[外部因應，新增] Anthropic、OpenAI、SpaceXAI、Google 遭控反壟斷合謀（因「踩煞車」呼籲）**：09-18 四名訂閱戶於加州北區聯邦法院提起擬議集體訴訟（媒體稱，10-17 查證）；主線記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁僅摘要並陳
 
 ### 2026-09-18
 - **[量化升級，新增] Reuters／Anthropic 官方：Claude 現負責公司內部下一代模型開發工作量的四分之一**：官方部落格同日另文說明衡量方法，與 06-04「8 倍代碼交付量」、08-14「尚未達兩倍」為三個不同指標，詳見「## 技術彙整」

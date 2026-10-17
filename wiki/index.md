@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-17
 
 ---
 
@@ -65,7 +65,7 @@
 | [[entities/chris-olah]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/chris-ciauri]] | person | 👤 人物 | active | Anthropic 國際業務總監；首爾記者會稱出口管制「數日內」解禁（2026-06-18，07-01 解除） |
 | [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：AI 風險論述與政府監管立場；九、十月六位公開批評者（黃仁勳、LeCun、Lonsdale 等）對照見頁內　↳ 子故事：[[entities/dario-amodei-archive]] |
-| [[entities/teresa-carlson]] | person | 👤 人物 | active（待核實）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
+| [[entities/teresa-carlson]] | person | 👤 人物 | active（單一來源）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
 | [[entities/opencode]] | product | 💼 商業 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills　↳ 子故事：[[entities/opencode-archive]] |
 | [[entities/claude-tag]] | feature | 🛠️ 工具/功能 | active | Claude Tag：Slack-native AI 協作工具，可讀取頻道上下文、跨 session 記憶、主動完成任務；Anthropic 內部 65% 程式碼由其生成 |
@@ -78,12 +78,12 @@
 | [[entities/tom-blomfield]] | person | 👤 人物 | active| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（2026-09-20 查證確認到任與職稱）|
 | [[entities/claude-for-teachers]] | product | 🛠️ 工具/功能 | active | Anthropic 面向美國通過認證 K-12 教師的免費方案，開放進階 Claude 功能與教學技能庫，對接全美 50 州學術標準 |
 | [[entities/tino-cuellar]] | person | 👤 人物 | active | Anthropic 首任 Chief Global Affairs Officer（2026-08-05 到任），前 Carnegie Endowment for International Peace 總裁、加州最高法院大法官 |
-| [[entities/robert-mahari]] | person | 👤 人物 | active（待核實）| Anthropic「Claude for Legal」負責人（2026-08-07 任命；哈佛／MIT JD-PhD、史丹佛 CodeX 副主任、Akiva AI 創辦人，職掌為法律垂直的 GTM，2026-09-13 查證）|
+| [[entities/robert-mahari]] | person | 👤 人物 | active（單一來源）| Anthropic「Claude for Legal」負責人（2026-08-07 任命；哈佛／MIT JD-PhD、史丹佛 CodeX 副主任、Akiva AI 創辦人，職掌為法律垂直的 GTM，2026-09-13 查證）|
 | [[entities/jensen-huang]] | person | 👤 人物 | active | Nvidia 執行長；2026-08-26 財報電話會議說對投資 OpenAI／Anthropic「唯一的後悔是投得不夠多、不夠早」（已查實）|
 | [[entities/amir-salek]] | person | 👤 人物 | active | Google TPU 專案創辦人（2013–2022，經手前七代）；2026-08 加入 Anthropic compute 團隊，向 James Bradbury 匯報（Bloomberg 查證 2026-09-06）|
 | [[entities/evan-hubinger]] | person | 👤 人物 | active | Anthropic 安全研究員；2026-09-09 公開估計 AI 十年內導致人類全滅機率逾 10%（BBC 具名報導） |
 | [[entities/jack-clark]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人；2026-09-15 向 BBC 稱 AI「緊急關閉開關」未來或需強制、向 NPR 稱放緩開發是「集體行動難題」；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
-| [[entities/jacob-coxon]] | person | 👤 人物 | active（待核實）| 前 OpenAI／Anthropic pretraining 研究員；2026-09-09 指控兩家公司衝向自我改進超級智能，2026-10-10 稱九成把握中國間諜已滲透美國 AI 公司 |
+| [[entities/jacob-coxon]] | person | 👤 人物 | active（單一來源）| 前 OpenAI／Anthropic pretraining 研究員；2026-09-09 指控兩家公司衝向自我改進超級智能，2026-10-10 稱九成把握中國間諜已滲透美國 AI 公司 |
 | [[entities/joe-benton]] | person | 👤 人物 | active | 前 Anthropic 安全研究團隊負責人；2026-09-10 接受 NBC News 首次專訪，警告先進 AI 研究進展恐失控 |
 | [[entities/josh-engels]] | person | 👤 人物 | active | 前 Google DeepMind AI 安全研究員；2026-09-10 接受 NBC News 首次專訪，稱「這裡面沒有大人在把關」|
 | [[entities/simon-willison]] | person | 👤 人物 | active | 獨立開發者／部落客，全站引用最多的第一手觀點來源（114 次／15 頁）；多筆 Boris Cherny、Dario Amodei 聲明的原文轉引管道 |
@@ -113,7 +113,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：19 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |

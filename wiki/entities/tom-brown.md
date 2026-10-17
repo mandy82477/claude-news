@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 06-24 起接手與白宮的出口管制談判，促成 Mythos 5 解封
 **首次出現：** 2026-06-25
-**最後更新：** 2026-10-11
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-11
 
 > **牽線 SpaceX 運算交易**（2026-10-11）
-> WSJ：Tom Brown 以共和黨人脈促成每月 12.5 億美元 SpaceX 運算交易（僅標題）；產能意義見 [[topics/anthropic-business]]。
+> WSJ：Tom Brown 以共和黨人脈促成每月 12.5 億美元 SpaceX 運算交易（僅標題）；產能意義見 [[topics/anthropic-business]]，這筆對標的的判讀見 [[topics/market-signals]]。
 
 ---
 

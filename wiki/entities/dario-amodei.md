@@ -174,8 +174,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 - 2026-10-01：AI「教父」Yann LeCun 公開批評 Amodei 看待 AI 風險的方式「deluded」「crazy」，並稱其不懂資安，詳見 [[entities/yann-lecun]]（來源：Google News／Fortune、Google News／Yahoo Finance）
 - 2026-09-29：Bloomberg 稱 Nvidia 執行長黃仁勳將偕同 Amodei 再赴白宮與 Trump 會晤、聚焦 AI 風險；Fox News 引述會中談話指出 Trump 呼籲美國在 AI 競賽中保持領先，談話實質內容未見報導（來源：Google News／Bloomberg、Google News／Fox News）
 - 2026-09-27：與 Trump 於白宮共進晚餐，緊接 09-25 上訴法院維持五角大廈「供應鏈風險」認定之後；具體談話內容未見報導（來源：Google News／WSJ、華郵、紐約郵報、Axios、半島電視台、KRXI2／KTVL）
-- 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；僅標題可用，攻防具體內容與參戰人士未見報導（來源：Google News／Axios）
-- 2026-09-24：FT「聯合國大會即時報導」提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，與 09-22 預告的聯合國安理會簡報是否同一場合未明（來源：Google News／Financial Times）
+- 2026-09-24：Axios 獨家報導川普陣營盟友把 Dario Amodei 塑造成 AI「末日論」（doomerism）代表人物，開闢新一輪政治攻防戰線；10-17 查證：手法為白宮內流傳的備忘錄、稱有效利他主義「打造 AI 末日論管線」，詳見 [[topics/recursive-self-improvement]]（來源：Axios）
+- 2026-09-24：FT 聯合國即時報導提及 Dario Amodei 呼籲 AI 安全協議應「範圍限定」（narrow）；為單一媒體轉述而非逐字引述，10-17 查證場合為 09-23 聯合國安理會簡報，非聯合國大會（來源：Google News／Financial Times）
 - 2026-09-22：Bloomberg 報導 Dario Amodei 將向聯合國安理會簡報 AI 風險（僅標題可用）（來源：Google News／Bloomberg）
 - 2026-09-17：NYT 刊出分析文章，解讀 Amodei 過往文章如何形塑外界對 AI 的恐懼（僅標題）（來源：Google News／The New York Times）
 - 2026-09-17：Yahoo Finance 報導稱其近期言論被解讀為對 SpaceX 投資人不利的消息，因果未見報導（僅標題）（來源：Google News／Yahoo Finance）

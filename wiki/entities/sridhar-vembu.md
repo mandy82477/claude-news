@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 評論 OpenAI、Anthropic 為何不自己放慢 AI 腳步
 **首次出現：** 2026-09-24
-**最後更新：** 2026-10-04
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-04
 
 > **公開評論 AI 減速爭論**（2026-09-24）
@@ -52,7 +52,7 @@ Vembu 與 Anthropic 無已知投資或競爭關係，屬外部企業家的評論
 
 - **公司可以自己放慢**（Economic Times，2026-09-23，轉載頁，2026-10-04 查證）：原話「They can slow it down themselves. They don't need anybody's permission.」
 - **批的是偽善，不是風險論本身**（同上）：原話「What they are saying is, let the others stop doing it. We will continue investing in it. That's not acceptable.」；他另認為災難風險被誇大。
-- ❓ **待查證**（標 2026-09-24｜查 Sridhar Vembu、NDTV、放慢腳步｜複 2026-10-08｜訊 2026-10-04）｜**NDTV 與 Economic Times 是否同一次受訪**（2026-09-23）：NDTV 正文未取得，僅標題。
+- 🔎 **查無官方**（標 2026-09-24｜查 Sridhar Vembu、NDTV、放慢腳步｜複 2026-11-14）｜**NDTV 與 Economic Times 是否同一次受訪**（2026-09-23）：2026-10-17 查證，NDTV 原文與本人貼文均未取得；10-04 日報無此條目（訊為誤命中）。[YourStory](https://yourstory.com/2026/09/zoho-sridhar-vembu-big-tech-push-slow-ai-development-cynical) 同月報導論點一致。
 
 ## 相關議題
 

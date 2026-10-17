@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 
 > **最新計費政策異動**（2026-10-16）
@@ -88,7 +88,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **usage credits 僅可在網頁版開通（2026-08-11 官方查證）**：官方說明中心 usage-credits 條目載明，行動 App（iOS／Android）訂閱者無法直接於 App 內開啟 usage credits，須改至網頁版 `Settings > Usage` 操作；額度用盡後可切換按量計費（API 標準費率）不中斷服務。此為既有「credits 為 opt-in、預設關閉」規則（見上方 2026-08-08 條目）的補充限制（來源：support.claude.com usage-credits 條目，2026-08-11）
 - **09-17 官方 Plans & Pricing 頁大改版**：新增 Claude Academy、Docs／Slides（beta）／Design 說明；移除舊版 token 定價與 context window 對照，均為前代模型過期資訊（Official Docs，09-17）
 - **Design／Slides／Docs 是方案內含功能，沒有獨立定價（2026-10-03 官方定價頁查證）**：Pro、Max、Team、Enterprise 皆內含，Free 不含；官方未對這三項列出任何單獨費率或加購項，因此它們不會在帳單上獨立出現一列（來源：[claude.com/pricing](https://claude.com/pricing)）
-- **Free 不含 Opus 5.5、Pro 可用（2026-09-24，單一弱來源）**：shattered.io 稱 Free 不提供 Opus 5.5、Pro 可用；方向與官方 Opus 5.5 取代 Opus 5 的既有分界一致，惟本則單一低知名度來源，未經官方原文比對（shattered.io）
+- 已查證（2026-10-17，[claude.com/pricing](https://claude.com/pricing)）｜**Free 不含 Opus、Pro 可用**：官方方案表 Opus 列 Free 為 No，Pro、Max 5x／20x、Team、Enterprise 皆為 Yes，與 shattered.io 的說法一致。
+  - 方案表只寫 Opus、未逐版本標示；[Opus 5.5 發布稿](https://www.anthropic.com/claude-opus-5-5)（09-22）也未逐方案列出可用範圍。
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
 - **Plans & Pricing 頁新增「Claude Dashboards（beta）」（2026-10-09）**：無獨立費率，但官方說明中心載明算進方案用量上限（2026-10-11 查證），見 [[entities/claude-design]]
 
@@ -124,7 +125,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 模型 | Input / Output per Mtok | 備注 |
 |------|------|------|
 | Claude Opus 5.5 | **$4 / $20** | 2026-09-22 發布，較 Opus 5 執行成本省 40%；快取讀取 5%（$0.20/Mtok），Batch 5 折。Opus 5、Fable 5 列為 legacy（[官方](https://www.anthropic.com/claude-opus-5-5)） |
-| Claude Sonnet 5.5 | **$2 / $10** | 2026-09-28 上線，取代 Sonnet 5 為 Claude Code／API 預設；支援 1M context，快取讀取低至 $0.20/Mtok；官方定價頁另列依方案階梯 $1/$5 報價，細節待補（[官方](https://www.anthropic.com/claude-sonnet-5-5)、Reuters） |
+| Claude Sonnet 5.5 | **$2 / $10** | 2026-09-28 上線，取代 Sonnet 5 為 Claude Code／API 預設；支援 1M context，快取讀取 $0.10/Mtok；Batch 半價 $1／$5，無方案分層（10-17 [官方定價文件](https://platform.claude.com/docs/en/about-claude/pricing)查證） |
 | Claude Sonnet 5 | $2 / $10 | **標準定價**：$2/$10 永久化（2026-08-10）；2026-09-28 起預設改為 Sonnet 5.5（同價），Sonnet 5 仍可用 |
 | Claude Fable 5.1 | **$10 / $50** | 與 Fable 5 同價（官方定價頁 2026-09-03 查證）；**快取命中 ×0.025**（其餘模型 ×0.1），Batch $5/$25。Mythos 5.1 同價但僅限授權機構 |
 | Claude Fable 5 | $10 / $50 | Pro／Team standard 走此費率以 usage credits 計費；Max／Team premium 為標配（週用量 50% 內）。訂閱端分界見上方「我的方案現在有什麼」|
@@ -157,7 +158,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 是否新增訂閱留存優惠應對競品追近 | 單一來源（Startup Fortune，2026-10-15）稱官方「現在付費留住訂閱者」，具體機制、金額與適用方案均未見，僅標題可用 | 官方公告或第二來源佐證 |
 | Max／Team 新增「每月 API credits」 | ✅ 2026-10-11 查證：Max 5x $100、Max 20x $200、Team 每席最高 $500／月；**不可用於 Claude Code 或 Claude apps**。細節見「額度與通路的帳務坑」 | 已查證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
-| Free 不含 Opus 5.5、Pro 可用 | 單一低知名度來源；方向與官方分界一致，未比對官方原文 | 無時點，待官方方案表更新 |
+| Free 不含 Opus 5.5、Pro 可用 | ✅ 2026-10-17 查證官方方案表：Opus 列 Free 否、Pro 是（未逐版本標示） | 已查證 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
 | Haiku 5.5 精確 $/Mtok 牌價 | ✅ 已查證（2026-10-11 官方定價頁）：輸入／輸出 $0.10／$0.50（prompt ≤100K）、$0.50／$2.50（>100K），快取讀取 $0.01／$0.05；「降 75%」是官方平均值 | — |
@@ -265,7 +266,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 2. **經雲端市集買 Claude，帳務責任可能落在三不管**：Azure Marketplace 案（The Register 10-09）新創以為贊助額度涵蓋，收到約 $17,600 帳單，Microsoft 稱市集費用不能調、要它找 Anthropic；單一案例，細節見 [[topics/anthropic-business]]，不在此重抄。
    - **對工程師的意思**：贊助額度（如新創計畫）是否適用市集計費，用量產生**前**問清楚並書面確認；與上方「通路」表合讀——通路決定誰開票，也決定誰能調帳。
 
-3. **Claude for Startups 條件變動（❓待查證）**：10-06 媒體稱擴大（免費一年 Team＋$1,000 額度），10-10 傳暫停（單一來源）；官方方案頁同日改版但無生效時間，計畫頁仍無一手來源。脈絡見下方事件流 10-06／10-10 條目。
+3. ❓ **待查證**（標 2026-10-10｜查 Claude Startups、Pasquale Pillitteri）｜**Claude for Startups 條件變動**：10-06 媒體稱擴大（免費一年 Team＋$1,000 額度），10-10 傳暫停（單一來源）；官方方案頁同日改版但無生效時間，計畫頁仍無一手來源。脈絡見下方事件流 10-06／10-10 條目。
    - **對工程師的意思**：申請或規劃以此額度為預算前，別當成既定福利；以官方計畫頁當下條款為準，查證前不要據此排預算。
 
 ---
@@ -306,7 +307,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 灰色市場與轉售現象
 
-- 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。
+- 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。（區域存取政策本身的動態見 [[topics/anthropic-government-policy]]「現在有哪幾條線在動」第 1 列）
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。
 - 灰市管道「Poison Claude」已被兩獨立媒體證實會讓中間營運者讀取客戶傳送的全部 prompt——安全事件細節與可信度評估見 [[topics/ai-agent-safety]]。
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
@@ -502,7 +503,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Official Docs 異動**：claude.com/pricing 頁字數增至 22,083 字（+273），新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文）；同時移除「Industries: Financial services」段。
 - **Google News／Pasquale Pillitteri**：稱 Anthropic 今日暫停先前上線的免費 Claude Team 試用與每月 $1,000 API 額度優惠；此來源過往曾被查出以同網域發多語言重複報導（見下方 09-23 條），單一來源，不採信為定案。
-- **方向一致但未證實**：官方頁新增的 $100–$200/月字樣與上方「還沒確定的計費變動」既有懸置項（媒體曾稱 $200／$500 互相矛盾）方向相符，惟官方原文完整段落、適用方案層級、是否暫停及生效時間均未查證。
+- ❓ **待查證**（標 2026-10-10｜查 Plans & Pricing、API credits）｜**官方頁新增的 $100–$200/月字樣是否即暫停或額度變動的官方版本**：與上方「還沒確定的計費變動」既有懸置項（媒體曾稱 $200／$500 互相矛盾）方向相符，惟官方原文完整段落、適用方案層級、是否暫停及生效時間均未查證。
 
 #### 2026-10-09：官方說明中心三頁同步改版——usage credits 機制拿掉「需明確同意」與「購買用量包」措辭
 
@@ -516,7 +517,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **媒體稱**：TechCrunch、CNBC、Quartz、Unite.AI 等至少 4 家同日報導 Anthropic 擴大 Claude Startups 計畫，合格早期新創可獲一年免費 Claude Team 方案＋$1,000 額度；官方計畫頁、資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium）均未見本站查證，不得視為官方數字。
 - **後續（2026-10-07）**：Android Headlines、Tech Edition（＋TechCrunch）、Dataconomy、Techish Kenya、Konsulteer 等至少 6 家媒體同步跟進報導同一方案，數字（一年免費 Team＋$1,000 額度）一致，資格門檻與席位層級細節仍未見官方頁面補齊。
 - ❓ **待查證**（標 2026-10-09｜查 Claude Startups、Forbes｜訊 2026-10-10｜複 2026-10-23）｜**Claude Startups 免費方案是否已暫停**：Forbes 稱方案上線數日後遭暫停，原文未能取得，暫停原因與影響範圍均未見報導（僅標題可用）。
-- **2026-10-11 查證**：官方方案頁 10-10 改版，但未寫暫停與生效時間；Startups 計畫頁仍無一手來源，暫停與否維持❓待查證（見「額度與通路的帳務坑」第 3 條）。
+- **2026-10-11 查證**：官方方案頁 10-10 改版，但未寫暫停與生效時間；Startups 計畫頁仍無一手來源，暫停與否維持上方懸置標記（見「額度與通路的帳務坑」第 3 條）。
 - **訊 2026-10-10 追蹤**：Google News／Pasquale Pillitteri（單一來源）稱已暫停免費 Team 試用與每月 $1,000 額度優惠，與同日官方 Plans & Pricing 頁新增 API 額度段落方向相符，但官方頁未明寫暫停與生效時間。
 %% 維運備忘：Team 分層官方資格與席位細節未經查證，暫不列入「我的方案現在有什麼」表，待官方說明中心或公告確認後補列 %%
 

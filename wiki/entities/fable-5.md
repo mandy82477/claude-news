@@ -33,7 +33,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-05
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-05
 
 > **最新進展**（2026-10-05）
@@ -82,9 +82,9 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 送進去的請求若被前置安全分類器判為高風險，**你會收到通知**（回覆上會標出實際作答的模型），不是安靜地把品質調低（官方 2026-06-30〈Redeploying Claude Fable 5〉：「Users will be notified if a request to Fable 5 is blocked」）。2026-06-09 發布時的「降級且不告知」已於 06-11 由官方道歉撤回。
 
-**接手的模型分兩路（2026-09-26 查證）**：資安類請求由 **Opus 4.8** 接手，生物、化學與生命科學類請求由 **Opus 5** 接手（官方說明中心〈Why Claude switched models in your conversation with Fable 5〉逐字載明 "the Opus 4.8 for offensive cybersecurity technique requests" 與 "currently Opus 5 for biology, chemistry, and life sciences requests"）。本頁此前只寫「一律改由 Opus 4.8」，已依官方更正。
+**接手的模型分兩路（2026-09-26 查證）**：資安類請求由 **Opus 4.8** 接手，生物、化學與生命科學類請求由 **Opus 5** 接手（官方說明中心[〈Why Claude switched models in your conversation with Fable 5 or Fable 5.1〉](https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1)逐字載明 "the Opus 4.8 for offensive cybersecurity technique requests" 與 "currently Opus 5 for biology, chemistry, and life sciences requests"）。本頁此前只寫「一律改由 Opus 4.8」，已依官方更正。
 
-> 下表四個觸發類別**官方已明載同時適用 Fable 5 與 Fable 5.1**（同一份說明中心文件寫 "Distillation attacks on Fable 5 and Fable 5.1"，2026-09-26 查證）。此前本頁註記「5.1 是否原樣沿用官方未明說」（查證 2026-09-07）已由這份文件解消。
+> 下表四個觸發類別**官方已明載同時適用 Fable 5 與 Fable 5.1**（同一份說明中心文件寫 "Distillation attacks on Fable 5 and Fable 5.1"，2026-09-26 查證；2026-10-17 複查四類未變，官方文章標題已更名為含 Fable 5.1）。此前本頁註記「5.1 是否原樣沿用官方未明說」（查證 2026-09-07）已由這份文件解消。
 
 | 會踩到的類別 | 具體是什麼 | 誰最容易誤觸 | 你能先做什麼 |
 |---|---|---|---|
@@ -212,7 +212,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 **查證補述（2026-10-03）**：媒體稱（Scientific American、Epoch AI 題庫頁）曲線指橢圓曲線的 rank 紀錄：Anthropic 數學家 Levent Alpöge 與密碼學者 Ava Howell 用 Claude 於數日內先後提交 rank ≥30 與 ≥31（8 月 23 日）的橢圓曲線，此前由 rank 28 到 29 耗時逾 18 年；所用為 Anthropic 內部未發布版本，非 Fable 5／5.1 產品版（[Scientific American](https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/)；[Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank)，查證 2026-10-03；Scientific American 本環境 egress 被擋，內容取自搜尋摘要）。
 
-🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-10-26）｜**官方未載該紀錄所用模型版本**：查證 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
+🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-10-26）｜**該紀錄所用模型版本**（2026-09-16 報導）：官方頁面查無記載；查證 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：

@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 官方定位：Opus 5.5 面向需審慎判斷的複雜工作，Sonnet 5.5 專攻「界定清楚的日常任務」——修 bug、產出文件／簡報／試算表，並對設計細節敏銳；**Claude Haiku 5.5**（面向高流量、成本敏感場景）已於 2026-10-07 發布，加入 5.5 家族，細節見 [[entities/haiku-5-5]]。
 
-定價分層細節見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
+定價見 [[entities/pricing]]（無依方案分層），這份工作該用哪個模型見 [[topics/model-comparison]]。
 
 ---
 
@@ -140,7 +140,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/sonnet-5]] — 前代，現況與是否列 Legacy 追蹤於此頁
 - [[entities/opus-5-5]] — 同 5.5 家族首款模型，發布於 09-22
 - [[entities/fable-5]] — 現行旗艦，5.5 家族外的最高階公開模型
-- [[entities/pricing]] — 分層費率細節，官方定價頁同步改版
+- [[entities/pricing]] — 精確牌價（無依方案分層，Batch 半價）
 - [[entities/claude-code]] — v2.1.284 完整改動，含「Yes, but ask」新功能
 - [[topics/model-comparison]] — 這份工作該用哪個模型、換一個實付差多少
 - [[topics/model-task-leaderboard]] — 跨家排名，現在誰在前面
@@ -179,7 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - HN 互動累計回升至 853 分（HN＋HN Repo Bridge 2 個來源，2026-09-29 查核），仍低於 Opus 5.5 發布當日的 1,674 分
 - **2026-09-28**：Anthropic 發布 Claude Sonnet 5.5，Claude Code v2.1.284 同步新增支援並設為 API 預設 Sonnet（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）
   - Terminal-Bench 4.0：70.6%（前代 Sonnet 5 為 10.3%）；官方稱另在 GDPval 系列某評測落後 Opus 5.5 兩分，原文截斷未載完整名稱與分數
-  - 牌價維持 $2/$10 每 Mtok；快取讀取**$0.10（×0.05）**——本庫當日依發布文記為 $0.20（×0.1），2026-10-10 對官方模型頁更正；官方定價頁同步改版，分層費率細節見 [[entities/pricing]]
+  - 牌價維持 $2/$10 每 Mtok；快取讀取**$0.10（×0.05）**——本庫當日依發布文記為 $0.20（×0.1），2026-10-10 對官方模型頁更正；2026-10-17 查官方定價文件：$2／$10 為標準價、Batch 半價 $1／$5，無依方案分層，見 [[entities/pricing]]
   - 官方預告 Claude Haiku 5.5 將於未來數週內加入 5.5 家族，尚未發布。**後續（2026-10-07）**：Haiku 5.5 已發布，見 [[entities/haiku-5-5]]
   - 路透報導將此次上線與 Anthropic IPO 籌備進度並列；TechCrunch、VentureBeat、The Decoder、SiliconANGLE 及 Hacker News、Reddit 同日跟進，合計至少 7 個來源（Reuters，2026-09-28）
   - HN 互動 46 分（2 個來源），訊號偏弱

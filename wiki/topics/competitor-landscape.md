@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-16
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **Microsoft／GitHub** 🏢 | Agentic autofix 10-15 正式 GA；Slack/Teams 版支援多 repo 單一對話（10-15）；11-16 起棄用部分模型（10-15 公告）→ Claude Code 皆無對應功能/整合/棄用排程 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；棄用清單未列完整型號 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-15 起 GPT-6.1 Sol 成為 Codex CLI **預設模型**（宣稱成本降 77%）；09-29 已全面開放、快取輸入 $0.10/Mtok → 低價層從「可選」變「預設」 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源，Astra／Sol 絕對牌價未見公布 ❓ 待查證⟨Q-07⟩ |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-15 起 GPT-6.1 Sol 成為 Codex CLI **預設模型**（宣稱成本降 77%）；09-29 已全面開放、快取輸入 $0.10/Mtok → 低價層從「可選」變「預設」 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源；牌價已查證 ⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書 ❓ 待查證⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
@@ -67,7 +67,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **懸置細節**
 - ⟨Q-06⟩ 已查證（2026-09-20，[antigravity.google/docs/plans](https://antigravity.google/docs/plans/)）：企業存取走 Gemini Enterprise Agent Platform，Google Cloud 消費制計費，無固定席位價，不支援 BYO-key／合約制組織方案。
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
-- ⟨Q-07⟩ ❓ **待查證**（標 2026-09-30｜查 GPT-6.1 Sol、GPT-6 Astra｜複 2026-10-14）：OpenAI 官方僅揭露相對倍率（Astra 標準價的五分之一）與快取輸入價 $0.10/M tokens，Astra／Sol 絕對牌價未見公布，無法換算 vs Claude 比例。
+- ⟨Q-07⟩ 已查證（2026-10-17，[OpenAI 定價頁](https://developers.openai.com/api/docs/pricing)，以搜尋摘要讀取，直連失敗）：GPT-6.1 Sol 標準價 $2 input／$0.10 快取／$10 output 每百萬 token，GPT-6 Astra $10／$1／$50，Sol 約為 Astra 的五分之一。
+  - 對照 Claude 官方定價：Sol 與 Sonnet 5.5（$2／$10）同價，約為 Opus 5.5（$4／$20）的一半。「改預設」是否見於官方 Codex 更新紀錄，本輪未查得。
 - ⟨Q-08⟩ ❓ **待查證**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-10-19）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；「Anthropic 背書競品模型」與其一貫定位不符，單一財經聚合媒體來源，未見其他媒體或官方佐證。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
@@ -167,7 +168,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - OpenAI 官方自曝案例已累積至少五則（Perplexity 09-13；V7 機構記憶 89% 準確率 09-21；Proaction 導入 Codex 銷售成長 60% 09-25；Oracle 全流程導入 10-08；Sophos 資安調查時間降 96% 10-09）：均為官方自報、無第三方驗證，共同指向 Claude Code 的自主任務與長期記憶定位。
 **還沒解決**
 - 「零資料保留」的技術實作與涵蓋範圍、以及 OpenAI 企業用戶「追近」的量化數字均未見。
-- GPT-6 Astra／GPT-6.1 Sol 全面上線 Pro／Enterprise／API 的具體規格、絕對牌價、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
+- GPT-6 Astra／GPT-6.1 Sol 全面上線 Pro／Enterprise／API 的具體規格（絕對牌價已於 2026-10-17 查得，見競品雷達細節 ⟨Q-07⟩）、V7 的產品化時程與是否對外開放均未見報導，89% 準確率的測試方法論未載。
 
 ### Microsoft／GitHub
 **現在的答案**
@@ -207,16 +208,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 日期 | 來源 | 內容 | 量化數字 |
 |------|------|------|---------|
 | 2026-08-22 | 36Kr | 「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察，與同日 HN 高分貼文呼應同一主題（另見 [[topics/community-tech-discussions]]，詳見下方細節） | 🔎 查無官方 ⟨Q-02⟩ |
-| 2026-07-15 | HackerNoon（跨 2 來源） | 「Claude Code vs Codex vs OpenCode：全端工程師誠實裁決」，三方比較文 | 🔎 查無官方（標 2026-08-10｜複 2026-09-13）：為工程師個人觀點比較文，查證後仍未見具體評分數據 |
+| 2026-07-15 | HackerNoon（跨 2 來源） | 「Claude Code vs Codex vs OpenCode：全端工程師誠實裁決」，三方比較文 | 🔎 查無官方 ⟨Q-09⟩ |
 | 2026-07-22 | South China Morning Post（跨 2 來源） | 中國 Qiushi Engine（浙江大學團隊）於 ResearchClawBench 自主研究排行榜奪冠，Claude Code 第三、Open Science Desktop 第二 | 已查證：2026-08-13，[SCMP 原文](https://www.scmp.com/news/china/science/article/3361370/chinese-ai-agent-outperforms-anthropics-claude-code-autonomous-research) |
-| 2026-07-25 | SitePoint | 「Codex 5.3 生產環境工作流——何時該選它而非 Claude 做複雜重構」，工作流選型建議文 | 🔎 查無官方（標 2026-08-10｜複 2026-09-13）：為工作流選型建議文，查證後仍未見具體評測方法論或分數 |
-| 2026-07-29 | The Information（跨 3 來源） | 儘管 Codex／開源模型討論度上升，Claude Code 採用黏著度仍領先 | 🔎 查無官方（標 2026-08-10｜複 2026-09-13）：留存率、活躍用戶數等量化數字查證後仍未見報導揭露 |
+| 2026-07-25 | SitePoint | 「Codex 5.3 生產環境工作流——何時該選它而非 Claude 做複雜重構」，工作流選型建議文 | 🔎 查無官方 ⟨Q-10⟩ |
+| 2026-07-29 | The Information（跨 3 來源） | 儘管 Codex／開源模型討論度上升，Claude Code 採用黏著度仍領先 | 🔎 查無官方 ⟨Q-11⟩ |
 | 2026-08-01 | MarkTechPost | Supabase 推出開源評測套件 Evals，以真實 Supabase 任務對 Claude Code、Codex、OpenCode 評分比較 | 已查證（08-13）：Build 階段 Opus 5／Kimi K3 均 100%；Sonnet 5 skills 輔助 78%→100%（詳見下方細節） |
 | 2026-08-01 | [quasa.io](https://news.google.com/rss/articles/CBMilwFBVV95cUxQc3VGQXhIUWNkSElXb2swMFRjVlFscUE1ZTNuTXlwNjdTVGlVNmcyN0dMNk05NnJKdjZkeXpZa2dWdHkwYzRIdEh1LUFDelo5UTNPVjdWQm9lQmxRSTV3N0dWUUdsd3Y5Wk5tS1dnSEh3VTVwd3VlY0s5Mnk2VEVBX2EwOWpRbG9BOHQyVjNYWFZGd2tfYXlR?oc=5)（2026-07-31 22:00 UTC） | 「Claude Code vs OpenAI Codex: What Published Coding Tests Actually Show」——整理已公開的程式碼測試結果比較兩者實測表現 | 已查證（08-13）：SWE-bench Verified 持平 ~88.7%；SWE-bench Pro Claude 領先；Terminal-Bench Codex 領先（詳見下方細節）|
 
 **查證快照細節**
 - **36Kr（08-22）**：「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察報導，與同日 Hacker News 高分貼文「Quick impressions: A week of using Codex more than Claude」呼應同一主題（該則個人觀察角度另見 [[topics/community-tech-discussions]]）。
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-22｜查 Codex、評測方法論｜複 2026-10-04）：延伸查證 36Kr 同系列報導確認此篇性質為產業競爭態勢觀察評論，非帶方法論的評測文章，站內未見任何一篇 36Kr 報導提供 Codex vs Claude Code 的量化分數或測試方法；判定此則本質上不存在可查證的「評測方法論」，非官方未公開。
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-22｜查 Codex、評測方法論｜複 2026-11-14）：延伸查證 36Kr 同系列報導確認此篇性質為產業競爭態勢觀察評論，非帶方法論的評測文章，站內未見任何一篇 36Kr 報導提供 Codex vs Claude Code 的量化分數或測試方法；判定此則本質上不存在可查證的「評測方法論」，非官方未公開。
+- ⟨Q-09⟩ 🔎 **查無官方**（標 2026-08-10｜查 HackerNoon、誠實裁決｜複 2026-11-14）｜**HackerNoon 三方比較文的評分數據**：08-10 查證結論為工程師個人觀點比較文、未見具體評分數據；10-17 網搜再查仍搜不到該文可驗證的評分。
+- ⟨Q-10⟩ 🔎 **查無官方**（標 2026-08-10｜查 SitePoint、Codex 5.3｜複 2026-11-14）｜**SitePoint 選型建議文的評測方法論或分數**：08-10 查證結論為工作流選型建議文、未見具體評測方法論或分數；10-17 網搜再查仍搜不到該文可驗證的數字。
+- ⟨Q-11⟩ 🔎 **查無官方**（標 2026-08-10｜查 The Information、留存率｜複 2026-11-14）｜**Claude Code 留存率與活躍用戶數的量化揭露**：08-10 查證結論為留存率、活躍用戶數等量化數字未見報導揭露；10-17 網搜再查仍未見引述 The Information 的留存數字。
 - **MarkTechPost（08-01）**：Supabase Evals 已查證（2026-08-13）——Build 階段 Opus 5／Kimi K3 均 100%（未輔助）；Sonnet 5 經 skills 輔助由 78%→100%、GPT-5.6 Sol 由 89%→100%（[supabase.com/evals](https://supabase.com/blog/introducing-supabase-evals)）。
 - **quasa.io（08-01）**：第三方彙整已查證（2026-08-13）——SWE-bench Verified 兩者持平 ~88.6–88.7%（Opus 5 於 07 月發布後 Claude 升至 97.0%）。
 - **quasa.io 其餘兩組**：SWE-bench Pro Claude Opus 4.8 領先 69.2% vs 58.6%；Terminal-Bench Codex 領先 82.7% vs 69.4%（2026-08-13 查證）。
@@ -593,7 +597,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-#### 2026-05（封存總結）
+#### 2026-05（時段總結）
 
 - **Microsoft 退出是當月主線**：去年 12 月起向數千名員工開放的 Claude Code 授權因成本陸續取消、改推 GitHub Copilot CLI（05-15 首報；The Verge 05-22 報導 HN 493 分、05-23 續報 330 分）；dev.to 內部揭露記為「開發者愛它，財務殺了它」（05-19）。
 - **企業採用同時創高**：Ramp AI Index 顯示 Anthropic 企業採用率首次超越 OpenAI（34.4% vs 32.3%，05-15）；Business Insider 稱新創圈 Claude Code 已勝出、Cursor 消退（05-23）——大企業因成本退出、新創因效果採用的分層自此成形。
@@ -605,7 +609,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-#### 2026-04（封存總結）
+#### 2026-04（時段總結）
 
 - 早期格局以「Claude Code vs Codex 誰更好」為軸：HN「Is Anybody Using Codex?」認為 Claude Code 討論量遠超 Codex（04-30，此判斷已由 05-05 下載量數據取代）；大型 Python monolith 實測作者偏好 Codex（04-29）；XDA 四工具橫向評測（04-28）。
 - 採用面：哈佛 FAS 以 Claude 取代 ChatGPT Edu（04-28）、GameMaker 整合（04-30）。

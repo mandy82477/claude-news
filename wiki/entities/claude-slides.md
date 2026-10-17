@@ -30,21 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-09-17
-**最後更新：** 2026-10-03
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-09-25
 
 > **最新動態**（2026-09-25）
-> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**；範本與協作機制仍未載明。
+> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**。
 
 ---
 
 ## 現況
 
-Claude Slides 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方簡報工具（beta）。搭配整合進對話的 [[entities/claude-design|Claude Design]]，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 Pro、Max 方案可用，官方表示未來數週將擴及更多方案。
+Claude Slides 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與 Chat 合併]]同步推出的官方簡報工具（2026-10-08 起已脫離 beta，見 [[entities/claude-design]]）。搭配整合進對話的 [[entities/claude-design|Claude Design]]，使用者可直接在 Claude 對話中編輯、展示簡報，並下載為 PowerPoint 或 PDF 格式。首波僅 Pro、Max 方案可用，2026-10-17 查官方說明頁已改載所有方案、預設開啟。
 
-**09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**；範本與協作機制仍未載明。
+**09-25 操作路徑部分確認：** Help Center release notes 新增段落，稱可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**；範本與匯出已由 2026-10-17 查證補齊（見下段），多人協作機制仍未載明。
 
-❓ **待查證**（標 2026-09-17｜查 claude.com/slides、[[entities/claude-docs]]｜複 2026-10-17｜訊 2026-09-25）｜**Claude Slides 的具體操作路徑、範本與協作機制**：官方部落格與轉載媒體（Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld）均僅提及推出事實，無操作截圖或完整說明頁連結；細節待官方文件（Help Center／claude.com/slides）更新後確認。09-25 Help Center release notes 確認可在任何對話（含 Claude Code、Artifact 介面）要求簡報，惟範本與協作機制仍未載明。（依 2026-09-25 日報收斂；2026-10-03 清算未另查官方。）
+**官方說明頁確認操作路徑、匯出與編輯方式（2026-10-17 查證）：** 依 [Help Center〈What are artifacts〉](https://support.claude.com/en/articles/17153992-what-are-artifacts)，Slides（decks）可由你的筆記、報告或對話內已有的工作產出。建立：與 Docs 相同，在任何對話要求、選 Output 挑 Slides 範本或從 Artifacts 分頁開始。編輯與展示：可直接編輯任何一頁並在 Claude 內直接簡報（亦支援鍵盤與螢幕閱讀器）。匯出：PowerPoint 或 PDF，也可直送 Google Slides 成為可編輯檔。範本：Slides 本身即範本型 artifact，且可套用你的 design system（色彩、字型、元件）。協作：說明頁只把協作明確寫在 Docs，Slides 的多人協作機制未載明。方案：所有方案、預設開啟（Enterprise 自 2026-10-15 預設開啟，owner 可提早啟用）。
 
 ## 熱度與試用價值
 

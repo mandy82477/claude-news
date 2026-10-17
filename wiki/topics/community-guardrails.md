@@ -69,7 +69,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | RuleReceipt（09-30） | 檢查型 | 比對 agent 有沒有守 CLAUDE.md／AGENTS.md | 討論串有人質疑 agent 能關掉檢查 hook；趕工時最常繞過規則；無使用回報 |
 | Perspica（09-30） | 檢查型（輔助人審） | 審閱大型 AI PR 的語意化 diff，可選不靠 LLM 的機械分組 | 只幫人讀、不攔合併（推論）；LLM 分組模式仍靠模型判斷；無使用回報 |
 | 自主 agent 部署閘（10-01） | 強制型 | 預檢契約、帶硬門檻的 canary、agent 無法推翻的自動回滾 | 作者自述 340 餘次部署、零人工呼叫，無 repo 或指標可複核；閘是事故後才加 |
-| 刪除 48,000 檔事件（09-25，TechRadar） | 強制型缺位的個案 | 報導未提任何攔截層 | 僅標題可用、單一媒體；備份、指令與版本均未見報導，不當作定論 |
+| 刪除 48,000 檔事件（09-25，TechRadar） | 強制型缺位的個案 | 報導未提任何攔截層 | 單一媒體、來源為已刪除的 Reddit 貼文（Windows junction 清理腳本，10-17 查證，見 [[topics/ai-agent-safety]]）；備份與版本未載，不當作定論 |
 
 - **檢查型的共同破口**：被檢查的 agent 與檢查器同處一個環境時，agent 可能動到檢查本身；強制型把關住在 agent 碰不到的地方，這是兩型的分界（推論）。
 - **兩型都沒回答的是品質**：Ask HN〈Is anybody producing good code with coding agents?〉（HN 26 分，10-02）轉述資深工程師抱怨 AI 程式碼難讀、品質差；守規則與能安全出貨，不等於寫得好。

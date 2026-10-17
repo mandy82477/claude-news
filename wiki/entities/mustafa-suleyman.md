@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 公開評論 Anthropic 對 Claude 類人化與 AI 意識的說法
 **首次出現：** 2026-09-16
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-17
 **最後新聞更新：** 2026-10-07
 
 > **對 Anthropic 的成本立場**（2026-10-07）
@@ -53,3 +53,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Microsoft 內部 Claude 支出砍逾三分之一（2026-10-05 報導） | [[topics/competitor-landscape]]（對手動態）、[[topics/market-signals]]（MSFT 判讀） |
 
 > 他是 Microsoft 側的發言人，不是 Anthropic 的人；本頁的追蹤理由只有一個——他的發言會改到 Microsoft 要不要繼續買 Claude。
+
+同期另一位從外部批評 Anthropic 風險論述的具名人物是 [[entities/yann-lecun]]（2026-10-01 Fortune 專訪）；兩人批的點不同——Suleyman 針對「類人化與 AI 意識」論述，LeCun 針對「滅絕風險」的講法與資安理解。
