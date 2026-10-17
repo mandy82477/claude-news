@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-16
+**最後新聞更新：** 2026-10-17
 
-> **Scion／Mononoke 爭議落幕：Anthropic 已補歸因，原作者確認足夠**（2026-10-16）
-> 原作者更新文章：Anthropic 員工 Nick G. 在 HN 回應，官方部落格已補上足夠歸因；作者仍堅持原始技術觀察，登 HN 248 分。
+> **StarSkirmish Bench 新回合：納入 OpenAI／Anthropic／Google／Meta 旗艦模型**（2026-10-17）
+> 開發者更新讓 LLM 寫程式對戰《星海爭霸》的基準測試，本輪比較四家旗艦模型戰力；HN 228 分。
 
 ---
 
@@ -153,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| StarSkirmish Bench 更新：讓 LLM 寫程式對戰《星海爭霸》，納入 OpenAI／Anthropic／Google／Meta 旗艦模型 | 2026-10-16 · 2026-10-16 | 🔥🔥🔥 | ☄️閃現 | 開發者更新基準測試，比較四家旗艦模型寫 Protoss bot 對戰戰力；HN score 228（2 來源） | — |
 | Anthropic 工程部落格「重新設計原始碼控制」系列話題：Scion／Mononoke 爭議落幕 | 2026-10-13 · 2026-10-16 | 🔥🔥🔥🔥🔥 | 🌸落幕 | 10-16 Anthropic 員工 Nick G. 在 HN 回應並補上歸因，原作者確認歸因已足夠、仍堅持原始技術觀察 | — |
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
 | Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-13 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch 並親自聲明由 Claude Code 完成，dev.to 指出有 regression 權衡（2 來源） | — |
@@ -261,6 +262,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### Show HN: StarSkirmish Bench 更新——LLM 寫程式對戰星海爭霸基準測試，納入 Anthropic 旗艦模型（2026-10-16）
+
+- **來源：** Show HN: Gemini 4 Argon plays StarCraft — Hacker News（228 分，2 個來源）；[原文](https://starskirmish.com/bench/v0-2/)
+- **核心論點：** 開發者更新「StarSkirmish Bench」——讓 LLM 以 C++ 寫 Protoss bot、限時一小時，對戰其他 LLM 與既有人類寫的 bot，評比《星海爭霸：母巢之戰》戰力的基準測試；本次更新納入 OpenAI、Anthropic、Google、Meta 旗艦模型的對戰結果。
+- **關鍵回響：**（本次摘要未提供留言區正反意見細節，僅見標題、摘要與互動分數）
+- **收斂結論：**（無）屬非程式解題類的新基準展示，Claude／Anthropic 模型具體名次或分數未見於本次摘要（僅標題可考），需讀者自行查閱原文
 
 #### Sunshowers 部落格更新：Anthropic 已回應並補上歸因，原作者確認足夠（2026-10-16）
 

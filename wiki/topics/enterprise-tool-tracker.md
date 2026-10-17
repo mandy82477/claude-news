@@ -29,16 +29,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
 **最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-16
+**最後新聞更新：** 2026-10-17
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-16）
+> **最新企業採用異動**（2026-10-17）
+> - **Replit 執行長表示已不再與 Anthropic 合作**（TechCrunch，詳見使用現況表新增列）。
 > - **Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費達 $1,000**（多家媒體同日跟進，詳見使用現況表新增列與 [[topics/enterprise-cost-management]]）。
 > - **美國參議院準備讓幕僚開始使用 Claude**（Bloomberg Government，尚未確認已上線）。
 
 ## 摘要
 
-**目前追蹤 50 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-16）。
+**目前追蹤 51 家具名企業/機構，多數使用中（✅）、7 家退出/切換（❌🔄）、3 家縮減中（⚠️）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-16）。
 
 **退出理由分兩類：** 客戶自己選的是成本、安全疑慮、自家有競品（Meta、Microsoft，10-05 已查證）；別人劃線的是出口管制、區域存取（Goldman、OKX，2026-08-19/20，Anthropic 區域存取政策，與出口管制無關，見 ⟨Q-03⟩）、Pentagon 黑名單，詳見 [[topics/anthropic-government-policy]]。
 
@@ -67,6 +68,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期退出／縮減：**
 
+- **Replit**（❌ 已退出）：執行長表示已不再與 Anthropic 合作；具體終止範圍、改用模型未見報導
 - **Microsoft**（❌ 已停用 Claude Code）：成本考量；2026-06-21 確認於 Fable 5 封鎖期間加速退出，2026-06-22 The Jerusalem Post 跟進確認系統性降低對 Claude 依賴，GitHub Copilot 為主要替代方案
 - **JPMorgan Chase**（❌ 已退出）：香港分行因出口管制被迫退出
 - **Alibaba**（❌ 已禁用）：資安疑慮禁用 Claude Code，明確改用內部工具 Qoder
@@ -74,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
-**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture 與美國參議院故為 50；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture、美國參議院與 Replit 故為 51；「7 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy、Replit；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -90,6 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Replit | 大型（AI 編碼/應用開發平台） | Claude（API 整合） | ❌ | — | 執行長表示已不再與 Anthropic 合作；具體終止範圍、改用模型未見報導 | 2026-10-16 |
 | Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
 | 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
 | Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code | ✅ | 2026-10-12 | 官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用，527 星；生態系整合信號，內部採用規模未見報導 | 2026-10-12 |
@@ -149,6 +152,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
+- **Replit（10-16）**：TechCrunch 報導執行長表示 Replit 已不再與 Anthropic 合作；具體終止時間、範圍、改用模型均未見報導
 - **Accenture 支出上限（10-16，3 家媒體）**：將員工可報銷的 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000；是否限 Claude Code 未見細節，成本面見 [[topics/enterprise-cost-management]]
 - **美國參議院（10-15）**：Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude；僅標題可用，具體時程、涵蓋部門與資料存取規範均未見報導
 - **Meta 使用量（10-05，已查證 2026-10-07）**：The Information 報導 Claude Code 使用者由今年稍早約 6 萬降至約 3 萬；春季裁員約 10%（7.8 萬人）只解釋一部分，動機為推自家工具；近 28 天仍花逾 1.05 億美元（The Information）
@@ -183,7 +187,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
 | Claude Code | 10 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce 等，詳見上方使用現況表）+2縮減（Uber、Meta）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
-| Claude API | 31（詳見下方「採用企業清單」）+ 1 退出中（Lindy → DeepSeek） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
+| Claude API | 31（詳見下方「採用企業清單」）+ 2 退出中（Lindy → DeepSeek、Replit） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
 | Cursor | 1（Uber） | ⚠️ 新創份額下滑 | 成本管控困難；企業級功能不如 Claude Code |
@@ -213,6 +217,7 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ### 2026-10
 
 #### 2026-10-16
+- **[新增具名企業，❌ 已退出] TechCrunch：Replit 執行長表示已不再與 Anthropic 合作**：具體終止範圍、時間與改用模型均未見報導，詳見上方使用現況表新增列（Google News/TechCrunch）
 - **[新增具名企業，✅ 使用中] Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000**：詳見上方使用現況表新增列與 [[topics/enterprise-cost-management]]（Google News/Startup Fortune；24/7 Wall St.；The Times of India）
 
 #### 2026-10-15

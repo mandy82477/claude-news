@@ -31,10 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-16
+**最後新聞更新：** 2026-10-17
 
-> **最新動態**（2026-10-16）
-> Claude Code 的 Code Review 功能正式轉為正式發布（GA）；v2.1.301 新增無人值守重試逾時上限旗標。
+> **最新動態**（2026-10-17）
+> - **版本**：v2.1.302 新增 `CLAUDE_CODE_AUTO_MODE_MODEL`（指定 auto mode 分類器用哪個模型）與閒置自動壓縮相關功能，細節未完整揭露。
+> - **已知問題**：新增一則——平行工具呼叫中一個失敗，同批其他呼叫被自動取消標錯誤（#22264，64 讚）。
 
 ---
 
@@ -42,6 +43,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.302**（2026-10-16）：新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 環境變數，可指定 client 端 auto mode 分類器使用的模型，不影響 server 端 auto mode 本身要選哪個模型；另新增閒置自動壓縮（idle compaction）相關功能，官方原文截斷，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）。
+  同版 build 另新增 2 個功能候選旗標（`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.301**（2026-10-15）：新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，讓無人值守重試模式（`CLAUDE_CODE_RETRY_WATCHDOG`）在額度重置時間太久遠時直接結束請求，不再乾等（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）。
   同版 build 另新增 1 個第一階候選旗標 `CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA`＋代號旗標 `DAPPER_CUPCAKE`，代號旗標 `SQUISHY_NEWT` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.15.0／anthropic-sdk-typescript sdk-v0.135.0 同步發布：thinking 類型新增 `between_tools`、Messages 新增 `speed` 參數與 `usage.speed`、可讀取 Console 組織用量等級，見下方「版本更新」表。
 - **v2.1.300**（2026-10-15）：新增 `virtualText`——mod 可在提示框內畫裝飾文字，不會進入草稿或送出的提示內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量的欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）。
@@ -83,6 +86,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-17）：桌面版文件重寫「結束 App 後任務是否還在跑」規則，依平台分流——macOS／Linux 以 Claude 帳號登入時結束 App，重開 session 可接續正在跑的任務；Windows 版或接第三方 provider 時結束 App，進度無法接回，須保持 App 開著直到任務完成（文件字數 148,156→148,190）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-16）：文件索引新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解），呼應 Code Review 功能同日轉為正式發布（GA），詳見 [[feature-radar]]（[索引](https://code.claude.com/docs/llms.txt)）。
 - **官方文件更新**（2026-10-15）：桌面版文件新增 SSH／TLS 代理疑難排解章節，涵蓋 `HTTPS_PROXY`、`NODE_EXTRA_CA_CERTS` 等設定，延續 10-14 的 SSH 遠端工作流程擴充（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-14）：桌面版文件大幅擴充（99,435→122,477 字，新增 122 段、移除 6 段），集中於 SSH 遠端工作流程——連線遠端機器的需求、macOS／Linux 沿用既有 SSH 設定、Windows 遠端機器支援，以及 Desktop 離線時任務在背景持續執行、連回後處理期間送達的請求（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -258,8 +262,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（65 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（66 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**平行工具呼叫中一個失敗，同批其他呼叫被自動取消並標記錯誤（GitHub issue #22264，累積 35 則留言、64 個讚，2026-10-16）**：Claude Code 單一訊息內送出多個平行工具呼叫時，只要其中一個失敗，同批其餘呼叫會被自動取消並標為錯誤，而非各自獨立執行完畢；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Ctrl+Enter 換行快捷鍵與一般應用程式慣例衝突，應可自訂（GitHub issue #5064，累積 33 則留言、58 個讚，2026-10-08）**：使用者反映 Ctrl+Enter 用於換行與多數應用程式慣例衝突，呼籲新增可自訂快捷鍵設定；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
@@ -305,7 +310,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：訊息佇列模式——排入佇列而非中斷進行中任務（GitHub issue #50246，累積 67 則留言、236 個讚，首見 2026-07-25，2026-08-25 互動數更新，今日全站互動量次高）**：使用者反映 Claude 進行中任務時，目前唯一選項是中斷，若使用者想追加後續指令，只能打斷現有工作或事後另尋方式協調；呼籲新增訊息佇列機制，讓後續指令排隊等候而非強制中斷；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Opus 5 xhigh 推理強度於 Claude Code Desktop 失效，因思考功能被強制關閉（Reddit r/ClaudeCode，2026-07-25，Opus 5 上線當天新增問題，單一來源待更多佐證）**：使用者回報 Claude Code Desktop 上將 Opus 5 設為 xhigh 推理強度時功能失效，追查發現是思考（thinking）功能被強制關閉所致；此為 Opus 5 於 Claude Code 上線當天即浮現的新 regression，目前僅單一 Reddit 貼文回報、尚無 GitHub Issue 或跨平台佐證，暫列待更多來源確認；官方尚未回應。
 - 🔴 **未修復**｜**Claude 自陳分析依據不足，卻仍在同一回應中完成該分析——自我識別的阻擋性缺口未真正阻止輸出（GitHub issue #60226，累積 50 則留言，2026-07-24，10-08 更新）**：使用者回報 Claude 明確指出分析依據不足（unfounded），卻在同一回應中繼續完成該分析並輸出結論；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：新增 `--screen-reader` 模式改善 NVDA／JAWS 無障礙體驗（GitHub issue #11002，65 則留言、38 讚，首見 2026-07-21，09-16 更新）**：v2.1.218 changelog 曾提及螢幕報讀相關改善，惟原文截斷、範圍未知，暫不視為正式回應。
+- 🔴 **未修復**｜**功能請求：新增 `--screen-reader` 模式改善 NVDA／JAWS 無障礙體驗（GitHub issue #11002，67 則留言、38 讚，首見 2026-07-21，2026-10-17 互動數更新）**：v2.1.218 changelog 曾提及螢幕報讀相關改善，惟原文截斷、範圍未知，暫不視為正式回應。
 - 🔴 **未修復**｜**無法用 `Ctrl+Shift+C` 或右鍵選單複製輸出文字（GitHub issue #62699，累積 42 則留言、68 個讚，2026-09-06 更新）**：與「終端機複製夾帶多餘縮排」（#18170）現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**［META］`bypassPermissions` 模式未真正略過權限檢查，9 個月未解、12+ 重複回報（GitHub issue #39523，37 則留言、19 個讚，首見 2026-07-23，2026-10-10 更新）**：回報者指出該模式並未如預期跳過權限檢查；官方尚未回應。
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 47 則留言，首見 2026-07-23，2026-09-24 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
@@ -466,7 +471,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：VS Code 擴充功能比照 GitHub Copilot Edits Review 的差異審閱介面（GitHub issue #33932，累積 33 則留言、218 個讚，2026-07-14）**：使用者呼籲 VS Code 擴充功能提供類似 GitHub Copilot Edits Review 的 diff 審閱 UI；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援 LaTeX 算式渲染（GitHub issue #16446，累積 42 則留言、138 個讚，首見 2026-07-14，2026-08-22 互動數更新）**：使用者請求「Claude Code for VS Code」外掛支援 LaTeX 算式渲染；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Environment Contributions 警告訊息持續重複出現（GitHub issue #3301，累積 47 則留言、86 個讚，2026-09-18 互動數更新）**：每次開啟 Cursor／VS Code IDE 皆重複出現，Claude Code Status v1.0.25；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：Visual Studio 2026 整合支援（GitHub issue #15942，累積 154 則留言、556 個讚，首見 2026-07-09，2026-09-21 互動數更新）**：使用者要求 Claude Code 支援 Visual Studio 2026 整合；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：Visual Studio 2026 整合支援（GitHub issue #15942，累積 155 則留言、587 個讚，首見 2026-07-09，2026-10-17 互動數更新）**：使用者要求 Claude Code 支援 Visual Studio 2026 整合；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：Claude Code Desktop 多視窗支援（GitHub issue #30154，累積 61 則留言、249 個讚，首見 2026-07-09，2026-09-11 互動數更新）**：使用者呼籲 Desktop app 支援多視窗同時操作，取代目前單視窗＋側邊欄的 session 管理方式；官方尚未回應。
 - 🔴 **未修復**｜**Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染（GitHub issue #49322，52 則留言、43 個讚，首見 2026-07-09，2026-10-10 更新）**：VS Code 擴充套件無法正確渲染 thinking summaries；官方尚未回應。見 [[entities/opus-4-7]]。
 - 🔴 **未修復**｜**VSCode 擴充套件 `ide_selection` 缺失、`ide_opened_file` 回報錯誤（GitHub issue #8451，累積 50 則留言、35 個讚，2026-07-10）**：VSCode 擴充套件未正確回報 `ide_selection`，且 `ide_opened_file` 欄位回傳錯誤檔案資訊，影響依賴這些欄位判斷編輯器狀態的工作流；官方尚未回應。
@@ -594,6 +599,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定 auto mode 分類器用的模型；另新增閒置自動壓縮功能，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|
 | **anthropic-sdk-python v1.15.0** | 2026-10-15 | thinking 類型新增 `between_tools`；Messages 新增 `speed` 參數與對應 `usage.speed`；可讀取 Console 組織用量等級（usage-tier）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0)）|
 | **anthropic-sdk-typescript sdk-v0.135.0** | 2026-10-15 | 同步 Python v1.15.0：thinking 新增 `between_tools`、Messages 新增 `speed`／`usage.speed`、Console 組織用量等級（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0)）|
 | **v2.1.301** | 2026-10-15 | 新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`：無人值守重試模式於額度重置過久時主動結束請求（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）|
@@ -921,6 +927,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-17 | **v2.1.302**：新增 AUTO_MODE_MODEL＋閒置自動壓縮（未載）。桌面文件改寫任務接續規則。新增已知問題 1 則（#22264）。互動更新 2 則（#15942、#11002）。 |
 | 2026-10-16 | **v2.1.301**：新增重試逾時旗標＋SDK speed／usage-tier；文件新增 6 頁 Code Review（轉 GA）；已知問題 4 則、互動更新 3 則。 |
 | 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；新增2則安全揭露指標，見下方「近期報導」。 |
 | 2026-10-14 | **v2.1.299**：新增 `DISABLE_FILE_MENTIONS`；旗標增 13 消 1，見 [[topics/claude-code-experimental]]。桌面文件擴充 122 段（SSH）。 |

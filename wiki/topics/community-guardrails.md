@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-12
-**最後新聞更新：** 2026-10-12
+**最後更新：** 2026-10-17
+**最後新聞更新：** 2026-10-17
 
-> **mods 安裝前先看權限範圍**（2026-10-12）
-> - **awesome-claude-code-mods**：社群掃描公開 Claude Code mods 的讀寫執行網路權限並建成目錄，526 星。
+> **本日新增**（2026-10-17）
+> - **官方揭露審查機制**：Claude Code 團隊發文，Claude 寫出自身九成程式碼，審查改為壓低人力審查時間、底線不增加 revert／事故。
+> - **routines 自動化實作**：開發者用 Claude Code routines 排程功能打造全自動讀文件、發 Slack 摘要的「AI 同事」。
 
 ---
 
@@ -82,6 +83,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Anthropic 官方部落格：Claude Code 團隊自曝審查機制——目標是把人力審查時間壓到不增加 revert／事故的最低限度（2026-10-16）
+
+- **主線：** 除錯分工
+- **核心模式：** Claude Code 團隊發文稱 Claude 已寫出 Claude Code 自身約 90% 的程式碼；達到高覆蓋率與深度審查後，審查策略改為持續壓低人力審查時間，底線是不讓 revert 或事故增加，而非追求「有沒有人讀過」。
+- **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧（4-agent Code Review、對抗性審查、Read-Only Reviewer 等，[[topics/community-guardrails#2026-09]]）一個官方一手實踐案例，對象是 Anthropic 自己審查九成由 Claude 寫出的程式碼；主線填除錯分工。
+- **可信度註記：** 官方一手來源（Claude Code 團隊部落格），同日由 Simon Willison 部落格轉引 Addy Osmani、Morgan Westlee Lunt、Qing Wang 的說法擴散；Hacker News 396 分。
+- **來源：** How the Claude Code team does code review — Hacker News（396 分，2 個來源）；[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)；Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang — Blog / Simon Willison；[原文](https://simonwillison.net/2026/Oct/16/code-review/)
+- **成熟度：** ⚡ 活躍（官方一手實踐，社群跨平台關注，惟具體量化審查節省比例未見公開數字）
+
+#### dev.to 第一手實作：用 Claude Code 的「routines」排程功能打造睡覺時也在跑的 AI 自動化同事（2026-10-16）
+
+- **主線：** —
+- **核心模式：** 作者用 Claude Code 的 routines 功能——cron 排程啟動、clone repo、呼叫 MCP 連接器（Slack、Gmail）後自行退出——打造每天自動讀官方文件、做前後 diff、貼 Slack 摘要的無人值守「AI 同事」。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧（PostToolUse 稽核、Git Hooks 品質門等，[[topics/community-guardrails#2026-10]]）一個「排程式無人值守自動化」取向——既有做法多是事件觸發或強制攔截，本則改用 cron 排程＋MCP 連接器做完全無人值守的週期性任務；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 第一手實作文，依本頁 dev.to 收錄規則以內容判斷不看讚數（0 讚）；機制（cron 排程、clone repo、MCP 連接器、diff 比對）寫得清楚，屬可複現做法。
+- **來源：** dev.to / #anthropic；[原文](https://dev.to/persimmoq/i-built-an-ai-coworker-that-works-while-i-sleep-using-nothing-but-claude-code-6k8)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實作，尚無社群採用回饋數據）
 
 #### karanb192/awesome-claude-code-mods：社群掃描公開 Claude Code mods 的讀寫執行網路權限並建目錄（2026-10-12）
 

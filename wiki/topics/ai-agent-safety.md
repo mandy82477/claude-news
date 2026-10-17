@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
 **最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-16
+**最後新聞更新：** 2026-10-17
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新動態**（2026-10-16）
-> The Register 報導間接提示注入開始出現在網頁 HTTP 標頭，不再只藏在可見內容裡——攻擊面持續擴張，延續本頁提示注入系列敘事。
+> **最新動態**（2026-10-17）
+> Claude Code 桌面版預覽窗格漏洞正式命名「SneakPeek」：無需互動的惡意 HTML 即可繞過三層沙盒竊取 AWS、GitHub、SSH 憑證，官方仍未修補；桌面版使用者應避免開啟不明來源的 HTML 檔案。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -183,6 +183,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### 《AI Agent Prompt Injection: What the Evidence Actually Shows》彙整提示注入實證研究現況（2026-10-17 新增，教育/論述層訊號）
+
+- **揭露來源**：Google News（2026-10-17 10:28 UTC）；0 互動，單一來源，原文經 Google News 轉址無法讀取全文，僅標題可用（Topic Watch/ai-agent-safety）
+- **核心主張（僅標題可用）**：文章彙整目前關於 AI agent prompt injection 風險的實證研究現況；具體研究內容、方法與結論均未見報導
+- **與既有系列的關係**：與既有「教讀者怎麼防／彙整現況」教育層訊號（09-28、10-11、10-14 tech-insider）同屬一條敘事；「## 提示注入已不是單點漏洞」訊號表已滿載 8/8，本輪未列入
+- **性質判斷**：教育／論述性質，非具體攻擊或漏洞事件，不列入「## 現在還擋不住的攻擊」表
+- **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低
+
 ### The Register：間接提示注入開始出現在網頁 HTTP 標頭中，不限於可見內容（2026-10-16 新增，跨類別）
 
 - **揭露來源**：Google News／The Register（2026-10-15 20:04 UTC，互動 0）
@@ -208,15 +216,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **同組報導**：news.lavx.hu〈HiddenLayer finds Jev decision model vulnerable to prompt injection attacks〉（2026-10-15 06:40 UTC）跟進同一揭露
 - **性質判斷**：非 Claude／Anthropic 產品，屬跨類別延伸記錄；呼應本頁「## 提示注入已不是單點漏洞，是產業級攻擊面」的收斂觀察——即使限制輸出形式（僅選項、非自由文字）仍無法阻絕提示注入
 
-### Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7（Critical）漏洞，攻擊鏈細節已公開（2026-10-14 新增，獨立於同日 CSO Online 揭露，2026-10-15 升級：完整攻擊鏈公開）
+### Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7（Critical）漏洞，攻擊鏈細節已公開（2026-10-14 新增，獨立於同日 CSO Online 揭露，2026-10-15 升級：完整攻擊鏈公開，2026-10-16 升級：正式命名「SneakPeek」）
 
 - **揭露來源**：VMblog（經 Google News，2026-10-14 15:04 UTC）；0 互動，單一來源，原文經 Google News 轉址無法讀取全文，僅標題可用
 - **核心主張（僅標題可用）**：資安業者 Noma Labs 揭露 Claude Code 桌面版存在一項 CVSS 8.7（Critical 等級）漏洞；具體攻擊鏈、觸發條件與是否已修補均未見報導
 - **與同日另一則揭露的關係**：同日另有 CSO Online 報導 Claude Code 桌面版 256KB 限制相關瑕疵（見下則），兩者均為獨立的 Claude Code Desktop 安全揭露，無證據顯示為同一漏洞
 - **10-15 升級（Noma Labs 原文可讀，Hacker News 15 分）**：攻擊鏈公開——攻擊者在公開 repo 放入偽裝成測試覆蓋率報告的惡意 HTML，繞過 Claude Code Desktop 預覽沙盒、在無 CSP 限制下執行 JavaScript，達成任意檔案讀取；官方尚未發布修補或回應（[Noma Labs](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)）
-- **性質判斷（10-15 更新）**：開啟不明 repo 覆蓋率報告預覽的使用者會遇到此攻擊鏈，先避免開啟不明來源的預覽即可規避；官方尚未發布修補，持續在本節追蹤
-- ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7｜訊 2026-10-15）：攻擊鏈與觸發條件已於 10-15 公開（見上），官方是否已修補仍未見報導
-- **可信度評估**：Noma Labs 原文直接來源（10-15），較 10-14 VMblog 轉述可信度提升；CVSS 分數仍為資安業者評分，非官方確認
+- **10-16 升級（dev.to、Hackread 跟進命名）**：安全研究者正式將此漏洞命名「SneakPeek」；dev.to、Hackread 均稱該惡意 HTML 檔案無需互動（no-click）即可繞過三層沙盒、竊取 AWS、GitHub 與 SSH 憑證，較 10-15 版本「任意檔案讀取」更具體點出可外洩的憑證類型；官方仍未見修補公告
+- **性質判斷（10-16 更新）**：桌面版使用者在官方修補前，應避免在工作目錄開啟來路不明的 HTML 檔案；官方尚未發布修補，持續在本節追蹤
+- ❓ **待查證**（標 2026-10-14｜查 Noma Labs、CVSS 8.7｜訊 2026-10-16）：攻擊鏈與憑證竊取範圍已於 10-15／10-16 公開（見上），官方是否已修補仍未見報導
+- **可信度評估**：Noma Labs 原文直接來源（10-15）＋dev.to／Hackread 10-16 跟進命名；CVSS 分數仍為資安業者評分，非官方確認
 %% 維運備忘：Cybernews〈Claude Code preview pane flaw could leak developer secrets〉（2026-10-16，經 Google News，0 互動，僅標題）經核對與本則為同一漏洞（Noma Labs 原文 URL 即含「preview-pane...exfiltrate」），非新事實，未另立條目 %%
 
 ### CSO Online 揭露 Claude Code 桌面版 256KB 大小限制瑕疵，機密資料可外洩至預覽窗格（2026-10-14 新增，獨立於同日 Noma Labs 揭露）
@@ -1459,6 +1468,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-17
+- **[📋 新增] 《AI Agent Prompt Injection: What the Evidence Actually Shows》彙整提示注入實證研究現況**：僅標題可用，教育／論述層訊號，詳見「## 技術彙整」（Topic Watch/ai-agent-safety）
+- **[🔴 升級] dev.to／Hackread：Noma Labs 揭露的 Claude Code 桌面版漏洞正式命名「SneakPeek」**：無需互動的惡意 HTML 可繞過三層沙盒竊取 AWS、GitHub、SSH 憑證，官方仍未見修補公告，詳見「## 技術彙整」
 
 ### 2026-10-15
 - **[📋 新增，官方自揭＋量化數據] Anthropic 發布 2026 美國期中選舉防護措施報告**：抽樣 25 萬則對話，政治中立性評測 99%，已封鎖境外假新聞網站，10 月下旬起依州別提供投票資訊，詳見「## 技術彙整」

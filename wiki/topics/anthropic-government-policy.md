@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
 **最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-15
+**最後新聞更新：** 2026-10-17
 
-> **FTC 正式發出傳票**（2026-10-15）
-> CBS News／The Hill：FTC 對 Anthropic、OpenAI 發出傳票，要求提交資料，調查從「開啟」進入取證程序。
+> **Anthropic 遊說國會推自家 AI 安全法案**（2026-10-17）
+> Politico 報導 Anthropic 悄悄向國會議員遊說自提法案，內容限制政府封鎖「危險」AI 模型的權力；Bloomberg、Law Commentary 同日跟進轉載。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -103,6 +103,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **國會立法壓力**：Sanders 與 Casar 09-03 提出 Ban Artificial Superintelligence Act，違者最高 20 年徒刑，狀態為提案未進委員會；細節見「## 時序」09-05（Decrypt、IBTimes、TechTimes 09-04）。
   - 09-10 Reuters 報導國會議員在 Anthropic 研究員相繼發出 AI 風險警告後，呼籲盡速制定新規；具體議員身分、法案內容均僅標題可用，暫不逕自合併為同一延伸
   - 09-11 qz.com 報導跨黨派議員延續同一呼籲；同日 CNBC 報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；研究員警告本身的人物面見 [[topics/recursive-self-improvement]]
+- **Anthropic 自提 AI 安全法案遊說國會**（新增 10-16）：Politico 獨家報導 Anthropic 悄悄向國會議員遊說自提法案，限制政府封鎖「危險」AI 模型的權力；Bloomberg、Law Commentary 同日跟進。
+  - 與上方 09-03 Sanders／Casar 提出的 Ban Artificial Superintelligence Act 方向相反（該案限制 AI、本案限制政府權力），非同一條線；具名議員、法案文字與進度均未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
 - **中國線**：08-31 官方表態不滿、設條件；09-02 官媒指控雙重標準，並陳不合併。併入阿里巴巴蒸餾指控（滿 90 天為 2026-11-08）與 Moonshot 蒸餾指控。08-13 後見「## 時序」；07-11 前見 [[topics/safety-china-trust-dispute]]。
 - **09-11 中國線新增**：Anthropic 威脅情報報告指控中國 AI 實驗室非法蒸餾，稱 Moonshot 暗中導流用戶請求至 Claude；與 07-22 指控不同（挪用非訓練），實驗室名單未見報導。**2026-09-26 查證**：Moonshot 否認、稱將提告已報警；商務部稱美方指控無據（[BeInCrypto](https://beincrypto.com/kimi-k3-moonshot-police-report-distillation/)）。
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。
@@ -272,6 +274,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-10-16 | 🏢 | Politico 獨家：Anthropic 悄悄向國會議員遊說自家提出的 AI 安全法案 | 法案內容會限制政府封鎖「危險」AI 模型的權力；具名議員、法案文字與立法進度均未見報導，僅標題可用；Bloomberg、Law Commentary 同日跟進轉載，詳見「線的細節」 |
 | 2026-10-15 | 🏛️ | CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料 | 調查從 09-30「開啟」進入取證程序；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 8 列 |
 | 2026-10-14 | 🏢 | WIRED：OpenAI、Anthropic 向英國國會議員表態支持接受監管 | 具體委員會名稱、聽證內容與監管訴求細節均未見報導，僅標題可用 |
 | 2026-10-14 | 🏢 | Bloomberg／Quartz：Anthropic 一名高管稱開源 AI 模型風險高於閉源模型 | 報導未點名具體模型或佐證資料，呼應「## 根本矛盾」與「出口管制」開放權重論戰（見「## 三個戰場」🚫 出口管制段落） |
@@ -492,6 +495,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-10-16
+- **[🏢] Politico 獨家：Anthropic 悄悄向國會議員遊說自家提出的 AI 安全法案**：法案內容會限制政府封鎖「危險」AI 模型的權力；具名議員、法案文字與立法進度均未見報導，僅標題可用；Bloomberg、Law Commentary 同日跟進轉載，詳見「## 攻防紀錄」、「線的細節」
 
 ### 2026-10-15
 - **[🏛️] CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料**：調查進入取證程序，較 09-30「調查開啟」更進一步；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 8 列
