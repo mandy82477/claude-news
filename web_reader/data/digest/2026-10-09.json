@@ -531,11 +531,6 @@
       "id": "jack-clark",
       "name": "Jack Clark",
       "pageType": "entity"
-    },
-    {
-      "id": "community-tech-tools",
-      "name": "社群工具目錄",
-      "pageType": "topic"
     }
   ],
   "reader": {
