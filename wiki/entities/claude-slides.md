@@ -4,24 +4,24 @@ kind: "entity"
 type: "feature"
 status: "beta"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-03"
+last_updated: "2026-10-17"
 last_news_update: "2026-09-25"
 status_main: "beta"
-days_since_news: 21
+days_since_news: 22
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 21
+days_since_news_subtree: 22
 inbound_links: 4
 attribution_count: 2
 attribution_last: "2026-09-25"
 top_source: "hn-repo-bridge"
-pending_count: 1
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-10-17"
-pending_signalled: 1
+pending_next_review: null
+pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Slides

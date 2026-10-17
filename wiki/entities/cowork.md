@@ -4,22 +4,22 @@ kind: "entity"
 type: "product"
 status: "active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-06"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-06"
 status_main: "active"
-days_since_news: 10
+days_since_news: 11
 parent: null
 children: "['entities/cowork-archive']"
 page_role: "hub"
-days_since_news_subtree: 10
+days_since_news_subtree: 11
 inbound_links: 11
 attribution_count: 5
 attribution_last: "2026-10-06"
 top_source: "github"
-pending_count: 1
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-10-17"
-pending_signalled: 1
+pending_next_review: null
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"

@@ -4,14 +4,14 @@ kind: "entity"
 type: "model"
 status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-11"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-09"
 status_main: "active"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 20
 attribution_count: 14
 attribution_last: "2026-10-09"

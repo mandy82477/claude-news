@@ -5,7 +5,7 @@ type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
 last_updated: "2026-10-10"
-last_news_update: "2026-09-23"
+last_news_update: "2026-09-24"
 status_main: "active"
 days_since_news: 23
 parent: null

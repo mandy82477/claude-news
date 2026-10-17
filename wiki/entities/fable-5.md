@@ -4,14 +4,14 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-10-05"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-05"
 status_main: "active"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 11
+days_since_news_subtree: 12
 inbound_links: 63
 attribution_count: 38
 attribution_last: "2026-10-05"

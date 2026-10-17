@@ -7,12 +7,12 @@ domain: "👤 人物"
 last_updated: "2026-10-10"
 last_news_update: "2026-10-10"
 status_main: "active"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
-inbound_links: 10
+days_since_news_subtree: 7
+inbound_links: 9
 attribution_count: 3
 attribution_last: "2026-10-10"
 top_source: "hacker-news"

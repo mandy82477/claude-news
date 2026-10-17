@@ -3,16 +3,16 @@ page: "topics/market-lessons"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-10"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-10"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
-inbound_links: 5
+days_since_news_subtree: 7
+inbound_links: 3
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 投資判讀教材（週更）

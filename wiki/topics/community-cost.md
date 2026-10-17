@@ -3,14 +3,14 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-13"
+last_updated: "2026-10-17"
 last_news_update: "2026-10-13"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 0
 attribution_count: 5
 attribution_last: "2026-10-13"
