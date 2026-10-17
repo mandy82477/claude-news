@@ -7832,6 +7832,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - **安全政策**：wiki/topics/ai-agent-safety.md、wiki/topics/anthropic-government-policy.md
   - **模型**：無（ECDSA／量子電路兩則研究判定不構成建頁門檻，比照 2026-08-12 Riemann zeta 案例處置，僅留存於日報）
   - **社群**：wiki/topics/community-guardrails.md、wiki/topics/community-tech-discussions.md、wiki/topics/community-tech-patterns.md
+  - **投資分析**：wiki/topics/market-signals.md
 - 新增頁面：無
 - feature-radar：本日無新功能
 - index：無狀態變更
@@ -7842,3 +7843,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編查證：商業記者提出 claude.com/pricing 原始擷取「Free 方案含 Claude Design, Slides, Docs」字樣與既有 2026-10-03 查證（Free 不含）衝突；主編以 WebFetch 直接查核官方定價頁確認屬實（Free 現已新增這三項），已於 entities/pricing.md 補一筆更正條目（2026-10-17 查證），不影響付費方案
 - 📋 待使用者裁示：功能記者回報 issue #15942（Visual Studio 2026 整合，👍 587、今日最高單日漲幅 +31）已達 official-community-gap.md 矩陣「≥100 讚」開列門檻，但矩陣已滿 18 列；是否與現有最弱一列比較後納入，留待 `/weekly` 或使用者裁示
 - devpractice 沉澱：候選 3 筆（#22264 平行工具呼叫批錯、Claude Code 團隊自曝審查機制、dev.to routines 無人值守自動化範本），留待週更落地；手冊正文寫入 0 則（今日無開發實務分類派工包）；⚠️ 記者回報 `data/devpractice_state.json` 原記錄 last_sha 在本機歷史中缺失（疑似淺層 clone），已 fallback 48 小時比對並以 `git diff` 額外核對無影響判斷
+- market 判讀：新增 5 則（Anthropic 信用評等 KBRA；IPO 估值下修至 1.5 兆＋紐約市主計官對話併入既有 IPO 進程線；Blackstone 晶片融資新開「私募信貸晶片融資」線；Replit 終止合作新開「具名客戶流失」線）；「買得到的標的」覆寫新增 Blackstone〔NYSE: BX〕；里程碑新增 5 筆、回顧結算 ⏳ 新增 5 列（結算日均 2026-10-31）；主編已補正 3 筆來源歸因的 slug（bloomberg/yahoo-finance/techcrunch → google-news，未註冊 slug 不寫入故需修正）後落帳
