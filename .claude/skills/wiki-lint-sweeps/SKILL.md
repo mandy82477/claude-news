@@ -40,7 +40,7 @@ disable-model-invocation: true
 
 ## 邊界
 
-- 由主編（本機主 session 或雲端頂層 session）執行；派工一律 foreground 且帶明確 `model`，記者不可再呼叫 Agent tool 委派。
+- 由主編（本機主 session 或雲端頂層 session）執行；派工帶明確 `model`，記者派工明寫 `run_in_background: false`（Agent 工具省略此欄即為背景，hook 只擋明寫 true，不會替你補；背景派出就得等完成通知收齊才進下一步），記者不可再呼叫 Agent tool 委派。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 需使用者確認的項目（5a ⏳ 逾期以外的結構性改動、5g 連續 2 輪門檻調整、5k 滿載讓位）一律只回報、寫進步驟 8 的待使用者確認區。
 - 驗證閘：十五行回報全部有值（跳過者寫明跳過理由）才算完。

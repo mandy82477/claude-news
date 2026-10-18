@@ -55,3 +55,9 @@
 - **3g 舊語法回填配額**：舊語法盲區 33→41 筆只增不減（5c 查證散文持續寫出舊字樣）。每輪派工前跑 `--queue` 算配額，至少回填 15 筆、前三頁優先，收報後重跑驗收——取 15 不取 10：上週 5c 就新增約 8 筆，10 筆淨減僅約 2 筆／週。原條文叫 5c 在 3g 派工時指定，但 3g（A 段）排在 5c（B 段）之前，時序做不到，一併改正。
 - **7b 題庫下限**：自檢門檻 `<7` 落後實際 8 題，改 8 並加少一題即紅的測試。
 - **6k 缺口偵測**：`wiki_graph.py gaps` 把 `page_role: redirect` 轉址殘頁列進候選，每週重現（改前 top50 有 chris-olah × jensen-huang）。gap_pairs 排除轉址頁並補測試，改後 0 對。
+
+## 2026-10-18（10-17 雲端 lint 6f 三處條文與實況不同步）
+
+- **`.claude/skills/wiki-lint-sweeps/SKILL.md` 邊界「派工一律 foreground」**：10-17 雲端 5c／5f／5k 六次派工皆為背景，條文卻說一律前景。查 `guard_roles.py`：只擋記者派工**明寫** `run_in_background: true`，欄位省略時 Agent 工具預設背景、hook 放行（2026-10-03 fail-open 決定）。條文改寫成與 hook 一致的動作句：明寫 `false`，省略即背景且要等完成通知收齊。
+- **`.claude/skills/wiki-lint-sweeps/references/sweeps.md` 檔頭「5a–5n」**：09-19 加 5o 時漏改，改「5a–5o」。
+- **`docs/cloud-runbooks/weekly-lint.md` 步驟表 5o 列在 5n 前**：與 SKILL.md 十五步表順序相反，兩列對調。

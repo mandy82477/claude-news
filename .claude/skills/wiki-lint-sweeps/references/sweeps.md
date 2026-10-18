@@ -1,4 +1,4 @@
-# Wiki Lint B 段：5a–5n 逐步判準與回報格式
+# Wiki Lint B 段：5a–5o 逐步判準與回報格式
 
 `.claude/skills/wiki-lint-sweeps/SKILL.md` 的判準單一來源。**執行某步之前逐字讀本檔對應節**；每節末的回報格式原樣填入步驟 8 的 lint 紀錄（模板見 `.claude/skills/wiki-lint/references/log-format.md`）。
 
