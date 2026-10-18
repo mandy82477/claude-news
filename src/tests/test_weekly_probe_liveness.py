@@ -74,6 +74,9 @@ class TestProbeLiveness(unittest.TestCase):
 
     def test_probe_keywords_both_forms(self):
         self.assertEqual(ledger.probe_keywords("若 X → A｜查證：a、b"), ["a", "b"])
+        # 「50,000」「1,000」是一個關鍵字：半角逗號夾在數字中間不切（2026-10-18；W41 曾被切成「1」「000」兩個探針）
+        self.assertEqual(ledger.probe_keywords("若 X → A<!-- 查證：50,000、Code Review -->"), ["50,000", "Code Review"])
+        self.assertEqual(ledger.probe_keywords("若 X → A<!-- 查證：Startups, Team 試用,1,000 -->"), ["Startups", "Team 試用", "1,000"])
         self.assertEqual(ledger.probe_keywords("若 X → A<!-- 查證：a、b -->"), ["a", "b"])
         self.assertEqual(ledger.probe_keywords("若 X → A；若兩週無事 → 結案"), [])
 

@@ -55,6 +55,18 @@ def conflicted_paths() -> list[str]:
     return [l.strip() for l in out.splitlines() if l.strip()]
 
 
+def join_sides(ours: str, theirs: str) -> str:
+    """無 base 的 append-append 串接。兩側交界補換行：一側檔尾沒換行時直接相加，
+    jsonl 的最後一筆會和對方第一筆黏成同一行（weekly/open-signals.jsonl 2026-09-20 兩處，
+    逐行 json.loads 直接炸）。檔尾也補齊換行，讓下一次 append 不再製造同樣的黏行。"""
+    if ours and not ours.endswith("\n"):
+        ours += "\n"
+    merged = ours + theirs
+    if merged and not merged.endswith("\n"):
+        merged += "\n"
+    return merged
+
+
 def resolve_union(path: str) -> None:
     """三方 union 合併：base(:1) / ours(:2) / theirs(:3)。任一 stage 缺席（一側新增檔）
     則退化為把兩側串接（新檔的 append-append 無 base）。"""
@@ -63,7 +75,7 @@ def resolve_union(path: str) -> None:
         r = _git("show", f":{n}:{path}", check=False)
         stages[n] = r.stdout if r.returncode == 0 else None
     if stages[1] is None:
-        merged = (stages[2] or "") + (stages[3] or "")
+        merged = join_sides(stages[2] or "", stages[3] or "")
     else:
         tmp = [REPO / f".merge_{n}.tmp" for n in (2, 1, 3)]
         for f, n in zip(tmp, (2, 1, 3)):

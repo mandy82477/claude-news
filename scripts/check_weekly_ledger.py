@@ -357,6 +357,8 @@ PROBE_LIVENESS_SINCE = "2026-W39"
 # 兩種形狀都收：W41 起新立判準用 HTML 註解（讀者在 Obsidian／GitHub 看不到）；
 # 舊形 `｜查證：` 仍會出現——回收表逐字沿用 W40 以前立案的判準。
 PROBE_TAIL_RE = re.compile(r"(?:｜查證[：:]\s*(.+?)|<!--\s*查證[：:]\s*(.+?)\s*-->)\s*$")
+# 探針分隔：全形頓號／逗號一律切；半角逗號只在不是「數字,數字」時切（「50,000」是一個關鍵字，2026-10-18）
+PROBE_SEP_RE = re.compile(r"、|，|(?<!\d),|,(?!\d)")
 
 
 def probe_keywords(cell: str) -> list[str]:
@@ -364,7 +366,7 @@ def probe_keywords(cell: str) -> list[str]:
     m = PROBE_TAIL_RE.search(cell)
     if not m:
         return []
-    return [x.strip() for x in re.split(r"[、,，]", m.group(1) or m.group(2)) if x.strip()]
+    return [x.strip() for x in re.split(PROBE_SEP_RE, m.group(1) or m.group(2)) if x.strip()]
 NEWS_DIR = REPO_ROOT / "news"
 
 

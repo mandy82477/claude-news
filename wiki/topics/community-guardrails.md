@@ -104,7 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **可信度註記：** 官方一手來源（Claude Code 團隊部落格），同日由 Simon Willison 部落格轉引 Addy Osmani、Morgan Westlee Lunt、Qing Wang 的說法擴散；Hacker News 396 分。
 - **成本軸：** 目標函數是「revert 與事故不增加」前提下的最少人工審查時間，是本頁第一個以成本（人時）而非效果為軸的 review 一手來源。它算的是人時，不是 token 單價。
 - **該問什麼：** Simon Willison 10-16 引述三人原話：「有沒有人讀過」只是不精確的代理指標，真正要問的是這個變更可能出什麼錯、哪個檢查能擋（[原文](https://simonwillison.net/2026/Oct/16/code-review/)）。
-- **官方產品怎麼計費：** Code Review 沒有固定單價、按 token 從 usage credits 扣、可設月上限，見 [[topics/coding-workflow-guide]] 第 5 節「Code review」。
+- **官方產品怎麼計費：** Code Review 沒有固定單價、按 token 從 usage credits 扣、可設月上限，見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 - **來源：** How the Claude Code team does code review — Hacker News（396 分，2 個來源）；[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)；Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang — Blog / Simon Willison；[原文](https://simonwillison.net/2026/Oct/16/code-review/)
 - **成熟度：** ⚡ 活躍（官方一手實踐，社群跨平台關注，惟具體量化審查節省比例未見公開數字）
 

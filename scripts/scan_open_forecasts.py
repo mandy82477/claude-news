@@ -36,6 +36,8 @@ FORECAST_HEADER_RE = re.compile(r"^\|\s*類型\s*\|\s*預告\s*\|\s*判準\s*\|\
 SEPARATOR_RE = re.compile(r"^\|[-: |]+\|$")
 # 新立判準（W41 起）把線索藏進 HTML 註解；回收表沿用的舊判準仍是 `｜查證：`，兩形都收
 PROBE_RE = re.compile(r"(?:｜\s*查證[：:]\s*(.+?)|<!--\s*查證[：:]\s*(.+?)\s*-->)\s*$")
+# 探針分隔：全形頓號／逗號一律切；半角逗號只在不是「數字,數字」時切（「50,000」是一個關鍵字，2026-10-18）
+PROBE_SEP_RE = re.compile(r"、|，|(?<!\d),|,(?!\d)")
 OPEN_MARKS = ("⏳", "🟡", "⏰")
 
 # 日報條目：標題行為 **[標題](url)**，其後為說明句
@@ -91,7 +93,7 @@ def open_forecasts() -> tuple[str, list[dict]]:
 
     for it in items:
         m = PROBE_RE.search(it["criterion"])
-        it["probes"] = [p.strip() for p in re.split(r"[、,，]", m.group(1) or m.group(2)) if p.strip()] if m else []
+        it["probes"] = [p.strip() for p in re.split(PROBE_SEP_RE, m.group(1) or m.group(2)) if p.strip()] if m else []
     return latest.stem, items
 
 

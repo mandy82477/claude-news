@@ -31,6 +31,14 @@ class TestUnionMerge(unittest.TestCase):
         return subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True,
                               encoding="utf-8", check=True)
 
+    def test_join_sides_never_glues_last_and_first_line(self):
+        # 2026-09-20 open-signals.jsonl 的黏行：ours 檔尾無換行 + theirs 直接相加
+        merged = rao.join_sides('{"a": 1}', '{"b": 2}\n')
+        self.assertEqual(merged, '{"a": 1}\n{"b": 2}\n')
+        self.assertEqual(rao.join_sides("x\n", "y\n"), "x\ny\n")
+        self.assertEqual(rao.join_sides("", "y"), "y\n")
+        self.assertEqual(rao.join_sides("", ""), "")
+
     def test_union_keeps_both_appends_in_order(self):
         with tempfile.TemporaryDirectory() as d:
             d = Path(d)
