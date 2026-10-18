@@ -61,3 +61,16 @@
 - **`.claude/skills/wiki-lint-sweeps/SKILL.md` 邊界「派工一律 foreground」**：10-17 雲端 5c／5f／5k 六次派工皆為背景，條文卻說一律前景。查 `guard_roles.py`：只擋記者派工**明寫** `run_in_background: true`，欄位省略時 Agent 工具預設背景、hook 放行（2026-10-03 fail-open 決定）。條文改寫成與 hook 一致的動作句：明寫 `false`，省略即背景且要等完成通知收齊。
 - **`.claude/skills/wiki-lint-sweeps/references/sweeps.md` 檔頭「5a–5n」**：09-19 加 5o 時漏改，改「5a–5o」。
 - **`docs/cloud-runbooks/weekly-lint.md` 步驟表 5o 列在 5n 前**：與 SKILL.md 十五步表順序相反，兩列對調。
+
+## 2026-10-18（lint 待裁示區瘦身：規則有預設值的事不再問使用者）
+
+使用者問「以後 lint 可以自己修嗎，為什麼需要我決定」。回看 10-17 的 14 條待裁示，只有雲端 repo 授權是真的要人決定；其餘是條文寫「只回報／向使用者確認」留下的早期保險。現有閘、測試、append-only log 已足以回溯，保險的成本（每週一張沒人讀的清單）高於它防的風險。改法：
+
+- **6d 規則年齡**：逾閾值的節當場修訂或刪，節數只進 log。
+- **6f 跨檔語意矛盾**：看機械證據（hook、腳本、實跑）定哪側對，直接改另一側；無機械證據才問。邊界清單的「向使用者確認」拿掉 6d、6f。
+- **5k 滿載讓位、5o 厚頁拆頁**：照讓位序與 verify 流程直接做；拆頁一輪至多 2 頁、拆錯一週內併回。`page-lifecycle.md` 的蒸餾「經使用者確認才執行」、併回「需使用者裁決」、verify 階段 1「使用者裁決」三處同步改為當輪執行。
+- **5d**：連續 3 週 B=0 自動降頻、B>0 自動恢復。
+- **3h 蒸餾**：記者提案、主編核例外後當輪派回執行；log 行改記「已執行／例外擋下」。
+- **入口層月份分組**：先 grep 日期錨點入邊，有就同批改連結，不以「可能破壞錨點」擱置。
+- **log 待裁示區**只收權限／環境設定與無預設值的純取捨。
+- 社群線（主線 tag 分母、趨勢 >12 節點）與投資線（例題前提被推翻）各補一句預設值，見 `docs/rules-changelog/reporter-community.md`、`docs/rules-changelog/reporter-market.md` 同日段。

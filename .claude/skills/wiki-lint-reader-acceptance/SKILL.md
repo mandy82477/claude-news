@@ -49,7 +49,7 @@ disable-model-invocation: true
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）親做，不派工——出題與判斷「讀者會不會迷路」是本步的全部內容。
-- 修復只能補 callout／wikilink／index 摘要欄；❌ 的結構性缺口只回報、寫進步驟 8 的待使用者確認區，不自行拆頁建頁。
+- 修復只能補 callout／wikilink／index 摘要欄；❌ 的結構性缺口不在本步拆頁建頁，轉給 5o 厚頁流程（`.claude/skills/wiki-lint-sweeps/references/sweeps.md`）處置，本步只記頁名。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - 驗證閘：7 的三題與 7b 的兩題各有明確三態結果（❌ 者已留待辦）才算完。
 

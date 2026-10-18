@@ -57,14 +57,14 @@ hierarchy 最自然的衰退是母頁退化成目錄——那正是本原則要�
 
 ### 對稱規則：併回
 
-子頁 < 80 行且 60 天無新聞更新 → lint 提案併回直接上層（需使用者裁決）。併回**必留 redirect 殼**：原 slug 保留標頭＋一行「已併回 [[母頁]]」（`page_role=redirect`），否則週報與外部連結永久斷。
+子頁 < 80 行且 60 天無新聞更新 → lint 當輪併回直接上層，log 記一行。併回**必留 redirect 殼**：原 slug 保留標頭＋一行「已併回 [[母頁]]」（`page_role=redirect`），否則週報與外部連結永久斷。
 
 ### 升格／併回 verify 流程（強制）
 
 | 階段 | 做什麼 | 機械證據 |
 |---|---|---|
 | **0 前置** | 厚頁先跑蒸餾；量出蒸餾後行數；仍 > 600 才進三題 | lint 回報行數 |
-| **1 盤點 dry run** | 記者對候選頁列子故事，每個附三題答案（引用方頁名＋行號） | 回報表；使用者裁決 |
+| **1 盤點 dry run** | 記者對候選頁列子故事，每個附三題答案（引用方頁名＋行號） | 回報表；三題全答齊即進階段 2，答不齊的群併鄰群，不等裁決 |
 | **2 手術（同一 commit）** | 建子頁（標頭：領域＝母頁、`上層`）、母頁改寫（callout／目錄／結論層）、回掃 `[[頁#段]]` 錨點連結、懸置標記 `⟨Q-nn⟩` 與細節區成對搬、轉知帳本 `page` 改派、路由規則加子頁 | `python scripts/gen_wiki_frontmatter.py`（產 index 投影）→ `python scripts/run_tests.py` 全綠（含 check_hierarchy／freshness／index_sync／pending_markers／check_tools_page）→ `python scripts/build_web.py` 錨點 WARN 不增 |
 | **3 帳本同步** | `python scripts/devpractice_diff.py mark`（搬家 diff 不得被當新料）；log 記升格 | 基準線 sha |
 | **4 上站** | 同一 commit push（雲端班次是 fresh clone，配套晚一個 commit 就停站一天） | gate_web_build 綠 |
@@ -96,7 +96,7 @@ hierarchy 最自然的衰退是母頁退化成目錄——那正是本原則要�
 
 **引用回掃：** grep 全庫指向被搬條目的 `[[頁#條目標題]]`，改指 archive 對應錨點（`scripts/build_web.py` 的 `check_wikilink_anchors()` 會驗）。蒸餾是搬位置＋熬濃，不是刪除，斷鏈即違規。
 
-**節奏與角色：** 每次 `/wiki-lint`，各記者對自己負責頁面提案（回報欄 `蒸餾候選：`，格式見 `.claude/skills/wiki-lint-reporters/references/dispatch.md` 的 3h），主編彙整後**經使用者確認才執行**；**每頁至多 2 個最舊時段**（漸進，不一次大搬家）。無達標時段 → 回報「無蒸餾候選」。
+**節奏與角色：** 每次 `/wiki-lint`，各記者對自己負責頁面提案（回報欄 `蒸餾候選：`，格式見 `.claude/skills/wiki-lint-reporters/references/dispatch.md` 的 3h），主編核過三條例外後**當輪直接執行**（搬位置可逆、archive 一字不刪，無需事前請示；拆錯併回即可）；**每頁至多 2 個最舊時段**（漸進，不一次大搬家）。無達標時段 → 回報「無蒸餾候選」。
 
 **欄位：** 主頁與 archive 頁都只更新「最後更新」，**不動「最後新聞更新」**——搬位置不是新聞。
 

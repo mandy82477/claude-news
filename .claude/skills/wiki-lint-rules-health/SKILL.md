@@ -67,7 +67,7 @@ python scripts/lint_health.py age --days 60
 - **逾 60 天**：逐一確認該節描述的行為是否仍與現狀吻合，並問「少了這節，執行者會不會做錯」——不會就提議刪
 - **60 天內**：記「在閾值內」
 
-輸出直接抄腳本的最後一行進 log。→ 逾閾值的列**向使用者確認是否修訂或刪除**，不自行修改。
+輸出直接抄腳本的最後一行進 log。逾閾值的節當場處置：行為仍吻合 → 不動；不吻合 → 直接修訂成現狀；少了也不會做錯 → 直接刪。節數是觀測值，只進 log，不列待使用者裁示。
 
 ## 6e. 來源健康檢查
 
@@ -107,7 +107,7 @@ python scripts/lint_health.py age --days 60
 ```
 若無矛盾則寫「✅ 全部配對語意一致」。
 
-**向使用者確認後才修改**，不自行決定保留哪條規則。
+判定哪側對看機械證據（hook 原始碼、腳本行為、本輪實跑紀錄），直接把另一側改成一致並在沿革檔記一行；兩側都拿不出機械證據、純屬取捨時才列待使用者確認。
 
 ## 6g. 品質指標
 
@@ -232,7 +232,7 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）執行；6l 的改寫可派 agent，其餘親做。
-- **凡本節標明「向使用者確認」者（6a、6c、6d、6f、6h、6j 的規則改動）不自行改規則檔**：雲端只回報，寫進步驟 8 的待使用者確認區；本機當輪呈給使用者，確認後才改（6j 的修訂文字原文須隨待辦保存，見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
+- **凡本節標明「向使用者確認」者（6a、6c、6h、6j 的規則改動）不自行改規則檔**：雲端只回報，寫進步驟 8 的待使用者確認區；本機當輪呈給使用者，確認後才改。6d、6f 依各節條文當場處置，不進確認區（6j 的修訂文字原文須隨待辦保存，見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
 - 改任何 `.claude/` 下的規則檔依 `.claude/rules/claude-md-edit.md` 流程，完成後 `python scripts/check_rules.py` 必須零 ❌。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - 驗證閘：十三行回報（6a–6l ＋漏抓帳／規則版本戳）全部有值，且本段若動過規則檔則 `check_rules.py` 綠，才算完。
