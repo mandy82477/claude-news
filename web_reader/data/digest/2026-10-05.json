@@ -466,11 +466,6 @@
   "preview": "Claude Code：新增「HIPAA-ready 組織 local mode 設定指南」；桌面版文件揭露 Desktop／雲端 session 兩個組織管理開關（HIPAA 組織預設關閉，需 Owner 開啟）。",
   "sedimentedToday": [
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
       "id": "mythos",
       "name": "Claude Mythos",
       "pageType": "entity"

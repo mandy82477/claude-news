@@ -441,18 +441,8 @@
   "preview": "Claude Code：Claude Code 的 Code Review 功能正式轉為正式發布（GA）；v2.1.301 新增無人值守重試逾時上限旗標。",
   "sedimentedToday": [
     {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
-    },
-    {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
       "pageType": "topic"
     },
     {

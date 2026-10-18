@@ -498,16 +498,6 @@
       "id": "coding-workflow-guide",
       "name": "程式開發實戰手冊",
       "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
     }
   ],
   "reader": {
