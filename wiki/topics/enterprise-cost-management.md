@@ -31,8 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-18
 **最後新聞更新：** 2026-10-18
 
-> **最新成本案例**（2026-10-16）
-> Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000——繼 JPMorgan（每月 $2,000 上限）後另一起頂尖企業設定個人支出天花板的具名案例（Startup Fortune／24/7 Wall St.／The Times of India）。
+> **Code Review 計費：官方給估法不給單價**（2026-10-18）
+> 官方費用頁（code.claude.com/docs/en/code-review-costs）確認 LLM code review 按 token 從組織 usage credits 扣、可設月上限，無固定單次價格；10-16 Accenture 把員工可報銷 Claude 支出上限設在每月 $29（此前單月花費高達 $1,000）仍是本頁最新具名企業案例。
 
 ---
 

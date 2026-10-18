@@ -7879,3 +7879,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-280b61（功能，H-280b61 由主編核對後確認 official-community-gap.md 矩陣不受影響，未改動該頁）；不登帳：社群記者 ⚠️ 轉知功能記者一則（dev.to「Same Local Model, 3 Coding Agents」Claude Code 7/12 落後 pi／Codex 12/12），單篇第一手實測、2 讚、無跨來源佐證，主編判斷證據強度不足以要求功能記者改動 entities/claude-code.md，留待後續觀察是否有覆現報導
 - devpractice 沉澱：候選 1 筆（topics/community-guardrails：`git push` deny 規則被 `git -C . push` 繞過＋Paveo／Vibecheck 兩款「檢查守衛本身」新工具），留待週更落地；手冊正文寫入 0 則（本日無開發實務分類派工包，基準線已推進至 a0b2ad72）
 - market 判讀：本日無訊號（已檢視全部 37 則不重複條目，無一命中六類判準；最接近門檻的 Replit／OpenAI 預設供應商消息與 2026-10-17 既有判讀同源，未見新進展）
+- 讀者版涵蓋閘補派：`entities/openclaw`、`topics/enterprise-cost-management` 兩頁的「最後新聞更新」因今日稍早週度延伸回顧已是 2026-10-18，但頂部 callout 括號日期仍停在舊日期，補派商業記者覆寫為 delta-first（openclaw：官方 Pro／Max 說明頁 11145838 未載第三方工具訂閱額度適用；enterprise-cost-management：Code Review 計費官方給估法不給單價），覆寫後 `check_callout_coverage.py 2026-10-18` 轉綠（18/18）
