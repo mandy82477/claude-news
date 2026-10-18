@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-17
+**最後新聞更新：** 2026-10-18
 
-> **最新動態**（2026-10-17）
-> - **版本**：v2.1.302 新增 `CLAUDE_CODE_AUTO_MODE_MODEL`（指定 auto mode 分類器用哪個模型）與閒置自動壓縮相關功能，細節未完整揭露。
-> - **已知問題**：新增一則——平行工具呼叫中一個失敗，同批其他呼叫被自動取消標錯誤（#22264，64 讚）。
+> **最新動態**（2026-10-18）
+> - **已知問題**：新增 2 則——複合 bash 權限詢問誤判只核 `cd`（#28240，49 則留言、209 讚）、桌面版跨 session 傳訊自 2.1.224+ 起 regression 靜默失效（#86012，Windows／macOS）。
+> - **互動更新**：XDG 規範缺失（#1455，69 則留言、460 讚）、GitLab 整合（#12346，55 則留言、159 讚）。
 
 ---
 
@@ -194,8 +194,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（16 條未修復、4 條已修復、1 條拒修、1 條❓）
+### 🛡️ 安全與隱私（17 條未修復、4 條已修復、1 條拒修、1 條❓）
 
+- 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
 - ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
 - 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews，2026-09-18）**：媒體稱（2026-10-03 查證）Air Security 09-17 披露：插件 SHA 釘選未驗證檢出內容、加自動更新致零點擊，Claude Code 2.1.179 已修補。
 - 官方 v2.1.179 release notes 與 Security Advisories 未載，狀態待官方確認。詳見 [[topics/ai-agent-safety]]
@@ -330,7 +331,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：READ 工具未標示目前正在讀取哪一個檔案（GitHub issue #21151，累積 133 則留言、186 個讚，2026-07-17 首次記錄，2026-07-21 留言數更新）**：使用者反映執行 READ 工具讀取檔案時，介面未顯示目前正在讀取的具體檔案名稱，多檔案讀取情境下難以追蹤進度；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增選項常駐顯示 Claude 的思考過程（GitHub issue #8477，累積 93 則留言、356 個讚，2026-07-17 首次記錄，2026-08-17 互動數更新）**：使用者希望新增設定選項讓 Claude 的 thinking／推理過程預設常駐顯示，而非需要每次手動展開或依賴目前的摘要呈現；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：送出前檢視並編輯「已貼上文字」區塊內容——官方曾承諾以 Editor 功能解決，issue 現已重開（GitHub issue #3412，累積 83 則留言、307 個讚，首見 2026-07-18，2026-08-17 互動數更新，環境：Claude Code 1.0.51／macOS 15 Sequoia／Ghostty；2026-08-10 查證）**：使用者（常見情境為搭配 MacWhisper 等聽寫軟體使用）希望能在送出前檢視並編輯輸入框中已收合的「已貼上文字」區塊內容；官方協作者 dicksontsai 曾於 2026-01-14 回應「下個版本起可用 Editor 功能檢視已貼上文字」，惟該次修復對應的 PR 觸發 GitHub 自動關閉、issue 隨後於當前回報週期被重新開啟（`state_reason: reopened`），顯示先前修復未能持續解決問題或涵蓋範圍不足；與既有「關閉輸入框貼上文字自動收合」需求（issue #23134）同屬貼上文字呈現方式相關訴求但方向不同，暫分列追蹤。
-- 🔴 **未修復**｜**Post/PreToolUse Hooks 未如預期觸發（GitHub issue #6305，累積 40 則留言、16 個讚，首見 2026-07-31，2026-08-22 留言數更新，環境：Claude Code claude-sonnet-4-20250514／macOS Darwin；2026-08-10 查證）**：使用者回報 PreToolUse 與 PostToolUse hooks 未依預期執行；查證同串較早的官方協作者留言（dicksontsai）說明此為既有設計：修改 Settings JSON 後基於安全考量不會立即生效，須以 `/hooks` 確認或開新 session，並指出部分回報者對 `$TOOL_NAME`／`$TOOL_ARGS` 用法有誤（參見[官方文件](https://docs.anthropic.com/en/docs/claude-code/hooks#pretooluse-input)）；惟該說明未必涵蓋本則 2026-07-31 的具體回報情境，issue 仍為 open，無官方留言直接回應此次個案。與既有「Stop Hooks 被忽略」（2026-04-24 回報）同屬 hooks 機制可靠性問題但涉及不同 hook 類型，暫分列追蹤。
+- 🔴 **未修復**｜**Post/PreToolUse Hooks 未如預期觸發（GitHub issue #6305，累積 41 則留言、16 個讚，首見 2026-07-31，2026-10-18 留言數更新，環境：Claude Code claude-sonnet-4-20250514／macOS Darwin；2026-08-10 查證）**：使用者回報 PreToolUse 與 PostToolUse hooks 未依預期執行；查證同串較早的官方協作者留言（dicksontsai）說明此為既有設計：修改 Settings JSON 後基於安全考量不會立即生效，須以 `/hooks` 確認或開新 session，並指出部分回報者對 `$TOOL_NAME`／`$TOOL_ARGS` 用法有誤（參見[官方文件](https://docs.anthropic.com/en/docs/claude-code/hooks#pretooluse-input)）；惟該說明未必涵蓋本則 2026-07-31 的具體回報情境，issue 仍為 open，無官方留言直接回應此次個案。與既有「Stop Hooks 被忽略」（2026-04-24 回報）同屬 hooks 機制可靠性問題但涉及不同 hook 類型，暫分列追蹤。
 - 🔴 **未修復**｜**功能請求：Skills 支援子目錄結構（GitHub issue #10238，累積 54 則留言、168 個讚，首見 2026-07-17，2026-09-12 互動數更新）**：使用者希望 Skills 檔案結構能支援子目錄組織方式，便於大型或多層次 Skills 套件管理；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**未處理例外僅顯示 [object Object]（GitHub issue #59033，累積 70 則留言、85 個讚，2026-07-08）**：發生未處理例外時，錯誤訊息僅顯示 `[object Object]`，未提供可診斷的錯誤內容，增加除錯難度；官方尚未回應。
 - 🔎 **查無官方**（標 2026-08-09｜查 #16856、token 消耗｜複 2026-11-14）｜**升級至 v2.1.1 後 token 消耗異常暴增 4 倍以上（GitHub issue #16856，累積留言 73，2026-07-03 指控）**：使用者反映升級後 rate 消耗速度明顯加快超過 4 倍，屬重大體驗負評；查證確認 issue 仍為 open（`has repro`、`area:cost`、`oncall` 標籤，內部已排查但無公開回應），無官方留言或修復版本；升版前建議留意此回報，若已升級可觀察實際 usage 曲線變化。
@@ -354,8 +355,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（17 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（18 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復（regression）**｜**桌面版跨 session 傳訊自 CCD 2.1.224+ 起靜默失效，訊息遺失、收訊 session 卡死 15–20 分鐘（GitHub issue #86012，42 則留言、9 讚，Windows／macOS，2026-10-17）**：與下方 #24798 已修復狀態矛盾；部分安裝已於 2.1.237 修復，穩定版頻道仍受影響。
 - 🔴 **未修復**｜**context compaction 後會抹除 `.claude/project-context.md` 的專案指引（GitHub issue #9796，累積 30 則留言、4 個讚，2026-10-08）**：使用者回報壓縮後專案指引遭清空；與跨 compaction 記憶缺口（#34556）同類但聚焦該檔案本身，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：原生支援可切換的 Claude Code「profile」，隔離記憶、指令、hook 與設定（GitHub issue #7075，累積 32 則留言、58 個讚，2026-10-08）**：生態系框架各帶自己的 context／subagent 庫，混用易衝突，呼籲官方原生支援；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**`.claude.json` 持續累積每個專案的對話歷史，無上限，檔案膨脹至數百 MB 以上（GitHub issue #5024，累積 55 則留言、50 個讚，2026-10-07）**：使用者回報該檔案不斷累積歷史紀錄，導致啟動變慢、效能下降；官方尚未回應或提供自動清理機制。
@@ -450,7 +452,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 無法加入私有 GitHub marketplace（GitHub issue #28125，累積 35 個讚，2026-08-02）**：使用者回報 Cowork 功能無法加入私有（private）GitHub marketplace；官方尚未回應。
 - 🔴 **未修復**｜**Bedrock：Claude Opus 4.7 回傳 permission_error，儘管帳號權限狀態顯示 AUTHORIZED（GitHub issue #51183，累積 39 則留言、12 個讚，首見 2026-07-31，2026-08-16 互動數更新）**：在 AWS Bedrock 環境下，即使帳號權限狀態顯示為 AUTHORIZED（已授權），呼叫 Opus 4.7 仍回傳 permission_error 錯誤；回報者已確認搜尋過現有 issue 未見重複回報；與既有「Bedrock 功能相容性落差（持續）」同屬 Bedrock 接入層問題，官方尚未回應。
 - 🔴 **未修復**｜**Cowork：儲存 Global instructions 後靜默還原成舊版本（GitHub issue #40175，38 則留言、23 個讚，首見 2026-08-01，2026-10-10 更新）**：儲存後會悄悄退回舊版本，不會跳出任何警示，屬資料遺失類 bug；官方尚未回應。
-- 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 68 則留言、447 個讚，2026-09-12 互動數更新）**：快取與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG 標準路徑；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 69 則留言、460 個讚，2026-10-18 互動數更新）**：快取與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG 標準路徑；官方尚未回應。
 - 🔴 **未修復**｜**Dispatch 主對話持續顯示離線，儘管 Cowork 任務正常運作（GitHub issue #45937，累積 37 則留言，2026-07-26）**：使用者回報 Dispatch 主對話在行動裝置端持續顯示「This desktop appears offline」，即使直接從桌面端發起提示也一樣；然而個別 Cowork 任務仍能正常運作，顯示問題限於主對話的連線狀態顯示；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援終端機 CLI 已有的 `/btw` 指令（GitHub issue #37323，累積 35 則留言、216 個讚，首見 2026-07-23，2026-08-09 互動數更新，今日日報互動量最高）**：使用者呼籲 VS Code 擴充套件比照終端機 CLI 版本支援 `/btw` 指令；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**GitHub connector 可連結帳號內所有 repository 卻無法讀取任何內容，回報為近期功能退化（GitHub issue #71542，累積 63 則留言、69 個讚，首見 2026-07-18，2026-09-16 互動數更新）**：帳號全域皆受影響，公開與私有 repo 皆然；官方尚未回應。
@@ -465,7 +467,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-11-14）｜**Remote Control 自動重連失效（GitHub issue #34255，71 則留言、108 個讚，07-16 首見，09-19 更新）**：中斷不自動重連、無提示；仍 open。與 #28322、#29006 同屬不穩定訊號。
 - 🔴 **未修復**｜**Remote Control 顯示「不可用於目前方案」，儘管帳號已以 Pro 方案完成驗證（GitHub issue #28817，45 則留言，2026-10-05）**：Pro 方案帳號驗證通過後仍報「not yet available on your plan」，登出重登無效；與 #34255（自動重連失效）現象不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 52 則留言、140 個讚，首見 2026-07-15，2026-09-04 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 55 則留言、159 個讚，首見 2026-07-15，2026-10-18 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
 - 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-11-14）｜**功能請求：Linear 整合——指派 issue 給 Claude Code 觸發雲端 agent session（GitHub issue #12925，累積 45 則留言、146 個讚，2026-07-30）**：使用者呼籲支援將 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，比照現有 GitHub Issues 指派觸發雲端工作流的模式擴展至 Linear；查證確認 issue 仍為 open（`enhancement`、`external`），無官方留言或排入路線圖跡象。
   - 09-24：146 讚為本日反應數最高功能請求；社群已有 Linear 官方 MCP＋本地 Lanes MCP 橋接做法，官方原生整合仍缺，見 [[topics/official-community-gap]]。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充功能比照 GitHub Copilot Edits Review 的差異審閱介面（GitHub issue #33932，累積 33 則留言、218 個讚，2026-07-14）**：使用者呼籲 VS Code 擴充功能提供類似 GitHub Copilot Edits Review 的 diff 審閱 UI；官方尚未回應或排入路線圖。

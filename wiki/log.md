@@ -7860,3 +7860,22 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 聚焦校準：非本月首次週度回顧，跳過（本月已於 10-04 執行）
 - 歸因：追加 14 筆 `data/source_attribution.jsonl`（日報來源填日報日、user-query 填查證日 10-18）
 - 歸因 wiki-weekly-review／模型、功能、商業、安全政策、社群、人物
+
+## 2026-10-18 Ingest
+
+- 來源日報：[[news/2026-10-18]]
+- 更新頁面：
+  - **人物**：wiki/entities/dario-amodei.md
+  - **功能**：wiki/entities/claude-code.md
+  - **商業**：wiki/topics/anthropic-business.md、wiki/topics/competitor-landscape.md
+  - **安全政策**：wiki/topics/anthropic-government-policy.md
+  - **模型**：wiki/entities/opus-5-5.md、wiki/entities/fable-5.md
+  - **社群**：topics/community-cost、topics/community-integrations、topics/community-interfaces、topics/community-memory、topics/community-guardrails、topics/community-tech-discussions、topics/community-tech-patterns（母頁：僅覆寫 callout＋路由表「最後動態」欄，「最後新聞更新」未動）
+- 新增頁面：無
+- 摘要：Anthropic 員工結構研究＋法律團隊助攻 agent 簽約兩則重大事件領軍，其餘以 Claude Code 五則高互動 bug／功能請求回報與社群工具首次收錄為主
+- 呈現品質：全部通過
+- 品質備註：主編彙整各記者回報為 `data/ingest-packets/2026-10-18/reports/` 時，社群記者回報的「⚠️ 需主編處理」提示行曾因主編謄寫時漏寫原始「- 」前綴而被腳本誤判為新欄位、一度偵測不到；補回前綴後重跑 `collect_reporter_reports.py` 確認偵測正常。「未回應清單」列出的 17 則條目（人物 1、功能 2、安全政策 3、模型 1、社群 10）主編已逐一核對各記者回報內「補充說明」段落，確認皆已附明確不收錄或交棒理由，非真正遺漏，僅因該段落未落在腳本比對的結構化欄位內而顯示未回應
+- 分類回退：無
+- 轉知帳本：結案 H-280b61（功能，H-280b61 由主編核對後確認 official-community-gap.md 矩陣不受影響，未改動該頁）；不登帳：社群記者 ⚠️ 轉知功能記者一則（dev.to「Same Local Model, 3 Coding Agents」Claude Code 7/12 落後 pi／Codex 12/12），單篇第一手實測、2 讚、無跨來源佐證，主編判斷證據強度不足以要求功能記者改動 entities/claude-code.md，留待後續觀察是否有覆現報導
+- devpractice 沉澱：候選 1 筆（topics/community-guardrails：`git push` deny 規則被 `git -C . push` 繞過＋Paveo／Vibecheck 兩款「檢查守衛本身」新工具），留待週更落地；手冊正文寫入 0 則（本日無開發實務分類派工包，基準線已推進至 a0b2ad72）
+- market 判讀：本日無訊號（已檢視全部 37 則不重複條目，無一命中六類判準；最接近門檻的 Replit／OpenAI 預設供應商消息與 2026-10-17 既有判讀同源，未見新進展）

@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-17
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **StarSkirmish Bench 新回合：納入 OpenAI／Anthropic／Google／Meta 旗艦模型**（2026-10-17）
-> 開發者更新讓 LLM 寫程式對戰《星海爭霸》的基準測試，本輪比較四家旗艦模型戰力；HN 228 分。
+> **本地模型測試：Claude Code 落後 pi、Codex**（2026-10-18）
+> dev.to 實測同一本地模型接三款 agent，pi、Codex 全過，Claude Code 僅 7/12，單篇個案觀察。
 
 ---
 
@@ -262,6 +262,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### dev.to 實測：同一本地模型接三款 coding agent，pi、Codex 全過，Claude Code 僅 7/12（2026-10-16）
+
+- **來源：** Same Local Model, 3 Coding Agents: pi 12/12, Codex 12/12, Claude Code 7/12 on a 6GB GPU — dev.to / #claudecode（2 讚）；[原文](https://dev.to/kunfieldnotes/same-local-model-3-coding-agents-pi-1212-codex-1212-claude-code-712-on-a-6gb-gpu-2f9m)
+- **核心論點：** 作者在同一台 6GB 筆電 GPU 上以 llama.cpp 跑 LFM2.5-24B 與 Qwen3.6-35B 兩顆本地模型，分別接 pi、Codex、Claude Code 三款 agent harness 做相同任務；pi 與 Codex 全數通過（12/12），Claude Code 僅通過 7/12，作者歸因為各 agent 自帶的系統提示詞差異決定了結果。
+- **關鍵回響：**（本次摘要未提供留言區細節，dev.to 讚數本身不具品質指標意義）
+- **收斂結論：**（無）單篇第一手實測，讚數不高，尚無跨平台或後續呼應佐證，暫記為個案觀察；本地模型場景下 harness 系統提示詞差異是否為通用結論，仍待更多樣本覆現
 
 #### Show HN: StarSkirmish Bench 更新——LLM 寫程式對戰星海爭霸基準測試，納入 Anthropic 旗艦模型（2026-10-16）
 

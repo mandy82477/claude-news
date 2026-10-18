@@ -34,22 +34,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **Reuters 獨家：去年薪酬 1,800 萬美元，居科技業 CEO 排行中段**（2026-10-06）
-> Reuters 獨家報導，Amodei 去年薪酬為 1,800 萬美元，落在科技業 CEO 薪酬排行中段，與外界對頂尖 AI 實驗室高層薪酬的想像有落差。
+> **Fortune：操盤可能的 2 兆美元 IPO，重申 40% 工時投入文化建設**（2026-10-18）
+> Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO，同時重申他最多花 40% 工時維護公司文化，延續 06-08 同一說法（僅標題可用）。
 
 ---
 
 ## 現況
 
-2026-10-06，Reuters 獨家報導 Amodei 去年薪酬為 1,800 萬美元，落在科技業 CEO 薪酬排行中段，與外界對頂尖 AI 實驗室高層薪酬的想像有落差；具體薪酬結構（基本薪、股權、獎金拆分）未見報導（僅標題可用）。
+2026-10-17，Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO（[[topics/anthropic-business]] 詳述估值與營運脈絡），同時重申他最多花 40% 工時維護公司文化，延續 06-08 同一說法（僅標題可用，Fortune，經 Google News）。
 
-2026-10-03，Yahoo Finance 轉述華爾街日報：黃仁勳等數位 AI 業者主管在 09-29 白宮午宴（Trump 與約 24 位科技 CEO）後，私下就 Amodei 對 AI 風險的公開警告向他提出質疑；Amodei 則呼籲同業對模型能力保持透明誠實。單一轉述來源，細節見 [[entities/jensen-huang]]。
+2026-10-06，Reuters 獨家報導 Amodei 去年薪酬為 1,800 萬美元，落在科技業 CEO 薪酬排行中段，與外界對頂尖 AI 實驗室高層薪酬的想像有落差；具體薪酬結構（基本薪、股權、獎金拆分）未見報導（僅標題可用）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -59,6 +59,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-10-17 | Fortune：操盤可能的 2 兆美元 IPO；重申最多花 40% 工時於企業文化（僅標題可用） | Google News／Fortune |
 | 2026-10-06 | 去年薪酬 1,800 萬美元，居科技業 CEO 薪酬排行中段（僅標題可用） | Google News／Reuters（獨家）|
 | 2026-09-15 | 於 Dreamforce 現場重申全球 AI 減速呼籲，與黃仁勳主張加速形成對比 | The Guardian |
 | 2026-09-13 | 稱中國是其所提 AI 減速方案中「最棘手的兩難」 | Hacker News（10分）／CNBC |
@@ -121,6 +122,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Anthropic's Dario Amodei is steering a possible $2 trillion IPO—but he says up to 40% of his time goes to making sure company culture is good](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVndFZDV2OEU0dmx1U1N1Ri1MTnRjeFBpOHlGU040ekJHZ1VHZkhkcWhvYV9qVFdKNXdjdFpZZ0JWbW1wN1BWcGNHakgwY29GYjZRanRXLXl1QTlPaVhiNGg0WDhOZXhYQnNzUEhtRkREVl9nOGRDMXRieDhMUTNPLXNuWF9LSlByZGpqSXFxZEpWWmd5OC0wZDBzclNVUnh0dk1PeHRzR2o?oc=5) — Google News／Fortune，2026-10-17（僅標題可用）
 - [EXCLUSIVE: Anthropic's Amodei made $18 million last year, middle of the tech CEO pack](https://news.google.com/rss/articles/CBMisAFBVV95cUxPN1o2SFlUSFBHTDc2ejFoZElwNUVaSDdVMGlMckFhSUhTYlJKNkRteGxBMGhndHBjVU8yaE5qaVkxYURVLW1ZdmlGTkZ1TXhRVEhwM0ZkVzVJaDN4ZUdwdm9JLTNXNC11NGFpSi0ycTJhRnNGSVhINUJwNU1YcTVCUGFGQ2E2dGtIT2pYTUJzejZQc3JRZjRuTlFsYmJoWEZqcFE2R3FBd1Jfek84dWVNMg?oc=5) — Google News／Reuters，2026-10-06（獨家，僅標題可用）
 - [Nvidia's Jensen Huang, Other CEOs Privately Confront Anthropic's Dario Amodei Over AI Doomsday Warnings](https://finance.yahoo.com/technology/ai/articles/nvidias-jensen-huang-other-ceos-213019720.html) — Google News／Yahoo Finance，2026-10-02
 - [Trump Says He Liked Anthropic's Amodei in Sign of Detente](https://news.google.com/rss/articles/CBMirAFBVV95cUxPQWlRNjM2WjFWSTRxc3FJM2c4S0F4RlF4WXdxZ0FGT1FWWmRuVWljV0lMajdYeXhxdWlLMW9YRGhjSkZGYjVrWVI2TkZabFhxX1A3dGhMc1FjdWM3d2F4ek1zQ3FqaDMyQnQwSmx2X2VtOFFxZS1NYk1FeVAwZFNEendOcS14dWZHb2Z3R1ZQM0JndkJsV3E1SENvYmhMUTdTcDlfUlhLN190WmFU?oc=5) — Google News／Bloomberg.com，2026-10-01（僅標題可用）
@@ -168,6 +170,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-10-17：Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO，同時重申他最多花 40% 工時維護企業文化，與 06-08「文化決勝論」同一說法；僅標題可用，IPO 估值脈絡見 [[topics/anthropic-business]]（來源：Google News／Fortune）
 - 2026-10-06：Reuters 獨家報導，Amodei 去年薪酬為 1,800 萬美元，落在科技業 CEO 薪酬排行中段，與外界對頂尖 AI 實驗室高層薪酬的想像有落差；僅標題可用，具體薪酬結構未見報導（來源：Google News／Reuters）
 - 2026-10-03：據華爾街日報（Yahoo Finance 轉述），黃仁勳等 AI 業者主管在 Trump 與約 24 位科技 CEO 午宴後私下質疑 Amodei 的 AI 風險警告；Amodei 呼籲同業對模型能力保持透明誠實，詳見 [[entities/jensen-huang]]（來源：Google News／Yahoo Finance）
 - 2026-10-01：Bloomberg 報導 Trump 公開表示喜歡 Amodei 本人，為兩人緊張關係釋出解凍訊號，續 09-27 白宮晚餐、09-29 黃仁勳同赴會晤；具體談話內容未見報導（僅標題可用）（來源：Google News／Bloomberg）

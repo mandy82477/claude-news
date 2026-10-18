@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **最新做法**（2026-10-15）
-> - **Context 管理添反面診斷清單**：dev.to 文章整理四種會污染 context 的壞習慣與對應解法（`/clear`、`/rewind`、拆 subagent、精簡 CLAUDE.md）。
+> **記憶工具新增零 LLM 呼叫的結構化圖儲存**（2026-10-18）
+> - **syncable-dev/memtrace-public**：雙時態圖儲存 AI coding agent 記憶，MCP-native，查詢寫入不呼叫 LLM，跨 Cursor、Claude Code、Codex 等多工具。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### syncable-dev/memtrace-public：雙時態圖儲存 AI coding agent 結構化記憶，MCP-native 且不呼叫任何 LLM（2026-10-18）
+
+- **主線：** —
+- **核心模式：** 用雙時態圖（bi-temporal graph）儲存 AI coding agent 的結構化記憶，MCP-native，查詢與寫入過程不呼叫任何 LLM；支援 Cursor、Claude Code、Codex、DeepSeek Harness、Hermes、VS Code、Windsurf；GitHub Search 累積 500 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」一個「零 LLM 呼叫的結構化圖儲存」取向——既有做法多靠 LLM 摘要記憶內容，本則改用純圖資料結構，同時涵蓋「跨環境 Agent 記憶」跨工具持久的特性；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/syncable-dev/memtrace-public)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Avoid These 4 Claude Code Context Antipatterns：四種會污染 context 的壞習慣與對應解法（2026-10-13）
 

@@ -31,17 +31,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-16
-**最後新聞更新：** 2026-10-16
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **livenerf 追蹤進入第 20 天**（2026-10-16）
-> 社群「Opus 5.5 是否被偷偷降規」追蹤系列更新進入第 20 天，登 Reddit 週熱門（0 留言，弱訊號）；30 天結果預計 10-24 前後揭曉。
+> **創意展示案例**（2026-10-18）
+> Hacker News 讀者分享以 Opus 5.5 連續多場對話生成 500 個自製時鐘頁面，當作個人版「鵜鶘騎車」創意測試（54 分、2 個來源）；屬質化展示，非量化基準。
 
 ---
 
 ## 現況
 
-**2026-10-16 最新**：社群「Opus 5.5 是否被偷偷降規」追蹤系列（livenerf）更新進入第 20 天，貼文登上 Reddit 一週熱門榜（0 留言，弱訊號）。30 天基準測試結果預計 10-24 前後揭曉，細節見下方「這些數字是誰量的」。
+**2026-10-18 最新**：Hacker News 分享作者連續多個對話工作階段以 Opus 5.5 生成 500 個自製時鐘網頁，當作個人版「鵜鶘騎自行車」創意測試（54 分、2 個來源）；屬單一創意展示，非量化基準，細節見下方「這些數字是誰量的」。
 
 **2026-09-23 最新**：Anthropic 發布 Claude Opus 5.5（API ID `claude-opus-5-5`），Claude Code v2.1.280 已將其設為預設 Opus 模型；Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5（官方 models overview（2026-09-23 查證））。官方稱多數工作表現追平 [[entities/fable-5|Fable 5.1]]、運算成本降 40%（相對 Opus 5）；媒體另有「API 價格便宜 60%」一說，兩個百分比對照的基準不同，見下方「這些數字是誰量的」。[[entities/opus-5|Opus 5]] 與 Fable 5 同步改列 Legacy，仍可用（2026-09-23 查證）。
 
@@ -94,6 +94,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **社群反應正向但屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)稱程式碼品質與可控性優於前代；另兩則（[複現實測](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)、[原展示貼文](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)）以約 $3–4 API 花費重現 Opus 5.5 專案。三則皆單則貼文、0 留言、無測試方法或量化指標，不構成獨立複測。
 - **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；未附測試方法或量化指標、0 留言，屬主觀觀感，不構成已驗證的能力下降；同類主張累計見 [[topics/code-quality-decline]]。
 - **livenerf 追蹤進入第 20 天，仍無結論**：dev.to 貼文稱已為 Opus 5.5 建立第 0 天基準線、每日重測連續 30 天，最早約 10-24 才能下結論（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30；3 讚，題組與評分方法未見載）；[Day 20 更新貼文](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)登上 Reddit 週熱門（0 留言，2026-10-14），仍未附具體數字，不能拿來支持或反駁上則。
+- **500 個自製時鐘創意展示**：Hacker News 讀者分享作者連續多個 Claude 對話工作階段，以 Opus 5.5 生成 500 個各具巧思的自製時鐘網頁（單一 6.3 MB HTML 檔案），作者稱為個人版「鵜鶘騎自行車」創意測試基準；屬單一創意展示，非量化基準或複測（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源，2026-10-18）。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
 
@@ -171,6 +172,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Simon Willison：Scrimshaw Jukebox](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)（2026-10-06）
 - [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15)（GitHub Search，550 星，2026-10-09）
 - [Reddit r/ClaudeAI：Are They Nerfing Opus 5.5? Livenerf Day 20 update](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)（週熱門，2026-10-14）
+- [Show HN：500 clocks in one 6.3 MB HTML file by Opus 5.5](https://tkgally.github.io/500-clocks/)（HN 54 分，2026-10-18）
 - [[news/2026-09-23]]
 - [[news/2026-09-27]]
 - [[news/2026-09-30]]
@@ -178,6 +180,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-10-06]]
 - [[news/2026-10-09]]
 - [[news/2026-10-16]]
+- [[news/2026-10-18]]
 
 ## 歷史記錄
 
@@ -185,6 +188,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-18 | Hacker News 分享「500 clocks in one 6.3 MB HTML file by Opus 5.5」，作者連續多場對話生成 500 個自製時鐘頁面，創意展示非基準（54 分，2 個來源）|
 | 2026-10-14 | livenerf 系列追蹤「Opus 5.5 是否被偷偷降規」進入第 20 天，登 Reddit 週熱門，仍無結論（0 留言，弱訊號）|
 | 2026-10-09 | GitHub repo `mg-styles-15` 收錄 15 種動態設計風格，皆由 Opus 5.5 單一提示直接生成程式碼（550 星，forks／issues 未查證）|
 | 2026-10-06 | Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）|
@@ -195,6 +199,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **歷史記錄細節**
 
+- **2026-10-18**：Hacker News 貼文《500 clocks》，作者以 Opus 5.5 生成 500 個自製時鐘網頁，作為個人版「鵜鶘騎自行車」創意測試；單一創意展示，非量化基準（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源）
 - **2026-10-14**：Reddit r/ClaudeAI 貼文稱 livenerf 追蹤「Opus 5.5 是否被偷偷降規」系列更新進入第 20 天，登上一週熱門榜；0 留言、未附具體數字或測試方法，結論預計 10-24 前後公布，承接 2026-10-03 第 0 天基準線記錄（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)，週熱門，2026-10-14）
 - **2026-10-09**：GitHub repo [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) 收錄 15 種動態設計風格，皆由 Claude Opus 5.5 讀取單一提示直接生成程式碼完成，附影片與完整原始提示（550 星；fork／issue／近期 commit 活躍度未查證，依弱訊號處理）（GitHub Search，2026-10-09）
 - **2026-10-06**：Simon Willison 測試讓 Claude Opus 5.5 設計一套文字格式的遊戲配樂並生成可播放的 artifact，風格接近《猴島小英雄》原聲帶；Willison 認為可能是文字模型新近出現的能力，但未與舊模型對照確認（推論，單一部落格貼文，0 互動）（[Simon Willison](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)，2026-10-06）

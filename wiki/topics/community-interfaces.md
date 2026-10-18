@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **VS Code 橋接 Claude CLI，解四個編輯器痛點**（2026-10-15）
-> - **VS Code Bridge**：擴充套件橋接 Claude CLI 與編輯器 context／指令，解決選取內容傳不進去、CLI 拿不到編輯器狀態等四個痛點。
+> **手機遠端控制新增反向案例**（2026-10-18）
+> - **OpenMinis/iCTRL**：讓 Claude Code、Codex 等 agent 透過加密 JSON-RPC API 操作 iPhone／iPad，而非手機控制 agent。
 
 ---
 
@@ -56,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### OpenMinis/iCTRL：讓 Claude Code、Codex 等 agent 透過加密 JSON-RPC API 遠端操作 iPhone／iPad（2026-10-18）
+
+- **主線：** —
+- **核心模式：** 基於 XCUITest 打造的 iOS／iPadOS 自動化測試工具，讓 Claude Code、Codex、Hermes、OpenClaw、Minis 等 agent 透過加密 JSON-RPC 2.0 API 無線操作手機或平板：點擊、輸入、讀畫面、啟動 App；GitHub Search 累積 504 星。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（ccgram、Android Remote Control MCP、Shellular、CLI-WeChat-Bridge、Mobile-Harness）一個方向相反的取向——既有做法是把手機當控制 Claude Code 的介面，本則反過來讓 agent 操作手機本身；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（504★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/OpenMinis/iCTRL)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Klaster1/vscode-bridge-for-claude-code：VS Code 擴充套件橋接 Claude CLI，解決四個編輯器內使用痛點（2026-10-14）
 

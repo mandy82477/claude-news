@@ -32,11 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
 **最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-17
+**最後新聞更新：** 2026-10-18
 
-> **本日新增**（2026-10-17）
-> - **官方揭露審查機制**：Claude Code 團隊發文，Claude 寫出自身九成程式碼，審查改為壓低人力審查時間、底線不增加 revert／事故。
-> - **routines 自動化實作**：開發者用 Claude Code routines 排程功能打造全自動讀文件、發 Slack 摘要的「AI 同事」。
+> **架構邊界合約新增貼入式提示詞契約**（2026-10-18）
+> - **HERO-Anti-OverDefense**：針對 coding agent 雜湊、邊界案例、評分標準、過度搭建四種過度防禦樣態，提供可直接貼入提示詞的契約。
 
 ---
 
@@ -95,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### wanshuiyin/HERO-Anti-OverDefense：針對 coding agent 過度防禦四種樣態的貼入式提示詞契約（2026-10-18）
+
+- **主線：** —
+- **核心模式：** HERO（Hashing、Edge cases、Rubrics、Overbuild）指出 coding agent 常見的四種「過度防禦」樣態，提供一份可直接貼進提示詞的契約加以對治；支援 Claude Code、Codex、Antigravity、Cursor、Copilot、Windsurf、Gemini CLI；GitHub Search 累積 500 星。
+- **與既有模式的關係：** 補上「架構邊界合約」既有代表技巧（ANMA YAML contracts、ISO 29148 規格驅動）一個「貼入式提示詞契約」取向——既有做法多走獨立規格文件或 YAML 設定檔，本則直接以一段提示詞文字充當契約、約束 agent 不過度搭建；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/wanshuiyin/HERO-Anti-OverDefense)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Anthropic 官方部落格：Claude Code 團隊自曝審查機制——目標是把人力審查時間壓到不增加 revert／事故的最低限度（2026-10-16）
 

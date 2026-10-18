@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-16
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **兩款新 MCP 整合：對話畫圖與資安情報查詢**（2026-10-16）
-> - **DayuanJiang/next-ai-draw-io**：聊天方式畫、編輯 draw.io 流程圖，含網頁版、桌面版與 MCP 伺服器；GitHub Search 36,275 星（存量盤點）。
-> - **mukul975/cve-mcp-server**：MCP 伺服器讓 Claude 透過 21 個 API 使用 27 項資安情報工具（CVE、EPSS、CISA KEV、MITRE ATT&CK 等）；GitHub Search 1,624 星。
+> **Blender 創意工具新增 AI／MCP 外掛**（2026-10-18）
+> - **LiCinCan/blender-ai-mcp-addon**：Blender AI 助理與 MCP 伺服器外掛，支援視覺化對話、場景工具與多 agent 工作流程。
 
 ---
 
@@ -59,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### LiCinCan/blender-ai-mcp-addon：Blender 的 AI 助理與 MCP 伺服器外掛，支援多 agent 工作流程（2026-10-18）
+
+- **主線：** —
+- **核心模式：** Blender 外掛提供 AI 助理與 MCP 伺服器，支援視覺化對話、場景工具操作與多 agent 工作流程，可接 Claude、ChatGPT、Gemini、Ollama、OpenCode 等模型；GitHub Search 累積 736 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「3D 建模工具（Blender）」取向——既有做法多接影片、遊戲引擎，本則延伸到 3D 建模與 bpy Python 腳本層；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（736★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/LiCinCan/blender-ai-mcp-addon)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### DayuanJiang/next-ai-draw-io：透過對話畫與編輯 draw.io 流程圖，含網頁版、桌面版與多工具 MCP 伺服器（2026-10-16）
 

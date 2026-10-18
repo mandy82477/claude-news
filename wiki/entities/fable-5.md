@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
-> **最新進展**（2026-10-05）
-> Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘（05:40–06:10 PT），已解決；屬穩定性事件，非能力變化。
+> **下代傳聞**（2026-10-18）
+> TestingCatalog 單一來源稱 Anthropic 下週發布 Claude Fable 5.5，官方尚未證實；查證進度見「歷史記錄」。
 
 ---
 
@@ -194,10 +194,17 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - [dev.to：Anthropic's AI formalizes Fermat's Last Theorem in Lean](https://dev.to/techaiwire/anthropics-ai-formalizes-fermats-last-theorem-in-lean-lf3)（2026-09-09）
 - [[news/2026-09-12]]
 - [[news/2026-09-17]]
+- [Google News/TestingCatalog AI News：Anthropic prepares to release Claude Fable 5.5 next week](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)（2026-10-17）
+- [[news/2026-10-18]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-10-18
+**傳聞：Anthropic 下週發布 Claude Fable 5.5（單一來源，官方尚未證實）**：TestingCatalog AI News 報導稱 Anthropic 準備於下週發布 Claude Fable 5.5，未見具體發布日、規格或定價（[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)，2026-10-17）。
+
+❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體或官方管道佐證，發布日、規格與定價均未載。
 
 #### 2026-10-05
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：

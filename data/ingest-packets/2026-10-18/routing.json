@@ -1,0 +1,370 @@
+{
+ "https://github.com/Folkbench/folkbench": {
+  "title": "Folkbench/folkbench",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/LiCinCan/blender-ai-mcp-addon": {
+  "title": "LiCinCan/blender-ai-mcp-addon",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/OpenMinis/iCTRL": {
+  "title": "OpenMinis/iCTRL",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/syncable-dev/memtrace-public": {
+  "title": "syncable-dev/memtrace-public",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/wanshuiyin/HERO-Anti-OverDefense": {
+  "title": "wanshuiyin/HERO-Anti-OverDefense",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.anthropic.com/research/employment-at-anthropic": {
+  "title": "How employment is changing at Anthropic",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/1455": {
+  "title": "Claude Code does not respect the XDG Base Directory specification",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/12346": {
+  "title": "[FEATURE] Add GitLab Integration (Repository Connection, MRs, Mobile Access)",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://tkgally.github.io/500-clocks/": {
+  "title": "Show HN: 500 clocks in one 6.3 MB HTML file by Opus 5.5",
+  "source": "Hacker News",
+  "categories": [
+   "模型",
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/28240": {
+  "title": "[BUG] Permission prompt incorrectly triggers on cd instead of the actual command in compound bash statements",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/86012": {
+  "title": "[Regression, Windows+macOS] Cross-session messaging silently broken since CCD 2.1.224+ — messages dropped, recipient sessions wedged 15-20 min (hadFirstResponse=false); fixed in 2.1.237 for some installs, stable channel still affected",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/6305": {
+  "title": "Post/PreToolUse Hooks Not Executing in Claude Code",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://comptroller.nyc.gov/reports/letter-to-anthropic-re-planned-initial-public-offering/": {
+  "title": "Letter to Anthropic Re: Planned Initial Public Offering",
+  "source": "Hacker News",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://legendofhyrule.com/": {
+  "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "全文與 Claude/Anthropic 生態系無關（薩爾達傳說時間軸整理），疑似抓取噪音",
+  "note": ""
+ },
+ "https://github.com/SoftwareRenderer/MIKE": {
+  "title": "Show HN: Cosplay as a tech lead, using gVisor to sandbox agents",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "僅在文中提及曾試用 Claude Code 作為比較對象，核心是作者自建的 agent 沙盒介面",
+  "note": ""
+ },
+ "https://dev.to/kunfieldnotes/same-local-model-3-coding-agents-pi-1212-codex-1212-claude-code-712-on-a-6gb-gpu-2f9m": {
+  "title": "Same Local Model, 3 Coding Agents: pi 12/12, Codex 12/12, Claude Code 7/12 on a 6GB GPU",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://farsidelab.com/concept/rocket-engines/": {
+  "title": "Show HN: A 3D catalog of rocket engines you can take apart",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "全文與 Claude/Anthropic 生態系無關（火箭引擎科普目錄），疑似抓取噪音",
+  "note": ""
+ },
+ "https://github.com/ramigb/epoptes": {
+  "title": "Show HN: Epoptes – Run Claude Code and Codex for hours with human oversight",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "摘要僅剩 HN 殼層標記 [flagged]；依標題與 URL 判斷為 Claude Code／Codex 長時間無人值守監督工具",
+  "note": ""
+ },
+ "https://helptheparents.org/": {
+  "title": "Show HN: Parents Inbox – Communication Guide for Schools",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "全文與 Claude/Anthropic 生態系無關（學校家長溝通工具），疑似抓取噪音",
+  "note": ""
+ },
+ "https://github.com/ahmtsahin/claude-env-tabs": {
+  "title": "Show HN: Env-tabs – Pin your projects in Claude Desktop's Code tab",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "摘要僅剩 HN 殼層標記 [flagged]；依標題與 URL 判斷為 Claude Desktop Code tab 專案釘選工具",
+  "note": ""
+ },
+ "https://github.com/adrianchifor/scn": {
+  "title": "Show HN: Scalable source control in Rust, inspired by Anthropic's Scion",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "作者明確標註受 Anthropic 內部原始碼控制系統 Scion 啟發而寫的 Rust 實作，與 10-16 Scion/Mononoke 抄襲爭議話題相關，供社群記者評估是否補充",
+  "note": ""
+ },
+ "https://github.com/rupello/theseus/": {
+  "title": "Show HN: Theseus the Mouse by Claude S. (and Claude O.)",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93zzl/maxxing_out_usage/": {
+  "title": "Maxxing out usage",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93vw9/anyone_else_experiencing_a_sudden_drop_in_opus/": {
+  "title": "Anyone else experiencing a sudden drop in Opus 5.5's reasoning quality?",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群",
+   "模型"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93ses/send_your_claude_code_agent_to_work_on_the/": {
+  "title": "Send your Claude Code agent to work on the Riemann hypothesis with a community of research agents.",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93o10/getting_ads_in_chatgpt_go_plan/": {
+  "title": "Getting ads in chatgpt Go plan.",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "貼文本體僅為圖片、無文字可讀；標題與 r/ClaudeCode 版面脈絡顯示為對照 ChatGPT Go 開始插廣告的社群討論",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93ltd/once_an_engineer_always_an_engineer_three_months/": {
+  "title": "Once an engineer, always an engineer: three months of building with Claude Code",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1x93k3s/these_new_cards_cause_claude_not_to_explain_as/": {
+  "title": "These new 'cards' cause Claude not to explain as requested.",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVjB4YWJlM1piXzhhQzJFa1ZMWXh1dC1lZHJpaUJhVFhoZGdZbkwxUzRmeUdXdktLU2M5eFdRTG04am5UNDdtYlMwZWxLVW0zejBZWWtTTlExMTRTUlpnY3NUZGZ3V1JsMVlVY0RTWVdVQUhvWU0xZWdzNEgwdFJzQmdR?oc=5": {
+  "title": "What are self-replicating ‘AI worms’, and why is Anthropic worried about them? - The Guardian",
+  "source": "Google News / The Guardian",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMirwFBVV95cUxNV25LU0xobEk4YzEtT3JsZnFhVUZuX3hZVWFPdlBsRXdmM1dsX245S19uaTBWb3lFd1dkeVZ0cEtMNWViVXMtUFZZZ2lnSk1fY3lnN210ZkdRclFJc2NFX2QtUTlRWDZpRldiZGNldHFTUVJtM3o5ZVZxVlZlSXVQb1UwMWdhNGhxZXdyeHZnRmpDRjRvQXRqYkpPRHRsMDFpOHFkNXlDUUNJMGdHNHNr0gG3AUFVX3lxTFBLZk1sdlJUYjFPWHBWaF9rWUNhaWZlSENrLTR0QlZUMW8yOEJvVzZqRVA3dVo4NHdpazhGcUNtMEE2cGtKVE9ST1VpbXg2eWVmTFVXb09pcE9CamJRVnRtUFlQNG1HODRaSU5EblRaSGJ3bXR2cFNBNUFDVEhYd1lRdEN1N19IMHN4ZXhPQ3l4UTJma3Y3MzdVaVRsQ1djXzhGVlNOUHdkcDdBMnIxWmI5aXB2WlUtZw?oc=5": {
+  "title": "19-Year-Old Claims Claude Code Helped Turn $68 Into $750,000. Here's How - NDTV Profit",
+  "source": "Google News / NDTV Profit",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUlFvSEladUVkZFRkUmY4ZUJENGNSclF1ejRENThnYU9FS291c243clpHTlNpNHloemREeHJVSm9QSE9wRDU0UXZ1eEhKNnlheFNEeHFrM2MwdkJxc1ZuNzV0MjZYN2xBWG1SZXk0RmtsWldlbzZQOVhTOTBSSUplNW1jMHRkUQ?oc=5": {
+  "title": "Claude Code Plugins Go Official at v2.1.302 [2026] - https://tech-insider.org/",
+  "source": "Google News / https://tech-insider.org/",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZDdLdlFXTmVsa1pVT2o5MU5hbF9nR0pqbl9CZWUyWnZ4cTFXN0VzM1Rld0FuUk8xdmZkZHNTTkpKX0pVdk1ZOXBwaW5MdDlsLWkyRXhTcXliTlRFRHhwaER6STVRSWZMSEVmb0NBVkN0NFJFNHFaQ1dsNHFzWXdVUTU4V2MwZldsOHZnbkZpd1EwNjlwVlNQOGNiWnl3SnhXSVJHMg?oc=5": {
+  "title": "Anthropic wants outside input on Claude’s values. But who gets the final say? - NBC News",
+  "source": "Google News / NBC News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVmFlM0p6TV9oV3pMdGVaZ3ZVWkpDaU1oZV9JMEVGdkk4dXZoSVhiX2dERjhYRUJjQ252bW9VeVliam5Kemd5YzZjQXVqMlVsRlc2RkM2QUZELWdPTFJSTjk3MkxvUWg1STdiSkVIQWd2ZFU0ZXhhdWI4RGNLTm4yYzVER2c?oc=5": {
+  "title": "Anthropic turns to lawyers to help AI agents strike deals - Financial Times",
+  "source": "Google News / Financial Times",
+  "categories": [
+   "功能",
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMitAFBVV95cUxNM0p2OW9XaU1lRFdwQVhTRU9aQXJvb0txWG5Gd1A0cl84dVN0eW5SVkZKNlFUQUFwTmloNWl0S0FPa19iLVRnSXlnTHFCeTFrS25PX1R1ek1EOXZmdGpHSTdNRWE4NV9FMHFjcHkxc0U2M19zV2dkMXFVYW9KRnZSbUZTNUFlZXBiQ1lYMjVmbENYN19sUGsyUEViQnhVb1NfVHpNbkltZGsxNzJMOXlEYzhUa1I?oc=5": {
+  "title": "ForgeCode claims it beats Claude Code and Codex, but the fine print tells another story - Startup Fortune",
+  "source": "Google News / Startup Fortune",
+  "categories": [
+   "商業"
+  ],
+  "reason": "topic 欄＝competitor-landscape，依規則直接路由給該 slug 所屬的商業記者",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMicEFVX3lxTE9BOXg1cnVLam5kdlRzekpwZ2ppalNIaHlYU1poOW9IQlJUMDlOc09zX2RZU2NtckE0bE9KWW1hQ3VGS185MTdSaHNFYnBlYTg0UVY2V2xKWEZUbWlTLTJlX0tFU053c05kaW1heTNxT2nSAXZBVV95cUxNMjJTd05DdHhXYVlhNDdrTWdhTk5XYkpYbEFORE9QeFJZLXhIU21ISjV4akVoVUt4b0w3VHZuUzBnQ3gyQm5Ec2swaGJKMFlqbkRkcm5KcjI3QkFlR04tVHJSalZDQUl2WFJHSDhyUVVGeWpMT1NR?oc=5": {
+  "title": "AI rapidly improving, could vastly boost U.S. GDP, Anthropic's Clark tells policymakers - CNBC",
+  "source": "Google News / CNBC",
+  "categories": [
+   "安全政策",
+   "人物"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1x8meib/alignment_on_sota_chinese_models_like_qwen_38/": {
+  "title": "Alignment on SOTA Chinese Models like Qwen 3.8 Flash Next / GLM 5.3 Flash",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [],
+  "reason": "全文與 Claude/Anthropic 無關，討論對象為 Qwen／GLM 等中國模型的對齊表現",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNVRwb2hUSGYwb3BQaUZ3XzJCcEpERVhxU1RWNEUxcVFmZHg3Y2REQzBITC04N2VUU1JZajR2ZHNRLUU3bkRVeWtDcVBWQ3p0cnJLODdjOFBVQTJFT0JwdVl4Y2pvSG9CNms5VGtVbTNNODEzTGRBeEZWMUc2WF9Hc1pBRUZsa0l4ZTNmNDBpU3V6VTFFNVFHQUVVVHB5VFJnZWF3M1BxT3pqa1M5VkZCb0Q1aU5SUDVuNTJRZm5KalpmUQ?oc=5": {
+  "title": "Anthropic says its workforce has become less junior and is spending more time in meetings - TechCrunch",
+  "source": "Google News / TechCrunch",
+  "categories": [
+   "商業"
+  ],
+  "reason": "與同日 Hacker News／Anthropic 官方研究報導同一事件（員工結構變化），供商業記者併入同一條敘事",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5": {
+  "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action - Mother Jones",
+  "source": "Google News / Mother Jones",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUFoxYWFYWWFqQTRraXdReXZYYmo5S0ZabG04MmlMbnp5R1VoMUsyLWpIMVg0bUhnOUNqMmxZV05BWm1DRVg4QlhONW9qbUo5UktELXhFMmc4VXhKMzhPbGxuZ2l0cjhGdE1MaEtPU0hBNzdqbTZPaEFHRENkVU9hcG9ieFhDalBPSUNZSEJGRQ?oc=5": {
+  "title": "Replit makes OpenAI its default over Anthropic, CEO says - TechCrunch",
+  "source": "Google News / TechCrunch",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVndFZDV2OEU0dmx1U1N1Ri1MTnRjeFBpOHlGU040ekJHZ1VHZkhkcWhvYV9qVFdKNXdjdFpZZ0JWbW1wN1BWcGNHakgwY29GYjZRanRXLXl1QTlPaVhiNGg0WDhOZXhYQnNzUEhtRkREVl9nOGRDMXRieDhMUTNPLXNuWF9LSlByZGpqSXFxZEpWWmd5OC0wZDBzclNVUnh0dk1PeHRzR2o?oc=5": {
+  "title": "Anthropic’s Dario Amodei is steering a possible $2 trillion IPO—but he says up to 40% of his time goes to making sure company culture is good - Fortune",
+  "source": "Google News / Fortune",
+  "categories": [
+   "人物",
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5": {
+  "title": "Anthropic prepares to release Claude Fable 5.5 next week - TestingCatalog AI News",
+  "source": "Google News / TestingCatalog AI News",
+  "categories": [
+   "模型"
+  ],
+  "reason": "",
+  "note": ""
+ }
+}
