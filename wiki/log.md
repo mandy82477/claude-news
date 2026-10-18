@@ -7844,3 +7844,19 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 📋 待使用者裁示：功能記者回報 issue #15942（Visual Studio 2026 整合，👍 587、今日最高單日漲幅 +31）已達 official-community-gap.md 矩陣「≥100 讚」開列門檻，但矩陣已滿 18 列；是否與現有最弱一列比較後納入，留待 `/weekly` 或使用者裁示
 - devpractice 沉澱：候選 3 筆（#22264 平行工具呼叫批錯、Claude Code 團隊自曝審查機制、dev.to routines 無人值守自動化範本），留待週更落地；手冊正文寫入 0 則（今日無開發實務分類派工包）；⚠️ 記者回報 `data/devpractice_state.json` 原記錄 last_sha 在本機歷史中缺失（疑似淺層 clone），已 fallback 48 小時比對並以 `git diff` 額外核對無影響判斷
 - market 判讀：新增 5 則（Anthropic 信用評等 KBRA；IPO 估值下修至 1.5 兆＋紐約市主計官對話併入既有 IPO 進程線；Blackstone 晶片融資新開「私募信貸晶片融資」線；Replit 終止合作新開「具名客戶流失」線）；「買得到的標的」覆寫新增 Blackstone〔NYSE: BX〕；里程碑新增 5 筆、回顧結算 ⏳ 新增 5 列（結算日均 2026-10-31）；主編已補正 3 筆來源歸因的 slug（bloomberg/yahoo-finance/techcrunch → google-news，未註冊 slug 不寫入故需修正）後落帳
+
+## 2026-10-18 週度延伸回顧
+
+- 延伸：
+  1. `topics/model-task-leaderboard` 新增「連續抓不到的榜：換不換」一節（六榜：WebDev、SWE-bench、MTEB、METR、Terminal-Bench、OpenRouter 用量；替代來源皆 10-18 實連確認；OpenRouter 10-18 重抓已見週用量表，建議再等一週後恢復）
+  2. `topics/enterprise-cost-management` 新增「LLM code review 一次多少錢：官方給的是估法，不是單價」（官方費用頁 10-18 查證：無固定單價、按 token 走 usage credits、限 Team／Enterprise、四步估法、專屬月上限；`entities/pricing` 互指）
+  3. `topics/community-guardrails`：claude.dev 審查文補「人時成本軸」＋ Simon Willison 10-16 引述；新增「守衛本身會靜默失效（2026-10-18 彙整）」子區塊（r/ClaudeCode `git -C . push` 繞過 deny rule、Paveo、Vibecheck，三則互動近零標推論）
+  4. `topics/ai-agent-safety`「官方自揭的 agent 失控事故年表」完整性核對：8 列核對、7 列改格（費城列補 Haiku 4.5／FTC 10-15 傳票／7-18 起點；07-31 列改 Blog 07-30＋OpenAI 07-21 起因＋1–7 月事發、7/23–24 查覺；09-28 列「OpenAI 暫停訓練」查無出處改未載）、補 07-28 OpenAI ExploitGym 逃沙盒一列、修掉把表切成兩段的空白行、入表判準補三類不入表（外部攻擊、能力研究、濫用）、結論句改「拖長的是事發到查覺」
+  5. `entities/linus-torvalds`：現況改成 cover letter 原話＋時序；補收 10-15 GBHackers、10-17 r/ClaudeCode；後者 10-18 外查到原始脈絡（10-08 布拉格 Maintainers Summit 後核心社群取消 `Assisted-by` 揭露要求，Torvalds 稱禁 AI 工具 utterly stupid；The Register 10-14）當場結案，相關議題連 `topics/community-tech-discussions`
+  6. 第三方通路鬆動：`topics/enterprise-tool-tracker` Replit 列由 ❌ 改 ⚠️ 有爭議（Masad 10-16 TechCrunch Disrupt 台上表態；匿名知情者否認；Replit 9 月部落格仍列 Fable 5／5.1 生產環境），`topics/competitor-landscape`、`topics/market-signals`（L41／147／149）同步改口徑；`entities/openclaw` 第三方額度 ❓ 維持，補 10-18 查官方 Pro／Max 說明頁未載並加探針 11145838
+- 必做更正（事實錯誤，未經確認直接執行）：**SneakPeek 被寫成「官方未修補」且與 CSO Online 256KB 當兩起**——Noma 原文 07-04 回報、08-17 Claude Desktop 1.30096.1 修完並自動更新推送，兩者同一漏洞；`topics/ai-agent-safety`（callout、L219–239 合併、時序加 10-18 更正）、`entities/claude-code`（L127–128 合併）、`overview`（4 處）已改，❓ 結案 4 筆，基線以 `--rebuild-count` 重建；`topics/coding-workflow-guide` L429／432「Code Review $15–25／次」改為「沒有固定單價」（beta 時期文件曾寫平均 $15–25，10-18 官方費用頁已不這樣寫）
+- 使用者跳過項目：`entities/claude-code` OpenTelemetry 可觀測性子區塊（弱訊號，等下週）；`entities/opus-5-5` Livenerf 追蹤小節（0 留言，先查一手）；`anthropic-business` IPO 風險對照表、`tom-brown` 角色彙整、`community-cost` Haiku 多代理附記（記者自評最低優先）
+- 收件匣：L29「LLM code review 的單位成本」標 ✅（第 2、3 項回答；token 單價層仍無社群實測）；L31「agent 記憶格式規約」本週無訊號維持 ⏳
+- 聚焦校準：非本月首次週度回顧，跳過（本月已於 10-04 執行）
+- 歸因：追加 14 筆 `data/source_attribution.jsonl`（日報來源填日報日、user-query 填查證日 10-18）
+- 歸因 wiki-weekly-review／模型、功能、商業、安全政策、社群、人物

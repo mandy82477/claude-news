@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-18
 **最後新聞更新：** 2026-10-17
 
 > **最新動態**（2026-10-17）
@@ -124,8 +124,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-10-15｜查 nested sessions、saved environments）｜**Claude Code 桌面版傳推出巢狀對話與已儲存環境設定**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；官方未見對應版本號。
-- ❓ **待查證**（標 2026-10-15｜查 Noma Labs、CVSS 8.7）｜**Noma Labs 揭露 Claude Code 桌面版 CVSS 8.7 漏洞**：攻擊鏈與修補狀態未見報導，詳見 [[topics/ai-agent-safety]]。
-- ❓ **待查證**（標 2026-10-15｜查 CSO Online、256KB）｜**CSO Online：Claude Code 桌面版 256KB 限制瑕疵外洩機密至預覽窗格**：觸發條件與修補狀態未見報導，詳見 [[topics/ai-agent-safety]]。
+- ✅ **SneakPeek（桌面版預覽窗格漏洞，CVSS 8.7）已於 2026-08-17 修補**（[Noma Labs 原文](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)，查證 2026-10-18）：於 Claude Desktop 1.30096.1 修完並經自動更新推送；CSO Online 的「256KB 預覽窗格洩密」是同一個漏洞。
+  - **你該做的**：確認桌面版不低於 1.30096.1；CVE 與 GitHub 安全公告待發，時間線見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-11-14｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：正式性仍待官方確認。
   - 2026-10-17 搜尋補查：第三方稱其 2026-09-30 上線、由 @ClaudeDevs 宣布、內容多為彙整既有文章；claude.dev 無法自本環境連線，未取得一手公告。
   - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。

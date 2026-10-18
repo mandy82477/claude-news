@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-18
 **最後新聞更新：** 2026-10-17
 
 > **本日新增**（2026-10-17）
@@ -76,6 +76,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **兩型都沒回答的是品質**：Ask HN〈Is anybody producing good code with coding agents?〉（HN 26 分，10-02）轉述資深工程師抱怨 AI 程式碼難讀、品質差；守規則與能安全出貨，不等於寫得好。
 - 來源：[RuleReceipt](https://github.com/rulereceipt/rulereceipt)、[Perspica](https://github.com/sshah03/perspica)（Show HN，日報 2026-10-01）；[部署閘](https://dev.to/yureki_lab/how-i-built-a-deploy-gate-so-my-autonomous-coding-agent-can-ship-to-prod-safely-1egb)；[Ask HN](https://news.ycombinator.com/item?id=49934037)；[TechRadar 報導](https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnRRdGtkRlpCQjlEQTR5bnd6MTRudlA3dWVubjZISzBGZng5eVg5NlBjcTdVRHdobXB5bDlfb1BncldYc2lUWVUzY0s2RkFZZmxpdFN2ZlNBU2huNzRIYUtEUGszYldjMksyS3ZXd0dwdFh2b1I3ZEQ2cFVuXzFKRVhlWGNUVC1ISkhvazJOYTZ0emtJR3FKUzBGR1JlMHdSekowekRDSzRZTmhGalZyWHZsdlVvQ1dHQVdWQ3lhWV9VakVFWUM2YkFDdUw0cXZUUEd2dmVSYnlldTAxeVVULUd0NjdqMTVXd2J5NUV3RjNYRHVmZjdFaWJRTHNPU2V0Mw?oc=5)（日報 2026-09-25；庫內條目見 [[topics/ai-agent-safety]]）；RuleReceipt 工具選型見 [[topics/community-tech-tools]]。
 
+### 守衛本身會靜默失效（2026-10-18 彙整）
+
+> 上表問的是守衛擋不擋得住 agent；這三則問的是守衛自己有沒有在運作。
+
+- **deny 規則擋不住換個寫法**（Reddit r/ClaudeCode，10-14）：作者一週內讀公開 repo 的 Claude Code hooks，把壞掉的回報給維護者，稱同樣四種錯誤反覆出現。標題點名一種：對 `git push` 設的 deny 規則擋不住 `git -C . push`；其餘三種（細節未載）。0 留言（10-14 快照）。
+- **Paveo**（Show HN，10-16）：在 Claude Code、Codex、Cursor 的指令執行前先檢查（僅標題）；貼文在 HN 被標 flagged。HN 1 分（10-16 快照）。
+- **Vibecheck**（Show HN，10-12）：自架的 GitHub merge gate，開 PR 時檢查作者懂不懂自己或 AI 寫的程式碼，BYOK Anthropic。HN 1 分（10-13 快照）。
+- **怎麼看**：有人開始審守衛本身，不只是再加一道守衛；但三則都是單一作者、互動近零，採用證據還很弱（推論）。
+- **官方的硬擋手段**：hook 加 `onFailure: "block"`（2.1.295）只補「hook 自己起不來或逾時」的缺口；官方文件說 `if` 條件是盡力比對，要硬擋請用權限系統（2026-10-11 查證，見 [[entities/claude-code#hooks：事件、失效模式與能不能當防線]]）。
+- **權限系統也要寫對**：Reddit 那則的例子正是 deny 規則，換一種指令寫法就漏，硬擋仍得覆蓋同一動作的各種寫法（推論）。
+- 來源：[Reddit 貼文](https://www.reddit.com/r/ClaudeCode/comments/1x5tbps/your_deny_rule_for_git_push_doesnt_stop_git_c/)、[Paveo](https://github.com/paveo-dev/paveo)、[Vibecheck](https://github.com/bhurghundii/vibecheck.dev)。
+
 ---
 
 ## 技術彙整
@@ -90,6 +102,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** Claude Code 團隊發文稱 Claude 已寫出 Claude Code 自身約 90% 的程式碼；達到高覆蓋率與深度審查後，審查策略改為持續壓低人力審查時間，底線是不讓 revert 或事故增加，而非追求「有沒有人讀過」。
 - **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧（4-agent Code Review、對抗性審查、Read-Only Reviewer 等，[[topics/community-guardrails#2026-09]]）一個官方一手實踐案例，對象是 Anthropic 自己審查九成由 Claude 寫出的程式碼；主線填除錯分工。
 - **可信度註記：** 官方一手來源（Claude Code 團隊部落格），同日由 Simon Willison 部落格轉引 Addy Osmani、Morgan Westlee Lunt、Qing Wang 的說法擴散；Hacker News 396 分。
+- **成本軸：** 目標函數是「revert 與事故不增加」前提下的最少人工審查時間，是本頁第一個以成本（人時）而非效果為軸的 review 一手來源。它算的是人時，不是 token 單價。
+- **該問什麼：** Simon Willison 10-16 引述三人原話：「有沒有人讀過」只是不精確的代理指標，真正要問的是這個變更可能出什麼錯、哪個檢查能擋（[原文](https://simonwillison.net/2026/Oct/16/code-review/)）。
+- **官方產品怎麼計費：** Code Review 沒有固定單價、按 token 從 usage credits 扣、可設月上限，見 [[topics/coding-workflow-guide]] 第 5 節「Code review」。
 - **來源：** How the Claude Code team does code review — Hacker News（396 分，2 個來源）；[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)；Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang — Blog / Simon Willison；[原文](https://simonwillison.net/2026/Oct/16/code-review/)
 - **成熟度：** ⚡ 活躍（官方一手實踐，社群跨平台關注，惟具體量化審查節省比例未見公開數字）
 

@@ -424,12 +424,12 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 |---|---|---|---|
 | `/code-review` | 本機背景 subagent | 手動 | 算一般用量 |
 | `/code-review ultra`（ultrareview） | 雲端 sandbox | **只有人打才跑** | Pro/Max 各 3 次免費，之後 **$5–25** |
-| **Code Review**（GitHub App） | Anthropic 基礎設施 | PR 開啟／每次 push／`@claude review` | **$15–25／次**，走 usage credits |
+| **Code Review**（GitHub App） | Anthropic 基礎設施 | PR 開啟／每次 push／`@claude review` | **沒有固定單價**，按 token 走 usage credits（10-18 官方費用頁） |
 | `/security-review` | 本機 | 手動 | 一般用量 |
 | security-guidance 外掛 | 本機 | 自動三層 | 一般用量 |
 | Claude Security 外掛 | — | 深度掃描 | — |
 
-**成本面完全不是空白**，官方文件逐一列價：Code Review 平均 $15–25、約 20 分鐘（限 Team/Enterprise）；ultrareview $5–25（Pro/Max 各 3 次免費，一次性不 refresh）；整體基準 $13/開發者／活躍日、$150–250/月。
+**成本面完全不是空白**，官方文件逐一列價：Code Review 轉正式版後官方費用頁改寫為「沒有固定單次價格」，按審查等級、變更大小與候選問題數計 token（限 Team/Enterprise；beta 時期文件曾寫平均 $15–25、約 20 分鐘，2026-10-18 已不再這樣寫，估法與封頂見 [[topics/enterprise-cost-management]]）；ultrareview $5–25（Pro/Max 各 3 次免費，一次性不 refresh）；整體基準 $13/開發者／活躍日、$150–250/月。
 
 **官方給了至少七個成本收斂旋鈕**：觸發模式選 Manual／Once（「Reviewing on every push runs the most reviews and costs the most」）；`REVIEW.md` 設 skip rules 與 re-review 收斂（官方講理由時原話是「stops a one-line fix from reaching round seven on style alone」）；降 effort（`low`／`medium` 只報最有信心的，是少誤報而非少覆蓋）；月支出上限；per-repo 均價監看；security-guidance 分層關閉。
 

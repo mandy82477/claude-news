@@ -15,7 +15,7 @@
 
 **Accenture 把員工 Claude 月費上限設在 29 美元——此前有人單月花到 1,000**：10-16 多家媒體同日報導。這是本庫第一個具名的「企業端自己裝上限」案例，和 09-17 摩根大通設 2,000 美元上限是同一類做法，差別在這次的數字低了近七十倍。管內部 Claude 支出的人值得拿它當對照。詳見 [[topics/enterprise-cost-management]]、[[topics/enterprise-tool-tracker]]。
 
-**Claude Code 桌面版同日兩起獨立資安揭露，都還沒有官方修補公告**：10-14 Noma Labs 揭露一項 CVSS 8.7（Critical）漏洞（當時只有分數、無攻擊鏈細節，10-15 補上）；CSO Online 另報一個 256KB 大小限制瑕疵，會把開發者的機密資料外洩到預覽窗格。兩者都在桌面版。詳見 [[topics/ai-agent-safety]]。
+**Claude Code 桌面版預覽窗格漏洞 SneakPeek 已於 08-17 修完**：10-14 起報導的 CVSS 8.7 漏洞（Noma Labs）與 CSO Online 的「256KB 預覽窗格外洩」是同一個洞；Noma 原文寫明 07-04 回報、08-17 在 Claude Desktop 1.30096.1 修完並經自動更新推送，本週是揭露公開日（2026-10-18 查證）。桌面版有自動更新者不用動；CVE 與官方安全公告待發。詳見 [[topics/ai-agent-safety]]。
 
 **Anthropic 自己也被 agent 產量壓垮，重組了內部開發基礎設施**：10-13 工程部落格揭露，每日合併的程式碼變更從 5 月的約 2,500 次衝到 9 月的逾 3 萬次，原本為人類規模設計的原始碼控制、建置與 CI 系統撐不住。這是少見的官方第一手「規模化之後會壞在哪」資料。同週該系統「Scion」被指設計抄襲 Mononoke，10-16 官方部落格補上歸因、原作者確認足夠。詳見 [[topics/coding-workflow-guide]]、[[topics/community-large-codebase-workflow]]。
 
@@ -56,8 +56,8 @@
    - 10-15 IPO 前最後一次揭露；AI 概念股同步下跌、紐約市主計官要求暫緩；10-16 Reuters 稱投資人轉趨保守
 2. **[[topics/anthropic-government-policy]] — FTC 從開啟調查進到取證，白宮擬加通報義務**
    - 10-15 正式發出傳票；10-10 Axios 稱白宮擬要求比照通報「非預期行為」事故；八條線中三條已改到你的 Claude
-3. **[[topics/ai-agent-safety]] — 桌面版同週兩起獨立揭露，攻擊面 11 列全數維持**
-   - 10-14 Noma Labs CVSS 8.7（Critical）、CSO Online 256KB 預覽窗格外洩，皆未見官方修補公告
+3. **[[topics/ai-agent-safety]] — 桌面版 SneakPeek 揭露公開（08-17 已修），攻擊面 11 列全數維持**
+   - 10-14 Noma Labs CVSS 8.7 與 CSO Online 256KB 預覽窗格外洩為同一漏洞，已於 08-17 修完（2026-10-18 查證）
 4. **[[topics/enterprise-cost-management]] — 企業端開始自己裝上限，數字一路往下**
    - 10-16 Accenture 把員工 Claude 月費上限設在每月 29 美元（此前有員工單月花到 1,000）；09-17 摩根大通設的是 2,000
 5. **[[topics/long-context-1m]] — 1M session 會靜默清除工具結果，無已知規避做法**
@@ -83,7 +83,7 @@
 |------|------|------|
 | 10-16 | **Code Review（GitHub App）轉正式發布**（官方同日補 6 頁文件）；Accenture 把員工 Claude 月費上限設在 29 美元；Scion 抄襲爭議官方補上歸因 | 🛠️ 功能；💼 商業 |
 | 10-15 | **Q3 營收 168 億美元、季增放緩至 46%**（IPO 前最後一次揭露，AI 股同步下跌、紐約市主計官要求暫緩）；**FTC 正式發出傳票**；期中選舉防護措施報告（政治中立性評測 99%）| 💼 商業；🏛️ 政策 |
-| 10-14 | 桌面版兩起獨立資安揭露（Noma Labs CVSS 8.7、CSO Online 256KB 外洩）；OpenTelemetry Tracing 進公開測試；官方定價範例改用 Opus 5.5 | 🛠️ 功能；⚠️ 安全 |
+| 10-14 | 桌面版 SneakPeek 漏洞揭露公開（CVSS 8.7，08-17 已修）；OpenTelemetry Tracing 進公開測試；官方定價範例改用 Opus 5.5 | 🛠️ 功能；⚠️ 安全 |
 | 10-13 | 官方兩份研究：小模型可能在 IoT 裝置自我複製、蒸餾防禦讓竊得量降 90–99%；內部每日合併從 2,500 衝到逾 3 萬次後重組基礎設施 | 🏛️ 政策；💻 開發實務 |
 | 10-12 | Phoronix 發現 Linus Torvalds 用 Claude Code 開發 kernel 分支；10-13 他把它整理成 patch 送上 LKML，cover letter 自承初稿由 Claude 產出 | 🌐 社群 |
 | 10-10 | 白宮擬要求比照通報「非預期行為」事故（Axios；起因為測試 agent 誤送費城警局假線報）；WSJ 稱 Tom Brown 牽線每月 12.5 億美元 SpaceX 運算交易 | 🏛️ 政策；💼 商業 |
@@ -142,5 +142,5 @@
 - HN 討論熱度：🔥🔥🔥🔥 高（Linus Torvalds 用 Claude Code 寫 kernel、Scion 抄襲爭議、Q3 營收放緩）
 - Reddit 情緒：😤 額度／成本焦慮持續，企業端開始自己裝月費上限；模型品質退化疑慮跨代際延燒
 - 開發者工具活躍度：📈 升溫（本輪策展新增 22 筆、移出 5 筆，目錄 164 列；記憶類工具仍無第三方使用回報）
-- 信任指標：↘ 走弱（桌面版同週兩起獨立資安揭露且無官方修補公告、1M 靜默清除工具結果無解法、提示注入已產業級）
+- 信任指標：↘ 走弱（桌面版漏洞雖已修但揭露前無官方公告、1M 靜默清除工具結果無解法、提示注入已產業級）
 - 競爭壓力：🟡 中（GPT-6.1 Sol 與 Sonnet 5.5 同價、中國陣營「免費夠用」、開源旗艦權重釋出）

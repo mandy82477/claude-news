@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-18
 **最後新聞更新：** 2026-10-17
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
@@ -240,7 +240,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-10-16
-- **具名企業退出事件（非本頁收錄範圍）**：Replit 執行長表示已不再與 Anthropic 合作，事件層詳見 [[topics/enterprise-tool-tracker]]（Google News/TechCrunch）
+- **具名企業退出事件（非本頁收錄範圍）**：Replit 執行長表示已不再與 Anthropic 合作，事件層詳見 [[topics/enterprise-tool-tracker]]（Google News/TechCrunch）。執行長稱 OpenAI 的 Sol／Astra 在從零建 app 上表現較好，但匿名知情人士否認合作已結束，狀態有爭議
 - **OpenAI**：官方部落格發布 Itaú（巴西零售銀行）導入案例，以對話介面 ia.i 與治理平台 IARA 推動全客群生成式 AI；廠商自宣客戶案例，具體規模與效益數字未見報導，不進「對手雷達」（Blog/OpenAI News）
 - **Microsoft／GitHub**：Copilot in Slack and Teams 新增多 repo 單一對話支援；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：官方公告 11-16 起全平台棄用部分 GitHub Copilot 模型，具體型號清單見官方 changelog；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）

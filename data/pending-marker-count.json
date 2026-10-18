@@ -1,7 +1,7 @@
 {
-  "count": 164,
-  "updated": "2026-10-17",
-  "note": "2026-10-17 weekly lint 5c 清零：77 筆逾期全數處置（查實 36／確認官方未載 27／依日報收斂 4／repo 授權不足 9／人物 4 筆 🔎），其中主編授權下共移除 11 筆標記、其餘改狀態符號或更新複查日；同輪 3g 回填 26 筆舊語法為新語法（盲區 42→16），故基線筆數整批位移",
+  "count": 165,
+  "updated": "2026-10-18",
+  "note": "W42 週度回顧：SneakPeek 已查證 08-17 修補，claude-code 2 筆、ai-agent-safety 2 筆 ❓ 結案",
   "fingerprints": [
     {
       "key": "entities/chris-olah::2026-10-09::woke、另一位共同創辦人",
@@ -18,14 +18,6 @@
     {
       "key": "entities/claude-code::2026-10-15::nested sessions、saved environments",
       "label": "entities/claude-code（標 2026-10-15｜查 nested sessions、saved environments）"
-    },
-    {
-      "key": "entities/claude-code::2026-10-15::noma labs、cvss 8.7",
-      "label": "entities/claude-code（標 2026-10-15｜查 Noma Labs、CVSS 8.7）"
-    },
-    {
-      "key": "entities/claude-code::2026-10-15::cso online、256kb",
-      "label": "entities/claude-code（標 2026-10-15｜查 CSO Online、256KB）"
     },
     {
       "key": "entities/claude-code::2026-10-01::claude.dev、developer hub",
@@ -206,14 +198,6 @@
     {
       "key": "topics/ai-agent-safety::2026-10-16::the register、http header、prompt injection",
       "label": "topics/ai-agent-safety（標 2026-10-16｜查 The Register、HTTP header、prompt injection）"
-    },
-    {
-      "key": "topics/ai-agent-safety::2026-10-14::noma labs、cvss 8.7",
-      "label": "topics/ai-agent-safety（標 2026-10-14｜查 Noma Labs、CVSS 8.7）"
-    },
-    {
-      "key": "topics/ai-agent-safety::2026-10-14::cso online、256kb",
-      "label": "topics/ai-agent-safety（標 2026-10-14｜查 CSO Online、256KB）"
     },
     {
       "key": "topics/ai-agent-safety::2026-10-14::the register、conjures threat",
@@ -442,6 +426,26 @@
     {
       "key": "topics/competitor-landscape::2026-08-13::grok、spacex",
       "label": "topics/competitor-landscape（標 2026-08-13｜查 Grok、SpaceX）"
+    },
+    {
+      "key": "topics/market-signals::2026-10-17::telegraph、1.5兆美元",
+      "label": "topics/market-signals（標 2026-10-17｜查 Telegraph、1.5兆美元）"
+    },
+    {
+      "key": "topics/market-signals::2026-10-17::comptroller、展開對話",
+      "label": "topics/market-signals（標 2026-10-17｜查 Comptroller、展開對話）"
+    },
+    {
+      "key": "topics/market-signals::2026-10-17::kbra、ebitda",
+      "label": "topics/market-signals（標 2026-10-17｜查 KBRA、EBITDA）"
+    },
+    {
+      "key": "topics/market-signals::2026-10-17::blackstone、殖利率",
+      "label": "topics/market-signals（標 2026-10-17｜查 Blackstone、殖利率）"
+    },
+    {
+      "key": "topics/market-signals::2026-10-17::replit、終止合作",
+      "label": "topics/market-signals（標 2026-10-17｜查 Replit、終止合作）"
     },
     {
       "key": "topics/market-signals::2026-10-16::accenture、支出上限",

@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-10-16"
-last_news_update: "2026-10-16"
+last_news_update: "2026-10-18"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -28,8 +28,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-16
-**最後新聞更新：** 2026-10-16
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
 > **最新成本案例**（2026-10-16）
 > Accenture 將員工可報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000——繼 JPMorgan（每月 $2,000 上限）後另一起頂尖企業設定個人支出天花板的具名案例（Startup Fortune／24/7 Wall St.／The Times of India）。
@@ -94,6 +94,24 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 | CLAUDE.md 精簡 | 縮短每次對話 token 基礎消耗；94% token 流向 Opus 的預設路由問題可用分層路由解決 | 通用 |
 | Session 分拆 | 避免單一長 session 耗盡配額，改用多個短 session | 通用 |
 | 本機圖索引取代重讀 codebase | Session 重啟費用 $6–10 多因每次重讀完整 codebase；改用本機圖資料庫索引可避免重複讀取 | 個人→中型 |
+
+### LLM code review 一次多少錢：官方給的是估法，不是單價
+
+官方 Code Review（Team／Enterprise 方案在 GitHub PR 上跑的審查服務）沒有固定單次價格，官方只給估算與封頂的方法（[官方費用頁](https://code.claude.com/docs/en/code-review-costs)，查證 2026-10-18）。
+
+- **怎麼收**：按 token 從組織的 usage credits 扣，與方案內含用量分開；帳算在組織，不算在開 PR 或要求審查的人頭上。
+- **雲端通路也一樣**：其他 Claude Code 功能走 Amazon Bedrock、Google Cloud Agent Platform 或 Microsoft Foundry 的組織，Code Review 費用照樣出現在 Anthropic 帳單。
+- **單次貴不貴看四件事**：審查等級（Quick 最快最便宜、Standard 為預設、Deep 最慢最貴）、變更大小、周邊程式碼複雜度、要驗證的候選問題數。
+- **審幾次看 repo 設定**：新加入的 repo 預設「After every push」，每次 push 都審，最貴；「Once after PR creation」只在開 PR、重開或標記 ready 時審一次；「Manual」只在有人留言 `@claude review` 時審。
+- **次數的例外**：在 Once 或 Manual 模式下留言 `@claude review always`，該 PR 之後每次 push 都會審並計費；草稿與 fork 來的 PR，自動審查一律跳過。
+- **官方估法四步**：先為試跑設月上限 → 挑幾個代表性 repo，Review runs 設 Once 或 Manual 試跑 → 到 Admin settings > Claude Code 的 Code review 區，看 Repositories 表的 Average cost 欄 → 平均單次成本乘以該 repo 每月 PR 數。
+- **After every push 要再乘一次**：上面的結果再乘每個 PR 平均 push 數；官方提醒平均單次成本會隨 PR 大小與審查等級浮動。
+- **封頂**：在 claude.ai/admin-settings/usage 可設 Code Review 專屬月上限，全組織適用；它、組織總上限、usage credits 餘額任一用完，或剩下的不夠一次審查的預估成本，就跳過審查並在 PR 留言說明原因。
+- **看支出**：claude.ai/analytics/code-review 有本月支出與各 repo 估算成本；官方註明儀表板按牌價估、未扣折扣，以帳單為準。
+- **不想付這筆**：在自己的 Claude Code session 跑本機 `/code-review`，任何方案都能用（[官方 Code Review 總覽頁](https://code.claude.com/docs/en/code-review)「Compare ways to get a review」表）。
+- **媒體說的 GA 附 $50,000 點數方案**：官方費用頁與總覽頁都沒寫，現況見 [[entities/pricing#還沒確定的計費變動]]。
+
+上限沒先設會怎樣，可對照下方「企業案例」的 Accenture：員工單月花到 $1,000 後，公司才把可報銷上限定在每月 $29。
 
 ---
 

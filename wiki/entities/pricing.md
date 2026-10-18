@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-18
 **最後新聞更新：** 2026-10-17
 
 > **最新計費政策異動**（2026-10-17）
@@ -164,6 +164,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 09-13／09-17 到期時分（23:59 PT） | 多家媒體轉述一致，官方說明中心原文未取得 | 無時點 |
 | Haiku 5.5 精確 $/Mtok 牌價 | ✅ 已查證（2026-10-11 官方定價頁）：輸入／輸出 $0.10／$0.50（prompt ≤100K）、$0.50／$2.50（>100K），快取讀取 $0.01／$0.05；「降 75%」是官方平均值 | — |
 | Claude Code Code Review GA 附帶 $50,000 美元點數方案 | 媒體稱 Code Review 2026-10-15 轉 GA 附帶 $50,000 點數方案；2026-10-16 查證官方 code-review／code-review-costs 頁僅載計費機制，均未提及此點數方案 | 官方點數方案細節公告 |
+
+**Code Review 實際怎麼計費**：官方費用頁只給估算與封頂方法、沒有單次價格，整理見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 
 **Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得（**2026-10-11 已由編輯部查證收斂：兩數字分屬不同方案層級，見上表**）。**（2026-10-10 補充）** 官方 Plans & Pricing 頁改版偵測到新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文），數字落在 XenoSpectrum 一端，惟完整段落、適用方案層級與是否已暫停均未查證，見下方 10-10 條目。
 

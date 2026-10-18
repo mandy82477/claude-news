@@ -5,7 +5,7 @@ type: "product（第三方工具）"
 status: "active（信用池計費，不含訂閱）"
 domain: "💼 商業"
 last_updated: "2026-10-15"
-last_news_update: "2026-10-15"
+last_news_update: "2026-10-18"
 status_main: "active"
 days_since_news: 2
 parent: null
@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（信用池計費，不含訂閱）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-18
+**最後新聞更新：** 2026-10-18
 
 > **疑似新政策動態**（2026-10-15）
 > BigGo Finance／36 Kr 兩則標題稱官方進一步開放第三方工具存取或解除第三方 App 禁令，是否屬實、是否與既有 2026-05-14 政策（允許但走信用池計費）同一事，官方原文目前查無，尚無法確認。
@@ -69,7 +69,7 @@ OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude
 
 ### 2026-10-15：兩則標題稱官方進一步鬆綁第三方工具政策（未經官方查證）
 
-❓ **待查證**（標 2026-10-15｜查 Third-Party Access、Third-Party App Ban｜複 2026-10-29）｜**Claude 是否已進一步鬆綁第三方工具政策**：BigGo Finance「Anthropic Opens Third-Party Access, Expanding the Claude Subscription Ecosystem」與 36 Kr「Claude Fully Lifts Third-Party App Ban Immediately」兩則標題稱官方進一步開放或解除第三方工具限制，與本頁已載 2026-05-14 恢復允許（仍走信用池計費）是否為同一政策或新一輪鬆綁，官方原文未見，僅標題可用。次級部落格報導（未經官方一手文件核實）稱官方支援頁約 10/7 曾更新，讓用 Claude Agent SDK 開發的第三方工具可動用訂閱方案額度，兩則今日標題疑為對該次異動的延遲報導而非今日新異動，仍待官方原文確認。
+❓ **待查證**（標 2026-10-15｜查 Third-Party Access、Third-Party App Ban、11145838｜複 2026-10-29）｜**Claude 是否已進一步鬆綁第三方工具政策**：BigGo Finance「Anthropic Opens Third-Party Access, Expanding the Claude Subscription Ecosystem」與 36 Kr「Claude Fully Lifts Third-Party App Ban Immediately」兩則標題稱官方進一步開放或解除第三方工具限制，與本頁已載 2026-05-14 恢復允許（仍走信用池計費）是否為同一政策或新一輪鬆綁，官方原文未見，僅標題可用。次級部落格報導（未經官方一手文件核實）稱官方支援頁約 10/7 曾更新，讓用 Claude Agent SDK 開發的第三方工具可動用訂閱方案額度，兩則今日標題疑為對該次異動的延遲報導而非今日新異動，仍待官方原文確認。2026-10-18 查官方 Pro／Max 用 Claude Code 說明頁（support.claude.com/en/articles/11145838）未載 Agent SDK 或第三方工具可用訂閱額度，媒體所稱「支援頁已更新」出處未明。
 
 ### 2026-08-10：使用者操作的 OpenClaw agent 利用健身房 API 授權漏洞取消他人預約
 
