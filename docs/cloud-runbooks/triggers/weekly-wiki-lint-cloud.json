@@ -1,5 +1,5 @@
 {
-  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。⚠️ 2026-10-10 lint 7b-Q6 核對發現本檔 id 與雲端實況不符（舊 id 已不存在），已依 list_triggers 更新。最後同步：2026-10-10｜前次：2026-08-29",
+  "_mirror_note": "claude.ai trigger 定義鏡像備份，非執行檔。改雲端後同步更新本檔（見 ../README.md）。⚠️ 2026-10-10 lint 7b-Q6 核對發現本檔 id 與雲端實況不符（舊 id 已不存在），已依 list_triggers 更新。最後同步：2026-10-18（sources 加 anthropics/claude-code sparse CHANGELOG.md，供 5m／5n 讀 issue 與 CHANGELOG；⚠️ RemoteTrigger update 的 job_config.ccr 是整塊覆寫，漏帶 events 會把 prompt 洗空，10-18 踩過一次）｜前次：2026-10-10",
   "id": "trig_01RphSQ52ZSpWgNsqDHNGmFr",
   "name": "weekly-wiki-lint-cloud",
   "cron_expression": "0 3 * * 6",
@@ -33,6 +33,14 @@
           {
             "git_repository": {
               "url": "https://github.com/mandy82477/claude-news"
+            }
+          },
+          {
+            "git_repository": {
+              "url": "https://github.com/anthropics/claude-code",
+              "sparse_checkout_paths": [
+                "CHANGELOG.md"
+              ]
             }
           }
         ]

@@ -74,3 +74,7 @@
 - **入口層月份分組**：先 grep 日期錨點入邊，有就同批改連結，不以「可能破壞錨點」擱置。
 - **log 待裁示區**只收權限／環境設定與無預設值的純取捨。
 - 社群線（主線 tag 分母、趨勢 >12 節點）與投資線（例題前提被推翻）各補一句預設值，見 `docs/rules-changelog/reporter-community.md`、`docs/rules-changelog/reporter-market.md` 同日段。
+
+## 2026-10-18（雲端 5m／5n 的 repo 讀取權限：加 source、指令改 REST）
+
+10-03、10-17 兩輪雲端 lint 的 5m／5n 都寫「repo 授權不足，跳過」。探針（`docs/cloud-runbooks/probe-github-access-2026-10-18.md`）證實：雲端 session 讀得到哪些 repo 由 routine 的 `sources` 決定，加 `anthropics/claude-code`（sparse checkout CHANGELOG.md）後 GitHub MCP 與 `gh api` 皆可讀；真正擋的是 `gh issue view` 走 GraphQL，雲端環境一律 403，與授權無關；`gh auth status` 報 GH_TOKEN 失效是誤報。處置：`weekly-wiki-lint-cloud` 加第二個 source（鏡像 JSON 同步）；`.claude/skills/wiki-lint-sweeps/references/sweeps.md` 5m／5n 與 `.claude/reporter-rules/features/pages.md` 的指令全改 REST（`gh api repos/.../issues/<n>`、`/comments --paginate`），CHANGELOG 雲端直接讀 sparse clone；egress 節的「repo 授權不足」改為「sources 被改掉」的診斷分支，措辭保留給 registry 配對。另一教訓：`RemoteTrigger update` 的 `job_config.ccr` 是整塊覆寫，漏帶 `events` 會把 prompt 洗空，當場從鏡像 JSON 補回。

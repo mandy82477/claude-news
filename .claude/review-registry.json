@@ -12,9 +12,10 @@
     ],
     "pattern": "CLAUDE\\.md",
     "exempt_files": [
-      ".claude/rules/claude-md-edit.md"
+      ".claude/rules/claude-md-edit.md",
+      "docs/cloud-runbooks/probe-github-access-2026-10-18.md"
     ],
-    "_exempt_files_note": "claude-md-edit.md 全篇在示範/講解裸露 CLAUDE.md 規則本身，不適用此檢查。",
+    "_exempt_files_note": "claude-md-edit.md 全篇在示範/講解裸露 CLAUDE.md 規則本身，不適用此檢查。 probe-github-access-2026-10-18.md 是雲端探針逐字輸出（ls 列出的檔名、clone 目錄描述），不是規則檔引用，整檔豁免（2026-10-18）。",
     "line_allowlist": [
       {
         "file": ".claude/commands/review-commands.md",
@@ -83,7 +84,8 @@
       "^CLAUDE_NEWS/CLAUDE\\.md$",
       "^CLAUDE_NEWS/\\.claude/rules/claude-md-edit\\.md$",
       "^CLAUDE_NEWS/news/YYYY-MM-DD\\.md$",
-      "^\\.claude/reporter-rules/wiki-ingest\\.md$"
+      "^\\.claude/reporter-rules/wiki-ingest\\.md$",
+      "^raw\\.githubusercontent\\.com/anthropics/claude-code/main/CHANGELOG\\.md$"
     ],
     "_allowlist_note": "以上為 placeholder 或執行期才產生的產物檔，不強制存在。",
     "bare_name_search_dirs": {
@@ -101,7 +103,8 @@
       ]
     },
     "_allowlist_note_cloud_paths": "2026-09-12：`CLAUDE_NEWS/…` 前綴的兩筆是 docs/cloud-runbooks/probe-custom-subagent-2026-09-12.md 逐字引述雲端 session 看到的路徑（雲端從 repo 根啟動，本檢查則以 CLAUDE_NEWS 為根），不是本庫的路徑引用。刻意寫成完整字串而非 `^CLAUDE_NEWS/` 前綴通配，避免掩蓋別處真的打錯的路徑。",
-    "_allowlist_note_probe": "2026-09-13：probe-custom-subagent-2026-09-12.md 逐字引述 2026-09-12 雲端 session 看到的角色檔內容（當時仍指 reporter-rules/wiki-ingest.md，該檔已於 2026-09-13 拆成 skills/wiki-ingest/references/classification.md 與各記者資料夾）；歷史逐字紀錄不改寫。"
+    "_allowlist_note_probe": "2026-09-13：probe-custom-subagent-2026-09-12.md 逐字引述 2026-09-12 雲端 session 看到的角色檔內容（當時仍指 reporter-rules/wiki-ingest.md，該檔已於 2026-09-13 拆成 skills/wiki-ingest/references/classification.md 與各記者資料夾）；歷史逐字紀錄不改寫。",
+    "_allowlist_note_probe_github": "2026-10-18：probe-github-access-2026-10-18.md 結論節逐字引述 curl 目標 URL（去掉 https:// 的主機路徑），不是本庫路徑。"
   },
   "anchors": [
     {

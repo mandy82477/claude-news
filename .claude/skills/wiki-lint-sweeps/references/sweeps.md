@@ -20,7 +20,7 @@
 
 待辦一律進 log 的待使用者確認區；該步回報那一行寫「雲端 egress 未開，跳過」。
 
-**探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。實際呼叫時 GitHub MCP 回 `repository not configured for this session`，或 `gh auth status` 報 token 失效 → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，待辦寫「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
+**探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。雲端 session 讀得到哪些 repo 由 routine 定義的 `sources` 決定——`weekly-wiki-lint-cloud` 自 2026-10-18 起已把 `anthropics/claude-code`（sparse checkout `CHANGELOG.md`）列為第二個 source，GitHub MCP 與 `gh api`（REST）皆可讀；`gh auth status` 報 GH_TOKEN 失效屬誤報，不以它判定。若 GitHub MCP 仍回 `repository not configured for this session`，代表 routine 的 `sources` 被改掉了，先對照 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json` 修 routine → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，待辦寫「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
 
 **5h 不受此限、不需探測**：催化劑那一半純查本庫日報；股價那一半用 **WebSearch**，由 Anthropic 端執行、不經沙盒 egress（`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空，恆印 `EGRESS: market OK`）。唯一例外是該環境根本沒有 WebSearch 工具可用——此時才寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」並列入待使用者確認區；日後若本步改用 WebFetch 直抓行情站，須同步把那些網域填進 market 組並改回探測式。
 
@@ -285,9 +285,9 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 ## 5m. code-quality-decline 三條線 issue 狀態複查（主編親做）
 
-「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者的日常派工不查外部來源。逐一跑（`gh issue view` 一次只吃一個 issue；本 repo 的 remote 是 `mandy82477/claude-news`，不加 `-R` 會查到錯的 repo）：
+「三條線現在到哪」的「現在還在嗎」欄吃 GitHub issue 狀態，不在日報來源清單內，記者的日常派工不查外部來源。逐一跑（走 REST 的 `gh api`，不用 `gh issue view`——後者走 GraphQL，雲端 session 一律回 403；路徑要寫全名 `anthropics/claude-code`，本 repo 的 remote 是 `mandy82477/claude-news`）：
 
-    for n in 41930 65687 77136 83510; do gh issue view $n -R anthropics/claude-code --json number,state,updatedAt; done
+    for n in 41930 65687 77136 83510; do gh api repos/anthropics/claude-code/issues/$n --jq '{number,state,updated_at,closed_at}'; done
 
 與表上三列比對，不一致即改寫該格並更新表上方「資料截至」；任一列由「還在」翻「已結案」時，同批改寫 `## 摘要` 第一段並回報 index 鉤子。
 
@@ -306,10 +306,12 @@ code-quality-decline 三條線（5m）：N 列比對／M 列已改／資料截�
 
 1. 表上每個 issue 號只取狀態與官方回覆，不要把整包留言倒進來（#6235 有 405 則）：
    ```
-   gh issue view <號> -R anthropics/claude-code --json state,stateReason,closedAt,comments \
-     -q '{state,stateReason,closedAt,official:[.comments[]|select(.authorAssociation=="COLLABORATOR" or .authorAssociation=="MEMBER")|{login:.author.login,body:.body[0:400]}]}'
+   gh api repos/anthropics/claude-code/issues/<號> --jq '{state,state_reason,closed_at}'
+   gh api repos/anthropics/claude-code/issues/<號>/comments --paginate \
+     --jq '.[]|select(.author_association=="COLLABORATOR" or .author_association=="MEMBER")|{login:.user.login,body:.body[0:400]}'
    ```
-2. 抓 CHANGELOG 全文再本機 grep 該列關鍵詞：`gh api repos/anthropics/claude-code/contents/CHANGELOG.md -H "Accept: application/vnd.github.raw"`。
+   走 REST（`gh api`），不用 `gh issue view`——後者走 GraphQL，雲端 session 一律回 403（2026-10-18 探針 `docs/cloud-runbooks/probe-github-access-2026-10-18.md`）。
+2. 抓 CHANGELOG 全文再本機 grep 該列關鍵詞：`gh api repos/anthropics/claude-code/contents/CHANGELOG.md -H "Accept: application/vnd.github.raw"`；雲端 session 旁邊已有 sparse clone，`cat ../claude-code/CHANGELOG.md` 更省（不存在才走 `gh api`）。
 3. 官方文件站有對應頁者一併看（code.claude.com／platform.claude.com；否定證明查 `code.claude.com/docs/llms.txt` 的文件索引）。
 4. 核完更新該列「核對日」；核對日逾 30 天的列列進 lint 回報。
 

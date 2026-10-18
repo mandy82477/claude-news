@@ -181,10 +181,12 @@ Anthropic 對全產品（含 Claude Code）的帳號、年齡、身分驗證政�
 
 1. 表上每個 issue 號只取狀態與官方回覆，不要把整包留言倒進來（#6235 有 405 則）：
    ```
-   gh issue view <號> -R anthropics/claude-code --json state,stateReason,closedAt,comments \
-     -q '{state,stateReason,closedAt,official:[.comments[]|select(.authorAssociation=="COLLABORATOR" or .authorAssociation=="MEMBER")|{login:.author.login,body:.body[0:400]}]}'
+   gh api repos/anthropics/claude-code/issues/<號> --jq '{state,state_reason,closed_at}'
+   gh api repos/anthropics/claude-code/issues/<號>/comments --paginate \
+     --jq '.[]|select(.author_association=="COLLABORATOR" or .author_association=="MEMBER")|{login:.user.login,body:.body[0:400]}'
    ```
-2. 抓 CHANGELOG 全文再本機 grep 該列關鍵詞：`gh api repos/anthropics/claude-code/contents/CHANGELOG.md -H "Accept: application/vnd.github.raw"`。
+   走 REST（`gh api`），不用 `gh issue view`——後者走 GraphQL，雲端 session 一律回 403（2026-10-18 探針 `docs/cloud-runbooks/probe-github-access-2026-10-18.md`）。
+2. 抓 CHANGELOG 全文再本機 grep 該列關鍵詞：`gh api repos/anthropics/claude-code/contents/CHANGELOG.md -H "Accept: application/vnd.github.raw"`；雲端 session 旁邊已有 sparse clone，`cat ../claude-code/CHANGELOG.md` 更省（不存在才走 `gh api`）。
 3. 官方文件站有對應頁者一併看（code.claude.com／platform.claude.com；否定證明查 `code.claude.com/docs/llms.txt` 的文件索引）。
 4. 核完更新該列「核對日」；核對日逾 30 天的列列進 lint 回報。
 
