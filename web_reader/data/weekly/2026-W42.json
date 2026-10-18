@@ -1,0 +1,141 @@
+{
+  "id": "2026-W42",
+  "pageType": "weekly",
+  "name": "CLAUDE NEWS 週報 · 2026-W42",
+  "preview": "這週三份報導把 Claude Code 桌面版的預覽窗格漏洞寫成「官方還沒修」：10-14 先傳出 CVSS 8.7 分，10-15 資安公司 Noma Labs 公開攻擊鏈，10-17 研究者把它命名為 SneakPeek。手法是在公開 repo 放一份灌到 256KB 以上、偽裝成測試覆蓋率報告的 HTML；你請 ",
+  "markdown": "# CLAUDE NEWS 週報 · 2026-W42\n\n## 一、頭條敘事：SneakPeek 漏洞八月就修好了，桌面版有自動更新的人不用慌\n\n這週三份報導把 Claude Code 桌面版的預覽窗格漏洞寫成「官方還沒修」：10-14 先傳出 CVSS 8.7 分，10-15 資安公司 Noma Labs 公開攻擊鏈，10-17 研究者把它命名為 SneakPeek。手法是在公開 repo 放一份灌到 256KB 以上、偽裝成測試覆蓋率報告的 HTML；你請 Claude 看這個檔，預覽窗格就會執行裡面的 JavaScript，讀走 SSH 金鑰、雲端憑證和 GitHub token 再送出去。\n\n但 Noma 自己的原文寫得很清楚：7 月 4 日回報給 Anthropic，7 月 24 日第一次修補當天就被繞過，8 月 17 日在 Claude Desktop 1.30096.1 修完並經自動更新推送，Noma 複測後確認結案（[Noma Labs](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)）。這週是負責任揭露的公開日，不是新的零時差漏洞。同週 CSO Online 報的「256KB 讓機密外洩到預覽窗格」講的是同一個洞，不是第二起。\n\n要不要動：桌面版開著自動更新的，8 月中以後就安全，不用做事。如果你的桌面版很久沒更新，又在 8 月前請 Claude 預覽過陌生 repo 的 HTML 報告，先更新，再把那台機器上的 SSH 金鑰與雲端憑證換一輪（本刊推論）。CVE 與官方安全公告還沒發，發了會在下週追蹤。\n\n---\n\n## 二、技術討論與深挖\n\n### 本週官方出了什麼\n\n- **Code Review 轉正式版**（10-15，Team、Enterprise）：Claude 在 GitHub PR 上逐行留審查意見，按 token 從組織的 usage credits 扣。怎麼估費用、怎麼設上限見開發實務專文。\n- **閒置自動壓縮**（2.1.299）：20 萬 token 以上的對話閒置約 54 分鐘，會在一小時的 prompt cache 過期前先壓縮，回來不必整串重算。不想要就在 settings.json 設 `\"idleCompaction\": false`，或在 `/config` 關。\n- **fork subagent 預設打開**（2.1.302）：`claude -p`、Agent SDK、桌面版和 VS Code 改成跟終端機一樣預設可用，要關設 `CLAUDE_CODE_FORK_SUBAGENT=0`。跑腳本或 CI 的人升版後先重跑一次。\n- **美國使用者問投票資訊會拿到官方資料**（10 月下旬起）：問投票地點或要帶什麼證件，Claude 會依州別給官方資訊（[官方報告](https://www.anthropic.com/news/2026-us-midterms)）。不用動。\n\n升版：本週四個版本（2.1.299–302），最新 2.1.302，可升；升之前看一眼上面 fork subagent 的預設改變。穩定版已推進到 2.1.292，含 2.1.288 那刀 `rm` 繞過修正，穩定版使用者照常更新即可（[官方 CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，10-18 取得）。\n\n### 討論綜述\n\n- **Linus Torvalds 用 Claude Code 寫 kernel patch**：他把修頁快取效能瓶頸的分支整理成 patch 貼上核心信件列表，cover letter 寫明程式碼、測試、審查與說明的初稿都是 Claude Code 在他指示下做的，效能是他自己的機器量的（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)）。值得看的是他怎麼交代分工，不是那句「AI 寫的」。\n- **「哪個 agent 在等我」一週冒出六個小工具**：把多個 Claude Code、Codex、Cursor session 的狀態收進選單列或小視窗，例如 Muster 按 ⌥Tab 先列出等你回應的 agent（[Muster](https://github.com/josefchen/muster)）。痛點是真的，還看不出誰會留下。**該不該擋**：同時開很多 session 的人可以試，別急著綁定。\n- **MCP 代理號稱省 85–99% token，實測不一定**：有人在 Claude Code 裡跑了六個，四個比不用還耗、兩個跑不完；廣告的前提是工具定義一開始全部載入，而 Claude Code 本來就不這樣做（[基準頁](https://rabin-a.github.io/mcp-router/#benchmark)）。作者自己也賣路由器，數字要打折。**直接做**：在用的先量自己有沒有真的省到。\n- **Console 儲值把小數點吃掉**：有人因地區的小數點習慣不同，輸入「5.04」想儲 5.04 美元，結果被刷 504 美元，付款前沒有確認畫面（[Hacker News](https://news.ycombinator.com/item?id=50121562)，87 分，10-17 快照）。**直接做**：儲值前看清楚金額再送出。\n\n### 深挖：本期兩篇記者專文\n\n開發實務講 Code Review 轉正式版之後一次要花多少、本機端這週又改了什麼；財經講營收還在漲，上市估值卻先被往下談。\n\n#### 開發實務｜Code Review 轉正式版：沒有固定單價，但官方教你怎麼估\n\n**這週哪裡不一樣？** 10-15 Code Review 轉為正式發布，官方文件新增六頁，其中一頁專談用量與費用。媒體說附帶五萬美元點數方案，官方這幾頁查不到，先別拿它當預算依據。[文件索引](https://code.claude.com/docs/llms.txt)\n\n**審一次要多少錢？** 官方沒有固定單價：按 token 從組織的 usage credits 扣，只開放 Team 與 Enterprise。費用隨審查等級（Quick、Standard、Deep）、變更大小與要驗證的問題數變動。新加入的 repo 預設每次 push 都審，最貴；可改成開 PR 時審一次，或只在留言 `@claude review` 時審。官方建議先挑幾個 repo 試跑，在管理後台看每個 repo 的平均成本，乘上每月 PR 數，再設 Code Review 專屬月上限，額度不夠時會自動略過並在 PR 上留言。不想付這筆，`/code-review` 在任何方案的本機 session 都能跑。[用量與費用](https://code.claude.com/docs/en/code-review-costs)\n\n**Anthropic 自己怎麼審？** Claude Code 團隊說，這個產品約九成程式碼由 Claude 寫成。他們的目標是在 revert 與事故不增加的前提下，把人工審查時間壓到最低。文章沒公布單位成本（本刊推論：帳單之外，人時才是他們主要在算的成本）。[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)\n\n**本機端有跟著省嗎？** 2.1.299 加了閒置壓縮：超過 20 萬 token 的對話閒置約 54 分鐘，會在一小時 prompt cache 過期前先壓縮。想關掉，用 `/config` 或在 settings.json 設 `\"idleCompaction\": false`。[v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)\n\n**升版要留意什麼？** 2.1.302 起，`claude -p`、Agent SDK、桌面版與 VS Code 的 fork subagent 預設開啟，`CLAUDE_CODE_FORK_SUBAGENT=0` 可關。跑腳本或 CI 的人，升版後先重跑一次。[v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)\n\n#### 財經｜營收還在漲，但上市估值先被往下談了 5,000 億美元\n\n**這週生意上最大的事是什麼？** Anthropic 在週三投資人日公布第三季營收 168 億美元，比上季成長約 46%。市場在意的是成長斜率：上季成長超過一倍，這季不到一半。Reuters 引述與會者說，部分投資人把 11 月上市的估值，從原先預期的 2 兆美元討論到約 1.5 兆美元。這是投資人討論中的數字，不是定價。[Telegraph](https://www.telegraph.co.uk/business/2026/10/16/anthropic-valuation-ipo-ai-stock-listing/)\n\n**成長放緩時，財務結構撐得住嗎？** 信用面也不輕鬆。FT 披露 Anthropic 6 月被 KBRA 評為垃圾級中最高的一級；提供給評等機構的資料不含自由現金流與 EBITDA，分析師只能自行假設推算。FT 另報導，Anthropic 在新一輪晶片融資中向 Blackstone 提供兩位數殖利率。靠高利率借錢買算力，營收一放緩，利息壓力最先浮現（本刊推論）。[FT](https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d)\n\n**客戶端有跟著縮手嗎？** 有零星跡象，但不能放大解讀。Accenture 把員工的 Claude 公司補助上限訂在每月 29 美元，此前有人單月花到 1,000 美元。這是控管用量，不是退出合約，與上期談的員工工具減用同一類。Replit 執行長則說不再與 Anthropic 合作，原因與範圍目前不明。[24/7 Wall St.](https://news.google.com/rss/articles/CBMinwFBVV95cUxPdWQtN1NiZVg3ZklkS0xpX3pfczltelh5aE80c1RTT3BBbnBUR3luRF91eVJIYndWbVhYbTNvYV9aRmlQVzZDYkxzb1VnTG53OWZYRmpNbnVaX3Vqa2xEWnpfMzJiOUxMQ1ZyQnFkbGFWN1c1YTFPclVVcEZRRGpnQTMyeGprT1Bnbk0yYWFENVhHSHJtUHh5VlpOSkk5bzQ?oc=5)\n\n**官方價格頁動了什麼？** 定價頁的一小時寫碼試算從 Opus 5 換成 Opus 5.5：每百萬 token 輸入從 5 美元變 4 美元，輸出從 25 美元變 20 美元，快取讀取從輸入價的 0.1 倍降到 0.05 倍，整段試算從 0.525 美元降到 0.428 美元。同週方案頁把 Team 年繳加上最低 20 席。大量跑 agent 的人帳單會變輕，五人小團隊年繳則要重算。[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)\n\n**我該做什麼？** 自己付訂閱或 API 的，這週不用動。公司在用 Code Review 的，先照開發實務專文設好月上限；Accenture 的例子提醒，按量計費最怕的是沒人盯。[官方費用說明](https://code.claude.com/docs/en/code-review-costs)\n\n### 本週要動的事\n\n- **桌面版很久沒更新的人**：更新到 1.30096.1 以上；8 月前預覽過陌生 repo 的 HTML 報告，順手換一輪 SSH 金鑰與雲端憑證（見頭條）\n- **Team、Enterprise 管理員**：開 Code Review 前，把新 repo 的審查時機從每次 push 改掉、設好月上限（見開發實務專文）\n- **跑腳本或 CI 的人**：升到 2.1.302 後先重跑一次，fork subagent 不要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`（見本週官方出了什麼）\n- **用 Console 儲值 API 額度的人**：送出前核對金額，小數點可能被吃掉（見討論綜述）\n\n---\n\n## 三、下週看什麼\n\n下週值得留意的 9 件事：5 件新的，4 件從上週延續（cache_creation 多算、Cowork 本機 VM、Startups 優惠、Haiku 當 subagent）。另有 6 件本週結案。\n\n### 下週值得關注：新開 5 條\n\n上期 4 條續盯、6 條結案，額度 5 條。這 5 件三件等官方公告或說法，兩件看實際回報。\n\n| 類型 | 預告 | 判準 |\n|------|------|------|\n| **修復追蹤型** | **SneakPeek 的 CVE 與官方安全公告什麼時候出**：Noma 說修補 8 月已推送，CVE 與 GitHub 安全公告待發 | 若 CVE 或官方安全公告發布 → 寫入升版說明並結案；若兩週無事 → 維持「確認桌面版有自動更新」 |\n| **官宣待發型** | **上市定價區間會不會公布**：投資人日後估值傳從 2 兆美元談到約 1.5 兆，原訂 11 月上市 | 若公布定價區間 → 以官方區間取代傳聞估值；若兩週無公布 → 估值仍視為投資人傳聞 |\n| **官宣待發型** | **Code Review 的五萬美元點數是不是真的**：媒體報導正式版附帶點數方案，官方文件查不到 | 若官方公布點數對象與期限 → 寫入試用建議；若兩週無官方說法 → 降為單一媒體說法 |\n| **趨勢確認型** | **「哪個 agent 在等我」會不會有官方解**：本週至少六個第三方小工具在做同一件事 | 若官方推出跨 session 的等待提醒 → 改建議用內建；若兩週只多出第三方工具 → 本題退場 |\n| **趨勢確認型** | **閒置自動壓縮會不會惹事**：2.1.299 起 20 萬 token 以上的對話閒置約 54 分鐘就自動壓縮 | 若出現誤壓縮或丟失脈絡的回報 → 寫進關閉方法；若兩週無回報 → 本題退場 |\n\n### 上週的線怎麼了（2026-W41）\n\n上週列的 10 件：4 件還要看，6 件結案（2 件有結論、4 件盯滿兩週放下）；上週判斷錯的 0 件。\n\n| 上週預告 | 判準 | 本週結果 |\n|---|---|---|\n| **cache_creation 多算 2 萬 token 有沒有人回**：#46917 對照組明確、42 則留言、官方未回 | 若官方回覆或修復 → 寫入升版提醒；若關閉為設計行為 → 改寫成計費說明；若兩週無事 → 維持「先對版本號」 | ⏳ **還要盯** → 續盯至 W43。issue 還開著，官方仍未回 |\n| **Cowork 本機 VM 會不會被清掉**：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端 | 若 Desktop 釋出移除或清理本機 VM 的版本 → 結案並寫入操作建議；若官方說要手動刪 → 改寫成步驟；若兩週無事 → 維持「關掉 Cowork」 | ⏳ **還要盯** → 續盯至 W43。#22543 仍開著，本週只有其他 Cowork 錯誤回報 |\n| **Claude Startups 優惠暫停後的新條件**：10-10 傳暫停免費 Team 試用與 1,000 美元額度，官方方案頁同日改版但沒寫生效時間 | 若官方公布新條件或恢復日期 → 更新方案說明；若官方確認取消 → 記為已下架；若兩週無事 → 維持「以方案頁現況為準」 | ⏳ **還要盯** → 續盯至 W43。本週沒有新條件 |\n| **Haiku 5.5 當 subagent 的實測會不會出現**：本週只有官方建議與一份單人拆帳 | 若出現附重工率或成本對照的實測 → 更新換不換的建議；若只有體感貼文 → 維持「先換唯讀的」；若兩週無新貼文 → 本題退場 | ⏳ **還要盯** → 續盯至 W43。本週沒有附數字的實測 |\n| **「同時指揮 1,000 個 agent」是不是正式功能**：The Decoder 10-09 報導，同日 build 出現 workflow 相關旗標，官方沒說 | 若官方文件或版本說明寫出上限與開放範圍 → 寫入並結案；若官方說仍在內部測試 → 記為未開放；若兩週無事 → 降為單一媒體轉述 | ✅ **結案，是正式功能**：官方文件寫明每次執行最多 1,000 個 agent，所有付費方案可用，Pro 要在 `/config` 打開 |\n| **穩定版什麼時候追上**：權限防護修正在 2.1.287–289，穩定版還停在 2.1.285 | 若 10-11 前穩定版升到 2.1.288 以上 → 改建議穩定版使用者照常更新；若仍停在 2.1.285 → 維持切 latest 建議；若兩週無事 → 結案 | ✅ **結案**：穩定版已升到 2.1.292，含 `rm` 繞過修正，穩定版使用者照常更新即可 |\n| **長對話靜默清除有沒有人回**：#42542 開了半年、無官方回覆 | 若官方回覆或 CHANGELOG 提及 → 補上能不能單獨關；若關閉為設計行為 → 改寫成門檻說明；若兩週無事 → 維持存檔做法 | ❌ **不用再盯了**：盯滿兩週官方仍未回，維持存檔做法 |\n| **MCP Python SDK 帳號劫持漏洞**：Cycode 09-28 揭露，受影響與修補版本都未公開 | 若官方或 Cycode 公布修補版本號 → 寫入升版提醒並結案；若兩週仍無細節 → 降為未經證實的單一來源 | ❌ **不用再盯了**：兩週仍無修補版本，降為未證實的單一來源 |\n| **公開版招股書會不會遞交**：本週只有外流版，數字來自轉述 | 若公開版遞交且營收、虧損與外流版吻合 → 外流數字可視為可靠；若數字不同 → 以公開版為準；若兩週無事 → 仍視為轉述 | ❌ **不用再盯了**：公開版仍未遞交，外流數字仍是轉述；定價區間另立新條 |\n| **降智指控會不會附上資料**：本週兩篇都只有感想，沒有版本前後對照 | 若出現附對照資料的量測 → 核對方法並更新；若仍只有感想 → 維持「先看自己的 effort」；若兩週無新貼文 → 本題退場 | ❌ **不用再盯了**：Livenerf 追蹤到第 20 天仍無前後對照資料，維持「先看自己的 effort」 |\n\n---\n\n## 四、本週數字\n\n- **$2／$10**——Google 10-13 全面開放的 Gemini 4 Argon 每百萬 token 輸入／輸出價格（[Google DeepMind](https://deepmind.google/blog/introducing-gemini-4-argon/)），和 Sonnet 5.5 的牌價一樣；拿它跟 Claude 比，比的是同一價位的能力。\n- **90–99%**——Anthropic 說新防禦讓蒸餾者從 Claude 竊得的資料量減少的幅度（[官方研究](https://www.anthropic.com/research/distillation-defenses)，10-13）；是官方自評，沒有第三方量測。\n- **5.75%**——Anthropic 抽樣 9 月 21–27 日 25 萬則對話，政治相關對話的占比；跟選舉投票直接相關的只有 0.51%（[官方報告](https://www.anthropic.com/news/2026-us-midterms)，10-15）。\n\n---\n\n**素材涵蓋窗**：本期取材自 2026-10-11 ~ 2026-10-17 的每日新聞，以及 10-18 對 Noma Labs SneakPeek 原文、Code Review 官方文件（總覽與用量費用兩頁）、dynamic workflows 官方文件、官方 CHANGELOG、npm 版本標籤與 GitHub issue 狀態的外部查證。社群線本週交了一篇（Scion 出處爭議、Anthropic 的審查框架、agent 狀態小工具、MCP 代理實測），與開發實務專文的審查段重疊，要點併進討論綜述。讀者記下的興趣題中，「LLM code review 的單位成本」由開發實務專文答了一半：官方沒有單價，但給了估算與封頂的方法；「agent 記憶的格式規約」本週無訊號。\n",
+  "lede": null,
+  "sections": {
+    "headline": {
+      "title": "一、頭條敘事：SneakPeek 漏洞八月就修好了，桌面版有自動更新的人不用慌",
+      "body": "這週三份報導把 Claude Code 桌面版的預覽窗格漏洞寫成「官方還沒修」：10-14 先傳出 CVSS 8.7 分，10-15 資安公司 Noma Labs 公開攻擊鏈，10-17 研究者把它命名為 SneakPeek。手法是在公開 repo 放一份灌到 256KB 以上、偽裝成測試覆蓋率報告的 HTML；你請 Claude 看這個檔，預覽窗格就會執行裡面的 JavaScript，讀走 SSH 金鑰、雲端憑證和 GitHub token 再送出去。\n\n但 Noma 自己的原文寫得很清楚：7 月 4 日回報給 Anthropic，7 月 24 日第一次修補當天就被繞過，8 月 17 日在 Claude Desktop 1.30096.1 修完並經自動更新推送，Noma 複測後確認結案（[Noma Labs](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)）。這週是負責任揭露的公開日，不是新的零時差漏洞。同週 CSO Online 報的「256KB 讓機密外洩到預覽窗格」講的是同一個洞，不是第二起。\n\n要不要動：桌面版開著自動更新的，8 月中以後就安全，不用做事。如果你的桌面版很久沒更新，又在 8 月前請 Claude 預覽過陌生 repo 的 HTML 報告，先更新，再把那台機器上的 SSH 金鑰與雲端憑證換一輪（本刊推論）。CVE 與官方安全公告還沒發，發了會在下週追蹤。"
+    },
+    "discussion": {
+      "title": "二、技術討論與深挖",
+      "body": "### 本週官方出了什麼\n\n- **Code Review 轉正式版**（10-15，Team、Enterprise）：Claude 在 GitHub PR 上逐行留審查意見，按 token 從組織的 usage credits 扣。怎麼估費用、怎麼設上限見開發實務專文。\n- **閒置自動壓縮**（2.1.299）：20 萬 token 以上的對話閒置約 54 分鐘，會在一小時的 prompt cache 過期前先壓縮，回來不必整串重算。不想要就在 settings.json 設 `\"idleCompaction\": false`，或在 `/config` 關。\n- **fork subagent 預設打開**（2.1.302）：`claude -p`、Agent SDK、桌面版和 VS Code 改成跟終端機一樣預設可用，要關設 `CLAUDE_CODE_FORK_SUBAGENT=0`。跑腳本或 CI 的人升版後先重跑一次。\n- **美國使用者問投票資訊會拿到官方資料**（10 月下旬起）：問投票地點或要帶什麼證件，Claude 會依州別給官方資訊（[官方報告](https://www.anthropic.com/news/2026-us-midterms)）。不用動。\n\n升版：本週四個版本（2.1.299–302），最新 2.1.302，可升；升之前看一眼上面 fork subagent 的預設改變。穩定版已推進到 2.1.292，含 2.1.288 那刀 `rm` 繞過修正，穩定版使用者照常更新即可（[官方 CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，10-18 取得）。\n\n### 討論綜述\n\n- **Linus Torvalds 用 Claude Code 寫 kernel patch**：他把修頁快取效能瓶頸的分支整理成 patch 貼上核心信件列表，cover letter 寫明程式碼、測試、審查與說明的初稿都是 Claude Code 在他指示下做的，效能是他自己的機器量的（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)）。值得看的是他怎麼交代分工，不是那句「AI 寫的」。\n- **「哪個 agent 在等我」一週冒出六個小工具**：把多個 Claude Code、Codex、Cursor session 的狀態收進選單列或小視窗，例如 Muster 按 ⌥Tab 先列出等你回應的 agent（[Muster](https://github.com/josefchen/muster)）。痛點是真的，還看不出誰會留下。**該不該擋**：同時開很多 session 的人可以試，別急著綁定。\n- **MCP 代理號稱省 85–99% token，實測不一定**：有人在 Claude Code 裡跑了六個，四個比不用還耗、兩個跑不完；廣告的前提是工具定義一開始全部載入，而 Claude Code 本來就不這樣做（[基準頁](https://rabin-a.github.io/mcp-router/#benchmark)）。作者自己也賣路由器，數字要打折。**直接做**：在用的先量自己有沒有真的省到。\n- **Console 儲值把小數點吃掉**：有人因地區的小數點習慣不同，輸入「5.04」想儲 5.04 美元，結果被刷 504 美元，付款前沒有確認畫面（[Hacker News](https://news.ycombinator.com/item?id=50121562)，87 分，10-17 快照）。**直接做**：儲值前看清楚金額再送出。\n\n### 深挖：本期兩篇記者專文\n\n開發實務講 Code Review 轉正式版之後一次要花多少、本機端這週又改了什麼；財經講營收還在漲，上市估值卻先被往下談。\n\n#### 開發實務｜Code Review 轉正式版：沒有固定單價，但官方教你怎麼估\n\n**這週哪裡不一樣？** 10-15 Code Review 轉為正式發布，官方文件新增六頁，其中一頁專談用量與費用。媒體說附帶五萬美元點數方案，官方這幾頁查不到，先別拿它當預算依據。[文件索引](https://code.claude.com/docs/llms.txt)\n\n**審一次要多少錢？** 官方沒有固定單價：按 token 從組織的 usage credits 扣，只開放 Team 與 Enterprise。費用隨審查等級（Quick、Standard、Deep）、變更大小與要驗證的問題數變動。新加入的 repo 預設每次 push 都審，最貴；可改成開 PR 時審一次，或只在留言 `@claude review` 時審。官方建議先挑幾個 repo 試跑，在管理後台看每個 repo 的平均成本，乘上每月 PR 數，再設 Code Review 專屬月上限，額度不夠時會自動略過並在 PR 上留言。不想付這筆，`/code-review` 在任何方案的本機 session 都能跑。[用量與費用](https://code.claude.com/docs/en/code-review-costs)\n\n**Anthropic 自己怎麼審？** Claude Code 團隊說，這個產品約九成程式碼由 Claude 寫成。他們的目標是在 revert 與事故不增加的前提下，把人工審查時間壓到最低。文章沒公布單位成本（本刊推論：帳單之外，人時才是他們主要在算的成本）。[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)\n\n**本機端有跟著省嗎？** 2.1.299 加了閒置壓縮：超過 20 萬 token 的對話閒置約 54 分鐘，會在一小時 prompt cache 過期前先壓縮。想關掉，用 `/config` 或在 settings.json 設 `\"idleCompaction\": false`。[v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)\n\n**升版要留意什麼？** 2.1.302 起，`claude -p`、Agent SDK、桌面版與 VS Code 的 fork subagent 預設開啟，`CLAUDE_CODE_FORK_SUBAGENT=0` 可關。跑腳本或 CI 的人，升版後先重跑一次。[v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)\n\n#### 財經｜營收還在漲，但上市估值先被往下談了 5,000 億美元\n\n**這週生意上最大的事是什麼？** Anthropic 在週三投資人日公布第三季營收 168 億美元，比上季成長約 46%。市場在意的是成長斜率：上季成長超過一倍，這季不到一半。Reuters 引述與會者說，部分投資人把 11 月上市的估值，從原先預期的 2 兆美元討論到約 1.5 兆美元。這是投資人討論中的數字，不是定價。[Telegraph](https://www.telegraph.co.uk/business/2026/10/16/anthropic-valuation-ipo-ai-stock-listing/)\n\n**成長放緩時，財務結構撐得住嗎？** 信用面也不輕鬆。FT 披露 Anthropic 6 月被 KBRA 評為垃圾級中最高的一級；提供給評等機構的資料不含自由現金流與 EBITDA，分析師只能自行假設推算。FT 另報導，Anthropic 在新一輪晶片融資中向 Blackstone 提供兩位數殖利率。靠高利率借錢買算力，營收一放緩，利息壓力最先浮現（本刊推論）。[FT](https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d)\n\n**客戶端有跟著縮手嗎？** 有零星跡象，但不能放大解讀。Accenture 把員工的 Claude 公司補助上限訂在每月 29 美元，此前有人單月花到 1,000 美元。這是控管用量，不是退出合約，與上期談的員工工具減用同一類。Replit 執行長則說不再與 Anthropic 合作，原因與範圍目前不明。[24/7 Wall St.](https://news.google.com/rss/articles/CBMinwFBVV95cUxPdWQtN1NiZVg3ZklkS0xpX3pfczltelh5aE80c1RTT3BBbnBUR3luRF91eVJIYndWbVhYbTNvYV9aRmlQVzZDYkxzb1VnTG53OWZYRmpNbnVaX3Vqa2xEWnpfMzJiOUxMQ1ZyQnFkbGFWN1c1YTFPclVVcEZRRGpnQTMyeGprT1Bnbk0yYWFENVhHSHJtUHh5VlpOSkk5bzQ?oc=5)\n\n**官方價格頁動了什麼？** 定價頁的一小時寫碼試算從 Opus 5 換成 Opus 5.5：每百萬 token 輸入從 5 美元變 4 美元，輸出從 25 美元變 20 美元，快取讀取從輸入價的 0.1 倍降到 0.05 倍，整段試算從 0.525 美元降到 0.428 美元。同週方案頁把 Team 年繳加上最低 20 席。大量跑 agent 的人帳單會變輕，五人小團隊年繳則要重算。[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)\n\n**我該做什麼？** 自己付訂閱或 API 的，這週不用動。公司在用 Code Review 的，先照開發實務專文設好月上限；Accenture 的例子提醒，按量計費最怕的是沒人盯。[官方費用說明](https://code.claude.com/docs/en/code-review-costs)\n\n### 本週要動的事\n\n- **桌面版很久沒更新的人**：更新到 1.30096.1 以上；8 月前預覽過陌生 repo 的 HTML 報告，順手換一輪 SSH 金鑰與雲端憑證（見頭條）\n- **Team、Enterprise 管理員**：開 Code Review 前，把新 repo 的審查時機從每次 push 改掉、設好月上限（見開發實務專文）\n- **跑腳本或 CI 的人**：升到 2.1.302 後先重跑一次，fork subagent 不要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`（見本週官方出了什麼）\n- **用 Console 儲值 API 額度的人**：送出前核對金額，小數點可能被吃掉（見討論綜述）",
+      "versionNote": null,
+      "official": "- **Code Review 轉正式版**（10-15，Team、Enterprise）：Claude 在 GitHub PR 上逐行留審查意見，按 token 從組織的 usage credits 扣。怎麼估費用、怎麼設上限見開發實務專文。\n- **閒置自動壓縮**（2.1.299）：20 萬 token 以上的對話閒置約 54 分鐘，會在一小時的 prompt cache 過期前先壓縮，回來不必整串重算。不想要就在 settings.json 設 `\"idleCompaction\": false`，或在 `/config` 關。\n- **fork subagent 預設打開**（2.1.302）：`claude -p`、Agent SDK、桌面版和 VS Code 改成跟終端機一樣預設可用，要關設 `CLAUDE_CODE_FORK_SUBAGENT=0`。跑腳本或 CI 的人升版後先重跑一次。\n- **美國使用者問投票資訊會拿到官方資料**（10 月下旬起）：問投票地點或要帶什麼證件，Claude 會依州別給官方資訊（[官方報告](https://www.anthropic.com/news/2026-us-midterms)）。不用動。\n\n升版：本週四個版本（2.1.299–302），最新 2.1.302，可升；升之前看一眼上面 fork subagent 的預設改變。穩定版已推進到 2.1.292，含 2.1.288 那刀 `rm` 繞過修正，穩定版使用者照常更新即可（[官方 CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，10-18 取得）。",
+      "roundup": "- **Linus Torvalds 用 Claude Code 寫 kernel patch**：他把修頁快取效能瓶頸的分支整理成 patch 貼上核心信件列表，cover letter 寫明程式碼、測試、審查與說明的初稿都是 Claude Code 在他指示下做的，效能是他自己的機器量的（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)）。值得看的是他怎麼交代分工，不是那句「AI 寫的」。\n- **「哪個 agent 在等我」一週冒出六個小工具**：把多個 Claude Code、Codex、Cursor session 的狀態收進選單列或小視窗，例如 Muster 按 ⌥Tab 先列出等你回應的 agent（[Muster](https://github.com/josefchen/muster)）。痛點是真的，還看不出誰會留下。**該不該擋**：同時開很多 session 的人可以試，別急著綁定。\n- **MCP 代理號稱省 85–99% token，實測不一定**：有人在 Claude Code 裡跑了六個，四個比不用還耗、兩個跑不完；廣告的前提是工具定義一開始全部載入，而 Claude Code 本來就不這樣做（[基準頁](https://rabin-a.github.io/mcp-router/#benchmark)）。作者自己也賣路由器，數字要打折。**直接做**：在用的先量自己有沒有真的省到。\n- **Console 儲值把小數點吃掉**：有人因地區的小數點習慣不同，輸入「5.04」想儲 5.04 美元，結果被刷 504 美元，付款前沒有確認畫面（[Hacker News](https://news.ycombinator.com/item?id=50121562)，87 分，10-17 快照）。**直接做**：儲值前看清楚金額再送出。",
+      "deepDive": {
+        "title": "本期兩篇記者專文",
+        "body": "開發實務講 Code Review 轉正式版之後一次要花多少、本機端這週又改了什麼；財經講營收還在漲，上市估值卻先被往下談。\n\n#### 開發實務｜Code Review 轉正式版：沒有固定單價，但官方教你怎麼估\n\n**這週哪裡不一樣？** 10-15 Code Review 轉為正式發布，官方文件新增六頁，其中一頁專談用量與費用。媒體說附帶五萬美元點數方案，官方這幾頁查不到，先別拿它當預算依據。[文件索引](https://code.claude.com/docs/llms.txt)\n\n**審一次要多少錢？** 官方沒有固定單價：按 token 從組織的 usage credits 扣，只開放 Team 與 Enterprise。費用隨審查等級（Quick、Standard、Deep）、變更大小與要驗證的問題數變動。新加入的 repo 預設每次 push 都審，最貴；可改成開 PR 時審一次，或只在留言 `@claude review` 時審。官方建議先挑幾個 repo 試跑，在管理後台看每個 repo 的平均成本，乘上每月 PR 數，再設 Code Review 專屬月上限，額度不夠時會自動略過並在 PR 上留言。不想付這筆，`/code-review` 在任何方案的本機 session 都能跑。[用量與費用](https://code.claude.com/docs/en/code-review-costs)\n\n**Anthropic 自己怎麼審？** Claude Code 團隊說，這個產品約九成程式碼由 Claude 寫成。他們的目標是在 revert 與事故不增加的前提下，把人工審查時間壓到最低。文章沒公布單位成本（本刊推論：帳單之外，人時才是他們主要在算的成本）。[原文](https://claude.dev/blog/solving-code-review-at-anthropic/)\n\n**本機端有跟著省嗎？** 2.1.299 加了閒置壓縮：超過 20 萬 token 的對話閒置約 54 分鐘，會在一小時 prompt cache 過期前先壓縮。想關掉，用 `/config` 或在 settings.json 設 `\"idleCompaction\": false`。[v2.1.299](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)\n\n**升版要留意什麼？** 2.1.302 起，`claude -p`、Agent SDK、桌面版與 VS Code 的 fork subagent 預設開啟，`CLAUDE_CODE_FORK_SUBAGENT=0` 可關。跑腳本或 CI 的人，升版後先重跑一次。[v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)\n\n#### 財經｜營收還在漲，但上市估值先被往下談了 5,000 億美元\n\n**這週生意上最大的事是什麼？** Anthropic 在週三投資人日公布第三季營收 168 億美元，比上季成長約 46%。市場在意的是成長斜率：上季成長超過一倍，這季不到一半。Reuters 引述與會者說，部分投資人把 11 月上市的估值，從原先預期的 2 兆美元討論到約 1.5 兆美元。這是投資人討論中的數字，不是定價。[Telegraph](https://www.telegraph.co.uk/business/2026/10/16/anthropic-valuation-ipo-ai-stock-listing/)\n\n**成長放緩時，財務結構撐得住嗎？** 信用面也不輕鬆。FT 披露 Anthropic 6 月被 KBRA 評為垃圾級中最高的一級；提供給評等機構的資料不含自由現金流與 EBITDA，分析師只能自行假設推算。FT 另報導，Anthropic 在新一輪晶片融資中向 Blackstone 提供兩位數殖利率。靠高利率借錢買算力，營收一放緩，利息壓力最先浮現（本刊推論）。[FT](https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d)\n\n**客戶端有跟著縮手嗎？** 有零星跡象，但不能放大解讀。Accenture 把員工的 Claude 公司補助上限訂在每月 29 美元，此前有人單月花到 1,000 美元。這是控管用量，不是退出合約，與上期談的員工工具減用同一類。Replit 執行長則說不再與 Anthropic 合作，原因與範圍目前不明。[24/7 Wall St.](https://news.google.com/rss/articles/CBMinwFBVV95cUxPdWQtN1NiZVg3ZklkS0xpX3pfczltelh5aE80c1RTT3BBbnBUR3luRF91eVJIYndWbVhYbTNvYV9aRmlQVzZDYkxzb1VnTG53OWZYRmpNbnVaX3Vqa2xEWnpfMzJiOUxMQ1ZyQnFkbGFWN1c1YTFPclVVcEZRRGpnQTMyeGprT1Bnbk0yYWFENVhHSHJtUHh5VlpOSkk5bzQ?oc=5)\n\n**官方價格頁動了什麼？** 定價頁的一小時寫碼試算從 Opus 5 換成 Opus 5.5：每百萬 token 輸入從 5 美元變 4 美元，輸出從 25 美元變 20 美元，快取讀取從輸入價的 0.1 倍降到 0.05 倍，整段試算從 0.525 美元降到 0.428 美元。同週方案頁把 Team 年繳加上最低 20 席。大量跑 agent 的人帳單會變輕，五人小團隊年繳則要重算。[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)\n\n**我該做什麼？** 自己付訂閱或 API 的，這週不用動。公司在用 Code Review 的，先照開發實務專文設好月上限；Accenture 的例子提醒，按量計費最怕的是沒人盯。[官方費用說明](https://code.claude.com/docs/en/code-review-costs)"
+      },
+      "actions": "- **桌面版很久沒更新的人**：更新到 1.30096.1 以上；8 月前預覽過陌生 repo 的 HTML 報告，順手換一輪 SSH 金鑰與雲端憑證（見頭條）\n- **Team、Enterprise 管理員**：開 Code Review 前，把新 repo 的審查時機從每次 push 改掉、設好月上限（見開發實務專文）\n- **跑腳本或 CI 的人**：升到 2.1.302 後先重跑一次，fork subagent 不要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`（見本週官方出了什麼）\n- **用 Console 儲值 API 額度的人**：送出前核對金額，小數點可能被吃掉（見討論綜述）"
+    },
+    "nextweek": {
+      "title": "三、下週看什麼",
+      "body": "下週值得留意的 9 件事：5 件新的，4 件從上週延續（cache_creation 多算、Cowork 本機 VM、Startups 優惠、Haiku 當 subagent）。另有 6 件本週結案。\n\n### 下週值得關注：新開 5 條\n\n上期 4 條續盯、6 條結案，額度 5 條。這 5 件三件等官方公告或說法，兩件看實際回報。\n\n| 類型 | 預告 | 判準 |\n|------|------|------|\n| **修復追蹤型** | **SneakPeek 的 CVE 與官方安全公告什麼時候出**：Noma 說修補 8 月已推送，CVE 與 GitHub 安全公告待發 | 若 CVE 或官方安全公告發布 → 寫入升版說明並結案；若兩週無事 → 維持「確認桌面版有自動更新」 |\n| **官宣待發型** | **上市定價區間會不會公布**：投資人日後估值傳從 2 兆美元談到約 1.5 兆，原訂 11 月上市 | 若公布定價區間 → 以官方區間取代傳聞估值；若兩週無公布 → 估值仍視為投資人傳聞 |\n| **官宣待發型** | **Code Review 的五萬美元點數是不是真的**：媒體報導正式版附帶點數方案，官方文件查不到 | 若官方公布點數對象與期限 → 寫入試用建議；若兩週無官方說法 → 降為單一媒體說法 |\n| **趨勢確認型** | **「哪個 agent 在等我」會不會有官方解**：本週至少六個第三方小工具在做同一件事 | 若官方推出跨 session 的等待提醒 → 改建議用內建；若兩週只多出第三方工具 → 本題退場 |\n| **趨勢確認型** | **閒置自動壓縮會不會惹事**：2.1.299 起 20 萬 token 以上的對話閒置約 54 分鐘就自動壓縮 | 若出現誤壓縮或丟失脈絡的回報 → 寫進關閉方法；若兩週無回報 → 本題退場 |\n\n### 上週的線怎麼了（2026-W41）\n\n上週列的 10 件：4 件還要看，6 件結案（2 件有結論、4 件盯滿兩週放下）；上週判斷錯的 0 件。\n\n| 上週預告 | 判準 | 本週結果 |\n|---|---|---|\n| **cache_creation 多算 2 萬 token 有沒有人回**：#46917 對照組明確、42 則留言、官方未回 | 若官方回覆或修復 → 寫入升版提醒；若關閉為設計行為 → 改寫成計費說明；若兩週無事 → 維持「先對版本號」 | ⏳ **還要盯** → 續盯至 W43。issue 還開著，官方仍未回 |\n| **Cowork 本機 VM 會不會被清掉**：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端 | 若 Desktop 釋出移除或清理本機 VM 的版本 → 結案並寫入操作建議；若官方說要手動刪 → 改寫成步驟；若兩週無事 → 維持「關掉 Cowork」 | ⏳ **還要盯** → 續盯至 W43。#22543 仍開著，本週只有其他 Cowork 錯誤回報 |\n| **Claude Startups 優惠暫停後的新條件**：10-10 傳暫停免費 Team 試用與 1,000 美元額度，官方方案頁同日改版但沒寫生效時間 | 若官方公布新條件或恢復日期 → 更新方案說明；若官方確認取消 → 記為已下架；若兩週無事 → 維持「以方案頁現況為準」 | ⏳ **還要盯** → 續盯至 W43。本週沒有新條件 |\n| **Haiku 5.5 當 subagent 的實測會不會出現**：本週只有官方建議與一份單人拆帳 | 若出現附重工率或成本對照的實測 → 更新換不換的建議；若只有體感貼文 → 維持「先換唯讀的」；若兩週無新貼文 → 本題退場 | ⏳ **還要盯** → 續盯至 W43。本週沒有附數字的實測 |\n| **「同時指揮 1,000 個 agent」是不是正式功能**：The Decoder 10-09 報導，同日 build 出現 workflow 相關旗標，官方沒說 | 若官方文件或版本說明寫出上限與開放範圍 → 寫入並結案；若官方說仍在內部測試 → 記為未開放；若兩週無事 → 降為單一媒體轉述 | ✅ **結案，是正式功能**：官方文件寫明每次執行最多 1,000 個 agent，所有付費方案可用，Pro 要在 `/config` 打開 |\n| **穩定版什麼時候追上**：權限防護修正在 2.1.287–289，穩定版還停在 2.1.285 | 若 10-11 前穩定版升到 2.1.288 以上 → 改建議穩定版使用者照常更新；若仍停在 2.1.285 → 維持切 latest 建議；若兩週無事 → 結案 | ✅ **結案**：穩定版已升到 2.1.292，含 `rm` 繞過修正，穩定版使用者照常更新即可 |\n| **長對話靜默清除有沒有人回**：#42542 開了半年、無官方回覆 | 若官方回覆或 CHANGELOG 提及 → 補上能不能單獨關；若關閉為設計行為 → 改寫成門檻說明；若兩週無事 → 維持存檔做法 | ❌ **不用再盯了**：盯滿兩週官方仍未回，維持存檔做法 |\n| **MCP Python SDK 帳號劫持漏洞**：Cycode 09-28 揭露，受影響與修補版本都未公開 | 若官方或 Cycode 公布修補版本號 → 寫入升版提醒並結案；若兩週仍無細節 → 降為未經證實的單一來源 | ❌ **不用再盯了**：兩週仍無修補版本，降為未證實的單一來源 |\n| **公開版招股書會不會遞交**：本週只有外流版，數字來自轉述 | 若公開版遞交且營收、虧損與外流版吻合 → 外流數字可視為可靠；若數字不同 → 以公開版為準；若兩週無事 → 仍視為轉述 | ❌ **不用再盯了**：公開版仍未遞交，外流數字仍是轉述；定價區間另立新條 |\n| **降智指控會不會附上資料**：本週兩篇都只有感想，沒有版本前後對照 | 若出現附對照資料的量測 → 核對方法並更新；若仍只有感想 → 維持「先看自己的 effort」；若兩週無新貼文 → 本題退場 | ❌ **不用再盯了**：Livenerf 追蹤到第 20 天仍無前後對照資料，維持「先看自己的 effort」 |",
+      "forecasts": [
+        {
+          "type": "修復追蹤型",
+          "forecast": "SneakPeek 的 CVE 與官方安全公告什麼時候出：Noma 說修補 8 月已推送，CVE 與 GitHub 安全公告待發",
+          "criterion": "若 CVE 或官方安全公告發布 → 寫入升版說明並結案；若兩週無事 → 維持「確認桌面版有自動更新」"
+        },
+        {
+          "type": "官宣待發型",
+          "forecast": "上市定價區間會不會公布：投資人日後估值傳從 2 兆美元談到約 1.5 兆，原訂 11 月上市",
+          "criterion": "若公布定價區間 → 以官方區間取代傳聞估值；若兩週無公布 → 估值仍視為投資人傳聞"
+        },
+        {
+          "type": "官宣待發型",
+          "forecast": "Code Review 的五萬美元點數是不是真的：媒體報導正式版附帶點數方案，官方文件查不到",
+          "criterion": "若官方公布點數對象與期限 → 寫入試用建議；若兩週無官方說法 → 降為單一媒體說法"
+        },
+        {
+          "type": "趨勢確認型",
+          "forecast": "「哪個 agent 在等我」會不會有官方解：本週至少六個第三方小工具在做同一件事",
+          "criterion": "若官方推出跨 session 的等待提醒 → 改建議用內建；若兩週只多出第三方工具 → 本題退場"
+        },
+        {
+          "type": "趨勢確認型",
+          "forecast": "閒置自動壓縮會不會惹事：2.1.299 起 20 萬 token 以上的對話閒置約 54 分鐘就自動壓縮",
+          "criterion": "若出現誤壓縮或丟失脈絡的回報 → 寫進關閉方法；若兩週無回報 → 本題退場"
+        }
+      ],
+      "recap": [
+        {
+          "forecast": "cache_creation 多算 2 萬 token 有沒有人回：#46917 對照組明確、42 則留言、官方未回",
+          "criterion": "若官方回覆或修復 → 寫入升版提醒；若關閉為設計行為 → 改寫成計費說明；若兩週無事 → 維持「先對版本號」",
+          "result": "⏳ 還要盯 → 續盯至 W43。issue 還開著，官方仍未回",
+          "mark": "⏳"
+        },
+        {
+          "forecast": "Cowork 本機 VM 會不會被清掉：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端",
+          "criterion": "若 Desktop 釋出移除或清理本機 VM 的版本 → 結案並寫入操作建議；若官方說要手動刪 → 改寫成步驟；若兩週無事 → 維持「關掉 Cowork」",
+          "result": "⏳ 還要盯 → 續盯至 W43。#22543 仍開著，本週只有其他 Cowork 錯誤回報",
+          "mark": "⏳"
+        },
+        {
+          "forecast": "Claude Startups 優惠暫停後的新條件：10-10 傳暫停免費 Team 試用與 1,000 美元額度，官方方案頁同日改版但沒寫生效時間",
+          "criterion": "若官方公布新條件或恢復日期 → 更新方案說明；若官方確認取消 → 記為已下架；若兩週無事 → 維持「以方案頁現況為準」",
+          "result": "⏳ 還要盯 → 續盯至 W43。本週沒有新條件",
+          "mark": "⏳"
+        },
+        {
+          "forecast": "Haiku 5.5 當 subagent 的實測會不會出現：本週只有官方建議與一份單人拆帳",
+          "criterion": "若出現附重工率或成本對照的實測 → 更新換不換的建議；若只有體感貼文 → 維持「先換唯讀的」；若兩週無新貼文 → 本題退場",
+          "result": "⏳ 還要盯 → 續盯至 W43。本週沒有附數字的實測",
+          "mark": "⏳"
+        },
+        {
+          "forecast": "「同時指揮 1,000 個 agent」是不是正式功能：The Decoder 10-09 報導，同日 build 出現 workflow 相關旗標，官方沒說",
+          "criterion": "若官方文件或版本說明寫出上限與開放範圍 → 寫入並結案；若官方說仍在內部測試 → 記為未開放；若兩週無事 → 降為單一媒體轉述",
+          "result": "✅ 結案，是正式功能：官方文件寫明每次執行最多 1,000 個 agent，所有付費方案可用，Pro 要在 `/config` 打開",
+          "mark": "✅"
+        },
+        {
+          "forecast": "穩定版什麼時候追上：權限防護修正在 2.1.287–289，穩定版還停在 2.1.285",
+          "criterion": "若 10-11 前穩定版升到 2.1.288 以上 → 改建議穩定版使用者照常更新；若仍停在 2.1.285 → 維持切 latest 建議；若兩週無事 → 結案",
+          "result": "✅ 結案：穩定版已升到 2.1.292，含 `rm` 繞過修正，穩定版使用者照常更新即可",
+          "mark": "✅"
+        },
+        {
+          "forecast": "長對話靜默清除有沒有人回：#42542 開了半年、無官方回覆",
+          "criterion": "若官方回覆或 CHANGELOG 提及 → 補上能不能單獨關；若關閉為設計行為 → 改寫成門檻說明；若兩週無事 → 維持存檔做法",
+          "result": "❌ 不用再盯了：盯滿兩週官方仍未回，維持存檔做法",
+          "mark": "❌"
+        },
+        {
+          "forecast": "MCP Python SDK 帳號劫持漏洞：Cycode 09-28 揭露，受影響與修補版本都未公開",
+          "criterion": "若官方或 Cycode 公布修補版本號 → 寫入升版提醒並結案；若兩週仍無細節 → 降為未經證實的單一來源",
+          "result": "❌ 不用再盯了：兩週仍無修補版本，降為未證實的單一來源",
+          "mark": "❌"
+        },
+        {
+          "forecast": "公開版招股書會不會遞交：本週只有外流版，數字來自轉述",
+          "criterion": "若公開版遞交且營收、虧損與外流版吻合 → 外流數字可視為可靠；若數字不同 → 以公開版為準；若兩週無事 → 仍視為轉述",
+          "result": "❌ 不用再盯了：公開版仍未遞交，外流數字仍是轉述；定價區間另立新條",
+          "mark": "❌"
+        },
+        {
+          "forecast": "降智指控會不會附上資料：本週兩篇都只有感想，沒有版本前後對照",
+          "criterion": "若出現附對照資料的量測 → 核對方法並更新；若仍只有感想 → 維持「先看自己的 effort」；若兩週無新貼文 → 本題退場",
+          "result": "❌ 不用再盯了：Livenerf 追蹤到第 20 天仍無前後對照資料，維持「先看自己的 effort」",
+          "mark": "❌"
+        }
+      ],
+      "intro": "下週值得留意的 9 件事：5 件新的，4 件從上週延續（cache_creation 多算、Cowork 本機 VM、Startups 優惠、Haiku 當 subagent）。另有 6 件本週結案。 上期 4 條續盯、6 條結案，額度 5 條。這 5 件三件等官方公告或說法，兩件看實際回報。",
+      "recapIntro": "上週列的 10 件：4 件還要看，6 件結案（2 件有結論、4 件盯滿兩週放下）；上週判斷錯的 0 件。"
+    },
+    "numbers": {
+      "title": "四、本週數字",
+      "body": "- **$2／$10**——Google 10-13 全面開放的 Gemini 4 Argon 每百萬 token 輸入／輸出價格（[Google DeepMind](https://deepmind.google/blog/introducing-gemini-4-argon/)），和 Sonnet 5.5 的牌價一樣；拿它跟 Claude 比，比的是同一價位的能力。\n- **90–99%**——Anthropic 說新防禦讓蒸餾者從 Claude 竊得的資料量減少的幅度（[官方研究](https://www.anthropic.com/research/distillation-defenses)，10-13）；是官方自評，沒有第三方量測。\n- **5.75%**——Anthropic 抽樣 9 月 21–27 日 25 萬則對話，政治相關對話的占比；跟選舉投票直接相關的只有 0.51%（[官方報告](https://www.anthropic.com/news/2026-us-midterms)，10-15）。",
+      "stats": [
+        {
+          "value": "$2／$10",
+          "desc": "Google 10-13 全面開放的 Gemini 4 Argon 每百萬 token 輸入／輸出價格（[Google DeepMind](https://deepmind.google/blog/introducing-gemini-4-argon/)），和 Sonnet 5.5 的牌價一樣；拿它跟 Claude 比，比的是同一價位的能力。"
+        },
+        {
+          "value": "90–99%",
+          "desc": "Anthropic 說新防禦讓蒸餾者從 Claude 竊得的資料量減少的幅度（[官方研究](https://www.anthropic.com/research/distillation-defenses)，10-13）；是官方自評，沒有第三方量測。"
+        },
+        {
+          "value": "5.75%",
+          "desc": "Anthropic 抽樣 9 月 21–27 日 25 萬則對話，政治相關對話的占比；跟選舉投票直接相關的只有 0.51%（[官方報告](https://www.anthropic.com/news/2026-us-midterms)，10-15）。"
+        }
+      ]
+    }
+  },
+  "extraSections": [],
+  "footer": "素材涵蓋窗：本期取材自 2026-10-11 ~ 2026-10-17 的每日新聞，以及 10-18 對 Noma Labs SneakPeek 原文、Code Review 官方文件（總覽與用量費用兩頁）、dynamic workflows 官方文件、官方 CHANGELOG、npm 版本標籤與 GitHub issue 狀態的外部查證。社群線本週交了一篇（Scion 出處爭議、Anthropic 的審查框架、agent 狀態小工具、MCP 代理實測），與開發實務專文的審查段重疊，要點併進討論綜述。讀者記下的興趣題中，「LLM code review 的單位成本」由開發實務專文答了一半：官方沒有單價，但給了估算與封頂的方法；「agent 記憶的格式規約」本週無訊號。"
+}

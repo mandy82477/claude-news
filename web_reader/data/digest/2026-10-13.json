@@ -206,7 +206,13 @@
       "time": "10/12 21:13",
       "sentiment": "",
       "body": "自架的 GitHub merge gate，檢查 PR 作者是否真的理解自己（或 AI）寫的程式碼，而非直接把票貼進 LLM 就送出；支援 BYOK Anthropic。擔心團隊內浮濫使用 AI 寫程式卻缺乏理解的主管可留意。情緒：😐",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "Claude Code and Linus Torvalds: the Linux patch tradeoffs",

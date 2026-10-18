@@ -4,15 +4,15 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-17"
+last_updated: "2026-10-18"
 last_news_update: "2026-10-17"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 181
+days_since_news_subtree: 1
+inbound_links: 182
 attribution_count: 153
 attribution_last: "2026-10-17"
 top_source: "google-news"

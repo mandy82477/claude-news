@@ -485,18 +485,8 @@
   "preview": "Claude Code：v2.1.300 新增 virtualText（mod 裝飾文字）與 OTel 快取用量拆分欄位；2.1.299 已補修 gateway API 金鑰外洩與排程夏令時間重複觸發兩個問題。",
   "sedimentedToday": [
     {
-      "id": "linus-torvalds",
-      "name": "Linus Torvalds",
-      "pageType": "entity"
-    },
-    {
       "id": "managed-agents",
       "name": "Managed Agents",
-      "pageType": "entity"
-    },
-    {
-      "id": "openclaw",
-      "name": "OpenClaw",
       "pageType": "entity"
     },
     {

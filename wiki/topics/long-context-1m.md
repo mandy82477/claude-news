@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-16"
 last_news_update: "2026-10-16"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 15
 attribution_count: 5
 attribution_last: "2026-10-16"

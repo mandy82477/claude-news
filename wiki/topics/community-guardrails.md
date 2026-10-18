@@ -3,18 +3,18 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-17"
+last_updated: "2026-10-18"
 last_news_update: "2026-10-17"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 6
-attribution_count: 4
+days_since_news_subtree: 1
+inbound_links: 7
+attribution_count: 8
 attribution_last: "2026-10-17"
-top_source: "github"
+top_source: "hacker-news"
 pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-10-20"
