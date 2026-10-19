@@ -294,3 +294,5 @@
 {"id": "H-280b61", "opened": "2026-10-17", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 新增「Anthropic 官方審查機制」節點（Claude Code 團隊自曝審查流程），評估是否影響 official-community-gap.md 產品化矩陣。", "status": "open"}
 {"id": "H-987f57", "closed": "2026-10-17", "status": "done", "by": "功能", "result": "功能記者 2026-10-17 ingest 回報已處理"}
 {"id": "H-280b61", "closed": "2026-10-18", "status": "done", "by": "功能", "result": "功能記者 2026-10-18 ingest 回報已處理"}
+{"id": "H-0a5cb5", "opened": "2026-10-19", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Tmux and Claude Code 一文提及新版 Claude Code 已內建 claude --worktree --tmux（一次建立 worktree 與 tmux session），建議評估是否已入官方功能清單／official-community-gap 矩陣（來源：Hacker News 2026-10-19，https://crystl.dev/guides/tmux-for-ai-agents/）", "status": "open"}
+{"id": "H-2ed7e9", "opened": "2026-10-19", "from": "社群", "to": "人物", "page": "entities/linus-torvalds", "note": "The New Stack 2026-10-19 追蹤報導：Torvalds 用 Claude Code 修 page cache 瓶頸，10-patch 系列合成測試 23 倍吞吐量提升，審查發現 race condition；建議同步人物頁", "status": "open"}

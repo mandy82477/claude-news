@@ -261,9 +261,11 @@
   "https://www.reddit.com/r/ClaudeCode/comments/1xa1xtm/claude_code_on_desktop_in_bypass_permissions_now/": {
     "title": "Claude Code on Desktop in bypass permissions now asks for things inside the chat, only two buttons approve or not",
     "source": "Reddit / r/ClaudeCode",
-    "categories": [],
-    "reason": "0 留言單一使用者觀察，缺乏其他來源佐證，非新聞事件",
-    "note": "單一使用者回報：bypass permissions 模式下，對話中彈出的核可對話框變成只剩「核可／不核可」兩鍵，此前會顯示更多選項；無其他來源佐證"
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "分類回退自 排除（分類複核記者判定：具體指向 Claude Code Desktop bypass permissions 權限互動行為改變，應派給功能記者判斷是否列入已知問題／待查證）"
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xa1pg0/limit_resets_no_resets_right_now_when_you_get_one/": {
     "title": "\"Limit resets: No resets right now. When you get one, it shows up here with its expiry date.\"",
