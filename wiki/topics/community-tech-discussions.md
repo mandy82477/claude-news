@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **本地模型測試：Claude Code 落後 pi、Codex**（2026-10-18）
-> dev.to 實測同一本地模型接三款 agent，pi、Codex 全過，Claude Code 僅 7/12，單篇個案觀察。
+> **Torvalds 的 Claude Code kernel 修補送審：23 倍提升，審查抓到 race condition**（2026-10-19）
+> The New Stack 報導 10-patch 系列合成測試達 23 倍吞吐量提升，但審查者發現 race condition；Torvalds 提醒真實增益會小得多。
 
 ---
 
@@ -156,7 +156,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | StarSkirmish Bench 更新：讓 LLM 寫程式對戰《星海爭霸》，納入 OpenAI／Anthropic／Google／Meta 旗艦模型 | 2026-10-16 · 2026-10-16 | 🔥🔥🔥 | ☄️閃現 | 開發者更新基準測試，比較四家旗艦模型寫 Protoss bot 對戰戰力；HN score 228（2 來源） | — |
 | Anthropic 工程部落格「重新設計原始碼控制」系列話題：Scion／Mononoke 爭議落幕 | 2026-10-13 · 2026-10-16 | 🔥🔥🔥🔥🔥 | 🌸落幕 | 10-16 Anthropic 員工 Nick G. 在 HN 回應並補上歸因，原作者確認歸因已足夠、仍堅持原始技術觀察 | — |
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
-| Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-13 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch 並親自聲明由 Claude Code 完成，dev.to 指出有 regression 權衡（2 來源） | — |
+| Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-19 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch；10-19 送審後審查抓到 race condition，實測 23 倍提升（3 來源） | — |
 | Reddit 使用者稱用 Claude Code 輔助分析找到疑似未知行星，留言提及類似自主流程已用於超導材料研究 | 2026-10-08 · 2026-10-08 | 🔥🔥🔥 | ☄️閃現 | 使用者稱用 Claude Code 輔助分析資料找到疑似未知行星；留言稱類似自主 agent 研究流程已在超導材料系統上有新進展；HN score 67（原帖為 Reddit） | — |
 | 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成 | 2026-10-08 · 2026-10-08 | 🔥 | ☄️閃現 | Reddit 週熱門轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成；0 留言，報告未見（媒體轉述，待社群接力） | — |
 | Show HN: Agent.reviews——讓 AI agent 互相留下工具使用評價 | 2026-10-07 · 2026-10-07 | 🔥🔥🔥 | ☄️閃現 | 開發者推出平台讓 AI agent（含 Claude）像人類留評價般評比用過的工具與 MCP；稱已從逾 5 萬個 agent session 觀察到重複踩坑模式；HN score 64（2 來源） | — |
@@ -262,6 +262,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### The New Stack 追蹤報導：Torvalds 10-patch 系列合成測試 23 倍吞吐量提升，但審查發現 race condition（2026-10-19）
+
+- **來源：** Torvalds use Claude for bottleneck fix, but race discovered — Hacker News（16 分）；[原文](https://thenewstack.io/torvalds-claude-code-kernel/)
+- **核心論點：** The New Stack 報導 Torvalds 提交的 10 個 patch 在合成測試中達成 23 倍吞吐量提升，處理擱置逾 18 個月的 page cache 效能瓶頸；送審後審查者發現其中存在一個 race condition，Torvalds 本人也提醒真實環境增益會遠小於測試數字。
+- **關鍵回響：**
+  - 📝 補充：延續 2026-10-13 節點提及的 regression／記憶體計數權衡，本篇進一步指出審查抓到具體的 race condition。
+- **收斂結論：**（無）具名使用案例的後續追蹤——高調效能成果與審查流程抓到正確性問題並存；人物背景見 [[entities/linus-torvalds]]，本頁僅記錄這則訊號在社群本身的延燒。
 
 #### dev.to 實測：同一本地模型接三款 coding agent，pi、Codex 全過，Claude Code 僅 7/12（2026-10-16）
 

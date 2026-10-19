@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-18"
-last_news_update: "2026-10-18"
+last_updated: "2026-10-19"
+last_news_update: "2026-10-19"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,12 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新動態**（2026-10-18）
-> Claude Code 桌面版「SneakPeek」預覽窗格漏洞（CVSS 8.7）08-17 已在 Desktop 1.30096.1 修完；請確認版本不低於此，舊版預覽過陌生 repo 者換 SSH 金鑰與雲端憑證（推論）。
+> **最新動態**（2026-10-19）
+> - **CVP 誤擋持續惡化**：GitHub Issue #84352 留言數攀升至 201 則、👍29，已通過驗證的組織仍遭 Claude Code 誤擋，官方未回應。
+> - **第三方風險**：AI 編碼平台 OpenCode 主控台外洩，估計影響 1.4% 使用者；曾在其中存放 Claude API 金鑰者應立即檢查並考慮重置。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -125,6 +126,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-19 | 摩擦 | GitHub #84352 留言數持續攀升至 201 則、👍29，本日互動數最高的開發者回報 | Issue 一手回報；官方仍未公開回應或修復時程 |
 | 10-15 | 防護 | Bank of America 雇用 1000 名約聘人員，修補 Mythos 掃出的軟體漏洞 | CNBC 單一來源；Hacker News 討論 35 分，對是否為 Jevons paradox 案例意見兩極，另稱 Mythos 後續在新修補裡又找到新漏洞 |
 | 10-09 | 防護 | Anthropic Cyber Mission：關鍵基礎設施防禦計畫（CIDP，11 家創始夥伴）＋對開源專案免費漏洞掃描（官方稱真陽性率逾 90%） | 官方一手（2026-10-09 Anthropic Blog）；Axios、The Hacker News 補充；掃描是否經人工複核未載 |
 | 10-08 | 防護 | 對通過審核的防禦團隊放寬護欄（Dark Reading 對 CVP 擴大的定性；原報導為 UTC 10-07 21:09） | Dark Reading，單一媒體框架；與官方公告同源，見 10-07 列 |
@@ -144,7 +146,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 07-29 | 能力 | Mythos Preview 找出 HAWK 與 round-reduced AES 的改進攻擊；ProPublica 稱 4 月在 SharePoint 找出 231 個漏洞 | 官方研究；ProPublica 原文已查證 |
 | 07-22 | 濫用 | 俄語駭客 Trim 越獄 Claude Opus，用灰市金鑰做出 AI Pentest Checker | 原文已查證（2026-08-10）；Anthropic 未見聲明 |
 
-**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行：09-18 LSVP 放寬生醫專業人士、10-07 CVP 擴為三層（10-08 再開放醫院機構）、10-09 Cyber Mission 把關鍵基礎設施防守方與開源維護者納入。摩擦集中在 09-15～09-22 通過 CVP 仍被誤擋（GitHub #84352 等），三項擴大是否緩解未見官方說明，也無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。10-08 CrowdStrike 揭露的南韓銀行資料竊案顯示濫用已直接指向金融機構資料竊取，非僅技術測試或零散帳號濫用。10-15 Bank of America 雇用千人修補 Mythos 掃出漏洞，是 CVP／Glasswing 數字以外首見企業端實際修補成本的具體案例。
+**結論：** 能力端已有官方與第三方量測，防護主軸是驗證身分後放行：09-18 LSVP 放寬生醫專業人士、10-07 CVP 擴為三層（10-08 再開放醫院機構）、10-09 Cyber Mission 把關鍵基礎設施防守方與開源維護者納入。摩擦自 09-15 持續至 10-19 仍未解（GitHub #84352 留言已達 201 則），三項擴大是否緩解未見官方說明，也無公開修復時程。已記錄的濫用多為低技術者借 Claude 補細節，或防守方白帽；GLM-5.3 顯示能力不再是 Anthropic 專有，單靠自家分類器的覆蓋有限（推論）。10-08 CrowdStrike 揭露的南韓銀行資料竊案顯示濫用已直接指向金融機構資料竊取，非僅技術測試或零散帳號濫用。10-15 Bank of America 雇用千人修補 Mythos 掃出漏洞，是 CVP／Glasswing 數字以外首見企業端實際修補成本的具體案例。
 
 ---
 
@@ -187,6 +189,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29，本日互動數最高開發者回報（2026-10-19 新增，升級既有 08-12 事件）
+
+- **揭露來源**：GitHub Issues／claude-code（2026-10-19 06:42 UTC；201 則留言、👍29 反應，本日互動數最高的開發者回報）
+- **核心主張**：已通過官方 Cyber Verification Program（CVP）審核的 Claude.ai 組織，再度遭 Claude Code 的 cyber-safeguard 機制擋下；Verification Portal 顯示的核准狀態與實際遭擋情形不一致
+- **與既有事件的關係**：延續 2026-08-12 首次回報（69 則留言、👍9）與 09-22 升級（199 則留言），詳見「## 模型網攻能力與防護」09-15～10-19 列；官方至今未公開回應或修復時程
+- **可信度評估**：GitHub Issue 為使用者一手回報，非 Anthropic 官方確認
+
+### XenoSpectrum／The Hacker News：第三方平台 OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及其中存放的 OpenAI、Anthropic、Google API 金鑰（2026-10-19 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：Google News／XenoSpectrum、Google News／The Hacker News（原料僅殼層摘要，無可讀內文，以標題與日報段落判讀）
+- **核心主張**：[[entities/opencode]] 主控台爆出資料外洩，可能波及存放其中的 OpenAI、Anthropic、Google API 金鑰；官方初估影響約 1.4% 使用者，仍在處理中
+- **性質判斷**：OpenCode 為獨立第三方平台（非 Anthropic 產品），性質類似既有「資訊竊取型惡意軟體偷走 session 憑證」一列——外洩管道在第三方，使 Claude 憑證曝險，而非 Claude 自身產品漏洞；完整影響範圍、攻擊鏈與 OpenCode 官方回應均未見報導
+- **同一波事件另有報導**：36Kr（經 Google News）稱同時間部分 OpenCode 使用者的 GPT、Claude 帳戶餘額遭歸零，官方仍在搶修服務，尚未公告賠償或復原時程；此為服務／帳務面細節，商業影響詳見 [[entities/opencode]]
+- **你能先做什麼**：把 Claude API 金鑰託管在 OpenCode 的開發者應立即檢查金鑰是否遭盜用並考慮重置
+- **可信度評估**：僅標題與殼層摘要可用，無完整報導內文；OpenCode 官方公告與修補時程均未見報導
 
 ### 《AI Agent Prompt Injection: What the Evidence Actually Shows》彙整提示注入實證研究現況（2026-10-17 新增，教育/論述層訊號）
 
@@ -705,6 +723,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **性質判斷**：屬產品層安全（誤攔／過度審查），非攻擊事件——呼應本頁「模型層安全≠產品層安全」框架，本則呈現分類器誤判合法白名單使用者的落差，與 [[topics/anthropic-government-policy]] 07-02 已記錄的 Fable 5 高風險請求誤攔案例性質相近
 - **官方說明（2026-10-03 查證，[support.claude.com](https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude)）**：CVP 適用 Opus／Sonnet 級模型，核可綁定特定 organization ID、不跨 workspace 轉移，ZDR 組織不符資格，並提供「回報／申訴表單」；文章未明載 Claude Code 是否套用白名單，也未把「已核可仍被攔」列為已知限制
 - **後續（09-22）**：GitHub Issue #84352 回報已通過 CVP 審核的組織在 Claude Code 仍遭 cyber-safeguard 封鎖（199 則留言），同類 Issue 另有 #85222、#84689、#86352，顯示非單一個案；官方尚未公開修復時程
+- **後續（2026-10-19）**：GitHub Issue #84352 留言數再攀升至 201 則、👍29 反應，為本日互動數最高的開發者回報；官方仍未公開回應或修復時程
 - **可信度評估**：單一 Reddit 貼文，無「週熱門」標記，score 不可信；未見其他研究者附議或官方回應，非攻擊面，不列入「## 現在還擋不住的攻擊」表
 
 ### SitePoint：TypeScript 中防範 AI Agent Context Injection 教學（2026-09-15 新增，跨類別，非 Claude 專屬）
@@ -1468,6 +1487,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-19
+- **[🔴 升級] GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29**：本日互動數最高的開發者回報，官方仍未回應，詳見「## 技術彙整」、「## 模型網攻能力與防護」
+- **[📋 新增，跨類別，非 Claude 專屬] XenoSpectrum／The Hacker News：OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及 Claude API 金鑰**：同波事件另有 36Kr 稱部分使用者帳戶餘額遭歸零，詳見「## 技術彙整」
 
 ### 2026-10-18
 - **[✅ 更正] SneakPeek（Claude Code 桌面版預覽窗格 CVSS 8.7）已於 08-17 修完**：10-14 至 10-17 條目稱「官方未修補」「CSO Online 256KB 為另一起」均不正確；07-24 首修被繞、08-03 確認不完整、08-17 Desktop 1.30096.1 修完，CSO 256KB 與此為同一漏洞，詳見「## 技術彙整」

@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **Agent 規模化添淘汰賽選答案做法**（2026-10-13）
-> - **arena-skill**：同一任務跑 100 個策略變體，以淘汰賽（bracket）篩出單一答案。
+> **Agent 規模化添 tmux 實務設定與四代理天花板**（2026-10-19）
+> - **tmux 具名 session 工作流**：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。
 
 ---
 
@@ -135,6 +135,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Tmux and Claude Code：具名、可重連 session 跑多個 agent 的實務設定，及四個 agent 的天花板（2026-10-19）
+
+- **主線：** 並行規模
+- **核心模式：** tmux session 跑多個 AI agent：依專案命名、規劃 pane、send-keys 餵指令、capture-pane 讀回、status-line 監控；實測第四個 agent 即觸頂；新版 Claude Code 已內建 `claude --worktree --tmux` 建好 worktree 與 tmux session；HN 123 分。
+- **與既有模式的關係：** 補上「Agent 規模化」既有代表技巧（20-instance 崩潰分析、arena-skill 等）一個「tmux 層並行、四個 agent 天花板」取向——既有做法多談數量上限與資源競爭，本則給終端機層操作手法與實測上限；主線填並行規模。
+- **可信度註記：** HN 123 分；內容為作者第一手工作流紀錄，無第三方重現數字。
+- **來源：** Hacker News；[原文](https://crystl.dev/guides/tmux-for-ai-agents/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者第一手紀錄，尚無第二方重現）
 
 #### Jakeschincariol/arena-skill：100 個策略變體淘汰賽選答案的可靠性做法（2026-10-13）
 

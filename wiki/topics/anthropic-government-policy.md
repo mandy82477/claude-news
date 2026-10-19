@@ -3,8 +3,8 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-18"
-last_news_update: "2026-10-18"
+last_updated: "2026-10-19"
+last_news_update: "2026-10-19"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **紐約市主計官要求暫緩 IPO**（2026-10-18）
-> 主計官致函 Dario Amodei，稱白宮與另五家公司所簽「道德約束力」AI 安全協議不足以回應風險，要求暫緩 IPO。
+> **AI 安全法案門檻曝光**（2026-10-19）
+> Anthropic 遊說國會的自提法案觸發門檻經媒體揭露：僅預估 50 人以上死亡或超過 10 億美元損害時，政府才可封鎖「危險」AI 模型；Reddit 社群質疑門檻定太高。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -106,6 +106,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Anthropic 自提 AI 安全法案遊說國會**（新增 10-16）：Politico 獨家報導 Anthropic 悄悄向國會議員遊說自提法案，限制政府封鎖「危險」AI 模型的權力；Bloomberg、Law Commentary 同日跟進。
   - 與上方 09-03 Sanders／Casar 提出的 Ban Artificial Superintelligence Act 方向相反（該案限制 AI、本案限制政府權力），非同一條線；具名議員、法案文字與進度均未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
   - **10-17 評論角度新增**：Mother Jones 評論稱該法案為啟動政府介入設下的門檻「令人擔憂」（alarming threshold）；具體門檻數值與觸發條件未見報導，屬批評性評論非新事實
+  - **10-19 門檻數字曝光**：Yahoo／Reddit 報導揭露法案具體觸發門檻——僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；Reddit r/ClaudeAI 社群質疑門檻「定太高」；法案文字、具名議員與立法進度仍未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
 - **中國線**：08-31 官方表態不滿、設條件；09-02 官媒指控雙重標準，並陳不合併。併入阿里巴巴蒸餾指控（滿 90 天為 2026-11-08）與 Moonshot 蒸餾指控。08-13 後見「## 時序」；07-11 前見 [[topics/safety-china-trust-dispute]]。
 - **09-11 中國線新增**：Anthropic 威脅情報報告指控中國 AI 實驗室非法蒸餾，稱 Moonshot 暗中導流用戶請求至 Claude；與 07-22 指控不同（挪用非訓練），實驗室名單未見報導。**2026-09-26 查證**：Moonshot 否認、稱將提告已報警；商務部稱美方指控無據（[BeInCrypto](https://beincrypto.com/kimi-k3-moonshot-police-report-distillation/)）。
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。
@@ -276,6 +277,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-10-19 | 🌐 | Yahoo／Reddit：媒體進一步揭露 10-16 Anthropic 遊說國會法案的具體觸發門檻 | 僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；Reddit r/ClaudeAI 質疑門檻「定太高」，法案文字與立法進度仍未見報導，詳見「線的細節」 |
 | 2026-10-17 | 🏛️ | 紐約市主計官致函 Dario Amodei，要求暫緩 IPO | 稱白宮所簽「道德約束力」AI 安全協議不足以回應風險；具體後續時程與 Anthropic 回應均未見報導，僅標題可用（HN 14 分），詳見「線的細節」 |
 | 2026-10-17 | 🌐 | Mother Jones 評論稱 Anthropic 遊說國會法案為啟動政府介入設下的門檻「令人擔憂」 | 針對 10-16 Politico 揭露法案的批評性評論，未提供門檻數值或新事實，詳見「線的細節」 |
 | 2026-10-16 | 🏢 | Politico 獨家：Anthropic 悄悄向國會議員遊說自家提出的 AI 安全法案 | 法案內容會限制政府封鎖「危險」AI 模型的權力；具名議員、法案文字與立法進度均未見報導，僅標題可用；Bloomberg、Law Commentary 同日跟進轉載，詳見「線的細節」 |
@@ -499,6 +501,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-10-19
+- **[🌐] Yahoo／Reddit：媒體進一步揭露 Anthropic 遊說國會法案的具體觸發門檻**：僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可封鎖「危險」AI 模型；Reddit r/ClaudeAI 質疑門檻「定太高」，法案文字與立法進度仍未見報導，詳見「## 攻防紀錄」、「線的細節」
 
 ### 2026-10-17
 - **[🏛️] 紐約市主計官致函 Dario Amodei，要求暫緩 IPO**：稱白宮所簽「道德約束力」AI 安全協議對風險回應不足；具體後續時程與 Anthropic 回應均未見報導，僅標題可用（HN 14 分），詳見「## 攻防紀錄」、「線的細節」

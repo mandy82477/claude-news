@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-16
-**最後新聞更新：** 2026-10-16
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **兩款新 skill：SEO 全流程與 JSON 規格動態圖表**（2026-10-16）
-> - **Illyism/seo-skills（506★）**：給 Claude Code、Cursor、Codex 的 SEO 全流程 skill 組，涵蓋自動巡檢、標題優化、backlink、文案等。
-> - **Aryanutkarsh/SeeCode（515★）**：由簡短 JSON 規格產生動畫、可互動探索的圖表，供 coding agent 使用。
+> **新增跨工具技能範本集**（2026-10-19）
+> - **mxyhi/ok-skills（500★）**：給 Codex、Claude Code、Cursor、OpenClaw 等相容工具共用的技能與 AGENTS.md 範本集。
 
 ---
 
@@ -69,6 +68,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### mxyhi/ok-skills：給 Codex、Claude Code、Cursor、OpenClaw 等相容工具共用的技能與 AGENTS.md 範本集（2026-10-19）
+
+- **主線：** —
+- **核心模式：** 整理給 Codex、Claude Code、Cursor、OpenClaw 等相容 SKILL.md 格式工具共用的編碼代理技能與 AGENTS.md 範本集；GitHub Search 累積 500 星。
+- **與既有模式的關係：** 補上「Skills 設計」一個「跨工具共用技能與 AGENTS.md 範本」取向——既有代表技巧多鎖定單一垂直領域（SEO、圖表、學術審稿等），本則走通用範本集、強調跨 Codex／Cursor／OpenClaw 相容；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/mxyhi/ok-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Illyism/seo-skills：給 Claude Code、Cursor、Codex 的 SEO 全流程 skill 組（2026-10-16）
 

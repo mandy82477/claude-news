@@ -111,6 +111,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-10-19 CNBC：稱 Anthropic 是今年美股 AI 概念股最後一個重大 IPO 希望**：呼應近期投資人對營收成長放緩、估值下修（見上表「值多少」列）的疑慮，具體論證與新時程未見報導，僅標題可用（Google News/CNBC）。
 - **2026-10-17 Hacker News（14 分）：主計官公開信全文曝光，點名白宮自願承諾不足**：信函主張 Anthropic 與其他五家公司與白宮簽署的協議不足以回應 AI 安全風險，重申暫緩 IPO 要求（Hacker News；[comptroller.nyc.gov](https://comptroller.nyc.gov/reports/letter-to-anthropic-re-planned-initial-public-offering/)）。
 - **2026-10-16 Bloomberg：Anthropic 與本週公開信要求暫緩 IPO 的紐約市主計官展開對話**：具體對話內容與結果未見報導，僅標題可用，詳見上表「誰說撐不住」列更新（Google News/Bloomberg.com）。
 - **2026-10-16 Telegraph／Reuters：部分投資人討論將 IPO 估值由 $2 兆下修至約 $1.5 兆**：出席本週投資人日的與會者稱，本季營收年增率已從上季 146% 放緩至約 45%（約 $170 億美元）；詳見「現在的數字」表「IPO 估值預期」列與上表「值多少」列更新（Google News/Telegraph；Google News/Reuters）。
@@ -597,12 +598,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ### 2026-10
 
 #### 2026-10-19
-- **[重大事件，官方一手] Anthropic／Reuters：承諾捐 5% 股權成立 Public Benefit Fund，市值每漲 50% 加碼 2%，待股東會表決**：詳見「現在的數字」表新增列；同日馬斯克倡議企業直接捐股票予兒童（[Anthropic](https://www.anthropic.com/news/public-benefit-fund)；Reuters；Google News 各家）
 - **[商業模式，僅標題可用] NBC News／Business Insider：公益基金承諾引發各界反應，含與馬斯克捐股倡議的對比討論**：具體專家評論內容未見摘要，僅標題可用（Google News/NBC News；Google News/Business Insider）
 - **[IPO前瞻，僅標題可用] CNBC：稱 Anthropic 是今年美股 AI 概念股最後一個重大 IPO 希望**：呼應近期投資人對估值下修的疑慮，詳見「IPO 走到哪一格」細節區，具體論證未見報導（Google News/CNBC）
 - **[商業模式，僅標題可用] AI Magazine：綜合報導企業 AI agent 布局，引用估值約 $9,650 億**：與「現在的數字」表「官方估值」列一致，市場對 IPO 估值仍另有 $1.5–2 兆之議，兩者口徑不同見該表（Google News/AI Magazine）
 
 #### 2026-10-18
+- **[重大事件，官方一手] Anthropic／Reuters：承諾捐 5% 股權成立 Public Benefit Fund，市值每漲 50% 加碼 2%，待股東會表決**：詳見「現在的數字」表新增列；同日馬斯克倡議企業直接捐股票予兒童（[Anthropic](https://www.anthropic.com/news/public-benefit-fund)；Reuters；Google News 各家）
 - **[重大事件，官方一手] Anthropic Research／TechCrunch：官方揭露內部雇用結構轉變，初階技術職缺比例下降、互動式 agent 工時達員工工時 6 倍**：詳見「商業模式」段新增說明（Hacker News 80 分；Google News/TechCrunch）
 - **[IPO前瞻] Hacker News：紐約市主計官公開信全文曝光，點名白宮自願承諾不足**：詳見「IPO 走到哪一格」細節區（Hacker News 14 分；comptroller.nyc.gov）
 - **[商業模式，僅標題可用] Financial Times：Anthropic 引入律師團隊，建立讓 AI agent 代表使用者洽談並簽署交易的法律框架**：具體框架內容、適用範圍與時程均未見報導（Google News/Financial Times）

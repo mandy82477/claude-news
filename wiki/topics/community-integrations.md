@@ -31,11 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **Blender 創意工具新增 AI／MCP 外掛**（2026-10-18）
-> - **LiCinCan/blender-ai-mcp-addon**：Blender AI 助理與 MCP 伺服器外掛，支援視覺化對話、場景工具與多 agent 工作流程。
+> **新增三則 MCP／工具整合做法**（2026-10-19）
+> - **vibe-coding-toolkit**：外掛＋子代理協同＋品質關卡的工具箱（1,701★）。
+> - **whatsapp-mcp**：免費 Cloudflare 版 WhatsApp MCP server，留言區有隱私疑慮（HN 143 分）。
+> - **open-pstack**：把 Cursor 的 pstack 工具移植給 Claude Code／Codex（500★）。
 
 ---
 
@@ -58,6 +60,33 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### soumatheusgomes/vibe-coding-toolkit：結合外掛、子代理協同作業與品質關卡的「vibe coding」工具箱（2026-10-19）
+
+- **主線：** —
+- **核心模式：** 工具箱整合 Claude Code 外掛、子代理協同作業與品質關卡（quality gates），並附可直接複製使用的提示詞，取材自真實正式環境專案；GitHub Search 累積 1,701 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「外掛＋子代理協同＋品質關卡」綜合工具箱取向；子代理協同一面與「Multi-agent 架構」、品質關卡一面與「Hooks 與自動化」兩類既有做法重疊，暫依外掛為主歸入本類，週更再判是否該拆列或多類並列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,701★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/soumatheusgomes/vibe-coding-toolkit)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### finereli/whatsapp-mcp：免費在 Cloudflare 上運行的 WhatsApp MCP server，讓 Claude 讀取個人訊息（2026-10-18）
+
+- **主線：** —
+- **核心模式：** 開發者打造完全免費、在 Cloudflare 上運行的 WhatsApp MCP server，讓行動版 Claude 存取個人 WhatsApp 訊息，並串接 Google 帳號補齊聯絡人姓名；HN 143 分（2 個來源：Hacker News＋HN Repo Bridge）。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「個人即時通訊 MCP、免費雲端部署」取向——既有代表技巧多接生產力或創作服務，本則把私人聊天記錄接進 MCP 供 Claude 讀取；留言區對把對話上傳第三方 AI 公司訓練模型表達隱私疑慮，尚無開發者正式回應；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 143 分，2 個來源同日報導（Hacker News＋HN Repo Bridge）；公開 repo 可查證，但無 forks／issues／commit 數字佐證，未另行查證。
+- **來源：** Hacker News＋HN Repo Bridge；[GitHub](https://github.com/finereli/whatsapp-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### ericlitman/open-pstack：把 Cursor 的 pstack 工具移植給 Claude Code 與 Codex 使用（2026-10-19）
+
+- **主線：** —
+- **核心模式：** 將原本僅支援 Cursor 的 pstack 工具移植到同時支援 Claude Code 與 Codex，並持續追蹤 Cursor 上游版本更新；GitHub Search 累積 500 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「跨工具移植既有生態工具」取向；pstack 實際功能細節未載（僅標題與一句描述可用），分類暫依「把其他 agent 生態的工具搬進 Claude Code」此一既有大方向歸入，週更時視功能細節再判是否該歸入其他類；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述僅一句話可用（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/ericlitman/open-pstack)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### LiCinCan/blender-ai-mcp-addon：Blender 的 AI 助理與 MCP 伺服器外掛，支援多 agent 工作流程（2026-10-18）
 
