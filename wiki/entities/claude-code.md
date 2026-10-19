@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-19
+**最後新聞更新：** 2026-10-19
 
-> **最新動態**（2026-10-18）
-> - **已知問題**：新增 2 則——複合 bash 權限詢問誤判只核 `cd`（#28240，49 則留言、209 讚）、桌面版跨 session 傳訊自 2.1.224+ 起 regression 靜默失效（#86012，Windows／macOS）。
-> - **互動更新**：XDG 規範缺失（#1455，69 則留言、460 讚）、GitLab 整合（#12346，55 則留言、159 讚）。
+> **最新動態**（2026-10-19）
+> - **版本**：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。
+> - **互動更新**：CVP 審核組織仍遭資安防護誤擋（#84352，201 留言，今日全站互動最高）、Windows GPU 當機拖垮整個應用（#81698，68 留言）、Desktop 反覆當機須「進階選項→修復」（#85199，52 留言）。
 
 ---
 
@@ -210,7 +210,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - **v2.1.196 部分修補**；Manifold Security 2026-09-01 覆測，一條執行路徑仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，2026-08-12 首見）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效。
-- 該 issue 累積 199 則留言、27 個讚（2026-09-22 互動數更新），為今日全站已知問題互動量最高；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
+- 該 issue 累積 201 則留言、29 個讚（2026-10-19 互動數更新），為今日全站已知問題互動量最高；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
 - 官方說明（2026-10-03 查證，support.claude.com）載 CVP 核可綁定 organization ID、可提交申訴表單，未載 Claude Code 適用範圍，亦未列此為已知限制。
   - 09-15（Reddit r/ClaudeAI）一名資安研究者反映已通過 CVP 審核，Opus 5 仍持續標記其研究相關訊息，與本則模式相符；惟未載明是否發生於 Claude Code，僅供旁證。
 - 🔴 **未修復**｜**Claude Code 送出的 User-Agent 字串夾帶使用者真實 email（GitHub Issue #78431，經 Hacker News 轉發 38 分，2026-08-11）**：2026-08-22 直查 issue 頁確認——回報**已補上可重現條件**：v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，回報者標明為**回歸**（舊版本無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤。**但 issue 仍為 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復**。此前本頁對此事件真實性持保留態度——現已可確認事件為真、標籤獲官方分類，未解的是修復進度而非事件本身（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。
@@ -269,7 +269,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：Ctrl+Enter 換行快捷鍵與一般應用程式慣例衝突，應可自訂（GitHub issue #5064，累積 33 則留言、58 個讚，2026-10-08）**：使用者反映 Ctrl+Enter 用於換行與多數應用程式慣例衝突，呼籲新增可自訂快捷鍵設定；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
-- 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 33 則留言、91 個讚，2026-10-04）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
+- 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 36 則留言、93 個讚，首見 2026-10-04，2026-10-19 互動數更新）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
 - 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
 - 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
@@ -277,8 +277,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 媒體稱成因為 agent 自寫清理腳本、Windows junction 判斷失誤（10-17 查證，見 [[topics/ai-agent-safety]]），版本未載、官方未回應。與 v2.1.183 破壞性 Git 指令封鎖不同範疇，該防護未涵蓋一般檔案刪除。
 - 🔴 **未修復**｜**子代理無限遞迴，token 用量暴增（GitHub issue #68619，官方標 CRITICAL，累積 33 則留言、22 個讚，2026-09-26）**：無視 `CLAUDE_CODE_FORK_SUBAGENT=0` 遞迴逾 50 層，伴隨權限拒絕連鎖，子代理工作成果遺失；官方尚未給修復時程。
 - 🔴 **未修復**｜**CLI 輸出全帶 2 空格縮排與 80 字元強制換行，破壞複製貼上（GitHub issue #15199，累積 28 則留言、106 個讚，2026-09-26）**：與既有「終端機複製夾帶縮排」（#18170）同類但涵蓋全輸出，暫分列；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：Plugins 支援類似 CLAUDE.md 的 rules 設定檔（GitHub issue #14200，累積 37 則留言、120 個讚，2026-09-26）**：使用者呼籲讓 Plugins 機制能像 CLAUDE.md 一樣附帶規則檔設定；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 34 則留言、30 個讚，2026-09-25）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：Plugins 支援類似 CLAUDE.md 的 rules 設定檔（GitHub issue #14200，累積 38 則留言、123 個讚，首見 2026-09-26，2026-10-19 互動數更新）**：使用者呼籲讓 Plugins 機制能像 CLAUDE.md 一樣附帶規則檔設定；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 38 則留言、31 個讚，首見 2026-09-25，2026-10-19 互動數更新）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
 - 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
@@ -438,7 +438,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）安裝程式因先前一次「顯示成功」實則套件狀態不一致的安裝，導致後續安裝以 HRESULT 0x80073CF6 失敗（GitHub issue #49917，累積 38 則留言、8 個讚）**：官方尚未回應。
-- 🔴 **未修復**｜**Claude Desktop（Windows）反覆當機，須進「進階選項→修復」才能恢復（GitHub issue #85199，累積 40 則留言，2026-08-30）**：使用者回報 Windows 版 Claude Desktop 反覆當機，每次都須進入「進階選項→修復」才能恢復使用，屬穩定性問題；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop（Windows）反覆當機，須進「進階選項→修復」才能恢復（GitHub issue #85199，累積 52 則留言、11 個讚，首見 2026-08-30，2026-10-19 互動數更新）**：使用者回報 Windows 版 Claude Desktop 反覆當機，每次都須進入「進階選項→修復」才能恢復使用，屬穩定性問題；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--quiet`（或 `--minimal-output`）旗標抑制互動模式工具呼叫輸出（GitHub issue #9340，累積 32 則留言、47 個讚，2026-08-29）**：社群呼籲新增 `--quiet` 旗標，讓互動模式下的工具呼叫輸出可被抑制、僅顯示精簡進度，方便長時間執行時減少畫面雜訊；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 65 則留言、241 個讚，2026-10-15）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
@@ -495,7 +495,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。
 - 🔴 **未修復**｜**claude.exe 列出目錄時（`NtQueryDirectoryFileEx`）疑似透過 Wof.sys 觸發 Windows 藍屏（BSOD）（GitHub issue #32870，累積 41 則留言，首見 2026-07-29，2026-08-15 互動數更新）**：使用者回報 claude.exe 在列出目錄內容（`NtQueryDirectoryFileEx`）時，疑似透過 Windows 系統的 Wof.sys（Windows Overlay Filter driver）觸發系統藍屏當機；屬嚴重穩定性問題，官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓（GitHub issue #26302，累積 49 則留言、47 個讚，2026-10-11 互動數更新）**：回報為效能退步（regression）；與既有「Cowork 10GB VM bundle」（#22543）同屬效能問題但情境不同，暫分列；官方尚未回應。
-- 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 36 則留言、1 個讚，2026-08-16）**：Windows 桌面應用（Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080）發生 GPU process crash（exit code 101457950），導致整個應用程式與所有執行中的 session 一併中斷；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 68 則留言、6 個讚，2026-08-16）**：環境：Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Windows/MSIX 1.28929.0：跨 session 訊息會送進目標 session 輸入框卻不會自動送出，該 session 從此無回應（GitHub issue #86069，累積 8 個讚，2026-08-23）**：使用者回報在 Windows MSIX 版本（1.28929.0）下，透過跨 session 訊息互通功能（見上方「功能請求：多 Claude session 間直接通訊」issue #24798 已修復條目）傳送的訊息會正確出現在目標 session 的輸入框中，但不會如預期自動送出，導致目標 session 完全無回應；與既有跨 session 訊息互通功能同源但屬 Windows/MSIX 平台特有的送出步驟缺陷，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 98 則留言、77 個讚，2026-09-22 互動數更新）**：Claude Code 進程持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。
 - 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 66 則留言、58 個讚，2026-09-19 首見，2026-10-12 互動數更新）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
@@ -601,6 +601,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.303** | 2026-10-18 | Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.303)）|
 | **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定 auto mode 分類器用的模型；另新增閒置自動壓縮功能，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|
 | **anthropic-sdk-python v1.15.0** | 2026-10-15 | thinking 類型新增 `between_tools`；Messages 新增 `speed` 參數與對應 `usage.speed`；可讀取 Console 組織用量等級（usage-tier）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0)）|
 | **anthropic-sdk-typescript sdk-v0.135.0** | 2026-10-15 | 同步 Python v1.15.0：thinking 新增 `between_tools`、Messages 新增 `speed`／`usage.speed`、Console 組織用量等級（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0)）|
@@ -929,6 +930,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-19 | **v2.1.303**：純臭蟲修復，無使用者端功能異動。互動更新 6 則：#84352（201 留言，今日最高）、#81698、#85199、#76694、#14200、#65632。 |
 | 2026-10-17 | **v2.1.302**：新增 AUTO_MODE_MODEL＋閒置自動壓縮（未載）。桌面文件改寫任務接續規則。新增已知問題 1 則（#22264）。互動更新 2 則（#15942、#11002）。 |
 | 2026-10-16 | **v2.1.301**：新增重試逾時旗標＋SDK speed／usage-tier；文件新增 6 頁 Code Review（轉 GA）；已知問題 4 則、互動更新 3 則。 |
 | 2026-10-15 | **v2.1.300**：新增 `virtualText`、OTel 快取拆分欄位；旗標增4消1，見 [[topics/claude-code-experimental]]。互動更新2則；新增2則安全揭露指標，見下方「近期報導」。 |
