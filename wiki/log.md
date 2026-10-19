@@ -7901,6 +7901,6 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [安全政策→社群] 犯罪礦工軼事兩則（The Mac Observer／Tom's Hardware）：查 `data/classification-log.jsonl` 該組已含「社群」類別且社群記者本輪已處理（判定不收），不追加派工
   - [分類複核→功能] Reddit「Claude Code Desktop bypass permissions 新增對話內彈窗」：原排除理由「0 留言非新聞事件」，複核記者判定應派功能記者評估；3c 補派後功能記者維持不收錄（純 Reddit 來源、0 留言、無跨來源佐證，判斷為噪音非確認的功能行為異動，且本則本身即唯一來源不具懸置標記偵測力）
 - 轉知帳本：新開 H-0a5cb5（社群→功能，`entities/claude-code`：Tmux 文章提及 `claude --worktree --tmux` 內建功能，請評估 official-community-gap 矩陣）；新開 H-2ed7e9（社群→人物，`entities/linus-torvalds`：The New Stack 10-19 追蹤報導待同步）；不登帳：安全政策記者轉知商業記者關於 entities/opencode.md 的提醒，同輪已由商業記者獨立處理（其原始派工包本就含同一則 36Kr 報導），無需另開罰單
-- devpractice 沉澱：本日無開發實務分類派工包，未派工
+- devpractice 沉澱：本日無開發實務分類派工包，未派工；手冊正文寫入 0 則，基準線已推進至 6cdddd89
 - market 判讀：新增 2 則（Public Benefit Fund 股權承諾；AI 安全法案門檻曝光），均為 ⚖️ 兩面訊號；到期複查 3 筆（Meta/Microsoft 內部用量限縮、Pentagon 停用範圍、PitchBook 估值區間）今日日報未見後續，逾期交 `/wiki-lint` 處理
 - 主編查證：market 記者提出 AI 安全法案「50 人死亡或 10 億美元損害」門檻數字是否有官方法案文本可查；主編以 WebSearch 核對，該門檻與加州 SB 53「災難性風險」法定定義完全一致（Anthropic 已公開背書該州法案），但未查得對應聯邦法案文本，無法確認 Yahoo／Mashable 報導的聯邦遊說是否即沿用 SB 53 定義或另有新草案；已於 `topics/anthropic-government-policy.md` 10-19 細節區補一筆查證備註，不下定論
