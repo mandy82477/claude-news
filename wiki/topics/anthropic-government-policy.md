@@ -107,6 +107,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 與上方 09-03 Sanders／Casar 提出的 Ban Artificial Superintelligence Act 方向相反（該案限制 AI、本案限制政府權力），非同一條線；具名議員、法案文字與進度均未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
   - **10-17 評論角度新增**：Mother Jones 評論稱該法案為啟動政府介入設下的門檻「令人擔憂」（alarming threshold）；具體門檻數值與觸發條件未見報導，屬批評性評論非新事實
   - **10-19 門檻數字曝光**：Yahoo／Reddit 報導揭露法案具體觸發門檻——僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；Reddit r/ClaudeAI 社群質疑門檻「定太高」；法案文字、具名議員與立法進度仍未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
+    - **2026-10-19 查證**：WebSearch 核對，此「50 人死亡或 10 億美元損害」門檻數字與加州 SB 53（「災難性風險」法定定義，Anthropic 已公開背書）的門檻完全一致；但未找到對應聯邦法案文本，Yahoo／Mashable 報導的「Anthropic 自提聯邦法案」是否即援引 SB 53 定義、或為獨立新草案沿用同一數字，無法從現有報導確認
 - **中國線**：08-31 官方表態不滿、設條件；09-02 官媒指控雙重標準，並陳不合併。併入阿里巴巴蒸餾指控（滿 90 天為 2026-11-08）與 Moonshot 蒸餾指控。08-13 後見「## 時序」；07-11 前見 [[topics/safety-china-trust-dispute]]。
 - **09-11 中國線新增**：Anthropic 威脅情報報告指控中國 AI 實驗室非法蒸餾，稱 Moonshot 暗中導流用戶請求至 Claude；與 07-22 指控不同（挪用非訓練），實驗室名單未見報導。**2026-09-26 查證**：Moonshot 否認、稱將提告已報警；商務部稱美方指控無據（[BeInCrypto](https://beincrypto.com/kimi-k3-moonshot-police-report-distillation/)）。
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。

@@ -7880,3 +7880,27 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 1 筆（topics/community-guardrails：`git push` deny 規則被 `git -C . push` 繞過＋Paveo／Vibecheck 兩款「檢查守衛本身」新工具），留待週更落地；手冊正文寫入 0 則（本日無開發實務分類派工包，基準線已推進至 a0b2ad72）
 - market 判讀：本日無訊號（已檢視全部 37 則不重複條目，無一命中六類判準；最接近門檻的 Replit／OpenAI 預設供應商消息與 2026-10-17 既有判讀同源，未見新進展）
 - 讀者版涵蓋閘補派：`entities/openclaw`、`topics/enterprise-cost-management` 兩頁的「最後新聞更新」因今日稍早週度延伸回顧已是 2026-10-18，但頂部 callout 括號日期仍停在舊日期，補派商業記者覆寫為 delta-first（openclaw：官方 Pro／Max 說明頁 11145838 未載第三方工具訂閱額度適用；enterprise-cost-management：Code Review 計費官方給估法不給單價），覆寫後 `check_callout_coverage.py 2026-10-18` 轉綠（18/18）
+
+## 2026-10-19 Ingest
+
+- 來源日報：[[news/2026-10-19]]
+- 更新頁面：
+  - **人物**：無（本日無人物分類條目）
+  - **功能**：無（entities/claude-code.md 僅做互動數更新與版本列新增，未新增已知問題或 feature-radar 項目）
+  - **商業**：wiki/topics/anthropic-business.md、wiki/entities/opencode.md（休眠 149 天後首次更新）
+  - **安全政策**：wiki/topics/ai-agent-safety.md、wiki/topics/anthropic-government-policy.md
+  - **模型**：無（4 則條目皆未達收錄門檻：單一來源傳聞、殼層摘要或與既有查證重複）
+  - **社群**：wiki/topics/community-tech-patterns（母頁）、community-integrations、community-skills、community-multi-agent、community-tech-discussions
+  - **投資分析**：wiki/topics/market-signals
+- 新增頁面：無
+- feature-radar：本日無新功能
+- index：無狀態變更
+- 摘要：Anthropic 宣布捐 5% 股權成立 Public Benefit Fund（待股東會表決）；國會版 AI 安全法案觸發門檻曝光（50 人死亡或 10 億美元損害，經查與加州 SB 53 定義一致）；第三方編碼平台 OpenCode 主控台外洩可能波及 Claude API 金鑰並拖累帳戶餘額；Claude Code 多則 Windows／Desktop 穩定性回報互動數創高（CVP 誤擋 201 留言為本日全站最高）。
+- 呈現品質：全部通過（`ingest_gate.py` 9 道內容閘全綠；過程中修正 3 筆字元上限超限儲存格——entities/claude-code.md 2 筆、topics/anthropic-business.md 1 筆，community-multi-agent.md 1 筆記者自行於機械自查後修正）
+- 分類回退：2 筆，1 筆同輪已由原輪處理、1 筆補派無寫入——
+  - [安全政策→社群] 犯罪礦工軼事兩則（The Mac Observer／Tom's Hardware）：查 `data/classification-log.jsonl` 該組已含「社群」類別且社群記者本輪已處理（判定不收），不追加派工
+  - [分類複核→功能] Reddit「Claude Code Desktop bypass permissions 新增對話內彈窗」：原排除理由「0 留言非新聞事件」，複核記者判定應派功能記者評估；3c 補派後功能記者維持不收錄（純 Reddit 來源、0 留言、無跨來源佐證，判斷為噪音非確認的功能行為異動，且本則本身即唯一來源不具懸置標記偵測力）
+- 轉知帳本：新開 H-0a5cb5（社群→功能，`entities/claude-code`：Tmux 文章提及 `claude --worktree --tmux` 內建功能，請評估 official-community-gap 矩陣）；新開 H-2ed7e9（社群→人物，`entities/linus-torvalds`：The New Stack 10-19 追蹤報導待同步）；不登帳：安全政策記者轉知商業記者關於 entities/opencode.md 的提醒，同輪已由商業記者獨立處理（其原始派工包本就含同一則 36Kr 報導），無需另開罰單
+- devpractice 沉澱：本日無開發實務分類派工包，未派工
+- market 判讀：新增 2 則（Public Benefit Fund 股權承諾；AI 安全法案門檻曝光），均為 ⚖️ 兩面訊號；到期複查 3 筆（Meta/Microsoft 內部用量限縮、Pentagon 停用範圍、PitchBook 估值區間）今日日報未見後續，逾期交 `/wiki-lint` 處理
+- 主編查證：market 記者提出 AI 安全法案「50 人死亡或 10 億美元損害」門檻數字是否有官方法案文本可查；主編以 WebSearch 核對，該門檻與加州 SB 53「災難性風險」法定定義完全一致（Anthropic 已公開背書該州法案），但未查得對應聯邦法案文本，無法確認 Yahoo／Mashable 報導的聯邦遊說是否即沿用 SB 53 定義或另有新草案；已於 `topics/anthropic-government-policy.md` 10-19 細節區補一筆查證備註，不下定論
