@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-18"
-last_news_update: "2026-10-18"
+last_updated: "2026-10-19"
+last_news_update: "2026-10-19"
 status_main: "active"
 days_since_news: 0
 parent: null

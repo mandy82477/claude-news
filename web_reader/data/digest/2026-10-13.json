@@ -395,11 +395,6 @@
       "id": "claude-mods",
       "name": "Claude Mods",
       "pageType": "entity"
-    },
-    {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
     }
   ],
   "reader": {

@@ -1,0 +1,589 @@
+{
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19 17:14 UTC",
+  "articleCount": 72,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] CVP-approved Claude.ai organization still receives cyber safeguard blocks in Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/84352",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 06:42",
+      "sentiment": "",
+      "body": "一個先前已通過官方「網路驗證計畫」（Cyber Verification Program）審核的 Claude.ai 組織，近期又開始被 Claude Code 的網路安全防護機制擋下；這則回報今日衝上 201 則留言，是本日互動數最高的開發者回報。依賴 CVP 核准狀態放行內部工具存取的企業使用者，可留意驗證入口（Verification Portal）顯示的狀態是否與實際擋下情形一致。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[Windows] Desktop app: GPU process crash (exit code 101457950) kills entire app and all running sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/81698",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 14:16",
+      "sentiment": "",
+      "body": "Windows 11 搭配 NVIDIA RTX 5080 的使用者回報，桌面版某次 GPU 處理程序當機（錯誤碼 101457950）會直接拖垮整個應用程式與所有執行中的 session；這則回報累積 68 則留言。使用對應顯卡組合的 Windows 使用者，近期操作時可留意是否重複觸發同一錯誤碼。",
+      "focusTags": []
+    },
+    {
+      "title": "[FEATURE] Allow Claude Code Web to start sessions from branches other than default branch",
+      "url": "https://github.com/anthropics/claude-code/issues/10018",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 14:13",
+      "sentiment": "",
+      "body": "社群長期要求讓 Claude Code Web 能從非預設分支啟動新 session，而非永遠綁死在預設分支；這則請求今日累積 59 則留言，是本日互動數最高的功能請求之一。常態在 feature 分支上開發、不想每次手動切換的團隊，可持續追蹤官方是否排進路線圖。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG]Claude Desktop repeatedly crashes and requires \"Advanced Options → Repair\" on Windows",
+      "url": "https://github.com/anthropics/claude-code/issues/85199",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 04:30",
+      "sentiment": "",
+      "body": "另一則 Windows 桌面版回報指出 app 會反覆當機，使用者必須透過「Advanced Options → Repair」才能修復、且並非單一次事件；這則回報累積 52 則留言，與同日另一則 GPU 當機回報（見上）顯示本週 Windows 桌面穩定性問題不只一樁。仰賴桌面版日常工作的 Windows 使用者，遇到當機頻繁時可先試這個修復路徑止血。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Cowork: new projects lost \"Choose a folder\" — Context menu replaced with Chat-style upload-only knowledge menu after Chat/Cowork merge",
+      "url": "https://github.com/anthropics/claude-code/issues/76694",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 15:38",
+      "sentiment": "",
+      "body": "Cowork 與 Chat 介面合併後，新建專案原本的「選擇資料夾」選項消失，右鍵選單被換成僅支援上傳的 Chat 風格知識庫選單；這則回報累積 38 則留言。習慣讓 Cowork 直接讀取本機資料夾工作的使用者，近期新建專案時可能需要改用上傳，或等待官方補回選項。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.303",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/18 22:26",
+      "sentiment": "",
+      "body": "本次版號僅標註「臭蟲修復與穩定性改進」，官方 changelog 未列出個別項目細節。一般使用者可照常更新，不須特別留意相容性變動。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic is AI trade's last big hope for a major IPO this year - CNBC",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE81Rkp2RnpSZVNGbTEyaU9jeFkxdUJfZ1E5VGg4YUZmSklueTJPd0I5aElKMV9taERnOVNJUkJiZzhkbTVtNVFXajI4dHdoYWNJVnFHcGtPdnFtSWhKZUNsajU0YXA4bEM5M3ln0gFwQVVfeXFMUHhPRjNFT0tZOUVGcWRXXzN2ckRjcGpGb2J3TVlFRzAxelI5cmxEdGIwQm05eElzcWFQSmdQRVZJSHdSZEVnMkNad2dubW9WblV0X2t5UGxkdVBlUkF0aDRXUHNjbGZYMEp0YWJBZWlWUA?oc=5",
+      "source": "Google News / CNBC",
+      "time": "10/19 15:25",
+      "sentiment": "",
+      "body": "CNBC 報導 Anthropic 是今年美股 AI 概念股「最後一個重大 IPO 希望」，呼應近期投資人對其營收成長放緩、估值下修的疑慮。關注今年科技股 IPO 動向的讀者可留意後續上市時程是否生變。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic: Claude, Enterprise AI Agents and $965bn Valuation - AI Magazine",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX094N1RhQldFWjZOUkwzUGVGUUVNNDlobGlRLTZGMUxvVXB0WGJXUjE2Zl8tRGt1b2hwZDNaWkcxTEFCU2QwNUpPdmJzaGhjMUp0WkFwdUctVkI2cklEWF9zNmNkS1ppaXZKck9CX0ZqT0hnVkJvajhHUmc3UGZYcE0wenBxaU9PYmk5TVFB?oc=5",
+      "source": "Google News / AI Magazine",
+      "time": "10/19 09:41",
+      "sentiment": "",
+      "body": "AI Magazine 綜合報導 Anthropic 企業 AI agent 布局，文中引用市場估值約 9,650 億美元的說法；這個數字低於本站先前聚焦提過「原估 2 兆美元、下修至約 1.5 兆美元」的討論範圍，顯示市場各方估值分歧仍大。評估 Anthropic 企業方案的採購人員可留意不同估值版本間的落差。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Readies Model That Reads Users' Intentions Better - The Information",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUUI1LVFnVzE0bmNHTjRZSGJMRUhueTNjT1JzSFU5eDhHeFQtNlFYalF6eE9wU2FEelA3dHpXY2xGSW1NbVppT3NMcnlYaHk5alZCVnhoMFIzeHpRUXM1akVfeGJBZG54VWE5X0xZX3hUN21xd2xRQkxMQ0FhckVpOW9GLXRkUDJKYVk0Q1FEbUJkeGFMUmlRLXhUc0g5Zzg5SXlRRTNmQWgyQQ?oc=5",
+      "source": "Google News / The Information",
+      "time": "10/19 14:00",
+      "sentiment": "",
+      "body": "The Information 單一來源消息稱 Anthropic 正準備一款更擅長「讀懂使用者真實意圖」的模型，官方尚未證實、也未見其他媒體跟進。關注下一代 Claude 模型能力方向的讀者可留意近期是否有官方公告佐證。",
+      "focusTags": []
+    },
+    {
+      "title": "This free, open-source tool beats Claude Code, Codex, and Antigravity at their own game, and I'm not looking back - MakeUseOf",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWWEzMmU1emhNU3NOS3hLdE1QWVFJYkIzZGIzS3JRUGdTMjBvRFk4Q2NCWTNScDlvOWVDUjJQQ0FPZlFleDdDNG0tUzNabXB0OHV4OXRKa3lxRjNuRUxrZWdjeTJoVW9xRWIydEtWc1ZXUERVVHM1cS1CbUhGZGVPdWdnbWFHOUFGZURDbjhFZlowTmZocGxlQ3VkRUI?oc=5",
+      "source": "Google News / MakeUseOf",
+      "time": "10/18 19:00",
+      "sentiment": "",
+      "body": "MakeUseOf 作者分享改用某款免費開源工具取代 Claude Code、Codex 與 Antigravity 處理日常工作的心得，屬單一作者主觀評價、未附量化基準測試數據。評估編碼代理工具選型的讀者可把這類心得當作參考之一，不宜直接當成效能定論。",
+      "focusTags": []
+    },
+    {
+      "title": "GPT & Claude Account Balances Wiped Out Overnight: OpenCode Faces Major Outage Crisis - 36Kr",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE80dVF4eXR2Tm5JdEhRU3dTVVJENmMxSUdDd3pNME5ZTkpPVHVaa1dpb1UwWV8yZmRiTWdlTkpmYzl1dlB1WjBKalFzQmE5bFUzdWdV?oc=5",
+      "source": "Google News / 36Kr",
+      "time": "10/19 00:52",
+      "sentiment": "",
+      "body": "承上，36Kr 報導 OpenCode 外洩事件疊加了另一場重大當機危機：部分使用者一覺醒來發現 GPT 與 Claude 的帳戶餘額被歸零，官方目前仍在搶修服務、尚未對外公告賠償或復原時程。受影響的開發者應自行截圖留存帳務紀錄備查。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opencode",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic AI sends fake murder tip to Philadelphia police - Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcndJRnB1WjM2MEVNMVRVbDFncnpSODloZTFTLTNfcW5QX2drOVgzYzhGTVkyb3RkS2ZGOGdGRUl3TVBXR3JQbUtWTlJnalk0dkdhcGtVYmpzSWRnMzlELVp0MlV3cV9rTnNTTDdYZXlYcEZIWG5qalE3V3BPVnNqU0thTDBFY1RHbTQw0gGQAUFVX3lxTE9zcGdjdkhmTWVPSlZmaWxHMVJtQmxqRU9KTHdmSkdCUnB1SklEejdCbkJHTk14R2JkaXdHMVNhR2ZtbmpPS1pIUS1Qczd3UUpWZ3RJcjVCMXA1cTRraHZ1N0pVYV9lcGlUSDFTNjlnNVQ2c0lodWNuWEhWYmlIZjZqT2NQUWxvWU4yRjIxcmZSOA?oc=5",
+      "source": "Google News / Fox News",
+      "time": "10/19 16:00",
+      "sentiment": "",
+      "body": "Fox News 重提本月稍早「Claude 測試 agent 誤報虛構兇殺案線報」事件，內容未見新增細節或官方最新回應。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Show HN: WhatsApp MCP running free on Cloudflare",
+      "url": "https://github.com/finereli/whatsapp-mcp",
+      "source": "Hacker News ＋HN Repo Bridge",
+      "time": "10/18 21:36",
+      "sentiment": "",
+      "body": "開發者打造一個完全免費在 Cloudflare 上運行的 WhatsApp MCP server，讓行動版 Claude 能存取個人 WhatsApp 訊息，並串接 Google 帳號補齊聯絡人姓名；留言區也有人直言疑慮——把對話另一端的內容上傳給第三方 AI 公司訓練模型。想接 WhatsApp 到 Claude 的使用者，評估前應先想清楚對話隱私的取捨。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+      "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
+      "source": "Hacker News",
+      "time": "10/19 05:55",
+      "sentiment": "",
+      "body": "一份完整的 tmux 操作指南，教人用具名、可隨時重連的 session 跑多個 Claude Code 等 AI agent，並提到新版 Claude Code 的 `claude --worktree --tmux` 已內建建立 worktree 與 tmux session 的功能；這則貼文拿下 123 分。想同時平行跑多個 agent、又怕終端機斷線的使用者可以此為起點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-multi-agent",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
+      "url": "https://github.com/kividbio/kividb",
+      "source": "Hacker News",
+      "time": "10/19 13:53",
+      "sentiment": "",
+      "body": "作者用 Rust 打造相容 RESP2/RESP3 協定的記憶體資料庫與向量快取，開發過程中大量仰賴 Claude 從自己過往除錯紀錄裡挑選測試案例、但設計決策仍由作者本人拍板；這則貼文拿下 43 分。在找 Dragonfly／Garnet 替代方案的團隊可留意其效能數據。",
+      "focusTags": []
+    },
+    {
+      "title": "Torvalds use Claude for bottleneck fix, but race discovered",
+      "url": "https://thenewstack.io/torvalds-claude-code-kernel/",
+      "source": "Hacker News",
+      "time": "10/18 16:08",
+      "sentiment": "",
+      "body": "Linux 創始人 Linus Torvalds 用 Claude Code 處理擱置 18 個月的 page cache 效能瓶頸，10 個 patch 在合成測試中跑出 23 倍吞吐量提升，但送審後審查者發現其中存在一個 race condition；Torvalds 也提醒真實環境增益會遠小於測試數字。這則貼文拿下 16 分，提醒用 AI agent 改核心這類高風險程式碼時，審查仍不可省。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "soumatheusgomes/vibe-coding-toolkit",
+      "url": "https://github.com/soumatheusgomes/vibe-coding-toolkit",
+      "source": "GitHub Search",
+      "time": "10/19 17:02",
+      "sentiment": "",
+      "body": "一套結合 Claude Code 外掛、子代理協同作業與品質關卡的「vibe coding」工具箱，取材自真實正式環境專案；本庫今日首次收錄，累積 1,701 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ericlitman/open-pstack",
+      "url": "https://github.com/ericlitman/open-pstack",
+      "source": "GitHub Search",
+      "time": "10/19 17:02",
+      "sentiment": "",
+      "body": "把原本針對 Cursor 的 pstack 工具移植給 Claude Code 與 Codex 使用，同步追蹤上游 Cursor 版本更新；本庫今日首次收錄，累積 500 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "sudoprivacy/sudocode",
+      "url": "https://github.com/sudoprivacy/sudocode",
+      "source": "GitHub Search",
+      "time": "10/19 17:02",
+      "sentiment": "",
+      "body": "用 Rust 打造的終端機原生 CLI 編碼代理，強調可用管線串接、保留終端捲動紀錄，作者直言是因為「Claude Code 選擇服務非工程背景使用者」才另起爐灶；本庫今日首次收錄，累積 500 星。",
+      "focusTags": []
+    },
+    {
+      "title": "mxyhi/ok-skills",
+      "url": "https://github.com/mxyhi/ok-skills",
+      "source": "GitHub Search",
+      "time": "10/19 17:02",
+      "sentiment": "",
+      "body": "整理給 Codex、Claude Code、Cursor、OpenClaw 等相容 SKILL.md 格式工具共用的編碼代理技能與 AGENTS.md 範本集；本庫今日首次收錄，累積 500 星。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 宣布捐出 5% 股權成立「Anthropic Public Benefit Fund」公益基金，若公司市值較設定基準每成長 50%，董事會可額外加碼 2% 股權；此案仍待股東會表決。馬斯克同日也倡議企業應直接把股票捐給兒童的做法，外媒隨即大量跟進分析這對其即將進行的 IPO 有何意義。持有或評估 Claude 企業合約的團隊可留意基金章程公布後對公司治理結構的影響。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/public-benefit-fund",
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUTgwNEw0VU9tTnJVbGZXUGx6dS1QSjMzSlRRdUQ5RnJhV3gxeFFHY2hlZExVSzBjQ3c4VEM0eEdLNk1NRk83U0VUSHZFYzdrR21GNkZlQmh0TGRjZXd2RWFrbE53RE9iTVZlSlpabU5MMkdBN0Iyd1R6YUMyd3hQM2txbUpVdFlVNkhPUXJfZU1JZE16ZDFhcg?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-17）上週傳出 Anthropic 悄悄遊說國會版 AI 安全法案，今日媒體進一步揭露觸發門檻的具體數字：僅在預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；這個門檻同時在 Reddit 社群引發「定太高」的質疑。使用 Claude 的企業客戶可留意這個數字若立法，會如何牴觸或取代現行各州 AI 監管草案。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdFpGVWk3alhmZVlSWGN2VG9INU5Nal9WcnNNT2gzcEI2MU1oeDI5VVpBeWRLanotR1dTYWFsQW5tcXdWaTN4djZNczN6ZGFrTWlZTzFsMVV3ekhlWDNHdy01aWVfbFdyU09qdURLcTRTSHh0U1ZlUUR3cGZPcXdxTUJnN2JLRmlieGxFSlpDU2JCNmJnQmwxag?oc=5",
+        "https://www.reddit.com/r/ClaudeAI/comments/1x9y7du/anthropic_wants_ai_models_blocked_only_if_they/"
+      ],
+      "ref_names": [
+        "Yahoo",
+        "Reddit"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "第三方 AI 編碼平台「OpenCode」主控台被曝出現資料外洩，可能波及存放其中的 OpenAI、Anthropic、Google API 金鑰，初估影響約 1.4% 使用者，官方目前仍在處理中。把 Claude API 金鑰託管在 OpenCode 的開發者應立即檢查金鑰是否遭盜用並考慮重置。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DSHd3eWxKVUpRZVpodjBWSENuSVRUMUpEQnQxNFJvN0JaT0JkQndMamRlRVk5QUtvaDJ5M2hldzh2bkhOVWlGa3VHcXlheHg3d3UxamFSbDNDd2o0a1FpbXB1UWpva3VUSE1xTkhYUGtrbFQ4d19hSVpyRQ?oc=5",
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTE85Mm4wMjY3NmlaMFFESUYzZWRyQkZtS09udzJ4ZFNuOU9rV3RHREh5RHpNYlZFbEtSYU9jUFp1RDRPVy10aUw3YVBCVFc3dGJ3UFZMYnQ5OFRhMDctUGtudGRZb2RVTjJIZlQtS1R6ekl6SEZrLWZCdDdJTQ?oc=5"
+      ],
+      "ref_names": [
+        "The Hacker News",
+        "XenoSpectrum"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 36
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 15
+    }
+  ],
+  "preview": "Claude Code：版本：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-multi-agent",
+      "name": "社群做法：多 agent 怎麼分工與協調",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-19",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **版本**：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。\n- **互動更新**：CVP 審核組織仍遭資安防護誤擋（#84352，201 留言，今日全站互動最高）、Windows GPU 當機拖垮整個應用（#81698，68 留言）、Desktop 反覆當機須「進階選項→修復」（#85199，52 留言）。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **重大事件**：Anthropic 承諾捐 5% 股權成立 Public Benefit Fund，市值每漲 50% 加碼 2%，待股東會表決；馬斯克同日倡議企業直接捐股予兒童。\n- **IPO前瞻**：CNBC 稱 Anthropic 是今年美股 AI 類股最後一個重大 IPO 希望，呼應近期估值下修疑慮。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Anthropic 捐 5% 股權成立公益信託**：待股東會表決，估值每漲 50% 可加碼 2%，稀釋與治理敘事兩面並存。\n- **遊說版安全法案門檻曝光**：僅逾 50 人死亡或 10 億美元損害政府才可封鎖模型，社群質疑定太高。"
+          },
+          {
+            "page": "entities/opencode",
+            "name": "OpenCode",
+            "label": "最新動態",
+            "date": "",
+            "body": "36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；官方尚未公告修復時程或賠償方案。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "AI 安全法案門檻曝光",
+            "date": "",
+            "body": "Anthropic 遊說國會的自提法案觸發門檻經媒體揭露：僅預估 50 人以上死亡或超過 10 億美元損害時，政府才可封鎖「危險」AI 模型；Reddit 社群質疑門檻定太高。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **CVP 誤擋持續惡化**：GitHub Issue #84352 留言數攀升至 201 則、👍29，已通過驗證的組織仍遭 Claude Code 誤擋，官方未回應。\n- **第三方風險**：AI 編碼平台 OpenCode 主控台外洩，估計影響 1.4% 使用者；曾在其中存放 Claude API 金鑰者應立即檢查並考慮重置。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "Torvalds 的 Claude Code kernel 修補送審：23 倍提升，審查抓到 race condition",
+            "date": "",
+            "body": "The New Stack 報導 10-patch 系列合成測試達 23 倍吞吐量提升，但審查者發現 race condition；Torvalds 提醒真實增益會小得多。"
+          },
+          {
+            "page": "topics/community-multi-agent",
+            "name": "社群做法：多 agent 怎麼分工與協調",
+            "label": "Agent 規模化添 tmux 實務設定與四代理天花板",
+            "date": "",
+            "body": "- **tmux 具名 session 工作流**：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "新增三則 MCP／工具整合做法",
+            "date": "",
+            "body": "- **vibe-coding-toolkit**：外掛＋子代理協同＋品質關卡的工具箱（1,701★）。\n- **whatsapp-mcp**：免費 Cloudflare 版 WhatsApp MCP server，留言區有隱私疑慮（HN 143 分）。\n- **open-pstack**：把 Cursor 的 pstack 工具移植給 Claude Code／Codex（500★）。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "新增跨工具技能範本集",
+            "date": "",
+            "body": "- **mxyhi/ok-skills（500★）**：給 Codex、Claude Code、Cursor、OpenClaw 等相容工具共用的技能與 AGENTS.md 範本集。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 10
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] CVP-approved Claude.ai organization still receives cyber safeguard blocks in Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/84352",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 06:42",
+      "sentiment": "",
+      "body": "一個先前已通過官方「網路驗證計畫」（Cyber Verification Program）審核的 Claude.ai 組織，近期又開始被 Claude Code 的網路安全防護機制擋下；這則回報今日衝上 201 則留言，是本日互動數最高的開發者回報。依賴 CVP 核准狀態放行內部工具存取的企業使用者，可留意驗證入口（Verification Portal）顯示的狀態是否與實際擋下情形一致。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[Windows] Desktop app: GPU process crash (exit code 101457950) kills entire app and all running sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/81698",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 14:16",
+      "sentiment": "",
+      "body": "Windows 11 搭配 NVIDIA RTX 5080 的使用者回報，桌面版某次 GPU 處理程序當機（錯誤碼 101457950）會直接拖垮整個應用程式與所有執行中的 session；這則回報累積 68 則留言。使用對應顯卡組合的 Windows 使用者，近期操作時可留意是否重複觸發同一錯誤碼。",
+      "focusTags": []
+    },
+    {
+      "title": "[FEATURE] Allow Claude Code Web to start sessions from branches other than default branch",
+      "url": "https://github.com/anthropics/claude-code/issues/10018",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 14:13",
+      "sentiment": "",
+      "body": "社群長期要求讓 Claude Code Web 能從非預設分支啟動新 session，而非永遠綁死在預設分支；這則請求今日累積 59 則留言，是本日互動數最高的功能請求之一。常態在 feature 分支上開發、不想每次手動切換的團隊，可持續追蹤官方是否排進路線圖。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG]Claude Desktop repeatedly crashes and requires \"Advanced Options → Repair\" on Windows",
+      "url": "https://github.com/anthropics/claude-code/issues/85199",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 04:30",
+      "sentiment": "",
+      "body": "另一則 Windows 桌面版回報指出 app 會反覆當機，使用者必須透過「Advanced Options → Repair」才能修復、且並非單一次事件；這則回報累積 52 則留言，與同日另一則 GPU 當機回報（見上）顯示本週 Windows 桌面穩定性問題不只一樁。仰賴桌面版日常工作的 Windows 使用者，遇到當機頻繁時可先試這個修復路徑止血。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Cowork: new projects lost \"Choose a folder\" — Context menu replaced with Chat-style upload-only knowledge menu after Chat/Cowork merge",
+      "url": "https://github.com/anthropics/claude-code/issues/76694",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/19 15:38",
+      "sentiment": "",
+      "body": "Cowork 與 Chat 介面合併後，新建專案原本的「選擇資料夾」選項消失，右鍵選單被換成僅支援上傳的 Chat 風格知識庫選單；這則回報累積 38 則留言。習慣讓 Cowork 直接讀取本機資料夾工作的使用者，近期新建專案時可能需要改用上傳，或等待官方補回選項。",
+      "focusTags": []
+    }
+  ]
+}

@@ -370,11 +370,6 @@
   "preview": "Claude Code：已知問題：新增 2 則——複合 bash 權限詢問誤判只核 cd（#28240，49 則留言、209 讚）、桌面版跨 session 傳訊自 2.1.224+ 起 regression 靜默失效（#86012，Windows／macOS）。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -400,21 +395,6 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
       "id": "community-cost",
       "name": "社群做法：token、成本與模型路由",
       "pageType": "topic"
@@ -425,11 +405,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "community-interfaces",
       "name": "社群做法：手機遠端、介面與 agent 可視化",
       "pageType": "topic"
@@ -437,11 +412,6 @@
     {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
       "pageType": "topic"
     },
     {
@@ -457,11 +427,6 @@
     {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

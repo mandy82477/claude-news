@@ -12,8 +12,8 @@ children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 130
-attribution_count: 256
-attribution_last: "2026-10-18"
+attribution_count: 260
+attribution_last: "2026-10-19"
 top_source: "google-news"
 pending_count: 26
 pending_overdue: 0

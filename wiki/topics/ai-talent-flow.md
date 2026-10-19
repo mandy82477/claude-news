@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-10-17"
 last_news_update: "2026-10-05"
 status_main: "ongoing"
-days_since_news: 13
+days_since_news: 14
 parent: null
 children: "['topics/ai-talent-flow-archive']"
 page_role: "hub"
-days_since_news_subtree: 13
+days_since_news_subtree: 14
 inbound_links: 22
 attribution_count: 25
 attribution_last: "2026-10-05"

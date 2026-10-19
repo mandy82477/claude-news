@@ -25,11 +25,6 @@
       "pageType": "entity"
     },
     {
-      "id": "opencode",
-      "name": "OpenCode",
-      "pageType": "entity"
-    },
-    {
       "id": "community-tech-timeline",
       "name": "社群技術應用趨勢時序",
       "pageType": "topic"
