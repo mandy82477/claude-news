@@ -3,24 +3,24 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-19"
-last_news_update: "2026-10-19"
+last_updated: "2026-10-20"
+last_news_update: "2026-10-20"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
-inbound_links: 4
-attribution_count: 10
-attribution_last: "2026-10-19"
+days_since_news_subtree: 0
+inbound_links: 2
+attribution_count: 11
+attribution_last: "2026-10-20"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 社群做法：Skills 怎麼寫

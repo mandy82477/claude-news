@@ -12,7 +12,7 @@ parent: null
 children: "['entities/claude-skills-archive']"
 page_role: "hub"
 days_since_news_subtree: 22
-inbound_links: 8
+inbound_links: 7
 attribution_count: 13
 attribution_last: "2026-09-28"
 top_source: "github"

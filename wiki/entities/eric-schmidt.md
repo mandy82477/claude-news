@@ -1,3 +1,29 @@
+---
+page: "entities/eric-schmidt"
+kind: "entity"
+type: "person"
+status: "active（單一來源）"
+domain: "👤 人物"
+last_updated: "2026-10-20"
+last_news_update: "2026-10-20"
+status_main: "active"
+days_since_news: 0
+parent: null
+children: "[]"
+page_role: "root"
+days_since_news_subtree: 0
+inbound_links: 0
+attribution_count: 3
+attribution_last: "2026-10-20"
+top_source: "google-news"
+pending_count: 0
+pending_overdue: 0
+pending_next_review: null
+pending_signalled: 0
+staleness_exempt: null
+signal: "孤島"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Eric Schmidt
 
 **類型：** person

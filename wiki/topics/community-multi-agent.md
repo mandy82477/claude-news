@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 6
+inbound_links: 5
 attribution_count: 3
 attribution_last: "2026-10-19"
 top_source: "github"

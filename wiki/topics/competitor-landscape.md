@@ -3,14 +3,14 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-18"
-last_news_update: "2026-10-18"
+last_updated: "2026-10-20"
+last_news_update: "2026-10-20"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 73
 attribution_count: 199
 attribution_last: "2026-10-18"

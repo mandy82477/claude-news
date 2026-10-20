@@ -4,14 +4,14 @@ kind: "entity"
 type: "feature"
 status: "active（v2.1.287 起正式發布，預設開啟）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-13"
-last_news_update: "2026-10-13"
+last_updated: "2026-10-20"
+last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 7
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 7
+days_since_news_subtree: 0
 inbound_links: 4
 attribution_count: 6
 attribution_last: "2026-10-13"
