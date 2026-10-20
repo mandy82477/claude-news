@@ -7929,3 +7929,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-2ed7e9（人物，linus-torvalds 頁補完整報導細節）；新開 H-2b9347（安全政策→功能，overreach rate 後續完整報告是否需補官方功能頁）；不登帳：商業記者提醒 Citrini Research 一案轉知投資分析記者，因 4c 同輪已直接讀取六類包檔原文，當輪即處理完畢，無需另開轉知票；功能記者轉知 H-0a5cb5（tmux 整合）本輪仍查無今日佐證，維持 open 待下一輪
 - devpractice 沉澱：本日無開發實務分類派工包，未派工；手冊正文寫入 0 則
 - market 判讀：新增 1 則（Nscale 第二筆算力合約規模 ▸ 第 2 則，⚖️ 待簽署訊號，複查日 2026-11-03）；其餘 62 則條目逐一套用六類判準後皆不構成「新資訊且動到 S-1 數字」
+- 更正（同日）：上方「devpractice 沉澱」一行誤判為「本日無開發實務分類派工包，未派工」——devpractice 記者應每日無條件派工（分類包僅影響是否貼入官方使用指南內容，不影響是否派工），已補派並完成：基準線 6cdddd8950 → 8e8e8314d0，候選 9 筆（entities/claude-mods、entities/linus-torvalds、topics/ai-agent-safety、topics/anthropic-business、topics/community-integrations、topics/community-skills、topics/community-tech-discussions、topics/skill-interest-watch ×2）留待週更落地；手冊正文本輪寫入 0 則（今日無分類層派發的開發實務官方使用指南條目）
