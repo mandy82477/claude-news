@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-18）
+> **本週衝擊**（2026-10-20）
 > - 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。
 > - 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
@@ -238,6 +238,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-20
+- **Microsoft／GitHub**：Copilot 新推出四模型組合，報導稱正拉近與 Cursor 的差距；具體模型清單與對比數字未見報導，僅標題可用（Google News/tech-insider.org；Topic Watch/competitor-landscape）
+
+### 2026-10-19
+- **Microsoft／GitHub**：Copilot 新增 REST API，供企業、企業團隊、企業應用與組織查詢並更新模型使用政策（GET／PATCH 端點）；屬企業治理功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：09-19 預告之部分 Copilot 模型停用今日正式生效，涵蓋 Chat、inline edits、ask／agent 模式與程式碼補全，完整型號清單見官方 changelog；詳見「對手雷達」Microsoft／GitHub 列（Blog/GitHub Copilot Changelog）
 
 ### 2026-10-18
 - **ForgeCode（分析文，廠商自宣）**：Startup Fortune 報導 ForgeCode 宣稱效能勝過 Claude Code 與 Codex，但細則另有保留；具體數字與測試方法未見報導，僅標題可用，不列入「對手雷達」表（Google News/Startup Fortune；Topic Watch/competitor-landscape）

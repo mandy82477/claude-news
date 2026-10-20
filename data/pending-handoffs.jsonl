@@ -296,3 +296,5 @@
 {"id": "H-280b61", "closed": "2026-10-18", "status": "done", "by": "功能", "result": "功能記者 2026-10-18 ingest 回報已處理"}
 {"id": "H-0a5cb5", "opened": "2026-10-19", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Tmux and Claude Code 一文提及新版 Claude Code 已內建 claude --worktree --tmux（一次建立 worktree 與 tmux session），建議評估是否已入官方功能清單／official-community-gap 矩陣（來源：Hacker News 2026-10-19，https://crystl.dev/guides/tmux-for-ai-agents/）", "status": "open"}
 {"id": "H-2ed7e9", "opened": "2026-10-19", "from": "社群", "to": "人物", "page": "entities/linus-torvalds", "note": "The New Stack 2026-10-19 追蹤報導：Torvalds 用 Claude Code 修 page cache 瓶頸，10-patch 系列合成測試 23 倍吞吐量提升，審查發現 race condition；建議同步人物頁", "status": "open"}
+{"id": "H-2ed7e9", "closed": "2026-10-20", "status": "done", "by": "人物", "result": "linus-torvalds 頁補上 2026-10-19 The New Stack 完整報導細節；既有 ⟨36Kr 3x 效能提升⟩ 待查證標記因量測口徑不同，證據不足以作為後續，依規定不標訊、不動標記"}
+{"id": "H-2b9347", "opened": "2026-10-20", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "The New Stack 2026-10-20 報導：系統提示詞加一句話使 Claude Code 越界操作率從 0% 升至 17.1%（僅標題可用，無完整細節）；建議留意後續完整報告是否需在 claude-code.md 或官方功能頁補充 agent 權限邊界相關內容", "status": "open"}

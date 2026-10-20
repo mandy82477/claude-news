@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **Torvalds 的 Claude Code kernel 修補送審：23 倍提升，審查抓到 race condition**（2026-10-19）
-> The New Stack 報導 10-patch 系列合成測試達 23 倍吞吐量提升，但審查者發現 race condition；Torvalds 提醒真實增益會小得多。
+> **Show HN：無人值守軟體工廠骨架自稱省 80% token 成本**（2026-10-20）
+> gojko/lights-on-software-factory 釋出基於 Votito 實戰經驗的編排器骨架；作者稱比純 Claude 工作流節省約 80% token 成本，留言追問多 agent 情境下憑證如何分配。
 
 ---
 
@@ -153,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN: gojko/lights-on-software-factory——無人值守軟體工廠骨架自稱省 80% token 成本 | 2026-10-20 · 2026-10-20 | 🔥 | ☄️閃現 | 作者釋出基於 Votito 實戰經驗的編排器骨架，聲稱較純 Claude 工作流省約 80% token 成本；留言追問多 agent 憑證如何分配；HN 15 分（2 個來源） | — |
 | StarSkirmish Bench 更新：讓 LLM 寫程式對戰《星海爭霸》，納入 OpenAI／Anthropic／Google／Meta 旗艦模型 | 2026-10-16 · 2026-10-16 | 🔥🔥🔥 | ☄️閃現 | 開發者更新基準測試，比較四家旗艦模型寫 Protoss bot 對戰戰力；HN score 228（2 來源） | — |
 | Anthropic 工程部落格「重新設計原始碼控制」系列話題：Scion／Mononoke 爭議落幕 | 2026-10-13 · 2026-10-16 | 🔥🔥🔥🔥🔥 | 🌸落幕 | 10-16 Anthropic 員工 Nick G. 在 HN 回應並補上歸因，原作者確認歸因已足夠、仍堅持原始技術觀察 | — |
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
@@ -262,6 +263,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-10
+
+#### Show HN: gojko/lights-on-software-factory——無人值守軟體工廠骨架自稱省 80% token 成本（2026-10-20）
+
+- **來源：** Show HN: Lights-on software factory boilerplate for Claude Code — Hacker News（15 分，2 個來源）；[原文](https://github.com/gojko/lights-on-software-factory)
+- **核心論點：** 作者釋出以 Votito 專案實戰經驗為基礎的「無人值守軟體工廠」骨架，供 Claude Code 使用；聲稱其編排器相較純 Claude 工作流執行，token 成本降低約 80%。
+- **關鍵回響：**
+  - 📝 追問：留言詢問多個 agent 需要不同存取權限時，憑證與外部 API 存取如何分配（暫無作者回覆紀錄）。
+- **收斂結論：**（無）單一作者釋出之骨架專案，80% 成本降低為作者自述，未見第三方量測方法或程式碼層級驗證，暫記為個案觀察。
 
 #### The New Stack 追蹤報導：Torvalds 10-patch 系列合成測試 23 倍吞吐量提升，但審查發現 race condition（2026-10-19）
 

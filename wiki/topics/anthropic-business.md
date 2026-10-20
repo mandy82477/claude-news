@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **最新動態**（2026-10-19）
-> - **重大事件**：Anthropic 承諾捐 5% 股權成立 Public Benefit Fund，市值每漲 50% 加碼 2%，待股東會表決；馬斯克同日倡議企業直接捐股予兒童。
-> - **IPO前瞻**：CNBC 稱 Anthropic 是今年美股 AI 類股最後一個重大 IPO 希望，呼應近期估值下修疑慮。
+> **最新動態**（2026-10-20）
+> - **戰略合作**：Anthropic 傳與 Nscale 洽談第二筆雲端合作，規模同樣約 450 億美元，尚未定案（CNBC／Reuters／Bloomberg）。
+> - **公司治理**：前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權於 IPO 前曝光，潛在報酬可觀（Bloomberg／Quartz／Reuters）。
 
 ---
 
@@ -379,7 +379,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|
-| Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論 | 第一方 API 與訂閱席次不受影響 | 2026-09-30 |
+| Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論；新增 structured outputs 支援 | 第一方 API 與訂閱席次不受影響 | 2026-10-20 |
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 | Google Cloud／Vertex AI | 費率由 Google 自訂，與第一方牌價不同；功能可用性看官方平台頁 | — | 2026-09-03 |
 | Enterprise Frontier Safeguards（AWS／Google Cloud／Azure 三雲） | 企業客戶資料改存在自己控制的雲端，EFS 免費，2026 秋季起分階段開放 | 個人 Pro／Max 不在範圍內 | 2026-09-01 |
@@ -396,6 +396,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Emory University**（2026-10-19）：Claude AI 正式開放予 Emory 大學社群使用，具體導入規模與產品線未見報導（Google News/Emory University）
 - **Anthropic（新加坡辦公室）**（2026-10-14）：於新加坡開設亞太區第五個辦公室，並與新加坡數位發展與資訊部簽署 MOU；官方點名 GovTech Singapore、Grab、DBS 為既有 Claude 使用方，具體採用規模與產品線未見報導（Anthropic Blog）
 - **Tenth Revolution Group**（2026-10-14）：取得 Claude Partner Network「Select」夥伴資格，延續 Fabric（09-28）、IPC Global（10-05）、Nimble.LA（10-06）、Intuitive.ai（10-07）同系列夥伴認證，具體權益未見報導（Google News/HRTech Series）
 - **Aditi Consulting**（2026-10-08）：達成 Anthropic「Select Tier」夥伴資格，稱已在自家業務與客戶環境全面導入 Claude 投入生產，具體權益與資格門檻未見報導（Google News/DevOps.com）
@@ -434,6 +435,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Cursor（SpaceX 旗下）**（2026-08-29）：OpenAI 退出與 Cursor 的合作，Anthropic 加碼投入運算資源承接需求（Wccftech）
 - **Nscale**（2026-08-28）：簽署 450 億美元資料中心協議，取得 460 MW Vera Rubin 世代算力（Forbes；Financial Times）
   **訊 2026-09-21 追蹤**：Bloomberg 報導 Nscale 總合約值達 1,030 億美元，Anthropic 與 Microsoft 為最大兩家客戶，首度揭露 Nscale 整體規模與客戶排名（Google News/Bloomberg.com）
+  **訊 2026-10-19 追蹤**：CNBC／Reuters／Bloomberg 報導雙方洽談第二筆合作，規模同樣約 450 億美元，尚未定案，為獨立於本筆的新協議，詳見「時序」（Google News/CNBC；Google News/Reuters；Google News/Bloomberg.com）
 - **Anthropic（營收信號）**（2026-08-28）：Yahoo Finance 獨家稱 Claude 營收年增達 1,000%，未經官方證實（Yahoo Finance）
 - **Salesforce**（2026-08-26，訊 2026-09-08）：深化合作發布 CRM 業務外掛「Claudeforce」，Salesforce 同步上修全年營收預測（Reuters；WSJ）。09-08 Demand Gen Report 稱雙方「擴大」合作，擴大範疇未見報導，僅標題可用（Google News/Demand Gen Report）
 - **CrowdStrike**（2026-08-27）：股價單日漲 13%，執行長歸功本季最佳表現部分來自與 Anthropic 合作（Forbes）
@@ -494,6 +496,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 %% 維運備忘：原「意義」欄的敘述併進上方一句，不另外開細節條目；一句寫不下者才下沉「戰略合作細節」區。本清單只保留最近 3 個完整月，逾窗列滾動蒸餾。2026-09-20 本輪蒸餾：21 列 ≤2026-06-30（Rubrik…Amazon 投資）已搬出，一字不刪照搬至 archive；表清單現起點為 2026-07-01。條文的家在 `.claude/rules/wiki-ingest-commercial.md` 第 5 條。 %%
 
 **戰略合作細節**
+- **Amazon Bedrock structured outputs（10-19）**：AWS 官方部落格宣布 Bedrock 上的 Claude 模型新增結構化輸出支援，開發者可省去額外輸出格式校驗邏輯，細節以官方文件為準（Google News/Amazon Web Services (AWS)）。
 - **Amadeus（09-03）**：Skift 報導旅遊科技公司 Amadeus 將其技術整合進 Claude Code 與 Cowork；延續本頁既有 SDK 夥伴生態邊緣擴張模式（如 Claranova、MixRoute），是旅遊產業首個具名整合案例，惟具體整合形式（MCP 連接器、資料 API 或其他）、涵蓋範圍未見報導，僅標題可用（Google News/Skift）。
 - **Enterprise Frontier Safeguards（EFS，09-01，官方一手來源）**：Anthropic 官方部落格宣布推出 EFS，結合零資料留存（ZDR——資料存放於**客戶控制**的雲端基礎設施，而非 Anthropic 控制）與最新濫用偵測技術，回應企業客戶「資料主權」與「AI 安全監控」雙重需求；**EFS 本身免費**。由 100 多家企業客戶（涵蓋金融、醫療、製造、電信、法律、零售、公部門七大產業）共同開發，並與 AWS、Google Cloud、Microsoft Azure 三大雲端夥伴合作，**今秋起分階段開放**（未見完整生效時程與資格門檻）。**過渡期安排**：符合資格的企業客戶可在 Fable 5／5.1 上先行取得零資料留存待遇。csoonline.com、SecurityWeek 同步跟進報導，聚焦企業採用角度，未見新增細節（Google News/csoonline.com；Google News/SecurityWeek）。**與既有懸置的關係**：本則為 08-20 Reuters/Bloomberg「企業資料保留政策調整」、08-21 Techzine「自有雲端環境」兩則傳聞的強力後續（查證進度詳見 [[entities/pricing]] 對應段落，已加註訊號日）；惟 EFS 明確定位為「安全監控產品」而非單純保留政策調整，兩者是否完全對應同一政策變動尚未確定。本則側重商業／企業採用角度（客戶共創規模、雲端夥伴生態、市場定位）；EFS 涉及的濫用偵測技術機制、與既有安全事件（Reuters 08-31 METR 獨立審查等，見 [[topics/anthropic-commitments]]）的關係詳見 [[topics/ai-agent-safety]]（[Anthropic Blog](https://www.anthropic.com/news/enterprise-frontier-safeguards)，2026-09-02）。
 %% 維運備忘：EFS 與 08-20/08-21 兩則傳聞是否完全對應同一政策變動，留待主編核對官方全文後於 lint 判定是否結案，本頁不逕自宣告解消；EFS 技術機制面是否需在 ai-agent-safety 補充，已轉知安全政策記者評估。 %%
@@ -568,6 +571,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | [[entities/robert-mahari\|Robert Mahari]] | 法律科技學者，Claude for Legal 負責人 | 2026-08-07 出任新設 Claude for Legal 部門負責人 |
 | [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 經 Bloomberg 報導加入 compute 團隊，向 James Bradbury 匯報；實際到任日官方未公開 |
 | [[entities/tom-brown\|Tom Brown]] | Anthropic 共同創辦人 | 2026-10-10 WSJ 報導其利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易（僅標題與 HN 摘要可用，WSJ 原文付費牆） |
+| Eric Schmidt | 前 Google 執行長 | 2026-10-19/20 於 Anthropic IPO 前曝光持有約 1% 股權，Bloomberg 估算潛在報酬可觀（Bloomberg；Quartz；Reuters） |
 
 %% 維運備忘：裁決點 1（四人物頁併入本頁）未回覆，依保守預設「不併」——四頁維持獨立，本表以 wikilink 指過去。若日後裁決「併」，四頁各留 redirect 殼，本表改為純文字並補一句「他這個動作對讀者意味什麼」。 %%
 
@@ -596,6 +600,15 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-20
+- **[戰略合作] AWS 官方部落格：Amazon Bedrock 上的 Claude 模型新增結構化輸出（structured outputs）支援**：開發者可望省去額外輸出格式校驗邏輯，細節以官方文件為準，詳見「哪個合作會改到你用的 Claude」表 Amazon Bedrock 列（Google News/Amazon Web Services (AWS)）
+- **[重大事件] CNBC／Reuters／Bloomberg：Anthropic 傳與 Nscale 洽談第二筆雲端合作，規模同樣約 450 億美元，尚未定案**：首筆見「哪個合作」清單 08-28 列，本次為獨立第二筆，條款與時程未見報導（Google News/CNBC；Reuters；Bloomberg.com）
+- **[公司治理] Quartz／Reuters／Bloomberg：前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權於 IPO 前曝光，潛在報酬可觀**：詳見「上面提到的人是誰」表新增列，具體持股取得時間與條件未見報導（Google News/Quartz；Google News/Reuters；Google News/Bloomberg.com）
+- **[IPO前瞻，僅標題可用] Yahoo Finance：稱 Anthropic 將是 2026 年最後一個 AI IPO，伴隨「產業正在崩潰」的更戲劇化框架**：與 10-19 CNBC「最後一個重大 IPO 希望」同源但論調更悲觀，具體論證未見報導（Google News/Yahoo Finance）
+- **[IPO前瞻，僅標題可用] The Motley Fool：稱 Dario Amodei 的 AI 安全警語正與 Anthropic IPO 時程產生衝突**：具體衝突內容未見報導，Dario 言論脈絡另見 [[entities/dario-amodei]]（Google News/The Motley Fool）
+- **[商業模式，僅標題可用] LA Times：報導稱 SpaceX 與 Anthropic 同步承諾捐股予公眾以回應 AI 恐引發失業的疑慮**：與 10-18 已記錄之 Anthropic 5% Public Benefit Fund 承諾同屬一事，SpaceX 自身承諾細節未見報導（Google News/Los Angeles Times）
+- **[商業模式] Fortune／MIXED Reality News：讀完 Claude 每日全部產出約需一名員工半週工時，Anthropic 稱注意力將是 agent 規模化的瓶頸**：管理多個並行 Claude agent 的團隊可將審閱人力納入擴編規劃（推論）（Google News/Fortune；MIXED Reality News）
 
 #### 2026-10-19
 - **[商業模式，僅標題可用] NBC News／Business Insider：公益基金承諾引發各界反應，含與馬斯克捐股倡議的對比討論**：具體專家評論內容未見摘要，僅標題可用（Google News/NBC News；Google News/Business Insider）

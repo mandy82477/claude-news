@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Linux 核心維護者具名使用 Claude Code 開發 kernel 分支
 **首次出現：** 2026-10-12
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **最新動態**（2026-10-18）
-> Linus Torvalds 在 cover letter 親口承認 Claude Code 寫了 kernel patch 的程式碼與測試；審查發現一處競態條件，能否進主線待追蹤。
+> **最新動態**（2026-10-20）
+> Hacker News 轉載 The New Stack 完整報導：這個擱置 18 個月的 page cache 效能瓶頸，10-patch 分支合成測試跑出 23 倍吞吐量提升，但審查發現 race condition；Torvalds 提醒真實環境增益會遠小於測試數字。
 
 ---
 
@@ -47,6 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：「程式碼、測試程式、前述審查與這份文字的初稿，都是在我的指示下用 LLM coding assistant（Claude Code）完成的，效能測量是在我自己的機器上跑的」（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)，2026-10-13）。這個 patch 修的是多執行緒同時讀同一檔案時，頁快取（page cache）的參照計數效能瓶頸。
 
 - **後續**：patch 能否合併進主線、競態條件是否修正，待追蹤
+- **2026-10-19**：Hacker News（16分）轉載 The New Stack 完整報導，揭露此 10-patch 分支原為擱置 18 個月的 page cache 效能瓶頸，合成測試跑出 23 倍吞吐量提升；Torvalds 提醒真實環境增益遠小於測試數字
 - **2026-10-15**：GBHackers 報導標題稱 Claude Code 協助他處理長期的 kernel 記憶體效能瓶頸（僅標題；[GBHackers News](https://news.google.com/rss/articles/CBMisgFBVV95cUxQekNxOXU5bTUyR2JqM1NfWjFXVjhidjlFY3h2YXdoSFQ1WFQ3NzlIMFhXeW5XQ2dEeWl3SmV5bFN3OWp2X0ZzRWtiOHA4WFVpRndBTGpKNUNjZ0pXZEUtbEE3a0xYVk1GYmhOZ3NCY2JGbmZRTnBCczFYaHloU2dJbk44TmcwR2h4cTB4TjM0aVlfSFI5MVltSDZ6RFJMWmkzRGN0aEg1dTlweTg4SmFYVGNn0gG3AUFVX3lxTE9QOVlvdWg1ZG1Ca2VUUkdJTDJhMEc3aDEwWXZMTTVETmQtVVJTc21aaW1CX3VhSGZfbU0xU00tbW5ma0NkcHhBNHBJVVR6U0ZfZmxxYmY1Znhtb0Z2NWZocGlxWG5rdkNfUU5uUERJVTBDV0x2RnFIR2dzTXVIek9MTjhXY3l3SXBOUHRBajFJTF9JMGJvTVJQM19RVWM1Nlg4LWZKQWJPUXBISjQ2Q2RXdGduMlRidw?oc=5)）
 - **2026-10-08／10-14**：布拉格 Linux Maintainers Summit 後，核心社群取消 `Assisted-by` 揭露要求；Torvalds 稱禁 AI 工具「utterly stupid」，如同禁編譯器（[The Register](https://www.theregister.com/ai-and-ml/2026/10/14/linux-kernel-devs-drop-obligatory-confession-of-ai-tool-usage/5303140)、[PC Gamer](https://www.pcgamer.com/software/linux/linux-kernel-drops-ai-contribution-disclosure-rule-as-linus-torvalds-says-banning-the-tech-would-be-utterly-stupid/)、[heise](https://www.heise.de/en/news/Linux-may-drop-AI-code-labels-Torvalds-uses-LLMs-too-11490773.html)）
 - **2026-10-14**：審查者在 patch 中發現一處競態條件（race condition）（[The New Stack](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5)）；同日 36Kr 稱效能提升 3 倍，單一中國媒體轉述、尚待查證（[36Kr](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5)）
@@ -68,11 +69,13 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 - [Linus Torvalds used Claude Code to rewrite how Linux reads cached files](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/) — Hacker News／StartupFortune，2026-10-13
 - [Linus Torvalds Embraces AI: Writing Linux Kernel Code with Claude Code Delivers 3X Performance Surge](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5) — Google News／36Kr，2026-10-14
 - [Linus Torvalds Working on a Hefty Linux Kernel Improvement with Claude Code](https://www.phoronix.com/news/Linus-Torvalds-Claude-Code) — Hacker News／Phoronix，2026-10-12
+- [Torvalds use Claude for bottleneck fix, but race discovered](https://thenewstack.io/torvalds-claude-code-kernel/) — Hacker News（16分）／The New Stack，2026-10-18
 - [Quoting Linus Torvalds](https://simonwillison.net/2026/Aug/22/linus-torvalds/) — Blog／Simon Willison，2026-08-22（背景：未點名工具的除錯發言）
 - [Linus Torvalds let Claude Code fix the Linux page cache. Then reviewers found a race.](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5) — Google News／The New Stack，2026-10-14
 
 ## 歷史記錄
 
+- 2026-10-19：Hacker News（16分）轉載 The New Stack 完整報導，揭露此 10-patch 分支原為擱置 18 個月的 page cache 效能瓶頸，合成測試跑出 23 倍吞吐量提升，Torvalds 提醒真實環境增益遠小於測試數字（來源：Hacker News／The New Stack）
 - 2026-10-17：r/ClaudeCode 轉貼 Torvalds 對反 AI 編碼規則的表態，原始脈絡見下條（2026-10-18 查證；來源：Reddit／r/ClaudeCode、The Register）
 - 2026-10-15：GBHackers 報導標題稱 Claude Code 協助 Linus 處理長期的 kernel 記憶體效能瓶頸（僅標題）（來源：Google News／GBHackers News）
 - 2026-10-14：核心社群取消 `Assisted-by` 揭露要求，Torvalds 稱禁 AI 工具「utterly stupid」，如同禁編譯器或文字編輯器（來源：The Register、PC Gamer、heise）

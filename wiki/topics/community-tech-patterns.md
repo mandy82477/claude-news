@@ -29,13 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-19
+**最後更新：** 2026-10-20
 **最後新聞更新：** 2026-10-14
 
-> **三個子頁同步新增新做法**（2026-10-19）
-> - **Plugin / MCP 整合**：vibe-coding-toolkit 工具箱、免費 WhatsApp MCP、pstack 跨工具移植，見 [[topics/community-integrations#2026-10]]。
-> - **Skills 設計**：ok-skills 跨工具技能與 AGENTS.md 範本集，見 [[topics/community-skills#2026-10]]。
-> - **Agent 規模化**：tmux 具名 session 跑多 agent 實務設定與四代理天花板，見 [[topics/community-multi-agent#2026-10]]。
+> **兩個子頁同步新增新做法**（2026-10-20）
+> - **Skills 設計**：oil-oil/draw-ui，screenshot-to-code 的 UI 設計 skill，與同作者 oil-ui 互補，見 [[topics/community-skills#2026-10]]。
+> - **Plugin / MCP 整合**：marvkr/better-design，開源設計 MCP server＋shadcn/ui registry，見 [[topics/community-integrations#2026-10]]。
 
 ---
 
@@ -56,9 +55,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、Agent Loop 終止條件 | 2026-10-19 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-18 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略 | 2026-10-18 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-19 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-20 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-18 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-19 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-20 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-18 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
@@ -71,11 +70,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Skills 設計** | 知識框架化、drawio-skill、personal-os-skills、reladraw、geo-score、open-steps 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-16 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | 知識框架化、drawio-skill、reladraw、geo-score、open-steps、oil-oil/draw-ui 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-20 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、sloppy、routines 排程自動化（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-16 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、amux、Offrun、zhikuncode 等（[[topics/community-multi-agent#2026-10]]） | ✅ 成熟 | 2026-10-09 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-memory#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、remote-desktop-commander、pipeboard 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-16 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **Plugin / MCP 整合** | docsagent、solomd、atlassian-mcp-server、pipeboard、marvkr/better-design 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-20 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、官方審查機制（[[topics/community-guardrails#2026-10]]） | ⚡ 活躍 | 2026-10-16 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Haiku 5.5 價格閘門、tokentab（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-13 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-13 | 即時取回優於預先載入；避免 context 過早飽和 |

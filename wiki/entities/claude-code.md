@@ -30,12 +30,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **最新動態**（2026-10-19）
-> - **版本**：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。
-> - **互動更新**：CVP 審核組織仍遭資安防護誤擋（#84352，201 留言，今日全站互動最高）、Windows GPU 當機拖垮整個應用（#81698，68 留言）、Desktop 反覆當機須「進階選項→修復」（#85199，52 留言）。
+> **最新動態**（2026-10-20）
+> - **版本**：v2.1.304，mod 系統新增 hook 被跳過時的具名 transcript 記錄，`tool.check` 新增 `decider: "person"` 選項，細節見 [[entities/claude-mods]]。
+> - **文件**：桌面版文件新增 171 段、移除 65 段（148,190→160,296 字），集中於 session 資料夾與已儲存環境。
+> - **旗標**：build 新增 11 個第一階候選旗標，詳見 [[topics/claude-code-experimental]]。
 
 ---
 
@@ -43,6 +44,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.304**（2026-10-19）：mod 系統新增兩項——一個 mod 的 hook 被排序在前的外掛跳過時，transcript 具名記錄事件與外掛名稱；`tool.check` 回答新增 `decider: "person"` 選項，標示該次核准／拒絕由人決定而非 mod 自動代為決定；細節見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
+  同版 build 另新增 11 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.302**（2026-10-16）：新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 環境變數，可指定 client 端 auto mode 分類器使用的模型，不影響 server 端 auto mode 本身要選哪個模型；另新增閒置自動壓縮（idle compaction）相關功能，官方原文截斷，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）。
   同版 build 另新增 2 個功能候選旗標（`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.301**（2026-10-15）：新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，讓無人值守重試模式（`CLAUDE_CODE_RETRY_WATCHDOG`）在額度重置時間太久遠時直接結束請求，不再乾等（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）。
@@ -86,6 +89,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-20）：桌面版文件新增 171 段、移除 65 段（148,190→160,296 字，近期最大單日異動），聚焦 session 資料夾管理與已儲存環境；移除段落多為舊版操作說明，新版對應寫法未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-17）：桌面版文件重寫「結束 App 後任務是否還在跑」規則，依平台分流——macOS／Linux 以 Claude 帳號登入時結束 App，重開 session 可接續正在跑的任務；Windows 版或接第三方 provider 時結束 App，進度無法接回，須保持 App 開著直到任務完成（文件字數 148,156→148,190）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-16）：文件索引新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解），呼應 Code Review 功能同日轉為正式發布（GA），詳見 [[feature-radar]]（[索引](https://code.claude.com/docs/llms.txt)）。
 - **官方文件更新**（2026-10-15）：桌面版文件新增 SSH／TLS 代理疑難排解章節，涵蓋 `HTTPS_PROXY`、`NODE_EXTRA_CA_CERTS` 等設定，延續 10-14 的 SSH 遠端工作流程擴充（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -418,8 +422,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（85 條未修復、3 條查無官方、3 條已修復）
+### 🔌 平台相容性（86 條未修復、3 條查無官方、3 條已修復）
 
+- 🔴 **未修復**｜**功能請求：支援 AGENTS.md 與 `.agents/skills/`（GitHub issue #31005，累積 36 則留言、565 個讚，本日反應數最高，2026-10-20）**：社群自 2025 年 8 月起持續要求，官方尚未回應或排入路線圖；相關脈絡見下方「已修復」issue #6235。
+  - `.agents/skills/` 目錄慣例未涵蓋在 v2.1.277 AGENTS.md 支援範圍內，與既有 [[topics/official-community-gap]] ⟨G-08⟩ 缺口相符。
 - 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、56 個讚，2026-10-15）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 39 則留言、48 個讚，2026-10-15）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
@@ -601,6 +607,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.304** | 2026-10-19 | mod 系統新增 transcript 具名記錄 hook 被跳過事件；`tool.check` 回答新增 `decider: "person"` 選項，見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）|
 | **v2.1.303** | 2026-10-18 | Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.303)）|
 | **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定 auto mode 分類器用的模型；另新增閒置自動壓縮功能，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|
 | **anthropic-sdk-python v1.15.0** | 2026-10-15 | thinking 類型新增 `between_tools`；Messages 新增 `speed` 參數與對應 `usage.speed`；可讀取 Console 組織用量等級（usage-tier）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0)）|
@@ -930,6 +937,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-20 | **v2.1.304**：mod 系統新增 hook 跳過具名 transcript＋`tool.check` 的 `decider: "person"`。桌面文件新增 171 段（近期最大單日異動）。build 新增 11 個候選旗標。 |
 | 2026-10-19 | **v2.1.303**：純臭蟲修復，無使用者端功能異動。互動更新 6 則：#84352（201 留言，今日最高）、#81698、#85199、#76694、#14200、#65632。 |
 | 2026-10-17 | **v2.1.302**：新增 AUTO_MODE_MODEL＋閒置自動壓縮（未載）。桌面文件改寫任務接續規則。新增已知問題 1 則（#22264）。互動更新 2 則（#15942、#11002）。 |
 | 2026-10-16 | **v2.1.301**：新增重試逾時旗標＋SDK speed／usage-tier；文件新增 6 頁 Code Review（轉 GA）；已知問題 4 則、互動更新 3 則。 |

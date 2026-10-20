@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-20
 
 ---
 
@@ -96,6 +96,7 @@
 | [[entities/fei-fei-li]] | person | 👤 人物 | active | World Labs 創辦人；2026-09-29 隨 AMD 以約 82 億美元收購 World Labs 出任 AMD 首席科學家　↳ 詳見 [[topics/ai-talent-flow#對各公司的影響]] |
 | [[entities/jamie-dimon]] | person | 👤 人物 | active | 摩根大通執行長；2026-10-06 警告 Anthropic 的 Mythos AI 讓網路風險提高 10 倍，彙整 07-16／08-10／10-06 三次公開表態 |
 | [[entities/linus-torvalds]] | person | 👤 人物 | active（單一來源） | Linux 創造者；2026-10-12 被發現用 Claude Code 開發新 kernel 分支 `noref-filemap-read-with-llm`（Phoronix） |
+| [[entities/eric-schmidt]] | person | 👤 人物 | active | 前 Google 執行長；持有 Anthropic 約 1% 股權一事於 IPO 前曝光（Bloomberg／Quartz／Reuters，2026-10-20） |
 ---
 
 ## Topics（進行中議題）

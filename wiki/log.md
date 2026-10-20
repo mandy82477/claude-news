@@ -7904,3 +7904,28 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無開發實務分類派工包，未派工；手冊正文寫入 0 則，基準線已推進至 6cdddd89
 - market 判讀：新增 2 則（Public Benefit Fund 股權承諾；AI 安全法案門檻曝光），均為 ⚖️ 兩面訊號；到期複查 3 筆（Meta/Microsoft 內部用量限縮、Pentagon 停用範圍、PitchBook 估值區間）今日日報未見後續，逾期交 `/wiki-lint` 處理
 - 主編查證：market 記者提出 AI 安全法案「50 人死亡或 10 億美元損害」門檻數字是否有官方法案文本可查；主編以 WebSearch 核對，該門檻與加州 SB 53「災難性風險」法定定義完全一致（Anthropic 已公開背書該州法案），但未查得對應聯邦法案文本，無法確認 Yahoo／Mashable 報導的聯邦遊說是否即沿用 SB 53 定義或另有新草案；已於 `topics/anthropic-government-policy.md` 10-19 細節區補一筆查證備註，不下定論
+
+## 2026-10-20 Ingest
+
+- 來源日報：[[news/2026-10-20]]
+- 更新頁面：
+  - **人物**：entities/linus-torvalds、entities/eric-schmidt（新頁）
+  - **功能**：entities/claude-code、entities/claude-mods、topics/claude-code-experimental
+  - **商業**：topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety、topics/anthropic-government-policy
+  - **模型**：entities/opus-5-5
+  - **社群**：topics/community-skills、topics/community-integrations、topics/community-tech-patterns、topics/community-tech-discussions
+  - **投資分析**：topics/market-signals
+- 新增頁面：wiki/entities/eric-schmidt.md
+- feature-radar：本日無新功能
+- index：新增 entities/eric-schmidt 一列（人物／👤）；最後更新日戳推進至 2026-10-20
+- 摘要：Anthropic 傳與 Nscale 洽談第二筆約 450 億美元雲端合作（CNBC／Reuters／Bloomberg）；前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權於 IPO 前曝光；Investors Research 以 Claude 設計蛋白質加碼生技股；AI 安全法案（50 人死亡或 10 億美元損害門檻）外界反彈聲浪擴大但無新數字；社群單日至少 9 款 Claude Code 周邊工具登上 Show HN；Linus Torvalds 用 Claude Code 修 kernel page cache 瓶頸的完整報導細節補入人物頁
+- 呈現品質：全部通過（`ingest_gate.py` 待步驟 4½ 執行；各記者機械自查四支皆 OK／通過，entities/claude-code 與 topics/claude-code-experimental 各有數筆既有存量 WARN，非本次新增所致）
+- 分類回退：4 筆追加派工，已同輪處理完畢——
+  - [功能→商業] AWS Bedrock structured outputs：併入既有 Amazon Bedrock 合作列
+  - [功能→安全政策] Claude Code 越界操作率 0%→17.1%：寫入 ai-agent-safety 時序，後續完整報告提醒詳下方轉知帳本 H-2b9347
+  - [社群→模型] joeseesun/opus-video-prompts：比照既有 mg-styles-15 先例併入 entities/opus-5-5
+  - [社群→功能] GitHub Issue #31005（AGENTS.md 支援請求）：寫入 entities/claude-code「🔌 平台相容性」分組
+- 轉知帳本：結案 H-2ed7e9（人物，linus-torvalds 頁補完整報導細節）；新開 H-2b9347（安全政策→功能，overreach rate 後續完整報告是否需補官方功能頁）；不登帳：商業記者提醒 Citrini Research 一案轉知投資分析記者，因 4c 同輪已直接讀取六類包檔原文，當輪即處理完畢，無需另開轉知票；功能記者轉知 H-0a5cb5（tmux 整合）本輪仍查無今日佐證，維持 open 待下一輪
+- devpractice 沉澱：本日無開發實務分類派工包，未派工；手冊正文寫入 0 則
+- market 判讀：新增 1 則（Nscale 第二筆算力合約規模 ▸ 第 2 則，⚖️ 待簽署訊號，複查日 2026-11-03）；其餘 62 則條目逐一套用六類判準後皆不構成「新資訊且動到 S-1 數字」

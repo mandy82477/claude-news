@@ -30,20 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-09-15
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-17
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-17）
-> 2.1.302（自 2.1.301 起比對）新增 2 個第一階候選旗標：`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`。
+> **最新動態**（2026-10-20）
+> 2.1.304（自 2.1.303 起比對）新增 11 個第一階候選旗標，涵蓋歸因追蹤、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告。
 
 ---
 
 ## 摘要
 
+- **2.1.304（10-19，自 2.1.303 起）新增 11 個候選旗標**：涵蓋歸因追蹤（`CLAUDE_CODE_ATTRIBUTION_PROJECT`）、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告（`CLAUDE_CODE_WARN_DISK_FREE_GIB` 等）；皆第一階，對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.302（10-17，自 2.1.301 起）新增 2 個候選旗標**：`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`，皆第一階；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.301（10-16，自 2.1.300 起）新增 2 個候選旗標**：`CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA`（第一階）＋代號旗標 `DAPPER_CUPCAKE`；另 1 個設定類旗標依蒐集邊界不列；代號旗標 `SQUISHY_NEWT`（首見 2.1.282）依來源條目消失清單記為消失；對帳僅命中來源條目，暫不升第二階。
 - **2.1.300（10-15，自 2.1.299 起）新增 4 個候選旗標**：PDF 讀取頁數上限（單訊息／單輪）、隱藏回覆伺服器名稱、訊息提示快取 TTL，皆第一階；`FORCE_SANDBOX` 消失；對帳僅命中來源條目，暫不升第二階。
@@ -82,6 +83,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_ATTRIBUTION_PROJECT` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_PERSONAL_CONFIG_FIX` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_SDK_READS_STARTUP_MARKS` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_WARN_DISK_FREE_GIB` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
+| `CLAUDE_CODE_WARN_MEMORY_FREE_GIB` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
 | `CLAUDE_CODE_ALLOW_OTHER_MODELS` | 2.1.302（10-17） | 1 | — | — | 2.1.302 仍在（比對日 10-17） |
 | `CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT` | 2.1.302（10-17） | 1 | — | — | 2.1.302 仍在（比對日 10-17） |
 | `CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA` | 2.1.301（10-16） | 1 | — | — | 2.1.301 仍在（比對日 10-16） |
@@ -273,6 +285,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-19 | 2.1.304 新增 11 個第一階候選旗標（名單見追蹤表）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-17 | 2.1.302 新增 2 個第一階候選旗標：`ALLOW_OTHER_MODELS`、`MCP_SERVE_WORKSPACE_ROOT`；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-16 | 2.1.301 新增 1 候選旗標＋代號旗標 `DAPPER_CUPCAKE`；`SQUISHY_NEWT` 消失；對帳僅命中來源條目 |
 | 2026-10-15 | 2.1.300 新增 4 候選旗標（PDF 頁數上限、隱藏伺服器名稱、訊息快取 TTL）；`FORCE_SANDBOX` 消失；對帳僅命中來源條目，不算獨立佐證 |

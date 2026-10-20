@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`
 **上層：** [[entities/claude-code]]
 **首次出現：** 2026-09-04
-**最後更新：** 2026-10-13
-**最後新聞更新：** 2026-10-13
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **最新判讀**（2026-10-13）
-> MIXED Reality News 報導官方已把九個政策相關變數獨立於外掛可改寫範圍外；原文無可讀內文、單一來源，數字與機制待其他來源佐證。
+> **最新判讀**（2026-10-20）
+> v2.1.304 新增 mod 跳過 hook 時具名記錄 transcript，以及 `tool.check` 的 `decider: "person"` 選項，供標示核准由人或 mod 決定。
 
 ---
 
@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Claude Mods 是 Claude Code 的外掛機制：mod 是 plugin，以 JS／TS 事件處理函式在 Claude Code 行程內執行，可觀察、改寫或接管 tool call、prompt 與介面繪製。需 v2.1.287 以上，**預設開啟**（官方文件，2026-10-04 查證，[overview](https://code.claude.com/docs/en/plugins/mods/overview)）。
 
-它即先前的「Function Hooks」提案：09-04 的 build 已有 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 旗標，09-09 官方在 issue #91870 承諾出貨並更名，10-01 隨 v2.1.287 上線（旗標追蹤見 [[topics/claude-code-experimental]]）。v2.1.288 為 mods 加了 `$.ui.selection()`，回傳使用者在全螢幕模式最後選取的文字。
+v2.1.288 為 mods 加了 `$.ui.selection()`，回傳使用者在全螢幕模式最後選取的文字；v2.1.304（2026-10-19）新增兩項——一個 mod 的 hook 被排序在前的外掛跳過時，transcript 具名記錄是哪個事件、哪個外掛跳過；`tool.check` 回答新增 `decider: "person"`，標示該次核准／拒絕由人決定、而非 mod 自動代為決定（Function Hooks 沿革見下方歷史記錄；見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
 
 ## 熱度與試用價值
 
@@ -138,6 +138,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-19 | v2.1.304：mod 跳過 hook 新增具名 transcript 訊息；`tool.check` 新增 `decider: "person"` 選項。 |
 | 2026-10-13 | MIXED Reality News（單一來源，僅標題）報導九個政策變數隔離於外掛可改寫範圍外；XDA（僅標題）報導外掛／skill 客製化玩法。 |
 | 2026-10-04 | 建頁；依官方 overview 文件整理權限範圍、關閉方式與內建 mods |
 | 2026-10-03 | the-decoder、The New Stack 報導以使用者權限執行、無沙箱；v2.1.288 加入 `$.ui.selection()` |

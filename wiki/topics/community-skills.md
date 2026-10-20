@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **新增跨工具技能範本集**（2026-10-19）
-> - **mxyhi/ok-skills（500★）**：給 Codex、Claude Code、Cursor、OpenClaw 等相容工具共用的技能與 AGENTS.md 範本集。
+> **新增 UI 設計 skill 新方向**（2026-10-20）
+> - **oil-oil/draw-ui（506★）**：screenshot-to-code 的 UI 設計 skill，與同作者 oil-ui 互補。
 
 ---
 
@@ -68,6 +68,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### oil-oil/draw-ui：UI 設計 skill 反向走「截圖重建回頁面」，與同作者 oil-ui 互補（2026-10-20）
+
+- **主線：** —
+- **核心模式：** Claude Code／Codex 用的 UI 設計與重建 skill：輸入截圖，由 skill 出設計稿並還原成可用頁面程式碼（screenshot to code）；GitHub Search 506 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有 UI／前端視覺取向（oil-oil/oil-ui、taste-skill）第三個方向，從截圖直接重建頁面；同作者稍早已有 oil-ui（2026-10-14），機制不同暫不合併；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（506★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/oil-oil/draw-ui)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### mxyhi/ok-skills：給 Codex、Claude Code、Cursor、OpenClaw 等相容工具共用的技能與 AGENTS.md 範本集（2026-10-19）
 

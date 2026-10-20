@@ -31,13 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-20
+**最後新聞更新：** 2026-10-20
 
-> **新增三則 MCP／工具整合做法**（2026-10-19）
-> - **vibe-coding-toolkit**：外掛＋子代理協同＋品質關卡的工具箱（1,701★）。
-> - **whatsapp-mcp**：免費 Cloudflare 版 WhatsApp MCP server，留言區有隱私疑慮（HN 143 分）。
-> - **open-pstack**：把 Cursor 的 pstack 工具移植給 Claude Code／Codex（500★）。
+> **新增設計系統 MCP server**（2026-10-20）
+> - **marvkr/better-design**：開源設計 MCP server＋shadcn/ui registry，31 套品牌佈景主題一鍵安裝（504★）。
 
 ---
 
@@ -60,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### marvkr/better-design：開源設計 MCP server＋shadcn/ui registry，一行指令裝 31 套品牌級佈景主題（2026-10-20）
+
+- **主線：** —
+- **核心模式：** 開源設計 MCP server＋shadcn/ui registry，供 Claude Code、Cursor、Codex 等 MCP client 用；31 套品牌級佈景主題＋設計 tokens／UI 原則／WCAG 規則，一行指令裝元件；GitHub Search 504 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「設計系統／UI 元件庫 MCP 化」取向——既有做法多接生產力服務或程式碼本身，本則把品牌設計系統與 shadcn/ui 元件庫包成 MCP server 供任何相容 client 直接安裝；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（504★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/marvkr/better-design)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### soumatheusgomes/vibe-coding-toolkit：結合外掛、子代理協同作業與品質關卡的「vibe coding」工具箱（2026-10-19）
 
