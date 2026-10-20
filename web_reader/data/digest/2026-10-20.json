@@ -1,0 +1,591 @@
+{
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20 17:15 UTC",
+  "articleCount": 58,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Show HN: Lights-on software factory boilerplate for Claude Code",
+      "url": "https://github.com/gojko/lights-on-software-factory",
+      "source": "Hacker News",
+      "time": "10/20 01:22",
+      "sentiment": "",
+      "body": "今日至少 9 款圍繞 Claude Code 的工具同步登上 Hacker News Show HN，本則作者稱其編排器比純 Claude 工作流節省約 80% token 成本；其餘工具涵蓋資料中心路由模擬、B2B 開發客戶開發、強制測試執行、手寫算式批改等不同場景，多數個別討論熱度不高。想嘗鮮新外掛的開發者可直接逛今日 Show HN 列表。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "One sentence changed Claude Code's overreach rate from 0% to 17.1%",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9xRXF6bnN2MFFWRFQwTzYtNUhMMTk4MkVONnE1TWVIelhkd2FwME9QYnZxbTNGVnNPRm1hWnQzNGQ1c3puVkd6LS1MTWV4TURUYkg1Z2RRdzFPWC05dTNQQnB3?oc=5",
+      "source": "Google News / The New Stack",
+      "time": "10/19 18:36",
+      "sentiment": "",
+      "body": "報導稱在系統提示詞中加入單一句子，使 Claude Code 的「越界操作率」從 0% 升至 17.1%；原文完整細節未取得，暫以標題揭露的數字為準。負責 agent 權限邊界設計的團隊可留意後續完整報告，評估自家系統提示詞是否有類似風險。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Structured outputs for Anthropic Claude models on Amazon Bedrock",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeGtQZ3VDNTRrRVNBTDA4ak5mUlBKUG1kdWpwWDJxQUx2UWxFMGw3Sk85MllYN1gyTENSZEcxa0RwZ2RXLTk5WlE0ejZPZWU0UzI5RVRmUnlLdXgwcjZBUUhEUnI5enprM2NPZVlhbXl6ZUhTVU4wZEpwMjc0SHlQME54Ri1NMk40UmF5bDBReHdEV0V6OWxXVnJVSl9nUkpsTGFQejBtU2tFeEliQXpvZw?oc=5",
+      "source": "Google News / Amazon Web Services (AWS)",
+      "time": "10/19 23:32",
+      "sentiment": "",
+      "body": "AWS 官方部落格宣布 Amazon Bedrock 上的 Claude 模型新增結構化輸出（structured outputs）支援（細節以官方文件為準）。透過 Bedrock 呼叫 Claude 的開發者，可留意是否能藉此省去額外的輸出格式校驗邏輯。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "Claude Code 2.1.304 build 新增 11 個功能候選旗標",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.304",
+      "source": "Build Flags",
+      "time": "10/20 15:13",
+      "sentiment": "",
+      "body": "本次 build 新增 11 個功能候選旗標，涵蓋歸因追蹤、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告等面向；旗標出現在 build 裡不代表會正式上線。持續追蹤 Claude Code 實驗功能的團隊可留意旗標是否轉正。",
+      "focusTags": []
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "10/20 15:13",
+      "sentiment": "",
+      "body": "桌面版官方文件字數由 148,190 字增至 160,296 字，新增約 171 段內容，包含「為 session 新增資料夾」「封存 session」「檢查並釋放 context」「建立已儲存環境」等操作說明，同時刪減 65 段舊內容。持續使用桌面版的用戶可留意新文件是否對應介面上尚未注意到的功能。",
+      "focusTags": []
+    },
+    {
+      "title": "anthropics/claude-code v2.1.304",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/19 21:34",
+      "sentiment": "",
+      "body": "本版為 mod 系統新增 transcript 訊息：當某個 mod 的 hook 被排序在前的外掛跳過時，會具名記錄事件與外掛名稱；另外在 mod 的 `tool.check` 回答新增 `decider: \"person\"` 選項。撰寫或除錯 Claude Code mod／外掛的開發者可留意這兩項異動。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "TCL Google TV owner hands the remote to Claude Code, and the ads don't survive",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPM2xZOU9FSF9DLWJHeE9hU1NST01TWUNqZVZ2aVNpc1pQVVVPcHZ6VVZFNUZaT2ZCYmthZFRtWjFpYjRwYmVuMEg0Rnh5dmVLdnlQMGgxdGVZVXo2Vkk4dy1SbHhGNUVHTTJNeUdtZ3Y0eTZWdXE3ZUdTWUplWHhQNTJnQU5UNUtwVmJpdUd1dUlLYlF2dDFVUzNNWlJBeThFSHJGaWUwZjhwd1lRNDhGUV9nVXBXQjBlRWJ3ZWwzMnRFdk0?oc=5",
+      "source": "Google News / TweakTown",
+      "time": "10/20 14:45",
+      "sentiment": "",
+      "body": "TweakTown 報導一名 TCL Google TV 用戶讓 Claude Code 接管智慧電視遙控，連帶把電視介面上的廣告也擋了下來。對自架裝置自動化有興趣的讀者可留意這類消費端 agent 應用案例。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude Code Spotted a Cryptominer On Mac While Helping To Build a Temperature App",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdUM4NkVFalAzSncwRktFZXROajZnMFA1LTZjbktIZVhNRVNMTWlIYjFraXFqZTZreDhHMG94enF0MzhORmdHV1MtR3ZvWTJYWVdvRVdMLWJRS3ByVmIta2dCbWo5RmxaVjJLVE84YW5WUGxWVEtHX0hUNmh6WG1QRXk3N2tEWEFpRXdEalk0S1RtUUpuSlFONFR4U3lWa2pETXBXd2RtNzE5ZF9JWmlN?oc=5",
+      "source": "Google News / Gadget Review",
+      "time": "10/20 14:37",
+      "sentiment": "",
+      "body": "Gadget Review 報導一名用戶請 Claude Code 協助開發溫度監測 app 時，意外被其發現 Mac 上藏有一支挖礦程式。偶爾用 Claude Code 排查系統異常的讀者，可留意這類附帶效益的真實案例。",
+      "focusTags": []
+    },
+    {
+      "title": "Reading all of Claude's output would take half an Anthropic worker's week",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQaFI3YUQ2YWxvcVQ0bkJCbHF5Zl9vU3pkdElRbWRfa0xBTXU2a3NlWUxTbUlJcUItOW1uNGxPYUx4bDVjbDRFRXctdjdxbG5EcThIOXRMZzdIYWVVMUVVZGFvOXBXbFRLOEI5WGZpVGEtdmJ3dkxBMEZ0X19DRHVLbw?oc=5",
+      "source": "Google News / MIXED Reality News",
+      "time": "10/20 11:58",
+      "sentiment": "",
+      "body": "MIXED Reality News 報導 Anthropic 內部估算，若要讀完 Claude 每日產出的全部內容，得花掉一名員工半週的工時；文章未附完整拆解方法。關注 Anthropic 內部如何監看與審核模型輸出規模的讀者可留意後續細節。",
+      "focusTags": []
+    },
+    {
+      "title": "'An army of Claudes, with every one asking for my attention': Anthropic calls human attention the bottleneck in the botsitting world to come",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbl9PcUp2RThiUVVvSVgxQnJ0bEtHaTVpUVRIX3JHbkVCbW5GUkxjYWhnXzBTeV84SVdESHJuVmFMLU1DM1NSZV9pREVsUS1DanFqelQ5ck5aSHk3MFEyZnk2aHpkNmI0NlA2Zl9oSk1aZmF4TUNPSDBxZjN4eW42N0M2bWxyN2VlNUE?oc=5",
+      "source": "Google News / Fortune",
+      "time": "10/19 18:10",
+      "sentiment": "",
+      "body": "Fortune 報導 Anthropic 內部觀點：隨著 AI agent 普及，未來瓶頸會從「讓 agent 做更多事」轉為「人類注意力能看顧多少個 agent」（文中稱為 botsitting）。管理多個 Claude agent 並行作業的團隊，可留意這類人力配置思路是否符合自身現況。",
+      "focusTags": []
+    },
+    {
+      "title": "I asked Claude, ChatGPT, and Gemini to design the same replacement part, then 3D printed all three",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB3WTJfLUVkMk5lTC1xaVFBZ2FDVndsRWVJbGJlTk1RQ0czaFZTdHBKWHZwS1VOYi05UFMzeWVVZ2NzVk5KcnhQNHUtQWZSeGcxeGE4SDFGUDZGQjhBS1lxTzhDLU5MdEZIeDBuUlBtUWFXNXIzd0QzWHpwSQ?oc=5",
+      "source": "Google News / MakeUseOf",
+      "time": "10/20 12:30",
+      "sentiment": "",
+      "body": "MakeUseOf 讓 Claude、ChatGPT、Gemini 分別設計同一個替換零件並實際 3D 列印比較成果；文章未揭露三者完整評比細節。對用 LLM 輔助設計實體零件有興趣的讀者可留意這類跨廠牌實測。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic's leaked AI bill sparks backlash",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQRDZVUmdCYWRSbnN5d0JWem5HN2hOMEdINWxjdWFTS2NoYmZDdWFHZ3VqNjAxX25wSTktTVdzV2wtWXpFbHVQUVZ1ZmFrR2xwc0pDUzB2OUlkSWNLNHB5aGVKRGFMSUhOWEpMXzBHdTJMU3FsNjItdE1icWxKYTNSRkRucm0zcWpJd3oyUg?oc=5",
+      "source": "Google News / Semafor",
+      "time": "10/20 09:07",
+      "sentiment": "",
+      "body": "承上週曝光的 Anthropic 遊說版 AI 安全法案（門檻設在 50 人死亡或 10 億美元損害），Semafor 與《華盛頓郵報》今日同步報導外界反彈聲浪擴大，但未提供新的具體門檻數字。使用 Claude 的企業客戶仍可留意此案若推進對各州監管草案的牴觸。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Support for AGENTS.md and .agents/skills/, the community has been asking since August 2025",
+      "url": "https://github.com/anthropics/claude-code/issues/31005",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/20 14:07 UTC ·",
+      "sentiment": "😤",
+      "body": "這則自 2025 年 8 月就開著的功能請求，目前累積 565 個 reaction、36 則留言，是今日資料中互動量最大的社群討論；官方尚未在 issue 中給出明確時程。長期關注 Claude Code 與其他 agent 框架設定檔相容性的開發者可持續追蹤。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "How I work with Claude Code: memory, gates and the mistakes that built them",
+      "url": "https://dev.to/muchassak/how-i-work-with-claude-code-memory-gates-and-the-mistakes-that-built-them-1n8l",
+      "source": "dev.to / #claudecode",
+      "time": "10/18 18:26 UTC ·",
+      "sentiment": "😊",
+      "body": "作者分享自己在真實專案中用 wiki 與 hooks 撐過 context compaction 的實作心得，把過去犯過的錯轉成測試與收工前的 gate／截圖檢查。想替自己的 Claude Code 專案補強長期記憶機制的讀者可參考這套具體做法。",
+      "focusTags": []
+    },
+    {
+      "title": "oil-oil/draw-ui",
+      "url": "https://github.com/oil-oil/draw-ui",
+      "source": "GitHub Search",
+      "time": "10/20 15:12 UTC ·",
+      "sentiment": "😐",
+      "body": "三個今日由 GitHub Search 收錄的 Claude Code／Codex 周邊專案：前兩者是截圖轉介面與 shadcn/ui 設計系統 MCP 伺服器，第三者整理 Opus 5.5 以程式碼生成影片的提示詞案例；三者皆為本庫首次收錄，星數為目前累積規模、非當日漲幅。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 傳出正與 Nvidia 支持的雲端服務商 Nscale 洽談第二筆巨額合作，據報規模達 450 億美元；CNBC 率先披露，Reuters 與 Bloomberg 同日查證跟進。關注 Anthropic 運算產能擴張的企業客戶，可留意後續是否牽動 Claude 服務的擴容時程與可用性。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPcGMyclR5X0JrXzBKem90Uk1sZnBQNkcyRnlyc3ZnWTM4Q0ZoUWtKUzRrd1Y3aHlqaDRjT1pfaFdmV0pHYUFROFI3TFhTWVhtczJsM01PSF8tSEtXejB4emlhVjZGMmQzeWh0RXJoaS0tNDQ1SDhlZDRJZU5hZG5ibE85N3dxU21DS2ZKYm1NV2pVUUF4ZjF3XzQ1ZncwaHVMdXlWZ2FsWjRtQ1d0eFN2YUVQc2x4cTd6YjNwSTVuVUFQZw?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWElPM1lSczhESmRndWxlZjZIbWhtVS0zZXBjS2Z2Qi12ZVIwcXR0c2lZTWNSYjQxc2lTUnBGaEVBQWZpbUFhNUxQcUhNeVByZVFPQ0hJbm52TVVrX2c0WFFaMDJHSjktNHV3VFVhcDZoY2Ewc1Q4Yks2N0FTek1HR0lYYVoxV0ZYb0Y0c2RmUUtRdVlSbDRNYWJvcm5PeFdqQkVOeFVfQ1RMZTZTeGtzcDFR?oc=5"
+      ],
+      "ref_names": [
+        "Reuters",
+        "Bloomberg"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權一事於 IPO 前曝光，Bloomberg 估算這筆持股未來可能帶來可觀報酬，Quartz 與 Reuters 同日引述跟進。持續關注 Anthropic IPO 股權結構的讀者可留意後續申報文件是否揭露更多早期投資人名單。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE05ZjV3RXpSTW5vQTFvNWRwUkE5N01QcTN3MXNuUXV3WE1WeTdxM3hXRE5oUDVyWkdlLU1rUXdEU1dFWHZHUWFrVXpzZmUtNjB2dlVVNndJWXNFSGJsUW9tZTIzbGNrdGdGT2M3Q1V1OUE?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX21NdVRPSTJNSUZiZ201OEo3U1Q0Rk9XVFJGaHVEWG1pczBSZzNpZVI2UXEwdEljb0F1UjJTUFRQOXBSTF9zQTNtRnhUcjBKRG9pVktwU1JXeWNiS0ZSZjBZaUhhakJEaU5YbEpBWG14MkUwTjhLX1RzU2NnY2ZvRER6VkVvNUVzemcwU0JzSWE4SmMzM3loLUdFR2JsMG9BbE9hS0ZrZFRGRVUtQ3BYYw?oc=5"
+      ],
+      "ref_names": [
+        "Quartz",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "投資機構 Citrini Research 揭露其以 Claude 輔助設計蛋白質的研究方法，並據此加碼生技類股；Quartz 報導這是該機構運用 AI 輔助科研選股的案例之一。關注 AI 輔助藥物／生技研發應用的團隊可留意後續是否有更多機構跟進類似做法。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN3E2YkxXZFhGcy1kaWFuTFRZeENWa29qaW56Y3VjWWt6TEJSdzZJVEJWOTBpNDJnaWlPRGdqZXptU2JLenZpYW1jYkhlS0Y2bVFYSllNN2V5eUtIQnZpU1BQNFZrRUFfTmpPbEMyR1pDaThraEpUcG9Tc3dTR1UzQy1icGlTRW1F?oc=5"
+      ],
+      "ref_names": [
+        "Quartz"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "GitHub Copilot models deprecated on October 19, 2026",
+      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "body": "GitHub Copilot 官方今日起停用多款舊模型，涵蓋 Chat、Agent 模式與程式碼補全等多數體驗。（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Copilot's 4-Model Bundle Closes Cursor's Gap \\[2026\\]",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xb2htaGVWY0FyaEZodjBINHNUQk5pOXQ3MDFnWnZmZnh1VEtzRUJkd2NjM3JoUElkS3NtOUlHODZxQ1VOMG5yS0d5dnBqWnpDRUo5NERLTjJqc01XRHdPZWc4NmcyeHJIMmM0U0k0ZGxOX2xGX3R4NEVYSDZhQXc?oc=5",
+      "body": "報導稱 Copilot 新的四模型組合正在拉近與 Cursor 的差距。（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "body": "GitHub Copilot 新增 REST API，讓企業與組織可用程式化方式查詢並更新模型使用政策。（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Cursor Origin vs GitHub: AI Code Hosting Launch \\[2026\\]",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0yNGlXeHQ2NV9mMmxmOVdPSGtJLXpoQ0xpaHRKU1hraTNkamlOT1FPdDQ4MTMzNVVOcTl1TDJVQUlfSEVTS2lMWEVvOFFqYldhRllQcVBjaEZwZ1Nkb0ZwV0JmUFE4Z25RWklTVDd3?oc=5",
+      "body": "報導比較 Cursor 新推出的 AI 程式碼託管服務 Origin 與 GitHub 既有定位。（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Microsoft Warns AI Agents Can Be Hijacked Through Prompt Injection Attacks",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fNHhrdV9DN2RMN2NZajcycTJWMThFSDRYSVRxb0xYMEFBZmNOTDJUdV9zQVlwUV9ndlJUZk9LdEpXYVR5ckJZNVd3bGdzZ3RRUzRrYnphaVhFdEpYUHZvZ2NQcFMtcDl2X3ZBUW50N1A1Z9IBd0FVX3lxTE8zUzhKNWdGZk5oTllwU0lXRlEyalU2WWE1TzhxdHNnbW1jR3hqdmVmdnhhU0Q0dlBaVGpyd3B3bFZfQURlV3RBSHNuSUZlSTJ2M095MXU0YVY0TTJIbDY4VmtaeEFsbjE1eUlKSHRvelRaUGh4alRN?oc=5",
+      "body": "Microsoft 官方警告 AI agent 可能透過 prompt injection 遭挾持。（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 33
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code 實驗功能追蹤：2.1.304（自 2.1.303 起比對）新增 11 個第一階候選旗標，涵蓋歸因追蹤、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-mods",
+      "name": "Claude Mods",
+      "pageType": "entity"
+    },
+    {
+      "id": "eric-schmidt",
+      "name": "Eric Schmidt",
+      "pageType": "entity"
+    },
+    {
+      "id": "linus-torvalds",
+      "name": "Linus Torvalds",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-20",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.304（自 2.1.303 起比對）新增 11 個第一階候選旗標，涵蓋歸因追蹤、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告。"
+          },
+          {
+            "page": "entities/claude-mods",
+            "name": "Claude Mods",
+            "label": "最新判讀",
+            "date": "",
+            "body": "v2.1.304 新增 mod 跳過 hook 時具名記錄 transcript，以及 `tool.check` 的 `decider: \"person\"` 選項，供標示核准由人或 mod 決定。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "GitHub 展示案例",
+            "date": "",
+            "body": "GitHub repo 彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，本庫首次收錄）；forks／issues 未查證，屬弱訊號。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **戰略合作**：Anthropic 傳與 Nscale 洽談第二筆雲端合作，規模同樣約 450 億美元，尚未定案（CNBC／Reuters／Bloomberg）。\n- **公司治理**：前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權於 IPO 前曝光，潛在報酬可觀（Bloomberg／Quartz／Reuters）。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。\n- 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。\n- 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Nscale 第二筆算力合作曝光**：傳規模約 450 億美元，與 09-21 揭露的 1,030 億美元合約併計，資本支出規模持續墊高。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "AI 安全法案反彈持續擴大",
+            "date": "",
+            "body": "Semafor 與《華盛頓郵報》同步報導外界反彈擴大，未提供新的具體門檻數字。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Microsoft prompt injection 警告**：AI agent 可能透過 prompt injection 遭挾持；具體受影響範圍與攻擊鏈細節均未見報導，僅標題可用。\n- **Claude Code 越界操作率研究**：系統提示詞加一句話，使越界操作率從 0% 升至 17.1%；原文細節未見報導，僅標題可用。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "Show HN：無人值守軟體工廠骨架自稱省 80% token 成本",
+            "date": "",
+            "body": "gojko/lights-on-software-factory 釋出基於 Votito 實戰經驗的編排器骨架；作者稱比純 Claude 工作流節省約 80% token 成本，留言追問多 agent 情境下憑證如何分配。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "新增 UI 設計 skill 新方向",
+            "date": "",
+            "body": "- **oil-oil/draw-ui（506★）**：screenshot-to-code 的 UI 設計 skill，與同作者 oil-ui 互補。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "新增設計系統 MCP server",
+            "date": "",
+            "body": "- **marvkr/better-design**：開源設計 MCP server＋shadcn/ui registry，31 套品牌佈景主題一鍵安裝（504★）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/linus-torvalds",
+            "name": "Linus Torvalds",
+            "label": "最新動態",
+            "date": "",
+            "body": "Hacker News 轉載 The New Stack 完整報導：這個擱置 18 個月的 page cache 效能瓶頸，10-patch 分支合成測試跑出 23 倍吞吐量提升，但審查發現 race condition；Torvalds 提醒真實環境增益會遠小於測試數字。"
+          },
+          {
+            "page": "entities/eric-schmidt",
+            "name": "Eric Schmidt",
+            "label": "IPO 前曝光持股約 1%",
+            "date": "",
+            "body": "Bloomberg 報導前 Google 執行長 Eric Schmidt 持有 Anthropic 約 1% 股權，估算這筆持股未來可能帶來可觀報酬；Quartz、Reuters 同日轉引跟進，具體投資時間與金額未見報導。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 13
+  },
+  "readerTopStories": [
+    {
+      "title": "Show HN: Lights-on software factory boilerplate for Claude Code",
+      "url": "https://github.com/gojko/lights-on-software-factory",
+      "source": "Hacker News",
+      "time": "10/20 01:22",
+      "sentiment": "",
+      "body": "今日至少 9 款圍繞 Claude Code 的工具同步登上 Hacker News Show HN，本則作者稱其編排器比純 Claude 工作流節省約 80% token 成本；其餘工具涵蓋資料中心路由模擬、B2B 開發客戶開發、強制測試執行、手寫算式批改等不同場景，多數個別討論熱度不高。想嘗鮮新外掛的開發者可直接逛今日 Show HN 列表。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "One sentence changed Claude Code's overreach rate from 0% to 17.1%",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9xRXF6bnN2MFFWRFQwTzYtNUhMMTk4MkVONnE1TWVIelhkd2FwME9QYnZxbTNGVnNPRm1hWnQzNGQ1c3puVkd6LS1MTWV4TURUYkg1Z2RRdzFPWC05dTNQQnB3?oc=5",
+      "source": "Google News / The New Stack",
+      "time": "10/19 18:36",
+      "sentiment": "",
+      "body": "報導稱在系統提示詞中加入單一句子，使 Claude Code 的「越界操作率」從 0% 升至 17.1%；原文完整細節未取得，暫以標題揭露的數字為準。負責 agent 權限邊界設計的團隊可留意後續完整報告，評估自家系統提示詞是否有類似風險。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Structured outputs for Anthropic Claude models on Amazon Bedrock",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeGtQZ3VDNTRrRVNBTDA4ak5mUlBKUG1kdWpwWDJxQUx2UWxFMGw3Sk85MllYN1gyTENSZEcxa0RwZ2RXLTk5WlE0ejZPZWU0UzI5RVRmUnlLdXgwcjZBUUhEUnI5enprM2NPZVlhbXl6ZUhTVU4wZEpwMjc0SHlQME54Ri1NMk40UmF5bDBReHdEV0V6OWxXVnJVSl9nUkpsTGFQejBtU2tFeEliQXpvZw?oc=5",
+      "source": "Google News / Amazon Web Services (AWS)",
+      "time": "10/19 23:32",
+      "sentiment": "",
+      "body": "AWS 官方部落格宣布 Amazon Bedrock 上的 Claude 模型新增結構化輸出（structured outputs）支援（細節以官方文件為準）。透過 Bedrock 呼叫 Claude 的開發者，可留意是否能藉此省去額外的輸出格式校驗邏輯。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

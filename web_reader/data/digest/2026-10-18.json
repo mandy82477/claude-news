@@ -380,18 +380,8 @@
       "pageType": "entity"
     },
     {
-      "id": "linus-torvalds",
-      "name": "Linus Torvalds",
-      "pageType": "entity"
-    },
-    {
       "id": "openclaw",
       "name": "OpenClaw",
-      "pageType": "entity"
-    },
-    {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
       "pageType": "entity"
     },
     {
@@ -412,11 +402,6 @@
     {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {

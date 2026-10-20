@@ -376,58 +376,13 @@
   "preview": "Claude Code：版本：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "opencode",
       "name": "OpenCode",
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],
