@@ -23,7 +23,7 @@ paths:
 | 類型 | 內容 |
 |------|------|
 | **官方核心** | GitHub Changelog、SDK / API 迭代、定價結構變化、Anthropic 公告 |
-| **社群實測** | 工程師驗證過的工作流模式、agent 設計、Bug 回報與替代方案（HN / Reddit） |
+| **社群實測** | 工程師驗證過的工作流模式、agent 設計、正在討論的新功能與替代方案、Bug 回報（HN / Reddit） |
 | **生態動態** | 融資、大型企業合作（AWS / Google）、政策趨勢、周邊工具——**只收會改變工程師決策的那些**：定價、可用性、法規強制、供應商鎖定。純資本敘事與市場觀感不收 |
 | **專頁定向** | 為特定 wiki 專頁定向抓取的少量條目（`src/news_aggregator/sources/topic_watch.json`； 另含 `src/news_aggregator/sources/blogroll.json` 帶 `topic` 的各家 AI 廠商官方 blog／changelog，每 feed 每次至多 3 則），判準是「對該專頁有無價值」而非標題是否提及 Claude／Anthropic；廠商發布另加一道「會不會改變用 Claude 的人的選型、帳單、可用性或能力對比」的判斷，無衝擊不寫 |
 | **存量盤點** | 已成名但本庫從未報導過的 GitHub repo，每日至多 3 則補進（`src/news_aggregator/sources/github_releases.py` C 窗，2026-09-25 由 2 調為 3）。含 Agent Skills 生態——SKILL.md 是 Anthropic originated 的格式，該生態整體屬 Claude 生態，但多數 repo 的描述不含 claude 字樣 |

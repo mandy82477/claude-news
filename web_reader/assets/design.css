@@ -507,7 +507,7 @@ code {
   .focus-item { flex-direction: column; gap: var(--space-sm); }
   .focus-tag { align-self: flex-start; margin-top: 0; }
 }
-/* 今日聚焦下方的常駐導流：「該不該升版」→ 熱度雷達 */
+/* 今日聚焦下方的常駐導流：「有什麼新功能值得用」→ 熱度雷達 */
 .focus-radar-cta {
   margin-top: 4px; padding-top: 10px;
   border-top: 1px solid var(--border-1);

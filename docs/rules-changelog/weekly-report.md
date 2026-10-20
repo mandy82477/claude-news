@@ -84,3 +84,7 @@
 - `headline.md` 三類讀者整串重抄改為指 `collection-scope.md`。
 
 機制：`check_rules.py` 新增檢查 7（script_symbols），規則檔同一行提到腳本與符號就核對符號存在，不需登記；對本次 `HEADLINE_SECTION_RE` 回歸實測會擋（exit 1）。沿革見 `docs/rules-changelog/claude-md-edit.md` 2026-10-08。
+
+## 2026-10-20（本週官方出了什麼：收尾句改「最值得試的一項」）
+
+`columns.md` 該段原以「升版建議」收尾，目標讀者改寫為「有什麼新功能、值不值得用」後改為「這週最值得試的一項」，破壞性變更或預設值改變才附升版提醒。`web_reader/assets/app.js` 對應註解同步。

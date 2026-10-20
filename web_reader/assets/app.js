@@ -322,9 +322,9 @@
       parts.push(`<li class="focus-item focus-item--market"><span class="focus-tag focus-tag--market">投資訊號</span><button type="button" class="focus-item__link" onclick="openWikiPage('market-signals','topic')">${esc(d.marketSignal.title)} — 看判讀 →</button></li>`);
     }
     parts.push('</ul>');
-    // 常駐導流：重度使用者的核心問題「該不該升版」答案在熱度雷達頁，
+    // 常駐導流：重度使用者的核心問題「有什麼新功能值得用」答案在熱度雷達頁，
     // 但從日報頁原本沒有任何入口（2026-07-28 讀者 review 高影響項）
-    parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
+    parts.push(`<div class="focus-radar-cta">有什麼新功能值得用？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：現在值得試的功能 →</button></div>`);
     parts.push('</div>');
     return parts.join('\n');
   }
@@ -438,7 +438,7 @@
       const top = readerNewsTopHtml(d);
       if (top) parts.push(top);
       parts.push(readerDigestHtml(r));
-      if (!top) parts.push(`<div class="focus-radar-cta">該不該升版？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：升上去會遇到什麼 →</button></div>`);
+      if (!top) parts.push(`<div class="focus-radar-cta">有什麼新功能值得用？<button type="button" class="focus-radar-cta__link" onclick="openWikiPage('feature-radar','radar')">看熱度雷達：現在值得試的功能 →</button></div>`);
       container.innerHTML = parts.join('\n');
       return;
     }
@@ -1509,7 +1509,7 @@
       <div class="weekly-version__text">${mdToHtml(d.versionNote)}</div>
     </div>`);
       }
-      // W41 起「本週版本」改題為「本週官方出了什麼」：新功能與新產品有固定位置，升版建議是其中一行
+      // W41 起「本週版本」改題為「本週官方出了什麼」：新功能與新產品有固定位置，「這週最值得試的一項」與破壞性變更提醒是其中一行
       if (d.official) {
         parts.push(`
     <div class="weekly-official">

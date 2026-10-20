@@ -78,3 +78,7 @@
 ## 2026-10-18（雲端 5m／5n 的 repo 讀取權限：加 source、指令改 REST）
 
 10-03、10-17 兩輪雲端 lint 的 5m／5n 都寫「repo 授權不足，跳過」。探針（`docs/cloud-runbooks/probe-github-access-2026-10-18.md`）證實：雲端 session 讀得到哪些 repo 由 routine 的 `sources` 決定，加 `anthropics/claude-code`（sparse checkout CHANGELOG.md）後 GitHub MCP 與 `gh api` 皆可讀；真正擋的是 `gh issue view` 走 GraphQL，雲端環境一律 403，與授權無關；`gh auth status` 報 GH_TOKEN 失效是誤報。處置：`weekly-wiki-lint-cloud` 加第二個 source（鏡像 JSON 同步）；`.claude/skills/wiki-lint-sweeps/references/sweeps.md` 5m／5n 與 `.claude/reporter-rules/features/pages.md` 的指令全改 REST（`gh api repos/.../issues/<n>`、`/comments --paginate`），CHANGELOG 雲端直接讀 sparse clone；egress 節的「repo 授權不足」改為「sources 被改掉」的診斷分支，措辭保留給 registry 配對。另一教訓：`RemoteTrigger update` 的 `job_config.ccr` 是整塊覆寫，漏帶 `events` 會把 prompt 洗空，當場從鏡像 JSON 補回。
+
+## 2026-10-20（讀者模擬題型隨目標讀者改寫）
+
+`.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 讀者模擬表：重度使用者題型由「該不該升版／壞了嗎」改「有什麼新功能／值不值得現在用」，系統開發者加「最近社群在討論什麼」。對應 `.claude/rules/collection-scope.md` 2026-10-20 的讀者定義改寫。
