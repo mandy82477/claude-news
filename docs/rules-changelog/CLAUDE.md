@@ -37,3 +37,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-11：規則檔 paths 排除記者讀的檔
 
 量測記者子代理的 context：讀 `.claude/` 下任何 `.md`（角色檔、`.claude/reporter-rules/`）都會被路徑規則自動塞進 `claude-md-edit.md`（6.7 KB）與 `dev-done.md`（2.3 KB），每次派工約 5 千 token，而記者永遠不改規則也不開發。改法：`claude-md-edit.md` 的 `.claude/**/*.md` 改列舉 `rules/`、`skills/`、`commands/`；`dev-done.md` 的 `.claude/**` 改列舉 `rules/`、`skills/`、`commands/`、`hooks/`、`mods/` 與 `settings.json`、`review-registry.json`。兩者都刻意不含 `agents/`、`reporter-rules/`，改那兩處的人照 `claude-md-edit.md` 正文明文 Read。`.claude/hooks/` 沒有 `.md`，列進 `claude-md-edit.md` 會讓 `test_rules_frontmatter` 的零匹配檢查紅，故不列。
+
+## 2026-10-20（目標讀者兩句改寫）
+
+使用者改寫 `.claude/rules/collection-scope.md` 檔首兩類讀者：Claude Code 重度使用者由「有什麼壞了、值不值得升版」改為「有什麼新功能、值不值得用」（收錄重心從故障追蹤移向功能評估）；AI 系統開發者加「最近在討論什麼」（社群討論本身也是收錄理由）。根目錄 `./CLAUDE.md`、`README.md`、`web_reader/index.html` 關於頁同句同步。
