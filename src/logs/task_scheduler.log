@@ -1200,3 +1200,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [週一 2026/10/19 18:01:34.00] === Pipeline complete (agent) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-10-19T22:09:26Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-19T22:09:38Z] Step 0b 冪等閘：news/2026-10-19.md 已存在，TARGET_DATE=2026-10-19（22 UTC 班，第三班）為今日排程模式，中止（本班為當日第三班，第二班 17:08 UTC 已完成全流程：Aggregator OK / Wiki ingest OK / 測試全綠 / Single push done）
+[cloud watchdog-push STARTED 2026-10-20T01:31:59Z]
