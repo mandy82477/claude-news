@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-21
 
 > **最新動態**（2026-10-21）
-> - **版本**：v2.1.306 純 bug 修復（雲端 session `claude -p` 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；SDK 同步發新版，見下方「版本更新」表。
+> - **版本**：v2.1.306 純 bug 修復（雲端 session `claude -p` 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；anthropic-sdk-python／anthropic-sdk-typescript 同步發新版（詳見 [[entities/claude-code#版本更新]]）。
 > - **文件**：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節與 session details panel／usage ring 用量顯示說明。
 > - **旗標**：build 新增 6 個第一階候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES` 消失，詳見 [[topics/claude-code-experimental]]。
 
