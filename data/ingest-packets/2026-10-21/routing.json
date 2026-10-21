@@ -150,10 +150,11 @@
   "title": "Claude designed protein binders against scorpion neurotoxins",
   "source": "Hacker News",
   "categories": [
-   "模型"
+   "模型",
+   "功能"
   ],
   "reason": "",
-  "note": ""
+  "note": "分類回退自 模型（模型記者判斷：屬 Claude 科研應用案例，非模型發布/能力評測/棄用/版本迭代，應歸功能類 entities/claude-science.md 既有系列）"
  },
  "https://github.com/anthropics/claude-code/issues/69044": {
   "title": "User feedback: Recurring errors documented over months of daily Claude Code use",

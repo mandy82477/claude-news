@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-20）
+> **本週衝擊**（2026-10-21）
 > - 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。
 > - 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
@@ -238,6 +238,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-21
+- **OpenAI（分析文，非競品動態）**：官方部落格宣布旗下模型（含 Codex 工作流程）將透過 Google Cloud Marketplace 的 Model Garden 提供；純通路擴張，未見與 Claude 的對比數字，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非競品動態）**：ChatGPT Ads 擴展至 26 個新國家，官方稱累計逾 10 萬廣告主使用；廣告業務擴張，非編碼/模型能力變動，不列入「對手雷達」表（Blog/OpenAI News）
 
 ### 2026-10-20
 - **Microsoft／GitHub**：Copilot 新推出四模型組合，報導稱正拉近與 Cursor 的差距；具體模型清單與對比數字未見報導，僅標題可用（Google News/tech-insider.org；Topic Watch/competitor-landscape）

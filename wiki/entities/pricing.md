@@ -30,11 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-17
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **最新計費政策異動**（2026-10-17）
-> Hacker News 回報 Anthropic Console 儲值小數點輸入 bug，部分使用者遭超扣達 100 倍（$5.04 誤刷為 $504），付款前無金額確認視窗，官方尚未回應。
+> **最新計費政策異動**（2026-10-21）
+> - **官方定價頁改版**：新增 Extensions「Claude in Chrome」與「Managed Agents」段落，移除舊版命名（diff 偵測）。
+> - **Max 20x 爭議延燒**：新 GitHub Issue 回報 7 月已升級用戶週用量仍按 Max 5x 速率消耗，呼應既有集體訴訟。
 
 ## 現況
 
@@ -70,6 +71,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 方案細節
 
+- **Plans & Pricing 頁新增 Extensions「Claude in Chrome」段落（2026-10-21 diff，同日查證）**：僅「Claude for Chrome」改名，方案可用範圍（Pro 以上）與定價不變
+- **同次 diff：「Models Mythos」改名「Mythos (including Fable)」、新增 Managed Agents 連結**：均為命名／導覽調整，Managed Agents 費率仍是既載 $0.08／session-hour，非新費率
 - **Team 方案年繳新增 20 席下限（2026-10-15 diff 偵測）**：年繳條件從「每席每月 $20」變「每席每月 $20，最低 20 席」；小型團隊年繳前應先確認席數達標（[claude.com/pricing](https://claude.com/pricing)）
 - **09-28 官方 Plans & Pricing 頁 Batch processing 範例模型換代**：頁面把 Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5；屬頁面範例更新，不代表 Batch 折扣費率本身變動（Official Docs）
 - **旗艦分界的官方定義（2026-07-20 生效）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用「至多每週用量上限的 50%」且不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率付費。先前將 Fable 5 納入方案週用量的促銷結束於 **2026-07-19 23:59:59 PT**
@@ -286,7 +289,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |------|------|---------|-----------|
 | HERMES.md 字串觸發靜默切 API 計費 | ⛔ 官方拒修 | 2026-04-25，官方確認為 bug 但拒絕退款 | commit 訊息避開該大寫字串；已被扣費者官方不退 |
 | Anthropic 證實 $16.6M 帳務錯誤、企業多收 $1.7M（含南韓 $16.7M 個案） | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；退款與補救 ❓ 待查證 ⟨Q-01⟩ |
-| Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-09-09，四家媒體跟進（Verge／Startup Fortune／The New Stack／Engadget），首度點名「20 倍」實為週用量上限機制 | 依現況估算用量，不要以「20 倍」為預算基準 |
+| Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-10-21，Issue #79773（31 留言）：7 月已升級 Max 20x 用戶仍按 Max 5x 速率耗用 | 依現況估算用量，不要以「20 倍」為預算基準 |
 | Anthropic Status 通報：credit purchase 入帳延遲，部分請求因餘額不足失敗 | 🔴 未解 | 2026-10-01，官方 Investigating，修復時間未載 | 失敗請求稍後重試；充值後先核對餘額再跑長任務 |
 | Max 方案 session 額度自 3 月起異常加速耗盡 | 🔴 未解 | 2026-09-16，Issue #38335 累積 855 留言、545 👍，跨 2 則 Reddit 佐證 | 留意消耗速率，於 `Settings > Usage` 核對走勢是否異常 |
 | Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-17，Issue #16157 累積 1,495 則留言、725 👍，本頁互動量最高 | 官方新增說明：用量與長度是兩種限制，先關閉不需要的工具／連接器省用量；並查 `Settings > Usage` 是否真的觸頂 |
@@ -316,6 +319,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### ⚖️ 2026-10-21：新 GitHub Issue #79773——7 月已升級 Max 20x 用戶回報週用量仍按 Max 5x 甚至更低速率消耗
+
+- **GitHub Issue #79773（31 則留言，2026-10-21）**：一名 7 月已升級 Max 20x 的用戶回報，其週用量額度仍按 Max 5x（甚至更低）速率消耗，而非應有額度；呼應既有 Max 20x 集體訴訟「實際僅 Pro 6–8 倍」的落差指控（[GitHub #79773](https://github.com/anthropics/claude-code/issues/79773)）。
+- **你能先做什麼**：已升級 Max 20x 的用戶可對照自己 `Settings > Usage` 的消耗速率是否接近舊方案水準，並留意官方後續回應。
 
 #### 🔴 2026-10-16：Hacker News 回報 Console 儲值小數點輸入 bug，$5.04 被當成 $504 刷卡扣款 100 倍
 

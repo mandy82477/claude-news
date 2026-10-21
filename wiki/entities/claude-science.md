@@ -30,22 +30,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-06
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **最新動態**（2026-10-06）
-> - **CRISPR 酶系統爭議再添一家分析**：IBM 發文檢視這項發現「實際上顯示了什麼」，延續 09-27 起 NYT／Benzinga／the-scientist.com／WIRED 對原創性與能力範圍的質疑（僅標題可用）。
+> **最新動態**（2026-10-21）
+> - **蠍毒神經毒素蛋白質結合物**：Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物，Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分）。
 
 ---
 
 ## 現況
 
+**蠍毒神經毒素蛋白質結合物（2026-10-21）：** Anthropic 公布研究成果：Claude 自主設計出可中和蠍毒神經毒素的蛋白質結合物。投資機構 Citrini Research 應用此法測試 211 個候選蛋白，篩出 17 個有效 binder，尚待實驗室進一步驗證（Hacker News 111 分，4 個來源，含 Google News、HN Repo Bridge 跟進）。
+
 **CRISPR 特徵酶系統發現：官方公布與媒體跟進（2026-09-24～09-25）：** Anthropic 部落格 09-24 宣布新設生命科學研究團隊，聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統（Hacker News 729 分，4 個來源同日交叉報導，含 Reuters 獨立確認角度）。此團隊／實驗室與本頁所記錄、2026-07-01 發布的 Claude Science app 是否為同一產品線的延伸或另立獨立團隊，官方原文未載明，暫以獨立事件記錄；該酶系統實際用途原文亦未載明（The Next Web 標題稱「功能尚未確定」，僅供旁證）。09-25 the-scientist.com 揭露，這項發現出自 Anthropic 一個先前保密的「AI 驅動濕實驗室」首度曝光的成果，該濕實驗室與 [[topics/anthropic-business]] 09-18 起記錄之自有生物實驗室（AI 藥物開發布局）應屬同一設施，原文未逐字確認；Gizmodo 指出 Anthropic 目前仍無法完整說明酶系統的能力範圍，New Scientist 引述專家審慎看法稱其「充其量只是另一款基因編輯工具」，The New York Times、therundown.ai 同日跟進（Google News 聚合共 5 個來源，除 the-scientist.com 外均僅標題可用）。09-27 紐約時報追問這項發現是否真為 Claude 獨立完成，同日 Benzinga 報導另一名科學家稱先前已有類似發現，兩者均對「AI 獨立完成科學發現」的原創性提出質疑（Hacker News＋Google News，11 分／3 個來源）。09-29 the-scientist.com 與 WIRED 同日跟進，延續同一質疑方向：the-scientist.com 質疑發現可能借用另一科學家既有研究成果，WIRED 追問 Anthropic 是否已完整釐清該系統能力範圍（僅標題可用，無新技術細節）。10-06 IBM 發文檢視這項發現「實際上顯示了什麼」，延續同一質疑方向（僅標題可用）。
 
-**物理學家挑戰題一個月後被解出（2026-09-26）：** Anthropic Science 部落格以訪談形式記錄：理論物理學家、科普作家 Matt von Hippel 向多家 AI 公司拋出一道他過去研究領域的理論物理問題，一個月後被解出。Hacker News 累積 103 分，4 個來源同日報導；具體解題方法與模型版本原文未載（僅標題可用）。
-
-**DRC 伊波拉疫情應用案例（2026-09-25）：** Anthropic 部落格文章指出，剛果民主共和國（DRC）團隊自 5 月起使用 Claude 協助對抗 Bundibugyo（BDBV）伊波拉病毒株疫情，透過健康工作者筆記本記錄接觸史，近 8,000 例確診中近半數死亡，及早發現為存活關鍵。此案例為 Claude 應用於公共衛生現場的產品案例，與本頁記錄的科學家研究工作台（Claude Science app）及生命科學研究團隊屬不同產品線。
-%% 維運備忘：單一來源、低互動（HN 27 分），暫無專屬頁面，記於此頁待後續同類案例累積後再評估是否獨立成頁 %%
+%% 維運備忘：物理學家挑戰題（09-26）、DRC 伊波拉應用案例（09-25）兩段已移入「歷史記錄」表，不在現況雙重維護（「現況不被時序侵蝕」規則）；DRC 案例單一來源、低互動（HN 27 分），暫無專屬頁面 %%
 
 Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作台 app。整合研究常用工具套件、可稽核 artifact（Auditable Artifacts）與彈性雲端運算資源，定位為科研人員的端對端 AI 研究平台。使用者可直接存取此 app，無需自行配置底層 API。
 
@@ -83,6 +82,8 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 ## 參考來源
 
+- [Anthropic Research: Claude designed protein binders against scorpion neurotoxins](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design)（2026-10-21，Hacker News 111 分，4 個來源）
+- Hacker News 討論：[item?id=50170021](https://news.ycombinator.com/item?id=50170021)（70 則留言）
 - [Anthropic Science: Yes, Claude can do nine loops](https://www.anthropic.com/research/yes-claude-can-do-nine-loops)（2026-09-25，Hacker News 103 分）
 - [Anthropic Blog: Claude discovers a novel enzyme system with CRISPR-like repeats](https://www.anthropic.com/news/claude-discovers-novel-enzyme-system)（2026-09-23）
 - [Anthropic Blog: Claude Science AI Workbench](https://www.anthropic.com/news/claude-science-ai-workbench)（2026-07-01）
@@ -98,6 +99,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 - Google News / IBM："What Anthropic's AI biology experiment actually showed"（2026-10-06，僅標題可用）
 - Google News / the-scientist.com："Early Verdicts on Claude Science: Faster Workflows, But Gaps Remain"（2026-07-15，僅標題可用）
 - GitHub Search: [anthropics/life-sciences](https://github.com/anthropics/life-sciences)（576★，2026-08-17 查證）
+- [[news/2026-10-21]]
 - [[news/2026-10-06]]
 - [[news/2026-09-30]]
 - [[news/2026-09-28]]
@@ -111,6 +113,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-21 | Anthropic 公布 Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物；Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分，4 個來源） |
 | 2026-10-06 | IBM 發文檢視 CRISPR 特徵酶系統發現「實際上顯示了什麼」，延續 09-27 起對原創性與能力範圍的質疑；僅標題可用 |
 | 2026-09-29 | the-scientist.com 與 WIRED 同日跟進，延續原創性質疑：the-scientist.com 稱發現可能借用另一科學家既有研究成果，WIRED 追問能力範圍是否已釐清；皆僅標題可用 |
 | 2026-09-27 | 紐約時報追問 CRISPR 特徵酶系統發現是否真為 Claude 獨立完成；同日 Benzinga 報導另一名科學家稱先前已有類似發現，對原創性提出質疑 |

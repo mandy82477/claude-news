@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **記憶工具新增零 LLM 呼叫的結構化圖儲存**（2026-10-18）
-> - **syncable-dev/memtrace-public**：雙時態圖儲存 AI coding agent 記憶，MCP-native，查詢寫入不呼叫 LLM，跨 Cursor、Claude Code、Codex 等多工具。
+> **新增跨 5 款工具的對話歷史擷取工具**（2026-10-21）
+> - **jatechan/ai-data-extractor**：開源擷取工具，解析 Claude Code、Cursor、Windsurf、Aider、Cline／Roo Code 等本機對話歷史並匯出。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### jatechan/ai-data-extractor：跨 5 款 AI coding agent 的對話歷史擷取工具，含 Claude Code（2026-10-21）
+
+- **主線：** 索引記憶
+- **核心模式：** 開源免費擷取工具，解析本機已存的 AI coding assistant 對話歷史並匯出，支援 Claude Code、Cursor、Windsurf、Aider、Cline／Roo Code 等多款工具；GitHub Search 526 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（raine/claude-history 等）一個「單一工具覆蓋多款 agent」取向——既有做法多鎖定 Claude Code 單一 agent，本則廣度優先支援 5 款工具的對話歷史擷取；跨工具持久記憶核心概念相符，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（526★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體擷取格式與匯出機制未見細節。
+- **來源：** GitHub Search；[GitHub](https://github.com/jatechan/ai-data-extractor)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### syncable-dev/memtrace-public：雙時態圖儲存 AI coding agent 結構化記憶，MCP-native 且不呼叫任何 LLM（2026-10-18）
 

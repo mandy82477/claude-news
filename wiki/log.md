@@ -7930,3 +7930,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無開發實務分類派工包，未派工；手冊正文寫入 0 則
 - market 判讀：新增 1 則（Nscale 第二筆算力合約規模 ▸ 第 2 則，⚖️ 待簽署訊號，複查日 2026-11-03）；其餘 62 則條目逐一套用六類判準後皆不構成「新資訊且動到 S-1 數字」
 - 更正（同日）：上方「devpractice 沉澱」一行誤判為「本日無開發實務分類派工包，未派工」——devpractice 記者應每日無條件派工（分類包僅影響是否貼入官方使用指南內容，不影響是否派工），已補派並完成：基準線 6cdddd8950 → 8e8e8314d0，候選 9 筆（entities/claude-mods、entities/linus-torvalds、topics/ai-agent-safety、topics/anthropic-business、topics/community-integrations、topics/community-skills、topics/community-tech-discussions、topics/skill-interest-watch ×2）留待週更落地；手冊正文本輪寫入 0 則（今日無分類層派發的開發實務官方使用指南條目）
+
+## 2026-10-21 Ingest
+
+- 來源日報：[[news/2026-10-21]]
+- 更新頁面：
+  - **功能**：wiki/entities/claude-code.md、wiki/topics/claude-code-experimental.md、wiki/entities/claude-science.md（分類回退補派工新增）
+  - **商業**：wiki/entities/pricing.md、wiki/topics/anthropic-business.md、wiki/topics/competitor-landscape.md
+  - **安全政策**：wiki/topics/anthropic-government-policy.md、wiki/topics/ai-agent-safety.md
+  - **模型**：無
+  - **社群**：wiki/topics/community-tech-patterns.md、wiki/topics/community-memory.md、wiki/topics/community-skills.md、wiki/topics/community-integrations.md
+  - **投資分析**：wiki/topics/market-signals.md
+  - **主編**：wiki/index.md（anthropic-business 鉤子更新為 S-1 淨損數字＋最後更新日戳）
+- 新增頁面：無
+- feature-radar：本日無新功能
+- index：anthropic-business 鉤子更新（S-1 首度揭露 2026 上半年淨損 807 億美元），最後更新日戳推進至 2026-10-21
+- 摘要：Anthropic 正式提交 S-1、首度揭露 2026 上半年淨損達 807 億美元，WSJ 獨家報導後多家媒體同日跟進（Fortune、CTech、Al Jazeera、Yahoo Finance）；Anthropic 公開研究讓 Claude 自主設計抗蠍毒蛋白質結合物並經 Citrini Research 測試出 17 個有效 binder；Anthropic 部落格公布強化「蒸餾攻擊」防禦措施（資料竊取量降 90–99%）；美國 HHS 將給予 Anthropic 一項聯邦採購唯一來源合約；社群面 Claude Code 錯誤回報與 ECONNRESET 連線問題兩則 GitHub Issue 互動量居高
+- 呈現品質：全部通過（`ingest_gate.py` 曾因 entities/pricing.md 一筆細節區條列超過 200 字元上限（391 字元）FAIL，主編同輪拆成兩條縮短後重跑轉綠）
+- 品質備註：[商業] 分類包內「〔同事件〕Citrini Research...Dealroom」引用未見於商業記者回報的個別處理；事實已由同事件主條目（entities/claude-science，功能類）承載，Dealroom 來源本身未單獨補歸因，列為已知小缺口，不影響正文事實正確性
+- 分類回退：追加派工 1 筆——[模型→功能] Claude designed protein binders against scorpion neurotoxins（模型記者判斷：屬 Claude 科研應用案例，非模型發布／能力評測／棄用／版本迭代，與既有 entities/claude-science 系列同一敘事脈絡）；主編同輪核對後補派功能記者，已完成寫入
+- 主編查證：商業記者提出官方 Plans & Pricing 頁 diff（Extensions「Claude in Chrome」、「Managed Agents」段落、「Models Mythos」改名）具體內容未經查證；主編以 WebFetch 逐字查證官方頁後確認為**命名調整，非新功能或新費率**，已寫入 entities/pricing.md「方案細節」並標明查證日期
+- devpractice 沉澱：本日無開發實務分類派工包（分類階段無條目判為官方使用指南類），候選 0 筆，手冊正文未更動；基準線 8e8e8314d0 → c3ef1ac96e
+- market 判讀：新增 2 則（第1類·一手財務揭露：S-1 淨損 807 億美元；第4類·具名客戶採用：HHS 唯一來源合約），均判「本體不可買、無間接曝險標的」；其餘條目逐一套用六類判準後不構成新判讀

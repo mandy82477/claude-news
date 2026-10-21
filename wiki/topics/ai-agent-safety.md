@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-20"
-last_news_update: "2026-10-20"
+last_updated: "2026-10-21"
+last_news_update: "2026-10-21"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 
-> **最新動態**（2026-10-20）
-> - **Microsoft prompt injection 警告**：AI agent 可能透過 prompt injection 遭挾持；具體受影響範圍與攻擊鏈細節均未見報導，僅標題可用。
-> - **Claude Code 越界操作率研究**：系統提示詞加一句話，使越界操作率從 0% 升至 17.1%；原文細節未見報導，僅標題可用。
+> **最新動態**（2026-10-21）
+> - **官方防護研究**：Anthropic 發布用 Claude 分析降低程式碼攻擊面的研究，HN 105 分／71 則留言。
+> - **濫用態勢**：朝日新聞稱 AI 相關網路攻擊所用伺服器上發現 Claude Code 蹤跡，攻擊鏈細節未載。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -126,6 +126,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-21 | 防護 | Anthropic 官方研究文章說明用 Claude 分析降低程式碼攻擊面，HN 105 分／71 則留言 | 官方一手＋HN；具體方法論與量化成效數字未見全文，僅標題可用 |
+| 10-21 | 濫用 | 朝日新聞：AI 相關網路攻擊所用伺服器上發現 Claude Code 蹤跡 | Google News／朝日新聞；僅標題可用，攻擊鏈細節未載 |
 | 10-19 | 摩擦 | GitHub #84352 留言數持續攀升至 201 則、👍29，本日互動數最高的開發者回報 | Issue 一手回報；官方仍未公開回應或修復時程 |
 | 10-15 | 防護 | Bank of America 雇用 1000 名約聘人員，修補 Mythos 掃出的軟體漏洞 | CNBC 單一來源；Hacker News 討論 35 分，對是否為 Jevons paradox 案例意見兩極，另稱 Mythos 後續在新修補裡又找到新漏洞 |
 | 10-09 | 防護 | Anthropic Cyber Mission：關鍵基礎設施防禦計畫（CIDP，11 家創始夥伴）＋對開源專案免費漏洞掃描（官方稱真陽性率逾 90%） | 官方一手（2026-10-09 Anthropic Blog）；Axios、The Hacker News 補充；掃描是否經人工複核未載 |
@@ -189,6 +191,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Anthropic 官方研究：用 Claude 分析並降低程式碼的攻擊面（2026-10-21 新增，官方防護研究）
+
+- **揭露來源**：Anthropic 官方研究／Hacker News（2026-10-21 03:36 UTC；HN 105 分、71 則留言討論；https://www.anthropic.com/research/attack-surface-reduction）
+- **核心主張（僅標題可用）**：官方研究文章說明如何運用 Claude 分析程式碼、找出可縮減的攻擊面；具體方法論、測試範圍與量化成效數字未見於可讀摘要
+- **性質判斷**：官方防護研究／工具說明，非漏洞或攻擊事件，不列入「## 現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」
+- **可信度評估**：官方一手來源，經 Hacker News 轉載並有具體討論熱度（105 分、71 則留言），為今日互動數最高條目之一
+
+### 朝日新聞：AI 相關網路攻擊所用伺服器上發現 Claude Code（2026-10-21 新增，濫用態勢，非 Claude 產品漏洞）
+
+- **揭露來源**：Google News／朝日新聞（2026-10-21 04:04 UTC，互動 0；殼層摘要，原文無可讀內文，以標題判讀）
+- **核心主張（僅標題可用）**：報導稱在與 AI 相關的網路攻擊案件所使用的伺服器上發現 Claude Code 的蹤跡；具體攻擊鏈、調查單位與受害範圍均未見報導
+- **性質判斷**：屬「別人拿 Claude Code 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入「## 現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」，與既有 10-07 CyberXero、09-14 ShinyHunters 同屬濫用態勢系列
+- ❓ **待查證**（標 2026-10-21｜查 AI-linked cyberattacks）：攻擊鏈細節、調查單位與伺服器用途均未見報導，僅標題可用
+- **可信度評估**：單一來源，經 Google News 轉載，原文未可讀，互動 0，訊號強度低
 
 ### The New Stack：系統提示詞加一句話，使 Claude Code 越界操作率從 0% 升至 17.1%（2026-10-20 新增，行為邊界研究）
 
@@ -1504,6 +1521,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-21
+- **[🛠️ 新增，官方防護研究] Anthropic 官方研究：用 Claude 分析並降低程式碼攻擊面**：Hacker News 105 分／71 則留言，具體方法論與量化成效未見全文，詳見「## 技術彙整」、「## 模型網攻能力與防護」
+- **[📋 新增，濫用態勢，非 Claude 產品漏洞] 朝日新聞：AI 相關網路攻擊伺服器上發現 Claude Code**：攻擊鏈細節、調查單位均未見報導，僅標題可用，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 
 ### 2026-10-20
 - **[📋 新增，行為邊界研究] The New Stack：系統提示詞加一句話，使 Claude Code 越界操作率從 0% 升至 17.1%**：僅標題可用，具體句子與測試方法未見報導，詳見「## 技術彙整」

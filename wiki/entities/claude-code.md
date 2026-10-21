@@ -30,13 +30,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **最新動態**（2026-10-20）
-> - **版本**：v2.1.304，mod 系統新增 hook 被跳過時的具名 transcript 記錄，`tool.check` 新增 `decider: "person"` 選項，細節見 [[entities/claude-mods]]。
-> - **文件**：桌面版文件新增 171 段、移除 65 段（148,190→160,296 字），集中於 session 資料夾與已儲存環境。
-> - **旗標**：build 新增 11 個第一階候選旗標，詳見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-10-21）
+> - **版本**：v2.1.306 純 bug 修復（雲端 session `claude -p` 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；SDK 同步發新版，見下方「版本更新」表。
+> - **文件**：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節與 session details panel／usage ring 用量顯示說明。
+> - **旗標**：build 新增 6 個第一階候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES` 消失，詳見 [[topics/claude-code-experimental]]。
 
 ---
 
@@ -44,6 +44,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.306**（2026-10-21）：修正雲端 session 在未帶入該 session 環境變數時執行 `claude -p` 會誤報「Not logged in」的問題；修正一個原本會被「prompt is too long」訊息覆蓋掉的 API 錯誤；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）。
+  同版 build 另新增 6 個功能候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES`（首見 2.1.299）消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.17.0 新增組織層級 webhook 端點、RBAC 群組擁有者權限錯誤碼；anthropic-sdk-typescript vertex-sdk-v0.22.0 ⚠️ 新增行為：在 `AnthropicVertex` 讀取 `userProfiles`／`beta.userProfiles` 改為拋出 `AnthropicError`（Vertex 不提供使用者個人資料端點），見下方「版本更新」表。
 - **v2.1.304**（2026-10-19）：mod 系統新增兩項——一個 mod 的 hook 被排序在前的外掛跳過時，transcript 具名記錄事件與外掛名稱；`tool.check` 回答新增 `decider: "person"` 選項，標示該次核准／拒絕由人決定而非 mod 自動代為決定；細節見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
   同版 build 另新增 11 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.302**（2026-10-16）：新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 環境變數，可指定 client 端 auto mode 分類器使用的模型，不影響 server 端 auto mode 本身要選哪個模型；另新增閒置自動壓縮（idle compaction）相關功能，官方原文截斷，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）。
@@ -89,6 +91,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- **官方文件更新**（2026-10-21）：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節、session details panel 用量顯示方式、新增憑證來源設定步驟；移除內容未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-20）：桌面版文件新增 171 段、移除 65 段（148,190→160,296 字，近期最大單日異動），聚焦 session 資料夾管理與已儲存環境；移除段落多為舊版操作說明，新版對應寫法未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-17）：桌面版文件重寫「結束 App 後任務是否還在跑」規則，依平台分流——macOS／Linux 以 Claude 帳號登入時結束 App，重開 session 可接續正在跑的任務；Windows 版或接第三方 provider 時結束 App，進度無法接回，須保持 App 開著直到任務完成（文件字數 148,156→148,190）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-16）：文件索引新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解），呼應 Code Review 功能同日轉為正式發布（GA），詳見 [[feature-radar]]（[索引](https://code.claude.com/docs/llms.txt)）。
@@ -127,6 +130,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-10-21｜查 old chat、warns you）｜**Claude Code 傳新增「接續舊對話前提醒會吃掉本次 5 小時額度」提示**（MIXED Reality News，2 個來源，2026-10-21 報導，僅標題可用）：功能名稱、版本號與是否已上線均未見官方確認；與今日桌面版文件新增的用量顯示段落是否同一功能待查。
+- ❓ **待查證**（標 2026-10-21｜查 Bedrock、schema-enforced）｜**AWS 傳 Amazon Bedrock 為 Claude 新增結構化輸出（schema-enforced outputs），涵蓋兩種 API 介面**（OpenTools，2026-10-20 報導，僅標題可用）：細節未見官方文件確認。
 - ❓ **待查證**（標 2026-10-15｜查 nested sessions、saved environments）｜**Claude Code 桌面版傳推出巢狀對話與已儲存環境設定**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；官方未見對應版本號。
 - ✅ **SneakPeek（桌面版預覽窗格漏洞，CVSS 8.7）已於 2026-08-17 修補**（[Noma Labs 原文](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)，查證 2026-10-18）：於 Claude Desktop 1.30096.1 修完並經自動更新推送；CSO Online 的「256KB 預覽窗格洩密」是同一個漏洞。
   - **你該做的**：確認桌面版不低於 1.30096.1；CVE 與 GitHub 安全公告待發，時間線見 [[topics/ai-agent-safety]]。
@@ -232,10 +237,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 - **Claude Code 新增 Compliance API 與企業安全功能**（查證日 2026-09-20，來源：[Claude Help Center](https://support.claude.com/en/articles/13015708-access-the-compliance-api)、[platform.claude.com](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Compliance API 提供 Enterprise／Claude Console 客戶以程式化方式讀取組織 Activity Feed（含 chat、files、projects、sessions、users），供合規、稽核與治理使用；本機 Cowork／Claude Code session 端點於 2026-08-11 上線、2026-08-26 脫離 beta（遠端 Cowork session 端點則於 08-03 先上線）。與 Claude Enterprise／Claude Code Analytics API（回傳聚合用量與成本）不同，Compliance API 回傳逐事件紀錄。
 
-### 💰 計費與配額（26 條未修復）
+### 💰 計費與配額（27 條未修復）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
 - 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
@@ -267,8 +273,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
 
-### 🧠 行為與品質（66 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
+### 🧠 行為與品質（67 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
+- 🔴 **未修復**｜**不遵守原始檔案編碼，Windows-1252 編碼檔案讀寫後遭破壞（GitHub issue #7134，累積 33 則留言、30 個讚，2026-10-21）**：使用者回報 Claude Code 未遵守檔案原始編碼，非 UTF-8（如 Windows-1252）編碼的既有檔案經讀寫後內容損毀；官方尚未回應，處理舊檔前建議先備份。
 - 🔴 **未修復**｜**平行工具呼叫中一個失敗，同批其他呼叫被自動取消並標記錯誤（GitHub issue #22264，累積 35 則留言、64 個讚，2026-10-16）**：Claude Code 單一訊息內送出多個平行工具呼叫時，只要其中一個失敗，同批其餘呼叫會被自動取消並標為錯誤，而非各自獨立執行完畢；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Ctrl+Enter 換行快捷鍵與一般應用程式慣例衝突，應可自訂（GitHub issue #5064，累積 33 則留言、58 個讚，2026-10-08）**：使用者反映 Ctrl+Enter 用於換行與多數應用程式慣例衝突，呼籲新增可自訂快捷鍵設定；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
@@ -426,6 +433,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**功能請求：支援 AGENTS.md 與 `.agents/skills/`（GitHub issue #31005，累積 36 則留言、565 個讚，本日反應數最高，2026-10-20）**：社群自 2025 年 8 月起持續要求，官方尚未回應或排入路線圖；相關脈絡見下方「已修復」issue #6235。
   - `.agents/skills/` 目錄慣例未涵蓋在 v2.1.277 AGENTS.md 支援範圍內，與既有 [[topics/official-community-gap]] ⟨G-08⟩ 缺口相符。
+  - 另有獨立 issue #16345（累積 33 則留言、58 個讚，2026-10-20）提出相同訴求，引用 Agent Skills 標準（agentskills.io）將 `.agents/skills/` 列為建議共用路徑；官方尚未回應。
 - 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、56 個讚，2026-10-15）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 39 則留言、48 個讚，2026-10-15）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
@@ -607,6 +615,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.306** | 2026-10-21 | Bug fixes：修正雲端 session 未帶環境變數執行 `claude -p` 誤報「Not logged in」；修正原被「prompt too long」蓋掉的 API 錯誤；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）|
+| **anthropic-sdk-python v1.17.0** | 2026-10-20 | Features：新增組織層級 webhook 端點與使用者個人資料強制設定事件；Admin API 新增 RBAC 群組擁有者權限錯誤碼；補 `unsupported_charset` 說明（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v0.22.0** | 2026-10-20 | ⚠️ 行為變更：讀取 `AnthropicVertex` 的 `userProfiles`／`beta.userProfiles` 改拋出 `AnthropicError`（Vertex 不提供此端點）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0)）|
 | **v2.1.304** | 2026-10-19 | mod 系統新增 transcript 具名記錄 hook 被跳過事件；`tool.check` 回答新增 `decider: "person"` 選項，見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）|
 | **v2.1.303** | 2026-10-18 | Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.303)）|
 | **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定 auto mode 分類器用的模型；另新增閒置自動壓縮功能，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|

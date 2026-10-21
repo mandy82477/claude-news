@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **新增 UI 設計 skill 新方向**（2026-10-20）
-> - **oil-oil/draw-ui（506★）**：screenshot-to-code 的 UI 設計 skill，與同作者 oil-ui 互補。
+> **新增內建 agent 規則的專案樣板**（2026-10-21）
+> - **wataru-maeda/react-native-boilerplate（520★）**：React Native 樣板內建 AGENTS.md 規則與 skills，同時相容 Claude Code、Codex、Cursor。
 
 ---
 
@@ -68,6 +68,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### wataru-maeda/react-native-boilerplate：React Native 樣板內建 AGENTS.md 規則與 skills，一次相容 3 款 AI coding agent（2026-10-21）
+
+- **主線：** —
+- **核心模式：** Production-ready React Native 樣板（Expo SDK 58、React 19.3、Expo Router、Redux Toolkit、TypeScript、Maestro E2E），內建 AGENTS.md 規則與 skills，同時相容 Claude Code、Codex、Cursor；GitHub Search 520 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧（mxyhi/ok-skills、kharmanskyi/open-steps 等多工具相容範本集）一個「專案樣板內建 agent 規則」取向——既有做法多是獨立發布的 skill／範本合輯，本則改把 AGENTS.md 規則與 skills 直接內嵌進可直接起案的 app 樣板；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（520★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體規則內容未見細節，僅標題與簡短描述可用。
+- **來源：** GitHub Search；[GitHub](https://github.com/wataru-maeda/react-native-boilerplate)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### oil-oil/draw-ui：UI 設計 skill 反向走「截圖重建回頁面」，與同作者 oil-ui 互補（2026-10-20）
 

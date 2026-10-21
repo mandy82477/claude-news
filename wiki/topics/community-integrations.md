@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-21
+**最後新聞更新：** 2026-10-21
 
-> **新增設計系統 MCP server**（2026-10-20）
-> - **marvkr/better-design**：開源設計 MCP server＋shadcn/ui registry，31 套品牌佈景主題一鍵安裝（504★）。
+> **新增像素美術創作整合**（2026-10-21）
+> - **with-pebbly/aseprite-ai-artist**：MCP server＋skills 讓 coding agent 直接在 Aseprite 視窗內作畫、檢視、動畫與匯出（438★）。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### with-pebbly/aseprite-ai-artist：coding agent 直接在開著的 Aseprite 視窗畫像素風美術（2026-10-21）
+
+- **主線：** —
+- **核心模式：** MCP server ＋ skills，讓 coding agent 在使用者已開啟的 Aseprite 視窗內作畫、檢視成果、animate 與匯出；同時相容 Claude Code、omp、Codex、Gemini CLI、Cursor；附公開畫廊與基準站 pixeli.pebbly.space；GitHub Search 438 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Unity MCP Server、blender-ai-mcp-addon 等遊戲／3D 創作整合）一個「2D 像素美術」方向——既有做法多鎖定遊戲引擎與 3D 建模，本則把 agent 整合延伸到像素美術編輯器；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（438★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體繪製與動畫機制未見細節。
+- **來源：** GitHub Search；[GitHub](https://github.com/with-pebbly/aseprite-ai-artist)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### marvkr/better-design：開源設計 MCP server＋shadcn/ui registry，一行指令裝 31 套品牌級佈景主題（2026-10-20）
 
