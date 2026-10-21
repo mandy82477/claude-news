@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-10"
 last_news_update: "2026-08-27"
 status_main: "active"
-days_since_news: 54
+days_since_news: 55
 parent: null
 children: "['entities/opus-4-8-archive']"
 page_role: "hub"
-days_since_news_subtree: 54
+days_since_news_subtree: 55
 inbound_links: 9
 attribution_count: 6
 attribution_last: "2026-07-25"

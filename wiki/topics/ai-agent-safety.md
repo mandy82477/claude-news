@@ -12,12 +12,12 @@ children: "['topics/ai-agent-safety-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 130
-attribution_count: 261
-attribution_last: "2026-10-20"
+attribution_count: 264
+attribution_last: "2026-10-21"
 top_source: "google-news"
-pending_count: 28
-pending_overdue: 3
-pending_next_review: "2026-10-21"
+pending_count: 29
+pending_overdue: 6
+pending_next_review: "2026-10-22"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
