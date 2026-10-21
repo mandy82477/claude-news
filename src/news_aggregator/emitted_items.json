@@ -50,7 +50,7 @@
   "https://github.com/anthropics/claude-code/issues/69044#ef5799bf24b54d9c": {
     "first_emitted": "2026-09-16",
     "score_at_emit": 106,
-    "digest_confirmed": false,
+    "digest_confirmed": true,
     "last_seen": "2026-10-21",
     "last_emitted": "2026-10-21"
   },
@@ -6710,7 +6710,7 @@
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 63,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/metahumansworld/SIwithin": {
     "first_emitted": "2026-10-20",
@@ -7018,482 +7018,482 @@
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://claude.com/pricing#a0742a240a3b070d": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://code.claude.com/docs/en/desktop.md#39bf6eb97b2f4647": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/news/announcements": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/news/features": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/news/product": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/news/distillation-defenses": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.306": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/simbasjungles/free-my-tv": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 2368,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/jatechan/ai-data-extractor": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 526,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/wataru-maeda/react-native-boilerplate": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 520,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/raine/claude-history": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 519,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/with-pebbly/aseprite-ai-artist": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 438,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/ctoldigital/axuse": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 193,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reuters.com/business/anthropic-recorded-net-loss-over-80-billion-first-half-this-year-wsj-reports-2026-10-20": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 166,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 111,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.anthropic.com/research/attack-surface-reduction": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 105,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://jevcards.com": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 66,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/5674#99f187c0ce60ce26": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 54,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.ycombinator.com/item?id=50167583": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 52,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://twitter.com/Polymarket/status/2112634886070919426": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 39,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/7134#db007cb2e74676cf": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 33,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/16345#7a94510f951b6ed0": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 33,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/anthropics/claude-code/issues/79773#1c5b45fec57f8c60": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 31,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.wsj.com/tech/ai/anthropic-revenue-growth-ipo-accaf0f1": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 20,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/xamrayev/nexus-cli": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 15,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://thezvi.substack.com/p/anthropic-does-not-understand-why": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 10,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://mcp.bonbook.co/claude-setup": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 5,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://pawnrush.xiaohan.dev": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 3,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/wangjohn/agent-archive": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 2,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/LippInc/catnap": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 2,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://github.com/sanagnos/taskman": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://peras.vertias.eu": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://pagecritic.app": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 1,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbq4wv/how_do_developers_using_ai_coding_agents_manage": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbq0hc/whats_your_morning_routine_these_days": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbpyde/terrible_ui_of_claude_code": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbpvsv/i_kept_losing_track_of_10_claude_code_sessions_so": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbpmyp/i_built_a_live_leaderboard_for_claude_code_using": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xbpj5t/final_piece_of_state_of_ai_instruction_quality_q3": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT3pZQUU3NTI4WFhrZkxldDBxUTRpT20za0J4X2JkYTUxdExnbFdaUEoyam5PWmFTa2xNWHpTTGZqdTl6SWhuOW4tcXMyNE9uOHNqcHlIRGhHendlM2JyYkJVRjE1RnNSUDhpVjFZNEY3Vy1kamtSVTJXaFdiWE1oYXlxS2Q1Ylg4NV9kNmhLMElBOTAxdXJVa0E1eEt6NUkxWU9UcTU1MGIyeDdBUy1jcXFvR04?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMExPWi16NXpnWUZrdzlsRmVQeVlFN2JzU1VTWGNHcUVLa2ptZUlwbXUtMWEzTDNpOU5zR1JiUFRTR1pLOFhtYi11VFBFVnFYRnlud0FLbm5wQWNtX0N1MElmaEZWTXhxVUdVeERIbEUzb21VRGVRelBJSGtGN0ZqVWx1Q0ZvVVNJNmd1dFU3M1M5WDNQSUJDVXhyV3pKMTRtdFl4MkJHaGloUQ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWldMdUUxUHliNHltczFOUV9nY0hQVjFIaTlHRkQ5WkhBbW9pNERKOUhkNmI3VWNjaVlmRE01TXU2eVRkM2RhaWNvWVVXUS0yZF9SZWVWaDJPdTdSVFpJWWN5Q2hONm1WckpoWVI3bUJaeTd3ZWhkOGhEeWJGejJudlpORVVfR2k5aDZZVVBOODZWeXhjdVl0dUROVXNSN2xDSE1CaGZXSkgwZEd3S1drRGdXNE5FWG9WYTUySTViOE1kUy14bWtnRlFfU21mcjgzNzE2akJxRGRER2c5M21nSXA0OTNGWGdRZHJEWVAtUE03cG9lTnVJ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUXZ6UC04clRxb0hVcFZBamh3dURDUVdlc2F2NjM3YzhRTUF5cXdGd2lZUThOb1Nxa0M1MzN0V2lDOUxoX3dKbURKbVl2Wmh3LXhmcXZXaHZyUzdlUlB5ejhUdnBqZDNJckxiSldqT09PbkhJZ3lVY0VKLVpmdjhOT2lMcTBRb2U2MnByUGxJdw?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMid0FVX3lxTE12Rmh5YlpKWGQ5eHZMeE04Q0ZLQ3J4NVBXQmx6QnkwN2dEQTl3X0lNUWNVaWpZM1FPczlHSEI5b1c5N2l6ejBGVkMzYUpqcE1KeGlXX1FYaUFyc1NkaUVTRDBrSTM5RDlENjV2MVYxa1ptZGxsM2RF0gF8QVVfeXFMUHU5aWFRX0ZvcngwMG5UM3B0c095Vmw4Mm9FNFZYOW02Q2t4MjQtcTc1Z3hSckNqSjRRVTMwd2FZZXNhZkVKNVEwRk16bUxnbjNDR3dmMGJhV19wWWotZmRMVlBsU19pcXlFZXhuUlhmR2F2NGNaMEtYQXBiXw?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://openai.com/index/chatgpt-ads-expands-26-new-countries": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRERWcHh0ckJsS19NWmVfLWpsZzNHLXNGNm1lSmhQN1NOa3ZWeTBhanBtcDBEckFReHBmRHYtZ1RBLWJhdVBrdVpST3RqR245eEwzV1NuMUpiSldzaFNvUTluNVp0bEFHMGF6ZGhNcVA1d1lza0R5OXhRYWpVTzU0dmNMTQ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://openai.com/index/openai-models-google-cloud": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMifEFVX3lxTE1jblFUeEN4R0dOTFBPc0EwNlBKbnJVQU4wbFItZTltLU9GbHlHS1UwU1ZORlZFbTd3RFQtSVNQQXNsVHVHbkpiMjhGeVI4dGlOX1ZjVnlGWmhsOXZPWmJyOWVfNFFrN1ByM19CTmxTTVBXTy1JYlZTUEVuWmU?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMidkFVX3lxTFBqV2YtTlBQVV9ycDFuN2NDR3RnNUdxQ2dsbVJrX2xZOFJoMkl6czFkSDdpV3JyNzFyMld6dzlndWdYemFKZE94QUNWcnNMTll5MDA5TUFEbHRvQTN5TXV6VkFldDNKTG54WjRxeVlvVlNNSDQtYWc?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMie0FVX3lxTE5fTWd2NkxkQ3U5XzBnd1MwYWx4Qk5hN3dCenBUbDhVdG1MMVNnQlhxZmJyZkhTQjBtUmZJRGlDazZxd0poWHdyNlhfUlJYWTJfMC16SThVS2ZDZGdkY3lCbWdycVRjcEl4WTdsYlptNzRUbEMtRDVfWEpZUQ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMixwFBVV95cUxNRFhOalpRUk5VVk5ScER1YWtrT0pvUDRCTXpyVk9wRDdhS2I1RzB3RE1rUjZBSkNfVXFUMGJZM1AtVDhweTNRRjJzWm13YWxVM3ZLMFROaHZEc3RYdVh1VldCVmtERThXb1V4YU9XSDRIYkFjTk0tcGRnSUo0dmp6WlNoNEVxR2xGRy1lUGlFbFNmbUx5cnN4cjh3bldDWklJbFpWN080NkJGZUhlY2lSMzluTjRSYUVpbHlCbjRPMzlNMjgxX2hz?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMikgFBVV95cUxNd19UWlotY2Jkd2hCNGFnbjFRX0dUNEZOXzA0Ym44WDNqcEVXZjItdUsydGdULVE4eU1XdVREb2pzN1Y3dm1WcjlCeWtHdVZRaHd2elN1YXBla1BvZThmbVVsclRsbkdBbi02b3VTQkIzTjNTZUJTSjlXQV9Vb0l1R1Y5aUQ5RllHZ1ZKLWNQRFR4QQ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWWhaN0lXMkdTcldqYTBoVktsbUx1QzI3emNYTmZ2Q2ZENEp0NFh2My1VeGZLbnlYbS1SMFNkak1FLXk1eGtaMUMtME9EOFpCV3N4TG45ZEUyNHRiVFNZcHFSTURZel9kSzNKRU8ySHBNZmtrcEg0VkNrdHhjUF8yWFVjMEFlYzhpcVE?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMicEFVX3lxTE42NXlKVUlCVEIydDEzVDgyblQ2eXRNZ2hBWGI5QUZoNzNzQ0Fyc3JIVFg1emJOTDJKa2xLOHpsVVZJcDV5MVI5VmJfWkZfeFJvR2dUQmtlaTltMWhfWXZTNmJOWHV1eVlnNnZCd2ZUMVE?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMijAFBVV95cUxPN3UwUjFDMXlwbEh1SzVqVlVXdzJlbnc4RW42S1ZiWjA4aEUtS3hLMGl4cE95QTRVeEczRmJBTEdpbWVDbHdCQU5wV01GcHkxeks1R09XcldGSWRucnNhUHBReTBRMWFJMmtJeWRCR012VW5IeGRPN1VaWXZ3LXlmZkdOQ2pseThjRWFzcA?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1EUkF6M3hXbVJzT1VlVHhTdzJrWXN2eGRaY3c2NFFqM0Zfd0YyVlpzVkNwQ1pSQnhCeEZ4d004cXl6UWZGNk13ODVTSVgxMUlpTm9oQkY0b0pzU0dxNUo4Y1Ryc21OZWc?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMimAFBVV95cUxQV0ZfTHFlMmNYREl3N2Y2MXd0d1Y3cTlWQzl3YVJDQl9zV2Z6dWowQ2RYTndpVlNHYUJuR1hsbDNCLVBhbDM1WU5udU5ST1lOSHBqRzNHemYxWEtDUFduay1qeHMzWk1aLUhzTlRyaTg1ajNYbWlobEhHTlJHaU12eTVqbHk1NlpFS3ZWbk5aMDZwUjItZDNFdtIBngFBVV95cUxNbTgza084T1RZZ2UzOWlQM2pDd2NON3NSSjQ5enAzN1BzSWFiRVlTU3l0RWx1UXo2RjkydFk0RWhHa0FZcFJqUVNIaWg3MmJoMUpYVzJFSkhMYnBJbE1oRFVfcGhWcjNRdXJYSW1Bbkg4eG1MTmdOV203ODI5UUQ0TmdzNktudWNZSWVmSUVXYUxjWVNlc1VVMjRIWURwUQ?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9RQl85RzBFX1k4N2o5cERPd0ozTG11cWdSR200ZXYxX1lXQzFyZDM2OUZHVmpLRTFFUk1Gc1Y3ZzRTUGlnNG1SMG5TcWJGVjI4RWRNdF9n?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMicEFVX3lxTE9sUW41dkF1aFFTbHotcmJualhBVnlNWmhfY2oxMnpVNFYwTFlXa2MtWmp5N3BydWVDb2owRmliTVpSU3hiYVhVdF96TWtZSm1KQkUtWnlhRUVPWnhmWUlUSlpKYUtsUy1TZ3JHYXF3czc?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaDFyYXc1VXhSNWszSTJjeHpqMzhfNnJyaU44UURVY2tKdl9PdVh1TXRnQ3lrRktDV1VhMEttU25ERGFKaXFKZmlsN0tZZDlGWVhPM0VKMXA1VHZlN0pja1BNSExXUnFTRUtES2xoM3hXdG95MDNSSjFDZTFOck1ZaXlVMDZwMW56VWlRVzVXTzY5TmdrZnoxVG51ZmhGQl8zeC1DeTcwalM3RzhISi1ncUE1Z2FXYUZOTXlB?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPakNkc1FBNTZaU1A5RFdkRFl2NEFUdnFoODEtZTdLYzkybC1DbmQ0Y3ZLd194U21pbFFtZmVRSXM5OHlhM1Roai1yZEF0X2NHTE1BbzNvTmtDLUdEOHRtcWxBQjdjSEgtSE1iQ2ZQZGxhZm82NTVoR295WmhQdVk5enA5ZXJ6em03cTMwSHZScUxNRDJTSHJ0Y1pvczRjeFBlTkt5ZFFCN2t6Zw?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://simonwillison.net/2026/Oct/20/battledrones": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMic0FVX3lxTE5zTlFXZm1uRTJYSXlPWi1OWmJCSkdBcmg2dkRDc2ZiNmNNaFQtYmg5WFBiWUFQRFVUTms0T3hweW9ycWZ1SlljdlNFUTZuOGliSUpVNkpybnJaQ0p2bzBYWmgydU9MVVBQQlJKMGFRdEpCaWM?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVXRITFJYeU11STZCcEY1MVZCLWVLc3ZiNFN1YnBIMExwZXRYRzhrUElXWUh6ekEtRXN2RmUzOTZHTXdIVFJKZWVxT09haTg0em82dXdtXzhEczctampJMDhtcHR3N3lXYkV1TWZXZ3NhZHJ3emNVeEVJb1NlTWtoa3dWbDNUN3Z2WkE?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   },
   "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYlRVVVRvR21CSnQ3QUFkSkZBcWZhSmk4UTEzZmJlbU1PZ0k5cWFUTjg3TDBkdkdpdzJ6bU9TUGREdjQxZ2dxTllMODNMYTdlUVNJbDZ5bmFUMHNGNzhFby1MQ3ZNbUp0UVJLX3N5aHJmaDlKS1YteVIya1V3ZFBmOGxHWGNuWTFoQ1FjVTZTVHI2bTRvUU04ek44SmUyLUdjZEhTdk02WTlDOF9UUFVMRlkya2dPSDk4RUdn?oc=5": {
     "first_emitted": "2026-10-21",
     "last_emitted": "2026-10-21",
     "last_seen": "2026-10-21",
     "score_at_emit": 0,
-    "digest_confirmed": false
+    "digest_confirmed": true
   }
 }
