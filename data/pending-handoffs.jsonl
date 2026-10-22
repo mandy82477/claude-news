@@ -305,3 +305,13 @@
 {"id": "H-7e836a", "opened": "2026-10-22", "from": "開發實務", "to": "功能", "page": "entities/claude-skills", "note": "L114 相關實體列 guide 的鉤子「開發流程各階段該下哪個 skill…」：guide 第 19 波撤掉「該下哪個 skill」的承諾，使命改為「每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案」，請改鉤子。", "status": "open"}
 {"id": "H-130d53", "opened": "2026-10-22", "from": "開發實務", "to": "功能", "page": "feature-radar", "note": "AGENTS.md 原生讀取（v2.1.277）：feature-radar L486、L494 與 entities/claude-code L89 用現在式寫「尚未支援 Bedrock、Vertex、Foundry」。第 19 波主編 2026-10-22 查官方 memory 頁（L350–369、L411–417），現行不支援情形只列三種（v2.1.277 前、停用內建 plugin、升級後第一個 session），沒有平台限制；guide 已刪此句。請查現況後改寫或標上時點；claude-code L661 版本表是當時 changelog 的原文，可以留。", "status": "open"}
 {"id": "H-fc0960", "closed": "2026-10-22", "status": "done", "by": "開發實務", "result": "第 19 波核對：guide 現行 L483、L674 已是新指向"}
+{"id": "H-f80c1d", "closed": "2026-10-22", "status": "done", "by": "功能", "result": "功能記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-7e836a", "closed": "2026-10-22", "status": "done", "by": "功能", "result": "功能記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-130d53", "closed": "2026-10-22", "status": "done", "by": "功能", "result": "功能記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-0a5cb5", "closed": "2026-10-22", "status": "done", "by": "功能", "result": "功能記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-2b9347", "closed": "2026-10-22", "status": "done", "by": "功能", "result": "功能記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-e8a985", "closed": "2026-10-22", "status": "done", "by": "社群", "result": "社群記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-8245fe", "closed": "2026-10-22", "status": "done", "by": "社群", "result": "社群記者 2026-10-22 ingest 回報已處理"}
+{"id": "H-9f3bb4", "opened": "2026-10-22", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Claude Managed Agents 出現負向對照：Show HN Omnara（Hacker News，2026-10-21，98 分／4 個來源同日報導）自稱開源替代方案，建議評估是否需在官方功能頁補充社群對 Managed Agents 的落差回饋（證據等級：單一自述＋互動數字，尚無第三方測試數據）", "status": "open"}
+{"id": "H-6008d0", "opened": "2026-10-22", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "評估產品化矩陣新增列候選：cheaper-inference/OmniRoute（多供應商 AI gateway，79,703★）、alchaincyf/huashu-chrome（MCP＋Chrome 瀏覽器控制，503★）、Paradigm-Study/claude-share（多人協作 session，536★）、Omnara（開源 agent 託管，HN 98 分）", "status": "open"}
+{"id": "H-f353a0", "closed": "2026-10-22", "status": "done", "by": "主編", "result": "主編以 WebFetch 查證官方 support 11145838 原文並寫入 entities/pricing.md「當前生效的計費規則」節（2026-10-22 查證）"}

@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-22
 **最後新聞更新：** 2026-10-16
 
 > **目錄新增 22 個工具、移除 5 個久無下文的舊列**（2026-10-17）
@@ -97,7 +97,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 🧩 Skills 速查（依 coding 用途分類）
 
-社群 Agent Skills 的用途索引（**官方** skill 另有兩條軸：按工程流程階段與按產出物格式選用，見 [[topics/coding-workflow-guide]]）。安裝多為一行（`/plugin` 或 `npx skills add`），隨時可拔。
+社群 Agent Skills 的用途索引（**官方做法**按開發流程階段見 [[topics/coding-workflow-guide]]；產出物格式類官方 skill 見該頁附錄）。安裝多為一行（`/plugin` 或 `npx skills add`），隨時可拔。
 
 **Codebase 理解／索引**——知識傳承的三個工種：讓 **agent** 記住 repo、讓**人**看懂 repo、把架構**講給人聽**（建程式庫的一次性設定首選在「給 agent」列）
 

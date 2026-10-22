@@ -33,10 +33,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-22
 **最後新聞更新：** 2026-10-22
 
-> **最新動態**（2026-10-21）
-> - **版本**：v2.1.306 純 bug 修復（雲端 session `claude -p` 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；anthropic-sdk-python／anthropic-sdk-typescript 同步發新版（詳見 [[entities/claude-code#版本更新]]）。
-> - **文件**：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節與 session details panel／usage ring 用量顯示說明。
-> - **旗標**：build 新增 6 個第一階候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES` 消失，詳見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-10-22）
+> - **版本**：v2.1.308 純 bug 修復；同日 TypeScript Vertex SDK 滿 1.0（⚠️ Breaking Change，改支援新版 API）、Python SDK v2.1.0 擴充 User Profiles enforcement 參數（詳見 [[entities/claude-code#版本更新]]）。
+> - **文件**：桌面版文件新增 Dispatch「建議任務」／session 追蹤說明與檔案路徑複製選單（162,725→165,374 字）。
+> - **旗標**：build 新增 6 個第一階候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，詳見 [[topics/claude-code-experimental]]。
 
 ---
 
@@ -44,6 +44,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.308**（2026-10-22）：Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）。
+  同版 build 另新增 6 個功能候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-typescript vertex-sdk-v1.0.0 正式滿 1.0，⚠️ Breaking Change：改為支援新版 API（2026-10-21），KuCoin 報導稱同時移除取樣相關參數、細節待官方文件完整確認；anthropic-sdk-python v2.1.0 新增 User Profiles API 的 enforcement status、actions 與 filter 參數，見下方「版本更新」表。
 - **v2.1.306**（2026-10-21）：修正雲端 session 在未帶入該 session 環境變數時執行 `claude -p` 會誤報「Not logged in」的問題；修正一個原本會被「prompt is too long」訊息覆蓋掉的 API 錯誤；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）。
   同版 build 另新增 6 個功能候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES`（首見 2.1.299）消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.17.0 新增組織層級 webhook 端點、RBAC 群組擁有者權限錯誤碼；anthropic-sdk-typescript vertex-sdk-v0.22.0 ⚠️ 新增行為：在 `AnthropicVertex` 讀取 `userProfiles`／`beta.userProfiles` 改為拋出 `AnthropicError`（Vertex 不提供使用者個人資料端點），見下方「版本更新」表。
 - **v2.1.304**（2026-10-19）：新增 `/auto-mode-setup`（引導式教 auto mode 認識專案環境）與 `/claude-api managed-agents-secure`（對照官方安全指南檢查 Managed Agents，唯讀）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
@@ -86,7 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **v2.1.280**（2026-09-22）：**Claude Opus 5.5 成為新預設模型**——Pro／Max／Team／Enterprise／API／Bedrock／Vertex 的 `default` 皆改指向 `claude-opus-5-5`（Foundry 仍為 Sonnet 4.5，官方文件 2026-09-23 查）；1M context，$4／$20 每 Mtok。
   同版新增全螢幕模式更多清單的滑鼠操作支援（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)）。模型能力與定價細節見 [[entities/pricing]]。
 - **v2.1.278**（2026-09-19）：Auto mode 預設改用 server-side classifier，API／Enterprise／Bedrock／Vertex／Foundry／閘道器不再為分類器耗用額外計費；`CLAUDE_CODE_AUTO_MODE_SERVER=0` 可退回舊行為；`/status` 新增顯示列（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)）。
-- **v2.1.277**（2026-09-18）：新增 AGENTS.md 支援，無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry（見 [Changelog](https://code.claude.com/docs/en/changelog)）。回應已知問題 #6235，見下方「已知問題」。
+- **v2.1.277**（2026-09-18）：新增 AGENTS.md 支援，無 CLAUDE.md 時改讀 AGENTS.md，可於 `/config` 調整（見 [Changelog](https://code.claude.com/docs/en/changelog)）；不支援範圍限三種，非平台限制（查證 2026-10-22）。回應 #6235，見下方「已知問題」。
 - **v2.1.276**（2026-09-18）：修復 2.1.275 一項迴歸——`ANTHROPIC_BASE_URL` 指向 proxy／gateway 時，每個請求皆因 `advisor_20260301` 標籤觸發 400 錯誤而全數失敗；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.276)）。
 - **v2.1.272**（2026-09-15）：Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動。
 - **v2.1.270**（2026-09-12）：修復 2.1.269 一項迴歸——長時間執行的 session 中，唯讀 git 指令會意外要求使用者授權；純 bug 修復。
@@ -619,6 +621,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking Change：改為支援新版 API（2026-10-21）；KuCoin 報導稱同時移除取樣相關參數，官方原文截斷待確認（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
+| **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|
 | **v2.1.306** | 2026-10-21 | Bug fixes：修正雲端 session 未帶環境變數執行 `claude -p` 誤報「Not logged in」；修正原被「prompt too long」蓋掉的 API 錯誤；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）|
 | **anthropic-sdk-python v1.17.0** | 2026-10-20 | Features：新增組織層級 webhook 端點與使用者個人資料強制設定事件；Admin API 新增 RBAC 群組擁有者權限錯誤碼；補 `unsupported_charset` 說明（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v0.22.0** | 2026-10-20 | ⚠️ 行為變更：讀取 `AnthropicVertex` 的 `userProfiles`／`beta.userProfiles` 改拋出 `AnthropicError`（Vertex 不提供此端點）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0)）|
@@ -952,6 +957,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-22 | **v2.1.308**：純可靠性修正。Vertex SDK 滿 1.0（⚠️ Breaking Change）；Python SDK v2.1.0 擴充 enforcement 參數；桌面文件增 Dispatch 說明；旗標增6消1。 |
 | 2026-10-20 | **v2.1.304**：mod 系統新增 hook 跳過具名 transcript＋`tool.check` 的 `decider: "person"`。桌面文件新增 171 段（近期最大單日異動）。build 新增 11 個候選旗標。 |
 | 2026-10-19 | **v2.1.303**：純臭蟲修復，無使用者端功能異動。互動更新 6 則：#84352（201 留言，今日最高）、#81698、#85199、#76694、#14200、#65632。 |
 | 2026-10-17 | **v2.1.302**：新增 AUTO_MODE_MODEL＋閒置自動壓縮（未載）。桌面文件改寫任務接續規則。新增已知問題 1 則（#22264）。互動更新 2 則（#15942、#11002）。 |

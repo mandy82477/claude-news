@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **最新動態**（2026-10-21）
-> - **IPO財務揭露**：S-1 首度揭露具體數字，2026 上半年淨損達 807 億美元；WSJ 獨家，CTech、Al Jazeera 跟進，營收仍快速成長但運算成本同步攀升。
+> **最新動態**（2026-10-22）
+> - **IPO 遞件時程**：消息稱 Anthropic 最快本週五（10/23）正式公開提交 S-1，承接 10-21 揭露上半年淨損 807 億美元後的下一步（Yahoo Finance）。
+> - **商業風險**：音樂出版商 Reservoir 加入控告 Anthropic 與 Suno，著作權訴訟再添一案（Billboard）。
 
 ---
 
@@ -95,7 +96,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
-| 遞件了沒 | 機密遞交草稿已完成，公開版 S-1 未見；內容經 Reuters 取得外流（財報數字＋存在性風險警語），細節見下方 | 多家報導（2026-06-01／06-02 兩說）；Reuters 獨家外流內容（09-28） | 一級媒體 |
+| 遞件了沒 | 機密草稿已完成，內容經 Reuters 外流（財報數字＋存在性風險警語）；消息稱最快本週五（10/23）正式公開提交，細節見下方 | 多家報導（2026-06-01／06-02 兩說）；Reuters 獨家外流內容（09-28）；Yahoo Finance（10-21） | 一級媒體 |
 | 什麼時候上市 | 公司沒給過時程；投資人先前預期 9–10 月，09-07 Forbes 稱延至 10 月中並鎖定 $150 億信用額度，09-08 Yahoo Finance 同步稱延至十月 ❓ 待查證 ⟨Q-03⟩ | FT、Axios（2026-08-13／08-17）；calcalistech（09-06）；Forbes（09-07）；Yahoo Finance（09-08） | 一級媒體引投資人／傳聞（僅標題） |
 | 值多少 | 最後一次定價 $9,650 億；投資人原估 $2 兆，10-16 下修至約 $1.5 兆；10-20 S-1 首度揭露 H1 淨損 807 億美元（WSJ） | Series H 公告；FT（2026-05-28／08-13）；Reuters 獨家（2026-10-15）；Telegraph（2026-10-16）；WSJ（2026-10-20） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
@@ -113,6 +114,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見下方「哪個合作會改到你用的 Claude」表與其一行制清單：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 **IPO 細節**
+- **2026-10-21 Yahoo Finance：消息人士稱 Anthropic 最快本週五（10/23）正式公開提交 S-1**：承接前一日 WSJ 揭露 2026 上半年淨損 807 億美元後的時程進展，官方公開版本細節未見（Google News/Yahoo Finance）。
 - **2026-10-20 WSJ 獨家：Anthropic S-1 首度揭露具體虧損數字，2026 上半年淨損 807 億美元**：WSJ 報導營收仍快速成長，但運算成本與虧損同步攀升，詳見「現在的數字」表新增「淨損」列（WSJ）。
 - **同日跟進**：CTech、Al Jazeera、Fortune（標題含「again」暗示非首次外流）引用同一數字；HN 兩則討論（166 分、39 分）質疑與先前「連續獲利」揭露的落差（Google News/CTech；Google News/Al Jazeera；Google News/Fortune；Hacker News）。
 - **2026-10-19 CNBC：稱 Anthropic 是今年美股 AI 概念股最後一個重大 IPO 希望**：呼應近期投資人對營收成長放緩、估值下修（見上表「值多少」列）的疑慮，具體論證與新時程未見報導，僅標題可用（Google News/CNBC）。
@@ -298,7 +300,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | 風險（最後動態） | 誰會遇到 | 你能先做什麼 | 嚴重度 | 來源等級 |
 |---|---|---|---|---|
 | 企業轉向開源模型分流訂單（2026-09-04） | 用量大到會被談價的企業客戶 | 續約前把開源自架的等值成本算出來當籌碼 | ⚠️ 高 | 一級媒體＋社群熱議 |
-| 音樂出版商著作權訴訟升級（2026-10-21） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
+| 音樂出版商著作權訴訟升級（2026-10-22） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
 | 企業因成本失控退出（2026-07-23） | 沒有部門級用量上限的團隊 | 開企業版支出控管；案例見 [[topics/enterprise-cost-management]] | ⚠️ 高 | 一級媒體 |
 | Claude Code Projects 多 agent 併發推高用量（2026-09-17） | 同時開多個長任務 agent 的 Pro／Max 訂閱用戶 | 限制併發 agent 數量、盯緊用量儀表板，避免額度提前用罄 | ⚠️ 中 | 一級媒體 |
 | 訂閱補貼倍數是兩位數，收窄是進行式（2026-09-06） | 靠訂閱跑自動化工作流的重度使用者 | 先量自己的等值 API 花費，再決定要不要簽長約 | ⚠️ 中 | 社群估算 |
@@ -315,6 +317,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
+- **訊 2026-10-22 追蹤**：Billboard 報導音樂出版商 Reservoir 加入控告 Suno 與 Anthropic，指控兩家公司「意圖取代創作者」；求償金額與具體論點未見報導，僅標題可用（Billboard）。
 - **訊 2026-10-21 追蹤**：Reuters 報導 Anthropic 與音樂出版商將在 AI 訓練資料訴訟案提出關鍵論點，意味案件進入實質審理階段；具體論點內容未見報導，僅標題可用（Google News/Reuters）。
 - **Azure Marketplace 贊助額度未必涵蓋 Claude 帳單（2026-10-09）**：The Register 報導一家 Microsoft for Startups 新創經 Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，收到約 $17,600 帳單。
 - Microsoft 稱 Marketplace 夥伴收費無法調整、要新創直接找 Anthropic，雙方互踢責任；單一案例，未見官方回應或其他媒體佐證規模（Google News/The Register）。
@@ -609,6 +612,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-22
+- **[IPO前瞻] Yahoo Finance：消息人士稱 Anthropic 最快本週五（10/23）正式公開提交 S-1**：承接 10-21 WSJ 揭露上半年淨損 807 億美元後的時程進展，詳見「IPO 走到哪一格」表「遞件了沒」列更新，官方公開版本未見（Google News/Yahoo Finance）
+- **[商業風險] Billboard：音樂出版商 Reservoir 加入控告 Suno 與 Anthropic，指控「意圖取代創作者」**：詳見「還沒過去的風險」表音樂出版商訴訟列更新，求償金額與論點未見報導（Google News/Billboard）
+- **[公司觀察，僅標題可用] Yahoo Finance：前 Google 執行長 Eric Schmidt 稱不認同「AI 泡沫」說法，稱 Anthropic 成長速度是當年 Google 的兩倍**：未附具體數字佐證，與 10-20 已記錄 Schmidt 持股約 1% 曝光同屬其對 Anthropic 的公開表態（Google News/Yahoo Finance）
 
 #### 2026-10-21
 - **[重大事件] WSJ：Anthropic S-1 首度揭露具體數字，2026 上半年淨損 807 億美元**：CTech、Al Jazeera、Fortune 同日跟進；詳見「現在的數字」表新增列與「IPO 走到哪一格」細節區（Google News/CTech；Hacker News）

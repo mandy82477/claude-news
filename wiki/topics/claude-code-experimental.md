@@ -30,46 +30,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-09-15
 **領域：** 🛠️ 工具/功能
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-21）
-> 2.1.306（自 2.1.304 起比對）新增 6 個第一階候選旗標，涵蓋 auto mode 郵件寄送、CCR 設定被拒後提前同步與事件排出策略；`CLAUDE_CODE_SETTLE_TOUCHED_FILES`（首見 2.1.299）消失。
+> **最新動態**（2026-10-22）
+> 2.1.308（自 2.1.306 起比對）新增 6 個第一階候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，涵蓋 auto mode 留言待審、diff 複製根目錄、啟動器略過登入、偵測既有 git repo、忽略已持久化信任判斷與 subagent 歷史；`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失。
 
 ---
 
 ## 摘要
 
+- **2.1.308（10-22，自 2.1.306 起）新增 6 個候選旗標＋代號旗標 `WITTY_DEWDROP`**（名單見追蹤表），皆第一階；`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失（首見早於追蹤範圍）；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.306（10-21）新增 6 個候選旗標**：auto mode 郵件寄送兩項、CCR 設定被拒後提前同步與事件排出策略、`CONSENT_POINTERLESS`、`ENTRYPOINT_ON_REQUESTS`（見追蹤表），皆第一階；`SETTLE_TOUCHED_FILES` 消失列 4 階；對帳僅命中來源條目，暫不升第二階。
-- **2.1.304（10-19，自 2.1.303 起）新增 11 個候選旗標**：涵蓋歸因追蹤（`CLAUDE_CODE_ATTRIBUTION_PROJECT`）、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告（`CLAUDE_CODE_WARN_DISK_FREE_GIB` 等）；皆第一階，對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.302（10-17，自 2.1.301 起）新增 2 個候選旗標**：`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`，皆第一階；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.301（10-16，自 2.1.300 起）新增 2 個候選旗標**：`CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA`（第一階）＋代號旗標 `DAPPER_CUPCAKE`；另 1 個設定類旗標依蒐集邊界不列；代號旗標 `SQUISHY_NEWT`（首見 2.1.282）依來源條目消失清單記為消失；對帳僅命中來源條目，暫不升第二階。
-- **2.1.300（10-15，自 2.1.299 起）新增 4 個候選旗標**：PDF 讀取頁數上限（單訊息／單輪）、隱藏回覆伺服器名稱、訊息提示快取 TTL，皆第一階；`FORCE_SANDBOX` 消失；對帳僅命中來源條目，暫不升第二階。
-- **2.1.299（10-14，自 2.1.296 起）新增 13 個候選旗標**（名單見追蹤表）；`DISABLE_FILE_MENTIONS` 同版 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299) 已出貨升第 4 階。
-- `WEBSEARCH_CITATIONS_DECLARED`（首見 2.1.296）消失升列第 4 階；另 2 個設定類旗標不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.296（10-10 比對）新增 4 個候選旗標**：3 個第一階（`AGENT_PROGRESS_SUMMARIES`、`WEBSEARCH_CITATIONS_DECLARED`、`WORKFLOW_SUBAGENT_MODEL`）＋代號旗標 `SNAPPY_PELICAN`；`ARTIFACT_TEXT_VARIANT` 消失升第 4 階；另 3 個設定類旗標不列；暫不升第二階。
-- **2.1.295（10-09 比對）新增 5 個候選旗標**（名單見追蹤表），皆第一階；另 2 個設定類旗標依蒐集邊界不列。`ARTIFACT_FIVE_CLASS_ASKS`（首見 2.1.262–2.1.272）消失升列第 4 階，`INTRO_FRAME` 同批消失但首見早於追蹤範圍；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.294（10-08 比對）新增 1 個候選旗標**：`CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.292（10-07 比對）新增 4 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.289–2.1.291（10-06 比對）累積新增 18 個候選旗標**：5 個代號旗標（見代號旗標表）＋13 個一般候選（見追蹤表）；對帳僅命中來源條目與日報鏡像，暫不升第二階。
-- **2.1.288（10-03 比對）新增 7 個候選旗標**：`DISABLE_STRUCTURED_OUTPUTS` 依[官方 Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.288) 升第 4 階已出貨，其餘 6 個仍第一階（名單見追蹤表）；對帳僅命中自身條目，暫不升第二階。
-- **2.1.287（10-02 比對）新增 7 個第一階候選旗標**（名單見追蹤表）；`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 3 階，≤09-04 即在 build 裡）升第 4 階——官方 v2.1.287 Release 正式出貨為「Claude Mods」，同輪已回報 [[feature-radar]] 新增。
-- **2.1.286（10-01 比對）新增 8 個第一階候選旗標**（名單見追蹤表）；另 2 個設定類旗標依蒐集邊界不列。`CLAUDE_CODE_AUTO_MODE_CANDIDATE_WORDING`（首見 2.1.284）消失，依消失清單升列第 4 階；對帳僅命中自身條目（來源文章），不算獨立佐證，暫不升第二階。
-- **2.1.285（09-30 比對）新增 9 個第一階候選旗標**，`CLAUDE_CODE_DISABLE_WEB_FETCH` 依官方 Release 已出貨升列第 4 階，其餘 8 個仍第一階；另 1 個設定類旗標依蒐集邊界不列。同版消失 7 個（`DIR_SYNC` 家族 6＋代號旗標 `PARCHMENT_FERN`），皆早於本頁追蹤範圍；對帳僅命中自身條目，暫不升第二階。
-- **2.1.284（09-28）新增 4 個第一階旗標＋1 個代號旗標**（`WHIMSICAL_ELEPHANT`）；`COMMIT_BETWEEN_KEYS`（首見 2.1.281）依消失清單升列 4 階，`ENABLE_NARRATION` 同批消失但首見早於本頁基線；對帳僅命中自身條目，暫不升第二階。
-- **2.1.282（09-25）新增 8 個第一階旗標＋2 個代號旗標**（`ELEGANT_MEADOW`、`SQUISHY_NEWT`，名單見追蹤表）；`CLAUDE_CODE_OCHRE_KITE`（首見 2.1.273）從程式本體消失，依來源條目消失清單升列 4 階已移除；對帳僅命中自身條目，暫不升第二階。
-- **2.1.281（09-24）新增 9 個第一階旗標**（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中自身條目，暫不升第二階。
-- **2.1.278（2026-09-19）新增 3 個第一階旗標**：`PER_TURN_TIMING`、`SESSION_START_ANNOUNCEMENTS_BEFORE_PROMPT`、代號旗標 `PARSED_WILLOW`；同批消失代號旗標 `DAPPER_LAGOON`；對帳僅命中自身條目，暫不升第二階。
-- **2.1.276（2026-09-18）新增 2 個第一階旗標**：`DISABLE_ATTRIBUTION_CROSS_REPO`、`FORCE_TERMINAL_IMAGES`；同批消失 2 個：`HOLD_UNANSWERED_PARKED_PERMISSION`、`RETIRE_UNANSWERED_PARKED_PERMISSION`；對帳僅命中自身條目，暫不升第二階。
-- **首批基線 2.1.272（2026-09-14）**：程式本體含 619 個 `CLAUDE_CODE_*` 旗標。09-04 的 2.1.261 到 09-14 的 2.1.272 之間新增 44 個、消失 4 個；新增裡 29 個像功能、15 個是設定類。
-- **2.1.273（2026-09-16）新增 3 個第一階旗標**：`CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS`、`CLAUDE_CODE_GATEWAY_HINT_HEADERS`、`CLAUDE_CODE_OCHRE_KITE`；對帳僅命中來源條目本身與日報鏡像，非獨立社群提及，暫不升第二階。
-- **2.1.274（2026-09-17）新增 6 個第一階旗標**（名單見下方追蹤表）；同批另有 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目本身與日報鏡像，暫不升第二階。
 - **已出貨的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 4 階）——v2.1.287 正式出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
-- **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有。
+- **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有；更早版本的異動見下方「時序」。
 
 ## 怎麼讀這一頁
 
@@ -84,6 +62,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_AUTO_MODE_THREAD_ASK_HELD` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
+| `CLAUDE_CODE_DIFF_COPY_ROOT` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
+| `CLAUDE_CODE_DISABLE_LAUNCHER_SIGN_IN` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
+| `CLAUDE_CODE_FOUND_REPOSITORY_GIT` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
+| `CLAUDE_CODE_IGNORE_PERSISTED_TRUST` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
+| `CLAUDE_CODE_SUBAGENT_HISTORY` | 2.1.308（10-22） | 1 | — | — | 2.1.308 仍在（比對日 10-22） |
 | `CLAUDE_CODE_AUTO_MODE_EMAIL_SENDER_REPLY_TURN` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
 | `CLAUDE_CODE_AUTO_MODE_EMAIL_SENDER_TURN` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
 | `CLAUDE_CODE_CCR_EARLY_SYNC_AFTER_SETTINGS_REFUSAL` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
@@ -247,6 +231,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_WITTY_DEWDROP` | 2.1.308（10-22）出現 |
 | `CLAUDE_CODE_DAPPER_CUPCAKE` | 2.1.301（10-16）出現 |
 | `CLAUDE_CODE_SNAPPY_PELICAN` | 2.1.296（10-10）出現 |
 | `CLAUDE_CODE_CALM_MOCHI` | 2.1.289–2.1.291（跨版回填）出現 |
@@ -276,6 +261,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - `CLAUDE_CODE_CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）
 - `CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_RETIRE_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
+- `CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION`（2.1.306–2.1.308 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 
 ## 靜默表
 
@@ -292,6 +278,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-22 | 2.1.308 新增 6 個第一階候選旗標＋代號旗標 `WITTY_DEWDROP`；`ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失（首見早於追蹤範圍）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-21 | 2.1.306 新增 6 個候選旗標（見摘要）；`SETTLE_TOUCHED_FILES` 消失列 4 階；對帳僅命中來源條目，不算獨立佐證 |
 | 2026-10-19 | 2.1.304 新增 11 個第一階候選旗標（名單見追蹤表）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-17 | 2.1.302 新增 2 個第一階候選旗標：`ALLOW_OTHER_MODELS`、`MCP_SERVE_WORKSPACE_ROOT`；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |

@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-09
+**最後更新：** 2026-10-22
 **最後新聞更新：** 2026-09-28
 
 > **最新官方動態**（2026-09-28）
@@ -111,7 +111,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 ## 相關議題
 
-- [[topics/coding-workflow-guide]] — 開發流程各階段該下哪個 skill、探索 codebase 與寫下結果的實戰對照
+- [[topics/coding-workflow-guide]] — 開發流程各階段官方怎麼做、社群補了什麼、哪裡還沒有答案（含 skill 選用的實戰對照）
 
 - [[topics/community-skills#慣例與地雷]]（skill 設計模式、踩坑經驗與社群自製 skill 案例——如何寫 skill、何時該封裝等一手心得皆記錄於該頁，本頁不重複收錄）
 - [[entities/claude-code]]（Skills 為六大控制層之一；版本更新與已知問題見該頁版本表）

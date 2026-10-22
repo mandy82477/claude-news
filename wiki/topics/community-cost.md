@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **AI API 中轉站評測工具新增**（2026-10-18）
-> - **Folkbench**：開源工具評測各家第三方 API 中轉站的可用率、延遲與價格供切換，Claude Code／Codex 可用。
+> **多供應商 AI gateway 新增，星數異常待查**（2026-10-22）
+> - **cheaper-inference/OmniRoute**：單一端點整合 375 家供應商、逾 1,400 款模型，配額感知備援＋壓縮省 token；2026-02 建 repo、星數已近 8 萬，本庫僅陳列星數，未驗證採用規模。
 
 ---
 
@@ -73,6 +73,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### cheaper-inference/OmniRoute：單一端點整合 375 家供應商、1,400+ 模型的免費 AI gateway，配額感知備援＋壓縮省 token（2026-10-22）
+
+- **主線：** —
+- **核心模式：** 免費 MIT 授權 AI gateway，單一端點整合 375 家供應商（150+ 免費）、逾 1,400 款模型，相容 Claude Code、Codex、Cursor 等；配額感知自動備援，稱 RTK+Caveman 壓縮省 token 15–95%。
+- **與既有模式的關係：** 補上「模型使用策略」既有代表技巧（多模型路由、jev-router 等）一個「單一端點整合 375 家供應商」的規模取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 2026-02 建 repo、8 個月內星數暴增至 79,703，遠高於本頁同類節點常見的數百至數萬星，無 forks／issues／近期 commit 佐證可查，不排除灌星可能，本庫僅陳列星數、不代表採用規模或品質背書。
+- **來源：** GitHub Search；[GitHub](https://github.com/cheaper-inference/OmniRoute)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，星數異常未經驗證，尚無社群採用回饋數據）
 
 #### Folkbench/folkbench：評測各家 AI API 中轉站可用率、延遲與價格並支援一鍵切換（2026-10-18）
 

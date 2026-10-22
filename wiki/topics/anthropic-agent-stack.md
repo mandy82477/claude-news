@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-10-15
+**最後更新：** 2026-10-22
 **最後新聞更新：** 2026-10-15
 
 > **這頁在回答什麼**
@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-官方 agent 積木在 2026 年中補上編排這一塊：dynamic workflows 讓計畫從 Claude 的逐回合判斷變成一支可存檔重跑的 script——先前分身之間只能互傳純文字、訊息不帶依賴語意，排不出誰先誰後。本頁把八塊積木一塊一塊拆開，每塊答「為什麼有它、讓你多做出什麼、還做不到什麼」；八塊怎麼疊、怎麼挑各有一節，原本的五種形態速查表與六層架構收在頁尾附錄。想知道「我現在在開發流程的哪一步、該下哪個」，那是流程視角，見 [[topics/coding-workflow-guide]]；Managed Agents 這個平台產品本身的現況、計費算式與零件成熟度在子頁 [[entities/managed-agents]]。
+官方 agent 積木在 2026 年中補上編排這一塊：dynamic workflows 讓計畫從 Claude 的逐回合判斷變成一支可存檔重跑的 script——先前分身之間只能互傳純文字、訊息不帶依賴語意，排不出誰先誰後。本頁把八塊積木一塊一塊拆開，每塊答「為什麼有它、讓你多做出什麼、還做不到什麼」；八塊怎麼疊、怎麼挑各有一節，原本的五種形態速查表與六層架構收在頁尾附錄。想知道「用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案」，那是流程視角，見 [[topics/coding-workflow-guide]]；Managed Agents 這個平台產品本身的現況、計費算式與零件成熟度在子頁 [[entities/managed-agents]]。
 
 社群這幾年自己長出來的做法收斂成九個方向，跟這八塊積木一塊一塊對得上——官方補了哪一塊、哪一塊還是只有社群解，見 [[topics/community-pattern-trends]]。
 
@@ -84,7 +84,7 @@ Continue that code review and now analyze the authorization logic
 
   `--agent`（v2.0.59 起）讓角色檔 body 整段取代預設 system prompt、resume 後身分保留；搭 `--name` 就成了一位長駐領域專家——別的 session 用傳訊丟任務給他、隔天 `--continue` 接續，context 不歸零（[官方 sub-agents 文件](https://code.claude.com/docs/en/sub-agents)，2026-09-12 查證）。
 
-- **還做不到什麼**：Explore 與 Plan 唯讀、一次性不能追問，且會跳過 CLAUDE.md 與上層 session 的 git status（官方明說只有這兩個省略）；Explore 的模型繼承主對話、在 Claude API 上以 Opus 為上限，要來回追問改用 `general-purpose`。**subagent 裡開不了 workflow**。
+- **還做不到什麼**：Explore 與 Plan 唯讀、一次性不能追問，且會跳過 CLAUDE.md 與上層 session 的 git status（官方明說只有這兩個省略）；Explore 的模型與主對話相同；主對話跑 Fable 時 Explore 改跑 Opus，要來回追問改用 `general-purpose`。**subagent 裡開不了 workflow**。
 
 **同一 session 內用 Agent tool 平行開 subagent，上限 20 路**：官方 sub-agents 文件——「By default, when 20 subagents are running in a session, spawning another with the Agent tool fails with `Concurrent subagent limit reached`」，可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（2026-09-23 查證）。這是**本節**的上限，第三節 dynamic workflows 的 16／256 路、[[entities/managed-agents]] 的 20 路子代理是另外兩個不互通、不疊加的場景。
 

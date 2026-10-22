@@ -5,7 +5,7 @@
 **最後更新：** 2026-10-22
 
 > **這禮拜動了什麼**（2026-10-22）
-> v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
+> Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
 
 ---
 
@@ -68,6 +68,40 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Duet
+**發布：** 2026-10-21（Research Preview） | **狀態：** Research Preview
+
+**是什麼：** 由 Opus 5.5 驅動的主動式 agent，攔截使用者未開口的待辦事項、在背景持續工作，只在需要使用者拍板時才打斷。
+
+**為何熱：** Reuters、TechCrunch、VentureBeat、CNBC、The Verge 等十餘家媒體同日跟進報導；OrcaRouter 評論其與 Claude Code「同一模型，對『完成』定義不同」。
+
+**現在要試嗎：** 美國 Pro／Max 訂閱戶可直接試用；其他地區與方案使用者暫無法取用，不必找。
+
+**快速上手：**
+```
+# 美國 Pro／Max 帳號：claude.com/product/claude-duet 開啟研究預覽
+# 官方目前僅提供產品頁文案，未見 CLI／API 層級設定說明
+```
+
+**注意事項：** 僅美國 Pro／Max 方案開放，官方未提供其他地區／方案時程；任務範圍、權限模型等技術文件尚未公開。詳見 [[entities/claude-duet]]。
+
+### anthropic-sdk-typescript Vertex SDK 1.0.0（Breaking Change）
+**發布：** 2026-10-21（vertex-sdk-v1.0.0） | **狀態：** 正式發布
+
+**是什麼：** TypeScript Vertex SDK 正式滿 1.0，⚠️ Breaking Change：改為支援新版 API（2026-10-21）。
+
+**為何熱：** 首個 1.0 正式版含破壞性變更，直接影響透過 Vertex 呼叫 Claude 的 TypeScript 開發者；KuCoin 報導稱同時移除取樣相關參數，細節待官方文件完整確認。
+
+**現在要試嗎：** 透過 Vertex 呼叫 Claude 的 TypeScript 專案升級前應先核對是否設定 temperature／top_p 等取樣參數；直連 API／Bedrock 的開發者可略過。
+
+**快速上手：**
+```
+npm install @anthropic-ai/vertex-sdk@1.0.0
+# 升級前核對呼叫是否設定 temperature／top_p 等取樣參數
+```
+
+**注意事項：** ⚠️ 官方 release note 未附遷移時程；KuCoin「移除取樣參數」細節未見官方一手佐證，以 GitHub Release 原文為準。
 
 ### Claude Code `/auto-mode-setup`＋`CLAUDE_CODE_AUTO_MODE_MODEL`（auto mode 設定）
 **發布：** 2026-10-19（v2.1.304；`CLAUDE_CODE_AUTO_MODE_MODEL` 為 2026-10-16 v2.1.302） | **狀態：** 正式發布
@@ -483,7 +517,7 @@ export CLAUDE_CODE_AUTO_MODE_SERVER=0   # 想退回舊行為（Bedrock／Vertex�
 
 **為何熱：** 回應全站讚數最高的已知問題（issue #6235，396 則留言、6,643 個讚）；HN 討論串 683 分（2 個管道同步收錄），The Register 稱此舉等同跟進 OpenAI 提出的 markdown 指示規範，Anthropic 工程師 Thariq Shihipar 發文說明（經 Simon Willison 轉引）。
 
-**現在要試嗎：** Claude API 直連或消費版可直接受益；Bedrock、Vertex、Foundry 尚未支援；需要跨工具共用設定檔的團隊可放心改用 AGENTS.md。
+**現在要試嗎：** Claude API 直連或消費版可直接受益；需要跨工具共用設定檔的團隊可放心改用 AGENTS.md。
 
 **快速上手：**
 ```
@@ -491,7 +525,7 @@ export CLAUDE_CODE_AUTO_MODE_SERVER=0   # 想退回舊行為（Bedrock／Vertex�
 # 改行為：/config →「Project instructions」
 ```
 
-**注意事項：** 尚未支援 Bedrock、Vertex、Foundry；目前不含 `.agents/skills` 資料夾（HN 討論已有開發者點出這個落差）。
+**注意事項：** 不支援範圍限三種——v2.1.277 前版本、停用內建 plugin、升級後第一個 session，非平台限制（查證 2026-10-22）；目前不含 `.agents/skills` 資料夾（HN 討論已有開發者點出這個落差）。
 
 ### Claude Code Projects（Beta 改版）
 **發布：** 2026-09-17（公告） | **狀態：** Beta
@@ -693,6 +727,8 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
+| **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **`/claude-api managed-agents-secure`**（v2.1.304，對照官方安全指南檢查 Managed Agents 設定，唯讀） | 2026-10-19 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Code Review 審查等級 Quick／Standard／Deep**（v2.1.304，組織層或逐 repo 設定；新增審查全組織 repo 選項） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-10-21"
-last_news_update: "2026-10-14"
+last_news_update: "2026-10-22"
 status_main: "ongoing"
 days_since_news: 7
 parent: null
@@ -29,13 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-14
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **三個子頁同步新增新做法**（2026-10-21）
-> - **記憶與知識管理**：jatechan/ai-data-extractor，跨 Claude Code、Cursor、Windsurf、Aider 等 5 款工具的對話歷史擷取工具，見 [[topics/community-memory#2026-10]]。
-> - **Skills 設計**：wataru-maeda/react-native-boilerplate，React Native 樣板內建 AGENTS.md 規則與 skills，見 [[topics/community-skills#2026-10]]。
-> - **創意工具 Agent 整合**：with-pebbly/aseprite-ai-artist，MCP server＋skills 讓 agent 在 Aseprite 內畫像素美術，見 [[topics/community-integrations#2026-10]]。
+> **兩個子頁新增做法，另兩則新工具暫未歸類**（2026-10-22）
+> - **模型使用策略**：cheaper-inference/OmniRoute，單一端點整合 375 家供應商的免費 AI gateway，見 [[topics/community-cost#2026-10]]。
+> - **Plugin / MCP 整合**：alchaincyf/huashu-chrome，MCP＋Chrome 擴充套件讓 agent 帶使用者登入態操控瀏覽器，見 [[topics/community-integrations#2026-10]]。
+> - **未歸類**：Omnara（開源版 Claude Managed Agents 替代方案）、claude-share（Claude Code 多人協作 session），見下方「技術彙整」。
 
 ---
 
@@ -55,10 +55,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、Agent Loop 終止條件 | 2026-10-19 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-21 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略 | 2026-10-18 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略 | 2026-10-22 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-21 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-18 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-21 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-22 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-18 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
@@ -129,6 +129,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每一則做法的原始證據依類別住在七個子頁（見上方「每一類做法住哪一頁」）。這裡只留還分不出類的新做法，以及早期月份的總結。
 
 ### 未歸類
+
+#### Show HN: Omnara——開源版 Claude Managed Agents 替代方案（2026-10-21）
+
+- **核心模式：** 開源 agent 託管平台：一次 API 呼叫建立 agent，由平台代管執行迴圈、沙盒、密鑰與權限（RBAC），agent 狀態存 Postgres，閒置零成本、可存活重啟；今日 Hacker News 98 分，4 個獨立來源同步報導。
+- **判不出類原因：** 功能橫跨 agent 託管基礎設施（執行迴圈＋沙盒）與權限／安全管理（RBAC、密鑰），現有子頁類別（Multi-agent 架構、安全架構、Plugin / MCP 整合）皆只覆蓋一部分；留待週更判斷。
+- **來源：** Hacker News；[原文](https://github.com/omnara-ai/omnara)
+%% 本則明文定位為「Claude Managed Agents 的開源替代方案」，屬對官方功能的負向對照，已在 2026-10-22 回報標記轉知。%%
+
+#### Paradigm-Study/claude-share：Claude Code 多人協作 session，一條連結即時共看回覆、工具與預覽（2026-10-22）
+
+- **核心模式：** GitHub repo：分享一條連結即可多人即時共同查看同一個 Claude Code session 的回覆、工具呼叫與預覽；GitHub Search 536 星。
+- **判不出類原因：** 現有介面類別（介面元件複用、行動裝置遠端控制、Agent 活動可視化）聚焦單人視角的強化，本做法核心是「多人共享同一 session」，暫無既有類別精確對應；留待週更判斷是否開新類。
+- **可信度註記：** 僅有 GitHub Search 星數（536★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[原文](https://github.com/Paradigm-Study/claude-share)
 
 #### 《Your Game Is A Harness》：讓遊戲對 AI agent 更「可讀」、加快 agentic 迭代的實戰做法（2026-10-14）
 

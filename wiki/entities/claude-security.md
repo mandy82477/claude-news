@@ -30,17 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-30
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-09-30
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **最新資安產品動態**（2026-09-30）
-> 多家資安媒體 09-29 報導的「Claude Compliance API」實為既有稽核介面，官方文件已載（2026-10-17 查證）；與 Claude Security 掃描線無關，見下方現況。
+> **最新資安產品動態**（2026-10-22）
+> Claude Security 新增偵測「同一漏洞再次出現」的能力並追蹤修補進度，不只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，細節未見官方部落格或文件佐證。
 
 ## 現況
 
+**2026-10-22 新增「重複出現漏洞」偵測與修補進度追蹤：** Claude Security 新增偵測同一漏洞再次出現的能力，並持續追蹤修補進度，不再只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導（單一線報導，未見官方部落格或產品文件佐證，涵蓋語言／比對機制等細節未載）。
+
 **「Claude Compliance API」並非 09 月新推出，是既有的稽核與治理資料介面（2026-10-17 查證）：** 依 [官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)，Enterprise 與 Console 客戶可程式化讀取組織 Activity Feed；Enterprise 另可讀 claude.ai 的對話、檔案、專案，以及 Cowork、Claude Code、Claude in Chrome 等產品的 session 逐字稿，需在 claude.ai 建立 Compliance Access Key（Console 的 Admin API key 只能讀 Activity Feed）。Console 版於 [2026-03-30 公告](https://claude.com/blog/claude-platform-compliance-api)，僅含管理與資源異動，不含推論活動。官方兩份文件均未列價格，也未把它與 Claude Security 掃描外掛／Mythos 5 掃描關聯；定位是稽核治理，而非漏洞掃描。MIND 等第三方 DLP 整合屬廠商端公告，Security Boulevard 09-29 的「推出」說法與官方時序不符。
 
-Anthropic 已將 **Claude Mythos 5**（見 [[entities/mythos]]，目前僅限授權機構的安全模型）整合進 Claude Security，讓企業團隊取得前沿等級漏洞掃描能力，且**不需直接存取 Mythos 5 模型本身**——延續 2026-05-24 曾洩露的「Claude Security 將整合 Mythos 模型」app 字串線索，如今由官方正式產品化（2026-08-21，MarkTechPost 首發，Dealroom／Palo Alto Networks Unit 42／The New Stack 跟進報導）。原文為摘要層級，尚未見具體掃描範圍、與下方既有 Claude Security 掃描機制的技術銜接細節；細節待後續報導或官方文件補齊。
+Anthropic 已將 **Claude Mythos 5**（見 [[entities/mythos]]）整合進 Claude Security，讓企業團隊取得前沿等級漏洞掃描能力且不需直接存取模型本身（2026-08-21，詳見下方「歷史記錄」）。
 
 Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 正式向**全部 Enterprise 客戶**開放。ZDNET、SecurityWeek、SiliconANGLE、CRN、Pulse 2.0 等多家媒體報導。這是 Anthropic 首次以**獨立資安產品形式**跨足 AI 輔助資安市場，直接整合於 Claude Code 開發環境。
 
@@ -97,6 +99,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-22 | **新增「重複出現漏洞」偵測與修補進度追蹤**：不再只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，未見官方佐證 |
 | 2026-09-29 | **「Claude Compliance API」媒體曝光**：Security Boulevard 首發，企業可監控 Claude 對話／檔案／Agent 活動；4 個來源同日跟進，2026-10-17 查證為既有官方產品（詳見「現況」） |
 | 2026-08-21 | **Claude Mythos 5 整合進 Claude Security**：企業團隊在不直接存取模型本身的前提下取得前沿等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進；額度／定價面（Dealroom 提及 $35M credits 承諾）詳見 [[entities/pricing]]；來源：Google News / MarkTechPost（另有 Dealroom、Palo Alto Networks Unit 42、The New Stack） |
 | 2026-07-24 | **社群反映無 Workflow tool 存取權限**：Reddit 使用者（自稱使用 Claude Code 未滿一個月）反映摸索過程燒費大量 token 才發現 Claude Security 沒有 Workflow tool 的存取權限；查證確認為既有 opt-in 設計限制，非缺陷（見下方 ⟨Q-01⟩）；來源：Reddit / r/ClaudeCode |

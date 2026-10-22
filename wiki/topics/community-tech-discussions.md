@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **Show HN：無人值守軟體工廠骨架自稱省 80% token 成本**（2026-10-20）
-> gojko/lights-on-software-factory 釋出基於 Votito 實戰經驗的編排器骨架；作者稱比純 Claude 工作流節省約 80% token 成本，留言追問多 agent 情境下憑證如何分配。
+> **Ask HN 質疑主動式 agent 走向危險方向**（2026-10-22）
+> 使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比《駭客任務》Agent Smith 台詞，質疑把主動代理人交給 AI 是否危險；HN 10 分，單平台初現（10-21 首見）。
 
 ---
 
@@ -153,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Ask HN：有人引《駭客任務》Agent Smith 台詞，質疑 Anthropic 主動式 agent Claude Duet 方向是否危險 | 2026-10-21 · 2026-10-21 | 🔥 | ☄️閃現 | 使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比《駭客任務》反派 Agent Smith 台詞，質疑把「主動代理人」交給 AI 是否走向危險方向；HN score 10，單平台初現 | — |
 | Show HN: gojko/lights-on-software-factory——無人值守軟體工廠骨架自稱省 80% token 成本 | 2026-10-20 · 2026-10-20 | 🔥 | ☄️閃現 | 作者釋出基於 Votito 實戰經驗的編排器骨架，聲稱較純 Claude 工作流省約 80% token 成本；留言追問多 agent 憑證如何分配；HN 15 分（2 個來源） | — |
 | StarSkirmish Bench 更新：讓 LLM 寫程式對戰《星海爭霸》，納入 OpenAI／Anthropic／Google／Meta 旗艦模型 | 2026-10-16 · 2026-10-16 | 🔥🔥🔥 | ☄️閃現 | 開發者更新基準測試，比較四家旗艦模型寫 Protoss bot 對戰戰力；HN score 228（2 來源） | — |
 | Anthropic 工程部落格「重新設計原始碼控制」系列話題：Scion／Mononoke 爭議落幕 | 2026-10-13 · 2026-10-16 | 🔥🔥🔥🔥🔥 | 🌸落幕 | 10-16 Anthropic 員工 Nick G. 在 HN 回應並補上歸因，原作者確認歸因已足夠、仍堅持原始技術觀察 | — |

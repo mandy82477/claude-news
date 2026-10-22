@@ -89,7 +89,7 @@
 
 ### Code review（對應 [[topics/coding-workflow-guide]] 第 5 段）
 
-**本庫判斷**：本類本庫不推薦單一工具——官方 `/code-review`、ultra、GitHub App 等六個入口與明價，見 [[topics/coding-workflow-guide]] 第 5 段；社群面做法（Read-Only Reviewer、跨模型互審）見 [[topics/community-tech-patterns]]
+**本庫判斷**：本類本庫不推薦單一工具——官方各入口的方案限制與計費見 [[topics/coding-workflow-guide]] 第 5 段；社群面做法（Read-Only Reviewer、跨模型互審）見 [[topics/community-tech-patterns]]
 
 規模榜：無——這類需求無法用 GitHub 描述辨識（治理型需求是讀者講痛點的語言，在 HN／dev.to 全文不在 repo 描述），本庫不掛空榜。
 
@@ -105,7 +105,7 @@
 
 規模榜：無——這類需求無法用 GitHub 描述辨識（治理型需求是讀者講痛點的語言，在 HN／dev.to 全文不在 repo 描述），本庫不掛空榜。
 
-### 規則維護不腐爛（CLAUDE.md 跟上改動）（對應 [[topics/coding-workflow-guide]] 第 8 段）
+### 規則維護：跟上改動＋不腐爛（CLAUDE.md）（對應 [[topics/coding-workflow-guide]] 第 7、8 段）
 
 **本庫判斷**：標 🧭 者的判斷見 [[topics/community-tech-tools]] Skills 速查或工具目錄
 

@@ -7970,3 +7970,28 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - index：新增「改動大要先規劃還是直接開工」列、「它說做完了」改指第 6、9 段、review 列撤「明價」、手冊列換使命句。
 - 轉知：[開發實務→商業] H-f353a0（pricing 收五小時額度句）；[開發實務→社群] H-e8a985（skill-interest-watch 六入口＋明價、第 7／8 段混類）、H-8245fe（community-tech-tools L100）；[開發實務→功能] H-f80c1d（agent-stack 鉤子與 Explore 模型）、H-7e836a（claude-skills 鉤子）、H-130d53（feature-radar／claude-code「AGENTS.md 不支援 Bedrock 等」查無）；H-fc0960 結案。
 - 歸因 user-query／開發實務
+
+## 2026-10-22 Ingest
+
+- 來源日報：[[news/2026-10-22]]
+- 更新頁面：
+  - **人物**：entities/eric-schmidt.md、entities/bernanke.md（僅格式/交叉連結）
+  - **功能**：topics/claude-code-experimental.md、entities/claude-code.md、entities/claude-security.md、topics/anthropic-agent-stack.md、entities/claude-skills.md、feature-radar.md（主編：新增 2 條＋全覽表 2 列、修正 AGENTS.md 不支援範圍誤述、更新頁首 callout）
+  - **商業**：topics/anthropic-business.md、topics/ai-talent-flow.md
+  - **安全政策**：topics/ai-agent-safety.md、topics/anthropic-government-policy.md
+  - **模型**：無（The Verge 蠍毒解毒劑澄清條目查核後判定既有措辭已準確，無需更正）
+  - **社群**：topics/community-cost.md、topics/community-integrations.md、topics/community-tech-patterns.md、topics/community-tech-discussions.md、topics/skill-interest-watch.md、topics/community-tech-tools.md
+  - **主編**：entities/pricing.md（WebFetch 查證官方 support 11145838 原文，補五小時 session 收尾寬限規則）、index.md（新增 2 列）
+- 新增頁面：entities/christopher-stubbs.md、entities/claude-duet.md
+- 摘要：Claude Duet 開放研究預覽（Opus 5.5 驅動主動式 agent，美國 Pro／Max）為全站頭條，音樂版權訴訟 Reservoir v. Suno/Anthropic、IPO 傳最快週五公開申報、Christopher Stubbs 加入長期利益信託並列今日聚焦；Vertex SDK 1.0.0 破壞性變更與 Claude Security 重複漏洞偵測為次要技術異動。
+- 呈現品質：全部通過
+- 品質備註：[商業] 回報疑似 topic-watch 誤觸發一則（DeepMind 森林製圖部落格與 AI 編碼工具競品動態無關），建議下次 `/wiki-lint` 檢查 competitor-landscape 的收錄條件 (c) 是否誤判；[社群] community-tech-discussions「最近在討論什麼」已滿 54/50 列，建議下次 `/wiki-lint` 退場清理
+- 分類回退：追加派工 1 筆（The Verge 蠍毒解毒劑澄清條目，模型→功能，查核後判無需更正）；無駁回
+- 轉知帳本：結案 H-f80c1d、H-7e836a、H-130d53、H-0a5cb5（不適用）、H-2b9347（不適用）、H-e8a985、H-8245fe、H-f353a0（主編查證後寫入 entities/pricing.md）；新開 H-9f3bb4（社群→功能：Omnara 對照 Claude Managed Agents 負面訊號）、H-6008d0（社群→功能：official-community-gap 新增列候選 OmniRoute／huashu-chrome／claude-share／Omnara）
+- 歸因 news-digest（六類），31 行 append 至 `data/source_attribution.jsonl`
+
+## 2026-10-22 Ingest（續：devpractice／market）
+
+- devpractice 沉澱：候選 5 筆（entities/claude-code v2.1.302／304／300 預設值變更與已修復項、topics/community-memory 的 ai-data-extractor、topics/community-skills 的 react-native-boilerplate），append 至 `data/devpractice-candidates.jsonl`，手冊寫入 0 則（今日唯一候選條目《Your CLAUDE.md Is Probably Too Long》為第三方 dev.to 部落格，非官方使用指南，不符開發實務類門檻，已更正分類為不收錄）
+- market 判讀：判讀 2 則（Reservoir 控告 Suno 與 Anthropic AI 音樂著作權侵權；Anthropic 傳最快本週五公開提交 S-1），寫入 topics/market-signals，皆無可交易上市公司牽涉，里程碑登記 2 筆（訴狀全文／案號；公開版 S-1 是否於 10/23 後出現在 SEC EDGAR），結算日 2026-11-05
+- 歸因：市場判讀 2 行併入 `data/source_attribution.jsonl`（category 商業，沿既有 market-signals 歸因慣例）

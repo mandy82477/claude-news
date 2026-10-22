@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **新增像素美術創作整合**（2026-10-21）
-> - **with-pebbly/aseprite-ai-artist**：MCP server＋skills 讓 coding agent 直接在 Aseprite 視窗內作畫、檢視、動畫與匯出（438★）。
+> **新增帶登入態操控瀏覽器的 MCP 外掛**（2026-10-22）
+> - **alchaincyf/huashu-chrome**：MCP ＋ Chrome 擴充套件，讓 Claude Code、Codex、Cursor、Gemini CLI 等 agent 操控使用者自己已登入的 Chrome（503★）。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### alchaincyf/huashu-chrome：MCP＋Chrome 擴充套件，讓 agent 帶著使用者登入態操控瀏覽器（2026-10-22）
+
+- **主線：** —
+- **核心模式：** MCP server ＋ Chrome 瀏覽器擴充套件，讓 Claude Code、Codex、Cursor、Gemini CLI 等任何 AI agent 操控使用者自己的 Chrome，並帶著既有全部登入態（cookies／session），不需另外登入；GitHub Search 503 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「瀏覽器自動化、保留使用者登入態」取向——既有做法多接生產力服務或創作工具，本則讓 agent 直接沿用使用者自己已登入的瀏覽器狀態操作網頁；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（503★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/alchaincyf/huashu-chrome)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### with-pebbly/aseprite-ai-artist：coding agent 直接在開著的 Aseprite 視窗畫像素風美術（2026-10-21）
 

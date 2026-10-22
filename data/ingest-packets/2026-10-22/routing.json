@@ -203,10 +203,8 @@
   "https://dev.to/iggredible/your-claudemd-is-probably-too-long-17bi": {
     "title": "Your CLAUDE.md Is Probably Too Long",
     "source": "dev.to / #claudecode",
-    "categories": [
-      "開發實務"
-    ],
-    "reason": "",
+    "categories": [],
+    "reason": "主編分類錯誤已更正（devpractice 記者指出）：第三方 dev.to 部落格非官方使用指南，不符開發實務類門檻；互動僅 4 讚，低於社群類 dev.to 低門檻（≥10 讚），改投社群亦不達標，故不收錄",
     "note": ""
   },
   "https://www.jeroenbouma.com/projects/financetoolkit/mcp": {
@@ -405,9 +403,9 @@
     "title": "Claude did not invent scorpion antivenom - The Verge",
     "source": "Google News / The Verge",
     "categories": [
-      "模型"
+      "功能"
     ],
-    "reason": "",
+    "reason": "分類回退自 模型（主編已依分類表核對：事件本體在 entities/claude-science.md，domain=功能，模型記者回報判無具體模型評測數據）",
     "note": ""
   },
   "https://www.reddit.com/r/LocalLLaMA/comments/1xcgzp4/benchmark_recursives_flint_40b_a25b_q4_achieves/": {
