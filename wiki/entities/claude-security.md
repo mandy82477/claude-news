@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-17"
-last_news_update: "2026-09-30"
+last_updated: "2026-10-22"
+last_news_update: "2026-10-22"
 status_main: "beta"
-days_since_news: 21
+days_since_news: 0
 parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
-days_since_news_subtree: 21
+days_since_news_subtree: 0
 inbound_links: 13
-attribution_count: 7
-attribution_last: "2026-09-30"
+attribution_count: 9
+attribution_last: "2026-10-22"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

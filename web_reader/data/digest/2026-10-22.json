@@ -1,0 +1,722 @@
+{
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22 17:08 UTC",
+  "articleCount": 90,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+      "url": "https://github.com/omnara-ai/omnara",
+      "source": "Hacker News",
+      "time": "10/21 16:44",
+      "sentiment": "",
+      "body": "開源專案 Omnara 定位為 Claude Managed Agents 的開源替代方案：一次 API 呼叫即可建立 agent，由 Omnara 代管執行迴圈、沙盒、密鑰與權限，agent 狀態存在 Postgres，閒置零成本、重啟後可存活；今日在 Hacker News 獲 98 分，並有至少 4 個獨立管道同步報導。評估要不要自架 agent 託管平台取代官方 Managed Agents 的團隊可留意這個開源選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Security can now spot vulnerabilities that reappear in code",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJzcFFFLVdfa3piUzAyVDB0aXAwX1FjTDJRNHlZdUlhVUg1UVVzNXNWaUpIWUdSMmVlQmZaN2NfVTU3Rm85bnkzZ20wemwtck40eERoWmVUWUhyMng3aS02UEViWWs1NA?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "10/22 11:02",
+      "sentiment": "",
+      "body": "Claude Security 新增「同一漏洞再次出現」的偵測能力，並追蹤修補進度，不只是一次性掃描；Help Net Security 今日報導，TestingCatalog 同日也獨立跟進。負責程式碼安全稽核流程、已導入 Claude Security 的團隊可留意主控台是否已出現這項追蹤功能。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's top engineer reveals just how far her team has gone with AI coding",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ1ozdXdwU0xrLW9uTW9US0NpV3hOMWNrcVdXREw1a3hvUkxqUERlTkl3M1NGd0JQcTJ4RnlaNE5ZNWd6MGlCbjVzbmtqbElPZ1VVSENRSTRzMVIxY0dFbEg4TUF3SVFtREY1Uk9kTTczcG9OVjVUWUpJck5Nai1PMmhJX2o0bUxaQ3dqQm52S014TjRYZU5Mb0JPeVZBNDg?oc=5",
+      "source": "Google News / Business Insider",
+      "time": "10/22 09:00",
+      "sentiment": "",
+      "body": "Business Insider 報導一名 Anthropic 工程主管分享其團隊導入 AI 寫程式的實際進度，延續本月初官方內部研究揭露「AI agent 工時已達員工工時六倍」的話題；今日有至少 3 個獨立管道同日跟進報導。持續追蹤 AI 對開發團隊實際生產力影響的讀者可留意後續細節補充。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "anthropics/claude-code v2.1.308",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+      "source": "GitHub / anthropics/claude-code ＋Build Flags",
+      "time": "10/22 04:34",
+      "sentiment": "",
+      "body": "官方 release notes 僅標註「錯誤修正與穩定性改善」；同版 npm build 另外看到 7 個新功能候選旗標（`CLAUDE_CODE_AUTO_MODE_THREAD_ASK_HELD`、`CLAUDE_CODE_DIFF_COPY_ROOT`、`CLAUDE_CODE_DISABLE_LAUNCHER_SIGN_IN`、`CLAUDE_CODE_FOUND_REPOSITORY_GIT`、`CLAUDE_CODE_IGNORE_PERSISTED_TRUST`、`CLAUDE_CODE_SUBAGENT_HISTORY`、`CLAUDE_CODE_WITTY_DEWDROP`），另有 1 個舊旗標（`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION`）消失；旗標出現在 build 裡不代表會正式上線。持續追蹤 Claude Code 實驗功能的團隊可留意是否轉正，其餘用戶可直接升級。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "anthropics/anthropic-sdk-python v2.1.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "10/21 22:00",
+      "sentiment": "",
+      "body": "新版為 User Profiles API 新增 enforcement status、actions 與 filter 參數，可用於查詢與篩選帳號的強制執行狀態（完整變更以 release notes 為準）。透過 Python SDK 管理帳號合規或自動化風控流程的團隊可留意這批新參數。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "anthropics/anthropic-sdk-typescript vertex-sdk-v1.0.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "10/21 15:52",
+      "sentiment": "",
+      "body": "Vertex SDK 正式滿 1.0 版，release notes 標註本版含破壞性變更：改為支援新版 API（2026-10-21）；KuCoin 報導稱這次更新移除了取樣（sampling）相關參數，細節仍待官方文件完整確認。透過 Vertex 呼叫 Claude 的 TypeScript 開發者，若程式碼設定了 temperature、top_p 等取樣參數，升級前應先核對呼叫是否受影響。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "10/22 15:24",
+      "sentiment": "",
+      "body": "桌面版文件新增「Dispatch」相關說明：可啟動 Claude 建議的任務、追蹤 Dispatch 啟動的 session，另新增複製檔案絕對／相對路徑等選單項目；文件字數由 162,725 字增至 165,374 字。持續使用桌面版的用戶可留意介面上是否已出現對應的 Dispatch 入口。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "10/22 15:24",
+      "sentiment": "",
+      "body": "Release notes 新增「Change the model, effort, and thinking settings」說明頁，讓使用者可直接調整模型、努力程度與思考設定；同篇也記錄了 10/21 開放的 Claude Duet 研究預覽（見今日聚焦）。持續關注介面設定異動的用戶可留意新設定頁是否已出現在自己帳號。",
+      "focusTags": []
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Eric Schmidt Rejects AI Bubble Fears, Says Anthropic Is Growing Twice as Fast as Google Did - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMjNzWmZqZm9mc3E5bnNzLW9zVWk4SmJvaEMtdmpyZ1kxWF8xUUdQV2FjcGtwS1BXMUVCbU9vN2pjRzVvTlNKcjdkcEVfc1ByUjhKdlRTWTFfeEFsSmxaOFkzaEdXYl80Q3JITkxlSnI3Z3pRaVVlVEZEM21URlhVXy1FZmctUjdkbnJ2a2NSUndXM2hXai1QVGZn?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "10/22 15:04",
+      "sentiment": "",
+      "body": "前 Google 執行長 Eric Schmidt 公開表示不認同「AI 泡沫」說法，並稱 Anthropic 成長速度是當年 Google 的兩倍，細節未附具體數字佐證。持有或評估 Anthropic 股權的讀者可留意這類高知名度投資人表態，是否影響 IPO 前的估值討論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "eric-schmidt",
+          "pageType": "entity"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic to publicly file for IPO as early as Friday, sources say - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPREpSeVQzcmx3WVBKdmRna3pObmZqMEpoN3hvcGpid1JuZEJRODNnZUg5X19DQmJDT2E5YnRqQTNwbWJwMjVPVXQ2MDBLRmNXd1VMOGFScHl6cE9GWUp3LWc0UTAzcGJtRnJiR1ZqdjNWWkZwVV9OX0Y5WkVER2RMMHhmZVBjYVR5aVN2ME1nd3BNNWdQNTFGOTMtM245MGpEOGhRTFNqSlZ0bnBwQmRHZVlLeXJOVFhCZDd3TEpnNA?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "10/21 13:53",
+      "sentiment": "",
+      "body": "Yahoo Finance 引述消息人士報導，Anthropic 最快本週五（10/23）就會正式公開提交 S-1；這是 10/21 揭露上半年淨損 807 億美元後的時程進展，細節以官方申報文件公開版本為準。持續追蹤 Anthropic IPO 時程的團隊可留意公開版本是否補上新財務細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's 'CLAUDE MYTHOS' Trademark Application Denied by USPTO - Gerben IP",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQ3Nxa1VFbS1nb0RlOHBsVHBGNThjUTVmc1NMbW9sSHcxTUg5QjJoM0ZXX3BUdjZPbVMtZHE0Y0Flc2tvazhrZjJIR2dZNVVCc1JkMHZyVnVpY1Y1ZERGa185Q2M0bHNHendMTG1rQjItcjZTcDIzRWNTMnJBNlJtS3gwSkFOTUxfdHJieVV0b2dBTG5NNzJ5NWRB?oc=5",
+      "source": "Google News / Gerben IP",
+      "time": "10/22 14:49",
+      "sentiment": "",
+      "body": "美國專利商標局（USPTO）駁回 Anthropic 為「CLAUDE MYTHOS」提出的商標申請，駁回理由與是否重新提交原文未詳述。使用 Mythos 系列模型名稱的開發者暫不受影響，命名本身與模型可用性無關。",
+      "focusTags": []
+    },
+    {
+      "title": "Claude did not invent scorpion antivenom - The Verge",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUDJ0SkZfUUhOVmNLVkY0TkFrSFduTFlnZ2JWQ3l3VWlwLUtEeVBfbVctWlpPa1dDaVhvaGFSTllkWl9PaTFqaEdseHRTdnJmbTRNMkgxNGV5T3BmRUU3UWlpVHd1RUNNSzgxckZOaThOOWVIRlVTQ1FkdGJrd3hLN1ZxT3J1c3pFVTlrSjA0SVlUY1dhR1Nhajg3aF9fcTlQMk1OT1VWLTB1R1JDbUFpMU50aUY?oc=5",
+      "source": "Google News / The Verge",
+      "time": "10/22 12:21",
+      "sentiment": "",
+      "body": "The Verge 澄清近期流傳「Claude 自主發明蠍毒解毒劑」的說法並不準確，實際進展是 Anthropic 研究團隊用 Claude 輔助設計蛋白質結合物、仍待實驗室驗證（見 10/20 日報 Citrini Research 條目），並非已完成的解毒劑。轉述這則消息的讀者可用這篇報導核對措辭，避免誇大既有研究進展。",
+      "focusTags": []
+    },
+    {
+      "title": "How are AI agents changing work inside Anthropic? - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTXlDTlY5SG1xQXc0UDU0dWFCdlprNnoyb2NNM0Y2V2R3YUFfWHV6REJmemlkeUliamkzXzM0MHppSmhWWkxQdHpCOXNJUWEzRk5YWmN1bjdfMW85WGktSGI5ZUZEbk5jOTZkY3NrUVBmdFNvVncyaHdRVDEyR3pLT0J6VVQ?oc=5",
+      "source": "Google News / Financial Times",
+      "time": "10/22 11:30",
+      "sentiment": "",
+      "body": "Financial Times 走訪 Anthropic 內部多個團隊，記錄 AI agent 具體改變了哪些工作流程的環節與決策方式，細節以原文為準——與今日另一則工程主管個案報導呼應，但訪談對象與涵蓋團隊不同。長期追蹤 AI 對企業內部工作結構影響的團隊可留意這篇報導的具體案例。",
+      "focusTags": []
+    },
+    {
+      "title": "HHS Plans Sole-Source Anthropic Claude Contract Ahead of Enterprise AI BPA - ExecutiveGov",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5LVTZDYmM3dFJ5NFBBOWdpTFE2cnBoTHh1VUY5ZXAxTjFSSnExeUNST0VYTFFKa1hlWnhsSXFoOW04bWZicVlqSXlVOWR5bXlUNXRsSFc1dy1mcGkyTGl6SFhZY3ZrRTAyUjBBX3R6aFBXZzNid3NZSHlB?oc=5",
+      "source": "Google News / ExecutiveGov",
+      "time": "10/21 21:28",
+      "sentiment": "",
+      "body": "ExecutiveGov 跟進 10/21 FedScoop 已報導的 HHS「唯一來源」聯邦採購決定，本篇未補上新的具體數字或官方公告進度。關注政府機關 AI 採購動態的團隊暫不需要額外動作，待官方公告出來再核對。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "I tested 2 of Boris Cherny's coding prompts. One caught bugs. The other made my code worse.",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xcl2ca/i_tested_2_of_boris_chernys_coding_prompts_one/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/22 15:04 UTC ·",
+      "sentiment": "🤔",
+      "body": "一名使用者實測 Claude Code 創造者 Boris Cherny 公開分享的兩個寫程式提示詞，其中一個確實抓到既有程式碼的 bug，另一個反而讓程式碼品質變差，細節原文未附具體提示詞內容。想套用社群流傳的相關提示詞的開發者，升級前應自行驗證效果而非直接套用。",
+      "focusTags": []
+    },
+    {
+      "title": "I kept losing Claude Code sessions that were waiting on me in some terminal tab, so I built a dashboard for all of them",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xcl3hg/i_kept_losing_claude_code_sessions_that_were/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/22 15:06 UTC ·",
+      "sentiment": "😊",
+      "body": "一名使用者分享自製儀表板工具，集中顯示散落在不同終端機分頁、正在等待使用者回覆的 Claude Code session，解決多工作業時容易漏看待辦 session 的問題。同時開多個 Claude Code session 工作的開發者可參考這個做法。",
+      "focusTags": []
+    },
+    {
+      "title": "Ask HN: Are we giving away our civilization?",
+      "url": "https://news.ycombinator.com/item?id=50188865",
+      "source": "Hacker News",
+      "time": "10/21 23:00 UTC ·",
+      "sentiment": "🤔",
+      "body": "有使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比電影《駭客任務》反派 Agent Smith 的台詞，質疑把「主動代理人」交給 AI 是否走向危險方向，今日在 Hacker News 獲 10 分討論。對 Claude Duet 這類主動式 agent 有疑慮的讀者可參考這篇討論的觀點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ClaudeCode Guardrails?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xck5fs/claudecode_guardrails/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/22 14:29 UTC ·",
+      "sentiment": "🤔",
+      "body": "使用者討論一份名為《Claude Code Safety》的付費電子書與對應 GitHub repo，詢問社群是否有人實際用過這套 guardrails 方案、效果如何，原文未附具體回覆內容。想替 Claude Code 加裝額外安全防護層的團隊可留意這串討論後續的使用者回饋。",
+      "focusTags": []
+    },
+    {
+      "title": "claude now lives on my phone home screen and tells me how much of my limit is left",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xck2ei/claude_now_lives_on_my_phone_home_screen_and/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/22 14:26 UTC ·",
+      "sentiment": "😊",
+      "body": "一名使用者分享把 Claude 用量提示做成手機主畫面小工具的做法，隨時能看到目前方案額度剩餘多少，細節原文未附具體實作方式。常擔心用量逼近上限的 Pro／Max 用戶可留意這類第三方小工具。",
+      "focusTags": []
+    },
+    {
+      "title": "Your CLAUDE.md Is Probably Too Long",
+      "url": "https://dev.to/iggredible/your-claudemd-is-probably-too-long-17bi",
+      "source": "dev.to / #claudecode",
+      "time": "10/20 18:25 UTC ·",
+      "sentiment": "😐",
+      "body": "作者指出：如果 Claude 常忽略某條規則，問題通常是 `CLAUDE.md` 寫得太長而非太短，文中整理哪些內容該留、哪些該刪、該搬去哪裡。自己專案的 `CLAUDE.md` 持續長大的團隊可參考這篇的取捨原則精簡規則檔。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic's Public Benefit Charter",
+      "url": "https://www.anthropic.com/public-benefit-charter",
+      "source": "Hacker News",
+      "time": "10/21 18:29 UTC ·",
+      "sentiment": "🤔",
+      "body": "Anthropic 公益公司（PBC）章程頁面今日登上 Hacker News 獲 49 分討論，討論串聚焦公司「兼顧股東利益與公眾利益」的法律定位，恰與近期揭露的 AI 安全法案遊說爭議同期發酵。關注 Anthropic 公司治理定位的讀者可留意討論串中對這層法律義務的質疑。",
+      "focusTags": []
+    },
+    {
+      "title": "Open-source, cross-harness memory for AI agents",
+      "url": "https://news.ycombinator.com/item?id=50182883",
+      "source": "Hacker News",
+      "time": "10/21 15:42 UTC ·",
+      "sentiment": "😊",
+      "body": "兩位創辦人因為常態性在 Claude Code、Codex、Cursor 間切換、每次都要重新跟 agent 解釋專案脈絡與常見錯誤模式，因而開發出可跨工具共用的開源記憶層，今日在 Hacker News 獲 17 分討論。同時用多款編碼 agent 工作、厭倦重複解釋專案背景的開發者可留意這個選項。",
+      "focusTags": []
+    },
+    {
+      "title": "13 claude code skills for the founder side of a project, and our evals say plain opus already does most of it",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xcl0zp/13_claude_code_skills_for_the_founder_side_of_a/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/22 15:03 UTC ·",
+      "sentiment": "😊",
+      "body": "作者分享 13 個針對產品創辦人（非純程式碼）日常事務設計的 Claude Code skills 包，並稱自家評測顯示單用 Opus 不加 skills 已能完成大部分工作。想把 Claude Code 用在產品管理而非單純寫程式的使用者可參考這個 skills 包。",
+      "focusTags": []
+    },
+    {
+      "title": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "source": "GitHub Search",
+      "time": "10/22 15:24 UTC ·",
+      "sentiment": "😐",
+      "body": "",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Duet 開放研究預覽：由 Opus 5.5 驅動的主動式 agent，會在使用者未開口時先攔截待辦事項、持續在背景工作，需要使用者拍板時才打斷；目前僅美國 Pro／Max 方案可用。Reuters、TechCrunch、VentureBeat、CNBC 等多家媒體同日跟進報導。訂閱 Pro／Max 方案的美國用戶可留意介面是否已出現，其他地區用戶暫未開放不必找。",
+      "ref_urls": [
+        "https://claude.com/product/claude-duet",
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRFhacjJyXzZ6ZzNUdkptUDkwRHFyV2pxSXhOc2JucmxQdDJFQ09WZ05DamcxS1NvNUx1b0cyR05DM1U3SzgwdXpvQlhaajl2dHNlVTVlYml2LVhLVENGaWtDbkdMWjFNVkdPMDRTWWFubXJsYkFZQ19peDBLMUI2cXF4cU1hN2lrU2FuZi1wSTRndFU?oc=5"
+      ],
+      "ref_names": [
+        "官方",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "音樂出版商 Reservoir 控告 Suno 與 Anthropic，指控兩家公司「意圖取代創作者」侵犯著作權；Billboard 報導細節仍待法院文件進一步揭露。使用 Claude 處理音樂相關內容生成或版權諮詢的團隊可留意此案是否影響訓練資料合規界線。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVDE5V3NNUV9BRGdBQkNJYVRybEtyQXZMbEE1VXVrZEV3V0xNaVZqdXBadDlwbzZyMGF5TW1JejdseXEyMjBTdF8yQlBOZS1vY2RxQXliWExoMG9yR0dqcFgyUVR4bkRuWWdwVTU2eWV5UjJyN2QtdlZFTGZCdGlwSUgzZw?oc=5"
+      ],
+      "ref_names": [
+        "Billboard"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "哈佛大學前科學院長 Christopher Stubbs 加入 Anthropic「長期利益信託」（Long-Term Benefit Trust），該信託對公司治理具監督角色；Anthropic 官方部落格與 Harvard Crimson 同日報導這項人事任命。關注 Anthropic 公司治理與安全監督機制的讀者可留意信託成員異動是否影響其對董事會的制衡力道。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbXRYQjdhSnU4R2ZRMjZFVXJXM0ZfS3dJdTN3TnVDWGhHX0hCb2Q1QlZjQVZWMWtJbXJXV0M4aFZkaTBwcUhDN3BJanNSaE90QmNaanlhNGw5QVE4M25vR21GV0VYWldhbXpqc1NIYkl5aEpudnQ3b1RmY3BxTFJUVXU4WQ?oc=5"
+      ],
+      "ref_names": [
+        "官方",
+        "Harvard Crimson"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Attackers Target Flowise AI Agents With Credential Theft, Prompt Injection and Workflow Hijacking",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1wOThqaTZWb1d2VDJCa3ktRzlQeUh5a0ROQTFneGI3bUhMNkZJVFBvU2FQOEc4M1dlc09oU0NlajBycFp0dWFWRG5xZHU5aDVBQ1HSAVdBVV95cUxOanJYZkVJQ1c1bk00ZzFwQU5MVGFNTEdINWV3OXVJSUMwUzZFX3ZNbDkycmNOTFZ1bHRuckxHNHJQd01KbUVES2ZnaVk4TUtGN08zZVdoQTQ?oc=5",
+      "body": "GBHackers 報導 Flowise 這類 AI agent 建置平台遭受認證竊取、提示注入與工作流程劫持等攻擊手法，與 Claude agent 常見攻擊面重疊。（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Defending AI Agent Memory Against Persistent Prompt Injection",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSGpxZFNCNjJQMFBLbWJtLUJ6ejRRZ1BqWEZPY1BhUFpRNXZJcnZFeFJqcVEyQ0gta0VLckxQUlFmTUlPVzVtT29LZzlzTXI5VnRKUjRySzd4OUV6ZzFPaGZHNGV1SEQwRTRPWndYeEhfYUpoQkhkY2J6MUZzRzRkR1RZZ091aGNSdDVOcw?oc=5",
+      "body": "HackerNoon 整理如何防範針對 AI agent 長期記憶的持續性提示注入攻擊，適用任何帶記憶功能的 Claude agent 架構。（→ AI Agent 安全與可靠性）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "How AT&T is rethinking in-house legal work with OpenAI",
+      "url": "https://openai.com/index/att-legal",
+      "body": "OpenAI 官方部落格揭露 AT&T 法務團隊採用 OpenAI 工具重塑內部法律工作流程；恰與今日 Financial Times 報導 Anthropic 也在建立讓 agent 代表使用者簽署交易的法律框架同期出現，兩家在法務垂直領域的佈局可對照看。（→ AI 編碼工具競品動態）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "What are AI neolabs and why are they betting on safe superintelligence?",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNa2tGNU4tOUdic1RjWlpLcUowR2prOVVxd2NuSGhURVU4dkQtcEdSa2dTTXZkWHVIbDlralhFd0FPakJCQXlPX3BXQlR1R1dlNHh1dmlpeERIX1RuSVVDNnF4THNMOHhQOW12WDNDa2VYS3ItRU54cU9LamttYzJ5VEx3UHVRY0l4ckRaMlZRazlkb1pUd1JNazhsWUlIUExvb2tockR6dHczbjMwRzh3SjFCNERlYzUycUtrYUl4ZEhCMGxCRkNmRnpqX0pEVDlEUFpFLXZ1dkpQSkVUOC1LS3h6aEI0S0RmU1ZyTmJKMERuQjl0LWfSAfYBQVVfeXFMTWtrRjVOLTlHYnNUY1paS3FKMEdqazlVcXdjbkhoVEVVOHZELXBHUmtnU012ZFh1SGw5a2pYRXdBT2pCQkF5T19wV0JUdUdXZTR4dXZpaXhESF9UbklVQzZxeExzTDh4UDltdlgzQ2tlWEtyLUVOeHFPS2prbWMyeVRMd1B1UWNJeHJEWjJWUWs5ZG9aVHdSTWs4bFlJSFBMb29raHJEenR3M24zMEc4d0oxQjREZWM1MnFLa2FJeGRIQjBsQkZDZkZ6al9KRFQ5RFBaRS12dXZKUEpFVDgtS0t4emhCNEtEZlNWck5iSjBEbkI5dC1n?oc=5",
+      "body": "Business Standard 介紹押注「安全超級智慧」路線的 AI neolab 現象，涉及人才與資金從既有大型實驗室外流的脈絡。（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Google DeepMind Engineer Resigns in Protest of Pentagon Contract",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdjZyeTBvbUlQVUMybVhKMWR1ek5sbnJPTjhmbVVPUW1rcUs3REdTMGxvc2p0WlRZenNIN1hLREdlS2k5bjVYZG1XRXdfREN3Q2ZUMW9CNnBIWlJZTEQ2VGxWZF9RWHYwY2l0S01ESG1UZUppZEVTbzB6LWRRSWRZYnFn?oc=5",
+      "body": "The Intercept 報導一名 Google DeepMind 工程師因抗議公司與五角大廈的合約而辭職，反映大型實驗室內部對軍方合作的人才流失壓力。（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 44
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 4
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 14
+    }
+  ],
+  "preview": "Claude Code：版本：v2.1.308 純 bug 修復；同日 TypeScript Vertex SDK 滿 1.0（⚠️ Breaking Change，改支援新版 API）、Python SDK v2.1.0 擴充 User Profiles enforcement 參數（詳見 entities/clau",
+  "sedimentedToday": [
+    {
+      "id": "christopher-stubbs",
+      "name": "Christopher Stubbs",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-duet",
+      "name": "Claude Duet",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-security",
+      "name": "Claude Security",
+      "pageType": "entity"
+    },
+    {
+      "id": "eric-schmidt",
+      "name": "Eric Schmidt",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-22",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **版本**：v2.1.308 純 bug 修復；同日 TypeScript Vertex SDK 滿 1.0（⚠️ Breaking Change，改支援新版 API）、Python SDK v2.1.0 擴充 User Profiles enforcement 參數（詳見 [[entities/claude-code#版本更新]]）。\n- **文件**：桌面版文件新增 Dispatch「建議任務」／session 追蹤說明與檔案路徑複製選單（162,725→165,374 字）。\n- **旗標**：build 新增 6 個第一階候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，詳見 [[topics/claude-code-experimental]]。"
+          },
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "compact 之後 skill 不再被遺忘",
+            "date": "",
+            "body": "官方 context-window 頁：v2.1.304 起，compact 後 skill 描述清單會重建並重新注入；更早的版本長 session 後較難自動觸發 skill，見第 1 段。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.308（自 2.1.306 起比對）新增 6 個第一階候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，涵蓋 auto mode 留言待審、diff 複製根目錄、啟動器略過登入、偵測既有 git repo、忽略已持久化信任判斷與 subagent 歷史；`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失。"
+          },
+          {
+            "page": "entities/claude-security",
+            "name": "Claude Security",
+            "label": "最新資安產品動態",
+            "date": "",
+            "body": "Claude Security 新增偵測「同一漏洞再次出現」的能力並追蹤修補進度，不只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，細節未見官方部落格或文件佐證。"
+          },
+          {
+            "page": "entities/claude-duet",
+            "name": "Claude Duet",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方 2026-10-21 開放研究預覽；Reuters、TechCrunch、VentureBeat、CNBC、The New York Times、The Verge 等多家媒體同日跟進報導，Mashable、PCMag、Yahoo Finance、Quartz、Technology Org 等隨後補充。僅美國 Pro／Max 方案可用，其他地區與方案官方未提供時程。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **IPO 遞件時程**：消息稱 Anthropic 最快本週五（10/23）正式公開提交 S-1，承接 10-21 揭露上半年淨損 807 億美元後的下一步（Yahoo Finance）。\n- **商業風險**：音樂出版商 Reservoir 加入控告 Anthropic 與 Suno，著作權訴訟再添一案（Billboard）。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態",
+            "date": "",
+            "body": "The Intercept：一名 Google DeepMind 工程師因抗議公司與五角大廈合約辭職；Business Standard 另稱人才與資金正流向主打「安全超級智慧」的新興 AI 實驗室。既有格局不變，詳見 [[topics/ai-talent-flow#時序]]。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Reservoir 控告 Suno 與 Anthropic 音樂著作權侵權**：Billboard 報導新訴訟，雙方均未上市，無可交易標的。\n- **Anthropic 傳最快本週五公開提交 S-1**：若屬實，公開版 S-1 將一次結算多筆估值與財務待查證項目。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **AI 安全法案**：TechCrunch／Politico／Zvi Mowshowitz／Novara Media 跟進 10-19 揭露的「50 人死亡或 10 億美元損害」門檻，均未提供新數值。\n- **HHS 唯一來源採購**：FedScoop 稱衛生部將對 Anthropic 做出「唯一來源」聯邦採購決定，細節未載。\n- **川普／Amodei**：Fox News 稱川普發表 AI 與資料中心立場，Amodei 同時為安全紀錄與對中銷售辯護，全文未載。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **跨廠商提示注入**：GBHackers 稱 Flowise agent 平台遭認證竊取、提示注入與工作流程劫持攻擊，細節未載。\n- **教育層訊號**：HackerNoon 整理防範 AI agent 長期記憶遭持續性提示注入的方法，僅標題可用。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "Ask HN 質疑主動式 agent 走向危險方向",
+            "date": "",
+            "body": "使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比《駭客任務》Agent Smith 台詞，質疑把主動代理人交給 AI 是否危險；HN 10 分，單平台初現（10-21 首見）。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "新增帶登入態操控瀏覽器的 MCP 外掛",
+            "date": "",
+            "body": "- **alchaincyf/huashu-chrome**：MCP ＋ Chrome 擴充套件，讓 Claude Code、Codex、Cursor、Gemini CLI 等 agent 操控使用者自己已登入的 Chrome（503★）。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "多供應商 AI gateway 新增，星數異常待查",
+            "date": "",
+            "body": "- **cheaper-inference/OmniRoute**：單一端點整合 375 家供應商、逾 1,400 款模型，配額感知備援＋壓縮省 token；2026-02 建 repo、星數已近 8 萬，本庫僅陳列星數，未驗證採用規模。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/christopher-stubbs",
+            "name": "Christopher Stubbs",
+            "label": "加入長期利益信託",
+            "date": "",
+            "body": "實驗物理學家、哈佛大學前科學院長 Christopher Stubbs 加入 Anthropic 獨立監督機構「長期利益信託」；The Harvard Crimson 指出他卸任哈佛大學 AI 顧問一職數週後即加入（僅標題可用）。"
+          },
+          {
+            "page": "entities/eric-schmidt",
+            "name": "Eric Schmidt",
+            "label": "駁斥 AI 泡沫論，稱 Anthropic 成長速度是 Google 兩倍",
+            "date": "",
+            "body": "前 Google 執行長 Eric Schmidt 公開表示不認同「AI 泡沫」說法，稱 Anthropic 成長速度是當年 Google 的兩倍（僅標題可用，未附具體數字）；與 10-20 曝光其持有 Anthropic 約 1% 股權同屬近期公開表態。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 15
+  },
+  "readerTopStories": [
+    {
+      "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+      "url": "https://github.com/omnara-ai/omnara",
+      "source": "Hacker News",
+      "time": "10/21 16:44",
+      "sentiment": "",
+      "body": "開源專案 Omnara 定位為 Claude Managed Agents 的開源替代方案：一次 API 呼叫即可建立 agent，由 Omnara 代管執行迴圈、沙盒、密鑰與權限，agent 狀態存在 Postgres，閒置零成本、重啟後可存活；今日在 Hacker News 獲 98 分，並有至少 4 個獨立管道同步報導。評估要不要自架 agent 託管平台取代官方 Managed Agents 的團隊可留意這個開源選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Security can now spot vulnerabilities that reappear in code",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWoyZjQ4X0ZoYUtacURwZU4yM1BqbTQ4d284NVJxM3hGc3RmUTFOMHJzcFFFLVdfa3piUzAyVDB0aXAwX1FjTDJRNHlZdUlhVUg1UVVzNXNWaUpIWUdSMmVlQmZaN2NfVTU3Rm85bnkzZ20wemwtck40eERoWmVUWUhyMng3aS02UEViWWs1NA?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "10/22 11:02",
+      "sentiment": "",
+      "body": "Claude Security 新增「同一漏洞再次出現」的偵測能力，並追蹤修補進度，不只是一次性掃描；Help Net Security 今日報導，TestingCatalog 同日也獨立跟進。負責程式碼安全稽核流程、已導入 Claude Security 的團隊可留意主控台是否已出現這項追蹤功能。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-security",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's top engineer reveals just how far her team has gone with AI coding",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ1ozdXdwU0xrLW9uTW9US0NpV3hOMWNrcVdXREw1a3hvUkxqUERlTkl3M1NGd0JQcTJ4RnlaNE5ZNWd6MGlCbjVzbmtqbElPZ1VVSENRSTRzMVIxY0dFbEg4TUF3SVFtREY1Uk9kTTczcG9OVjVUWUpJck5Nai1PMmhJX2o0bUxaQ3dqQm52S014TjRYZU5Mb0JPeVZBNDg?oc=5",
+      "source": "Google News / Business Insider",
+      "time": "10/22 09:00",
+      "sentiment": "",
+      "body": "Business Insider 報導一名 Anthropic 工程主管分享其團隊導入 AI 寫程式的實際進度，延續本月初官方內部研究揭露「AI agent 工時已達員工工時六倍」的話題；今日有至少 3 個獨立管道同日跟進報導。持續追蹤 AI 對開發團隊實際生產力影響的讀者可留意後續細節補充。",
+      "focusTags": []
+    }
+  ]
+}

@@ -376,13 +376,7 @@
     }
   ],
   "preview": "Claude Code：v2.1.299 新增 CLAUDE_CODE_DISABLE_FILE_MENTIONS：開啟後 @ 檔案提及只傳路徑、交既有工具讀取，不再直接灌入檔案全文。",
-  "sedimentedToday": [
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-14",
     "summary": "",

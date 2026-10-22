@@ -3,17 +3,17 @@ page: "topics/ai-talent-flow"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-17"
-last_news_update: "2026-10-05"
+last_updated: "2026-10-22"
+last_news_update: "2026-10-22"
 status_main: "ongoing"
-days_since_news: 16
+days_since_news: 0
 parent: null
 children: "['topics/ai-talent-flow-archive']"
 page_role: "hub"
-days_since_news_subtree: 16
+days_since_news_subtree: 0
 inbound_links: 22
-attribution_count: 25
-attribution_last: "2026-10-05"
+attribution_count: 27
+attribution_last: "2026-10-22"
 top_source: "topic-watch"
 pending_count: 2
 pending_overdue: 0

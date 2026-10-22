@@ -455,11 +455,6 @@
   "preview": "Claude Code：版本：v2.1.306 純 bug 修復（雲端 session claude -p 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；anthropic-sdk-python／anthropic-sdk-typescript 同步發新版（詳",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-science",
       "name": "Claude Science",
       "pageType": "entity"
@@ -468,31 +463,6 @@
       "id": "pricing",
       "name": "Anthropic 訂閱方案與計費政策",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
     },
     {
       "id": "community-memory",
@@ -507,16 +477,6 @@
     {
       "id": "competitor-landscape",
       "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

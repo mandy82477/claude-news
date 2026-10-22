@@ -336,11 +336,6 @@
       "pageType": "entity"
     },
     {
-      "id": "eric-schmidt",
-      "name": "Eric Schmidt",
-      "pageType": "entity"
-    },
-    {
       "id": "linus-torvalds",
       "name": "Linus Torvalds",
       "pageType": "entity"
@@ -349,11 +344,6 @@
       "id": "opus-5-5",
       "name": "Claude Opus 5.5",
       "pageType": "entity"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
     }
   ],
   "reader": {

@@ -3,16 +3,16 @@ page: "topics/community-tech-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-17"
+last_updated: "2026-10-22"
 last_news_update: "2026-10-16"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
-inbound_links: 55
+days_since_news_subtree: 6
+inbound_links: 54
 attribution_count: 15
 attribution_last: "2026-09-26"
 top_source: "github"

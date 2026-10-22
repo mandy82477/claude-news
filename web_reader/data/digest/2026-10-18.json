@@ -385,11 +385,6 @@
       "pageType": "entity"
     },
     {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
       "pageType": "topic"

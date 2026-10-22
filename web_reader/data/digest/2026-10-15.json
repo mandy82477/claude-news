@@ -493,11 +493,6 @@
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
       "pageType": "topic"
-    },
-    {
-      "id": "coding-workflow-guide",
-      "name": "程式開發實戰手冊",
-      "pageType": "topic"
     }
   ],
   "reader": {

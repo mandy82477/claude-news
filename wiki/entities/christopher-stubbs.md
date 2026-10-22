@@ -12,16 +12,16 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 0
-attribution_count: 0
-attribution_last: null
-top_source: null
+inbound_links: 1
+attribution_count: 2
+attribution_last: "2026-10-22"
+top_source: "anthropic-blog"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Christopher Stubbs
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 👤 人物
 **身分：** 實驗物理學家、哈佛大學前科學院長，曾任哈佛大學 AI 顧問
-**與 Anthropic：** 治理（長期利益信託受託人）
+**與 Anthropic：** 治理
 **職能：** 政策治理
 **為何追蹤：** 2026-10-22 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）
 **首次出現：** 2026-10-22

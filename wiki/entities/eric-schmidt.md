@@ -11,10 +11,10 @@ days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 0
-attribution_count: 3
-attribution_last: "2026-10-20"
+attribution_count: 4
+attribution_last: "2026-10-22"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
