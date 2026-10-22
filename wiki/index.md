@@ -99,7 +99,7 @@
 | [[entities/linus-torvalds]] | person | 👤 人物 | active（單一來源） | Linux 創造者；2026-10-12 被發現用 Claude Code 開發新 kernel 分支 `noref-filemap-read-with-llm`（Phoronix） |
 | [[entities/eric-schmidt]] | person | 👤 人物 | active | 前 Google 執行長；持有 Anthropic 約 1% 股權一事於 IPO 前曝光（Bloomberg／Quartz／Reuters，2026-10-20） |
 | [[entities/christopher-stubbs]] | person | 👤 人物 | active | 哈佛大學前科學院長、實驗物理學家；2026-10-21 加入 Anthropic 長期利益信託（Long-Term Benefit Trust） |
-| [[entities/claude-duet]] | product | 🛠️ 工具/功能 | Research Preview | Opus 5.5 驅動的主動式 agent，2026-10-21 開放研究預覽，僅美國 Pro／Max 方案可用 |
+| [[entities/claude-duet]] | product | 🛠️ 工具/功能 | active | Opus 5.5 驅動的主動式 agent，2026-10-21 開放研究預覽，僅美國 Pro／Max 方案可用 |
 ---
 
 ## Topics（進行中議題）
