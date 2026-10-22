@@ -9,7 +9,7 @@
 2. **段號不變＝`data/skill_interest_watch.json` 與 index 的「第 N 段」都不用同批改**；index 只改路由（Q2、Q4、明價、鉤子）。
 3. **自足的做法是「每題在本頁有一句答案」**，不是把鄰頁搬過來：Q2、Q3 各補一句話版本，Q5 進導航表。
 4. 本頁 675 → 674 行；四支閘對副本：讀者語言新增 0、字元上限新增 0、懸置 177 → 177、頁內斷錨 2 → 0。
-5. 跨維護者 5 筆轉知（商業 1、社群 2、功能 2）；規則檔改 `devpractice/pages.md` 6 處（健檢卡 5 處漂移＋L21「領域注意」欄）。
+5. 跨維護者 6 筆轉知（商業 1、社群 2、功能 3）；規則檔改 `devpractice/pages.md` 6 處（健檢卡 5 處漂移＋L21「領域注意」欄）。
 
 ## 1. 推薦案
 
@@ -35,7 +35,7 @@
 
 ## 3. 自足：每題在本頁拿到什麼（一句）
 
-- **Q1** CLAUDE.md 放什麼、多長、何時加：§1 原本就自足；多長那句改成官方現行逐字「每份目標 200 行以內」（A-07）。
+- **Q1** CLAUDE.md 放什麼、多長、何時加：§1 原本就自足；L147 改成「官方三頁說法不一」並以「讀 code 推不推得出」調和（A-07b，二輪），多長那句改成官方現行逐字（A-07）。
 - **Q2** 它說做完了怎麼驗：§9 新增一句四級階梯（同 prompt 自跑 → `/goal` → Stop hook → 驗證 subagent），§6 L465 補「評估者不跑工具」（A-24、A-36）——從 index 進第 9 段也拿得到完整答案。
 - **Q3** review 入口與價錢：§5 表加「誰能用」——Code Review 限 Team／Enterprise、按 token 無單價；下面一句話講完四個入口各怎麼付錢＋官方估法三步＋$13／活躍日參考值；估法細節仍指 ecm 錨點（A-22）。
 - **Q4** 先規劃還是直接做：§3 原本自足；缺的是入口（index D-1）。
@@ -56,8 +56,10 @@
 | L427 未寫限方案；L419／L90「明價」 | 限 Team／Enterprise；「四個入口，方案與計費各寫明」 | A-22、A-05 |
 | L434、L436 兩句引文 | 拿掉引號與 blockquote，旋鈕本身保留 | A-22 |
 | L440「官方沒標的坑」 | 「官方明寫」 | A-22 |
+| L434 effort「`low`／`medium`」、旋鈕混兩入口（二輪 R-2） | 只有 `low` 收斂（code-review-local L85）；GitHub 端調審查等級 Quick／Standard／Deep（code-review-costs L11） | A-22 |
+| L147 只列兩頁（二輪 R-1） | 三頁：加 memory L623 `/doctor` 瘦身建議 | A-07b、A-05、A-38、A-41 |
 
-順手修（健檢卡／冷讀者點名）：L281 第 7→8 段、L529「✅ 成熟」與 L535 互斥、L585 `/doctor` 歸屬、L377 火焰數、L555「顯著降低」、L629 第一條與 L535 互斥、L632「數字全無」未反映官方費用頁。
+順手修（健檢卡／冷讀者點名）：L281 第 7→8 段、L529「✅ 成熟」與 L535 互斥、L585 補 `/doctor` 出處、L650 查證日、L658「六個入口」、L377 火焰數、L555「顯著降低」、L629 第一條與 L535 互斥、L632「數字全無」未反映官方費用頁。
 
 ## 5. 新聞條目去處
 
@@ -111,7 +113,7 @@ L9 使命句換 A＋領域欄改 💻（B-1）；L21「領域注意」欄不存�
 | 表格格 ≤120、條列 ≤200 | **有**：`check_cell_limits.py:91–92`、`:242`；本頁存量 5 筆（L334／L397／L404／L499／L571），本案一筆都沒碰 |
 | 懸置標記不得溶掉 | **有**：`check_pending_markers.py:288–338`（全庫模式；`--page` 模式在 `:377–384` 跳過此閘） |
 | `[[頁#標題]]` 錨點 | **有**（只 WARN）：`build_web.py:369` |
-| 頁內 `](#…)` 錨點 | **無看守**（現檔 2 個斷錨就是這樣留下的）；本波用 scratchpad `design/anchors_js.py` 自驗 |
+| 頁內 `](#…)` 錨點 | **無看守**（現檔 2 個斷錨就是這樣留下的）；本波用 scratchpad `design/anchors_js.py` 自驗，缺口記 ledger（實作單第 9 步） |
 | 拆頁評估存在且未過期 | **有**：`check_page_thickness.py:35`、`:95` |
 | `pages.md` 四個契約字串 | **有**：`.claude/review-registry.json` L819–828、L903–912，`check_rules.py` 消費 |
 | 段號與 JSON `guide_section` 一致 | **無看守**（`skill_interest_snapshot.py:255` 只照抄字串） |
@@ -120,16 +122,7 @@ L9 使命句換 A＋領域欄改 💻（B-1）；L21「領域注意」欄不存�
 
 方法：`wiki/` 整份複製到 scratchpad `design/repo/wiki/`，以 `ops.py`（draft A 區的單一來源）套進副本；wiki 現檔未動。
 
-| 閘 | 現檔 | 副本 |
-|---|---|---|
-| 行數／正文（`check_page_thickness.body_lines`） | 675／649 | 674／646 |
-| 頁內斷錨（`anchors_js.py`） | 2（L47、L48） | **0** |
-| `check_reader_language.scan`＋`split_hits`（`WIKI` 指副本，白名單照吃） | 0 | **0 新增** |
-| `check_cell_limits.scan` | 5 | 5，指紋逐一相同 → **0 新增** |
-| 本頁 `iter_pending`／`iter_legacy` | 0／1（L285） | 0／1（L276，同一句） |
-| `check_pending_markers.check` 全庫 | 177（基線 165）、舊字樣 23 | **177**、**23**，ok |
-| `build_web.check_wikilink_anchors` | 0 WARN | **0 WARN** |
-| `check_page_thickness.assessment` | 無 | 2026-10-22、未過期 |
+現檔 → 副本：行數／正文 675／649 → 674／646；頁內斷錨（`anchors_js.py`）2 → **0**；`check_reader_language.scan`＋`split_hits`（`WIKI` 指副本，白名單照吃）新增 **0**；`check_cell_limits.scan` 5 → 5、指紋逐一相同；本頁 `iter_pending` 0 → 0、`iter_legacy` 1 → 1（同一句「官方未載」）；`check_pending_markers.check` 全庫 177 → **177**（基線 165）、舊字樣 23 → 23；`build_web.check_wikilink_anchors` 0 → **0 WARN**；`check_page_thickness.assessment` 無 → 2026-10-22 未過期。
 
 **驗紅**：(1) 副本另拷一份，以副本現況重建標記基線（177），把 `entities/chris-olah` 的一個 ❓ 標記改成散文 → `check()` 回 False：「❌ 懸置標記總數低於基線：基線 177／現況 176…少了：entities/chris-olah（標 2026-10-09｜查 woke、另一位共同創辦人）」（紅在 `check_pending_markers.py:318–338`）。(2) 副本 L41 注入「本節由記者每週覆寫。」→ `split_hits` 新增 2 筆（記者、覆寫）。(3) 副本把 claude-code 錨點改成不存在的 `#hooks：失效模式` → `check_wikilink_anchors` 回 1 WARN。(4) `pages.md` 套 B 區的副本：四個 registry 字串皆在；「格式表」「官方涵蓋不到」「「深入」」「探索時常撞到」「工具/功能」「領域注意」皆 0 命中。
 
@@ -137,6 +130,21 @@ L9 使命句換 A＋領域欄改 💻（B-1）；L21「領域注意」欄不存�
 
 1. 五小時額度那句（舊 L41／L283）verified 沒逐字核——本案已從頁面移出，C-1 請 pricing 收前先查。
 2. `/security-review` 與 Claude Security 外掛的方案與計費，verified 未核；表格維持「一般用量」原說法，Claude Security 只寫一句「做深度掃描」不寫價錢。
-3. `REVIEW.md` skip rules／重審收斂這兩個旋鈕的現行官方措辭沒核到（verified 只說原引句查無）；旋鈕保留、引號拿掉。
-4. `scripts/pending_markers.py:512` 註解「手冊領域是工具/功能」過期（只是註解，改 script 屬另一波）。
-5. 冷讀者 index 外洩（L3–6、L22、L104）不屬本頁，留給 index 下一波。
+3. `scripts/pending_markers.py:512` 註解「手冊領域是工具/功能」過期（只是註解，改 script 屬另一波）。
+4. 冷讀者 index 外洩（L3–6、L22、L104）不屬本頁，留給 index 下一波。
+
+## 第二輪回應（評審 🔴 2／🟡 8：接受 9、改寫 1、反駁 0）
+
+官方原文逐條對過 scratchpad `w19v/`：memory L623、code-review-local L85、ultrareview L125、code-review-costs L11 與評審引文一致。
+- **R-1 接受**：A-38 是我改錯（memory L623 原歸因 `/doctor` 正確）；新增 A-07b（L147–148）、A-38 改補出處、A-41 第二條、A-05 第 1 列照評審版。
+- **R-2 接受**：A-22 旋鈕段換評審版（GitHub 端審查等級／本機只有 `low` 收斂）；REVIEW.md「列出要跳過的路徑與類別」另有 code-review-customize L12、L87 撐，§14 原第 3 條刪。
+- **R-3 接受**：A-42b（L650 查證日）、A-42c（L658「六個入口」）。
+- **R-4 接受**：ultrareview 格加「看變更大小」（ultrareview L125）。
+- **R-5 接受**：C-4 句尾加 L87 Explore；新增 C-6（`--dry-run` 負責人＝功能 通過）。
+- **R-6 接受**：實作單不跑 `gen_wiki_frontmatter.py`。
+- **R-7 接受**：B-3 第二段換「所有 `](#…)` ＋ grep」版。
+- **R-8 接受**：B-2 改整行取代 L21（「不得改以開發領域」保留）。
+- **R-9 接受**：A-26b、A-29b、A-33b、A-33c 四處。
+- **R-10 改寫**：分工照收；只改評審實作單第 2 步——R 項已在參考副本裡，第 2 步只剩填 `<實作當天>`；驗收 `grep -c "官方三頁"` 應為 **2**（評審 R-1 自己要求的 A-07b 正文＋A-05 流程表兩處），不是 1。新版第 2 步見 draft 末節。
+
+**二輪閘（副本重產，wiki 未動）**：674 行／正文 646；頁內斷錨 0；讀者語言新增 0；字元上限 5 筆指紋不變；懸置全庫 177（基線 165）、舊字樣 23；`check_wikilink_anchors` 0 WARN。驗紅重跑：溶掉 chris-olah 一個 ❓ → 177→176 FAIL；注入「記者…覆寫」→ 2 筆；claude-code 錨點改錯 → 1 WARN；導航表一個錨點改回帶標記的舊 slug → `anchors_js.py` 斷錨 1。
