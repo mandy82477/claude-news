@@ -2,31 +2,35 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-16
+**最後更新：** 2026-10-22
 
-> **這禮拜動了什麼**（2026-10-09）
-> v2.1.295：command／HTTP hook 新增 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接阻擋該動作、不再放行（MIXED Reality News 同日指出官方文件仍寫「不要只依賴 hook 做安全防護」，兩者有落差）；Bedrock／Vertex／Foundry 的 token 計數同版改走 AWS 官方 CountTokens API，⚠️ 需額外授予 `bedrock:CountTokens` 權限。Claude Haiku 5.5 發布：Claude 5.5 家族第三款模型，官方稱最便宜、最快、最具能力的小型模型，平均執行成本比 Haiku 4.5 降約 75%；HN＋Blog 合計 1,005 分，是本週互動量最高的訊號。v2.1.288：修正包在 `bash -c`／`sh -c` 裡的危險 `rm` 會繞過檢查的缺口；新增 `/code-review --max-findings`、`claude purge`、`CLAUDE_CODE_DISABLE_STRUCTURED_OUTPUTS`。mixed-news.com 指出 stable 標籤仍停在 2.1.285，固定用 stable 的人還沒拿到這個修正。v2.1.287：Claude Code 推出「Mods」功能，外掛可修改更深層的執行時行為，內建示範 mod「You should know」由旁觀 agent 主動提醒使用者或 Claude 可能忽略的事項；官方文件索引同步新增 10 頁 mods 文件。官方追蹤 issue 上線當日累積 233 則留言、218 個讚。v2.1.284：Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端預設 Sonnet 模型，速度快逾三成、成本降最多三成。Claude Code 整體預設模型仍是 09-22 起的 Opus 5.5。
+> **這禮拜動了什麼**（2026-10-22）
+> v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
+
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-10-08）
+## ⭐ 現在值得跟的三件（最後輪替 2026-10-22）
 
 - **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
 - **Claude Haiku 5.5 可選用**：Claude 5.5 家族第三款模型，官方稱成本比前代降約 75%，適合高流量成本敏感任務。**怎麼開始：** `/model claude-haiku-5-5`，細節見 [[entities/haiku-5-5]]。
-- **Claude Code 讀取 AGENTS.md**：v2.1.277 起，專案無 CLAUDE.md 時改讀 AGENTS.md，回應讚數最高的已知問題 #6235。**怎麼開始：** 專案根放 AGENTS.md 即生效，`/config` 可調（Bedrock／Vertex／Foundry 未支援；關 telemetry 會被靜默略過，官方已標修復）。
+- **Claude Mods**：外掛可修改 Claude Code 更深層行為（v2.1.287 GA，v2.1.300 起新增 `agent.spawn`、`prompt.change` hook），以你的權限執行、不受沙箱隔離。**怎麼開始：** 裝前先跑 `claude plugin validate ./some-mod`，安全面細節見 [[entities/claude-mods]]。
 
 %% 10-08 換上 Claude Haiku 5.5（🔥🔥🔥🔥🔥，10-07 發布，在 30 天時間閘內達標，與 AGENTS.md 同熱度但發布日較新，依規則排序優先），擠下 Claude Mods（🔥🔥🔥🔥，10-01 發布，熱度較低）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，第一條固定為預設值改變型 Sonnet 5.5 %%
-%% 10-16：本週無新達標功能（Code Review GA 僅 🔥🔥🔥，未達 🔥🔥🔥🔥 替補門檻），維持上週推薦（最後輪替：2026-10-08） %%
+%% 10-22 重算：AGENTS.md（09-18 發布）距今 34 天，出 30 天時間閘，換上 Claude Mods（🔥🔥🔥🔥 ⚡，10-01 發布，與 Opus 5.5 同熱度但較新）；Sonnet 5.5（第一條，預設值改變型）、Haiku 5.5 不動。本次補收的 v2.1.300／302／304 條目全為 🔥（僅 GitHub Release 單一來源、無社群報導），皆未達 🔥🔥🔥🔥 門檻 %%
 
 ---
 
 ## ⚠️ 升級前要知道的預設值與破壞性變更
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.295，2026-10-09；v2.1.289–v2.1.294 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.304，2026-10-22；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code#版本更新]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.304 | 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟（gateway 回 400／422 會改不帶它重試）；壓縮後重送 skill 清單 | 預設值改變 | 走自家 gateway 的人：工具改為按需載入，若 gateway 不支援會多一次重試；可觀察請求量 |
+| v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
+| v2.1.300 | hook `updatedInput` 依 schema 驗證；大型請求預設 gzip（`CLAUDE_CODE_GZIP_REQUEST_BODIES=0` 關）；transcript 多記請求的 system prompt | 預設值改變 | 靠 hook 注入非 schema 欄位的要改寫；分享 transcript 前留意其中含 system prompt |
 | v2.1.295 | Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API | 預設值改變 | 用這三個通道的企業管理者需額外授予 `bedrock:CountTokens` IAM 權限，否則計數功能可能受影響 |
 | v2.1.285 | 背景 Bash／PowerShell 指令加上時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守的 session | 預設值改變 | 無人值守跑長建置或測試的，用 `timeout` 參數明設時限 |
 | v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
@@ -36,9 +40,6 @@
 | v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
 | v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
 | v2.1.257 | 預設 Fable 模型換成 5.1；auto 模式新增 Containment Escape 規則 | 預設值改變 | Pro／Team standard 的 Fable 走 usage credits，升完看一次帳單通道；雲端 CI 若需抓 metadata／執行對外連線，在環境標記為預期用途，否則 auto 不再自動核准 |
-| v2.1.243 | 沙盒 Bash 提示不再列出允許網域；`CLAUDE_CODE_SUBAGENT_MODEL` 由「覆蓋全部」改為「預設值」 | 預設值改變 | 靠該變數強制全部子代理用同一模型的人，改在呼叫子代理時逐次指定 |
-| v2.1.239 | 成本估算對「資料常駐工作區」計入 1.1 倍純美國推理附加費 | 預設值改變 | 不在資料常駐工作區的人不受影響；在的人 `/cost` 數字會變高，不是你多花了錢 |
-| v2.1.234 | `/config` 移除「Default teammate model」，隊友改用主導者的模型 | 預設值改變 | 靠該設定讓隊友跑不同模型的流程要改寫 |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -47,7 +48,7 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的較舊門檻**：2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；逐版見 [[entities/claude-code#版本更新]]。
+- **因上限 12 列移出的較舊門檻**：2.1.234／239／243 三項、2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；逐版見 [[entities/claude-code#版本更新]]。
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 
@@ -67,6 +68,73 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Code `/auto-mode-setup`＋`CLAUDE_CODE_AUTO_MODE_MODEL`（auto mode 設定）
+**發布：** 2026-10-19（v2.1.304；`CLAUDE_CODE_AUTO_MODE_MODEL` 為 2026-10-16 v2.1.302） | **狀態：** 正式發布
+
+**是什麼：** `/auto-mode-setup` 是引導式設定，讀你的專案與近期 session，教 auto mode 認識你的環境；Bedrock、Vertex、Foundry、apps gateway 與關 telemetry 的 session 也能用。`CLAUDE_CODE_AUTO_MODE_MODEL` 指定 client-side auto mode 分類器用哪個模型，不影響 server-side auto mode。
+
+**為何熱：** 官方 GitHub Release 單一來源，尚無社群報導或實測；併成一條是因兩者都在調 auto mode 分類器的行為，且 auto 已是預設權限模式（見 [[entities/claude-code]]）。
+
+**現在要試嗎：** 在用 auto mode 又常被誤擋或誤放行的人可試 `/auto-mode-setup`；固定指定分類器模型屬進階調校，一般使用者先觀望。
+
+**快速上手：**
+```
+/auto-mode-setup
+export CLAUDE_CODE_AUTO_MODE_MODEL=<model-id>   # 只影響 client-side 分類器
+```
+
+**注意事項：** 官方原文未說明 `/auto-mode-setup` 寫入哪些設定、可用的分類器模型清單；查證 2026-10-22，來源 [v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)、[v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)。
+
+### Claude Code `/claude-api managed-agents-secure`
+**發布：** 2026-10-19（v2.1.304） | **狀態：** 正式發布
+
+**是什麼：** 把你的 Managed Agents 設定對照 Anthropic 公開的安全指南逐項檢查，只回報、不改任何設定。
+
+**為何熱：** 官方 GitHub Release 單一來源，尚無社群報導；是 `/claude-api` 技能下的子動作，產品背景見 [[entities/managed-agents]]。
+
+**現在要試嗎：** 已把 Managed Agents 接進正式流程的團隊上線前跑一次；沒用 Managed Agents 的人無關。
+
+**快速上手：**
+```
+/claude-api managed-agents-secure
+```
+
+**注意事項：** 官方原文只說「對照公開安全指南」，檢查項目與輸出格式未載；查證 2026-10-22，來源 [v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)。
+
+### Code Review 審查等級（Quick／Standard／Deep）
+**發布：** 2026-10-19（v2.1.304） | **狀態：** 正式發布
+
+**是什麼：** Code Review 新增三種審查等級：Quick、Standard（預設）、Deep；可在組織層設定，也可逐 repo 另設。另新增「審查組織內所有 repo（含之後新增）」選項。
+
+**為何熱：** 官方 GitHub Release 單一來源；延續 10-15 的 GA（見上方「Code Review 正式發布」），尚無社群反應。
+
+**現在要試嗎：** 已用 GitHub App Code Review 的團隊可依 repo 風險分級：核心 repo 開 Deep、文件或內部工具用 Quick；各等級的用量差異官方原文未載，先小範圍試再看帳單（費用規則見 [[entities/pricing]]）。
+
+**快速上手：**
+```
+Code Review 設定 → 審查等級 → 選 Quick / Standard / Deep（組織層或逐 repo）
+```
+
+**注意事項：** 「含之後新增的 repo」會讓新 repo 自動納入審查，開之前先確認用量預算；查證 2026-10-22，來源 [v2.1.304](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)。
+
+### Claude Code v2.1.302：`/config` Idle compaction 開關
+**發布：** 2026-10-16（v2.1.302） | **狀態：** 正式發布
+
+**是什麼：** `/config` 新增「Idle compaction」列，可關閉或重新開啟閒置自動壓縮。同版另有三項預設值改變（見「升級前要知道的預設值」表）：`claude -p`／Agent SDK 在特定環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟、prompt／agent hook 同事件最多 12 個並行。
+
+**為何熱：** 官方 GitHub Release 單一來源，尚無社群報導；先前本庫僅記到「閒置壓縮相關功能，細節未載」，此處依 release 原文補齊。
+
+**現在要試嗎：** 不想讓閒置 session 被自動壓縮的人到 `/config` 關掉；跑 `claude -p` 的 CI 與 SDK 使用者升版後先確認權限模式。
+
+**快速上手：**
+```
+/config            # 找「Idle compaction」切換
+claude -p --permission-mode auto "..."   # 要維持 auto 須明確指定
+export CLAUDE_CODE_FORK_SUBAGENT=0       # 關閉 fork subagent 預設開啟
+```
+
+**注意事項：** 另有 `/design-sync`、`/design-login` 通知：獨立版 Claude Design（claude.ai/design）2026-12-14 關閉；查證 2026-10-22，來源 [v2.1.302](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)。
 
 ### Code Review 正式發布（GA）
 **發布：** 2026-10-15 | **狀態：** 正式發布
@@ -135,6 +203,23 @@ export CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS=600000   # 範例：10
 ```
 
 **注意事項：** 公開測試階段；需應用程式自行先註冊全域 tracer provider 才會生效；支援的 exporter 清單官方未列。
+
+### Claude Code v2.1.300：Mods 擴充＋OpenTelemetry 屬性＋`/advisor`
+**發布：** 2026-10-14（v2.1.300） | **狀態：** 正式發布
+
+**是什麼：** mods 新增 prompt decoration `virtualText`（畫在提示框、不進草稿與送出內容）、`$.ui.view({ agentId })`（主畫面顯示某 agent 的 transcript）、`agent.spawn` hook（可改寫 workflow agent 的 prompt 與 model）與 `prompt.change` hook。OpenTelemetry `api_request` 事件加 `cache_creation_5m_tokens`、`cache_creation_1h_tokens`，trace span 加 GenAI 語意屬性（`gen_ai.provider.name`、`gen_ai.conversation.id`、`gen_ai.tool.name`、`error.type`）。Claude Platform on AWS 新增 `/advisor`。
+
+**為何熱：** 官方 GitHub Release 單一來源，尚無社群報導；mods 背景見 [[entities/claude-mods]]。
+
+**現在要試嗎：** 寫 mod 的外掛開發者與已把 Claude Code 接進 OTel 的團隊可用；`/advisor` 僅 Claude Platform on AWS，其他通道看不到。
+
+**快速上手：**
+```
+/advisor                                  # 或 advisorModel 設定、--advisor 旗標指定才啟用
+export CLAUDE_CODE_DISABLE_ADVISOR_TOOL=1 # 關閉 advisor
+```
+
+**注意事項：** 同版預設值改變（gzip 壓縮請求、transcript 記錄每次請求的 system prompt 與 tools、hook `updatedInput` 驗證）見預設值表。另有修正：agent hooks 現在採用自己的 `model` 欄。VSCode 新增 `claudeCode.attachSelection` 可停止附帶編輯器選取文字；查證 2026-10-22，來源 [v2.1.300](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)。
 
 ### Claude Code 停用 @ 檔案提及自動讀取內容（CLAUDE_CODE_DISABLE_FILE_MENTIONS）
 **發布：** 2026-10-14（v2.1.299） | **狀態：** 正式發布
@@ -608,10 +693,15 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **`/claude-api managed-agents-secure`**（v2.1.304，對照官方安全指南檢查 Managed Agents 設定，唯讀） | 2026-10-19 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Code Review 審查等級 Quick／Standard／Deep**（v2.1.304，組織層或逐 repo 設定；新增審查全組織 repo 選項） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code v2.1.302**（`/config` Idle compaction 開關；`-p` 預設權限模式與 fork subagent 預設改變） | 2026-10-16 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Code Review（GitHub App）正式發布（GA）**（PR 審查，$50,000 點數方案，官方文件新增 6 頁） | 2026-10-15 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Messages API speed 參數＋usage-tier**（anthropic-sdk-python v1.15.0／typescript sdk-v0.135.0） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **無人值守重試逾時上限**（`CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，v2.1.301） | 2026-10-15 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude API 原生 OpenTelemetry Tracing**（SDK 自動建立/匯出 span，免改程式碼；vertex-sdk v0.21.0／python v1.14.0） | 2026-10-14 | 🔥🔥 | ⚡ 有條件推薦 | Beta（公開測試） |
+| **Claude Code v2.1.300**（mods 新 hook 與 `virtualText`；OTel 快取拆分與 GenAI 屬性；`/advisor`，AWS 通道） | 2026-10-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code 停用 @ 檔案提及自動讀取內容**（v2.1.299，`CLAUDE_CODE_DISABLE_FILE_MENTIONS`，只取路徑不灌入內容） | 2026-10-14 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway Code 分頁政策鍵**（v2.1.296，`managed.policies[].code` 比照 `cli` 政策套用到 Desktop Code 分頁） | 2026-10-09 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Hook `onFailure: "block"`**（v2.1.295，command／HTTP hook 失敗即阻擋） | 2026-10-08 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |

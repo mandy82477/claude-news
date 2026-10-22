@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-21
+**最後更新：** 2026-10-22
 **最後新聞更新：** 2026-10-21
 
 > **最新動態**（2026-10-21）
@@ -46,13 +46,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **v2.1.306**（2026-10-21）：修正雲端 session 在未帶入該 session 環境變數時執行 `claude -p` 會誤報「Not logged in」的問題；修正一個原本會被「prompt is too long」訊息覆蓋掉的 API 錯誤；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）。
   同版 build 另新增 6 個功能候選旗標，`CLAUDE_CODE_SETTLE_TOUCHED_FILES`（首見 2.1.299）消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.17.0 新增組織層級 webhook 端點、RBAC 群組擁有者權限錯誤碼；anthropic-sdk-typescript vertex-sdk-v0.22.0 ⚠️ 新增行為：在 `AnthropicVertex` 讀取 `userProfiles`／`beta.userProfiles` 改為拋出 `AnthropicError`（Vertex 不提供使用者個人資料端點），見下方「版本更新」表。
-- **v2.1.304**（2026-10-19）：mod 系統新增兩項——一個 mod 的 hook 被排序在前的外掛跳過時，transcript 具名記錄事件與外掛名稱；`tool.check` 回答新增 `decider: "person"` 選項，標示該次核准／拒絕由人決定而非 mod 自動代為決定；細節見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
+- **v2.1.304**（2026-10-19）：新增 `/auto-mode-setup`（引導式教 auto mode 認識專案環境）與 `/claude-api managed-agents-secure`（對照官方安全指南檢查 Managed Agents，唯讀）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）。
+  Code Review 新增 Quick／Standard（預設）／Deep 審查等級；mods `tool.check` 新增 `decider: "person"`，見 [[entities/claude-mods]]。
+  ⚠️ 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。修正 `claude --worktree` 在 detached HEAD 退出不問就刪 worktree 與分支。（查證 2026-10-22）
   同版 build 另新增 11 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
-- **v2.1.302**（2026-10-16）：新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 環境變數，可指定 client 端 auto mode 分類器使用的模型，不影響 server 端 auto mode 本身要選哪個模型；另新增閒置自動壓縮（idle compaction）相關功能，官方原文截斷，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）。
+- **v2.1.302**（2026-10-16）：新增 `CLAUDE_CODE_AUTO_MODE_MODEL`（指定 client 端 auto mode 分類器模型）；`/config` 新增「Idle compaction」列可關閉閒置自動壓縮（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）。
+  ⚠️ 預設值：`claude -p`／Agent SDK 在第三方供應商、關 telemetry 或全新安裝上改從 `default` 權限模式起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟。（查證 2026-10-22）
   同版 build 另新增 2 個功能候選旗標（`CLAUDE_CODE_ALLOW_OTHER_MODELS`、`CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.301**（2026-10-15）：新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`，讓無人值守重試模式（`CLAUDE_CODE_RETRY_WATCHDOG`）在額度重置時間太久遠時直接結束請求，不再乾等（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）。
   同版 build 另新增 1 個第一階候選旗標 `CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA`＋代號旗標 `DAPPER_CUPCAKE`，代號旗標 `SQUISHY_NEWT` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v1.15.0／anthropic-sdk-typescript sdk-v0.135.0 同步發布：thinking 類型新增 `between_tools`、Messages 新增 `speed` 參數與 `usage.speed`、可讀取 Console 組織用量等級，見下方「版本更新」表。
-- **v2.1.300**（2026-10-15）：新增 `virtualText`——mod 可在提示框內畫裝飾文字，不會進入草稿或送出的提示內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量的欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）。
+- **v2.1.300**（2026-10-14）：mods 新增 `virtualText`、`agent.spawn` 與 `prompt.change` hook；OpenTelemetry 加快取建立欄位與 GenAI 語意屬性；AWS 通道新增 `/advisor`（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）。
+  ⚠️ 預設值：大型請求預設 gzip、transcript 多記每次請求的 system prompt 與 tools、hook `updatedInput` 依 schema 驗證。（查證 2026-10-22）
   同版 build 另新增 4 個功能候選旗標（PDF 讀取頁數上限、隱藏回覆伺服器名稱、訊息提示快取 TTL），消失 1 個（`CLAUDE_CODE_FORCE_SANDBOX`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.299**（2026-10-14）：修復 gateway API key 外洩與排程夏令時間重複觸發兩項問題；新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`，`@` 檔案提及只傳路徑（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）。
   同版 build 另新增 13 個功能候選旗標（自 2.1.296 起累積），`CLAUDE_CODE_WEBSEARCH_CITATIONS_DECLARED` 消失，追蹤見 [[topics/claude-code-experimental]]。
@@ -618,13 +622,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.306** | 2026-10-21 | Bug fixes：修正雲端 session 未帶環境變數執行 `claude -p` 誤報「Not logged in」；修正原被「prompt too long」蓋掉的 API 錯誤；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）|
 | **anthropic-sdk-python v1.17.0** | 2026-10-20 | Features：新增組織層級 webhook 端點與使用者個人資料強制設定事件；Admin API 新增 RBAC 群組擁有者權限錯誤碼；補 `unsupported_charset` 說明（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v0.22.0** | 2026-10-20 | ⚠️ 行為變更：讀取 `AnthropicVertex` 的 `userProfiles`／`beta.userProfiles` 改拋出 `AnthropicError`（Vertex 不提供此端點）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0)）|
-| **v2.1.304** | 2026-10-19 | mod 系統新增 transcript 具名記錄 hook 被跳過事件；`tool.check` 回答新增 `decider: "person"` 選項，見 [[entities/claude-mods]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）|
+| **v2.1.304** | 2026-10-19 | 新增 `/auto-mode-setup`、`/claude-api managed-agents-secure`、Code Review 審查等級；⚠️ tool search 預設開（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.304)）|
 | **v2.1.303** | 2026-10-18 | Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.303)）|
-| **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定 auto mode 分類器用的模型；另新增閒置自動壓縮功能，細節未完整揭露（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|
+| **v2.1.302** | 2026-10-16 | 新增 `CLAUDE_CODE_AUTO_MODE_MODEL`、`/config` Idle compaction 開關；⚠️ `-p` 預設權限模式與 fork subagent 預設改變（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.302)）|
 | **anthropic-sdk-python v1.15.0** | 2026-10-15 | thinking 類型新增 `between_tools`；Messages 新增 `speed` 參數與對應 `usage.speed`；可讀取 Console 組織用量等級（usage-tier）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.15.0)）|
 | **anthropic-sdk-typescript sdk-v0.135.0** | 2026-10-15 | 同步 Python v1.15.0：thinking 新增 `between_tools`、Messages 新增 `speed`／`usage.speed`、Console 組織用量等級（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.135.0)）|
 | **v2.1.301** | 2026-10-15 | 新增 `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS`：無人值守重試模式於額度重置過久時主動結束請求（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.301)）|
-| **v2.1.300** | 2026-10-15 | 新增 `virtualText`：mod 提示框內裝飾文字，不進入草稿或送出內容；OpenTelemetry `api_request` 事件新增拆分 5 分鐘／1 小時快取用量欄位（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）|
+| **v2.1.300** | 2026-10-14 | mods 新 hook、`virtualText`；OTel 新屬性；`/advisor`；⚠️ gzip、hook `updatedInput` 驗證（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.300)）|
 | **anthropic-sdk-typescript vertex-sdk-v0.21.0** | 2026-10-14 | 新增 `execution_identity`；client 原生支援 OpenTelemetry tracing（已註冊 tracer provider 時自動匯出 span）（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0)）|
 | **anthropic-sdk-python v1.14.0** | 2026-10-14 | 同步新增 `execution_identity`；另新增花費上限錯誤類型 `organization_type_not_supported`、telemetry destination 測試端點（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
 | **v2.1.299** | 2026-10-14 | 新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`：`@` 檔案提及只傳路徑不灌入內容；同版修復 gateway API key 外洩與排程夏令時間重複觸發（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.299)）|

@@ -7953,3 +7953,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：本日無開發實務分類派工包（分類階段無條目判為官方使用指南類），候選 0 筆，手冊正文未更動；基準線 8e8e8314d0 → c3ef1ac96e
 - market 判讀：新增 2 則（第1類·一手財務揭露：S-1 淨損 807 億美元；第4類·具名客戶採用：HHS 唯一來源合約），均判「本體不可買、無間接曝險標的」；其餘條目逐一套用六類判準後不構成新判讀
 - 日報更正（ingest 階段發現，push 前已修）：安全政策記者比對後指出，日報 📌 原列的「Anthropic 強化蒸餾攻擊防禦」部落格文章與 topics/anthropic-government-policy 既有 2026-10-13 條目（標題、90–99% 數字完全一致，僅 URL 路徑 `/research/` vs `/news/` 不同）為同一篇，非當日新進展，故未寫入 wiki。主編回頭核對 `news/2026-10-21.md`，發現 Step 1b 聚焦跨日查核的 5 天視窗未能涵蓋 10-13（距今 8 天），屬規則設計邊界非執行疏漏；已於 push 前將該則移出 📌。同批「Claude 設計抗蠍毒蛋白質」條目經 `check_focus.py` 複檢，與 10-20 聚焦相似度 0.32、判定為同一故事延續，但當日 [持續追蹤] 名額已給 S-1 淨損（續 10-17），依「同一天至多一條」規則改列 ⭐ 重點話題並在說明句註明承接 10-20
+## 2026-10-22 Query（使用者：官方功能好幾週沒更新、v2.1.300／302／304 補進 radar）
+
+- 問題：使用者問 feature-radar 為何停在 10-15、「值得跟的三件」為何沒替補。查 10-17～10-21 五次 ingest 回報皆「feature-radar：本日無新功能」，但 v2.1.300（10-14）、v2.1.302（10-16）、v2.1.304（10-19）各有新旗標／新指令／預設值改變，依 features/daily.md「版本更新收錄判斷」應收，屬記者漏判；頁首「這禮拜動了什麼」callout 停在 10-09，規則檔無人認領該區塊。
+- 查證（GitHub Release 原文 v2.1.300／302／304，主編 WebFetch，2026-10-22）：`/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/config` Idle compaction、`/claude-api managed-agents-secure`、Code Review 審查等級 Quick／Standard／Deep、mods `tool.check` `decider: "person"`、`/advisor`（AWS）、OTel cache_creation 欄位；預設值改變：`-p`／SDK 第三方供應商改 `default` 權限模式、fork subagent 預設開、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開、gzip 請求、hook `updatedInput` 依 schema 驗證。
+- 處置：(a) 功能記者（sonnet）補 feature-radar 5 條詳細條目＋全覽表 5 列，預設值表新增 3 列、擠出 2.1.234／239／243，表頭核對到 v2.1.304；頁首與 callout 更新 2026-10-22；三件重算：AGENTS.md 出 30 天閘，Claude Mods 補位（最後輪替 2026-10-22）。(b) `entities/claude-code` 版本表 v2.1.300／302／304 列改到與原文一致。(c) 歸因 slug `user-query`，三筆 release URL 入 `data/source_attribution.jsonl`。
+- 規則缺口（轉 /wiki-lint）：① 「這禮拜動了什麼」callout 無更新規則與負責人；② 記者連續五日把「版本表新增列」當成「無新功能」，建議在 features/daily.md 版本收錄表加一句「版本列有新旗標／指令即須同輪回報 radar 條目」。
+- 歸因 user-query／功能
