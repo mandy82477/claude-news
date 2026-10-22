@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **兩個子頁新增做法，另兩則新工具暫未歸類**（2026-10-22）
 > - **模型使用策略**：cheaper-inference/OmniRoute，單一端點整合 375 家供應商的免費 AI gateway，見 [[topics/community-cost#2026-10]]。
 > - **Plugin / MCP 整合**：alchaincyf/huashu-chrome，MCP＋Chrome 擴充套件讓 agent 帶使用者登入態操控瀏覽器，見 [[topics/community-integrations#2026-10]]。
-> - **未歸類**：Omnara（開源版 Claude Managed Agents 替代方案）、claude-share（Claude Code 多人協作 session），見下方「技術彙整」。
+> - **未歸類**：Omnara（開源版 Claude Managed Agents 替代方案）、claude-share（Claude Code 多人協作 session），見 [[topics/community-tech-patterns#技術彙整]]。
 
 ---
 
