@@ -15,7 +15,7 @@ wiki 記者 subagent 與 ingest／lint 主編**明文 Read** 的規則檔。**�
 | market（投資分析，不在分類路由內） | ✅ | ✅（主編層：回顧結算＋教材頁） | ✅ 1 節 | 1 |
 | people（👤 人物） | ✅ | — | —（無結論表） | 4 |
 | safety-policy（🏛️ 政策/安全） | ✅ | — | ✅ 2 節 | 3 |
-| devpractice（開發實務，只收官方使用指南一種條目） | ✅ | ✅ | ✅ 1 節 | 1（coding-workflow-guide，領域欄為工具/功能的例外） |
+| devpractice（開發實務，只收官方使用指南一種條目） | ✅ | ✅ | ✅ 1 節 | 1（coding-workflow-guide，領域欄 💻 開發實務，負責人靠 `OWNER_OVERRIDES` 指認） |
 
 「負責頁數」是 `daily.md`「負責頁面」表的明列頁數；每位記者實際認領的是 `wiki/index.md` 中領域等於自己那一組的所有頁面（含子頁與日後新增）。
 

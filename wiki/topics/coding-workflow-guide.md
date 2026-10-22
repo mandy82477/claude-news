@@ -26,77 +26,68 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 程式開發實戰手冊
 
+用 Claude Code 寫程式時，從接手 repo 到交件，每一段官方怎麼做、社群補了什麼。
+
 **狀態：** ongoing
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-22
+**最後新聞更新：** 2026-10-22
 
-> **本頁在回答什麼**（重寫 2026-08-08）
-> 把一條完整的開發流程攤開，逐段回答：**官方給了什麼、社群補了什麼、還缺什麼**。
-> 敘述順序**官方在前**——官方文件有 185 頁、可查證、會更新；社群做法只在官方留白處補位，並標明訊號強度。
+> **本頁在回答什麼**
+> 用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查。
+> 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
-> **最新動態**（2026-10-15）
-> 官方文件補充：Pro／Max 方案五小時 session 額度用盡時，若 Claude Code 正在產生回應，該次回應仍會做完，不會被硬性截斷。
-
----
-
-## 本週 coding 亮點
-
-- **跨模型比較先釘 `--effort`**：Opus 5.5／Haiku 5.5 預設降為 `medium`，見 [第 6 段](#6-測試與上線--怎麼讓它自己驗完再交給你)
-- **沙箱自動放行與「強制」CLAUDE.md 規則都有未修復 issue**：強制性請落在 hook，見 [第 4 段](#4-實際動手寫--錯誤何時被攔)
-- **`CLAUDE_CODE_DISABLE_FILE_MENTIONS`**：`@` 只傳路徑省 context，見 [第 2a 段](#2a-怎麼讀得省)
-
-> 檢查日 2026-10-17；其餘候選（用量與定價、工具星數類、單一作者做法）屬他頁，不入本段。
+> **compact 之後 skill 不再被遺忘**（2026-10-22）
+> 官方 context-window 頁：v2.1.304 起，compact 後 skill 描述清單會重建並重新注入；更早的版本長 session 後較難自動觸發 skill，見第 1 段。
 
 ---
 
 ## 我想問的是⋯⋯
 
-| 我卡在這裡                         | 去哪一段                                   |
-| ----------------------------- | -------------------------------------- |
-| 我要從零建一個新程式庫，該裝哪些 skill        | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)＋流程總表「一次性設定」；社群側見 [[topics/community-tech-tools]]「🧩 Skills 速查」 |
-| 接手一個沒碰過的大 repo，第一步做什麼         | [第 2a 段](#2a-怎麼讀得省)                |
-| `/init` 幫我做了什麼、沒做什麼           | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)     |
-| 第一份 CLAUDE.md 要放哪些東西          | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)     |
-| coding convention 要不要寫進去      | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)     |
-| 怎麼讓探索讀得省，官方有沒有優化              | [第 2a 段](#2a-怎麼讀得省)                |
-| Explore subagent 在做什麼、為什麼那樣設計 | [第 2a 段](#2a-怎麼讀得省)                |
-| 委派給 Explore 時該給它什麼資訊          | [第 2a 段](#2a-怎麼讀得省)                |
-| 探索會出什麼錯、怎麼知道它探錯了              | [第 2b 段](#2b-怎麼探得對)              |
-| 動手前要不要先寫規格、該拆多細               | [第 3 段](#3-規劃改動-先寫規格還是直接開工已深查)            |
-| 怎麼讓它照專案規矩寫，它老是不聽              | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)     |
-| 怎麼 code review，太貴怎麼辦          | [第 5 段](#5-code-review-該用哪個入口怎麼審得起已深查)        |
-| 改動之後怎麼讓 CLAUDE.md 跟上          | [第 7 段](#7-改動之後怎麼讓既有規則跟上已補庫內證據) |
-| 規則怎麼不腐爛                       | [第 8 段](#8-規則怎麼不腐爛已補庫內證據)          |
-| 怎麼讓它照專案規矩寫、錯誤何時才被攔 | [第 4 段](#4-實際動手寫-錯誤何時被攔已補庫內證據) |
-| 測試策略要不要跟著變、上線前檢查什麼 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你已補庫內證據) |
-| 它說做完了，我怎麼知道是真的 | [第 9 段](#9-除錯-怎麼知道它真的做了已補庫內證據) |
-| 我想讓它自己跑幾小時／過夜，該用哪個 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你已補庫內證據)；各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」 |
+| 我卡在這裡 | 去哪一段 |
+|---|---|
+| 從零建一個新程式庫，先做哪些設定 | [第 1 段](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)＋下方「串起來的樣子」的一次性設定；社群 skill 見 [[topics/community-tech-tools]]「🧩 Skills 速查」 |
+| 接手一個沒碰過的大 repo，第一步做什麼 | [第 2a 段](#接手一個沒碰過的大-repo第一步做什麼) |
+| `/init` 幫我做了什麼、沒做什麼 | [第 1 段](#init-做了什麼沒做什麼) |
+| 第一份 CLAUDE.md 要放哪些東西、寫多長 | [第 1 段](#官方的-includeexclude-清單) |
+| coding convention 要不要寫進去 | [第 1 段](#官方的-includeexclude-清單) |
+| 怎麼讓探索讀得省，官方有沒有優化 | [第 2a 段](#2a-怎麼讀得省) |
+| Explore subagent 在做什麼、委派時該給它什麼 | [第 2a 段](#2a-怎麼讀得省) |
+| 探索會出什麼錯、怎麼知道它探錯了 | [第 2b 段](#2b-怎麼探得對) |
+| 動手前要不要先寫規格、該拆多細 | [第 3 段](#3-規劃改動-先寫規格還是直接開工) |
+| 它老是不照專案規矩寫，怎麼變硬 | [第 1 段「東西該放哪一層」](#東西該放哪一層)＋[第 4 段](#4-實際動手寫-錯誤何時被攔) |
+| code review 用哪個入口、一次多少錢 | [第 5 段](#5-code-review-該用哪個入口怎麼審得起) |
+| 測試策略要不要跟著變、上線前檢查什麼 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你) |
+| 它說做完了，我怎麼知道是真的 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)（驗證階梯）＋[第 9 段](#9-除錯-怎麼知道它真的做了)（要它出示證據） |
+| 長 session 之後，規則或 skill 好像失效了 | [第 1 段](#paths-省了-context代價是什麼)＋[第 9 段](#9-除錯-怎麼知道它真的做了) 第一步 |
+| 改動之後怎麼讓 CLAUDE.md 跟上 | [第 7 段](#7-改動之後怎麼讓既有規則跟上) |
+| 規則怎麼不腐爛 | [第 8 段](#8-規則怎麼不腐爛) |
+| 我想讓它自己跑幾小時／過夜，該用哪個 | [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)；各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」 |
 
-「怎麼讓它照專案規矩寫」橫跨第 1 段的**強制力**小節與第 4 段——關鍵是 `CLAUDE.md` 與 skill 都只是建議層，要硬的得用 hook 或 permissions。若想看全流程而不是單一問題，看下面這張表。
+「它老是不照專案規矩寫」的關鍵：`CLAUDE.md` 與 skill 都只是建議層，要硬的得用 hook 或 permissions。想看全流程而不是單一問題，看下面這張表。
 
 ---
 ## 這條流程長什麼樣
 
-| 階段                                                   | 官方                      | 能照著做嗎 | 缺什麼                    |
-| ---------------------------------------------------- | ----------------------- | ----- | ---------------------- |
-| [1 寫第一份 CLAUDE.md](#1-一個沒被-claude-code-碰過的-repo要放哪些-md)       | ✅ include／exclude 清單    | 🟢    | 官方兩頁措辭衝突，總量無判準         |
-| [2a 探索：讀得省](#2a-怎麼讀得省)                           | ✅ 專屬文件頁＋Explore agent   | 🟢    | —                      |
-| [2b 探索：探得對](#2b-怎麼探得對)                         | ❌ 無驗證機制                 | 🔴    | 探索產出無法驗證               |
-| [3 規劃改動](#3-規劃改動-先寫規格還是直接開工已深查)                        | ✅ Explore→Plan→Code     | 🟡    | 「要不要規劃」有判準，「切幾塊」沒有     |
-| [4 實際動手寫](#4-實際動手寫-錯誤何時被攔已補庫內證據)                          | ✅ LSP、security-guidance | 🟡    | 新規則該留 CLAUDE.md 還是升級成 hook，無事前判準 |
-| [5 Code review](#5-code-review-該用哪個入口怎麼審得起已深查)             | ✅ 六個入口，含明價              | 🟢    | 分層審查省多少，無人量測           |
-| [6 測試與上線](#6-測試與上線-怎麼讓它自己驗完再交給你已補庫內證據)                            | ✅ 驗證階梯四級                | 🟢    | 用了 Claude Code 之後測試涵蓋率／型態該不該變，社群無解 |
-| [7 讓 CLAUDE.md 跟上改動](#7-改動之後怎麼讓既有規則跟上已補庫內證據) | ⚠️ 有掛點無判準               | 🟡    | 什麼改動算讓規則過期，官方與社群皆無判準 |
-| [8 長期維護](#8-規則怎麼不腐爛已補庫內證據)                      | ⚠️ 只診斷設定                | 🟡    | 規則是否仍與現狀相符，無機制         |
-| [9 除錯](#9-除錯-怎麼知道它真的做了已補庫內證據)                             | ✅ 驗證階梯＋失敗模式命名           | 🟢    | 評估者不跑工具，看不到 Claude 沒說的 |
+| 階段 | 官方 | 能照著做嗎 | 缺什麼 |
+| --- | --- | --- | --- |
+| [1 寫第一份 CLAUDE.md](#1-一個沒被-claude-code-碰過的-repo要放哪些-md) | ✅ include／exclude 清單 | 🟢 | 官方三頁說法不一，總量無判準 |
+| [2a 探索：讀得省](#2a-怎麼讀得省) | ✅ 專屬文件頁＋Explore agent | 🟢 | — |
+| [2b 探索：探得對](#2b-怎麼探得對) | ❌ 無驗證機制 | 🔴 | 探索產出無法驗證 |
+| [3 規劃改動](#3-規劃改動-先寫規格還是直接開工) | ✅ Explore→Plan→Code | 🟡 | 「要不要規劃」有判準，「切幾塊」沒有 |
+| [4 實際動手寫](#4-實際動手寫-錯誤何時被攔) | ✅ LSP、security-guidance | 🟡 | 新規則該留 CLAUDE.md 還是升級成 hook，無事前判準 |
+| [5 Code review](#5-code-review-該用哪個入口怎麼審得起) | ✅ 四個入口，方案與計費各寫明 | 🟢 | 分層審查省多少，無人量測 |
+| [6 測試與上線](#6-測試與上線-怎麼讓它自己驗完再交給你) | ✅ 驗證階梯四級 | 🟢 | 用了 Claude Code 之後測試涵蓋率／型態該不該變，社群無解 |
+| [7 讓 CLAUDE.md 跟上改動](#7-改動之後怎麼讓既有規則跟上) | ⚠️ 有掛點無判準 | 🟡 | 什麼改動算讓規則過期，官方與社群皆無判準 |
+| [8 長期維護](#8-規則怎麼不腐爛) | ⚠️ 只診斷設定 | 🟡 | 規則是否仍與現狀相符，無機制 |
+| [9 除錯](#9-除錯-怎麼知道它真的做了) | ✅ 驗證階梯＋失敗模式命名 | 🟢 | 評估者不跑工具，看不到 Claude 沒說的 |
 
-**兩欄怎麼讀。** 官方欄：✅ 有明文機制／⚠️ 有但不完整／❌ 無。「能照著做嗎」是官方加社群之後、讀者實際拿不拿得到可執行答案：🟢 拿得到／🟡 部分拿得到／🔴 拿不到。評的是同一件事，九段用同一把尺——所以第 5 段官方雖厚仍有「缺什麼」，第 6 段社群雖空但官方夠用仍是 🟢。
+**兩欄怎麼讀。** 官方欄：✅ 有明文機制／⚠️ 有但不完整／❌ 無。「能照著做嗎」是官方加社群之後、讀者實際拿不拿得到可執行答案：🟢 拿得到／🟡 部分拿得到／🔴 拿不到。評的是同一件事，九段用同一把尺——所以第 5 段官方雖厚仍有「缺什麼」，第 6 段社群證據都是單一來源，但官方夠用仍是 🟢。
 
-⚠️ **證據深度不平均，讀「缺什麼」欄前先看這段。** 第 2、3、5 段做過專題查證（社群、學術、GitHub、HN 多輪交叉，含反證與量測數字），標 `[已深查]`；九段的社群面皆已補齊，無剩餘 `[社群面待補]`。第 9 段（2026-09-02）、第 4 段（2026-09-03）、第 6 段（2026-09-12）、第 8 段（2026-09-26）與第 7 段（2026-10-03）的社群面標 `[已補：庫內證據]`，來自既有 `community-tech-patterns`／`community-tech-tools` 條目的萃取，非新一輪查證——第 7、8 段查到的機制（CodeAlmanac `garden`、Patina retro loop、語意層漂移 CI 測試）皆只是沾邊，核心缺口仍未解，見第 8 段「還沒解掉的那一塊」。第 1 段官方面查得完整，社群面只有 14 個 repo 的一手觀察。
-本欄的限制：本庫日報收錄自 2026-04-25 起，來源以 HN／Reddit／dev.to／GitHub 與官方管道為主；更早的官方發布（如 2026-03-09 的 Code Review 功能）結構性收不到，本頁官方部分改以直接查證官方文件補足，查證日記於各段。
+**證據深度不平均。** 第 2、3、5 段做過多來源交叉查證（社群、學術、GitHub、HN，含反證與量測數字）；第 4、6、7、8、9 段的社群做法整理自本站社群頁，多為單一來源，各段末標了證據強度——第 7、8 段找到的做法都只沾到邊，核心缺口仍未解。第 1 段社群面只有 14 個熱門 repo 的一手觀察。
+本站來源自 2026-04-25 起，以 HN／Reddit／dev.to／GitHub 與官方管道為主；更早的官方發布（如 2026-03-09 的 Code Review）以直接查官方文件補足，查證日記於各段。
 
 **串起來的樣子：**
 
@@ -128,7 +119,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **規則想集中管就用 `.claude/rules/*.md`。** 與「每個目錄一份 CLAUDE.md」是兩種做法，官方明確對照過：rules 放在 repo 根的 `.claude/` 裡、可加 `paths:` glob 限定生效範圍，適合「所有慣例集中一處」或「同一條規則散落多處路徑」；per-directory CLAUDE.md 則適合「各目錄的維護者自己管、規則跟著程式碼一起版控」。
 
-**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。**v2.1.277（2026-09-18）起，repo 內若沒有 `CLAUDE.md`，Claude Code 會原生改讀 `AGENTS.md`**（可在 `/config`「Project instructions」調整；尚未支援 Bedrock、Vertex、Foundry），不必再手動 import；兩者都要保留時，仍可在 `CLAUDE.md` 裡用 `@AGENTS.md` 把共用內容帶進來，底下補 Claude 專屬指示。
+**別家 agent 也在用同一個 repo 的話，內容放 `AGENTS.md`。** 這是實務上的主流做法——14 個熱門專案裡 **9 個的 `CLAUDE.md` 只是個指標**（symlink 或 `@AGENTS.md`），真正內容在 `AGENTS.md`。**v2.1.277（2026-09-18）起，repo 內若沒有 `CLAUDE.md`，Claude Code 會原生改讀 `AGENTS.md`**（可在 `/config`「Project instructions」調整），不必再手動 import；兩者都要保留時，仍可在 `CLAUDE.md` 裡用 `@AGENTS.md` 把共用內容帶進來，底下補 Claude 專屬指示。
 
 **只給自己看的東西放 `CLAUDE.local.md`**（沙箱網址、偏好的測試資料），記得加進 `.gitignore`。跨 worktree 的個人設定則改成從家目錄 import。
 
@@ -144,8 +135,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **不該放**：逐檔案的 codebase 描述；讀 code 就能知道的事；標準語言慣例；詳細 API 文件（改放連結）；經常變動的資訊；冗長的解釋或教學；「寫乾淨的程式碼」這種不證自明的話。
 
-⚠️ **官方兩頁在這裡措辭衝突。** `best-practices` 把「file-by-file descriptions」列為排除，但 `features-overview` 兩處明寫「Put it in CLAUDE.md… project structure」「Use CLAUDE.md for… project architecture」。
-可調和的讀法（本頁歸納，官方未明說）：**架構決策與專案結構該放，逐檔案描述不該放。** 分界在抽象層級，不在主題。
+⚠️ **官方三頁在這裡說法不一。** `best-practices` 把「file-by-file descriptions」列為不該放；`features-overview` 兩處明寫「Put it in CLAUDE.md… project structure」「Use CLAUDE.md for… project architecture」；`memory` 頁則說 `/doctor` 的瘦身建議會砍掉 Claude 讀 code 就推得出的內容（目錄結構、依賴清單、架構概述），留下陷阱、理由，以及和工具預設不同的慣例。
+可調和的讀法（本頁歸納，官方未明說）：**分界在「讀 code 推不推得出」**——架構決策背後的理由與取捨該放；目錄樹、逐檔描述、讀 code 就看得出的架構概述不該放。
 
 `large-codebases` 給了 root CLAUDE.md 的範例，形狀值得照抄——**是方位說明，不是目錄樹**：
 
@@ -170,7 +161,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 ### 該寫多長
 
-- `features-overview` 與 `claude-directory` 給硬數字：**目標 200 行以內**，「Longer files still load in full but may reduce adherence」，接近 200 行時開始拆進 rules。
+- `features-overview` 與 `memory` 給硬數字：**每份 CLAUDE.md 目標 200 行以內**，「Longer files consume more context and reduce adherence」，接近 200 行時開始拆進 rules。
 - `best-practices` 刻意不給數字，改給逐行提問法：**「Would removing this cause Claude to make mistakes?」** 答否就刪。並警告：「Bloated CLAUDE.md files cause Claude to ignore your actual instructions!」
 
 ### 什麼時候該往裡面加
@@ -211,11 +202,11 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 ### `paths:` 省了 context，代價是什麼
 
-`features-overview` 推薦用 `paths:` 省 context；但 `context-window` 的存活表寫著它 **compact 後會消失**（Lost until a matching file is read again），並明說：若某條規則必須跨 compaction 存活，就把 `paths:` 拿掉。
+`features-overview` 推薦用 `paths:` 省 context；`context-window` 的存活表則寫：帶 `paths:` 的規則 compact 後不在 context 裡，**要等 Claude 再讀到匹配的檔案才重新載入**，並明說若某條規則必須跨 compaction 存活，就把 `paths:` 拿掉。
 
-**兩頁都對，但沒有一頁把代價講完：省 context 的代價是長 session 之後那條規則就不在了。**
+**代價一句話：長 session compact 之後、還沒碰到匹配檔案之前，那條規則不在。** 必須時時生效的規則別加 `paths:`。
 
-同一張表還有一條實務衝擊很大的：**skill 的「描述清單」在 compact 後不重載**（官方頁內表格漏列，只有互動元件寫）。後果是長 session compact 過後，模型自動觸發 skill 的能力會下降，因為它看不到沒用過的 skill 了。
+skill 的描述清單不一樣：**v2.1.304 起 compact 後會重建並重新注入**（官方 context-window 頁，2026-10-22 查證）；更早的版本 compact 後不重載，長 session 自動觸發 skill 的能力會下降——還在舊版就先升級。
 
 ### `/init` 做了什麼、沒做什麼
 
@@ -229,7 +220,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 ---
 
-## 2. 探索 codebase — 怎麼讀得省，怎麼探得對　`[已深查]`
+## 2. 探索 codebase — 怎麼讀得省，怎麼探得對
 
 這一段要拆成兩半，因為兩半的成熟度天差地遠：**「怎麼讀得省」官方已經很成熟；「怎麼探得對」是整個生態的驗證真空區。**
 
@@ -254,7 +245,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 團隊規模再往上，官方建議把慣例從「每個目錄一份 CLAUDE.md」搬進 plugin ＋ 內部 marketplace，並用 `SessionStart` hook 在啟動時告訴使用者這個區塊該裝哪個 plugin。若組織已有 code search 或 RAG index，官方建議用 MCP 暴露給 Claude 查詢，取代直接讀檔。
 
 
-**內建 Explore subagent** —— 官方定位是「A fast, read-only agent optimized for searching and analyzing codebases」。唯讀，Write 與 Edit 被拒；跳過 CLAUDE.md 與 parent session 的 git status 以保持快速便宜（全 Claude Code 只有 Explore 和 Plan 這樣做，沒有任何設定可改）；模型繼承主對話、在 Claude API 上以 Opus 為上限（v2.1.198 起，此前固定跑 Haiku）；三段 thoroughness：`quick`／`medium`／`very thorough`；one-shot，不能 resume——要來回追問得改用 `general-purpose`。
+**內建 Explore subagent** —— 官方定位是「A fast, read-only agent optimized for searching and analyzing codebases」。唯讀，Write 與 Edit 被拒；跳過 CLAUDE.md 與 parent session 的 git status 以保持快速便宜（全 Claude Code 只有 Explore 和 Plan 這樣做，沒有任何設定可改）；模型跟主對話相同，主對話跑 Fable 時改跑 Opus（v2.1.198 起；此前固定跑 Haiku）；三段 thoroughness：`quick`／`medium`／`very thorough`；one-shot，不能 resume——要來回追問得改用 `general-purpose`。
 
 #### 它為什麼被設計成這樣（推論）
 
@@ -262,7 +253,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 探索的成本結構很特殊：價值在結論，垃圾在過程，而垃圾會反覆收費。你為了找 3 個相關檔案讀了 50 個，那 47 個沒用的內容一旦進主對話，就會在之後每一次請求都被重送一遍。所以整個設計就是一句話：**把讀檔丟到一個會被扔掉的地方。**
 
-每個限制都在保護這件事。獨立 context window 讓那 47 個沒用的讀取隨 subagent 一起消失，只有摘要回來。唯讀讓你不必稽核它做了什麼，可以放心開寬、開平行，也杜絕「搜著搜著就順手改了」。跳過 CLAUDE.md 是因為 subagent 會發很多次工具呼叫，等於同一份規則被重複付費——而官方的補償設計是主對話讀結果時帶著完整 CLAUDE.md context，也就是**規則作用在「做決定」的地方，不是「找東西」的地方**。模型繼承但設上限的意思是它只會比你便宜、不會比你貴。one-shot 則是因為一旦你需要來回追問，「把讀檔扔掉」這個前提就不成立了。
+每個限制都在保護這件事。獨立 context window 讓那 47 個沒用的讀取隨 subagent 一起消失，只有摘要回來。唯讀讓你不必稽核它做了什麼，可以放心開寬、開平行，也杜絕「搜著搜著就順手改了」。跳過 CLAUDE.md 是因為 subagent 會發很多次工具呼叫，等於同一份規則被重複付費——而官方的補償設計是主對話讀結果時帶著完整 CLAUDE.md context，也就是**規則作用在「做決定」的地方，不是「找東西」的地方**。模型跟著主對話、遇到 Fable 改跑 Opus，意思是它不會比你貴。one-shot 則是因為一旦你需要來回追問，「把讀檔扔掉」這個前提就不成立了。
 
 它接受的代價是：你失去了「讓它搜尋時遵守專案規則」的能力——這就是下一段要處理的。
 
@@ -278,15 +269,15 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 #### 官方的 session 經營建議
 
-Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 7 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
+Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 8 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
 
-官方說明中心〈[How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)〉（2026-09-17 文件更新）新增說明：**用量（usage）與長度（length）是兩種不同運作方式的限制**——用量是額度／配額消耗，長度是單一對話或請求的 token 上限，兩者互不替代。官方同時建議**暫時關閉不需要的工具或連接器**（web search、Research、MCP 連接器）以節省用量，屬於任務層級的節流做法，與上方「跨目錄存取」「Explore subagent」等 context 層級做法互補。另一份官方文件〈[Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)〉（2026-10-15 文件更新）補充：**五小時 session 額度用盡的當下若 Claude Code 正在產生回應，該次回應仍會做完**，不會被硬性截斷。
+**額度與用量限制**：用量（額度消耗）與長度（單一對話的 token 上限）是兩種限制，暫時關掉不用的工具或連接器可省用量；額度怎麼算、用盡時會怎樣見 [[entities/pricing]]。
 
-**`@` 提及不灌全文：** v2.1.299（2026-10-14）新增 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`，開啟後 `@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
+**`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
 
 **腳本／SDK 呼叫場景的省法：** 官方 headless 文件（2026-09-23 查）記載 `--bare` 旗標——「Add `--bare` to reduce startup time by skipping auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md」；官方稱這是 script 與 SDK 呼叫的建議模式，未來會成為 `-p` 的預設值。這與上方「分層 CLAUDE.md」「`claudeMdExcludes`」等互動式 session 的省法不同層級——後者省的是載入內容的量，`--bare` 省的是連自動發現這個動作本身都跳過，只適合不需要專案客製化行為的一次性腳本呼叫。
 
-以下三條**已被官方機制取代或證據不足，本頁不再推薦**：「hook 層設讀取上限」（Claude Code 本來就有硬編碼上限，CLI 25,000／Desktop 10,000 tokens，社群在 issue 求的是放寬不是收緊）；「已否決方案索引」（對應官方 issue 已關閉、0 reactions）；「本地小模型分流省 50–60% context」（生態只驗證成本不驗證 context）。
+以下三種做法常被提起，**不建議**：「hook 層設讀取上限」（Claude Code 本來就有硬編碼上限，CLI 25,000／Desktop 10,000 tokens，社群在 issue 求的是放寬不是收緊）；「已否決方案索引」（對應官方 issue 已關閉、0 reactions）；「本地小模型分流省 50–60% context」（生態只驗證成本不驗證 context）。
 
 ### 2b. 怎麼探得對
 
@@ -346,7 +337,7 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 ---
 
-## 3. 規劃改動 — 先寫規格，還是直接開工　`[已深查]`
+## 3. 規劃改動 — 先寫規格，還是直接開工
 
 ### 官方的四階段與「要不要規劃」判準
 
@@ -374,7 +365,7 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 ### 社群的 spec-driven 走到哪了
 
-Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05-08「coding is solved」爭議多平台延燒（🔥🔥🔥🔥🔥）。但**方法層有反證，而且比正方紮實**：
+Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05-08「coding is solved」爭議多平台延燒。但**方法層有反證，而且比正方紮實**：
 
 - **Scott Logic**（具名機構，一手實測有對照組，2025-11-26）：用 Spec Kit 重建功能——33.5 分鐘、產出 2,577 行 markdown 對應約 700 行程式碼、review 花 3.5 小時；對照組迭代提示 8 分鐘、1,000 行、review 15+9 分。約 10 倍慢，且仍有明顯 bug。結論：「回到瀑布」。
 - **三工具同任務實測**（2026-04-13）：Spec-Kit 總分 2.77/5 最低，較輕量的 OpenSpec 4.00 最高。
@@ -389,7 +380,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ---
 
-## 4. 實際動手寫 — 錯誤何時被攔　`[已補：庫內證據]`
+## 4. 實際動手寫 — 錯誤何時被攔
 
 **這一步沒有 skill**，那是 Claude Code 本體在做的事。要調的是環境：
 
@@ -397,9 +388,9 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI。自配 hook 本身也會失靈：v2.1.295 起 command／HTTP hook 可設 `onFailure: "block"`，hook 無法啟動、逾時或退出碼異常時直接擋下該動作，不再默默放行；媒體轉述的「官方文件寫不要只依賴 hook 做安全防護」經 2026-10-11 查證不見於官方 hooks 文件，官方原意是 `if` 過濾器為盡力比對、硬性允許／拒絕請用權限系統——hook 是保險絲不是門鎖；權限自動放行也不是絕對的——開沙箱並設 `autoAllowBashIfSandboxed: true` 後，含 shell expansion 的指令仍會跳權限提示（issue #43713，2026-10-11，官方未回應），無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略也是長期未解的已知問題（issue #2544，溯至 2025-06），強制性請落在 hook 而非措辭，見 [[entities/claude-code]]；用 `prompt`／`agent` hook 寫「封鎖 X」的人升到 v2.1.294 以上後應重新驗證。彙整見 [[entities/claude-code]]「hooks：事件、失效模式與能不能當防線」。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code#hooks：事件、失效模式與能不能當防線]]。
 
-**社群面（2026-09-03 補，庫內證據）：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
+**社群做法：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 
 - **CLAUDE.md 規則遷移到 hooks 強制執行**（06-23 首次收錄，08-25 dev.to 第一手實測追加）：判準是「LLM 偶爾遵守」的留在 CLAUDE.md、「必須 100% 執行」的遷到 hooks（PreToolUse 攔部署指令、PostToolUse 強制跑 formatter）；08-25 案例作者報告規則遵循率從機率性變成 100%，副作用是遵循率提升後改用較便宜的 Haiku 當 builder 也不再顯得冒險。與 [[topics/community-tech-tools]] 決策表「CLAUDE.md 寫了它不聽」列同一結論（該列標「答案是機制不是工具」）。
 - **語意化規則注入取代整份塞給模型**（Writ，05-12）：每次工具呼叫前只注入與當前任務語意相關的規則子集，解的是「規則太多、全量載入既耗 token 又稀釋精準度」——是強制層之外的另一個失效點。
@@ -414,30 +405,26 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ---
 
-## 5. Code review — 該用哪個入口，怎麼審得起　`[已深查]`
+## 5. Code review — 該用哪個入口，怎麼審得起
 
-**官方有六個入口，而且成本是明碼標價的。**
+**官方有四個 review 入口，誰能用、怎麼付錢各不相同；另有兩個邊寫邊掃的安全外掛。**
 
-先更正一個常見誤解：**`/code-review` 是 Claude Code 內建指令，不是外掛**（`/review` 是它的別名）。它在 v2.1.147 前叫 `/simplify`；v2.1.154 起 `/simplify` 變成只做 cleanup 不找 bug 的另一個指令。
+`/code-review` 是 Claude Code 內建指令，不是外掛；`/review` 是它的別名（v2.1.223 前 `/review` 是另一個指令）。
 
-| 入口 | 跑在哪 | 觸發 | 誰付錢 |
-|---|---|---|---|
-| `/code-review` | 本機背景 subagent | 手動 | 算一般用量 |
-| `/code-review ultra`（ultrareview） | 雲端 sandbox | **只有人打才跑** | Pro/Max 各 3 次免費，之後 **$5–25** |
-| **Code Review**（GitHub App） | Anthropic 基礎設施 | PR 開啟／每次 push／`@claude review` | 按 token 走 usage credits，無固定單價；估法與封頂見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]] |
-| `/security-review` | 本機 | 手動 | 一般用量 |
-| security-guidance 外掛 | 本機 | 自動三層 | 一般用量 |
-| Claude Security 外掛 | — | 深度掃描 | — |
+| 入口 | 什麼時候跑 | 誰能用、怎麼付錢 |
+|---|---|---|
+| `/code-review` | 本機背景 subagent，手動 | 任何方案；算一般用量 |
+| `/code-review ultra`（ultrareview） | 雲端 sandbox，只有人打才跑 | Pro／Max 各 3 次免費（一次性、不重置），之後每次約 $5–25 usage credits，看變更大小 |
+| **Code Review**（GitHub App） | PR 開啟／每次 push／留言 `@claude review` | 限 Team／Enterprise；按 token 從組織 usage credits 扣，沒有單價 |
+| `/security-review` | 本機，手動；只審安全問題 | 一般用量 |
 
-**成本面完全不是空白**，官方文件逐一列價：Code Review 的計費方式、估法與月上限住 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]，本頁不重抄；ultrareview $5–25（Pro/Max 各 3 次免費，一次性不 refresh）；整體基準 $13/開發者／活躍日、$150–250/月。
+**一次多少錢，一句話**：本機兩個入口算你平常的用量；ultrareview 用完 3 次免費後每次約 $5–25；GitHub 上的 Code Review 沒有單價——先設月上限，挑幾個 repo 用 Once 或 Manual 試跑，看後台平均單次成本再乘每月 PR 數（新 repo 預設每次 push 都審，最貴）。對照用的整體參考值：Claude Code 每位開發者每個活躍日約 $13、每月 $150–250（官方 costs 頁的企業部署平均，2026-10-22 查）。估法四步與封頂細節見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 
-**官方給了至少七個成本收斂旋鈕**：觸發模式選 Manual／Once（「Reviewing on every push runs the most reviews and costs the most」）；`REVIEW.md` 設 skip rules 與 re-review 收斂（官方講理由時原話是「stops a one-line fix from reaching round seven on style alone」）；降 effort（`low`／`medium` 只報最有信心的，是少誤報而非少覆蓋）；月支出上限；per-repo 均價監看；security-guidance 分層關閉。
+邊寫邊掃的兩個外掛不算 review 入口：`security-guidance` 每次 edit 自動三層掃描、算一般用量（見第 4 段）；Claude Security 外掛做深度掃描。
 
-> **Length has a cost: a long `REVIEW.md` dilutes the rules that matter most.**
+**官方給的成本收斂旋鈕**：GitHub 上的 Code Review——觸發模式選 Manual 或 Once、審查等級選 Quick（Standard 為預設、Deep 最貴）、`REVIEW.md` 列出要跳過的路徑與類別、專屬月上限、看各 repo 的估算成本；本機 `/code-review`——effort 給 `low` 只報最有信心的（少誤報而非少覆蓋，`medium` 起擴大覆蓋），自 v2.1.288 起可加 `--max-findings <n>`（或 `all`、`default`）限制回報條數，見 [[entities/claude-code]]；security-guidance 可分層關閉。
 
-`/code-review` 自 v2.1.288 起可加 `--max-findings <n>|all` 限制回報條數，是本機入口多一個收斂旋鈕（見 [[entities/claude-code]]）。
-
-**一個官方沒標的坑**：Code Review 產品讀 `REVIEW.md`，本機 `/code-review` 不讀（它只跟 `CLAUDE.md`）。「本機先審再上 PR」時兩邊校準不同步。
+**本機和 PR 上的校準不同**：官方明寫 Code Review 讀 `REVIEW.md`，本機 `/code-review` 不讀、只跟 `CLAUDE.md`。「本機先審再上 PR」時兩邊標準會不一樣（推論：要一致，就把關鍵規則也寫進 `CLAUDE.md`）。
 
 ### 社群的做法，以及官方自己的煞車
 
@@ -453,7 +440,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ---
 
-## 6. 測試與上線 — 怎麼讓它自己驗完再交給你　`[已補：庫內證據]`
+## 6. 測試與上線 — 怎麼讓它自己驗完再交給你
 
 官方 `best-practices` 把「給 Claude 一個能驗證自己工作的方法」放在**全頁第一節**，排在 Explore→Plan→Code 之前。理由：
 
@@ -462,7 +449,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 四級階梯，成本遞增：
 
 1. **同一個 prompt 內** —— 叫它跑檢查並自行迭代
-2. **跨整個 session** —— `/goal` 設完成條件，「completion is decided by a fresh model rather than the one doing the work」
+2. **跨整個 session** —— `/goal` 設完成條件，「completion is decided by a fresh model rather than the one doing the work」；評估者不跑工具，只看對話裡說過的話
 3. **確定性閘門** —— `Stop` hook 跑你的 script，不通過就不讓這回合結束（連續擋 8 次後 Claude Code 會強制結束，要檢查 `stop_hook_active`）
 4. **第二意見** —— 驗證 subagent，「so the agent doing the work isn't the one grading it」
 
@@ -470,25 +457,25 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 其餘：`/engineering:testing-strategy` 決定測什麼；`/engineering:deploy-checklist` 驗證 CI、依賴並要求**事先寫下 rollback 觸發條件**；官方 recipe 明說 Claude 會照著你既有測試檔的風格與框架寫。
 
-**用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下會把改完的程式回報為完成卻沒跑真正的檢查；在指示裡加「改到可執行的程式就要跑真實檢查（測試／型別檢查／build）」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
+**用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下可能沒跑真正的檢查就回報完成；在指示裡加「改到可執行的程式就要跑測試／型別檢查／build」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
 
-**跨模型比較表現前先釘 effort**：Opus 5 預設 `high`，Opus 5.5 與 Haiku 5.5 換代後預設降為 `medium`（官方頁 2026-10-10／10-11 查證），省略 effort 的請求在新世代低一級；懷疑新模型變笨前，先用 `--effort` 把兩邊釘在同一檔，見 [[entities/claude-code]]、[[topics/model-comparison]]。
+**跨模型比較表現前先釘 effort**：各代的預設 effort 不同，省略 effort 的請求在新世代可能低一級；懷疑新模型變笨前，先用 `--effort` 把兩邊釘在同一檔，見 [[topics/model-comparison]]。
 
 `/goal` 只管單一 session；要跨 session 保留狀態或 20 路並行，官方的另一格是 Managed Agents——各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」。
 
-**社群面（2026-09-12 補，庫內證據）：** 官方沒回答的問題——「規則寫了 Claude 真的會照做嗎」——社群有一份量化答案，且是負面的：**即使 CLAUDE.md 明寫 `## TDD First` 六行規則，30 天提交審計顯示 60% 的情況 Claude Code 仍先寫程式碼、事後才補測試**（規則遵守率僅 40%；dev.to「I Told Claude Code to Do TDD. It Wrote the Test AFTER the Code 6 Out of 10 Times.」，2026-05-25，原始條目見 [[topics/community-tech-discussions-archive#2026-05]]）。這與第 4 段「CLAUDE.md 規則遷移到 hooks 強制執行」是同一個機率性遵守問題的測試版本。
+**社群做法：** 官方沒回答的問題——「規則寫了 Claude 真的會照做嗎」——社群有一份量化答案，且是負面的：**即使 CLAUDE.md 明寫 `## TDD First` 六行規則，30 天提交審計顯示 60% 的情況 Claude Code 仍先寫程式碼、事後才補測試**（規則遵守率僅 40%；dev.to「I Told Claude Code to Do TDD. It Wrote the Test AFTER the Code 6 Out of 10 Times.」，2026-05-25，原始報導見 [[topics/community-tech-discussions-archive#2026-05]]）。這與第 4 段「CLAUDE.md 規則遷移到 hooks 強制執行」是同一個機率性遵守問題的測試版本。
 
 **社群目前的結構性做法是把 TDD 從「寫在規則裡」改成「寫進流程指令裡」**：Pilot Shell 的 `/spec` 指令把完整 TDD 流程做成單一指令觸發，不依賴 Claude 自己記得規則（2026-05-04）；EvanFlow 的 TDD 驅動迴圈進一步在每個步驟設人工確認節點、不自動 commit，用人在迴圈中把關取代對規則遵守率的信任（2026-04-27）。兩者細節見 [[topics/community-tech-tools]] 工具目錄。
 
 **規模化之後，測試瓶頸從「測不測」轉移到「CI 撐不撐得住」**：多個平行 Claude Code agent 同時觸發建置與測試，會拖垮低規格機器、推高 CI 帳單（作者實測 4–5 個平行 agent 每天推近 90 次 commit）；社群做法是本地合併佇列——commit 排隊逐一完整測試後才合併，取代各分支各自即時觸發 CI（Hacker News「A local merge queue for parallel Claude Code agents」，2026-07-30，見 [[topics/community-multi-agent#2026-07]]）。
 
-訊號強度：TDD 審計為單一作者、單一 30 天樣本，量化但未見第三方複測；merge queue 為今日首見單一開發者工具，尚待社群採用回饋；Pilot Shell／EvanFlow 為既有工具的既定設計，非針對本問題的新實測。
+訊號強度：TDD 審計為單一作者、單一 30 天樣本，量化但未見第三方複測；merge queue 為單一開發者工具（2026-07-30），尚無社群採用回饋；Pilot Shell／EvanFlow 為既有工具的既定設計，非針對本問題的新實測。
 
 **還沒解掉的那一塊**：三則證據答的是「規則會不會被遵守」與「測試規模化會不會拖垮 CI」，**沒有任何一則回答「用 Claude Code 之後，測試涵蓋率或測試型態本身該不該變」**——例如該不該因為它產出快而寫更多測試、或它容易漏邊界情況而該把測試重心移到邊界案例。這一題社群仍是空白。
 
 ---
 
-## 7. 改動之後，怎麼讓既有規則跟上　`[已補：庫內證據]`
+## 7. 改動之後，怎麼讓既有規則跟上
 
 **官方給了掛點，但沒給判準。**
 
@@ -503,10 +490,10 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 **缺口 🔴**：判準無人談——「改到什麼程度才算讓既有規則過期」，官方與社群都沒有。掛點有了，觸發條件要自己定義。
 
-**社群面（2026-10-03 補，庫內證據）：** 全庫沒有任何一個把「什麼改動算讓規則過期」說成判準的案例，只有三種沾邊做法：
+**社群做法：** 本站收錄的資料裡沒有任何一個把「什麼改動算讓規則過期」說成判準的案例，只有三種沾邊做法：
 
 - **隨對話增量改文件**：CodeAlmanac（07-22，HN 54 分，YC S26）從對話紀錄與 diff、PR 增量寫入 codebase wiki，`garden` 指令修過期、斷鏈、重複與無據主張（2026-09-12 查證，見 [[topics/llm-wiki-pattern]]）。
-- CodeAlmanac 以對話為觸發，不是以程式碼改動為觸發；本庫 08-29 因 30 天無後續採用回饋已自 [[topics/community-tech-tools]] 移除追蹤。
+- CodeAlmanac 以對話為觸發，不是以程式碼改動為觸發，至今沒有後續採用回饋。
 - **定期回顧**：Patina 的 retro loop 與語意層漂移 CI 測試，見第 8 段。
 - **記憶工具的過期處理**：Jevmem 發布後被留言質疑，「舊記錄只標過時不刪」會讓 context 逐步混入過期資訊（HN，2026-09-26，單一留言意見）；hippo-memory 走相反設計，標記某則記憶為錯後不再出現、新事實覆蓋舊事實（GitHub 769 星，僅星數佐證）。兩者處理的是 agent 記憶，不是 CLAUDE.md 條文。
 
@@ -514,7 +501,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ---
 
-## 8. 規則怎麼不腐爛　`[已補：庫內證據]`
+## 8. 規則怎麼不腐爛
 
 **官方的診斷工具只回答「設定有沒有生效」，不回答「內容還對不對」。**
 
@@ -526,19 +513,19 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 還有兩條官方明列的失敗模式，直接對應維護：**「過度指定的 CLAUDE.md」**（修法：無情地刪；如果 Claude 沒有那條指令也做得對，就刪掉它或改成 hook）、以及同一個問題糾正超過兩次就 `/clear`（「乾淨的 session 配更好的 prompt，幾乎總是勝過累積一堆失敗嘗試的長 session」）。
 
-社群的「CLAUDE.md 管理」是少數達 **✅ 成熟**的類別：以「規則」而非「建議」語氣撰寫並用 CI 攔截違反架構的 PR、Self-improving Rules、防腐爛機制、語意層漂移的 CI 測試。
+社群在「CLAUDE.md 管理」提過的做法有四種：以「規則」而非「建議」語氣撰寫並用 CI 攔截違反架構的 PR、Self-improving Rules、防腐爛機制、語意層漂移的 CI 測試——查得到實作的只有下面兩個，而且都沒回答「內容還對不對」。
 
-**社群面（2026-09-26 補，庫內證據）：** 全庫只查到兩個沾邊機制，皆非本題直接解答。**Patina**（CLI，MIT，已上 npm）用「retro loop」定期回顧 harness 設定、移除過時規則、整合新規則，鎖定的正是官方診斷語沒接住的那塊——「規則是否仍有效缺乏持續驗證機制、規則只增不減、修復後無回歸測試確保仍適用」；但它是排程觸發的**人工**回顧流程，不會自動比對規則內容與目前 codebase 現狀是否相符（2026-05-04，見 [[topics/community-tech-patterns-archive#2026-05]]）。**語意層漂移 CI 測試**用探針任務＋統計分布比對，六秒 CI 偵測 agent **行為**隨時間偏離預期（2026-05-11，同上）——但驗的是「這次輸出還像不像平常」，不是「CLAUDE.md 寫的東西還符不符合程式碼現狀」。
+**社群做法：** 本站只查到兩個沾邊機制，皆非本題直接解答。**Patina**（CLI，MIT，已上 npm）用「retro loop」定期回顧 harness 設定、移除過時規則、整合新規則，鎖定的正是官方診斷語沒接住的那塊——「規則是否仍有效缺乏持續驗證機制、規則只增不減、修復後無回歸測試確保仍適用」；但它是排程觸發的**人工**回顧流程，不會自動比對規則內容與目前 codebase 現狀是否相符（2026-05-04，見 [[topics/community-tech-patterns-archive#2026-05]]）。**語意層漂移 CI 測試**用探針任務＋統計分布比對，六秒 CI 偵測 agent **行為**隨時間偏離預期（2026-05-11，同上）——但驗的是「這次輸出還像不像平常」，不是「CLAUDE.md 寫的東西還符不符合程式碼現狀」。
 
 訊號強度：兩者皆單一作者首發，逾四個月無第二個獨立案例佐證持續使用或採用回饋；`community-tech-tools`「CLAUDE.md 寫了它不聽」決策表目前也判定「這一列沒有工具可評」，未把 Patina 列為可選首選（見 [[topics/community-tech-tools]]）。
 
-**還沒解掉的那一塊**：缺口原句「規則內容是否還與程式碼現狀相符」仍是全庫零證據——兩個候選一個驗規則本身有沒有被定期清過、一個驗 agent 輸出像不像平常，沒有一個把 CLAUDE.md 條文拿去跟目前的原始碼狀態做比對。這題官方與社群都還是空白。
+**還沒解掉的那一塊**：「規則內容是否還與程式碼現狀相符」至今沒有任何證據——兩個候選一個驗規則本身有沒有被定期清過、一個驗 agent 輸出像不像平常，沒有一個把 CLAUDE.md 條文拿去跟目前的原始碼狀態做比對。這題官方與社群都還是空白。
 
 ---
 
-## 9. 除錯 — 怎麼知道它真的做了　`[已補：庫內證據]`
+## 9. 除錯 — 怎麼知道它真的做了
 
-**懷疑「這個 session 變笨了」，第一步不是換 prompt，是打 `/context`**——看這次啟動實際載入了什麼：哪些 CLAUDE.md／skills／rules 進了 context、是否已被 compact 掉（第 1 段「skill 的描述清單 compact 後不重載」）。這條診斷順序全站原本沒有一頁明寫，`/context` 過去只被記到它會列出 Skills（見第 8 段「官方診斷工具」），此處補上它作為「session 變笨」時的第一步用法。
+**懷疑「這個 session 變笨了」，第一步不是換 prompt，是打 `/context`**——看這次實際載入了什麼：哪些 CLAUDE.md／skills／rules 在 context 裡。帶 `paths:` 的規則 compact 後要等碰到匹配檔案才回來；v2.1.304 以前的版本，skill 描述清單 compact 後也不會重載（見第 1 段）。`/context` 同時是第 8 段那組官方診斷工具之一。
 
 官方**幫這個問題命名了**：「The trust-then-verify gap」——Claude 產出看起來合理但沒處理邊界情況的實作。官方的修法一句話：「If you can't verify it, don't ship it.」
 
@@ -546,13 +533,13 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 > **Have Claude show evidence rather than asserting success**: the test output, the command it ran and what it returned, or a screenshot of the result.
 
-**Opus 5.5 的提示建議（官方部落格，2026-10-03，HN 224 分）**：它比前代更能自主跑長任務、完工時會主動講清楚做了什麼、且每次回覆前都會思考。官方建議一次把整個任務講完、點名明確的收尾狀態（如「測試全過」），再放手讓它跑；**完工後核對它的摘要跟你原本要的是否一致**——它主動報告不代表報告就是對的，trust-then-verify 的核對動作不因此省掉。
+**Opus 5.5 的提示建議**（官方部落格，2026-10-03）：一次把整個任務講完、點名明確的收尾狀態（如「測試全過」），再放手讓它跑；它完工會主動講清楚做了什麼，但**摘要要你自己核對**——主動報告不代表報告就是對的。
 
-其餘見第 6 段的驗證階梯——`/goal` 與驗證 subagent 的重點都是**把裁決權從執行者手上拿走**。
+**讓它自己驗完再交給你，一句話**：同一個 prompt 叫它跑檢查 → `/goal` 設可量測的完成條件 → `Stop` hook 跑你的 script、不過不放行 → 驗證 subagent，成本遞增；四級的寫法見[第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)。共同重點是**把裁決權從執行者手上拿走**。
 
 除錯本身：`/engineering:debug` 提供重現 → 隔離 → 診斷 → 修復的流程；官方 recipe 建議**直接告訴 Claude 重現指令並給它 stack trace**、說明錯誤是間歇還是穩定發生。無法在本機重現的場景（硬體在迴路、生產限定），這流程第一步就會卡住。
 
-**社群面（2026-09-02 補，庫內證據）：** 靜默失敗的社群對策分兩路——**偵測**與**預防**。偵測面：「你的 AI Subagent 在騙你」一文從 317 色碼平行清理任務的踩坑記錄歸納出 4 種靜默失敗模式（各 subagent 回報「完成」，實際檢查卻不然；dev.to，2026-07-29）；另一獨立來源指出 MCP server 在長 session 中會無聲斷線，Claude Code 對已失效工具的呼叫因此得到靜默失敗，對應做法是心跳檢查＋自動重連。預防面：**對抗性雙 Claude 審查**是目前唯一有多專案追蹤數據支撐的做法——計畫前做法讓 Agent B 實際讀真實 codebase 挑戰 Agent A 的計畫（2026-06-25）；程式碼完成後做法則是起草者／批評者角色分工，作者追蹤六個生產專案回報顯著降低執行後靜默失敗率，尤其長任務與規格不完整場景（2026-05-12）。三者細節見 [[topics/community-tech-patterns]]。**與官方的關係**：`/goal`／驗證 subagent 解的是「怎麼確認完成」，這些社群做法解的是「怎麼在完成之前先防止樂觀偏差」，兩者互補。
+**社群做法：** 靜默失敗的社群對策分兩路——**偵測**與**預防**。偵測面：「你的 AI Subagent 在騙你」一文從 317 色碼平行清理任務的踩坑記錄歸納出 4 種靜默失敗模式（各 subagent 回報「完成」，實際檢查卻不然；dev.to，2026-07-29）；另一獨立來源指出 MCP server 在長 session 中會無聲斷線，Claude Code 對已失效工具的呼叫因此得到靜默失敗，對應做法是心跳檢查＋自動重連。預防面：**對抗性雙 Claude 審查**是目前唯一有多專案追蹤的做法——計畫前做法讓 Agent B 實際讀真實 codebase 挑戰 Agent A 的計畫（2026-06-25）；程式碼完成後做法則是起草者／批評者角色分工，作者追蹤六個生產專案，回報執行後的靜默失敗變少（未給數字），尤其長任務與規格不完整場景（2026-05-12）。三者細節見 [[topics/community-tech-patterns]]。**與官方的關係**：`/goal`／驗證 subagent 解的是「怎麼確認完成」，這些社群做法解的是「怎麼在完成之前先防止樂觀偏差」，兩者互補。
 
 **還沒解掉的那一塊（範圍要縮小）**：`/goal` 的評估者不跑工具，只能判斷 Claude 已經在對話中說出來的東西——Claude 沒講的，它抓不到。要真正閉環得靠 `Stop` hook 這種跑 script 的確定性閘。工具失敗、API 錯誤、用量耗盡三種靜默失敗源頭混在一起難以分辨，仍是缺口。
 
@@ -582,7 +569,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 **長度：10/14 符合 200 行** —— 超標的 next.js 513、deno 433、n8n 333、bun 239，而這四個同時有最多 skills（18／22／8／6），代表長度沒被分流走。最短的 uv 只有 25 行。
 
-**目錄結構：10/14 有寫** —— 官方 `/doctor` 建議砍掉，實務上大多數還是寫，next.js 甚至寫了兩次。但 zed 明文反對，理由值得抄：
+**目錄結構：10/14 有寫** —— 官方 `memory` 頁說 `/doctor` 的瘦身建議會砍掉目錄結構（見第 1 段），實務上大多數還是寫，next.js 甚至寫了兩次。但 zed 明文反對，理由值得抄：
 
 > Avoid architectural descriptions of a crate. **These go stale fast and the agent can gather them by reading the code.** Rules should be traps to avoid, not maps to follow.
 
@@ -596,7 +583,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 官方文件導讀：想深入該讀哪一頁
 
-官方文件共 185 頁（完整索引在 [llms.txt](https://code.claude.com/docs/llms.txt)，原文已失效），跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
+官方文件的完整索引在 [llms.txt](https://code.claude.com/docs/llms.txt)，跟 codebase 工作相關的是這些。每頁後面標的是「它在回答什麼」：
 
 - [prompting-claude-opus-5-5](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)（2026-09-28 發布，HN 187 分）—— Opus 5.5 相對 Opus 5 的行為差異與因應寫法：effort calibration、無人值守／多代理任務的進度回報、安全拒答、frontend 設計、貼上文字處理等。
 - [Getting the most out of Opus 5.5 in Claude and Claude Code](https://claude.dev/blog/getting-the-most-out-of-opus-5-5/)（2026-10-03，HN 224 分）—— 在 Claude 與 Claude Code 怎麼提示它、怎麼放手讓它跑長任務、完工後怎麼核對結果；重點見第 9 段「Opus 5.5 的提示建議」。
@@ -606,7 +593,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - [sub-agents](https://code.claude.com/docs/en/sub-agents) —— Explore／Plan 的規格，以及 subagent 啟動時到底載入了什麼。
 - [context-window](https://code.claude.com/docs/en/context-window) —— **compact 之後什麼還在、什麼消失**。想搞懂長 session 為什麼會失憶就看這頁。
 - [features-overview](https://code.claude.com/docs/en/features-overview) —— CLAUDE.md／rule／skill／hook／subagent 的選用對照，以及「什麼徵狀出現時往哪一層搬」。
-- [code-review](https://code.claude.com/docs/en/code-review)、[ultrareview](https://code.claude.com/docs/en/ultrareview) —— 官方 review 的入口與定價。
+- [code-review](https://code.claude.com/docs/en/code-review)、[code-review-costs](https://code.claude.com/docs/en/code-review-costs)、[ultrareview](https://code.claude.com/docs/en/ultrareview) —— 官方 review 的入口、方案限制與計費。
 - [security-guidance](https://code.claude.com/docs/en/security-guidance) —— 邊寫邊審的三層機制與上限。
 - [costs](https://code.claude.com/docs/en/costs)、[prompt-caching](https://code.claude.com/docs/en/prompt-caching) —— 成本基準，以及**哪些動作會讓快取失效**（切模型與改 effort 都會）。
 - [claude-directory](https://code.claude.com/docs/en/claude-directory) —— `.claude/` 底下每個檔案的用途。
@@ -626,10 +613,20 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 目前結論
 
-- **官方比社群厚得多**，尤其在探索、規劃、驗證、review 四段。社群真正補位的只有三處：session 語意搜尋、符號級索引、CLAUDE.md 的長期維護紀律。
-- **官方文件自己有衝突**，最明顯的是 CLAUDE.md 該不該寫專案結構（`best-practices` vs `features-overview`）。分界應是抽象層級：架構決策該寫，逐檔案描述不該寫。
-- **官方沒把 trade-off 講完的地方，是本頁的價值所在** ——`paths:` 省 context 但 compact 後消失、skill 描述清單不重載導致長 session 自動觸發能力下降，這兩條都要跨兩份文件才拼得出來。
-- **兩個生態層級的空白**：LLM review 的單位成本收斂（做法是共識，數字全無）、規則過期的判準（掛點有了，觸發條件無人談）。
+- **官方比社群厚得多**，尤其在探索、規劃、驗證、review 四段。社群真正補位的有三處：session 語意搜尋、符號級索引、把「必須 100% 遵守」的 CLAUDE.md 規則升級成 hook。
+- **官方文件自己有衝突**，最明顯的是 CLAUDE.md 該不該寫專案結構（`features-overview` 說寫，`best-practices` 與 `memory` 的 `/doctor` 說不寫）。分界是讀 code 推不推得出：架構決策的理由該寫，目錄樹與逐檔描述不該寫。
+- **官方沒把 trade-off 講完的地方，是本頁的價值所在** ——`paths:` 省 context，但 compact 後要等碰到匹配檔案才回來，必須時時生效的規則別加；這要跨兩份官方文件才拼得出來。
+- **兩個還沒有答案的地方**：分層審查到底省多少（官方給了 Code Review 的估法，分層前後的數字沒人量）、規則過期的判準（掛點有了，觸發條件無人談）。
+
+---
+
+## 本週 coding 亮點
+
+- **跨模型比較先釘 `--effort`**：各代預設 effort 不同，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
+- **沙箱自動放行與「強制」CLAUDE.md 規則都有未修復 issue**：強制性請落在 hook，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **`CLAUDE_CODE_DISABLE_FILE_MENTIONS`**：`@` 只傳路徑省 context，見 [第 2a 段](#2a-怎麼讀得省)
+
+%% 亮點檢查日 2026-10-17；其餘候選（用量與定價、工具星數類、單一作者做法）屬他頁，不入本節。 %%
 
 ---
 
@@ -647,7 +644,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 參考來源
 
-官方文件（全部 2026-08-08 查證）：
+官方文件（2026-08-08 查證；context-window、memory、sub-agents、code-review 系列 2026-10-22 重查）：
 
 - [Set up Claude Code in a monorepo or large codebase](https://code.claude.com/docs/en/large-codebases) — 探索設定七項、方位說明範例
 - [How Claude remembers your project](https://code.claude.com/docs/en/memory) — CLAUDE.md 分層、`/doctor` trim、auto memory
@@ -655,12 +652,12 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - [Create custom subagents](https://code.claude.com/docs/en/sub-agents) — Explore／Plan agent、subagent 初始 context
 - [Explore the context window](https://code.claude.com/docs/en/context-window) — compaction 存活表
 - [Extend Claude Code](https://code.claude.com/docs/en/features-overview) — 功能對照六表、Build your setup over time
-- [Code Review](https://code.claude.com/docs/en/code-review) ／ [ultrareview](https://code.claude.com/docs/en/ultrareview) — 六個入口與定價
+- [Code Review](https://code.claude.com/docs/en/code-review) ／ [ultrareview](https://code.claude.com/docs/en/ultrareview) — review 入口、方案限制與定價
 - [Catch security issues as Claude writes code](https://code.claude.com/docs/en/security-guidance) — 三層機制與上限
 - [Manage costs effectively](https://code.claude.com/docs/en/costs) ／ [How Claude Code uses prompt caching](https://code.claude.com/docs/en/prompt-caching) — 成本基準與快取失效條件
 - [Explore the .claude directory](https://code.claude.com/docs/en/claude-directory) ／ [Extend Claude with skills](https://code.claude.com/docs/en/skills) ／ [Automate actions with hooks](https://code.claude.com/docs/en/hooks-guide) — 目錄結構、skill 截短規則、hook 事件表
 - [Keep Claude working toward a goal](https://code.claude.com/docs/en/goal) — `/goal` 條件寫法
-- [完整文件索引](https://code.claude.com/docs/llms.txt) — 官方 185 頁清單
+- [完整文件索引](https://code.claude.com/docs/llms.txt) — 官方文件完整清單
 
 2026-09-23 補查：
 
@@ -673,3 +670,5 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
 - [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節
+
+%% 拆頁評估 2026-10-22：不拆，每群太薄（三群中只有「CLAUDE.md 與規則層」約 222 行過 150；切走它母頁仍約 427 行，逾母頁 300 行上限；使用者同日定本頁要讓讀者只讀這份就夠） %%

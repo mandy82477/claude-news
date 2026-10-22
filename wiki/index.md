@@ -24,11 +24,12 @@
 | 我想…… | 去哪 |
 |---|---|
 | 接手／新建一個 repo，**官方**建議先做哪些設定（CLAUDE.md、LSP、探索） | [[topics/coding-workflow-guide]] 第 1、2a 段 |
+| 改動大，要先規劃／寫規格，還是直接開工 | [[topics/coding-workflow-guide]] 第 3 段 |
 | 我卡住了（帳單爆、額度快用完想被提醒、context 撐爆、agent 互踩、它說做完了沒做、agent 讀不懂大 repo、CLAUDE.md 寫了它不聽、被單一供應商綁住……），**社群首選**是哪個 | [[topics/community-tech-tools]]「我卡在這裡」決策表 |
 | 我關心的某類工具，現在誰最大、本週誰在竄升（七日星數差，每日快照） | [[topics/skill-interest-watch]] 各類別（按開發流程段） |
-| 它說做完了，我怎麼知道是真的——**官方**做法（要證據、`/goal`、Stop hook） | [[topics/coding-workflow-guide]] 第 9 段 |
+| 它說做完了，我怎麼知道是真的——**官方**做法（要證據、`/goal`、Stop hook） | [[topics/coding-workflow-guide]] 第 6 段（驗證階梯）、第 9 段（要它出示證據） |
 | 我想讓 agent 自己跑幾小時／過夜，該用哪個（`/goal`、subagent、dynamic workflows、agent teams、agent view、Managed Agents、Agent SDK） | [[topics/anthropic-agent-stack]]「你該用哪個」 |
-| code review 該用哪個入口、怎麼審得起（本庫刻意不推薦單一社群工具，官方六個入口＋明價） | [[topics/coding-workflow-guide]] 第 5 段 |
+| code review 該用哪個入口、一次多少錢（官方各入口的方案限制與計費；本庫刻意不推薦單一社群工具） | [[topics/coding-workflow-guide]] 第 5 段 |
 | 大型 codebase 的做法主線（並行／context／記憶／把關） | [[topics/community-large-codebase-workflow]] |
 | 多個 agent 怎麼分工、隔離，隔離之後誰先合併、誰驗收（官方三條路對照與缺口） | [[topics/community-multi-agent]] |
 | 跨 session 讓 Claude 記得專案脈絡（記憶、CLAUDE.md、context）：最常見的做法是什麼、收斂了沒 | [[topics/community-memory]]「目前結論」 |
@@ -124,7 +125,7 @@
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動——五角大廈供應鏈風險黑名單上訴法院維持（09-25）、FTC 新開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
 | [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
-| [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：我現在在做這件事，該下哪個 skill、它會做什麼、有什麼坑——以流程階段為軸（官方技能不按開發領域切） |
+| [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：S-1 首度揭露 2026 上半年淨損 807 億美元，IPO 估值疑慮加深；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]] |

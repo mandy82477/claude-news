@@ -7960,3 +7960,13 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 處置：(a) 功能記者（sonnet）補 feature-radar 5 條詳細條目＋全覽表 5 列，預設值表新增 3 列、擠出 2.1.234／239／243，表頭核對到 v2.1.304；頁首與 callout 更新 2026-10-22；三件重算：AGENTS.md 出 30 天閘，Claude Mods 補位（最後輪替 2026-10-22）。(b) `entities/claude-code` 版本表 v2.1.300／302／304 列改到與原文一致。(c) 歸因 slug `user-query`，三筆 release URL 入 `data/source_attribution.jsonl`。
 - 規則缺口（轉 /wiki-lint）：① 「這禮拜動了什麼」callout 無更新規則與負責人；② 記者連續五日把「版本表新增列」當成「無新功能」，建議在 features/daily.md 版本收錄表加一句「版本列有新旗標／指令即須同輪回報 radar 條目」。
 - 歸因 user-query／功能
+
+
+## 2026-10-22 Query（第 19 波頁面健檢——程式開發實戰手冊）
+
+- [[topics/coding-workflow-guide]] 不拆、改成「只讀這頁就夠」：使用者裁決「程式開發手冊是不是比較特別 要讓讀者可以只看這份就好」＋使命句「每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查」；撤「該下哪個 skill」承諾。段號 1–9 不變；拿掉八個標題進度標記並改 17 個頁內錨點（修好 2 個斷錨）；Code Review 補「限 Team／Enterprise、沒有單價」與各入口計費一句；新聞條目移出正文。
+- 主編官方查證（code.claude.com `.md` 原文，2026-10-22）：skill 描述清單 compact 後會重新注入（v2.1.304 起），推翻頁面結論「不重載」；官方文件數 185 與「llms.txt 已失效」皆錯（現 264 頁、可取得）；`paths:` 規則是依需重載不是消失；Explore 改跑 Opus 只在主對話是 Fable 時；「Length has a cost」「round seven」兩句現行官方查無；本機 `/code-review` 不讀 REVIEW.md 官方已明寫；本機 review 只有 `low` 收窄、GitHub Code Review 改調 review level。
+- 冷讀者：首測 Q1 2 跳／Q2 2 跳（index 指錯段）／Q3 3 跳半／Q4 2 跳（index 無入口）→ 複驗四題皆 2 跳拿到。
+- index：新增「改動大要先規劃還是直接開工」列、「它說做完了」改指第 6、9 段、review 列撤「明價」、手冊列換使命句。
+- 轉知：[開發實務→商業] H-f353a0（pricing 收五小時額度句）；[開發實務→社群] H-e8a985（skill-interest-watch 六入口＋明價、第 7／8 段混類）、H-8245fe（community-tech-tools L100）；[開發實務→功能] H-f80c1d（agent-stack 鉤子與 Explore 模型）、H-7e836a（claude-skills 鉤子）、H-130d53（feature-radar／claude-code「AGENTS.md 不支援 Bedrock 等」查無）；H-fc0960 結案。
+- 歸因 user-query／開發實務
