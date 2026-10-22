@@ -5,7 +5,7 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-10-21"
-last_news_update: "2026-10-21"
+last_news_update: "2026-10-22"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-21
+**最後新聞更新：** 2026-10-22
 
 > **最新動態**（2026-10-21）
 > - **版本**：v2.1.306 純 bug 修復（雲端 session `claude -p` 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；anthropic-sdk-python／anthropic-sdk-typescript 同步發新版（詳見 [[entities/claude-code#版本更新]]）。
