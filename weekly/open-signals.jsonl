@@ -266,3 +266,7 @@
 {"date": "2026-10-22", "week": "2026-W42", "forecast": "閒置自動壓縮會不會惹事：2.1.299 起 20 萬 token 以上的對話閒置約 54 分鐘就自動壓縮", "origin": "新立", "probe": "壓縮", "entries": []}
 {"date": "2026-10-22", "week": "2026-W42", "forecast": "Cowork 本機 VM 會不會被清掉：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端", "origin": "續盯", "probe": "VM", "entries": []}
 {"date": "2026-10-22", "week": "2026-W42", "forecast": "Haiku 5.5 當 subagent 的實測會不會出現：本週只有官方建議與一份單人拆帳", "origin": "續盯", "probe": "subagent", "entries": []}
+{"date": "2026-10-23", "week": "2026-W42", "forecast": "SneakPeek 的 CVE 與官方安全公告什麼時候出：Noma 說修補 8 月已推送，CVE 與 GitHub 安全公告待發", "origin": "新立", "probe": "CVE", "entries": []}
+{"date": "2026-10-23", "week": "2026-W42", "forecast": "閒置自動壓縮會不會惹事：2.1.299 起 20 萬 token 以上的對話閒置約 54 分鐘就自動壓縮", "origin": "新立", "probe": "壓縮", "entries": []}
+{"date": "2026-10-23", "week": "2026-W42", "forecast": "Cowork 本機 VM 會不會被清掉：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端", "origin": "續盯", "probe": "Cowork", "entries": [{"title": "[BUG] Missing HCS services: vfpext - Cowork not working on Windows 11 Pro", "url": "https://github.com/anthropics/claude-code/issues/74649"}]}
+{"date": "2026-10-23", "week": "2026-W42", "forecast": "Cowork 本機 VM 會不會被清掉：#22543 累積 271 個讚，官方已說新版把 VM 移到雲端", "origin": "續盯", "probe": "VM", "entries": []}
