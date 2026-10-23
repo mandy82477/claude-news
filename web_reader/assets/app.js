@@ -679,6 +679,14 @@
   <label class="pmx-ctl"${st.col ? '' : ' aria-disabled="true"'}><input type="checkbox" data-pmx-only${st.only ? ' checked' : ''}${st.col ? '' : ' disabled'}><span>只看這個產品有官方明載的列</span><small>${st.col ? '目前：' + esc(pmxProd(st.col).short) : '先點一個產品欄頭'}</small></label>
   <div class="pmx-legend" aria-label="圖例">${['available', 'beta', 'preview', 'no', 'vague', 'unknown'].map(s => `<span>${pmxMk(s)}${esc(PMX_STATUS[s])}</span>`).join('')}</div>
 </div>`;
+    // 「怎麼讀這張表」原本住在右側 300px 的 aside，整張表被擠窄、窄螢幕還會被切掉
+    // （2026-10-23 使用者：位置有點爛）。改成圖例下方可收合的一段，表格拿回全寬。
+    h += `<details class="pmx-guide"${st.guideOpen ? ' open' : ''}><summary>怎麼讀這張表</summary><ol class="pmx-steps">
+<li>實心方塊是可用，後面是方案縮寫：全＝Free 起、付費＝Pro 起、T/E＝Team／Enterprise、P/M＝Pro／Max、API＝按量計費。</li>
+<li>半實心是「官方用詞籠統」：官方只寫「在 Claude 裡」沒列介面，面板照抄那句原文。</li>
+<li>淡淡的「·」是官方沒有說，不等於不支援。</li>
+<li>點任一格看說明、方案、來源與查證日；點欄頭或分組名可整欄、整段高亮。</li></ol>
+${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照表的 wiki 頁')}</details>`;
     // ── 矩陣 ──
     let t = `<table class="pmx"><colgroup><col class="pmx__fcol">${P.map(() => '<col>').join('')}</colgroup><thead>`;
     t += `<tr class="pmx__axis"><th></th><th colspan="${P.length}"><div class="pmx__axis-in"><span>誰起手</span><span class="pmx__axis-line"></span></div></th></tr>`;
@@ -695,7 +703,7 @@
       if (!rows.length) return;
       const hidden = f => st.only && st.col && !stated(f, st.col);
       const vis = rows.filter(f => !hidden(f));
-      t += `<tbody><tr class="pmx__grp${st.grp === g.k ? ' is-on' : ''}${vis.length ? '' : ' is-hidden'}"><th colspan="${P.length + 1}" scope="rowgroup"><button type="button" class="pmx__grp-btn" data-pmx-grp="${esc(g.k)}" aria-pressed="${st.grp === g.k}">${g.en ? `<span class="pmx__grp-en">${g.en}</span>` : ''}${g.zh ? `<span class="pmx__grp-zh">${g.zh}</span>` : ''}<span class="pmx__grp-note">${esc(g.note)}</span></button></th></tr>`;
+      t += `<tbody><tr class="pmx__grp${st.grp === g.k ? ' is-on' : ''}${vis.length ? '' : ' is-hidden'}" data-pmx-grprow="${esc(g.k)}"><th colspan="${P.length + 1}" scope="rowgroup"><button type="button" class="pmx__grp-btn" data-pmx-grp="${esc(g.k)}" aria-pressed="${st.grp === g.k}">${g.en ? `<span class="pmx__grp-en">${g.en}</span>` : ''}${g.zh ? `<span class="pmx__grp-zh">${g.zh}</span>` : ''}<span class="pmx__grp-note">${esc(g.note)}</span></button></th></tr>`;
       rows.forEach(f => {
         const isRow = st.grp === g.k || (st.sel && st.sel.t === 'feat' && st.sel.f === f.id);
         t += `<tr class="pmx__row${hidden(f) ? ' is-hidden' : ''}${isRow ? ' is-row' : ''}" data-pmx-row="${esc(f.id)}"><th scope="row"><button type="button" class="pmx__fh-btn" data-pmx-feat="${esc(f.id)}"><span class="pmx__fname">${esc(f.name)}</span>${f.sub ? `<span class="pmx__fsub">${esc(f.sub)}</span>` : ''}</button></th>`;
@@ -756,12 +764,15 @@
   <div class="entity-row__summary">${esc(r.hook || '')}</div>
   <div class="entity-row__updated">${esc(r.lastUpdated || '')}</div>
 </div>`).join('') + '</div>';
-    h += '</section><aside class="pmx-panel" id="pmx-panel" aria-live="polite"></aside></div>';
+    h += '</section></div>';
     container.innerHTML = h;
     pmxRenderPanel();
     if (!st.bound) {
       st.bound = true;
       container.addEventListener('click', pmxOnClick);
+      container.addEventListener('toggle', e => {
+        if (e.target.classList && e.target.classList.contains('pmx-guide')) pmx.guideOpen = e.target.open;
+      }, true);
       container.addEventListener('change', e => {
         if (!container.classList.contains('pmx-host') || !e.target.matches('[data-pmx-only]')) return;
         pmx.only = !!(e.target.checked && pmx.col); renderProductMatrix(container);
@@ -778,22 +789,34 @@
   }
   function pmxNa(v) { return !v || v === '官方未說' ? '<span class="pmx-na">官方未說</span>' : esc(v); }
 
+  // 面板只在有選取時存在，插在被點的那一列正下方：桌機插成一列跨欄的表格列，手機插在清單列後。
+  // 原本是右側 sticky aside，表格被擠窄、說明離被點的格子很遠（2026-10-23 改）。
+  function pmxPanelAnchor(sel) {
+    const host = document.getElementById('wiki-kb');
+    if (!host) return null;
+    const q = PMX_MQ_PHONE.matches
+      ? (sel.t === 'cell' ? `.pmxl [data-pmx-f="${CSS.escape(sel.f)}"][data-pmx-p="${CSS.escape(sel.p)}"]`
+        : sel.t === 'spec' ? `.pmxl [data-pmx-spec="${CSS.escape(sel.s)}"]`
+        : sel.t === 'prod' ? `.pmxl [data-pmxl-prod="${CSS.escape(sel.p)}"] .pmxl__name` : null)
+      : (sel.t === 'cell' ? (host.querySelector(`.pmx [data-pmx-x="${CSS.escape(sel.f)}"]`) ? '.pmx .pmx__excl' : `.pmx [data-pmx-row="${CSS.escape(sel.f)}"]`)
+        : sel.t === 'feat' ? `.pmx [data-pmx-row="${CSS.escape(sel.f)}"]`
+        : sel.t === 'prod' ? '.pmx thead tr:last-child'
+        : sel.t === 'grp' ? `.pmx [data-pmx-grprow="${CSS.escape(sel.g)}"]`
+        : sel.t === 'spec' ? `.pmx-spec [data-pmx-specrow="${CSS.escape(sel.s)}"]` : null);
+    return q ? host.querySelector(q) : null;
+  }
+
   function pmxRenderPanel() {
-    const panel = document.getElementById('pmx-panel');
-    if (!panel) return;
+    document.querySelectorAll('#pmx-panel, .pmx__panelrow').forEach(el => el.remove());
     const sel = pmx.sel;
+    if (!sel) return;
+    const anchor = pmxPanelAnchor(sel);
+    if (!anchor) return;
+    const panel = document.createElement('aside');
+    panel.className = 'pmx-panel'; panel.id = 'pmx-panel'; panel.setAttribute('aria-live', 'polite');
     const close = '<button type="button" class="pmx-panel__close" data-pmx-close aria-label="關閉">×</button>';
     let h;
-    if (!sel) {
-      panel.setAttribute('data-empty', '');
-      h = `<div class="pmx-panel__kicker">怎麼讀這張表</div><ol class="pmx-steps">
-<li>實心方塊是可用，後面是方案縮寫：全＝Free 起、付費＝Pro 起、T/E＝Team／Enterprise、P/M＝Pro／Max、API＝按量計費。</li>
-<li>半實心是「官方用詞籠統」：官方只寫「在 Claude 裡」沒列介面，面板照抄那句原文。</li>
-<li>淡淡的「·」是官方沒有說，不等於不支援。</li>
-<li>點任一格看說明、方案、來源與查證日；點欄頭或分組名可整欄、整段高亮。</li></ol>
-${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照表的 wiki 頁')}`;
-    } else {
-      panel.removeAttribute('data-empty');
+    {
       if (sel.t === 'cell') {
         const f = pmxFeat(sel.f), p = pmxProd(sel.p), c = pmxCell(f, sel.p);
         h = `${close}<div class="pmx-panel__kicker">${esc(p.short)} × ${esc(f.full)}</div><div class="pmx-panel__title">${pmxMk(c.status)}${esc(PMX_STATUS[c.status])}</div>
@@ -820,13 +843,16 @@ ${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
       }
     }
     panel.innerHTML = h;
-    // 手機：面板插在被點的那一列下方；桌機留在表格旁
-    if (PMX_MQ_PHONE.matches && sel) {
-      const host = document.getElementById('wiki-kb');
-      const sq = sel.t === 'cell' ? `.pmxl [data-pmx-f="${CSS.escape(sel.f)}"][data-pmx-p="${CSS.escape(sel.p)}"]`
-        : sel.t === 'spec' ? `.pmxl [data-pmx-spec="${CSS.escape(sel.s)}"]` : null;
-      const el = sq && host.querySelector(sq);
-      if (el) el.after(panel);
+    if (anchor.tagName === 'TR') {
+      const tr = document.createElement('tr');
+      tr.className = 'pmx__panelrow';
+      const td = document.createElement('td');
+      td.colSpan = anchor.children.length || (anchor.querySelector('[colspan]') ? Number(anchor.querySelector('[colspan]').getAttribute('colspan')) : 1);
+      // 表頭／分組列只有一個跨欄 th，用它的 colspan；一般列用子元素數
+      if (anchor.children.length === 1 && anchor.children[0].hasAttribute('colspan')) td.colSpan = Number(anchor.children[0].getAttribute('colspan'));
+      td.appendChild(panel); tr.appendChild(td); anchor.after(tr);
+    } else {
+      anchor.after(panel);
     }
   }
 
