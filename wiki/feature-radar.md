@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-22
+**最後更新：** 2026-10-23
 
 > **這禮拜動了什麼**（2026-10-22）
 > Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
@@ -68,6 +68,21 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Message Threads API ＋依維度拆分用量費用報表
+**發布：** 2026-10-23（anthropic-sdk-python v2.2.0／anthropic-sdk-typescript vertex-sdk-v1.1.0） | **狀態：** 正式發布
+
+**是什麼：** API 新增 message threads 支援，供多輪對話以執行緒方式管理；Python SDK 同時新增依維度（dimension）拆分的用量與費用報表，舊版報表標記為 legacy。
+
+**為何熱：** 兩個 SDK 同日同步發布同一功能，延續本月 10-21 User Profiles enforcement、10-15 speed 參數的連續成對發布節奏；社群跟進情況尚無資料。
+
+**快速上手：**
+```
+升級 anthropic-sdk-python ≥ v2.2.0 或 anthropic-sdk-typescript ≥ vertex-sdk-v1.1.0
+官方 release notes 僅列功能名稱，尚未附程式碼範例
+```
+
+**注意事項：** 官方 changelog 僅列「add support for message threads」一句，無技術細節；是否需 beta header 或對額度/計費有影響待官方文件確認。
 
 ### Claude Duet
 **發布：** 2026-10-21（Research Preview） | **狀態：** Research Preview
@@ -728,6 +743,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
 | **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

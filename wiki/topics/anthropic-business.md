@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **最新動態**（2026-10-22）
-> - **IPO 遞件時程**：消息稱 Anthropic 最快本週五（10/23）正式公開提交 S-1，承接 10-21 揭露上半年淨損 807 億美元後的下一步（Yahoo Finance）。
-> - **商業風險**：音樂出版商 Reservoir 加入控告 Anthropic 與 Suno，著作權訴訟再添一案（Billboard）。
+> **最新動態**（2026-10-23）
+> - **歐洲顧問合作**：Anthropic 與私募基金 Hg 合作於歐洲推出 AI 顧問服務，供當地企業導入 AI，細節未見報導（FT／SQ Magazine）。
+> - **治理權轉移**：將 Agent Skills 開放標準捐贈予新設 Agentic AI Foundation，官方稱逾 70 平台已整合（Anthropic Blog）。
 
 ---
 
@@ -216,6 +216,8 @@ Anthropic 的收入來自兩條軌道（2026-06-15 後正式成文化）：
 **2026-10-21 新增：API 轉售商可單獨封禁違規終端客戶，不再牽連整個帳號**：MIXED Reality News 報導 Anthropic 調整 Claude API 轉售／代理商的帳號管理機制，自此可針對單一違規終端客戶封禁，不必停用轉售商整個帳號；具體生效時間、適用範圍與官方公告均未見報導，僅標題可用。**對商業的意涵**：降低轉售／代理通路業者因單一客戶違規而遭殃及整個業務的風險（推論）（Google News/MIXED Reality News）。
 
 **2026-10-18 新增：Anthropic 引入律師團隊，建立 AI agent 代表使用者簽約的法律框架**：Financial Times 報導 Anthropic 正建立讓 AI agent 能代表使用者洽談並簽署交易的法律框架；具體框架內容、適用範圍與時程均未見報導，僅標題可用（Google News/Financial Times）。
+
+**2026-10-23 新增：外部學者質疑 10-18 內部雇用研究方法論**：The Guardian 報導多名外部學者對上述 10-18 內部雇用結構研究提出方法論質疑，認為樣本與對照設計可能不足以支撐原報告結論；原文未附具體反駁數據，僅標題與摘要層級可用。**對商業的意涵**：若質疑成立，可能削弱 Anthropic 以該研究佐證「AI 提升生產力」敘事的說服力（推論）（Google News/The Guardian）。
 
 > 更多計費細節見 [[entities/pricing]]
 
@@ -406,6 +408,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **Hg（歐洲顧問服務）**（2026-10-23）：Financial Times 與 SQ Magazine 同日報導 Anthropic 與私募基金 Hg 合作，於歐洲推出 AI 顧問服務供當地企業導入 AI，合作細節與服務範疇未見報導（Google News/Financial Times；Google News/SQ Magazine）
+- **學術機構／生命科學（Guest Investigator Program）**（2026-10-23）：官方公開徵求學術機構、非營利組織或政府實驗室研究團隊，於 8–12 週內與 Anthropic 研究員合作研究因果人類生物學、分子生物學、藥物化學等題目，模型與運算成本由官方負擔（[Anthropic Blog](https://www.anthropic.com/news/open-call-guest-investigators-life-sciences)）
 - **Simform**（2026-10-21）：取得 Claude Partner Network「Select Tier」服務夥伴資格，延續 Tenth Revolution Group（10-14）、Aditi Consulting（10-08）等同系列夥伴認證，具體權益未見報導（Google News/EIN Presswire）
 - **Google Antigravity**（2026-10-20）：Claude Opus 5.5 與 Sonnet 5.5 已在 Google 旗下 Antigravity 平台上架，具體整合範疇與計費未見報導（Google News/Google Cloud）
 - **Emory University**（2026-10-19）：Claude AI 正式開放予 Emory 大學社群使用，具體導入規模與產品線未見報導（Google News/Emory University）
@@ -612,6 +616,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-23
+- **[商業模式，僅標題可用] CTech：Anthropic 擬以約 $345,000 年薪招聘高管溝通顧問，協助主管找到「正確用詞」**：職缺性質與招聘進度未見報導（Google News/CTech）
+- **[戰略合作] Anthropic Blog／Simon Willison：將 Agent Skills 開放標準捐贈予新設 Agentic AI Foundation（AAIF）**：官方稱已有逾 70 平台整合（含 ChatGPT、Cursor、Copilot、VS Code），治理權轉移後相容性未見報導（[Anthropic Blog](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)；Blog/Simon Willison）
+- **[戰略合作，僅標題可用] Financial Times／SQ Magazine：Anthropic 與私募基金 Hg 合作，於歐洲推出 AI 顧問服務供當地企業導入 AI**：合作細節與服務範疇未見報導，詳見「哪個合作會改到你用的 Claude」清單新增列（Google News/Financial Times；Google News/SQ Magazine）
+- **[戰略合作，僅標題可用] Google Cloud 官方部落格：宣布擴大 Claude 在該平台的可用性與部署選項**：具體新增區域或服務細節未見報導（Google News/Google Cloud）
+- **[商業模式] The Guardian：外部學者質疑 Anthropic 10-18 內部雇用結構研究的方法論**：承接 10-18 內部研究，詳見「商業模式」段新增說明（Google News/The Guardian）
 
 #### 2026-10-22
 - **[IPO前瞻] Yahoo Finance：消息人士稱 Anthropic 最快本週五（10/23）正式公開提交 S-1**：承接 10-21 WSJ 揭露上半年淨損 807 億美元後的時程進展，詳見「IPO 走到哪一格」表「遞件了沒」列更新，官方公開版本未見（Google News/Yahoo Finance）

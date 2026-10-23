@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **架構邊界合約新增貼入式提示詞契約**（2026-10-18）
-> - **HERO-Anti-OverDefense**：針對 coding agent 雜湊、邊界案例、評分標準、過度搭建四種過度防禦樣態，提供可直接貼入提示詞的契約。
+> **規格驅動開發新增全流程自動化 skill**（2026-10-23）
+> - **nick-vels/skills**：描述想法即自動寫規格、拆任務、實作並對照原始需求檢查結果，附即時進度儀表板。
 
 ---
 
@@ -94,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### nick-vels/skills：描述想法即自動寫規格、拆任務、實作並對照需求檢查，附即時進度儀表板（2026-10-23）
+
+- **主線：** —
+- **核心模式：** Claude Code、Cursor、Codex 共用的 agent skill：只詢問使用者的想法要從既有產品的哪裡延伸，接著自動寫規格、拆成任務、動手實作，並對照原始需求檢查結果，附會自動開啟的即時進度儀表板；GitHub Search 523 星。
+- **與既有模式的關係：** 補上「規格驅動開發」既有代表技巧（spec-kit）一個「規格→拆任務→實作→自動對照原始需求檢查」全流程自動化、附即時進度儀表板的實作；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（523★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/nick-vels/skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### wanshuiyin/HERO-Anti-OverDefense：針對 coding agent 過度防禦四種樣態的貼入式提示詞契約（2026-10-18）
 

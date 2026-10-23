@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-21）
+> **本週衝擊**（2026-10-23）
 > - 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。
 > - 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
@@ -49,13 +49,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
+| **Microsoft／GitHub** 🏢 | 10-22：VS 版新增 PR 聊天瀏覽、換模型、弱點自動修補；11-16 起棄用部分模型；全域預設開啟政策正式 GA → Claude Code 均無對應 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；棄用清單未列完整型號，VS 版細節與 GA 確認同源 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-22 推出 Decisions API 正式版（GPT-6 Luna，宣稱快 10 倍、低成本決策任務）；10-15 GPT-6.1 Sol 成為 Codex CLI 預設模型（成本降 77%）→ 低價快決策與編碼成本同步下壓 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源；Decisions API 官方部落格一手；牌價已查證 ⟨Q-07⟩ |
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
-| **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
-| **Microsoft／GitHub** 🏢 | Agentic autofix 10-15 正式 GA；Slack/Teams 版支援多 repo 單一對話（10-15）；11-16 起棄用部分模型（10-15 公告）→ Claude Code 皆無對應功能/整合/棄用排程 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；棄用清單未列完整型號 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-15 起 GPT-6.1 Sol 成為 Codex CLI **預設模型**（宣稱成本降 77%）；09-29 已全面開放、快取輸入 $0.10/Mtok → 低價層從「可選」變「預設」 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源；牌價已查證 ⟨Q-07⟩ |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書 ❓ 待查證⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
+| **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
@@ -101,6 +101,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | OpenCode | 免費（開源）| —（免費開源工具，實際成本取決於所接模型） | 開源免費 vs 訂閱付費（$20/月）的採用落差，是本頁最早的分流訊號；已查證 ⟨Q-04⟩：下載量統計為 npm registry 公開數字，非推算 | 2026-08-01（Google News/tech-insider.org）|
 | Cursor | Hobby 免費／Pro $20／Pro+ $60／Ultra $200／Teams $40/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：SpaceX 收購後未見因收購而生的定價異動，6 級方案為既有架構延續 | 2026-08-13 查證（收購確認 2026-06-17）|
 | OpenAI Codex CLI | Free（試用）／Go $8／Plus $20／Pro 5x $100／Pro 20x $200／Business $30/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：2026-04-02 起改按 token 用量計費，非固定訊息數 | 2026-08-13 查證（多方比較站彙整）|
+| GitHub Copilot（加購 AI credits） | $10 ＝ 1,500 credits（加購制，非月費） | —（credit 制非按 token 計費，不可比；單個 credit 對應的底層模型與 token 量未載） | 2026 年方案彙整頁換算，與既有 Pro+ $39 月費訂閱層屬不同計費面，關係未載 | 2026-10-23（shattered.io，單一來源，僅標題可用）|
 | GPT-5.6（OpenAI API） | 已查證：Luna 降 80%（$0.20／$1.20）；Terra 降 20%（$2／$12）；Sol 未降價但提速 2.5 倍 | Luna≈0.12×、Terra≈1.2×（對 Sonnet 5 $10/Mtok 輸出）；Sol 未提新價 | OpenAI 官方明確訴求以更低價格對打 Anthropic | 2026-07-30（OpenAI 官方；2026-08-13 查證數字）|
 | Gemini CLI / Gemini 系列 | 已查證：Free $10 一次性／Pro $60/月／Max $200/月；2026-06-18 起免費層併入 Antigravity CLI | —（訂閱制，不可比） | 免費層緊縮後，個人開發者需轉 Antigravity CLI 或付費 API key | 2026-08-13 查證（多方比較站彙整）|
 | Grok 4.5（xAI） | $2／$6 per Mtok（input／output） | 輸入 1.0×、輸出 ≈0.6×（對 Sonnet 5 $2/$10 per Mtok） | 宣稱優於 GPT-5 與 Claude，對標哪個 Claude 模型未指明，無 benchmark 佐證 | 2026-09-07（單一來源 shattered.io）|
@@ -118,6 +119,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-04⟩ 已查證（2026-09-20）：5.4 倍統計基礎為 npm registry 公開下載數字——2026-07-31 止 30 天窗口 Claude Code 44,264,901 次 vs OpenCode 8,245,142 次，方法公開可驗證，非黑箱推算，脈絡見 [[entities/opencode]]。
 - ⟨Q-05⟩ 已查證（2026-09-20，[Cline 官方 FAQ](https://cline.bot/faq)）：Cline 工具免費、僅收所接模型 token 費；官方載明免費模型（如 Gemini）常遇 rate limit，惟未公布量化上限數字。
 - **已移出表**：GitHub Copilot Pro+（$39/月，Opus 採 27 倍加價換算）來源日期 2026-05-06 已逾 90 天，結論保留於「硬答案」；Kimi K3、HydraFusion 僅有相對成本的定性宣稱、無掛牌價，改記於「對手雷達」硬度欄與「雷達細節」。
+- **GitHub Copilot 加購 credits（2026-10-23，shattered.io，僅標題可用）**：$10 可換 1,500 AI credits；credit 與底層模型、token 量的對應關係未見報導，與已移出表之 Pro+ $39 月費（27 倍加價換算，2026-05-06 查證）是否同一套計費口徑待查。
 - **久未更新（2026-10-13，表滿 12 列換手，讓位給 Gemini 4 Argon、Muse Wonder Full）**：Antigravity（Google）Free／Pro ~$20／Ultra ~$100／Ultra Max $200，依附 Google AI 訂閱框架（2026-07-23，2026-08-13 查證）。
 - Cline 免費工具、token 費用另計，介於 Claude Code 與 Copilot 間的免費替代（2026-07-22，Google News/tech-insider.org）。兩者均訂閱制／免費工具，不可按 token 換算 vs Claude。
 - **pi-coding-agent**：低成本編碼 agent 的成本數字已升格為「硬答案」條目（Databricks，2026-08-13 查證）。
@@ -172,8 +174,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
+- 10-22：VS 版 Copilot 新增聊天內瀏覽 PR、切換信任 AI 模型、偵測弱點套件自動修補；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA 生效——四者 Claude Code 在 VS 內均無對應。
 - 10-15／16：Agentic autofix 正式 GA；Copilot in Slack/Teams 新增多 repo 單一對話；官方公告 11-16 起棄用部分模型——三者 Claude Code 均無對應。
-- 09-24／25：GA 功能於 Business/Enterprise 帳號推出全域預設開啟政策；同日 Microsoft 推出 all-in-one Copilot app 整合旗下商用 AI，CNBC／GeekWire 稱劍指 Anthropic 與 OpenAI。
 - 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
 **還沒解決**
 - 棄用型號完整清單、JetBrains 版本適用範圍、all-in-one Copilot app 整合範疇與定價均未見完整報導。
@@ -238,6 +240,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-23
+- **Microsoft／GitHub**：shattered.io 整理 2026 年 GitHub Copilot 方案定價，稱 $10 可換 1,500 AI credits；詳見「競品定價對照」新增列，單一來源僅標題可用（Topic Watch/competitor-landscape）
+- **Microsoft／GitHub**：VS 版 Copilot 9 月更新支援聊天內瀏覽 PR、切換信任 AI 模型、即時修補弱點套件；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA；詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog ×2）
+- **Microsoft／GitHub**：Copilot 用量指標 API 新增顯示組織自建 skills、custom agents、MCP servers、slash commands 與 plugins 的具體名稱，不再合併計算；屬企業用量分析功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **OpenAI**：官方推出 Decisions API 正式版（GPT-6 Luna 模型），宣稱比 Responses API 快 10 倍、聚焦低成本快速決策，並提供美歐資料落地選項；詳見「對手雷達」OpenAI 列更新（Blog/OpenAI News）
+- **OpenAI（分析文，非競品動態）**：官方部落格宣布與波蘭 NASK 機構合作推進 AI 安全、資安與技術研究，強化防護與數位韌性；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Meta（透過比較報導）**：Barron's 發表「Claude Duet 與 Meta Muse 比較」文章，具體比較內容與結論未見報導，僅標題可用（Google News/Barron's）
 
 ### 2026-10-21
 - **OpenAI（分析文，非競品動態）**：官方部落格宣布旗下模型（含 Codex 工作流程）將透過 Google Cloud Marketplace 的 Model Garden 提供；純通路擴張，未見與 Claude 的對比數字，不列入「對手雷達」表（Blog/OpenAI News）

@@ -37,8 +37,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
 
-> **最新動態**（2026-10-15）
-> anthropic-sdk-python v1.14.0／anthropic-sdk-typescript vertex-sdk-v0.21.0 同步新增 Managed Agents 的 `execution_identity`；官方 release note 僅列欄位新增，具體可操作的 API 用法未載。
+> **最新動態**（2026-10-23）
+> 官方查證 Proactive Workflows 底層已改稱 scheduled tasks（原 Routines）；社群出現負向對照——Show HN Omnara（98 分，4 個來源同日報導）自稱是開源替代方案，證據等級僅單一自述＋互動數字，尚無第三方測試數據。
 
 ---
 
@@ -63,6 +63,8 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 **為什麼只剩 🔥🔥**：近四週（08-09～09-06）只被提到兩天——一次是 SDK 版號、一次是別人拿它當對照組——沒有任何正向採用回報，實質新功能停在 05-22。
 %% 維運備忘：2026-09-05 頁面健檢一次性下修。量測：python scripts/news_mentions.py --since 4w --any "Managed Agents" "受管代理" → 命中 08-20（版號無細節）、09-03（負向對照）。現行「連續 4 週零命中 −1 格」對本頁降 0 格，故為編輯判斷；上限式判準是否成法見 docs/page-audits/ledger.md 待裁決。feature-radar L226 已同步。%%
+
+- **社群負向對照（2026-10-21）**：Show HN Omnara（Hacker News，98 分，4 個來源同日報導）自稱是 Managed Agents 的開源替代方案；證據等級：單一自述＋互動數字，尚無第三方測試數據。
 
 ---
 

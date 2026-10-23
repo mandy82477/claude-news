@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
 
-> **最新動態**（2026-09-25）
-> Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求簡報，**含 Claude Code 與 Artifact 介面**。
+> **最新動態**（2026-10-23）
+> 官方確認 2026-10-08 起脫離 beta，所有方案（含 Free）皆可用 Claude Slides。
 
 ---
 

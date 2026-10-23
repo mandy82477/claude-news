@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **手機遠端控制新增反向案例**（2026-10-18）
-> - **OpenMinis/iCTRL**：讓 Claude Code、Codex 等 agent 透過加密 JSON-RPC API 操作 iPhone／iPad，而非手機控制 agent。
+> **手機遠端控制再添一例反向案例，可視化新增多 session 儀表板**（2026-10-23）
+> - **witchan/ios-mcp**：iOS 自動化工具與 MCP Server，讓 AI agent 看懂 iPhone 畫面並直接操作，與 10-18 的 iCTRL 同屬「agent 操作手機」反向取向。
+> - **ccdeck**：本機儀表板統一顯示多個 Claude Code／Codex session 與子 agent 樹狀結構，解決漏看待回覆 session 的問題。
 
 ---
 
@@ -56,6 +57,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### witchan/ios-mcp：iOS 自動化工具與 MCP Server，讓 AI agent 看懂 iPhone 畫面並直接操作手機（2026-10-23）
+
+- **主線：** —
+- **核心模式：** iOS 自動化工具＋MCP Server，讓 Claude、Codex、Cursor 等 AI agent 取得 UI 樹、定位元素、截圖並做 OCR 辨識，進而點擊滑動、輸入文字、管理應用與讀取日誌，直接操作 iPhone 畫面；適用自動化測試與 iOS 逆向調試；GitHub Search 691 星。
+- **與既有模式的關係：** 與既有代表技巧（ccgram、Android Remote Control MCP、Shellular、OpenMinis/iCTRL 等）方向相反——既有做法多是把手機當控制 Claude Code 的介面，本則是 agent 反過來操作手機；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（691★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/witchan/ios-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### bargan/ccdeck：本機儀表板統一顯示多個 Claude Code／Codex session 與子 agent 樹狀結構（2026-10-23）
+
+- **主線：** —
+- **核心模式：** 本機儀表板，統一顯示所有同時執行中的 Claude Code／Codex session 與各自的子 agent 樹狀結構，解決同時開多個 agent 時漏看某個 session 已完成或正在等待權限確認的問題；dev.to 11 讚。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office、agent-office、MioIsland 等遊戲化空間視覺化）一個「多 session／子 agent 樹狀結構總覽」取向——既有做法聚焦單一 agent 活動的視覺化隱喻，本則解決多 session 同時進行時的漏看問題；非大型 codebase 特有痛點，主線填 —。
+- **來源：** dev.to（11 讚）；[原文](https://dev.to/bargan/the-scarce-resource-is-not-tokens-it-is-my-attention-why-i-built-ccdeck-4pik)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### OpenMinis/iCTRL：讓 Claude Code、Codex 等 agent 透過加密 JSON-RPC API 遠端操作 iPhone／iPad（2026-10-18）
 

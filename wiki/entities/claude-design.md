@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
 
-> **最新工具動態**（2026-10-08 發布，2026-10-11 查證）
-> Claude Dashboards 與 Claude Motion 進 beta；Design、Docs、Slides 脫離 beta、所有方案可用。**獨立站 claude.ai/design 於 2026-12-14 關閉**，有專案或團隊 design system 的人要先搬。
+> **最新工具動態**（2026-10-23）
+> Claude Code 端 `/design` 等範本現為 beta（非 research preview），需 v2.1.265+；Pro／Max／Team 預設開，Enterprise 由 Owner 逐項開。
 
 ---
 

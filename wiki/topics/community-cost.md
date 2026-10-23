@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **多供應商 AI gateway 新增，星數異常待查**（2026-10-22）
-> - **cheaper-inference/OmniRoute**：單一端點整合 375 家供應商、逾 1,400 款模型，配額感知備援＋壓縮省 token；2026-02 建 repo、星數已近 8 萬，本庫僅陳列星數，未驗證採用規模。
+> **Agent 預算控制新增 hook 防護工具**（2026-10-23）
+> - **rbartoli/agent-usage-guard**：Claude Code hook，用量超過 80% 時防止繼續生出子 agent、快取過期或內容過大時提前提示壓縮，作者自述 75 天內單次爆量 agent 數從 365 降到 27。
 
 ---
 
@@ -73,6 +73,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### rbartoli/agent-usage-guard：Claude Code hook 防用量窗口被幾分鐘內燒完（2026-10-23）
+
+- **主線：** —
+- **核心模式：** 以 hooks 實作的 Claude Code mod：快取過期、內容過大時提前提示「先壓縮再送出」，用量超過 80% 門檻時防止繼續生出子 agent，控制權交還使用者；MIT 授權，作者自述實測 75 天後單次爆量的 agent 數從 365 降到 27。
+- **與既有模式的關係：** 補上「Agent 預算控制」一個以 hooks 實作的用量窗口防護取向（上一代表技巧 AgentWatch 已逾 60 天移出概覽表，本則重新激活此類別），呼應「Hooks 與自動化」；非大型 codebase 特有痛點，主線填 —。
+- **來源：** Hacker News（24 分，2 個來源）；[GitHub](https://github.com/rbartoli/agent-usage-guard)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，作者自述量測、無第三方覆核）
 
 #### cheaper-inference/OmniRoute：單一端點整合 375 家供應商、1,400+ 模型的免費 AI gateway，配額感知備援＋壓縮省 token（2026-10-22）
 

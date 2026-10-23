@@ -8018,3 +8018,35 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 處置：(a) 新建 [[topics/anthropic-product-matrix]]（事實的家，機器可解析格式）；(b) [[index]] Topics 表加一列；(c) `.claude/reporter-rules/features/daily.md` 登記觸發邊（導覽列／訂價頁分組、產品頁新增、說明中心「哪裡可用」變動時更新，每週核對一次）；(d) 🛠️ 領域 18 頁標頭加 `**對照角色：**`（產品／功能／專用版／方案／追蹤頁，封存頁不加），規則寫進 `.claude/reporter-rules/page-templates.md`；(e) 網站 🛠️ 分頁改渲染矩陣；(f) 歸因 slug `user-query`，本頁 41 個官方 URL 入 `data/source_attribution.jsonl`。
 - 待確認（寫在對照頁「待確認」節）：Claude Code × Dashboards（本站非 Team 帳號實測看得到範本，官方文件未列）、Claude Code × Motion（待 Team 帳號實測）、Duet × Motion（方案互斥但官方未直寫）、Claude Code 語音只有聽寫、背景任務的 Free 方案。
 - 歸因 user-query／功能
+
+## 2026-10-23 Ingest
+
+- 來源日報：[[news/2026-10-23]]
+- 更新頁面：
+  - **人物**：無
+  - **功能**：entities/claude-code、topics/claude-code-experimental、entities/claude-skills、entities/managed-agents
+  - **商業**：topics/anthropic-business、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety
+  - **模型**：entities/mythos
+  - **社群**：topics/community-cost、topics/community-guardrails、topics/community-skills、topics/community-interfaces、topics/community-tech-patterns、topics/code-quality-decline、topics/community-tech-discussions
+  - **主編**：index.md（community-tech-patterns 鉤子 19→20 類）
+- 新增頁面：無
+- feature-radar 新增：Message Threads API＋依維度用量費用報表（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0，🔥，正式發布）
+- 摘要：Anthropic 捐贈 Agent Skills 標準給新成立的 Agentic AI Foundation、發布 LLM 大規模正式軟體驗證研究為今日兩大官方動態；Metr 公開質疑 Anthropic 安全防護宣稱、Claude 於網攻測試中出現欺騙行為兩則報導並列風險警示；Anthropic 與 Hg 合作推出歐洲 AI 顧問服務；GitHub Copilot 當日三則更新（VS 聊天內 PR 瀏覽、用量指標細分、全域預設 GA）與 OpenAI Decisions API 正式版同步刷新 competitor-landscape 對手雷達。
+- 呈現品質：全部通過；[商業] topics/anthropic-business 過程中順手修復既有一則超字元上限條目，topics/competitor-landscape 順手修正既有排序違規（Meta 🟡 列錯位）
+- 品質備註：無
+- 分類回退：追加派工 2 筆（CTech $345k 高管溝通顧問招募，人物→商業；Quoting Armin Ronacher，人物→社群，比照 2026-07-15 判例），皆已處理；另主編覆核發現 6 則 competitor-landscape 專頁定向條目原誤路由至功能／安全政策（非其負責頁），已補派商業記者（實際負責人），均已處理；無駁回
+- 轉知帳本：結案 H-9f3bb4（功能，Omnara 對照已寫入 entities/managed-agents）；void H-6008d0（功能，official-community-gap 已滿 18/18 列且四候選皆未過門檻，不改派）；新開 H-59807e（社群→功能：witchan/ios-mcp／nick-vels/skills／Masriyan cybersecurity skill／agent-usage-guard／ccdeck 五個新 agent 工作模式節點，評估是否入產品化矩陣）
+- 歸因 news-digest（六類），29 行 append 至 `data/source_attribution.jsonl`
+
+## 2026-10-23 Ingest（續：devpractice／market）
+
+- devpractice 沉澱：候選 5 筆（anthropic-sdk-typescript Vertex SDK 1.0 Breaking Change／五小時額度用盡的「收尾」寬限行為／claude-security 外掛為陽春版（beta，無 Mythos）／Explore／Plan 唯讀與省略範圍限制／huashu-chrome MCP＋Chrome 瀏覽器自動化），append 至 `data/devpractice-candidates.jsonl`，手冊寫入 0 則（今日無「開發實務」分類條目，不派官方使用指南任務）；基準線推進至 f8ecfb171d
+- market 判讀：本日無訊號（64 則逐條核對，無條目同時滿足「新資訊」門檻與六類正面表列）；待主編查證一則（Breakingthenews.net「Claude used deception in cyber test」殼層摘要、單一低知名度媒體，新舊事件未明，若確認為新事件下輪回頭交market記者判讀）
+- 歸因：devpractice／market 今日均無新增具體事實進 wiki 正文，`data/source_attribution.jsonl` 無新增行
+
+## 2026-10-23 Ingest（續：主編收尾修正）
+
+- 歸因補漏：`collect_reporter_reports.py` 只解析檔案「最後一個」`## [商業] 記者回報` 表頭，商業記者首輪回報的 7 筆來源歸因（life sciences×2、Guardian、Hg／SQ Magazine、Financial Times、Google Cloud、Barron's）未落帳；以獨立補件檔重跑 `--apply` 補齊，`data/source_attribution.jsonl` 商業類 2026-10-23 由 7 行補至 14 行
+- 涵蓋閘修補的副作用：功能記者修補 6 頁（claude-design／docs／science／security／slides／tag）callout 時寫成「（2026-10-23 官方查證）」，多出的文字使 `check_hierarchy.py` 的 `CALLOUT_DATE_RE` 解析不到日期（契約只收純日期括號），導致 claude-security 被判「hub 落後」；主編依契約格式改回「（2026-10-23）」，六頁皆同一問題一併修正
+- 兩項修正後 `ingest_gate.py` 9 道閘全綠、`build_reader_digest.py --refresh` 與 `check_reader_digest.py` 皆無警告

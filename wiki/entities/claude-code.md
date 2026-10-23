@@ -33,12 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-22
+**最後新聞更新：** 2026-10-23
 
-> **最新動態**（2026-10-22）
-> - **版本**：v2.1.308 純 bug 修復；同日 TypeScript Vertex SDK 滿 1.0（⚠️ Breaking Change，改支援新版 API）、Python SDK v2.1.0 擴充 User Profiles enforcement 參數（詳見 [[entities/claude-code#版本更新]]）。
-> - **文件**：桌面版文件新增 Dispatch「建議任務」／session 追蹤說明與檔案路徑複製選單（162,725→165,374 字）。
-> - **旗標**：build 新增 6 個第一階候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，詳見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-10-23）
+> - **版本**：v2.1.309 修正 macOS／Linux 上 sandboxed Bash 與 `denyWrite` 沙盒規則比對問題；同日 anthropic-sdk-python v2.2.0、anthropic-sdk-typescript vertex-sdk-v1.1.0 同步新增 message threads 支援，Python SDK 另新增依維度拆分的用量與費用報表（詳見 [[entities/claude-code#版本更新]]）。
+> - **旗標**：build 新增 4 個第一階候選旗標，詳見 [[topics/claude-code-experimental]]。
 
 ---
 
@@ -46,6 +45,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.309**（2026-10-22）：修正 macOS／Linux 上 sandboxed Bash 指令執行前會先跑過 shell 啟動設定檔、導致該動作發生在沙盒範圍之外的問題；修正 macOS sandbox `denyWrite` glob 規則比對不完全的問題；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）。
+  同版 build 另新增 4 個功能候選旗標（`CLAUDE_CODE_CCR_OWN_CONNECTION_POOL`、`CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK`、`CLAUDE_CODE_RESUME_SHOWS_CUT_OFF_CALLS`、`CLAUDE_CODE_SYNC_PLUGINS_DOWNLOAD_CONCURRENCY`），追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v2.2.0（2026-10-23）新增 message threads 支援、新增依維度拆分的用量與費用報表（舊版報表標記為 legacy），並修正 client 端不再建議在 `max_tokens` 使用 `math.inf`；anthropic-sdk-typescript vertex-sdk-v1.1.0（2026-10-23）同步新增 message threads 支援，見下方「版本更新」表。
 - **v2.1.308**（2026-10-22）：Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）。
   同版 build 另新增 6 個功能候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-typescript vertex-sdk-v1.0.0 正式滿 1.0，⚠️ Breaking Change：改為支援新版 API（2026-10-21），KuCoin 報導稱同時移除取樣相關參數、細節待官方文件完整確認；anthropic-sdk-python v2.1.0 新增 User Profiles API 的 enforcement status、actions 與 filter 參數，見下方「版本更新」表。
 - **v2.1.306**（2026-10-21）：修正雲端 session 在未帶入該 session 環境變數時執行 `claude -p` 會誤報「Not logged in」的問題；修正一個原本會被「prompt is too long」訊息覆蓋掉的 API 錯誤；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）。
@@ -317,14 +318,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：優先訊息通道，可在執行途中即時導正 Claude（Real-time steering，GitHub issue #30492，累積 34 則留言、60 個讚，2026-08-14）**：使用者呼籲新增優先訊息通道（priority message channel），讓使用者能在 Claude 執行中途即時傳送導正指令，而不需中斷現有任務或排隊等候；與既有「訊息佇列模式」需求（issue #50246，排隊而非中斷）為同一類「執行中如何插入使用者輸入」缺口的不同解法——佇列訴求重點是不打斷，本則訴求重點是即時介入；官方尚未回應或排入路線圖。
 - ✅ **已修復（非計費 bug，官方說明為顯示行為）**｜**Claude Code 回傳空白思考區塊，推理 token 仍照常計費（The Register，2026-08-14 報導，2026-09-06 查證）**：The Register 原文：07 中起 API 對 Opus 4.8／Sonnet 5 回空 thinking block；Anthropic 說明 thinking token 本就以 output 計費、不論是否回傳文字，並稱在調查是否為摘要顯示測試的副作用；非計費錯誤。計費爭議面另見 [[entities/pricing]]。
 - 🔎 **查無官方**（標 2026-08-09｜查 #23377、prompt 過長｜複 2026-11-14）｜**「Prompt is too long」錯誤導致 session 永久卡死（GitHub issue #23377，累積 43 則留言、38 個讚，2026-08-08 回報，2026-08-09 查證收錄）**：查證確認完整標題與內容——一旦觸發「Prompt is too long」錯誤，後續每次輸入皆重現同一錯誤，session 永久無法使用，須捨棄該 session 重開；已標記 `has repro`、`area:core`、`area:ide`、`oncall`（內部已排查但無公開回應）；查無官方留言或修復版本。
-- 🔴 **未修復**｜**功能請求：支援與 main 以外分支進行 diff 比較（GitHub issue #23626，累積 38 則留言、120 個讚，2026-08-07，今日互動量最高功能請求）**：使用者希望 Claude Code 支援與 main 以外分支進行 diff 比較；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：支援與 main 以外分支進行 diff 比較（GitHub issue #23626，累積 46 則留言、141 個讚，首見 2026-08-07，2026-10-23 互動數更新，今日三則討論中讚同數最高）**：使用者希望 Claude Code 支援與 main 以外分支進行 diff 比較；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**應優先使用 Read／Grep 等內建工具的情境下仍頻繁改用 Bash 指令如 sed/grep（GitHub issue #19649，累積 45 則留言、101 個讚，2026-08-22，既有行為模式回報）**：使用者回報 Claude 在明顯應優先使用 Read、Grep 等內建工具的情境下，仍頻繁改用 Bash 指令（如 `sed`、`grep`）達成相同目的，非單一事件而是持續存在的行為模式；官方尚未回應。
 - ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：允許自訂 `.claude/agents/` 定義加入 agent team 作為隊友（GitHub issue #24316，累積 41 則留言、43 個讚，2026-08-23）**：使用者呼籲開放將 `.claude/agents/` 目錄下的自訂 agent 定義納入 agent team、以隊友（teammate）身分參與任務分派；官方答：spawning teammate 時可指名 `.claude/agents/` 的定義，隊友照該定義的 `tools` 白名單與 `model`，但 `skills`／`mcpServers` frontmatter 不套用到隊友。
 
 - ⛔ **官方拒修**｜**無法釘選 model version：`--model` 只接受 family 名（GitHub issue #27892，2026-02-23）**：無法指定帶日期 pinned version，官方以 not planned 關閉。見 [[topics/code-quality-decline#模型釘選：你選的不一定算數（2026-02 起）]]。
 - 🔎 **查無官方**（標 2026-08-09｜查 #46221、[[topics/code-quality-decline]]｜複 2026-11-14）｜**Opus 4.6 1M 從選單消失被 200k 取代，預設切 Sonnet（#46221，2026-04-10）**：選 1M 後 /model 該選項消失；關為 duplicate（#45978，無官方留言）。
 - 🔴 **未修復**｜**功能請求：提供選項關閉啟動時歡迎畫面與提示（GitHub issue #2254，累積 47 則留言、151 個讚，首見 2026-08-02，2026-10-13 互動數更新）**：使用者希望能關閉 Claude Code 啟動時顯示的歡迎畫面與提示訊息，認為每次啟動都佔用終端機顯示空間；官方尚未回應或提供設定選項。
-- 🔴 **未修復**｜**v2.1.150 起滑鼠滾輪失效，滾動動作誤判為方向鍵輸入（GitHub issue #65833，累積 35 則留言，2026-07-31，今日全站 GitHub Issues 互動次高）**：升級至 v2.1.150 後，滑鼠滾輪在 TUI 中不再能捲動對話輸出內容，滾動動作反而被誤判為方向鍵輸入，改變對話中游標／選取位置，屬版本更新後的回歸性 bug；與既有「CLI TUI 模式下無法捲動回看完整對話歷史」（issue #28077）同屬 TUI 捲動相關問題但成因不同，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**v2.1.150 起滑鼠滾輪失效，滾動動作誤判為方向鍵輸入（GitHub issue #65833，累積 49 則留言、124 個讚，2026-10-23 更新）**：升級至 v2.1.150 後，滑鼠滾輪在 TUI 中不再能捲動對話輸出內容，滾動動作反而被誤判為方向鍵輸入；與既有「CLI TUI 模式下無法捲動回看完整對話歷史」（issue #28077）同屬 TUI 捲動問題但成因不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 在部分提示上卡住/凍結 5–20 分鐘以上（GitHub issue #26224，累積 131 則留言、151 個讚，2026-09-08 互動數更新，全站今日互動量最高）**：大量提示情境下卡住／凍結，持續 5–20 分鐘以上，標題註記 URGENT；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 經常誤判所在工作目錄（GitHub issue #1669，累積 51 則留言、86 個讚，首見 2026-07-25，2026-10-13 互動數更新）**：使用者回報 Claude Code 經常誤判自己目前所在的工作目錄，導致指令執行失敗，且需經過多輪自我排查才能發現問題根源；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：訊息佇列模式——排入佇列而非中斷進行中任務（GitHub issue #50246，累積 67 則留言、236 個讚，首見 2026-07-25，2026-08-25 互動數更新，今日全站互動量次高）**：使用者反映 Claude 進行中任務時，目前唯一選項是中斷，若使用者想追加後續指令，只能打斷現有工作或事後另尋方式協調；呼籲新增訊息佇列機制，讓後續指令排隊等候而非強制中斷；官方尚未回應或排入路線圖。
@@ -503,7 +504,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**VSCode 擴充套件確認變更時未顯示 Edit 預覽/diff（GitHub issue #8660，累積 52 則留言、90 個讚，首見 2026-07-08，2026-09-11 互動數更新，已持續數月未修復）**：確認變更時 diff 畫面未正確顯示，難以於套用前檢視異動；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop/Cowork 缺 RTL（希伯來/阿拉伯文）排版支援（GitHub issue #38005，累積 41 則留言、111 個讚，首見 2026-07-07，2026-08-05 互動數更新，功能請求）**：使用者要求 Claude Desktop 與 Cowork 介面支援 RTL（right-to-left）排版，目前不支援希伯來文、阿拉伯文等 RTL 語言的正確顯示；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Pro：CoworkVMService 因「signature verification initialization failed: failed to get service executable path」無法啟動（GitHub issue #29941，累積 39 則留言，首見 2026-07-23）**：使用者回報 Windows 11 Pro 上 CoworkVMService 因簽章驗證初始化失敗（找不到服務執行檔路徑）而無法啟動，導致 Cowork 功能在該平台完全無法使用；官方尚未回應。
-- 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 86 則留言、7 個讚，2026-09-12 留言數更新）**：與 #29941 同屬 Windows Cowork 啟動障礙但成因不同；官方尚未回應。
+- 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 87 則留言、7 個讚，2026-10-23 互動數更新，今日 GitHub Issues 討論量最高）**：與 #29941 同屬 Windows Cowork 啟動障礙但成因不同；官方尚未回應。
 - 🔴 **未修復**｜**Desktop：macOS 無法啟用 Bypass Permissions，自動退回 Accept Edits（GitHub issue #61415，累積 65 則留言、29 個讚，2026-09-11，v2.1.148）**：畫面顯示「Permission mode couldn't be changed」；官方尚未回應。
 - 🔴 **未修復（範圍擴大）**｜**Cowork（Windows）九月累積更新破壞 device_bash，ARM64／x64 皆中，五機 A/B 回滾確認（GitHub issue #92958，累積 49 則留言、8 個讚，2026-09-12）**：與 #92984 同源，移除對應 KB 可恢復；官方尚未修復。
 - 🔴 **未修復**｜**Claude Desktop（Windows 11）主視窗持續蓋在其他應用程式最上層，無設定可關閉（issue #85891，103 則留言、259 讚，09-16 更新）**：類似強制「always on top」，影響多視窗工作流程；官方尚未回應。
@@ -623,6 +624,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v2.2.0** | 2026-10-23 | 新增 message threads 支援與依維度拆分用量費用報表；client 不再建議 `max_tokens` 用 `math.inf`（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.1.0** | 2026-10-23 | 新增 message threads 支援，與同日 Python SDK 呼應（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0)）|
+| **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
 | **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking Change：改為支援新版 API（2026-10-21）；KuCoin 報導稱同時移除取樣相關參數，官方原文截斷待確認（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
 | **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|
@@ -959,6 +963,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | **v2.1.309**：sandboxed Bash／`denyWrite` 修復，4 旗標。SDK 同步新增 message threads。互動更新 #74649／#65833／#23626。 |
 | 2026-10-22 | **v2.1.308**：純可靠性修正。Vertex SDK 滿 1.0（⚠️ Breaking Change）；Python SDK v2.1.0 擴充 enforcement 參數；桌面文件增 Dispatch 說明；旗標增6消1。 |
 | 2026-10-20 | **v2.1.304**：mod 系統新增 hook 跳過具名 transcript＋`tool.check` 的 `decider: "person"`。桌面文件新增 171 段（近期最大單日異動）。build 新增 11 個候選旗標。 |
 | 2026-10-19 | **v2.1.303**：純臭蟲修復，無使用者端功能異動。互動更新 6 則：#84352（201 留言，今日最高）、#81698、#85199、#76694、#14200、#65632。 |

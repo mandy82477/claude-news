@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
 
-> **最新動態**（2026-10-21）
-> - **蠍毒神經毒素蛋白質結合物**：Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物，Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分）。
+> **最新動態**（2026-10-23）
+> 產品頁標 Claude Science 為 Public Beta（非 active）；運算跑在本機、HPC 登入節點、雲端 VM 或 Slurm／Modal，非 Anthropic 動態調配。
 
 ---
 
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作台 app。整合研究常用工具套件與可稽核 artifact（Auditable Artifacts），定位為科研人員的端對端 AI 研究平台。使用者可直接存取此 app，無需自行配置底層 API。
 
-**形態與方案（2026-10-23 官方查證）：** 產品頁標 Claude Science (beta)、公開 beta；為獨立桌面 app（macOS／Windows／Linux），從瀏覽器連線，用你方案內的 Claude 模型，另經 NVIDIA BioNeMo skills 接 Evo 2、Boltz-2、OpenFold3。Pro／Max／Team／Enterprise 可用（Team／Enterprise 需管理員開），學術與非營利有 Team plan for Scientists（[官方產品頁](https://claude.com/product/claude-science)）。
+**形態與方案（2026-10-23）：** 產品頁標 Claude Science (beta)、公開 beta；為獨立桌面 app（macOS／Windows／Linux），從瀏覽器連線，用你方案內的 Claude 模型，另經 NVIDIA BioNeMo skills 接 Evo 2、Boltz-2、OpenFold3。Pro／Max／Team／Enterprise 可用（Team／Enterprise 需管理員開），學術與非營利有 Team plan for Scientists（[官方產品頁](https://claude.com/product/claude-science)）。
 
 核心功能組合：
 - 研究常用工具套件（整合資料分析、文獻搜尋等研究場景工具）
@@ -76,7 +76,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 - **研究工具套件**：整合科學研究場景常用工具，降低工具切換摩擦
 - **可稽核 Artifact**：研究產出含完整稽核軌跡，支援研究可重現性與透明度要求
-- **運算位置可選**：本機、HPC 登入節點、雲端 VM、Slurm（SSH）或 Modal 帳號（2026-10-23 官方查證）
+- **運算位置可選**：本機、HPC 登入節點、雲端 VM、Slurm（SSH）或 Modal 帳號（2026-10-23）
 
 ## 相關議題
 

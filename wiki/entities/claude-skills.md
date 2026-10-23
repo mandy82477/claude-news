@@ -33,14 +33,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 功能（Capabilities；含 Plugins）
 **首次出現：** 2026-04-27
 **最後更新：** 2026-10-23
-**最後新聞更新：** 2026-09-28
+**最後新聞更新：** 2026-10-23
 
-> **最新官方動態**（2026-09-28）
-> 報導稱 Anthropic 正式推出「Claude Marketplace」，收錄逾 2,000 個 connector 與 plugin（Google News 轉述，未附官方公告連結，數字未經官方一手確認）。
+> **最新官方動態**（2026-10-23）
+> Anthropic 將 Agent Skills（讓 AI agent 具備特定領域知識與工作流程的開放標準）捐贈給新成立的 Agentic AI Foundation（AAIF），結束官方獨自治理；官方稱自 2025-12 發布以來已有逾 70 個 agent 平台（含 ChatGPT、Cursor、GitHub Copilot、VS Code）整合此標準（[官方](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)）。
 
 ---
 
 ## 現況
+
+**2026-10-23：** Anthropic 將 Agent Skills 開放標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權由官方單方轉移至該基金會；官方稱逾 70 個平台已整合此標準。已在用 Skills 格式的團隊可留意治理權轉移後的版本相容性是否受影響。
 
 Anthropic 目前把 Skills 定位為官方六大「控制層」之一：把常用工作流程（如程式碼審查、安全審計、前端設計）封裝成描述文件，Claude 依語意自動判斷何時載入執行，使用者不需手動下指令；**但 2026-07-19（v2.1.215）起 `/verify` 與 `/code-review` 兩項技能改為例外**，不再自動觸發，須使用者手動呼叫指令才會執行（詳見下方「官方 Skills 生態一覽」）。2026-06-21 官方部落格《七種指令傳遞方法》正式將其納入決策框架，釐清 Skills 與 CLAUDE.md、rules、subagents、hooks、output styles、system prompt append 之間的定位差異。
 
@@ -93,7 +95,8 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | | v2.1.178：Skills 在巢狀子 Agent 中可正常運作（搭配新版 `Tool(param:value)` permission 語法） | 2026-06-16 |
 | 官方設計指南 | 《Lessons from building Claude Code: How we use skills》——內部數百個 Skills 的實戰心得 | 2026-06-05 |
 | | 《七種指令傳遞方法》——Skills 與 CLAUDE.md/rules/subagents/hooks/output styles/system prompt append 六層控制的定位框架 | 2026-06-21 |
-| 分享／同步機制 | Google News 轉述 Claude Marketplace 上線，逾 2,000 個 connector／plugin，無官方公告連結；企業合作面見 [[topics/anthropic-business]] | 2026-09-27 |
+| 分享／同步機制 | Agent Skills 標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉移；逾 70 平台已整合 | 2026-10-23 |
+| | Google News 轉述 Claude Marketplace 上線，逾 2,000 個 connector／plugin，無官方公告連結；企業合作面見 [[topics/anthropic-business]] | 2026-09-27 |
 | | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
 | | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程與審核標準未載） | 2026-09-25 |
 | | ✅ **已有官方市集**（2026-08-08 查證官方文件更正）：`claude-plugins-official`（Anthropic 策展，首次互動啟動時自動註冊）與 `claude-plugins-community`（第三方送審後上架，需自行 `/plugin marketplace add`）；目錄另可於 [claude.com/plugins](https://claude.com/plugins) 瀏覽，送審有自動驗證與安全篩查。**創作者變現機制仍缺** | 市集已就位；變現無官方時程 |
@@ -123,6 +126,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 ## 參考來源
 
+- [Anthropic Blog: Donating Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)（2026-10-23）
 - [Anthropic Blog: Lessons from building Claude Code: How we use skills](https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills)（2026-06-05）
 - [Anthropic Blog: The seven methods for delivering instructions](https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more)（2026-06-21）
 - [OpenCode-power-pack – Claude Code skills ported to OpenCode](https://github.com/waybarrios/opencode-power-pack)（2026-04-27）
@@ -136,6 +140,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | Agent Skills 捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉移；逾 70 個平台已整合此標準 |
 | 2026-09-26 | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI，僅標題可用） |
 | 2026-09-25 | 桌面版文件新增段落：本機／SSH session 起自動載入帳號 skills／plugins，桌面裝的 plugin 不同步雲端；文件索引新增 22 頁（自架市集、plugin 開發文件，僅標題可用）、移除 9 頁 |
 | 2026-08-24 | 第三方索引工具 SkillWorks（非官方）08-23 揭露其索引規模統計（503,570 listings、392,227 skills、80,636 subagents、23,442 plugins、7,265 marketplaces，48,190 個 skill 無法載入，2026-08-22 rebuilt）；HN 僅 2 分，互動偏低，數字未經官方驗證，供生態規模參考 |

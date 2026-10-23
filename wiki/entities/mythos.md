@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-10
-**最後新聞更新：** 2026-10-05
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **最新進展**（2026-10-05）
-> Anthropic 狀態頁：Mythos 5.1／Fable 5.1 一度錯誤率升高，影響約 30 分鐘，已解決；完整記錄見 [[entities/fable-5]]。
+> **最新進展**（2026-10-23）
+> Anthropic 與 Theorem 合作研究：LLM 可大規模生成形式化驗證證明，回應「AI 已能輕易找漏洞」的防禦缺口（HN 392 分）。
 
 ---
 
 ## 現況
 
-**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：官方研究測得 GLM-5.3 完整控制流劫持 4%、Mythos Preview 同測 6%，Opus 4.6、GLM-5.2 做不到——Mythos 的網攻能力領先幅度正在縮小。量測方法、擴散脈絡與防護見 [[topics/ai-agent-safety#模型網攻能力與防護]]（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
+**2026-10-22（Anthropic 與 Theorem：LLM 大規模生成形式化驗證證明）**：Anthropic 研究部落格發布研究，稱 AI 已能輕易發現並利用軟體漏洞、標準防禦已不足，需要能證明程式碼無漏洞的方法；與形式化驗證公司 Theorem 合作，展示大規模產生機器可驗證 formal proof 的工作流程，回應本頁「資安雙重性」防禦端一直未解的瓶頸（HN 392 分、The Decoder 同日跟進；[Anthropic Research](https://www.anthropic.com/research/formal-verification)，2026-10-22；詳見下方「時序」10-22 條目）。
 
-**2026-09-01（Mythos 5.1 發布，仍限信任機構存取）**：Anthropic 正式發布 Claude Mythos 5.1，與同日發布的 Claude Fable 5.1 為**同一模型的不同防護層級**——Mythos 5.1 護欄「專為資安與生命科學工作設計」，維持僅開放信任機構存取，並非全面公開；新增反萃取（anti-distillation）機制。此舉為 2026-07-25 Mashable 標題「Claude Mythos, or a model like it, to get public release」傳聞的**部分證實**：版本確實推出新一代，但存取模式未變為公開，與該標題字面暗示的「公開發布」有落差（詳見下方「時序」07-25 條目）；能力評測、System Card 與定價變動等細節見 [[entities/fable-5]]（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）。
+**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：官方研究測得 GLM-5.3 完整控制流劫持 4%、Mythos Preview 同測 6%，Opus 4.6、GLM-5.2 做不到——Mythos 的網攻能力領先幅度正在縮小。量測方法、擴散脈絡與防護見 [[topics/ai-agent-safety#模型網攻能力與防護]]（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -133,6 +133,13 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-22
+**Anthropic 與 Theorem 合作研究：LLM 可大規模生成形式化驗證證明，直指「AI 找漏洞比防禦快」的缺口**：
+- Anthropic 研究部落格發布〈LLMs are making formal software verification feasible at a much larger scale〉：與形式化驗證公司 Theorem 合作，展示 LLM 大規模產生機器可驗證 formal proof 的工作流程（[Anthropic Research](https://www.anthropic.com/research/formal-verification)，2026-10-22；HN 392 分，5 個來源）
+- 官方稱 AI 已能輕易發現並利用軟體漏洞、標準資安防禦已不足，需要能證明程式碼無漏洞的方法，此即該研究動機
+- The Decoder 同日跟進報導，標題稱「Claude 可自動寫程式碼並證明其安全」；原始研究未點名具體模型版本，僅以「LLM」泛稱，本頁暫不歸入 Mythos／Fable 特定世代（Google News/The Decoder，2026-10-23）
+- **模型面意義**：formal verification 是本頁「資安雙重性」防禦端的新進展，呼應 Project Glasswing 首批夥伴點名的瓶頸——「驗證、揭露與修補速度已取代找漏洞成為新瓶頸」（見上方「Project Glasswing」）；政策與產業防禦範式轉變的意涵見 [[topics/ai-agent-safety]]，本頁僅記錄模型能力面
 
 #### 2026-10-05
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：
@@ -307,3 +314,6 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [[news/2026-09-30]]
 - [Google News/The Register：Anthropic's super bug-hunting model Mythos is hardcore good at math, as latest vuln under attack shows](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5)（2026-10-03，僅標題可用，無漏洞編號／細節，弱訊號；完整記錄見「時序」2026-10-03 條目）
 - [[news/2026-10-04]]
+- [LLMs are making formal software verification feasible at a much larger scale](https://www.anthropic.com/research/formal-verification) — Anthropic Research（2026-10-22）
+- [Google News/The Decoder：Anthropic's Claude now writes code and proves it safe automatically](https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFhWNmYyaWJiMHdMWXJFZHVGam5MMjR4TVRSNUV0c3hHV1JVb2JHTzJYYzNqZ0ZFY1ppdi1RRUU1ZUJ3SjJ4WmZkYlNXSWhBWEU1eEl4X2E3VFhlaVZfQmpmNTFGQW1YRkowQlNlakE?oc=5)（2026-10-23，僅標題可用）
+- [[news/2026-10-23]]

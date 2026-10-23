@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
 
-> **最新資安產品動態**（2026-10-22）
-> Claude Security 新增偵測「同一漏洞再次出現」的能力並追蹤修補進度，不只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，細節未見官方部落格或文件佐證。
+> **最新資安產品動態**（2026-10-23）
+> 官方確認主產品是 claude.ai 網頁 app（Mythos 掃描僅此）；Claude Code 端為另裝的 claude-security 外掛，非內建整合。
 
 ## 現況
 

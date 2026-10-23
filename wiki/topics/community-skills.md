@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
-> **新增內建 agent 規則的專案樣板**（2026-10-21）
-> - **wataru-maeda/react-native-boilerplate（520★）**：React Native 樣板內建 AGENTS.md 規則與 skills，同時相容 Claude Code、Codex、Cursor。
+> **新增資安垂直領域的 22 個 skills 合集**（2026-10-23）
+> - **Masriyan/Claude-Code-CyberSecurity-Skill（503★）**：涵蓋攻防、逆向工程、威脅情報、CSOC 自動化、AI/LLM 安全、GRC 等 22 個資安專用 Claude Code Skills。
 
 ---
 
@@ -68,6 +68,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Masriyan/Claude-Code-CyberSecurity-Skill：22 個資安專用 Claude Code Skills 合集，涵蓋攻防、情報與合規（2026-10-23）
+
+- **主線：** —
+- **核心模式：** 22 個生產等級 Claude Code Skills 合集，供資安專業人員使用，涵蓋攻擊性安全、防禦操作、逆向工程、威脅狩獵與情報、紫隊演練、CSOC 自動化、AI/LLM 安全、行動裝置、OT/ICS、GRC 與軟體供應鏈安全；GitHub Search 503 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧（drawio-skill、geo-score 等多為單一用途 skill）一個「單一垂直領域（資安）22 個 skill 整批合集」的規模取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（503★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### wataru-maeda/react-native-boilerplate：React Native 樣板內建 AGENTS.md 規則與 skills，一次相容 3 款 AI coding agent（2026-10-21）
 
