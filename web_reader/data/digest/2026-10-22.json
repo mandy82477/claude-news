@@ -460,16 +460,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-duet",
-      "name": "Claude Duet",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-security",
-      "name": "Claude Security",
-      "pageType": "entity"
-    },
-    {
       "id": "eric-schmidt",
       "name": "Eric Schmidt",
       "pageType": "entity"

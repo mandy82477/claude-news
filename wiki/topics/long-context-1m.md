@@ -3,14 +3,15 @@ page: "topics/long-context-1m"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-16"
+last_updated: "2026-10-23"
 last_news_update: "2026-10-16"
 status_main: "ongoing"
-days_since_news: 6
+matrix_role: "追蹤頁"
+days_since_news: 7
 parent: null
 children: "['topics/long-context-1m-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 7
 inbound_links: 15
 attribution_count: 5
 attribution_last: "2026-10-16"

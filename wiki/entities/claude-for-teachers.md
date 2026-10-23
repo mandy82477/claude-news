@@ -4,15 +4,16 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-09-26"
+last_updated: "2026-10-23"
 last_news_update: "2026-07-18"
 status_main: "active"
-days_since_news: 96
+matrix_role: "方案"
+days_since_news: 97
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 96
-inbound_links: 4
+days_since_news_subtree: 97
+inbound_links: 6
 attribution_count: 3
 attribution_last: "2026-07-18"
 top_source: "google-news"

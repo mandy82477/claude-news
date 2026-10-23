@@ -437,16 +437,6 @@
   "preview": "Claude Code：v2.1.282：新增 maxProseWidth 設定，限制寬終端機下 Claude 散文輸出的寬度（表格、程式碼區塊維持全寬）；另新增啟動通知，/status 亦有異動（官方原文截斷，細節未載）；build 另新增 8 個功能候選旗標＋2 個代號旗標，CLAUDE_CODE_OCHRE_KI",
   "sedimentedToday": [
     {
-      "id": "claude-docs",
-      "name": "Claude Docs",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-slides",
-      "name": "Claude Slides",
-      "pageType": "entity"
-    },
-    {
       "id": "llm-wiki-pattern",
       "name": "Karpathy 式 LLM wiki 模式",
       "pageType": "topic"

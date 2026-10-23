@@ -2,26 +2,27 @@
 page: "entities/claude-slides"
 kind: "entity"
 type: "feature"
-status: "beta"
+status: "active（2026-10-08 起脫離 beta，所有方案含 Free 可用；2026-10-23 官方查證）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-17"
-last_news_update: "2026-09-25"
-status_main: "beta"
-days_since_news: 27
+last_updated: "2026-10-23"
+last_news_update: "2026-10-23"
+status_main: "active"
+matrix_role: "功能"
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 27
-inbound_links: 4
-attribution_count: 2
-attribution_last: "2026-09-25"
+days_since_news_subtree: 0
+inbound_links: 6
+attribution_count: 3
+attribution_last: "2026-10-23"
 top_source: "hn-repo-bridge"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Slides

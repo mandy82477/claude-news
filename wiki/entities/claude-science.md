@@ -2,19 +2,20 @@
 page: "entities/claude-science"
 kind: "entity"
 type: "product"
-status: "active"
+status: "beta（公開測試版，2026-10-23 官方查證）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-21"
-last_news_update: "2026-10-21"
-status_main: "active"
-days_since_news: 1
+last_updated: "2026-10-23"
+last_news_update: "2026-10-23"
+status_main: "beta"
+matrix_role: "專用版"
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 6
-attribution_count: 21
-attribution_last: "2026-10-21"
+days_since_news_subtree: 0
+inbound_links: 8
+attribution_count: 22
+attribution_last: "2026-10-23"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

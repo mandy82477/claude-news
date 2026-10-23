@@ -464,11 +464,6 @@
   "preview": "Claude Code：v2.1.291 修正兩項回歸：雲端 session 可能遺失權限提示答案（源自 v2.1.290）、對話尾端訊息可能遺失（源自 v2.1.288）。",
   "sedimentedToday": [
     {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "simon-willison",
       "name": "Simon Willison",
       "pageType": "entity"

@@ -2,19 +2,20 @@
 page: "entities/claude-duet"
 kind: "entity"
 type: "product"
-status: "active（Research Preview，僅美國 Pro／Max 方案）"
+status: "active（Research Preview，美國 Pro／Max 候補名單制）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-22"
-last_news_update: "2026-10-22"
+last_updated: "2026-10-23"
+last_news_update: "2026-10-23"
 status_main: "active"
+matrix_role: "產品"
 days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
-inbound_links: 1
-attribution_count: 7
-attribution_last: "2026-10-22"
+inbound_links: 3
+attribution_count: 8
+attribution_last: "2026-10-23"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

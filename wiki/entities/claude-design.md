@@ -4,17 +4,18 @@ kind: "entity"
 type: "feature"
 status: "active（初期，體驗粗糙）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-11"
-last_news_update: "2026-10-09"
+last_updated: "2026-10-23"
+last_news_update: "2026-10-23"
 status_main: "active"
-days_since_news: 13
+matrix_role: "功能"
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 13
-inbound_links: 13
-attribution_count: 5
-attribution_last: "2026-10-09"
+days_since_news_subtree: 0
+inbound_links: 18
+attribution_count: 6
+attribution_last: "2026-10-23"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
