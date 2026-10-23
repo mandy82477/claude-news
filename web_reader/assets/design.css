@@ -3181,8 +3181,6 @@ p.ppl-muted { margin: 8px 0; padding-inline: 8px; }
 .pmx__psub { display: block; font-size: var(--fs-small); color: var(--ink-3); line-height: 1.4; }
 .pmx__pattr { display: block; font-size: var(--fs-small); color: var(--ink-2); line-height: 1.45; margin-top: 6px; }
 .pmx__pattr i { font-style: normal; color: var(--ink-3); margin-right: 4px; }
-.pmx__pcount { display: block; font-size: var(--fs-small); color: var(--ink-3); margin-top: 6px; }
-.pmx__pcount b { font-family: var(--font-mono); font-weight: 400; font-size: var(--fs-meta); color: var(--ink-2); margin-left: 4px; }
 .pmx .pmx__grp th { padding: 22px 0 6px; border-bottom: 1px solid var(--border-2); }
 .pmx__grp-btn { background: none; border: 0; padding: 0; cursor: pointer; text-align: left; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .pmx__grp-btn--static { cursor: default; }

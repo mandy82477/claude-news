@@ -684,12 +684,10 @@
     t += `<tr class="pmx__axis"><th></th><th colspan="${P.length}"><div class="pmx__axis-in"><span>誰起手</span><span class="pmx__axis-line"></span></div></th></tr>`;
     t += '<tr><th class="pmx__corner" scope="col">功能 ／ 產品</th>';
     P.forEach(p => {
-      const n = F.filter(f => stated(f, p.id)).length;
       const base = p.name.replace(/（.*$/, ''), sub = (p.name.match(/（(.+)）$/) || [])[1];
       t += `<th class="pmx__ph${st.col === p.id ? ' is-on' : ''}" scope="col" data-pmx-colh="${esc(p.id)}"><button type="button" class="pmx__ph-btn" data-pmx-prod="${esc(p.id)}" aria-pressed="${st.col === p.id}">
   <span class="pmx__pname">${esc(base)}</span>${sub ? `<span class="pmx__psub">${esc(sub)}</span>` : ''}${p.id === 'claude-app' ? '<span class="pmx__psub">含 Cowork 任務</span>' : ''}
-  <span class="pmx__pattr"><i>入口</i>${esc(p.entry)}</span><span class="pmx__pattr"><i>起手</i>${esc(p.whoStarts)}</span>
-  <span class="pmx__pcount">官方明載<b>${n}/${F.length}</b></span></button></th>`;
+  <span class="pmx__pattr"><i>入口</i>${esc(p.entry)}</span></button></th>`;
     });
     t += '</tr></thead>';
     PMX_GROUPS.forEach(g => {
@@ -735,7 +733,7 @@
     P.forEach(p => {
       const has = F.filter(f => stated(f, p.id) || f.cells[p.id].status === 'vague');
       const unk = F.filter(f => f.cells[p.id].status === 'unknown');
-      h += `<section class="pmxl__sec" data-pmxl-prod="${esc(p.id)}"><div class="pmxl__name">${esc(p.name)}</div><div class="pmxl__attr"><i>入口</i>${esc(p.entry)}</div><div class="pmxl__attr"><i>起手</i>${esc(p.whoStarts)}</div>`;
+      h += `<section class="pmxl__sec" data-pmxl-prod="${esc(p.id)}"><div class="pmxl__name">${esc(p.name)}</div><div class="pmxl__attr"><i>入口</i>${esc(p.entry)}</div>`;
       PMX_GROUPS.forEach(g => {
         const rows = has.filter(f => f.group === g.k);
         if (!rows.length) return;
