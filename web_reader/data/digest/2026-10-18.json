@@ -385,16 +385,6 @@
       "pageType": "entity"
     },
     {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "enterprise-cost-management",
       "name": "企業規模 Claude 成本管理",
       "pageType": "topic"

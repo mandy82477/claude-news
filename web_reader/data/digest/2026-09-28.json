@@ -411,11 +411,6 @@
   "preview": "Claude Code：v2.1.284：Sonnet 5.5 成 API 預設 Sonnet 模型；另新增「Yes, but ask」功能，官方原文截斷，具體行為未知。",
   "sedimentedToday": [
     {
-      "id": "claude-skills",
-      "name": "Claude Skills",
-      "pageType": "entity"
-    },
-    {
       "id": "sonnet-5",
       "name": "Claude Sonnet 5",
       "pageType": "entity"
