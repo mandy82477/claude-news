@@ -29,6 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** product
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
+**對照角色：** 專用版（建在 claude.ai 網頁 app；Claude Code 另有外掛）
 **首次出現：** 2026-04-30
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23

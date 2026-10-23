@@ -22,6 +22,7 @@
 | `wiki/topics/official-community-gap.md` | 官方功能 vs 社群痛點缺口變化 |
 | `wiki/topics/long-context-1m.md` | 1M context 的**計費規則、預設行為、可控性、可見性**（世代加價分界、預設開啟／關閉、model picker 保不保得住 `[1m]` 變體、UI 顯示的 context 上限是否正確、1M 觸發獨立計費通道）——觸發邊見 `.claude/reporter-rules/features/pages.md` |
 | `wiki/topics/claude-code-experimental.md` | 「Build Flags」來源條目（每版至多一則）：條目列的功能候選旗標各入追蹤表第一階；同輪跑 `python scripts/build_flags_mentions.py` 對社群提及，有命中才升第二階；官方承認、出貨、消失各要對應證據——頁面契約見 `.claude/reporter-rules/features/pages.md` |
+| `wiki/topics/anthropic-product-matrix.md` | 產品 × 功能對照表（衍生頁，類別路由接不到，以下觸發邊明文登記）：日報出現官方導覽列 Product 選單或訂價頁分組變動、新增產品頁、說明中心「哪裡可用」段落變動（某功能新增或移除某介面、beta 轉正）時，更新對應格（狀態｜方案｜說明｜來源｜查證日｜來源種類）與頁頂 callout；格子事實以官方一手來源為準，日報只是觸發。**每週核對一次**：對照頁「對照表」各功能的來源 URL 抽查，與標頭 `對照角色：` 欄的 🛠️ 頁是否一致。🛠️ 頁新增或改角色時，同步標頭 `**對照角色：**`（四選一規則見 `.claude/reporter-rules/page-templates.md`） |
 | `wiki/feature-radar.md` | 新增/更新功能條目（**須回報主編彙整**，不直接寫入） |
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 🛠️ 工具/功能 的所有頁面（含日後新增）皆由本記者負責維護與 lint。

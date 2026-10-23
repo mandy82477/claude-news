@@ -29,6 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** product
 **狀態：** active（Research Preview，美國 Pro／Max 候補名單制）
 **領域：** 🛠️ 工具/功能
+**對照角色：** 產品（入口：獨立 app，電腦走網頁；誰起手：它自己判斷）
 **別名：** Duet
 **首次出現：** 2026-10-21
 **最後更新：** 2026-10-23

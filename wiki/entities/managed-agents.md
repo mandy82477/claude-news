@@ -29,6 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** feature
 **狀態：** beta（所有 API 帳號預設可用，須帶 beta header）
 **領域：** 🛠️ 工具/功能
+**對照角色：** 功能（Claude Platform 專屬）
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28

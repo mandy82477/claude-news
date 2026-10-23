@@ -29,6 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** feature
 **狀態：** active（初期，體驗粗糙）
 **領域：** 🛠️ 工具/功能
+**對照角色：** 功能（產出物；含 Dashboards、Motion）
 **首次出現：** 2026-04-27
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23

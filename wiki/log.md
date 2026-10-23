@@ -8010,3 +8010,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 處置：(a) 功能記者（sonnet）修 entities/claude-tag、claude-science、claude-security、claude-docs、claude-slides、cowork、managed-agents、claude-design 八頁，各加歷史列；(b) 主編改 [[index]] 四列（Science／Tag 主值 → beta，Docs／Slides → active 並改鉤子）與 [[feature-radar]] Proactive Workflows 列改名；(c) 歸因 slug `user-query`，七個官方 URL 入 `data/source_attribution.jsonl`；(d) 對照表資料與版面另案實作，事實的家將是新 topic 頁（建頁時登記觸發邊）。
 - 規則缺口（轉 /wiki-lint）：Docs／Slides 頁內正文已寫脫離 beta、頁頭與 index 卻停在 beta 達 15 天——頁頭狀態主值與正文脫鉤無閘可抓，建議 check_wiki_freshness 或 lint 加「正文含『脫離 beta』而主值仍 beta」的提示。
 - 歸因 user-query／功能
+
+## 2026-10-23 Query（使用者：產品對照表上線——🛠️ 分頁改矩陣）
+
+- 問題：使用者對 Anthropic 產品路線困惑，裁決以「產品 × 功能」對照矩陣取代網站 Wiki 知識庫 🛠️ 工具/功能 分頁的列表；欄＝Claude app（網頁／桌面／手機，含 Cowork 任務）、Claude Code、Claude Tag、Claude Platform、Claude Duet，列＝15 項功能，另列產品專屬功能、專用版與追蹤頁。
+- 查證（主編 WebFetch 官方說明中心／Claude Code 文件／Tag 文件／claude.com 導覽列，2026-10-23）：沿用同日 126 格底稿，捨 Cowork 欄後重判 75 格，新增第五態「官方用詞籠統」（vague）——功能來源只寫「在 Claude 裡／任何對話」沒逐列介面時，Claude app 照標、Claude Code／Tag／Duet 標 vague 並抄原句；Platform 走 API key 另計費，不延伸，維持未公開。結果：可用 20、beta 16、研究預覽 8、籠統 11、未公開 20、明寫不支援 0。改判 14 格，其中三格是狀態更正：語音在 Claude app 為 beta（說明中心 Use voice mode）、Claude in Chrome 在 Claude app 為可用（只有側邊欄 beta）、Skills 在 Platform 為 beta（說明中心 Use skills in Claude）。
+- 處置：(a) 新建 [[topics/anthropic-product-matrix]]（事實的家，機器可解析格式）；(b) [[index]] Topics 表加一列；(c) `.claude/reporter-rules/features/daily.md` 登記觸發邊（導覽列／訂價頁分組、產品頁新增、說明中心「哪裡可用」變動時更新，每週核對一次）；(d) 🛠️ 領域 18 頁標頭加 `**對照角色：**`（產品／功能／專用版／方案／追蹤頁，封存頁不加），規則寫進 `.claude/reporter-rules/page-templates.md`；(e) 網站 🛠️ 分頁改渲染矩陣；(f) 歸因 slug `user-query`，本頁 41 個官方 URL 入 `data/source_attribution.jsonl`。
+- 待確認（寫在對照頁「待確認」節）：Claude Code × Dashboards（本站非 Team 帳號實測看得到範本，官方文件未列）、Claude Code × Motion（待 Team 帳號實測）、Duet × Motion（方案互斥但官方未直寫）、Claude Code 語音只有聽寫、背景任務的 Free 方案。
+- 歸因 user-query／功能

@@ -27,6 +27,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **狀態：** ongoing
 **領域：** 🛠️ 工具/功能
+**對照角色：** 追蹤頁
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
 **最後更新：** 2026-10-23

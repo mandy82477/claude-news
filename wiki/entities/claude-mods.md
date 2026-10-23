@@ -29,10 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** feature
 **狀態：** active（v2.1.287 起正式發布，預設開啟）
 **領域：** 🛠️ 工具/功能
+**對照角色：** 功能（Claude Code 專屬）
 **別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`
 **上層：** [[entities/claude-code]]
 **首次出現：** 2026-09-04
-**最後更新：** 2026-10-20
+**最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-20
 
 > **最新判讀**（2026-10-20）

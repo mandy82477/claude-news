@@ -53,6 +53,7 @@
 **類型：** model / feature / person / product / policy / event
 **狀態：** active / beta / deprecated / acquired / resolved（格式：主值（補充說明））
 **領域：** 🤖 模型 / 🛠️ 工具/功能 / 👤 人物 / 💼 商業 / 🏛️ 政策/安全 / 🌐 社群
+**對照角色：** 產品 / 功能 / 專用版 / 方案 / 追蹤頁（僅 🛠️ 工具/功能 領域頁；格式見「命名與分類規則」）
 **首次出現：** YYYY-MM-DD
 **最後更新：** YYYY-MM-DD
 **最後新聞更新：** YYYY-MM-DD
@@ -119,6 +120,8 @@
 # 議題名稱
 
 **狀態：** ongoing / resolved / monitoring
+**領域：** （六選一，同 entities）
+**對照角色：** （僅 🛠️ 工具/功能 領域頁）
 **開始日期：** YYYY-MM-DD
 **最後更新：** YYYY-MM-DD
 **最後新聞更新：** YYYY-MM-DD
@@ -157,7 +160,15 @@
 
 **新 topics slug 命名規約**（既有頁面不溯及）：社群類 `community-*`、企業類 `enterprise-*`、Anthropic 官方 `anthropic-*`、安全政策 `safety-*`。
 
-**別名欄位（選填）**：頁面主題有常用英文名／舊名／媒體慣用別稱，且與中文頁名或 slug 字面不同者，在標頭「領域」之後加一行 `**別名：** Fable 5, Mythos-class`（逗號分隔，只列真實出現過的稱呼，不預測性堆詞）。用途：全庫 grep 與 `scripts/wiki_graph.py sections` 查詢時可命中、記者判斷條目歸屬時對照。人物頁英文名、產品頁官方英文名為典型適用；slug 已含該英文者不必重複。
+**別名欄位（選填）**：頁面主題有常用英文名／舊名／媒體慣用別稱，且與中文頁名或 slug 字面不同者，在標頭「領域」（🛠️ 頁為「對照角色」）之後加一行 `**別名：** Fable 5, Mythos-class`（逗號分隔，只列真實出現過的稱呼，不預測性堆詞）。用途：全庫 grep 與 `scripts/wiki_graph.py sections` 查詢時可命中、記者判斷條目歸屬時對照。人物頁英文名、產品頁官方英文名為典型適用；slug 已含該英文者不必重複。
+
+**對照角色欄位（🛠️ 工具/功能 領域頁必填，其他領域不加）**：標出這頁在 [[topics/anthropic-product-matrix]] 對照表裡的角色，放在 `**領域：**` 之後、`**別名：**` 之前。主詞五選一，括號內補一句路由用的補充，不重複對照表格子內容（方案、狀態只住對照頁）：
+- `產品（入口：…；誰起手：…）`：對照表的一欄，如 claude-code、claude-tag、claude-duet；已併入別欄者寫 `產品（已併入 Claude app）`
+- `功能（產出物／Capabilities／Extensions／其他／<產品> 專屬）`：對照表的一列或「只在一個產品裡」的一項；一頁收多項時括號補「含 …」
+- `專用版（建在 …）`：對照表「專用版」區的官方 Specialized 產品
+- `方案（…）`：官方不列為產品、但寫在專用版區的方案頁（如 claude-for-teachers）
+- `追蹤頁`：矩陣裝不下的 🛠️ 頁（跨產品議題、實驗旗標、未公開工具）；網站 🛠️ 分頁的「追蹤頁」區由這個值機械算出
+主詞是 `scripts/build_web.py`（`matrixRole`）與 `scripts/gen_wiki_frontmatter.py`（frontmatter `matrix_role`）的字面值契約；封存頁（`-archive`）不加，角色看母頁。對照頁本身不加。
 
 ---
 
