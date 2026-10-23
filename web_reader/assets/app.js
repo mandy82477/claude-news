@@ -1638,11 +1638,22 @@ ${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
     });
   }
 
+  // 標頭欄位（**狀態：** …）在詳頁另有 metaRows 呈現，正文要剝掉。
+  // 舊版只剝「緊接在 H1 下方」的一串欄位行：模板允許 H1 下先寫一句「這是什麼」，
+  // 那句一出現，後面的欄位就全漏進正文（2026-10-23 發現，當時 10 頁中招）。
+  // 標頭區＝H1 之後、第一個 `## `／`---`／`> ` 之前；區內欄位行全剝，其餘（那一句）保留。
+  function stripHeaderFields(md) {
+    const end = md.search(/^(?:## |---\s*$|> )/m);
+    const head = end < 0 ? md : md.slice(0, end);
+    const tail = end < 0 ? '' : md.slice(end);
+    return head.replace(/^[ \t]*\*\*[^*\n]+[：:]\*\*[^\n]*(?:\n|$)/gm, '').replace(/^\s*\n+/, '') + tail;
+  }
+
   function renderMarkdownBody(raw, opts = {}) {
     let md = raw || '';
     md = md.replace(/^#[^#][^\n]*\n/, '');
     if (opts.stripMeta !== false) {
-      md = md.replace(/^(\s*\*\*[^*]+[：:]\*\*[^\n]*\n|\s*\n)*/m, '');
+      md = stripHeaderFields(md);
     }
     if (typeof marked === 'undefined') {
       return `<pre style="white-space:pre-wrap;font-size:var(--fs-small)">${esc(md)}</pre>`;

@@ -259,5 +259,21 @@ class TestGateExitCode(unittest.TestCase):
         self.assertEqual(self._main(False), 1)
 
 
+class TestFailureLineShape(unittest.TestCase):
+    """失敗行只認 unittest 案例 id 形狀——build_web 致命路徑印的 ERROR: 行不是失敗案例。"""
+
+    def test_build_error_line_is_not_a_failure(self):
+        out = ("ERROR: 下列 wiki 頁面解析失敗，會從網站上整頁消失：\n"
+               "  - topic x.md: boom\n"
+               "FAILED: 1 個失敗、0 個錯誤（共 3 個案例）\n"
+               "  FAIL: test_x (mod.Case.test_x)\n")
+        self.assertEqual(parse_failures(out), ["test_x (mod.Case.test_x)"])
+
+    def test_error_case_line_still_parsed(self):
+        out = "  ERROR: test_blogroll (news_aggregator.tests.test_blogroll.TestBlogroll)\n"
+        self.assertEqual(parse_failures(out),
+                         ["test_blogroll (news_aggregator.tests.test_blogroll.TestBlogroll)"])
+
+
 if __name__ == "__main__":
     unittest.main()

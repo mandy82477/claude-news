@@ -55,8 +55,11 @@ def _use_utf8_stdout() -> None:
 RUN_TESTS = REPO_ROOT / "scripts" / "run_tests.py"
 GAPS_FILE = REPO_ROOT / "docs" / "known-test-gaps.json"
 
-# run_tests.py 的失敗清單格式：「  FAIL: test_x (pkg.Class)」／「  ERROR: ...」
-FAILURE_LINE = re.compile(r"^\s*(?:FAIL|ERROR):\s*(.+?)\s*$", re.MULTILINE)
+# run_tests.py 的失敗清單格式：「  FAIL: test_x (pkg.Class)」／「  ERROR: test_y (pkg.Class)」
+# 只認 unittest 的案例 id 形狀「名稱 (點分路徑)」——測試套件裡有案例會刻意讓 build_web
+# 走致命路徑，它印的「ERROR: 下列 wiki 頁面解析失敗…」也以 ERROR: 開頭；舊 regex 吃任何
+# ERROR: 行，把那行當成一個失敗案例，缺口清單對不上就整個擋下（2026-10-23 發現）。
+FAILURE_LINE = re.compile(r"^\s*(?:FAIL|ERROR):\s*(\S+ \([\w.]+\))\s*$", re.MULTILINE)
 
 
 def load_gaps(path: Path = GAPS_FILE) -> list[dict]:
