@@ -45,3 +45,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-20（蒐集範圍「社群實測」列順序）
 
 `.claude/rules/collection-scope.md` 社群實測列由「Bug 回報與替代方案」領頭改為「正在討論的新功能與替代方案」在前、Bug 回報在後，與同日讀者定義改寫一致。網站同步：關於頁、雷達卡片描述、今日聚焦導流鈕改問「有什麼新功能值得用」。
+
+## 2026-10-23（目標讀者改寫的語意層清查）
+
+10-20 兩輪只對齊關鍵字（升版／壞了）。本日派一個 Sonnet Explore agent 讀 `.claude/` 規則、skill、agent、網站文案共 90 檔，找不含關鍵字但仍把讀者框成「踩雷與升版」的句子，得 10 處，使用者裁決全改：devpractice 收錄判準、news-digest 所以呢三問、週報頭條／討論綜述／專文標籤／下週看什麼、features ⭐ 排序與階梯表讀者身分，以及設計套件 `claude-news-llm-wiki-design/ui_kits/web_reader/about.html` 的受眾文案（與正式站關於頁同步）。各處細節見對應沿革檔同日段。`docs/page-audits/` 與 `docs/local/` 的「該不該升版」是當時波次名稱，保留。

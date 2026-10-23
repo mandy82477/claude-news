@@ -176,3 +176,7 @@
 - **做法**：`scripts/pipeline_lock.py`，鎖放在遠端分支 `pipeline-lock`（非 master，不觸發網站部署）。搶鎖／放鎖各推一筆空樹 commit，靠 git 快轉檢查當 compare-and-swap（同時搶時後推者 non-fast-forward 被拒），不用 force、不刪分支（專案 hook 禁止）。HELD 逾 3 小時視為死班可接手（與 news-console 死班判準同值）。搶到後再看一次 origin/master 的 `news/<日期>.md`，別人剛做完就放鎖回 4。不做同 clone 重入：同一 clone 可能開兩個本機 session、共用權杖檔。
 - **接點**：`news-digest` 0-3（新鮮度與原料健檢之後、動筆前取得；等料中止的班次不碰鎖）、`web-publish` Step 6（寫完 log 放鎖，所有結束路徑）。news-console 把 `pipeline lock held` 中止視為設計內讓位、不亮紅燈。
 - **驗證**：`src/tests/test_pipeline_lock.py` 7 案（bare 遠端＋兩 clone：持有擋、放了可搶、逾時接手、同時搶後推者輸、日報已在 origin 回 4、未持有 release 不動遠端、非鎖訊息不解析）；對真實 GitHub 遠端煙霧測試 acquire→二次 acquire 被擋→release 通過。
+
+## 2026-10-23（news-digest「所以呢」三問加成四問）
+
+`.claude/skills/news-digest/references/format.md` 每則說明句末分句原只回答「影響誰／該做什麼／為什麼是今天」，範例全是「會撞到、先別升、不必動」的風險視角，記者會照範例寫。2026-10-20 目標讀者改為「有什麼新功能、值不值得用」後，加一問「值不值得用」（範例「想省 token 的人現在就能開」「只有 Max 方案拿得到，Pro 先不用管」），「影響誰」補一個非故障型範例。`build_reader_digest.py` 原樣搬運，不受影響。
