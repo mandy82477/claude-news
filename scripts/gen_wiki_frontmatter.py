@@ -69,6 +69,21 @@ FIELD_RE = {
 }
 
 
+# 🛠️ 頁的「對照角色」欄（2026-10-23）：frontmatter 只投影括號前的主詞，給 Obsidian Bases 篩選；
+# 主詞字面值契約見 .claude/reporter-rules/page-templates.md「對照角色欄位」，與 build_web.MATRIX_ROLES 同步
+MATRIX_ROLE_RE = re.compile(r"^\*\*對照角色[：:]\*\*\s*(.+?)\s*$", re.MULTILINE)
+MATRIX_ROLES = ("產品", "功能", "專用版", "方案", "追蹤頁")
+
+
+def matrix_role_of(body: str) -> str | None:
+    """標頭「對照角色：功能（產出物）」→ "功能"；沒有這欄或主詞不在五個之內回 None。"""
+    m = MATRIX_ROLE_RE.search(body)
+    if not m:
+        return None
+    main = re.split(r"[（(]", m.group(1))[0].strip()
+    return main if main in MATRIX_ROLES else None
+
+
 PARENT_RE = re.compile(r"^\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)", re.MULTILINE)
 LAST_NEWS_RE_ANY = re.compile(r"^\*\*最後新聞更新[：:]\*\*\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
 # 非新聞驅動頁的新鮮度豁免：值＝理由（必填，空白視為未宣告）。
@@ -282,6 +297,9 @@ def main(argv: list[str]) -> int:
 
         status = str(meta.get("status", ""))
         meta["status_main"] = re.split(r"[（(]", status)[0].strip() or None
+        role = matrix_role_of(body)
+        if role:  # 只有 🛠️ 頁有這欄；沒有就不投影，避免全庫每頁多一個 null 欄
+            meta["matrix_role"] = role
 
         lnu = meta.get("last_news_update")
         days = (today - date.fromisoformat(str(lnu))).days if lnu else None

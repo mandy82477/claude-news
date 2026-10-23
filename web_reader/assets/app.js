@@ -92,7 +92,12 @@
   // own group regardless of underlying entity/topic/comparison type. Display-layer
   // kbTypeOf() above is untouched — this only feeds the kbType sort comparator.
   function kbSortGroupOf(item) {
-    return item.updateFreq ? 'weekly' : kbTypeOf(item);
+    return isWeeklyCadence(item) ? 'weekly' : kbTypeOf(item);
+  }
+  // 週更判準只有這一份：有更新頻率欄且不是每日（「週更」篩選、列表型別 pill、型別排序共用）。
+  // 2026-10-23 修：原本 pill 與排序只看「有沒有更新頻率」，每日快照頁也被標成週更，與篩選器不一致
+  function isWeeklyCadence(item) {
+    return !!item.updateFreq && !/每日/.test(item.updateFreq);
   }
 
   // Status sort priority (lower = higher priority / shown first in desc)
@@ -585,12 +590,20 @@
     // 標籤 chip 會暫時空著，但不會整頁空白，下次載入即自癒
     const readerDomains = i => i.readerDomains || (i.domain ? [i.domain] : []);
     const filtered = activeDomain === 'all' ? roots
-      : activeDomain === 'weekly' ? roots.filter(i => !!i.updateFreq && !/每日/.test(i.updateFreq))
+      : activeDomain === 'weekly' ? roots.filter(isWeeklyCadence)
       : roots.filter(i => readerDomains(i).includes(activeDomain));
     // 人物領域：接管列表區（人物總覽／議題陣容）；其他領域還原表格列
     const pplSortBar = document.getElementById('sort-bar-kb');
     if (activeDomain === PPL_DOMAIN) {
       renderPeople(container, filtered.filter(i => i._kbBaseType === 'entity' && (i.anthropicRel || i.identity)));
+      return;
+    }
+    // 🛠️ 工具/功能：接管列表區改畫產品 × 功能矩陣（2026-10-23 裁決）；排序列對矩陣無意義，收起
+    container.classList.remove('pmx-host');
+    if (activeDomain === PMX_DOMAIN && (window.WIKI_DATA || {}).productMatrix) {
+      container.classList.remove('ppl-host');
+      if (pplSortBar) pplSortBar.style.display = 'none';
+      renderProductMatrix(container);
       return;
     }
     container.classList.remove('ppl-host');
@@ -603,19 +616,293 @@
       : '';
     container.innerHTML = weeklyNote + filtered.map(item => {
       const kbType = kbTypeOf(item);
-      const isWeeklyCadence = !!item.updateFreq;
-      const typeLabel = isWeeklyCadence ? KB_TYPE_LABEL.weekly : (KB_TYPE_LABEL[kbType] || '檔案');
-      const typePillCls = isWeeklyCadence ? 'weekly' : kbType;
+      const weekly = isWeeklyCadence(item);
+      const typeLabel = weekly ? KB_TYPE_LABEL.weekly : (KB_TYPE_LABEL[kbType] || '檔案');
+      const typePillCls = weekly ? 'weekly' : kbType;
       const rowCls = kbType === 'topic' ? 'entity-row entity-row--topic' : 'entity-row';
       return `
 <div class="${rowCls}" onclick="openWikiPage('${esc(item.id)}','${item._kbBaseType}')">
   <div class="entity-row__name"><span class="entity-row__zh">${esc(item.name || item.id)}</span><span class="entity-row__slug">${esc(item.id)}</span></div>
-  <div><span class="kb-type-pill kb-type-pill--${typePillCls}">${isWeeklyCadence ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:3px"><rect x="3" y="5" width="18" height="16" rx="1"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="8" y1="3" x2="8" y2="7"></line><line x1="16" y1="3" x2="16" y2="7"></line></svg>' : ''}${esc(typeLabel)}</span></div>
+  <div><span class="kb-type-pill kb-type-pill--${typePillCls}">${weekly ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:3px"><rect x="3" y="5" width="18" height="16" rx="1"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="8" y1="3" x2="8" y2="7"></line><line x1="16" y1="3" x2="16" y2="7"></line></svg>' : ''}${esc(typeLabel)}</span></div>
   <div><span class="pill pill--${item.pill}">${esc(statusLabelShort(item.status))}</span></div>
   <div class="entity-row__summary">${esc(item.latestHeadline || '')}</div>
   <div class="entity-row__updated">${item.lastNewsUpdate === today ? '<span class="badge-new">今日</span>' : ''}${esc(item.lastNewsUpdate || item.lastUpdated || item.startDate || item.firstSeen || '')}</div>
 </div>`;
     }).join('');
+  }
+
+  // ── 🛠️ 工具/功能：產品 × 功能矩陣（2026-10-23 裁決，取代列表）──────────────────────
+  // 資料：WIKI_DATA.productMatrix（scripts/build_web.py parse_product_matrix；事實的家是
+  // wiki/topics/anthropic-product-matrix.md）。版面依已裁決 mock：欄＝產品、列＝功能，
+  // 點格子開面板；≤640px 改依產品分組清單。只用 ochre 一色，靠形狀分六態。
+  const PMX_DOMAIN = '🛠️ 工具/功能';
+  const PMX_GROUPS = [
+    { k: '產出物',       en: '',             zh: '產出物', note: '官方把 Artifacts、Design 歸在 Capabilities，Docs 等是 Artifacts 範本；本站合成一段' },
+    { k: 'Capabilities', en: 'Capabilities', zh: '',       note: '官方「能力」' },
+    { k: 'Extensions',   en: 'Extensions',   zh: '',       note: '官方「擴充」：入口在別人的 app 裡' },
+    { k: '其他',         en: '',             zh: '其他',   note: '官方導覽列沒有分組' },
+  ];
+  const PMX_STATUS = { available: '可用', beta: 'beta', preview: '研究預覽／候補', no: '官方明寫不支援', vague: '官方用詞籠統', unknown: '官方未公開' };
+  const PMX_PREFIX = { beta: 'β ', preview: '預覽 ', vague: '籠統 ' };
+  const PMX_STATED = new Set(['available', 'beta', 'preview', 'no']);  // 「官方明載」＝這四態
+  const PMX_KIND = { official: '官方一手', community: '社群', 'site-test': '本站實測' };
+  const pmx = { sel: null, col: null, grp: null, only: false, bound: false };
+  const pmxMk = st => `<i class="pmx-mk pmx-mk--${esc(st)}" aria-hidden="true"></i>`;
+  const pmxText = c => (c.status === 'unknown' ? '' : (PMX_PREFIX[c.status] || '') + (c.abbr || ''));
+  const pmxPlain = st => st === 'unknown' || st === 'vague';
+  const PMX_MQ_PHONE = window.matchMedia ? window.matchMedia('(max-width:640px)') : { matches: false, addEventListener() {} };
+
+  function pmxData() { return (window.WIKI_DATA || {}).productMatrix; }
+  function pmxFeat(id) { const M = pmxData(); return M.features.find(f => f.id === id) || M.exclusive.find(x => x.id === id); }
+  function pmxProd(id) { return pmxData().products.find(p => p.id === id); }
+  function pmxCell(f, pid) {  // 專屬功能只有一格，其餘產品視同不在
+    return f.cells ? f.cells[pid] : (f.product === pid ? f : null);
+  }
+  function pmxSrc(u) {
+    if (!u) return '';
+    return `<a class="pmx-q__src" href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, ''))}</a>`;
+  }
+  function pmxOpenBtn(page, label) {
+    if (!page) return '';
+    const a = page.anchor ? `,'${jsStr(page.anchor)}'` : '';
+    return `<button type="button" class="pmx-panel__open" onclick="openWikiPage('${jsStr(page.id)}','${jsStr(page.pageType)}'${a})">${esc(label || '看 wiki 頁')} →</button>`;
+  }
+
+  function renderProductMatrix(container) {
+    const M = pmxData();
+    container.classList.add('pmx-host');
+    const P = M.products, F = M.features, X = M.exclusive, S = M.specialized;
+    const st = pmx;
+    const stated = (f, pid) => PMX_STATED.has((f.cells[pid] || {}).status);
+    let h = `<div class="pmx-lead">欄與列對應官方導覽列 Products／Capabilities／Extensions 分組；欄序依「誰起手」是本站解讀。每一格都連到官方來源，查證日 <span class="pmx-num">${esc(M.checked)}</span>。</div>`;
+    h += `<div class="pmx-toolbar">
+  <label class="pmx-ctl"${st.col ? '' : ' aria-disabled="true"'}><input type="checkbox" data-pmx-only${st.only ? ' checked' : ''}${st.col ? '' : ' disabled'}><span>只看這個產品有官方明載的列</span><small>${st.col ? '目前：' + esc(pmxProd(st.col).short) : '先點一個產品欄頭'}</small></label>
+  <div class="pmx-legend" aria-label="圖例">${['available', 'beta', 'preview', 'no', 'vague', 'unknown'].map(s => `<span>${pmxMk(s)}${esc(PMX_STATUS[s])}</span>`).join('')}</div>
+</div>`;
+    // ── 矩陣 ──
+    let t = `<table class="pmx"><colgroup><col class="pmx__fcol">${P.map(() => '<col>').join('')}</colgroup><thead>`;
+    t += `<tr class="pmx__axis"><th></th><th colspan="${P.length}"><div class="pmx__axis-in"><span>誰起手</span><span class="pmx__axis-line"></span></div></th></tr>`;
+    t += '<tr><th class="pmx__corner" scope="col">功能 ／ 產品</th>';
+    P.forEach(p => {
+      const n = F.filter(f => stated(f, p.id)).length;
+      const base = p.name.replace(/（.*$/, ''), sub = (p.name.match(/（(.+)）$/) || [])[1];
+      t += `<th class="pmx__ph${st.col === p.id ? ' is-on' : ''}" scope="col" data-pmx-colh="${esc(p.id)}"><button type="button" class="pmx__ph-btn" data-pmx-prod="${esc(p.id)}" aria-pressed="${st.col === p.id}">
+  <span class="pmx__pname">${esc(base)}</span>${sub ? `<span class="pmx__psub">${esc(sub)}</span>` : ''}${p.id === 'claude-app' ? '<span class="pmx__psub">含 Cowork 任務</span>' : ''}
+  <span class="pmx__pattr"><i>入口</i>${esc(p.entry)}</span><span class="pmx__pattr"><i>起手</i>${esc(p.whoStarts)}</span>
+  <span class="pmx__pcount">官方明載<b>${n}/${F.length}</b></span></button></th>`;
+    });
+    t += '</tr></thead>';
+    PMX_GROUPS.forEach(g => {
+      const rows = F.filter(f => f.group === g.k);
+      if (!rows.length) return;
+      const hidden = f => st.only && st.col && !stated(f, st.col);
+      const vis = rows.filter(f => !hidden(f));
+      t += `<tbody><tr class="pmx__grp${st.grp === g.k ? ' is-on' : ''}${vis.length ? '' : ' is-hidden'}"><th colspan="${P.length + 1}" scope="rowgroup"><button type="button" class="pmx__grp-btn" data-pmx-grp="${esc(g.k)}" aria-pressed="${st.grp === g.k}">${g.en ? `<span class="pmx__grp-en">${g.en}</span>` : ''}${g.zh ? `<span class="pmx__grp-zh">${g.zh}</span>` : ''}<span class="pmx__grp-note">${esc(g.note)}</span></button></th></tr>`;
+      rows.forEach(f => {
+        const isRow = st.grp === g.k || (st.sel && st.sel.t === 'feat' && st.sel.f === f.id);
+        t += `<tr class="pmx__row${hidden(f) ? ' is-hidden' : ''}${isRow ? ' is-row' : ''}" data-pmx-row="${esc(f.id)}"><th scope="row"><button type="button" class="pmx__fh-btn" data-pmx-feat="${esc(f.id)}"><span class="pmx__fname">${esc(f.name)}</span>${f.sub ? `<span class="pmx__fsub">${esc(f.sub)}</span>` : ''}</button></th>`;
+        P.forEach(p => {
+          const c = f.cells[p.id];
+          const isSel = st.sel && st.sel.t === 'cell' && st.sel.f === f.id && st.sel.p === p.id;
+          t += `<td class="${st.col === p.id ? 'is-col' : ''}"><button type="button" class="pmx-cell pmx-cell--${esc(c.status)}${isSel ? ' is-sel' : ''}" data-pmx-f="${esc(f.id)}" data-pmx-p="${esc(p.id)}" aria-label="${esc(p.short)}：${esc(f.name)}，${esc(PMX_STATUS[c.status])}${c.abbr ? '，' + esc(c.abbr) : ''}">${pmxMk(c.status)}${c.status === 'unknown' ? '' : `<span>${esc(pmxText(c))}</span>`}</button></td>`;
+        });
+        t += '</tr>';
+      });
+      t += '</tbody>';
+    });
+    // 只在一個產品裡：同一張表的最後一段，對齊所屬產品欄
+    t += `<tbody><tr class="pmx__grp"><th colspan="${P.length + 1}" scope="rowgroup"><span class="pmx__grp-btn pmx__grp-btn--static"><span class="pmx__grp-zh">只在一個產品裡</span><span class="pmx__grp-note">不佔列，對齊所屬產品欄</span></span></th></tr>`;
+    t += '<tr class="pmx__excl"><th scope="row">各產品專屬功能</th>';
+    P.forEach(p => {
+      const items = X.filter(x => x.product === p.id);
+      t += `<td class="${st.col === p.id ? 'is-col' : ''}">${items.length ? items.map(x => {
+        const isSel = st.sel && st.sel.t === 'cell' && st.sel.f === x.id;
+        return `<button type="button" class="pmx-xitem${isSel ? ' is-sel' : ''}" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}" data-pmx-x="${esc(x.id)}">${pmxMk(x.status)}<span>${esc(x.name)}${x.sub ? `<small>${esc(x.sub)}</small>` : ''}<small>${esc(pmxText(x))}</small></span></button>`;
+      }).join('') : '<span class="pmx-none" aria-label="無">·</span>'}</td>`;
+    });
+    t += '</tr></tbody></table>';
+    h += `<div class="pmx-stage"><section class="pmx-board" aria-label="產品功能對照">${t}`;
+    // ── 專用版 ──
+    h += '<div class="pmx-sec-h"><h2>Specialized</h2><span>專用版：拿上面的產品與功能重新包裝給特定對象</span></div>';
+    h += '<table class="pmx-spec"><colgroup><col class="pmx-spec__c-name"><col><col><col><col></colgroup><thead><tr><th>名稱</th><th>建在哪個產品上</th><th>模型</th><th>用到哪些功能</th><th>誰能用</th></tr></thead><tbody>';
+    S.forEach(s => {
+      h += `<tr class="${st.sel && st.sel.t === 'spec' && st.sel.s === s.id ? 'is-sel' : ''}" data-pmx-specrow="${esc(s.id)}"><th scope="row"><button type="button" class="pmx-spec__name" data-pmx-spec="${esc(s.id)}"><b>${esc(s.name)}</b></button><span class="pmx-kind${s.isProduct ? '' : ' pmx-kind--not'}">${s.isProduct ? '官方 Specialized' : '官方不列為產品'}</span></th>
+<td>${esc(s.builtOn)}</td><td>${pmxNa(s.model)}</td><td><div class="pmx-uses">${s.uses.map(u => `<button type="button" class="pmx-use" data-pmx-use="${esc(u.kind)}:${esc(u.id)}">${esc(u.label)}</button>`).join('')}</div></td><td>${pmxNa(s.plans)}</td></tr>`;
+    });
+    h += '</tbody></table>';
+    // ── 手機清單（≤640px 才顯示）──
+    h += '<div class="pmxl">';
+    P.forEach(p => {
+      const has = F.filter(f => stated(f, p.id) || f.cells[p.id].status === 'vague');
+      const unk = F.filter(f => f.cells[p.id].status === 'unknown');
+      h += `<section class="pmxl__sec" data-pmxl-prod="${esc(p.id)}"><div class="pmxl__name">${esc(p.name)}</div><div class="pmxl__attr"><i>入口</i>${esc(p.entry)}</div><div class="pmxl__attr"><i>起手</i>${esc(p.whoStarts)}</div>`;
+      PMX_GROUPS.forEach(g => {
+        const rows = has.filter(f => f.group === g.k);
+        if (!rows.length) return;
+        h += `<div class="pmxl__grp">${esc(g.en || g.zh)}</div>` + rows.map(f => { const c = f.cells[p.id]; return `<button type="button" class="pmxl__row" data-pmx-f="${esc(f.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(c.status)}<span>${esc(f.name)}</span><span>${esc(pmxText(c))}</span></button>`; }).join('');
+      });
+      const xs = X.filter(x => x.product === p.id);
+      if (xs.length) h += '<div class="pmxl__grp">只在這個產品裡</div>' + xs.map(x => `<button type="button" class="pmxl__row" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(x.status)}<span>${esc(x.name)}</span><span>${esc(pmxText(x))}</span></button>`).join('');
+      if (unk.length) h += `<div class="pmxl__unknown">${pmxMk('unknown')} 官方未公開 ${unk.length} 項：${unk.map(f => esc(f.name)).join('、')}</div>`;
+      h += '</section>';
+    });
+    h += '<section class="pmxl__sec"><div class="pmxl__name">專用版</div>' + S.map(s => `<button type="button" class="pmxl__row pmxl__row--spec" data-pmx-spec="${esc(s.id)}"><span></span><span><b>${esc(s.name)}</b><small>${esc(s.builtOn)}</small></span><span>${s.isProduct ? 'Specialized' : '不列為產品'}</span></button>`).join('') + '</section>';
+    h += '</div>';
+    // ── 追蹤頁 ──
+    h += `<div class="pmx-sec-h" id="pmx-tracking"><h2>Tracking</h2><span>追蹤頁：矩陣裝不下的工具/功能頁——跨產品議題、實驗旗標、未公開工具</span></div>`;
+    h += '<div class="entity-table pmx-track">' + (M.tracking || []).map(r => `
+<div class="entity-row${r.pageType === 'topic' ? ' entity-row--topic' : ''}" role="button" tabindex="0" data-pmx-open="${esc(r.id)}" data-pmx-type="${esc(r.pageType)}">
+  <div class="entity-row__name"><span class="entity-row__zh">${esc(r.name || r.id)}</span><span class="entity-row__slug">${esc(r.id)}</span></div>
+  <div><span class="kb-type-pill kb-type-pill--${r.pageType === 'radar' ? 'comparison' : r.pageType}">${r.pageType === 'radar' ? '對照' : r.pageType === 'topic' ? '議題' : '檔案'}</span></div>
+  <div>${r.status ? `<span class="pill pill--${esc(r.pill)}">${esc(statusLabelShort(r.status))}</span>` : ''}</div>
+  <div class="entity-row__summary">${esc(r.hook || '')}</div>
+  <div class="entity-row__updated">${esc(r.lastUpdated || '')}</div>
+</div>`).join('') + '</div>';
+    h += '</section><aside class="pmx-panel" id="pmx-panel" aria-live="polite"></aside></div>';
+    container.innerHTML = h;
+    pmxRenderPanel();
+    if (!st.bound) {
+      st.bound = true;
+      container.addEventListener('click', pmxOnClick);
+      container.addEventListener('change', e => {
+        if (!container.classList.contains('pmx-host') || !e.target.matches('[data-pmx-only]')) return;
+        pmx.only = !!(e.target.checked && pmx.col); renderProductMatrix(container);
+      });
+      container.addEventListener('keydown', e => {
+        const r = container.classList.contains('pmx-host') && e.target.closest('[data-pmx-open]');
+        if (r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openWikiPage(r.dataset.pmxOpen, r.dataset.pmxType); }
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && pmx.sel && container.classList.contains('pmx-host')) { pmx.sel = null; pmx.grp = null; renderProductMatrix(container); }
+      });
+      PMX_MQ_PHONE.addEventListener && PMX_MQ_PHONE.addEventListener('change', () => { if (container.classList.contains('pmx-host')) renderProductMatrix(container); });
+    }
+  }
+  function pmxNa(v) { return !v || v === '官方未說' ? '<span class="pmx-na">官方未說</span>' : esc(v); }
+
+  function pmxRenderPanel() {
+    const panel = document.getElementById('pmx-panel');
+    if (!panel) return;
+    const sel = pmx.sel;
+    const close = '<button type="button" class="pmx-panel__close" data-pmx-close aria-label="關閉">×</button>';
+    let h;
+    if (!sel) {
+      panel.setAttribute('data-empty', '');
+      h = `<div class="pmx-panel__kicker">怎麼讀這張表</div><ol class="pmx-steps">
+<li>實心方塊是可用，後面是方案縮寫：全＝Free 起、付費＝Pro 起、T/E＝Team／Enterprise、P/M＝Pro／Max、API＝按量計費。</li>
+<li>半實心是「官方用詞籠統」：官方只寫「在 Claude 裡」沒列介面，面板照抄那句原文。</li>
+<li>淡淡的「·」是官方沒有說，不等於不支援。</li>
+<li>點任一格看說明、方案、來源與查證日；點欄頭或分組名可整欄、整段高亮。</li></ol>
+${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照表的 wiki 頁')}`;
+    } else {
+      panel.removeAttribute('data-empty');
+      if (sel.t === 'cell') {
+        const f = pmxFeat(sel.f), p = pmxProd(sel.p), c = pmxCell(f, sel.p);
+        h = `${close}<div class="pmx-panel__kicker">${esc(p.short)} × ${esc(f.full)}</div><div class="pmx-panel__title">${pmxMk(c.status)}${esc(PMX_STATUS[c.status])}</div>
+<dl class="pmx-q"><div><dt>方案</dt><dd>${c.plans ? esc(c.plans) : '<span class="pmx-na">官方未寫</span>'}</dd></div><div><dt>說明</dt><dd>${esc(c.note)}</dd></div><div><dt>來源</dt><dd>${pmxSrc(c.source)}</dd></div><div><dt>查證日</dt><dd><span class="pmx-num">${esc(c.checked)}</span></dd></div><div><dt>來源種類</dt><dd>${esc(PMX_KIND[c.kind] || c.kind)}</dd></div></dl>
+${pmxOpenBtn(f.page || p.page, `看「${f.name}」的 wiki 頁`)}`;
+      } else if (sel.t === 'prod') {
+        const p = pmxProd(sel.p);
+        h = `${close}<div class="pmx-panel__kicker">產品欄</div><div class="pmx-panel__title">${esc(p.name)}</div>
+<dl class="pmx-q"><div><dt>入口</dt><dd>${esc(p.entry)}</dd></div><div><dt>誰起手</dt><dd>${esc(p.whoStarts)}</dd></div><div><dt>說明</dt><dd>${esc(p.note)}</dd></div>
+${(p.extra || []).map(x => `<div><dt>${esc(x.label)}</dt><dd>${esc(x.text.replace(/（來源）/g, ''))}${x.sources.map(u => '<br>' + pmxSrc(u)).join('')}</dd></div>`).join('')}</dl>
+${pmxOpenBtn(p.page, `看「${p.short}」的 wiki 頁`)}`;
+      } else if (sel.t === 'feat') {
+        const f = pmxFeat(sel.f), P = pmxData().products;
+        h = `${close}<div class="pmx-panel__kicker">功能列，${esc(f.group)}</div><div class="pmx-panel__title">${esc(f.full)}</div><ul class="pmx-plist">${P.map(p => { const c = f.cells[p.id]; return `<li>${pmxMk(c.status)}<span>${esc(p.short)}</span><span>${c.status === 'unknown' ? '官方未公開' : esc(pmxText(c) || PMX_STATUS[c.status])}</span></li>`; }).join('')}</ul>
+${pmxOpenBtn(f.page, `看「${f.name}」的 wiki 頁`)}`;
+      } else if (sel.t === 'grp') {
+        const g = PMX_GROUPS.find(x => x.k === sel.g);
+        h = `${close}<div class="pmx-panel__kicker">分組</div><div class="pmx-panel__title">${esc(g.en || g.zh)}</div><p class="pmx-panel__p">${esc(g.note)}。本段 ${pmxData().features.filter(f => f.group === g.k).length} 列已在表中高亮。</p>`;
+      } else if (sel.t === 'spec') {
+        const s = pmxData().specialized.find(x => x.id === sel.s);
+        h = `${close}<div class="pmx-panel__kicker">${s.isProduct ? '官方 Specialized' : '官方不列為產品'}</div><div class="pmx-panel__title">${esc(s.name)}</div>
+<dl class="pmx-q"><div><dt>官方分組</dt><dd>${esc(s.officialGroup)}</dd></div><div><dt>建在哪個產品上</dt><dd>${esc(s.builtOn)}</dd></div><div><dt>模型</dt><dd>${pmxNa(s.model)}</dd></div><div><dt>誰能用</dt><dd>${pmxNa(s.plans)}</dd></div><div><dt>說明</dt><dd>${esc(s.note)}</dd></div><div><dt>來源</dt><dd>${s.sources.map(pmxSrc).join('<br>')}</dd></div><div><dt>查證日</dt><dd><span class="pmx-num">${esc(s.checked)}</span></dd></div></dl>
+${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
+      }
+    }
+    panel.innerHTML = h;
+    // 手機：面板插在被點的那一列下方；桌機留在表格旁
+    if (PMX_MQ_PHONE.matches && sel) {
+      const host = document.getElementById('wiki-kb');
+      const sq = sel.t === 'cell' ? `.pmxl [data-pmx-f="${CSS.escape(sel.f)}"][data-pmx-p="${CSS.escape(sel.p)}"]`
+        : sel.t === 'spec' ? `.pmxl [data-pmx-spec="${CSS.escape(sel.s)}"]` : null;
+      const el = sq && host.querySelector(sq);
+      if (el) el.after(panel);
+    }
+  }
+
+  function pmxOnClick(e) {
+    const host = e.currentTarget;
+    if (!host.classList.contains('pmx-host')) return;
+    const t = e.target, st = pmx, again = () => renderProductMatrix(host);
+    if (t.closest('[data-pmx-close]')) { st.sel = null; st.grp = null; return again(); }
+    const open = t.closest('[data-pmx-open]');
+    if (open) return openWikiPage(open.dataset.pmxOpen, open.dataset.pmxType);
+    const cell = t.closest('[data-pmx-f][data-pmx-p]');
+    if (cell) {
+      const same = st.sel && st.sel.t === 'cell' && st.sel.f === cell.dataset.pmxF && st.sel.p === cell.dataset.pmxP;
+      st.sel = same ? null : { t: 'cell', f: cell.dataset.pmxF, p: cell.dataset.pmxP }; st.grp = null; return again();
+    }
+    const pr = t.closest('[data-pmx-prod]');
+    if (pr) {
+      const id = pr.dataset.pmxProd; st.col = st.col === id ? null : id;
+      st.sel = st.col ? { t: 'prod', p: id } : null; if (!st.col) st.only = false; return again();
+    }
+    const fe = t.closest('[data-pmx-feat]');
+    if (fe) { const id = fe.dataset.pmxFeat; st.sel = (st.sel && st.sel.t === 'feat' && st.sel.f === id) ? null : { t: 'feat', f: id }; st.grp = null; return again(); }
+    const gr = t.closest('[data-pmx-grp]');
+    if (gr) { const g = gr.dataset.pmxGrp; st.grp = st.grp === g ? null : g; st.sel = st.grp ? { t: 'grp', g } : null; return again(); }
+    const sp = t.closest('[data-pmx-spec]');
+    if (sp) { const id = sp.dataset.pmxSpec; st.sel = (st.sel && st.sel.t === 'spec' && st.sel.s === id) ? null : { t: 'spec', s: id }; return again(); }
+    const us = t.closest('[data-pmx-use]');
+    if (us) { const [k, ...rest] = us.dataset.pmxUse.split(':'); pmxJump({ t: k === 'product' ? 'prod' : 'feat', id: rest.join(':') }); }
+  }
+
+  // 定位到矩陣某欄／列／專用版／追蹤區（專用版標籤、詳頁「對照角色」共用）
+  function pmxJump(target) {
+    const host = document.getElementById('wiki-kb'), M = pmxData();
+    if (!host || !M || !target) return;
+    let q = null;
+    if (target.t === 'prod') { pmx.col = target.id; pmx.sel = { t: 'prod', p: target.id }; pmx.grp = null; q = `[data-pmx-colh="${CSS.escape(target.id)}"]`; }
+    else if (target.t === 'feat') {
+      const x = M.exclusive.find(i => i.id === target.id);
+      if (x) { pmx.sel = { t: 'cell', f: x.id, p: x.product }; q = `.pmx [data-pmx-x="${CSS.escape(x.id)}"]`; }
+      else { pmx.sel = { t: 'feat', f: target.id }; q = `[data-pmx-row="${CSS.escape(target.id)}"]`; }
+      pmx.grp = null;
+    } else if (target.t === 'spec') { pmx.sel = { t: 'spec', s: target.id }; q = `[data-pmx-specrow="${CSS.escape(target.id)}"]`; }
+    else if (target.t === 'track') { q = '#pmx-tracking'; }
+    renderProductMatrix(host);
+    if (PMX_MQ_PHONE.matches) {  // 手機沒有表格：產品跳到該產品段，其餘跳到插在列下的面板
+      if (target.t === 'prod') q = `[data-pmxl-prod="${CSS.escape(target.id)}"]`;
+      else if (target.t !== 'track') q = '#pmx-panel';
+    }
+    const el = q && host.querySelector(q);
+    if (el) el.scrollIntoView({ block: 'center' });
+  }
+
+  // 詳頁「對照角色」→ 該頁在矩陣裡的位置（出處欄反查；追蹤頁 → 追蹤區）
+  function pmxTargetOf(pageId) {
+    const M = pmxData();
+    if (!M) return null;
+    const hit = o => o.page && o.page.id === pageId;
+    const p = M.products.find(hit); if (p) return { t: 'prod', id: p.id };
+    const s = M.specialized.find(hit); if (s) return { t: 'spec', id: s.id };
+    const f = M.features.find(hit) || M.exclusive.find(hit); if (f) return { t: 'feat', id: f.id };
+    if ((M.tracking || []).some(r => r.id === pageId)) return { t: 'track' };
+    return null;
+  }
+  window.gotoProductMatrix = function (pageId) {
+    const nav = Array.from(document.querySelectorAll('.nav__link')).find(b => /switchView\('wiki'/.test(b.getAttribute('onclick') || ''));
+    switchView('wiki', nav || null);
+    window.setDomainFilter(PMX_DOMAIN);
+    pmxJump(pmxTargetOf(pageId) || { t: 'none' });
+  };
+  function matrixRoleChipHtml(item) {
+    if (!item.matrixRole || !pmxData()) return '';
+    const role = item.matrixRole.replace(/（.*$/, '').trim();
+    const more = (item.matrixRole.match(/（(.+)）$/) || [])[1];
+    return `<button type="button" class="pill pill--gray pmx-role" title="在 🛠️ 產品對照表裡看這頁的位置" onclick="gotoProductMatrix('${jsStr(item.id)}')">對照角色：${esc(role)}${more ? `<span class="pmx-role__more">（${esc(more)}）</span>` : ''} →</button>`;
   }
 
   // ── 人物領域：人物總覽（圈層圖＋分區卡片）／議題陣容（F1/F2）─────────────────────
@@ -1780,6 +2067,7 @@ ${older.length ? `<div class="weekly-list-count">共 ${index.length} 份週報 �
   ${item.status ? `<span class="pill pill--${item.pill}">${esc(statusLabelFull(item.status))}</span>` : ''}
   <span class="pill pill--gray">${esc(isPerson ? '人物' : (item.entityType || typeLabel))}</span>
   ${item.updateFreq ? `<span class="pill pill--weekly">🗓️ ${/每日/.test(item.updateFreq) ? '每日' : '週更'}</span>` : ''}
+  ${matrixRoleChipHtml(item)}
 </div>
 ${crumbHtml}
 <h1 class="detail__h1">${esc(item.name)}</h1>

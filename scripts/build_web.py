@@ -135,6 +135,9 @@ META_RE = {
     "lastNewsUpdate": re.compile(r"\*\*最後新聞更新[：:]\*\*\s*(.+)"),
     "updateFreq":     re.compile(r"\*\*更新頻率[：:]\*\*\s*(.+)"),
     "parent":         re.compile(r"\*\*上層[：:]\*\*\s*\[\[([^\]|#]+)\]\]"),  # 子故事階層（2026-09-03）
+    # 🛠️ 頁在產品對照表裡的角色（2026-10-23）：產品／功能／專用版／方案／追蹤頁＋括號補充。
+    # 規則見 .claude/reporter-rules/page-templates.md「對照角色欄位」；追蹤頁區由它機械算出
+    "matrixRole":     re.compile(r"\*\*對照角色[：:]\*\*\s*(.+)"),
     # 人物頁標頭四欄（只對 類型＝person 有意義；其他頁型 parse_wiki 會把這四個 key 移除、輸出端不帶）
     "identity":     re.compile(r"\*\*身分[：:]\*\*\s*(.+)"),
     "anthropicRel": re.compile(r"\*\*與 ?Anthropic[：:]\*\*\s*(.+)"),
@@ -490,6 +493,262 @@ def parse_enterprise_tracker(f: Path) -> dict | None:
         "matrix": matrix,
         "rows": rows,
     }
+
+
+# ── 產品 × 功能對照表（wiki/topics/anthropic-product-matrix.md → wiki_data["productMatrix"]）──
+# 2026-10-23 使用者裁決：網站 🛠️ 分頁改渲染這張矩陣。頁面是事實的家，本函式只解析不補值；
+# 結構不對就 raise，由 build() 併入致命集合——矩陣靜默變空，讀者看到的是「什麼功能都沒有」。
+PRODUCT_MATRIX_PAGE = WIKI_TOPICS / "anthropic-product-matrix.md"
+MATRIX_STATUSES = ("available", "beta", "preview", "no", "vague", "unknown")
+MATRIX_ROLES = ("產品", "功能", "專用版", "方案", "追蹤頁")
+_PM_PRODUCT_IDS = {"Claude app": "claude-app", "Claude Code": "claude-code", "Claude Tag": "tag",
+                   "Claude Platform": "platform", "Claude Duet": "duet"}
+_PM_LINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#([^\]|]+))?(?:\|[^\]]*)?\]\]")
+_PM_URL_RE = re.compile(r"\]\((https?://[^)\s]+)\)|(https?://[^\s｜)]+)")
+_PM_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def matrix_role_main(value: str) -> str:
+    """對照角色欄值 → 主詞（括號前）。不在五個主詞內回空字串。"""
+    main = re.split(r"[（(]", (value or "").strip())[0].strip()
+    return main if main in MATRIX_ROLES else ""
+
+
+def plan_abbr(plans: str) -> str:
+    """方案全文 → 格內縮寫（全／付費／T/E／P/M／API／美 P/M）；對不上就不縮寫（回空字串）。"""
+    p = (plans or "").strip()
+    if not p or p == "—":
+        return ""
+    if p.startswith("美國"):
+        return "美 P/M"
+    if p.startswith("API"):
+        return "API"
+    if p.startswith("Free"):
+        return "全"
+    if p.startswith("Pro／Max／Team／Enterprise"):
+        return "付費"
+    if p.startswith("Team／Enterprise"):
+        return "T/E"
+    if p.startswith("Pro／Max"):
+        return "P/M"
+    return ""
+
+
+def _pm_page(cell: str) -> dict | None:
+    """出處格 → {id, pageType, anchor}；「—」或沒有 wikilink 回 None。"""
+    m = _PM_LINK_RE.search(cell or "")
+    if not m:
+        return None
+    target = m.group(1).strip()
+    kind = "radar" if target == "feature-radar" else ("topic" if target.startswith("topics/") else "entity")
+    return {"id": target.split("/")[-1], "slug": target, "pageType": kind, "anchor": (m.group(2) or "").strip()}
+
+
+def _pm_urls(text: str) -> list[str]:
+    return [a or b for a, b in _PM_URL_RE.findall(text or "")]
+
+
+def _pm_sections(raw: str) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for title, body in _split_by_heading(raw, re.compile(r"^## (.+?)\s*$", re.M)):
+        out[title.strip()] = body
+    return out
+
+
+def _pm_table(body: str) -> list[list[str]]:
+    rows = []
+    for line in body.splitlines():
+        s = line.strip()
+        if not s.startswith("|") or re.match(r"^\|[-: |]+\|$", s):
+            continue
+        rows.append([c.strip() for c in s.strip("|").split("|")])
+    return rows[1:]  # 去表頭
+
+
+def _pm_split_name(name: str) -> tuple[str, str]:
+    m = re.match(r"^(.+?)（(.+)）$", name.strip())
+    return (m.group(1).strip(), m.group(2).strip()) if m else (name.strip(), "")
+
+
+def parse_product_matrix(f: Path) -> dict:
+    """解析對照頁 → productMatrix（tracking 由 build_matrix_tracking 另算）。結構錯誤一律 raise ValueError。"""
+    if not f.exists():
+        raise ValueError(f"{f.name} 不存在")
+    raw = read_md(f)
+    secs = _pm_sections(raw)
+    need = ("官方自己的分法", "產品", "對照表", "只在一個產品裡", "專用版")
+    miss = [n for n in need if n not in secs]
+    if miss:
+        raise ValueError(f"缺少章節：{'、'.join(miss)}")
+    m = re.search(r"^\*\*最後更新[：:]\*\*\s*(\d{4}-\d{2}-\d{2})", raw, re.M)
+    verified = m.group(1) if m else ""
+
+    official = [{"group": r[0], "members": [x.strip() for x in r[1].split("、") if x.strip()]}
+                for r in _pm_table(secs["官方自己的分法"]) if len(r) >= 2]
+
+    products = []
+    for r in _pm_table(secs["產品"]):
+        if len(r) < 5:
+            raise ValueError(f"產品表欄數不足：{r}")
+        base, sub = _pm_split_name(r[0])
+        pid = _PM_PRODUCT_IDS.get(base)
+        if not pid:
+            raise ValueError(f"產品表出現未知產品「{r[0]}」")
+        products.append({"id": pid, "name": r[0], "short": base, "entry": r[1], "whoStarts": r[2],
+                         "note": readable_inline(r[3]), "page": _pm_page(r[4])})
+    if [p["id"] for p in products] != list(_PM_PRODUCT_IDS.values()):
+        raise ValueError(f"產品欄順序或成員不對：{[p['id'] for p in products]}")
+    # 產品表下方的條列補充（**Claude app 的 Cowork**：… 這類），掛到對應產品面板
+    for line in secs["產品"].splitlines():
+        mm = re.match(r"^-\s+\*\*(.+?)(?:[：:]\*\*|\*\*[：:])\s*(.+)$", line.strip())
+        if not mm:
+            continue
+        key = next((k for k in _PM_PRODUCT_IDS if mm.group(1).startswith(k)), None)
+        if key:
+            p = next(x for x in products if x["id"] == _PM_PRODUCT_IDS[key])
+            p.setdefault("extra", []).append({"label": mm.group(1), "text": readable_inline(mm.group(2)),
+                                              "sources": _pm_urls(mm.group(2))})
+
+    features = []
+    for title, body in _split_by_heading(secs["對照表"], re.compile(r"^### (.+?)\s*$", re.M)):
+        name, sub = _pm_split_name(title)
+        feat = {"id": name, "name": name, "sub": sub, "full": title.strip(), "group": "", "cells": {}, "page": None}
+        for line in body.splitlines():
+            mm = re.match(r"^-\s+\*\*(.+?)[：:]\*\*\s*(.*)$", line.strip())
+            if not mm:
+                continue
+            key, val = mm.group(1).strip(), mm.group(2).strip()
+            if key == "分組":
+                feat["group"] = val
+            elif key == "出處":
+                feat["page"] = _pm_page(val)
+            elif key in _PM_PRODUCT_IDS:
+                parts = [x.strip() for x in val.split("｜")]
+                if len(parts) != 6:
+                    raise ValueError(f"「{title}」×{key} 應為 6 欄（狀態｜方案｜說明｜來源｜查證日｜來源種類），實得 {len(parts)}")
+                status, plans, note, src, checked, kind = parts
+                if status not in MATRIX_STATUSES:
+                    raise ValueError(f"「{title}」×{key} 狀態「{status}」不在 {MATRIX_STATUSES}")
+                urls = _pm_urls(src)
+                if not urls or not _PM_DATE_RE.match(checked) or not kind:
+                    raise ValueError(f"「{title}」×{key} 來源／查證日／來源種類缺漏")
+                plans = "" if plans == "—" else plans
+                feat["cells"][_PM_PRODUCT_IDS[key]] = {
+                    "status": status, "plans": plans, "abbr": plan_abbr(plans), "note": readable_inline(note),
+                    "source": urls[0], "checked": checked, "kind": kind}
+        if not feat["group"]:
+            raise ValueError(f"「{title}」缺 **分組：**")
+        lack = [k for k, v in _PM_PRODUCT_IDS.items() if v not in feat["cells"]]
+        if lack:
+            raise ValueError(f"「{title}」缺產品格：{'、'.join(lack)}")
+        features.append(feat)
+    if not features:
+        raise ValueError("對照表沒有任何功能小節")
+
+    ex_detail = {}
+    for line in secs["只在一個產品裡"].splitlines():
+        mm = re.match(r"^-\s+\*\*(.+?)\*\*[：:]\s*(.+)$", line.strip())
+        if mm:
+            parts = [x.strip() for x in mm.group(2).split("｜")]
+            ex_detail[mm.group(1).strip()] = parts
+    exclusive = []
+    for r in _pm_table(secs["只在一個產品裡"]):
+        if len(r) < 5:
+            raise ValueError(f"只在一個產品裡表欄數不足：{r}")
+        pid = _PM_PRODUCT_IDS.get(r[0])
+        if not pid or r[2] not in MATRIX_STATUSES:
+            raise ValueError(f"只在一個產品裡表列不合法：{r}")
+        det = ex_detail.get(r[1], [])
+        name, sub = _pm_split_name(r[1])
+        plans = "" if r[3] == "—" else r[3]
+        exclusive.append({"id": r[1], "name": name, "sub": sub, "full": r[1], "product": pid, "status": r[2],
+                          "plans": plans, "abbr": plan_abbr(plans), "page": _pm_page(r[4]),
+                          "note": readable_inline(det[0]) if det else "",
+                          "source": (_pm_urls(det[1]) or [""])[0] if len(det) > 1 else "",
+                          "checked": det[2] if len(det) > 2 else "", "kind": det[3] if len(det) > 3 else ""})
+
+    names = {f_["name"]: f_["id"] for f_ in features}
+    names.update({x["full"]: x["id"] for x in exclusive})
+    names.update({x["name"]: x["id"] for x in exclusive})
+    sp_detail = {}
+    for line in secs["專用版"].splitlines():
+        mm = re.match(r"^-\s+\*\*(.+?)\*\*[：:]\s*(.+)$", line.strip())
+        if mm:
+            sp_detail[mm.group(1).strip()] = [x.strip() for x in mm.group(2).split("｜")]
+    specialized = []
+    for r in _pm_table(secs["專用版"]):
+        if len(r) < 7:
+            raise ValueError(f"專用版表欄數不足：{r}")
+        uses = []
+        for u in [x.strip() for x in r[4].split("、") if x.strip()]:
+            if u in _PM_PRODUCT_IDS:
+                uses.append({"kind": "product", "id": _PM_PRODUCT_IDS[u], "label": u})
+            elif u in names:
+                uses.append({"kind": "feature", "id": names[u], "label": u})
+            else:
+                raise ValueError(f"專用版「{r[0]}」用到的功能「{u}」對不上任何產品或功能名")
+        det = sp_detail.get(r[0], [])
+        specialized.append({"id": r[0], "name": r[0], "officialGroup": r[1], "isProduct": r[1] == "Specialized",
+                            "builtOn": r[2], "model": r[3], "uses": uses, "plans": r[5], "page": _pm_page(r[6]),
+                            "note": readable_inline(det[0]) if det else "",
+                            "sources": _pm_urls(det[1]) if len(det) > 1 else [],
+                            "checked": det[2] if len(det) > 2 else "", "kind": det[3] if len(det) > 3 else ""})
+
+    return {"checked": verified, "official": official, "products": products, "features": features,
+            "exclusive": exclusive, "specialized": specialized, "tracking": []}
+
+
+def matrix_covered_pages(pm: dict) -> set[str]:
+    """矩陣出處欄連到的頁 slug（產品、功能、專屬、專用版）；feature-radar 不算（它是固定追蹤頁）。"""
+    pages = [p.get("page") for p in pm["products"]] + [f_.get("page") for f_ in pm["features"]] \
+        + [x.get("page") for x in pm["exclusive"]] + [s.get("page") for s in pm["specialized"]]
+    return {p["slug"] for p in pages if p and p["slug"] != "feature-radar"}
+
+
+def build_matrix_tracking(pm: dict, entities: list, topics: list, radar_file: Path | None = None) -> tuple[list, list[str]]:
+    """追蹤頁區：feature-radar（固定第一列）＋標頭「對照角色：追蹤頁」的 🛠️ 根頁。
+
+    交叉驗證：另用「index 領域欄 🛠️ 的頁 − 矩陣出處已涵蓋 − 對照頁本身」算一次，兩者不一致回傳 WARN 字串
+    （常見原因：新 🛠️ 頁忘了加對照角色欄，或角色寫成追蹤頁卻被矩陣某格當出處）。
+    """
+    by_slug = {("entities/" if i["pageType"] == "entity" else "topics/") + i["id"]: i for i in entities + topics}
+    descs: dict[str, str] = {}  # slug → index 列最後一格（鉤子）；entities 與 topics 欄數不同，取最後一格
+    rows = []
+    if radar_file and radar_file.exists():
+        r = parse_radar(radar_file)
+        rows.append({"id": "feature-radar", "pageType": "radar", "name": r["name"], "status": "",
+                     "pill": "gray", "lastUpdated": r["lastUpdated"], "hook": r["summary"]})
+    header_set = set()
+    for slug, it in sorted(by_slug.items()):
+        if it.get("domain") != "🛠️ 工具/功能" or it.get("parent"):
+            continue
+        if matrix_role_main(it.get("matrixRole", "")) == "追蹤頁":
+            header_set.add(slug)
+    index_tool = set()
+    _idx = WIKI_DIR / "index.md"
+    for line in (_idx.read_text(encoding="utf-8-sig") if _idx.exists() else "").splitlines():
+        mm = re.match(r"^\|\s*\[\[([^\]|]+)\]\]\s*\|(.*)\|\s*$", line.rstrip("\r"))
+        if not mm:
+            continue
+        cells = [c.strip() for c in mm.group(2).split("|")]
+        descs[mm.group(1).strip()] = cells[-1]
+        if any("🛠️ 工具/功能" in c for c in cells[:2]):
+            index_tool.add(mm.group(1).strip())
+    computed = index_tool - matrix_covered_pages(pm) - {"topics/anthropic-product-matrix"}
+    warns = []
+    if computed != header_set:
+        only_h = sorted(header_set - computed)
+        only_i = sorted(computed - header_set)
+        warns.append("對照表追蹤頁兩種算法不一致——"
+                     f"只在標頭「對照角色：追蹤頁」：{'、'.join(only_h) or '無'}；"
+                     f"只在「index 🛠️ − 矩陣出處」：{'、'.join(only_i) or '無'}")
+    for slug in sorted(header_set, key=lambda s: by_slug[s].get("lastNewsUpdate", ""), reverse=True):
+        it = by_slug[slug]
+        hook = re.split(r"\s*↳", readable_inline(descs.get(slug, "")))[0].strip() or it.get("latestHeadline", "")
+        rows.append({"id": it["id"], "pageType": it["pageType"], "name": it["name"], "status": it.get("status", ""),
+                     "pill": it.get("pill", "gray"), "lastUpdated": it.get("lastNewsUpdate") or it.get("lastUpdated", ""),
+                     "hook": hook})
+    return rows, warns
 
 
 def parse_radar(f: Path) -> dict:
@@ -1525,6 +1784,28 @@ def build():
         except Exception as e:
             wiki_parse_failures.append(f"topic {f.name}: {e}")
 
+    # 產品 × 功能對照表：🛠️ 分頁整個靠它，解析失敗與頁面解析失敗同等致命
+    product_matrix = None
+    _pm_file = WIKI_TOPICS / PRODUCT_MATRIX_PAGE.name  # 呼叫時才解析路徑（測試會換掉 WIKI_TOPICS）
+    _index_md = WIKI_DIR / "index.md"
+    _pm_listed = _index_md.exists() and "[[topics/anthropic-product-matrix]]" in _index_md.read_text(encoding="utf-8-sig")
+    try:
+        if not _pm_file.exists() and not _pm_listed:
+            # index 沒登記這頁＝這份 wiki 本來就沒有對照表（最小夾具）；🛠️ 分頁退回列表。
+            # index 有登記卻找不到檔 → 照常進 parse 報「不存在」、致命
+            raise FileNotFoundError
+        product_matrix = parse_product_matrix(_pm_file)
+        product_matrix["tracking"], _pm_warns = build_matrix_tracking(product_matrix, entities, topics, WIKI_RADAR)
+        for _w in _pm_warns:
+            print(f"WARN: {_w}")
+    except FileNotFoundError:
+        print("WARN: wiki/index.md 未登記 topics/anthropic-product-matrix，🛠️ 分頁退回列表")
+    except Exception as e:
+        wiki_parse_failures.append(f"product matrix {PRODUCT_MATRIX_PAGE.name}: {e}")
+    for _it in entities + topics:
+        if _it.get("matrixRole") and not matrix_role_main(_it["matrixRole"]):
+            print(f"WARN: {_it['id']} 的對照角色「{_it['matrixRole']}」主詞不在 {MATRIX_ROLES}")
+
     if wiki_parse_failures:
         print("ERROR: 下列 wiki 頁面解析失敗，會從網站上整頁消失：")
         for msg in wiki_parse_failures:
@@ -1816,6 +2097,7 @@ def build():
         "digestIndex": digest_index,
         "weeklyIndex": weekly_index,
         "radar": radar if radar else None,  # include markdown — rendered inline, no fetch needed
+        "productMatrix": product_matrix,  # 🛠️ 分頁的產品 × 功能矩陣（parse_product_matrix）
     }
 
     # ── 來源透明度資料（scripts/source_scorecard.py，隨每日 build 更新）────────────
