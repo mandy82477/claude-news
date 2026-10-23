@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（初期，體驗粗糙）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-09
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新工具動態**（2026-10-08 發布，2026-10-11 查證）
 > Claude Dashboards 與 Claude Motion 進 beta；Design、Docs、Slides 脫離 beta、所有方案可用。**獨立站 claude.ai/design 於 2026-12-14 關閉**，有專案或團隊 design system 的人要先搬。
@@ -46,7 +46,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 **與程式碼庫雙向同步已官方化：** 官方說明中心載明，在 Claude Code 下 `/design-sync` 可從 GitHub repo、設計檔、上傳檔或**本機程式碼庫**匯入一套或多套 design system，並在 Claude Design 與 Claude Code 之間往返保持同步（[官方說明中心](https://support.claude.com/en/articles/14604416-get-started-with-claude-design)，該文件 2026-08-06 更新，2026-09-06 查證）。
 
-**Claude Code `/design` 指令已官方確認，與本頁 Claude Design 同源：** `/design` skill 將 Claude Design 的 artboard 工作流程帶入 CLI 與 Claude Code Desktop，以 artifacts 為基礎，下指令後 Claude 發佈一組可編輯的 UI artboard 供挑選、調整並實作；research preview 階段，v2.1.234（2026-08-17）起提供 Pro／Max／Team／Enterprise 方案（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）。
+**Claude Code `/design` 指令已官方確認，與本頁 Claude Design 同源：** `/design` skill 將 Claude Design 的 artboard 工作流程帶入 CLI 與 Claude Code Desktop，以 artifacts 為基礎，下指令後 Claude 發佈一組可編輯的 UI artboard 供挑選、調整並實作；v2.1.234（2026-08-17）起提供，當時為 research preview（[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）。**2026-10-23 官方查證：**Claude Code 文件現寫 Slides／Design／Docs 範本為 beta、不再是 research preview；Pro／Max／Team 預設開，Enterprise 由 Owner 逐項開，需 v2.1.265+（[官方文件](https://code.claude.com/docs/en/artifacts)）。
 
 ---
 
@@ -103,10 +103,11 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 歷史記錄
 
+- 2026-10-23：官方查證 Claude Code 端 `/design` 等範本現為 beta（非 research preview），需 v2.1.265+，Enterprise 由 Owner 逐項開（[來源](https://code.claude.com/docs/en/artifacts)）
 - 2026-10-08：官方發布 Claude Dashboards 與 Claude Motion（beta）；Design、Docs、Slides 脫離 beta；獨立站訂 2026-12-14 關閉（2026-10-11 查證）
 - 2026-10-09：官方「方案與定價」頁新增「Claude Dashboards (beta)」段落；Reuters、XDA 同日報導
 - 2026-09-17：官方部落格宣布（隨 [[entities/cowork|Cowork／Chat 合併]]同批）Claude Design 整合進對話，可直接編輯、簡報並下載為 PowerPoint／PDF
-- 2026-08-17（v2.1.234）：`/design` skill 上線（research preview），將 Claude Design 的 artboard 工作流程帶入 Claude Code CLI 與 Desktop，確認與本頁 Claude Design 同源（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）
+- 2026-08-17（v2.1.234）：`/design` skill 上線（當時 research preview；現況見上），將 Claude Design 的 artboard 工作流程帶入 Claude Code CLI 與 Desktop，確認與本頁 Claude Design 同源（查證日 2026-09-20，[官方 Week 34 週報](https://code.claude.com/docs/en/whats-new/2026-w34)）
 - 2026-09-06：官方說明中心確認 `/design-sync` 可自本機程式碼庫匯入 design system，並支援 Claude Design ↔ Claude Code 雙向同步（[官方說明中心](https://support.claude.com/en/articles/14604416-get-started-with-claude-design)，文件 2026-08-06 更新）——2026-07-16 dev.to 教學文章提及的同步能力至此獲官方佐證
 - 2026-04-27：有開發者透過讓 Claude Design 洩漏部分指引，成功反向工程其系統提示詞，並以近似版本公開分享，顯示提示工程邏輯可被複製至其他 LLM 或 Claude Code 環境，降低了其差異化壁壘
 

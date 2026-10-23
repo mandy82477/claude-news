@@ -839,7 +839,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **`claude agents --json`**（v2.1.145） | 2026-05-20 | 🔥 | ✅ 推薦 | 正式發布 |
 | **自架沙箱 + MCP 隧道**（完整文件） | 2026-05-22 | 🔥 | ⚡ 有條件推薦 | 公開測試 |
 | **`/resume` 背景 session 擴展**（v2.1.144） | 2026-05-19 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Proactive Workflows**（2026-05-18 公告；官方以 Routines 落地，見 [[entities/managed-agents]]）（2026-05-18 公告，此後未見後續報導） | 2026-05-18 | 🔥 | ⏳ 觀望 | Routines 研究預覽 |
+| **Proactive Workflows**（2026-05-18 公告；官方以 scheduled tasks（原 Routines）落地，見 [[entities/managed-agents]]） | 2026-05-18 | 🔥 | ⏳ 觀望 | scheduled tasks 研究預覽 |
 | **Capability Curve**（Code w/ Claude 演講主題，非產品功能，見 [[entities/managed-agents]]）（2026-05-18 公告，此後未見後續報導） | 2026-05-18 | 🔥 | ⏳ 觀望 | 演講主題 |
 | **Plugin 依賴關係強制執行**（v2.1.143） | 2026-05-16 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`claude agents` 細粒度旗標**（v2.1.142） | 2026-05-14 | 🔥 | ⚡ 有條件 | 正式發布 |

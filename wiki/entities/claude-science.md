@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Science
 
 **類型：** product
-**狀態：** active
+**狀態：** beta（公開測試版，2026-10-23 官方查證）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-21
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-10-21）
 > - **蠍毒神經毒素蛋白質結合物**：Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物，Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分）。
@@ -46,12 +46,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 %% 維運備忘：物理學家挑戰題（09-26）、DRC 伊波拉應用案例（09-25）兩段已移入「歷史記錄」表，不在現況雙重維護（「現況不被時序侵蝕」規則）；DRC 案例單一來源、低互動（HN 27 分），暫無專屬頁面 %%
 
-Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作台 app。整合研究常用工具套件、可稽核 artifact（Auditable Artifacts）與彈性雲端運算資源，定位為科研人員的端對端 AI 研究平台。使用者可直接存取此 app，無需自行配置底層 API。
+Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作台 app。整合研究常用工具套件與可稽核 artifact（Auditable Artifacts），定位為科研人員的端對端 AI 研究平台。使用者可直接存取此 app，無需自行配置底層 API。
+
+**形態與方案（2026-10-23 官方查證）：** 產品頁標 Claude Science (beta)、公開 beta；為獨立桌面 app（macOS／Windows／Linux），從瀏覽器連線，用你方案內的 Claude 模型，另經 NVIDIA BioNeMo skills 接 Evo 2、Boltz-2、OpenFold3。Pro／Max／Team／Enterprise 可用（Team／Enterprise 需管理員開），學術與非營利有 Team plan for Scientists（[官方產品頁](https://claude.com/product/claude-science)）。
 
 核心功能組合：
 - 研究常用工具套件（整合資料分析、文獻搜尋等研究場景工具）
 - 可稽核 artifact：研究產出有稽核軌跡，可追蹤 AI 在研究過程中的介入點
-- 彈性雲端運算資源：按研究需求動態調配運算能力
+- 運算位置由使用者選：本機、Linux／HPC 登入節點、雲端 VM，或 Slurm（SSH）、Modal 帳號（2026-10-23 官方查證；非 Anthropic 動態調配的雲端運算）
 
 ## 熱度與試用價值
 
@@ -72,7 +74,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 - **研究工具套件**：整合科學研究場景常用工具，降低工具切換摩擦
 - **可稽核 Artifact**：研究產出含完整稽核軌跡，支援研究可重現性與透明度要求
-- **彈性雲端運算**：按需調配，適應不同規模的計算任務
+- **運算位置可選**：本機、HPC 登入節點、雲端 VM、Slurm（SSH）或 Modal 帳號（2026-10-23 官方查證）
 
 ## 相關議題
 
@@ -113,6 +115,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | 官方查證：產品頁標 beta；運算跑在本機／HPC／雲端 VM／Slurm／Modal，非動態調配的雲端運算（[來源](https://claude.com/product/claude-science)） |
 | 2026-10-21 | Anthropic 公布 Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物；Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分，4 個來源） |
 | 2026-10-06 | IBM 發文檢視 CRISPR 特徵酶系統發現「實際上顯示了什麼」，延續 09-27 起對原創性與能力範圍的質疑；僅標題可用 |
 | 2026-09-29 | the-scientist.com 與 WIRED 同日跟進，延續原創性質疑：the-scientist.com 稱發現可能借用另一科學家既有研究成果，WIRED 追問能力範圍是否已釐清；皆僅標題可用 |
@@ -123,4 +126,4 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 | 2026-09-24 | Anthropic 宣布新設生命科學研究團隊與實驗室；早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統，與本頁 Claude Science app 是否同一產品線原文未載明 |
 | 2026-08-17 | GitHub Search 發現官方 repo `anthropics/life-sciences`（576★），為「Claude for Life Sciences Launch」的 Claude Code Marketplace，長期託管 `marketplace.json`；與「Claude Science」品牌關係待後續報導釐清 |
 | 2026-07-15 | the-scientist.com 報導科學研究者早期評價：工作流程加快，但仍存在功能缺口；僅標題可用，細節待補 |
-| 2026-07-01 | 正式發布，科學家專用 AI 工作台 app，整合研究工具套件、可稽核 artifact 與彈性雲端運算 |
+| 2026-07-01 | 正式發布，科學家專用 AI 工作台 app，整合研究工具套件與可稽核 artifact |

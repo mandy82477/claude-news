@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Tag
 
 **類型：** product
-**狀態：** active
+**狀態：** beta（公開測試版，2026-10-23 官方查證）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-06-24
-**最後更新：** 2026-08-27
-**最後新聞更新：** 2026-07-08
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-07-07）
 > Anthropic Status 確認 Claude Tag 的 GitHub 操作一度出現錯誤率升高，已於同日 15:52 UTC 恢復正常，官方未公布根因。
@@ -42,7 +42,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新動態：** Anthropic Status 確認 Claude Tag 的 GitHub 操作於 2026-07-07 一度出現錯誤率升高，已於同日 15:52 UTC 恢復正常（事故頁：[status.claude.com](https://status.claude.com/incidents/d23j8s7t8rx2)），屬短暫中性事件，細節見下方「穩定性事件」。
 
-Claude Tag 是 Anthropic 於 2026-06-24 正式發布的 Slack-native AI 協作工具，讓 AI 以隊友身份加入 Slack 頻道，可讀取頻道上下文、記憶資訊、主動完成任務，並連接程式碼庫、工具與資料。Anthropic 內部已有 **65% 產品程式碼**由 Claude Tag 生成，定位為 Claude Code 向「更主動、更團隊協作」方向的延伸。
+Claude Tag 是 Anthropic 於 2026-06-24 發布的 Slack-native AI 協作工具，讓 AI 以隊友身份加入 Slack 頻道，可讀取頻道上下文、記憶資訊、主動完成任務，並連接程式碼庫、工具與資料。Anthropic 內部已有 **65% 產品程式碼**由 Claude Tag 生成，定位為 Claude Code 向「更主動、更團隊協作」方向的延伸。
+
+**方案與狀態（2026-10-23 官方查證）：** 官方文件全站標 Public Beta，僅開放 Team、Enterprise（個人方案不可用）；由 Owner 在 admin-settings 配對 Slack 工作區（[官方文件](https://claude.com/docs/claude-tag/overview)）。
 
 ## 熱度與試用價值
 
@@ -68,10 +70,10 @@ Claude Tag 是 Anthropic 於 2026-06-24 正式發布的 Slack-native AI 協作�
 
 ## 使用指南
 
-使用者可透過 Anthropic 官方發布頁面申請使用：
+僅 Team／Enterprise 可用（個人方案不可用）：由組織 Owner 在 admin-settings 配對 Slack 工作區（2026-10-23 官方查證，[官方文件](https://claude.com/docs/claude-tag/overview)）。發布公告：
 
 ```
-Anthropic 官方公告：https://www.anthropic.com/news/introducing-claude-tag
+https://www.anthropic.com/news/introducing-claude-tag
 ```
 
 ## 相關議題
@@ -83,5 +85,6 @@ Anthropic 官方公告：https://www.anthropic.com/news/introducing-claude-tag
 
 | 日期 | 事件 |
 |------|------|
-| 2026-06-24 | Anthropic 正式發布 Claude Tag，進入今日 HN 熱門討論（情緒 😊）；Anthropic 內部 65% 產品程式碼由 Claude Tag 生成（官方公告數據） |
+| 2026-06-24 | Anthropic 發布 Claude Tag，進入今日 HN 熱門討論（情緒 😊）；Anthropic 內部 65% 產品程式碼由 Claude Tag 生成（官方公告數據） |
 | 2026-07-07 | GitHub 操作錯誤率一度升高，Anthropic Status 頁面確認並展開調查 |
+| 2026-10-23 | 官方查證：文件全站標 Public Beta，僅 Team／Enterprise，Owner 於 admin-settings 配對 Slack（[來源](https://claude.com/docs/claude-tag/overview)） |

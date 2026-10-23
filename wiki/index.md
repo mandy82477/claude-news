@@ -44,7 +44,7 @@
 | [[entities/sonnet-5-5]] | model | 🤖 模型 | active | Claude Sonnet 5.5：2026-09-28 發布，取代 Sonnet 5 成為 API 預設 Sonnet，Terminal-Bench 4.0 由 10.3%→70.6%，牌價維持 $2/$10 |
 | [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位 |
 | [[entities/haiku-5-5]] | model | 🤖 模型 | active | Claude Haiku 5.5：2026-10-07 發布，取代 Haiku 4.5，官方稱最便宜最快最具能力的小型模型，成本降約 75%；牌價 From $0.10/$0.50、1M context（已查實） |
-| [[entities/claude-science]] | product | 🛠️ 工具/功能 | active | Claude Science：科學家專用 AI 工作台，整合研究工具套件、可稽核 artifact、彈性運算資源；Anthropic 宣布自行開發藥物 |
+| [[entities/claude-science]] | product | 🛠️ 工具/功能 | beta | Claude Science：科學家專用桌面 app（公開 beta），可稽核 artifact、本機／HPC／雲端 VM 皆可跑；Anthropic 宣布自行開發藥物 |
 | [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-mods]] |
 | [[entities/opus-5-5]] | model | 🤖 模型 | active | Claude Opus 5.5：2026-09-22 發布的現行 Opus，$4/$20、快取讀取 $0.20，官方稱多數工作追平 Fable 5.1；v2.1.280 起為 Claude Code 預設模型 |
 | [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手 |
@@ -69,11 +69,11 @@
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（單一來源）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
 | [[entities/opencode]] | product | 💼 商業 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills　↳ 子故事：[[entities/opencode-archive]] |
-| [[entities/claude-tag]] | feature | 🛠️ 工具/功能 | active | Claude Tag：Slack-native AI 協作工具，可讀取頻道上下文、跨 session 記憶、主動完成任務；Anthropic 內部 65% 程式碼由其生成 |
+| [[entities/claude-tag]] | feature | 🛠️ 工具/功能 | beta | Claude Tag：Slack-native AI 協作工具，可讀取頻道上下文、跨 session 記憶、主動完成任務；Anthropic 內部 65% 程式碼由其生成 |
 | [[entities/claude-skills]] | feature | 🛠️ 工具/功能 | active | Claude Skills：官方 Skills 產品線與生態單一入口——六大控制層之一，官方小企業/教師技能包、平台支援、第三方移植動態；怎麼寫、慣例與地雷歸 [[topics/community-skills]]　↳ 子故事：[[entities/claude-skills-archive]] |
 | [[entities/cowork]] | product | 🛠️ 工具/功能 | active（09-17 起與聊天介面合併） | 與聊天介面合併為單一 Claude；同步推出 [[entities/claude-docs]]、[[entities/claude-slides]]（beta），先於 Pro／Max 開放　↳ 子故事：[[entities/cowork-archive]] |
-| [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | beta | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；先開放 Pro、Max 方案 |
-| [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | beta | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；先開放 Pro、Max 方案 |
+| [[entities/claude-docs]] | feature | 🛠️ 工具/功能 | active | 官方文件工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接在 Claude 對話中建立、編輯文件；所有方案含 Free 可用（10-08 起） |
+| [[entities/claude-slides]] | feature | 🛠️ 工具/功能 | active | 官方簡報工具，2026-09-17 隨 Cowork／Chat 合併同步推出，可直接展示或下載為 PowerPoint／PDF；所有方案含 Free 可用（10-08 起） |
 | [[entities/fable-5]] | model | 🤖 模型 | active | 現行旗艦 5.1（09-01 GA）；5 轉 Legacy，退役不早於 2027-06-09；兩代同價；護欄擋什麼、被擋會不會知道　↳ 子故事：[[entities/fable-5-archive]] |
 | [[entities/tom-brown]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人（GPT-3 共同作者）、算力負責人；2026-06-25 接管與白宮的出口管制談判，促成 Mythos 5 解封；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/tom-blomfield]] | person | 👤 人物 | active| 前 Monzo 共同創辦人，2026-07-13 加入 Anthropic（2026-09-20 查證確認到任與職稱）|

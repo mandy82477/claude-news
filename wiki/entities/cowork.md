@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（09-17 起與 Claude 聊天介面合併為單一 Claude，介面選擇不再需要；先於 Pro／Max 開放，數週內擴及更多方案）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
-> **最新動態**（2026-10-06）
-> 官方工程師 Felix Rieseberg 說明 Cowork 改雲端原因（省硬碟電池、闔筆電不中斷）；r/ClaudeAI 追問本機 VM 何時釋放硬碟空間，官方未答。
+> **最新動態**（2026-10-23）
+> 官方查證：Chrome 側邊欄仍是 beta；Pro／Max 新任務自 10-06 起一律雲端執行，Team 為 web／mobile beta。
 
 ---
 
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **官方說明中心確認合併後的背景執行與沙箱（2026-10-17 查證）：** [〈Use Claude Cowork on web, desktop, and mobile〉](https://support.claude.com/en/articles/15520349)寫明「Claude Cowork is now just Claude」，在任何對話描述任務即可交給 Claude；雲端 session 在背景持續執行（「Close your laptop and Claude keeps going」），Pro、Max 於雲端執行，Team、Enterprise 的雲端 Cowork 為 beta。沙箱：[〈Claude Cowork architecture overview〉](https://support.claude.com/en/articles/14479288)載明雲端 session 各有獨立沙箱（session 開始時建立、結束時銷毀；未稱其為 Linux VM），本機 session 的指令與程式碼則在專屬 Linux VM 內執行。雲端 session 只能經桌面版 App 觸及本機檔案，App 離線即無法。[release notes](https://support.claude.com/en/articles/12138966-release-notes)（2026-09-16）另載聊天、Cowork 任務、專案、連接器、技能都會沿用，逐步開放給 Pro、Max。
 
-Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放，首波僅限 Max 訂閱戶，2026-10-17 查官方說明中心已改載 Pro、Max 於雲端執行、Team 與 Enterprise 的雲端版為 beta（詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
+Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放（首波僅 Max）；2026-10-23 官方查證：Pro、Max 在每個介面都於雲端執行，10-06 起新任務一律雲端、介面已拿掉「Only on your computer」，Team 的 web／mobile 為 beta，Enterprise 需管理員開（[說明中心](https://support.claude.com/en/articles/15520349)；詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
 
 **跟 Claude Code 差在哪（合併前狀態，合併後見上方查證段）：** Claude Code 是終端機 CLI，面向工程師逐指令互動；Cowork 是圖形化桌面／行動／網頁介面，任務丟出去後可背景執行，不需要盯著終端機。兩者共用底層 Claude agent 能力（如 2026-05-03 macOS 電腦使用功能，Claude Code 與 Cowork 同步取得直接控制桌面滑鼠鍵盤的能力）。2026-05-11 一則 Reddit 貼文（單一使用者觀點，非官方聲明）指出，桌面版 Claude Code 推出後與 Cowork 功能高度重疊，使用者一度分不清楚兩者定位；此後未見官方公開發文說明差異。
 
@@ -56,9 +56,9 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 | 介面 | 狀態 | 取用門檻 |
 |---|---|---|
 | 桌面版 | 正式發布 | Pro 方案以上（Free 不含，claude.com/pricing 官方查證） |
-| Chrome 側邊欄 | 正式發布 | Max／Team 公告當日即可用，Pro 於數週內開放；不支援其他 Chromium 瀏覽器與行動版側邊欄 |
+| Chrome 側邊欄 | beta（2026-10-23 官方查證） | 2026-08-12 起 Max／Team 先開、Pro 數週內開放；不支援其他 Chromium 瀏覽器與行動版側邊欄 |
 | 行動版（iPhone／iPad／Android） | 正式發布（Help Center 確認） | 隨帳號方案而定，官方未再細分獨立門檻 |
-| 網頁版／雲端持續執行擴展 | Preview | 首波僅 Max 訂閱戶，2026-07-07 起逐步擴大 |
+| 網頁版／雲端持續執行 | Pro／Max 已上線；Team beta；Enterprise beta | Pro／Max 每個介面都在雲端跑；Team 為 web／mobile beta；Enterprise 需管理員開（2026-10-23 官方查證） |
 
 **現在會咬到你的是什麼：** 除了 Windows 平台不穩定叢集（見上方連結），近期還有三類值得留意——① **資料完整性**：Cowork 的 Edit/Write 工具因緩衝區容量上限會靜默截斷檔案（#53940，Windows 上的 Cowork 使用者），寫入後務必自行核對檔案長度；② **連結狀態失真**：Google Drive connector 顯示已連結，Cowork 中卻叫不到對應工具（#30457，2026-09-10）；③ **接入層限制**：Claude Desktop／Cowork 目前不支援 AWS Bedrock 作為替代後端，僅 Claude Code CLI 有此環境變數（#32668，功能請求，官方尚未排入路線圖）。
 
@@ -98,6 +98,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | 官方查證：Chrome 側邊欄仍 beta；Pro／Max 各介面皆雲端、10-06 起新任務一律雲端；Team beta、Enterprise 需管理員開（[來源](https://support.claude.com/en/articles/15520349)） |
 | 2026-10-06 | Simon Willison 部落格轉引 Anthropic 工程師 Felix Rieseberg 說明架構轉雲端原因（省硬碟電池、闔筆電不中斷）；r/ClaudeAI 使用者追問本機殘留 VM 何時釋放硬碟空間，官方未答 |
 | 2026-09-25 | Help Center release notes 新增段落確認 Cowork 進駐每個對話，可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件 |
 | 2026-09-17 | Cowork 與 Chat 合併為單一 Claude，同步推出 Claude Docs、Slides（beta）；HN 226 分，六家媒體同日跟進（僅標題可用） |

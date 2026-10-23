@@ -8002,3 +8002,11 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 查證（官方產品頁 claude.com/product/claude-duet，主編 WebFetch，2026-10-23）：Duet 為獨立 app（「a standalone app for iOS and Android」），電腦上在 claude.ai 網頁開啟，未提桌面版；沿用 Claude app 帳號、記憶、skills 與連接的 app，單一對話串、可語音；每日晨間簡報、完成或需決定時才傳訊息；發訊息、付款前先問；取得方式為候補名單（Join the waitlist），Team／Enterprise 明寫尚未納入。推翻頁面「介面未說明」與 feature-radar「美國 Pro／Max 可直接試用」兩處。
 - 處置：(a) [[entities/claude-duet]] 標頭狀態、callout、現況、方案表、核心功能、來源與歷史表更新。(b) [[feature-radar]] Duet 條目「是什麼／現在要試嗎／快速上手／注意事項」改寫。(c) [[index]] Duet 列鉤子補「獨立 app、候補名單制」。(d) 歸因 slug `user-query`，產品頁 URL 入 `data/source_attribution.jsonl`。
 - 歸因 user-query／功能
+
+## 2026-10-23 Query（使用者：產品路線怎麼分——產品 × 功能對照表查證，七處 wiki 與官方不符）
+
+- 問題：使用者裁決網站新增「產品 × 功能」對照表（產品為欄、功能為列、專用版另區並寫明建在哪個產品上）。主編派查證員以官方一手來源逐格填 126 格（61 格官方未公開），過程中發現 wiki 七處與官方現況不符。
+- 查證（主編派工 WebFetch 官方產品頁／說明中心／Claude Code 文件／訂價頁，2026-10-23）：① Tag 官方全站 Public Beta、只開放 Team／Enterprise；② Science 公開 beta、獨立桌面 app，運算跑本機／HPC／雲端 VM／Slurm／Modal，不是 Anthropic 動態調配；③ Security 主產品是 claude.ai 網頁 app（Enterprise beta，Mythos 只在此），Claude Code 只有另裝外掛；④ Docs／Slides 10-08 起脫離 beta、所有方案含 Free；⑤ Cowork 的 Chrome 側邊欄仍 beta，Pro／Max 各介面皆雲端跑，Team／Enterprise beta；⑥ Routines 官方改名 scheduled tasks（仍研究預覽）；⑦ Claude Code `/design` 等範本現為 beta（v2.1.265+），非 research preview。另：Cowork 官方說明中心明寫已併入 Claude、新介面無模式切換，但導覽列與產品頁仍單列。
+- 處置：(a) 功能記者（sonnet）修 entities/claude-tag、claude-science、claude-security、claude-docs、claude-slides、cowork、managed-agents、claude-design 八頁，各加歷史列；(b) 主編改 [[index]] 四列（Science／Tag 主值 → beta，Docs／Slides → active 並改鉤子）與 [[feature-radar]] Proactive Workflows 列改名；(c) 歸因 slug `user-query`，七個官方 URL 入 `data/source_attribution.jsonl`；(d) 對照表資料與版面另案實作，事實的家將是新 topic 頁（建頁時登記觸發邊）。
+- 規則缺口（轉 /wiki-lint）：Docs／Slides 頁內正文已寫脫離 beta、頁頭與 index 卻停在 beta 達 15 天——頁頭狀態主值與正文脫鉤無閘可抓，建議 check_wiki_freshness 或 lint 加「正文含『脫離 beta』而主值仍 beta」的提示。
+- 歸因 user-query／功能

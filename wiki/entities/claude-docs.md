@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Docs
 
 **類型：** feature
-**狀態：** beta
+**狀態：** active（2026-10-08 起脫離 beta，所有方案含 Free 可用；2026-10-23 官方查證）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-09-17
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-09-25
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-09-25）
 > Help Center release notes 新增段落：可在任何對話中直接向 Claude 要求文件，**含 Claude Code 與 Artifact 介面**。
@@ -59,7 +59,7 @@ Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與
 
 ## 使用指南
 
-Pro／Max 方案使用者於 claude.ai 對話中直接請 Claude 建立或編輯文件，即可觸發 Claude Docs（beta）；具體選單路徑官方未附截圖，待補。
+所有方案（含 Free）使用者於 claude.ai 對話中直接請 Claude 建立或編輯文件，即可觸發 Claude Docs（2026-10-08 起脫離 beta，2026-10-23 官方查證，[來源](https://claude.com/resources/articles/dashboards-and-motion)）；具體選單路徑官方未附截圖，待補。
 
 ## 核心功能
 
@@ -82,5 +82,6 @@ Pro／Max 方案使用者於 claude.ai 對話中直接請 Claude 建立或編輯
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | 官方查證：2026-10-08 起脫離 beta，所有方案含 Free 可用，頁頭狀態同步更正（[來源](https://claude.com/resources/articles/dashboards-and-motion)） |
 | 2026-09-25 | Help Center release notes 新增段落：可在任何對話（含 Claude Code、Artifact 介面）直接要求文件；輸出格式與跟 Artifacts 邊界仍未載明 |
 | 2026-09-17 | 建頁。官方隨 Cowork／Chat 合併同步推出 Claude Docs（beta），先開放 Pro、Max 方案 |

@@ -32,8 +32,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-10-15
-**最後新聞更新：** 2026-10-15
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-10-15）
 > anthropic-sdk-python v1.14.0／anthropic-sdk-typescript vertex-sdk-v0.21.0 同步新增 Managed Agents 的 `execution_identity`；官方 release note 僅列欄位新增，具體可操作的 API 用法未載。
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽文件](https://platform.claude.com/docs/en/managed-agents/overview)）：持久記憶（含 Dreaming 記憶整合）、20 路並行子代理、Outcomes 規格驗證、Proactive Workflows、企業自架沙箱。**狀態為 beta**（自 2026-05-11 起，所有 API 帳號預設可用，須帶 `managed-agents-2026-04-01` beta header）——各零件成熟度不一：只有 `/goal` 已達正式發布，Dreaming 與 Agent View 仍是 research preview（Dreaming 另需申請並帶 `dreaming-2026-04-21` header），Proactive Workflows 官方以 Routines（research preview）落地，Capability Curve 則是 Code w/ Claude 演講主題而非產品功能（見零件表，查證 2026-10-03）。Outcomes 讓規格文件成為執行時的強制依據（官方語「Specs become load-bearing」）。
+Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽文件](https://platform.claude.com/docs/en/managed-agents/overview)）：持久記憶（含 Dreaming 記憶整合）、20 路並行子代理、Outcomes 規格驗證、Proactive Workflows、企業自架沙箱。**狀態為 beta**（自 2026-05-11 起，所有 API 帳號預設可用，須帶 `managed-agents-2026-04-01` beta header）——各零件成熟度不一：只有 `/goal` 已達正式發布，Dreaming 與 Agent View 仍是 research preview（Dreaming 另需申請並帶 `dreaming-2026-04-21` header），Proactive Workflows 官方以 scheduled tasks（原 Routines，研究預覽；2026-10-23 官方查證改名，[文件](https://code.claude.com/docs/en/routines)）落地，Capability Curve 則是 Code w/ Claude 演講主題而非產品功能（見零件表，查證 2026-10-03）。Outcomes 讓規格文件成為執行時的強制依據（官方語「Specs become load-bearing」）。
 
 實質新功能停在 2026-05-22；此後多筆為 SDK 版號擴充，多數官方 changelog 未列細節，2026-09-11 的 anthropic-sdk-python v1.5.0 首度列出具體項目——新增 auto mode 工具權限設定；2026-09-15 的 v1.6.0 再擴充同一功能線，原文同樣截斷。2026-10-09 的 anthropic-sdk-python v1.13.0／anthropic-sdk-typescript sdk-v0.133.0 新增 workflows、多代理設定（multiagent configuration）與 thread 狀態過濾三項型別支援，官方 changelog 僅列項目名稱，具體可操作的 API 用法與對應產品介面（是否即「各零件現在到哪」表中的 Proactive Workflows）仍待官方文件補充。獨立第三方生產環境回饋至今為零——本頁引用到的兩則使用案例，一則用的是自組架構、一則來自 Claude Code 創始人。
 
@@ -73,7 +73,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 ## 接下來看什麼
 
-- **等哪個訊號**：Agent View 從研究預覽升格、Routines 脫離研究預覽、出現第一則獨立生產環境回饋。三者任一發生，本頁的零件表與熱度就會變。
+- **等哪個訊號**：Agent View 從研究預覽升格、scheduled tasks（原 Routines）脫離研究預覽、出現第一則獨立生產環境回饋。三者任一發生，本頁的零件表與熱度就會變。
 - **你的選項**：(a) 什麼都不做，先用 `/goal` 把單 session 的完成條件立起來；(b) 只在需要資料不出境時評估自架沙箱；(c) 想要跨 session 記憶又不想綁平台，先看社群自組架構——但目前唯一的成本數字未附方法。
 
 ---
@@ -90,11 +90,12 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 | Outcomes 規格驗證 | Agent 自我驗證輸出是否符合規格文件 | 公開測試 |
 | Agent View | 統一面板管理所有並行 session 即時狀態（`claude agents`） | 研究預覽 |
 | `/goal` 指令 | fire-and-forget 自動化，小型快速模型驗證完成條件 | 正式發布（v2.1.139） |
-| Proactive Workflows | 官方工作坊以 Routines 實作排程／API／GitHub 事件觸發的雲端 Claude Code（查證 2026-10-03，細節見下） | 公告｜Routines 研究預覽 |
+| Proactive Workflows | 官方工作坊以 scheduled tasks（原 Routines）實作排程／API／GitHub 事件觸發的雲端 Claude Code（查證 2026-10-03，細節見下） | 公告｜研究預覽 |
 | Capability Curve | Code w/ Claude 2026（2026-05-06）Alex Albert 演講主題，非可操作的產品功能（查證 2026-10-03，細節見下） | 演講主題 |
 
-- **Proactive Workflows**：官方「proactive agent workflow」工作坊（[session](https://claude.com/code-with-claude/session/tyo-proactive-agent-workflow)）以 Routines 實作：存好 prompt、repo 與 connector 的雲端 Claude Code 設定，由排程、API 呼叫或 GitHub 事件（PR、release）觸發，筆電關機也能跑。
-- Proactive Workflows 可用方案與命名：Pro／Max／Team／Enterprise 可用（[Routines 文件](https://code.claude.com/docs/en/routines)，查證 2026-10-03）；官方文件未見以 Proactive Workflows 命名的獨立產品頁。
+- **Proactive Workflows**：官方「proactive agent workflow」工作坊（[session](https://claude.com/code-with-claude/session/tyo-proactive-agent-workflow)）以 Routines（現稱 scheduled tasks）實作：存好 prompt、repo 與 connector 的雲端 Claude Code 設定，由排程、API 呼叫或 GitHub 事件（PR、release）觸發，筆電關機也能跑。
+- Proactive Workflows 可用方案與命名：Pro／Max／Team／Enterprise 可用（[scheduled tasks 文件](https://code.claude.com/docs/en/routines)，查證 2026-10-03）；官方文件未見以 Proactive Workflows 命名的獨立產品頁。
+- 命名更正（2026-10-23 官方查證）：官方已改稱 scheduled tasks（原 Routines），routines 只留在網址、/routines 別名、API 路徑與組織設定開關。
 - **Capability Curve**：Code w/ Claude 2026（2026-05-06 舊金山）Alex Albert 的演講主題：frontier 模型持續進步，曲線往哪走、對建構者代表什麼（[官方 session 頁](https://claude.com/code-with-claude/session/sf-the-capability-curve)，查證 2026-10-03）。
 - Capability Curve 官方頁僅有演講介紹，未載評估指標或任務分類，非可操作的產品功能。
 | 自架沙箱（Self-hosted Sandboxes） | 企業在自有基礎設施執行 agent 工作流，資料不出境 | 公開測試 |
@@ -131,6 +132,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | 官方查證：Routines 已改名 scheduled tasks，狀態仍為研究預覽；routines 僅留於網址、別名、API 路徑（[來源](https://code.claude.com/docs/en/routines)） |
 | 2026-10-15 | **anthropic-sdk-python v1.14.0** 新增 Managed Agents 的 `execution_identity`，用法未載（TS vertex-sdk v0.21.0 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
 | 2026-10-09 | **anthropic-sdk-python v1.13.0** 新增 Managed Agents 的 workflows、多代理設定與 thread 過濾型別，用法未載（TS SDK 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|
 | 2026-09-15 | **anthropic-sdk-python v1.6.0** 再擴充 auto mode 工具權限功能，原文截斷、範圍未知（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0)）|

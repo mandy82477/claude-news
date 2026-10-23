@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** beta（公開測試版）
 **領域：** 🛠️ 工具/功能
 **首次出現：** 2026-04-30
-**最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-10-23
+**最後新聞更新：** 2026-10-23
 
 > **最新資安產品動態**（2026-10-22）
 > Claude Security 新增偵測「同一漏洞再次出現」的能力並追蹤修補進度，不只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，細節未見官方部落格或文件佐證。
@@ -44,7 +44,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Anthropic 已將 **Claude Mythos 5**（見 [[entities/mythos]]）整合進 Claude Security，讓企業團隊取得前沿等級漏洞掃描能力且不需直接存取模型本身（2026-08-21，詳見下方「歷史記錄」）。
 
-Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 正式向**全部 Enterprise 客戶**開放。ZDNET、SecurityWeek、SiliconANGLE、CRN、Pulse 2.0 等多家媒體報導。這是 Anthropic 首次以**獨立資安產品形式**跨足 AI 輔助資安市場，直接整合於 Claude Code 開發環境。
+Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 正式向**全部 Enterprise 客戶**開放。ZDNET、SecurityWeek、SiliconANGLE、CRN、Pulse 2.0 等多家媒體報導。這是 Anthropic 首次以**獨立資安產品形式**跨足 AI 輔助資安市場。
+
+**產品形態（2026-10-23 官方查證）：** 主產品是 claude.ai 上的 Claude Security 網頁 app（Enterprise 公開 beta；Mythos 掃描只在這裡）；Claude Code 只能另裝 claude-security 外掛（beta，用 session 模型，不含 Mythos）（[官方產品頁](https://claude.com/product/claude-security)）。
 
 核心運作方式：以類安全研究員的方式**讀取 Git 歷史**、**跨檔案追蹤資料流**，目標大幅降低傳統規則掃描的誤報率。多位開發者指出「**推理式驗證（reasoned verification）**」才是本次發布真正的差異化設計決策——工具可自動確認漏洞真實性並提出修復建議，而非僅標記疑似問題。
 
@@ -67,7 +69,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 與傳統 CVE 掃描器相比，Claude Security 的關鍵差異在於：
 - **情境化安全評估**：結合應用程式的**業務邏輯**提供安全評估，而非僅比對已知 CVE 資料庫
-- **開發流程整合**：直接嵌入 Claude Code 環境，在開發階段即攔截安全問題
+- **開發流程整合**：網頁 app 為主；Claude Code 端透過另裝的 claude-security 外掛在開發階段攔截問題（2026-10-23 官方查證）
 - **架構層理解**：能判斷「應用邏輯是否安全」，補足傳統 SAST 工具的盲點
 
 社群工具 **Trent**（Show HN: 2026-04-30）提供類似定位——在 Claude Code 環境中提供應用架構層級的安全評估，可視為 Claude Security 的社群先行版本。
@@ -99,6 +101,7 @@ Claude Security 於 2026-04-30 宣布推出公開測試版，並於 2026-05-01 �
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-23 | 官方查證：主產品是 claude.ai 網頁 app（Mythos 僅此）；Claude Code 為另裝外掛，非內建（[來源](https://claude.com/product/claude-security)） |
 | 2026-10-22 | **新增「重複出現漏洞」偵測與修補進度追蹤**：不再只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導，未見官方佐證 |
 | 2026-09-29 | **「Claude Compliance API」媒體曝光**：Security Boulevard 首發，企業可監控 Claude 對話／檔案／Agent 活動；4 個來源同日跟進，2026-10-17 查證為既有官方產品（詳見「現況」） |
 | 2026-08-21 | **Claude Mythos 5 整合進 Claude Security**：企業團隊在不直接存取模型本身的前提下取得前沿等級漏洞掃描能力；MarkTechPost 首發報導，Dealroom、Palo Alto Networks Unit 42、The New Stack 三方跟進；額度／定價面（Dealroom 提及 $35M credits 承諾）詳見 [[entities/pricing]]；來源：Google News / MarkTechPost（另有 Dealroom、Palo Alto Networks Unit 42、The New Stack） |
