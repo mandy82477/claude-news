@@ -72,19 +72,20 @@
 ### Claude Duet
 **發布：** 2026-10-21（Research Preview） | **狀態：** Research Preview
 
-**是什麼：** 由 Opus 5.5 驅動的主動式 agent，攔截使用者未開口的待辦事項、在背景持續工作，只在需要使用者拍板時才打斷。
+**是什麼：** 由 Opus 5.5 驅動的主動式 agent，獨立 app（iOS／Android，電腦走 claude.ai 網頁），攔截使用者未開口的待辦事項、在背景持續工作，只在需要使用者拍板時才打斷。
 
 **為何熱：** Reuters、TechCrunch、VentureBeat、CNBC、The Verge 等十餘家媒體同日跟進報導；OrcaRouter 評論其與 Claude Code「同一模型，對『完成』定義不同」。
 
-**現在要試嗎：** 美國 Pro／Max 訂閱戶可直接試用；其他地區與方案使用者暫無法取用，不必找。
+**現在要試嗎：** 美國 Pro／Max 訂閱戶可加入候補名單（不是開放即用，2026-10-23 官方產品頁查證）；其他地區、Team／Enterprise 暫無法取用，不必找。
 
 **快速上手：**
 ```
-# 美國 Pro／Max 帳號：claude.com/product/claude-duet 開啟研究預覽
-# 官方目前僅提供產品頁文案，未見 CLI／API 層級設定說明
+# 美國 Pro／Max 帳號：claude.com/product/claude-duet →「Join the waitlist」
+# 獲准後：手機裝 iOS／Android app，電腦上在 claude.ai 網頁開啟
+# 官方未提供 CLI／API 層級設定說明
 ```
 
-**注意事項：** 僅美國 Pro／Max 方案開放，官方未提供其他地區／方案時程；任務範圍、權限模型等技術文件尚未公開。詳見 [[entities/claude-duet]]。
+**注意事項：** 僅美國 Pro／Max 候補名單，官方未提供其他地區／方案時程；發訊息、付款前會先問，其餘權限模型與通知管道尚未公開。詳見 [[entities/claude-duet]]。
 
 ### anthropic-sdk-typescript Vertex SDK 1.0.0（Breaking Change）
 **發布：** 2026-10-21（vertex-sdk-v1.0.0） | **狀態：** 正式發布

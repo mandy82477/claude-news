@@ -7995,3 +7995,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 5 筆（entities/claude-code v2.1.302／304／300 預設值變更與已修復項、topics/community-memory 的 ai-data-extractor、topics/community-skills 的 react-native-boilerplate），append 至 `data/devpractice-candidates.jsonl`，手冊寫入 0 則（今日唯一候選條目《Your CLAUDE.md Is Probably Too Long》為第三方 dev.to 部落格，非官方使用指南，不符開發實務類門檻，已更正分類為不收錄）
 - market 判讀：判讀 2 則（Reservoir 控告 Suno 與 Anthropic AI 音樂著作權侵權；Anthropic 傳最快本週五公開提交 S-1），寫入 topics/market-signals，皆無可交易上市公司牽涉，里程碑登記 2 筆（訴狀全文／案號；公開版 S-1 是否於 10/23 後出現在 SEC EDGAR），結算日 2026-11-05
 - 歸因：市場判讀 2 行併入 `data/source_attribution.jsonl`（category 商業，沿既有 market-signals 歸因慣例）
+
+## 2026-10-23 Query（使用者：Claude Duet 為什麼放在聊天介面——產品地圖提案討論）
+
+- 問題：使用者在討論兩軸產品地圖（入口 × 誰起手）提案時，問 Duet 為什麼被放在「聊天介面」列。查 [[entities/claude-duet]] 頁寫「介面官方未說明」，提案的擺法是推定。
+- 查證（官方產品頁 claude.com/product/claude-duet，主編 WebFetch，2026-10-23）：Duet 為獨立 app（「a standalone app for iOS and Android」），電腦上在 claude.ai 網頁開啟，未提桌面版；沿用 Claude app 帳號、記憶、skills 與連接的 app，單一對話串、可語音；每日晨間簡報、完成或需決定時才傳訊息；發訊息、付款前先問；取得方式為候補名單（Join the waitlist），Team／Enterprise 明寫尚未納入。推翻頁面「介面未說明」與 feature-radar「美國 Pro／Max 可直接試用」兩處。
+- 處置：(a) [[entities/claude-duet]] 標頭狀態、callout、現況、方案表、核心功能、來源與歷史表更新。(b) [[feature-radar]] Duet 條目「是什麼／現在要試嗎／快速上手／注意事項」改寫。(c) [[index]] Duet 列鉤子補「獨立 app、候補名單制」。(d) 歸因 slug `user-query`，產品頁 URL 入 `data/source_attribution.jsonl`。
+- 歸因 user-query／功能
