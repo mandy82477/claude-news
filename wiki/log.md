@@ -8143,3 +8143,5 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 待使用者確認（本輪新增，非前述擱置清單重複）：
   1. [功能] GitHub Issue #7490（Bash tool 可設定 shell，150 讚）已達 official-community-gap 入口判準①，但判準③「官方補到哪」需一手查證（記者無 web 工具），請主編／使用者查證後決定是否開新列。
   2. [商業] topics/anthropic-business「哪個合作會改到你用的 Claude」表已 6/6 滿載，Schwab RIA 20 席門檻事件符合入表判準②卻無既定讓位機制（`.claude/reporter-rules/commercial/pages.md` 第 5 條未給此表讓位規則，不同於第 1、4 條），請裁示依「影響價格＞影響功能可用性＞資料落地」優先序讓位或維持現狀。
+- devpractice 沉澱：候選 12 筆（entities/claude-code 數則、anthropic-agent-stack、claude-skills、community-cost／multi-agent／tech-tools／interfaces／guardrails 各 1）／本日無開發實務官方使用指南條目，手冊寫入 0 則；基準線推進至 931ca82d。⚠️ 記者回報本機 checkout 為 shallow clone（63 commits，最舊至 2026-10-22），`devpractice_diff.py` 上次基準 sha 在本次歷史中找不到、已 fallback 48 小時重新比對（已逐筆核對帳本排除重複，未漏記），但提醒雲端 session clone 深度若長期不足可能讓此 fallback 真的漏看內容，建議檢查 clone 深度設定。另提醒：`entities/claude-skills` 今日新增 Agent Skills 標準捐贈 AAIF 治理權轉移，`official-community-gap` 若有引用 Anthropic 單方治理 Skills 的敘述，功能記者下輪可留意是否需同步。
+- market 判讀：2 則（Schwab RIA 20 席門檻、Anthropic 官方量化 UK AISI 事件）；topics/market-signals 新增「買得到的標的」SCHW 一列、里程碑登記 2 筆、回顧結算 ⏳ 新增 2 列。
