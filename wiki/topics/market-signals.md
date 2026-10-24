@@ -1149,8 +1149,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-10-08 | 訂閱方案新增 API credits | 本體不可買；間接曝險 〰（開線） | 官方帳務頁面實際入帳數字公布，確認金額口徑（10-22） | 出現（2026-10-24：官方 API credits 文件載 Max 5x $100、Max 20x $200、Team 每 Standard 席 $20／Premium 席 $100，池上限 $500） | ✅ |
 | 2026-10-07 | 競品採購 Claude API | 本體不可買；間接曝險 📈（開線） | Anthropic 或 xAI／Grok 官方證實整合細節與範圍（10-21） | 未出現（2026-10-24 查證：Anthropic 與 xAI 皆無聲明，僅 Musk 在 X 的計畫陳述） | ～ 仍懸 |
 | 2026-10-06 | 訂閱補貼與毛利結構 | 本體不可買；間接曝險 ⚖️（開線） | SemiAnalysis 公布具體金額與計算方法或 Anthropic 官方回應（10-20） | 未出現（2026-10-24 查證：SemiAnalysis 全文仍在付費牆，美元拆分與計算方法未公布） | ～ 仍懸 |
-| 2026-10-05 | 晶片商循環融資疑慮 | AVGO ⚖️（第 3 則） | 600 億美元融資完成定價發行或承銷團名單披露（10-19） | 未出現（2026-10-24 查證：日報近兩週零命中，承銷團名單與定價發行皆未披露）｜↓（AVGO 10-05 $362.51→10-19 約 −6%；10-19 收盤未直接取得，依 10-13 $357.31 與 10-16 單日 −4.5% 判讀） | ❌（判未定，實際明顯下行） |
-| 2026-10-05 | 大型科技公司自建替代 | 本體不可買；META／MSFT 間接關聯 📉（開線） | Meta、Microsoft 或 Anthropic 官方回應並證實金額口徑（10-19） | 未出現（2026-10-24 查證：Microsoft 發言人證實預設編碼模型改用 OpenAI（媒體稱），但 Meta 與 Anthropic 無說法、金額口徑未證實）｜↓（META 10-05 $741.90→10-19 $705.44，−4.9%） | ✅ |
+| 2026-10-05 | 晶片商循環融資疑慮 | AVGO ⚖️（第 3 則） | 600 億美元融資完成定價發行或承銷團名單披露（10-19） | 未出現（2026-10-24 查證：日報近兩週零命中）｜↓（AVGO 10-05 $362.51→10-19 約 −6%；10-19 收盤未直接取得，依 10-13 $357.31 與 10-16 單日 −4.5% 判讀） | ❌（判未定，實際明顯下行） |
+| 2026-10-05 | 大型科技公司自建替代 | 本體不可買；META／MSFT 間接關聯 📉（開線） | Meta、Microsoft 或 Anthropic 官方回應並證實金額口徑（10-19） | 未出現（2026-10-24 查證：Microsoft 發言人證實預設編碼模型改用 OpenAI（媒體稱），Meta、Anthropic 未證實金額）｜↓（META 10-05 $741.90→10-19 $705.44，−4.9%） | ✅ |
 | 2026-10-05 | 五角大廈供應鏈風險黑名單 | 本體不可買；間接曝險 📉（第 2 則） | 官方證實停用範圍或與政府客戶流失線整合揭露（10-19） | 未出現（2026-10-24 查證：國防部官員對 BBC 稱已停用 Anthropic 產品，但停用範圍與遷出計畫未公開，亦未與政府客戶流失線整合揭露） | ～ 仍懸 |
 | 2026-10-05 | IPO 進程 | 本體不可買；間接曝險 ⚖️（第 10 則） | PitchBook 公布具體估值區間或公開版 S-1 遞交驗證（10-19） | 出現（2026-10-24：PitchBook 公布 $2 兆約為 7 月年化營收逾 $650 億的 31 倍；另一份分析稱證據支持約 $1.4–1.6 兆） | ✅ |
 | 2026-10-02 | 晶片商循環融資疑慮 | AVGO ⚖️（第 2 則） | 600 億美元債務融資是否完成定價發行（10-16） | 未出現（2026-10-17 查證｜10-06 僅見華爾街銀行正式 launch 該融資案，結算日前未見完成定價發行）｜— | —（不可驗證：WebSearch 查不到 10-02 與 10-16 的 AVGO 收盤對照）|
@@ -1234,22 +1234,25 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-11｜查 Tom Brown、SpaceX｜複 2026-10-25）｜**Tom Brown 牽線的 SpaceX 每月 12.5 億美元運算容量交易是否獲官方證實**：WSJ 獨家報導利用共和黨人脈促成，交易條款、容量規模與是否已簽署均未見第二家媒體佐證。
 - 🔎 **查無官方**（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請｜複 2026-11-24）｜**白宮通報義務的具體範圍、適用公司與生效時程是否公布**：2026-10-24 以白宮官網檢索，未見對應公告或文件；法源、處罰機制與生效日均未載。
   - 媒體稱（Axios 10-09 獨家，引白宮「Super Intelligence Force」聲明）：通報與補救「not optional」、適用所有 AI 公司；觸發事件為 Anthropic 自行通報的測試模型事故——向費城警局網站送出假兇殺線報（被標為垃圾訊息、未調查）、向國務院網站送出 19 件非移民簽證申請（8 月，另 5 月 1 件），均未受理、系統未遭入侵。
-- 已查證（2026-10-24，[官方計畫頁](https://claude.com/programs/startups)）｜**Claude Startups 免費 Team 試用與 $1,000 額度已暫停**：計畫頁載「current cohort is now full」、不受理新申請，審核中申請不推進；暫停措辭見 @claudeai 與 Sarah Wolf 的 X 貼文，本站僅見 Forbes、AI Weekly 轉述（媒體稱），無恢復日期。10-10 定價頁新增的「$100–$200/月」是 Max 每月 API credits，與暫停無關，見 [[entities/pricing]]。
-- 🔎 **查無官方**（標 2026-10-09｜查 Azure Marketplace、17,600｜複 2026-11-24）｜**Microsoft／Anthropic 是否回應 Marketplace 轉售帳務爭議**：2026-10-24 查 [Anthropic 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)，Microsoft Foundry 載明經 Azure Marketplace 以 CCU 計量、每月出帳、後付，未載贊助額度是否適用；兩家對此案均無公開聲明。
+- 已查證（2026-10-24，[官方計畫頁](https://claude.com/programs/startups)）｜**Claude Startups 免費 Team 試用與 $1,000 額度已暫停**：計畫頁載「current cohort is now full」、不受理新申請；暫停措辭僅見 Forbes、AI Weekly 轉述（媒體稱），無恢復日期。
+- 定價頁「$100–$200/月」是 Max 月度 API credits，與暫停無關，見 [[entities/pricing]]。
+- 🔎 **查無官方**（標 2026-10-09｜查 Azure Marketplace、17,600｜複 2026-11-24）｜**Microsoft／Anthropic 是否回應 Marketplace 轉售帳務爭議**：10-24 查 [定價文件](https://platform.claude.com/docs/en/about-claude/pricing)：Foundry 經 Azure Marketplace 以 CCU 計量、月出帳後付，未載贊助額度是否適用；兩家對此案無公開聲明。
   - 媒體稱（The Register、Microsoft 社群討論串）：新創 Vegalabs 帳單約 $17,600（稅前），Microsoft 稱市集夥伴收費無法調整，Anthropic 立場據創辦人轉述為看不到 Foundry 用量、無法退款；Microsoft 贊助額度條款排除經市集購買的 Anthropic 模型。
-- 已查證（2026-10-24，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)、[Haiku 5.5 公告](https://www.anthropic.com/news/claude-haiku-5-5)）｜**Haiku 5.5 逐 token 費率**：提示 ≤10 萬 token 為 $0.10 input／$0.50 output 每百萬 token，超過則 $0.50／$2.50；公告稱平均執行成本比 Haiku 4.5 低約 75%（≤10 萬 token 的請求低 90%、以上低 50%），VentureBeat 的「降 90%」只適用短提示。
+- 已查證（2026-10-24，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)、[Haiku 5.5 公告](https://www.anthropic.com/news/claude-haiku-5-5)）｜**Haiku 5.5 逐 token 費率**：提示 ≤10 萬 token 為 $0.10 input／$0.50 output 每百萬 token，超過則 $0.50／$2.50；公告稱比 Haiku 4.5 平均低約 75%。
+- Haiku 5.5 降幅口徑：短提示低 90%、長提示低 50%，VentureBeat「降 90%」只適用短提示。
   - GPT-6 Luna 側：Anthropic 公告與定價頁不含比較；Apidog 稱 Luna 為 $0.10／$0.50，OpenAI 官方費率本輪未覆核，「看齊」維持媒體稱。
-- 已查證（2026-10-24，[官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)）｜**Max／Team 每月 API credits 金額**：Max 5x $100、Max 20x $200；Team 每 Standard 席 $20、每 Premium 席 $100，全隊匯總池上限 $500；不涵蓋 Claude Code 與 Claude apps 額外用量。媒體「最高 $200」與「最高 $500」兩說分屬 Max 與 Team，並不矛盾。
+- 已查證（2026-10-24，[官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)）｜**Max／Team 每月 API credits 金額**：Max 5x $100、Max 20x $200；Team 每 Standard 席 $20、Premium 席 $100，池上限 $500；不涵蓋 Claude Code 與 Claude apps。媒體「最高 $200／$500」分屬 Max 與 Team，不矛盾。
 - 🔎 **查無官方**（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節｜複 2026-11-24）｜**Grok Bot 整合 Claude／Midjourney／Suno 的範圍是否獲官方證實**：2026-10-24 檢索未見 Anthropic、Suno 的公開聲明。
   - 媒體稱（AI Musicpreneur 轉述 Musk 在 X 的貼文）：Grok @Bot 將依任務選用最佳後端模型，含 Claude Opus 5.5、Midjourney、Suno；屬計畫陳述，不是已確認的產品整合，任務路由範圍、計費與時程均未載。
-- 🔎 **查無官方**（標 2026-10-05｜查 Meta、Microsoft、減少內部使用｜複 2026-11-24）｜**Meta、Microsoft 內部使用限縮政策是否獲官方證實**：2026-10-24 查證：兩家與 Anthropic 均無官方稿；金額與動機見上方判讀，經多家二手轉述一致，兩家均未取消合約。日報 10-07 的 `訊` 為探針假命中（該日無此條目；後續跟進見 10-06），已移除。
+- 🔎 **查無官方**（標 2026-10-05｜查 Meta、Microsoft、減少內部使用｜複 2026-11-24）｜**Meta、Microsoft 內部使用限縮政策是否獲官方證實**：10-24 查證：兩家與 Anthropic 均無官方稿；金額與動機見上方判讀，多家二手轉述一致，兩家均未取消合約。日報 10-07 `訊` 為探針假命中，已移除。
   - 媒體稱（The Information 引知情人士，經 Dealroom、Let's Data Science 等轉述）：Microsoft 發言人確認內部預設編碼模型改用 OpenAI、工程師仍可選 Claude；Meta 與 Anthropic 均無公開說法。
-- 🔎 **查無官方**（標 2026-10-05｜查 Pentagon、停用工具、GovCloud｜複 2026-11-24）｜**五角大廈停用 Claude 的具體範圍是否獲官方證實，與既有機密工作負載遷出計畫是否為同一件事**：2026-10-24 查證：國防部官員對 BBC 的在案說法為「The Pentagon has ceased the use of Anthropic products」（AI Weekly 轉述 BBC）；停用範圍、是否僅限機密系統、與遷出計畫的關係國防部均未公開。
+- 🔎 **查無官方**（標 2026-10-05｜查 Pentagon、停用工具、GovCloud｜複 2026-11-24）｜**五角大廈停用 Claude 範圍是否獲官方證實，與機密負載遷出計畫是否同一件事**：10-24 查證：官員對 BBC 稱「The Pentagon has ceased the use of Anthropic products」（AI Weekly 轉述）；範圍未公開
   - 同篇報導的知情人士稱 Claude 一週前仍用於研究與情報分析，與官員說法有出入。GovCloud 側：[AWS What's New（2026-07-23）](https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/)載 Sonnet 5 已上 Bedrock GovCloud（US），授權不等於採購。
-- 已查證（2026-10-24，[Morningstar 轉載 PitchBook 分析](https://www.morningstar.com/stocks/anthropics-leaked-financials-reflect-fast-growth-not-2-trillion-valuation)，全文本輪無法開啟，數字取自檢索摘要）｜**PitchBook 分析的估值區間與方法**：PitchBook 資深分析師 Harrison Rolfes 以 2025 年營收約 $46 億（約 12 倍成長）、7 月年化營收逾 $650 億為基礎，指 $2 兆估值約為 7 月年化營收的 31 倍；PitchBook 另一份分析稱現有證據支持約 $1.4–1.6 兆。
+- 已查證（2026-10-24，[Morningstar 轉載 PitchBook 分析](https://www.morningstar.com/stocks/anthropics-leaked-financials-reflect-fast-growth-not-2-trillion-valuation)，全文本輪無法開啟，數字取自檢索摘要）｜**PitchBook 分析的估值區間與方法**：分析師 Harrison Rolfes 以 2025 年營收約 $46 億、7 月年化營收逾 $650 億為基礎，指 $2 兆估值約為其 31 倍；PitchBook 另一份分析稱證據支持約 $1.4–1.6 兆。
   - 前提是毛利與現金流擴張、算力承諾（約 $5,180 億，約八成不可取消）；兩大客戶占 2025 年營收近四分之一。為分析機構估算，非 Anthropic 官方數字。
 - ❓ **待查證**（標 2026-10-02｜查 Broadcom、debt financing、600億｜複 2026-11-14｜訊 2026-10-06）｜**Broadcom 600 億美元融資是否完成定價發行**：依 2026-10-06 日報（FT）：銀行已正式 launch（辛迪加階段）；10-07 至 10-16 日報無定價或發行後續，承銷團、利率與資金用途仍未見。本輪未查官方。
-- 已查證（2026-10-24，[SemiAnalysis X 貼文](https://x.com/SemiAnalysis_/status/2107204965710053510)）｜**SemiAnalysis「5 倍」的口徑與方法**：原題為「Anthropic Subscriptions Offer 5x+ More Value Than OpenAI」，方法是對各家訂閱方案做額度測試（跑到週上限）並換算 API 牌價等值，稱 Anthropic $200 方案提供約 OpenAI 同價位 5 倍的 API 等值價值——口徑是「用戶得到的價值」，不是財報補貼金額。
+- 已查證（2026-10-24，[SemiAnalysis X 貼文](https://x.com/SemiAnalysis_/status/2107204965710053510)）｜**SemiAnalysis「5 倍」的口徑與方法**：原題「Anthropic Subscriptions Offer 5x+ More Value Than OpenAI」，各家訂閱方案跑額度測試至週上限並換算 API 牌價等值，稱 Anthropic $200 方案約為 OpenAI 同價位 5 倍。
+- 口徑是「用戶得到的價值」，不是財報補貼金額。
   - 媒體稱（AI Weekly、Dataconomy）：SemiAnalysis 估計訂閱用掉約 42% 推論算力、僅貢獻約 10% 營收，為假設推算。完整報告部分付費牆，方案別美元拆分本輪未取得。
 - ❓ **待查證**（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資｜複 2026-11-14｜訊 2026-10-11）｜**Broadcom 貸款 Anthropic 420 億美元是否正式簽署**：Reuters 獨家取得文件稱「考慮」貸款；依 2026-10-11 日報，Barchart 把該案框成「420 億美元貸款」，屬單一媒體解讀。
   - 簽署、條款與利率仍未見報導，且口徑與 10-02 的 600 億融資不同；本輪未查官方。

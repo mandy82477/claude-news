@@ -63,7 +63,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 維運備忘：指標表本輪 10/10 滿載。2026-09-07 換手一列：「定價談判力」（無下一個時點、資料日期最舊 05-13）讓位給新進的「算力交易總額（11個月）」（一級媒體、雖無時點但資料日期最新），已移入細節區並註記讓位日。2026-10-19 再換手一列：「訂閱補貼倍數」（社群估算、無下一個時點，留表優先序最弱）讓位給新進的「Public Benefit Fund 股權承諾」（官方一手、有明確下一個時點：股東會表決），已移入細節區並註記讓位日。2026-10-21 再換手一列：「AI 市場現況」（第三方研究、無下一個時點，三個無時點指標中來源等級最弱）讓位給新進的「淨損（2026上半年）」（一級媒體獨家揭露具體數字、下一個時點：公開版 S-1），已移入細節區並註記讓位日。下一個新指標進來時依留表優先序判斷，現存最舊/最弱者待評估。 %%
 
 **數字細節**
-- **首度揭露具體淨損數字：2026 上半年淨損 $807 億（2026-10-20，WSJ 獨家／CTech／Al Jazeera 跟進）**：WSJ 報導營收仍快速成長但運算成本與虧損同步攀升（Google News/CTech；Google News/Al Jazeera）。**這筆虧損近九成不是花掉的現金**——約 $720 億來自可轉換工具隨估值上升產生的會計帳列損失；同期實際投入基礎建設與運算的現金約 $90 億（前一年同期 $23 億），上半年營收約 $163 億（前一年同期 $11 億）；2025 全年虧損約 $420 億，同樣主要來自同類會計帳列（[Quartz](https://qz.com/anthropic-net-loss-first-half-ipo-prospectus-102126)、[Reuters 轉載](https://kfgo.com/2026/10/20/anthropic-recorded-net-loss-of-over-80-billion-in-first-half-of-this-year-wsj-reports/)，2026-10-24 查證）。
+- **首度揭露具體淨損數字：2026 上半年淨損 $807 億（2026-10-20，WSJ 獨家／CTech／Al Jazeera 跟進）**：WSJ 報導營收仍快速成長但運算成本與虧損同步攀升（Google News/CTech；Google News/Al Jazeera）。
+- **這筆虧損近九成不是花掉的現金**——約 $720 億來自可轉換工具隨估值上升產生的會計帳列損失；同期實際投入基礎建設與運算的現金約 $90 億（前一年同期 $23 億），上半年營收約 $163 億（前一年同期 $11 億）。
+- **2025 全年虧損對照**：約 $420 億，同樣主要來自同類會計帳列（[Quartz](https://qz.com/anthropic-net-loss-first-half-ipo-prospectus-102126)、[Reuters 轉載](https://kfgo.com/2026/10/20/anthropic-recorded-net-loss-of-over-80-billion-in-first-half-of-this-year-wsj-reports/)，2026-10-24 查證）。
 - **淨損與「獲利」列口徑不同（推論）**：09-13 口頭揭露「連續第二季獲利」為公司自陳利潤指標，與本次會計虧損計算基礎不同，官方未說明；HN 兩則討論（166 分、39 分）質疑此落差（Hacker News）。
 - **IPO 估值預期下修至約 $1.5 兆（2026-10-16，Telegraph／Reuters）**：部分出席本週投資人日的與會者討論將估值由先前 $2 兆（08-13）砍至約 $1.5 兆，因本季營收年增率已從上季 146% 放緩至約 45%（約 $170 億美元）；舊值 $2 兆已被取代。
 - **Q3 營收 168 億美元，季增放緩引疑（2026-10-14，Hacker News 32 分）**：留言指出本季季增約 46%，上季為 140%，認為成長放緩非正面訊號；另有留言表示考慮改用 Gemini（FT；Google News/Bloomberg.com；Hacker News）。
@@ -698,13 +700,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 #### 2026-10-07
 - **[IPO前瞻，僅標題可用] CNBC：分析師稱 Anthropic 將是今年「最荒謬的 IPO」**：詳見「IPO 走到哪一格」細節區（Google News/CNBC）
 - **[IPO前瞻，僅標題可用] Reuters：Haiku 5.5 發布框進「IPO 前擴充產品線」敘事**：模型本身細節見 [[entities/haiku-5-5]]，詳見「IPO 走到哪一格」細節區（Google News/Reuters）
-- **[戰略合作] The Next Web／9to5Mac：xAI 旗下 Grok Bot 整合 Anthropic Claude、Midjourney、Suno 模型**：競爭對手在自家產品採用 Claude 以提升回應品質，具體範疇與計費未見報導（2026-10-24 查證：僅見 Musk 在 X 的計畫陳述，Anthropic 無聲明），詳見「哪個合作會改到你用的 Claude」一行制清單（Google News/The Next Web；Google News/9to5Mac）
+- **[戰略合作] The Next Web／9to5Mac：xAI 旗下 Grok Bot 整合 Anthropic Claude、Midjourney、Suno 模型**：範疇與計費未見報導（2026-10-24 查證：僅見 Musk 在 X 的計畫，Anthropic 無聲明），見「哪個合作會改到你用的 Claude」（Google News/The Next Web；9to5Mac）
 - **[戰略合作] TechPowerUp：三星晶圓代工將以 2 奈米製程生產 Anthropic 設計 AI ASIC 晶片**：較 07-02／07-06 代工洽談階段具體化，詳見「算力與資金從哪來」新增列（Google News/TechPowerUp）
 - **[戰略合作，僅標題可用] Yahoo Finance／GlobeNewswire：Anthropic 將 Intuitive.ai 列為 Claude Partner Network 優先夥伴**：資格門檻與具體權益未見報導，詳見「哪個合作會改到你用的 Claude」一行制清單（Google News/Yahoo Finance；Google News/GlobeNewswire）
 
 #### 2026-10-06
 - **[商業風險] Financial Times：華爾街銀行啟動 600 億美元晶片融資案，Broadcom 與 Anthropic 為對象**：由 10-01「考慮中貸款」、10-02「啟動債務融資」升級為銀行正式 launch；條款與交付時程未見報導，僅標題可用，詳見「還沒過去的風險」細節區（Google News/Financial Times）
-- **[商業模式，第三方研究] SemiAnalysis：Anthropic 訂閱方案提供的價值為 OpenAI 的 5 倍以上**：HN 75 分、6 個來源轉載或討論；為分析機構自家估算，方法是各家方案額度測試換算 API 等值價值（2026-10-24 查證，見 [[topics/market-signals]]），與「現在的數字」訂閱補貼倍數（對 API 牌價的倍數）口徑不同、不可互換，詳見該表細節區（Hacker News；Reddit；Google News/SemiAnalysis）
+- **[商業模式，第三方研究] SemiAnalysis：Anthropic 訂閱方案提供的價值為 OpenAI 的 5 倍以上**：HN 75 分、6 個來源轉載；分析機構自家估算，口徑與「現在的數字」補貼倍數不可互換（2026-10-24 查證，見 [[topics/market-signals]]）（Hacker News；Reddit；SemiAnalysis）
 - **[公司治理，一級媒體] Reuters 獨家：Dario Amodei 去年薪酬 1,800 萬美元，落在科技業 CEO 中段**：構成細項未見報導，人物脈絡見 [[entities/dario-amodei]]（Google News/Reuters）
 - **[商業風險，僅標題可用] BBC 原始報導 10-06 於 HN 累積 12 分**：承 10-05 五角大廈停用 Anthropic 工具，未見新進展，詳見「還沒過去的風險」細節區（Hacker News；Google News/BBC）
 
@@ -1166,7 +1168,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **[生態周邊整合] 第三方路由服務 MixRoute 宣布支援 Fable 5**：Yahoo Finance 報導 MixRoute 確認支援 Claude Fable 5，開發者可透過單一金鑰同時存取 Fable 5 與 GPT-5.6。**對商業的意涵**：屬於第三方路由/聚合服務的生態邊緣整合，非 Anthropic 官方合作案，對採用率或估值影響有限，僅反映 Fable 5 解禁後第三方生態工具的正常跟進（Yahoo Finance https://finance.yahoo.com/technology/ai/articles/mixroute-confirms-claude-fable-5-001400157.html）
 
 #### 2026-07-04
-- **[企業成本管控產品化] Anthropic 推出 Claude 企業支出控管（spend controls）功能**：Tech Times 報導（07-04），企業導入 agentic AI 後帳單頻繁超出預算的痛點持續發酵，Anthropic 針對企業客戶推出支出控管功能協助管理成本。**對商業的意涵**：這是 Anthropic 首次針對 [[topics/enterprise-cost-management]] 長期呼籲的「部門/團隊層級預算分配與上限設定」缺口推出產品化解法，若功能落地良好，可能緩解 Uber、Microsoft 等因成本失控退出的壓力，對企業採購決策有正面訊號（推論）；定價與計費架構細節見 [[entities/pricing]]（Tech Times https://www.techtimes.com/articles/319687/20260704/claude-enterprise-spend-controls-arrive-agentic-ai-bills-blow-past-budgets.htm） %% 維運備忘 2026-10-24：「企業因成本失控退出」最後動態 2026-07-23 起逾 90 天無新事實，已不再列入 `## 還沒過去的風險`；案例與後續追蹤的家是 [[topics/enterprise-cost-management]]。 %%
+- **[企業成本管控產品化] Anthropic 推出 Claude 企業支出控管（spend controls）功能**：Tech Times 報導（07-04），企業導入 agentic AI 後帳單頻繁超出預算的痛點持續發酵，Anthropic 針對企業客戶推出支出控管功能協助管理成本。**對商業的意涵**：首次針對 [[topics/enterprise-cost-management]] 長期呼籲的「部門/團隊層級預算分配與上限」缺口推出產品化解法，若落地良好可能緩解 Uber、Microsoft 等因成本失控退出的壓力（推論）；計費細節見 [[entities/pricing]]（Tech Times https://www.techtimes.com/articles/319687/20260704/claude-enterprise-spend-controls-arrive-agentic-ai-bills-blow-past-budgets.htm） %% 維運備忘 2026-10-24：「企業因成本失控退出」最後動態 2026-07-23 起逾 90 天無新事實，已不再列入 `## 還沒過去的風險`；案例與後續追蹤的家是 [[topics/enterprise-cost-management]]。 %%
 - **[媒體擴散，非新事件] TechCrunch 跟進報導 Alibaba 禁用 Claude Code**：TechCrunch（07-04）跟進報導 Alibaba 禁止員工職場使用 Claude Code 事件，屬 07-03 路透社首報後的多方媒體擴散，非獨立新事件，詳見 [[topics/enterprise-tool-tracker]]（TechCrunch https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/）
 - **[晶片代工洽談媒體跟進，確定性未升級] upi.com 跟進報導 Anthropic-Samsung 洽談**：upi.com 跟進 07-02 The Information 首報的 Anthropic-Samsung 客製 AI 晶片代工洽談消息，但未提供代工規模、金額、時程等獨立新細節，無法判斷是否為獨立查證，暫不視為第二來源確認，維持「初步報導」標記（upi.com https://www.upi.com/Top_News/World-News/2026/07/03/Anthropic-Samsung-Electronics/7811783128641/）
 

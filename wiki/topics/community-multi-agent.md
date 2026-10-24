@@ -329,7 +329,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** 並行規模
 - **核心模式：** 把使用者手邊已在跑的多個編程 agent（Claude Code、Codex、Grok、DeepSeek Harness、Kimi、Pi）整編成一支團隊，任何 session 皆可跨廠商、跨機器分派任務並收集成果，可經 Telegram、Lark 或瀏覽器分頁統一操控
-- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「跨廠商既有 agent 整編」取向的案例，與 avibe-bot/avibe（本機常駐 Agent OS）同日收錄、同屬統一操控多個編程 agent 的取向，差異在本則明確涵蓋非 Anthropic／OpenAI 廠商（Grok、DeepSeek、Kimi）並主打跨機器分派任務；跨廠商、跨機器分派任務並收集成果，屬多 agent 編排，依反例條文填並行規模。
+- **與既有模式的關係：** 補上「Multi-agent 架構」的「跨廠商既有 agent 整編」案例，與 avibe-bot/avibe 同日收錄、同屬統一操控多個編程 agent；差異在涵蓋 Grok、DeepSeek、Kimi 並主打跨機器分派任務，屬多 agent 編排，依反例條文填並行規模。
 - **可信度註記：** GitHub Search 星數 501，僅取得星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（501★）；[GitHub](https://github.com/firstintent/ccteam)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）

@@ -118,7 +118,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 從一份簡短 JSON 規格產生動畫、可互動探索的圖表，供 Claude 與其他 coding agent 使用；GitHub Search 515 星。
-- **與既有模式的關係：** 補上「Skills 設計」一個「圖表規格語言」取向，與既有 reladraw（可自訂版面配置的圖表描述語言）、drawio-skill（程式碼/規格轉 draw.io 圖）同屬圖表類但走「JSON 規格＋動畫可互動探索」而非靜態 draw.io 輸出；原始描述簡略，分類暫依與既有圖表類做法最接近者歸入，週更時可再判；圖表規格語言與 codebase 規模無關，主線暫填 —。
+- **與既有模式的關係：** 補上「Skills 設計」的「圖表規格語言」取向，與 reladraw、drawio-skill 同屬圖表類，但走「JSON 規格＋動畫可互動探索」而非靜態 draw.io；原始描述簡略，分類暫依最接近者歸入，週更時可再判；與 codebase 規模無關，主線暫填 —。
 - **可信度註記：** 原始描述僅一句話可用，依日報段落判讀；僅取得 GitHub Search 星數（515★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/Aryanutkarsh/SeeCode)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）

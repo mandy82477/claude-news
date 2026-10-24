@@ -76,8 +76,8 @@
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 10-23 | **Agent Skills 捐贈給 Agentic AI Foundation**，官方獨自治理結束、逾 70 平台已整合；Anthropic 與 Theorem 發布研究，展示 LLM 已可大規模產生正式軟體驗證證明；與 Hg 合作在歐洲推 AI 顧問服務；Metr 公開質疑官方安全防護說法 | 標準治理權轉出；形式驗證從研究走向規模化；第三方首度具名質疑自評數字 |
-| 10-22 | **Claude Duet 開放研究預覽**（Opus 5.5 驅動的主動式 agent，美國 Pro／Max，獨立 iOS app）；音樂出版商 Reservoir 控告 Suno 與 Anthropic；哈佛前科學院長 Christopher Stubbs 加入長期利益信託 | 第一個「不等你開口」的官方產品形態；著作權戰線再開一條 |
+| 10-23 | **Agent Skills 捐贈給 Agentic AI Foundation**（官方獨自治理結束，逾 70 平台已整合）；Theorem 形式驗證研究；Metr 公開質疑官方安全說法 | 標準治理權轉出；第三方首度具名質疑自評數字 |
+| 10-22 | **Claude Duet 開放研究預覽**（Opus 5.5 驅動的主動式 agent，美國 Pro／Max）；音樂出版商 Reservoir 控告 Suno 與 Anthropic | 第一個「不等你開口」的官方產品形態；著作權再開一條戰線 |
 | 10-21 | **S-1 正式提交，首度揭露具體數字**：上半年淨損 $807 億、營收 $163 億（其中約 $720 億虧損為非現金帳列）；美國衛生部（HHS）將對 Anthropic 做出「唯一來源」聯邦採購 | IPO 財務口徑首次可查；政府端綁定加深 |
 | 10-20 | 傳與 Nvidia 支持的 Nscale 洽談第二筆巨額算力合作；前 Google 執行長 Eric Schmidt 持有約 1% 股權於 IPO 前曝光；Citrini Research 揭露以 Claude 輔助設計蛋白質的研究方法 | 算力承諾續增；IPO 前股東結構曝光 |
 | 10-19 | **捐出 5% 股權成立 Anthropic Public Benefit Fund**；媒體續報悄悄遊說國會版 AI 安全法案；第三方編碼平台 OpenCode 主控台資料外洩 | 公益結構入 IPO 敘事；第三方平台外洩波及存放其中的憑證 |

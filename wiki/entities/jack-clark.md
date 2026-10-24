@@ -73,5 +73,5 @@ Jack Clark 現任 Anthropic 政策主管，此前已在 Anthropic 呼籲全球�
 ## 歷史記錄
 
 - 2026-10-17：向政策制定者表示 AI 正快速進步，可能大幅提升美國 GDP（僅標題可用，來源：Google News／Reuters）
-- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，Anthropic 官方未就此發言；WSJ 原文（標題〈The Other Anthropic Founder Trying to Fix the Company's 'Woke' Reputation〉）付費牆內，本站讀不到內文，無法確認所指何人，亦無逐字稿可引；本人僅為候選之一，另見 [[entities/chris-olah]]、[[entities/tom-brown]]（WSJ，2026-10-09）
+- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，官方未發言；付費牆內未能查證所指何人，僅為候選之一；查證脈絡見 [[entities/chris-olah]]（WSJ，2026-10-09）
 - 2026-09-15：同日接受 BBC、NPR 專訪，稱 AI「緊急關閉開關」未來或需強制立法並由第三方查核，並稱放緩 AI 開發是「集體行動難題」（BBC、NPR）

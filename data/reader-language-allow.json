@@ -141,14 +141,20 @@
   {
    "page": "entities/claude-code",
    "term": "封存",
-   "line_contains": "封存後完全消失",
-   "reason": "描述的是 Claude Code 自己的 session 封存行為（v2.1.252 修復的 bug：session 封存後找不回），是讀者會遇到的產品行為，不是本庫把頁面移進 archive 的維運動作（2026-10-17 6l 存量清理判讀）"
+   "line_contains": "只談封存",
+   "reason": "「封存／共用專案」是 Claude 產品本身的功能名（官方說明中心〈如何復原已刪除的對話〉所述的 archived projects），非本庫把頁面搬進 archive 子頁的維運動作；2026-10-24 5c 查證改寫該筆時新增命中"
   },
   {
    "page": "entities/claude-code",
    "term": "封存",
-   "line_contains": "只談封存專案、共用專案與權限被移除",
-   "reason": "「封存專案」是 Claude 產品本身的功能名（官方說明中心〈如何復原已刪除的對話〉所述的 archived projects），非本庫把頁面搬進 archive 子頁的維運動作；2026-10-24 5c 查證改寫該筆時新增命中"
+   "line_contains": "只談封存",
+   "reason": "「封存／共用專案」是 Claude 產品本身的功能名（官方說明中心〈如何復原已刪除的對話〉所述的 archived projects），非本庫把頁面搬進 archive 子頁的維運動作；2026-10-24 5c 查證改寫該筆時新增命中"
+  },
+  {
+   "page": "entities/claude-code",
+   "term": "封存",
+   "line_contains": "對話封存後完全消失",
+   "reason": "「對話封存」是 Claude 產品的使用者動作（#22931 回報 Cowork 對話封存後消失），非本庫把頁面搬進 archive 子頁的維運動作；2026-10-24 讀者語言閘在同頁第二處命中時現形"
   }
  ]
 }

@@ -513,7 +513,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Kiro（AWS）**：tech-insider.org 發表 Kiro vs Claude Code 比較文，並列 80.8% SWE-bench 與 $200 費用上限兩項數字（Google News/tech-insider.org）
 
 ### 2026-08-02
-- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20），稱 Claude Code 的 npm 下載量約為 OpenCode 的 5.4 倍，方法為 npm registry 公開 30 天下載數；完整脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
+- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20），稱 Claude Code 的 npm 下載量約為 OpenCode 的 5.4 倍（npm registry 30 天下載數）；脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
 
 ### 2026-08-01
 - **Supabase Evals**：MarkTechPost 報導 Supabase 推出開源評測套件，以真實任務對 Claude Code、Codex、OpenCode 評分（Google News/MarkTechPost）

@@ -74,7 +74,7 @@ Brown 是 Anthropic 共同創辦人，曾在 OpenAI 參與 GPT-3 開發（論文
 ## 歷史記錄
 
 - 2026-10-10：WSJ 報導 Tom Brown 利用共和黨人脈，牽線促成每月 12.5 億美元 SpaceX 運算容量交易（僅標題，細節未載）（來源：WSJ via Hacker News，2026-10-10）
-- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，Anthropic 官方未就此發言；WSJ 原文（標題〈The Other Anthropic Founder Trying to Fix the Company's 'Woke' Reputation〉）付費牆內，本站讀不到內文，無法確認所指何人，亦無逐字稿可引；本人僅為候選之一，另見 [[entities/jack-clark]]、[[entities/chris-olah]]（WSJ，2026-10-09）
+- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，官方未發言；付費牆內未能查證所指何人，僅為候選之一；查證脈絡見 [[entities/chris-olah]]（WSJ，2026-10-09）
 - 2026-07-01：接管談判後促成 Fable 5 / Mythos 5 出口管制全面解除，詳見 [[topics/anthropic-government-policy]]（來源：NYT、BBC、CNN、Reuters、WSJ、FT、WashPost、The Guardian）
 - 2026-06-27：Lutnick 致函 Tom Brown，批准 Mythos 5 向 100+ 受信任合作夥伴有限釋出，為接管談判後首次重大解封（來源：Semafor、CNBC、Reuters）
 - 2026-06-26：Wired 報導補充確認 Tom Brown 為 GPT-3 共同研發者（OpenAI 時期），聯合創辦人身分獲多來源確認（來源：WIRED）
