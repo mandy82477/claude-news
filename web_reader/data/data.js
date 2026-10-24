@@ -3893,49 +3893,6 @@ window.WIKI_DATA = {
       ]
     },
     {
-      "id": "long-context-1m-archive",
-      "pageType": "topic",
-      "name": "1M context：加不加價、你能不能關——原始條目封存",
-      "entityType": "",
-      "status": "resolved（封存頁）",
-      "domain": "🛠️ 工具/功能",
-      "pill": "gray",
-      "firstSeen": "",
-      "startDate": "",
-      "lastUpdated": "2026-09-20",
-      "lastNewsUpdate": "2026-05-11",
-      "updateFreq": "",
-      "parent": "topics/long-context-1m",
-      "summary": "本頁保存 long-context-1m 被搬離主頁的原始「時序」條目。條目一字不刪，只是搬離主頁讓主頁讀得動；重點層見主頁。",
-      "latestHeadline": "",
-      "pageRole": "archive",
-      "readerDomains": [
-        "🛠️ 工具/功能"
-      ]
-    },
-    {
-      "id": "long-context-1m",
-      "pageType": "topic",
-      "name": "1M context：加不加價、你能不能關",
-      "entityType": "",
-      "status": "ongoing",
-      "domain": "🛠️ 工具/功能",
-      "pill": "active",
-      "firstSeen": "",
-      "startDate": "2026-04-10",
-      "lastUpdated": "2026-10-23",
-      "lastNewsUpdate": "2026-10-16",
-      "updateFreq": "",
-      "parent": "",
-      "summary": "官方說 Claude 4.6 以後的 1M context **不加價**——這句話是對的，但它只回答了三個問題裡的一個。另外兩個是「**我手上是不是舊世代**」（舊世代超過 200K 要付兩倍輸入價）與「**我能不能決定要不要開**」（Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失）。 本頁把這三件事收在一…",
-      "latestHeadline": "官方說 Claude 4.6 以後的 1M context 不加價——這句話是對的，但它只回答了三個問題裡的一個。另外兩個是「我手上是不是舊世代」（舊世代超過 200K 要付兩倍輸入價）與「我能不能決定要不要開」（Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失）。",
-      "matrixRole": "追蹤頁",
-      "pageRole": "",
-      "readerDomains": [
-        "🛠️ 工具/功能"
-      ]
-    },
-    {
       "id": "market-lessons",
       "pageType": "topic",
       "name": "投資判讀教材（週更）",
@@ -6983,15 +6940,6 @@ window.WIKI_DATA = {
         "pill": "active",
         "lastUpdated": "2026-10-23",
         "hook": "Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272"
-      },
-      {
-        "id": "long-context-1m",
-        "pageType": "topic",
-        "name": "1M context：加不加價、你能不能關",
-        "status": "ongoing",
-        "pill": "active",
-        "lastUpdated": "2026-10-16",
-        "hook": "1M context 的計費與控制權：加不加價看模型世代（舊世代 ×2 輸入）、Pro 預設開啟且關不掉、選定的 1M 變體會從選單消失；10-01 新增靜默清除工具結果 bug（#42542）"
       },
       {
         "id": "official-community-gap",

@@ -246,11 +246,6 @@
       "id": "cowork-archive",
       "name": "Cowork——原始條目封存",
       "pageType": "entity"
-    },
-    {
-      "id": "long-context-1m-archive",
-      "name": "1M context：加不加價、你能不能關——原始條目封存",
-      "pageType": "topic"
     }
   ]
 }

@@ -77,10 +77,6 @@
         {
           "id": "claude-code",
           "pageType": "entity"
-        },
-        {
-          "id": "long-context-1m",
-          "pageType": "topic"
         }
       ]
     },
