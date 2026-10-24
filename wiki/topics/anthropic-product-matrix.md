@@ -6,12 +6,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
-inbound_links: 0
+days_since_news_subtree: 1
+inbound_links: 1
 attribution_count: 41
 attribution_last: "2026-10-23"
 top_source: "user-query"
@@ -77,7 +77,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 
 ## 對照表
 
-每格依序是：狀態｜方案｜說明｜來源｜查證日｜來源種類。狀態的五種值見「怎麼讀這張表」。
+每格依序是：狀態｜方案｜說明｜來源｜查證日｜來源種類。狀態的五種值見「怎麼讀這張表」。「方案」欄只標哪些方案拿得到這一格，**各方案的價格、額度與計費方式不在本表**，見 [[entities/pricing]]。
 
 ### Artifacts
 

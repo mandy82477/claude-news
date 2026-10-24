@@ -8,12 +8,12 @@ last_news_update: "2026-10-23"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 0
-inbound_links: 32
+days_since_news_subtree: 1
+inbound_links: 33
 attribution_count: 30
 attribution_last: "2026-10-23"
 top_source: "build-flags"
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2.1.309（10-22，自 2.1.308 起）新增 4 個候選旗標**（名單見追蹤表），皆第一階；另有 1 個設定類旗標（逾時、識別碼等）來源已過濾不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.308（10-22，自 2.1.306 起）新增 6 個候選旗標＋代號旗標 `WITTY_DEWDROP`**（名單見追蹤表），皆第一階；`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失（首見早於追蹤範圍）；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.306（10-21）新增 6 個候選旗標**：auto mode 郵件寄送兩項、CCR 設定被拒後提前同步與事件排出策略、`CONSENT_POINTERLESS`、`ENTRYPOINT_ON_REQUESTS`（見追蹤表），皆第一階；`SETTLE_TOUCHED_FILES` 消失列 4 階；對帳僅命中來源條目，暫不升第二階。
-- **已出貨的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 4 階）——v2.1.287 正式出貨，產品名 Claude Mods，細節與已知問題在 [[entities/claude-code]]。
+- **已出貨的一個**：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（第 4 階）——v2.1.287 正式出貨，產品名 [[entities/claude-mods|Claude Mods]]，該產品的能力與限制見那一頁，版本紀錄與已知問題在 [[entities/claude-code]]。
 - **其餘全在第一階**：只有名字。下表的「官方態度」「社群反應」兩欄空白代表本站來源裡還沒有證據，不代表沒有；更早版本的異動見下方「時序」。
 
 ## 怎麼讀這一頁

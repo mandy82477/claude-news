@@ -6,17 +6,17 @@ domain: "💼 商業"
 last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 73
 attribution_count: 208
 attribution_last: "2026-10-23"
 top_source: "google-news"
 pending_count: 7
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-11"
 pending_signalled: 2
 staleness_exempt: null
@@ -53,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-22 推出 Decisions API 正式版（GPT-6 Luna，宣稱快 10 倍、低成本決策任務）；10-15 GPT-6.1 Sol 成為 Codex CLI 預設模型（成本降 77%）→ 低價快決策與編碼成本同步下壓 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源；Decisions API 官方部落格一手；牌價已查證 ⟨Q-07⟩ |
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
-| **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書 ❓ 待查證⟨Q-08⟩ |
+| **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
 | **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
@@ -69,7 +69,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 個人方案不變：Pro ~$20／Ultra ~$100／Ultra 20x $200。
 - ⟨Q-07⟩ 已查證（2026-10-17，[OpenAI 定價頁](https://developers.openai.com/api/docs/pricing)，以搜尋摘要讀取，直連失敗）：GPT-6.1 Sol 標準價 $2 input／$0.10 快取／$10 output 每百萬 token，GPT-6 Astra $10／$1／$50，Sol 約為 Astra 的五分之一。
   - 對照 Claude 官方定價：Sol 與 Sonnet 5.5（$2／$10）同價，約為 Opus 5.5（$4／$20）的一半。「改預設」是否見於官方 Codex 更新紀錄，本輪未查得。
-- ⟨Q-08⟩ ❓ **待查證**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-10-19）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；「Anthropic 背書競品模型」與其一貫定位不符，單一財經聚合媒體來源，未見其他媒體或官方佐證。
+- ⟨Q-08⟩ 🔎 **查無官方**（標 2026-10-05｜查 GLM-5.3、雙重背書｜複 2026-11-24）：finance.biggo.com 稱 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24 檢索未見 Anthropic 對 GLM-5.3 的任何背書。
+  - Cursor 側有佐證（檢索摘要）：[Cursor 文件](https://cursor.com/docs/models/glm-5-3)列 GLM 5.3 為 Z.ai 最新開放權重編碼模型（需手動加入、計第三方額度池）；Cursor 10-01 的 X 貼文稱 GLM 5.3 Max 是其內部 CursorBench 4.0 得分最高的開放權重模型（SmartScope 轉述）。「雙重背書」只有 Cursor 一半有跡可循。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
 **未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）、Reflection（10-06，開源權重新創，NYT 稱崛起為 Anthropic 新挑戰者，模型與數字未見）；AgentConnect（新聞稿自宣）依准入不入表。
@@ -316,7 +317,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Reflection**：紐約時報報導開源權重模型新創崛起為 Anthropic 新挑戰者，具體模型規格與數字未見報導（Google News/The New York Times）
 
 ### 2026-10-05
-- **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書，待查證見「對手雷達」⟨Q-08⟩（Topic Watch/competitor-landscape）
+- **Zhipu Z.AI**：finance.biggo.com 傳 GLM-5.3 獲 Cursor、Anthropic 雙重背書；2026-10-24 查證僅 Cursor 側有跡可循、Anthropic 側查無官方，見「對手雷達」⟨Q-08⟩（Topic Watch/competitor-landscape）
 - **OpenAI**：官方部落格說明因應歐盟文字來源標示規則的作法，聚焦浮水印適用範圍與偵測機制（Blog/OpenAI News）
 - **OpenAI**：官方部落格推出 ChatGPT 新視覺廣告格式，並擴充衡量工具與品牌歸因合作（Blog/OpenAI News）
 - **產業趨勢**：fortune.com 報導 OpenAI、Anthropic 因資料隱私爭議促使更多企業轉向開源模型與「主權 AI」，未點名具體企業或數字（Google News/fortune.com）
@@ -512,7 +513,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Kiro（AWS）**：tech-insider.org 發表 Kiro vs Claude Code 比較文，並列 80.8% SWE-bench 與 $200 費用上限兩項數字（Google News/tech-insider.org）
 
 ### 2026-08-02
-- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20，稱 5.4 倍），統計方法未揭露；完整脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
+- **OpenCode**：tech-insider.org 比較 OpenCode 與 Claude Code 的下載量與定價（Free vs $20），稱 Claude Code 的 npm 下載量約為 OpenCode 的 5.4 倍，方法為 npm registry 公開 30 天下載數；完整脈絡見 [[entities/opencode]]（Google News/tech-insider.org）
 
 ### 2026-08-01
 - **Supabase Evals**：MarkTechPost 報導 Supabase 推出開源評測套件，以真實任務對 Claude Code、Codex、OpenCode 評分（Google News/MarkTechPost）

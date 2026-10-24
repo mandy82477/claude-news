@@ -2,16 +2,16 @@
 page: "entities/opus-4-8"
 kind: "entity"
 type: "model"
-status: "active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位由 Opus 5 接手）"
+status: "active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位先由 Opus 5 接手，現行 Opus 為 [[entities/opus-5-5|Opus 5.5]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-10"
+last_updated: "2026-10-24"
 last_news_update: "2026-08-27"
 status_main: "active"
-days_since_news: 57
+days_since_news: 58
 parent: null
 children: "['entities/opus-4-8-archive']"
 page_role: "hub"
-days_since_news_subtree: 57
+days_since_news_subtree: 58
 inbound_links: 9
 attribution_count: 6
 attribution_last: "2026-07-25"
@@ -27,14 +27,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Opus 4.8
 
 **類型：** model
-**狀態：** active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位由 Opus 5 接手）
+**狀態：** active（官方已列 Legacy，退役不早於 2027-05-28；次旗艦地位先由 Opus 5 接手，現行 Opus 為 [[entities/opus-5-5|Opus 5.5]]）
 **領域：** 🤖 模型
 **首次出現：** 2026-05-28
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-08-27
 
 > **最新進展**（2026-08-27）
-> 官方已列 Legacy、退役不早於 2027-05-28，建議遷移 Opus 5（[官方模型頁](https://platform.claude.com/docs/en/models/opus-4-8/overview)，2026-09-07 查證）。GitHub Issue 回報 Claude 4.7、4.8、5.0 與 Fable 日益預設重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善，跨模型代際共同問題（106 則留言、517 個反應）；完整記錄見 [[entities/opus-5]]。Opus 4.8 本身自 2026-07-25 起已由 [[entities/opus-5|Claude Opus 5]] 取代次旗艦地位（詳見下方「現況」）。
+> 官方已列 Legacy、退役不早於 2027-05-28，建議遷移 Opus 5（此後現行 Opus 已改為 [[entities/opus-5-5|Opus 5.5]]；[官方模型頁](https://platform.claude.com/docs/en/models/opus-4-8/overview)，2026-09-07 查證）。GitHub Issue 回報 Claude 4.7、4.8、5.0 與 Fable 日益預設重複修辭套路、難維持連貫散文，即使給明確風格指示仍難改善，跨模型代際共同問題（106 則留言、517 個反應）；完整記錄見 [[entities/opus-5]]。Opus 4.8 本身自 2026-07-25 起已由 [[entities/opus-5|Claude Opus 5]] 取代次旗艦地位（詳見下方「現況」）。
 
 ---
 
@@ -52,7 +52,7 @@ Claude Opus 4.8 於 2026-05-28 正式發布，同步推出 Dynamic Workflows（R
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥 |
+| 社群熱度 | 🔥 |
 | 試用價值 | ⚡ 有條件推薦（2026-09-07 判定）|
 | 最適合 | 大型 agentic 任務、multi-step 工作流、需要 1M context 的長文件處理 |
 | 不適合 | 追求穩定性的生產環境（初期社群反映有行為退步）|
@@ -137,6 +137,7 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 
 ## 相關議題
 - [[entities/opus-5]]（2026-07-25 發布，取代 Opus 4.8 成為次旗艦，官方稱相同成本下效能大幅提升）
+- [[entities/opus-5-5]]（2026-09-22 發布，現行 Opus）
 - [[entities/fable-5]]（現任最高階公開模型；Opus 4.8 為其護欄觸發時的 fallback）
 - [[entities/sonnet-5]]（2026-07-01 發布，效能接近 Opus 4.8 但成本低約 60%）
 - [[topics/code-quality-decline]]（升版前效能下降事件）

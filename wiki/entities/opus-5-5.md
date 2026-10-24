@@ -7,12 +7,12 @@ domain: "🤖 模型"
 last_updated: "2026-10-20"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
-inbound_links: 29
+days_since_news_subtree: 4
+inbound_links: 34
 attribution_count: 23
 attribution_last: "2026-10-20"
 top_source: "google-news"
@@ -106,7 +106,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥🔥（HN 1,674 分，發布日）|
+| 社群熱度 | 🔥🔥🔥（HN 1,674 分，發布日）|
 | 試用價值 | ⏳ 剛發布、資料不足（2026-09-23 判定）|
 | 最適合 | 待社群累積實測後補；官方定位同 Opus 5（數小時無人盯著的編碼任務、跨數十檔 refactor）|
 | 不適合 | 待補 |

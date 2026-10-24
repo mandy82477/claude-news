@@ -3,14 +3,14 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-23"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 0
 attribution_count: 8
 attribution_last: "2026-10-18"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-23
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-23
 
 > **手機遠端控制再添一例反向案例，可視化新增多 session 儀表板**（2026-10-23）
@@ -62,7 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** iOS 自動化工具＋MCP Server，讓 Claude、Codex、Cursor 等 AI agent 取得 UI 樹、定位元素、截圖並做 OCR 辨識，進而點擊滑動、輸入文字、管理應用與讀取日誌，直接操作 iPhone 畫面；適用自動化測試與 iOS 逆向調試；GitHub Search 691 星。
-- **與既有模式的關係：** 與既有代表技巧（ccgram、Android Remote Control MCP、Shellular、OpenMinis/iCTRL 等）方向相反——既有做法多是把手機當控制 Claude Code 的介面，本則是 agent 反過來操作手機；主線填 —。
+- **與既有模式的關係：** 與「行動裝置遠端控制」既有代表技巧（ccgram、Android Remote Control MCP、Shellular、OpenMinis/iCTRL 等）方向相反——既有做法多是把手機當控制 Claude Code 的介面，本則是 agent 反過來操作手機；主線填 —。
 - **可信度註記：** 僅有 GitHub Search 星數（691★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/witchan/ios-mcp)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
@@ -74,6 +74,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office、agent-office、MioIsland 等遊戲化空間視覺化）一個「多 session／子 agent 樹狀結構總覽」取向——既有做法聚焦單一 agent 活動的視覺化隱喻，本則解決多 session 同時進行時的漏看問題；非大型 codebase 特有痛點，主線填 —。
 - **來源：** dev.to（11 讚）；[原文](https://dev.to/bargan/the-scarce-resource-is-not-tokens-it-is-my-attention-why-i-built-ccdeck-4pik)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Paradigm-Study/claude-share：Claude Code 多人協作 session，一條連結即時共看回覆、工具與預覽（2026-10-22）
+
+- **主線：** —
+- **核心模式：** GitHub repo：分享一條連結即可多人即時共同查看同一個 Claude Code session 的回覆、工具呼叫與預覽；GitHub Search 536 星。
+- **與既有模式的關係：** 與「Agent 活動可視化」既有代表技巧（claude-office、MioIsland、ccdeck 等單人視角總覽）不同——本則是「多人共看同一個 session」的共享取向；歸類為近似判斷（推論），主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（536★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[原文](https://github.com/Paradigm-Study/claude-share)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### OpenMinis/iCTRL：讓 Claude Code、Codex 等 agent 透過加密 JSON-RPC API 遠端操作 iPhone／iPad（2026-10-18）
 
@@ -253,7 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 開源工具，可從手機遠端生成、下指令、終止並管理多個 Claude Code 實例；關閉 App 後任務仍在背景持續執行，之後可回來查看進度；支援 Android（GitHub 下載 build）與 iOS（TestFlight）
-- **與既有模式的關係：** 補上「行動裝置遠端控制」類別一個聚焦「多實例生命週期管理」的具體案例，與既有代表技巧（ccgram、Android Remote Control MCP、Shellular）同屬手機當 agent 控制介面取向，差異在本則強調背景持續執行與多實例並管
+- **與既有模式的關係：** 補上「行動裝置遠端控制」類別一個聚焦「多實例生命週期管理」的具體案例，與既有代表技巧（ccgram、Android Remote Control MCP、Shellular）同屬手機當 agent 控制介面取向，差異在本則強調背景持續執行與多實例並管；手機端生命週期管理屬裝置存取，主線填 —。
 - **可信度註記：** 未提供互動分數；未見 forks／issues／近期 commit 佐證
 - **來源：** 「Show HN: Orchestrator, spawn and manage Claude Code instances remotely」— Hacker News；[GitHub](https://github.com/markusbug/Orchestrator)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
@@ -262,7 +271,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** TUI 補位插件，提供 Claude Code 風格介面元件：鯨魚頂欄、即時狀態列、串流思考顯示、雙擊 Esc 回滾、含 TPS 的 context 進度條，npm 一鍵安裝；中國社群「DSH」官方公眾號收錄
-- **與既有模式的關係：** 補上「介面元件複用」類別一個聚焦 Claude Code 風格 TUI 元件的具體案例，與既有代表技巧（Brainless、statuslin.es）同屬把 agent 互動封裝成可安裝前端元件的取向
+- **與既有模式的關係：** 補上「介面元件複用」類別一個聚焦 Claude Code 風格 TUI 元件的具體案例，與既有代表技巧（Brainless、statuslin.es）同屬把 agent 互動封裝成可安裝前端元件的取向；TUI 外觀元件屬單一 agent 使用體驗，主線填 —。
 - **可信度註記：** GitHub Search 星數 2,933，僅取得星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（2,933★）；[GitHub](https://github.com/ccch1mneyyy/dsh-TUI)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）
@@ -271,7 +280,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 多工作區終端機聚合工具，整合 Claude Code 的 AI 協作功能
-- **與既有模式的關係：** 補上「介面元件複用」類別另一個終端機介面案例，與 dsh-TUI 同日收錄、同屬把 agent 互動封裝成可安裝前端元件的取向，差異在鎖定多工作區聚合而非單一 session 風格化
+- **與既有模式的關係：** 補上「介面元件複用」類別另一個終端機介面案例，與 dsh-TUI 同日收錄、同屬把 agent 互動封裝成可安裝前端元件的取向，差異在鎖定多工作區聚合而非單一 session 風格化；終端機介面聚合屬單一使用者體驗，主線填 —。
 - **可信度註記：** GitHub Search 星數 502，僅取得星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（502★）；[GitHub](https://github.com/tony1223/better-agent-terminal)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）

@@ -3,16 +3,16 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-10-22"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 38
+days_since_news_subtree: 2
+inbound_links: 37
 attribution_count: 4
 attribution_last: "2026-09-28"
 top_source: "hacker-news"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-22
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-22
 
 > **本頁在回答什麼**
@@ -239,13 +239,13 @@ skill 的描述清單不一樣：**v2.1.304 起 compact 後會重建並重新注
 3. **`claudeMdExcludes`** —— glob 排除從不碰的套件：其他團隊的、legacy、vendored 子樹。
 4. **`permissions.deny` 的 `Read()` 規則** —— 擋 `dist/`、`build/`、`*.generated.*`、`vendor/`。`.gitignore` 裡的東西搜尋時已自動排除，所以這條是給有進版控的產生碼與 vendored SDK。一個限制要知道：deny 規則不會把路徑從遞迴搜尋的輸出中濾掉，也管不到自己開檔的子程序。
 5. **裝 code intelligence（LSP）外掛** —— 理由見 2b 的「裝 LSP 的真正理由」。
-6. **`worktree.sparsePaths` ＋ `symlinkDirectories`** —— worktree 只 checkout 需要的目錄，`node_modules` symlink 回主 repo 不重複佔空間；subagent worktree 隔離特別受益。
+6. **`worktree.sparsePaths` ＋ `symlinkDirectories`** —— worktree 只 checkout 需要的目錄，`node_modules` symlink 回主 repo 不重複佔空間；subagent worktree 隔離特別受益。用 `claude --worktree` 隔離平行 session 時，v2.1.304 以前在 detached HEAD 狀態退出會不問就刪 worktree 與分支（已修，見 [[entities/claude-code]]）；還在舊版就先升級。
 7. **`--add-dir`／`additionalDirectories`** —— 跨 package 或跨 repo 存取。
 
 團隊規模再往上，官方建議把慣例從「每個目錄一份 CLAUDE.md」搬進 plugin ＋ 內部 marketplace，並用 `SessionStart` hook 在啟動時告訴使用者這個區塊該裝哪個 plugin。若組織已有 code search 或 RAG index，官方建議用 MCP 暴露給 Claude 查詢，取代直接讀檔。
 
 
-**內建 Explore subagent** —— 官方定位是「A fast, read-only agent optimized for searching and analyzing codebases」。唯讀，Write 與 Edit 被拒；跳過 CLAUDE.md 與 parent session 的 git status 以保持快速便宜（全 Claude Code 只有 Explore 和 Plan 這樣做，沒有任何設定可改）；模型跟主對話相同，主對話跑 Fable 時改跑 Opus（v2.1.198 起；此前固定跑 Haiku）；三段 thoroughness：`quick`／`medium`／`very thorough`；one-shot，不能 resume——要來回追問得改用 `general-purpose`。
+**內建 Explore subagent** —— 官方定位是「A fast, read-only agent optimized for searching and analyzing codebases」。唯讀，Write 與 Edit 被拒；跳過 CLAUDE.md 與 parent session 的 git status 以保持快速便宜（全 Claude Code 只有 Explore 和 Plan 這樣做，沒有任何設定可改）；模型跟主對話相同，主對話跑 Fable 時改跑 Opus（v2.1.198 起；此前固定跑 Haiku）；三段 thoroughness：`quick`／`medium`／`very thorough`；one-shot，不能 resume——要來回追問得改用 `general-purpose`；subagent 裡也開不了 workflow（見 [[topics/anthropic-agent-stack]]）。
 
 #### 它為什麼被設計成這樣（推論）
 
@@ -390,6 +390,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code#hooks：事件、失效模式與能不能當防線]]。
 
+硬擋層還有兩個寫法上的坑：`permissions.deny` 要覆蓋同一動作的各種寫法——Reddit 一則回報稱對 `git push` 設的 deny 擋不住 `git -C . push`（單一來源，2026-10-14），見 [[topics/community-guardrails]]；v2.1.300 起 hook 回傳的 `updatedInput` 依 schema 驗證，靠 hook 改寫 schema 以外欄位的寫法，升版後會失效，見 [[entities/claude-code]]。
+
 **社群做法：** 讓它「寫得合你的意」不是攔錯誤，是攔「不合意的寫法」——社群目前收斂在強制層與注入層兩條路：
 
 - **CLAUDE.md 規則遷移到 hooks 強制執行**（06-23 首次收錄，08-25 dev.to 第一手實測追加）：判準是「LLM 偶爾遵守」的留在 CLAUDE.md、「必須 100% 執行」的遷到 hooks（PreToolUse 攔部署指令、PostToolUse 強制跑 formatter）；08-25 案例作者報告規則遵循率從機率性變成 100%，副作用是遵循率提升後改用較便宜的 Haiku 當 builder 也不再顯得冒險。與 [[topics/community-tech-tools]] 決策表「CLAUDE.md 寫了它不聽」列同一結論（該列標「答案是機制不是工具」）。
@@ -420,7 +422,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 **一次多少錢，一句話**：本機兩個入口算你平常的用量；ultrareview 用完 3 次免費後每次約 $5–25；GitHub 上的 Code Review 沒有單價——先設月上限，挑幾個 repo 用 Once 或 Manual 試跑，看後台平均單次成本再乘每月 PR 數（新 repo 預設每次 push 都審，最貴）。對照用的整體參考值：Claude Code 每位開發者每個活躍日約 $13、每月 $150–250（官方 costs 頁的企業部署平均，2026-10-22 查）。估法四步與封頂細節見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 
-邊寫邊掃的兩個外掛不算 review 入口：`security-guidance` 每次 edit 自動三層掃描、算一般用量（見第 4 段）；Claude Security 外掛做深度掃描。
+邊寫邊掃的兩個外掛不算 review 入口：`security-guidance` 每次 edit 自動三層掃描、算一般用量（見第 4 段）；Claude Security 外掛（beta）在 Claude Code 端用你當前 session 的模型掃描，不含網頁版 Claude Security 的 Mythos 掃描，見 [[entities/claude-security]]。
 
 **官方給的成本收斂旋鈕**：GitHub 上的 Code Review——觸發模式選 Manual 或 Once、審查等級選 Quick（Standard 為預設、Deep 最貴）、`REVIEW.md` 列出要跳過的路徑與類別、專屬月上限、看各 repo 的估算成本；本機 `/code-review`——effort 給 `low` 只報最有信心的（少誤報而非少覆蓋，`medium` 起擴大覆蓋），自 v2.1.288 起可加 `--max-findings <n>`（或 `all`、`default`）限制回報條數，見 [[entities/claude-code]]；security-guidance 可分層關閉。
 
@@ -435,6 +437,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 > A reviewer prompted to find gaps will usually report some, **even when the work is sound**, because that is what it was asked to do. Chasing every finding leads to over-engineering: extra abstraction layers, defensive code, and tests for cases that can't happen.
 
 官方的解法是叫 reviewer 只標**影響正確性或既定需求**的缺口，其餘視為 optional。
+
+官方自己的一手案例：Claude Code 團隊稱 Claude 已寫出自身約 90% 的程式碼，審查策略改為在「revert 與事故不增加」的底線下持續壓低人力審查時間，而不是追求每個變更都有人讀過（官方部落格，2026-10-16；HN 396 分）。這是用 revert／事故率而非審查覆蓋率來校準審查強度的判準，沒有公開節省比例，見 [[topics/community-guardrails]]。
 
 **缺口**：分層審查（機械檢查先篩，LLM 只做機械抓不到的）已是共識性建議，但沒有任何一篇留下「分層前後省了多少」的數字；多輪對抗式審查的成本效益比也是徹底空白。
 
@@ -458,6 +462,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 其餘：`/engineering:testing-strategy` 決定測什麼；`/engineering:deploy-checklist` 驗證 CI、依賴並要求**事先寫下 rollback 觸發條件**；官方 recipe 明說 Claude 會照著你既有測試檔的風格與框架寫。
 
 **用 Sonnet 5.5 跑 `low` effort 要自己補驗證指令**：官方 prompting 指南（2026-10-03 查證）指出它在 `low` 下可能沒跑真正的檢查就回報完成；在指示裡加「改到可執行的程式就要跑測試／型別檢查／build」，官方測得略增成本、品質無可測變化，見 [[entities/sonnet-5-5]]。
+
+**升版檢查：`claude -p` 的預設權限模式變了。** v2.1.302 起，`claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑（先前是 auto）；CI 或無人值守腳本若依賴舊行為，升版後要明寫 `--permission-mode auto`。同版起 fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟，不想要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`，見 [[entities/claude-code]]。
 
 **跨模型比較表現前先釘 effort**：各代的預設 effort 不同，省略 effort 的請求在新世代可能低一級；懷疑新模型變笨前，先用 `--effort` 把兩邊釘在同一檔，見 [[topics/model-comparison]]。
 
@@ -536,6 +542,10 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 **Opus 5.5 的提示建議**（官方部落格，2026-10-03）：一次把整個任務講完、點名明確的收尾狀態（如「測試全過」），再放手讓它跑；它完工會主動講清楚做了什麼，但**摘要要你自己核對**——主動報告不代表報告就是對的。
 
 **讓它自己驗完再交給你，一句話**：同一個 prompt 叫它跑檢查 → `/goal` 設可量測的完成條件 → `Stop` hook 跑你的 script、不過不放行 → 驗證 subagent，成本遞增；四級的寫法見[第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)。共同重點是**把裁決權從執行者手上拿走**。
+
+**同一批工具呼叫全標錯誤時，先找第一個真正失敗的**（推論）：單一訊息內的平行工具呼叫只要一個失敗，同批其餘會被自動取消並標為錯誤（GitHub issue #22264，2026-10-16，未修復、官方未回應）；依賴平行工具呼叫的流程不能假設批次內各自獨立，見 [[entities/claude-code]]。
+
+**要看它當時實際看到什麼**：v2.1.300 起 transcript 每次請求多記當時的 system prompt 與 tools，可直接翻；分享 transcript 前要知道裡面現在含完整 system prompt。
 
 除錯本身：`/engineering:debug` 提供重現 → 隔離 → 診斷 → 修復的流程；官方 recipe 建議**直接告訴 Claude 重現指令並給它 stack trace**、說明錯誤是間歇還是穩定發生。無法在本機重現的場景（硬體在迴路、生產限定），這流程第一步就會卡住。
 
@@ -622,11 +632,11 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 本週 coding 亮點
 
-- **跨模型比較先釘 `--effort`**：各代預設 effort 不同，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
-- **沙箱自動放行與「強制」CLAUDE.md 規則都有未修復 issue**：強制性請落在 hook，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **`CLAUDE_CODE_DISABLE_FILE_MENTIONS`**：`@` 只傳路徑省 context，見 [第 2a 段](#2a-怎麼讀得省)
+- **`claude -p` 預設權限模式變了**：v2.1.302 起部分環境改從 `default` 起跑，腳本要明寫模式，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
+- **deny 規則與 `updatedInput` 的寫法坑**：換個指令寫法就繞過 deny、hook 回傳欄位現在要過 schema，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **平行工具呼叫一個失敗，同批全標錯誤**：未修復，見 [第 9 段](#9-除錯-怎麼知道它真的做了)
 
-%% 亮點檢查日 2026-10-17；其餘候選（用量與定價、工具星數類、單一作者做法）屬他頁，不入本節。 %%
+%% 亮點檢查日 2026-10-24；其餘候選（用量與定價、工具星數類、單一作者做法、mods 內部事件）屬他頁，不入本節。 %%
 
 ---
 
@@ -666,7 +676,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 社群與一手觀察：
 
-- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-08-08 查證
+- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-10-24 查證，近 7 天無增減
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
 - [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節

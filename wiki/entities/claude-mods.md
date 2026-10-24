@@ -8,12 +8,12 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-20"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 3
+days_since_news: 4
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
-inbound_links: 8
+days_since_news_subtree: 4
+inbound_links: 9
 attribution_count: 6
 attribution_last: "2026-10-13"
 top_source: "google-news"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（v2.1.287 起正式發布，預設開啟）
 **領域：** 🛠️ 工具/功能
 **對照角色：** 功能（Claude Code 專屬）
-**別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`
+**別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（這支旗標從 build 旗標升到出貨的四階歷程見 [[topics/claude-code-experimental]]）
 **上層：** [[entities/claude-code]]
 **首次出現：** 2026-09-04
 **最後更新：** 2026-10-23

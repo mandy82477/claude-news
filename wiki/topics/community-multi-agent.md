@@ -3,14 +3,14 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-19"
-last_news_update: "2026-10-19"
+last_updated: "2026-10-24"
+last_news_update: "2026-10-21"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 3
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 3
 inbound_links: 7
 attribution_count: 3
 attribution_last: "2026-10-19"
@@ -31,8 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-19
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-21
 
 > **Agent 規模化添 tmux 實務設定與四代理天花板**（2026-10-19）
 > - **tmux 具名 session 工作流**：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **隔離已定案**：每個 agent 開一個 git worktree，官方已內建（subagent 設 `isolation: worktree` 就拿到一份獨立的 repo 副本）。agent teams 這邊沒有隔離（見下方缺口追蹤「協調與衝突解決」那一列）。
 - **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-multi-agent#2026-07]]）自己排序，或維持人工把關，或等官方補。
 - **開到多大**：超過 10 個並行 agent 要獨立 worktree 加一層協調；官方 session 預設同時跑到 20 個 subagent 時再開新的會失敗，上限可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（官方 sub-agents 文件，2026-10-09 查證）。
-- **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），還在試。
+- **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），之後兩個月沒有新做法，已移出概覽表。
 - **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較；2026-10-09 新增的自架框架 zhikuncode 也走同一路，尚無第二方實測。
 
 **機制細節**
@@ -135,6 +135,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Show HN: Omnara——開源版 Claude Managed Agents 替代方案（2026-10-21）
+
+- **主線：** —
+- **核心模式：** 開源 agent 託管平台：一次 API 呼叫建立 agent，由平台代管執行迴圈、沙盒、密鑰與權限（RBAC），agent 狀態存 Postgres，閒置零成本、可存活重啟；今日 Hacker News 98 分，4 個獨立來源同步報導。
+- **與既有模式的關係：** 補上「Agent 規模化」一個「託管式」取向——既有代表技巧（20-instance 崩潰分析、agent-channels、arena-skill 等）多半是自己在本機開並行 agent，本則把執行迴圈、沙盒、密鑰與權限（RBAC）交給託管平台，並明文定位為官方 Claude Managed Agents 的開源替代；歸類為近似判斷（推論），主線填 —。
+- **來源：** Hacker News；[原文](https://github.com/omnara-ai/omnara)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
+%% 本則明文定位為「Claude Managed Agents 的開源替代方案」，屬對官方功能的負向對照，已在 2026-10-22 回報標記轉知。%%
 
 #### Tmux and Claude Code：具名、可重連 session 跑多個 agent 的實務設定，及四個 agent 的天花板（2026-10-19）
 
@@ -282,7 +291,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 開源、可自架的個人金融 AI 團隊框架，結合 opencode、Claude Code 與 MCP 的多代理架構，標榜 15 分鐘內可用 Docker 完成部署
-- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「垂直領域（個人金融）多代理團隊」取向的實作——既有代表技巧多為通用開發用途，本則把 orchestrator 分派模式套進單一金融決策領域並強調快速自架。
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「垂直領域（個人金融）多代理團隊」取向的實作——既有代表技巧多為通用開發用途，本則把 orchestrator 分派模式套進單一金融決策領域並強調快速自架；垂直領域（金融）多代理團隊，非大型 codebase 痛點，主線填 —。
 - **主線判斷：** 個人金融領域框架與 codebase 規模無關，暫填 —。
 - **可信度註記：** 星速偵測收錄（509 星，forks 57，約星數 11%，符合防刷門檻），近日仍有 commit（2026-09-15）
 - **來源：** GitHub Search；[GitHub](https://github.com/agentpit-io/hunter-community)
@@ -299,9 +308,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### stablyai/orca：用既有訂閱跑任意 coding agent 的多 agent ADE，桌面／行動／遠端執行環境皆支援，近 7 天新增 4,966 星（約 709 星/日）（2026-09-12）
 
-- **主線：** —
+- **主線：** 並行規模
 - **核心模式：** 多 agent Agent Development Environment（ADE），讓使用者以自己既有的訂閱（非另計費 API key）跑任意 coding agent，桌面、行動裝置、遠端執行環境皆支援
-- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「用既有訂閱、跨裝置執行」取向的 ADE——既有代表技巧多聚焦單機 orchestrator 分派，本則強調沿用訂閱省去額外計費、跨桌面／行動／遠端環境執行。
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一種「用既有訂閱、跨裝置執行」取向的 ADE——既有代表技巧多聚焦單機 orchestrator 分派，本則強調沿用訂閱省去額外計費、跨桌面／行動／遠端環境執行；ADE 讓多個 agent 並行跑在同一套環境，屬多 agent 協作環境，依反例條文填並行規模。
 - **主線判斷：** 解的是計費與裝置存取，非大型 codebase 特有的並行規模痛點，暫填 —。
 - **可信度註記：** 星速偵測收錄（近 7 天 +4,966 星），未見 forks／issues／近期 commit 佐證
 - **來源：** GitHub Search；[GitHub](https://github.com/stablyai/orca)
@@ -311,16 +320,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 主打「本機優先」的 Agent OS，AI 夥伴常駐在使用者自己的機器上，可透過瀏覽器或任何聊天 App 驅動官方 Claude Code、Codex 與 OpenCode
-- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「本機常駐 Agent OS」取向的案例，與 magnitudedev/magnitude（本地推論伺服器後端）不同層次——本則是驅動既有官方 harness 的本機作業系統層，而非替換推論後端
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「本機常駐 Agent OS」取向的案例，與 magnitudedev/magnitude（本地推論伺服器後端）不同層次——本則是驅動既有官方 harness 的本機作業系統層，而非替換推論後端；單一常駐入口驅動既有 harness，不解並行協調，主線填 —。
 - **可信度註記：** GitHub Search 星數 501，僅取得星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（501★）；[GitHub](https://github.com/avibe-bot/avibe)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）
 
 #### firstintent/ccteam：把已在跑的多個編程 agent（Claude Code、Codex、Grok、DeepSeek Harness、Kimi、Pi）整編成一支團隊，可跨廠商跨機器分派任務並經 Telegram／Lark／瀏覽器統一操控（2026-09-10）
 
-- **主線：** —
+- **主線：** 並行規模
 - **核心模式：** 把使用者手邊已在跑的多個編程 agent（Claude Code、Codex、Grok、DeepSeek Harness、Kimi、Pi）整編成一支團隊，任何 session 皆可跨廠商、跨機器分派任務並收集成果，可經 Telegram、Lark 或瀏覽器分頁統一操控
-- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「跨廠商既有 agent 整編」取向的案例，與 avibe-bot/avibe（本機常駐 Agent OS）同日收錄、同屬統一操控多個編程 agent 的取向，差異在本則明確涵蓋非 Anthropic／OpenAI 廠商（Grok、DeepSeek、Kimi）並主打跨機器分派任務
+- **與既有模式的關係：** 補上「Multi-agent 架構」類別一個「跨廠商既有 agent 整編」取向的案例，與 avibe-bot/avibe（本機常駐 Agent OS）同日收錄、同屬統一操控多個編程 agent 的取向，差異在本則明確涵蓋非 Anthropic／OpenAI 廠商（Grok、DeepSeek、Kimi）並主打跨機器分派任務；跨廠商、跨機器分派任務並收集成果，屬多 agent 編排，依反例條文填並行規模。
 - **可信度註記：** GitHub Search 星數 501，僅取得星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（501★）；[GitHub](https://github.com/firstintent/ccteam)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）

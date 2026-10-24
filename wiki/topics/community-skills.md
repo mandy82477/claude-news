@@ -6,11 +6,11 @@ domain: "🌐 社群"
 last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 5
 attribution_count: 12
 attribution_last: "2026-10-21"
@@ -118,7 +118,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 從一份簡短 JSON 規格產生動畫、可互動探索的圖表，供 Claude 與其他 coding agent 使用；GitHub Search 515 星。
-- **與既有模式的關係：** 補上「Skills 設計」一個「圖表規格語言」取向，與既有 reladraw（可自訂版面配置的圖表描述語言）、drawio-skill（程式碼/規格轉 draw.io 圖）同屬圖表類但走「JSON 規格＋動畫可互動探索」而非靜態 draw.io 輸出；原始描述簡略，分類暫依與既有圖表類做法最接近者歸入，週更時可再判。
+- **與既有模式的關係：** 補上「Skills 設計」一個「圖表規格語言」取向，與既有 reladraw（可自訂版面配置的圖表描述語言）、drawio-skill（程式碼/規格轉 draw.io 圖）同屬圖表類但走「JSON 規格＋動畫可互動探索」而非靜態 draw.io 輸出；原始描述簡略，分類暫依與既有圖表類做法最接近者歸入，週更時可再判；圖表規格語言與 codebase 規模無關，主線暫填 —。
 - **可信度註記：** 原始描述僅一句話可用，依日報段落判讀；僅取得 GitHub Search 星數（515★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/Aryanutkarsh/SeeCode)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
@@ -228,7 +228,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 工程顧問公司 Serokell 分享把內部工程規範轉成 Claude Code skills 的做法，動機是 coding agent 熟悉語法但不熟悉團隊內部慣例；同一篇同步登上 r/ClaudeCode 與 r/ClaudeAI（2 個來源同日出現）。
-- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧「知識框架化」一個具名真實企業案例——把公司工程規範（而非公開書籍／流程）封裝成 skill；具體轉換機制原文遭截斷未載，暫不確認是否構成新取向。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧「知識框架化」一個具名真實企業案例——把公司工程規範（而非公開書籍／流程）封裝成 skill；具體轉換機制原文遭截斷未載，暫不確認是否構成新取向；團隊規範轉 skill 屬通用做法，原文未涉大型 codebase，主線填 —。
 - **可信度註記：** Reddit 貼文，0 留言，但 r/ClaudeCode＋r/ClaudeAI 兩個來源同日出現，符合跨來源門檻；內容細節僅摘要可讀，原文被截斷。
 - **來源：** Reddit / r/ClaudeCode ＋ Reddit / r/ClaudeAI；[原文](https://www.reddit.com/r/ClaudeCode/comments/1wteorc/how_we_use_claude_code_at_serokell/)
 - **成熟度：** ⏳ 新興（本庫首次收錄，具名企業案例，尚無社群回饋數據）
@@ -262,7 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - emilkowalski/skills：給設計師與工程師使用的通用 skills 集合（41,183★，2026-03 出生，本庫今日首次收錄，forks 2,340）
   - drama-skills：開源 AI 短劇／漫劇創作 skill 合集，涵蓋劇本、角色資產、分鏡、圖片／影片提示詞、審查，適配 Claude Code 與 Codex，MIT（2,272★，forks 497）
   - asd-ste100-skill：把 ASD-STE100 簡化技術英文規則轉為 Claude Code skill，用於改寫模糊的 agent 對話英文（2,241★，forks 125）
-- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧四個新取向的具名實作——學術寫作、設計/工程通用、創作全流程、語言精簡；前兩款星數異常高卻本庫今日首次收錄，推測受限於 GitHub Search 抓取覆蓋（推論）；非大型 codebase 特有痛點，主線填 —。
+- **與既有模式的關係：** 補上「Skills 設計」既有代表技巧四個新取向的具名實作——學術寫作、設計/工程通用、創作全流程、語言精簡；前兩款星數異常高卻本庫今日首次收錄，推測受限於 GitHub Search 抓取覆蓋（推論）；非大型 codebase 特有痛點，主線填 —；四款題材型 skill 合集，與 codebase 規模無關，主線填 —。
 - **可信度註記：** 四者 forks 占星數約 5%–22%，皆在 GitHub Search 抓取當日或前兩日內仍有 commit 或 issue 往來，非「異常高星數無佐證」情況。
 - **來源：** GitHub Search；[nature-skills](https://github.com/Yuan1z0825/nature-skills)（44,559★）、[emilkowalski/skills](https://github.com/emilkowalski/skills)（41,183★）、[drama-skills](https://github.com/zenstory-ai/drama-skills)（2,272★）、[asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill)（2,241★）
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
@@ -352,7 +352,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 提供可掛載的 skill 與 MCP server，協助搜尋現金、點數、里程與獎勵機票的省錢旅遊方案；相容 Claude、Codex、OpenCode；GitHub Search 累積 657 星
-- **與既有模式的關係：** 延續本頁「Skill 生態多元化」既有趨勢（coding agent 透過 Skill／MCP 跨足非程式碼垂直領域），與影片、簡報、SSH 等既有領域案例同屬一取向，本則鎖定旅遊比價這個此前未見的垂直領域
+- **與既有模式的關係：** 延續本頁「Skill 生態多元化」既有趨勢（coding agent 透過 Skill／MCP 跨足非程式碼垂直領域），與影片、簡報、SSH 等既有領域案例同屬一取向，本則鎖定旅遊比價這個此前未見的垂直領域；旅遊比價與 codebase 規模無關，主線填 —。
 - **可信度註記：** 僅取得 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證
 - **來源：** GitHub Search（657★）；[GitHub](https://github.com/borski/travel-hacking-toolkit)
 - **成熟度：** ⏳ 新興（本庫首次收錄，尚無星數以外的社群採用回饋數據）

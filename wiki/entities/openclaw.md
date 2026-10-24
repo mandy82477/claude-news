@@ -4,19 +4,19 @@ kind: "entity"
 type: "product（第三方工具）"
 status: "active（信用池計費，不含訂閱）"
 domain: "💼 商業"
-last_updated: "2026-10-18"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-18"
 status_main: "active"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['entities/openclaw-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 9
 attribution_count: 4
 attribution_last: "2026-10-18"
 top_source: "google-news"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-10-29"
 pending_signalled: 0
@@ -30,11 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（信用池計費，不含訂閱）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-18
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-18
 
 > **官方查無鬆綁**（2026-10-18）
-> 查官方 Pro／Max 說明頁（support.claude.com/en/articles/11145838）未載 Agent SDK 或第三方工具可用訂閱額度；10-15 BigGo Finance／36 Kr 稱官方進一步鬆綁第三方工具政策，出處未明，仍待查證。
+> 查官方 Pro／Max 說明頁（support.claude.com/en/articles/11145838）未載 Agent SDK 或第三方工具可用訂閱額度；10-15 BigGo Finance／36 Kr 稱官方進一步鬆綁第三方工具政策，出處未明。
+> ❓ **待查證**（標 2026-10-15｜查 BigGo Finance、36 Kr、第三方工具政策）｜**官方是否進一步鬆綁第三方工具政策**：已掃日報至 2026-10-23 無後續；官方頁面未查證
 
 ---
 

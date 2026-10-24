@@ -3,15 +3,15 @@ page: "topics/community-pattern-trends"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-17"
-last_news_update: "2026-10-17"
+last_updated: "2026-10-24"
+last_news_update: "2026-10-23"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
+days_since_news_subtree: 1
 inbound_links: 21
 attribution_count: 0
 attribution_last: null
@@ -30,13 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-17
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-23
 
-> **最新趨勢觀察**（2026-10-17）
-> - **模型路由重新有新做法**：jev-router（9/30）、atticus-mac（10/12）進來，不再標淡出；強制層、對抗性設計、規格驅動三條已逾 30 天沒有新做法，改標淡出。
-> - **多 agent 的衝突偵測前移到寫碼前**：Foremerge（9/22）在寫碼前偵測意圖衝突，補在本地合併佇列「寫完後落地」之前。
-> - **跨 session 記憶出現「記失敗」工具**：hippo-memory、projectmem 把 8/31 的否決記錄概念做成工具；另有額度可見（Pulse）與手機端（Mobile-Harness、微信橋接）新做法。
+> **最新趨勢觀察**（2026-10-24）
+> - **強制層與規格驅動兩條淡出的方向各回來一例**：agent-usage-guard（10/22）用 hook 在用量超過 80% 時擋下再生子 agent；nick-vels/skills（10/23）是規格驅動時隔 6 週的新實作，兩者都只有單一來源或星數佐證。
+> - **隔離與路由往託管與供應商層延伸**：Omnara（10/21，HN 98）把沙盒與權限交給託管平台，OmniRoute（10/22）在額度用盡時自動換供應商；可觀測性線添 ccdeck 多 session 儀表板。
 
 ---
 
@@ -54,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 已收斂的方向
 
-### 趨勢一：強制層取代建議層　`方向已收斂`　↘ 淡出・最近一次動靜 2026-09-06
+### 趨勢一：強制層取代建議層　`方向已收斂`　最近一次動靜 2026-10-22
 
 **演進：**
 - 🔥🔥（估） **Hooks 強制執行機制**（5/06）：用 Hooks 在工具呼叫前後攔截行為，而非只在 CLAUDE.md 寫「請不要…」
@@ -65,6 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **氛圍狀態燈**（7/2）：同一「hooks 感知 agent 活躍狀態」機制的第二個獨立實作——驅動實體 LED 燈號提示 agent 執行狀態，確認此條件觸發模式非單一作者的個案巧思，而是可複製的機制
 - 🔥（估） **規則遵循率變 100% 新實例**（8/25，dev.to）：將原寫在 prompt 裡的規則改用 hooks 強制執行，遵循率從「機率性」變成 100%；附帶效益是規則確定性提升後，改用較便宜的 Haiku 當 builder 也不再顯得冒險，補上「強制執行降低模型成本門檻」這個先前未明說的連結
 - 🔥（估） **claude-code-hooks 外掛市集**（9/6，525★）：把多個 hook 打包成可安裝的市集，從「單一 hook 各自維護」進到「市集化分享」，延伸 Hooks 強制執行路線的散布方式
+- 🔥（估） **agent-usage-guard**（10/22，Show HN）：把「別燒爆用量窗口」從提醒變成 hook 強制——快取過期、內容過大先擋，用量超過 80% 不准再生子 agent；作者自稱單次爆量 agent 數 365 降到 27（單一自測）
 
 **代表模式：**
 - **Hooks 強制執行取代 CLAUDE.md 規則**：把 deploy 保護、formatter、migration 防寫等「必做」遷到 PreToolUse / PostToolUse hook，以 exit 2 攔截（見下方「Hook 怎麼擋」）
@@ -88,7 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢二：Multi-agent 隔離工程化　`方向已收斂`　最近一次動靜 2026-10-06
+### 趨勢二：Multi-agent 隔離工程化　`方向已收斂`　最近一次動靜 2026-10-21
 
 **演進：**
 - 🔥（估） **零星嘗試**（4/26）：多 agent 概念出現，但還沒解決「互相踩到彼此檔案」的問題
@@ -104,6 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **hcom：任務脈絡互通第二例**（9/16）：跨終端機讓 8 種 coding agent CLI 互相傳訊、監看、生成彼此，走 Concord 那條「不統一容器、只互通脈絡」的路；僅星數佐證
 - 🔥🔥🔥 **Foremerge：衝突偵測前移到寫碼前**（9/22，Show HN，HN 44）：疊在 git worktree 上的意圖廣播層，agent 動手前先宣告變更範圍，寫碼前就偵測架構層級衝突；合併佇列管寫完後落地，這則管寫之前會不會撞；尚無獨立覆核
 - 🔥（估） **統一容器路線第五波（zeron／amux／cezar 等）**（9/25–10/6）：zeron、claude-ops、VibeAround 等控制平面與 amux、cezar 同期出現，跨 harness 編排層持續有新品；皆僅星數佐證，尚無採用回饋
+- 🔥🔥🔥 **Omnara**（10/21，HN 98，多家報導）：執行迴圈、沙盒、密鑰與權限整包交給託管平台，隔離從自己開 worktree 延伸到託管環境代管；定位為官方 Managed Agents 的開源替代，尚無使用回報
 
 **代表模式：**
 - **Git Worktrees 隔離原語**：多 agent 各持獨立 worktree，根除共享目錄的覆蓋衝突
@@ -148,7 +149,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢四：模型路由自動化　`方向已收斂`　最近一次動靜 2026-10-12
+### 趨勢四：模型路由自動化　`方向已收斂`　最近一次動靜 2026-10-22
 
 **演進：**
 - 🔥（估） **Dragoman 多模型路由**（5/13）：早期單一分享，用顯式規則手動指定哪個任務走哪個模型
@@ -161,6 +162,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **分層 Opus「大腦」＋Sonnet「工人」提案**（8/14，GitHub Issue #56913）：把模型分層從成本路由延伸到長時間自主運行——Opus 決策監督、Sonnet 執行、持久化狀態記進度；官方已於 2026-09-15 關閉，標為不做
 - 🔥（估） **jev-router：依任務路由到最便宜模型**（9/30）：Claude Code 內依任務自動選最便宜模型，延續 Workweave Router 的自動降階路線；單一來源，無使用回饋
 - 🔥🔥🔥 **atticus-mac：模型之前先分流**（10/12，Show HN，HN 36）：簡單操作在本機處理，複雜任務才經 `claude -p` 吃既有訂閱額度；分流發生在選模型之前，與雲端模型間的路由不同
+- 🔥（估） **OmniRoute**（10/22，GitHub Search 79,703★）：單一端點整合 375 家供應商、逾 1,400 款模型，含配額感知自動備援；路由從選模型延伸到額度用盡自動換供應商，僅星數佐證
 
 **代表模式：**
 - **Workweave Router**：嵌入 Claude Code / Codex / Cursor 的成本感知路由，依難度自動降階（裝哪個見 [[topics/community-tech-tools]]）
@@ -212,7 +214,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-10-03
+### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-10-23
 
 **演進：**
 - 🔥（估） **live-log-viewer-next**（7/6）：讀取本機 JSONL transcript，呈現多個平行 agent 即時對話地圖，此線最早的獨立實作
@@ -224,6 +226,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥（估） **Clinch／Voidleap Code／DocStash／Csift 同日亮相**（8/19，Hacker News）：管理多 repo session（Clinch）、對話中途換模型的 IDE（Voidleap Code）、agent 產出直接發布成網頁（DocStash）、整理 JSONL session 檔（Csift），「怎麼管理與觀察 session」成了穩定賽道
 - 🔥（估） **dsh-TUI／better-agent-terminal**（9/10）：介面元件化的延伸——dsh-TUI（中國社群「DSH」官方收錄的 Claude Code 風格 TUI 元件市集）、better-agent-terminal（多工作區終端聚合），從獨立看板再細分出「可複用介面元件」
 - 🔥（估） **額度可見：TokenEater／Pulse**（9/16、10/3）：用量額度做進原生 macOS App 與邊緣常駐監視器，Offrun 也並排顯示各帳號剩餘額度；觀測對象從「誰在做什麼」延伸到「額度剩多少」，皆僅星數或單一討論
+- 🔥（估） **ccdeck**（10/23，dev.to 11 讚）：本機儀表板統一顯示多個 Claude Code／Codex session 與子 agent 樹狀結構，解決同時開多個 agent 時漏看已完成或待確認 session
 
 **代表模式：**
 - **JSONL Transcript 讀取型**（live-log-viewer-next）：解析本機 session 逐字稿檔案重建對話地圖，不需官方額外介面支援
@@ -234,7 +237,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢七：規格驅動開發（Spec-Driven Development）　`方向已收斂`　↘ 淡出・最近一次動靜 2026-09-12
+### 趨勢七：規格驅動開發（Spec-Driven Development）　`方向已收斂`　最近一次動靜 2026-10-23
 
 **演進：**
 - 🔥（估） **opsx spec-driven-development-toolkit**（6/19）：CLI 工具強制要求先寫規格文件才能執行 AI 代碼生成，早期單一嘗試，已被 HN flagged，社群接受度尚待觀察
@@ -242,6 +245,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **ISO/IEC/IEEE 29148 SRS 格式引入**（6/22，Reddit r/ClaudeAI）：與 ANMA 同日獨立出現的第二種規格化路徑，以工業標準需求規格格式（The system shall...）作為 Interview 收集需求後的書面化框架
 - 🔥🔥（估） **ospec／smart-ralph 批次亮相**（8/11）：時隔近兩個月的第三、四個獨立實作——ospec 是「規劃—執行—驗證」可驗證目標迴圈，smart-ralph 把 Ralph Wiggum loop 接上結構化規格流程；兩者星數 8/13 查過非刷星
 - 🔥🔥（估） **spec-kit**（9/12）：GitHub 官方帳號釋出規格驅動入門工具包，固定走 spec → plan → tasks → implement，中間產物（規格、計畫）可審查；一週新增兩千多星，尚無使用心得
+- 🔥（估） **nick-vels/skills**（10/23，GitHub Search 523★）：描述想法後自動寫規格、拆任務、實作並對照原始需求檢查，附進度儀表板；規格驅動時隔 6 週再現新實作，僅星數佐證
 
 **代表模式：**
 - **ANMA YAML 合約**：架構邊界寫成合約 + Hook 強制驗證，讓便宜模型也能守規（0/20 vs 13/19 實測）
@@ -310,7 +314,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **你的選項**：拿自己的設計對各條「對現有設計的啟示」逐條檢查；撞到的是大 repo 的四面牆，照 [[topics/community-large-codebase-workflow]] 的現在答案做；模型路由、手機遠端、跨 session 記憶三條先開官方零件，再看社群工具。
-- **接下來看什麼**：jev-router、atticus-mac 之後模型路由有沒有第三個獨立做法；Foremerge 的寫碼前衝突偵測有沒有第二個實作；強制層、對抗性設計、規格驅動三條淡出的方向有沒有新做法回來。
+- **接下來看什麼**：Omnara 之後託管式隔離有沒有第二個獨立實作、有沒有人回報實際使用；agent-usage-guard 的 hook 式用量煞車有沒有第二個來源；對抗性設計這條淡出的方向有沒有新做法回來。
 
 ---
 
@@ -332,4 +336,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]（多數趨勢圍繞的官方產品）
 - [[entities/boris-cherny]]（Loops 哲學影響多條趨勢的設計取向）
 
-%% 週更撈料水位：週更已收至 2026-10-16（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。  %%
+%% 週更撈料水位：週更已收至 2026-10-23（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。   2026-10-24 撈料：行動裝置遠端控制的 ios-mcp、iCTRL 是 agent 反向操作手機，不推進趨勢八；Claude Code 團隊官方 code review 部落格（10/16）談壓低人力審查時間，不推進趨勢五；memtrace-public、ai-data-extractor 只是記憶類再多一個工具，不寫進趨勢九。 %%

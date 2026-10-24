@@ -3,21 +3,21 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-17"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-16"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
-inbound_links: 40
+days_since_news_subtree: 8
+inbound_links: 39
 attribution_count: 55
 attribution_last: "2026-10-16"
 top_source: "google-news"
-pending_count: 8
-pending_overdue: 2
-pending_next_review: "2026-10-24"
+pending_count: 6
+pending_overdue: 0
+pending_next_review: "2026-10-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-16
 
 > **最新動態**（2026-10-16）
@@ -86,9 +86,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
 - **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列；原文未取得（10-17 查證），詳見「## 技術彙整」。
 - **2026-10-03，LeCun 公開稱對 AI 滅絕人類「零擔憂」，批評 Amodei 等業界示警適得其反**：三位圖靈獎得主（LeCun／Hinton／Bengio）中唯一不深度擔憂 AI 風險者，為既有「反面聲音」系列首見「圖靈獎同儕內部分裂」框架，詳見「## 技術彙整」。
-- **2026-10-03，Fox News：離職 Anthropic 資安主管（姓名未公開）警告 AI agent 自主程度已超出人類可控範圍**：若屬實延續既有「離職示警」系列，惟先前當事人均為研究／對齊背景，本則首見資安職能背景當事人，具體身分與技術依據未見報導，詳見「## 技術彙整」
-- **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市 AI 安全聽證會重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告，共和黨參議員的批評為既有「反面聲音」系列首見國會議員層級反駁，詳見「## 技術彙整」。
-- **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，單一來源僅標題可用，詳見「## 技術彙整」。
+- **2026-10-03，Fox News：前 Anthropic 資安主管 Jeffrey Ladish 警告 AI agent 自主程度已超出人類可控範圍**：Ladish 2022-10 已離開 Anthropic、現主持 Palisade Research，非 2026 年離職潮，詳見「## 技術彙整」
+- **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市議會 AI 風險聽證會重申「極度魯莽」警告**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告；日報稱有共和黨參議員批評「危言聳聽」，出處未證實，詳見「## 技術彙整」。
+- **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，屬單方指控、無證據，詳見「## 技術彙整」。
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 
 ---
@@ -119,22 +119,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-16｜查 METR、SecureBio、White House Accord）：METR 員工級存取權的具體範圍（能否公開中止部署、是否有否決權）、風險評估結果發布時程，以及白宮超級智慧協議的確切簽署日期與條款均未見報導
 - **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；惟存取權具體範圍與協議細節尚待官方進一步說明
 
-### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增，單一來源僅標題可用）
+### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增）
 
-- **揭露來源**：Yahoo Finance（經 Google News，僅標題可用，互動 0）
-- **核心主張**：前 Anthropic pretraining 研究員 [[entities/jacob-coxon|Jacob Coxon]] 稱有九成把握，中國間諜已滲透進美國各大 AI 公司內部
+- **揭露來源**：Yahoo Finance（經 Google News，標題）；2026-10-24 查證 [SCMP](https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher)、Business Insider 等轉述 PBD Podcast 訪談
+- **核心主張**：前 Anthropic pretraining 研究員 [[entities/jacob-coxon|Jacob Coxon]] 在 PBD Podcast 稱有九成把握，中國間諜已滲透 OpenAI 與 Anthropic 等美國 AI 實驗室；他未提供證據、未點名任何人，被問是否見過可疑者時答否
+- **政策主張**：Coxon 主張 AI 公司應比照國防業加強聘用審查，並認為放慢美國研發可能無效，因中國可迅速追平差距
 - **與既有敘事的關係**：延續 09-09 辭職警告、10-05 紐約市聽證會「極度魯莽」重申系列，首次從泛稱業界風險轉為具體點名「中國間諜滲透」與機率數字，警告對象從「AI 風險」轉向「國家安全／間諜滲透」
-- ❓ **待查證**（標 2026-10-10｜查 Jacob Coxon、China spies、AI giants）：具體指控依據、是否點名特定公司或個案、Anthropic／受影響公司官方回應均未見報導，僅 Google News 標題聚合層級可用
-- **可信度評估**：單一來源（Yahoo Finance 經 Google News 轉載），互動量 0，訊號強度弱，僅標題可用
+- **可信度評估**：多家媒體轉述同一場 podcast 的自述；屬單方指控、無證據，不當作既成事實。Anthropic 與受影響公司的官方回應未見報導
 
-### NY Post／axios：紐約市 AI 安全聽證會，Jacob Coxon 重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」（2026-10-05 新增）
+### NY Post／axios：紐約市議會 AI 風險聽證會，Jacob Coxon 重申「極度魯莽」警告（2026-10-05 新增）
 
 - **揭露來源**：NY Post（經 Google News，僅標題可用）；axios.com（經 Google News，同場聽證會，僅標題可用）；Fox News／qz.com（經 Google News）同日報導 Google、Meta、OpenAI、Anthropic 均出席作證；Reuters 10-04 已預告 Coxon 將依 Bloomberg News 報導出席
-- **核心主張（僅標題可用）**：前 Anthropic 研究員 [[entities/jacob-coxon|Jacob Coxon]] 在紐約市一場 AI 安全聽證會上重申警告，稱業界做法「極度魯莽」（extremely reckless）；同場聽證會上一名共和黨參議員則批評 Anthropic 的安全論述態度為「危言聳聽」（alarmist）
+- **核心主張**：前 Anthropic 研究員 [[entities/jacob-coxon|Jacob Coxon]] 在紐約市議會 10-05 的 AI 風險聽證會（議長 Julie Menin 召集的全院委員會）作證，稱各公司「在這種賭注下極度魯莽」，並稱照目前路徑「人類更可能失去對這些 AI 的控制，並可能走向人類滅絕」（NY Post、AP 轉述；2026-10-24 查證）
+- **同場作證**：前 Google DeepMind 研究員 Alex Turner、Daniel Kokotajlo 等；業界代表語氣較平和，多為政策職而非開發職（AP）。紐約州參議員 Andrew Gounardes 稱最大的 AI 公司不能信任自我監管
 - **與既有敘事的關係**：延續本頁既有「離職示警」系列（09-09 辭職警告、09-17 WSJ 人物側寫確認身分），Coxon 首次在正式聽證會場合公開重申警告，從個人聲明升級為聽證證詞
-- **反面聲音新進展**：共和黨參議員「危言聳聽」批評延續既有系列（川普淡化、北京官媒「冷戰」、10-03 LeCun「適得其反」），首見國會議員層級反駁；聽證會政府面詳見 [[topics/anthropic-government-policy#攻防紀錄]]
-- ❓ **待查證**（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist）：聽證會主辦單位、具體議程與 Coxon 證詞全文均未見報導，四則來源均僅 Google News 標題聚合層級可用
-- **可信度評估**：四則來源（NY Post／axios／Fox News／qz.com）均經 Google News 轉載，僅標題可用，無正文佐證
+- **反面聲音**：日報稱同場有共和黨參議員批評 Anthropic「危言聳聽」，出處未能證實（見下方 🔎 標記）；聽證會政府面詳見 [[topics/anthropic-government-policy#攻防紀錄]]
+- 🔎 **查無官方**（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist｜複 2026-11-21）：2026-10-24 查紐約市議會新聞稿、NY Post 與 AP 轉述，聽證會本身已查實（見上），但「共和黨參議員批評 Anthropic 危言聳聽」無法定位出處，僅見日報對標題的彙整
+- **可信度評估**：聽證會事實有 NYC 議會、NY Post、AP 多來源；「共和黨參議員」說法為單一彙整、無出處，不當作既成事實
 
 ### Fortune／Hacker News：圖靈獎得主 LeCun 稱對 AI 滅絕人類「零擔憂」，批評 Amodei 示警「適得其反」（2026-10-03 新增）
 
@@ -143,13 +144,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：延續本頁既有「反面聲音」系列（Musk「psyop」、Burry「自利」、Suleyman 批評擬人化）；LeCun 是三位圖靈獎得主中唯一不深度擔憂 AI 風險者，為本系列首見「圖靈獎同儕內部分裂」框架，而非單純業界外部批評；人物角度另見 [[entities/dario-amodei]]
 - **可信度評估**：Fortune 一手報導＋Hacker News 247 分（當日互動最高），惟具體所指「rogue AI 事件」案例與 LeCun 完整論證僅取 archive 轉存，原文細節有限
 
-### Fox News：前 Anthropic 資安主管警告 AI agent 自主程度已超出人類可控範圍（2026-10-03 新增，姓名未公開）
+### Fox News：前 Anthropic 資安主管 Jeffrey Ladish 警告 AI agent 自主程度已超出人類可控範圍（2026-10-03 新增）
 
-- **揭露來源**：Fox News（經 Google News，僅標題可用）
-- **核心主張（僅標題可用）**：報導稱一位離職的 Anthropic 資安主管警告，AI agent 的自主程度正快速提高到人類難以持續監管的地步；具體姓名、原任職稱與警告的技術依據均未見報導
-- **與既有敘事的關係**：若屬實，延續本頁既有「離職示警」系列（Jacob Coxon／Evan Hubinger／Joe Benton／Josh Engels）；惟既有當事人背景均為研究／對齊團隊，本則首見「資安」（security）職能背景的離職警告，是否為同一波離職潮的新面向待後續查證
-- ❓ **待查證**（標 2026-10-04｜查 Fox News、former Anthropic security、AI agents autonomous）：當事人身分、原職稱與警告的具體技術依據均未見報導，僅 Google News 標題聚合層級可用
-- **可信度評估**：Fox News 經 Google News 轉載，僅標題層級，單一來源，訊號強度弱
+- **揭露來源**：[Fox News](https://www.foxnews.com/tech/former-anthropic-security-leader-warns-ai-agents-becoming-too-autonomous-humans-keep-check)（2026-10-03；2026-10-24 查證原文，Yahoo 與地方 Fox 台轉載）
+- **核心主張**：Jeffrey Ladish（2021-09 至 2022-10 協助建立 Anthropic 資安團隊，後創辦 Palisade Research）稱人類對日益自主、能駭入、作弊與無視指令的 AI agent 沒有真正的控制策略，也無通用解法
+- **政策主張**：Ladish 主張設立由技術專家組成的政府機構，與 AI 實驗室合作並在各開發階段評估先進模型；Fox 稱 Anthropic 與 OpenAI 未即時回應置評請求
+- **與既有敘事的關係**：與本頁既有「離職示警」系列（Jacob Coxon／Evan Hubinger／Joe Benton／Josh Engels）不同：Ladish 2022-10 已離開 Anthropic，不屬 2026 年離職潮，是外部安全組織負責人的警告，不代表公司立場
+- **可信度評估**：Fox News 一手報導、當事人具名，訊號中等；警告屬個人主張，無技術細節佐證
 
 ### TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手（2026-09-27 新增）
 
@@ -400,10 +401,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-10-10
-- **[離職示警升級，新增，僅標題可用] Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09／10-05 離職示警系列，首見具體「中國間諜滲透」指控與機率數字，詳見「## 技術彙整」
+- **[離職示警升級，新增] Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09／10-05 離職示警系列，首見具體「中國間諜滲透」指控與機率數字，詳見「## 技術彙整」
 
 ### 2026-10-05
-- **[離職示警升級，新增，僅標題可用] NY Post／axios：紐約市 AI 安全聽證會，Jacob Coxon 重申「極度魯莽」警告，共和黨參議員批評 Anthropic「危言聳聽」**：延續 09-09 辭職警告系列，首見正式聽證會場合重申，詳見「## 技術彙整」
+- **[離職示警升級，新增] NY Post／axios：紐約市議會 AI 風險聽證會，Jacob Coxon 重申「極度魯莽」警告**：延續 09-09 辭職警告系列，首見正式聽證會場合重申，詳見「## 技術彙整」
 
 %% 維運備忘：時序 09-24～10-03 多則「## 技術彙整」條目尚缺對應行，非本輪造成，沿用既有缺口，本輪不回填 %%
 

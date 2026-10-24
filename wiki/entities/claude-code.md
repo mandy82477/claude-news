@@ -8,17 +8,17 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 130
+days_since_news_subtree: 1
+inbound_links: 133
 attribution_count: 754
 attribution_last: "2026-10-23"
 top_source: "github-issues"
 pending_count: 21
-pending_overdue: 5
+pending_overdue: 0
 pending_next_review: "2026-10-26"
 pending_signalled: 2
 staleness_exempt: null
@@ -70,7 +70,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   同版 build 另新增 5 個功能候選旗標，消失 2 個（`ARTIFACT_FIVE_CLASS_ASKS`、`INTRO_FRAME`），追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.294**（2026-10-08）：修正 `prompt`／`agent` hook 寫成自然語言指示（如「封鎖做 X 的指令」）時，實際上擋不住該指令的問題；改善 `Stop`／`SubagentStop` 上 `prompt` hook 的行為；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.294)）。
   同版 build 另新增 1 個功能候選旗標 `CLAUDE_CODE_DESKTOP_SKILL_SWITCHES`，追蹤見 [[topics/claude-code-experimental]]。
-- **v2.1.292**（2026-10-06）：`claude plugin install` 新增 `--marketplace <source>`，裝外掛可一併加入市集來源，沿用 `marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）。另有未經證實的 stdio MCP 協定異動報導，見下方「🔌 MCP 整合」已知問題。
+- **v2.1.292**（2026-10-06）：`claude plugin install` 新增 `--marketplace <source>`，裝外掛可一併加入市集來源，沿用 `marketplace add` 政策檢查（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.292)）。同版官方 Changelog 另載本機（stdio）MCP server 改為預設協商協定 2026-07-28，可用 `MCP_PROTOCOL_NEGOTIATION=legacy` 退出，見下方「🔌 MCP 整合」已知問題。
   同版 build 另新增 4 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.291**（2026-10-06）：修正兩項回歸缺陷——雲端 session 可能遺失使用者對權限提示的回答（源自 v2.1.290）、對話尾端訊息在特定情境下可能遺失（源自 v2.1.288）；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.291)）。
 - **v2.1.289**（2026-10-03）：修正巢狀 shell 複合指令中 deny／ask 規則未對使用者安裝的 mod 核准生效的漏洞；修正短指令造成終端機凍結；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.289)）。
@@ -155,7 +155,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
 - **Claude in Chrome 的 session 可由企業合規團隊經 Compliance API 調閱**（查證日 2026-10-17，來源：[Compliance API 官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Enterprise 組織以 Compliance Access Key 讀取 session 逐字稿。
-  - 同一介面涵蓋 Cowork、Claude Code 等產品與 Activity Feed；官方文件未標 beta，MIXED Reality News 稱「beta」官方未載。與 [[entities/claude-security]] 的 Compliance API 條同源。
+  - 同一介面涵蓋 Cowork、Claude Code 等產品與 Activity Feed；❓ **待查證**（標 2026-10-17｜查 Compliance API、Activity Feed）｜**介面是否為 beta**：官方文件未標 beta，MIXED Reality News 稱「beta」；已掃日報至 2026-10-23 無後續；官方頁面未查證。與 [[entities/claude-security]] 的 Compliance API 條同源。
 - **MCP Python SDK 的 OAuth 憑證外洩漏洞已修補（GHSA-qx49-fqc8-xw99，High、CVSS 7.5，2026-09-28 公開）**（查證日 2026-10-17，來源：[官方 advisory](https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-qx49-fqc8-xw99)）：安全面見 [[topics/ai-agent-safety]]。
   - 成因：OAuth 用戶端未在所有探索路徑驗證授權伺服器 issuer，惡意 MCP server 可誘使 client 把 client_secret、授權碼、PKCE verifier 送往攻擊者的 token endpoint。
   - 影響 1.9.1 至 1.30.0 前、2.0.0a1 至 2.2.0 前；1.30.0 與 2.2.0 已修補。stdio client、伺服器端與自帶 token 的 client 不受影響。
@@ -357,7 +357,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-09｜查 #16856、token 消耗｜複 2026-11-14）｜**升級至 v2.1.1 後 token 消耗異常暴增 4 倍以上（GitHub issue #16856，累積留言 73，2026-07-03 指控）**：使用者反映升級後 rate 消耗速度明顯加快超過 4 倍，屬重大體驗負評；查證確認 issue 仍為 open（`has repro`、`area:cost`、`oncall` 標籤，內部已排查但無公開回應），無官方留言或修復版本；升版前建議留意此回報，若已升級可觀察實際 usage 曲線變化。
 - 🔴 **未修復**｜**Extended Thinking「思考內容」實為摘要，非真實推理（2026-06-22 社群揭露）**：工程師 Patrick McCanna 分析 Claude Code session log 後發現，`thinking blocks` 呈現的文字為摘要，而非模型的真實推理過程。真實推理被 Anthropic 以加密方式存於 600 字元 signature 中，API 僅回傳摘要；完整思考內容需要企業級協議才可取用，Anthropic 持有解密金鑰。需依賴 thinking blocks 進行審計追蹤的工程師應特別注意此限制（HN score 98，見 [原文](https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/)）
 - 🔴 **未修復**｜**Explore subagent 固定使用 Haiku 模型（2026-06-30 社群分析）**：深入分析 Claude Code 內建 subagent 類型後發現，Explore subagent 被鎖定只能使用 Haiku 模型（見 [Reddit 討論](https://www.reddit.com/r/ClaudeAI/comments/1ujpz0t/caution_when_using_native_subagent_explore_for/)）。在複雜除錯場景中，Haiku 能力可能不足以完成任務，導致誤判或分析遺漏。使用前建議確認任務複雜度是否在 Haiku 能力範圍內；若需更強推理能力，考慮改用其他 subagent 類型或直接指定模型的自訂 agent。
-- 🔎 **查無官方**（標 2026-08-09｜查 [[topics/code-quality-decline]]、記憶過多｜複 2026-10-18）｜**記憶過多導致品質退步**（2026-06-22 指控）：用戶反映兩個進行中專案的 Claude Code 品質近期大幅退步，疑似 context 中累積過多歷史記憶導致干擾。查證確認：此則為獨立於已記錄的 2026-04 效能退步事件（見下方 Extended Thinking／CLAUDE.md system-reminder／已於 v2.1.116 修復的三項產品層問題）之外的另一批 06-22 回報，Anthropic 未曾針對此批回報單獨公開回應；與 04 月事件是否同源尚無官方說明；2026-09-20 複查：官方 2026-04-23 postmortem（thinking block 清除 bug 等三項成因，04-20 前修復）僅涵蓋 04 月既有事件，未提及 06-22 這批獨立回報，同源與否仍查無官方說明。見 [[topics/code-quality-decline]]
+- 🔎 **查無官方**（標 2026-08-09｜查 [[topics/code-quality-decline]]、記憶過多｜複 2026-11-21）｜**記憶過多導致品質退步**（2026-06-22 指控）：用戶反映兩個進行中專案的 Claude Code 品質近期大幅退步，疑似 context 中累積過多歷史記憶導致干擾。查證確認：此則為獨立於已記錄的 2026-04 效能退步事件（見下方 Extended Thinking／CLAUDE.md system-reminder／已於 v2.1.116 修復的三項產品層問題）之外的另一批 06-22 回報，Anthropic 未曾針對此批回報單獨公開回應；與 04 月事件是否同源尚無官方說明；2026-09-20 複查：官方 2026-04-23 postmortem（thinking block 清除 bug 等三項成因，04-20 前修復）僅涵蓋 04 月既有事件，未提及 06-22 這批獨立回報，同源與否仍查無官方說明。見 [[topics/code-quality-decline]]2026-10-24 再複查：重新檢索官方來源（[Anthropic 工程部落格 4 月 23 日 postmortem](https://anthropic.com/engineering/april-23-postmortem)），仍只涵蓋 04 月三項成因，未見針對 06-22 這批「記憶過多」回報的官方說明。
 - 🔴 **未修復**｜**LLM 無障礙偏差：CLAUDE.md 明定 WCAG 2.2 AA 為硬性要求，仍被視為可選項目（Aaron Gustafson 揭露，GitHub issue #56079，2026-06-18）**：價值觀優先序偏差，非能力不足；官方尚未回應。
 - 🔴 **未修復**｜**Stop Hooks 被忽略**（2026-04-24 回報）：Claude 4.7 開始無視自訂 stop hooks，影響依賴 hooks 的自動化工作流程，屬行為退步（regression）
 - ✅ **已修復（三項各自獨立的修法）**｜**2026 年 4 月效能退步事件**：官方 04-23 說明三件工程變更各自修復——effort（v2.1.116）、thinking 清除（v2.1.101）、prompt 長度（04-20 服務端回復）；另兩批訊號見 [[topics/code-quality-decline]]
@@ -400,7 +400,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**上傳過大圖片導致對話永久卡死，無法在不開新對話情況下復原（GitHub issue #13480，累積 111 則留言、90 個讚，2026-08-05）**：使用者回報上傳過大（oversized）圖片會讓對話進入永久卡死狀態，除了開啟新對話外沒有其他復原方式，導致該次對話內容遺失；官方尚未回應。
 
 - ⛔ **官方拒修**｜**Session 歷史 30 天自動刪除（Anthropic 明確拒絕修復）**（2026-05-01 確認，2026-06-30 更新，2026-07-28 補充資料使用政策說明）：Claude Code 預設在 30 天後自動刪除 session `.jsonl` 歷史檔；Anthropic 官方在 [GitHub issue #62476](https://github.com/anthropics/claude-code/issues/62476) 明確表示不會修復此行為。社群建議替代方案：用 CLAUDE.md 記錄關鍵決策，或建立 `.claude/changelog` 手動保留對話摘要。延長保留期間的臨時解法：`npx agentinit agent set claude cleanupPeriodDays 365`。**2026-07-28 Hacker News 討論補充：** 本地 30 天刪除為裝置端保留機制，與訓練資料使用政策為不同議題——依官方[資料使用政策文件](https://code.claude.com/docs/en/data-usage)，消費版（Free/Pro/Max）預設可自行選擇是否讓對話用於模型訓練；商用版（Team/Enterprise/API/第三方平台/Claude Gov）維持不用客戶程式碼訓練模型，除非客戶主動選擇加入（如 Development Partner Program）；即刪除時程與訓練授權為兩條獨立規則，不可混為一談。
-- 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-10-18）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天的創作對話無故消失，在記錄中留下日期空白，且無法透過搜尋找回。查證未見 Anthropic 針對此則 2026-04-30 個案的官方回應；同類「對話消失」報告後續於 2026-06-30（The Register 報導）與 2026-07-14（Anthropic 就當次更新回應「並未刪除對話，該次為 HIPAA 設定調整」）持續出現，媒體調查指出一般成因多為桌面版 app 在對話同步至伺服器前靜默當機重啟，但此為第三方調查推論、非 Anthropic 對本則個案的官方確認；2026-09-20 複查：另有獨立報導同樣將 07-14 事件歸因於「該次僅為 HIPAA 設定自助化，與對話無關」且一般消失情形歸因於 app 同步前當機，與既有查證結論一致，惟 04-30 個案本身仍無官方逐案回應。
+- 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-11-21）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天的創作對話無故消失，在記錄中留下日期空白，且無法透過搜尋找回。查證未見 Anthropic 針對此則 2026-04-30 個案的官方回應；同類「對話消失」報告後續於 2026-06-30（The Register 報導）與 2026-07-14（Anthropic 就當次更新回應「並未刪除對話，該次為 HIPAA 設定調整」）持續出現，媒體調查指出一般成因多為桌面版 app 在對話同步至伺服器前靜默當機重啟，但此為第三方調查推論、非 Anthropic 對本則個案的官方確認；2026-09-20 複查：另有獨立報導同樣將 07-14 事件歸因於「該次僅為 HIPAA 設定自助化，與對話無關」且一般消失情形歸因於 app 同步前當機，與既有查證結論一致，惟 04-30 個案本身仍無官方逐案回應。2026-10-24 再複查：[說明中心「如何復原已刪除的對話」](https://support.claude.com/en/articles/9519177-how-can-i-recover-a-deleted-conversation)只談封存專案、共用專案與權限被移除造成的「看似消失」，未提及對話無故消失或同步前當機，對 04-30 個案仍無官方逐案說明。
 - 🔴 **未修復**｜**Auto Compact 失效**（2026-04-28 回報）：context window 滿載後 Auto Compact 未自動觸發，手動執行 `/compact` 亦失效，導致整個 session 鎖死；即使重購額外用量並重啟工具問題仍未解決
 - 🔴 **未修復**｜**Checkpoint Commits 污染 git history**（2026-05-12 社群熱議）：Claude Code 自動建立的 checkpoint commit 大量污染 git 歷史，搭配 worktree 使用時問題更嚴重（每個子 Agent 各自建立分支並獨立 checkpoint），討論串聚集多種清理方案（interactive rebase、squash、git filter-repo）；目前無官方解決方案。
 - 🔴 **未修復**｜**Prompt Cache Race Condition**（2026-04-27 確認）：連續兩次呼叫 `client.messages.create()` 時，第二個請求約有 40% 機率發生 cache miss；在兩次呼叫之間等待 2 秒可穩定解決；已由 Anthropic 工程師確認追蹤中。見 [Issue #1451](https://github.com/anthropics/anthropic-sdk-python/issues/1451)
@@ -415,9 +415,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
 - 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，1006 讚，全站讚數新高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，963 讚、192 則留言，2026-09-19 互動數更新）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，541 讚、251 則留言，2026-09-18 互動數更新）皆缺多帳號支援；官方尚未回應。
 
-### 🔌 MCP 整合（14 條未修復、1 條已修復、1 條❓）
+### 🔌 MCP 整合（14 條未修復、2 條已修復／已變更）
 
-❓ **待查證**（標 2026-10-07｜查 stdio、v2.1.292｜複 2026-10-21）｜**v2.1.292 是否已將 stdio 型 MCP server 切換至新協定**：MIXED Reality News 報導 v2.1.292 把 stdio 型 MCP server 切換到新協定，但官方文件與 v2.1.292 release notes 仍寫「選用（opt-in）」，兩者不一致；用 stdio 型 MCP server 的使用者升級後可留意行為是否改變。
+- ✅ **已變更 v2.1.292**｜**本機（stdio）MCP server 預設協商新協定**：[官方 Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) 的 2.1.292 條目載明「本機（stdio）MCP server 連線預設協商協定版本 2026-07-28，所有安裝（含 Bedrock、Vertex、Foundry）一律適用」，設 `MCP_PROTOCOL_NEGOTIATION=legacy` 可退出；並載明對忽略新協定檢查的 stdio server，首次連線慢過一次後會被記住 7 天、改以舊方式連線。先前 MIXED Reality News 的報導屬實，「仍為選用」的說法不成立（查證日 2026-10-24）。用 stdio 型 MCP server 的使用者升級後若遇連線異常，可先設該環境變數退回舊協商。
 
 - 🔴 **未修復**｜**Google Drive connector 顯示已連結，Cowork 中卻未暴露對應工具（GitHub issue #30457，累積 43 個讚，2026-09-10）**：使用者回報 Google Drive connector 於介面顯示已連結成功，但在 Cowork 中無法呼叫任何對應工具，屬連結狀態與實際可用性不一致的缺口；官方尚未回應。
 
@@ -530,7 +530,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Bedrock 功能相容性落差（持續）**（2026-05-07 再次回報）：Claude Code 透過 AWS Bedrock 接入時功能異常，社群指出 Bedrock 與 Anthropic 直接服務的新功能同步速度慣常落後，每次新功能發布後的相容性落差問題已成常態。
 - 🔴 **未修復**｜**Mac 卸載不完整**：依官方教學卸載後，macOS 仍殘留「Claude Code URL Handler」應用程式
 - 🔴 **未修復**｜**主題模式不跟隨系統，無法隨作業系統自動切換明暗模式（GitHub issue #2990，累積 242 個讚，2026-08-02 讚數更新，本日已知問題讚數最高）**：`auto` 主題僅在啟動時偵測一次，不會即時同步作業系統 dark/light 切換；社群 workaround：WezTerm + Lua 事件鉤子。
-- 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-10-18）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。
+- 🔎 **查無官方**（標 2026-08-09｜查 Linux 沙箱、隱性故障｜複 2026-11-21）｜**Claude Cowork Linux 沙箱啟動失敗**（2026-05-07 指控）：用戶回報 Claude Cowork 的 Linux 沙箱在多台電腦重新安裝後持續無法啟動，Anthropic 狀態頁顯示正常，疑為帳號層級隱性故障，目前無官方回應。查證同類 Linux 沙箱啟動失敗（`cowork-vm-service.js` 未啟動、`/run/user/1000/cowork-vm-service.sock` 不存在）已有社群診斷指出根因為該服務未在 Linux 上自動喚起，並提出手動啟動 workaround，但此為社群自行定位，非 Anthropic 官方確認或修復時程；2026-07-07 Cowork 擴展至行動/網頁版後是否延伸此問題仍待觀察。2026-10-24 再複查：[說明中心 Cowork 沙箱文章](https://support.claude.com/en/articles/14479288)只描述 macOS（Apple Virtualization.framework）與 Windows（Hyper-V）的本機虛擬機，未載 Linux 主機支援或本案的官方診斷，查無官方。
 - ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
   **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
@@ -544,7 +544,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（38 條已修復、10 條未修復、1 條查無官方）
+### 🌐 服務穩定性（39 條已修復、10 條未修復）
 
 - 🔴 **未修復（監控中，緩解措施已部分生效）**｜**Anthropic Status：platform.claude.com Usage／Rate limits、Admin API usage report 錯誤率持續升高（10-07 16:36 UTC 更新，與下則不同事故）**：仰賴這些頁面查用量的使用者這幾天數據可能不準。[來源](https://status.claude.com/incidents/978mjkgw6mh7)
 - ✅ **已修復（約 1 小時 40 分後解決）**｜**Anthropic Status：platform.claude.com 用量資料讀取錯誤升高（2026-10-06 17:00–18:40 PT，10-07 02:33 UTC 確認解決）**：Usage 頁面讀取出現大量錯誤，僅影響用量儀表板顯示，不影響 Claude 本身使用。[來源](https://status.claude.com/incidents/wf2v8ms031sx)
@@ -598,7 +598,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**API Error: Connection closed mid-response——頻繁發生到讓 Claude Code 幾乎無法用於任何任務（GitHub issue #69415，累積 56 則留言、95 個讚，首見 2026-07-23，2026-10-16 互動數更新，今日全站已知問題互動量最高）**：使用者回報連線在回應中途遭關閉（Connection closed mid-response）的 API 錯誤發生頻率極高，嚴重到使 Claude Code 幾乎無法用於任何任務；與既有「串流閒置逾時」（issue #46987）同屬串流連線可靠性問題但錯誤訊息不同，暫分列追蹤；官方尚未回應。
 - ✅ **已修復（服務已恢復）**｜**Claude API / Claude Code 529 過載（2026-06-21 至 06-22 多波中斷）**：Anthropic 確認 Claude API 與 Claude Code 的 Opus 及 Sonnet 模型發生部分服務中斷，Max plan 用戶反映第一條 prompt 即觸發 529 Overloaded 錯誤，影響持續約 90 分鐘後於 UTC 19:34 恢復服務；06-22 又發生新一波激增，確認受影響模型：Opus 4.8、Opus 4.7、Opus 4.6、Sonnet 4.6；CyberSecurityNews 等多家媒體追蹤報導（見 [HN 討論](https://news.ycombinator.com/item?id=48624168)）
 - ✅ **已修復（服務已恢復）**｜**Anthropic API 大規模 500 Internal Server Error**（2026-05-16 UTC 18:08）：Anthropic 官方狀態頁確認多模型請求出現「Elevated error rates」，Claude Code 使用者陸續回報 500 錯誤，為近期少見的多模型服務中斷事件，影響範圍跨越多個模型；GitHub Issue #59743 有大量開發者回報。
-- 🔎 **查無官方**（標 2026-08-09｜查 claude update、版本回退｜複 2026-10-18）｜**版本管理不透明**（2026-04-27 指控）：執行 `claude update` 後版本從 2.1.120 降回 2.1.119，疑似靜默撤版，官方 changelog 與索引資訊不一致。查證確認社群已彙整 v2.1.119／v2.1.120 在 24 小時內連續出包（含靜默模型切換、UI 重複顯示等多項回歸），並建議暫時鎖版至 v2.1.117 因應，惟此為社群自建的 gist 彙整，Anthropic 未曾就此版本序號異動或 changelog 不一致提供官方說明。2026-09-20 複查：同一份 gist 彙整仍是網路上最完整的記錄，未見官方 postmortem 或 changelog 回頭說明這次 24 小時內兩版本的異動與回退原因。
+- ✅ **已修復 v2.1.121**｜**`claude update` 後版本由 2.1.120 降回 2.1.119**（2026-04-27 指控，查證日 2026-10-24）：成因是 2.1.120 的 `--resume`／`--continue` 啟動即崩潰；官方 repo 的 [issue #53085](https://github.com/anthropics/claude-code/issues/53085) 於 2026-05-17 被標為 #53041 的重複並註記「2.1.121 已修復」，[官方 Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) 2.1.121 條目亦載「修正 `--resume` 在外部版本啟動即崩潰」。Anthropic 狀態頁對此事的通報（2026-04-25 約 50 分鐘，稱自動更新會把用戶端移回 2.1.119）本輪因狀態頁無法直接連線，僅見第三方鏡像站轉載，不升格為官方原文。社群彙整 2.1.119／2.1.120 連續出包與「鎖版至 2.1.117」的 gist 仍屬社群自建。
 
 ### ✅ 已修復（1 條已修復）
 
@@ -628,7 +628,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **anthropic-sdk-typescript vertex-sdk-v1.1.0** | 2026-10-23 | 新增 message threads 支援，與同日 Python SDK 呼應（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0)）|
 | **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
 | **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
-| **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking Change：改為支援新版 API（2026-10-21）；KuCoin 報導稱同時移除取樣相關參數，官方原文截斷待確認（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking：改支援新版 API；❓ **待查證**（標 2026-10-21｜查 vertex-sdk-v1.0.0、取樣參數）｜KuCoin 稱移除取樣參數（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
 | **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|
 | **v2.1.306** | 2026-10-21 | Bug fixes：修正雲端 session 未帶環境變數執行 `claude -p` 誤報「Not logged in」；修正原被「prompt too long」蓋掉的 API 錯誤；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）|
 | **anthropic-sdk-python v1.17.0** | 2026-10-20 | Features：新增組織層級 webhook 端點與使用者個人資料強制設定事件；Admin API 新增 RBAC 群組擁有者權限錯誤碼；補 `unsupported_charset` 說明（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0)）|

@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-07"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-07"
 status_main: "active"
-days_since_news: 16
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 16
+days_since_news_subtree: 17
 inbound_links: 1
 attribution_count: 2
 attribution_last: "2026-10-07"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 多次具名公開評論 Anthropic Mythos AI 的風險，所屬摩根大通亦為 Claude Code 企業客戶
 **首次出現：** 2026-07-16
-**最後更新：** 2026-10-07
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-07
 
 > **稱 Mythos AI「supercharged」網路風險，雙源跟進**（2026-10-07）
@@ -59,6 +59,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/mythos]] — Anthropic 的 Mythos 模型，本人三度公開評論其風險的對象
 - [[topics/anthropic-government-policy]] — Mythos 出口管制與金融監管機構風險警示的完整政策脈絡
 - [[topics/enterprise-tool-tracker]] — 摩根大通同時是 Claude Code 企業客戶（每月 $2,000 支出上限）
+- [[entities/eric-schmidt]] — 另一位財經／科技界人物對 Anthropic 的公開表態：持股約 1%，2026-10-22 駁斥「AI 泡沫」說法
 
 ## 參考來源
 

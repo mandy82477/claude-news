@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active（單一來源）"
 domain: "👤 人物"
-last_updated: "2026-10-17"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-10"
 status_main: "active"
-days_since_news: 13
+days_since_news: 14
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 13
+days_since_news_subtree: 14
 inbound_links: 14
 attribution_count: 20
 attribution_last: "2026-10-10"
@@ -34,17 +34,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 2026-09 辭職並公開示警 AI 風險，成為主流媒體報導焦點
 **首次出現：** 2026-09-09
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-10
 
 > **稱九成把握中國間諜已滲透美國 AI 公司**（2026-10-10）
-> Yahoo Finance 報導 Coxon 稱有九成把握中國間諜已潛入美國各大 AI 公司內部，比 10-05 聽證會「業界做法極度魯莽」的泛稱更進一步，首度給出具體機率數字；原文僅標題可用，細節見「核心論述」。
+> Yahoo Finance 報導 Coxon 稱有九成把握中國間諜已潛入美國各大 AI 公司內部，比 10-05 聽證會「業界做法極度魯莽」的泛稱更進一步，首度給出具體機率數字；2026-10-24 查證為 PBD Podcast 自述，無證據、未點名任何人。
 
 ---
 
 ## 現況
 
-Yahoo Finance（2026-10-09 22:00 UTC，經 Google News）報導 Coxon 稱他有九成把握中國間諜已滲透進美國各大 AI 公司內部；原文僅標題可用，無法確認其依據或是否點名具體公司。此說法比 10-05 聽證會「業界做法極度魯莽」的泛稱指控更進一步，首度提出具體機率數字；安全/政策面的攻防脈絡見 [[topics/anthropic-government-policy]]。
+Yahoo Finance（2026-10-09 22:00 UTC，經 Google News）報導 Coxon 稱他有九成把握中國間諜已滲透進美國各大 AI 公司內部；2026-10-24 查證（SCMP、Business Insider）：出自 PBD Podcast，他未提供證據、未點名任何人。此說法比 10-05 聽證會「業界做法極度魯莽」的泛稱指控更進一步，首度提出具體機率數字；安全/政策面的攻防脈絡見 [[topics/anthropic-government-policy]]。
 
 Coxon 於 2026-10-05 出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（[NY Post](https://news.google.com/rss/articles/CBMizgFBVV95cUxQNmUzVVVySnJtNFBUYlhrMWlxY0xOMEVySFZTMzFlR25La0ZqSU00TlEtWTRMT3Z1ZE85S3dwTXg0LXZTV2JmeDZ5R1RYaU9qVGFtYzZrNnV4YXZMSEZ1bW5YUEFCQkZpV0t4V1NaRTI2VldmRGFwWEFLNkhzbzU0Nk9sQUpPRmVDNjg4YVBpMm5rR2hLR0FSYlhjZEhWemN2dHVWTW9mLS1mekdmU1RuSTBma2sta3B4T2p1Y3VmWUZnaG0zMmVNRENEOXZjZw?oc=5)／[Axios](https://news.google.com/rss/articles/CBMipAFBVV95cUxPZ2dacmRIYW4xWGNpRkNvNE9VWGJvU1o3RFV2c0taOUl5UmNOTmxkczJNV0tiLTF3QlpWd01JZ2piczhRRUc4ZVNkMDZmQVZkRVVma0wzZk9NNV9kTFAxLWpPVEJSUzdYY0tvTGEtUWR6bTBybVJkREZqNUdwVTB6Si1MbnFvV0N4SHo0LTBlS09NOVFNVzJDSzZscE1YNE10bkZfRw?oc=5)，經 Google News，2026-10-05）。Bloomberg News 於前一日（10-04）先行報導本人將出庭作證（經 [Reuters](https://news.google.com/rss/articles/CBMivgFBVV95cUxORnR5cUVLZE91ckU2X0sxOGNzbjA4SjU4MFhiUXNvb0E4M1FLTldoT3d0b3BDUmU3NFVxOUk1eURXMmhEVExrQTNKT3d2LXY2emNNSUo0Nzd0Vkp0WmxiTDh0MVhhM2h1NnRIZnVnZmRNcmJNNmlCajkxN1U2ZGJBZHlLNEVYanF6c2lBc0pVOHh2a1h4QWs0Yngxc0RYX3pOS2NDUGZRRjRKQmtLbnpxZk5QNjljNjJVSkNQRVNn?oc=5)／Google News，2026-10-04）。
 
@@ -52,7 +52,7 @@ Coxon 的資歷經具名媒體獨立查證（2026-09-26 查證）：英國劍橋
 
 ## 核心論述
 
-- **稱九成把握中國間諜已滲透美國 AI 公司**（Yahoo Finance，2026-10-09，經 Google News）：稱有九成把握中國間諜已潛入美國各大 AI 公司內部；原文僅標題可用，無法確認具體依據、方法或是否點名公司，比 10-05 聽證會的泛稱指控更具體。
+- **稱九成把握中國間諜已滲透美國 AI 公司**（Yahoo Finance，2026-10-09，經 Google News）：稱有九成把握中國間諜已潛入美國各大 AI 公司內部；2026-10-24 查證：PBD Podcast 自述，無證據、未點名公司，比 10-05 聽證會的泛稱指控更具體。
 - **聽證會重申警告**（紐約市 AI 安全聽證會，2026-10-05，經 NY Post／Axios）：出庭作證重申辭職時立場，稱業界做法「極度魯莽」。
 - **辭職聲明**（X，2026-09-09，經 HN 轉發 623 分）：稱已辭去 Anthropic 職務，過去三年於 OpenAI／Anthropic 從事 pretraining 研究，指控兩家公司「不負責任地衝向自我改進超級智能，拿我們的生命當賭注」（原文見細節區）。
 
@@ -105,7 +105,7 @@ Hacker News 讀者對 Coxon 的資歷提出質疑，稱其「較資淺、公開�
 
 ## 歷史記錄
 
-- 2026-10-10：稱有九成把握中國間諜已滲透進美國各大 AI 公司內部，比 10-05 聽證會泛稱更進一步；原文僅標題可用（來源：Yahoo Finance，經 Google News）
+- 2026-10-10：稱有九成把握中國間諜已滲透進美國各大 AI 公司內部，比 10-05 聽證會泛稱更進一步；PBD Podcast 自述，無證據（來源：Yahoo Finance；2026-10-24 查 SCMP）
 - 2026-10-05：出庭紐約市 AI 安全聽證會作證，重申辭職時的警告，稱業界做法「極度魯莽」（來源：Google News／New York Post、Axios）
 - 2026-10-04：Bloomberg News 報導本人將於紐約市 AI 安全聽證會作證（來源：Google News／Reuters）
 - 2026-09-17：WSJ 刊出人物報導《The Anonymous Math Geek Who Quit Anthropic—and Became the Face of AI Safety》，稱一名離開 Anthropic 的匿名數學研究者已成為 AI 安全議題代表性人物（來源：Google News／WSJ）

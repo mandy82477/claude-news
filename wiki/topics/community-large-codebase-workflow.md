@@ -3,16 +3,16 @@ page: "topics/community-large-codebase-workflow"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-17"
-last_news_update: "2026-10-17"
+last_updated: "2026-10-24"
+last_news_update: "2026-10-19"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
-inbound_links: 56
+days_since_news_subtree: 5
+inbound_links: 55
 attribution_count: 2
 attribution_last: "2026-08-05"
 top_source: "reddit"
@@ -30,8 +30,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-05-02
-**最後更新：** 2026-10-17
-**最後新聞更新：** 2026-10-17
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-19
 
 > **協調開始前移到寫碼前，「記住失敗」有了第一批工具**（2026-10-17）
 > 並行線出現 Foremerge：agent 動手前先廣播意圖，在寫碼前偵測架構層級衝突，git 要改到同一行才看得到。記憶線有 projectmem、hippo-memory 兩個本機工具做「記下失敗、重走時先警告」，兩者都沒有第三方使用回報。
@@ -68,7 +68,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
 | 隔離 | OS 帳號隔離 → git worktree 成共識，並工具化、動態化；官方也已內建 | Claudette、Superset、cc-fleet 等，見 [[topics/community-tech-patterns-archive]] | 多來源 |
-| 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；另有單一長 session 前後動用 147 個 subagent、24 天完成移植（09-04） | 《Why 20 Instances Break Down》、F-Zero X 移植 | 單一深度分析 |
+| 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；單一長 session 動用 147 個 subagent（09-04）；tmux 實務在第四個 agent 觸頂（10-19） | 《Why 20 Instances Break Down》、F-Zero X 移植、tmux 設定 | 單一深度分析 |
 | 統一容器 | 08-05 起一批接一批，至 10-06 仍有新品（控制平面、IDE 化、24/7 自架）；換底層 agent 不必重寫協作邏輯 | omnigent、zeron、cezar 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
 | 任務脈絡互通 | 讓獨立 agent 共享任務脈絡；09-16 有跨終端傳訊第二例，09-20 另有「planner 先產結構化規格合約」的交接做法 | Concord（MCP）、hcom | 單一實測 |
 | 可觀測性 | 多款儀表板分「讀官方 event stream」與「自解析 transcript」兩路；10-03～10-10 再添並排 worktree 管理與視訊通話介面 | HUD、episko（原名 Cockpit）等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
@@ -191,7 +191,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/managed-agents]]（各功能的版本紀錄與已知問題；Managed Agents 是平台代管的另一個產品）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
 
-%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-10-16 %%
+%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-10-23 %%
 
 ## 參考來源
 

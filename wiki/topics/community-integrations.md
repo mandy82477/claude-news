@@ -6,18 +6,18 @@ domain: "🌐 社群"
 last_updated: "2026-10-22"
 last_news_update: "2026-10-22"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 3
 attribution_count: 14
 attribution_last: "2026-10-22"
 top_source: "github"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-11-24"
 pending_signalled: 0
 staleness_exempt: null
 signal: "孤島"
@@ -119,7 +119,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** Blender 外掛提供 AI 助理與 MCP 伺服器，支援視覺化對話、場景工具操作與多 agent 工作流程，可接 Claude、ChatGPT、Gemini、Ollama、OpenCode 等模型；GitHub Search 累積 736 星。
 - **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「3D 建模工具（Blender）」取向——既有做法多接影片、遊戲引擎，本則延伸到 3D 建模與 bpy Python 腳本層；非大型 codebase 特有痛點，主線填 —。
 - **可信度註記：** 僅有 GitHub Search 星數（736★），無 forks／issues／近期 commit 佐證可查，未另行查證。
-- **來源：** GitHub Search；[GitHub](https://github.com/LiCinCan/blender-ai-mcp-addon)
+- **來源：** GitHub Search；[GitHub](https://github.com/LiCinCan/blender-ai-mcp-addon)（原文已失效，2026-10-23 連結檢查回 404；URL 保留供追溯）
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### DayuanJiang/next-ai-draw-io：透過對話畫與編輯 draw.io 流程圖，含網頁版、桌面版與多工具 MCP 伺服器（2026-10-16）
@@ -234,7 +234,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** 本地優先、MIT 授權 markdown 編輯器（約 15MB），內建 MCP server 讓 Claude Code、Codex、Cursor 直接操作筆記庫，支援 14 家 LLM 供應商自帶金鑰；GitHub Search 1,167 星。
-- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（docsagent 等）一個「筆記應用本身即 MCP 橋接」取向——把既有編輯器變成 agent 可直接操作的資料層，而非另建獨立記憶服務。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧（docsagent 等）一個「筆記應用本身即 MCP 橋接」取向——把既有編輯器變成 agent 可直接操作的資料層，而非另建獨立記憶服務；筆記應用的 MCP 橋接，與 codebase 規模無關，主線填 —。
 - **可信度註記：** 僅有 GitHub Search 星數（1,167★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/zhitongblog/solomd)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
@@ -243,7 +243,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** Atlassian 官方推出的 remote MCP server，讓 Claude、ChatGPT、Cursor、VS Code 等工具以 OAuth 2.1 或 API token 直接存取 Jira、Confluence、Jira Service Management、Bitbucket、Compass；GitHub Search 1,084 星。
-- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「供應商官方自建 remote MCP」取向——不是社群拼裝，是廠商自己發布的正式整合層。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「供應商官方自建 remote MCP」取向——不是社群拼裝，是廠商自己發布的正式整合層；供應商 remote MCP 連接器，與 codebase 規模無關，主線填 —。
 - **可信度註記：** 僅有 GitHub Search 星數（1,084★），無 forks／issues／近期 commit 佐證可查，未另行查證；官方供應商發布，造假誘因低於個人開發者項目（推論）。
 - **來源：** GitHub Search；[GitHub](https://github.com/atlassian/atlassian-mcp-server)
 - **成熟度：** ⏳ 新興（本庫首次收錄，官方供應商發布，尚無社群採用回饋數據）
@@ -261,7 +261,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **主線：** —
 - **核心模式：** Desktop Commander 官方 remote MCP server，讓 claude.ai、ChatGPT、Cursor 等用戶端透過 OAuth 連回使用者自己的電腦執行操作；GitHub Search 137 星。
-- **與既有模式的關係：** 與本則同批的 atlassian-mcp-server 同屬「供應商官方自建 remote MCP」取向，併入「Plugin / MCP 整合」既有代表技巧。
+- **與既有模式的關係：** 與本則同批的 atlassian-mcp-server 同屬「供應商官方自建 remote MCP」取向，併入「Plugin / MCP 整合」既有代表技巧；供應商 remote MCP 連接器，與 codebase 規模無關，主線填 —。
 - **可信度註記：** 僅有 GitHub Search 星數（137★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/desktop-commander/remote-desktop-commander)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
@@ -523,6 +523,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **成熟度：** ⏳ 新興（今日首見，OAuth 使用風險尚待社群後續驗證）
 
 **懸置細節**
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）。
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-10｜查 auto-undo、rollback｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能取得（reddit.com 網域對本工具封鎖擷取）。
   - 補充查得官方確有自動快照機制：[Checkpointing 文件](https://code.claude.com/docs/en/checkpointing)載明每次送出提示前自動快照檔案、`/rewind` 可還原至任一檢查點。
   - 但無法比對原貼文所指是否即為此機制。

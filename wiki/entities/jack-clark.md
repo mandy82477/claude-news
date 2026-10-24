@@ -7,18 +7,18 @@ domain: "👤 人物"
 last_updated: "2026-10-17"
 last_news_update: "2026-10-17"
 status_main: "active"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
+days_since_news_subtree: 7
 inbound_links: 7
 attribution_count: 4
 attribution_last: "2026-10-17"
 top_source: "google-news"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-11-07"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-10-17，Jack Clark 向政策制定者表示，AI 正快速進步，可能大幅提升美國 GDP（僅標題可用，Reuters，經 Google News）。
 
-2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；報導未具名，Jack Clark 列為候選對象之一，另見 [[entities/chris-olah]]、[[entities/tom-brown]]，待具名來源出現後收斂。
+2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；標題稱「另一位」共同創辦人，內文因付費牆未能查證所指何人（2026-10-24 查證，官方未載），Jack Clark 僅列為候選對象之一，另見 [[entities/chris-olah]]、[[entities/tom-brown]]，待具名來源出現後收斂。
 
 Jack Clark 現任 Anthropic 政策主管，此前已在 Anthropic 呼籲全球建立遞歸自我改進暫停機制時提出需要「brake pedal」（煞車踏板）的說法，完整脈絡見 [[topics/recursive-self-improvement]]。
 
@@ -73,5 +73,5 @@ Jack Clark 現任 Anthropic 政策主管，此前已在 Anthropic 呼籲全球�
 ## 歷史記錄
 
 - 2026-10-17：向政策制定者表示 AI 正快速進步，可能大幅提升美國 GDP（僅標題可用，來源：Google News／Reuters）
-- 2026-10-09：❓ **待查證**（標 2026-10-09｜查 woke、另一位共同創辦人）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：報導未具名，本人為候選之一，另見 [[entities/chris-olah]]、[[entities/tom-brown]]（WSJ，2026-10-09）
+- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，Anthropic 官方未就此發言；WSJ 原文（標題〈The Other Anthropic Founder Trying to Fix the Company's 'Woke' Reputation〉）付費牆內，本站讀不到內文，無法確認所指何人，亦無逐字稿可引；本人僅為候選之一，另見 [[entities/chris-olah]]、[[entities/tom-brown]]（WSJ，2026-10-09）
 - 2026-09-15：同日接受 BBC、NPR 專訪，稱 AI「緊急關閉開關」未來或需強制立法並由第三方查核，並稱放緩 AI 開發是「集體行動難題」（BBC、NPR）

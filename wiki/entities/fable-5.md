@@ -4,14 +4,14 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-10-18"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-18"
 status_main: "active"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 61
 attribution_count: 39
 attribution_last: "2026-10-18"
@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-18
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-18
 
 > **下代傳聞**（2026-10-18）
-> TestingCatalog 單一來源稱 Anthropic 下週發布 Claude Fable 5.5，官方尚未證實；查證進度見「歷史記錄」。
+> TestingCatalog 單一來源傳聞 Anthropic 下週發布 Claude Fable 5.5；日報無後續，官方頁面未查證（標記見「歷史記錄」2026-10-18）。
 
 ---
 
@@ -49,7 +49,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 ## 你現在拿到的是什麼
 
-> 本表比的是 Fable 這一代（5 vs 5.1）；Opus 這一代見 [[entities/opus-5]] 同名節。資料截至 2026-09-07（官方模型頁與說明中心查證）。一格一個你會問的問題，兩欄是兩代的答案。
+> 本表比的是 Fable 這一代（5 vs 5.1）；Opus 這一代見 [[entities/opus-5-5]] 同名節。資料截至 2026-09-07（官方模型頁與說明中心查證）。一格一個你會問的問題，兩欄是兩代的答案。
 
 | 這一格 | Fable 5（Legacy） | Fable 5.1（現行） | 官方出處（查證日） |
 |---|---|---|---|
@@ -202,9 +202,9 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 ### 解禁後（2026-07-01 起）
 
 #### 2026-10-18
-**傳聞：Anthropic 下週發布 Claude Fable 5.5（單一來源，官方尚未證實）**：TestingCatalog AI News 報導稱 Anthropic 準備於下週發布 Claude Fable 5.5，未見具體發布日、規格或定價（[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)，2026-10-17）。
+**傳聞：Anthropic 下週發布 Claude Fable 5.5（單一來源）**：TestingCatalog AI News 報導稱 Anthropic 準備於下週發布 Claude Fable 5.5，未見具體發布日、規格或定價（[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)，2026-10-17）。
 
-❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體或官方管道佐證，發布日、規格與定價均未載。
+❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-23 無後續，官方頁面未查證。
 
 #### 2026-10-05
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：
@@ -294,7 +294,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 #### 2026-08-15
 **Anthropic Status：錯誤率一度升高（同日解決）**：Anthropic Status 通報 Fable 5 於 2026-08-14 20:00 至 2026-08-15 00:11 UTC 錯誤率升高，事件已解決，無需採取行動（[Anthropic Status](https://status.claude.com/incidents/hdynq1pc0fn8)，2026-08-15）。
 
-**Reddit 週熱門：企業端為何不採用 Fable 5？（開放式討論，無具名案例）**：r/ClaudeAI 週熱門貼文討論企業端採用 Fable 5 的阻力何在；原文未提供具名企業案例或量化數據，屬開放式社群討論，暫列觀察，未達 `enterprise-tool-tracker.md` 具名企業收錄門檻（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vnj1xq/why_arent_businesses_using_fable_5/)，週熱門，2026-08-15）。
+**Reddit 週熱門：企業端為何不採用 Fable 5？（開放式討論，無具名案例）**：r/ClaudeAI 週熱門貼文討論企業端採用 Fable 5 的阻力何在；原文未提供具名企業案例或量化數據，屬開放式社群討論，沒有具名企業可對照（具名企業的採用與退出見 [[topics/enterprise-tool-tracker]]）（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vnj1xq/why_arent_businesses_using_fable_5/)，週熱門，2026-08-15）。
 
 #### 2026-08-11
 **未發布研究版 Claude 意外改進黎曼假設 zeta 函數下界紀錄（研究里程碑，非 Fable 5 本體）**：Anthropic 官方部落格公告，一個**未發布的研究版 Claude**（非現行 Fable 5 產品版本）在嘗試證明黎曼假設（Riemann hypothesis）未果的過程中，意外改進了「黎曼 zeta 函數零點滿足該假設比例」的長期下界紀錄，該紀錄先前已維持 87 年未被突破；The Times of India 另有跟進報導，指研究者感謝 Claude 協助解開此一長年數學猜想相關進展。此為 Anthropic 內部研究能力展示（HN 211 分、4 個獨立來源轉載），與 Fable 5 產品版本或其部署狀態無直接關聯，僅記為 Anthropic 前沿數學研究能力的里程碑參考（[Anthropic Blog](https://www.anthropic.com/research/riemann-zeta)、The Times of India，2026-08-11）。

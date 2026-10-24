@@ -4,15 +4,15 @@ kind: "entity"
 type: "model"
 status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-17"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-09"
 status_main: "active"
-days_since_news: 14
+days_since_news: 15
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 14
-inbound_links: 20
+days_since_news_subtree: 15
+inbound_links: 19
 attribution_count: 14
 attribution_last: "2026-10-09"
 top_source: "google-news"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-09
 
 > **牌價與 100K 分段已查實**（官方頁 2026-10-11 查證）
@@ -158,7 +158,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **歷史記錄細節**
 
 - **2026-10-09**：[dev.to 社群文](https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4)（10/08 21:40 UTC）稱 Haiku 5.5 逾 10 萬 token 的 prompt 轉為較高定價，2026-10-11 查官方定價頁證實（見〈實付成本〉）。
-- **2026-10-08**：Help Net Security 等 3 個來源（Google News，10/08 11:24 UTC）報導 Haiku 5.5 抵抗隱藏指令注入（prompt injection）的防禦力比前代顯著提升；原文僅標題可讀，具體測試方法與數字未見完整記載，不採信推算。完整安全框架分析見 [[topics/ai-agent-safety]]。
+- **2026-10-08**：Help Net Security 等報導 Haiku 5.5 抵抗隱藏指令注入的防禦力比前代顯著提升；官方 Transparency Hub（10-24 查證）：15 次內攻擊得手率由 Haiku 4.5 的 83.2% 降至 7.1%，GUI 電腦操作仍最弱（24.4%）。完整安全框架分析見 [[topics/ai-agent-safety]]。
   - 牌價與分段已查實（官方頁 2026-10-11，[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)）：≤100K 為 $0.10／$0.50，>100K 為 $0.50／$2.50；1M context 屬 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)。
     - 先前口徑不一的原因：官方「降 75%」是平均成本；3 家標題的 $0.10 是 ≤100K 輸入價；VentureBeat 的「90%」與輸入價相對 Haiku 4.5 的降幅相符（推論）。
   - VentureBeat 稱定價已與 GPT-6 Luna 看齊，屬跨家比較，本頁不展開，相關快照見 [[topics/competitor-landscape]]；精確牌價更新見 [[entities/pricing]]。

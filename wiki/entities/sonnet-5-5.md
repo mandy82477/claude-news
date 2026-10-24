@@ -2,17 +2,17 @@
 page: "entities/sonnet-5-5"
 kind: "entity"
 type: "model"
-status: "active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 是否比照 Opus 5.5 模式列 Legacy 見 [[entities/sonnet-5]]）"
+status: "active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 官方已列 Legacy，見 [[entities/sonnet-5]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-10"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-01"
 status_main: "active"
-days_since_news: 22
+days_since_news: 23
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 22
-inbound_links: 25
+days_since_news_subtree: 23
+inbound_links: 28
 attribution_count: 14
 attribution_last: "2026-10-01"
 top_source: "google-news"
@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Sonnet 5.5
 
 **類型：** model
-**狀態：** active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 是否比照 Opus 5.5 模式列 Legacy 見 [[entities/sonnet-5]]）
+**狀態：** active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 官方已列 Legacy，見 [[entities/sonnet-5]]）
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-01
 
 > **後續反應**（2026-10-01）
@@ -41,11 +41,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-09-28 最新**：Anthropic 發布 Claude Sonnet 5.5（API ID `claude-sonnet-5-5`），為 Claude 5.5 家族第二款模型（首款為 09-22 發布的 [[entities/opus-5-5|Opus 5.5]]）。官方稱較 Sonnet 5「明顯升級」：速度快逾 30%、多數工作成本省最多 30%（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)，2026-09-28）。隨 Claude Code v2.1.284 更新，Sonnet 5.5 成為 **Anthropic API 預設 Sonnet 模型**；是否同步為 Claude Code CLI 本身的預設、[[entities/sonnet-5|Sonnet 5]] 是否比照 Opus 5.5 模式列為 Legacy，官方原文均未載明（[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。
+**2026-09-28 最新**：Anthropic 發布 Claude Sonnet 5.5（API ID `claude-sonnet-5-5`），為 Claude 5.5 家族第二款模型（首款為 09-22 發布的 [[entities/opus-5-5|Opus 5.5]]）。官方稱較 Sonnet 5「明顯升級」：速度快逾 30%、多數工作成本省最多 30%（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)，2026-09-28）。隨 Claude Code v2.1.284 更新，Sonnet 5.5 成為 **Anthropic API 預設 Sonnet 模型**；是否同步為 Claude Code CLI 本身的預設、[[entities/sonnet-5|Sonnet 5]] 是否比照 Opus 5.5 模式列為 Legacy，發布當日官方原文均未載明（2026-10-10 起官方已列 Legacy，見 [[entities/sonnet-5]]）（[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。
 
 官方定位：Opus 5.5 面向需審慎判斷的複雜工作，Sonnet 5.5 專攻「界定清楚的日常任務」——修 bug、產出文件／簡報／試算表，並對設計細節敏銳；**Claude Haiku 5.5**（面向高流量、成本敏感場景）已於 2026-10-07 發布，加入 5.5 家族，細節見 [[entities/haiku-5-5]]。
 
 定價見 [[entities/pricing]]（無依方案分層），這份工作該用哪個模型見 [[topics/model-comparison]]。
+
+自 2026-10-01 起無新動態（2026-10-24 核）。
 
 ---
 
@@ -103,7 +105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥🔥（同步 [[feature-radar]]，2026-09-29 查核；HN 互動回升至 853 分，媒體覆蓋廣）|
+| 社群熱度 | 🔥🔥🔥🔥（同步 [[feature-radar]]，2026-09-29 查核；HN 互動回升至 853 分，媒體覆蓋廣）|
 | 試用價值 | ⚡ 有條件推薦（同步 [[feature-radar]]，2026-09-29 查核）|
 | 最適合 | 官方稱：界定清楚的日常任務、修 bug、文件／簡報／試算表產出 |
 | 不適合 | 待補 |
@@ -137,7 +139,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 相關議題
 
-- [[entities/sonnet-5]] — 前代，現況與是否列 Legacy 追蹤於此頁
+- [[entities/sonnet-5]] — 前代，官方已列 Legacy，現況追蹤於此頁
 - [[entities/opus-5-5]] — 同 5.5 家族首款模型，發布於 09-22
 - [[entities/fable-5]] — 現行旗艦，5.5 家族外的最高階公開模型
 - [[entities/pricing]] — 精確牌價（無依方案分層，Batch 半價）

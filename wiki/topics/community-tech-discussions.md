@@ -6,18 +6,18 @@ domain: "🌐 社群"
 last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 55
 attribution_count: 187
 attribution_last: "2026-10-23"
 top_source: "hacker-news"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-11-24"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -166,14 +166,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Reddit r/ClaudeCode 週熱門：自嘲「成功把事情自動化成更複雜」 | 2026-10-05 · 2026-10-05 | 🔥 | ☄️閃現 | 使用者以自嘲語氣調侃團隊把「自動化」做成了另一層複雜度，而非真正簡化流程；Reddit r/ClaudeCode 週熱門標記（僅標題可考） | — |
 | Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者 | 2026-10-06 · 2026-10-06 | 🔥🔥🔥 | ☄️閃現 | 部落格主張事後跳出的建議訊息實際是說給模型自己聽；以 LLM 接續「start of user」提示的機制類推；HN score 255，近期單篇互動量最高技術評論 | — |
 | Claude 是否可能有意識：NYT 報導引 HN 辯論定義，Vox 整理 Anthropic 與天主教會的分歧 | 2026-10-02 · 2026-10-03 | 🔥 | ☄️閃現 | HN 轉貼 NYT 報導（10 分），留言辯論意識定義與「技術上符合卻不過關」的設計；Vox 稱 Anthropic 憂其可能有意識、天主教會不同意（媒體報導，待社群接力） | — |
-| Ask HN：有人靠 coding agent 寫出好程式嗎？發問者轉述資深工程師抱怨 AI 產出難讀、讀碼耗盡一天 | 2026-10-02 · 2026-10-02 | 🔥 | ☄️閃現 | 發問者稱資深工程師抱怨 Claude、Copilot、Codex 等產出程式碼品質差、讀起來很累，過去享受的工藝與優雅被「啃讀冗長程式」取代，詢問是否有人真能產出好程式；HN score 26，單平台、本次摘要未見留言細節 | — |
-| Show HN／Reddit：Mods 新 function hooks 讓作者把 statuslin.es 狀態列延伸進 Claude 桌面 App | 2026-10-02 · 2026-10-02 | 🔥 | ☄️閃現 | 作者用新上線的 Mods function hooks，把先前 statuslin.es 專案的狀態列功能延伸進 Claude 桌面 App；HN 2 分＋Reddit r/ClaudeCode 同日轉發（2 來源），訊號薄弱 | statusline-anywhere |
-| Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變 | 2026-10-02 · 2026-10-02 | 🔥 | ☄️閃現 | Matthew Schwartz 延續「Vibe Physics」系列，描述停止直接下指令、改讓 Claude 自主探索後觀察到的研究方法轉變；官方部落格，HN score 27，無社群延燒 | — |
-| Show HN: Rhun——組合語言打造的輕量程式碼編輯器，內建面板直接接 Claude Code／Codex session | 2026-10-01 · 2026-10-01 | 🔥🔥🔥 | ☄️閃現 | 作者以組合語言打造的輕量編輯器，內建面板接 Claude Code／Codex session；HN score 59（2 來源） | — |
-| Reddit 流出 OpenAI 內部基準：稱 GPT-6.1 Sol 大幅超越 Opus 5.5，Anthropic 追趕吃力 | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | 社群討論流出的 OpenAI 內部基準測試，聲稱 GPT-6.1 Sol 表現大幅超越 Opus 5.5；僅來自流出消息，尚無獨立驗證 | — |
-| Simon Willison OpenAI DevDay 直播花絮：Codex Cloud 故障，改用 Claude Code for web | 2026-09-29 · 2026-09-29 | 🔥 | ☄️閃現 | Simon Willison 直播時原想用 Codex Cloud 在手機上處理照片，工具遇問題後改用 Claude Code for web 完成；具名表態，無社群延燒 | — |
-| Show HN: OpenAPPA——開源確定性 guardrail，鎖定多工具連接 agent 的資料外洩風險 | 2026-09-28 · 2026-09-28 | 🔥 | ☄️閃現 | 作者稱工具連接數愈多、agent 失控外洩敏感資料風險愈高，LLM-as-judge 類 guardrail 易受 prompt injection；HN score 22（2 來源） | — |
-| Show HN: Reladraw——可自訂版面配置的圖表描述語言，附 Claude agent skill | 2026-09-26 · 2026-09-26 | 🔥🔥🔥 | ☄️閃現 | 作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 耗時，做出可控版面圖表語言＋agent skill；HN score 351 | reladraw |
 | Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | 🌙靜候 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題，最後動態 2026-09-22） | — |
 | Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | 🌙靜候 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節，最後動態 2026-09-19） | — |
 | 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | 🌙靜候 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節）（最後動態 2026-09-18） | — |
@@ -211,7 +203,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 > 當時熱度的意思是首見那時的討論規模：🔥🔥🔥🔥🔥 跨平台廣泛熱議 / 社群兩極化；🔥🔥🔥 單平台高互動 / 議題共鳴深；🔥🔥 多次被引用 / 催生後續工具；🔥 值得關注但尚未擴散
 
-**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。「Anthropic's War on open source AI」批評文引發熱議（08-17）本輪滿載讓位移出，原文見 [[topics/community-tech-discussions#2026-08]]。 AskUserQuestion 60 秒逾時自動代答爭議（07-17 定調為「效率繞過」）與 Unblocked 團隊「從 Anthropic 遷到 GLM」盲測分享，本輪同為最舊的 🌙靜候 而移出，原文見 [[topics/community-tech-discussions#2026-07]]、[[topics/community-tech-discussions#2026-08]]。
+**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。「Anthropic's War on open source AI」批評文引發熱議（08-17）本輪滿載讓位移出，原文見 [[topics/community-tech-discussions#2026-08]]。 2026-10-24 本輪另有八則 ☄️閃現 逾 21 天移出：Reddit 流出 OpenAI 內部基準（GPT-6.1 Sol 對 Opus 5.5）與 Simon Willison DevDay 直播花絮原文見 [[topics/community-tech-discussions#2026-09]]，Reladraw 圖表描述語言原文見 [[topics/community-tech-discussions#2026-09]]；其餘五則（程式品質發問、Mods function hooks、Anthropic Science 專欄、Rhun 編輯器、OpenAPPA guardrail）只存在於表列，直接移除。 AskUserQuestion 60 秒逾時自動代答爭議（07-17 定調為「效率繞過」）與 Unblocked 團隊「從 Anthropic 遷到 GLM」盲測分享，本輪同為最舊的 🌙靜候 而移出，原文見 [[topics/community-tech-discussions#2026-07]]、[[topics/community-tech-discussions#2026-08]]。
 
 **最近在討論什麼細節**
 
@@ -219,8 +211,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
   - [原文](https://www.zohaib.cc/blog/smartest-claude-code-feature)（原文已失效，2026-10-09 連結健檢回 404；URL 保留供追溯）（HN）
 - **Claude 是否可能有意識：NYT 報導引 HN 辯論定義，Vox 整理 Anthropic 與天主教會的分歧**：HN 轉貼 NYT 報導（10 分），留言構想一個「技術上符合意識定義、但說不過去」的假設：聊天 session 搭配定時心跳腳本輪詢感測器並逐次回應；[NYT](https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html)（HN）
 - **Vox 延續同題：Anthropic 與教宗之爭**：Vox 電子報稱 Claude 的開發者擔心它可能有意識，天主教會持相反看法；單一媒體報導，未見社群延燒；[原文](https://www.vox.com/today-explained-newsletter/504966/anthropic-claude-consciousness-pope-leo)（Google News／vox.com）
-- **Anthropic Science 專欄：物理學教授描述停止下指令、改讓 Claude 自主探索的研究方法轉變**：Matthew Schwartz 延續『Vibe Physics』系列，本篇描述他停止直接對 Claude 下指令、改採放手讓其自主探索問題後，觀察到的研究方法轉變；官方部落格文章，HN score 27，未見社群跟進討論；[原文](https://www.anthropic.com/research/claude-shaped-science)（Anthropic Blog／HN）
-- **Show HN: Rhun——組合語言打造的輕量程式碼編輯器**：作者稱已用不到 vim／VS Code 三分之一功能而自製，支援 Linux／Windows／Apple Silicon；內建 Vim 模式、終端機、Git diff，面板可接 Claude Code／Codex session；HN score 59（2 來源）；[原文](https://rhun.app/)（HN）
 - **Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent**：發起人面試時觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正理解自己在做什麼感到不安；HN score 38；與本頁「Skill Atrophy 與技藝認同」長期議題同軸，補上「招募方視角」；[原文](https://news.ycombinator.com/item?id=49768826)（HN）
 - **有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析**：涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制（子 agent 共享 prompt cache 前綴省 95% 成本）；非官方逆向分析，未經 Anthropic 確認；HN score 17；[原文](https://claude-code-from-source.com/)（HN）
 - **Reddit r/artificial 週熱門：呼籲未成年人使用 AI agent 應有額外規範**：使用者觀察未成年人能輕易用 Claude 等工具寫程式、建 AI agent，卻幾乎沒有任何年齡驗證機制，主張是否該有額外規範；僅單方觀點，未見反方論述；Reddit r/artificial 週熱門標記；[原文](https://www.reddit.com/r/artificial/comments/1wirqzs/i_wonder_if_ai_agents_and_ai_usage_should_have/)（Reddit · 週熱門）
@@ -736,7 +726,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 - **來源：** [Just got this response from Claude, what is going on?](https://old.reddit.com/r/LLMDevs/comments/1udpw9h/just_got_this_response_from_claude_what_is_going_on/)（Reddit r/LLMDevs via Hacker News，HN score 20，07-05）
 - **核心論點：** 使用者質疑 Claude 疑似對自己執行了未告知的 prompt injection，貼出疑似證據並引發討論串內正反回應
-- **收斂結論：** 🔎 **查無官方**（標 2026-08-10｜查 Prompt Injection、LLMDevs｜複 2026-10-20）｜**Prompt Injection 指控可信度**：已查證（2026-08-13、複查 2026-09-20 結論不變）公開搜尋未能定位該則具體 Reddit 貼文或後續交叉驗證，僅一方說法，暫無第二來源或官方回應（推論：與 07-02 已記錄的「Anthropic 疑似動態插入未公開系統訊息」屬同類型「透明度信任」疑慮，但為獨立事件，證據力均弱，暫不合併；同軸事件彙整索引見長期議題「Anthropic 透明度與信任赤字」子區塊）
+- **收斂結論：** 🔎 **查無官方**（標 2026-08-10｜查 Prompt Injection、LLMDevs｜複 2026-11-24）｜**Prompt Injection 指控可信度**：已查證（2026-08-13、複查 2026-10-24 結論不變）公開搜尋未能定位該則具體 Reddit 貼文或後續交叉驗證，僅一方說法，暫無第二來源或官方回應（推論：與 07-02 已記錄的「Anthropic 疑似動態插入未公開系統訊息」屬同類型「透明度信任」疑慮，但為獨立事件，證據力均弱，暫不合併；同軸事件彙整索引見長期議題「Anthropic 透明度與信任赤字」子區塊）
 
 #### Sonnet 5 Orchestrator 實測與 Fable 5／Opus 4.8 免費期彙整帖（2026-07-05，簡記）
 

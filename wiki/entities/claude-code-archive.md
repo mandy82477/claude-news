@@ -6,18 +6,18 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-09-27"
 last_news_update: "2026-04-30"
 status_main: "resolved"
-days_since_news: 176
+days_since_news: 177
 parent: "entities/claude-code"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 176
+days_since_news_subtree: 177
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-11-21"
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-04-28 | Anthropic 為 Managed Agents 加入跨會話記憶功能（正式公告） |
 | 2026-04-27 | API 金鑰外洩漏洞被媒體報導：可能在自動化流程中洩漏至 npm 等公開倉庫 |
 | 2026-04-27 | HERMES.md 計費 bug 引發更廣泛媒體關注，確認損失達 $200，等待修復 |
-| 2026-04-27 | 版本從 2.1.120 回滾至 2.1.119，疑似靜默撤版 |
+| 2026-04-27 | 版本從 2.1.120 回滾至 2.1.119；成因為 2.1.120 的 --resume 啟動崩潰，2.1.121 修復（2026-10-24 查證，見 [[entities/claude-code]] 已知問題）|
 | 2026-04-27 | 28 個滲透測試子代理人開源工具 pentest-ai-agents 釋出 |
 | 2026-04-26 | HERMES.md 計費路由 bug 曝光，Anthropic 確認但拒絕退款 |
 | 2026-04-26 | Anthropic 測試 Bugcrawl 漏洞偵測工具，見 [[entities/bugcrawl]] |
@@ -152,4 +152,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-06-21 | **v2.1.185**：stream-stall 提示文字改為「Waiting for API response · will retry in …」，觸發門檻延長至 20 秒（原 10 秒），reliability 改善；Anthropic 官方博客發布「七種 Claude Code 控制層」決策框架（CLAUDE.md、rules、skills、subagents、hooks、output styles、system prompt append），HN score 4 |
 
 **懸置細節**
-- ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-10-18）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。
+- ⟨Q-13⟩ 🔎 **查無官方**（標 2026-08-09｜查 Governor、token 浪費｜複 2026-11-21）：社群工具 Governor 宣稱優化 token 浪費，HN 社群對其實際成效提出疑慮；2026-08-10 查證找到廠商自報數據（compact professional 模式宣稱較基準降低 55.5% output token），惟均為工具作者／推廣部落格自行發布。2026-09-20 複查：本輪另搜尋獨立測試／評測站台，僅找到其他 token 優化工具（非 Governor 本身）的第三方 benchmark，未見任何獨立來源覆核或反駁 Governor 自報的 55.5% 數字；Governor 屬第三方社群工具，非 Anthropic 官方項目，故本題本質上不會有「官方」說法，僅能靠獨立覆核解決，目前仍缺，爭議維持未解。2026-10-24 再複查：重新檢索未見 Anthropic 針對 Governor 的任何說法（僅有官方一般性 token 節省指引，與該工具無關），獨立覆核仍缺。

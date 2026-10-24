@@ -3,14 +3,14 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-21"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-21"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 5
 attribution_count: 5
 attribution_last: "2026-10-21"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-21
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-21
 
 > **新增跨 5 款工具的對話歷史擷取工具**（2026-10-21）
@@ -81,6 +81,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/syncable-dev/memtrace-public)
 - **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### 《Your Game Is A Harness》：讓遊戲對 AI agent 更「可讀」、加快 agentic 迭代的實戰做法（2026-10-14）
+
+- **主線：** —
+- **核心模式：** 部落格文章整理作者在 Indie Rodeo 研討會的演講，分享讓遊戲專案對 coding agent 更易讀（legible）、加快 agentic 迭代速度的具體做法；Hacker News 160 分。
+- **與既有模式的關係：** 呼應「Context 管理」——把目標系統（遊戲專案）整理成對 agent 更易讀，與即時取回優於預先載入同方向，另涉及架構邊界合約的設計約束；聚焦遊戲開發垂直領域，歸類為近似判斷（推論），主線填 —。
+- **來源：** Hacker News；[原文](https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code)
+- **成熟度：** ⏳ 新興（本庫首次收錄，尚無社群採用回饋數據）
 
 #### Avoid These 4 Claude Code Context Antipatterns：四種會污染 context 的壞習慣與對應解法（2026-10-13）
 

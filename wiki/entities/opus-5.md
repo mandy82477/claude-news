@@ -4,15 +4,15 @@ kind: "entity"
 type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
-last_updated: "2026-10-10"
+last_updated: "2026-10-24"
 last_news_update: "2026-09-24"
 status_main: "active"
-days_since_news: 29
+days_since_news: 30
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 29
-inbound_links: 36
+days_since_news_subtree: 30
+inbound_links: 35
 attribution_count: 31
 attribution_last: "2026-09-21"
 top_source: "google-news"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-09-24
 
 > **最新動態**（2026-09-23）
@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。09-24 之後日報（核至 2026-10-16）無其他 Opus 5 新動態（2026-10-17 核）。
+**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。自 2026-09-24 起無新動態（2026-10-24 核）。
 
 Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]，與 4.8 兩代同價、知識截止晚四個月，曾是 Max、Team premium、Enterprise 隨用隨付與 API 上預設的 Opus，Claude Code 的整體預設則一路是 Sonnet。
 
@@ -75,7 +75,7 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥🔥 |
+| 社群熱度 | 🔥🔥🔥🔥 |
 | 試用價值 | ⚡ 有條件推薦（2026-09-07 判定）|
 | 最適合 | 數小時、沒人盯著也要跑完的編碼任務；跨數十檔 refactor；複雜系統工程 |
 | 不適合 | 日常規模開發（改 Sonnet 5）；跨多天的極長任務（改 Fable 5.1）；資安滲透測試（仍落後 Mythos 5）|

@@ -7,17 +7,17 @@ domain: "💼 商業"
 last_updated: "2026-10-19"
 last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['entities/opencode-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-19"
 top_source: "google-news"
-pending_count: 2
-pending_overdue: 1
+pending_count: 1
+pending_overdue: 0
 pending_next_review: "2026-11-02"
 pending_signalled: 0
 staleness_exempt: null
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 OpenCode 是 Claude Code 的主要開源替代品，截至 2026-05-12 已吸引 **157,000 名開發者**轉向（The New Stack 報導）。功能與體驗被 XDA 評測認為與 Claude Code 相當，且完全開源免費。即便 Anthropic 宣布倍增速率限制，對 vendor lock-in 的顧慮仍持續驅動開發者轉向開源方案。
 
-另有 tech-insider.org（Google News 轉載，2026-08-01）稱 OpenCode 下載量達 Claude Code 的 **5.4 倍**（比較定價 Free vs $20）。🔎 **查無官方**（標 2026-08-10｜查 tech-insider.org、OpenCode 下載量｜複 2026-10-18）：此下載量倍數之統計方法與時間範圍，查證後仍未見揭露；2026-09-20 複查：tech-insider.org 仍是唯一提出此 5.4 倍數字的來源（其 2026-09 版文章重申「OpenCode 贏 GitHub star 數：195K vs 132K，但 Anthropic npm 下載量高 5.4 倍」），無獨立第三方或官方 npm 下載統計可覆核，統計方法與時間範圍依然未揭露。
+另有 tech-insider.org（Google News 轉載，2026-08-01）比較兩者下載量與定價（Free vs $20）：2026-07-31 止 30 天 npm 下載數 Claude Code 44,264,901 次、OpenCode 8,245,142 次，即 **Claude Code 約為 OpenCode 的 5.4 倍**（媒體稱，tech-insider.org；GitHub star 則 OpenCode 領先）。2026-10-24 查證：先前「OpenCode 達 Claude Code 5.4 倍」的方向寫反，已更正；統計基礎是 npm registry 公開下載數（30 天窗口），方法可驗證、非黑箱推算。npm API 本輪無法直連（403），數字取自該文（[tech-insider.org](https://tech-insider.org/opencode-vs-claude-code-2026)），尚無獨立第二來源或 npm 官方頁面逐字覆核。
 
 ## 熱度與試用價值
 

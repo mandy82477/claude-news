@@ -4,21 +4,21 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-21"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-21"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 185
+days_since_news_subtree: 3
+inbound_links: 187
 attribution_count: 155
 attribution_last: "2026-10-21"
 top_source: "google-news"
-pending_count: 6
+pending_count: 4
 pending_overdue: 0
-pending_next_review: "2026-10-24"
+pending_next_review: "2026-10-26"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-21
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-21
 
 > **最新計費政策異動**（2026-10-21）
@@ -160,7 +160,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
 | 是否新增訂閱留存優惠應對競品追近 | 單一來源（Startup Fortune，2026-10-15）稱官方「現在付費留住訂閱者」，具體機制、金額與適用方案均未見，僅標題可用 | 官方公告或第二來源佐證 |
-| Max／Team 新增「每月 API credits」 | ✅ 2026-10-11 查證：Max 5x $100、Max 20x $200、Team 每席最高 $500／月；**不可用於 Claude Code 或 Claude apps**。細節見「額度與通路的帳務坑」 | 已查證 |
+| Max／Team 新增「每月 API credits」 | ✅ 2026-10-11 查證：Max 5x $100、Max 20x $200、Team 每 Standard 席 $20／Premium 席 $100、全隊匯總上限 $500／月（2026-10-24 對官方文件校正）；**不可用於 Claude Code 或 Claude apps**。細節見「額度與通路的帳務坑」 | 已查證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有，機制、適用方案、是否官方確認均未見 | 2026-10-08 複查 |
 | Free 不含 Opus 5.5、Pro 可用 | ✅ 2026-10-17 查證官方方案表：Opus 列 Free 否、Pro 是（未逐版本標示） | 已查證 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
@@ -170,7 +170,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **Code Review 實際怎麼計費**：官方費用頁只給估算與封頂方法、沒有單次價格，整理見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 
-**Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得（**2026-10-11 已由編輯部查證收斂：兩數字分屬不同方案層級，見上表**）。**（2026-10-10 補充）** 官方 Plans & Pricing 頁改版偵測到新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文），數字落在 XenoSpectrum 一端，惟完整段落、適用方案層級與是否已暫停均未查證，見下方 10-10 條目。
+**Max／Team 每月 API credits 細節**：用途限 Claude Platform 自建 App／Agent；媒體稱月度上限 $200（XenoSpectrum）與 $500（Pasquale Pillitteri）互相矛盾，官方原文未取得（**2026-10-11 已由編輯部查證收斂：兩數字分屬不同方案層級，見上表；2026-10-24 再對 [官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers) 核實，Max 5x $100／Max 20x $200／Team 池上限 $500**）。**（2026-10-10 補充）** 官方 Plans & Pricing 頁改版偵測到新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文），數字落在 XenoSpectrum 一端，惟（2026-10-24 補：完整段落與方案層級已查證，確為 Max／Team 每月 API credits，與 Startups 暫停無關，見下方 10-10 條目。）
 
 **Haiku 5.5 定價細節**：官方定價頁 2026-10-09 查證已新增「依 prompt 長度分級計費，逾 10 萬 token 的請求適用更高價格」原文，確認分級計費機制存在；2026-10-11 官方定價頁查得分級數字：≤100K 輸入／輸出 $0.10／$0.50、>100K $0.50／$2.50，快取讀取 $0.01／$0.05；媒體的 $0.10 是 ≤100K 輸入價、官方「降 75%」是平均值、VentureBeat 的「90%」與輸入價降幅相符（推論），三者不矛盾，完整脈絡見 [[entities/haiku-5-5#實付成本]]。
 
@@ -267,13 +267,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 三條共同點：**帳單上的錢和你以為涵蓋它的額度不是同一個口袋**。（2026-10-11 查證）
 
-1. **訂閱附帶的 API credits 不付 Claude Code**：claude.com/pricing 載 Max 5x 每月 $100、Max 20x 每月 $200、Team 每席每月最高 $500（pooled）；官方 support 頁明寫這些額度不能用於 Claude Code 或 Claude apps，只能用於 API／Console。另 [Pro／Max 說明頁](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan) 10-09 改版，拿掉「改走額外計費需你明確同意」與「Buy usage bundles」段；[usage credits 說明頁](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 寫明須自己在 Settings > Usage 按 Enable 才開、可設每月上限、適用 Claude Code，預設值未寫。
+1. **訂閱附帶的 API credits 不付 Claude Code**：claude.com/pricing 載 Max 5x 每月 $100、Max 20x 每月 $200、Team 最高 $500／月（pooled）；[官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)（2026-10-24 查證）載 Team 每 Standard 席 $20、每 Premium 席 $100，全隊匯總池上限 $500，且明寫這些額度不能用於 Claude Code 或 Claude apps 額外用量，只能用於 API／Console。另 [Pro／Max 說明頁](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan) 10-09 改版，拿掉「改走額外計費需你明確同意」與「Buy usage bundles」段；[usage credits 說明頁](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 寫明須自己在 Settings > Usage 按 Enable 才開、可設每月上限、適用 Claude Code，預設值未寫。
    - **對工程師的意思**：別把「$200 額度」算進 Claude Code 的預算；Claude Code 超量要靠自己開 usage credits 並設月上限，開之前先確認上限值。
 
 2. **經雲端市集買 Claude，帳務責任可能落在三不管**：Azure Marketplace 案（The Register 10-09）新創以為贊助額度涵蓋，收到約 $17,600 帳單，Microsoft 稱市集費用不能調、要它找 Anthropic；單一案例，細節見 [[topics/anthropic-business]]，不在此重抄。
    - **對工程師的意思**：贊助額度（如新創計畫）是否適用市集計費，用量產生**前**問清楚並書面確認；與上方「通路」表合讀——通路決定誰開票，也決定誰能調帳。
 
-3. ❓ **待查證**（標 2026-10-10｜查 Claude Startups、Pasquale Pillitteri）｜**Claude for Startups 條件變動**：10-06 媒體稱擴大（免費一年 Team＋$1,000 額度），10-10 傳暫停（單一來源）；官方方案頁同日改版但無生效時間，計畫頁仍無一手來源。脈絡見下方事件流 10-06／10-10 條目。
+3. **Claude for Startups 的免費 Team 與 $1,000 額度已暫停**（2026-10-24 查證）：10-06 媒體稱擴大（免費一年 Team＋$1,000 額度）；[官方計畫頁](https://claude.com/programs/startups)現載「current cohort is now full」、不受理新申請，審核中的申請不再推進，頁面擷取內容未見免費 Team／$1,000 的字樣。暫停措辭與原因（低估需求、前 48 小時申請量為前五個月的 21 倍）出自 @claudeai 與 Anthropic 新創行銷主管 Sarah Wolf 的 X 貼文，本站僅見 Forbes、AI Weekly 轉述（媒體稱），未取得貼文原文；已兌換者保留，無恢復日期。官方定價頁 10-10 新增的「$100–$200/月」是 Max 每月 API credits，與暫停無關（見第 1 條）。脈絡見下方事件流 10-06／10-10 條目。
    - **對工程師的意思**：申請或規劃以此額度為預算前，別當成既定福利；以官方計畫頁當下條款為準，查證前不要據此排預算。
 
 ---
@@ -289,14 +289,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 事故 | 狀態 | 最後動態 | 你該做的事 |
 |------|------|---------|-----------|
 | HERMES.md 字串觸發靜默切 API 計費 | ⛔ 官方拒修 | 2026-04-25，官方確認為 bug 但拒絕退款 | commit 訊息避開該大寫字串；已被扣費者官方不退 |
-| Anthropic 證實 $16.6M 帳務錯誤、企業多收 $1.7M（含南韓 $16.7M 個案） | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；退款與補救 ❓ 待查證 ⟨Q-01⟩ |
+| 7 月帳務錯誤：南韓免費用戶收到 $16.6M 無效帳單；審計稱企業多收 $1.7M | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；補救方式見下方細節 |
 | Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-10-21，Issue #79773（31 留言）：7 月已升級 Max 20x 用戶仍按 Max 5x 速率耗用 | 依現況估算用量，不要以「20 倍」為預算基準 |
 | Anthropic Status 通報：credit purchase 入帳延遲，部分請求因餘額不足失敗 | 🔴 未解 | 2026-10-01，官方 Investigating，修復時間未載 | 失敗請求稍後重試；充值後先核對餘額再跑長任務 |
 | Max 方案 session 額度自 3 月起異常加速耗盡 | 🔴 未解 | 2026-09-16，Issue #38335 累積 855 留言、545 👍，跨 2 則 Reddit 佐證 | 留意消耗速率，於 `Settings > Usage` 核對走勢是否異常 |
 | Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-17，Issue #16157 累積 1,495 則留言、725 👍，本頁互動量最高 | 官方新增說明：用量與長度是兩種限制，先關閉不需要的工具／連接器省用量；並查 `Settings > Usage` 是否真的觸頂 |
 
 **懸置細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-07-20｜查 $16.6M、帳務錯誤、企業多收｜複 2026-10-24）｜**$16.6M 帳務錯誤的退款與補救方式**：已掃日報至 2026-10-09 無後續；官方頁面未查證
+- **$16.6M 帳務錯誤補救（2026-10-24 查證，媒體稱）**：南韓免費方案用戶 2026-07-07／08 收到約 $1.67M 與 $16.6M 兩張無效請求，未登記付款方式、無 API 用量。
+  - Anthropic 告知該用戶是自動儲值（auto-reload）設定錯誤所致，已關閉設定並還原帳務設定；金流端扣款被拒，確認無需付款（Startup Fortune、BeInCrypto，2026-07-13）。
+  - $16.6M 為何由該設定產生，Anthropic 未公開解釋；官方頁面未載此事，故無退款問題，只剩成因未明。
+  - 另一件獨立事件：審計公司 Vaudit 稱檢視 60 家公司 $34M 帳單，發現約 $1.7M 多收，多家業者合計退還約八成（The Information 報導，非 Anthropic 單家數字）；Anthropic 發言人稱不對未完成請求收費、未暗中改派舊模型、未見普遍問題。兩件不可併讀。
 
 **已結案三件（供對照）**：共用池機制（2026-08-22 官方確認）、Opus 5 定價兩說收斂（2026-08-08）、Sonnet 5 $2/$10 永久化（2026-08-10）。下方「事故與爭議」事件流每則事故標題前的符號就是它的狀態。
 
@@ -317,7 +320,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 조선일보報導中國境內存在規避封鎖使用 Claude 的黑市交易，顯示官方封鎖未完全阻絕當地需求，規模與定價未見報導（Google News/조선일보，2026-10-04）；地緣政治執法面見 [[topics/ai-agent-safety]]。（區域存取政策本身的動態見 [[topics/anthropic-government-policy]]「現在有哪幾條線在動」第 1 列）
 - 轉售商以最高 90% 折扣轉賣 Claude／Codex API 存取權，違反 Anthropic 消費者條款（禁止 resell、禁止分享帳號憑證）。
 - 灰市管道「Poison Claude」已被兩獨立媒體證實會讓中間營運者讀取客戶傳送的全部 prompt——安全事件細節與可信度評估見 [[topics/ai-agent-safety]]。
-- 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜訊 2026-08-29｜複 2026-09-30）｜轉售規模與 Anthropic 執法回應均未見官方聲明或第三方媒體佐證。
+- 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜複 2026-11-24）｜轉售規模與 Anthropic 針對轉售的個案執法回應均未見官方聲明或第三方媒體佐證。2026-10-24 查官方：[商業條款](https://www.anthropic.com/legal/commercial-terms) D.4(a) 明文禁止「resell the Services except as expressly approved by Anthropic」；[Transparency Hub](https://www.anthropic.com/transparency) 已讀部分未見封鎖或轉售執法統計。日報 08-29 的 `訊` 為探針假命中（該日條目無轉售內容），已移除。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
 
@@ -476,7 +479,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 🔴 2026-07-20：南韓用戶收到 $16.7M 帳單疑似故障，與 07-12/13 已證實帳務錯誤規模相近
 
-- **KED Global：南韓用戶收到 $16.7M 帳單**：報導一名南韓用戶收到 Claude 系統疑似故障產生的 **$16.7 百萬美元**帳單。**與既有事件的關係（推論，待證實）**：金額與 07-12/13 已記錄的「Anthropic 證實 1660 萬美元帳務錯誤」（Tech Times）高度接近（$16.6M vs $16.7M），可能是同一筆已證實錯誤的受害個案首次被具名地區媒體揭露；惟原文摘要遭 RSS 截斷，未見報導連結兩起事件，亦未見官方就此個案回應，**不可認定為同一事件**（Google News/KED Global）
+- **KED Global：南韓用戶收到 $16.7M 帳單**：報導一名南韓用戶收到 Claude 系統疑似故障產生的 **$16.7 百萬美元**帳單。**與既有事件的關係（推論，待證實）**：金額與 07-12/13 已記錄的「Anthropic 證實 1660 萬美元帳務錯誤」（Tech Times）高度接近（$16.6M vs $16.7M），可能是同一筆已證實錯誤的受害個案首次被具名地區媒體揭露；惟原文摘要遭 RSS 截斷，未見報導連結兩起事件，亦未見官方就此個案回應，**不可認定為同一事件**（Google News/KED Global）。2026-10-24 補：BeInCrypto、Startup Fortune 報導的 $16.6M 即南韓免費用戶個案，與本則極可能同一人，惟兩者間的連結仍是間接的
 - （狀態隨 07-12/13 條，推論為同一筆已證實錯誤的個案）
 
 #### ✅ 2026-07-20：Fable 5 免費期到期後社群反映存取異常，含官方已證實的 Max 誤判事件
@@ -522,7 +525,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Official Docs 異動**：claude.com/pricing 頁字數增至 22,083 字（+273），新增「$100 to $200/month in API credits」等片段（diff 偵測，非完整原文）；同時移除「Industries: Financial services」段。
 - **Google News／Pasquale Pillitteri**：稱 Anthropic 今日暫停先前上線的免費 Claude Team 試用與每月 $1,000 API 額度優惠；此來源過往曾被查出以同網域發多語言重複報導（見下方 09-23 條），單一來源，不採信為定案。
-- ❓ **待查證**（標 2026-10-10｜查 Plans & Pricing、API credits）｜**官方頁新增的 $100–$200/月字樣是否即暫停或額度變動的官方版本**：與上方「還沒確定的計費變動」既有懸置項（媒體曾稱 $200／$500 互相矛盾）方向相符，惟官方原文完整段落、適用方案層級、是否暫停及生效時間均未查證。
+- **2026-10-24 查證**：該「$100–$200/月」字樣即 [claude.com/pricing](https://claude.com/pricing) Max 卡片的「$100 to $200/month in API credits」，比較表列 Max 5x $100、Max 20x $200、Team 最高 $500／月（pooled）；[官方文件](https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers)載 Team 每 Standard 席 $20、每 Premium 席 $100、池上限 $500，不涵蓋 Claude Code 與 Claude apps 額外用量。它是月度 API credits 福利的定價頁呈現，不是 Startups 暫停的官方版本；媒體 $200／$500 兩說分屬 Max 與 Team，並不矛盾。
 
 #### 2026-10-09：官方說明中心三頁同步改版——usage credits 機制拿掉「需明確同意」與「購買用量包」措辭
 
@@ -535,9 +538,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **媒體稱**：TechCrunch、CNBC、Quartz、Unite.AI 等至少 4 家同日報導 Anthropic 擴大 Claude Startups 計畫，合格早期新創可獲一年免費 Claude Team 方案＋$1,000 額度；官方計畫頁、資格門檻（公司階段、募資輪次上限）與適用席位層級（standard／premium）均未見本站查證，不得視為官方數字。
 - **後續（2026-10-07）**：Android Headlines、Tech Edition（＋TechCrunch）、Dataconomy、Techish Kenya、Konsulteer 等至少 6 家媒體同步跟進報導同一方案，數字（一年免費 Team＋$1,000 額度）一致，資格門檻與席位層級細節仍未見官方頁面補齊。
-- ❓ **待查證**（標 2026-10-09｜查 Claude Startups、Forbes｜訊 2026-10-10｜複 2026-10-23）｜**Claude Startups 免費方案是否已暫停**：Forbes 稱方案上線數日後遭暫停，原文未能取得，暫停原因與影響範圍均未見報導（僅標題可用）。
-- **2026-10-11 查證**：官方方案頁 10-10 改版，但未寫暫停與生效時間；Startups 計畫頁仍無一手來源，暫停與否維持上方懸置標記（見「額度與通路的帳務坑」第 3 條）。
-- **訊 2026-10-10 追蹤**：Google News／Pasquale Pillitteri（單一來源）稱已暫停免費 Team 試用與每月 $1,000 額度優惠，與同日官方 Plans & Pricing 頁新增 API 額度段落方向相符，但官方頁未明寫暫停與生效時間。
+- **2026-10-24 查證：Claude Startups 免費 Team／$1,000 額度已暫停**：[官方計畫頁](https://claude.com/programs/startups)載「current cohort is now full」、不受理新申請，審核中的申請未推進；Forbes（含 Forbes Australia 版）、AI Weekly 轉述 Sarah Wolf 的 X 貼文（媒體稱）：未妥善調校資格條件致非新創也取得資格，前 48 小時申請量為前五個月的 21 倍，已兌換者保留、其餘重新審核，無恢復日期。Startup Stack 夥伴折扣與 Applied AI office hours 續辦。
+- **2026-10-11 查證**：官方方案頁 10-10 改版，但未寫暫停與生效時間；Startups 計畫頁仍無一手來源，暫停與否已於 2026-10-24 查證（見上條與「額度與通路的帳務坑」第 3 條）。
+- **訊 2026-10-10 追蹤**：Google News／Pasquale Pillitteri（單一來源）稱已暫停免費 Team 試用與每月 $1,000 額度優惠，與同日官方 Plans & Pricing 頁新增 API 額度段落方向相符，但官方頁未明寫暫停與生效時間（2026-10-24 補：官方計畫頁已載申請額滿，Forbes 亦報導同事）。
 %% 維運備忘：Team 分層官方資格與席位細節未經查證，暫不列入「我的方案現在有什麼」表，待官方說明中心或公告確認後補列 %%
 
 #### 2026-10-05：Sonnet 4.5 退役日 2026-11-30 經官方查證屬實

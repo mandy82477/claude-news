@@ -3,16 +3,16 @@ page: "topics/anthropic-agent-stack"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 13
+days_since_news_subtree: 1
+inbound_links: 14
 attribution_count: 4
 attribution_last: "2026-09-10"
 top_source: "user-query"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 追蹤頁
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-10-23
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-23
 
 > **這頁在回答什麼**
@@ -222,6 +222,8 @@ claude self-hosted-runner
 3. **它們會不會碰到同一批檔案？** 會 → 用 worktree 隔離（背景 session 會自動搬進 `.claude/worktrees/`）。實際下法兩種（官方 worktrees 文件，2026-09-23 查證）：自己開一個獨立 session 用 `claude --worktree <name>`；要讓內建 subagent 自動各自隔離，在角色檔 frontmatter 寫 `isolation: worktree`，不必自己先手動建 worktree 再指路徑。
 
 要跑數小時以上、跨 session 保留狀態，或資料不出境，那是另一條分支：[[entities/managed-agents]]（平台代管）或 self-hosted runner（你自己的機器）。逐欄對照見下方附錄（[官方 agents 總覽](https://code.claude.com/docs/en/agents)，2026-09-12 查證）。
+
+想看哪個產品（Claude、Claude Code、Cowork、Duet、Tag）能用哪些功能，見 [[topics/anthropic-product-matrix]]。
 
 ---
 

@@ -4,24 +4,24 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-20"
+last_updated: "2026-10-24"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
-inbound_links: 4
+days_since_news_subtree: 4
+inbound_links: 3
 attribution_count: 7
 attribution_last: "2026-10-20"
 top_source: "google-news"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-10-28"
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Linus Torvalds
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Linux 核心維護者具名使用 Claude Code 開發 kernel 分支
 **首次出現：** 2026-10-12
-**最後更新：** 2026-10-20
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-20
 
 > **最新動態**（2026-10-20）
@@ -50,7 +50,7 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 - **2026-10-19**：Hacker News（16分）轉載 The New Stack 完整報導，揭露此 10-patch 分支原為擱置 18 個月的 page cache 效能瓶頸，合成測試跑出 23 倍吞吐量提升；Torvalds 提醒真實環境增益遠小於測試數字
 - **2026-10-15**：GBHackers 報導標題稱 Claude Code 協助他處理長期的 kernel 記憶體效能瓶頸（僅標題；[GBHackers News](https://news.google.com/rss/articles/CBMisgFBVV95cUxQekNxOXU5bTUyR2JqM1NfWjFXVjhidjlFY3h2YXdoSFQ1WFQ3NzlIMFhXeW5XQ2dEeWl3SmV5bFN3OWp2X0ZzRWtiOHA4WFVpRndBTGpKNUNjZ0pXZEUtbEE3a0xYVk1GYmhOZ3NCY2JGbmZRTnBCczFYaHloU2dJbk44TmcwR2h4cTB4TjM0aVlfSFI5MVltSDZ6RFJMWmkzRGN0aEg1dTlweTg4SmFYVGNn0gG3AUFVX3lxTE9QOVlvdWg1ZG1Ca2VUUkdJTDJhMEc3aDEwWXZMTTVETmQtVVJTc21aaW1CX3VhSGZfbU0xU00tbW5ma0NkcHhBNHBJVVR6U0ZfZmxxYmY1Znhtb0Z2NWZocGlxWG5rdkNfUU5uUERJVTBDV0x2RnFIR2dzTXVIek9MTjhXY3l3SXBOUHRBajFJTF9JMGJvTVJQM19RVWM1Nlg4LWZKQWJPUXBISjQ2Q2RXdGduMlRidw?oc=5)）
 - **2026-10-08／10-14**：布拉格 Linux Maintainers Summit 後，核心社群取消 `Assisted-by` 揭露要求；Torvalds 稱禁 AI 工具「utterly stupid」，如同禁編譯器（[The Register](https://www.theregister.com/ai-and-ml/2026/10/14/linux-kernel-devs-drop-obligatory-confession-of-ai-tool-usage/5303140)、[PC Gamer](https://www.pcgamer.com/software/linux/linux-kernel-drops-ai-contribution-disclosure-rule-as-linus-torvalds-says-banning-the-tech-would-be-utterly-stupid/)、[heise](https://www.heise.de/en/news/Linux-may-drop-AI-code-labels-Torvalds-uses-LLMs-too-11490773.html)）
-- **2026-10-14**：審查者在 patch 中發現一處競態條件（race condition）（[The New Stack](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5)）；同日 36Kr 稱效能提升 3 倍，單一中國媒體轉述、尚待查證（[36Kr](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5)）
+- **2026-10-14**：審查者在 patch 中發現一處競態條件（race condition）（[The New Stack](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5)）；❓ **待查證**（標 2026-10-14｜查 36Kr、3X Performance Surge）｜**36Kr 稱效能提升 3 倍**：單一中國媒體轉述，已掃日報至 2026-10-23 無後續；官方頁面未查證（[36Kr](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5)）
 - **2026-10-13**：分支整理成 patch 貼上核心信件列表，附上述 cover letter（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)）
 - **2026-10-12**：重新整理 `torvalds/linux.git` 時意外出現分支 `noref-filemap-read-with-llm`（[Phoronix](https://www.phoronix.com/news/Linus-Torvalds-Claude-Code)）
 

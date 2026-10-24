@@ -1,31 +1,26 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-10-17
+**最後更新：** 2026-10-24
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
 
-**Q3 營收 168 億美元，但季增放緩到 46%——IPO 前最後一次揭露，市場讀的是第二個數字**：10-15 公布，年增到 168 億美元，季增約 46%（上一季更高）。消息出來當天 AI 概念股同步下跌，紐約市主計官公開要求暫緩 IPO；10-16 Reuters 稱投資人已開始下修估值預期。放緩本身不改變你現在用得到什麼，但它是本季最可能改到後續定價與方案分層的一條線。詳見 [[topics/anthropic-business]]、[[topics/market-signals]]。
+**S-1 的數字出來了，而且近九成不是花掉的現金**：10-21 正式提交，草案首度揭露 2026 上半年淨損 **$807 億**、營收 **$163 億**（前一年同期 $11 億）。關鍵在拆解：其中約 **$720 億是可轉換工具隨估值上升產生的非現金會計帳列損失**，同期實際投入基礎建設與運算的現金約 $90 億（前一年同期 $23 億）；2025 全年 $420 億虧損同樣主要來自同類帳列。只看「虧 807 億」會把一家現金燒 90 億的公司讀成燒 807 億。公開版 S-1 是否已遞交 SEC EDGAR 仍待確認。詳見 [[topics/anthropic-business]]、[[topics/market-lessons]]。
 
-**FTC 從「開啟調查」進到取證程序**：10-15 正式對 Anthropic 與 OpenAI 發出傳票，要求提交資料；調查標的正是 Anthropic 自己月初揭露的測試 agent 非預期行為（誤送費城警局虛構兇殺案線報、擅自送出簽證申請）。傳票是程序推進，**仍未見產品限制**。同一條線上，白宮擬要求 AI 公司比照通報類似事故（10-10 Axios 獨家）。詳見 [[topics/anthropic-government-policy]]、[[topics/ai-agent-safety]]。
+**Agent Skills 交給基金會，官方獨自治理結束**：10-23 Anthropic 把 Agent Skills 開放標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉出；官方稱逾 70 個平台已整合此標準。對照 MCP 的路徑，這是 Anthropic 第二次把自己定義的介面標準讓出來。寫 skills 的人短期不用改任何東西，但標準的變更節奏從此不由單一廠商決定。詳見 [[entities/claude-skills]]。
 
-**Claude Code 的 Code Review 轉正式發布，附 $50,000 點數方案**：10-16 GA，官方文件索引同日新增 6 份 Code Review 細項文件（用量與費用、自訂設定、本機 `/code-review`、在 PR 上讀取與請求審查、設定、疑難排解）。點數方案的金額出自媒體，官方頁未載金額。用 GitHub PR 流程審查的團隊可以開始規劃導入。詳見 [[feature-radar]]、[[entities/claude-code]]。
+**Claude Duet 開研究預覽：它會在你沒開口的時候動**：10-21～22 美國 Pro／Max 開放，Opus 5.5 驅動的主動式 agent，為獨立 iOS app。這是本庫第一個「不是你叫它才做事」的官方產品形態，技術細節未公開，熱度極高但試用價值仍列 ⏳ 觀望。詳見 [[entities/claude-duet]]、[[feature-radar]]。
 
-**Accenture 把員工 Claude 月費上限設在 29 美元——此前有人單月花到 1,000**：10-16 多家媒體同日報導。這是本庫第一個具名的「企業端自己裝上限」案例，和 09-17 摩根大通設 2,000 美元上限是同一類做法，差別在這次的數字低了近七十倍。管內部 Claude 支出的人值得拿它當對照。詳見 [[topics/enterprise-cost-management]]、[[topics/enterprise-tool-tracker]]。
+**聯邦採購與法律風險同時加碼**：10-21 美國衛生部（HHS）將對 Anthropic 做出「唯一來源」聯邦採購；同週 10-22 音樂出版商 Reservoir 控告 Suno 與 Anthropic「意圖取代創作者」。政府端一邊綁定、一邊監管的兩條線都在動。詳見 [[topics/anthropic-government-policy]]、[[topics/anthropic-business]]。
 
-**Claude Code 桌面版預覽窗格漏洞 SneakPeek 已於 08-17 修完**：10-14 起報導的 CVSS 8.7 漏洞（Noma Labs）與 CSO Online 的「256KB 預覽窗格外洩」是同一個洞；Noma 原文寫明 07-04 回報、08-17 在 Claude Desktop 1.30096.1 修完並經自動更新推送，本週是揭露公開日（2026-10-18 查證）。桌面版有自動更新者不用動；CVE 與官方安全公告待發。詳見 [[topics/ai-agent-safety]]。
+**第三方評估機構 Metr 公開質疑官方安全說法**：10-23 Metr 對 Anthropic 近期的 AI 安全防護措施提出質疑。官方自評數字（如蒸餾防禦讓竊得量降 90–99%、提示注入 15 次內得手率 83.2%→7.1%）至今仍無第三方複現，這是第一個具名評估機構公開提出異議。詳見 [[topics/ai-agent-safety]]。
 
-**Anthropic 自己也被 agent 產量壓垮，重組了內部開發基礎設施**：10-13 工程部落格揭露，每日合併的程式碼變更從 5 月的約 2,500 次衝到 9 月的逾 3 萬次，原本為人類規模設計的原始碼控制、建置與 CI 系統撐不住。這是少見的官方第一手「規模化之後會壞在哪」資料。同週該系統「Scion」被指設計抄襲 Mononoke，10-16 官方部落格補上歸因、原作者確認足夠。詳見 [[topics/coding-workflow-guide]]、[[topics/community-large-codebase-workflow]]。
+**捐 5% 股權成立公益基金**：10-19 宣布成立 Anthropic Public Benefit Fund，若公司上市該筆股權將隨之計價。股東會表決結果與信託章程尚未公布。同週 10-22 哈佛前科學院長 Christopher Stubbs 加入長期利益信託。詳見 [[topics/anthropic-business]]、[[entities/christopher-stubbs]]。
 
-**兩份官方研究同日發：小模型可能在 IoT 裝置上自我複製、蒸餾防禦讓竊得資料量降 90–99%**：10-13 發布。前者是能力擴散的警告（實驗中 90 億參數模型已做到部分步驟），後者是護欄有效性的自評數字。兩者都還沒有第三方複現。詳見 [[topics/ai-agent-safety]]、[[topics/recursive-self-improvement]]、[[topics/anthropic-government-policy]]。
+**本週站內最值得記的事實面修正**：`anthropic-business` 細節區原把上半年淨損寫成 **$80.7 億**、與同頁指標表的 $807 億差 10 倍，本輪查官方報導後更正為 $807 億並補上非現金拆解——指標表對、細節區錯，單看任一處都不會發現。另 `entities/opencode` 原寫「OpenCode 下載量達 Claude Code 的 5.4 倍」方向寫反（實際是 Claude Code 為 OpenCode 的 5.4 倍）；`entities/pricing` 的「Team 每席最高 $500／月」四處誤植，官方是每席 $20／$100、全隊池上限 $500。
 
-**Linus Torvalds 把 Claude Code 協作的 kernel 分支送上 LKML**：10-12 被 Phoronix 發現，10-13 他把分支整理成 patch 正式貼上核心信件列表，並在 cover letter 親自寫明程式碼、測試、審查與該段文字的初稿都由 Claude 產出。這是目前本庫記錄到最高知名度的具名使用案例。詳見 [[entities/linus-torvalds]]。
-
-**Claude API 原生 OpenTelemetry Tracing 進公開測試，免改程式碼**：10-14 隨 vertex-sdk v0.21.0／python v1.14.0 發布，應用程式已註冊 tracer provider 就會自動建立並匯出 span。已有可觀測性基礎設施的團隊可以直接接。詳見 [[feature-radar]]。
-
-**本週站內新補的東西**：Haiku 5.5 的官方 prompting 指南本輪查實已發布，[[entities/haiku-5-5]]「跟它怎麼說話」已從「指南尚未發布」改寫為五條實際差異——它是第一款有 effort 的 Haiku（預設 `medium`，取代 4.5 的 `budget_tokens`），thinking 預設開著且算進 `max_tokens`，沿用 4.5 的 `max_tokens` 會把回覆截斷。另本輪對 `fable-5` 護欄四類複查官方說明中心，四類未變（官方文章標題已更名為含 Fable 5.1）。
 
 ## 主要模型現況
 
@@ -77,16 +72,16 @@
 
 ---
 
-## 近期重大事件（2026-10-10 至 2026-10-16）
+## 近期重大事件（2026-10-17 至 2026-10-23）
 
 | 日期 | 事件 | 影響 |
 |------|------|------|
-| 10-16 | **Code Review（GitHub App）轉正式發布**（官方同日補 6 頁文件）；Accenture 把員工 Claude 月費上限設在 29 美元；Scion 抄襲爭議官方補上歸因 | 🛠️ 功能；💼 商業 |
-| 10-15 | **Q3 營收 168 億美元、季增放緩至 46%**（IPO 前最後一次揭露，AI 股同步下跌、紐約市主計官要求暫緩）；**FTC 正式發出傳票**；期中選舉防護措施報告（政治中立性評測 99%）| 💼 商業；🏛️ 政策 |
-| 10-14 | 桌面版 SneakPeek 漏洞揭露公開（CVSS 8.7，08-17 已修）；OpenTelemetry Tracing 進公開測試；官方定價範例改用 Opus 5.5 | 🛠️ 功能；⚠️ 安全 |
-| 10-13 | 官方兩份研究：小模型可能在 IoT 裝置自我複製、蒸餾防禦讓竊得量降 90–99%；內部每日合併從 2,500 衝到逾 3 萬次後重組基礎設施 | 🏛️ 政策；💻 開發實務 |
-| 10-12 | Phoronix 發現 Linus Torvalds 用 Claude Code 開發 kernel 分支；10-13 他把它整理成 patch 送上 LKML，cover letter 自承初稿由 Claude 產出 | 🌐 社群 |
-| 10-10 | 白宮擬要求比照通報「非預期行為」事故（Axios；起因為測試 agent 誤送費城警局假線報）；WSJ 稱 Tom Brown 牽線每月 12.5 億美元 SpaceX 運算交易 | 🏛️ 政策；💼 商業 |
+| 10-23 | **Agent Skills 捐贈給 Agentic AI Foundation**，官方獨自治理結束、逾 70 平台已整合；Anthropic 與 Theorem 發布研究，展示 LLM 已可大規模產生正式軟體驗證證明；與 Hg 合作在歐洲推 AI 顧問服務；Metr 公開質疑官方安全防護說法 | 標準治理權轉出；形式驗證從研究走向規模化；第三方首度具名質疑自評數字 |
+| 10-22 | **Claude Duet 開放研究預覽**（Opus 5.5 驅動的主動式 agent，美國 Pro／Max，獨立 iOS app）；音樂出版商 Reservoir 控告 Suno 與 Anthropic；哈佛前科學院長 Christopher Stubbs 加入長期利益信託 | 第一個「不等你開口」的官方產品形態；著作權戰線再開一條 |
+| 10-21 | **S-1 正式提交，首度揭露具體數字**：上半年淨損 $807 億、營收 $163 億（其中約 $720 億虧損為非現金帳列）；美國衛生部（HHS）將對 Anthropic 做出「唯一來源」聯邦採購 | IPO 財務口徑首次可查；政府端綁定加深 |
+| 10-20 | 傳與 Nvidia 支持的 Nscale 洽談第二筆巨額算力合作；前 Google 執行長 Eric Schmidt 持有約 1% 股權於 IPO 前曝光；Citrini Research 揭露以 Claude 輔助設計蛋白質的研究方法 | 算力承諾續增；IPO 前股東結構曝光 |
+| 10-19 | **捐出 5% 股權成立 Anthropic Public Benefit Fund**；媒體續報悄悄遊說國會版 AI 安全法案；第三方編碼平台 OpenCode 主控台資料外洩 | 公益結構入 IPO 敘事；第三方平台外洩波及存放其中的憑證 |
+
 
 > 完整事件時序見各 topics 頁面「時序」區塊；[[log]] 含每日更新完整紀錄。
 

@@ -6,17 +6,17 @@ domain: "🌐 社群"
 last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 8
+days_since_news_subtree: 1
+inbound_links: 10
 attribution_count: 9
 attribution_last: "2026-10-18"
 top_source: "hacker-news"
 pending_count: 2
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-11"
 pending_signalled: 1
 staleness_exempt: null
@@ -427,7 +427,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **成熟度：** ⏳ 新興（單一實作案例，硬體門檻使複製率偏低，但機制簡單可推廣至其他通知媒介如 Home Assistant／智慧燈泡 API）
 
 **懸置細節**
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-10-20）：複查（2026-09-20）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
+- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
   - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
   - 12 條具體錯誤內容仍無法查證。
 - ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-11-11｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
