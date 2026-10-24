@@ -11,7 +11,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 16
-inbound_links: 56
+inbound_links: 53
 attribution_count: 22
 attribution_last: "2026-10-08"
 top_source: "reddit"
@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Sonnet 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，新採用一律改用 Sonnet 5.5。見 [[entities/sonnet-5]]。
 - **Sonnet 4.6**：**$3 / $15 per Mtok、1M context、128k 輸出**（官方模型總覽頁，2026-08-20 查證；legacy 仍可用）。適合既有穩定工作流；不適合新專案——Sonnet 5.5 更便宜且效能更高，新專案一律選 Sonnet 5.5。見 [[entities/pricing]]。
 - **Haiku 5.5**（2026-10-07 取代 Haiku 4.5）：官方定位最便宜、最快的小型模型，面向高流量成本敏感任務；與 Opus 5.5／Sonnet 5.5 搭配作編碼 subagent，平均成本比 Haiku 4.5 降約 75%（平均值，>100K 分段價見 [[entities/haiku-5-5#實付成本]]）；不適合多步驟深度推理（改 Sonnet 5.5）。
-- **Haiku 4.5（已被取代）**：官方載明退役不早於 2026-10-15，是下限而非確定停用日（[官方模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-10-03 查證）；僅適合尚未遷移者的既有工作流延續，新採用一律改用 Haiku 5.5。見 [[topics/long-context-1m]]（200K context 背景）。
+- **Haiku 4.5（已被取代）**：官方載明退役不早於 2026-10-15，是下限而非確定停用日（[官方模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-10-03 查證）；僅適合尚未遷移者的既有工作流延續，新採用一律改用 Haiku 5.5。
 - **Opus 4.8 / Opus 4.7（已被取代）**：僅適合尚未遷移者的既有工作流延續，不建議新採用——次旗艦地位已由 Opus 5 接手，Fast Mode 亦非 4.8 獨佔優勢（官方文件確認 Opus 5 與 4.8 皆支援 fast mode）。Opus 4.7 另有 200K context 上限與思考深度議題，見 [[entities/opus-4-7]]。
 - **Mythos 5.1（非公開陣容，2026-09-01 取代 5.0）**：無護欄完整版，僅供信任機構的安全研究、滲透測試；一般使用者取不到，不可作為公開陣容模型的淘汰基準——公開陣容資安首選為 Fable 5.1。與 Fable 5.1 為同一模型的不同防護層級，存取模式（信任機構限定）自 5.0 起未變，詳見 [[entities/mythos]]。
 - **定價備注**：Opus 5.5 為 **$4 / $20 per Mtok**（官方 models overview（2026-09-23 查證）），較 Opus 5 的 $5 / $25 降 20%。Opus 5 已改列 Legacy，沿用原定價未變。沿革見 [[entities/pricing#模型 API 定價現況]]。

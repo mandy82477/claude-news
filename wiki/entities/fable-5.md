@@ -12,7 +12,7 @@ parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
 days_since_news_subtree: 6
-inbound_links: 61
+inbound_links: 59
 attribution_count: 39
 attribution_last: "2026-10-18"
 top_source: "google-news"
@@ -64,7 +64,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **表下細節**
 
 - **兩代共用一套方案規則**：Pro 拿得到 5 與 5.1，是走 usage credits 付費。2026-07-19 到期的是**限時免費促銷**，只適用 Fable 5；上表「我的方案能不能用」那列是促銷結束後仍在的**常態規則**，兩者是兩件事，不互斥。
-- **Context 與輸出長度兩代相同**：1,000,000 token context、128,000 token 最大輸出。1M 這個旋鈕本身的計費與可見性見 [[topics/long-context-1m]]。
+- **Context 與輸出長度兩代相同**：1,000,000 token context、128,000 token 最大輸出。1M 的計費規則見 [[entities/pricing]]。
 - **5.1 新增反萃取（anti-distillation）機制**，防止他人萃取權重或行為訓練競品（官方 2026-09-01 公告）。
 
 ## 熱度與試用價值
@@ -148,7 +148,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - ⚠️ **「失去靈魂」討論**：部分用戶認為 Fable 5 相比 Opus 4.6 更工具性、減少人本關懷深度
 - ⚠️ **「Defense in Depth」分類器誤判（2026-07-02，新）**：redeploy 後新增的資安/程式碼請求分類器出現誤判案例——合法資安審查請求被攔截、化學問題被拒（後者範圍已於 2026-08-26 查證確認不限於 coding/cybersecurity，見下方歷史記錄 2026-07-02）
 - 🔴 **Fable 5 advisor 跨全部 session 顯示 unavailable**：完整追蹤與最新互動數見 [[entities/claude-code]] 已知問題（GitHub #73365）
-- 🔴 **Max 方案被要求另購 usage credits 才能跑 Fable 5**：計費面見 [[entities/pricing]]、缺陷追蹤見 [[entities/claude-code]]；1M 變體引發的通用問題見 [[topics/long-context-1m]]
+- 🔴 **Max 方案被要求另購 usage credits 才能跑 Fable 5**：計費面見 [[entities/pricing]]、缺陷追蹤見 [[entities/claude-code]]
 - ⚠️ **「太危險」分級受競品追平質疑**：r/ClaudeCode 使用者認為 Fable 5 被「削弱」後只比 Opus 4.8 聰明一點，開源模型已追上「太危險」等級能力（單一社群貼文，未附測試方法）；分類爭議的安全政策脈絡見 [[topics/ai-agent-safety]]，此處僅記能力落差角度
 
 ## 相關議題
@@ -158,7 +158,6 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - [[topics/model-comparison]] — 這份工作該用哪個模型（Fable 5.1 vs Opus 5 vs Sonnet 5）
 - [[topics/anthropic-government-policy]] — 政府那條線會不會讓你哪天用不到、或用到被改派的版本
 - [[entities/claude-code]] — Claude Code 現在有什麼毛病（Fable 相關的 issue 追蹤在這）
-- [[topics/long-context-1m]] — 1M context 這個旋鈕本身的計費與可見性
 - [[topics/ai-agent-safety]] — 護欄被繞過、越獄與提示注入這類攻擊面（本頁爭議節那幾條的安全政策脈絡）
 
 ## 參考來源

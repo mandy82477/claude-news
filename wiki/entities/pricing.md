@@ -12,7 +12,7 @@ parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 187
+inbound_links: 185
 attribution_count: 155
 attribution_last: "2026-10-21"
 top_source: "google-news"
@@ -206,7 +206,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **✅ usage credits 說明頁現行版只有 9 節（官方文件，2026-10-04 查證）**：是什麼、怎麼運作、啟用、設上限、定價、管理、省錢提示、與其他功能的互動、FAQ（[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)）
 - 上條已移除：「How do I pay for my Claude API usage?」、Public Sector FAQs、usage analytics 三段；日報 09-28／10-01 偵測到的異動屬實
 - **訂閱配額制維持**：原定 2026-06-15 生效的 Agent SDK／`claude -p` 計費切割已於 2026-06-16 暫停，重新推行時間未定；Agent SDK、`claude -p`、第三方 Agent SDK app 用量持續計入訂閱配額，無需額外信用池（來源：2026-06-16、2026-06-18 DevOps.com）
-- **1M context window 觸發獨立 API 計費通道**：即使儀表板顯示 0% 訂閱用量，1M context window 仍會產生額外費用（實例：2026-05-11 用戶 0% 用量下遭收取 $3.37 Extra Usage）。1M 的世代分界與控制權缺口見 [[topics/long-context-1m]]
+- **1M context window 觸發獨立 API 計費通道**：即使儀表板顯示 0% 訂閱用量，1M context window 仍會產生額外費用（實例：2026-05-11 用戶 0% 用量下遭收取 $3.37 Extra Usage）。
 - **`ANTHROPIC_API_KEY` 環境變數陷阱**：雲端環境（CI/CD、Docker、K8s）若設置此環境變數，所有 Claude Code 呼叫自動改走 API 計費通道而非訂閱配額（來源：2026-04-30）；2026-10-02 另有設定後被擋下的回報，見事件流 10-02 條
 - **企業支出控管功能上線（2026-07-04）**：具體控管粒度（部門／團隊層級、per-user、即時警報）尚未公開（來源：2026-07-04 Tech Times）
 - **印度盧比在地化定價生效（2026-07-13）**：Pro 方案 **Rs 2,000／月**，為美國以外最大市場首次官方在地化定價；Max／Team／Enterprise 是否同步在地化未見報導（來源：2026-07-13～14 TechCrunch、NDTV、Times of India、bestmediainfo.com）
@@ -261,7 +261,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **長脈絡的分界是模型世代，不是「1M」這個功能**。Claude 4.6 以後內含 1M 且不加價（官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing) Long context pricing 節）；Sonnet 4／4.5 世代的 1M 為 public preview，[AWS 公告](https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-sonnet-bedrock-expanded-context-window/)明載超過 20 萬 token 的 prompt 約為兩倍輸入價、1.5 倍輸出價。**兩代混用時，兩套規則會出現在同一份帳單上**
 - **診斷法**：價差只在大請求出現 → 舊世代長脈絡溢價；小請求也貴同樣比例 → 資料落地或地區端點
 - 模型之間「同一份工作換個模型差多少」的換算（含 tokenizer 換代的影響）不在本頁，見 [[topics/model-comparison#同一份工作，換設定差多少]]
-- **1M 這個旋鈕本身**（世代分界為何長這樣、預設開啟能不能關、選定狀態保不保得住）另見 [[topics/long-context-1m]]
 
 ### 額度與通路的帳務坑
 

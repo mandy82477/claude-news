@@ -196,28 +196,6 @@ Anthropic 對全產品（含 Claude Code）的帳號、年齡、身分驗證政�
 
 ---
 
-## topics/long-context-1m
-
-### 1M 專頁的觸發邊
-
-本頁是**衍生頁**——1M 相關的新聞條目會照舊被路由到 `entities/claude-code`（已知問題）或 `entities/pricing`（計費規則），**沒有任何條目會自己路由到這一頁**。依 `.claude/reporter-rules/page-templates.md`「建頁時必須確認觸發邊」，此處登記明文觸發邊，否則該頁會孤兒化。
-
-**每次 ingest：** 你為 claude-code 或（經商業記者）pricing 寫入的條目，只要涉及下列任一項，**同時**更新本頁：
-
-| 條目涉及 | 本頁要動的地方 |
-|---|---|
-| 長脈絡費率、世代分界、1M 是否加價 | 「你的 1M 會不會加價」表 |
-| 1M 的預設行為、開關、model picker、`[1m]` 變體 | 「你控制不了的地方」表＋狀態欄 |
-| **1M 的可見性**——狀態列／`/model`／設定畫面顯示的 context 上限與實際不符 | 同上；「看不出自己在不在 1M 上」也是控制權缺口的一種，不因為它「只是顯示問題」而排除 |
-| 0% 用量卻被收費、獨立計費通道、`ANTHROPIC_API_KEY` 走 API 通道 | 「帳單對不上時怎麼判」表 |
-| 以上任一 | `## 時序` prepend 一則，更新兩個日期欄位 |
-
-**紀律：** 本頁只放「1M 這個旋鈕本身」。單一模型的費率數字屬 [[entities/pricing]]、選型建議屬 [[topics/model-comparison]]、單條 issue 的完整脈絡留在 `entities/` 原頁——本頁引 wikilink，不複製（同 `wiki/CLAUDE.md`「每個事實只有一個家」）。
-
-**若某條目只影響費率數字而與 1M 無關**（如 Opus 5 調價），不動本頁。
-
----
-
 ## topics/anthropic-agent-stack
 
 ### agent 相關功能：多標三件事

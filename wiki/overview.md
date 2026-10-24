@@ -55,8 +55,6 @@
    - 10-14 Noma Labs CVSS 8.7 與 CSO Online 256KB 預覽窗格外洩為同一漏洞，已於 08-17 修完（2026-10-18 查證）
 4. **[[topics/enterprise-cost-management]] — 企業端開始自己裝上限，數字一路往下**
    - 10-16 Accenture 把員工 Claude 月費上限設在每月 29 美元（此前有員工單月花到 1,000）；09-17 摩根大通設的是 2,000
-5. **[[topics/long-context-1m]] — 1M session 會靜默清除工具結果，無已知規避做法**
-   - GitHub #42542（三種機制），官方未回應；控制權缺口第五條
 
 ### 🟡 持續追蹤
 

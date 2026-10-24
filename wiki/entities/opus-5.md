@@ -66,7 +66,7 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 
 - **兩代同價，但實付不一定同**：$5／$25 兩代相同；同一份文字換代後算出來的 token 量與 effort 設定都會改變帳單，換算見 [[topics/model-comparison]]「同一份工作，換設定差多少」。
 - **effort 在 Opus 5 比前幾代更關鍵**：官方寫預設為 `high`，且它把額外 effort 轉成更好結果的可靠度高於歷代 Opus。換模型前先對自己的題目跑一次 effort 比較。
-- **1M context 的方案分界**：官方在 API、Max、Team、Enterprise 列出 Opus 5 的 1M 視窗，Pro 未列；Claude Code 需 v2.1.219 以上。1M 這個旋鈕本身見 [[topics/long-context-1m]]。
+- **1M context 的方案分界**：官方在 API、Max、Team、Enterprise 列出 Opus 5 的 1M 視窗，Pro 未列；Claude Code 需 v2.1.219 以上。
 - **Fast mode**：速度 2.5 倍、費率為基礎價兩倍（$10／$50），Opus 5 與 4.8 都支援，Opus 4.7 已不支援。
 
 ---

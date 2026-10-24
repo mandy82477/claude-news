@@ -11,7 +11,7 @@ parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 42
+inbound_links: 40
 attribution_count: 44
 attribution_last: "2026-10-16"
 top_source: "reddit"
@@ -182,7 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **只有單一來源的具體宣稱（2026-08-04）：** r/ClaudeCode 一則貼文宣稱以實測記錄四種繞過模型釘選的方式，並稱 Sonnet 4.6 遭無預告移除。該貼文所指的**現象**方向與上述四個節點一致，但貼文獨有的「4 measured bypass vectors」與「Sonnet 4.6 silently removed」**具體技術細節**至今只有這一個來源、無第二來源核對，本頁只採計現象，不採計其量化宣稱（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1vf7uv5/model_pinning_is_completely_broken_in_claude_code/)）。官方 [Model deprecations](https://docs.claude.com/en/docs/about-claude/model-deprecations) 頁面載明：模型退役前至少提前 60 天公告，退役後的請求會直接失敗（回錯誤），而非靜默切換到其他模型——與貼文「Sonnet 4.6 遭無預告移除」的敘事框架不符（查證日 2026-09-20）；「4 measured bypass vectors」的具體清單官方文件未載，且該 Reddit 原始貼文至今仍是唯一來源，無第二來源或官方逐項證實，此節維持不採計。
 
-**這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立（1M 這一項的完整脈絡見 [[topics/long-context-1m]]）。
+**這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立。
 
 **同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。單一使用者回報、無官方確認，待查證標記見 [[entities/claude-code]]（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。
 
@@ -225,7 +225,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[feature-radar]]「從你現在的版本升上去，會遇到什麼」——升上去會壞什麼；你沒升版卻覺得變慢，才是本頁
 - [[entities/pricing]]「事故現在還在發生嗎」——帳單被扣錯、配額換軌；token 燒得比以前快在本頁
 - [[topics/community-tech-discussions]]「現在吵到哪」——「越用越笨是模型退步還是 context 腐蝕」那場觀念之爭
-- [[topics/model-comparison]]、[[topics/long-context-1m]]、[[entities/opus-4-7]]、[[entities/opus-4-8]]——以上四頁是本頁事實的上下游：選型與成本換算、1M 這個旋鈕、以及兩代舊模型自己的頁。
+- [[topics/model-comparison]]、[[entities/opus-4-7]]、[[entities/opus-4-8]]——以上三頁是本頁事實的上下游：選型與成本換算、1M 這個旋鈕、以及兩代舊模型自己的頁。
 
 ## 參考來源
 

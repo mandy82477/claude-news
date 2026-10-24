@@ -13,7 +13,7 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 133
+inbound_links: 130
 attribution_count: 754
 attribution_last: "2026-10-23"
 top_source: "github-issues"
@@ -256,11 +256,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-11-14）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
-- 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 63 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
+- 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 63 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 - 🔴 **未修復**｜**Max 20（$200/月）方案升級至 v2.1.198 後，額度重置僅約 70 分鐘即 100% 用盡，此前版本未曾發生（GitHub issue #41788，累積 60 則留言，2026-08-09）**：使用者回報升級至 v2.1.198 後，5 小時額度重置僅約 70 分鐘就被 100% 用盡，且回報者指出前一批版本（2.1.86～2.1.88）從未發生此現象，屬版本更新後的回歸性配額消耗異常；官方尚未回應。與既有多起額度異常消耗回報（issue #38335、#16157 等）同屬配額爭議但版本觸發點不同，暫分列追蹤。定價/計費政策面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**Max 訂閱在使用者未做任何操作下被自動降級為 Free 方案（GitHub issue #41581，累積 39 則留言、9 個讚，2026-08-08）**：使用者回報自己的 Max 訂閱在未進行任何操作的情況下被降級為 Free 方案，屬訂閱計費異常 bug（非官方計費規則調整）；官方尚未回應。
 - 🔴 **未修復**｜**Max 5x 升級至 Max 20x 失敗，顯示「Unable to update subscription」，回報者稱與 #10832、#50710、#43118 同屬相同模式（GitHub issue #55266，累積 39 則留言、1 個讚，2026-08-02）**：使用者回報將訂閱方案從 Max 5x 升級至 Max 20x 時失敗，出現「Unable to update subscription」錯誤；回報者指出此與此前三則已回報問題（#10832、#50710、#43118）呈現相同模式，暗示屬持續未解的訂閱升級系統性 bug（此為回報者主張，本站未逐一查證前三則 issue 內容）；與既有「升級方案付款失敗 `PaymentIntent` 遭 `void_invoice` 作廢」（issue #55982）、「付款訂閱 Max 5x 方案後帳號反遭停用」（issue #5088）同屬訂閱升級／付款流程不穩定的訊號，暫分列追蹤；官方尚未回應。定價/計費政策面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**Fable 5 於 Max 方案自 2026-07-20 起持續要求「usage credits required」並靜默降級為 Opus 4.8（GitHub issue #79337，累積 76 則留言、26 個讚，2026-07-25 首見，2026-09-02 互動數更新）**：使用者回報自 2026-07-20（Fable 5 成為 Max 方案標準模型當天）起，Claude Code 在 Max 方案上執行 Fable 5 時反覆跳出「usage credits required」提示並靜默降級為 Opus 4.8，即使 session 已存 `claude-fable-5[1m]` 設定仍會被覆蓋；症狀與同日已標記「已修復」的 Anthropic Status 事件（見「🌐 服務穩定性」）重疊，但本則回報顯示問題並未隨該事件解決而消失，屬持續性 regression 且已延燒逾 6 週；官方尚未針對此持續回報再次回應。定價/方案存取政策面另見 [[entities/pricing]]、[[topics/model-comparison]]；`[1m]` 變體遭覆蓋屬 1M model picker 控制權缺口，全貌見 [[topics/long-context-1m]]。
+- 🔴 **未修復**｜**Fable 5 於 Max 方案自 2026-07-20 起持續要求「usage credits required」並靜默降級為 Opus 4.8（GitHub issue #79337，累積 76 則留言、26 個讚，2026-07-25 首見，2026-09-02 互動數更新）**：使用者回報自 2026-07-20（Fable 5 成為 Max 方案標準模型當天）起，Claude Code 在 Max 方案上執行 Fable 5 時反覆跳出「usage credits required」提示並靜默降級為 Opus 4.8，即使 session 已存 `claude-fable-5[1m]` 設定仍會被覆蓋；症狀與同日已標記「已修復」的 Anthropic Status 事件（見「🌐 服務穩定性」）重疊，但本則回報顯示問題並未隨該事件解決而消失，屬持續性 regression 且已延燒逾 6 週；官方尚未針對此持續回報再次回應。定價/方案存取政策面另見 [[entities/pricing]]、[[topics/model-comparison]]；`[1m]` 變體遭覆蓋屬 1M model picker 控制權缺口。
 - 🔴 **未修復**｜**API Error: Rate limit reached，儘管訂閱 Claude Max 且僅使用 16% 額度（GitHub issue #29579，累積 153 則留言、94 個讚，2026-07-21）**：使用者回報訂閱 Claude Max 方案、用量儀表板僅顯示已用 16% 額度的情況下，仍收到「Rate limit reached」速率限制錯誤，顯示速率限制觸發條件與實際額度顯示可能未同步；與既有「額度顯示 84% 卻收到已達上限」（issue #19673）同屬額度計算與實際限制不一致的疑慮，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**方案 5 小時用量限額在不到 1 小時 30 分鐘內即用罄（GitHub Issues，累積 120 則留言、31 個讚，2026-07-19，今日互動量最高）**：使用者回報依標準 bug 回報範本提交，環境為 Anthropic API／Claude CLI v1.0.89，方案 5 小時用量限額實際不到 1 小時 30 分鐘即被用罄，遠低於預期使用時長；官方尚未回應，與既有「Max 訂閱方案立即觸及用量上限」（issue #16157）同屬配額消耗速度爭議，暫分列追蹤。
 - 🔴 **未修復**｜**「Server is temporarily limiting requests」錯誤與用量上限無關（GitHub issue #53915，累積 68 則留言、26 個讚，2026-07-13）**：使用者回報收到「伺服器暫時限制請求」的速率限制錯誤，官方訊息明確標註並非使用者用量上限所致；成因與是否可緩解官方尚未說明。
@@ -281,7 +281,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - ⚠️ 社群 09-20 流傳的「v2.1.234 新增、預設開啟、可在 `/config` 關閉」與官方週報三處皆不符（版本區間為 v2.1.225–233、非預設、週報未提 `/config`），**不採信**。
 - 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 25 個讚，2026-07-18）**：使用者回報升級訂閱方案時付款流程失敗，`PaymentIntent` 在確認（confirm）尚未完成前就被 `void_invoice` 動作立即作廢，導致升級無法完成；官方尚未回應。定價/計費層面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
-- 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費與控制權全貌見 [[topics/long-context-1m]]。
+- 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
 ### 🧠 行為與品質（67 條未修復、3 條已修復、1 條拒修、6 條查無官方、3 條❓）
 
@@ -291,7 +291,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
 - 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 36 則留言、93 個讚，首見 2026-10-04，2026-10-19 互動數更新）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
-- 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；詳見 [[topics/long-context-1m]]；官方未回應。
+- 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；官方未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
 - 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code agent 於約 100 秒內刪除 48,000 個檔案，事後主動道歉（TechRadar，2026-09-27）**：報導稱使用者的 agent session 極短時間內刪除近五萬檔案並主動致歉。

@@ -171,7 +171,7 @@ Claude Code 自己的官方記憶是 auto memory（依你的更正與偏好自�
 
 **2026-08-09 缺口的兩個切面各自累積：** #47023 彙整清單中的兩個成員本日各自延燒——跨 session 記憶訴求 [#14227](https://github.com/anthropics/claude-code/issues/14227) 累積至 34 則留言、跨 compaction 記憶訴求 #34556 累積至 62 則留言，合計 96 則留言；兩者訴求範圍不同（跨 session vs. 單一 session 內跨壓縮），但同屬本缺口，官方仍無回應，狀態不變。
 
-**2026-10-04 補兩筆證據：** 功能請求 [#11455](https://github.com/anthropics/claude-code/issues/11455)（Session Handoff／Continuity，10-03）累積 37 則留言、25 個讚，要的是新 session 能接續上一個 session 的工作；[#42542](https://github.com/anthropics/claude-code/issues/42542)（10-01）累積 28 則留言，回報 1M context 下三種機制靜默清除工具結果，同一個 session 內的脈絡也留不住（細節見 [[topics/long-context-1m]]）。兩筆本站來源均未見官方回應，狀態不變。
+**2026-10-04 補兩筆證據：** 功能請求 [#11455](https://github.com/anthropics/claude-code/issues/11455)（Session Handoff／Continuity，10-03）累積 37 則留言、25 個讚，要的是新 session 能接續上一個 session 的工作；[#42542](https://github.com/anthropics/claude-code/issues/42542)（10-01）累積 28 則留言，回報 1M context 下三種機制靜默清除工具結果，同一個 session 內的脈絡也留不住。兩筆本站來源均未見官方回應，狀態不變。
 
 ### 🧪 部分對應：平台可及性
 

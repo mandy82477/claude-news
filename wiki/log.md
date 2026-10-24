@@ -8115,3 +8115,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   5. **⏳ 已擱置 1 週** — `topics/community-tech-patterns` 的 `ai-job-search`（AI 求職自動化框架）是單一垂直應用、非做法，歸不進 19 類任何一類；社群記者建議依 `collection-scope` 判定不收，但刪除條目需人裁決。
   6. **⏳ 已擱置 1 週** — `topics/ai-agent-safety` 的 Cyber Verification Program 公告日期不一致：官方頁載 2026-10-06，本庫頁面標題標 10-07。安全政策記者未自行改標題，請裁示以哪一個為準。
   7. **⏳ 已擱置 1 週** — 5b 跨家榜單週更連續第 3 輪因雲端 egress（leaderboard 組 1/12 網域可達）跳過。這是**環境設定**：在 claude.ai 環境設定把網路存取改為 Custom 並加入 metr.org、openrouter.ai 等網域即可解；否則本步永遠只能留給本機 `/weekly` 步驟 0 承接。
+
+## 2026-10-24 Query（使用者：刪掉 1M context 頁）
+
+- 裁決：使用者在看過產品對照表後，要求刪除 [[topics/long-context-1m]]（含子頁 topics/long-context-1m-archive）。兩頁最後版本在 git 歷史（刪除前 HEAD e1c19cd7），內容未搬到別頁。
+- 連動：index 列、overview 當前局勢第 5 項、features/daily.md 負責頁面列、features/pages.md「topics/long-context-1m」觸發邊一節、review-registry 標籤字樣一併移除；claude-code（4 處）、fable-5（3）、opus-5、pricing（2）、code-quality-decline（2）、model-comparison、official-community-gap 的入鏈改指 [[entities/pricing]] 或刪句。對照表追蹤頁區由標頭角色機械算，自然少一列。
+- 規則面：1M 相關條目照 pages.md 原本的路由，回到 entities/claude-code（已知問題）與 entities/pricing（計費規則），不再有衍生頁；沿革記 docs/rules-changelog/wiki-ingest-features.md。
+- 歸因 user-query／功能
