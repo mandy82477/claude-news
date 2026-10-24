@@ -2015,7 +2015,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-10-23",
-      "lastUpdated": "2026-10-23",
+      "lastUpdated": "2026-10-24",
       "lastNewsUpdate": "2026-10-23",
       "updateFreq": "",
       "parent": "",
@@ -5683,7 +5683,7 @@ window.WIKI_DATA = {
     "summary": "這禮拜官方動了什麼、值不值得現在跟，以及跟上去會遇到什麼。"
   },
   "productMatrix": {
-    "checked": "2026-10-23",
+    "checked": "2026-10-24",
     "official": [
       {
         "group": "Products",
@@ -5881,12 +5881,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "claude-design",
-          "slug": "entities/claude-design",
-          "pageType": "entity",
-          "anchor": ""
-        }
+        "page": null
       },
       {
         "id": "Claude Design",
@@ -6241,12 +6236,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "cowork",
-          "slug": "entities/cowork",
-          "pageType": "entity",
-          "anchor": ""
-        }
+        "page": null
       },
       {
         "id": "Plugins",
@@ -6421,12 +6411,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "cowork",
-          "slug": "entities/cowork",
-          "pageType": "entity",
-          "anchor": ""
-        }
+        "page": null
       },
       {
         "id": "Memory",
@@ -6481,12 +6466,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "cowork",
-          "slug": "entities/cowork",
-          "pageType": "entity",
-          "anchor": ""
-        }
+        "page": null
       },
       {
         "id": "Research",
@@ -6596,12 +6576,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "feature-radar",
-          "slug": "feature-radar",
-          "pageType": "radar",
-          "anchor": "Claude 語音模式 Opus／Sonnet 模型選擇"
-        }
+        "page": null
       },
       {
         "id": "背景／排程任務",
@@ -6716,12 +6691,7 @@ window.WIKI_DATA = {
             "kind": "official"
           }
         },
-        "page": {
-          "id": "cowork",
-          "slug": "entities/cowork",
-          "pageType": "entity",
-          "anchor": ""
-        }
+        "page": null
       }
     ],
     "exclusive": [
@@ -6805,9 +6775,9 @@ window.WIKI_DATA = {
         "plans": "Pro／Max／Team／Enterprise",
         "abbr": "付費",
         "page": {
-          "id": "claude-code",
-          "slug": "entities/claude-code",
-          "pageType": "entity",
+          "id": "anthropic-agent-stack",
+          "slug": "topics/anthropic-agent-stack",
+          "pageType": "topic",
           "anchor": ""
         },
         "note": "/goal 跑到條件成立；workflows 付費方案可用，Pro 需在 /config 開",

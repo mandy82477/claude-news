@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** product matrix, 產品對照, product × feature
 **開始日期：** 2026-10-23
-**最後更新：** 2026-10-23
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-23
 
 > **最新動態**（2026-10-23）
@@ -87,7 +87,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** beta｜Team／Enterprise｜可在討論串貼出 claude.ai 託管頁，與 Claude Code 同款｜[來源](https://claude.com/docs/claude-tag/concepts/how-it-works)｜2026-10-23｜official
 - **Claude Platform：** unknown｜—｜管理指南逐列介面未含 API；Platform 只有 Compliance API 讀 artifacts｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
 - **Claude Duet：** unknown｜—｜管理指南逐列介面未含 Duet；Duet 說交回可編輯檔案，未稱 artifact｜[來源](https://claude.com/product/claude-duet)｜2026-10-23｜official
-- **出處：** [[entities/claude-design]]
+- **出處：** —
 
 ### Claude Design
 
@@ -147,7 +147,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** beta｜Team／Enterprise｜管理員依頻道設的 Tag connectors；個人 connector 需允許｜[來源](https://claude.com/docs/claude-tag/overview)｜2026-10-23｜official
 - **Claude Platform：** beta｜API（按量計費）｜Messages API 的 MCP connector 仍標 beta｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
 - **Claude Duet：** preview｜美國 Pro／Max（候補名單）｜沿用 Claude app 已連的 app，稱 6,000+｜[來源](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)｜2026-10-23｜official
-- **出處：** [[entities/cowork]]
+- **出處：** —
 
 ### Plugins
 
@@ -177,7 +177,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** unknown｜—｜官方未提及｜[來源](https://claude.com/docs/claude-tag/overview)｜2026-10-23｜official
 - **Claude Platform：** unknown｜—｜API 有 browser use 工具，不是這個擴充｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
 - **Claude Duet：** unknown｜—｜官方未提及｜[來源](https://claude.com/product/claude-duet)｜2026-10-23｜official
-- **出處：** [[entities/cowork]]
+- **出處：** —
 
 ### Memory
 
@@ -187,7 +187,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** beta｜Team／Enterprise｜依頻道記筆記，公開頻道可存全工作區｜[來源](https://claude.com/docs/claude-tag/concepts/how-it-works)｜2026-10-23｜official
 - **Claude Platform：** available｜API（按量計費）｜Memory tool，由開發者自管儲存｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
 - **Claude Duet：** preview｜美國 Pro／Max（候補名單）｜沿用 Claude app 的記憶｜[來源](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)｜2026-10-23｜official
-- **出處：** [[entities/cowork]]
+- **出處：** —
 
 ### Research
 
@@ -207,7 +207,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** unknown｜—｜官方未提及｜[來源](https://claude.com/docs/claude-tag/overview)｜2026-10-23｜official
 - **Claude Platform：** unknown｜—｜官方未提及｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
 - **Claude Duet：** preview｜美國 Pro／Max（候補名單）｜可用文字或語音傳訊｜[來源](https://support.claude.com/en/articles/17631495-get-started-with-claude-duet)｜2026-10-23｜official
-- **出處：** [[feature-radar#Claude 語音模式 Opus／Sonnet 模型選擇]]
+- **出處：** —
 
 ### 背景／排程任務（含 Claude Code scheduled tasks，原 Routines）
 
@@ -227,7 +227,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Tag：** unknown｜—｜官方未提及｜[來源](https://claude.com/docs/claude-tag/overview)｜2026-10-23｜official
 - **Claude Platform：** available｜API（按量計費）｜Claude API 正式；AWS／Bedrock／Foundry 為 beta｜[來源](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool)｜2026-10-23｜official
 - **Claude Duet：** unknown｜—｜產品頁說在自己的雲端電腦上用你連的 app，未稱 computer use｜[來源](https://claude.com/product/claude-duet)｜2026-10-23｜official
-- **出處：** [[entities/cowork]]
+- **出處：** —
 
 ## 只在一個產品裡
 
@@ -239,7 +239,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 | Claude app | Claude for Microsoft 365 | available | Pro／Max／Team／Enterprise | — |
 | Claude Code | Claude Mods | available | Pro／Max／Team／Enterprise | [[entities/claude-mods]] |
 | Claude Code | Code Review（GitHub App） | available | Team／Enterprise | [[entities/claude-code]] |
-| Claude Code | /goal 與 dynamic workflows | available | Pro／Max／Team／Enterprise | [[entities/claude-code]] |
+| Claude Code | /goal 與 dynamic workflows | available | Pro／Max／Team／Enterprise | [[topics/anthropic-agent-stack]] |
 | Claude Platform | Managed Agents | beta | API（按量計費） | [[entities/managed-agents]] |
 
 **細節**
@@ -270,6 +270,8 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude for Legal**：名稱只出現在 GitHub 外掛連結與研討會標題；外掛涵蓋合約審閱、NDA 分流、合規｜[來源](https://claude.com/solutions/legal)｜2026-10-23｜official
 
 ## 怎麼讀這張表
+
+- **出處欄只連專屬頁**：功能有自己的 wiki 頁（或頁面標頭明寫「含此功能」）才填；Artifacts、Connectors、Chrome、Memory、語音、電腦操作目前沒有專屬頁，出處為「—」，網站面板不放連結（2026-10-24 使用者裁決）。
 
 - **available（可用）**：官方寫明正式可用。網站上是實心方塊，後接方案縮寫：全＝Free 起、付費＝Pro 起、T/E＝Team／Enterprise、P/M＝Pro／Max、API＝按量計費、美 P/M＝美國 Pro／Max 候補。
 - **beta／preview（測試／研究預覽）**：官方標 beta 是實線框，研究預覽或候補名單是虛線框。

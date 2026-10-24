@@ -821,7 +821,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
         const f = pmxFeat(sel.f), p = pmxProd(sel.p), c = pmxCell(f, sel.p);
         h = `${close}<div class="pmx-panel__kicker">${esc(p.short)} × ${esc(f.full)}</div><div class="pmx-panel__title">${pmxMk(c.status)}${esc(PMX_STATUS[c.status])}</div>
 <dl class="pmx-q"><div><dt>方案</dt><dd>${c.plans ? esc(c.plans) : '<span class="pmx-na">官方未寫</span>'}</dd></div><div><dt>說明</dt><dd>${esc(c.note)}</dd></div><div><dt>來源</dt><dd>${pmxSrc(c.source)}</dd></div><div><dt>查證日</dt><dd><span class="pmx-num">${esc(c.checked)}</span></dd></div><div><dt>來源種類</dt><dd>${esc(PMX_KIND[c.kind] || c.kind)}</dd></div></dl>
-${pmxOpenBtn(f.page || p.page, `看「${f.name}」的 wiki 頁`)}`;
+${pmxOpenBtn(f.page, `看「${f.name}」的 wiki 頁`)}`;  // 功能沒有專屬頁就不放連結，不退回產品頁（2026-10-24 使用者裁決）
       } else if (sel.t === 'prod') {
         const p = pmxProd(sel.p);
         h = `${close}<div class="pmx-panel__kicker">產品欄</div><div class="pmx-panel__title">${esc(p.name)}</div>
