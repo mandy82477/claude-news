@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 
-> **Agent 預算控制新增 hook 防護工具**（2026-10-23）
-> - **rbartoli/agent-usage-guard**：Claude Code hook，用量超過 80% 時防止繼續生出子 agent、快取過期或內容過大時提前提示壓縮，作者自述 75 天內單次爆量 agent 數從 365 降到 27。
+> **又一款跨 agent 用量監控工具：macOS 選單列、本地追蹤 25 種以上 agent**（2026-10-24）
+> - **Nanako0129/syrtis**：原生 Swift 選單列小工具，本地追蹤 Claude Code、Codex、Cursor、OpenCode 等 25 種以上 agent 的 token 用量與配額，附 3D 貢獻圖；延續每隔數天出現新實作的用量監控工具系列。
 
 ---
 
@@ -73,6 +73,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Nanako0129/syrtis：macOS 選單列原生 Swift 用量監控，本地追蹤 25 種以上 agent（2026-10-24）
+
+- **主線：** —
+- **核心模式：** macOS 選單列 AI token 用量／配額監控工具，原生 Swift 打造（Liquid Glass 介面），本地追蹤 Claude Code、Codex、Cursor、OpenCode 等 25 種以上 agent 的用量，另附 3D 累積貢獻圖；GitHub Search 501 星。
+- **與既有模式的關係：** 此類用量監控工具持續每隔數天出現新實作（如 10-13 tokentab、09-25 同日三款、09-20 Usage-Monitor），模式概覽表無對應類別收留；差異在本則單一工具同時覆蓋 25 種以上 agent，既有做法多鎖定 1–3 款；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（501★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Nanako0129/syrtis)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### rbartoli/agent-usage-guard：Claude Code hook 防用量窗口被幾分鐘內燒完（2026-10-23）
 

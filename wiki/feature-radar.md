@@ -69,6 +69,21 @@
 
 ## 🆕 最新功能（2026-10）
 
+### Claude Code Monitor tool（plugin 監控）
+**發布：** 2026-10-23（v2.1.310） | **狀態：** 正式發布
+
+**是什麼：** 新增 Monitor tool，可在 Bedrock、Vertex、Foundry 平台監看 plugin；同版起，停用 telemetry 或非必要流量時，連長時間 foreground sleep 都會被攔阻。
+
+**為何熱：** 官方 v2.1.310 release notes 列為首項異動；日報「今日聚焦」標為重大事件；單一 GitHub Release 來源，尚無社群討論。
+
+**快速上手：**
+```
+官方 release notes 未附具體指令／旗標名稱，隨 v2.1.310 升級後於 Bedrock／Vertex／Foundry 自動啟用
+停用 telemetry 下跑長 foreground sleep 的自動化腳本應改寫
+```
+
+**注意事項：** 設定項與完整行為官方文件尚未補齊；在這些平台跑自動化或背景任務的團隊升級前應檢查腳本是否依賴長 sleep。
+
 ### Message Threads API ＋依維度拆分用量費用報表
 **發布：** 2026-10-23（anthropic-sdk-python v2.2.0／anthropic-sdk-typescript vertex-sdk-v1.1.0） | **狀態：** 正式發布
 
@@ -743,6 +758,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
 | **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
@@ -830,7 +846,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **`autoMode.classifyAllShell` 設定**（Claude Code v2.1.193，所有 Bash/PowerShell 路由 auto-mode 分類器） | 2026-06-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **`/rewind` 指令**（Claude Code，從 `/clear` 前節點恢復 context） | 2026-06-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **SDK `client.system.message`**（TypeScript v0.106.0 / Python v0.112.0） | 2026-06-25 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Tag**（Slack-native AI 協作工具，65% Anthropic 程式碼由其生成） | 2026-06-24 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Tag**（Slack-native AI 協作工具，65% Anthropic 程式碼由其生成；2026-10-23 新增 Claude Enterprise 組織 API endpoint） | 2026-06-24 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **sandbox.credentials + 組織模型限制**（Claude Code v2.1.187） | 2026-06-24 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **MCP CLI 認證指令**（`claude mcp login/logout`，v2.1.186） | 2026-06-22 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **MCP Enterprise Authorization**（Okta / VS Code 零設定 SSO） | 2026-06-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

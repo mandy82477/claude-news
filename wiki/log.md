@@ -8122,3 +8122,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 連動：index 列、overview 當前局勢第 5 項、features/daily.md 負責頁面列、features/pages.md「topics/long-context-1m」觸發邊一節、review-registry 標籤字樣一併移除；claude-code（4 處）、fable-5（3）、opus-5、pricing（2）、code-quality-decline（2）、model-comparison、official-community-gap 的入鏈改指 [[entities/pricing]] 或刪句。對照表追蹤頁區由標頭角色機械算，自然少一列。
 - 規則面：1M 相關條目照 pages.md 原本的路由，回到 entities/claude-code（已知問題）與 entities/pricing（計費規則），不再有衍生頁；沿革記 docs/rules-changelog/wiki-ingest-features.md。
 - 歸因 user-query／功能
+
+## 2026-10-24 Ingest
+
+- 來源日報：[[news/2026-10-24]]
+- 更新頁面：
+  - **人物**：無
+  - **功能**：entities/claude-code.md、entities/claude-tag.md、topics/claude-code-experimental.md
+  - **商業**：entities/pricing.md、topics/anthropic-business.md、topics/competitor-landscape.md
+  - **安全政策**：topics/ai-agent-safety.md
+  - **模型**：entities/opus-5-5.md、entities/mythos.md
+  - **社群**：topics/community-cost.md、topics/community-interfaces.md、topics/community-integrations.md、topics/community-tech-patterns.md、topics/community-tech-discussions.md
+- 新增頁面：無
+- feature-radar：新增「Claude Code Monitor tool」（v2.1.310，🔥，⏳ 觀望）；Claude Tag 熱度 🔥→🔥🔥（v2.3.0 新增 Enterprise endpoint）
+- index：無狀態變更
+- 摘要：Claude Code v2.1.310 新增 Monitor tool；Anthropic 官方研究報告公開 UK AISI CTF 測試量化數字（43 次評估 9 次逾越範圍），與既有 WSJ 數字並陳待核；Schwab 對 RIA 新增 20 席門檻排除逾 1.1 萬家小型顧問公司；Windows VS Code 擴充功能致 Claude Code 當機（56 留言）。
+- 呈現品質：全部通過
+- 分類回退：1 筆——「Anthropic targets Muse and Dots with new AI agent, Claude Duet - Computerworld」功能→商業（純策略表態、無新功能數字），已依 SKILL.md 步驟 3b 合併追加派工，商業記者已收錄進 topics/competitor-landscape.md
+- 轉知帳本：開立 H-6ced0e（安全政策→模型，Mythos CTF 測試次數官方新數字 vs WSJ 舊數字落差）；結案 H-46b3a1（商業，entities/pricing Opus 5→5.5 現況更正）、H-7e3132（社群，community-tech-discussions 韓銀行事件歸因更正）；void H-59807e（功能核對：產品化矩陣候選不符 official-community-gap 入列判準，理由成立）
+- 待使用者確認（本輪新增，非前述擱置清單重複）：
+  1. [功能] GitHub Issue #7490（Bash tool 可設定 shell，150 讚）已達 official-community-gap 入口判準①，但判準③「官方補到哪」需一手查證（記者無 web 工具），請主編／使用者查證後決定是否開新列。
+  2. [商業] topics/anthropic-business「哪個合作會改到你用的 Claude」表已 6/6 滿載，Schwab RIA 20 席門檻事件符合入表判準②卻無既定讓位機制（`.claude/reporter-rules/commercial/pages.md` 第 5 條未給此表讓位規則，不同於第 1、4 條），請裁示依「影響價格＞影響功能可用性＞資料落地」優先序讓位或維持現狀。

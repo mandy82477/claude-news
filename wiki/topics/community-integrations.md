@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 
-> **新增帶登入態操控瀏覽器的 MCP 外掛**（2026-10-22）
-> - **alchaincyf/huashu-chrome**：MCP ＋ Chrome 擴充套件，讓 Claude Code、Codex、Cursor、Gemini CLI 等 agent 操控使用者自己已登入的 Chrome（503★）。
+> **創意工具整合再添一例：單一提示生成繪圖 artifact**（2026-10-24）
+> - **Simon Willison：Quick Study**：提示 Opus 5.5 以 Sobel 邊緣偵測與模擬畫筆，數秒內把照片畫成畫作，不依賴外部創作軟體。
 
 ---
 
@@ -58,6 +58,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Simon Willison：Quick Study，Opus 5.5 以 Sobel 邊緣偵測即時模擬畫筆作畫（2026-10-24）
+
+- **主線：** —
+- **核心模式：** Simon Willison 提示 Claude Opus 5.5 High 打造 artifact：開啟一張照片後，用 canvas 元素與模擬畫筆於數秒內「畫」出該照片的畫作版本，核心技術為 Sobel 邊緣偵測，除 Google Fonts 外無外部函式庫；延續其先前用 Fable 模擬水彩插畫（P5.js）的實驗系列。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「單一提示生成獨立繪圖 artifact」取向——既有代表技巧多是把 agent 接上既有創作軟體（Aseprite、Unity、Blender），本則是模型直接生成繪圖程式本身，不依賴外部創作工具；非大型 codebase 特有痛點，主線填 —。
+- **來源：** Blog／Simon Willison（具名開發者第一手實作記錄）；[原文](https://simonwillison.net/2026/Oct/23/quick-study-painter/)
+- **成熟度：** ⏳ 新興（單次示範，非工具發布，無法複用為套件）
 
 #### alchaincyf/huashu-chrome：MCP＋Chrome 擴充套件，讓 agent 帶著使用者登入態操控瀏覽器（2026-10-22）
 

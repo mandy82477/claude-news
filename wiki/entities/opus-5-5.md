@@ -31,19 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-20
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 
-> **GitHub 展示案例**（2026-10-20）
-> GitHub repo 彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，本庫首次收錄）；forks／issues 未查證，屬弱訊號。
+> **LiveNerf 追蹤第 29 天**（2026-10-24）
+> 社群基準測試稱「看不出被降規」，仍未附具體數字；30 天結論預計近日公布。
 
 ---
 
 ## 現況
 
-**2026-10-20 最新**：GitHub repo「opus-video-prompts」彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，GitHub Search，本庫首次收錄）；forks／issues 未查證，依弱訊號處理，細節見「歷史記錄細節」。
+**2026-10-22 最新**：Reddit livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新，仍未附具體數字或測試方法；30 天結論預計近日（約 10-24）公布，細節見「這些數字是誰量的」與「歷史記錄」。
 
-**2026-09-23 最新**：Anthropic 發布 Claude Opus 5.5（API ID `claude-opus-5-5`），Claude Code v2.1.280 已將其設為預設 Opus 模型；Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5（官方 models overview（2026-09-23 查證））。官方稱多數工作表現追平 [[entities/fable-5|Fable 5.1]]、運算成本降 40%（相對 Opus 5）；媒體另有「API 價格便宜 60%」一說，兩個百分比對照的基準不同，見下方「這些數字是誰量的」。[[entities/opus-5|Opus 5]] 與 Fable 5 同步改列 Legacy，仍可用（2026-09-23 查證）。
+**2026-10-20**：GitHub repo「opus-video-prompts」彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，GitHub Search，本庫首次收錄）；forks／issues 未查證，依弱訊號處理，細節見「歷史記錄細節」。
 
 上線同時伴隨資安相關防護機制強化（The Verge 報導），紐約時報將此次發布放進近期 AI 安全爭論的脈絡報導；機制細節與爭議屬安全政策線，本頁僅記模型面，完整脈絡見 [[topics/ai-agent-safety]]。定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
@@ -93,7 +93,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **HN 討論**（1,674 分，7 個來源同日交叉報導，2026-09-22）：屬互動量訊號，非能力數字。
 - **社群反應正向但屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wqcara/aight_i_get_it_opus_55_is_actually_peak/)稱程式碼品質與可控性優於前代；另兩則（[複現實測](https://www.reddit.com/r/ClaudeAI/comments/1wovwao/jaw_literally_dropped_i_ran_the_prompt_from_the/)、[原展示貼文](https://www.reddit.com/r/ClaudeAI/comments/1wogab3/made_entirely_with_opus_55_321_of_openrouter_api/)）以約 $3–4 API 花費重現 Opus 5.5 專案。三則皆單則貼文、0 留言、無測試方法或量化指標，不構成獨立複測。
 - **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；未附測試方法或量化指標、0 留言，屬主觀觀感，不構成已驗證的能力下降；同類主張累計見 [[topics/code-quality-decline]]。
-- **livenerf 追蹤進入第 20 天，仍無結論**：dev.to 貼文稱已為 Opus 5.5 建立第 0 天基準線、每日重測連續 30 天，最早約 10-24 才能下結論（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30；3 讚，題組與評分方法未見載）；[Day 20 更新貼文](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)登上 Reddit 週熱門（0 留言，2026-10-14），仍未附具體數字，不能拿來支持或反駁上則。
+- **livenerf 追蹤第 29 天，仍稱「看不出被降規」**：[Day 29 貼文](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)延續 10-03 建立的第 0 天基準線（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30）與 10-14 [Day 20 更新](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)，三則均未附具體數字或測試方法；30 天結論預計近日（約 10-24）公布，不能拿來支持或反駁上則觀感回報。
 - **500 個自製時鐘創意展示**：Hacker News 讀者分享作者連續多個 Claude 對話工作階段，以 Opus 5.5 生成 500 個各具巧思的自製時鐘網頁（單一 6.3 MB HTML 檔案），作者稱為個人版「鵜鶘騎自行車」創意測試基準；屬單一創意展示，非量化基準或複測（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源，2026-10-18）。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
@@ -174,6 +174,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Reddit r/ClaudeAI：Are They Nerfing Opus 5.5? Livenerf Day 20 update](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)（週熱門，2026-10-14）
 - [Show HN：500 clocks in one 6.3 MB HTML file by Opus 5.5](https://tkgally.github.io/500-clocks/)（HN 54 分，2026-10-18）
 - [joeseesun/opus-video-prompts](https://github.com/joeseesun/opus-video-prompts)（GitHub Search，503 星，2026-10-20）
+- [Reddit r/ClaudeAI：Did they nerf Opus 5.5? Doesn't look like it. LiveNerf day 29 update](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)（週熱門，2026-10-22）
 - [[news/2026-09-23]]
 - [[news/2026-09-27]]
 - [[news/2026-09-30]]
@@ -190,6 +191,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-22 | livenerf 第 29 天更新稱「看不出被降規」，仍未附具體數字（0 留言，弱訊號）|
 | 2026-10-20 | GitHub repo `opus-video-prompts` 彙整 54 個 Opus 5.5 程式碼生成影片提示詞案例（503 星，forks／issues 未查證）|
 | 2026-10-18 | Hacker News 分享「500 clocks in one 6.3 MB HTML file by Opus 5.5」，作者連續多場對話生成 500 個自製時鐘頁面，創意展示非基準（54 分，2 個來源）|
 | 2026-10-14 | livenerf 系列追蹤「Opus 5.5 是否被偷偷降規」進入第 20 天，登 Reddit 週熱門，仍無結論（0 留言，弱訊號）|
@@ -202,6 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **歷史記錄細節**
 
+- **2026-10-22**：Reddit r/ClaudeAI livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新；0 留言、未附具體數字或測試方法，30 天結論預計近日（約 10-24）公布（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)，週熱門，2026-10-22）
 - **2026-10-20**：GitHub repo [joeseesun/opus-video-prompts](https://github.com/joeseesun/opus-video-prompts) 彙整 54 個以 Claude Opus 5.5 生成程式碼渲染影片的提示詞案例，含可直接複製的 prompt（503 星；fork／issue／近期 commit 活躍度未查證，依弱訊號處理）（GitHub Search，2026-10-20）
 - **2026-10-18**：Hacker News 貼文《500 clocks》，作者以 Opus 5.5 生成 500 個自製時鐘網頁，作為個人版「鵜鶘騎自行車」創意測試；單一創意展示，非量化基準（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源）
 - **2026-10-14**：Reddit r/ClaudeAI 貼文稱 livenerf 追蹤「Opus 5.5 是否被偷偷降規」系列更新進入第 20 天，登上一週熱門榜；0 留言、未附具體數字或測試方法，結論預計 10-24 前後公布，承接 2026-10-03 第 0 天基準線記錄（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)，週熱門，2026-10-14）

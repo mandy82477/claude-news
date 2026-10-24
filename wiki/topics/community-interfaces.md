@@ -32,11 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
 **最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-23
+**最後新聞更新：** 2026-10-24
 
-> **手機遠端控制再添一例反向案例，可視化新增多 session 儀表板**（2026-10-23）
-> - **witchan/ios-mcp**：iOS 自動化工具與 MCP Server，讓 AI agent 看懂 iPhone 畫面並直接操作，與 10-18 的 iCTRL 同屬「agent 操作手機」反向取向。
-> - **ccdeck**：本機儀表板統一顯示多個 Claude Code／Codex session 與子 agent 樹狀結構，解決漏看待回覆 session 的問題。
+> **Agent 活動可視化再添一個終端機多工器**（2026-10-24）
+> - **Corgi**：agent／終端機多工器，統一管理多組 Claude Code、Codex、Pi session，逐 agent 活動 feed＋F1 跳至下一個未讀；HN 104 分（2 來源）。
 
 ---
 
@@ -57,6 +56,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Show HN: Corgi——agent／終端機多工器，統一管理多組 Claude Code／Codex／Pi session 並附活動 feed（2026-10-24）
+
+- **主線：** 並行規模
+- **核心模式：** 桌面 agent／terminal 多工器，日常使用數週；顯示每個 agent 目前在做什麼與逐 agent 活動動態 feed，F1 快捷鍵跳至下一個未讀 agent，支援多帳號同時開；HN score 104（2 個來源）。
+- **與既有模式的關係：** 補上「Agent 活動可視化」一個「多工器內建活動 feed＋未讀捷徑」做法；與 10-23 ccdeck 同屬總覽多 agent 進度，差異在聚焦跨工具（Claude Code／Codex／Pi）活動 feed 而非樹狀結構，故主線填並行規模。
+- **來源：** Hacker News（104 分，2 個來源）；[原文](https://corgi.computer/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，作者自述已作為日常工具使用數週，尚無第三方量化數據）
 
 #### witchan/ios-mcp：iOS 自動化工具與 MCP Server，讓 AI agent 看懂 iPhone 畫面並直接操作手機（2026-10-23）
 

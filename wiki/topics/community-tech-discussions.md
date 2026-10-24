@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-23
+**最後更新：** 2026-10-24
 **最後新聞更新：** 2026-10-23
 
 > **Simon Willison 引述 Armin Ronacher 評 AI 寫程式**（2026-10-23）
@@ -161,7 +161,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
 | Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-19 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch；10-19 送審後審查抓到 race condition，實測 23 倍提升（3 來源） | — |
 | Reddit 使用者稱用 Claude Code 輔助分析找到疑似未知行星，留言提及類似自主流程已用於超導材料研究 | 2026-10-08 · 2026-10-08 | 🔥🔥🔥 | ☄️閃現 | 使用者稱用 Claude Code 輔助分析資料找到疑似未知行星；留言稱類似自主 agent 研究流程已在超導材料系統上有新進展；HN score 67（原帖為 Reddit） | — |
-| 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成 | 2026-10-08 · 2026-10-08 | 🔥 | ☄️閃現 | Reddit 週熱門轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成；0 留言，報告未見（媒體轉述，待社群接力） | — |
+| 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成 | 2026-10-08 · 2026-10-24 | 🔥 | 🌋重燃 | CrowdStrike 報告查證確認多款 LLM 並用，歸因華語財務動機個人而非國家背景（重燃原因：2026-10-24 查證結果公布） | — |
 | Show HN: Agent.reviews——讓 AI agent 互相留下工具使用評價 | 2026-10-07 · 2026-10-07 | 🔥🔥🔥 | ☄️閃現 | 開發者推出平台讓 AI agent（含 Claude）像人類留評價般評比用過的工具與 MCP；稱已從逾 5 萬個 agent session 觀察到重複踩坑模式；HN score 64（2 來源） | — |
 | Reddit r/ClaudeCode 週熱門：自嘲「成功把事情自動化成更複雜」 | 2026-10-05 · 2026-10-05 | 🔥 | ☄️閃現 | 使用者以自嘲語氣調侃團隊把「自動化」做成了另一層複雜度，而非真正簡化流程；Reddit r/ClaudeCode 週熱門標記（僅標題可考） | — |
 | Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者 | 2026-10-06 · 2026-10-06 | 🔥🔥🔥 | ☄️閃現 | 部落格主張事後跳出的建議訊息實際是說給模型自己聽；以 LLM 接續「start of user」提示的機制類推；HN score 255，近期單篇互動量最高技術評論 | — |
@@ -335,7 +335,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **來源：** Last week some of South Korea's biggest banks were hit by a cyberattack... — Reddit / r/LocalLLaMA（週熱門，0 留言）；[原文](https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/)
 - **核心論點：** 貼文轉述 CrowdStrike 的說法，稱南韓多家大型銀行上週遭遇網路攻擊，整套攻擊鏈可能由單一人士結合開源滲透測試工具 ARTEX，搭配 DeepSeek v4.1-Flash、GLM-5.3、Grok 4.6 與 Claude Code 等多款 AI 工具完成
 - **關鍵回響：**（0 留言，本次摘要未見跟進佐證或社群延燒）
-- **收斂結論：**（無）僅為社群轉述、原始 CrowdStrike 報告未見，攻擊鏈細節與真實性皆待官方報告佐證；安全意涵與攻擊鏈分析見 [[topics/ai-agent-safety]]，本頁僅記錄這則轉述在社群本身的熱度與反應
+- **收斂結論：** 後續（2026-10-24）：CrowdStrike 報告（經媒體轉述）證實多款 LLM 並用，以中等信心歸因華語財務動機個人，未歸因國家背景，與本貼文「單人結合多工具」主張大致吻合；攻擊鏈細節與安全意涵見 [[topics/ai-agent-safety]]
 
 #### Claude Code 的「建議訊息」功能，實際上是說給模型自己聽（2026-10-06）
 

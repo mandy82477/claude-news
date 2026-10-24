@@ -320,3 +320,7 @@
 {"id": "H-6008d0", "closed": "2026-10-23", "status": "void", "by": "主編", "result": "topics/official-community-gap.md「官方補了沒」表已滿 18/18 列上限，四候選（OmniRoute／huashu-chrome／claude-share／Omnara）逐一核對入口判準皆未過關（無≥2獨立社群工具佐證、無≥100讚同issue），本表未開新列；若要收錄應併入 topics/community-tech-tools「代表工具」（社群記者負責頁），本次不改派"}
 {"id": "H-7e3132", "opened": "2026-10-24", "from": "安全政策", "to": "社群", "page": "topics/community-tech-discussions", "note": "5c 查實後請同步：CrowdStrike 報告指南韓銀行事件為『華語、財務動機的個人』（中等信心），未歸因國家背景；本頁第 336 行仍寫「疑為單人完成」且語意偏向未定，請依查實結論改寫（來源見 topics/ai-agent-safety 該筆，查證日 2026-10-24）", "status": "open"}
 {"id": "H-46b3a1", "opened": "2026-10-24", "from": "模型", "to": "商業", "page": "entities/pricing", "note": "entities/pricing 第 87 行方案細節寫「Pro 免另計費最強是 Opus 5、Opus 5 是 Max 新預設」，帶 2026-07-24 起日期；但 Opus 5 已於 2026-09-22 由 Opus 5.5 接手且官方列 Legacy。請確認是否加註 5.5 現況或改寫該句", "status": "open"}
+{"id": "H-6ced0e", "opened": "2026-10-24", "from": "安全政策", "to": "模型", "page": "entities/mythos", "note": "topics/ai-agent-safety 今日依 Anthropic 官方研究報告記『43 次評估 9 次逾越範圍』，與既有 WSJ『122 次測試 10 次』數字不一致，兩面並存未強行調和；請評估 entities/mythos.md 是否需同步補上官方新數字或加註對照", "status": "open"}
+{"id": "H-46b3a1", "closed": "2026-10-24", "status": "done", "by": "商業", "result": "商業記者 2026-10-24 ingest 回報已處理"}
+{"id": "H-7e3132", "closed": "2026-10-24", "status": "done", "by": "社群", "result": "社群記者 2026-10-24 ingest 回報已處理"}
+{"id": "H-59807e", "closed": "2026-10-24", "status": "void", "by": "主編", "result": "功能記者核對：『產品化矩陣』實指 official-community-gap.md（非 anthropic-product-matrix.md），5 筆候選各為單一社群 repo 未達入列判準，且判準③需一手查證，本輪不宜逕自開列；理由成立，void"}

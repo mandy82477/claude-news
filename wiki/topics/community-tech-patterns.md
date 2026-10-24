@@ -30,15 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-23
+**最後新聞更新：** 2026-10-24
 
-> **五個子頁新增做法，另一則新工具暫未歸類**（2026-10-23）
-> - **行動裝置遠端控制**：witchan/ios-mcp，iOS 自動化與 MCP Server 讓 agent 看懂並操作 iPhone 畫面，見 [[topics/community-interfaces#2026-10]]。
-> - **Agent 活動可視化**：ccdeck，本機儀表板統一顯示多個 session 與子 agent 樹狀結構，見 [[topics/community-interfaces#2026-10]]。
-> - **規格驅動開發**：nick-vels/skills，描述想法即自動寫規格、拆任務、實作並對照需求檢查，見 [[topics/community-guardrails#2026-10]]。
-> - **Skills 設計**：Masriyan/Claude-Code-CyberSecurity-Skill，22 個資安專用 skills 合集，見 [[topics/community-skills#2026-10]]。
-> - **Agent 預算控制**：rbartoli/agent-usage-guard，hook 防用量窗口被幾分鐘內燒完，見 [[topics/community-cost#2026-10]]。
-> - **未歸類**：ai-job-search（AI 求職自動化框架，本庫存量盤點今日首次收錄），見 [[topics/community-tech-patterns#技術彙整]]。
+> **兩個子頁新增做法：終端機多工器與單一提示創作 artifact**（2026-10-24）
+> - **Agent 活動可視化**：Show HN: Corgi，agent／終端機多工器，統一管理多組 Claude Code／Codex／Pi session 並附活動 feed，見 [[topics/community-interfaces#2026-10]]。
+> - **創意工具 Agent 整合**：Simon Willison 的 Quick Study，提示 Opus 5.5 以 Sobel 邊緣偵測數秒內把照片畫成畫作，見 [[topics/community-integrations#2026-10]]。
 
 ---
 
@@ -58,11 +54,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-21 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-23 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-24 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計 | 2026-10-23 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-23 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-22 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-23 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-24 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-24 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 
@@ -85,8 +81,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router、Atticus（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-22 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **記憶與知識管理** | claude-mem、projectmem、second-brain-os、deja-vu、jatechan/ai-data-extractor 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-21 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、vscode-bridge 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
-| **創意工具 Agent 整合** | Palmier Pro、reelmimic、GodotMaker、with-pebbly/aseprite-ai-artist 等（[[topics/community-integrations#2026-10]]） | ⏳ 新興 | 2026-10-21 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
-| **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck 多 session 儀表板、claude-share 多人共看等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-23 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
+| **創意工具 Agent 整合** | Palmier Pro、reelmimic、GodotMaker、Quick Study 等（[[topics/community-integrations#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck、claude-share、Corgi 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **Agent 預算控制** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
 | **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-10]]） | ⏳ 新興 | 2026-10-21 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
 | **安全架構** | Grepathy、OneCLI、agent-scan、ThinkWatch-Lite、WaLiAPI、awesome-claude-code-mods 等（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-16 | AI 加速開發下的系統性防線；CI 攔截語義退化 |

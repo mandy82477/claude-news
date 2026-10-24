@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-23）
-> 2.1.309（自 2.1.308 起比對）新增 4 個第一階候選旗標：`CCR_OWN_CONNECTION_POOL`、`DISABLE_ULTRAREVIEW_TRUST_CHECK`、`RESUME_SHOWS_CUT_OFF_CALLS`、`SYNC_PLUGINS_DOWNLOAD_CONCURRENCY`；對帳僅命中來源條目與日報鏡像，不升第二階。
+> **最新動態**（2026-10-24）
+> 2.1.310（自 2.1.309 起比對）新增 4 個第一階候選旗標：`ARTIFACT_ASK_FIRST`、`DESKTOP_CONNECTOR_NAMES`、`RETRY_WATCHDOG_SCOPE`、`TOOL_CONTAINER_PLUGINS_NAMED`；對帳僅命中來源條目與日報鏡像，不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.310（10-23，自 2.1.309 起）新增 4 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.309（10-22，自 2.1.308 起）新增 4 個候選旗標**（名單見追蹤表），皆第一階；另有 1 個設定類旗標（逾時、識別碼等）來源已過濾不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.308（10-22，自 2.1.306 起）新增 6 個候選旗標＋代號旗標 `WITTY_DEWDROP`**（名單見追蹤表），皆第一階；`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失（首見早於追蹤範圍）；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.306（10-21）新增 6 個候選旗標**：auto mode 郵件寄送兩項、CCR 設定被拒後提前同步與事件排出策略、`CONSENT_POINTERLESS`、`ENTRYPOINT_ON_REQUESTS`（見追蹤表），皆第一階；`SETTLE_TOUCHED_FILES` 消失列 4 階；對帳僅命中來源條目，暫不升第二階。
@@ -65,6 +66,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_ARTIFACT_ASK_FIRST` | 2.1.310（10-23） | 1 | — | — | 2.1.310 仍在（比對日 10-23） |
+| `CLAUDE_CODE_DESKTOP_CONNECTOR_NAMES` | 2.1.310（10-23） | 1 | — | — | 2.1.310 仍在（比對日 10-23） |
+| `CLAUDE_CODE_RETRY_WATCHDOG_SCOPE` | 2.1.310（10-23） | 1 | — | — | 2.1.310 仍在（比對日 10-23） |
+| `CLAUDE_CODE_TOOL_CONTAINER_PLUGINS_NAMED` | 2.1.310（10-23） | 1 | — | — | 2.1.310 仍在（比對日 10-23） |
 | `CLAUDE_CODE_CCR_OWN_CONNECTION_POOL` | 2.1.309（10-22） | 1 | — | — | 2.1.309 仍在（比對日 10-22） |
 | `CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK` | 2.1.309（10-22） | 1 | — | — | 2.1.309 仍在（比對日 10-22） |
 | `CLAUDE_CODE_RESUME_SHOWS_CUT_OFF_CALLS` | 2.1.309（10-22） | 1 | — | — | 2.1.309 仍在（比對日 10-22） |
@@ -285,6 +290,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-24 | 2.1.310 新增 4 個第一階候選旗標（見摘要）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-23 | 2.1.309 新增 4 個第一階候選旗標（見摘要）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-22 | 2.1.308 新增 6 個第一階候選旗標＋代號旗標 `WITTY_DEWDROP`；`ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失（首見早於追蹤範圍）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-21 | 2.1.306 新增 6 個候選旗標（見摘要）；`SETTLE_TOUCHED_FILES` 消失列 4 階；對帳僅命中來源條目，不算獨立佐證 |

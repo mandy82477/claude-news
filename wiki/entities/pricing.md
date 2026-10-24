@@ -31,11 +31,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
 **最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-21
+**最後新聞更新：** 2026-10-24
 
-> **最新計費政策異動**（2026-10-21）
-> - **官方定價頁改版**：新增 Extensions「Claude in Chrome」與「Managed Agents」段落，移除舊版命名（diff 偵測）。
-> - **Max 20x 爭議延燒**：新 GitHub Issue 回報 7 月已升級用戶週用量仍按 Max 5x 速率消耗，呼應既有集體訴訟。
+> **最新計費政策異動**（2026-10-24）
+> - **Max 5x→20x 升級再爆付款失敗**：新 GitHub Issue #56281（39 留言）回報升級至 Max 20x 時每次付款皆失敗、客服未回應，延續 08-02 已知同類問題（本頁事故表已滿載，詳見「事故與爭議」區）。
 
 ## 現況
 
@@ -84,7 +83,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Max 20x 用量上限集體訴訟進行中**：Karl Kahn 訴訟（2026-06-16 提起）指控實際僅 Pro 的 6–8 倍而非廣告的 20 倍
 - **Team／Free／Enterprise 月費（2026-08-08 官方查證）**：Team 可混搭席位型別（mix and match），standard $20／premium $100（年繳，月繳各為 $25／$125），未見最低席位數規定；Free $0；Enterprise 未公開完整報價，頁面標示為「席位費＋依 API 費率計量」並提及 $20／席，實際價格需洽業務（來源：[claude.com/pricing](https://claude.com/pricing)）
 - **Free／Pro 功能組成（2026-08-12 官方查證，原文於 Max 段落截斷）**：Free 含 web 搜尋、記憶、桌面擴充、connector；Pro 另含 Claude Code／Cowork／Design／Science、無限 projects、Research、更多模型選擇、Microsoft 365 整合。此為功能清單補充，不影響上表的月費／計費規則；Max／Team／Enterprise 段落待後續查證（來源：[claude.com/pricing](https://claude.com/pricing)）
-- **各方案最強「免另計費」模型（2026-07-24 起，2026-09-07 釐清用詞）**：Pro 方案**免另計費**可用的最強是 Opus 5；旗艦 Fable 5／5.1 仍可用，但走 usage credits 額外計費（見上表）。Opus 5 同時是 Max 方案新預設模型（原為 Opus 4.8），見 [[entities/opus-5]]
+- **各方案最強「免另計費」模型（2026-07-24 起，2026-09-22 由 [[entities/opus-5-5|Opus 5.5]] 接手，Opus 5 改列 Legacy）**：Pro 免另計費最強現為 Opus 5.5；旗艦 Fable 5／5.1 仍走 usage credits 額外計費（見上表）。Opus 5.5 同步為 Max 新預設
 - **旗艦分界同時適用 Fable 5 與 5.1（2026-09-07 補列）**：07-20 生效的官方規則（Max／Team premium 週用量 50% 內免費、Pro／Team standard 走 usage credits）兩代通用；07-19 到期的免費促銷僅適用 Fable 5，5.1 上線時（見 [[entities/fable-5]]）即直接適用付費分界，無促銷期
 - **Max 20x 的差異不只用量**：context window、Claude Code 額度、優先排隊等有結構性差異，非單純 Pro 的 20 倍
 - **Enterprise 附加功能**：含 Compliance API、Enterprise Gateway 等；合作分級 Select／Preferred 差異未公開。Team 方案於 2026-06-19 官方速率翻倍時同步適用
@@ -322,6 +321,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope｜複 2026-11-24）｜轉售規模與個案執法回應均未見官方或媒體佐證。10-24 查官方：[商業條款](https://www.anthropic.com/legal/commercial-terms) D.4(a) 禁止未經核准的 resell；[Transparency Hub](https://www.anthropic.com/transparency) 未見轉售執法統計。08-29 `訊` 為探針假命中，已移除。
 
 ### 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-10-24：新 GitHub Issue #56281——Max 5x → Max 20x 升級付款持續失敗、客服未回應
+
+- **GitHub Issue #56281（39 則留言，2026-10-24）**：使用者回報將 Max 5x 升級至 Max 20x 時，每次嘗試付款皆失敗、客服未回應；延續 08-02 已記錄之 Issue #55266（同類「升級操作本身無法完成」症狀，當時指出與 #10832、#50710、#43118 同源），顯示該類升級故障持續逾兩個半月未解（[GitHub #56281](https://github.com/anthropics/claude-code/issues/56281)）。
+- **你能先做什麼**：升級前備妥多張付款方式備援，失敗後保留錯誤訊息截圖以加速客服申訴；官方尚無回應，避免反覆重試造成多次扣款嘗試。
+
+%% 未列入總表：表滿載，2026-10-24；單一社群回報型 🔴（39 留言），互動量低於現有 6 列最低者（#38335 855 留言／545👍、#16157 1,495 留言／725👍），優先序低於現有全部 6 列 %%
 
 #### ⚖️ 2026-10-21：新 GitHub Issue #79773——7 月已升級 Max 20x 用戶回報週用量仍按 Max 5x 甚至更低速率消耗
 

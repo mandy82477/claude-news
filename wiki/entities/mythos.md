@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 
-> **最新進展**（2026-10-23）
-> Anthropic 與 Theorem 合作研究：LLM 可大規模生成形式化驗證證明，回應「AI 已能輕易找漏洞」的防禦缺口（HN 392 分）。
+> **待查證：未發布新模型傳聞**（2026-10-24）
+> The Decoder 稱 Anthropic 表示其未發布新模型優於 Mythos 5.1（能力與對齊皆優）；僅標題可讀、單一來源，尚待後續報導確認。
 
 ---
 
 ## 現況
 
-**2026-10-22（Anthropic 與 Theorem：LLM 大規模生成形式化驗證證明）**：Anthropic 研究部落格發布研究，稱 AI 已能輕易發現並利用軟體漏洞、標準防禦已不足，需要能證明程式碼無漏洞的方法；與形式化驗證公司 Theorem 合作，展示大規模產生機器可驗證 formal proof 的工作流程，回應本頁「資安雙重性」防禦端一直未解的瓶頸（HN 392 分、The Decoder 同日跟進；[Anthropic Research](https://www.anthropic.com/research/formal-verification)，2026-10-22；詳見下方「時序」10-22 條目）。
+**2026-10-23（The Decoder 轉引：Anthropic 稱未發布新模型優於 Mythos 5.1）**：The Decoder 報導 Anthropic 表示一款尚未發布的新模型在能力與對齊上皆優於 Mythos 5.1，惟原文僅標題可讀、單一來源、互動數 0，確認狀態標為待查證（Google News/The Decoder，2026-10-23；詳見下方「時序」）。
 
-**2026-09-29（Frontier Red Team：GLM-5.3 跨越控制流劫持門檻）**：官方研究測得 GLM-5.3 完整控制流劫持 4%、Mythos Preview 同測 6%，Opus 4.6、GLM-5.2 做不到——Mythos 的網攻能力領先幅度正在縮小。量測方法、擴散脈絡與防護見 [[topics/ai-agent-safety#模型網攻能力與防護]]（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29）。
+**2026-10-22（Anthropic 與 Theorem：LLM 大規模生成形式化驗證證明）**：Anthropic 研究部落格發布研究，稱 AI 已能輕易發現並利用軟體漏洞、標準防禦已不足，需要能證明程式碼無漏洞的方法；與形式化驗證公司 Theorem 合作，展示大規模產生機器可驗證 formal proof 的工作流程，回應本頁「資安雙重性」防禦端一直未解的瓶頸（HN 392 分、The Decoder 同日跟進；[Anthropic Research](https://www.anthropic.com/research/formal-verification)，2026-10-22；詳見下方「時序」10-22 條目）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -133,6 +133,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-23
+❓ **待查證**（標 2026-10-24｜查 Mythos 5.1）｜**The Decoder：Anthropic 稱其未發布新模型能力與對齊皆優於 Mythos 5.1**（僅標題可用，互動 0、單一來源）：
+- Google News 轉載 The Decoder 標題「Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1」（[Google News/The Decoder](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)，2026-10-23）；RSS 僅提供標題，無正文，無法取得具體比較基準、測試方法或預計發布時程
+- 互動數 0、單一來源，弱訊號；若屬實將是 Mythos 5.1 之後下一代模型首次對外露出的比較說法，待後續報導補充具體內容再擴寫
 
 #### 2026-10-22
 **Anthropic 與 Theorem 合作研究：LLM 可大規模生成形式化驗證證明，直指「AI 找漏洞比防禦快」的缺口**：
@@ -317,3 +322,4 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [LLMs are making formal software verification feasible at a much larger scale](https://www.anthropic.com/research/formal-verification) — Anthropic Research（2026-10-22）
 - [Google News/The Decoder：Anthropic's Claude now writes code and proves it safe automatically](https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFhWNmYyaWJiMHdMWXJFZHVGam5MMjR4TVRSNUV0c3hHV1JVb2JHTzJYYzNqZ0ZFY1ppdi1RRUU1ZUJ3SjJ4WmZkYlNXSWhBWEU1eEl4X2E3VFhlaVZfQmpmNTFGQW1YRkowQlNlakE?oc=5)（2026-10-23，僅標題可用）
 - [[news/2026-10-23]]
+- [Google News/The Decoder：Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)（2026-10-23，僅標題可用；懸置標記細節見「時序」2026-10-23 條目）

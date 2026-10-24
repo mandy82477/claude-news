@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 
-> **最新動態**（2026-10-23）
-> - **歐洲顧問合作**：Anthropic 與私募基金 Hg 合作於歐洲推出 AI 顧問服務，供當地企業導入 AI，細節未見報導（FT／SQ Magazine）。
-> - **治理權轉移**：將 Agent Skills 開放標準捐贈予新設 Agentic AI Foundation，官方稱逾 70 平台已整合（Anthropic Blog）。
+> **最新動態**（2026-10-24）
+> - **Schwab RIA 通路追加席位門檻**：原宣布全數 1.6 萬家 RIA 可用 Claude，現追加 20 席企業採購下限，逾 1.1 萬家小型顧問公司被排除資格（RIABiz）。
 
 ---
 
@@ -438,7 +437,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Palo Alto Networks**（2026-09-22）：推出結合 Claude、GPT 模型的 AI 資安服務，具體整合規模與費用未見報導，僅標題可用（Yahoo Finance）
 - **Novo Nordisk**（2026-09-16）：與 Anthropic 合作，用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見報導（Reuters；Bloomberg；WSJ；politico.eu）
 - **Apple（iOS 27／macOS）**（2026-09-14）：程式碼曝光顯示 Siri 新增「Model Delegation」機制，可讓使用者把 Claude、ChatGPT 設為第三方模型；尚未正式發布，計費與上線時間未見報導（MacRumors／HN 188 分）**訊 09-19**：Reddit 週熱門重新討論同一線索，無新細節
-- **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）
+- **Charles Schwab／Orion**（2026-09-14）：兩平台同日宣布導入 Claude，鎖定 RIA 通路，費率未見報導（Bloomberg 等）**訊 09-15**：官方定名「Claude for Financial Advisors」，詳見下方時序（Reuters）**訊 2026-10-24**：追加 20 席門檻，逾 1.1 萬家小型顧問被排除（RIABiz）
 - **Visa／Mastercard**（2026-09-09）：推出 Claude Commerce Agents 商務代理功能並與兩家建立合作，交易機制、資格與是否另計費均未見報導，僅標題可用；與 09-04「自建支付技術」同屬跨入支付基礎設施（見「商業模式」節）（Crowdfund Insider）
 - **LoanPro**（2026-09-09）：貸款管理平台採用建構在 AWS 與 Claude 上的 AI 原生客服介面，客服通話時間最多縮短 15%，具體導入規模未見報導（citybiz）
 - **Fluidstack**（2026-09-07）：主導 Anthropic 一筆 500 億美元的算力建置案，詳見下方細節（AI Magazine）
@@ -617,6 +616,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-24
+- **[重大事件] RIABiz：Charles Schwab 原宣布全數 1.6 萬家 RIA 可用 Claude，現追加 20 席企業採購下限，逾 1.1 萬家小型顧問公司被排除資格**：時間點卡在 IMPACT 2026 大會前，詳見「哪個合作會改到你用的 Claude」清單 Schwab／Orion 列更新；何時新增門檻未見報導（Google News/RIABiz）
+- **[IPO前瞻，僅標題可用] Yahoo Finance：稱 Anthropic IPO 可能是這波 AI 交易熱潮的終極考驗**：具體論證未見報導（Google News/Yahoo Finance）
 
 #### 2026-10-23
 - **[商業模式，僅標題可用] CTech：Anthropic 擬以約 $345,000 年薪招聘高管溝通顧問，協助主管找到「正確用詞」**：職缺性質與招聘進度未見報導（Google News/CTech）

@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-24
+**最後新聞更新：** 2026-10-24
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-23）
+> **本週衝擊**（2026-10-24）
 > - 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。
 > - 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。
 > - 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
@@ -241,6 +241,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-24
+- **Claude Duet 市場定位比較（透過比較報導）**：Computerworld 與 Fortune 同步整理 Claude Duet 與 Muse、Dots 之市場定位比較，承上 10-23 Barron's 同類文章，具體比較內容與結論均未見報導，僅標題可用（Google News/Computerworld）
+- **Microsoft／GitHub**：Copilot 用量指標 API 新增回報透過其他工具（如 OpenCode）使用模型的用量，先前未被納入報表；屬企業用量分析功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub**：Teams 新上線 GitHub app，將頻道／群組通知與 Copilot 串接，可直接把問題轉為修復提交；分發通路擴張，具體能力對比未見報導，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **OpenAI（分析文，非競品動態）**：官方部落格說明如何擴充儲存架構服務逾 10 億 ChatGPT 用戶（Habitat／Azure Cosmos DB，讀取提速 12 倍）；基礎設施技術文章，非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Meta（分析文，非競品動態）**：官方部落格推出 Forum 社群管理新工具（admin AI、Admin Assist），延續 09-29 已記錄之 Forum app 上線；非 AI 編碼工具競品異動（Blog/Meta Newsroom）
+- **OpenAI（透過比較報導）**：shattered.io 發表「Opus 5.5 vs Sol」定價降幅比較文，稱兩者降幅分別為 40% 與 50%；具體口徑是否與既有 ⟨Q-07⟩ 查證之 GPT-6.1 Sol 牌價一致未見報導，僅標題可用（Google News/shattered.io）
 
 ### 2026-10-23
 - **Microsoft／GitHub**：shattered.io 整理 2026 年 GitHub Copilot 方案定價，稱 $10 可換 1,500 AI credits；詳見「競品定價對照」新增列，單一來源僅標題可用（Topic Watch/competitor-landscape）
