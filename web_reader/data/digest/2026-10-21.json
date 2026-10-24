@@ -463,6 +463,11 @@
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"
+    },
+    {
+      "id": "community-multi-agent",
+      "name": "社群做法：多 agent 怎麼分工與協調",
+      "pageType": "topic"
     }
   ],
   "reader": {

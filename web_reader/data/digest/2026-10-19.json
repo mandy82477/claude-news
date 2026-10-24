@@ -381,8 +381,8 @@
       "pageType": "entity"
     },
     {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
+      "id": "community-large-codebase-workflow",
+      "name": "大型 Codebase 規模化開發：社群工作流主線",
       "pageType": "topic"
     }
   ],
