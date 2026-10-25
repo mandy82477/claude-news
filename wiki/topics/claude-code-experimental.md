@@ -3,8 +3,8 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
-last_news_update: "2026-10-23"
+last_updated: "2026-10-24"
+last_news_update: "2026-10-24"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
@@ -13,9 +13,9 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 33
-attribution_count: 30
-attribution_last: "2026-10-23"
+inbound_links: 34
+attribution_count: 31
+attribution_last: "2026-10-24"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0

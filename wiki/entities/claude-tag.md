@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版，2026-10-23 官方查證）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
-last_news_update: "2026-10-23"
+last_updated: "2026-10-24"
+last_news_update: "2026-10-24"
 status_main: "beta"
 matrix_role: "產品"
 days_since_news: 1
@@ -13,16 +13,16 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
-inbound_links: 3
-attribution_count: 1
-attribution_last: "2026-10-23"
+inbound_links: 4
+attribution_count: 2
+attribution_last: "2026-10-24"
 top_source: "user-query"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Tag

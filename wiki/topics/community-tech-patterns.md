@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-10-24"
-last_news_update: "2026-10-23"
+last_news_update: "2026-10-24"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
