@@ -324,3 +324,4 @@
 {"id": "H-46b3a1", "closed": "2026-10-24", "status": "done", "by": "商業", "result": "商業記者 2026-10-24 ingest 回報已處理"}
 {"id": "H-7e3132", "closed": "2026-10-24", "status": "done", "by": "社群", "result": "社群記者 2026-10-24 ingest 回報已處理"}
 {"id": "H-59807e", "closed": "2026-10-24", "status": "void", "by": "主編", "result": "功能記者核對：『產品化矩陣』實指 official-community-gap.md（非 anthropic-product-matrix.md），5 筆候選各為單一社群 repo 未達入列判準，且判準③需一手查證，本輪不宜逕自開列；理由成立，void"}
+{"id": "H-6ced0e", "closed": "2026-10-25", "status": "done", "by": "模型", "result": "模型記者 2026-10-25 ingest 回報已處理"}

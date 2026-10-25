@@ -8174,3 +8174,21 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 條文：`wiki-lint-rules-health` 6e「回報使用者擇一」改主編判定附理由；`docs/cloud-runbooks/weekly-lint.md` 5o「待拆頁只進待使用者確認區」改記者本輪交代切法、判拆者進健檢總帳
 - 仍需使用者：claude.ai 雲端環境網路改 Custom、加入榜單網域（5b 連三週在雲端跳過）
 - 歸因 user-query／主編
+
+## 2026-10-25 Ingest
+
+- 來源日報：[[news/2026-10-25]]
+- 更新頁面：
+  - 人物：[[entities/jack-clark]]
+  - 功能：[[entities/claude-code]]
+  - 商業：[[entities/pricing]]、[[topics/anthropic-business]]、[[topics/ai-talent-flow]]
+  - 模型：[[entities/fable-5]]、[[entities/sonnet-5-5]]
+  - 社群：[[topics/community-tech-discussions]]
+- 新增頁面：無
+- 摘要：Fable 5 於 Max 方案的扣點 bug（#79337）逾三個月未修復累積 77 留言，與今日官方 repo 同時湧現 8 則高互動 issue（計費、VS Code diff review UI、Cowork 背景服務等）並列為今日社群面主軸；官方面兩起 Claude 服務短暫錯誤率升高事件（Fable 5.1、Sonnet 5.5 等）皆於 30 分鐘內解決；商業面新增音樂出版商對 Anthropic 的另一起 Elvis Presley 侵權訴訟（與 10-22 Reservoir／Suno 案不同起）；人物面 Jack Clark 將「AI 自我改進」預測提前至 2027 年
+- 呈現品質：全部通過
+- 分類回退：無（分類複核記者覆核當日排除 4 則，結論皆維持排除，無誤排除）
+- 轉知帳本：結案 H-6ced0e（模型記者評估 entities/mythos.md 現況已涵蓋兩套數字並存事實，不需改動）
+- 主編裁決（記者回報「⚠️ 需主編轉知」兩項，皆非跨記者轉知，當輪直接裁決，不留待下輪；不登帳：裁決對象是主編自己要做的查證/收錄判斷，不是另一位記者的待接手事項，無目標記者可登）：
+  - [模型] GVS5H harness「5 個 Qwen3.8-27B 追平 Fable 5」是否該在 [[topics/model-task-leaderboard]] 或 [[topics/competitor-landscape]] 開列：裁定不開列——HN 熱門留言已質疑該題庫（2023-05～2025-04）可能遭污染、且未比對 sol／opus 5.5／fable 5.1 現行主力模型，社群面已由 [[topics/community-tech-discussions]] 完整記錄爭議本身，榜單/雷達頁收的是可信排名，不是有爭議的單一 harness 結果；若後續有獨立複測或跨來源佐證再收
+  - [功能] GitHub #33932（VS Code diff review UI，今日 306 讚）是否已達 official-community-gap 矩陣開新列門檻：判準③「官方補到哪」需 WebFetch 查官方一手來源，不在雲端排程每日 ingest 範圍內——留待 `/wiki-lint` 5n 或下次本機 session 查證後補列
