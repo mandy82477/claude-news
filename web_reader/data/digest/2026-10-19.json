@@ -382,11 +382,6 @@
   "preview": "Claude Code：版本：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。",
   "sedimentedToday": [
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
       "id": "opencode",
       "name": "OpenCode",
       "pageType": "entity"

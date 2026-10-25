@@ -409,11 +409,6 @@
   "preview": "Claude Code：版本：v2.1.310 新增 Monitor tool，支援 Bedrock／Vertex／Foundry 的 plugin 監控；停用 telemetry 或非必要流量時，長時間 foreground sleep 也會被攔阻（詳見 entities/claude-code#版本更新）。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-tag",
       "name": "Claude Tag",
       "pageType": "entity"
@@ -429,11 +424,6 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
       "pageType": "topic"
@@ -441,11 +431,6 @@
     {
       "id": "ai-eval-boundary-incidents",
       "name": "AI 評測越界事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
       "pageType": "topic"
     },
     {
@@ -486,16 +471,6 @@
     {
       "id": "competitor-landscape",
       "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

@@ -468,13 +468,7 @@
     }
   ],
   "preview": "Claude Code：版本：v2.1.302 新增 CLAUDE_CODE_AUTO_MODE_MODEL（指定 auto mode 分類器用哪個模型）與閒置自動壓縮相關功能，細節未完整揭露。",
-  "sedimentedToday": [
-    {
-      "id": "jack-clark",
-      "name": "Jack Clark",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-17",
     "summary": "",

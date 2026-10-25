@@ -583,11 +583,6 @@
       "id": "fei-fei-li",
       "name": "Fei-Fei Li",
       "pageType": "entity"
-    },
-    {
-      "id": "sonnet-5-5",
-      "name": "Claude Sonnet 5.5",
-      "pageType": "entity"
     }
   ],
   "reader": {

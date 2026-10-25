@@ -1,0 +1,515 @@
+{
+  "date": "2026-10-25",
+  "generatedAt": "2026-10-25 17:20 UTC",
+  "articleCount": 42,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Fable 5 prompts 'usage credits required' on Max plan",
+      "url": "https://github.com/anthropics/claude-code/issues/79337",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 14:11",
+      "sentiment": "",
+      "body": "Fable 5 自 2026-07-20 成為 Max 方案標準模型當天起就持續誤判為需額外扣點，問題延燒超過三個月仍未修復，今日累積 77 則留言、26 個 👍，是今日官方 repo 互動數最高的單一 issue。付費 Max 方案用戶若曾被要求額外購買 usage credits，可對照此 issue 回報。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] VS Code Extension: Diff review UI similar to GitHub Copilot Edits Review",
+      "url": "https://github.com/anthropics/claude-code/issues/33932",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 20:49",
+      "sentiment": "",
+      "body": "這則功能請求今日拿下 306 個 👍，是今日所有條目中反應數最高者，訴求是讓 VS Code 擴充功能的 diff 審閱介面比照 GitHub Copilot Edits Review 的體驗。長期用 VS Code 擴充功能審閱 Claude Code 變更的工程師，可留意這類介面需求是否貼近自己的痛點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Delete Claude Code sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/13514",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 14:11",
+      "sentiment": "",
+      "body": "這則刪除 session 的功能請求累積 49 則留言、114 個 👍，是長期未被處理的熱門請求之一（8 月中旬時留言數僅 47 則）。在意本機 session 歷史清理的使用者可持續關注進度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "今日 GitHub Search 新上榜 3 款 Claude／Codex 相關工具",
+      "url": "https://github.com/artokun/comfyui-mcp",
+      "source": "GitHub Search",
+      "time": "10/25 14:27",
+      "sentiment": "",
+      "body": "`[artokun/comfyui-mcp](https://github.com/artokun/comfyui-mcp)`（862 星，ComfyUI 的 agent 原生控制平面／MCP server）、`[ryanfrigo/kalshi-ai-trading-bot](https://github.com/ryanfrigo/kalshi-ai-trading-bot)`（632 星，Kalshi 預測市場的 agent 原生交易工具組，含 Claude skill）、`[dagoSte/squadra](https://github.com/dagoSte/squadra)`（524 星，協調 Claude、Codex、Cursor 多視窗共享任務與審查）同日登上 GitHub Search 榜，皆屬 MCP／多 agent 協作生態的周邊工具。",
+      "focusTags": []
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[Status] Elevated errors for Claude Sonnet 5.5 and other models",
+      "url": "https://status.claude.com/incidents/334jvgbrc4ff",
+      "source": "Anthropic Status",
+      "time": "10/25 07:53",
+      "sentiment": "",
+      "body": "今日 06:05–06:35 UTC 一度出現 Claude Sonnet 5.5 等多款模型錯誤率升高，官方已於 07:53 UTC 標記已解決，影響時間約 30 分鐘。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "sonnet-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Status] Elevated errors for Claude Fable 5.1",
+      "url": "https://status.claude.com/incidents/vx06kp8wfpq2",
+      "source": "Anthropic Status",
+      "time": "10/25 08:49",
+      "sentiment": "",
+      "body": "同日 08:08–08:29 UTC 另一起 Claude Fable 5.1 錯誤率升高事件，官方於 08:49 UTC 標記已解決，影響時間約 21 分鐘，與上則為不同時段的獨立事件。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeE42UnAzeHB6THFVTDg3b04yczBhQnBqUmhzMzRGNUR1YzJ2TkxEVGtOS3F5NVh5TVhlVFY0b0VLRk1xNTk1TWJBYkVMZnlUOWVQR1d6eEtyem1UUlpPZER3cmFzaVB4UXREOEFUYmFuTDBmWTlSb1FVMlozcTNnRU54Ni1EMUMySkZrZ3FVVnZuN2ltTWNzNm5HaVdwMktiT3Z0ckNCaTktSnUxZ3diNzFjN2NxQQ?oc=5",
+      "source": "Google News / The Decoder",
+      "time": "10/25 09:43",
+      "sentiment": "",
+      "body": "The Decoder 報導，Anthropic 共同創辦人 Jack Clark 將他對「AI 自我改進」出現時間點的預測，從原先說法提前到 2027 年。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "jack-clark",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's Margin is OpenAI's Opportunity",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOX0N0ZWVJZjFXUjdmLTdoRVdJbzkwVDBYaXM1eHN3aEdPbm4zTXNhdjJrbTdHdkQyQTJ5ZWRBMGdheFRKeUFjMFNGbWRZdHhnZWh2YXdDZDV2R2JTazNmaU5kTk9oVmQ2a0hnUzl3V2dtSWE0U2ZOZjB5TElicGVxOE1sSQ?oc=5",
+      "source": "Google News / The Information",
+      "time": "10/24 14:00",
+      "sentiment": "",
+      "body": "The Information 分析指出，Anthropic 的毛利結構可能成為 OpenAI 可乘之機，惟原文細節未附。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Sued for Using Elvis Presley Music to Train AI Models",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2w5MWpVOHBzaUxLMllrM0c1SDcxREV3WGt1VGdMNjM2STE3VHBlSEZwSnBDc1lKWnJ5c0pPNWJHMHlZcV9rVXRRVjNGYkxOcUpNZmRQVmVHTEZJZ1NYcUJhVzBCeW1hQ09mZTIzZm5JVDZ0emRMN3hSUXdhUnhodkF5NWJYTVBZNzNVejk4RjJQWTd0b0lROXNjWHpYM0NKc0hSb1ZtVmM0QQ?oc=5",
+      "source": "Google News / Billboard ＋Google News / The Hollywood Reporter",
+      "time": "10/24 14:36",
+      "sentiment": "",
+      "body": "Billboard 與 Hollywood Reporter 同日報導，Anthropic 被控告使用 Elvis Presley 音樂訓練 AI 模型，原告稱對這類「經典歌曲格外謹慎保護」；這是繼本週較早的 Reservoir 侵權訴訟後，音樂版權方對 Anthropic 提出的另一起訴訟，具體細節仍待法院文件揭露。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "另有 5 則 Claude Code GitHub Issues 中度互動",
+      "url": "https://github.com/anthropics/claude-code/issues/57371",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/25 14:04 UTC ·",
+      "sentiment": "😤",
+      "body": "`[Claude Desktop (Windows): disable bundled Cowork background service](https://github.com/anthropics/claude-code/issues/57371)`（31 留言）、`[[BUG] Claude Code silently deletes conversation transcripts after 30 days](https://github.com/anthropics/claude-code/issues/62476)`（28 留言）、`[Remote control: permission prompts not rendering on mobile app](https://github.com/anthropics/claude-code/issues/35637)`（26 留言）、`[[BUG] Unable to generate a AGPLv3 license due to content filtering policy](https://github.com/anthropics/claude-code/issues/12705)`（26 留言）、`[[FEATURE] Accessibility - turn duration verbs should also be customizable](https://github.com/anthropics/claude-code/issues/24968)`（25 留言）同日落在中度互動區間。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "今日 Show HN 版面多款工具標注由 Claude Code 協助開發",
+      "url": "https://perchfocus.com/",
+      "source": "Hacker News",
+      "time": "10/24 21:01 UTC ·",
+      "sentiment": "😊",
+      "body": "`[Perch，整理 Claude Code 多 session 的 Mac 小工具](https://perchfocus.com/)`、`[Loböle，Claude 驅動的開源參數化 CAD](https://github.com/eliasaronson/lobole)`、`[AlwaysHex，顯示十進位與十六進位的 Visual Studio 除錯擴充](https://github.com/JochenBaier/AlwaysHex)` 等多款個人專案同日在 Hacker News Show HN 版面亮相，作者皆提到專案由 Claude Code 協助完成，但個別貼文互動分數偏低（1～2 分）。",
+      "focusTags": []
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[新工具]",
+      "text": "Claude Code 傳出新增 MCP Tasks 與 Elicitations 支援，主打「持久化 agent 工作流程」，目前為限量發布（narrow launch），細節仍有限。用 MCP 建置長時間執行 agent 任務的團隊，可留意後續官方公告是否擴大開放範圍。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZmIwUnNsbzdhTERIYWlMaWZhMEtVSWFCYU14dFZUQ3h5MWRSMlc1SklocTU5OUFPQm5xeEM1c1JxLXpiWU9aWkxlQUI5OHdVai1ZNFF1RHBnTjdiMW5MS2xhUnBPak5Dbmg1SDRuWkFQMGhEekZ2Y2dpWVdsbGN0WHEtcjdYOWY3Nlo0djRjQkVnRV9DX2l6OVVGX09FYmFkRlEyT01RNTNuTi1nejZsNVZNc3I?oc=5"
+      ],
+      "ref_names": [
+        "Forkast News"
+      ]
+    },
+    {
+      "tag": "[社群趨勢]",
+      "text": "今日 Claude Code 官方 repo 的 GitHub Issues 同時有 8 則衝上高互動榜，留言數落在 25～77 則之間，橫跨計費異常、功能請求、介面體驗與無障礙設計等多個面向，較前兩日（10/24 五則、10/23 三則）明顯增加。持續追蹤 Claude Code 問題回報熱度的團隊，可留意今日清單裡是否有命中自己正在用的功能。",
+      "ref_urls": [],
+      "ref_names": []
+    },
+    {
+      "tag": "[社群趨勢]",
+      "text": "Hacker News 熱議一份用 GVS5H harness 測出的結果：5 個 Qwen3.8-27B 模型在一份 2023～2025 年題庫的飽和 coding benchmark 上大致追平 Fable 5（171 分、2 來源跟進）。但熱門留言質疑該題庫可能已遭污染、且未納入 sol／opus 5.5／fable 5.1 等現行主力模型對照。關注模型評測方法學的讀者，不宜直接採信這類舊題庫排名的結論。",
+      "ref_urls": [
+        "https://github.com/slee-persis/GVS5H"
+      ],
+      "ref_names": [
+        "GitHub"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Google DeepMind resignations and military AI debate",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbThOemJtVjRmeUFRMjY2Y3ZnMjlCUG1TT1JaUU4tN2hMb0dOMC0zZUNOdDhZekQxWjh5OS1RaV9rMXY2OFBURzYwOXc2Nkl6dXRRU18xR25oUzdFUGJGbUhERjhSYUNfNkt2bjNMa2xFcHhsMlBEc2FWWEc5U0RYbkNOUjdTbEJUa3c?oc=5",
+      "body": "NeoTeo 報導 Google DeepMind 員工因軍方合約議題引發的辭職與內部辯論，延續近期大型實驗室人才流動的脈絡。（→ AI 實驗室人才流動）",
+      "topic": "",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 9
+    }
+  ],
+  "preview": "Claude Code：已知問題：VS Code diff 審閱 UI（#33932）今日反應數全站最高（306 讚）；新增 5 則中度互動 issue；Fable 5 用量誤判（#79337）逾 3 個月未修復。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5 與 5.1",
+      "pageType": "entity"
+    },
+    {
+      "id": "jack-clark",
+      "name": "Jack Clark",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-25",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **已知問題**：VS Code diff 審閱 UI（#33932）今日反應數全站最高（306 讚）；新增 5 則中度互動 issue；Fable 5 用量誤判（#79337）逾 3 個月未修復。\n- **旗標**：build 新增 4 個第一階候選旗標，詳見 [[topics/claude-code-experimental]]。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5 與 5.1",
+            "label": "穩定性事件",
+            "date": "",
+            "body": "Fable 5.1 一度錯誤率升高（08:08–08:29 UTC，約 21 分鐘），08:49 UTC 已解決；不影響能力或存取政策。"
+          },
+          {
+            "page": "entities/sonnet-5-5",
+            "name": "Claude Sonnet 5.5",
+            "label": "穩定性事件",
+            "date": "",
+            "body": "Sonnet 5.5 等多款模型一度錯誤率升高（06:05–06:35 UTC，約 30 分鐘），07:53 UTC 已解決；受影響模型清單未完整列出。"
+          },
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "12 榜全數嘗試（2026-10-25 換榜後）。本週換掉兩個抓不到的來源、移出四個：寫 code 改看 llm-stats（分數為廠商自報）、電腦操作 agent 改看 AA Terminal-Bench Hard；MTEB、METR、OpenRouter 用量、Search Arena 移出快照表。arena.ai 的 Text、WebDev 兩榜連兩週回 403，再等一週。影片榜第三名換成 HeyGen Video 1，STT 榜第三名換成 Voxtral Small Transcribe 3。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- **Fable 5 誤判扣點逾三個月未解**：GitHub #79337 自 07-20 起持續誤判需購買 usage credits，今日累積 77 留言、26 👍，為官方 repo 互動最高單一 issue。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **音樂版權訴訟再添一案**：Billboard、Hollywood Reporter 同日報導 Anthropic 被告控告使用 Elvis Presley 音樂訓練 AI，為本週第二起音樂出版商侵權訴訟。"
+          },
+          {
+            "page": "topics/ai-talent-flow",
+            "name": "AI 實驗室人才流動",
+            "label": "最新動態",
+            "date": "",
+            "body": "NeoTeo 跟進報導 10-21 五角大廈合約辭職事件，稱已延燒為軍方 AI 內部辯論；既有格局不變。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Elvis Presley 版權方控告 Anthropic 音樂訓練侵權**：繼 10-22 Reservoir 訴訟後，音樂著作權訴訟線新增第二起具名原告訴訟，求償金額與訴狀細節未揭露（Billboard／Hollywood Reporter）。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic IPO 追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "公開版 S-1 截至 10-25 SEC 全文檢索仍查無；估值預期 10-16 下修至約 $1.5 兆，10-20 WSJ 揭露 H1 淨損 $807 億。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "GVS5H Harness 宣稱 Qwen3.8-27B 打平 Fable 5，HN 質疑題庫污染",
+            "date": "",
+            "body": "harness 測出 5 個 Qwen3.8-27B 模型追平 Fable 5；HN 質疑題庫已遭污染，且缺 Astra／Sol／Fable 5.1／Opus 5.5 對照（171 分，2 來源）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/jack-clark",
+            "name": "Jack Clark",
+            "label": "AI 自我改進時間點預測提前至 2027 年",
+            "date": "",
+            "body": "The Decoder 報導，Jack Clark 將「AI 自我改進」出現時間點的預測提前到 2027 年；僅標題可用，原先說法未見報導。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 11
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Fable 5 prompts 'usage credits required' on Max plan",
+      "url": "https://github.com/anthropics/claude-code/issues/79337",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 14:11",
+      "sentiment": "",
+      "body": "Fable 5 自 2026-07-20 成為 Max 方案標準模型當天起就持續誤判為需額外扣點，問題延燒超過三個月仍未修復，今日累積 77 則留言、26 個 👍，是今日官方 repo 互動數最高的單一 issue。付費 Max 方案用戶若曾被要求額外購買 usage credits，可對照此 issue 回報。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] VS Code Extension: Diff review UI similar to GitHub Copilot Edits Review",
+      "url": "https://github.com/anthropics/claude-code/issues/33932",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 20:49",
+      "sentiment": "",
+      "body": "這則功能請求今日拿下 306 個 👍，是今日所有條目中反應數最高者，訴求是讓 VS Code 擴充功能的 diff 審閱介面比照 GitHub Copilot Edits Review 的體驗。長期用 VS Code 擴充功能審閱 Claude Code 變更的工程師，可留意這類介面需求是否貼近自己的痛點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Delete Claude Code sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/13514",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/24 14:11",
+      "sentiment": "",
+      "body": "這則刪除 session 的功能請求累積 49 則留言、114 個 👍，是長期未被處理的熱門請求之一（8 月中旬時留言數僅 47 則）。在意本機 session 歷史清理的使用者可持續關注進度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "今日 GitHub Search 新上榜 3 款 Claude／Codex 相關工具",
+      "url": "https://github.com/artokun/comfyui-mcp",
+      "source": "GitHub Search",
+      "time": "10/25 14:27",
+      "sentiment": "",
+      "body": "`[artokun/comfyui-mcp](https://github.com/artokun/comfyui-mcp)`（862 星，ComfyUI 的 agent 原生控制平面／MCP server）、`[ryanfrigo/kalshi-ai-trading-bot](https://github.com/ryanfrigo/kalshi-ai-trading-bot)`（632 星，Kalshi 預測市場的 agent 原生交易工具組，含 Claude skill）、`[dagoSte/squadra](https://github.com/dagoSte/squadra)`（524 星，協調 Claude、Codex、Cursor 多視窗共享任務與審查）同日登上 GitHub Search 榜，皆屬 MCP／多 agent 協作生態的周邊工具。",
+      "focusTags": []
+    }
+  ]
+}
