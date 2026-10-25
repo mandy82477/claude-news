@@ -8192,3 +8192,5 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編裁決（記者回報「⚠️ 需主編轉知」兩項，皆非跨記者轉知，當輪直接裁決，不留待下輪；不登帳：裁決對象是主編自己要做的查證/收錄判斷，不是另一位記者的待接手事項，無目標記者可登）：
   - [模型] GVS5H harness「5 個 Qwen3.8-27B 追平 Fable 5」是否該在 [[topics/model-task-leaderboard]] 或 [[topics/competitor-landscape]] 開列：裁定不開列——HN 熱門留言已質疑該題庫（2023-05～2025-04）可能遭污染、且未比對 sol／opus 5.5／fable 5.1 現行主力模型，社群面已由 [[topics/community-tech-discussions]] 完整記錄爭議本身，榜單/雷達頁收的是可信排名，不是有爭議的單一 harness 結果；若後續有獨立複測或跨來源佐證再收
   - [功能] GitHub #33932（VS Code diff review UI，今日 306 讚）是否已達 official-community-gap 矩陣開新列門檻：判準③「官方補到哪」需 WebFetch 查官方一手來源，不在雲端排程每日 ingest 範圍內——留待 `/wiki-lint` 5n 或下次本機 session 查證後補列
+- devpractice 沉澱：本日無開發實務分類派工包（分類階段無條目判為官方使用指南類），候選 3 筆（entities/claude-code 的 #33932 VS Code diff 審閱 UI 請求、#12705 AGPLv3 授權內容過濾誤擋；entities/pricing 的 #79337 帳單自查步驟），append 至 `data/devpractice-candidates.jsonl` 留待週更落地；手冊正文本輪寫入 0 則；基準線推進至 fc33389
+- market 判讀：判讀 1 則（Billboard／Hollywood Reporter：Elvis Presley 版權方控告 Anthropic 音樂訓練侵權，音樂著作權訴訟線第 2 則），寫入 [[topics/market-signals]]，本體不可買、無間接曝險標的，里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列，結算日 2026-11-08；其餘條目逐一套用六類判準後不構成新判讀
