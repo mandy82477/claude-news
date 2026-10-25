@@ -243,8 +243,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "cdf75e6b2e7a92f2d08d78f73a435dcdd617791627b39812617cb354fd5939d2",
-    "length": 189391,
+    "hash": "a8a7baa9db5ee92320962d21a80932a45431a16ba5c22abb2b7ff3eb52681e81",
+    "length": 189365,
     "segments": [
       "\"HTTPS_PROXY\": \"http://proxy.example.com:8080\",",
       "\"NODE_EXTRA_CA_CERTS\": \"/etc/ssl/certs/example-ca.pem\"",
@@ -1175,7 +1175,7 @@
       "To have Claude review your changes before you commit, enter `/code-review` in the [prompt box](#use-the-prompt-box). The findings arrive in the conversation when the review completes.",
       "To have sessions archive themselves when their pull request merges or closes, turn on **Auto-archive after PR merge or close** in **Settings > Claude Code**. Cloud sessions and sessions that are still running don't archive themselves.",
       "To hide a session that already appears on your other devices, archive it in Desktop. Desktop archives the session's Remote Control copy too, so it leaves the default session list on those devices. To view or delete it there, see [Archive sessions](https://code.claude.com/docs/en/claude-code-on-the-web.md#archive-sessions).",
-      "To hide or show the panel, click **Hide session rail** or **Show session rail** in the session's title bar, or in the bar's **⋮** menu when the window is narrow. If you still don't see the panel, [check which Code tab layout you have](#check-which-layout-you-have).",
+      "To hide or show the panel, click **Hide session rail** or **Show session rail** in the session's title bar, or in the bar's **⋮** menu. If you still don't see the panel, [check which Code tab layout you have](#check-which-layout-you-have).",
       "To include gitignored files like `.env` in new worktrees, create a [`.worktreeinclude` file](https://code.claude.com/docs/en/worktrees#copy-gitignored-files-into-worktrees) in your project root. See [What worktrees share with the main checkout](https://code.claude.com/docs/en/worktrees.md#what-worktrees-share-with-the-main-checkout) for where a worktree session reads project settings, hooks, and skills.",
       "To keep Desktop from forwarding your SSH agent or a port, run `ssh -G devbox` in a terminal on your computer. Then run it again as Desktop can run it, with the `hostname` and `user` values that it prints, as in `ssh -G -o HostName=devbox.internal.example.com -l alice devbox`. The second output can show settings from a `Match` block that the first skips.",
       "To keep fail2ban from banning an address for Desktop's tests, change one of two settings of the jail, each at a cost:",
