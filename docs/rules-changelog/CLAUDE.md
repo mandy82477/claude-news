@@ -49,3 +49,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-23（目標讀者改寫的語意層清查）
 
 10-20 兩輪只對齊關鍵字（升版／壞了）。本日派一個 Sonnet Explore agent 讀 `.claude/` 規則、skill、agent、網站文案共 90 檔，找不含關鍵字但仍把讀者框成「踩雷與升版」的句子，得 10 處，使用者裁決全改：devpractice 收錄判準、news-digest 所以呢三問、週報頭條／討論綜述／專文標籤／下週看什麼、features ⭐ 排序與階梯表讀者身分，以及設計套件 `claude-news-llm-wiki-design/ui_kits/web_reader/about.html` 的受眾文案（與正式站關於頁同步）。各處細節見對應沿革檔同日段。`docs/page-audits/` 與 `docs/local/` 的「該不該升版」是當時波次名稱，保留。
+
+## 2026-10-25（lint 待裁示改主編自決：6e 佇列、5o 厚頁；派工路徑並存說明）
+
+使用者第四次指出待裁示清單裡多數不需要她（「為什麼需要我決定你不能自己決定嗎」）。根因是條文本身把決定權寫給使用者：`wiki-lint-rules-health` 6e 發現窗積壓「回報使用者擇一」、`docs/cloud-runbooks/weekly-lint.md` 5o「待拆頁只進待使用者確認區」，雲端 lint 照條文堆進待裁示。改為主編判定附理由（6e 三擇一含「不動」）、記者本輪交代切法（5o 判拆者進頁面健檢總帳）。另 `.claude/skills/wiki-ingest/references/classification.md` 補一句：已註冊記者型別留給本機一次性手動派工，與 2026-08-15 general-purpose 唯一正典並存，6f 不再列待裁示。

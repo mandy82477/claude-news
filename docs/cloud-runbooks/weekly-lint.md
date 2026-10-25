@@ -35,7 +35,7 @@
 | `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
 | `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api repos/anthropics/claude-code/issues/<n>`（REST；`gh issue view` 走 GraphQL 在雲端一律 403）；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；routine `sources` 已含 `anthropics/claude-code`（2026-10-18），MCP 仍回 not configured 代表 sources 被改掉 → 寫「repo 授權不足，跳過」並對照鏡像 JSON，不擴權 |
 | `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api`（issue 與 comments 皆走 REST；CHANGELOG 直接 `cat ../claude-code/CHANGELOG.md`，是第二個 source 的 sparse clone）；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；repo 未授權同 5m 列 |
-| `wiki-lint-sweeps` `5o. 厚頁清單（主編親做）` | 照做（純本機讀檔，不需 egress）；待拆頁只進待使用者確認區，雲端不開拆頁波 |
+| `wiki-lint-sweeps` `5o. 厚頁清單（主編親做）` | 照做（純本機讀檔，不需 egress）；雲端不開拆頁波，但切法評估照 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」由負責記者在本輪做完、寫進頁面 `%%` 的 `拆頁評估` 行；判定「拆」的頁列進 lint 紀錄由下一次頁面健檢波執行，不列待使用者確認 |
 | `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
 | `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |

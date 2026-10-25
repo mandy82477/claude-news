@@ -90,6 +90,8 @@ python scripts/check_classification_log.py --date TARGET_DATE
 | 社群 | `wiki-reporter-community` |
 | 人物 | `wiki-reporter-people` |
 
+**已註冊的 `wiki-reporter-*` 型別不是第二條正典**：它們留給本機對話裡一次性的手動派工（例如週報專欄派稿），省啟動成本；pipeline 的 ingest、`/wiki-lint` 各步與 `/wiki-weekly-review` 一律照本節走 general-purpose。兩者並存不是矛盾，6f 掃到時不列待裁示。
+
 **為何不用自訂 `subagent_type`：** 雲端 routine 環境曾多次無法載入專案層 `.claude/agents/`，每次都退回 general-purpose ＋手工內嵌規則，形成「本機一條路、雲端一條路」的雙軌。2026-08-15 裁決：**內嵌路徑轉正為唯一正典**，本機也走同一條，不再有「降級」——同一角色只剩一種構成方式，規則檔改動兩邊同時吃到。自訂 agent 註冊照留（無害、方便本機手動呼叫），但派工流程不依賴它。
 
 ### 🚫 派工 prompt 不得臨場加寫操作指示
