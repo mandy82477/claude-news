@@ -5636,7 +5636,7 @@ window.WIKI_DATA = {
     {
       "id": "2026-W43",
       "name": "CLAUDE NEWS 週報 · 2026-W43",
-      "preview": "10-22 Anthropic 把 Agent Skills 標準（Claude Code 讀的 `SKILL.md` 格式）捐給 Linux 基金會旗下的 Agentic AI Foundation；官方說 2025 年 12 月發布以來，已有超過 70 個 agent 平台整合，含 ChatGPT 與 Cursor"
+      "preview": "這週社群冒出好幾包現成 skill：Qt 官方的 agent-skills（GitHub），還有資安、上架 App 等整包合集。也有反向聲音：一位作者發了 13 個 skill，卻說自家評測單用 Opus 就能做完大部分工作（Reddit，10-22）。"
     },
     {
       "id": "2026-W42",
