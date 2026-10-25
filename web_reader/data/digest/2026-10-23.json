@@ -451,11 +451,6 @@
   "preview": "Claude Code：版本：v2.1.309 修正 macOS／Linux 上 sandboxed Bash 與 denyWrite 沙盒規則比對問題；同日 anthropic-sdk-python v2.2.0、anthropic-sdk-typescript vertex-sdk-v1.1.0 同步新增 mess",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-design",
       "name": "Claude Design",
       "pageType": "entity"
@@ -491,11 +486,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-tag",
-      "name": "Claude Tag",
-      "pageType": "entity"
-    },
-    {
       "id": "cowork",
       "name": "Cowork",
       "pageType": "entity"
@@ -506,23 +496,8 @@
       "pageType": "entity"
     },
     {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
       "pageType": "topic"
     },
     {
@@ -531,28 +506,13 @@
       "pageType": "topic"
     },
     {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
       "pageType": "topic"
     },
     {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
       "pageType": "topic"
     },
     {
@@ -571,23 +531,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-tools",
       "name": "社群工具目錄",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

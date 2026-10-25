@@ -475,18 +475,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "market-lessons",
       "name": "投資判讀教材（週更）",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],
