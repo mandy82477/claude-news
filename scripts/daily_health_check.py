@@ -65,9 +65,11 @@ READER_DIGEST_SINCE = date(2026, 9, 12)  # 日報改版乙生效日：此日起 
 
 
 # 雲端 routine 在 task_scheduler.log 的開跑／結果行：[cloud <routine> <STATE> <UTC 時間戳>…]
-# 時間戳兩種寫法都出現過：2026-09-25T12:09:02Z 與 2026-09-25 12:09:02 UTC。
+# 時間戳兩種寫法都出現過：2026-09-25T12:09:02Z 與 2026-09-25 12:09:02 UTC；
+# 結果行也出現過只有日期、沒有時間（2026-10-24 12 UTC 班 `ABORTED 2026-10-24]`），
+# 時間因此可省略——認不出結果行，前一筆 STARTED 就會被誤報成中途斷掉。
 CLOUD_LOG_RE = re.compile(
-    r"^\[cloud (?P<name>[\w-]+) (?P<state>[A-Z]+) (?P<ts>\d{4}-\d{2}-\d{2})[T ](?P<hms>\d{2}:\d{2}(?::\d{2})?)")
+    r"^\[cloud (?P<name>[\w-]+) (?P<state>[A-Z]+) (?P<ts>\d{4}-\d{2}-\d{2})(?:[T ](?P<hms>\d{2}:\d{2}(?::\d{2})?))?")
 # 開跑後多久仍無結果行才算「斷掉」。日更最長實測約 70 分鐘（09-27 22:10→23:17），
 # 週更約 45 分鐘；給足 4 小時，避免 01:00 看門狗把還在跑的 22:00 班誤判成死。
 ORPHAN_GRACE = timedelta(hours=4)
@@ -116,7 +118,8 @@ def orphan_starts(target: date, repo: Path = REPO_ROOT, now: datetime | None = N
         m = CLOUD_LOG_RE.match(line)
         if not m:
             continue
-        hms = m.group("hms") if m.group("hms").count(":") == 2 else m.group("hms") + ":00"
+        raw = m.group("hms") or "00:00:00"
+        hms = raw if raw.count(":") == 2 else raw + ":00"
         try:
             ts = datetime.fromisoformat(f"{m.group('ts')}T{hms}").replace(tzinfo=timezone.utc)
         except ValueError:

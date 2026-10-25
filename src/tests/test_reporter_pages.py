@@ -63,6 +63,17 @@ class TestReporterPages(unittest.TestCase):
         self.assertIn("合計\t6", lines)
         self.assertIn("  未分類：wiki/topics/odd.md", lines)
 
+    def test_stdout_has_no_carriage_return(self):
+        # Windows 文字模式會寫出 CRLF；shell 的 $(...) 只去掉最後的換行，其餘路徑尾巴留下 \r
+        import subprocess
+        import sys
+        r = subprocess.run(
+            [sys.executable, str(REPO_ROOT / "scripts" / "reporter_pages.py"), "--category", "安全政策"],
+            capture_output=True, cwd=REPO_ROOT)
+        self.assertEqual(r.returncode, 0)
+        self.assertTrue(r.stdout.strip())
+        self.assertNotIn(b"\r", r.stdout)
+
     def test_unknown_category_exit_2(self):
         rc, out, err = run(["--category", "八卦", "--wiki-dir", str(self.wiki)])
         self.assertEqual(rc, 2)

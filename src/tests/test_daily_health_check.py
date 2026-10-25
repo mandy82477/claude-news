@@ -465,6 +465,14 @@ class TestOrphanStarts(unittest.TestCase):
         log = "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T22:10:42Z]\n"
         self.assertEqual(self._orphans(log, now=datetime(2026, 9, 28, 1, 0, tzinfo=timezone.utc)), [])
 
+    def test_result_line_without_time_counts(self):
+        # 2026-10-24 12 UTC 班實例：ABORTED 行只寫日期沒寫時間，舊 regex 認不出而誤報斷掉
+        log = ("[cloud daily-news-pipeline-cloud STARTED 2026-09-27T12:09:28Z]\n"
+               "[cloud daily-news-pipeline-cloud ABORTED 2026-09-27] ABORTED: gathered_archive not found\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T17:08:11Z]\n"
+               "[Sun 2026/09/27 18:09:28.00] === Pipeline complete (agent) ===\n")
+        self.assertEqual(self._orphans(log), [])
+
     def test_result_on_next_utc_day_counts(self):
         log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T23:50:00Z]\n"
                "[cloud daily-news-pipeline-cloud STARTED 2026-09-28T00:10:00Z]\n"

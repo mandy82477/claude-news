@@ -75,7 +75,9 @@ def page_categories(wiki_dir: Path = WIKI_DIR) -> dict[str, str]:
 def _stdout() -> None:
     for s in (sys.stdout, sys.stderr):
         try:
-            s.reconfigure(encoding="utf-8", errors="replace")
+            # newline="\n"：Windows 文字模式預設把換行寫成 \r\n；`$(reporter_pages.py …)` 帶進
+            # `git diff -- …` 時每個路徑尾巴會多一個 \r，只剩最後一個路徑對得上
+            s.reconfigure(encoding="utf-8", errors="replace", newline="\n")
         except (AttributeError, ValueError):
             pass
 
