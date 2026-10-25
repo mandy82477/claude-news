@@ -351,6 +351,11 @@
       "id": "cat-wu",
       "name": "Cat Wu",
       "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5-archive",
+      "name": "Claude Sonnet 5 — 原始條目封存",
+      "pageType": "entity"
     }
   ]
 }
