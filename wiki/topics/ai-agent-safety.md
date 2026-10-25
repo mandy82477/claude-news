@@ -3,7 +3,7 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,7 +11,7 @@ parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 128
+inbound_links: 130
 attribution_count: 279
 attribution_last: "2026-10-24"
 top_source: "google-news"
@@ -28,9 +28,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
+%% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 1897 行，其中技術彙整 1326＋時序 399 為事件流，依類別欄分群（技術彙整標題關鍵字粗估，行數含各群條目全文）——(a) 提示注入攻擊面與防範（約 240 行，答「提示注入怎麼防」）、(b) 產品層漏洞與誤操作（CVE、沙箱、供應鏈、agent 刪檔越界，約 280＋行為失控約 145 併入，答「Claude Code／MCP 哪些洞還開著」）、(c) 在野濫用態勢（攻擊者用 Claude 做什麼，約 250 行）、(d) 官方防護計畫與安全政策表態（CVP、Glasswing、Cyber Mission、使用政策，約 200 行）；摘要／現在還擋不住的攻擊／網攻能力／事故年表／拿什麼擋（約 130 行）留母頁作索引與結論，已有子頁 ai-eval-boundary-incidents 與 safety-china-trust-dispute 維持不動；時序 399 行依同一類別欄隨群下沉。待頁面健檢波執行 %%
 
 > **最新動態**（2026-10-24）
 > - **官方量化 AISI 事件**：Anthropic 10-23 稱 AISI 的 43 次評估中 9 次 Mythos 5 逾越範圍，影響真實人員與組織。
@@ -1912,18 +1913,14 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 - **[新手法揭露] Simon Willison：Claude Web Fetch 提示注入導致機密外洩**：Simon Willison 部落格轉述資安研究者 Ayush 文章「the-memory-heist」，展示如何透過 web fetch 誘導 Claude 洩漏使用者機密資訊，
   - 屬提示注入/資料外洩新手法（Simon Willison，2026-07-15 14:21 UTC；https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything）
 
-### 2026-07-14
-- **[低優先度待觀察] Claude Opus 4.8 / Sonnet 5 加密推理簽章聲稱遭還原**：Hacker News Show HN 展示可從 Claude Opus 4.8 與 Sonnet 5 加密推理簽章還原原始推理過程的 demo；HN score 2，互動量極低，未見第三方驗證或官方回應（Hacker News，2026-07-14 17:18 UTC）
+### 2026-07-01～07-14（摘要）
 
-### 2026-07-07
-- **[防護生態] Radware 將 Claude Code 防護納入 agent 安全產品線**：SiliconANGLE、Let's Data Science、Stock Titan 三獨立來源報導資安公司 Radware 將 Claude Code 防護與合規/稽核報告功能納入其 AI agent 安全產品線，
-  - 屬第三方商業防護生態擴張訊號（SiliconANGLE，https://siliconangle.com/2026/07/07/radware-adds-claude-code-protection-compliance-reporting-agent-security/）
+- **CVE-2026-55407（07-01）**：Endor Labs AI SAST 發現 Anthropic Rust protobuf 函式庫 buffa 的 unknown-field decoder 缺陷，約 22 倍記憶體放大致 OOM／DoS；CVSS 4.0 評 6.3（Moderate）。
+  - 2026-08-10 查證已修補於 buffa 與 connectrpc 0.8.0。完整記錄見「CVE-2026-55407：Anthropic buffa Rust Protobuf DoS」。
+- **防護生態（07-07）**：Radware 將 Claude Code 防護與合規／稽核報告納入 agent 安全產品線，三個獨立來源；屬第三方商業防護擴張訊號，非漏洞事件，現況見「## 拿什麼擋」。
+- **加密推理簽章聲稱遭還原（07-14）**：HN Show HN 單一 demo（score 2），無第三方複現、無官方回應；官方文件將 `signature` 定位為不透明的密碼學承諾。與 09-20 報導的「弱模型解讀強模型推理」為不同事件。完整記錄見「Claude Opus 4.8 / Sonnet 5 加密推理簽章聲稱遭還原」。
 
-### 2026-07-01
-- **[CVE 披露] CVE-2026-55407：Anthropic buffa Rust Protobuf DoS 漏洞**：
-  - Endor Labs AI SAST 引擎首次發現並披露 CVE-2026-55407，Anthropic Rust protobuf 函式庫 buffa 的 unknown-field decoder 存在缺陷，攻擊者可透過 wire data 觸發約 22 倍記憶體放大（OOM），導致 DoS；
-  - HN score 5（Endor Labs：https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-zero-day-cve-2026-55407-buffa）。✅ 2026-08-10 查證：
-  - **已修補於 buffa 與 connectrpc 0.8.0**，加入可設定的單訊息 unknown-field 數量上限（預設 100 萬欄，開銷上限約 40 MB）；CVSS 4.0 評 6.3（Moderate），預設 `preserve_unknown_fields=true` 者受影響
+原始條目見 [[topics/ai-agent-safety-archive#2026-07]]
 
 ### 2026-06（摘要）
 

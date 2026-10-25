@@ -8162,3 +8162,15 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 聚焦校準：非本月首次週度回顧，跳過（本月 10-04 已執行）
 - 機制：派工指令 `$(reporter_pages.py …)` 在 Windows 輸出 CRLF，致 7 天 git diff 只對得上最後一頁（三位記者回報 diff 近空）；`scripts/reporter_pages.py` 改固定輸出 LF 換行並加測試。看門狗 `daily_health_check.py` 認不出無時間的 ABORTED 行，10-24 誤報「1 班無結果」，regex 改為時間可省略並加測試
 - 歸因 user-query／主編
+
+## 2026-10-25 裁決：10-24 lint 待裁示 7 項＋榜單換榜（使用者「為什麼需要我決定你不能自己決定嗎」，主編自決）
+
+- 蒸餾 16 時段：執行 13 個——模型 [[entities/fable-5]]（保留 07-02，例外 2）、[[entities/mythos]]、[[entities/sonnet-5]]（新建 archive）；人物 [[entities/boris-cherny]]、[[entities/dario-amodei]]（其餘 5 個人物時段太小，不蒸）；商業 [[topics/anthropic-business]]（1130→970 行）、[[topics/competitor-landscape]]（656→584）、[[topics/enterprise-tool-tracker]]；安全政策 [[topics/ai-agent-safety]] 07-01～07-14。例外 2 由各頁記者自核，唯一細節出處先併進結論層再蒸
+- 厚頁 8 頁切法交代（`%%` 拆頁評估 2026-10-25）：判「拆」5 頁——[[topics/market-signals]]（三群：IPO 估值／訴訟監管／算力定價採用）、[[entities/claude-code]]（已知問題／版本事件流／功能用法）、[[topics/ai-agent-safety]]（四群）、[[topics/anthropic-business]]（合作算力／營收估值／風險）、[[entities/pricing]]（事故／價格沿革）；判「不拆」2 頁——[[topics/community-tech-discussions]]（分不出群）、[[topics/anthropic-government-policy]]（每群太薄）；[[topics/competitor-landscape]] 蒸餾後 557 行免交代。判「拆」者排進頁面健檢總帳，逐頁走健檢波
+- 派工路徑（6f）：維持 2026-08-15 裁決，pipeline／lint／週度回顧走 general-purpose；已註冊記者型別留給本機一次性手動派工，兩者並存不再列待裁示（`.claude/skills/wiki-ingest/references/classification.md`）
+- `interest:planning` 佇列：不動——三週只增 1.6（28.0→29.6），每日放出 5、排空約 7 天，遠低於 30 天線
+- `ai-job-search`：依收錄判準移出 [[topics/community-tech-patterns]]「未歸類」（原 URL https://github.com/ai-job-search-dev/ai-job-search ，10-23 存量盤點）
+- 榜單換榜：[[topics/model-task-leaderboard]] 寫 code 改看 llm-stats（廠商自報）、電腦操作改看 AA Terminal-Bench Hard；MTEB、METR、OpenRouter 用量、Search Arena 移出快照表（16→12 榜）；Text、WebDev 兩榜再等一週
+- 條文：`wiki-lint-rules-health` 6e「回報使用者擇一」改主編判定附理由；`docs/cloud-runbooks/weekly-lint.md` 5o「待拆頁只進待使用者確認區」改記者本輪交代切法、判拆者進健檢總帳
+- 仍需使用者：claude.ai 雲端環境網路改 Custom、加入榜單網域（5b 連三週在雲端跳過）
+- 歸因 user-query／主編

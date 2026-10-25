@@ -129,12 +129,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 未歸類
 
-#### GitHub Search 存量盤點：ai-job-search-dev/ai-job-search——本機跑的 AI 求職自動化框架，評估職缺、客製履歷與模擬面試（2026-10-23）
-
-- **核心模式：** 建立在 Claude Code 上的開源 AI 求職應用框架：在使用者自己的機器上跑，評估職缺、客製化履歷、寫求職信、準備面試；可 fork 自行擁有與修改；本庫存量盤點（2026-03-18 出生）今日首次收錄，GitHub Search 63,930 星。
-- **判不出類原因：** 功能橫跨多個既有子頁類別（Multi-agent 架構的多階段任務拆分、Skills 設計的流程封裝），核心是單一垂直場景（求職）端到端自動化，現有類別皆只覆蓋一部分；留待週更判斷。
-- **可信度註記：** 僅有 GitHub Search 星數（63,930★），遠高於本頁同類節點常見的數百至數萬星，無 forks／issues／近期 commit 佐證可查，不排除灌星可能，本庫僅陳列星數、不代表採用規模或品質背書。
-- **來源：** GitHub Search；[原文](https://github.com/ai-job-search-dev/ai-job-search)
+目前沒有尚未分派的做法節點。
 
 ### 2026-07
 

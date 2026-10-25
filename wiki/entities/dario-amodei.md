@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-18"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-18"
 status_main: "active"
 days_since_news: 7
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-18
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-18
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -202,11 +202,9 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 - 2026-08-06：The Information 發布深度剖析報導《How Dario Amodei Spread Anthropic's Religion and Stirred Up Silicon Valley》，探討其個人影響力對矽谷的攪動與外界對 Anthropic 企業文化的觀感；原文僅標題層級資訊可用（來源：Google News／The Information）。**後續（2026-09-06）：** 查得該文論旨——小圈子決策、安全優先、日常管理下放，而其對就業衝擊與監管的示警正在 IPO 前夕疏遠投資人、對手與部分美國政府；全文付費牆，逐字引述仍未取得
 - 2026-08-03：憂心部分員工是為金錢而非公司使命加入 Anthropic；Hacker News（經 Twitter/Techmeme，11 分）討論反應兩極——有人認為多數人本就為錢工作，也有人認為這是科技業近 30 年被資本侵蝕的縮影；The Next Web 同步以「Anthropic's CEO says staff want money over mission」為題報導，與 Techmeme 互為佐證（來源：Hacker News/Techmeme、The Next Web，2026-08-03）。**後續（2026-09-06）：** 查證確認此非公開發言，而是 Amodei 對同事的內部談話、由 Axios 引述知情人士轉述，故無場合與逐字稿可查
-- 2026-07-28：於 Anthropic Blog 發表聲明「Our position on open-weights models」，澄清 Anthropic 從未主張禁止開源權重模型，並呼籲加強對中國晶片出口管制；人物角度僅記個人具名立場表態，政策細節詳見 [[topics/anthropic-government-policy]]（來源：Anthropic Blog）
-- 2026-07-16：**個人捐款 100 萬美元予 Public First**——Politico 原報導只寫「Anthropic 執行長」未具名，2026-09-13 複查已由 FEC 申報文件確認捐款人即本人，捐於 5 月，是他首筆七位數政治獻金（[Bloomberg](https://www.bloomberg.com/news/articles/2026-07-16/dario-amodei-anthropic-employees-give-millions-to-regulate-ai)）
-  - **三筆捐款的關係（2026-09-13 釐清）**：同一個收款方（Public First／Public First Action），捐款人各自獨立——公司法人 4000 萬、Dario 個人 100 萬、其他員工合計 200–300 萬；不是同一筆資金分拆，也非公司代個人出資
-  - 對手陣營為反監管的 Leading the Future 一系，雙方在 Bores 該席次補選對燒（詳見 [[topics/anthropic-government-policy]]）；WSJ／The Hill／Axios 的「選舉支出翻倍」框架與官方非選舉用途聲明的張力仍在
-- 2026-07-06：接受 STAT News 專訪談 AI 對生技產業的影響——Amodei 表示他「壓縮 21 世紀」（十年內完成百年生醫進展）的願景**目前還做不到**，坦承現階段 AI 在生技的貢獻仍以加速個別研究環節為主，並以同期發布的 [[entities/claude-science]] 為例說明 Anthropic 的切入方式（[STAT News，2026-07-06](https://www.statnews.com/2026/07/06/anthropic-ai-biotech-impact/)，2026-09-03 查證）
+- 2026-07（總結）：原始條目見 [[entities/dario-amodei-archive#2026-07]]
+  - 個人捐款 100 萬美元予 Public First，FEC 申報確認捐款人即本人（07-16，三筆捐款關係見 [[topics/anthropic-government-policy]]）
+  - STAT News 專訪坦承「壓縮 21 世紀」願景目前還做不到（07-06）；Anthropic Blog 發表開源權重模型立場聲明（07-28）
 - 2026-06（總結，上）：白宮信任關係全月走低——談判改由 Tom Brown 接管（06-24～26，WIRED），FT 分析指其風險用詞密度為 Altman 8 倍多（06-22）
 - 2026-06（總結，下）：另有 Fortune「文化決勝論」（06-08）、Bloomberg 政府監管與扁平組織訪談（06-06、06-11）、Times of India 談離開 OpenAI（06-21）。原始條目見 [[entities/dario-amodei-archive#2026-06]]
 - 2026-05（總結）：Code with Claude 大會現場宣布 Pro/Max 速率翻倍＋取消尖峰降速，為 SpaceX 算力合作首次鬆綁使用限制（05-12）。原始條目見 [[entities/dario-amodei-archive#2026-05]]

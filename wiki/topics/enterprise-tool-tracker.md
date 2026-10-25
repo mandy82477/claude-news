@@ -298,38 +298,15 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 #### 2026-08-04
 - **[媒體二次確認，非新增合作事實] Fierce Biotech 跟進報導 ICON 與 Anthropic 臨床試驗合作**：Fierce Biotech 報導與 07-29 Clinical Trials Arena 首報同一事件，未見新增合作細節，詳見上方使用現況表 ICON 列更新（Google News/Fierce Biotech）
 
-### 2026-07
+### 2026-07（總結；原始條目已移出）
 
-#### 2026-07-29
-- **ICON 與 Anthropic 合作，將 Claude AI 整合進臨床試驗流程**：Clinical Trials Arena 報導，詳見上方使用現況表新增列（Google News/Clinical Trials Arena）
-- **[市場反應追蹤，非新增合作事實] Cognizant（CTSH）股價於 07-28 合作公告後第二日再漲 8%**：TipRanks 報導 Cognizant 股價在與 Anthropic 的 Claude 合作宣布後第二天上漲 8%，為既有 07-28 Cognizant 全球首要夥伴升級案（見上方使用現況表 Cognizant 列）的投資人反應追蹤，僅標題可用，具體合作細節未見新增（Google News/TipRanks）
-
-#### 2026-07-28
-- **Cognizant 與 Anthropic 擴大既有合作，升級為 Global Premier Partner**：Anthropic Blog 官方公告，Cognizant 將 Claude 用於自身建置並為客戶運行的系統，橫跨製造業、生命科學、保險等產業，並將 Claude 嵌入自身商業與工程平台、打造「Claude 認證」（Frontier Certified）人才梯隊，同步升級為 Claude Partner Network 的全球首要夥伴（Global Premier Partner）；延續近期 TCS（06-11）、DXC（06-12）等頂尖 IT 服務商全面深化合作模式（推論），詳見上方使用現況表新增列與 [[topics/anthropic-business]]（Anthropic Blog https://www.anthropic.com/news/cognizant-anthropic；Google News/Seeking Alpha 同日跟進，未見新增細節）
-
-#### 2026-07-21
-- **[❓ 未確認，單一非主流媒體，疑似與蒸餾指控混淆] tech-insider.org：阿里巴巴據稱因偵測 2.5萬假帳號封鎖 Claude Code**：tech-insider.org 報導阿里巴巴以偵測到 2.5 萬個虛假帳號為由封鎖 Claude Code 存取。**注意**：阿里巴巴已於 07-03/07-10 因「疑似後門風險」封鎖 Claude Code 並改用 Qoder（見上方使用現況表 Alibaba 列，狀態 ❌ 已退出）；本則報導的「2.5萬假帳號」數字與 06-25 Anthropic 指控阿里巴巴蒸餾攻擊所用的假帳號數字（詳見 [[topics/competitor-landscape]]）完全相同，高度疑似報導方將「Alibaba 封鎖 Claude Code」與「Anthropic 指控 Alibaba 蒸餾攻擊」兩起不同事件的細節混淆或誤植；來源為單一非主流媒體且細節有限，暫不視為新增獨立事件或狀態變更，僅於既有 Alibaba 列備註補充查證註記（tech-insider.org）
-
-#### 2026-07-15
-- **[企業採購認知層，傳聞，2026-09-05 自 [[topics/competitor-landscape]] 移入] Yahoo Finance：Microsoft 據報訓練業務團隊向客戶淡化 OpenAI 與 Anthropic 的競爭優勢**：延續 Microsoft 06-21 退出 Claude Code（成本）、改推 GitHub Copilot CLI（05-15 內部切換，見上方使用現況表 Microsoft 兩列）的既有軌跡，本次從「產品替代」延伸至「銷售話術」層面，直接鎖定客戶認知層，可能影響企業採購決策（推論，未經 Microsoft 官方證實；僅標題可用，具體話術內容與涵蓋客戶範圍未見細節）（Google News/Yahoo Finance）
-- **Grasshopper Bank 成為首家列入 Anthropic MCP 目錄的銀行**：Financial IT 報導 Grasshopper Bank 成為首家列入 Anthropic MCP（Model Context Protocol）目錄的銀行，為金融業具名採用 MCP 生態系的起點案例；具體整合規模、應用場景未見細節（僅標題可用，Google News 轉址）（Google News/Financial IT）
-
-#### 2026-07-08
-- **Alibaba 禁用 Claude Code 事件再獲媒體確認，定調升溫為中美 AI 資安爭端**：Yahoo Finance（07-08）跟進報導阿里巴巴禁用 Anthropic Claude Code 事件，將其定調為中美 AI 資安爭端升溫的一環；未提供禁令細節、生效日或替代方案的新事實，僅補充「地緣政治爭端」框架，維持既有 ❌ 已退出狀態與 07-10 生效日不變（Yahoo Finance https://finance.yahoo.com/technology/ai/articles/alibaba-bans-anthropics-claude-code-175649089.html）
-
-#### 2026-07-07
-- **阿里巴巴禁用 Claude 改用內部工具 Qoder（三媒體確認）**：PYMNTS、Benzinga、BeInCrypto 三獨立媒體確認阿里巴巴以資安疑慮禁止員工使用 Anthropic Claude，並**明確指示改用內部工具 Qoder**；此前僅知禁令與 07-10 生效日，本次補上具體替代方案細節，是繼 Microsoft（GitHub Copilot）、JPMorgan（出口管制被迫）之後，第三個「退出 Claude → 明確替代工具」的具名案例（Benzinga https://www.benzinga.com/markets/tech/26/07/60297708/alibaba-reportedly-bans-anthropics-claude-for-employees-citing-security-risks-directs-them-to-use-qoder-instead）
-- **Alberta 省政府具名採用：20 小時掃描 4.66 億行程式碼**：Anthropic Blog 官方案例研究揭露，加拿大 Alberta 省技術與創新部門自 2025 年起使用 Claude Code（含 Opus、Sonnet 模型）進行系統資安審查，20 小時內完成 4.66 億行程式碼掃描，並建立漏洞盤點、修補與新工具；是繼加州州政府（Newsom 協議）後另一個具體量化成效的地方政府採用案例（Anthropic Blog https://www.anthropic.com/news/alberta-government-claude-cybersecurity；Digital Watch Observatory 跟進）
-
-#### 2026-07-06
-- **Meta 傳出限制工程師使用 Claude（未確認）**：日報補充提及 Meta 限制工程師使用 Claude，惟未提供具體來源連結、規模範圍或生效日期，暫列為 ❓ 未確認狀態，待後續獨立媒體報導確認後更新（若確認屬實，將是繼 Alibaba 安全疑慮、Microsoft 成本、JPMorgan Chase 出口管制後第四種退出/縮限驅動因素的具名頂尖科技企業案例）
-- **小型企業改用 Claude 自建工作流取代 Salesforce**：The Information 報導部分小型企業改用 Claude 自建工作流取代 Salesforce，反映企業軟體採購行為變化；報導未點名具體企業或提供規模數字，暫不單獨列入使用現況表，僅記錄為採購行為觀察（The Information https://www.theinformation.com/articles/small-firms-use-claude-quit-salesforce）
-
-#### 2026-07-05
-- **Alibaba 禁令生效日確認為 7/10**：The Indian Express 跟進報導，確認阿里巴巴將於 2026-07-10 起正式禁止員工使用 Claude Code，作為美中 AI 競爭加劇下的因應措施；提供 07-03 Reuters 獨家報導以來首個具體生效日期，此前僅知禁令已宣布但無明確時間點；事件日期欄已由報導日 07-03 更新為生效日 07-10（The Indian Express https://indianexpress.com/article/technology/artificial-intelligence/alibaba-ban-claude-code-us-china-ai-10772429/）
-
-#### 2026-07-03
-- **Alibaba 傳出禁止員工職場使用 Claude Code（疑似後門風險）**：Reuters 獨家報導（HN score 313，多家媒體跟進），Alibaba 以「疑似後門風險」為由禁止員工在職場使用 Claude Code；指控來源未經 Anthropic 證實。是繼 Microsoft（成本，06-21）、JPMorgan Chase 香港（出口管制，06-18）後第三個具名企業退出案例，也是首次以「安全疑慮」為退出理由，區別於此前的成本與法規兩類驅動因素；此事件亦與 6/24–6/29 Anthropic 指控阿里巴巴大規模蒸餾攻擊 Claude 模型的爭端同期發生，雙方關係持續緊張（詳見 [[topics/anthropic-business]] 相關時序、安全面向見 [[topics/ai-agent-safety]]）（Reuters https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/）
+- **Alibaba 禁用 Claude Code（07-03～07-08）**：Reuters 07-03 首報「疑似後門風險」（HN 313 分）；07-05 確認生效日 07-10；07-07 三媒體確認改用內部工具 Qoder；07-08 Yahoo Finance 定調為中美 AI 資安爭端。首個以安全疑慮退出的案例，成因查證見 ⟨Q-01⟩。
+- **Meta 限制工程師使用 Claude**：07-06 日報首提（未確認），後於 ⟨Q-02⟩ 查證屬實。
+- **Alberta 省政府（07-07）**：Claude Code 20 小時掃描 4.66 億行程式碼，用於資安審查；繼加州州政府後第二個量化的地方政府案例。
+- **Partner 擴張**：Cognizant 升級 Global Premier Partner（07-28）；ICON 把 Claude 整合進臨床試驗流程（07-29，Cognizant 股價次日再漲 8%）；Grasshopper Bank 成為首家列入 MCP 目錄的銀行（07-15）。
+- **Microsoft（07-15）**：Yahoo Finance 傳其訓練業務團隊向客戶淡化 OpenAI 與 Anthropic 優勢（推論，未經官方證實）。
+- **採購行為（07-06）**：The Information 稱部分小型企業改用 Claude 自建工作流取代 Salesforce，未點名企業。
+- 原始條目見 [[topics/enterprise-tool-tracker-archive#2026-07]]
 
 ### 2026-06（總結；原始條目已移出）
 

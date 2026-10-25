@@ -12,7 +12,7 @@ parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 189
+inbound_links: 191
 attribution_count: 156
 attribution_last: "2026-10-24"
 top_source: "google-news"
@@ -32,6 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **首次出現：** 2026-04-25
 **最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
+%% 拆頁評估 2026-10-25：拆，草案：正文 896 行（本輪未蒸餾），事件流約 596 行（重要政策變動紀錄各節）。全列各節所答：現況／我的方案現在有什麼／一小時一個月多少／模型 API 定價／還沒確定的計費變動／當前生效的計費規則／通路與乘數＝我現在怎麼被計費、該買哪個（約 270 行，留母頁）；事故現在還在發生嗎＋灰色市場＋事故與爭議＝帳單出錯、帳號被封怎麼辦（約 230 行）；定價與促銷＋配額與速率＋計費切割風波＋成本案例＝價格與配額何時怎麼變（約 400 行，計費切割 101 行單獨太薄、併入）。草案：事故群→子頁 entities/pricing-incidents；價格配額沿革群→子頁 entities/pricing-history；母頁留現況與生效規則、路由表。錨點入邊（如 pricing#方案可用性與帳務摩擦）留母頁不動，指入事故／沿革節的須回掃，待頁面健檢波執行。 %%
 
 > **最新計費政策異動**（2026-10-24）
 > - **Max 5x→20x 升級再爆付款失敗**：新 GitHub Issue #56281（39 留言）回報升級至 Max 20x 時每次付款皆失敗、客服未回應，延續 08-02 已知同類問題（本頁事故表已滿載，詳見 [[entities/pricing#事故與爭議（誤扣費、靜默計費改動、帳號安全）]]）。

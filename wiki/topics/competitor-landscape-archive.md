@@ -3,7 +3,7 @@ page: "topics/competitor-landscape-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-09-05"
+last_updated: "2026-10-25"
 last_news_update: "2026-05-23"
 status_main: "resolved"
 days_since_news: 155
@@ -29,13 +29,103 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/competitor-landscape]]
 **開始日期：** 2026-04-24
-**最後更新：** 2026-09-05
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-05-23
 
 > **原始條目封存**（2026-09-04）
 > 本頁為 [[topics/competitor-landscape]] 的時序原始條目封存，一字未刪；重點層（時段總結、競品定價對照、主要競品追蹤）見主頁。
 
 ---
+
+## 2026-07
+
+### 2026-07-30
+- **OpenAI**：官方公告 GPT-5.6 降價「Advancing the price-performance frontier」，Luna 降 80%、Terra 降 20%、Sol 提速 2.5 倍（Blog/Simon Willison；[OpenAI 官方](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/)）
+
+### 2026-07-29
+- **OpenAI**：The Information 稱 Codex 與開源模型討論度上升，但 Claude Code 採用黏著度仍領先，無量化數字（Google News/The Information）
+
+### 2026-07-27
+- **Moonshot AI**：Tom's Hardware 與 Simon Willison 報導 Kimi K3 權重正式開源，宣稱運算成本僅前沿模型 2–3 分之一（Google News；Blog/Simon Willison）
+- **產業聯盟**：The Verge 報導 Nvidia、Microsoft 發起開放 AI 安全聯盟，OpenAI、Google、Anthropic 均未列名（Google News/The Verge）
+
+### 2026-07-26
+- **開源立場對立**：Benzinga 報導白宮 AI 政策顧問 David Sacks 稱 Anthropic 的開源立場「將把一把匕首刺進美國開源生態系的心臟」（Google News/Benzinga）
+
+### 2026-07-25
+- **OpenAI**：SitePoint 發表「Codex 5.3 生產環境工作流——何時該選它而非 Claude 做複雜重構」，無量化比較（Google News/SitePoint）
+
+### 2026-07-22
+- **Cline**：tech-insider.org 比較 Cline、Claude Code 與 Copilot 定價（Free vs $20 vs $10）（Google News/tech-insider.org）
+- **中國 agent**：SCMP 報導某中國 AI agent 在自主研究任務上超越 Claude Code，未具名廠商與方法（Google News/South China Morning Post）
+- **Alibaba**：TipRanks 報導 Claude 曾自稱是阿里巴巴 Qwen AI，引發「蒸餾雙標」批評；蒸餾指控的法律戰見 [[topics/anthropic-government-policy]]（Google News/TipRanks）
+
+### 2026-07-21
+- **Moonshot AI／Alibaba**：Emerging Trajectories（HN 341 分）分析 Kimi K3 與 Qwen 3.8 逼近 Fable 5，直言對 Anthropic 產品差異化構成重大威脅；The New Stack 實測顯示 Kimi K3 效果與 Fable 5 相當、成本三分之一、速度慢 4 倍（Hacker News；The New Stack）
+
+### 2026-07-20
+- **Alibaba**：qz.com、WSJ、SCMP 同步報導 Qwen3.8 預覽，宣稱能力僅次於 Anthropic Fable 5；thestreet.com 稱此標誌 AI 編程競爭態勢轉變（Google News）
+- **Moonshot AI**：r/LocalLLaMA 週熱門貼文稱 Kimi K3 在 Text Arena 與 arena.ai 勝過 Claude Fable，與官方 07-18 自陳方向相反，無方法論（Reddit）
+- **Thinking Machines**：r/LocalLLaMA 報導其發表首款開源權重模型 Inkling（Reddit）
+- **開源陣營節奏**：r/LocalLLaMA 彙整近期開源模型發布時程（Kimi K3、Deepseek V4、Liquid、Mistral、GLM 5.5）（Reddit）
+
+### 2026-07-19
+- **xAI**：The New Stack 報導 Musk 開源 Grok Build 對抗 Anthropic，標題並稱 Anthropic 每月支付對方 12.5 億美元，付款對象與用途原文未載，不可逕自推論（Google News/The New Stack）
+- **Thinking Machines**：Fast Company 稱該新創在「智識調性」上對 Anthropic 構成競爭（Google News/Fast Company）
+- **區域市場**：KED Global 稱企業需求帶動下 Claude 有望在南韓生成式 AI 市場領先，無市佔數字（Google News/KED Global）
+- **競品陣營表態**：The Motley Fool 再報 Musk 稱先前低估 Anthropic 實力，與 07-13 報導幾乎一致（Google News/The Motley Fool）
+
+### 2026-07-18
+- **Moonshot AI**：Simon Willison 引述官方公告確認 Kimi K3 為 2.8 兆參數、Kimi Delta Attention 架構、100 萬 token context，官方自陳整體仍落後 Fable 5 與 GPT-5.6 Sol（Blog/Simon Willison）
+- **媒體擴散**：BBC、Forbes、The Globe and Mail 同步報導 Kimi K3 能力逼近 Claude／ChatGPT（Google News）
+- **總體分析**：WSJ 分析 AI 更廣泛普及對中國有利、對 OpenAI 與 Anthropic 未必是好消息（Google News/WSJ）
+- **蒸餾指控**：The Times of India 報導 Anthropic 與 OpenAI 指控多家中國 AI 公司蒸餾，投資人 Chamath Palihapitiy 加入評論（Google News/The Times of India）
+
+### 2026-07-17
+- **Moonshot AI**：CNBC、TechCrunch、FT 同步報導 Kimi K3 正式發布，官方稱「最強模型」，TechCrunch 分析後續版本有望逼近 Opus 4.8（Google News；CNBC）
+- **Microsoft**：CNBC 報導 Nadella 公開批評 Anthropic 的 Fable「受編輯層面控制」（Google News/CNBC）
+
+### 2026-07-16
+- **Moonshot AI**：Financial Times 報導 Moonshot 即將發布挑戰 Anthropic 領先地位的新模型（Google News/Financial Times）
+
+### 2026-07-15
+- **Microsoft**：Yahoo Finance 報導 Microsoft 據稱訓練業務團隊向客戶淡化 OpenAI 與 Anthropic 優勢；企業採購面見 [[topics/enterprise-tool-tracker]]（Google News/Yahoo Finance）
+- **OpenAI**：HackerNoon 發表 Claude Code vs Codex vs OpenCode 的全端工程師比較文，無公開分數（Google News/HackerNoon）
+- **Alibaba**：Technology Org 解讀 Claude Code 內部邏輯設計，稱其凸顯 Anthropic 與阿里巴巴的競爭關係（Google News/Technology Org）
+
+### 2026-07-14
+- **競品陣營表態**：Proactive 解讀 Musk 稱 Anthropic 為「AI 領域明確領先者」的發言意涵，無新引言（Google News/Proactive）
+
+### 2026-07-13
+- **Cursor**：TweakTown 報導 Cursor 對標 Claude Cowork 的 AI agent 確認代號「Sand」（[TweakTown](https://www.tweaktown.com/news/112601/cursor-builds-ai-agent-sand-to-rival-anthropics-claude-cowork/index.html)）
+- **Microsoft**：Business Insider 報導 Nadella 對 Anthropic 等廠商的模型蒸餾做法提出隱晦批評（Business Insider）
+- **TCS**：The Times of India 報導 TCS 執行長宣布組建「前線部署工程師」團隊與 OpenAI、Anthropic、Amazon、Microsoft 競爭；合作面見 [[topics/anthropic-business]]（The Times of India）
+- **競品陣營表態**：Yahoo Finance 兩來源報導 Musk 稱先前對 Anthropic 的看法「明顯錯誤」（Yahoo Finance）
+
+### 2026-07-10
+- **pi-coding-agent**：Databricks 官方部落格證實 GLM 5.2 與 Opus 4.8 品質統計持平但成本 $1.28 vs $1.94／任務（省約 34%）；Pi harness 在 Opus 4.8 high 下便宜約 2.08 倍，主因 context 傳遞量約 1/3（[Databricks](https://www.databricks.com/blog/benchmarking-coding-agents-databricks-multi-million-line-codebase)）
+
+### 2026-07-09
+- **OpenAI**：Reuters、ZDNET 報導 OpenAI 發表「super app」ChatGPT Work 與 GPT-5.6，明確訴求在價格、速度、生產力超越 Anthropic（Reuters；ZDNET）
+- **Cursor**：The Information 報導 Cursor 正開發 AI agent 直接對標 Claude Cowork（The Information）
+- **競品陣營表態**：Business Insider、Yahoo Finance 報導 Musk 稱 Anthropic 為業界「領導者」，承認先前判斷有誤（Business Insider）
+- **Meta**：CNBC 報導 Meta 跨入 AI 程式輔助工具市場追趕 Anthropic 與 OpenAI（CNBC）
+
+### 2026-07-08
+- **Microsoft**：SiliconANGLE、Bloomberg 兩獨立來源報導 Microsoft 正以自研模型取代部分產品中的 OpenAI 與 Anthropic 模型以降低成本，官方無回應（[SiliconANGLE](https://siliconangle.com/2026/07/07/microsoft-reportedly-ditching-openais-anthropics-ai-models-favor-cut-costs/)；[Bloomberg](https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps)）
+- **Perplexity**：Business Insider 報導 Perplexity 低調開發 AI 編碼工具，對打 Cursor 與 Claude Code（[Business Insider](https://www.businessinsider.com/perplexity-building-ai-coding-tool-take-on-cursor-and-openai-2026-7)）
+- **總體分析**：TechCrunch 探討開源 AI 崛起為何目前尚未衝擊 Anthropic（[TechCrunch](https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/)）
+
+### 2026-07-07
+- **中國模型整體**：CNBC 報導在 OpenAI、Anthropic 成本上升下，中國本土模型在美企採用率上升（[CNBC](https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html)）
+- **DeepSeek**：finance.biggo.com 報導 DeepSeek 生態推出開源 agent 工具「Deep Code」對標 Claude Code（finance.biggo.com）
+
+### 2026-07-06
+- **Zhipu Z.AI**：Techzine Global 報導 Z.ai 推出免費 ZCode，直接對標 Cursor 與 Claude Code（[Techzine Global](https://www.techzine.eu/news/devops/142702/z-ai-takes-on-cursor-and-claude-code-with-free-zcode/)）
+- **Base 44**：Business Insider 實測 Base 44 新模型 base-1 與 Anthropic 模型的建站速度（[Business Insider](https://www.businessinsider.com/base44-first-llm-base-1-ai-coded-website-comparison-anthropic-2026-7)）
+
+### 2026-07-02
+- **Palantir**：HN 討論串（16 分）記錄 Palantir CEO Alex Karp 公開批評 Anthropic 與 OpenAI「竊取客戶 IP、token 價值偏低」；分析師同日調升其評等，背景涉及國防／企業市場競爭（Hacker News；Investor's Business Daily）
 
 ## 2026-06
 

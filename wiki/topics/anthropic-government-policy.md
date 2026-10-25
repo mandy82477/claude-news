@@ -11,7 +11,7 @@ parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 145
+inbound_links: 148
 attribution_count: 196
 attribution_last: "2026-10-22"
 top_source: "google-news"
@@ -30,6 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-05-01
 **最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-22
+%% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
 > **多線政府動態**（2026-10-22）
 > - **AI 安全法案**：TechCrunch／Politico／Zvi Mowshowitz／Novara Media 跟進 10-19 揭露的「50 人死亡或 10 億美元損害」門檻，均未提供新數值。

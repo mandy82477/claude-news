@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "resolved（封存頁）"
 domain: "🤖 模型"
-last_updated: "2026-09-07"
+last_updated: "2026-10-25"
 last_news_update: "2026-07-03"
 status_main: "resolved"
 days_since_news: 114
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **上層：** [[entities/fable-5]]
 **首次出現：** 2026-06-09
-**最後更新：** 2026-09-07
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-07-03
 
 > 本頁是 [[entities/fable-5]] 的原始條目封存，現在還成立的答案（哪一代、能不能用、護欄會不會擋你）都在主頁。
@@ -175,3 +175,55 @@ Jailbreak 持續爭議：有人再次聲稱破解成功，Anthropic 官方出面
 
 #### 2026-06-09
 正式發布。HN score 2,448，近 2,000 評論。6/22 前含括於訂閱方案。
+
+## 2026-07
+
+> 07-02 條目（Defense in Depth 分類器與化學／生物提問被拒）因為主頁爭議節引為細節出處，暫留在 [[entities/fable-5]] 歷史記錄，未搬入。
+
+#### 2026-07-31
+**法官質疑聯邦政府「供應鏈風險」禁令正當性，與 Fable 5 出口管制為不同政策線**（2026-08-10 官方/媒體查證）：Hacker News 轉載 Bloomberg 報導《Judge Voices Doubt US Has Justified Its Ban on Anthropic AI》，查得全文確認：聯邦法官 Rita F. Lin 認為川普政府未充分證明將 Anthropic 列為「供應鏈風險」的正當性，稱以「Anthropic 公開批評國防部」作為禁令理由「令人憂慮」；爭議根源是 Anthropic 與美國國防部合約談判破裂，Anthropic 拒絕其 AI 被用於大規模監控或致命武器鎖定／開火決策。此案為**聯邦機構採購/使用限制爭議**，與 Fable 5 晶片**出口管制**（已於 2026-07-01 解除）是兩條獨立政策線，不應合併記錄；與 2026-06-24 Legion 提告出口管制令一案是否同一訴訟程序仍未經證實，不可逕自合併。完整法律論證內容與政策脈絡見 [[topics/anthropic-government-policy]]（[Bloomberg](https://www.bloomberg.com/news/articles/2026-07-30/judge-voices-doubt-us-has-justified-its-ban-on-anthropic-ai)、[HN 討論](https://news.ycombinator.com/item?id=49117486)，2026-07-30/31）。
+
+**終局判決（2026-08-28，🔴→✅ 結案）**：Rita F. Lin 法官裁定國防部「供應鏈風險」黑名單違法且毫無根據，即時解除禁令；The Register 指出黑名單當初所依據的 Claude「能力」實際上並不存在，為判決翻案的關鍵理由之一（Reuters／Washington Post，2026-08-28）。此案終局結果與 Fable 5 晶片出口管制（已於 2026-07-01 解除）仍是兩條獨立政策線，本則僅摘記模型面關聯；完整判決分析、後續 Anthropic 與國防部合作動向見 [[topics/anthropic-government-policy]]「## 現在有哪幾條線在動」與「## 三個戰場」🪖 軍事合約段落。
+
+#### 2026-07-24
+**GitHub Issue #79337 持續追蹤：reaction 增至 13 個 + 新技術細節「已儲存模型 claude-fable-5[1m]」**：07-20 首次回報的 Max 方案誤判事件持續有讀者互動，reaction 數由 10 個增至 13 個（留言數維持 35 則、暫無更新資料）；本次追蹤新揭露受影響帳號的已儲存模型設定為 `claude-fable-5[1m]`，即 1M context 變體，有助釐清受影響的具體模型設定範圍。官方已於 07-20 確認為誤判並建議重啟，此結論未變，計費/配額面向詳見 [[entities/pricing]]（[GitHub Issues](https://github.com/anthropics/claude-code/issues/79337)，2026-07-24 01:16 UTC）。**後續（2026-09-02）**：issue 仍未關閉，留言數已增至 76 則、reaction 增至 26 個，距 07-20「已確認為誤判並建議重啟」的結論已逾 6 週，顯示問題非單次誤判或已復發；詳見下方「歷史記錄」2026-09-02 條目。
+
+**社群觀點：「太危險」分級與競品追平能力的落差（單一來源，社群觀點）**：Reddit r/ClaudeCode 使用者認為 Fable 5 被「削弱」後感覺只比 Opus 4.8 聰明一點，開源模型已追上原本被列為「太危險」等級的模型能力（[Reddit r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1v56yic/open_source_model_at_par_with_fable/)，2026-07-24，單一來源、score 恆 0）。同期另有 r/ClaudeAI 週熱門貼文（原貼 2026-07-18），一名自稱基因學/神經科學研究者質疑 Fable/Mythos「對科學研究太危險」的分類，認為自身分析 RNA 等用途與生物恐怖主義完全無關；此則安全分級爭議完整脈絡見 [[topics/ai-agent-safety]]，本頁僅並列記錄競品/能力落差角度。兩則均為個人觀點，非量化評測，不構成能力結論。
+
+**（已排除）「Fable 5 min cache」貼文**：另有 r/ClaudeCode 圖片型貼文僅標題提及快取時間偏短，無正文內容佐證，單一來源，證據不足，本輪不予記錄。
+
+#### 2026-07-20
+**GitHub Issue #79337：Max 方案誤判需購買 usage credits 才能執行 Fable 5，session 靜默降級至 Opus 4.8（官方已證實為誤判，非未修復）**：GitHub Issue 回報，2026-07-20（issue 原文稱為 Fable 5 正式成為 Max 方案標準配置的第一天）當天，Claude Code 一度拒絕在 Max 方案上執行 Fable 5，提示需購買額外「usage credits」，並將 session 靜默降級至 Opus 4.8；累積 10 個 reaction、35 則留言（[GitHub Issues](https://github.com/anthropics/claude-code/issues/79337)，2026-07-20）。**與既有事件的關係**：時間點與症狀（Max 方案 + 要求點數 + 涉及 Fable 5）與同日 Anthropic Status 公告的「Max 方案用戶被誤判需使用點數才能存取 Fable 5」事件高度吻合，官方已證實為誤判並建議受影響用戶重啟；本則 GitHub Issue 可能是同一起誤判事件經由另一管道的獨立回報，惟兩則來源未見官方明確互相對應確認，不逕自視為同一 issue（推論）。「Fable 5 正式成為 Max 方案標準配置」一說源自 issue 原文框架，與同期 [[entities/pricing]] 記錄的 Max/Team 存取政策分歧報導（07-19 Tech Times「轉為永久」vs 07-20 Reddit 週熱門「轉為計量存取」）需並陳看待，尚無官方公告一次性釐清「標配」的具體條件與計費方式；額度與計費爭議完整脈絡見 [[entities/pricing]]。
+
+#### 2026-07-13
+**Anthropic 拒絕說明延長原因，暗示與 Cursor 內部發現有關（推論）**：The New Stack 報導標題直指「Anthropic extends Fable 5 again — and won't talk about what developers found inside Cursor」，指出 Anthropic 拒絕說明本次延長是否與開發者在 Cursor 中發現的問題有關；Forbes 同日另一篇報導同樣說明存取限制延長，但未提供新細節。此為推測性報導，暗示延長原因可能另有隱情，但缺乏具體佐證，標「（推論）」（Google News／The New Stack、Google News／Forbes，2026-07-13）。
+
+**多家媒體重複確認延長至 7/19（無新日期變化）**：Forbes（Tyler Roush）、Help Net Security、Economic Times、Forbes（Sandy Carter）等多家媒體同日重複報導 Fable 5 存取限制延長至 2026-07-19 一事，內容與 07-12 記錄的同一事件一致，未出現新的日期或條件變化，僅為跨媒體多來源重複確認（[Forbes](https://www.forbes.com/)、[Help Net Security](https://www.helpnetsecurity.com/)、[Economic Times](https://economictimes.indiatimes.com/)，2026-07-13）。
+
+#### 2026-07-12
+**存取限制再度延長至 7/19**：Anthropic 將 Fable 5 存取限制再次延長，由原訂 7/12 延至 2026-07-19（Google News/The Economic Times，2026-07-12 18:08 UTC）。[Simon Willison 部落格「Fable gets another bump」](https://simonwillison.net/2026/Jul/12/bump/#atom-everything)（2026-07-12 21:20 UTC）第一手記錄並指出，延後原因與競品 GPT-5.6 Sol 被業界視為明顯屬於 Fable／Mythos 同級模型有關，暗示 Anthropic 觀察競品定位後才決定存取政策走向；免費期限與計費細節見 [[entities/pricing]]。
+
+#### 2026-07-10
+**GitHub Issue #73365：Advisor 角色全面 unavailable（🔴 未修復）**：Fable 5 advisor（Opus 4.8 main 底下的 advisor 角色）在所有 Claude Code session 中皆顯示「unavailable」，版本 v2.1.198，累積 50 則留言、100 個讚，情緒 😤。此為 Claude Code 呼叫層面的可用性問題，已同步記入 [[entities/claude-code]] 已知問題。
+
+#### 2026-07-09
+**官方基準：「Fable 5 orchestrates, cheap models execute」— 46% 成本達 96% 效能**：Reddit 使用者整理 Anthropic 官方公布的多模型協作模式基準數字，指出以 Fable 5 負責任務調度（orchestrator）、由較便宜模型負責實際執行，可用 46% 的成本達到 96% 的效能水準；此模式現可在 Claude Code 中直接套用（Reddit r/ClaudeAI，週熱門標記，來源貼文日期 2026-07-08 19:17 UTC）。屬官方基準數據轉述，原始發布連結未附於本則貼文，暫未直接查證官方原始頁面。**後續（2026-09-07）**：本站核查未見原始官方發布連結，此數字改列為社群整理轉載，非官方基準。
+
+#### 2026-07-08
+**免費期限延長至 7/12 + zero-shot coding 實測**：
+- **免費期再延長**：Anthropic 將 Fable 5 免費使用期限再延展 5 天，延至 2026-07-12（[Times of India](https://timesofindia.indiatimes.com/technology/tech-news/anthropic-extends-claude-fable-5-free-offer-till-july-12-eligibility-and-other-details-explained/articleshow/132255396.cms)、[Forbes](https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/)，2026-07-07~08）；定價與資格細節見 [[entities/pricing]]
+- **XDA zero-shot coding 實測**：作者以 Fable 5 進行 zero-shot（一次性）程式生成測試，並反思為何 Anthropic 選擇對 Fable 5 施加更嚴格的存取限制（[XDA](https://www.xda-developers.com/i-used-claude-fable-5-for-zero-shot-coding-and-understood-why-anthropic-locked-it-down/)）
+
+#### 2026-07-06
+**Anthropic 多模型錯誤率升高事件（同日解決）+ HN 實測佐證解封後能力**：
+- **服務中斷**：Anthropic Status 通報多個模型一度出現錯誤率升高，Fable 5 也一併受影響，事件於同日解決，無需採取行動（[Anthropic Status](https://status.claude.com/incidents/tl8x3p1msff2)）；同期 AOL 彙整讀者對 Claude API 不穩定的抱怨與詢問（Response incomplete Claude / Is Claude down / Claude api error，07-05 22:24 UTC），屬服務穩定性面向，非出口管制或護欄爭議重演
+- **Show HN 實測：Python 移植 Super Nintendo（6 分）**：作者以此專案作為 Fable 5 的實測案例——出口管制期間（6/12–6/30）專案卡關三週，Fable 5 解封後 90 分鐘內找出根本問題並修復 23 個編譯器 bug（[fabian-kuebler.com](https://fabian-kuebler.com/posts/fable-python-snes/)）；訊號雖弱（HN 6 分），但具體佐證解封後 Fable 5 在複雜除錯任務上的實際生產力
+
+#### 2026-07-03
+**配額重置規則釐清 + 消耗速度落差極大（社群策略彙整見「配額與計費過渡」子區塊）**：Reddit 社群釐清 Fable 5 額度重置時間依訂閱起始日而異，非統一週期（[Reddit r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1umt5h5/fable_resets_on_monday_if_you_held_a_plan_already/)）；同日回報顯示個體消耗速度差異懸殊，2 天內燒完額度、大型基因體分析工作流受衝擊等案例並陳（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1umtox4/i_burned_through_my_fable_5_usage_in_2_days_so_i/)、[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1umtlqh/sad_about_fable_restrictions/)）。
+
+#### 2026-07-01
+**出口管制正式解除，全球恢復存取**：
+- **官方公告（[Anthropic Blog](https://www.anthropic.com/news/redeploying-fable-5)）**：美國出口管制解除，Fable 5 與 Mythos 5 於 2026-07-01 起向全球用戶恢復存取。過渡期計費：Pro/Max/Team 方案 7/7 前維持每週配額 50%；7/7 後改依用量計費，定價近期公布
+- **Anthropic-美國政府協議**：Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動；此協議為 Fable 5 全球解禁的交換條件，標誌管制事件正式落幕
+- **管制解除**：2026-06-30 宣布、07-01 全球恢復（天數口徑見 [[topics/anthropic-government-policy]]）

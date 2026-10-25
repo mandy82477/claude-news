@@ -11,7 +11,7 @@ parent: null
 children: "['topics/enterprise-cost-management-archive']"
 page_role: "hub"
 days_since_news_subtree: 7
-inbound_links: 43
+inbound_links: 44
 attribution_count: 10
 attribution_last: "2026-10-18"
 top_source: "google-news"

@@ -11,7 +11,7 @@ parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 1
+inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-24"
 top_source: "google-news"
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 1
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic IPO 追蹤

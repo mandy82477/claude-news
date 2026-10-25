@@ -4,7 +4,7 @@ kind: "topic"
 type: "event"
 status: "resolved（封存頁）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-09-04"
+last_updated: "2026-10-25"
 last_news_update: "2026-06-27"
 status_main: "resolved"
 days_since_news: 120
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-04-27
-**最後更新：** 2026-09-04
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-06-27
 
 > 本頁為 [[topics/ai-agent-safety]] 的原始條目封存，重點層見主頁。收：時序（2026-05-21 以前，及 2026-09-04 遷入的 2026-06）＋技術彙整（2026-05-18 以前，2026-07-01 遷入；2026-05-25～05-09 五條 2026-09-04 遷入）。
@@ -464,6 +464,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **政策描述**：企業透過 AWS Bedrock 使用 Claude Fable 5 時，需明確同意將推論資料（inference data）共享給 Anthropic；此為 Bedrock 部署 Fable 5 的新增合規前提條件
 - **企業影響**：對有資料主權、GDPR、金融合規（如 FFIEC、MAS TRM）要求的企業，此條款可能形成部署障礙；部分企業可能未在評估 Bedrock 時預先知悉此要求
 - **與既有條目關聯**：此條款使企業在「能力最強的模型（Fable 5）」與「資料隱私合規」之間面臨取捨；呼應 2026-06-10 JFrog 治理插件發布背景，顯示企業 AI 治理需求持續上升
+
+## 2026-07
+
+> 2026-10-25 自主頁「時序」遷入的原始條目（07-01～07-14）。
+
+### 2026-07-14
+- **[低優先度待觀察] Claude Opus 4.8 / Sonnet 5 加密推理簽章聲稱遭還原**：Hacker News Show HN 展示可從 Claude Opus 4.8 與 Sonnet 5 加密推理簽章還原原始推理過程的 demo；HN score 2，互動量極低，未見第三方驗證或官方回應（Hacker News，2026-07-14 17:18 UTC）
+
+### 2026-07-07
+- **[防護生態] Radware 將 Claude Code 防護納入 agent 安全產品線**：SiliconANGLE、Let's Data Science、Stock Titan 三獨立來源報導資安公司 Radware 將 Claude Code 防護與合規/稽核報告功能納入其 AI agent 安全產品線，
+  - 屬第三方商業防護生態擴張訊號（SiliconANGLE，https://siliconangle.com/2026/07/07/radware-adds-claude-code-protection-compliance-reporting-agent-security/）
+
+### 2026-07-01
+- **[CVE 披露] CVE-2026-55407：Anthropic buffa Rust Protobuf DoS 漏洞**：
+  - Endor Labs AI SAST 引擎首次發現並披露 CVE-2026-55407，Anthropic Rust protobuf 函式庫 buffa 的 unknown-field decoder 存在缺陷，攻擊者可透過 wire data 觸發約 22 倍記憶體放大（OOM），導致 DoS；
+  - HN score 5（Endor Labs：https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-zero-day-cve-2026-55407-buffa）。✅ 2026-08-10 查證：
+  - **已修補於 buffa 與 connectrpc 0.8.0**，加入可設定的單訊息 unknown-field 數量上限（預設 100 萬欄，開銷上限約 40 MB）；CVSS 4.0 評 6.3（Moderate），預設 `preserve_unknown_fields=true` 者受影響
 
 ## 相關實體
 

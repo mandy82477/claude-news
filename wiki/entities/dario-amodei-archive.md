@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "resolved（封存頁）"
 domain: "👤 人物"
-last_updated: "2026-09-13"
+last_updated: "2026-10-25"
 last_news_update: "2026-06-26"
 status_main: "resolved"
 days_since_news: 121
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 👤 人物
 **上層：** [[entities/dario-amodei]]
 **開始日期：** 2026-05-12
-**最後更新：** 2026-09-13
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-06-26
 
 > 本頁保存 [[entities/dario-amodei]] 被搬離主頁的原始條目，一字不刪。想知道現況，回主頁「現況」或「公開立場與言論」表。
@@ -52,3 +52,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 2026-06-11：Bloomberg 報導兩則：（1）主張政府應可阻止危險 AI 發布，被解讀為針對中國；（2）直屬下屬僅一人的扁平組織結構引發討論。
 - 2026-06-08：Fortune 訪談引述：「在 AI 競賽中文化而非產品才是決勝點」，本人花 40% 時間建設公司文化。
 - 2026-06-06：Bloomberg 報導：對「Claude 是否被用於伊朗學校打擊」表示不知情。
+
+## 2026-07
+
+- 2026-07-28：於 Anthropic Blog 發表聲明「Our position on open-weights models」，澄清 Anthropic 從未主張禁止開源權重模型，並呼籲加強對中國晶片出口管制；人物角度僅記個人具名立場表態，政策細節詳見 [[topics/anthropic-government-policy]]（來源：Anthropic Blog）
+- 2026-07-16：**個人捐款 100 萬美元予 Public First**——Politico 原報導只寫「Anthropic 執行長」未具名，2026-09-13 複查已由 FEC 申報文件確認捐款人即本人，捐於 5 月，是他首筆七位數政治獻金（[Bloomberg](https://www.bloomberg.com/news/articles/2026-07-16/dario-amodei-anthropic-employees-give-millions-to-regulate-ai)）
+  - **三筆捐款的關係（2026-09-13 釐清）**：同一個收款方（Public First／Public First Action），捐款人各自獨立——公司法人 4000 萬、Dario 個人 100 萬、其他員工合計 200–300 萬；不是同一筆資金分拆，也非公司代個人出資
+  - 對手陣營為反監管的 Leading the Future 一系，雙方在 Bores 該席次補選對燒（詳見 [[topics/anthropic-government-policy]]）；WSJ／The Hill／Axios 的「選舉支出翻倍」框架與官方非選舉用途聲明的張力仍在
+- 2026-07-06：接受 STAT News 專訪談 AI 對生技產業的影響——Amodei 表示他「壓縮 21 世紀」（十年內完成百年生醫進展）的願景**目前還做不到**，坦承現階段 AI 在生技的貢獻仍以加速個別研究環節為主，並以同期發布的 [[entities/claude-science]] 為例說明 Anthropic 的切入方式（[STAT News，2026-07-06](https://www.statnews.com/2026/07/06/anthropic-ai-biotech-impact/)，2026-09-03 查證）

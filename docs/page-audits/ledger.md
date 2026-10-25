@@ -304,3 +304,7 @@
 4. 「節點／本輪／本線」仍不在 `check_reader_language.py` TERMS（第 16、17 波連兩波自承），機制待辦；四項頁內契約（標題日期＝最後節點、HN 分級、估標記、淡出檢查）無看守——要不要寫成 `run_tests.py` 一支頁面契約測試屬另一波。
 5. 併頁裁決點（trends↔patterns）與第 15 波（tools↔SIW）一起等使用者；兩者同型：機器／投影頁 vs 判斷頁。
 6. 第 1 層下一頁：`coding-workflow-guide`（入邊 20，功能記者頁，本波與第 16 波共 6 筆轉知指向它——轉知結案後審最省）；未結案則取隊列下一個未審頁（用 `wiki_graph.py explain` 重算入邊）。
+
+## 拆頁候選隊列（2026-10-25 厚頁評估，主編自決）
+
+lint 5o 厚頁 8 頁由負責記者交代切法（各頁 `%%` `拆頁評估 2026-10-25`）。判「拆」的 5 頁依序走健檢波（每波一頁，草案在該頁備忘）：`topics/ai-agent-safety`（1,897 行，四群）→ `entities/claude-code`（約 1,015 行，三群）→ `topics/market-signals`（約 1,355 行，三群）→ `topics/anthropic-business`（936 行，三群）→ `entities/pricing`（896 行，兩群）。排序依行數與入邊；廣度優先第 1 層隊列照舊並行。

@@ -42,7 +42,7 @@
 | 頁面 | 類型 | 領域 | 狀態 | 摘要 |
 |------|------|------|------|------|
 | [[entities/sonnet-5-5]] | model | 🤖 模型 | active | Claude Sonnet 5.5：2026-09-28 發布，取代 Sonnet 5 成為 API 預設 Sonnet，Terminal-Bench 4.0 由 10.3%→70.6%，牌價維持 $2/$10 |
-| [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位 |
+| [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位　↳ 子故事：[[entities/sonnet-5-archive]] |
 | [[entities/haiku-5-5]] | model | 🤖 模型 | active | Claude Haiku 5.5：2026-10-07 發布，取代 Haiku 4.5，官方稱最便宜最快最具能力的小型模型，成本降約 75%；牌價 From $0.10/$0.50、1M context（已查實） |
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | beta | Claude Science：科學家專用桌面 app（公開 beta），可稽核 artifact、本機／HPC／雲端 VM 皆可跑；Anthropic 宣布自行開發藥物 |
 | [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-mods]] |

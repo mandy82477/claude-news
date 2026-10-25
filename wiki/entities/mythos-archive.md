@@ -3,7 +3,7 @@ page: "entities/mythos-archive"
 kind: "entity"
 status: "resolved（封存頁）"
 domain: "🤖 模型"
-last_updated: "2026-09-27"
+last_updated: "2026-10-25"
 last_news_update: "2026-05-30"
 status_main: "resolved"
 days_since_news: 148
@@ -15,10 +15,10 @@ inbound_links: 0
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
-pending_signalled: 0
+pending_next_review: "2026-11-10"
+pending_signalled: 1
 staleness_exempt: null
 signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** resolved（封存頁）
 **領域：** 🤖 模型
 **上層：** [[entities/mythos]]
-**最後更新：** 2026-09-27
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-05-30
 
 > 本頁是原始條目的存放處，重點層見 [[entities/mythos]]。
@@ -145,3 +145,46 @@ Glasswing 夥伴從 50 擴展至 150 個新組織（共 200 個，15+ 國家）�
 
 #### 2026-06-01
 ENISA（歐盟網路安全局）獲准存取，成首個歐洲政府機構。英國銀行同日遭拒，OpenAI 主動提出替代方案——AI 安全能力開始成為地緣政治談判籌碼。The Information 報導授權費被稱「Budget Buster」。
+
+## 2026-07
+
+#### 2026-07-29
+**密碼學界對 07-28 密碼分析研究的第一波深度反應**：
+- **密碼工程背景部落客評論**（HN score 168）：作者評論 07-28 公布的兩項 Mythos Preview 密碼分析成果，指 HAWK 攻擊與 AES 改進攻擊在「成熟度」與「意義」上有落差（[Cryptography Engineering](https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/)，2026-07-29）。具體所指見下兩條（09-13 讀原文查證）
+  - **HAWK 攻擊是真成果**：沒有發明新數學，而是把既有工具接起來，但**產出了真能跑的程式碼**，對挑戰實例數小時 wall-clock 跑完，等於把安全強度砍半、逼該方案加倍金鑰長度——而 HAWK 的賣點正是效率
+  - **AES-7 那篇只是 2013 年舊研究的常數倍改進**：需 2^89 次加密運算與 2^105 個選擇明文，作者直言「你得先說服一個真的加密者產出 2^105 筆加密」；屬知識小增量而非實用攻擊
+- **Matthew Green 觀點（經 Simon Willison 引述）**：密碼學家 Matthew Green 將此次研究成果放入「公鑰密碼演算法邁向後量子轉型過渡期」的脈絡評論（[Simon Willison](https://simonwillison.net/2026/Jul/29/matthew-green/#atom-everything)，2026-07-29，原文引自 blog.cryptographyengineering.com）
+- 兩則皆為密碼學專業社群對 07-28 研究成果的第一波深度反應，顯示該研究已進入專家圈層討論，非僅止於一般科技媒體轉述
+
+#### 2026-07-28
+**Anthropic 公開密碼學研究攻擊成果 + GitHub 實作展示 + Oxide 加入 Project Glasswing**：
+- **密碼學研究**：Anthropic 研究團隊使用 Claude Mythos Preview，發現兩項改進的密碼學演算法攻擊法：第一項大幅削弱 HAWK（後量子世界設計的數位簽章方案）；第二項識別出攻擊 round-reduced AES（最廣泛使用的對稱加密演算法）的新方法。官方稱這是重大研究進展，但**目前不影響任何正式系統**（[Anthropic Research](https://www.anthropic.com/research/discovering-cryptographic-weaknesses)，HN score 221，多方報導確認）。文章並提及 Mythos Preview 先前已展示能自主完成密碼學研究任務的能力。
+- **GitHub 實作展示**：GitHub 上出現針對 HAWK-256 的實際可行金鑰恢復攻擊示範（[repo](https://github.com/anthropics/cryptography-research-demo)，HN score 57），與上述研究成果相呼應，HN 讀者留言稱「這個類別（HAWK）本來就被認為有問題，但這次很酷因為是實際可行的」。
+- **Oxide 加入 Project Glasswing**：Oxide Computer 宣布加入 Project Glasswing，將 Claude Mythos 5 應用於主動識別並修補自家開源程式碼庫（韌體、作業系統、控制平面、網路堆疊）中的潛在漏洞（[Oxide Blog](https://oxide.computer/blog/oxide-anthropic-project-glasswing)，HN score 16）。Oxide 強調其一貫信念「所有關鍵軟體都應可被檢視」，故開源自身全部程式碼；此為 Project Glasswing 又一具名企業夥伴案例，能力面詳見本頁，商業/安全政策面另見相關頁面。
+
+#### 2026-07-25
+❓ **待查證**（標 2026-08-10｜查 Mashable、public release｜複 2026-11-10｜訊 2026-09-02）｜**Mashable：Claude Mythos 或類似模型可能對外公開發布**（僅標題可用；09-01 發布的 Mythos 5.1 仍限信任機構，「公開發布」猜測依日報未成立，Mashable 原文與官方是否另有公開時程未查官方；日報 2026-09-02 僅載 Mythos 5.1 仍限信任機構，2026-10-10 依日報收斂）：
+- Google News 轉載 Mashable 標題「Anthropic's Claude Mythos, or a model like it, to get public release」（[Google News/Mashable](https://mashable.com/tech/anthropic-mythos-might-get-public-release)）；RSS 僅提供標題與轉址連結，無正文摘要，無法確認具體時程、版本形態（完整無護欄版 vs 附加護欄新版本）或與現有 Fable 5 的關係
+- 若屬實將是繼 Fable 5（2026-06-09，Mythos 架構附加護欄公開版）後，Mythos 級能力進一步向大眾開放的重大政策轉向；暫無第二來源佐證，待後續報導補充具體內容再擴寫分析
+- **後續（2026-09-01）**：Anthropic 正式發布 Claude Mythos 5.1，但**存取模式維持信任機構限定**（「available only through our trusted access programs」），並未如標題所暗示轉為全面公開發布；版本迭代屬實，「公開發布」的猜測則未成立。詳見上方「現況」（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）
+
+#### 2026-07-21
+**CNBC：Fed 對銀行示警 Mythos 風險，自己卻數月拿不到該模型**（2026-08-26 查證）：
+- Google News 轉載 CNBC 標題「The Fed rang the alarm about Anthropic's Mythos AI model — but had to go months without it」（[Google News/CNBC](https://news.google.com/rss/articles/CBMikgFBVV95cUxOejZuVHE3NHBKYnY4N0VFS0U3M3JXd3pQeEJBemUyQ21BRTF6U3Vvc2JWVXdQQkdlUDVPYnN0OUZJRnpUNVh4NkhTUTRNT3NyTlhwaTJ1YmpBcm1PSUF5MUZhNjU0SnlLZ3VwdWR4X1MzalF1UDRjcWszR0daUmVtV01ibDQ1MWxBaVFfTWhJWmVpZ9IBlwFBVV95cUxPSmNOa05qbkpGTjB1YkFBZE5rNEZaMFcteW81SlRldGFvckpHRE0tdVI3RHlEa1FSWDVFSnRNbnNLSTBjQlRJSWpJZTZOSEhwU09lb1paM051X2k3ZzcyWXNPYTRrai1tRHdFSndVbS15MUlVWXNFQWtFZGNwM0ZIUVcxTmdPNUVWY2FrS0RWajJucGpDSk9v?oc=5)）；RSS 僅提供標題與轉址連結，無正文摘要，無法取得具體警示內容、發布時間點、延遲原因或影響範圍。已掃日報至 2026-08-21 無後續；官方頁面未查證
+- **查證結果**：Fed 與財政部於 4 月與主要銀行執行長召開特別會議示警 Mythos 級能力可能讓網路攻擊更頻繁且更具破壞性；但 Fed 自該次示警後**至少三個月未取得 Mythos Preview 存取權**，截至 2026-07-15 仍在爭取——即央行一邊要求金融機構修補 AI 找出的漏洞，一邊被排除在其他銀行正在使用的同一工具之外（[CNBC](https://www.cnbc.com/2026/07/21/fed-mythos-ai-cybersecurity-banks-project-glasswing.html)；Bloomberg 2026-05-19 另報導監管機關因 Mythos 延後美國銀行網攻演練）
+- 監管關注鏈條因此確立：加拿大金融監管機關（07-13）→ 摩根大通 [[entities/jamie-dimon|Dimon]] 公開表態（07-16）→ 美國聯準會層級（本則），非同一事件的重複報導
+
+#### 2026-07-20
+**csoonline.com：Mythos FAQ 專文**（能力／存取／競爭者／影響）：
+- Google News 轉載 csoonline.com 標題「Claude Mythos FAQ: Capabilities, access, competitors, implications」（[Google News/csoonline.com](https://news.google.com/rss/articles/CBMirgFBVV95cUxOaE10YjdGU2JoM2xVRC02Q3VRQkVOX3ZBVmVMY1hXbTUxNDgwTUZ5OVBMUUdLdWNPcEtfYUZVMS0xaTRYMWFWckU2eUNuZ251VHV2aF9wcU5GNUtReHE3QUlYODdPU2ZTN3pfaDhHWG84Ti1GZV9IMC05QWNrUVNqZHg5OUY2TEExWmZuQURTMi1Tb1duVUpyTW5uVVZfa0RFRnRjQVBPRFpmekxHQlE?oc=5)）；RSS 僅提供標題與轉址連結，無正文內容可用，無法取得具體 FAQ 問答內容。已掃日報至 2026-08-21 無後續；官方頁面未查證
+- 顯示主流資安科技媒體持續以整理性 FAQ 形式報導 Mythos 現況；2026-08-26 回查該文連結已失效（HTTP 404），且本則本就無本頁他處未載的獨立事實，僅保留「媒體以 FAQ 形式報導」此一現象記錄，不再追蹤
+
+#### 2026-07-16
+**摩根大通執行長 Dimon：Mythos AI 風險是「真實問題」（Reuters／Google News，僅標題可用）**：
+- Reuters 報導（經 Google News RSS 轉載，僅取得標題，無法取得完整內文細節），摩根大通執行長 Jamie Dimon 公開表示 Anthropic Mythos 模型所涉及的 AI 風險是「真實的問題」（real issue）（[Google News/Reuters](https://news.google.com/rss/articles/CBMiugFBVV95cUxQQllaMFNac0hQSGkxVzh2V2VmWk9YR3Q3eXdEYW05UDMyd2hGc0F5N0d2MUZNQ2UxbVNqdl9DcUpkVzNQZzJDQkNjZ0pwNDY3MDhHVTdwVEhEU1FFZHYxVEZITllpYTJ1R190YU1zN292LVBDemhUYkNTNmZ1T0ktb3U4ek1CeFZfOF9PUWpWakNRU05uRnNFZUNLdVNESU80eDBJOEFadms0Y0VCWXI5YUhMQ05lZFBqdGc?oc=5)）
+- 這是繼 07-13 加拿大金融監管機關引用 Mythos 作為銀行業網路風險佐證後，金融業界對 Mythos 級模型風險認知持續升溫的最新一例；從監管機構正式文件延伸到具名金融業高管公開表態，顯示風險認知已從單一監管案例擴散至產業領袖層級。此則涉及風險評論之政策/監管面，本頁僅記錄模型認知動態面向，完整政策分析見 [[topics/anthropic-government-policy]]。
+
+#### 2026-07-13
+**加拿大金融監管機關引用 Claude Mythos 警告銀行網路風險（Reuters 獨家）**：
+- Reuters 獨家報導（另有一家媒體跟進），加拿大金融監管機關發給銀行業的網路風險警告信中，明確引用 Claude Mythos 作為佐證，電郵內容為報導依據；為 Mythos 2026-07-01 出口管制解禁後，監管機構首次在正式監管文件中點名其能力進行風險評估（Reuters，2026-07-13）
+- 顯示金融監管機構已開始將 Mythos 級模型的高階網路攻擊協助能力，正式納入銀行業風險評估框架；出口管制解禁後「使用面」（跨國企業/政府採用）敘事之外，首次出現「監管面」（風險警示）後續發展，值得持續追蹤是否有其他國家監管機構跟進；政策/外交面完整分析見 [[topics/anthropic-government-policy]]

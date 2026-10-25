@@ -13,7 +13,7 @@ parent: "topics/anthropic-agent-stack"
 children: "['entities/managed-agents-archive']"
 page_role: "hub+child"
 days_since_news_subtree: 2
-inbound_links: 39
+inbound_links: 40
 attribution_count: 11
 attribution_last: "2026-10-23"
 top_source: "github"

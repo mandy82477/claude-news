@@ -33,10 +33,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-05
 **最後更新：** 2026-10-25
 **最後新聞更新：** 2026-08-05
-**蒐集邊界：** 每週抓取 16 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
+**蒐集邊界：** 每週抓取 12 個公開活榜單的領先者，抓不到的榜會在「本週註記」寫明；只涵蓋**模型**層排名，Codex CLI、OpenCode 這類工具（harness）不在榜上。帶跑分數字的第三方對照評測不在本站蒐集範圍，因此本頁沒有「Claude 對某家」的頭對頭實測。
 
 > **本週快照重點**（2026-10-25）
-> 16 榜全數嘗試（直接抓取 8 榜、無法取得 8 榜）。arena.ai 三榜（Text、Search、WebDev）連續第二週全部回 403，**Text、Search 兩列也進入「連續 2 週拿不到」，考慮汰換的列由六列增為八列**。拿得到的榜大多同序：影片榜第三名換成 HeyGen Video 1，STT 榜第三名換成 Voxtral Small Transcribe 3，改圖榜第三名並列多了 Krea 3（Ultra）。八個榜換不換的選項見下方『連續抓不到的榜』。
+> 12 榜全數嘗試（2026-10-25 換榜後）。本週換掉兩個抓不到的來源、移出四個：寫 code 改看 llm-stats（分數為廠商自報）、電腦操作 agent 改看 AA Terminal-Bench Hard；MTEB、METR、OpenRouter 用量、Search Arena 移出快照表。arena.ai 的 Text、WebDev 兩榜連兩週回 403，再等一週。影片榜第三名換成 HeyGen Video 1，STT 榜第三名換成 Voxtral Small Transcribe 3。
 ---
 
 ## 摘要
@@ -53,27 +53,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想做的任務 | 本週前三名 | 資料日期 | 榜單 |
 |---|---|---|---|
-| [寫 code（agent 解 issue）](#eval-swebench) | Pro：Fable 5.1 > Fable 5／Mythos 5 > Opus 5；Verified：Opus 5 > Mythos 5 > Fable 5（兩子集不可互比；維持 09-10 值，見註記）（連續 4 週無法取得，考慮汰換） | 09-10（媒體轉述；10-11 起無法取得） | [SWE-bench](https://www.swebench.com/) |
+| [寫 code（agent 解 issue）](#eval-swebench) | Claude Fable 5（95.0%）> Claude Mythos Preview（93.9%）> Ember-1（92.2%）（Verified 子集，廠商自報；Pro 子集見註記） | 10-25（頁面自標） | [llm-stats SWE-bench](https://llm-stats.com/benchmarks/swe-bench-verified) |
 | [寫文案、聊天、翻譯](#eval-lmarena) | gemini-4-argon-high（1525，榜頁標初步）> claude-opus-5.5-high（1507）> claude-opus-4-6-high（1504）（維持 10-08 值）（連續 2 週無法取得，考慮汰換） | 10-08（榜頁自標；10-18、10-25 無法取得） | [Text Arena](https://arena.ai/leaderboard/text) |
-| [查資料（AI 搜尋）](#eval-search) | gpt-5.6-sol-xhigh（1257）> claude-opus-4-6-search（1253）> gpt-5.5-search（1242）（維持上次值，見註記）（連續 2 週無法取得，考慮汰換） | 08-24（榜頁自標；10-18、10-25 無法取得） | [Search Arena](https://arena.ai/leaderboard/search) |
 | [做網頁／前端](#eval-webdev) | claude-opus-5.5-max（1815）> gpt-6-astra-max（1788）> claude-sonnet-5.5-xhigh（1786）（維持 10-01 值）（連續 3 週無法取得，考慮汰換） | 10-01（榜頁自標；10-11 起無法取得） | [WebDev Arena](https://arena.ai/leaderboard) |
 | [畫圖（文生圖）](#eval-image) | GPT Image 2.5 Sunburst max（1222）> GPT Image 2.5 Flare max（1207）> GPT Image 2 high（1186）（與上週同序） | 榜頁未標日期（本次 10-25 抓取） | [AA 圖像榜](https://artificialanalysis.ai/image/leaderboard/text-to-image) |
 | [改圖（圖像編輯）](#eval-imageedit) | GPT Image 2.5 Sunburst max（1199）> GPT Image 2.5 Flare max（1182）> MAI-Image-2.6、Krea 3（Ultra）、Nano Banana 2.1 並列（1151） | 榜頁未標日期（本次 10-25 抓取） | [AA 編輯榜](https://artificialanalysis.ai/image/leaderboard/editing) |
 | [生成影片](#eval-video) | Wan 3.0（1175）> Utopai X（1167）> HeyGen Video 1（1160）（第三名換人，見註記） | 榜頁未標日期（本次 10-25 抓取） | [AA 影片榜](https://artificialanalysis.ai/video/leaderboard/text-to-video) |
 | [語音合成（TTS）](#eval-tts) | Eleven v4 Turbo（1336）> Eleven v4（1332）> Qwen-Audio-3.1-TTS-Plus（1307）（與上週同序） | 榜頁未標日期（本次 10-25 抓取） | [AA TTS 榜](https://artificialanalysis.ai/text-to-speech/leaderboard) |
 | [語音轉文字（逐字稿）](#eval-stt) | Fun-Realtime-ASR-preview（1.7% WER）> MAI-Transcribe-2（2.0%）> Voxtral Small Transcribe 3（2.1%）（第三名換人，見註記） | 榜頁未標日期（本次 10-25 抓取） | [AA STT 榜](https://artificialanalysis.ai/speech-to-text) |
-| [電腦操作 agent](#eval-terminal) | Claude Opus 5（42.7%）> GPT-5.6 Sol（34.6%）> Claude Fable 5（34.0%）**只看 TB 3.0，勿與 2.x／4.0 互比**（媒體轉述）（連續 3 週無法取得，考慮汰換） | 08-28（媒體轉述；10-11 起官方榜無法取得） | [Terminal-Bench](https://www.tbench.ai/) |
+| [電腦操作 agent](#eval-terminal) | GPT-5.6 Sol（Max，65.9%）> Claude Fable 5（Max，62.9%）＝ GPT-5.6 Sol（Medium，62.9%）（第三方統一跑分，版本與舊 Terminal-Bench 3.0 數字不接續） | 榜頁未標日期（本次 10-25 抓取） | [AA Terminal-Bench Hard](https://artificialanalysis.ai/evaluations/terminalbench-hard) |
 | [文件解析／OCR](#eval-docparse) | MiniMax M3（0.916）> Qwen3.7-Plus（0.914）> Qwen3.6 Plus（0.912）（與上週同值；頁面標示分數皆為自報） | 10-25（頁面自標） | [OmniDocBench](https://llm-stats.com/benchmarks/omnidocbench-1.5) |
 | [音樂生成](#eval-music) | Suno v6（1147）> Suno v6-mini（1130）> Mureka V9.5（1107）（與上週同序） | 榜頁未標日期（本次 10-25 抓取） | [AA Music Arena](https://artificialanalysis.ai/music/leaderboard/vocals) |
-| [Embedding（自建 RAG）](#eval-mteb) | KaLM-Gemma3-12B（72.32）> gemini-embedding-001（68.37）> Qwen3-0.6B（64.34）（媒體轉述，榜版不可互比）（連續 4 週無法取得，考慮汰換） | 07–09 月（媒體轉述；10-04 起無法取得） | [MTEB](https://huggingface.co/spaces/mteb/leaderboard) |
-| [放多長的任務給 agent](#eval-metr) | Claude Mythos Preview（17.4 小時@50%）（⚠️ 逾官方自陳可信上限，且無完整名次表）（連續 3 週無法取得，考慮汰換） | 2026-05（1.1 版，媒體轉述；10-11 起無法取得） | [METR](https://metr.org/) |
 | [讀文件不胡說（幻覺率低）](#eval-vectara) | finix_s1_32b（1.8%）> gpt-5.4-nano（3.1%）> gemini-2.5-flash-lite（3.3%）（與上週同值） | 10-22（榜頁自標，名次同 05-11） | [Vectara 幻覺榜](https://github.com/vectara/hallucination-leaderboard) |
-| [大家實際在用什麼](#eval-openrouter) | 本週仍讀不到 token 用量排名（頁面標用量資料至 10-24，但名次由前端載入；智慧指數不採計）（連續 3 週無法取得，考慮汰換） | 10-11 起無法取得 | [OpenRouter](https://openrouter.ai/rankings) |
 
 ## 本週註記（僅列異常）
 
-- **arena.ai 三榜連續第二週全部回 403**：Text Arena、Search Arena、WebDev Arena 官方頁都抓不到，三列維持最後一次取得的值；網路上流傳的快照多停在 7–9 月，不採計。
-- **八列連續 2 週以上拿不到，標「考慮汰換」**：SWE-bench（4 週，官方頁截斷）、MTEB（4 週，Space 載入中）、WebDev Arena（3 週）、Terminal-Bench（3 週，官方頁只有表頭）、METR（3 週，無完整名次表）、OpenRouter 用量（3 週，名次由前端載入）、Text Arena 與 Search Arena（各 2 週）。換不換榜尚未決定。
+- **arena.ai 的 Text、WebDev 兩榜連兩週回 403**：兩列維持最後一次取得的值，再等一週；網路上流傳的快照多停在 7–9 月，不採計。
+- **2026-10-25 換榜（寫 code）**：SWE-bench 官方頁連 4 週讀不到，改看 llm-stats。Pro 子集前三為 Claude Opus 5.5（89.9%）> Claude Sonnet 5.5（81.3%）> Claude Fable 5（80.0%），高於該子集已知水位，僅供排序參考。
+- **2026-10-25 換榜（其他）**：Terminal-Bench 官方頁連 3 週只有表頭，改看 AA Terminal-Bench Hard；MTEB、METR、OpenRouter 用量、Search Arena 移出快照表，題型仍留在頁尾索引。
 - **影片榜第三名換人**：HeyGen Video 1（1160）進前三，上週第三的 Dreamina Seedance 2.5 降到並列第四（1158）。
 - **STT 榜第三名換人**：Voxtral Small Transcribe 3（2.1%）進前三，上週第三的 Scribe v2 降到第四（2.2%）。
 - **OmniDocBench 分數皆為自報**：頁面把全部分數標為未驗證。
@@ -90,19 +87,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|---|
 | 做網頁／前端 | WebDev Arena | 3 週 | arena.ai 回 403；同站 Text、Search 兩榜也連兩週 403 | [Design Arena](https://www.designarena.ai/leaderboard)：有 Website 分榜，名次由前端載入，10-18、10-25 兩次都沒讀出 | 再等一週或改用媒體轉述：替代源兩次都讀不到名次 |
 | 寫文案、聊天、翻譯 | Text Arena | 2 週 | arena.ai 全站回 403 | 暫無：網路流傳的快照停在 07 月 | 再等一週：同站三榜同時擋抓取，等 arena.ai 是否恢復 |
-| 查資料（AI 搜尋） | Search Arena | 2 週 | arena.ai 全站回 403；且最後取得的資料已停在 08-24 | 暫無 | 移出快照表的候選：就算恢復，榜本身已兩個月沒更新 |
-| 寫 code（agent 解 issue） | SWE-bench | 4 週 | 官方頁抓取被截斷，讀不到名次 | [llm-stats Verified](https://llm-stats.com/benchmarks/swe-bench-verified)（120 模型）、[llm-stats Pro](https://llm-stats.com/benchmarks/swe-bench-pro)（62 模型），10-25 更新 | 換成 llm-stats：兩子集都有、每週有更新；分數全為廠商自報，表上要標明 |
-| Embedding（自建 RAG） | MTEB | 4 週 | HF Space 運作中，但名次由前端載入，抓到的頁面停在載入中 | [Agentset 嵌入榜](https://agentset.ai/embeddings)：頁面標 2026-02-15 更新 | 移出快照表：唯一替代停在 2 月，比現值還舊；題型留在頁尾索引 |
-| 放多長的任務給 agent | METR | 3 週 | 首頁沒有完整名次表 | [METR 時長子頁](https://metr.org/time-horizons/)：10-25 重抓只見頁面標最後更新 09-08，數值未讀出 | 移出快照表的候選：官方頁更新已慢下來，最新可信值仍是 04 月 |
-| 電腦操作 agent | Terminal-Bench | 3 週 | 官方頁只有表頭，沒有資料列 | [AA Terminal-Bench Hard](https://artificialanalysis.ai/evaluations/terminalbench-hard)：10-25 讀到 GPT-5.6 Sol（Max）65.9% 居首、Claude Fable 5（Max）62.9% 次之 | 換成 AA Terminal-Bench Hard：第三方統一跑分、收現役模型；版本不同，不與 3.0 數字接續 |
-| 大家實際在用什麼 | OpenRouter 用量 | 3 週 | 頁面標用量資料至 10-24，但名次由前端載入，10-25 讀不到 | 暫無：token 用量只有平台自己有 | 移出快照表的候選：連三週讀不到，10-18 那次是例外 |
 
 - **llm-stats 兩榜全為自報**：Pro 子集 10-25 以 Claude Opus 5.5 89.9% 居首，與 Pro 頂級約兩三成的已知水位不符，採用前要逐列核對（[llm-stats](https://llm-stats.com/benchmarks/swe-bench-pro)，2026-10-25）。
 - **METR 子頁的範圍**：10-18 讀到 23 個模型、最新一筆 2026-04-07（Claude Mythos Preview）；10-25 重抓只見「最後更新 09-08」，官方仍註明逾 16 小時的量測不可信（[METR](https://metr.org/time-horizons/)）。
 - **OpenRouter 用量列表**：只有 10-18 那次讀到（首列 DeepSeek V4.1 Flash，週 35.9T tokens），10-25 又讀不到（[OpenRouter](https://openrouter.ai/rankings)）。
 - **已確認不適用的替代**：llm-stats WebDev 榜只收 1 個模型；Vals 的 SWE-bench 頁已停更、Terminal-Bench 2.0 停在 06-04；Scale 的 Pro 榜停在 Opus 4.6 世代。
 
-這張表每週更新；換不換由本站編輯決定，表只列選項。
+這張表每週更新；換不換由本站編輯決定，表只列還沒決定的榜。2026-10-25 已決定的換榜與移出見上方「本週註記」。
 
 ## 評比方式索引（每榜比什麼、分數怎麼來）
 
