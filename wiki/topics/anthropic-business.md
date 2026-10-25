@@ -29,11 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
 **最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-24
+**最後新聞更新：** 2026-10-25
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 %%
 
-> **最新動態**（2026-10-24）
-> - **Schwab RIA 通路追加席位門檻**：原宣布全數 1.6 萬家 RIA 可用 Claude，現追加 20 席企業採購下限，逾 1.1 萬家小型顧問公司被排除資格（RIABiz）。
+> **最新動態**（2026-10-25）
+> - **音樂版權訴訟再添一案**：Billboard、Hollywood Reporter 同日報導 Anthropic 被告控告使用 Elvis Presley 音樂訓練 AI，為本週第二起音樂出版商侵權訴訟。
 
 ---
 
@@ -209,7 +209,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | 風險（最後動態） | 誰會遇到 | 你能先做什麼 | 嚴重度 | 來源等級 |
 |---|---|---|---|---|
 | 企業轉向開源模型分流訂單（2026-09-04） | 用量大到會被談價的企業客戶 | 續約前把開源自架的等值成本算出來當籌碼 | ⚠️ 高 | 一級媒體＋社群熱議 |
-| 音樂出版商著作權訴訟升級（2026-10-22） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
+| 音樂出版商著作權訴訟升級（2026-10-24） | 拿 Claude 產生近似受版權保護內容的人 | 沒有繞法。輸出用於商業發行前自行做版權檢查 | ⚠️ 高 | 一級媒體 |
 | Claude Code Projects 多 agent 併發推高用量（2026-09-17） | 同時開多個長任務 agent 的 Pro／Max 訂閱用戶 | 限制併發 agent 數量、盯緊用量儀表板，避免額度提前用罄 | ⚠️ 中 | 一級媒體 |
 | 訂閱補貼倍數是兩位數，收窄是進行式（2026-09-06） | 靠訂閱跑自動化工作流的重度使用者 | 先量自己的等值 API 花費，再決定要不要簽長約 | ⚠️ 中 | 社群估算 |
 | 專利侵權訴訟（UTRF，2026-08-24） | 全部使用者（求償含禁制令請求） | 沒有繞法。看訴訟進度，Anthropic 已表明全力抗辯 | ⚠️ 中 | 法院文件＋一級媒體 |
@@ -225,6 +225,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
+- **訊 2026-10-24 追蹤**：Billboard、Hollywood Reporter 同日報導另一起音樂出版商告 Anthropic 案，指控用 Elvis Presley 音樂訓練 AI；與 10-22 Reservoir／Suno 案不同起，原告與求償金額未見報導，僅標題可用（Billboard＋Hollywood Reporter）。
 - **訊 2026-10-22 追蹤**：Billboard 報導音樂出版商 Reservoir 加入控告 Suno 與 Anthropic，指控兩家公司「意圖取代創作者」；求償金額與具體論點未見報導，僅標題可用（Billboard）。
 - **訊 2026-10-21 追蹤**：Reuters 報導 Anthropic 與音樂出版商將在 AI 訓練資料訴訟案提出關鍵論點，意味案件進入實質審理階段；具體論點內容未見報導，僅標題可用（Google News/Reuters）。
 - **Azure Marketplace 贊助額度未必涵蓋 Claude 帳單（2026-10-09）**：The Register 報導一家 Microsoft for Startups 新創經 Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，收到約 $17,600 帳單。
@@ -540,6 +541,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-25
+- **[商業風險] Billboard／Hollywood Reporter：音樂出版商另告 Anthropic，指控用 Elvis Presley 音樂訓練 AI**：與 10-22 Reservoir／Suno 案不同起，詳見「還沒過去的風險」表更新，原告與求償金額未見報導（Google News/Billboard；Google News/The Hollywood Reporter）
+- **[商業風險，僅標題可用] The Information：分析 Anthropic 毛利結構可能成為 OpenAI 可乘之機**：具體數字與論證未附（Google News/The Information）
 
 #### 2026-10-24
 - **[重大事件] RIABiz：Charles Schwab 原宣布全數 1.6 萬家 RIA 可用 Claude，現追加 20 席企業採購下限，逾 1.1 萬家小型顧問公司被排除資格**：時間點卡在 IMPACT 2026 大會前，詳見「哪個合作會改到你用的 Claude」清單 Schwab／Orion 列更新；何時新增門檻未見報導（Google News/RIABiz）

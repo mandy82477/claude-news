@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行 Sonnet；取代 [[entities/sonnet-5|Sonnet 5]] 成為 Anthropic API 預設，Sonnet 5 官方已列 Legacy，見 [[entities/sonnet-5]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
-last_news_update: "2026-10-01"
+last_updated: "2026-10-25"
+last_news_update: "2026-10-25"
 status_main: "active"
 days_since_news: 24
 parent: null
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-sonnet-5-5
 **首次出現：** 2026-09-28
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-01
+**最後更新：** 2026-10-25
+**最後新聞更新：** 2026-10-25
 
-> **後續反應**（2026-10-01）
-> mixed-news.com 稱 Sonnet 5.5 工作階段可能在使用者未主動輸入特定內容下被自動降回 Sonnet 5，觸發條件原文未載（僅標題可讀）。
+> **穩定性事件**（2026-10-25）
+> Sonnet 5.5 等多款模型一度錯誤率升高（06:05–06:35 UTC，約 30 分鐘），07:53 UTC 已解決；受影響模型清單未完整列出。
 
 ---
 
@@ -168,6 +168,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-25 | Anthropic Status：Sonnet 5.5 等多款模型錯誤率升高，06:05–06:35 UTC，07:53 UTC 已解決 |
 | 2026-10-01 | mixed-news.com 稱工作階段可能在使用者未主動輸入下被自動降回 Sonnet 5，觸發條件未載 |
 | 2026-09-30 | MIXED Reality News 稱升級有 5 處行為差異、1 處靜默失敗，未經官方證實 |
 | 2026-09-29 | Reddit 使用者同組 skills 各跑 3 次，稱與 Opus 5.5 難以分辨；HN 互動回升至 853 分 |
@@ -175,6 +176,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **歷史記錄細節**
 
+- **2026-10-25**：Anthropic Status 通報 Sonnet 5.5 等多款模型錯誤率升高，06:05–06:35 UTC（約 30 分鐘），07:53 UTC 已解決；受影響模型清單未完整列出。同日另有一起獨立事件影響 Fable 5.1，見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/334jvgbrc4ff)，2026-10-25）
 - **2026-10-01**：mixed-news.com 報導稱使用者在未主動輸入特定內容的情況下，Sonnet 5.5 工作階段也可能被自動降回 Sonnet 5；觸發條件、影響範圍與是否可關閉均未見報導，僅標題可讀，不採信推算（[mixed-news.com](https://news.google.com/rss/articles/CBMif0FVX3lxTFBFcVJCd0NrVEZkeDZxTHJsakdDWXJXRVZ4NzVTNTJ5VjhFV0pOZVhsajYtRXR1cERpOWdaZ0lLeXYxQk16T3VORE4ybVVFdUsyemVrUmFTNi13Y2M1SHF1a055M0l4TVlHaEZGdkFuc3JmSkVPX2VZa0owQ2RrQVE?oc=5)，2026-10-01）
 - **2026-09-30**：MIXED Reality News 報導稱從 Sonnet 5 升級至 Sonnet 5.5 會在五種情境下出現行為差異，其中一種屬無錯誤訊息的靜默失敗，建議開發者升級前先跑一輪回歸測試（[MIXED Reality News](https://news.google.com/rss/articles/CBMiigFBVV95cUxNSGplNGg4aERiNE9YSm90SE1CZkNuMkFxWk5feFJCdnptTjhqdnpKZHNLNVhhMWFRSXMzV2NsdXR1VDBCdHhuREw5WW1NV2pUZmVGaHJvOHpxYmJkQVBDTnBObmdyVExQWHpfc0NGYlV6dUd0MlpiX2Njb2JlT0wyRHJQdktSQlNZd0E?oc=5)，2026-09-30；原文僅標題可讀，具體情境未見完整記載，不採信推算）
 - **2026-09-29**：Reddit 使用者以同一組 skills 對 Sonnet 5.5 與 Opus 5.5 各跑 3 次，稱看不出輸出差異（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wtend0/tested_sonnet_55_vs_opus_55_with_the_same_skills/)，2026-09-29；0 留言，訊號極弱，未附具體分數，不採信推算）

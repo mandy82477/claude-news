@@ -5,7 +5,7 @@ type: "model"
 status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
 last_updated: "2026-10-25"
-last_news_update: "2026-10-19"
+last_news_update: "2026-10-25"
 status_main: "active"
 days_since_news: 6
 parent: null
@@ -34,10 +34,10 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
 **最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-19
+**最後新聞更新：** 2026-10-25
 
-> **下代傳聞**（2026-10-18）
-> TestingCatalog 單一來源傳聞 Anthropic 下週發布 Claude Fable 5.5；官方未證實；與另兩則未發布模型訊號合併見「下一代模型傳聞彙整」。
+> **穩定性事件**（2026-10-25）
+> Fable 5.1 一度錯誤率升高（08:08–08:29 UTC，約 21 分鐘），08:49 UTC 已解決；不影響能力或存取政策，下一代傳聞詳見下方「現況」。
 
 ---
 
@@ -213,6 +213,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+#### 2026-10-25
+**Anthropic 狀態頁：Fable 5.1 錯誤率升高（同日 08:49 UTC 已解決，影響約 21 分鐘）**：
+- 官方 08:30 UTC 標記 Monitoring、08:49 UTC 標記已解決；影響期間 01:08–01:29 PT（08:08–08:29 UTC）（[Anthropic Status](https://status.claude.com/incidents/vx06kp8wfpq2)，2026-10-25）
+- 屬穩定性事件，非能力或存取政策變化；與同日另一起影響 Sonnet 5.5 等多款模型的獨立事件（06:05–06:35 UTC）不同時段，記錄見 [[entities/sonnet-5-5]]
 
 #### 2026-10-18
 **傳聞：Anthropic 下週發布 Claude Fable 5.5（單一來源）**：TestingCatalog AI News 報導稱 Anthropic 準備於下週發布 Claude Fable 5.5，未見具體發布日、規格或定價（[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)，2026-10-17）。

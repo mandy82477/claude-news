@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-10-22
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-10-25
+**最後新聞更新：** 2026-10-25
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
-> **最新動態**（2026-10-22）
-> The Intercept：一名 Google DeepMind 工程師因抗議公司與五角大廈合約辭職；Business Standard 另稱人才與資金正流向主打「安全超級智慧」的新興 AI 實驗室。既有格局不變，詳見 [[topics/ai-talent-flow#時序]]。
+> **最新動態**（2026-10-25）
+> NeoTeo 跟進報導 10-21 五角大廈合約辭職事件，稱已延燒為軍方 AI 內部辯論；既有格局不變，詳見下方時序。
 
 ## 摘要
 
@@ -79,6 +79,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-25
+- **NeoTeo 跟進 10-21 Google DeepMind 五角大廈合約辭職事件，稱已延燒為軍方 AI 內部辯論**：與 The Intercept 原始報導同一事件，未見新增姓名或合約細節，僅標題可用（Topic Watch/ai-talent-flow）
 
 #### 2026-10-22
 - **Business Standard：AI neolab 現象——人才與資金押注「安全超級智慧」路線**：報導泛論資金與人才正從既有大型實驗室外流至主打 safe-superintelligence 的新興 AI neolab，未點名具體人物、公司或流向；與既有 Google DeepMind 淨流失格局方向一致，僅標題可用（Topic Watch/ai-talent-flow）
