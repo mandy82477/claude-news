@@ -17,6 +17,7 @@ Anthropic 這週出的新功能與新產品，**至多 6 條**，每條一行：
 - **誰寫**：財經（`wiki-reporter-commercial`）、開發實務（`wiki-reporter-devpractice`）、社群（`wiki-reporter-community`）三位記者三取二。
 - **寫什麼**：記者自己決定**該專欄這週最熱的討論**。派稿時只問一句：「你的讀者週日晚上問你『這週那邊怎麼了』，你第一句講什麼？」不給候選清單；`python scripts/reader_notes.py --pending --category <類別>` 輸出裡的 🔍 興趣主題連同料一起給記者——那是讀者主動問過的，記者判斷本週有沒有它的訊號（比意思，不比字面）。
 - **給什麼料**：近 7 天該專欄類別的原料包 `data/ingest-packets/<日期>/<類別>.md`（財經＝`商業`、社群＝`社群`、開發實務＝`開發實務`＋`社群`），派稿時給路徑讓記者自己讀，不給七份日報；記者覺得不夠再列缺的料給主編外查。
+- **標題**：記者擬的 `#### 專欄名｜標題` 是草稿，收稿時照 `.claude/skills/weekly-report/references/headline.md`「誰定稿」由 Opus 重審定稿。
 - **怎麼寫**：每篇 600–800 **可見字**（收稿時主編用 `scripts/check_weekly_ledger.py` 的 `deepdive_visible_len()` 量一次，超過請記者自己砍）；體裁由記者選（新聞體、解釋、爭論整理都行）；段落標籤寫成讀者的問題（例如：這是什麼／社群怎麼用／值不值得試），不用體裁名；讀完知道什麼變了、值不值得跟。
 - **主編只做三件事**：記者列出缺的料就去外查（查不到寫「官方到今天沒說」）；替讀者追問「為什麼會在意」；守本檔與 `.claude/skills/weekly-report/references/contracts.md` 的格式。
 - 同題連續上週報，要有這週的新東西。
