@@ -7,21 +7,21 @@ domain: "🤖 模型"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-25"
 status_main: "active"
-days_since_news: 24
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 24
-inbound_links: 28
-attribution_count: 14
-attribution_last: "2026-10-01"
+days_since_news_subtree: 0
+inbound_links: 29
+attribution_count: 15
+attribution_last: "2026-10-25"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Sonnet 5.5
