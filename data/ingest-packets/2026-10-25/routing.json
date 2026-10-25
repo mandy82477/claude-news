@@ -1,0 +1,376 @@
+{
+  "https://status.claude.com/incidents/vx06kp8wfpq2": {
+    "title": "[Status] Elevated errors for Claude Fable 5.1",
+    "source": "Anthropic Status",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://status.claude.com/incidents/334jvgbrc4ff": {
+    "title": "[Status] Elevated errors for Claude Sonnet 5.5 and other models",
+    "source": "Anthropic Status",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/artokun/comfyui-mcp": {
+    "title": "artokun/comfyui-mcp",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/ryanfrigo/kalshi-ai-trading-bot": {
+    "title": "ryanfrigo/kalshi-ai-trading-bot",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/dagoSte/squadra": {
+    "title": "dagoSte/squadra",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/slee-persis/GVS5H": {
+    "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
+    "source": "Hacker News",
+    "categories": [
+      "模型",
+      "社群"
+    ],
+    "reason": "",
+    "note": "HN 熱門留言質疑該 benchmark 題庫（2023-2025）已可能遭污染，且未比對 sol/opus 5.5/fable 5.1 等現行主力模型，可信度存疑"
+  },
+  "https://github.com/anthropics/claude-code/issues/79337": {
+    "title": "[BUG] Fable 5 prompts 'usage credits required' on Max plan from 2026-07-20, the day it became standard on Max (saved model claude-fable-5[1m])",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能",
+      "商業"
+    ],
+    "reason": "",
+    "note": "累積 77 則留言，Fable 5 於 2026-07-20 成為 Max 標準模型當天起即持續誤判扣點，逾三個月未修復"
+  },
+  "https://github.com/anthropics/claude-code/issues/13514": {
+    "title": "[FEATURE] Delete Claude Code sessions",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/33932": {
+    "title": "[FEATURE] VS Code Extension: Diff review UI similar to GitHub Copilot Edits Review",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/57371": {
+    "title": "Claude Desktop (Windows): provide a way to disable the bundled Cowork background service (CoworkVMService) for users who don't use Cowork",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/62476": {
+    "title": "[BUG] Claude Code silently deletes conversation transcripts after 30 days by  default",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/12705": {
+    "title": "[BUG] Unable to generate a AGPLv3 license due to content filtering policy",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/35637": {
+    "title": "Remote control: permission prompts not rendering on mobile app",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/24968": {
+    "title": "[FEATURE] Accessbility - turn duration verbs should also be customizable",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://roush.io/paste-buff": {
+    "title": "Show HN: The missing clipboard history for macOS that idles at 16 MB",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://tributary.music/": {
+    "title": "Show HN: Tributary – Discover who influenced your favorite musicians",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/stubbi/openxet": {
+    "title": "Show HN: OpenXet",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://perchfocus.com/": {
+    "title": "Show HN: Perch, a calm Mac app for juggling Claude Code sessions",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/orgiggly/claude-plugin": {
+    "title": "Show HN: Orgiggly – Claude Code plugin that hosts the apps it builds",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/gtanczyk/genaicode": {
+    "title": "Show HN: Claude Code(and others) embedded in your app",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/eliasaronson/lobole": {
+    "title": "Show HN: Loböle, open-source parametric CAD that AI agents can drive",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/JochenBaier/AlwaysHex": {
+    "title": "Show HN: Visual Studio extension that shows decimal and hex in the debugger",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf3k9a/one_ide_with_a_fusion_of_claude_code_codex_cursor/": {
+    "title": "One IDE with a fusion of Claude Code, Codex, Cursor and OpenCode, on desktop and phone, across all your machines",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf3dae/what_level_of_usage_justifies_the_100_subscription/": {
+    "title": "What Level of Usage Justifies the $100 subscription?",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf32kw/the_future_of_the_ide_code_editor/": {
+    "title": "The future of the IDE / code editor?",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf2pkt/stop_paying_to_polish_agentsmd_claudemd_keep_it/": {
+    "title": "Stop paying to polish AGENTS.md / CLAUDE.md: keep it lean, move rules into hooks, and test it with 5 probe tasks",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf2lur/i_pointed_claude_code_at_the_cheap_chinese_head/": {
+    "title": "I pointed Claude Code at the cheap Chinese head unit in my Civic. What it found in the firmware was wild.",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xf2jj6/regarding_sub/": {
+    "title": "Regarding sub",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [],
+    "reason": "純使用者個人訂閱時程疑問，無生態資訊價值",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQlFXUXJmTlk1b3p1ZVgybmF6cl9jbDRWUXZOejVGbVBEUzdxNjZjYzNXYU5tZXBmS05kb1l3WTMzRHA0a21ITzRDY0NyaGI1Z2pDdTVZcmwwMFZEWGhnU210X3YtNnV4SHNJS2VMczRzR2NYZlBTTjhENmpqX0E5Z2FrMU8tSm9HaE5EU2Jqd04zX1ZRbnU5UW0yNTg?oc=5": {
+    "title": "Anthropic 5%, Musk $10B: AI Philanthropy Fine Print [2026] - https://tech-insider.org/",
+    "source": "Google News / https://tech-insider.org/",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "標題為比較/排名式文案，摘要為空，來源網域為非具名比較稿聚合站"
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeE42UnAzeHB6THFVTDg3b04yczBhQnBqUmhzMzRGNUR1YzJ2TkxEVGtOS3F5NVh5TVhlVFY0b0VLRk1xNTk1TWJBYkVMZnlUOWVQR1d6eEtyem1UUlpPZER3cmFzaVB4UXREOEFUYmFuTDBmWTlSb1FVMlozcTNnRU54Ni1EMUMySkZrZ3FVVnZuN2ltTWNzNm5HaVdwMktiT3Z0ckNCaTktSnUxZ3diNzFjN2NxQQ?oc=5": {
+    "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027 - The Decoder",
+    "source": "Google News / The Decoder",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxNV0VWT1ZhaXhkVkdab21aZUZvbTF3eFN6RUxKdFhTYkc1ZU9xX21BVkNhamNYamtfV1VTR1pEQnpxZlhZT054SEtfdDRKWFB3T3NXYWpVS0d2TWo4TGJHM1F1VjUtUzJUbmV6NU9VX2JjbGp1Sk5OOGFFcDlWSUdpNlpaUk45dzJyZUxGQlRfUQ?oc=5": {
+    "title": "Anthropic Investigates Elevated Errors Across Five Claude Models - Unite.AI",
+    "source": "Google News / Unite.AI",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "與編號 0／1 同日官方狀態事件相同主題，媒體面轉述，留給模型記者判斷是否已有增量"
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZUpIRi1oRmV0Q2lLRUZGdU9ab2ZyUGhZVTVDVDh2VnVSOG5nZVFBQ3gxd3VUeUs5QUw0emMtRVJpWHVtV2MxNzUwc0dVSF8tRWluWTFqcjhiY2J5RzNCMHdwV3A3R0JtVlNsVmtvRUtUX29SZ29CQTU1dV9ZYWVmT1AtdnpYOFZSSHc?oc=5": {
+    "title": "DeepSeek vs Claude: $0.30 vs $2 Input Tokens [2026] - shattered.io",
+    "source": "Google News / shattered.io",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "標題為比較/排名式文案，摘要為空，來源網域為非具名比較稿聚合站"
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbThOemJtVjRmeUFRMjY2Y3ZnMjlCUG1TT1JaUU4tN2hMb0dOMC0zZUNOdDhZekQxWjh5OS1RaV9rMXY2OFBURzYwOXc2Nkl6dXRRU18xR25oUzdFUGJGbUhERjhSYUNfNkt2bjNMa2xFcHhsMlBEc2FWWEc5U0RYbkNOUjdTbEJUa3c?oc=5": {
+    "title": "Google DeepMind resignations and military AI debate - NeoTeo",
+    "source": "Topic Watch / ai-talent-flow",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "專頁定向抓取（Topic Watch / ai-talent-flow），路由至該 slug 所屬領域"
+  },
+  "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZGtwT1ZKUkNBYXk3eWVXZVlHLU1CSldaVTgtbm9oUmtpNDQyekE2YWRxcmVPTThtbE9SdDE0ZG9qV1Utc2lvS1J3bUM1cmlQOWxaS2tOTzlwU2lHNExvay03UV8xWTJuSm01R2U2aDhrcFV0SkxqNWF6OXVkMEh0YVczNFRlVEZlZS0wS0VBVW5YdXpBSzdzNGhaRFJDUEZKV3NSbkZ0bElUSHJlcW5PX3QtMXRBc2lD?oc=5": {
+    "title": "Someone turned their monitor into a laser pointer firing range game using Claude Code - XDA",
+    "source": "Google News / XDA",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2w5MWpVOHBzaUxLMllrM0c1SDcxREV3WGt1VGdMNjM2STE3VHBlSEZwSnBDc1lKWnJ5c0pPNWJHMHlZcV9rVXRRVjNGYkxOcUpNZmRQVmVHTEZJZ1NYcUJhVzBCeW1hQ09mZTIzZm5JVDZ0emRMN3hSUXdhUnhodkF5NWJYTVBZNzNVejk4RjJQWTd0b0lROXNjWHpYM0NKc0hSb1ZtVmM0QQ?oc=5": {
+    "title": "Anthropic Sued for Using Elvis Presley Music to Train AI Models - The Hollywood Reporter",
+    "source": "Google News / The Hollywood Reporter",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "與編號 39 同一 Elvis Presley 侵權訴訟事件，Hollywood Reporter 報導"
+  },
+  "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5JUlpuRlhRclpWNHBLWWZhb2JPYkNmUktZTEVoM3NlN25zSHl2d3U4MFd2QW0wM3hlaGxSUGlWU1pJUWNZMTh6R2hiUkRXOUotdlJ6cmE4UlhBYzFKMkUyLVBxNG0?oc=5": {
+    "title": "Claude Code vs Codex: 65.5% vs 29.5% Use [2026] - tech-insider.org",
+    "source": "Google News / tech-insider.org",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "標題為比較/排名式文案，摘要為空，來源網域為非具名比較稿聚合站"
+  },
+  "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZmIwUnNsbzdhTERIYWlMaWZhMEtVSWFCYU14dFZUQ3h5MWRSMlc1SklocTU5OUFPQm5xeEM1c1JxLXpiWU9aWkxlQUI5OHdVai1ZNFF1RHBnTjdiMW5MS2xhUnBPak5Dbmg1SDRuWkFQMGhEekZ2Y2dpWVdsbGN0WHEtcjdYOWY3Nlo0djRjQkVnRV9DX2l6OVVGX09FYmFkRlEyT01RNTNuTi1nejZsNVZNc3I?oc=5": {
+    "title": "Claude Ships MCP Tasks and Elicitations in Claude Code — Durable Agent Workflows, Narrow Launch - Forkast News",
+    "source": "Google News / Forkast News",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "單一媒體（Forkast News）報導，Google News 摘要為空，細節待查證"
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1xem3qq/eu_buying_advice_two_modded_dell_t5810/": {
+    "title": "[EU Buying Advice] TWO modded Dell T5810 workstations (Xeon E5-2699 v4 & 2698 v4) + 32GB RDIMM smart or stupid to host my RTX 3090?",
+    "source": "Reddit / r/LocalLLaMA",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯之通用本地 LLM 硬體討論，不符合收錄範圍",
+    "note": "",
+    "summary_override": "使用者詢問用兩台改裝 Dell T5810 工作站（Xeon E5-2699 v4／2698 v4）+32GB RDIMM 搭 RTX 3090 跑本地 LLM 是否划算，純硬體選購討論，與 Claude/Anthropic 無關。"
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1xeia9o/made_a_rhythm_game_where_4_small_neural_nets/": {
+    "title": "Made a rhythm game where 4 small neural nets listen to your song right in the browser tab (open source)",
+    "source": "Reddit / r/LocalLLaMA",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯之通用本地 LLM 專案，不符合收錄範圍",
+    "note": "",
+    "summary_override": "開源節奏遊戲，用 4 個小型神經網路在瀏覽器分析使用者歌曲並生成玩法，純本地模型應用展示，與 Claude/Anthropic 無關。"
+  },
+  "https://news.google.com/rss/articles/CBMie0FVX3lxTE8tQUZPNFFsYXJZcnJydGJWWldtMmJLZEF4QlpiVWtQeHVZY1UwdjJHOFRLMHEyS0FvR0pjZ0ZXZHdQQURfNDNuWXNMaHlnZUdjUUYzeHF1T2pscmtVUFhXYTdwUkE2NmdWaEY4RkdneUhHNXFUdzZVbG5kOA?oc=5": {
+    "title": "Anthropic Sued For Stealing Elvis Presley Music to Train AI: ‘Deeply Protective of These Iconic Songs’ - Billboard",
+    "source": "Google News / Billboard",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "與編號 34 同一 Elvis Presley 侵權訴訟事件，Billboard 報導"
+  },
+  "https://www.reddit.com/r/LocalLLaMA/comments/1xe9yyg/capyflash_v074_where_my_twogpu_qwen38_engine_is/": {
+    "title": "capy-flash v0.7.4: where my two-GPU Qwen3.8 engine is now, what it isn't for, and where it's going",
+    "source": "Reddit / r/LocalLLaMA",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 無直接關聯之通用本地 LLM 引擎更新，不符合收錄範圍",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMigwFBVV95cUxOX0N0ZWVJZjFXUjdmLTdoRVdJbzkwVDBYaXM1eHN3aEdPbm4zTXNhdjJrbTdHdkQyQTJ5ZWRBMGdheFRKeUFjMFNGbWRZdHhnZWh2YXdDZDV2R2JTazNmaU5kTk9oVmQ2a0hnUzl3V2dtSWE0U2ZOZjB5TElicGVxOE1sSQ?oc=5": {
+    "title": "Anthropic’s Margin is OpenAI’s Opportunity - The Information",
+    "source": "Google News / The Information",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "The Information 報導 Anthropic 毛利結構分析，摘要為空"
+  }
+}
