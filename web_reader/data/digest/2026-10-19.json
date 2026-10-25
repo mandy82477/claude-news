@@ -106,7 +106,13 @@
       "time": "10/19 14:00",
       "sentiment": "",
       "body": "The Information 單一來源消息稱 Anthropic 正準備一款更擅長「讀懂使用者真實意圖」的模型，官方尚未證實、也未見其他媒體跟進。關注下一代 Claude 模型能力方向的讀者可留意近期是否有官方公告佐證。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
     },
     {
       "title": "This free, open-source tool beats Claude Code, Codex, and Antigravity at their own game, and I'm not looking back - MakeUseOf",
@@ -375,6 +381,11 @@
   ],
   "preview": "Claude Code：版本：v2.1.303，純臭蟲修復與穩定性改進，官方未列具體項目。",
   "sedimentedToday": [
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5 與 5.1",
+      "pageType": "entity"
+    },
     {
       "id": "opencode",
       "name": "OpenCode",

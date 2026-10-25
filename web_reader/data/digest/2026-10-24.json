@@ -164,7 +164,13 @@
       "time": "10/23 21:31",
       "sentiment": "",
       "body": "Forbes 與 Yahoo Finance 同日各自整理 Anthropic IPO 前景觀察，均未附新的財務數字（10-21 的 S-1 虧損數字已是最新）。持續關注 Anthropic IPO 的讀者可快速掃過，不必期待新資訊。",
-      "focusTags": []
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
     },
     {
       "title": "OpenAI disables internet access during model training while Anthropic issues another mea culpa - The Register",
@@ -433,8 +439,18 @@
       "pageType": "topic"
     },
     {
+      "id": "ai-eval-boundary-incidents",
+      "name": "AI 評測越界事件",
+      "pageType": "topic"
+    },
+    {
       "id": "anthropic-business",
       "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic IPO 追蹤",
       "pageType": "topic"
     },
     {
@@ -455,6 +471,11 @@
     {
       "id": "community-interfaces",
       "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-pattern-trends",
+      "name": "社群趨勢觀察（週更）",
       "pageType": "topic"
     },
     {
