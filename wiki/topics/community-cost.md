@@ -3,7 +3,7 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 
 > **又一款跨 agent 用量監控工具：macOS 選單列、本地追蹤 25 種以上 agent**（2026-10-24）
@@ -60,6 +60,38 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⏳ **計價端的分段門檻：** Haiku 5.5 的 prompt 超過 10 萬 token 後單價跳五倍（$0.10／$0.50 → $0.50／$2.50），見 [[entities/haiku-5-5#實付成本]]。
 - ⏳ **事前試算：** 送出前先估成本——mcptoon（10-04）壓縮 MCP schema 的 context 佔用，條目見本頁〈activeing123/mcptoon〉；Haiku 價格閘門見本頁〈Claude Haiku 5.5 Is Cheap Until 100k Tokens〉。
 - **證據強度：** 單人一月樣本，尚無覆核；各節點細節以所在頁為準，此處只彙整歸因脈絡。
+
+### 用量窗口與配額守門
+
+訂閱方案的 5 小時與 7 天用量窗口被燒完時，社群的補救分六類。下表分類，逐則證據仍在下方〈技術彙整〉原條目，表下各條只指路。
+
+| 類別 | 解決什麼 | 代表節點 | 成熟度 |
+|---|---|---|---|
+| 事前攔截 hook | 窗口被燒完前先擋下 | agent-usage-guard | ⏳ 作者自報 |
+| 選單列／儀表板 | 看見剩餘額度與重置時間 | syrtis、Pulse 等 | ⏳ 最多一族 |
+| 暫停與恢復 | 撞限速後不丟進度 | resume-on-ratelimit | ⏳ 單人腳本 |
+| 預算圍欄 | 到門檻自動停手 | agent-usage-guard；官方 Spend Controls | ⏳／官方有警示無暫停 |
+| 中轉與 gateway 比價 | 換便宜管道或多帳號 | Folkbench、OmniRoute | ⏳ 星數待證 |
+| 成本拆解實測 | 找出額度被誰吃掉 | aidiveyt | ⏳ 單一樣本 |
+
+- **事前攔截 hook**：[[topics/community-cost#rbartoli/agent-usage-guard：Claude Code hook 防用量窗口被幾分鐘內燒完（2026-10-23）|agent-usage-guard]] 在快取過期、內容過大時提示先壓縮，用量逾 80% 時擋下新子 agent；單次爆量 365 降到 27 是作者 75 天自述。
+- **選單列與儀表板**
+  - [[topics/community-cost#Nanako0129/syrtis：macOS 選單列原生 Swift 用量監控，本地追蹤 25 種以上 agent（2026-10-24）|syrtis]]（10-24）
+  - [[topics/community-cost#qunqin24/Pulse：macOS 邊緣常駐監視器，顯示 Claude Code、Codex、Cursor、Copilot 等 70 餘款 AI 工具剩餘額度（2026-10-03）|Pulse]]（10-03）
+  - [[topics/community-cost#yakuikai/tokentab：本機優先、免 API key 讀取三款 CLI session 算用量與成本（2026-10-13）|tokentab]]（10-13）
+  - [[topics/community-cost#同日三款 Claude Code／Codex 用量監控工具：codenotch（macOS 選單列釘選）、Armada（跨帳號側欄）、token-tracker（狀態列＋熱力圖＋成本分析）（2026-09-25）|同日三款]]（09-25）；全是單一作者工具，彼此不比較準不準。
+- **暫停與恢復**
+  - [[topics/community-cost#resume-on-ratelimit.sh：以 PROGRESS.md + 20 行 shell script 自動恢復被限速中斷的 Claude Code Session（2026-08-04）|resume-on-ratelimit.sh]] 用 PROGRESS.md 加 20 行 shell 重試
+  - [[topics/community-cost#額度監控與自動恢復工具生態（2026-07-03）|07-03 自動恢復與監控兩類工具]]，是最早的同類
+- **預算圍欄**：社群端只有上列 agent-usage-guard 的 80% 門檻；官方 Spend Controls 屬 Enterprise 方案，有 75%／90% 警示、無自動暫停，見 [[topics/enterprise-cost-management]]。
+- **中轉與 gateway 比價**
+  - [[topics/community-cost#Folkbench/folkbench：評測各家 AI API 中轉站可用率、延遲與價格並支援一鍵切換（2026-10-18）|Folkbench]] 量中轉站可用率與價格
+  - [[topics/community-cost#cheaper-inference/OmniRoute：單一端點整合 375 家供應商、1,400+ 模型的免費 AI gateway，配額感知備援＋壓縮省 token（2026-10-22）|OmniRoute]] 的 79,703 星異常高，不當採用證據。
+- **成本拆解實測**
+  - [[topics/community-cost#aidiveyt：逐 session 拆帳一個月用量，量出 subagent 佔全部 token 48.1%、寫了 64% 的輸出（2026-10-08）|aidiveyt]] 一個月 455 個 session 拆帳，subagent 佔 48.1%
+  - [[topics/community-cost#MCP Server 設計對每輪對話隱藏 token 成本的實測比較（2026-07-21）|MCP 隱藏成本]]：單一作者實測各設計每輪注入的 token
+  - [[topics/community-cost#headless Claude Code（`claude -p`）冷啟動實測：未加 `--bare` 約載入 15 萬 token（2026-08-07）|headless 冷啟動]]：未加 `--bare` 約載入 15 萬 token
+- **證據強度：** 六類全部是單一作者工具或自報數字，沒有一款有第二方重現；官方端只有 Enterprise 警示。
 
 **機制細節**
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）

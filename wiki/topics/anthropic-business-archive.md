@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-09-20
 **最後新聞更新：** 2026-06-14
 
-> 本頁是 [[topics/anthropic-business]] 的原始條目封存，重點層（現在的數字、IPO 走到哪一格、還沒過去的風險）都在主頁。
+> 本頁是 [[topics/anthropic-business]] 的原始條目封存，重點層（現在的數字、還沒過去的風險）都在主頁；IPO 進程見 [[topics/anthropic-ipo]]。
 
 ## 2026-06
 

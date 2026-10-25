@@ -3,7 +3,7 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-21"
 status_main: "ongoing"
 days_since_news: 4
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 4
-inbound_links: 7
+inbound_links: 8
 attribution_count: 3
 attribution_last: "2026-10-19"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-21
 
 > **Agent 規模化添 tmux 實務設定與四代理天花板**（2026-10-19）
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 官方給了三條路：subagent 是做完回報的工人（官方原話「quick, focused workers that report back」）；agent teams 讓隊友彼此傳訊、自己協調，目前實驗性、預設關閉；cross-session 讓獨立 session 互傳文字（[sub-agents](https://code.claude.com/docs/en/sub-agents)、[agent teams](https://code.claude.com/docs/en/agent-teams) 官方文件，2026-10-09 查證）。社群這邊，每個 agent 一個 worktree 的隔離已經定案；隔離之後誰先合併、誰驗收，官方還沒有答案，社群用合併佇列和控制平面自己補。
 
-下方三節是官方機制與學術名詞的對照、「誰來拆任務」的五種來源、文獻主張的缺口補了沒；「技術彙整」是逐則證據。大型 repo 上並行互踩的現在答案見 [[topics/community-large-codebase-workflow]] 第 1 線，隔離這個方向怎麼走到今天見 [[topics/community-pattern-trends]] 趨勢二。
+下方三節是官方機制與學術名詞的對照、「誰來拆任務」的五種來源、文獻主張的缺口補了沒；「技術彙整」是逐則證據。大型 repo 上並行互踩的現在答案見 [[topics/community-large-codebase-workflow]] 第 1 線，隔離這個方向怎麼走到今天見 [[topics/community-pattern-trends]] 趨勢二。角色檔（subagent 定義）怎麼寫、哪些合集不能整包裝，見 [[topics/community-skills#給 coding agent 的 Skill 與角色檔：數量、寫法與採用證據]]。
 
 ---
 

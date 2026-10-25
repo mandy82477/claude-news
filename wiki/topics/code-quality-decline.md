@@ -11,7 +11,7 @@ parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 40
+inbound_links: 41
 attribution_count: 44
 attribution_last: "2026-10-16"
 top_source: "reddit"

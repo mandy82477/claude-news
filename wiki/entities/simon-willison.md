@@ -4,17 +4,17 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-11"
-last_news_update: "2026-10-06"
+last_updated: "2026-10-25"
+last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 19
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 19
+days_since_news_subtree: 5
 inbound_links: 2
-attribution_count: 2
-attribution_last: "2026-09-29"
+attribution_count: 3
+attribution_last: "2026-10-20"
 top_source: "blog"
 pending_count: 0
 pending_overdue: 0
@@ -35,8 +35,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 評論媒體
 **為何追蹤：** 多位 Anthropic 人士發言原文經他部落格逐字轉引，並做模型首日實測
 **首次出現：** 2026-05-20
-**最後更新：** 2026-10-11
-**最後新聞更新：** 2026-10-06
+**最後更新：** 2026-10-25
+**最後新聞更新：** 2026-10-20
 **蒐集邊界：** 本站只收錄他與 Claude／Anthropic 生態相關的公開發言——部落格對其他人聲明的轉引、模型實測心得、AI agent 資安事件的具名轉載。不收錄他的個人生活，也不收錄他在 Claude／Anthropic 之外的其他技術工作（如 Datasette、SQLite 相關獨立專案）。
 
 > **本站引用最多的第一手觀點來源**（2026-09-13 建頁）
@@ -86,6 +86,7 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 參考來源
 
+- [My obituary for programming](https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/)（2026-10-19，轉引 Jeremy Scheff）
 - [Claude Sonnet 5.5](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/)（2026-09-28）
 - [Quoting Boris Cherny](https://simonwillison.net/2026/Sep/11/boris-cherny/)（2026-09-11）
 - [Quoting Dario Amodei](https://simonwillison.net/2026/Aug/16/)（2026-08-16，原文 URL 見 [[entities/dario-amodei]]）
@@ -94,6 +95,7 @@ Simon Willison 是獨立開發者與部落客（simonwillison.net），本身極
 
 ## 歷史記錄
 
+- 2026-10-19：Link blog〈My obituary for programming〉轉引 Jeremy Scheff 的文章，談程式代理讓熱愛解邏輯謎題的職業程式設計師失去什麼；本庫僅取得開頭摘錄（細節未載），評論為 Scheff 所寫、非他本人表態（來源：Blog／Simon Willison）
 - 2026-10-06：部落格〈Scrimshaw Jukebox〉測試 Claude Opus 5.5 設計文字格式遊戲配樂並生成可播放 artifact；是否為新進能力他未對照舊模型，內容見 [[entities/opus-5-5]]（來源：Blog／Simon Willison）
 - 2026-10-06：轉引 Anthropic 工程師 Felix Rieseberg 說明 Cowork 本機 VM 架構轉雲端的原因，細節與社群追問見 [[entities/cowork]]（來源：Blog／Simon Willison）
 - 2026-09-28：Sonnet 5.5 發布當日依例以鵜鶘測試，「max」思考強度下圖示輸出異常；原文稱與 Opus 5.5 那次同一個 bug（Opus 5.5 那次的症狀本庫未見記載，2026-10-03 核）（來源：Blog／Simon Willison）

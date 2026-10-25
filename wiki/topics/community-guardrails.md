@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 10
+inbound_links: 11
 attribution_count: 9
 attribution_last: "2026-10-18"
 top_source: "hacker-news"

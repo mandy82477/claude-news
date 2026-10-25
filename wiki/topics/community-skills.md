@@ -3,7 +3,7 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-23"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
 days_since_news: 2
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 5
+inbound_links: 8
 attribution_count: 12
 attribution_last: "2026-10-21"
 top_source: "github"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-23
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-23
 
 > **新增資安垂直領域的 22 個 skills 合集**（2026-10-23）
@@ -62,6 +62,31 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Skills 正從「指令封裝」變成「知識框架載體」**：單一職責的寫法自 2026-05 起沒有人再反對，但也還沒有第二方量測（[[topics/community-skills#2026-09]]）。**接下來看什麼：** 第三方 skill 的品質量測（可靠性測試那一類）會不會補上來。
 - **你的選項：** 寫新 skill 前先把 description 寫成「什麼時候該叫我」的具體條件；skill 一多就檢查清單有沒有被擠掉；要硬擋的規則改用 hook。
+
+---
+
+## 給 coding agent 的 Skill 與角色檔：數量、寫法與採用證據
+
+十月本頁收錄的 skill 條目明顯變多，但多數只有 GitHub 星數，沒有採用數據；角色檔（subagent 定義）的寫法則有一份 11 個 repo 的逐檔實測可對照。
+
+**逐月新條目數**
+- 7 月 6 則、8 月 9 則、9 月 22 則、10 月 15 則（截至 10-23）。數的是本庫收錄條目（本頁〈技術彙整〉各月子頁標題），不是全網總數；其中含少量課程、樣板與合集，不全是單一 skill。
+- 十月的 15 則涵蓋 SEO、UI 設計、學術審稿、資安、創業等垂直領域，多數同時標明相容 Claude Code、Codex、Cursor；成熟度全是 ⏳ 新興。見〈技術彙整〉[[topics/community-skills#2026-10]]。
+
+**角色檔寫法對照**（2026-10-20 對 11 個 repo 與官方文件的實測，單一研究者，未經第二方複現）
+- **觸發語互相打架**：[VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) 163 檔與 [wshobson/agents](https://github.com/wshobson/agents) 202 檔，合計 365 檔沒有一檔寫 "MUST BE USED"；wshobson 有 158 檔、[lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) 有 24 檔都寫 "Use PROACTIVELY"，人人都喊就彼此搶觸發。
+- **較好的觸發寫法**：以生命週期時點當觸發，如官方 code-reviewer 範例的「寫完或改完程式碼後立即使用」，見[官方 sub-agents 文件](https://code.claude.com/docs/en/sub-agents)。
+- **tools 白名單多半沒寫**：wshobson 202 檔中 187 檔沒寫 tools，等於繼承全部工具。社群稽核的類似數字見 [[topics/community-guardrails#2026-09]]（skillcrossroads，87 個 subagent 有 57% 未宣告）。
+- **預寫的虛構完工數字**：VoltAgent 舊模板預寫帶數字的完工訊息，[issue #300](https://github.com/VoltAgent/awesome-claude-code-subagents/issues/300) 已證實並關閉；維護者只改了 meta-orchestration 的 9 檔，其餘約 150 檔仍是舊模板。
+- **值得抄的契約格式**：wshobson 的 agent-teams（一個檔案一個 owner、固定的發現回報格式）與 VoltAgent meta 新版的三段（Scope and honesty rules、Required inputs、Report back）。
+- **官方必填只有兩欄**：name 與 description；寫錯的欄位靜默忽略（官方 sub-agents 文件，同上連結）。
+
+**反向證據**
+- r/ClaudeCode 10-22〈[13 個創辦人用 skills，作者自家評測說單用 Opus 已做掉大半](https://www.reddit.com/r/ClaudeCode/comments/1xcl0zp/13_claude_code_skills_for_the_founder_side_of_a/)〉：評測結果是作者自報，無 repo 連結可複現；它說的是「裝了未必更好」，與十月條目數成長並列看。
+
+**官方端**
+- Anthropic 宣布把 Agent Skills 開放標準捐贈給 Linux 基金會旗下新成立的 Agentic AI Foundation（AAIF），稱逾 70 個平台已整合（[官方公告](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)，2026-10-22；2026-10-25 查）；公告未說既有 SKILL.md 需要修改。官方 Skills 動態見 [[entities/claude-skills]]。
+- 工具規模榜見 [[topics/skill-interest-watch]]；多 agent 角色分工見 [[topics/community-multi-agent]]。
 
 ---
 

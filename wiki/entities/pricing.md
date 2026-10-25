@@ -4,7 +4,7 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "active"
 days_since_news: 1
@@ -12,7 +12,7 @@ parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 185
+inbound_links: 189
 attribution_count: 156
 attribution_last: "2026-10-24"
 top_source: "google-news"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 
 > **最新計費政策異動**（2026-10-24）
@@ -72,7 +72,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Plans & Pricing 頁新增 Extensions「Claude in Chrome」段落（2026-10-21 diff，同日查證）**：僅「Claude for Chrome」改名，方案可用範圍（Pro 以上）與定價不變
 - **同次 diff：「Models Mythos」改名「Mythos (including Fable)」、新增 Managed Agents 連結**：均為命名／導覽調整，Managed Agents 費率仍是既載 $0.08／session-hour，非新費率
-- **Team 方案年繳新增 20 席下限（2026-10-15 diff 偵測）**：年繳條件從「每席每月 $20」變「每席每月 $20，最低 20 席」；小型團隊年繳前應先確認席數達標（[claude.com/pricing](https://claude.com/pricing)）
+- **Team 年繳最低 20 席（2026-10-15 生效）**：小型團隊年繳前先確認席數達標；其他席位與付款摩擦見 [[entities/pricing#方案可用性與帳務摩擦]]
 - **09-28 官方 Plans & Pricing 頁 Batch processing 範例模型換代**：頁面把 Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5；屬頁面範例更新，不代表 Batch 折扣費率本身變動（Official Docs）
 - **旗艦分界的官方定義（2026-07-20 生效）**：Max 方案、Team premium seats、舊制席位制 Enterprise premium seats — Fable 5 為標配，可用「至多每週用量上限的 50%」且不額外收費；Pro 方案、Team standard seats、Enterprise standard seats — Fable 5 **不計入方案用量**，需以 usage credits 按 API 費率付費。先前將 Fable 5 納入方案週用量的促銷結束於 **2026-07-19 23:59:59 PT**
 - **Pro／Team standard 過渡 credit（2026-08-22 官方查證，先前懸置已結案）**：金額 **$100**——Pro 為每帳戶 $100，Team 為每購買的 standard seat $100、每組織上限 $2,500。資格以 **2026-07-19 23:59:59 PT** 當下持有合格 Pro／Team standard 方案為準（免費試用不算）。**領取窗已於 2026-08-02 23:59 PT 關閉**，未領者不再補發；已領取的 credits 於 **2026-09-17 23:59 PT 到期**（促銷起算 60 天）。這批 credits **不限 Fable 5**，是一般 usage credits，任何模型都能用、方案用量觸頂時也能墊（來源：[Claude Fable 5 one-time free credits promotion](https://support.claude.com/en/articles/15862783)，2026-08-22 查證）。credits 用盡後可續買、改用其他模型、或升級 Max
@@ -273,6 +273,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 3. **Claude for Startups 的免費 Team 與 $1,000 額度已暫停**（2026-10-24 查證）：10-06 媒體稱擴大（免費一年 Team＋$1,000 額度）；[官方計畫頁](https://claude.com/programs/startups)現載「current cohort is now full」、不受理新申請，審核中的申請不再推進，頁面擷取內容未見免費 Team／$1,000 的字樣。暫停措辭與原因（低估需求、前 48 小時申請量為前五個月的 21 倍）出自 @claudeai 與 Anthropic 新創行銷主管 Sarah Wolf 的 X 貼文，本站僅見 Forbes、AI Weekly 轉述（媒體稱），未取得貼文原文；已兌換者保留，無恢復日期。官方定價頁 10-10 新增的「$100–$200/月」是 Max 每月 API credits，與暫停無關（見第 1 條）。脈絡見下方事件流 10-06／10-10 條目。
    - **對工程師的意思**：申請或規劃以此額度為預算前，別當成既定福利；以官方計畫頁當下條款為準，查證前不要據此排預算。
+
+### 方案可用性與帳務摩擦
+
+**這一節彙整「拿得到方案、付得出錢」的門檻與摩擦；各項細節的家在連結處，此處只留一行結論。**
+
+- **升級付款失敗**：Max 5x 升 20x 每次付款皆失敗、客服未回應（GitHub #56281，39 則留言，2026-10-24），延續 08-02 的 #55266；升級成功者的額度仍按 5x 速率消耗（#79773，31 則留言，10-21）。事件本文見 [[entities/pricing#事故與爭議（誤扣費、靜默計費改動、帳號安全）]]。
+- **席位下限**：Team 年繳最低 20 席（2026-10-15 生效，規則本文見「當前生效的計費規則」同日條）。
+- **Schwab 通路席位下限**：另有一條不同的 20 席企業採購下限，原稱 1.6 萬家 RIA 皆可用，現逾 1.1 萬家小型 RIA 被排除（RIABiz，2026-10-24，僅標題可用，生效時間未見）；通路背景見 [[topics/anthropic-business]]。兩條下限互不相干，勿合併計算。
+- **轉售商封禁範圍**：API 轉售／代理商現可單獨封禁違規終端客戶，不必停用整個轉售商帳號（MIXED Reality News，2026-10-21；生效時間、適用範圍、官方公告均未見，僅標題可用）。降低通路業者因單一客戶違規被牽連的風險（推論）。
 
 ---
 

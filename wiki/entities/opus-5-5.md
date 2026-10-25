@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "active"
 days_since_news: 1
@@ -13,9 +13,9 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
 inbound_links: 35
-attribution_count: 24
+attribution_count: 25
 attribution_last: "2026-10-24"
-top_source: "google-news"
+top_source: "reddit"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 
 > **LiveNerf 追蹤第 29 天**（2026-10-24）
@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-10-22 最新**：Reddit livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新，仍未附具體數字或測試方法；30 天結論預計近日（約 10-24）公布，細節見「這些數字是誰量的」與「歷史記錄」。
+**2026-10-22 最新**：Reddit livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新，仍未附具體數字或測試方法；30 天結論原預計約 10-24 公布，到 10-24 為止未見，細節見「LiveNerf／降智觀感」。
 
 **2026-10-20**：GitHub repo「opus-video-prompts」彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，GitHub Search，本庫首次收錄）；forks／issues 未查證，依弱訊號處理，細節見「歷史記錄細節」。
 
@@ -101,6 +101,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **所以呢**：官方有具名基準表且全項領先前代；要看的是社群獨立複測，目前還沒有。
 
 ---
+
+## LiveNerf／降智觀感
+
+社群對「Opus 5.5 是否被悄悄降規」的說法兩邊都有，全是主觀貼文、互動近 0；**到 2026-10-24 為止沒有前後對照數據，30 天期滿也沒有公布結論。**
+
+- **LiveNerf 是什麼**：社群的即時基準測試，目標是追蹤 Opus 5.5 表現是否隨時間變化；dev.to 2026-09-30 貼文稱已建立第 0 天基準線、連測 30 天（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，3 讚）。起算日由 10-22 的「第 29 天」反推約為 09-23 至 09-24（推論）。
+- **看不出降規**：r/ClaudeAI 週熱門貼文 10-22「第 29 天」更新稱 Doesn't look like it；0 留言，未附數字或題組（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)）。
+- **推理品質驟降**：r/ClaudeCode 10-18 貼文問是否有人遇到 Opus 5.5 推理品質突然下滑，作者自承 LLM 有變異；0 留言，僅見標題與開頭兩句（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1x93vw9/anyone_else_experiencing_a_sudden_drop_in_opus/)）。
+- **期滿結論**：原預計 10-24 前後公布；截至 10-24 日報與原料包沒有結論貼文，題組與評分方法也從未公開，兩邊都無法驗證。
+
+兩則方向相反的貼文不能互相抵銷，也不構成能力變化的證據。同類主張的累計與自行量測方法見 [[topics/code-quality-decline]]。
 
 ## 熱度與試用價值
 

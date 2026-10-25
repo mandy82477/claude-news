@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "active"
 matrix_role: "產品"
@@ -13,7 +13,7 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 131
+inbound_links: 132
 attribution_count: 766
 attribution_last: "2026-10-24"
 top_source: "github-issues"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 
 > **最新動態**（2026-10-24）
@@ -103,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期平台與文件異動：**
 
+- 桌面版文件異動已依主題彙整，見 [[entities/claude-code#桌面版功能地圖]]；下列時序條目保留。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。
   ❓ **待查證**（標 2026-10-24｜查 `Local sessions on managed devices`、devbox）｜**移除段落含「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 設定範例**：官方未附遷移說明，依賴這兩種 hook 範例設定的桌面版使用者可留意範例是否已搬到別處。
 - **官方文件更新**（2026-10-21）：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節、session details panel 用量顯示方式、新增憑證來源設定步驟；移除內容未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -859,6 +860,50 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 
+### 桌面版功能地圖
+
+> 把「近期平台與文件異動」裡散落的桌面版文件（`desktop.md`）異動依主題歸群；每條只收該時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
+
+**SSH 遠端與離線續跑**
+- 10-08：可從連結開啟 SSH session，分「已有連線」「新連線」。
+- 10-14：SSH 遠端工作流程擴充——連線需求、macOS／Linux 沿用既有 SSH 設定、支援 Windows 遠端機器；Desktop 離線時任務在背景續跑，連回後處理期間送達的請求。
+- 10-15：新增 SSH／TLS 代理疑難排解（`HTTPS_PROXY`、`NODE_EXTRA_CA_CERTS` 等）。
+- 10-11：SSH session 在連線設定 Worktree folder（遠端路徑，如 `~/worktrees`）。
+- 10-17：結束 App 後任務是否續跑依平台分流——macOS／Linux 帳號登入可接回；Windows 或第三方 provider 接不回。
+- 09-25：本機與 SSH session 自動載入帳號已啟用的 skills／plugins。
+
+**dev box 與受管裝置**
+- 10-24：新增內容集中於 dev box 設定範例（`acme-dev create`、`devbox` id／name）。
+- 10-24：移除「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 範例，官方未附遷移說明（查證標記在近期異動的 10-24 條）。
+- 10-12：組織設定 `disableDesktopLocalSessions`、`sshHost`／`sshHostAllowlist`（見「開發者須知」）。
+- 10-05：HIPAA 組織「Desktop」「雲端 session」兩個管理開關，Desktop 預設關閉（見「開發者須知」）。
+
+**Dispatch 與 Claude 建議的任務**
+- Dispatch：10-22 桌面文件增 Dispatch 說明（細節未載，見歷史記錄）；相關未修問題見已知問題 #40283、#45937。
+- Claude 建議的任務：本頁尚無對應的時序條目。
+
+**Auto mode availability**
+- 10-21：桌面版文件新增 Auto mode availability 小節。
+- 09-02：Auto mode 開放所有 Anthropic API 使用者，需 Opus 4.6／Sonnet 4.6 以上（見「開發者須知」）。
+
+**session 資料夾與環境**
+- 10-20：文件新增 171 段、移除 65 段，聚焦 session 資料夾管理與已儲存環境；新版對應寫法未見列出。
+- 10-11：本機 session 於設定 > Claude Code 設 Worktree location。
+- 10-09：本機 session 顯示獨立版本號；「+ New session」或 `Cmd+N`／`Ctrl+N` 開新 session。
+- 10-04：「Continue in」拆成個別選項，可選 Cloud 或直接以編輯器／檔案管理器開 session 資料夾。
+- 09-14：雲端 session 可掛載多個 repository。
+- 09-12：Git 需求改為「用獨立 worktree 的 session 才需要」。
+
+**Agent teams**
+- 本頁沒有桌面版文件對應條目；機制見「Subagent 型別差異對照」軸線 4。
+
+**其他**
+- 10-21：session details panel 用量顯示方式、憑證來源設定步驟。
+- 10-01：`claude --desktop` 直接開桌面版。
+- 09-30、09-15：`/resume` 接續終端機／CLI session。
+- 09-19：Transcript 新增 Thinking／Verbose 檢視。
+- 09-14：`disableMobileSimulatorTools` 可封鎖 iOS 模擬器工具。
+
 ### hooks：事件、失效模式與能不能當防線
 
 > 本節只彙整與導覽，細節留在原處：版本表（`onFailure`、`PreModelSwitch`）、「已知問題」各組、「開發者須知」。官方 hooks 文件 2026-10-11 查證。
@@ -894,7 +939,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Subagent 型別差異對照
 
-派 subagent 前先看四條獨立軸線，可疊加（例：一個 background 的 fork）。來源：官方 `code.claude.com/docs/en/sub-agents`，2026-08-22 查證。
+派 subagent 前先看四條獨立軸線，可疊加（例：一個 background 的 fork）。來源：官方 `code.claude.com/docs/en/sub-agents`，2026-08-22 查證；欄位表 2026-10-22 補欄。
 
 **軸線 1：內建 / 自訂 / plugin**
 
@@ -907,7 +952,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 自訂（`.claude/agents/`） | 讀取 | 依 frontmatter | 依設定 |
 | plugin agent | 讀取 | 依 frontmatter | 依設定 |
 
-- 自訂 agent 支援的 frontmatter 全集：`name`, `description`, `tools`, `disallowedTools`, `model`, `permissionMode`, `maxTurns`, `skills`, `mcpServers`, `hooks`, `memory`, `background`, `effort`, `isolation`, `color`, `initialPrompt`；可定義於 `.claude/agents/`、`~/.claude/agents/`、`--agents` CLI 旗標或 managed settings
+- 自訂 agent 支援的 frontmatter 全集（19 欄，2026-10-22 核對）：`name`, `description`, `tools`, `disallowedTools`, `model`, `permissionMode`, `maxTurns`, `autoCompactWindow`, `skills`, `mcpServers`, `hooks`, `memory`, `background`, `omitClaudeMd`, `effort`, `isolation`, `color`, `initialPrompt`, `experimental`
+- 自訂 agent 可定義於 `.claude/agents/`、`~/.claude/agents/`、`--agents` CLI 旗標或 managed settings
+- 2026-08-22 版缺的三個欄位（查證 2026-10-22，[官方 sub-agents 文件](https://code.claude.com/docs/en/sub-agents)）：
+
+| 欄位 | 作用 | 版本門檻 |
+|---|---|---|
+| `autoCompactWindow` | 把該 subagent 的 auto-compact 視窗降到 100000–1000000 token；寫純整數 | v2.1.296+ |
+| `omitClaudeMd` | `true` 時不載入 user／project／local CLAUDE.md（managed policy 仍載入） | v2.1.271+ |
+| `experimental` | 實驗選項 map；目前 `cacheTtl` 設 `5m` 或 `1h` 選 prompt cache 壽命 | v2.1.248+ |
+
 - **plugin agent 基於安全理由不支援 `hooks`／`mcpServers`／`permissionMode`**，其餘欄位支援；識別碼帶 scope（如 `my-plugin:review:security`）
 
 **軸線 2：fork / 非 fork**
@@ -941,9 +995,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | background | 不可（foreground-only） | 依軸線 3 規則 |
 | context 隔離 | out-of-process teammate（split pane）各自獨立 context window | — |
 
+#### 角色檔設計陷阱
+
+> 只收官方 sub-agents 文件（查證 2026-10-22）寫得出的事實。
+
+- **必填只有 `name` 與 `description`**；欄位名須與表格完全相符（`maxTurns`、`disallowedTools` 為駝峰），不認得的欄位靜默忽略、不報錯。
+- **抓拼錯欄位**：v2.1.296+ 用 `claude --debug`，在 `~/.claude/debug/<session-id>.txt` 搜 `does not recognize or apply`，最多列出 5 個欄位並提示可能的正確名稱。
+- **整檔被靜默略過的情形**：沒有 `name`（當成文件）、開頭 `---` 不在第一行、`name` 以 `-` 開頭或含 `:` 或超過 256 字元、有 `name` 無 `description`、YAML 解析失敗。
+- **`tools` 省略＝繼承全部可用工具**；`tools` 與 `disallowedTools` 並用時先套 `disallowedTools`，兩邊都列的工具被移除。`tools` 內沒有任何項目能解析時通常拒絕啟動並指名錯誤項目。
+- **`memory` 欄會自動開啟 Read、Write、Edit**，讓 subagent 管理自己的記憶檔（文件原文）；做唯讀角色時留意此欄。`autoMemoryEnabled` 關閉時 `memory` 欄無效。
+- **觸發寫法**：description 寫「use proactively」之類字句鼓勵主動委派；官方範例用生命週期時點（「Use immediately after writing or modifying code」）。所有 subagent description 合計逾 15,000 token 會有啟動警告，仍全數載入。
+- **自訂 subagent 的 system prompt 整個取代預設 Claude Code system prompt**；CLAUDE.md 與專案記憶仍照常載入，除非設 `omitClaudeMd`。
+- 社群說法「用 general-purpose 代理再要它讀角色檔，`tools` 白名單不生效」：官方原文未直接記載；general-purpose 的工具是「所有可用於 subagent 的工具」，不列為已證實。
+
 > 相關：社群 subagent 使用模式見 [[topics/community-tech-patterns]]；本表列的機制對得上學術哪些缺口（已補／未補／倒退）見 [[topics/community-tech-patterns]]「學術對照」節的缺口追蹤層；官方 vs 社群缺口對照見 [[topics/official-community-gap]]；官方建議的使用做法見 [[topics/coding-workflow-guide]]
 
-> 本表依官方文件 2026-08-22 查證；逾 90 天未回訪時在此標明。
+> 本表依官方文件 2026-08-22 查證、2026-10-22 補欄；逾 90 天未回訪時在此標明。
 
 ---
 

@@ -11,7 +11,7 @@ parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 55
+inbound_links: 56
 attribution_count: 268
 attribution_last: "2026-10-22"
 top_source: "github"

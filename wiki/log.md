@@ -8145,3 +8145,20 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   2. [商業] topics/anthropic-business「哪個合作會改到你用的 Claude」表已 6/6 滿載，Schwab RIA 20 席門檻事件符合入表判準②卻無既定讓位機制（`.claude/reporter-rules/commercial/pages.md` 第 5 條未給此表讓位規則，不同於第 1、4 條），請裁示依「影響價格＞影響功能可用性＞資料落地」優先序讓位或維持現狀。
 - devpractice 沉澱：候選 12 筆（entities/claude-code 數則、anthropic-agent-stack、claude-skills、community-cost／multi-agent／tech-tools／interfaces／guardrails 各 1）／本日無開發實務官方使用指南條目，手冊寫入 0 則；基準線推進至 931ca82d。⚠️ 記者回報本機 checkout 為 shallow clone（63 commits，最舊至 2026-10-22），`devpractice_diff.py` 上次基準 sha 在本次歷史中找不到、已 fallback 48 小時重新比對（已逐筆核對帳本排除重複，未漏記），但提醒雲端 session clone 深度若長期不足可能讓此 fallback 真的漏看內容，建議檢查 clone 深度設定。另提醒：`entities/claude-skills` 今日新增 Agent Skills 標準捐贈 AAIF 治理權轉移，`official-community-gap` 若有引用 Anthropic 單方治理 Skills 的敘述，功能記者下輪可留意是否需同步。
 - market 判讀：2 則（Schwab RIA 20 席門檻、Anthropic 官方量化 UK AISI 事件）；topics/market-signals 新增「買得到的標的」SCHW 一列、里程碑登記 2 筆、回顧結算 ⏳ 新增 2 列。
+
+## 2026-10-25 週度延伸回顧
+
+- 延伸（使用者「前面的你就全做吧」，15 項全做）：
+  - 商業：新子頁 [[topics/anthropic-ipo]]（IPO 五格表、估值算術、逐日細節自 [[topics/anthropic-business]] 搬出）；[[entities/pricing]]「方案可用性與帳務摩擦」；[[topics/anthropic-business]] 算力合約總表（17 列，Nscale 第二筆與第一筆分列）；[[topics/competitor-landscape]] Kimi 列更新為 K3.1 Pro（弱訊號）
+  - 安全政策：新子頁 [[topics/ai-eval-boundary-incidents]]（AISI 122／10／19 與 Anthropic 43／9 數字對照、官方處置）；[[topics/anthropic-government-policy]]「Anthropic 自提 AI 安全法案」彙整
+  - 模型：[[entities/fable-5]]「下一代模型傳聞彙整」（補 The Information 意圖理解模型）；[[entities/opus-5-5]]「LiveNerf／降智觀感」（到 10-24 無前後對照數據）
+  - 功能：[[entities/claude-code]]「桌面版功能地圖」、subagent 欄位表補到 19 欄＋「角色檔設計陷阱」（官方 sub-agents 原文 10-22）；[[topics/claude-code-experimental]] auto mode 兩族旗標歸群
+  - 社群：[[topics/community-skills]]「給 coding agent 的 Skill 與角色檔」（逐月 7 月 6／8 月 9／9 月 22／10 月 15）；[[topics/community-cost]]「用量窗口與配額守門」；[[topics/community-pattern-trends]] 趨勢六補 Corgi（HN 104）
+  - 人物：[[entities/simon-willison]] 補 10-19〈My obituary for programming〉
+- 必做（主編查官方一手）：[[topics/ai-agent-safety]] CVP 公告日 10-07 → 官方頁 10-06；[[topics/anthropic-business]]「最快 10-23 公開遞件」→ 截至 10-25 SEC 全文檢索查無；[[entities/claude-skills]]、[[topics/community-skills]] AAIF 捐贈日對齊官方頁 10-22，補「Linux 基金會旗下」
+- 跨家榜單週更（5b，本機補跑）：16 榜讀到 8 榜；arena.ai 三榜連兩週 403，考慮汰換由 6 列增為 8 列（換不換待使用者裁示）
+- reader-notes：L18、L20（2026-10-20）標 ✅（W43 頭條與社群專文、上述頁面）；L35 維持 ⏳（本週無格式提案節點）
+- 使用者跳過項目：無
+- 聚焦校準：非本月首次週度回顧，跳過（本月 10-04 已執行）
+- 機制：派工指令 `$(reporter_pages.py …)` 在 Windows 輸出 CRLF，致 7 天 git diff 只對得上最後一頁（三位記者回報 diff 近空）；`scripts/reporter_pages.py` 改固定輸出 LF 換行並加測試。看門狗 `daily_health_check.py` 認不出無時間的 ABORTED 行，10-24 誤報「1 班無結果」，regex 改為時間可省略並加測試
+- 歸因 user-query／主編

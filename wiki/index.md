@@ -122,7 +122,7 @@
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
 | [[topics/llm-wiki-pattern]] | 🌐 社群 | monitoring | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面八種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]]　↳ 子故事：[[topics/safety-china-trust-dispute-archive]] |
-| [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界；Anthropic 研究稱進階網攻能力正擴散至 GLM-5.3 等他家模型　↳ 子故事：[[topics/ai-agent-safety-archive]] |
+| [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全：Auto 模式非安全邊界；Anthropic 研究稱進階網攻能力正擴散至 GLM-5.3 等他家模型　↳ 子故事：[[topics/ai-agent-safety-archive]]、[[topics/ai-eval-boundary-incidents]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動——五角大廈供應鏈風險黑名單上訴法院維持（09-25）、FTC 新開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
 | [[topics/official-community-gap]] | 🛠️ 工具/功能 | monitoring | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
@@ -130,7 +130,7 @@
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
-| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：S-1 首度揭露 2026 上半年淨損 807 億美元，IPO 估值疑慮加深；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]] |
+| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：S-1 首度揭露 2026 上半年淨損 807 億美元，IPO 估值疑慮加深；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-ipo]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |

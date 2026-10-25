@@ -3,7 +3,7 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-22"
 status_main: "ongoing"
 days_since_news: 3
@@ -11,7 +11,7 @@ parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 3
-inbound_links: 142
+inbound_links: 145
 attribution_count: 196
 attribution_last: "2026-10-22"
 top_source: "google-news"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-22
 
 > **多線政府動態**（2026-10-22）
@@ -105,14 +105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **國會立法壓力**：Sanders 與 Casar 09-03 提出 Ban Artificial Superintelligence Act，違者最高 20 年徒刑，狀態為提案未進委員會；細節見「## 時序」09-05（Decrypt、IBTimes、TechTimes 09-04）。
   - 09-10 Reuters 報導國會議員在 Anthropic 研究員相繼發出 AI 風險警告後，呼籲盡速制定新規；具體議員身分、法案內容均僅標題可用，暫不逕自合併為同一延伸
   - 09-11 qz.com 報導跨黨派議員延續同一呼籲；同日 CNBC 報導川普公開淡化 AI 滅絕風險，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩；研究員警告本身的人物面見 [[topics/recursive-self-improvement]]
-- **Anthropic 自提 AI 安全法案遊說國會**（新增 10-16）：Politico 獨家報導 Anthropic 悄悄向國會議員遊說自提法案，限制政府封鎖「危險」AI 模型的權力；Bloomberg、Law Commentary 同日跟進。
-  - 與上方 09-03 Sanders／Casar 提出的 Ban Artificial Superintelligence Act 方向相反（該案限制 AI、本案限制政府權力），非同一條線；具名議員、法案文字與進度均未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
-  - **10-17 評論角度新增**：Mother Jones 評論稱該法案為啟動政府介入設下的門檻「令人擔憂」（alarming threshold）；具體門檻數值與觸發條件未見報導，屬批評性評論非新事實
-  - **10-19 門檻數字曝光**：Yahoo／Reddit 報導揭露法案具體觸發門檻——僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；Reddit r/ClaudeAI 社群質疑門檻「定太高」；法案文字、具名議員與立法進度仍未見報導，僅標題可用，答不出下一個時點，暫不入「## 現在有哪幾條線在動」表
-    - **2026-10-19 查證**：WebSearch 核對，此「50 人死亡或 10 億美元損害」門檻數字與加州 SB 53（「災難性風險」法定定義，Anthropic 已公開背書）的門檻完全一致；但未找到對應聯邦法案文本，Yahoo／Mashable 報導的「Anthropic 自提聯邦法案」是否即援引 SB 53 定義、或為獨立新草案沿用同一數字，無法從現有報導確認
-  - **10-20 反彈擴大**：Semafor 與《華盛頓郵報》同步報導外界對此法案的反彈聲浪擴大；未提供新的具體門檻數字或法案進度資訊，僅重申既有反彈
-  - **10-20／10-21 多方跟進，無新事實**：TechCrunch（10-20）重申「50 人以上死亡」門檻；Zvi Mowshowitz 評論（10-20，HN 10 分）批評 Anthropic 未能理解法案為何引發疑慮；Politico（10-21）解析「10 億美元損害」門檻的設定理由；三者均未提供新門檻數值或法案進度，與既有 10-19 揭露同屬一事
-  - **10-21 Novara Media 跟進**：稱 Anthropic 建議需達同一死亡數字才可關閉「rogue AI」，僅標題可用，未提供新數值或法案進度，與上列同屬一事
+- **Anthropic 自提 AI 安全法案遊說國會**（10-16 起）：要點、門檻、外界反彈與已知／未知彙整於下方 [[topics/anthropic-government-policy#Anthropic 自提 AI 安全法案]]；暫不入「## 現在有哪幾條線在動」表，答不出下一個時點。
 - **中國線**：08-31 官方表態不滿、設條件；09-02 官媒指控雙重標準，並陳不合併。併入阿里巴巴蒸餾指控（滿 90 天為 2026-11-08）與 Moonshot 蒸餾指控。08-13 後見「## 時序」；07-11 前見 [[topics/safety-china-trust-dispute]]。
 - **09-11 中國線新增**：Anthropic 威脅情報報告指控中國 AI 實驗室非法蒸餾，稱 Moonshot 暗中導流用戶請求至 Claude；與 07-22 指控不同（挪用非訓練），實驗室名單未見報導。**2026-09-26 查證**：Moonshot 否認、稱將提告已報警；商務部稱美方指控無據（[BeInCrypto](https://beincrypto.com/kimi-k3-moonshot-police-report-distillation/)）。
 - **09-14 中國線新增**：Cybernews 報導 Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士，為同一份威脅情報揭露系列的最新案例；具體帳號、手法與 Anthropic 因應動作僅標題可用。
@@ -161,6 +154,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **員工聯名信**：OpenAI、Anthropic 員工聯名致信政府籲控管 AI 步調（07-28～07-29）；不入表（非政府動作）。
 - **Reddit 資料爬取／授權訴訟**：聯邦法官 09-19 裁定 Reddit 對 Anthropic 提起的訴訟大部分可繼續進行；不入表（僅標題可用，答不出會不會改到你的 Claude 或下一個時點），具體裁定理由與後續程序未見報導，詳見「## 攻防紀錄」。
 - **紐約市主計官要求暫緩 IPO**：10-17 致函 Dario Amodei，稱白宮與另五家公司所簽「道德約束力」AI 安全協議對風險回應不足；不入表（單一政府財務官員意見函，非監管機關執法動作，答不出下一個時點），Anthropic 回應與 IPO 時程均未見報導，僅標題可用（HN 14 分）。商業面見 [[topics/anthropic-business]]。
+
+### Anthropic 自提 AI 安全法案
+
+**要點與條件**
+- **10-16 Politico 獨家**：Anthropic 悄悄向國會議員遊說自家提出的法案，限制政府封鎖「危險」AI 模型的權力；Bloomberg、Law Commentary 同日跟進。
+- **10-19 門檻曝光**（Yahoo／Reddit）：僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型。
+- **10-20／10-21 重申同一門檻**：TechCrunch（10-20）重申「50 人以上死亡」；Politico（10-21）解析「10 億美元損害」門檻的設定理由；Novara Media（10-21）稱 Anthropic 建議需達同一死亡數字才可關閉「rogue AI」，僅標題可用。三者均未提供新數值或法案進度。
+
+**外界反彈**
+- **10-17 Mother Jones 評論**：稱該法案為啟動政府介入設下的門檻「令人擔憂」（alarming threshold），屬批評性評論。
+- **10-19 社群**：Reddit r/ClaudeAI 質疑門檻「定太高」。
+- **10-20 反彈擴大**：Semafor 與《華盛頓郵報》同步報導；Zvi Mowshowitz 評論（10-20，HN 10 分）批評 Anthropic 未能理解法案為何引發疑慮。
+
+**已知與未知**
+- **已知**：法案限制的是政府權力，與 09-03 Sanders／Casar 提出的 Ban Artificial Superintelligence Act 方向相反（該案限制 AI），非同一條線。
+- **未知**：法案文字、具名議員、國會進度均未見報導；Anthropic 官方回應亦未見報導。
+
+**與 SB 53 的重合（2026-10-19 查證）**
+- WebSearch 核對，「50 人死亡或 10 億美元損害」門檻與加州 SB 53（「災難性風險」法定定義，Anthropic 已公開背書）的門檻完全一致。
+- 未找到對應聯邦法案文本；Yahoo／Mashable 報導的「Anthropic 自提聯邦法案」是否援引 SB 53 定義、或為獨立新草案沿用同一數字，無法從現有報導確認。
 
 ## 政府動作對你的產品做了什麼
 
@@ -285,17 +298,10 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
-| 2026-10-21 | 🌐 | Novara Media：稱 Anthropic 建議「rogue AI」須威脅 50 條人命才可被關閉 | 與既有 10-19 門檻數字曝光相同事實，未提供新門檻數值或法案進度，僅標題可用，並陳不合併，詳見「線的細節」 |
+| 2026-10-16～10-21 | 🏢🌐 | Anthropic 自提 AI 安全法案遊說國會：Politico 首報（10-16）、50 人死亡／10 億美元門檻曝光（10-19）、外界反彈與評論 | 法案文字與進度未見報導；要點、反彈、已知／未知見 [[topics/anthropic-government-policy#Anthropic 自提 AI 安全法案]] |
 | 2026-10-21 | 🏛️🏢 | Fox News：川普政府發表 AI 與資料中心政策立場；Anthropic 執行長 Amodei 同時為公司安全紀錄與對中銷售紀錄辯護 | 具體政策內容、Amodei 回應全文均未見報導，僅標題可用 |
-| 2026-10-21 | 🌐 | Politico：解析 Anthropic 遊說法案設定「10 億美元損害」門檻的理由 | 與既有 10-19 門檻數字曝光相同事實，未提供新門檻數值或法案進度，僅標題可用，並陳不合併，詳見「線的細節」 |
 | 2026-10-20 | 🏛️ | FedScoop：美國衛生部（HHS）將對 Anthropic 做出「唯一來源」（sole-source）聯邦採購決定，先於後續更廣泛 AI 採購競標程序 | 具體採購標的、金額與競標排除範圍均未見報導，僅標題可用 |
-| 2026-10-20 | 🌐 | Zvi Mowshowitz（thezvi.substack.com，經 Hacker News）評論 Anthropic 未能理解自提法案為何「不可接受且令人不安」 | 針對既有 10-16 自提法案遊說爭議的批評性評論，未提供具體論點或新事實，HN 10 分，僅標題可用，詳見「線的細節」 |
-| 2026-10-20 | 🌐 | TechCrunch：Anthropic 遊說的 AI 安全法案門檻為「可能造成 50 人以上死亡」才可封鎖模型 | 與既有 10-19 門檻數字曝光相同事實，未提供新門檻數值或法案進度，僅標題可用，並陳不合併，詳見「線的細節」 |
-| 2026-10-20 | 🌐 | Semafor／《華盛頓郵報》同步報導 10-16 Anthropic 遊說法案外界反彈擴大 | 未提供新的具體門檻數字，僅重申反彈聲浪持續擴大，詳見「線的細節」 |
-| 2026-10-19 | 🌐 | Yahoo／Reddit：媒體進一步揭露 10-16 Anthropic 遊說國會法案的具體觸發門檻 | 僅預估造成 50 人以上死亡或超過 10 億美元損害時，政府才可依此法案封鎖「危險」AI 模型；Reddit r/ClaudeAI 質疑門檻「定太高」，法案文字與立法進度仍未見報導，詳見「線的細節」 |
 | 2026-10-17 | 🏛️ | 紐約市主計官致函 Dario Amodei，要求暫緩 IPO | 稱白宮所簽「道德約束力」AI 安全協議不足以回應風險；具體後續時程與 Anthropic 回應均未見報導，僅標題可用（HN 14 分），詳見「線的細節」 |
-| 2026-10-17 | 🌐 | Mother Jones 評論稱 Anthropic 遊說國會法案為啟動政府介入設下的門檻「令人擔憂」 | 針對 10-16 Politico 揭露法案的批評性評論，未提供門檻數值或新事實，詳見「線的細節」 |
-| 2026-10-16 | 🏢 | Politico 獨家：Anthropic 悄悄向國會議員遊說自家提出的 AI 安全法案 | 法案內容會限制政府封鎖「危險」AI 模型的權力；具名議員、法案文字與立法進度均未見報導，僅標題可用；Bloomberg、Law Commentary 同日跟進轉載，詳見「線的細節」 |
 | 2026-10-15 | 🏛️ | CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料 | 調查從 09-30「開啟」進入取證程序；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 8 列 |
 | 2026-10-14 | 🏢 | WIRED：OpenAI、Anthropic 向英國國會議員表態支持接受監管 | 具體委員會名稱、聽證內容與監管訴求細節均未見報導，僅標題可用 |
 | 2026-10-14 | 🏢 | Bloomberg／Quartz：Anthropic 一名高管稱開源 AI 模型風險高於閉源模型 | 報導未點名具體模型或佐證資料，呼應「## 根本矛盾」與「出口管制」開放權重論戰（見「## 三個戰場」🚫 出口管制段落） |

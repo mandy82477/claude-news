@@ -3,7 +3,7 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
@@ -236,6 +236,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_REMOTE_TOOLS_SPECULATIVE_CLASSIFIER` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
 | `CLAUDE_CODE_WEBSEARCH_CCR_PROXY_FAST` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
 | `CLAUDE_CODE_WEB_SEARCH_FAST_ARG` | 2.1.282（09-25） | 1 | — | — | 2.1.282 仍在（比對日 09-25） |
+
+## auto mode 擴張：兩族旗標歸群
+
+> **旗標名不是承諾。** 下面只依名稱字面把同族旗標分堆，方便一眼看出這兩族在長什麼樣；每個旗標仍是第一階（只有名字），行為、用途、會不會出貨都不知道。版本與首見日以上方追蹤表為準。
+
+**`CLAUDE_CODE_AUTO_MODE_*`（9 個，1 個已消失）**
+- **名稱帶 `EMAIL`**：`EMAIL_SENDER_TURN`、`EMAIL_SENDER_REPLY_TURN`，同於 2.1.306（10-21）出現。
+- **名稱帶 `THREAD`**：`THREAD_ASK_HELD`（2.1.308，10-22）、`COMPACT_THREAD_RULE`（2.1.299，10-14）。
+- **名稱帶 `REMOTE`／`SERVER`**：`REMOTE_BROWSER`（2.1.304，10-19）、`SERVER`（2.1.262–2.1.272 跨版回填）。
+- **其他單獨名稱**：`TIER`、`HEARTH_MEMBER_RELAY_ROWS`，同於 2.1.286（10-01）出現。
+- **已消失**：`CANDIDATE_WORDING`（2.1.284 出現，2.1.286 消失，列 4 階）。
+
+**`CLAUDE_CODE_CCR_*`（9 個含 1 個已消失；另 `WEBSEARCH_CCR_PROXY_FAST` 名稱含 CCR）**
+- **名稱帶 `EARLY`**：`EARLY_REMOTE_CONNECT`（2.1.281）、`EARLY_PLUGINS_SYNC`（2.1.286）、`EARLY_SKILLS_SYNC`（2.1.287）、`EARLY_SYNC_AFTER_SETTINGS_REFUSAL`（2.1.306）。
+- **名稱帶 `EVENT`／`POOL`／`MIGRATIONS`／`RESCAN`**：`EVENT_FLUSH_POLICY`（2.1.306）、`OWN_CONNECTION_POOL`（2.1.309）、`SKIP_FRESH_MIGRATIONS`、`FOLD_FIRST_TURN_RESCAN`（均 2.1.287）。
+- **名稱含 CCR 的搜尋類**：`WEBSEARCH_CCR_PROXY_FAST`（2.1.282，前綴非 `CCR_`）。
+- **已消失**：`CCR_LAZY_SUBAGENT_HYDRATE`（2.1.262–2.1.272 之間）。
 
 ## 代號旗標
 

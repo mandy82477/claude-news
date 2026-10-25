@@ -3,15 +3,15 @@ page: "topics/community-pattern-trends"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-24"
-last_news_update: "2026-10-23"
+last_updated: "2026-10-25"
+last_news_update: "2026-10-24"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 21
 attribution_count: 0
 attribution_last: null
@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-25
+**最後新聞更新：** 2026-10-24
 
 > **最新趨勢觀察**（2026-10-24）
 > - **強制層與規格驅動兩條淡出的方向各回來一例**：agent-usage-guard（10/22）用 hook 在用量超過 80% 時擋下再生子 agent；nick-vels/skills（10/23）是規格驅動時隔 6 週的新實作，兩者都只有單一來源或星數佐證。
-> - **隔離與路由往託管與供應商層延伸**：Omnara（10/21，HN 98）把沙盒與權限交給託管平台，OmniRoute（10/22）在額度用盡時自動換供應商；可觀測性線添 ccdeck 多 session 儀表板。
+> - **隔離與路由往託管與供應商層延伸**：Omnara（10/21，HN 98）把沙盒與權限交給託管平台，OmniRoute（10/22）在額度用盡時自動換供應商；可觀測性線添 ccdeck 多 session 儀表板與 Corgi（10/24，HN 104）。
 
 ---
 
@@ -214,7 +214,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-10-23
+### 趨勢六：多 Agent 可觀測性儀表板化　`方向已收斂`　最近一次動靜 2026-10-24
 
 **演進：**
 - 🔥（估） **live-log-viewer-next**（7/6）：讀取本機 JSONL transcript，呈現多個平行 agent 即時對話地圖，此線最早的獨立實作
@@ -227,11 +227,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **dsh-TUI／better-agent-terminal**（9/10）：介面元件化的延伸——dsh-TUI（中國社群「DSH」官方收錄的 Claude Code 風格 TUI 元件市集）、better-agent-terminal（多工作區終端聚合），從獨立看板再細分出「可複用介面元件」
 - 🔥（估） **額度可見：TokenEater／Pulse**（9/16、10/3）：用量額度做進原生 macOS App 與邊緣常駐監視器，Offrun 也並排顯示各帳號剩餘額度；觀測對象從「誰在做什麼」延伸到「額度剩多少」，皆僅星數或單一討論
 - 🔥（估） **ccdeck**（10/23，dev.to 11 讚）：本機儀表板統一顯示多個 Claude Code／Codex session 與子 agent 樹狀結構，解決同時開多個 agent 時漏看已完成或待確認 session
+- 🔥🔥🔥🔥 **Corgi**（10/24，HN 104，2 個來源）：桌面 agent／終端機多工器，跨 Claude Code、Codex、Pi 顯示逐 agent 活動 feed，F1 跳到下一個未讀；作者自述已日常使用數週，無第三方量化數據。此線首個過 100 分的條目，熱度升級的依據只有這一筆
 
 **代表模式：**
 - **JSONL Transcript 讀取型**（live-log-viewer-next）：解析本機 session 逐字稿檔案重建對話地圖，不需官方額外介面支援
 - **官方 Event Stream 型**（HUD）：透過官方 CLI 既有的 JSON event stream + hook 取得狀態，不額外消耗 token，是目前技術上最乾淨的實作路徑
 - **獨立看板/主控台型**（Fleet Deck、episko（原名 Cockpit）、Wallfacer、Topsoil）：以獨立 App／TUI 彙整多 session 狀態，各自在「一覽性」與「所在平台」（終端、瀏海面板、獨立視窗）上做不同取捨
+
+**採用量（另一把尺）：** [[topics/community-tech-patterns]] 模式概覽表把「Agent 活動可視化」標為 ⏳ 新興（最後動態 2026-10-24），ccdeck、Corgi 都是單一作者工具；方向已收斂但採用仍新興，本節因此不升成熟度，只調熱度。
 
 **對現有設計的啟示：** 先看官方給了什麼：Agent view（研究預覽）每個 session 一列，標出在跑、在等你還是做完了，但看不到 agent 之間誰在等誰（見 [[topics/official-community-gap]]）。回頭檢查：你的並行 agent 數是不是已經超過眼睛盯得住的終端機視窗數——超過了，可觀測性就該是一層獨立基礎設施，不是事後加的附加功能。自己做這類工具，先看官方 CLI 有沒有事件流介面：讀官方 event stream（如 HUD）比自己解析 transcript 檔案穩，不容易隨版本更新失效。與趨勢二互補——隔離解決「不互相踩到」，這條線解決「知道每個 agent 現在在幹嘛」。
 

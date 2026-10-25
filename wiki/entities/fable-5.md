@@ -4,19 +4,19 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
-last_news_update: "2026-10-18"
+last_updated: "2026-10-25"
+last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 7
+days_since_news: 6
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
-inbound_links: 58
-attribution_count: 39
-attribution_last: "2026-10-18"
+days_since_news_subtree: 6
+inbound_links: 59
+attribution_count: 40
+attribution_last: "2026-10-19"
 top_source: "google-news"
-pending_count: 3
+pending_count: 4
 pending_overdue: 0
 pending_next_review: "2026-10-26"
 pending_signalled: 0
@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Claude Fable 5.1
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-25
+**最後新聞更新：** 2026-10-19
 
 > **下代傳聞**（2026-10-18）
-> TestingCatalog 單一來源傳聞 Anthropic 下週發布 Claude Fable 5.5；日報無後續，官方頁面未查證（標記見「歷史記錄」2026-10-18）。
+> TestingCatalog 單一來源傳聞 Anthropic 下週發布 Claude Fable 5.5；官方未證實；與另兩則未發布模型訊號合併見「下一代模型傳聞彙整」。
 
 ---
 
@@ -46,6 +46,20 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 現行世代是 **Fable 5.1**（2026-09-01 GA）；**Fable 5 仍可呼叫但已列為 Legacy**，官方建議遷移。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
 
 出口管制已於 2026-06-30 解除、07-01 起全球恢復存取，現在不影響你拿不拿得到；政府那條線之後怎麼走見 [[topics/anthropic-government-policy]]。方案內含什麼、超出怎麼算見 [[entities/pricing]]。
+
+## 下一代模型傳聞彙整
+
+三則關於下一代 Claude 模型的訊號，**全部官方未證實**，皆為單一來源且互動數近 0；回查日 2026-10-25（掃描範圍：日報至 2026-10-24，官方頁面未查）。
+
+- **Fable 5.5 下週發布**：TestingCatalog 2026-10-17 稱官方下週發布，可信度低（單一來源、無日期規格定價）；截至 10-24 無官方公告或第二來源。細節見「歷史記錄」2026-10-18。
+- **「更強、對齊更好」的未發布模型**：The Decoder 2026-10-23 標題引述 Anthropic 自述，稱未發布模型能力與對齊皆優於 [[entities/mythos|Mythos 5.1]]；出處是 Anthropic 自述但只見標題，內文與型號未載，可信度中低。標記在 [[entities/mythos]]。
+- **更懂使用者意圖的模型**：The Information 2026-10-19 稱 Anthropic 正準備一款更擅長讀懂使用者真實意圖的模型；單一來源，可信度低，無型號與時程，也沒有其他媒體跟進。
+
+❓ **待查證**（標 2026-10-25｜查 Readies Model、Intentions Better）｜**The Information：Anthropic 準備更懂使用者意圖的模型**（2026-10-19 報導）：僅標題與日報摘要可用，無型號、時程或規格；官方公告頁未查證。
+
+❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-24 無後續，官方頁面未查證。
+
+三則是否指同一款模型，目前無證據可判斷。
 
 ## 你現在拿到的是什麼
 
@@ -203,7 +217,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 #### 2026-10-18
 **傳聞：Anthropic 下週發布 Claude Fable 5.5（單一來源）**：TestingCatalog AI News 報導稱 Anthropic 準備於下週發布 Claude Fable 5.5，未見具體發布日、規格或定價（[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)，2026-10-17）。
 
-❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-23 無後續，官方頁面未查證。
+懸置標記已併入上方「下一代模型傳聞彙整」。
 
 #### 2026-10-05
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 錯誤率升高（同日 13:21 UTC 已解決，影響約 30 分鐘）**：

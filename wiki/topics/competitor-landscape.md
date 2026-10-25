@@ -3,7 +3,7 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-24"
+last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "ongoing"
 days_since_news: 1
@@ -12,7 +12,7 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 73
-attribution_count: 214
+attribution_count: 215
 attribution_last: "2026-10-24"
 top_source: "google-news"
 pending_count: 7
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-25
 **最後新聞更新：** 2026-10-24
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
-| **Moonshot AI（Kimi K3）** | 權重開源，效果與 Fable 5 相當、成本約三分之一但慢約 4 倍（07-27）→ 可離線批次的工作有便宜選項 | 能力 | 🔴 | The New Stack 量化實測＋官方一手規格；官方自陳整體仍落後 Fable 5 |
+| **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
 | **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
 | **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
@@ -189,8 +189,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **還沒解決**
 - 是否為同一款 GLM-5.3、測試方法論、benchmark 數字均未見；Cursor 官方亦未回應該漏洞宣稱。
 
-### Moonshot AI（Kimi K3）
+### Moonshot AI（Kimi K3／K3.1 Pro）
 **現在的答案**
+- K3.1 Pro 於 2026-10-23 上線 Kimi API，權重尚未開源；The Decoder 標題稱其逼近 Opus 5.5，未附量化數字（媒體標題，弱訊號，Google News/The Decoder；Blog/Simon Willison）。
+- OrcaRouter 另整理在 Claude Code／Codex 中切換使用 K3.1 Pro 的設定與踩坑（Google News/OrcaRouter，僅標題可用）。
 - 開源權重可直接取用（07-27），不必依賴 API；官方規格為 2.8 兆參數、100 萬 token context、原生視覺。
 - 第三方量化實測：效果與 Fable 5 相當，成本約三分之一但速度慢約 4 倍——性價比構成威脅，時間敏感的工作不受影響。
 - 官方自陳整體表現仍落後 Fable 5 與 GPT-5.6 Sol，社群「超越」說法未獲實測支持。
@@ -251,6 +253,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **OpenAI（透過比較報導）**：shattered.io 發表「Opus 5.5 vs Sol」定價降幅比較文，稱兩者降幅分別為 40% 與 50%；具體口徑是否與既有 ⟨Q-07⟩ 查證之 GPT-6.1 Sol 牌價一致未見報導，僅標題可用（Google News/shattered.io）
 
 ### 2026-10-23
+- **Moonshot AI**：Kimi K3.1 Pro 上線 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；OrcaRouter 整理在 Claude Code／Codex 切換使用的設定與踩坑，均無量化數字（Google News/The Decoder；Google News/OrcaRouter；Blog/Simon Willison）
 - **Microsoft／GitHub**：shattered.io 整理 2026 年 GitHub Copilot 方案定價，稱 $10 可換 1,500 AI credits；詳見「競品定價對照」新增列，單一來源僅標題可用（Topic Watch/competitor-landscape）
 - **Microsoft／GitHub**：VS 版 Copilot 9 月更新支援聊天內瀏覽 PR、切換信任 AI 模型、即時修補弱點套件；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA；詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog ×2）
 - **Microsoft／GitHub**：Copilot 用量指標 API 新增顯示組織自建 skills、custom agents、MCP servers、slash commands 與 plugins 的具體名稱，不再合併計算；屬企業用量分析功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
