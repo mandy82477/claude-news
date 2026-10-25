@@ -143,7 +143,7 @@ class BankIntegrityError(RuntimeError):
 def check_integrity(bank=None) -> None:
     bank = BANK if bank is None else bank
     if len(bank) < MIN_BANK_SIZE:
-        raise BankIntegrityError(f"題庫只剩 {len(bank)} 題（<{MIN_BANK_SIZE}）——刪題須經使用者確認並同步模式文件")
+        raise BankIntegrityError(f"題庫只剩 {len(bank)} 題（<{MIN_BANK_SIZE}）——刪題須由主編判定並同步模式文件")
     ids = [q["id"] for q in bank]
     if len(set(ids)) != len(ids):
         raise BankIntegrityError(f"題目 id 重複：{ids}")

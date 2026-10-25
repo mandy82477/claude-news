@@ -66,7 +66,7 @@ git push        # 失敗時照 Step 5 的 push 重試程序處理
 | `Step 5：Commit Web 並統一推送` | 照做，**單一 push** |
 | `Step 6：寫入 task_scheduler.log` | 照做，無論前面成敗都必須寫 |
 
-> 上表若與四個 pipeline skill 的實際步驟標題對不上（有標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照 skill 檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 pipeline skill 不同步`，供使用者回頭修 runbook。
+> 上表若與四個 pipeline skill 的實際步驟標題對不上（有標題被改名、或出現表中沒有的新步驟），**不要自行猜測略過**：照 skill 檔實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 pipeline skill 不同步`，記進 log 的「本機承接」，下次本機 session 由主編修 runbook。
 
 **Phase 劃分不適用於雲端：** `.claude/skills/news-pipeline/SKILL.md` 把步驟分成 Phase A / B / C，那是為了本機 session 省 context 而拆的背景 agent 邊界。你是雲端頂層 session，**全部步驟自己一條龍做完，不 spawn 背景 agent 執行 pipeline 步驟**（記者派工除外，見下）。
 

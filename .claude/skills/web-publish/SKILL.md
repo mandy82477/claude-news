@@ -12,6 +12,8 @@ disable-model-invocation: true
 
 ## Step 3：Commit Wiki 變更（不 push）
 
+**Step 3 commit 前先清截止日複查**（Phase A 的回報不帶 3g 輸出，由本步執行者自己重跑 `PYTHON REPO_ROOT\scripts\scan_expiring_deadlines.py`，唯讀、exit 恆 0）：有命中（已過期或 7 天內到期）就逐個 WebFetch 官方原文，照 `.claude/skills/news-digest/SKILL.md` 3g 三選一處置，改到的頁隨下方 commit 進；WebFetch 不可用（雲端 egress 封鎖）時寫進 `wiki/log.md` 本次 ingest 紀錄的「本機承接」行，下次本機 session 由主編處理。印「無需複查的截止日」時略過。
+
 **commit 前先跑內容閘**（閘紅時 `.claude/hooks/gate_wiki_commit.py` 會擋下 master 上任何含 `wiki/` 的 commit）：
 
 ```
@@ -131,7 +133,7 @@ git -C REPO_ROOT push || {
   git -C REPO_ROOT merge --no-edit origin/master && git -C REPO_ROOT push
   ```
 
-  **有交集就停手**：不 merge、不 stash、不 checkout，Step 6 log 記 `Push DEFERRED - dirty overlap`，列出重疊檔名交使用者處理。commit 還在本機不會遺失（雲端無此路徑——雲端是 fresh clone，工作樹本來就乾淨，走原 `pull --rebase` 即可）。
+  **有交集就停手**：不 merge、不 stash、不 checkout，Step 6 log 記 `Push DEFERRED - dirty overlap`，列出重疊檔名，下次本機 session 由主編在獨立 worktree 合併後補推。commit 還在本機不會遺失（雲端無此路徑——雲端是 fresh clone，工作樹本來就乾淨，走原 `pull --rebase` 即可）。
 - 先確認在 master 上：雲端容器起跑時是 detached HEAD、本機 master 停在舊快取（2026-07-14、2026-09-29 實例），該狀態下 push 不會更新遠端分支。**歸位只在開跑時做**——`scripts/cloud_bootstrap.py` 在任何 commit 之前、只在不會丟東西時自動歸位；到了這一步才發現不在 master，改推 `cloud-daily-TARGET_DATE-unmerged` 分支保住 commit，Step 6 log 記 `Push PARKED - not on master`（看門狗會認出該分支並提醒救回）
 - **允許自動解的衝突只有兩類**：
   1. `src/news_aggregator/emitted_items.json`——此檔有兩個寫者（GitHub Actions 加入未確認條目、pipeline 翻確認欄位）。解法固定：**放棄我方的 confirm commit、保留遠端版本**，因為日報上站遠比確認欄位重要，未確認的條目只會被重新提供一次，是良性退化。處理後標「emitted-cache 確認本次放棄，項目將於次日重新提供」
@@ -201,15 +203,15 @@ REPO_ROOT\src\logs\task_scheduler.log
 | Step 6 Log 寫入 | ✅ / ❌ |
 | 目標日期 | TARGET_DATE |
 
-### 📋 待使用者裁示
+### 📋 需使用者端設定
 
-摘要表之後**必接**此區塊——待確認事項只寫進 `wiki/log.md` 等於沒有出口，使用者不會讀那個檔（起因見沿革檔 2026-08-08）。
+摘要表之後**必接**此區塊，只放使用者才能做的動作：claude.ai 雲端環境網路設定、GitHub／帳號權限、憑證、付費設定。其餘事項主編當輪判定並處理完、理由寫進 `wiki/log.md`，不放這裡；摘要只寫做了什麼。
 
-作法：Grep `wiki/log.md` 中 TARGET_DATE 該次 ingest 紀錄的「📋 待使用者確認」段落，逐條轉貼成一行摘要（`- [頁面/主題]：一句話問題`）。同時 Grep 前 14 天的 ingest 紀錄，**同一議題重複出現者標「⏳ 已擱置 N 天」**置頂。
+作法：Grep `wiki/log.md` 中 TARGET_DATE 該次 ingest 紀錄的「📋 需使用者端設定」段落，逐條轉成一行（`- [要設什麼]：在哪設、設了之後解開什麼`）。同時 Grep 前 14 天的 ingest 紀錄，**同一項重複出現者標「⏳ 已擱置 N 天」**置頂。
 
-**另必接 Step 1b-3g 的截止日複查清單：** Phase A 的回報不帶 3g 輸出，寫摘要的人看不到它——**寫本區前由本步執行者自己重跑 `PYTHON REPO_ROOT\scripts\scan_expiring_deadlines.py`**（唯讀、exit 恆 0，見 `.claude/skills/news-digest/SKILL.md` 3g），以這次的輸出為準。有命中（已過期或 7 天內到期）時，逐個截止日轉成一行 `- ⏰ [YYYY-MM-DD]（剩 N 天，M 處引用）：[事件]——需查官方原文確認日期是否仍有效`。這批與 log.md 的裁示不同源，**不可因為 log.md 沒有對應段落就省略**；3g 印「無需複查的截止日」時整段省略。
+**另接 Step 3 commit 前的截止日複查結果：** 有命中時逐個截止日一行 `- ⏰ [YYYY-MM-DD]：[事件]——仍有效／已延長至…／已作廢（回掃 N 處）／留待本機（WebFetch 不可用）`；這幾行是處置紀錄，不是待辦。3g 印「無需複查的截止日」時整段省略。
 
-無任何未決項時寫 `- 無`，不可省略此區塊。
+無任何項目時寫 `- 無`，不可省略此區塊。
 
 ---
 

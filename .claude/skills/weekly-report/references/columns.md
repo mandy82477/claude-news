@@ -20,7 +20,7 @@ Anthropic 這週出的新功能與新產品，**至多 6 條**，每條一行：
 - **怎麼寫**：每篇 600–800 **可見字**（收稿時主編用 `scripts/check_weekly_ledger.py` 的 `deepdive_visible_len()` 量一次，超過請記者自己砍）；體裁由記者選（新聞體、解釋、爭論整理都行）；段落標籤寫成讀者的問題（例如：這是什麼／社群怎麼用／值不值得試），不用體裁名；讀完知道什麼變了、值不值得跟。
 - **主編只做三件事**：記者列出缺的料就去外查（查不到寫「官方到今天沒說」）；替讀者追問「為什麼會在意」；守本檔與 `.claude/skills/weekly-report/references/contracts.md` 的格式。
 - 同題連續上週報，要有這週的新東西。
-- 專文若解掉了某條 🔍，回報裡提醒使用者可把該筆標 ✅；主編不自行改 `wiki/reader-notes.md` 的狀態（那是 `/wiki-weekly-review` 的事）。
+- 專文若解掉了某條 🔍，回報裡寫明是哪一筆，由同週 `/wiki-weekly-review` 步驟 3 標 ✅；本步不改 `wiki/reader-notes.md` 的狀態（那是 `/wiki-weekly-review` 的事）。
 
 ## 本週要動的事（選用）
 

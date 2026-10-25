@@ -777,14 +777,14 @@
       ]
     },
     {
-      "name": "news-pipeline SKILL.md <-> .claude/skills/web-publish/SKILL.md：完成摘要必須接出「待使用者裁示」（待確認事項只寫進 log.md 等於靜默丟棄——2026-08-02 裁示擱置 6 天的防再犯）",
+      "name": "news-pipeline SKILL.md <-> .claude/skills/web-publish/SKILL.md：完成摘要必須接出「需使用者端設定」（只有使用者能做的設定只寫進 log.md 等於靜默丟棄——2026-08-02 擱置 6 天的防再犯）",
       "assertion": "all_contain",
       "files": [
         ".claude/skills/news-pipeline/SKILL.md",
         ".claude/skills/web-publish/SKILL.md"
       ],
       "patterns": [
-        "待使用者裁示"
+        "需使用者端設定"
       ]
     },
     {
@@ -1025,15 +1025,16 @@
       "_note": "2026-08-28 首版用概念詞『存量盤點』當 pattern，是假綠——檔內設計註解也含這四個字，把前綴改壞照樣通過。pattern 必須釘實際輸出字串。"
     },
     {
-      "name": "截止日複查的產出端 <-> 消費端：scan_expiring_deadlines.py 必須被 .claude/skills/news-digest/SKILL.md 的 3g 呼叫，且其輸出必須在完成摘要「待使用者裁示」有接手方（只寫在步驟裡沒人接＝偵測器印給空氣看，正是 2026-08-02 裁示擱置 6 天的同型死法）",
+      "name": "截止日複查的產出端 <-> 消費端：scan_expiring_deadlines.py 必須被 .claude/skills/news-digest/SKILL.md 的 3g 呼叫，且其輸出必須在 web-publish Step 3 commit 前有接手方（只寫在步驟裡沒人接＝偵測器印給空氣看，正是 2026-08-02 裁示擱置 6 天的同型死法）",
       "assertion": "all_contain",
       "files": [
         "scripts/scan_expiring_deadlines.py",
-        ".claude/skills/news-digest/SKILL.md"
+        ".claude/skills/news-digest/SKILL.md",
+        ".claude/skills/web-publish/SKILL.md"
       ],
       "patterns": [
         "scan_expiring_deadlines",
-        "待使用者裁示"
+        "Step 3 commit 前"
       ],
       "_note": "2026-08-29 review 三度修正：首版 files 只列消費端＋patterns 用 2 字元的「3g」；二版改「截止日」仍是兩檔天然都含的通用詞；三版釘腳本名但只守住 name 宣稱的前半（被呼叫），沒守住後半（輸出有接手方）。現兩者各一個 pattern。"
     },

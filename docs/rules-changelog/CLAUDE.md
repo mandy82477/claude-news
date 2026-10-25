@@ -53,3 +53,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-25（lint 待裁示改主編自決：6e 佇列、5o 厚頁；派工路徑並存說明）
 
 使用者第四次指出待裁示清單裡多數不需要她（「為什麼需要我決定你不能自己決定嗎」）。根因是條文本身把決定權寫給使用者：`wiki-lint-rules-health` 6e 發現窗積壓「回報使用者擇一」、`docs/cloud-runbooks/weekly-lint.md` 5o「待拆頁只進待使用者確認區」，雲端 lint 照條文堆進待裁示。改為主編判定附理由（6e 三擇一含「不動」）、記者本輪交代切法（5o 判拆者進頁面健檢總帳）。另 `.claude/skills/wiki-ingest/references/classification.md` 補一句：已註冊記者型別留給本機一次性手動派工，與 2026-08-15 general-purpose 唯一正典並存，6f 不再列待裁示。
+
+## 2026-10-25（規則檔不再把決定丟給使用者）
+
+使用者第五次指出待裁示多半不需要她，並要求「把這個要問使用者的規則刪掉」。`.claude/`、`docs/cloud-runbooks/`、`wiki/CLAUDE.md` 裡「回報使用者／經使用者確認／列待裁示／停下來問」的條文全數改為主編判定並執行、理由寫進 `wiki/log.md`（頁面健檢寫 `docs/page-audits/ledger.md`），回報只寫做了什麼：涵蓋 page-audit-review 裁決節奏、`/wiki-weekly-review` 步驟 3 可選項閘、月度蒸餾、規則矛盾與遵守率、密度蒸餾、來源觀察名單、題庫增刪、選材指引修正、語意分岔／死案、拆頁切法。完成摘要與 lint 紀錄的「待使用者裁示」改為「主編判定／本機承接／需使用者端設定」三行，registry 兩組 sync_pair 同步換字串。保留兩類例外：只有使用者能做的設定（雲端網路白名單、GitHub／帳號權限、憑證、付費）列「需使用者端設定」；雲端無人值守的既有安全邊界（6a／6c／6h／6j 不改規則檔、不動頁面結構、不改腳本與測試、lint 不改管線程式）原樣保留，只把後半「回報使用者」改成記「本機承接」或 `docs/workaround-register.md`，由下次本機 session 的主編照判定執行。

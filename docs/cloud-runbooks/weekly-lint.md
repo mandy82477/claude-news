@@ -4,7 +4,7 @@
 
 **先讀 `docs/cloud-runbooks/_shared.md`**（環境覆寫、收尾閉迴路、無人值守原則），再照本檔執行。
 
-你執行的是 `/wiki-lint`（總指揮 `.claude/skills/wiki-lint/SKILL.md` ＋四個子 skill）的**自主安全部分**，把需要人工判斷的項目寫成待辦留給使用者，最後閉迴路上站。今日日期用 `date -u +%F`。
+你執行的是 `/wiki-lint`（總指揮 `.claude/skills/wiki-lint/SKILL.md` ＋四個子 skill）的**自主安全部分**：取捨一律由你（主編）判定；雲端的邊界是下表標「雲端不動手／雲端不改」的項目（6a／6c／6h／6j 的規則檔改動、頁面結構改動：拆頁／併頁／歸檔／建新頁），這類項目寫下判定與理由記進「本機承接」，由下次本機 `/weekly` 步驟 0 執行。最後閉迴路上站。今日日期用 `date -u +%F`。
 
 ---
 
@@ -18,58 +18,59 @@
 |------|------|
 | `wiki-lint-reporters` `1. 載入 wiki 全貌` | 自主執行 |
 | `wiki-lint-reporters` `2. 並行派工（六位記者同時執行）` | 自主執行，派工帶 明寫 `model`；含記者職責內的矛盾修正、孤立連結、狀態更新、呈現品質、待查證回訪，以及社群記者的 community-tech-tools 策展 |
-| `wiki-lint-reporters` `3. 處理語意分岔／死案歸檔候選（需使用者確認）` | **只回報，不動手** → 寫入待辦 |
-| `wiki-lint-reporters` `4. 建議並建立新實體頁` | **只回報，不動手** → 寫入待辦 |
+| `wiki-lint-reporters` `3. 處理語意分岔／死案歸檔候選（主編判定）` | **雲端不動手**：主編逐項判定拆／歸檔／不動，判定與理由記「本機承接」 |
+| `wiki-lint-reporters` `4. 建議並建立新實體頁` | **雲端不動手**：主編判定建不建，判定與理由記「本機承接」 |
 | `wiki-lint-reporters` `5. 更新 wiki/overview.md` | 自主執行 |
 | `wiki-lint-sweeps` `5a. feature-radar 熱度降溫（主編親做）` | 自主執行（`scripts/news_mentions.py` 純本地比對日報；⏳ 逾期處置照該節三選一） |
-| `wiki-lint-sweeps` `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
-| `wiki-lint-sweeps` `5c. 逾期待查證清算（清零制，按頁面所有權派六記者並行）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5b. 跨家任務榜單週更（主編派工）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group leaderboard` → 印 `EGRESS: leaderboard OK` 就照該節執行；`PARTIAL`／`BLOCKED` 才跳過並記「本機承接」（本機 `/weekly` 步驟 0 承接）。不得未探測就跳過 |
+| `wiki-lint-sweeps` `5c. 逾期待查證清算（清零制，按頁面所有權派六記者並行）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就照該節執行（**清零制：目標把逾期清到 0，無每輪額度；Lane A／B 只標成本不設上限**）；`PARTIAL`／`BLOCKED` 才整步跳過並記「本機承接」（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5d. 歸因忠實度抽查（主編親做）` | 自主執行（帳本與日報皆為本地檔） |
-| `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並寫待辦（本機 `/weekly` 步驟 0 承接）|
+| `wiki-lint-sweeps` `5e. pricing「通路與乘數」複查（主編親查）` | **先探測再決定** `[改版: 2026-09-12]`：`python scripts/cloud_egress_check.py --group official` → `EGRESS: official OK` 就 WebFetch 官方計價頁照該節執行；`PARTIAL`／`BLOCKED` 才跳過並記「本機承接」（本機 `/weekly` 步驟 0 承接）|
 | `wiki-lint-sweeps` `5f. devpractice 週彙整（主編派工）` | 自主執行，派工帶 明寫 `model`；回報的「⚠️ 需主編轉知」登 `data/pending-handoffs.jsonl` |
 | `wiki-lint-sweeps` `5g. 高引用但停滯（signal 消費端，主編親做）` | 自主執行（`gen_wiki_frontmatter.py --list-signal` 純本地；每頁二選一派對應記者確認） `[加入: 2026-09-04]` |
-| `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過寫待辦 |
+| `wiki-lint-sweeps` `5h. 投資訊號回顧環（主編親查）` | 自主執行 `[加入: 2026-09-12]`：催化劑半邊純本地；股價半邊走 WebSearch（不經沙盒 egress），該環境無 WebSearch 工具時才跳過記「本機承接」 |
 | `wiki-lint-sweeps` `5i. 安全政策兩頁結論表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
 | `wiki-lint-sweeps` `5j. 商業健康度四表退場複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：純讀庫內頁面與日期，不連網 |
 | `wiki-lint-sweeps` `5k. 社群三張結論表退場複查（主編派社群記者）` | 自主執行 `[加入: 2026-09-13]`，派工帶 明寫 `model` |
-| `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時寫待辦留待本機 `/weekly` |
-| `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api repos/anthropics/claude-code/issues/<n>`（REST；`gh issue view` 走 GraphQL 在雲端一律 403）；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；routine `sources` 已含 `anthropics/claude-code`（2026-10-18），MCP 仍回 not configured 代表 sources 被改掉 → 寫「repo 授權不足，跳過」並對照鏡像 JSON，不擴權 |
-| `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api`（issue 與 comments 皆走 REST；CHANGELOG 直接 `cat ../claude-code/CHANGELOG.md`，是第二個 source 的 sparse clone）；`PARTIAL`／`BLOCKED` 才跳過並寫待辦；repo 未授權同 5m 列 |
-| `wiki-lint-sweeps` `5o. 厚頁清單（主編親做）` | 照做（純本機讀檔，不需 egress）；雲端不開拆頁波，但切法評估照 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」由負責記者在本輪做完、寫進頁面 `%%` 的 `拆頁評估` 行；判定「拆」的頁列進 lint 紀錄由下一次頁面健檢波執行，不列待使用者確認 |
+| `wiki-lint-sweeps` `5l. 模型頁世代表複查（主編親做）` | 自主執行 `[加入: 2026-09-13]`：讀該頁「資料截至」判斷是否需重查；**需重查時才受 egress 限制**，此時記「本機承接」留待本機 `/weekly` |
+| `wiki-lint-sweeps` `5m. code-quality-decline 三條線 issue 狀態複查（主編親做）` | **先探測再決定** `[加入: 2026-09-12]`：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api repos/anthropics/claude-code/issues/<n>`（REST；`gh issue view` 走 GraphQL 在雲端一律 403）；`PARTIAL`／`BLOCKED` 才跳過並記「本機承接」；routine `sources` 已含 `anthropics/claude-code`（2026-10-18），MCP 仍回 not configured 代表 sources 被改掉 → 寫「repo 授權不足，跳過」並對照鏡像 JSON，不擴權 |
+| `wiki-lint-sweeps` `5n. official-community-gap「官方補了沒」表對官方一手（主編親做）` | **先探測再決定**：`python scripts/cloud_egress_check.py --group github` → `EGRESS: github OK` 就跑 `gh api`（issue 與 comments 皆走 REST；CHANGELOG 直接 `cat ../claude-code/CHANGELOG.md`，是第二個 source 的 sparse clone）；`PARTIAL`／`BLOCKED` 才跳過並記「本機承接」；repo 未授權同 5m 列 |
+| `wiki-lint-sweeps` `5o. 厚頁清單（主編親做）` | 照做（純本機讀檔，不需 egress）；雲端不開拆頁波，但切法評估照 `.claude/reporter-rules/page-lifecycle.md`「一頁一故事」由負責記者在本輪做完、寫進頁面 `%%` 的 `拆頁評估` 行；判定「拆」的頁記「本機承接」，由下一次頁面健檢波執行 |
 | `wiki-lint-rules-health` `6. 規則檔健檢` | 分項處理，見下方「健檢分項」 |
-| `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；蒸餾**提案只回報**（需使用者確認）→ 寫入待辦 `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6h. 規則密度審查` | 跑 `lint_health.py density` 自主量測；主編判定蒸餾哪些段；雲端不改 `.claude/`，判定與蒸餾文字記「本機承接」 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6i. 檢查器的檢查：突變測試` | 自主執行 `mutate`／`hits report`；抓到的假看守當場收緊 pattern，改完 `check_rules.py` 必須綠 `[加入: 2026-09-04]` |
-| `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；wiki 頁面的事實缺陷照常當場修；**規則檔缺陷只回報**——修規則檔屬「要求確認」→ 待辦，**每項附 reviewer 的修訂文字原文**（不得只留摘要），並登 `lint_health.py misses`（口徑同 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」） `[加入: 2026-09-04]` |
-| `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選只回報** → 待辦 `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6j. 對抗輪（月度）` | 月度首次 lint 自主派三個對抗 agent（主編已為 Opus，冷讀者照該檔派 Opus）；wiki 頁面的事實缺陷照常當場修；**規則檔缺陷雲端不改**（不動 `.claude/`）→ 主編判定採不採，記「本機承接」，**每項附 reviewer 的修訂文字原文**（不得只留摘要），並登 `lint_health.py misses`（口徑同 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」） `[加入: 2026-09-04]` |
+| `wiki-lint-rules-health` `6k. 連結缺口偵測（每輪）` | 自主執行 `wiki_graph.py gaps --top 10 --with-news`，候選派記者三選一；**併頁／蒸餾候選雲端不動手** → 主編判定，判定與理由記「本機承接」 `[加入: 2026-09-04]` |
 | `wiki-lint-rules-health` `6l. 讀者語言存量清理（每輪）` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
 | `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |
 | `wiki-lint-reader-acceptance` `7b. 歷史質疑代打` | 自主執行 `[加入: 2026-09-13]`，但**開工前必須先 `git fetch --unshallow`**：雲端容器是淺 clone，Q1 溯源探針的 `git rev-list --before` 在淺 clone 下靜默回空、看起來像「近 7 天沒有新數字」（2026-09-12 實際踩到）|
-| `wiki-lint` `8. 記錄本次 lint` | 自主執行，待辦清單寫在這裡 |
+| `wiki-lint` `8. 記錄本次 lint` | 自主執行，「主編判定」「本機承接」「需使用者端設定」三行寫在這裡 |
 | `wiki-lint` `9. 更新 wiki/index.md` | 自主執行 |
 | `wiki-lint` `10. 收尾閉迴路` | 自主執行，套用 `_shared.md` 的收尾閉迴路（單一 push），commit 訊息用 `wiki: weekly lint (cloud) <date>` 與 `web: rebuild (cloud) <date>` |
 
-> 上表若與各 skill 的實際步驟標題對不上（標題被改名、skill 改名或拆併、或出現表中沒有的新步驟），**不要自行猜測略過**：照該 skill 實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 wiki-lint skill 不同步`，供使用者回頭修 runbook。
+> 上表若與各 skill 的實際步驟標題對不上（標題被改名、skill 改名或拆併、或出現表中沒有的新步驟），**不要自行猜測略過**：照該 skill 實際內容執行，並在最終摘要標一行 `⚠️ runbook 步驟表與 wiki-lint skill 不同步`，並記進 log 的「本機承接」，下次本機 session 由主編修 runbook。
 
 ## 健檢分項
 
-`wiki-lint-rules-health` `6. 規則檔健檢` 底下的子項，判準是「該子項是否要求向使用者確認」：
+`wiki-lint-rules-health` `6. 規則檔健檢` 底下的子項，判準是「該子項要不要改 `.claude/` 規則檔」：
 
-- **要求確認的**（規則矛盾、規則調整、跨檔案語意矛盾等，該檔內以「向使用者確認後才修改」「未經確認不得執行」標示）→ **只回報，寫入待辦**
+- **要改規則檔的**（6a 規則矛盾、6c 規則調整、6h 蒸餾、6j 規則檔缺陷；6d、6f 依該檔條文當場處置不在此列）→ 主編判定改法，雲端不改，判定與修訂文字記「本機承接」
 - **純機械檢查與統計的**（規則引用驗證、遵守率抽樣、來源健康與記分卡、品質指標與 `wiki/metrics.md` append）→ **自主執行**
 
 判斷依據是該檔子項的實際措辭，不是本表的記憶——措辭改了以該檔為準。
 
-**✅ 外部死鏈檢查已移交 GitHub Actions，雲端照常執行 `[改版: 2026-08-20]`**：不再自己連網——改讀 `data/link_health.json`（由 `.github/workflows/weekly-linkcheck.yml` 於本 routine 之前產出並 commit 回 repo），因此雲端可完整執行指標三、不需跳過、不需留待辦。**唯一要守的是新鮮度防線**：`checked_at` 距今 > 8 天視為報告過期，本輪不據以標註頁面，改回報「⚠️ link_health.json 過期」——過期報告比沒有報告更危險，它看起來像剛檢查過。（原設計在雲端跑 `check_links.py` 會把全部連結誤判為死鏈並污染頁面，故當時標為跳過；移交 Actions 後該風險消失。）月度蒸餾的立法提案仍屬「要求確認」→ 照上表寫入待辦；採用驗證率是本地檔案統計，雲端可自主執行。
+**✅ 外部死鏈檢查已移交 GitHub Actions，雲端照常執行 `[改版: 2026-08-20]`**：不再自己連網——改讀 `data/link_health.json`（由 `.github/workflows/weekly-linkcheck.yml` 於本 routine 之前產出並 commit 回 repo），因此雲端可完整執行指標三、不需跳過、不需留待辦。**唯一要守的是新鮮度防線**：`checked_at` 距今 > 8 天視為報告過期，本輪不據以標註頁面，改回報「⚠️ link_health.json 過期」——過期報告比沒有報告更危險，它看起來像剛檢查過。（原設計在雲端跑 `check_links.py` 會把全部連結誤判為死鏈並污染頁面，故當時標為跳過；移交 Actions 後該風險消失。）月度蒸餾的立法提案要改規則檔 → 照上表記「本機承接」；採用驗證率是本地檔案統計，雲端可自主執行。
 
-## 待辦寫法
+## 本機承接寫法
 
-凡標為「只回報」的項目，在 `wiki/log.md` 本次 lint 紀錄中以 `📋 待使用者確認` 清單列出，每項要寫清楚：是什麼、觸發標準、你建議怎麼做、為何需要人判斷。使用者下次進專案時才看得懂。
+雲端不動手的項目寫進 `wiki/log.md` 本次 lint 紀錄的「本機承接」行（格式見 `.claude/skills/wiki-lint/references/log-format.md`），每項寫清楚：是什麼、觸發標準、你的判定與理由、雲端為何不做——下次本機 session 的主編照你的判定執行，不再問使用者。只有使用者才能做的設定（雲端網路白名單、GitHub／帳號權限、憑證、付費）寫進「需使用者端設定」行。
 
 ---
 
 ## 完成後輸出摘要
 
 - 更新了哪些頁
-- 留了哪些「📋 待使用者確認」待辦
+- 主編判定了哪些事、留了哪些「本機承接」
+- 需使用者端設定（無則寫「無」）
 - 測試 / build / push 結果
 - 若 runbook 步驟表與來源檔不同步，附上 `⚠️` 那一行

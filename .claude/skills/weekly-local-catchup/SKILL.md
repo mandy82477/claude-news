@@ -1,6 +1,6 @@
 ---
 name: weekly-local-catchup
-description: /weekly 步驟 0：補跑雲端沒做的 lint 步驟（5b/5c 等）、呈報 lint 待裁示事項、跑開放迴路掃描並回報三個數字。
+description: /weekly 步驟 0：補跑雲端沒做的 lint 步驟（5b/5c 等）、清掉 lint 遺留事項、跑開放迴路掃描並回報三個數字。
 disable-model-invocation: true
 ---
 
@@ -18,9 +18,9 @@ disable-model-invocation: true
 
 2. **5c 逾期待查證清算（清零制）**——照該檔「5c. 逾期待查證清算」執行，**目標是把逾期清到 0，沒有每輪額度**。`check_pending_markers.py --queue` 已內建 Lane A／B 兩條分流（分流只標成本：A 多數可免 web、B 需 WebFetch；**探測判為未開時整個 5c 跳過**，本機一律可做）。**按頁面所有權把待清筆數拆給各類別記者並行**，不要一個人查完——這是清零做得完的前提。務必照 5c 第 5 步做結案回掃，並把輸出的「🎯 本輪目標」「📈 趨勢」與末尾「⚠️ 舊語法盲區」一併抄進回報
 
-3. **lint 待裁示事項呈報**——`Grep "待使用者確認\|待裁示" wiki/log.md` 取最近 3 次 lint 紀錄的未決事項，**直接列在 `/weekly` 的輸出裡呈給使用者**，每項標「⏳ 已擱置 N 週」。理由：那些事項只寫進 `wiki/log.md`，而**使用者不讀該檔**——不呈報等於沒提過
+3. **lint 遺留事項清理**——`Grep "本機承接\|需使用者端設定\|待使用者確認\|待裁示" wiki/log.md` 取最近 3 次 lint 紀錄的未決事項（舊紀錄仍用後兩個標題）。「本機承接」與舊格式的待裁示事項由本 session 主編逐項判定、當輪做完，不做的把理由寫進本次 log；只有「需使用者端設定」項（雲端網路、權限、憑證、付費）列進 `/weekly` 的輸出，每項標「⏳ 已擱置 N 週」——使用者不讀 `wiki/log.md`，只寫在那裡等於沒提過
 
-4. **開放迴路掃描**——跑 `python scripts/open_loops.py`，它彙整**五類**開放迴路的可見性（只報數字與最舊年齡，不合併處理權——每類仍由各自流程消化）：未 commit 的實質改動、逾複查日的 workaround（表在 `docs/workaround-register.md`）、懸置標記逾期＋舊語法盲區（處理端 `/wiki-lint` 5c）、`wiki/reader-notes.md` 的 ⏳（處理端 `/wiki-weekly-review`）、`wiki/feature-radar.md` 的 ⏳（逾期判定端 `/wiki-lint` 5a）。另附一盞「人類質疑時效燈」：`wiki/log.md` 最新 Query 條目距今 >21 天即亮 ⚠（另計不入總；已知質疑模式由 `/wiki-lint` 7b 依 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md` 抽題代打，新型質疑仍靠使用者）。**輸出原樣抄進 `/weekly` 的回報**，同第 3 項的理由：只寫進 log 等於沒提過。日常另有 SessionStart hook 在開啟專案時提醒未 commit 的實質改動。
+4. **開放迴路掃描**——跑 `python scripts/open_loops.py`，它彙整**五類**開放迴路的可見性（只報數字與最舊年齡，不合併處理權——每類仍由各自流程消化）：未 commit 的實質改動、逾複查日的 workaround（表在 `docs/workaround-register.md`）、懸置標記逾期＋舊語法盲區（處理端 `/wiki-lint` 5c）、`wiki/reader-notes.md` 的 ⏳（處理端 `/wiki-weekly-review`）、`wiki/feature-radar.md` 的 ⏳（逾期判定端 `/wiki-lint` 5a）。另附一盞「人類質疑時效燈」：`wiki/log.md` 最新 Query 條目距今 >21 天即亮 ⚠（另計不入總；已知質疑模式由 `/wiki-lint` 7b 依 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md` 抽題代打，新型質疑仍靠使用者）。**輸出原樣抄進 `/weekly` 的回報**：只寫進 log 等於沒提過。日常另有 SessionStart hook 在開啟專案時提醒未 commit 的實質改動。
 
    輸出末尾分成**三個數字**，各答一個問題：
 

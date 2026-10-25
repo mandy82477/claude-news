@@ -49,7 +49,7 @@ wiki 裡沒有、或使用者點名要查證的事實，走這條通道——**�
 
 使用者的問題若**揭露缺陷**（該頁答不出它該答的問題、數字沒有來源、規則有漏洞、機制從沒被執行過），除了上一節的 Query 條目，回報末尾多一行，格式見 `.claude/skills/wiki-query/references/contract.md`「質疑回流」。
 
-判「是」者交 `/wiki-lint` 步驟 7b 評估要不要加進抽問題庫（判準見 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md`「題庫維護」，加題須經使用者確認）。
+判「是」者交 `/wiki-lint` 步驟 7b 評估要不要加進抽問題庫（判準見 `.claude/skills/wiki-lint-reader-acceptance/references/inquiry.md`「題庫維護」，加不加由主編判定）。
 
 ## 5. 收尾
 

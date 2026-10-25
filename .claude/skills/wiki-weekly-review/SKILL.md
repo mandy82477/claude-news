@@ -1,6 +1,6 @@
 ---
 name: wiki-weekly-review
-description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開子區塊/升熱度）；必做項直接執行，可選項經使用者確認後執行。
+description: 每週判斷本週有哪些主題值得加碼追蹤（建頁/加開子區塊/升熱度）；主編逐項判定做或不做，做的直接執行。
 disable-model-invocation: true
 ---
 
@@ -11,7 +11,7 @@ disable-model-invocation: true
 
 每週執行一次，建議在週末或週一執行，可與 `.claude/skills/wiki-lint/SKILL.md` 同一天跑。
 
-**與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨；主編判為**必做**（事實錯誤、時效強）的直接執行，其餘可選項才需要使用者確認。
+**與 `.claude/skills/wiki-lint/SKILL.md` 的分工：** wiki-lint 處理結構性正確性與精簡（矛盾、孤立頁面、過期狀態、過長頁面重構）；本 skill 只做**延伸判斷**——找出值得加碼追蹤的主題，是主觀取捨；每一項由主編判定做或不做，做的直接執行，不做的把理由寫進 log。
 
 派工 prompt 全文、月度聚焦校準 agent 規格與輸出表、彙整清單格式、log 模板住 `.claude/skills/wiki-weekly-review/references/dispatch.md`，本檔不重述——**派工前逐字讀它**。
 
@@ -41,19 +41,19 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 執行時派一個 agent（明寫 `model`），規格與輸出表見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「月度聚焦校準」。命中率數字 append 進 `wiki/metrics.md` 對應欄（只 append 不改舊列）。
 
-### 3. 彙整回報給使用者確認
+### 3. 主編逐項判定
 
-收齊六位記者回報後，彙整成單一清單呈現給使用者。清單每項先標「必做／可選」：**必做**（記者指出的事實錯誤、距官方期限不到兩週的時效項）**直接進步驟 4 執行、不問**；**可選**（主觀加碼、彙整區塊、維護）才等使用者確認（使用者 2026-10-11 裁定，見沿革檔）。格式見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「彙整確認清單」。
+收齊六位記者回報後，彙整成單一清單，每項先標「必做／可選」：**必做**（記者指出的事實錯誤、距官方期限不到兩週的時效項）一律做；**可選**（主觀加碼、彙整區塊、維護）由主編判定做或不做，判準是本站目標句「這能幫需要深度與穩定資訊的工程師更了解 Claude／Anthropic 生態系嗎」，不做的寫理由。不向使用者徵詢，回報只寫做了什麼。格式見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「彙整判定清單」。
 
 **同時處理 `wiki/reader-notes.md` 收件匣**（本 skill 是它的每週消費者）：
-- 🔍 興趣主題被記者採納為加碼建議 → 在清單標明來源，該 note 待使用者確認執行後標 ✅ 已納入
-- 🎨 版面建議、📝 內容修正 → 列進呈現清單提醒使用者（版面由使用者觸發 web 改動、內容修正轉下次 ingest/lint）；使用者確認處置後標 ✅
+- 🔍 興趣主題被記者採納為加碼建議 → 在清單標明來源，主編判定做並執行後該 note 標 ✅ 已納入
+- 🎨 版面建議 → 主編判定做不做，做的照 `.claude/rules/web-reader-design.md` 與 `.claude/rules/dev-done.md` 當輪改；📝 內容修正 → 轉下次 ingest/lint；處置後標 ✅
 - 未被採納的 🔍 興趣主題 → 保留 ⏳（不強制清除，訊號可能之後成形）
 - 📌 📓 雜記 → 讀作「近期方向背景」輔助本週判斷，不需動作；**清除距今 > 30 天的雜記**（日記性質，過期即除）
 
-### 4. 依確認執行
+### 4. 執行判定
 
-使用者確認後，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/page-templates.md` 頁面格式模板。此階段派工同樣沿用 明寫 `model`。
+判定要做的項目，若牽涉多頁修改可再次平行派工對應記者執行；若牽涉新頁面建立，讀 `.claude/reporter-rules/page-templates.md` 頁面格式模板。此階段派工同樣沿用 明寫 `model`。
 
 ### 5. 記錄
 
@@ -63,7 +63,7 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 > **由 `/weekly` 帶起時跳過本步驟**（`.claude/commands/weekly.md` 會在兩個子流程都跑完後統一收尾）。只有單獨執行本 skill 時才執行以下內容。
 
-**僅當步驟 4 實際執行了頁面修改時才需要**（使用者「都不要」且無 log 以外變更 → 仍須 commit log.md 這一筆，照走本步）。理由同 `.claude/skills/wiki-lint/SKILL.md` 步驟 10：本 skill 改 `wiki/*.md` 不會自動上站，web build 僅發生於本步與 `/news-pipeline`。
+**僅當步驟 4 實際執行了頁面修改時才需要**（主編判定全數不做且無 log 以外變更 → 仍須 commit log.md 這一筆，照走本步）。理由同 `.claude/skills/wiki-lint/SKILL.md` 步驟 10：本 skill 改 `wiki/*.md` 不會自動上站，web build 僅發生於本步與 `/news-pipeline`。
 
 依序執行（`REPO_ROOT` = `git rev-parse --show-toplevel` 所得，`PYTHON` = PATH 上的 `python`（雲端為 `python3`））：
 
@@ -78,5 +78,5 @@ prompt 全文見 `.claude/skills/wiki-weekly-review/references/dispatch.md`「�
 
 - 由主 session 執行並派工六記者（明寫 `model`）；記者只回報，不直接修改頁面。
 - 繁體中文為主；`wiki/log.md` 只能 append，不可修改既有條目；`news/` 唯讀。
-- 本 skill 產出的可選建議屬主觀判斷，**未經使用者確認不得執行修改**；只有步驟 3 標為必做的項目可直接執行。
+- 步驟 3 每一項都要有主編判定（做／不做＋理由）；必做項不得判不做。
 - 單獨執行時步驟 6 的 `run_tests.py` 綠了才 build web；由 `/weekly` 帶起時步驟 6 跳過，收尾由總指揮負責。

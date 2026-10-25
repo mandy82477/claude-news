@@ -216,7 +216,7 @@ flowchart TD
 flowchart TD
     L1["1. 載入 wiki 全貌"] --> L2
     L2["2. 六記者並行（model: sonnet）\n3a 矛盾 / 3b 孤立 / 3c 過期(用最後新聞更新判)\n3d resolved 收尾 / 3e 呈現品質 / 3f 入口層健檢\n3g 待查證回訪"] --> L3
-    L3["3. 語意分岔／死案候選（需使用者確認）"] --> L4
+    L3["3. 語意分岔／死案候選（主編判定）"] --> L4
     L4["4. 建議新實體頁"] --> L5
     L5["5. 更新 overview.md"] --> LB
 
@@ -265,7 +265,7 @@ lint 5b 榜單週更＋5c 逾期待查證清算
     W0 --> W1
 
     W1["1. /weekly-report —— 對外交付\n頭條敘事＋技術討論深挖＋下週看什麼＋檔尾數字\n→ weekly/YYYY-Wnn.md（寫入即凍結）"]
-    W1 --> W2["2. /wiki-weekly-review —— 對內策展\n判斷值得加碼追蹤的主題（建頁/加區塊/升熱度）\n⚠️ 未經使用者確認不得改任何頁面"]
+    W1 --> W2["2. /wiki-weekly-review —— 對內策展\n判斷值得加碼追蹤的主題（建頁/加區塊/升熱度）\n主編逐項判定並執行"]
     W2 --> W3["3. 收尾：commit → 測試 → build web → 單一 push"]
 
     W1 -.-> LEDGER["scripts/check_weekly_ledger.py\n帳本機械檢查＋反確認偏誤護欄"]
@@ -276,7 +276,7 @@ lint 5b 榜單週更＋5c 逾期待查證清算
 
 | 理由 | 說明 |
 |---|---|
-| **確認閘相反** | 策展未經使用者確認不得改頁；週報是自主產出。合併只會二選一，等於廢掉其中一條規則 |
+| **確認閘相反**（2026-10-25 退場） | 原為「策展需使用者確認、週報自主」；兩段改為都由主編判定後，此理由不再成立，順序靠下列兩條維持 |
 | **凍結語義衝突** | 週報寫入後凍結、不因後續 ingest 回頭改；策展則主動改 wiki。策展先跑會讓週報引用到同一次執行剛改出來的頁面狀態 |
 | **帳本獨立性** | 週報帳本有機械檢查與反確認偏誤護欄；策展若先知道本週開了哪些預告，會傾向加碼「能讓預告成真」的主題 |
 
@@ -359,7 +359,7 @@ flowchart LR
 | 想做的事 | 動哪個檔 |
 |---------|---------|
 | 新增新聞來源 | `src/news_aggregator/sources/` 繼承 `BaseSource`，在 `main.py` sources 列表註冊 |
-| 增減權威部落客 | `src/news_aggregator/sources/blogroll.json`（status: probation/active/retired，汰換依來源記分卡建議、使用者確認） |
+| 增減權威部落客 | `src/news_aggregator/sources/blogroll.json`（status: probation/active/retired，汰換由主編依來源記分卡判定） |
 | 調來源品質標籤 / 看來源效益 | `data/source_registry.json`（標籤）＋ `python scripts/source_scorecard.py`（記分卡，隨 `/wiki-lint` 6e 週跑） |
 | 改過濾規則 | `src/news_aggregator/filter.py`（純規則，無 LLM） |
 | 改日報格式 | `.claude/skills/news-digest/references/format.md`／`.claude/skills/news-digest/references/selection.md` |
@@ -370,7 +370,7 @@ flowchart LR
 | 改 devpractice 記者（daily 判準／weekly 三件事） | `.claude/reporter-rules/devpractice/daily.md`／`weekly.md`；基準線 `python scripts/devpractice_diff.py show｜mark` |
 | 新增週更／機器快照頁 | 標頭加「更新頻率」欄**且**登記 `scripts/check_wiki_freshness.py` 的 `DERIVED_PAGES`（未登記會紅——2026-09-02 擋掉雲端 web build 的教訓） |
 | rebase 撞到 append-only 檔衝突 | `python scripts/resolve_append_only.py`（白名單內 union 自解；白名單外 abort 交人工） |
-| 改質疑題庫 | `scripts/inquiry_bank.py`（加題須經使用者確認；`--seed` 僅測試用） |
+| 改質疑題庫 | `scripts/inquiry_bank.py`（加題由主編判定；`--seed` 僅測試用） |
 | 改週報格式／帳本檢查 | `.claude/skills/weekly-report/SKILL.md`＋`scripts/check_weekly_ledger.py` |
 | 改懸置標記語法／偵測 | `.claude/reporter-rules/page-templates.md`「懸置標記語法」＋`scripts/scan_pending_verifications.py`／`check_pending_markers.py` |
 | 查/結轉知帳本 | `python scripts/pending_handoffs.py list｜open｜close｜void`（`data/pending-handoffs.jsonl`） |

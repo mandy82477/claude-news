@@ -18,11 +18,11 @@
 | 5m | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「code-quality-decline issue 狀態複查因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 | 5n | `python scripts/cloud_egress_check.py --group github` | `EGRESS: github OK` | 「official-community-gap「官方補了沒」表對官方一手因雲端 egress 未開（github）跳過，留待本機 `/weekly`」 |
 
-待辦一律進 log 的待使用者確認區；該步回報那一行寫「雲端 egress 未開，跳過」。
+上表引號內的那句記進 lint 紀錄的「本機承接」行；該步回報那一行寫「雲端 egress 未開，跳過」。雲端網路白名單本身要開才解得掉的，另記「需使用者端設定」（在 claude.ai 環境設定加哪些網域）。
 
-**探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。雲端 session 讀得到哪些 repo 由 routine 定義的 `sources` 決定——`weekly-wiki-lint-cloud` 自 2026-10-18 起已把 `anthropics/claude-code`（sparse checkout `CHANGELOG.md`）列為第二個 source，GitHub MCP 與 `gh api`（REST）皆可讀；`gh auth status` 報 GH_TOKEN 失效屬誤報，不以它判定。若 GitHub MCP 仍回 `repository not configured for this session`，代表 routine 的 `sources` 被改掉了，先對照 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json` 修 routine → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，待辦寫「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
+**探測通了、repo 卻沒授權（5m／5n）**：`EGRESS: github OK` 只證明網路通，不證明本 session 讀得到 `anthropics/claude-code`。雲端 session 讀得到哪些 repo 由 routine 定義的 `sources` 決定——`weekly-wiki-lint-cloud` 自 2026-10-18 起已把 `anthropics/claude-code`（sparse checkout `CHANGELOG.md`）列為第二個 source，GitHub MCP 與 `gh api`（REST）皆可讀；`gh auth status` 報 GH_TOKEN 失效屬誤報，不以它判定。若 GitHub MCP 仍回 `repository not configured for this session`，代表 routine 的 `sources` 被改掉了，先對照 `docs/cloud-runbooks/triggers/weekly-wiki-lint-cloud.json` 修 routine → **不擴權、不換別條路繞**，該步回報寫「repo 授權不足，跳過」，「本機承接」記「<步驟名>因 repo 授權不足（anthropics/claude-code）跳過，留待本機 `/weekly` 以 `gh` 補做」。本機 `/weekly` 步驟 0 照 `.claude/skills/weekly-local-catchup/SKILL.md` 承接。
 
-**5h 不受此限、不需探測**：催化劑那一半純查本庫日報；股價那一半用 **WebSearch**，由 Anthropic 端執行、不經沙盒 egress（`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空，恆印 `EGRESS: market OK`）。唯一例外是該環境根本沒有 WebSearch 工具可用——此時才寫待辦「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」並列入待使用者確認區；日後若本步改用 WebFetch 直抓行情站，須同步把那些網域填進 market 組並改回探測式。
+**5h 不受此限、不需探測**：催化劑那一半純查本庫日報；股價那一半用 **WebSearch**，由 Anthropic 端執行、不經沙盒 egress（`python scripts/cloud_egress_check.py --group market` 的 market 組刻意為空，恆印 `EGRESS: market OK`）。唯一例外是該環境根本沒有 WebSearch 工具可用——此時才在「本機承接」記「投資訊號股價結算因該環境無 WebSearch 跳過，留待本機 `/weekly` 承接」；日後若本步改用 WebFetch 直抓行情站，須同步把那些網域填進 market 組並改回探測式。
 
 ---
 
@@ -266,7 +266,7 @@ python scripts/gen_wiki_frontmatter.py --list-signal "⚠️ 高引用但停滯"
 
 **回報格式：**
 ```
-社群模式概覽退場複查（5k）：列數 N／21（✅a／⚡b／⏳c）／最後動態已重算 N 列／退場 M 列／補位 K 列／合併 J 組／主線 tag 補填 20 則（累計 N/M，M＝該輪現算的節點總數）／滿載讓位：無 ／ ⚠️ 需裁決
+社群模式概覽退場複查（5k）：列數 N／21（✅a／⚡b／⏳c）／最後動態已重算 N 列／退場 M 列／補位 K 列／合併 J 組／主線 tag 補填 20 則（累計 N/M，M＝該輪現算的節點總數）／滿載讓位：無 ／ 已讓位（移出哪列＋理由）
 社群討論兩表（5k）：爭論 N/10（還在吵 a／已共識 b／僵住 c）／討論 M/50（移出 d／改標 e）／最後動態已重算 K 列
 ```
 

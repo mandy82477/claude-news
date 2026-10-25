@@ -106,7 +106,7 @@ def cmd_density(args, out) -> int:
         out.write(f"{r['lines']:>5} {r['lesson_lines']:>4} {r['lesson_pct']:>5}  {flag} {r['file']}\n")
     out.write(f"總計 {sum(r['lines'] for r in rows)} 行、{sum(r['lesson_lines'] for r in rows)} 教訓行\n")
     if cands:
-        out.write(f"\n⚠️ 蒸餾候選 {len(cands)} 檔（每次 lint 至多提案 2 檔，經使用者確認才動）：\n")
+        out.write(f"\n⚠️ 蒸餾候選 {len(cands)} 檔（每次 lint 至多處理 2 檔，主編判定蒸餾哪些段）：\n")
         for r in cands:
             out.write(f"  - {r['file']}：{r['lines']} 行／教訓 {r['lesson_pct']}%\n")
         return 2

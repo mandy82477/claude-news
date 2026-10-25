@@ -19,7 +19,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
 - **A 必須先於 B**：B 的 5f（devpractice 週彙整）與 5k（社群三表）都要等六記者寫完才不互踩。
 - **E 最後**：步驟 8 的 log 要收齊 A–D 全部回報行。
-- 單段失敗不阻斷其餘段；該段回報行寫明失敗原因，並列入步驟 8 的待使用者確認區。
+- 單段失敗不阻斷其餘段；該段回報行寫明失敗原因；本機當輪重跑，雲端列入步驟 8 的「本機承接」行。
 
 ## 月度判斷法（A 段月度蒸餾、C 段 6g 指標二／6j 共用）
 
@@ -48,11 +48,11 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
    - **本機**：瀏覽器實開該頁（web reader 本機路徑見 `.claude/rules/web-reader-design.md`），眼睛掃一遍：表格有沒有爆版、懸置標記 `⟨Q-nn⟩` 有沒有正常顯示、wikilink 有沒有變成裸字串
    - **雲端**（無瀏覽器）：`Read` 該頁的 build 產物（`web_reader/data/wiki/<slug>.json`），確認本輪改動的段落確實出現在產物中、且沒有被解析器吞掉
-   - 發現渲染層問題 → 修 `web_reader/` 或改 wiki 寫法後重跑 build；修不掉則記入待確認區
+   - 發現渲染層問題 → 修 `web_reader/` 或改 wiki 寫法後重跑 build；修不掉則登 `docs/workaround-register.md`（owner 主編、複查日）並寫進步驟 8 的「本機承接」行
 
  > **為什麼不能只信 build 綠燈**：`build_web.py` 只證明「資料層對」，不證明「讀者看到的東西對」；全域 `REVIEW-PRINCIPLES.md` 第 9 條明言 DOM／資料斷言不可替代眼睛驗收。（沿革檔 2026-08-09）
 
-4. **心跳紀錄（無論成功／no-op／中止都必須寫）**：append 一行結果到 `src/logs/task_scheduler.log`（格式沿用該檔既有慣例，如 `[週六 YYYY/MM/DD hh:mm:ss.00] Weekly lint OK - 修 N 頁，M 項待確認，測試/build/push 結果`；no-op 寫 `Weekly lint OK (no-op) - 無頁面需修正`；中途失敗寫 `Weekly lint FAILED - <卡在哪一步>`）→ `git -C REPO_ROOT add src/logs/task_scheduler.log` → `git -C REPO_ROOT commit -m "chore: weekly lint heartbeat YYYY-MM-DD"`。**這一步是本步驟序列中唯一保證產生 commit 的步驟**——目的是讓「跑了但無事可改」與「靜默死亡」在 GitHub 上可分辨。對應每日 pipeline 的 `.claude/skills/web-publish/SKILL.md`「Step 6」（無論前面成敗都必須寫），本機與雲端行為一致。
+4. **心跳紀錄（無論成功／no-op／中止都必須寫）**：append 一行結果到 `src/logs/task_scheduler.log`（格式沿用該檔既有慣例，如 `[週六 YYYY/MM/DD hh:mm:ss.00] Weekly lint OK - 修 N 頁，M 項本機承接，測試/build/push 結果`；no-op 寫 `Weekly lint OK (no-op) - 無頁面需修正`；中途失敗寫 `Weekly lint FAILED - <卡在哪一步>`）→ `git -C REPO_ROOT add src/logs/task_scheduler.log` → `git -C REPO_ROOT commit -m "chore: weekly lint heartbeat YYYY-MM-DD"`。**這一步是本步驟序列中唯一保證產生 commit 的步驟**——目的是讓「跑了但無事可改」與「靜默死亡」在 GitHub 上可分辨。對應每日 pipeline 的 `.claude/skills/web-publish/SKILL.md`「Step 6」（無論前面成敗都必須寫），本機與雲端行為一致。
 4b. **命中帳（每輪必記）**：`python scripts/lint_health.py hits record --date YYYY-MM-DD --rules-rev <規則版本> --step 3a=N --step 3b=N … --step 7b=N`——每個執行過的步驟各一筆命中數（0 也要記，零命中才是訊號），`data/lint_step_hits.jsonl` 併入本步 push
 
 5. **單一 push**：`git -C REPO_ROOT push`（本次所有 commit 一次推送，一次 push = 一個 Pages 部署，避免並發競爭）。**push 失敗的重試程序照 `.claude/skills/web-publish/SKILL.md` Step 5**，本檔不另寫一套
@@ -63,8 +63,8 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
 ## 邊界
 
-- 由主編（本機主 session 或雲端頂層 session）執行；雲端的環境差異與待辦寫法見 `docs/cloud-runbooks/weekly-lint.md`，行為本體一律以四個子 skill 為準。
-- 四段的「需使用者確認」項目一律不自行動手，收斂進步驟 8 的待使用者確認區；本機執行時使用者在場，可當輪呈報、確認後再動（6j 的分流見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
+- 由主編（本機主 session 或雲端頂層 session）執行；雲端的環境差異與本機承接寫法見 `docs/cloud-runbooks/weekly-lint.md`，行為本體一律以四個子 skill 為準。
+- 四段的取捨項目一律由主編判定並執行，判定與理由寫進步驟 8 的「主編判定」行，回報只寫做了什麼；雲端不動手的項目（見 `docs/cloud-runbooks/weekly-lint.md`）記「本機承接」，下次本機 session 由主編照判定執行（6j 的分流見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 驗證閘：步驟 8 的 log 每一欄都有值、`gate_web_build.py` 綠（或已走完至多 2 輪修復迴圈並在心跳寫明）、單一 push 成功，才算完。
 

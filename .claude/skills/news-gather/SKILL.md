@@ -20,7 +20,7 @@ disable-model-invocation: true
 |------|------|
 | 環境值（路徑、`python3` vs `python.exe`、日期取得方式） | 任何閘門、檢查、重試、失敗處理邏輯 |
 | 哪些步驟不適用該環境（雲端跳過 Step 1a，因抓料由 GitHub Actions 完成） | 步驟本身的做法與判準 |
-| 無人值守政策（需使用者確認的動作改寫成待辦） | 需要確認的是哪些動作 |
+| 無人值守政策（雲端不准做的動作改記「本機承接」，留給下次本機 session） | 哪些動作屬於安全邊界 |
 
 > 判斷標準：這條規則換到另一個環境還成立嗎？成立 → 寫在 skill 檔。只在特定環境成立 → 才進 runbook。（反例見沿革檔 2026-07-25 A）
 
@@ -32,7 +32,7 @@ disable-model-invocation: true
 
 計算 TARGET_DATE 的前一天 YESTERDAY，檢查 `news/YESTERDAY.md` 是否存在：
 - 存在 → 一行帶過，繼續 Step 1a
-- 不存在 → 記錄缺失，於完成摘要表加一列「⚠️ 昨日（YESTERDAY）日報缺失」，並提示使用者可執行 `/news-pipeline` 帶日期參數手動補跑；Step 6 log 寫入 `WARN: yesterday digest missing (YESTERDAY)`。**不自動補跑**（避免排程場景下連鎖跑兩天造成時間不可控）
+- 不存在 → 記錄缺失，於完成摘要表加一列「⚠️ 昨日（YESTERDAY）日報缺失」，log 本次紀錄的「本機承接」記一行「補跑 YESTERDAY」，下次本機 session 由主編以 `/news-pipeline YESTERDAY` 補跑；Step 6 log 寫入 `WARN: yesterday digest missing (YESTERDAY)`。**不自動補跑**（避免排程場景下連鎖跑兩天造成時間不可控）
 
 ---
 
@@ -42,7 +42,7 @@ disable-model-invocation: true
 
 - **不存在** → 正常繼續
 - **已存在，且 TARGET_DATE 是今日（排程／無參數模式）** → **中止**，理由 `digest already exists`，寫入 Step 6 log 後結束。重跑會覆寫日報並讓 wiki 記者對同一批新聞重複 prepend——日報覆寫還能重生，**wiki 重複條目要人工逐頁挑，代價高得多**
-- **已存在，但 TARGET_DATE 由參數明確指定（backfill 模式）** → 使用者已明示覆寫意圖，**不中止**，但在完成摘要標一行 `⚠️ 覆寫既有日報 TARGET_DATE`，並提醒 wiki ingest 可能產生重複條目、需人工核對
+- **已存在，但 TARGET_DATE 由參數明確指定（backfill 模式）** → 使用者已明示覆寫意圖，**不中止**，但在完成摘要標一行 `⚠️ 覆寫既有日報 TARGET_DATE`，並在本輪 wiki ingest 後由主編逐頁核對重複條目、當輪清掉
 
 會觸發此閘的情境：手動觸發撞上排程、當日已補跑過、或前次執行日報已產出但後段失敗。
 
@@ -86,7 +86,7 @@ PYTHON REPO_ROOT\scripts\archive_gathered.py
 
 **3. 補跑不套用跨日去重快取**（`main.py` 明文：backfill 不碰 cache，否則會拿今日的快取去誤刪過去的項目）。因此補出來的日報**可能與前後日的日報有重複條目**，屬預期行為，wiki ingest 端由 `.claude/skills/wiki-ingest/SKILL.md` 的「確認最近是否已處理過同一份日報」把關。
 
-**4. 補跑日報已存在時**：`Step 0b：冪等閘` 會因為你明確給了日期參數而放行覆寫，但 wiki 那邊會產生重複條目，需人工核對——見該步驟說明。
+**4. 補跑日報已存在時**：`Step 0b：冪等閘` 會因為你明確給了日期參數而放行覆寫，但 wiki 那邊會產生重複條目，由主編在本輪 ingest 後逐頁清掉——見該步驟說明。
 
 ---
 

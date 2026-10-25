@@ -9,7 +9,7 @@ argument-hint: [YYYY-Wnn]
 
 | 順序 | 規範檔 | 性質 | 產出 |
 |---|---|---|---|
-| 0 | `.claude/skills/weekly-local-catchup/SKILL.md` | 本機專屬補跑 | 5b 榜單週更、5c 清算、lint 待裁示呈報、開放迴路掃描 |
+| 0 | `.claude/skills/weekly-local-catchup/SKILL.md` | 本機專屬補跑 | 5b 榜單週更、5c 清算、lint 遺留事項清理、開放迴路掃描 |
 | 1 | `.claude/skills/weekly-report/SKILL.md` | 對外交付 | `weekly/YYYY-Wnn.md`（凍結存檔） |
 | 2 | `.claude/skills/wiki-weekly-review/SKILL.md` | 對內策展 | `wiki/` 頁面加碼 + `wiki/log.md` |
 | 3 | 本檔步驟 3 | 收尾 | commit + test + build + **單一 push** |
@@ -27,7 +27,7 @@ argument-hint: [YYYY-Wnn]
 
 ## 🔒 順序與邊界（不可調換、不可合併）
 
-**執行順序固定為「週報先、策展後」**，且兩者是兩段獨立工作，不可揉成一段：確認閘相反、凍結語義衝突、帳本獨立性三者皆會被合併破壞（完整論證見沿革檔 `docs/rules-changelog/weekly.md` 2026-08-09）。
+**執行順序固定為「週報先、策展後」**，且兩者是兩段獨立工作，不可揉成一段：凍結語義衝突、帳本獨立性兩者皆會被合併破壞（完整論證見沿革檔 `docs/rules-changelog/weekly.md` 2026-08-09）。
 
 > 判斷式：**這一步會不會讓後面那步「已經知道答案」？** 會 → 順序錯了。
 
@@ -37,7 +37,7 @@ argument-hint: [YYYY-Wnn]
 
 ### 0. 本機專屬步驟補跑（先做，不可略過）
 
-讀 `.claude/skills/weekly-local-catchup/SKILL.md` 並依其四項執行（5b/5c 等探測式補跑、lint 待裁示呈報、開放迴路掃描與三個數字）。第 3、4 項的輸出原樣抄進本指令的回報；四項產出一律併入步驟 3 的單一 push，不自行 commit。
+讀 `.claude/skills/weekly-local-catchup/SKILL.md` 並依其四項執行（5b/5c 等探測式補跑、lint 遺留事項清理、開放迴路掃描與三個數字）。第 3、4 項的輸出原樣抄進本指令的回報；四項產出一律併入步驟 3 的單一 push，不自行 commit。
 
 ### 1. 週報產出（對外交付）
 
@@ -47,11 +47,11 @@ argument-hint: [YYYY-Wnn]
 
 ### 2. wiki 週度延伸回顧（對內策展）
 
-讀 `.claude/skills/wiki-weekly-review/SKILL.md` 並依其步驟 1–5 執行（含六記者並行判斷、月度聚焦校準判斷、`wiki/reader-notes.md` 收件匣消費、彙整清單交使用者確認、依確認執行、log 記錄）。
+讀 `.claude/skills/wiki-weekly-review/SKILL.md` 並依其步驟 1–5 執行（含六記者並行判斷、月度聚焦校準判斷、`wiki/reader-notes.md` 收件匣消費、主編逐項判定、執行、log 記錄）。
 
-- **使用者確認閘只管可選項**：步驟 3 標「必做」的項目直接執行不問；標「可選」的仍須經使用者確認才可執行修改，本指令不代為決定
+- **主編自決**：步驟 3 的每一項由主編判定做或不做，做的直接執行，不做的把理由寫進 `wiki/log.md`；回報只寫做了什麼，不向使用者徵詢
 - **跳過該檔的步驟 6（收尾閉迴路）**——同上，留到步驟 3
-- 使用者若回「都不要」，仍須照該檔規定 append log.md 那一筆
+- 主編判定全數不做時，仍須照該檔規定 append log.md 那一筆
 
 ### 3. 統一收尾閉迴路
 
@@ -74,7 +74,7 @@ argument-hint: [YYYY-Wnn]
 ## Weekly YYYY-Wnn
 
 - 週報：weekly/YYYY-Wnn.md（深挖題目：…）
-- 延伸回顧：執行 N 項 / 使用者跳過 M 項
+- 延伸回顧：執行 N 項 / 判定不做 M 項
 - 聚焦校準：（月度才有，或「非本月首次，跳過」）
 - 開放迴路：需收尾 N／已跳票 M／存量遷移 K（人類質疑時效燈：✅／⚠️ N 天）
 - 收尾：涵蓋窗補掃（新日報 N 份／無）｜gate：（`gate_web_build.py` 最後一行摘要）｜build ✅／跳過｜push ✅

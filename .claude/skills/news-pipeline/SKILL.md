@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 ## 怎麼用
 
-`/news-pipeline` 跑今天，`/news-pipeline 2026-09-01` 補跑指定日。**要準備什麼：** 無，設定值由派工 prompt 自帶。**會被問什麼：** 完成摘要末尾的「📋 待使用者裁示」區會把當日待確認事項接出來等你回覆。**拿到什麼：** 當日日報、更新過的 wiki、讀者版日報、重建並推送的網站，加一份完成摘要。**成本：** 兩個背景 agent（Phase A、Phase C）＋本 session 前景跑六記者 ingest。
+`/news-pipeline` 跑今天，`/news-pipeline 2026-09-01` 補跑指定日。**要準備什麼：** 無，設定值由派工 prompt 自帶。**會被問什麼：** 不問；主編當輪判定並處理，完成摘要末尾的「📋 需使用者端設定」區只列只有你能做的設定（雲端網路、權限、憑證、付費），無則寫「無」。**拿到什麼：** 當日日報、更新過的 wiki、讀者版日報、重建並推送的網站，加一份完成摘要。**成本：** 兩個背景 agent（Phase A、Phase C）＋本 session 前景跑六記者 ingest。
 
 TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** 雲端 routine 用的就是 UTC，本機時區的「今天」會與雲端對不上（`docs/cloud-runbooks/daily.md`）。
 
@@ -31,7 +31,7 @@ TARGET_DATE 取 UTC 日期（`date -u +%F`）或 `$ARGUMENTS`。**判準：** �
 
 - **做什麼：** commit wiki、建置 web reader、單一 push、寫 `task_scheduler.log`
 - **誰做：** **本 session 直接執行**（2026-09-24 起，不再派背景 agent）：Step 3–6 是四段指令加一行 log，派 agent 的成本全在讀測試輸出（實測 162k token），`run_tests.py` 已改安靜模式後本 session 跑約 10k。派工 prompt 留在 `.claude/skills/news-pipeline/references/dispatch.md`「Phase C 步驟」作備用（本 session 額度耗盡或雲端環境才用）
-- **失敗怎麼辦：** Phase B 無論成敗都要進入本階段，Step 6 的 log 才寫得成。Step 3–6 做完後本 session 彙整三段結果輸出完成摘要（格式見 `.claude/skills/web-publish/SKILL.md`「完成摘要」），**必含「📋 待使用者裁示」區塊**，無未決項也寫「無」
+- **失敗怎麼辦：** Phase B 無論成敗都要進入本階段，Step 6 的 log 才寫得成。Step 3–6 做完後本 session 彙整三段結果輸出完成摘要（格式見 `.claude/skills/web-publish/SKILL.md`「完成摘要」），**必含「📋 需使用者端設定」區塊**，無項目也寫「無」
 
 ## 規範對照表
 

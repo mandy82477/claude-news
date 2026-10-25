@@ -27,13 +27,13 @@ disable-model-invocation: true
   B 說：「…」
   建議：保留 [A/B]，理由：…
 ```
-→ **向使用者確認後再修改**，不自行決定保留哪條規則。
+→ 主編判定保留哪條、改掉另一條（理由寫進「建議」行與 lint 紀錄），當輪修；雲端記「本機承接」。
 
 > 修完矛盾後**必須回掃**：依 `.claude/reporter-rules/shared-when.md`「事實更正必回掃」，拿該事實的關鍵字 grep 全庫，把仍在講舊說法的引用方一併上修。3a 判矛盾時「以較嚴謹者為準」會把結論**下修**到低確信度頁面，而事後那個結論被查實**上修**時，被下修過的引用方不會自己回來——同步是雙向的，但機制原本只有單向。
 
 ## 6b. 規則引用驗證
 
-**由 `scripts/check_rules.py` 檢查 3（錨點）看守**：規則描述中引用的頁面錨點（清單住 `.claude/review-registry.json` 的 `anchors`，勿在此另抄一份）必須仍存在於對應檔案。本步只做失敗判讀：紅燈＝該錨點消失或改名 → 向使用者說明是規則過時還是頁面被誤改，**不自行刪除規則**；新增錨點登記進 registry，不改引擎。
+**由 `scripts/check_rules.py` 檢查 3（錨點）看守**：規則描述中引用的頁面錨點（清單住 `.claude/review-registry.json` 的 `anchors`，勿在此另抄一份）必須仍存在於對應檔案。本步只做失敗判讀：紅燈＝該錨點消失或改名 → 主編判定是規則過時（改規則與 registry 錨點）還是頁面被誤改（把錨點改回），當輪修、理由記 lint 紀錄（雲端改規則檔的記「本機承接」）；新增錨點登記進 registry，不改引擎。
 
 輸出：`📎 引用驗證：✅ check_rules 檢查 3 全部有效／⚠️ [錨點名] 失效 → 規則可能過時`
 
@@ -54,7 +54,7 @@ disable-model-invocation: true
   ✅ 呈現品質審查 — 3/3
   ⚠️ 近期工具更新 — 1/3
 ```
-→ 遵守率 < 2/3 的規則：說明原因，**向使用者確認是否調整規則**。
+→ 遵守率 < 2/3 的規則：說明原因，主編判定改寫條文、加機械檢查或維持，當輪執行並記 lint 紀錄；雲端記「本機承接」。
 
 ## 6d. 規則年齡審查
 
@@ -67,7 +67,7 @@ python scripts/lint_health.py age --days 60
 - **逾 60 天**：逐一確認該節描述的行為是否仍與現狀吻合，並問「少了這節，執行者會不會做錯」——不會就提議刪
 - **60 天內**：記「在閾值內」
 
-輸出直接抄腳本的最後一行進 log。逾閾值的節當場處置：行為仍吻合 → 不動；不吻合 → 直接修訂成現狀；少了也不會做錯 → 直接刪。節數是觀測值，只進 log，不列待使用者裁示。
+輸出直接抄腳本的最後一行進 log。逾閾值的節當場處置：行為仍吻合 → 不動；不吻合 → 直接修訂成現狀；少了也不會做錯 → 直接刪。節數是觀測值，只進 log。
 
 ## 6e. 來源健康檢查
 
@@ -77,10 +77,10 @@ python scripts/lint_health.py age --days 60
 - **清冊／官方型來源**（Official Skills、Official Docs、Claude API Release Notes、Anthropic Blog、Anthropic Status、Topic Watch、Build Flags）`ok=true` 且 count=0 **屬正常**（上游無異動）——「查過確認沒有」與「沒查」的分界就是 `ok` 旗標，**不對這組發連續 0 告警**；它們的異常訊號是 `ok=false`，或 GitHub Actions 的 `daily-gather` 連續失敗（`data/source_funnel.jsonl` 當日缺列）
 - 輸出各來源 7 天貢獻統計表，供判斷來源價值
 
-發現 ⚠️ 時回報使用者，不自行修改管線程式。
+lint 中不改管線程式：⚠️ 寫進 lint 紀錄並登 `docs/workaround-register.md`（owner 主編、複查日），由下次本機開發 session 依 `.claude/rules/dev-done.md` 修。
 
 **發現窗產消對帳：** 讀 `data/discovery_queue_history.csv`（各發現窗每日抓取時寫入，schema `date,window,queued,emitted,note`；window 現值 `rising`／`crossing`／`inventory`／`hn_bridge`，note 值域 `ok|cold_start|disabled|retired|rejected|error`；`retired` 與 `rejected` 都是**刻意撤下**（前者為窗自身退役，後者為整個類別被移進設定檔的 `_rejected`），兩者**皆不得判為窗死**；反過來說，**一個 window 從 CSV 上整個消失才是異常**——2026-09-12 lint 就是這樣把 `interest:source-resilience` 誤看成窗死了 7 天）。**逐 window 判讀**：
-- 某 window 佇列量（queued−emitted 積壓）連兩週上升、或排空預估 > 30 天 → ⚠️ 主編判定並寫進 lint 紀錄：提高該窗配額／一次清倉／不動（排空預估 < 30 天且漲幅在單週一列以內）三擇一，附理由，不列待使用者確認，不得只抄數字
+- 某 window 佇列量（queued−emitted 積壓）連兩週上升、或排空預估 > 30 天 → ⚠️ 主編判定並寫進 lint 紀錄：提高該窗配額／一次清倉／不動（排空預估 < 30 天且漲幅在單週一列以內）三擇一，附理由，不得只抄數字
 - **某 window 連 3 天完全缺列 → ⚠️「該窗未執行或靜默死亡，查 daily gather」**——「今天沒有候選」（queued=0 的列）與「窗沒跑」（整列缺席）必須分得開
 - 檔案缺失或全檔最新日期距今 > 3 天 → ⚠️「對帳未寫入，查 daily gather 是否失敗」——**掃描失敗不得當成 0**
 - 另讀 `data/repo_star_history.csv`（E 窗記錄端）**行數與最新日期**：連兩週不增長 → ⚠️「星史檔未被保存（雲端 commit 清單？）」——E 窗壞掉時會**永遠冷啟動且吐 0，看起來像正常**，這行檢查是它唯一的看守
@@ -88,9 +88,9 @@ python scripts/lint_health.py age --days 60
 
 **來源記分卡：** 執行 `python scripts/source_scorecard.py`，將輸出表格附入本節回報。判讀規則（指標定義見 `docs/source-scoring-optimization.md`）：
 - 標 ⚠️ 樣本不足的來源只讀趨勢，**不得**據以建議汰換
-- 樣本充足（✅）且 Wilson 下界與 Presence 雙低的來源 → 列入「觀察名單」回報使用者，不自行動 pipeline 或 registry
-- 出現「⚠️ 未註冊 slug」→ 檢查 `data/source_registry.json` 與記者回報的 slug 用字，回報使用者
-- Google News 低信譽桶（pc1 < 0.4）> 0 筆 → 列出條目供人工覆核
+- 樣本充足（✅）且 Wilson 下界與 Presence 雙低的來源 → 列入「觀察名單」，主編判定留／降 probation／汰換並寫理由進 lint 紀錄；要改來源設定檔的本機當輪改並跑測試，雲端記「本機承接」；要改管線程式的同 6e 上一條
+- 出現「⚠️ 未註冊 slug」→ 檢查 `data/source_registry.json` 與記者回報的 slug 用字，主編判定錯在哪側並當輪修（雲端記「本機承接」）
+- Google News 低信譽桶（pc1 < 0.4）> 0 筆 → 主編逐筆覆核（留或剔除＋一句理由），結果寫進本節回報
 
 ## 6f. 跨檔案語意矛盾掃描
 
@@ -107,7 +107,7 @@ python scripts/lint_health.py age --days 60
 ```
 若無矛盾則寫「✅ 全部配對語意一致」。
 
-判定哪側對看機械證據（hook 原始碼、腳本行為、本輪實跑紀錄），直接把另一側改成一致並在沿革檔記一行；兩側都拿不出機械證據、純屬取捨時才列待使用者確認。
+判定哪側對看機械證據（hook 原始碼、腳本行為、本輪實跑紀錄），直接把另一側改成一致並在沿革檔記一行；兩側都拿不出機械證據、純屬取捨時由主編判定，理由寫進沿革檔那一行。
 
 ## 6g. 品質指標
 
@@ -167,7 +167,7 @@ python scripts/lint_health.py density
 
 - 門檻：檔 >300 行、或教訓行 >5%（改門檻改腳本常數）
 - 超門檻者為**蒸餾候選**：以 `| 檔 | 段落 | 現況行數 | 擬處置 | 省多少行 |` 提案——處置三選一：下沉到該檔的沿革檔（`docs/rules-changelog/`，不在 agent 讀取範圍）或 `wiki/log.md`（考古鏈靠 `[加入:]` 日期→log Query 保持可追）／併入判準一句／規則已被機械檢查接住者改為一句＋指向檢查器
-- **每次 lint 至多提案 2 檔，經使用者確認才動**（同 wiki 月度蒸餾節奏）；無候選回報「無密度候選」
+- **每次 lint 至多處理 2 檔**，主編判定蒸餾哪些段後當輪執行（雲端記「本機承接」）；無候選回報「無密度候選」
 - 規則的閱讀者是每個 agent——規則債跟內容債一樣會壓垮閱讀者。density 只量 agent 實際讀的檔（`RULE_GLOBS` 不含 `docs/`），沿革檔刻意不入量測範圍——這是密度量測的正確方向，不是漏算
 
 ## 6i. 檢查器的檢查：突變測試
@@ -185,7 +185,7 @@ python scripts/lint_health.py hits report     # 各步驟連續零命中輪數�
 
 ## 6j. 對抗輪（月度）
 
-每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/skills/wiki-lint-rules-health/references/adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。處置照該檔「收報後」：wiki 事實缺陷當場修；規則檔缺陷本機經使用者確認後逐項修到「無阻擋意見」、雲端只回報並附修訂文字原文；兩種環境都登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
+每月首次 lint（判斷法見 `.claude/skills/wiki-lint/SKILL.md`「月度判斷法」）依 `.claude/skills/wiki-lint-rules-health/references/adversarial.md` 派三個對抗 agent：冷讀者審日報、冷讀者審週報＋隨機 3 頁 wiki、prompt reviewer 審近 30 天改過的規則檔。處置照該檔「收報後」：wiki 事實缺陷當場修；規則檔缺陷本機由主編判定後逐項修到「無阻擋意見」、雲端記「本機承接」並附修訂文字原文；兩種環境都登記 `lint_health.py misses`。非月度首次寫「非本月首次 lint，跳過」。
 
 ## 6k. 連結缺口偵測（每輪）
 
@@ -232,7 +232,7 @@ python scripts/check_reader_language.py --page <slug>   # 單頁清單
 ## 邊界
 
 - 由主編（本機主 session 或雲端頂層 session）執行；6l 的改寫可派 agent，其餘親做。
-- **凡本節標明「向使用者確認」者（6a、6c、6h、6j 的規則改動）不自行改規則檔**：雲端只回報，寫進步驟 8 的待使用者確認區；本機當輪呈給使用者，確認後才改。6d、6f 依各節條文當場處置，不進確認區（6j 的修訂文字原文須隨待辦保存，見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
+- **6a、6c、6h、6j 的規則改動由主編判定**：本機當輪改；雲端不改規則檔，判定與修訂文字寫進步驟 8 的「本機承接」行。6d、6f 依各節條文當場處置（6j 的修訂文字原文須隨本機承接保存，見 `.claude/skills/wiki-lint-rules-health/references/adversarial.md`「收報後」）。
 - 改任何 `.claude/` 下的規則檔依 `.claude/rules/claude-md-edit.md` 流程，完成後 `python scripts/check_rules.py` 必須零 ❌。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」。
 - 驗證閘：十三行回報（6a–6l ＋漏抓帳／規則版本戳）全部有值，且本段若動過規則檔則 `check_rules.py` 綠，才算完。
