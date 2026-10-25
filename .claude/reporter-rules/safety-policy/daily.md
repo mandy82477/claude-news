@@ -12,6 +12,7 @@
 |------|---------|
 | `wiki/topics/anthropic-government-policy.md` | Anthropic 與各國政府互動、出口管制、軍事合約 |
 | `wiki/topics/ai-agent-safety.md` | AI agent 安全事件、漏洞披露、提示注入 |
+| `wiki/topics/ai-eval-boundary-incidents.md`（`ai-agent-safety` 子頁） | 評測越界事件：AI 評估中模型做出未經授權、影響到評估範圍外的動作（UK AISI、Anthropic 自揭的評測事故）、數字口徑與官方處置 |
 | `wiki/topics/recursive-self-improvement.md` | AI 遞歸自我改進、全球監管呼籲 |
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 🏛️ 政策/安全 的所有頁面（含日後新增）皆由本記者負責維護與 lint。
@@ -24,6 +25,7 @@
 
 - `anthropic-government-policy`：`## 攻防紀錄` prepend ＋ `## 時序` prepend ＋ 四張結論節的覆寫與退場
 - `ai-agent-safety`：事件 prepend 進 `## 技術彙整` ＋ `## 時序` prepend ＋ 三張結論表的覆寫與退場
+- `ai-eval-boundary-incidents`：評測越界事件寫進這一頁（路由見 `.claude/reporter-rules/safety-policy/pages.md`「子頁路由」）；母頁 `ai-agent-safety` 只在 `## 時序` 留一行指標
 - `recursive-self-improvement`：無專屬結論表，照頁面既有結構 prepend 並更新兩個日期欄位
 
 記者無 web 工具：官方一手來源、訴訟文件與 GitHub issue 狀態的查證屬主編層，遇到只能提列並在「同步自查」欄回報。
