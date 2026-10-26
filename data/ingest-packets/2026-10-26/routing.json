@@ -1,0 +1,652 @@
+{
+ "https://code.claude.com/docs/en/desktop.md": {
+  "title": "官方文件更新：Claude Code 桌面版",
+  "source": "Official Docs",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm": {
+  "title": "Anthropic S-1",
+  "source": "Hacker News",
+  "categories": [
+   "商業",
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/codesstar/loci": {
+  "title": "codesstar/loci",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/kanaworksai-hue/audio-studio-mcp": {
+  "title": "kanaworksai-hue/audio-studio-mcp",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/codeswithroh/tastemaker": {
+  "title": "codeswithroh/tastemaker",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://minimaxir.com/2026/10/cheap-llms/": {
+  "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+  "source": "Hacker News",
+  "categories": [
+   "商業",
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/JetBrains/thinkrail": {
+  "title": "JetBrains/thinkrail",
+  "source": "HN Repo Bridge",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/8327": {
+  "title": "[Bug/Documentation] 'Organization has been disabled' error when ANTHROPIC_API_KEY overrides Max/Pro subscription",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能",
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/boyuchengz/canvas-mcp": {
+  "title": "boyuchengz/canvas-mcp",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/20697": {
+  "title": "[FEATURE] Sync Skills between Claude Desktop and Claude Code CLI",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/1935": {
+  "title": "[BUG] MCP servers not properly terminated when Claude Code exits, causing orphaned processes",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.anthropic.com/news/s1-sec": {
+  "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://nypost.com/2026/10/23/business/wall-street-is-urging-anthropic-openai-to-do-their-ipos-in-a-hurry-heres-why/": {
+  "title": "Anthropic rushing IPO before AI bubble bursts",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/helderberto/my-ai-coding-workflow-v3-3c4c": {
+  "title": "My AI Coding Workflow, v3",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/FrigadeHQ/hob": {
+  "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/mainplane-ai/mainplane": {
+  "title": "Show HN: Mainplane – Agent in Go that lives on your old PC, drives your laptop",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://chromewebstore.google.com/detail/relay-continue-google-sea/fjjfadgooapnegipjocinojjhaajghag": {
+  "title": "Show HN: Continue Your Google AI Mode Chats in Gemini/Claude",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/michaeldmueller/hue-claude": {
+  "title": "Show HN: Flash your Hue lights when Claude finishes a turn or needs permission",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://juiced.codes": {
+  "title": "Show HN: Juiced Claude Code",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://amni-scient.com/amni-cad": {
+  "title": "Show HN: Amni-CAD – free browser CAD with FEA that Claude can drive over MCP",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/swapnildahiphale/compactly": {
+  "title": "Show HN: Compactly – Compact Claude Code sessions between tasks",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/aipdv/fast-melroformer": {
+  "title": "Show HN: Claude optimizes mel-band roformer to run 4x faster on Mac",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/radu2lupu/limitbreak": {
+  "title": "Show HN: Limitbreak – Claude Code switches accounts mid-session on a limit",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/carson-katri/geometry-script": {
+  "title": "Show HN: A Blender addon that makes Claude twice as efficient at using nodes",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMikgFBVV95cUxNX09XVmlSS01jT3lubFZUV2pxODhTM3JaOFpwX2k1cVNEdkItaFNCcGtNU3dRSnV3eXVTZ19JRm5pcGRFcDIxLVNLb3U0QkxZNlhSU3k2U05vZndadGNtb3FrUzhoUFNhVWpPYUVpX1FxV0hjejJiRzB1M2w3MzJSdUlDb1oxZENReEFmdE1qUU5HUQ?oc=5": {
+  "title": "Owners of Elvis Presley’s Music Sue Anthropic for Copyright Infringement - The New York Times",
+  "source": "Google News / The New York Times",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg27pf/i_analysed_35000_ccarf_claude_certification/": {
+  "title": "I analysed 35,000 CCAR-F (Claude Certification) practice answers. Here's where people lose marks",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg24ji/how_i_separated_requirement_failures_from_test/": {
+  "title": "How I separated requirement failures from test coupling in a Claude Code run",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg230i/i_built_a_tool_that_lets_claude_code_record/": {
+  "title": "I built a tool that lets Claude Code record polished demos of the features it builds.",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg1zev/this_tweet_is_a_scary_truth/": {
+  "title": "This tweet is a scary truth",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRnRQY1JrY2Q4YXNnTW05YkdpWHhaanZMTzdQMFdaMkZxVld6Q285RDA3QS1QZWpxOTZJdzVCdExUNFJ4Snd4QlEteW16WDBYNWJfcmNLVjd1UXB6eTFlWEhxNmJzWWxsakxlTTNsR1dXcVVvWE10WGFyTnhpekdVbjEyVQ?oc=5": {
+  "title": "Claude’s full API now works through Google Cloud billing and account permissions - MIXED News",
+  "source": "Google News / MIXED News",
+  "categories": [
+   "商業",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg1rd3/webmcp_skipped_a_step/": {
+  "title": "WebMCP skipped a step",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBpRThpZzljUDVhR2FLUnEzald0ZTRNU09RTDIyazJvSDVmazJ4NGtleVFjY0dXRFNBX0gzQkZzTFNBQ1N5cEdxbG1jeU1DMXpYRGNTUS1kSHhiNHM?oc=5": {
+  "title": "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing - BBC",
+  "source": "Google News / BBC",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xg18nn/do_you_keep_correcting_the_same_mistakes/": {
+  "title": "Do you keep correcting the same mistakes?",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTDZ0RXFWVjg1emRIUzRubVJFOG9SdE13M3hhWmtJNlNsd0JLaGhmUWxIYUdBSzFXeXlmS2FicTNzdVFvWU85RlRZcVdVWHdlNTBKVFEtdUJGSVBwTGM4bGhjcTJGSklHVFBkOVpKd0F2WEdpdUVrQnBPLWoxZkQwbzRRSXI0bGM3?oc=5": {
+  "title": "Espressif's Claude Code alternative knows exactly what’s connected to your ESP32 - MakeUseOf",
+  "source": "Google News / MakeUseOf",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUFY3eTlnM0pORnAyOVRXMjBXZXAwdE1TZ0J2bkxjT2dfdTJJRGpUUkdMeVBuTDZTUGpKb3psZ1FETWZNaXFGTmJmMTNaNWJsMGJ0bFRGc3VGWkx6UFlCcGtpQTIxVVV0cC1KOVhoQVNmaHBZRVpNanFIdkgwUFJ3MGp1dHUyM2I4VDIyOHdyc0FERHBUa0VQRWxrVFNJb0ttREdIbVY2TQ?oc=5": {
+  "title": "Rogue Anthropic AI accessed US voter data - The Telegraph",
+  "source": "Google News / The Telegraph",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUnQtTy1telV5VlJMSWRzbUJtLW5KNnNBRURmTnFuZ1NaczgxWFl3b3A5NHlUTkxRbkFoME9MUXhCR3RwY3o0Q3lmNlN2QzFDYjhPNnkzOFplRGx6R2xJRlV5ZTduMGZ2ZG5tNnJnMVZWWS10OW9ubm9BaDYxYjJHOA?oc=5": {
+  "title": "Codex vs Claude Code: 65.5% vs 29.5% Usage [2026] - shattered.io",
+  "source": "Google News / shattered.io",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSU91RXFjTktnUkEyQlRXY3FOdEJBTWNyVVg5QjB4Y0hNaVBFczJSZXdqNXpZWHRxNDBFa0JTWGNSSlhJdFFqSFdXWDVVX01KRTU2Ni1MdU5oYTVGZlBVQjRoYmxIcEI2OUs3UkQ2YjFfdWtUaXFYNFAteTkxaFhUOHBXZ0NaUy1nWnFZREhhaXc5VnhoZW5fVmlVSGVwU3ZhQUJLdE5hU3FSbklJVE1HVzNvUW5jNUh0d0h3TQ?oc=5": {
+  "title": "Anthropic Files for IPO to Become First Frontier AI Lab to List - Bloomberg.com",
+  "source": "Google News / Bloomberg.com",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSmtWbG0yMEZxRVdUU19lZmdvNkZCZ0M5eEFKbE9uUVBOaFVDWGdtNkgzbzRxb1FIcE9TRi1FR2dqTl9IUTEtMnVPRjV1QmtrdTlJSk83YWdrX2JnU0h2R1ZnVDBGTERnY3ZyZ29lX21uSDlFcnY2OUpoUEt2ZFJULU9hQ1dnY1hzWTRvblVrS1ByRFZ6WDdCRUVQZU9idnkyYUdETWdGbnlldHdraFkteWdsR0JfdmRGd3c?oc=5": {
+  "title": "Anthropic reveals $80 billion loss, huge spending spree ahead of IPO - NBC News",
+  "source": "Google News / NBC News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMilAFBVV95cUxObGhmODgyLTNhSG5ITEZ1WjVCSXVIMU9FY3owbXhBMHpfNENkMHVWSE9mZVY2cDNhOUVNeTFITjNSTEdxSi1BWVMzczZteVVBQXVVeEk0T183TW1mcGlrVXFxeFpLYXFnQThWenJ2anFBS3ZDTEN5enMtcEp6NzF5Qjg3OXF0UUNjSlRCUzdTbHlrenBv?oc=5": {
+  "title": "Former DOGE Staffers’ New Startup Claims It Hacked Anthropic - Gizmodo",
+  "source": "Google News / Gizmodo",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdmdVZ21uMHVfcm5sbTlKRi12aVE5bk1SMG5ieGdla0lBT2xuMUxUZDBFd2JfNlR3cXRfYnd4SE9xdURUc2RMUXVWY3duMkxaZHZzQU9Cc01CeW9WTW5EVWxKeVVVMEdMZXZ4UFJDaDVVblJ2WXdXdEhmYUduVU1xaTdldXp4N3BTMUJnVmdzY0NVX0V2MkhXOExB?oc=5": {
+  "title": "Anthropic warns investors of political risks as it prepares to go public - Politico",
+  "source": "Google News / Politico",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1QlQ5SXlDeF9EZUVLUWQySDd3Zkt2c1U2Wm1yM2lwS1hJZXhUbXMxU3NtVFJUbUVXVEVIRXZaaUM2Sm9vNHpsMncteUlFZUlaMW1OZEtub0VVVXh2ZUtWbkxWV28zQQ?oc=5": {
+  "title": "Claude Code's top enterprise users outspend other Claude users 20 to 1, Anthropic's IPO filing says - The New Stack",
+  "source": "Google News / The New Stack",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipgFBVV95cUxNc0hzQTk2MkxxWENxY3NHOGFXbGtMUTBFLXE2Y3VQTlA5VnhmQTI2UmRqUDJvclhJU2o2ZlowNzF2UnFzUVctRlhVRS1lRE4wZ0E3SXJqanRRaTQxX3dfay1mQ3FpMG5ELThFbkFxSmRQVFBPVkdiX3oxUmstLTkyTGFRLUYtWGxXZUoxMGR5TWNRR2NJQVNteWlEbFAzcmxpTmg1c253?oc=5": {
+  "title": "Anthropic AI bot accessed public Georgia voter data, officials say - CBS News",
+  "source": "Google News / CBS News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aM0VCcEtCcW8wb2VSYU8zM2ducWdqTGtXbTVSQlVFenFITHdISHUzVllRRXdSNGtBcHVWcjYyd1VJTk9BcWRjeVdCYVFkVkJtWlE4cEp4eHMwUE4zakZGUlE4QnVHbUpnbVRUSTNYU0QzQkxiamRkdlB2OWsxVlU?oc=5": {
+  "title": "Anthropic sued for allegedly training Claude on Elvis Presley's music - Mashable",
+  "source": "Google News / Mashable",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMidkFVX3lxTE00LW1KN0VjU0RLUEEyN3ZQVHdSZW1JMW5WNlBEampKUUJobVI2ZXRlLVV5R1loTzFpRGx1ZG9tWjM4anpqRGRtcV9NVndUcDA2RFpyRUFnRlRBWlRSQ2J6YzZMUWlpbkhlQ1lJUnhJNEdELTJMVVE?oc=5": {
+  "title": "SpaceX Borrows Another $40 Billion. Why Anthropic Is Key to Its Success. - Barron's",
+  "source": "Google News / Barron's",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZWRLbnU1SW5mV0hFN0luc05jT3VYaU4yTEc2MVdvTGpZUnVkcXJsTElPZUNWNEM0TDZBalFMYWhEeHVNY2hUYjB2cUhBYUEtV3BCT1JLQjF0ZnBmNkJkY3FGamZBdlJmS2hVV21neFJHblpROHZYTVN2OFU3LTZ5Zy14ZGdQMjcz?oc=5": {
+  "title": "AI giant Anthropic files for an IPO that could break records - NPR",
+  "source": "Google News / NPR",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMib0FVX3lxTE56OXlIM2g3QVFhMlVtMXAxV1RmTjg0RkhYYk5vdExURTNHYjdBRXFsaWlfT1N2bTlKQ1B0X3h1Zy1heGp2Z1FoVmJTQXBabU9yZlpPQ3RZaTFFbS1seTBFd2xYTnQ1aFlKTTMyZjc0SQ?oc=5": {
+  "title": "Claude Opus 5.6: Pencariannya Ada, Modelnya Tidak — Inilah yang Sebenarnya Ada - OrcaRouter",
+  "source": "Google News / OrcaRouter",
+  "categories": [
+   "模型"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMidkFVX3lxTE03bGhpOG1mUzh2WXFSdGRXcDAwMlh1eE0xUkZseXkzbUhOSmFEb1NNM2hKbmw1X29ERW9zcHBKT2ltbDF3ZVhRRDZwalhqOE5mYXM0NS0yY3c4SEFDNEdDUDk2cElLbGl2VkE2RHp3TmhJQ25IM0E?oc=5": {
+  "title": "AI company Anthropic sued over alleged Elvis Presley copyright infringement - Fox News",
+  "source": "Google News / Fox News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMid0FVX3lxTFBOdGlOZG5Ja3FScVNkampVTGI0MkdHTDBKZTJKOWpNWGZvRVllS3liaGNrTUtnOFBlOHV0QkpnYnlUX3lRZXl1MUVhMnp6Y3BCVWVkTlQxSkVObWt1SHg2NmJPNkJTQ2N4NWMtYmNhekFISnh0NzUw?oc=5": {
+  "title": "Anthropic's IPO filing outlines AI's extraordinary risks to humanity - Axios",
+  "source": "Google News / Axios",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMikAFBVV95cUxQX2ItSXJrUWdNaklDTWloN3RSd1VfTldGWDFMc2xySV8ta1ZTSUNNdUpmajBhMmVtTks0QnJIZnI1TWlHdnd1WF91Z2c1WEFHSVNxWTF4UXNMWnJ1RmFCM2hEb3NYd29uSVljWWhpVV81MGFfVENldDJxbFhUeWJ2RU93WmVPSnBJMmM0WDA3OGU?oc=5": {
+  "title": "Anthropic, PBC - S-1 (Q2) - SEC.gov",
+  "source": "Google News / SEC.gov",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMifkFVX3lxTE15X01NR0d1bVA3X25zMWQ4SFdxbVRhTko3TGRIVVI5cmRlM2FSSjVxb2pjMmdWMWZwNmVDM1BuTXk3eEM4V0p3SjhucVFZZm5uR3dPVV9QWmZLTURqNlpRbkdiZ2g3TkFDdWt4Zi16bEppNXF6LXBGWVZmUEtHdw?oc=5": {
+  "title": "Anthropic Reveals 14-Fold Increase in Growth as It Prepares for Blockbuster I.P.O. - The New York Times",
+  "source": "Google News / The New York Times",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMia0FVX3lxTFBZSlY5T3JkOG5YNHVNTDNhWGV2Q3dnVjdLX29OUWRGSllaT3p3NmFKUlFZdzM4NTJ3SzJKcWJMa1UxS1dHLXRrLVpGN1JhTXBfZ0xEdk5FODZQZzVpTWdBbHlubWlMX2dZQkM4?oc=5": {
+  "title": "Anthropic files for IPO, touting AI's ability to \"improve how humans live\" - CBS News",
+  "source": "Google News / CBS News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWUJzcmZKYjhVN2dtZm5OZmNpUzVrdEUzMlRPV0wwYkRxZkp0ZkZDVEozLWtYOHZDeVdoZ2d2djFIaENOdmRaRlVGeGo5SDRZSzhXYzZuekh0d2dES0REZGc5ZXB6MnJfWXJGakxuWnRRRFc5SmlIbzFxQTFLTmttRXB4MEhablk3Wlp6OFg1bnRvTVNsNHV4NDJpUW5ZcTAxZVpObm4yQzJlb0tGR0U2MA?oc=5": {
+  "title": "Anthropic’s Claude AI model accessed Georgia voter data in US - The Guardian",
+  "source": "Google News / The Guardian",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9TTUMzZ3kyQXlPLXRDU0hPQjlUZU9XWVhtZkhwMlBkSVRMOWVHU3MzcF8yUWJYTXc1LUdiQnZNc2ZGOWNibGt0SjBHRXBhbURnQkFOWEk1aDdIaDJhZTh5WkQ5M3kwUQ?oc=5": {
+  "title": "Anthropic set to make stock market debut as questions swirl about safety of AI - CNN",
+  "source": "Google News / CNN",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN2tqeWJKTk84UnBKU3FfaktGMmtqMGVhakMyRl9MZnlvTWRmWkxnZFk2S05kcHZHWjZMQXozUmplMExDcTUzeEtQdWlXc3dqcGZTd1dkUVhqWGpHXzJiQmVpd0xWWnd3alpmZTM5NjdRQkt4UmpJRWhhTTIwbnB2eENsZnRuWjNfUmVBS1otUGQxa1FSeV9qOVdPMXBKZUhZTHdFNA?oc=5": {
+  "title": "Claude Code AI finds a cryptominer on a Mac; says it didn’t put it there - 9to5Mac",
+  "source": "Google News / 9to5Mac",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdXExakFzRHBKQUNQQWYtdkQ4NUYwSm1DazVFTUJOM3ktTXh2SU5IOU1zeXpBS0lQR2ZIRFYyd3ZhbXdnNjBlakdGVk5HR25RLVZNQ3FpMnBKTGxLeFFjUk5vOW9CM0pnMmFRNE5meVg3dzNyNjZDNGkyakNHOUVhc1NVd3VCdEVtd3lxd09zdzM4cTZSUFVSY091NmpzQzJ6bDJuM2d2MTQ4YlozSy0zcg?oc=5": {
+  "title": "Claude Code vs. Cursor: What a Field Test Shows That the Feature Comparisons Miss - Towards Data Science",
+  "source": "Google News / Towards Data Science",
+  "categories": [
+   "商業",
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMic0FVX3lxTE51bjFqN2xCMEJCOVM1cm81ekFfX0dMenZEczRtejloTFh3R0NvY0JrbnlvdDBFS1o1RGlFMXpibkZhTF9CM3lFY3IzU3pfNlppdGctUjB1Sl91RU1qdDRjM1ZQVm9BSVRuMDBNSk1oN05xTDg?oc=5": {
+  "title": "Anthropic's Claude accessed Georgia voter data by bypassing a paywall on its own - Quartz",
+  "source": "Google News / Quartz",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWGRfa29NR1l4a19INEZWSXZWakhia2ZKTnRpQTVYeFNTUXRhdURvSTltbV9RRVJkbzVndVhsMUg0Y3N1MkZVNm11QVB5ZWtFVlhGY2NSSkp1MU84Qm0taWMtcURQcm9EbjZFTjV4Sk9NMTFwLV9Xc1BqM3RqWFhlLWpQZl8tOHJwdktBT2kxTUV6d2ZnWXg1cWwyVWtNSVl2UVA2LU1mWkNlcFZKd1BhNlpRbXZMeGZ0SEdR?oc=5": {
+  "title": "How an AI start-up founded by ex-DOGE staffers broke into Anthropic - The Washington Post",
+  "source": "Google News / The Washington Post",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA1Q2JTdWZxeUgydWprRXMwb3FzSWJDY3VUSFBsQW04VU5VblVldUdLRjZWQms0cnVtWDc3Ym41dlRVMWhoMldaUUtONE9MQXpLbjdF?oc=5": {
+  "title": "Claude Code Desktop Creator Officially Resigns: High School Dropout’s Stunning Comeback to AI Industry Peak - eu.36kr.com",
+  "source": "Google News / eu.36kr.com",
+  "categories": [
+   "人物"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMU11RVVlWWdMcjFwbkViY0lSNEFXd0JJOHFTekgxZWJVVUZfS2dzc2drb2pidmFPQ255VjhqMXJvRThqY2hVTjVEVzI5T1dKS3R0azNMczV3M1pXallQWkJubkRXT0dtTmtUVFZmUjZJVnFWd3ZaNjh1Vk9VaDJybUpmcXpvY1JWTDRVLTFzcmNZazRBLW1RR1J6U01LTkJGbF9SbDA3elpoRUliU1VVNnNreUVTRXMtUm1Idg?oc=5": {
+  "title": "Claude saves an overheating Mac from a cryptominer it might have put there - Macworld",
+  "source": "Google News / Macworld",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMijgFBVV95cUxORnZPWXdUUTFNZGM1VHp0dGg3OTVhdndRVlRVZTNiRTBKWTdnZzhQdXVqbHJKcjNfR3VwcUlNeXRHOGk5RXZBMlBIa2hIV3FMSHlPVzktYzFOS0dJREJLN3QwQ0tPWWFMaFB1bUZpQjRESV84S1hySmgxcGd5Tnc1bFRSUFdhdFRhWV9RTmRn?oc=5": {
+  "title": "Anthropic details what stops Claude Duet from going rogue - Help Net Security",
+  "source": "Google News / Help Net Security",
+  "categories": [
+   "安全政策",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSkRMNFBxdC0xZm84aXBxUmFCSzl3TDMxZ3FtSXVZZFg4alRqMjhRLXV2Ry05M3VOUUFVMWltZmhJVFpCQWhsTTFIMVR5UWpLSW8wUjBzN0FKQkYyeHZaVmtxZTZUcjRoMUVRN2Z2NGJUdzJIWF9SX1ZaVmpwbVBwb1AzVU03emZhRmNLenJxSjVrOUpIYTQ5dmhGUEVENV9NQWttNVNR?oc=5": {
+  "title": "Users report that Anthropic blocked Claude from reverse-engineering TVs - XDA",
+  "source": "Google News / XDA",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX1NnSFR3VWJrZlVDVkphZHpGOEFLMFE0LWpRWGRXZXlpVmliaHVaNTFXbU9nSDlWSkFQWlE5U3MxTjhJaUZOMV9ackVHamxrUENqMFprUmRBQk5DTUpXTmN2YXFDcXE3RHlSTmdhOUpFVjJjOEFnX3RwLWt2T2stYWx6UVgzbk9sU1BzV21lWlN0RzhTbDdWNDN5ZWVGenc?oc=5": {
+  "title": "Claude blocks accounts from Russia and Hong Kong - Root-Nation.com",
+  "source": "Google News / Root-Nation.com",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbUd4aFpMMGRzTWlQMjd4OWJFTUZSMVFPM3k2QTVVQnk4YWs1bE51U0lUZGw5cmtMWWdSWFItOFplYzdMQ2ZvX2VCaUVPYWlYZmxlbHJubWlyT0NaWFFTY21FVExoY2dmX2dtTjJkY3g5MTNTSnJzSW1fMUFqelhNZlFyS1VTN253UGZYUnctbXVuTUdRMWlV?oc=5": {
+  "title": "Claude Code and Codex obey a file any website can drop in your Downloads - Martin Cid Magazine",
+  "source": "Google News / Martin Cid Magazine",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://openai.com/index/fanatics-streamline-fan-experience": {
+  "title": "How Fanatics and OpenAI streamline the fan experience",
+  "source": "Blog / OpenAI News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQjl5TDJXX0xXR1I4QVhLN0RRT1ZwRGNJSWlGaER6V0NvdThma3dFYjVtQ2dqRm9rSlBoem9DaXVEcWpfVXZUdEFXWmpVNzduUUVaSDZsVE1sUTU4YUtIQ1F6b0U3eVJZLUIxeGFzMjViY1d0THpacUdaYkgwcVB5bXl4R2pCaEh2VUM2TUtTRWgzQ3lYd1ZuM0hkMWtyajBXc2dwdE5uZFE0bGJMLVJwS3J1dkM?oc=5": {
+  "title": "Google DeepMind engineer Sofia Liguori resigns over military AI contracts - EdTech Innovation Hub",
+  "source": "Topic Watch / ai-talent-flow",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQU1V0TEFXVkRST0oyRUxLRmM1eDlNVXpWU1Z6eUpMdmZ3cUhrYjJDeEtKbUJRUWJfVHEzRXBfMTZMYldqdlMwX0hSTFRNTkJmQmJvX25ycU8xM01Bc1hUUHItTzhqVXZ5UXVLMFVUeTBMRHN0Q3hfcUtXTDNzZldoRkl1U2NKVHRvRXFIbEJ5ODhXcGRtcDhKYVAydlZwd3ZSZjBDQnI1YmdNUS1iZXhHQTNHb0dIN2FN0gG-AUFVX3lxTE50STBSNzFDRHpBSjBJSDhWYU1HaGtyWVRUa1pOdEhZc1k4N0xOSmotektxSk84RXI3OXAxTm91eGU4NHJwM1dVUThmcFZQVDkteVhPcXh1dldhVmxuNHNrVW5QQVB3YTlVaWxiQkRwUHg4VmQxbWFXUWdHSGZGc3hwUUppa0ZRM0wyQ3dFeTY5bnZ3UFdpZWxKZHB3UjhDWXI1TmQ2aWhmMGdicy14Z25RNHNLY3V3TVlaOFBnWkE?oc=5": {
+  "title": "Claude AI accessed publicly available Georgia voter data, Anthropic confirms - Fox Business",
+  "source": "Google News / Fox Business",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSW54N19MRjExQnplUVpaeWJUTFVtVlpTa1FqdTJYZVR0WlJLV3BKY0lwUEVjRjA5b0tURjVyQ3dzaUp1T3VsVUJEVDZZc2VTMVNrdzJFNnNUSkNmVW4zaVBJb2ZtZjlBR2dnWDRMc0djVWRxcGM5SUZyaUV3RlY1dTE5SGtEdDdadTFoU1RYdE1Ed00?oc=5": {
+  "title": "Claude adds an Anthropic-managed Google Cloud route with different processor and feature choices - OpenTools",
+  "source": "Google News / OpenTools",
+  "categories": [
+   "商業",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1xfeywq/sync_session_data_between_different_cli_harnesses/": {
+  "title": "Sync session data between different CLI harnesses",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTElKSTM1Q0xTdC1jSGQtUUM3VTdsdEttOVhwZ21JX2RzRUxLV18tMzZmaElBUVFlRDJwbVNXYndKc2JIR3FiRlBrRHFVSjY4MUQwMDZVQXB6T3NRQ0VMRWg5dlY3TUNCZTBFTlJtSjdYMlQtbWxSQ2hDWnJ1c1RhSjdQRGN2Y3dFWUt0c3lTOWlzd0Fqd1BnRFNnRkNtT3hpYUlJWHpB?oc=5": {
+  "title": "Anthropic quietly separates Claude Agent SDK usage from subscription limits - Startup Fortune",
+  "source": "Google News / Startup Fortune",
+  "categories": [
+   "商業",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMimwFBVV95cUxNelFOZFdTZmw2a1FtcjAxZk5lYktWT09FRTRaT0g0MmFrRFpHX0dIbk1IeVJNYmxVVlhBZHRYWk1YZzFHRjh0N29jSEdWd2s3OEJrcFM4SW9Tb29tLTQ5VjJaQ3BFQThpRXNJUzVPbXcwOElvcVJUNl9aZE1SaWVZTTR1VTYtcHNGZVdjU2t4MVItd2ZKYlhZZGd3cw?oc=5": {
+  "title": "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models - The Guardian",
+  "source": "Google News / The Guardian",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMitwFBVV95cUxNQ0FCOGIzakpUMVpPd0ExOThTRHBtaGpTeWhRQ21NeWZuNXNtRlFCaVVPclNZa0FWY2RoN0VFTWxtYm5HcENvLTJiYTVVa2RidnZrY2xXdkUzMzBVb09PbGdmZ1UyUUt0aFhUdDR6T2hiY0o1bWxjTXNBUTdhQ21sZVJ3TWdwQzJnN29aeEN6WU5DT2JWT1ZjV29Zay14c240WmZxcW9JczhuQUNoTWVKVU1MMU5qZUk?oc=5": {
+  "title": "Anthropic’s AI Agents Outwork Humans By 6x. So Why Are You Needed? - Forbes",
+  "source": "Google News / Forbes",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ }
+}
