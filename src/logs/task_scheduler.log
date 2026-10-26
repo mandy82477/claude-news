@@ -1283,3 +1283,8 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-25T22:14:00Z] Step 0b 冪等閘：news/2026-10-25.md 已存在（17 UTC 班已完成 news+wiki+web，log 顯示 Single push done (news + wiki + web) / Pipeline complete），TARGET_DATE=2026-10-25 為排程模式今日，中止不重跑（22 UTC 班，第三班）。Step 0 昨日缺跑檢查：news/2026-10-24.md 存在，通過，無需本機承接。
 [cloud watchdog-push STARTED 2026-10-26T01:31:30Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-10-26T12:18:04Z]
+[週一 2026/10/26 12:19:02.00] === Agent pipeline start (2026-10-26) ===
+[週一 2026/10/26 12:19:02.00] Step 0 昨日缺跑檢查：news/2026-10-25.md 存在，通過
+[週一 2026/10/26 12:19:02.00] Step 1a 跳過（雲端），cp src/gathered_archive/2026-10-26.json 失敗：檔案不存在（GitHub Actions 當日抓料尚未落地）
+[週一 2026/10/26 12:19:02.00] ABORTED: gathered_items.json date=2026-10-25 items=42，非目標日期的新鮮資料
+[週一 2026/10/26 12:19:02.00] === Pipeline aborted (12 UTC 班，第一班；資料到齊的後續班次接手) ===
