@@ -461,11 +461,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-duet",
-      "name": "Claude Duet",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-science",
       "name": "Claude Science",
       "pageType": "entity"
@@ -513,11 +508,6 @@
     {
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
       "pageType": "topic"
     },
     {

@@ -424,18 +424,8 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-eval-boundary-incidents",
       "name": "AI 評測越界事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic IPO 追蹤",
       "pageType": "topic"
     },
     {
@@ -446,11 +436,6 @@
     {
       "id": "community-cost",
       "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
       "pageType": "topic"
     },
     {
@@ -466,11 +451,6 @@
     {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     }
   ],

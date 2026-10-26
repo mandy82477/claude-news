@@ -513,11 +513,6 @@
   "preview": "Claude Code：v2.1.295 新增 hook onFailure: \"block\"：command／HTTP hook 若無法啟動、逾時或退出碼異常，動作直接阻擋，不再放行；Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API（需額外授予 be",
   "sedimentedToday": [
     {
-      "id": "boris-cherny",
-      "name": "Boris Cherny",
-      "pageType": "entity"
-    },
-    {
       "id": "haiku-5-5",
       "name": "Claude Haiku 5.5",
       "pageType": "entity"

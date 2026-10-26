@@ -435,13 +435,7 @@
     }
   ],
   "preview": "Claude Code：Claude Code 的 Code Review 功能正式轉為正式發布（GA）；v2.1.301 新增無人值守重試逾時上限旗標。",
-  "sedimentedToday": [
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-16",
     "summary": "",
