@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-16
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 
-> **最新動態**（2026-10-16）
-> Anthropic 公布已給予 METR 團隊員工級系統存取權，SecureBio、Accenture 同列評估者，呼應上月簽署的白宮超級智慧協議。
+> **最新動態**（2026-10-26）
+> BBC／Axios／CNN：Anthropic IPO 前 S-1 文件警告 AI 可能構成「災難性風險」，呼應本頁核心矛盾；政府/產品後果面見 [[topics/anthropic-government-policy]]。
 
 ---
 
@@ -90,6 +90,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市議會 AI 風險聽證會重申「極度魯莽」警告**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告；日報稱有共和黨參議員批評「危言聳聽」，出處未證實，詳見「## 技術彙整」。
 - **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，屬單方指控、無證據，詳見「## 技術彙整」。
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
+- **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
 
 ---
 
@@ -108,6 +109,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### BBC／Axios／CNN：Anthropic IPO 前 S-1 文件警告 AI 可能構成「災難性風險」（2026-10-26 新增，跨頁指標）
+
+- **揭露來源**：BBC、Axios、CNN 同日報導，3 個獨立媒體
+- **核心主張（僅標題可用）**：Anthropic 上市前的 S-1 文件警告 AI 可能對人類構成「災難性風險」；具體條文、是否援引既有加州 SB 53「災難性風險」法定門檻定義均未見報導
+- **與既有敘事的關係**：呼應本頁「摘要」段落既有的核心矛盾——呼籲謹慎示警的同時走向 IPO；政府與產品後果面的完整記錄在 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複
+- **可信度評估**：三家主流媒體同日報導，惟均僅標題層級可用，原文細節未見
 
 ### Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio、Accenture 同列評估者，呼應上月簽署白宮超級智慧協議（2026-10-16 新增，官方一手）
 

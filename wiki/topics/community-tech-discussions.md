@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-25
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 
-> **GVS5H Harness 宣稱 Qwen3.8-27B 打平 Fable 5，HN 質疑題庫污染**（2026-10-25）
-> harness 測出 5 個 Qwen3.8-27B 模型追平 Fable 5；HN 質疑題庫已遭污染，且缺 Astra／Sol／Fable 5.1／Opus 5.5 對照（171 分，2 來源）。
+> **田野實測指出功能列表比不出的 Claude Code / Cursor 落差**（2026-10-26）
+> Towards Data Science 以實測方式比較 Claude Code 與 Cursor，指出官方功能列表看不出的真實使用差異；重要媒體報導，社群尚未接力討論。
 
 ---
 
@@ -153,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Towards Data Science 田野實測：Claude Code 與 Cursor 的功能列表外的真實落差 | 2026-10-26 · 2026-10-26 | 🔥 | ☄️閃現 | 以實測方式比較 Claude Code 與 Cursor，指出單看官方功能列表會漏掉的實際使用差異；重要媒體報導，待社群接力（10-26） | — |
 | GVS5H Harness 宣稱 5 個 Qwen3.8-27B 模型打平 Fable 5，HN 質疑題庫遭污染、缺現行模型對照 | 2026-10-25 · 2026-10-25 | 🔥🔥🔥 | ☄️閃現 | 評測宣稱 5 個 Qwen3.8-27B 模型追平 Fable 5；HN 留言質疑題庫（2023-05～2025-04）已遭污染，且未比對 Astra／Sol／Fable 5.1／Opus 5.5；HN score 171（2 來源） | — |
 | Simon Willison 引述 Armin Ronacher：AI 寫程式雖好玩，但業界過去 30 年欠的技術債，現在輪到被清算 | 2026-10-22 · 2026-10-22 | 🔥 | ☄️閃現 | Armin Ronacher：AI 雖好玩，但過去 30 年寫了太多爛軟體，現在是宇宙在懲罰這些罪；具名表態，無社群延燒 | — |
 | Ask HN：有人引《駭客任務》Agent Smith 台詞，質疑 Anthropic 主動式 agent Claude Duet 方向是否危險 | 2026-10-21 · 2026-10-21 | 🔥 | ☄️閃現 | 使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比《駭客任務》反派 Agent Smith 台詞，質疑把「主動代理人」交給 AI 是否走向危險方向；HN score 10，單平台初現 | — |

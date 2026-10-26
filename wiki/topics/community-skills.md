@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 
-> **新增資安垂直領域的 22 個 skills 合集**（2026-10-23）
-> - **Masriyan/Claude-Code-CyberSecurity-Skill（503★）**：涵蓋攻防、逆向工程、威脅情報、CSOC 自動化、AI/LLM 安全、GRC 等 22 個資安專用 Claude Code Skills。
+> **UI 品味 skill 再添一例，可靠性測試類別重新出現動態**（2026-10-26）
+> - **codeswithroh/tastemaker（500★）**：用參考圖與開發者個人品味校正 AI 生成介面，取代泛用 AI 風格預設。
+> - **可靠性測試**：Reddit 貼文提出把「需求沒做到」與「測試寫得太綁死」分開判讀的方法，見技術彙整。
 
 ---
 
@@ -93,6 +94,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### codeswithroh/tastemaker：用參考圖與開發者個人品味校正 AI 生成介面（2026-10-26）
+
+- **主線：** —
+- **核心模式：** Claude Code skill，讓 AI 產出的 UI 設計依據真實參考圖片與一份持久保存的「每位開發者個人品味檔案」校正，取代泛用的 AI 風格預設樣板。
+- **與既有模式的關係：** 與 10-14 的 Leonxlnx/taste-skill、oil-oil/oil-ui 同屬「Skills 設計」的「視覺品味／防 AI 樣板感」取向，差異在依據「參考圖＋per-developer 持久品味檔案」校正，方法不同暫不合併；主線填 —。
+- **可信度註記：** GitHub Search 500 星，無 forks／issues／近期 commit 佐證可查；星數未見異常增長，暫依現有數字收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/codeswithroh/tastemaker)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Reddit：把「需求沒做到」與「測試寫得太綁死」兩種失敗原因分開判讀的方法（2026-10-26）
+
+- **主線：** —
+- **核心模式：** 作者用 Claude Code（Opus 5.5）依 FastAPI 官方 OpenTelemetry 功能文件、範例與公開介面規格重建該功能，提出一套判讀方法：agent 測試失敗時，先區分是「需求本身沒做到」（requirement failure）還是「測試寫得太綁死實作細節」（test coupling），避免被測試失敗訊息誤導排查方向。
+- **與既有模式的關係：** 本頁「可靠性測試」類別自 07-12（Caliper pass@k 指標測試、Skill Linter）之後首次出現新代表技巧，聚焦先前未覆蓋的子問題——「測試失敗時怎麼判斷真失敗」；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Reddit r/ClaudeCode（0 留言，無「週熱門」標記，score 不可信；單一貼文，惟屬具體第一手測試方法論與可複用的判讀框架，依內容判斷收錄）。
+- **來源：** 「How I separated requirement failures from test coupling in a Claude Code run」— Reddit r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xg24ji/how_i_separated_requirement_failures_from_test/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者方法論，尚無第二方重現）
 
 #### Masriyan/Claude-Code-CyberSecurity-Skill：22 個資安專用 Claude Code Skills 合集，涵蓋攻防、情報與合規（2026-10-23）
 

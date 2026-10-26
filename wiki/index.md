@@ -116,7 +116,7 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：19 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：20 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
 | [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
@@ -130,7 +130,7 @@
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
-| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：S-1 首度揭露 2026 上半年淨損 807 億美元，IPO 估值疑慮加深；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-ipo]] |
+| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：公開版 S-1 已於 2026-10-26 正式提交 SEC（擬掛牌代號 ANT），確認 2026 上半年淨損 807 億美元；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-ipo]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |

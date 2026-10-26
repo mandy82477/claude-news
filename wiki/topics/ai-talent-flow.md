@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-25
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
-> **最新動態**（2026-10-25）
-> NeoTeo 跟進報導 10-21 五角大廈合約辭職事件，稱已延燒為軍方 AI 內部辯論；既有格局不變。
+> **最新動態**（2026-10-26）
+> EdTech Innovation Hub 點名 10-21 五角大廈合約辭職的 Google DeepMind 工程師為 Sofia Liguori；此前僅標題可用、姓名未載。
 
 ## 摘要
 
@@ -55,7 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **對各公司的影響細節**
 - **Google DeepMind**：兩週內連失 Jumper（科學/生物）、Adler（AI 編碼）、Pritzel（訓練）、額外 2 位資深研究員（6/28），另有一名研究員轉投 OpenAI；市值蒸發約 $2,700 億美元（dev.to 口徑，CNBC 另記當日 $2,000 億）；Gemini 3.5 Pro 延期至七月（延期屬實，歸因於人才出走則為推論）；被迫重組 AI 編碼突擊隊
-  - **10-21（The Intercept）**：一名工程師因抗議公司與五角大廈合約辭職；具體姓名、職稱與合約內容未見報導，僅標題可用。與既有「對齊風險下降」警告型離職（09-13 起多家轉載）同屬公開表態型出走，惟訴求點為軍方合作而非 AI 對齊（推論）。
+  - **10-21（The Intercept）／10-26 點名（EdTech Innovation Hub）**：工程師 **Sofia Liguori** 因抗議公司與五角大廈合約辭職；職稱與合約內容未見報導。與既有「對齊風險下降」警告型離職（09-13 起多家轉載）同屬公開表態型出走，惟訴求點為軍方合作而非 AI 對齊（推論）。
   - **09-25（the-decoder.com）**：又一位研究員離職，稱短期內打造超級智慧 AI「本質上不負責任」；與 09-13 事件是否同一人原文未載明，姓名與職稱均未見報導，僅單一來源標題可用。
   - **09-27（조선일보）**：第二家媒體跟進同一事件，改用「AI's Rapid Pace」（AI 步調過快）措辭；與 09-25 the-decoder.com 報導是否同一人原文未載明，僅標題可用，未見新增細節。
   - **09-13**：一名 DeepMind 員工離職，警告 AI「對齊程度」正在下降、五年內恐釀重大傷害；storyboard18.com、Firstpost、Inshorts 三家媒體各自報導同一事件，姓名與職稱均未見報導。
@@ -79,6 +79,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-26
+- **EdTech Innovation Hub 點名 10-21 五角大廈合約辭職的 Google DeepMind 工程師為 Sofia Liguori**：職稱與合約內容仍未見報導，詳見「對各公司的影響」表更新（Topic Watch/ai-talent-flow）
 
 #### 2026-10-25
 - **NeoTeo 跟進 10-21 Google DeepMind 五角大廈合約辭職事件，稱已延燒為軍方 AI 內部辯論**：與 The Intercept 原始報導同一事件，未見新增姓名或合約細節，僅標題可用（Topic Watch/ai-talent-flow）

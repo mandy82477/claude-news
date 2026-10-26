@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-25
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 
-> **最新動態**（2026-10-25）
-> - **已知問題**：VS Code diff 審閱 UI（#33932）今日反應數全站最高（306 讚）；新增 5 則中度互動 issue；Fable 5 用量誤判（#79337）逾 3 個月未修復。
-> - **旗標**：build 新增 4 個第一階候選旗標，詳見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-10-26）
+> - **官方文件**：桌面版文件再度異動（189,365→201,162 字），段落數超過自動比對上限，無法產生逐段差異，須自行開原文比對。
+> - **已知問題互動**：API 金鑰蓋過訂閱方案遭「Organization has been disabled」擋下（#8327）累積 122 則留言；桌面／CLI 同步 Skills 功能請求（#20697）累積 171 個讚、49 則留言。
 
 ---
 
@@ -106,6 +106,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期平台與文件異動：**
 
 - 桌面版文件異動已依主題彙整，見 [[entities/claude-code#桌面版功能地圖]]；下列時序條目保留。
+- **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。
   ❓ **待查證**（標 2026-10-24｜查 `Local sessions on managed devices`、devbox）｜**移除段落含「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 設定範例**：官方未附遷移說明，依賴這兩種 hook 範例設定的桌面版使用者可留意範例是否已搬到別處。
 - **官方文件更新**（2026-10-21）：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節、session details panel 用量顯示方式、新增憑證來源設定步驟；移除內容未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -260,7 +261,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
-- 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，累積 121 則留言、22 個讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
+- 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，122 則留言、22 讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
 - 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-11-14）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
 - 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 63 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
@@ -441,7 +442,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 2026-07-13 集中爆發：連線認證（#5826 為當日全站互動最高條目）、token 生命週期（#5706）與計費透明度（#1785）三個面向同週同時升溫，加上既有的設定熱重載與 token 消耗問題，MCP 作為 Claude Code 核心整合機制的成熟度缺口成形。安全面的 Gmail MCP connector 黑暗設計模式批評另見「🛡️ 安全與隱私」分組。
 
-- 🔴 **未修復**｜**MCP servers 於 Claude Code 結束時未被正確終止，留下孤兒行程（GitHub issue #1935，累積 43 則留言、18 個讚，環境：Anthropic API／Claude CLI v1.0.18）**：使用者回報 Claude Code 結束時未正確終止其啟動的 MCP server 行程，留下孤兒行程持續佔用系統資源；官方尚未回應。
+- 🔴 **未修復**｜**MCP servers 於 Claude Code 結束時未被正確終止，留下孤兒行程（GitHub issue #1935，47 則留言、19 讚，Claude CLI v1.0.18）**：使用者回報 Claude Code 結束時未正確終止其啟動的 MCP server 行程，留下孤兒行程持續佔用系統資源；官方尚未回應。
 - 🔴 **未修復**｜**宣告 draft-07 `outputSchema` 的 MCP server 完全無法使用（issue #86142，53 則留言，2026-09-18 互動數更新）**：送出前就被判定「unsupported dialect」拒絕，官方未回應。
 - 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 50 則留言、31 個讚，首見 2026-08-02，2026-10-15 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
 - 🔴 **未修復**｜**Microsoft 365 Connector 僅限 Team／Enterprise 方案，Max 個人版無法使用（GitHub issue #20469，累積 60 則留言、105 個讚，2026-07-26）**：使用者反映 Microsoft 365 connector 目前僅開放 Team／Enterprise 方案使用，訂閱 Max 方案（月費 $100 或 $200）的個人使用者即使付費仍無法存取此整合；官方尚未回應或說明是否將開放個人方案。
@@ -565,7 +566,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 分頁在 Windows 11 desktop app v1.2581.0 消失（GitHub issue #48407，累積 40 則留言、16 個讚，2026-07-07 首見，2026-07-26 留言數更新）**：使用者回報 Windows 11 上 desktop app 版本 v1.2581.0 找不到 Cowork 分頁，疑為該版本的平台性 regression；官方尚未回應
 - 🔴 **未修復**｜**Focus reporting escape sequences 洩漏至輸入框（GitHub issue #10375，累積 30 則留言、31 個讚，2026-07-05）**：在 WezTerm（可能也影響其他終端機）中使用滑鼠或修飾鍵時，focus reporting escape sequences（`[I`、`[O`）會被誤植入輸入介面文字中，官方尚未回應。
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
-- 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 43 則留言、159 個讚，2026-09-01 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
+- 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
 ### 🌐 服務穩定性（42 條已修復、10 條未修復）
 

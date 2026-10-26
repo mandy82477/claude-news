@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-26
+**最後新聞更新：** 2026-10-26
 
-> **創意工具整合再添一例：單一提示生成繪圖 artifact**（2026-10-24）
-> - **Simon Willison：Quick Study**：提示 Opus 5.5 以 Sobel 邊緣偵測與模擬畫筆，數秒內把照片畫成畫作，不依賴外部創作軟體。
+> **本機生成式音訊接進 MCP**（2026-10-26）
+> - **kanaworksai-hue/audio-studio-mcp**：MCP server 用 Stable Audio 3 在本機生成背景音樂與音效，免雲端、免 API key。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### kanaworksai-hue/audio-studio-mcp：本機 AI 配樂與音效 MCP server，免雲端免 API key（2026-10-26）
+
+- **主線：** —
+- **核心模式：** MCP server 讓 Claude Code 與其他 MCP client 用 Stable Audio 3 在本機生成背景音樂與音效，支援 Apple Silicon（MLX）與 Windows NVIDIA GPU（PyTorch），全程不連雲端、不需 API key。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「本機生成式音訊」取向——既有代表技巧多接既有服務（WhatsApp、CVE 情報庫）或既有創作軟體，本則把生成模型本身（Stable Audio 3）包成 MCP server 讓 agent 直接產出素材；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub Search 501 星，無 forks／issues／近期 commit 佐證可查；星數未見異常增長，暫依現有數字收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/kanaworksai-hue/audio-studio-mcp)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Simon Willison：Quick Study，Opus 5.5 以 Sobel 邊緣偵測即時模擬畫筆作畫（2026-10-24）
 
