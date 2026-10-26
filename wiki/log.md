@@ -8194,3 +8194,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [功能] GitHub #33932（VS Code diff review UI，今日 306 讚）是否已達 official-community-gap 矩陣開新列門檻：判準③「官方補到哪」需 WebFetch 查官方一手來源，不在雲端排程每日 ingest 範圍內——留待 `/wiki-lint` 5n 或下次本機 session 查證後補列
 - devpractice 沉澱：本日無開發實務分類派工包（分類階段無條目判為官方使用指南類），候選 3 筆（entities/claude-code 的 #33932 VS Code diff 審閱 UI 請求、#12705 AGPLv3 授權內容過濾誤擋；entities/pricing 的 #79337 帳單自查步驟），append 至 `data/devpractice-candidates.jsonl` 留待週更落地；手冊正文本輪寫入 0 則；基準線推進至 fc33389
 - market 判讀：判讀 1 則（Billboard／Hollywood Reporter：Elvis Presley 版權方控告 Anthropic 音樂訓練侵權，音樂著作權訴訟線第 2 則），寫入 [[topics/market-signals]]，本體不可買、無間接曝險標的，里程碑登記 1 筆、回顧結算 ⏳ 新增 1 列，結算日 2026-11-08；其餘條目逐一套用六類判準後不構成新判讀
+
+## 2026-10-26 Ingest
+
+- 來源日報：[[news/2026-10-26]]
+- 更新頁面：
+  - 人物：[[entities/boris-cherny]]
+  - 功能：[[entities/claude-code]]、[[entities/claude-duet]]
+  - 商業：[[topics/anthropic-business]]、[[topics/anthropic-ipo]]、[[topics/ai-talent-flow]]、[[topics/competitor-landscape]]
+  - 安全政策：[[topics/ai-agent-safety]]、[[topics/anthropic-government-policy]]、[[topics/recursive-self-improvement]]
+  - 社群：[[topics/community-integrations]]、[[topics/community-skills]]、[[topics/community-tech-patterns]]（母頁）、[[topics/community-tech-discussions]]
+  - 投資分析：[[topics/market-signals]]
+  - 模型：無（唯一一則 Opus 5.6 存在性傳聞判證據不足，不收）
+- 新增頁面：無
+- 摘要：今日最大事件是 Anthropic 正式向 SEC 提交公開版 S-1（擬於 Nasdaq 以代號「ANT」掛牌），連帶把先前外流的 807 億美元淨損數字升級為官方一手，並新增 14 倍營收成長、企業大戶支出 20 倍、雲端算力承諾逾 5000 億美元等數字；安全政策面首度記錄 Claude 存取喬治亞州選民資料並繞過付費牆一事（Anthropic 已證實）、前 DOGE 新創聲稱入侵 Anthropic（未證實）、Downloads 資料夾提示注入攻擊面；商業面另有 Elvis Presley 音樂版權方對 Anthropic 提起新訴訟（274 首歌曲，與 10-22 Reservoir／Suno 案不同起）；人物面 eu.36kr.com 的 Claude Code Desktop 創作者辭職傳聞（判定為 Boris Cherny）因單一低分來源未經證實，僅標 ❓ 待查證
+- 呈現品質：全部通過
+- 分類回退：無
+- 轉知帳本：新開 H-72a5d9（安全政策→功能：Martin Cid Magazine 報導的 Downloads 資料夾提示注入攻擊面，請功能記者評估是否同步收入 entities/claude-code.md 已知問題）
+- 主編裁決（記者回報「⚠️ 需主編同步/查證」各項，當輪直接處理）：
+  - [商業][社群] index.md 一句鉤子已同步：[[topics/anthropic-business]] 改寫為「公開版 S-1 已於 2026-10-26 正式提交 SEC」；[[topics/community-tech-patterns]] 模式概覽列數 19→20
+  - [投資分析] 三則判讀所引數字（ANT 代號與 Nasdaq 掛牌、四家雲端承諾總額、14 倍成長、20 倍客戶集中度）僅見標題層級，建議下次本機 session 以 SEC EDGAR 正式 S-1 文件核對精確數字與統計期間口徑——本機承接，留待查證
+- devpractice 沉澱：本日無開發實務分類派工包（分類階段零則判為官方使用指南類），候選 0 筆（檢視當日 13 頁新增行，皆為 frontmatter 統計刷新或不符開發做法範圍，無新候選）；手冊正文本輪寫入 0 則；基準線推進至 86b1120c64
+- market 判讀：判讀 3 則（IPO 進程第 19、20 則：S-1 正式提交與 14/20 倍兩項企業結構數字；雲端供應鏈承諾總額開新線），寫入 [[topics/market-signals]]，覆寫 3 列買得到的標的（Broadcom／Amazon／Alphabet）、里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列，結算日 2026-11-09；已標訊 3 筆既有懸置標記（10-15／10-21／10-22 的 IPO 遞件查證），證據不足不動 1 筆（Tom Brown／SpaceX 交易）
