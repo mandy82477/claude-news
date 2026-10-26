@@ -3,17 +3,17 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-25"
-last_news_update: "2026-10-23"
+last_updated: "2026-10-26"
+last_news_update: "2026-10-26"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 12
-attribution_last: "2026-10-21"
+attribution_count: 14
+attribution_last: "2026-10-26"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

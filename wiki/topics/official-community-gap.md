@@ -7,11 +7,11 @@ last_updated: "2026-10-24"
 last_news_update: "2026-10-04"
 status_main: "monitoring"
 matrix_role: "追蹤頁"
-days_since_news: 21
+days_since_news: 22
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 21
+days_since_news_subtree: 22
 inbound_links: 41
 attribution_count: 18
 attribution_last: "2026-10-01"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 官方功能 vs 社群痛點缺口分析
