@@ -243,8 +243,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "a8a7baa9db5ee92320962d21a80932a45431a16ba5c22abb2b7ff3eb52681e81",
-    "length": 189365,
+    "hash": "1b18f6a039d986fe4b505cba36ec55467846906d901c7e726dc0c53062fe7946",
+    "length": 201162,
     "segments": [
       "\"HTTPS_PROXY\": \"http://proxy.example.com:8080\",",
       "\"NODE_EXTRA_CA_CERTS\": \"/etc/ssl/certs/example-ca.pem\"",
