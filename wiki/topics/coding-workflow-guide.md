@@ -7,11 +7,11 @@ last_updated: "2026-10-24"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 37
 attribution_count: 4
 attribution_last: "2026-09-28"

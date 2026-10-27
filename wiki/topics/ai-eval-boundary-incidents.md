@@ -3,18 +3,18 @@ page: "topics/ai-eval-boundary-incidents"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-25"
-last_news_update: "2026-10-24"
+last_updated: "2026-10-27"
+last_news_update: "2026-10-27"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 1
-attribution_count: 0
-attribution_last: null
-top_source: null
+attribution_count: 1
+attribution_last: "2026-10-27"
+top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-11-06"

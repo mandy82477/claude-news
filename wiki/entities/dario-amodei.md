@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-18"
 status_main: "active"
-days_since_news: 8
+days_since_news: 9
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 8
+days_since_news_subtree: 9
 inbound_links: 32
 attribution_count: 44
 attribution_last: "2026-10-18"
