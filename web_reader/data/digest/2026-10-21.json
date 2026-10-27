@@ -455,11 +455,6 @@
   "preview": "Claude Code：版本：v2.1.306 純 bug 修復（雲端 session claude -p 誤報「Not logged in」、「prompt is too long」曾蓋掉真正的 API 錯誤）；anthropic-sdk-python／anthropic-sdk-typescript 同步發新版（詳",
   "sedimentedToday": [
     {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
       "pageType": "topic"
