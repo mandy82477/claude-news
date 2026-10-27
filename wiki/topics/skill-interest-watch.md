@@ -1,39 +1,13 @@
----
-page: "topics/skill-interest-watch"
-kind: "topic"
-status: "ongoing"
-domain: "🌐 社群"
-last_updated: "2026-10-26"
-last_news_update: "2026-10-26"
-update_freq: "🗓️ 每日快照（機器產出；「本週竄升」以七日星數差計）"
-status_main: "ongoing"
-days_since_news: 0
-parent: null
-children: "[]"
-page_role: "root"
-days_since_news_subtree: 0
-inbound_links: 10
-attribution_count: 0
-attribution_last: null
-top_source: null
-pending_count: 0
-pending_overdue: 0
-pending_next_review: null
-pending_signalled: 0
-staleness_exempt: null
-signal: "健康"
-generated_by: "scripts/gen_wiki_frontmatter.py"
----
 # 社群工具規模榜
 
 **狀態：** ongoing
 **開始日期：** 2026-09-02
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 每日快照（機器產出；「本週竄升」以七日星數差計）
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 
-> **本頁是什麼**（快照 2026-10-26）
+> **本頁是什麼**（快照 2026-10-27）
 > - **這頁是什麼**：各類社群工具在 GitHub 上現在誰最大、本週誰在漲（6 類可用 GitHub 辨識，每日快照）。
 > - **該裝哪個**：看 [[topics/community-tech-tools]]「我卡在這裡」決策表——有人判斷過，帶證據等級與判定日；那頁另有 181 列工具目錄。
 > - **星數是規模不是品質**：本頁不做推薦；每類底下的「本庫判斷 →」直接連到那頁對應的症狀列。
@@ -61,15 +35,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) 🧭 📰 | 224,347 | A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's o… |
-| [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) 📰 | 13,003 | All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts… |
-| [drona23/claude-token-efficient](https://github.com/drona23/claude-token-efficient) | 6,124 | One CLAUDE.md file. Keeps Claude responses terse. Reduces output verbosity on heavy workf… |
-| [gadievron/raptor](https://github.com/gadievron/raptor) | 3,942 | Raptor turns Claude Code into a general-purpose AI offensive/defensive security agent. By… |
-| [centminmod/my-claude-code-setup](https://github.com/centminmod/my-claude-code-setup) | 2,683 | Shared starter template configuration and CLAUDE.md memory bank system for Claude Code |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) 🧭 📰 | 225,298 | A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's o… |
+| [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) 📰 | 13,014 | All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts… |
+| [drona23/claude-token-efficient](https://github.com/drona23/claude-token-efficient) | 6,127 | One CLAUDE.md file. Keeps Claude responses terse. Reduces output verbosity on heavy workf… |
+| [gadievron/raptor](https://github.com/gadievron/raptor) | 3,943 | Raptor turns Claude Code into a general-purpose AI offensive/defensive security agent. By… |
+| [centminmod/my-claude-code-setup](https://github.com/centminmod/my-claude-code-setup) | 2,686 | Shared starter template configuration and CLAUDE.md memory bank system for Claude Code |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | +3,180 | 224,347 |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | +3,877 | 225,298 |
 
 ### codebase 探索與理解（對應 [[topics/coding-workflow-guide]] 第 2a 段）
 
@@ -77,19 +51,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) 🧭 📰 | 135,919 | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowle… |
-| [Egonex-AI/Understand-Anything](https://github.com/Egonex-AI/Understand-Anything) 🧭 📰 | 88,370 | Graphs that teach > graphs that impress. Turn any code into an interactive knowledge grap… |
-| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) 🧭 📰 | 75,427 | Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gem… |
-| [getzep/graphiti](https://github.com/getzep/graphiti) | 32,243 | Build Real-Time Knowledge Graphs for AI Agents |
-| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) 📰 | 15,848 | Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude re… |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) 🧭 📰 | 136,736 | Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowle… |
+| [Egonex-AI/Understand-Anything](https://github.com/Egonex-AI/Understand-Anything) 🧭 📰 | 88,536 | Graphs that teach > graphs that impress. Turn any code into an interactive knowledge grap… |
+| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) 🧭 📰 | 75,586 | Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gem… |
+| [getzep/graphiti](https://github.com/getzep/graphiti) | 32,272 | Build Real-Time Knowledge Graphs for AI Agents |
+| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) 📰 | 15,880 | Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude re… |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | +6,973 | 135,919 |
-| [Egonex-AI/Understand-Anything](https://github.com/Egonex-AI/Understand-Anything) | +1,388 | 88,370 |
-| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) | +979 | 75,427 |
-| [getzep/graphiti](https://github.com/getzep/graphiti) | +204 | 32,243 |
-| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) | +202 | 15,848 |
+| [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | +6,972 | 136,736 |
+| [Egonex-AI/Understand-Anything](https://github.com/Egonex-AI/Understand-Anything) | +1,361 | 88,536 |
+| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) | +1,067 | 75,586 |
+| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) | +215 | 15,880 |
 
 ### 規劃與拆解（對應 [[topics/coding-workflow-guide]] 第 3 段）
 
@@ -97,15 +70,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | 73,043 | Spec-driven development (SDD) for AI coding assistants. |
-| [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) 📰 | 64,215 | A light-weight and powerful meta-prompting, context engineering and spec-driven developme… |
-| [gsd-build/gsd-2](https://github.com/gsd-build/gsd-2) | 7,760 | A powerful meta-prompting, context engineering and spec-driven development system that en… |
-| [buildermethods/agent-os](https://github.com/buildermethods/agent-os) | 5,548 | Agent OS is a system for injecting your codebase standards and writing better specs for s… |
+| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | 73,141 | Spec-driven development (SDD) for AI coding assistants. |
+| [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) 📰 | 64,206 | A light-weight and powerful meta-prompting, context engineering and spec-driven developme… |
+| [gsd-build/gsd-2](https://github.com/gsd-build/gsd-2) | 7,761 | A powerful meta-prompting, context engineering and spec-driven development system that en… |
+| [buildermethods/agent-os](https://github.com/buildermethods/agent-os) | 5,552 | Agent OS is a system for injecting your codebase standards and writing better specs for s… |
 | [Pimzino/spec-workflow-mcp](https://github.com/Pimzino/spec-workflow-mcp) | 4,302 | A Model Context Protocol (MCP) server that provides structured spec-driven development wo… |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | +629 | 73,043 |
+| [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | +620 | 73,141 |
 
 ### 實作期攔錯（hook／lint／型別）（對應 [[topics/coding-workflow-guide]] 第 4 段）
 
@@ -137,18 +110,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [tw93/Kami](https://github.com/tw93/Kami) | 12,092 | 👩‍🚒 Good content deserves good paper. Layout rules and templates that let AI agents expor… |
-| [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop) | 7,229 | Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and cod… |
-| [steipete/agent-rules](https://github.com/steipete/agent-rules) | 5,672 | Rules and Knowledge to work better with agents such as Claude Code or Cursor |
-| [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) 🧭 📰 | 5,602 | ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewr… |
-| [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows) | 5,519 | AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents |
+| [tw93/Kami](https://github.com/tw93/Kami) | 12,100 | 👩‍🚒 Good content deserves good paper. Layout rules and templates that let AI agents expor… |
+| [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop) | 7,296 | Rules for an AI coding agent to filter out generic AI-generated UI designs, text, and cod… |
+| [steipete/agent-rules](https://github.com/steipete/agent-rules) | 5,673 | Rules and Knowledge to work better with agents such as Claude Code or Cursor |
+| [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) 🧭 📰 | 5,644 | ASD-STE100 Simplified Technical English rules, repurposed as a Claude Code skill for rewr… |
+| [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows) | 5,541 | AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop) | +715 | 7,229 |
-| [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) | +406 | 5,602 |
-| [WorldFlowAI/everything-claude-code](https://github.com/WorldFlowAI/everything-claude-code) | +402 | 5,434 |
-| [Nanako0129/sepia](https://github.com/Nanako0129/sepia) | +252 | 3,499 |
+| [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop) | +636 | 7,296 |
+| [danyuchn/asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) | +395 | 5,644 |
+| [WorldFlowAI/everything-claude-code](https://github.com/WorldFlowAI/everything-claude-code) | +389 | 5,489 |
+| [Nanako0129/sepia](https://github.com/Nanako0129/sepia) | +240 | 3,515 |
 
 ## B. 治理（管 agent 的需求）
 
@@ -160,17 +133,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [Yeachan-Heo/oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex) | 33,638 | OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much mor… |
-| [NanmiCoder/cc-haha](https://github.com/NanmiCoder/cc-haha) 📰 | 15,176 | 本地优先的跨平台 Claude Code / AI Agent 桌面工作台：多 Agent 协作、Git Worktree、代码 Diff、技能市场、多模型、Computer U… |
-| [OrchestratorInc/agent-orchestrator](https://github.com/OrchestratorInc/agent-orchestrator) | 13,701 | Open-source (Apache-2.0) orchestrator for Claude Code, Codex & 30+ coding agents. Plan, r… |
-| [revfactory/harness](https://github.com/revfactory/harness) | 9,258 | A meta-skill that designs domain-specific agent teams, defines specialized agents, and ge… |
-| [automazeio/ccpm](https://github.com/automazeio/ccpm) | 8,417 | Project management skill system for Agents that uses GitHub Issues and Git worktrees for… |
+| [Yeachan-Heo/oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex) | 33,643 | OmX - Oh My codeX: Your codex is not alone. Add hooks, agent teams, HUDs, and so much mor… |
+| [NanmiCoder/cc-haha](https://github.com/NanmiCoder/cc-haha) 📰 | 15,195 | 本地优先的跨平台 Claude Code / AI Agent 桌面工作台：多 Agent 协作、Git Worktree、代码 Diff、技能市场、多模型、Computer U… |
+| [OrchestratorInc/agent-orchestrator](https://github.com/OrchestratorInc/agent-orchestrator) | 13,762 | Open-source (Apache-2.0) orchestrator for Claude Code, Codex & 30+ coding agents. Plan, r… |
+| [revfactory/harness](https://github.com/revfactory/harness) | 9,268 | A meta-skill that designs domain-specific agent teams, defines specialized agents, and ge… |
+| [automazeio/ccpm](https://github.com/automazeio/ccpm) | 8,420 | Project management skill system for Agents that uses GitHub Issues and Git worktrees for… |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [bowenliang123/dsh-context](https://github.com/bowenliang123/dsh-context) | +1,281 | 3,639 |
-| [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpencil) | +424 | 6,700 |
-| [OrchestratorInc/agent-orchestrator](https://github.com/OrchestratorInc/agent-orchestrator) | +336 | 13,701 |
+| [bowenliang123/dsh-context](https://github.com/bowenliang123/dsh-context) | +1,307 | 3,702 |
+| [ZSeven-W/openpencil](https://github.com/ZSeven-W/openpencil) | +424 | 6,720 |
+| [OrchestratorInc/agent-orchestrator](https://github.com/OrchestratorInc/agent-orchestrator) | +351 | 13,762 |
 
 ### git／commit 衛生自動化
 
@@ -184,18 +157,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 目前前 5 | ★ | 一句話 |
 |---|---|---|
-| [Tencent/WeKnora](https://github.com/Tencent/WeKnora) | 35,532 | Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomou… |
-| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 29,980 | TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations,… |
-| [nashsu/llm_wiki](https://github.com/nashsu/llm_wiki) | 20,992 | LLM Wiki is a cross-platform desktop application that turns your documents into an organi… |
-| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) 📰 | 15,848 | Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude re… |
-| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | 15,225 | Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with… |
+| [Tencent/WeKnora](https://github.com/Tencent/WeKnora) | 35,641 | Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomou… |
+| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | 30,021 | TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations,… |
+| [nashsu/llm_wiki](https://github.com/nashsu/llm_wiki) | 21,027 | LLM Wiki is a cross-platform desktop application that turns your documents into an organi… |
+| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) 📰 | 15,880 | Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude re… |
+| [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | 15,234 | Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with… |
 
 | 本週竄升 | 七日增量 | ★ 現值 |
 |---|---|---|
-| [Tencent/WeKnora](https://github.com/Tencent/WeKnora) | +817 | 35,532 |
-| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | +349 | 29,980 |
-| [nashsu/llm_wiki](https://github.com/nashsu/llm_wiki) | +202 | 20,992 |
-| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) | +202 | 15,848 |
+| [Tencent/WeKnora](https://github.com/Tencent/WeKnora) | +805 | 35,641 |
+| [TencentCloud/TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) | +332 | 30,021 |
+| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) | +215 | 15,880 |
+| [nashsu/llm_wiki](https://github.com/nashsu/llm_wiki) | +201 | 21,027 |
 
 ---
 
