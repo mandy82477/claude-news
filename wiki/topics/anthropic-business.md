@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 %%
 
-> **最新動態**（2026-10-26）
-> - **公開版 S-1 今日正式提交**：官方確認＋NYT 稱營收年增 14 倍、New Stack 稱 Claude Code 企業大戶支出為一般用戶的 20 倍。
-> - **HN 909 分熱議雲端算力承諾**：S-1 揭露承諾 Google $114B、AWS $110B、Broadcom $161B、SpaceX $120B，質疑需求撐不撐得住。
-> - **Elvis Presley 版權訟案擴大報導**：NYT、衛報等 4 媒體跟進控告 Anthropic 用 274 首歌曲訓練 AI，為本週第二起音樂版權訴訟。
+> **最新動態**（2026-10-27）
+> - **S-1 再爆細節**：90% 程式碼由 Claude 自撰、一個月訓練暫停與資安事件、AI 損失恐超保險業承保能力（WSJ／Business Insurance／Fox News）。
+> - **CFO Krishna Rao 面臨上市前最關鍵考驗**（Fortune）；華爾街銀行＋Blackstone 安排 630 億美元融資供 Broadcom 晶片採購。
+> - **近 100 頁風險清單含生物武器、勒索、「AI 甦醒」用語**（CNN／WaPo），企業採用仍處「早期階段」（WSJ）。
 
 ---
 
@@ -131,6 +131,10 @@ Anthropic 的收入來自兩條軌道（2026-06-15 後正式成文化）：
 
 **2026-10-23 新增：外部學者質疑 10-18 內部雇用研究方法論**：The Guardian 報導多名外部學者對上述 10-18 內部雇用結構研究提出方法論質疑，認為樣本與對照設計可能不足以支撐原報告結論；原文未附具體反駁數據，僅標題與摘要層級可用。**對商業的意涵**：若質疑成立，可能削弱 Anthropic 以該研究佐證「AI 提升生產力」敘事的說服力（推論）（Google News/The Guardian）。
 
+**2026-10-27 新增：S-1 首度揭露 Claude 現在寫下公司逾 90% 程式碼**：Forbes、The Times of India 報導申報文件揭露此一內部生產力數字；與 10-18 已記錄之「互動式 agent 工時達員工工時 6 倍」同屬內部雇用結構系列訊號，衡量基準未見細節，僅標題可用。
+
+**資料使用政策（官方既有規則，2026-10-27 經 Hacker News 100 分重新聚焦）**：官方隱私文件載明，Claude for Work、Anthropic API 等商業方案預設不用輸入輸出訓練模型，但使用者透過 👍👎 按鈕主動回報意見或另外選擇同意時，當次對話與程式開發過程可能被納入訓練。常用意見回饋按鈕的商業方案團隊可留意這點（[官方說明](https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training)；Hacker News）。
+
 > 更多計費細節見 [[entities/pricing]]
 
 ---
@@ -152,6 +156,8 @@ Simon Willison（知名開發者博主）發表文章，認為 Anthropic 與 Ope
 Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general consumer users）上，不敵定價較低的競品工具。**與既有 PMF 論述的關係**：Simon Willison 的 PMF 分析聚焦**開發者**工作流依賴度，本則聚焦**一般消費者**採用面，衡量對象不同、不構成矛盾，但共同呈現「開發者端 PMF 強、消費者端 PMF 弱」的分層圖像；與「定價強勢期」（企業客戶即使漲價仍留存，The Information 05-13）並置時可補一句：企業／開發者端定價強勢，與一般消費者端價格敏感流失，可能同時成立（推論）。具體流失規模、競品名稱、量化數字未見報導，僅標題可用。
 
 **08-25 跟進（cio.com，企業端視角，非新事實）**：cio.com 報導部分企業對 Anthropic 旗艦模型的採用意願不如預期熱絡。**與 08-23 FT 報導的關係**：FT 聚焦**一般消費者**採用面，本則聚焦**企業**端採用意願，若兩者均屬實，代表「旗艦模型吸引力不足」的現象可能同時出現在消費者與企業兩端，而非僅限一般消費者價格敏感群體（推論）；惟本則同樣僅標題層級可用，未見具體企業名稱、採用意願不足的原因（成本、效能、或替代方案競爭）等細節，暫不視為獨立新增結論，僅作既有反面訊號的並置補充（Google News/cio.com）。
+
+**10-27 跟進（WSJ，公司自評，非新事實）**：Anthropic 在 S-1 申報文件中自陳企業 AI 採用目前仍處「早期階段」；與既有 08-23 FT／08-25 cio.com「企業採用意願不如預期」同屬企業端 PMF 偏弱訊號，差別是本則為公司自身口徑而非外部報導，具體早期階段定義未見報導。
 
 ---
 
@@ -201,6 +207,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **著作權集體訴訟核准**：美國法官正式核准，Engadget 稱「創紀錄」和解金額，New York Post 稱「AI 著作權訴訟首宗達成和解的重大案件」；著作權訴訟風險首次獲司法定案結果，IPO 前瞻敘事整備背景下降低法律不確定性（推論）。
 - **著作權和解案執行細節**：逾 48.2 萬本受涵蓋書籍中約 91% 已由作者或出版商提出賠付申請（每本約 3,000 美元）；法院文件顯示法官將集體訴訟律師費比例削減至 6.8%；英國出版商 Bloomsbury 確認為受益方之一。原告律師 Justin Nelson 稱此為「史上最大宗已知著作權求償和解案」（經 Hacker News 討論；courtlistener.com 法院文件 PDF）。
 - **著作權和解案讀者反應報導**：NPR 報導作家群體對已核准的 15 億美元 Anthropic 著作權侵權集體訴訟和解案反應不一；與既有 91% 賠付申請率、6.8% 律師費削減、Bloomsbury 分潤等執行細節屬同一和解案的後續讀者反應報導，未見新增賠付金額或條款細節。
+- **Stanford Daily 點名具體受害教授（2026-10-27，非新訴訟）**：Bartz v. Anthropic 和解案（已判決和解）中逾 10 位史丹佛教授著作遭盜版用於訓練，含 Tobias Wolff、Abraham Verghese；既有和解案的新聞角度補充，非新訴訟（Hacker News；Stanford Daily）。
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 **結構性問題**：訂閱方案補貼規模龐大（社群估算 13–40 倍），6/15 政策是 Anthropic 收窄補貼的第一步。社群討論「未來必然漲價」但 Anthropic 無官方回應。
@@ -218,6 +225,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | Claude Code Projects 多 agent 併發推高用量（2026-09-17） | 同時開多個長任務 agent 的 Pro／Max 訂閱用戶 | 限制併發 agent 數量、盯緊用量儀表板，避免額度提前用罄 | ⚠️ 中 | 一級媒體 |
 | 訂閱補貼倍數是兩位數，收窄是進行式（2026-09-06） | 靠訂閱跑自動化工作流的重度使用者 | 先量自己的等值 API 花費，再決定要不要簽長約 | ⚠️ 中 | 社群估算 |
 | 專利侵權訴訟（UTRF，2026-08-24） | 全部使用者（求償含禁制令請求） | 沒有繞法。看訴訟進度，Anthropic 已表明全力抗辯 | ⚠️ 中 | 法院文件＋一級媒體 |
+| AI 相關損失恐超出保險業承保能力（2026-10-27） | 需為 AI 相關營運風險投保的企業採購方 | 評估現有保單是否涵蓋 AI 損失上限，不夠則另尋風險轉嫁方案 | ⚠️ 中 | 官方一手（S-1）＋一級媒體 |
 
 **嚴重度：** ⚠️ 高＝已經有人因此改了做法；⚠️ 中＝方向明確但還沒落到你身上；ℹ️ 低＝有人這樣說，還沒有可觀察的後果。
 
@@ -226,10 +234,14 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **競品分流（OpenCode、DeepSeek）** → [[topics/competitor-landscape]]「對手雷達」
 - **浮水印可被繞過** → [[topics/anthropic-government-policy]]（法源與產品後果都在那邊）
 
-%% 維運備忘：2026-09-18 新風險「Claude Code Projects 多 agent 併發推高用量」（The New Stack，⚠️ 中）進表，表滿載觸發讓位，依留表優先序（ℹ️ 低最先）讓位者為「雲端夥伴以自研模型替代」，已移出表、細節區加註未列入標記。餘五列本輪到期檢查：開源分流 09-04（2026-12-03）、音樂訴訟（不適用 90 天）、企業因成本退出 07-23（2026-10-21）、補貼倍數 09-06（2026-12-05）、UTRF（訴訟，不適用）。表 6 列滿載，最早到期為企業因成本退出 2026-10-21。 %%
+%% 維運備忘：2026-09-18 新風險「Claude Code Projects 多 agent 併發推高用量」（The New Stack，⚠️ 中）進表，表滿載觸發讓位，依留表優先序（ℹ️ 低最先）讓位者為「雲端夥伴以自研模型替代」，已移出表、細節區加註未列入標記。2026-10-27 新增「AI 相關損失恐超出保險業承保能力」（官方 S-1＋Business Insurance，⚠️ 中），表由 5 列補滿至 6 列上限，本輪未觸發讓位。餘五列本輪到期檢查：開源分流 09-04（2026-12-03）、音樂訴訟（不適用 90 天）、企業因成本退出 07-23（2026-10-21，已逾期待 /wiki-lint 5j 處置）、補貼倍數 09-06（2026-12-05）、UTRF（訴訟，不適用）。表 6 列滿載。 %%
 
 **商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve Eisman 唱空、頂尖模型是否停售企業客戶——五則都是評論或單一來源，移出表、留在細節區。田納西大學那列併入專利訴訟列，不另計。本輪另移出「雲端夥伴以自研模型替代」，結論見下方細節區標記。
 
+- **AI 損失恐超保險業承保能力（2026-10-27，Business Insurance）**：S-1 申報文件警告，AI 相關損失規模可能超出整個保險業承保能力；具體量化門檻與保險業回應未見報導，僅標題可用。見上方風險表新增列。
+- **近 100 頁風險清單含生物武器、勒索、「AI 甦醒」用語（2026-10-27，CNN／WaPo）**：S-1 附上近百頁風險清單，點名生物武器、勒索並用「對人類的風險」字眼；WaPo 聚焦「AI 甦醒」警語。安全面見 [[topics/ai-agent-safety]]。
+- **S-1 揭露一個月訓練暫停與資安事件（2026-10-27，Fox News／CNBC 引路透社）**：申報文件揭露公司曾有為期一個月的訓練暫停，以及資安事件；暫停原因與事件細節未見報導，僅標題可用。操作面細節見 [[topics/ai-agent-safety]]。
+- **企業 AI 採用仍處「早期階段」（2026-10-27，WSJ）**：Anthropic 在申報文件中自陳企業採用 AI 目前仍處早期階段；與「現在的數字」表「企業採用率」43.5%（Ramp Index，衡量家數）為不同維度的官方自評，具體早期階段的定義與量化指標未見報導。
 - **訊 2026-10-26 追蹤**：NYT、衛報、Mashable、Fox News 跟進 Elvis Presley 版權方告 Anthropic 案，確認求償標的 274 首歌曲；求償金額未見報導（4 媒體同日跟進）。
 - **訊 2026-10-24 追蹤**：Billboard、Hollywood Reporter 同日報導另一起音樂出版商告 Anthropic 案，指控用 Elvis Presley 音樂訓練 AI；與 10-22 Reservoir／Suno 案不同起，原告與求償金額未見報導，僅標題可用（Billboard＋Hollywood Reporter）。
 - **訊 2026-10-22 追蹤**：Billboard 報導音樂出版商 Reservoir 加入控告 Suno 與 Anthropic，指控兩家公司「意圖取代創作者」；求償金額與具體論點未見報導，僅標題可用（Billboard）。
@@ -281,11 +293,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 |---|---|---|---|
 | Nscale（第二筆） | 約 $450 億，條款與年期未見（10-20） | 洽談中，尚未定案 | 目前無可見後果。下一個觸發點：簽約與容量公告 |
 | Nscale（第一筆） | $450 億，460 MW Vera Rubin 世代，年期未見（08-28） | 已簽 | 目前無可見後果；第二筆金額同為 $450 億，與此筆獨立 |
-| Blackstone | 晶片融資，兩位數殖利率；利率、金額、期限未見（10-17） | 已報導，簽署與條款未載 | 目前無可見後果。下一個觸發點：利率與金額公開 |
+| Blackstone | 晶片融資，兩位數殖利率；併入銀行團 $630 億 Broadcom 晶片融資方案（10-26 更新），殖利率仍未見 | 規模已確認，利率條款未載 | 目前無可見後果。下一個觸發點：利率與條款公開 |
 | EverWind（加拿大新斯科舍省） | 資料中心供電給 Claude；規模、金額、時程未見（10-16） | 計畫報導，簽署未載 | 目前無可見後果。下一個觸發點：規模與上線時程 |
 | Samsung Foundry | 代工 Anthropic 設計 AI ASIC，2 奈米；金額、產能未見（10-07） | 較 07 月洽談階段具體化，簽約未載 | 目前無可見後果（未見 Claude 改在該晶片上服務的時程） |
 | SpaceX | 每月 $12.5 億運算容量；範圍未見（10-03／10-10） | 合作已報導，細節未見 | 目前無可見後果。下一個觸發點：算力規模公開 |
-| Broadcom | 貸款租賃晶片：最高 $420 億（10-01），$600 億債務融資（10-02） | 考慮中，融資已啟動，條款未見 | 目前無可見後果。下一個觸發點：條款或交付時程 |
+| Broadcom | 貸款租賃晶片：最高 $420 億（10-01）；華爾街銀行＋Blackstone 安排 $630 億融資（10-26，較 10-02 的 $600 億更新） | 規模已確認，條款未見 | 目前無可見後果。下一個觸發點：條款或交付時程 |
 | Akamai | $116 億 7 年 CPU 算力，另有報導稱 $120 億（09-25） | 已簽，含認股權證約 770 萬股 | 目前無可見後果 |
 | Fluidstack | $500 億算力建置案，結構與時程未見（09-07） | 報導稱主導建置，簽署未載（僅標題） | 目前無可見後果 |
 | Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽 | 目前無可見後果；循環融資質疑屬評論 |
@@ -299,7 +311,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **來源**
 - Nscale 兩筆：第二筆 CNBC、Reuters、Bloomberg（2026-10-20）；第一筆 Forbes、Financial Times（2026-08-28）。
-- Blackstone：Financial Times、Yahoo Finance（2026-10-17）。EverWind：Global News、CBC（2026-10-16）。Samsung Foundry：TechPowerUp（2026-10-07）。
+- Blackstone：Financial Times、Yahoo Finance（2026-10-17）；Reuters（630 億美元銀行＋Blackstone 聯合融資，2026-10-26）。EverWind：Global News、CBC（2026-10-16）。Samsung Foundry：TechPowerUp（2026-10-07）。
 - SpaceX：Barchart.com（2026-10-03）、Hacker News 轉 WSJ（2026-10-10）；WSJ 稱由共同創辦人 Tom Brown 透過共和黨人脈牽線。
 - Broadcom：Reuters 獨家引文件（2026-10-01）、Yahoo Finance、qz.com（2026-10-02）。
 - Akamai：Bloomberg、WSJ、IBD、Reddit（2026-09-25）。Fluidstack：AI Magazine（2026-09-07）。Lambda／Hut 8：多家媒體（2026-09-01／09-07）；24/7 Wall St. 質疑循環融資（09-02，評論）。
@@ -519,6 +531,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 經 Bloomberg 報導加入 compute 團隊，向 James Bradbury 匯報；實際到任日官方未公開 |
 | [[entities/tom-brown\|Tom Brown]] | Anthropic 共同創辦人 | 2026-10-10 WSJ 報導其利用共和黨人脈牽線促成每月 $12.5 億 SpaceX 運算容量交易（僅標題與 HN 摘要可用，WSJ 原文付費牆） |
 | Eric Schmidt | 前 Google 執行長 | 2026-10-19/20 於 Anthropic IPO 前曝光持有約 1% 股權，Bloomberg 估算潛在報酬可觀（Bloomberg；Quartz；Reuters） |
+| Krishna Rao | Anthropic CFO | 2026-10-27 Fortune 稱隨 IPO 逼近，面臨上任以來最關鍵一次考驗；具體檢視項目未見報導（Fortune） |
 
 %% 維運備忘：裁決點 1（四人物頁併入本頁）未回覆，依保守預設「不併」——四頁維持獨立，本表以 wikilink 指過去。若日後裁決「併」，四頁各留 redirect 殼，本表改為純文字並補一句「他這個動作對讀者意味什麼」。 %%
 
@@ -547,6 +560,18 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-27
+- **[重大事件] Forbes／The Times of India：S-1 首度揭露 Claude 現在寫下 Anthropic 自家逾 90% 程式碼**：詳見「商業模式」段新增說明，衡量基準未見細節（Google News/The Times of India）
+- **[商業風險] Fox News／CNBC 引路透社：S-1 揭露一個月訓練暫停與資安事件**：暫停原因與事件細節未見報導，詳見「還沒過去的風險」細節區（Google News/Fox News）
+- **[商業風險] Business Insurance：Anthropic 警告 AI 相關損失恐超出保險業承保能力**：詳見「還沒過去的風險」表新增列（Google News/Business Insurance）
+- **[商業風險] CNN／WaPo：S-1 近 100 頁風險清單含生物武器、勒索、「AI 甦醒」用語，使用「對人類的風險」字眼**：詳見「還沒過去的風險」細節區，安全面細節另見 [[topics/ai-agent-safety]]（Google News/CNN）
+- **[商業模式] WSJ：Anthropic 自陳企業 AI 採用仍處「早期階段」**：詳見「產品市場契合度」段新增說明（Google News/WSJ）
+- **[IPO 前瞻] Fortune：CFO Krishna Rao 隨 IPO 逼近面臨上任以來最關鍵考驗**：詳見「上面提到的人是誰」表新增列與 [[topics/anthropic-ipo]]（Google News/Fortune）
+- **[戰略合作] Reuters：華爾街銀行與 Blackstone 安排 630 億美元融資，供應 Anthropic 向 Broadcom 採購 AI 晶片**：詳見「算力與資金從哪來」表 Broadcom／Blackstone 列更新（Google News/Reuters）
+- **[公司治理，僅標題可用] Reuters：Anthropic 規劃創辦團隊卸任後仍能監督強大 AI 系統使用的治理機制**：接續 10-22 哈佛前科學院長 Christopher Stubbs 加入長期利益信託的人事任命，具體治理架構細節未見報導（Google News/Reuters）
+- **[商業風險，非新事實] Stanford Daily：點名逾 10 位史丹佛教授著作遭用於訓練 Claude**：詳見「這些數字是誰說的」細節區，案件本身為既有已判決和解案（Hacker News）
+- **[商業模式] Anthropic 官方隱私文件：商業方案按 👍👎 回報意見或另行同意者，對話可能被用於訓練**：既有規則因 Hacker News 100 分重新聚焦，詳見「商業模式」段新增說明（Hacker News）
 
 #### 2026-10-26
 - **[IPO 前瞻] Anthropic 官方確認：公開版 S-1 今日正式提交 SEC**：擬以代號「ANT」在 Nasdaq Global Select Market 掛牌普通股；詳見 [[topics/anthropic-ipo]]（[Anthropic 官方](https://www.anthropic.com/news/s1-sec)）

@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 
-> **最新動態**（2026-10-26）
-> BBC／Axios／CNN：Anthropic IPO 前 S-1 文件警告 AI 可能構成「災難性風險」，呼應本頁核心矛盾；政府/產品後果面見 [[topics/anthropic-government-policy]]。
+> **最新動態**（2026-10-27）
+> CNN／The Washington Post 補上 S-1 風險清單具體項目（生物武器、勒索、「AI 甦醒」警語）；Forbes／Times of India 另揭露 S-1 首度確認 Claude 占 Anthropic 自身程式碼比例超過 90%（續 06-04 報告「80–90%」）。政府/產品後果面見 [[topics/anthropic-government-policy]]。
 
 ---
 
@@ -91,6 +91,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，屬單方指控、無證據，詳見「## 技術彙整」。
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 - **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
+- **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
+  - Forbes／Times of India 另揭露 S-1 首度確認 Claude 占 Anthropic 自身程式碼比例超過 90%，為 06-04 報告「80–90%」數字的來源升級，詳見「## 技術彙整」。
 
 ---
 
@@ -105,17 +107,27 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Claude 負責內部下一代模型開發工作量比例 | 約四分之一（25%） | 2026-09-18 | Reuters／Anthropic 官方部落格 | 第三種指標（工作量佔比），與前兩者口徑不同 |
 | R&D Automation Index：「主導」比例／完全無人監督比例 | 26%／0% | 2026-09-21 | dev.to（reidmarlow，社群分析，非官方一手） | 疑似與 09-18 的 25% 同一組官方數據，另補「零無人監督」，未經官方一手證實 |
 | 同時工作中的 agent 數量 | 約 3 萬個 | 2026-09-24 | Reddit r/ClaudeAI 週熱門（轉引 dev.to） | 與 26% 主導比例同源轉述，非獨立新披露，官方原始出處未見 |
+| Claude 占 Anthropic 自身程式碼比例（S-1 申請文件首度揭露） | 超過 90% | 2026-10-26／27 | Forbes／Times of India（經 AP News 系列報導） | 與 06-04《When AI Builds Itself》的「≥80%、部分報導稱 80–90%」同一量測對象，S-1 為首次由正式申請文件給出具體數字，非新指標；是否與 06-04 口徑完全一致未見說明 |
 
 ---
 
 ## 技術彙整
 
-### BBC／Axios／CNN：Anthropic IPO 前 S-1 文件警告 AI 可能構成「災難性風險」（2026-10-26 新增，跨頁指標）
+### Forbes／Times of India（經 AP News 系列報導）：S-1 申請文件首度揭露 Claude 現在寫下 Anthropic 自家超過 90% 程式碼（2026-10-26～27 新增）
 
-- **揭露來源**：BBC、Axios、CNN 同日報導，3 個獨立媒體
-- **核心主張（僅標題可用）**：Anthropic 上市前的 S-1 文件警告 AI 可能對人類構成「災難性風險」；具體條文、是否援引既有加州 SB 53「災難性風險」法定門檻定義均未見報導
-- **與既有敘事的關係**：呼應本頁「摘要」段落既有的核心矛盾——呼籲謹慎示警的同時走向 IPO；政府與產品後果面的完整記錄在 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複
-- **可信度評估**：三家主流媒體同日報導，惟均僅標題層級可用，原文細節未見
+- **揭露來源**：Forbes、Times of India（經 Google News／AP News 系列報導，2026-10-26～27）
+- **核心主張（僅標題可用）**：公開版 S-1 申請文件首度以正式文件形式揭露，Claude 現在寫下 Anthropic 自家超過 90% 的程式碼；具體量測方法、是否涵蓋全部內部程式碼庫均未見報導
+- **與既有敘事的關係**：與 06-04《When AI Builds Itself》報告「Claude 負責 ≥80% 生產程式碼（部分報導稱 80–90%）」為同一量測對象的**升級**——首次由正式 SEC 申請文件給出具體數字，而非官方部落格或研究報告，非新指標；見 [[#自我改進量化指標]]
+- **可信度評估**：Forbes、Times of India 經 AP News 轉載，惟均僅標題層級可用，S-1 原文對應條文與量測方法論未查證
+
+### BBC／Axios／CNN：Anthropic IPO 前 S-1 文件警告 AI 可能構成「災難性風險」（2026-10-26 新增，10-27 CNN／WaPo 補上風險清單具體項目，跨頁指標）
+
+- **揭露來源**：BBC、Axios、CNN 同日報導（10-26），3 個獨立媒體；CNN、The Washington Post 10-27 跟進報導
+- **核心主張（僅標題可用，2026-10-26）**：Anthropic 上市前的 S-1 文件警告 AI 可能對人類構成「災難性風險」；具體條文、是否援引既有加州 SB 53「災難性風險」法定門檻定義均未見報導
+- **10-27 補充（CNN）**：S-1 附上近 100 頁風險清單，點名生物武器、勒索等具體項目，並使用「對人類的風險」字眼；具體條文與是否已有緩解措施對應均未見報導（僅標題可用）
+- **10-27 補充（The Washington Post）**：同份風險清單中出現「AI 甦醒」（AI wakes up）這類警語；WaPo 報導聚焦此類警語本身，具體條文與脈絡未見報導（僅標題可用）
+- **與既有敘事的關係**：CNN／WaPo 10-27 報導是同一份 S-1 風險清單的具體項目披露，呼應本頁「摘要」段落既有的核心矛盾——呼籲謹慎示警的同時走向 IPO；政府與產品後果面的完整記錄在 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複
+- **可信度評估**：10-26 三家＋10-27 兩家主流媒體同日報導，惟均僅標題層級可用，S-1 原文風險清單條文本身未見查證
 
 ### Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio、Accenture 同列評估者，呼應上月簽署白宮超級智慧協議（2026-10-16 新增，官方一手）
 

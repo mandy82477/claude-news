@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 
-> **新增跨 5 款工具的對話歷史擷取工具**（2026-10-21）
-> - **jatechan/ai-data-extractor**：開源擷取工具，解析 Claude Code、Cursor、Windsurf、Aider、Cline／Roo Code 等本機對話歷史並匯出。
+> **新增本機可視化編修 AI 對話記憶工具**（2026-10-27）
+> - **voidcraft-dev/memory-forge-rs**：Tauri + Rust 打造的離線本機 session 管理器，可直接可視化編輯對話記憶，涵蓋 Claude Code、Codex、Gemini CLI 等多款工具。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### voidcraft-dev/memory-forge-rs：本機 session 管理器，可視化編輯 AI 對話記憶，涵蓋 Claude Code 等多款工具（2026-10-27）
+
+- **主線：** 索引記憶
+- **核心模式：** 用 Tauri + Rust 打造的 100% 離線本機工具，讓使用者直接可視化編輯／改寫 AI 對話的記憶內容，而非放棄已進行到一半的對話重開；支援 Claude Code、Codex、OpenCode、Gemini CLI、Kiro CLI、pi、Cursor；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（claude-mem、projectmem、jatechan/ai-data-extractor 等）一個「記憶可視化直接改寫」取向——既有做法多聚焦擷取、搜尋或持久化記憶，本則讓使用者手動編修記憶內容本身，涵蓋多款 agent 工具；跨工具持久記憶核心概念相符，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/voidcraft-dev/memory-forge-rs)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### jatechan/ai-data-extractor：跨 5 款 AI coding agent 的對話歷史擷取工具，含 Claude Code（2026-10-21）
 

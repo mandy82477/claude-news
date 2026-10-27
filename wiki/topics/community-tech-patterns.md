@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-26
+**最後更新：** 2026-10-27
 **最後新聞更新：** 2026-10-24
 
-> **Plugin / MCP 整合新增一例，可靠性測試類別重新出現動態**（2026-10-26）
-> - **Plugin / MCP 整合**：kanaworksai-hue/audio-studio-mcp，本機生成式音訊 MCP server（免雲端免 API key），見 [[topics/community-integrations#2026-10]]。
-> - **可靠性測試**：Reddit 貼文提出把「需求沒做到」與「測試寫得太綁死」分開判讀的方法，距上次動態（2026-07-12）逾 3 個月後重新出現，見 [[topics/community-skills#2026-10]]。
+> **Hooks 與自動化、記憶與知識管理同日各新增一例**（2026-10-27）
+> - **Hooks 與自動化**：EricTechPro/super-board，綁定 GitHub Project 看板的建置→QA→審查全自動迴圈，見 [[topics/community-guardrails#2026-10]]。
+> - **記憶與知識管理**：voidcraft-dev/memory-forge-rs，可視化編輯 AI 對話記憶的本機 session 管理器，見 [[topics/community-memory#2026-10]]。
 
 ---
 
@@ -53,10 +53,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-21 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-27 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-24 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-26 |
-| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-23 |
+| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-27 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-26 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-24 |
 
@@ -70,16 +70,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
+| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、routines 排程自動化、EricTechPro/super-board 等（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-27 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Skills 設計** | oil-oil/draw-ui、Masriyan/Claude-Code-CyberSecurity-Skill、codeswithroh/tastemaker 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-26 | description 自動觸發，把書籍與流程封裝成可複用 skill |
-| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、sloppy、routines 排程自動化（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-23 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、amux、Offrun、zhikuncode 等（[[topics/community-multi-agent#2026-10]]） | ✅ 成熟 | 2026-10-19 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-memory#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
+| **記憶與知識管理** | claude-mem、projectmem、jatechan/ai-data-extractor、voidcraft-dev/memory-forge-rs 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-27 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **Plugin / MCP 整合** | pipeboard、marvkr/better-design、kanaworksai-hue/audio-studio-mcp 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-26 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、官方審查機制（[[topics/community-guardrails#2026-10]]） | ⚡ 活躍 | 2026-10-16 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Haiku 5.5 價格閘門、tokentab（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-13 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-14 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router、Atticus（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-22 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **記憶與知識管理** | claude-mem、projectmem、second-brain-os、deja-vu、jatechan/ai-data-extractor 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-21 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、vscode-bridge 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | **創意工具 Agent 整合** | Palmier Pro、reelmimic、GodotMaker、Quick Study 等（[[topics/community-integrations#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
 | **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck、claude-share、Corgi 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |

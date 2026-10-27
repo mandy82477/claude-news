@@ -103,10 +103,10 @@
     "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
     "source": "Hacker News",
     "categories": [
-      "社群"
+      "商業"
     ],
     "reason": "",
-    "note": ""
+    "note": "分類回退自社群（社群記者判定：本地端 Claude/ChatGPT 替代品屬競品動態，非 Claude Code 工作流模式）"
   },
   "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training": {
     "title": "Giving chat feedback gives Anthropic your data",
@@ -228,9 +228,11 @@
   "https://www.reddit.com/r/ClaudeCode/comments/1xgvuu5/claude_code_suddenly_started_talking_to_me_in/": {
     "title": "Claude Code suddenly started talking to me in German, explaining what it was doing. WTF?",
     "source": "Reddit / r/ClaudeCode",
-    "categories": [],
-    "reason": "Reddit 互動 0、非週熱門標記、單一來源，score 不可信，不因單一貼文收錄",
-    "note": "",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "分類回退自排除（分類複核記者判定：具體功能缺陷回報，無熱度門檻）",
     "summary_override": "Reddit 使用者回報 Claude Code 無預警改用德文回覆並說明自己在做什麼，互動 0、單一來源，score 不可信。"
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xgvsoh/the_most_boring_part_of_my_job_now_is_waiting_for/": {
@@ -267,9 +269,11 @@
   "https://www.reddit.com/r/ClaudeCode/comments/1xgv098/recent_change_in_opus_safety_classifiers_about/": {
     "title": "Recent change in opus safety classifiers about 10h ago?",
     "source": "Reddit / r/ClaudeCode",
-    "categories": [],
-    "reason": "Reddit 互動 0、非週熱門標記、單一來源，score 不可信，不因單一貼文收錄",
-    "note": ""
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "分類回退自排除（分類複核記者判定：具體安全分類器行為異常回報，無熱度門檻）"
   },
   "https://news.google.com/rss/articles/CBMifkFVX3lxTFBNdE1WOWlrUDJuS0JmYXd6WGpfOFJtQWZYcHRac1JId01VVTA0N09Qa05oMGdCS2xHS1VQWHV5Ty16QWxadzZuMGp3N1hXX3REMHdTMzNLVklDcmJoTVNvRnY5NnZmOEFmOFdoU1YtZ3ZlUlNtbEUyTjI4cUk0Zw?oc=5": {
     "title": "Anthropic’s Claude took Georgia vote counts without even asking - TheStreet",
@@ -438,10 +442,10 @@
     "title": "GPT-6.1 Terra launches with cheaper computer use, but Claude and OpenAI's own top models still lead in independent tests - XenoSpectrum",
     "source": "Google News / XenoSpectrum",
     "categories": [
-      "模型"
+      "商業"
     ],
     "reason": "",
-    "note": ""
+    "note": "分類回退自模型（模型記者判定：純競品模型發布訊息，無 Claude 模型新事實）"
   },
   "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTDYzTWVQbzlrTFY2TzhBSVdkWExubjl6MmUzSUVUakF5cElQMDdVVlN1NlU1d3hqcDczMEN3NTgtTUpEcWtoUllPdHQzekJtYUxiTzhOVWgyZkI0RnJlNmVCVHJoaWRaTkZ3d1UxTlNRVzJyZnp6YU1BbHc5bzlYUUtUT19LUnhDbjY5SUFLR1VkVExLYWE0OURlZHMtQjRM?oc=5": {
     "title": "Cursor turns its coding agent into a TypeScript SDK anyone can build on - Startup Fortune",
@@ -473,10 +477,10 @@
     "title": "GPT-6.1 Terra",
     "source": "Blog / Simon Willison",
     "categories": [
-      "模型"
+      "商業"
     ],
     "reason": "",
-    "note": ""
+    "note": "分類回退自模型（模型記者判定：純競品模型發布訊息，無 Claude 模型新事實）"
   },
   "https://news.google.com/rss/articles/CBMiugFBVV95cUxQS3FLY3BuUDlrcDFuUnJvU2dEZG16ejUwV0dwQzlWT2JWTndReVcxU2VPMnhhQXQySFROWVNCUG1udmY1aGVaMnl5UVAzcFlteE9TUWtiX1BlMTdGd1NvWlowck1IQ1BMa0w1Rm9Vc2Z5UjVpZGdoVkRTTXQxYmhNcTR5aXI4X1N0dkdXNTFZdWpnQ2ZadzRWWTZiVjJQUENaZlY4dElkdl8xNlI4SFhBWHk5ZFFOQ0Fja2c?oc=5": {
     "title": "Anthropic’s IPO Sets Up Defining Moment for Wall Street and AI Boom - Bloomberg.com",
@@ -500,9 +504,11 @@
   "https://www.reddit.com/r/LocalLLaMA/comments/1xgbkks/tool_calling_is_still_just_a_prompt/": {
     "title": "Tool calling is still just a prompt",
     "source": "Reddit / r/LocalLLaMA",
-    "categories": [],
-    "reason": "內容泛論 LLM tool calling 架構，未見具體 Claude/Anthropic 關聯",
-    "note": ""
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "分類回退自排除（分類複核記者判定：可複用的工具呼叫架構討論，社群類不限出處）"
   },
   "https://github.blog/changelog/2026-10-26-github-copilot-assisted-permissions-generally-available": {
     "title": "GitHub Copilot assisted permissions generally available",

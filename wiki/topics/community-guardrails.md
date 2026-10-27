@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 
-> **規格驅動開發新增全流程自動化 skill**（2026-10-23）
-> - **nick-vels/skills**：描述想法即自動寫規格、拆任務、實作並對照原始需求檢查結果，附即時進度儀表板。
+> **Hooks 與自動化新增 GitHub Project 建置→QA→審查全自動迴圈**（2026-10-27）
+> - **EricTechPro/super-board**：綁定 GitHub Project 看板，自動跑完建置、QA 與審查三階段，宣稱一行安裝。
 
 ---
 
@@ -94,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### EricTechPro/super-board：綁定 GitHub Project 看板的建置→QA→審查全自動迴圈，一行安裝（2026-10-27）
+
+- **主線：** —
+- **核心模式：** 針對 Claude Code 的全自動迴圈：綁定 GitHub Project 看板，自動跑完建置、QA 測試與審查三階段，宣稱一行指令即可安裝；GitHub Search 521 星。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧（PostToolUse 稽核、Git Hooks 品質門等，[[topics/community-guardrails#2026-10]]）一個「GitHub Project 看板建置→QA→審查全自動迴圈」取向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（521★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體 QA／審查判定機制未見細節。
+- **來源：** GitHub Search；[GitHub](https://github.com/EricTechPro/super-board)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### nick-vels/skills：描述想法即自動寫規格、拆任務、實作並對照需求檢查，附即時進度儀表板（2026-10-23）
 

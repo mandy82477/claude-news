@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-27
+**最後新聞更新：** 2026-10-27
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-26）
-> - 🔴 **GitHub Copilot 10-15 agentic autofix（程式碼掃描警示自動修復）正式 GA，10-14 HydraFusion 新增 Max 方案**（官方）——Claude Code 兩項皆無對應功能/方案，選型時又多兩層要比。
-> - 🔴 **GPT-6.1 Sol 10-15 成為 Codex CLI 預設模型，宣稱成本降 77%**（tech-insider.org，單一來源）——低價層從「可選」變「預設」，壓縮 Claude 中階模型的性價比優勢。
-> - 🔴 **Google Gemini 4 Argon 全面開放後，GA 上架 GitHub Copilot**（10-14，官方）——直接打進 Claude Code 既有的企業 IDE 整合戰場。
+> **本週衝擊**（2026-10-27）
+> - 🔴 **GitHub Copilot「輔助式權限」10-26 正式 GA（CLI／App／VS Code）**（官方）——Copilot 執行指令或存取路徑時能提供輔助判斷，Claude Code 仍逐次手動核准，自動化流程摩擦差距拉大。
+> - 🔴 **GPT-6.1 Terra 10-26 進駐 GitHub Copilot，官方定位比 Sol 更便宜**（官方）——低價層再下探一階，想省錢的日常編碼任務多一個比價對象。
+> - 🟡 **Cursor 把自家 coding agent 包成 TypeScript SDK，開放任何人建置**（Startup Fortune）——還不影響現有 Claude Code 用戶，但評估自建 agent 產品的人多一個平台選項可比。
 
 ---
 
@@ -49,15 +49,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **Microsoft／GitHub** 🏢 | 10-22：VS 版新增 PR 聊天瀏覽、換模型、弱點自動修補；11-16 起棄用部分模型；全域預設開啟政策正式 GA → Claude Code 均無對應 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；棄用清單未列完整型號，VS 版細節與 GA 確認同源 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）** 🏢 | 10-22 推出 Decisions API 正式版（GPT-6 Luna，宣稱快 10 倍、低成本決策任務）；10-15 GPT-6.1 Sol 成為 Codex CLI 預設模型（成本降 77%）→ 低價快決策與編碼成本同步下壓 | 定價 | 🔴 | 09-29 開放為 OpenAI／GitHub 雙重一手；10-15「改預設」僅 tech-insider.org 單一來源；Decisions API 官方部落格一手；牌價已查證 ⟨Q-07⟩ |
+| **Microsoft／GitHub** 🏢 | 10-26：Copilot「輔助式權限」於 CLI／App／VS Code 正式 GA，執行指令或存取路徑時可提供輔助判斷 → Claude Code 仍逐次手動核准，自動化摩擦差距拉大 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；輔助判斷依據的具體機制未載 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
+| **Cursor** 🏢 | 10-27 把自家 coding agent 包成 TypeScript SDK，開放任何人在自己程式裡呼叫建置 → 從「工具」升級為可嵌入他人產品的平台，評估自建 agent 的人多一個選項 | 生態 | 🟡 | Startup Fortune 單一來源，僅標題可用，SDK 能力範圍與定價未載 |
 | **Meta（Muse Code／Muse Glimmer／Muse Wonder）** 🏢 | 官方發布新前沿模型 Muse Wonder／Full，主打法律、金融、健康等 agentic 任務並宣稱具 frontier coding 能力（10-12）→ 模型層再添一位對手，直接比拚 agentic coding | 能力 | 🟡 | Meta Newsroom 官方一手；benchmark、定價、與 Muse Code 整合關係均未見 |
 | **xAI（Grok 4.7）** | Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線（09-21）→ 經 Copilot 生態擴大觸及，多一個推理模型選項 | 生態 | 🟡 | GitHub 官方 changelog 一手來源，惟無 benchmark 或定價資訊 |
-| **Cursor** 🏢 | OpenAI 傳 11/12 斷供（09-04）→ 只影響 Cursor 使用者，Claude Code 使用者不必動 | 生態 | 🟡 | 單一 Reddit 週熱門討論串，無官方、無主流媒體 |
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
 | **OpenCode** | 開源免費替代，社群採用規模仍是主要訊號（08-01）→ 想離開訂閱制時的第一個候選 | 定價 | 🟡 | 下載量倍數的統計方法未揭露，完整脈絡見 [[entities/opencode]] |
@@ -73,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Cursor 側有佐證（檢索摘要）：[Cursor 文件](https://cursor.com/docs/models/glm-5-3)列 GLM 5.3 為 Z.ai 最新開放權重編碼模型（需手動加入、計第三方額度池）；Cursor 10-01 的 X 貼文稱 GLM 5.3 Max 是其內部 CursorBench 4.0 得分最高的開放權重模型（SmartScope 轉述）。「雙重背書」只有 Cursor 一半有跡可循。
 
 %% 維運備忘：上表固定 12 列，⚪ 級一律不佔列，動態只在時序累積。2026-09-07：騰訊 Hy4（唯一 ⚪ 列）讓位給新進 xAI（Grok 4.5，🟡），移入下方未列入清單。 %%
-**未列入上表**（⚪ 級，動態仍記在下方時序）：Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）、Reflection（10-06，開源權重新創，NYT 稱崛起為 Anthropic 新挑戰者，模型與數字未見）；AgentConnect（新聞稿自宣）依准入不入表。
+**未列入上表**（⚪ 級，動態仍記在下方時序）：Hob（FrigadeHQ，10-26，MIT 授權本地端桌面 app，比照 Claude／ChatGPT 桌面版但模型於本機執行，尚無對比對象）、Base44（Wix，09-28，Base Code 直接對標 Claude Code 與 Cursor，具體定價與能力未見）、騰訊 Hy4（08-29，開放權重 770B、不含視覺，尚無對比對象）、Slack Code（Salesforce，08-26 官方確認，整合 Claude 與 ChatGPT 而非取代）、Inherent（08-23，公司自宣）、Thinking Machines Inkling（07-20 首款開源權重模型）、Perplexity（07-07 傳聞開發中）、中國 360 Tulongfeng（06-28，網路安全 AI，對標 Mythos 5）、Sakana AI Fugu（06-28，宣稱對標 Fable 5）、Google 未命名競品（Sergey Brin 主導，04 月起無新動態）、Reflection（10-06，開源權重新創，NYT 稱崛起為 Anthropic 新挑戰者，模型與數字未見）；AgentConnect（新聞稿自宣）依准入不入表。
 
 ## 硬答案
 
@@ -243,6 +243,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-27
+- **Microsoft／GitHub**：Copilot「輔助式權限」（assisted permissions）於 CLI／App／VS Code 正式 GA；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
+- **OpenAI（GitHub Copilot）**：GPT-6.1 Terra 正式 GA 進駐 Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作；詳見「對手雷達」OpenAI 列更新（Blog/GitHub Copilot Changelog）
+- **OpenAI（分析文，透過觀察）**：Simon Willison 觀察 GPT-6.1 Terra 主打視覺推理與電腦操作，市場定位類似 Claude Sonnet——非最便宜也非最貴，難判斷何時該用，不列入「對手雷達」表（Blog/Simon Willison）
+- **Cursor**：把自家 coding agent 包成任何人都能呼叫的 TypeScript SDK；詳見「對手雷達」Cursor 列更新（Google News/Startup Fortune；Topic Watch/competitor-landscape）
+- **Greptile（透過比較報導，⚪）**：OpenAI 官方部落格介紹 Greptile 以 GPT-6 Astra 的電腦操作能力，把測試範圍從讀程式碼擴大到實際跑一遍使用者流程；Greptile 本身非 Anthropic 直接對標對象，具體與 Claude 的對比未見報導，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非競品動態）**：官方部落格分享與學術社群合作驗證 Kakeya 猜想、指數時間假設、量子色動力學等模型研究成果；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Hob（開源新進者，⚪）**：FrigadeHQ 作者於 HN 發布 MIT 授權本地端桌面 app，操作檔案方式比照 Claude／ChatGPT 桌面版，模型改在使用者自己電腦執行（Gemma 4／gpt-oss），尚無對比對象，不列入「對手雷達」表（Hacker News／HN Repo Bridge）
 
 ### 2026-10-26
 - **OpenAI（分析文，非競品動態）**：官方部落格宣布與 Fanatics 合作「Shop the Look」電商個人化功能，測試約 3 萬件 MLB 商品，互動率提升 10%；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）

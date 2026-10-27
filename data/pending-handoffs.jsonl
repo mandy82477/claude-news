@@ -326,3 +326,6 @@
 {"id": "H-59807e", "closed": "2026-10-24", "status": "void", "by": "主編", "result": "功能記者核對：『產品化矩陣』實指 official-community-gap.md（非 anthropic-product-matrix.md），5 筆候選各為單一社群 repo 未達入列判準，且判準③需一手查證，本輪不宜逕自開列；理由成立，void"}
 {"id": "H-6ced0e", "closed": "2026-10-25", "status": "done", "by": "模型", "result": "模型記者 2026-10-25 ingest 回報已處理"}
 {"id": "H-72a5d9", "opened": "2026-10-26", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "Martin Cid Magazine 報導 Claude Code／Codex 會遵從 Downloads 資料夾內任何網站放入的檔案指令（prompt injection 攻擊面）；安全政策已於 topics/ai-agent-safety 加 ❓ 待查證並列入攻擊面表，請評估是否同步收入 entities/claude-code.md 已知問題", "status": "open"}
+{"id": "H-72a5d9", "closed": "2026-10-27", "status": "done", "by": "功能", "result": "功能記者 2026-10-27 ingest 回報已處理"}
+{"id": "H-6b29fd", "opened": "2026-10-27", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "topics/ai-agent-safety「Downloads 資料夾攻擊面」續有第二獨立來源（CyberSecurityNews）報導 Claude Code／Codex 遵從 Downloads 資料夾內任意檔案指令；另有補派條目（opus-5-5 安全分類器誤判，情境貼近 Claude Code 編碼工作流），請功能記者下一輪留意是否已有對應開發者回報", "status": "open"}
+{"id": "H-2fcc1b", "opened": "2026-10-27", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "今日 patterns 樹新增兩則節點（EricTechPro/super-board、voidcraft-dev/memory-forge-rs），請評估 official-community-gap.md 產品化矩陣是否需新增對應列", "status": "open"}

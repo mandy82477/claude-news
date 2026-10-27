@@ -8216,3 +8216,31 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [投資分析] 三則判讀所引數字（ANT 代號與 Nasdaq 掛牌、四家雲端承諾總額、14 倍成長、20 倍客戶集中度）僅見標題層級，建議下次本機 session 以 SEC EDGAR 正式 S-1 文件核對精確數字與統計期間口徑——本機承接，留待查證
 - devpractice 沉澱：本日無開發實務分類派工包（分類階段零則判為官方使用指南類），候選 0 筆（檢視當日 13 頁新增行，皆為 frontmatter 統計刷新或不符開發做法範圍，無新候選）；手冊正文本輪寫入 0 則；基準線推進至 86b1120c64
 - market 判讀：判讀 3 則（IPO 進程第 19、20 則：S-1 正式提交與 14/20 倍兩項企業結構數字；雲端供應鏈承諾總額開新線），寫入 [[topics/market-signals]]，覆寫 3 列買得到的標的（Broadcom／Amazon／Alphabet）、里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列，結算日 2026-11-09；已標訊 3 筆既有懸置標記（10-15／10-21／10-22 的 IPO 遞件查證），證據不足不動 1 筆（Tom Brown／SpaceX 交易）
+
+## 2026-10-27 Ingest
+
+- 來源日報：[[news/2026-10-27]]
+- 更新頁面：
+  - 人物：新建 [[entities/krishna-rao]]
+  - 功能：[[entities/claude-code]]、[[topics/claude-code-experimental]]
+  - 商業：[[topics/anthropic-business]]、[[topics/anthropic-ipo]]、[[topics/competitor-landscape]]
+  - 安全政策：[[topics/ai-agent-safety]]、[[topics/ai-eval-boundary-incidents]]、[[topics/recursive-self-improvement]]
+  - 社群：[[topics/community-guardrails]]、[[topics/community-memory]]、[[topics/community-tech-discussions]]、[[topics/community-tech-patterns]]（母頁）
+  - 投資分析：[[topics/market-signals]]
+  - 模型：無（GPT-6.1 Terra 兩則經分類回退改歸商業，模型頁本輪無異動）
+  - 開發實務：無（唯一候選「Pro/Max 登入文件更新」判定不落在九段工程流程任一階段，未收錄）
+- 新增頁面：wiki/entities/krishna-rao.md（Anthropic CFO，整合 08-14 CNBC 既有事實與今日 Fortune 新動態）；index.md 已補列
+- feature-radar：新增「Claude Code self-hosted runner idle session 保留旗標」（v2.1.311，`--hold-idle-file`／`--max-hold-min`），最後更新改 2026-10-27
+- 摘要：今日最大事件是 Anthropic 公開版 S-1 全面發酵——《華盛頓郵報》首度揭露 800 億美元虧損、《富比士》與《印度時報》揭露 Claude 現在寫下 Anthropic 自家超過 90% 的程式碼、《福斯新聞》與 CNBC 引路透社揭露一個月訓練暫停與資安事件、CNN／WaPo 揭露近百頁風險清單（生物武器、勒索、AI 甦醒）、路透社揭露 630 億美元 Broadcom 晶片融資與創辦團隊卸任後的治理安排；安全政策面 CyberSecurityNews 為 Downloads 資料夾劫持攻擊面提供第二獨立來源佐證；功能面 Claude Code v2.1.311 正式發布並新增 15 個功能候選旗標，GitHub Issue 揭露 headless `claude -p` 消耗 1.8 倍 5 小時使用視窗；人物面因 CFO Krishna Rao 連續第二次具名點名達建頁門檻新建頁面
+- 呈現品質：全部通過
+- 品質備註：
+  - [商業] 4 則派工包內條目（BBC「5 件驚奇」、Guardian「四個重點」、WSJ「調整後利潤」、HN「最荒謬 IPO」分析文件）記者未逐一點名處置，判斷為與既有 S-1 覆蓋重疊之合理省略，非漏看；[安全政策] 1 則（CNBC trickle-down effect）已在補充說明處理，僅未被腳本關鍵字比對抓到
+  - [社群] 3 則 GitHub Search 條目（Vincentwei1021/anything2explainer、elmohq/elmo、oil-oil/oil-motion）記者未逐一說明收錄與否，推定依收錄門檻判斷不足額而略過，非漏看
+  - [開發實務] 「Pro/Max 登入文件更新」在功能、開發實務兩邊都判定不屬於自己的收錄範圍（功能：官方使用指南類分類層直接派給開發實務；開發實務：不落在九段工程流程），目前無記者認領，留待下次 ingest 或 /wiki-lint 覆核是否有第三類別適用
+- 分類回退：追加派工 4 筆，當輪全數處理完畢（模型→商業 2 筆：GPT-6.1 Terra 兩則，商業記者已收錄進 topics/competitor-landscape；社群→商業 1 筆：Show HN Hob，商業記者已收錄；分類複核記者另抓出 3 筆誤排除→功能 1 筆（德文無預警切換 bug，已以 ❓ 待查證寫入 entities/claude-code）、安全政策 1 筆（opus 安全分類器誤判回報，已以 ❓ 待查證寫入 ai-agent-safety）、社群 1 筆（r/LocalLLaMA tool calling 討論，社群記者評估後判定不收錄，討論三路門檻與 patterns 門檻皆未達標）
+- 轉知帳本：結案 H-72a5d9（功能，Downloads 資料夾提示注入攻擊面已同步進 entities/claude-code）；新開 H-6b29fd（安全政策→功能：Downloads 資料夾攻擊面第二來源＋opus 安全分類器異常，請功能記者下一輪留意）；新開 H-2fcc1b（社群→功能：patterns 樹新增 2 節點，請評估 official-community-gap.md 產品化矩陣是否需新增列）
+- devpractice 沉澱：本日無開發實務候選（檢視當日新增行皆為 frontmatter 統計刷新或星數快照，無實質內容；唯一候選判定不落在九段工程流程任一階段，未收錄）；手冊正文本輪寫入 0 則；基準線推進至 113fc54740
+- market 判讀：判讀 3 則（S-1 風險清單首度點名生物武器與勒索／保險業承保能力示警；S-1 首度揭露一個月訓練暫停與資安事件；630 億美元 Broadcom／Blackstone 融資案），寫入 [[topics/market-signals]]，覆寫 2 列買得到的標的（Broadcom／Blackstone）、里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列，結算日 2026-11-10；多則敘事型重複報導（$80B 虧損重複既有數字、1.5 兆估值重複既有數字、治理安排敘事未動數字、90% 程式碼非 S-1 數字類、兩則低互動 HN）判定未達新資訊門檻，不開新則
+- 主編待辦（記者回報「⚠️ 需主編留意」各項，留待 /wiki-lint 處理）：
+  - [商業] topics/anthropic-business「還沒過去的風險」表「企業轉向開源模型分流訂單」一列到期日 2026-10-21 已逾期，本輪未逕自裁定退場／補位，留待 /wiki-lint 5j
+  - [商業] topics/competitor-landscape「競品定價對照」表已達 13 列（超出 12 列上限，非本輪新增所致），建議 /wiki-lint 依久未更新退場規則處理

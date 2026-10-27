@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-27
 
 > **這禮拜動了什麼**（2026-10-22）
 > Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
@@ -68,6 +68,20 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Code self-hosted runner：idle session 保留旗標
+**發布：** 2026-10-26（v2.1.311） | **狀態：** 正式發布
+
+**是什麼：** 為 `self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min` 兩個旗標，host 回報還有殘留行程時，runner 可繼續保留一個 idle session 而不被提早回收。
+
+**為何熱：** GitHub Release 正式公告，目前互動為 0，尚無社群實測回饋。
+
+**快速上手：**
+```
+claude self-hosted-runner --hold-idle-file <path> --max-hold-min <分鐘數>
+```
+
+**注意事項：** 僅影響以 self-hosted runner 跑 Claude Code 自動化的團隊；一般互動式 CLI／桌面版用途不受影響。
 
 ### Claude Code Monitor tool（plugin 監控）
 **發布：** 2026-10-23（v2.1.310） | **狀態：** 正式發布
@@ -758,6 +772,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
