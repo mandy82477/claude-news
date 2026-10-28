@@ -8261,3 +8261,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - 加州州長表態原文與法院封鎖權具體適用條件——現僅 U.S. News & World Report 等標題層級可用
   - Mithril Medicine 收購金額、條款與創辦人真實身分——R&D World／Endpoints News 均僅標題層級
   - Managed Agents／Haiku 5.5／inference_geo=us 三項計費機制的具體費率數字——官方文件 https://platform.claude.com/docs/en/about-claude/pricing 原文待開連結核對
+- **訂正**：上方「devpractice 沉澱：本日無開發實務候選（當日分類無條目落入「開發實務」類）」一行是主編誤判——該步驟每日皆應派工做 wiki 新增行撿候選，不限於有無「開發實務」分類包；補派後實際結果：候選 8 筆（entities/claude-code ×2、topics/ai-agent-safety ×1、topics/community-guardrails ×2、topics/community-memory ×1、topics/community-tech-discussions ×1、topics/anthropic-business ×1，含 #97074 claude -p 額度耗用倍率、v2.1.311 疑似移除 rm 阻擋、Downloads 資料夾攻擊面二次來源確認等），已 append `data/devpractice-candidates.jsonl`，等週更落地手冊；基準線推進至 696d26f
