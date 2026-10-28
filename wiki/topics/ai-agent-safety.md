@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > - **入侵聲稱再跟進**：The Independent 稱該新創聲稱在 12 小時內「攻破」Anthropic（續 10-26 Gizmodo／WaPo），官方仍未回應。
 > - **rm 阻擋移除主張**：shattered.io／The Register 稱 v2.1.311 在 skip permissions 模式下移除 rm 阻擋，三篇報導皆僅標題可用、可信度偏低。
 >
-> 詳見下方「## 技術彙整」。
+> 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
 ---
 
