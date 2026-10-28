@@ -1,0 +1,692 @@
+{
+  "date": "2026-10-28",
+  "generatedAt": "2026-10-28 17:30 UTC",
+  "articleCount": 81,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+      "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+      "source": "Hacker News",
+      "time": "10/27 15:28",
+      "sentiment": "",
+      "body": "Stanford Daily 報導，指控 Anthropic 未經授權使用超過 10 位史丹佛教授的著作訓練 Claude，點名 Tobias Wolff、Abraham Verghese、Chang-Rae Lee、Daniel Mason、Hayagreeva Rao 與 Myra Strober 六位教授，並追溯今年 5 月 Bartz v. Anthropic 一案法官 William Alsup 的裁定——Authors Alliance 稱其為涉及 AI 公司最大規模的版權和解案之一。今日在 Hacker News 累積 552 分，是本日社群討論度最高的條目。關注 Anthropic 訓練資料合規爭議的人可留意具名教授名單與該案後續動作。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic Tells California Governor Courts Should Be Able to Block Risky AI Models - U.S. News & World Report",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc1o2ZnhZdWdYQVpiM2xVcGExX29qUVd3QldMWmwtdTFoYV9DOGRHNGxvdlB0OU5KMzRZOTJSUDRaX0JxdEFUMlI0VEtwdWMtc2tNVFBhXzZra0dleU51TDdzenIxR2piYnNDcDR5RXRVMXFTRHhvbEFlbU9hM3BlNXI5QUIzbFR2TU9IUHJ6MDI4Y25WUUp2T2xvRkhQUG1aOGxVcUN2TGRjWGZJVnVkcWlxQnlRYl9hc2hJR0Z5TjEtbFp3WTd2b3FQdU4wMWdlNGlNY2RB?oc=5",
+      "source": "Google News / U.S. News & World Report",
+      "time": "10/28 16:08",
+      "sentiment": "",
+      "body": "《美國新聞與世界報導》報導，Anthropic 向加州州長表態，主張法院應有權封殺風險 AI 模型；另一來源同日跟進，但兩篇報導都只有標題層級，具體主張內容與官方原文均未附。持續追蹤 Anthropic 監管立場的人可留意後續官方全文。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Releases Claude for Legal Artifacts, a Set of New Interactive Tools for Legal Users - Law.com",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTJlbERhR2hXeUJNbkw5cUVwd0Q1MTZkQUNMU0hWbnlfZmhlTmdOVi1CWm8yVjMwZ1NGaC1TZmdkOWg2S1c5bUpxelowTXdXcTh0aTExU0o4d2lEaDZHY1BIVlJFRTFpQ3FZUHM1VnZmNUxEb1d1eGpkR2U4ZkdvNjVnMGc5VEVpQ1pON28yaGs0alY0Tm1TOGRaQ1BMWWJmZlFYRm5nZHkxYXZZOEFxOWs5YU52QzI2VFBybzU5MW42NVpveEkxdGFwUEZpSWtkZmp2MThR?oc=5",
+      "source": "Google News / Law.com",
+      "time": "10/28 15:15",
+      "sentiment": "",
+      "body": "Reuters 與 Law.com 同日報導，Anthropic 推出「Claude for Legal Artifacts」，為法律從業者新增一組互動式工具；兩篇報導皆僅標題層級，未附具體功能細節。做法律科技選型評估的人可留意官方後續公告的功能清單。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop fails to launch on Windows — orphaned Silo / Job Object after app crash, only logoff or reboot recovers (HRESULT 0x80070020 in AppModel-Runtime EventID 215/208)",
+      "url": "https://github.com/anthropics/claude-code/issues/53247",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/28 07:49",
+      "sentiment": "",
+      "body": "今日累積 109 則留言、38 個 👍，使用者回報 Claude Desktop 在 Windows 上當機後會留下孤兒 Silo／Job Object，只有登出或重開機才能恢復使用。在 Windows 上跑 Claude Desktop 的使用者可留意是否已撞上這個當機後無法重啟的狀況。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/28 00:05",
+      "sentiment": "",
+      "body": "今日累積 41 則留言、17 個 👍，使用者回報 Cloud／Cowork session 的 git proxy 開始封鎖所有不在「本次 session 授權 repository 集合」內的推送，連使用者自備 PAT 也無法繞過，懷疑與代號 `CCR_TEST_GITPROXY` 的功能推出有關。用 Cowork／雲端 session 對外部 repo 推送程式碼的團隊應留意目前授權範圍是否因此被收緊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "anthropics/claude-code v2.1.312",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/27 20:24",
+      "sentiment": "",
+      "body": "正式發布的 v2.1.312 新增 `oidc.user_id_claim` 設定，讓 Claude apps gateway 能用 `sub` 以外的 id_token claim（例如 Microsoft Entra ID 的 `oid`）識別使用者；官方摘要另列有其他變更但未完整附上細節。用 OIDC 識別使用者、且身分欄位不是 `sub` 的團隊可留意這個新設定。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.312 build 新增 1 個功能候選旗標（自 2.1.311 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.312",
+      "source": "Build Flags",
+      "time": "10/28 16:44",
+      "sentiment": "",
+      "body": "承上，同一版 build 新增 1 個功能候選環境變數 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`，另有 1 個設定類旗標未列；同時有 1 個舊旗標 `CLAUDE_CODE_MCP_HANDED_LISTINGS` 消失。build 裡出現旗標不等於會正式上線，跑 nightly／pre-release 版的人可留意這個開關是否已改變既有行為。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "10/28 16:44",
+      "sentiment": "",
+      "body": "桌面版文件字數由 201,437 字增至 202,006 字，但頁面段落數（1,228）已超過自動比對上限 1,200，無法產生逐段差異。持續追蹤桌面版文件異動的人需自行開啟原文比對改了哪裡。",
+      "focusTags": []
+    },
+    {
+      "title": "[Status] Elevated errors affecting the Google Calendar connector",
+      "url": "https://status.claude.com/incidents/phg1y2yh07n2",
+      "source": "Anthropic Status",
+      "time": "10/28 16:19",
+      "sentiment": "",
+      "body": "官方狀態頁顯示，列出或搜尋 Google Calendar 連接器日曆事件的部分請求自 10/26 起即開始失敗，官方於 10/28 16:19 UTC 仍標記「調查中」，尚未標記解決。有串接 Google Calendar 連接器的使用者，可留意列出／搜尋行事曆事件的請求目前是否仍不穩定。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic IPO warns its AI could blackmail people, become sentient, end humanity - Ars Technica",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUTNLaEZxN01qbHhiZ3NjYWN0WHU2MmJ3Y1hWT1JHUVIyaUJCTkMxZjI2Zk05bmFLbzJxbDBSVTU2dEtobjlOdHE2VU5uQnpJVW9fMTVrUjZYc21WVUlDcEw3dHVoQ2FPQXkwYXlfajZZeDY1aWlZRlFnVG1JMFV2Z0twN3VvSlp1Um1LTzFQTXBad05iUV83dWo1Z3l3blJsd1RQRW5SS29QTXlmU0VUS212S08?oc=5",
+      "source": "Google News / Ars Technica",
+      "time": "10/27 21:31",
+      "sentiment": "",
+      "body": "承上日 S-1 揭露，Ars Technica 報導點出申請文件列出的具體風險字眼——AI 可能「勒索」、「產生自我意識」甚至「終結人類」；Yahoo Finance 同日另從申請文件挖出天然氣是 AI 擴張的關鍵瓶頸，Business Insider 引述「大賣空」投資人 Michael Burry 稱整個 AI 產業「災難性脆弱」，TechCrunch 則分析這次上市讓創投賺得多、但 Amazon 賺得更多。持續追蹤 Anthropic S-1 揭露內容與市場解讀的人可留意這批新角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Text Watermark Arrives on Opus 4.7, 4.6 and Sonnet 4.6 on November 3 - Pasquale Pillitteri",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbmNJb1p6UHlYdEJ2TlB1cmhsRG1lNUh4WUR1TkJFel9VYzl1YWpNdlJqYld4b3hySXVjRXdYSHVDWldRV09fQm1FUGpiWXN3d3JNMTdoT05oS2paUlhQY3RwY2JqMGt2QXp4aHlRTjc3Y1pxZUV0ajRxS1A1YUc0dUwzNnRYQWU5TDI2dnhQc2V1VnJDNUE?oc=5",
+      "source": "Google News / Pasquale Pillitteri",
+      "time": "10/28 12:24",
+      "sentiment": "",
+      "body": "報導指出，Claude 文字浮水印將於 11/3 上線 Opus 4.7、4.6 與 Sonnet 4.6；報導僅標題層級，未附浮水印機制細節與官方公告連結。想確認輸出內容是否可被浮水印追溯的使用者，可留意 11/3 上線後官方文件是否補充技術細節。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic manager says the 'coding interview is dead' — here's his advice for junior developers - Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNblo5NXRfeFc1dWFZVks0QmFUbmRVaDd1RVM0ZHNLRTRtTjJma0lhNndpT09lZy1UWEVrbUcydTVDMzh3aGgwTl9mb0xfS0FnV3Jxb3E0enNLdjdHR3pvLVlMTjdHd2ltczZsX053aWt1QUEyVzlTRHJnWDlUc3RORlFpRm1neDVVNEE5WUROU0JhcjBTMUFYQ0RNUDZUSWlfRHc3Mnh1X0owQ3JiMGVF?oc=5",
+      "source": "Google News / Business Insider",
+      "time": "10/28 11:56",
+      "sentiment": "",
+      "body": "Business Insider 報導，一位 Anthropic 經理稱「寫程式面試已死」，並對新進工程師給出建議；報導僅標題層級，具體建議內容未附。帶新人或正在調整招募流程的工程主管可留意官方後續是否有更完整的說法。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic hacked by AI startup in less than 12 hours, report claims - The Independent",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeUxBMDA5ZU9GbHo0R0F1bWMtbFVIWmRDS2dWZ094VU5wVG50XzlFQjNsZEFjZHo2d1d1R1NfM0pjY2xjQ3pLSzVwc3FuMnoxc0ljTHY1XzItNVRyeUFidUxaUFZyb0h3RnF3QmNmLWxHYXg2REtIcTRub0J1UWdnMnlvN3VCYmx2ZTNEelhOajMwdmJyOHJB?oc=5",
+      "source": "Google News / The Independent",
+      "time": "10/28 14:22",
+      "sentiment": "",
+      "body": "《獨立報》報導稱有 AI 新創在不到 12 小時內「攻破」Anthropic，惟報導僅止標題層級，攻擊手法、影響範圍與官方回應皆未附。關注 Anthropic 自身資安狀況的人可留意後續是否有更完整的報告或官方說明。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Show HN: Weir - Catch credential leaks in the AI agents you build and use",
+      "url": "https://github.com/IdoGol24/weir",
+      "source": "Hacker News",
+      "time": "10/27 16:07 UTC ·",
+      "sentiment": "😊",
+      "body": "Hacker News 今日有 3 分討論，作者發布開源工具 Weir：對自建 agent 植入假憑證並觀測是否外流到 telemetry、log 或對外請求；對正在使用的第三方 agent，則可監看網路流量找同樣的外流模式，兩種路徑都不會印出真實憑證內容。自建或大量串接第三方 AI agent、擔心憑證外洩的團隊可留意這個工具。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Nekot, an iPhone app that warns you before Claude Code limits hit",
+      "url": "https://jeman.net/nekot/",
+      "source": "Hacker News",
+      "time": "10/28 15:01 UTC ·",
+      "sentiment": "😊",
+      "body": "Hacker News 今日有 1 分討論，作者發布 iPhone app Nekot，在 Claude Code 用量即將觸頂前主動提醒。常在外用手機盯 Claude Code 用量、怕臨時卡用量上限的使用者可留意這個小工具。",
+      "focusTags": []
+    },
+    {
+      "title": "The October inflection point for vibe game development",
+      "url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+      "source": "Blog / Simon Willison",
+      "time": "10/28 13:55 UTC ·",
+      "sentiment": "🤔",
+      "body": "Simon Willison 延續他先前提出的「拐點」觀察——去年 11 月 Opus 4.5 與 GPT-5.1 讓 coding agent 出現轉折——今篇聚焦遊戲開發這個子領域今年 10 月出現類似的能力轉折。持續評估用 agent 做遊戲開發可行性的工程師可參考這篇觀察。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "t3dotgg/tstack",
+      "url": "https://github.com/t3dotgg/tstack",
+      "source": "GitHub Search",
+      "time": "10/28 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄，作者公開自己每天在用的一批 agent skills，相容 Claude Code 與 Codex，目前已有 2,199 星。想參考別人日常 skills 組合的使用者可從這份清單找起點。",
+      "focusTags": []
+    },
+    {
+      "title": "helloianneo/awesome-claude-code-skills",
+      "url": "https://github.com/helloianneo/awesome-claude-code-skills",
+      "source": "GitHub Search",
+      "time": "10/28 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄一份 Claude Code Skills／Agents／Plugins 精選合集，依場景分類並標示推薦等級，目前已有 500 星。想快速挑選現成 skill 而不想從零摸索的使用者可從這份合集找起點。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "10/28 16:44",
+      "sentiment": "",
+      "body": "定價文件新增約 10 段內容：Claude Managed Agents 的 session 以毫秒計費且只在運行中累計、閒置等待時間不計費；Claude Haiku 5.5 改為依 prompt 長度分級計價，prompt 超過 100,000 tokens 的請求收費更高；另當 agent 的推理地理區域（`model.inference_geo`）釱定在「us」時，另計一道資料居住（data residency）加成費率。用 Managed Agents 或長 prompt 跑 Haiku 5.5 的使用者應重新核對帳單假設。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code usage limits run out in hours, users report a bug - Pasquale Pillitteri",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUmptdkdzVnF6dTFuQl9kU3BjZzF5X3ZRb1N2MUlyWnhOWGhrVHFOd2Y2TksyUWdiLXN0aHVWRFhIdUdDM0Y3blFnVzl4a01SbkJaeTJmSlV5ZkJKSGZxekIwc0lYdHRnMDBzcVlhbDVsOFNyNmlGcUxUWVprX2xuNURUWjN1aldORTRjaVRyTHJFRGo0Rkd2cQ?oc=5",
+      "source": "Google News / Pasquale Pillitteri",
+      "time": "10/28 10:27",
+      "sentiment": "",
+      "body": "Google News 轉載報導稱有使用者回報，Claude Code 用量上限消耗速度異常加快，疑似程式錯誤；報導僅標題層級，未附官方回應或重現步驟。留意自己帳戶配額消耗速度的使用者，可對照官方用量頁確認是否受影響。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[風險警示]",
+      "text": "Anthropic 公開研究，指內部一個未發布的研究模型過去數月找出多款廣泛使用軟體的關鍵漏洞，公開 5 條攻擊鏈，可在幾乎不需使用者互動的情況下對 Chrome、Safari、Windows、Linux 達成遠端程式碼執行並繞過 Android 鎖定畫面；The Hacker News、CyberSecurityNews 同日跟進報導。追蹤 Claude 能力邊界與自家防禦面的資安團隊應留意這套攻擊鏈細節。",
+      "ref_urls": [
+        "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "The Hacker News"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "多家科技媒體（shattered.io、tech-insider.org，The Register 同日以「跳機不帶降落傘」為喻跟進）報導，Claude Code v2.1.311 在 skip permissions（跳過權限確認）模式下移除了原有對 `rm` 指令的阻擋。用 `--dangerously-skip-permissions` 跑自動化或 CI 的團隊，應重新檢視目前版本在跳過確認模式下對破壞性指令的防護範圍。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRVRBRThLTmJneFJSbGdaNFotUWRFTkpCOFJHRmk2ZEtTbEloZnd6ZW1PaDVaRVNYdS1Vbk1ORjFjU05JYThVYWRTaFZBd01FQUZTMHVRVk4tZE1WN0F2c1Z0LU5vMjl6VTFfbjctRUhwTjVsWk9vVXR1OTVlbk16c1lJSmJ1ZXl6QldoTWNR?oc=5",
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObXJKeUdKb0ZSVGVVTVFjRXVZNzkyeWExMWZEQWpEU0JEMTdpcndQQ0tYQS1ja3ZadzVPSkZkVzlncXJkN1J4TDIwSEVxQ21ycXBpUW9nTzg4aEhfUU55S2VsX3Ewd2t4YzJ4OVpfRGhyU2RUbW9GMXd2QlZKYVdVbXFwcFhTemkzbXVBbVg1dHVQNnpqWEthMF9QbGVsWDNzQVNicmxiUkdoUjJzYllUa1B0c1FwWDZqa2NOWlVZUExpUQ?oc=5"
+      ],
+      "ref_names": [
+        "shattered.io",
+        "The Register"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 與美國聯邦總務署（GSA）擴大合作，新協議把 Claude Enterprise、Claude for Government 與 Claude API 的折扣提升到 40%，首次涵蓋所有採購管道（含直接向 Anthropic 採購與日後透過雲端供應商採購），折扣並延伸到州、地方、部落與屬地政府；Hacker News 討論串今日匯集 5 個來源，FedScoop 等媒體同日報導。用 Claude for Government／Enterprise 編列採購預算的機構可留意新折扣是否已適用自己的採購管道。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/expanding-partnership-gsa",
+        "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50MnRrUWwyYUg2azNuWVBkYUdxeGxnVjJqVm43NThxQ2d0eGVrZUZTTHdIVngyWmVFRXdfUEFGcXVGMmFKRWxKVTc1Q2x3TDBSQ1pwY0NLUEphNUZwNk5nc2lSYlg?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "FedScoop"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 公開其生命科學團隊近況：過去數月已與 BigHat Biosciences、Bristol Myers Squibb、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 六個組織展開藥物開發研究合作，也已啟動自家藥物探索工作；Hacker News 討論串今日匯集 5 個來源。評估 Claude 在生命科學領域能力的團隊可留意這批合作細節。",
+      "ref_urls": [
+        "https://www.anthropic.com/research/early-progress-drug-development"
+      ],
+      "ref_names": [
+        "Anthropic"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 收購一人神秘生技新創 Mithril Medicine；Endpoints News 指出該公司是由一位匿名 Twitter 用戶經營的潛伏式新創（stealth startup），R&D World 同日報導。評估 Anthropic 跨入生技領域策略的人可留意這筆收購後續的整合動作。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxObHpwcmFPOUt4SGt2Q3VCTHJoT0FWdGp5eWJsZHFsQjdUczVLWFNQYXdFTDNkYVBOeFNuWjlvRUxWRHVKUzNlNEZSNVg2aU4yY2RucnNrQkNwYkdPOTRUak4tWnFIRnBSUGpnbWFFb1Z5SU9NVzVnLWNQblJUM0tkYzlIMHhxLV9XU3I4WnJPdmNEcWQ2alA2eTdn?oc=5",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaG5QVkVkdXoyQ0N3eEFmbjBtdGtNNC1jalU4ck1HZ25Ea011cWw0Y2VIY2k0RkhORWppN21pV0Jwd1Q1ZHpYOGNNTTVnM0RpYllJZG9wTS0xczNhMWt4ZE5QcnFVa3FjM0F5dnhYczQtSS1SOXdpU2dlUVhyQVNBd2phbUhOQzZOVktnQjlB?oc=5"
+      ],
+      "ref_names": [
+        "Endpoints News",
+        "R&D World"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Security Researchers Detect In-the-Wild AI Prompt Injection Exploiting Coding Agents' Trust in Markdown Files - OODA Loop",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNSHoydy1SNUllNnI1aENzUU8xOVFYeU9fN1ZlNDF4RHpGTTRZMEFzMEFFTWFEcGNkZzRXTW0zczdSbUtYY1pwQWUxbkptVkZyNURfcXdCZHd3WWI2dnRKWW9oUXl3T1RncFlQaXQ3TXBHNkJmTWVrcHd1SEtpLWlMMFZ3VUxjMTJmSEJLaGF3UDIyMHVYdW1oRjVhWVp2UTBPZjVPYk1uM3pCQ1RIV1g0dFNUUUlNdnJKaDlzWVlrTlFUdTdfZEJERGhpNXk3cGVEVUFiakl1MUFvTHNYMV9KdjNn?oc=5",
+      "body": "資安研究者在實際環境中偵測到針對 coding agent 的提示注入攻擊，手法是利用 agent 對 Markdown 檔案內容的信任。（→ AI agent 安全）",
+      "topic": "",
+      "topicPage": null
+    },
+    {
+      "title": "Legora is building the agentic operating system for legal work",
+      "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+      "body": "OpenAI 官方部落格報導，法律科技公司 Legora 用其模型打造「法律工作用 agentic 作業系統」，與今日 Anthropic 同日推出的 Claude for Legal Artifacts 正面相撞。",
+      "topic": "競品態勢",
+      "topicPage": null
+    },
+    {
+      "title": "GitHub Enterprise now includes access to GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
+      "body": "GitHub Enterprise 方案直接內建 Copilot 存取權，改變企業採購 Copilot 的計價與綁定方式，評估 Claude Code 與 Copilot 採購成本的團隊可留意這個綁售變化。",
+      "topic": "競品態勢",
+      "topicPage": null
+    },
+    {
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+      "body": "Copilot 新增 Fusion 功能，可在同一工作流程內跨模型路由與協調任務，Claude Code 目前無對應的跨模型路由機制。",
+      "topic": "競品態勢",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 47
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code：v2.1.312：Claude apps gateway 新增 oidc.user_id_claim 設定，可用 sub 以外 id_token claim（如 Entra ID oid）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 topics/claude-code-ex",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-28",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.312**：Claude apps gateway 新增 `oidc.user_id_claim` 設定，可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。\n- **新已知問題**：Google Calendar 連接器列出／搜尋事件請求自 10-26 起失敗，10-28 16:19 UTC 仍標記調查中。\n- **已知問題互動**：Windows Desktop 孤兒 Silo 當機（#53247）增至 109 則留言、38 個讚；Cloud／Cowork git proxy 擋外部 push（#76248）增至 41 則留言、17 個讚。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.312（自 2.1.311 起比對）新增 1 個第一階候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`；同版 `CLAUDE_CODE_MCP_HANDED_LISTINGS` 消失，升列第 4 階「已移除」（首見 2.1.311，2.1.312 即消失）。對帳僅命中來源條目與日報鏡像，新旗標暫不升第二階。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "最新動態",
+            "date": "",
+            "body": "Anthropic 公開研究：未發布的內部研究模型近月找出 Chrome、Safari、Windows、Linux 的 5 條攻擊鏈，多數免互動即可取得遠端執行，並繞過 Android 鎖定；原文未指名是否為 Mythos。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **GSA 協議擴大，政府採購折扣達 40%**：Claude Enterprise／for Government／API 折扣提升至 40%，首次涵蓋全部採購管道，並延伸至州、地方、部落與屬地政府（Anthropic／FedScoop）。\n- **收購一人神秘生技新創 Mithril Medicine**：由匿名 Twitter 用戶經營的潛伏式新創（Endpoints News／R&D World）。\n- **生命科學團隊首度公開近況**：與 BigHat、Bristol Myers Squibb、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 六個組織展開藥物開發合作，並啟動自家藥物探索（Anthropic）。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **GitHub Copilot Fusion 跨模型智慧路由正式 GA**（官方）——同一工作流程內自動選模型並協調任務，Claude Code 目前無對應機制。\n- 🔴 **GitHub Enterprise 現內建 Copilot 存取權，改變企業採購綁定方式**（官方）——評估 Claude Code 企業採購時，Copilot 可能已隨既有授權到手，比價基準要重算。\n- 🟡 **OpenAI／Meta 同日各自推出 Legora 法律 agentic 作業系統與 Muse 新加坡上線**（OpenAI Blog；Meta Newsroom）——均非編碼工具直接競品，先知道有這些新進者即可。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **GSA 擴大 OneGov 合作：API 折扣提升至 40%，首度涵蓋所有採購管道並延伸至州/地方/部落/屬地政府**：Anthropic 官方部落格宣布，HN 45 分、FedScoop 等多家跟進。\n- **Anthropic 收購一人生技新創 Mithril Medicine，創辦人身分為匿名 Twitter 用戶**：R&D World、Endpoints News 同日報導。\n- **Anthropic 向加州州長表態：主張法院應有權封鎖風險 AI 模型**：U.S. News & World Report 等媒體報導。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **加州州長喊話**：U.S. News & World Report／Reuters 報導 Anthropic 向加州州長表態，主張法院應有權封殺風險 AI 模型；與既有自提法案「50 人死亡／10 億美元門檻」主張的關聯未見報導證實。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety",
+            "name": "AI Agent 安全與可靠性",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **模型網攻能力**：Anthropic 官方研究稱未發布內部模型公開 5 條攻擊鏈，於 Chrome、Safari、Windows、Linux 達成 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動。\n- **入侵聲稱再跟進**：The Independent 稱該新創聲稱在 12 小時內「攻破」Anthropic（續 10-26 Gizmodo／WaPo），官方仍未回應。\n- **rm 阻擋移除主張**：shattered.io／The Register 稱 v2.1.311 在 skip permissions 模式下移除 rm 阻擋，三篇報導皆僅標題可用、可信度偏低。\n\n詳見 [[topics/ai-agent-safety#技術彙整]]。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "Simon Willison 觀察：vibe game 開發在 10 月出現能力拐點",
+            "date": "",
+            "body": "延續去年 11 月 Opus 4.5／GPT-5.1 的 coding agent 拐點觀察，主張遊戲開發子領域今年 10 月出現類似轉折；具名表態，單篇報導，尚無社群延燒。"
+          },
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "規格驅動開發新增本體驅動變體",
+            "date": "",
+            "body": "- **sharptoolbox/ontology-driven-dev（506★）**：需求探索→本體建模→應用構建三步法，以七模型本體 YAML 取代一般規格文件。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計再添一例：多來源證據比對判斷照片拍攝地點",
+            "date": "",
+            "body": "- **Oldcircle/geo-sleuth（4408★）**：綜合 OSM 地理幾何、天際線比對、衛星影像與街景等多種證據判斷照片拍攝地點並展示推理過程，相容 6 款 coding agent。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 11
+  },
+  "readerTopStories": [
+    {
+      "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+      "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+      "source": "Hacker News",
+      "time": "10/27 15:28",
+      "sentiment": "",
+      "body": "Stanford Daily 報導，指控 Anthropic 未經授權使用超過 10 位史丹佛教授的著作訓練 Claude，點名 Tobias Wolff、Abraham Verghese、Chang-Rae Lee、Daniel Mason、Hayagreeva Rao 與 Myra Strober 六位教授，並追溯今年 5 月 Bartz v. Anthropic 一案法官 William Alsup 的裁定——Authors Alliance 稱其為涉及 AI 公司最大規模的版權和解案之一。今日在 Hacker News 累積 552 分，是本日社群討論度最高的條目。關注 Anthropic 訓練資料合規爭議的人可留意具名教授名單與該案後續動作。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic Tells California Governor Courts Should Be Able to Block Risky AI Models - U.S. News & World Report",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc1o2ZnhZdWdYQVpiM2xVcGExX29qUVd3QldMWmwtdTFoYV9DOGRHNGxvdlB0OU5KMzRZOTJSUDRaX0JxdEFUMlI0VEtwdWMtc2tNVFBhXzZra0dleU51TDdzenIxR2piYnNDcDR5RXRVMXFTRHhvbEFlbU9hM3BlNXI5QUIzbFR2TU9IUHJ6MDI4Y25WUUp2T2xvRkhQUG1aOGxVcUN2TGRjWGZJVnVkcWlxQnlRYl9hc2hJR0Z5TjEtbFp3WTd2b3FQdU4wMWdlNGlNY2RB?oc=5",
+      "source": "Google News / U.S. News & World Report",
+      "time": "10/28 16:08",
+      "sentiment": "",
+      "body": "《美國新聞與世界報導》報導，Anthropic 向加州州長表態，主張法院應有權封殺風險 AI 模型；另一來源同日跟進，但兩篇報導都只有標題層級，具體主張內容與官方原文均未附。持續追蹤 Anthropic 監管立場的人可留意後續官方全文。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Releases Claude for Legal Artifacts, a Set of New Interactive Tools for Legal Users - Law.com",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTJlbERhR2hXeUJNbkw5cUVwd0Q1MTZkQUNMU0hWbnlfZmhlTmdOVi1CWm8yVjMwZ1NGaC1TZmdkOWg2S1c5bUpxelowTXdXcTh0aTExU0o4d2lEaDZHY1BIVlJFRTFpQ3FZUHM1VnZmNUxEb1d1eGpkR2U4ZkdvNjVnMGc5VEVpQ1pON28yaGs0alY0Tm1TOGRaQ1BMWWJmZlFYRm5nZHkxYXZZOEFxOWs5YU52QzI2VFBybzU5MW42NVpveEkxdGFwUEZpSWtkZmp2MThR?oc=5",
+      "source": "Google News / Law.com",
+      "time": "10/28 15:15",
+      "sentiment": "",
+      "body": "Reuters 與 Law.com 同日報導，Anthropic 推出「Claude for Legal Artifacts」，為法律從業者新增一組互動式工具；兩篇報導皆僅標題層級，未附具體功能細節。做法律科技選型評估的人可留意官方後續公告的功能清單。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop fails to launch on Windows — orphaned Silo / Job Object after app crash, only logoff or reboot recovers (HRESULT 0x80070020 in AppModel-Runtime EventID 215/208)",
+      "url": "https://github.com/anthropics/claude-code/issues/53247",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/28 07:49",
+      "sentiment": "",
+      "body": "今日累積 109 則留言、38 個 👍，使用者回報 Claude Desktop 在 Windows 上當機後會留下孤兒 Silo／Job Object，只有登出或重開機才能恢復使用。在 Windows 上跑 Claude Desktop 的使用者可留意是否已撞上這個當機後無法重啟的狀況。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/28 00:05",
+      "sentiment": "",
+      "body": "今日累積 41 則留言、17 個 👍，使用者回報 Cloud／Cowork session 的 git proxy 開始封鎖所有不在「本次 session 授權 repository 集合」內的推送，連使用者自備 PAT 也無法繞過，懷疑與代號 `CCR_TEST_GITPROXY` 的功能推出有關。用 Cowork／雲端 session 對外部 repo 推送程式碼的團隊應留意目前授權範圍是否因此被收緊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

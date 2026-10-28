@@ -487,18 +487,9 @@
       "pageType": "topic"
     },
     {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
       "id": "recursive-self-improvement",
       "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"
     }
-  ],
-  "marketSignal": {
-    "title": "S-1 風險清單首度點名生物武器、勒索，保險業界示警承保能力恐被超出",
-    "date": "2026-10-27"
-  }
+  ]
 }
