@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 
-> **最新動態**（2026-10-27）
-> - **v2.1.311**：`self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min`；同版 build 另新增 15 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
-> - **新已知問題**：headless `claude -p`（SDK CLI）同工作負載下每 token 耗用 5 小時額度比互動式 CLI 多約 1.8 倍（#97074，52 則留言、96 個讚）。
-> - **已知問題互動**：內建 Slack MCP connector 多 workspace 請求（#44243）累積 127 個讚、47 則留言。
+> **最新動態**（2026-10-28）
+> - **v2.1.312**：Claude apps gateway 新增 `oidc.user_id_claim` 設定，可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
+> - **新已知問題**：Google Calendar 連接器列出／搜尋事件請求自 10-26 起失敗，10-28 16:19 UTC 仍標記調查中。
+> - **已知問題互動**：Windows Desktop 孤兒 Silo 當機（#53247）增至 109 則留言、38 個讚；Cloud／Cowork git proxy 擋外部 push（#76248）增至 41 則留言、17 個讚。
 
 ---
 
@@ -224,8 +224,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（17 條未修復、4 條已修復、1 條拒修、2 條❓）
+### 🛡️ 安全與隱私（17 條未修復、4 條已修復、1 條拒修、3 條❓）
 
+- ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 疑似移除 skip permissions 模式下 `rm` 指令的既有阻擋**：媒體（shattered.io／The Register）報導，changelog 未見相關記載；風險面見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：觸發機制與官方回應均未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
 - ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
@@ -477,7 +478,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 39 則留言、48 個讚，2026-10-15）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Insider（MSIX）Cowork VM 完全無法使用，EXDEV 跨裝置重新命名錯誤未解（v1.1.4010，GitHub issue #27897，累積 36 則留言、15 個讚，2026-10-16）**：MSIX 封裝 EXDEV rename 錯誤，與既有 Cowork VM 啟動失敗同屬平台不穩定訊號；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤（GitHub issue #20571，累積 133 則留言、183 個讚，2026-10-13）**：VS Code 版擴充套件近期更新後，每次工具呼叫皆觸發 API 400 錯誤；CLI 版不受影響；可暫時切換至 CLI 版繞過；官方尚未回應。
-- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 40 則留言、16 個讚，2026-10-07）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
+- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 41 則留言、17 個讚，2026-10-28 更新）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援刪除與重新命名對話（GitHub issue #10747，累積 42 則留言、52 個讚，2026-10-07）**：VS Code 擴充套件目前無法刪除或重新命名既有對話，長期管理多個對話的使用者只能任由清單累積；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
@@ -566,7 +567,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
   **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
-- 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020，issue #53247，86 則留言、33 讚，09-16 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020、AppModel-Runtime EventID 215/208，issue #53247，109 則留言、38 讚，10-28 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop 1.1.4173 啟動後無視窗渲染，工作管理員仍可見進程（GitHub issue #28304，41 則留言、31 個讚，2026-10-09）**：更新至 1.1.4173 後啟動無畫面，但背景進程仍在執行；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
 - ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：Claude Desktop App 遠端控制 Claude Code session（GitHub issue #29006，累積 36 則留言、158 個讚，首見 2026-07-12）**：官方答遠端控制已可用，在「設定 > Claude Code > 預設啟用遠端控制」打開。
@@ -576,8 +577,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（43 條已修復、10 條未修復）
+### 🌐 服務穩定性（43 條已修復、11 條未修復）
 
+- 🔴 **未修復（調查中）**｜**Anthropic Status：Google Calendar 連接器錯誤率升高，列出／搜尋行事曆事件請求自 10-26 起即開始失敗（2026-10-28 16:19 UTC 仍標記調查中）**：非 Claude Code CLI 本身問題，屬 Anthropic Status 頁面涵蓋的連接器生態系事故，補記於此供跨產品穩定性對照。[來源](https://status.claude.com/incidents/phg1y2yh07n2)
 - ✅ **已修復（約 35 分鐘後解決）**｜**Anthropic Status：Claude Sonnet 5.5 錯誤率升高，波及 claude.ai、Claude API、Claude Code 與 Claude Cowork（2026-10-27 14:42–15:17 UTC，15:50 UTC 確認解決）**：官方通報四項產品同受影響，15:50 UTC 確認已解決。[來源](https://status.claude.com/incidents/lqhknfdjrcst)
 - ✅ **已修復（約 35 分鐘後解決）**｜**Anthropic Status：Claude Fable 5、Fable 5.1 錯誤率升高（2026-10-24 05:00–05:35 UTC，05:53 UTC 確認解決）**：官方通報兩款模型請求錯誤率升高，05:53 UTC 確認已解決。[來源](https://status.claude.com/incidents/0ns5clsk8p2x)
 - ✅ **已修復（約 11 分鐘後解決）**｜**Anthropic Status：Claude Opus 5.5 錯誤率升高（2026-10-24 00:23–00:34 UTC，00:37 UTC 確認解決）**：官方通報 Opus 5.5 請求錯誤率升高，00:37 UTC 確認已解決。[來源](https://status.claude.com/incidents/3cqf3pmlnr96)
@@ -662,6 +664,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.312** | 2026-10-27 | 新增 `oidc.user_id_claim` 設定，gateway 可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)）|
 | **v2.1.311** | 2026-10-26 | `self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min`，host 回報殘留行程時可保留 idle session 不被提早回收（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)）|
 | **v2.1.310** | 2026-10-23 | 新增 Monitor tool，含 Bedrock／Vertex／Foundry 的 plugin 監控；停用 telemetry 或非必要流量時攔阻長時間 foreground sleep（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.310)）|
 | **anthropic-sdk-python v2.3.0** | 2026-10-23 | Features：新增 Claude Tag（Claude Enterprise 組織）API endpoint；Bug fix：Google Cloud 路由下使用者個人資料請求改送往組織端點（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0)）|

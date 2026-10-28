@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 
-> **Hooks 與自動化新增 GitHub Project 建置→QA→審查全自動迴圈**（2026-10-27）
-> - **EricTechPro/super-board**：綁定 GitHub Project 看板，自動跑完建置、QA 與審查三階段，宣稱一行安裝。
+> **規格驅動開發新增本體驅動變體**（2026-10-28）
+> - **sharptoolbox/ontology-driven-dev（506★）**：需求探索→本體建模→應用構建三步法，以七模型本體 YAML 取代一般規格文件。
 
 ---
 
@@ -94,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### sharptoolbox/ontology-driven-dev：需求探索→本體建模→應用構建三步法的本體驅動開發 Skill（2026-10-28）
+
+- **主線：** —
+- **核心模式：** 以「需求探索→本體建模→應用構建」三步法取代直接下 vibe coding 提示，依七模型本體 YAML 定義業務領域再據此生成應用，底層搭配 code-paas 技術基礎；相容 WorkBuddy、Claude Code、Codex。
+- **與既有模式的關係：** 與 10-23 的 nick-vels/skills 同屬「規格驅動開發」，差異在用本體模型（七模型本體 YAML）取代一般規格文件作為中介層；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（506★，今日首次收錄），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/sharptoolbox/ontology-driven-dev)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### EricTechPro/super-board：綁定 GitHub Project 看板的建置→QA→審查全自動迴圈，一行安裝（2026-10-27）
 

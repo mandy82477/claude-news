@@ -467,28 +467,13 @@
   "preview": "（續 10-26）Anthropic 公開版 S-1 今日又曝光一批具體數字：《華盛頓郵報》報導其虧損達 800 億美元、但營收仍在成長，《富比士》與《印度時報》報導申請文件首度揭露 Claude 現在寫下 Anthropic 自家超過 90% 的程式碼，《福斯新聞》與 CNBC 引述路透社報導，申請文件同時揭露一個月",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "krishna-rao",
       "name": "Krishna Rao",
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety",
-      "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-eval-boundary-incidents",
       "name": "AI 評測越界事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
       "pageType": "topic"
     },
     {
@@ -497,28 +482,8 @@
       "pageType": "topic"
     },
     {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
@@ -529,11 +494,6 @@
     {
       "id": "recursive-self-improvement",
       "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

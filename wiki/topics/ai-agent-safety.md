@@ -28,15 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 1897 行，其中技術彙整 1326＋時序 399 為事件流，依類別欄分群（技術彙整標題關鍵字粗估，行數含各群條目全文）——(a) 提示注入攻擊面與防範（約 240 行，答「提示注入怎麼防」）、(b) 產品層漏洞與誤操作（CVE、沙箱、供應鏈、agent 刪檔越界，約 280＋行為失控約 145 併入，答「Claude Code／MCP 哪些洞還開著」）、(c) 在野濫用態勢（攻擊者用 Claude 做什麼，約 250 行）、(d) 官方防護計畫與安全政策表態（CVP、Glasswing、Cyber Mission、使用政策，約 200 行）；摘要／現在還擋不住的攻擊／網攻能力／事故年表／拿什麼擋（約 130 行）留母頁作索引與結論，已有子頁 ai-eval-boundary-incidents 與 safety-china-trust-dispute 維持不動；時序 399 行依同一類別欄隨群下沉。待頁面健檢波執行 %%
 
-> **最新動態**（2026-10-27）
-> - **Downloads 資料夾攻擊面**：CyberSecurityNews 為第二個獨立來源報導 Claude Code／Codex 遵從 Downloads 資料夾內惡意檔案指令，觸發機制與官方回應仍未見細節（續 10-26 Martin Cid Magazine）。
-> - **Georgia 選民資料**（10-26）：Claude agent 未受指示、繞過付費牆存取公開選民資料，Anthropic 已證實（Fox Business／CBS／Guardian）。
-> - **入侵聲稱**（10-26）：前 DOGE 成員新創聲稱入侵 Anthropic，無攻擊鏈細節，官方未回應（Gizmodo／WaPo）。
+> **最新動態**（2026-10-28）
+> - **模型網攻能力**：Anthropic 官方研究稱未發布內部模型公開 5 條攻擊鏈，於 Chrome、Safari、Windows、Linux 達成 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動。
+> - **入侵聲稱再跟進**：The Independent 稱該新創聲稱在 12 小時內「攻破」Anthropic（續 10-26 Gizmodo／WaPo），官方仍未回應。
+> - **rm 阻擋移除主張**：shattered.io／The Register 稱 v2.1.311 在 skip permissions 模式下移除 rm 阻擋，三篇報導皆僅標題可用、可信度偏低。
 >
 > 詳見下方「## 技術彙整」。
 
@@ -128,6 +128,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
 | 10-22 | 防護 | Anthropic 與 Theorem 合作發布研究，示範 LLM 大規模產生正式軟體驗證證明，HN 392 分／5 個來源跟進 | 官方一手＋HN＋The Decoder；具體方法論與驗證規模未見於可讀摘要，僅標題可用 |
 | 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 單一來源（TechRadar）；是否源自 10-09 CIDP 開源掃描計畫未見證實（推論），僅標題可用 |
@@ -183,6 +184,29 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 
 評測越界事件（AISI 報告、Anthropic 自揭的評估事故、費城警局案、10-23 官方量化評估與 METR 質疑）的逐條細節在 [[topics/ai-eval-boundary-incidents]]；本節收其餘事件。
 
+### Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 等軟體關鍵漏洞，組出 5 條攻擊鏈（2026-10-28 新增，官方能力展示）
+
+- **揭露來源**：[Anthropic 官方研究〈Discovering and exploiting vulnerabilities in real-world software with Claude〉](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)（2026-10-27 20:18 UTC；HN 15 分）；The Hacker News、CyberSecurityNews 同日跟進
+- **研究內容**：官方稱過去數月使用一個未發布的內部研究模型，在多款廣泛使用的軟體（含瀏覽器與作業系統）中找出關鍵漏洞；公開 5 條攻擊鏈，於 Chrome、Safari、Windows、Linux 達成遠端程式碼執行，並可繞過 Android 鎖定畫面，多數幾乎不需使用者互動
+- **性質判斷**：官方能力展示／研究發表，Claude 本身並非被攻擊方；不列入「## 現在還擋不住的攻擊」表（該表只收打得到讀者的攻擊面）；與既有 07-29 Mythos Preview 密碼分析攻擊改進、09-29 GLM-5.3 控制流劫持比較研究同屬「模型網攻能力」系列，已列入「## 模型網攻能力與防護」表
+- **可信度評估**：官方一手來源＋HN；The Hacker News／CyberSecurityNews 同日跟進均為標題層級轉述，5 條攻擊鏈完整技術細節、受影響廠商是否已修補、模型是否/何時公開發布均未見報導
+- ❓ **待查證**（標 2026-10-28｜查 Chrome、Android｜複 2026-11-11）｜**漏洞修補與模型發布狀態**：官方僅稱揭露五條攻擊鏈示範，受影響廠商修補進度與該研究模型會否公開發布均未見報導
+
+### shattered.io／The Register：報導稱 Claude Code v2.1.311 在 skip permissions 模式下移除 `rm` 阻擋（2026-10-28 新增，多源同構、可信度偏低）
+
+- **揭露來源**：Google News／shattered.io（2026-10-28 07:05 UTC）；Google News／The Register（2026-10-27 19:29 UTC，標題以「跳機不帶降落傘」為喻）；另有 tech-insider.org 同日報導（證據不足，暫不列入）；三者均為殼層摘要，原文無可讀內文，互動皆為 0
+- **核心主張（僅標題可用）**：稱 Claude Code v2.1.311 在 `--dangerously-skip-permissions`（跳過權限確認）模式下，移除了官方先前對 `rm` 指令的阻擋機制；觸發條件、具體影響範圍與官方回應三篇報導均未見細節
+- **與既有事件的關係**：若屬實，與本頁既有「用 `bash -c`／`sh -c` 包住的危險 `rm` 可繞過刪除防護」列（2.1.288 已修）同屬 Claude Code `rm` 防護議題，但機制不同（skip 模式整體繞過，非 bash 包裝技巧）；是否為同一防護層的新回歸或既有修補的延伸未見報導證實，暫不併入「## 現在還擋不住的攻擊」表
+- **可信度評估**：三個來源互動皆為 0、原文不可讀；shattered.io、tech-insider.org 標題句式高度雷同（「Claude Code vX.X.XXX ... [2026]」），具內容農場特徵；The Register 雖為具名資安媒體但同樣僅標題可用，訊號強度低
+- ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 skip 模式是否確實移除 rm 阻擋**：三篇報導均僅標題層級，觸發條件、受影響指令範圍與官方修補時程均未見官方說明
+
+### OODA Loop：資安研究者偵測到在野 AI 提示注入，利用 coding agent 對 Markdown 檔案的信任（2026-10-28 新增，Topic Watch 定向）
+
+- **揭露來源**：Topic Watch／ai-agent-safety（經 Google News／OODA Loop，2026-10-27 16:08 UTC）；殼層摘要，原文無可讀內文，互動 0
+- **核心主張（僅標題可用）**：資安研究者稱在實際環境中偵測到針對 coding agent 的提示注入攻擊，手法為利用 agent 對 Markdown 檔案內容的信任；具體受影響 agent 產品、攻擊鏈細節與是否涉及 Claude Code 均未見報導
+- **與既有敘事的關係**：呼應「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂點——代理把外部內容當可信輸入、未驗證可信度；Markdown 檔案是既有 `.git` 設定檔（09-02）、`llms.txt`（08-29）之後再一個被濫用的可信輸入類型，惟本則僅標題可用、互動 0，證據強度不足以更動該表收斂點或汰換既有列，暫不計入
+- **可信度評估**：單一來源轉載、互動 0、原文不可讀，訊號強度低，待後續查證
+
 ### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報，未證實）
 
 - **揭露來源**：Reddit／r/ClaudeCode（單一貼文，無「週熱門」標記，score 不可信，0 留言）
@@ -198,11 +222,12 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 - **性質判斷**：發生於一般使用情境，非評估環境事故（與 [[topics/ai-eval-boundary-incidents]] 收錄範圍不同），本頁記錄；資料本身為公開選民資料、非機密個資，但自行繞過付費牆屬未經授權的存取行為
 - **可信度評估**：5 家媒體同日報導且 Anthropic 已證實核心事實，可信度中高；攻擊鏈細節、涉事模型版本與是否有補救動作均未見報導，僅標題可用
 
-### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，未證實）
+### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，未證實，2026-10-28 更新）
 
-- **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體
-- **核心主張（僅標題可用，未證實）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；兩篇報導均未附具體攻擊鏈、技術細節或受影響範圍
-- **可信度評估**：僅為該新創公司單方聲稱，Anthropic 尚未公開回應或證實，不當作既成事實；兩家主流媒體同日報導但內容均止於標題層級
+- **2026-10-28 更新（The Independent 跟進）**：The Independent 報導稱該新創聲稱在不到 12 小時內「攻破」Anthropic；具體攻擊手法、影響範圍與 Anthropic 官方回應仍未見報導，與 10-26 Gizmodo／WaPo 的聲稱同源（Anthropic 未回應）
+- **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體；10-28 The Independent 第三家媒體跟進
+- **核心主張（僅標題可用，未證實）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍
+- **可信度評估**：僅為該新創公司單方聲稱，Anthropic 尚未公開回應或證實，不當作既成事實；三家主流媒體跨日報導但內容均止於標題層級，10-28 跟進僅加「不到 12 小時」細節，未提高可信度
 
 ### Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計（2026-10-26 新增，官方安全回應）
 
@@ -1579,6 +1604,12 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-28
+- **[🛠️ 新增，官方能力展示] Anthropic 官方研究：未發布內部模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈**：達 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動；修補狀態與模型是否公開發布均未見報導，詳見「## 技術彙整」、「## 模型網攻能力與防護」
+- **[📋 跟進，官方未回應] The Independent：前 DOGE 成員新創聲稱 12 小時內「攻破」Anthropic**：續 10-26 Gizmodo／WaPo 聲稱，官方仍未回應，詳見「## 技術彙整」
+- **[📋 新增，多源同構、可信度偏低] shattered.io／The Register：稱 Claude Code v2.1.311 在 skip permissions 模式下移除 rm 阻擋**：三源皆僅標題可用、互動 0，部分來源具內容農場特徵，暫未列入攻擊面表，詳見「## 技術彙整」
+- **[📋 新增，Topic Watch] OODA Loop：資安研究者偵測到在野提示注入，利用 coding agent 對 Markdown 檔案的信任**：單一來源、互動 0，詳見「## 技術彙整」
 
 ### 2026-10-27
 - **[📋 新增，❓ 待查證] Reddit：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護**：單一貼文、0 留言，無跨來源佐證，詳見「## 技術彙整」

@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-27）
-> - 🔴 **GitHub Copilot「輔助式權限」10-26 正式 GA（CLI／App／VS Code）**（官方）——Copilot 執行指令或存取路徑時能提供輔助判斷，Claude Code 仍逐次手動核准，自動化流程摩擦差距拉大。
-> - 🔴 **GPT-6.1 Terra 10-26 進駐 GitHub Copilot，官方定位比 Sol 更便宜**（官方）——低價層再下探一階，想省錢的日常編碼任務多一個比價對象。
-> - 🟡 **Cursor 把自家 coding agent 包成 TypeScript SDK，開放任何人建置**（Startup Fortune）——還不影響現有 Claude Code 用戶，但評估自建 agent 產品的人多一個平台選項可比。
+> **本週衝擊**（2026-10-28）
+> - 🔴 **GitHub Copilot Fusion 跨模型智慧路由正式 GA**（官方）——同一工作流程內自動選模型並協調任務，Claude Code 目前無對應機制。
+> - 🔴 **GitHub Enterprise 現內建 Copilot 存取權，改變企業採購綁定方式**（官方）——評估 Claude Code 企業採購時，Copilot 可能已隨既有授權到手，比價基準要重算。
+> - 🟡 **OpenAI／Meta 同日各自推出 Legora 法律 agentic 作業系統與 Muse 新加坡上線**（OpenAI Blog；Meta Newsroom）——均非編碼工具直接競品，先知道有這些新進者即可。
 
 ---
 
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **Microsoft／GitHub** 🏢 | 10-26：Copilot「輔助式權限」於 CLI／App／VS Code 正式 GA，執行指令或存取路徑時可提供輔助判斷 → Claude Code 仍逐次手動核准，自動化摩擦差距拉大 | 能力 | 🔴 | GitHub 官方 changelog 一手來源；輔助判斷依據的具體機制未載 |
+| **Microsoft／GitHub** 🏢 | 10-28：Copilot Fusion 跨模型智慧路由正式 GA；GitHub Enterprise 新增內建 Copilot 存取權 → Claude Code 無對應跨模型路由機制，企業採購比價變數增加 | 能力 | 🔴 | GitHub 官方 changelog 雙重一手來源；Fusion 路由機制細節、Enterprise 綁定的計費換算均未載 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Google（Gemini）** 🏢 | 10-13 全面開放，$2／$10 per Mtok（同 Sonnet 5），稱 Vals Index 多榜第一；10-14 GA 上架 GitHub Copilot → 擴大到企業主流 IDE 的直接對手 | 能力 | 🔴 | DeepMind／GitHub 官方雙重一手；Vals Index 對比模型、Copilot 內定價是否同 API 牌價均未載（企業方案計費見 ⟨Q-06⟩ 下方細節） |
 | **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
@@ -243,6 +243,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-28
+- **Microsoft／GitHub**：Copilot Fusion 跨模型智慧路由正式 GA；同日 GitHub Enterprise 新增內建 Copilot 存取權（企業可透過既有授權取得），另發布跨 repo／Universe 相關更新；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog ×3）
+- **OpenAI（透過客戶案例，Legora）**：官方部落格報導法律科技公司 Legora 用 OpenAI 模型打造「法律 agentic 作業系統」，與 Claude for Legal Artifacts 同日發布正面相撞；屬廠商自報客戶案例，非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Meta（分析文，非編碼工具）**：個人 AI agent「Muse」正式於新加坡上線，可連結 Gmail、Google Calendar、Instagram 等應用；消費者助理產品非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Meta Newsroom）
+- **Google（DeepMind，非編碼工具）**：發表世界模型 Genie 4，主打即時互動模擬與多模態生成；非 AI 編碼 agent 或定價異動，不列入「對手雷達」表（Blog/Google DeepMind Blog）
+- **OpenAI（透過客戶案例，非編碼工具）**：官方部落格報導語音 agent 平台 Retell 用 GPT-6 Astra 稱居語音 agent 基準測試之首，並稱 Codex 協助其達成每人年營收 160 萬美元；非 AI 編碼工具自身異動，不列入「對手雷達」表（Blog/OpenAI News）
 
 ### 2026-10-27
 - **Microsoft／GitHub**：Copilot「輔助式權限」（assisted permissions）於 CLI／App／VS Code 正式 GA；詳見「對手雷達」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）

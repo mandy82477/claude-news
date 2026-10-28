@@ -414,11 +414,6 @@
       "pageType": "entity"
     },
     {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    },
-    {
       "id": "opus-5-5",
       "name": "Claude Opus 5.5",
       "pageType": "entity"
@@ -436,11 +431,6 @@
     {
       "id": "community-pattern-trends",
       "name": "社群趨勢觀察（週更）",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
     }
   ],

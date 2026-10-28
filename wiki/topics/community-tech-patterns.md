@@ -29,12 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 
-> **Hooks 與自動化、記憶與知識管理同日各新增一例**（2026-10-27）
-> - **Hooks 與自動化**：EricTechPro/super-board，綁定 GitHub Project 看板的建置→QA→審查全自動迴圈，見 [[topics/community-guardrails#2026-10]]。
-> - **記憶與知識管理**：voidcraft-dev/memory-forge-rs，可視化編輯 AI 對話記憶的本機 session 管理器，見 [[topics/community-memory#2026-10]]。
+> **Skills 設計、規格驅動開發同日各新增一例**（2026-10-28）
+> - **Skills 設計**：Oldcircle/geo-sleuth，多來源證據交叉比對判斷照片拍攝地點並展示推理過程，見 [[topics/community-skills#2026-10]]。
+> - **規格驅動開發**：sharptoolbox/ontology-driven-dev，需求探索→本體建模→應用構建三步法，見 [[topics/community-guardrails#2026-10]]。
 
 ---
 
@@ -55,8 +55,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-27 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-24 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-26 |
-| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-27 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-28 |
+| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-28 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-26 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-24 |
 
@@ -71,7 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
 | **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、routines 排程自動化、EricTechPro/super-board 等（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-27 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
-| **Skills 設計** | oil-oil/draw-ui、Masriyan/Claude-Code-CyberSecurity-Skill、codeswithroh/tastemaker 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-26 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Skills 設計** | oil-oil/draw-ui、codeswithroh/tastemaker、Oldcircle/geo-sleuth 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-28 | description 自動觸發，把書籍與流程封裝成可複用 skill |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、amux、Offrun、zhikuncode 等（[[topics/community-multi-agent#2026-10]]） | ✅ 成熟 | 2026-10-19 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-memory#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
 | **記憶與知識管理** | claude-mem、projectmem、jatechan/ai-data-extractor、voidcraft-dev/memory-forge-rs 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-27 | 跨 session、跨工具、跨機器的持久記憶協定 |
@@ -88,7 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **安全架構** | Grepathy、OneCLI、agent-scan、ThinkWatch-Lite、WaLiAPI、awesome-claude-code-mods 等（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-16 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
 | **Agent 記憶保護** | AGENTS.md 輸出持久化片段：把規劃文件發布到可持久引用的連結（[[topics/community-memory#2026-10]]） | ⏳ 新興 | 2026-10-08 | agent 寫出的規劃文件不只活在單一 .md 檔，檔案被取代後脈絡仍在 |
 | **行動裝置遠端控制** | ccgram、Android Remote Control MCP、OpenMinis/iCTRL、witchan/ios-mcp 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-23 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
-| **規格驅動開發** | spec-kit、nick-vels/skills（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-23 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
+| **規格驅動開發** | spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-28 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **可靠性測試** | requirement failure／test coupling 判讀框架（[[topics/community-skills#2026-10]]） | ⏳ 新興 | 2026-10-26 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）

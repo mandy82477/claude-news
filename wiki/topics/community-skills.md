@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 
-> **UI 品味 skill 再添一例，可靠性測試類別重新出現動態**（2026-10-26）
-> - **codeswithroh/tastemaker（500★）**：用參考圖與開發者個人品味校正 AI 生成介面，取代泛用 AI 風格預設。
-> - **可靠性測試**：Reddit 貼文提出把「需求沒做到」與「測試寫得太綁死」分開判讀的方法，見技術彙整。
+> **Skills 設計再添一例：多來源證據比對判斷照片拍攝地點**（2026-10-28）
+> - **Oldcircle/geo-sleuth（4408★）**：綜合 OSM 地理幾何、天際線比對、衛星影像與街景等多種證據判斷照片拍攝地點並展示推理過程，相容 6 款 coding agent。
 
 ---
 
@@ -94,6 +93,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### Oldcircle/geo-sleuth：多來源證據交叉比對判斷照片拍攝地點並展示推理過程的 agent skill（2026-10-28）
+
+- **主線：** —
+- **核心模式：** Claude Code skill：綜合 OpenStreetMap 地理幾何、海拔天際線比對、衛星影像與街景等多種證據來源判斷一張照片的拍攝地點，並展示完整推理過程；相容 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、GitHub Copilot 六款工具。
+- **與既有模式的關係：** 「Skills 設計」類別首次出現「多來源證據交叉比對＋展示推理過程」取向的代表技巧，與既有視覺品味校正類（tastemaker、taste-skill）用途與方法皆不同，不合併；主線填 —。
+- **可信度註記：** 持續追蹤一個月的星數軌跡（502★→4408★，2026-09-28～2026-10-28），非單日暴增；仍無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Oldcircle/geo-sleuth)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### codeswithroh/tastemaker：用參考圖與開發者個人品味校正 AI 生成介面（2026-10-26）
 

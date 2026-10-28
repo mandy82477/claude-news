@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 
-> **待查證：未發布新模型傳聞**（2026-10-24）
-> The Decoder 稱 Anthropic 表示其未發布新模型優於 Mythos 5.1（能力與對齊皆優）；僅標題可讀、單一來源，尚待後續報導確認；另兩則下代模型訊號合併見 [[entities/fable-5#下一代模型傳聞彙整]]。
+> **最新動態**（2026-10-28）
+> Anthropic 公開研究：未發布的內部研究模型近月找出 Chrome、Safari、Windows、Linux 的 5 條攻擊鏈，多數免互動即可取得遠端執行，並繞過 Android 鎖定；原文未指名是否為 Mythos。
 
 ---
 
 ## 現況
 
-**2026-10-23（The Decoder 轉引：Anthropic 稱未發布新模型優於 Mythos 5.1）**：The Decoder 報導 Anthropic 表示一款尚未發布的新模型在能力與對齊上皆優於 Mythos 5.1，惟原文僅標題可讀、單一來源、互動數 0，確認狀態標為待查證（Google News/The Decoder，2026-10-23；詳見下方「時序」）。
+**2026-10-27（Anthropic 研究：未發布的內部研究模型鏈出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android）**：Anthropic 研究部落格公開，過去數月以一個「未發布的內部研究模型」在廣泛使用軟體中找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需使用者互動即可達成遠端程式碼執行；The Hacker News、CyberSecurityNews 同日跟進點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面。原文未點名具體模型版本，本頁暫不歸入 Mythos 特定世代（詳見下方「時序」）。
 
-**2026-10-22（Anthropic 與 Theorem：LLM 大規模生成形式化驗證證明）**：Anthropic 研究部落格發布研究，稱 AI 已能輕易發現並利用軟體漏洞、標準防禦已不足，需要能證明程式碼無漏洞的方法；與形式化驗證公司 Theorem 合作，展示大規模產生機器可驗證 formal proof 的工作流程，回應本頁「資安雙重性」防禦端一直未解的瓶頸（HN 392 分、The Decoder 同日跟進；[Anthropic Research](https://www.anthropic.com/research/formal-verification)，2026-10-22；詳見下方「時序」10-22 條目）。
+**2026-10-23（The Decoder 轉引：Anthropic 稱未發布新模型優於 Mythos 5.1）**：The Decoder 報導 Anthropic 表示一款尚未發布的新模型在能力與對齊上皆優於 Mythos 5.1，惟原文僅標題可讀、單一來源、互動數 0，確認狀態標為待查證（Google News/The Decoder，2026-10-23；詳見下方「時序」）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -134,6 +134,13 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-27
+**Anthropic 研究：未發布的內部研究模型找出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android**：
+- Anthropic 研究部落格公開：過去數月以一個「未發布的內部研究模型」在廣泛使用的瀏覽器與作業系統找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需互動即可達成遠端程式碼執行（[Anthropic Research](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)，2026-10-27；HN 15 分）
+- The Hacker News／CyberSecurityNews（10-28）跟進，標題點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面；兩篇皆僅標題可用，無正文細節（[Google News/The Hacker News](https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5)／[Google News/CyberSecurityNews](https://news.google.com/rss/articles/CBMiZkFVX3lxTE83Q09fcFRRbW1uWFFxUDUweXRxT0ZGbEhoZTc0dDRKS1hzdjFKTVFRUGw0VHNsa1V2c2pjTm1jZGdwTjVuUG5vcUZNbUlZWFNZeEo4RzAwWkhVeEo3VGxQUlhZZjB5UdIBa0FVX3lxTE5paG5zeElzZWxHMGFLR2JMVTh3NUxoSzNweXN1RDVycEdzVEp3TlFvanc5UnI0S1hXZGdVQm1ybDFoeGlwQ0dQa3pOY2dnWGxFWGZMUTJiZWo5akk1NGhPT253ZHc1d3NmODNJ?oc=5)，2026-10-28）
+- 原文未點名具體模型版本，僅稱「unreleased, internal research model」，與 10-22 formal verification 研究同樣以泛稱處理，本頁暫不歸入 Mythos／Fable 特定世代——與上方 10-23 條目「未發布新模型優於 Mythos 5.1」的傳聞**是否為同一模型，原文未見交叉確認**，不合併為同一事件
+- **模型面意義**：延續本頁「核心能力」記錄的漏洞發現與 exploit 組合能力，本次新增「幾乎零互動達成 RCE」與「繞過裝置鎖定畫面」兩項具體攻擊面；政策與產業因應見 [[topics/ai-agent-safety]]，本頁僅記錄模型能力面
 
 #### 2026-10-23
 ❓ **待查證**（標 2026-10-24｜查 Mythos 5.1）｜**The Decoder：Anthropic 稱其未發布新模型能力與對齊皆優於 Mythos 5.1**（僅標題可用，互動 0、單一來源）：
@@ -294,3 +301,8 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [Google News/The Decoder：Anthropic's Claude now writes code and proves it safe automatically](https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFhWNmYyaWJiMHdMWXJFZHVGam5MMjR4TVRSNUV0c3hHV1JVb2JHTzJYYzNqZ0ZFY1ppdi1RRUU1ZUJ3SjJ4WmZkYlNXSWhBWEU1eEl4X2E3VFhlaVZfQmpmNTFGQW1YRkowQlNlakE?oc=5)（2026-10-23，僅標題可用）
 - [[news/2026-10-23]]
 - [Google News/The Decoder：Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)（2026-10-23，僅標題可用；懸置標記細節見「時序」2026-10-23 條目）
+- [Discovering and exploiting vulnerabilities in real-world software with Claude](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude) — Anthropic Research（2026-10-27，HN 15 分）
+- [Google News/The Hacker News：Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits](https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5)（2026-10-28，僅標題可用）
+- [Google News/CyberSecurityNews：Claude AI Builds One-Click Chrome and Zero-Click Linux Exploit Chains, Bypasses Android Lock Screen](https://news.google.com/rss/articles/CBMiZkFVX3lxTE83Q09fcFRRbW1uWFFxUDUweXRxT0ZGbEhoZTc0dDRKS1hzdjFKTVFRUGw0VHNsa1V2c2pjTm1jZGdwTjVuUG5vcUZNbUlZWFNZeEo4RzAwWkhVeEo3VGxQUlhZZjB5UdIBa0FVX3lxTE5paG5zeElzZWxHMGFLR2JMVTh3NUxoSzNweXN1RDVycEdzVEp3TlFvanc5UnI0S1hXZGdVQm1ybDFoeGlwQ0dQa3pOY2dnWGxFWGZMUTJiZWo5akk1NGhPT253ZHc1d3NmODNJ?oc=5)（2026-10-28，僅標題可用）
+- [[news/2026-10-27]]
+- [[news/2026-10-28]]

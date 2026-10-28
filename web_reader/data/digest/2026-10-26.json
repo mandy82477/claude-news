@@ -400,18 +400,8 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
       "id": "community-integrations",
       "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
       "pageType": "topic"
     }
   ],

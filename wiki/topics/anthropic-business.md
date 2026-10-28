@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 %%
 
-> **最新動態**（2026-10-27）
-> - **S-1 再爆細節**：90% 程式碼由 Claude 自撰、一個月訓練暫停與資安事件、AI 損失恐超保險業承保能力（WSJ／Business Insurance／Fox News）。
-> - **CFO Krishna Rao 面臨上市前最關鍵考驗**（Fortune）；華爾街銀行＋Blackstone 安排 630 億美元融資供 Broadcom 晶片採購。
-> - **近 100 頁風險清單含生物武器、勒索、「AI 甦醒」用語**（CNN／WaPo），企業採用仍處「早期階段」（WSJ）。
+> **最新動態**（2026-10-28）
+> - **GSA 協議擴大，政府採購折扣達 40%**：Claude Enterprise／for Government／API 折扣提升至 40%，首次涵蓋全部採購管道，並延伸至州、地方、部落與屬地政府（Anthropic／FedScoop）。
+> - **收購一人神秘生技新創 Mithril Medicine**：由匿名 Twitter 用戶經營的潛伏式新創（Endpoints News／R&D World）。
+> - **生命科學團隊首度公開近況**：與 BigHat、Bristol Myers Squibb、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 六個組織展開藥物開發合作，並啟動自家藥物探索（Anthropic）。
 
 ---
 
@@ -334,10 +334,10 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|
+| GSA（美國聯邦總務署，OneGov） | Claude Enterprise／Claude for Government／API 折扣提升至 40%，首度涵蓋全部採購管道（含日後透過雲端供應商採購），並延伸至州、地方、部落與屬地政府 | 非政府機構採購不適用 | 2026-10-27 |
 | Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論；新增 structured outputs 支援 | 第一方 API 與訂閱席次不受影響 | 2026-10-20 |
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 | Google Cloud／Vertex AI | 新增走 GCP 帳單／帳戶權限的 Anthropic 代管 API 路線，處理器與功能選擇不同於標準 Vertex（MIXED News／OpenTools，10-26，單一來源各一）| 費率仍由 Google 自訂，第一方牌價不變 | 2026-10-26 |
-| Enterprise Frontier Safeguards（AWS／Google Cloud／Azure 三雲） | 企業客戶資料改存在自己控制的雲端，EFS 免費，2026 秋季起分階段開放 | 個人 Pro／Max 不在範圍內 | 2026-09-01 |
 | AWS（模型上線） | Claude Fable 5.1 已在 AWS 平台可用 | 不改價 | 2026-09-02 |
 | Microsoft Foundry | 走 CCU 後付，折扣以「同一筆用量換算出較少 CCU」呈現 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 
@@ -345,12 +345,18 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **這張表講的是 API 通路。** 訂閱席次（Claude Code、Team、Enterprise）不走上面這幾條通路，雲端合作不改變席次價格或可用性；席次現在包含什麼見 [[entities/pricing#我的方案現在有什麼]]。
 
-%% 維運備忘：衝擊表退場本輪跑一遍——六列差異全部現存，最後動態最舊為 2026-09-01，180 天到期日 2027-02-28。零退場、零讓位。 %%
+%% 維運備忘：2026-10-27 新進 GSA（折扣，影響價格）進表，表滿載觸發讓位，依留表優先序（資料落地類最弱）讓位者為「Enterprise Frontier Safeguards」，已移出表、降為下方一行制清單條目。餘五列最後動態最舊為 2026-09-02，180 天到期日 2027-03-01。 %%
 
 **資本支出算術（本頁計算，2026-08-29）：** Nscale 單筆 450 億美元（08-28）≈ 年化營收 650 億美元的 **69%**（450 ÷ 650 ≈ 0.69）；為本月第三筆重大算力布局（前有 AMD、Nvidia），另有 13 億美元私募信貸（08-19）、Bastrop County 資料中心洽租中（08-25）——單月算力承諾規模已逼近年化營收本身量級（推論，本頁計算）；循環融資質疑見「還沒過去的風險」表細節區。
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **生命科學深度研究合作（6 組織）**（2026-10-27）：官方近況：與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 合作藥物開發，並啟動自家藥物探索；模型面見 [[entities/claude-science]]（Anthropic；HN 294 分）
+- **Mithril Medicine（收購）**（2026-10-27）：收購一人神秘生技新創，Endpoints News 稱由匿名 Twitter 用戶經營的潛伏式新創（stealth startup），金額與整合計畫未見報導（Endpoints News；R&D World）
+- **Claude for Legal Artifacts**（2026-10-28）：Reuters／Law.com 報導 Anthropic 推出互動式法律工具組，僅標題可用，延續 08-07 設立 Claude for Legal 部門（[[entities/robert-mahari|Robert Mahari]] 負責）（Google News/Reuters；Law.com）
+- **Lumia Security**（2026-10-27）：資安治理平台新增整合 Claude Compliance API，延續 Surf AI（07-28）、Cyberhaven（07-23）、Orca Security（07-21）等資安夥伴生態擴張模式，具體規模與商業條款未見報導（Google News/Yahoo Finance）
+- **Claude for Financial Advisors（訊號）**（2026-10-28）：PYMNTS 稱 Anthropic 擴大整合範圍，新增對象與功能均未見報導，僅標題可用；沿革見 [[#哪個合作會改到你用的 Claude]] Schwab／Orion 條目（Google News/PYMNTS）
+- **Enterprise Frontier Safeguards（AWS／Google Cloud／Azure 三雲）**（2026-09-01）：企業客戶資料改存在自己控制的雲端，EFS 免費，2026 秋季起分階段開放；個人 Pro／Max 不在範圍內（原列於上表，2026-10-27 讓位給 GSA 折扣列移入本清單，事實不變）
 - **Hg（歐洲顧問服務）**（2026-10-23）：Financial Times 與 SQ Magazine 同日報導 Anthropic 與私募基金 Hg 合作，於歐洲推出 AI 顧問服務供當地企業導入 AI，合作細節與服務範疇未見報導（Google News/Financial Times；Google News/SQ Magazine）
 - **學術機構／生命科學（Guest Investigator Program）**（2026-10-23）：官方公開徵求學術機構、非營利組織或政府實驗室研究團隊，於 8–12 週內與 Anthropic 研究員合作研究因果人類生物學、分子生物學、藥物化學等題目，模型與運算成本由官方負擔（[Anthropic Blog](https://www.anthropic.com/news/open-call-guest-investigators-life-sciences)）
 - **Simform**（2026-10-21）：取得 Claude Partner Network「Select Tier」服務夥伴資格，延續 Tenth Revolution Group（10-14）、Aditi Consulting（10-08）等同系列夥伴認證，具體權益未見報導（Google News/EIN Presswire）
@@ -560,6 +566,13 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-28
+- **[重大事件] Anthropic／FedScoop：GSA 擴大 OneGov 協議，Claude Enterprise／for Government／API 折扣提升至 40%，首度涵蓋全部採購管道並延伸至州地方部落屬地政府**：詳見「哪個合作會改到你用的 Claude」表新增列（Anthropic；Google News/FedScoop；Hacker News）
+- **[重大事件] Anthropic 官方：生命科學團隊公開近況，與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 六組織展開藥物開發合作**：詳見「哪個合作」清單新增列（Anthropic；HN 294 分）
+- **[戰略合作] Endpoints News／R&D World：Anthropic 收購一人神秘生技新創 Mithril Medicine**：匿名 Twitter 用戶經營的潛伏式新創，詳見「哪個合作」清單新增列（Google News/Endpoints News；R&D World）
+- **[戰略合作，僅標題可用] Reuters／Law.com：Anthropic 推出「Claude for Legal Artifacts」法律工具組**：延續 08-07 設立 Claude for Legal 部門（[[entities/robert-mahari|Robert Mahari]]），詳見「哪個合作」清單新增列（Google News/Reuters；Law.com）
+- **[戰略合作，僅標題可用] Yahoo Finance：資安治理平台 Lumia Security 整合 Claude Compliance API**：延續 Surf AI、Cyberhaven、Orca Security 等資安夥伴生態擴張模式，詳見清單新增列（Google News/Yahoo Finance）
 
 #### 2026-10-27
 - **[重大事件] Forbes／The Times of India：S-1 首度揭露 Claude 現在寫下 Anthropic 自家逾 90% 程式碼**：詳見「商業模式」段新增說明，衡量基準未見細節（Google News/The Times of India）
