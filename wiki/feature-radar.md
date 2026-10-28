@@ -69,6 +69,22 @@
 
 ## 🆕 最新功能（2026-10）
 
+### Claude apps gateway：OIDC 自訂 id_token claim 識別使用者
+**發布：** 2026-10-27（v2.1.312） | **狀態：** 正式發布
+
+**是什麼：** Claude apps gateway 新增 `oidc.user_id_claim` 設定，讓管理者指定用 `sub` 以外的 id_token claim 識別使用者，例如 Microsoft Entra ID 的 `oid`。
+
+**為何熱：** GitHub Release 正式公告，目前互動為 0，尚無社群實測回饋；同版另有「click to send」相關異動，官方原文截斷，細節未載。
+
+**快速上手：**
+```
+# gateway 設定檔
+oidc:
+  user_id_claim: "oid"
+```
+
+**注意事項：** 只影響走 Claude apps gateway 做 OIDC 身分識別、且身分欄位非 `sub` 的企業／組織部署；一般 API／CLI 使用者無感。
+
 ### Claude Code self-hosted runner：idle session 保留旗標
 **發布：** 2026-10-26（v2.1.311） | **狀態：** 正式發布
 
@@ -772,6 +788,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |

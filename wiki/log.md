@@ -8244,3 +8244,15 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編待辦（記者回報「⚠️ 需主編留意」各項，留待 /wiki-lint 處理）：
   - [商業] topics/anthropic-business「還沒過去的風險」表「企業轉向開源模型分流訂單」一列到期日 2026-10-21 已逾期，本輪未逕自裁定退場／補位，留待 /wiki-lint 5j
   - [商業] topics/competitor-landscape「競品定價對照」表已達 13 列（超出 12 列上限，非本輪新增所致），建議 /wiki-lint 依久未更新退場規則處理
+
+## 2026-10-28 Ingest
+
+- 來源日報：[[news/2026-10-28]]
+- 更新頁面：entities/claude-code、entities/mythos、topics/claude-code-experimental、topics/anthropic-business、topics/competitor-landscape、topics/ai-agent-safety、topics/anthropic-government-policy、topics/community-skills、topics/community-guardrails、topics/community-tech-patterns、topics/community-tech-discussions、feature-radar
+- 新增頁面：無
+- 摘要：Anthropic 官方研究揭露未發布模型找出 5 條攻擊鏈（RCE＋繞過 Android 鎖定）、GSA 政府合作折扣提升至 40%、生命科學六組織合作進度公開，另有 Claude Code v2.1.311 skip-permissions 移除 rm 阻擋的多源低可信度報導與 Stanford 教授訓練資料爭議的媒體再跟進
+- 呈現品質：全部通過
+- 分類回退：[模型→商業] Early progress on accelerating drug development with Claude——模型記者判斷無可驗證模型能力數字、未點名模型版本，應純屬商業面；該則商業記者原輪已收到並處理（topics/anthropic-business.md），已由原輪商業記者處理，未追加派工
+- 轉知帳本：結案 H-2fcc1b（功能記者，official-community-gap 矩陣兩則候選皆未達新列門檻）；H-6b29fd（安全政策→功能，Downloads 資料夾攻擊面＋opus-5-5 分類器誤判）本輪功能記者判定無對應新回報，仍留 open 待下一輪；安全政策記者回報「⚠️ 需主編轉知功能記者」詢問 v2.1.311 rm 阻擋移除一事是否與功能記者重複處理——主編核對後確認功能記者寫入 `entities/claude-code.md`「🛡️ 安全與隱私」產品變更角度、安全政策記者寫入 `topics/ai-agent-safety.md` 風險態勢角度，兩頁各自成立、無重複或矛盾，**不登帳**：已於同輪當場核對清楚，非待下一輪處理的事項
+- 功能記者回報「⚠️ 需主編轉知安全政策記者」：Claude 文字浮水印擴大至 Opus 4.7／4.6、Sonnet 4.6（11/3 生效）比照既有慣例歸安全政策（EU AI Act 政策面），但安全政策記者本輪已派出、未及附入——已開立 H-ffd95c（功能→安全政策，頁 topics/anthropic-government-policy），下一輪派工時附上
+- devpractice 沉澱：本日無開發實務候選（當日分類無條目落入「開發實務」類）
