@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-28
+**最後新聞更新：** 2026-10-28
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-27）
-> 2.1.311（自 2.1.310 起比對）新增 15 個第一階候選旗標（名單見追蹤表）；同版 `TOOL_CONTAINER_PLUGINS_NAMED` 消失，升列第 4 階「已移除」（出現於 2.1.310、2.1.311 即消失）。對帳僅命中來源條目與日報鏡像，新旗標暫不升第二階。
+> **最新動態**（2026-10-28）
+> 2.1.312（自 2.1.311 起比對）新增 1 個第一階候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`；同版 `CLAUDE_CODE_MCP_HANDED_LISTINGS` 消失，升列第 4 階「已移除」（首見 2.1.311，2.1.312 即消失）。對帳僅命中來源條目與日報鏡像，新旗標暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.312（10-28，自 2.1.311 起）新增 1 個候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`**，第一階；`CLAUDE_CODE_MCP_HANDED_LISTINGS`（首見 2.1.311）消失，列 4 階「已移除」；另有 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.311（10-27，自 2.1.310 起）新增 15 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。`CLAUDE_CODE_TOOL_CONTAINER_PLUGINS_NAMED`（首見 2.1.310）消失，列 4 階「已移除」。
 - **2.1.310（10-23，自 2.1.309 起）新增 4 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.309（10-22，自 2.1.308 起）新增 4 個候選旗標**（名單見追蹤表），皆第一階；另有 1 個設定類旗標（逾時、識別碼等）來源已過濾不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
@@ -67,6 +68,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP` | 2.1.312（10-28） | 1 | — | — | 2.1.312 仍在（比對日 10-28） |
 | `CLAUDE_CODE_AGENTS_MD_ROWS_EVERY_PROCESS` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_CHROME_LATE_MCP_SERVER` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_COUNT_GARBAGE_COLLECTIONS` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
@@ -78,7 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_EMIT_USER_PROMPT_SUBMIT_HOOK_EVENTS` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_EVEN_MORE_DANGEROUSLY_SKIP_PERMISSIONS` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_INCREMENTAL_REQUEST_BODY` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
-| `CLAUDE_CODE_MCP_HANDED_LISTINGS` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
+| `CLAUDE_CODE_MCP_HANDED_LISTINGS` | 2.1.311（10-27） | 4 | — | — | 2.1.312（10-28）消失（來源條目消失清單） |
 | `CLAUDE_CODE_MCP_REGISTRY_FETCH_AT_STARTUP` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_SDK_HAS_SESSIONS_OAUTH_REFRESH` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
 | `CLAUDE_CODE_SKIP_MCP_DEBUG_LOG_FILES` | 2.1.311（10-27） | 1 | — | — | 2.1.311 仍在（比對日 10-27） |
@@ -323,6 +325,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-10-28 | 2.1.312 新增候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`；`MCP_HANDED_LISTINGS`（首見 2.1.311）消失，列 4 階；僅命中來源與日報鏡像 |
 | 2026-10-27 | 2.1.311 新增 15 個第一階候選旗標（名單見追蹤表）；`TOOL_CONTAINER_PLUGINS_NAMED`（首見 2.1.310）消失，列 4 階；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-24 | 2.1.310 新增 4 個第一階候選旗標（見摘要）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
 | 2026-10-23 | 2.1.309 新增 4 個第一階候選旗標（見摘要）；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |
