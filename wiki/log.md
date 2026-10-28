@@ -8256,3 +8256,8 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-2fcc1b（功能記者，official-community-gap 矩陣兩則候選皆未達新列門檻）；H-6b29fd（安全政策→功能，Downloads 資料夾攻擊面＋opus-5-5 分類器誤判）本輪功能記者判定無對應新回報，仍留 open 待下一輪；安全政策記者回報「⚠️ 需主編轉知功能記者」詢問 v2.1.311 rm 阻擋移除一事是否與功能記者重複處理——主編核對後確認功能記者寫入 `entities/claude-code.md`「🛡️ 安全與隱私」產品變更角度、安全政策記者寫入 `topics/ai-agent-safety.md` 風險態勢角度，兩頁各自成立、無重複或矛盾，**不登帳**：已於同輪當場核對清楚，非待下一輪處理的事項
 - 功能記者回報「⚠️ 需主編轉知安全政策記者」：Claude 文字浮水印擴大至 Opus 4.7／4.6、Sonnet 4.6（11/3 生效）比照既有慣例歸安全政策（EU AI Act 政策面），但安全政策記者本輪已派出、未及附入——已開立 H-ffd95c（功能→安全政策，頁 topics/anthropic-government-policy），下一輪派工時附上
 - devpractice 沉澱：本日無開發實務候選（當日分類無條目落入「開發實務」類）
+- market 判讀：判讀 4 則（GSA 政府採購折扣擴大至 40%、Mithril Medicine 一人生技新創收購、加州州長 AI 監管表態、API 定價文件三項計費機制異動），寫入 [[topics/market-signals]]；里程碑登記 4 筆、回顧結算 ⏳ 新增 4 列，結算日 2026-11-11；多則重述既有 S-1 風險清單／IPO 評論類（Ars Technica、PBS、NPR、Michael Burry、TechCrunch、天然氣瓶頸等）判定未達新資訊門檻，不開新則
+- 主編待辦（市場記者回報「⚠️ 需主編查證」三項，留待後續查證）：
+  - 加州州長表態原文與法院封鎖權具體適用條件——現僅 U.S. News & World Report 等標題層級可用
+  - Mithril Medicine 收購金額、條款與創辦人真實身分——R&D World／Endpoints News 均僅標題層級
+  - Managed Agents／Haiku 5.5／inference_geo=us 三項計費機制的具體費率數字——官方文件 https://platform.claude.com/docs/en/about-claude/pricing 原文待開連結核對
