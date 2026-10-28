@@ -1312,3 +1312,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-27T22:10:38Z] TARGET_DATE=2026-10-27, Step 0b 冪等閘: digest already exists (news/2026-10-27.md 已由本日較早班次產出並完成全流程，commit d4bd711 chore: cloud daily-news-pipeline-cloud completed 2026-10-27)
 [週三 2026/10/28 01:31:41.00] Watchdog push SENT - 每日新聞 2026-10-27 缺件：讀者版。本機跑 /news-pipeline 2026-10-27 補
 [cloud daily-news-pipeline-cloud STARTED 2026-10-28T12:27:26Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-10-28T12:28:17Z] TARGET_DATE=2026-10-28, Step 0-1 新鮮度防線: gathered_items.json date=2026-10-27 items=76，非目標日期的新鮮資料（src/gathered_archive/2026-10-28.json 尚不存在，GitHub Actions 上游抓料未到齊，交後續班次接手）
