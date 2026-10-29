@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **最新動態**（2026-10-29）
 > - **AI for Science 擴大至 20 個基金會與研究機構**：提供免費 Claude 額度支持高影響力科研，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic）。
 > - **IPO 揭露效應擴散**：彭博法律新聞稱 S-1「存在性」AI 風險揭露正設下業界標準；彭博另報導銀行已撤回一筆與 Anthropic 相關的德州資料中心債券發行案，詳見 [[topics/anthropic-ipo]]。
-> - **Mithril Medicine 收購追加細節**：Forbes 稱這家一人新創此前以 Claude 運行藥物開發專案（收購本身見下方清單 10-27 條）。
+> - **Mithril Medicine 收購追加細節**：Forbes 稱這家一人新創此前以 Claude 運行藥物開發專案（收購本身為 10-27 已報導事件的媒體覆述）。
 
 ---
 
