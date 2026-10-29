@@ -1,0 +1,609 @@
+{
+  "https://code.claude.com/docs/en/desktop.md": {
+    "title": "官方文件更新：Claude Code 桌面版",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions": {
+    "title": "AI for Science expands to foundations and research institutions",
+    "source": "Anthropic Blog",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/oil-oil/oil-ui": {
+    "title": "oil-oil/oil-ui",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce": {
+    "title": "Claude Code regularly sends each background agent’s transcript to its model",
+    "source": "Hacker News",
+    "categories": [
+      "功能",
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/AeternaLabsHQ/pullmd": {
+    "title": "AeternaLabsHQ/pullmd",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/dragonked2/alphacode": {
+    "title": "dragonked2/alphacode",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/410979729/scope-recall-hermes": {
+    "title": "410979729/scope-recall-hermes",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/tomtomsatnav/agent-orchestration-standard": {
+    "title": "tomtomsatnav/agent-orchestration-standard",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/70217": {
+    "title": "[Bug] Anthropic API Error: Connection closed mid-response",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/58693": {
+    "title": "[BUG] Spell checking cannot be turned off, making all entered text hard to read",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/53223": {
+    "title": "[BUG][SECURITY] CLAUDE.md/AGENTS.md instruction compliance is architecturally unenforced — documented security consequences and 10+ independent reports",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/41458": {
+    "title": "[BUG] cleanupPeriodDays: 99999 ignored — 490 sessions silently deleted despite explicit setting",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50286306": {
+    "title": "Tell HN: Claude Code adds your email to the prompt, the LLM sends it to websites",
+    "source": "Hacker News",
+    "categories": [
+      "功能",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://twitter.com/coolerwave/status/2115393243458207755": {
+    "title": "Claude Code found 14,219 photos of my face on my Android that I never took",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50281226": {
+    "title": "Show HN: Full Python 3.15 Implemented in 25k LoC C11",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.fabivo.app/en": {
+    "title": "Show HN: Fabivo – Furniture design from a photo to a numbered cut list",
+    "source": "Hacker News",
+    "categories": [],
+    "reason": "furniture design 工具，摘要未指名使用 Claude，與 Claude/Anthropic 生態系無關",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50291424": {
+    "title": "Show HN: Fast agentic video editing in the browser (Tella)",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/standing-desks/nouli": {
+    "title": "Show HN: Nouli – A multi-turn decision graph harness for System One models",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://dev.to/joancomadran/single-agent-vs-multi-agent-when-subagents-are-worth-it-5146": {
+    "title": "Single agent vs multi-agent: when subagents are worth it",
+    "source": "dev.to / #anthropic",
+    "categories": [
+      "開發實務"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anonbeat1/overheard": {
+    "title": "Show HN: Overheard – a Mac meeting recorder you can query from Claude Code",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/overflowy/claude-scrub": {
+    "title": "Show HN: Claude Scrub - redact secrets from Claude Code history on disk",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.wavefunction.si/": {
+    "title": "Show HN: Wavefunction – a minimal, open-source desktop coding agent for Mac",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://strictllm.com": {
+    "title": "Show HN: StrictLLM – For when you need human-in-the-loop",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/shivnathtathe/openbridge": {
+    "title": "Show HN: MCP bridge for chat between OpenCode and Claude Code sessions",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/vagkaratzas/orc-work-notify": {
+    "title": "Show HN: Orc-work-notify – Claude Code plugin with orc voice alerts",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xipksq/i_made_a_scripting_language_for_blender_4_years/": {
+    "title": "I made a scripting language for Blender 4 years ago, and recently discovered that Claude loves using it",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xipifa/looking_for_claude_pass/": {
+    "title": "Looking for Claude pass",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [],
+    "reason": "純求助帖（找人代買 Claude 訂閱），非新聞事件",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xipdfc/making_cc_smoother/": {
+    "title": "Making CC smoother",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xipbhx/the_only_limit_is_us/": {
+    "title": "The only limit is us",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xiouuc/20_is_too_little_100_is_too_much/": {
+    "title": "20$ is too little, 100$ is too much",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xior8z/i_built_a_windows_taskbar_tracker_because_my/": {
+    "title": "I built a Windows taskbar tracker because my background agents kept eating through my quota",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5": {
+    "title": "SentinelOne to Add Anthropic’s Claude Mythos 5.1 to Wayfinder Frontier AI Services - VMblog",
+    "source": "Google News / VMblog",
+    "categories": [
+      "模型",
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTkUxbVRTZUhEVXBMdGNiYmhzU0NadlBJTFh1ZGlMYjZPcXUxa1dpWmpTQ0RGY1VDRnZ2YXVsYlQxakNIcGlXcEU2Z19WXzFFWF90M1NncXNXY1g0Y3daQlNRLUZoTm8yc3RCY2QzOUR6Wnpia1RKR25NSFVmd2tGa2NMVzdqdFk?oc=5": {
+    "title": "I installed 3 Claude Code mods, and now the default version feels unfinished - MakeUseOf",
+    "source": "Google News / MakeUseOf",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5": {
+    "title": "Anthropic offering users $4,800 Claude for Financial Advisors credit - Citywire",
+    "source": "Google News / Citywire",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTGRzaFc1Qi1PLUNMVXNod05hdlZtSlQ2Mk10UWZCamdST1RhWEhpcHdjU0syd0NWZ0VRNTlCM2ZnZkY0TnVObFdCWWRmMmkzWHN1em8wTGZBc0lyRS04eDdQT0t5TkdpZUowT055MEk4MFBCcXNyazN0Qm0tTk9FY0VQbHYyR21pM0p6ck5zVlNKWDdCYm1iUTVjR0huUWF3M3JzR01FeHd5OUx3OEtWMUU4ZzlwVVVrNGoyNnBLLVpibEJN?oc=5": {
+    "title": "Anthropic Launched A Consulting Arm. 5 Ways The Industry Has To Change - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOX3VESlFQVVMycTBtRnFKSUdzTjlaWndGaS15VTdjWVlQSUpwenZBQjBiN19KU2VVeFNISlE3MmFvYUllM2JDS3B5dFA0V204RVZNZkFkZmtyd0xTYmZ6MUo3Nko5RzBhR28ybzhVZGUtTE9sd1dfM3R4WTl5ejhPQkdtWW1LdzFPRy1SOUJSMnRWWC1kR1FtWHJKZy1RUURFTEsyeFVxanZ3bE8yYU53cE9wMHNlM2dHS0dVaDU1amtiWDQ?oc=5": {
+    "title": "Anthropic Bought A One-Person Biotech That Ran A Drug Program With Claude - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSHNYSEJlZEQtclhFUk1CZjRKWkFhVk1SM1pmcEJkajl5LWgtSHVfaDNkWUtKazRRUUh2YjZ1UVB0M1owMEdOdnlLc0FOdmdDbWdQanZqUjdELS1lVHFHMktfcHVXbXRaZmUtcXdaTncyTlBrdU5MVEN3NURjR1c4Mg?oc=5": {
+    "title": "Claude's new smart reports tell bosses when workers are 'off-topic' - Mashable",
+    "source": "Google News / Mashable",
+    "categories": [
+      "功能",
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxObXVNcHg4RlZVb1pMelhtUTNkaHBQLXJNeTVoVDFFWEFuZG5HMDVud1dDYzZOOUJlUXdIbWhrTHdRRWx3MTZzcDM4eWdZTFNHOF9QT2dpQWJLc0RRZFNabkVPb2FCbUdBYVJjb1k4MUlidDVEOEdKOGR2TlpTWHcxN3V2aTk5ckJmTGZpRjdZeEFCYWFGbUkwWWxKVzVrQ0VpLWxTSElpRWIxZzhOQWFzcjNpb3ZjUWtwbkMtX2Y2QUd5Nk50TmxCdEZn?oc=5": {
+    "title": "Anthropic IPO Disclosure of ‘Existential’ AI Risk Sets Standard - Bloomberg Law News",
+    "source": "Google News / Bloomberg Law News",
+    "categories": [
+      "商業",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM0dkaWlfVnhscS1vQm55TUZvZE5fT2NiWGlqa0VYX0hDakpaSXFidk0xRTctM3d4cjVoVzhKeWFEUlEycXBROEdudk9kNXR5SXMzNmJoRGs1VEs5U1ZGQnVKdUVxWkRlV2dhVmJXcTBlQUE2UmhUalZCT19aNW8xU1lTTTk1YTJjVWZGS2hRT3hyNGM?oc=5": {
+    "title": "Researchers broke the browsers built into VS Code, Cursor, Copilot, Codex and Claude Desktop - Help Net Security",
+    "source": "Google News / Help Net Security",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://simonwillison.net/2026/Oct/29/ben-hylak/": {
+    "title": "Quoting Ben Hylak",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTWZ1cFJjWU12d2ZBMU9WVTFvbXFMdXBwaUFMRko0VXBXYkZadEM1dDRsRi04QjR6TjE1NmhpOGY3bDBNdjlrWXUtT29uc2NTNmpVTzE4QnQ0ZkRtNURPOG1OZW5QOGFyMGJ2R196NFhxTThFZGlpSV9PdlVBRFJXdm0wdHRzSnpOTEtPR18ybFpXSGZESWNxeEhEdGotYUJNOHhXYVR3XzlDVlVabjhV?oc=5": {
+    "title": "Banks Shelve Bond Sale for Anthropic-Tied Texas Data Center - Bloomberg.com",
+    "source": "Google News / Bloomberg.com",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiogFBVV95cUxOd29LTUlWU1VjenV4SGhZUzRFNmlNZ1RGdUlVNlMwOVdaY1dzQ1dIdnI4SzlVMUNMRHExdGo5djRyWXluSk83bHVzRmg3ZmxXLW91a18tb19GTmhsUnNXajdtRjk4bWxuam5LTE5hcWctSnNyU2VPS1FaWlgzQUdrRFJCRmxqeWJZeXAyWGJVR1lubWMxQTM0SEdwVHJKeXBhZkE?oc=5": {
+    "title": "Mollie launches AI plugins and MCP server for Claude and ChatGPT - The Paypers",
+    "source": "Google News / The Paypers",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdkFOTVRMbnZjQmlvc0dRN3FObDMwTm0wNWJYVnVBWjVjN3FKVEtNYWxFMEY4VUdZeDR0bDA5U3E1UlNLUVFEd1I4SkNqZ0hCeE1UaWFKUWptQU5peXVZdFpiNlZ0N08xRzUxS2p1YTVaTjNLMlA4c0VpSFN4TS11NXBVZ2sxeE5LMjl3VlVuOGlYYl82ZV9KN3U1WllQMGV4Qi1z?oc=5": {
+    "title": "Fake Anthropic AI previews lure in overeager employees - CSO Online",
+    "source": "Google News / CSO Online",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE4xVjR4eUZ4YS1XRUNGVThYNnVXX1ZmY251dERqcWJRaDlMRTVuZHRnX3FwbHk0b09LRXJPNmVJM1NBTUdXMUpEWGY1M2dsOGtveGtXdUhrdlRwaUJiZlZ5WXNkbVBwajM2cHM2R05qUDdORWJ1?oc=5": {
+    "title": "Codex vs Claude Code vs Antigravity: $500 to $0 [2026] - https://tech-insider.org/",
+    "source": "Google News / https://tech-insider.org/",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcXY0c1BrYWdzQ1JGb1JDMjhNNVBkSHdOeUd1UzZLdGVFdUgyOTFORTMwR1d1dkdveXNZd0dZdXFGbUgwUDNTSHhUb1I5eEhPMUhJXzZBemZ5TTdDMzlFWlgydzZlcWxBOGJGdVRrcTdVZ0FlMmtZS0JBWHQtcmdhaHBpazFBSlpxUHdRazJCZW1POU1DT0pUdVZSeDNXeHpqR1VZVWxLNXVOSG44MWJTQThVWEMxdmdfc3dV?oc=5": {
+    "title": "Anthropic and OpenAI diverge on who should pull the plug on risky AI - Computerworld",
+    "source": "Google News / Computerworld",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TZUpmUHlNa3JZVDZPR3FXSENQem9aYTN4c1BCenRKN1JpcWVGbFFKcWVmZ1NZdnJZamdmV1o4MVlXeVRqd2xsRFAxMkpiVUs5UHA5NmxGaGk2ejZaR2t3?oc=5": {
+    "title": "Claude vs ChatGPT 2027: Which Is Better? - The Tech Buzz",
+    "source": "Google News / The Tech Buzz",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc0pOcjNtSkM5Z2VlUmRTUVN1SktSa1hGMEE0d3FuN3FBZDdDUUtzR2t6MDYtMndob2VPUDYza1J0NVV4bUMxRm1XZ1BFbkpzVzBuNUJWeE5FSWxXTC13X1AwZExQSVdKQngyckYxM0k5SFRnbG1GR1A3MU80d1o3aXFkZmNuWVdrNHJYUHE2Qi14QTRRanFKMnM5b3JVMFRmelowaXZzdGxWalJKeHpSU25ydHpjclk?oc=5": {
+    "title": "Claude Code Vs. Codex Vs Lovable Vs. Replit. Which AI Tool Is Best? - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONGJuaUdNcXBSZ3pndXVaY2pkSmhrM0poeEFQeFlKSmpFdDdGdHlfY3JESTJwcWNVS1NDUS1zN2JNenNfc0dnMDJVdm0wUktqc2l5MGdBc0pyX1FvWWd4LVJ0LWxTZzkxYS1aOTNuRnJZOE5JWExZVG5wbm5LaVFiRkVSZlRkUjhpWXVpMzZUamp3Q25iWVg0eGhFblloOHNNT0I2OENLdkROX055NTJ6XzdSV2E3bGJfbjJ1ZnBKUV93dG04TGZKLVdZVlRLb1lkZjB2dTd30gHWAUFVX3lxTE40Ym5pR01xcFJnemd1dVpjamRKaGszSmh4QVB4WUpKakV0N0Z0eV9jckRJMnBxY1VLU0NRLXM3Yk16c19zR2cwMlV2bTBSS2pzaXkwZ0FzSnJfUW9ZZ3gtUnQtbFNnOTFhLVo5M25Gclk4TklYTFlUbnBubktpUWJGRVJmVGRSOGlZdWkzNlRqandDbmJZWDR4aEVuWWg4c01PQjY4Q0t2RE5fTnk1MnpfN1JXYTdsYl9uMnVmcEpRX3d0bThMZkotV1lWVEtvWWRmMHZ1N3c?oc=5": {
+    "title": "LOHUM appoints Nobel laureate Konstantin Novoselov as chief scientist - ET Auto",
+    "source": "Topic Watch / ai-talent-flow",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMioAFBVV95cUxPU0pDX2pVQjkzZ3FqYjVRYVN5d0E5QllrX09mTXVISmtQd3pMWU9jYUZLRUVvbmRDZkxXNkZDdnFUc0F6Tnlhd203eEdTNEgta3VLeFhsOG5Ubk80eXFEWUtETzdwd2c5UzhLRmN1eDBnUE1VcXdsYjBQUHhKOEJVLU1ITUtnZTFsendwYWhsQ3dDVFBvVTVEVERqNmdaM2pR?oc=5": {
+    "title": "Shadowy AI Relay Disables OpenAI Codex, Claude Code Sandboxes - Dark Reading",
+    "source": "Google News / Dark Reading",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5va3NCQ1NINmlOLW0yNmdUZzRnQzAyMjMyRmpNdURMbDRicFR5VkZpclNlY2c1V1BKdTQyNGpZNXJ6WGJnM3FoR3hLNGFHQ2Fxdm9Zblh2UjJNTVVwMUhzTGNJcFZyQXd6?oc=5": {
+    "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That - infoq.com",
+    "source": "Google News / infoq.com",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxONTFYMkE3VElIM3Q5QlM3Q3FZSlJXQ2ExZDJwMkdqdmVTenZ0X0pwVXNkTHAwc2lBdkh0NVcxVENFN3Z0S21TZ3E0YWZ1UmZKdlZpc1Nsb0plTWRzU3dsZ05oX1dDX09yamJVWjN5bTRCeV95V0pnNjItWW91MC1Lak9ob3o5c2hGeERMOTJMdzNfSUgxQWdIR0tBeHd0d19XaVZPQkdGLWw3aC1mbTF2bUo3YlBiTkM1VVRpcXFUVQ?oc=5": {
+    "title": "Anthropic spent $2.75 million guarding Dario Amodei last year—more than 4 times his salary - Fortune",
+    "source": "Google News / Fortune",
+    "categories": [
+      "人物",
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORUhKakNPTGttWWFZV0I2cGswd3BadHM4NFE0dkZLbTFFd09hWEN6SzhIU0VOZDhmQlhkU3dLTHUzVjBZTlFnaUg2ejM2X29VSVp4bm1rNzhFZDBiV3hWeVBULXRxNUxMRnpIb2MxZlJRdWZ0SlV6N253Ymd6ak0tWEx1UmlwV3VySndsWGVnX1RsaVltWDRaVkMyNlJJUHhzdW91M2tYZDl2TWMtNUpDTE0wX2ViSkdiRnVBbHd1cV9xS0ZtY3RGUQ?oc=5": {
+    "title": "Epic Games is now using Claude Code and Codex to improve and debug Unreal Engine - TweakTown",
+    "source": "Google News / TweakTown",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE1WOE5mQmU2VG9Ddng2elNsQXNqWFJkU1o4MFJEQWN2VVR2dk1EMWNvZUpTd1YweGIzek1rMXlZNkcxS1ZoejJmaGt3QjIzTzVWaXZpaWdfNExicU5wQlNKYUd2WUR2WG1ackR2UkxJZnFTOHVSclE?oc=5": {
+    "title": "Anthropic's Zero-Rust Team Rebuilds Core API With Claude, Cutting CPU Consumption by 40% - BigGo Finance",
+    "source": "Google News / BigGo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://simonwillison.net/2026/Oct/28/ted-sanders/": {
+    "title": "Quoting Ted Sanders",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVZVbzFtbDFxZnF1V0VYS2ptbFhIb3pyNThETi03Mk5xMUhmMUs5TTVWUXBRSUlGUWtXcDM3RVRwVmlLRDV4ZklfMjF6Y2hGbmVrMEhKREdaRmh3VE5vZ1VBQ2IyZ1FDbjl4SXNGSFAzcW5CdXRtcG04V05yNGNEb2g0a0hKMkdEVE9mdkZzVjNub1BEWXFERDhteDlkUlN5c3Fpai1jeTl4a0ZkV05tZVl4U2RqbVZiUW8zSWtSSm5fd0k2N2t4aQ?oc=5": {
+    "title": "I tested the 3 Claude Code alternatives the internet keeps talking about, and only one let me down - XDA",
+    "source": "Google News / XDA",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZ3hIMUZpekhyUm5IWXhkcnBxcG1SWmJPTzJCTkVPOVhQRmxsNXMyZHZjdGNNUmZWQk9xR1lPenppcS1iWTA0OUJrdkV6VGQ4dkpKSkE5TU9WQ284OV81bjY5Nm9oU3ljTnQyUjBOSjkzYXVpZjlHQkN4MDMwaFFIWHhrWkxLQmJhMDRwR3Y1cGxfY3RlVFpWVTlTSms?oc=5": {
+    "title": "Expert Judgement Can Be Easily Hacked by AI, Anthropic Study Finds - Gizmodo",
+    "source": "Google News / Gizmodo",
+    "categories": [
+      "安全政策",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE56X2lqb0JtRDhTZ19hUmN6MEF3dVJkNTdGSGp1MGZRV04zRHN0R0tqU1l1SklfamlyUzhXU0g1YmJtRWRWbHdMVDJHengzeTVaNzFVN09nVWRhQTdya2s0WDRFdnoxcEw5ZHdUMHNZOWVjMm0zbktVZF9VNEVNRFU?oc=5": {
+    "title": "GSA Expands Anthropic OneGov Deal With 40-Percent Claude Token Discount - ExecutiveGov",
+    "source": "Google News / ExecutiveGov",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5veGE4N0V0WkZIUkNxclVtQVBUR05NRVgyRC1lTTdJSnA4OWZrRGxMYjI3b2x1YmhkNDZDWkx4eG4xM3FNcHZBNFkwdWxOeXdxREpISlA4SUhGdzA?oc=5": {
+    "title": "Theo Browne says his Claude agents ran 4,000 hours and rebuilt a compiler in weeks for $800 in subscriptions - BigGo Finance",
+    "source": "Google News / BigGo Finance",
+    "categories": [
+      "社群",
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMieEFVX3lxTE5hVmNYTzcxeFpBNVduX2JnRzcwODFoRE50Y0JKcEQ2QnE0WkE1emllTDFJTDBrOHFMd2oxMkY1V2xxeUM1RHpOam9hVC1zUkNiN3JVR2NHZTNMbmQxUmNQMTF3UjE1QWZCNDBqVTZucVpTS05nRW5BUw?oc=5": {
+    "title": "Amazon relaxes push for AI use as Anthropic reveals shocking stats - Fox News",
+    "source": "Google News / Fox News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcW5lamlYOHpXckR6U09fTmFTWDJ4LU5ySm1JY084ek5DVGp3OFpEUHNMUHJuYVBZTlRvUVBQa0ZCdG1ldV8yRkdmVFNpVlRBb3Z1d1RvT3RPb1NudFpiU2RFVmZ5TlJTS2xKZUlaYlBfRGRjYWFpUk9DRXhZaF9RZXQ1eHdLbWswdVFmYVowMTZXZ1Rx?oc=5": {
+    "title": "Copilot vs ChatGPT vs Claude: 30 Days to 5 Years [2026] - tech-insider.org",
+    "source": "Google News / tech-insider.org",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5": {
+    "title": "Anthropic just launched tools to show companies what their AI spending is buying - TechCrunch",
+    "source": "Google News / TechCrunch",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTFBwN2NNTWhtN2tqTEVZbGpvbngtc1BoS3hJNEJidWtMbERSVDNOVnFKQmpVUDlyS01odkZlVVowY3pKdm8zbTl3NGJ2WmVCTXFiODFfZWJBZ2hweThiUTQxWkFDdmhZN2N6dVBZTzdOT1NHYVpFVDVyM0RpNlQwVGc?oc=5": {
+    "title": "TheAnthropic IPO Arrives: My (but not the) Anthropic Valuation! - Aswath Damodaran | Substack",
+    "source": "Google News / Aswath Damodaran | Substack",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMzJoa0dYcHozYXk5WkJSbTFOUmNSLTVmVlNHSTZWSDlyU19VVkd6T0FVZEZQaFk2OUc1VVdhODZhODhHSU9GdndsajZkTEYwbldOd1dXb2YzSE1LU2JWZl9OUjV6R0xObGVBWm9uWVhPalF1OEpEOW1oYXU5bVNYQkxxd0JUa3M?oc=5": {
+    "title": "ChatGPT vs Claude vs Gemini Test: 12 Steps, 90 Min [2026] - shattered.io",
+    "source": "Google News / shattered.io",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/": {
+    "title": "Gemini 4 Carbon: Our next frontier model",
+    "source": "Blog / Google DeepMind Blog",
+    "categories": [
+      "商業",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://about.fb.com/news/2026/10/meta-partners-with-five-us-universities-to-accelerate-medical-and-scientific-breakthroughs/": {
+    "title": "Meta Partners With Five US Universities to Accelerate Medical and Scientific Breakthroughs",
+    "source": "Blog / Meta Newsroom",
+    "categories": [],
+    "reason": "Meta 自家學術資金新聞，內容與 Claude/Anthropic 選型、帳單、可用性或能力對比完全無關",
+    "note": ""
+  },
+  "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/": {
+    "title": "GitHub Octoverse 2026",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1md2xqdDM4TGFVT2RfUWw5VW1Cb2lOeVVQc1ZxdzBoR0hpODRxSi13Rk1zMHdIZVlOcVlWaVM0aWR2dzQxVEFOQ1ZRaEJGbnVWaE45V3NfSVY?oc=5": {
+    "title": "GitHub debuts Copilot Fusion, a new model selection & orchestration system that beats Claude Code for half the API cost - The New Stack",
+    "source": "Google News / The New Stack",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  }
+}
