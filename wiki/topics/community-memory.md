@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-27
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **新增本機可視化編修 AI 對話記憶工具**（2026-10-27）
-> - **voidcraft-dev/memory-forge-rs**：Tauri + Rust 打造的離線本機 session 管理器，可直接可視化編輯對話記憶，涵蓋 Claude Code、Codex、Gemini CLI 等多款工具。
+> **新增跨 agent 本機長期記憶工具，強調來源可追溯**（2026-10-29）
+> - **410979729/scope-recall-hermes**：單一 SQLite 儲存的本機長期記憶，回憶內容附來源，並提供檢視、修正或刪除記憶的工具，涵蓋 Hermes、Codex、Claude Code 等多款 agent。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### 410979729/scope-recall-hermes：跨 agent 本機長期記憶，單一 SQLite 儲存＋來源可追溯回憶（2026-10-29）
+
+- **主線：** 索引記憶
+- **核心模式：** 給 Hermes、Codex、Claude Code、WorkBuddy、dsh 等 agent 用的本機長期記憶工具：單一 SQLite 儲存、回憶內容附來源，並提供檢視、修正或刪除記憶內容的工具；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有代表技巧（claude-mem、projectmem、memory-forge-rs 等）一個「回憶來源可追溯、可人工修正」取向——既有做法多聚焦擷取、搜尋或可視化編輯記憶，本則強調每筆回憶可查來源、記錯可刪，涵蓋多款 agent 工具；跨工具持久記憶核心概念相符，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/410979729/scope-recall-hermes)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### voidcraft-dev/memory-forge-rs：本機 session 管理器，可視化編輯 AI 對話記憶，涵蓋 Claude Code 等多款工具（2026-10-27）
 

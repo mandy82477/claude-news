@@ -32,13 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **最新動態**（2026-10-28）
-> - **v2.1.312**：Claude apps gateway 新增 `oidc.user_id_claim` 設定，可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
-> - **新已知問題**：Google Calendar 連接器列出／搜尋事件請求自 10-26 起失敗，10-28 16:19 UTC 仍標記調查中。
-> - **已知問題互動**：Windows Desktop 孤兒 Silo 當機（#53247）增至 109 則留言、38 個讚；Cloud／Cowork git proxy 擋外部 push（#76248）增至 41 則留言、17 個讚。
+> **最新動態**（2026-10-29）
+> - **新已知問題**：`cleanupPeriodDays` 設為 99999 仍遭忽略、490 個 session 被靜默刪除（#41458）；CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報（#53223）；輸入框拼字檢查無法關閉（#58693）；使用者 email 經 prompt 外流至外部網站（#81138）；Connection closed mid-response 再增一則獨立回報（#70217）。
+> - **社群發現（未經官方證實）**：背景 agent 面板每 30 秒重送完整 transcript 僅為更新狀態列，Hacker News 今日熱度最高條目（527 分），社群腳本可停用。
 
 ---
 
@@ -224,8 +223,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（17 條未修復、4 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（19 條未修復、4 條已修復、1 條拒修、3 條❓）
 
+- 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報與資安後果（GitHub issue #53223，31 則留言、5 讚，2026-10-28）**：官方尚未回應。
+  - 與既有「CLAUDE.md 標記為強制的規則持續被忽略」（#2544）、「candidate-context 而非強制系統提示」發現（見「🧠 行為與品質」）同屬此限制，本則為彙整版；把 CLAUDE.md／AGENTS.md 當安全邊界用的團隊應留意。風險面見 [[topics/ai-agent-safety]]。
+- 🔴 **未修復**｜**使用者 email 被加進 prompt，LLM 可能分享給外部網站（GitHub issue #81138，經 Hacker News 討論 16 分，2026-10-29）**：官方尚未回應。
+  - Reddit 另有獨立回報稱 Opus 5.5 把使用者 email 分享給外部網站；與「User-Agent 字串夾帶 email」（#78431，見下方）觸發機制不同，暫分列追蹤。會串接外部網站或 MCP 工具的使用者應留意。風險面見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 疑似移除 skip permissions 模式下 `rm` 指令的既有阻擋**：媒體（shattered.io／The Register）報導，changelog 未見相關記載；風險面見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：觸發機制與官方回應均未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
@@ -260,10 +263,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 - **Claude Code 新增 Compliance API 與企業安全功能**（查證日 2026-09-20，來源：[Claude Help Center](https://support.claude.com/en/articles/13015708-access-the-compliance-api)、[platform.claude.com](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Compliance API 提供 Enterprise／Claude Console 客戶以程式化方式讀取組織 Activity Feed（含 chat、files、projects、sessions、users），供合規、稽核與治理使用；本機 Cowork／Claude Code session 端點於 2026-08-11 上線、2026-08-26 脫離 beta（遠端 Cowork session 端點則於 08-03 先上線）。與 Claude Enterprise／Claude Code Analytics API（回傳聚合用量與成本）不同，Compliance API 回傳逐事件紀錄。
 
-### 💰 計費與配額（28 條未修復）
+### 💰 計費與配額（29 條未修復）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**背景 agent 每隔約 30 秒重送完整對話記錄，僅為更新狀態列，疑增加隱性 token 用量（社群分析＋繞過腳本，Hacker News 527 分，2026-10-29）**：單一社群來源，官方無公開回應。
+  - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
 - 🔴 **未修復**｜**無介面 `claude -p`（SDK CLI 入口）相同工作負載下，每 token 耗用的 5 小時額度比互動式 CLI 多約 1.8 倍（GitHub issue #97074，累積 52 則留言、96 個讚，2026-10-27）**：headless／SDK 模式批次跑 Claude Code 的使用者可能在相同用量下更快撞到額度上限；官方尚未回應。
 - 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
@@ -297,8 +302,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
-### 🧠 行為與品質（70 條未修復、3 條已修復、1 條拒修、6 條查無官方、4 條❓）
+### 🧠 行為與品質（71 條未修復、3 條已修復、1 條拒修、6 條查無官方、4 條❓）
 
+- 🔴 **未修復**｜**輸入框拼字檢查無法關閉，紅色底線標記讓輸入文字難以閱讀（GitHub issue #58693，累積 31 則留言、18 個讚，2026-10-29）**：常輸入非英文或專有名詞的使用者受影響最明顯；官方尚未回應或提供設定選項。
 - ❓ **待查證**（標 2026-10-27｜查 German、1xgvuu5｜複 2026-11-10）｜**無預警切換德文回覆（Reddit，單一貼文、0 留言）**：對話中途突然改用德文作答並說明自身動作；單一來源、無佐證，無法判斷是否孤立個案。
 - 🔴 **未修復**｜**功能請求：Bash tool 可設定使用的 shell 或繼承啟動時的 shell（GitHub issue #7490，累積 39 則留言、150 個讚，2026-10-23，今日反應數最高）**：目前 Bash tool 固定走某套 shell；使用者呼籲可設定或繼承啟動時的 shell（如 fish、nushell）；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**不遵守原始檔案編碼，Windows-1252 編碼檔案讀寫後遭破壞（GitHub issue #7134，累積 33 則留言、30 個讚，2026-10-21）**：使用者回報 Claude Code 未遵守檔案原始編碼，非 UTF-8（如 Windows-1252）編碼的既有檔案經讀寫後內容損毀；官方尚未回應，處理舊檔前建議先備份。
@@ -396,8 +402,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（18 條未修復、2 條拒修、1 條查無官方、2 條已修復）
+### 📂 Session 與資料管理（19 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+- 🔴 **未修復**｜**明確設 `cleanupPeriodDays: 99999` 仍遭忽略，490 個 session 遭靜默刪除（GitHub issue #41458，26 則留言、11 讚，2026-10-29）**：官方尚未回應。
+  - 與下方「Session 歷史 30 天自動刪除」條目建議的延長解法矛盾——該設定本身可能不生效；靠 session 歷史回溯過去工作的使用者應留意是否真的被保留。
 - 🔴 **未修復（regression）**｜**桌面版跨 session 傳訊自 CCD 2.1.224+ 起靜默失效，訊息遺失、收訊 session 卡死 15–20 分鐘（GitHub issue #86012，42 則留言、9 讚，Windows／macOS，2026-10-17）**：與下方 #24798 已修復狀態矛盾；部分安裝已於 2.1.237 修復，穩定版頻道仍受影響。
 - 🔴 **未修復**｜**context compaction 後會抹除 `.claude/project-context.md` 的專案指引（GitHub issue #9796，累積 30 則留言、4 個讚，2026-10-08）**：使用者回報壓縮後專案指引遭清空；與跨 compaction 記憶缺口（#34556）同類但聚焦該檔案本身，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：原生支援可切換的 Claude Code「profile」，隔離記憶、指令、hook 與設定（GitHub issue #7075，累積 32 則留言、58 個讚，2026-10-08）**：生態系框架各帶自己的 context／subagent 庫，混用易衝突，呼籲官方原生支援；官方尚未回應或排入路線圖。
@@ -422,6 +430,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ⛔ **官方拒修**｜**Session 歷史 30 天自動刪除（Anthropic 明確拒絕修復）**（2026-05-01 確認，2026-06-30 更新，2026-07-28 補充資料使用政策說明）：Claude Code 預設在 30 天後自動刪除 session `.jsonl` 歷史檔；Anthropic 官方在 [GitHub issue #62476](https://github.com/anthropics/claude-code/issues/62476) 明確表示不會修復此行為。社群建議替代方案：用 CLAUDE.md 記錄關鍵決策，或建立 `.claude/changelog` 手動保留對話摘要。延長保留期間的臨時解法：`npx agentinit agent set claude cleanupPeriodDays 365`。**2026-07-28 Hacker News 討論補充：** 本地 30 天刪除為裝置端保留機制，與訓練資料使用政策為不同議題——依官方[資料使用政策文件](https://code.claude.com/docs/en/data-usage)，消費版（Free/Pro/Max）預設可自行選擇是否讓對話用於模型訓練；商用版（Team/Enterprise/API/第三方平台/Claude Gov）維持不用客戶程式碼訓練模型，除非客戶主動選擇加入（如 Development Partner Program）；即刪除時程與訓練授權為兩條獨立規則，不可混為一談。
   - 2026-10-25 互動數更新：累積 28 則留言、33 個讚，官方立場未變。
+  - 2026-10-29 新回報：issue #41458 指出即使設定 `cleanupPeriodDays: 99999` 仍遭忽略、490 個 session 遭靜默刪除（見上方條目），上述延長解法是否持續有效待觀察。
 - 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-11-21）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天對話無故消失且搜尋不到；查無 Anthropic 針對此個案的官方回應。
   - 同類報告續見於 2026-06-30（The Register）與 07-14（Anthropic 稱該次為 HIPAA 設定調整、並未刪除對話）；媒體調查推論多為桌面版同步前靜默當機，屬第三方推論；09-20 複查另有獨立報導一致。
   - 2026-10-24 再複查：[說明中心「如何復原已刪除的對話」](https://support.claude.com/en/articles/9519177-how-can-i-recover-a-deleted-conversation)只談封存／共用專案與權限造成的「看似消失」，未提無故消失或同步前當機，04-30 個案仍無官方逐案說明。
@@ -577,8 +586,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（43 條已修復、11 條未修復）
+### 🌐 服務穩定性（43 條已修復、12 條未修復）
 
+- 🔴 **未修復**｜**API Error: Connection closed mid-response，工作到一半無預警中斷（GitHub issue #70217，33 則留言、22 讚，2026-10-28）**：官方尚未回應。
+  - 與既有同名錯誤（#69415）、「串流閒置逾時」（#46987）同屬串流可靠性問題但為獨立回報，暫分列追蹤；長時間跑自動化或大型任務的使用者可留意。
 - 🔴 **未修復（調查中）**｜**Anthropic Status：Google Calendar 連接器錯誤率升高，列出／搜尋行事曆事件請求自 10-26 起即開始失敗（2026-10-28 16:19 UTC 仍標記調查中）**：非 Claude Code CLI 本身問題，屬 Anthropic Status 頁面涵蓋的連接器生態系事故，補記於此供跨產品穩定性對照。[來源](https://status.claude.com/incidents/phg1y2yh07n2)
 - ✅ **已修復（約 35 分鐘後解決）**｜**Anthropic Status：Claude Sonnet 5.5 錯誤率升高，波及 claude.ai、Claude API、Claude Code 與 Claude Cowork（2026-10-27 14:42–15:17 UTC，15:50 UTC 確認解決）**：官方通報四項產品同受影響，15:50 UTC 確認已解決。[來源](https://status.claude.com/incidents/lqhknfdjrcst)
 - ✅ **已修復（約 35 分鐘後解決）**｜**Anthropic Status：Claude Fable 5、Fable 5.1 錯誤率升高（2026-10-24 05:00–05:35 UTC，05:53 UTC 確認解決）**：官方通報兩款模型請求錯誤率升高，05:53 UTC 確認已解決。[來源](https://status.claude.com/incidents/0ns5clsk8p2x)

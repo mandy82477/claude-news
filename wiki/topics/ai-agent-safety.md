@@ -28,15 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 1897 行，其中技術彙整 1326＋時序 399 為事件流，依類別欄分群（技術彙整標題關鍵字粗估，行數含各群條目全文）——(a) 提示注入攻擊面與防範（約 240 行，答「提示注入怎麼防」）、(b) 產品層漏洞與誤操作（CVE、沙箱、供應鏈、agent 刪檔越界，約 280＋行為失控約 145 併入，答「Claude Code／MCP 哪些洞還開著」）、(c) 在野濫用態勢（攻擊者用 Claude 做什麼，約 250 行）、(d) 官方防護計畫與安全政策表態（CVP、Glasswing、Cyber Mission、使用政策，約 200 行）；摘要／現在還擋不住的攻擊／網攻能力／事故年表／拿什麼擋（約 130 行）留母頁作索引與結論，已有子頁 ai-eval-boundary-incidents 與 safety-china-trust-dispute 維持不動；時序 399 行依同一類別欄隨群下沉。待頁面健檢波執行 %%
 
-> **最新動態**（2026-10-28）
-> - **模型網攻能力**：Anthropic 官方研究稱未發布內部模型公開 5 條攻擊鏈，於 Chrome、Safari、Windows、Linux 達成 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動。
-> - **入侵聲稱再跟進**：The Independent 稱該新創聲稱在 12 小時內「攻破」Anthropic（續 10-26 Gizmodo／WaPo），官方仍未回應。
-> - **rm 阻擋移除主張**：shattered.io／The Register 稱 v2.1.311 在 skip permissions 模式下移除 rm 阻擋，三篇報導皆僅標題可用、可信度偏低。
+> **最新動態**（2026-10-29）
+> - **CLAUDE.md／AGENTS.md 非安全邊界**：GitHub Issue #53223 稱指令遵從性在架構上未被強制執行，31 留言、10+ 份獨立回報。
+> - **email 外洩新路徑**：Hacker News／GitHub Issue #81138／Reddit 三來源稱 Claude Code 把使用者 email 加入 prompt，模型再分享給外部網站。
+> - **瀏覽器元件遭攻破（僅標題）**：Help Net Security 稱研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件，細節未載。
 >
 > 詳見 [[topics/ai-agent-safety#技術彙整]]。
 
@@ -75,6 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **官方現在擋到哪（整頁層）**
 
 - **Auto 模式不是安全邊界**：這是官方立場，不是還沒修。讀者能動的是隔離與監看（2026-08-31 揭露、官方結案為 informative）。
+- **CLAUDE.md／AGENTS.md 也不是安全邊界**：GitHub Issue #53223（31 留言，10+ 份獨立回報，2026-10-29）稱此類指令遵從性在架構上未被強制執行，與 Auto 模式同屬「官方文件／設定非安全保證」的模式。
 - **Enterprise Frontier Safeguards**（2026-09-01 公告）：監看攻擊性網路與生物能力開發、以及憑證外洩跡象；資料存客戶自己的雲端儲存，今年秋季分階段推出、本身免費（雲端儲存另計）。
 - **LSVP 放寬生物安全限制**（2026-09-18 公告）：生命科學驗證計畫（LSVP）先以 Beta 開放給已完成早期存取的機構，通過驗證的生醫專業人士使用 Mythos／Opus／Sonnet 時適用較寬鬆但仍有把關的生物相關防護；放寬幅度與審核標準未見公告細節。
 - **CVP 擴大為三層存取**（2026-10-06 官方公告）：核准資安團隊可取得更完整網路能力與較少阻擋的分類器，涵蓋 Opus 5.5、Sonnet 5.5、Mythos 5.1；The Hacker News 稱 Glasswing 藉此已找出 129,000 個漏洞，為目前唯一公開量化成效數字。區域醫院列為 Defense Access 適用範例（官方，10-24 查證）。
@@ -183,6 +184,34 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 ## 技術彙整
 
 評測越界事件（AISI 報告、Anthropic 自揭的評估事故、費城警局案、10-23 官方量化評估與 METR 質疑）的逐條細節在 [[topics/ai-eval-boundary-incidents]]；本節收其餘事件。
+
+### Hacker News／GitHub Issue #81138／Reddit：Claude Code 將使用者 email 加入 prompt，模型再把它分享給外部網站（2026-10-29 新增，跨三來源）
+
+- **揭露來源**：Hacker News「Tell HN」（2026-10-29 09:06 UTC，16 分，2 個來源）；連往 GitHub Issue #81138（email 進入 prompt 的機制面）與 Reddit r/ClaudeCode 貼文（稱 Opus 5.5 把使用者 email 分享給外部網站）
+- **核心主張**：GitHub Issue #81138 指出 Claude Code 會把使用者 email 加入 prompt／context；Reddit 貼文稱 Opus 5.5 與外部網站互動時把該 email 分享出去——兩則合起來構成「email 先進 prompt、模型再主動送出」的外流路徑。HN 留言主張應可設定關閉此行為，模型不該知道使用者 email
+- **與既有事件的關係**：與既有 08-11 #78431（User-Agent 夾帶 email，至今未修，見「### 2026-08-11～08-12」）屬不同機制的同類外洩——#78431 是傳輸層 header 夾帶，本則是提示層注入後模型主動分享，是否同源未見報導，暫不合併
+- **性質判斷**：若屬實比 #78431 更廣——模型「知道」使用者 email 後，任何串接外部網站或 MCP 工具的互動都可能把它帶出去，不限於特定 API 呼叫的 header；是否所有使用者都受影響、或僅特定設定／整合觸發均未見報導
+- **可信度評估**：三個獨立來源（HN、GitHub Issue、Reddit）交叉佐證同一敘事；GitHub Issue #81138 本身互動數與官方回應狀態未見摘要列出，Reddit 貼文為單一回報、未見第三方重現
+- ❓ **待查證**（標 2026-10-29｜查 81138、shared my email｜複 2026-11-12）｜**觸發條件、受影響範圍與官方回應**：email 如何進入 prompt、是否可關閉、官方是否已確認或修復均未見報導
+
+%% 維運備忘：本則與下方 #53223 條目皆可能夠格進「## 現在還擋不住的攻擊」表（現滿載 11 列），誰留誰讓的範圍判斷留待整頁維護時處理，暫不逕自改表 %%
+
+### GitHub Issue #53223：CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，累計 31 留言、10+ 份獨立回報（2026-10-29 新增，產品層安全意涵）
+
+- **揭露來源**：claude-code repo Issue #53223（2026-10-28 15:06 UTC，31 則留言，👍5）；標記 `[BUG][SECURITY]`
+- **核心主張**：issue 作者整理至少 10 份獨立回報，稱 Claude Code 對 CLAUDE.md／AGENTS.md 內指令的遵從性在架構上並未被強制執行，並記載已發生的資安後果；具體後果案例與技術機制僅標題與摘要層級可用
+- **與既有事件的關係**：與既有「## 官方現在擋到哪（整頁層）」「Auto 模式不是安全邊界」同屬「官方文件／設定非安全保證」的模式——若團隊把 CLAUDE.md／AGENTS.md 當成安全邊界使用，此假設目前不成立
+- **性質判斷**：產品層安全意涵（設計假設落差），非具體攻擊鏈或 CVE；31 則留言與 10+ 份獨立回報顯示訊號強度不低，issue 本身未標官方回應或修復時程
+- **可信度評估**：GitHub Issue 一手回報，👍5／31 留言；未見 Anthropic 官方公開回應，「已記載的資安後果」逐案細節未見摘要
+- ❓ **待查證**（標 2026-10-29｜查 CLAUDE.md、AGENTS.md｜複 2026-11-12）｜**官方是否回應與是否規劃強制執行機制**：issue 彙整 10+ 份獨立回報與資安後果，官方尚未公開回應或標註修復路線圖
+
+### Help Net Security：研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件（2026-10-29 新增，僅標題可用）
+
+- **揭露來源**：Google News／Help Net Security（2026-10-29 14:10 UTC）；殼層摘要，原文無可讀內文，互動 0
+- **核心主張（僅標題可用）**：報導稱研究人員成功攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建的瀏覽器元件；具體攻擊手法、影響範圍與官方回應均未見報導
+- **性質判斷**：若屬實屬產品層漏洞，Claude Desktop 為受影響產品之一（非 Claude Code）；與「## 現在還擋不住的攻擊」既有列是否同一機制未見報導，證據不足，暫不列入
+- **可信度評估**：單一來源、互動 0、原文不可讀，訊號強度低
+- ❓ **待查證**（標 2026-10-29｜查 Cursor、Codex｜複 2026-11-12）｜**攻擊手法與影響範圍**：僅標題可用，具體攻擊鏈、受影響版本與官方回應均未見報導
 
 ### Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 等軟體關鍵漏洞，組出 5 條攻擊鏈（2026-10-28 新增，官方能力展示）
 
@@ -1605,6 +1634,11 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-10-29
+- **[📋 新增，跨三來源] Hacker News／GitHub Issue #81138／Reddit：Claude Code 將使用者 email 加入 prompt，模型再分享給外部網站**：與既有 08-11 #78431（User-Agent 夾帶 email）為不同機制的同類外洩，詳見「## 技術彙整」
+- **[📋 新增，低可信度] GitHub Issue #53223：CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，累計 31 留言、10+ 份獨立回報**：資安後果已有記載，官方未回應，詳見「## 技術彙整」
+- **[📋 新增，僅標題可用] Help Net Security：研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件**：互動 0、原文不可讀，攻擊手法與影響範圍未見報導，詳見「## 技術彙整」
+
 ### 2026-10-28
 - **[🛠️ 新增，官方能力展示] Anthropic 官方研究：未發布內部模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈**：達 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動；修補狀態與模型是否公開發布均未見報導，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 跟進，官方未回應] The Independent：前 DOGE 成員新創聲稱 12 小時內「攻破」Anthropic**：續 10-26 Gizmodo／WaPo 聲稱，官方仍未回應，詳見「## 技術彙整」
@@ -1872,6 +1906,7 @@ Anthropic 與同業自揭的評測越界事故——英國 AISI 報告、費城�
 - 🔴 **未修復（2026-08-22 直查 issue 確認事件為真）**｜**GitHub Issue #78431：Claude Code 以 User-Agent 字串夾帶使用者真實 email**：Hacker News（38 分，2026-08-11 14:21 UTC）連往 GitHub Issue #78431。
   - HN 留言當時質疑「沒有細節、沒有可重現步驟」——**2026-08-22 直查 issue 頁後此質疑已不成立**：回報載明 v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，並標為回歸（舊版無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤完成分類。
   - **未解的是修復進度**——issue 仍 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。同步見 [[entities/claude-code]] 已知問題。
+  - **後續（2026-10-29）**：另一條使用者 email 外洩路徑經 Hacker News／GitHub Issue #81138／Reddit 揭露，機制為 prompt／context 層而非 User-Agent header，是否同源未見報導，詳見「## 技術彙整」2026-10-29 條目。
 - 🔎 **查無官方**（標 2026-08-12｜查 deep_think、_can1357｜複 2026-11-20）｜**推文指稱 OpenAI 與 Anthropic 於 deep_think 工具外洩隱藏思維鏈**：
   - Hacker News（54 分，2026-08-11 22:06 UTC）連往一則推文（@_can1357），指稱兩家提供 deep_think 工具時會外洩隱藏的思維鏈（CoT）內容；原文僅為推文截圖，HN 留言僅屬猜測性討論（https://twitter.com/_can1357/status/2087228354399265125）。
   - **2026-09-20 查證：OpenAI 與 Anthropic 官方均未就此表態**，亦查無 CVE、無具名研究者的論文或技術報告。

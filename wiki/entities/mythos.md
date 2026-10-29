@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **最新動態**（2026-10-28）
-> Anthropic 公開研究：未發布的內部研究模型近月找出 Chrome、Safari、Windows、Linux 的 5 條攻擊鏈，多數免互動即可取得遠端執行，並繞過 Android 鎖定；原文未指名是否為 Mythos。
+> **弱訊號**（2026-10-29）
+> SentinelOne 稱將把 Claude Mythos 5.1 導入其 Wayfinder 資安服務，僅標題可讀、單一來源、互動數 0，整合管道與時程均未確認。
 
 ---
 
 ## 現況
 
-**2026-10-27（Anthropic 研究：未發布的內部研究模型鏈出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android）**：Anthropic 研究部落格公開，過去數月以一個「未發布的內部研究模型」在廣泛使用軟體中找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需使用者互動即可達成遠端程式碼執行；The Hacker News、CyberSecurityNews 同日跟進點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面。原文未點名具體模型版本，本頁暫不歸入 Mythos 特定世代（詳見下方「時序」）。
+**2026-10-29（SentinelOne 稱將 Mythos 5.1 導入 Wayfinder 資安服務，僅標題可讀，列為弱訊號）**：Google News 轉載 VMblog 標題，稱 SentinelOne 將把 Claude Mythos 5.1 整合進其 Wayfinder Frontier AI 資安服務；原文僅標題可用、單一來源、互動數 0，整合管道（是否透過 Project Glasswing）與時程均未確認（Google News/VMblog，2026-10-29；詳見下方「時序」）。
 
-**2026-10-23（The Decoder 轉引：Anthropic 稱未發布新模型優於 Mythos 5.1）**：The Decoder 報導 Anthropic 表示一款尚未發布的新模型在能力與對齊上皆優於 Mythos 5.1，惟原文僅標題可讀、單一來源、互動數 0，確認狀態標為待查證（Google News/The Decoder，2026-10-23；詳見下方「時序」）。
+**2026-10-27（Anthropic 研究：未發布的內部研究模型鏈出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android）**：Anthropic 研究部落格公開，過去數月以一個「未發布的內部研究模型」在廣泛使用軟體中找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需使用者互動即可達成遠端程式碼執行；The Hacker News、CyberSecurityNews 同日跟進點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面。原文未點名具體模型版本，本頁暫不歸入 Mythos 特定世代（詳見下方「時序」）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -134,6 +134,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+#### 2026-10-29
+❓ **待查證**（標 2026-10-29｜查 SentinelOne、Wayfinder）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（僅標題可讀，弱訊號）：
+- Google News 轉載 VMblog 標題「SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services」（[Google News/VMblog](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)，2026-10-29）；RSS 僅提供標題，無正文，互動數 0、單一來源、未進當日日報正文
+- 無法確認整合是否透過 Project Glasswing、整合範圍或上線時程；企業採用面細節見 [[topics/enterprise-tool-tracker]]
 
 #### 2026-10-27
 **Anthropic 研究：未發布的內部研究模型找出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android**：
@@ -306,3 +311,4 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [Google News/CyberSecurityNews：Claude AI Builds One-Click Chrome and Zero-Click Linux Exploit Chains, Bypasses Android Lock Screen](https://news.google.com/rss/articles/CBMiZkFVX3lxTE83Q09fcFRRbW1uWFFxUDUweXRxT0ZGbEhoZTc0dDRKS1hzdjFKTVFRUGw0VHNsa1V2c2pjTm1jZGdwTjVuUG5vcUZNbUlZWFNZeEo4RzAwWkhVeEo3VGxQUlhZZjB5UdIBa0FVX3lxTE5paG5zeElzZWxHMGFLR2JMVTh3NUxoSzNweXN1RDVycEdzVEp3TlFvanc5UnI0S1hXZGdVQm1ybDFoeGlwQ0dQa3pOY2dnWGxFWGZMUTJiZWo5akk1NGhPT253ZHc1d3NmODNJ?oc=5)（2026-10-28，僅標題可用）
 - [[news/2026-10-27]]
 - [[news/2026-10-28]]
+- [Google News/VMblog：SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)（2026-10-29，僅標題可用；懸置標記細節見「時序」2026-10-29 條目）

@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **Code Review 計費：官方給估法不給單價**（2026-10-18）
-> 官方費用頁（code.claude.com/docs/en/code-review-costs）確認 LLM code review 按 token 從組織 usage credits 扣、可設月上限，無固定單次價格；10-16 Accenture 把員工可報銷 Claude 支出上限設在每月 $29（此前單月花費高達 $1,000）仍是本頁最新具名企業案例。
+> **官方傳推出 AI 支出能見度新工具**（2026-10-29）
+> TechCrunch 報導 Anthropic 推出新工具，讓企業客戶看到 Claude 支出買到了什麼；工具名稱與功能範圍未見報導。10-16 Accenture 員工月支出上限 $29 仍是最新具名企業案例。
 
 ---
 
@@ -58,7 +58,7 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 | 缺口 | 社群/企業呼籲起點 | 官方對應 | 狀態 | 備注 |
 |------|------|------|------|------|
 | 部門 / 團隊層級預算分配與上限設定 | Uber 四個月燒光全年預算（Forbes，2026-05-17）；CFO.com 專文揭露 CFO 難以預測季度支出（2026-05-28）| Spend Controls（官方 blog，2026-07-02）| ✅ | 組織層 spend cap（75%／90% 警示）＋部門層用量報表 |
-| 細粒度 per-user token 消耗報表 | tokenflex.ing 排行榜、$4,200/月帳單審計揭示浪費模式（2026-05-23）| Spend Controls（同上）| ✅ | per-user 可見度與限額（75%／95% 通知） |
+| 細粒度 per-user token 消耗報表 | tokenflex.ing 排行榜、$4,200/月帳單審計揭示浪費模式（2026-05-23）| Spend Controls（同上）| ✅ | per-user 可見度與限額（75%／95% 通知）；10-29 TechCrunch 稱另有支出用途能見度新工具，名稱與範圍未載 |
 | 即時消費警報與自動暫停機制 | $6,000 /loop 徹夜運行事件（2026-05-22）；計費儀表板滯後問題（2026-05-01 起持續）| Spend Controls（官方 blog，2026-07-02）| 🧪 部分回應 | 有 75%／90%（組織層）與 75%／95%（每人）警示通知，**無自動暫停**——超過上限仍會繼續計費 |
 | API 費率 vs 訂閱方案的混合計費管理 | 6/15 計費結構改變爭議（[[entities/pricing]]，2026-05-14 起）；Agent SDK/CI/CD 用量脫離訂閱疑慮 | 無官方對應 | ❌ 無官方對應 | Spend Controls 報導聚焦支出管控，未提及混合計費規則調整 |
 
@@ -239,6 +239,9 @@ Anthropic 企業採用率（43.5%，Ramp AI Index 8 月指數，2026-08-12 發�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-29
+- **[官方工具，僅標題可用] TechCrunch：Anthropic 推出新工具讓企業看到 AI 支出買到了什麼**：工具名稱與功能範圍未見報導，詳見「缺口 vs 官方對應」表更新（Google News/TechCrunch）
 
 #### 2026-10-16
 - **[新增具名企業] Accenture 將員工 Claude 支出上限設在每月 $29，此前單月花費高達 $1,000**：詳見「企業案例」新增段落（Google News/Startup Fortune；24/7 Wall St.；The Times of India）

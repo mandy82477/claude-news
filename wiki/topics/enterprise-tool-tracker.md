@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-18
-**最後新聞更新：** 2026-10-18
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-18）
-> Replit 與 Anthropic 是否已停止合作有爭議：執行長在 TechCrunch Disrupt 台上答「是」，熟悉合作的匿名人士否認，雙方都沒發正式聲明，本表由「已退出」改標「有爭議」。
+> **最新企業採用異動**（2026-10-29）
+> TweakTown 報導 Epic Games 已用 Claude Code 與 Codex 直接協助改善／除錯 Unreal Engine 本體，僅標題可用；此前（10-12）官方僅釋出 skills 供外部開發者使用，兩者層次不同。Replit 合作爭議仍標「有爭議」未變。
 
 ## 摘要
 
@@ -93,7 +93,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Replit | 大型（AI 編碼/應用開發平台） | Claude（API 整合） | ⚠️ 有爭議 | 2026-10-16 | 執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方 | 2026-10-17 |
 | Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
 | 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
-| Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code | ✅ | 2026-10-12 | 官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用，527 星；生態系整合信號，內部採用規模未見報導 | 2026-10-12 |
+| Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code ＋ Codex | ✅ | 2026-10-12 | TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見下方 | 2026-10-12（跟進 2026-10-29） |
 | Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
 | JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07 | 2026-09-17 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
@@ -150,6 +150,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 哈佛 FAS | 大型 | Claude API | ✅ | 2026-04-28 | 取代 ChatGPT Edu，學術授權 | 2026-04-28 |
 
 **使用現況細節**
+- **Epic Games 使用面跟進（10-29，TweakTown）**：報導稱 Epic Games 已用 Claude Code 與 Codex 直接改善／除錯 Unreal Engine 本體，僅標題可用，導入範圍與成效數字未見報導；與 10-12 官方釋出 skills 供外部開發者使用層次不同（前者開放工具、本則為內部採用）
 - **Replit 執行長說法（10-16）**：Amjad Masad 在 TechCrunch Disrupt 被問 8 月宣布的 OpenAI 合作是否代表不再與 Anthropic 合作，答「Yeah. I mean, yeah」；理由是成本、夥伴關係與效能（TechCrunch；[Unite.AI](https://www.unite.ai/replit-ceo-masad-says-company-no-longer-works-with-anthropic/)）
 - **Replit 選型理由（10-16）**：Masad 稱 OpenAI 的 Sol／Astra 在從零 vibe-coding 建 app 上持續表現較好（TechCrunch）
 - **Replit 反證（10-16）**：一位熟悉合作的匿名人士對 TechCrunch 否認合作已結束；Replit 9 月部落格仍列 Fable 5／5.1 用在 Replit Agent 生產環境；Replit 與 Anthropic 都沒發正式聲明
@@ -216,6 +217,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-29
+- **[既有企業，使用面跟進] TweakTown：Epic Games 已用 Claude Code 與 Codex 直接改善／除錯 Unreal Engine**：僅標題可用，導入範圍與成效數字未見報導，詳見上方使用現況表 Epic Games 列與細節（Google News/TweakTown）
 
 #### 2026-10-16
 - **[新增具名企業，⚠️ 有爭議] TechCrunch：Replit 執行長表示已不再與 Anthropic 合作**：匿名知情人士否認合作已結束，雙方無正式聲明；10-18 由「已退出」改標「有爭議」，詳見上方使用現況表（Google News/TechCrunch；Unite.AI）

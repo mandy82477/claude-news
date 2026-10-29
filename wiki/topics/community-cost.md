@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **又一款跨 agent 用量監控工具：macOS 選單列、本地追蹤 25 種以上 agent**（2026-10-24）
-> - **Nanako0129/syrtis**：原生 Swift 選單列小工具，本地追蹤 Claude Code、Codex、Cursor、OpenCode 等 25 種以上 agent 的 token 用量與配額，附 3D 貢獻圖；延續每隔數天出現新實作的用量監控工具系列。
+> **背景 agent 面板每 30 秒重傳整份逐字稿：社群寫腳本停用**（2026-10-29）
+> - **no-agent-summary.js**：Bun `--preload` 腳本停用 Claude Code 背景 agent 面板每 30 秒重送完整逐字稿給模型的行為，不改本體二進位；HN 累積 527 分，今日討論度最高。
 
 ---
 
@@ -95,7 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **機制細節**
 - **模型使用策略**：Dragoman / Workweave 自動路由，嵌入 Claude Code / Codex / Cursor 的成本感知路由；InstantVideos 將分工路由思路延伸至內容生成（文字/圖像/影音各交專門模型）
-- **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認，OpenAI、Nvidia、GitHub 開發者使用；claude-thermos 以保活請求維持快取不過期，但引發「成本轉嫁其他用戶」爭議；pxpipe 反其道而行，把文字 context 渲染成圖片傳遞以降低 token 用量；`claude -p` 未加 `--bare` 冷啟動實測約耗 15 萬 token
+- **Token / 成本優化**：極簡輸出模式（穴居人）企業採用獲 404 Media 確認；claude-thermos 保活請求維持快取不過期，引發成本轉嫁爭議；pxpipe 把文字渲染成圖片降 token；`claude -p` 未加 `--bare` 冷啟動約耗 15 萬 token；no-agent-summary.js 停用背景 agent 面板每 30 秒重傳逐字稿的隱藏成本
 - **並行用量與成本歸因（缺口）**：Pulse、Offrun、[Usage Updates](https://usageupdates.com/)（Show HN，10-01）只顯示帳號額度與重置，不給每批並行 subagent 的成本；r/ClaudeAI 10-03 [提問](https://www.reddit.com/r/ClaudeAI/comments/1wwlwys/how_do_you_track_cost_and_outcome_across_parallel/)庫內無解答；遞迴失控見 [#68619](https://github.com/anthropics/claude-code/issues/68619)
 
 ---
@@ -105,6 +105,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### Claude Code 背景 agent 面板每 30 秒重傳完整逐字稿給模型：no-agent-summary.js 停用此行為（2026-10-29）
+
+- **主線：** 並行規模
+- **核心模式：** 社群分析發現 Claude Code 每隔約 30 秒把每個背景 agent 的完整對話記錄重新送給模型，只為更新 agents 面板的狀態列；作者發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器，不修改 Claude Code 本體二進位檔，於 2.1.257–2.1.312（Linux）測試過，據稱 macOS 亦可行。
+- **與既有模式的關係：** Token / 成本優化——既有做法多在「送得少」（穴居人）或「送得晚」（MCP Code Execution），本則揭露的是官方 agents 面板本身的隱藏重傳成本；同時跑的背景 agent 數越多，影響越大，主線填並行規模。
+- **可信度註記：** 單一作者分析＋腳本，於 2.1.257–2.1.312（Linux）實測，macOS 可行性為他人回報、未附對照數字，無第三方獨立覆核；HN 累積 527 分，為今日討論度最高條目。
+- **來源：** Hacker News；[Gist](https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者腳本，無第三方覆核）
 
 #### Nanako0129/syrtis：macOS 選單列原生 Swift 用量監控，本地追蹤 25 種以上 agent（2026-10-24）
 

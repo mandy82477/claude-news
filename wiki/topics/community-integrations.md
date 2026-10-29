@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **本機生成式音訊接進 MCP**（2026-10-26）
-> - **kanaworksai-hue/audio-studio-mcp**：MCP server 用 Stable Audio 3 在本機生成背景音樂與音效，免雲端、免 API key。
+> **自架內容轉 Markdown 服務接進 MCP 與 Claude Code skill**（2026-10-29）
+> - **AeternaLabsHQ/pullmd**：自架的 URL／檔案轉 Markdown 服務，支援網頁、文件、圖片、音訊、YouTube，提供 PWA、REST、MCP 與 Claude Code skill 介面。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### AeternaLabsHQ/pullmd：自架 URL／檔案轉 Markdown 服務，支援 MCP 與 Claude Code skill（2026-10-29）
+
+- **主線：** —
+- **核心模式：** 自架的 URL／檔案轉 Markdown 服務，支援網頁、文件、圖片、音訊與 YouTube，提供 PWA、REST、MCP 與 Claude Code skill 四種介面，另支援 Reddit 解析與可刷新的分享連結；GitHub Search 511 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「內容轉 Markdown 自架服務」取向——既有做法多接既有服務或創作軟體，本則把「轉成 Markdown 餵給 agent」這一步包成可自架的服務，透過 MCP 或 skill 讓任何 agent 直接取用；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（511★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/AeternaLabsHQ/pullmd)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### kanaworksai-hue/audio-studio-mcp：本機 AI 配樂與音效 MCP server，免雲端免 API key（2026-10-26）
 

@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-10-29
+**最後新聞更新：** 2026-10-29
 
-> **Skills 設計、規格驅動開發同日各新增一例**（2026-10-28）
-> - **Skills 設計**：Oldcircle/geo-sleuth，多來源證據交叉比對判斷照片拍攝地點並展示推理過程，見 [[topics/community-skills#2026-10]]。
-> - **規格驅動開發**：sharptoolbox/ontology-driven-dev，需求探索→本體建模→應用構建三步法，見 [[topics/community-guardrails#2026-10]]。
+> **Token/成本優化、Plugin/MCP整合、記憶與知識管理同日各新增一例**（2026-10-29）
+> - **Token / 成本優化**：no-agent-summary.js 揭露並停用 Claude Code 背景 agent 面板每 30 秒重傳完整逐字稿的隱藏成本，見 [[topics/community-cost#2026-10]]。
+> - **Plugin / MCP 整合**：AeternaLabsHQ/pullmd，自架 URL／檔案轉 Markdown 服務，支援 MCP 與 Claude Code skill，見 [[topics/community-integrations#2026-10]]。
+> - **記憶與知識管理**：410979729/scope-recall-hermes，跨 agent 本機長期記憶，來源可追溯、可人工修正，見 [[topics/community-memory#2026-10]]。
 
 ---
 
@@ -53,11 +54,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-27 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-24 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-29 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-29 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-28 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-28 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-26 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-29 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-24 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。

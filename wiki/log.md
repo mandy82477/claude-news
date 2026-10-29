@@ -8262,3 +8262,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - Mithril Medicine 收購金額、條款與創辦人真實身分——R&D World／Endpoints News 均僅標題層級
   - Managed Agents／Haiku 5.5／inference_geo=us 三項計費機制的具體費率數字——官方文件 https://platform.claude.com/docs/en/about-claude/pricing 原文待開連結核對
 - **訂正**：上方「devpractice 沉澱：本日無開發實務候選（當日分類無條目落入「開發實務」類）」一行是主編誤判——該步驟每日皆應派工做 wiki 新增行撿候選，不限於有無「開發實務」分類包；補派後實際結果：候選 8 筆（entities/claude-code ×2、topics/ai-agent-safety ×1、topics/community-guardrails ×2、topics/community-memory ×1、topics/community-tech-discussions ×1、topics/anthropic-business ×1，含 #97074 claude -p 額度耗用倍率、v2.1.311 疑似移除 rm 阻擋、Downloads 資料夾攻擊面二次來源確認等），已 append `data/devpractice-candidates.jsonl`，等週更落地手冊；基準線推進至 696d26f
+
+## 2026-10-29 Ingest
+
+- 來源日報：[[news/2026-10-29]]
+- 更新頁面：entities/claude-code、entities/mythos、entities/dario-amodei、topics/ai-agent-safety、topics/anthropic-government-policy、topics/anthropic-business、topics/anthropic-ipo、topics/enterprise-tool-tracker、topics/enterprise-cost-management、topics/competitor-landscape、topics/community-cost、topics/community-integrations、topics/community-memory、topics/community-tech-patterns、topics/market-signals
+- 新增頁面：無
+- 摘要：Anthropic 擴大 AI for Science 計畫至 20 個科學機構；Claude Code 兩則社群安全/成本發現（CLAUDE.md 指令遵從性未強制執行、背景 agent 逐字稿重傳成本）登上今日聚焦；Anthropic IPO 揭露效應持續擴散（德州資料中心債券流標、Bloomberg Law 風險揭露評論）；GitHub Copilot Fusion 對標 Claude Code 成本的競品訊號
+- 呈現品質：全部通過
+- 品質備註：
+  - [商業] 25 則條目中 10 則為比較型 SEO 列表文與單一來源殼層摘要，判斷未達採信門檻不收錄，非漏看
+  - [社群] 其餘 20 餘則 Show HN／Reddit／Google News 條目未逐一點名處置，記者已於回報說明以聚合理由（互動門檻未達、無「週熱門」標記、非一手來源）交代，判斷為合理省略
+- 分類回退：共 3 筆，追加派工 2 筆、不追加 1 筆
+  - [分類複核→商業] Meta Partners With Five US Universities：主編原排除理由誤用 Claude/Anthropic 關聯門檻，實際上 competitor-landscape 頁觸發條件 (c) 不套用此門檻；追加派工後商業記者已收錄進 `## 時序`
+  - [人物→商業] LOHUM appoints Nobel laureate Konstantin Novoselov：`wiki/index.md` 第 138 行確認 topics/ai-talent-flow 領域為 💼 商業非 👤 人物；追加派工後商業記者複核判定不符該頁「AI 實驗室人才流動」觸發條件，不收錄（非分類錯誤，單純不達門檻）
+  - [模型→安全政策] Expert Judgement Can Be Easily Hacked by AI（Gizmodo）：已確認安全政策記者原輪已收到並處理，不追加派工
+  - [開發實務→社群] Single agent vs multi-agent（dev.to）：主編原分類誤判，依分流鐵則「官方提出的新工作流模式／agent 設計」屬社群類；追加派工後社群記者複核認為來源非一手、互動僅 3 讚、內容厚度不足，判定不收錄
+- 轉知帳本：結案 H-ffd95c（功能→安全政策，Claude 浮水印擴大）；新開 H-7d0344（社群→功能，official-community-gap 產品化矩陣評估 no-agent-summary.js／pullmd／scope-recall-hermes 三則是否新增列）；H-6b29fd（安全政策→功能，Downloads 資料夾攻擊面）本輪功能記者判定仍無對應開發者回報，留 open 待下一輪；安全政策記者回報「⚠️ 需主編轉知功能記者」#53223／email 外流兩則功能面，核對後確認功能記者原輪已寫入 entities/claude-code.md 已知問題，**不登帳**：同輪已核對清楚
+- devpractice 沉澱：本日無候選（唯一派工條目「Single agent vs multi-agent」經核對分類錯誤，轉社群處理後未收錄；今日新增頁 topics/skill-interest-watch 僅為機器星數快照，無可信佐證不收）；基準線推進至 08f2898
+- market 判讀：判讀 4 則（德州資料中心債券流標、Financial Advisors 使用額度優惠、Copilot Fusion 性價比對標 Claude Code、Zero-Rust 團隊重建 API 降低算力成本），寫入 [[topics/market-signals]]；覆寫 2 列買得到的標的（Microsoft、Charles Schwab）、里程碑登記 4 筆、回顧結算 ⏳ 新增 4 列；Gemini 4 Carbon／Mithril 收購覆述／GSA 折扣覆述／顧問服務分析框架／Dario Amodei 保全支出／IPO 風險揭露評論性重述等多則判定未達新資訊門檻，不開新則
+- 主編待辦（記者回報「⚠️ 需主編查證」事項，留待後續查證）：
+  - [商業] Claude for Financial Advisors「最高 $4,800 額度」的使用門檻與期限——Citywire 報導僅標題層級，官方未確認
+- 收件匣提醒：`wiki/reader-notes.md` 有 1 筆 ⏳ 項目逾 14 天未結案（2026-08-08｜codebase map／agent 記憶格式規約興趣主題），現由每週回顧持續追蹤中，非積壓無人處理

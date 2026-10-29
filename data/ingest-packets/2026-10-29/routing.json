@@ -166,7 +166,7 @@
     "title": "Single agent vs multi-agent: when subagents are worth it",
     "source": "dev.to / #anthropic",
     "categories": [
-      "開發實務"
+      "社群"
     ],
     "reason": "",
     "note": ""
@@ -428,7 +428,7 @@
     "title": "LOHUM appoints Nobel laureate Konstantin Novoselov as chief scientist - ET Auto",
     "source": "Topic Watch / ai-talent-flow",
     "categories": [
-      "人物"
+      "商業"
     ],
     "reason": "",
     "note": ""
@@ -584,8 +584,10 @@
   "https://about.fb.com/news/2026/10/meta-partners-with-five-us-universities-to-accelerate-medical-and-scientific-breakthroughs/": {
     "title": "Meta Partners With Five US Universities to Accelerate Medical and Scientific Breakthroughs",
     "source": "Blog / Meta Newsroom",
-    "categories": [],
-    "reason": "Meta 自家學術資金新聞，內容與 Claude/Anthropic 選型、帳單、可用性或能力對比完全無關",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
     "note": ""
   },
   "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/": {
