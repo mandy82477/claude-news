@@ -1322,3 +1322,11 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [週四 2026/10/29 12:09:53.35] ABORTED: gathered_items.json date=2026-10-28 items=81，非目標日期的新鮮資料（src/gathered_archive/2026-10-29.json 尚未由 GitHub Actions 產出，上游抓料延遲，交由本日後續班次接手，不等待）
 [週四 2026/10/29 12:09:53.35] === Pipeline complete (agent, aborted) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-10-29T17:11:08Z]
+[週四 2026/10/29 18:29:33.00] === Agent pipeline start (2026-10-29) ===
+[週四 2026/10/29 18:29:33.00] Aggregator OK
+[週四 2026/10/29 18:29:33.00] Wiki ingest OK
+[週四 2026/10/29 18:29:33.00] Building web reader...
+[週四 2026/10/29 18:29:33.00] 測試全綠 - web build 放行
+[週四 2026/10/29 18:29:33.00] Single push done (news + wiki + web)
+[週四 2026/10/29 18:29:33.00] === Pipeline complete (agent) ===
+[cloud daily-news-pipeline-cloud completed 2026-10-29] TARGET_DATE=2026-10-29，新鮮度=fresh (67 items)，Step 1a~1c OK，Wiki Ingest 七記者（含人物、開發實務、投資分析）全完成，分類回退 4 筆已處理（2 筆追加派工商業、1 筆確認原輪已處理、1 筆開發實務→社群複判不收錄），Step 2b~5 OK（測試套件全綠、web build OK、單一 push 成功），⚠️ 主編待辦 1 項（Citywire $4,800 額度細節待查證，記入 wiki/log.md）
