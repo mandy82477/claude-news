@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-27"
-last_news_update: "2026-10-27"
+last_updated: "2026-10-29"
+last_news_update: "2026-10-29"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 134
-attribution_count: 291
-attribution_last: "2026-10-27"
+inbound_links: 138
+attribution_count: 301
+attribution_last: "2026-10-29"
 top_source: "google-news"
-pending_count: 27
-pending_overdue: 6
-pending_next_review: "2026-10-28"
+pending_count: 32
+pending_overdue: 7
+pending_next_review: "2026-10-30"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"

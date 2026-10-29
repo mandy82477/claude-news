@@ -370,24 +370,9 @@
   "preview": "Claude Code：已知問題：新增 2 則——複合 bash 權限詢問誤判只核 cd（#28240，49 則留言、209 讚）、桌面版跨 session 傳訊自 2.1.224+ 起 regression 靜默失效（#86012，Windows／macOS）。",
   "sedimentedToday": [
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "openclaw",
       "name": "OpenClaw",
       "pageType": "entity"
-    },
-    {
-      "id": "enterprise-cost-management",
-      "name": "企業規模 Claude 成本管理",
-      "pageType": "topic"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
     }
   ],
   "reader": {

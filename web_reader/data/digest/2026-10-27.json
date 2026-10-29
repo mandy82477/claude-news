@@ -477,16 +477,6 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-ipo",
-      "name": "Anthropic IPO 追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
       "id": "recursive-self-improvement",
       "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"

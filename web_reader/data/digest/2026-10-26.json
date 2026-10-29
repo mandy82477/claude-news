@@ -398,11 +398,6 @@
       "id": "ai-talent-flow",
       "name": "AI 實驗室人才流動",
       "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
     }
   ],
   "reader": {

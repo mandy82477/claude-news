@@ -3,17 +3,17 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-27"
-last_news_update: "2026-10-27"
+last_updated: "2026-10-28"
+last_news_update: "2026-10-28"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 55
-attribution_count: 192
-attribution_last: "2026-10-27"
+attribution_count: 193
+attribution_last: "2026-10-28"
 top_source: "hacker-news"
 pending_count: 1
 pending_overdue: 0

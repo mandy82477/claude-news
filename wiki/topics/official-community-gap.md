@@ -7,12 +7,12 @@ last_updated: "2026-10-24"
 last_news_update: "2026-10-04"
 status_main: "monitoring"
 matrix_role: "追蹤頁"
-days_since_news: 23
+days_since_news: 25
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 23
-inbound_links: 41
+days_since_news_subtree: 25
+inbound_links: 42
 attribution_count: 18
 attribution_last: "2026-10-01"
 top_source: "github-issues"

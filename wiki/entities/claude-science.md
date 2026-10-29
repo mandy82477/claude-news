@@ -8,12 +8,12 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "beta"
 matrix_role: "專用版"
-days_since_news: 4
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
-inbound_links: 8
+days_since_news_subtree: 6
+inbound_links: 9
 attribution_count: 22
 attribution_last: "2026-10-23"
 top_source: "google-news"

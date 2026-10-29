@@ -3,17 +3,17 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-27"
-last_news_update: "2026-10-27"
+last_updated: "2026-10-28"
+last_news_update: "2026-10-28"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 11
-attribution_count: 10
-attribution_last: "2026-10-27"
+attribution_count: 11
+attribution_last: "2026-10-28"
 top_source: "github"
 pending_count: 2
 pending_overdue: 0
