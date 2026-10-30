@@ -345,3 +345,4 @@
 {"id": "H-4dcafe", "closed": "2026-10-30", "status": "done", "by": "模型", "result": "entities/mythos.md L174 錨點已改指 topics/ai-agent-safety-cyber#模型網攻能力與防護，全檔已確認無殘留舊錨點"}
 {"id": "H-6b29fd", "closed": "2026-10-30", "status": "done", "by": "功能", "result": "今日功能類別 8 則條目中無對應「Downloads 資料夾／任意檔案指令」開發者回報，續留意下一輪"}
 {"id": "H-7526b2", "opened": "2026-10-30", "from": "安全政策", "to": "功能", "page": "entities/claude-code", "note": "重開（collect_reporter_reports.py --apply 誤將『不適用，續留意下一輪』判讀為已結案，原筆 H-6b29fd 已被腳本結案；此為同一事項的重開）：topics/ai-agent-safety「Downloads 資料夾攻擊面」續有第二獨立來源（CyberSecurityNews）報導 Claude Code／Codex 遵從 Downloads 資料夾內任意檔案指令；另有補派條目（opus-5-5 安全分類器誤判，情境貼近 Claude Code 編碼工作流），請功能記者下一輪留意是否已有對應開發者回報", "status": "open"}
+{"id": "H-b16ef0", "closed": "2026-10-30", "status": "done", "by": "投資分析", "result": "topics/market-signals L333 wikilink 由誤指 ai-agent-safety#技術彙整 改正為 ai-eval-boundary-incidents#數字對照（43次/9次數字的真正家）"}
