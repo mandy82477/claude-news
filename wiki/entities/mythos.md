@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-29
+**最後更新：** 2026-10-30
 **最後新聞更新：** 2026-10-29
 
 > **弱訊號**（2026-10-29）
@@ -171,7 +171,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 #### 2026-09-29
 **Anthropic Frontier Red Team：GLM-5.3 跨越完整控制流劫持門檻**：
 - GLM-5.3 4% 對 Mythos Preview 6%（100 題 Binary Exploitation 抽樣）；首度有官方測試證實非 Anthropic 模型跨過這條門檻（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29；Simon Willison 同日轉述、SCMP 09-30 跟進，HN 239 分）
-- 事件全貌與擴散脈絡的家在 [[topics/ai-agent-safety#模型網攻能力與防護]]，政策面見 [[topics/anthropic-government-policy]]
+- 事件全貌與擴散脈絡的家在 [[topics/ai-agent-safety-cyber#模型網攻能力與防護]]，政策面見 [[topics/anthropic-government-policy]]
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：
