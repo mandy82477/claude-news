@@ -53,7 +53,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **能力**：官方研究稱未發布的研究模型組出 5 條攻擊鏈（10-28 收錄，發布日待查）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
-- **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy]]。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
+- **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
+- **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
 - **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程。
 - **你的選項**：個人研究者能申請的只有 CVP Defense；被誤擋可走官方申訴表單，並在 #84352 補上可重現的情境。

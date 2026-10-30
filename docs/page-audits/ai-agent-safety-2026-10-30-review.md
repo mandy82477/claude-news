@@ -124,3 +124,45 @@ B 節點（原 L600 後）新增的是 `- %% 未列入現況表：…狀態翻 �
 | 11 | 主 session | `check_hierarchy && check_pending_markers && check_reader_language && check_cell_limits && check_wiki_freshness && check_rules && build_web && run_tests` 用 `&&` 串起來一次跑 | 全部 exit 0；build_web 尾行「錨點 WARN 0」 |
 | 12 | 主 session | 只 `git add` 指名的檔：wiki 9 檔＋規則檔 6＋`data/cell-limit-baseline.json`、`data/baseline-changes.jsonl`、`data/pending-marker-count.json`、`data/pending-handoffs.jsonl`、`wiki/log.md`、`docs/page-audits/ledger.md`；commit 後跑 `python scripts/devpractice_diff.py mark` | `git status` 殘留只准是 gen 改的 frontmatter 數值 |
 | 13 | 主 session | ledger 定稿列（行數用 178／570／621／468）；`git fetch` 確認沒有新 commit 才 push | — |
+
+## 實作複核（2026-10-30）
+
+> 複核的對象：真 repo 工作樹（未 commit），對照 proposal「實作單（定稿）」第 4–11 步。原檔用主 session 的快照 `w20\main\orig\wiki\topics\`；我核過，它與 `D\tmp_before` 去掉 CR 後逐位元組相同。新腳本是 `R\verify2.py`（容許改字行，以相似度把它們找回來）和 `R\unm.py`。沒改任何檔，沒跑 git。
+
+**結論：放行 commit。** 不擋 commit 的 🟡 有 3 條：兩條改 docs、一條改實作單驗收句。四條 🔴 都已落地，重算數字全對。
+
+| 步 | 判定 | 依據 |
+|---|---|---|
+| 4 前置 `git log` 檢查 | 我沒能核 | 複核不准跑 git，由主 session 自證。工作樹裡只有預期的 15 檔、data 4 檔、log、gen 的 frontmatter 與 build_web 產物 |
+| 5 九檔進 wiki＋`verify_split.py` | **偏離（驗收句無法執行）** | `verify_split.py` L16 從 repo 的 `wiki/topics/ai-agent-safety.md` 讀「原檔」，複製後那裡已是新母頁，腳本在 L78 報 IndexError。我改用 `R\verify2.py` 獨立重核，通過（見下表）。修法 🟡A |
+| 6 規則六檔 | 照做 | 抽驗見下方 🔴 落地 |
+| 7 gen | 照做 | index L126 投影含三子頁；`check_hierarchy` ✅ 31 個母頁 |
+| 8 cell `--rebuild --allow-grow` | 照做 | 新增恰 2 筆，正是第一輪那兩筆（product-vulns「官方原文核心論點」625、prompt-injection「09-02 新增（媒體稱官方無修復計畫）」351）。removed 267＝本頁 105＋他頁 162，比設計時的 254 多 13 筆。現況重掃：基線外新增 0、未使用槽 0，所以全部都是失效存量，合法收緊。帳本末行 reason＝「第 20 波 ai-agent-safety 拆頁：2 筆存量條列隨節點原文搬到子頁（長度不變）；同批收緊已失效存量」 |
+| 9 pending `--rebuild-count` | 照做 | 帳本 count 202、updated 2026-10-30。reason 寫了 #43713 結案（−1）、31 筆同數減增、基線自 10-18 165 筆未重建；和我給的句子措辭略有不同，四個要素都在 |
+| 10 handoff＋log | 照做 | 四筆 note 與 draft §G 定稿一致：H-d06051 已改成 L670「stable 目前落差」、L244「惡意 .git 設定檔」、L236「Plugin4Shell」，並註明 `.git` 事件住 A；H-4dcafe、H-b16ef0、H-bf1dd0 逐字相符。log L8288 起的 Query 條目帶齊四個單號；`check_log_handoffs.py` ✅ |
+| 11 閘 | 照做（抽跑） | 我重跑 hierarchy／pending／cell／reader_language／freshness，五道全綠；build_web 與 run_tests 用主 session 的結果 |
+
+| 重算項目 | 主 session／設計者 | 我在真 repo 重算 |
+|---|---|---|
+| 160 則節點 | 119→ABC、29→AR | 148 則（另 12 則是骨架）照第二輪 map 都只有一個家：A 44／B 43／C 32／AR 29；87 行改字都能用相似度找回；相似度 <0.6 的 8 行全是 verified 的改寫（L197、L230、L234、L445、L458 標題、L462、L464、L541） |
+| 191 條時序 | A48／B53／C37／E16／AR26／母6／改寫3／刪2 | 相同，零重複。找不到原文的只有預期那 5 條：L1651、L1661（刪）、L2041、L2043、L2044（併入 07 月總結） |
+| 懸置 | 203→202 | 202；去掉 slug 比對，removed 只有 `2026-10-11::43713…`，added ∅，非本家族頁 ∅。B 14／A 9／C 8，L295 已隨 L290 搬到 B |
+| 首屏表／網攻表 | 11／23 | 11／23 |
+| 錨點 | 22 筆＋daily 41 | 全庫、daily、weekly 0 BAD。mythos L174、rsi L337、eval L83 三個、log L7259、gov 5 筆、eval 4 筆 `product-vulns#2026-09`、B 指 A 的 `#2026-09` 都能解析 |
+| 正文行數 | 173／587／603／475 | `check_page_thickness.py` 給：母 173、A 587、B 603、C 475。B 的拆頁評估寫「正文 603 行」，數字一致 |
+
+**🔴 落地抽驗**
+- 🔴1：product-vulns L171 已改成「…官方 2026-08-19 關閉並確認修好（見上方結案）」。
+- 🔴2：pages.md L41 是四問、先答「是」的定案。
+- 🔴3：page-lifecycle L52 加了現況表例外；pages.md L45「只准動五樣」、L49「母頁除 callout 與 `### 未歸類` 外」，兩份規則對得上。
+- 🔴4：帳本 reason 如上。
+- 🟡8：三個子頁 grep「Topic Watch／殼層／原料」都是 0 筆。🟡9：A、C 的 L36 都有蒐集邊界。
+
+**換頁的三則節點**
+- L1229 落在 A L480，時序 L1920 在 A L614。
+- L290 落在 B L113，懸置 L295 在 B L118。原檔就沒有它的時序行，這是既有缺口，不是本波造成。
+- L1090 落在 C L375，時序 L1856 在 C L486。
+
+**🟡A `verify_split.py` 拆頁後不能再跑**：L16 的 `REPO / 'wiki/topics/ai-agent-safety.md'` 換成 `Path(__file__).parent.parent / 'main' / 'orig' / 'wiki' / 'topics' / 'ai-agent-safety.md'`。這是設計者在 scratchpad 的檔，可改可不改；本波的驗收以 `R\verify2.py` 為準。
+**🟡B map §五「母:294（L290 節點內）」那列**：去向欄「不動（節點到 C，仍指母頁該節）」改成「不動（第二輪節點到 B，仍指母頁該節）」。
+**🟡C 實作單第 12 步的驗收句**：工作樹還有 build_web 產物 `web_reader/`（修改檔加上三個子頁的新 json），不在 add 清單內。把「殘留只准是 gen 改的 frontmatter 數值」改成「殘留只准是 gen 改的 frontmatter 數值與 build_web 產物 `web_reader/`（交給下一次 web rebuild commit）」。

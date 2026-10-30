@@ -8292,4 +8292,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 規則面：`safety-policy/pages.md` 第 0 條改為四問路由（先 yes 先贏）、事件 prepend 目標改子頁、網攻表上限 25 列／90 天退場、母頁每日可動項與 `page-lifecycle.md` L52 對齊；`daily.md` 負責頁表加三子頁；`sweeps.md` 5i 加子頁目前結論週更（N3：暫由主編，安全類有 weekly.md 時搬回）；`shared-when.md`、`wiki-lint/references/log-format.md` 同步。
 - 轉知帳本：新開 H-d06051（安全政策→功能，claude-code 🛡️ 三處狀態矛盾與分工）、H-4dcafe（→模型，mythos L174 錨點改指 cyber）、H-b16ef0（→投資分析，market-signals L333 錨點本就指錯、家在 eval）、H-bf1dd0（→功能，official-community-gap L158 安全邊界列與一手相反）。
 - 歸因 user-query／安全政策
-
+- 複驗（新冷讀者，原四題逐字）：Q1 拿到、Q2 半、Q3 半、Q4 拿到（第一輪 1 拿 3 半）；依複驗補 cyber 結論「官方承認過的在野濫用」清單、product-vulns 結論補 2.1.309 沙箱修補、母頁兩句撐不起的話改可查證寫法；加開 H-614eeb（→功能，claude-code L54 2.1.309 條目漏 rm 直接拒絕變更）。評審實作複核放行（3 🟡 皆文件修正，已改）。

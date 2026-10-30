@@ -111,11 +111,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 產品層漏洞與誤操作
 
-已修的升到 stable 就躲得掉（2026-10-30 npm stable 是 2.1.308）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
+已修的升到 stable 就躲得掉（2026-10-30 npm stable 是 2.1.308）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（2.1.252 之後未見查證；攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
 
 ### 模型網攻能力與防護
 
-防守方准入在擴大（CVP 三層、Cyber Mission），通過審核還被擋的摩擦沒有官方修復時程；拿 Claude 打人的案例多數是第三方說法，官方沒有證實。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
+防守方准入在擴大（CVP 三層、Cyber Mission），通過審核還被擋的摩擦沒有官方修復時程；拿 Claude 打人的案例，官方承認的只有威脅情報報告點名的幾件，其餘是第三方說法。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
 
 ### 評測越界
 

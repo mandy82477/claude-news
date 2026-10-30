@@ -55,6 +55,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
 - **升版也還開著的**：惡意 `.git` 第二變體（至 2.1.252 未修，正常 clone 不受影響）（證據在 [[topics/ai-agent-safety-prompt-injection#2026-09]] 09-02 條目）、email 進 prompt 後被帶出（#81138，官方未回應）、User-Agent 夾帶 email（#78431，未見修復）。
+- **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
 - **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買。
