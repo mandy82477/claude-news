@@ -428,11 +428,6 @@
   "preview": "Claude Code：新已知問題：cleanupPeriodDays 設為 99999 仍遭忽略、490 個 session 被靜默刪除（#41458）；CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報（#53223）；輸入框拼字檢查無法關閉（#58693）；使用者 e",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -443,53 +438,13 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-government-policy",
       "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic IPO 追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
@@ -500,16 +455,6 @@
     {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

@@ -419,11 +419,6 @@
       "pageType": "entity"
     },
     {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "community-pattern-trends",
       "name": "社群趨勢觀察（週更）",
       "pageType": "topic"

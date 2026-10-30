@@ -158,7 +158,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 🧪 部分對應：安全邊界（原列「✅ 高度對應」，2026-10-30 更正範圍）
 
-Claude Code Sandboxing（OS 層隔離）、`hard_deny`（不可覆蓋的提示層邊界）、Claude Security（公開 Beta）在 5/06–5/10 集中發布，與 CVE-2026-39861 沙箱逃逸漏洞（5/08）的時間高度吻合，解決的是**執行層**邊界（防誤操作、沙箱逃逸）。**外部內容信任邊界**（來源標記、套件名驗證、寫入確認——prompt injection、惡意 `.git` 等攻擊面）官方至今未推出對應機制，見 [[topics/ai-agent-safety#還沒有的]]；原「社群工具需求降溫」一句無一手出處，已移除。
+Claude Code Sandboxing（OS 層隔離）、`hard_deny`（不可覆蓋的提示層邊界）、Claude Security（公開 Beta）在 5/06–5/10 集中發布，與 CVE-2026-39861 沙箱逃逸漏洞（5/08）的時間高度吻合，解決的是**執行層**邊界（防誤操作、沙箱逃逸）。**外部內容信任邊界**（來源標記、套件名驗證、寫入確認——prompt injection、惡意 `.git` 等攻擊面）官方至今未推出對應機制，見 [[topics/ai-agent-safety#官方現在擋到哪]]；原「社群工具需求降溫」一句無一手出處，已移除。
 
 ### 🧪 部分對應：輸出品質驗證
 

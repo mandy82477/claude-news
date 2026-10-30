@@ -1,0 +1,707 @@
+{
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30 17:17 UTC",
+  "articleCount": 79,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Trojanized Claude Code Extension Plants an SSH Backdoor",
+      "url": "https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor",
+      "source": "Hacker News",
+      "time": "10/30 11:05",
+      "sentiment": "",
+      "body": "在 Cursor 官方公告發出前，獨立資安研究者 GossiTheDog（Mastodon）、Phorion 與 OpenSourceMalware 已各自搶先公開同一起後門，OpenSourceMalware 並取得 Cursor 證實：遭竄改的是 Cursor 市集自己代管的套件副本，不是 Open VSX 或官方 VS Code Marketplace 上架的版本；Phorion 的分析指出後門嘗試在 macOS、Linux、Windows 三個平台都建立 SSH 持久化機制。今日 Hacker News 已有三條獨立討論串同步升溫（644 分、396 分、349 分），三位研究者各自獨立觀測到同一手法，互為佐證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] v2.1.219 `heron_brook` prompt section injects \"Do not call the AgentTool unless the user requested it\" for Opus 5 only, silently overriding user-configured delegation policy, with no opt-out",
+      "url": "https://github.com/anthropics/claude-code/issues/80988",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/29 18:15",
+      "sentiment": "",
+      "body": "今日累積 38 則留言、91 個 👍，使用者回報內部提示詞片段 `heron_brook` 只在使用 Opus 5 時注入「不要在使用者沒要求時呼叫 AgentTool」，會悄悄蓋過使用者自行設定的委派（delegation）策略，且沒有任何關閉選項。靠自訂委派策略把工作拆給子 agent 的使用者，應留意用 Opus 5 時這層設定是否其實沒有生效。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Bug: Project-scoped plugins incorrectly detected as installed globally",
+      "url": "https://github.com/anthropics/claude-code/issues/14202",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/30 14:09",
+      "sentiment": "",
+      "body": "今日累積 27 則留言、66 個 👍，使用者回報用 `--scope project` 裝的外掛，會被其他專案誤判成「已全域安裝」，導致 Marketplaces 畫面顯示已安裝、卻拒絕真正安裝。同時在多個專案分別裝不同外掛設定的使用者，可留意外掛清單顯示的安裝狀態是否可信。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.314",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/30 01:06",
+      "sentiment": "",
+      "body": "官方發布 2.1.314 版，新增 `permissions.blockWritesOutsideWorkingDirectories` 設定：開啟後 Write、Edit 與 NotebookEdit 在任何權限模式下都會拒絕寫入工作目錄以外的路徑。今天同時爆出 Cursor 市集版 Claude Code 延伸套件遭植入後門，想進一步收緊 agent 寫入範圍的團隊可留意這個新設定。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "official-community-gap",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code 2.1.314 build 新增 7 個功能候選旗標（自 2.1.312 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.314",
+      "source": "Build Flags",
+      "time": "10/30 16:44",
+      "sentiment": "",
+      "body": "2.1.314 build 內新增 7 個功能候選旗標，涵蓋橋接子 CLI 進入點、CCR 長輪詢、停用連線池閒置上限、停用回應比對、記憶體上下文不等待、串流事件單行位元上限與工具前置載入；候選旗標出現在 build 裡不代表會正式上線。想提前摸清下一版可能方向的使用者可留意這批旗標名稱。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：方案與定價（Plans & Pricing）",
+      "url": "https://claude.com/pricing",
+      "source": "Official Docs",
+      "time": "10/30 16:44",
+      "sentiment": "",
+      "body": "官方定價頁新增兩段問答，說明 Claude Enterprise 與 Claude API 的價格可依用量與承諾支出客製化，提供數量折扣。採購 Enterprise 或 API 方案、想談量級折扣的團隊可據此主動詢價。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic's IPO filing spends 69,800 words on AI's risks to investors and says little about the risks to the rest of us - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTjl1TkZPY185cXlEUEt6WFM4U1FXSC1tcjQwdFBHNlVaTlBjcVlHUzVqNE1TMWxQUGhjZ2NmWlZvVnN5U0hhWEtlYUpKZmFwMTFJRGZ6MFU0VXhia0liOUd6MzBydThSdVdxLWdJY0F0d0UtUDgwWkJJT0kyYmZfV2k2MlhxVGo1N25z?oc=5",
+      "source": "Google News / Fortune",
+      "time": "10/30 15:27",
+      "sentiment": "",
+      "body": "Fortune 報導指出，Anthropic 上市申請文件用 69,800 字描述 AI 對投資人的風險，但對社會整體承受的風險著墨相對少；報導僅標題層級，具體段落與對照未附。評估 Anthropic 揭露品質與風險分配是否對等的人可留意這個字數對比。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Berkeley Law professor: Anthropic's IPO puts AI accountability to the test - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnY0akR6LXVXSnVoSDMxdVhIN0E5aDBaZnRpQUh4Z0gyTkFGV1RLTFh3ZkExWV9aVExBX0toTVpQbjZXckVGNENuRlg5U0s5bUdEWWFfZ2xVU2EwMXJKbjBiRHRDZWxZaHdVeU9VN250RXZ6SFU1UzN6Nks3U0l5b0ZIVzhTd2N6SkdjTmdIM3A3dw?oc=5",
+      "source": "Google News / Fortune",
+      "time": "10/30 13:00",
+      "sentiment": "",
+      "body": "Fortune 引述一位柏克萊法學院教授的觀點，認為 Anthropic 的上市正在考驗 AI 問責機制能否經得起公開市場檢視；報導僅標題層級，教授論點細節未附。關注 AI 治理與上市公司問責框架的人可留意後續完整評論。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Nvidia in talks to give credit support for Nscale's deal with Anthropic, The Information reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeFZKQnF5QVdNQlBQRzNMTE5PbjhUSXF0Y0NzYXpyaVJFeGplang3clhEYUtGUF9Fd2tPRjE0VllQVjV0cncwdU9za2RGZkFjQ2ZSTGdpQ3hXSkRBSjVtY2tvTzhEVTYtUkxYQjdfc1A3blJMd0c2ajJTUFp0eGMtOEtMbEk2NGl2Y2hrRFVlSHVaT1VQWi1qaGhLTkoyZVhXWFVFaXpDVEpZQV90MFNSZzN2dTl0WXJWZEhBRzJmUFVpNzI2Smc?oc=5",
+      "source": "Google News / Reuters",
+      "time": "10/30 01:26",
+      "sentiment": "",
+      "body": "路透引述《The Information》報導，Nvidia 正洽談為 Nscale 與 Anthropic 之間的雲端運算協議提供信用支持；報導僅標題層級，具體金額與條件未附。評估 Anthropic 算力供應鏈與資金穩定度的人可留意這筆潛在融資安排的後續細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic AI model finds Linux kernel bug that leads to remote root access - CSO Online",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNV0I1UVQxSWpUXzlZWGNaZ19IZEEweHYzQUdhNUhBdENhUWRsNGdBcmI3NlFGbmI0N2hEU2toOU50ZEZ0aTBwN1hvdEdqX3F1dFFJbTJZUUFDRzBESjBwamJ2SzZQVDVrZUt6SXRXSjZqZUJvRUc4c1lzamFTQXVIdTQxbGlRWWozLUVFMjVPM2dBYW9URC1kbTdGYjBLSDRrMENTV3NuQkZCNUxWSTFhdDRoQlRVRzZmOGZodTFn?oc=5",
+      "source": "Google News / CSO Online",
+      "time": "10/30 12:29",
+      "sentiment": "",
+      "body": "承上 10/28 已報導的研究模型揪出多款軟體漏洞一事，CSO Online 今日點出其中一條攻擊鏈命中 Linux kernel，可讓攻擊者取得遠端 root 權限；報導僅標題層級，CVE 編號與受影響版本未附。維運 Linux 伺服器、追蹤這批攻擊鏈細節的資安團隊可留意官方後續是否公開更完整的技術文件。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "kajisho5/ffmpeg-skill",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "source": "GitHub Search",
+      "time": "10/30 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄一款給 coding agent 用的本機影片編輯工具：42 個 FFmpeg 操作包成機器可讀合約＋MCP server，支援剪輯、字幕、重新裁切畫面比例、音量正規化與各平台匯出格式，可接 Claude Code、Cursor、Codex，不用雲端也不用 API 金鑰，目前已有 4,078 星。常用 agent 批量處理影片素材的使用者可留意這個全離線的工具鏈。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Ansub/tv-detox",
+      "url": "https://github.com/Ansub/tv-detox",
+      "source": "GitHub Search",
+      "time": "10/30 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄一個用 Claude Code 或 Codex 讓老舊 Android TV 恢復流暢的小工具：提供一個無廣告的簡化主畫面，外加清理用的提示詞，目前已有 1,858 星。手上有卡頓老 Android TV 盒子的使用者可留意這個專案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Cracking Down on Video Game Rewrites",
+      "url": "https://twitter.com/chasmmmmmmmmmmm/status/2116062991686721968",
+      "source": "Hacker News",
+      "time": "10/30 14:22 UTC ·",
+      "sentiment": "😤",
+      "body": "Hacker News 今日有 72 分討論，起於一則推文指控 Anthropic 開始限制用 Claude 重寫或移植既有電子遊戲，留言串對「AI 公司是否該決定使用者能編譯出什麼程式」展開激烈爭論。用 Claude 做遊戲逆向工程或移植專案的使用者，應留意這類用途是否正撞上官方政策邊界。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "YizhengWw/HachimoDock",
+      "url": "https://github.com/YizhengWw/HachimoDock",
+      "source": "GitHub Search",
+      "time": "10/30 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄一款桌面寵物小工具：會隨 Claude Code session 即時反應，思考中、打字中、耍雜技、睡著等狀態都有對應動畫，目前已有 517 星。想讓終端機旁多一點視覺回饋的使用者可留意這個專案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-interfaces",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "itechmeat/open-second-brain",
+      "url": "https://github.com/itechmeat/open-second-brain",
+      "source": "GitHub Search",
+      "time": "10/30 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub Search 今日收錄一款給 Hermes Agent 用的本機優先記憶系統，常駐在使用者的 Obsidian vault 裡記住專案脈絡，每晚會把重複出現的修正自動沉澱成帶信心分數的偏好設定，並提供 Claude Code、Codex、OpenClaw 的轉接器與通用 MCP server，目前已有 500 星。想讓 agent 跨 session 記住自己偏好又要能稽核來源的使用者可留意這個專案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-memory",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "MCP tool cost: 20 job Actors on Apify, 2.1K to 32.7K tokens each",
+      "url": "https://dev.to/kevinhall/mcp-tool-cost-20-job-actors-on-apify-21k-to-327k-tokens-each-1hm4",
+      "source": "dev.to / #claudecode",
+      "time": "10/28 11:00 UTC ·",
+      "sentiment": "😐",
+      "body": "作者實測對 Apify 上 20 個求職相關 Actor 呼叫 `tools/list`，每個工具中位數吃掉 3.8K token，其中一個高達 32.7K，98% 是伺服器自動推論出來的輸出 schema。串接大量 MCP 工具、擔心 context 被工具定義本身吃掉的使用者可留意這個隱藏成本。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code session token cache invalidating faster",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xjjryu/claude_code_session_token_cache_invalidating/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/30 16:17 UTC ·",
+      "sentiment": "🤔",
+      "body": "使用者在 Reddit 回報，session token cache 似乎比以前更快失效，大約每 10 分鐘就重置一次；貼文僅單一回報，尚無官方或其他使用者證實。常倚賴 prompt cache 省 token 的使用者可留意自己的快取命中率是否也變差了。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "my claude code optimizer is now a vscode extension, it showed me 8.9M tokens wasted on expired caches in 30 days",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xjiyk0/my_claude_code_optimizer_is_now_a_vscode/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "10/30 15:48 UTC ·",
+      "sentiment": "😤",
+      "body": "作者把自製的 Claude Code 用量優化工具做成 VS Code 延伸套件，據其統計過去 30 天有 890 萬個 token 浪費在已過期的快取上。想盤點自己實際浪費多少 token 在過期快取的使用者可留意這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Research: Matching Claude Code + Sonnet 5.5 design quality with DeepSeek/GLM Flash models and a custom harness",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xit9g8/research_matching_claude_code_sonnet_55_design/",
+      "source": "Reddit / r/LocalLLaMA",
+      "time": "10/29 19:14 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者發布研究，稱用 DeepSeek／GLM Flash 等較便宜的模型搭配自製 harness，在設計品質上追平了 Claude Code 搭配 Sonnet 5.5 的輸出。評估能否用較便宜模型換掉 Claude Code 的團隊可留意這份研究的測試方法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "url": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+      "source": "Blog / Simon Willison",
+      "time": "10/29 17:00 UTC ·",
+      "sentiment": "🤔",
+      "body": "Simon Willison 轉介 Jacob Sansbury 描述自己如何用自主的 Fable 級模型打造多人遊戲世界 Spawn，探索 agentic engineering 目前能力的前沿。對 agent 自主運作能撐到多複雜場景感興趣的使用者可參考這篇實戰紀錄。",
+      "focusTags": []
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[風險警示]",
+      "text": "Cursor 官方發布安全公告證實，在其 VS Code 相容套件市集代管的「Claude Code」延伸套件 2.1.313 版遭惡意竄改，會收集受害機器的主機與使用者資訊並植入攻擊者的 SSH 金鑰，藉此取得持續遠端存取權；竄改版本於太平洋時間當日 2:27 至 13:35 間流通，Cursor 表示最多 5,000 名使用者受影響、會逐一通知，並強調這個遭竄改版本並非 Anthropic 所開發，官方 VS Code Marketplace 上的原版不受影響。透過 Cursor 市集安裝過 Claude Code 延伸套件的人應立即檢查機器、更新到乾淨版本並排查是否已被植入未知的 SSH 金鑰。",
+      "ref_urls": [
+        "https://cursor.com/blog/claude-code-extension-security-notice",
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSE5Sd2ZzblVoTHk3cWowdjBHOUlGQ25obHhuSkoyell3S2JWTUxqeXFFRnBMbTVaOENobjFKVFJXT0VhQi1VSzVBX0dSM3N5SGJ4N2VWSjhnX3NCQlJsSmdTX1RmSlpEeHN0NFFXVll0MzZRV1lfbUpkcDZ1dk9xQXpSWHBVUVJiMDJCYXgtMmlxMnQ1a2dxcmxBZlFBcTY0SUZMYXZyeHNZX3o1ejRUbkxmN3JqRlYtSnNCRnFiZkswLWx4S2c?oc=5"
+      ],
+      "ref_names": [
+        "Cursor 官方公告",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "FourWeekMBA 與 Startup Fortune 同日報導，Anthropic 把 Claude API 單次請求大小上限從 32 MB 提高到 128 MB（四倍），對照 AWS Bedrock 平台現行上限則相差 6.4 倍；兩篇報導皆僅標題層級，變更生效時間與涵蓋範圍未附。走 API 批量上傳大型檔案、長 context 或大量附件的團隊，現在單次請求能塞進更多資料，不必再手動分批。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxORHU0amdRYUVlODdNTWg1VElpUGpyUlZ3RWp2MlJ4WnJMTzJaN3pCa2NrM0UtYnpzQndHa0lVdXRiM3V5X3dxa1lBUFNyTEdwdXB4cUNFQnpScmczS2pTM3BPeW45NzVwTllPV21rbTVXejFoOUg4OTZFYWJ4TTdwUlNLM3hodFNlMy1YZEVqUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2tnWEM2QWZjMHNGcnZmR2trcUVNZkZMWG0zWVJsZ1Z2eTN5UUtTS1RvTGprdGtFQVRfbnljemFkYjIzNkZKa2NYQ0JUbHVWcnRxWHVCQ2lYZHd4QXFDdUpRWm55UjhGUjQta1d2YjAzcVBGWDlvRWNrMmdSNHBjck1NVjU4MTc3QmV2cGswSUNJTHFjOW8w?oc=5"
+      ],
+      "ref_names": [
+        "FourWeekMBA",
+        "Startup Fortune"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Mistral's Le Chonk is now a top open model for coding, ranking alongside Codex GPT-6.1 Terra - ZDNET",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1oUDdGckVKYzJobVpZMk5HeFFpX1Z5U0FRQnRoQTJfeEZXaHRCRHVwLUluQWNJSDVKcHI5VFhPR3NvSDdvbUNhZ2JUbGN1SjVmeGltaVVDMTc2ODVnU1dGbXVUMGFCLWVKbVhIOExJZllTZnM?oc=5",
+      "body": "Mistral 開源模型 Le Chonk 據報在程式碼能力上擠進頂尖開源模型之列，與 Codex GPT-6.1 Terra 並列；報導僅標題層級，具體榜單與分數未附。",
+      "topic": "競品態勢",
+      "topicPage": null
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 43
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 21
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 10
+    }
+  ],
+  "preview": "Claude Code：v2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方准入",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic IPO 追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "official-community-gap",
+      "name": "官方功能 vs 社群痛點缺口分析",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-30",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.314 新增 `permissions.blockWritesOutsideWorkingDirectories`**：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。\n- **新已知問題**：`heron_brook` 提示詞片段只在 Opus 5 悄悄蓋過使用者委派政策、無法關閉（#80988）；`--scope project` 外掛被其他專案誤判全域已安裝（#14202）。"
+          },
+          {
+            "page": "topics/official-community-gap",
+            "name": "官方功能 vs 社群痛點缺口分析",
+            "label": "官方補了沒更新",
+            "date": "",
+            "body": "- **它會不會跑出破壞性指令**：新增 v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`，拒絕寫入工作目錄外路徑，官方在這題的對應仍是 ✅（git 層與寫入路徑都已補）。\n- **「安全邊界」更正範圍**：原「✅ 高度對應」改列 🧪 部分對應——執行層已補，外部內容信任邊界仍缺，見 [[topics/ai-agent-safety]]。"
+          },
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.314（自 2.1.312 起比對）新增 7 個第一階候選旗標：`CLAUDE_CODE_BRIDGE_CHILD_CLI_ENTRYPOINT`、`CLAUDE_CODE_CCR_LONG_POLL`、`CLAUDE_CODE_DISABLE_POOLED_CONNECTION_IDLE_LIMIT`、`CLAUDE_CODE_DISABLE_RESPONSE_COMPARISON`、`CLAUDE_CODE_MEMORY_CONTEXT_NO_WAIT`、`CLAUDE_CODE_STREAM_EVENT_MAX_LINE_BYTES`、`CLAUDE_CODE_UPFRONT_TOOLS`。對帳僅命中來源條目自身，新旗標暫不升第二階。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "官方定價頁新增問答：Enterprise 與 API 定價可依用量與承諾支出客製化，提供數量折扣——採購量大或要談長約的團隊可據此主動詢價。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🟡 **OpenAI 跟進推出與 Claude Max／Team 同額的 API credits 訂閱福利**（Blog/Simon Willison）——這項福利不再是 Claude 訂閱獨有的賣點。\n- ⚪ **Mistral Le Chonk 据報擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列**（ZDNET）——具體榜單與分數缺，知道就好。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Nvidia 洽談為 Nscale 與 Anthropic 雲端協議提供信用支持**：Reuters 引《The Information》，僅標題可用。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic IPO 追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **S-1 風險揭露「重投資人、輕社會」**：Fortune 稱 S-1 以 69,800 字描述 AI 對投資人的風險，對社會整體風險著墨相對少（Fortune）。\n- **學界質疑 IPO 測試 AI 問責**：柏克萊法學院教授投書稱 Anthropic 上市正考驗 AI 問責機制能否經得起公開市場檢視（Fortune）。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "Cursor 市集版 Claude Code 延伸套件 2.1.313 遭竄改植入 SSH 後門，Cursor 證實最多 5,000 人受影響，非 Anthropic 開發；裝過的人應立即檢查 SSH 金鑰。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方准入",
+            "label": "最新動態",
+            "date": "",
+            "body": "CSO Online 跟進指出，官方研究模型揭露的 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；CVE 編號與受影響版本未附。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "一則推文指控 Anthropic 限制用 Claude 重寫／移植既有遊戲，引發編譯自由與訓練資料授權兩條爭論",
+            "date": "",
+            "body": "HN 留言兩極：一方主張 devtools 公司不該決定使用者能編譯出什麼程式，另一方反問 Anthropic 訓練資料本身的授權合法性；單源，待社群接力，尚不足以進「現在吵到哪」。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Token 消耗異常訊號群新增一例：session token cache 似乎更快失效",
+            "date": "",
+            "body": "- Reddit 使用者稱 session token cache 比以前更快失效，約每 10 分鐘就重置一次；單一貼文、無互動數，尚無其他使用者或官方佐證。\n- 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "新增 Obsidian vault 常駐記憶，夜間把重複修正沉澱成帶信心分數的偏好",
+            "date": "",
+            "body": "- **itechmeat/open-second-brain**：給 Hermes Agent 用的本機優先記憶，常駐 Obsidian vault；每晚跑「dream pass」把重複修正轉成帶信心分數的偏好設定，另提供 Claude Code、Codex、OpenClaw 轉接器。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "本機影片編輯工具加入 MCP 整合清單",
+            "date": "",
+            "body": "- **kajisho5/ffmpeg-skill**：42 個 FFmpeg 操作包成機器可讀合約＋MCP server，剪輯、字幕、重新裁切、音量正規化與平台匯出全離線完成。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "MCP 工具成本、快取浪費與便宜模型追平設計品質，同日三則新證據",
+            "date": "",
+            "body": "- **MCP 工具成本實測**：Apify 20 個求職 Actor 的 `tools/list` 耗 2.1K–32.7K token，98% 是自動推論的輸出 schema。\n- **快取浪費量化**：Claude Code 用量優化工具推出 VS Code 延伸套件，統計 30 天內 890 萬 token 浪費在已過期快取。\n- **便宜模型＋自製 harness**：單一作者宣稱用 DeepSeek／GLM Flash 搭配自製 harness 追平 Claude Code + Sonnet 5.5 的設計品質。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "Agent 活動可視化再添一個桌面寵物",
+            "date": "",
+            "body": "- **HachimoDock**：桌面寵物小工具，依 Claude Code session 即時狀態切換思考中、打字中、耍雜技、睡著等動畫；517 星。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 15
+  },
+  "readerTopStories": [
+    {
+      "title": "Trojanized Claude Code Extension Plants an SSH Backdoor",
+      "url": "https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor",
+      "source": "Hacker News",
+      "time": "10/30 11:05",
+      "sentiment": "",
+      "body": "在 Cursor 官方公告發出前，獨立資安研究者 GossiTheDog（Mastodon）、Phorion 與 OpenSourceMalware 已各自搶先公開同一起後門，OpenSourceMalware 並取得 Cursor 證實：遭竄改的是 Cursor 市集自己代管的套件副本，不是 Open VSX 或官方 VS Code Marketplace 上架的版本；Phorion 的分析指出後門嘗試在 macOS、Linux、Windows 三個平台都建立 SSH 持久化機制。今日 Hacker News 已有三條獨立討論串同步升溫（644 分、396 分、349 分），三位研究者各自獨立觀測到同一手法，互為佐證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] v2.1.219 `heron_brook` prompt section injects \"Do not call the AgentTool unless the user requested it\" for Opus 5 only, silently overriding user-configured delegation policy, with no opt-out",
+      "url": "https://github.com/anthropics/claude-code/issues/80988",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/29 18:15",
+      "sentiment": "",
+      "body": "今日累積 38 則留言、91 個 👍，使用者回報內部提示詞片段 `heron_brook` 只在使用 Opus 5 時注入「不要在使用者沒要求時呼叫 AgentTool」，會悄悄蓋過使用者自行設定的委派（delegation）策略，且沒有任何關閉選項。靠自訂委派策略把工作拆給子 agent 的使用者，應留意用 Opus 5 時這層設定是否其實沒有生效。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Bug: Project-scoped plugins incorrectly detected as installed globally",
+      "url": "https://github.com/anthropics/claude-code/issues/14202",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/30 14:09",
+      "sentiment": "",
+      "body": "今日累積 27 則留言、66 個 👍，使用者回報用 `--scope project` 裝的外掛，會被其他專案誤判成「已全域安裝」，導致 Marketplaces 畫面顯示已安裝、卻拒絕真正安裝。同時在多個專案分別裝不同外掛設定的使用者，可留意外掛清單顯示的安裝狀態是否可信。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
