@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **新增跨 agent 本機長期記憶工具，強調來源可追溯**（2026-10-29）
-> - **410979729/scope-recall-hermes**：單一 SQLite 儲存的本機長期記憶，回憶內容附來源，並提供檢視、修正或刪除記憶的工具，涵蓋 Hermes、Codex、Claude Code 等多款 agent。
+> **新增 Obsidian vault 常駐記憶，夜間把重複修正沉澱成帶信心分數的偏好**（2026-10-30）
+> - **itechmeat/open-second-brain**：給 Hermes Agent 用的本機優先記憶，常駐 Obsidian vault；每晚跑「dream pass」把重複修正轉成帶信心分數的偏好設定，另提供 Claude Code、Codex、OpenClaw 轉接器。
 
 ---
 
@@ -63,6 +63,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### itechmeat/open-second-brain：本機優先記憶常駐 Obsidian vault，夜間「dream pass」把重複修正沉澱成帶信心分數的偏好（2026-10-30）
+
+- **主線：** 索引記憶
+- **核心模式：** 給 Hermes Agent 用的本機優先記憶系統，常駐使用者的 Obsidian vault 記住專案脈絡；每晚跑「dream pass」，把重複出現的修正自動沉澱成帶信心分數的偏好設定；提供 Claude Code、Codex、OpenClaw 轉接器，其餘透過通用 MCP server 接入；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「記憶與知識管理」一個「夜間 dream pass 把重複修正轉信心分數偏好」取向——與 10-29 scope-recall-hermes 同支援 Hermes Agent，差異在本則用 Obsidian vault、修正為自動沉澱而非人工逐筆；跨 session 記住脈絡屬大型 codebase 痛點，主線填索引記憶。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/itechmeat/open-second-brain)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### 410979729/scope-recall-hermes：跨 agent 本機長期記憶，單一 SQLite 儲存＋來源可追溯回憶（2026-10-29）
 

@@ -31,11 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **背景 agent 面板每 30 秒重傳整份逐字稿：社群寫腳本停用**（2026-10-29）
-> - **no-agent-summary.js**：Bun `--preload` 腳本停用 Claude Code 背景 agent 面板每 30 秒重送完整逐字稿給模型的行為，不改本體二進位；HN 累積 527 分，今日討論度最高。
+> **MCP 工具成本、快取浪費與便宜模型追平設計品質，同日三則新證據**（2026-10-30）
+> - **MCP 工具成本實測**：Apify 20 個求職 Actor 的 `tools/list` 耗 2.1K–32.7K token，98% 是自動推論的輸出 schema。
+> - **快取浪費量化**：Claude Code 用量優化工具推出 VS Code 延伸套件，統計 30 天內 890 萬 token 浪費在已過期快取。
+> - **便宜模型＋自製 harness**：單一作者宣稱用 DeepSeek／GLM Flash 搭配自製 harness 追平 Claude Code + Sonnet 5.5 的設計品質。
 
 ---
 
@@ -105,6 +107,32 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### MCP tool cost 實測：Apify 20 個求職 Actor 的 tools/list 耗 2.1K–32.7K token（2026-10-30）
+
+- **主線：** —
+- **核心模式：** 作者對 mcp.apify.com 上 20 個求職相關 Actor 呼叫 `tools/list`，實測每個工具定義耗用的 token：中位數 3.8K，最高一個達 32.7K，其中 98% 是伺服器自動推論出來的輸出 schema。
+- **與既有模式的關係：** 補充既有「Token / 成本優化」MCP context bloat 量化系列（MCP Code Execution、MCP Server 信任邊界審查、MCP Server 設計隱藏成本比較）一筆新數據點，聚焦單一 MCP 服務內工具數量 × schema 大小的加總效應；非大型 codebase 特有痛點，主線填 —。
+- **來源：** dev.to（12 讚；依規則以第一手量化實測內容判斷，非讚數）；[原文](https://dev.to/kevinhall/mcp-tool-cost-20-job-actors-on-apify-21k-to-327k-tokens-each-1hm4)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者實測，無第三方覆核）
+
+#### Claude Code 用量優化工具推出 VS Code 延伸套件：30 天內 890 萬 token 浪費在已過期快取上（2026-10-30）
+
+- **主線：** —
+- **核心模式：** 作者將自製的 Claude Code 用量優化工具做成 VS Code 延伸套件，統計過去 30 天內有 890 萬個 token 浪費在已過期的 prompt cache 上。
+- **與既有模式的關係：** 補上「用量去向歸因」一筆快取過期浪費的量化數字；方向與同日另一則「session token cache 更快失效」回報一致，詳見 [[topics/code-quality-decline#2026-10]]；主線填 —。
+- **可信度註記：** 單一作者工具與自報數字，0 留言、無第三方覆核，未另行查證。
+- **來源：** Reddit r/ClaudeCode（0 留言）；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xjiyk0/my_claude_code_optimizer_is_now_a_vscode/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，作者自報數字、無第三方覆核）
+
+#### Research：自製 harness 搭配 DeepSeek／GLM Flash 等便宜模型，宣稱追平 Claude Code + Sonnet 5.5 的設計品質（2026-10-30）
+
+- **主線：** —
+- **核心模式：** 作者發布研究，自製 agent harness 搭配 DeepSeek、GLM Flash 等較便宜的模型，宣稱可在設計品質上追平 Claude Code 搭配 Sonnet 5.5 的輸出；本則只記 harness 設計本身，模型能力對比面見 [[entities/sonnet-5-5]]。
+- **與既有模式的關係：** 補上「模型使用策略」一個「自製 harness 換用便宜模型」取向——既有做法多在同一 agent 內依任務路由模型，本則整套自建 harness 搭配非 Claude 模型重現設計產出；主線填 —。
+- **可信度註記：** 僅有 Reddit 單一貼文、0 留言，無第三方覆核；測試方法與樣本量未見於摘要，未另行查證。
+- **來源：** Reddit r/LocalLLaMA（0 留言）；[原文](https://www.reddit.com/r/LocalLLaMA/comments/1xit9g8/research_matching_claude_code_sonnet_55_design/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者研究，無第三方覆核）
 
 #### Claude Code 背景 agent 面板每 30 秒重傳完整逐字稿給模型：no-agent-summary.js 停用此行為（2026-10-29）
 

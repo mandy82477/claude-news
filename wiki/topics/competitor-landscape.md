@@ -28,14 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-29）
-> - 🔴 **GitHub Copilot Fusion 基準測試稱勝 Claude Code、API 成本減半**（The New Stack，承接 10-28 GA）——拿 Claude Code 與 Copilot 做選型比價的人，要重新核對這組測試條件。
-> - 🔴 **Gemini 4 Carbon 發布，稱資安攻防基準大幅領先、AA 指數排名第一**（DeepMind）——評估 Claude 資安 agentic 能力定位的人，多一組對照數字要看。
-> - 🟡 **OpenAI／Meta 同日各自推出 Legora 法律 agentic 作業系統與 Muse 新加坡上線**（OpenAI Blog；Meta Newsroom）——均非編碼工具直接競品，先知道有這些新進者即可。
+> **本週衝擊**（2026-10-30）
+> - 🟡 **OpenAI 跟進推出與 Claude Max／Team 同額的 API credits 訂閱福利**（Blog/Simon Willison）——這項福利不再是 Claude 訂閱獨有的賣點。
+> - ⚪ **Mistral Le Chonk 据報擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列**（ZDNET）——具體榜單與分數缺，知道就好。
 
 ---
 
@@ -242,6 +241,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-10-30
+- **OpenAI（分析文，透過觀察）**：Simon Willison 觀察 OpenAI 已跟進推出與 Anthropic Max／Team 訂閱相同額度的 API credits 福利（$100／$200／$500，隨 ChatGPT 方案層級對應）；具體到期日與適用方案細節未見，不列入「對手雷達」表（Blog/Simon Willison）
+- **Mistral（分析文，僅標題可用）**：ZDNET 稱開源模型 Le Chonk 已擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列；具體榜單與分數未附，不列入「對手雷達」表（Topic Watch/competitor-landscape）
+- **OpenAI（分析文，非競品動態）**：官方部落格發布更新版 Model Spec，提出五項核心價值引導 AI 走向更穩健判斷、人類自主與忠於使用者意圖；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Meta（分析文，非編碼工具）**：官方部落格宣布與加拿大非營利組織 INCA 合作，支援當地視障、聾盲及弱視人士；非 AI 編碼工具競品異動，不列入「對手雷達」表（Blog/Meta Newsroom ×2，英法雙語版）
 
 ### 2026-10-29
 - **Meta（分析文，非編碼工具）**：官方部落格宣布捐助美國五所大學（加州理工、俄亥俄州立大學醫學院、LSU、印第安納大學、UTHealth Houston）共200萬美元，供以其模型加速醫學與科學研究；非編碼工具或定價異動，不列入「對手雷達」表（Blog/Meta Newsroom）

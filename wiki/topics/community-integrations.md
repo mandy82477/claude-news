@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **自架內容轉 Markdown 服務接進 MCP 與 Claude Code skill**（2026-10-29）
-> - **AeternaLabsHQ/pullmd**：自架的 URL／檔案轉 Markdown 服務，支援網頁、文件、圖片、音訊、YouTube，提供 PWA、REST、MCP 與 Claude Code skill 介面。
+> **本機影片編輯工具加入 MCP 整合清單**（2026-10-30）
+> - **kajisho5/ffmpeg-skill**：42 個 FFmpeg 操作包成機器可讀合約＋MCP server，剪輯、字幕、重新裁切、音量正規化與平台匯出全離線完成。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-10
+
+#### kajisho5/ffmpeg-skill：本機影片編輯工具，42 個 FFmpeg 操作包成機器可讀合約＋MCP server（2026-10-30）
+
+- **主線：** —
+- **核心模式：** 本機影片編輯工具，把 42 個 FFmpeg 操作封裝成機器可讀合約與 MCP server，支援剪輯、字幕、重新裁切畫面比例、音量正規化與各平台匯出格式；可接 Claude Code、Cursor、Codex，全程不連雲端、不需 API key；GitHub Search 4,078 星（2 個來源）。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」既有代表技巧一個「本機影片編輯」取向——既有做法多接生產力服務、創作軟體或遊戲引擎，本則把 FFmpeg 操作包成 MCP server 讓 agent 直接剪輯影片；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（4,078★，2 個來源），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search（2 個來源）；[GitHub](https://github.com/kajisho5/ffmpeg-skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### AeternaLabsHQ/pullmd：自架 URL／檔案轉 Markdown 服務，支援 MCP 與 Claude Code skill（2026-10-29）
 

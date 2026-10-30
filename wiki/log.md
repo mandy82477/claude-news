@@ -8293,3 +8293,19 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-d06051（安全政策→功能，claude-code 🛡️ 三處狀態矛盾與分工）、H-4dcafe（→模型，mythos L174 錨點改指 cyber）、H-b16ef0（→投資分析，market-signals L333 錨點本就指錯、家在 eval）、H-bf1dd0（→功能，official-community-gap L158 安全邊界列與一手相反）。
 - 歸因 user-query／安全政策
 - 複驗（新冷讀者，原四題逐字）：Q1 拿到、Q2 半、Q3 半、Q4 拿到（第一輪 1 拿 3 半）；依複驗補 cyber 結論「官方承認過的在野濫用」清單、product-vulns 結論補 2.1.309 沙箱修補、母頁兩句撐不起的話改可查證寫法；加開 H-614eeb（→功能，claude-code L54 2.1.309 條目漏 rm 直接拒絕變更）。評審實作複核放行（3 🟡 皆文件修正，已改）。
+
+## 2026-10-30 Ingest
+
+- 來源日報：[[news/2026-10-30]]
+- 更新頁面：entities/claude-code、entities/pricing、entities/mythos、topics/claude-code-experimental、topics/official-community-gap、topics/ai-agent-safety、topics/ai-agent-safety-cyber、topics/ai-agent-safety-product-vulns、topics/anthropic-ipo、topics/anthropic-business、topics/competitor-landscape、topics/community-integrations、topics/community-interfaces、topics/community-memory、topics/community-cost、topics/community-tech-discussions、topics/community-tech-patterns、topics/code-quality-decline
+- 新增頁面：無
+- 摘要：Cursor 市集版 Claude Code 延伸套件 2.1.313 遭竄改植入 SSH 後門（最多 5,000 用戶受影響）為本日最大事件，另有 Claude API 單次請求上限四倍提升至 128MB、v2.1.314 新增工作目錄外寫入阻擋設定、Anthropic IPO 揭露效應持續擴散
+- 呈現品質：全部通過
+- 品質備註：
+  - [社群] 27 則條目中 11 則（多為 0～2 分 Show HN／Reddit 貼文）記者未逐一點名處置，依回報「互動量低於門檻且日報未收錄」聚合理由，判斷為合理省略
+  - [安全政策] 29 則條目中 3 則（Quartz 員工警示、Berkeley Law 教授評論、NPR 兩大風險）未逐一點名處置，皆為標題層級無可讀內文的單一來源評論／觀點類，依「不可為了消化而過度解讀新聞」原則判斷為合理省略，非漏看
+  - [社群] 原回報漏列 Ansub/tv-detox（GitHub，1,858★，遠超高門檻且日報已收錄）——主編追問後記者查核防刷佐證（近 30 天多時區真實 commit）屬實收錄，已補寫入 topics/community-tech-patterns「未歸類」節，待週更分派正式類別
+  - [功能] 收到轉知 H-d06051 要求新增「🔴 部分修補」狀態值，正確依規則檔（僅五值）擋下、改以內文補充細節達成等效區分，未新增第六個狀態值——規則優先序運作如預期，非錯誤
+  - [工具] `collect_reporter_reports.py --apply` 誤將功能記者「不適用：H-6b29fd（續留意下一輪）」判讀為已結案並自動 close，已以 H-7526b2 重開同一事項；此為腳本在「不適用」與「已處理」文字相鄰時的解析缺陷，建議下次本機 session 覆核 `collect_reporter_reports.py` 的轉知結案判讀邏輯（本機承接）
+- 分類回退：[功能→商業] Anthropic Claude API 請求上限提升至 128MB（FourWeekMBA／Startup Fortune 兩則）——功能記者判斷僅標題層級、無版本號可驗證，不符功能類門檻；商業記者原輪已收到該則（dual-tag），已以「屬功能面異動、無計費面新數字」為由主動不重複收錄；兩位記者互評讓對方處理、結果都以證據不足判斷不收錄，核對後確認非分類錯誤，不追加派工，已由原輪商業記者處理
+- 轉知帳本：結案 H-d06051、H-bf1dd0、H-614eeb、H-7d0344、H-4dcafe（皆功能／模型記者已處理）；H-6b29fd 遭腳本誤結案，已重開為 H-7526b2（→功能，同一事項：Downloads 資料夾攻擊面第二來源＋opus-5-5 分類器誤判，續留意下一輪）；H-b16ef0（→投資分析）留待 4c market 判讀派工時處理；安全政策／社群回報的兩則「⚠️ 需主編轉知」（v2.1.314/#80988 不涉安全主線；Reddit DeepSeek/GLM harness claim 存疑）核對後確認目標記者原輪已處理或已有相同結論，**不登帳**：同輪已核對清楚

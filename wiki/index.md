@@ -125,7 +125,7 @@
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]]　↳ 子故事：[[topics/safety-china-trust-dispute-archive]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全入口：現在什麼打得到你、官方擋到哪（沙箱才是安全邊界，Auto 與 deny-list 都不是）；提示注入、產品漏洞與誤操作、網攻與防守方准入各一個子頁　↳ 子故事：[[topics/ai-agent-safety-archive]]、[[topics/ai-agent-safety-cyber]]、[[topics/ai-agent-safety-product-vulns]]、[[topics/ai-agent-safety-prompt-injection]]、[[topics/ai-eval-boundary-incidents]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動——五角大廈供應鏈風險黑名單上訴法院維持（09-25）、FTC 新開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
-| [[topics/official-community-gap]] | 🛠️ 工具/功能 | monitoring | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
+| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
 | [[topics/anthropic-product-matrix]] | 🛠️ 工具/功能 | ongoing | 產品 × 功能對照表：Claude app、Claude Code、Tag、Platform、Duet 五欄 × 15 項功能，每格附官方來源；產品專屬功能與專用版另列 |
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |

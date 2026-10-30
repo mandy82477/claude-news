@@ -30,12 +30,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-25
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 %% 拆頁評估 2026-10-25：拆，草案：正文 896 行（本輪未蒸餾），事件流約 596 行（重要政策變動紀錄各節）。全列各節所答：現況／我的方案現在有什麼／一小時一個月多少／模型 API 定價／還沒確定的計費變動／當前生效的計費規則／通路與乘數＝我現在怎麼被計費、該買哪個（約 270 行，留母頁）；事故現在還在發生嗎＋灰色市場＋事故與爭議＝帳單出錯、帳號被封怎麼辦（約 230 行）；定價與促銷＋配額與速率＋計費切割風波＋成本案例＝價格與配額何時怎麼變（約 400 行，計費切割 101 行單獨太薄、併入）。草案：事故群→子頁 entities/pricing-incidents；價格配額沿革群→子頁 entities/pricing-history；母頁留現況與生效規則、路由表。錨點入邊（如 pricing#方案可用性與帳務摩擦）留母頁不動，指入事故／沿革節的須回掃，待頁面健檢波執行。 %%
 
-> **最新計費政策異動**（2026-10-25）
-> - **Fable 5 誤判扣點逾三個月未解**：GitHub #79337 自 07-20 起持續誤判需購買 usage credits，今日累積 77 留言、26 👍，為官方 repo 互動最高單一 issue。
+> **最新計費政策異動**（2026-10-30）
+> 官方定價頁新增問答：Enterprise 與 API 定價可依用量與承諾支出客製化，提供數量折扣——採購量大或要談長約的團隊可據此主動詢價。
 
 ## 現況
 
@@ -182,6 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-10-30 官方定價頁新增｜Enterprise／API 可依用量與承諾支出談客製折扣**：官方 Plans & Pricing 頁新增問答，載明 Enterprise 與 API 定價可依用量與承諾支出（committed-spend）客製化、提供數量折扣；具體折扣門檻與幅度未公開，需洽業務（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-30）
 - **✅ 2026-10-16 查證｜Fast mode 不再標記「research preview」**：官方定價頁拿掉「in research preview」字樣，價格數字不變（來源：[官方定價頁](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測）
 - **✅ 2026-10-15 生效｜Team 方案年繳新增 20 席下限**：官方「方案與定價」頁將 Team annual billing 條件新增「20 seat minimum」，此前無此門檻（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-15）
 - **✅ 2026-09-19 生效｜Auto mode 改用 server-side classifier，分類器耗用不計費**：適用 Claude API、Enterprise，以及 Bedrock／Vertex／Foundry／閘道器用戶；可設 `CLAUDE_CODE_AUTO_MODE_SERVER=0` 退回舊行為（來源：[v2.1.278](https://github.com/anthropics/claude-code/releases/tag/v2.1.278)，2026-09-19）

@@ -33,8 +33,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-10-29）
-> - **產品漏洞三則**：#81138 稱 Claude Code 把 email 放進 prompt、再被帶給外部網站（三來源）；#53223 稱 CLAUDE.md 指令沒有強制力；內建瀏覽器元件遭攻破只有標題。細節見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+> **最新動態**（2026-10-30）
+> - **供應鏈**：Cursor 市集版 Claude Code 延伸套件遭植入 SSH 後門，Cursor 證實最多 5,000 人受影響。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+> - **網攻能力**：CSO Online 跟進指出官方研究模型找到的 Linux 漏洞可致遠端 root 權限。見 [[topics/ai-agent-safety-cyber#2026-10]]。
 
 ---
 
@@ -53,8 +54,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-10-28 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-10-29 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-28 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-10-30 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-30 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%

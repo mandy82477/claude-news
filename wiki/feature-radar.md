@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-27
+**最後更新：** 2026-10-30
 
 > **這禮拜動了什麼**（2026-10-22）
 > Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
@@ -68,6 +68,23 @@
 ---
 
 ## 🆕 最新功能（2026-10）
+
+### Claude Code v2.1.314：`permissions.blockWritesOutsideWorkingDirectories`
+**發布：** 2026-10-30（v2.1.314） | **狀態：** 正式發布
+
+**是什麼：** 新增 `permissions.blockWritesOutsideWorkingDirectories` 設定，開啟後 Write、Edit 與 NotebookEdit 在任何權限模式（含 bypass／auto）下一律拒絕寫入工作目錄以外的路徑。
+
+**為何熱：** 官方 release notes 單日列出的使用者端設定變更；同日爆出 Cursor 市集版 Claude Code 延伸套件遭植入後門，想收緊 agent 寫入範圍的團隊可留意（安全角度另見 [[topics/ai-agent-safety-product-vulns]]）。
+
+**現在要試嗎：** 想把 Claude Code 寫入範圍鎖在工作目錄內（多專案／CI／自動化情境）的團隊可直接開啟；單一專案一般互動式使用者影響有限。
+
+**快速上手：**
+```
+// settings.json
+{ "permissions": { "blockWritesOutsideWorkingDirectories": true } }
+```
+
+**注意事項：** 官方同日另有一項可選設定，原文截斷未附細節；此設定不影響 Read／Bash 等其他工具的路徑存取範圍。
 
 ### Claude apps gateway：OIDC 自訂 id_token claim 識別使用者
 **發布：** 2026-10-27（v2.1.312） | **狀態：** 正式發布
@@ -788,6 +805,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`**（任何權限模式下拒絕寫入工作目錄外路徑） | 2026-10-30 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |

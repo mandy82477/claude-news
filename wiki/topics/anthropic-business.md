@@ -28,14 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 %%
 
-> **最新動態**（2026-10-29）
-> - **AI for Science 擴大至 20 個基金會與研究機構**：提供免費 Claude 額度支持高影響力科研，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic）。
-> - **IPO 揭露效應擴散**：彭博法律新聞稱 S-1「存在性」AI 風險揭露正設下業界標準；彭博另報導銀行已撤回一筆與 Anthropic 相關的德州資料中心債券發行案，詳見 [[topics/anthropic-ipo]]。
-> - **Mithril Medicine 收購追加細節**：Forbes 稱這家一人新創此前以 Claude 運行藥物開發專案（收購本身為 10-27 已報導事件的媒體覆述）。
+> **最新動態**（2026-10-30）
+> - **Nvidia 洽談為 Nscale－Anthropic 雲端合約提供信用支持**：路透引《The Information》報導，金額與條件未見（Reuters）。
+> - **IPO 揭露與問責質疑延燒**：Fortune 稱 S-1 以 69,800 字披露 AI 對投資人的風險、對社會風險著墨相對少；另有柏克萊法學院教授投書稱 IPO 正考驗 AI 問責機制，詳見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -568,6 +567,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-10
+
+#### 2026-10-30
+- **[戰略合作] Reuters 引《The Information》：Nvidia 洽談為 Nscale 與 Anthropic 間雲端合約提供信用支持**：背景為既有 Nscale 兩筆合計約 900 億美元算力交易（見「算力與資金從哪來」表），具體金額與條件未見報導，僅標題可用（Google News/Reuters）
 
 #### 2026-10-29
 - **[重大事件] Anthropic：AI for Science 擴大至 20 個基金會與研究機構，提供免費 Claude 額度**：涵蓋生物、醫學、物理、化學、氣候科學與數學，詳見「哪個合作」清單新增列（Anthropic）

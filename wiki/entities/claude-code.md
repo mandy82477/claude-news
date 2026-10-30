@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **最新動態**（2026-10-29）
-> - **新已知問題**：`cleanupPeriodDays` 設為 99999 仍遭忽略、490 個 session 被靜默刪除（#41458）；CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報（#53223）；輸入框拼字檢查無法關閉（#58693）；使用者 email 經 prompt 外流至外部網站（#81138）；Connection closed mid-response 再增一則獨立回報（#70217）。
-> - **社群發現（未經官方證實）**：背景 agent 面板每 30 秒重送完整 transcript 僅為更新狀態列，Hacker News 今日熱度最高條目（527 分），社群腳本可停用。
+> **最新動態**（2026-10-30）
+> - **v2.1.314 新增 `permissions.blockWritesOutsideWorkingDirectories`**：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。
+> - **新已知問題**：`heron_brook` 提示詞片段只在 Opus 5 悄悄蓋過使用者委派政策、無法關閉（#80988）；`--scope project` 外掛被其他專案誤判全域已安裝（#14202）。
 
 ---
 
@@ -47,11 +47,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.314**（2026-10-30）：新增 `permissions.blockWritesOutsideWorkingDirectories` 設定，開啟後 Write、Edit 與 NotebookEdit 在任何權限模式下都會拒絕寫入工作目錄以外的路徑；另新增一項可選設定（官方原文截斷，細節未附）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）。
+  同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.311**（2026-10-26）：為 `self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min` 兩個旗標，host 回報還有殘留行程時可讓 runner 繼續保留一個 idle session 而不被提早回收（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)）。
   同版 build 另新增 15 個功能候選旗標，`CLAUDE_CODE_TOOL_CONTAINER_PLUGINS_NAMED`（首見 2.1.310）消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.310**（2026-10-23）：新增 Monitor tool，含 Bedrock、Vertex、Foundry 平台的 plugin 監控；停用 telemetry 或非必要流量時，連長時間 foreground sleep 都會被攔阻（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.310)）。
   同版 build 另新增 4 個功能候選旗標（`CLAUDE_CODE_ARTIFACT_ASK_FIRST`、`CLAUDE_CODE_DESKTOP_CONNECTOR_NAMES`、`CLAUDE_CODE_RETRY_WATCHDOG_SCOPE`、`CLAUDE_CODE_TOOL_CONTAINER_PLUGINS_NAMED`），追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-typescript google-cloud-sdk-v1.1.1（2026-10-23）修正 Google Cloud 路由下使用者個人資料請求未送往組織端點的 bug；anthropic-sdk-python v2.3.0（2026-10-23）新增 Claude Tag（見 [[entities/claude-tag]]）服務 Claude Enterprise 組織的 API endpoint，並同步修正同一個 Google Cloud 路由 bug，見下方「版本更新」表。
-- **v2.1.309**（2026-10-22）：修正 macOS／Linux 上 sandboxed Bash 指令執行前會先跑過 shell 啟動設定檔、導致該動作發生在沙盒範圍之外的問題；修正 macOS sandbox `denyWrite` glob 規則比對不完全的問題；純 bug 修復，無新指令/旗標（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）。
+- **v2.1.309**（2026-10-22）：修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；**bypass 模式下危險 `rm`／`rmdir` 改為直接拒絕並給改寫提示**；純 bug 修復＋安全強化（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）。
   同版 build 另新增 4 個功能候選旗標（`CLAUDE_CODE_CCR_OWN_CONNECTION_POOL`、`CLAUDE_CODE_DISABLE_ULTRAREVIEW_TRUST_CHECK`、`CLAUDE_CODE_RESUME_SHOWS_CUT_OFF_CALLS`、`CLAUDE_CODE_SYNC_PLUGINS_DOWNLOAD_CONCURRENCY`），追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-python v2.2.0（2026-10-23）新增 message threads 支援、新增依維度拆分的用量與費用報表（舊版報表標記為 legacy），並修正 client 端不再建議在 `max_tokens` 使用 `math.inf`；anthropic-sdk-typescript vertex-sdk-v1.1.0（2026-10-23）同步新增 message threads 支援，見下方「版本更新」表。
 - **v2.1.308**（2026-10-22）：Bug fixes and reliability improvements，官方 changelog 未列具體異動項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）。
   同版 build 另新增 6 個功能候選旗標＋代號旗標 `CLAUDE_CODE_WITTY_DEWDROP`，`CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION` 消失，追蹤見 [[topics/claude-code-experimental]]。同日 anthropic-sdk-typescript vertex-sdk-v1.0.0 正式滿 1.0，⚠️ Breaking Change：改為支援新版 API（2026-10-21），KuCoin 報導稱同時移除取樣相關參數、細節待官方文件完整確認；anthropic-sdk-python v2.1.0 新增 User Profiles API 的 enforcement status、actions 與 filter 參數，見下方「版本更新」表。
@@ -108,6 +110,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期平台與文件異動：**
 
 - 桌面版文件異動已依主題彙整，見 [[entities/claude-code#桌面版功能地圖]]；下列時序條目保留。
+- **官方文件更新**（2026-10-30）：桌面版文件字數由 202,046 增至 203,154，但本頁段落數（1236）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。
   ❓ **待查證**（標 2026-10-24｜查 `Local sessions on managed devices`、devbox）｜**移除段落含「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 設定範例**：官方未附遷移說明，依賴這兩種 hook 範例設定的桌面版使用者可留意範例是否已搬到別處。
@@ -223,7 +226,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（19 條未修復、4 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（18 條未修復、4 條已修復、1 條拒修、4 條❓）
 
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報與資安後果（GitHub issue #53223，31 則留言、5 讚，2026-10-28）**：官方尚未回應。
   - 與既有「CLAUDE.md 標記為強制的規則持續被忽略」（#2544）、「candidate-context 而非強制系統提示」發現（見「🧠 行為與品質」）同屬此限制，本則為彙整版；把 CLAUDE.md／AGENTS.md 當安全邊界用的團隊應留意。風險面見 [[topics/ai-agent-safety]]。
@@ -233,16 +236,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：觸發機制與官方回應均未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
 - ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
-- 🔴 **未修復**｜**「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（CyberSecurityNews，2026-09-18）**：媒體稱（2026-10-03 查證）Air Security 09-17 披露：插件 SHA 釘選未驗證檢出內容、加自動更新致零點擊，Claude Code 2.1.179 已修補。
-- 官方 v2.1.179 release notes 與 Security Advisories 未載，狀態待官方確認。詳見 [[topics/ai-agent-safety]]
+- ❓ **待查證**（標 2026-10-30｜查 Plugin4Shell、v2.1.179｜複 2026-11-13）｜**「Plugin4Shell」零點擊 RCE 橫跨 4 款 AI coding agent**：媒體稱 2.1.179 已修補，官方未載，狀態未經證實。詳見 [[topics/ai-agent-safety-product-vulns]]
 - 🔴 **未修復**｜**GitHub Actions 預設範本三家 AI coding agent 通用 RCE 缺陷（Reddit r/artificial 週熱門，2026-09-14）**：Claude Code、Gemini CLI、Codex 官方 Actions 範本皆傳有同款可致 RCE 的設定缺陷。
 - 2026-10-03 查 claude-code-action 與 claude-code 官方 Security Advisories 無對應「預設範本」條目；可能相關的 Novee Black Hat 披露見 [[topics/ai-agent-safety]]。
   - 僅見 Reddit 轉載，未附具名研究者、CVE 或官方回應，受影響版本與修復狀態未知，待原始來源或官方公告確認；跨產品面另見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**安裝安全警示：Google 搜尋廣告曾出現仿冒官方安裝包**（多家資安媒體同步報導）：假冒包植入 Trojan:Win32/Kepavll!rfn，透過 IElevator 機制竊取瀏覽器 Cookie 與機密憑證；**務必僅從官方來源安裝：`github.com/anthropics/claude-code`**。
 - 🔴 **未修復（08-31 補上量化數字，嚴重度升級）**｜**Opus 5 Auto Mode 安全機制遭具名研究者繞過，並有實際惡意程式碼利用案例（embracethered／Simon Willison／Cybernews／The Register，2026-08-27～08-31）**：資安研究者 embracethered（經 simonwillison.net 轉載，2026-08-27）公布可繞過 Claude Code Opus 5「Auto Mode」（低監督／高自動化預設權限模式）安全機制、誘使 agent 在未經授權情況下執行任意程式碼的攻擊手法；Cybernews（2026-08-28）補充至少一起實際遭惡意程式碼利用的在野案例，**在野案例中 Claude 曾嘗試修復被植入的惡意程式碼，但修復動作遭拒絕執行**。**08-31（embracethered／The Register）補上量化數字**：小樣本測試中僅需請 Claude Code 摘要一個網頁即可觸發，提示注入攻擊成功率達 **60–80%**，與 Anthropic 委託第三方針對 Auto Mode 的評測宣稱 **0%** 形成明顯落差（兩個數字並陳，不擇一；樣本規模與雙方評測方法論均未見完整揭露）。屬產品層安全（權限／沙箱繞過）問題，非模型層問題；官方尚未公開回應或就實測數字提出說明。**Tech Times／The Next Web（2026-09-01～09-02 轉載跟進）** 重申「僅需請 Auto Mode 摘要一個網頁即可劫持該次執行」並稱**官方目前尚無修復計畫**——此為媒體轉述而非 GitHub issue 上的官方明確回覆，故仍標 🔴 未修復而非 ⛔ 官方拒修。與既有 v2.1.216／v2.1.223 修補的 Auto Mode 繞過（見下方「已修復」條目）屬相關但不同批次的發現。事件完整分析見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**僅需請 Claude Code 摘要一個網址即可誘發信任 llms.txt 內容而產生非預期行為（The Register，2026-08-29～08-30 報導）**：The Register 揭露 Claude Code 會將目標網站 `llms.txt` 檔案內容視為可信指令來源，使用者只需請 Claude 摘要或讀取一個網址，該網址若帶有惡意撰寫的 `llms.txt`，即可誘發非預期行為，屬產品層攻擊面問題（信任邊界設計缺陷），非單一 bug；官方尚未公開回應或提供修補說明。與已知 GitHub Issue 內容經 prompt injection 執行任意程式碼（CVE-2026-54316，見下方「已修復」）同屬信任邊界／注入攻擊面議題，但觸發媒介不同（llms.txt vs CI runner 內容），暫分列追蹤。
-- 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：報導揭露惡意撰寫的 `.git` 設定檔（如 core.fsmonitor、hooks 相關設定）可誘使 Claude Code、Codex、Cursor 等多款 AI coding agent 在讀取該 repo 時執行攻擊者指定的程式碼，非 Claude Code 單一產品缺陷，而是多款 agent 共通的信任邊界問題（clone／開啟不明來源 repo 即可能觸發）；與上列 llms.txt 信任邊界問題同屬「開啟不明來源內容即可能觸發非預期執行」的同類攻擊面，但觸發媒介為 repo 內的 `.git` 設定而非網頁內容，暫分列追蹤；官方尚未回應。事件完整分析見 [[topics/ai-agent-safety]]
-  - **v2.1.196 部分修補**；Manifold Security 2026-09-01 覆測，一條執行路徑仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
+- 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：多款 agent 共通的信任邊界問題，非單一產品缺陷；正常 clone 不受影響。詳見 [[topics/ai-agent-safety-prompt-injection]]
+  - **v2.1.196 修補 core.fsmonitor 變體**；第二變體據 CyberSecurityNews 轉述（二手）至 2.1.252 仍未修補，官方未證實此變體（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，2026-08-12 首見）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效。
 - 該 issue 累積 201 則留言、29 個讚（2026-10-19 互動數更新），為今日全站已知問題互動量最高；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
@@ -302,8 +304,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
-### 🧠 行為與品質（71 條未修復、3 條已修復、1 條拒修、6 條查無官方、4 條❓）
+### 🧠 行為與品質（73 條未修復、3 條已修復、1 條拒修、6 條查無官方、4 條❓）
 
+- 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
+- 🔴 **未修復**｜**v2.1.219 內部提示詞片段 `heron_brook` 只在 Opus 5 悄悄蓋過使用者委派政策，無關閉選項（GitHub issue #80988，累積 38 則留言、91 個讚，2026-10-29）**：注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派策略且無法關閉；用 Opus 5 拆工作給子 agent 者可能發現委派未生效；官方尚未回應。
 - 🔴 **未修復**｜**輸入框拼字檢查無法關閉，紅色底線標記讓輸入文字難以閱讀（GitHub issue #58693，累積 31 則留言、18 個讚，2026-10-29）**：常輸入非英文或專有名詞的使用者受影響最明顯；官方尚未回應或提供設定選項。
 - ❓ **待查證**（標 2026-10-27｜查 German、1xgvuu5｜複 2026-11-10）｜**無預警切換德文回覆（Reddit，單一貼文、0 留言）**：對話中途突然改用德文作答並說明自身動作；單一來源、無佐證，無法判斷是否孤立個案。
 - 🔴 **未修復**｜**功能請求：Bash tool 可設定使用的 shell 或繼承啟動時的 shell（GitHub issue #7490，累積 39 則留言、150 個讚，2026-10-23，今日反應數最高）**：目前 Bash tool 固定走某套 shell；使用者呼籲可設定或繼承啟動時的 shell（如 fish、nushell）；官方尚未回應或排入路線圖。
@@ -360,7 +364,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**［META］`bypassPermissions` 模式未真正略過權限檢查，9 個月未解、12+ 重複回報（GitHub issue #39523，37 則留言、19 個讚，首見 2026-07-23，2026-10-10 更新）**：回報者指出該模式並未如預期跳過權限檢查；官方尚未回應。
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 47 則留言，首見 2026-07-23，2026-09-24 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
-- 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 54 則留言，2026-09-08 首見，2026-09-23 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 60 則留言，2026-09-08 首見，2026-10-30 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 76 則留言、116 個讚，2026-09-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**回應超過 32000 output token 上限觸發 API 錯誤（GitHub issue #24055，累積 137 則留言、85 個讚，2026-07-11）**：多名使用者回報回應長度超過 32000 output token 上限時觸發「API Error: Claude's response exceeded the 32000 output token maximum」；官方尚未回應。
@@ -667,7 +671,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **套件管理器安裝不會自己更新**：Homebrew、apt、dnf、apk 都要手動升級，落在 stable 又沒升級的人版本會比預期更舊。
 - **升版前先查**：`claude --version` 看現在跑哪一版，設定檔裡的 `autoUpdatesChannel` 看跟哪條通道。
 - **`minimumVersion` 的限制**：只讓自動更新不裝比它舊的版本；官方文件沒說它會把 stable 拉高，不能拿來補 stable 的落差。
-- **stable 目前落差**：stable 標籤停在 2.1.285（mixed-news.com，10-03），權限修正在 2.1.287–2.1.289；何時追上官方未說。
+- **stable 目前落差**：npm 查證 2026-10-30，stable 標籤已到 2.1.308，已含 2.1.287／288 的危險 `rm` 防護修正；落差已追上，不再是 2.1.285。
 
 ### 最新版本
 
@@ -675,6 +679,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.314** | 2026-10-30 | 新增 `permissions.blockWritesOutsideWorkingDirectories`：Write、Edit、NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）|
 | **v2.1.312** | 2026-10-27 | 新增 `oidc.user_id_claim` 設定，gateway 可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)）|
 | **v2.1.311** | 2026-10-26 | `self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min`，host 回報殘留行程時可保留 idle session 不被提早回收（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)）|
 | **v2.1.310** | 2026-10-23 | 新增 Monitor tool，含 Bedrock／Vertex／Foundry 的 plugin 監控；停用 telemetry 或非必要流量時攔阻長時間 foreground sleep（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.310)）|
@@ -682,7 +687,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **anthropic-sdk-typescript google-cloud-sdk-v1.1.1** | 2026-10-23 | Bug fix：Google Cloud 路由下使用者個人資料請求改送往組織端點；測試不再預期 beta query 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.1)）|
 | **anthropic-sdk-python v2.2.0** | 2026-10-23 | 新增 message threads 支援與依維度拆分用量費用報表；client 不再建議 `max_tokens` 用 `math.inf`（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.0** | 2026-10-23 | 新增 message threads 支援，與同日 Python SDK 呼應（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0)）|
-| **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
+| **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；bypass 模式下危險 `rm`／`rmdir` 改為直接拒絕並給改寫提示（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
 | **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking：改支援新版 API；❓ **待查證**（標 2026-10-21｜查 vertex-sdk-v1.0.0、取樣參數）｜KuCoin 稱移除取樣參數（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
 | **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|

@@ -29,13 +29,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **Token/成本優化、Plugin/MCP整合、記憶與知識管理同日各新增一例**（2026-10-29）
-> - **Token / 成本優化**：no-agent-summary.js 揭露並停用 Claude Code 背景 agent 面板每 30 秒重傳完整逐字稿的隱藏成本，見 [[topics/community-cost#2026-10]]。
-> - **Plugin / MCP 整合**：AeternaLabsHQ/pullmd，自架 URL／檔案轉 Markdown 服務，支援 MCP 與 Claude Code skill，見 [[topics/community-integrations#2026-10]]。
-> - **記憶與知識管理**：410979729/scope-recall-hermes，跨 agent 本機長期記憶，來源可追溯、可人工修正，見 [[topics/community-memory#2026-10]]。
+> **Token/成本優化、Plugin/MCP整合、記憶與知識管理、Agent活動可視化同日各新增一例，另有一則暫列未歸類**（2026-10-30）
+> - **Token / 成本優化**：MCP 工具成本實測（Apify 20 個 Actor）與用量優化工具揭露的快取浪費數字，見 [[topics/community-cost#2026-10]]。
+> - **Plugin / MCP 整合**：kajisho5/ffmpeg-skill，42 個 FFmpeg 操作包成機器可讀合約＋MCP server 的本機影片編輯工具，見 [[topics/community-integrations#2026-10]]。
+> - **記憶與知識管理**：itechmeat/open-second-brain，常駐 Obsidian vault、夜間把重複修正沉澱成帶信心分數偏好，見 [[topics/community-memory#2026-10]]。
+> - **Agent 活動可視化**：YizhengWw/HachimoDock，隨 Claude Code session 即時反應的桌面寵物，見 [[topics/community-interfaces#2026-10]]。
+> - **未歸類**：Ansub/tv-detox，用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，見下方「技術彙整」未歸類節點。
 
 ---
 
@@ -54,12 +56,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-29 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-29 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-30 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-30 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-28 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-28 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-29 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-24 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-30 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-30 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 
@@ -131,7 +133,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 未歸類
 
-目前沒有尚未分派的做法節點。
+#### Ansub/tv-detox：用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，搭配無廣告簡化主畫面（2026-10-30）
+
+- **主線：** —
+- **核心模式：** Android TV 專用的無廣告簡化主畫面 app，搭配一份餵給 Claude Code 或 Codex 的提示詞，由 agent 針對裝置現況生成清理指令、移除預裝臃腫軟體，讓老舊 Android TV 盒子恢復流暢；GitHub Search 1,858 星。
+- **與既有模式的關係：** 不屬於第 0 條路由表任何一類逐字命名的類別——它是 Claude Code／Codex 產出的終端消費應用（老舊硬體再利用），不是既有 agent 使用模式或工具整合技巧，先放未歸類，週更時再判是否併入既有頁或另開類別；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub Search 1,858★，遠高於星數「高」門檻（≥1,000★）；查核近 30 天 commit 記錄（git clone），自 10-20 起幾乎每日有合併 PR、貢獻者時區分散，非單一帳號灌水；forks／issues 本次無 API 權限，未查。
+- **來源：** GitHub Search；[GitHub](https://github.com/Ansub/tv-detox)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者專案起步，已有多名外部貢獻者送 PR，尚無第三方量化採用數據）
 
 ### 2026-07
 

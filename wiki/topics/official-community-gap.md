@@ -26,15 +26,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 官方功能 vs 社群痛點缺口分析
 
-**狀態：** monitoring
+**狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-04
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **代表工具更新**（2026-10-04）
-> Offrun（跨 harness 統一面板）併入「想在一個地方操作好幾家 agent」，狀態不變（❌）；deja-vu、hippo-memory 併入「新開一個 session 它就忘光」；jev-router 併入「模型路由」，兩痛點狀態皆不變（🧪）。
+> **官方補了沒更新**（2026-10-30）
+> - **「跑出破壞性指令」列**：新增 v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`，拒絕寫入工作目錄外路徑，git 層與寫入路徑已補（✅ 不變）。
+> - **「安全邊界」更正範圍**：原「✅ 高度對應」改列 🧪 部分對應——執行層已補，外部內容信任邊界仍缺，見 [[topics/ai-agent-safety]]。
 
 ## 摘要
 
@@ -69,7 +70,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 別家 agent 的 AGENTS.md，它讀不讀 | ✅ | v2.1.277（2026-09-18）起原生讀 `AGENTS.md`；v2.1.281 起 Bedrock／Vertex／Foundry／LLM gateway／關閉遙測的 session 也讀得到 | 只剩預設順序這一項：有 `CLAUDE.md` 時預設只讀 `CLAUDE.md`，要兩者並讀在 `/config` 設 `claude-md-and-agents-md` ⟨G-08⟩ | 2026-10-24 |
 | 它需要你輸入時會不會叫你 | ✅ | 接上 Remote Control 可推手機通知、桌面閒置通知、`Notification` hook、`waitingFor` 可見性 | 社群補的是終端機標籤變色、實體燈號這類形式 ⟨G-03⟩ | 2026-10-24 |
 | 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-10-24 |
-| 它會不會跑出破壞性指令 | ✅ | auto mode 下破壞性 git 指令自動封鎖（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222） | git 層已完整；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | 2026-10-24 |
+| 它會不會跑出破壞性指令 | ✅ | auto mode 封鎖破壞性 git（v2.1.183）、Sandboxing、`hard_deny`、worktree 隔離（v2.1.222）、擋跨目錄寫入（v2.1.314） | git 層與寫入路徑已補；更廣的資源限制仍靠社群沙盒 ⟨G-04⟩ | 2026-10-30 |
 | Slack 裡要一個 AI 隊友 | ✅ | [[entities/claude-tag\|Claude Tag]]（2026-06-24，Slack 原生） | 這一列的社群前驅稀薄、官方主導色彩強，放在這裡只供對照 | 2026-10-24 |
 | 把 Linear 工單指派給 Claude Code 就觸發雲端 agent | ❌ | 無——僅 GitHub Issues 可指派觸發雲端工作流；截至 2026-09-24 官方文件未見 Linear 對應支援，issue 見 [[entities/claude-code]] | 社群自接官方 Linear MCP＋本地 Lanes MCP 橋接 issue-to-code；官方尚未排入路線圖，issue #12925 累積 146 讚 | 2026-10-24 |
 
@@ -155,9 +156,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 兩者互補，但 agent 監控需求官方仍未主動回應。
 
-### ✅ 高度對應：安全邊界
+### 🧪 部分對應：安全邊界（原列「✅ 高度對應」，2026-10-30 更正範圍）
 
-Claude Code Sandboxing（OS 層隔離）、`hard_deny`（不可覆蓋的提示層邊界）、Claude Security（公開 Beta）在 5/06–5/10 集中發布，與 CVE-2026-39861 沙箱逃逸漏洞（5/08）的時間高度吻合。社群安全工具（SmolVM、Trent、DataMoat）在此之後需求有所降溫。
+Claude Code Sandboxing（OS 層隔離）、`hard_deny`（不可覆蓋的提示層邊界）、Claude Security（公開 Beta）在 5/06–5/10 集中發布，與 CVE-2026-39861 沙箱逃逸漏洞（5/08）的時間高度吻合，解決的是**執行層**邊界（防誤操作、沙箱逃逸）。**外部內容信任邊界**（來源標記、套件名驗證、寫入確認——prompt injection、惡意 `.git` 等攻擊面）官方至今未推出對應機制，見 [[topics/ai-agent-safety#還沒有的]]；原「社群工具需求降溫」一句無一手出處，已移除。
 
 ### 🧪 部分對應：輸出品質驗證
 

@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-30
+**最後新聞更新：** 2026-10-30
 
-> **Agent 活動可視化再添一個終端機多工器**（2026-10-24）
-> - **Corgi**：agent／終端機多工器，統一管理多組 Claude Code、Codex、Pi session，逐 agent 活動 feed＋F1 跳至下一個未讀；HN 104 分（2 來源）。
+> **Agent 活動可視化再添一個桌面寵物**（2026-10-30）
+> - **HachimoDock**：桌面寵物小工具，依 Claude Code session 即時狀態切換思考中、打字中、耍雜技、睡著等動畫；517 星。
 
 ---
 
@@ -56,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-10
+
+#### YizhengWw/HachimoDock：桌面寵物即時反映 Claude Code session 狀態（2026-10-30）
+
+- **主線：** —
+- **核心模式：** 桌面寵物小工具，依 Claude Code session 即時狀態切換動畫——思考中、打字中、耍雜技、睡著等；GitHub Search 517 星。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office、agent-office、MioIsland、ccdeck、claude-share、Corgi 等）一個「桌面寵物」取向——既有做法多走遊戲化空間或多 session 儀表板，本則用擬人化寵物動畫取代文字終端輸出；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/YizhengWw/HachimoDock)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Show HN: Corgi——agent／終端機多工器，統一管理多組 Claude Code／Codex／Pi session 並附活動 feed（2026-10-24）
 

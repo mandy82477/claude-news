@@ -32,14 +32,12 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
 **最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-29
+**最後新聞更新：** 2026-10-30
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-10-29）
-> - **CLAUDE.md／AGENTS.md 非安全邊界**：GitHub Issue #53223 稱指令遵從性在架構上未被強制執行，31 留言、10+ 份獨立回報。
-> - **email 外洩新路徑**：Hacker News／GitHub Issue #81138／Reddit 三來源稱 Claude Code 把使用者 email 加入 prompt，模型再分享給外部網站。
-> - **瀏覽器元件遭攻破（僅標題）**：Help Net Security 稱研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件，細節未載。
+> **最新動態**（2026-10-30）
+> Cursor 市集版 Claude Code 延伸套件 2.1.313 遭竄改植入 SSH 後門，Cursor 證實最多 5,000 人受影響，非 Anthropic 開發；裝過的人應立即檢查 SSH 金鑰。
 
 ---
 
@@ -58,7 +56,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
-- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買。
+- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；透過 Cursor 市集裝過 Claude Code 延伸套件的人立即查有無被植入的 SSH 金鑰。
 
 ---
 
@@ -67,6 +65,17 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-10
+
+#### Cursor 市集代管的 Claude Code VS Code 延伸套件 2.1.313 版遭惡意竄改植入 SSH 後門，官方證實最多 5,000 人受影響（2026-10-30 新增，供應鏈攻擊，多源同報）
+
+- **揭露來源**：資安研究者 GossiTheDog（[Mastodon](https://cyberplace.social/@GossiTheDog/117528831681803563)，HN 644 分）、[OpenSourceMalware](https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor)（HN 19 分）、[Phorion](https://phorion.io/blog/offical-claude-code-vsx-compromise/)（HN 349 分）各自獨立搶先公開；[Cursor 官方安全公告](https://cursor.com/blog/claude-code-extension-security-notice) 證實；Reuters、The Register 等媒體跟進
+- **核心主張**：Cursor 證實其 VS Code 相容套件市集代管的「Claude Code」延伸套件 2.1.313 版遭惡意竄改，會收集受害機器主機與使用者資訊並植入攻擊者的 SSH 金鑰取得持續遠端存取；竄改版本於太平洋時間 10-30 當日 2:27–13:35 流通，Cursor 表示最多 5,000 名使用者受影響、會逐一通知
+- **關鍵限定**：遭竄改的是 Cursor 市集自行代管的套件副本，不是 Open VSX 或官方 VS Code Marketplace 上架版本；此竄改版本並非 Anthropic 開發（Cursor 公告、The Register〈Anthropic: that... couldn't be us〉同口徑轉述）
+- **技術細節**：Phorion、OpenSourceMalware 分析指出後門嘗試在 macOS、Linux、Windows 三平台都建立 SSH 持久化機制；OpenSourceMalware 取得 Cursor 直接證實竄改源頭
+- **你能先做什麼**：透過 Cursor 市集安裝過 Claude Code 延伸套件的人應立即檢查機器、更新到乾淨版本，並排查是否已被植入未知的 SSH 金鑰
+- **與既有事件的關係**：攻擊面是 Cursor 自家市集的套件副本遭竄改，與母頁「現在還擋不住的攻擊」既有「套件供應鏈：受感染 npm 套件」列（攻擊載體是 npm 套件）屬不同管道，暫不併列
+- **可信度評估**：官方一手公告（Cursor）＋Reuters 等主流媒體＋三位獨立資安研究者各自佐證同一手法，可信度高；CVE 編號、完整受害清單與是否已有實際濫用案例均未見報導
+- ❓ **待查證**（標 2026-10-30｜查 2.1.313、SSH backdoor｜複 2026-11-13）｜**CVE 編號與實際濫用規模**：受影響使用者是否已遭實際存取濫用、攻擊者身分與動機均未見報導
 
 #### Hacker News／GitHub Issue #81138／Reddit：Claude Code 將使用者 email 加入 prompt，模型再把它分享給外部網站（2026-10-29 新增，跨三來源）
 
