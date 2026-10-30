@@ -1,14 +1,13 @@
 {
-  "checked_at": "2026-10-23",
-  "total_unique_links": 1660,
+  "checked_at": "2026-10-30",
+  "total_unique_links": 1750,
   "mode": "incremental",
-  "checked": 418,
+  "checked": 368,
   "ok_urls": [
     "https://aaronfulkerson.com/2026/04/12/karpathys-pattern-for-an-llm-wiki-in-production/",
     "https://agent-watch.dev/",
     "https://agent.reviews/",
     "https://agents.md/",
-    "https://agentset.ai/embeddings",
     "https://aider.chat/docs/leaderboards/",
     "https://airlock.sorrel.systems",
     "https://aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
@@ -17,12 +16,12 @@
     "https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models",
     "https://alexkras.com/focus-is-the-main-feature-why-i-miss-the-old-claude-code/",
     "https://analyticsindiamag.com/ai-features/youre-drowning-claude-code-in-instructions-you-cant-explain-or-remember",
+    "https://anthropic.com/engineering/april-23-postmortem",
     "https://anthropic.com/news/barclays-scales-claude",
     "https://antigravity.google/docs/plans/",
     "https://antoine.fi/mri-analysis-using-claude-code-opus",
     "https://api-docs.deepseek.com/quick_start/pricing/",
     "https://arena.ai/leaderboard",
-    "https://arena.ai/leaderboard/search",
     "https://arena.ai/leaderboard/text",
     "https://armada.mgcrea.io/",
     "https://artificialanalysis.ai/",
@@ -44,6 +43,7 @@
     "https://asyncdot.com/blog/chief-of-staff-pattern-orchestrating-claude-code-sessions/",
     "https://aws.amazon.com/about-aws/whats-new/2025/05/amazon-bedrock-models-fedramp-high-dod-il-4-5-govcloud/",
     "https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-sonnet-bedrock-expanded-context-window/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/",
     "https://aws.amazon.com/bedrock/pricing/",
     "https://aws.amazon.com/blogs/",
     "https://aws.amazon.com/blogs/machine-learning/supercharge-regulated-workloads-with-claude-code-and-amazon-bedrock/",
@@ -86,6 +86,7 @@
     "https://claude.com/product/claude-science",
     "https://claude.com/product/claude-security",
     "https://claude.com/product/tag",
+    "https://claude.com/programs/startups",
     "https://claude.com/resources/articles/dashboards-and-motion",
     "https://claude.com/solutions/legal",
     "https://claude.com/solutions/teachers",
@@ -148,12 +149,16 @@
     "https://code.claude.com/docs/en/worktrees",
     "https://code.claude.com/docs/llms.txt",
     "https://comptroller.nyc.gov/reports/letter-to-anthropic-re-planned-initial-public-offering/",
+    "https://corgi.computer/",
     "https://cruxxxxxx.github.io/gdx-3ds/postmortem/index.html",
     "https://cryptobriefing.com/jpmorgan-claude-code-spending-limits/",
     "https://cryptobriefing.com/sanders-urges-openai-anthropic-meta-to-pause-ai-development-amid-regulatory-push/",
     "https://crystl.dev/guides/tmux-for-ai-agents/",
+    "https://cursor.com/blog/claude-code-extension-security-notice",
+    "https://cursor.com/docs/models/glm-5-3",
     "https://cybernews.com/ai-news/openai-anthropic-wave-of-security-incidents/",
     "https://cybernews.com/security/claude-code-attack-prompt-injection-mozilla/",
+    "https://cyberplace.social/@GossiTheDog/117528831681803563",
     "https://cybersecuritynews.com/anthropic-claude-ai-outage/",
     "https://cybersecuritynews.com/claude-code-helps-ransomware-operator/",
     "https://cybersecuritynews.com/claude-code-rce-flaw/",
@@ -171,6 +176,7 @@
     "https://dev.to/aws-builders/how-my-first-claude-code-on-aws-bedrock-experiment-cost-me-843-in-just-one-day-1835",
     "https://dev.to/axrisi/claude-code-and-linus-torvalds-the-linux-patch-tradeoffs-299j",
     "https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d",
+    "https://dev.to/bargan/the-scarce-resource-is-not-tokens-it-is-my-attention-why-i-built-ccdeck-4pik",
     "https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4",
     "https://dev.to/bokuwalily/7-of-my-8-claude-code-agents-had-zero-calls-in-30-days-finding-dead-agents-automatically-27jf",
     "https://dev.to/clawlabs/how-to-run-claude-code-as-an-autonomous-agent-on-a-mac-mini-3ld1",
@@ -203,6 +209,7 @@
     "https://dev.to/kanfu-panda/want-ai-to-work-in-parallel-first-give-each-one-its-own-workspace-40ch",
     "https://dev.to/kapoormanish/stop-clicking-approve-how-to-customize-claude-code-cli-permissions-pnh",
     "https://dev.to/kenimo49/i-let-claude-code-run-a-month-of-my-business-books-it-reconciled-200-transactions-and-513d",
+    "https://dev.to/kevinhall/mcp-tool-cost-20-job-actors-on-apify-21k-to-327k-tokens-each-1hm4",
     "https://dev.to/kunfieldnotes/same-local-model-3-coding-agents-pi-1212-codex-1212-claude-code-712-on-a-6gb-gpu-2f9m",
     "https://dev.to/locoprowrestling/my-ai-assistant-deleted-my-working-files-because-i-said-i-cant-tell-which-ones-are-current-22b3",
     "https://dev.to/masondelan/your-agents-memory-needs-the-word-no-and-a-way-to-prove-nobody-edited-it-2kg8",
@@ -238,7 +245,6 @@
     "https://ecosistemastartup.com/matthew-green-advierte-el-sandboxing-no-frena-a-los-agentes-ia/",
     "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
     "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
-    "https://epoch.ai/benchmarks/metr-time-horizons",
     "https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank",
     "https://eu.36kr.com/en/p/3867737936548872",
     "https://eu.36kr.com/en/p/3876461674917892",
@@ -277,17 +283,21 @@
     "https://fourweekmba.com/ai-google-gemini-35-pro-delayed-coding-gap/",
     "https://gadgetreview.com/openais-kill-switch-failed-tens-of-thousands-of-incidents-followed",
     "https://getunblocked.com/blog/moving-agent-loops-from-anthropic-to-glm/",
+    "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
     "https://github.com/0xhimanshu/governor",
+    "https://github.com/410979729/scope-recall-hermes",
     "https://github.com/AGGIB/Stroq",
     "https://github.com/AMAP-ML/LongHorizon-Harness",
     "https://github.com/AThevon/TokenEater",
     "https://github.com/Abilityai/trinity",
+    "https://github.com/AeternaLabsHQ/pullmd",
     "https://github.com/AgentSystemLabs/agent-office",
     "https://github.com/Agents365-ai/drawio-skill",
     "https://github.com/AgriciDaniel/claude-obsidian",
     "https://github.com/AlmanacCode/codealmanac/",
     "https://github.com/Anionex/agent-vision-toolkit",
     "https://github.com/AnkleBreaker-Studio/unity-mcp-server",
+    "https://github.com/Ansub/tv-detox",
     "https://github.com/ApodexAI/FrontierAgent",
     "https://github.com/ArtemXTech/personal-os-skills",
     "https://github.com/Aryanutkarsh/SeeCode",
@@ -300,10 +310,11 @@
     "https://github.com/ComposioHQ/awesome-claude-skills",
     "https://github.com/Coolver/home-assistant-vibecode-agent",
     "https://github.com/DayuanJiang/next-ai-draw-io",
+    "https://github.com/Devin-AXIS/iPolloWork",
     "https://github.com/Egonex-AI/Understand-Anything",
     "https://github.com/EliaAlberti/cpr-compress-preserve-resume",
     "https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin",
-    "https://github.com/FalkorDB/FalkorDB",
+    "https://github.com/EricTechPro/super-board",
     "https://github.com/Fission-AI/OpenSpec",
     "https://github.com/Folkbench/folkbench",
     "https://github.com/GTKottman/mortiflix-oss",
@@ -323,17 +334,19 @@
     "https://github.com/Louis-CFM/coucou",
     "https://github.com/LuisPCFialho/claude-fuel-gauge",
     "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
+    "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill",
     "https://github.com/MemTensor/memmy-agent",
     "https://github.com/Mibayy/token-savior",
     "https://github.com/MioMioOS/MioIsland",
     "https://github.com/Muvon/octocode",
     "https://github.com/Nanako0129/coralline",
     "https://github.com/Nanako0129/sepia",
+    "https://github.com/Nanako0129/syrtis",
     "https://github.com/NanmiCoder/cc-haha",
+    "https://github.com/NanmiCoder/dsh-agent-teams",
     "https://github.com/NanoNets/Graft",
     "https://github.com/Oldcircle/geo-sleuth",
     "https://github.com/OpenMinis/iCTRL",
-    "https://github.com/OrchestratorInc/agent-orchestrator",
     "https://github.com/OtoDock/oto-dock",
     "https://github.com/Paradigm-Study/claude-share",
     "https://github.com/Paritok-official/paritok-4b-v1",
@@ -358,11 +371,15 @@
     "https://github.com/Vincentwei1021/mg-styles-15",
     "https://github.com/Vincentwei1021/video-shotcraft",
     "https://github.com/Vincentwei1021/video-talkcraft",
+    "https://github.com/VoltAgent/awesome-claude-code-subagents",
+    "https://github.com/VoltAgent/awesome-claude-code-subagents/issues/300",
     "https://github.com/WEIFENG2333/phistory",
     "https://github.com/WorldFlowAI/everything-claude-code",
     "https://github.com/Yeachan-Heo/oh-my-codex",
+    "https://github.com/YizhengWw/HachimoDock",
     "https://github.com/Yuan1z0825/nature-skills",
     "https://github.com/ZSeven-W/openpencil",
+    "https://github.com/Zen4-bit/Proxima",
     "https://github.com/aannoo/hcom",
     "https://github.com/abcwyc/pi-agent-desktop",
     "https://github.com/activeing123/mcptoon",
@@ -373,6 +390,7 @@
     "https://github.com/agentpit-io/hunter-community",
     "https://github.com/agenvoy/Agenvoy",
     "https://github.com/agustind/dbjoy",
+    "https://github.com/ai-job-search-dev/ai-job-search",
     "https://github.com/alchaincyf/huashu-chrome",
     "https://github.com/alchaincyf/huashu-doubao-search",
     "https://github.com/alexgreensh/attention-span",
@@ -405,6 +423,8 @@
     "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.8.0",
     "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.9.0",
     "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0",
+    "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.12",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.13",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.15",
@@ -412,6 +432,7 @@
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.19",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.6",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v0.0.7",
+    "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.1",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.112.1",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.112.3",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v0.112.4",
@@ -435,6 +456,8 @@
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.21.0",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v0.22.0",
     "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0",
+    "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0",
+    "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
     "https://github.com/anthropics/claude-code/issues/11455",
     "https://github.com/anthropics/claude-code/issues/12506",
     "https://github.com/anthropics/claude-code/issues/13354",
@@ -461,13 +484,13 @@
     "https://github.com/anthropics/claude-code/issues/47023",
     "https://github.com/anthropics/claude-code/issues/49747",
     "https://github.com/anthropics/claude-code/issues/5088",
+    "https://github.com/anthropics/claude-code/issues/53085",
     "https://github.com/anthropics/claude-code/issues/53262",
     "https://github.com/anthropics/claude-code/issues/55266",
     "https://github.com/anthropics/claude-code/issues/55982",
+    "https://github.com/anthropics/claude-code/issues/56281",
     "https://github.com/anthropics/claude-code/issues/56913",
     "https://github.com/anthropics/claude-code/issues/60705",
-    "https://github.com/anthropics/claude-code/issues/61734",
-    "https://github.com/anthropics/claude-code/issues/61869",
     "https://github.com/anthropics/claude-code/issues/6235",
     "https://github.com/anthropics/claude-code/issues/62476",
     "https://github.com/anthropics/claude-code/issues/65687",
@@ -481,6 +504,7 @@
     "https://github.com/anthropics/claude-code/issues/79337",
     "https://github.com/anthropics/claude-code/issues/79773",
     "https://github.com/anthropics/claude-code/issues/80988",
+    "https://github.com/anthropics/claude-code/issues/81138",
     "https://github.com/anthropics/claude-code/issues/8327",
     "https://github.com/anthropics/claude-code/issues/83510",
     "https://github.com/anthropics/claude-code/issues/84352",
@@ -561,6 +585,11 @@
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.304",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.306",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
     "https://github.com/anthropics/cryptography-research-demo",
     "https://github.com/anthropics/knowledge-work-plugins",
     "https://github.com/anthropics/life-sciences",
@@ -574,7 +603,6 @@
     "https://github.com/automazeio/ccpm",
     "https://github.com/avibe-bot/avibe",
     "https://github.com/awdr74100/figwright",
-    "https://github.com/awslabs/aidlc-workflows",
     "https://github.com/ayghri/i-have-adhd",
     "https://github.com/badseal/ssh-skill",
     "https://github.com/bangtutorial/bang-motion",
@@ -593,6 +621,7 @@
     "https://github.com/claesbackman/AI-research-feedback",
     "https://github.com/coco-research/coco",
     "https://github.com/codesstar/loci",
+    "https://github.com/codeswithroh/tastemaker",
     "https://github.com/colbymchenry/codegraph",
     "https://github.com/danielhagever/agent-guardrails-kit",
     "https://github.com/danyuchn/asd-ste100-skill",
@@ -638,6 +667,7 @@
     "https://github.com/internet-court/internet-court-skill",
     "https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp",
     "https://github.com/irinabuht12-oss/marketing-skills",
+    "https://github.com/itechmeat/open-second-brain",
     "https://github.com/jatechan/ai-data-extractor",
     "https://github.com/jazzenchen/VibeAround",
     "https://github.com/jens-duttke/usage-monitor-for-claude",
@@ -646,6 +676,8 @@
     "https://github.com/joeseesun/opus-video-prompts",
     "https://github.com/josefchen/muster",
     "https://github.com/kageroumado/adrafinil",
+    "https://github.com/kajisho5/ffmpeg-skill",
+    "https://github.com/kanaworksai-hue/audio-studio-mcp",
     "https://github.com/karanb192/awesome-claude-code-mods",
     "https://github.com/karanb192/claude-code-hooks",
     "https://github.com/kelviq/tare",
@@ -656,6 +688,7 @@
     "https://github.com/leopard627/fire-your-seo-agency",
     "https://github.com/longsurf-ai/openchart",
     "https://github.com/lowenbjer/claude-terse",
+    "https://github.com/lst97/claude-code-sub-agents",
     "https://github.com/magnitudedev/magnitude",
     "https://github.com/markusbug/Orchestrator",
     "https://github.com/marvkr/better-design",
@@ -676,6 +709,7 @@
     "https://github.com/naw103/foremerge",
     "https://github.com/ness-dev/ness",
     "https://github.com/nex-crm/wuphf",
+    "https://github.com/nick-vels/skills",
     "https://github.com/nirholas/XActions",
     "https://github.com/nykooi1/vibe-wise",
     "https://github.com/obra/superpowers",
@@ -696,6 +730,7 @@
     "https://github.com/proliferate-ai/proliferate",
     "https://github.com/qunqin24/Pulse",
     "https://github.com/raine/claude-history",
+    "https://github.com/rbartoli/agent-usage-guard",
     "https://github.com/rehan-remade/universal-modder",
     "https://github.com/reladraw/reladraw",
     "https://github.com/respeak-io/episko",
@@ -713,8 +748,10 @@
     "https://github.com/samyost1/3dicon",
     "https://github.com/shadcn-ui/lint",
     "https://github.com/shanirsh/prismodev",
+    "https://github.com/sharptoolbox/ontology-driven-dev",
     "https://github.com/shlokkhemani/rabbithole",
     "https://github.com/silasxbt/anti-api",
+    "https://github.com/slee-persis/GVS5H",
     "https://github.com/snflkd/fluent-korean",
     "https://github.com/snyk/agent-scan",
     "https://github.com/soumatheusgomes/vibe-coding-toolkit",
@@ -723,6 +760,7 @@
     "https://github.com/stablyai/orca",
     "https://github.com/steipete/agent-rules",
     "https://github.com/stormzhang/token-tracker",
+    "https://github.com/sudoprivacy/sudocode",
     "https://github.com/syncable-dev/memtrace-public",
     "https://github.com/teamchong/pxpipe",
     "https://github.com/techjarves/Mobile-Harness",
@@ -738,17 +776,21 @@
     "https://github.com/vectara/hallucination-leaderboard",
     "https://github.com/vinzdg/codenotch",
     "https://github.com/vnmoorthy/groundtruth",
+    "https://github.com/voidcraft-dev/memory-forge-rs",
     "https://github.com/vshulcz/deja-vu",
     "https://github.com/wanderingstan/vibeconf-app",
     "https://github.com/wanghuan9/skilldock",
+    "https://github.com/wangjohn/agent-archive",
     "https://github.com/wanshuiyin/HERO-Anti-OverDefense",
     "https://github.com/wataru-maeda/react-native-boilerplate",
     "https://github.com/wavever/CCLimitPing",
     "https://github.com/waybarrios/opencode-power-pack",
     "https://github.com/weave-os/router",
     "https://github.com/wheresryan22/anatomy",
+    "https://github.com/witchan/ios-mcp",
     "https://github.com/with-pebbly/aseprite-ai-artist",
     "https://github.com/workweave/router",
+    "https://github.com/wshobson/agents",
     "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
     "https://github.com/yacuo/check-cc",
     "https://github.com/yetone/cumora",
@@ -768,12 +810,12 @@
     "https://horizon3.ai/attack-research/vulnerabilities/cve-2026-42271-chained-with-cve-2026-48710/",
     "https://howborisusesclaudecode.com",
     "https://huggingface.co/blog/agent-intrusion-technical-timeline",
-    "https://huggingface.co/spaces/mteb/leaderboard",
     "https://igupta.in/blog/why-i-am-no-longer-letting-claude-code-add-itself-as-coauthor/",
     "https://inferencex.semianalysis.com/profit-estimator-per-gigawatt",
     "https://innerloop.works/breadcrumb",
     "https://instantvideos.org/",
     "https://jonathannen.com/anthropic-safety-too-narrow/",
+    "https://kfgo.com/2026/10/20/anthropic-recorded-net-loss-of-over-80-billion-in-first-half-of-this-year-wsj-reports/",
     "https://kiro.dev/",
     "https://kix.codes/anthropic-banned-me-for-suspicious-signals/",
     "https://korben.info/en/clean-github-repo-hijack-claude-code.html",
@@ -789,7 +831,6 @@
     "https://llm-stats.com/benchmarks/omnidocbench-1.5",
     "https://llm-stats.com/benchmarks/swe-bench-pro",
     "https://llm-stats.com/benchmarks/swe-bench-verified",
-    "https://llm-stats.com/benchmarks/terminal-bench-2",
     "https://lmarena.ai/",
     "https://lucid.earthpilot.ai",
     "https://lucumr.pocoo.org/2026/10/6/codemode/",
@@ -799,7 +840,6 @@
     "https://mashable.com/tech/claude-mythos-5-reinstated-by-us-government",
     "https://mathstodon.xyz/@tao/112364045570423403",
     "https://maxxwell.dev/",
-    "https://metr.org/",
     "https://metr.org/time-horizons/",
     "https://micahflee.com/just-say-no-to-openai-and-anthropic/",
     "https://mikaweiss6.gumroad.com/l/limitbar",
@@ -817,10 +857,12 @@
     "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQcG1rMmpFWEtFRmJaeWcyVUxzbnE1Wlpjd19hTURUU2dmX0swTmtCNTNzbEVpS0RsR1lSeV9YX0dyNF81by12M1Q1ZEtnejZ0NzhSWXFxQndxNzV1bzlhY256ZHFMd3BBZlVyc09sZjBldGx0OTR2WU5GVEo5ME44VkstcTgybE1mZmwweVBRekFTNGctQWdTU1dhSzVoZWVWR004WEVqcDY5Smk1cjBSZjVQUHRKZG1DaklmZklybThETW1qcFpJUmlfMXdDX2FJZVZqeE5hTVE1T0YzQXVBUWx5ZldlXzBIVHIycnRlRDJlcFJyWTBFdnpNUUNJbVNuM18xbVhLelhXLVloQjZyU3FVZjEtcWQ0LWpvcGE5b09iOXhRYi04SmxIQWVqMHBNZ1c2dVJZbVNMSmlVdEIwX0tScWQta2FvYUhob1pQYWlhLXIwc3ZGQ3p3?oc=5",
     "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQZ0czQzBvbWlTc0pQUHEteEowRDM3UE1NVEg0LU4ta3F3ZG5jYjZuc2FqRDNtS0VRNXlXWTNXS1VudE0xVEpyamFrSWpjMGFidlZ0YVp5WVNVV3lndS1hLVdCUnNHMGxXZUJUU25kcmE2aWJieGt0ZldjcXpaaHJQRjhoRTBEeW9uS3Jralk2Wl8zTEhTaGt2ZGRjZ3FvaTZlZHpyRDd6Skw0cTRmLUhJMkZZYloycXhkNmxQdFRFUGc4UFU3TzZMS2JRbFFnaXlkVXpBUUdLWTlQcUU?oc=5",
     "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNQ004TDgwUFlDTU9VcE12Rl9IZDRVR0VNREdxdWQ0dTNnRlpQbmNVa25uZGhDN2FNTklfVENRZFN6cmpFWU1jdEwtV2VMcDV2Y2lCMDFLbXQwSThrRHRQaTdjZDEzQm03Rnhhc1BybEt2VEVUT0t2UUZmZ1MyMEVEX09ZV01UMXhxNFVldnBacWlGd3ZwUXlRaklsb0ttNlFnRm9zbExWM0Z5Qld4TnV2OHduaDZ4NWVsR3VONDZ0eDhXT25MejRuQk1oTF84RVItT0JvOTlHazhBdFlUeGRz",
+    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNSHoydy1SNUllNnI1aENzUU8xOVFYeU9fN1ZlNDF4RHpGTTRZMEFzMEFFTWFEcGNkZzRXTW0zczdSbUtYY1pwQWUxbkptVkZyNURfcXdCZHd3WWI2dnRKWW9oUXl3T1RncFlQaXQ3TXBHNkJmTWVrcHd1SEtpLWlMMFZ3VUxjMTJmSEJLaGF3UDIyMHVYdW1oRjVhWVp2UTBPZjVPYk1uM3pCQ1RIV1g0dFNUUUlNdnJKaDlzWVlrTlFUdTdfZEJERGhpNXk3cGVEVUFiakl1MUFvTHNYMV9KdjNn?oc=5",
     "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5",
     "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQQnF4R0NXdkRxQXIyVVVnQlNVVmg5OElaV1Mzd1ZkV25UaGxibWNNUGhfdm1keUlCVEVyMW9YMGNvOUZGbF9OaWxIY2xVMjhpSWlISVpjdWZzeUdMVFBJX05BdzlJTFFCU1B3YjZYaXM0S2lIaW1xcExwXzY0UnRwU3dYOGtNQi11aUoyb3JaV3FOZ3RTTDVJZnFQTndQZ0lWQUdKMDBQeU5QYUtFMDF5aEdhVS0wMHMzUmRldUJXRWFEWFpDLURaTzU0RHhUYnNGbDV0Q0taNFEzR2hNMHY5bDliajlzNTlPYVBpdk1jQTQ?oc=5",
     "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5",
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE83Q09fcFRRbW1uWFFxUDUweXRxT0ZGbEhoZTc0dDRKS1hzdjFKTVFRUGw0VHNsa1V2c2pjTm1jZGdwTjVuUG5vcUZNbUlZWFNZeEo4RzAwWkhVeEo3VGxQUlhZZjB5UdIBa0FVX3lxTE5paG5zeElzZWxHMGFLR2JMVTh3NUxoSzNweXN1RDVycEdzVEp3TlFvanc5UnI0S1hXZGdVQm1ybDFoeGlwQ0dQa3pOY2dnWGxFWGZMUTJiZWo5akk1NGhPT253ZHc1d3NmODNJ?oc=5",
     "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqeDR6T3k4dF9HZjA5aFJPc1NHUXpvM1J1ZnA2UDgtRkhfbXdfRXJFbDVWRXpvaTFwNVBabzY3VU51ZmtSNm9JQjNtcXlIak9id20yeGxDc1NwM2EtTmNGZ3NkV2dneHds?oc=5",
     "https://news.google.com/rss/articles/CBMicEFVX3lxTE05ZjV3RXpSTW5vQTFvNWRwUkE5N01QcTN3MXNuUXV3WE1WeTdxM3hXRE5oUDVyWkdlLU1rUXdEU1dFWHZHUWFrVXpzZmUtNjB2dlVVNndJWXNFSGJsUW9tZTIzbGNrdGdGT2M3Q1V1OUE?oc=5",
     "https://news.google.com/rss/articles/CBMicEFVX3lxTE4yQUdqNE15M09tanI3bHRPY1pLaUl0SERqMzVzR2JkRDNPZHE5V09GTllTbU9Hc0JzUVUyUkNmaVJMZV82SE9uaGRRdEV0d0RXcXBNVFU4Tzd6ZVhtVkJRdzlvcFBjMTBPeDFEazRYZWs?oc=5",
@@ -840,6 +882,7 @@
     "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa01meU5ZWVpKYVJodDlpcExfZUdQbnBqVEc1UUl5TGg2YnFxT05yd0I5RU9vd2ltcjhMY1VCeVBsTGluNjJ3X2hyNkJEZFlUbHI3SmNsdWpGbzA2NmNEdTg4UjMwdEo2UzdsUHg5WUl0S085cXVMN1lwN1Q0UzBWdQ?oc=5",
     "https://news.google.com/rss/articles/CBMigAFBVV95cUxPM2d1QUlzZ3FaU3BNX3Z1aEI3V0EtUnpxN2tHZHZhMjNCSFdPdmliZnQ5end4U09MRkZCLVFmMjlOVGhyelpvWUdUaG92a1RvSkdFaW1CZWI5MW9VeHBDQ0RPQ2VXYmE2dGpTTEFyS2VITEtJMXBDWW1hUEtTLWRkUA?oc=5",
     "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYTJiUlZEa2N3S21hQnVYVjBXeVEyN2ZicERzMWNpUTFFNEFYcGNrSzZjNDh6ZTFqdW9vZDkzbzg1YjhBV1FwVnROQlZNalJjTlFXZXRIdFJRQW81LUV0V1ktb05sZmw0eTVZdUl5aEFDT204T1lMeGRQNjFVY2QwYQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5",
     "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWkVkQU8xS2pPWVFZS2RMemJCQ0JFVnZyZFBia28xMlNlWWNPVFB2eHhxdVhBTWJJRFFmaDlOUU9IcGJUWDlBU0phQUhUUEFGRG51NkttME9tMTl0X1dsV2piR2lsQTZOeURZQV8yRExlTE93cFF2U1hYbUFTZGNRUTIxcw?oc=5",
     "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbXRYQjdhSnU4R2ZRMjZFVXJXM0ZfS3dJdTN3TnVDWGhHX0hCb2Q1QlZjQVZWMWtJbXJXV0M4aFZkaTBwcUhDN3BJanNSaE90QmNaanlhNGw5QVE4M25vR21GV0VYWldhbXpqc1NIYkl5aEpudnQ3b1RmY3BxTFJUVXU4WQ?oc=5",
     "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdl9CNzFpU1IyZjY1T2hTbFpCZUJpbFFzRVlIeFJxdFJRQVlYVkhmaEpfUDNvOGhXbkl3VFpoaGU1Q3FJaWdBTnBlSjVULUlqU0NwMGZZVDVkdmJsSVlKajVKbDVjR3VxUnpuaW14WHpCd1Nsb2ZxQnJkXzRzV2szWDNTWjdkdw?oc=5",
@@ -860,6 +903,7 @@
     "https://news.google.com/rss/articles/CBMikgFBVV95cUxOejZuVHE3NHBKYnY4N0VFS0U3M3JXd3pQeEJBemUyQ21BRTF6U3Vvc2JWVXdQQkdlUDVPYnN0OUZJRnpUNVh4NkhTUTRNT3NyTlhwaTJ1YmpBcm1PSUF5MUZhNjU0SnlLZ3VwdWR4X1MzalF1UDRjcWszR0daUmVtV01ibDQ1MWxBaVFfTWhJWmVpZ9IBlwFBVV95cUxPSmNOa05qbkpGTjB1YkFBZE5rNEZaMFcteW81SlRldGFvckpHRE0tdVI3RHlEa1FSWDVFSnRNbnNLSTBjQlRJSWpJZTZOSEhwU09lb1paM051X2k3ZzcyWXNPYTRrai1tRHdFSndVbS15MUlVWXNFQWtFZGNwM0ZIUVcxTmdPNUVWY2FrS0RWajJucGpDSk9v?oc=5",
     "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRFhacjJyXzZ6ZzNUdkptUDkwRHFyV2pxSXhOc2JucmxQdDJFQ09WZ05DamcxS1NvNUx1b0cyR05DM1U3SzgwdXpvQlhaajl2dHNlVTVlYml2LVhLVENGaWtDbkdMWjFNVkdPMDRTWWFubXJsYkFZQ19peDBLMUI2cXF4cU1hN2lrU2FuZi1wSTRndFU?oc=5",
     "https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5",
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQWdjb3ROVHcwOVVEQ2RXd2U4dTVjYTN4TUNyTlA1U0pXTDRXNTBaWFhWNmYyaWJiMHdMWXJFZHVGam5MMjR4TVRSNUV0c3hHV1JVb2JHTzJYYzNqZ0ZFY1ppdi1RRUU1ZUJ3SjJ4WmZkYlNXSWhBWEU1eEl4X2E3VFhlaVZfQmpmNTFGQW1YRkowQlNlakE?oc=5",
     "https://news.google.com/rss/articles/CBMilwFBVV95cUxQc3VGQXhIUWNkSElXb2swMFRjVlFscUE1ZTNuTXlwNjdTVGlVNmcyN0dMNk05NnJKdjZkeXpZa2dWdHkwYzRIdEh1LUFDelo5UTNPVjdWQm9lQmxRSTV3N0dWUUdsd3Y5Wk5tS1dnSEh3VTVwd3VlY0s5Mnk2VEVBX2EwOWpRbG9BOHQyVjNYWFZGd2tfYXlR?oc=5",
     "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHF1YnFCRW55ek5WeFpCSkgtWkdOcFBrM3c5dVhBd0xXSFY4VngwNHpLMzcwWTZmOUVzUXF3Q1dDT2xtVnNwVm5nN01yc1E2TGlUR2JRSnhtalFKYjJhUjl1bGk1OWRKZ1FHb0hETGxrcHJKaFhFTHdaYzZQTE9KNk5xc2w2V2k5d3p1WHhfUWJtT0ZmUmlvQQ?oc=5",
     "https://news.google.com/rss/articles/CBMimAFBVV95cUxOX1FTbUlTeHZFbVppZVRkYUtlXzZGVDNfbFFmU2pqbG1Tai1Ra0g3cTItaVMyX0pnaktabVduWWFFTDhsZFhuZ0hOMUkxamFtM2RibnZtWThuRlVJcGxuVkRVSk1COHJxRkowMVl5TEVnOVdXNUtrZk5taXJ6NllpeDBfWE9oOGk2YnFWSGFXZ2FoNWxuRlVXag?oc=5",
@@ -868,6 +912,7 @@
     "https://news.google.com/rss/articles/CBMingFBVV95cUxOeEZlYzhQcGFQX3V2N3U1T1doZmVIdkhvQ3plX3ZVRFdwQU5faGtWZzVEeVhmMVdGU2F3c1BLcFFLVnZHd0RnNE5vQkVYSFg5V2lQTm5hSEY3a25ZM3AweWJ5VHhFeHdfRUt0RTVSNXdXa0NEZTBJYjVoRjJlWml1aC1PZUhOLUxQS09nUWF3R0kzX2FCRkdsQ1AzOW1XQQ?oc=5",
     "https://news.google.com/rss/articles/CBMingFBVV95cUxQcktnOVJUTlRkVG53NHl6ZlR4RFhTekx1ZlQ4cmRRZVROMG5vZzZNR0cwandpVlhfM3MzQnhNTEZDX0pQR1dfOVF2SnhJcmkwYWtaZXJGZF9LVlBKQ1cxRHdLeHFuZzlBR2FpT3JEb05QUTJGQ3JUQzlYeGlrRlJrQkNrdzFMR1F3WThfdW5wb1RwUkI4a2d0a2RWSWxKZw?oc=5",
     "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUExpODBocm5KMzF1WjlIREJrZEFFWG9KZVVqQVpZeVhBQndwbm9xZ19VQm5CODNfc2xvd0hfd18weDNON2pKV3JWOGQ0bEd5X2VMMzdqaXlfTzZnX1FSa3NERWxNa0ctWkx4YVctMGZKUDlkVUFrU0hMUjVDU1VKb0lkazlrckZXUFB6OVpOWGxYOVpqODJqY25qZlZYNDA?oc=5",
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxOY0piMlhGTkx5akpMdTVnZlM0VVEtVEpBTWlUZURFWkdZT0F0THo4WTVzSEhyRG5mc3VaeFRFanJDaWhRdzFwMDR6MUpYdHF4ZHVXVktRN2UxN256YkU1S0s2XzN5UzdhOXJqSTN5S2o1c1pNbHNVZGMxUjA0ZjdwYTBaZ2YyYnF2ZGF5X3VmbC1ydnp3M3JFdWhPTUxzamM?oc=5",
     "https://news.google.com/rss/articles/CBMinwFBVV95cUxQX2RvVnVRbGpVcnoyNXRpMHNvQ0JZUHhSYTlIOWMxcnFjS0ZfSE9LclJhSEZWOHFOazNOa0FwekpZQXVDeFN2R2p1dE42U3k5SXFNRUhBR2NRWTlpOXYzN1oteUg1U1pPWmtmaDlhU2syOFVEblRnZWlEY2FJRUZuR2lscWhOMnc2dG1TZGNMM25TUW5fVHIzTC13d25WQ28?oc=5",
     "https://news.google.com/rss/articles/CBMioAFBVV95cUxObGljb1R4TVhDaGJuYS1XLVRCYzBUNWpFOGxwSFJvNGlPemtwWkdrXzhWaDhWemd6WTVod01nSk1OOTRIdEdXWnRsa1RueHdfS1hKWmhTM1ZvbUwzUWZaazJsTy1obFFUYXFWMDJseWQtS0JXSkFuRkp4ZnVvRmFjLWxCdmhRdjNIZ2tRTWRoSlQyb3dpaUk1RUVjNU1Td3Jf0gGmAUFVX3lxTE9qcExhRGdCS3hVclRJSnJhdHdyajdZeUw5ODJjam1EUzlRQnFjNHhjanZ6Q0p6QXl0RnQyM0pUR29iYTZtbEdPVXZNUUQ2VENWNWVWbWc3V2x3TGJNZE5SZzVfUjlQcXlQMC1CT1gwTFRiNmVzV2ItakN4ZTBXbFo0REx3NklUaW5sdnFfUE81RFFRTnROWWdlYW1IZmRVaGN2cU5IWHc?oc=5",
     "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdjhZVC1qcHgyOVNmVHdubnNBTVhnQmVXSGpKUDd6UDlSSk1zcXkxQmJTNHMxR19tSU0weWcxbDFtWVBIS3JnSnl3SGFzdE1nUWIzaTY5S1Fja1F6b2hHQ1U4dXdnUkZpM05tc0lfS2R0NTRMLWxIbk14YXlDRVpPWWpEam42VWxqR200blFFLW1fUHpESnFHaEd1S0JxNU93?oc=5",
@@ -886,6 +931,7 @@
     "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaE10YjdGU2JoM2xVRC02Q3VRQkVOX3ZBVmVMY1hXbTUxNDgwTUZ5OVBMUUdLdWNPcEtfYUZVMS0xaTRYMWFWckU2eUNuZ251VHV2aF9wcU5GNUtReHE3QUlYODdPU2ZTN3pfaDhHWG84Ti1GZV9IMC05QWNrUVNqZHg5OUY2TEExWmZuQURTMi1Tb1duVUpyTW5uVVZfa0RFRnRjQVBPRFpmekxHQlE?oc=5",
     "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaVNvS2NCLTIzRG1JMUtKZnd2NGpScTIwVUoyYnlNODUybTMxUGdyeGE5WVFkOWtraTJYNXp2RmhpVVh1S3E4QTZOVkFCOHFtR2FJTFlfc0YzNVVYX1lzOTRyODlEWGxncUJXOVc0MmdsQ19mTkNiRkV0T2kwNUFSRGlnMWhTeTlDWWs1V005Zy11NUNWRUFUVmtHdmdaRld6UmgySjNGY1h2ckRWSEHSAbMBQVVfeXFMUE4xcjB6OEJPZHZrZExQWUZqRU9GZk5zeFBjS0tGeHdWckFUWUpaTkNyRWpMN1VaUXY0bllQbGpvV1BIb01zNUdtdEJxaVRyLUMxSnRTV2RHVWozcVJwUklabkpWYllWTGhrQWpRcUVESmRCZkRCdy11aUlVMEdGdkljejRrS2VIbnQ5cmE2dmYySFdKWDI3dm5zT0tZakp3WVVpUjV6cTNBX2ptamtaLWphNjQ?oc=5",
     "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZHp2bEZTR0FEa2lyTE9pbkplLVpKdkVGX3loQVIyVG1VVVpCSDhBOGFLVGtaTFNtSGxPcFhfVWxtZnRiQWVxSHR0TXlJcGpCcXhpX1h2MWhiSDZiQlFqc2ppOW15eUJ5TVVnZS1hUUlQRVhtSDJYUWJEaG5sUFQ5S3RvM2VtX0RnODZaczNPQWlxN0RNVjZIME5YTW9oZ2w5V29TMWxKcTZLMDltaUE?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5",
     "https://news.google.com/rss/articles/CBMirwFBVV95cUxNLWxKNkJCQ0VMZTh4eEh5Rkt4ck5ndG1WRDJqRXJWanVtMllrTmZuTEFDYkNMN21hRmVGYWtvazFsVGtBajROUklZaFVvTWZvNzU0RVVqLW81RTkzNWdJRFJTYkpkWGJJb1c0LS1IbGU0OUNLMnloMDhZT1l1NW01UFRWNGxsWE5XVWtkdkN3MGhwT3lJbVVoWmcwRUtsWnNEeXMybjhXRGZzRElTdTlR?oc=5",
     "https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1E3Um1LaDRvamd5R3M4TDFIdEpIQ1dSY09DV2tsM0FXOTMtUVkxcnlBZ2ZKeEdOcXhYOGtRdFNYQkhab1drZE9WZzhDeHBwbl9vQzlUV29vLXVfcG9WNU5RWDV1cEdHMDBDb0xBVjZiaE5UVDFmeG93OUhpRzRuQnJYOGswcHJwVkJrS1dBeTRSUk5LWXo1S01LVmhLMHZPZU9WWmNhOVRqZ3EwSjZv?oc=5",
     "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbEhCZG1VUm1abnJFdHA1NUFUbE5od0c1akNXc01KTlNMQWRwblM4YjEwb0h3bUdFYUQwTlg5VDhnbkNuQk1va05zZjUtejA4NTZidThyc2huOUhfREtBYXE0QkZRQnN2ZV9OdGZxbnBfVzhiRXlnWFFONlgybnFVS2pEdDVfOE5mRjNkMnhnaENoVVVtWUlmTHdfa0FoMmJpczAzWWZ2UTRNMzVHNlpKMQ?oc=5",
@@ -893,13 +939,17 @@
     "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX21NdVRPSTJNSUZiZ201OEo3U1Q0Rk9XVFJGaHVEWG1pczBSZzNpZVI2UXEwdEljb0F1UjJTUFRQOXBSTF9zQTNtRnhUcjBKRG9pVktwU1JXeWNiS0ZSZjBZaUhhakJEaU5YbEpBWG14MkUwTjhLX1RzU2NnY2ZvRER6VkVvNUVzemcwU0JzSWE4SmMzM3loLUdFR2JsMG9BbE9hS0ZrZFRGRVUtQ3BYYw?oc=5",
     "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY3A5WUhzc052RnlDWFU5R2FOWFQtU0g0OXV4X0MzTGRoR1U2enhudDIzMU9FNFBQaHVZNFlHN2dDc2VnRzM0ZmxSVldfdmVLTnVLNjFVSG9tcGF2QkQ3VE16ZkZzV25GU3BLWTRldFphbzd4bFhjSzFmU3VtN1dmMjdYR2kwSk1VcTlKNDJVZVlSRUlWaVI3U3dBTTBFY0U4UHVqeklBOXotNFBYTlVUUQ?oc=5",
     "https://news.google.com/rss/articles/CBMisgFBVV95cUxQekNxOXU5bTUyR2JqM1NfWjFXVjhidjlFY3h2YXdoSFQ1WFQ3NzlIMFhXeW5XQ2dEeWl3SmV5bFN3OWp2X0ZzRWtiOHA4WFVpRndBTGpKNUNjZ0pXZEUtbEE3a0xYVk1GYmhOZ3NCY2JGbmZRTnBCczFYaHloU2dJbk44TmcwR2h4cTB4TjM0aVlfSFI5MVltSDZ6RFJMWmkzRGN0aEg1dTlweTg4SmFYVGNn0gG3AUFVX3lxTE9QOVlvdWg1ZG1Ca2VUUkdJTDJhMEc3aDEwWXZMTTVETmQtVVJTc21aaW1CX3VhSGZfbU0xU00tbW5ma0NkcHhBNHBJVVR6U0ZfZmxxYmY1Znhtb0Z2NWZocGlxWG5rdkNfUU5uUERJVTBDV0x2RnFIR2dzTXVIek9MTjhXY3l3SXBOUHRBajFJTF9JMGJvTVJQM19RVWM1Nlg4LWZKQWJPUXBISjQ2Q2RXdGduMlRidw?oc=5",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZmIwUnNsbzdhTERIYWlMaWZhMEtVSWFCYU14dFZUQ3h5MWRSMlc1SklocTU5OUFPQm5xeEM1c1JxLXpiWU9aWkxlQUI5OHdVai1ZNFF1RHBnTjdiMW5MS2xhUnBPak5Dbmg1SDRuWkFQMGhEekZ2Y2dpWVdsbGN0WHEtcjdYOWY3Nlo0djRjQkVnRV9DX2l6OVVGX09FYmFkRlEyT01RNTNuTi1nejZsNVZNc3I?oc=5",
     "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeFZRWUluVVg0Q1ZoWnRkWF85dUNCdm5hZnZPUDNPWmZYOHlmX1FFZndoRTlYbEJ6WUQtb3E5ZnZDNjF4U1k5aFZyRm1POHI5dFJSRHNTZ2Rqb2YtNXN2eEpjekJpNkVPVmlJM3FJOVlOanVpMUJ5T1VMY1FiQXo5TDVsNzVwLUpoc1hicEVVS1ZLaGlsYlpNelJTVEY5SE9QUDhGZkJWRzhyc2ZiMlVwUFJmR0Q?oc=5",
     "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX290R25heG90MzBtM0VHREFLWFRqMGhHd3BhLTFJR21Ka1JsNm5TZEd6eXM5NG0tX3R2SkQ0N01DUkthYWZ6X2hLLWM0RmlPLWgzcnJfM2hsNUpjSWNvbjZQeUhhUWNmdVQ3VU4xaHVvVmc0aGgtOGV2VVp2LWVmUk9HaTNuNVlGSnduM0JrLUxTaFFZY3FycFZ6NTFRSmJTSEllVTNQckthUFlEc0Jkb0FBUGrSAbwBQVVfeXFMUGRWZUNLeXdLamtxMDVtdEJmSVA1TTQxOWxKVDg1a2xKSy1tVDJhaDlTekZrWXotUGpDcjY1UGg0RHJ5MzI5TDliam1YenFSSW5Lb3VzQ01uMkJNLTBNRG5UejkxMFFhTUxVQTNWdWMtODNPbE5YSHc5cUt6NDZWdVJWbnl2ajVUZExnMmVHMGdNbzktNlJ3QnY3MGdvaFZ2Z1NCZkZBV1FaREdjRkNMbG5FZ0pieXEtS1VHMUM?oc=5",
     "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3lickZOd2RkR1RET0xHZmhBNjhkTDdGeEN1SVBHUkZlZl81Vm9xbFFrR2ZFbFFVbWVzbkc1aTMyS1ZYWTJBTUdKZWFENllXdkY4R1d0ajhVbWJ4UldKVlRkMEdwak5aMkE5TmZCTVhHcF9CQkRCQno2SmtDejd1LTZyOVhGWlhBRlBWenI4LUduZk9RSlJ1OFp4SUcwMm5BU3pNYnZkTDRERXVFQ2Y4endQbGg?oc=5",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeE42UnAzeHB6THFVTDg3b04yczBhQnBqUmhzMzRGNUR1YzJ2TkxEVGtOS3F5NVh5TVhlVFY0b0VLRk1xNTk1TWJBYkVMZnlUOWVQR1d6eEtyem1UUlpPZER3cmFzaVB4UXREOEFUYmFuTDBmWTlSb1FVMlozcTNnRU54Ni1EMUMySkZrZ3FVVnZuN2ltTWNzNm5HaVdwMktiT3Z0ckNCaTktSnUxZ3diNzFjN2NxQQ?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5",
     "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOTFMTVFQOTJ2SmdCSGdjR2Z4Q2ZYMF9ncldZM3NUNTlEWUVOUERVUVVpdHdfQno4c3F3aWJ1WnIybnpYNGxnMmk5d3FCaUlkdkhCeHpPMENmRG81MEpBcGx5Y1kxY25GY3oxb3gzNGk1bDdOS0JwMkxFZ1hkUFI2M21GMWowTzc4VVJaLUNaajc5MGJrMTdtcXNJem93Q2lpSGFvYXJCbEFwN2hMTnY4bzcxdEswa29DWFE?oc=5",
     "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQllaMFNac0hQSGkxVzh2V2VmWk9YR3Q3eXdEYW05UDMyd2hGc0F5N0d2MUZNQ2UxbVNqdl9DcUpkVzNQZzJDQkNjZ0pwNDY3MDhHVTdwVEhEU1FFZHYxVEZITllpYTJ1R190YU1zN292LVBDemhUYkNTNmZ1T0ktb3U4ek1CeFZfOF9PUWpWakNRU05uRnNFZUNLdVNESU80eDBJOEFadms0Y0VCWXI5YUhMQ05lZFBqdGc?oc=5",
     "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOXY4MndxQmFFbWQ2TktCNVI3bHdSMUhzODdfdHFUMTB3Nk9lQkgxNFRWV285dWtLZGFHWWl2S01GX0FOOEdsdUhzdjZ2Y1gwUlZ4aDZGdnk0MnNmWWdZd1owV0lCTFFENXBuRUY4ZzVGM1JaSmdhNzRuS0g1NVhRMFB3TkgxeS1zZmdKMXYwYTI3Qm5pSlI5WFZYQWVmM2tfeDNMekxjSmlrTFZ1bTNScDRoRzVsZkRaTk8zWg?oc=5",
     "https://news.google.com/rss/articles/CBMivgFBVV95cUxORnR5cUVLZE91ckU2X0sxOGNzbjA4SjU4MFhiUXNvb0E4M1FLTldoT3d0b3BDUmU3NFVxOUk1eURXMmhEVExrQTNKT3d2LXY2emNNSUo0Nzd0Vkp0WmxiTDh0MVhhM2h1NnRIZnVnZmRNcmJNNmlCajkxN1U2ZGJBZHlLNEVYanF6c2lBc0pVOHh2a1h4QWs0Yngxc0RYX3pOS2NDUGZRRjRKQmtLbnpxZk5QNjljNjJVSkNQRVNn?oc=5",
+    "https://news.google.com/rss/articles/CBMivwFBVV95cUxONTFYMkE3VElIM3Q5QlM3Q3FZSlJXQ2ExZDJwMkdqdmVTenZ0X0pwVXNkTHAwc2lBdkh0NVcxVENFN3Z0S21TZ3E0YWZ1UmZKdlZpc1Nsb0plTWRzU3dsZ05oX1dDX09yamJVWjN5bTRCeV95V0pnNjItWW91MC1Lak9ob3o5c2hGeERMOTJMdzNfSUgxQWdIR0tBeHd0d19XaVZPQkdGLWw3aC1mbTF2bUo3YlBiTkM1VVRpcXFUVQ?oc=5",
     "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdXJlWHJEOE9lVzdhLW1md0RZMTMzVkJGc2wwX3ZsOTR6eGFrbnRud2N0SElkeHNrRm1WdXc4ZVBKQ00wS21kMmJGYzNyTDlieEYwakZQbnB4Z19pYl81Z3duYUcyQ1ZoQnkyUnJKMUtvOVF2enhmbUhfaW5NTy1DeVpZTXRIdGQ5NUxTVlhfRUF4emRsblpqakhDZGVwbXF0NzN0VDRUZ1dUdHRIcjVlSkJVbVcwdWFza0lHaU40U1Q?oc=5",
     "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5",
     "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcFNYWHJZZHY5d01zSUdta0lSNlRpNnhWeDZjUHJVRGFWbkphaDBQamRnX1ZOblJhLTFBZklPdFFKTkl0UGtCTkx6RGF6NTg0dkJOTjQwNEg3MExxRm9ESE4tbTN0NDN3bFJWMXFZbVd0NDNVb2JFeHJjTWtpM3U2ZktMazVMNnF5LVdJRVBmVzludzl6Y2NoTFQwNkM4Rzg4RXQwcWdDMlRPMHNkazFCV3d4cnYtOU82Z0hralhYY3NSMHfSAcMBQVVfeXFMTzFhQlFMWEdlclNCWDZ5cGo1R2Q0b3lqS2dPMnVlQlFMcDVrN213YXZ5QnBac3B2TDBsSDd0V1hyc2dHSHpfV01XelZZZ0hvRkxKZm1WY0psMTUzTG52UnNnYTlzWFliZ1hqT1VUUWhiNWI5Ui1qVzlTcFJwY2czbW5iY3dfc01ZN2diaC0wNWMxNmZOOVJMMmhQYjdqSW1iV2NJX1Y3dHNaZmlpck5fdFE1SUJBOVdtLTZEQXRONGMtZFZj?oc=5",
@@ -934,6 +984,8 @@
     "https://news.ycombinator.com/item?id=49768826",
     "https://news.ycombinator.com/item?id=49934037",
     "https://news.ycombinator.com/item?id=50121562",
+    "https://news.ycombinator.com/item?id=50167583",
+    "https://news.ycombinator.com/item?id=50170021",
     "https://ngrislain.github.io/projects/2026-6-22-vibe-under-constraint/",
     "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data",
     "https://nypost.com/2026/07/13/business/how-china-is-ripping-off-cutting-edge-ai-from-anthropic-openai-and-threatening-us-national-security/",
@@ -942,12 +994,15 @@
     "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
     "https://opencode.ai/docs/models/",
     "https://openrouter.ai/rankings",
+    "https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor",
     "https://openthemagazine.com/world/ai-safety-or-market-control-anthropic-investor-joe-lonsdale-takes-aim-at-tech-giants",
     "https://oxide.computer/blog/oxide-anthropic-project-glasswing",
     "https://ozbrain.com",
     "https://parsimony.lasu.dev/",
     "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
     "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/",
+    "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+    "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers",
     "https://platform.claude.com/docs/en/about-claude/model-deprecations",
     "https://platform.claude.com/docs/en/about-claude/models/choosing-a-model",
     "https://platform.claude.com/docs/en/about-claude/models/migration-guide",
@@ -976,9 +1031,11 @@
     "https://platform.claude.com/docs/en/models/sonnet-5/overview",
     "https://platform.claude.com/docs/en/release-notes/overview",
     "https://porus.dev/en/blogs/2026-08-12-claudish-translator/",
+    "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training",
     "https://propakistani.pk/2026/09/21/subscribers-sue-openai-anthropic-google-and-xai-over-ai-slowdown/",
     "https://quesma.com/blog/claude-code-pricing-for-enterprise/",
     "https://qz.com/anthropic-mythos-5-clearance-trusted-partners-commerce-062926",
+    "https://qz.com/anthropic-net-loss-first-half-ipo-prospectus-102126",
     "https://qz.com/enterprise-ai-spending-openai-anthropic-roi-pullback-062626",
     "https://raheeljunaid.com/blog/anthropics-method-to-losing-goodwill-in-a-few-easy-steps/",
     "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
@@ -994,6 +1051,7 @@
     "https://registry.npmjs.org/-/package/@anthropic-ai/claude-code/dist-tags",
     "https://rhun.app/",
     "https://rohanadwankar.github.io/posts/platforms.html",
+    "https://scholar.google.com/citations?user=AqfZChIAAAAJ",
     "https://shellular.dev/",
     "https://signoz.io/blog/claude-code-model-comparison/",
     "https://siliconangle.com/2026/07/07/microsoft-reportedly-ditching-openais-anthropics-ai-models-favor-cut-costs/",
@@ -1016,6 +1074,9 @@
     "https://simonwillison.net/2026/May/29/anthropic/",
     "https://simonwillison.net/2026/Oct/1/matthew-green/",
     "https://simonwillison.net/2026/Oct/16/code-review/",
+    "https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/",
+    "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+    "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
     "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
     "https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/",
     "https://simonwillison.net/2026/Sep/11/boris-cherny/",
@@ -1039,9 +1100,12 @@
     "https://status.claude.com/",
     "https://status.claude.com/incidents/005ym4vzrq2w",
     "https://status.claude.com/incidents/0lbk5m7mbqk5",
+    "https://status.claude.com/incidents/0ns5clsk8p2x",
     "https://status.claude.com/incidents/1019wwb67615",
     "https://status.claude.com/incidents/288w7p4hk1l1",
     "https://status.claude.com/incidents/2pt83vlkk7x7",
+    "https://status.claude.com/incidents/334jvgbrc4ff",
+    "https://status.claude.com/incidents/3cqf3pmlnr96",
     "https://status.claude.com/incidents/461yvfrzpwtt",
     "https://status.claude.com/incidents/4n0mmv2v41rf",
     "https://status.claude.com/incidents/4xvtc2gnq73l",
@@ -1055,14 +1119,17 @@
     "https://status.claude.com/incidents/f1q2wvw4qj4j",
     "https://status.claude.com/incidents/f6gkkq6txl7z",
     "https://status.claude.com/incidents/fsh2zzzl2c4l",
+    "https://status.claude.com/incidents/h101vcmhnfky",
     "https://status.claude.com/incidents/hdynq1pc0fn8",
     "https://status.claude.com/incidents/hh9hj15mxkrx",
     "https://status.claude.com/incidents/hkcw95k7r0f4",
     "https://status.claude.com/incidents/hlt0yqp4lkww",
     "https://status.claude.com/incidents/j6gv862066n7",
     "https://status.claude.com/incidents/k0h22tsvnydg",
+    "https://status.claude.com/incidents/lqhknfdjrcst",
     "https://status.claude.com/incidents/lw0sb1srtznh",
     "https://status.claude.com/incidents/n3v83qmtlbqm",
+    "https://status.claude.com/incidents/phg1y2yh07n2",
     "https://status.claude.com/incidents/q7txxvbsftgq",
     "https://status.claude.com/incidents/r1pqn1kb4hvk",
     "https://status.claude.com/incidents/r82kdk0m7vqh",
@@ -1073,6 +1140,7 @@
     "https://status.claude.com/incidents/v35b71rthzhp",
     "https://status.claude.com/incidents/vmys9qn874h4",
     "https://status.claude.com/incidents/vr9tpk8w7zr8",
+    "https://status.claude.com/incidents/vx06kp8wfpq2",
     "https://status.claude.com/incidents/wf2v8ms031sx",
     "https://status.claude.com/incidents/yc7mr2gvl914",
     "https://status.claude.com/incidents/zftg3gqkmv18",
@@ -1103,6 +1171,7 @@
     "https://support.claude.com/en/articles/14479288",
     "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
     "https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude",
+    "https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet",
     "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
     "https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1",
     "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan",
@@ -1120,6 +1189,7 @@
     "https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards",
     "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet",
     "https://support.claude.com/en/articles/8461763-where-can-i-access-claude",
+    "https://support.claude.com/en/articles/9519177-how-can-i-recover-a-deleted-conversation",
     "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
     "https://tech.yahoo.com/ai/claude/articles/anthropics-latest-big-name-hire-094131924.html",
     "https://tech.yahoo.com/ai/claude/articles/creator-anthropics-claude-code-wants-220802157.html",
@@ -1179,6 +1249,7 @@
     "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
     "https://twitter.com/_can1357/status/2087228354399265125",
     "https://twitter.com/bcherny/status/2080713091688583312",
+    "https://twitter.com/chasmmmmmmmmmmm/status/2116062991686721968",
     "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
     "https://twitter.com/i/status/2068001285173834106",
     "https://usageupdates.com/",
@@ -1204,6 +1275,7 @@
     "https://www.anthropic.com/engineering/redesigning-source-control",
     "https://www.anthropic.com/features/ebola-response",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+    "https://www.anthropic.com/legal/commercial-terms",
     "https://www.anthropic.com/news",
     "https://www.anthropic.com/news/2026-us-midterms",
     "https://www.anthropic.com/news/2026-usage-policy-update",
@@ -1217,6 +1289,7 @@
     "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
     "https://www.anthropic.com/news/claude-fable-5-mythos-5",
     "https://www.anthropic.com/news/claude-for-teachers",
+    "https://www.anthropic.com/news/claude-haiku-5-5",
     "https://www.anthropic.com/news/claude-opus-4-8",
     "https://www.anthropic.com/news/claude-opus-5",
     "https://www.anthropic.com/news/claude-science-ai-workbench",
@@ -1225,6 +1298,7 @@
     "https://www.anthropic.com/news/cognizant-anthropic",
     "https://www.anthropic.com/news/confidential-draft-s1-sec",
     "https://www.anthropic.com/news/cyber-verification-program",
+    "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
     "https://www.anthropic.com/news/donation-public-first-action",
     "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
     "https://www.anthropic.com/news/enterprise-frontier-safeguards",
@@ -1236,31 +1310,37 @@
     "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
     "https://www.anthropic.com/news/investigating-unintended-model-actions",
     "https://www.anthropic.com/news/life-sciences-verification-program",
+    "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
     "https://www.anthropic.com/news/position-open-weights-models",
     "https://www.anthropic.com/news/public-benefit-fund",
     "https://www.anthropic.com/news/rare-disease-research-grants",
     "https://www.anthropic.com/news/redeploying-fable-5",
+    "https://www.anthropic.com/news/s1-sec",
     "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
     "https://www.anthropic.com/news/tino-cuellar",
     "https://www.anthropic.com/news/wellbeing-research-grants",
     "https://www.anthropic.com/pricing",
     "https://www.anthropic.com/project/glasswing",
     "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+    "https://www.anthropic.com/research/alignment-assessment-ukaisi",
     "https://www.anthropic.com/research/attack-surface-reduction",
     "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
     "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-    "https://www.anthropic.com/research/claude-shaped-science",
     "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+    "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude",
     "https://www.anthropic.com/research/distillation-defenses",
     "https://www.anthropic.com/research/employment-at-anthropic",
+    "https://www.anthropic.com/research/formal-verification",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
     "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+    "https://www.anthropic.com/research/investigating-unintended-model-actions",
     "https://www.anthropic.com/research/multiagent-systems",
     "https://www.anthropic.com/research/off-switch-dual-use",
     "https://www.anthropic.com/research/riemann-zeta",
     "https://www.anthropic.com/research/self-replicating-ai",
     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
     "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "https://www.anthropic.com/transparency",
     "https://www.aol.com/articles/inside-anthropics-state-state-plan-120439000.html",
     "https://www.artificiallawyer.com/2026/08/07/anthropic-hires-head-of-claude-for-legal/",
     "https://www.ayush.digital/blog/the-memory-heist",
@@ -1297,6 +1377,7 @@
     "https://www.euronews.com/next/2026/04/22/hackers-breach-anthropics-too-dangerous-to-release-mythos-ai-model-report",
     "https://www.fool.com/investing/2026/06/28/anthropic-become-valuable-software-stock-ai/",
     "https://www.forbes.com/",
+    "https://www.foxnews.com/tech/former-anthropic-security-leader-warns-ai-agents-becoming-too-autonomous-humans-keep-check",
     "https://www.govconwire.com/articles/teresa-carlson-anthropic-public-sector-global-head",
     "https://www.groundlevel-ai.com/p/anthropic-ai-consciousness-new-york-times-rabbi",
     "https://www.heise.de/en/news/Linux-may-drop-AI-code-labels-Torvalds-uses-LLMs-too-11490773.html",
@@ -1329,6 +1410,7 @@
     "https://www.schneier.com/blog/archives/2026/09/stealing-ai-reasoning-traces.html",
     "https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/",
     "https://www.scmp.com/news/china/diplomacy/article/3360833/anthropic-china-and-why-pax-silica-architect-thinks-us-can-keep-ai-lead",
+    "https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher",
     "https://www.scmp.com/news/china/science/article/3361370/chinese-ai-agent-outperforms-anthropics-claude-code-autonomous-research",
     "https://www.scmp.com/tech/article/3357926/china-ai-ready-match-anthropics-fable-5-musk-zhipus-tang-clash-over-glm-52-rise",
     "https://www.scmp.com/tech/article/3358067/how-anthropics-fable-5-shutdown-could-help-chinas-zhipu-glm-52-gain-ground",
@@ -1346,7 +1428,6 @@
     "https://www.statnews.com/2026/07/06/anthropic-ai-biotech-impact/",
     "https://www.swebench.com/",
     "https://www.tahawultech.com/industry/technology/tenable-announces-strategic-integration-with-the-claude-compliance-api/",
-    "https://www.tbench.ai/",
     "https://www.techdirt.com/2026/07/29/anthropic-says-its-against-a-ban-on-open-weight-models-it-just-wants-to-ban-everything-that-makes-them-good/",
     "https://www.technologyreview.com",
     "https://www.technologyreview.com/2026/06/22/1139424/three-things-to-watch-amid-anthropics-latest-feud-with-the-government/",
@@ -1392,6 +1473,7 @@
     "https://www.yahoo.com/news/us/article/trump-rejects-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-with-ai-wins-182008851.html",
     "https://x.com/JoeJBenton/status/2098480585119572317",
     "https://x.com/SemiAnalysis_/status/2087667983288078795",
+    "https://x.com/SemiAnalysis_/status/2107204965710053510",
     "https://x.com/WSJ/status/2100543615709646901",
     "https://x.com/claudeai/status/2078302415804379218",
     "https://xenaproject.wordpress.com/2026/09/04/flt-anthropic-has-beaten-me-to-it/",
@@ -1400,7 +1482,7 @@
     "https://yourstory.com/2026/09/zoho-sridhar-vembu-big-tech-push-slow-ai-development-cynical",
     "https://zeroshot.ghost.io/spec-driven-development-with-ai-coding-agents/"
   ],
-  "ok": 1395,
+  "ok": 1477,
   "dead": [
     {
       "url": "https://anthropic.com/claude-code/managed-agents",
@@ -1424,7 +1506,7 @@
       "status": 404,
       "note": "",
       "pages": [
-        "wiki/topics/anthropic-business.md"
+        "wiki/topics/anthropic-business-archive.md"
       ]
     },
     {
@@ -1508,7 +1590,7 @@
       "status": 400,
       "note": "",
       "pages": [
-        "wiki/topics/ai-agent-safety.md"
+        "wiki/topics/ai-agent-safety-prompt-injection.md"
       ]
     },
     {
@@ -1549,21 +1631,21 @@
       "url": "https://www.bloomberg.com/news/videos/2026-07-20/creator-of-claude-code-on-the-world-s-hottest-software-video",
       "status": 403,
       "pages": [
-        "wiki/entities/boris-cherny.md"
+        "wiki/entities/boris-cherny-archive.md"
       ]
     },
     {
       "url": "https://www.bloomberg.com/news/features/2026-07-16/anthropic-and-openai-tools-transform-the-profession-of-coding",
       "status": 403,
       "pages": [
-        "wiki/entities/boris-cherny.md"
+        "wiki/entities/boris-cherny-archive.md"
       ]
     },
     {
       "url": "https://www.inc.com/ashley-couto/claude-code-startup-needs-employee-archetypes/91370409",
       "status": 403,
       "pages": [
-        "wiki/entities/boris-cherny.md",
+        "wiki/entities/boris-cherny-archive.md",
         "wiki/entities/cat-wu.md"
       ]
     },
@@ -1582,13 +1664,6 @@
       ]
     },
     {
-      "url": "https://news.ycombinator.com/item?id=50170021",
-      "status": 429,
-      "pages": [
-        "wiki/entities/claude-science.md"
-      ]
-    },
-    {
       "url": "https://www.nytimes.com/2026/09/27/science/anthropic-biology-enzyme-mestre.html",
       "status": 403,
       "pages": [
@@ -1600,6 +1675,15 @@
       "status": 403,
       "pages": [
         "wiki/entities/cowork.md"
+      ]
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-16/dario-amodei-anthropic-employees-give-millions-to-regulate-ai",
+      "status": 403,
+      "pages": [
+        "wiki/entities/dario-amodei-archive.md",
+        "wiki/topics/anthropic-government-policy.md",
+        "wiki/topics/anthropic-government-policy.md"
       ]
     },
     {
@@ -1631,20 +1715,11 @@
       ]
     },
     {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-16/dario-amodei-anthropic-employees-give-millions-to-regulate-ai",
-      "status": 403,
-      "pages": [
-        "wiki/entities/dario-amodei.md",
-        "wiki/topics/anthropic-government-policy.md",
-        "wiki/topics/anthropic-government-policy.md"
-      ]
-    },
-    {
       "url": "https://www.reddit.com/r/ClaudeCode/comments/1umt5h5/fable_resets_on_monday_if_you_held_a_plan_already/",
       "status": 403,
       "pages": [
         "wiki/entities/fable-5-archive.md",
-        "wiki/entities/fable-5.md",
+        "wiki/entities/fable-5-archive.md",
         "wiki/topics/community-tech-discussions.md"
       ]
     },
@@ -1653,7 +1728,7 @@
       "status": 403,
       "pages": [
         "wiki/entities/fable-5-archive.md",
-        "wiki/entities/fable-5.md",
+        "wiki/entities/fable-5-archive.md",
         "wiki/topics/community-tech-discussions.md"
       ]
     },
@@ -1662,7 +1737,7 @@
       "status": 403,
       "pages": [
         "wiki/entities/fable-5-archive.md",
-        "wiki/entities/fable-5.md",
+        "wiki/entities/fable-5-archive.md",
         "wiki/topics/community-tech-discussions.md"
       ]
     },
@@ -1712,6 +1787,30 @@
       ]
     },
     {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-30/judge-voices-doubt-us-has-justified-its-ban-on-anthropic-ai",
+      "status": 403,
+      "pages": [
+        "wiki/entities/fable-5-archive.md",
+        "wiki/topics/anthropic-government-policy.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1v56yic/open_source_model_at_par_with_fable/",
+      "status": 403,
+      "pages": [
+        "wiki/entities/fable-5-archive.md",
+        "wiki/entities/fable-5.md"
+      ]
+    },
+    {
+      "url": "https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/",
+      "status": 403,
+      "pages": [
+        "wiki/entities/fable-5-archive.md",
+        "wiki/entities/pricing.md"
+      ]
+    },
+    {
       "url": "https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/",
       "status": 403,
       "pages": [
@@ -1757,29 +1856,6 @@
       "status": 403,
       "pages": [
         "wiki/entities/fable-5.md"
-      ]
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-30/judge-voices-doubt-us-has-justified-its-ban-on-anthropic-ai",
-      "status": 403,
-      "pages": [
-        "wiki/entities/fable-5.md",
-        "wiki/topics/anthropic-government-policy.md"
-      ]
-    },
-    {
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1v56yic/open_source_model_at_par_with_fable/",
-      "status": 403,
-      "pages": [
-        "wiki/entities/fable-5.md"
-      ]
-    },
-    {
-      "url": "https://www.forbes.com/sites/sandycarter/2026/07/07/claude-fable-5-extends-by-five-more-days-10-moves-to-make-now/",
-      "status": 403,
-      "pages": [
-        "wiki/entities/fable-5.md",
-        "wiki/entities/pricing.md"
       ]
     },
     {
@@ -1881,6 +1957,14 @@
       ]
     },
     {
+      "url": "https://www.cnbc.com/2026/07/21/fed-mythos-ai-cybersecurity-banks-project-glasswing.html",
+      "status": 403,
+      "pages": [
+        "wiki/entities/mythos-archive.md",
+        "wiki/topics/anthropic-government-policy.md"
+      ]
+    },
+    {
       "url": "https://www.beckershospitalreview.com/healthcare-information-technology/innovation/why-epic-joined-anthropics-project-glasswing/",
       "status": 403,
       "pages": [
@@ -1895,11 +1979,10 @@
       ]
     },
     {
-      "url": "https://www.cnbc.com/2026/07/21/fed-mythos-ai-cybersecurity-banks-project-glasswing.html",
+      "url": "https://tech-insider.org/opencode-vs-claude-code-2026",
       "status": 403,
       "pages": [
-        "wiki/entities/mythos.md",
-        "wiki/topics/anthropic-government-policy.md"
+        "wiki/entities/opencode.md"
       ]
     },
     {
@@ -1966,6 +2049,16 @@
       ]
     },
     {
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/",
+      "status": 403,
+      "pages": [
+        "wiki/entities/opus-5-5.md",
+        "wiki/entities/opus-5-5.md",
+        "wiki/entities/opus-5-5.md",
+        "wiki/entities/opus-5-5.md"
+      ]
+    },
+    {
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/",
       "status": 403,
       "pages": [
@@ -1973,6 +2066,13 @@
         "wiki/entities/opus-5-5.md",
         "wiki/entities/opus-5-5.md",
         "wiki/topics/code-quality-decline.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x93vw9/anyone_else_experiencing_a_sudden_drop_in_opus/",
+      "status": 403,
+      "pages": [
+        "wiki/entities/opus-5-5.md"
       ]
     },
     {
@@ -2246,7 +2346,7 @@
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1ulf5xc/something_important_was_lost_between_sonnet_46/",
       "status": 403,
       "pages": [
-        "wiki/entities/sonnet-5.md",
+        "wiki/entities/sonnet-5-archive.md",
         "wiki/entities/sonnet-5.md"
       ]
     },
@@ -2307,14 +2407,14 @@
       "url": "https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/",
       "status": 403,
       "pages": [
-        "wiki/topics/ai-agent-safety.md"
+        "wiki/topics/ai-agent-safety-product-vulns.md"
       ]
     },
     {
       "url": "https://venturebeat.com/security/prompt-injection-measurable-security-metric-one-ai-developer-publishes-numbers",
       "status": 429,
       "pages": [
-        "wiki/topics/ai-agent-safety.md"
+        "wiki/topics/ai-agent-safety-prompt-injection.md"
       ]
     },
     {
@@ -2368,6 +2468,100 @@
       "status": 403,
       "pages": [
         "wiki/topics/ai-talent-flow.md"
+      ]
+    },
+    {
+      "url": "https://www.axios.com/2026/07/29/anthropic-claude-open-models-ban-china",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.daytondailynews.com/nation-world/anthropic-announces-claude-corps-to-teach-nonprofits-to-use-ai-more-effectively/article_a978f0cf-5abd-5420-89ef-6dc77064072b.html",
+      "status": 429,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md",
+        "wiki/topics/competitor-landscape-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/2026/07/07/nyregion/anthropic-ai-boom-nyc.html",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.wsj.com/finance/investing/terawulf-signs-19-billion-lease-with-anthropic-for-ai-infrastructure-campus-ef26be27",
+      "status": 401,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.cnbc.com/2026/07/06/anthropic-terawulf-data-center-ai.html",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.barrons.com/articles/terawulf-stock-anthropic-ai-data-centers-43d5629a",
+      "status": 401,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.techrepublic.com/article/news-anthropic-samsung-custom-ai-chip/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.theinformation.com/articles/small-firms-use-claude-quit-salesforce",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md",
+        "wiki/topics/enterprise-tool-tracker-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.upi.com/Top_News/World-News/2026/07/03/Anthropic-Samsung-Electronics/7811783128641/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-07-02/anthropic-drives-strongest-month-for-blackstone-fund-for-wealthy",
+      "status": 403,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.barrons.com/articles/amazon-stock-broadcom-anthropic-fable-mythos-0edab4a7",
+      "status": 401,
+      "pages": [
+        "wiki/topics/anthropic-business-archive.md",
+        "wiki/topics/anthropic-business-archive.md"
       ]
     },
     {
@@ -2475,100 +2669,6 @@
       "url": "https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/",
       "status": 401,
       "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.axios.com/2026/07/29/anthropic-claude-open-models-ban-china",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.daytondailynews.com/nation-world/anthropic-announces-claude-corps-to-teach-nonprofits-to-use-ai-more-effectively/article_a978f0cf-5abd-5420-89ef-6dc77064072b.html",
-      "status": 429,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md",
-        "wiki/topics/competitor-landscape.md"
-      ]
-    },
-    {
-      "url": "https://www.nytimes.com/2026/07/07/nyregion/anthropic-ai-boom-nyc.html",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.wsj.com/finance/investing/terawulf-signs-19-billion-lease-with-anthropic-for-ai-infrastructure-campus-ef26be27",
-      "status": 401,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.cnbc.com/2026/07/06/anthropic-terawulf-data-center-ai.html",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.barrons.com/articles/terawulf-stock-anthropic-ai-data-centers-43d5629a",
-      "status": 401,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.techrepublic.com/article/news-anthropic-samsung-custom-ai-chip/",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.theinformation.com/articles/small-firms-use-claude-quit-salesforce",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md",
-        "wiki/topics/enterprise-tool-tracker.md"
-      ]
-    },
-    {
-      "url": "https://www.upi.com/Top_News/World-News/2026/07/03/Anthropic-Samsung-Electronics/7811783128641/",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.bloomberg.com/news/articles/2026-07-02/anthropic-drives-strongest-month-for-blackstone-fund-for-wealthy",
-      "status": 403,
-      "pages": [
-        "wiki/topics/anthropic-business.md"
-      ]
-    },
-    {
-      "url": "https://www.barrons.com/articles/amazon-stock-broadcom-anthropic-fable-mythos-0edab4a7",
-      "status": 401,
-      "pages": [
-        "wiki/topics/anthropic-business.md",
         "wiki/topics/anthropic-business.md"
       ]
     },
@@ -2737,7 +2837,7 @@
       ]
     },
     {
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wckk5k/40_session_usage_on_max_plan_in_30_mins/",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xdg4l0/i_hit_claude_session_limit_within_30_minutes/",
       "status": 403,
       "pages": [
         "wiki/topics/code-quality-decline.md",
@@ -2745,9 +2845,10 @@
       ]
     },
     {
-      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x1qc8a/does_anyone_have_any_idea_why_my_weekly_limit_is/",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xjjryu/claude_code_session_token_cache_invalidating/",
       "status": 403,
       "pages": [
+        "wiki/topics/code-quality-decline.md",
         "wiki/topics/code-quality-decline.md"
       ]
     },
@@ -2774,6 +2875,13 @@
       "status": 403,
       "pages": [
         "wiki/topics/code-quality-decline.md",
+        "wiki/topics/code-quality-decline.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1x1qc8a/does_anyone_have_any_idea_why_my_weekly_limit_is/",
+      "status": 403,
+      "pages": [
         "wiki/topics/code-quality-decline.md"
       ]
     },
@@ -2814,6 +2922,13 @@
     },
     {
       "url": "https://www.reddit.com/r/ClaudeAI/comments/1wl6wyn/its_time_to_cancel_your_subscriptions_anthropic/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/code-quality-decline.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1wckk5k/40_session_usage_on_max_plan_in_30_mins/",
       "status": 403,
       "pages": [
         "wiki/topics/code-quality-decline.md"
@@ -2912,6 +3027,20 @@
       ]
     },
     {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xjiyk0/my_claude_code_optimizer_is_now_a_vscode/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/community-cost.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xit9g8/research_matching_claude_code_sonnet_55_design/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/community-cost.md"
+      ]
+    },
+    {
       "url": "https://www.reddit.com/r/ClaudeCode/comments/1uox6ko/claude_code_with_cavemanopensoure_skill_cuts/",
       "status": 403,
       "pages": [
@@ -2973,6 +3102,20 @@
       "status": 403,
       "pages": [
         "wiki/topics/community-multi-agent.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xcl0zp/13_claude_code_skills_for_the_founder_side_of_a/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/community-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xg24ji/how_i_separated_requirement_failures_from_test/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/community-skills.md"
       ]
     },
     {
@@ -3272,6 +3415,20 @@
       ]
     },
     {
+      "url": "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
+      "status": 403,
+      "pages": [
+        "wiki/topics/competitor-landscape-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.techzine.eu/news/devops/142702/z-ai-takes-on-cursor-and-claude-code-with-free-zcode/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/competitor-landscape-archive.md"
+      ]
+    },
+    {
       "url": "https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html",
       "status": 403,
       "pages": [
@@ -3302,24 +3459,24 @@
       ]
     },
     {
-      "url": "https://www.cnbc.com/2026/07/07/chinese-ai-models-costs-us-openai-anthropic.html",
-      "status": 403,
-      "pages": [
-        "wiki/topics/competitor-landscape.md"
-      ]
-    },
-    {
-      "url": "https://www.techzine.eu/news/devops/142702/z-ai-takes-on-cursor-and-claude-code-with-free-zcode/",
-      "status": 403,
-      "pages": [
-        "wiki/topics/competitor-landscape.md"
-      ]
-    },
-    {
       "url": "https://www.theinformation.com/articles/ai-customers-lowering-anthropic-openai-bills",
       "status": 403,
       "pages": [
         "wiki/topics/enterprise-cost-management-archive.md"
+      ]
+    },
+    {
+      "url": "https://indianexpress.com/article/technology/artificial-intelligence/alibaba-ban-claude-code-us-china-ai-10772429/",
+      "status": 403,
+      "pages": [
+        "wiki/topics/enterprise-tool-tracker-archive.md"
+      ]
+    },
+    {
+      "url": "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/",
+      "status": 401,
+      "pages": [
+        "wiki/topics/enterprise-tool-tracker-archive.md"
       ]
     },
     {
@@ -3330,17 +3487,10 @@
       ]
     },
     {
-      "url": "https://indianexpress.com/article/technology/artificial-intelligence/alibaba-ban-claude-code-us-china-ai-10772429/",
+      "url": "https://www.morningstar.com/stocks/anthropics-leaked-financials-reflect-fast-growth-not-2-trillion-valuation",
       "status": 403,
       "pages": [
-        "wiki/topics/enterprise-tool-tracker.md"
-      ]
-    },
-    {
-      "url": "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03/",
-      "status": 401,
-      "pages": [
-        "wiki/topics/enterprise-tool-tracker.md"
+        "wiki/topics/market-signals.md"
       ]
     },
     {
@@ -3359,13 +3509,6 @@
     },
     {
       "url": "https://axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei",
-      "status": 403,
-      "pages": [
-        "wiki/topics/recursive-self-improvement.md"
-      ]
-    },
-    {
-      "url": "https://scholar.google.com/citations?user=AqfZChIAAAAJ",
       "status": 403,
       "pages": [
         "wiki/topics/recursive-self-improvement.md"
