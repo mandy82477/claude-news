@@ -1340,3 +1340,10 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [週五 2026/10/30 12:14:07.00] ABORTED: gathered_items.json date=2026-10-29 items=67，非目標日期的新鮮資料（src/gathered_archive/2026-10-30.json 不存在，GitHub Actions daily-gather 尚未抓到/commit 當日原料）
 [週五 2026/10/30 12:14:07.00] === Pipeline complete (agent, aborted) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-10-30T17:08:36Z]
+[2026-10-30T18:30:21Z] === Agent pipeline start (2026-10-30) ===
+[2026-10-30T18:30:21Z] Aggregator OK
+[2026-10-30T18:30:21Z] Wiki ingest OK
+[2026-10-30T18:30:21Z] Building web reader...
+[2026-10-30T18:30:21Z] 測試全綠 - web build 放行
+[2026-10-30T18:30:21Z] Single push done (news + wiki + web)
+[2026-10-30T18:30:21Z] === Pipeline complete (agent) ===
