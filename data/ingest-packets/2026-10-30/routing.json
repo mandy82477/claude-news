@@ -1,0 +1,720 @@
+{
+ "https://claude.com/pricing": {
+  "title": "官方文件更新：方案與定價（Plans & Pricing）",
+  "source": "Official Docs",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://code.claude.com/docs/en/desktop.md": {
+  "title": "官方文件更新：Claude Code 桌面版",
+  "source": "Official Docs",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.314": {
+  "title": "Claude Code 2.1.314 build 新增 7 個功能候選旗標（自 2.1.312 起）",
+  "source": "Build Flags",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/releases/tag/v2.1.314": {
+  "title": "[anthropics/claude-code] v2.1.314",
+  "source": "GitHub / anthropics/claude-code",
+  "categories": [
+   "功能",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/kajisho5/ffmpeg-skill": {
+  "title": "kajisho5/ffmpeg-skill",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/Ansub/tv-detox": {
+  "title": "Ansub/tv-detox",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://cyberplace.social/@GossiTheDog/117528831681803563": {
+  "title": "Backdoors in official Claude Code extensions",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/YizhengWw/HachimoDock": {
+  "title": "YizhengWw/HachimoDock",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/claesbackman/AI-research-feedback": {
+  "title": "claesbackman/AI-research-feedback",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/itechmeat/open-second-brain": {
+  "title": "itechmeat/open-second-brain",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2": {
+  "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://phorion.io/blog/offical-claude-code-vsx-compromise/": {
+  "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/JialaoLiu/dsh-baton": {
+  "title": "JialaoLiu/dsh-baton",
+  "source": "GitHub Search",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://twitter.com/chasmmmmmmmmmmm/status/2116062991686721968": {
+  "title": "Anthropic Cracking Down on Video Game Rewrites",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/91188": {
+  "title": "Feature request: make the auto-memory MEMORY.md compaction reminder threshold configurable",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/80988": {
+  "title": "[BUG] v2.1.219 `heron_brook` prompt section injects \"Do not call the AgentTool unless the user requested it\" for Opus 5 only, silently overriding user-configured delegation policy, with no opt-out",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/Millillion/lasm": {
+  "title": "Show HN: Lasm – Write formally verified webapps in Lean for Node/serverless/edge",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/14202": {
+  "title": "Bug: Project-scoped plugins incorrectly detected as installed globally",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor": {
+  "title": "Trojanized Claude Code Extension Plants an SSH Backdoor",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://cursor.com/blog/claude-code-extension-security-notice": {
+  "title": "Malicious Claude Code Extension Found in Cursor Marketplace",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/kevinhall/mcp-tool-cost-20-job-actors-on-apify-21k-to-327k-tokens-each-1hm4": {
+  "title": "MCP tool cost: 20 job Actors on Apify, 2.1K to 32.7K tokens each",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/hadiux0295/claude-code-mistake-guards": {
+  "title": "Show HN: Claude Code guards built from my agent's repeated mistakes",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.axoris.app/": {
+  "title": "Show HN: Axoris – macOS App for Grok, Claude, ChatGPT and Gemini",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/leonlee/cc-pair": {
+  "title": "Show HN: Cc-pair – Claude Code and Codex review each other's work",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/mandarvshinde/ai-bill-to-focus": {
+  "title": "Show HN: Convert Anthropic and OpenAI bill exports to FinOps FOCUS (open source)",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://nexus.kushalsm.com/": {
+  "title": "Show HN: Nexus, a calorie and workout planner inside ChatGPT and Claude",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/vanmiku/mydash": {
+  "title": "Show HN: Mydash – a self-hosted inbox for what Claude Code and Codex produce",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/marciob/prompt-refiner": {
+  "title": "Show HN: Type and+ in Claude Code and a second Claude rewrites your prompt first",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/jdbrewer/ccfleet": {
+  "title": "Show HN: ccfleet, a quiet, tmux-native Claude Code dashboard",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb0FEYWdoVzk1Ym1YZmZmMzMyQkU4MnFIM2NUcThKY2xPczJ1dk1udmVUTWdEbmVrNzVpYkxMRzMwMTZGQ29sUkhoN3dkY2M0Tnl5X3hqcGpKUXJqSktmUzhPRU9PbWdwV3lIZElmbC01Q3ppVlVqTGgwa0tmSEZjWWtHakVhMGRLa2dIVDgzQjlJVHR1VnJn?oc=5": {
+  "title": "Want to invest in Anthropic before its IPO? These 5 funds offer exposure to the AI giant. - Business Insider",
+  "source": "Google News / Business Insider",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjk479/unaminer_coop_bitcoin_digging_game_not_real/": {
+  "title": "Unaminer - Co-op \"bitcoin\" digging game (Not real bitcoin ofc)",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMivAFBVV95cUxOV2FaNjdkR0JjU3Itc3RRakQ1UkdSLXdnZG1KVUhhSFdZRERLU2QwVFliWmNMXzdhMHJBMGZKWHlURWJNZ0MwTnA3YnI3VjV2UWNwYmJJYTdCMUIwYUhrbWdwaDMxNDlaMms3eVNfYWJVb3dJbzAtLWFRaE5GQ2JqQ0JxLWJzcEd2Z3FMdklvWWg3aXhka2V5U01ZeEE0MEhTVFRsRkphOFV5VjdGdnNFenR2OEpLMnlMcEROVA?oc=5": {
+  "title": "Anthropic: That Claude Code extension compromise… couldn't be us - The Register",
+  "source": "Google News / The Register",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMirgFBVV95cUxOckRlQ1RiS0VLX2xXSVZYSlBpVTZrbzdUSEpCTnFfZXRzdWhxM1JwTXkzZ1d5eVBKcERFY2pSSjVHc0VDT1UtUC1pNU92R2ZaZjlET2lodjlfLVRFMmFfb2pMUW9SVzJ0a2tGT2VzdUZjTUwxSXlEalVMeE5oMm5SR0xtWUNocVFxZmo3aUFwSU4ycEl6X0NJZXFJV25jX0lPMVFQZi1Cb19YMzVjWEE?oc=5": {
+  "title": "Malicious Claude Code extension in Cursor installs SSH backdoor - Techzine Global",
+  "source": "Google News / Techzine Global",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjjzlj/claude_code_subreddit_passed_1m_weekly_visitors/": {
+  "title": "Claude Code subreddit passed 1m weekly visitors this week, the first of ANY coding agent",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTDdxd0lYcllCMW5WekJSbWJHM2hvWmlES01wTUZVMDEwQjRuV0dXRWtmRENzS3lYSlhRZHVqOTMyTG9tb1BSa2Y4QVMwYVVIdU9XdWRxVS1nMC1zOER5N3d1SUhIRWhBNmlzbUd2TmY4WS1VbFlvRjVtNm1CYWw2dlJETm9ULVlEYTZBT0tRN25iRmhmNlg3dE1uVWlMX3laLUlv?oc=5": {
+  "title": "Watch Anthropic's S1 | Google's AI Problem | The Rundown - Bloomberg.com",
+  "source": "Google News / Bloomberg.com",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjjryu/claude_code_session_token_cache_invalidating/": {
+  "title": "Claude Code session token cache invalidating faster",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjjpue/built_with_claude_code_an_ai_sports_show_where_8/": {
+  "title": "Built with Claude Code: an AI sports show where 8 models judge each other blind",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjiz7o/created_an_open_source_mod_or_the_claude_code_app/": {
+  "title": "Created an open source mod or the Claude code app, that adds a few useful things.",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/ClaudeCode/comments/1xjiyk0/my_claude_code_optimizer_is_now_a_vscode/": {
+  "title": "my claude code optimizer is now a vscode extension, it showed me 8.9M tokens wasted on expired caches in 30 days",
+  "source": "Reddit / r/ClaudeCode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMicEFVX3lxTE42LS12dlZUNmQ1RHJpTjI0T0VWQ1BuNC1ZUlUxbkFZQi1kcUZGcFpmTTU0eWlxUUpPaThldXNONElMSnBCX0ZXbGRmTWZidnAzemltUkxkTVBPcERXTFl4M09NZlRWMHNyaGQyM25KSmg?oc=5": {
+  "title": "I thought Claude Code couldn't get any better until I installed these 4 plugins - MakeUseOf",
+  "source": "Google News / MakeUseOf",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMic0FVX3lxTE1oUDdGckVKYzJobVpZMk5HeFFpX1Z5U0FRQnRoQTJfeEZXaHRCRHVwLUluQWNJSDVKcHI5VFhPR3NvSDdvbUNhZ2JUbGN1SjVmeGltaVVDMTc2ODVnU1dGbXVUMGFCLWVKbVhIOExJZllTZnM?oc=5": {
+  "title": "Mistral's Le Chonk is now a top open model for coding, ranking alongside Codex GPT-6.1 Terra - ZDNET",
+  "source": "Topic Watch / competitor-landscape",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTjl1TkZPY185cXlEUEt6WFM4U1FXSC1tcjQwdFBHNlVaTlBjcVlHUzVqNE1TMWxQUGhjZ2NmWlZvVnN5U0hhWEtlYUpKZmFwMTFJRGZ6MFU0VXhia0liOUd6MzBydThSdVdxLWdJY0F0d0UtUDgwWkJJT0kyYmZfV2k2MlhxVGo1N25z?oc=5": {
+  "title": "Anthropic’s IPO filing spends 69,800 words on AI’s risks to investors and says little about the risks to the rest of us - Fortune",
+  "source": "Google News / Fortune",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiggFBVV95cUxQelpZcm9zTkJtOXRMNVRZNmFISW1IM2RqVkFnU2FrNi1hbF90RGd6ZTJueENqREVUdmRHTE9NNWxFN1BPWG9CVnZ2S0E1RUltSlVjcjdqM3NpOEh2Vkk5cVFkMXdyMjY3NGl0UlJvc3p5MUU1eDVDa3NfQnRsbWxPMkxB?oc=5": {
+  "title": "Anthropic staff warn AI could kill us all as its safety rules weaken - Quartz",
+  "source": "Google News / Quartz",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1xjhwc3/qwen4/": {
+  "title": "Qwen4!",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNY2RPZzhmclF2N2I0Q09oQjl0QjNMVWdmcGcxaGhVa0dHSi1PYXVPWGRIdkpTUk9HWUxLeVE4eXVsN1cwdzZPaDNjM3k0V1JISGdKeGF1QXVmZ3A5empvbTdIXy1LcEF1SHhFeXVnU2hJZWVwT3BRM2pPOG9ZVXdjQmpfYW1pYk9Nb0RxdVZMaWh3bmJCYWhXa0lKdHNlaDFQY1RtZHdnRTlBbWtXWEJfdldPUWZmRUJLUDNqM2xFYUJHSmN2TF83LUdYa2phNVBXSDQwREV3?oc=5": {
+  "title": "A Malicious Claude Code Extension Build Planted SSH Backdoors on Developer Machines Through Cursor's Marketplace - Startup Fortune",
+  "source": "Google News / Startup Fortune",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVkNudmY1OHJOWFJ0b1lLZFhWS0RGOGI0LTlEclVpcWFuNTBtbUY4Y3J6dWs5eWpsUkNWSkRLQjZ6Tk92LVJwdTlXVTJjMzF3NVlyWE1Kb3czTmdiR2ZtZUFJcVZIQUk0REVZX3A2ZUo5ZUpiYm9sQ2JOZFZBYkFNcjVFWWNfcXI4OHhQRUNzbmpyLVlxR3RlcmNWZXdTMEdLRDhta1JKc04tZ3RJMDJ3Sw?oc=5": {
+  "title": "Malicious Claude Code extension on Cursor planted SSH backdoors - BleepingComputer",
+  "source": "Google News / BleepingComputer",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQWV5czdyUDJ4VEtJS1B2aGs4cHBzT1RyNEpXZGhWdGE4RGl3Sm9zX2Myem9SeDJBbS12S2xYX0V6ZWNlZWp4R1A1UGNSc21QbDY5TmJjRkN5UE9CdUtvRkpnRTQ5RGdtUzhXeTRuSXpHR01FOGIwUTNwM2pJQlRLWWdEZThoR05wRlhzMGROMWp1cEdnMkk0T21qaEZxLWNhZFZGeUxUVQ?oc=5": {
+  "title": "Malicious Claude Code extension distributed through Cursor marketplace - Sophos",
+  "source": "Google News / Sophos",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1xjgfuv/another_reason_to_own_your_own_compute_your/": {
+  "title": "Another reason to own your own compute. Your account may get banned in a sneaky update.",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": "標題未提及具體平台，摘要僅圖片 alt 文字，建議開連結確認是否與 Claude/Anthropic 相關"
+ },
+ "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMGFSQVBQNTNTTFdmMWtDdDF6R1YxMUNrQUNlV0ltUUFWRkJwUktKcVBWTDNRblhmYlR1Y3RGUnh2bzdxNEd1RFU0OENRZlZ0Z2hfRWhONWN3Nlp3YUhVVE9yZUJkMmdDN1hJQ2o2TkwzOEpsNXdmX1hvWWt6OGhqTFNTMUtiNUdXTVg1amJRaHk?oc=5": {
+  "title": "Anthropic’s historic IPO; Akeso’s big clinical showing - Pharma Voice",
+  "source": "Google News / Pharma Voice",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZTNSMFhsd1JEYXAzeXE3c0Y0YTBrdkFrTWVUVTl6X1pWV0s3MlF1WlhIMUIyNWtHTHZxeTFFOEFBdnp2Zm13cHRLSXR4ckhBQkkwa1YwbTR0Ql9yOEJsZFI1UmM3WGlLNEc4NUk4bzY4ZzN4anduc01SUmI1S2JVdU5mM1BNajFo?oc=5": {
+  "title": "Malicious Claude Code Extension (2.1.313) in Cursor Marketplace Plants Attacker SSH Key and Persistence - OX Security",
+  "source": "Google News / OX Security",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSGNkS09TbVBOUjNhSDB3VWRXRDFrMDlQZy1tQ1VBWWZsM1F2dldtVV9YQVJ2Nnl0aXNjMHhCQ3VvZjFLTnNxTVA4S2pHT1VtVjNObllLc1hsNmliVkliYk5DX2tHTk5mNmlNSDczTVhlMGc3MEdRaHRrXzdjRDkwWEZxWnBHdW9uMlFZSA?oc=5": {
+  "title": "Q&A: Anthropic's drug R&D chief talks catching Prof. Oak, the limits of Claude's taste and cures vs. QALYs - Endpoints News",
+  "source": "Google News / Endpoints News",
+  "categories": [
+   "人物",
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnY0akR6LXVXSnVoSDMxdVhIN0E5aDBaZnRpQUh4Z0gyTkFGV1RLTFh3ZkExWV9aVExBX0toTVpQbjZXckVGNENuRlg5U0s5bUdEWWFfZ2xVU2EwMXJKbjBiRHRDZWxZaHdVeU9VN250RXZ6SFU1UzN6Nks3U0l5b0ZIVzhTd2N6SkdjTmdIM3A3dw?oc=5": {
+  "title": "Berkeley Law professor: Anthropic’s IPO puts AI accountability to the test - Fortune",
+  "source": "Google News / Fortune",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMivgFBVV95cUxNV0I1UVQxSWpUXzlZWGNaZ19IZEEweHYzQUdhNUhBdENhUWRsNGdBcmI3NlFGbmI0N2hEU2toOU50ZEZ0aTBwN1hvdEdqX3F1dFFJbTJZUUFDRzBESjBwamJ2SzZQVDVrZUt6SXRXSjZqZUJvRUc4c1lzamFTQXVIdTQxbGlRWWozLUVFMjVPM2dBYW9URC1kbTdGYjBLSDRrMENTV3NuQkZCNUxWSTFhdDRoQlRVRzZmOGZodTFn?oc=5": {
+  "title": "Anthropic AI model finds Linux kernel bug that leads to remote root access - CSO Online",
+  "source": "Google News / CSO Online",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VYXRVZG52ZU8wZ183VXZkS192WXFoWm5uRm0wNE1PZFZBblEyTklTWnZodHhNVUIyZlNaZGI1Y2xRaGJqZ3FTSVplcjNaM2tZVzF6UlNpRTd4S0dlQzVrak5jOHFQN2tfdkpMalkzWXlvVjl5T0hpb9IBfkFVX3lxTFBsbUVyNW9GLVlJZ3dpSHl2MXVZa0pxdDRiN2FnakZCa3lwVDJFOXdiSW9iYTh3UnhOZ0xhYklQSnJXVmoxaGpwckIyNzkzWm9hTVhVOFBrZTFHbnV5LWVBcFdiRGFqMXUyRXZXNjM5Z1ZNVXdiR1E3eFlzLU04Zw?oc=5": {
+  "title": "The big questions remaining after Anthropic’s blockbuster IPO prospectus - CNBC",
+  "source": "Google News / CNBC",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdVA4YXJPS0JJMXRZSUFBTTc4Z2JwWGpaX2EtQ2c3VjJqYjNLVWhwcXJWb3NhRFFyX2NCWG12VzhwNGlNX1NwVmh3MUczbkJCQms1a0Z4OFgzek5PTll4ajRJS0Npc2hEdmtsNEFBSnRyTEZDaFd6QWdqTnBKa2FKYzRobGtwdw?oc=5": {
+  "title": "Cursor: 5,000 Users Hit by Tampered Claude Code [2026] - https://tech-insider.org/",
+  "source": "Google News / https://tech-insider.org/",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdnVVUDhWYTZ2WjgtVmZpMzhaYzlWcGpXemVHaFpTMWdnaGxvU3lEQW96VnNhb2Q1UjlBZmpPcmNxUlpMdVNncFA0RC1mLTFNRDktYTlrNGlMRHFDLVNwTnMtbWhHMk10TjlxaHAxTzRkVmU3NW5vT1d0eUpuWWJQYg?oc=5": {
+  "title": "Tampered Claude Code Extension: 5,000 Cursor Users [2026] - shattered.io",
+  "source": "Google News / shattered.io",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMikAFBVV95cUxOd0RoZEdVX05GUER3ZV9kSkUxcVVQblZobTh0ZmdLNnlHTFhMdmpYenN6dER2Qy1IeWpNYUhSUlBuREd3bC1ZZUlRdTRTMmtjdEJVYkpnWndjOGNYQmdGWmw2dVJXUmFHeTRRd0oxZUNqMFR6SnZiNHBjX2JlUzgzWHlHYUxNcjZwblNTa0J2bzU?oc=5": {
+  "title": "Cursor Says Tampered Claude Code Extension Reached Up to 5,000 Users - Technology Org",
+  "source": "Google News / Technology Org",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1xjclj9/official_claude_code_vs_code_extension/": {
+  "title": "Official Claude Code VS Code Extension Compromised to Install Persistent SSH Backdoor",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVnQ4Ylo3R2N1ekJRbGFaYko3RF9FN2hsdzlncVA1U1Y1TWxLcTdnUEhyR3NYMmtYaUJYRXBsSlQ0bzZKX3ZVTEdkaFc0eWZYbVFLVXZVbnNxcHROU3NHQkhGQWRHNGc0MnNNaXo5VnktTEZILU9PUTltS0liN2lVUUdaWEU?oc=5": {
+  "title": "Claude Code extension poisoned with persistent SSH backdoor - Help Net Security",
+  "source": "Google News / Help Net Security",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa1FMTmdET2o0WEZsSFJjZVpnZEp2OHExaVlhYzlXc3YtTVZJdGNpSnV0bURtTXliSmpxZXp0ZlQ0TU1ibmN0enhBbC1mT2U5RzUtQTMyeFFXUTNwb0o3V0xCQXVoeUpMWXpFSzRXQkxTRWhhaTAyeEVNNnRxWDFwTVlOQkpuQU9xZkw1RUdHdjBvTHM4Q2dvWGQtM1F4TlFJdnBwYmVrYll5Tk54MEl3?oc=5": {
+  "title": "The two most interesting risks to Anthropic - NPR",
+  "source": "Google News / NPR",
+  "categories": [
+   "商業",
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMib0FVX3lxTE5PeVlzdldiSmVTV0g5cUFZYUZNUmYwMjVBRjlUUWpwalBfbWFtVHhYM1dQT3pTU1BnVE5FWi1ac0hnWTFpQl9EZExWbkFIa3ZFWmxaQTRjdFYxdGtqMFBSS3YwWHotZURmN0lGdFkzUdIBdEFVX3lxTE1ROWFWX21DTFFzVktUcHdQVWdQX0ZwMW1xVmEtMm5MeGdQaklYcVVXYnpIcGFVUmxJY2x4amI1dEtBQ1ZXQ0FtWVNDd3Iwb1B1LXpMVjJnTVo3czlndUN6Z0JxV0FpWU1aUmJ4c0RiNlltZXRp?oc=5": {
+  "title": "Weaponized Claude Code Extension Gives Hackers Persistent Remote Access to Developer Systems - CyberSecurityNews",
+  "source": "Google News / CyberSecurityNews",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYlhhemJJUy1zRzV1V3BYQnZVOEsxR3JDbzF5eUVTNzg3Q180OWxaTFV5alZVNUpHWGdvVWVabEE5OTVmV1dyTjJSTnI1cGctc2VCcldCYzRaMFhfMlpWSE1fTzN5WXh6STNaNDl0TXV1RS1KaW9LTDJaenNfSHo1WG1TLUY4WEJDUmhMRE5OTUR6Z2QwTmMtZTBvYkJHZkpkakRHQThIamxlcDRWQ0U1R3l3TnNvYlJlaktTeWRHVXYwUQ?oc=5": {
+  "title": "Anthropic hacked to deliver remote access trojan to Claude developer laptops worldwide - DoublePulsar",
+  "source": "Google News / DoublePulsar",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMic0FVX3lxTE5QN1Q5bXI1WXMzZlpOLWIxaDJEVGhuTWZxcXRwTWdaXzlETHZYd0pIcGhpdnR3R1dsQXUzWGFoZHUyZUd2UldGMHotYVFHNHFQZjdCWERJektwVXZVMWw5dGc4WldHQktiLXFYVnBST19Ecmc?oc=5": {
+  "title": "Trojanized Claude Code Extension Delivered Persistent SSH Backdoor to Developer Machines - Step Security",
+  "source": "Google News / Step Security",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMigwFBVV95cUxPS2hyRVBYNEpLVEQ2V2IwYk9aZmhtUm9veEV5RE4tZVVONXpIM1Y5Q1hxSWprYjFDR1NXNGF2MjlyeUpod2p6NFNydVltcmpudHoxU2wtUWJxSUdrWUhhanRiTUo3ZzdGNXViN0NyRUdTcHFiVEJfT2Z0VklGczNiOGhzYw?oc=5": {
+  "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor - The Hacker News",
+  "source": "Google News / The Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMihwJBVV95cUxPSUprUEU5bGhBaGJxaTVJcEVhMWppc3U1M1drNGVsMU1yZ0tjT2JLNXBva3BZYU5pN2lGTm1jWi1JUjdBYlE1UHBtYkx0N09iY1BObGVqYVNoVmFocnZXLXRQb193M3JRUnFsZnBEUnFzUmtaVzZLSTlWalNNcW1LNi1yWmZiNTk4VThjWTNWTUxqc0lkZUhLV2tmbkpmQXN3MnRZUWx1QWVCbEZ5N0ltX2VxVm5MUEdWdXVnakhCbV9pcm9ibkcwdW94allaQkRFX1BUa1FuU195N2hwYkFERDc5cGcwcmUyMDdGeTQweEhrdUNDOWZOYVh5UUo4cWQwei1iNDk2VQ?oc=5": {
+  "title": "Suno’s new MCP tool lets users make songs inside ChatGPT, Claude, and Gemini – as its developer API gets a sign-in portal but remains in beta - Music Business Worldwide",
+  "source": "Google News / Music Business Worldwide",
+  "categories": [],
+  "reason": "純第三方產品（Suno）功能發布，Claude 僅為其支援平台之一被提及，非 Anthropic/Claude 本身新聞",
+  "note": "",
+  "summary_override": "Music Business Worldwide 報導：Suno 推出新 MCP 工具，讓使用者可在 ChatGPT、Claude、Gemini 內直接製作歌曲；其開發者 API 也新增登入入口但仍在beta。Claude 只是其支援平台之一，非 Anthropic/Claude 本身的新聞。"
+ },
+ "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSE5Sd2ZzblVoTHk3cWowdjBHOUlGQ25obHhuSkoyell3S2JWTUxqeXFFRnBMbTVaOENobjFKVFJXT0VhQi1VSzVBX0dSM3N5SGJ4N2VWSjhnX3NCQlJsSmdTX1RmSlpEeHN0NFFXVll0MzZRV1lfbUpkcDZ1dk9xQXpSWHBVUVJiMDJCYXgtMmlxMnQ1a2dxcmxBZlFBcTY0SUZMYXZyeHNZX3o1ejRUbkxmN3JqRlYtSnNCRnFiZkswLWx4S2c?oc=5": {
+  "title": "Cursor says up to 5,000 users affected by tampered Claude Code extension - Reuters",
+  "source": "Google News / Reuters",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdDNoVkx3Mmpqa0JHVUJkdjl6RTEyX1RpU0p2eHF3eGxWNm52aEd1NDUxY3ZZLU12QTk0WC1OZkNCR2J6azRkTEd6QVliX1B0V0NzT21RRWRYUTBwQngyNFR4dFNrMmxyeGhwSzE1a1VJdWZ4X0hkcWxlWHgtWFVJcGRSSjczWm04RXJCVHJ5ZGkzQlRmTHJYbVhFQ3FyS0ViLTEw?oc=5": {
+  "title": "Trojanized Claude Code Extension 2.1.313 in Cursor Marketplace Plants SSH Backdoor - Rescana",
+  "source": "Google News / Rescana",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTWwtUFFpSzhQZVNkMkt1SU81UjlXX0c0aXllSVduRy1sd1VFSmRUUFUwUlBuaHZ0SzRBcl80bDNwaU96TmVKWDhncGZHYUdsQVJCQmRRdzZvdHJNRk5TR3liR2xfM3o2N1lEWnNQbl9nN2dORmhxd1JtOExFeVhiZ29oT2hmT2U3UkxVWnplUDg3T0w1NzFSbTF3?oc=5": {
+  "title": "Cursor Discloses SSH Backdoor Attempt in Malicious Claude Code Extension - Unite.AI",
+  "source": "Google News / Unite.AI",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMingFBVV95cUxQQUF2YXlnSkNGTGxNUXFMenVYXzZsb0ZaUERLTFkwWjIxbG5qUTRhUFU3VHdoS1BnTkZNNkdQcUtjUXdsZ0Fyb0xCX0NGZDdLVUI1SG5fYWkzQnhjMG9xTjQtUkFtcFFkMnZfSFAxRW9wUXB1aUNqV21TNi1RWUFtNWljSVpwb0s2ZHVjWmNqVWt0VGhDUVB1Tnd6V2hjQQ?oc=5": {
+  "title": "The Smartest AI Stock to Buy on Anthropic's IPO Filing Isn't Anthropic - Yahoo Finance",
+  "source": "Google News / Yahoo Finance",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMijwFBVV95cUxORHU0amdRYUVlODdNTWg1VElpUGpyUlZ3RWp2MlJ4WnJMTzJaN3pCa2NrM0UtYnpzQndHa0lVdXRiM3V5X3dxa1lBUFNyTEdwdXB4cUNFQnpScmczS2pTM3BPeW45NzVwTllPV21rbTVXejFoOUg4OTZFYWJ4TTdwUlNLM3hodFNlMy1YZEVqUQ?oc=5": {
+  "title": "Anthropic Lifts Claude API Requests to 128 MB, 6.4x Bedrock - FourWeekMBA",
+  "source": "Google News / FourWeekMBA",
+  "categories": [
+   "商業",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMie0FVX3lxTE0zblNkSjA1M2N3Q0hrc0ZQWC1UMEluYXJrbXRUSnlSWENfTWdkUkZ0R3dCX3NhbTFFajZkQi1UdHZsdk1aZ3k2YTVmOTlfQlRWQ2pnT3VBMVIxcldpOE9TSFRHeGMwRFNRQ0QwTXZGUzZWMXk1RTQ5MEZ0SQ?oc=5": {
+  "title": "Anthropic Is a Revolutionary Business, but Its IPO Is Still an Enormous Gamble - Barron's",
+  "source": "Google News / Barron's",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMilwFBVV95cUxOb2tnWEM2QWZjMHNGcnZmR2trcUVNZkZMWG0zWVJsZ1Z2eTN5UUtTS1RvTGprdGtFQVRfbnljemFkYjIzNkZKa2NYQ0JUbHVWcnRxWHVCQ2lYZHd4QXFDdUpRWm55UjhGUjQta1d2YjAzcVBGWDlvRWNrMmdSNHBjck1NVjU4MTc3QmV2cGswSUNJTHFjOW8w?oc=5": {
+  "title": "Anthropic quadruples Claude API request cap to 128 MB from 32 MB - Startup Fortune",
+  "source": "Google News / Startup Fortune",
+  "categories": [
+   "商業",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeFZKQnF5QVdNQlBQRzNMTE5PbjhUSXF0Y0NzYXpyaVJFeGplang3clhEYUtGUF9Fd2tPRjE0VllQVjV0cncwdU9za2RGZkFjQ2ZSTGdpQ3hXSkRBSjVtY2tvTzhEVTYtUkxYQjdfc1A3blJMd0c2ajJTUFp0eGMtOEtMbEk2NGl2Y2hrRFVlSHVaT1VQWi1qaGhLTkoyZVhXWFVFaXpDVEpZQV90MFNSZzN2dTl0WXJWZEhBRzJmUFVpNzI2Smc?oc=5": {
+  "title": "Nvidia in talks to give credit support for Nscale's deal with Anthropic, The Information reports - Reuters",
+  "source": "Google News / Reuters",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://simonwillison.net/2026/Oct/29/api-credits/": {
+  "title": "API credits benefit for eligible ChatGPT subscriptions",
+  "source": "Blog / Simon Willison",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/LocalLLaMA/comments/1xit9g8/research_matching_claude_code_sonnet_55_design/": {
+  "title": "Research: Matching Claude Code + Sonnet 5.5 design quality with DeepSeek/GLM Flash models and a custom harness",
+  "source": "Reddit / r/LocalLLaMA",
+  "categories": [
+   "模型",
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://about.fb.com/news/2026/10/lavenir-appartient-a-tous-meta-et-inca-sassocient-pour-soutenir-les-personnes-aveugles-sourdes-et-aveugles-ou-ayant-une-basse-vision-au-canada/": {
+  "title": "L’avenir appartient à tous: Meta et INCA s’associent pour soutenir les personnes aveugles, sourdes et aveugles ou ayant une basse vision au Canada",
+  "source": "Blog / Meta Newsroom",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://about.fb.com/news/2026/10/the-future-is-for-everyone-meta-and-cnib-partner-to-support-canadians-who-are-blind-deafblind-or-have-low-vision/": {
+  "title": "The Future Is for Everyone: Meta and CNIB Partner to Support Canadians Who Are Blind, Deafblind or Have Low Vision",
+  "source": "Blog / Meta Newsroom",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/": {
+  "title": "Building a multiplayer game world with autonomous Fable-class models",
+  "source": "Blog / Simon Willison",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://openai.com/index/updated-model-spec": {
+  "title": "An updated Model Spec for more capable and beneficial AI",
+  "source": "Blog / OpenAI News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ }
+}
