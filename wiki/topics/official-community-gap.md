@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-30
 
 > **官方補了沒更新**（2026-10-30）
-> - **「跑出破壞性指令」列**：新增 v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`，拒絕寫入工作目錄外路徑，git 層與寫入路徑已補（✅ 不變）。
+> - **它會不會跑出破壞性指令**：新增 v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`，拒絕寫入工作目錄外路徑，官方在這題的對應仍是 ✅（git 層與寫入路徑都已補）。
 > - **「安全邊界」更正範圍**：原「✅ 高度對應」改列 🧪 部分對應——執行層已補，外部內容信任邊界仍缺，見 [[topics/ai-agent-safety]]。
 
 ## 摘要

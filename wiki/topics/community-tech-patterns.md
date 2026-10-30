@@ -37,7 +37,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > - **Plugin / MCP 整合**：kajisho5/ffmpeg-skill，42 個 FFmpeg 操作包成機器可讀合約＋MCP server 的本機影片編輯工具，見 [[topics/community-integrations#2026-10]]。
 > - **記憶與知識管理**：itechmeat/open-second-brain，常駐 Obsidian vault、夜間把重複修正沉澱成帶信心分數偏好，見 [[topics/community-memory#2026-10]]。
 > - **Agent 活動可視化**：YizhengWw/HachimoDock，隨 Claude Code session 即時反應的桌面寵物，見 [[topics/community-interfaces#2026-10]]。
-> - **未歸類**：Ansub/tv-detox，用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，見下方「技術彙整」未歸類節點。
+> - **未歸類**：Ansub/tv-detox，用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，見 [[topics/community-tech-patterns#未歸類]]。
 
 ---
 
