@@ -243,8 +243,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "d12a75fd77691997b6c1723f75a63743e94eb8cd2078b77fceb2bf3aa8f05e86",
-    "length": 202046,
+    "hash": "86e54cb939cbd6225172548f66c7d3e8175f4cbd57ee535ebba3f21f6c06e219",
+    "length": 203154,
     "segments": [
       "\"HTTPS_PROXY\": \"http://proxy.example.com:8080\",",
       "\"NODE_EXTRA_CA_CERTS\": \"/etc/ssl/certs/example-ca.pem\"",
@@ -1410,8 +1410,8 @@
     ]
   },
   "https://claude.com/pricing": {
-    "hash": "74e2ba10c67c41a0b31fb7c8ea1076654fd0507f75af893b7f857169f0ae0934",
-    "length": 22350,
+    "hash": "0768e18adbe58ca98d531a269031ace464e666bee72371c6bf2e74c129a7d584",
+    "length": 22679,
     "segments": [
       "$0.01 / MTok",
       "$0.05 / MTok",
@@ -1517,6 +1517,7 @@
       "Developer docs",
       "Developer docs Console Enterprise Enterprise Overview",
       "Does Claude offer refunds?",
+      "Does Claude offer volume discounts?",
       "Domain capture",
       "Domain verification",
       "Downgrades take effect at the end of your current billing period, and your chats, projects, and files stay with your account whichever plan you&#x27;re on.",
@@ -1697,6 +1698,7 @@
       "What do I get with Claude Pro?",
       "When you choose to pay annually, you&#x27;re billed once up front for the year. If you&#x27;re already on a monthly plan, you can switch to annual in Settings &gt; Billing , and any unused time is credited toward your first annual invoice. See the steps for Pro and Team .",
       "Yes Yes Yes Yes",
+      "Yes, Claude Enterprise and Claude API pricing can be customized for your organization with volume and committed-spend discounts through our sales team. We don&#x27;t publish discount rates, so figures you see elsewhere may not reflect our pricing. Contact sales to learn more.",
       "Yes, annual plans are designed to cost less than monthly subscriptions. Annual subscriptions are available for Pro and Team plans. Enterprise plans are only available as annual subscriptions.",
       "You can cancel anytime, and your plan stays active until the end of your current billing period. To avoid the next charge, cancel at least 24 hours before your renewal date.",
       "You can change your plan any time in Settings.",
@@ -2094,12 +2096,11 @@
     ]
   },
   "https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan": {
-    "hash": "cce4cc6e30573f9b9ca2871b377b0435d1abdb24ba31d1cc31eb8c332a1d9dc7",
-    "length": 6910,
+    "hash": "69d5a67f0cdb3b5d341b04699b2a2b9d40ec83536f544864b263f1125b40df9e",
+    "length": 6905,
     "segments": [
       "All Collections Claude Usage and limits Claude Fable models on your plan Claude Fable models on your plan",
       "Amazon Bedrock",
-      "Change the model, effort, and thinking settings",
       "Check the following:",
       "Claude API and Console",
       "Claude API: Access to Fable 5 and Fable 5.1 is billed at standard API rates. For current per-model pricing, see our API pricing page .",
@@ -2129,6 +2130,7 @@
       "If you’re using Cowork, you’re on the latest version of Claude Desktop.",
       "In Claude on the web, Claude Desktop, and Claude Mobile, select &quot;Fable 5&quot; or “Fable 5.1” from the model picker. In Claude Code, Fable 5 requires version 2.1.170 or later and Fable 5.1 requires version 2.1.255 or later. To use Fable models in Claude Cowork, you need to be on the latest version of Claude Desktop.",
       "It depends on your plan. On the Max plan, premium seats on the Team plan, and premium seats on the seat-based Enterprise plan, Fable models count toward your plan&#x27;s usage limits, and you can use up to 50% of your weekly usage limits on Fable models at no extra cost. On the Pro plan, standard seats on the Team plan, and standard seats on the seat-based Enterprise plan, Fable models run on usage credits rather than your plan&#x27;s usage limits.",
+      "Manage usage credits for paid Claude plans",
       "Max plans, premium seats on Team plans, and premium seats on seat-based Enterprise plans: Fable 5 and Fable 5.1 are included as a standard part of your plan. You can use up to 50% of your weekly usage limits on Fable models at no extra cost. They draw from your plan&#x27;s regular weekly usage limits and use them faster than other Claude models. When you reach your Fable limit, you can keep using Fable models with usage credits, or switch to another model to stay within your plan&#x27;s usage limits.",
       "No. You can use up to 50% of your weekly limit on Fable models, but your use of other models draws from the same usage limits and you can never use more than your weekly limit. You can track both in your usage settings.",
       "On Max plans, premium seats on Team plans, and premium seats on seat-based Enterprise plans, once you use up to 50% of your weekly usage limits on Fable models, you can continue in one of two ways: keep using Fable models with usage credits, or switch to another Claude model to keep working within your plan&#x27;s usage limits.",
