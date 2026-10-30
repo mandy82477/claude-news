@@ -1336,3 +1336,6 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-29T22:08:55Z] Step 0b 冪等閘：news/2026-10-29.md 已存在（17 UTC 班已完成全流程，commit 7c16ac2 chore: cloud daily-news-pipeline-cloud completed 2026-10-29），TARGET_DATE=2026-10-29 為排程模式今日，中止不重跑（22 UTC 班，第三班）。Step 0 昨日缺跑檢查：news/2026-10-28.md 存在，通過，無需本機承接。
 [週五 2026/10/30 本機] Parked branches RESOLVED - origin/cloud-watchdog-push-2026-10-27-unmerged（唯一一行 10-28 01:31:41 Watchdog SENT，master 已有）與 origin/cloud-daily-2026-10-29-unmerged（兩行 10-29 01:31:48，已按時序併回本檔上方）皆只含看門狗 log、無 wiki 成果，併回後刪除遠端分支。附註：10-29 01:31 那則「10-28 17:14 班中途斷」為誤報，該班 completed 紀錄已在本檔。
 [cloud daily-news-pipeline-cloud STARTED 2026-10-30T12:13:13Z]
+[週五 2026/10/30 12:14:07.00] === Agent pipeline start (2026-10-30) ===
+[週五 2026/10/30 12:14:07.00] ABORTED: gathered_items.json date=2026-10-29 items=67，非目標日期的新鮮資料（src/gathered_archive/2026-10-30.json 不存在，GitHub Actions daily-gather 尚未抓到/commit 當日原料）
+[週五 2026/10/30 12:14:07.00] === Pipeline complete (agent, aborted) ===
