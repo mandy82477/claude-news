@@ -434,6 +434,16 @@
   "preview": "Claude Code：v2.1.312：Claude apps gateway 新增 oidc.user_id_claim 設定，可用 sub 以外 id_token claim（如 Entra ID oid）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 topics/claude-code-ex",
   "sedimentedToday": [
     {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方准入",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
       "id": "claude-code-experimental",
       "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"

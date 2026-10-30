@@ -443,6 +443,11 @@
       "pageType": "entity"
     },
     {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
       "pageType": "topic"

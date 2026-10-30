@@ -1850,13 +1850,76 @@ window.WIKI_DATA = {
       "pill": "gray",
       "firstSeen": "",
       "startDate": "2026-04-27",
-      "lastUpdated": "2026-10-25",
+      "lastUpdated": "2026-10-30",
       "lastNewsUpdate": "2026-06-27",
       "updateFreq": "",
       "parent": "topics/ai-agent-safety",
       "summary": "本頁為 ai-agent-safety 的原始條目封存，重點層見主頁。收：時序（2026-05-21 以前，及 2026-09-04 遷入的 2026-06）＋技術彙整（2026-05-18 以前，2026-07-01 遷入；2026-05-25～05-09 五條 2026-09-04 遷入）。",
       "latestHeadline": "",
       "pageRole": "archive",
+      "readerDomains": [
+        "🏛️ 政策/安全"
+      ]
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "pageType": "topic",
+      "name": "模型網攻能力、濫用與防守方准入",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "🏛️ 政策/安全",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-08-04",
+      "lastUpdated": "2026-10-30",
+      "lastNewsUpdate": "2026-10-28",
+      "updateFreq": "",
+      "parent": "topics/ai-agent-safety",
+      "summary": "**這頁答四題：** 模型能做到什麼攻擊；有人拿 Claude 打人，哪些是官方承認的；防守方能申請什麼；通過審核還被擋怎麼辦。 **這些都不擋母頁現況表的任何一列**：那張表問的是別人怎麼打你（ai-agent-safety#現在還擋不住的攻擊），本頁是能力、濫用與准入。政府面見 anthropic-governme…",
+      "latestHeadline": "這頁答四題： 模型能做到什麼攻擊；有人拿 Claude 打人，哪些是官方承認的；防守方能申請什麼；通過審核還被擋怎麼辦。",
+      "pageRole": "child",
+      "readerDomains": [
+        "🏛️ 政策/安全"
+      ]
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "pageType": "topic",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "🏛️ 政策/安全",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-08-04",
+      "lastUpdated": "2026-10-30",
+      "lastNewsUpdate": "2026-10-29",
+      "updateFreq": "",
+      "parent": "topics/ai-agent-safety",
+      "summary": "**這頁答三題：** 哪些洞還開著、我的版本中不中；agent 會不會做出我沒叫它做的事；帳號與憑證怎麼被盜用。 **現在還打得到你的那幾列在母頁** ai-agent-safety#現在還擋不住的攻擊；本頁是逐則證據、修補版本與已修的紀錄。Claude Code 的功能面與版本見 claude-code，評測環境裡的…",
+      "latestHeadline": "這頁答三題： 哪些洞還開著、我的版本中不中；agent 會不會做出我沒叫它做的事；帳號與憑證怎麼被盜用。",
+      "pageRole": "child",
+      "readerDomains": [
+        "🏛️ 政策/安全"
+      ]
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "pageType": "topic",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "🏛️ 政策/安全",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-08-07",
+      "lastUpdated": "2026-10-30",
+      "lastNewsUpdate": "2026-10-28",
+      "updateFreq": "",
+      "parent": "topics/ai-agent-safety",
+      "summary": "**這頁答兩題：** 代理讀進來的外部內容被塞進指令（提示注入）怎麼防、最近多了哪些手法；注入會不會從單次觸發變成自己擴散。 **能先做的事在母頁：** 每個攻擊面能先做的一件事在 ai-agent-safety#現在還擋不住的攻擊，官方立場（沙箱才是安全邊界、Auto 模式不是）在 ai-agent-safety#官…",
+      "latestHeadline": "這頁答兩題： 代理讀進來的外部內容被塞進指令（提示注入）怎麼防、最近多了哪些手法；注入會不會從單次觸發變成自己擴散。",
+      "pageRole": "child",
       "readerDomains": [
         "🏛️ 政策/安全"
       ]
@@ -1871,12 +1934,12 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-04-27",
-      "lastUpdated": "2026-10-29",
+      "lastUpdated": "2026-10-30",
       "lastNewsUpdate": "2026-10-29",
       "updateFreq": "",
       "parent": "",
-      "summary": "**現在最該知道的：** 官方已把 Auto 模式定性為 best-effort convenience control、不是安全邊界，所以「等官方修到 0%」不會發生。你能動的是隔離環境與監看，不是等修補。下方「現在還擋不住的攻擊」列出十個面，以及各自能先做的一件事。 **這一個月的方向：** 提示注入已不是單點漏洞…",
-      "latestHeadline": "現在最該知道的： 官方已把 Auto 模式定性為 best-effort convenience control、不是安全邊界，所以「等官方修到 0%」不會發生。你能動的是隔離環境與監看，不是等修補。下方「現在還擋不住的攻擊」列出十個面，以及各自能先做的一件事。",
+      "summary": "**現在最該知道的：** 官方把 Auto 模式與 deny-list 都定性為不是安全邊界，官方指定的安全邊界是沙箱。所以「等官方修到 0%」不會發生，你能動的是隔離環境與監看。下方「現在還擋不住的攻擊」逐列寫出誰會遇到、能先做的一件事。 **三類問題各住一頁：** 提示注入與自我複製、Claude Code／MCP…",
+      "latestHeadline": "現在最該知道的： 官方把 Auto 模式與 deny-list 都定性為不是安全邊界，官方指定的安全邊界是沙箱。所以「等官方修到 0%」不會發生，你能動的是隔離環境與監看。下方「現在還擋不住的攻擊」逐列寫出誰會遇到、能先做的一件事。",
       "pageRole": "",
       "readerDomains": [
         "🏛️ 政策/安全"
@@ -1892,7 +1955,7 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-07-28",
-      "lastUpdated": "2026-10-27",
+      "lastUpdated": "2026-10-30",
       "lastNewsUpdate": "2026-10-27",
       "updateFreq": "",
       "parent": "topics/ai-agent-safety",
