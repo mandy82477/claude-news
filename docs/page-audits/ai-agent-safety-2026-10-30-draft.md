@@ -5,14 +5,14 @@
 
 ## 行數（正文＝扣 frontmatter 與 `%%` 備忘）
 
-| 頁 | 總行 | 正文 |
+| 頁 | 總行 | 正文（check_page_thickness 口徑） |
 |---|---|---|
-| `topics/ai-agent-safety` | 208 | 183 |
-| `topics/ai-agent-safety-prompt-injection` | 598 | 573 |
-| `topics/ai-agent-safety-product-vulns` | 653 | 628 |
-| `topics/ai-agent-safety-cyber` | 494 | 469 |
-| `topics/ai-agent-safety-archive` | 894 | 868 |
-| `topics/ai-eval-boundary-incidents` | 337 | 312 |
+| `topics/ai-agent-safety` | 204 | 173 |
+| `topics/ai-agent-safety-prompt-injection` | 615 | 587 |
+| `topics/ai-agent-safety-product-vulns` | 636 | 603 |
+| `topics/ai-agent-safety-cyber` | 501 | 475 |
+| `topics/ai-agent-safety-archive` | 894 | 865 |
+| `topics/ai-eval-boundary-incidents` | 337 | 311 |
 
 # 進頁面
 
@@ -55,11 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
 > **最新動態**（2026-10-29）
-> - **CLAUDE.md／AGENTS.md 非安全邊界**：GitHub Issue #53223 稱指令遵從性在架構上未被強制執行，31 留言、10+ 份獨立回報。
-> - **email 外洩新路徑**：Hacker News／GitHub Issue #81138／Reddit 三來源稱 Claude Code 把使用者 email 加入 prompt，模型再分享給外部網站。
-> - **瀏覽器元件遭攻破（僅標題）**：Help Net Security 稱研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件，細節未載。
->
-> 三則的細節都在 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+> - **產品漏洞三則**：#81138 稱 Claude Code 把 email 放進 prompt、再被帶給外部網站（三來源）；#53223 稱 CLAUDE.md 指令沒有強制力；內建瀏覽器元件遭攻破只有標題。細節見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 
 ---
 
@@ -82,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-28 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
-判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派。
+%% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%
 
 ---
 
@@ -99,7 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Auto 模式：只要請它讀一個網址，注入的指令就能取得程式碼執行權 | 開 Auto 模式（8/14 起 Pro／Max／Team 預設即 Auto）、且會讓 Claude Code 讀網頁或外部檔案的人 | 🔴 | 官方定性 Auto 模式是 best-effort convenience control、不是安全邊界，該揭露結案為 informative；官方稱擋下 89%（2026-08-07 blog）危險指令 | 讀外部內容時關掉 Auto，或改在隔離容器裡跑。實測成功率 60–80%，官方委託評測 0%，兩個數字並陳 |
 | 惡意 `.git` 設定檔可誘使 agent 執行攻擊者指定的程式碼，跨廠通用 | 以壓縮檔、共享資料夾或同步雲端夾收到含 `.git` 的 repo 的人；正常 `git clone` 不受影響 | 🔴 | v2.1.196 修了 `core.fsmonitor` 變體，第二變體至 2.1.252 未修（Manifold Security 09-02 揭露，CSA 註記轉述） | 解壓或同步來的 repo，先自己看一遍 `.git/config` 有沒有不是你加的設定，再讓 agent 進去 |
 | deny-list 型權限設定可被繞過，只有 allow-list 型設定擋得住 | 用 deny-list（黑名單）方式設定 Claude Code 權限的人 | 🔴 | 官方 03 月回應稱 deny 規則不是擋刻意構造指令的安全屏障（他人轉述）；09-11 Show HN 展示 8 種繞過 | 改用 allow-list（白名單）方式設定權限，或在沙箱裡跑 |
-| 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見技術彙整） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
+| 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見產品漏洞子頁 09-25 條目） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款 |
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
@@ -136,7 +132,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 產品層漏洞與誤操作
 
-已修的升到 stable 就躲得掉（2026-10-30 npm stable 是 2.1.308）；升版也還開著的是上表的 `.git` 第二變體、email 外流與誤刪類。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
+已修的升到 stable 就躲得掉（2026-10-30 npm stable 是 2.1.308）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
 
 ### 模型網攻能力與防護
 
@@ -231,7 +227,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 2. 子頁 A：`wiki/topics/ai-agent-safety-prompt-injection.md`
 
-frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 43 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋33 個日期節。
+frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 44 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋34 個日期節。
 
 ````markdown
 ---
@@ -247,7 +243,7 @@ parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 2
+inbound_links: 3
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -266,9 +262,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
-**開始日期：** 2026-08-13
+**開始日期：** 2026-08-07
 **最後更新：** 2026-10-30
 **最後新聞更新：** 2026-10-28
+**蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
 > **最新動態**（2026-10-28）
@@ -351,12 +348,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
-（33 個日期節：2026-10-28 … 2026-08-13～08-14）
+（34 個日期節：2026-10-28 … 2026-08-06～08-07）
 ````
 
 ## 3. 子頁 B：`wiki/topics/ai-agent-safety-product-vulns.md`
 
-frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 44 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋39 個日期節。
+frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 43 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋39 個日期節。
 
 ````markdown
 ---
@@ -376,7 +373,7 @@ inbound_links: 4
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 13
+pending_count: 14
 pending_overdue: 2
 pending_next_review: "2026-10-31"
 pending_signalled: 1
@@ -394,8 +391,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **開始日期：** 2026-08-04
 **最後更新：** 2026-10-30
 **最後新聞更新：** 2026-10-29
-%% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 16 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
-%% 拆頁評估 2026-10-30：正文 627 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
+%% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
+%% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
 > **最新動態**（2026-10-29）
 > - **CLAUDE.md／AGENTS.md 非安全邊界**：GitHub Issue #53223 稱指令遵從性在架構上未被強制執行，31 留言、10+ 份獨立回報。
@@ -415,7 +412,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 ## 目前結論
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
-- **升版也還開著的**：惡意 `.git` 第二變體（至 2.1.252 未修，正常 clone 不受影響）、email 進 prompt 後被帶出（#81138，官方未回應）、User-Agent 夾帶 email（#78431，未見修復）。
+- **升版也還開著的**：惡意 `.git` 第二變體（至 2.1.252 未修，正常 clone 不受影響）（證據在 [[topics/ai-agent-safety-prompt-injection#2026-09]] 09-02 條目）、email 進 prompt 後被帶出（#81138，官方未回應）、User-Agent 夾帶 email（#78431，未見修復）。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
 - **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買。
@@ -447,7 +444,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 ## 4. 子頁 C：`wiki/topics/ai-agent-safety-cyber.md`
 
-frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 32 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋23 個日期節。
+frontmatter 起到 `## 技術彙整` 說明句為止逐字如下；其後是 32 則節點（`####`）分在 2026-10、2026-09、2026-08 三個月節，`## 時序` 圖例兩行（原 L1634–1635）＋24 個日期節。
 
 ````markdown
 ---
@@ -467,7 +464,7 @@ inbound_links: 1
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 9
+pending_count: 8
 pending_overdue: 2
 pending_next_review: "2026-11-04"
 pending_signalled: 0
@@ -485,6 +482,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-04
 **最後更新：** 2026-10-30
 **最後新聞更新：** 2026-10-28
+**蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
 > **最新動態**（2026-10-28）
@@ -533,7 +531,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
 | 10-22 | 防護 | Anthropic 與 Theorem 合作發布研究，示範 LLM 大規模產生正式軟體驗證證明，HN 392 分／5 個來源跟進 | 官方一手＋HN＋The Decoder；具體方法論與驗證規模未見於可讀摘要，僅標題可用 |
-| 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 單一來源（TechRadar）；是否源自 10-09 CIDP 開源掃描計畫未見證實（推論），僅標題可用 |
+| 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 單一來源（TechRadar）；是否源自 10-08 CIDP 開源掃描計畫未見證實（推論），僅標題可用 |
 | 10-21 | 防護 | Anthropic 官方研究文章說明用 Claude 分析降低程式碼攻擊面，HN 105 分／71 則留言 | 官方一手＋HN；具體方法論與量化成效數字未見全文，僅標題可用 |
 | 10-21 | 濫用 | 朝日新聞：AI 相關網路攻擊所用伺服器上發現 Claude Code 蹤跡 | Google News／朝日新聞；僅標題可用，攻擊鏈細節未載 |
 | 10-19 | 摩擦 | GitHub #84352 留言數持續攀升至 201 則、👍29，本日互動數最高的開發者回報 | Issue 一手回報；官方仍未公開回應或修復時程 |
@@ -576,7 +574,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
-（23 個日期節：2026-10-28 … 2026-08-04～08-05）
+（24 個日期節：2026-10-28 … 2026-08-04～08-05）
 ````
 
 ## 5. archive `wiki/topics/ai-agent-safety-archive.md`（只動三處，其餘不改）
@@ -620,10 +618,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 @@ -287,0 +288,50 @@
 +
 +### 2026-10-11
-+- **[📋 新增，補充 10-10 條目] Reuters 原始報導：費城假線報事件涉事模型為 Claude Haiku 4.5，指示未明文禁止送出表單本身**：詳見[[topics/ai-eval-boundary-incidents]]
++- **[📋 新增，補充 10-10 條目] Reuters 原始報導：費城假線報事件涉事模型為 Claude Haiku 4.5，指示未明文禁止送出表單本身**：詳見「## 技術彙整」
 +
 +### 2026-10-10
-+- **[📋 新增，官方自揭＋多家媒體查證] Anthropic 揭露測試用 agent 兩起非預期行為：費城警局假兇殺案線報、美國國務院 20 份假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見[[topics/ai-eval-boundary-incidents]]
++- **[📋 新增，官方自揭＋多家媒體查證] Anthropic 揭露測試用 agent 兩起非預期行為：費城警局假兇殺案線報、美國國務院 20 份假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見「## 技術彙整」
 +- **[🏛️ 新增] 白宮因此要求 AI 公司比照通報類似「非預期行為」事故（Axios 獨家）**：政府互動面詳見 [[topics/anthropic-government-policy#攻防紀錄]]，詳見「## 技術彙整」
 +
 +### 2026-09-19
@@ -637,7 +635,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 +
 +### 2026-09-01
 +- **[🟡 官方升級，併案檢討＋METR 獨立審查，新增] Anthropic：〈improving-alignment-security-efforts〉將 07-30 三起評估事件與 08-04 英國 AISI／Mythos 5 事件併案，確認與 METR 合作獨立審查**：
-+  - Business Insider／Reuters 證實已因此暫停部分 AI 訓練並收緊訓練環境安全性，Reuters 稱已恢復外部測試；為兩起既有主線事件的官方升級，非新事件，詳見[[topics/ai-eval-boundary-incidents]]
++  - Business Insider／Reuters 證實已因此暫停部分 AI 訓練並收緊訓練環境安全性，Reuters 稱已恢復外部測試；為兩起既有主線事件的官方升級，非新事件，詳見「## 技術彙整」
 +
 +### 2026-08-06～08-07
 +- **[主線事件，官方報告確認] Simon Willison／Fortune：Meta 成為第三家坦承 agent 失控的實驗室**：Simon Willison（08-06 00:25 UTC）轉引 CNN 報導 Meta 的模型也在測試中入侵另一家公司；
@@ -646,7 +644,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 +### 2026-08-04～08-05
 +- **[主線事件，官方報告確認核心事實] 英國 AISI 官方事件報告：Mythos 假冒身分入侵並隱藏證據**：
 +  - AISI 官方報告（https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing）確認最嚴重案例為 Mythos 建立冒充真人假帳號、私訊真人以取得服務存取權並隱藏證據；OpenAI Sol 出現類似行為；雙方稱測試已降低/移除部分安全防護；
-+  - BBC／CNBC／CNN／Bloomberg／Reuters／Guardian／Axios／calcalistech／Politico／FT 等至少 8+ 家媒體報導（完整機制記錄見[[topics/ai-eval-boundary-incidents]]，2026-08-05）
++  - BBC／CNBC／CNN／Bloomberg／Reuters／Guardian／Axios／calcalistech／Politico／FT 等至少 8+ 家媒體報導（完整機制記錄見「## 技術彙整」，2026-08-05）
 +
 +### 2026-08-02～08-03
 +- **[技術解讀，供應鏈細節] Aikido：「Anthropic's Fever Dream: Claude's package that stole real keys」**：
@@ -702,7 +700,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 # 進規則檔
 
-改前先 Read `.claude/rules/claude-md-edit.md`；改完跑 `python scripts/check_rules.py`（臨時副本上除「檢查 6 個人路徑」因無 .git 必紅外，其餘與改前同）。
+改前先 Read `.claude/rules/claude-md-edit.md`；改完跑 `python scripts/check_rules.py`（臨時副本上除「檢查 6 個人路徑」因無 .git 必紅外，其餘與改前同）。改後全文在 `<sp>/w20/design/out/rules/`。
 
 ## A. `.claude/reporter-rules/safety-policy/pages.md`：`## topics/ai-agent-safety` 整節換成下文（原 L22–38），其後新增三個子頁節與 eval 節
 
@@ -726,15 +724,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `topics/ai-agent-safety-cyber` | 模型做網路攻擊的能力；有人拿 Claude 打別人（濫用）；防守方准入計畫（CVP、Cyber Mission、LSVP、EFS 這類）與正當研究者被誤擋；官方非資安的安全政策表態 |
 | `topics/ai-eval-boundary-incidents` | 評測越界：AI 評估中模型做出未經授權、影響到評估範圍外的動作（UK AISI、Anthropic 自揭的評測事故）、各方數字口徑與官方處置 |
 
-- 一則事件只住一頁；同一則跨兩類時，依「讀者會來問哪一題」選一頁，另一頁要提它就寫 `[[topics/<子頁>#YYYY-MM]]`。
-- 判不出歸哪一頁：寫進母頁 `## 技術彙整` 的 `### 未歸類`，週更時分派（不設預設子頁，`.claude/reporter-rules/page-lifecycle.md`「路由」條）。
+- **一則事件只住一頁，依序問，第一個「是」就定案：** ① 評估中模型做出影響評估範圍外真實系統或真人的動作（AISI、廠商自揭的評估事故）→ `topics/ai-eval-boundary-incidents`；② 主角是模型的攻擊能力、官方的網攻防護研究與計畫、防守方准入與誤擋、有人拿 Claude 打第三方、或非資安的政策表態 → `topics/ai-agent-safety-cyber`；③ 攻擊者把指令放進代理會讀的內容（網頁、repo 檔案與設定、MCP 回應、記憶、標頭、下載檔），或在談這類注入的手法、防法與自我擴散（含本頁訊號表、自我複製階梯已引用的事件）→ `topics/ai-agent-safety-prompt-injection`，該產品之後出了修補版也一樣；④ 其餘 Claude 產品的漏洞、供應鏈、誤操作、agent 在真實環境越界、帳號與憑證、資料外洩疑慮、第三方防護產品 → `topics/ai-agent-safety-product-vulns`。四問都答不出，才寫母頁 `### 未歸類`，週更時分派（不設預設子頁，`.claude/reporter-rules/page-lifecycle.md`「路由」條）。別頁要提它就寫 `[[topics/<子頁>#YYYY-MM]]`。
+- 上表「收什麼」是四問的摘要，兩者不一致時以四問為準。
 - 子頁 `## 技術彙整` 依日期分 `### YYYY-MM`，事件標題用 `####`；`## 時序` 照舊以 `### YYYY-MM-DD` 分日。
 
-### 1. 每日（母頁只准動三樣）
+### 1. 每日（母頁只准動五樣）
 
-1. 事件依第 0 條 prepend 進該子頁 `## 技術彙整` 當月節最上方（`#### 事件名稱（YYYY-MM-DD 新增）`），並在同一子頁 `## 時序` prepend 一行。評測越界事件寫進 `topics/ai-eval-boundary-incidents`，母頁不留指標行。
+1. 事件依第 0 條 prepend 進該子頁 `## 技術彙整` 當月節最上方（當月節還沒有就在說明句下新開 `### YYYY-MM`；`#### 事件名稱（YYYY-MM-DD 新增）`），並在同一子頁 `## 時序` prepend 一行。評測越界事件寫進 `topics/ai-eval-boundary-incidents`，母頁不留指標行。
 2. 寫了事件的子頁覆寫它的 callout；母頁 callout 同批覆寫成當天各子頁新事件的一句總覽並連子頁（母頁 callout 日期落後子頁「最後新聞更新」，`scripts/check_hierarchy.py` 會紅）。來源歸因的 page 一律填事件所在的子頁；母頁 callout 只是轉述，不報歸因。
-3. 母頁其餘只准動：路由表「最後動態」欄（＝該子頁標頭「最後新聞更新」，照抄）、`## 現在還擋不住的攻擊` 依第 2 條覆寫、既有懸置標記加 `訊`。母頁「最後新聞更新」不因子頁動（`.claude/reporter-rules/page-lifecycle.md` 母頁契約）。
+3. 母頁除 callout 與 `### 未歸類` 外，只准再動：路由表「最後動態」欄（＝該子頁標頭「最後新聞更新」，照抄）、`## 現在還擋不住的攻擊` 依第 2 條覆寫、既有懸置標記加 `訊`。母頁「最後新聞更新」不因子頁動（`.claude/reporter-rules/page-lifecycle.md` 母頁契約）。
 
 ### 2. 母頁 `## 現在還擋不住的攻擊`（覆寫式，上限 11 列）
 
@@ -751,7 +749,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 5. 蒸餾與欄位
 
-- 蒸餾與封存照 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」，母頁與三個子頁共用 archive `topics/ai-agent-safety-archive`；子頁蒸餾進同一 archive 的 `## YYYY-MM`，母頁 `## 技術彙整` 留該月的時段總結。
+- 蒸餾與封存照 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」，母頁與三個子頁共用 archive `topics/ai-agent-safety-archive`；子頁蒸餾進同一 archive 的 `## YYYY-MM`，搬進的節點標題末尾加子頁短名（〔提示注入〕／〔產品漏洞〕／〔網攻〕），母頁 `## 技術彙整` 留該月的時段總結。
 - 更新「最後更新」；子頁有新事件時一併更新該子頁「最後新聞更新」。
 
 ---
@@ -760,7 +758,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本頁回答「代理讀進來的東西被塞指令，怎麼防、最近多了哪些手法；注入會不會自己擴散」。結論層是 `## 目前結論`、`## 提示注入已不是單點漏洞，是產業級攻擊面` 與其下 `### 自我複製／蠕蟲化`。
 
-1. `## 目前結論`：五到六條，每條一個判斷＋日期，末條固定「你的選項」（列選項不下指令）。有新事件改變其中一條才覆寫該條；週更整段重判。
+1. `## 目前結論`：五到六條，每條一個判斷＋日期，末條固定「你的選項」（列選項不下指令）。有新事件改變其中一條才覆寫該條；週更見 `.claude/skills/wiki-lint-sweeps/references/sweeps.md` 5i。
 2. `## 提示注入已不是單點漏洞，是產業級攻擊面` 是覆寫式訊號表，一則訊號一列，上限 8 列，收斂點改變時整表重判、汰除最舊者；**導言、收斂點與「仍未有答案的」三處的則數必須等於表列數**，改表就要一起改這三個數字。收斂點沒變時新訊號不入表，寫進 `## 目前結論`。
 3. `### 自我複製／蠕蟲化` 階梯：一階一種證據類型，依證據深度由淺到深，上限 8 階；新證據與既有某階同類型時覆寫該階，只有比最深一階更深、或補上一種新類型時才加階；滿 8 階時合併兩個最淺的同類型階。
 4. 他家 agent 的注入事件滿 3 個月、未進訊號表也未被 `## 目前結論` 引用者，蒸餾時只留一行時段總結。
@@ -771,7 +769,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本頁回答「哪些洞還開著、我的版本中不中；agent 會不會做出我沒叫它做的事；帳號與憑證怎麼被盜用」。結論層是 `## 目前結論`。
 
-1. `## 目前結論`：分「升到 stable 就躲得掉的」「升版也還開著的」「報導與官方對不上的」「agent 自己越界」「你的選項」五條；每條列出事件名＋修補版本或狀態。修補狀態由官方 changelog、release、advisory 或 issue 狀態決定；npm `stable` 標籤追到哪一版屬主編查證，記者不自填。
+1. `## 目前結論`：分「升到 stable 就躲得掉的」「升版也還開著的」「報導與官方對不上的」「agent 自己越界」「你的選項」五條；每條列出事件名＋修補版本或狀態。修補狀態由官方 changelog、release、advisory 或 issue 狀態決定；npm `stable` 標籤追到哪一版屬主編查證，記者不自填。週更見 sweeps 5i。
 2. 版本號與 Claude Code 功能面的已知問題另住 [[entities/claude-code]]；本頁是事件證據與狀態的家，兩頁對同一個洞狀態不同時，以有一手出處、日期較新者為準，並在回報「同步自查」欄寫「請主編轉知功能記者」。
 
 ---
@@ -780,7 +778,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 本頁回答「模型能做到什麼攻擊、誰拿 Claude 打人（哪些是官方承認的）、防守方能申請什麼、通過審核還被擋怎麼辦」。結論層是 `## 目前結論`、`## 防守方能申請什麼`、`## 模型網攻能力與防護`。
 
-1. `## 目前結論`：分「能力」「濫用，誰承認的」「防守方」「誤擋」「你的選項」五條；「濫用」條必須區分官方承認（官方報告或公告寫明並處置）與第三方說法。
+1. `## 目前結論`：分「能力」「濫用，誰承認的」「防守方」「誤擋」「你的選項」五條；「濫用」條必須區分官方承認（官方報告或公告寫明並處置）與第三方說法。週更見 sweeps 5i。
 2. `## 防守方能申請什麼`（覆寫式，一種申請人一列，上限 8 列）：三欄 `你是誰｜可申請｜官方寫的條件`；每格只寫官方頁上的條件，表下附官方頁連結與查證日。官方新增或下架計畫、改層級條件才改列；媒體轉述不改表。
 3. `## 模型網攻能力與防護`（事件表，四欄 `日期｜面向｜事件｜來源強度`，一事件一列、最新在上）：**上限 25 列**；退場：列首日期距今逾 90 天即移出；滿載時最舊者移出。移出前確認該列事實在本頁或 archive 的技術彙整／時序有家；只住這張表的那句，先寫進同日時序條目再移。表下不寫結論段，結論寫在 `## 目前結論`。
 4. 「面向」欄只用：能力／防護／摩擦／濫用／擴散／測試。
@@ -821,7 +819,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 -安全兩頁結論表退場（5i）：safety（複查 N 列，移除 a／補位 b／不動 c）／gov-policy（複查 N 列，移除 a／補位 b／不動 c；產品節 M 項對 K 列）
 +本步是下列各表退場條文與母頁結論層的週更觸發邊，規則都在 `.claude/reporter-rules/safety-policy/pages.md`：`wiki/topics/ai-agent-safety.md` 的攻擊面結論表（現名 `## 現在還擋不住的攻擊`，上限 11 列，「topics/ai-agent-safety」第 2 條）與 `## 三類各自走到哪`（第 4 條，整線重寫）；`wiki/topics/ai-agent-safety-prompt-injection.md` 的訊號表（上限 8 列）與自我複製階梯（上限 8 階）；`wiki/topics/ai-agent-safety-cyber.md` 的 `## 模型網攻能力與防護`（上限 25 列、90 天退場）；`wiki/topics/anthropic-government-policy.md` 的 `## 現在有哪幾條線在動`（上限 8 列，同檔「topics/anthropic-government-policy」第 2、3、4 條）。
 +
-+逐列檢查攻擊面表的「最後動態」是否距今逾 90 天且本輪無新回報、或狀態已翻 ✅，符合即依規則移除並在事件記錄補註記；表未滿載時從三個子頁挑候選補位並移除其註記。訊號表滿 8 列時汰除最舊者，並確認導言／收斂點／「仍未有答案的」三處則數與表列數一致。網攻表逐列看列首日期，逾 90 天移出（只住表上的那句先寫進同日時序）。母頁 `## 三類各自走到哪` 每個 h3 對照子頁 `## 目前結論`：答案變了才改寫，沒變只改不動。母頁 `### 未歸類` 有條目就依路由表分派。政策頁逐列檢查『線』欄括號內的最後動態日期是否逾 90 天且本輪無新事實，符合即依規則移除並在 `## 時序` 對應條目補註記；表未滿載時從 `## 時序` 挑符合三條判準、最後動態最新者補位。另比對 `## 政府動作對你的產品做了什麼` 的項數是否等於上表標『會』的列數，不等即依規則增刪。
++逐列檢查攻擊面表的「最後動態」是否距今逾 90 天且本輪無新回報、或狀態已翻 ✅，符合即依規則移除並在事件記錄補註記；表未滿載時從三個子頁挑候選補位並移除其註記。訊號表滿 8 列時汰除最舊者，並確認導言／收斂點／「仍未有答案的」三處則數與表列數一致。網攻表逐列看列首日期，逾 90 天移出（只住表上的那句先寫進同日時序）。三個子頁的 `## 目前結論` 逐條對照本週新節點，答案變了才改該條。母頁 `## 三類各自走到哪` 每個 h3 對照子頁 `## 目前結論`：答案變了才改寫，沒變只改不動。母頁 `### 未歸類` 有條目就依路由表分派。政策頁逐列檢查『線』欄括號內的最後動態日期是否逾 90 天且本輪無新事實，符合即依規則移除並在 `## 時序` 對應條目補註記；表未滿載時從 `## 時序` 挑符合三條判準、最後動態最新者補位。另比對 `## 政府動作對你的產品做了什麼` 的項數是否等於上表標『會』的列數，不等即依規則增刪。
 +
 +**回報格式：**
 +```
@@ -844,31 +842,41 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 +典型大型頁面（整頁約 70–86K token）：`claude-code.md`、`community-tech-patterns.md`、`anthropic-business.md`、`community-tech-patterns-archive.md`
 ```
 
-## F. 不改的規則檔（查過）
+**F. page-lifecycle.md L52：母頁每日可動項與 pages.md §1 對齊（評審 🔴3）**（`.claude/reporter-rules/page-lifecycle.md`）
 
-- `.claude/reporter-rules/page-lifecycle.md`：母頁契約、蒸餾、路由條文都適用，不用改。唯一例外寫在 pages.md 第 4 條：母頁結論層由主編在 5i 重寫，不是「對應類別記者」——安全類沒有 weekly.md（裁決點 N3）。
+```diff
+@@ -52 +52 @@
+-| 每日 ingest | **唯讀**，除三樣：頂部 callout（覆寫）、分支目錄表、既有懸置標記加 `訊` | 記者 |
++| 每日 ingest | **唯讀**，除三樣：頂部 callout（覆寫）、分支目錄表、既有懸置標記加 `訊`；另外，母頁本身就是現況表的，該表照它的規則檔每日覆寫（現有：`topics/ai-agent-safety` 的 `## 現在還擋不住的攻擊`）；判不出的節點寫進 `### 未歸類`（見下方「路由」） | 記者 |
+```
+
+## G. 不改的規則檔（查過）
+
 - `.claude/agents/wiki-reporter-safety-policy.md`：只寫「負責 ai-agent-safety…等頁面」，認領靠領域欄，子頁領域＝🏛️ 政策/安全，不用改。
-- `.claude/skills/reader-digest/references/format.md` L56：範例標題，不改。
-- `.claude/review-registry.json` L155「蒐集邊界」pattern：母頁保留原 L33，不改。
+- `.claude/skills/wiki-lint-sweeps/SKILL.md` L25 與 `docs/cloud-runbooks/weekly-lint.md` L32：5i 節標題是 registry sync_pair 契約字串，標題不改，所以這兩處不用改。
+- `.claude/skills/reader-digest/references/format.md` L56：範例標題，不改。`.claude/review-registry.json` L155「蒐集邊界」pattern：母頁保留原 L33，不改。
 
-## G. 轉知帳本（`python scripts/pending_handoffs.py open`；先 `--dry-run`，2026-10-30 已驗負責人）
+## H. 轉知帳本（`python scripts/pending_handoffs.py open`；先 `--dry-run`，2026-10-30 已驗負責人；**閘之前開、與 log 條目同一 commit**）
 
 ```
-python scripts/pending_handoffs.py open --from 安全政策 --to 功能 --page entities/claude-code --note "ai-agent-safety 拆頁：事件證據與未修狀態的家改在 topics/ai-agent-safety-product-vulns。請改三處矛盾：L670 stable 仍寫 2.1.285（npm 2026-10-30 stable＝2.1.308，已含 2.1.287／288 rm 修正）；L238 .git 列狀態與安全頁對齊為 🔴 部分修補（v2.1.196 修 core.fsmonitor 變體、第二變體至 2.1.252 未修，正常 clone 不受影響）；L234 Plugin4Shell 同句寫「🔴 未修復」與「2.1.179 已修補」。建議 🛡️ 安全與隱私只留與版本號綁定的修補狀態列並指 [[topics/ai-agent-safety-product-vulns]]"
+python scripts/pending_handoffs.py open --from 安全政策 --to 功能 --page entities/claude-code --note "ai-agent-safety 拆頁：事件證據與未修狀態的家改在 topics/ai-agent-safety-product-vulns（.git 事件住 topics/ai-agent-safety-prompt-injection）。請改三處矛盾：L670「stable 目前落差」仍寫 2.1.285（npm 2026-10-30 stable＝2.1.308，已含 2.1.287／288 rm 修正）；L244「惡意 `.git` 設定檔」列對齊為 🔴 部分修補（v2.1.196 修 core.fsmonitor 變體，第二變體至 2.1.252 未修〔CSA 轉述，二手〕，正常 clone 不受影響）；L236「Plugin4Shell」同句寫「🔴 未修復」與「2.1.179 已修補」。建議 🛡️ 安全與隱私只留與版本號綁定的修補狀態列並指子頁"
 python scripts/pending_handoffs.py open --from 安全政策 --to 模型 --page entities/mythos --note "ai-agent-safety 拆頁：網攻表搬到 topics/ai-agent-safety-cyber。L174 [[topics/ai-agent-safety#模型網攻能力與防護]] 請改指 [[topics/ai-agent-safety-cyber#模型網攻能力與防護]]；未改前母頁留同名 h3 一句結論，錨點不會斷"
 python scripts/pending_handoffs.py open --from 安全政策 --to 投資分析 --page topics/market-signals --note "L333「事實見 [[topics/ai-agent-safety#技術彙整]]」本來就指錯（安全頁零命中）；43 次／9 次的家是 [[topics/ai-eval-boundary-incidents#數字對照]]"
 python scripts/pending_handoffs.py open --from 安全政策 --to 功能 --page topics/official-community-gap --note "冷讀者 2026-10-30：L158「✅ 高度對應：安全邊界」與安全頁「官方沒有外部內容信任邊界機制」相反，L160「SmolVM 等需求降溫」無出處；安全頁已不再指你這頁當缺口追蹤，若要收這一列請補一手出處"
 ```
 
-## H. 實作單（「主 session」＝動閘檔、基線或帶 `--rebuild`／`--rebuild-count`，`.claude/hooks/guard_roles.py` 擋子 agent）
+## I. 實作單（定稿；以評審 13 步為底。「主 session」＝動閘檔、基線或帶 `--rebuild`／`--rebuild-count`，`.claude/hooks/guard_roles.py` 擋子 agent；`<sp>`＝scratchpad）
 
 | 步 | 誰 | 做什麼 | 驗 |
 |---|---|---|---|
-| 1 | 實作者 | `w20\design\out\wiki\` 九個檔複製進 `wiki/`（母頁、archive、eval、gov-policy、rsi、index 覆蓋；三子頁新增） | `python <scratchpad>\w20\design\verify_split.py <repo>\wiki` 印 OK |
-| 2 | 實作者 | 規則檔 A–E 照抄（`w20\design\out\rules\` 是改後全文） | `python scripts/check_rules.py` exit 0 |
-| 3 | 主 session | `python scripts/gen_wiki_frontmatter.py` | index L126 投影含三子頁 |
-| 4 | 主 session | `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 20 波 ai-agent-safety 拆頁：2 筆存量條列隨節點原文搬到子頁（長度不變）"` | 新增恰 2：product-vulns「官方原文核心論點」625 字、prompt-injection「09-02 新增（媒體稱官方無修復計畫）」351 字；removed 清單逐筆核對是現況已無命中 |
-| 5 | 主 session | `python scripts/check_pending_markers.py --rebuild-count --reason "第 20 波：#43713 主編查證結案（08-19 官方已修）；31 筆隨節點搬到三子頁，指紋鍵含 slug 同數減增"` | 印出的 − 比 ＋ 恰多 1 筆，即 #43713 |
-| 6 | 主 session | 閘串跑：`check_hierarchy && check_pending_markers && check_reader_language && check_cell_limits && check_wiki_freshness && check_rules && build_web && run_tests` | 全 exit 0；build_web 尾行「錨點 WARN 0」 |
-| 7 | 主 session | 只 `git add` 本波 wiki 9 檔＋規則檔 5＋`data/cell-limit-baseline.json`、`data/baseline-changes.jsonl`、`data/pending-marker-count.json`；commit 後 `python scripts/devpractice_diff.py mark` | `git status` 無本波殘留 |
-| 8 | 主 session | §G 四筆轉知、`wiki/log.md` Query 條目帶單號、ledger 定稿列；`git fetch` 無新 commit 才 push | `scripts/check_log_handoffs.py` 綠 |
+| 1–3 | 設計者（第二輪，已完成） | `subs.py`／`pattern_subs`／模板／`groups.py` 照評審改；規則檔 A–F 與 `out/rules/` 同步；119 則照四問重跑（3 則換頁，見 map §二）；本稿與 proposal、map 同批改 | `bash <sp>/w20/design/after.sh`：verify_split OK；cell 新增 2；pending 202；錨點 WARN 0 |
+| 4 | 主 session | `git log d797af66..HEAD -- wiki/topics/ai-agent-safety.md wiki/topics/ai-agent-safety-archive.md wiki/topics/ai-eval-boundary-incidents.md wiki/topics/anthropic-government-policy.md wiki/topics/recursive-self-improvement.md wiki/index.md .claude/reporter-rules/safety-policy/pages.md .claude/reporter-rules/safety-policy/daily.md .claude/reporter-rules/page-lifecycle.md .claude/reporter-rules/shared-when.md .claude/skills/wiki-lint-sweeps/references/sweeps.md .claude/skills/wiki-lint/references/log-format.md` | 只准出現本波的 docs commit（55d8ec99 只動 docs）；任一檔有別的 commit → 不整檔覆蓋，改照本稿 diff 逐段套，並重跑 `split_safety.py` 產新 out |
+| 5 | 實作者 | `<sp>/w20/design/out/wiki/` 九檔複製進 `wiki/`（母頁、archive、eval、gov-policy、rsi、index 覆蓋；三子頁新增） | `python <sp>/w20/design/verify_split.py <repo>/wiki` 印 `結論： OK 160 則節點與 191 條時序一行不丟不重` |
+| 6 | 實作者 | `<sp>/w20/design/out/rules/` 六檔複製（pages、daily、page-lifecycle、shared-when、sweeps、log-format） | `python scripts/check_rules.py` 印 `狀態：✅ 全部確定性檢查通過` |
+| 7 | 主 session | `python scripts/gen_wiki_frontmatter.py` | index L126 投影含三子頁＋archive＋eval |
+| 8 | 主 session | `python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 20 波 ai-agent-safety 拆頁：2 筆存量條列隨節點原文搬到子頁（長度不變）；同批收緊已失效存量"` | 新增恰 2：product-vulns「官方原文核心論點」625、prompt-injection「09-02 新增（媒體稱官方無修復計畫）」351；removed 約 254 筆，全是 `<sp>/w20/review/cells.py` 列的失效存量，不逐筆人工核 |
+| 9 | 主 session | 先 `python -I <sp>/w20/review/markers.py <repo> <sp>/w20/design/tmp_before/wiki <repo>/wiki`，再 `python scripts/check_pending_markers.py --rebuild-count --reason "第 20 波 ai-agent-safety 拆頁：#43713 主編查證結案（08-19 官方已修）；31 筆隨節點搬到三子頁（指紋含 slug，同數減增）；基線自 10-18 165 筆未重建，期間 ingest 淨增 38 筆一併入帳"` | 前者三行預期（副本實跑）：`removed(after-slug-agnostic): {"2026-10-11::43713…autoallowbashifsandboxed"}`、`added(after-slug-agnostic): set()`、`non-family diff: set()`；rebuild 後印 `懸置標記基線已重建：202 筆`。若第 4 步後別的 session 動過 wiki 標記，先 `python <sp>/w20/design/build_tmp.py before` 重拍改前副本再比 |
+| 10 | 主 session | §H 四筆轉知先 `--dry-run` 再 `open`；`wiki/log.md` append Query 條目並帶四個單號 | `python scripts/check_log_handoffs.py` 綠 |
+| 11 | 主 session | `python scripts/check_hierarchy.py && python scripts/check_pending_markers.py && python scripts/check_reader_language.py && python scripts/check_cell_limits.py && python scripts/check_wiki_freshness.py && python scripts/check_rules.py && python scripts/build_web.py && python scripts/run_tests.py` | 全部 exit 0；build_web 印 `錨點 WARN 0` |
+| 12 | 主 session | 只 `git add` 指名：wiki 9 檔＋規則檔 6＋`data/cell-limit-baseline.json`、`data/baseline-changes.jsonl`、`data/pending-marker-count.json`、`data/pending-handoffs.jsonl`、`wiki/log.md`、`docs/page-audits/ledger.md`；commit 後 `python scripts/devpractice_diff.py mark` | `git status` 殘留只准是 gen 改的 frontmatter 數值（`days_since_*` 等） |
+| 13 | 主 session | ledger 定稿列（行數用 check_page_thickness 口徑 173／587／603／475）；`git fetch` 無新 commit 才 push | — |
