@@ -13,7 +13,7 @@
 
 > **成本看 token 不看行數。** 行數會騙人：`claude-code.md` 行數只排全庫第四，讀一次卻約 86K token、全庫最貴（長表格列，每行平均 180 字元）；它最常被改的「已知問題」**單節就約 41K**——照節標題讀，等於每天為了改一列 bug 狀態載入 41K。
 
-典型大型頁面（整頁約 70–86K token）：`claude-code.md`、`community-tech-patterns.md`、`anthropic-business.md`、`ai-agent-safety.md`、`community-tech-patterns-archive.md`
+典型大型頁面（整頁約 70–86K token）：`claude-code.md`、`community-tech-patterns.md`、`anthropic-business.md`、`community-tech-patterns-archive.md`
 
 ## 事實更正必回掃
 

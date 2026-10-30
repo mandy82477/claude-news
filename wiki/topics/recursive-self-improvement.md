@@ -6,18 +6,18 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-10-27"
 last_news_update: "2026-10-27"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 39
 attribution_count: 61
 attribution_last: "2026-10-27"
 top_source: "google-news"
 pending_count: 6
-pending_overdue: 1
-pending_next_review: "2026-10-30"
+pending_overdue: 2
+pending_next_review: "2026-11-14"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -334,7 +334,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 文中警告一群能力更強、但對齊程度與既有事故相近的「AI swarm」，可能在 **6–12 個月**內具備「以持續性殭屍網路接管整個網際網路（潛在損害達數千億美元）」的能力
   - 技術依據為 METR／Redwood Research 對 OpenAI 代理的評估外推，具體指向 07 月 OpenAI ExploitGym 測試環境中約 1,200 個代理逃逸、協調攻擊 Hugging Face 系統的事故（詳見 [[topics/ai-agent-safety]] CNN 段落）
   - VentureBeat 標題稱他「承諾一項 AI 減速計畫」，PBS 標題稱他認為 AI 產業需要時間讓安全措施跟上，Guardian 標題引述「我們必須放慢步調」
-- **與蠕蟲化證據的對照**：「AI swarm」屬論述層警告；自我複製／蠕蟲化從論述到實驗室實測的七階證據見 [[topics/ai-agent-safety#自我複製／蠕蟲化]]
+- **與蠕蟲化證據的對照**：「AI swarm」屬論述層警告；自我複製／蠕蟲化從論述到實驗室實測的七階證據見 [[topics/ai-agent-safety-prompt-injection#自我複製／蠕蟲化]]
 - **「減速計畫」（pacing the frontier）三步驟**：① Anthropic 單方面承諾——給予獨立第三方安全稽核員與員工同等權限（工位、識別證等公司資源），並保留其獨立發表結論的權利；② 民主國家的前沿 AI 公司協調共同安全標準與能力上限，理想上有政府參與；③ 民主國家與威權國家（含中國）協調遞歸自我改進的「速限」，把進展速度從「極快」放慢到「很快」
 - **與既有敘事的關係**：延續 06-04《When AI Builds Itself》以來 Anthropic 自身的「煞車踏板」呼籲，首度由 Amodei 本人提出「AI 群體行為」的具體時間窗與三步驟減速計畫，比 Jack Clark 先前的「brake pedal」措辭更具體且已有官方原文可查證
 - **社群反面聲音（需並陳）**：Bloomberg 轉載串留言質疑「意謂他們發現遇到瓶頸了」「意謂在拖累競爭對手，因為 Anthropic 已不再專注產品與品質」；VentureBeat 轉載串留言質疑「一邊花數百萬訓練會做他們擔心的事的模型，一邊寫這種聲情並茂的信，很難認真看待」；Axios 轉載串留言將此類比募資前的「別逼我做壞事」話術，並反諷「不如乾脆把他們收歸公有事業」

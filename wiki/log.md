@@ -8284,3 +8284,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編待辦（記者回報「⚠️ 需主編查證」事項，留待後續查證）：
   - [商業] Claude for Financial Advisors「最高 $4,800 額度」的使用門檻與期限——Citywire 報導僅標題層級，官方未確認
 - 收件匣提醒：`wiki/reader-notes.md` 有 1 筆 ⏳ 項目逾 14 天未結案（2026-08-08｜codebase map／agent 記憶格式規約興趣主題），現由每週回顧持續追蹤中，非積壓無人處理
+
+## 2026-10-30 Query（第 20 波頁面健檢——ai-agent-safety 拆成母頁＋三子頁）
+
+- 裁決（主 session 代判，使用者 `/page-audit-review` 接續原規模；七個裁決點＋N1–N4 記 `docs/page-audits/ledger.md` 2026-10-30 兩條）：[[topics/ai-agent-safety]] 由 2,057 行拆為母頁（正文 173 行，使命句沿用「現在什麼會打到你、官方擋到哪、你能先做什麼——每一類的證據往下鑽」）＋三子頁 [[topics/ai-agent-safety-prompt-injection]]（587 行，提示注入與自我複製）、[[topics/ai-agent-safety-product-vulns]]（603 行，產品層漏洞、誤操作、agent 越界與帳號；逾 600 已在頁內交代不拆理由）、[[topics/ai-agent-safety-cyber]]（475 行，網攻能力、濫用、防守方准入與誤擋）。160 則技術彙整節點與 191 條時序一行不丟不重（`verify_split.py` 獨立核對）；06／07 月 29 則蒸餾進 [[topics/ai-agent-safety-archive]]；評測越界 16 條時序歸位 [[topics/ai-eval-boundary-incidents]]；網攻表與提示注入節下沉，母頁保留同名 h3 各一句結論，22 筆錨點入邊零斷。
+- 主編查證（一手，2026-10-30）：`bash -c` 包 `rm` 繞過已於 2.1.287／2.1.288 修正且 npm stable＝2.1.308 已含→首屏列 ✅ 退場、補位 GitHub #81138 email 進 prompt；GitHub #43713 `autoAllowBashIfSandboxed` 08-19 由 Anthropic 關閉並確認 v2.1.139 起已修→懸置結案（−1）；惡意 `.git` 設定檔（GitSpawn）Claude Code core.fsmonitor 變體 v2.1.196 已修、第二變體未修、正常 clone 不受影響→列改 🔴 部分修補並縮窄受害面；shattered.io「2.1.311 移除 rm 阻擋」與官方 changelog 不符（2.1.309 反而改為直接拒絕）→標 🔎；CVP 三層公告官方日期 **2026-10-06**（結案 10-23 lint 擱置項 6 的日期不一致）、129,000／5,500／33,000／46-50 皆為官方自述；Project Glasswing 是 Anthropic 自己的計畫、非資安公司；Cyber Mission 10-08、CIDP 11 夥伴；自我複製研究 10-12、9 種硬體跑通 8 種、GLM-5.2 端對端 8/8。
+- 規則面：`safety-policy/pages.md` 第 0 條改為四問路由（先 yes 先贏）、事件 prepend 目標改子頁、網攻表上限 25 列／90 天退場、母頁每日可動項與 `page-lifecycle.md` L52 對齊；`daily.md` 負責頁表加三子頁；`sweeps.md` 5i 加子頁目前結論週更（N3：暫由主編，安全類有 weekly.md 時搬回）；`shared-when.md`、`wiki-lint/references/log-format.md` 同步。
+- 轉知帳本：新開 H-d06051（安全政策→功能，claude-code 🛡️ 三處狀態矛盾與分工）、H-4dcafe（→模型，mythos L174 錨點改指 cyber）、H-b16ef0（→投資分析，market-signals L333 錨點本就指錯、家在 eval）、H-bf1dd0（→功能，official-community-gap L158 安全邊界列與一手相反）。
+- 歸因 user-query／安全政策
+

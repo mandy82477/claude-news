@@ -11,7 +11,7 @@
 | 頁面 | 觸發條件 |
 |------|---------|
 | `wiki/topics/anthropic-government-policy.md` | Anthropic 與各國政府互動、出口管制、軍事合約 |
-| `wiki/topics/ai-agent-safety.md` | AI agent 安全事件、漏洞披露、提示注入 |
+| `wiki/topics/ai-agent-safety.md`（母頁）＋三個子頁 | AI agent 安全事件、漏洞披露、提示注入、網攻與濫用。**事件寫進子頁**：查 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」第 0 條路由表——`ai-agent-safety-prompt-injection`（提示注入與自我複製）、`ai-agent-safety-product-vulns`（產品漏洞、誤操作、帳號）、`ai-agent-safety-cyber`（網攻能力、濫用、防守方准入）；判不出寫母頁 `### 未歸類`。寫了事件的子頁覆寫它的 callout，母頁 callout 同批覆寫成一句總覽並連子頁；母頁其餘只准動第 1 條列的三樣，「最後新聞更新」不動。來源歸因的 page 一律填事件所在的子頁，母頁 callout 不報歸因 |
 | `wiki/topics/ai-eval-boundary-incidents.md`（`ai-agent-safety` 子頁） | 評測越界事件：AI 評估中模型做出未經授權、影響到評估範圍外的動作（UK AISI、Anthropic 自揭的評測事故）、數字口徑與官方處置 |
 | `wiki/topics/recursive-self-improvement.md` | AI 遞歸自我改進、全球監管呼籲 |
 
@@ -21,11 +21,11 @@
 
 ## 每日動作
 
-兩頁各有自己的逐步順序與結論表契約，逐條照 `.claude/reporter-rules/safety-policy/pages.md` 執行：
+各頁有自己的逐步順序與結論表契約，逐條照 `.claude/reporter-rules/safety-policy/pages.md` 執行：
 
 - `anthropic-government-policy`：`## 攻防紀錄` prepend ＋ `## 時序` prepend ＋ 四張結論節的覆寫與退場
-- `ai-agent-safety`：事件 prepend 進 `## 技術彙整` ＋ `## 時序` prepend ＋ 三張結論表的覆寫與退場
-- `ai-eval-boundary-incidents`：評測越界事件寫進這一頁（路由見 `.claude/reporter-rules/safety-policy/pages.md`「子頁路由」）；母頁 `ai-agent-safety` 只在 `## 時序` 留一行指標
+- `ai-agent-safety` 樹：事件依路由表 prepend 進子頁 `## 技術彙整` 當月節＋該子頁 `## 時序` ＋ 子頁結論層與母頁現況表的覆寫與退場（第 1–2 條與各子頁節）
+- `ai-eval-boundary-incidents`：評測越界事件寫進這一頁（路由見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」第 0 條）；母頁不留指標行
 - `recursive-self-improvement`：無專屬結論表，照頁面既有結構 prepend 並更新兩個日期欄位
 
 記者無 web 工具：官方一手來源、訴訟文件與 GitHub issue 狀態的查證屬主編層，遇到只能提列並在「同步自查」欄回報。

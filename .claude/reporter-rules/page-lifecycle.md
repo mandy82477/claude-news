@@ -49,7 +49,7 @@ hierarchy 最自然的衰退是母頁退化成目錄——那正是本原則要�
 
 | 時點 | 母頁准動什麼 | 誰 |
 |---|---|---|
-| 每日 ingest | **唯讀**，除三樣：頂部 callout（覆寫）、分支目錄表、既有懸置標記加 `訊` | 記者 |
+| 每日 ingest | **唯讀**，除三樣：頂部 callout（覆寫）、分支目錄表、既有懸置標記加 `訊`；另外，母頁本身就是現況表的，該表照它的規則檔每日覆寫（現有：`topics/ai-agent-safety` 的 `## 現在還擋不住的攻擊`）；判不出的節點寫進 `### 未歸類`（見下方「路由」） | 記者 |
 | 每週 lint | **結論層整線重寫**（照 `community-large-codebase-workflow` 契約：固定分層、行數硬上限、只寫「哪條子故事的答案變了」、不 append、引子頁 wikilink 不複製數字） | 對應類別記者，觸發邊登記在該類 `weekly.md` |
 
 - 母頁自身「最後新聞更新」**不因子頁動**（動了會與 `check_wiki_freshness.py` 第 2 類互斥、擋 web build）；「母不落後子」改驗 **callout 日期 ≥ 子樹最新新聞**（`scripts/check_hierarchy.py`，掛 `run_tests.py`）；列表排序與訊號用子樹聚合值（frontmatter `days_since_news_subtree`）

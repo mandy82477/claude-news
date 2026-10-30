@@ -2,8 +2,8 @@
   "_note": "字元上限機械閘的存量基線（頁 → [{kind, anchor, max_len}]）。check_cell_limits.py 以「同頁同類型同錨點且長度 ≤ max_len」判存量，其餘判新增 FAIL。只准變緊：--rebuild 只能移除或收緊條目；要新增必須 --allow-grow --reason 並寫入 data/baseline-changes.jsonl，src/tests/test_baseline_ratchet.py 以 HEAD 版比對看守。記者不得 rebuild。",
   "_format": 2,
   "_baseline_set": "2026-09-05",
-  "_pages": 40,
-  "_hits": 852,
+  "_pages": 41,
+  "_hits": 600,
   "_migrated": "2026-09-25",
   "_migrated_from_hits": 915,
   "pages": {
@@ -15,21 +15,6 @@
       }
     ],
     "entities/boris-cherny": [
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-08",
-        "max_len": 215
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-17",
-        "max_len": 222
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-20",
-        "max_len": 273
-      },
       {
         "kind": "list_item",
         "anchor": "2026-08-03",
@@ -44,11 +29,6 @@
       }
     ],
     "entities/claude-code": [
-      {
-        "kind": "list_item",
-        "anchor": "\"fork\" subagent 是否每次工具呼叫",
-        "max_len": 332
-      },
       {
         "kind": "list_item",
         "anchor": "--dangerously-skip-permi",
@@ -191,28 +171,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Claude Cowork Linux 沙箱啟動",
-        "max_len": 392
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude Desktop 1.1.3189",
-        "max_len": 296
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude Desktop 1.1.3189",
-        "max_len": 225
-      },
-      {
-        "kind": "list_item",
         "anchor": "Claude Desktop/Cowork 缺",
         "max_len": 221
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude Projects 對話消失（202",
-        "max_len": 464
       },
       {
         "kind": "list_item",
@@ -233,11 +193,6 @@
         "kind": "list_item",
         "anchor": "Cowork 工作區啟動失敗「Failed to",
         "max_len": 327
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Cowork 建立 10GB VM bundle",
-        "max_len": 226
       },
       {
         "kind": "list_item",
@@ -267,7 +222,7 @@
       {
         "kind": "list_item",
         "anchor": "Fable 5 於 Max 方案自 2026-0",
-        "max_len": 563
+        "max_len": 542
       },
       {
         "kind": "list_item",
@@ -296,11 +251,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "MCP servers/hooks/plugin",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
         "anchor": "Max 20（$200/月）方案升級至 v2.1",
         "max_len": 312
       },
@@ -318,11 +268,6 @@
         "kind": "list_item",
         "anchor": "OAuth 登入逾時失敗，auth.anthro",
         "max_len": 217
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Opus 4.7 thinking summar",
-        "max_len": 201
       },
       {
         "kind": "list_item",
@@ -347,7 +292,7 @@
       {
         "kind": "list_item",
         "anchor": "Pro 方案新開 session 預設開啟 1M",
-        "max_len": 537
+        "max_len": 527
       },
       {
         "kind": "list_item",
@@ -357,7 +302,7 @@
       {
         "kind": "list_item",
         "anchor": "Session 額度上限時無法順暢接續／功能請求",
-        "max_len": 598
+        "max_len": 595
       },
       {
         "kind": "list_item",
@@ -377,7 +322,7 @@
       {
         "kind": "list_item",
         "anchor": "Windows Desktop app",
-        "max_len": 487
+        "max_len": 406
       },
       {
         "kind": "list_item",
@@ -427,7 +372,7 @@
       {
         "kind": "list_item",
         "anchor": "v2.1.150 起滑鼠滾輪失效，滾動動作誤判為",
-        "max_len": 266
+        "max_len": 222
       },
       {
         "kind": "list_item",
@@ -531,11 +476,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "功能請求：內建 Slack MCP connec",
-        "max_len": 242
-      },
-      {
-        "kind": "list_item",
         "anchor": "功能請求：印度地區專屬定價方案（INR 計價）（",
         "max_len": 231
       },
@@ -548,11 +488,6 @@
         "kind": "list_item",
         "anchor": "功能請求：訊息佇列模式——排入佇列而非中斷進行中",
         "max_len": 220
-      },
-      {
-        "kind": "list_item",
-        "anchor": "功能請求：跨 context compactio",
-        "max_len": 342
       },
       {
         "kind": "list_item",
@@ -661,11 +596,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "版本管理不透明（2026-04-27 指控）",
-        "max_len": 391
-      },
-      {
-        "kind": "list_item",
         "anchor": "畫面/終端機閃爍（GitHub issue #7",
         "max_len": 210
       },
@@ -677,117 +607,22 @@
       {
         "kind": "list_item",
         "anchor": "自訂 agent 支援的 frontmatter",
-        "max_len": 301
+        "max_len": 295
       },
       {
         "kind": "list_item",
         "anchor": "記憶過多導致品質退步（2026-06-22 指控",
-        "max_len": 480
+        "max_len": 205
       },
       {
         "kind": "list_item",
         "anchor": "選用 opus-plan 模型時，即使已達成 1",
-        "max_len": 313
+        "max_len": 303
       },
       {
         "kind": "list_item",
         "anchor": "預設選擇依序：teammate 派的 → for",
         "max_len": 251
-      },
-      {
-        "kind": "list_item",
-        "anchor": "［META］bypassPermissions",
-        "max_len": 313
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-01#c2",
-        "max_len": 188
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-01#c2",
-        "max_len": 133
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-01#c2",
-        "max_len": 130
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-08#c2",
-        "max_len": 217
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-09#c2",
-        "max_len": 181
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-14#c2",
-        "max_len": 445
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-17#c2",
-        "max_len": 798
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-20#c2",
-        "max_len": 323
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-21#c2",
-        "max_len": 649
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-22#c2",
-        "max_len": 1171
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-23#c2",
-        "max_len": 1054
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-24#c2",
-        "max_len": 963
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-25#c2",
-        "max_len": 458
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-26#c2",
-        "max_len": 627
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-28#c2",
-        "max_len": 534
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-29#c2",
-        "max_len": 736
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-30#c2",
-        "max_len": 485
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-07-31#c2",
-        "max_len": 312
       },
       {
         "kind": "table_cell",
@@ -1191,11 +1026,6 @@
     "entities/dario-amodei": [
       {
         "kind": "list_item",
-        "anchor": "2026-07-06",
-        "max_len": 210
-      },
-      {
-        "kind": "list_item",
         "anchor": "2026-08-03",
         "max_len": 338
       },
@@ -1273,11 +1103,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "服務中斷：Anthropic Status 通報",
-        "max_len": 227
-      },
-      {
-        "kind": "list_item",
         "anchor": "範圍確認擴大：化學／生物提問同樣被拒（2026-",
         "max_len": 390
       },
@@ -1304,26 +1129,6 @@
         "kind": "list_item",
         "anchor": "Anthropic 官方部落格發文 Improv",
         "max_len": 260
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Google News 轉載 CNBC 標題「T",
-        "max_len": 211
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Oxide 加入 Project Glasswi",
-        "max_len": 251
-      },
-      {
-        "kind": "list_item",
-        "anchor": "密碼學研究：Anthropic 研究團隊使用 C",
-        "max_len": 254
-      },
-      {
-        "kind": "list_item",
-        "anchor": "查證結果：Fed 與財政部於 4 月與主要銀行執",
-        "max_len": 230
       },
       {
         "kind": "list_item",
@@ -1489,7 +1294,7 @@
       {
         "kind": "list_item",
         "anchor": "KED Global",
-        "max_len": 279
+        "max_len": 203
       },
       {
         "kind": "list_item",
@@ -1745,11 +1550,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "「57 分」的 benchmark 名稱",
-        "max_len": 232
-      },
-      {
-        "kind": "list_item",
         "anchor": "官方 BrowseComp 對比圖表換版（爭議已",
         "max_len": 413
       }
@@ -1787,531 +1587,18 @@
         "max_len": 140
       }
     ],
-    "topics/ai-agent-safety": [
-      {
-        "kind": "list_item",
-        "anchor": "08-01 新增（法律定性）",
-        "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "08-01 新增（肇因）",
-        "max_len": 507
-      },
-      {
-        "kind": "list_item",
-        "anchor": "08-04 新增（媒體持續轉載）",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "08-04 新增（官方進一步定性）",
-        "max_len": 328
-      },
-      {
-        "kind": "list_item",
-        "anchor": "08-04 新增（技術解讀）",
-        "max_len": 653
-      },
-      {
-        "kind": "list_item",
-        "anchor": "08-29 補充：具名研究者與攻擊方法論：資安研",
-        "max_len": 321
-      },
-      {
-        "kind": "list_item",
-        "anchor": "09-01 新增（官方併案升級）",
-        "max_len": 746
-      },
-      {
-        "kind": "list_item",
-        "anchor": "09-01 新增（官方併案升級）",
-        "max_len": 384
-      },
-      {
-        "kind": "list_item",
-        "anchor": "09-02 新增（Guardian",
-        "max_len": 486
-      },
-      {
-        "kind": "list_item",
-        "anchor": "09-02 新增（Guardian",
-        "max_len": 281
-      },
-      {
-        "kind": "list_item",
-        "anchor": "09-02 新增（媒體稱官方無修復計畫）",
-        "max_len": 351
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-29 更新（自保教學跟進）",
-        "max_len": 352
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證",
-        "max_len": 294
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證原文結果",
-        "max_len": 213
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證原文結果，先前的分類需",
-        "max_len": 248
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證官方新聞稿結果",
-        "max_len": 202
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證廠商原文結果",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證結果",
-        "max_len": 247
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-10 查證結果（已結案）",
-        "max_len": 353
-      },
-      {
-        "kind": "list_item",
-        "anchor": "AISI 測試環境的關鍵限定條件",
-        "max_len": 273
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Benzinga／Business Inside",
-        "max_len": 454
-      },
-      {
-        "kind": "list_item",
-        "anchor": "CNN 報導補充兩項細節（原文 2026-08-",
-        "max_len": 730
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #78431",
-        "max_len": 486
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Meta 加入：第三家坦承 agent「失控」的",
-        "max_len": 408
-      },
-      {
-        "kind": "list_item",
-        "anchor": "The Register",
-        "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[/btw 指令] Fable 5 /btw 指",
-        "max_len": 275
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[Bing 廣告詐騙] Notebookchec",
-        "max_len": 312
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[CEO 指令不遵從] TBIJ",
-        "max_len": 434
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[CVE 披露] CVE-2026-55407",
-        "max_len": 490
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[Cisco 警告] The Times of",
-        "max_len": 404
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[Claude Code 本身漏洞，僅標題] T",
-        "max_len": 273
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[symlink 瑕疵] gbhackers.c",
-        "max_len": 371
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[中國網路間諜指控] Security Affa",
-        "max_len": 352
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[主線事件，官方報告確認] Simon Will",
-        "max_len": 303
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[主線事件，官方報告確認核心事實] 英國 AIS",
-        "max_len": 353
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[主線事件，新增，具名機構自揭] TechCru",
-        "max_len": 272
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[使用者回報，Claude Code 功能面，非",
-        "max_len": 469
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[俄語駭客 jailbreak] cyberpr",
-        "max_len": 418
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[僅標題] Decrypt",
-        "max_len": 275
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[合作動態] Industrial Cyber",
-        "max_len": 356
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[合作動態] Industrial Cyber",
-        "max_len": 324
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體持續轉載，僅標題] Forbes／Tech",
-        "max_len": 382
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體擴散第二天，肇因新增] Cybersecu",
-        "max_len": 218
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體用詞光譜／社群保留態度，補充例證] Ars",
-        "max_len": 441
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體跟進，08-10 事件補充] eSecur",
-        "max_len": 240
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方修補聲稱] Tech Times",
-        "max_len": 276
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方安全政策表態] Fox Business",
-        "max_len": 205
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方揭露，本日最大新聞] Anthropic",
-        "max_len": 494
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方研究成果，非漏洞] Anthropic",
-        "max_len": 329
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方研究正式發布] Anthropic〈Pat",
-        "max_len": 397
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方進一步定性，僅標題] Dark Readi",
-        "max_len": 290
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[技術解讀，供應鏈細節] Aikido",
-        "max_len": 479
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[新手法揭露] Simon Willison",
-        "max_len": 280
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[極度保守處理，廠商未確認] Simon Wil",
-        "max_len": 309
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[法律定性新角度] WIRED",
-        "max_len": 204
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[澳洲企業風險] Anthropic 發現駭客利",
-        "max_len": 306
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[瀏覽器擴充功能疑慮] TechRadar",
-        "max_len": 345
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[灰市轉售詐術，兩來源合併] Help Net",
-        "max_len": 222
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[用詞保守處理] digitimes",
-        "max_len": 392
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[第三方 repo 遭植入惡意程式碼] Hack",
-        "max_len": 296
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[能力面追蹤，僅標題] ProPublica",
-        "max_len": 297
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[資訊嚴重不足] EIN News",
-        "max_len": 385
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[防護生態] Radware 將 Claude",
-        "max_len": 296
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[隱私外洩，跨最多獨立媒體來源] BBC 等至少",
-        "max_len": 334
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[隱藏連結外洩] Hackread",
-        "max_len": 385
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[🔴 已確認，具名研究者＋在野利用雙重確認，新增",
-        "max_len": 213
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[🟡 官方升級，併案檢討＋METR 獨立審查，新",
-        "max_len": 242
-      },
-      {
-        "kind": "list_item",
-        "anchor": "cbsnews.com、The Hill、CNB",
-        "max_len": 398
-      },
-      {
-        "kind": "list_item",
-        "anchor": "事件分類：屬 Anthropic 官方主動安全政",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "可信度評估（低優先度）",
-        "max_len": 217
-      },
-      {
-        "kind": "list_item",
-        "anchor": "可信度評估：高——Anthropic 官方研究部",
-        "max_len": 275
-      },
-      {
-        "kind": "list_item",
-        "anchor": "威脅模型定位：本篇屬制度/治理層級的前瞻性論述（",
-        "max_len": 204
-      },
-      {
-        "kind": "list_item",
-        "anchor": "媒體交叉確認：BBC「Anthropic AI",
-        "max_len": 476
-      },
-      {
-        "kind": "list_item",
-        "anchor": "媒體框架（大量轉載，標題普遍用「駭入/escap",
-        "max_len": 1300
-      },
-      {
-        "kind": "list_item",
-        "anchor": "媒體用詞光譜（補充例證）",
-        "max_len": 289
-      },
+    "topics/ai-agent-safety-product-vulns": [
       {
         "kind": "list_item",
         "anchor": "官方原文核心論點：「Models are imp",
         "max_len": 625
-      },
+      }
+    ],
+    "topics/ai-agent-safety-prompt-injection": [
       {
         "kind": "list_item",
-        "anchor": "官方原文（權威來源，優先採用其措辭）",
-        "max_len": 513
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質判斷：屬 Anthropic 官方主動揭露的",
-        "max_len": 231
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質判斷：屬新增攻擊向量，且跨廠通用（涵蓋 Co",
-        "max_len": 228
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質判斷：此為功能面已知問題（見 entitie",
-        "max_len": 266
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質判斷：漏洞本身屬第三方健身房 API 的授權",
-        "max_len": 205
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質判斷：與 Anthropic 無關——涉事方",
-        "max_len": 294
-      },
-      {
-        "kind": "list_item",
-        "anchor": "性質澄清（重要）：這是 Anthropic 官方",
-        "max_len": 247
-      },
-      {
-        "kind": "list_item",
-        "anchor": "披露者：Tenet Security（AI ag",
-        "max_len": 261
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源（至少 8 家獨立媒體，2026-07-",
-        "max_len": 937
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：ABC News（澳洲，2026-08",
-        "max_len": 279
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：Anthropic 官方研究部落格「D",
-        "max_len": 245
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：Ars Technica（經 Goog",
-        "max_len": 461
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：EIN News（經 Google N",
-        "max_len": 211
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：Help Net Security「D",
-        "max_len": 296
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：Simon Willison 部落格「",
-        "max_len": 219
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：TechCrunch「Anthropi",
-        "max_len": 340
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：gbhackers.com；標題「At",
-        "max_len": 317
-      },
-      {
-        "kind": "list_item",
-        "anchor": "揭露來源：simonwillison.net（2",
-        "max_len": 297
-      },
-      {
-        "kind": "list_item",
-        "anchor": "核心事實（官方報告字面內容）",
-        "max_len": 299
-      },
-      {
-        "kind": "list_item",
-        "anchor": "標題訊息：報導標題稱工業資安公司 Nozomi",
-        "max_len": 227
-      },
-      {
-        "kind": "list_item",
-        "anchor": "機制（文件層級）：repo 內 committe",
-        "max_len": 220
-      },
-      {
-        "kind": "list_item",
-        "anchor": "權威來源（優先採用）",
-        "max_len": 317
-      },
-      {
-        "kind": "list_item",
-        "anchor": "監管反應：Reuters（2026-07-31",
-        "max_len": 237
-      },
-      {
-        "kind": "list_item",
-        "anchor": "社群保留態度（補充例證）",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "社群對媒體框架的質疑",
-        "max_len": 327
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與其他報導用詞的差異（處理原則）",
-        "max_len": 286
-      },
-      {
-        "kind": "list_item",
-        "anchor": "與既有 08-13～08-14 turf war",
-        "max_len": 206
-      },
-      {
-        "kind": "list_item",
-        "anchor": "關聯報導：ProPublica（經 Google",
-        "max_len": 276
+        "anchor": "09-02 新增（媒體稱官方無修復計畫）",
+        "max_len": 351
       }
     ],
     "topics/ai-talent-flow": [
@@ -2342,11 +1629,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "entities/teresa-carlson",
-        "max_len": 214
-      },
-      {
-        "kind": "list_item",
         "anchor": "⟨Q-01⟩ 已查證（2026-08-13）",
         "max_len": 263
       },
@@ -2357,116 +1639,6 @@
       }
     ],
     "topics/anthropic-business": [
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-15 投資人會議三方同步",
-        "max_len": 250
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-19 仿效 SpaceX 信貸額",
-        "max_len": 265
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-23 Alphabet 持股市值",
-        "max_len": 327
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-24 ETF 版 SpaceX",
-        "max_len": 262
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-07-28 超越消費品牌市值",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-13 2 兆美元估值三方同日報導",
-        "max_len": 299
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-14 CFO 投資人會議",
-        "max_len": 233
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-15 Q2 營收超過 115 億",
-        "max_len": 247
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-15 泡沫討論評論",
-        "max_len": 229
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-16 過度炒作評論",
-        "max_len": 273
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-18 ARR 站上 650 億美",
-        "max_len": 353
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-18 上市前信用額度",
-        "max_len": 238
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-18 超級投票權",
-        "max_len": 319
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-20 Amazon 持股 4,0",
-        "max_len": 474
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-20 發行規模比肩 SpaceX",
-        "max_len": 236
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-21 AI 反彈情緒風險因素",
-        "max_len": 277
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-21 散戶投資人教育",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-22 募資 1,000 億美元",
-        "max_len": 228
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-23 Damodaran 營收門",
-        "max_len": 387
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-24 SpaceX 對照矛盾",
-        "max_len": 329
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-24 治理權分析",
-        "max_len": 253
-      },
-      {
-        "kind": "list_item",
-        "anchor": "2026-08-26 TAM 30 兆美元",
-        "max_len": 636
-      },
       {
         "kind": "list_item",
         "anchor": "AMD（07-22）",
@@ -2660,7 +1832,7 @@
       {
         "kind": "list_item",
         "anchor": "TechRadar：「AI 界的 Apple」：",
-        "max_len": 432
+        "max_len": 430
       },
       {
         "kind": "list_item",
@@ -2679,138 +1851,18 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[CSR/公益，AI for Science 專",
-        "max_len": 311
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[CSR／教育投資] FOX13 Memphis",
-        "max_len": 276
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[Fable 5 出口管制全面解除 + 商務部正",
-        "max_len": 462
-      },
-      {
-        "kind": "list_item",
         "anchor": "[IPO 前瞻／財務狀況，重大，四方同步報導]",
-        "max_len": 227
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO 敘事，兩則標題層級報導，無新增查證數字",
-        "max_len": 386
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO 敘事，媒體擴散確認] Yahoo Fi",
-        "max_len": 207
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO 財務前瞻，重大] SemiAnalys",
-        "max_len": 423
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO 進程加溫，跨三媒體同步] Anthro",
-        "max_len": 241
+        "max_len": 220
       },
       {
         "kind": "list_item",
         "anchor": "[IPO/估值敘事，正反論戰] Hacker N",
-        "max_len": 408
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IREN 股價聯動] IREN 股價盤後漲 5",
-        "max_len": 239
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[TeraWulf 融資後續] TeraWulf",
-        "max_len": 353
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[人才/資本外溢，個人投資者身分，非公司戰略合作",
-        "max_len": 328
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[人才動態，詳見 ai-talent-flow]",
-        "max_len": 350
+        "max_len": 404
       },
       {
         "kind": "list_item",
         "anchor": "[人才／文化] Axios 獨家",
         "max_len": 527
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[今日最大商業事件] Anthropic 與 T",
-        "max_len": 731
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業內部觀感] Salesforce 員工對公",
-        "max_len": 306
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業客戶擴張] LTM 宣布與 Anthrop",
-        "max_len": 268
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業成本管控產品化] Anthropic 推出",
-        "max_len": 476
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業採用擴張案例，公益計畫延續] Claude",
-        "max_len": 328
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業據點擴張，資訊量少] Claude Sci",
-        "max_len": 317
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業服務案例] Channel Dive 報導",
-        "max_len": 256
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業服務模式觀察] 大型科技公司大規模派遣員工",
-        "max_len": 555
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業軟體採購行為變化] 小型企業改用 Clau",
-        "max_len": 249
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業雲端整合] Anthropic 新增 En",
-        "max_len": 356
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[估值對照，第三方分析，資訊量少] Mornin",
-        "max_len": 302
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[估值飆升，流動性成疑] Anthropic 次",
-        "max_len": 519
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[公部門客戶擴展] Anthropic 將 Cl",
-        "max_len": 340
       },
       {
         "kind": "list_item",
@@ -2824,16 +1876,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[分析師觀察，未確認] Jefferies 分析",
-        "max_len": 259
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[勞動市場爭議] Mission Local",
-        "max_len": 367
-      },
-      {
-        "kind": "list_item",
         "anchor": "[商業風險，升級] TechCrunch／Bus",
         "max_len": 274
       },
@@ -2844,68 +1886,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[基礎設施擴張] AFR 報導 Anthropi",
-        "max_len": 390
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體擴散] Hacker News 延燒 07",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體擴散，非新事件] TechCrunch 跟",
-        "max_len": 279
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體擴散，非新事件] The New Stac",
-        "max_len": 456
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體擴散，非新政策] Dayton Daily",
-        "max_len": 376
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[媒體重複報導，非新事件] Spectrum N",
-        "max_len": 233
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[官方降本論述] Anthropic 官員",
-        "max_len": 346
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[實體製造業滲透] Anthropic 與 US",
-        "max_len": 320
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[已查證] Axios〈Anthropic's",
-        "max_len": 272
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[已查證] WSJ〈A Backlash Aga",
-        "max_len": 324
-      },
-      {
-        "kind": "list_item",
         "anchor": "[市場滲透] Bloomberg.com",
         "max_len": 335
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[帳務錯誤重大揭露] Anthropic 證實",
-        "max_len": 407
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[廣告爭議，內容首度揭露，補上 07-18 缺口",
-        "max_len": 449
       },
       {
         "kind": "list_item",
@@ -2929,11 +1911,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[戰略合作，媒體重複報導] Yahoo Fina",
-        "max_len": 214
-      },
-      {
-        "kind": "list_item",
         "anchor": "[戰略合作，官方一手來源] Anthropic",
         "max_len": 251
       },
@@ -2949,118 +1926,13 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[投資人回報訊號，單一分析師觀點] BofA",
-        "max_len": 395
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[投資人效應分析，標題層級] Fortune",
-        "max_len": 386
-      },
-      {
-        "kind": "list_item",
         "anchor": "[投資人／股權] Business Inside",
         "max_len": 296
       },
       {
         "kind": "list_item",
-        "anchor": "[政府/機構評估階段，非確定採用] AI New",
-        "max_len": 234
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[新事件，獨立於著作權和解案] 田納西大學對 A",
-        "max_len": 202
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[新事件，獨立於著作權和解案，兩來源交叉確認]",
-        "max_len": 365
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[晶片代工洽談媒體跟進，確定性未升級] upi.",
-        "max_len": 287
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[晶片代工洽談，初步報導] The Inform",
-        "max_len": 303
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[晶片代工洽談，媒體持續追蹤] TechRepu",
-        "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[治理擴充] 前聯準會主席 Ben Bernan",
-        "max_len": 461
-      },
-      {
-        "kind": "list_item",
         "anchor": "[法律風險，🔎 查無新訴訟證據] The Pos",
         "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[澳洲投資具體金額首度揭露] Anthropic",
-        "max_len": 589
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[生命科學拓展] Anthropic 宣布將自行",
-        "max_len": 301
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[生命科學拓展，跟進確認] The Verge",
-        "max_len": 397
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[生態周邊整合] 第三方路由服務 MixRout",
-        "max_len": 322
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[生態整合深化] Claude 成為 Googl",
-        "max_len": 275
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[生技製藥布局回顧，彙整性報導，無新事實] En",
-        "max_len": 385
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[產品/工具，資訊量少，與上則不同產物] Ant",
-        "max_len": 261
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[產業級對照] TechCrunch",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[私募資本外溢效應，初步報導] Bloomber",
-        "max_len": 349
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[競品陣營表態] Elon Musk 公開稱 A",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[競品陣營表態] Palantir CEO Al",
-        "max_len": 602
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[競品陣營表態延續，詳見 competitor-",
-        "max_len": 257
       },
       {
         "kind": "list_item",
@@ -3074,53 +1946,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[資本市場連動] Fable 5 解禁消息推動",
-        "max_len": 276
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[資訊過於單薄，未建立正式條目] Yahoo F",
-        "max_len": 257
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[運算力供給側，媒體持續追蹤，未見新金額] Me",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[配額爭議，社群訊號，詳見 pricing，部分",
-        "max_len": 291
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[重大，CSR/經濟政策研究，官方公告] Ant",
-        "max_len": 415
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[重大，商業模式擴張] Anthropic 與",
-        "max_len": 302
-      },
-      {
-        "kind": "list_item",
         "anchor": "[重大，戰略層級，硬體自主] Anthropic",
         "max_len": 394
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[重大，法律/財務] 美國法官正式核准 Anth",
-        "max_len": 454
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[重大，法律/財務，多媒體跟進] 著作權和解案執",
-        "max_len": 628
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[雲端夥伴依賴度收斂風險] Microsoft",
-        "max_len": 669
       },
       {
         "kind": "list_item",
@@ -3135,7 +1962,7 @@
       {
         "kind": "list_item",
         "anchor": "創投人士質疑 IPO 前景",
-        "max_len": 234
+        "max_len": 232
       },
       {
         "kind": "list_item",
@@ -3517,11 +2344,6 @@
     "topics/community-cost": [
       {
         "kind": "list_item",
-        "anchor": "Token / 成本優化",
-        "max_len": 205
-      },
-      {
-        "kind": "list_item",
         "anchor": "來源： GitHub Search（今日日報「⭐",
         "max_len": 204
       },
@@ -3896,11 +2718,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Geeky Gadgets 教學文",
-        "max_len": 203
-      },
-      {
-        "kind": "list_item",
         "anchor": "HN 討論質疑 AISLE「curl 六個 CV",
         "max_len": 275
       },
@@ -3923,26 +2740,6 @@
         "kind": "list_item",
         "anchor": "Reddit r/ClaudeAI 週熱門",
         "max_len": 263
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/MachineLearning",
-        "max_len": 276
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Show HN：以 JPEG gain-map",
-        "max_len": 311
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Simon Willison 引述 Drew B",
-        "max_len": 299
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Simon Willison 引述 Linus",
-        "max_len": 361
       },
       {
         "kind": "list_item",
@@ -4152,36 +2949,6 @@
     "topics/enterprise-tool-tracker": [
       {
         "kind": "list_item",
-        "anchor": "Alberta 省政府具名採用",
-        "max_len": 323
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Alibaba 傳出禁止員工職場使用 Claud",
-        "max_len": 506
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Alibaba 禁令生效日確認為 7/10",
-        "max_len": 324
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Alibaba 禁用 Claude Code 事",
-        "max_len": 304
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Cognizant 與 Anthropic 擴大",
-        "max_len": 450
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Grasshopper Bank 成為首家列入",
-        "max_len": 216
-      },
-      {
-        "kind": "list_item",
         "anchor": "PicPay（09-04）",
         "max_len": 244
       },
@@ -4197,18 +2964,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[❓ 未確認，單一非主流媒體，疑似與蒸餾指控混淆",
-        "max_len": 466
-      },
-      {
-        "kind": "list_item",
         "anchor": "[❓ 未確認，新增追蹤] Shopify 執行長",
         "max_len": 240
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[企業採購認知層，傳聞，2026-09-05 自",
-        "max_len": 341
       },
       {
         "kind": "list_item",
@@ -4227,11 +2984,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "[市場反應追蹤，非新增合作事實] Cogniza",
-        "max_len": 218
-      },
-      {
-        "kind": "list_item",
         "anchor": "[新增企業採用，具名高等教育機構] Duke U",
         "max_len": 201
       },
@@ -4239,16 +2991,6 @@
         "kind": "list_item",
         "anchor": "⟨Q-01⟩ 已查證（2026-08-13）",
         "max_len": 288
-      },
-      {
-        "kind": "list_item",
-        "anchor": "小型企業改用 Claude 自建工作流取代 Sa",
-        "max_len": 238
-      },
-      {
-        "kind": "list_item",
-        "anchor": "阿里巴巴禁用 Claude 改用內部工具 Qod",
-        "max_len": 409
       }
     ],
     "topics/official-community-gap": [

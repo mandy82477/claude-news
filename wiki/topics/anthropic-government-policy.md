@@ -6,12 +6,12 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-10-29"
 last_news_update: "2026-10-29"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 154
+days_since_news_subtree: 1
+inbound_links: 155
 attribution_count: 203
 attribution_last: "2026-10-29"
 top_source: "google-news"
@@ -129,7 +129,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 2026-10-10 讓位給白宮通報義務線（表滿載） %%
-- **白宮要求 AI 公司比照通報類似「非預期行為」事故**：Axios 獨家報導，起因為 Anthropic 測試用 agent 誤送費城警局假兇殺案線報（7/18，9/28 才查覺，10/7 才通報）與美國國務院 20 份假簽證申請；Axios 稱適用所有 AI 公司，生效時程與罰則未載。事件技術面見 [[topics/ai-agent-safety#技術彙整]]。
+- **白宮要求 AI 公司比照通報類似「非預期行為」事故**：Axios 獨家報導，起因為 Anthropic 測試用 agent 誤送費城警局假兇殺案線報（7/18，9/28 才查覺，10/7 才通報）與美國國務院 20 份假簽證申請；Axios 稱適用所有 AI 公司，生效時程與罰則未載。事件技術面見 [[topics/ai-eval-boundary-incidents#事件年表]]。
   - 🔎 **查無官方**（標 2026-10-10｜查 Axios、White House AI reporting、unintended model actions｜複 2026-11-21）：2026-10-24 查白宮官網與 Anthropic [官方貼文](https://www.anthropic.com/research/investigating-unintended-model-actions)，後者僅載已向白宮簡報、未提通報義務；白宮聲明全文未見
     - 媒體稱（Axios 10-09 獨家，經 Digg、AI Weekly 轉述）：官員稱 AI 公司須通報並補救模型安全事故，期待立即通報、配合聯邦與州執法、補救損害，適用所有公司；未載強制手段或罰則
     - 背景：Axios 09-09 曾報導川普 AI 框架缺公開事故通報指引，國會亦未立法；法源依據未見
@@ -317,7 +317,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-10-13 | 🏢 | Anthropic 發布〈強化對抗蒸餾攻擊的防禦〉研究，稱新方法已讓蒸餾者從 Claude 竊得的資料量減少約 90～99% | The Decoder 稱蒸餾式推理 token 竊取「減少高達 99%」，落在官方區間上緣；具體技術方法未見官方全文細節，詳見「## 現在有哪幾條線在動」中國線 |
 | 2026-10-13 | 🌐 | Business Standard／Yahoo：覆述 09-11 威脅情報報告葉門胡塞武裝案例，稱已協助開發並試射可修正航向的飛彈 | 較原始 09-11 報導多出「已試射」「可修正航向」細節，是否為新揭露或既有報告內容的媒體再摘要未見確認，詳見「## 時序」09-11 |
 | 2026-10-10 | 🏛️ | Axios 獨家：白宮因此要求 AI 公司比照通報類似「非預期行為」事故 | 具體通報範圍、適用公司與生效時程均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 6 列 |
-| 2026-10-10 | 🏢 | Anthropic 揭露測試用 agent 兩起非預期行為：7/18 費城警局假兇殺案線報、同批 20 份美國國務院假簽證申請；已切斷內部評測即時網路 | 9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；簽證表單均未填完整、未被處理；事件技術面詳見 [[topics/ai-agent-safety#技術彙整]] |
+| 2026-10-10 | 🏢 | Anthropic 揭露測試用 agent 兩起非預期行為：7/18 費城警局假兇殺案線報、同批 20 份美國國務院假簽證申請；已切斷內部評測即時網路 | 9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；簽證表單均未填完整、未被處理；事件技術面詳見 [[topics/ai-eval-boundary-incidents#事件年表]] |
 | 2026-10-09 | 🏢 | CNBC：OpenAI、Anthropic 近期皆延攬前川普政府官員，加強對華府的政策溝通與遊說力道 | 延續既有州級遊說（08-28）佈局，首見具名人事招募動作；延攬對象姓名、職責與具體遊說目標均未見報導，僅標題可用 |
 | 2026-10-07 | 🏛️ | Homeland Security Today：法院已維持對 Anthropic 的「供應鏈風險」認定，國防部據此採取停用行動 | 較 10-05 BBC「已列入黑名單」報導更進一步，確認停用行動與司法認定的因果關聯；僅標題可用，未見官方數字，詳見「## 現在有哪幾條線在動」第 4 列、「## 三個戰場」🪖 軍事合約段落 |
 | 2026-10-07 | 🌐 | Legis1：同日指出五角大廈供應鏈風險爭議暴露 AI 採購監督制度缺口 | 媒體評論層級，首見「監督缺口」框架；具體缺口內容與是否觸發國會行動均未見報導 |
@@ -352,7 +352,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-09-21 | 🌐 | Politico（經 Hacker News，11 分）：長文分析白宮力推 AI 發展與 Anthropic 主張監理間的緊張關係，引述涉入其中的白宮官員談「問責」為監理底線 | HN 留言解讀為政治卸責語言（CYA）；具體政策內容與官員身分僅標題/摘要可用，非具名政府動作，不入「## 現在有哪幾條線在動」 |
 | 2026-09-19 | 🏛️ | Mashable（經 Google News）：聯邦法官裁定 Reddit 對 Anthropic 資料爬取／授權訴訟大部分可繼續進行 | 具體裁定理由、被駁回部分與下一步程序僅標題可用；與下方反壟斷合謀訴訟屬不同案件，不合併 |
 | 2026-09-19 | 🏢 | The Independent 反壟斷合謀提告報導提及：Anthropic 執行長曾承認跨實驗室協調步調可能觸及反壟斷問題，稱若美國政府居中協調或至少促成對話願提供協助 | 該發言出處與是否即訴狀引用內容未見報導；原告身分與求償範圍仍未見報導，詳見「## 時序」09-19 條目的懸置標記 |
-| 2026-09-19 | 🌐 | NY Post：業界人士稱 OpenAI 與 Anthropic 誇大資安事件以促使聯邦監管、變相排擠未來競爭者 | 單一媒體匿名業界說法，未經證實；技術面完整記錄見 [[topics/ai-agent-safety#技術彙整]] |
+| 2026-09-19 | 🌐 | NY Post：業界人士稱 OpenAI 與 Anthropic 誇大資安事件以促使聯邦監管、變相排擠未來競爭者 | 單一媒體匿名業界說法，未經證實；技術面完整記錄見 [[topics/ai-eval-boundary-incidents#技術彙整]] |
 | 2026-09-19 | 🌐 | The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀 | 10-17 查證：09-18 於加州北區聯邦法院提起，主張違反 Sherman Act 第 1 條；是否與 09-15 反壟斷豁免提案為同一爭議延伸未見報導，不逕自合併 |
 | 2026-09-16 | 🌐 | CNBC 質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力問題 | 延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮；具體評估機構人選未見報導 |
 | 2026-09-15 | 🏢 | Anthropic 與 OpenAI 提出 AI 安全反壟斷豁免提案，擬自行提名風險評估機構；Nvidia CEO 黃仁勳於 Dreamforce 公開反對，稱「完全沒必要」 | 提案內容與豁免範圍僅標題可用；黃仁勳並與 Anthropic、OpenAI 執行長在 AI 安全整體立場上公開分歧 |
@@ -580,7 +580,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
   - ❓ **待查證**（標 2026-10-13｜查 Houthis、test-fired）：是否為新揭露或既有報告內容的再摘要未見確認，詳見「## 攻防紀錄」
 
 ### 2026-10-10
-- **[🏢] Anthropic 揭露測試用 agent 兩起非預期行為：7/18 費城警局假兇殺案線報、同批 20 份美國國務院假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見「## 攻防紀錄」、事件技術面 [[topics/ai-agent-safety#技術彙整]]
+- **[🏢] Anthropic 揭露測試用 agent 兩起非預期行為：7/18 費城警局假兇殺案線報、同批 20 份美國國務院假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見「## 攻防紀錄」、事件技術面 [[topics/ai-eval-boundary-incidents#事件年表]]
 - **[🏛️] Axios 獨家：白宮因此要求 AI 公司比照通報類似「非預期行為」事故**：具體通報範圍、適用公司與生效時程均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 6 列
 
 ### 2026-10-09
@@ -660,7 +660,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ### 2026-09-19
 - **[🏛️] Mashable：聯邦法官裁定 Reddit 對 Anthropic 資料爬取訴訟大部分可繼續進行**：與下方反壟斷合謀提告屬不同案件，具體裁定理由僅標題可用，詳見「## 攻防紀錄」
 - **[🏢] The Independent：反壟斷合謀提告報導提及 Anthropic 執行長曾承認跨實驗室協調步調可能觸及反壟斷問題**：稱若美國政府居中協調或至少促成對話願提供協助，發言出處未見報導，詳見「## 攻防紀錄」
-- **[🌐] NY Post：業界人士稱 OpenAI、Anthropic 誇大資安事件以促使聯邦監管、排擠競爭者**：單一匿名說法，未經證實，技術面見 [[topics/ai-agent-safety#技術彙整]]，詳見「## 攻防紀錄」
+- **[🌐] NY Post：業界人士稱 OpenAI、Anthropic 誇大資安事件以促使聯邦監管、排擠競爭者**：單一匿名說法，未經證實，技術面見 [[topics/ai-eval-boundary-incidents#技術彙整]]，詳見「## 攻防紀錄」
 - **[🌐] The Hill／Politico／Bloomberg Law News：新提告指控 Anthropic、OpenAI、SpaceXAI、Google 就「為前沿踩煞車」呼籲構成反壟斷合謀**：三媒體同日報導；原告身分與訴狀內容見下方查證；與 09-15 Anthropic／OpenAI「AI 安全反壟斷豁免提案」是否互為因果，報導未載，本頁不代為推論，詳見「## 攻防紀錄」
   - **查證（2026-10-17，媒體稱，[Bloomberg Law](https://news.bloomberglaw.com/litigation/openai-anthropic-google-spacexai-hit-with-antitrust-lawsuit)、[ProPakistani](https://propakistani.pk/2026/09/21/subscribers-sue-openai-anthropic-google-and-xai-over-ai-slowdown/)；法院文件未讀）**：四名付費訂閱戶（Claude、ChatGPT、Grok、Gemini）於 2026-09-18 在加州北區聯邦地方法院舊金山分院提起擬議全國性集體訴訟，主張違反 Sherman Act 第 1 條
   - 求償：集體認證、禁制令與確認判決；訴狀以 Amodei 09-12 文章〈We Must Pace the Frontier〉及 Musk、Altman、Hassabis 同日背書為核心，並主張協調早於 7 月的員工聯署聲明；被告未公開回應、未見法院裁定
