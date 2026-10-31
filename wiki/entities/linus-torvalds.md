@@ -4,20 +4,20 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-24"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 9
+days_since_news: 11
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 9
+days_since_news_subtree: 11
 inbound_links: 3
 attribution_count: 7
 attribution_last: "2026-10-20"
 top_source: "google-news"
-pending_count: 2
-pending_overdue: 2
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Linux 核心維護者具名使用 Claude Code 開發 kernel 分支
 **首次出現：** 2026-10-12
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-20
 
 > **最新動態**（2026-10-20）
@@ -50,7 +50,10 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 - **2026-10-19**：Hacker News（16分）轉載 The New Stack 完整報導，揭露此 10-patch 分支原為擱置 18 個月的 page cache 效能瓶頸，合成測試跑出 23 倍吞吐量提升；Torvalds 提醒真實環境增益遠小於測試數字
 - **2026-10-15**：GBHackers 報導標題稱 Claude Code 協助他處理長期的 kernel 記憶體效能瓶頸（僅標題；[GBHackers News](https://news.google.com/rss/articles/CBMisgFBVV95cUxQekNxOXU5bTUyR2JqM1NfWjFXVjhidjlFY3h2YXdoSFQ1WFQ3NzlIMFhXeW5XQ2dEeWl3SmV5bFN3OWp2X0ZzRWtiOHA4WFVpRndBTGpKNUNjZ0pXZEUtbEE3a0xYVk1GYmhOZ3NCY2JGbmZRTnBCczFYaHloU2dJbk44TmcwR2h4cTB4TjM0aVlfSFI5MVltSDZ6RFJMWmkzRGN0aEg1dTlweTg4SmFYVGNn0gG3AUFVX3lxTE9QOVlvdWg1ZG1Ca2VUUkdJTDJhMEc3aDEwWXZMTTVETmQtVVJTc21aaW1CX3VhSGZfbU0xU00tbW5ma0NkcHhBNHBJVVR6U0ZfZmxxYmY1Znhtb0Z2NWZocGlxWG5rdkNfUU5uUERJVTBDV0x2RnFIR2dzTXVIek9MTjhXY3l3SXBOUHRBajFJTF9JMGJvTVJQM19RVWM1Nlg4LWZKQWJPUXBISjQ2Q2RXdGduMlRidw?oc=5)）
 - **2026-10-08／10-14**：布拉格 Linux Maintainers Summit 後，核心社群取消 `Assisted-by` 揭露要求；Torvalds 稱禁 AI 工具「utterly stupid」，如同禁編譯器（[The Register](https://www.theregister.com/ai-and-ml/2026/10/14/linux-kernel-devs-drop-obligatory-confession-of-ai-tool-usage/5303140)、[PC Gamer](https://www.pcgamer.com/software/linux/linux-kernel-drops-ai-contribution-disclosure-rule-as-linus-torvalds-says-banning-the-tech-would-be-utterly-stupid/)、[heise](https://www.heise.de/en/news/Linux-may-drop-AI-code-labels-Torvalds-uses-LLMs-too-11490773.html)）
-- **2026-10-14**：審查者在 patch 中發現一處競態條件（race condition）（[The New Stack](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5)）；❓ **待查證**（標 2026-10-14｜查 36Kr、3X Performance Surge）｜**36Kr 稱效能提升 3 倍**：單一中國媒體轉述，已掃日報至 2026-10-23 無後續；官方頁面未查證（[36Kr](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Sejh2bUFBMmZGTzR5QWhaSThBRFl2OTNuSVJfdGhnOEQxWGlqY0xPRDNuejVoX1dyVjZsR3NwSEV0NEJGVDBmNTZkU1hXRUVmNmFJ?oc=5)）
+- **2026-10-14**：審查者在 patch 中發現一處競態條件（race condition）（[The New Stack](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWNVVYdFVjSlNnZUd1SkhrMk5XQzJ2ajhWLTFGbm5Wbk9HalI2R3BMYjRFQlRITnc0LWxKMWJTeXZod0t6OFBsd1kySWxmaEUzdkRwWFNGd2ZJOHJ3aF9UXw?oc=5)）
+  - **效能提升約 3 倍（媒體稱）**：36Kr、Linuxiac／Linux Today（標題「Sees 3x Speedup」）等具名媒體皆稱約 3 倍，指特定負載（筆電、ext4、部分核心緩解關閉下的多執行緒讀取）。
+  - 另有轉述原始數字約 1000 萬→3300 萬次讀取／秒（8 執行緒，約 3.3 倍）；The New Stack 的 23 倍為另一口徑（合成測試吞吐量），兩者不矛盾但不可互換。
+  - 分支未合併、審查已發現 race。2026-10-31 查證：經 WebSearch 結果交叉比對，Torvalds cover letter 一手原文未能直讀，故為媒體數字、非官方數字。
 - **2026-10-13**：分支整理成 patch 貼上核心信件列表，附上述 cover letter（[StartupFortune](https://startupfortune.com/linus-torvalds-used-claude-code-to-rewrite-how-linux-reads-cached-files/)）
 - **2026-10-12**：重新整理 `torvalds/linux.git` 時意外出現分支 `noref-filemap-read-with-llm`（[Phoronix](https://www.phoronix.com/news/Linus-Torvalds-Claude-Code)）
 
@@ -80,7 +83,7 @@ Linus 在送上 Linux 核心信件列表的 patch cover letter 親口寫道：�
 - 2026-10-15：GBHackers 報導標題稱 Claude Code 協助 Linus 處理長期的 kernel 記憶體效能瓶頸（僅標題）（來源：Google News／GBHackers News）
 - 2026-10-14：核心社群取消 `Assisted-by` 揭露要求，Torvalds 稱禁 AI 工具「utterly stupid」，如同禁編譯器或文字編輯器（來源：The Register、PC Gamer、heise）
 - 2026-10-14：這個已送上 Linux 核心信件列表的 Claude Code 協作分支，審查者發現其中一處競態條件（race condition），能否進主線待追蹤修正是否補上（來源：Google News／The New Stack）
-- 2026-10-14：❓ **待查證**（標 2026-10-14｜查 36Kr、3X Performance Surge）｜**36Kr 稱 kernel 分支效能提升達 3 倍**：36Kr 報導稱該 Claude Code 協作分支效能實測提升達 3 倍，為單一中國媒體轉述，尚未見 Linus 本人或其他來源證實具體數字（來源：Google News／36Kr）
+- 2026-10-14：**36Kr 稱分支效能提升約 3 倍**：2026-10-31 查證，Linuxiac／Linux Today 等亦稱約 3 倍（特定負載：多執行緒讀取），與 10-19 The New Stack 的合成測試 23 倍口徑不同；屬「媒體稱」，Torvalds cover letter 原文未直讀（來源：Google News／36Kr）
 - 2026-10-13：這個 Claude Code 協作分支正式整理成 patch 貼上 Linux 核心信件列表，Linus 在 cover letter 親自寫下程式碼、測試程式與效能測量皆在自己指示下用 Claude Code 完成、在自己機器上測得（來源：Hacker News／StartupFortune）
 - 2026-10-12：重新整理 `torvalds/linux.git` 時意外發現新分支 `noref-filemap-read-with-llm`；Phoronix 判讀為使用 Claude Code 開發 kernel 新功能，與他過去僅在主線推 master 的習慣不同（來源：Hacker News／Phoronix）
 - 2026-10-08：布拉格 Linux Maintainers Summit 討論 AI 貢獻；Torvalds 要求貢獻者懂自己送的程式碼，人類仍須負 `Signed-off-by` 責任，AI agent 不能簽（來源：The Register、heise）

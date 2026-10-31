@@ -3,15 +3,15 @@ page: "topics/community-pattern-trends"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-25"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-24"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
+days_since_news_subtree: 7
 inbound_links: 21
 attribution_count: 0
 attribution_last: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-10-25
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-24
 
 > **最新趨勢觀察**（2026-10-24）
@@ -45,6 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **和 [[topics/community-tech-patterns]] 差在哪**：那頁是每一種做法的原始證據型錄，模式概覽表標出每一類的成熟度與最後動態；本頁只挑已經收斂成方向的，按時間排、講回頭檢查什麼。
 - **其他鄰居**：大 repo 四面牆現在該怎麼做、官方零件在哪，見 [[topics/community-large-codebase-workflow]]；觀念爭論見 [[topics/community-tech-discussions]]；7 月以前的最早出處見 [[topics/community-tech-patterns-archive]]。
+- **Skill 與角色檔**：Skill 本身怎麼寫、採用證據怎麼看，見 [[topics/community-skills]]。
 - **兩把尺**：標題的「方向已收斂」量的是做法有沒有收斂成一個方向，不是用的人多不多；採用量看 patterns 模式概覽表的成熟度（✅⚡⏳），兩者可以不同——例如規格驅動方向已收斂，採用仍屬新興。
 - **最近一次動靜**：標題上的日期是最後一個做法進來的那天；近 30 天本頁與 patterns 都沒有新做法進來，標「↘ 淡出」——淡出不代表做法失效。
 - **🔥 熱度（注意力，非技術力）**：寫了 HN 分數的條目照分數分級——🔥🔥🔥🔥 ≥100、🔥🔥🔥 30–99、🔥🔥 10–29、🔥 <10（2026-09-23 判定）；標「估」的沒有 HN 分數，是收錄當時依來源數與互動量的估計。
@@ -339,4 +340,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]（多數趨勢圍繞的官方產品）
 - [[entities/boris-cherny]]（Loops 哲學影響多條趨勢的設計取向）
 
-%% 週更撈料水位：週更已收至 2026-10-23（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。   2026-10-24 撈料：行動裝置遠端控制的 ios-mcp、iCTRL 是 agent 反向操作手機，不推進趨勢八；Claude Code 團隊官方 code review 部落格（10/16）談壓低人力審查時間，不推進趨勢五；memtrace-public、ai-data-extractor 只是記憶類再多一個工具，不寫進趨勢九。 %%
+%% 週更撈料水位：週更已收至 2026-10-30（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。   2026-10-24 撈料：行動裝置遠端控制的 ios-mcp、iCTRL 是 agent 反向操作手機，不推進趨勢八；Claude Code 團隊官方 code review 部落格（10/16）談壓低人力審查時間，不推進趨勢五；memtrace-public、ai-data-extractor 只是記憶類再多一個工具，不寫進趨勢九。 2026-10-31 撈料（節點 10-20～10-30）：記憶三例 memory-forge-rs／scope-recall-hermes／open-second-brain（10/27～10/30）都以「記憶可檢視、可修正、來源可追溯」為賣點，屬趨勢九「同類再多一個工具」，不另立節點，下週若有第四個獨立實作再議；趨勢九演進現 13 節點已逾 12 上限，待主編裁示搬 archive 的落點。 %%

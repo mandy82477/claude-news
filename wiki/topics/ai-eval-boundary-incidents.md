@@ -3,15 +3,15 @@ page: "topics/ai-eval-boundary-incidents"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-30"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-27"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
-inbound_links: 11
+days_since_news_subtree: 4
+inbound_links: 12
 attribution_count: 1
 attribution_last: "2026-10-27"
 top_source: "google-news"
@@ -31,7 +31,7 @@ Claude 與同業模型在評測、測試環境中碰到真實系統或真人的�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-07-28
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-27
 
 > **最新動態**（2026-10-27）
@@ -257,6 +257,7 @@ Claude 與同業模型在評測、測試環境中碰到真實系統或真人的�
 - **可信度評估（09-19）**：NY Post 為主流媒體，惟消息來源為匿名「業界人士」，具體指控範圍與涵蓋本節哪些事件均未見報導，可信度低於官方或具名研究者來源
 - **10-27 新增（官方文件升級確認）：Anthropic S-1 申請文件揭露一個月訓練暫停與資安事件**：Fox Business／CNBC 引路透社報導，S-1 文件本身記載此事
   - 與上方 09-01 官方部落格＋Business Insider／Reuters 已證實的「暫停訓練並收緊訓練環境安全性」為同一事件，差異在於首度見於正式 SEC 文件，是來源層級升級、非新事件；暫停時長是否即一個月、是否仍指 07-30 三起事件，S-1 原文條文未見
+  - 同一份 S-1 的其餘風險揭露（災難性風險字眼、Claude 占自家程式碼比例）見 [[topics/recursive-self-improvement]]。
 - **可信度評估（10-27）**：Fox Business／CNBC 轉述路透社對 S-1 文件的報導，惟本輪僅取得兩家媒體轉述、S-1 原文對應條文未查證，暫以「與既有官方部落格揭露同一事件」處理，不視為新增事實量級
 
 ---

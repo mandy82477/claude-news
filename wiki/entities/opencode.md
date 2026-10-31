@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "active（快速成長）"
 domain: "💼 商業"
-last_updated: "2026-10-19"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 10
+days_since_news: 12
 parent: null
 children: "['entities/opencode-archive']"
 page_role: "hub"
-days_since_news_subtree: 10
+days_since_news_subtree: 12
 inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-19"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（快速成長）
 **領域：** 💼 商業
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-19
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-19
 
 > **最新動態**（2026-10-19）
@@ -41,6 +41,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 現況
 
 **最新動態（2026-10-19）：** 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；OpenCode 官方表示仍在搶修服務，尚未對外公告賠償或復原時程，僅標題可用（36Kr）。❓ **待查證**（標 2026-10-19｜查 [[entities/opencode]]、帳戶餘額歸零）｜**事故成因與修復時程未載**：影響範圍、復原時程與是否賠償均未見報導。
+
+同一波事件中存放在 OpenCode 的 OpenAI、Anthropic、Google API 金鑰外洩風險，與其他第三方平台憑證事件並看，見 [[topics/ai-agent-safety-product-vulns]]，攻擊面總覽見 [[topics/ai-agent-safety]]。
 
 **（2026-05-22）：** XDA 正式評為 Claude Code 的可行開源替代方案，同期 `OpenCode-power-pack` 完成移植官方 11 個 skills。
 

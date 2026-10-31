@@ -3,15 +3,15 @@ page: "topics/community-large-codebase-workflow"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-24"
-last_news_update: "2026-10-19"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 10
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 10
+days_since_news_subtree: 1
 inbound_links: 55
 attribution_count: 2
 attribution_last: "2026-08-05"
@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-05-02
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-19
+**最後更新：** 2026-10-31
+**最後新聞更新：** 2026-10-30
 
-> **協調開始前移到寫碼前，「記住失敗」有了第一批工具**（2026-10-17）
-> 並行線出現 Foremerge：agent 動手前先廣播意圖，在寫碼前偵測架構層級衝突，git 要改到同一行才看得到。記憶線有 projectmem、hippo-memory 兩個本機工具做「記下失敗、重走時先警告」，兩者都沒有第三方使用回報。
+> **並行 agent 越多，官方面板的隱藏重傳成本越高；本機記憶工具開始把「可稽核」當賣點**（2026-10-30）
+> 10-29 社群分析（HN 527 分）指出 Claude Code 約每 30 秒把每個背景 agent 的完整逐字稿重送給模型，只為更新 agents 面板，agent 開得越多越貴；作者以腳本停用，單一作者實測、官方未回應。記憶線 10-27 至 10-30 連出三個本機工具，把記憶做成可檢視、可修正、來源可追溯，都只有星數佐證。
 
 ---
 
@@ -63,7 +63,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——「多個 agent 在同一 repo 互相覆蓋」列（首選 ness，原名 Harness；已經用 worktree 隔離、只差 commit 落地不打架的分界在同列第三欄）與「一堆 agent 在跑，看不到誰卡住」列（首選 Omar）
 
-**還沒解決**：「開得出幾個」和「跑得穩幾個」是兩回事——官方的 20 是上限（Claude Code 一個 session 預設同時 20 個 subagent、可調，[官方文件](https://code.claude.com/docs/en/sub-agents)；Managed Agents 最多 20 個子代理同時跑，見 [[entities/managed-agents]]），社群實測卻在 4→20 之間就崩，中間沒人系統驗證。fork 子代理會繼承父對話（官方證實），token 因此累積多快只有社群單一觀察（查證見頁末）。
+**還沒解決**：「開得出幾個」和「跑得穩幾個」是兩回事——官方的 20 是上限（Claude Code 一個 session 預設同時 20 個 subagent、可調，[官方文件](https://code.claude.com/docs/en/sub-agents)；Managed Agents 最多 20 個子代理同時跑，見 [[entities/managed-agents]]），社群實測卻在 4→20 之間就崩，中間沒人系統驗證。fork 子代理會繼承父對話（官方證實），token 因此累積多快只有社群單一觀察（查證見頁末）。另有一個不經 fork 的成本：官方 agents 面板約每 30 秒把每個背景 agent 的逐字稿重送給模型（10-29，HN 527 分），agent 越多越貴，目前只有單一作者的分析與停用腳本。
 
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
@@ -71,6 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 規模上限 | 4→20 崩潰主因：git lock／DB 連線競爭、context 洩漏、無協調層；單一長 session 動用 147 個 subagent（09-04）；tmux 實務在第四個 agent 觸頂（10-19） | 《Why 20 Instances Break Down》、F-Zero X 移植、tmux 設定 | 單一深度分析 |
 | 統一容器 | 08-05 起一批接一批，至 10-06 仍有新品（控制平面、IDE 化、24/7 自架）；換底層 agent 不必重寫協作邏輯 | omnigent、zeron、cezar 等，見 [[topics/community-multi-agent]] | 已成趨勢 |
 | 任務脈絡互通 | 讓獨立 agent 共享任務脈絡；09-16 有跨終端傳訊第二例，09-20 另有「planner 先產結構化規格合約」的交接做法 | Concord（MCP）、hcom | 單一實測 |
+| 隱藏重傳成本 | 官方 agents 面板約每 30 秒重送各背景 agent 逐字稿（10-29，HN 527 分），agent 越多越貴；作者用 Bun preload 腳本停用 | no-agent-summary.js | 單一實測 |
 | 可觀測性 | 多款儀表板分「讀官方 event stream」與「自解析 transcript」兩路；10-03～10-10 再添並排 worktree 管理與視訊通話介面 | HUD、episko（原名 Cockpit）等，見 [[topics/community-pattern-trends]] 趨勢六 | 已成趨勢 |
 | 落地整合 | 兩個時點：寫完後本地合併佇列讓 commit 依序落地（4–5 agent／日 90 commit）；寫碼前先廣播意圖偵測衝突（09-22，HN 44） | Merge Queue、Foremerge | 單一實測 |
 
@@ -116,7 +117,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **🧰 現在就能下的解**：見 [[topics/community-tech-tools]]「我卡在這裡」——接手大 repo 讓 agent 讀懂走「接手沒碰過的大 repo，agent 讀不懂」列（首選 graphify）；跨 session 記憶走「每開新 session 都要重講一遍」列（首選 brain.md，零依賴檔案式；團隊共享與 Obsidian 路線的分界在同列第三欄）
 
-**還沒解決**：跨工具可攜、codebase 文件自動維護、「內建記憶到底解決了什麼」都只有一兩個案例，三條近期實作路線（零依賴檔案式、手動策展取代官方、團隊共享）各走各的，沒有交叉比較。「已否決方案要不要記」已有兩個本機工具實作（見下表），但都沒有第三方使用回報，也沒人比較過警告的誤報率。
+**還沒解決**：跨工具可攜、codebase 文件自動維護、「內建記憶到底解決了什麼」都只有一兩個案例，三條近期實作路線（零依賴檔案式、手動策展取代官方、團隊共享）各走各的，沒有交叉比較。「已否決方案要不要記」已有兩個本機工具實作（見下表），但都沒有第三方使用回報，也沒人比較過警告的誤報率。10-27 起三個本機工具把記憶做成可檢視、可修正，但沒人比較過修正後的記憶是否真的改變 agent 行為。
 
 | 子問題 | 社群走到哪 | 代表實作 | 證據強度 |
 |---|---|---|---|
@@ -127,6 +128,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 團隊共享 | 鎖定「跟著使用者走」而非留在人類設計的筆記/任務管理系統 | OzBrain（HN 69）| 單一實測 |
 | 可攜性 | Markdown 規則檔不跨工具 → JSON 協定或格式規約；claude-mem／gentle-ai 規模大但沒有實測 | ltm、OKF、claude-mem 等，見 [[topics/community-memory]] | 單一實測 |
 | 文件自動維護 | codebase wiki 隨對話自動更新，取代手維護 MANUAL.md | CodeAlmanac | 單一實測 |
+| 可稽核記憶 | 10-27～10-30 三個獨立本機工具各自主打記憶可檢視、可修正、來源可追溯；皆只有星數佐證 | memory-forge-rs、scope-recall-hermes、open-second-brain | 推論 |
 | 否決方案索引 | 8/7、8/31 兩則概念觀察後，10-01、10-03 出現兩個本機工具：記下失敗嘗試，agent 重走同一條路時先警告 | hippo-memory、projectmem | 單一實測 |
 
 **為什麼會這樣**：跑了數月、數百 session 的 repo，agent 每次重「猜」已知答案既費 token 又重蹈覆轍；社群的共同答案是把記憶從模型搬到 repo 與本地索引，差別只在用什麼形式存、跨不跨工具、以及要不要索性繞過官方記憶機制。
@@ -165,7 +167,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 收斂最高的是「除錯與分工」（唯讀＋工具範圍）；「並行規模」的上限沒有定論，可觀測性與落地整合正在補位；「索引與記憶」幾條路線各走各的，還沒有交叉比較。
 - **與官方做法頁說法不同的兩處**：[[topics/coding-workflow-guide]] 不再推薦「自己加讀取上限」（官方已內建上限）與「已否決方案索引」（對應官方 issue 已關閉、零回應）；分界是那頁只收官方機制撐得起的做法、本頁記社群走到哪。社群這兩條也只到個別做法與單一工具（已否決方案索引在 10 月才有兩個、都沒有使用回報），撐不起可執行結論，所以只留在子問題表。
 - **你的選項**：官方零件（worktree 隔離、腳本加 `--bare`、auto memory）都是現成的，可以先開起來，撞到哪面牆再照該線的 🧰 行找社群工具；打算跑 10 個以上 agent，可以一段一段加、每段自己量——官方上限與社群崩潰點之間沒有驗證數據。
-- **接下來看什麼**：隔離之後的協調有「寫碼前偵測意圖衝突」與「寫完後依序落地」兩個時點，各只有一則單一案例；fork 子代理的 token 累積有沒有第二則量測，會決定規模上限那一格要不要改寫。
+- **接下來看什麼**：隔離之後的協調有「寫碼前偵測意圖衝突」與「寫完後依序落地」兩個時點，各只有一則單一案例；fork 子代理的 token 累積有沒有第二則量測，會決定規模上限那一格要不要改寫；背景 agent 面板的重傳成本有沒有官方確認或第二則實測，決定「隱藏重傳成本」那一列能不能升級。
 
 **查過的數字**
 - **fork 子代理會不會讓 token 暴增**：《Why 20 Instances Break Down》與 Reddit 回報稱 fork 子代理每次工具呼叫都重送整段對話歷史，四個平行子代理耗約 200 萬 token。
@@ -191,7 +193,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/managed-agents]]（各功能的版本紀錄與已知問題；Managed Agents 是平台代管的另一個產品）
 - [[entities/boris-cherny]]（千級子代理工作流、「沿途驗證」心法）
 
-%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-10-23 %%
+%% 週更撈料：patterns 節點以 `**主線：**` 欄位標記所屬線（規則：.claude/reporter-rules/community/daily.md「主線 tag 規則」、weekly.md「週更整線重寫」）；週更已收至 2026-10-30 %%
 
 ## 參考來源
 

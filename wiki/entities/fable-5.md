@@ -7,17 +7,17 @@ domain: "🤖 模型"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-25"
 status_main: "active"
-days_since_news: 4
+days_since_news: 6
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 6
 inbound_links: 60
 attribution_count: 41
 attribution_last: "2026-10-25"
 top_source: "google-news"
 pending_count: 4
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-01"
 pending_signalled: 0
 staleness_exempt: null
@@ -57,7 +57,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 ❓ **待查證**（標 2026-10-25｜查 Readies Model、Intentions Better）｜**The Information：Anthropic 準備更懂使用者意圖的模型**（2026-10-19 報導）：僅標題與日報摘要可用，無型號、時程或規格；官方公告頁未查證。
 
-❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-24 無後續，官方頁面未查證。
+❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-30 無後續，官方頁面未查證。
 
 三則是否指同一款模型，目前無證據可判斷。
 
@@ -214,6 +214,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 ### 解禁後（2026-07-01 起）
 
+### 2026-10
+
 #### 2026-10-25
 **Anthropic 狀態頁：Fable 5.1 錯誤率升高（同日 08:49 UTC 已解決，影響約 21 分鐘）**：
 - 官方 08:30 UTC 標記 Monitoring、08:49 UTC 標記已解決；影響期間 01:08–01:29 PT（08:08–08:29 UTC）（[Anthropic Status](https://status.claude.com/incidents/vx06kp8wfpq2)，2026-10-25）
@@ -229,6 +231,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - 官方 13:05 UTC 標記 Investigating、13:21 UTC 標記已解決；影響期間 05:40–06:10 PT（12:40–13:10 UTC），僅波及 Mythos 5.1 與 Fable 5.1 兩者（[Anthropic Status](https://status.claude.com/incidents/bhphxz3vr58g)，2026-10-05）
 - 屬穩定性事件，非能力或存取政策變化；與 09-15 為不同起事件，Mythos 面記錄見 [[entities/mythos]]
 
+### 2026-09
+
 #### 2026-09-17
 **Reddit：Fable 5.1 執行時把本地資料庫用 `rm -rf` 刪除（單一使用者回報，無量化數據）**：r/ClaudeCode 使用者回報 Fable 5.1 執行任務過程中把本地資料庫用 `rm -rf` 刪除；單一貼文、無週熱門標記，score 恆 0，未見官方回應或其他來源佐證。破壞性操作與程式碼品質觀感的完整脈絡見 [[topics/code-quality-decline]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wiv96d/fable_51_rm_rfed_my_local_db/)，2026-09-17）。
 
@@ -237,7 +241,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 **查證補述（2026-10-03）**：媒體稱（Scientific American、Epoch AI 題庫頁）曲線指橢圓曲線的 rank 紀錄：Anthropic 數學家 Levent Alpöge 與密碼學者 Ava Howell 用 Claude 於數日內先後提交 rank ≥30 與 ≥31（8 月 23 日）的橢圓曲線，此前由 rank 28 到 29 耗時逾 18 年；所用為 Anthropic 內部未發布版本，非 Fable 5／5.1 產品版（[Scientific American](https://www.scientificamerican.com/article/anthropics-ai-steals-mathematicians-record-for-most-complicated-curve/)；[Epoch AI](https://epoch.ai/frontiermath/open-problems/elliptic-curve-rank)，查證 2026-10-03；Scientific American 本環境 egress 被擋，內容取自搜尋摘要）。
 
-🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-10-26）｜**該紀錄所用模型版本**（2026-09-16 報導）：官方頁面查無記載；查證 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
+🔎 **查無官方**（標 2026-09-16｜查 complicated curve、Scientific American｜複 2026-11-30）｜**該紀錄所用模型版本**（2026-09-16 報導）：官方頁面查無記載；複查 2026-10-31，[anthropic.com/news](https://www.anthropic.com/news) 近期貼文（含 10-27、10-28 科學類）無此紀錄，Scientific American 文章存在（搜尋可見）但本環境 egress 擋該網域、無法讀全文；首查 2026-10-03，[anthropic.com/news](https://www.anthropic.com/news) 與[模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)均無此紀錄或模型說明，上述歸屬僅媒體稱
 
 #### 2026-09-15
 **Anthropic 狀態頁：Mythos 5.1／Fable 5.1 間歇性錯誤率升高（同日 11:14 UTC 已解決）**：
@@ -287,6 +291,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - **Simon Willison 首日實測**：知名獨立開發者 Simon Willison（慣例以「畫一隻騎腳踏車的鵜鶘」測試新模型）記錄 Fable 5.1 首日實測心得，稱其「sets a new standard for coding, knowledge work, and long...」（原文摘要於此處截斷，完整脈絡未查證）（Blog/Simon Willison，2026-09-01）
 - **定價面**：官方定價頁同步更新，快取讀取（cache hit）與 refresh 費率由基礎輸入價的 0.1 倍降至 **0.025 倍**（原文：「Cache hits and refreshes on Claude Fable 5.1 and Claude Mythos 5.1 are priced at 0.025x the base input price」）；細節見 [[entities/pricing]]（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，2026-09-02）
 
+### 2026-08
+
 #### 2026-08-28
 **Reddit 質疑串：「Anthropic 是否在削弱模型」**：r/ClaudeCode 貼文「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」（nerf）；單一使用者觀感回報，無具體案例或量化數字佐證，延續 08-13「rage-inducing」、08-20「smoking gun」等已記錄的社群觀感分歧模式（完整同類記錄見 [[entities/opus-5]]「歷史記錄」）（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）。
 
@@ -324,7 +330,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 **Astra security／The Register「放寬 Fable 5 限制」即為同日生物安全防護更新**（2026-08-07 報導，2026-08-10 查證）：The Register 同日報導《OpenAI pledges to add Astra security as Anthropic loosens Fable's leash》，經查全文確認「loosens leash」具體所指為官方部落格同日公告的生物安全防護更新——Anthropic 放寬 Fable 5 對生物相關提示的護欄拒答（fallback）頻率，與上一則 08-07 生物安全防護公告為**同一事件**，非另一項獨立放寬措施（[The Register](https://www.theregister.com/ai-and-ml/2026/08/08/openai-pledges-to-add-astra-security-as-anthropic-loosens-fables-leash/5285161)，2026-08-08）。
 
-#### 2026-07（總結；07-02 條目因屬爭議節的唯一細節出處留在下方，其餘原始條目已移出）
+### 2026-07（總結；07-02 條目因屬爭議節的唯一細節出處留在下方，其餘原始條目已移出）
 - **07-01 管制解除、全球恢復存取**：官方〈Redeploying Fable 5〉；Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動，作為解禁的交換條件（天數口徑見 [[topics/anthropic-government-policy]]）。
 - **07-03 配額與消耗**：額度重置依訂閱起始日而異，個體消耗速度差異極大（2 天燒完額度的回報）；社群省額度策略見 [[entities/fable-5-archive#配額與計費過渡（原訂 7/7，2026-07-19 到期）]]。
 - **07-06 多模型錯誤率升高（同日解決）**；Show HN 實測（6 分）：出口管制期間卡關三週的 Python 移植 SNES 專案，解封後 90 分鐘內找出根因並修 23 個編譯器 bug。

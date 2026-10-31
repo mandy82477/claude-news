@@ -155,6 +155,24 @@
    "term": "封存",
    "line_contains": "對話封存後完全消失",
    "reason": "「對話封存」是 Claude 產品的使用者動作（#22931 回報 Cowork 對話封存後消失），非本庫把頁面搬進 archive 子頁的維運動作；2026-10-24 讀者語言閘在同頁第二處命中時現形"
+  },
+  {
+   "page": "topics/anthropic-government-policy-archive",
+   "term": "記者",
+   "line_contains": "首爾記者會",
+   "reason": "「首爾記者會」（Ciauri 的新聞發布會）的字面子串，非編輯部記者角色詞；同一句在 entities/mythos-archive 已登記過，此為 archive 分頁後的同一事實（2026-10-31 6l 清存量）"
+  },
+  {
+   "page": "topics/community-tech-discussions-archive",
+   "term": "主編",
+   "line_contains": "自主編程",
+   "reason": "「自主編程代理」的字面子串，非編輯部角色詞；主頁 topics/community-tech-discussions 已登記同一例外，此為蒸餾搬入 archive 後的同一行（2026-10-31 6l 清存量）"
+  },
+  {
+   "page": "topics/competitor-landscape-archive",
+   "term": "門檻",
+   "line_contains": "夠用」門檻",
+   "reason": "「一旦競品達『夠用』門檻」是讀者語境的產品可用性門檻，非本庫收錄門檻的欄位名（2026-10-31 6l 清存量）"
   }
  ]
 }

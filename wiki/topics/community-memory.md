@@ -3,17 +3,17 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-29"
-last_news_update: "2026-10-29"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 5
-attribution_count: 7
-attribution_last: "2026-10-29"
+days_since_news_subtree: 1
+inbound_links: 6
+attribution_count: 8
+attribution_last: "2026-10-30"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 
 > **新增 Obsidian vault 常駐記憶，夜間把重複修正沉澱成帶信心分數的偏好**（2026-10-30）
@@ -49,7 +49,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **記憶**：官方 auto memory＋把決策寫回 repo 是現在的底；社群工具（claude-mem、projectmem、brain.md、token-savior 等）各走一路，還沒收斂。**接下來看什麼：** 有沒有人拿兩三個工具在同一個專案上做比較。
+- **記憶**：官方 auto memory＋把決策寫回 repo 是現在的底；社群工具（claude-mem、projectmem、brain.md、token-savior 等）各走一路，還沒收斂；
+  - 10-27 至 10-30 連出三個本機工具（memory-forge-rs、scope-recall-hermes、open-second-brain），賣點都是記憶可檢視、可修正、來源可追溯，皆只有星數佐證。**接下來看什麼：** 有沒有人拿兩三個工具在同一個專案上做比較。
 - **Agent 寫出的文件**：2026-10-08 有人提出把規劃文件發布到可持久引用的連結，避免檔案被取代後脈絡消失；單一作者做法，還在試。
 - **CLAUDE.md**：寫成規則而不是建議，違反架構的改動交給 CI 或 hook 攔；要 100% 遵守的規則不該只放 CLAUDE.md，見 [[topics/community-guardrails]]。
 - **Context**：即時取回優於預先載入；官方 2026-07-26 移除逾 80% Claude Code 系統提示詞，是這條路唯一的廠商一手依據（見下方 2026-07）。
@@ -57,6 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **機制細節**
 - **記憶與知識管理**：OKF 標準化 agent 知識格式供團隊共用；已否決方案未結構化記錄會導致 agent 重新實作已被殺掉的方案；OzBrain 主張取代傳統筆記/任務管理工具，鎖定團隊共用而非單一使用者記憶；Karpathy 式 LLM wiki 這條路線的設計對照見 [[topics/llm-wiki-pattern]]
+  - 這一類公開實作的每日 GitHub 星數走勢見 [[topics/skill-interest-watch]]。
 
 ---
 

@@ -2,22 +2,22 @@
 page: "entities/openclaw"
 kind: "entity"
 type: "product（第三方工具）"
-status: "active（信用池計費，不含訂閱）"
+status: "active（信用池計費方案於 06-16 暫停，現行規則見 pricing）"
 domain: "💼 商業"
-last_updated: "2026-10-24"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-18"
 status_main: "active"
-days_since_news: 11
+days_since_news: 13
 parent: null
 children: "['entities/openclaw-archive']"
 page_role: "hub"
-days_since_news_subtree: 11
+days_since_news_subtree: 13
 inbound_links: 9
 attribution_count: 4
 attribution_last: "2026-10-18"
 top_source: "google-news"
-pending_count: 2
-pending_overdue: 2
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -27,21 +27,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # OpenClaw
 
 **類型：** product（第三方工具）
-**狀態：** active（信用池計費，不含訂閱）
+**狀態：** active（信用池計費方案於 06-16 暫停，現行規則見 pricing）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-18
 
-> **官方查無鬆綁**（2026-10-18）
-> 查官方 Pro／Max 說明頁（support.claude.com/en/articles/11145838）未載 Agent SDK 或第三方工具可用訂閱額度；10-15 BigGo Finance／36 Kr 稱官方進一步鬆綁第三方工具政策，出處未明。
-> ❓ **待查證**（標 2026-10-15｜查 BigGo Finance、36 Kr、第三方工具政策）｜**官方是否進一步鬆綁第三方工具政策**：已掃日報至 2026-10-23 無後續；官方頁面未查證
+> **官方查證：未見新一輪鬆綁**（2026-10-31）
+> 官方支援頁（[Use the Claude Agent SDK with your Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan)）載：2026-06-15 已暫停先前宣布的 Agent SDK 用量變更；Agent SDK、`claude -p` 與第三方 app 登入方案時仍計入訂閱額度；2026-10-07 新增的是 Max／Ultra／Team 每月 API credits（走 API key 路徑，不改訂閱額度）。10-15 BigGo Finance／36 Kr 的「解除禁令」標題，官方頁面無此措辭。
 
 ---
 
 ## 現況
 
-OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：**這些用量全數脫離訂閱方案，改為按完整 API 費率計費的獨立信用池（Pro $20/月、Max 5x $100/月、Max 20x $200/月）**，實質等同允許使用但不補貼。此為 Anthropic 與第三方工具生態系摩擦的最具代表性案例，也是 programmatic 用量與互動式使用定價結構分離的具體體現。
+OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude 訂閱方案的自動化用量。歷經 2026-04-25 配額禁令後，Anthropic 於 2026-05-14 宣布恢復允許 OpenClaw 等第三方工具使用，但代價是：**這些用量全數脫離訂閱方案，改為按完整 API 費率計費的獨立信用池（Pro $20/月、Max 5x $100/月、Max 20x $200/月）**，實質等同允許使用但不補貼。此為 Anthropic 與第三方工具生態系摩擦的最具代表性案例，也是 programmatic 用量與互動式使用定價結構分離的具體體現。**後續：** 該計費切割已於 2026-06-16 暫停，Agent SDK 與第三方 Agent SDK app 用量改回計入訂閱配額、重啟時間未定（見 [[entities/pricing]]）；官方 Pro／Max 說明頁 10-18 未載第三方工具可用訂閱額度，上述金額為當時公布的設計，不是現行計費。
 
 ---
 
@@ -68,9 +67,9 @@ OpenClaw 是一款第三方 Claude agentic 工具，設計用途為擴展 Claude
 
 ## 事件時序
 
-### 2026-10-15：兩則標題稱官方進一步鬆綁第三方工具政策（未經官方查證）
+### 2026-10-15：兩則標題稱官方進一步鬆綁第三方工具政策（官方頁面核實：無新鬆綁）
 
-❓ **待查證**（標 2026-10-15｜查 Third-Party Access、Third-Party App Ban、11145838｜複 2026-10-29）｜**Claude 是否已進一步鬆綁第三方工具政策**：BigGo Finance「Anthropic Opens Third-Party Access, Expanding the Claude Subscription Ecosystem」與 36 Kr「Claude Fully Lifts Third-Party App Ban Immediately」兩則標題稱官方進一步開放或解除第三方工具限制，與本頁已載 2026-05-14 恢復允許（仍走信用池計費）是否為同一政策或新一輪鬆綁，官方原文未見，僅標題可用。次級部落格報導（未經官方一手文件核實）稱官方支援頁約 10/7 曾更新，讓用 Claude Agent SDK 開發的第三方工具可動用訂閱方案額度，兩則今日標題疑為對該次異動的延遲報導而非今日新異動，仍待官方原文確認。2026-10-18 查官方 Pro／Max 用 Claude Code 說明頁（support.claude.com/en/articles/11145838）未載 Agent SDK 或第三方工具可用訂閱額度，媒體所稱「支援頁已更新」出處未明。
+官方支援頁已核實（2026-10-31 查）：[Use the Claude Agent SDK with your Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan) 載 2026-06-15「已暫停先前宣布的 Claude Agent SDK 用量變更」，且 Agent SDK、`claude -p` 與第三方 app 登入方案時仍計入訂閱額度；2026-10-07 更新為 Max／Ultra／Team 方案新增每月 API credits（API key 經 Console 組織使用，涵蓋 Claude API、Managed Agents、Agent SDK、`claude -p`），登入方案時 SDK 仍走訂閱額度。[Pro／Max 用 Claude Code 說明頁](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan)僅載 IDE 整合，未載第三方工具。結論：10-15 BigGo Finance「Anthropic Opens Third-Party Access」與 36 Kr「Claude Fully Lifts Third-Party App Ban」兩則標題，對應的應是 06-15 暫停變更與 10-07 API credits 這類既有異動，不是新一輪鬆綁；官方頁面無「解除禁令」措辭。與本頁 05-14 恢復允許（信用池計費）的關係：信用池方案已於 06-16 暫停（見上方狀態列）。
 
 ### 2026-08-10：使用者操作的 OpenClaw agent 利用健身房 API 授權漏洞取消他人預約
 

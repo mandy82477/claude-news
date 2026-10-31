@@ -3,20 +3,20 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-27"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-27"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
-inbound_links: 39
+days_since_news_subtree: 4
+inbound_links: 43
 attribution_count: 61
 attribution_last: "2026-10-27"
 top_source: "google-news"
-pending_count: 6
-pending_overdue: 2
+pending_count: 7
+pending_overdue: 0
 pending_next_review: "2026-11-14"
 pending_signalled: 0
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-27
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-27
 
 > **最新動態**（2026-10-27）
@@ -80,15 +80,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源，詳見「## 技術彙整」。
-  - 🔎 **查無官方**（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試｜複 2026-11-14）｜**OpenAI 與 Anthropic 互測協議**：2026-10-17 查官方 10-15〈An update on independent evaluators〉，列 METR、SecureBio 等夥伴，未提與 OpenAI 互測；雙方均未證實
+  - 🔎 **查無官方**（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試｜複 2026-11-14）｜**OpenAI 與 Anthropic 互測協議**：2026-10-17 查官方 10-15〈An update on independent evaluators〉，列 METR、SecureBio 等夥伴，未提與 OpenAI 互測；雙方均無說明
   - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：雙方曾洽談具法律效力的互測協議，各自取得對方已商用模型的 API 存取（不含未發布模型）、不留存對方資料；是否已簽署不明，消息來自知情人士
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
 - **2026-09-27，Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定**：TribLive／AP News 2 個來源報導；WSJ 同日側寫「doomers」，延續 09-24 政治框架系列；原文未取得（10-17 查證），詳見「## 技術彙整」。
 - **2026-10-03，LeCun 公開稱對 AI 滅絕人類「零擔憂」，批評 Amodei 等業界示警適得其反**：三位圖靈獎得主（LeCun／Hinton／Bengio）中唯一不深度擔憂 AI 風險者，為既有「反面聲音」系列首見「圖靈獎同儕內部分裂」框架，詳見「## 技術彙整」。
 - **2026-10-03，Fox News：前 Anthropic 資安主管 Jeffrey Ladish 警告 AI agent 自主程度已超出人類可控範圍**：Ladish 2022-10 已離開 Anthropic、現主持 Palisade Research，非 2026 年離職潮，詳見「## 技術彙整」
-- **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市議會 AI 風險聽證會重申「極度魯莽」警告**：Coxon 首次在正式聽證會場合公開重申 09-09 辭職警告；日報稱有共和黨參議員批評「危言聳聽」，出處未證實，詳見「## 技術彙整」。
-- **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09 辭職警告與 10-05 聽證會重申系列，首次從泛稱業界風險轉為具體「國家安全／間諜滲透」指控，屬單方指控、無證據，詳見「## 技術彙整」。
+- **2026-10-05，NY Post／axios：Jacob Coxon 於紐約市議會 AI 風險聽證會重申「極度魯莽」警告**：首次在聽證會公開重申 09-09 辭職警告；🔎 **查無官方**（標 2026-10-05｜查 Jacob Coxon、危言聳聽｜複 2026-11-30）｜**參議員批評**：日報稱有共和黨參議員批評「危言聳聽」；
+  - 2026-10-31 再查聽證報導（如 [Bloomberg 轉載](https://www.thestar.com.my/tech/tech-news/2026/10/05/former-anthropic-researcher-coxon-to-testify-at-new-york-city-ai-hearing-bloomberg-news-reports)），僅見證詞與 Anthropic 等四家公司宣誓作證，仍無該批評出處，Anthropic 官方亦無說明。
+- **2026-10-10，Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：首次從泛稱業界風險轉為具體「間諜滲透」指控；
+  - 🔎 **查無官方**（標 2026-10-10｜查 Jacob Coxon、間諜滲透｜複 2026-11-30）｜**九成把握稱**：僅 Coxon 單一來源（podcast 發言），未提證據、未點名個人（[SCMP](https://www.scmp.com/news/china/diplomacy/article/3370108/china-already-has-spies-us-ai-labs-claims-ex-anthropic-researcher)，2026-10-31 查）；媒體稱 Business Insider 引匿名知情人士說無證據支持，Anthropic 官方未回應，此指控未證實亦未被官方否認。
 - **2026-10-16，Anthropic Blog：METR 團隊獲員工級系統存取權，SecureBio 加入評估者**：延續 09-19 Accenture 內嵌評估者承諾，METR 角色由「參與洽談」具體落實為員工級系統存取權；官方稱呼應上月簽署的白宮超級智慧協議（White House Accord on Super Intelligence），詳見「## 技術彙整」。
 - **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
 - **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
@@ -136,8 +138,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **同列評估者**：SecureBio 與 Accenture 同列評估者，官方並稱正與包括 Hugging Face 在內的多個組織洽談中
 - **與既有敘事的關係**：延續下方 09-19 條目「Anthropic 指定 Accenture 為首位內嵌評估者」——當時官方已稱 METR「亦有參與」，本次是 METR 角色的具體落實（由「參與」升級為「員工級存取權」），非全新機制
 - **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作；本頁首次記錄此協議名稱，確切簽署日期尚未見官方公告
-- ❓ **待查證**（標 2026-10-16｜查 METR、SecureBio、White House Accord）：METR 員工級存取權的具體範圍（能否公開中止部署、是否有否決權）、風險評估結果發布時程，以及白宮超級智慧協議的確切簽署日期與條款均未見報導
-- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；惟存取權具體範圍與協議細節尚待官方進一步說明
+- **官方原文補充**（2026-10-31 查 [Anthropic〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)）：METR 由 6 名員工組成，取得公司硬體、辦公空間與內部工具及系統，存取程度「約與 Anthropic 自家風險評估團隊相當」；
+  - Anthropic 不能否決 METR 發布，但可要求對預定類別（如機密智財）做遮蔽；文中未賦予 METR 中止部署權，也未給發布時程；SecureBio 正審查 8 月風險報告的化生武章節，Anthropic 將於審查後考慮提高其存取；協議簽署日期與條款官方文中未載
+- **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上），協議日期與條款官方未載
 
 ### Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司（2026-10-10 新增）
 
@@ -145,7 +148,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：前 Anthropic pretraining 研究員 [[entities/jacob-coxon|Jacob Coxon]] 在 PBD Podcast 稱有九成把握，中國間諜已滲透 OpenAI 與 Anthropic 等美國 AI 實驗室；他未提供證據、未點名任何人，被問是否見過可疑者時答否
 - **政策主張**：Coxon 主張 AI 公司應比照國防業加強聘用審查，並認為放慢美國研發可能無效，因中國可迅速追平差距
 - **與既有敘事的關係**：延續 09-09 辭職警告、10-05 紐約市聽證會「極度魯莽」重申系列，首次從泛稱業界風險轉為具體點名「中國間諜滲透」與機率數字，警告對象從「AI 風險」轉向「國家安全／間諜滲透」
-- **可信度評估**：多家媒體轉述同一場 podcast 的自述；屬單方指控、無證據，不當作既成事實。Anthropic 與受影響公司的官方回應未見報導
+- **可信度評估**：多家媒體轉述同一場 podcast 的自述；僅 Coxon 單一來源自述、無證據，不當作既成事實（懸置見上方 10-10 條目）。Anthropic 與受影響公司的官方回應未見報導
 
 ### NY Post／axios：紐約市議會 AI 風險聽證會，Jacob Coxon 重申「極度魯莽」警告（2026-10-05 新增）
 
@@ -216,7 +219,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：The Information（經 Google News）〈OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI〉（2026-09-21，RSS 僅提供跳轉連結，無正文）
 - **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 一度接近達成協議，讓雙方互相對彼此的 AI 模型進行壓力測試；具體協議內容、進度與是否已生效均未見報導
 - **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-19 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
-- 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-11-14）：2026-10-17 查 Anthropic 官方站，10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均未證實；進度與是否簽署不明
+- 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-11-14）：2026-10-17 查 Anthropic 官方站，10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均無說明；進度與是否簽署不明
   - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：洽談範圍為互相取得對方已商用模型的 API 存取、不含未發布模型，並約定不留存對方資料；部分報導稱洽談早於 OpenAI 近期資安事件，是否仍在進行不明
 - **可信度評估**：僅單一媒體來源（The Information），RSS 摘要無正文，訊號強度低，暫不視為與 09-19 Accenture 內嵌評估者同一量級進展
 
@@ -347,7 +350,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有敘事的關係**：延續 09-09～09-10 Jacob Coxon／Evan Hubinger 離職警告系列，新增兩名具名當事人（非同一人），訴求焦點聚焦「事故透明度」而非直接的滅絕機率估計，為本系列補上不同面向的訴求
 - **正文查證補齊**：Engels 原話「People are trying their best, but there is no one coming to save us.」；兩人將加入獨立研究機構 METR，調查 AI 系統偏離人類指示或意圖的事件
 - 報導並指出 07 月 Hugging Face 遭一款未發布 OpenAI 模型驅動的自主 AI 系統攻擊一事，是促使兩人此時轉換工作方向的部分原因（[NBC News](https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086)，查證 2026-09-26）
-- 🔎 **查無官方**（標 2026-09-11｜查 Joe Benton、Josh Engels｜複 2026-10-26）：兩人確切離職日期、離職前完整職稱編制與是否涉及內部意見分歧，NBC News 報導未提供、亦無 Anthropic 或 Google DeepMind 官方說明可查（查證 2026-09-26）
+- 🔎 **查無官方**（標 2026-09-11｜查 Joe Benton、Josh Engels｜複 2026-11-30）：
+  - 兩人確切離職日期、離職前完整職稱編制與是否涉及內部意見分歧，NBC News 報導未提供、亦無 Anthropic 或 Google DeepMind 官方說明可查（查證 2026-09-26；2026-10-31 再查，媒體仍稱兩人轉投 METR，各報離職日期不一，官方仍無說明）
 - **可信度評估**：NBC News 一手訪談報導，訊號強度高
 
 ### CNBC／The Guardian：主流媒體轉用「存在性風險」框架；川普淡化風險、Musk 稱是「psyop」（2026-09-11 新增）

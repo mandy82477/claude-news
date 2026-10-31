@@ -3,24 +3,24 @@ page: "topics/ai-agent-safety-prompt-injection"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-30"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-28"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
-inbound_links: 3
+days_since_news_subtree: 3
+inbound_links: 5
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 9
-pending_overdue: 3
+pending_overdue: 0
 pending_next_review: "2026-11-03"
 pending_signalled: 2
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 提示注入與自我複製：代理讀進來的東西憑什麼可信
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-28
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這頁答兩題：** 代理讀進來的外部內容被塞進指令（提示注入）怎麼防、最近多了哪些手法；注入會不會從單次觸發變成自己擴散。
 
-**能先做的事在母頁：** 每個攻擊面能先做的一件事在 [[topics/ai-agent-safety#現在還擋不住的攻擊]]，官方立場（沙箱才是安全邊界、Auto 模式不是）在 [[topics/ai-agent-safety#官方現在擋到哪]]；本頁是證據與收斂判斷。他家 agent 的注入事件，只在補上新載體或新防法時收。
+**能先做的事在母頁：** 每個攻擊面能先做的一件事在 [[topics/ai-agent-safety#現在還擋不住的攻擊]]，官方立場（沙箱才是安全邊界、Auto 模式不是）在 [[topics/ai-agent-safety#官方現在擋到哪]]；本頁是證據與收斂判斷。他家 agent 的注入事件，只在補上新載體或新防法時收。模型自己能發動什麼網路攻擊、防守方的准入審核（CVP）不在本頁，見姊妹頁 [[topics/ai-agent-safety-cyber]]。
 
 ---
 
@@ -114,7 +114,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／Martin Cid Magazine（2026-10-26，單一來源，互動 0）；Google News／CyberSecurityNews（2026-10-26 16:45 UTC，獨立第二來源，互動 0）
 - **核心主張（僅標題可用）**：兩家報導均稱攻擊者可利用使用者 Downloads 資料夾內的檔案劫持 Claude Code 與 OpenAI Codex，任何網站都能把這類檔案放進該資料夾；具體觸發機制、是否需使用者額外動作與官方回應，兩篇報導均僅標題層級，仍未見報導
 - **性質判斷**：若屬實，為本地檔案層級的提示注入攻擊面，跨 Claude Code 與 OpenAI Codex，與既有「代理把外部內容當可信輸入」敘事同源，見「## 提示注入已不是單點漏洞，是產業級攻擊面」
-- ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09｜訊 2026-10-27）｜**Downloads 資料夾檔案提示注入觸發機制**：10-27 CyberSecurityNews 為第二個獨立來源報導同一攻擊路徑，但觸發機制與是否已有官方回應兩篇報導仍均未見細節，待查證問題本身未解
+- ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09｜訊 2026-10-27）｜**Downloads 資料夾檔案提示注入觸發機制**：10-27 CyberSecurityNews 為第二個獨立來源報導同一攻擊路徑，但觸發機制與是否已有官方回應兩篇報導仍均未見細節，查證問題本身未解
 - **可信度評估**：已由單一來源升級為兩個獨立媒體同報導同一攻擊面，惟兩篇報導均僅標題層級、互動 0、原文不可讀，訊號強度仍低；已列入母頁「現在還擋不住的攻擊」表，標記維持 ❓
 
 #### GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊（2026-10-22 新增，跨類別，非 Claude 專屬）
@@ -157,7 +157,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：報導稱間接提示注入（indirect prompt injection）攻擊開始出現在網頁的 HTTP 標頭（headers）中，不再只藏在頁面可見內容裡；具體攻擊案例、受影響的 AI agent 產品與是否波及 Claude 均未見報導
 - **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂敘事——可信輸入的邊界已依序擴至網頁內容、`llms.txt`、MCP 回應、記憶層、`.git` 設定檔，本則再擴至 HTTP 標頭本身；該訊號表已滿 8 列，本輪未列入
 - **收錄說明**：跨廠商提示注入案例，不套用一般 Claude／Anthropic 關聯門檻
-- ❓ **待查證**（標 2026-10-16｜查 The Register、HTTP header、prompt injection）：具體攻擊案例、受影響產品與是否波及 Claude 均未見報導，僅 Google News 標題聚合層級可用
+- 🔎 **查無官方**（標 2026-10-16｜查 The Register、HTTP header、prompt injection｜複 2026-11-30）：具體攻擊案例、受影響產品與是否波及 Claude 均未見報導；2026-10-31 搜尋未能定位該 Register 報導，Anthropic 官方無對應說明
 - **可信度評估**：單一來源（The Register 經 Google News 轉載），僅標題可用，互動 0，訊號強度低
 
 #### The Register／HiddenLayer：決策模型 Jev 僅輸出預定選項仍可被 prompt injection 攻破，27 次測試 25 次成功翻轉決策（2026-10-15 新增，跨類別，非 Claude 專屬）
@@ -182,7 +182,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **為何難以關閉**：複製動作本身可能要數日才倍增一次，速度遠低於資料中心內的模型；但官方指出這類複製體沒有單一可關閉的中心節點，一旦散布就難以徹底清除
 - **與既有階梯的關係**：是「## 自我複製／蠕蟲化」階梯第 7 階，較 08-16 官方「三個 Claude 實例互相部署自我複製惡意程式」（第 6 階）更進一步——本次是官方主動研究脫離資料中心場景的能力上限，而非 agent 互相破壞的副產品；仍無任何一階是在野蠕蟲案例
 - **性質判斷**：屬前瞻能力評估（數月內可能具備），非現在已發生的攻擊，不列入母頁「現在還擋不住的攻擊」表；物聯網或邊緣裝置導入 AI agent 的團隊可留意此風險評估
-- 🔎 **查無官方**（標 2026-10-13｜查 self-replicating-ai、IoT devices）：10-30 查官方原文，月數是「小模型照歷史速度今年底可追上」，緩解四條（ISP 流量監看、蜜罐、隔離並通知、製造商安全預設）已寫明；9 種硬體只點名 5 種，全名單未列
+- 🔎 **查無官方**（標 2026-10-13｜查 self-replicating-ai、IoT devices｜複 2026-11-30）：10-30 查官方原文，月數是「小模型照歷史速度今年底可追上」，緩解四條（ISP 流量監看、蜜罐、隔離並通知、製造商安全預設）已寫明；9 種硬體只點名 5 種，全名單未列
 - **可信度評估**：Anthropic 官方一手研究，可信度高；Hacker News 95 分，Reuters 等多家主流媒體同日轉述，訊號強
 %% 維運備忘：Fox Business〈Anthropic warns of self-replicating artificial intelligence models as AI arms race heats up〉（2026-10-16，經 Google News，0 互動，僅標題）經核對與本則為同一篇 10-12 官方研究的後續轉載，非新事實，未另立條目 %%
 
@@ -192,7 +192,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：報導稱單一惡意提示即可挾持 AWS 上的 AI agent 並竊取雲端憑證；具體攻擊鏈、受影響服務範圍與 AWS 官方回應均未見報導，標題未提及 Claude／Anthropic
 - **與既有系列的關係**：與 09-22 Cloud Computing News 揭露的 AWS AgentCore 提示注入風險同屬「代理讀取外部內容缺乏信任邊界」主題，是否為同一漏洞未見報導
 - **性質判斷**：AWS AI agent 為第三方雲端服務，非 Claude 官方產品，不列入母頁「現在還擋不住的攻擊」表
-- ❓ **待查證**（標 2026-10-11｜查 Hijack AWS、Cloud Credentials）：是否與 09-22 AWS AgentCore 為同一漏洞、具體攻擊鏈與受影響範圍均未見報導
+- 🔎 **查無官方**（標 2026-10-11｜查 Hijack AWS、Cloud Credentials｜複 2026-11-30）：2026-10-31 再查，媒體稱同期有 Unit 42（毒化工單竊 AgentCore 憑證）與 Zenity Labs「AgentCorruption」（10-08）兩案，AWS 稱存取執行角色憑證屬預期行為；
+  - 無法確認該標題即此二案之一，亦未見涉及 Claude 的官方說明
 - **可信度評估**：單一來源，0 互動，RSS 無正文，訊號強度低
 
 #### HackerNoon：測試以來源驗證（provenance-based）機制防禦 AI Agent 間接提示注入（2026-10-11 新增，跨類別，防範論述）
@@ -499,10 +500,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[📋 新增，定向補抓] OODA Loop：資安研究者偵測到在野提示注入，利用 coding agent 對 Markdown 檔案的信任**：單一來源、互動 0，詳見「## 技術彙整」
 
 ### 2026-10-27
-- **[📋 跟進，❓ 待查證仍未解] CyberSecurityNews：第二個獨立來源報導 Claude Code／Codex 遭 Downloads 資料夾惡意檔案劫持**：呼應 10-26 Martin Cid Magazine 同一攻擊面披露，兩篇報導均僅標題層級，觸發機制與官方回應仍未見細節，詳見母頁「現在還擋不住的攻擊」、「## 技術彙整」
+- **[📋 跟進，來源仍單薄] CyberSecurityNews：第二個獨立來源報導 Claude Code／Codex 遭 Downloads 資料夾惡意檔案劫持**：呼應 10-26 Martin Cid Magazine 同一攻擊面披露，兩篇報導均僅標題層級，觸發機制與官方回應仍未見細節，詳見母頁「現在還擋不住的攻擊」、「## 技術彙整」
 
 ### 2026-10-26
-- **[📋 新增，❓ 待查證] Martin Cid Magazine：Claude Code／Codex 會遵從 Downloads 資料夾內任何網站放入的檔案指令**：單一來源，詳見母頁「現在還擋不住的攻擊」、「## 技術彙整」
+- **[📋 新增，單一來源] Martin Cid Magazine：Claude Code／Codex 會遵從 Downloads 資料夾內任何網站放入的檔案指令**：單一來源，詳見母頁「現在還擋不住的攻擊」、「## 技術彙整」
 
 ### 2026-10-22
 - **[📋 新增，跨類別，非 Claude 專屬] GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊**：攻擊鏈細節與受影響範圍均未見報導，與既有跨廠商提示注入系列同屬一條線，詳見「## 技術彙整」

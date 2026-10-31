@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "beta"
 matrix_role: "專用版"
-days_since_news: 6
+days_since_news: 8
 parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 8
 inbound_links: 16
 attribution_count: 10
 attribution_last: "2026-10-23"
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-10-22 新增「重複出現漏洞」偵測與修補進度追蹤：** Claude Security 新增偵測同一漏洞再次出現的能力，並持續追蹤修補進度，不再只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導（單一線報導，未見官方部落格或產品文件佐證，涵蓋語言／比對機制等細節未載）。
 
-**「Claude Compliance API」並非 09 月新推出，是既有的稽核與治理資料介面（2026-10-17 查證）：** 依 [官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)，Enterprise 與 Console 客戶可程式化讀取組織 Activity Feed；Enterprise 另可讀 claude.ai 的對話、檔案、專案，以及 Cowork、Claude Code、Claude in Chrome 等產品的 session 逐字稿，需在 claude.ai 建立 Compliance Access Key（Console 的 Admin API key 只能讀 Activity Feed）。Console 版於 [2026-03-30 公告](https://claude.com/blog/claude-platform-compliance-api)，僅含管理與資源異動，不含推論活動。官方兩份文件均未列價格，也未把它與 Claude Security 掃描外掛／Mythos 5 掃描關聯；定位是稽核治理，而非漏洞掃描。MIND 等第三方 DLP 整合屬廠商端公告，Security Boulevard 09-29 的「推出」說法與官方時序不符。
+**「Claude Compliance API」並非 09 月新推出，是既有的稽核與治理資料介面（2026-10-17 查證）：** 依 [官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)，Enterprise 與 Console 客戶可程式化讀取組織 Activity Feed；Enterprise 另可讀 claude.ai 的對話、檔案、專案，以及 Cowork、Claude Code、Claude in Chrome 等產品的 session 逐字稿，需在 claude.ai 建立 Compliance Access Key（Console 的 Admin API key 只能讀 Activity Feed）。Console 版於 [2026-03-30 公告](https://claude.com/blog/claude-platform-compliance-api)，僅含管理與資源異動，不含推論活動。官方兩份文件均未列價格，也未把它與 Claude Security 掃描外掛／Mythos 5 掃描關聯；定位是稽核治理，而非漏洞掃描。Cowork 與 Claude Code 的 session 涵蓋已於 2026-08-26 更新註記改為 GA（查證日 2026-10-31，來源：[Anthropic 部落格](https://claude.com/blog/compliance-api-cowork-and-claude-code)；媒體所稱「beta」沿用 08-11 原文）。MIND 等第三方 DLP 整合屬廠商端公告，Security Boulevard 09-29 的「推出」說法與官方時序不符。
 
 Anthropic 已將 **Claude Mythos 5**（見 [[entities/mythos]]）整合進 Claude Security，讓企業團隊取得前沿等級漏洞掃描能力且不需直接存取模型本身（2026-08-21，詳見下方「歷史記錄」）。
 

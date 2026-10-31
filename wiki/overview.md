@@ -1,26 +1,27 @@
 # Claude / Anthropic 生態系概覽
 
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-31
 **更新頻率：** 🗓️ 週更（每週檢視一次；更新日期停留數天屬正常節奏）
 
 ---
 
 ## 當前局勢
 
-**S-1 的數字出來了，而且近九成不是花掉的現金**：10-21 正式提交，草案首度揭露 2026 上半年淨損 **$807 億**、營收 **$163 億**（前一年同期 $11 億）。關鍵在拆解：其中約 **$720 億是可轉換工具隨估值上升產生的非現金會計帳列損失**，同期實際投入基礎建設與運算的現金約 $90 億（前一年同期 $23 億）；2025 全年 $420 億虧損同樣主要來自同類帳列。只看「虧 807 億」會把一家現金燒 90 億的公司讀成燒 807 億。公開版 S-1 是否已遞交 SEC EDGAR 仍待確認。詳見 [[topics/anthropic-business]]、[[topics/market-lessons]]。
+**公開版 S-1 已經在 SEC EDGAR 上，兩個日期不是同一件事**：10-21 首度揭露數字（2026 上半年淨損 **$807 億**、營收 **$163 億**，前一年同期 $11 億），10-26 **公開版正式出現在 SEC EDGAR**，官方同日公告擬掛牌代號 **ANT**、Class A 普通股。數字的關鍵在拆解：$807 億中約 **$720 億是可轉換工具隨估值上升產生的非現金帳列損失**，同期實際投入基礎建設與運算的現金約 $90 億。只看「虧 807 億」會把一家現金燒 90 億的公司讀成燒 807 億。公開版另揭露營收較前期成長 14 倍、Claude Code 企業大戶支出為一般用戶 20 倍。**價格區間與上市日仍未公布**。詳見 [[topics/anthropic-business]]、[[topics/anthropic-ipo]]、[[topics/market-lessons]]。
 
-**Agent Skills 交給基金會，官方獨自治理結束**：10-23 Anthropic 把 Agent Skills 開放標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉出；官方稱逾 70 個平台已整合此標準。對照 MCP 的路徑，這是 Anthropic 第二次把自己定義的介面標準讓出來。寫 skills 的人短期不用改任何東西，但標準的變更節奏從此不由單一廠商決定。詳見 [[entities/claude-skills]]。
+**寫入範圍終於有了硬邊界**：v2.1.314 新增 `permissions.blockWritesOutsideWorkingDirectories`——Write／Edit／NotebookEdit 在**任何權限模式下**都拒絕工作目錄外的路徑。這是官方在「它會不會跑出破壞性指令」這題上補的最後一塊（git 層與寫入路徑都已補），但**外部內容的信任邊界仍缺**，所以該題在對照表上從 ✅ 下修為 🧪 部分對應。另 v2.1.316 起 **Opus 4.8 的 fast mode 已宣告淘汰、2026-11-30 移除**，用它的人要遷到 Opus 5.5。詳見 [[topics/official-community-gap]]、[[entities/pricing]]。
 
-**Claude Duet 開研究預覽：它會在你沒開口的時候動**：10-21～22 美國 Pro／Max 開放，Opus 5.5 驅動的主動式 agent，為獨立 iOS app。這是本庫第一個「不是你叫它才做事」的官方產品形態，技術細節未公開，熱度極高但試用價值仍列 ⏳ 觀望。詳見 [[entities/claude-duet]]、[[feature-radar]]。
+**Downloads 資料夾：任何網站都能把指令檔丟進去，它會照著執行**：10-26／10-27 兩個獨立來源披露 Claude Code 與 Codex 會遵從 Downloads 資料夾內任意檔案的指令。官方至今無回應，觸發機制與是否需使用者額外動作均未見報導。這是本週站上風險最高且官方沒接的一條。詳見 [[topics/ai-agent-safety]]。
 
-**聯邦採購與法律風險同時加碼**：10-21 美國衛生部（HHS）將對 Anthropic 做出「唯一來源」聯邦採購；同週 10-22 音樂出版商 Reservoir 控告 Suno 與 Anthropic「意圖取代創作者」。政府端一邊綁定、一邊監管的兩條線都在動。詳見 [[topics/anthropic-government-policy]]、[[topics/anthropic-business]]。
+**第三方評估機構的存取範圍，官方自己講清楚了**：本輪查到官方〈獨立評估者更新〉原文——METR 有 6 名員工、取得公司硬體與內部工具，存取程度約與 Anthropic 自家風險評估團隊相當；Anthropic **不能否決 METR 發布**，但可要求遮蔽預定類別；文中**未**賦予中止部署權、也未給發布時程。SecureBio 正審查 8 月風險報告的化生武章節。這把 10-23 Metr 公開質疑那條線從「各說各話」推進到「權限邊界有官方文字可引」。詳見 [[topics/recursive-self-improvement]]、[[topics/ai-agent-safety]]。
 
-**第三方評估機構 Metr 公開質疑官方安全說法**：10-23 Metr 對 Anthropic 近期的 AI 安全防護措施提出質疑。官方自評數字（如蒸餾防禦讓竊得量降 90–99%、提示注入 15 次內得手率 83.2%→7.1%）至今仍無第三方複現，這是第一個具名評估機構公開提出異議。詳見 [[topics/ai-agent-safety]]。
+**Agent Skills 交給基金會，官方獨自治理結束**：10-23 Anthropic 把 Agent Skills 開放標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉出；官方稱逾 70 個平台已整合。對照 MCP 的路徑，這是 Anthropic 第二次把自己定義的介面標準讓出來。寫 skills 的人短期不用改任何東西，但標準的變更節奏從此不由單一廠商決定。詳見 [[entities/claude-skills]]。
 
-**捐 5% 股權成立公益基金**：10-19 宣布成立 Anthropic Public Benefit Fund，若公司上市該筆股權將隨之計價。股東會表決結果與信託章程尚未公布。同週 10-22 哈佛前科學院長 Christopher Stubbs 加入長期利益信託。詳見 [[topics/anthropic-business]]、[[entities/christopher-stubbs]]。
+**Claude Duet：它會在你沒開口的時候動**：10-21～22 美國 Pro／Max 開放研究預覽，Opus 5.5 驅動的主動式 agent，獨立 iOS app。這是本庫第一個「不是你叫它才做事」的官方產品形態；10-26 官方另說明了「什麼擋著它不脫軌」。技術細節仍未公開，熱度極高但試用價值仍列 ⏳ 觀望。詳見 [[entities/claude-duet]]、[[feature-radar]]。
 
-**本週站內最值得記的事實面修正**：`anthropic-business` 細節區原把上半年淨損寫成 **$80.7 億**、與同頁指標表的 $807 億差 10 倍，本輪查官方報導後更正為 $807 億並補上非現金拆解——指標表對、細節區錯，單看任一處都不會發現。另 `entities/opencode` 原寫「OpenCode 下載量達 Claude Code 的 5.4 倍」方向寫反（實際是 Claude Code 為 OpenCode 的 5.4 倍）；`entities/pricing` 的「Team 每席最高 $500／月」四處誤植，官方是每席 $20／$100、全隊池上限 $500。
+**監管與風險移轉同時加碼**：10-28 Anthropic 向加州州長表態，主張法院應有權封殺風險 AI 模型；10-29 起文字輸出隱形浮水印擴大至 Opus 4.7／4.6 與 Sonnet 4.6，**11/3 生效**（法源為歐盟 AI Act 透明度規範）。另一面，10-27 業界指出 AI 相關損失恐超出保險業承保能力——需為 AI 營運風險投保的企業採購方要先確認保單上限。詳見 [[topics/anthropic-government-policy]]、[[topics/anthropic-business]]。
 
+**本週站內最值得記的事實面修正**：`entities/pricing` 的「通路與乘數」對官方計價頁重查後改兩項——**長脈絡標準價有 Haiku 5.5 這個例外**（逾 10 萬 token 改用 $0.50／$2.50 高一檔），以及 **fast mode 不再限第一方 API**（Opus 5.5 另可用於 Google Cloud 與 Azure 上的 Foundry）。另 `entities/claude-code` 原把 `rm` 防護的兩件事寫得像互相矛盾——2.1.287／288 補的是「always-ask 防線被繞過」的漏洞，2.1.309 才是把 bypass 模式的追問改為直接拒絕，而**後者不在 stable**；`topics/market-signals` 另清掉 15 處簡體「价」。
 
 ## 主要模型現況
 

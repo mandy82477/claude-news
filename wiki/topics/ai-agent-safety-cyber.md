@@ -3,24 +3,24 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-30"
-last_news_update: "2026-10-28"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
-inbound_links: 1
-attribution_count: 0
-attribution_last: null
-top_source: null
-pending_count: 8
-pending_overdue: 2
+days_since_news_subtree: 1
+inbound_links: 4
+attribution_count: 1
+attribution_last: "2026-10-30"
+top_source: "google-news"
+pending_count: 9
+pending_overdue: 0
 pending_next_review: "2026-11-04"
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 模型網攻能力、濫用與防守方准入
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
@@ -45,7 +45,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這頁答四題：** 模型能做到什麼攻擊；有人拿 Claude 打人，哪些是官方承認的；防守方能申請什麼；通過審核還被擋怎麼辦。
 
-**這些都不擋母頁現況表的任何一列**：那張表問的是別人怎麼打你（[[topics/ai-agent-safety#現在還擋不住的攻擊]]），本頁是能力、濫用與准入。政府面見 [[topics/anthropic-government-policy]]，模型面見 [[entities/mythos]]，中美信任見 [[topics/safety-china-trust-dispute]]。
+**這些都不擋母頁現況表的任何一列**：那張表問的是別人怎麼打你（[[topics/ai-agent-safety#現在還擋不住的攻擊]]），本頁是能力、濫用與准入。政府面見 [[topics/anthropic-government-policy]]，模型面見 [[entities/mythos]]，中美信任見 [[topics/safety-china-trust-dispute]]。姊妹頁 [[topics/ai-agent-safety-prompt-injection]] 管反方向：攻擊者把指令塞進代理讀到的內容（例如 10-08 Haiku 5.5 抗注入數字的完整脈絡），本頁只管模型自己能做出的攻擊。
 
 ---
 
@@ -120,19 +120,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **CSO Online 跟進（2026-10-30）**：指出 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；僅標題可用，CVE 編號與受影響版本未附
 - ❓ **待查證**（標 2026-10-28｜查 Chrome、Android｜複 2026-11-11）｜**漏洞修補與模型發布狀態**：官方僅稱揭露五條攻擊鏈示範，受影響廠商修補進度與該研究模型會否公開發布均未見報導
 
-#### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報，未證實）
+#### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報）
 
 - **揭露來源**：Reddit／r/ClaudeCode（單一貼文，無「週熱門」標記，score 不可信，0 留言）
 - **核心主張（僅標題可用，使用者回報、非官方確認）**：使用者稱自前一晚約 22:30 PT 起，多數 opus-5-5 工作階段僅被要求「實作任務 X」就觸發「推理萃取」安全防護機制（reasoning extraction safeguards）；具體觸發條件、受影響範圍與官方說明均未見報導
 - **性質判斷**：屬產品使用限制／疑似誤攔，非外部攻擊面，不列入母頁「現在還擋不住的攻擊」表；與本頁「模型層安全≠產品層安全」既有框架同類，主題上與 09-15 CVP 分類器誤標研究者訊息、10-26 XDA 電視逆向工程限制相近，但未見報導提及與 CVP 或既有分類器變更的關聯，暫不併線
-- ❓ **待查證**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-11-10）｜**分類器是否確有行為變化**：單一使用者回報、0 留言、無跨來源佐證，是分類器近期確有調整還是個案誤判均未證實
+- ❓ **待查證**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-11-10）｜**分類器是否確有行為變化**：單一使用者回報、0 留言、無跨來源佐證，是分類器近期確有調整還是個案誤判均無定論
 - **可信度評估**：單一 Reddit 貼文、0 留言、無其他使用者附議或媒體跟進，可信度低，暫記錄觀察
 
-#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，未證實，2026-10-28 更新）
+#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-28 更新）
 
 - **2026-10-28 更新（The Independent 跟進）**：The Independent 報導稱該新創聲稱在不到 12 小時內「攻破」Anthropic；具體攻擊手法、影響範圍與 Anthropic 官方回應仍未見報導，與 10-26 Gizmodo／WaPo 的聲稱同源（Anthropic 未回應）
 - **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體；10-28 The Independent 第三家媒體跟進
-- **核心主張（僅標題可用，未證實）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍
+- ❓ **待查證**（標 2026-10-26｜查 DOGE、Washington Post）｜**入侵聲稱（僅標題可用）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍；已掃日報至 2026-10-30 未見 Anthropic 回應，官方頁面未查證
 - **可信度評估**：僅為該新創公司單方聲稱，Anthropic 尚未公開回應或證實，不當作既成事實；三家主流媒體跨日報導但內容均止於標題層級，10-28 跟進僅加「不到 12 小時」細節，未提高可信度
 
 #### Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計（2026-10-26 新增，官方安全回應）
@@ -201,7 +201,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：標題稱 Anthropic「渲染一個尚不存在的威脅」以炒作 AI 末日恐慌；摘要提及「AI 系統已完全有能力對基礎設施發動惡夢級攻擊」一語，但該摘要混雜了 HN 首頁其他則標題，無法確認文章完整論述脈絡
 - **與既有敘事的關係**：與母頁「自我複製／蠕蟲化」階梯、「## 模型網攻能力與防護」等官方風險論述構成反面聲音，呼應本頁「矛盾來源兩面並存、不強行調和」原則
 - **性質判斷**：評論／批判性文章，非具體攻擊或漏洞事件，不列入母頁「現在還擋不住的攻擊」表
-- ❓ **待查證**（標 2026-10-14｜查 The Register、conjures threat）：批評具體針對哪一項官方論述或研究、完整論點均未見報導（摘要不完整）
+- 🔎 **查無官方**（標 2026-10-14｜查 The Register、conjures threat｜複 2026-11-30）：批評具體針對哪一項官方論述或研究、完整論點均未見報導；2026-10-31 以關鍵詞搜尋未能定位原文，同期可見「安全警告是行銷」類批評（如 BBC、IPO 文件矛盾說），但無法確認即此篇
 - **可信度評估**：Hacker News 67 分，熱度不低；但原文僅標題式摘要可讀，具體論證強度無法評估
 
 #### Anthropic 推出「Cyber Mission」長期資安計畫：關鍵基礎設施防禦計畫（CIDP）＋開源漏洞免費掃描（2026-10-09 新增，官方新安全專案）
@@ -242,8 +242,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **社群轉述新主張（Reddit／r/LocalLLaMA 週熱門，2026-10-11）**：貼文稱攻擊由單一人士結合 ARTEX、DeepSeek v4.1-Flash、GLM-5.3、Grok 4.6 與 Claude Code 完成；CrowdStrike 報告（BleepingComputer 轉述）確認多款 LLM 並用，歸因華語財務動機個人而非國家背景（2026-10-24 查證）
 - **後續查證（2026-10-24）**：據 CrowdStrike 報告（BleepingComputer、Korea Times、TheNextWeb 轉述），入侵發生於 9 月底至 10 月初，攻擊者用開源滲透工具 ARTEX 搭配多款 LLM；CrowdStrike 以中等信心判斷為華語、財務動機的個人，未歸因給特定駭客組織
 - 報導稱 Claude 用於研究（如詢問南韓外洩資料的交易管道、製作假資安研究員履歷）；Shinhan、KB Kookmin、Hana 為受害銀行，南韓警方 10-06 立案；其一報導稱 Shinhan 約 2.5 萬名客戶、KB 119 名客戶資料外洩，各報導不一
-- 嫌疑人（廣東 26 歲男子）身分未證實；Anthropic 官方站未見對應說明（2026-10-24 查）
-- ❓ **待查證**（標 2026-10-11｜查 ARTEX、GLM-5.3）：CrowdStrike 報告經轉述稱華語財務動機個人（中等信心），未歸因國家背景；模型組合僅見 Korea Times 單一說法（2026-10-24 查）
+- 嫌疑人（廣東 26 歲男子）身分僅見報導指稱；Anthropic 官方站未見對應說明（2026-10-24 查）
+- 🔎 **查無官方**（標 2026-10-11｜查 ARTEX、GLM-5.3｜複 2026-11-30）：CrowdStrike 報告經轉述稱華語財務動機個人（中等信心），未歸因國家背景；
+  - 2026-10-31 再查，媒體稱（BleepingComputer、Cyber Magazine）ARTEX 主後端為 DeepSeek v4.1-flash，GLM-5.3 與 Grok 4.6 為補充，與 Korea Times 說法不同，「華語」歸因本輪未找到佐證；Anthropic 官方站無對應說明
 - **可信度評估**：CrowdStrike 為具名資安公司一手研究，經 Benzinga 單一媒體轉引，攻擊鏈細節尚未揭露，訊號強度中等偏高；單一人士歸因僅見 Reddit 週熱門貼文轉述，未見 CrowdStrike 原始報告佐證，訊號強度低
 
 #### Anthropic 官方推出擴大版 Cyber Verification Program，分三層存取；官方自述 Glasswing 夥伴已找出至少 129,000 個漏洞（2026-10-07 新增，CVP 官方升級）
@@ -415,10 +416,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[📋 跟進，官方未回應] The Independent：前 DOGE 成員新創聲稱 12 小時內「攻破」Anthropic**：續 10-26 Gizmodo／WaPo 聲稱，官方仍未回應，詳見「## 技術彙整」
 
 ### 2026-10-27
-- **[📋 新增，❓ 待查證] Reddit：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護**：單一貼文、0 留言，無跨來源佐證，詳見「## 技術彙整」
+- **[📋 新增，單一使用者回報] Reddit：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護**：單一貼文、0 留言，無跨來源佐證，詳見「## 技術彙整」
 
 ### 2026-10-26
-- **[📋 新增，未證實] Gizmodo／The Washington Post：前 DOGE 成員新創聲稱入侵 Anthropic**：無攻擊鏈或技術細節，官方未回應，詳見「## 技術彙整」
+- **[📋 新增，單方聲稱] Gizmodo／The Washington Post：前 DOGE 成員新創聲稱入侵 Anthropic**：無攻擊鏈或技術細節，官方未回應，詳見「## 技術彙整」
 - **[🛠️ 新增，官方防護] Help Net Security：Anthropic 說明防止 Claude Duet「失控」的機制設計**：僅標題可用，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 新增，使用者回報] XDA：使用者稱 Claude 已限制電視逆向工程相關任務**：非官方公告，詳見「## 技術彙整」
 

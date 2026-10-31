@@ -1,16 +1,16 @@
 ---
 page: "topics/model-comparison"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "🤖 模型"
 last_updated: "2026-10-24"
 last_news_update: "2026-10-08"
-status_main: "ongoing"
-days_since_news: 21
+status_main: "monitoring"
+days_since_news: 23
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 21
+days_since_news_subtree: 23
 inbound_links: 54
 attribution_count: 22
 attribution_last: "2026-10-08"
@@ -20,12 +20,12 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude 模型選型對照
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
 **最後更新：** 2026-10-24
@@ -33,6 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **Haiku 5.5 發布，取代 Haiku 4.5**（2026-10-08）
 > 2026-10-07 官方發布：最便宜、最快、最具能力的小型模型，成本比 Haiku 4.5 降約 75%，精確牌價另見 [[entities/haiku-5-5]]。
+> 自 2026-10-08 起陣容無新變動（2026-10-31 核）；本頁改列 `monitoring`，現行陣容結論以下方快速選型表為準，有新模型發布或退役時再回到 `ongoing`。
 
 ---
 
@@ -204,15 +205,35 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 
 ## 時序（陣容變化）
 
+**2026-10**
+
 - 2026-10-07：**Haiku 5.5 發布**，取代 Haiku 4.5；官方稱最便宜、最快、最具能力的小型模型，成本降約 75%；精確牌價另見 [[entities/haiku-5-5]]
+
+**2026-09**
+
 - 2026-09-30：**Sonnet 4.5 公告棄用，2026-11-30 退役**（官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證，與 mixed-news.com、dev.to 先行報導一致）：建議遷移至 `claude-sonnet-5-5`；Bedrock、GCP 另訂時程
 - 2026-09-28：**Sonnet 5.5 發布**，取代 Sonnet 5 成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3% 升至 70.6%
 - 2026-09-23：**Opus 5.5 發布**，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價 $4/$20（降 20%），官方稱運算成本降 40%
 - 2026-09-01：**Fable 5.1 發布**，取代 Fable 5.0 成為公開陣容旗艦；Mythos 5.1 同步發布，維持信任機構限定存取
+
+**2026-08**
+
 - 2026-08-24：**36氪稱 Anthropic 就 Claude 推理能力「秘密降低」發布道歉聲明**：查證後確認非新事件，是 2026-06-11 官方已道歉的 Fable 5 護欄爭議之後續轉述；完整事件見 [[entities/fable-5#2026-06（發布與出口管制期）]]（查證 2026-09-20）
+
+**2026-07**
+
 - 2026-07-25：**Opus 5 發布**，取代 Opus 4.8 成為次旗艦、Claude Max 新預設模型、Claude Pro 最強模型
 - 2026-07-01：Sonnet 5 發布（Claude Code 預設）；Fable 5 / Mythos 5 解禁
+
+**2026-06**
+
 - 2026-06-13：Fable 5 / Mythos 5 出口管制停用（至 06-30）
 - 2026-06-09：Fable 5 發布，Opus 4.8 退居次旗艦
+
+**2026-05**
+
 - 2026-05-28：Opus 4.8 發布
+
+**2026-04**
+
 - 2026-04-24：Opus 4.7 發布

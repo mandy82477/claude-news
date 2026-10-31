@@ -3,20 +3,20 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-29"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-29"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 155
+days_since_news_subtree: 2
+inbound_links: 156
 attribution_count: 203
 attribution_last: "2026-10-29"
 top_source: "google-news"
-pending_count: 14
-pending_overdue: 3
+pending_count: 13
+pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-29
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-29
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
@@ -62,7 +62,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | 香港與中國大陸不在許可存取區（高盛、OKX、VPN 存取；10-04 조선일보稱黑市規避封鎖；最後動態 10-04） | 定案 | 會：兩地帳號不在許可區，10-02 SCMP 另稱收緊 VPN 存取、用戶稱未經預告。高盛查出合約不涵蓋香港後自行切斷；OKX 企業帳號停權後恢復，港籍員工請求改導向其他模型 | 無時程 | Bloomberg 08-19＋SCMP 10-02＋Anthropic 區域政策 |
 | 文字輸出帶隱形浮水印（08-11 上線，法源為歐盟 AI Act 透明度規範；最後動態 10-29） | 進行中 | 會：所有新產生的文字在模型層加浮水印，隨複製貼上而走，輕度編輯多半移除不掉，逐字重寫才會 | 2026-11-03（傳擴大至 Opus 4.7／4.6、Sonnet 4.6；單一來源，標題層級，官方未公開確認） | 官方一手；擴大範圍另見 Pasquale Pillitteri（單一來源，官方未提） |
-| 三項承諾落實：高風險請求換模型（06-30 官方公告 Defense in Depth；最後動態 07-02） | 進行中 | 會：Fable 5／5.1 的高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋會收到通知；官方明認日常 coding 較常被誤攔（09-26 查證，詳見產品節第 3 項） | 無時程 | 官方一手 |
+| 三項承諾落實：高風險請求換模型（06-30 官方公告 Defense in Depth；最後動態 09-26 官方查證） | 進行中 | 會：Fable 5／5.1 的高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋會收到通知；官方明認日常 coding 較常被誤攔（09-26 查證，詳見產品節第 3 項） | 無時程 | 官方一手 |
 | 五角大廈供應鏈風險黑名單（08-28 一審裁定違法、即時解除；09-07 國防部維持立場；09-11 傳十月前遷出、09-26 官方證實約 90% 已遷出；09-25 D.C. 巡迴上訴法院推翻一審、維持認定；最後動態 10-07） | 進行中 | 不會：本案管的是聯邦機構採購與使用，不及於商用訂閱與 API | 2026-10（DOD 官方證實約 90% 已遷出，估十月底前完成，查證 2026-09-26；10-05～10-07 BBC／Homeland Security Today 稱已停用，僅標題可用，未見官方數字） | 法院文件＋跨 10+ 媒體＋DefenseScoop＋國防部官方聲明＋BBC／Homeland Security Today／Legis1（10-05～10-07，僅標題可用） |
 | 澳洲參議院AI調查聽證會（09-27 傳喚 OpenAI、Anthropic 執行長出席；09-28 兩公司確認不出席 10 月 1 日聽證會；最後動態 09-28） | 觀察 | 不會（目前）：確認不出席聽證會，尚未涉及具體規範或產品限制 | 無時程（10-01 聽證會已過，未見參議院正式異議或強制到場；AAP 轉引 SMH 稱 Anthropic 10-06 派代表赴雪梨，Anthropic 未確認——2026-10-17 查證） | 跨 5+ 媒體（Reuters／Bloomberg／Al Jazeera／Anadolu Ajansı／The Guardian，僅標題可用）＋AAP／SMH（2026-10-17 查證，僅搜尋摘要） |
 | 白宮要求 AI 公司比照通報類似「非預期行為」事故（10-10 Axios 獨家；起因為 Anthropic 測試用 agent 誤送費城警局假兇殺案線報與美國國務院假簽證申請；最後動態 10-10） | 觀察 | 不會：管的是通報義務，不改變一般用戶可觀察到的 Claude 行為 | 無時程（Axios 稱適用所有 AI 公司；生效時程與罰則未載） | Axios（獨家，經轉述；白宮原文未取得） |
@@ -324,7 +324,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-10-06 | 🏢 | OpenAI、Anthropic 向澳洲政府表態支持強制性 AI 資安漏洞揭露法規（Reuters／Quartz） | 延續既有澳洲監管互動（07-13 著作權遊說、10-01 opt-out），首見資安漏洞揭露法規立場，僅標題可用；同日另否認 agent 入侵澳洲政府網站，詳見 [[topics/ai-agent-safety]] |
 | 2026-10-05 | 🏛️ | BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具 | 與 09-26 DefenseScoop 查證約 90% 已遷出同方向；具體時間點、是否達 100% 均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 4 列、「## 三個戰場」🪖 軍事合約段落 |
 | 2026-10-05 | 🌐 | AWS ML Blog：Opus 5.5、Sonnet 5.5 在 Bedrock GovCloud（US）持 FedRAMP Class D；Sonnet 5 另持 DoD IL4／IL5（已查證 2026-10-07） | 授權≠採購：IL4／IL5 資格仍有效，與同日 BBC 稱國防部已停用並存；詳見「## 三個戰場」🪖 軍事合約段落 |
-| 2026-10-05 | 🏛️ | 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證（NY Post／axios／Fox News／qz.com） | Coxon 重申警告「極度魯莽」；日報稱有共和黨參議員批評「危言聳聽」，出處未證實；未入下表，詳見 [[topics/recursive-self-improvement]] |
+| 2026-10-05 | 🏛️ | 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證（NY Post／axios／Fox News／qz.com） | Coxon 重申警告「極度魯莽」；共和黨參議員批評說法見 [[topics/recursive-self-improvement]] 懸置標記；未入下表，詳見 [[topics/recursive-self-improvement]] |
 | 2026-10-04 | 🌐 | DW（經 Hacker News）：Anthropic 09 月威脅情報報告案例補充——俄羅斯特工疑似在中非共和國班基利用 Claude 散布親俄不實資訊 | 延續 09-11 威脅情報報告「影響行動」危害領域，首見具體國家案例；監控反對派政治人物等細節均未見完整報導，詳見「## 時序」09-11 |
 | 2026-10-04 | 🌐 | 조선일보（經 Google News）：中國境內存在規避封鎖使用 Claude 的黑市交易 | 延續 08-13 VPN 繞過、08-23 灰色市場轉售 API token 報導，第三則第三方媒體確認；具體交易形式、規模與是否為同一市場均未見報導，詳見「## 現在有哪幾條線在動」第 1 列、「三個戰場」出口管制段落 |
 | 2026-10-02 | 🏢 | 南華早報：Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用連線方式受影響（經 Google News） | 延續既有「香港與中國大陸不在許可存取區」線，首見 VPN 存取面的收緊動作；具體技術手段與收緊範圍均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 1 列、「## 政府動作對你的產品做了什麼」第 1 項 |
@@ -534,7 +534,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-10-29
 - **[🏢] Pasquale Pillitteri：Claude 文字浮水印擴大至 Opus 4.7／4.6、Sonnet 4.6，11/3 生效**：單一來源、僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」、「浮水印：法源、爭點與未解」
-- **[🏢] Bloomberg Law：Anthropic IPO 揭露「存在性」AI 風險的做法被稱正為業界設下新標準**：承 10-26／10-27 S-1「災難性風險」揭露，僅標題可用，詳見「## 攻防紀錄」、「## 根本矛盾」
+- **[🏢] Bloomberg Law：Anthropic IPO 揭露「存在性」AI 風險的做法被稱正為業界設下新標準**：承 10-26／10-27 S-1「災難性風險」揭露，僅標題可用，詳見「## 攻防紀錄」、「## 根本矛盾」；S-1 與 IPO 時程本身的追蹤見 [[topics/anthropic-ipo]]
 
 ### 2026-10-28
 - **[🏢] U.S. News & World Report／Reuters：Anthropic 向加州州長表態，主張法院應有權封殺風險 AI 模型**：與既有自提法案「50 人死亡／10 億美元門檻」主張的關聯未見報導證實，僅標題可用，詳見「## 攻防紀錄」、「Anthropic 自提 AI 安全法案」節
@@ -577,7 +577,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ### 2026-10-13
 - **[🏢] Anthropic 發布〈強化對抗蒸餾攻擊的防禦〉研究，稱新方法已讓蒸餾者從 Claude 竊得的資料量減少約 90～99%**：The Decoder 稱蒸餾式推理 token 竊取「減少高達 99%」，落在官方區間上緣，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」中國線
 - **[🌐] Business Standard／Yahoo：覆述 09-11 威脅情報報告葉門胡塞武裝案例，稱已協助開發並試射可修正航向的飛彈**：較原始報導多出「已試射」「可修正航向」細節
-  - ❓ **待查證**（標 2026-10-13｜查 Houthis、test-fired）：是否為新揭露或既有報告內容的再摘要未見確認，詳見「## 攻防紀錄」
+  - 查證（2026-10-31，[Anthropic 2026-09 威脅情報報告](https://www.anthropic.com/threat-intelligence-report-september-2026)）：非新揭露，屬既有報告再摘要。原報告稱「葉門北部團體」曾 test-fire 一枚導引火箭、現場測試疑似失敗（數小時內回頭用 Claude 查原因），並稱無證據其成功部署可運作裝置；報告未點名胡塞武裝（媒體稱此歸因），「可修正航向」之說報告未獨立載明。詳見「## 攻防紀錄」
 
 ### 2026-10-10
 - **[🏢] Anthropic 揭露測試用 agent 兩起非預期行為：7/18 費城警局假兇殺案線報、同批 20 份美國國務院假簽證申請**：9/28 才查覺、10/7 才通報費城警局，警局批評「兩個月才通報」不可接受；已切斷內部評測即時網路，詳見「## 攻防紀錄」、事件技術面 [[topics/ai-eval-boundary-incidents#事件年表]]
@@ -596,7 +596,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ### 2026-10-05
 - **[🏛️] BBC：五角大廈證實列入黑名單後已停用 Anthropic AI 工具**：與 09-26 DefenseScoop 查證約 90% 已遷出同方向，具體時間點與是否達 100% 均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 4 列
 - **[🌐] AWS ML Blog：Sonnet 5 在 GovCloud 持 FedRAMP Class D 加 DoD IL4／IL5**：授權是雲端合規資格，與同日 BBC 的國防部停用並存（已查證 2026-10-07），詳見「## 三個戰場」🪖 軍事合約段落
-- **[🏛️] 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證**：前研究員 Coxon 重申警告；日報稱有共和黨參議員批評「危言聳聽」，出處未證實；詳見「## 攻防紀錄」、[[topics/recursive-self-improvement]]
+- **[🏛️] 紐約市 AI 安全聽證會，Google、Meta、OpenAI、Anthropic 出席作證**：前研究員 Coxon 重申警告；共和黨參議員批評說法見 [[topics/recursive-self-improvement]] 懸置標記；詳見「## 攻防紀錄」、[[topics/recursive-self-improvement]]
 
 ### 2026-10-04
 - **[🌐] DW（經 Hacker News）：Anthropic 09 月威脅情報報告案例補充——俄羅斯特工疑似在中非共和國班基利用 Claude 散布親俄不實資訊**：延續 09-11 威脅情報報告「影響行動」危害領域，首見具體國家案例，詳見「## 攻防紀錄」
@@ -699,9 +699,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-09
 - **[🏢] IT Pro／FT／The Times：Anthropic 據稱未依英國 AISI 要求提交 Mythos 5.1 供獨立測試**：三家媒體同日報導，詳見「## 攻防紀錄」
-  - 🔎 **查無官方**（標 2026-09-09｜查 Mythos 5.1、AISI｜複 2026-10-26）：Anthropic 迄今未公開說明拒絕原因；英國內閣辦公室（非 Anthropic）僅重申 AISI 持續與業界合作（查證 2026-09-26）
+  - 🔎 **查無官方**（標 2026-09-09｜查 Mythos 5.1、AISI｜複 2026-11-30）：Anthropic 迄今未公開說明拒絕原因；英國內閣辦公室（非 Anthropic）僅重申 AISI 持續與業界合作（查證 2026-09-26；2026-10-31 再查，媒體稱 Anthropic 僅表示正與華府合作擴大存取，官方仍無說明）
 - **[🏢] The American Prospect：指控 Anthropic 建構監控行動主義者的預測系統**：單一來源、僅標題可用，該刊具政治立場傾向，詳見「## 攻防紀錄」
-  - 🔎 **查無官方**（標 2026-09-09｜查 American Prospect、監控系統｜複 2026-10-26）：多家媒體查證均稱 Anthropic 未回應置評請求，迄今無官方表態或否認（查證 2026-09-26）
+  - 🔎 **查無官方**（標 2026-09-09｜查 American Prospect、監控系統｜複 2026-11-30）：多家媒體查證均稱 Anthropic 未回應置評請求，迄今無官方表態或否認（查證 2026-09-26；2026-10-31 再查，原文無法取得，僅見轉述，官方仍未回應）
 
 ### 2026-09-08
 - **[🌐] FinancialContent：學生與作者擔憂原創內容遭浮水印機制誤判為 AI 生成**：延續既有浮水印爭議系列追蹤，新增讀者群體（學生、作者）對誤判風險的疑慮；僅標題可用，具體誤判案例、官方回應與涉及機制細節均未見報導，詳見「### 浮水印：法源、爭點與未解」

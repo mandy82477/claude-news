@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-24"
 last_news_update: "2026-08-27"
 status_main: "active"
-days_since_news: 63
+days_since_news: 65
 parent: null
 children: "['entities/opus-4-8-archive']"
 page_role: "hub"
-days_since_news_subtree: 63
+days_since_news_subtree: 65
 inbound_links: 9
 attribution_count: 6
 attribution_last: "2026-07-25"
@@ -154,9 +154,16 @@ claude.ai 用戶現可調節 Claude 在任務上投入的努力程度，不再�
 
 ## 歷史記錄
 
+**2026-08**
+
 | 日期 | 事件 |
 |------|------|
 | 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路問題（詳見上方「現況」與 [[entities/opus-5]]） |
+
+**2026-07**
+
+| 日期 | 事件 |
+|------|------|
 | 2026-07-25 | **✅ 官方證實：Claude Opus 5 正式發布**，取代 Opus 4.8 成為次旗艦、Claude Max 新預設模型、Claude Pro 最強模型；終結近兩週傳聞（詳見 [[entities/opus-5]]） |
 | 2026-07-24 | **Opus 5 傳聞通過截圖測試，未通過 API 合約測試**：指出流傳截圖看似可信，但缺乏可程式化驗證的 API 層級證據——已由隔日官方發布證實 |
 | 2026-07-23 | **Anthropic 正為潛在 Opus 5 推出做準備**：未提供具體時間或型號細節——已由 07-25 官方發布證實 |

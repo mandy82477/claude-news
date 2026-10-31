@@ -4,14 +4,14 @@ kind: "entity"
 type: "model"
 status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-09"
 status_main: "active"
-days_since_news: 20
+days_since_news: 22
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 20
+days_since_news_subtree: 22
 inbound_links: 19
 attribution_count: 14
 attribution_last: "2026-10-09"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Haiku 5.5
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-09
 
 > **牌價與 100K 分段已查實**（官方頁 2026-10-11 查證）
@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-10-07 最新**：Anthropic 發布 Claude Haiku 5.5（API ID `claude-haiku-5-5`），為 Claude 5.5 家族第三款模型，繼 Opus 5.5（09-22）、Sonnet 5.5（09-28）之後。官方定位為「目前最便宜、最快、最具能力的小型模型」，面向高流量、成本敏感的工作（摘要、壓縮、資料庫查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼任務的 subagent 效果好；官方稱它也是迄今最快的模型，適合即時客服、瀏覽器操作等延遲敏感場景。平均執行成本比 Haiku 4.5 低約 75%（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）；這是平均值，>100K 的 prompt 另計，見〈實付成本〉。同批官方也將 Claude Sonnet 5.5 的快取讀取價砍半，定價細節見 [[entities/pricing]]。
+**2026-10-07 最新**：Anthropic 發布 Claude Haiku 5.5（API ID `claude-haiku-5-5`），為 Claude 5.5 家族第三款模型，繼 Opus 5.5（09-22）、Sonnet 5.5（09-28）之後。官方定位為「目前最便宜、最快、最具能力的小型模型」，面向高流量、成本敏感的工作（摘要、壓縮、資料庫查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼任務的 subagent 效果好；官方稱它也是迄今最快的模型，適合即時客服、瀏覽器操作等延遲敏感場景。平均執行成本比 Haiku 4.5 低約 75%（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）；這是平均值，>100K 的 prompt 另計，見〈實付成本〉。同批官方也將 Claude Sonnet 5.5 的快取讀取價砍半，定價細節見 [[entities/pricing]]。 自 2026-10-09 起無新動態（2026-10-31 核）；仍是現行 Haiku，停滯表示近三週沒有新增事實。
 
 牌價（2026-10-11 查定價頁）：**prompt ≤100K 為 $0.10／$0.50，>100K 為 $0.50／$2.50 每 Mtok**；規格：**1M context、128K 最大輸出、預設 effort `medium`、可靠知識截止 Jun 2026、退役不早於 2027-10-07**（官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)、2026-10-10 查證）。AWS、GitHub Copilot 同日同步上架（Reuters／VentureBeat，2026-10-07）。
 
@@ -71,7 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **牌價與分段**：≤100K 為 $0.10／$0.50，>100K 為 $0.50／$2.50（輸入、輸出皆 5 倍）；快取讀取 $0.01（≤100K）／$0.05（>100K）（[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)，官方頁 2026-10-11 查證）。費率細節的家是 [[entities/pricing]]。
 - **對 Haiku 4.5 的差距**：Haiku 4.5 為 $1／$5；短 prompt 輸入降 90%，>100K 仍約減半（換算）。1M context 可用，但過 100K 就換價。
 - **快取讀取對照**：Sonnet 5.5 快取讀取 $0.10（輸入價 ×0.05）；Haiku 5.5 ≤100K 為 $0.01，約是其十分之一。
-- **「75%」是平均，不是長 context**：官方稱「平均成本比 Haiku 4.5 低約 75%」（[發布文](https://www.anthropic.com/claude-haiku-5-5)，官方頁 2026-10-11 查證）；以長 prompt 為主的工作量，別套這個數字。
+- **「75%」是平均，不是長 context**：官方稱「平均成本比 Haiku 4.5 低約 75%」（[發布文](https://www.anthropic.com/claude-haiku-5-5)，官方頁 2026-10-11 查證）；以長 prompt 為主的工作量，別套這個數字。官方 75% 與媒體 90% 的分母不同，怎麼拆見 [[topics/market-lessons#一課一課學]] 的「官方百分比和媒體百分比的分母可能不同」。
 - **在 Claude Code 裡換不會自動發生**：內建 Explore 繼承主對話模型；要讓它用 Haiku，得在 `.claude/agents/` 自訂名為 `Explore`、`model: haiku` 的 agent 蓋掉；只設 `CLAUDE_CODE_SUBAGENT_MODEL` 不改 Explore（[subagent 文件](https://code.claude.com/docs/en/sub-agents)，官方頁 2026-10-11 查證）。
 
 ---

@@ -3,17 +3,17 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-29"
-last_news_update: "2026-10-29"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 56
-attribution_count: 268
-attribution_last: "2026-10-22"
+days_since_news_subtree: 1
+inbound_links: 54
+attribution_count: 269
+attribution_last: "2026-10-30"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 
 > **Token/成本優化、Plugin/MCP整合、記憶與知識管理、Agent活動可視化同日各新增一例，另有一則暫列未歸類**（2026-10-30）
@@ -73,26 +73,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 類別 | 代表技巧 | 成熟度 | 最後動態 | 核心概念 |
 |---|---|---|---|---|
-| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、routines 排程自動化、EricTechPro/super-board 等（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-27 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Skills 設計** | oil-oil/draw-ui、codeswithroh/tastemaker、Oldcircle/geo-sleuth 等（[[topics/community-skills#2026-10]]） | ✅ 成熟 | 2026-10-28 | description 自動觸發，把書籍與流程封裝成可複用 skill |
+| **Hooks 與自動化** | PostToolUse 稽核、Git Hooks 品質門、精簡輸出外掛、routines 排程自動化、EricTechPro/super-board 等（[[topics/community-guardrails#2026-10]]） | ✅ 成熟 | 2026-10-27 | 強制執行勝過建議；CLAUDE.md 做偏好、Hooks 做邊界 |
 | **Multi-agent 架構** | Claude Squad、ccteams、OtoDock、omnigent、orca、hcom、amux、Offrun、zhikuncode 等（[[topics/community-multi-agent#2026-10]]） | ✅ 成熟 | 2026-10-19 | orchestrator 分派 ＋ 獨立 git worktree，防答案塌縮 |
 | **CLAUDE.md 管理** | 精簡規則策略、Self-improving Rules、防腐爛機制（[[topics/community-memory#2026-10]]） | ✅ 成熟 | 2026-10-01 | 寫成「規則」而非「建議」，CI 攔截違反架構的 PR |
-| **記憶與知識管理** | claude-mem、projectmem、jatechan/ai-data-extractor、voidcraft-dev/memory-forge-rs 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-27 | 跨 session、跨工具、跨機器的持久記憶協定 |
-| **Plugin / MCP 整合** | pipeboard、marvkr/better-design、kanaworksai-hue/audio-studio-mcp 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-26 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **記憶與知識管理** | claude-mem、projectmem、memory-forge-rs、itechmeat/open-second-brain 等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-30 | 跨 session、跨工具、跨機器的持久記憶協定 |
+| **Plugin / MCP 整合** | pipeboard、marvkr/better-design、audio-studio-mcp、kajisho5/ffmpeg-skill 等（[[topics/community-integrations#2026-10]]） | ⚡ 活躍 | 2026-10-30 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
+| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、Haiku 5.5 價格閘門、tokentab、Apify MCP 成本實測（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-30 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
+| **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、magpie、jev-router、Atticus、自製 harness 換便宜模型（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
 | **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、官方審查機制（[[topics/community-guardrails#2026-10]]） | ⚡ 活躍 | 2026-10-16 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
-| **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、I-have-ADHD、Haiku 5.5 價格閘門、tokentab（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-13 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-14 | 即時取回優於預先載入；避免 context 過早飽和 |
-| **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、MaskShift、magpie、jev-router、Atticus（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-22 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、vscode-bridge 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
-| **創意工具 Agent 整合** | Palmier Pro、reelmimic、GodotMaker、Quick Study 等（[[topics/community-integrations#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
-| **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck、claude-share、Corgi 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
-| **Agent 預算控制** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
-| **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-10]]） | ⏳ 新興 | 2026-10-21 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
-| **安全架構** | Grepathy、OneCLI、agent-scan、ThinkWatch-Lite、WaLiAPI、awesome-claude-code-mods 等（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-16 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
-| **Agent 記憶保護** | AGENTS.md 輸出持久化片段：把規劃文件發布到可持久引用的連結（[[topics/community-memory#2026-10]]） | ⏳ 新興 | 2026-10-08 | agent 寫出的規劃文件不只活在單一 .md 檔，檔案被取代後脈絡仍在 |
-| **行動裝置遠端控制** | ccgram、Android Remote Control MCP、OpenMinis/iCTRL、witchan/ios-mcp 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-23 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
+| **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck、claude-share、Corgi、HachimoDock 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-30 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **規格驅動開發** | spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-28 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
 | **可靠性測試** | requirement failure／test coupling 判讀框架（[[topics/community-skills#2026-10]]） | ⏳ 新興 | 2026-10-26 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
+| **創意工具 Agent 整合** | Palmier Pro、reelmimic、GodotMaker、Quick Study 等（[[topics/community-integrations#2026-10]]） | ⏳ 新興 | 2026-10-24 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| **Agent 預算控制** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
+| **行動裝置遠端控制** | ccgram、Android Remote Control MCP、OpenMinis/iCTRL、witchan/ios-mcp 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-23 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
+| **Agent 規模化** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-10]]） | ⏳ 新興 | 2026-10-21 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
+| **安全架構** | Grepathy、OneCLI、agent-scan、ThinkWatch-Lite、WaLiAPI、awesome-claude-code-mods 等（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-16 | AI 加速開發下的系統性防線；CI 攔截語義退化 |
+| **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、vscode-bridge 等（[[topics/community-interfaces#2026-10]]） | ⏳ 新興 | 2026-10-14 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
+| **Agent 記憶保護** | AGENTS.md 輸出持久化片段：把規劃文件發布到可持久引用的連結（[[topics/community-memory#2026-10]]） | ⏳ 新興 | 2026-10-08 | agent 寫出的規劃文件不只活在單一 .md 檔，檔案被取代後脈絡仍在 |
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）
 
@@ -109,7 +109,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **成本控制仍是多 agent 最大的未解項**：四個平行子代理耗掉約 200 萬 token（[[topics/community-multi-agent#2026-08]]），但把純 I/O 工作路由給便宜模型可降 90% token（[[topics/community-cost#2026-09]]）。
   - 同一個問題兩個相反答案，還沒收斂。官方數量級參照見 ⟨Q-06⟩：多 agent 系統約耗一般對話 15 倍 token。
 - **Skills**：觸發寫法是最大的地雷，慣例與地雷整理在 [[topics/community-skills]]「慣例與地雷」。
-- **規則、把關與安全**：強制勝過建議；「檢查型」與「強制型」把關的分界與各自破口見 [[topics/community-guardrails]]「目前結論」。
+- **規則、把關與安全**：強制勝過建議；「檢查型」與「強制型」把關的分界與各自破口見 [[topics/community-guardrails]]「目前結論」；agent 因一句模糊指令誤刪整個資料夾這類事故本身，與備份、確認閘門的建議見 [[topics/ai-agent-safety]]。
 - **外部整合**：十月新做法最多的一群，但還沒有人篩過「哪個值得裝」；該裝哪個看 [[topics/community-tech-tools]]，逐則證據見 [[topics/community-integrations]]。
 - **手機、介面與可視化**：先試官方的遠端控制；社群走 bot、MCP、web-app 三條路，沒有逐項比較。見 [[topics/community-interfaces]]「目前結論」。
 - **還在試的十六類全數在 2026-10-01 起有新動靜**：最後動態最舊的是 Agent 記憶保護（2026-10-08）；Agent Loop 終止條件逾 60 天已移出概覽表，規格驅動開發與 Agent 預算控制於 2026-10-23、可靠性測試於 2026-10-26 回到有新動靜的名單。

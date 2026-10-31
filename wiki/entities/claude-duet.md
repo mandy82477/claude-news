@@ -4,15 +4,15 @@ kind: "entity"
 type: "product"
 status: "active（Research Preview，美國 Pro／Max 候補名單制）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-26"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-26"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 3
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
+days_since_news_subtree: 5
 inbound_links: 4
 attribution_count: 9
 attribution_last: "2026-10-26"
@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 產品（入口：獨立 app，電腦走網頁；誰起手：它自己判斷）
 **別名：** Duet
 **首次出現：** 2026-10-21
-**最後更新：** 2026-10-26
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-26
 
 由 [[entities/opus-5-5|Opus 5.5]] 驅動的主動式 agent，是一個獨立 app（iOS／Android，電腦上走 claude.ai 網頁）：攔截使用者未開口的待辦事項、在背景持續工作，只在需要使用者拍板時才打斷；2026-10-21 以研究預覽開放，美國 Pro／Max 訂閱戶需先加入候補名單。
@@ -66,7 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **敏感操作先問**：發送訊息、付款這類動作會先徵詢使用者（產品頁原文：「asks you before sensitive operations like sending messages or paying」）。
 - **驅動模型**：Opus 5.5。
 
-> 官方產品頁（2026-10-23 查證）仍未說明：通知走推播還是其他管道、除「發訊息／付款」外哪些操作算敏感、可存取資料的完整權限模型，以及與 Cowork 的任務分工；查到後補充。
+> 官方產品頁（2026-10-23 查證）仍未說明：通知走推播還是其他管道、除「發訊息／付款」外哪些操作算敏感、可存取資料的完整權限模型，以及與 Cowork 的任務分工；查到後補充。Duet 的防護機制報導（10-26）歸在 [[topics/ai-agent-safety-cyber]] 的官方防護條目，與 Auto 模式等其他 agent 防護並看，總覽見 [[topics/ai-agent-safety]]。
 
 ❓ **待查證**（標 2026-10-26｜查 [[entities/claude-duet]]、rogue）｜**Anthropic 據報說明防止 Claude Duet「失控」的機制**（Help Net Security，2026-10-26，僅標題可用）：媒體標題稱 Anthropic 說明讓 Duet 不會「go rogue」的防護設計，具體機制內容未見於可讀原文，是否正是回答上一條「完整權限模型」待官方文件或報導全文確認。
 

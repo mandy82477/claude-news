@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-20"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 9
+days_since_news: 11
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 9
+days_since_news_subtree: 11
 inbound_links: 9
 attribution_count: 6
 attribution_last: "2026-10-13"
@@ -52,7 +52,7 @@ v2.1.288 為 mods 加了 `$.ui.selection()`，回傳使用者在全螢幕模式�
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥 |
+| 社群熱度 | 🔥🔥🔥 |
 | 試用價值 | ⚡ 有條件推薦 |
 | 最適合 | 想改 Claude Code 行為、介面或審核流程的外掛開發者 |
 | 不適合 | 沒有能力讀懂第三方 mod 原始碼、又在放真實 API key 的環境直接安裝陌生 mod 的人 |

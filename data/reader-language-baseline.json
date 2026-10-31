@@ -1,26 +1,7 @@
 {
  "_note": "讀者語言閘的存量基線（頁 → 命中指紋）。check_reader_language.py 只對基線外的新增命中 FAIL，基線內的印為 WARN 摘要。清乾淨一頁就把該頁整筆移除——棘輪只能往下轉，不可為了轉綠而加回去。指紋 = 禁詞 + 該行正規化內容雜湊，改寫該行即失效。",
  "_baseline_set": "2026-09-05",
- "_pages": 6,
- "_hits": 6,
- "pages": {
-  "entities/managed-agents": [
-   "未收錄:578aa4591833"
-  ],
-  "topics/anthropic-government-policy-archive": [
-   "記者:a712097d295b"
-  ],
-  "topics/code-quality-decline": [
-   "候選症狀:bcf6d9565eb6"
-  ],
-  "topics/community-tech-discussions-archive": [
-   "主編:bd39653985ae"
-  ],
-  "topics/competitor-landscape-archive": [
-   "門檻:9603226095b9"
-  ],
-  "topics/market-signals": [
-   "退場:d899d322b3e4"
-  ]
- }
+ "_pages": 0,
+ "_hits": 0,
+ "pages": {}
 }

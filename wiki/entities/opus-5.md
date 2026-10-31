@@ -7,17 +7,17 @@ domain: "🤖 模型"
 last_updated: "2026-10-24"
 last_news_update: "2026-09-24"
 status_main: "active"
-days_since_news: 35
+days_since_news: 37
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 35
+days_since_news_subtree: 37
 inbound_links: 34
 attribution_count: 31
 attribution_last: "2026-09-21"
 top_source: "google-news"
 pending_count: 3
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。自 2026-09-24 起無新動態（2026-10-24 核）。
+**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。自 2026-09-24 起無新動態（2026-10-24 核）。 自 2026-09-24 起無新動態（2026-10-31 核）；本代已被 Opus 5.5 取代，停滯是事實而非漏更新。
 
 Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]，與 4.8 兩代同價、知識截止晚四個月，曾是 Max、Team premium、Enterprise 隨用隨付與 API 上預設的 Opus，Claude Code 的整體預設則一路是 Sonnet。
 
@@ -192,6 +192,8 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 
 > 表格是索引，每一則的完整說明與來源在下方。❓ ⟨Q-01⟩ 這類記號代表「這一則我們還沒查到答案」，完整說明同樣在下方。
 
+**2026-09**
+
 | 日期 | 事件 |
 |------|------|
 | 2026-09-21 | 傳聞：Opus 5.5 週二發布、降價 20%——09-22 官方發布證實 |
@@ -203,12 +205,22 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 | 2026-09-15 | 傳聞：Opus 5.2 疑似秘密試行（官方未載 🔎查無官方⟨Q-03⟩）；CVP 審核後仍遭護欄標記；Max 5x 質疑縮減幅度超官方 25%；GitHub #56913 提案「Opus 決策、Sonnet 執行」（49 則留言）|
 | 2026-09-12 | Reddit：「Hate Opus 5」，稱話多缺根據、比舊版更易離題下結論（單一觀感）|
 | 2026-09-03 | Anthropic 狀態頁：多款模型錯誤率升高，同日 16:16 UTC 已解決（2026-09-07 查證）|
+
+**2026-08**
+
+| 日期 | 事件 |
+|------|------|
 | 2026-08-28 | Reddit 質疑「Anthropic 是否削弱模型」；另有三模型 code review 比較 🔎查無官方⟨Q-01⟩ |
 | 2026-08-27 | GitHub Issue #77136：跨模型代際重複修辭套路；同日另有回饋稱表達方式較 4.8 改善 |
 | 2026-08-26 | tech-insider.org 定價比較標題「$19 Gap」，計算基準 🔎查無官方⟨Q-02⟩ |
 | 2026-08-14 | Anthropic 八月風險報告揭露未發布「Model 2」，官方稱無釋出計畫（見 [[topics/ai-agent-safety]]） |
 | 2026-08-11 | SitePoint 開發者效能評測——**2026-09-07 查證：內文的 context、牌價、發布年皆與官方不符，不採信** |
 | 2026-08-08 | Reddit「PSA」提醒 WebFetch 研究可能捏造統計數字與引述，單一使用者回報 |
+
+**2026-07**
+
+| 日期 | 事件 |
+|------|------|
 | 2026-07-30・08-07・08-13・08-20 | 社群觀感分歧四則：皆單一貼文、無量化；08-20 與 07-30 原文已不可取得，2026-09-07 放棄追查 |
 | 2026-07-29 | Reddit 稱 effort 旋鈕「非單調」——**2026-08-08 官方文件證偽**，說法不成立 |
 | 2026-07-26 | MLQ.ai／PCMag「tops」標題——**2026-08-10 第三方基準查證屬實**；定價「同價」與「減半」兩說法經查證皆成立 |
@@ -216,6 +228,8 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 | 2026-07-24 | Reddit 週熱門稱長時間任務表現最佳、low effort 成本效益高，無量化數字佐證 |
 
 **歷史記錄細節**
+
+**2026-09**
 
 - **2026-09-21**：單一部落格（Pasquale Pillitteri）稱 Opus 5.5 將於週二發布、降價 20%（[Google News/Pasquale Pillitteri](https://news.google.com/rss/articles/CBMijwFBVV95cUxOQ0QzUlJkSGEzTk9BVzN4dUdvZXhlRGJHNzVOaUMyTUZSR3NSUzkyaENib2NKNHYzS3BNTHdya1VQLVhWcmlrTk5HVzlIT3dOdHppdmc3UDdJVlRfeUV2blMtM2EyeElZYUtrUHBkWDdzLXR0TEpaVG5OcGh6QmNDSjN3TnFDVGEzbWtDcV9oNA?oc=5)，2026-09-21）
   - **已證實（官方發布文、官方 GitHub changelog，編輯查證 2026-09-23／09-25；
@@ -231,10 +245,14 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
   - 一名資安研究者稱已通過 Anthropic 的 Cyber Verification Program（CVP）審核，Opus 5 仍持續標記其研究相關訊息；單一貼文，後續 09-22 起有同類 GitHub Issue 佐證（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1wh010w/opus_5_is_flagging_all_my_messages_even_though_im/)，2026-09-15）
   - Max 5x 訂閱用戶質疑近期用量縮減幅度不只官方所稱的 25%，稱此前幾乎全程仰賴 Opus 5 規劃工作流程；單一使用者觀感，計費面完整脈絡見 [[entities/pricing]]（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wh2tzt/por_esto_me_voy_de_claude/)，2026-09-15）
   - GitHub Issue #56913 提案將 Claude Code 改為分層架構——Opus 負責統籌決策、Sonnet 負責執行、並搭配持久化狀態，累積 49 則留言，尚無官方回應（[GitHub Issue #56913](https://github.com/anthropics/claude-code/issues/56913)，2026-09-15）
-  - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-10-26）｜**單一部落格稱 Opus 5.2 秘密試行，官方未載**：查證 2026-10-03，[Anthropic 模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)現行與舊版清單只有 Opus 5、Opus 5.5（2026-09-22 發布）等，無 Opus 5.2。
+  - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-09-15｜查 Opus 5.2、biggo.com｜複 2026-11-30）｜**單一部落格稱 Opus 5.2 秘密試行，官方未載**：
+    - 複查 2026-10-31，[Anthropic 模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)現行（Fable 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5）與舊版（Fable 5、Opus 5、Opus 4.x、Sonnet 5 等）清單皆無 Opus 5.2；
+      - 首查 2026-10-03。Opus 5.5 已為現行主力，此傳聞僅留作查無官方紀錄。
   - [anthropic.com/news](https://www.anthropic.com/news) 亦無相關公告。以下為媒體稱（BigGo Finance）：finance.biggo.com 稱回應更快、可自主迭代，並提及內部「RSI」模型；僅連結標記無內文，未見其他來源佐證（[Google News/finance.biggo.com](https://news.google.com/rss/articles/CBMidkFVX3lxTE5tWk9uLU5DQVVDRElYODFqdk9NQlR2d3VmSk52MHlGbXBSeG9sa1dZX3NkNS04WlQ0NXk0MGNkT2pDcFJiQy0wTXZQQzI1LXV3cE1PMG1wT25zcC1TTEx6LTgzZTJwX3Fwbm1PX1RRa3lMbF9yTnc?oc=5)，2026-09-15）
 - **2026-09-12**：Reddit r/ClaudeCode 貼文「Hate Opus 5. Really dont know why they did this」，使用者抱怨 Opus 5 話變多但缺乏根據，比舊版本更容易離題下結論；單一使用者觀感，無量化數字佐證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1wecaw5/hate_opus_5_really_dont_know_why_they_did_this/)，2026-09-12）
 - **2026-09-03**：Opus 5／4.8／4.6 與 Fable、Mythos 全系列同時錯誤率升高。官方 13:41 UTC 鎖定原因，**同日 16:16 UTC 標記已解決**（2026-09-07 查證）。屬穩定性事件，非能力或定價變化；跨模型完整記錄見 [[entities/fable-5]]（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w69016/claude_code_server_down_for_a_long_time_now_will/)，2026-09-03）
+
+**2026-08**
 
 - **2026-08-28**：Reddit r/ClaudeCode 質疑串「Is it even legal for Anthropic to nerf its models this hard?」，使用者抱怨 Opus 5 與 Fable 5 在 Claude Code 中的實際表現遜於預期，質疑模型遭「削弱」；單一使用者觀感回報，無量化數字佐證，延續 08-13、08-20 已記錄的社群觀感分歧模式（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1w0t53b/is_it_even_legal_for_anthropic_to_nerf_its_models/)，2026-08-28）
   - 同日另有 Reddit 貼文比較 Opus 5、4.7、4.6 在同一份 code review 提示下的表現，情緒中性，僅標題可用；
@@ -253,6 +271,9 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 - **2026-08-11**：SitePoint 刊出針對開發者的 Claude Opus 5 效能評測整理。**2026-09-07 查證：該文寫的 context 上限、每百萬 token 牌價與發布年份三項皆與官方不符，本站不採信其數據**（Google News／SitePoint，2026-08-11）
 - **2026-08-08**：Reddit r/ClaudeAI 週熱門貼文「PSA: Be careful letting Claude use WebFetch for research」：作者請 Opus 5 研究 AI agent 記憶架構時，發現其以 WebFetch 生成看似真實、實則捏造的具體統計數字、百分比與引述，提醒他人使用 WebFetch 做研究時需小心查核；單一使用者回報、無具體案例引文或跨來源佐證，列為待社群驗證的可靠性觀察，非量化評測結論（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vim8b7/psa_be_careful_letting_claude_use_webfetch_for/)，週熱門，2026-08-08）
 - **2026-08-07**：Reddit r/ClaudeAI 週熱門貼文「I defended Opus 5 - and then I realised otherwise」稱作者原本認為 Opus 5 是目前最「奇特獨特」的模型、稱讚其思考過程（reasoning trace）而非單純能力，深入分析其思考過程後改變了看法；原文於「actually reading through and analysing it's thought process I find fascinati...」處截斷，具體轉折方向（趨向更正面或更負面）不可考。與 07-29～08-04 已記錄的「過度自信」「不如跑分預期」「令人挫折」負向回饋屬同一波「上線兩週後社群重新評估」現象，惟本則聚焦 reasoning trace 角度且結論方向不明，暫列觀察、不代入評測結論（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1vibkny/i_defended_opus_5_and_then_i_realised_otherwise/)，週熱門，2026-08-07）
+
+**2026-07**
+
 - **2026-07-30**：Reddit r/ClaudeCode 貼文稱作者原先看跑分認為 Opus 5 優於 Fable 5，實際使用後覺得仍有落差，並提到遇上「minor」問題；該貼文無週熱門標記、分數不可信（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1var15k/opus_5_is_not_as_good_as_i_thought/)，2026-07-30）
   - 原文在「minor」處截斷，2026-08-10 與 2026-09-07 兩次都取不到後續內容，具體所指與落差幅度本站放棄追查；本則不代入任何評測結論。
 - **2026-07-29**：Reddit r/artificial 週熱門貼文稱 Opus 5 的 effort 旋鈕「非單調」——超過 `high` 後（`xhigh`／`max`）程式碼任務分數反而下降，並稱官方 migration guide 本身即有此說明；**2026-08-08 查證官方文件後判定此說法不成立**——[What's new in Claude Opus 5](https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5) 明載「Claude Opus 5 converts additional effort into better results more reliably than any earlier Opus model」，並將 test-time compute scaling（效果隨 effort 提升直到 `max`）列為主要能力改進；官方對 `xhigh`／`max` 的唯一告誡是「須設較大 `max_tokens`」，以及 `thinking: disabled` 在 `xhigh`／`max` 會回 400。未見任何「高於 high 即單調下降」文字，社群措辭比官方原文更強烈——核心說法已證偽，無下降幅度可言，完整比對見 [[topics/model-comparison]]

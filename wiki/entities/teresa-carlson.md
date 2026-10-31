@@ -7,18 +7,18 @@ domain: "👤 人物"
 last_updated: "2026-10-04"
 last_news_update: "2026-07-07"
 status_main: "active"
-days_since_news: 114
+days_since_news: 116
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 114
+days_since_news_subtree: 116
 inbound_links: 6
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-11-30"
 pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
@@ -39,7 +39,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **加入 Anthropic**（2026-07-07 報導）：Teresa Carlson（曾任職 Microsoft、AWS）出任 Anthropic **Global Head of Public Sector**（全球公部門負責人），為該公司首任此職。職稱已由多家具名產業媒體與本人 LinkedIn 檔案一致載明（[FedScoop](https://fedscoop.com/anthropic-taps-microsoft-aws-teresa-carlson-lead-public-sector/)、[Nextgov/FCW](https://www.nextgov.com/people/2026/07/anthropic-taps-teresa-calrson-public-sector-lead/414604/)、[Washington Technology](https://www.washingtontechnology.com/companies/2026/07/anthropic-hires-teresa-carlson-public-sector-lead/414605/)、[ExecutiveBiz](https://www.executivebiz.com/articles/teresa-carlson-anthropic-global-head-public-sector)、[GovConWire](https://www.govconwire.com/articles/teresa-carlson-anthropic-public-sector-global-head)；2026-09-20 查證），**已非單一來源**。
 
-🔎 **查無官方**（標 2026-07-07｜查 Teresa Carlson、Public Sector｜複 2026-10-26）｜**到任日期與官方人事公告確認查無**（2026-09-26 查證）：查證 anthropic.com/news（新聞稿）與 anthropic.com/company/leadership（領導團隊頁，Carlson 未列名於該頁）均未見正式人事公告或到任日期；Anthropic 僅透過發言人 Kate Earle Jensen（Head of Americas）向媒體發表評論（見下方新增），未發布官方新聞稿。到任日期迄今未見任何來源（含官方、媒體、本人）載明具體日期。
+🔎 **查無官方**（標 2026-07-07｜查 Teresa Carlson、Public Sector｜複 2026-11-30）｜**到任日期與官方人事公告確認查無**（2026-09-26 查證，2026-10-31 複查仍無）：複查另檢 anthropic.com/company 與站內搜尋，均未見 Carlson 名字；anthropic.com 既有公部門頁面（2025 年 DOD、GSA 公告、AWS re:Invent 2025 活動頁）仍以 Thiyagu Ramasamy 為 Head of Public Sector，屬舊頁面未更新或職務分工未公開，官方未說明兩者關係，不推論。查證 anthropic.com/news（新聞稿）與 anthropic.com/company/leadership（領導團隊頁，Carlson 未列名於該頁）均未見正式人事公告或到任日期；Anthropic 僅透過發言人 Kate Earle Jensen（Head of Americas）向媒體發表評論（見下方新增），未發布官方新聞稿。到任日期迄今未見任何來源（含官方、媒體、本人）載明具體日期。
 
 ---
 

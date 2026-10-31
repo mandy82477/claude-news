@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-30"
-last_news_update: "2026-10-29"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 4
-attribution_count: 0
-attribution_last: null
-top_source: null
-pending_count: 14
-pending_overdue: 2
-pending_next_review: "2026-10-31"
+inbound_links: 8
+attribution_count: 6
+attribution_last: "2026-10-30"
+top_source: "hacker-news"
+pending_count: 15
+pending_overdue: 0
+pending_next_review: "2026-11-03"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
@@ -156,7 +156,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
   - CVE 與 GitHub 安全公告待發
 - **同一漏洞的多篇報導**：CSO Online〈256KB 限制瑕疵將機密外洩到預覽窗格〉（10-14）指的是同一漏洞，觸發條件是攻擊檔大於 256KB；10-14 至 10-17 本頁曾誤記為官方未修補、兩起獨立揭露，以本條為準
 - **讀者動作**：確認桌面版不低於 1.30096.1；8 月前在舊版預覽過陌生 repo 的 HTML 報告者，換一輪 SSH 金鑰與雲端憑證（推論）
-- **已查證**（2026-10-18｜查 Noma Labs 原文）：修補狀態與兩篇報導的關係已結案，不再列待查證
+- **已查證**（2026-10-18｜查 Noma Labs 原文）：修補狀態與兩篇報導的關係已結案，不再列為懸置
 - **可信度評估**：時間線與修補版本取自 Noma 一手原文，Anthropic 側尚無 CVE 或公告可對照；CVSS 8.7 為 Anthropic 於 07-09 自評，原文載明
 %% 維運備忘：Cybernews〈Claude Code preview pane flaw could leak developer secrets〉（2026-10-16，經 Google News，0 互動，僅標題）經核對與本則為同一漏洞（Noma Labs 原文 URL 即含「preview-pane...exfiltrate」），非新事實，未另立條目 %%
 
@@ -168,7 +168,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：報導稱 Anthropic 的 MCP SDK 存在一個可被用來劫持登入狀態（hijack logins）的漏洞；具體攻擊鏈與是否已修補均未見報導
 - **與既有條目的關係**：本頁既有 09-28 Cycode 揭露「Anthropic MCP Python SDK 帳號劫持（account takeover）漏洞」性質相近，是否為同一漏洞的後續報導或獨立新發現，兩則報導均僅標題層級，無法確認
 - **性質判斷**：內容過於簡略，暫不列入母頁「現在還擋不住的攻擊」表，與既有 09-28 條目判斷一致
-- ❓ **待查證**（標 2026-10-13｜查 IT Brief UK、hijack logins）：與 09-28 Cycode 揭露是否為同一漏洞、具體攻擊鏈與修補狀態均未見報導
+- 🔎 **查無官方**（標 2026-10-13｜查 IT Brief UK、hijack logins｜複 2026-11-30）：與 09-28 Cycode 揭露是否為同一漏洞、具體攻擊鏈與修補狀態均未見報導；2026-10-31 搜尋未能定位 IT Brief 原文與 Cycode 關聯，Anthropic 官方無說明
 - **可信度評估**：單一媒體來源，僅標題層級摘要可讀，訊號強度低
 
 #### GitHub Issue #43713：`autoAllowBashIfSandboxed` 在含 shell expansion 等語法的指令上失效，2026-08-19 官方已修（v2.1.139 起）（2026-10-11 新增，產品層安全意涵）
@@ -204,7 +204,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張**：bypassPermissions 模式或 shell 允許規則下，包在 `bash -c`／`sh -c` 裡的危險 `rm`（如針對根目錄或家目錄）原本會繞過檢查，2.1.288 修正；mixed-news.com 稱 10-03 時 stable 標籤仍指 2.1.285（單一來源；2026-10-17 已追上，見下方查證）
 - **性質判斷**：產品層防護缺口，與「遞迴刪檔」列同屬誤刪風險但機制不同（防護被包裝繞過，而非指令模糊）；已官方修補，故讀者影響限於停在 stable 者。功能面細節見 [[entities/claude-code]]
 - **查證（2026-10-17）**：[官方 Changelog](https://code.claude.com/docs/en/changelog) 確認 2.1.288（2026-10-02）修正此缺口（anthropics/claude-code#96300）；[npm dist-tags](https://registry.npmjs.org/-/package/@anthropic-ai/claude-code/dist-tags) 顯示 stable 已指向 2.1.292（10-06 發布），即 stable 已含修正
-  - 🔎 **查無官方**（標 2026-10-17｜查 stable 追上日期、dist-tags 2.1.292）｜**stable 標籤追上 2.1.288 修正的確切日期**：官方 Changelog 與 npm dist-tags 僅顯示現況（stable 指向 2.1.292，10-06 發布），未載追上的日期；在野誤刪案例未見報導。已掃日報至 2026-10-24 無後續；官方頁面未再查證
+  - 🔎 **查無官方**（標 2026-10-17｜查 stable 追上日期、dist-tags 2.1.292｜複 2026-11-30）｜**stable 標籤追上 2.1.288 修正的確切日期**：官方 Changelog 與 npm dist-tags 僅顯示現況（stable 指向 2.1.292，10-06 發布），未載追上的日期；在野誤刪案例未見報導。
+    - 已掃日報至 2026-10-24 無後續；官方頁面未再查證
   - 2026-10-30 查 npm dist-tags：stable＝2.1.308、latest＝2.1.312，stable 已含修正
 %% 2026-10-30 依第 2 條退場（stable 已含修正、狀態翻 ✅），不是補位候選 %%
 
@@ -357,7 +358,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **揭露來源**：Hacker News Show HN〈I bypassed my Claude Code deny-list 8 ways; only an allow-list held〉，附公開 GitHub repo（[danielhagever/agent-guardrails-kit](https://github.com/danielhagever/agent-guardrails-kit)）；[HN 討論串](https://news.ycombinator.com/item?id=49658005)
 - **核心主張**：作者實測針對 Claude Code 以 deny-list（黑名單）方式設定的權限限制，找出 8 種可繞過手法，只有改用 allow-list（白名單）方式設定才能真正擋住；已列入母頁「現在還擋不住的攻擊」表
-- 🔎 **查無官方**（標 2026-09-11｜查 deny-list、allow-list｜複 2026-10-26）：查證官方說明中心、changelog 與社群管道，均未見 Anthropic 回應或通報收訖確認（查證 2026-09-26）
+- 🔎 **查無官方**（標 2026-09-11｜查 deny-list、allow-list｜複 2026-11-30）：查證官方說明中心、changelog 與社群管道，均未見 Anthropic 回應或通報收訖確認（查證 2026-09-26；2026-10-31 再查，僅見第三方媒體與部落格，官方仍無說明）
 - **技術細節補充**：作者示例之一為以 `python -c 'os.remove(...)'` 包裝 `rm`，完整繞過逐詞比對式黑名單；其餘手法仍僅見原始貼文與 repo
 
 #### TechCrunch／Startup Fortune：駭客可在不竊取密碼情況下抽乾 Claude 訂閱者用量額度（2026-09-09 新增）

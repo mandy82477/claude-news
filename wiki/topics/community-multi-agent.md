@@ -3,14 +3,14 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-25"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-21"
 status_main: "ongoing"
-days_since_news: 8
+days_since_news: 10
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 8
+days_since_news_subtree: 10
 inbound_links: 8
 attribution_count: 3
 attribution_last: "2026-10-19"
@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-25
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-21
 
-> **Agent 規模化添 tmux 實務設定與四代理天花板**（2026-10-19）
-> - **tmux 具名 session 工作流**：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。
+> **Agent 規模化添託管式取向：Omnara（開源版 Claude Managed Agents 替代）**（2026-10-21）
+> - **Omnara**：Show HN（HN 98 分、4 個獨立管道報導），把執行迴圈、沙盒與密鑰放進託管層，不必自己在本機開並行 agent。
+> - **tmux 具名 session 工作流**（10-19）：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。
 
 ---
 
@@ -72,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Agent Teams** | 實驗性，預設關閉 | Agent（autonomous）側的多 agent 協作 | Dynamic／emergent | 任務表當共享黑板、信箱直接傳訊、依賴自動解鎖 |
 | **Cross-session 傳訊** | 正式，預設開啟 | 不在該文分類內 | Dynamic | 獨立 session 之間傳純文字，不帶對話歷史或檔案 |
 
-**補充對照：** 手動開兩個 session ＋ 共享檔案協調，只有共享記憶一個原語且被動輪詢，所以無法自動反應；Agent Teams 在此之上補了直接傳訊與依賴解鎖。官方明載團隊之間不可巢狀、一個 session 只能有一個團隊、lead 不可更換，多層階層只能靠 subagent 巢狀：預設最多往下三層，可用 `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` 調。
+**補充對照：** 手動開兩個 session ＋ 共享檔案協調，只有共享記憶一個原語（跨 session 記憶層的各種做法見 [[topics/community-memory]]）且被動輪詢，所以無法自動反應；Agent Teams 在此之上補了直接傳訊與依賴解鎖。官方明載團隊之間不可巢狀、一個 session 只能有一個團隊、lead 不可更換，多層階層只能靠 subagent 巢狀：預設最多往下三層，可用 `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` 調。
 
 ### 誰負責拆分（decomposition）
 

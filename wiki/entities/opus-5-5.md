@@ -7,11 +7,11 @@ domain: "🤖 模型"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-24"
 status_main: "active"
-days_since_news: 5
+days_since_news: 7
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
+days_since_news_subtree: 7
 inbound_links: 35
 attribution_count: 25
 attribution_last: "2026-10-24"
@@ -200,6 +200,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 表格是索引，每一則的完整說明與來源在下方。🔎 ⟨Q-01⟩ 這類記號代表「已查官方一手來源，確認未載」，完整說明同樣在下方。
 
+**2026-10**
+
 | 日期 | 事件 |
 |------|------|
 | 2026-10-22 | livenerf 第 29 天更新稱「看不出被降規」，仍未附具體數字（0 留言，弱訊號）|
@@ -210,10 +212,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-10-06 | Simon Willison 測試 Opus 5.5 寫文字格式配樂並生成可播放 artifact，風格接近《猴島小英雄》（推論：或為新進能力，未對照舊模型）|
 | 2026-10-03 | livenerf 為「降智」說法建立第 0 天基準線，連測 30 天，最早約 10-24 下結論（日報 09-30 貼文）|
 | 2026-10-01 | Reddit 週熱門貼文稱上線前 5–6 天表現佳、近日起在複雜任務上失手，無量化指標，弱訊號 |
+
+**2026-09**
+
+| 日期 | 事件 |
+|------|------|
 | 2026-09-30 | VentureBeat 稱 em-dash 用量降 99%、仍測得 2,548 處 AI 寫作特徵（方法論未載）|
 | 2026-09-23 | 正式發布（官方日期 09-22），取代 Opus 5 成為預設 Opus；牌價降 20%、官方稱運算成本降 40%；具名基準表見「這些數字是誰量的」（2026-09-25 查證）|
 
 **歷史記錄細節**
+
+**2026-10**
 
 - **2026-10-22**：Reddit r/ClaudeAI livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新；0 留言、未附具體數字或測試方法，30 天結論預計近日（約 10-24）公布（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)，週熱門，2026-10-22）
 - **2026-10-20**：GitHub repo [joeseesun/opus-video-prompts](https://github.com/joeseesun/opus-video-prompts) 彙整 54 個以 Claude Opus 5.5 生成程式碼渲染影片的提示詞案例，含可直接複製的 prompt（503 星；fork／issue／近期 commit 活躍度未查證，依弱訊號處理）（GitHub Search，2026-10-20）
@@ -223,6 +232,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-06**：Simon Willison 測試讓 Claude Opus 5.5 設計一套文字格式的遊戲配樂並生成可播放的 artifact，風格接近《猴島小英雄》原聲帶；Willison 認為可能是文字模型新近出現的能力，但未與舊模型對照確認（推論，單一部落格貼文，0 互動）（[Simon Willison](https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/)，2026-10-06）
 - **2026-10-03**：dev.to 貼文（09-30 發）稱 livenerf 針對 Opus 5.5「變笨」傳言建立第 0 天基準線，連續測 30 天，最早約 10-24 可下結論（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30；3 讚，題組與評分方法未見載，尚無結果）
 - **2026-10-01**：Reddit r/ClaudeAI 週熱門貼文稱 Opus 5.5 上線前 5–6 天在複雜任務（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手（[Reddit r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)，2026-10-01；0 留言，無測試方法或量化指標，屬主觀觀感回報，不採信推算是否構成能力下降）
+
+**2026-09**
+
 - **2026-09-30**：VentureBeat 報導稱 Opus 5.5 回覆的 em-dash 用量較前代降 99%、讀起來更像真人，但同一批測試仍測得 2,548 處其他「AI 寫作特徵」（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30；原文僅標題可讀，方法論未見完整記載，不採信推算）
 - **2026-09-23**：Anthropic 發布 Claude Opus 5.5，Claude Code v2.1.280 設為預設 Opus（[Anthropic](https://www.anthropic.com/claude-opus-5-5)；[GitHub](https://github.com/anthropics/claude-code/releases/tag/v2.1.280)，2026-09-23）
   - 1M context、128K 最大輸出，牌價 $4／$20 每 Mtok、快取讀取 $0.20／Mtok（官方 5%）；Pro／Max 用量上限同步調高（[MIXED Reality News](https://mixed-news.com/en/claude-opus-5-5-price-4-per-million-tokens-usage-limits/)，2026-09-23）

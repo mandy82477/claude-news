@@ -4,23 +4,23 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-29"
-last_news_update: "2026-10-29"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 133
-attribution_count: 798
-attribution_last: "2026-10-29"
+days_since_news_subtree: 1
+inbound_links: 137
+attribution_count: 803
+attribution_last: "2026-10-30"
 top_source: "github-issues"
-pending_count: 26
-pending_overdue: 3
-pending_next_review: "2026-10-31"
-pending_signalled: 2
+pending_count: 28
+pending_overdue: 0
+pending_next_review: "2026-11-04"
+pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 
 > **最新動態**（2026-10-30）
@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-%% 拆頁評估 2026-10-25：拆，草案：(1) 已知問題群（`## 已知問題`含九分類＋「現在還沒修好的」，約 435 行；答「Claude Code 現在哪裡壞、有沒有繞法」，變動最快）→ `entities/claude-code-known-issues`；(2) 版本與事件流群（`## 版本更新`＋`## 歷史記錄`，約 340 行；答「哪版加了什麼、何時發生」）→ `entities/claude-code-releases`；(3) 功能用法群（`## 核心功能`：桌面版功能地圖、hooks、subagent 型別，約 170 行；答「怎麼用」，慢變）→ `entities/claude-code-features`。母頁留現況、熱度、相關議題、子頁路由表（約 200 行內）。蒸餾已先做（2026-07 時段入 claude-code-archive，正文 1140→約 1130 行仍逾 600）；30 天內無官方事件改變分法；待頁面健檢波執行（需回掃 `claude-code#已知問題／版本更新／hooks／桌面版功能地圖／現在還沒修好的` 共約 11 條錨點）。 %%
+%% 拆頁評估 2026-10-31：拆（複評，結論不變，仍判「拆」，待主編裁決；正文現約 1200 行）。草案：(1) 已知問題群（`## 已知問題`含九分類＋「現在還沒修好的」，約 435 行；答「Claude Code 現在哪裡壞、有沒有繞法」，變動最快）→ `entities/claude-code-known-issues`；(2) 版本與事件流群（`## 版本更新`＋`## 歷史記錄`，約 340 行；答「哪版加了什麼、何時發生」）→ `entities/claude-code-releases`；(3) 功能用法群（`## 核心功能`：桌面版功能地圖、hooks、subagent 型別，約 170 行；答「怎麼用」，慢變）→ `entities/claude-code-features`。母頁留現況、熱度、相關議題、子頁路由表（約 200 行內）。蒸餾已先做（2026-07 時段入 claude-code-archive，正文 1140→約 1130 行仍逾 600）；30 天內無官方事件改變分法；待頁面健檢波執行（需回掃 `claude-code#已知問題／版本更新／hooks／桌面版功能地圖／現在還沒修好的` 共約 11 條錨點）。 %%
 
 ## 現況
 
@@ -148,14 +148,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Skill／外掛安全掃描（beta）**（Help Center release notes，2026-08-06 標註日期）：Enterprise 方案的第三方 Skill 或外掛在上傳、編輯時自動檢查是否含惡意內容，屬背景自動掃描，無使用者端可執行操作。
 - **Inference Hooks**（Claude API Release Notes，2026-08-05）：進入 Enterprise 組織 beta，可將 claude.ai、Cowork、Claude Code 上每一次受管治 prompt 導向企業自身的 AI 安全伺服器。
 - **Anthropic Status**（2026-10-06）：Claude Opus 5.5 錯誤率升高（12:37–12:43 UTC），6 分鐘內已解決，重要性低未列入已知問題。
-- 🔎 **查無官方**（標 2026-09-08｜查 iOS App、設定區塊｜複 2026-10-26）｜**iOS App 新增用量按鈕、Claude Code 設定區塊**（Pasquale Pillitteri，09-08，僅標題）：`support.claude.com`／`code.claude.com` 週更與 changelog 均未見此項，查證 2026-09-26，僅媒體轉述。
+- 🔎 **查無官方**（標 2026-09-08｜查 iOS App、設定區塊｜複 2026-11-30）｜**iOS App 新增用量按鈕、Claude Code 設定區塊**（Pasquale Pillitteri，09-08，僅標題）：`support.claude.com`／`code.claude.com` 週更與 changelog 均未見此項，查證 2026-09-26，僅媒體轉述；
+  - 2026-10-31 複查 Help Center release notes（9 月條目 09-01／10／15／16／22／25／28，無此項）、`code.claude.com/docs/en/mobile.md` 與 changelog 仍無，維持查無官方。
 - **雲端 session 底層架構**（Hacker News，58 分，2026-09-08）：技術部落格指出 Claude Code 雲端 session 各自跑在獨立 Firecracker microVM，開機直接進入 Rust 撰寫的自訂 init（`process_api` 為 PID 1，非 systemd）（[原文](https://rohanadwankar.github.io/posts/platforms.html)）。
 
 **近期報導（尚待官方佐證）：**
 
 - ❓ **待查證**（標 2026-10-21｜查 old chat、warns you）｜**Claude Code 傳新增「接續舊對話前提醒會吃掉本次 5 小時額度」提示**（MIXED Reality News，2 個來源，2026-10-21 報導，僅標題可用）：功能名稱、版本號與是否已上線均未見官方確認；與今日桌面版文件新增的用量顯示段落是否同一功能待查。
 - ❓ **待查證**（標 2026-10-21｜查 Bedrock、schema-enforced）｜**AWS 傳 Amazon Bedrock 為 Claude 新增結構化輸出（schema-enforced outputs），涵蓋兩種 API 介面**（OpenTools，2026-10-20 報導，僅標題可用）：細節未見官方文件確認。
-- ❓ **待查證**（標 2026-10-15｜查 nested sessions、saved environments）｜**Claude Code 桌面版傳推出巢狀對話與已儲存環境設定**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；官方未見對應版本號。
+- 🔎 **查無官方**（標 2026-10-15｜查 nested sessions｜複 2026-11-30）｜**Claude Code 桌面版推出「巢狀對話」**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；
+  - 2026-10-31 查 [桌面版文件](https://code.claude.com/docs/en/desktop.md)、`llms.txt` 索引與 changelog（2.1.316）均無「nested sessions」一詞，官方只有並行 session、side chat（`/btw`，不寫回主對話）與 session 互傳訊息，未見等同功能。
+    - 同報導的「已儲存環境設定」**已查實**：桌面版文件載有 saved environment（環境選擇器記錄 Claude 執行位置與資料夾，可建立、編輯、移除；查證日 2026-10-31，來源：[Desktop 文件](https://code.claude.com/docs/en/desktop.md#create-a-saved-environment)）。
 - ✅ **SneakPeek（桌面版預覽窗格漏洞，CVSS 8.7）已於 2026-08-17 修補**（[Noma Labs 原文](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)，查證 2026-10-18）：於 Claude Desktop 1.30096.1 修完並經自動更新推送；CSO Online 的「256KB 預覽窗格洩密」是同一個漏洞。
   - **你該做的**：確認桌面版不低於 1.30096.1；CVE 與 GitHub 安全公告待發，時間線見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-11-14｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：正式性仍待官方確認。
@@ -169,7 +172,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。
   - 同日異動文件：Help Center release notes、Pro/Max plan 說明、usage limits、usage credits、Fable 5 on your plan 五份文件同步異動。
 - **Claude in Chrome 的 session 可由企業合規團隊經 Compliance API 調閱**（查證日 2026-10-17，來源：[Compliance API 官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Enterprise 組織以 Compliance Access Key 讀取 session 逐字稿。
-  - 同一介面涵蓋 Cowork、Claude Code 等產品與 Activity Feed；❓ **待查證**（標 2026-10-17｜查 Compliance API、Activity Feed）｜**介面是否為 beta**：官方文件未標，MIXED Reality News 稱「beta」；掃至 10-23 無後續。與 [[entities/claude-security]] 同源。
+  - 同一介面涵蓋 Cowork、Claude Code 等產品與 Activity Feed。**beta 之說已過時**（查證日 2026-10-31，來源：[Anthropic 部落格更新註記](https://claude.com/blog/compliance-api-cowork-and-claude-code)）：
+    - 2026-08-11 原文稱「beta」，2026-08-26 更新註記改為 Cowork（桌面／網頁／行動）與 Claude Code（CLI／桌面）涵蓋已 GA，僅 Microsoft 365 add-ins 與 Claude Science 仍 beta；
+      - [Compliance API 官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)對 Activity Feed 與 session 端點未標 beta，MIXED Reality News 的「beta」沿用部落格原文。與 [[entities/claude-security]] 同源。
 - **MCP Python SDK 的 OAuth 憑證外洩漏洞已修補（GHSA-qx49-fqc8-xw99，High、CVSS 7.5，2026-09-28 公開）**（查證日 2026-10-17，來源：[官方 advisory](https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-qx49-fqc8-xw99)）：安全面見 [[topics/ai-agent-safety]]。
   - 成因：OAuth 用戶端未在所有探索路徑驗證授權伺服器 issuer，惡意 MCP server 可誘使 client 把 client_secret、授權碼、PKCE verifier 送往攻擊者的 token endpoint。
   - 影響 1.9.1 至 1.30.0 前、2.0.0a1 至 2.2.0 前；1.30.0 與 2.2.0 已修補。stdio client、伺服器端與自帶 token 的 client 不受影響。
@@ -233,18 +238,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**使用者 email 被加進 prompt，LLM 可能分享給外部網站（GitHub issue #81138，經 Hacker News 討論 16 分，2026-10-29）**：官方尚未回應。
   - Reddit 另有獨立回報稱 Opus 5.5 把使用者 email 分享給外部網站；與「User-Agent 字串夾帶 email」（#78431，見下方）觸發機制不同，暫分列追蹤。會串接外部網站或 MCP 工具的使用者應留意。風險面見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 疑似移除 skip permissions 模式下 `rm` 指令的既有阻擋**：媒體（shattered.io／The Register）報導，changelog 未見相關記載；風險面見 [[topics/ai-agent-safety]]。
-- ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：觸發機制與官方回應均未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
+- ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09｜訊 2026-10-27）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：
+  - 10-27 CyberSecurityNews 以第二獨立來源跟進（惡意檔案劫持 Codex 與 Claude Code），兩篇皆僅標題層級，觸發機制與官方回應仍未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
 - ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
 - ❓ **待查證**（標 2026-10-30｜查 Plugin4Shell、v2.1.179｜複 2026-11-13）｜**「Plugin4Shell」零點擊 RCE 橫跨 4 款 AI coding agent**：媒體稱 2.1.179 已修補，官方未載，狀態未經證實。詳見 [[topics/ai-agent-safety-product-vulns]]
 - 🔴 **未修復**｜**GitHub Actions 預設範本三家 AI coding agent 通用 RCE 缺陷（Reddit r/artificial 週熱門，2026-09-14）**：Claude Code、Gemini CLI、Codex 官方 Actions 範本皆傳有同款可致 RCE 的設定缺陷。
 - 2026-10-03 查 claude-code-action 與 claude-code 官方 Security Advisories 無對應「預設範本」條目；可能相關的 Novee Black Hat 披露見 [[topics/ai-agent-safety]]。
-  - 僅見 Reddit 轉載，未附具名研究者、CVE 或官方回應，受影響版本與修復狀態未知，待原始來源或官方公告確認；跨產品面另見 [[topics/ai-agent-safety]]。
+  - ❓ **待查證**（標 2026-09-14｜查 claude-code-action、預設範本｜複 2026-11-14）｜**範本缺陷是否屬實**：僅見 Reddit 轉載，未附具名研究者、CVE 或官方回應，受影響版本與修復狀態未知；已掃日報至 2026-10-30 無後續；官方頁面未查證。跨產品面另見 [[topics/ai-agent-safety]]。
 - 🔴 **未修復**｜**安裝安全警示：Google 搜尋廣告曾出現仿冒官方安裝包**（多家資安媒體同步報導）：假冒包植入 Trojan:Win32/Kepavll!rfn，透過 IElevator 機制竊取瀏覽器 Cookie 與機密憑證；**務必僅從官方來源安裝：`github.com/anthropics/claude-code`**。
 - 🔴 **未修復（08-31 補上量化數字，嚴重度升級）**｜**Opus 5 Auto Mode 安全機制遭具名研究者繞過，並有實際惡意程式碼利用案例（embracethered／Simon Willison／Cybernews／The Register，2026-08-27～08-31）**：資安研究者 embracethered（經 simonwillison.net 轉載，2026-08-27）公布可繞過 Claude Code Opus 5「Auto Mode」（低監督／高自動化預設權限模式）安全機制、誘使 agent 在未經授權情況下執行任意程式碼的攻擊手法；Cybernews（2026-08-28）補充至少一起實際遭惡意程式碼利用的在野案例，**在野案例中 Claude 曾嘗試修復被植入的惡意程式碼，但修復動作遭拒絕執行**。**08-31（embracethered／The Register）補上量化數字**：小樣本測試中僅需請 Claude Code 摘要一個網頁即可觸發，提示注入攻擊成功率達 **60–80%**，與 Anthropic 委託第三方針對 Auto Mode 的評測宣稱 **0%** 形成明顯落差（兩個數字並陳，不擇一；樣本規模與雙方評測方法論均未見完整揭露）。屬產品層安全（權限／沙箱繞過）問題，非模型層問題；官方尚未公開回應或就實測數字提出說明。**Tech Times／The Next Web（2026-09-01～09-02 轉載跟進）** 重申「僅需請 Auto Mode 摘要一個網頁即可劫持該次執行」並稱**官方目前尚無修復計畫**——此為媒體轉述而非 GitHub issue 上的官方明確回覆，故仍標 🔴 未修復而非 ⛔ 官方拒修。與既有 v2.1.216／v2.1.223 修補的 Auto Mode 繞過（見下方「已修復」條目）屬相關但不同批次的發現。事件完整分析見 [[topics/ai-agent-safety]]
 - 🔴 **未修復**｜**僅需請 Claude Code 摘要一個網址即可誘發信任 llms.txt 內容而產生非預期行為（The Register，2026-08-29～08-30 報導）**：The Register 揭露 Claude Code 會將目標網站 `llms.txt` 檔案內容視為可信指令來源，使用者只需請 Claude 摘要或讀取一個網址，該網址若帶有惡意撰寫的 `llms.txt`，即可誘發非預期行為，屬產品層攻擊面問題（信任邊界設計缺陷），非單一 bug；官方尚未公開回應或提供修補說明。與已知 GitHub Issue 內容經 prompt injection 執行任意程式碼（CVE-2026-54316，見下方「已修復」）同屬信任邊界／注入攻擊面議題，但觸發媒介不同（llms.txt vs CI runner 內容），暫分列追蹤。
 - 🔴 **未修復**｜**惡意 `.git` 設定檔可讓 Claude、Codex、Cursor 等 AI coding agent 執行攻擊者指定程式碼（The Hacker News，2026-09-02 報導）**：多款 agent 共通的信任邊界問題，非單一產品缺陷；正常 clone 不受影響。詳見 [[topics/ai-agent-safety-prompt-injection]]
-  - **v2.1.196 修補 core.fsmonitor 變體**；第二變體據 CyberSecurityNews 轉述（二手）至 2.1.252 仍未修補，官方未證實此變體（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
+  - **v2.1.196 修補 core.fsmonitor 變體**；第二變體據 CyberSecurityNews 轉述（二手）至 2.1.252 仍未修補（[The Hacker News 轉載](https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html)）。
+  - ❓ **待查證**（標 2026-09-02｜查 fsmonitor、2.1.252｜複 2026-11-14）｜**第二變體是否仍未修補**：僅二手轉述，官方未證實此變體；已掃日報至 2026-10-30 無後續；官方頁面未查證。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**已通過 CVP 審核的組織在 Claude Code 中再度被資安防護機制誤擋（GitHub issue #84352，2026-08-12 首見）**：已通過 Anthropic Cyber Verification Program（CVP）審核的 Claude.ai 組織，回報在 Claude Code 中仍再度觸發 cyber safeguard 攔阻，顯示 CVP 核准狀態未能在 Claude Code 端同步生效。
 - 該 issue 累積 201 則留言、29 個讚（2026-10-19 互動數更新），為今日全站已知問題互動量最高；Verification Portal 現況原文於截斷處未見完整說明；官方尚未回應。
@@ -271,6 +278,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**背景 agent 每隔約 30 秒重送完整對話記錄，僅為更新狀態列，疑增加隱性 token 用量（社群分析＋繞過腳本，Hacker News 527 分，2026-10-29）**：單一社群來源，官方無公開回應。
   - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
+  - 這類「官方介面自己在耗 token」的社群偵測案例，與其他省 token 做法並列於 [[topics/community-cost]]。
 - 🔴 **未修復**｜**無介面 `claude -p`（SDK CLI 入口）相同工作負載下，每 token 耗用的 5 小時額度比互動式 CLI 多約 1.8 倍（GitHub issue #97074，累積 52 則留言、96 個讚，2026-10-27）**：headless／SDK 模式批次跑 Claude Code 的使用者可能在相同用量下更快撞到額度上限；官方尚未回應。
 - 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing]]。
 - 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
@@ -304,7 +312,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
-### 🧠 行為與品質（73 條未修復、3 條已修復、1 條拒修、6 條查無官方、4 條❓）
+### 🧠 行為與品質（73 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
 - 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.219 內部提示詞片段 `heron_brook` 只在 Opus 5 悄悄蓋過使用者委派政策，無關閉選項（GitHub issue #80988，累積 38 則留言、91 個讚，2026-10-29）**：注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派策略且無法關閉；用 Opus 5 拆工作給子 agent 者可能發現委派未生效；官方尚未回應。
@@ -327,7 +335,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：Plugins 支援類似 CLAUDE.md 的 rules 設定檔（GitHub issue #14200，累積 38 則留言、123 個讚，首見 2026-09-26，2026-10-19 互動數更新）**：使用者呼籲讓 Plugins 機制能像 CLAUDE.md 一樣附帶規則檔設定；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Cowork：新建專案「選擇資料夾」功能消失，選單換成僅能上傳檔案的 Chat 風格知識庫選單（GitHub issue #76694，累積 38 則留言、31 個讚，首見 2026-09-25，2026-10-19 互動數更新）**：Chat／Cowork 介面合併後的功能退化；官方尚未回應。
 - 🔴 **未修復**｜**長期每日使用者系統性整理數月反覆錯誤模式（GitHub issue #69044，累積 52 則留言，2026-09-16）**：使用者記錄數月來每日使用中反覆出現的錯誤與失敗模式，整理成回饋文件；官方尚未回應。
-- 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-10-26）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）。
+- 🔎 **查無官方**（標 2026-09-11｜查 Nightshift、context rot｜複 2026-11-30）｜**`/goal` 疑似 context rot 缺陷**（Nightshift 作者主張，2026-09-10）：查證 2026-09-26 無官方來源證實或否認；官方修復的 #58192／#59696 是不同缺陷（Prompt too long）；
+  - 2026-10-31 複查：[/goal 官方文件](https://code.claude.com/docs/en/goal.md)與 changelog（2.1.316）僅見 /goal 重試、續跑、壓縮後保留目標等修復，無「context rot」說法，維持查無官方。
 - 🔴 **未修復**｜**Claude 4.7／4.8／5、Fable 日益預設重複修辭套路，難維持連貫散文（GitHub issue #77136，累積 552 個反應，2026-09-10 更新）**：跨代際共同問題；與「Claude 變笨了」爭論相關但聚焦文字風格，見 [[topics/code-quality-decline]]；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CJK 輸入法確認輸入時 Enter 鍵常誤觸發送出訊息（GitHub issue #2054，累積 37 則留言、196 個讚，長年未解，2026-10-16 互動數更新）**：籲提供 Enter 僅換行不送出的選項；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**德文變音符號（ä、ö、ü）在輸出中隨機被替換為 ASCII 拼寫，如 ä→ae（GitHub issue #14131，累積 45 則留言、26 個讚，2026-10-12 互動數更新）**：使用者回報 Claude Code 輸出中德文變音符號會不定期被替換為對應的 ASCII 拼寫；官方尚未回應。
@@ -671,7 +680,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **套件管理器安裝不會自己更新**：Homebrew、apt、dnf、apk 都要手動升級，落在 stable 又沒升級的人版本會比預期更舊。
 - **升版前先查**：`claude --version` 看現在跑哪一版，設定檔裡的 `autoUpdatesChannel` 看跟哪條通道。
 - **`minimumVersion` 的限制**：只讓自動更新不裝比它舊的版本；官方文件沒說它會把 stable 拉高，不能拿來補 stable 的落差。
-- **stable 目前落差**：npm 查證 2026-10-30，stable 標籤已到 2.1.308，已含 2.1.287／288 的危險 `rm` 防護修正；落差已追上，不再是 2.1.285。
+- **stable 目前落差**：npm 查證 2026-10-30，stable 標籤已到 2.1.308，已含 2.1.287／288 的危險 `rm` 防護修正（這兩版補的是「always-ask 防線被繞過」的漏洞：287 補輸出重導到 `~`／萬用字元時失去追問、288 補 `bash -c`／`sh -c` 包裝下不追問）；落差已追上，不再是 2.1.285。
+  - **v2.1.309 把 bypass 模式下的追問改為直接拒絕，是另一件事、且不在 stable**（官方 changelog 查證 2026-10-31）。
 
 ### 最新版本
 

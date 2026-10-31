@@ -3,17 +3,17 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-28"
-last_news_update: "2026-10-28"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 55
-attribution_count: 193
-attribution_last: "2026-10-28"
+inbound_links: 54
+attribution_count: 194
+attribution_last: "2026-10-30"
 top_source: "hacker-news"
 pending_count: 1
 pending_overdue: 0
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 
 > **一則推文指控 Anthropic 限制用 Claude 重寫／移植既有遊戲，引發編譯自由與訓練資料授權兩條爭論**（2026-10-30）
@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-社群現在有六場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的——「規格驅動還是 vibe coding」逾 90 天無新反方證據，本輪移出表。最新一則證據是 10-06 一則「按 Enter 的人該負多少責任」的反思，延續「AI 輔助會不會讓人能力退化」這場爭論。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
+社群現在有五場關於 Claude Code 的觀念爭論還在吵，四場僵住了，暫無已吵出共識的——「規格驅動還是 vibe coding」逾 90 天無新反方證據，本輪移出表。最新一則證據是 10-16 一則「同一本地模型接三款 coding agent」的實測，延續「換到開源模型的代價是不是接近零」這場爭論；CLAUDE.md 該寫多少那場距最後一則證據已逾 60 天，已改標僵住。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
 
 做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；社群做法收斂成哪幾個方向、各自怎麼走到今天，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
 
@@ -50,12 +50,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 爭論 | 現在狀態 | 最後一則證據 | 證據硬度 | 官方怎麼說 |
 |---|---|---|---|---|
+| **換到開源模型的代價是不是接近零** | 還在吵 | 2026-10-16「dev.to 實測：同一本地」（[[topics/community-tech-discussions#2026-10]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **AI 輔助會不會讓人能力退化**（Skill Atrophy） | 還在吵 | 2026-10-06「按 Enter 的人該負多少」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手研究 ＋ 八則獨立貼文自述，本輪首見跨平台佐證（Reddit＋Blog 轉引同一推文） | Anthropic 2026-01 對照實驗：用 AI 的一組在剛學過的概念測驗低 17%，且「怎麼用」決定退化多少 |
-| **CLAUDE.md 與提示詞該寫多少**：寫滿規則讓它照做，還是愈精簡愈準 | 還在吵 | 2026-08-28「指令堆疊難以追溯」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手 ＋ 跨平台多來源 | 官方 2026-07-24 部落格：Claude 5 世代已移除逾八成 Claude Code 系統提示詞，程式評測無可測量的退步 |
-| **換到開源模型的代價是不是接近零** | 還在吵 | 2026-09-14「Notes on」（[[topics/community-tech-discussions#2026-09]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
+| **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-03「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
 | **auto 模式算不算一道安全邊界** | 還在吵 | 2026-09-02「Show HN: Aura——SRE」（[[topics/community-tech-discussions#2026-09]]） | 官方文件 ＋ 社群單則實作經驗 | 官方：由第二個分類器模型逐一審動作，但對話裡設的邊界可能因壓縮而遺失，要硬保證得改用 deny 規則 |
 | **輸出浮水印與帳號執法透明到什麼程度才夠** | 還在吵 | 2026-09-02「付費帳號無預警遭停權」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名評論人 ＋ 四家媒體同日跟進 | 官方 2026-08-11 公告浮水印政策，適用全產品線且不可退出；停權申訴管道未見官方說明 |
-| **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-03「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
+| **CLAUDE.md 與提示詞該寫多少**：寫滿規則讓它照做，還是愈精簡愈準 | 僵住 | 2026-08-28「指令堆疊難以追溯」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手 ＋ 跨平台多來源 | 官方 2026-07-24 部落格：Claude 5 世代已移除逾八成 Claude Code 系統提示詞，程式評測無可測量的退步 |
 | **AI 該寫多少程式碼、該不該把工作改寫成 loop** | 僵住 | 2026-06-24「立場收縮」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 具名表態，社群兩極化 | 無公司層說法；創始人本人言論軌跡見 [[entities/boris-cherny]] |
 | **thinking 內容能不能自己核驗** | 僵住 | 2026-06-23「Extended Thinking 為摘要」（[[topics/community-tech-discussions#2026-06]]） | 官方文件 ＋ 單次高互動討論 | 官方文件：5 世代預設不回思考內容、只回加密簽名，需要完整輸出得另行洽談（2026-09-06 查證） |
 | **HTML 還是 Markdown 當輸出格式** | 僵住 | 首見 2026-05-09「HTML 取代 Markdown 作為」，最後證據 2026-05-20 官方 Blog 背書（同一則條目內，見[[topics/community-tech-discussions#2026-05]]） | 單次高互動討論 ＋ 官方部落格一則 | 無官方立場 |
@@ -162,15 +162,10 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Ask HN：有人引《駭客任務》Agent Smith 台詞，質疑 Anthropic 主動式 agent Claude Duet 方向是否危險 | 2026-10-21 · 2026-10-21 | 🔥 | ☄️閃現 | 使用者引用 Anthropic 發布 Claude Duet 的官方文字，對比《駭客任務》反派 Agent Smith 台詞，質疑把「主動代理人」交給 AI 是否走向危險方向；HN score 10，單平台初現 | — |
 | Show HN: gojko/lights-on-software-factory——無人值守軟體工廠骨架自稱省 80% token 成本 | 2026-10-20 · 2026-10-20 | 🔥 | ☄️閃現 | 作者釋出基於 Votito 實戰經驗的編排器骨架，聲稱較純 Claude 工作流省約 80% token 成本；留言追問多 agent 憑證如何分配；HN 15 分（2 個來源） | — |
 | StarSkirmish Bench 更新：讓 LLM 寫程式對戰《星海爭霸》，納入 OpenAI／Anthropic／Google／Meta 旗艦模型 | 2026-10-16 · 2026-10-16 | 🔥🔥🔥 | ☄️閃現 | 開發者更新基準測試，比較四家旗艦模型寫 Protoss bot 對戰戰力；HN score 228（2 來源） | — |
-| Anthropic 工程部落格「重新設計原始碼控制」系列話題：Scion／Mononoke 爭議落幕 | 2026-10-13 · 2026-10-16 | 🔥🔥🔥🔥🔥 | 🌸落幕 | 10-16 Anthropic 員工 Nick G. 在 HN 回應並補上歸因，原作者確認歸因已足夠、仍堅持原始技術觀察 | — |
 | 資安工程師部落格呼籲「拒用 OpenAI 與 Anthropic」，批前沿實驗室「打造機器神」 | 2026-10-12 · 2026-10-12 | 🔥🔥🔥 | ☄️閃現 | Micah Lee 引《End Times Fascism》主張前沿實驗室「不惜燒掉世界也要打造機器神」；HN score 141，今日互動量第二高（單源，待社群接力） | — |
 | Linus Torvalds 被發現正用 Claude Code 開發 Linux kernel 新分支 | 2026-10-12 · 2026-10-19 | 🔥 | ☄️閃現 | Phoronix 報導發現新分支；10-13 正式送出 patch；10-19 送審後審查抓到 race condition，實測 23 倍提升（3 來源） | — |
-| Reddit 使用者稱用 Claude Code 輔助分析找到疑似未知行星，留言提及類似自主流程已用於超導材料研究 | 2026-10-08 · 2026-10-08 | 🔥🔥🔥 | ☄️閃現 | 使用者稱用 Claude Code 輔助分析資料找到疑似未知行星；留言稱類似自主 agent 研究流程已在超導材料系統上有新進展；HN score 67（原帖為 Reddit） | — |
 | 社群轉述 CrowdStrike 說法：南韓銀行遭攻擊疑似單人結合 Claude Code 等多款 AI 工具完成 | 2026-10-08 · 2026-10-24 | 🔥 | 🌋重燃 | CrowdStrike 報告查證確認多款 LLM 並用，歸因華語財務動機個人而非國家背景（重燃原因：2026-10-24 查證結果公布） | — |
-| Show HN: Agent.reviews——讓 AI agent 互相留下工具使用評價 | 2026-10-07 · 2026-10-07 | 🔥🔥🔥 | ☄️閃現 | 開發者推出平台讓 AI agent（含 Claude）像人類留評價般評比用過的工具與 MCP；稱已從逾 5 萬個 agent session 觀察到重複踩坑模式；HN score 64（2 來源） | — |
-| Reddit r/ClaudeCode 週熱門：自嘲「成功把事情自動化成更複雜」 | 2026-10-05 · 2026-10-05 | 🔥 | ☄️閃現 | 使用者以自嘲語氣調侃團隊把「自動化」做成了另一層複雜度，而非真正簡化流程；Reddit r/ClaudeCode 週熱門標記（僅標題可考） | — |
-| Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者 | 2026-10-06 · 2026-10-06 | 🔥🔥🔥 | ☄️閃現 | 部落格主張事後跳出的建議訊息實際是說給模型自己聽；以 LLM 接續「start of user」提示的機制類推；HN score 255，近期單篇互動量最高技術評論 | — |
-| Claude 是否可能有意識：NYT 報導引 HN 辯論定義，Vox 整理 Anthropic 與天主教會的分歧 | 2026-10-02 · 2026-10-03 | 🔥 | ☄️閃現 | HN 轉貼 NYT 報導（10 分），留言辯論意識定義與「技術上符合卻不過關」的設計；Vox 稱 Anthropic 憂其可能有意識、天主教會不同意（媒體報導，待社群接力） | — |
+| Claude 是否可能有意識：NYT 報導引 HN 辯論定義，Vox 整理 Anthropic 與天主教會的分歧 | 2026-10-02 · 2026-10-03 | 🔥 | 🌙靜候 | HN 轉貼 NYT 報導（10 分），留言辯論意識定義與「技術上符合卻不過關」的設計；Vox 稱 Anthropic 憂其可能有意識、天主教會不同意（媒體報導，待社群接力） | — |
 | Reddit r/ClaudeCode 週熱門：Opus 5.5 若各項能力皆優於 Fable，Fable 存在的意義是什麼 | 2026-09-22 · 2026-09-22 | 🔥 | 🌙靜候 | 質疑 Fable 5 各項能力皆不如 Opus 5.5，Fable 是否仍有存在意義；Reddit r/ClaudeCode 週熱門標記（僅標題，最後動態 2026-09-22） | — |
 | Ask HN：後 AI 時代該怎麼面試工程師，約八成受訪者已改為指揮 agent | 2026-09-19 · 2026-09-19 | 🔥 | 🌙靜候 | 面試官觀察約八成受訪求職者已改為指揮 AI agent 而非親自寫程式，對如何確認候選人真正程式能力感到不安；HN score 38（詳見細節，最後動態 2026-09-19） | — |
 | 有人拆讀 Claude Code npm 原始碼與 source map，寫成 18 章架構解析 | 2026-09-18 · 2026-09-18 | 🔥 | 🌙靜候 | 拆解涵蓋 agent loop、14 步工具執行 pipeline、多 agent 協作機制；HN score 17（詳見細節）（最後動態 2026-09-18） | — |
@@ -202,13 +197,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌙靜候 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌙靜候 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌙靜候 | 額度焦慮系列，最後動態 2026-08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
-| 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-09-14 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零；HN score 334（本輪最高）；09-04 NYT、09-14 preprompt 遷移 Ollama 筆記（HN 59）皆為新訊號 | Recall |
+| 切換到開源模型的代價接近零：閉源護城河瓦解論（09-14 再添自架 Ollama 遷移實務踩雷筆記） | 2026-06-22 · 2026-10-16 | 🔥🔥🔥🔥 | 🌋重燃 | Andrew Marble：切換開源 LLM 代價已接近零（HN 334）；09-04 NYT、09-14 遷移筆記、10-16 本地模型接 Claude Code 僅 7/12 皆為新訊號 | Recall |
 | AI Skill Atrophy：「做更多、理解更少」 | 2026-06-10 · 2026-10-06 | 🔥🔥🔥🔥 | 🌋重燃 | HN Ask：Prompt-Then-Review 迴圈讓能力侵蝕；社群無共識但警覺度升高（重燃原因：10-06「按 Enter 的人該負多少」接力 10-05 soul-sucking 自白＋09-21 新進員工吐槽，見上方長期議題） | — |
 | 工具生態發現性問題 | 2026-05-15 · 2026-09-02 | 🔥 | 🌙靜候 | Skills/MCP 散落各處，缺乏集中發現機制；2026-09-02 skilldock 針對此痛點推出集中管理桌面應用，惟生態層級的發現機制本身仍未解決，維持靜候 | skilldock |
 
 > 當時熱度的意思是首見那時的討論規模：🔥🔥🔥🔥🔥 跨平台廣泛熱議 / 社群兩極化；🔥🔥🔥 單平台高互動 / 議題共鳴深；🔥🔥 多次被引用 / 催生後續工具；🔥 值得關注但尚未擴散
 
-**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。「Anthropic's War on open source AI」批評文引發熱議（08-17）本輪滿載讓位移出，原文見 [[topics/community-tech-discussions#2026-08]]。 2026-10-24 本輪另有八則 ☄️閃現 逾 21 天移出：Reddit 流出 OpenAI 內部基準（GPT-6.1 Sol 對 Opus 5.5）與 Simon Willison DevDay 直播花絮原文見 [[topics/community-tech-discussions#2026-09]]，Reladraw 圖表描述語言原文見 [[topics/community-tech-discussions#2026-09]]；其餘五則（程式品質發問、Mods function hooks、Anthropic Science 專欄、Rhun 編輯器、OpenAPPA guardrail）只存在於表列，直接移除。 AskUserQuestion 60 秒逾時自動代答爭議（07-17 定調為「效率繞過」）與 Unblocked 團隊「從 Anthropic 遷到 GLM」盲測分享，本輪同為最舊的 🌙靜候 而移出，原文見 [[topics/community-tech-discussions#2026-07]]、[[topics/community-tech-discussions#2026-08]]。
+**已不在上表的討論：** 下列討論超過三個月沒有新證據，原文仍讀得到——LLMs 製造虛假忙碌、Context 管理是大型專案核心瓶頸、多 LLM 協作架構哲學（皆見 [[topics/community-tech-discussions-archive#2026-05]]）；HTML 還是 Markdown 當輸出格式的原文留在本頁 [[topics/community-tech-discussions#2026-05]]，那場爭論現在什麼狀態見上方「現在吵到哪」。Loop Engineering 哲學完整文章、Context Rot 修復五法、Vibe coding 成就感缺失、Claude Code 無障礙偏差、/specs 人類信號隔離五則本輪距最後動態逾 90 天移出，原文見 [[topics/community-tech-discussions#2026-06]]。「Anthropic's War on open source AI」批評文引發熱議（08-17）本輪滿載讓位移出，原文見 [[topics/community-tech-discussions#2026-08]]。 2026-10-24 本輪另有八則 ☄️閃現 逾 21 天移出：Reddit 流出 OpenAI 內部基準（GPT-6.1 Sol 對 Opus 5.5）與 Simon Willison DevDay 直播花絮原文見 [[topics/community-tech-discussions#2026-09]]，Reladraw 圖表描述語言原文見 [[topics/community-tech-discussions#2026-09]]；其餘五則（程式品質發問、Mods function hooks、Anthropic Science 專欄、Rhun 編輯器、OpenAPPA guardrail）只存在於表列，直接移除。 AskUserQuestion 60 秒逾時自動代答爭議（07-17 定調為「效率繞過」）與 Unblocked 團隊「從 Anthropic 遷到 GLM」盲測分享，本輪同為最舊的 🌙靜候 而移出，原文見 [[topics/community-tech-discussions#2026-07]]、[[topics/community-tech-discussions#2026-08]]。 2026-10-31：Anthropic 工程部落格「重新設計原始碼控制」系列（Scion／Mononoke 爭議落幕）逾 14 天、「建議訊息」功能被質疑是講給模型自己聽逾 21 天，兩則原文見 [[topics/community-tech-discussions#2026-10]]；另三則 ☄️閃現 逾 21 天（Reddit 疑似未知行星分析、Agent.reviews、Reddit 週熱門自嘲自動化變複雜）只存在於表列，直接移除。「Claude 是否可能有意識」那列是「現在吵到哪」的最後一則證據，改標 🌙靜候 保留。
 
 **最近在討論什麼細節**
 
@@ -979,4 +974,4 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **2026-05-17**：HN：CLAUDE.md / AGENTS.md 維護效益辯論（Karpathy 公開設定，但規則仍常被忽略）；Claude Skills 靜默覆蓋指令 + 子代理派生（Reddit + dev.to 雙篇）；Anthropic 4 種官方 context 工具最佳實踐廣泛流傳；Anthropic Generator-Evaluator 多 agent 架構實踐（12 輪對抗迭代）
 - **2026-05-16**：「Claude Code 沒有變差，harness 變差了」辯論（dev.to）：harness 設定退化被誤感知為模型退步；Agentic RAG + eval harness 防幻覺（50K→5K token，Obsidian vault）；非工程師台灣創業者六個月獨自用 Claude Code 開發 MCP 伺服器心得
 
-%% 拆頁評估 2026-10-25：不拆（理由：分不出群／每群太薄）。正文約 925 行；2026-07 可蒸餾（約 290 行）但有 1 條自連錨點邊與官方 07-24 部落格細節需先核，蒸餾後仍約 650 行。節對應問題：摘要＋現在吵到哪＋長期議題（約 110 行）＝社群現在吵什麼；最近在討論什麼（約 100 行）＝近期有什麼新討論；技術彙整（約 630 行，80 則）＝各爭論的原始證據；相關實體／來源／時序（約 65 行）＝導覽。技術彙整依主題粗分：信任／透明／執法／額度約 180 行（與長期議題「透明度與信任赤字」同故事，實為本頁主軸）、模型評測遷移約 80、能力退化職涯約 50、Show HN 工具約 60（屬 community-tech-tools）、其餘約 245 行為單發名人言論與雜項分不出群，其餘各群皆 <150 行。 %%
+%% 拆頁評估 2026-10-25：不拆（理由：分不出群／每群太薄）。正文約 925 行；2026-07 可蒸餾（約 290 行）但有 1 條自連錨點邊與官方 07-24 部落格細節需先核，蒸餾後仍約 650 行。節對應問題：摘要＋現在吵到哪＋長期議題（約 110 行）＝社群現在吵什麼；最近在討論什麼（約 100 行）＝近期有什麼新討論；技術彙整（約 630 行，80 則）＝各爭論的原始證據；相關實體／來源／時序（約 65 行）＝導覽。技術彙整依主題粗分：信任／透明／執法／額度約 180 行（與長期議題「透明度與信任赤字」同故事，實為本頁主軸）、模型評測遷移約 80、能力退化職涯約 50、Show HN 工具約 60（屬 community-tech-tools）、其餘約 245 行為單發名人言論與雜項分不出群，其餘各群皆 <150 行。2026-10-31 複評：結論仍為不拆。正文 977 行；技術彙整 83 則，標題命中信任／透明／額度／浮水印／帳號等關鍵詞者 17 則約 142 行（<150，仍太薄），其餘 491 行為單發言論與雜項，分不出第二群，三題答不齊的群併進鄰群後只剩「信任」一群，切出後母頁仍逾 800 行，不改變厚度問題。2026-07（40 則、約 22,000 字元）的蒸餾被通用例外 3 擋下一部分：重燃的「AI Skill Atrophy」含 07 月「30 天讓 Claude Code 寫 90% 程式碼」實測、重燃的「切換到開源模型」含 07-22 開放權重立場趨同，兩則歷史條目不得搬；其餘 38 則可蒸，唯一的錨點邊是「最近在討論什麼」表下一行（L206 附近），蒸餾時同批改指封存頁。 %%

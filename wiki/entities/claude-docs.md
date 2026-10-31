@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 6
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 6
+days_since_news_subtree: 8
 inbound_links: 6
 attribution_count: 3
 attribution_last: "2026-10-23"
@@ -52,7 +52,7 @@ Claude Docs 是 Anthropic 於 2026-09-17 隨 [[entities/cowork|Claude Cowork 與
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥 |
+| 社群熱度 | 🔥🔥 |
 | 試用價值 | ⏳ 觀望 |
 | 最適合 | 待社群實測後補齊 |
 | 不適合 | 待社群實測後補齊 |

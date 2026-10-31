@@ -3,17 +3,17 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-29"
-last_news_update: "2026-10-29"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 12
-attribution_count: 8
-attribution_last: "2026-10-29"
+days_since_news_subtree: 1
+inbound_links: 15
+attribution_count: 10
+attribution_last: "2026-10-30"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -31,7 +31,7 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
 
 > **最新動態**（2026-10-30）
@@ -47,7 +47,7 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
-| 什麼時候上市 | 公司沒給過時程；投資人先前預期 9–10 月，09-07 Forbes 稱延至 10 月中並鎖定 $150 億信用額度，09-08 Yahoo Finance 同步稱延至十月 ❓ 待查證 ⟨Q-03⟩ | FT、Axios（2026-08-13／08-17）；calcalistech（09-06）；Forbes（09-07）；Yahoo Finance（09-08） | 一級媒體引投資人／傳聞（僅標題） |
+| 什麼時候上市 | 公司沒給過時程；投資人先前預期 9–10 月，09-07 Forbes 稱延至 10 月中並鎖定 $150 億信用額度，09-08 Yahoo Finance 同步稱延至十月 🔎 查無官方 ⟨Q-03⟩ | FT、Axios（2026-08-13／08-17）；calcalistech（09-06）；Forbes（09-07）；Yahoo Finance（09-08） | 一級媒體引投資人／傳聞（僅標題） |
 | 值多少 | 最後一次定價 $9,650 億；投資人原估 $2 兆，10-16 下修至約 $1.5 兆；10-20 S-1 首度揭露 H1 淨損 807 億美元（WSJ） | Series H 公告；FT（2026-05-28／08-13）；Reuters 獨家（2026-10-15）；Telegraph（2026-10-16）；WSJ（2026-10-20） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
 | 誰說撐不住 | 撐住 $2 兆需第 10 年營收 $1.2 兆；另一說需微軟等級 70% 毛利率；紐約市主計官公開要求暫緩 IPO、優先處理 AI 安全（2026-10-15），Anthropic 已就此展開對話（2026-10-16） | Damodaran、Stocktwits（2026-08-23／09-02）；Bloomberg（2026-10-15／10-16，引紐約市主計官） | 第三方研究／一級媒體引官員 |

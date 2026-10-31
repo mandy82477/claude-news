@@ -4,20 +4,20 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-10-25"
-last_news_update: "2026-10-25"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-30"
 status_main: "active"
-days_since_news: 4
+days_since_news: 1
 parent: null
 children: "['entities/pricing-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
-inbound_links: 193
-attribution_count: 157
-attribution_last: "2026-10-25"
+days_since_news_subtree: 1
+inbound_links: 196
+attribution_count: 158
+attribution_last: "2026-10-30"
 top_source: "google-news"
 pending_count: 4
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
@@ -30,9 +30,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-30
-%% 拆頁評估 2026-10-25：拆，草案：正文 896 行（本輪未蒸餾），事件流約 596 行（重要政策變動紀錄各節）。全列各節所答：現況／我的方案現在有什麼／一小時一個月多少／模型 API 定價／還沒確定的計費變動／當前生效的計費規則／通路與乘數＝我現在怎麼被計費、該買哪個（約 270 行，留母頁）；事故現在還在發生嗎＋灰色市場＋事故與爭議＝帳單出錯、帳號被封怎麼辦（約 230 行）；定價與促銷＋配額與速率＋計費切割風波＋成本案例＝價格與配額何時怎麼變（約 400 行，計費切割 101 行單獨太薄、併入）。草案：事故群→子頁 entities/pricing-incidents；價格配額沿革群→子頁 entities/pricing-history；母頁留現況與生效規則、路由表。錨點入邊（如 pricing#方案可用性與帳務摩擦）留母頁不動，指入事故／沿革節的須回掃，待頁面健檢波執行。 %%
+%% 拆頁評估 2026-10-25：拆，草案：正文 896 行（本輪未蒸餾），事件流約 596 行（重要政策變動紀錄各節）。全列各節所答：現況／我的方案現在有什麼／一小時一個月多少／模型 API 定價／還沒確定的計費變動／當前生效的計費規則／通路與乘數＝我現在怎麼被計費、該買哪個（約 270 行，留母頁）；事故現在還在發生嗎＋灰色市場＋事故與爭議＝帳單出錯、帳號被封怎麼辦（約 230 行）；定價與促銷＋配額與速率＋計費切割風波＋成本案例＝價格與配額何時怎麼變（約 400 行，計費切割 101 行單獨太薄、併入）。草案：事故群→子頁 entities/pricing-incidents；價格配額沿革群→子頁 entities/pricing-history；母頁留現況與生效規則、路由表。錨點入邊（如 pricing#方案可用性與帳務摩擦）留母頁不動，指入事故／沿革節的須回掃，待頁面健檢波執行。 複評 2026-10-31：結論不變，仍判「拆」，三群切法同上，請主編裁決（記者不動手）。 %%
 
 > **最新計費政策異動**（2026-10-30）
 > 官方定價頁新增問答：Enterprise 與 API 定價可依用量與承諾支出客製化，提供數量折扣——採購量大或要談長約的團隊可據此主動詢價。
@@ -221,7 +221,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 通路與乘數
 
-上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-09-26**（官方定價頁查證；本次補上 Opus 5.5 的快取命中特例 ×0.05 與 Fast mode $8／$40，通路五條與其餘乘數與 09-03 一致）。
+上方三個區塊是**牌價**。實付金額還取決於兩件事：**走哪條通路**，以及**套了哪些乘數**——兩者都會讓帳單與牌價對不上。資料截至 **2026-10-31**（官方定價頁查證；本次改兩項——長脈絡標準價的 Haiku 5.5 例外、Fast mode 不再限第一方 API；通路五條與其餘乘數與 09-26 一致）。
 
 ### 通路：誰定價、怎麼開票
 
@@ -248,15 +248,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 快取命中 | ×0.1（Fable 5.1／Mythos 5.1 為 **×0.025**；Opus 5.5 與 **Sonnet 5.5** 為 **×0.05**） | 讀取的 token | 命中既有快取 |
 | Batch API | ×0.5 | 輸入＋輸出 | 非即時工作負載 |
 | 快取寫入（5 分／1 小時） | ×1.25／×2.0 | 寫入的 token | 建立快取 |
-| 資料落地 | ×1.1 | **輸入、輸出、快取讀寫全部** | `inference_geo:"us"`；Azure 為 US Data Zone Standard；Claude 4.6 以後 |
+| 資料落地 | ×1.1 | **輸入、輸出、快取讀寫全部**（Haiku 5.5 逾 10 萬 token 的高一檔價也適用） | `inference_geo:"us"`；Azure 為 US Data Zone Standard；Claude 4.6 以後 |
 | 地區端點 | ×1.1 | 全部 token | Bedrock／Google Cloud 用 regional 或 multi-region 端點 |
-| 長脈絡（Claude 4.6 以後） | ×1.0 | — | **不加價**，900k 與 9k 同費率 |
+| 長脈絡（Claude 4.6 以後） | ×1.0（**Haiku 5.5 除外**） | — | **不加價**，900k 與 9k 同費率；Haiku 5.5 不含此待遇，逾 10 萬 token 改用高一檔費率（$0.50／$2.50） |
 | 長脈絡（Sonnet 4／4.5 世代） | ×2.0 輸入／×1.5 輸出 | 僅超過 200K 的請求 | 該世代 1M 為預覽功能 |
-| Fast mode | Opus 5.5 改為 $8／$40；Opus 5 與 4.8 改為 $10／$50 | 取代基準費率 | 僅這三款 Opus，僅第一方 API；不能與 Batch 併用 |
+| Fast mode | Opus 5.5 改為 $8／$40；Opus 5 與 4.8 改為 $10／$50 | 取代基準費率 | 僅這三款 Opus，不能與 Batch 併用；可用通路與淘汰時程見細節區 |
 
 **乘數細節**
 
 - **會疊乘**：例如 Batch ×0.5 與資料落地 ×1.1 同時成立時兩者相乘。往下的只有快取命中與 Batch
+- **Fast mode 可用在哪些通路、哪一款要被淘汰（2026-10-31 官方查證）**：Opus 5.5 的 fast mode 另可用於 Google Cloud（Anthropic managed）與 Azure 上的 Microsoft Foundry，**不再限第一方 API**。
+  - Opus 5 與 4.8 的 fast mode 仍是研究預覽；**Opus 4.8 的 fast mode 已於 2026-10-30 宣告淘汰、2026-11-30 移除**，之後請求會直接回錯誤、不會退回標準 Opus 4.8。
 - **快取命中的特例（三檔，2026-10-10 官方查證）**：Fable 5.1／Mythos 5.1 為基準輸入價的 ×0.025（$0.25/Mtok）、**Opus 5.5 與 Sonnet 5.5** 為 ×0.05（分別 $0.20／**$0.10**/Mtok），其餘所有模型維持 ×0.1；
   - 快取寫入倍率（5 分 ×1.25／1 小時 ×2）三者相同（官方定價頁 Prompt caching 節）。⚠️ Sonnet 5.5 這一檔 09-26 查證時漏列，2026-10-10 依官方 models overview 與 Sonnet 5.5 模型頁補上
 - **長脈絡的分界是模型世代，不是「1M」這個功能**。Claude 4.6 以後內含 1M 且不加價（官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing) Long context pricing 節）；Sonnet 4／4.5 世代的 1M 為 public preview，[AWS 公告](https://aws.amazon.com/about-aws/whats-new/2025/08/anthropic-claude-sonnet-bedrock-expanded-context-window/)明載超過 20 萬 token 的 prompt 約為兩倍輸入價、1.5 倍輸出價。**兩代混用時，兩套規則會出現在同一份帳單上**
@@ -426,7 +428,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與既有事件的關係（推論，待證實同源）**：症狀與本頁已記錄的多起「用量無明顯使用即耗盡」事故（08-14 Issue #38335 session 額度異常、08-04 Reddit 回報 Max 20x 半小時 0%→100%）同屬「配額計算是否準確」一類，惟本則互動規模遠超其餘各案，且問題描述為「幾乎立即觸頂」而非既有案例的「一段時間內耗盡」，是否同根因未見官方交叉確認，不可合併
 - **後續（2026-09-12）**：#38335 攀升至 850 留言、545 👍，重返事故總表，見上方 09-12 條目。
 - **同日 Reddit 疑似相關回報（單一貼文，score 0，非週熱門，未經證實）**：r/ClaudeCode 貼文稱收到「即將達上限」警告，但實際用量遠未接近門檻，與本則同屬「配額顯示是否準確」討論，惟訊號較弱（score 0、非週熱門標記），僅並列記錄不獨立成案（Reddit）
-- 🔎 **查無官方**（標 2026-09-07｜查 GitHub #16157、usage limits｜複 2026-10-26）：官方 09-17 只新增 usage／length limits 的一般性區別，未給觸頂成因或修復時程（2026-09-26 查 `support.claude.com`）
+- 🔎 **查無官方**（標 2026-09-07｜查 GitHub #16157、usage limits｜複 2026-11-30）：官方 09-17 只新增 usage／length limits 的一般性區別，未給觸頂成因或修復時程（2026-09-26 查 `support.claude.com`）。
+  - 2026-10-31 複查 [#16157](https://github.com/anthropics/claude-code/issues/16157)：仍 Open（標籤 bug、area:cost）；
+    - 官方唯一實質回覆是 2026-01-26 置頂留言（稱限額未變、歸因 Opus 4.5 耗 token 更多，並調整 edge case 的 token 用量），之後僅有使用者留言，無新成因或修復時程。
 
 #### 🔴 2026-09-04：GitHub Issue 累積 184 則留言——Max 5x 續訂扣款後帳號遭停用
 

@@ -680,6 +680,30 @@
    ],
    "reviewed": "2026-10-24",
    "why": "同一則官方頁更新（10-23 claude.com pricing）落在兩頁但取不同面向：矩陣記產品可用性、market-signals 做消息面判讀；兩頁各自連向 entities/pricing，不互連"
+  },
+  {
+   "pages": [
+    "entities/bernanke",
+    "topics/market-lessons"
+   ],
+   "reviewed": "2026-10-31",
+   "why": "Bernanke 頁只記 07-09 加入長期利益信託董事會的人事公告，market-lessons 的課是判讀訊號的方法（未收任何人事任命課）；兩頁只共享 IPO 脈絡鄰居，直接互連是結構巧合而非同一件事"
+  },
+  {
+   "pages": [
+    "topics/ai-agent-safety",
+    "topics/enterprise-tool-tracker"
+   ],
+   "reviewed": "2026-10-31",
+   "why": "共同新聞 Rubrik Code Guardian 在安全頁是僅標題可用的產業動態（防護機制未見報導），在 tracker 是 Rubrik 作為客戶用 Mythos 5 做紅隊測試的一列；各自的事實家不同，互連只會讓客戶列表長出安全敘事"
+  },
+  {
+   "pages": [
+    "topics/ai-agent-safety-prompt-injection",
+    "topics/anthropic-commitments"
+   ],
+   "reviewed": "2026-10-31",
+   "why": "anthropic-commitments 只追蹤官方明文承諾（修復、政策、拒絕）；提示注入頁目前沒有任何官方承諾可建檔（官方只有模型層數字與立場），兩頁僅因共享安全母頁鄰居而相似，待官方出現注入相關承諾再補連結"
   }
  ]
 }

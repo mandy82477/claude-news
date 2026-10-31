@@ -4,19 +4,19 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-26"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-26"
 status_main: "active"
-days_since_news: 3
+days_since_news: 5
 parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 5
 inbound_links: 31
 attribution_count: 11
 attribution_last: "2026-10-26"
 top_source: "google-news"
-pending_count: 1
+pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-11-09"
 pending_signalled: 0
@@ -34,17 +34,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** Claude Code 設計理念與工程實務最主要的公開發言來源
 **首次出現：** 2026-04-23（事後報告發布）
-**最後更新：** 2026-10-26
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-26
 
-> **待查證：辭職傳聞**（2026-10-26）
-> Google News／eu.36kr.com 標題稱「Claude Code 創作者正式辭職」；單一來源、無正文、互動 0，與本頁現行「現任」狀態矛盾，尚待後續報導確認。
+> **最新動態**（2026-10-26）
+> Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者「正式辭職」，單一來源、無正文，與其現任 Head of Claude Code 的身分矛盾，尚未查證，請勿當成已確認的人事異動；此前最近一次公開發言為 10-09 CTech 報導的提示工程心法。
+
+> ❓ **待查證**（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職）｜**辭職傳聞**：Google News／eu.36kr.com 標題稱「Claude Code 創作者正式辭職」；單一來源、無正文，與本頁現行「現任」狀態矛盾。
 
 ---
 
 ## 現況
 
-**截至 2026-10-26**，Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文可用，與現行「現任」狀態矛盾，確認狀態標為待查證（詳見下方標記）。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
+**截至 2026-10-26**，Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文可用，與現行「現任」狀態矛盾，標記見下。此前最近一次公開發言為 10-09 CTech 報導其提示工程心法——清楚說出需求、交給 AI 自行判斷，延續 10-07 Business Insider／Times of India「視 Claude 為同事」主張；技巧細節均未載，僅標題可用。
 
 ❓ **待查證**（標 2026-10-26｜查 Boris Cherny）｜**Google News／eu.36kr.com 標題稱 Claude Code 創作者正式辭職**（2026-10-26 報導）：單一來源、無正文、互動 0，與本頁現行「現任」狀態矛盾；標題未具名指向特定人，依既有「Claude Code 創始人動態」收錄範圍暫列於本頁，尚待第二來源或官方確認。
 
@@ -193,7 +195,7 @@ Boris Cherny 的公開言論呈現兩種截然不同的社群反應：
 
 ## 歷史記錄
 
-- 2026-10-26：❓ 待查證——Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文、互動 0，與現行「現任」狀態矛盾，尚待第二來源或官方確認（Google News / eu.36kr.com，2026-10-26）
+- 2026-10-26：❓ **待查證**（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職）｜**Claude Code 創作者辭職標題**：Google News 轉載 eu.36kr.com 標題稱 Claude Code 創作者正式辭職；單一來源、無正文，與現行「現任」狀態矛盾（Google News / eu.36kr.com，2026-10-26）
 - 2026-10-09：CTech 報導其提示工程心法「清楚說出想要什麼、交給 AI 自行判斷」，延續 10-07 BI／ToI「視 Claude 為同事」主張；原文僅標題可用（Google News / CTech，2026-10-09）
 - 2026-10-07：Business Insider 與 Times of India 同日報導分享 3 個提示技巧，主張把 Claude 當同事對話而非下指令；技巧細節未載，僅標題可用（Google News / Business Insider ＋ Google News / The Times of India，2026-10-07）
 - 2026-09-12：Business Insider 報導一名開發者為「AI slop」問題致信 Boris Cherny，獲親自回信；原文僅標題可用（Google News / Business Insider，2026-09-12）

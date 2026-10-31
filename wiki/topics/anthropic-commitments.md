@@ -1,16 +1,16 @@
 ---
 page: "topics/anthropic-commitments"
 kind: "topic"
-status: "monitoring（最後新聞更新 2026-10-05，距今 19 天無新承諾事件；仍有 🔴／🟡 未兌現項，轉低頻觀察）"
+status: "monitoring（最後新聞更新 2026-10-05，之後無新承諾事件；仍有 🔴／🟡 未兌現項，轉低頻觀察）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-24"
+last_updated: "2026-10-31"
 last_news_update: "2026-10-05"
 status_main: "monitoring"
-days_since_news: 24
+days_since_news: 26
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 24
+days_since_news_subtree: 26
 inbound_links: 12
 attribution_count: 2
 attribution_last: "2026-10-05"
@@ -25,10 +25,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 承諾兌現追蹤
 
-**狀態：** monitoring（最後新聞更新 2026-10-05，距今 19 天無新承諾事件；仍有 🔴／🟡 未兌現項，轉低頻觀察）
+**狀態：** monitoring（最後新聞更新 2026-10-05，之後無新承諾事件；仍有 🔴／🟡 未兌現項，轉低頻觀察）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-24
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-05
 
 > **最新動態**（2026-10-05）

@@ -3,14 +3,14 @@ page: "topics/llm-wiki-pattern"
 kind: "topic"
 status: "monitoring（2026-09-25 後日報無新的 LLM wiki 實作或設計討論，轉低頻觀察；有新實作入日報即回升 ongoing）"
 domain: "🌐 社群"
-last_updated: "2026-10-10"
+last_updated: "2026-10-31"
 last_news_update: "2026-09-25"
 status_main: "monitoring"
-days_since_news: 34
+days_since_news: 36
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 34
+days_since_news_subtree: 36
 inbound_links: 6
 attribution_count: 8
 attribution_last: "2026-09-25"
@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **別名：** LLM Wiki, Karpathy wiki
 **開始日期：** 2026-09-12
-**最後更新：** 2026-10-10
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-09-25
 **蒐集邊界：** 本頁的事實來自逐筆查證過的一手來源，加上 [[topics/skill-interest-watch]]「LLM 知識庫／文件策展／知識傳承」類的每日 GitHub 星數快照；不談 Claude 的 LLM wiki 專案，若既沒進那份榜、也沒被社群討論引用，本頁就會漏掉。
 
@@ -69,6 +69,7 @@ Karpathy 於 2026-04 提出的三層 wiki 模式，五個月內長出至少八�
   - 從 Claude／Codex 對話紀錄與 diff、PR、URL 增量寫入，`topics.yaml` 組織主題，附本地 web 檢視器；本庫 2026-07-22 曾收過此工具，見 [[topics/community-pattern-trends]] 趨勢九。
 - **wuphf**（開源工具，多 agent 共腦）：每個主張都帶「哪個 bot、何時、哪個來源」的出處 metadata，沒有出處的主張直接觸發警告；跨 bot 矛盾靠信心分數與時間戳調和（[GitHub](https://github.com/nex-crm/wuphf)）。
 - **Astro-Han/karpathy-llm-wiki**（可安裝的 Agent Skill，2,218 星／261 fork，MIT；2026-09-13 查證）：一行 `npx add-skill Astro-Han/karpathy-llm-wiki` 裝進支援 Agent Skills 的工具（[GitHub](https://github.com/Astro-Han/karpathy-llm-wiki)）。
+  - Skill 這種載體本身的社群寫法與採用證據，見 [[topics/community-skills]]。
   - `raw/`／`wiki/`／`index.md`／`log.md` 四件套與 Ingest／Query／Lint 三動作都是通用指令；作者自己的 wiki 從 2026-04 維護至今 94 頁／99 個來源。
   - 與前六者的差別是它不是某個人的 wiki，而是任何人拿來起自己 wiki 的殼；README 把自己對比 RAG，知識在寫入時合成而非每次查詢重推。本庫 09-12 的 skill-interest-watch 探針即由它命中，見 [[topics/skill-interest-watch]]。
 

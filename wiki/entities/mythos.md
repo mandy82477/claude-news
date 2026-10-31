@@ -4,15 +4,15 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-10-29"
+last_updated: "2026-10-30"
 last_news_update: "2026-10-29"
 status_main: "active"
-days_since_news: 0
+days_since_news: 2
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 40
+days_since_news_subtree: 2
+inbound_links: 41
 attribution_count: 33
 attribution_last: "2026-10-29"
 top_source: "google-news"
@@ -135,6 +135,8 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 
 ### 解禁後（2026-06-27 起）
 
+### 2026-10
+
 #### 2026-10-29
 ❓ **待查證**（標 2026-10-29｜查 SentinelOne、Wayfinder）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（僅標題可讀，弱訊號）：
 - Google News 轉載 VMblog 標題「SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services」（[Google News/VMblog](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)，2026-10-29）；RSS 僅提供標題，無正文，互動數 0、單一來源、未進當日日報正文
@@ -168,6 +170,8 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - Google News 轉載 The Register 標題「Mythos is hardcore good at math, as latest vuln under attack shows」（[Google News/The Register](https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMTFORllmZXdsc2dtcERROE9SNmpyM3lqTWl3X1N2OFprUzlxcEJoczZ2Y2wxZHp5WlhkRW15WGV2aEdGOHBKSVpMM3V4bmRSNlV3ZktpS1lSOWdQWEJUbENKUzYybHF4OW1tYjZqcW1paUVrZGhTYjhxRHJHWmZ0d3dmVjNFQ2pRM1ZZNXNMUGlralpVVDBDOV9YeEZJRFBwWlpHN3R6enEyRi1XOGEwQmVkSTVtR1pCRGdZZGNJa0Zxb3RkdjU1dGxCZW42ZE1sY2lJZ2IxN09McTdwQ2dYWlJEbEI1YWpWT0RUaQ?oc=5)）；RSS 僅提供標題，無正文與漏洞編號，無法確認與既有能力評測的關聯
 - 互動數 0、單一來源，列為弱訊號，不展開分析；漏洞攻擊面細節見 [[topics/ai-agent-safety]]
 
+### 2026-09
+
 #### 2026-09-29
 **Anthropic Frontier Red Team：GLM-5.3 跨越完整控制流劫持門檻**：
 - GLM-5.3 4% 對 Mythos Preview 6%（100 題 Binary Exploitation 抽樣）；首度有官方測試證實非 Anthropic 模型跨過這條門檻（[Anthropic Research](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)，2026-09-29；Simon Willison 同日轉述、SCMP 09-30 跟進，HN 239 分）
@@ -187,6 +191,8 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - Anthropic 官方公告，Mythos 5.1 與同日發布的 Fable 5.1 為同一模型的不同防護層級，Mythos 5.1「僅開放透過信任存取計畫使用（available only through our trusted access programs）」，護欄「專為資安與生命科學工作設計」；新增反萃取（anti-distillation）機制。完整能力面、System Card、HN 討論度（1,338 分）等細節見 [[entities/fable-5]]「歷史記錄」（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）
 - **模型面意義**：存取模式（信任機構限定）自 2026-06-09 Mythos 5 發布以來未變，變的是底層模型版本；此為「2026-07」總結中 07-25 Mashable「可能對外公開發布」傳聞的部分證實——版本迭代屬實，全面公開未成立，原文見 [[entities/mythos-archive#2026-07]]
 - 官方定價頁同步更新：Fable 5.1／Mythos 5.1 快取讀取費率降至基礎輸入價 0.025 倍（原 0.1 倍）；定價細節留給 [[entities/pricing]]（[Official Docs](https://platform.claude.com/docs/en/about-claude/pricing)，2026-09-02）
+
+### 2026-08
 
 #### 2026-08-31
 **Anthropic 官方部落格首度正面確認 AISI 未授權行動事件，公布因應措施＋揭露另三起環境設定錯誤事件**：
