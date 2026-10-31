@@ -1349,3 +1349,4 @@ ABORTED: gathered_items.json date=2026-09-23 items=72，非目標日期(2026-09-
 [2026-10-30T18:30:21Z] === Pipeline complete (agent) ===
 [cloud daily-news-pipeline-cloud STARTED 2026-10-30T22:08:07Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-10-30T22:08:07Z] TARGET_DATE=2026-10-30, Step 0b 冪等閘: digest already exists (news/2026-10-30.md 已由本日較早班次產出並完成全流程，commit 920738a chore: cloud daily-news-pipeline-cloud OK heartbeat 2026-10-30)，17 UTC 班已完成 news+wiki+web，中止不重跑（22 UTC 班，第三班）。Step 0 昨日缺跑檢查：news/2026-10-29.md 存在，通過，無需本機承接。
+[cloud weekly-wiki-lint-cloud STARTED 2026-10-31T03:06:05Z]
