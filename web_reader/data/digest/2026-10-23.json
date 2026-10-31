@@ -499,11 +499,6 @@
       "id": "anthropic-product-matrix",
       "name": "Anthropic 產品 × 功能對照表",
       "pageType": "topic"
-    },
-    {
-      "id": "community-tech-tools",
-      "name": "社群工具目錄",
-      "pageType": "topic"
     }
   ],
   "reader": {
