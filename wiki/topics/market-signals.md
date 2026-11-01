@@ -16,7 +16,7 @@ attribution_count: 112
 attribution_last: "2026-10-31"
 top_source: "google-news"
 pending_count: 69
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-02"
 pending_signalled: 8
 staleness_exempt: null

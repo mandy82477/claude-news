@@ -3,7 +3,7 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-30"
 status_main: "ongoing"
 days_since_news: 2
@@ -15,7 +15,7 @@ inbound_links: 75
 attribution_count: 239
 attribution_last: "2026-10-30"
 top_source: "blog"
-pending_count: 7
+pending_count: 8
 pending_overdue: 0
 pending_next_review: "2026-11-11"
 pending_signalled: 2

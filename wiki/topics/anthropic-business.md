@@ -3,7 +3,7 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1

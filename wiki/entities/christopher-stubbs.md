@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 10
-inbound_links: 1
+inbound_links: 2
 attribution_count: 2
 attribution_last: "2026-10-22"
 top_source: "anthropic-blog"

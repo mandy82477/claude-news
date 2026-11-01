@@ -3,7 +3,7 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
@@ -15,7 +15,7 @@ inbound_links: 15
 attribution_count: 12
 attribution_last: "2026-10-31"
 top_source: "google-news"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 1

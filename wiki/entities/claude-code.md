@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-31"
 status_main: "active"
 matrix_role: "產品"
@@ -13,11 +13,11 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 138
+inbound_links: 139
 attribution_count: 822
 attribution_last: "2026-10-31"
 top_source: "github-issues"
-pending_count: 28
+pending_count: 29
 pending_overdue: 0
 pending_next_review: "2026-11-04"
 pending_signalled: 3
@@ -424,7 +424,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **Session 保存與記憶生命週期（彙整，細節見各原條目）**
 
 - ⛔ 30 天自動刪 session，官方拒修：見下方「Session 歷史 30 天自動刪除」（#62476）。
-- 🔴 `cleanupPeriodDays: 99999` 被忽略、490 個 session 被刪：見 [[entities/claude-code#📂 Session 與資料管理|#41458 條目]]（2026-10-29）；上一條的延長天數解法目前不保證有效。
+- 🔴 `cleanupPeriodDays: 99999` 被忽略、490 個 session 被刪：見本節下方 #41458 條目（2026-10-29）；上一條的延長天數解法目前不保證有效。
 - 🔴 刪除 session 的功能請求：見下方 #13514 條目。
 - 🔴 `MEMORY.md` 壓縮提醒門檻可設定的請求：見行為與品質區 #91188 條目。
 - 🔴 `/compact` 改檔案化摘要：見本節 #17428 條目。

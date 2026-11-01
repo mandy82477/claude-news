@@ -12,7 +12,7 @@ parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "archive"
 days_since_news_subtree: 127
-inbound_links: 10
+inbound_links: 13
 attribution_count: 0
 attribution_last: null
 top_source: null

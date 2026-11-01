@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
 days_since_news_subtree: 124
-inbound_links: 8
+inbound_links: 9
 attribution_count: 0
 attribution_last: null
 top_source: null
