@@ -3,15 +3,15 @@ page: "topics/community-pattern-trends"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-24"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 21
 attribution_count: 0
 attribution_last: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-06-29
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-24
 
 > **最新趨勢觀察**（2026-10-24）
@@ -279,14 +279,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ---
 
-### 趨勢九：跨 Session 記憶層／知識庫　`方向已收斂`　最近一次動靜 2026-10-03
+### 趨勢九：跨 Session 記憶層／知識庫　`方向已收斂`　最近一次動靜 2026-10-31
 
 **演進：**
-- 🔥（估） **跨環境 Agent 記憶協定（ltm）**（5/12）：Core Memory Packet JSON 協定，主張跨編輯器／跨機器／跨模型的供應商中立記憶格式，早期單一嘗試
-- 🔥（估） **OKF 物件鍵格式**（6/28）：第二個獨立標準化嘗試，聚焦跨 session agent 記憶的團隊共用格式，與 ltm 同屬「格式標準化」路線但各走各的協定
-- 🔥🔥🔥 **CodeAlmanac**（7/22，YC S26，Show HN score 54）：從「記格式」轉向「記文件」——隨對話自動更新 codebase wiki，取代手動維護的 MANUAL.md／DESIGN.md；30 天內無後續採用回饋，2026-08-29 已自 [[topics/community-tech-tools]] 移除追蹤
-- 🔥🔥🔥 **OzBrain**（8/21，HN 69，多家報導）：從「單一使用者跨 session」延伸到「team 共享」——主張 agent 與團隊共用知識庫，取代傳統筆記/任務管理工具
-- 🔥（估） **手動 Obsidian vault 取代官方自動記憶**（8/24，Reddit）：與前三者「補充記憶層」方向相反的第一個「取代」案例——使用者主張自己策展的 LLM Wiki 比官方自動記憶更可控、更可信賴
+- 2026-05～2026-08：早期四條路線——格式標準化、codebase 文件自動化、團隊共享、取代官方記憶——皆單例，無後續採用回饋（5 個節點，原文見 [[topics/community-tech-patterns-archive]]）
 - 🔥（估） **mindmuxai/brain.md**（8/25，504★）：第三種格式路線——零依賴、檔案式 CLI，鎖定決策／需求／限制三類專案層級資訊，補上「輕量、無外部服務依賴」這個此前未見的實作取向
 - 🔥（估） **否決記錄需可驗證、防竄改**（8/31，dev.to）：把記憶範疇從「記住怎麼做」延伸到「記住這條路已被否決」，並要求紀錄本身防竄改；與 8/7「已否決方案的隱形重工成本」是同一個問題的第二則訊號
 - 🔥（估） **gentle-ai／cpr-compress-preserve-resume**（9/6）：格式標準化再添兩例——gentle-ai（6,304★）打包記憶／規格驅動／skill 為跨 4 種 agent CLI 的單一設定層；cpr（508★）走「壓縮—保存—還原」三段式跨 session 記憶；皆僅星數佐證
@@ -295,6 +291,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥（估） **memmy-agent／agent-memory**（9/27、9/28）：跨工具共用單一記憶庫的兩個實作——memmy-agent 為使用者掌控的記憶中樞，agent-memory 以純 Markdown 為單一事實來源、Claude Code 與 Codex 共用；皆僅星數佐證
 - 🔥（估） **hippo-memory／projectmem**（10/1、10/3）：8/31 起「記住這條路已被否決」從概念變成工具——hippo-memory 標記錯誤後不再出現，projectmem 記下失敗嘗試並在重走時警告；皆無使用回饋
 - 🔥（估） **deja-vu／claude-history**（10/1、10/6）：免 LLM、直接搜尋硬碟上已有的 session 歷史，deja-vu 涵蓋 30 餘款 agent；不新寫記憶、只索引既有紀錄的第三種取向
+- ⏳（估） **本機記憶工具群**（10/26–10/31）：loci（501★）、memory-forge-rs（500★）、scope-recall-hermes（500★，單一 SQLite、回憶附來源、可檢視／修正／刪除）、open-second-brain（500★，夜間把重複修正轉成帶信心分數的偏好）
+  - 同群：Memsaga（Show HN 10/28，記憶與 skill 的 git 歷史）、dev.to〈work is lost in .md file〉；代表模式「可檢視、可修正、來源可追溯」，皆僅星數或單篇佐證
 
 **代表模式：**
 - **格式標準化**（ltm、OKF）：定義可攜的記憶資料格式，目標是跨工具/跨模型可讀，但兩個協定互不相容，尚未收斂到單一標準
@@ -302,6 +300,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **團隊共享知識庫**（OzBrain）：記憶範疇從單一使用者延伸到團隊，主張取代而非補充現有筆記工具
 - **零依賴檔案式**（mindmuxai/brain.md）：不依賴外部服務或資料庫，直接以檔案存決策/需求/限制
 - **記失敗路徑**（hippo-memory、projectmem）：把「這條路已被否決」寫進本機記憶，agent 重走同一條路時先警告
+- **可檢視可追溯的本機記憶**（scope-recall-hermes、open-second-brain 等）：回憶附來源、使用者能檢視與修正；成熟度未定，皆無第二方採用回饋
 
 **這條路線怎麼設計：** Karpathy 式 LLM wiki 的三層模式、外面幾種公開實作的並排對照見 [[topics/llm-wiki-pattern]]。
 
@@ -340,4 +339,4 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]（多數趨勢圍繞的官方產品）
 - [[entities/boris-cherny]]（Loops 哲學影響多條趨勢的設計取向）
 
-%% 週更撈料水位：週更已收至 2026-10-30（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。   2026-10-24 撈料：行動裝置遠端控制的 ios-mcp、iCTRL 是 agent 反向操作手機，不推進趨勢八；Claude Code 團隊官方 code review 部落格（10/16）談壓低人力審查時間，不推進趨勢五；memtrace-public、ai-data-extractor 只是記憶類再多一個工具，不寫進趨勢九。 2026-10-31 撈料（節點 10-20～10-30）：記憶三例 memory-forge-rs／scope-recall-hermes／open-second-brain（10/27～10/30）都以「記憶可檢視、可修正、來源可追溯」為賣點，屬趨勢九「同類再多一個工具」，不另立節點，下週若有第四個獨立實作再議；趨勢九演進現 13 節點已逾 12 上限，待主編裁示搬 archive 的落點。 %%
+%% 週更撈料水位：週更已收至 2026-10-31（規則：.claude/reporter-rules/community/weekly.md「community-pattern-trends 趨勢頁週更」）。2026-09-23 健檢：趨勢一曾於 07-02→08-15 44 天無新節點，08-25、09-06 又有新進展；agent-channels 在 patterns 無節點（只在概覽表列名，最早見 06-27 日報），不補進趨勢二；趨勢四 30 天檢查：patterns「模型使用策略」09-06 的 MaskShift（工具呼叫相容層）、magnitude（本地推論後端）不推進路由方向，故標淡出。 2026-10-17 淡出檢查：趨勢一對應的 Hooks 與自動化在 patterns 有 09-22（用未公開 function hooks 做輸出風格外掛）與 10-04（sloppy，PHP 債務掃描），皆是同類再多一個工具、不推進「強制取代建議」，不補節點；趨勢五、趨勢七對應類別 09-05、09-12 後無新節點。趨勢三 10-06〈Context Is Like a Fridge〉是任務分流判斷框架，不另列節點。趨勢二、趨勢九演進條列已逾 12 則，精簡屬使用者裁決。   2026-10-24 撈料：行動裝置遠端控制的 ios-mcp、iCTRL 是 agent 反向操作手機，不推進趨勢八；Claude Code 團隊官方 code review 部落格（10/16）談壓低人力審查時間，不推進趨勢五；memtrace-public、ai-data-extractor 只是記憶類再多一個工具，不寫進趨勢九。 2026-10-31 撈料（節點 10-20～10-30）：記憶三例 memory-forge-rs／scope-recall-hermes／open-second-brain（10/27～10/30）都以「記憶可檢視、可修正、來源可追溯」為賣點，屬趨勢九「同類再多一個工具」，不另立節點，下週若有第四個獨立實作再議；趨勢九演進現 13 節點已逾 12 上限，2026-11-01 主編裁示：最早 5 節點已壓成首條一行並搬 archive「趨勢九演進封存」；本機記憶工具群補為一個 ⏳（估）節點，不升等。 %%

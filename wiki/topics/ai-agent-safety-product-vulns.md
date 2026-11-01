@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_updated: "2026-11-01"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/ai-agent-safety"
@@ -12,13 +12,13 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
 inbound_links: 8
-attribution_count: 6
-attribution_last: "2026-10-30"
-top_source: "hacker-news"
+attribution_count: 13
+attribution_last: "2026-10-31"
+top_source: "google-news"
 pending_count: 15
 pending_overdue: 0
 pending_next_review: "2026-11-03"
-pending_signalled: 1
+pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -57,6 +57,22 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
 - **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；透過 Cursor 市集裝過 Claude Code 延伸套件的人立即查有無被植入的 SSH 金鑰，並照 Cursor 公告清查殘留檔案（解除安裝不夠）。
+
+### Claude Code 供應鏈攻擊：跨月對照
+
+七種載體並排：誰被打到、有數字嗎、你怎麼自查、官方回了什麼。細節不在此重寫，點右欄錨點。
+
+| 載體 | 日期 | 影響規模 | 如何自查 | 官方回應 |
+|---|---|---|---|---|
+| SEO 投毒假下載頁（冒充 Claude Code／Gemini 官方頁，投放資訊竊取程式） | 2026-05（EclecticIQ 揭露） | 未見受害數字 | 只從官方網域安裝，別點搜尋結果的下載連結。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
+| Google 廣告木馬（廣告排名高於官網，PowerShell 指令植入木馬） | 2026-05-10 | 已有 Windows 用戶中招，無總數 | 安裝指令只從官網複製；廣告位的「官方」頁先看網域。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
+| 637 個 npm 套件植入 SessionStart hook | 2026-05-19 攻擊，06-02 完整分析 | 39 分鐘內 323 套件受害，累計 637 套件（dev.to） | 檢查專案與使用者設定裡不是你加的 hook；見 [[topics/ai-agent-safety#現在還擋不住的攻擊]] | 第三方生態，無回應 |
+| 294,842 筆 secrets 外洩 | 2026-06-10 更新 | 6,943 台機器、294,842 個 secrets（Reddit 轉述，單一來源） | 裝過可疑套件的機器輪換 API 金鑰與憑證。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
+| Keyv 蠕蟲（npm，植入 Claude Code 與 VS Code hook） | 2026-08-04 | 30 分鐘內擴散至 400+ 套件名稱 | 開啟不明目錄前先看 hook；見 [[topics/ai-agent-safety-product-vulns#2026-08-04～08-05]] | 第三方事件，官方未見回應 |
+| Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵、非其所建；資安公司稱經官方帳號發出；兩說並存 |
+| 假 Anthropic 預覽誘騙員工 | 2026-10-29（CSO Online） | 手法與規模未見，僅標題層級 | 收到「新功能預覽」邀請，先走官方管道核實再點。見 [[topics/ai-agent-safety-product-vulns]] 時序 | 未見官方回應 |
+
+**讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七列瞄準人。官方有回應的只有 Cursor 事件，且雙方說法對不上。
 
 ---
 

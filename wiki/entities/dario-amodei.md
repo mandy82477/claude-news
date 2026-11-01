@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-29"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-29"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 32
 attribution_count: 45
 attribution_last: "2026-10-29"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-10-29
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-29
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-10-29，Fortune 報導 Anthropic 去年花費 275 萬美元保護 Amodei 人身安全，金額超過他 1,800 萬美元年薪（10-06 Reuters 獨家報導）四倍以上；同則報導同時探討企業高層人身安全支出議題，商業面脈絡見 [[topics/anthropic-business]]（僅標題可用）。
 
-2026-10-17，Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO（[[topics/anthropic-business]] 詳述估值與營運脈絡），同時重申他最多花 40% 工時維護公司文化，延續 06-08 同一說法（僅標題可用，Fortune，經 Google News）。
+2026-10-17，Fortune 報導 Amodei 正推動公司可能高達 2 兆美元的 IPO（[[topics/anthropic-business]] 詳述估值與營運脈絡；CFO [[entities/krishna-rao]] 是 IPO 操盤者），同時重申他最多花 40% 工時維護公司文化，延續 06-08 同一說法（僅標題可用，Fortune，經 Google News）。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 

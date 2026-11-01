@@ -44,7 +44,7 @@ disable-model-invocation: true
 | 規則 | 合格標準 |
 |------|---------|
 | 每次 ingest 執行呈現品質審查 | log 含 ✅/⚠️/📋 標記，3/3。**明文 rollup 行與表格式摘要等價**——標記散在各記者的表格列裡即算合格，不要求另寫一行總結（該規則要的是「有沒有審查」，不是「用什麼版面呈現」）|
-| 每次 ingest 更新 feature-radar.md | log 提及 feature-radar，3/3 |
+| 每次 ingest 更新 feature-radar.md | radar 有更新的日子 log 必提及；當日無新功能而未更新者，log 寫明「本日無新功能」——兩者皆算合格，3/3 |
 | 決策表首選變動時同步證據欄 | 有首選更換的 lint 須在 log 提及該症狀列 |
 | log.md 格式正確（來源日報、更新頁面、摘要欄位） | 3/3 |
 

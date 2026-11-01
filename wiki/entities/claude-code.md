@@ -5,7 +5,7 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_news_update: "2026-10-31"
 status_main: "active"
 matrix_role: "產品"
 days_since_news: 1
@@ -13,9 +13,9 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 137
-attribution_count: 803
-attribution_last: "2026-10-30"
+inbound_links: 138
+attribution_count: 822
+attribution_last: "2026-10-31"
 top_source: "github-issues"
 pending_count: 28
 pending_overdue: 0
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-31
 
 > **最新動態**（2026-10-31）
@@ -313,6 +313,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
+- ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
+
 ### 🧠 行為與品質（74 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
@@ -419,7 +421,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 📂 Session 與資料管理（20 條未修復、2 條拒修、1 條查無官方、2 條已修復）
 
+**Session 保存與記憶生命週期（彙整，細節見各原條目）**
+
+- ⛔ 30 天自動刪 session，官方拒修：見下方「Session 歷史 30 天自動刪除」（#62476）。
+- 🔴 `cleanupPeriodDays: 99999` 被忽略、490 個 session 被刪：見 [[entities/claude-code#📂 Session 與資料管理|#41458 條目]]（2026-10-29）；上一條的延長天數解法目前不保證有效。
+- 🔴 刪除 session 的功能請求：見下方 #13514 條目。
+- 🔴 `MEMORY.md` 壓縮提醒門檻可設定的請求：見行為與品質區 #91188 條目。
+- 🔴 `/compact` 改檔案化摘要：見本節 #17428 條目。
+- 🔴 Windows Desktop 靜默清除紀錄：見「現在還沒修好的」表列（#80444 等）與下方靜默資料遺失條目。
+- 讀者可做的事：靠 session 歷史回溯過去工作的人，自行定期備份 `~/.claude/projects`。
+
 - 🔴 **未修復**｜**功能請求：`/compact` 改為檔案化摘要並可選擇性還原（GitHub issue #17428，累積 45 則留言、117 個讚，2026-10-31）**：提議參考 Cursor 的 Dynamic Context Discovery，把摘要存成檔案、需要時再還原細節；官方尚未回應。
+  - 備註：候選：記憶／context 格式取向，尚非有名字有規格的 format。
 - 🔴 **未修復**｜**明確設 `cleanupPeriodDays: 99999` 仍遭忽略，490 個 session 遭靜默刪除（GitHub issue #41458，26 則留言、11 讚，2026-10-29）**：官方尚未回應。
   - 與下方「Session 歷史 30 天自動刪除」條目建議的延長解法矛盾——該設定本身可能不生效；靠 session 歷史回溯過去工作的使用者應留意是否真的被保留。
 - 🔴 **未修復（regression）**｜**桌面版跨 session 傳訊自 CCD 2.1.224+ 起靜默失效，訊息遺失、收訊 session 卡死 15–20 分鐘（GitHub issue #86012，42 則留言、9 讚，Windows／macOS，2026-10-17）**：與下方 #24798 已修復狀態矛盾；部分安裝已於 2.1.237 修復，穩定版頻道仍受影響。
@@ -444,9 +457,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 🔎 **查無官方**（標 2026-08-09｜查 #28300、跨機器｜複 2026-11-14）｜**#28300 跨機器範圍是否涵蓋於此次確認**：官方文件僅確認同機 session 訊息互通；查證 [issue #28300](https://github.com/anthropics/claude-code/issues/28300) 現況仍為 open，全程 37 則留言中無任何官方／協作者留言，故跨機器多 agent 協作（A2A 協定）範圍是否涵蓋在內仍查無官方說明。
 - 🔴 **未修復**｜**上傳過大圖片導致對話永久卡死，無法在不開新對話情況下復原（GitHub issue #13480，累積 111 則留言、90 個讚，2026-08-05）**：使用者回報上傳過大（oversized）圖片會讓對話進入永久卡死狀態，除了開啟新對話外沒有其他復原方式，導致該次對話內容遺失；官方尚未回應。
 
-- ⛔ **官方拒修**｜**Session 歷史 30 天自動刪除（Anthropic 明確拒絕修復）**（2026-05-01 確認，2026-06-30 更新，2026-07-28 補充資料使用政策說明）：Claude Code 預設在 30 天後自動刪除 session `.jsonl` 歷史檔；Anthropic 官方在 [GitHub issue #62476](https://github.com/anthropics/claude-code/issues/62476) 明確表示不會修復此行為。社群建議替代方案：用 CLAUDE.md 記錄關鍵決策，或建立 `.claude/changelog` 手動保留對話摘要。延長保留期間的臨時解法：`npx agentinit agent set claude cleanupPeriodDays 365`。**2026-07-28 Hacker News 討論補充：** 本地 30 天刪除為裝置端保留機制，與訓練資料使用政策為不同議題——依官方[資料使用政策文件](https://code.claude.com/docs/en/data-usage)，消費版（Free/Pro/Max）預設可自行選擇是否讓對話用於模型訓練；商用版（Team/Enterprise/API/第三方平台/Claude Gov）維持不用客戶程式碼訓練模型，除非客戶主動選擇加入（如 Development Partner Program）；即刪除時程與訓練授權為兩條獨立規則，不可混為一談。
+- ⛔ **官方拒修**｜**Session 歷史 30 天自動刪除（Anthropic 明確拒絕修復）**（2026-05-01 確認，07-28 更新）：Claude Code 預設在 30 天後自動刪除 session `.jsonl` 歷史檔；Anthropic 官方在 [GitHub issue #62476](https://github.com/anthropics/claude-code/issues/62476) 明確表示不會修復此行為。社群建議替代方案：用 CLAUDE.md 記錄關鍵決策，或建立 `.claude/changelog` 手動保留對話摘要。延長保留期間的臨時解法（目前不保證有效）：`npx agentinit agent set claude cleanupPeriodDays 365`。**2026-07-28 Hacker News 討論補充：** 本地 30 天刪除為裝置端保留機制，與訓練資料使用政策為不同議題——依官方[資料使用政策文件](https://code.claude.com/docs/en/data-usage)，消費版（Free/Pro/Max）預設可自行選擇是否讓對話用於模型訓練；商用版（Team/Enterprise/API/第三方平台/Claude Gov）維持不用客戶程式碼訓練模型，除非客戶主動選擇加入（如 Development Partner Program）；即刪除時程與訓練授權為兩條獨立規則，不可混為一談。
   - 2026-10-25 互動數更新：累積 28 則留言、33 個讚，官方立場未變。
-  - 2026-10-29 新回報：issue #41458 指出即使設定 `cleanupPeriodDays: 99999` 仍遭忽略、490 個 session 遭靜默刪除（見上方條目），上述延長解法是否持續有效待觀察。
+  - 2026-10-29 新回報：issue #41458 指出即使設定 `cleanupPeriodDays: 99999` 仍遭忽略、490 個 session 遭靜默刪除（見上方條目），上述延長解法是否持續有效待觀察。**此設定目前不保證有效**。
 - 🔎 **查無官方**（標 2026-08-09｜查 Claude Projects、對話消失｜複 2026-11-21）｜**Claude Projects 對話消失**（2026-04-30 指控）：重度使用者三度遭遇整天對話無故消失且搜尋不到；查無 Anthropic 針對此個案的官方回應。
   - 同類報告續見於 2026-06-30（The Register）與 07-14（Anthropic 稱該次為 HIPAA 設定調整、並未刪除對話）；媒體調查推論多為桌面版同步前靜默當機，屬第三方推論；09-20 複查另有獨立報導一致。
   - 2026-10-24 再複查：[說明中心「如何復原已刪除的對話」](https://support.claude.com/en/articles/9519177-how-can-i-recover-a-deleted-conversation)只談封存／共用專案與權限造成的「看似消失」，未提無故消失或同步前當機，04-30 個案仍無官方逐案說明。

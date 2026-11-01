@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-10-31"
 last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 75
 attribution_count: 239
 attribution_last: "2026-10-30"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-30
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
@@ -85,6 +85,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Kiro 標題那個 $200 是跟 Claude Max 比嗎？** 不是——那是 Kiro 自身 Power 方案的月費，非跨產品比較（2026-08-13 查證 kiro.dev）。
 - **Gemini CLI 還免費嗎？** 不是——2026-06-18 起免費／Pro／Ultra 帳號停止 Gemini CLI，併入 Antigravity CLI，個人開發者需轉付費 API key（2026-08-13 查證）。
 - **GitHub Copilot Pro+ $39 比 Claude 便宜嗎？** 名義月費較低，但 Opus 存取採 27 倍加價換算，重度使用時實際成本可能反超（2026-05-06 查證，此後未回訪）。
+- **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 單一來源、條件未載：10-29 The New Stack 稱 Fusion 勝 Claude Code、API 成本減半，測試條件未載；先別據此重算比價，見「對手雷達」Microsoft／GitHub 列。
+  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-11-15）｜**Fusion 成本與勝負的測試條件**：僅 The New Stack 一家，官方 changelog 只確認 10-28 GA。
 
 ## 競品定價對照
 

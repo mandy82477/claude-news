@@ -3,14 +3,14 @@ page: "topics/model-comparison"
 kind: "topic"
 status: "monitoring"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-08"
 status_main: "monitoring"
-days_since_news: 23
+days_since_news: 24
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 23
+days_since_news_subtree: 24
 inbound_links: 54
 attribution_count: 22
 attribution_last: "2026-10-08"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-24
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-08
 
 > **Haiku 5.5 發布，取代 Haiku 4.5**（2026-10-08）
@@ -158,6 +158,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Sonnet 4.5 退役**：2026-11-30 退役已官方確認（見上方 callout 與下方時序），仍用 4.5 者應儘速遷移。Foundry 的 `default` 仍指 Sonnet 4.5（2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
 - **升級行為差異與降回**：兩則皆只有標題可讀，Sonnet 5.5 頁各存一筆原文連結與日期；官方 migration guide 對 5→5.5 的記載尚不完整，本頁不推算具體情境。
+
+### 各模型現行行為限制與輸出標記
+
+選了模型之後，還有兩類「不是牌價、也不是能力」的限制會改變你拿到的結果：伺服器端引導（拒做某類任務）與輸出標記（文字帶浮水印）。本表只做模型維度對照，事實與細節都在出處頁。
+
+| 模型 | 限制或標記 | 生效／來源日期 | 出處頁 |
+|------|-----------|---------------|--------|
+| Opus 5.5 | 伺服器下發規則（`tengu_heron_brook`）引導 Claude Code 不重現他人特定遊戲；Anthropic 向 Game Developer 證實，使用者回報無害的逆向工程也被擋 | 約 2026-10-27 推送；10-31 官方證實；誤擋為使用者回報 | [[entities/opus-5-5]] |
+| Opus 5 | `heron_brook` 提示片段注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派政策且無法關閉（GitHub #80988，未修復） | Claude Code v2.1.219 起；issue 2026-10-29 仍未修 | [[entities/claude-code]]、[[topics/code-quality-decline]] |
+| Opus 5.5 等新模型 | 文字輸出已帶隱形浮水印，隨複製貼上而走 | 2026-08-11 上線 | [[topics/anthropic-government-policy]] |
+| Mythos 5、Opus 4.7、Opus 4.6、Sonnet 4.6 | 浮水印將擴及這四款（官方寄信通知 API 客戶）；The Decoder 稱其中兩款舊模型調一個取樣參數可避開（單一來源，兩款與參數未載） | 10-31 寄信；Pasquale Pillitteri（單一來源）稱 11-03 生效 | [[topics/anthropic-government-policy]] |
+| Fable 5／5.1 | 高風險 cybersecurity 請求改由 Opus 4.8 執行，被擋會收到通知；官方明認日常 coding 較常被誤攔 | 2026-06-30 公告；09-26 官方查證 | [[topics/anthropic-government-policy]] |
+
+**表格細節：**
+
+- **選型含意**：兩條 `heron_brook` 是不同模型上的不同規則，同代號不代表同一件事；做遊戲相關逆向或大量委派子 agent 的流程，先確認所選模型有沒有對應限制。
+- **浮水印的模型維度**：已帶與將加的名單，只有「將加」那一列有官方寄信；未列入的模型（如 Sonnet 5.5、Haiku 5.5、Fable 5.1）本頁不推斷是否帶標記，以政策頁為準。
 
 ## 外部評測榜單
 

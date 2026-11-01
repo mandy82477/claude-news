@@ -3,15 +3,15 @@ page: "topics/community-tech-tools"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-30"
 update_freq: "🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 56
 attribution_count: 15
 attribution_last: "2026-09-26"
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **更新頻率：** 🗓️ 週更（每週策展一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-30
 
 > **目錄新增 25 個工具、21 個久無下文的舊列加註、6 個 ✅ 降為 ⚡**（2026-10-31）
@@ -54,11 +54,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 帳單爆了，看不到錢花在哪 | ⌨️ [**tare**](https://github.com/kelviq/tare) | 要桌面常駐、不想開終端 → 🖥️ [TokenEater](https://github.com/AThevon/TokenEater)（僅 macOS）；想比較多個 coding agent 的花費 → 🖥️ [Frugal Tokens](https://github.com/dpclark4/frugal-tokens) | 🟡（判 08-27｜查 09-22，287★） |
 | 額度快用完，想在斷線前被提醒 | ⌨️ [**Claude-Code-Usage-Monitor**](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor) | 要跨平台、作者還在更新 → ⌨️ [claude-usage-widget](https://github.com/bozdemir/claude-usage-widget)（53★）；用 Windows、想自己設到幾 % 就叫你 → 🖥️ [usage-monitor-for-claude](https://github.com/jens-duttke/usage-monitor-for-claude) | ⚪（判 09-22｜查 09-22，8,713★、07-05 後未更新） |
 | context 一直被工具輸出撐爆 | 🔌 [**pxpipe**](https://github.com/teamchong/pxpipe) | 不能接受請求過代理層 → 🧩 [Graft](https://github.com/trailhq/Graft)（數字有爭議，見細節）；還不確定是誰在撐爆 → 先跑 ⌨️ [PrismoDev](https://github.com/shanirsh/prismodev) 診斷 | 🟡（判 08-05｜查 09-22，7,426★） |
-| 接手沒碰過的大 repo，agent 讀不懂 | 🧩 [**graphify**](https://github.com/Graphify-Labs/graphify) | 要讓**人**看懂而非 agent → [Understand-Anything](https://github.com/Egonex-AI/Understand-Anything)；要把架構畫成圖交付 → [archify](https://github.com/tt-a1i/archify)；改 code 要索引自動同步 → [codegraph](https://github.com/colbymchenry/codegraph) | 🟢（判 05-02 起多來源｜查 09-22，12.0 萬★） |
+| 接手沒碰過的大 repo，agent 讀不懂 | 🧩 [**graphify**](https://github.com/Graphify-Labs/graphify) | 要讓**人**看懂而非 agent → [Understand-Anything](https://github.com/Egonex-AI/Understand-Anything)；要把架構畫成圖交付 → [archify](https://github.com/tt-a1i/archify)；改 code 要索引自動同步 → [codegraph](https://github.com/colbymchenry/codegraph) | 🟢（判 05-02 起多來源｜查 11-01，14.0 萬★） |
 | 每開新 session 都要重講一遍 | ⌨️ [**brain.md**](https://github.com/mindmuxai/brain.md) | 要團隊共享而非單機 → 🖥️ [OzBrain](https://ozbrain.com)（付費服務）；已在用 Obsidian → VIR | 🟡（判 08-25｜查 09-22，552★） |
-| 多個 agent 在同一 repo 互相覆蓋 | 🖥️ [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 已經用 worktree 隔離、只差 commit 落地不打架 → 🧩 [Claude Code Merge Queue](https://github.com/funador/claude-code-merge-queue)；要跨 harness 統一協作邏輯 → [omnigent](https://github.com/omnigent-ai/omnigent) | 🟢（判 04-29 起多來源｜查 09-22，99★） |
+| 多個 agent 在同一 repo 互相覆蓋 | 🖥️ [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 已經用 worktree 隔離、只差 commit 落地不打架 → 🧩 [Claude Code Merge Queue](https://github.com/funador/claude-code-merge-queue)；要跨 harness 統一協作邏輯 → [omnigent](https://github.com/omnigent-ai/omnigent) | 🟢（判 04-29 起多來源｜查 11-01，103★、10-30 仍在推送） |
 | 一堆 agent 在跑，看不到誰卡住 | ⌨️ [**Omar**](https://github.com/omar-os/omar) | 只跑 3–5 個、不想多花一毛 token → [HUD](https://github.com/adrida/hud-mode)（走官方 event stream）；要 GUI 主控台 → 🖥️ [episko](https://github.com/respeak-io/episko)（原名 Cockpit） | 🟡（判 05-02｜查 09-22，48★） |
-| 它說做完了，但根本沒做 | 🧩 [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 要留可稽核證據給團隊審 → [Proof Loop](https://github.com/LeoStehlik/proof-loop)（建構者／驗證者分離） | 🟡（判 04-27｜查 09-22，7★） |
+| 它說做完了，但根本沒做 | 🧩 [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 要留可稽核證據給團隊審 → [Proof Loop](https://github.com/LeoStehlik/proof-loop)（建構者／驗證者分離） | 🟡（判 04-27｜查 11-01，7★、最後推送 07-20 未更新） |
 | CLAUDE.md 寫了它不聽 | —（答案是機制不是工具，見細節） | 規則多到耗 token → Writ；跨工具設定碎片化 → Caliber | —（這一列沒有工具可評，理由見細節） |
 | 不想被單一供應商綁死 | 🔌 [**Workweave Router**](https://github.com/weave-os/router) | 只想改用本地模型、不動主配置 → claudely；想繞過計量計費 → clarp（⚠️ 政策風險，見細節） | 🟡（判 06-27｜查 09-22，4,735★） |
 
@@ -105,7 +105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | Skill | 證據 | 一句話 |
 |---|---|---|
-| [**graphify**](https://github.com/Graphify-Labs/graphify) | 🟢（判 05-02 起多來源，當時 40k★＋作者宣稱 71×；查 09-22，12.0 萬★、`/graphify` skill、本機 AST 免向量 DB） | 【給 agent·索引】把 codebase（含文件、SQL schema）建成知識圖譜供跨 harness 查詢 |
+| [**graphify**](https://github.com/Graphify-Labs/graphify) | 🟢（判 05-02 起多來源，當時 40k★＋作者宣稱 71×；查 11-01，14.0 萬★、forks 13,365、`/graphify` skill、本機 AST 免向量 DB） | 【給 agent·索引】把 codebase（含文件、SQL schema）建成知識圖譜供跨 harness 查詢 |
 | [**codegraph**](https://github.com/colbymchenry/codegraph) | ⚪（判 09-02 讀者提問查證；查 09-22，71,801★、forks 4,612、仍在更新） | 【給 agent·索引】預索引 code 知識圖、**改 code 自動同步**、全本機——與 graphify 直接競品，auto-sync 主張更進一步，社群實測待累積 |
 | [**Understand-Anything**](https://github.com/Egonex-AI/Understand-Anything) | ⚪（判 09-02 讀者提問查證；查 09-22，83,707★、forks 7,057） | 【給人·探索式理解】把任意 code 變成可探索、可搜尋、可提問的互動知識圖——新人接手看懂 codebase 的那一格 |
 | [**archify**](https://github.com/tt-a1i/archify) | ⚪（判 09-02 讀者提問查證；查 09-22，69,632★、forks 4,670、20 天內漲六成） | 【給人·交付級圖表】架構／時序／資料流／生命週期圖，自包含 HTML 可匯出——把架構講給別人聽、寫進文件；🧩 `npx skills add tt-a1i/archify -g` |
@@ -361,9 +361,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**Usage4Claude 3.0.0**](https://www.reddit.com/r/ClaudeAI/comments/1tazqpg/) | 費用監測 | ⚡ | 2026-05-12 | 開源 macOS 選單列用量追蹤，3.0.0 版新增 Codex 追蹤，憑證存 Keychain（10-31 由 ✅ 降 ⚡：查無兩筆獨立使用回饋） |
 | **claudely** | 多 Agent | ⚡ | 2026-05-04 | 保留 Claude Code 生態的前提下切換至 Ollama/LM Studio/llama.cpp，無需改主配置；2026-09-22 查不到公開 repo 或產品頁 |
 | [**Omar**](https://github.com/omar-os/omar) | 多 Agent | ⚡ | 2026-05-02 | 統一管理多個 Claude Code agent 的編排工具；05-02 收錄時的說法是「TUI 儀表板管到 100 個 agent」，2026-09-22 查得網域改為 omar.rs、repo 48★，自述已改為形式化編排 |
-| [**graphify**](https://github.com/Graphify-Labs/graphify) | 記憶工具 | ✅ | 2026-05-02 | Leiden 偵測建程式碼知識圖譜，作者宣稱 71 倍 token 減少（05-02）；2026-09-22 查得 12.0 萬★、11,626 forks |
+| [**graphify**](https://github.com/Graphify-Labs/graphify) | 記憶工具 | ✅ | 2026-05-02 | Leiden 偵測建程式碼知識圖譜，作者宣稱 71 倍 token 減少（05-02）；2026-11-01 查得 14.0 萬★、13,365 forks |
 | **Caliber** | 工作流 | ⚡ | 2026-05-02 | 跨工具 AI config 統一管理（CLAUDE.md/.cursor/rules/AGENTS.md）；05-02 記到 888 stars，2026-09-22 查不到公開 repo 或產品頁 |
-| [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 多 Agent | ⚡ | 2026-04-29 | 多 Git worktree 並行管理多個 Claude Code agent；2026-09-22 查得已改名 ness、99★，自述改為「給 agent 用的 IDE」，README 仍寫可同時跑十個 Claude |
+| [**ness**](https://github.com/ness-dev/ness)（原名 Harness） | 多 Agent | ⚡ | 2026-04-29 | 多 Git worktree 並行管理多個 Claude Code agent；2026-11-01 查得已改名 ness、103★、12 forks，自述改為「給 agent 用的 IDE」，README 仍寫可同時跑十個 Claude |
 | [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 工作流 | ⚡ | 2026-04-27 | Stop Hook，強制 Claude 提供可驗證執行證明才能宣告完成 |
 | [**Claude Squad**](https://www.reddit.com/r/ClaudeAI/comments/1svmpkv/) | 多 Agent | ⚡ | 2026-04-26 | 多人多 agent 並行開發，orchestrator 分派任務並合併分支（10-31 由 ✅ 降 ⚡：查無兩筆獨立使用回饋） |
 | [**mux0**](https://mux0.com/) | IDE/終端 | ⚡ | 2026-04-26 | 開源 macOS 終端，側邊欄即時顯示多 agent 狀態（10-31 由 ✅ 降 ⚡：查無兩筆獨立使用回饋） |

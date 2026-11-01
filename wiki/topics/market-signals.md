@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -12,12 +12,12 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 1
 inbound_links: 18
-attribution_count: 111
-attribution_last: "2026-10-30"
+attribution_count: 112
+attribution_last: "2026-10-31"
 top_source: "google-news"
-pending_count: 68
-pending_overdue: 0
-pending_next_review: "2026-11-01"
+pending_count: 69
+pending_overdue: 1
+pending_next_review: "2026-11-02"
 pending_signalled: 8
 staleness_exempt: null
 signal: "健康"
@@ -1544,7 +1544,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-21｜查 SEC EDGAR、807億美元｜複 2026-11-04｜訊 2026-10-26）｜**公開版 S-1 是否正式遞交 SEC EDGAR 並確認同一淨損數字**：WSJ 獨家揭露 2026 上半年淨損達 807 億美元，CTech 等多家媒體跟進；仍屬機密招股書外流，公開版 S-1 與口徑說明均未見。
 - ❓ **待查證**（標 2026-10-21｜查 sole-source award、FedScoop｜複 2026-11-04）｜**HHS 唯一來源授予 Anthropic 聯邦合約的金額與範疇是否經官方公告**：FedScoop 報導 HHS 將做出唯一來源採購決定，先於後續更廣泛 AI 採購競標程序，合約金額、服務範疇、是否已簽署，以及是否有競爭對手提出異議均未見報導。
 - ❓ **待查證**（標 2026-10-20｜查 Nscale、450億美元｜複 2026-11-03）｜**Anthropic 與 Nscale 第二筆約 450 億美元算力合作是否正式簽署**：CNBC 披露洽談中，Reuters、Bloomberg 同日查證跟進，具體容量、條款與簽署時程均未披露，與既有 1,030 億美元合約的拆分關係亦未說明。
-- ❓ **待查證**（標 2026-10-18｜查 Public Benefit Fund、股東會表決｜複 2026-11-01）｜**Anthropic Public Benefit Fund 股東會表決結果與信託章程是否公布**：官方宣布捐出 5% 股權、估值每漲 50% 可加碼 2%，案件待股東會表決，信託受託人名單與基準市值均未見報導。
+- 🔎 **查無官方**（標 2026-10-18｜查 Public Benefit Fund、股東會表決｜複 2026-11-29）｜**Anthropic Public Benefit Fund 股東會表決結果與信託章程是否公布**：官方 10-18 宣布捐出 5% 股權、估值每漲 50% 董事會可加碼 2%，載明「subject to stockholder approval」。
+  - 2026-11-01 查證：官方未公布表決日期或結果，受託人名單與基準市值亦未見官方或媒體載明，官方稱「未來數月另發公益報告」。
 - ❓ **待查證**（標 2026-10-19｜查 50 人以上死亡、10 億美元損害｜複 2026-11-02）｜**國會 AI 安全法案的門檻數字是否進入正式提案或遭議員公開質疑**：Yahoo／Mashable 報導遊說版法案僅逾 50 人死亡或 10 億美元損害政府才可封鎖模型，Reddit 社群質疑門檻過高，法案是否進入正式立法程序與具體提案人均未見報導。
 - 🔎 **查無官方**（標 2026-10-17｜查 Telegraph、1.5兆美元｜複 2026-11-30）｜**Anthropic IPO 估值預期降至約 1.5 兆美元，無官方數字**：Telegraph 與 Reuters（引四名知情人士，稱 10-14 舊金山投資人活動上討論）均稱投資人討論約 1.5 兆、較 2 兆縮水；Reuters 稱 Anthropic 未回應置評。
   - 官方 10-26 公告僅載 S-1 已提交，媒體稱 S-1 的股數與價格區間留白，故 1.5 兆仍是投資人討論而非定價（2026-10-31 查 [anthropic.com/news](https://www.anthropic.com/news)；Reuters 內容經轉載媒體）。

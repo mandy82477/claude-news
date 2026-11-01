@@ -3,14 +3,14 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-31"
+last_updated: "2026-11-01"
 last_news_update: "2026-10-30"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 6
 attribution_count: 8
 attribution_last: "2026-10-30"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-30
 
 > **新增 Obsidian vault 常駐記憶，夜間把重複修正沉澱成帶信心分數的偏好**（2026-10-30）
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 最常見的做法是兩層：底層用官方 auto memory，讓 Claude 跨 session 自己記筆記（[官方 memory 文件](https://code.claude.com/docs/en/memory)；每個 session 載入多少、它不是強制設定，見 [[topics/community-large-codebase-workflow]] 第 3 線）；上層把已確定的決策寫回 repo——CLAUDE.md、spec、ADR——不靠模型自己記住。context 這邊的共識是少讀、按需取回，不預先塞滿。
 
-收斂了沒：方向收斂了（[[topics/community-pattern-trends]] 趨勢九），做法沒有。七月以來每週都有新的記憶工具進來，格式互不相通，沒有一條路線經過第二方採用驗證。該裝哪個先看 [[topics/community-tech-tools]]「每開新 session 都要重講一遍」那一列。
+收斂了沒：方向收斂了（[[topics/community-pattern-trends]] 趨勢九），做法沒有。七月以來每週都有新的記憶工具進來，格式互不相通，沒有一條路線經過第二方採用驗證。十月底一批本機記憶工具（scope-recall-hermes、open-second-brain 等）都主打「可檢視、可修正、來源可追溯」，仍是單篇佐證。該裝哪個先看 [[topics/community-tech-tools]]「每開新 session 都要重講一遍」那一列。
 
 ---
 

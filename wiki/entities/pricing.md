@@ -5,7 +5,7 @@ type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
 last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_news_update: "2026-10-31"
 status_main: "active"
 days_since_news: 1
 parent: null

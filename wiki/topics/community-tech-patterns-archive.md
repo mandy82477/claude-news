@@ -3,14 +3,14 @@ page: "topics/community-tech-patterns-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "🌐 社群"
-last_updated: "2026-10-10"
+last_updated: "2026-11-01"
 last_news_update: "2026-06-30"
 status_main: "resolved"
-days_since_news: 123
+days_since_news: 124
 parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
-days_since_news_subtree: 123
+days_since_news_subtree: 124
 inbound_links: 8
 attribution_count: 0
 attribution_last: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-10
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-06-30
 
 > 本頁保存 [[topics/community-tech-patterns]] 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳（舊時序頁 [[topics/community-tech-timeline]] 已併回此處）。條目一字不刪，只是搬離主頁讓主頁讀得動。
@@ -1053,3 +1053,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **效能監測**：CC-Canary — 讀取 `~/.claude/projects/` JSONL log，自動偵測效能漂移
 - **跨模型整合**：claude-anyteam — 讓 OpenAI Codex CLI 加入 Claude Code Agent Teams
 - **Web 管理介面**：Claude Code Manager — 集中管理 CLAUDE.md、hooks、skills
+
+---
+
+## 趨勢九演進封存
+
+> 搬自 [[topics/community-pattern-trends]] 趨勢九「跨 Session 記憶層／知識庫」演進最早 5 個節點（2026-11-01 精簡，原文一字不刪）。
+
+- 🔥（估） **跨環境 Agent 記憶協定（ltm）**（5/12）：Core Memory Packet JSON 協定，主張跨編輯器／跨機器／跨模型的供應商中立記憶格式，早期單一嘗試
+- 🔥（估） **OKF 物件鍵格式**（6/28）：第二個獨立標準化嘗試，聚焦跨 session agent 記憶的團隊共用格式，與 ltm 同屬「格式標準化」路線但各走各的協定
+- 🔥🔥🔥 **CodeAlmanac**（7/22，YC S26，Show HN score 54）：從「記格式」轉向「記文件」——隨對話自動更新 codebase wiki，取代手動維護的 MANUAL.md／DESIGN.md；30 天內無後續採用回饋，2026-08-29 已自 [[topics/community-tech-tools]] 移除追蹤
+- 🔥🔥🔥 **OzBrain**（8/21，HN 69，多家報導）：從「單一使用者跨 session」延伸到「team 共享」——主張 agent 與團隊共用知識庫，取代傳統筆記/任務管理工具
+- 🔥（估） **手動 Obsidian vault 取代官方自動記憶**（8/24，Reddit）：與前三者「補充記憶層」方向相反的第一個「取代」案例——使用者主張自己策展的 LLM Wiki 比官方自動記憶更可控、更可信賴

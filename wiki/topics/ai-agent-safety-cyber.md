@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_updated: "2026-11-01"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/ai-agent-safety"
@@ -12,13 +12,13 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
 inbound_links: 4
-attribution_count: 1
-attribution_last: "2026-10-30"
-top_source: "google-news"
-pending_count: 9
+attribution_count: 3
+attribution_last: "2026-10-31"
+top_source: "hacker-news"
+pending_count: 10
 pending_overdue: 0
 pending_next_review: "2026-11-04"
-pending_signalled: 0
+pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -57,6 +57,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
 - **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程。
+- **Glasswing 時程**：Project Glasswing 的啟動與擴張時間表見 [[entities/mythos#Project Glasswing]]。
 - **你的選項**：個人研究者能申請的只有 CVP Defense；被誤擋可走官方申訴表單，並在 #84352 補上可重現的情境。
 
 ## 防守方能申請什麼

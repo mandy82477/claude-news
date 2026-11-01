@@ -8416,3 +8416,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 流程備註：4b／4c 與 3b 商業追加同批派出（追加兩則為低值弱證據，不影響 4b 讀的新增行與 4c 的 wikilink 目標）；懸置掃描本輪 0 命中（Phase A 3f 曾報 S:1 A:2，Step 2 重跑為 0，差異未究）
 - 收件匣提醒：`wiki/reader-notes.md` 有 1 筆 ⏳ 逾 14 天（2026-08-08 codebase map／agent 記憶格式規約），週度回顧持續追蹤
 - 主編查證（2026-11-01，WebSearch 多家交叉，二手）：三大評等機構（S&P／Moody's／Fitch）未見正式公開評等（Bloomberg 轉述「尚未發布」）；KBRA 2026-06 BB+ 為既有事實（10-17 已記）；merca2.es 稱 Moody's Baa1／Fitch BBB+／S&P BBB 為單一西語來源、未獲英文來源交叉，不採；Anthropic 與 Blackstone 均未證實 BB 級預期。market-signals 里程碑 11-14 複查維持。
+
+## 2026-11-01 週度延伸回顧
+
+- 延伸（執行 11 項）：
+  - [模型] [[topics/model-comparison]] 新增「各模型現行行為限制與輸出標記」表 5 列（Opus 5.5 遊戲重製規則、Opus 5 `heron_brook` 委派覆寫、浮水印現況與四款待加、Fable 高風險請求改由 Opus 4.8），事實皆 wikilink 指回原頁
+  - [功能] [[entities/claude-code]]「Session 保存與記憶生命週期」彙整六條（#62476／#41458／#13514／#91188／#17428／Windows 靜默清除），`cleanupPeriodDays` 延長解法標「目前不保證有效」；轉知 H-6e641e（API 請求上限 128 MB，兩家僅標題）寫進計費區掛 ❓
+  - [商業] [[topics/anthropic-ipo]]「S-1 揭露了什麼」9 列表（來源層級逐列標，僅淨損一列為官方公告，其餘媒體轉述；表後掛 🔎 原文逐項核對未完成）；[[topics/competitor-landscape]] 硬答案加 Copilot Fusion 一題（單一來源、條件未載，❓）；[[entities/krishna-rao]] 入邊由 0 補至 3；[[topics/anthropic-business]] Mithril 條目補創辦人 Cody Tranbarger（主編 11-01 多家查證）
+  - [安全政策] [[topics/ai-agent-safety-product-vulns]]「Claude Code 供應鏈攻擊：跨月對照」7 列表；[[topics/anthropic-government-policy]]「S-1 揭露的安全風險：條文與治理」4 列表（三則原報導本站查不到，如實標）；[[topics/ai-agent-safety-cyber]] CVP 段加 Glasswing 時程指路 [[entities/mythos#Project Glasswing]]
+  - [社群] [[topics/community-pattern-trends]] 趨勢九演進 13→9 節點：最早 5 節點壓成首條、全文搬 [[topics/community-tech-patterns-archive]]「趨勢九演進封存」；補新節點「本機記憶工具群（10/26–10/31）」與代表模式「可檢視可追溯的本機記憶」；[[topics/community-memory]] 摘要同步一句；[[topics/community-tech-tools]] 決策表三列（graphify 14.0 萬★／ness 103★／groundtruth 7★、07-20 後未更新）查日期更新 11-01（主編 gh api 實查）
+  - [人物] [[entities/dario-amodei]] IPO 條目加 CFO [[entities/krishna-rao]] 一句
+- 判定不做（7 項，理由）：
+  - [模型] mythos「未發布模型追蹤」小節——多為待查證與傳聞，立節會製造假結論
+  - [功能] claude-code「桌面版變動索引」——證據只有文件字數變動，下輪再看
+  - [商業] enterprise-cost-management 的 TechCrunch 管理工具查證——需外查且低優先，併下輪 lint 5c
+  - [安全政策] `entities/project-glasswing` 專頁——事實已分住 mythos「Project Glasswing」節與 cyber CVP 段，10-08 起 Glasswing 併入 CVP，另建專頁違反一事一家，改以 wikilink 收攏
+  - [社群] community-multi-agent「異質互審／交棒」子區塊——cc-pair／squadra／dsh-baton 皆單例、無採用回饋，等第二個獨立實作再立
+  - [人物] dario-amodei「高層待遇與曝險」小節——四則皆僅標題層級；Mithril 負責人人物頁——單一事件、Endpoints 專訪原文未找到、身分未確認
+  - [讀者筆記] L35「agent 記憶的格式規約」維持 ⏳——本週記憶類新品（memory-forge-rs、open-second-brain、scope-recall-hermes、Memsaga、#17428）全為工具或提案、無有名字有規格的 format，第四輪未達第三節點；#17428 已在 claude-code 標為候選節點
+- 聚焦校準（11 月首次）：命中率 **46.0%**（11.5/25，回看 10-02~10-08 → 30 天；按故事去重 42.5%），較 10-04 的 39.3% 小幅回升，仍低於 8、9 月（76%／73.7%）。偏誤：單日事件型 12 條全誤報；重複登聚焦 3 組 7 條；版本修補單獨標重大事件 0 命中；漏報 IPO／S-1 線（連續三日在 ⭐ 未進聚焦，與上次漏 Pentagon／Meta 同型）。**主編採納改規則**：`.claude/skills/news-digest/references/selection.md` 聚焦節加「同一故事連續 3 天出現在 ⭐／📰 卻未進聚焦，第 3 天起列聚焦候選重評，仍須當天有新進展」。數字已 append [[metrics]]。
+- 本機補跑（`/weekly` 步驟 0）：
+  - 5b 跨家榜單週更：已更新 12 榜／0 榜無法取得（haiku 抓取＋主編對 Terminal-Bench Hard、Text Arena 原站複核）。arena.ai Text／WebDev 連三週 403 後恢復，WebDev 網址更正；電腦操作榜 Claude Fable 5 掉出前三；改圖第二名 MAI-Image-2.7-Preview、影片第三名 MiniMax H3；「連續抓不到的榜」表清空。
+  - 5c 逾期待查證清算：盤點 2 筆（Lane A 0／Lane B 2），清零 ✅；查實 0／確認官方未載 2（fable-5 Fable 5.5 傳聞：新聞室無公告、現行仍 5.1；market-signals 公益基金股東會：官方未公布表決日期與結果）／失效移除 0／依日報收斂 0；結案回掃：fable-5 入邊與「Fable 5.5」探針全庫 0 命中，公益基金探針 5 處皆已寫「待股東會表決」、不需上修。🎯 逾期 0（近 7 天新增 35 筆，複查日未到）；📈 趨勢 2026-10-31 0 筆 → 今日 0 筆。⚠️ 舊語法盲區 20 筆，前三頁 metrics 5／entities/claude-code 2／topics/recursive-self-improvement 2。
+  - lint 遺留事項（10-31 lint 本機承接 10 項）：已做——6a 規則矛盾（`wiki-lint-rules-health` 6c 口徑改為「radar 有更新的日子 log 必提及；當日無新功能而未更新者 log 寫明本日無新功能」）、社群 tools 第三方 repo 查證 3 列、趨勢九精簡、Glasswing 判不建頁、5b。未做並記理由——拆頁波 4 頁（走 `/page-audit-review` 波次，隊列下一頁 `entities/claude-code`）；3h 蒸餾 14 時段（本輪已有 11 項延伸寫入，同輪再動事件流分段無法歸因差異，另排）；6i 3d／3f 人工突變評估（需設計故障注入，另排）；6f 4 組 coupling hint 登記（check_rules 本輪印出 606 組未登記對，4 組無特殊優先性，與 6f 規則一併檢討）；6d 逾 60 天 57 節逐節確認（量大，另排）；`source_attribution.jsonl` 歷史歸因頁名遷移（消費端加母頁→子頁對照比改帳本安全，待設計）。
+  - 開放迴路掃描（`open_loops.py` 2026-11-01）：需收尾 158（未 commit 的實質改動 132，多為 frontmatter 計數器＋`pending_queue_history.csv`，本輪隨 push 收進；逾期 workaround 10 筆，最舊 105 天）｜已跳票 37｜存量遷移 20（舊語法盲區）；人類質疑時效燈 ✅（2 天前）。
+- 需使用者端設定：claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 7 週，2026-09-19 起）：leaderboard 組 11 個網域（huggingface.co、eqbench.com、metr.org、openrouter.ai 等）；5c／5h 另撞到 sec.gov、vals.ai、eu.36kr.com 等。
+

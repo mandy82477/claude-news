@@ -3,17 +3,17 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-29"
+last_updated: "2026-11-01"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 156
-attribution_count: 203
-attribution_last: "2026-10-29"
+days_since_news_subtree: 1
+inbound_links: 157
+attribution_count: 205
+attribution_last: "2026-10-31"
 top_source: "google-news"
 pending_count: 13
 pending_overdue: 0
@@ -77,6 +77,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **中國線的來源等級是混合**：Bloomberg 外交線報導（08-31）為跨媒體；中國官媒評論（TechRepublic 09-02）、阿里巴巴與 Moonshot 蒸餾指控為單一來源或僅標題。逐筆見下方「線的細節」。
 
 **香港列標「定案」的依據：** 這是 Anthropic 自身既定的地區可用性政策（非政府命令、不是會變動的個案認定），高盛與 OKX 兩起企業案例只是它的外部表現，來源等級欄的「Anthropic 區域政策」即指此（2026-09-06 查證，見「線的細節」）。
+
+### S-1 揭露的安全風險：條文與治理
+
+S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。S-1 原文本頁尚未逐條核對，下表來源層級逐列標明。
+
+| 面向 | S-1 寫了什麼（來源層級） | 誰能叫停／治理機制 | 與既有承諾對照 |
+|---|---|---|---|
+| 風險條文（勒索、自我意識、終結人類） | 10-26 公開版 S-1 提交（官方一手）；Ars Technica 轉述用語為「勒索」「產生自我意識」「終結人類」；CNN／WaPo 稱近 100 頁風險清單；Fortune 稱 69,800 字（僅標題） | 條文本身不構成叫停機制 | 與 SB 53「災難性風險」定義是否同用語，未見報導；見 [[topics/anthropic-commitments]] |
+| 停止權（誰能封殺風險模型） | 10-28 Anthropic 向加州州長表態，主張法院可封殺風險模型（U.S. News／Reuters，僅標題）；Computerworld 稱 Anthropic 與 OpenAI 看法分歧（本站尚未查到原報導） | 法院，而非政府單方；自提聯邦法案門檻為 50 人死亡或 10 億美元損害 | 門檻與 SB 53 一致，見本頁「Anthropic 自提 AI 安全法案」 |
+| 創辦人離開後的治理 | Reuters 談創辦人離開後的治理（本站尚未查到原報導）；08-18 另傳創辦人保留超級投票權 | 長期利益信託（LTBT）董事會，成員有選任部分董事的權力；10-22 Stubbs 加入 | 治理條文未核對；LTBT 成員見 [[entities/christopher-stubbs]] |
+| 「安全規則變弱」質疑 | Quartz 提出質疑（僅標題，本站尚未查到原報導） | 無具名機構 | 具體指哪條規則未載，無從與承諾對照 |
+
+- 🔎 **查無原文核對**（標 2026-11-01｜查 S-1、EDGAR、Long-Term Benefit Trust｜複 2026-11-15）：S-1 原文尚未逐條核對；本表四列除官方提交事實外皆為媒體轉述，未對上 EDGAR 條文，Computerworld、Reuters、Quartz 三則原報導亦待補查。
 
 ### 誰在動這幾條線
 

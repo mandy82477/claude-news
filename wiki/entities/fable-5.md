@@ -7,18 +7,18 @@ domain: "🤖 模型"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-25"
 status_main: "active"
-days_since_news: 6
+days_since_news: 7
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 7
 inbound_links: 60
 attribution_count: 41
 attribution_last: "2026-10-25"
 top_source: "google-news"
 pending_count: 4
-pending_overdue: 0
-pending_next_review: "2026-11-01"
+pending_overdue: 1
+pending_next_review: "2026-11-08"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -57,7 +57,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 ❓ **待查證**（標 2026-10-25｜查 Readies Model、Intentions Better）｜**The Information：Anthropic 準備更懂使用者意圖的模型**（2026-10-19 報導）：僅標題與日報摘要可用，無型號、時程或規格；官方公告頁未查證。
 
-❓ **待查證**（標 2026-10-18｜查 TestingCatalog、Fable 5.5）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證，發布日、規格與定價均未載；已掃日報至 2026-10-30 無後續，官方頁面未查證。
+🔎 **查無官方**（標 2026-10-18｜查 TestingCatalog、Fable 5.5｜複 2026-11-29）｜**Fable 5.5 下週發布傳聞**（2026-10-17 報導）：單一來源稱官方下週發布，尚無其他媒體佐證；2026-11-01 查證：Anthropic 新聞室最新模型公告仍為 Haiku 5.5（10-07），無 Fable 5.5 任何官方頁面，現行 Fable 仍為 5.1；二手整理指「5.5」名稱源自社群類推、非官方，傳聞至 10-31 日報無後續。
 
 三則是否指同一款模型，目前無證據可判斷。
 

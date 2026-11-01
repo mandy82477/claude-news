@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-ipo']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 174
-attribution_count: 492
-attribution_last: "2026-10-30"
+inbound_links: 175
+attribution_count: 493
+attribution_last: "2026-10-31"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-31
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 複評 2026-10-31：結論不變，仍判「拆」，三群切法同上，請主編裁決（記者不動手）。 %%
 
@@ -357,6 +357,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
 - **生命科學深度研究合作（6 組織）**（2026-10-27）：官方近況：與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 合作藥物開發，並啟動自家藥物探索；模型面見 [[entities/claude-science]]（Anthropic；HN 294 分）
 - **Mithril Medicine（收購）**（2026-10-27｜訊 2026-10-29）：收購一人神秘生技新創，由匿名 Twitter 用戶經營；Forbes 稱該新創此前以 Claude 運行藥物開發專案，金額與整合計畫未見報導（Endpoints News；R&D World；Forbes）
+  - Mithril Medicine 為一人生技公司，創辦人 Cody Tranbarger，研究罕見肌肉萎縮症藥物；收購於 2026-10-27 公告，媒體稱交易發生在 7 月，金額未揭露（The Next Web、The Neuron、OfficeChai，2026-11-01 查證）。
+  - Anthropic 稱最早 2028 年底進入臨床；「drug R&D chief」Endpoints 專訪原文未找到，負責人身分未確認（2026-11-01 查證）。
 - **Claude for Legal Artifacts**（2026-10-28）：Reuters／Law.com 報導 Anthropic 推出互動式法律工具組，僅標題可用，延續 08-07 設立 Claude for Legal 部門（[[entities/robert-mahari|Robert Mahari]] 負責）（Google News/Reuters；Law.com）
 - **Lumia Security**（2026-10-27）：資安治理平台新增整合 Claude Compliance API，延續 Surf AI（07-28）、Cyberhaven（07-23）、Orca Security（07-21）等資安夥伴生態擴張模式，具體規模與商業條款未見報導（Google News/Yahoo Finance）
 - **Claude for Financial Advisors（訊號）**（2026-10-28｜訊 2026-10-29）：PYMNTS 稱擴大整合範圍，新增對象未見報導；Citywire 稱用戶最高可領 $4,800 額度抵用，門檻與期限未附（PYMNTS；Citywire）
@@ -541,7 +543,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 | [[entities/amir-salek\|Amir Salek]] | Google TPU 專案創辦人（2013–2022，前七代） | 2026-08-21 經 Bloomberg 報導加入 compute 團隊，向 James Bradbury 匯報；實際到任日官方未公開 |
 | [[entities/tom-brown\|Tom Brown]] | Anthropic 共同創辦人 | 2026-10-10 WSJ 稱其牽線促成 SpaceX 運算容量交易；交易已獲官方證實，牽線說法僅 WSJ 一家（見下方合作細節）|
 | Eric Schmidt | 前 Google 執行長 | 2026-10-19/20 於 Anthropic IPO 前曝光持有約 1% 股權，Bloomberg 估算潛在報酬可觀（Bloomberg；Quartz；Reuters） |
-| Krishna Rao | Anthropic CFO | 2026-10-27 Fortune 稱隨 IPO 逼近，面臨上任以來最關鍵一次考驗；具體檢視項目未見報導（Fortune） |
+| [[entities/krishna-rao\|Krishna Rao]] | Anthropic CFO | 2026-10-27 Fortune 稱隨 IPO 逼近，面臨上任以來最關鍵一次考驗；具體檢視項目未見報導（Fortune） |
 
 %% 維運備忘：裁決點 1（四人物頁併入本頁）未回覆，依保守預設「不併」——四頁維持獨立，本表以 wikilink 指過去。若日後裁決「併」，四頁各留 redirect 殼，本表改為純文字並補一句「他這個動作對讀者意味什麼」。 %%
 

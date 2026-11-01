@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_news_update: "2026-10-31"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -12,8 +12,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
 inbound_links: 15
-attribution_count: 10
-attribution_last: "2026-10-30"
+attribution_count: 12
+attribution_last: "2026-10-31"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -31,7 +31,7 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-01
 **最後新聞更新：** 2026-10-31
 
 > **最新動態**（2026-10-31）
@@ -63,6 +63,24 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
+**S-1 揭露了什麼**
+
+S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm>。下表數字取自本頁與 [[topics/anthropic-business]] 既有條目，來源層級照條目原標示，本頁未直接核對原文。
+
+| 議題 | 數字或事實 | 來源層級 | 對工程師的意涵 |
+|---|---|---|---|
+| H1 淨損與可轉換工具會計損失 | 2026 上半年淨損 $807 億，已由官方公告與 SEC 文件確認；約 $720 億是可轉換工具隨估值上升的帳列損失，實際基建與運算現金約 $90 億（Quartz、Reuters 轉載） | 淨損：官方公告；拆解：媒體轉述 | 虧損近九成是帳列數字，不等於現金燒掉的速度；供應商穩定性看現金與融資，不看這個總數 |
+| 營收成長倍數 | NYT 稱營收較之前成長 14 倍；H1 營收約 $163 億，前一年同期 $11 億（Quartz、Reuters 轉載）；衡量基準未見細節 | 媒體轉述 | 需求端成長快，短期降價誘因弱；14 倍的比較基期不明，別當穩態成長率 |
+| Claude Code 企業大戶 20:1 | The New Stack 稱 Claude Code 企業大戶支出為一般用戶的 20 倍；僅標題與摘要層級 | 媒體轉述 | 收入集中在重度企業用量，定價與限額調整較可能先照顧這群人，個人訂閱方案要留意收窄 |
+| 自家 90% 程式碼 | Forbes、The Times of India 稱 Claude 現在寫下公司逾 90% 程式碼；衡量基準未見細節 | 媒體轉述 | 是公司自己的採用背書，不是第三方品質證據；不能直接推論你的專案能達到同樣比例 |
+| 一個月訓練暫停與資安事件 | Fox News、CNBC 引路透社稱 S-1 揭露一個月訓練暫停與資安事件；暫停原因與事件細節未見報導 | 媒體轉述 | 可能影響新模型節奏與信任；細節缺失前只能視為可用性風險的待查訊號，無法判斷衝擊 |
+| 算力承諾總額 | Google $1,140 億、AWS $1,100 億、Broadcom $1,610 億、SpaceX $1,200 億（HN 909 分熱議，留言質疑需求降溫時撐不撐得住） | 媒體轉述（HN 討論） | 容量有長約保障，服務不易斷供；代價是固定支出大，需求不如預期時成本壓力可能傳到定價 |
+| 69,800 字風險章節 | Fortune 稱 S-1 以 69,800 字描述 AI 對投資人的風險，社會整體風險著墨相對少；僅標題層級 | 媒體轉述 | 風險揭露詳盡，但具體條文未讀；要評估供應商風險須回到原文章節 |
+| BB 信評預期 | FT 引 Blackstone 告知 $630 億晶片融資案投資人，預期上市後獲 BB 級（TechCrunch 轉述，HN 99 分）；雙方拒評論、評等機構未公開評等 | 媒體轉述（單一來源） | 融資成本偏高，是資金壓力的訊號；與先前「2027 年前達投資級」說法矛盾，待評等公布 |
+| 政治獻金與風險 | 公司累計 $4,000 萬予 Public First Action、加州申報顯示選前捐民主黨委員會 $90 萬（見 [[topics/anthropic-government-policy]]）；S-1 是否揭露此項，本頁無記載 | 媒體轉述／加州申報（非 S-1 確認） | 與工程使用無直接關係；風險在政策立場可能影響與政府及特定客戶的關係，是否構成供應風險待查 |
+
+原文逐項核對尚未完成：🔎 **查無官方**（標 2026-11-01｜查 EDGAR、Anthropic S-1｜複 2026-11-15）｜**S-1 原文逐項核對**：上表各列來源皆為二手報導或官方公告，未直接核對 SEC 原文。
+
 **IPO 細節**
 - **2026-10-31 Yahoo Finance：IPO 將使 AI 產業「一贏一輸」**：稱此次 IPO 可能打破四個月前創下的史上最大 IPO 紀錄，並預期部分公司因 Anthropic 取得更多資本而受益、部分不然；具名贏家與輸家原文摘要未載，僅標題與導言可用（Google News/Yahoo Finance）。
 - **2026-10-31 YouTube／HN（10 分）：「大賣空」Steve Eisman 再談 Anthropic IPO 的訪談影片**：影片內容摘要未取得，僅有 HN 留言（一則嫌討論吵鬧、一則稱 Eisman 未真正理解 AI），留言為讀者意見、不構成查證（Hacker News）。
@@ -76,7 +94,7 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 - **2026-10-29 Bloomberg Law News：S-1「存在性」AI 風險揭露做法正設下業界標準**：具體標準內容、是否影響其他 AI 公司未來申報均未見報導，僅標題可用（Google News/Bloomberg Law News）。
 - **2026-10-29 Bloomberg：華爾街銀行已撤回一筆與 Anthropic 相關的德州資料中心債券發行案**：背景為 08-02 Morgan Stanley／Nexus Data Centers 德州投資案（見 [[topics/anthropic-business#算力與資金從哪來]]），撤回原因未見報導（Google News/Bloomberg.com）。
 - **2026-10-28 Aswath Damodaran（Substack）：公開版 S-1 提交後發表新一輪估值分析〈My (but not the) Anthropic Valuation〉**：延續 08-23 已記錄之「1.2 兆美元營收門檻」質疑框架，具體新結論與是否更新門檻數字未見摘要，僅標題可用（Google News/Aswath Damodaran | Substack）。
-- **2026-10-27 Fortune：CFO Krishna Rao 隨 IPO 逼近面臨上任以來最關鍵一次考驗**：報導未具體點名檢視項目（如估值簡報、投資人信心維護、財報透明度），僅標題可用；CFO 背景與既有 08-14 投資人會議紀錄見 [[topics/anthropic-business#上面提到的人是誰]]（Google News/Fortune）。
+- **2026-10-27 Fortune：CFO [[entities/krishna-rao]] 隨 IPO 逼近面臨上任以來最關鍵一次考驗**：報導未具體點名檢視項目（如估值簡報、投資人信心維護、財報透明度），僅標題可用；CFO 背景與既有 08-14 投資人會議紀錄見 [[topics/anthropic-business#上面提到的人是誰]]（Google News/Fortune）。
 - **2026-10-26 官方：公開版 S-1 正式提交 SEC**：Anthropic 官方公告今日向 SEC 提交 S-1 註冊聲明書，擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股；股數、價格區間未定（[Anthropic 官方](https://www.anthropic.com/news/s1-sec)）。
 - **同日跟進**：NYT 稱營收規模較之前成長 **14 倍**；The New Stack 稱 Claude Code 企業大戶支出為一般用戶的 **20 倍**；兩者衡量基準未見細節，僅標題與摘要層級可用（Google News/The New York Times；Google News/The New Stack）。
 - **同日 Hacker News（909 分）：熱議 S-1 揭露的雲端算力承諾總額**：承諾 Google $1,140 億、AWS $1,100 億、Broadcom $1,610 億、SpaceX $1,200 億；熱門留言質疑若 AI 需求降溫，這筆支出撐不撐得住（Hacker News）。
