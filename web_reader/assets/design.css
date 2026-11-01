@@ -3262,6 +3262,24 @@ p.ppl-muted { margin: 8px 0; padding-inline: 8px; }
 .pmx-steps { margin: 8px 0 0; padding-left: 18px; color: var(--ink-2); line-height: var(--lh-small); }
 .pmx-panel__open { display: inline-block; margin-top: 14px; font-family: var(--font-sans); font-size: var(--fs-small); font-weight: 500; color: var(--ochre-9); background: none; border: 1px solid var(--ochre-7); border-radius: 2px; padding: 5px 10px; cursor: pointer; }
 .pmx-panel__open:hover { background: var(--ochre-tint); }
+/* wiki 直達鈕：名字旁標出「這裡有 wiki 頁」，不必先開面板（2026-11-01） */
+.pmx-panel__open { display: inline-flex; align-items: center; gap: 6px; }
+.pmx-wl { display: inline-flex; align-items: center; gap: 3px; flex: none; font-family: var(--font-sans); font-size: var(--fs-meta); font-weight: 500; font-style: normal; line-height: 1; letter-spacing: 0.02em; color: var(--ochre-9); background: none; border: 1px solid var(--ochre-7); border-radius: 2px; padding: 3px 5px 3px 4px; cursor: pointer; white-space: nowrap; }
+.pmx-wl:hover { background: var(--ochre-tint); border-color: var(--ochre-9); }
+.pmx-wl:focus-visible { outline: 2px solid var(--ochre-9); outline-offset: 1px; }
+.pmx-wl__ic { width: 13px; height: 13px; flex: none; }
+.pmx-wl--demo { cursor: default; }
+.pmx-wl--demo:hover { background: none; border-color: var(--ochre-7); }
+.pmx-legend .pmx-legend__wl { gap: 6px; }
+.pmx__fh { display: flex; align-items: center; gap: 6px; padding-right: 8px; }
+.pmx__fh .pmx__fh-btn { flex: 1; min-width: 0; padding-right: 0; }
+.pmx__ph-wl { padding: 0 10px 8px; }
+/* 專屬功能欄窄，鈕放名字下方、對齊文字左緣（10px 內距＋方塊＋間距＝27px），不和名字搶寬 */
+.pmx-xrow .pmx-wl { margin: 0 0 6px 27px; }
+.pmx-spec__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 4px; }
+.pmx-spec__meta .pmx-kind { margin-top: 0; }
+.pmx-wl-mark { display: inline-block; width: 13px; height: 13px; margin-left: 6px; vertical-align: -1px; color: var(--ochre-9); }
+.pmxl__name { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .pmx-role { cursor: pointer; background: transparent; }
 .pmx-role:hover { color: var(--ochre-9); border-color: var(--ochre-7); }
 .pmx-role__more { color: var(--ink-3); }

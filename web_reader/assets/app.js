@@ -665,8 +665,17 @@
   function pmxOpenBtn(page, label) {
     if (!page) return '';
     const a = page.anchor ? `,'${jsStr(page.anchor)}'` : '';
-    return `<button type="button" class="pmx-panel__open" onclick="openWikiPage('${jsStr(page.id)}','${jsStr(page.pageType)}'${a})">${esc(label || '看 wiki 頁')} →</button>`;
+    return `<button type="button" class="pmx-panel__open" onclick="openWikiPage('${jsStr(page.id)}','${jsStr(page.pageType)}'${a})">${PMX_WL_ICON}${esc(label || '看 wiki 頁')} →</button>`;
   }
+  // 表上直接標出「這列／這欄有 wiki 頁」：原本要先點格子、打開面板捲到底才看得到連結，
+  // 30 個名字裡 20 個有 wiki 頁卻完全看不出來（2026-11-01 使用者：wiki 連結不明顯）。
+  const PMX_WL_ICON = '<svg class="pmx-wl__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h14v15H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 0 2 2h14"/><path d="M9 8h7"/></svg>';
+  function pmxWikiLink(page, name) {
+    if (!page) return '';
+    const label = `看「${esc(name)}」的 wiki 頁`;
+    return `<button type="button" class="pmx-wl" data-pmx-open="${esc(page.id)}" data-pmx-type="${esc(page.pageType)}"${page.anchor ? ` data-pmx-anchor="${esc(page.anchor)}"` : ''} aria-label="${label}" title="${label}">${PMX_WL_ICON}<span>wiki</span></button>`;
+  }
+  const pmxWikiMark = page => (page ? `<svg class="pmx-wl-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="有 wiki 頁"><path d="M4 19V5a2 2 0 0 1 2-2h14v15H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 0 2 2h14"/><path d="M9 8h7"/></svg>` : '');
 
   function renderProductMatrix(container) {
     const M = pmxData();
@@ -677,7 +686,7 @@
     let h = `<div class="pmx-lead">欄與列對應官方導覽列 Products／Capabilities／Extensions 分組；欄序依「誰起手」是本站解讀。每一格都連到官方來源，查證日 <span class="pmx-num">${esc(M.checked)}</span>。</div>`;
     h += `<div class="pmx-toolbar">
   <label class="pmx-ctl"${st.col ? '' : ' aria-disabled="true"'}><input type="checkbox" data-pmx-only${st.only ? ' checked' : ''}${st.col ? '' : ' disabled'}><span>只看這個產品有官方明載的列</span><small>${st.col ? '目前：' + esc(pmxProd(st.col).short) : '先點一個產品欄頭'}</small></label>
-  <div class="pmx-legend" aria-label="圖例">${['available', 'beta', 'preview', 'no', 'vague', 'unknown'].map(s => `<span>${pmxMk(s)}${esc(PMX_STATUS[s])}</span>`).join('')}</div>
+  <div class="pmx-legend" aria-label="圖例">${['available', 'beta', 'preview', 'no', 'vague', 'unknown'].map(s => `<span>${pmxMk(s)}${esc(PMX_STATUS[s])}</span>`).join('')}<span class="pmx-legend__wl"><i class="pmx-wl pmx-wl--demo" aria-hidden="true">${PMX_WL_ICON}<span>wiki</span></i>名字旁有它＝有 wiki 頁，點它直接開</span></div>
 </div>`;
     // 「怎麼讀這張表」原本住在右側 300px 的 aside，整張表被擠窄、窄螢幕還會被切掉
     // （2026-10-23 使用者：位置有點爛）。改成圖例下方可收合的一段，表格拿回全寬。
@@ -695,7 +704,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
       const base = p.name.replace(/（.*$/, ''), sub = (p.name.match(/（(.+)）$/) || [])[1];
       t += `<th class="pmx__ph${st.col === p.id ? ' is-on' : ''}" scope="col" data-pmx-colh="${esc(p.id)}"><button type="button" class="pmx__ph-btn" data-pmx-prod="${esc(p.id)}" aria-pressed="${st.col === p.id}">
   <span class="pmx__pname">${esc(base)}</span>${sub ? `<span class="pmx__psub">${esc(sub)}</span>` : ''}${p.id === 'claude-app' ? '<span class="pmx__psub">含 Cowork 任務</span>' : ''}
-  <span class="pmx__pattr"><i>入口</i>${esc(p.entry)}</span></button></th>`;
+  <span class="pmx__pattr"><i>入口</i>${esc(p.entry)}</span></button>${p.page ? `<div class="pmx__ph-wl">${pmxWikiLink(p.page, p.short)}</div>` : ''}</th>`;
     });
     t += '</tr></thead>';
     PMX_GROUPS.forEach(g => {
@@ -706,7 +715,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
       t += `<tbody><tr class="pmx__grp${st.grp === g.k ? ' is-on' : ''}${vis.length ? '' : ' is-hidden'}" data-pmx-grprow="${esc(g.k)}"><th colspan="${P.length + 1}" scope="rowgroup"><button type="button" class="pmx__grp-btn" data-pmx-grp="${esc(g.k)}" aria-pressed="${st.grp === g.k}">${g.en ? `<span class="pmx__grp-en">${g.en}</span>` : ''}${g.zh ? `<span class="pmx__grp-zh">${g.zh}</span>` : ''}<span class="pmx__grp-note">${esc(g.note)}</span></button></th></tr>`;
       rows.forEach(f => {
         const isRow = st.grp === g.k || (st.sel && st.sel.t === 'feat' && st.sel.f === f.id);
-        t += `<tr class="pmx__row${hidden(f) ? ' is-hidden' : ''}${isRow ? ' is-row' : ''}" data-pmx-row="${esc(f.id)}"><th scope="row"><button type="button" class="pmx__fh-btn" data-pmx-feat="${esc(f.id)}"><span class="pmx__fname">${esc(f.name)}</span>${f.sub ? `<span class="pmx__fsub">${esc(f.sub)}</span>` : ''}</button></th>`;
+        t += `<tr class="pmx__row${hidden(f) ? ' is-hidden' : ''}${isRow ? ' is-row' : ''}" data-pmx-row="${esc(f.id)}"><th scope="row"><div class="pmx__fh"><button type="button" class="pmx__fh-btn" data-pmx-feat="${esc(f.id)}"><span class="pmx__fname">${esc(f.name)}</span>${f.sub ? `<span class="pmx__fsub">${esc(f.sub)}</span>` : ''}</button>${pmxWikiLink(f.page, f.name)}</div></th>`;
         P.forEach(p => {
           const c = f.cells[p.id];
           const isSel = st.sel && st.sel.t === 'cell' && st.sel.f === f.id && st.sel.p === p.id;
@@ -723,7 +732,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
       const items = X.filter(x => x.product === p.id);
       t += `<td class="${st.col === p.id ? 'is-col' : ''}">${items.length ? items.map(x => {
         const isSel = st.sel && st.sel.t === 'cell' && st.sel.f === x.id;
-        return `<button type="button" class="pmx-xitem${isSel ? ' is-sel' : ''}" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}" data-pmx-x="${esc(x.id)}">${pmxMk(x.status)}<span>${esc(x.name)}${x.sub ? `<small>${esc(x.sub)}</small>` : ''}<small>${esc(pmxText(x))}</small></span></button>`;
+        return `<div class="pmx-xrow"><button type="button" class="pmx-xitem${isSel ? ' is-sel' : ''}" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}" data-pmx-x="${esc(x.id)}">${pmxMk(x.status)}<span>${esc(x.name)}${x.sub ? `<small>${esc(x.sub)}</small>` : ''}<small>${esc(pmxText(x))}</small></span></button>${pmxWikiLink(x.page, x.name)}</div>`;
       }).join('') : '<span class="pmx-none" aria-label="無">·</span>'}</td>`;
     });
     t += '</tr></tbody></table>';
@@ -732,7 +741,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
     h += '<div class="pmx-sec-h"><h2>Specialized</h2><span>專用版：拿上面的產品與功能重新包裝給特定對象</span></div>';
     h += '<table class="pmx-spec"><colgroup><col class="pmx-spec__c-name"><col><col><col><col></colgroup><thead><tr><th>名稱</th><th>建在哪個產品上</th><th>模型</th><th>用到哪些功能</th><th>誰能用</th></tr></thead><tbody>';
     S.forEach(s => {
-      h += `<tr class="${st.sel && st.sel.t === 'spec' && st.sel.s === s.id ? 'is-sel' : ''}" data-pmx-specrow="${esc(s.id)}"><th scope="row"><button type="button" class="pmx-spec__name" data-pmx-spec="${esc(s.id)}"><b>${esc(s.name)}</b></button><span class="pmx-kind${s.isProduct ? '' : ' pmx-kind--not'}">${s.isProduct ? '官方 Specialized' : '官方不列為產品'}</span></th>
+      h += `<tr class="${st.sel && st.sel.t === 'spec' && st.sel.s === s.id ? 'is-sel' : ''}" data-pmx-specrow="${esc(s.id)}"><th scope="row"><button type="button" class="pmx-spec__name" data-pmx-spec="${esc(s.id)}"><b>${esc(s.name)}</b></button><div class="pmx-spec__meta"><span class="pmx-kind${s.isProduct ? '' : ' pmx-kind--not'}">${s.isProduct ? '官方 Specialized' : '官方不列為產品'}</span>${pmxWikiLink(s.page, s.name)}</div></th>
 <td>${esc(s.builtOn)}</td><td>${pmxNa(s.model)}</td><td><div class="pmx-uses">${s.uses.map(u => `<button type="button" class="pmx-use" data-pmx-use="${esc(u.kind)}:${esc(u.id)}">${esc(u.label)}</button>`).join('')}</div></td><td>${pmxNa(s.plans)}</td></tr>`;
     });
     h += '</tbody></table>';
@@ -741,18 +750,18 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
     P.forEach(p => {
       const has = F.filter(f => stated(f, p.id) || f.cells[p.id].status === 'vague');
       const unk = F.filter(f => f.cells[p.id].status === 'unknown');
-      h += `<section class="pmxl__sec" data-pmxl-prod="${esc(p.id)}"><div class="pmxl__name">${esc(p.name)}</div><div class="pmxl__attr"><i>入口</i>${esc(p.entry)}</div>`;
+      h += `<section class="pmxl__sec" data-pmxl-prod="${esc(p.id)}"><div class="pmxl__name">${esc(p.name)}${p.page ? `<span class="pmxl__wl">${pmxWikiLink(p.page, p.short)}</span>` : ''}</div><div class="pmxl__attr"><i>入口</i>${esc(p.entry)}</div>`;
       PMX_GROUPS.forEach(g => {
         const rows = has.filter(f => f.group === g.k);
         if (!rows.length) return;
-        h += `<div class="pmxl__grp">${esc(g.en || g.zh)}</div>` + rows.map(f => { const c = f.cells[p.id]; return `<button type="button" class="pmxl__row" data-pmx-f="${esc(f.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(c.status)}<span>${esc(f.name)}</span><span>${esc(pmxText(c))}</span></button>`; }).join('');
+        h += `<div class="pmxl__grp">${esc(g.en || g.zh)}</div>` + rows.map(f => { const c = f.cells[p.id]; return `<button type="button" class="pmxl__row" data-pmx-f="${esc(f.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(c.status)}<span>${esc(f.name)}${pmxWikiMark(f.page)}</span><span>${esc(pmxText(c))}</span></button>`; }).join('');
       });
       const xs = X.filter(x => x.product === p.id);
-      if (xs.length) h += '<div class="pmxl__grp">只在這個產品裡</div>' + xs.map(x => `<button type="button" class="pmxl__row" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(x.status)}<span>${esc(x.name)}</span><span>${esc(pmxText(x))}</span></button>`).join('');
+      if (xs.length) h += '<div class="pmxl__grp">只在這個產品裡</div>' + xs.map(x => `<button type="button" class="pmxl__row" data-pmx-f="${esc(x.id)}" data-pmx-p="${esc(p.id)}">${pmxMk(x.status)}<span>${esc(x.name)}${pmxWikiMark(x.page)}</span><span>${esc(pmxText(x))}</span></button>`).join('');
       if (unk.length) h += `<div class="pmxl__unknown">${pmxMk('unknown')} 官方未公開 ${unk.length} 項：${unk.map(f => esc(f.name)).join('、')}</div>`;
       h += '</section>';
     });
-    h += '<section class="pmxl__sec"><div class="pmxl__name">專用版</div>' + S.map(s => `<button type="button" class="pmxl__row pmxl__row--spec" data-pmx-spec="${esc(s.id)}"><span></span><span><b>${esc(s.name)}</b><small>${esc(s.builtOn)}</small></span><span>${s.isProduct ? 'Specialized' : '不列為產品'}</span></button>`).join('') + '</section>';
+    h += '<section class="pmxl__sec"><div class="pmxl__name">專用版</div>' + S.map(s => `<button type="button" class="pmxl__row pmxl__row--spec" data-pmx-spec="${esc(s.id)}"><span></span><span><b>${esc(s.name)}${pmxWikiMark(s.page)}</b><small>${esc(s.builtOn)}</small></span><span>${s.isProduct ? 'Specialized' : '不列為產品'}</span></button>`).join('') + '</section>';
     h += '</div>';
     // ── 追蹤頁 ──
     h += `<div class="pmx-sec-h" id="pmx-tracking"><h2>Tracking</h2><span>追蹤頁：矩陣裝不下的工具/功能頁——跨產品議題、實驗旗標、未公開工具</span></div>`;
@@ -779,7 +788,7 @@ ${pmxOpenBtn({ id: 'anthropic-product-matrix', pageType: 'topic' }, '看對照�
       });
       container.addEventListener('keydown', e => {
         const r = container.classList.contains('pmx-host') && e.target.closest('[data-pmx-open]');
-        if (r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openWikiPage(r.dataset.pmxOpen, r.dataset.pmxType); }
+        if (r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openWikiPage(r.dataset.pmxOpen, r.dataset.pmxType, r.dataset.pmxAnchor); }
       });
       document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && pmx.sel && container.classList.contains('pmx-host')) { pmx.sel = null; pmx.grp = null; renderProductMatrix(container); }
@@ -862,7 +871,7 @@ ${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
     const t = e.target, st = pmx, again = () => renderProductMatrix(host);
     if (t.closest('[data-pmx-close]')) { st.sel = null; st.grp = null; return again(); }
     const open = t.closest('[data-pmx-open]');
-    if (open) return openWikiPage(open.dataset.pmxOpen, open.dataset.pmxType);
+    if (open) return openWikiPage(open.dataset.pmxOpen, open.dataset.pmxType, open.dataset.pmxAnchor);
     const cell = t.closest('[data-pmx-f][data-pmx-p]');
     if (cell) {
       const same = st.sel && st.sel.t === 'cell' && st.sel.f === cell.dataset.pmxF && st.sel.p === cell.dataset.pmxP;
