@@ -430,36 +430,6 @@
   "preview": "Claude Code：v2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方准入",
-      "pageType": "topic"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic IPO 追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "claude-code-experimental",
       "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"
@@ -495,11 +465,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
@@ -512,11 +477,6 @@
     {
       "id": "competitor-landscape",
       "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     },
     {

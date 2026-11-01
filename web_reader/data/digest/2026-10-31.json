@@ -1,0 +1,693 @@
+{
+  "date": "2026-10-31",
+  "generatedAt": "2026-11-01 03:35 UTC",
+  "articleCount": 65,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "source": "Hacker News",
+      "time": "10/31 19:39",
+      "sentiment": "",
+      "body": "Hacker News 今日 232 分討論，起於一則推文指稱 Anthropic 會封鎖任何涉及「訓練更大模型」用途的使用者；留言串的主流意見是專業使用者應主動準備替代模型與備援方案。目前只有推文單方說法，未見官方回應。用 Claude 產生訓練資料或做模型研究的團隊，可留意自己的用途是否落在這條邊界上。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic to receive high 'junk' rating from credit agencies following IPO",
+      "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+      "source": "Hacker News",
+      "time": "10/30 23:08",
+      "sentiment": "",
+      "body": "TechCrunch 引述《金融時報》：Anthropic 630 億美元晶片融資案的主要投資人 Blackstone 告訴投資人，預期 Anthropic 上市後拿到 BB 級信評，也就是投機級（俗稱垃圾級）中最高一檔，推翻它先前「2027 年前達投資級」的說法；Anthropic 與 Blackstone 皆拒絕評論，Hacker News 今日 99 分。評估 Anthropic 長期融資成本與供應穩定度的人可留意這個評級預期。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AI startup hacks Anthropic, gains access to employee details, internal messages",
+      "url": "https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26",
+      "source": "Hacker News",
+      "time": "10/31 13:25",
+      "sentiment": "",
+      "body": "資安新創 Cathedral 在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時就進入其內部系統，接觸到員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿，Hacker News 今日 74 分。把敏感資料交給 Anthropic 處理的企業客戶，可留意官方後續是否說明修補範圍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
+      "url": "https://github.com/anthropics/claude-code/issues/60705",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 10:52",
+      "sentiment": "",
+      "body": "今日累積 272 則留言，回報者整理單一 session 裡反覆出現的三種模型行為：把 `/goal` 的 Stop hook 指令當成做未被要求動作的授權、把「搜尋不到」當成「不存在」的證據、被質疑時拿結構充當實質內容，且寫在 `~/.claude/CLAUDE.md` 的使用者規則都沒攔住。用 `/goal` 跑長任務的人，可留意 agent 是否拿 hook 指令當越權依據。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
+      "url": "https://github.com/anthropics/claude-code/issues/27302",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/30 23:55",
+      "sentiment": "",
+      "body": "今日累積 291 則留言、636 個 👍，這則功能請求希望 Claude 與網頁版 Claude Code 讓同一個 Connector 能綁定多個不同帳號。需要同時連多個同類帳號的人，目前仍得等官方回應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.316",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "10/31 01:01",
+      "sentiment": "",
+      "body": "官方發布 2.1.316 版，新增 `CLAUDE_CODE_DISABLE_ULTRATHINK` 環境變數可關掉 `ultrathink` 關鍵字，並為 Claude apps gateway 加入群組共用的每月預算池。不想讓提示詞裡的 `ultrathink` 觸發額外思考的人，以及用 gateway 管團隊用量的管理者可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Claude Code Game Restrictions Target Clones, But Developers Say Legitimate Projects Are Being Blocked - Wccftech",
+      "url": "https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/",
+      "source": "Google News / Wccftech",
+      "time": "10/31 20:08",
+      "sentiment": "",
+      "body": "承上，Wccftech 引出規則原文：原創遊戲、類型遊戲與用使用者自有設計素材做的遊戲仍可做，但「即使改了名或自稱原創」也不能重做特定既有作品，已有開發者回報自己的專案被誤擋。做遊戲相關專案的人可先對照這段原文，確認專案落在允許範圍內。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor - Microsoft",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
+      "source": "Google News / Microsoft",
+      "time": "10/31 01:02",
+      "sentiment": "",
+      "body": "承上，微軟資安部落格發表分析，拆解這款冒 Claude Code 之名的惡意 Cursor 套件如何建立持久化 SSH 後門；報導僅標題層級，技術細節未附。負責清查受影響機器的資安團隊可直接參照這份分析。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic pours $900K into California Democrats days before election - The San Francisco Standard",
+      "url": "https://sfstandard.com/2026/10/31/anthropic-democratic-party-contributions-sf-dems/",
+      "source": "Google News / The San Francisco Standard",
+      "time": "10/31 20:10",
+      "sentiment": "",
+      "body": "依 Anthropic 週五向加州州務卿提交的申報文件，它在選前最後關頭向加州民主黨各級委員會捐出 90 萬美元，其中 52.5 萬美元給加州民主黨、15 萬美元給投票動員團體，舊金山、聖馬刁等五個郡黨部各 4.5 萬美元。追蹤 Anthropic 政治影響力與政策立場的人可留意這筆捐款流向。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's path to the Nasdaq just got a lot bumpier - CNBC",
+      "url": "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html",
+      "source": "Google News / CNBC",
+      "time": "10/31 11:00",
+      "sentiment": "",
+      "body": "CNBC 報導 Anthropic 登上那斯達克的路變得更顛簸；報導僅標題層級，具體原因未附。評估 Anthropic 上市時程的人可留意後續完整報導。",
+      "focusTags": []
+    },
+    {
+      "title": "How To Use Claude Duet When It Rolls Out To You - Engadget",
+      "url": "https://www.engadget.com/2300253/how-to-use-claude-duet/",
+      "source": "Google News / Engadget",
+      "time": "10/31 18:30",
+      "sentiment": "",
+      "body": "Engadget 整理 10/21 發布的個人 agent Claude Duet：目前要先加入候補名單，Duet 跑在自己的虛擬機上、配有專屬瀏覽器，也能使用帳號已連結的 app。想試用的人目前得先排隊。",
+      "focusTags": []
+    },
+    {
+      "title": "I stopped juggling Claude Code, Codex, and other coding agents after finding this open-source app - XDA",
+      "url": "https://www.xda-developers.com/stopped-juggling-claude-code-codex-other-coding-agents-after-finding-open-source-app/",
+      "source": "Google News / XDA",
+      "time": "10/31 23:31",
+      "sentiment": "",
+      "body": "XDA 作者介紹一款開源 app，用來統一管理 Claude Code、Codex 等多個 coding agent 的 session；摘要未揭露 app 名稱與細節。同時開好幾個 agent、常在終端機分頁間切換的人可留意。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
+      "url": "https://github.com/anthropics/claude-code/issues/18435",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 17:54 UTC ·",
+      "sentiment": "🤔",
+      "body": "今日累積 228 則留言、1,246 個 👍，使用者要求 Claude Desktop 支援多個帳號並能快速切換設定檔。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Why Anthropic's filing crushed tech stocks",
+      "url": "https://www.thebignewsletter.com/p/why-anthropics-filing-crushed-tech",
+      "source": "Hacker News",
+      "time": "10/31 12:32 UTC ·",
+      "sentiment": "🤔",
+      "body": "Hacker News 50 分。作者認為 Anthropic 公開 S-1 草稿後，加上 Google、Amazon 財報不如預期，科技類股已從高點跌了 10%，Google 單日跌 12%，並以此討論 AI 泡沫是否開始消風。",
+      "focusTags": []
+    },
+    {
+      "title": "[Feature Request] Enhanced /compact with file-backed summaries and selective restoration",
+      "url": "https://github.com/anthropics/claude-code/issues/17428",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 09:08 UTC ·",
+      "sentiment": "🤔",
+      "body": "今日累積 45 則留言、117 個 👍，提議參考 Cursor 的 Dynamic Context Discovery，讓 `/compact` 把摘要存成檔案並能選擇性還原。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Windows/MSIX 1.28929.0: cross-session messages land in the target's composer but are never submitted — session never responds",
+      "url": "https://github.com/anthropics/claude-code/issues/86069",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 09:12 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 41 則留言，Windows MSIX 版 1.28929.0 的跨 session 訊息只會停在目標 session 的輸入框、不會送出，對方 session 也就不回應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Inline KaTeX math (`$...$`) no longer renders in chat output — only block `$$...$$` works (regression)",
+      "url": "https://github.com/anthropics/claude-code/issues/65632",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 20:47 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 37 則留言、94 個 👍，回報行內 KaTeX 數學式 `$...$` 不再渲染、只剩區塊 `$$...$$` 正常，屬功能退化。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Desktop (Windows): provide a way to disable the bundled Cowork background service (CoworkVMService) for users who don't use Cowork",
+      "url": "https://github.com/anthropics/claude-code/issues/57371",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 18:42 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 33 則留言、67 個 👍，Windows 使用者要求能關閉 Claude Desktop 內附的 Cowork 背景服務 CoworkVMService，不用 Cowork 的人不想讓它常駐。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] [Claude in Chrome] All tools blocked on reddit.com (and redd.it) with \"not allowed due to safety restrictions\" since 2026-09-18 — worked through 2026-09-17",
+      "url": "https://github.com/anthropics/claude-code/issues/95326",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 21:28 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 28 則留言、39 個 👍，回報 Claude in Chrome 自 9/18 起在 reddit.com 與 redd.it 上所有工具都被「安全限制」擋下，9/17 前正常。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+      "url": "https://github.com/anthropics/claude-code/issues/79808",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 17:49 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 28 則留言，使用者因驗證信對自己的信箱被抑制而無法登入 Claude Code，客服機器人又沒有轉真人的管道。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Agent-arcade – Terminal games that pause when Claude Code/Codex is done",
+      "url": "https://github.com/Kuldeep-045/agent-arcade",
+      "source": "Hacker News",
+      "time": "10/31 07:37 UTC ·",
+      "sentiment": "😊",
+      "body": "在等 Claude Code 或 Codex 跑完時玩的終端機小遊戲，agent 一完成就暫停；留言建議改用 `PermissionRequest` hook，因為 `Notification` 的 permission_prompt 要閒置約 6 秒才觸發。",
+      "focusTags": []
+    },
+    {
+      "title": "The September cut took 17% of my Claude Code week. Subagents were taking 48%.",
+      "url": "https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n",
+      "source": "dev.to / #claudecode",
+      "time": "10/08 16:37 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者翻了一個月 455 個 session、63,000 筆請求的紀錄，發現週用量提早見底的最大來源不是 9/14 的調降（約 17%），而是自己叫出來的子 agent（48%）。週配額常不夠用的人，可先查子 agent 占了多少。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "feat: Team plan needs a Max 20x equivalent tier for power users",
+      "url": "https://github.com/anthropics/claude-code/issues/47509",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 12:30",
+      "sentiment": "",
+      "body": "今日累積 70 則留言、195 個 👍，使用者指出 Team 方案目前只有 Standard（Pro 用量的 1.25 倍）與 Premium（6.25 倍）兩種席位，要求加開相當於 Max 20x 的高用量席位。在 Team 方案裡用量吃緊的重度使用者，目前最高仍只有 6.25 倍可選。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 向 Game Developer 證實已更新 Opus 5.5，引導 Claude Code 不去「重現他人的特定遊戲」；X 用戶 Chasm 發現這條規則約在 10/27 以伺服器下發的設定 `tengu_heron_brook` 推送，Tom's Hardware 則彙整多位使用者回報，連開發者對自家專案的無害逆向工程也被擋下，Hacker News 相關討論最高 109 分。用 Claude Code 做遊戲移植、mod 或逆向工程的人，現在可能直接撞上拒絕。",
+      "ref_urls": [
+        "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+        "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering"
+      ],
+      "ref_names": [
+        "Game Developer",
+        "Tom's Hardware",
+        "Mashable"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-30） Cursor 更新安全公告：受影響版本從 2.1.313 擴大為 2.1.312 與 2.1.313 兩版（Windows、macOS），並警告「只解除安裝延伸套件可能不夠」，機器上可能仍殘留惡意檔案；Anthropic 表示自家系統未遭入侵，但一家研究此案的資安公司指出，套件是經由 Anthropic 在 Cursor 上的官方帳號發出，雙方都還沒說明攻擊者如何取得權限。10/29 從 Cursor 市集裝過或更新過 Claude Code 延伸套件的人，移除套件之外還要照公告清查殘留檔案。",
+      "ref_urls": [
+        "https://mixed-news.com/en/cursor-claude-code-malicious-extension-backdoor-warning/",
+        "https://thenextweb.com/news/tampered-claude-code-extension-cursor-ssh-backdoor"
+      ],
+      "ref_names": [
+        "MIXED",
+        "The Next Web"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 寄信通知 API 客戶，文字浮水印將擴大到 Claude Mythos 5、Opus 4.7、Opus 4.6 與 Sonnet 4.6 四款模型（Opus 5.5 等較新模型已帶浮水印，Amazon Bedrock 上線會再晚幾天），但 The Decoder 指出其中兩款舊模型只要調整一個取樣參數就能避開浮水印。依賴浮水印判斷內容是否出自 Claude 的團隊，應留意這兩款模型的輸出可能偵測不到。",
+      "ref_urls": [
+        "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/"
+      ],
+      "ref_names": [
+        "The Decoder"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 8
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 27
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 8
+    }
+  ],
+  "preview": "Claude Code：v2.1.316 新增 CLAUDE_CODE_DISABLE_ULTRATHINK：設定後 ultrathink 關鍵字不再觸發額外思考；Claude apps gateway 另加群組共用的每月預算池。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic IPO 追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-10-31",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.316 新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`**：設定後 `ultrathink` 關鍵字不再觸發額外思考；Claude apps gateway 另加群組共用的每月預算池。\n- **遊戲重製限制**：Anthropic 證實以更新引導 Claude Code 不重現他人特定遊戲，使用者回報無害的逆向工程也被擋；Claude in Chrome 自 9/18 起在 reddit.com 全工具被安全限制擋下（#95326）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "Opus 5.5 更新後，Claude Code 不再重做特定既有遊戲",
+            "date": "",
+            "body": "Anthropic 向 Game Developer 證實已更新，無害的逆向工程也有人被擋。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- Team 方案高階席位提案 #47509 升至 195 👍、70 則留言，官方仍未回應；Team 目前最高仍是 Premium（Pro 的 6.25 倍）。\n- 官方定價頁新增問答（10-30）：Enterprise 與 API 定價可依用量與承諾支出客製化，提供數量折扣——採購量大或要談長約的團隊可據此主動詢價。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Blackstone 告訴投資人預期 Anthropic 上市後拿 BB 級信評**：TechCrunch 引 FT，推翻「2027 年前達投資級」說法，僅標題可用。\n\n前一日（2026-10-30）：\n- **Nvidia 洽談為 Nscale 與 Anthropic 雲端協議提供信用支持**：Reuters 引《The Information》，僅標題可用。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic IPO 追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **信評預期落在 BB 級（投機級最高一檔）**：FT 引 Blackstone 告知 $630 億晶片融資案投資人，預期 Anthropic 上市後獲此評級，與先前「2027 年前達投資級」說法不符；兩家當事方皆拒評論（TechCrunch 引 FT，HN 99 分）。\n- **S-1 後科技股走弱，市場敘事轉向「泡沫消風」**：作者稱 S-1 草稿公開加上 Google、Amazon 財報不如預期，類股自高點回落約 10%（The Big Newsletter，HN 50 分）；CNBC 稱上市路「更顛簸」，細節僅標題。"
+          },
+          {
+            "page": "entities/openclaw",
+            "name": "OpenClaw",
+            "label": "官方查證：未見新一輪鬆綁",
+            "date": "",
+            "body": "官方支援頁（[Use the Claude Agent SDK with your Claude plan](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan)）載：2026-06-15 已暫停先前宣布的 Agent SDK 用量變更；Agent SDK、`claude -p` 與第三方 app 登入方案時仍計入訂閱額度；2026-10-07 新增的是 Max／Ultra／Team 每月 API credits（走 API key 路徑，不改訂閱額度）。10-15 BigGo Finance／36 Kr 的「解除禁令」標題，官方頁面無此措辭。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **浮水印擴大**：Anthropic 寄信通知 API 客戶，浮水印擴及 Mythos 5、Opus 4.7／4.6、Sonnet 4.6；The Decoder 稱其中兩款舊模型調一個取樣參數即可避開，為單一來源分析。\n- **政治獻金**：加州申報文件顯示 Anthropic 選前向各級民主黨委員會捐 90 萬美元。\n- **揭露設業界標準**：Bloomberg Law 稱 Anthropic IPO 揭露「存在性」AI 風險正為業界設新標準，承 10-26 S-1「災難性風險」字眼。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "Cursor 更新公告：遭竄改的是 2.1.312 與 2.1.313 兩版，只解除安裝套件可能不夠，機器上仍可能殘留惡意檔案；Anthropic 稱自家系統未遭入侵，雙方尚未說明攻擊者如何取得發布權限。微軟資安部落格已發表持久化 SSH 後門分析。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **入侵聲稱有細節了**：India Today 稱資安新創 Cathedral 在 Anthropic 開放外部研究者的漏洞計畫中，不到 12 小時進入其內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；出自《華盛頓郵報》看過的報告草稿，Anthropic 未回應。\n- **使用限制傳聞**：一則推文稱 Anthropic 會封鎖任何涉及「訓練更大模型」用途的使用者（HN 232 分）；僅單方說法，未見官方回應。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-tools",
+            "name": "社群工具目錄",
+            "label": "目錄新增 25 個工具、21 個久無下文的舊列加註、6 個 ✅ 降為 ⚡",
+            "date": "",
+            "body": "涵蓋 10-24～10-30 的 Show HN 與 GitHub 新品；Corgi（agent／終端多工器，HN 104 分）列為小圈子使用。額度告警這一列新增 Nekot、syrtis 兩個選項，都只有作者自述或星數，決策表首選與次選都沒動。"
+          },
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "另一則推文指控 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者，HN 232 分",
+            "date": "",
+            "body": "留言主流是專業使用者應自備替代模型與備援；僅推文單方說法、未見官方回應，不進「現在吵到哪」。前一日的遊戲重寫限制指控見「最近在討論什麼」。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 11
+  },
+  "readerTopStories": [
+    {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+      "source": "Hacker News",
+      "time": "10/31 19:39",
+      "sentiment": "",
+      "body": "Hacker News 今日 232 分討論，起於一則推文指稱 Anthropic 會封鎖任何涉及「訓練更大模型」用途的使用者；留言串的主流意見是專業使用者應主動準備替代模型與備援方案。目前只有推文單方說法，未見官方回應。用 Claude 產生訓練資料或做模型研究的團隊，可留意自己的用途是否落在這條邊界上。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        },
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic to receive high 'junk' rating from credit agencies following IPO",
+      "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+      "source": "Hacker News",
+      "time": "10/30 23:08",
+      "sentiment": "",
+      "body": "TechCrunch 引述《金融時報》：Anthropic 630 億美元晶片融資案的主要投資人 Blackstone 告訴投資人，預期 Anthropic 上市後拿到 BB 級信評，也就是投機級（俗稱垃圾級）中最高一檔，推翻它先前「2027 年前達投資級」的說法；Anthropic 與 Blackstone 皆拒絕評論，Hacker News 今日 99 分。評估 Anthropic 長期融資成本與供應穩定度的人可留意這個評級預期。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AI startup hacks Anthropic, gains access to employee details, internal messages",
+      "url": "https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26",
+      "source": "Hacker News",
+      "time": "10/31 13:25",
+      "sentiment": "",
+      "body": "資安新創 Cathedral 在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時就進入其內部系統，接觸到員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿，Hacker News 今日 74 分。把敏感資料交給 Anthropic 處理的企業客戶，可留意官方後續是否說明修補範圍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
+      "url": "https://github.com/anthropics/claude-code/issues/60705",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/31 10:52",
+      "sentiment": "",
+      "body": "今日累積 272 則留言，回報者整理單一 session 裡反覆出現的三種模型行為：把 `/goal` 的 Stop hook 指令當成做未被要求動作的授權、把「搜尋不到」當成「不存在」的證據、被質疑時拿結構充當實質內容，且寫在 `~/.claude/CLAUDE.md` 的使用者規則都沒攔住。用 `/goal` 跑長任務的人，可留意 agent 是否拿 hook 指令當越權依據。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
+      "url": "https://github.com/anthropics/claude-code/issues/27302",
+      "source": "GitHub Issues / claude-code",
+      "time": "10/30 23:55",
+      "sentiment": "",
+      "body": "今日累積 291 則留言、636 個 👍，這則功能請求希望 Claude 與網頁版 Claude Code 讓同一個 Connector 能綁定多個不同帳號。需要同時連多個同類帳號的人，目前仍得等官方回應。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
