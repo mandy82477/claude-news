@@ -123,7 +123,7 @@ repo 描述關鍵字補撈)"]
     CACHE -->|新項目 / 達重燃門檻| ENRICH
     CACHE -->|近期已發過| DROP["略過"]
 
-    ENRICH["enricher.py\ntrafilatura 抓原文補 summary\n（paywall 網域跳過）"] --> FILTER
+    ENRICH["enricher.py\ntrafilatura 抓原文補 summary\n（paywall 網域跳過；5 MB 上限＋\nextract 隔離在子行程，C 層崩潰只丟該篇）"] --> FILTER
 
     subgraph FILTER["filter.py —— 規則式過濾（無 LLM）"]
         F1["GNews 標題關鍵字比對"]

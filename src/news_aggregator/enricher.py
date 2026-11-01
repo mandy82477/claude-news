@@ -9,6 +9,9 @@ Priority per item type:
 import html
 import logging
 import re
+import signal
+import subprocess
+import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, TimeoutError as _FutureTimeout, as_completed
 from dataclasses import replace
@@ -37,6 +40,18 @@ _ENRICH_BUDGET_S = 60
 # 單篇文章 HTML 上限。6 個 worker 並行，所以最壞情況是這個數字的 6 倍常駐；
 # 5 MB × 6 = 30 MB，遠低於 runner 記憶體，而正常文章頁只有幾百 KB。
 _MAX_ARTICLE_BYTES = 5 * 1024 * 1024
+# trafilatura.extract 在子行程裡跑的牆鐘上限。正常文章幾百 ms 就抽完；超時多半是
+# lxml 在病態 HTML 上打轉，放棄該篇即可。
+_EXTRACT_TIMEOUT_S = _ARTICLE_TIMEOUT
+# 子行程程式碼：從 stdin 讀 HTML（UTF-8 bytes），把抽出的正文寫到 stdout。
+# 刻意不 import 本專案任何模組，啟動成本只有 trafilatura 本身。
+_CHILD_CODE = """\
+import sys
+import trafilatura
+html = sys.stdin.buffer.read().decode('utf-8', 'replace')
+text = trafilatura.extract(html, include_comments=False, include_tables=False, no_fallback=False)
+sys.stdout.buffer.write((text or '').encode('utf-8'))
+"""
 _HN_FIREBASE = "https://hacker-news.firebaseio.com/v0/item/{}.json"
 _HN_ITEM_RE = re.compile(r"news\.ycombinator\.com/item\?id=(\d+)")
 
@@ -221,7 +236,7 @@ except ImportError:
 def _read_capped(resp) -> str:
     """Read at most `_MAX_ARTICLE_BYTES` of the response and decode it.
 
-    **這道上限是為了不讓一個病態頁面殺掉整個 pipeline。** 底下的
+    **這道上限是第一道防線，第二道是 `_extract_isolated` 的子行程隔離。** 底下的
     `trafilatura.extract()` 走 lxml（C 擴充），把幾百 MB 的 HTML 丟給它，
     輕則吃光記憶體、重則在 C 層崩潰——而 C 層的 abort **Python 的 try/except
     攔不住**，整個 process 直接帶著 SIGABRT（exit 134）死掉，`main.py` 的
@@ -283,16 +298,46 @@ def _fetch_article(url: str) -> str:
         html = _read_capped(resp)
         if not html:
             return ""
-        text = _trafilatura.extract(
-            html,
-            include_comments=False,
-            include_tables=False,
-            no_fallback=False,
-        )
-        return (text or "").strip()
+        return _extract_isolated(html, url)
     except Exception as e:
         logger.debug("article fetch failed for %s: %s", url, e)
         return ""
+
+
+def _extract_isolated(html: str, url: str = "") -> str:
+    """Run `trafilatura.extract()` in a child process; a C-level crash only kills the child.
+
+    **為什麼要隔離：** `_read_capped` 的大小上限擋得住「幾百 MB 的 HTML」，擋不住
+    上限內的病態 HTML——2026-10-31 GitHub Actions 抓料就在 dedup 後 115 筆、
+    trafilatura 先報 `empty HTML tree: None`、三秒後整個 process Segmentation
+    fault（exit 139）死掉，當日零原料、三班雲端 routine 全部因新鮮度防線中止、
+    沒有日報。lxml 是 C 擴充，SIGSEGV／SIGABRT **Python 的 try/except 攔不住**，
+    `enrich()` 的 Never-raises 承諾在 C 層面前是空話。放進子行程後，崩潰只帶走那一篇，
+    母行程記下 URL（WARNING，讓下次有線索）並保留原摘要繼續。
+
+    成本：每篇一次直譯器啟動（數百 ms），只對摘要過薄才抽正文的條目發生，
+    6 個 worker 並行，整批仍在 `_ENRICH_BUDGET_S` 內。
+    """
+    try:
+        proc = subprocess.run(
+            [sys.executable, "-c", _CHILD_CODE],
+            input=html.encode("utf-8", errors="replace"),
+            capture_output=True,
+            timeout=_EXTRACT_TIMEOUT_S,
+        )
+    except subprocess.TimeoutExpired:
+        logger.warning("article extraction timed out after %ss, kept original summary: %s",
+                       _EXTRACT_TIMEOUT_S, url)
+        return ""
+    except OSError as e:
+        logger.warning("article extraction child failed to start (%s), kept original summary: %s", e, url)
+        return ""
+    if proc.returncode != 0:
+        rc = proc.returncode
+        how = f"signal {signal.Signals(-rc).name}" if rc < 0 and -rc in signal.Signals._value2member_map_             else f"exit {rc & 0xFFFFFFFF:#x}" if rc < 0 or rc > 255 else f"exit {rc}"
+        logger.warning("article extraction child died (%s), kept original summary: %s", how, url)
+        return ""
+    return proc.stdout.decode("utf-8", errors="replace").strip()
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
