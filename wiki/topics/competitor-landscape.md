@@ -29,13 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **開始日期：** 2026-04
 **最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-30
+**最後新聞更新：** 2026-11-01
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-10-30）
-> - 🟡 **OpenAI 跟進推出與 Claude Max／Team 同額的 API credits 訂閱福利**（Blog/Simon Willison）——這項福利不再是 Claude 訂閱獨有的賣點。
-> - ⚪ **Mistral Le Chonk 据報擠進頂尖開源編碼模型之列，與 Codex GPT-6.1 Terra 並列**（ZDNET）——具體榜單與分數缺，知道就好。
+> **本週衝擊**（2026-11-01）
+> - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，4 家媒體定位為直接挑戰 Claude Code**（Bloomberg／南華早報）——評估 coding agent 選型的人應留意後續功能與定價。
 
 ---
 
@@ -49,10 +48,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
+| **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」，彭博／南華早報等 4 家媒體同日報導定位為直接挑戰 Claude Code，恰在 Anthropic 預期 IPO 前數週推出 → 功能與定價細節待觀察 | 能力 | 🔴 | 跨 4 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits），功能細節與定價均未附，僅標題可用；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Microsoft／GitHub** 🏢 | 10-28 Copilot Fusion 跨模型智慧路由正式 GA；10-29 The New Stack 稱其基準測試勝 Claude Code、API 成本減半 → 選型比價基準要重算 | 能力 | 🔴 | GitHub 官方 changelog＋The New Stack 報導；Fusion 路由機制細節、測試條件均未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Google（Gemini）** 🏢 | 10-28 Gemini 4 Carbon 發布，稱 AA Intelligence Index v5.0 第一（59分）、資安基準大幅領先 → 編碼/資安 agentic 評測再添一筆對照 | 能力 | 🔴 | DeepMind 官方一手；SEC-bench Pro／ExploitGym／CWE-bench 細節與對照模型未列 |
-| **DeepSeek** 🏢 | Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04）→ 低價層威脅延伸至外掛生態層 | 生態 | 🔴 | Pandaily 單一來源，僅標題可用，相容範圍未載；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
 | **Cursor** 🏢 | 10-27 把自家 coding agent 包成 TypeScript SDK，開放任何人在自己程式裡呼叫建置 → 從「工具」升級為可嵌入他人產品的平台，評估自建 agent 的人多一個選項 | 生態 | 🟡 | Startup Fortune 單一來源，僅標題可用，SDK 能力範圍與定價未載 |
@@ -156,11 +155,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### DeepSeek
 **現在的答案**
-- Harness v0.2.1-alpha.1 新增 Claude Code Mods 相容層（實驗性，10-04），相容範圍與穩定性未載（Pandaily）。
-- 低價層已有可用替代：開源工具 Harness 正式定名上線（08-14），與 V4-Pro 模型同步。
-- V4-Pro 費率未載，只知高於 V4 Flash；V4 Flash 側僅有「較 Claude API 降低逾 100 倍」的定性描述。
+- 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code，彭博／南華早報等 4 家媒體同日定位為直接競爭動作，恰在 Anthropic 預期 IPO 前數週推出，功能細節未附（跨 4 媒體同報）。
+- 低價層已有可用替代：開源工具 Harness 上線，10-04 新增 Claude Code Mods 相容層（實驗性，Pandaily）。
+- V4-Pro 費率已查證（見「競品定價對照」）；V4 Flash 僅有「較 Claude API 降低逾 100 倍」的定性描述。
 **還沒解決**
-- V4-Pro 具體費率、Harness 與既有「Deep Code」（07-07，finance.biggo.com 報導 DeepSeek 生態推出的開源 agent 工具，對標 Claude Code）是否同一產品線，報導均未說明；Mods 相容層的相容範圍與是否進入正式版亦未見報導。
+- 新「超級 agent」的功能範圍、是否基於 Harness／V4-Pro、定價與可用性均未見報導；Mods 相容層是否進正式版亦未見。
 
 ### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
@@ -244,6 +243,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]、[[entities/google-investment]]、[[entities/opencode]]、[[topics/enterprise-cost-management]] — 對應實體與成本主題。
 
 ## 時序
+
+### 2026-11
+
+#### 2026-11-01
+- **DeepSeek**：發布自主程式開發「超級 agent」，4 家媒體同日定位為直接挑戰 Claude Code，恰在 IPO 前數週推出；詳見「對手雷達」DeepSeek 列更新（Google News/Bloomberg.com）
 
 ### 2026-10
 

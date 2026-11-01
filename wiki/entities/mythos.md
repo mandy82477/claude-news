@@ -30,19 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **弱訊號**（2026-10-29）
-> SentinelOne 稱將把 Claude Mythos 5.1 導入其 Wayfinder 資安服務，僅標題可讀、單一來源、互動數 0，整合管道與時程均未確認。
+> **弱訊號**（2026-11-01）
+> HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息或惡意檔案誘餌。
 
 ---
 
 ## 現況
 
-**2026-10-29（SentinelOne 稱將 Mythos 5.1 導入 Wayfinder 資安服務，僅標題可讀，列為弱訊號）**：Google News 轉載 VMblog 標題，稱 SentinelOne 將把 Claude Mythos 5.1 整合進其 Wayfinder Frontier AI 資安服務；原文僅標題可用、單一來源、互動數 0，整合管道（是否透過 Project Glasswing）與時程均未確認（Google News/VMblog，2026-10-29；詳見下方「時序」）。
+**2026-11-01（HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息）**：Hacker News（17 分）與 Reddit r/ClaudeAI 週熱門同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言，原網址因惡意軟體疑慮未附；留言者普遍判定此消息幾乎可以肯定是假的，手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類，疑在誘騙較不熟悉者下載並執行惡意程式碼（Hacker News，2026-11-01；詳見下方「時序」）。
 
-**2026-10-27（Anthropic 研究：未發布的內部研究模型鏈出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android）**：Anthropic 研究部落格公開，過去數月以一個「未發布的內部研究模型」在廣泛使用軟體中找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需使用者互動即可達成遠端程式碼執行；The Hacker News、CyberSecurityNews 同日跟進點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面。原文未點名具體模型版本，本頁暫不歸入 Mythos 特定世代（詳見下方「時序」）。
+**2026-10-29（SentinelOne 稱將 Mythos 5.1 導入 Wayfinder 資安服務，僅標題可讀，列為弱訊號）**：Google News 轉載 VMblog 標題，稱 SentinelOne 將把 Claude Mythos 5.1 整合進其 Wayfinder Frontier AI 資安服務；原文僅標題可用、單一來源、互動數 0，整合管道（是否透過 Project Glasswing）與時程均未確認（Google News/VMblog，2026-10-29；詳見下方「時序」）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -134,6 +134,14 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ## 時序
 
 ### 解禁後（2026-06-27 起）
+
+### 2026-11
+
+#### 2026-11-01
+❓ **待查證**（標 2026-11-01｜查 Hugging Face、Mythos-class）｜**HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息**：
+- Hacker News（17 分）、Reddit r/ClaudeAI（週熱門）同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言；原網址因惡意軟體疑慮未附，無法查核實際頁面內容
+- 留言者普遍判定此消息幾乎可以肯定是假的，指出手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類——疑在誘騙較不熟悉者下載並執行惡意程式碼，非真實模型外流
+- Anthropic 未就此傳言公開回應確認或否認；是否真有檔案外流、外流內容為何均未見報導
 
 ### 2026-10
 
@@ -318,3 +326,4 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [[news/2026-10-27]]
 - [[news/2026-10-28]]
 - [Google News/VMblog：SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)（2026-10-29，僅標題可用；懸置標記細節見「時序」2026-10-29 條目）
+- [Hacker News：Anthropic's Mythos-class model allegedly leaked on Hugging Face](https://news.ycombinator.com/item?id=50326727)（2026-11-01，17 分；懸置標記細節見「時序」2026-11-01 條目）

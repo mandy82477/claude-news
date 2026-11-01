@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-31
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **另一則推文指控 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者，HN 232 分**（2026-10-31）
-> 留言主流是專業使用者應自備替代模型與備援；僅推文單方說法、未見官方回應，不進「現在吵到哪」。前一日的遊戲重寫限制指控見「最近在討論什麼」。
+> **今日社群焦點：Claude 獨力完成的兩個作品型 Show HN**（2026-11-01）
+> - **HackerBooks**：作者找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書；HN 105 分。
+> - **BBRouter**：Ben Eater 8 位元電腦的 3D 虛擬麵包板編輯器，支援透過 MCP 把 Claude 接進來協助除錯與建置；HN 43 分（2 個來源）。
 
 ---
 
@@ -153,6 +154,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN: HackerBooks——找 Claude（Opus 5.5）全程寫出約 1.65 萬本 HN 推薦書的網站 | 2026-11-01 · 2026-11-01 | 🔥🔥🔥 | ☄️閃現 | 作者看到 Karpathy 的 HackerTube 後，找 Claude 全程寫資料管線與網站，整理出至少兩位 HN 留言者曾提過、約 1.65 萬本書，每本可回連留言串，資料可下載；HN score 105（單源，待社群接力） | — |
+| Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯 | 2026-11-01 · 2026-11-01 | 🔥🔥 | ☄️閃現 | 作者做出逼真的 3D 虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源） | — |
 | 一則推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者應自備替代模型 | 2026-10-31 · 2026-10-31 | 🔥🔥🔥 | ☄️閃現 | 留言主流：每個專業使用者都該備好替代模型與備援，並盡量選開放、標準化、可移植的生態；僅推文單方說法，未見官方回應；HN score 232（單源，待社群接力） | — |
 | 一則推文指控 Anthropic 開始限制用 Claude 重寫／移植既有電子遊戲，留言兩極 | 2026-10-30 · 2026-10-30 | 🔥🔥🔥 | ☄️閃現 | 留言兩極：AI devtools 公司該不該決定使用者能編譯出什麼程式，另一派反問 Anthropic 訓練資料本身的授權合法性；HN score 72（單源，待社群接力） | — |
 | Simon Willison：vibe game 開發在 10 月出現能力拐點，延續去年 11 月 coding agent 拐點觀察 | 2026-10-28 · 2026-10-28 | 🔥 | ☄️閃現 | 延續去年 11 月 Opus 4.5／GPT-5.1 的 coding agent 拐點觀察，主張今年 10 月遊戲開發子領域出現類似能力轉折；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Oct/28/vibe-game-development/) | — |
@@ -208,6 +211,8 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Show HN: HackerBooks——找 Claude（Opus 5.5）寫出約 1.65 萬本 HN 推薦書的網站**：作者看到 Karpathy 的 HackerTube 後找 Claude 全程編寫，整理出至少兩位留言者提過的約 1.65 萬本書；HN score 105；[原文](https://hackerbooks.org)（HN）
+- **Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯**：作者做出逼真的虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源）；[原文](https://bbrouter.com/bbrouter/ben-eater-sap-1)（HN）
 - **一則推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者應自備替代模型**：留言串的主流意見是不論多喜歡 Claude，專業使用者都應主動養一組替代模型與備援，並推動生態開放、標準化、可移植；留言把 Anthropic 形容為立場鮮明、偏理想主義；無官方說明，亦無第二來源佐證封鎖範圍；[原文](https://twitter.com/jiahaoshao1/status/2116475922190922088)（HN，232 分）
 - **一則推文指控 Anthropic 開始限制用 Claude 重寫／移植既有電子遊戲，留言兩極**：一派主張 devtools 公司不該決定使用者能編譯什麼，另一派反問 Anthropic 訓練資料本身授權也有爭議；無官方說明，亦無第二來源佐證；[原文](https://twitter.com/chasmmmmmmmmmmm/status/2116062991686721968)（HN）
 - **Claude Code「建議訊息」功能被質疑是講給模型自己聽，不是講給使用者**：部落格作者觀察到 Claude Code 事後跳出的「建議訊息」常是作者自己不想要的改動（如「還原這個改動」），認為這類訊息本質上是說給模型自己看、不是給使用者看，並以餵給 LLM 以「start of user」結尾的提示詞會自行接續對話為例類推其機制；HN score 255；
@@ -256,6 +261,20 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 ## 技術彙整
 
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
+
+### 2026-11
+
+#### Show HN: HackerBooks——找 Claude（Opus 5.5）全程寫出約 1.65 萬本 HN 推薦書的網站（2026-11-01）
+
+- **來源：** Show HN: HackerBooks – HackerTube, but for books recommended on HN — Hacker News（105 分）；[原文](https://hackerbooks.org)
+- **核心論點：** 作者看到 Karpathy 的 HackerTube 後，找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書，每本可回連到當時的留言串；資料可從關於頁下載；作者自述 Claude 幾乎獨力寫完所有程式碼，含資料管線與網站，自己主要負責引導與把關。
+- **收斂結論：**（無）單篇 Show HN 展示，尚無第三方驗證資料準確度；本頁僅記錄其作為「Claude 能獨力做出多大規模作品」的案例參考。
+
+#### Show HN: BBRouter——Ben Eater 8 位元電腦的 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯（2026-11-01）
+
+- **來源：** Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards — Hacker News（43 分，2 個來源）；[原文](https://bbrouter.com/bbrouter/ben-eater-sap-1)
+- **核心論點：** 作者常把 Ben Eater 8 位元電腦接錯線，做出一套逼真的 3D 虛擬麵包板編輯器（Three.js），具並排 diff、scope、電路圖自動同步、自動佈線（BBRouter 之名由此而來）；可從真實 Arduino IDE 上傳，並透過 MCP 把 Claude 等 agent 接進來協助除錯或建置，本次連結為 SAP-1 範例。
+- **收斂結論：**（無）單篇 Show HN 展示，屬工具發布非觀念爭論；本頁僅記錄其作為 MCP 串接 agent 協助硬體除錯的具體案例。
 
 ### 2026-10
 

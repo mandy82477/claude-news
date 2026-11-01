@@ -31,11 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **Skills 設計再添一例：多來源證據比對判斷照片拍攝地點**（2026-10-28）
-> - **Oldcircle/geo-sleuth（4408★）**：綜合 OSM 地理幾何、天際線比對、衛星影像與街景等多種證據判斷照片拍攝地點並展示推理過程，相容 6 款 coding agent。
+> **Skills 設計再添三例：像素特效生成、電影分鏡提示詞、.NET 技能目錄**（2026-11-01）
+> - **patch-gg/pixelfx（2,351★）**：244 種像素藝術特效各自為一小段程式碼，附 Claude Code skill 讓使用者依現有慣例自製新特效。
+> - **jnMetaCode/ai-shortfilm-prompts（506★）**：把任意想法轉成 Sora／Kling／Veo／Seedance 可直接使用的電影化分鏡提示詞，21 種類型模板、五階段結構，附 eval 測試。
+> - **managedcode/dotnet-skills（500★）**：最大型 .NET 專屬技能收藏之一，提供目錄、CLI 與編排 agent，相容 Codex、Claude Code、GitHub Copilot、Gemini、Junie。
 
 ---
 
@@ -91,6 +93,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### 2026-11
+
+#### 同日三款 Skills 設計新實作：pixelfx（像素特效生成）、ai-shortfilm-prompts（電影分鏡提示詞）、dotnet-skills（.NET 技能目錄）（2026-11-01）
+
+- **主線：** —
+- **核心模式：**
+  - patch-gg/pixelfx：244 種像素藝術特效各自為一小段程式碼，並附 Claude Code skill，讓使用者依現有特效的程式慣例自製新特效（2,351★）
+  - jnMetaCode/ai-shortfilm-prompts：Claude Code Skill 把任意想法轉成 Sora／Kling／Veo／Seedance 可直接使用的電影化分鏡提示詞，21 種類型模板、五階段結構，並附 eval 測試（506★）
+  - managedcode/dotnet-skills：目前最大型的 .NET 專屬技能收藏之一，提供目錄、CLI 與編排 agent，同時相容 Codex、Claude Code、GitHub Copilot、Gemini、Junie（500★）
+- **與既有模式的關係：** 補上「Skills 設計」三個新取向：pixelfx 為像素藝術生成＋依慣例自製新效果；ai-shortfilm-prompts 補影片／動態設計垂直，走 eval 測試過的結構化分鏡提示詞；dotnet-skills 補單一垂直領域技能合集一個「目錄＋CLI＋跨工具編排」規模；主線填 —。
+- **可信度註記：** 三者僅有 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[pixelfx](https://github.com/patch-gg/pixelfx)（2,351★）、[ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts)（506★）、[dotnet-skills](https://github.com/managedcode/dotnet-skills)（500★）
+- **成熟度：** ⏳ 新興（三者皆本庫首次收錄，單一作者或小團隊工具，尚無社群採用回饋數據）
 
 ### 2026-10
 

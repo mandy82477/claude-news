@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **本機影片編輯工具加入 MCP 整合清單**（2026-10-30）
-> - **kajisho5/ffmpeg-skill**：42 個 FFmpeg 操作包成機器可讀合約＋MCP server，剪輯、字幕、重新裁切、音量正規化與平台匯出全離線完成。
+> **創意工具 Agent 整合新增一例：影片範本跨 25+ agent 複用**（2026-11-01）
+> - **actionow-ai/vvv（510★）**：開源可編輯影片範本打包為 Agent Skill，一次製作即可在 Claude Code、Codex 等 25+ 款 coding agent 上重複使用。
 
 ---
 
@@ -56,6 +56,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
+
+### 2026-11
+
+#### actionow-ai/vvv：開源可編輯影片範本打包為 Agent Skill，一次製作跨 25+ coding agent 複用（2026-11-01）
+
+- **主線：** —
+- **核心模式：** 開源、可編輯的影片範本（示例為婚禮影片）包成 Agent Skill，一次打造即可在 Claude Code、Codex 等 25+ 款 coding agent 上重複使用，免去每個工具各自重寫一套範本；510★。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「範本可攜性」取向——既有做法多是把創作軟體整合進 agent，本則把範本本身包成可跨 25+ 款 agent 安裝的 Skill；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（510★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/actionow-ai/vvv)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 ### 2026-10
 

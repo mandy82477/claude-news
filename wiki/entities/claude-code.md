@@ -33,11 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-31
+**最後新聞更新：** 2026-11-01
 
-> **最新動態**（2026-10-31）
-> - **v2.1.316 新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`**：設定後 `ultrathink` 關鍵字不再觸發額外思考；Claude apps gateway 另加群組共用的每月預算池。
-> - **遊戲重製限制**：Anthropic 證實以更新引導 Claude Code 不重現他人特定遊戲，使用者回報無害的逆向工程也被擋；Claude in Chrome 自 9/18 起在 reddit.com 全工具被安全限制擋下（#95326）。
+> **最新動態**（2026-11-01）
+> - **`/buddy` 請願破 2,116 讚**：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。
+> - **Cursor 市集延伸套件遭竄改事件口徑分歧**：Anthropic 稱自家系統未遭入侵，一資安公司稱竄改版經官方帳號發出，兩說並存（詳見已知問題）。
 
 ---
 
@@ -232,7 +232,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 上方「現在還沒修好的」為本組的結論層索引，非搬移 %%
 
-### 🛡️ 安全與隱私（18 條未修復、4 條已修復、1 條拒修、4 條❓）
+### 🛡️ 安全與隱私（19 條未修復、4 條已修復、1 條拒修、4 條❓）
 
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報與資安後果（GitHub issue #53223，31 則留言、5 讚，2026-10-28）**：官方尚未回應。
   - 與既有「CLAUDE.md 標記為強制的規則持續被忽略」（#2544）、「candidate-context 而非強制系統提示」發現（見「🧠 行為與品質」）同屬此限制，本則為彙整版；把 CLAUDE.md／AGENTS.md 當安全邊界用的團隊應留意。風險面見 [[topics/ai-agent-safety]]。
@@ -241,6 +241,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 疑似移除 skip permissions 模式下 `rm` 指令的既有阻擋**：媒體（shattered.io／The Register）報導，changelog 未見相關記載；風險面見 [[topics/ai-agent-safety]]。
 - ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09｜訊 2026-10-27）｜**任何網站可把指令檔案放進 Downloads 資料夾，Claude Code／Codex 會照著執行**：
   - 10-27 CyberSecurityNews 以第二獨立來源跟進（惡意檔案劫持 Codex 與 Claude Code），兩篇皆僅標題層級，觸發機制與官方回應仍未見報導，完整攻擊面分析見 [[topics/ai-agent-safety]]。
+- 🔴 **未修復**｜**Cursor 市集代管的 Claude Code VS Code 延伸套件 2.1.312／2.1.313 版遭竄改植入 SSH 後門，官方證實最多 5,000 人受影響（流通窗口 10-29 美東 05:27–16:35）**：完整時序見 [[topics/ai-agent-safety-product-vulns]]。
+  - Anthropic 稱自家系統未遭入侵、竄改版非其所建；一資安公司稱竄改版經 Anthropic 官方帳號發出，兩說並存，攻擊者如何取得發布權限未見說明。經 Cursor 市集裝過此套件者應立即檢查機器、清查殘留檔案（解除安裝不夠）。
 - 🔴 **未修復**｜**複合 bash 陳述式的權限詢問對話框誤判審核目標為 `cd`，非真正要執行的指令（GitHub issue #28240，累積 49 則留言、209 個讚，2026-10-18）**：核可前應自行確認完整指令內容，不可只看對話框顯示的 `cd`；官方尚未回應。
 - ✅ **已修復 v2.1.294**｜**自然語言寫成的 hook 封鎖指示未真正擋下該指令**：先前把 hook 寫成「封鎖做 X 的指令」這類指示時擋不住該指令；同版改善 `Stop`／`SubagentStop` 上 `prompt` hook 行為；用此類 hook 的人升級後應重新驗證。
 - ❓ **待查證**（標 2026-10-30｜查 Plugin4Shell、v2.1.179｜複 2026-11-13）｜**「Plugin4Shell」零點擊 RCE 橫跨 4 款 AI coding agent**：媒體稱 2.1.179 已修補，官方未載，狀態未經證實。詳見 [[topics/ai-agent-safety-product-vulns]]
@@ -315,8 +317,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（74 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
+### 🧠 行為與品質（75 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
+- 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
 - 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.219 內部提示詞片段 `heron_brook` 只在 Opus 5 悄悄蓋過使用者委派政策，無關閉選項（GitHub issue #80988，累積 38 則留言、91 個讚，2026-10-29）**：注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派策略且無法關閉；用 Opus 5 拆工作給子 agent 者可能發現委派未生效；官方尚未回應。
@@ -359,7 +362,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（非計費 bug，官方說明為顯示行為）**｜**Claude Code 回傳空白思考區塊，推理 token 仍照常計費（The Register，2026-08-14 報導，2026-09-06 查證）**：The Register 原文：07 中起 API 對 Opus 4.8／Sonnet 5 回空 thinking block；Anthropic 說明 thinking token 本就以 output 計費、不論是否回傳文字，並稱在調查是否為摘要顯示測試的副作用；非計費錯誤。計費爭議面另見 [[entities/pricing]]。
 - 🔎 **查無官方**（標 2026-08-09｜查 #23377、prompt 過長｜複 2026-11-14）｜**「Prompt is too long」錯誤導致 session 永久卡死（GitHub issue #23377，累積 43 則留言、38 個讚，2026-08-08 回報，2026-08-09 查證收錄）**：查證確認完整標題與內容——一旦觸發「Prompt is too long」錯誤，後續每次輸入皆重現同一錯誤，session 永久無法使用，須捨棄該 session 重開；已標記 `has repro`、`area:core`、`area:ide`、`oncall`（內部已排查但無公開回應）；查無官方留言或修復版本。
 - 🔴 **未修復**｜**功能請求：支援與 main 以外分支進行 diff 比較（GitHub issue #23626，累積 46 則留言、141 個讚，首見 2026-08-07，2026-10-23 互動數更新，今日三則討論中讚同數最高）**：使用者希望 Claude Code 支援與 main 以外分支進行 diff 比較；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**應優先使用 Read／Grep 等內建工具的情境下仍頻繁改用 Bash 指令如 sed/grep（GitHub issue #19649，累積 45 則留言、101 個讚，2026-08-22，既有行為模式回報）**：使用者回報 Claude 在明顯應優先使用 Read、Grep 等內建工具的情境下，仍頻繁改用 Bash 指令（如 `sed`、`grep`）達成相同目的，非單一事件而是持續存在的行為模式；官方尚未回應。
+- 🔴 **未修復**｜**應優先使用 Read／Grep 等內建工具的情境下仍頻繁改用 Bash 指令如 sed/grep（GitHub issue #19649，累積 47 則留言、124 個讚，2026-08-22，2026-11-01 互動數更新）**：非單一事件，為持續行為模式；官方尚未回應。
 - ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：允許自訂 `.claude/agents/` 定義加入 agent team 作為隊友（GitHub issue #24316，累積 41 則留言、43 個讚，2026-08-23）**：使用者呼籲開放將 `.claude/agents/` 目錄下的自訂 agent 定義納入 agent team、以隊友（teammate）身分參與任務分派；官方答：spawning teammate 時可指名 `.claude/agents/` 的定義，隊友照該定義的 `tools` 白名單與 `model`，但 `skills`／`mcpServers` frontmatter 不套用到隊友。
 
 - ⛔ **官方拒修**｜**無法釘選 model version：`--model` 只接受 family 名（GitHub issue #27892，2026-02-23）**：無法指定帶日期 pinned version，官方以 not planned 關閉。見 [[topics/code-quality-decline#模型釘選：你選的不一定算數（2026-02 起）]]。
@@ -386,10 +389,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**畫面/終端機閃爍（GitHub issue #769 進行中呼叫畫面閃爍，累積 306 則留言、335 個讚，Claude CLI v0.2.69，全站已知問題今日互動量最高；issue #1913 終端機閃爍，累積 187 則留言、321 個讚，皆 2026-07-09）**：使用者回報進行中的呼叫會造成畫面閃爍，另有獨立回報指出終端機介面本身也會閃爍，兩者疑為相關或重複問題；官方尚未回應。
 - 🔴 **未修復**｜**Thinking summaries 在 Opus 4.7 消失，harness 未設定 `display: "summarized"`（GitHub issue #49268，累積 49 則留言、78 個讚，首見 2026-07-17，Claude Code v2.1.111，2026-07-21 10:45 UTC 留言數更新）**：使用者改用 Opus 4.7 後思考摘要不再顯示，追查發現 harness 呼叫 extended-thinking API 時未設定 `display: "summarized"` 參數，屬 harness 端設定缺失而非模型行為變化；與既有「Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染」（issue #49322）同屬 thinking summary 顯示問題但根源不同，暫分列追蹤；官方尚未回應。見 [[entities/opus-4-7]]。
 - 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 51 則留言、159 個讚，首見 2026-07-16，2026-09-22 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
-- 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 269 則留言、2092 個讚，2026-07-09 首見，2026-09-19 互動數更新）**：`/buddy` 已於 4/9 隨 v2.1.97 移除，官方 changelog 未提及；社群請願要求恢復，官方尚未回應。
+- 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 283 則留言、2,116 個讚，2026-07-09 首見，2026-11-01 互動數更新）**：`/buddy` 已於 4/9 隨 v2.1.97 移除，官方 changelog 未提及；社群請願要求恢復，官方尚未回應。
 - 🔴 **未修復**｜**終端機複製夾帶多餘縮排與行尾空白（GitHub issue #18170，累積 136 則留言、294 個讚，首見 2026-07-08，2026-09-22 互動數更新）**：從 Claude Code 終端機複製文字（段落或程式碼區塊）時會夾帶前導縮排與行尾空白，影響貼上至其他編輯器或文件時的格式整潔；官方尚未回應。
 - 🔴 **未修復**｜**AskUserQuestion 60 秒逾時自動代答（GitHub issue #73125，累積 414 個讚，2026-09-10 更新）**：逾時未回應會自動代答並繼續執行，可能略過決策分岔點；官方確認為刻意設計（v2.1.198），非 bug，尚無可調逾時設定。討論見 [[topics/community-tech-discussions]]。
-- 🔴 **未修復**｜**功能請求：READ 工具未標示目前正在讀取哪一個檔案（GitHub issue #21151，累積 133 則留言、186 個讚，2026-07-17 首次記錄，2026-07-21 留言數更新）**：使用者反映執行 READ 工具讀取檔案時，介面未顯示目前正在讀取的具體檔案名稱，多檔案讀取情境下難以追蹤進度；官方尚未回應或提供設定選項。
+- 🔴 **未修復**｜**功能請求：READ 工具未標示目前正在讀取哪一個檔案（GitHub issue #21151，累積 134 則留言、185 個讚，2026-07-17 首次記錄，2026-11-01 互動數更新）**：使用者反映執行 READ 工具讀取檔案時，介面未顯示目前正在讀取的具體檔案名稱，多檔案讀取情境下難以追蹤進度；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：新增選項常駐顯示 Claude 的思考過程（GitHub issue #8477，累積 93 則留言、356 個讚，2026-07-17 首次記錄，2026-08-17 互動數更新）**：使用者希望新增設定選項讓 Claude 的 thinking／推理過程預設常駐顯示，而非需要每次手動展開或依賴目前的摘要呈現；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：送出前檢視並編輯「已貼上文字」區塊內容——官方曾承諾以 Editor 功能解決，issue 現已重開（GitHub issue #3412，累積 83 則留言、307 個讚，首見 2026-07-18，2026-08-17 互動數更新，環境：Claude Code 1.0.51／macOS 15 Sequoia／Ghostty；2026-08-10 查證）**：使用者（常見情境為搭配 MacWhisper 等聽寫軟體使用）希望能在送出前檢視並編輯輸入框中已收合的「已貼上文字」區塊內容；官方協作者 dicksontsai 曾於 2026-01-14 回應「下個版本起可用 Editor 功能檢視已貼上文字」，惟該次修復對應的 PR 觸發 GitHub 自動關閉、issue 隨後於當前回報週期被重新開啟（`state_reason: reopened`），顯示先前修復未能持續解決問題或涵蓋範圍不足；與既有「關閉輸入框貼上文字自動收合」需求（issue #23134）同屬貼上文字呈現方式相關訴求但方向不同，暫分列追蹤。
 - 🔴 **未修復**｜**Post/PreToolUse Hooks 未如預期觸發（GitHub issue #6305，累積 41 則留言、16 個讚，首見 2026-07-31，2026-10-18 留言數更新，環境：Claude Code claude-sonnet-4-20250514／macOS Darwin；2026-08-10 查證）**：使用者回報 PreToolUse 與 PostToolUse hooks 未依預期執行；查證同串較早的官方協作者留言（dicksontsai）說明此為既有設計：修改 Settings JSON 後基於安全考量不會立即生效，須以 `/hooks` 確認或開新 session，並指出部分回報者對 `$TOOL_NAME`／`$TOOL_ARGS` 用法有誤（參見[官方文件](https://docs.anthropic.com/en/docs/claude-code/hooks#pretooluse-input)）；惟該說明未必涵蓋本則 2026-07-31 的具體回報情境，issue 仍為 open，無官方留言直接回應此次個案。與既有「Stop Hooks 被忽略」（2026-04-24 回報）同屬 hooks 機制可靠性問題但涉及不同 hook 類型，暫分列追蹤。
@@ -528,7 +531,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
-- 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，120 則留言、61 讚，10-12 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
+- 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，121 則留言、61 讚，11-01 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
@@ -550,10 +553,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Code 未遵循 XDG Base Directory 規範（GitHub issue #1455，累積 69 則留言、460 個讚，2026-10-18 互動數更新）**：快取與設定寫入 `~/.claude.json`、`~/.claude`，未依循 XDG 標準路徑；官方尚未回應。
 - 🔴 **未修復**｜**Dispatch 主對話持續顯示離線，儘管 Cowork 任務正常運作（GitHub issue #45937，累積 37 則留言，2026-07-26）**：使用者回報 Dispatch 主對話在行動裝置端持續顯示「This desktop appears offline」，即使直接從桌面端發起提示也一樣；然而個別 Cowork 任務仍能正常運作，顯示問題限於主對話的連線狀態顯示；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援終端機 CLI 已有的 `/btw` 指令（GitHub issue #37323，累積 35 則留言、216 個讚，首見 2026-07-23，2026-08-09 互動數更新，今日日報互動量最高）**：使用者呼籲 VS Code 擴充套件比照終端機 CLI 版本支援 `/btw` 指令；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**GitHub connector 可連結帳號內所有 repository 卻無法讀取任何內容，回報為近期功能退化（GitHub issue #71542，累積 63 則留言、69 個讚，首見 2026-07-18，2026-09-16 互動數更新）**：帳號全域皆受影響，公開與私有 repo 皆然；官方尚未回應。
+- 🔴 **未修復**｜**GitHub connector 可連結帳號內所有 repository 卻無法讀取任何內容，回報為近期功能退化（GitHub issue #71542，累積 71 則留言、77 個讚，首見 2026-07-18，2026-11-01 互動數更新）**：帳號全域皆受影響，公開與私有 repo 皆然；官方尚未回應。
   - 標題明確標註為近期發生的功能退化（regression）；與既有「GitHub Connector 已在 Claude Desktop 連結卻未被識別」（issue #32479）同屬 GitHub connector 可靠性問題但現象不同，暫分列追蹤。
 - 🔴 **未修復**｜**個人帳號（非組織）GitHub repo 不顯示於 Claude web，僅組織帳號正常（GitHub issue #18467，38 則留言、86 個讚，2026-10-09）**：個人帳號名下 repo 在 claude.ai/code 清單中不會出現，組織帳號正常；獨立開發者會直接撞到此限制；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：對話訊息加上時間戳記，方便監控長時間背景 agent 工作進度（GitHub Issues，累積 36 則留言、66 個讚，2026-07-18）**：使用者希望能在使用者與 assistant 訊息上顯示時間戳記，便於監控長時間執行的背景 worker 進度；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：對話訊息加上時間戳記，方便監控長時間背景 agent 工作進度（GitHub issue #44763，累積 41 則留言、108 個讚，首見 2026-07-18，2026-11-01 互動數更新）**：使用者希望能在使用者與 assistant 訊息上顯示時間戳記，便於監控長時間執行的背景 worker 進度；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**工作目錄追蹤暫存檔從未清理，`/tmp/claude-*-cwd` 持續累積（GitHub issue #8856，累積 71 個 reactions、111 則留言，首見 2026-07-17，2026-09-04 互動數更新）**：Claude Code 用來追蹤 Bash 執行間工作目錄變化的暫存檔（`/tmp/claude-*-cwd`）從未被清理，長期執行後持續累積佔用磁碟空間；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 建立 10GB VM bundle 導致效能持續惡化（GitHub issue #22543，78 則留言、271 個讚，首見 2026-07-15，2026-10-10 更新，今日互動量最高）**：使用 Cowork 後 Desktop 啟動變慢、UI 延遲，效能隨時間持續惡化；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Edit/Write 工具因緩衝區容量上限靜默截斷檔案（byte-conservation buffer cap，GitHub issue #53940，累積 44 則留言／16 個讚，原始回報 2026-04-27，2026-07-16 為作者持續維護的長篇更新摘要）**：使用者回報 Cowork 的 Edit/Write 工具會因緩衝區容量上限機制靜默截斷檔案內容，且此問題具確定性、在任何檔案大小下皆會觸發，並非邊緣情況；屬嚴重的資料完整性缺陷；官方尚未回應。
