@@ -5,17 +5,17 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-01"
-last_news_update: "2026-10-31"
+last_news_update: "2026-11-01"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 139
-attribution_count: 822
-attribution_last: "2026-10-31"
+attribution_count: 829
+attribution_last: "2026-11-01"
 top_source: "github-issues"
 pending_count: 29
 pending_overdue: 0

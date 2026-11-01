@@ -435,18 +435,8 @@
       "pageType": "topic"
     },
     {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
       "id": "community-cost",
       "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
       "pageType": "topic"
     },
     {
@@ -465,28 +455,13 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-tools",
       "name": "社群工具目錄",
       "pageType": "topic"
     },
     {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
       "id": "official-community-gap",
       "name": "官方功能 vs 社群痛點缺口分析",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

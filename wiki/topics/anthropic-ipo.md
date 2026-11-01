@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-01"
-last_news_update: "2026-10-31"
+last_news_update: "2026-11-01"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 15
-attribution_count: 12
-attribution_last: "2026-10-31"
+attribution_count: 14
+attribution_last: "2026-11-01"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
