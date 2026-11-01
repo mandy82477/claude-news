@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-10-25"
-last_news_update: "2026-10-24"
+last_updated: "2026-10-31"
+last_news_update: "2026-10-31"
 status_main: "active"
 days_since_news: 7
 parent: null
@@ -31,15 +31,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-10-31
+**最後新聞更新：** 2026-10-31
 
-> **LiveNerf 追蹤第 29 天**（2026-10-24）
-> 社群基準測試稱「看不出被降規」，仍未附具體數字；30 天結論預計近日公布。
+> **Opus 5.5 更新後，Claude Code 不再重做特定既有遊戲**（2026-10-31）
+> Anthropic 向 Game Developer 證實已更新，無害的逆向工程也有人被擋。
 
 ---
 
 ## 現況
+
+**2026-10-31 最新**：Anthropic 向 Game Developer 證實已發布 Opus 5.5 更新，引導 Claude Code 不去「重現他人的特定遊戲」。X 用戶 Chasm 發現這條規則約 10-27 以伺服器下發的設定 `tengu_heron_brook` 推送（[Game Developer](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games)）。Wccftech 引出的規則原文：原創遊戲、類型遊戲、用自己的設計素材做的遊戲可做，「即使改了名或自稱原創」也不能重做特定既有作品（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）。Tom's Hardware 彙整多位使用者回報，連開發者對自家專案的逆向工程與跨平台移植也被拒（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)），誤擋範圍僅見使用者自述，Anthropic 未公布判定邊界。Claude Code 側的行為見 [[entities/claude-code]]。細節見「歷史記錄細節」2026-10-31 條。
 
 **2026-10-22 最新**：Reddit livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新，仍未附具體數字或測試方法；30 天結論原預計約 10-24 公布，到 10-24 為止未見，細節見「LiveNerf／降智觀感」。
 
@@ -184,6 +186,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15)（GitHub Search，550 星，2026-10-09）
 - [Reddit r/ClaudeAI：Are They Nerfing Opus 5.5? Livenerf Day 20 update](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)（週熱門，2026-10-14）
 - [Show HN：500 clocks in one 6.3 MB HTML file by Opus 5.5](https://tkgally.github.io/500-clocks/)（HN 54 分，2026-10-18）
+- [Game Developer：Anthropic orders AI tool Claude to stop remaking video games](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games)（HN 29 分，2026-10-31）
+- [Tom's Hardware：Anthropic's Claude AI blocks video game cloning and reverse-engineering](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)（2026-10-31）
+- [Wccftech：Claude Code Game Restrictions Target Clones](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)（2026-10-31）
+- [Mashable：Anthropic takes steps to block Claude from reverse-engineering video games](https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering)（2026-10-31）
+- [TweakTown：vibe-coded game ports 限制](https://www.tweaktown.com/news/114429/anthropic-is-going-after-the-rise-of-vibe-coded-game-ports-with-new-claude-code-restrictions/index.html)（2026-10-31）
+- [IGN：Anthropic Updates Claude Opus in Attempt to Stop Game Clones](https://www.ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update)（2026-10-31）
+- [TechPowerUp：Anthropic Bans AI Game Clones and Reverse Engineering With Claude](https://www.techpowerup.com/354351/anthropic-bans-ai-game-clones-and-reverse-engineering-with-claude)（2026-10-31）
 - [joeseesun/opus-video-prompts](https://github.com/joeseesun/opus-video-prompts)（GitHub Search，503 星，2026-10-20）
 - [Reddit r/ClaudeAI：Did they nerf Opus 5.5? Doesn't look like it. LiveNerf day 29 update](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)（週熱門，2026-10-22）
 - [[news/2026-09-23]]
@@ -195,6 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-10-16]]
 - [[news/2026-10-18]]
 - [[news/2026-10-20]]
+- [[news/2026-10-31]]
 
 ## 歷史記錄
 
@@ -204,6 +214,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-10-31 | Anthropic 證實 Opus 5.5 更新後引導 Claude Code 不重做特定既有遊戲；使用者回報無害逆向工程也被擋 |
 | 2026-10-22 | livenerf 第 29 天更新稱「看不出被降規」，仍未附具體數字（0 留言，弱訊號）|
 | 2026-10-20 | GitHub repo `opus-video-prompts` 彙整 54 個 Opus 5.5 程式碼生成影片提示詞案例（503 星，forks／issues 未查證）|
 | 2026-10-18 | Hacker News 分享「500 clocks in one 6.3 MB HTML file by Opus 5.5」，作者連續多場對話生成 500 個自製時鐘頁面，創意展示非基準（54 分，2 個來源）|
@@ -224,6 +235,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-10**
 
+- **2026-10-31**：Anthropic 向 Game Developer 證實已更新 Opus 5.5，「steer」Claude Code 離開「recreating someone else's specific game」；規則約 10-27 以伺服器下發設定 `tengu_heron_brook` 推送（X 用戶 Chasm 發現，單一說法）。
+  - HN 相關討論最高 109 分（[Mashable](https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering)，3 個來源）、67 分（Tom's Hardware）、29 分（Game Developer）。
+  - 規則原文由 Wccftech 引出：原創、類型、自有素材可做，特定既有作品不可，改名或自稱原創亦同（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）。
+  - 誤擋回報：Tom's Hardware 彙整使用者稱無害的通用逆向、系統間移植與疑難排解也被拒；TweakTown 預期此類工作會轉向開源模型。IGN、TechPowerUp 為覆述，無新事實（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)，[TweakTown](https://www.tweaktown.com/news/114429/anthropic-is-going-after-the-rise-of-vibe-coded-game-ports-with-new-claude-code-restrictions/index.html)）。
+  - 缺口：Anthropic 未公開判定邊界，被擋案例皆為使用者自述，未見可重現的測試。
 - **2026-10-22**：Reddit r/ClaudeAI livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新；0 留言、未附具體數字或測試方法，30 天結論預計近日（約 10-24）公布（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)，週熱門，2026-10-22）
 - **2026-10-20**：GitHub repo [joeseesun/opus-video-prompts](https://github.com/joeseesun/opus-video-prompts) 彙整 54 個以 Claude Opus 5.5 生成程式碼渲染影片的提示詞案例，含可直接複製的 prompt（503 星；fork／issue／近期 commit 活躍度未查證，依弱訊號處理）（GitHub Search，2026-10-20）
 - **2026-10-18**：Hacker News 貼文《500 clocks》，作者以 Opus 5.5 生成 500 個自製時鐘網頁，作為個人版「鵜鶘騎自行車」創意測試；單一創意展示，非量化基準（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源）

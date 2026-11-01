@@ -8390,3 +8390,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - **5b 跨家榜單週更**：跨家榜單週更因雲端 egress 未開（leaderboard）跳過，留待本機 `/weekly`。
 - 需使用者端設定：
   - **claude.ai 雲端環境網路白名單（Trusted → Custom）**：⏳ 已擱置 **7 週**（2026-09-19 起每輪 lint 皆記）。要加的網域：`huggingface.co`、`eqbench.com`、`metr.org`、`openrouter.ai` 等 leaderboard 組 11 個（5b 唯一的阻斷原因，目前 1/12 通）；本輪 5c／5h 另撞到 `sec.gov`、`comptroller.nyc.gov`、`vals.ai`、`eu.36kr.com`、`www.groundlevel-ai.com`、`linuxiac.com`、`thenewstack.io`、`phoronix.com`、`scientificamerican.com`——這幾個擋住的是一手原文直讀，目前只能退用具名媒體的搜尋摘要並在頁面標明「未能直讀原文」。設定位置：claude.ai 環境設定的網路存取改 Custom 並加入上述網域。
+
+## 2026-10-31 Ingest
+
+- 來源日報：[[news/2026-10-31]]（本機補跑：10-31 GitHub Actions 抓料 segfault 致當日無原料，根因修於 commit 6e120bdd；重抓 65 則、日報 23 條）
+- 更新頁面：
+  - **模型**：[[entities/opus-5-5]]（callout、現況、歷史記錄 10-31：Opus 5.5 更新引導 Claude Code 不重現他人特定遊戲，規則推送 `tengu_heron_brook` 為單一說法、無害逆向工程被擋為使用者自述）
+  - **功能**：[[entities/claude-code]]（callout 10-31；版本表 v2.1.316 `CLAUDE_CODE_DISABLE_ULTRATHINK`、gateway 群組預算池；互動數更新 7 則；已知問題新增 6 則含遊戲重製限制）
+  - **商業**：[[topics/anthropic-ipo]]（IPO 細節 prepend 5 則：BB 級信評預期、S-1 後科技股、CNBC、Yahoo、Eisman）、[[topics/anthropic-business]]（callout 信評一則、IPO 前瞻補 10-31、Eisman 10-31 跟進）、[[entities/pricing]]（#47509 Team 高階席位 10-31）
+  - **安全政策**：[[topics/ai-agent-safety-product-vulns]]（Cursor 惡意套件續報：版本擴為 2.1.312／2.1.313、流通日更正 10-29、微軟分析；SneakPeek 不動）、[[topics/ai-agent-safety-cyber]]（Cathedral 併入 DOGE 事件；「訓練更大模型」封鎖傳聞新懸置）、[[topics/anthropic-government-policy]]（浮水印擴至四模型與取樣參數漏洞；90 萬美元加州政治獻金）、[[topics/ai-agent-safety]]（母頁 callout 與路由表最後動態）
+  - **社群**：[[topics/community-tech-discussions]]（HN 232 分「Anthropic 封鎖訓練更大模型用途」單方說法與社群反應）
+  - **投資分析**：[[topics/market-signals]]（IPO 進程第 21 則：Blackstone 預期 BB 級，📉、單一標題；BX 列覆寫；里程碑 11-14）
+  - **人物**：無（Torvalds 一則 10-13 已歸因 discussions，不重複）
+- 新增頁面：無
+- feature-radar：本日無新功能；⭐ 三件無合格替補維持 10-22 推薦（Duet 試用價值 ⏳ 不達標），備忘記全覽表 Mods 熱度與 10-22 備忘不一致、交功能記者核對
+- index：無
+- 摘要：Anthropic 以伺服器下發規則讓 Claude Code 拒絕重現特定遊戲並誤擋無害逆向工程；Cursor 惡意 Claude Code 套件事件擴大受影響版本；浮水印擴至四款舊模型但兩款可繞；Blackstone 預期 IPO 後僅 BB 級信評。
+- 呈現品質：[功能] `entities/claude-code` ⚠️ 已修復（4 筆新增列逾 200 字元縮短後通過）；其餘全部通過
+- 品質備註：[模型] 來源歸因行未照五欄格式（主編依回報內容改寫落帳）；[人物] 來源歸因欄寫說明句而非「無」；[開發實務] 回報缺八個標準欄；[投資分析] 回報末段說明混入來源歸因欄；[功能] 複核腳本列 MIXED 一則未回應（記者明寫派給安全政策未寫，屬合理）
+- 分類回退：追加派工 2 筆（分類複核記者判誤排除→商業：Eisman 訪談、Yahoo IPO 贏家輸家；商業記者以弱證據收進 anthropic-ipo／anthropic-business）；駁回 0 筆；主編排除維持 8 則
+- 轉知帳本：新開 H-29935d（功能→模型，opus-5-5 與 claude-code 遊戲限制口徑一致）、H-1458cf（安全政策→功能，claude-code 補 Cursor 套件事件版本與窗口）；H-7526b2 功能記者判不適用續留意，保留 open；商業記者「market-signals 是否接信評」由同輪投資分析記者已處理，不登帳
+- devpractice 沉澱：候選 2 筆（community-cost 背景 agent 逐字稿每 30 秒重送、official-community-gap `CLAUDE_CODE_SUBAGENT_EFFORT`）；手冊寫入 0 則（無開發實務包）；基準線 e9a12a94→8ca71ff7
+- market 判讀：判讀 1 則（Blackstone 預期 BB 級信評），寫入 [[topics/market-signals]]
+- 主編待辦：[投資分析] 標普／穆迪／惠譽是否已發布 Anthropic 正式評等、Anthropic 或 Blackstone 是否證實——主編本輪查證結果見下一行
+- 流程備註：4b／4c 與 3b 商業追加同批派出（追加兩則為低值弱證據，不影響 4b 讀的新增行與 4c 的 wikilink 目標）；懸置掃描本輪 0 命中（Phase A 3f 曾報 S:1 A:2，Step 2 重跑為 0，差異未究）
+- 收件匣提醒：`wiki/reader-notes.md` 有 1 筆 ⏳ 逾 14 天（2026-08-08 codebase map／agent 記憶格式規約），週度回顧持續追蹤
+- 主編查證（2026-11-01，WebSearch 多家交叉，二手）：三大評等機構（S&P／Moody's／Fitch）未見正式公開評等（Bloomberg 轉述「尚未發布」）；KBRA 2026-06 BB+ 為既有事實（10-17 已記）；merca2.es 稱 Moody's Baa1／Fitch BBB+／S&P BBB 為單一西語來源、未獲英文來源交叉，不採；Anthropic 與 Blackstone 均未證實 BB 級預期。market-signals 里程碑 11-14 複查維持。

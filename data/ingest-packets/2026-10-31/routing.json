@@ -1,0 +1,583 @@
+{
+ "https://github.com/anthropics/claude-code/releases/tag/v2.1.316": {
+  "title": "[anthropics/claude-code] v2.1.316",
+  "source": "GitHub / anthropics/claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/27302": {
+  "title": "[FEATURE] Support multiple Connector accounts (same connector, different accounts) in Claude and Claude Code on the web (claude.ai/code)",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/60705": {
+  "title": "Model behavior: /goal Stop-hook directive cited as authorization for unrequested actions; absence-from-search treated as evidence of absence; structure-as-substance under pushback",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://twitter.com/jiahaoshao1/status/2116475922190922088": {
+  "title": "Anthropic blocks users for anything touching training larger models",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策",
+   "社群"
+  ],
+  "reason": "",
+  "note": "僅推文單方說法，未見官方回應；HN 232 分"
+ },
+ "https://github.com/anthropics/claude-code/issues/18435": {
+  "title": "[FEATURE] Add the ability to manage multiple Claude accounts within the Claude Desktop app with easy switching between profiles.",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering": {
+  "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+  "source": "Hacker News",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": "同事件多源：Game Developer 取得 Anthropic 證實；Wccftech 引出規則原文（原創／類型／自有素材可做，特定既有作品不可）；Tom's Hardware 彙整使用者回報含無害逆向工程被擋；IGN、TweakTown、TechPowerUp 為覆述"
+ },
+ "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/": {
+  "title": "Anthropic to receive high 'junk' rating from credit agencies following IPO",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.indiatoday.in/technology/news/story/ai-startup-hacks-anthropic-in-12-hours-gains-access-to-employee-details-and-internal-messages-3025452-2026-10-26": {
+  "title": "AI startup hacks Anthropic, gains access to employee details, internal messages",
+  "source": "Hacker News",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/47509": {
+  "title": "feat: Team plan needs a Max 20x equivalent tier for power users",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked": {
+  "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
+  "source": "Hacker News",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.thebignewsletter.com/p/why-anthropics-filing-crushed-tech": {
+  "title": "Why Anthropic's filing crushed tech stocks",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/17428": {
+  "title": "[Feature Request] Enhanced /compact with file-backed summaries and selective restoration",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/86069": {
+  "title": "[BUG] Windows/MSIX 1.28929.0: cross-session messages land in the target's composer but are never submitted — session never responds",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/28791": {
+  "title": "[FEATURE] Sync conversation history between CLI and Claude Code desktop app",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/65632": {
+  "title": "[BUG] Inline KaTeX math (`$...$`) no longer renders in chat output — only block `$$...$$` works (regression)",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/57371": {
+  "title": "Claude Desktop (Windows): provide a way to disable the bundled Cowork background service (CoworkVMService) for users who don't use Cowork",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games": {
+  "title": "Anthropic orders AI tool Claude to stop remaking video games",
+  "source": "Hacker News",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/95326": {
+  "title": "[BUG]  [Claude in Chrome] All tools blocked on reddit.com (and redd.it) with \"not allowed due to safety restrictions\" since 2026-09-18 — worked through 2026-09-17",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/79808": {
+  "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/12953": {
+  "title": "[BUG] Mousewheel scrolls through input history instead of chat history",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/anthropics/claude-code/issues/91495": {
+  "title": "[BUG] Site permissions (\"Allow all websites\") ignored by the built-in browser in Claude Code Desktop",
+  "source": "GitHub Issues / claude-code",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/kevinhall/mcp-tool-cost-20-job-actors-on-apify-21k-to-327k-tokens-each-1hm4": {
+  "title": "MCP tool cost: 20 job Actors on Apify, 2.1K to 32.7K tokens each",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n": {
+  "title": "The September cut took 17% of my Claude Code week. Subagents were taking 48%.",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/anupa/your-coding-agents-work-is-lost-in-md-file-4emd": {
+  "title": "Your coding agent's work is lost in .md file",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/bargan/the-scarce-resource-is-not-tokens-it-is-my-attention-why-i-built-ccdeck-4pik": {
+  "title": "The scarce resource is not tokens, it is my attention — why I built ccdeck",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.youtube.com/watch?v=AMoKKtNFkDs": {
+  "title": "'Big Short' Trader Steve Eisman on Anthropic IPO",
+  "source": "Hacker News",
+  "categories": [
+   "商業"
+  ],
+  "reason": "分類回退自 排除（分類複核記者判誤排除：IPO 事件線屬商業，收錄門檻由記者判）",
+  "note": ""
+ },
+ "https://dev.to/iggredible/claude-code-context-is-like-a-fridge-put-only-perishable-items-in-it-f1p": {
+  "title": "Claude Code Context Is Like a Fridge - Put Only Perishable Items in It",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/Kuldeep-045/agent-arcade": {
+  "title": "Show HN: Agent-arcade – Terminal games that pause when Claude Code/Codex is done",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/helderberto/my-ai-coding-workflow-v3-3c4c": {
+  "title": "My AI Coding Workflow, v3",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/muchassak/how-i-work-with-claude-code-memory-gates-and-the-mistakes-that-built-them-1n8l": {
+  "title": "How I work with Claude Code: memory, gates and the mistakes that built them",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/vpodk/quantum-circuit-design-optimization-using-claude-ai-2bcn": {
+  "title": "Quantum Circuit Design Optimization Using Claude AI",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "模型"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/rbonweb/the-claude-code-desktop-vulnerability-that-beat-three-layers-of-sandboxing-296n": {
+  "title": "The Claude Code Desktop Vulnerability That Beat Three Layers of Sandboxing",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/techaiwire/claude-sonnet-55-nears-opus-55-at-half-the-price-4hoj": {
+  "title": "Claude Sonnet 5.5 nears Opus 5.5 at half the price",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "模型"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://codeconnect.sh": {
+  "title": "Show HN: CodeConnect: Coding Agents on Your iPhone",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://dev.to/joancomadran/single-agent-vs-multi-agent-when-subagents-are-worth-it-5146": {
+  "title": "Single agent vs multi-agent: when subagents are worth it",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": "2026-10-30 主編已判定：此則歸社群、非開發實務（分類回退一跳用盡），依前日判定派"
+ },
+ "https://github.com/khalilgharbaoui/opencode-claude-code-plugin": {
+  "title": "Show HN: Run Claude Code inside OpenCode through the official CLI",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://news.ycombinator.com/item?id=50313220": {
+  "title": "Show HN: Smallest-editor–so-far.exe (912 bytes)",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "趣味專案（912 bytes 編輯器），無 Claude 生態工程決策價值",
+  "note": ""
+ },
+ "https://multispace.dev/": {
+  "title": "Show HN: Free Unlimited Virtual Monitors+Watch Claude Work on Them+Community",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "無技術內容的行銷稿（虛擬螢幕服務），與 Claude 僅附帶提及",
+  "note": ""
+ },
+ "https://dev.to/axrisi/claude-code-and-linus-torvalds-the-linux-patch-tradeoffs-299j": {
+  "title": "Claude Code and Linus Torvalds: the Linux patch tradeoffs",
+  "source": "dev.to / #claudecode",
+  "categories": [
+   "社群",
+   "人物"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://github.com/marlandoj/muse-zouroboros": {
+  "title": "Show HN: Muse Zouroboros, gives Muse a software factory",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "非 Claude 工具（Muse 擴充），與 Claude／Anthropic 無直接關聯",
+  "note": ""
+ },
+ "https://clawdline.com/": {
+  "title": "Show HN: Clawdline – Manage Claude Code/Codex sessions across computers",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://vestlens.com/": {
+  "title": "Show HN: VestLens, a MCP App for Wealthsimple Portfolios in Claude/ChatGPT",
+  "source": "Hacker News",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://uncracked.city": {
+  "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+  "source": "Hacker News",
+  "categories": [],
+  "reason": "通用 LLM 遊戲，與 Claude／Anthropic 無直接關聯",
+  "note": ""
+ },
+ "https://dev.to/bobbyhalljr/claude-haiku-55-is-cheap-until-100k-tokens-build-a-tiny-price-gate-in-typescript-3k4": {
+  "title": "Claude Haiku 5.5 Is Cheap Until 100k Tokens. Build a Tiny Price Gate in TypeScript.",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": "Haiku 5.5 定價門檻 100k prompt tokens 為作者引述，需對官方定價頁"
+ },
+ "https://www.xda-developers.com/stopped-juggling-claude-code-codex-other-coding-agents-after-finding-open-source-app/": {
+  "title": "I stopped juggling Claude Code, Codex, and other coding agents after finding this open-source app - XDA",
+  "source": "Google News / XDA",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://finance.yahoo.com/technology/ai/articles/1-big-winner-1-loser-230502274.html": {
+  "title": "1 Big Winner and 1 Loser From the Upcoming Anthropic IPO - Yahoo Finance",
+  "source": "Google News / Yahoo Finance",
+  "categories": [
+   "商業"
+  ],
+  "reason": "分類回退自 排除（分類複核記者判誤排除：IPO 事件線屬商業，收錄門檻由記者判）",
+  "note": ""
+ },
+ "https://www.reddit.com/r/artificial/comments/1xknbji/really_impressed_with_ai_language_translation/": {
+  "title": "Really impressed with AI language translation",
+  "source": "Reddit / r/artificial",
+  "categories": [],
+  "reason": "通用 AI 翻譯感想，與 Claude／Anthropic 無直接關聯，0 留言",
+  "note": ""
+ },
+ "https://simonwillison.net/2026/Oct/31/datasette-llm/": {
+  "title": "datasette-llm 0.1a9",
+  "source": "Blog / Simon Willison",
+  "categories": [],
+  "reason": "datasette-llm 版本小更新，內容不涉 Claude／Anthropic",
+  "note": ""
+ },
+ "https://mixed-news.com/en/cursor-claude-code-malicious-extension-backdoor-warning/": {
+  "title": "“Uninstalling the extension may not be sufficient”: Cursor warns Claude Code users - MIXED News",
+  "source": "Google News / MIXED News",
+  "categories": [
+   "安全政策",
+   "功能"
+  ],
+  "reason": "",
+  "note": "續 10-30 Cursor 惡意套件事件：受影響版本擴為 2.1.312 與 2.1.313；Anthropic 稱自家系統未遭入侵，資安公司稱套件經 Anthropic 在 Cursor 的官方帳號發出，取得權限途徑雙方未說明"
+ },
+ "https://www.ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update": {
+  "title": "Claude Company Anthropic Updates Claude Opus in Attempt to Stop Those Controversial Game Clones - IGN",
+  "source": "Google News / IGN",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://sfstandard.com/2026/10/31/anthropic-democratic-party-contributions-sf-dems/": {
+  "title": "Anthropic pours $900K into California Democrats days before election - The San Francisco Standard",
+  "source": "Google News / The San Francisco Standard",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/": {
+  "title": "Claude Code Game Restrictions Target Clones, But Developers Say Legitimate Projects Are Being Blocked - Wccftech",
+  "source": "Google News / Wccftech",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.tweaktown.com/news/114429/anthropic-is-going-after-the-rise-of-vibe-coded-game-ports-with-new-claude-code-restrictions/index.html": {
+  "title": "Anthropic is going after the rise of vibe-coded game ports with new Claude Code restrictions - TweakTown",
+  "source": "Google News / TweakTown",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/": {
+  "title": "Anthropic's watermark rollout leaves a loophole on two older Claude models - The Decoder",
+  "source": "Google News / The Decoder",
+  "categories": [
+   "安全政策",
+   "模型"
+  ],
+  "reason": "",
+  "note": "The Decoder 稱兩款舊模型調一個取樣參數可避開浮水印，為單一來源分析"
+ },
+ "https://www.engadget.com/2300253/how-to-use-claude-duet/": {
+  "title": "How To Use Claude Duet When It Rolls Out To You - Engadget",
+  "source": "Google News / Engadget",
+  "categories": [
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.techpowerup.com/354351/anthropic-bans-ai-game-clones-and-reverse-engineering-with-claude": {
+  "title": "Anthropic Bans AI Game Clones and Reverse Engineering With Claude - TechPowerUp",
+  "source": "Google News / TechPowerUp",
+  "categories": [
+   "模型",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://mashable.com/tech/openai-chatgpt-outage-updates-grok-gemini": {
+  "title": "ChatGPT, Claude, Gemini down: What we know about the AI outages (updated) - Mashable",
+  "source": "Google News / Mashable",
+  "categories": [],
+  "reason": "非新聞事件：9/4 停機文章的更新時間戳重推，無當日新內容",
+  "note": ""
+ },
+ "https://northeasttimes.com/2026/10/31/tampered-claude-code-extension-put-ssh-backdoor-on-up-to-5-000-cursor-users/": {
+  "title": "Tampered Claude Code Extension Put SSH Backdoor on Up to 5,000 Cursor Users' Computers - Northeast Times",
+  "source": "Google News / Northeast Times",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://cybersecuritynews.com/malicious-claude-code-extension-with-cursor/": {
+  "title": "Cursor Confirms Malicious Claude Code Extension With SSH Backdoor Was Available for 11 Hours - CyberSecurityNews",
+  "source": "Google News / CyberSecurityNews",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://thenextweb.com/news/tampered-claude-code-extension-cursor-ssh-backdoor": {
+  "title": "Anthropic denies breach as tampered Claude Code extension hits Cursor users - The Next Web",
+  "source": "Google News / The Next Web",
+  "categories": [
+   "安全政策",
+   "功能"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html": {
+  "title": "Anthropic's path to the Nasdaq just got a lot bumpier - CNBC",
+  "source": "Google News / CNBC",
+  "categories": [
+   "商業"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.bankinfosecurity.com/cursor-confirms-anthropic-claude-code-extension-compromised-a-33263": {
+  "title": "Cursor Confirms Anthropic Claude Code Extension Compromised - BankInfoSecurity",
+  "source": "Google News / BankInfoSecurity",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/": {
+  "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor - Microsoft",
+  "source": "Google News / Microsoft",
+  "categories": [
+   "安全政策"
+  ],
+  "reason": "",
+  "note": ""
+ },
+ "https://www.reddit.com/r/MachineLearning/comments/1xggw1k/what_is_the_value_proposition_of_rl_environment/": {
+  "title": "What is the value proposition of \"RL environment\" companies? [D]",
+  "source": "Reddit / r/MachineLearning · 週熱門",
+  "categories": [],
+  "reason": "通用 ML 產業討論（RL 環境公司），與 Claude／Anthropic 無直接關聯",
+  "note": ""
+ },
+ "https://dev.to/persimmoq/i-built-an-ai-coworker-that-works-while-i-sleep-using-nothing-but-claude-code-6k8": {
+  "title": "I built an AI coworker that works while I sleep, using nothing but Claude Code",
+  "source": "dev.to / #anthropic",
+  "categories": [
+   "社群"
+  ],
+  "reason": "",
+  "note": ""
+ }
+}

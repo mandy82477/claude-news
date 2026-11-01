@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這頁答兩題：** 代理讀進來的外部內容被塞進指令（提示注入）怎麼防、最近多了哪些手法；注入會不會從單次觸發變成自己擴散。
 
-**能先做的事在母頁：** 每個攻擊面能先做的一件事在 [[topics/ai-agent-safety#現在還擋不住的攻擊]]，官方立場（沙箱才是安全邊界、Auto 模式不是）在 [[topics/ai-agent-safety#官方現在擋到哪]]；本頁是證據與收斂判斷。他家 agent 的注入事件，只在補上新載體或新防法時收。模型自己能發動什麼網路攻擊、防守方的准入審核（CVP）不在本頁，見姊妹頁 [[topics/ai-agent-safety-cyber]]。
+**能先做的事在母頁：** 每個攻擊面能先做的一件事在 [[topics/ai-agent-safety#現在還擋不住的攻擊]]，官方立場（沙箱才是安全邊界、Auto 模式不是）在 [[topics/ai-agent-safety#官方現在擋到哪]]；本頁是證據與收斂判斷。他家 agent 的注入事件，只在補上新載體或新防法時收。模型自己能發動什麼網路攻擊、防守方的放行審核（CVP）不在本頁，見姊妹頁 [[topics/ai-agent-safety-cyber]]。
 
 ---
 

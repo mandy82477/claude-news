@@ -23,7 +23,7 @@ staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
-# 模型網攻能力、濫用與防守方准入
+# 模型網攻能力、濫用與防守方放行
 
 模型能做到哪些網路攻擊、誰拿 Claude 打人、官方對防守方開了哪些門，以及正當研究者被誤擋。
 
@@ -32,12 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
 **最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-30
+**最後新聞更新：** 2026-10-31
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-10-30）
-> CSO Online 跟進指出，官方研究模型揭露的 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；CVE 編號與受影響版本未附。
+> **最新動態**（2026-10-31）
+> - **入侵聲稱有細節了**：India Today 稱資安新創 Cathedral 在 Anthropic 開放外部研究者的漏洞計畫中，不到 12 小時進入其內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；出自《華盛頓郵報》看過的報告草稿，Anthropic 未回應。
+> - **使用限制傳聞**：一則推文稱 Anthropic 會封鎖任何涉及「訓練更大模型」用途的使用者（HN 232 分）；僅單方說法，未見官方回應。
 
 ---
 
@@ -45,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這頁答四題：** 模型能做到什麼攻擊；有人拿 Claude 打人，哪些是官方承認的；防守方能申請什麼；通過審核還被擋怎麼辦。
 
-**這些都不擋母頁現況表的任何一列**：那張表問的是別人怎麼打你（[[topics/ai-agent-safety#現在還擋不住的攻擊]]），本頁是能力、濫用與准入。政府面見 [[topics/anthropic-government-policy]]，模型面見 [[entities/mythos]]，中美信任見 [[topics/safety-china-trust-dispute]]。姊妹頁 [[topics/ai-agent-safety-prompt-injection]] 管反方向：攻擊者把指令塞進代理讀到的內容（例如 10-08 Haiku 5.5 抗注入數字的完整脈絡），本頁只管模型自己能做出的攻擊。
+**這些都不擋母頁現況表的任何一列**：那張表問的是別人怎麼打你（[[topics/ai-agent-safety#現在還擋不住的攻擊]]），本頁是能力、濫用與放行。政府面見 [[topics/anthropic-government-policy]]，模型面見 [[entities/mythos]]，中美信任見 [[topics/safety-china-trust-dispute]]。姊妹頁 [[topics/ai-agent-safety-prompt-injection]] 管反方向：攻擊者把指令塞進代理讀到的內容（例如 10-08 Haiku 5.5 抗注入數字的完整脈絡），本頁只管模型自己能做出的攻擊。
 
 ---
 
@@ -111,6 +112,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-10
 
+#### Hacker News（推文）：稱 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者（2026-10-31 新增，單方聲稱）
+
+- **揭露來源**：Hacker News 232 分（推文 [@jiahaoshao1](https://twitter.com/jiahaoshao1/status/2116475922190922088)），單一來源；留言串主流意見是專業使用者應主動準備替代模型與備援
+- ❓ **待查證**（標 2026-10-31｜查 jiahaoshao1、訓練更大模型｜複 2026-11-14）｜**封鎖範圍與官方政策依據**：推文指稱的封鎖條件、被封者實際做了什麼、是否出於 Anthropic 禁止以輸出訓練競爭模型的使用條款，均未見官方回應或第二來源；與 [[topics/anthropic-government-policy]] 蒸餾線的關係未見報導
+- **性質判斷**：屬使用限制與誤擋的單方說法，可信度低，暫記錄觀察；用 Claude 產生訓練資料或做模型研究的團隊，可先對照自己用途與使用條款
+
 #### Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 等軟體關鍵漏洞，組出 5 條攻擊鏈（2026-10-28 新增，官方能力展示）
 
 - **揭露來源**：[Anthropic 官方研究〈Discovering and exploiting vulnerabilities in real-world software with Claude〉](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)（2026-10-27 20:18 UTC；HN 15 分）；The Hacker News、CyberSecurityNews 同日跟進
@@ -128,11 +135,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-11-10）｜**分類器是否確有行為變化**：單一使用者回報、0 留言、無跨來源佐證，是分類器近期確有調整還是個案誤判均無定論
 - **可信度評估**：單一 Reddit 貼文、0 留言、無其他使用者附議或媒體跟進，可信度低，暫記錄觀察
 
-#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-28 更新）
+#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-31 更新）
+
+- **2026-10-31 更新（India Today 轉述，HN 74 分）**：報導指名新創為 Cathedral，稱其是在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時進入內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿
+  - Cathedral 與前述前 DOGE 成員新創是否同一家（待確認，推論為同一事件）；是否在計畫授權範圍內、修補範圍與 Anthropic 回應均未見報導
 
 - **2026-10-28 更新（The Independent 跟進）**：The Independent 報導稱該新創聲稱在不到 12 小時內「攻破」Anthropic；具體攻擊手法、影響範圍與 Anthropic 官方回應仍未見報導，與 10-26 Gizmodo／WaPo 的聲稱同源（Anthropic 未回應）
 - **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體；10-28 The Independent 第三家媒體跟進
-- ❓ **待查證**（標 2026-10-26｜查 DOGE、Washington Post）｜**入侵聲稱（僅標題可用）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍；已掃日報至 2026-10-30 未見 Anthropic 回應，官方頁面未查證
+- ❓ **待查證**（標 2026-10-26｜查 DOGE、Washington Post｜訊 2026-10-31）｜**入侵聲稱（單方聲稱，細節增至員工資料與內部訊息）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍；已掃日報至 2026-10-30 未見 Anthropic 回應，官方頁面未查證
 - **可信度評估**：僅為該新創公司單方聲稱，Anthropic 尚未公開回應或證實，不當作既成事實；三家主流媒體跨日報導但內容均止於標題層級，10-28 跟進僅加「不到 12 小時」細節，未提高可信度
 
 #### Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計（2026-10-26 新增，官方安全回應）
@@ -410,6 +420,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-10-31
+- **[📋 新增，單方聲稱] Hacker News（推文）：稱 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者**：無官方回應，詳見「## 技術彙整」
+- **[📋 跟進，官方未回應] India Today：Cathedral 稱不到 12 小時進入 Anthropic 內部系統，接觸員工資料與內部訊息**：續 10-26 入侵聲稱，詳見「## 技術彙整」
 
 ### 2026-10-28
 - **[🛠️ 新增，官方能力展示] Anthropic 官方研究：未發布內部模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈**：達 RCE 並繞過 Android 鎖定畫面，多數幾乎不需使用者互動；修補狀態與模型是否公開發布均未見報導，詳見「## 技術彙整」、「## 模型網攻能力與防護」

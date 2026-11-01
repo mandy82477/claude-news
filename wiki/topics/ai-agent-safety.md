@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-30
+**最後更新：** 2026-10-31
 **最後新聞更新：** 2026-10-29
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-10-30）
-> - **供應鏈**：Cursor 市集版 Claude Code 延伸套件遭植入 SSH 後門，Cursor 證實最多 5,000 人受影響。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
-> - **網攻能力**：CSO Online 跟進指出官方研究模型找到的 Linux 漏洞可致遠端 root 權限。見 [[topics/ai-agent-safety-cyber#2026-10]]。
+> **最新動態**（2026-10-31）
+> - **供應鏈**：Cursor 市集惡意 Claude Code 套件受影響版本擴為 2.1.312／2.1.313，只解除安裝不夠；Anthropic 稱未遭入侵。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+> - **入侵聲稱**：資安新創 Cathedral 稱在 Anthropic 外部研究者計畫中不到 12 小時進入內部系統，Anthropic 未回應。見 [[topics/ai-agent-safety-cyber#2026-10]]。
 
 ---
 
@@ -43,7 +43,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **現在最該知道的：** 官方把 Auto 模式與 deny-list 都定性為不是安全邊界，官方指定的安全邊界是沙箱。所以「等官方修到 0%」不會發生，你能動的是隔離環境與監看。下方「現在還擋不住的攻擊」逐列寫出誰會遇到、能先做的一件事。
 
-**三類問題各住一頁：** 提示注入與自我複製、Claude Code／MCP 的漏洞與誤操作、模型網攻能力與防守方准入。每一類現在走到哪見「三類各自走到哪」，證據往下鑽到子頁。
+**三類問題各住一頁：** 提示注入與自我複製、Claude Code／MCP 的漏洞與誤操作、模型網攻能力與防守方放行。每一類現在走到哪見「三類各自走到哪」，證據往下鑽到子頁。
 
 **已經分出去的線：** 中美 AI 工具信任對峙（2026-06-30 起）見 [[topics/safety-china-trust-dispute]]，政府與外交面見 [[topics/anthropic-government-policy]]，評測越界事件（AISI／Mythos 5、Anthropic 自揭的評估事故）見 [[topics/ai-eval-boundary-incidents]]。
 
@@ -54,8 +54,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-10-28 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-10-30 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-30 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-10-31 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-31 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%
@@ -92,7 +92,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **CLAUDE.md／AGENTS.md 的指令沒有強制力**：GitHub Issue #53223（31 留言，10+ 份獨立回報，2026-10-29）稱遵從性在架構上未被強制執行；官方未回應，所以這是社群回報，不是官方立場。
 - **模型層的數字**：Haiku 5.5 的隱藏指令注入得手率由 Haiku 4.5 的 83.2% 降到 7.1%，GUI 電腦操作仍最弱（24.4%）（官方 Transparency Hub，2026-10-24 查證）；這是模型被騙的機率，不等於產品層有信任邊界。
 - **89%／0%／60–80% 三個數字答的不是同一件事**：89% 與 0% 皆出自 [Anthropic 官方 2026-08-07 blog](https://claude.com/blog/auto-mode-default-in-claude-code)（0% 為第三方 Trajectory Labs 720 次間接注入測試結果）；60–80% 是 embracethered 針對另一種攻擊面（網頁摘要＋`struct.py` 遮蔽）的實測，兩者不互相推翻。
-- **防守方准入不擋上表任何一列**：CVP、Cyber Mission、LSVP、EFS 與使用政策這類表態，答的是「誰能用到更完整的能力」，見 [[topics/ai-agent-safety-cyber#防守方能申請什麼]]。
+- **防守方放行不擋上表任何一列**：CVP、Cyber Mission、LSVP、EFS 與使用政策這類表態，答的是「誰能用到更完整的能力」，見 [[topics/ai-agent-safety-cyber#防守方能申請什麼]]。
 - **EFS 的企業面**：採用與資料主權見 [[topics/anthropic-business]]，它也是 [[entities/pricing]] 兩則企業資料保留傳聞的官方版本。
 - **還沒有的**：官方至今沒有對外部內容的信任邊界機制（來源標記、套件名驗證、寫入確認），十月多出來的載體見 [[topics/ai-agent-safety-prompt-injection#目前結論]]。官方也還沒有高風險操作的 agent 安全指引；**模型層安全（拒絕危險請求）不等於產品層安全（防誤操作、修補沙箱逃逸）**，上表每一列問的都是後者。
 
@@ -116,7 +116,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 模型網攻能力與防護
 
-防守方准入在擴大（CVP 三層、Cyber Mission），通過審核還被擋的摩擦沒有官方修復時程；拿 Claude 打人的案例，官方承認的只有威脅情報報告點名的幾件，其餘是第三方說法。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
+防守方放行在擴大（CVP 三層、Cyber Mission），通過審核還被擋的摩擦沒有官方修復時程；拿 Claude 打人的案例，官方承認的只有威脅情報報告點名的幾件，其餘是第三方說法。事件表、誰承認了什麼、誰能申請什麼見 [[topics/ai-agent-safety-cyber]]。
 
 ### 評測越界
 

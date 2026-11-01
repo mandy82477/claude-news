@@ -35,10 +35,10 @@
 |---|---|
 | `topics/ai-agent-safety-prompt-injection` | 代理讀進來的外部內容（網頁、repo 檔案、MCP 回應、記憶、標頭）被塞指令的事件與防法；注入或 agent 自我擴散（蠕蟲化）的論述與實測；他家 agent 的注入事件只在補上新載體或新防法時收 |
 | `topics/ai-agent-safety-product-vulns` | Claude Code、Claude Desktop、MCP SDK、外掛與擴充的漏洞與修補；供應鏈與惡意套件；誤刪等誤操作；agent 在真實環境做出沒被要求的動作；帳號、憑證、付費存取被盜用或轉售；第三方防護產品 |
-| `topics/ai-agent-safety-cyber` | 模型做網路攻擊的能力；有人拿 Claude 打別人（濫用）；防守方准入計畫（CVP、Cyber Mission、LSVP、EFS 這類）與正當研究者被誤擋；官方非資安的安全政策表態 |
+| `topics/ai-agent-safety-cyber` | 模型做網路攻擊的能力；有人拿 Claude 打別人（濫用）；防守方放行計畫（CVP、Cyber Mission、LSVP、EFS 這類）與正當研究者被誤擋；官方非資安的安全政策表態 |
 | `topics/ai-eval-boundary-incidents` | 評測越界：AI 評估中模型做出未經授權、影響到評估範圍外的動作（UK AISI、Anthropic 自揭的評測事故）、各方數字口徑與官方處置 |
 
-- **一則事件只住一頁，依序問，第一個「是」就定案：** ① 評估中模型做出影響評估範圍外真實系統或真人的動作（AISI、廠商自揭的評估事故）→ `topics/ai-eval-boundary-incidents`；② 主角是模型的攻擊能力、官方的網攻防護研究與計畫、防守方准入與誤擋、有人拿 Claude 打第三方、或非資安的政策表態 → `topics/ai-agent-safety-cyber`；③ 攻擊者把指令放進代理會讀的內容（網頁、repo 檔案與設定、MCP 回應、記憶、標頭、下載檔），或在談這類注入的手法、防法與自我擴散（含本頁訊號表、自我複製階梯已引用的事件）→ `topics/ai-agent-safety-prompt-injection`，該產品之後出了修補版也一樣；④ 其餘 Claude 產品的漏洞、供應鏈、誤操作、agent 在真實環境越界、帳號與憑證、資料外洩疑慮、第三方防護產品 → `topics/ai-agent-safety-product-vulns`。四問都答不出，才寫母頁 `### 未歸類`，週更時分派（不設預設子頁，`.claude/reporter-rules/page-lifecycle.md`「路由」條）。別頁要提它就寫 `[[topics/<子頁>#YYYY-MM]]`。
+- **一則事件只住一頁，依序問，第一個「是」就定案：** ① 評估中模型做出影響評估範圍外真實系統或真人的動作（AISI、廠商自揭的評估事故）→ `topics/ai-eval-boundary-incidents`；② 主角是模型的攻擊能力、官方的網攻防護研究與計畫、防守方放行與誤擋、有人拿 Claude 打第三方、或非資安的政策表態 → `topics/ai-agent-safety-cyber`；③ 攻擊者把指令放進代理會讀的內容（網頁、repo 檔案與設定、MCP 回應、記憶、標頭、下載檔），或在談這類注入的手法、防法與自我擴散（含本頁訊號表、自我複製階梯已引用的事件）→ `topics/ai-agent-safety-prompt-injection`，該產品之後出了修補版也一樣；④ 其餘 Claude 產品的漏洞、供應鏈、誤操作、agent 在真實環境越界、帳號與憑證、資料外洩疑慮、第三方防護產品 → `topics/ai-agent-safety-product-vulns`。四問都答不出，才寫母頁 `### 未歸類`，週更時分派（不設預設子頁，`.claude/reporter-rules/page-lifecycle.md`「路由」條）。別頁要提它就寫 `[[topics/<子頁>#YYYY-MM]]`。
 - 上表「收什麼」是四問的摘要，兩者不一致時以四問為準。
 - 子頁 `## 技術彙整` 依日期分 `### YYYY-MM`，事件標題用 `####`；`## 時序` 照舊以 `### YYYY-MM-DD` 分日。
 
@@ -54,7 +54,7 @@
 
 ### 3. 母頁 `## 官方現在擋到哪`、`## 拿什麼擋`
 
-- `## 官方現在擋到哪` 一條一個官方立場或官方數字，每條寫得出出處與日期；立場只有轉述、沒有官方原文的，條內明寫「他人轉述」。防守方准入、非資安政策表態只留一條指向 `topics/ai-agent-safety-cyber`，細節不抄。
+- `## 官方現在擋到哪` 一條一個官方立場或官方數字，每條寫得出出處與日期；立場只有轉述、沒有官方原文的，條內明寫「他人轉述」。防守方放行、非資安政策表態只留一條指向 `topics/ai-agent-safety-cyber`，細節不抄。
 - `## 拿什麼擋` 每條開頭必須指名它擋上表哪一列；上表某列移除時，指向它的那一條同步移除或改指別列。
 
 ### 4. 母頁 `## 三類各自走到哪`（週更整線重寫）

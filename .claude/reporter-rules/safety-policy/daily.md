@@ -11,7 +11,7 @@
 | 頁面 | 觸發條件 |
 |------|---------|
 | `wiki/topics/anthropic-government-policy.md` | Anthropic 與各國政府互動、出口管制、軍事合約 |
-| `wiki/topics/ai-agent-safety.md`（母頁）＋三個子頁 | AI agent 安全事件、漏洞披露、提示注入、網攻與濫用。**事件寫進子頁**：查 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」第 0 條路由表——`ai-agent-safety-prompt-injection`（提示注入與自我複製）、`ai-agent-safety-product-vulns`（產品漏洞、誤操作、帳號）、`ai-agent-safety-cyber`（網攻能力、濫用、防守方准入）；判不出寫母頁 `### 未歸類`。寫了事件的子頁覆寫它的 callout，母頁 callout 同批覆寫成一句總覽並連子頁；母頁其餘只准動第 1 條列的三樣，「最後新聞更新」不動。來源歸因的 page 一律填事件所在的子頁，母頁 callout 不報歸因 |
+| `wiki/topics/ai-agent-safety.md`（母頁）＋三個子頁 | AI agent 安全事件、漏洞披露、提示注入、網攻與濫用。**事件寫進子頁**：查 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」第 0 條路由表——`ai-agent-safety-prompt-injection`（提示注入與自我複製）、`ai-agent-safety-product-vulns`（產品漏洞、誤操作、帳號）、`ai-agent-safety-cyber`（網攻能力、濫用、防守方放行）；判不出寫母頁 `### 未歸類`。寫了事件的子頁覆寫它的 callout，母頁 callout 同批覆寫成一句總覽並連子頁；母頁其餘只准動第 1 條列的三樣，「最後新聞更新」不動。來源歸因的 page 一律填事件所在的子頁，母頁 callout 不報歸因 |
 | `wiki/topics/ai-eval-boundary-incidents.md`（`ai-agent-safety` 子頁） | 評測越界事件：AI 評估中模型做出未經授權、影響到評估範圍外的動作（UK AISI、Anthropic 自揭的評測事故）、數字口徑與官方處置 |
 | `wiki/topics/recursive-self-improvement.md` | AI 遞歸自我改進、全球監管呼籲 |
 
