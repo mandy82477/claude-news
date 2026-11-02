@@ -66,7 +66,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 #### 2026-10-31：GitHub Issue #47509 升至 195 👍、70 留言——Team 方案高階座位提案仍無官方回應
 
-- **GitHub Issue #47509**：延續 09-19 的 151 👍、46 留言，累積至 **195 👍、70 則留言**（GitHub Issues，2026-10-31）；提案不變——Team 方案新增對等 Max 20x 的席位，現有最高為 Premium（6.25x Pro 用量）。官方回應與時程未見。
+- **GitHub Issue #47509**：延續 09-19 的 151 👍、46 留言，累積至 **195 👍、70 則留言**（GitHub Issues，2026-10-31）；提案不變——Team 方案新增對等 Max 20x 的席位，現有最高為 Premium（官方只寫是 Standard 的 5 倍）。官方回應與時程未見。
 
 #### 2026-10-16：官方 API 定價頁格式改版，Fast mode 拿掉「research preview」標籤
 
@@ -111,7 +111,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 #### 2026-09-28：Claude Sonnet 5.5 上線，牌價 $2/$10 per Mtok，取代 Sonnet 5 為預設
 
-- **官方一手來源＋Reuters**：Anthropic 官方發布 Sonnet 5.5，隨 Claude Code v2.1.284 更新，API 端 Sonnet 系列預設選項換成此版；牌價與前代 Sonnet 5 相同（$2/$10 per Mtok），支援 1M context，快取讀取低至 $0.20/Mtok（[Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5)；Reuters）。
+- **官方一手來源＋Reuters**：Anthropic 官方發布 Sonnet 5.5，隨 Claude Code v2.1.284 更新，API 端 Sonnet 系列預設選項換成此版；牌價與前代 Sonnet 5 相同（$2/$10 per Mtok），支援 1M context，快取讀取 $0.10/Mtok（11-02 更正；[Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5)；Reuters）。
 - 完整定價表見上方「模型 API 定價現況」；模型能力面見 [[entities/sonnet-5-5]]。
 - **Plans & Pricing 頁同步小改**：Batch processing 選項的示範模型從 Opus 4.8／Opus 5 換成 Sonnet 5、Fable 5，屬頁面範例更新，非費率變動（Official Docs）。
 
