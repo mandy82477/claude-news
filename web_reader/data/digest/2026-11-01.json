@@ -405,13 +405,23 @@
       "pageType": "entity"
     },
     {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
       "id": "anthropic-business",
       "name": "Anthropic 商業健康度",
       "pageType": "topic"
     },
     {
       "id": "anthropic-ipo",
-      "name": "Anthropic IPO 追蹤",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
       "pageType": "topic"
     },
     {
