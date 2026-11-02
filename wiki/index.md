@@ -31,6 +31,7 @@
 | 我想讓 agent 自己跑幾小時／過夜，該用哪個（`/goal`、subagent、dynamic workflows、agent teams、agent view、Managed Agents、Agent SDK） | [[topics/anthropic-agent-stack]]「你該用哪個」 |
 | 升版前要知道什麼、該裝 stable 還是 latest | [[entities/claude-code-releases]]「現在該跟哪條」＋[[feature-radar]]「⚠️ 升級前要知道的預設值與破壞性變更」 |
 | 用 hook 或權限規則擋危險指令（`rm -rf` 之類），hook 擋不擋得住 | [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]] |
+| subagent 有哪幾種型別、要平行分派工作該選哪種 | [[entities/claude-code-features#Subagent 型別差異對照]] |
 | code review 該用哪個入口、一次多少錢（官方各入口的方案限制與計費；本庫刻意不推薦單一社群工具） | [[topics/coding-workflow-guide]] 第 5 段 |
 | 大型 codebase 的做法主線（並行／context／記憶／把關） | [[topics/community-large-codebase-workflow]] |
 | 多個 agent 怎麼分工、隔離，隔離之後誰先合併、誰驗收（官方三條路對照與缺口） | [[topics/community-multi-agent]] |

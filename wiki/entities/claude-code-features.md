@@ -162,12 +162,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 無法為不同情境隔離 hook 與設定（#7075 profile） | 🔴 | 未修 |
 | `prompt`／`agent` hook 以自然語言寫「封鎖 X」實際擋不住 | ✅ | v2.1.294 |
 | hook 起不來、逾時或退出碼異常時動作被放行 | ✅ 可選擇改為阻擋 | v2.1.295 起 `onFailure: "block"`（預設 `continue`） |
+| PowerShell hook 指令以型別轉換、`param`、`using` 或屬性開頭時，exit 2 擋不住 | ✅ | v2.1.316 |
 
 **三、能不能當安全控制**
 
 - **官方立場**（2026-10-11 查證）：`if` 過濾器是盡力比對（best-effort），要硬性允許或拒絕請用權限系統而不是 hook。官方文件沒有「不要只依賴 hook 做安全防護」這句，MIXED Reality News 的轉述不準（見「開發者須知」該條）。
 - **社群實測**：上表三個 🔴（#6305 未觸發、Stop hooks 被忽略、#24057 改設定要重啟）是 hook 靜默不作用的路徑；#9516、#7075 是功能請求（沒有中斷 hook、不能分情境隔離）。v2.1.294 修的那條是「寫了封鎖卻沒擋住」。
-- **結論：hook 一觸發就是硬擋，但不保證會觸發。** 要保證一定擋，用 deny 規則或沙箱，hook 當第二層。
+- **結論：hook 一觸發就是硬擋，但不保證會觸發。** 要保證一定擋，用沙箱（官方指定的安全邊界）；deny 規則比對的是指令文字，換個寫法就可能漏掉，見 [[topics/ai-agent-safety]]「deny-list 也不是」。hook 與 deny 規則都當第二層。
   - 擋得硬：官方 [permissions 文件](https://code.claude.com/docs/en/permissions)寫明 `PreToolUse` hook 擋下的呼叫不會被任何 allow 規則放行，exit 2 在權限規則之前就攔下（查證 2026-11-01）。
   - 不一定觸發：`if` 比對是盡力而為，也有沒觸發（#6305）、設定沒生效（#24057）的回報；`onFailure: "block"` 只補 hook 自己壞掉那一種缺口。
   - 反過來不成立：hook 回 allow 蓋不過 deny 規則。例外：沒有 managed settings、也不是 Team／Enterprise 登入時，mod 的 `tool.check` 可放行 hook 擋下的呼叫（見 [[entities/claude-mods]]）。
