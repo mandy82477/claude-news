@@ -79,6 +79,12 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | Blackstone（NYSE: BX） | 供應商，提供私募信貸參與 Anthropic 晶片融資案，與銀行團共同安排 630 億美元融資規模 | 10-17 私募信貸晶片融資一則、10-27 併入 630 億美元融資案一則、10-31 轉述預期 BB 級信評一則 | ⚖️ 兩面，融資規模已知為 630 億美元，具體殖利率與利率仍未披露；10-31 其向投資人預期 Anthropic 上市後為 BB 級（單一標題，非機構評等） | 630 億美元融資定價發行；Blackstone 具體利率與規模拆分是否披露 |
 | Charles Schwab（NYSE: SCHW） | 通路夥伴，「Claude for Financial Advisors」限 RIA 使用；10-24 追加 20 席採購下限排除逾 1.1 萬家小型顧問；10-29 另加碼最高 4,800 美元額度抵用，對 Schwab 財報不具重大性 | 10-24 Schwab 通路門檻一則；10-29 Financial Advisors 額度優惠一則 | ⚖️ 兩面，10-24 門檻收緊但 10-29 另加碼使用額度補貼 | 門檻理由與生效時間是否經官方說明；Orion 是否跟進類似門檻；額度補貼適用範圍與期限是否公布 |
 
+**曝險多大**：表上每一檔對 Anthropic 都是間接曝險，分三型看。
+- 持股型（GOOGL、AMZN、NVDA、AMD）：持股金額相對自身市值很小，股價主要由本業決定；持股金額的報導見 [[topics/anthropic-ipo]]。
+- 供應商與通路型（AKAM、AVGO、BX、CRM、SCHW）：看合約金額何時認列進它們的財報。
+- 客戶與其他（MSFT、META、JPM、NVO、ACN、BCS 是客戶，RDDT 是訴訟原告，SNDK 只是被歸成同概念股）：多數沒有可量化的金額，只能當方向參考。
+- Anthropic 本體尚未掛牌，公開市場買不到。
+
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
 
 **細節（Microsoft 列）**：10-09 The Register 報導，一家經 Azure AI Foundry Marketplace 使用 Claude 的新創，原以為受 Azure 贊助額度涵蓋，卻收到約 1.76 萬美元帳單；Microsoft 稱 Marketplace 合作夥伴收費無法調整，要新創直接找 Anthropic，雙方互踢責任，爭議是否解決未見報導。
