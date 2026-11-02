@@ -36,7 +36,7 @@ python scripts/list_digest_omissions.py --date TARGET_DATE
 python scripts/scan_pending_verifications.py TARGET_DATE
 ```
 
-輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。「開發實務」組隨 4b 附給開發實務記者。規格見 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」節。
+輸出依記者類別分組，供下一步派工時原樣附在對應記者的訊息裡；某類別無命中則該記者派工訊息此區塊寫「無」。「開發實務」組隨 4b 附給開發實務記者；「投資分析」組（投資訊號母頁與四子頁的命中）隨 4c 附給投資分析記者，scan 輸出沒有這一組就寫「無」（「無命中記者」一行不列投資分析，不能拿它判斷）。規格見 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」節。
 
 **再取轉知待接手清單：** 執行 `python scripts/pending_handoffs.py list`，輸出依目標記者分組，派工時附在對應記者訊息的「轉知待接手」區塊；無則寫「無」。這是先前 ingest 的記者「⚠️ 需主編轉知」經主編登帳後的未結案項（帳本 `data/pending-handoffs.jsonl`，主編端的登帳與結案動作見 `.claude/skills/wiki-ingest/references/checklist.md`）。
 
@@ -113,7 +113,7 @@ python scripts/collect_reporter_reports.py --date TARGET_DATE data/ingest-packet
 
 ### 4c. market 判讀派工（主編）
 
-與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + 明寫 `model` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後依序貼入 `data/ingest-packets/TARGET_DATE/` 六類包檔全文（與六記者同一份步驟 2 產物，不另篩）。
+與 4b 同批派出（兩者互不相干，可並行）。投資分析記者不吃分類路由，吃**當日日報本身**換市場框架重讀，但判讀要 wikilink 指向已定稿的事實頁，故同樣排在彙整之後。以 `subagent_type: "general-purpose"` + 明寫 `model` 派出，prompt 首段見 `.claude/skills/wiki-ingest/references/dispatch.md`，其後依序貼入 `data/ingest-packets/TARGET_DATE/` 六類包檔全文（與六記者同一份步驟 2 產物，不另篩），最後附「待查證命中」（步驟 1 scan 輸出的 `[投資分析]` 組）與「轉知待接手」（`pending_handoffs.py list` 的「→ 投資分析 記者」組）兩區塊，無則各寫「無」。
 
 收報後把「判讀 N 則／本日無訊號」記入 log.md 本次 ingest 紀錄一行 `market 判讀：…`；記者回報存進步驟 4 的 `reports/` 夾（檔名 `<類別>.md` 同規則）後照步驟 4 跑收報腳本落帳（slug 用該則日報條目的來源，不是 `user-query`）。
 

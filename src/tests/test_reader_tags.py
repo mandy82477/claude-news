@@ -69,6 +69,10 @@ class TestDecidedExclusions(unittest.TestCase):
 
     EXCLUDED = {
         "market-signals": "投資訊號判讀，不是程式（使用者原話：「market signal 不是程式」）",
+        "market-signals-ipo": "同 market-signals（第 22 波拆出的子頁）",
+        "market-signals-legal": "同 market-signals（第 22 波拆出的子頁）",
+        "market-signals-compute": "同 market-signals（第 22 波拆出的子頁）",
+        "market-signals-customers": "同 market-signals（第 22 波拆出的子頁）",
         "competitor-landscape": "競品雷達＝市場在幹嘛；「別家誰強」的主出口 model-task-leaderboard 已在名單",
         "anthropic-business": "估值／IPO／營收，跟寫 code 的距離同 market-signals",
         "fable-5": "模型實體頁是那個模型的百科；選型的家是 model-comparison",

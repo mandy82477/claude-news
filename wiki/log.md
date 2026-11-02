@@ -8476,3 +8476,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 已知缺口：cell 基線（107 筆搬家）與 reader-language 白名單（3 筆 page 欄）雲端 H6 改不了，本 commit 在分支上兩閘紅，清單見 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`，使用者本機重建後併 master。
 - 歸因 user-query／功能
 - 複驗（新冷讀者，原四題逐字）：Q1–Q4 皆拿到（第一輪 1 拿 3 半）；依複驗把 [[entities/claude-code-features]] hooks 結論改成「保證擋用沙箱，deny 規則與 hook 當第二層」（與 [[topics/ai-agent-safety]]「deny-list 也不是」對齊，母頁與摘要同步）、失效表補 2.1.316 PowerShell hook exit 2 修正、index 開發實務入口加 subagent 型別一列。剩餘缺口在他頁：額度事故總表漏近期事故（H-645373，pricing）、預設值表只核到 2.1.304（H-afee03）。評審實作複核放行（2 🔴 已修）。H-7b713f 結案文字誤寫 L52 帶錨點，實際為不帶錨點指 releases 頁（避免既有超限條目變長）。
+
+## 2026-11-02 Query（第 22 波頁面健檢——market-signals 拆成母頁＋四子頁）
+
+- 裁決（切法使用者選「四子頁＋收緊門檻」；其餘主 session 自決，使用者「你都自己決定好了 不要問我」；記 `docs/page-audits/ledger.md` 2026-11-02 第 22 波各條）：[[topics/market-signals]] 由 1,699 行拆為母頁（摘要、買得到的標的、子頁路由與四頁合計命中率）＋四子頁 [[topics/market-signals-ipo]]（IPO 與財務揭露 25 則）／[[topics/market-signals-legal]]（法律、監管與政府 24 則）／[[topics/market-signals-compute]]（算力與融資 14 則）／[[topics/market-signals-customers]]（定價、通路與企業採用 25 則）；88 則判讀連同各自的回顧結算列與里程碑照線別原文搬（一則三件同頁），照搬 1,083 行逐字核對、懸置 69→69；網站 💰 條目改讀整個子樹、點擊直達子頁；母頁留同名 h4 指路殼接 yann-lecun 錨點。記者草案三子頁落選：「算力、定價與採用」39 則約 670 行，出生即超 600。
+- 主編查證（2026-11-02；雲端解析不到 www.sec.gov，S-1 數字標「多家引 S-1」二手）：S-1 10-26 由官方公告、未生效、股數價格與掛牌日未定；上半年淨損 807 億中約 724 億為非現金公允價值變動（判讀已補）；GSA 擴大合作官方日期 10-27、「OneGov」為媒體用語；Public Benefit Fund 是撥入 Anthropic 全資子實體、待股東會核准；里程碑「S-1 尚未遞交」「市場預期 10 月上市」兩句過期已改。
+- 規則面：`market/pages.md` 改為母頁＋四子頁、照線歸頁（附查法）、`### 未歸類` 一則三件同處由主編週更分派；`market/daily.md` 寫入目標與母頁「最後新聞更新」條件；`market/weekly.md` 讀四張結算表；`page-lifecycle.md` 母頁每日例外加本頁；`wiki-ingest` SKILL 4c 把「投資分析」組待查證命中與轉知附給投資分析記者；記者角色檔、`commercial/daily.md`、`sweeps.md` 5h 同步。腳本：`build_web.py` 讀子樹、`pending_markers.py`／`pending_handoffs.py` 對照補本頁與四子頁（原本 285 筆命中誤記在商業記者名下）、`scan_pending_verifications.py`、`app.js` 標籤與兩支測試；`check_wiki_freshness.py` L78 說明字串屬雲端擋的閘檔，留本機改。
+- 歸因補登 1 筆（Citywire 10-29，網址在 customers callout）；The New Stack、BigGo、Bloomberg 三筆 10-29 漏報網址不在子頁內，依裁決不補。
+- 轉知帳本：新開 H-5978d7（→投資分析，六類判準回頭檢查——W41–W44 每週 12／13／9／16 則 vs 預期 3–5 則，使用者批准）、H-a450ba（→投資分析，market-lessons 連結改指四子頁、IPO 線則數更新）、H-5f3c59（→人物，yann-lecun／tom-brown／suleyman 錨點改指子頁，改完由主編刪母頁 h4 殼）、H-6109b3（→商業，anthropic-ipo／business 連結改指子頁、Microsoft 細節與 Nscale 口徑，第 23 波一併處理）。
+- 歸因 user-query／投資分析

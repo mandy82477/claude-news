@@ -1,7 +1,7 @@
 {
   "count": 212,
   "updated": "2026-11-02",
-  "note": "第 21 波 claude-code 拆頁：23 筆隨條目換 slug（K 20／F 2／R 1，含 11-01 新增的 128 MB 一筆）；去 slug 比對無減少；2.1.313 不新增標記（懸置住 product-vulns）；基線自 10-31 206 筆後他頁 ingest 淨增 6 筆一併入帳",
+  "note": "第 22 波 market-signals 拆頁：69 筆換 slug（母頁→四子頁 19／21／12／17），去 slug 比對無增減",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -548,280 +548,280 @@
       "label": "topics/market-lessons（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
     },
     {
-      "key": "topics/market-signals::2026-10-29::texas、bond",
-      "label": "topics/market-signals（標 2026-10-29｜查 Texas、bond）"
+      "key": "topics/market-signals-compute::2026-10-29::texas、bond",
+      "label": "topics/market-signals-compute（標 2026-10-29｜查 Texas、bond）"
     },
     {
-      "key": "topics/market-signals::2026-10-31::blackstone、bb 級信評、投資級",
-      "label": "topics/market-signals（標 2026-10-31｜查 Blackstone、BB 級信評、投資級）"
+      "key": "topics/market-signals-compute::2026-10-30::nvidia、信用支持",
+      "label": "topics/market-signals-compute（標 2026-10-30｜查 Nvidia、信用支持）"
     },
     {
-      "key": "topics/market-signals::2026-10-30::nvidia、信用支持",
-      "label": "topics/market-signals（標 2026-10-30｜查 Nvidia、信用支持）"
+      "key": "topics/market-signals-compute::2026-10-29::zero-rust、cpu 消耗",
+      "label": "topics/market-signals-compute（標 2026-10-29｜查 Zero-Rust、CPU 消耗）"
     },
     {
-      "key": "topics/market-signals::2026-10-29::4,800、financial advisors",
-      "label": "topics/market-signals（標 2026-10-29｜查 4,800、Financial Advisors）"
+      "key": "topics/market-signals-compute::2026-10-27::630 億美元、blackstone",
+      "label": "topics/market-signals-compute（標 2026-10-27｜查 630 億美元、Blackstone）"
     },
     {
-      "key": "topics/market-signals::2026-10-29::copilot fusion、github copilot",
-      "label": "topics/market-signals（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot）"
+      "key": "topics/market-signals-compute::2026-10-26::broadcom、履約時程",
+      "label": "topics/market-signals-compute（標 2026-10-26｜查 Broadcom、履約時程）"
     },
     {
-      "key": "topics/market-signals::2026-10-29::zero-rust、cpu 消耗",
-      "label": "topics/market-signals（標 2026-10-29｜查 Zero-Rust、CPU 消耗）"
+      "key": "topics/market-signals-compute::2026-10-20::nscale、450億美元",
+      "label": "topics/market-signals-compute（標 2026-10-20｜查 Nscale、450億美元）"
     },
     {
-      "key": "topics/market-signals::2026-10-28::onegov、屬地政府",
-      "label": "topics/market-signals（標 2026-10-28｜查 OneGov、屬地政府）"
+      "key": "topics/market-signals-compute::2026-10-17::blackstone、殖利率",
+      "label": "topics/market-signals-compute（標 2026-10-17｜查 Blackstone、殖利率）"
     },
     {
-      "key": "topics/market-signals::2026-10-28::mithril medicine、匿名創辦人",
-      "label": "topics/market-signals（標 2026-10-28｜查 Mithril Medicine、匿名創辦人）"
+      "key": "topics/market-signals-compute::2026-10-02::broadcom、debt financing、600億",
+      "label": "topics/market-signals-compute（標 2026-10-02｜查 Broadcom、debt financing、600億）"
     },
     {
-      "key": "topics/market-signals::2026-10-28::加州州長、法院封鎖",
-      "label": "topics/market-signals（標 2026-10-28｜查 加州州長、法院封鎖）"
+      "key": "topics/market-signals-compute::2026-10-01::broadcom、晶片租賃、循環投資",
+      "label": "topics/market-signals-compute（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資）"
     },
     {
-      "key": "topics/market-signals::2026-10-28::inference_geo、managed agents",
-      "label": "topics/market-signals（標 2026-10-28｜查 inference_geo、Managed Agents）"
+      "key": "topics/market-signals-compute::2026-09-25::akamai、10-q、營收指引",
+      "label": "topics/market-signals-compute（標 2026-09-25｜查 Akamai、10-Q、營收指引）"
     },
     {
-      "key": "topics/market-signals::2026-10-27::business insurance、承保能力",
-      "label": "topics/market-signals（標 2026-10-27｜查 Business Insurance、承保能力）"
+      "key": "topics/market-signals-compute::2026-09-21::nscale、microsoft、資料中心",
+      "label": "topics/market-signals-compute（標 2026-09-21｜查 Nscale、Microsoft、資料中心）"
     },
     {
-      "key": "topics/market-signals::2026-10-27::訓練暫停、資安事件",
-      "label": "topics/market-signals（標 2026-10-27｜查 訓練暫停、資安事件）"
+      "key": "topics/market-signals-compute::2026-09-16::澳洲資料中心、macquarie",
+      "label": "topics/market-signals-compute（標 2026-09-16｜查 澳洲資料中心、Macquarie）"
     },
     {
-      "key": "topics/market-signals::2026-10-27::630 億美元、blackstone",
-      "label": "topics/market-signals（標 2026-10-27｜查 630 億美元、Blackstone）"
+      "key": "topics/market-signals-customers::2026-10-29::4,800、financial advisors",
+      "label": "topics/market-signals-customers（標 2026-10-29｜查 4,800、Financial Advisors）"
     },
     {
-      "key": "topics/market-signals::2026-10-26::承銷商、定價區間",
-      "label": "topics/market-signals（標 2026-10-26｜查 承銷商、定價區間）"
+      "key": "topics/market-signals-customers::2026-10-29::copilot fusion、github copilot",
+      "label": "topics/market-signals-customers（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot）"
     },
     {
-      "key": "topics/market-signals::2026-10-26::broadcom、履約時程",
-      "label": "topics/market-signals（標 2026-10-26｜查 Broadcom、履約時程）"
+      "key": "topics/market-signals-customers::2026-10-28::mithril medicine、匿名創辦人",
+      "label": "topics/market-signals-customers（標 2026-10-28｜查 Mithril Medicine、匿名創辦人）"
     },
     {
-      "key": "topics/market-signals::2026-10-26::年化成長、客戶集中度",
-      "label": "topics/market-signals（標 2026-10-26｜查 年化成長、客戶集中度）"
+      "key": "topics/market-signals-customers::2026-10-28::inference_geo、managed agents",
+      "label": "topics/market-signals-customers（標 2026-10-28｜查 inference_geo、Managed Agents）"
     },
     {
-      "key": "topics/market-signals::2026-10-25::elvis presley、音樂著作權",
-      "label": "topics/market-signals（標 2026-10-25｜查 Elvis Presley、音樂著作權）"
+      "key": "topics/market-signals-customers::2026-10-24::schwab、小型顧問",
+      "label": "topics/market-signals-customers（標 2026-10-24｜查 Schwab、小型顧問）"
     },
     {
-      "key": "topics/market-signals::2026-10-24::schwab、小型顧問",
-      "label": "topics/market-signals（標 2026-10-24｜查 Schwab、小型顧問）"
+      "key": "topics/market-signals-customers::2026-10-17::replit、終止合作",
+      "label": "topics/market-signals-customers（標 2026-10-17｜查 Replit、終止合作）"
     },
     {
-      "key": "topics/market-signals::2026-10-24::alignment-assessment-ukaisi、43 次評估",
-      "label": "topics/market-signals（標 2026-10-24｜查 alignment-assessment-ukaisi、43 次評估）"
+      "key": "topics/market-signals-customers::2026-10-16::accenture、支出上限",
+      "label": "topics/market-signals-customers（標 2026-10-16｜查 Accenture、支出上限）"
     },
     {
-      "key": "topics/market-signals::2026-10-22::reservoir、suno",
-      "label": "topics/market-signals（標 2026-10-22｜查 Reservoir、Suno）"
+      "key": "topics/market-signals-customers::2026-10-13::argon、vals index",
+      "label": "topics/market-signals-customers（標 2026-10-13｜查 Argon、Vals Index）"
     },
     {
-      "key": "topics/market-signals::2026-10-21::sec edgar、807億美元",
-      "label": "topics/market-signals（標 2026-10-21｜查 SEC EDGAR、807億美元）"
+      "key": "topics/market-signals-customers::2026-10-09::azure marketplace、17,600",
+      "label": "topics/market-signals-customers（標 2026-10-09｜查 Azure Marketplace、17,600）"
     },
     {
-      "key": "topics/market-signals::2026-10-21::sole-source award、fedscoop",
-      "label": "topics/market-signals（標 2026-10-21｜查 sole-source award、FedScoop）"
+      "key": "topics/market-signals-customers::2026-10-07::grok、midjourney、suno、整合細節",
+      "label": "topics/market-signals-customers（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節）"
     },
     {
-      "key": "topics/market-signals::2026-10-20::nscale、450億美元",
-      "label": "topics/market-signals（標 2026-10-20｜查 Nscale、450億美元）"
+      "key": "topics/market-signals-customers::2026-10-05::meta、microsoft、減少內部使用",
+      "label": "topics/market-signals-customers（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
     },
     {
-      "key": "topics/market-signals::2026-10-18::public benefit fund、股東會表決",
-      "label": "topics/market-signals（標 2026-10-18｜查 Public Benefit Fund、股東會表決）"
+      "key": "topics/market-signals-customers::2026-10-01::barclays、採用率",
+      "label": "topics/market-signals-customers（標 2026-10-01｜查 Barclays、採用率）"
     },
     {
-      "key": "topics/market-signals::2026-10-19::50 人以上死亡、10 億美元損害",
-      "label": "topics/market-signals（標 2026-10-19｜查 50 人以上死亡、10 億美元損害）"
+      "key": "topics/market-signals-customers::2026-09-23::gpt-6 sol、毛利率",
+      "label": "topics/market-signals-customers（標 2026-09-23｜查 GPT-6 Sol、毛利率）"
     },
     {
-      "key": "topics/market-signals::2026-10-17::telegraph、1.5兆美元",
-      "label": "topics/market-signals（標 2026-10-17｜查 Telegraph、1.5兆美元）"
+      "key": "topics/market-signals-customers::2026-09-17::jpmorgan、摩根大通、支出上限",
+      "label": "topics/market-signals-customers（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限）"
     },
     {
-      "key": "topics/market-signals::2026-10-17::comptroller、展開對話",
-      "label": "topics/market-signals（標 2026-10-17｜查 Comptroller、展開對話）"
+      "key": "topics/market-signals-customers::2026-09-16::novo nordisk、諾和諾德",
+      "label": "topics/market-signals-customers（標 2026-09-16｜查 Novo Nordisk、諾和諾德）"
     },
     {
-      "key": "topics/market-signals::2026-10-17::kbra、ebitda",
-      "label": "topics/market-signals（標 2026-10-17｜查 KBRA、EBITDA）"
+      "key": "topics/market-signals-customers::2026-09-16::dealroom、token 費用外流",
+      "label": "topics/market-signals-customers（標 2026-09-16｜查 Dealroom、token 費用外流）"
     },
     {
-      "key": "topics/market-signals::2026-10-17::blackstone、殖利率",
-      "label": "topics/market-signals（標 2026-10-17｜查 Blackstone、殖利率）"
+      "key": "topics/market-signals-customers::2026-09-14::nvidia、palantir、booz allen、資料外洩",
+      "label": "topics/market-signals-customers（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
     },
     {
-      "key": "topics/market-signals::2026-10-17::replit、終止合作",
-      "label": "topics/market-signals（標 2026-10-17｜查 Replit、終止合作）"
+      "key": "topics/market-signals-ipo::2026-10-31::blackstone、bb 級信評、投資級",
+      "label": "topics/market-signals-ipo（標 2026-10-31｜查 Blackstone、BB 級信評、投資級）"
     },
     {
-      "key": "topics/market-signals::2026-10-16::accenture、支出上限",
-      "label": "topics/market-signals（標 2026-10-16｜查 Accenture、支出上限）"
+      "key": "topics/market-signals-ipo::2026-10-27::business insurance、承保能力",
+      "label": "topics/market-signals-ipo（標 2026-10-27｜查 Business Insurance、承保能力）"
     },
     {
-      "key": "topics/market-signals::2026-10-16::valuation expectations、下修估值",
-      "label": "topics/market-signals（標 2026-10-16｜查 valuation expectations、下修估值）"
+      "key": "topics/market-signals-ipo::2026-10-27::訓練暫停、資安事件",
+      "label": "topics/market-signals-ipo（標 2026-10-27｜查 訓練暫停、資安事件）"
     },
     {
-      "key": "topics/market-signals::2026-10-16::美國參議院、參議院幕僚",
-      "label": "topics/market-signals（標 2026-10-16｜查 美國參議院、參議院幕僚）"
+      "key": "topics/market-signals-ipo::2026-10-26::承銷商、定價區間",
+      "label": "topics/market-signals-ipo（標 2026-10-26｜查 承銷商、定價區間）"
     },
     {
-      "key": "topics/market-signals::2026-10-15::comptroller、退休基金",
-      "label": "topics/market-signals（標 2026-10-15｜查 Comptroller、退休基金）"
+      "key": "topics/market-signals-ipo::2026-10-26::年化成長、客戶集中度",
+      "label": "topics/market-signals-ipo（標 2026-10-26｜查 年化成長、客戶集中度）"
     },
     {
-      "key": "topics/market-signals::2026-10-13::argon、vals index",
-      "label": "topics/market-signals（標 2026-10-13｜查 Argon、Vals Index）"
+      "key": "topics/market-signals-ipo::2026-10-21::sec edgar、807億美元",
+      "label": "topics/market-signals-ipo（標 2026-10-21｜查 SEC EDGAR、807億美元）"
     },
     {
-      "key": "topics/market-signals::2026-10-10::phillyunsolvedmurders、簽證申請",
-      "label": "topics/market-signals（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請）"
+      "key": "topics/market-signals-ipo::2026-10-18::public benefit fund、股東會表決",
+      "label": "topics/market-signals-ipo（標 2026-10-18｜查 Public Benefit Fund、股東會表決）"
     },
     {
-      "key": "topics/market-signals::2026-10-09::azure marketplace、17,600",
-      "label": "topics/market-signals（標 2026-10-09｜查 Azure Marketplace、17,600）"
+      "key": "topics/market-signals-ipo::2026-10-17::telegraph、1.5兆美元",
+      "label": "topics/market-signals-ipo（標 2026-10-17｜查 Telegraph、1.5兆美元）"
     },
     {
-      "key": "topics/market-signals::2026-10-07::grok、midjourney、suno、整合細節",
-      "label": "topics/market-signals（標 2026-10-07｜查 Grok、Midjourney、Suno、整合細節）"
+      "key": "topics/market-signals-ipo::2026-10-17::comptroller、展開對話",
+      "label": "topics/market-signals-ipo（標 2026-10-17｜查 Comptroller、展開對話）"
     },
     {
-      "key": "topics/market-signals::2026-10-05::meta、microsoft、減少內部使用",
-      "label": "topics/market-signals（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
+      "key": "topics/market-signals-ipo::2026-10-17::kbra、ebitda",
+      "label": "topics/market-signals-ipo（標 2026-10-17｜查 KBRA、EBITDA）"
     },
     {
-      "key": "topics/market-signals::2026-10-05::pentagon、停用工具、govcloud",
-      "label": "topics/market-signals（標 2026-10-05｜查 Pentagon、停用工具、GovCloud）"
+      "key": "topics/market-signals-ipo::2026-10-16::valuation expectations、下修估值",
+      "label": "topics/market-signals-ipo（標 2026-10-16｜查 valuation expectations、下修估值）"
     },
     {
-      "key": "topics/market-signals::2026-10-02::broadcom、debt financing、600億",
-      "label": "topics/market-signals（標 2026-10-02｜查 Broadcom、debt financing、600億）"
+      "key": "topics/market-signals-ipo::2026-10-15::comptroller、退休基金",
+      "label": "topics/market-signals-ipo（標 2026-10-15｜查 Comptroller、退休基金）"
     },
     {
-      "key": "topics/market-signals::2026-10-01::broadcom、晶片租賃、循環投資",
-      "label": "topics/market-signals（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資）"
+      "key": "topics/market-signals-ipo::2026-09-30::amazon、google、customer concentration、calcalistech",
+      "label": "topics/market-signals-ipo（標 2026-09-30｜查 Amazon、Google、customer concentration、calcalistech）"
     },
     {
-      "key": "topics/market-signals::2026-10-01::barclays、採用率",
-      "label": "topics/market-signals（標 2026-10-01｜查 Barclays、採用率）"
+      "key": "topics/market-signals-ipo::2026-09-29::reuters、ipo prospectus、existential risks",
+      "label": "topics/market-signals-ipo（標 2026-09-29｜查 Reuters、IPO prospectus、existential risks）"
     },
     {
-      "key": "topics/market-signals::2026-09-30::federal trade commission、subpoena、investigation scope",
-      "label": "topics/market-signals（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope）"
+      "key": "topics/market-signals-ipo::2026-09-23::bloomberg、derailed",
+      "label": "topics/market-signals-ipo（標 2026-09-23｜查 Bloomberg、derailed）"
     },
     {
-      "key": "topics/market-signals::2026-09-30::amazon、google、customer concentration、calcalistech",
-      "label": "topics/market-signals（標 2026-09-30｜查 Amazon、Google、customer concentration、calcalistech）"
+      "key": "topics/market-signals-ipo::2026-09-12::nvidia、認購方、招股文件",
+      "label": "topics/market-signals-ipo（標 2026-09-12｜查 Nvidia、認購方、招股文件）"
     },
     {
-      "key": "topics/market-signals::2026-09-29::rogue ai agents、uncertain legal risk",
-      "label": "topics/market-signals（標 2026-09-29｜查 rogue AI agents、uncertain legal risk）"
+      "key": "topics/market-signals-ipo::2026-09-04::morgan stanley、goldman sachs",
+      "label": "topics/market-signals-ipo（標 2026-09-04｜查 Morgan Stanley、Goldman Sachs）"
     },
     {
-      "key": "topics/market-signals::2026-09-29::reuters、ipo prospectus、existential risks",
-      "label": "topics/market-signals（標 2026-09-29｜查 Reuters、IPO prospectus、existential risks）"
+      "key": "topics/market-signals-ipo::2026-09-06::calcalistech、ipo延後",
+      "label": "topics/market-signals-ipo（標 2026-09-06｜查 calcalistech、IPO延後）"
     },
     {
-      "key": "topics/market-signals::2026-09-28::australian senate、will not attend、october 1",
-      "label": "topics/market-signals（標 2026-09-28｜查 Australian senate、will not attend、October 1）"
+      "key": "topics/market-signals-ipo::2026-09-08::標普全球、穆迪評等、投資級信評",
+      "label": "topics/market-signals-ipo（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評）"
     },
     {
-      "key": "topics/market-signals::2026-09-27::australian senate、ai inquiry、hearing date",
-      "label": "topics/market-signals（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date）"
+      "key": "topics/market-signals-legal::2026-10-28::onegov、屬地政府",
+      "label": "topics/market-signals-legal（標 2026-10-28｜查 OneGov、屬地政府）"
     },
     {
-      "key": "topics/market-signals::2026-09-26::d.c. circuit、supply chain risk appeal、anthropic petition、遷出計畫",
-      "label": "topics/market-signals（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫）"
+      "key": "topics/market-signals-legal::2026-10-28::加州州長、法院封鎖",
+      "label": "topics/market-signals-legal（標 2026-10-28｜查 加州州長、法院封鎖）"
     },
     {
-      "key": "topics/market-signals::2026-09-25::akamai、10-q、營收指引",
-      "label": "topics/market-signals（標 2026-09-25｜查 Akamai、10-Q、營收指引）"
+      "key": "topics/market-signals-legal::2026-10-25::elvis presley、音樂著作權",
+      "label": "topics/market-signals-legal（標 2026-10-25｜查 Elvis Presley、音樂著作權）"
     },
     {
-      "key": "topics/market-signals::2026-09-25::white house、aisi、uk review",
-      "label": "topics/market-signals（標 2026-09-25｜查 White House、AISI、UK review）"
+      "key": "topics/market-signals-legal::2026-10-24::alignment-assessment-ukaisi、43 次評估",
+      "label": "topics/market-signals-legal（標 2026-10-24｜查 alignment-assessment-ukaisi、43 次評估）"
     },
     {
-      "key": "topics/market-signals::2026-09-23::gpt-6 sol、毛利率",
-      "label": "topics/market-signals（標 2026-09-23｜查 GPT-6 Sol、毛利率）"
+      "key": "topics/market-signals-legal::2026-10-22::reservoir、suno",
+      "label": "topics/market-signals-legal（標 2026-10-22｜查 Reservoir、Suno）"
     },
     {
-      "key": "topics/market-signals::2026-09-23::bloomberg、derailed",
-      "label": "topics/market-signals（標 2026-09-23｜查 Bloomberg、derailed）"
+      "key": "topics/market-signals-legal::2026-10-21::sole-source award、fedscoop",
+      "label": "topics/market-signals-legal（標 2026-10-21｜查 sole-source award、FedScoop）"
     },
     {
-      "key": "topics/market-signals::2026-09-21::nscale、microsoft、資料中心",
-      "label": "topics/market-signals（標 2026-09-21｜查 Nscale、Microsoft、資料中心）"
+      "key": "topics/market-signals-legal::2026-10-19::50 人以上死亡、10 億美元損害",
+      "label": "topics/market-signals-legal（標 2026-10-19｜查 50 人以上死亡、10 億美元損害）"
     },
     {
-      "key": "topics/market-signals::2026-09-20::資料爬取、mashable",
-      "label": "topics/market-signals（標 2026-09-20｜查 資料爬取、Mashable）"
+      "key": "topics/market-signals-legal::2026-10-16::美國參議院、參議院幕僚",
+      "label": "topics/market-signals-legal（標 2026-10-16｜查 美國參議院、參議院幕僚）"
     },
     {
-      "key": "topics/market-signals::2026-09-20::書面承認、跨實驗室對話",
-      "label": "topics/market-signals（標 2026-09-20｜查 書面承認、跨實驗室對話）"
+      "key": "topics/market-signals-legal::2026-10-10::phillyunsolvedmurders、簽證申請",
+      "label": "topics/market-signals-legal（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請）"
     },
     {
-      "key": "topics/market-signals::2026-09-19::反壟斷合謀、collusion、pacing",
-      "label": "topics/market-signals（標 2026-09-19｜查 反壟斷合謀、collusion、pacing）"
+      "key": "topics/market-signals-legal::2026-10-05::pentagon、停用工具、govcloud",
+      "label": "topics/market-signals-legal（標 2026-10-05｜查 Pentagon、停用工具、GovCloud）"
     },
     {
-      "key": "topics/market-signals::2026-09-17::jpmorgan、摩根大通、支出上限",
-      "label": "topics/market-signals（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限）"
+      "key": "topics/market-signals-legal::2026-09-30::federal trade commission、subpoena、investigation scope",
+      "label": "topics/market-signals-legal（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope）"
     },
     {
-      "key": "topics/market-signals::2026-09-16::novo nordisk、諾和諾德",
-      "label": "topics/market-signals（標 2026-09-16｜查 Novo Nordisk、諾和諾德）"
+      "key": "topics/market-signals-legal::2026-09-29::rogue ai agents、uncertain legal risk",
+      "label": "topics/market-signals-legal（標 2026-09-29｜查 rogue AI agents、uncertain legal risk）"
     },
     {
-      "key": "topics/market-signals::2026-09-16::dealroom、token 費用外流",
-      "label": "topics/market-signals（標 2026-09-16｜查 Dealroom、token 費用外流）"
+      "key": "topics/market-signals-legal::2026-09-28::australian senate、will not attend、october 1",
+      "label": "topics/market-signals-legal（標 2026-09-28｜查 Australian senate、will not attend、October 1）"
     },
     {
-      "key": "topics/market-signals::2026-09-16::澳洲資料中心、macquarie",
-      "label": "topics/market-signals（標 2026-09-16｜查 澳洲資料中心、Macquarie）"
+      "key": "topics/market-signals-legal::2026-09-27::australian senate、ai inquiry、hearing date",
+      "label": "topics/market-signals-legal（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date）"
     },
     {
-      "key": "topics/market-signals::2026-09-14::nvidia、palantir、booz allen、資料外洩",
-      "label": "topics/market-signals（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
+      "key": "topics/market-signals-legal::2026-09-26::d.c. circuit、supply chain risk appeal、anthropic petition、遷出計畫",
+      "label": "topics/market-signals-legal（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫）"
     },
     {
-      "key": "topics/market-signals::2026-09-12::nvidia、認購方、招股文件",
-      "label": "topics/market-signals（標 2026-09-12｜查 Nvidia、認購方、招股文件）"
+      "key": "topics/market-signals-legal::2026-09-25::white house、aisi、uk review",
+      "label": "topics/market-signals-legal（標 2026-09-25｜查 White House、AISI、UK review）"
     },
     {
-      "key": "topics/market-signals::2026-09-11::出口管制、國防部",
-      "label": "topics/market-signals（標 2026-09-11｜查 出口管制、國防部）"
+      "key": "topics/market-signals-legal::2026-09-20::資料爬取、mashable",
+      "label": "topics/market-signals-legal（標 2026-09-20｜查 資料爬取、Mashable）"
     },
     {
-      "key": "topics/market-signals::2026-09-10::american prospect、監控系統",
-      "label": "topics/market-signals（標 2026-09-10｜查 American Prospect、監控系統）"
+      "key": "topics/market-signals-legal::2026-09-20::書面承認、跨實驗室對話",
+      "label": "topics/market-signals-legal（標 2026-09-20｜查 書面承認、跨實驗室對話）"
     },
     {
-      "key": "topics/market-signals::2026-09-04::morgan stanley、goldman sachs",
-      "label": "topics/market-signals（標 2026-09-04｜查 Morgan Stanley、Goldman Sachs）"
+      "key": "topics/market-signals-legal::2026-09-19::反壟斷合謀、collusion、pacing",
+      "label": "topics/market-signals-legal（標 2026-09-19｜查 反壟斷合謀、collusion、pacing）"
     },
     {
-      "key": "topics/market-signals::2026-09-06::calcalistech、ipo延後",
-      "label": "topics/market-signals（標 2026-09-06｜查 calcalistech、IPO延後）"
+      "key": "topics/market-signals-legal::2026-09-11::出口管制、國防部",
+      "label": "topics/market-signals-legal（標 2026-09-11｜查 出口管制、國防部）"
     },
     {
-      "key": "topics/market-signals::2026-09-08::標普全球、穆迪評等、投資級信評",
-      "label": "topics/market-signals（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評）"
+      "key": "topics/market-signals-legal::2026-09-10::american prospect、監控系統",
+      "label": "topics/market-signals-legal（標 2026-09-10｜查 American Prospect、監控系統）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-09-21::stress-test each other、互相壓力測試",

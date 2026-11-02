@@ -135,7 +135,7 @@
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：公開版 S-1 已於 2026-10-26 正式提交 SEC（擬掛牌代號 ANT），確認 2026 上半年淨損 807 億美元；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-ipo]] |
-| [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
+| [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日，判讀分四條子線）：先列買得到的標的，再照分析師六問逐則判，兩週後結算（教學型事件研究，非投資建議；事實在商業各頁）　↳ 子故事：[[topics/market-signals-compute]]、[[topics/market-signals-customers]]、[[topics/market-signals-ipo]]、[[topics/market-signals-legal]] |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |
 | [[topics/ai-talent-flow]] | 💼 商業 | ongoing | AI 實驗室人才流動與對各公司影響：AMD 以約 82 億美元收購 World Labs、Fei-Fei Li 出任首席科學家；此前 Google DeepMind 高層與核心研究員異動、Anthropic 主要承接　↳ 子故事：[[topics/ai-talent-flow-archive]] |

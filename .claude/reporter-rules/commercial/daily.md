@@ -22,7 +22,7 @@
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 💼 商業 的所有頁面（含日後新增）皆由本記者負責維護與 lint。
 >
-> **唯一例外：`wiki/topics/market-signals.md`**——該頁領域雖為 💼 商業，但由**投資分析記者**維護（`.claude/reporter-rules/market/daily.md`），你不寫該頁的判讀內容；懸置掃描把該頁的標記派給你時，照共用規則只加 `訊`。它是觀點層，事實層仍在你的頁面上，兩者以 wikilink 相連。
+> **唯一例外：`wiki/topics/market-signals.md` 與四子頁 `market-signals-ipo／-legal／-compute／-customers`**——領域雖為 💼 商業，但由**投資分析記者**維護（`.claude/reporter-rules/market/daily.md`），你不寫這五頁；懸置掃描的命中直接派給投資分析記者（`scripts/pending_markers.py` 的 `PAGE_TO_REPORTER`），你不會收到。它是觀點層，事實層仍在你的頁面上，兩者以 wikilink 相連。
 
 ---
 
