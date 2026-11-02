@@ -4,24 +4,24 @@ kind: "entity"
 type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
-last_news_update: "2026-09-24"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "active"
-days_since_news: 38
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 38
-inbound_links: 34
-attribution_count: 31
-attribution_last: "2026-09-21"
+days_since_news_subtree: 0
+inbound_links: 37
+attribution_count: 32
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Opus 5

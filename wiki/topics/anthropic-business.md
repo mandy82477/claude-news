@@ -3,17 +3,17 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-01"
-last_news_update: "2026-11-01"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-ipo']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 175
-attribution_count: 497
-attribution_last: "2026-11-01"
+inbound_links: 177
+attribution_count: 500
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -66,7 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **數字細節**
 - **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
 - **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
-- **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[topics/anthropic-ipo#S-1 揭露了什麼]]。
+- **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[topics/anthropic-ipo]]。
 - **算力／採購承諾總額改用官方數字（2026-11-02）**：修訂版 S-1 揭露 $8,950 億採購承諾與租賃協議（$4,475 億於 2030 年底前支出完畢），取代此前 The Information 統計口徑的 $5,170 億（統計期至 2026-09，非官方數字，已移出指標表）；兩者涵蓋範圍可能不同，不可視為同一事物的新舊值直接相減。
 - **內部零售價換算的 Claude 使用量已超過員工薪酬（2026-11-02，Business Insider／CNBC，修訂版 S-1 揭露）**：4 月起每月內部使用量（按對外收費價格換算）已超過當月員工薪酬支出（不含股票獎酬），1–9 月累計暴增逾 250 倍；補上 11-01 已記錄同一事實的具體數字與時間點。
 - **公開版 S-1 正式提交，淨損 $807 億確認為官方數字（2026-10-26）**：此前僅 WSJ 獨家外流，今日官方公告＋SEC 文件確認，來源等級升為官方一手（[官方](https://www.anthropic.com/news/s1-sec)）。
