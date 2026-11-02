@@ -47,7 +47,7 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 |---|---|---|---|---|
 | Google | 2026-04-24 宣布最高 $400 億，見 [[entities/google-investment]] | TPU；S-1 承諾 $1,140 億（多家引 S-1） | Vertex AI，費率由 Google 自訂，見下方合作表 | Gemini 是直接對手，見 [[topics/competitor-landscape]] |
 | Amazon | 累計 $80 億（2023-09～2024-11 三筆，媒體稱）；Series H 再出 $50 億（2026-05-28，多家報導） | S-1 承諾 $1,100 億（多家引 S-1） | Bedrock、Claude Platform on AWS；2025 年近半營收經 Amazon、Google 雲端市集賣出 | 賣家工具首波接 Claude（09-23）；Alexa 傳降低對高成本模型依賴（07-23） |
-| Microsoft | 2025-11 承諾投資最高 $50 億（多家報導；實際入股金額未見） | 承諾購買 Azure 容量 $300 億（2025-11；[官方 05-06 公告](https://www.anthropic.com/news/higher-limits-spacex)提及） | Microsoft Foundry，CCU 後付 | 以自研 MAI 取代 Excel／Outlook 裡的 Claude，見 [[topics/anthropic-business-risks#還沒過去的風險]] |
+| Microsoft | 2025-11 承諾投資最高 $50 億（多家報導；實際入股金額未見） | 承諾購買 Azure 容量 $300 億（2025-11；[官方 05-06 公告](https://www.anthropic.com/news/higher-limits-spacex)提及） | Microsoft Foundry，CCU 後付 | 以自研 MAI 取代 Excel／Outlook 裡的 Claude，見 [[topics/anthropic-business-risks]] 細節區 |
 
 Amazon 累計 $80 億與 Microsoft 承諾最高 $50 億是 2026-11-02 多家媒體交叉（[Fortune](https://fortune.com/2024/11/22/amazon-4-billion-investment-startup-anthropic-founder-defected-openai/)、[Nasdaq](https://www.nasdaq.com/articles/microsoft-and-nvidia-deals-push-anthropic-toward-350-bln-valuation)），未見 Anthropic 一手。
 
