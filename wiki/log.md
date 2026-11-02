@@ -8505,3 +8505,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-f9ab90（→功能，known-issues 💰 組指事故者改指 pricing-incidents）、H-1cf735（→社群，code-quality-decline 三解表補連與錨點）、H-fa1aa2（→社群，community-cost 回指分流）；結案 H-645373（第 21 波冷讀者「額度掉得快總入口」）；index 一項主編同波直接改。
 - 已知缺口：cell 基線本波 +57 筆搬家（累計 210），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`pricing-2026-11-02-proposal-map.md` 第四節。
 - 歸因 user-query／商業
+- 複驗（新冷讀者，原四題逐字）：Q2、Q4 拿到，Q1、Q3 半拿到（第一輪 1 拿 3 半）；依官方原文修 [[entities/pricing-history]] Sonnet 5.5 快取讀取 $0.10（「half of Sonnet 5’s $0.20」）、Team premium 倍數照官方「Standard 席的 5 倍」（兩頁同改）。Q1 繞法分散三頁待 H-1cf735、H-fa1aa2 落地；Q3 Bedrock／Vertex 不記絕對價為頁面既定取捨。評審實作複核放行。拆頁候選隊列五頁（第 20–24 波）全部完成。
