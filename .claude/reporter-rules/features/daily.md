@@ -48,7 +48,7 @@ feature-radar 只收**使用者可實際取用、呼叫、設定或執行的官�
 | 研究成果 / 論文（無可用介面）| 化學 NMR 分析 | 對應 entities 或略過 |
 | 公益 / CSR / 組織 / 人事 | Claude Corps | `topics/anthropic-business` |
 | 定價 / 計費 / 配額政策 | Agent SDK 計費切割 | `entities/pricing` |
-| 商業合作 / 融資 | TCS / DXC 合作 | `topics/anthropic-business` |
+| 商業合作 / 融資 | TCS / DXC 合作 | 合作 → `topics/anthropic-partnerships-compute`；融資 → `topics/anthropic-ipo` |
 | 純策略表態（無新功能）| HTML 輸出背書 | `topics/community-tech-discussions` 或略過 |
 
 > 模型本身算功能（可選用）；模型的**定價**歸 `entities/pricing`。

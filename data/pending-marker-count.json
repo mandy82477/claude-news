@@ -1,7 +1,7 @@
 {
   "count": 212,
   "updated": "2026-11-02",
-  "note": "第 22 波 market-signals 拆頁：69 筆換 slug（母頁→四子頁 19／21／12／17），去 slug 比對無增減",
+  "note": "第 23 波 business 拆頁：Post-Crescent 1 筆換 slug（topics/anthropic-business→topics/anthropic-business-risks）",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -412,8 +412,8 @@
       "label": "topics/ai-talent-flow（標 2026-08-10｜查 [[entities/teresa-carlson]]）"
     },
     {
-      "key": "topics/anthropic-business::2026-08-13::post-crescent、著作權訴訟",
-      "label": "topics/anthropic-business（標 2026-08-13｜查 Post-Crescent、著作權訴訟）"
+      "key": "topics/anthropic-business-risks::2026-08-13::post-crescent、著作權訴訟",
+      "label": "topics/anthropic-business-risks（標 2026-08-13｜查 Post-Crescent、著作權訴訟）"
     },
     {
       "key": "topics/anthropic-government-policy::2026-09-25::aisi、withhold models",

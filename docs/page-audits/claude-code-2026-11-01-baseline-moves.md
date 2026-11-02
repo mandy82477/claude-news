@@ -1,11 +1,13 @@
-# 第 21 波 claude-code 拆頁：基線搬家清單（2026-11-02）
+# 第 21–23 波拆頁：基線搬家清單（2026-11-02）
+
+> 本檔原為第 21 波；第 23 波 anthropic-business 拆頁另有 46 筆同性質搬家（清單在 `anthropic-business-2026-11-02-proposal-map.md` 第六節），本機一次 `--rebuild --allow-grow` 一併收；第 22 波貢獻 0 筆。
 
 雲端 session 的 `guard_roles.py` H6 擋 `--rebuild`／`--allow-grow`／`--write-baseline` 與 `data/*-allow.json`，所以這兩道閘在 `claude/stoic-edison-ewvmcx` 上刻意是紅的（使用者 2026-11-02 裁決）。紅的每一筆都是原文隨拆頁從 `entities/claude-code` 搬到子頁，內容與長度不變。**併 master 前，在本機做下面兩件事：**
 
-1. **cell 基線**（配不回 0，預期 added 107／removed 181，removed 都在舊頁名下）：
+1. **cell 基線**（配不回 0；預期 added 153（第 21 波 107＋第 23 波 46）；removed 以輸出為準，都在舊頁名 `entities/claude-code`、`topics/anthropic-business` 下）：
 
    ```bash
-   python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 21 波 claude-code 拆頁：107 筆存量超限隨原文搬到三子頁（內容與長度不變，清單見 docs/page-audits/claude-code-2026-11-01-baseline-moves.md）；舊頁名下失效存量一併收緊"
+   python scripts/check_cell_limits.py --rebuild --allow-grow --reason "第 21 波 claude-code 拆頁：107 筆存量超限隨原文搬到三子頁（內容與長度不變，清單見 docs/page-audits/claude-code-2026-11-01-baseline-moves.md）；舊頁名下失效存量一併收緊；第 23 波 anthropic-business 拆頁 46 筆同性質，清單見 docs/page-audits/anthropic-business-2026-11-02-proposal-map.md 第六節"
    ```
 
 2. **reader-language 白名單**（不要跑 `--write-baseline`：存量基線已是 0，跑了會把兩筆產品詞種回去）：`data/reader-language-allow.json` 把 #22、#23（`line_contains`「只談封存」，兩筆重複，#23 可刪）的 `page` 改為 `entities/claude-code-known-issues`；#24（「對話封存後完全消失」）改為 `entities/claude-code-releases`；reason 原樣。之後 `python scripts/check_reader_language.py` 應印 `OK`。

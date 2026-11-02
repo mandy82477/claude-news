@@ -957,7 +957,7 @@ ${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
     'anthropic-government-policy': '政府與軍事', 'community-tech-discussions': '社群討論',
     'community-tech-patterns': '社群工作流', 'recursive-self-improvement': 'AI 自我改進',
     'safety-china-trust-dispute': '中美信任', 'market-signals': '投資訊號', 'code-quality-decline': '效能退步',
-    'market-signals-ipo': '投資·IPO', 'market-signals-legal': '投資·官司監管', 'market-signals-compute': '投資·算力融資', 'market-signals-customers': '投資·定價客戶',
+    'market-signals-ipo': '投資·IPO', 'market-signals-legal': '投資·官司監管', 'market-signals-compute': '投資·算力融資', 'market-signals-customers': '投資·定價客戶', 'anthropic-ipo': '商業·上市財報', 'anthropic-partnerships-compute': '商業·合作算力', 'anthropic-business-risks': '商業·風險',
   };
   const PPL_ORBIT_KEY = 'claude-news-ppl-orbit';
   const ppl = { view: 'overview', group: 'rel', filter: null, sel: null, people: [], issueSel: null, issueData: null, host: null };

@@ -101,8 +101,10 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 | 公司 | 出資 | 算力 | 通路 | 也是客戶或對手 |
 |---|---|---|---|---|
 | Google | 2026-04-24 宣布最高 $400 億，見 [[entities/google-investment]] | TPU；S-1 承諾 $1,140 億（多家引 S-1） | Vertex AI，費率由 Google 自訂，見下方合作表 | Gemini 是直接對手，見 [[topics/competitor-landscape]] |
-| Amazon | 2023–2024 共 $40 億（媒體稱）；Series H 再出 $50 億（2026-05-28，多家報導） | S-1 承諾 $1,100 億（多家引 S-1） | Bedrock、Claude Platform on AWS；2025 年近半營收經 Amazon、Google 雲端市集賣出 | 賣家工具首波接 Claude（09-23）；Alexa 傳降低對高成本模型依賴（07-23） |
-| Microsoft | 未見持股報導 | Azure 容量 $300 億（[官方 05-06 公告](https://www.anthropic.com/news/higher-limits-spacex)提及，2026-11-02 查證） | Microsoft Foundry，CCU 後付 | 以自研 MAI 取代 Excel／Outlook 裡的 Claude，見 [[topics/anthropic-business-risks#還沒過去的風險]] |
+| Amazon | 累計 $80 億（2023-09～2024-11 三筆，媒體稱）；Series H 再出 $50 億（2026-05-28，多家報導） | S-1 承諾 $1,100 億（多家引 S-1） | Bedrock、Claude Platform on AWS；2025 年近半營收經 Amazon、Google 雲端市集賣出 | 賣家工具首波接 Claude（09-23）；Alexa 傳降低對高成本模型依賴（07-23） |
+| Microsoft | 2025-11 承諾投資最高 $50 億（多家報導；實際入股金額未見） | 承諾購買 Azure 容量 $300 億（2025-11；[官方 05-06 公告](https://www.anthropic.com/news/higher-limits-spacex)提及） | Microsoft Foundry，CCU 後付 | 以自研 MAI 取代 Excel／Outlook 裡的 Claude，見 [[topics/anthropic-business-risks#還沒過去的風險]] |
+
+Amazon 累計 $80 億與 Microsoft 承諾最高 $50 億是 2026-11-02 多家媒體交叉（[Fortune](https://fortune.com/2024/11/22/amazon-4-billion-investment-startup-anthropic-founder-defected-openai/)、[Nasdaq](https://www.nasdaq.com/articles/microsoft-and-nvidia-deals-push-anthropic-toward-350-bln-valuation)），未見 Anthropic 一手。
 
 Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 47% 的口徑見 [[topics/anthropic-ipo#S-1 揭露了什麼]]。
 
@@ -302,6 +304,10 @@ S-1 表新增兩列（I71 之後、I76 之後）：
 
 - 「（見「IPO 追蹤」 表）」→「（見下方 IPO 細節）」
 
+**B203**　原：`- 惟衡量範圍是雲端商 AI 業務，非產業整體，原標題未言明；HN 反駁聲音仍為未附來源臆測；與本頁「企業採用率」43.5%（衡量家數）為不同維度，不可混用。…`
+
+- 「與本頁「企業採用率」43.5%」→「與 [[topics/anthropic-business#現在的數字]]「企業採用率」43.5%」
+
 **B238**　原：`**商業風險細節** 區保留原有條目，並新增：Nvidia-Lambda 循環融資質疑、黃仁勳對投資規模「後悔」、Chamath 質疑 IPO 前景、Steve…`
 
 整行改為：
@@ -411,6 +417,10 @@ S-1 表新增兩列（I71 之後、I76 之後）：
 **B711**　原：`- **[商業模式，第三方研究] SemiAnalysis：Anthropic 訂閱方案提供的價值為 OpenAI 的 5 倍以上**：HN 75 分、6 個來…`
 
 - 「見 [[topics/market-signals]]）」→「見 [[topics/market-signals-customers]]）」
+
+**B1023**　原：`- 法律：07-21 法官核准 15 億美元著作權和解案，申請率約 91%、律師費降至 6.8%（07-22）；同日 UTRF 專利訴訟成案（見風險表）。…`
+
+- 「同日 UTRF 專利訴訟成案（見風險表）」→「同日 UTRF 專利訴訟成案（見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區）」
 
 ### ipo 原行
 
@@ -632,7 +642,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 公司動態（辦公室、雇主排名、經濟研究、組織文化） | 母頁 `## 時序` |
 | 判不出 | 母頁 `## 時序` 的 `### 未歸類`，`/wiki-lint` 5j 分派 |
 
-母頁每日只動：頂部 callout、`## 往下鑽：三條子線` 路由表的「最後動態」、`## 現在的數字`（第 1 條）、`## 時序` 的公司動態與未歸類（`.claude/reporter-rules/page-lifecycle.md` 母頁契約的登記例外）。母頁 callout 日期不得早於子樹最新新聞（`scripts/check_hierarchy.py`）。母頁 `#### 指路殼` 四個不動：三個有 `daily/` 讀者版日報錨點指入（不可改的過去），「算力與資金從哪來」等人物頁改指後由主編刪。
+母頁每日只動：頂部 callout、`## 往下鑽：三條子線` 路由表的「最後動態」、`## 現在的數字`（第 1 條）、`## IPO 走到哪一格` 的一句結論（ipo 五格表任一格換值時同批覆寫，第 2 條）、`## 時序` 的公司動態與未歸類（`.claude/reporter-rules/page-lifecycle.md` 母頁契約的登記例外）。母頁 callout 日期不得早於子樹最新新聞（`scripts/check_hierarchy.py`）。母頁 `#### 指路殼` 四個不動：三個有 `daily/` 讀者版日報錨點指入（不可改的過去），「算力與資金從哪來」等人物頁改指後由主編刪。
 
 **每次 ingest 後依序：**
 ```
@@ -656,7 +666,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 ```
 新：
 ```markdown
-2. **IPO 五格表（住 `topics/anthropic-ipo` 的 `## 上市走到哪一格`；母頁 `## IPO 走到哪一格` 只留一句結論加連結；覆寫式，五格固定不增減）。** IPO 進程的逐日細節寫進該頁 `## IPO 細節`，營收估值類的一行制寫進該頁 `## 時序`。
+2. **IPO 五格表（住 `topics/anthropic-ipo` 的 `## 上市走到哪一格`；母頁 `## IPO 走到哪一格` 只留一句結論加連結，五格表任一格換值時同批覆寫這一句；覆寫式，五格固定不增減）。** IPO 進程的逐日細節寫進該頁 `## IPO 細節`，營收估值類的一行制寫進該頁 `## 時序`。
 ```
 
 ### `.claude/reporter-rules/commercial/pages.md`
@@ -793,9 +803,9 @@ archive 子頁為 `topics/anthropic-business-archive`（**子樹共用**：三�
 ```
 新：
 ```markdown
-| `wiki/topics/anthropic-business.md`（母頁） | 公司動態（辦公室、雇主排名、經濟研究、組織文化）；`## 現在的數字` 指標換值；子線路由表「最後動態」。其餘商業事件寫進下面三子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
+| `wiki/topics/anthropic-business.md`（母頁） | 公司動態（辦公室、雇主排名、經濟研究、組織文化）；`## 現在的數字` 指標換值；`## IPO 走到哪一格` 一句結論（五格表換值時同批）；子線路由表「最後動態」。其餘商業事件寫進下面三子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
 | `wiki/topics/anthropic-ipo.md`（子頁「上市與財報」） | **IPO 與估值進程**、融資輪次、**公司層級財務數字**、治理與股權（五格表、S-1 揭露表、數字細節住這頁） |
-| `wiki/topics/anthropic-partnerships-compute.md`（子頁「合作與算力」） | 戰略合作、收購、算力合約與資本支出、政府採購、企業採用率 |
+| `wiki/topics/anthropic-partnerships-compute.md`（子頁「合作與算力」） | 戰略合作、收購、算力合約與資本支出、政府採購、具名企業導入（採用率指數換值寫母頁 `## 現在的數字`） |
 | `wiki/topics/anthropic-business-risks.md`（子頁「風險與商業模式」） | **公司層級商業風險**（訴訟、企業退出、補貼結構）、商業模式、PMF 訊號 |
 ```
 
@@ -840,7 +850,7 @@ archive 子頁為 `topics/anthropic-business-archive`（**子樹共用**：三�
 ```
 新：
 ```markdown
-判讀涉及上市公司時覆寫，見 `.claude/reporter-rules/market/pages.md`；`topics/anthropic-business` 的 `## 現在的數字`（指標換值）與 `## 時序`（只收公司動態），路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條）；
+判讀涉及上市公司時覆寫，見 `.claude/reporter-rules/market/pages.md`；`topics/anthropic-business` 的 `## 現在的數字`（指標換值）、`## IPO 走到哪一格`（一句結論，隨 ipo 五格表覆寫）與 `## 時序`（只收公司動態），路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條）；
 ```
 
 ### `.claude/reporter-rules/features/daily.md`
@@ -885,6 +895,28 @@ archive 子頁為 `topics/anthropic-business-archive`（**子樹共用**：三�
 新：
 ```markdown
 事實頁（anthropic-business 子樹、pricing
+```
+
+### `.claude/reporter-rules/commercial/pages.md`
+
+原：
+```markdown
+**訴訟不適用 90 天**——在判決、和解或撤訴前一律留表。
+```
+新：
+```markdown
+**訴訟不適用 90 天**——在判決、和解或撤訴前不因 90 天退場；表滿載時仍照下方留表優先序讓位（細節區保留、表下點名）。
+```
+
+### `.claude/reporter-rules/market/daily.md`
+
+原：
+```markdown
+| [[topics/anthropic-business]]「現在的數字」 |
+```
+新：
+```markdown
+| [[topics/anthropic-ipo]]「S-1 揭露了什麼」（指標換值在 [[topics/anthropic-business]]「現在的數字」） |
 ```
 
 # 進腳本

@@ -10,8 +10,10 @@
 
 | 頁面 | 觸發條件 |
 |------|---------|
-| `wiki/topics/anthropic-business.md` | 融資、收購、戰略合作、企業採用率、**公司層級財務數字**、**公司層級商業風險**（訴訟、企業退出、補貼結構）|
-| `wiki/topics/anthropic-ipo.md`（`anthropic-business` 子頁） | **IPO 與估值進程**：遞件、時程、估值、承銷、質疑與逐日細節（五格表住這頁） |
+| `wiki/topics/anthropic-business.md`（母頁） | 公司動態（辦公室、雇主排名、經濟研究、組織文化）；`## 現在的數字` 指標換值；`## IPO 走到哪一格` 一句結論（五格表換值時同批）；子線路由表「最後動態」。其餘商業事件寫進下面三子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
+| `wiki/topics/anthropic-ipo.md`（子頁「上市與財報」） | **IPO 與估值進程**、融資輪次、**公司層級財務數字**、治理與股權（五格表、S-1 揭露表、數字細節住這頁） |
+| `wiki/topics/anthropic-partnerships-compute.md`（子頁「合作與算力」） | 戰略合作、收購、算力合約與資本支出、政府採購、具名企業導入（採用率指數換值寫母頁 `## 現在的數字`） |
+| `wiki/topics/anthropic-business-risks.md`（子頁「風險與商業模式」） | **公司層級商業風險**（訴訟、企業退出、補貼結構）、商業模式、PMF 訊號 |
 | `wiki/topics/enterprise-tool-tracker.md` | 具名企業採用 / 退出 AI 編碼工具；企業工具切換報導（含有規模描述的匿名企業）；企業 AI 工具預算或成本相關的具名案例 |
 | `wiki/topics/enterprise-cost-management.md` | 企業規模成本挑戰、具名案例 |
 | `wiki/entities/pricing.md` | 訂閱方案、計費政策、token 成本 |

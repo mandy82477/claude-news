@@ -8486,3 +8486,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-5978d7（→投資分析，六類判準回頭檢查——W41–W44 每週 12／13／9／16 則 vs 預期 3–5 則，使用者批准）、H-a450ba（→投資分析，market-lessons 連結改指四子頁、IPO 線則數更新）、H-5f3c59（→人物，yann-lecun／tom-brown／suleyman 錨點改指子頁，改完由主編刪母頁 h4 殼）、H-6109b3（→商業，anthropic-ipo／business 連結改指子頁、Microsoft 細節與 Nscale 口徑，第 23 波一併處理）。
 - 歸因 user-query／投資分析
 - 複驗（新冷讀者，原四題逐字）：Q1–Q3 拿到、Q4 半拿到（第一輪 2 拿 2 半）；依複驗在 [[topics/market-signals]] 標的表下補「曝險多大」三型說明。剩餘缺口屬 [[topics/anthropic-business]] 子樹（第 23 波）：[[topics/anthropic-ipo]] 一處仍寫「等待 S-1 遞交」、與 market-signals-ipo／compute 兩組讀者分不出差別。轉知更正：H-a450ba 作廢（market-lessons 由主編週更、記者唯讀），[[topics/market-lessons]] 三處連結改指四子頁、IPO 線則數 18→21 由主編同波直接改。評審實作複核有條件放行（派錯人 1 🔴 已修）。
+
+## 2026-11-02 Query（第 23 波頁面健檢——anthropic-business 拆成母頁＋兩子頁，財報併入 anthropic-ipo）
+
+- 裁決（主 session 自決，使用者授權；八點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-02 第 23 波兩條）：[[topics/anthropic-business]] 由 1,048 行拆為母頁（正文 189 行，使命句恢復第 7 波定稿「Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及哪幾件事會反過來改到你用的 Claude」）＋新子頁 [[topics/anthropic-partnerships-compute]]（合作與算力，含三大雲對照表）／[[topics/anthropic-business-risks]]（風險與商業模式）；營收估值群併入既有 [[topics/anthropic-ipo]]，標題改「上市與財報」（不另開 financials：S-1 數字會分住三頁，且名字與 [[topics/market-signals-ipo]] 鏡像）。拆前 08 月時序與 07 月合作清單蒸進 [[topics/anthropic-business-archive]]；照搬 910 行逐字核對、懸置 212→212；母頁留三個永久指路殼接讀者版日報 7 筆錨點。
+- 主編查證（2026-11-02；雲端解析不到 www.sec.gov）：Series H $9,650 億一致；淨損 807 億降為「多家引 S-1」並補九成非現金；「連續獲利」寫明調整後口徑（S-1 營業層仍虧約 6.9 億）；Q3 日期統一；SpaceX Colossus 1 對官方 05-06 頁一致；Nscale 1,030 億是全部客戶總合約、450 億是 Anthropic 那筆；補查 Microsoft 2025-11 承諾投資最高 $50 億＋$300 億 Azure、Amazon 累計 $80 億＋Series H $50 億（多家交叉）。anthropic-ipo 四處過期句（等 S-1 遞交、10 月中時程、10-20 外流當 S-1、「四件事」）改正，⟨Q-03⟩ 改問掛牌日與價格區間、複查 11-24。
+- 規則面：`commercial/pages.md`（子樹路由、母頁每日准動含 IPO 一句結論、三大雲表第 12 條、算力表 180 天退場第 13 條、訴訟留表與讓位不衝突）、`commercial/daily.md`／`weekly.md`、`page-lifecycle.md` L52 例外、`market/daily.md`（S-1 指標改指 anthropic-ipo）、`features/daily.md`、`sweeps.md`、兩記者角色檔。網站人物 chip 與讀者標籤測試補三子頁。
+- 轉知帳本：新開 H-fec1b0（→人物，tom-brown 錨點改指 partnerships-compute，改完主編刪暫時殼）、H-4dbf62（→投資分析，market-signals 子樹六項回掃與對稱互指句）、H-f000d4（→商業，時序類別標籤固定詞彙提案）；結案 H-6109b3（三項本波做完、一項移入 H-4dbf62）。`devpractice_diff.py mark` 未做（會跳過開發實務記者尚未撿料的範圍，第 20–22 波亦未做）。
+- 已知缺口：cell 基線本波 +46 筆搬家（累計 153），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`anthropic-business-2026-11-02-proposal-map.md` 第六節。
+- 歸因 user-query／商業

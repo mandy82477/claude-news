@@ -26,7 +26,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 ## 邊界（在共用限制之上）
 
-- **只寫 `wiki/topics/market-signals.md` 與四子頁 `market-signals-ipo／-legal／-compute／-customers`**；事實頁（anthropic-business、pricing、enterprise-tool-tracker、competitor-landscape）唯讀，需要它們改動時走「⚠️ 需主編轉知商業記者」
+- **只寫 `wiki/topics/market-signals.md` 與四子頁 `market-signals-ipo／-legal／-compute／-customers`**；事實頁（anthropic-business 子樹、pricing、enterprise-tool-tracker、competitor-landscape）唯讀，需要它們改動時走「⚠️ 需主編轉知商業記者」
 - **各子頁 `## 回顧結算` 的「兩週後」與「對錯」欄、母頁合計表、子頁 `## 現在怎麼判` 不由你填**——那需要跨週查證，屬 `/wiki-lint` 5h 主編工作（`.claude/reporter-rules/market/weekly.md`）；你只加 ⏳ 列
 - 無 web 工具；查證需求標「⚠️ 需主編查證」寫進回報，不自行推斷
 - 不可再呼叫 Agent tool 委派工作
