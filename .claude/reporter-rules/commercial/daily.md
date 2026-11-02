@@ -16,7 +16,9 @@
 | `wiki/topics/anthropic-business-risks.md`（子頁「風險與商業模式」） | **公司層級商業風險**（訴訟、企業退出、補貼結構）、商業模式、PMF 訊號 |
 | `wiki/topics/enterprise-tool-tracker.md` | 具名企業採用 / 退出 AI 編碼工具；企業工具切換報導（含有規模描述的匿名企業）；企業 AI 工具預算或成本相關的具名案例 |
 | `wiki/topics/enterprise-cost-management.md` | 企業規模成本挑戰、具名案例 |
-| `wiki/entities/pricing.md` | 訂閱方案、計費政策、token 成本 |
+| `wiki/entities/pricing.md`（母頁） | 訂閱方案、牌價、生效規則、還沒確定的計費變動等現行事實；子頁路由表「最後動態」。事故與沿革寫進下面兩子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
+| `wiki/entities/pricing-incidents.md`（子頁「計費事故」） | 計費事故與爭議、額度與速率異常回報、灰色市場與轉售；`## 還在發生的事故` 表 |
+| `wiki/entities/pricing-history.md`（子頁「計費沿革」） | 價格、方案與促銷什麼時候變的；`## 最近三個月變了什麼` |
 | `wiki/entities/openclaw.md` | 第三方 agentic 工具的**使用政策與計費**變化（禁令、恢復、信用池費率）。本頁主線是計費政策；OpenClaw agent 造成的安全事件由安全政策記者寫進 [[topics/ai-agent-safety]]，本頁只留一行指過去 |
 | `wiki/entities/opencode.md` | OpenCode 的**產品事實**（採用規模、功能對等性評測、對官方 skills 的移植）。競爭面的判讀（衝擊度、定價對照）住 [[topics/competitor-landscape]] 的 OpenCode 列，本頁是它指過來的「完整脈絡」——那一列有新動態時同步回寫本頁，別讓本頁再停在舊日期 |
 | `wiki/topics/competitor-landscape.md` | 競品動態、企業工具市佔變化（**先看 `.claude/reporter-rules/commercial/pages.md` 該頁第 0 條「本頁不收什麼」**）|

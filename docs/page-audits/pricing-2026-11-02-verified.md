@@ -29,3 +29,10 @@
 1. 方案表整表重判（資料截至 08-22 已逾 70 天）：改 Max／Ultra 名稱、加「月度 API 額度」欄或列、Enterprise 公開價；「資料截至」改 2026-11-02 並附 claude.com/pricing 連結。
 2. API 主表補 Haiku 5.5 兩檔、拿掉 Haiku 4.5「陣容中最低價」；「還沒確定的計費變動」裡已查證的 Haiku 5.5 列移出。
 3. 這兩項都屬母頁「我現在怎麼被計費」結論層，不隨拆頁下沉。
+
+## 四、補查（評審 🔴1，2026-11-02 主 session 逐字重抓 claude.com/pricing）
+
+- Ultra：「No 5-hour limit」（方案條列）、「No 5-hour limit for verified accounts.」（註腳）、用量表 Ultra 欄「No 5-hour limit‡」。
+- Ultra 週用量：「10x Pro usage every week」、用量表「Limit every week」Ultra 欄「10x」。
+- Fable 50% 上限：Max 條列「Fable included, up to half your weekly limit」；用量表 Fable 列 Max 與 Ultra 欄「50% of weekly limits*」；Team 表「50% of weekly limits*on premium seats」；Pro「Fable, paid with usage credits」無 50% 字樣；Free「No」。
+- 判定：N8 兩項皆為官方一手，照 N3 退場條文移出「還沒確定」表、寫進方案表。

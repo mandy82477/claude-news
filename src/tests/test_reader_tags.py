@@ -88,6 +88,8 @@ class TestDecidedExclusions(unittest.TestCase):
         "community-tech-discussions": "社群在吵什麼，同上（使用者原話：「裡面東西蠻不實務的」）",
         "code-quality-decline": "答的是「是不是變差了」，不是「怎麼做」",
         "pricing": "答的是「要花多少」，不是「怎麼做」",
+        "pricing-incidents": "同 pricing（第 24 波拆出的子頁）",
+        "pricing-history": "同 pricing（第 24 波拆出的子頁）",
         "ai-agent-safety": "答的是「有什麼風險」，不是「怎麼做」",
         "anthropic-government-policy": "答的是「管制怎麼走」，不是「怎麼做」",
         "managed-agents": "2026-09-10 起只收代管平台產品事實與計費（答「要花多少」）；agent 選型已升格到母頁 anthropic-agent-stack",

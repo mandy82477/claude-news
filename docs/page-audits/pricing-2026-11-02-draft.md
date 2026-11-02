@@ -26,7 +26,7 @@ callout（取代 P37–39）：
 
 `## 現況`（取代 P43–51 五段）：
 ```markdown
-**所有付費方案仍是訂閱配額制；週配額 09-14 換軌後約為加成期間的 83%**：同樣的工作，`Settings > Usage` 的用量百分比多跑約 20%（1 ÷ 0.83），5 小時上限的計算方式不變（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，09-14 確認）。旗艦 Fable 在訂閱裡分兩層：Max、Ultra 與 Team premium 標配、上限為週用量的 50%（Ultra 改名後官方未重述，沿用屬推論）；Pro 與 Team standard 走 usage credits 按 API 費率付費。Agent SDK、`claude -p` 照計訂閱配額——原定 06-15 的計費切割已於 06-16 暫停、重推時間未定（經過見 [[entities/pricing-archive#計費切割風波]]）。
+**所有付費方案仍是訂閱配額制；週配額 09-14 換軌後約為加成期間的 83%**：同樣的工作，`Settings > Usage` 的用量百分比多跑約 20%（1 ÷ 0.83），5 小時上限的計算方式不變（[官方說明中心](https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion)，09-14 確認）。旗艦 Fable 在訂閱裡分兩層：Max、Ultra 與 Team premium 標配、上限為週用量的 50%（2026-11-02 方案頁查證）；Pro 與 Team standard 走 usage credits 按 API 費率付費。Agent SDK、`claude -p` 照計訂閱配額——原定 06-15 的計費切割已於 06-16 暫停、重推時間未定（經過見 [[entities/pricing-archive#計費切割風波]]）。
 
 **升級能多拿多少、你的選項**：官方不公布週配額的絕對量，方案頁只寫倍數——Max 為 Pro 的 5 倍、Ultra 為 10 倍（2026-11-02 查證）。選項：把重活挪進 5 小時窗／升 Max 或 Ultra／開 usage credits 補量，但開之前先設月上限（開了之後上限不再是硬停止，見下方警語）。
 ```
@@ -54,7 +54,7 @@ callout（取代 P37–39）：
 | Free | $0 | 基本額度；含 Design／Slides／Docs，不含 Opus | — | — | 09-14 起週配額 +25% 不適用本方案 |
 | Pro | $20（年繳 $17／月）| 全模型，**Fable 旗艦除外**（免另計費最強為 Opus 5.5）| **Fable 5／5.1** — $10/$50 per Mtok，走 usage credits | 無月度 API credits | 至 `Settings > Usage` 確認 auto-reload 未開 |
 | Max | $100 | Pro 的 5 倍用量；**旗艦（Fable 5／5.1）上限為週用量 50%** | 超出後走 usage credits | 每月 $100 API credits | 留意旗艦誤要求購點問題（見 [[entities/pricing-incidents]]）|
-| Ultra（原 Max 20x） | $200 | Pro 的 10 倍用量；旗艦上限同 Max（改名後官方未重述，推論） | 同上 | 每月 $200 API credits | 用量上限集體訴訟進行中（訴的是 Max 20x 時期的宣稱） |
+| Ultra（原 Max 20x） | $200 | 每週 Pro 的 10 倍用量、驗證帳號無 5 小時上限；旗艦上限同 Max | 同上 | 每月 $200 API credits | 用量上限集體訴訟進行中（訴的是 Max 20x 時期的宣稱） |
 | Team standard seat | $20（年繳）／$25（月繳）每席 | 同 Pro | 同 Pro | 每席 $20 計入全隊共用池，上限 $500／月 | 年繳需達最低 20 席（2026-10-15 新增門檻）|
 | Team premium seat | $100（年繳）／$125（月繳）每席 | 同 Max | 同 Max | 每席 $100 計入同一池 | — |
 | Enterprise | $20／席（年繳，20 席起） | 席位費不含用量；舊制席位制比照 standard／premium 分層 | 用量按 API 費率；舊制同對應層 | — | 07-04 起可用支出控管；可依承諾支出談折扣 |
@@ -124,6 +124,11 @@ API 表新列（插在 P139 Sonnet 4.6 之後）：
 - **P33**：「**最後更新：** 2026-11-01」→「**最後更新：** 2026-11-02」
 - **P117**：「Opus 5 的 **142 小時**」→「Opus 5.5 的 **172 小時**」
 - **P117**：「**80 小時**與 **160 小時**」→「**80 小時**與 **200 小時**」
+- **P117**：「Max 5x 的 $100」→「Max 的 $100」
+- **P90**：「**Max 20x 的差異不只用量**」→「**Ultra（原 Max 20x）的差異不只用量**」
+- **P90**：「非單純 Pro 的 20 倍」→「不只是倍數不同」
+- **P94**：「Pro、Max、Team、Enterprise 皆內含，Free 不含；」→「Pro、Max、Team、Enterprise 皆內含（Free 自 10-17 起也含，見下條）；」
+- **P273**：「載 Max 5x 每月 $100、Max 20x 每月 $200」→「載 Max 每月 $100、Ultra（原 Max 20x）每月 $200」
 - **P140**：「陣容中最低價；」→「（刪）」
 - **P144**：「Fast mode（僅 Claude API，2026-10-16 查證已不再標記「research preview」）另計 **$10 / $50**」→「Fast mode 另計 **$10 / $50**（可用通路與研究預覽狀態見「通路與乘數」乘數細節）」
 - **P202**：「詳見下方「重要政策變動紀錄」10-09 條目」→「見 [[entities/pricing-history]] 10-09 條」
@@ -144,7 +149,7 @@ API 表新列（插在 P139 Sonnet 4.6 之後）：
 
 > **最新動態**（2026-11-01）
 > - [Reddit 單一貼文](https://www.reddit.com/r/ClaudeAI/comments/1xh3yyu/claude_code_usage_exploded_8x_today_anthropic/)稱當日 Claude Code 用量暴增 8 倍，並稱服務端錯誤也扣付費額度、不補償；未見 Anthropic 說法。
-> - [Reddit 單一貼文](https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/)稱方案改名並取消 5 小時窗：改名 2026-11-02 對官方查證屬實（$200 一檔現名 Ultra），5 小時窗至今只有這一則貼文。
+> - [Reddit 單一貼文](https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/)稱方案改名並取消 5 小時窗：2026-11-02 對官方方案頁查證兩件都屬實（$200 一檔現名 Ultra，驗證帳號無 5 小時上限）。
 ```
 
 `## 還在發生的事故`：表頭說明（取代 P295）與 `%%`（取代 P299）：
@@ -184,7 +189,7 @@ P339 標題（證據等級）：
 
 P794（取代）：
 ```markdown
-- **2026-11-02 對官方方案頁查證**：改名屬實——$200 一檔現名 Ultra（Pro 的 10 倍用量），$100 的 Max 為 5 倍；5 小時窗是否取消，官方說明未見，見 [[entities/pricing#還沒確定的計費變動]]。
+- **2026-11-02 對官方方案頁查證**：改名屬實——$200 一檔現名 Ultra（Pro 的 10 倍用量），$100 的 Max 為 5 倍；5 小時窗：方案頁載 Ultra 驗證帳號無 5 小時上限，見 [[entities/pricing#我的方案現在有什麼]]。
 ```
 
 相關：
@@ -202,6 +207,7 @@ P794（取代）：
 ```
 
 行內替換：
+- **P459**：「#### ⛔ 2026-08-28：」→「#### ✅ 2026-08-28：」
 - **P316**：「下方「事故與爭議」事件流每則」→「下方「事故與爭議」每則」
 - **P305**：「2026-10-21，Issue #79773（31 留言）：」→「2026-10-21，Issue #79773：」
 - **P308**：「Issue #16157 累積 1,495 則留言、725 👍，本頁互動量最高」→「Issue #16157，官方同日補「用量與長度是兩種限制」說明」
@@ -229,7 +235,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 官方已確認、會改到帳單的，新的在上；每條的現行規則住母頁，這裡只記什麼時候變。⚠️＝不必你操作就會改到帳單。
 
-- **11-02 查證｜方案改名與附帶 API credits**：$200 一檔現名 Ultra（Pro 的 10 倍用量）；Max／Ultra／Team 每月附 $100／$200／最多 $500 API credits，不付 Claude Code。見 [[entities/pricing#我的方案現在有什麼]]
+- **11-02 查證｜方案改名與附帶 API credits**：$200 一檔現名 Ultra（每週 Pro 的 10 倍用量、驗證帳號無 5 小時上限）；Max／Ultra／Team 每月附 $100／$200／最多 $500 API credits，不付 Claude Code。見 [[entities/pricing#我的方案現在有什麼]]
 - **10-30｜Opus 4.8 fast mode 宣告淘汰，11-30 移除** ⚠️：之後請求直接回錯誤、不退回標準 Opus 4.8；同批 Opus 5.5 fast mode 不再限第一方 API。見 [[entities/pricing#乘數：會互相疊乘]]
 - **10-30｜Enterprise／API 可依承諾支出談客製折扣**（門檻未公開）。見 [[entities/pricing#當前生效的計費規則]]
 - **10-15｜Team 年繳 20 席下限**。見 [[entities/pricing#方案可用性與帳務摩擦]]
@@ -239,8 +245,10 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 - **10-06→10-24｜Claude for Startups 的免費 Team＋$1,000 額度暫停**，不受理新申請。見 [[entities/pricing#額度與通路的帳務坑]]
 - **10-05 查證｜Sonnet 4.5 11-30 退役**（Claude API；夥伴平台另訂時程）。見 [[entities/pricing#模型 API 定價現況]]
 - **09-22／09-28｜Opus 5.5 $4／$20、Sonnet 5.5 $2／$10 上線並成為預設**。見 [[entities/pricing#模型 API 定價現況]]
+- **09-19｜Auto mode 改用 server-side classifier，分類器耗用不計費**（API、Enterprise、雲端通路）。見 [[entities/pricing#當前生效的計費規則]]
 - **09-14｜週配額換軌** ⚠️：+50% 加成到期、永久 +25% 接手，水位約為加成期間的 83%。見 [[entities/pricing#現況]]
-- **還沒證實的**：Ultra 取消 5 小時窗（10-30 Reddit）、Opus 5.5 實驗性用量重置。見 [[entities/pricing#還沒確定的計費變動]]
+- **08-10｜Sonnet 5 維持 $2／$10**，原訂 9/1 漲到 $3／$15 的計畫取消。見 [[entities/pricing#模型 API 定價現況]]
+- **還沒證實的**：Opus 5.5 實驗性用量重置。見 [[entities/pricing#還沒確定的計費變動]]
 
 ---
 

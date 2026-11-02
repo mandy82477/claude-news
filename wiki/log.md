@@ -8496,3 +8496,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 已知缺口：cell 基線本波 +46 筆搬家（累計 153），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`anthropic-business-2026-11-02-proposal-map.md` 第六節。
 - 歸因 user-query／商業
 - 複驗（新冷讀者，原四題逐字）：Q1–Q4 皆拿到、各 2 跳（第一輪 1 拿 3 半）；依複驗改 [[topics/anthropic-business-risks]] 保險列來源等級為「多家引 S-1」並修正 ⚠️ 高兩列排序、[[topics/anthropic-partnerships-compute]] Microsoft 列指路、[[topics/anthropic-ipo]] Q2 季增改 140%（Q2 $115 億對 Q1 $48 億）；其餘四項口徑矛盾開 H-11d17b（→商業）。評審實作複核放行。
+
+## 2026-11-02 Query（第 24 波頁面健檢——pricing 拆成母頁＋incidents／history，計費切割死案歸檔）
+
+- 裁決（主 session 自決，使用者授權；八點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-02 第 24 波兩條）：[[entities/pricing]] 由 969 行拆為母頁（正文約 293 行：方案、API 牌價、通路與乘數、生效規則、「額度掉得快」三路分流沿用 `## 事故現在還在發生嗎` 節名）＋[[entities/pricing-incidents]]（事故、配額與速率、灰色市場；事故表上限 8、照最後動態排序、未上表者表下可見一行）＋[[entities/pricing-history]]（定價與促銷沿革、成本案例，新增「最近三個月變了什麼」）；計費切割風波 101 行依使用者 09-06 裁決死案歸檔、06 月事故與配額條目一併進 [[entities/pricing-archive]]（116→231）；照搬 544 行逐字、懸置 4→4（全站 212）。乙案（另開 pricing-api 依讀者分）評估後落選，理由記 ledger。
+- 主編查證（官方一手，2026-11-02 claude.com/pricing 與 platform.claude.com 定價頁）：$200 那一檔改名 Ultra（Pro 的 10 倍週用量、驗證帳號無 5 小時上限、Fable 上限同 Max 為週用量 50%）；月度 API credits Max $100／Ultra $200／Team 最多 $500 共用、Pro 無；Enterprise $20／席年繳 20 席起＋用量按 API 費率；API 主表補 Haiku 5.5（≤100K $0.10／$0.50、>100K $0.50／$2.50），刪 Haiku 4.5「陣容中最低價」；方案表「資料截至」改 11-02。
+- 規則面：`commercial/pages.md` pricing 節改寫（四頁路由、事故表上限與排序條文、「單一社群回報型」定義、還沒確定表退場、history 可有三個月結論段、計費切割凍結條文刪除）、`commercial/daily.md`、`page-lifecycle.md` L52 例外；index 鉤子改寫並在開發實務入口補「要花多少、怎麼被計費」一列。
+- 轉知帳本：新開 H-f9ab90（→功能，known-issues 💰 組指事故者改指 pricing-incidents）、H-1cf735（→社群，code-quality-decline 三解表補連與錨點）、H-fa1aa2（→社群，community-cost 回指分流）；結案 H-645373（第 21 波冷讀者「額度掉得快總入口」）；index 一項主編同波直接改。
+- 已知缺口：cell 基線本波 +57 筆搬家（累計 210），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`pricing-2026-11-02-proposal-map.md` 第四節。
+- 歸因 user-query／商業

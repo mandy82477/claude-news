@@ -1,7 +1,7 @@
 {
   "count": 212,
   "updated": "2026-11-02",
-  "note": "第 23 波 business 拆頁：Post-Crescent 1 筆換 slug（topics/anthropic-business→topics/anthropic-business-risks）",
+  "note": "第 24 波 pricing 拆頁：3 筆換 slug（entities/pricing→entities/pricing-incidents）",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -216,16 +216,16 @@
       "label": "entities/opus-5（標 2026-08-26｜查 tech-insider.org、$19 Gap）"
     },
     {
-      "key": "entities/pricing::2026-08-10::[[topics/ai-agent-safety]]、resale scope",
-      "label": "entities/pricing（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope）"
+      "key": "entities/pricing-incidents::2026-09-07::github #16157、usage limits",
+      "label": "entities/pricing-incidents（標 2026-09-07｜查 GitHub #16157、usage limits）"
     },
     {
-      "key": "entities/pricing::2026-09-07::github #16157、usage limits",
-      "label": "entities/pricing（標 2026-09-07｜查 GitHub #16157、usage limits）"
+      "key": "entities/pricing-incidents::2026-09-04::max 5x、帳號停用",
+      "label": "entities/pricing-incidents（標 2026-09-04｜查 Max 5x、帳號停用）"
     },
     {
-      "key": "entities/pricing::2026-09-04::max 5x、帳號停用",
-      "label": "entities/pricing（標 2026-09-04｜查 Max 5x、帳號停用）"
+      "key": "entities/pricing-incidents::2026-08-10::[[topics/ai-agent-safety]]、resale scope",
+      "label": "entities/pricing-incidents（標 2026-08-10｜查 [[topics/ai-agent-safety]]、resale scope）"
     },
     {
       "key": "entities/pricing::2026-09-24::pasquale pillitteri、實驗性重置",

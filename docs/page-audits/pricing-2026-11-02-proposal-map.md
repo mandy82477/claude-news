@@ -53,7 +53,7 @@
 | L431 | incidents | 🔴 2026-09-06：GitHub Issue 累積 1,492 則留言、725 👍——Max  |
 | L442 | incidents | 🔴 2026-09-04：GitHub Issue 累積 184 則留言——Max 5x 續訂扣款後 |
 | L453 | incidents | ⚖️ 2026-08-31：HN 質疑「20x」用量宣稱的實質定義——只放大 5 小時視窗、非週上限 |
-| L459 | incidents | ⛔ 2026-08-28：Reddit 整理十週時間軸為誤讀——查證確認官方從未承諾 Fable 5 |
+| L459 | incidents（改） | ⛔ 2026-08-28：Reddit 整理十週時間軸為誤讀——查證確認官方從未承諾 Fable 5 |
 | L467 | incidents | ✅ 2026-08-15：Fable 5／Opus 5 是否共用同一週用量池 → ✅ 官方確認共用， |
 | L473 | incidents | 🔴 2026-08-14：Max 方案 session 額度自 3/23 起異常快速耗盡（本頁互動量 |
 | L484 | incidents | 🔴 2026-08-12：升級方案付款流程新爆計費 bug——PaymentIntent 於確認完成 |

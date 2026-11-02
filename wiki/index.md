@@ -32,6 +32,7 @@
 | 升版前要知道什麼、該裝 stable 還是 latest | [[entities/claude-code-releases]]「現在該跟哪條」＋[[feature-radar]]「⚠️ 升級前要知道的預設值與破壞性變更」 |
 | 用 hook 或權限規則擋危險指令（`rm -rf` 之類），hook 擋不擋得住 | [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]] |
 | subagent 有哪幾種型別、要讓多個 subagent 同時跑該選哪種 | [[entities/claude-code-features#Subagent 型別差異對照]] |
+| 要花多少、怎麼被計費；額度掉得特別快是 bug 還是正常 | [[entities/pricing]]「事故現在還在發生嗎」 |
 | code review 該用哪個入口、一次多少錢（官方各入口的方案限制與計費；本庫刻意不推薦單一社群工具） | [[topics/coding-workflow-guide]] 第 5 段 |
 | 大型 codebase 的做法主線（並行／context／記憶／把關） | [[topics/community-large-codebase-workflow]] |
 | 多個 agent 怎麼分工、隔離，隔離之後誰先合併、誰驗收（官方三條路對照與缺口） | [[topics/community-multi-agent]] |
@@ -53,7 +54,7 @@
 | [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手 |
 | [[entities/opus-4-8]] | model | 🤖 模型 | active（Legacy） | Opus 4.8：SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用；官方已列 Legacy、退役不早於 2027-05-28，建議遷移至 [[entities/opus-5]]　↳ 子故事：[[entities/opus-4-8-archive]] |
 | [[entities/opus-4-7]] | model | 🤖 模型 | active（Legacy）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |
-| [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案、牌價與乘數、計費規則現況；09-14 起週配額換軌、還在發生的計費事故　↳ 子故事：[[entities/pricing-archive]] |
+| [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案（含月度 API 額度）、牌價與乘數、計費規則現況；額度掉得快先看分流　↳ 子故事：[[entities/pricing-archive]]、[[entities/pricing-history]]、[[entities/pricing-incidents]] |
 | [[entities/mythos]] | model | 🤖 模型 | active（已解禁） | 高能力安全模型；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview（4% vs 6% 控制流劫持），跨越先前模型做不到的門檻　↳ 子故事：[[entities/mythos-archive]] |
 | [[entities/bugcrawl]] | feature | 🛠️ 工具/功能 | beta | Anthropic 測試中的 Claude Code 漏洞偵測工具 |
 | [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active | Anthropic AI 設計工具（10-08 脫離 beta、獨立站 12-14 關）；同頁收 Claude Dashboards 與 Motion（beta） |
