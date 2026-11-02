@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-01）
-> - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，4 家媒體定位為直接挑戰 Claude Code**（Bloomberg／南華早報）——評估 coding agent 選型的人應留意後續功能與定價。
+> **本週衝擊**（2026-11-02）
+> - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
 ---
 
@@ -48,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
-| **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」，彭博／南華早報等 4 家媒體同日報導定位為直接挑戰 Claude Code，恰在 Anthropic 預期 IPO 前數週推出 → 功能與定價細節待觀察 | 能力 | 🔴 | 跨 4 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits），功能細節與定價均未附，僅標題可用；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
+| **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Microsoft／GitHub** 🏢 | 10-28 Copilot Fusion 跨模型智慧路由正式 GA；10-29 The New Stack 稱其基準測試勝 Claude Code、API 成本減半 → 選型比價基準要重算 | 能力 | 🔴 | GitHub 官方 changelog＋The New Stack 報導；Fusion 路由機制細節、測試條件均未載 |
 | **Google（Gemini）** 🏢 | 10-28 Gemini 4 Carbon 發布，稱 AA Intelligence Index v5.0 第一（59分）、資安基準大幅領先 → 編碼/資安 agentic 評測再添一筆對照 | 能力 | 🔴 | DeepMind 官方一手；SEC-bench Pro／ExploitGym／CWE-bench 細節與對照模型未列 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
@@ -156,10 +156,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ### DeepSeek
 **現在的答案**
 - 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code，彭博／南華早報等 4 家媒體同日定位為直接競爭動作，恰在 Anthropic 預期 IPO 前數週推出，功能細節未附（跨 4 媒體同報）。
+- 11-02 Techzine Global 定位此「超級 agent」為開源版 Claude Code 替代品；權重／原始碼開放範圍與發布規模仍未見細節，僅標題可用。
 - 低價層已有可用替代：開源工具 Harness 上線，10-04 新增 Claude Code Mods 相容層（實驗性，Pandaily）。
 - V4-Pro 費率已查證（見「競品定價對照」）；V4 Flash 僅有「較 Claude API 降低逾 100 倍」的定性描述。
 **還沒解決**
-- 新「超級 agent」的功能範圍、是否基於 Harness／V4-Pro、定價與可用性均未見報導；Mods 相容層是否進正式版亦未見。
+- 新「超級 agent」是否基於 Harness／V4-Pro、確切開源範圍、定價與可用性均未見報導；Mods 相容層是否進正式版亦未見。
 
 ### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
@@ -245,6 +246,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-02
+- **DeepSeek**：Techzine Global 稱 11-01 發布的「超級 agent」為開源版 Claude Code 替代品，權重開放範圍與發布規模未見細節；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Techzine Global）
+- **OpenAI（分析文，非編碼工具）**：官方部落格宣布 Grid Protectors Program，與電力公司合作協助未來運算園區支援電網穩定並保護消費者電價；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：推出 LifeVal 基準，衡量 AI 協助托育、理財、政府文書等日常任務的表現；非編碼工具競品異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Qodo（透過 Codex 整合，⚪）**：官方部落格報導 Qodo 把公司知識與程式規範帶入 Codex 的 AI code review，協助開發者在 PR 前抓到 P0 問題；屬第三方整合生態擴張，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-01
 - **DeepSeek**：發布自主程式開發「超級 agent」，4 家媒體同日定位為直接挑戰 Claude Code，恰在 IPO 前數週推出；詳見「對手雷達」DeepSeek 列更新（Google News/Bloomberg.com）

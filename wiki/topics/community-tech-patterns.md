@@ -29,12 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-02
 **最後新聞更新：** 2026-11-01
 
-> **Skills 設計、創意工具整合同日各新增：三款 skill 同批亮相、影片範本跨 25+ agent 複用**（2026-11-01）
-> - **Skills 設計**：patch-gg/pixelfx（像素特效）、ai-shortfilm-prompts（電影分鏡提示詞）、dotnet-skills（.NET 技能目錄）三款同日亮相，見 [[topics/community-skills#2026-11]]。
-> - **Plugin / MCP 整合**：actionow-ai/vvv，開源可編輯影片範本打包為 Agent Skill，跨 25+ 款 coding agent 複用，見 [[topics/community-integrations#2026-11]]。
+> **五個子頁同日更新：測試作弊守門、語音互動第二／三例、音效 MCP、省 token 清單、跨裝置帳號搬移**（2026-11-02）
+> - **規則與安全**：Nomos 偵測 agent 測試作弊、intent-lens 執行前白話提示、aido 規格驅動 skill，另兩則 Reddit 工具不讓 agent 自己判定完成，見 [[topics/community-guardrails#2026-11]]。
+> - **介面**：語音操作 Claude Code 出現第二、三個獨立實作（Smalt、Poinky），終端機 session 瀏覽新增 arvre，見 [[topics/community-interfaces#2026-11]]。
+> - **其他**：Context 管理新增高星工具 context-mode，見 [[topics/community-memory#2026-11]]；創意工具整合新增音效 MCP soundbox，見 [[topics/community-integrations#2026-11]]；成本頁新增省 token 清單，見 [[topics/community-cost#2026-11]]。
 
 ---
 
@@ -53,12 +54,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-10-30 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-10-30 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-02 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-02 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-10-28 |
-| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-10-28 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-10-30 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-10-30 |
+| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-02 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-02 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-11-02 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 

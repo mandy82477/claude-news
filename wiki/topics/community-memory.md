@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **新增 Obsidian vault 常駐記憶，夜間把重複修正沉澱成帶信心分數的偏好**（2026-10-30）
-> - **itechmeat/open-second-brain**：給 Hermes Agent 用的本機優先記憶，常駐 Obsidian vault；每晚跑「dream pass」把重複修正轉成帶信心分數的偏好設定，另提供 Claude Code、Codex、OpenClaw 轉接器。
+> **Context 管理新增高星工具，跨環境記憶新增多帳號搬移範例**（2026-11-02）
+> - **mksglu/context-mode（33,266★）**：本機沙箱＋SQLite FTS5 全文搜尋把工具輸出攔在 context 外，稱可減少 99% 位元組；近 4 個月僅剩自動化提交，無真人開發紀錄。
+> - **altsang/claude-tandem**：多組 Claude 帳號／profile 管理工具，把 session 工作狀態搬到另一台 Mac／iPhone 繼續。
 
 ---
 
@@ -63,6 +64,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### 2026-11
+
+#### mksglu/context-mode：本機沙箱＋SQLite FTS5 全文搜尋，把工具輸出攔在 context 之外（2026-11-02）
+
+- **主線：** Context 管理
+- **核心模式：** 在本機沙箱執行工具呼叫，輸出改存 SQLite 並建 FTS5 全文索引，agent 只拿到搜尋結果而非整段輸出，稱可讓進 context 的位元組減少 99%；相容 Claude Code、Codex 等 10 款以上 agent。
+- **與既有模式的關係：** 補上「Context 管理」既有代表技巧（Just-in-Time @-file、Repo-as-Memory 等，[[topics/community-memory#2026-10]]）一個 sandbox＋全文索引取代整段工具輸出的實作；主線填 Context 管理。
+- **可信度註記：** 查核 git commit 記錄：2026-02-23～06-29 有十餘位具名貢獻者、逾 1,400 筆真人 commit，非單一帳號灌水；但 2026-06-29 後至今僅剩 GitHub Actions 機器人每日自動提交「update install stats」，無任何真人 commit，近期維護活躍度存疑；forks／issues 本次無 API 權限，未查。
+- **來源：** GitHub Search；[GitHub](https://github.com/mksglu/context-mode)
+- **成熟度：** ⏳ 新興（本庫今日首次收錄；曾有真實多人開發期，近 4 個月僅自動化提交，採用規模與維護現況待觀察）
+
+#### altsang/claude-tandem：多組 Claude 帳號與 profile 管理，跨 Mac／iPhone 搬移 session 工作狀態（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 桌面＋CLI 工具，管理多組 Claude 帳號與 profile，讓同一人能在多台 Mac、iPhone 同時跑多個 Claude 實例，並把某個 session 的工作狀態交接到另一台裝置繼續；Show HN 當日。
+- **與既有模式的關係：** 第 0 條路由表「跨環境 Agent 記憶」類別目前無代表技巧；本則是把帳號與 profile 身分、而非單純記憶內容，跨裝置搬移的實作，歸入跨環境 Agent 記憶；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 1 分，尚無第三方使用回饋；查核近期 commit，作者今日仍有真人提交（1.1.2～1.1.4 版號迭代），非一次性發布後棄置。
+- **來源：** Hacker News；[GitHub](https://github.com/altsang/claude-tandem)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，Show HN 當日，尚無社群採用回饋數據）
 
 ### 2026-10
 

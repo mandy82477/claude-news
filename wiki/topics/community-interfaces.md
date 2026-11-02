@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **Agent 活動可視化再添一個桌面寵物**（2026-10-30）
-> - **HachimoDock**：桌面寵物小工具，依 Claude Code session 即時狀態切換思考中、打字中、耍雜技、睡著等動畫；517 星。
+> **終端機 session 瀏覽新增一例，語音互動類再添兩個獨立實作**（2026-11-02）
+> - **victorcarrico/arvre**：終端機圖形化瀏覽 Claude Code session 與分支（fork）。
+> - **Smalt／Poinky**：語音操作 Claude Code，與 10 月的 tapq 合計已有三個獨立實作。
 
 ---
 
@@ -54,6 +55,35 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### 2026-11
+
+#### victorcarrico/arvre：終端機圖形化檢視 Claude Code session 與分支（fork）（2026-11-02）
+
+- **主線：** —
+- **核心模式：** TUI 工具，以圖形化方式在終端機內瀏覽 Claude Code 的多個 session 與其分支（fork），供同時手上有大量任務時快速定位；作者自述是週末用 vibe coding 做出的個人工具。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office、ccdeck、Corgi 等，[[topics/community-interfaces#2026-10]]）一個「終端機內圖形化瀏覽 session／fork 樹」取向——既有做法多是儀表板或 3D 場景，本則留在 TUI 內；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 1 分；查核 commit 記錄，作者本人近日仍有提交（含版號更動），非單次發布。
+- **來源：** Hacker News；[GitHub](https://github.com/victorcarrico/arvre)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，週末個人專案，尚無社群採用回饋數據）
+
+#### getsmalt.com／Smalt：macOS 免打字語音操作 Claude Code，步驟顯示在藥丸狀態列並語音回覆（2026-11-02）
+
+- **主線：** —
+- **核心模式：** macOS 應用，使用者說話下指令，Claude Code 動手執行，步驟即時顯示在一個藥丸狀態列上，完成後語音念出結果；免費，支援 Apple Silicon、macOS 14.4 以上，安裝即自動接上既有 Claude Code。
+- **與既有模式的關係：** 與 2026-10-04 的 spaceamoeba-t/tapq（多模態語音代理，[[topics/community-interfaces#2026-10]]）同屬「用語音取代打字操作 coding agent」取向，加上同日的 Poinky（見下則）已是第二、三個獨立實作；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 1 分；產品頁描述具體（免打字、步驟可視化、語音回覆），尚無第三方使用回饋。
+- **來源：** Hacker News；[產品頁](https://getsmalt.com/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
+
+#### tomyud1/poinky：語音對話且能看見螢幕畫面的 Claude Code 介面（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 讓使用者以語音與 Claude Code 對話、且 agent 能讀取使用者螢幕畫面的互動介面（僅標題可用，HN 留言被標記 flagged 無法參考，機制細節未載）。
+- **與既有模式的關係：** 與同日 Smalt、2026-10-04 的 tapq（[[topics/community-interfaces#2026-10]]）同屬「語音操作 Claude Code」取向，三個獨立實作同時存在，詳見上則 Smalt 節點；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 1 分且留言被 flagged，無法查證機制細節，僅標題可用。
+- **來源：** Hacker News；[GitHub](https://github.com/tomyud1/poinky)
+- **成熟度：** ⏳ 新興（本庫首次收錄，僅標題可用，細節未載）
 
 ### 2026-10
 

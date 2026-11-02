@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-11-01）
-> - **`/buddy` 請願破 2,116 讚**：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。
-> - **Cursor 市集延伸套件遭竄改事件口徑分歧**：Anthropic 稱自家系統未遭入侵，一資安公司稱竄改版經官方帳號發出，兩說並存（詳見已知問題）。
+> **最新動態**（2026-11-02）
+> - **MSIX GPU 當機找到根因**：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤。
+> - **新已知問題**：圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（#62466，36 則留言）。
 
 ---
 
@@ -111,6 +111,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期平台與文件異動：**
 
 - 桌面版文件異動已依主題彙整，見 [[entities/claude-code#桌面版功能地圖]]；下列時序條目保留。
+- **官方文件更新**（2026-11-02）：桌面版文件字數由 207,065 增至 209,756，但本頁段落數（1284）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-30）：桌面版文件字數由 202,046 增至 203,154，但本頁段落數（1236）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -279,6 +280,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**背景 agent 每隔約 30 秒重送完整對話記錄，僅為更新狀態列，疑增加隱性 token 用量（社群分析＋繞過腳本，Hacker News 527 分，2026-10-29）**：單一社群來源，官方無公開回應。
   - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
   - 這類「官方介面自己在耗 token」的社群偵測案例，與其他省 token 做法並列於 [[topics/community-cost]]。
@@ -317,8 +319,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（75 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
+### 🧠 行為與品質（76 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
+- 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
 - 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
@@ -450,7 +453,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⛔ **官方拒修**（NOT_PLANNED，2026-05-25）｜**功能請求：跨 session 持久記憶（GitHub issue #14227，累積 34 則留言、11 個讚，2026-08-09）**：使用者反映 Claude Code 每次啟動皆從零開始，缺乏跨 session 記憶；與跨 compaction 記憶訴求（issue #34556）、彙整提案 #47023 同屬記憶延續性缺口；官方標記 NOT_PLANNED 不排入路線圖。
 - ✅ **已修復**（2026-08-17 CLOSED／COMPLETED）｜**提案：開放 compact／session 生命週期 hooks 供外部記憶層串接（GitHub issue #47023，累積 41 則留言、4 個讚，2026-08-04）**：彙整 5 個既有持久記憶 issue（含 #14227、#34556），呼籲官方開放 hook 供外部記憶層串接；官方答：`PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` 四個 hook 今天都有。
 - 🔴 **未修復**｜**Session 重新命名後，第二次退出即消失，僅第一次 resume 正常顯示（GitHub issue #25090，累積 32 則留言、29 個讚，2026-08-01）**：使用者為 session 重新命名後，第一次 resume 該 session 時名稱正常顯示，但第二次退出後名稱又消失，回報者已確認搜尋過現有 issue 未見重複回報；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：CLI 與 Desktop app 間同步對話歷史（GitHub issue #28791，累積 39 則留言、187 個讚，2026-10-31 互動數更新）**：使用者呼籲 Claude Code CLI 與 Claude Code Desktop app 之間能同步對話歷史，目前兩端各自獨立、無法互通；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：CLI 與 Desktop app 間同步對話歷史（GitHub issue #28791，累積 41 則留言、187 個讚，2026-11-02 互動數更新）**：使用者呼籲 Claude Code CLI 與 Claude Code Desktop app 之間能同步對話歷史，目前兩端各自獨立、無法互通；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：串接 Claude Code 與 Claude.ai Projects 知識庫（GitHub issue #2511，累積 49 則留言、635 個讚，2026-07-29 首見，2026-09-11 互動數更新，今日全站互動量最高）**：呼籲 Claude Code 存取 Claude.ai Projects 知識庫，避免同一參考資料重複維護；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：跨 compaction 持久記憶（已自建 59 次 compaction 替代方案）（GitHub issue #34556，累積 114 則留言、6 個讚，首見 2026-07-25，2026-10-12 更新）**：每次壓縮遺失未外部保存內容；同屬記憶延續性缺口，見 [[topics/official-community-gap]]；官方未回應。
 - 🔴 **未修復**｜**對話壓縮（compaction）間歇性失敗或卡死（GitHub issue #20696，累積 61 則留言，2026-07-12 回報，regression）**：claude.ai 網頁版／行動版對話壓縮功能自 2026-01-15 起偶發失敗或卡死，回報者稱此為回歸性問題（先前版本未見）；官方尚未回應。與已列「Auto Compact 失效」為不同介面（此為 claude.ai web/mobile，另一為 Claude Code CLI），暫分列追蹤。
@@ -566,7 +569,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Remote Control 顯示「不可用於目前方案」，儘管帳號已以 Pro 方案完成驗證（GitHub issue #28817，45 則留言，2026-10-05）**：Pro 方案帳號驗證通過後仍報「not yet available on your plan」，登出重登無效；與 #34255（自動重連失效）現象不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Remote Control：手機 app 連線時互動式權限提示未渲染（GitHub issue #35637，累積 26 則留言、32 個讚，2026-10-25）**：與自動重連失效（#34255）、方案驗證失敗（#28817）同屬可靠性問題，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 55 則留言、159 個讚，首見 2026-07-15，2026-10-18 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 58 則留言、162 個讚，首見 2026-07-15，2026-11-02 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
 - 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-11-14）｜**功能請求：Linear 整合——指派 issue 給 Claude Code 觸發雲端 agent session（GitHub issue #12925，累積 45 則留言、146 個讚，2026-07-30）**：使用者呼籲支援將 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，比照現有 GitHub Issues 指派觸發雲端工作流的模式擴展至 Linear；查證確認 issue 仍為 open（`enhancement`、`external`），無官方留言或排入路線圖跡象。
   - 09-24：146 讚為本日反應數最高功能請求；社群已有 Linear 官方 MCP＋本地 Lanes MCP 橋接做法，官方原生整合仍缺，見 [[topics/official-community-gap]]。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充功能比照 GitHub Copilot Edits Review 的差異審閱介面（GitHub issue #33932，累積 45 則留言、306 個讚，首見 2026-07-14，2026-10-24 更新，今日全站反應數最高）**：官方尚未回應或排入路線圖。
@@ -592,6 +595,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
 - 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、111 則留言，2026-08-19 首見，2026-09-15 互動數更新）**：官方尚未回應。
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。
+  - 同一錯誤碼另有回報指出根因（GitHub issue #81341，累積 35 則留言、8 個讚，2026-11-02）：Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，瀏覽器預覽必當機。
 - 🔴 **未修復**｜**claude.exe 列出目錄時（`NtQueryDirectoryFileEx`）疑似透過 Wof.sys 觸發 Windows 藍屏（BSOD）（GitHub issue #32870，累積 41 則留言，首見 2026-07-29，2026-08-15 互動數更新）**：使用者回報 claude.exe 在列出目錄內容（`NtQueryDirectoryFileEx`）時，疑似透過 Windows 系統的 Wof.sys（Windows Overlay Filter driver）觸發系統藍屏當機；屬嚴重穩定性問題，官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓（GitHub issue #26302，累積 49 則留言、47 個讚，2026-10-11 互動數更新）**：回報為效能退步（regression）；與既有「Cowork 10GB VM bundle」（#22543）同屬效能問題但情境不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 68 則留言、6 個讚，2026-08-16）**：環境：Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
@@ -712,6 +716,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.1.1** | 2026-11-02 | Chores：為每個子套件的已發布型別宣告加上型別檢查，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1)）|
+| **anthropic-sdk-typescript google-cloud-sdk-v1.1.2** | 2026-11-02 | Chores：同批型別檢查；Docs：範例程式改用現行模型 ID（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2)）|
 | **v2.1.316** | 2026-10-31 | 新增 `CLAUDE_CODE_DISABLE_ULTRATHINK` 關閉 `ultrathink` 關鍵字；Claude apps gateway 新增群組共用每月預算池；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)）|
 | **v2.1.314** | 2026-10-30 | 新增 `permissions.blockWritesOutsideWorkingDirectories`：Write、Edit、NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）|
 | **v2.1.312** | 2026-10-27 | 新增 `oidc.user_id_claim` 設定，gateway 可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)）|

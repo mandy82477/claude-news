@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **創意工具 Agent 整合新增一例：影片範本跨 25+ agent 複用**（2026-11-01）
-> - **actionow-ai/vvv（510★）**：開源可編輯影片範本打包為 Agent Skill，一次製作即可在 Claude Code、Codex 等 25+ 款 coding agent 上重複使用。
+> **創意工具 Agent 整合再添一例：本機 AI 音效與語音克隆 MCP server**（2026-11-02）
+> - **HamSanders/soundbox**：免費開源、本機跑的 ElevenLabs／Suno 替代品，21 工具 MCP server 接 Claude Code、Cursor。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### HamSanders/soundbox：本機免費開源 AI 音效、配樂與語音克隆，21 工具 MCP server 接 Claude Code（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 本機運行、免費開源的 ElevenLabs／Suno 替代品，用自己的 GPU 跑 AI 音效、帶歌詞配樂、文字轉語音與語音克隆（底層含 Stable Audio、ACE-Step 等模型）；免帳號免點數、可離線，提供 Windows／macOS app、HTTP API，以及一個 21 工具的 MCP server 供 Claude Code、Cursor 使用。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro、reelmimic、GodotMaker、Quick Study 等，[[topics/community-integrations#2026-10]]）一個音訊創作類實作——既有例子多在影像／遊戲／設計場域，本則把 agent 整合擴到音效與語音；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 查核 commit 記錄，近期由作者本人與 dependabot 共同提交（依賴更新、功能修正），非一次性發布後棄置；GitHub 132★，規模不大但有持續維護訊號。
+- **來源：** GitHub Search；[GitHub](https://github.com/HamSanders/soundbox)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### actionow-ai/vvv：開源可編輯影片範本打包為 Agent Skill，一次製作跨 25+ coding agent 複用（2026-11-01）
 

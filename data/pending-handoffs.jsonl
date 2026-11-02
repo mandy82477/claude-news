@@ -354,3 +354,5 @@
 {"id": "H-29935d", "closed": "2026-11-01", "status": "done", "by": "模型", "result": "已核對 entities/opus-5-5 與 entities/claude-code 用詞、交叉連結一致——兩頁皆已記載 tengu_heron_brook 伺服器端規則推送、Opus 5.5 更新、無害逆向工程被擋，並互相以 wikilink 指向對方，無需修改"}
 {"id": "H-952d1f", "opened": "2026-11-01", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "評估 official-community-gap 產品化矩陣新增列（community-skills／community-integrations 2026-11-01 各新增 patterns 節點）", "status": "open"}
 {"id": "H-95764c", "opened": "2026-11-01", "from": "社群", "to": "功能", "page": "entities/claude-code", "note": "Claude Max $20 方案用量上限出現負向對照（muaaz9329/cheap-ag，2026-11-01，證據等級：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法，186★，未達收錄門檻故未寫入頁面，僅轉知）", "status": "open"}
+{"id": "H-95764c", "closed": "2026-11-02", "status": "done", "by": "功能", "result": "已於 claude-code.md「💰 計費與配額」新增一行負向對照：muaaz9329/cheap-ag 宣稱「50x your Claude usage」，標證據薄弱"}
+{"id": "H-952d1f", "closed": "2026-11-02", "status": "void", "by": "主編", "result": "功能記者已評估：community-skills／community-integrations 2026-11-01 新增節點均為單一社群工具示例，未達 official-community-gap 開新列門檻（需 ≥2 獨立工具或 GitHub issue ≥100 讚），且表已滿 18 列，不開新列"}
