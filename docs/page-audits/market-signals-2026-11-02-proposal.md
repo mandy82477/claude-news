@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案；評審 🔴1–3 的修正（`check_wiki_freshness.py` 那段 diff 不套、腳本 5 支；歸因只補 Citywire 1 筆、其餘 3 筆網址不在子頁不補）以 `market-signals-2026-11-02-review.md` 與 commit `7ec4d2b` 為準，文中相反的句子作廢。
+
 # 第 22 波設計提案：topics/market-signals 拆成母頁＋四子頁（2026-11-02）
 
 > 上游：健檢卡 `market-signals-2026-11-02.md`、冷讀者 `wave22-cold-reader-2026-11-02.md`、查證 `market-signals-2026-11-02-verified.md`；切法與七點照 ledger「2026-11-02｜第 22 波」條，不重開。

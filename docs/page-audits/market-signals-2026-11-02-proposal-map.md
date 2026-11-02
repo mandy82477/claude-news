@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案；評審 🔴1–3 的修正（`check_wiki_freshness.py` 那段 diff 不套、腳本 5 支；歸因只補 Citywire 1 筆、其餘 3 筆網址不在子頁不補）以 `market-signals-2026-11-02-review.md` 與 commit `7ec4d2b` 為準，文中相反的句子作廢。
+
 # 第 22 波逐節去向表：topics/market-signals（2026-11-02）
 
 > 行號指 `wiki/topics/market-signals.md` 在 commit `7dbc92e` 的原檔（1,699 行）。代號：**母**＝`topics/market-signals`、**A**＝`-ipo`、**B**＝`-legal`、**C1**＝`-compute`、**C2**＝`-customers`。

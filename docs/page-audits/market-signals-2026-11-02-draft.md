@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案；評審 🔴1–3 的修正（`check_wiki_freshness.py` 那段 diff 不套、腳本 5 支；歸因只補 Citywire 1 筆、其餘 3 筆網址不在子頁不補）以 `market-signals-2026-11-02-review.md` 與 commit `7ec4d2b` 為準，文中相反的句子作廢。
+
 # 第 22 波逐字稿：topics/market-signals 拆成母頁＋四子頁（2026-11-02）
 
 > 頁面逐字以 `<scratchpad>/w22/design/out/wiki/topics/` 五頁為準（`split.py` 輸出，臨時副本跑過 gen 後的版本）。本稿由 `make_draft.py` 從 `newtext.py`（頁面新字）、`rules_patch.py`（規則檔）、`scripts.diff`（腳本，臨時副本 `git diff`）直接產生，不手抄。
