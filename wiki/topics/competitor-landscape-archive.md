@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-10-25"
 last_news_update: "2026-05-23"
 status_main: "resolved"
-days_since_news: 162
+days_since_news: 163
 parent: "topics/competitor-landscape"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 162
+days_since_news_subtree: 163
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
