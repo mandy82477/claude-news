@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 3
-inbound_links: 0
+inbound_links: 3
 attribution_count: 0
 attribution_last: null
 top_source: null

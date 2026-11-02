@@ -11,7 +11,7 @@ parent: null
 children: "['topics/market-signals-compute', 'topics/market-signals-customers', 'topics/market-signals-ipo', 'topics/market-signals-legal']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 18
+inbound_links: 14
 attribution_count: 113
 attribution_last: "2026-10-31"
 top_source: "google-news"

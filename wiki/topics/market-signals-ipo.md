@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 1
+inbound_links: 6
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-04"
 pending_signalled: 3
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # IPO 與財務揭露這則怎麼判

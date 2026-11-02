@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 4
-inbound_links: 0
+inbound_links: 4
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-07"
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 定價、通路與客戶這則怎麼判
