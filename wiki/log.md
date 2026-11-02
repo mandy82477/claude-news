@@ -8495,3 +8495,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-fec1b0（→人物，tom-brown 錨點改指 partnerships-compute，改完主編刪暫時殼）、H-4dbf62（→投資分析，market-signals 子樹六項回掃與對稱互指句）、H-f000d4（→商業，時序類別標籤固定詞彙提案）；結案 H-6109b3（三項本波做完、一項移入 H-4dbf62）。`devpractice_diff.py mark` 未做（會跳過開發實務記者尚未撿料的範圍，第 20–22 波亦未做）。
 - 已知缺口：cell 基線本波 +46 筆搬家（累計 153），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`anthropic-business-2026-11-02-proposal-map.md` 第六節。
 - 歸因 user-query／商業
+- 複驗（新冷讀者，原四題逐字）：Q1–Q4 皆拿到、各 2 跳（第一輪 1 拿 3 半）；依複驗改 [[topics/anthropic-business-risks]] 保險列來源等級為「多家引 S-1」並修正 ⚠️ 高兩列排序、[[topics/anthropic-partnerships-compute]] Microsoft 列指路、[[topics/anthropic-ipo]] Q2 季增改 140%（Q2 $115 億對 Q1 $48 億）；其餘四項口徑矛盾開 H-11d17b（→商業）。評審實作複核放行。
