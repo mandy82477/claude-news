@@ -12,7 +12,7 @@ parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 4
+inbound_links: 7
 attribution_count: 0
 attribution_last: null
 top_source: null

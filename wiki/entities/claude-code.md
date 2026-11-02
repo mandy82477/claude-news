@@ -13,7 +13,7 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 133
+inbound_links: 128
 attribution_count: 829
 attribution_last: "2026-11-01"
 top_source: "github-issues"
