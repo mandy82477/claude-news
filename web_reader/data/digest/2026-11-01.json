@@ -400,6 +400,11 @@
       "pageType": "entity"
     },
     {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
       "id": "pricing",
       "name": "Anthropic 訂閱方案與計費政策",
       "pageType": "entity"

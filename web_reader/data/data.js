@@ -1572,13 +1572,55 @@ window.WIKI_DATA = {
       "pill": "gray",
       "firstSeen": "2026-04-25",
       "startDate": "",
-      "lastUpdated": "2026-09-20",
+      "lastUpdated": "2026-11-02",
       "lastNewsUpdate": "2026-05-19",
       "updateFreq": "",
       "parent": "entities/pricing",
-      "summary": "本頁是 pricing 的原始條目封存，重點層（現行規則、牌價、還在發生的事故）都在主頁。",
+      "summary": "本頁是 pricing 的原始條目封存，現行規則與牌價在主頁，還在發生的事故在 pricing-incidents，價格沿革在 pricing-history。",
       "latestHeadline": "",
       "pageRole": "archive",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "pricing-history",
+      "pageType": "entity",
+      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+      "entityType": "policy",
+      "status": "active（持續調整中）",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "2026-04-25",
+      "startDate": "",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-10-30",
+      "updateFreq": "",
+      "parent": "entities/pricing",
+      "summary": "Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近三個月哪幾件改到你的帳單——現在生效的規則與牌價在 pricing。 官方已確認、會改到帳單的，新的在上；每條的現行規則住母頁，這裡只記什麼時候變。⚠️＝不必你操作就會改到帳單。 - **11-02 查證｜方案改名與附帶 API credits**：$200…",
+      "latestHeadline": "",
+      "pageRole": "child",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "pricing-incidents",
+      "pageType": "entity",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "entityType": "policy",
+      "status": "active（持續調整中）",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "2026-04-25",
+      "startDate": "",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-11-01",
+      "updateFreq": "",
+      "parent": "entities/pricing",
+      "summary": "帳單出錯、額度掉得快、付了錢卻用不了——官方認了沒、現在還在不在，以及你能先做什麼；現在怎麼計費在 pricing，逐條 issue 的留言數在 claude-code-known-issues。 **一事故一列，只收 🔴、⛔、⚖️ 三種狀態；轉 ✅／⏸ 即移出表，條目留在下方。最多 8 列：官方拒修或官方已承認的在最…",
+      "latestHeadline": "",
+      "pageRole": "child",
       "readerDomains": [
         "💼 商業"
       ]
@@ -1593,12 +1635,12 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "2026-04-25",
       "startDate": "",
-      "lastUpdated": "2026-11-01",
+      "lastUpdated": "2026-11-02",
       "lastNewsUpdate": "2026-11-01",
       "updateFreq": "",
       "parent": "",
-      "summary": "**週配額換軌已於 09-14 生效**（官方文件 09-14 同步確認），水位約為加成期間的 83%；5 小時用量上限的計算方式不受影響。同一週還有過渡 credit 09-17 到期，不需要你做任何設定，但會改變這個月能用多少。 **2026-07-20 起，旗艦模型（現為 Fable 5）在訂閱體系中被切成兩層*…",
-      "latestHeadline": "週配額換軌已於 09-14 生效（官方文件 09-14 同步確認），水位約為加成期間的 83%；5 小時用量上限的計算方式不受影響。同一週還有過渡 credit 09-17 到期，不需要你做任何設定，但會改變這個月能用多少。",
+      "summary": "**所有付費方案仍是訂閱配額制；週配額 09-14 換軌後約為加成期間的 83%**：同樣的工作，`Settings > Usage` 的用量百分比多跑約 20%（1 ÷ 0.83），5 小時上限的計算方式不變（官方說明中心，09-14 確認）。旗艦 Fable 在訂閱裡分兩層：Max、Ultra 與 Team pre…",
+      "latestHeadline": "所有付費方案仍是訂閱配額制；週配額 09-14 換軌後約為加成期間的 83%：同樣的工作，`Settings > Usage` 的用量百分比多跑約 20%（1 ÷ 0.83），5 小時上限的計算方式不變（官方說明中心，09-14 確認）。旗艦 Fable 在訂閱裡分兩層：Max、Ultra 與 Team premium",
       "pageRole": "",
       "readerDomains": [
         "💼 商業"
