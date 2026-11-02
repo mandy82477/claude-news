@@ -30,3 +30,12 @@
 3. Nscale 1,030 億 vs 450 億是「總合約 vs Anthropic 那一筆」，事實住 business 算力表一句講清楚，market-signals-compute 只指過來。
 
 來源（二手）：[Fortune](https://fortune.com/2026/05/28/anthropic-series-h-valuation-ipo-unicorn/)、[Law360](https://law360.com/articles/2483295)、[Built In](https://builtin.com/articles/anthropic-raises-65b-series-h-965b-valuation-20260601)、[Luminix](https://www.useluminix.com/reports/company-overviews/anthropic-s1-what-the-filing-shows)；一手：[anthropic.com/news/higher-limits-spacex](https://www.anthropic.com/news/higher-limits-spacex)、anthropic.com/news（S-1 公告 10-26）。
+
+## 四、補查（設計者 N4，2026-11-02）
+
+| 格 | 交叉（二手，多家） | 寫法 |
+|---|---|---|
+| Microsoft 有沒有持股 | 2025-11-18 三方合作：Microsoft 承諾投資**最高 $50 億**、Nvidia 最高 $100 億（皆「up to」、承諾投入下一輪）；Anthropic 承諾購買 $300 億 Azure 容量、另簽最多 1 GW（官方 05-06 頁亦提「$30 billion of Azure capacity」） | 「投資人（承諾最高 $50 億，2025-11）＋雲端供應商（$300 億 Azure）＋通路夥伴」；實際入股金額未見 |
+| Amazon 2023–2024 投資金額 | 2023-09 首筆 $12.5 億（承諾最高 $40 億）→2024-03 追加 $27.5 億（累計 $40 億）→2024-11 再追加 $40 億（累計 $80 億）；2026-05 Series H 另出 $50 億 | 「累計 $80 億（2023-09～2024-11 三筆）＋Series H $50 億」 |
+
+來源：[Khaleej Times](https://www.khaleejtimes.com/business/tech/microsoft-nvidia-to-invest-in-anthropic-as-claude-maker-commits-30-billion-to-azure)、[Nasdaq](https://www.nasdaq.com/articles/microsoft-and-nvidia-deals-push-anthropic-toward-350-bln-valuation)、[ABC News](https://abcnews.go.com/US/wireStory/amazon-invest-additional-4-billion-ai-startup-anthropic-116134356)、[Fortune](https://fortune.com/2024/11/22/amazon-4-billion-investment-startup-anthropic-founder-defected-openai/)。
