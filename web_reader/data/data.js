@@ -7306,15 +7306,6 @@ window.WIKI_DATA = {
         "hook": "這禮拜官方動了什麼、值不值得現在跟，以及跟上去會遇到什麼。"
       },
       {
-        "id": "claude-code-experimental",
-        "pageType": "topic",
-        "name": "Claude Code 實驗功能追蹤",
-        "status": "ongoing",
-        "pill": "active",
-        "lastUpdated": "2026-10-30",
-        "hook": "Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272"
-      },
-      {
         "id": "official-community-gap",
         "pageType": "topic",
         "name": "官方功能 vs 社群痛點缺口分析",
@@ -7322,6 +7313,15 @@ window.WIKI_DATA = {
         "pill": "active",
         "lastUpdated": "2026-10-30",
         "hook": "社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補"
+      },
+      {
+        "id": "claude-code-experimental",
+        "pageType": "topic",
+        "name": "Claude Code 實驗功能追蹤",
+        "status": "ongoing",
+        "pill": "active",
+        "lastUpdated": "2026-10-30",
+        "hook": "Claude Code 實驗功能追蹤：出貨 build 裡先出現、還沒公告的旗標，四階狀態機（出現→有人談→官方承認→出貨/移除），每階要證據；09-15 建頁，基線 2.1.272"
       },
       {
         "id": "anthropic-agent-stack",

@@ -8485,3 +8485,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 歸因補登 1 筆（Citywire 10-29，網址在 customers callout）；The New Stack、BigGo、Bloomberg 三筆 10-29 漏報網址不在子頁內，依裁決不補。
 - 轉知帳本：新開 H-5978d7（→投資分析，六類判準回頭檢查——W41–W44 每週 12／13／9／16 則 vs 預期 3–5 則，使用者批准）、H-a450ba（→投資分析，market-lessons 連結改指四子頁、IPO 線則數更新）、H-5f3c59（→人物，yann-lecun／tom-brown／suleyman 錨點改指子頁，改完由主編刪母頁 h4 殼）、H-6109b3（→商業，anthropic-ipo／business 連結改指子頁、Microsoft 細節與 Nscale 口徑，第 23 波一併處理）。
 - 歸因 user-query／投資分析
+- 複驗（新冷讀者，原四題逐字）：Q1–Q3 拿到、Q4 半拿到（第一輪 2 拿 2 半）；依複驗在 [[topics/market-signals]] 標的表下補「曝險多大」三型說明。剩餘缺口屬 [[topics/anthropic-business]] 子樹（第 23 波）：[[topics/anthropic-ipo]] 一處仍寫「等待 S-1 遞交」、與 market-signals-ipo／compute 兩組讀者分不出差別。轉知更正：H-a450ba 作廢（market-lessons 由主編週更、記者唯讀），[[topics/market-lessons]] 三處連結改指四子頁、IPO 線則數 18→21 由主編同波直接改。評審實作複核有條件放行（派錯人 1 🔴 已修）。
