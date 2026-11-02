@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案，行號與數字以 `claude-code-2026-11-01-review.md`（重算後）與 commit `3a96d6b` 實作為準；文中「同 commit 重建 cell／reader-language 基線」已作廢（雲端 H6 擋，改由使用者本機重建，見 `-baseline-moves.md`）。
+
 # 第 21 波逐字稿：entities/claude-code 拆成母頁＋三子頁（2026-11-01）
 
 > 頁面逐字以 `scratchpad/w21/design/out/wiki/entities/` 為準（`split_cc.py` 輸出；新寫文字的單一來源是 `newtext.py`，本稿「進頁面」由 `make_draft.py` 從它直接產生，不手抄）。frontmatter 由 `gen_wiki_frontmatter.py` 生成，實作者不手填。純搬移的段落只寫原行號。

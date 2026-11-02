@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 摘要
 
-- **hook 能不能當防線**：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用 deny 規則或沙箱，hook 當第二層（見 [[#hooks：事件、失效模式與能不能當防線]]）。
+- **hook 能不能當防線**：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用沙箱；deny 規則與 hook 都當第二層（見 [[#hooks：事件、失效模式與能不能當防線]]）。
 - **平行分派派哪種 subagent**：什麼都不設就在背景跑、同時最多 20 個；要共用主對話的 context 與 cache 選 fork（見 [[#Subagent 型別差異對照]]）。
 - **桌面版能做什麼**：依主題歸群在 [[#桌面版功能地圖]]，每條日期對到同頁「桌面版文件時序」。
 - 官方建議的做法見 [[topics/coding-workflow-guide]]；Mods 見 [[entities/claude-mods]]；文中「已知問題頁」指 [[entities/claude-code-known-issues]]。

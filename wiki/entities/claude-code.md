@@ -170,7 +170,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## hooks：事件、失效模式與能不能當防線
 
-hook 一觸發就是硬擋（先於 allow 規則），但比對是盡力而為，也有不觸發的回報；要保證一定擋，用 deny 規則或沙箱。事件表、失效模式與官方原句見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。
+hook 一觸發就是硬擋（先於 allow 規則），但比對是盡力而為，也有不觸發的回報；要保證一定擋，用沙箱；deny 規則與 hook 都當第二層。事件表、失效模式與官方原句見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。
 
 ---
 

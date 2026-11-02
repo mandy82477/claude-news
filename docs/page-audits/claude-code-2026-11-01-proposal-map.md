@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案，行號與數字以 `claude-code-2026-11-01-review.md`（重算後）與 commit `3a96d6b` 實作為準；文中「同 commit 重建 cell／reader-language 基線」已作廢（雲端 H6 擋，改由使用者本機重建，見 `-baseline-moves.md`）。
+
 # 第 21 波逐節去向表：entities/claude-code（2026-11-01）
 
 > 行號指原檔（1,231 行）。代號：**母**＝`entities/claude-code`、**K**＝`entities/claude-code-known-issues`、**R**＝`entities/claude-code-releases`、**F**＝`entities/claude-code-features`、**AR**＝`entities/claude-code-archive`。

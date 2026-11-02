@@ -1,3 +1,5 @@
+> **2026-11-02 註：** 本檔是第一輪提案，行號與數字以 `claude-code-2026-11-01-review.md`（重算後）與 commit `3a96d6b` 實作為準；文中「同 commit 重建 cell／reader-language 基線」已作廢（雲端 H6 擋，改由使用者本機重建，見 `-baseline-moves.md`）。
+
 # 第 21 波設計提案：entities/claude-code 拆成母頁＋三子頁（2026-11-01）
 
 > 上游：健檢卡 `claude-code-2026-11-01.md`、冷讀者 `wave21-cold-reader-2026-11-01.md`、查證 `claude-code-2026-11-01-verified.md`；七個裁決點照 ledger「2026-11-01｜第 21 波」條執行，不重開。裁決 (3)「砍現況 L48–109」**待使用者確認**，本案照預設出。

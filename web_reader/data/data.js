@@ -292,8 +292,8 @@ window.WIKI_DATA = {
       "lastNewsUpdate": "2026-10-30",
       "updateFreq": "",
       "parent": "entities/claude-code",
-      "summary": "- **hook 能不能當防線**：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用 deny 規則或沙箱，hook 當第二層（見 #hooks：事件、失效模式與能不能當防線）。 - **平行分派派哪種 subagent**：什麼都不設就在背景跑、同時最多 20 個；要共用主對話的 context 與 cac…",
-      "latestHeadline": "- hook 能不能當防線：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用 deny 規則或沙箱，hook 當第二層（見 #hooks：事件、失效模式與能不能當防線）。",
+      "summary": "- **hook 能不能當防線**：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用沙箱；deny 規則與 hook 都當第二層（見 #hooks：事件、失效模式與能不能當防線）。 - **平行分派派哪種 subagent**：什麼都不設就在背景跑、同時最多 20 個；要共用主對話的 context 與 ca…",
+      "latestHeadline": "- hook 能不能當防線：hook 一觸發就是硬擋，但不保證會觸發；要保證一定擋，用沙箱；deny 規則與 hook 都當第二層（見 #hooks：事件、失效模式與能不能當防線）。",
       "pageRole": "child",
       "readerDomains": [
         "🛠️ 工具/功能"
