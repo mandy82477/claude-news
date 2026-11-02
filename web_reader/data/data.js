@@ -4130,6 +4130,90 @@ window.WIKI_DATA = {
       ]
     },
     {
+      "id": "market-signals-compute",
+      "pageType": "topic",
+      "name": "算力與融資這則怎麼判",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-09-16",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-10-30",
+      "updateFreq": "",
+      "parent": "topics/market-signals",
+      "summary": "⚠️ 教學型事件研究，非投資建議 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。",
+      "latestHeadline": "",
+      "pageRole": "child",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "market-signals-customers",
+      "pageType": "topic",
+      "name": "定價、通路與客戶這則怎麼判",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-08-26",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-10-29",
+      "updateFreq": "",
+      "parent": "topics/market-signals",
+      "summary": "⚠️ 教學型事件研究，非投資建議 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。",
+      "latestHeadline": "",
+      "pageRole": "child",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "market-signals-ipo",
+      "pageType": "topic",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-08-13",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-10-31",
+      "updateFreq": "",
+      "parent": "topics/market-signals",
+      "summary": "⚠️ 教學型事件研究，非投資建議 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。",
+      "latestHeadline": "",
+      "pageRole": "child",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
+      "id": "market-signals-legal",
+      "pageType": "topic",
+      "name": "官司、監管與政府這則怎麼判",
+      "entityType": "",
+      "status": "ongoing",
+      "domain": "💼 商業",
+      "pill": "active",
+      "firstSeen": "",
+      "startDate": "2026-09-11",
+      "lastUpdated": "2026-11-02",
+      "lastNewsUpdate": "2026-10-28",
+      "updateFreq": "",
+      "parent": "topics/market-signals",
+      "summary": "⚠️ 教學型事件研究，非投資建議 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。",
+      "latestHeadline": "",
+      "pageRole": "child",
+      "readerDomains": [
+        "💼 商業"
+      ]
+    },
+    {
       "id": "market-signals",
       "pageType": "topic",
       "name": "投資訊號判讀",
@@ -4139,12 +4223,12 @@ window.WIKI_DATA = {
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-09-05",
-      "lastUpdated": "2026-10-31",
+      "lastUpdated": "2026-11-02",
       "lastNewsUpdate": "2026-10-31",
       "updateFreq": "",
       "parent": "",
-      "summary": "每則判讀照分析師看消息的六個問題寫：**這是新資訊嗎、動到哪個數字、誰的口袋會有感、可信到什麼程度、下一個會讓答案變清楚的事件是什麼、所以我做什麼**；前四題壓成第一行「一眼」，要學的東西在每則最後的「一課」。先看「買得到的標的」，那是這頁裡你真的能交易的東西；沉澱過的課程表、未上市消息線的走向與 IPO 背景知識在週…",
-      "latestHeadline": "每則判讀照分析師看消息的六個問題寫：這是新資訊嗎、動到哪個數字、誰的口袋會有感、可信到什麼程度、下一個會讓答案變清楚的事件是什麼、所以我做什麼；前四題壓成第一行「一眼」，要學的東西在每則最後的「一課」。先看「買得到的標的」，那是這頁裡你真的能交易的東西；沉澱過的課程表、未上市消息線的走向與 IPO 背景知識在週更的 m",
+      "summary": "**現在**：公開版 S-1 已於 10-26 提交、尚未生效，股數、價格區間與掛牌日都未公布；Anthropic 本體仍買不到，能交易的只有下表的間接標的（事實見 anthropic-ipo）。判讀依題材分住四個子頁，從「近期判讀」的表往下鑽。 每則判讀照分析師看消息的六個問題寫：**這是新資訊嗎、動到哪個數字、誰的…",
+      "latestHeadline": "現在：公開版 S-1 已於 10-26 提交、尚未生效，股數、價格區間與掛牌日都未公布；Anthropic 本體仍買不到，能交易的只有下表的間接標的（事實見 anthropic-ipo）。判讀依題材分住四個子頁，從「近期判讀」的表往下鑽。",
       "pageRole": "",
       "readerDomains": [
         "💼 商業"
@@ -7260,6 +7344,6 @@ window.WIKI_DATA = {
     ]
   }
 };
-window.TRANSPARENCY = {"window":{"days":111,"from":"2026-07-11","to":"2026-11-01"},"totals":{"gathered":12092,"emitted":7092,"wiki_hits":3722,"prior_emit":0.5865034733708236,"prior_wiki":0.5248166948674563},"hhi":0.20638225564422125,"sources":[{"name":"Anthropic Blog","slug":"anthropic-blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":46,"filtered":35,"emitted":35,"wiki_hits":52,"emit_rate":0.7080313555669162,"emit_wilson":0.6206458383088198,"wiki_rate":1.2721814877483237,"presence":0.013970983342289092,"low_sample":false,"pc1_buckets":{"unknown":51,"high":1}},{"name":"Anthropic Status","slug":"anthropic-status","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":117,"filtered":103,"emitted":88,"wiki_hits":62,"emit_rate":0.7279567114409962,"emit_wilson":0.6667207450882539,"wiki_rate":0.6862057851905567,"presence":0.016657710908113917,"low_sample":false,"pc1_buckets":{"unknown":62}},{"name":"Claude API Release Notes","slug":"claude-api-release-notes","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":2,"filtered":2,"emitted":1,"wiki_hits":1,"emit_rate":0.5786395212462033,"emit_wilson":0.09452865480086611,"wiki_rate":0.568015177152233,"presence":0.00026867275658248256,"low_sample":true,"pc1_buckets":{"unknown":1}},{"name":"GitHub","slug":"github","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":1634,"filtered":1472,"emitted":553,"wiki_hits":370,"emit_rate":0.3414329319633715,"emit_wilson":0.3158928719065652,"wiki_rate":0.6665153942249993,"presence":0.09940891993551854,"low_sample":false,"pc1_buckets":{"unknown":370}},{"name":"GitHub Issues","slug":"github-issues","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":111,"gathered":1620,"filtered":1612,"emitted":563,"wiki_hits":540,"emit_rate":0.35044516430940026,"emit_wilson":0.3247275666786477,"wiki_rate":0.9515674815858195,"presence":0.14508328855454056,"low_sample":false,"pc1_buckets":{"unknown":540}},{"name":"Hacker News","slug":"hacker-news","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":111,"gathered":1655,"filtered":1512,"emitted":1354,"wiki_hits":412,"emit_rate":0.8153612355029353,"emit_wilson":0.7988125443317644,"wiki_rate":0.30590041565152093,"presence":0.11069317571198281,"low_sample":false,"pc1_buckets":{"unknown":287,"high":99,"mid":23,"low":3}},{"name":"Reddit","slug":"reddit","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":1184,"filtered":1164,"emitted":1084,"wiki_hits":217,"emit_rate":0.9100748085277546,"emit_wilson":0.8983257118401426,"wiki_rate":0.20315188934979395,"presence":0.05830198817839871,"low_sample":false,"pc1_buckets":{"unknown":217}},{"name":"Google News","slug":"google-news","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":3521,"filtered":2632,"emitted":2502,"wiki_hits":1463,"emit_rate":0.7098927053000329,"emit_wilson":0.6953912974957281,"wiki_rate":0.584493697033708,"presence":0.39306824288017195,"low_sample":false,"pc1_buckets":{"unknown":81,"high":1341,"mid":41}},{"name":"dev.to","slug":"devto","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":false,"days_seen":111,"gathered":1519,"filtered":1481,"emitted":190,"wiki_hits":75,"emit_rate":0.13107866762015366,"emit_wilson":0.10938580370896846,"wiki_rate":0.40124083474337285,"presence":0.02015045674368619,"low_sample":false,"pc1_buckets":{"unknown":75}},{"name":"Blogroll","slug":"blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":397,"filtered":390,"emitted":356,"wiki_hits":175,"emit_rate":0.8818466893703033,"emit_wilson":0.8628898902431563,"wiki_rate":0.49248133046085946,"presence":0.047017732401934444,"low_sample":false,"pc1_buckets":{"unknown":175}},{"name":"lobste.rs","slug":"lobsters","active":false,"score_reliability":"trusted","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":0,"emit_rate":0.5865034733708236,"emit_wilson":0.0,"wiki_rate":0.5248166948674563,"presence":0.0,"low_sample":true,"pc1_buckets":{}},{"name":"Official Docs","slug":"official-docs","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":85,"gathered":195,"filtered":187,"emitted":176,"wiki_hits":89,"emit_rate":0.8731631138019371,"emit_wilson":0.8528399357905011,"wiki_rate":0.506710574992874,"presence":0.023911875335840944,"low_sample":false,"pc1_buckets":{"unknown":89}},{"name":"Official Skills","slug":"official-skills","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":84,"gathered":2,"filtered":2,"emitted":2,"wiki_hits":2,"emit_rate":0.6240940667007489,"emit_wilson":0.3423719528896193,"wiki_rate":0.6040139123895469,"presence":0.0005373455131649651,"low_sample":true,"pc1_buckets":{"unknown":2}},{"name":"Topic Watch","slug":"topic-watch","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":79,"gathered":135,"filtered":133,"emitted":124,"wiki_hits":92,"emit_rate":0.8756778675317193,"emit_wilson":0.859982177478421,"wiki_rate":0.7257325891692131,"presence":0.024717893605588393,"low_sample":false,"pc1_buckets":{"high":72,"mid":5,"unknown":15}},{"name":"User Query","slug":"user-query","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":111,"emit_rate":0.5865034733708236,"emit_wilson":0.0,"wiki_rate":11.624816694867457,"presence":0.02982267598065556,"low_sample":true,"pc1_buckets":{"unknown":98,"mid":7,"high":6}},{"name":"HN Repo Bridge","slug":"hn-repo-bridge","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":59,"gathered":35,"filtered":34,"emitted":34,"wiki_hits":30,"emit_rate":0.8314558084984813,"emit_wilson":0.8546659090672867,"wiki_rate":0.8010947033789674,"presence":0.008060182697474477,"low_sample":false,"pc1_buckets":{"unknown":30}},{"name":"Build Flags","slug":"build-flags","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":47,"gathered":30,"filtered":29,"emitted":29,"wiki_hits":31,"emit_rate":0.8146013893483294,"emit_wilson":0.8332924860304112,"wiki_rate":0.9294401781711427,"presence":0.008328855454056958,"low_sample":false,"pc1_buckets":{"unknown":31}}],"unknown_slugs":{},"domain_data_loaded":11520};
+window.TRANSPARENCY = {"window":{"days":111,"from":"2026-07-11","to":"2026-11-01"},"totals":{"gathered":12092,"emitted":7092,"wiki_hits":3723,"prior_emit":0.5865034733708236,"prior_wiki":0.5249576988155669},"hhi":0.2064825738963658,"sources":[{"name":"Anthropic Blog","slug":"anthropic-blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":46,"filtered":35,"emitted":35,"wiki_hits":52,"emit_rate":0.7080313555669162,"emit_wilson":0.6206458383088198,"wiki_rate":1.2722128219590148,"presence":0.013967230727907601,"low_sample":false,"pc1_buckets":{"unknown":51,"high":1}},{"name":"Anthropic Status","slug":"anthropic-status","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":117,"filtered":103,"emitted":88,"wiki_hits":62,"emit_rate":0.7279567114409962,"emit_wilson":0.6667207450882539,"wiki_rate":0.6862201733485273,"presence":0.0166532366371206,"low_sample":false,"pc1_buckets":{"unknown":62}},{"name":"Claude API Release Notes","slug":"claude-api-release-notes","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":2,"filtered":2,"emitted":1,"wiki_hits":1,"emit_rate":0.5786395212462033,"emit_wilson":0.09452865480086611,"wiki_rate":0.5681433625596063,"presence":0.00026860059092130003,"low_sample":true,"pc1_buckets":{"unknown":1}},{"name":"GitHub","slug":"github","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":1634,"filtered":1472,"emitted":553,"wiki_hits":370,"emit_rate":0.3414329319633715,"emit_wilson":0.3158928719065652,"wiki_rate":0.666517898735623,"presence":0.09938221864088101,"low_sample":false,"pc1_buckets":{"unknown":370}},{"name":"GitHub Issues","slug":"github-issues","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":111,"gathered":1620,"filtered":1612,"emitted":563,"wiki_hits":540,"emit_rate":0.35044516430940026,"emit_wilson":0.3247275666786477,"wiki_rate":0.9515699423877063,"presence":0.145044319097502,"low_sample":false,"pc1_buckets":{"unknown":540}},{"name":"Hacker News","slug":"hacker-news","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":111,"gathered":1655,"filtered":1512,"emitted":1354,"wiki_hits":412,"emit_rate":0.8153612355029353,"emit_wilson":0.7988125443317644,"wiki_rate":0.30590144940480624,"presence":0.11066344345957561,"low_sample":false,"pc1_buckets":{"unknown":287,"high":99,"mid":23,"low":3}},{"name":"Reddit","slug":"reddit","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":1184,"filtered":1164,"emitted":1084,"wiki_hits":217,"emit_rate":0.9100748085277546,"emit_wilson":0.8983257118401426,"wiki_rate":0.20315317823414594,"presence":0.05828632822992211,"low_sample":false,"pc1_buckets":{"unknown":217}},{"name":"Google News","slug":"google-news","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":111,"gathered":3521,"filtered":2632,"emitted":2502,"wiki_hits":1464,"emit_rate":0.7098927053000329,"emit_wilson":0.6953912974957281,"wiki_rate":0.584892347527132,"presence":0.39323126510878326,"low_sample":false,"pc1_buckets":{"unknown":81,"high":1342,"mid":41}},{"name":"dev.to","slug":"devto","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":false,"days_seen":111,"gathered":1519,"filtered":1481,"emitted":190,"wiki_hits":75,"emit_rate":0.13107866762015366,"emit_wilson":0.10938580370896846,"wiki_rate":0.40124788494077834,"presence":0.020145044319097503,"low_sample":false,"pc1_buckets":{"unknown":75}},{"name":"Blogroll","slug":"blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":111,"gathered":397,"filtered":390,"emitted":356,"wiki_hits":175,"emit_rate":0.8818466893703033,"emit_wilson":0.8628898902431563,"wiki_rate":0.49248518302774774,"presence":0.0470051034112275,"low_sample":false,"pc1_buckets":{"unknown":175}},{"name":"lobste.rs","slug":"lobsters","active":false,"score_reliability":"trusted","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":0,"emit_rate":0.5865034733708236,"emit_wilson":0.0,"wiki_rate":0.5249576988155669,"presence":0.0,"low_sample":true,"pc1_buckets":{}},{"name":"Official Docs","slug":"official-docs","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":85,"gathered":195,"filtered":187,"emitted":176,"wiki_hits":89,"emit_rate":0.8731631138019371,"emit_wilson":0.8528399357905011,"wiki_rate":0.5067181558502993,"presence":0.023905452591995703,"low_sample":false,"pc1_buckets":{"unknown":89}},{"name":"Official Skills","slug":"official-skills","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":84,"gathered":2,"filtered":2,"emitted":2,"wiki_hits":2,"emit_rate":0.6240940667007489,"emit_wilson":0.3423719528896193,"wiki_rate":0.604131415679639,"presence":0.0005372011818426001,"low_sample":true,"pc1_buckets":{"unknown":2}},{"name":"Topic Watch","slug":"topic-watch","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":79,"gathered":135,"filtered":133,"emitted":124,"wiki_hits":92,"emit_rate":0.8756778675317193,"emit_wilson":0.859982177478421,"wiki_rate":0.725743111851908,"presence":0.024711254364759603,"low_sample":false,"pc1_buckets":{"high":72,"mid":5,"unknown":15}},{"name":"User Query","slug":"user-query","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":111,"emit_rate":0.5865034733708236,"emit_wilson":0.0,"wiki_rate":11.624957698815567,"presence":0.029814665592264304,"low_sample":true,"pc1_buckets":{"unknown":98,"mid":7,"high":6}},{"name":"HN Repo Bridge","slug":"hn-repo-bridge","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":59,"gathered":35,"filtered":34,"emitted":34,"wiki_hits":30,"emit_rate":0.8314558084984813,"emit_wilson":0.8546659090672867,"wiki_rate":0.8011267497308107,"presence":0.008058017727639,"low_sample":false,"pc1_buckets":{"unknown":30}},{"name":"Build Flags","slug":"build-flags","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":47,"gathered":30,"filtered":29,"emitted":29,"wiki_hits":31,"emit_rate":0.8146013893483294,"emit_wilson":0.8332924860304112,"wiki_rate":0.9294763330296325,"presence":0.0083266183185603,"low_sample":false,"pc1_buckets":{"unknown":31}}],"unknown_slugs":{},"domain_data_loaded":11520};
 // Digest content is loaded on-demand from data/digest/{date}.json
 // Wiki content is loaded on-demand from data/wiki/{id}.json

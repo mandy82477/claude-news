@@ -278,6 +278,10 @@
         {
           "id": "anthropic-business",
           "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
         }
       ]
     }
@@ -445,6 +449,11 @@
     {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-customers",
+      "name": "定價、通路與客戶這則怎麼判",
       "pageType": "topic"
     }
   ],
