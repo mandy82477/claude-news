@@ -385,6 +385,11 @@
   "preview": "Claude Code：/buddy 請願破 2,116 讚：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。",
   "sedimentedToday": [
     {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
       "id": "claude-code",
       "name": "Claude Code",
       "pageType": "entity"

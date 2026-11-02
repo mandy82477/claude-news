@@ -430,6 +430,11 @@
   "preview": "Claude Code：v2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。",
   "sedimentedToday": [
     {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
       "id": "claude-code-experimental",
       "name": "Claude Code 實驗功能追蹤",
       "pageType": "topic"

@@ -444,6 +444,11 @@
   "preview": "Claude Code：v2.1.316 新增 CLAUDE_CODE_DISABLE_ULTRATHINK：設定後 ultrathink 關鍵字不再觸發額外思考；Claude apps gateway 另加群組共用的每月預算池。",
   "sedimentedToday": [
     {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
       "id": "opus-5-5",
       "name": "Claude Opus 5.5",
       "pageType": "entity"
