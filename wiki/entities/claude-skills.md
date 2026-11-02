@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 9
+days_since_news: 10
 parent: null
 children: "['entities/claude-skills-archive']"
 page_role: "hub"
-days_since_news_subtree: 9
+days_since_news_subtree: 10
 inbound_links: 13
 attribution_count: 15
 attribution_last: "2026-10-23"
@@ -78,7 +78,7 @@ description: 在 PR 或 diff review 前，依團隊規範檢查命名、測試�
 
 將此目錄提交進 repo（`.claude/skills/`），任何人 clone 專案後 Claude Code 會自動載入，達到架構護欄效果（社群實測案例見 2026-05-20）。也可搭配 `--safe-mode` 旗標（v2.1.169 起）在排查問題時一鍵停用所有 skills、hooks、MCP 等客製化設定。
 
-Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 claude.ai 帳號設定（2026-09-17 官方文件）；本機與 SSH session 原讀本機路徑，2026-09-25 官方文件新增說明兩者現在也會自動載入帳號已啟用的 skills 與 plugins。桌面版的 plugin 瀏覽器僅本機可用、雲端 session 不可用，經桌面應用安裝的 plugin 也不會同步到雲端 session（詳見 [[entities/claude-code]]「近期平台與文件異動」）。
+Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 claude.ai 帳號設定（2026-09-17 官方文件）；本機與 SSH session 原讀本機路徑，2026-09-25 官方文件新增說明兩者現在也會自動載入帳號已啟用的 skills 與 plugins。桌面版的 plugin 瀏覽器僅本機可用、雲端 session 不可用，經桌面應用安裝的 plugin 也不會同步到雲端 session（詳見 [[entities/claude-code-features]]「桌面版文件時序」）。
 
 ## 官方 Skills 生態一覽
 

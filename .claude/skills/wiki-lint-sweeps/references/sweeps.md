@@ -35,6 +35,7 @@
 3. 零命中 → 熱度 −1 格，**同步對應 `entities/` 頁的「熱度與試用價值」表**——單邊下修是矛盾的來源
 4. **不降的例外**：狀態為「⏰ 倒數中」，或本輪熱度／試用價值有其他變動者
 5. **⏳ 逾期處置（同一趟做完）**：全覽表中標 ⏳ 且發布日距今 > 90 天者，依 `.claude/reporter-rules/features/pages.md`「⏳ 觀望是有期限的判斷」三選一處置，不得留原狀
+6. **Claude Code 通道現值**：同輪跑 `npm view @anthropic-ai/claude-code dist-tags`，把 `stable`／`latest` 寫進 `wiki/entities/claude-code.md`「現況」的「版本」第一條與 `wiki/entities/claude-code-releases.md`「現在該跟哪條」第一條，查證日一併改；stable 跨過某個會改到既有行為的版本時，同步改第二、三條。雲端沒有 npm 時跳過，「本機承接」記一行。這是母頁結論層的週更觸發邊（功能類沒有 `weekly.md`）。
 
 **回報格式：**
 ```

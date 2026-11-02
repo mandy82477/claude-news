@@ -8,12 +8,12 @@ last_updated: "2026-10-24"
 last_news_update: "2026-10-24"
 status_main: "beta"
 matrix_role: "產品"
-days_since_news: 8
+days_since_news: 9
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 8
-inbound_links: 5
+days_since_news_subtree: 9
+inbound_links: 4
 attribution_count: 2
 attribution_last: "2026-10-24"
 top_source: "user-query"
@@ -42,7 +42,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
-**最新動態：** anthropic-sdk-python v2.3.0（2026-10-23）新增 Claude Tag endpoints，服務 Claude Enterprise 組織（詳見 [[entities/claude-code#版本更新]]）。
+**最新動態：** anthropic-sdk-python v2.3.0（2026-10-23）新增 Claude Tag endpoints，服務 Claude Enterprise 組織（詳見 [[entities/claude-code-releases#最新版本]]）。
 
 Anthropic Status 確認 Claude Tag 的 GitHub 操作於 2026-07-07 一度出現錯誤率升高，已於同日 15:52 UTC 恢復正常（事故頁：[status.claude.com](https://status.claude.com/incidents/d23j8s7t8rx2)），屬短暫中性事件，細節見下方「穩定性事件」。
 

@@ -32,7 +32,7 @@ pricing 的前三個彙整區塊吃的是**日報條目**；「通路與乘數�
 
 - **儲存格 ≤ 120 字元**（同 pricing 既有紀律）：通路的功能缺項清單、乘數的適用細節一律下沉表下條列
 - **partner 通路（Bedrock、Google Cloud）的絕對數字不寫入**——費率由該平台自訂且各自調整，抄下來即過期且無人複查，比不寫更糟。只寫「由該平台自訂」＋官方定價頁連結
-- **功能落差不在本區塊展開**：某通路取不到哪些功能，只列**影響計費的那幾項**（如 Bedrock 無 Message Batches API ⇒ 拿不到 Batch 折扣）；完整功能落差屬 [[entities/claude-code]]，加 wikilink 不複製（同 `wiki/CLAUDE.md`「每個事實只有一個家」）
+- **功能落差不在本區塊展開**：某通路取不到哪些功能，只列**影響計費的那幾項**（如 Bedrock 無 Message Batches API ⇒ 拿不到 Batch 折扣）；完整功能落差屬 [[entities/claude-code-known-issues]]（🔌 平台相容性），加 wikilink 不複製（同 `wiki/CLAUDE.md`「每個事實只有一個家」）
 - **模型間的選型換算不在本頁**：「同一份工作換個模型差多少」屬 [[topics/model-comparison]] 的 `## 同一份工作，換設定差多少`，加 wikilink 指過去
 - 通路的功能可用性若影響**升版或遷移決策**（如某通路取不到 compaction／context editing），走 `data/pending-handoffs.jsonl` 轉知功能記者評估是否同步 feature-radar 升版風險
 

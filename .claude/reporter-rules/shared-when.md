@@ -11,9 +11,9 @@
 2. 再用 Read + offset/limit 只讀命中行的**前後約 10–20 行**；確實要重寫整節（週更結論層、蒸餾）才讀整節
 3. 同一次 ingest 中多個無關頁面的更新，在單一訊息中平行發出多個 Edit 呼叫
 
-> **成本看 token 不看行數。** 行數會騙人：`claude-code.md` 行數只排全庫第四，讀一次卻約 86K token、全庫最貴（長表格列，每行平均 180 字元）；它最常被改的「已知問題」**單節就約 41K**——照節標題讀，等於每天為了改一列 bug 狀態載入 41K。
+> **成本看 token 不看行數。** 行數會騙人：拆頁前的 `claude-code.md`（2026-10）行數只排全庫第四，讀一次卻約 86K token、全庫最貴（長表格列，每行平均 180 字元）；它最常被改的「已知問題」**單節就約 41K**——照節標題讀，等於每天為了改一列 bug 狀態載入 41K。2026-11 拆出的 `claude-code-known-issues.md` 仍約 138K 字元，是功能類最貴的一頁。
 
-典型大型頁面（整頁約 70–86K token）：`claude-code.md`、`community-tech-patterns.md`、`anthropic-business.md`、`community-tech-patterns-archive.md`
+典型大型頁面（整頁約 70–86K token）：`claude-code-known-issues.md`、`community-tech-patterns.md`、`anthropic-business.md`、`community-tech-patterns-archive.md`
 
 ## 事實更正必回掃
 

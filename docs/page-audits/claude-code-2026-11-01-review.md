@@ -61,7 +61,7 @@
 
 **🟡2 驗證腳本的路徑**（第 20 波 🟡A 重演）
 - `D/verify_split.py` 和 `D/split_cc.py` 的 `ROOT = HERE.parents[2]`，搬家後指到的是 scratchpad 根目錄，不是 repo。
-- `D/build_tmp.sh` L4–5 寫死 `/home/user/claude-news/scratchpad/w21/design`。
+- `D/build_tmp.sh` L4–5 寫死 `<repo>/scratchpad/w21/design`。
 - 九檔複製進 repo 後，`verify_split.py` 會去讀新母頁當「原檔」。
 修法：驗收改用 `R/rerun/verify2.py`，四個參數都要明寫：`<repo> <原檔> <原 archive> <out 目錄或 repo/wiki/entities>`。原檔在複製前先存一份：`git show HEAD:wiki/entities/claude-code.md > <scratchpad>/w21/review/orig_1234.md`，archive 同理存成 `orig_archive.md`。
 
@@ -119,7 +119,7 @@ H-1458cf、H-6e641e 在 11-01 的 ingest 已經結案（`data/pending-handoffs.j
 
 | 步 | 誰 | 做什麼 | 驗 |
 |---|---|---|---|
-| 1 | 設計者（第二輪） | 用 `R/rerun/{split_cc.py,newtext.py,verify2.py}` 取代 `D/` 同名檔，`split_cc.py` 加 🔴2 的防呆 assert；重跑 `python D/split_cc.py /home/user/claude-news`、`python D/make_draft.py` | 印 `OK {'M': 202, 'K': 465, 'R': 288, 'F': 267, 'AR': 362}`、`archive 版本列： 82`；`python -I D/verify2.py <repo> <repo>/wiki/entities/claude-code.md <repo>/wiki/entities/claude-code-archive.md D/out/wiki/entities` 印 `OK　照搬 925 行逐字、懸置 30→30` |
+| 1 | 設計者（第二輪） | 用 `R/rerun/{split_cc.py,newtext.py,verify2.py}` 取代 `D/` 同名檔，`split_cc.py` 加 🔴2 的防呆 assert；重跑 `python D/split_cc.py <repo>`、`python D/make_draft.py` | 印 `OK {'M': 202, 'K': 465, 'R': 288, 'F': 267, 'AR': 362}`、`archive 版本列： 82`；`python -I D/verify2.py <repo> <repo>/wiki/entities/claude-code.md <repo>/wiki/entities/claude-code-archive.md D/out/wiki/entities` 印 `OK　照搬 925 行逐字、懸置 30→30` |
 | 2 | 設計者（第二輪） | 文件：🟡1 的數字；proposal §1 的 N2 改成「舊 16／11、新 17／11（L269 獨有）」、§4、§6（🟡3）、§8 與可行性前提（照「四、治理」逐字）；draft F1 §0 補縮行前核句（🔴1）、R 節第二條換掉（🔴4）；map 第 26 列 96→107、🛡️ 列的 17 條清單刪 269 加「新 L244 Cursor」 | `grep -n "96 列\|78 列\|30→31\|R 2" docs/page-audits/claude-code-2026-11-01-*.md` 0 命中 |
 | 3 | 主 session | `git log --oneline ae4ce48..HEAD -- wiki/entities/claude-code.md wiki/entities/claude-code-archive.md wiki/entities/cowork.md wiki/entities/claude-tag.md wiki/entities/claude-skills.md wiki/entities/anthropic-agent-stack.md .claude/reporter-rules .claude/skills/wiki-lint-sweeps`；存原檔 `git show HEAD:wiki/entities/claude-code.md > <scratchpad>/w21/review/orig_1234.md`（archive 同） | log 為空。不空的話，第 1 步的防呆 assert 會紅，回到第 1 步照新 hunk 補 `o2n` |
 | 4 | 實作者 | `D/out/wiki/entities/` 五檔複製進 `wiki/entities/`；cowork L52、L78 `#已知問題`→`entities/claude-code-known-issues#已知問題`，L37、L97 指 K；claude-tag L45→`entities/claude-code-releases#最新版本`；claude-skills L81→F「桌面版文件時序」；anthropic-agent-stack L89 補連 F `#Subagent 型別差異對照` | `python -I D/verify2.py <repo> <scratchpad>/w21/review/orig_1234.md <scratchpad>/w21/review/orig_archive.md <repo>/wiki/entities` 印 OK、30→30 |

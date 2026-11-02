@@ -8466,3 +8466,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - competitor-landscape 雷達表首列換人（DeepSeek）：index.md 鉤子句「中國陣營「免費夠用」」已概括涵蓋此類競品動態，屬慢變路由事實未失準，不逐筆跟著頁內排序改寫；不改 index.md
 - market 判讀：本日無訊號（檢視 41 條，WSJ 雙重股權/Fortune 2 兆估值均為舊數字重複，DeepSeek agent 與 Max5/Max20 改名無具體數字，未過門檻）
 - devpractice 沉澱：候選 6 筆／手冊寫入 0 則（今日零官方使用指南條目，純候選撿拾；候選已寫入 data/devpractice-candidates.jsonl，基準線推進至 8ccec0a，留待下次週更落地）
+
+## 2026-11-02 Query（第 21 波頁面健檢——claude-code 拆成母頁＋三子頁）
+
+- 裁決（主 session 代判七點＋N1–N5，使用者裁兩題：砍「現況」版本副本、雲端基線護欄下分支先 commit；記 `docs/page-audits/ledger.md` 2026-11-01／11-02 兩條）：[[entities/claude-code]] 由 1,234 行拆為母頁（正文約 173 行，使命句沿用第 4 波「Claude Code 現在有什麼毛病、哪些修了、哪些你得繞過去」加「版本、毛病、功能怎麼用，各往下鑽」）＋三子頁 [[entities/claude-code-known-issues]]（九組逐條）／[[entities/claude-code-releases]]（通道、版本表、歷史記錄）／[[entities/claude-code-features]]（桌面版功能地圖與文件時序、hooks、subagent）；拆前蒸餾進共用 [[entities/claude-code-archive]]：版本表逾 90 天 82 列、歷史記錄 08 月 24 列、已解決 Status 事故 40 條；現況 62 行版本副本補 v2.1.289、v2.1.269 兩列後砍；🛡️ 組 17 條與 [[topics/ai-agent-safety-product-vulns]] 重疊者縮成一行修補狀態，攝影機一條因安全 archive 狀態較舊留全文；照搬 925 行逐字核對、懸置 30→30；母頁保留 `## 版本更新`、`## hooks：…` 兩個同名殼接舊錨點。
+- 主編查證（一手，2026-11-01）：npm stable＝2.1.309、latest＝2.1.316（頁面原寫 2.1.308，L704「2.1.309 不在 stable」已不成立）；2.1.309 bypass 模式 rm 直接拒絕限 Desktop 與 VS Code；2.1.316 全文可得、補 Opus 4.8 fast mode 10-30 棄用 11-30 移除；官方 CLI changelog 無 2.1.313（Cursor 事件的版號是延伸套件）；hooks：官方 permissions 文件「PreToolUse hook 擋下的呼叫維持擋下、exit 2 先於權限規則」，hooks 文件「`if` 過濾器是 best-effort，硬性允許／拒絕用權限系統」——結論句改為「觸發即硬擋、但不保證觸發」；subagent 預設背景、同時上限 20。
+- 規則面：`features/pages.md` 的 claude-code 節拆成母頁（四問路由、每日准動五樣、兩個殼）／known-issues／releases／features 四節；`features/daily.md` 負責頁表一列變四列；`page-lifecycle.md` 母頁每日例外加 claude-code `## 現在還沒修好的` 與 `## 現況`；`sweeps.md` 5a 加第 6 條（npm dist-tags 週更母頁與 releases 結論）；safety-policy／models／commercial／community 分工句、classification、shared-when 改指子頁。
+- 轉知帳本：新開 H-02df2d（→開發實務，coding-workflow-guide L197 hook 硬擋句無官方逐字句、L393 錨點改指 features）、H-9c7428（→社群，community-guardrails L86 錨點）、H-26cfb1（→安全政策，product-vulns stable 改 2.1.309）、H-0fd390（→安全政策，ai-agent-safety L78 補連 hooks）、H-9a89bc（→社群，code-quality-decline #38335 互動數）、H-645373（→商業，pricing「額度掉得快」總入口，第 24 波處理）、H-afee03（→主編，feature-radar 預設值表補核 2.1.305–316）；H-7b713f（radar 錨點）、H-433341（index 鉤子與兩列入口）主編同 commit 執行並結案；結案 H-7526b2（Downloads 條目已在 known-issues）。
+- 已知缺口：cell 基線（107 筆搬家）與 reader-language 白名單（3 筆 page 欄）雲端 H6 改不了，本 commit 在分支上兩閘紅，清單見 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`，使用者本機重建後併 master。
+- 歸因 user-query／功能

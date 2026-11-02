@@ -25,7 +25,7 @@
 
 找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.304，2026-10-22；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
 
-**本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code#版本更新]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
+**本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code-releases#最新版本]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
@@ -49,7 +49,7 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的較舊門檻**：2.1.234／239／243 三項、2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；逐版見 [[entities/claude-code#版本更新]]。
+- **因上限 12 列移出的較舊門檻**：2.1.234／239／243 三項、2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；見 [[entities/claude-code-releases]]。
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 
@@ -423,7 +423,7 @@ bedrock:CountTokens
 
 **是什麼：** `claude plugin install` 新增 `--marketplace <source>`，安裝外掛時若尚未加入所需市集來源會自動補上（沿用 `claude plugin marketplace add` 相同的政策檢查），省去先手動 `marketplace add` 的步驟。
 
-**為何熱：** 官方 release notes 單一條目，目前無社群回饋；同版官方 Changelog 另載一項與本旗標無關的變更：本機（stdio）MCP server 連線預設協商 MCP 協定 2026-07-28（查證日 2026-10-24，見 [[entities/claude-code]]「🔌 MCP 整合」）。
+**為何熱：** 官方 release notes 單一條目，目前無社群回饋；同版官方 Changelog 另載一項與本旗標無關的變更：本機（stdio）MCP server 連線預設協商 MCP 協定 2026-07-28（查證日 2026-10-24，見 [[entities/claude-code-known-issues]]「🔌 MCP 整合」）。
 
 **現在要試嗎：** 常裝外掛又手動管市集來源的人可省一步；一般使用者無感知差異。
 
@@ -464,7 +464,7 @@ claude plugin install <plugin> --marketplace <source>
 claude purge                      # 原 claude project purge
 ```
 
-**注意事項：** 防護缺口的攻擊面與 stable 落後的影響見 [[topics/ai-agent-safety]]；版本細節見 [[entities/claude-code#版本更新]]。
+**注意事項：** 防護缺口的攻擊面與 stable 落後的影響見 [[topics/ai-agent-safety]]；版本細節見 [[entities/claude-code-releases#最新版本]]。
 
 ### Claude Mods
 **發布：** 2026-10-01（v2.1.287） | **狀態：** 正式發布
@@ -1209,7 +1209,7 @@ claude --worktree <GitLab-MR-URL>
 
 **現在要試嗎：** 只在 Desktop 的 Code 分頁可用，終端機／CLI 未見此選項；是使用者需手動勾選的 opt-in，非預設開啟；**週額度卡片不提供此選項**，僅 session 上限卡片有——靠週額度續行的人這個功能幫不上忙。
 
-**注意事項：** 版本區間為 v2.1.225–233（2026-08-10～14），非社群流傳的 v2.1.234；完整限制與查證見 [[entities/claude-code]]「💰 計費與配額」。
+**注意事項：** 版本區間為 v2.1.225–233（2026-08-10～14），非社群流傳的 v2.1.234；完整限制與查證見 [[entities/claude-code-known-issues]]「💰 計費與配額」。
 
 ---
 

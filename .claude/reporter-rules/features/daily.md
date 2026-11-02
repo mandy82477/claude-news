@@ -12,7 +12,10 @@
 
 | 頁面 | 觸發條件 |
 |------|---------|
-| `wiki/entities/claude-code.md` | Claude Code 版本更新、新指令/旗標、Breaking change |
+| `wiki/entities/claude-code.md` | 母頁：callout、路由表「最後動態」、`## 現況`（帳號／年齡政策、尚待官方佐證的傳聞、定位與市場、版本兩條）、`## 現在還沒修好的`；寫條目前先查 `.claude/reporter-rules/features/pages.md` 第 0 條路由表 |
+| `wiki/entities/claude-code-known-issues.md` | GitHub Issues 高互動 bug／功能請求、互動數更新、Anthropic Status 事故 |
+| `wiki/entities/claude-code-releases.md` | Claude Code 與 SDK 版本更新、新指令／旗標、Breaking change；歷史記錄每日一列 |
+| `wiki/entities/claude-code-features.md` | 官方文件的功能用法異動（桌面版文件、hooks、subagent） |
 | `wiki/entities/bugcrawl.md` | BugCrawl 漏洞偵測工具動態 |
 | `wiki/topics/anthropic-agent-stack.md` | 官方 agent 積木總覽（母頁）：八張積木卡（為什麼出／多給了什麼／還做不到什麼）、「怎麼疊」、決策樹與兩份附錄。agent 架構相關功能經「多標三件事」寫入本頁（見 `.claude/reporter-rules/features/pages.md`）；官方查證欄位由主編維護 |
 | `wiki/entities/managed-agents.md` | Managed Agents 框架更新（[[topics/anthropic-agent-stack]] 的子頁，收代管平台產品事實：現況、計費、零件成熟度、歷史） |
@@ -26,7 +29,7 @@
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 🛠️ 工具/功能 的所有頁面（含日後新增）皆由本記者負責維護與 lint。
 
-GitHub Issues 來源的高互動 bug/issue 條目歸功能記者，記入 claude-code.md 已知問題（含 issue 編號與連結）；不進 feature-radar。
+GitHub Issues 來源的高互動 bug/issue 條目歸功能記者，記入 `claude-code-known-issues.md` 對應分組（含 issue 編號與連結）；不進 feature-radar。
 
 ---
 
@@ -77,7 +80,7 @@ feature-radar 只收**使用者可實際取用、呼叫、設定或執行的官�
 
 | 情況 | 判斷 | 處置 |
 |------|------|------|
-| 純 bug fix / reliability（無具體功能說明）| ❌ 不收錄 | 記入 `entities/claude-code` 版本表 |
+| 純 bug fix / reliability（無具體功能說明）| ❌ 不收錄 | 記入 `entities/claude-code-releases` 版本表 |
 | 內部基礎設施更新 | ❌ 不收錄 | 略過 |
 | 單一 bug 的 hotfix（已屬於另一功能的修正）| ❌ 不收錄 | 附記在對應功能條目「注意事項」 |
 | 有新指令 / 新旗標 / Breaking change | ✅ 收錄 | 正常建立條目 |
