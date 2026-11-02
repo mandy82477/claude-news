@@ -11,7 +11,7 @@ parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 8
+inbound_links: 9
 attribution_count: 13
 attribution_last: "2026-10-31"
 top_source: "google-news"

@@ -2356,8 +2356,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "adc2acbc18accd373ec67a532e8febad16573ad9836a5f3bef635c28fd347605",
-    "length": 9181,
+    "hash": "79a498ae76e67f03e988175a6b754f1e67a66c5e6cd3f3f78f8d5481f68e9ad9",
+    "length": 9151,
     "segments": [
       "Adjust these settings in the Console if you prefer to avoid automatic credit purchases.",
       "All Collections Claude Code Use Claude Code with your Pro, Max, or Ultra plan Use Claude Code with your Pro, Max, or Ultra plan",
@@ -2441,7 +2441,6 @@
       "To maintain your Pro, Max, or Ultra plan budget, simply decline API credit options when offered.",
       "Ultra plan users",
       "Understanding two distinct systems",
-      "Understanding your Pro, Max, or Ultra plan invoices",
       "Usage Policy",
       "Usage will be billed at standard API rates (distinct from Pro/Max/Ultra plan pricing).",
       "Use Claude Code for your terminal-based coding workflows.",
@@ -2454,6 +2453,7 @@
       "What happens when you hit usage limits",
       "What is Claude Code?",
       "What is the Max plan?",
+      "What is the Pro plan?",
       "What is the Ultra plan?",
       "When prompted during setup or first use, log in with the same credentials you use for Claude.",
       "When you reach your usage limits, you can select from a few options based on your needs:",

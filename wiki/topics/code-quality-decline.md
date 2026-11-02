@@ -3,17 +3,17 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-10-30"
-last_news_update: "2026-10-30"
+last_updated: "2026-11-01"
+last_news_update: "2026-11-01"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 43
-attribution_count: 45
-attribution_last: "2026-10-30"
+attribution_count: 46
+attribution_last: "2026-11-01"
 top_source: "reddit"
 pending_count: 0
 pending_overdue: 0
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **Token 消耗異常訊號群新增一例：session token cache 似乎更快失效**（2026-10-30）
-> - Reddit 使用者稱 session token cache 比以前更快失效，約每 10 分鐘就重置一次；單一貼文、無互動數，尚無其他使用者或官方佐證。
+> **Token 消耗異常訊號群新增一例：單次任務輸出 token 疑暴增 3.8 倍**（2026-11-01）
+> - Reddit 使用者稱依自行做的 token 分析，本週表現較上週變差 3.8 倍；單一貼文、0 留言，週熱門標記，尚無其他使用者或官方佐證。
 > - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
 
 ---
@@ -98,7 +98,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-07-08 | 「Cache hit rate dropping by 20% doubles your agent's bills」：使用者以圖表分享 cache 命中率下降 20% 會讓 agent 帳單翻倍 | Reddit r/ClaudeCode（[原文](https://www.reddit.com/r/ClaudeCode/comments/1uqsah2/cache_hit_rate_dropping_by_20_doubles_your_agents_bills/)）| `單一貼文（圖為主，本群唯一機制解釋）` |
 | 2026-07-09 | 「Claude Max 20x: Why did 27% of one session consume 7% of my entire weekly limit?」：單一 session 27% 的時間即消耗掉整週額度 7% | Reddit r/ClaudeAI（[原文](https://www.reddit.com/r/ClaudeAI/comments/1urqgqx/claude_max_20x_why_did_27_of_one_session_consume/)）| `單一貼文（帶具體比例）` |
 | 2026-09-12 | Ask HN 討論串：Fable 對手機 App 規劃任務「大材小用」，4 個平行 agent 數分鐘內耗盡 session 額度，等 6 小時逾時後快取已失效 | Hacker News（[原文](https://news.ycombinator.com/item?id=49672966)）| `單一貼文（HN 57 分）` |
-| 2026-10-23 | 「i hit claude session limit within 30 minutes after update」：用 Opus 5.5 high 做基本 UI 工作，更新後 30 分鐘內衝到 85% 用量上限 | Reddit r/ClaudeCode（[原文](https://www.reddit.com/r/ClaudeCode/comments/1xdg4l0/i_hit_claude_session_limit_within_30_minutes/)） | `單一貼文（無互動數）` |
+| 2026-10-27 | 「Claude is performing 3.8x poorer...」：使用者稱依 token 分析，本週表現較上週差 3.8 倍 | Reddit r/ClaudeAI · 週熱門（[原文](https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/)） | `單一貼文（無互動數）` |
 | 2026-10-30 | 「Claude Code session token cache invalidating faster」：session token cache 似乎比以前更快失效，約每 10 分鐘就重置一次 | Reddit r/ClaudeCode（[原文](https://www.reddit.com/r/ClaudeCode/comments/1xjjryu/claude_code_session_token_cache_invalidating/)） | `單一貼文（無互動數）` |
 
 **證據硬度五值（由來源決定，不由結論多強決定）：** 官方一手／GitHub issue（附留言數，可重現者標明）／具名個案／單一貼文（附真實互動數）／單一貼文（無互動數）。
@@ -116,7 +116,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **10-06「HOLY ULTRA OUTPUT TOKENS BATMAN! WHAT ARE THEY SMOKING OVER THERE?」**：r/ClaudeCode 週熱門貼文稱單次任務輸出 token 量異常暴增，引發不滿；無測試方法或版本號，只說明這個現象還在。
 - **10-09「weekly limit running out so fast」**：未列入上表（2026-10-30 起）；原文已在 [[topics/code-quality-decline#2026-10]] 10-09 時序條目一併提及。
 %% 維運備忘：訊號表上限 10 列已滿，本則取單一貼文（無互動數）中最舊者讓位給 10-30 新訊號（session token cache 似乎更快失效），見規則檔「code-quality-decline 的三張表」第 2 條 %%
-- **10-23「i hit claude session limit within 30 minutes after update」**：用 Opus 5.5 high 做基本 UI 工作，更新後 30 分鐘內即衝到 85% 用量上限，無互動數可佐證，訊號方向與既有十則一致。
+- **10-23「i hit claude session limit within 30 minutes after update」**：未列入上表（2026-11-01 起）；原文已在 [[topics/code-quality-decline#2026-10]] 10-23 時序條目一併提及。
+%% 維運備忘：訊號表上限 10 列已滿，本則取單一貼文（無互動數）中最舊者讓位給 10-27 新訊號（3.8x 表現變差），見規則檔「code-quality-decline 的三張表」第 2 條 %%
 - **10-30「Claude Code session token cache invalidating faster」**：session token cache 似乎比以前更快失效，約每 10 分鐘就重置一次；無互動數可佐證，訊號方向與既有十一則一致。
 
 ### 三種解釋，目前各自站在哪
@@ -256,6 +257,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-10-30
 - **「Claude Code session token cache invalidating faster」：Token 消耗異常訊號群第十二則**：Reddit 使用者稱 session token cache 似乎比以前更快失效，大約每 10 分鐘就重置一次；單一貼文、0 留言，無測試方法或版本號，尚無其他使用者或官方佐證，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xjjryu/claude_code_session_token_cache_invalidating/)）
+
+#### 2026-10-27
+- **「Claude is performing 3.8x poorer...」：Token 消耗異常訊號群第十三則**：使用者稱依 token 分析，本週表現較上週差 3.8 倍，0 留言、無測試方法或版本號（來源：[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xguw7r/claude_is_performing_38x_poorer_compared_to_last/)）
 
 #### 2026-10-23
 - **「i hit claude session limit within 30 minutes after update」：Token 消耗異常訊號群第十一則**：Reddit 使用者以 Opus 5.5 high 做基本 UI 工作，更新後 30 分鐘內即衝到 85% 用量上限，稱比更新前更快觸頂；單一貼文、0 留言，無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xdg4l0/i_hit_claude_session_limit_within_30_minutes/)）

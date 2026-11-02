@@ -8442,3 +8442,27 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - 開放迴路掃描（`open_loops.py` 2026-11-01）：需收尾 158（未 commit 的實質改動 132，多為 frontmatter 計數器＋`pending_queue_history.csv`，本輪隨 push 收進；逾期 workaround 10 筆，最舊 105 天）｜已跳票 37｜存量遷移 20（舊語法盲區）；人類質疑時效燈 ✅（2 天前）。
 - 需使用者端設定：claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 7 週，2026-09-19 起）：leaderboard 組 11 個網域（huggingface.co、eqbench.com、metr.org、openrouter.ai 等）；5c／5h 另撞到 sec.gov、vals.ai、eu.36kr.com 等。
 
+
+## 2026-11-01 Ingest
+
+- 來源日報：[[news/2026-11-01]]
+- 更新頁面：
+  - **人物**：無
+  - **功能**：entities/claude-code（14 則互動數同步/新增，另併入分類回退補派 1 則）
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/competitor-landscape、entities/pricing
+  - **安全政策**：無（唯一一則為 10-31 已完整報導的重複條目，未寫入）
+  - **模型**：entities/mythos
+  - **社群**：topics/community-skills、topics/community-integrations、topics/community-tech-discussions、topics/code-quality-decline
+- 新增頁面：無
+- feature-radar：本日無新功能（今日抓取零 official 類條目）
+- index：無狀態變更
+- 摘要：DeepSeek 發布自主程式開發 agent 直接對標 Claude Code（4 家媒體同日報導），為今日唯一新發生的大事；其餘熱度集中在 Claude Code 既有已知問題（/buddy 請願 283 留言、Cowork Plan9 掛載失敗、GitHub connector 失效）與 Anthropic IPO／治理周邊報導，遊戲重現限制與浮水印擴大兩條延續故事今日僅媒體二次收錄、無新事實。
+- 呈現品質：[商業] topics/anthropic-ipo：✅ 通過／topics/anthropic-business：✅ 通過／topics/competitor-landscape：✅ 通過（cell-limit 超限一次，已縮短覆查通過）／entities/pricing：⚠️ 已修復（check_reader_language 命中內部用語，已改寫並將維運備忘移入 `%% … %%`）／[功能] entities/claude-code：✅ 通過／[模型] entities/mythos：✅ 通過／[社群] 四頁：✅ 通過
+- 分類回退：1 筆已處理——[模型] issue #19649（Bash 工具濫用）→ 功能（已於 entities/claude-code 已知問題區塊收錄，2026-08-22 建檔，為工具選擇行為既有已知問題非模型評測條目；補派完成，互動數已同步至 47 則留言/124 讚）
+- 轉知帳本：結案 H-1458cf（功能，Cursor 套件口徑已對齊）、H-6e641e（功能，128MB 上限 ❓ 條目已存在非本次新增）、H-29935d（模型，已核對 opus-5-5／claude-code 用詞一致）；新開 H-952d1f（社群→功能，評估 official-community-gap 產品化矩陣新增列）、H-95764c（社群→功能，cheap-ag 負向用量對照轉知，186★ 未達收錄門檻僅轉知）
+- 主編判定（商業記者 ⚠️ 三項）：
+  - Max5／Max20 改名與 Max20 5 小時限制取消：單一 Reddit 來源（週熱門，無官方公告佐證），雲端 egress 為 Trusted 等級無法查證官方說明中心；本機承接——下次本機 session 以 WebFetch／WebSearch 查 Anthropic 官方方案頁後更新 entities/pricing 對應條目
+  - 計費事故表滿載：純資訊性觀察，不需本輪動作，留給 `/wiki-lint` 週度複查時依留表優先序評估是否汰除舊事故
+  - competitor-landscape 雷達表首列換人（DeepSeek）：index.md 鉤子句「中國陣營「免費夠用」」已概括涵蓋此類競品動態，屬慢變路由事實未失準，不逐筆跟著頁內排序改寫；不改 index.md
+- market 判讀：本日無訊號（檢視 41 條，WSJ 雙重股權/Fortune 2 兆估值均為舊數字重複，DeepSeek agent 與 Max5/Max20 改名無具體數字，未過門檻）
+- devpractice 沉澱：候選 6 筆／手冊寫入 0 則（今日零官方使用指南條目，純候選撿拾；候選已寫入 data/devpractice-candidates.jsonl，基準線推進至 8ccec0a，留待下次週更落地）

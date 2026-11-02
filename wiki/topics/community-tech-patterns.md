@@ -3,14 +3,14 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-30"
+last_updated: "2026-11-01"
+last_news_update: "2026-11-01"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 54
 attribution_count: 269
 attribution_last: "2026-10-30"
@@ -29,15 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-01
+**最後新聞更新：** 2026-11-01
 
-> **Token/成本優化、Plugin/MCP整合、記憶與知識管理、Agent活動可視化同日各新增一例，另有一則暫列未歸類**（2026-10-30）
-> - **Token / 成本優化**：MCP 工具成本實測（Apify 20 個 Actor）與用量優化工具揭露的快取浪費數字，見 [[topics/community-cost#2026-10]]。
-> - **Plugin / MCP 整合**：kajisho5/ffmpeg-skill，42 個 FFmpeg 操作包成機器可讀合約＋MCP server 的本機影片編輯工具，見 [[topics/community-integrations#2026-10]]。
-> - **記憶與知識管理**：itechmeat/open-second-brain，常駐 Obsidian vault、夜間把重複修正沉澱成帶信心分數偏好，見 [[topics/community-memory#2026-10]]。
-> - **Agent 活動可視化**：YizhengWw/HachimoDock，隨 Claude Code session 即時反應的桌面寵物，見 [[topics/community-interfaces#2026-10]]。
-> - **未歸類**：Ansub/tv-detox，用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，見 [[topics/community-tech-patterns#未歸類]]。
+> **Skills 設計、創意工具整合同日各新增：三款 skill 同批亮相、影片範本跨 25+ agent 複用**（2026-11-01）
+> - **Skills 設計**：patch-gg/pixelfx（像素特效）、ai-shortfilm-prompts（電影分鏡提示詞）、dotnet-skills（.NET 技能目錄）三款同日亮相，見 [[topics/community-skills#2026-11]]。
+> - **Plugin / MCP 整合**：actionow-ai/vvv，開源可編輯影片範本打包為 Agent Skill，跨 25+ 款 coding agent 複用，見 [[topics/community-integrations#2026-11]]。
 
 ---
 

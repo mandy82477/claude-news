@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-01"
-last_news_update: "2026-10-31"
+last_news_update: "2026-11-01"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 15
-attribution_count: 12
-attribution_last: "2026-10-31"
+attribution_count: 14
+attribution_last: "2026-11-01"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
@@ -32,11 +32,10 @@ Anthropic 上市進程的事實層：遞件、時程、估值、承銷、質疑�
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-31
+**最後新聞更新：** 2026-11-01
 
-> **最新動態**（2026-10-31）
-> - **信評預期落在 BB 級（投機級最高一檔）**：FT 引 Blackstone 告知 $630 億晶片融資案投資人，預期 Anthropic 上市後獲此評級，與先前「2027 年前達投資級」說法不符；兩家當事方皆拒評論（TechCrunch 引 FT，HN 99 分）。
-> - **S-1 後科技股走弱，市場敘事轉向「泡沫消風」**：作者稱 S-1 草稿公開加上 Google、Amazon 財報不如預期，類股自高點回落約 10%（The Big Newsletter，HN 50 分）；CNBC 稱上市路「更顛簸」，細節僅標題。
+> **最新動態**（2026-11-01）
+> - **WSJ：雙重股權結構讓創辦人上市後仍握控制權**：報導 Anthropic 採雙重股權結構，呼應 08-18 已記錄之超級投票權傳聞，首度見 WSJ 專文確認（HN 13 分）。
 
 **怎麼讀這頁：** IPO 對工程師的意義是兩件事——供應商穩定性（燒錢速度、資金與算力能不能撐住服務）與定價走向（上市壓力會不會推動漲價或限縮方案）。市場判讀（方向、該打幾折、下一個里程碑）不在本頁，見 [[topics/market-signals]]；整體數字見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -82,6 +81,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 原文逐項核對尚未完成：🔎 **查無官方**（標 2026-11-01｜查 EDGAR、Anthropic S-1｜複 2026-11-15）｜**S-1 原文逐項核對**：上表各列來源皆為二手報導或官方公告，未直接核對 SEC 原文。
 
 **IPO 細節**
+- **2026-11-01 WSJ《Imperial CEO》／HN（13 分）：雙重股權結構讓創辦人上市後仍握控制權**：呼應 08-18 已記錄之超級投票權傳聞，首度見 WSJ 專文確認；投票權倍數、涵蓋股份範圍未見報導，僅標題可用（Hacker News）。
 - **2026-10-31 Yahoo Finance：IPO 將使 AI 產業「一贏一輸」**：稱此次 IPO 可能打破四個月前創下的史上最大 IPO 紀錄，並預期部分公司因 Anthropic 取得更多資本而受益、部分不然；具名贏家與輸家原文摘要未載，僅標題與導言可用（Google News/Yahoo Finance）。
 - **2026-10-31 YouTube／HN（10 分）：「大賣空」Steve Eisman 再談 Anthropic IPO 的訪談影片**：影片內容摘要未取得，僅有 HN 留言（一則嫌討論吵鬧、一則稱 Eisman 未真正理解 AI），留言為讀者意見、不構成查證（Hacker News）。
   - 他先前唱空言論見 [[topics/anthropic-business#還沒過去的風險]]。

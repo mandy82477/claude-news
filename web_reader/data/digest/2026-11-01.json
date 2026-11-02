@@ -1,0 +1,620 @@
+{
+  "date": "2026-11-01",
+  "generatedAt": "2026-11-01 17:17 UTC",
+  "articleCount": 51,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Bring Back Buddy — A Consolidated Plea from the Community",
+      "url": "https://github.com/anthropics/claude-code/issues/45596",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 15:51",
+      "sentiment": "",
+      "body": "今日累積 283 則留言、2,116 個 👍，社群要求恢復 4/9 在 Claude Code v2.1.97 無預警移除的 `/buddy` 陪伴功能，issue 整理多位開發者的個人情感訴求，官方目前尚無回應。習慣用 `/buddy` 的使用者可留意官方是否受這波聲量影響回覆。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] No indication of WHICH file for READ tool",
+      "url": "https://github.com/anthropics/claude-code/issues/21151",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 07:33",
+      "sentiment": "",
+      "body": "今日累積 134 則留言、185 個 👍，使用者希望 READ 工具執行時能顯示正在讀取的檔案名稱，目前輸出看不出讀的是哪一個檔案。常需要在長 session 裡追蹤 agent 讀了哪些檔案的人可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cowork (Windows): all Plan9 shares fail with \"Plan9 mount failed: invalid argument\" after Windows update KB5124008 (26200.9445) — uninstalling the KB fixes it",
+      "url": "https://github.com/anthropics/claude-code/issues/92984",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 12:53",
+      "sentiment": "",
+      "body": "今日累積 121 則留言、61 個 👍，回報 Windows 更新 KB5124008 後 Cowork 的 Plan9 共享資料夾全部掛載失敗，回報者確認解除安裝該 KB 可恢復。在 Windows 上用 Cowork 的人，若最近更新後共享資料夾失靈，可先檢查是否裝了這個 KB。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "GitHub connector links repositories successfully but Claude cannot access content for ANY repository (account-wide, public and private alike) — recent regression",
+      "url": "https://github.com/anthropics/claude-code/issues/71542",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 00:13",
+      "sentiment": "",
+      "body": "今日累積 71 則留言、77 個 👍，回報 GitHub connector 能成功連結 repo，但不論公開或私有一律讀不到內容，屬帳號層級的退化。依賴 GitHub connector 讀取 repo 內容的使用者，目前應留意這個已知問題尚未修復。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: HackerBooks – HackerTube, but for books recommended on HN",
+      "url": "https://hackerbooks.org",
+      "source": "Hacker News",
+      "time": "11/01 15:58",
+      "sentiment": "",
+      "body": "Hacker News 今日 105 分，作者看到 Karpathy 的 HackerTube 後，找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書，每本可回連到當時的留言串。想看 Claude 能獨力做出什麼規模作品的人可參考這個案例。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [],
+  "mediaReports": [
+    {
+      "title": "Anthropic 內部用 Claude 的用量，若按對外收費計算已超過員工薪資 - Business Insider",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPckZlQklSTUE5MnZLZDM2U1RWbGFtQzRmVU1mTTk5YUVLNEVta3FmZnM5OWIxUW9DN253ZlctTGk4RFEybHFGQU9hXzNSdkE5SGZRbjNKLUd6RE9OaEN6NWkzd2dpcnRDRjdGR01DN0JyQWVjcFhkaEs5UmlmNS1oZV9VSVhjbHk3d0M3aHVwa0lfODdOZFF4NnVHSTBRUy1EZlE?oc=5",
+      "source": "Google News / Business Insider",
+      "time": "11/01 15:00",
+      "sentiment": "",
+      "body": "Business Insider 報導，若以 Anthropic 對外收費的價格換算，該公司員工內部使用 Claude 的用量價值已超過其薪資總額；兩個獨立來源同日報導，但報導僅標題層級、具體換算方式未附。評估 Anthropic 自家工程生產力與財務揭露的人可留意後續是否有更完整數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic 2 兆美元 IPO 估值下，面試考生被問「股價歸零怎麼辦」 - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSlBiVFRIMmt2WEVQTjRoQ21LTElPODlaUVNwWTJyUWxrNUw0amktMS12NDhEUGNYT2Q0bEE4S1lCd3ZNbFAzWEY1dDMyNjhObmJzRG51bndoNEt6ck80U1h5b0JHSF84MTAtMmJpR0dCSzRORWpLZU1EbUEyVzdiM2haTVFkelhTYXlKNU9ndEpmWXhkQS1kMXBRLUp6RDJ4LVpjVTJZYUdVY1NZd3NIYkFWN2M1RXZ5M09TY3JaRXlObURIY0VXV1lmNGJCWmFpeHdmOW52Y1d5c0ZIQ2VDY0l5Sng?oc=5",
+      "source": "Google News / Fortune",
+      "time": "11/01 14:15",
+      "sentiment": "",
+      "body": "Fortune 報導 Anthropic 的 IPO 估值上看 2 兆美元，同時揭露公司面試時會問應試者「如果股價歸零你會怎麼做」；報導僅標題層級，完整脈絡未附。關注 Anthropic 上市估值與招募文化的人可留意後續報導。",
+      "focusTags": []
+    },
+    {
+      "title": "Palantir CTO 向 Stratechery 表示不後悔與 Anthropic 合作 - The Next Web",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYXNMa2gzTHVCVzJJazJUQmY1S0FxeDlOdVA2V0ZIR1BpLUZBNkZQMXFYLXF2MEpjWXNlSmk2RkpEWF85bWgyeDFxdXhha3puWGk1VWtPX1R1cTRkN0EzODlaSmRkS3lOUEJzeE9iMVNsUm42cEY2ZjdiNGFVS2VTR2Y2VVd0OTUzQzZMWXBqMk5CZ2otY2c?oc=5",
+      "source": "Google News / The Next Web",
+      "time": "11/01 14:02",
+      "sentiment": "",
+      "body": "The Next Web 引述 Stratechery 專訪，Palantir CTO 公開表示不後悔與 Anthropic 的合作關係；報導僅標題層級，訪談細節未附。追蹤 Anthropic 企業合作關係穩定度的人可留意完整訪談內容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic updates Claude to 'steer it away' from letting users clone games following weeks of Steam being inundated with AI slop - Yahoo Tech",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWUlrcmZ6TDljRU5nSFNmNmlsclgtRGhqZ2t0dUpnSDZ0RUxVZFRoaXJ2eEctWXVHZGhhQUxYWjN5cnN4NGZuaHNFZjNUcllCZFNOTjdUczRSZFR4RWV0QWRDYU5fcDFKTWxYcWtra2VsMm11M1k3SHJ0ZVlpbGs2ZURnX0sxOVBtN01GRXhMRzdpSUFZVXlr?oc=5",
+      "source": "Google News / Yahoo Tech",
+      "time": "10/31 15:23",
+      "sentiment": "",
+      "body": "承上（遊戲重現限制，見 10/31 聚焦），Yahoo Tech 補充這波限制的背景：近幾週 Steam 上充斥 AI 生成的「AI slop」遊戲複製品，是促使 Anthropic 調整 Claude 行為的導火線；報導僅標題層級，具體數據未附。做遊戲相關專案的人可留意這個背景脈絡。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[MODEL] Frequently uses Bash tools (sed/grep/etc) when use-case is well aligned to other builtin tools (Read/Grep/etc)",
+      "url": "https://github.com/anthropics/claude-code/issues/19649",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 15:51 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 47 則留言、124 個 👍，回報模型常改用 Bash 的 sed/grep 等指令，而不是用途更貼合的內建 Read/Grep 工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show timestamps on conversation messages",
+      "url": "https://github.com/anthropics/claude-code/issues/44763",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 15:51 UTC ·",
+      "sentiment": "🤔",
+      "body": "今日累積 41 則留言、108 個 👍，使用者要求在對話訊息上顯示時間戳記，方便監控長時間跑的背景任務進度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Option to hide inline diffs for Edit/Write tool output",
+      "url": "https://github.com/anthropics/claude-code/issues/37951",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 15:51 UTC ·",
+      "sentiment": "🤔",
+      "body": "今日新增 35 則留言，累計 127 個 👍，提案讓 Edit/Write 工具輸出的行內差異對照可以關閉顯示。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "We're Living in the Age of the Imperial CEO",
+      "url": "https://www.wsj.com/tech/ai/anthropic-ipo-dual-class-stock-founder-control-4c43a56d",
+      "source": "Hacker News",
+      "time": "11/01 08:09 UTC ·",
+      "sentiment": "🤔",
+      "body": "Hacker News 13 分，原文為《華爾街日報》報導 Anthropic 採雙重股權結構，創辦人在上市後仍可維持對公司的控制權。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        },
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's Mythos-class model allegedly leaked on Hugging Face",
+      "url": "https://news.ycombinator.com/item?id=50326727",
+      "source": "Hacker News",
+      "time": "11/01 15:45 UTC ·",
+      "sentiment": "🤔",
+      "body": "Hacker News 17 分，留言者普遍認為這則「Mythos-class 模型外流到 Hugging Face」的傳言幾乎可以肯定是假消息，疑似是誘騙使用者下載惡意檔案的手法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+      "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1",
+      "source": "Hacker News",
+      "time": "11/01 00:10 UTC ·",
+      "sentiment": "😊",
+      "body": "Hacker News 43 分，作者用 Three.js 做出 Ben Eater 8 位元電腦的 3D 虛擬麵包板編輯器，並支援透過 MCP 把 Claude 接進來協助除錯與建置。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "patch-gg/pixelfx",
+      "url": "https://github.com/patch-gg/pixelfx",
+      "source": "GitHub",
+      "time": "11/01 16:52 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub 上一款累積 2,351 星的開源專案，收錄 244 種像素藝術特效、各自是一小段程式碼，並附一個 Claude Code skill 讓使用者自製新特效。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "managedcode/dotnet-skills",
+      "url": "https://github.com/managedcode/dotnet-skills",
+      "source": "GitHub",
+      "time": "11/01 16:52 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub 上一款累積 500 星的 .NET 技能收藏，提供目錄、CLI 與編排 agent，同時支援 Codex、Claude Code、GitHub Copilot、Gemini 與 Junie。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "Anthropic renames Max5 and Max20 and removes 5h limits for Max20",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "10/30 17:34",
+      "sentiment": "",
+      "body": "Reddit r/ClaudeAI 使用者回報，Anthropic 已將 Max5、Max20 方案改名，並取消 Max20 方案的 5 小時用量窗口限制；貼文僅有標題與圖片，無官方公告佐證。用 Max20 方案的使用者可留意自己帳戶的方案名稱與限制是否已變動。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code usage exploded 8x today. Anthropic confirmed service errors consume our paid limits — and they won't compensate users",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1xh3yyu/claude_code_usage_exploded_8x_today_anthropic/",
+      "source": "Reddit / r/ClaudeAI · 週熱門",
+      "time": "10/27 20:34",
+      "sentiment": "",
+      "body": "Reddit r/ClaudeAI 使用者回報當日用量暴增 8 倍，稱 Anthropic 已證實服務端錯誤一樣會消耗使用者的付費額度，且不予補償；貼文同樣僅有標題與圖片，細節未附。常撞到服務錯誤的使用者可留意自己的額度是否也被這類錯誤吃掉。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "DeepSeek 發布新的自主程式開發 agent，彭博、南華早報、Investing.com 等至少 4 家媒體同日報導，一致將其定位為直接挑戰 Anthropic Claude Code 的競爭動作，且恰好在 Anthropic 預期 IPO 前幾週推出。評估 coding agent 選型與觀察 Claude 競爭格局的工程師可留意這款新對手後續公開的功能細節與定價。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSGJoZUdrNzFHTjRVcm9OOVZ5a1Z4dVB4ME1aNjlmYmdjX1ZOTXNWTFJTNFFFUkQ2UUxxTGV4UDlOS0RjMnRlWlFUZ04yemVtQU9zU3FZbHlWY1YxMi1YSVBGb3k5cGszYnptNnZVZk1mR1NmS0RvLUhOeS1QUmxZamtoNGgzR21CR2tmY0JUd1c3YXBBMlc0SDhkZm9kOFRtZ3NvQ2RLNVZOYnFaV2x5Vy1ra3ZNUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbFU5NlZJMVBaQ0txUnotazkwaWdmQzJwb3JvWUY4dTFHd2VERGZtdVJiMmxaTG9vR0pjZjFLOXZoZVRfRlFFZzM3dV81VVM3RDZLckQxZ01nc2ZFWGVvQlVoalk3X21iWDdBa29WcWNvblY1YVpGc3hPbDJCVVA3a2d2YVJDbFlZRUdkZ0NXTHplVTlEUGJ6RVBXTXZ1bWQ5eVRNNtIBpAFBVV95cUxQY3o3SXYteGFPRF9kQ3psaFZaTDJHMzhibnhoVE5LdjhGVUxkN2VBNnVuNHd2XzhodEpYLTRyMzhRcXNpWjY4SjBhMmdzek1oN0ZGRnh6RU5aWm12QUxYdDVvaktJUUU2UE1QVVdXUzhvdHFPZ0FrOHpOODJNQUlHYm5DSlI3aW8wS0dpMHFDWTNfNGpQeS0wYnU1TkIxbmtxVGRfSw?oc=5"
+      ],
+      "ref_names": [
+        "Bloomberg",
+        "南華早報"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 26
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "Claude Code：/buddy 請願破 2,116 讚：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic IPO 追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-01",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **`/buddy` 請願破 2,116 讚**：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。\n- **Cursor 市集延伸套件遭竄改事件口徑分歧**：Anthropic 稱自家系統未遭入侵，一資安公司稱竄改版經官方帳號發出，兩說並存（詳見已知問題）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "弱訊號",
+            "date": "",
+            "body": "HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息或惡意檔案誘餌。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- Reddit 回報 Anthropic 已將 Max5、Max20 方案改名並取消 Max20 的 5 小時用量窗口限制（單一貼文，官方未確認）。\n- Reddit 回報當日用量暴增 8 倍，稱服務端錯誤一樣消耗付費額度且不補償（單一貼文，官方未確認）。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，4 家媒體定位為直接挑戰 Claude Code**（Bloomberg／南華早報）——評估 coding agent 選型的人應留意後續功能與定價。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic IPO 追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **WSJ：雙重股權結構讓創辦人上市後仍握控制權**：報導 Anthropic 採雙重股權結構，呼應 08-18 已記錄之超級投票權傳聞，首度見 WSJ 專文確認（HN 13 分）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "今日社群焦點：Claude 獨力完成的兩個作品型 Show HN",
+            "date": "",
+            "body": "- **HackerBooks**：作者找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書；HN 105 分。\n- **BBRouter**：Ben Eater 8 位元電腦的 3D 虛擬麵包板編輯器，支援透過 MCP 把 Claude 接進來協助除錯與建置；HN 43 分（2 個來源）。"
+          },
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Token 消耗異常訊號群新增一例：單次任務輸出 token 疑暴增 3.8 倍",
+            "date": "",
+            "body": "- Reddit 使用者稱依自行做的 token 分析，本週表現較上週變差 3.8 倍；單一貼文、0 留言，週熱門標記，尚無其他使用者或官方佐證。\n- 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計再添三例：像素特效生成、電影分鏡提示詞、.NET 技能目錄",
+            "date": "",
+            "body": "- **patch-gg/pixelfx（2,351★）**：244 種像素藝術特效各自為一小段程式碼，附 Claude Code skill 讓使用者依現有慣例自製新特效。\n- **jnMetaCode/ai-shortfilm-prompts（506★）**：把任意想法轉成 Sora／Kling／Veo／Seedance 可直接使用的電影化分鏡提示詞，21 種類型模板、五階段結構，附 eval 測試。\n- **managedcode/dotnet-skills（500★）**：最大型 .NET 專屬技能收藏之一，提供目錄、CLI 與編排 agent，相容 Codex、Claude Code、GitHub Copilot、Gemini、Junie。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "創意工具 Agent 整合新增一例：影片範本跨 25+ agent 複用",
+            "date": "",
+            "body": "- **actionow-ai/vvv（510★）**：開源可編輯影片範本打包為 Agent Skill，一次製作即可在 Claude Code、Codex 等 25+ 款 coding agent 上重複使用。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 9
+  },
+  "readerTopStories": [
+    {
+      "title": "Bring Back Buddy — A Consolidated Plea from the Community",
+      "url": "https://github.com/anthropics/claude-code/issues/45596",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 15:51",
+      "sentiment": "",
+      "body": "今日累積 283 則留言、2,116 個 👍，社群要求恢復 4/9 在 Claude Code v2.1.97 無預警移除的 `/buddy` 陪伴功能，issue 整理多位開發者的個人情感訴求，官方目前尚無回應。習慣用 `/buddy` 的使用者可留意官方是否受這波聲量影響回覆。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] No indication of WHICH file for READ tool",
+      "url": "https://github.com/anthropics/claude-code/issues/21151",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 07:33",
+      "sentiment": "",
+      "body": "今日累積 134 則留言、185 個 👍，使用者希望 READ 工具執行時能顯示正在讀取的檔案名稱，目前輸出看不出讀的是哪一個檔案。常需要在長 session 裡追蹤 agent 讀了哪些檔案的人可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cowork (Windows): all Plan9 shares fail with \"Plan9 mount failed: invalid argument\" after Windows update KB5124008 (26200.9445) — uninstalling the KB fixes it",
+      "url": "https://github.com/anthropics/claude-code/issues/92984",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 12:53",
+      "sentiment": "",
+      "body": "今日累積 121 則留言、61 個 👍，回報 Windows 更新 KB5124008 後 Cowork 的 Plan9 共享資料夾全部掛載失敗，回報者確認解除安裝該 KB 可恢復。在 Windows 上用 Cowork 的人，若最近更新後共享資料夾失靈，可先檢查是否裝了這個 KB。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "GitHub connector links repositories successfully but Claude cannot access content for ANY repository (account-wide, public and private alike) — recent regression",
+      "url": "https://github.com/anthropics/claude-code/issues/71542",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/01 00:13",
+      "sentiment": "",
+      "body": "今日累積 71 則留言、77 個 👍，回報 GitHub connector 能成功連結 repo，但不論公開或私有一律讀不到內容，屬帳號層級的退化。依賴 GitHub connector 讀取 repo 內容的使用者，目前應留意這個已知問題尚未修復。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: HackerBooks – HackerTube, but for books recommended on HN",
+      "url": "https://hackerbooks.org",
+      "source": "Hacker News",
+      "time": "11/01 15:58",
+      "sentiment": "",
+      "body": "Hacker News 今日 105 分，作者看到 Karpathy 的 HackerTube 後，找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書，每本可回連到當時的留言串。想看 Claude 能獨力做出什麼規模作品的人可參考這個案例。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}
