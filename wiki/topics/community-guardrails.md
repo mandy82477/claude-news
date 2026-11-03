@@ -3,18 +3,18 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-28"
-last_news_update: "2026-10-28"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 5
+days_since_news_subtree: 1
 inbound_links: 11
-attribution_count: 11
-attribution_last: "2026-10-28"
-top_source: "github"
+attribution_count: 16
+attribution_last: "2026-11-02"
+top_source: "hacker-news"
 pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-11-11"
@@ -31,11 +31,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-10-28
-**最後新聞更新：** 2026-10-28
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **規格驅動開發新增本體驅動變體**（2026-10-28）
-> - **sharptoolbox/ontology-driven-dev（506★）**：需求探索→本體建模→應用構建三步法，以七模型本體 YAML 取代一般規格文件。
+> **五則新增：測試作弊守門、執行前白話提示、規格驅動新實作，兩則不讓 agent 自己說了算**（2026-11-02）
+> - **mgantlett/nomos**：Go binary 守門層，偵測刪測試、改回傳值等讓編譯器安靜放行的作弊手法。
+> - **Dhananjay-JSR/intent-lens**：執行前一行白話說明指令用途，偵測到破壞性指令變紅示警。
+> - **joebew42/aido**：規格驅動、測試驅動的 Claude Code 工程工作流 skill。
+> - **Reddit 兩則**：judge model 覆核輸出的外掛套件，與強制測試閘＋獨立複核才能收工的 Agent Flow。
 
 ---
 
@@ -92,6 +95,53 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
+
+### 2026-11
+
+#### mgantlett/nomos：28MB 靜態 Go binary 當 repo 與 coding agent 間的守門層，偵測測試作弊（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 單一靜態執行檔（CGO_ENABLED=0，Apache 2.0），插在 repo 與任何 coding agent 之間，偵測並阻止刪測試、竄改回傳值、改規格等讓編譯器安靜放行的作弊手法；作者自稱在 TraceTrial-Bench（95 題）上有可查核的對照成績。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧（PostToolUse 稽核、Git Hooks 品質門等，[[topics/community-guardrails#2026-10]]）一個「專門偵測 agent 測試作弊」取向——既有做法多管一般程式碼品質門檻，本則鎖定「宣稱完成但用假招騙過檢查」這個子問題；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 3 分，低於社群工具門檻；查核 commit 記錄，作者今日仍密集提交（含 README 基準數據更新），非發布後即棄置；基準數據為作者自測，未見第三方覆核。
+- **來源：** Hacker News；[GitHub](https://github.com/mgantlett/nomos)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，Show HN 當日，尚無第三方覆核）
+
+#### Dhananjay-JSR/intent-lens：執行前一行白話說 Claude Code 要做什麼，偵測破壞性指令變紅示警（2026-11-02）
+
+- **主線：** —
+- **核心模式：** Claude Code 外掛，在工具呼叫執行前於提示上方顯示一行白話說明「這個指令要做什麼」；偵測到 `rm -rf`、強制推送、`curl | sh` 等破壞性型態時整行變紅；直接讀工具呼叫自身參數生成說明，預設不額外呼叫模型、不送出任何資料。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧一個「執行前白話翻譯＋風險變色提示」取向——既有做法多是事後稽核或強制攔截，本則補在「人類還沒按下確認前」這一刻，且不額外耗用 API 呼叫；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** HN 僅 2 分；查核 commit 記錄，作者今日仍在持續補文件與修 bug，非單次發布。
+- **來源：** Hacker News；[GitHub](https://github.com/Dhananjay-JSR/claude-mods/tree/main/plugins/intent-lens)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者外掛，Show HN 當日，尚無社群採用回饋數據）
+
+#### joebew42/aido：規格驅動、測試驅動的 Claude Code 工程工作流 skill（2026-11-02）
+
+- **主線：** —
+- **核心模式：** Claude Code 的規格驅動＋測試驅動工作流 skill／外掛，把「先寫規格、對照規格驗證實作」的流程封裝成可安裝套件，並能在產 PR 時為延後處理的項目自動開 issue。
+- **與既有模式的關係：** 補上「規格驅動開發」既有代表技巧（spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev，[[topics/community-guardrails#2026-10]]）一個新具名實作；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 查核 commit 記錄，作者今日仍密集提交（PR 審查、README 改版等），非單次發布後棄置。
+- **來源：** Hacker News；[GitHub](https://github.com/joebew42/aido)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Reddit：免費開源外掛套件，讓小型 judge model 覆核 Claude Code 輸出，兼顧安全與省 token（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 開源外掛套件，另跑一個較小的 judge model 覆核主 agent（Claude Code）的輸出，目標同時兼顧安全把關與 token 成本（用小模型覆核取代人工逐一複查，或取代用同等級大模型雙跑）。
+- **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧（4-agent Code Review、對抗性審查、Read-Only Reviewer 等，[[topics/community-guardrails#2026-10]]）一個「用小模型當 judge」取向，刻意選小模型壓低覆核成本；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Reddit r/ClaudeCode 貼文，score 不可信（RSS 抓取恆為 0）；僅標題與簡短摘要可用，judge model 具體判準與實測數字未載。
+- **來源：** Reddit / r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xm8c4j/i_built_a_free_opensource_plugin_suite_that_has_a/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者套件，細節未載）
+
+#### Reddit：本地工作流層 Agent Flow，沒過測試閘與獨立複核就不能宣告任務完成（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 本地工作流層，強制 Claude Code 在通過測試閘門與一次獨立複核之前，不能把任務標記為完成；針對「agent 跨 session 忘記進度」與「太容易自稱做完」兩個痛點設計。
+- **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧一個「完成判定前置獨立複核」取向，與同日 judge-model 外掛套件（見上則）同屬「不讓 agent 自己說了算」的做法；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Reddit r/ClaudeCode 貼文，score 不可信（RSS 抓取恆為 0）；機制描述具體（測試閘＋獨立複核兩道關卡），但無第三方採用回饋。
+- **來源：** Reddit / r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xm87yq/i_built_a_local_workflow_layer_so_claude_code/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 ### 2026-10
 

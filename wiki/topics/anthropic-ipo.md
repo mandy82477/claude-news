@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 41
-attribution_count: 14
-attribution_last: "2026-11-01"
+inbound_links: 44
+attribution_count: 27
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
@@ -32,10 +32,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-11-01）
-> - **WSJ：雙重股權結構讓創辦人上市後仍握控制權**：報導 Anthropic 採雙重股權結構，呼應 08-18 已記錄之超級投票權傳聞，首度見 WSJ 專文確認（HN 13 分）。
+> **最新動態**（2026-11-02）
+> - **修訂版 S-1（S-1/A）首度揭露 Q3 具體財報與採購承諾總額**：Q3 營收 170 億美元、採購承諾 8,950 億美元、營運虧損 12.5 億美元（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)、FT）
+> - **revenue-per-compute 比值由 2.08x 降至 1.72x**：每一美元算力投入產生的營收正在下降（Hacker News 引 SEC 文件）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -49,9 +50,9 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
 | 什麼時候上市 | 掛牌日與價格區間官方仍未公布；公開版 S-1 已提交、未生效，先前「10 月上市」「延後」都只是媒體說法 🔎 查無官方 ⟨Q-03⟩ | Anthropic 官方公告（2026-10-26）；FT、Forbes、Yahoo Finance（08-13～09-08） | 官方一手／一級媒體 |
-| 值多少 | 最後一次定價 $9,650 億；投資人原估 $2 兆，10-16 下修至約 $1.5 兆；H1 淨損 807 億美元（10-20 外流草稿首度揭露，10-26 公開版多家引同數字） | Series H 公告；FT（2026-05-28／08-13）；Reuters 獨家（2026-10-15）；Telegraph（2026-10-16）；WSJ（2026-10-20）；多家引 S-1（10-26） | 官方一手／一級媒體 |
+| 值多少 | 最後一次定價 $9,650 億；投資人原估 $2 兆，10-16 下修至約 $1.5 兆；11-02 修訂版 S-1 首度揭露 Q3 具體財報：營收 $170 億、9 個月累計營收 $330 億、營運虧損 $12.5 億（CNBC；FT） | Series H 公告；FT（2026-05-28／08-13）；Reuters 獨家（2026-10-15）；Telegraph（2026-10-16）；多家引 S-1（10-26）；CNBC／FT（2026-11-02） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
-| 誰說撐不住 | 撐住 $2 兆需第 10 年營收 $1.2 兆；另一說需微軟等級 70% 毛利率；紐約市主計官公開要求暫緩 IPO、優先處理 AI 安全（2026-10-15），Anthropic 已就此展開對話（2026-10-16） | Damodaran、Stocktwits（2026-08-23／09-02）；Bloomberg（2026-10-15／10-16，引紐約市主計官） | 第三方研究／一級媒體引官員 |
+| 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；紐約市主計官要求暫緩 IPO（10-15）；11-02 S-1 揭露 revenue-per-compute 2.08x→1.72x（細節見下表） | Damodaran、Stocktwits（2026-08-23／09-02）；Bloomberg（2026-10-15／10-16，引紐約市主計官）；CNBC／FT（2026-11-02） | 第三方研究／一級媒體引官員 |
 
 **下一個時點：** 股數與價格區間公告（路演期間或掛牌前）。公開版 S-1 已於 2026-10-26 提交，尚未生效。
 
@@ -78,6 +79,10 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 
 | 議題 | 數字或事實 | 來源層級 | 對工程師的意涵 |
 |---|---|---|---|
+| 9 個月累計財報（2026-11-02 修訂版 S-1） | Q3 單季營收 $170 億；9 個月累計營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億；每股有形帳面淨值 -$68.47；員工持股均價 $2.91 | 官方一手（SEC 文件） | 虧損規模遠小於 H1 淨損 $807 億（多為可轉換工具會計項），但現金負債已逼近資產總額，供應商穩定性要看現金走勢而非這個總數 |
+| 採購承諾總額升至 $8,950 億 | 其中 $4,475 億預計 2030 年底前支出完畢，取代此前 The Information $5,170 億統計口徑 | 官方一手 | 容量承諾進一步鎖定、服務不易斷供；代價是固定支出若需求不如預期可能傳導至定價 |
+| revenue-per-compute 比值 2.08x → 1.72x | 每一美元算力投入產生的營收下降，衡量期間與方法論未見細節 | 媒體轉述（引官方數字） | 若趨勢延續，可能削弱「規模帶來效率」的獲利敘事，是路演時機構投資人可能放大檢視的指標 |
+| 內部 Claude 使用量（零售價）超過員工薪酬 | 4 月起每月內部使用量按對外收費價格換算已超過當月員工薪酬（不含股票），1–9 月暴增逾 250 倍 | 官方一手（S-1）＋媒體轉述 | 公司自身重度依賴 Claude 的規模指標，不直接等於外部客戶需求，但顯示內部採用程度很深（推論） |
 | H1 淨損與可轉換工具會計損失 | 2026 上半年淨損 $807 億；約 $724 億是可轉換工具隨估值上升的非現金損失，營業層虧約 $6.9 億，實際基建與運算現金約 $90 億 | 多家引 S-1 | 虧損近九成是帳列數字，不等於現金燒掉的速度；供應商穩定性看現金與融資，不看這個總數 |
 | 營業損益口徑 | 上半年營業層虧約 $6.9 億；排除股權報酬、非現金捐贈、和解費用後的調整後營業利益約 $16 億 | 多家引 S-1 | 「連續第二季獲利」只在調整後口徑成立，別當成會計獲利 |
 | 營收成長倍數 | NYT 稱營收較之前成長 14 倍；H1 營收約 $163 億，前一年同期 $11 億（Quartz、Reuters 轉載）；衡量基準未見細節 | 媒體轉述 | 需求端成長快，短期降價誘因弱；14 倍的比較基期不明，別當穩態成長率 |
@@ -93,6 +98,11 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 原文逐項核對尚未完成：🔎 **查無官方**（標 2026-11-01｜查 EDGAR、Anthropic S-1｜複 2026-11-15）｜**S-1 原文逐項核對**：上表各列來源皆為二手報導或官方公告，未直接核對 SEC 原文。
 
 ## 數字細節
+- **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
+- **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
+- **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[#S-1 揭露了什麼]]。
+- **算力／採購承諾總額改用官方數字（2026-11-02）**：修訂版 S-1 揭露 $8,950 億採購承諾與租賃協議（$4,475 億於 2030 年底前支出完畢），取代此前 The Information 統計口徑的 $5,170 億（統計期至 2026-09，非官方數字，已移出指標表）；兩者涵蓋範圍可能不同，不可視為同一事物的新舊值直接相減。
+- **內部零售價換算的 Claude 使用量已超過員工薪酬（2026-11-02，Business Insider／CNBC，修訂版 S-1 揭露）**：4 月起每月內部使用量（按對外收費價格換算）已超過當月員工薪酬支出（不含股票獎酬），1–9 月累計暴增逾 250 倍；補上 11-01 已記錄同一事實的具體數字與時間點。
 - **公開版 S-1 正式提交（2026-10-26）**：淨損 $807 億與 10-20 WSJ 外流草稿同數字，多家引 S-1 為 80,748 百萬美元；本站未讀到原文，來源等級記為一級媒體引公司（[官方公告](https://www.anthropic.com/news/s1-sec)）。
 - **同日 HN 909 分熱議雲端算力承諾**：S-1 揭露承諾 Google $1,140 億、AWS $1,100 億、Broadcom $1,610 億、SpaceX $1,200 億；留言質疑需求降溫時支出撐不撐得住（Hacker News）。
 - **S-1 新增兩項企業結構數字（2026-10-26）**：NYT 稱營收成長 14 倍；New Stack 稱 Claude Code 企業大戶支出為一般用戶 20 倍；衡量基準未見細節（Google News/The New York Times；Google News/The New Stack）。
@@ -110,6 +120,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **次級市場 $1.2 兆的佐證**：Rainmaker Securities CEO Glen Anderson 稱「需求遠超供給，成交案例極罕見，因為沒有人在賣」；同期次級市場估值超越 OpenAI（約 $908B）（qz.com；Business Insider；TheNextWeb，2026-07-09，08-13 查證）。
 - **企業採用率**：Ramp 8 月指數（7 月資料，2026-08-12 發布）為 Anthropic 43.5%、OpenAI 39.7%、xAI 4%，原文寫「extended its gains as the leader」。**2026-05-15 的 34.4% vs 32.3% 是首度超越那一次的歷史數字**，不是現況。
 - **採用率的反面證據**：inc.com 2026-08-23 稱 OpenAI 拓展企業用戶速度已超越 Anthropic，無量化數字，見 [[topics/competitor-landscape]]。
+- **企業採用率另一資料源停更（2026-11-02，Simon Willison）**：作者用 Claude 重跑美國普查局數據，發現該局因行政命令 14434 已停止公開企業 AI 採用率統計；與 Ramp AI Index 數字（[[topics/anthropic-business#現在的數字]] 企業採用率列）為不同資料源，互不影響（[Simon Willison](https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/)）。
 - **Public Benefit Fund 股權承諾（2026-10-18）**：Anthropic 承諾 5% 股權撥入新設「Public Benefit Fund」，市值每漲 50% 可加碼 2%；案仍待股東會表決（[Anthropic](https://www.anthropic.com/news/public-benefit-fund)）。CNBC、Business Insider 等跟進討論對 AI 失業衝擊的意涵，基金章程細節未見報導。
 - **訂閱補貼倍數（未列入指標表）**：三個各自獨立的方法論指向同一量級——token-xray 換算 Max $200 方案等值 $3,400 API 用量（17 倍，2026-05-28）、modelplane.ai 反推約 13 倍（2026-09-06，該文另記月費暴增 44 倍，那是帳單倍數不是補貼倍數）、Quesma 訂閱制與純 API 價差最高 40 倍（2026-08-11）。%% 2026-10-19 讓位給資料日期更新、來源等級較硬且有下一個時點的「Public Benefit Fund 股權承諾」，結論不變 %%
 - **訂閱方案跨廠商價值比（2026-10-06，SemiAnalysis）**：稱 Anthropic 訂閱提供的價值為 OpenAI 的 5 倍以上；比的是兩家之間而非對 API 牌價，分析機構自家估算，方法論未見轉載（Hacker News，75 分；Reddit；Google News）。
@@ -151,6 +162,9 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-02 CNBC／FT／Axios／HN（208～211 分）：修訂版 S-1 首度揭露 Q3 財報與採購承諾**：營收 $170 億、採購承諾 $8,950 億（$4,475 億於 2030 年底前支出）、營運虧損 $12.5 億，詳見 [[topics/anthropic-business#現在的數字]]（CNBC；FT；Axios；HN）。
+  - **revenue-per-compute 比值 2.08x→1.72x**：每一美元算力投入產生的營收正在下降。
+  - **同日 Business Insider／Hacker News**：內部零售價換算的 Claude 使用量 4 月起已超過當月員工薪酬（不含股票），1–9 月暴增逾 250 倍（Business Insider；Hacker News）。
 - **2026-11-01 WSJ《Imperial CEO》／HN（13 分）：雙重股權結構讓創辦人上市後仍握控制權**：呼應 08-18 已記錄之超級投票權傳聞，首度見 WSJ 專文確認；投票權倍數、涵蓋股份範圍未見報導，僅標題可用（Hacker News）。
 - **2026-10-31 Yahoo Finance：IPO 將使 AI 產業「一贏一輸」**：稱此次 IPO 可能打破四個月前創下的史上最大 IPO 紀錄，並預期部分公司因 Anthropic 取得更多資本而受益、部分不然；具名贏家與輸家原文摘要未載，僅標題與導言可用（Google News/Yahoo Finance）。
 - **2026-10-31 YouTube／HN（10 分）：「大賣空」Steve Eisman 再談 Anthropic IPO 的訪談影片**：影片內容摘要未取得，僅有 HN 留言（一則嫌討論吵鬧、一則稱 Eisman 未真正理解 AI），留言為讀者意見、不構成查證（Hacker News）。
@@ -276,6 +290,9 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-02
+- **[IPO 前瞻] CNBC／FT／Axios：修訂版 S-1 首度揭露 Q3 財報與採購承諾**：營收 170 億、承諾 8,950 億、營運虧損 12.5 億；完整數字見 [[topics/anthropic-business#現在的數字]] 與本頁「S-1 揭露了什麼」（CNBC；FT；Axios；HN）
 
 #### 2026-11-01
 - **[公司治理] WSJ《Imperial CEO》／HN（13 分）：雙重股權結構讓創辦人上市後仍握控制權**：呼應既有超級投票權與治理機制報導，詳見 [[topics/anthropic-ipo]]（Hacker News）

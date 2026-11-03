@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -32,10 +32,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-11-01）
-> - **Palantir CTO 稱不後悔與 Anthropic 合作**：先前曾因資料外洩疑慮限縮內部使用（[The Next Web](https://news.google.com/rss/articles/CBMilgFBVV95cUxPYXNMa2gzTHVCVzJJazJUQmY1S0FxeDlOdVA2V0ZIR1BpLUZBNkZQMXFYLXF2MEpjWXNlSmk2RkpEWF85bWgyeDFxdXhha3puWGk1VWtPX1R1cTRkN0EzODlaSmRkS3lOUEJzeE9iMVNsUm42cEY2ZjdiNGFVS2VTR2Y2VVd0OTUzQzZMWXBqMk5CZ2otY2c?oc=5)）
+> **最新動態**（2026-11-02）
+> - **Johns Hopkins 大學癌細胞圖譜技術獲選用於 Anthropic AI 專案**：具體應用細節未揭露（[Johns Hopkins University](https://news.google.com/rss/articles/CBMiggFBVV95cUxQQldCbnFMMG95WWZLYVJ0WUJnTHUtYU84enppOVdjSFllRm50WldNM3NfWl9oYXpkVkc0UEhRaGxqWGpHaGJ1a04xbTBXeTVpZ0pNaWZIbi1kNTVmNVZDX0FsLU5KMEJDVWFDR1gxRjVUVDJWaVVkRDV4SDVzdklLMzZ3?oc=5)）
+> - **修訂版 S-1 揭露算力採購承諾與租賃協議升至 8,950 億美元**（其中 4,475 億預計 2030 年底前支出完畢），數字細節見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)）
 
 ---
 
@@ -122,6 +123,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **Johns Hopkins University**（2026-11-02）：癌細胞圖譜技術獲選用於 Anthropic AI 專案，具體應用細節未揭露（Google News/Johns Hopkins University）
 - **AI for Science（擴大至 20 機構）**（2026-10-29）：官方擴大科研夥伴計畫，20 個基金會／機構／研究團隊取得免費 Claude 額度，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic；Google News）
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
 - **生命科學深度研究合作（6 組織）**（2026-10-27）：官方近況：與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 合作藥物開發，並啟動自家藥物探索；模型面見 [[entities/claude-science]]（Anthropic；HN 294 分）
@@ -284,6 +286,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-02
+- **[戰略合作] Google News：Johns Hopkins 大學癌細胞圖譜技術獲選用於 Anthropic AI 專案**：具體應用細節未揭露，見上方「其餘合作」清單（Google News/Johns Hopkins University）
 
 #### 2026-11-01
 - **[戰略合作] The Next Web 引 Stratechery：Palantir CTO 公開表示不後悔與 Anthropic 合作**：呼應既有資料外洩疑慮限縮使用範圍報導，訪談細節未附，僅標題可用（Google News/The Next Web）

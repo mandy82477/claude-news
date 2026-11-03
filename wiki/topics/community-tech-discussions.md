@@ -3,8 +3,8 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-01"
-last_news_update: "2026-11-01"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -12,8 +12,8 @@ children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 54
-attribution_count: 197
-attribution_last: "2026-11-01"
+attribution_count: 198
+attribution_last: "2026-11-02"
 top_source: "hacker-news"
 pending_count: 1
 pending_overdue: 0
@@ -28,12 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **今日社群焦點：Claude 獨力完成的兩個作品型 Show HN**（2026-11-01）
-> - **HackerBooks**：作者找 Claude（Opus 5.5）全程寫資料管線與網站，整理出約 1.65 萬本曾被至少兩位 HN 留言者提過的書；HN 105 分。
-> - **BBRouter**：Ben Eater 8 位元電腦的 3D 虛擬麵包板編輯器，支援透過 MCP 把 Claude 接進來協助除錯與建置；HN 43 分（2 個來源）。
+> **今日社群焦點：QA agent 創業公司發布貼文，附 Sonnet 5.5 基準數字**（2026-11-02）
+> - **Launch HN: Momentic**：YC W24 團隊發布自主規劃、探索並抓蟲的 QA agent；貼文提到 Sonnet 5.5 在 DeepSWE v1.1 基準跑出 66.2% 通過率；HN 81 分。
 
 ---
 
@@ -154,6 +153,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Launch HN: Momentic (YC W24)——自動規劃探索抓蟲的 QA agent，貼文附 Sonnet 5.5 在 DeepSWE v1.1 基準 66.2% 通過率 | 2026-11-02 · 2026-11-02 | 🔥🔥🔥 | ☄️閃現 | YC W24 團隊發布 QA agent，自主規劃、探索並抓 web／iOS／Android app 的 bug；Sonnet 5.5 在 DeepSWE v1.1 基準跑出 66.2% 通過率；HN 81 分（單源） | — |
 | Show HN: HackerBooks——找 Claude（Opus 5.5）全程寫出約 1.65 萬本 HN 推薦書的網站 | 2026-11-01 · 2026-11-01 | 🔥🔥🔥 | ☄️閃現 | 作者看到 Karpathy 的 HackerTube 後，找 Claude 全程寫資料管線與網站，整理出至少兩位 HN 留言者曾提過、約 1.65 萬本書，每本可回連留言串，資料可下載；HN score 105（單源，待社群接力） | — |
 | Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯 | 2026-11-01 · 2026-11-01 | 🔥🔥 | ☄️閃現 | 作者做出逼真的 3D 虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源） | — |
 | 一則推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者應自備替代模型 | 2026-10-31 · 2026-10-31 | 🔥🔥🔥 | ☄️閃現 | 留言主流：每個專業使用者都該備好替代模型與備援，並盡量選開放、標準化、可移植的生態；僅推文單方說法，未見官方回應；HN score 232（單源，待社群接力） | — |
@@ -263,6 +263,12 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-11
+
+#### Launch HN: Momentic (YC W24)——自動規劃探索抓蟲的 QA agent（2026-11-02）
+
+- **來源：** Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app — Hacker News（81 分）；[原文](https://momentic.ai/)
+- **核心論點：** Momentic 團隊發布自主規劃、探索並抓蟲的 QA agent，涵蓋 web、iOS、Android（桌面即將支援）；貼文提到在 DeepSWE v1.1 基準上 Sonnet 5.5 跑出 66.2% 通過率，可作為用 Claude 系模型做自動化測試或 QA agent 選型的參考數字。
+- **收斂結論：**（無）單篇 Launch HN 展示商業產品，非觀念爭論；本頁僅記錄其提供的 Sonnet 5.5 基準數字供後續對照。
 
 #### Show HN: HackerBooks——找 Claude（Opus 5.5）全程寫出約 1.65 萬本 HN 推薦書的網站（2026-11-01）
 

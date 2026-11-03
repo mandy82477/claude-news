@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-31"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "active"
-days_since_news: 2
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
-inbound_links: 37
-attribution_count: 34
-attribution_last: "2026-10-31"
+days_since_news_subtree: 1
+inbound_links: 36
+attribution_count: 37
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,21 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-31
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **Opus 5.5 更新後，Claude Code 不再重做特定既有遊戲**（2026-10-31）
-> Anthropic 向 Game Developer 證實已更新，無害的逆向工程也有人被擋。
+> **跨版本修辭套路回報擴及 Opus 5.5，社群觀感方向相反**（2026-11-02）
+> GitHub #77136 累計 140 留言、578 反應，範圍擴至 Opus 5.5；同日兩則 Reddit 貼文一說「變笨」、一說「近乎完美」，皆單一弱訊號。
 
 ---
 
 ## 現況
 
-**2026-10-31 最新**：Anthropic 向 Game Developer 證實已發布 Opus 5.5 更新，引導 Claude Code 不去「重現他人的特定遊戲」。X 用戶 Chasm 發現這條規則約 10-27 以伺服器下發的設定 `tengu_heron_brook` 推送（[Game Developer](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games)）。Wccftech 引出的規則原文：原創遊戲、類型遊戲、用自己的設計素材做的遊戲可做，「即使改了名或自稱原創」也不能重做特定既有作品（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）。Tom's Hardware 彙整多位使用者回報，連開發者對自家專案的逆向工程與跨平台移植也被拒（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)），誤擋範圍僅見使用者自述，Anthropic 未公布判定邊界。Claude Code 側的行為見 [[entities/claude-code]]。細節見「歷史記錄細節」2026-10-31 條。
+**2026-11-02 最新**：GitHub Issue #77136（跨版本重複修辭套路）回報範圍擴增至含 Opus 5.5，累計留言增至 140 則、反應增至 578 個；完整查核紀錄見 [[entities/opus-5]]「這些數字是誰量的」。同日社群對 Opus 5.5 是否「變笨」方向相反——一則稱說話像另一款模型、一則稱近乎完美——皆單一來源弱訊號，細節見「LiveNerf／降智觀感」。
 
-**2026-10-22 最新**：Reddit livenerf 系列第 29 天更新稱「看不出被降規」，延續 10-03 第 0 天基準線與 10-14 Day 20 更新，仍未附具體數字或測試方法；30 天結論原預計約 10-24 公布，到 10-24 為止未見，細節見「LiveNerf／降智觀感」。
-
-**2026-10-20**：GitHub repo「opus-video-prompts」彙整 54 個以 Opus 5.5 生成程式碼渲染影片的提示詞案例（503 星，GitHub Search，本庫首次收錄）；forks／issues 未查證，依弱訊號處理，細節見「歷史記錄細節」。
+**2026-10-31**：Anthropic 向 Game Developer 證實已發布 Opus 5.5 更新，引導 Claude Code 不去「重現他人的特定遊戲」，規則約 10-27 以伺服器下發設定推送（[Game Developer](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games)）。Tom's Hardware 彙整多位使用者回報，連開發者對自家專案的逆向工程與跨平台移植也被拒，Anthropic 未公布判定邊界（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)）。細節見「歷史記錄細節」2026-10-31 條。
 
 上線同時伴隨資安相關防護機制強化（The Verge 報導），紐約時報將此次發布放進近期 AI 安全爭論的脈絡報導；機制細節與爭議屬安全政策線，本頁僅記模型面，完整脈絡見 [[topics/ai-agent-safety]]。定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
@@ -97,6 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；未附測試方法或量化指標、0 留言，屬主觀觀感，不構成已驗證的能力下降；同類主張累計見 [[topics/code-quality-decline]]。
 - **livenerf 追蹤第 29 天，仍稱「看不出被降規」**：[Day 29 貼文](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)延續 10-03 建立的第 0 天基準線（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30）與 10-14 [Day 20 更新](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)，三則均未附具體數字或測試方法；30 天結論預計近日（約 10-24）公布，不能拿來支持或反駁上則觀感回報。
 - **500 個自製時鐘創意展示**：Hacker News 讀者分享作者連續多個 Claude 對話工作階段，以 Opus 5.5 生成 500 個各具巧思的自製時鐘網頁（單一 6.3 MB HTML 檔案），作者稱為個人版「鵜鶘騎自行車」創意測試基準；屬單一創意展示，非量化基準或複測（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源，2026-10-18）。
+- **跨版本重複修辭套路回報範圍擴至 Opus 5.5**（GitHub #77136，11-02 查證，累計 140 留言、578 反應）：原涵蓋 4.7、4.8、5.0 與 Fable，今日起 Opus 5.5 亦列入；issue 已於 10-03 關閉、留言持續累積，完整數字與沿革見 [[entities/opus-5]]「這些數字是誰量的」。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
 
@@ -112,6 +111,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **看不出降規**：r/ClaudeAI 週熱門貼文 10-22「第 29 天」更新稱 Doesn't look like it；0 留言，未附數字或題組（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)）。
 - **推理品質驟降**：r/ClaudeCode 10-18 貼文問是否有人遇到 Opus 5.5 推理品質突然下滑，作者自承 LLM 有變異；0 留言，僅見標題與開頭兩句（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1x93vw9/anyone_else_experiencing_a_sudden_drop_in_opus/)）。
 - **期滿結論**：原預計 10-24 前後公布；截至 10-24 日報與原料包沒有結論貼文，題組與評分方法也從未公開，兩邊都無法驗證。
+- **風格變了，像另一款模型**（11-02）：r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與同日 GitHub #77136 跨版本修辭套路回報接近，但各自單一訊號，不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)）。
+- **相反的正向回饋**（10-28）：r/ClaudeCode 週熱門貼文稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美；無具體案例或分數（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門）。
 
 兩則方向相反的貼文不能互相抵銷，也不構成能力變化的證據。同類主張的累計與自行量測方法見 [[topics/code-quality-decline]]。
 
@@ -205,10 +206,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-10-18]]
 - [[news/2026-10-20]]
 - [[news/2026-10-31]]
+- [GitHub Issue #77136：repetitive rhetorical tics, now spanning Opus 5.5](https://github.com/anthropics/claude-code/issues/77136)（2026-11-02 查證）
+- [Reddit r/ClaudeCode：Is Opus 5.5 suddenly dumb again?](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)（2026-11-02，無週熱門標記，score 不可信）
+- [Reddit r/ClaudeCode：Has anyone else noticed that Opus has become nearly perfect?](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)（週熱門，2026-10-28）
+- [[news/2026-11-02]]
 
 ## 歷史記錄
 
 > 表格是索引，每一則的完整說明與來源在下方。🔎 ⟨Q-01⟩ 這類記號代表「已查官方一手來源，確認未載」，完整說明同樣在下方。
+
+**2026-11**
+
+| 日期 | 事件 |
+|------|------|
+| 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號 |
 
 **2026-10**
 
@@ -232,6 +243,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-09-23 | 正式發布（官方日期 09-22），取代 Opus 5 成為預設 Opus；牌價降 20%、官方稱運算成本降 40%；具名基準表見「這些數字是誰量的」（2026-09-25 查證）|
 
 **歷史記錄細節**
+
+**2026-11**
+
+- **2026-11-02**：GitHub #77136 回報範圍擴增至含 Opus 5.5，留言增至 140 則、反應增至 578 個；完整沿革見 [[entities/opus-5]]；已於 10-03 關閉、留言持續累積，官方無回應（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。
+  - 同日 r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與上述修辭套路回報接近但不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)，2026-11-02）
+  - 另一則週熱門貼文（10-28 發文、11-02 查核收錄）稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美，無具體案例或分數，方向相反（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門，2026-10-28）
 
 **2026-10**
 

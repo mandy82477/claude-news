@@ -5,16 +5,16 @@ type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "active"
 days_since_news: 1
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 198
-attribution_count: 160
-attribution_last: "2026-11-01"
+inbound_links: 199
+attribution_count: 163
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -33,10 +33,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-01）
+> **最新計費政策異動**（2026-11-02）
+> - 新 GitHub Issue [#62466](https://github.com/anthropics/claude-code/issues/62466)：圖片處理「Image couldn't be processed」錯誤重複發生，每次失敗仍計入付費用量（36 留言，官方未回應），見 [[entities/pricing-incidents#還在發生的事故]]。
+> - [Reddit 回報](https://www.reddit.com/r/ClaudeCode/comments/1xm7meb/psa_if_you_have_a_banked_reset_from_claude_duet/)從 Ultra 降級到 Max 後，已存的 Claude Duet 額度重置機會被收回（單一貼文，官方未確認），見 [[#還沒確定的計費變動]]。
 > - [Reddit 回報](https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/)的方案改名，2026-11-02 對[官方方案頁](https://claude.com/pricing)查證屬實：$200 一檔現名 **Ultra**（Pro 的 10 倍用量），$100 的 Max 是 5 倍；Max／Ultra／Team 每月附 API credits，Enterprise 已公開 $20／席。下方方案表已整表更新。
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[#事故現在還在發生嗎]]。
 
@@ -50,7 +52,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-01 |
+| [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-02 |
 | [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-10-30 |
 
 2026-04～06 的原始條目與已暫停的計費切割風波在 [[entities/pricing-archive]]。
@@ -159,6 +161,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 | 項目 | 現況 | 下一個時點 |
 |------|------|-----------|
+| Ultra→Max 降級是否取消已存的 Claude Duet 額度重置 | 單一來源（Reddit，2026-11-02）稱降級後已存的重置機會被收回，官方未確認 | 官方說明或第二來源佐證 |
 | 是否新增訂閱留存優惠應對競品追近 | 單一來源（Startup Fortune，2026-10-15）稱官方「現在付費留住訂閱者」，具體機制、金額與適用方案均未見，僅標題可用 | 官方公告或第二來源佐證 |
 | Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有；官方說明中心未見此機制（查證進度見表下） | 2026-11-10 複查 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |

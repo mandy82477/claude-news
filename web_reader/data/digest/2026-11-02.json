@@ -1,0 +1,837 @@
+{
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02 22:13 UTC",
+  "articleCount": 81,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Claude 4.7, 4.8, 5.0, 5.5, and Fable increasingly default to repetitive rhetorical tics and often struggle to produce coherent prose despite explicit style instructions",
+      "url": "https://github.com/anthropics/claude-code/issues/77136",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 14:02",
+      "sentiment": "",
+      "body": "今日累積 140 則留言、578 個 👍，回報 Claude 4.7 到 5.5 與 Fable 系列模型越來越容易落入重複的修辭套路，即使明確給風格指示也難產出連貫文字。靠 Claude 寫長文或對外文案的團隊可留意這個跨版本共通的品質抱怨。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add GitLab Integration (Repository Connection, MRs, Mobile Access)",
+      "url": "https://github.com/anthropics/claude-code/issues/12346",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 16:26",
+      "sentiment": "",
+      "body": "今日累積 58 則留言、162 個 👍，要求 Claude Code 支援 GitLab 的 repo 連接、Merge Request 與行動裝置存取，目前官方整合僅涵蓋 GitHub。用 GitLab 做主要程式碼託管的團隊可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "Hacker News",
+      "time": "11/02 17:05",
+      "sentiment": "",
+      "body": "Hacker News 81 分，團隊發布自動規劃、探索並抓蟲的 QA agent，貼文提到在 DeepSWE v1.1 基準上 Sonnet 5.5 跑出 66.2% 的通過率。評估用 Claude 系模型做自動化測試或 QA agent 選型的團隊可留意這個基準數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Sync conversation history between CLI and Claude Code desktop app",
+      "url": "https://github.com/anthropics/claude-code/issues/28791",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 15:33",
+      "sentiment": "",
+      "body": "今日累積 41 則留言、187 個 👍，要求 CLI 與桌面版之間同步對話歷史，目前兩端各自獨立無法接續。同時用 CLI 與桌面版切換工作的使用者可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/02 20:25",
+      "sentiment": "",
+      "body": "桌面版文件內容有變動（前次 207,065 字 → 本次 209,756 字），但本頁段落數已超過比對上限，具體改了什麼需開啟連結比對。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-python] v2.4.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "11/02 19:07",
+      "sentiment": "",
+      "body": "新增 analytics、spend limits 與 RBAC 的 GA 方法，以及 unified metrics、RBAC 刪除回應的具名 beta 型別。用 Python SDK 管理用量與權限的團隊現在能用正式（非 beta）API 操作這些功能。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.1",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/02 19:17",
+      "sentiment": "",
+      "body": "為每個子套件的已發布型別宣告加上型別檢查，屬內部維護性更新，4 個來源同日回報。走 Vertex 介接 Claude 的 TypeScript 專案更新時可留意型別檔是否有變。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v1.1.2",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/02 19:17",
+      "sentiment": "",
+      "body": "同批為已發布型別宣告加上型別檢查，並把範例程式改用現行模型 ID。沿用舊範例程式碼的團隊可借機檢查自己是否還在用已淘汰的模型 ID。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Johns Hopkins cancer cell mapping technology chosen for Anthropic AI project",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQldCbnFMMG95WWZLYVJ0WUJnTHUtYU84enppOVdjSFllRm50WldNM3NfWl9oYXpkVkc0UEhRaGxqWGpHaGJ1a04xbTBXeTVpZ0pNaWZIbi1kNTVmNVZDX0FsLU5KMEJDVWFDR1gxRjVUVDJWaVVkRDV4SDVzdklLMzZ3?oc=5",
+      "source": "Google News / Johns Hopkins University",
+      "time": "11/02 18:55",
+      "sentiment": "",
+      "body": "約翰霍普金斯大學的癌細胞圖譜技術獲選用於 Anthropic 的 AI 專案，具體應用細節未揭露。評估 Claude 在生命科學領域合作案的團隊可留意這起合作的後續公開資訊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "I built a local workflow layer so Claude Code can't mark a task done without green gates and an independent review",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xm87yq/i_built_a_local_workflow_layer_so_claude_code/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/02 20:16 UTC ·",
+      "sentiment": "😊",
+      "body": "作者分享自建的本地工作流層 Agent Flow，強制 Claude Code 在通過測試閘門與獨立複核前不能宣告任務完成，針對「agent 跨 session 忘記進度、太容易說做完了」兩個痛點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "20 ways to waste fewer tokens with coding agents, from basic to advanced",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xm8403/20_ways_to_waste_fewer_tokens_with_coding_agents/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/02 20:12 UTC ·",
+      "sentiment": "😊",
+      "body": "整理一份從基礎到進階的省 token 清單，指出檔案內容、修復回合、子代理與背景模型呼叫都會疊加消耗。想壓低多代理工作流 token 開銷的使用者可直接拿來對照自己的用法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Nomos – A Go harness that stops coding agents from cheating on tests",
+      "url": "https://github.com/mgantlett/nomos",
+      "source": "Hacker News",
+      "time": "11/02 14:35 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者發布 28MB 的靜態 Go binary，作為 repo 與 coding agent 之間的守門層，阻止 agent 用刪測試、回傳假值、改規格等手法讓編譯器安靜過關。長期放任 agent 自動跑測試的團隊可評估加一層這類守門機制。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Intent-lens – see what Claude Code is about to do, before it does it",
+      "url": "https://github.com/Dhananjay-JSR/claude-mods/tree/main/plugins/intent-lens",
+      "source": "Hacker News",
+      "time": "11/02 18:33 UTC ·",
+      "sentiment": "😊",
+      "body": "作者發布外掛，在 Claude Code 執行指令前先用一行白話講出它要做什麼，偵測到 `rm -rf`、強制推送等破壞性指令時整行變紅示警，且預設不額外呼叫模型、資料不出機器。常用 auto mode 卻沒細看指令的使用者可一試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop MSIX: CIG (MicrosoftSignedOnly) + vendor-signed vk_swiftshader.dll kills GPU process on every browser preview (0x060C201E)",
+      "url": "https://github.com/anthropics/claude-code/issues/81341",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 00:45 UTC ·",
+      "sentiment": "😤",
+      "body": "今日累積 35 則留言，回報 Windows MSIX 版 Claude Desktop 在 CIG 限制下，vendor 簽署的 vk_swiftshader.dll 會讓 GPU process 在每次瀏覽器預覽時崩潰。用 MSIX 版桌面應用且常用瀏覽器預覽功能的使用者會撞到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Is Opus 5.5 suddenly dumb again?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/02 19:53 UTC ·",
+      "sentiment": "😤",
+      "body": "使用者抱怨 Opus 5.5 輸出風格變得像另一款模型，認為品質有感下滑。這類主觀體感抱怨目前僅單一來源，但與今日 ⭐ 區塊的跨版本修辭癖回報方向接近，可互相參照。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "The U.S. Census Bureau and \"Super Intelligence\"",
+      "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+      "source": "Blog / Simon Willison",
+      "time": "11/02 13:31 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者用 Claude 的 Code Interpreter 重跑美國普查局的企業 AI 採用率調查數據，發現該局因行政命令 14434 已不再公開這項統計。常拿 Claude 做資料分析、追蹤政策資料可用性的人可留意這個資料來源異動。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Claude Tandem – multi accounts, profiles, projects",
+      "url": "https://github.com/altsang/claude-tandem",
+      "source": "Hacker News",
+      "time": "11/02 19:52 UTC ·",
+      "sentiment": "🤔",
+      "body": "作者發布工具管理多組 Claude 帳號、profile，並在多台 Mac／iPhone 間搬移 Claude session 的工作狀態。需要在多裝置、多帳號間切換使用 Claude 的人可留意這個方案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-memory",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Smalt – Talk to Claude Code by voice, hands-free, on your Mac",
+      "url": "https://getsmalt.com/",
+      "source": "Hacker News",
+      "time": "11/02 15:53 UTC ·",
+      "sentiment": "😊",
+      "body": "作者發布 macOS 上語音操作 Claude Code 的工具，說話即可下指令、聽語音回覆，免打字也免盯畫面。想用語音操作 agent 的 Mac 使用者可一試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-interfaces",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "source": "GitHub Search",
+      "time": "11/02 20:25 UTC ·",
+      "sentiment": "😐",
+      "body": "",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-memory",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "Claude Account Disabled After Payment for Claude Code Max 5x Plan",
+      "url": "https://github.com/anthropics/claude-code/issues/5088",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 15:11",
+      "sentiment": "",
+      "body": "今日累積 190 則留言、69 個 👍，回報帳號在續訂 Max 5x 方案並完成付款後被停用。剛付款或續訂 Max 方案的使用者可留意帳號狀態，付款成功不代表帳號必然維持可用。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Repeated \"Image couldn't be processed\" API errors consuming usage limit in Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/62466",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 00:43",
+      "sentiment": "",
+      "body": "今日累積 36 則留言，回報圖片處理失敗的錯誤會重複發生並持續扣用量，而非失敗後不計費。常在 Claude Code 裡貼圖或處理截圖的使用者應留意用量是否被這類失敗請求吃掉。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "PSA if you have a banked reset from Claude Duet and downgrade from Ultra > Max, they take your reset away",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xm7meb/psa_if_you_have_a_banked_reset_from_claude_duet/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/02 19:55",
+      "sentiment": "",
+      "body": "使用者回報從 Ultra 降級到 Max 方案（$100 美元檔）後，先前存下來的 Claude Duet 額度重置機會被收回。考慮降級方案、且手上有存額度重置的使用者應留意降級可能連帶清空這項福利。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-29）Anthropic 向 SEC 補交修訂版 S-1，首度揭露具體財報數字：Q3 營收 170 億美元、採購承諾與租賃協議升至 8,950 億美元（其中 4,475 億美元預計於 2030 年底前支出完畢）、營運虧損 12.5 億美元，revenue-per-compute 比值由 2.08x 降至 1.72x；同一份揭露也顯示，Anthropic 內部以零售價計算的 Claude 使用量今年 1 月至 9 月暴增逾 250 倍，4 月起已超過當月員工薪酬支出（不含股票獎酬）。持續關注 Anthropic 上市融資與財務健康度的團隊可留意這批數字公布後的市場反應。",
+      "ref_urls": [
+        "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
+        "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11"
+      ],
+      "ref_names": [
+        "CNBC",
+        "Business Insider"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Introducing the Grid Protectors Program",
+      "url": "https://openai.com/index/grid-protectors-program",
+      "body": "OpenAI 與電力公司合作保護電網可靠度與用戶電費",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "LifeVal",
+      "url": "https://openai.com/index/lifeval",
+      "body": "OpenAI 推出衡量 AI 完成日常任務（托育、理財、政府文書）能力的新基準",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Qodo builds context into AI code review with Codex",
+      "url": "https://openai.com/index/qodo-codex-plugin",
+      "body": "Qodo 把公司知識與程式規範接進 Codex，在開 PR 前先攔 P0 問題",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 45
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 4
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 12
+    }
+  ],
+  "preview": "Claude Code：MSIX GPU 當機找到根因：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 vk_swiftshader.dll 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5",
+      "name": "Claude Opus 5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-02",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **MSIX GPU 當機找到根因**：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤。\n- **新已知問題**：圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（#62466，36 則留言）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "跨版本修辭套路回報擴及 Opus 5.5，社群觀感方向相反",
+            "date": "",
+            "body": "GitHub #77136 累計 140 留言、578 反應，範圍擴至 Opus 5.5；同日兩則 Reddit 貼文一說「變笨」、一說「近乎完美」，皆單一弱訊號。"
+          },
+          {
+            "page": "entities/opus-5",
+            "name": "Claude Opus 5",
+            "label": "跨版本修辭套路留言數再增",
+            "date": "",
+            "body": "GitHub #77136（範圍涵蓋 4.7、4.8、5.0、5.5 與 Fable）累計 140 則留言、578 個 👍；issue 已於 10-03 由發文者關閉，留言持續累積，官方仍無回應。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- 新 GitHub Issue #62466：圖片處理「Image couldn't be processed」錯誤重複發生，每次失敗仍計入付費用量（36 留言，官方未回應）。\n- Reddit 回報從 Ultra 降級到 Max 後，已存的 Claude Duet 額度重置機會被收回（單一貼文，官方未確認）。"
+          },
+          {
+            "page": "topics/anthropic-business",
+            "name": "Anthropic 商業健康度",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **修訂版 S-1 首度揭露具體財報**：Q3 營收 170 億美元、採購承諾升至 8,950 億美元、營運虧損 12.5 億美元（CNBC、FT）\n- **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍（Business Insider）"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/market-signals",
+            "name": "投資訊號判讀",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **S-1/A 首度揭露財報數字**：單季營收 170 億美元、營運虧損 12.5 億美元，revenue-per-compute 比值由 2.08x 降至 1.72x。\n- **採購承諾總額升至 8,950 億美元**：取代先前逾 5000 億美元口徑，含租賃協議，4,475 億美元 2030 年底前支出完畢。\n\n前一日（2026-10-31）：\n- **Blackstone 告訴投資人預期 Anthropic 上市後拿 BB 級信評**：TechCrunch 引 FT，推翻「2027 年前達投資級」說法，僅標題可用。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic IPO 追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **修訂版 S-1（S-1/A）首度揭露 Q3 具體財報與採購承諾總額**：Q3 營收 170 億美元、採購承諾 8,950 億美元、營運虧損 12.5 億美元（CNBC、FT）\n- **revenue-per-compute 比值由 2.08x 降至 1.72x**：每一美元算力投入產生的營收正在下降（Hacker News 引 SEC 文件）"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "SecurityWeek、CSO Online 跟進報導 Cursor 惡意 Claude Code 延伸套件 SSH 後門事件，均無新事實。"
+          },
+          {
+            "page": "topics/ai-agent-safety-prompt-injection",
+            "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+            "label": "最新動態",
+            "date": "",
+            "body": "**規則檔藏惡意指令挾持助理（僅標題，Homeland411）**：規則檔類型與是否涉及 Claude Code 未見報導。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "**駭客假冒 AI 機器人身分獵密碼（僅標題，CyberSecurityNews）**：假冒 ChatGPT、Claude、Perplexity 機器人搜尋密碼與金鑰，手法與規模未見報導。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "今日社群焦點：QA agent 創業公司發布貼文，附 Sonnet 5.5 基準數字",
+            "date": "",
+            "body": "- **Launch HN: Momentic**：YC W24 團隊發布自主規劃、探索並抓蟲的 QA agent；貼文提到 Sonnet 5.5 在 DeepSWE v1.1 基準跑出 66.2% 通過率；HN 81 分。"
+          },
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "五則新增：測試作弊守門、執行前白話提示、規格驅動新實作，兩則不讓 agent 自己說了算",
+            "date": "",
+            "body": "- **mgantlett/nomos**：Go binary 守門層，偵測刪測試、改回傳值等讓編譯器安靜放行的作弊手法。\n- **Dhananjay-JSR/intent-lens**：執行前一行白話說明指令用途，偵測到破壞性指令變紅示警。\n- **joebew42/aido**：規格驅動、測試驅動的 Claude Code 工程工作流 skill。\n- **Reddit 兩則**：judge model 覆核輸出的外掛套件，與強制測試閘＋獨立複核才能收工的 Agent Flow。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "Context 管理新增高星工具，跨環境記憶新增多帳號搬移範例",
+            "date": "",
+            "body": "- **mksglu/context-mode（33,266★）**：本機沙箱＋SQLite FTS5 全文搜尋把工具輸出攔在 context 外，稱可減少 99% 位元組；近 4 個月僅剩自動化提交，無真人開發紀錄。\n- **altsang/claude-tandem**：多組 Claude 帳號／profile 管理工具，把 session 工作狀態搬到另一台 Mac／iPhone 繼續。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "新增一份給 coding agent 的省 token checklist",
+            "date": "",
+            "body": "- **Reddit「少浪費 token 20 招」**：從基礎到進階的檢查清單，點出 subagent 與背景模型呼叫是容易被忽略的疊加消耗。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "創意工具 Agent 整合再添一例：本機 AI 音效與語音克隆 MCP server",
+            "date": "",
+            "body": "- **HamSanders/soundbox**：免費開源、本機跑的 ElevenLabs／Suno 替代品，21 工具 MCP server 接 Claude Code、Cursor。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "終端機 session 瀏覽新增一例，語音互動類再添兩個獨立實作",
+            "date": "",
+            "body": "- **victorcarrico/arvre**：終端機圖形化瀏覽 Claude Code session 與分支（fork）。\n- **Smalt／Poinky**：語音操作 Claude Code，與 10 月的 tapq 合計已有三個獨立實作。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 17
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Claude 4.7, 4.8, 5.0, 5.5, and Fable increasingly default to repetitive rhetorical tics and often struggle to produce coherent prose despite explicit style instructions",
+      "url": "https://github.com/anthropics/claude-code/issues/77136",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 14:02",
+      "sentiment": "",
+      "body": "今日累積 140 則留言、578 個 👍，回報 Claude 4.7 到 5.5 與 Fable 系列模型越來越容易落入重複的修辭套路，即使明確給風格指示也難產出連貫文字。靠 Claude 寫長文或對外文案的團隊可留意這個跨版本共通的品質抱怨。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add GitLab Integration (Repository Connection, MRs, Mobile Access)",
+      "url": "https://github.com/anthropics/claude-code/issues/12346",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 16:26",
+      "sentiment": "",
+      "body": "今日累積 58 則留言、162 個 👍，要求 Claude Code 支援 GitLab 的 repo 連接、Merge Request 與行動裝置存取，目前官方整合僅涵蓋 GitHub。用 GitLab 做主要程式碼託管的團隊可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "url": "https://momentic.ai/",
+      "source": "Hacker News",
+      "time": "11/02 17:05",
+      "sentiment": "",
+      "body": "Hacker News 81 分，團隊發布自動規劃、探索並抓蟲的 QA agent，貼文提到在 DeepSWE v1.1 基準上 Sonnet 5.5 跑出 66.2% 的通過率。評估用 Claude 系模型做自動化測試或 QA agent 選型的團隊可留意這個基準數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Sync conversation history between CLI and Claude Code desktop app",
+      "url": "https://github.com/anthropics/claude-code/issues/28791",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/02 15:33",
+      "sentiment": "",
+      "body": "今日累積 41 則留言、187 個 👍，要求 CLI 與桌面版之間同步對話歷史，目前兩端各自獨立無法接續。同時用 CLI 與桌面版切換工作的使用者可留意這項請求的後續。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

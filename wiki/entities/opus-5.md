@@ -4,24 +4,24 @@ kind: "entity"
 type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
-last_updated: "2026-10-24"
-last_news_update: "2026-09-24"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "active"
-days_since_news: 39
+days_since_news: 1
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 39
-inbound_links: 34
-attribution_count: 31
-attribution_last: "2026-09-21"
+days_since_news_subtree: 1
+inbound_links: 37
+attribution_count: 32
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Opus 5
@@ -30,21 +30,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-09-24
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-09-23）
-> Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 官方改列 Legacy，仍可用。09-21 傳聞的「Opus 5.5 週二發布、降價 20%」已由本次官方發布證實方向一致（牌價確實降 20%），細節見「歷史記錄細節」2026-09-21 條。
+> **跨版本修辭套路留言數再增**（2026-11-02）
+> GitHub #77136（範圍涵蓋 4.7、4.8、5.0、5.5 與 Fable）累計 140 則留言、578 個 👍；issue 已於 10-03 由發文者關閉，留言持續累積，官方仍無回應。
 
 ---
 
 ## 現況
 
-**2026-09-23 最新**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。自 2026-09-24 起無新動態（2026-10-24 核）。 自 2026-09-24 起無新動態（2026-10-31 核）；本代已被 Opus 5.5 取代，停滯是事實而非漏更新。
+**2026-11-02 最新**：GitHub Issue #77136（跨版本重複修辭套路、難產出連貫文字，範圍涵蓋 Claude 4.7、4.8、5.0、5.5 與 Fable）累計留言增至 140 則、反應增至 578 個（09-20 查證時為 123 則／565 個）。該 issue 已於 2026-10-03 由發文者自行關閉、非官方修復，關閉後留言仍持續累積，官方至今無回應。細節見「歷史記錄細節」2026-11-02 條。
+
+**2026-09-23**：Anthropic 發布 [[entities/opus-5-5|Claude Opus 5.5]]，Claude Code v2.1.280 起設為預設 Opus，Pro／Max／Team／Enterprise／API 的預設 Opus 同步改為 Opus 5.5；Opus 5 官方改列 Legacy，仍可用（官方 models overview（2026-09-23 查證））。完整規格與定價對照見 [[entities/opus-5-5]]。本代自身已無新動態（2026-10-31 核），以下為跨版本共通議題（上方 #77136）的後續追蹤。
 
 Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到），取代 [[entities/opus-4-8|Opus 4.8]]，與 4.8 兩代同價、知識截止晚四個月，曾是 Max、Team premium、Enterprise 隨用隨付與 API 上預設的 Opus，Claude Code 的整體預設則一路是 Sonnet。
 
-自 2026-07-24 上線以來（截至 2026-09-07），社群累積的絕大多數是單一使用者觀感、沒有一則附測試方法或數字——例外見下方「這些數字之外」的 GitHub #77136（123 則留言、565 個反應，09-20 查證）與 [[topics/code-quality-decline]] 已查證屬實的 GitHub #80988；官方那側公布了四個基準數字。兩邊各是什麼證據見下方「這些數字是誰量的」。牌價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
+自 2026-07-24 上線以來，社群累積的絕大多數是單一使用者觀感、沒有一則附測試方法或數字——例外見下方「這些數字之外」的 GitHub #77136（140 則留言、578 個反應，11-02 查證）與 [[topics/code-quality-decline]] 已查證屬實的 GitHub #80988；官方那側公布了四個基準數字。兩邊各是什麼證據見下方「這些數字是誰量的」。牌價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
 
 ---
 
@@ -101,7 +103,7 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 - **五則「變差了」型貼文**（07-30、08-07、08-13、08-20、08-28）：全是單一使用者觀感，無案例、無數字、無測試方法；其中兩則原文已不可取得。逐則見下方「歷史記錄」。
 - **一則反向回饋**（08-27）：稱 Opus 5 被要求改寫時的解釋比 4.8 清楚。同樣是單一貼文。
 - **一則「effort 超過 high 反而變差」**（07-29）：**已由官方文件推翻**，官方寫 Opus 5 把額外 effort 轉成更好結果的可靠度高於歷代 Opus。
-- **一則跨模型的重複修辭套路**（GitHub #77136，123 則留言、565 個反應，09-20 查證｜08-27 首見時為 106／517）：4.7、4.8、5 與 Fable 同時出現，不是 Opus 5 獨有；追蹤見 [[entities/claude-code]]。
+- **一則跨模型的重複修辭套路**（GitHub #77136，140 則留言、578 個反應，11-02 查證｜09-20 為 123／565）：已於 10-03 由發文者關閉、留言持續累積；範圍含 4.7–5.5 與 Fable，非 Opus 5 獨有；追蹤見 [[entities/claude-code]]。
 - **一則第三方跨家指數**（Artificial Analysis，2026-08-10 一次性查證）：當時 Opus 5 在綜合指數微幅領先 Fable 5，數字與當時的比較見下方 07-26 那一則；**現在的跨家排名以 [[topics/model-task-leaderboard]] 為準**，本頁不留跨家分數。
 
 **所以呢**：官方那四個數字全部由 Anthropic 自己提交、沒有人複跑過；社群到今天也沒有一則量化實測能印證或推翻它。要別人量過的跨家排名去 [[topics/model-task-leaderboard]]；要決定這份工作用哪個模型去 [[topics/model-comparison]]；「有沒有系統性退步」這條線的狀態去 [[topics/code-quality-decline]]。
@@ -187,10 +189,18 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 - [[news/2026-09-21]]
 - [Claude Opus 5.5 官方發布文](https://www.anthropic.com/claude-opus-5-5)（2026-09-22，完整記錄見 [[entities/opus-5-5]]）
 - [[news/2026-09-23]]
+- [GitHub Issue #77136：repetitive rhetorical tics, now spanning 4.7/4.8/5.0/5.5/Fable](https://github.com/anthropics/claude-code/issues/77136)（2026-11-02 查證）
+- [[news/2026-11-02]]
 
 ## 歷史記錄
 
 > 表格是索引，每一則的完整說明與來源在下方。❓ ⟨Q-01⟩ 這類記號代表「這一則我們還沒查到答案」，完整說明同樣在下方。
+
+**2026-11**
+
+| 日期 | 事件 |
+|------|------|
+| 2026-11-02 | GitHub #77136 留言增至 140 則、反應增至 578 個；issue 已於 10-03 關閉但留言持續累積，範圍擴及 Opus 5.5 |
 
 **2026-09**
 
@@ -228,6 +238,10 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 | 2026-07-24 | Reddit 週熱門稱長時間任務表現最佳、low effort 成本效益高，無量化數字佐證 |
 
 **歷史記錄細節**
+
+**2026-11**
+
+- **2026-11-02**：GitHub #77136 留言增至 140 則、反應增至 578 個（09-20 為 123／565）；已於 10-03 由發文者關閉，留言持續累積，官方無回應；回報範圍擴至含 Opus 5.5（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。
 
 **2026-09**
 

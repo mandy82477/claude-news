@@ -5,7 +5,7 @@ type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "active"
 days_since_news: 1
 parent: "entities/pricing"
@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-11-01）
-> - [Reddit 單一貼文](https://www.reddit.com/r/ClaudeAI/comments/1xh3yyu/claude_code_usage_exploded_8x_today_anthropic/)稱當日 Claude Code 用量暴增 8 倍，並稱服務端錯誤也扣付費額度、不補償；未見 Anthropic 說法。
-> - [Reddit 單一貼文](https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/)稱方案改名並取消 5 小時窗：2026-11-02 對官方方案頁查證兩件都屬實（$200 一檔現名 Ultra，驗證帳號無 5 小時上限）。
+> **最新動態**（2026-11-02）
+> - 新 GitHub Issue [#62466](https://github.com/anthropics/claude-code/issues/62466)：圖片處理「Image couldn't be processed」錯誤重複發生，每次失敗仍計入付費用量（36 留言，官方未回應）。
+> - [#5088](https://github.com/anthropics/claude-code/issues/5088)（Max 5x 續訂付款後帳號停用）留言增至 190，官方仍無回應，依最後動態重新排進 [[#還在發生的事故]]。
 
 ---
 
@@ -55,11 +55,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 7 月帳務錯誤：南韓免費用戶收到 $16.6M 無效帳單；審計稱企業多收 $1.7M | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；補救方式見下方細節 |
 | HERMES.md 字串觸發靜默切 API 計費 | ⛔ 官方拒修 | 2026-04-25，官方確認為 bug 但拒絕退款 | commit 訊息避開該大寫字串；已被扣費者官方不退 |
 | Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-10-21，Issue #79773：7 月已升級 Max 20x 用戶仍按 Max 5x 速率耗用 | 依現況估算用量，不要以「20 倍」為預算基準 |
+| Max 5x 續訂扣款後帳號遭停用 | 🔴 未解 | 2026-11-02，Issue #5088，官方仍無回應；同模式另見 #80872、#64480、#90531 | 續訂前保留付款證明；遭停用時留扣款紀錄向客服與發卡行申訴 |
 | Max 5x 升 Max 20x 付款持續失敗、客服未回應 | 🔴 未解 | 2026-10-24，Issue #56281，延續 #55266、#55982 | 升級前備妥備援付款方式、留錯誤截圖；別反覆重試 |
 | Fable 成 Max 標準模型起被誤判要先買 usage credits | 🔴 未解 | 2026-10-24，Issue #79337，07-20 起未修 | 對照 `Settings > Usage` 與帳單，於該 issue 回報佐證 |
-| Max 訂閱幾乎一開工就撞上用量上限 | 🔴 未解 | 2026-09-17，Issue #16157，官方同日補「用量與長度是兩種限制」說明 | 官方新增說明：用量與長度是兩種限制，先關閉不需要的工具／連接器省用量；並查 `Settings > Usage` 是否真的觸頂 |
 
-**還在發生、沒進上表的**（同一排序，新的在前）：#38335 Max session 額度加速耗盡（09-16）、#5088 續訂扣款後帳號停用（09-04）；只有單一社群來源的：Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、#37394 Max 觸頂過快（09-21）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
+**還在發生、沒進上表的**（同一排序，新的在前）：#16157 Max 幾乎一開工就撞上用量上限（09-17）、#38335 Max session 額度加速耗盡（09-16）；只有單一社群來源的：#62466 圖片處理失敗仍扣用量（11-02）、Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、#37394 Max 觸頂過快（09-21）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
 
 表只寫 issue 號；留言數與讚數以 [[entities/claude-code-known-issues]] 為準，下方各條目裡的數字是當日快照。
 
@@ -74,6 +74,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-11-02：新 GitHub Issue #62466——圖片處理失敗重複發生，仍持續扣用量
+
+- **GitHub Issue #62466（36 則留言，2026-11-02）**：使用者回報 Claude Code 的「Image couldn't be processed」API 錯誤會重複發生，且每次失敗仍計入用量上限而非不計費；官方尚無回應（[GitHub #62466](https://github.com/anthropics/claude-code/issues/62466)）。
+- **你能先做什麼**：圖片類請求失敗後，先查 `Settings > Usage` 確認是否被計費；頻繁失敗時減少圖片輸入或改以文字描述替代，直到官方修復。
 
 #### 🔴 2026-10-27：Reddit 單一貼文回報當日用量暴增 8 倍，並稱服務端錯誤也扣付費額度、不補償（未見 Anthropic 說法）
 
@@ -166,6 +171,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-09-04｜查 Max 5x、帳號停用｜複 2026-11-10）：[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088) 現況（2026-09-20）——仍為 open，無 Anthropic 人員留言、無成因說明，支援信件與退款申請均未見回覆。
   - 2026-10-10 另查官方 [說明中心](https://support.claude.com/)，**未見任何關於 Max 5x 訂戶帳號停用成因或申訴流程的條目**；issue 本身本輪無法複驗（本 session 未取得 `anthropics/claude-code` 讀取授權，依規不擴權）。
 - 已確認屬「付款成功後帳號隨即遭停用」的重複模式（另見 #80872、#64480、#90531），惟仍無官方就根因或修復時程表態。
+- **後續（2026-11-02）**：留言數增至 190（+6），新增 69 個 👍 reactions 數據；官方仍無回應（[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088)）。
 
 #### ⚖️ 2026-08-31：HN 質疑「20x」用量宣稱的實質定義——只放大 5 小時視窗、非週上限，呼應既有 Max 20x 集體訴訟
 

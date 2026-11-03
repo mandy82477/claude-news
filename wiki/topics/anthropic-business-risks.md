@@ -4,7 +4,7 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -32,10 +32,10 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 
-> **最新動態**（2026-11-01）
-> - **Business Insider：內部用 Claude 的用量價值已超過員工薪資**：按對外收費換算，換算方式未附（[Business Insider](https://news.google.com/rss/articles/CBMiogFBVV95cUxPckZlQklSTUE5MnZLZDM2U1RWbGFtQzRmVU1mTTk5YUVLNEVta3FmZnM5OWIxUW9DN253ZlctTGk4RFEybHFGQU9hXzNSdkE5SGZRbjNKLUd6RE9OaEN6NWkzd2dpcnRDRjdGR01DN0JyQWVjcFhkaEs5UmlmNS1oZV9VSVhjbHk3d0M3aHVwa0lfODdOZFF4NnVHSTBRUy1EZlE?oc=5)）
+> **最新動態**（2026-11-02）
+> - **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍；數字出自修訂版 S-1，見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)）
 
 ---
 
@@ -199,6 +199,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-02
+- **[商業模式] Business Insider：內部零售價換算的 Claude 使用量 4 月起已超過當月員工薪酬，1–9 月暴增逾 250 倍**：補上 11-01 已記錄事實的具體數字與時間點，S-1 揭露脈絡見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（Business Insider）
 
 #### 2026-11-01
 - **[商業模式] Business Insider：按對外收費價格換算，Anthropic 內部使用 Claude 的用量價值已超過員工薪資總額**：兩個獨立來源同日報導，具體換算方式未附，僅標題可用（Google News/Business Insider）

@@ -3,17 +3,17 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-10-30"
-last_news_update: "2026-10-30"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 1
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 1
 inbound_links: 6
-attribution_count: 12
-attribution_last: "2026-10-30"
+attribution_count: 13
+attribution_last: "2026-11-02"
 top_source: "devto"
 pending_count: 0
 pending_overdue: 0
@@ -31,13 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 
-> **MCP 工具成本、快取浪費與便宜模型追平設計品質，同日三則新證據**（2026-10-30）
-> - **MCP 工具成本實測**：Apify 20 個求職 Actor 的 `tools/list` 耗 2.1K–32.7K token，98% 是自動推論的輸出 schema。
-> - **快取浪費量化**：Claude Code 用量優化工具推出 VS Code 延伸套件，統計 30 天內 890 萬 token 浪費在已過期快取。
-> - **便宜模型＋自製 harness**：單一作者宣稱用 DeepSeek／GLM Flash 搭配自製 harness 追平 Claude Code + Sonnet 5.5 的設計品質。
+> **新增一份給 coding agent 的省 token checklist**（2026-11-02）
+> - **Reddit「少浪費 token 20 招」**：從基礎到進階的檢查清單，點出 subagent 與背景模型呼叫是容易被忽略的疊加消耗。
 
 ---
 
@@ -105,6 +103,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
+
+### 2026-11
+
+#### Reddit：給 coding agent 的「少浪費 token 20 招」清單，從基礎到進階（2026-11-02）
+
+- **主線：** —
+- **核心模式：** 整理一份從基礎到進階的 20 項省 token 檢查清單，指出 prompt 本身只是一部分花費，檔案內容讀取、修復回合、subagent 與背景模型呼叫都會疊加消耗，逐項提供可執行的縮減做法。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧（MCP Code Execution、穴居人模式等，[[topics/community-cost#2026-10]]）一份彙整式檢查清單，把既有零散做法收成一份可對照的清單；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Reddit r/ClaudeCode 貼文，score 不可信（RSS 抓取恆為 0）；內容為清單彙整非單一量測，20 項具體條目未逐一轉述，依標題與摘要判讀收錄。
+- **來源：** Reddit / r/ClaudeCode；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xm8403/20_ways_to_waste_fewer_tokens_with_coding_agents/)
+- **成熟度：** ⏳ 新興（單篇彙整，尚無第三方驗證清單有效性）
 
 ### 2026-10
 

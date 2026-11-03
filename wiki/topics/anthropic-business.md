@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-11-01"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 178
-attribution_count: 497
-attribution_last: "2026-11-01"
+inbound_links: 180
+attribution_count: 500
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,20 +31,20 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-01
+**最後新聞更新：** 2026-11-02
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-01）
-> - **WSJ：雙重股權結構讓創辦人上市後仍握控制權**：呼應既有超級投票權報導，詳見 [[topics/anthropic-ipo]]（HN 13 分）
-> - **Business Insider：內部用 Claude 的用量價值已超過員工薪資**（按外部收費換算，具體換算方式未附）
+> **最新動態**（2026-11-02）
+> - **修訂版 S-1 首度揭露具體財報**：Q3 營收 170 億美元、採購承諾升至 8,950 億美元、營運虧損 12.5 億美元（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)、FT），數字與 S-1 細節見 [[topics/anthropic-ipo]]
+> - **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)），見 [[topics/anthropic-business-risks]]
 
 ---
 
 ## 現在的數字
 
-**最新（2026-10-26）：** 公開版 S-1 提交 SEC：上半年淨損 807 億美元，約九成是估值上升造成的非現金會計損失；上半年營收約 163 億（多家引 S-1）。股數、價格區間與掛牌日未定。
+**最新（2026-11-02）：** 修訂版 S-1（S-1/A）首度正式確認 Q3 營收 170 億美元、9 個月營運虧損 12.5 億美元；算力基建採購承諾與租賃協議升至 8,950 億美元，取代此前 The Information 的 5,170 億統計口徑。
 
-**（2026-10-15）：** 揭露 2026 Q3 營收 168 億美元（季增約 46%），公司稱為 IPO 前最後一次對投資人揭露；紐約市主計官同日要求暫緩 IPO。
+**（2026-10-26）：** 公開版 S-1 提交 SEC：上半年淨損 807 億美元，約九成是估值上升造成的非現金會計損失；上半年營收約 163 億（多家引 S-1）。股數、價格區間與掛牌日未定。
 
 > **公開版 S-1 已提交但尚未生效，上市前沒有季度財報。** 下表每一列的最後兩欄告訴你這個數字是誰說的、下一次會有新數字的時點。**五種數字量級不同，不可互相替代或加總**——年化營收、單季營收、官方估值、IPO 估值預期、市場總量各答各的問題。
 
@@ -53,13 +53,13 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 | 官方估值 | 最後一次真的有人按這個價格出錢 | $9,650 億（2026-05-28 Series H） | 官方一手 | IPO 定價 |
 | IPO 估值預期 | 投資人一方的預期，公司未設此目標 | 約 $1.5 兆（2026-10-16，較此前 $2 兆下修約 $5,000 億） | 一級媒體引投資人 | 正式定價區間公告 |
 | 年化營收（ARR） | 年化推估，非單季實收 | $650 億（2026-07 數字，08-18 報導；之後未見新值） | 一級媒體引公司 | 下次投資人揭露 |
-| 單季營收 | 2026 Q3 實際入帳，公司稱為 IPO 前最後一次對投資人揭露 | $168 億（2026-10-15） | 一級媒體引公司 | S-1 財報（下次揭露時點未定） |
+| 單季營收 | 2026 Q3 實際入帳，修訂版 S-1（S-1/A）首度正式確認 | $170 億（2026-11-02，官方修訂 S-1） | 官方一手 | 下次財報揭露（時點未定） |
 | 獲利 | 調整後營業利益（排除股權報酬、非現金捐贈、和解費用），不是會計淨利 | 連續第二季為正（2026-09-13 口頭）；S-1 上半年調整後約 $16 億 | 一級媒體引公司 | S-1 修正版或首份季報 |
 | 淨損（2026 上半年） | 會計淨損；約 $724 億是可轉換工具隨估值上升的非現金損失，營業層虧約 $6.9 億 | $807 億（2026 H1，2026-10-26 公開版 S-1） | 一級媒體引公司（多家引 S-1） | 下次財報揭露 |
 | 企業採用率 | Ramp AI Index 企業導入比例 | 43.5%（OpenAI 39.7%，2026-08-12 發布） | 第三方指數 | Ramp 次月指數 |
 | Public Benefit Fund 股權承諾 | 承諾撥入全資子實體 Public Benefit Fund 的股權比例，待股東會核准 | 5%（市值每漲 50% 加碼 2%，2026-10-18 宣布） | 官方一手 | 股東會表決結果 |
 | 產業 TAM | Anthropic 向投資人簡報的市場總量，非公司營收 | $30 兆（2026-08-26） | 一級媒體引公司 | 無時點 |
-| 算力交易總額（11 個月） | The Information 統計口徑，累計談成的算力／雲端合約總額 | $5,170 億（統計期至 2026-09，2026-09-06 報導） | 一級媒體 | 無時點 |
+| 算力／採購承諾總額 | 官方揭露的算力基建採購承諾與租賃協議總額 | $8,950 億，其中 $4,475 億預計 2030 年底前支出完畢（2026-11-02，修訂版 S-1） | 官方一手 | 無明確時點 |
 
 **來源等級（由硬到軟）：** 官方一手（Anthropic 公告或官方文件）→ 一級媒體引公司或投資人 → 第三方指數或研究 → 社群估算 → 傳聞（僅標題）。
 
@@ -70,7 +70,7 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 ## IPO 走到哪一格
 
-**一句結論：** 公開版 S-1 已於 2026-10-26 提交 SEC（擬掛牌代號「ANT」），尚未生效；最後定價 $9,650 億，投資人預期 10-16 下修至約 $1.5 兆；股數、價格區間與掛牌日未定。五格表、S-1 揭露、營收與估值細節見 [[topics/anthropic-ipo]]。
+**一句結論：** 公開版 S-1 已於 2026-10-26 提交 SEC（擬掛牌代號「ANT」），11-02 修訂版首度揭露 Q3 營收 $170 億與 revenue-per-compute 由 2.08x 降至 1.72x，尚未生效；最後定價 $9,650 億，投資人預期 10-16 下修至約 $1.5 兆；股數、價格區間與掛牌日未定。五格表、S-1 揭露、營收與估值細節見 [[topics/anthropic-ipo]]。
 
 ---
 
@@ -80,9 +80,9 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-01 |
-| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-01 |
-| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-01 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-02 |
+| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-02 |
+| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-02 |
 
 #### 算力與資金從哪來
 這一節現在在 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]。

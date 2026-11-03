@@ -380,3 +380,5 @@
 {"id": "H-1cf735", "opened": "2026-11-02", "from": "商業", "to": "社群", "page": "topics/code-quality-decline", "note": "第 24 波 pricing 拆頁：三解表第三列「你這端的配置」補連 [[topics/community-cost#用量去向歸因]]；L229 可改指 [[entities/pricing-incidents#還在發生的事故]]（#38335 數字已由 H-9a89bc 涵蓋）", "status": "open"}
 {"id": "H-fa1aa2", "opened": "2026-11-02", "from": "商業", "to": "社群", "page": "topics/community-cost", "note": "第 24 波 pricing 拆頁：「用量去向歸因」加一句回指 [[entities/pricing#事故現在還在發生嗎]]（額度掉得快三路分流的回程）", "status": "open"}
 {"id": "H-645373", "closed": "2026-11-02", "status": "done", "by": "商業", "result": "第 24 波拆頁：總入口＝pricing 母頁「事故現在還在發生嗎」三路分流；根因三個（未列入總表標記在 %% 被剝、排序按留言數漂移、上限 6）以條文＋表修（上限 8、照最後動態、表下可見一行）；pricing 側互指本波補，code-quality-decline／community-cost 側另開轉知給社群"}
+{"id": "H-95764c", "closed": "2026-11-02", "status": "done", "by": "功能", "result": "已於 claude-code.md「💰 計費與配額」新增一行負向對照：muaaz9329/cheap-ag 宣稱「50x your Claude usage」，標證據薄弱"}
+{"id": "H-952d1f", "closed": "2026-11-02", "status": "void", "by": "主編", "result": "功能記者已評估：community-skills／community-integrations 2026-11-01 新增節點均為單一社群工具示例，未達 official-community-gap 開新列門檻（需 ≥2 獨立工具或 GitHub issue ≥100 讚），且表已滿 18 列，不開新列"}

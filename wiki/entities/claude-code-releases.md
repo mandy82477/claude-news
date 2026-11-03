@@ -5,13 +5,13 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-01"
-last_news_update: "2026-10-31"
+last_news_update: "2026-11-02"
 status_main: "active"
-days_since_news: 2
+days_since_news: 1
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 7
 attribution_count: 0
 attribution_last: null
@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-31
+**最後新聞更新：** 2026-11-02
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-10-31）
-> - **v2.1.316**：新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`；Claude apps gateway 加群組共用的每月預算池。
+> **最新動態**（2026-11-02）
+> - **anthropic-sdk-python v2.4.0**：新增 analytics、spend limits 與 RBAC 的 GA 方法，另加 unified metrics、RBAC 刪除回應的具名 beta 型別（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）；同日 TypeScript 的 vertex-sdk v1.1.1、google-cloud-sdk v1.1.2 只是型別檢查與文件例行維護。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +67,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.1.1** | 2026-11-02 | Chores：為每個子套件的已發布型別宣告加上型別檢查，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1)）|
+| **anthropic-sdk-typescript google-cloud-sdk-v1.1.2** | 2026-11-02 | Chores：同批型別檢查；Docs：範例程式改用現行模型 ID（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2)）|
 | **v2.1.316** | 2026-10-31 | 新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`；⚠️ Opus 4.8 fast mode 11-30 移除；修 PowerShell hook exit 2 沒擋（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)）|
 | **v2.1.314** | 2026-10-30 | 新增 `permissions.blockWritesOutsideWorkingDirectories`：Write、Edit、NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）|
 | **v2.1.312** | 2026-10-27 | 新增 `oidc.user_id_claim` 設定，gateway 可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)）|

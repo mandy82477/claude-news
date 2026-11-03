@@ -4,20 +4,20 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-10-30"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 1
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 1
 inbound_links: 3
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 12
-pending_overdue: 0
-pending_next_review: "2026-11-03"
+pending_count: 13
+pending_overdue: 1
+pending_next_review: "2026-11-09"
 pending_signalled: 2
 staleness_exempt: null
 signal: "孤島"
@@ -32,14 +32,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-16
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-10-30
+**最後新聞更新：** 2026-11-02
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：晶片商循環融資、Nscale 等 9 條線 14 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-10-30）
-> - **Nvidia 洽談為 Nscale 與 Anthropic 的雲端協議提供信用支持**：[Reuters](https://news.google.com/rss/articles/CBMixgFBVV95cUxOeFZKQnF5QVdNQlBQRzNMTE5PbjhUSXF0Y0NzYXpyaVJFeGplang3clhEYUtGUF9Fd2tPRjE0VllQVjV0cncwdU9za2RGZkFjQ2ZSTGdpQ3hXSkRBSjVtY2tvTzhEVTYtUkxYQjdfc1A3blJMd0c2ajJTUFp0eGMtOEtMbEk2NGl2Y2hrRFVlSHVaT1VQWi1qaGhLTkoyZVhXWFVFaXpDVEpZQV90MFNSZzN2dTl0WXJWZEhBRzJmUFVpNzI2Smc?oc=5) 引《The Information》，僅標題可用；對象、金額與條件未披露。
+> **最新判讀**（2026-11-02）
+> - **S-1/A 採購承諾與租賃協議總額升至 8,950 億美元**：[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html) 引 SEC 申報，取代先前逾 5000 億美元口徑，其中 4,475 億美元預計 2030 年底前支出完畢；新舊口徑涵蓋範圍差異未明。
 
 ---
 
@@ -53,6 +53,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 近期判讀
+
+### 💰 修訂版 S-1 採購承諾總額升至 8,950 億美元，含租賃協議（2026-11-02）
+
+**一眼**：📉 負面（數字型，動到資本支出承諾總規模，從先前逾 5000 億美元升至 8,950 億美元）｜誰有感：Broadcom（NASDAQ: AVGO）、Amazon（NASDAQ: AMZN）、Alphabet（NASDAQ: GOOGL）｜硬度：官方文件（S-1/A 修訂申報揭露）｜線：雲端供應鏈承諾總額 ▸ 第 2 則
+
+**為什麼這樣判**：新資訊是修訂版 S-1（S-1/A）把採購承諾與租賃協議總額揭露為 8,950 億美元（其中 4,475 億美元預計 2030 年底前支出完畢），取代 10-26 當時四家供應商合計逾 5000 億美元的口徑，也取代此前 The Information 統計的 5,170 億美元非官方估計；本則首次把租賃協議計入總額，涵蓋範圍與前一口徑是否相同未見官方說明（推論）。判負面是因為總額再度擴大，而同份揭露資產僅 1,540 億美元、現金負債 1,460 億美元，緩衝薄，加深既有 10-17 KBRA 非投資等級評等與晶片商循環融資疑慮對資本支出能否撐住的質疑。事實見 [[topics/anthropic-business#現在的數字]]。
+
+**下一個催化劑**：8,950 億美元與先前 5000 億美元口徑的涵蓋範圍差異是否經官方拆解；各筆履約時程與付款結構是否披露。
+
+**你的選項**：(a) 什麼都不做，承諾總額是多年期帳面數字，不是當期現金流出；(b) 持有 Broadcom、Amazon、Alphabet 的讀者，把新總額與自己持股對應的那筆金額重新核對，留意後續財報是否認列。
+
+**一課｜複習：承諾總額非現金流出**
+- 這一則跟上次不一樣在哪：上次（10-26）是四家供應商各自拆分的首次總表；這次是官方把範圍擴大到含租賃協議的升級版總額，且取代了另一個非官方估計口徑，兩個口徑的涵蓋範圍差異未明。
+- 下次怎麼認：看到「總額」數字又變大，先問新舊口徑涵蓋範圍是否相同，不要直接相減算差異。
 
 ### 💰 Reuters／The Information：Nvidia 洽談為 Nscale 與 Anthropic 雲端協議提供信用支持（2026-10-30）
 
@@ -270,6 +284,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-11-02 | 雲端供應鏈承諾總額 | 本體不可買；AVGO／AMZN／GOOGL 間接關聯 📉（第 2 則） | 8,950 億美元口徑與先前總表關係是否經官方拆解（11-16） | ⏳ | ⏳ |
 | 2026-10-30 | Nscale 算力合約規模 | 本體不可買；NVDA 間接關聯 〰（第 3 則） | Nvidia 或 Anthropic／Nscale 官方證實信用支持條件與適用範圍（11-13） | ⏳ | ⏳ |
 | 2026-10-29 | 德州資料中心債券流標 | 本體不可買；間接曝險 📉（開線） | 撤回原因與發行人身分是否經具名報導披露（11-12） | ⏳ | ⏳ |
 | 2026-10-29 | 內部重建降低運算成本 | 本體不可買；間接曝險 📈（開線） | 內部重建降本效果是否反映進下一份財報毛利率數字（11-12） | ⏳ | ⏳ |
@@ -293,6 +308,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-02｜查 8,950億美元、租賃協議｜複 2026-11-16）｜**8,950 億美元採購承諾與租賃協議總額，與先前逾 5000 億美元／5,170 億美元口徑的涵蓋範圍差異是否經官方拆解**：修訂版 S-1 僅給出新總額數字，新舊口徑是否重疊、各筆履約時程與付款結構均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 Texas、bond｜複 2026-11-12）｜**銀行撤回德州資料中心債券發行案的原因與發行人身分是否經具名報導披露**：Bloomberg.com 報導僅標題可用，發行人、金額規模與撤回具體原因均未見報導。
 - ❓ **待查證**（標 2026-10-30｜查 Nvidia、信用支持｜複 2026-11-13）｜**Nvidia 信用支持 Nscale-Anthropic 協議的對象、金額與條件是否經官方證實**：Reuters 引《The Information》僅標題可用，支應哪一筆合約、金額與條件均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 Zero-Rust、CPU 消耗｜複 2026-11-12）｜**Anthropic「Zero-Rust」團隊重建核心 API 降低 CPU 消耗 40% 的效果是否反映進財報毛利率數字**：BigGo Finance 報導僅標題可用，是否已入帳與適用範圍均未見報導。

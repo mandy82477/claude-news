@@ -5,13 +5,13 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-01"
-last_news_update: "2026-10-30"
+last_news_update: "2026-11-02"
 status_main: "active"
-days_since_news: 3
+days_since_news: 1
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 1
 inbound_links: 2
 attribution_count: 0
 attribution_last: null
@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-01
-**最後新聞更新：** 2026-10-30
+**最後新聞更新：** 2026-11-02
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-10-30）
-> - **桌面版文件 10-26、10-30 兩次大增字**（189,365→203,154 字）：段落太多，沒有逐段差異可看，要知道改了什麼得自己開原文比對。
+> **最新動態**（2026-11-02）
+> - **桌面版文件再增字**（207,065→209,756 字）：段落數 1284 超過自動比對上限，沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。
 
 ---
 
@@ -101,6 +101,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 本頁沒有桌面版文件對應條目；機制見「Subagent 型別差異對照」軸線 4。
 
 **其他**
+- 11-02：文件增字（207,065→209,756），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 10-21：session details panel 用量顯示方式、憑證來源設定步驟。
 - 10-01：`claude --desktop` 直接開桌面版。
 - 09-30、09-15：`/resume` 接續終端機／CLI session。
@@ -109,6 +110,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-02）：桌面版文件字數由 207,065 增至 209,756，但本頁段落數（1284）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-30）：桌面版文件字數由 202,046 增至 203,154，但本頁段落數（1236）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。

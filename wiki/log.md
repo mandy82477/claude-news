@@ -8506,3 +8506,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 已知缺口：cell 基線本波 +57 筆搬家（累計 210），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`pricing-2026-11-02-proposal-map.md` 第四節。
 - 歸因 user-query／商業
 - 複驗（新冷讀者，原四題逐字）：Q2、Q4 拿到，Q1、Q3 半拿到（第一輪 1 拿 3 半）；依官方原文修 [[entities/pricing-history]] Sonnet 5.5 快取讀取 $0.10（「half of Sonnet 5’s $0.20」）、Team premium 倍數照官方「Standard 席的 5 倍」（兩頁同改）。Q1 繞法分散三頁待 H-1cf735、H-fa1aa2 落地；Q3 Bedrock／Vertex 不記絕對價為頁面既定取捨。評審實作複核放行。拆頁候選隊列五頁（第 20–24 波）全部完成。
+## 2026-11-02 Ingest
+- 來源日報：[[news/2026-11-02]]
+- 更新頁面：
+  - **模型**：entities/opus-5、entities/opus-5-5
+  - **功能**：entities/claude-code
+  - **商業**：topics/anthropic-business、topics/anthropic-ipo、entities/pricing、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-prompt-injection、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety-cyber、topics/ai-agent-safety（母頁僅覆寫 callout 與路由表「最後動態」欄）
+  - **社群**：topics/community-memory、topics/community-guardrails、topics/community-cost、topics/community-integrations、topics/community-interfaces、topics/community-tech-discussions、topics/community-tech-patterns（母頁）
+  - **投資分析**：topics/market-signals
+- 新增頁面：無
+- feature-radar：本日無新功能（今日 3 筆 SDK 釋出皆純 chores／既有 beta 轉 GA，1 筆桌面版文件異動原文截斷無法判讀，均未達收錄門檻）
+- index：無狀態變更
+- 摘要：Anthropic 修訂版 S-1（S-1/A）首度揭露 Q3 具體財報（營收 170 億美元、採購承諾 8,950 億美元、營運虧損 12.5 億美元、revenue-per-compute 2.08x→1.72x）為今日唯一重大新事實，社群同步湧現 10 餘款 Show HN 小工具與語音互動介面第二、三個獨立實作；安全政策與功能面多為既有事件（Cursor 供應鏈攻擊、遊戲複製規則）的媒體二次收錄，無新事實。
+- 呈現品質：全部通過（安全政策 topics/ai-agent-safety-prompt-injection 讀者語言外洩 1 筆、topics/ai-agent-safety-product-vulns 字元超限 1 筆、商業 topics/anthropic-business／topics/anthropic-ipo 字元超限各 1 筆、社群 topics/community-guardrails／community-interfaces／community-memory 字元超限各 1～2 筆、topics/community-integrations 讀者語言外洩 1 筆，主編於 Step 3 內容閘修復迴圈內改寫至綠，未改動 check_*.py 腳本）
+- 品質備註：[社群] 兩則 GitHub Search 新興工具原分類標完整摘要，查核 commit 記錄後 1 則（AirsupHQ/machine-skill，502★單一帳號僅 8 commit）判定不收，另 1 則（mksglu/context-mode，33,266★）維護活躍度存疑仍收錄並如實註記——過程紀律良好，非品質問題
+- 分類回退：追加派工 1 筆（安全政策→商業：The U.S. Census Bureau and "Super Intelligence"〔Simon Willison〕，內容核心是企業 AI 採用率統計資料源異動，屬 topics/anthropic-business「企業採用率」指標追蹤主題，不符政府政策/出口管制/軍事合約觸發條件；商業記者已處理，判定不構成指標新數值，僅於數字細節區新增一條說明）
+- 轉知帳本：結案 H-95764c（功能，已於 claude-code.md 計費配額區新增 cheap-ag 負向對照）；void H-952d1f（功能，official-community-gap 矩陣已滿 18 列且今日候選未達開新列門檻）；H-7526b2 保留 open（功能，今日批次無對應回報，續留意下一輪）
+- devpractice 沉澱：候選 8 筆／手冊寫入 0 則（今日零開發實務條目，純候選撿拾；候選涵蓋 community-cost／community-guardrails ×5／community-memory／entities-pricing，已寫入 data/devpractice-candidates.jsonl，基準線推進至 1eb0f8a，留待下次週更落地）
+- market 判讀：判讀新增 2 則（S-1/A 首度揭露具體財報；採購承諾總額升至 8,950 億美元，續雲端供應鏈承諾總額線），均來自同一次官方揭露的一手數字，過第 1 類判準；其餘候選（內部用量超薪資、帳號停用爭議、Johns Hopkins 合作、競品動態、集體訴訟傳聞）皆無具體金額或市場反應數字，未過門檻
+- 主編待辦：
+  - [社群→weekly-review] 評估「模式概覽」新增類別「語音互動」：tapq（2026-10-04）＋Smalt、Poinky（2026-11-02）三個獨立實作已滿足代表技巧 ≥2 與機制可複現判準，模式概覽表僅剩 1 格空位，留待下次 `/wiki-weekly-review` 處理

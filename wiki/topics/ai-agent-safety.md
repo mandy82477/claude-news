@@ -3,14 +3,14 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
+last_updated: "2026-11-02"
 last_news_update: "2026-10-29"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 127
 attribution_count: 301
 attribution_last: "2026-10-29"
@@ -28,14 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-02
 **最後新聞更新：** 2026-10-29
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-10-31）
-> - **供應鏈**：Cursor 市集惡意 Claude Code 套件受影響版本擴為 2.1.312／2.1.313，只解除安裝不夠；Anthropic 稱未遭入侵。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
-> - **入侵聲稱**：資安新創 Cathedral 稱在 Anthropic 外部研究者計畫中不到 12 小時進入內部系統，Anthropic 未回應。見 [[topics/ai-agent-safety-cyber#2026-10]]。
+> **最新動態**（2026-11-02）
+> - **提示注入**：Homeland411 稱攻擊者藏匿惡意規則挾持 AI coding 助理（僅標題）。見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
+> - **網攻濫用**：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰（僅標題）。見 [[topics/ai-agent-safety-cyber#2026-11]]。
+> - **供應鏈**：SecurityWeek、CSO Online 跟進 Cursor 惡意 Claude Code 延伸套件 SSH 後門事件，無新事實。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 
 ---
 
@@ -53,9 +54,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-10-28 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-10-31 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-10-31 |
+| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-02 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-02 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-02 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%

@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-02"
-last_news_update: "2026-10-31"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: null
 children: "['topics/market-signals-compute', 'topics/market-signals-customers', 'topics/market-signals-ipo', 'topics/market-signals-legal']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 14
-attribution_count: 113
-attribution_last: "2026-10-31"
+attribution_count: 115
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,17 +31,18 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
 **最後更新：** 2026-11-02
-**最後新聞更新：** 2026-10-31
+**最後新聞更新：** 2026-11-02
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-10-31）
-> - **Blackstone 告訴投資人預期 Anthropic 上市後拿 BB 級信評**：TechCrunch 引 FT，推翻「2027 年前達投資級」說法，僅標題可用（見 [[topics/market-signals-ipo]]）。
+> **最新判讀**（2026-11-02）
+> - **S-1/A 首度揭露財報數字**：單季營收 170 億美元、營運虧損 12.5 億美元，revenue-per-compute 比值由 2.08x 降至 1.72x（見 [[topics/market-signals-ipo]]）。
+> - **採購承諾總額升至 8,950 億美元**：取代先前逾 5000 億美元口徑，含租賃協議，4,475 億美元 2030 年底前支出完畢（見 [[topics/market-signals-compute]]）。
 >
-> 前一日（2026-10-30）：
-> - **Nvidia 洽談為 Nscale 與 Anthropic 雲端協議提供信用支持**：Reuters 引《The Information》，僅標題可用（見 [[topics/market-signals-compute]]）。
+> 前一日（2026-10-31）：
+> - **Blackstone 告訴投資人預期 Anthropic 上市後拿 BB 級信評**：TechCrunch 引 FT，推翻「2027 年前達投資級」說法，僅標題可用（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -62,9 +63,9 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | 標的 | 跟 Anthropic 的關係 | 相關判讀（所在子頁見「近期判讀」表） | 現在方向 | 下一個催化劑 |
 |---|---|---|---|---|
 | Salesforce（NYSE: CRM） | 合作夥伴，「Claudeforce」深度整合進 CRM | 08-26 Claudeforce 一則 | 📈 正面，動到全年營收預測 | 下一份季報是否拆分 Claudeforce 貢獻 |
-| Alphabet（NASDAQ: GOOGL） | Anthropic 的投資人，持股佔市值極小，買它幾乎等於沒曝險；亦為 09-19 反壟斷合謀訴訟被告之一；09-30 招股書外流稱與 Amazon 合計為 Anthropic 近半營收來源（金額對 Alphabet 自身財報不具重大性） | IPO 線、09-19／09-22 反壟斷訴訟、09-30 客戶集中度、10-13 Gemini 4 Argon 競品定價、10-26 S-1 揭露 1140 億美元 Google 雲端承諾共六則被點到 | ⚖️ 兩面，S-1 揭露 1140 億美元 Google 承諾總額，持股與客戶集中度精確比例仍未揭露 | Anthropic 公開版 S-1 揭露持股與客戶集中度精確比例；1140 億美元承諾履約時程是否拆分揭露 |
+| Alphabet（NASDAQ: GOOGL） | Anthropic 的投資人，持股佔市值極小，買它幾乎等於沒曝險；亦為 09-19 反壟斷合謀訴訟被告之一；09-30 招股書外流稱與 Amazon 合計為 Anthropic 近半營收來源（金額對 Alphabet 自身財報不具重大性） | IPO 線、09-19／09-22 反壟斷訴訟、09-30 客戶集中度、10-13 Gemini 4 Argon 競品定價、10-26 1140億Google雲端承諾、11-02 8950億總額共七則被點到 | ⚖️ 兩面，S-1/A 總承諾升至 8,950 億美元，持股與客戶集中度精確比例仍未揭露 | Anthropic 公開版 S-1 揭露持股與客戶集中度精確比例；8,950 億美元總額與先前口徑關係是否釐清 |
 | Reddit（NYSE: RDDT） | 原告，對 Anthropic 提起資料爬取／授權訴訟，聯邦法官裁定大部分可續行 | 09-19 Reddit 資料訴訟一則 | ⚖️ 兩面 | 具體裁定理由與被駁回部分披露；雙方是否進入和解談判 |
-| Amazon（NASDAQ: AMZN） | 投資人，持股佔市值極小，非訴訟被告；09-30 招股書外流稱與 Google 合計為 Anthropic 近半營收來源（金額對 Amazon 自身財報不具重大性） | IPO 線與 09-30 客戶集中度共兩則被點到、10-26 S-1 揭露 1100 億美元 AWS 雲端承諾一則 | ⚖️ 兩面，S-1 揭露 1100 億美元 AWS 承諾總額，持股與客戶集中度精確比例仍未揭露 | 持股與客戶集中度精確比例是否揭露；1100 億美元承諾履約時程是否拆分揭露 |
+| Amazon（NASDAQ: AMZN） | 投資人，持股佔市值極小，非訴訟被告；09-30 招股書外流稱與 Google 合計為 Anthropic 近半營收來源（金額對 Amazon 自身財報不具重大性） | IPO 線與 09-30 客戶集中度共兩則被點到、10-26 S-1 揭露 1100 億美元 AWS 雲端承諾、11-02 總額升至 8,950 億美元共三則被點到 | ⚖️ 兩面，S-1/A 總承諾升至 8,950 億美元，持股與客戶集中度精確比例仍未揭露 | 持股與客戶集中度精確比例是否揭露；8,950 億美元總額與先前口徑關係是否釐清 |
 | Nvidia（NASDAQ: NVDA） | 既有投資人＋硬體供應商，傳洽談加碼投資 IPO；10-30 另傳洽談為 Nscale 與 Anthropic 雲端協議提供信用支持；持股佔市值極小 | 09-12 Nvidia 洽談投資 IPO 一則；10-30 Nscale 信用支持洽談一則 | 〰 未定 | Nvidia 官方證實／否認（IPO 投資）；信用支持洽談對象、金額與條件是否披露 |
 | Novo Nordisk（NYSE: NVO） | 具名客戶，採用 Claude 加速藥物研發，合約範疇與費用未揭露 | 09-16 諾和諾德具名採用一則 | 〰 未定 | 合約範疇與費用披露；財報是否提及成本效益 |
 | JPMorgan Chase（NYSE: JPM） | 具名客戶，導入 Claude 並設 2,000 美元支出上限與額外安全管控 | 09-17 摩根大通導入一則 | 〰 未定 | 更多受監管金融機構是否跟進；上限適用範圍與席位數是否披露 |
@@ -72,7 +73,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | Microsoft（NASDAQ: MSFT） | 算力採購方，Nscale 合約最大兩家客戶之一；內部用戶縮減三分之一（已查證 2026-10-07）；10-09 另曝 Azure 轉售帳務爭議，細節見下；10-29 GitHub Copilot Fusion 對標 Claude Code | 09-21 Nscale 算力合約規模一則；10-05 內部用量縮減一則；10-09 Marketplace 帳務爭議一則；10-29 Copilot Fusion 對標一則 | ⚖️ 兩面（算力採購方身分未定、內部用戶與轉售通路身分皆轉負面；Copilot Fusion 對標對 MSFT 自身財報不具重大性） | Anthropic／Microsoft 合約拆分金額披露；官方是否證實縮減金額口徑；Marketplace 轉售帳務責任歸屬是否釐清；Copilot Fusion 基準測試方法論是否公開 |
 | Meta（NASDAQ: META） | 具名企業，Claude Code 使用者約 6 萬降至約 3 萬，轉用自家 MetaCode，近 28 天仍花逾 1.05 億美元（已查證 2026-10-07） | 10-05 內部用量縮減一則 | 📉 負面 | Meta 或 Anthropic 官方是否回應並證實金額口徑 |
 | Akamai（NASDAQ: AKAM） | 供應商，簽 7 年 116 億美元運算合約供應 CPU 算力，並發行認股權證讓 Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股 | 09-25 Akamai 算力合約一則 | 📈 正面，動到未來多年期營收承諾 | 下一份財報／10-Q 是否揭露此合約認列時程或上修全年指引 |
-| Broadcom（NASDAQ: AVGO） | 華爾街銀行與 Blackstone 安排 630 億美元晶片融資案，金額較既有 600 億美元擴大，循環投資模式與 07-22 AMD、09-02 Nvidia-Lambda 同屬一類 | 10-01 開線、10-02 第 2 則、10-05 第 3 則、10-26 S-1 揭露 1610 億美元雲端承諾總額一則、10-27 第 4 則 | ⚖️ 兩面，630 億美元融資安排持續推進，S-1 另揭露 1610 億美元承諾總額，兩者認列關係未明 | 630 億美元融資定價發行；1610 億美元 S-1 承諾總額與既有融資案重疊關係是否釐清 |
+| Broadcom（NASDAQ: AVGO） | 華爾街銀行與 Blackstone 安排 630 億美元晶片融資案，金額較既有 600 億美元擴大，循環投資模式與 07-22 AMD、09-02 Nvidia-Lambda 同屬一類 | 10-01 開線、10-02 第 2 則、10-05 第 3 則、10-26 S-1 揭露 1610 億美元雲端承諾總額一則、10-27 第 4 則、11-02 總額升至 8,950 億美元一則 | ⚖️ 兩面，630 億美元融資持續推進，S-1/A 總承諾升至 8,950 億美元，認列關係未明 | 630 億美元融資定價發行；8,950 億美元 S-1/A 總承諾與既有融資案重疊關係是否釐清 |
 | Barclays（NYSE: BCS） | 具名客戶，官方宣布擴大導入 Claude Code 全行，首度提出可驗證的量化採用率目標 | 10-01 Barclays 擴大導入一則 | 📈 正面，動到可驗證的滲透率目標 | 2026 年底開發者採用率 50% 目標是否達成並獲證實 |
 | AMD（NASDAQ: AMD） | 投資人＋晶片供應商，07-22 投資 Anthropic 最高 50 億美元並簽晶片暨投資協議（見 [[topics/anthropic-business]]） | 10-15 Q3 營收揭露一則 | 📉 負面，隨 Anthropic 營收增速放緩消息同步下跌 | Anthropic 下一季營收增速是否回升或持續放緩 |
 | Sandisk（NASDAQ: SNDK） | 無直接業務關係；被歸類為 AI 記憶體晶片概念股，隨 Anthropic 營收增速放緩消息同步下跌 | 10-15 Q3 營收揭露一則 | 📉 負面，純粹歸類連動、非業務關係 | 後續財報是否顯示記憶體晶片需求受 AI 資本支出週期影響 |
@@ -97,9 +98,9 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 10-31 Blackstone 預期上市後 BB 級 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-02 S-1/A 首度揭露財報數字 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 10-28 GSA 折扣擴大、向加州州長表態 |
-| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 10-30 Nvidia 洽談信用支持 |
+| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-02 S-1/A 採購承諾升至 8,950 億 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 

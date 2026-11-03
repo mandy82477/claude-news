@@ -385,58 +385,13 @@
   "preview": "Claude Code：/buddy 請願破 2,116 讚：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。",
   "sedimentedToday": [
     {
-      "id": "claude-code-known-issues",
-      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "mythos",
       "name": "Claude Mythos",
       "pageType": "entity"
     },
     {
-      "id": "pricing-incidents",
-      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "anthropic-business-risks",
-      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
-      "pageType": "topic"
-    },
-    {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
       "pageType": "topic"
     },
     {
@@ -445,23 +400,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

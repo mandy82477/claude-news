@@ -430,11 +430,6 @@
   "preview": "Claude Code：v2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。",
   "sedimentedToday": [
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
       "id": "pricing-history",
       "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
       "pageType": "entity"
@@ -445,33 +440,13 @@
       "pageType": "topic"
     },
     {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "community-large-codebase-workflow",
       "name": "大型 Codebase 規模化開發：社群工作流主線",
       "pageType": "topic"
     },
     {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-tools",
       "name": "社群工具目錄",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-compute",
-      "name": "算力與融資這則怎麼判",
       "pageType": "topic"
     },
     {

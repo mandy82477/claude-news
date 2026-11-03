@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-31"
+last_updated: "2026-11-02"
+last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 5
-attribution_count: 3
-attribution_last: "2026-10-31"
-top_source: "hacker-news"
-pending_count: 10
+attribution_count: 4
+attribution_last: "2026-11-02"
+top_source: "google-news"
+pending_count: 11
 pending_overdue: 0
 pending_next_review: "2026-11-04"
 pending_signalled: 1
@@ -31,14 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-31
+**最後更新：** 2026-11-02
+**最後新聞更新：** 2026-11-02
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-10-31）
-> - **入侵聲稱有細節了**：India Today 稱資安新創 Cathedral 在 Anthropic 開放外部研究者的漏洞計畫中，不到 12 小時進入其內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；出自《華盛頓郵報》看過的報告草稿，Anthropic 未回應。
-> - **使用限制傳聞**：一則推文稱 Anthropic 會封鎖任何涉及「訓練更大模型」用途的使用者（HN 232 分）；僅單方說法，未見官方回應。
+> **最新動態**（2026-11-02）
+> **駭客假冒 AI 機器人身分獵密碼（僅標題，CyberSecurityNews）**：假冒 ChatGPT、Claude、Perplexity 機器人搜尋密碼與金鑰，手法與規模未見報導。
 
 ---
 
@@ -81,6 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
 | 10-22 | 防護 | Anthropic 與 Theorem 合作發布研究，示範 LLM 大規模產生正式軟體驗證證明，HN 392 分／5 個來源跟進 | 官方一手＋HN＋The Decoder；具體方法論與驗證規模未見於可讀摘要，僅標題可用 |
@@ -110,6 +110,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
+
+### 2026-11
+
+#### CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity AI 機器人身分獵取密碼與 API 金鑰（2026-11-02 新增）
+
+- **揭露來源**：Google News／CyberSecurityNews（2026-11-02 11:05 UTC）；僅標題可用，互動未載
+- **核心主張（僅標題可用）**：報導稱駭客假冒 ChatGPT、Claude 與 Perplexity 的 AI 機器人身分，藉此搜尋目標網站上的密碼與金鑰；具體冒用手法、受害規模與是否已有實際案例均未見報導
+- **性質判斷**：屬「有人假冒 Claude 身分打第三方」的濫用態勢，非 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」表，與既有 10-21 朝日新聞、10-08 CrowdStrike 等濫用態勢系列同屬一類，惟本則鎖定冒用品牌身分這一手法
+- ❓ **待查證**（標 2026-11-02｜查 CyberSecurityNews、impersonate｜複 2026-11-16）｜**冒用手法細節與受害規模**：具體冒用方式、受害網站範圍與是否已有廠商回應均未見報導，僅標題可用
+- **可信度評估**：單一來源，原文未可讀，互動未載，訊號強度低
 
 ### 2026-10
 
