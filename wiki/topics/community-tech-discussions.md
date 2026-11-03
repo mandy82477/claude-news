@@ -3,8 +3,8 @@ page: "topics/community-tech-discussions"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
