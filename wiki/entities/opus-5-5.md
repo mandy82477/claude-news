@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **跨版本修辭套路回報擴及 Opus 5.5，社群觀感方向相反**（2026-11-02）
-> GitHub #77136 累計 140 留言、578 反應，範圍擴至 Opus 5.5；同日兩則 Reddit 貼文一說「變笨」、一說「近乎完美」，皆單一弱訊號。
+> **社群調侃：Opus 5.5 撐過十月整月發布潮**（2026-11-03）
+> Reddit 週熱門貼文稱 Opus 5.5 熬過十月各家密集發布新模型仍未被取代；0 留言，弱訊號，無具體數據佐證。
 
 ---
 
@@ -210,6 +210,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Reddit r/ClaudeCode：Is Opus 5.5 suddenly dumb again?](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)（2026-11-02，無週熱門標記，score 不可信）
 - [Reddit r/ClaudeCode：Has anyone else noticed that Opus has become nearly perfect?](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)（週熱門，2026-10-28）
 - [[news/2026-11-02]]
+- [Reddit r/ClaudeAI：Opus 5.5 surviving the entire October AI release cycle 😂](https://www.reddit.com/r/ClaudeAI/comments/1xlkghv/opus_55_surviving_the_entire_october_ai_release/)（週熱門，2026-11-02）
+- [[news/2026-11-03]]
 
 ## 歷史記錄
 
@@ -219,7 +221,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號 |
+| 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號；另一則週熱門貼文調侃 Opus 5.5 撐過十月發布潮（0 留言，弱訊號） |
 
 **2026-10**
 
@@ -249,6 +251,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-11-02**：GitHub #77136 回報範圍擴增至含 Opus 5.5，留言增至 140 則、反應增至 578 個；完整沿革見 [[entities/opus-5]]；已於 10-03 關閉、留言持續累積，官方無回應（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。
   - 同日 r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與上述修辭套路回報接近但不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)，2026-11-02）
   - 另一則週熱門貼文（10-28 發文、11-02 查核收錄）稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美，無具體案例或分數，方向相反（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門，2026-10-28）
+  - r/ClaudeAI 另一則週熱門貼文調侃 Opus 5.5 撐過整個十月的密集新模型發布潮仍未被取代；0 留言，無具體數據，屬弱訊號社群觀感（[Reddit](https://www.reddit.com/r/ClaudeAI/comments/1xlkghv/opus_55_surviving_the_entire_october_ai_release/)，週熱門，2026-11-02）
 
 **2026-10**
 

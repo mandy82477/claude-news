@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 %% 拆頁評估 2026-10-25：拆，草案：蒸餾後正文 936 行，時序事件流約 46%（依類別欄分群，不按月切）。全列各節所答：現在的數字／這些數字是誰說的／IPO 走到哪一格＝多大、值多少、數字可信嗎；商業模式／PMF／還沒過去的風險＝怎麼賺錢、哪裡會出事；算力與資金從哪來／哪個合作會改到你用的 Claude＝誰結盟、算力怎麼來、影響我用的 Claude 嗎；人物／相關實體／參考＝索引。草案三群：(1) 合作與算力資本→子頁 topics/anthropic-partnerships-compute（合作表 192＋算力 40＋時序戰略合作／資本支出／基礎設施約 140，共約 370 行；錨點入邊：anthropic-ipo、tom-brown、market-signals 指入「哪個合作會改到你用的 Claude」「算力與資金從哪來」須回掃）；(2) 營收估值與數字出處→子頁 topics/anthropic-financials（數字細節 55＋誰說的 51＋時序 IPO 前瞻／財務約 95，共約 205 行；「現在的數字」錨點入邊 anthropic-ipo 四處須回掃，指標表留母頁）；(3) 風險與商業模式→子頁 topics/anthropic-business-risks（風險 63＋模式 30＋PMF 17＋時序商業風險／模式約 70，共約 180 行）。母頁留 callout、指標表、IPO 路由、子頁路由表與人物索引，預估約 130 行，待頁面健檢波執行。 複評 2026-10-31：結論不變，仍判「拆」，三群切法同上，請主編裁決（記者不動手）。 %%
 
-> **最新動態**（2026-11-02）
-> - **修訂版 S-1 首度揭露具體財報**：Q3 營收 170 億美元、採購承諾升至 8,950 億美元、營運虧損 12.5 億美元（CNBC、FT）
-> - **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍（Business Insider）
+> **最新動態**（2026-11-03）
+> - **athenahealth 推出 athenaPatient MCP**：病患病歷接入 Claude 供臨床人員查詢（Healthcare IT News 等 3 家媒體）
+> - **Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計能力**，僅標題可用（The Information；Investing.com）
 
 ---
 
@@ -67,6 +67,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
 - **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
 - **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[topics/anthropic-ipo]]。
+- **Q3 換算月增量幾乎停滯（2026-11-02，regenerator1.com，HN 226 分）**：文章依官方 9 個月累計數字反推 7–9 月月增量，稱環比成長幅度小於 Q2；原文引 Q3 營收 $168 億為四捨五入差異，與本表 $170 億為同一數字，非新數字（方法論未見完整揭露）。
+- **人事成本首度換算至每人每月（2026-11-03，TechSpot 引 Business Insider，同一份修訂版 S-1）**：近期單季人事費用逾 $17 億，換算每位員工每月成本逾 $10.7 萬美元；與既有「內部 Claude 用量超過員工薪酬」（見上方 11-02 條）屬同一份揭露的不同欄位，員工人數基準未見報導。
 - **算力／採購承諾總額改用官方數字（2026-11-02）**：修訂版 S-1 揭露 $8,950 億採購承諾與租賃協議（$4,475 億於 2030 年底前支出完畢），取代此前 The Information 統計口徑的 $5,170 億（統計期至 2026-09，非官方數字，已移出指標表）；兩者涵蓋範圍可能不同，不可視為同一事物的新舊值直接相減。
 - **內部零售價換算的 Claude 使用量已超過員工薪酬（2026-11-02，Business Insider／CNBC，修訂版 S-1 揭露）**：4 月起每月內部使用量（按對外收費價格換算）已超過當月員工薪酬支出（不含股票獎酬），1–9 月累計暴增逾 250 倍；補上 11-01 已記錄同一事實的具體數字與時間點。
 - **公開版 S-1 正式提交，淨損 $807 億確認為官方數字（2026-10-26）**：此前僅 WSJ 獨家外流，今日官方公告＋SEC 文件確認，來源等級升為官方一手（[官方](https://www.anthropic.com/news/s1-sec)）。
@@ -358,6 +360,7 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 **其餘合作（一行制，日期倒序）** — 未列入上表者每筆一行：
 
+- **athenahealth**（2026-11-03）：推出 athenaPatient MCP 伺服器，將病患電子病歷接入 Claude 供臨床人員查詢，Healthcare IT News 等 3 家媒體同日報導，具體資料範圍與存取權限未見報導（Google News/HIT Consultant；Google News/Healthcare IT News）
 - **Johns Hopkins University**（2026-11-02）：癌細胞圖譜技術獲選用於 Anthropic AI 專案，具體應用細節未揭露（Google News/Johns Hopkins University）
 - **AI for Science（擴大至 20 機構）**（2026-10-29）：官方擴大科研夥伴計畫，20 個基金會／機構／研究團隊取得免費 Claude 額度，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic；Google News）
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
@@ -578,6 +581,12 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-03
+- **[商業模式，僅標題可用] Breakingthenews.net／The Information：Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計**：延續 08-05～07 自研晶片團隊信號，細節未見報導（Google News/Breakingthenews.net；The Information；Investing.com）
+- **[企業合作] Google News：醫療 IT 供應商 athenahealth 推出 athenaPatient MCP，將病患病歷接入 Claude**：Healthcare IT News 等 3 家媒體同日報導，詳見「哪個合作」清單新增列（Google News/HIT Consultant；Google News/Healthcare IT News）
+- **[商業風險，數字並陳] regenerator1.com：Q3 營收換算月增量近乎停滯**：與官方 $170 億為同一數字的四捨五入差異，詳見「現在的數字」數字細節（HN 226 分）
+- **[商業模式] TechSpot 引 Business Insider：修訂版 S-1 換算人事成本至每人每月**：單季人事費用逾 $17 億，詳見「現在的數字」數字細節新增說明
 
 #### 2026-11-02
 - **[IPO 前瞻] CNBC／FT／Axios：修訂版 S-1 首度揭露 Q3 財報與採購承諾**：營收 170 億、承諾 8,950 億、營運虧損 12.5 億；完整數字見「現在的數字」與 [[topics/anthropic-ipo]]（CNBC；FT；Axios；HN）

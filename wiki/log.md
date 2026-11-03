@@ -8489,3 +8489,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：判讀新增 2 則（S-1/A 首度揭露具體財報；採購承諾總額升至 8,950 億美元，續雲端供應鏈承諾總額線），均來自同一次官方揭露的一手數字，過第 1 類判準；其餘候選（內部用量超薪資、帳號停用爭議、Johns Hopkins 合作、競品動態、集體訴訟傳聞）皆無具體金額或市場反應數字，未過門檻
 - 主編待辦：
   - [社群→weekly-review] 評估「模式概覽」新增類別「語音互動」：tapq（2026-10-04）＋Smalt、Poinky（2026-11-02）三個獨立實作已滿足代表技巧 ≥2 與機制可複現判準，模式概覽表僅剩 1 格空位，留待下次 `/wiki-weekly-review` 處理
+
+## 2026-11-03 Ingest
+
+- 來源日報：[[news/2026-11-03]]
+- 更新頁面：
+  - **模型**：entities/opus-5-5
+  - **人物**：無既有頁面被修改（新頁見下）
+  - **功能**：entities/claude-code、topics/claude-code-experimental
+  - **商業**：topics/anthropic-business、topics/anthropic-ipo、topics/enterprise-tool-tracker、topics/competitor-landscape
+  - **安全政策**：topics/recursive-self-improvement、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety（母頁僅覆寫 callout／路由表「最後動態」／「現在還擋不住的攻擊」表下點名句三樣）
+  - **社群**：無（16 則逐一評估後僅覆核 Deputy 分類回退，仍判不收錄）
+  - **投資分析**：topics/market-signals
+- 新增頁面：wiki/entities/addy-osmani（主編以 WebSearch 查證身分異動後補派人物記者建頁，index.md 已登記）
+- feature-radar：本日無新功能；Message Threads API 熱度由 🔥 升至 🔥🔥（11-03 起 3 家新媒體跟進報導同一已追蹤功能），「為何熱」同步補一句媒體用語「Beta」與頁內「正式發布」不一致待官方文件覆核
+- index：新增 1 列（entities/addy-osmani，👤 人物），最後更新改為 2026-11-03
+- 摘要：Anthropic 修訂版 S-1 新增揭露「可能迫近」遞迴自我改進（RSI）門檻，為 11-02 財報揭露的延續性新事實；今日另有三件獨立新事件：Claude Code「訊息串」測試版功能（縮短等待時間 35%、計費不變）、高盛禁止行員使用 Claude Code／GitHub、athenahealth 將病患電子病歷接入 Claude（MCP）；社群面以 OpenAI Codex 資料分享設定被悄悄重開的討論熱度最高（HN 151 分）。
+- 呈現品質：全部通過（商業 topics/anthropic-business／topics/enterprise-tool-tracker／topics/competitor-landscape 各 1 筆字元超限或讀者語言外洩、社群 topics/community-interfaces 1 筆字元超限，主編於 Step 3 內容閘修復迴圈內已改寫至綠，未改動 check_*.py 腳本）
+- 品質備註：[人物] 原輪因摘要截斷與既有頁面身分描述表面衝突，正確判斷未強寫，留待主編查證——查證後確認是「轉職」而非「衝突」，過程紀律良好，非品質問題
+- 分類回退：追加派工 1 筆（排除→社群：Show HN「Deputy」，分類複核記者判定 [flagged] 僅為討論串殼層標記、非排除理由，社群記者補核後仍以互動不足＋負向信號判定不收錄）；另 1 筆不追加（模型／安全政策雙方皆判斷「Progress on provable inference for large language models - Anthropic」不符自己視角，主編 WebSearch 查證查無對應原文，判定不收錄，不追加派工）
+- 轉知帳本：H-7526b2 保留 open（功能，今日 v2.1.317 的 /schedule connector 警告為通用安全強化、非對應回報，續留意下一輪）
+- devpractice 沉澱：本日無候選（當日無開發實務包）
+- market 判讀：判讀新增 2 則（S-1/A 首度書面自評「可能迫近」觸及 RSI 門檻；S-1/A 揭露單季人事費用逾 17 億美元），均來自同一次官方揭露的一手數字，過第 1／第 5 類判準；其餘候選（高盛禁用令、Anthropic 成長環比持平分析、SEC 應封殺 IPO 社論、晶片設計能力宣稱）因「非新資訊」（已於 11-02 沉澱）或「無具體數字且屬意見／傳聞層級」未過門檻

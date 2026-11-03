@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-11-02）
-> - **MSIX GPU 當機找到根因**：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤。
-> - **新已知問題**：圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（#62466，36 則留言）。
+> **最新動態**（2026-11-03）
+> - **v2.1.317**：`/schedule` 新增雲端排程任務取得非使用者要求的 connector 時的警告與移除方式；新增工具呼叫前的確認檢查（官方原文截斷）。
+> - **高互動已知問題更新**：卡住/凍結（#26224，132 則留言、152 個讚，全站今日互動量最高）、Cowork 網路白名單失效（#30112，77 則留言、59 個讚）、速率限制錯誤與用量上限無關（#53915，69 則留言、27 個讚）互動數同步更新。
 
 ---
 
@@ -47,6 +47,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **最新版本動態：**
 
+- **v2.1.317**（2026-11-03）：`/schedule` 新增警告——新建立的雲端排程任務若被附加非使用者要求的 connector，提示並附移除方式；新增一項工具呼叫前的確認檢查（官方原文截斷，其餘異動細節未附）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）。
+  同版 build 另新增 12 個功能候選旗標＋2 個代號旗標，另有 1 個舊旗標消失，追蹤見 [[topics/claude-code-experimental]]。
 - **v2.1.316**（2026-10-31）：新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`，設定後 `ultrathink` 關鍵字停止生效；Claude apps gateway 新增群組共用預算池——一組成員共用單一每月預算（官方原文截斷，其餘異動細節未附）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)）。
 - **v2.1.314**（2026-10-30）：新增 `permissions.blockWritesOutsideWorkingDirectories` 設定，開啟後 Write、Edit 與 NotebookEdit 在任何權限模式下都會拒絕寫入工作目錄以外的路徑；另新增一項可選設定（官方原文截斷，細節未附）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）。
   同版 build 另新增 7 個功能候選旗標，追蹤見 [[topics/claude-code-experimental]]。
@@ -111,6 +113,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期平台與文件異動：**
 
 - 桌面版文件異動已依主題彙整，見 [[entities/claude-code#桌面版功能地圖]]；下列時序條目保留。
+- **官方文件更新**（2026-11-03）：桌面版文件字數由 209,756 增至 211,650，但本頁段落數（1293）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-02）：桌面版文件字數由 207,065 增至 209,756，但本頁段落數（1284）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-30）：桌面版文件字數由 202,046 增至 203,154，但本頁段落數（1236）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -297,7 +300,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Fable 5 於 Max 方案自 2026-07-20 起持續要求「usage credits required」並靜默降級為 Opus 4.8（GitHub issue #79337，累積 77 則留言、26 個讚，2026-07-25 首見，2026-10-25 互動數更新）**：使用者回報自 2026-07-20（Fable 5 成為 Max 方案標準模型當天）起，Claude Code 在 Max 方案上執行 Fable 5 時反覆跳出「usage credits required」提示並靜默降級為 Opus 4.8，即使 session 已存 `claude-fable-5[1m]` 設定仍會被覆蓋；症狀與同日已標記「已修復」的 Anthropic Status 事件（見「🌐 服務穩定性」）重疊，但本則回報顯示問題並未隨該事件解決而消失，屬持續性 regression，自上線首日起已延燒逾 3 個月仍未修復；官方尚未針對此持續回報再次回應。定價/方案存取政策面另見 [[entities/pricing]]、[[topics/model-comparison]]；`[1m]` 變體遭覆蓋屬 1M model picker 控制權缺口。
 - 🔴 **未修復**｜**API Error: Rate limit reached，儘管訂閱 Claude Max 且僅使用 16% 額度（GitHub issue #29579，累積 153 則留言、94 個讚，2026-07-21）**：使用者回報訂閱 Claude Max 方案、用量儀表板僅顯示已用 16% 額度的情況下，仍收到「Rate limit reached」速率限制錯誤，顯示速率限制觸發條件與實際額度顯示可能未同步；與既有「額度顯示 84% 卻收到已達上限」（issue #19673）同屬額度計算與實際限制不一致的疑慮，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**方案 5 小時用量限額在不到 1 小時 30 分鐘內即用罄（GitHub Issues，累積 120 則留言、31 個讚，2026-07-19，今日互動量最高）**：使用者回報依標準 bug 回報範本提交，環境為 Anthropic API／Claude CLI v1.0.89，方案 5 小時用量限額實際不到 1 小時 30 分鐘即被用罄，遠低於預期使用時長；官方尚未回應，與既有「Max 訂閱方案立即觸及用量上限」（issue #16157）同屬配額消耗速度爭議，暫分列追蹤。
-- 🔴 **未修復**｜**「Server is temporarily limiting requests」錯誤與用量上限無關（GitHub issue #53915，累積 68 則留言、26 個讚，2026-07-13）**：使用者回報收到「伺服器暫時限制請求」的速率限制錯誤，官方訊息明確標註並非使用者用量上限所致；成因與是否可緩解官方尚未說明。
+- 🔴 **未修復**｜**「Server is temporarily limiting requests」錯誤與用量上限無關（GitHub issue #53915，累積 69 則留言、27 個讚，首見 2026-07-13，2026-11-03 互動數更新）**：使用者回報收到「伺服器暫時限制請求」的速率限制錯誤，官方訊息明確標註並非使用者用量上限所致；成因與是否可緩解官方尚未說明。
 - 🔴 **未修復**｜**Max 訂閱方案立即觸及用量上限（GitHub issue #16157，累積 1492 則留言、725 個讚，全站互動最高，2026-09-06 更新）**：使用者訂閱 Max 方案後幾乎立即觸頂；官方尚未回應。計費面另見 [[entities/pricing]]。
 - 🔴 **未修復**｜**圖片處理失敗導致 token 大量浪費（GitHub issue #60334，累積 76 則留言、19 個讚，首見 2026-07-12，2026-10-11 互動數更新）**：使用者回報一次圖片處理失敗即耗掉五小時額度約 70%，即使對話中沒有圖片也會觸發；Anthropic API 端圖片處理錯誤直接反映為使用者額度損失，官方尚未回應。
 - 🔴 **未修復**｜**v2.1.289 成本顯示把 Haiku 5.5 以 Opus 費率計算，讀數偏高達 17 倍（Reddit r/ClaudeAI，2026-10-11）**：單一使用者實測回報，官方未確認；依賴內建成本顯示控管支出者應自行核對帳單。定價面另見 [[entities/pricing]]。
@@ -372,7 +375,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔎 **查無官方**（標 2026-08-09｜查 #46221、[[topics/code-quality-decline]]｜複 2026-11-14）｜**Opus 4.6 1M 從選單消失被 200k 取代，預設切 Sonnet（#46221，2026-04-10）**：選 1M 後 /model 該選項消失；關為 duplicate（#45978，無官方留言）。
 - 🔴 **未修復**｜**功能請求：提供選項關閉啟動時歡迎畫面與提示（GitHub issue #2254，累積 47 則留言、151 個讚，首見 2026-08-02，2026-10-13 互動數更新）**：使用者希望能關閉 Claude Code 啟動時顯示的歡迎畫面與提示訊息，認為每次啟動都佔用終端機顯示空間；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**v2.1.150 起滑鼠滾輪失效，滾動動作誤判為方向鍵輸入（GitHub issue #65833，累積 49 則留言、124 個讚，2026-10-23 更新）**：升級至 v2.1.150 後，滑鼠滾輪在 TUI 中不再能捲動對話輸出內容，滾動動作反而被誤判為方向鍵輸入；與既有「CLI TUI 模式下無法捲動回看完整對話歷史」（issue #28077）同屬 TUI 捲動問題但成因不同，暫分列追蹤；官方尚未回應。
-- 🔴 **未修復**｜**Claude Code 在部分提示上卡住/凍結 5–20 分鐘以上（GitHub issue #26224，累積 131 則留言、151 個讚，2026-09-08 互動數更新，全站今日互動量最高）**：大量提示情境下卡住／凍結，持續 5–20 分鐘以上，標題註記 URGENT；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code 在部分提示上卡住/凍結 5–20 分鐘以上（GitHub issue #26224，累積 132 則留言、152 個讚，2026-11-03 互動數更新，全站今日互動量最高）**：大量提示情境下卡住／凍結，持續 5–20 分鐘以上，標題註記 URGENT；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 經常誤判所在工作目錄（GitHub issue #1669，累積 51 則留言、86 個讚，首見 2026-07-25，2026-10-13 互動數更新）**：使用者回報 Claude Code 經常誤判自己目前所在的工作目錄，導致指令執行失敗，且需經過多輪自我排查才能發現問題根源；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：訊息佇列模式——排入佇列而非中斷進行中任務（GitHub issue #50246，累積 67 則留言、236 個讚，首見 2026-07-25，2026-08-25 互動數更新，今日全站互動量次高）**：使用者反映 Claude 進行中任務時，目前唯一選項是中斷，若使用者想追加後續指令，只能打斷現有工作或事後另尋方式協調；呼籲新增訊息佇列機制，讓後續指令排隊等候而非強制中斷；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Opus 5 xhigh 推理強度於 Claude Code Desktop 失效，因思考功能被強制關閉（Reddit r/ClaudeCode，2026-07-25，Opus 5 上線當天新增問題，單一來源待更多佐證）**：使用者回報 Claude Code Desktop 上將 Opus 5 設為 xhigh 推理強度時功能失效，追查發現是思考（thinking）功能被強制關閉所致；此為 Opus 5 於 Claude Code 上線當天即浮現的新 regression，目前僅單一 Reddit 貼文回報、尚無 GitHub Issue 或跨平台佐證，暫列待更多來源確認；官方尚未回應。
@@ -563,7 +566,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**工作目錄追蹤暫存檔從未清理，`/tmp/claude-*-cwd` 持續累積（GitHub issue #8856，累積 71 個 reactions、111 則留言，首見 2026-07-17，2026-09-04 互動數更新）**：Claude Code 用來追蹤 Bash 執行間工作目錄變化的暫存檔（`/tmp/claude-*-cwd`）從未被清理，長期執行後持續累積佔用磁碟空間；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 建立 10GB VM bundle 導致效能持續惡化（GitHub issue #22543，78 則留言、271 個讚，首見 2026-07-15，2026-10-10 更新，今日互動量最高）**：使用 Cowork 後 Desktop 啟動變慢、UI 延遲，效能隨時間持續惡化；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Edit/Write 工具因緩衝區容量上限靜默截斷檔案（byte-conservation buffer cap，GitHub issue #53940，累積 44 則留言／16 個讚，原始回報 2026-04-27，2026-07-16 為作者持續維護的長篇更新摘要）**：使用者回報 Cowork 的 Edit/Write 工具會因緩衝區容量上限機制靜默截斷檔案內容，且此問題具確定性、在任何檔案大小下皆會觸發，並非邊緣情況；屬嚴重的資料完整性缺陷；官方尚未回應。
-- 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 54 則留言、57 個讚，首見 2026-07-17，2026-09-11 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
+- 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 77 則留言、59 個讚，首見 2026-07-17，2026-11-03 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件新增停用自動附加開啟檔案/選取範圍設定（GitHub issue #24726，累積 77 則留言、243 個讚，首見 2026-07-17，2026-09-16 互動數更新）**：使用者希望 VS Code 擴充套件提供選項，可停用自動將目前開啟檔案或選取範圍附加進對話 context 的行為；官方尚未回應或提供設定選項。
 - 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-11-14）｜**Remote Control 自動重連失效（GitHub issue #34255，71 則留言、108 個讚，07-16 首見，09-19 更新）**：中斷不自動重連、無提示；仍 open。與 #28322、#29006 同屬不穩定訊號。
 - 🔴 **未修復**｜**Remote Control 顯示「不可用於目前方案」，儘管帳號已以 Pro 方案完成驗證（GitHub issue #28817，45 則留言，2026-10-05）**：Pro 方案帳號驗證通過後仍報「not yet available on your plan」，登出重登無效；與 #34255（自動重連失效）現象不同，暫分列追蹤；官方尚未回應。
@@ -716,6 +719,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.317** | 2026-11-03 | `/schedule` 新增警告：雲端排程任務取得非使用者要求的 connector 時提示並附移除方式；新增工具呼叫前確認檢查；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）|
 | **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.1** | 2026-11-02 | Chores：為每個子套件的已發布型別宣告加上型別檢查，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1)）|
 | **anthropic-sdk-typescript google-cloud-sdk-v1.1.2** | 2026-11-02 | Chores：同批型別檢查；Docs：範例程式改用現行模型 ID（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.2)）|
@@ -937,6 +941,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - ❓ **待查證**（標 2026-10-25｜查 MCP Tasks、Elicitations）｜**MCP Tasks 與 Elicitations 支援傳出限量發布**：[Forkast News](https://news.google.com/rss/articles/CBMitAFBVV95cUxNZmIwUnNsbzdhTERIYWlMaWZhMEtVSWFCYU14dFZUQ3h5MWRSMlc1SklocTU5OUFPQm5xeEM1c1JxLXpiWU9aWkxlQUI5OHdVai1ZNFF1RHBnTjdiMW5MS2xhUnBPak5Dbmg1SDRuWkFQMGhEekZ2Y2dpWVdsbGN0WHEtcjdYOWY3Nlo0djRjQkVnRV9DX2l6OVVGX09FYmFkRlEyT01RNTNuTi1nejZsNVZNc3I?oc=5) 單一媒體報導，摘要為空，官方文件未見對應說明。
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
+- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 
 ### 桌面版功能地圖
@@ -1132,6 +1137,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-03 | **v2.1.317**：`/schedule` connector 警告＋確認檢查；旗標+12＋2代號，消失1。文件字數增。互動更新 #26224／#30112／#53915。 |
 | 2026-10-24 | **v2.1.310**：Monitor tool＋plugin 監控；旗標+4。SDK 新增 Tag endpoint，修復 GCP 路由。新增已知問題 3 則；Status 事故 3 起（已解決）。 |
 | 2026-10-23 | **v2.1.309**：sandboxed Bash／`denyWrite` 修復，4 旗標。SDK 同步新增 message threads。互動更新 #74649／#65833／#23626。 |
 | 2026-10-22 | **v2.1.308**：純可靠性修正。Vertex SDK 滿 1.0（⚠️ Breaking Change）；Python SDK v2.1.0 擴充 enforcement 參數；桌面文件增 Dispatch 說明；旗標增6消1。 |

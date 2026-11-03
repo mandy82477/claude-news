@@ -28,11 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **今日社群焦點：QA agent 創業公司發布貼文，附 Sonnet 5.5 基準數字**（2026-11-02）
-> - **Launch HN: Momentic**：YC W24 團隊發布自主規劃、探索並抓蟲的 QA agent；貼文提到 Sonnet 5.5 在 DeepSWE v1.1 基準跑出 66.2% 通過率；HN 81 分。
+> **今日社群焦點：OpenAI 疑似悄悄重開 Codex 訓練資料分享設定，籲比對其他 coding agent**（2026-11-03）
+> - **HN 讀者發現 Codex「改善模型」設定被悄悄重新開啟**：本人未重新同意，留言籲同時用 Claude Code 等其他 coding agent 的人一併檢查；HN score 151。
+> - **週熱門追加兩則**：資安工程師抱怨「vibe coded」標籤式嘲諷無視投入心力；團隊用 Claude 打造出瀏覽器分頁內可執行的 PS2 模擬器 TabStationToo。
 
 ---
 
@@ -153,11 +154,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| HN 讀者發現 OpenAI 悄悄重新開啟 Codex 對話訓練資料分享設定，籲比對其他 coding agent | 2026-11-03 · 2026-11-03 | 🔥🔥🔥 | ☄️閃現 | 公司原本關閉的 Codex「改善模型」設定被悄悄重新開啟、本人未重新同意；HN score 151（單源，待社群接力），留言籲同時用其他 coding agent 的人一併檢查設定 | — |
 | Launch HN: Momentic (YC W24)——自動規劃探索抓蟲的 QA agent，貼文附 Sonnet 5.5 在 DeepSWE v1.1 基準 66.2% 通過率 | 2026-11-02 · 2026-11-02 | 🔥🔥🔥 | ☄️閃現 | YC W24 團隊發布 QA agent，自主規劃、探索並抓 web／iOS／Android app 的 bug；Sonnet 5.5 在 DeepSWE v1.1 基準跑出 66.2% 通過率；HN 81 分（單源） | — |
 | Show HN: HackerBooks——找 Claude（Opus 5.5）全程寫出約 1.65 萬本 HN 推薦書的網站 | 2026-11-01 · 2026-11-01 | 🔥🔥🔥 | ☄️閃現 | 作者看到 Karpathy 的 HackerTube 後，找 Claude 全程寫資料管線與網站，整理出至少兩位 HN 留言者曾提過、約 1.65 萬本書，每本可回連留言串，資料可下載；HN score 105（單源，待社群接力） | — |
 | Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯 | 2026-11-01 · 2026-11-01 | 🔥🔥 | ☄️閃現 | 作者做出逼真的 3D 虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源） | — |
+| Reddit r/ClaudeAI 週熱門：資安工程師抱怨「vibe coded」標籤式嘲諷無視作品投入心力 | 2026-10-31 · 2026-10-31 | 🔥 | ☄️閃現 | 只要作品被認出用 AI 協助完成，社群第一反應永遠是「vibe coded」嘲諷，不論投入多少工夫；Reddit r/ClaudeAI 週熱門（0 留言，無獨立佐證） | — |
 | 一則推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者應自備替代模型 | 2026-10-31 · 2026-10-31 | 🔥🔥🔥 | ☄️閃現 | 留言主流：每個專業使用者都該備好替代模型與備援，並盡量選開放、標準化、可移植的生態；僅推文單方說法，未見官方回應；HN score 232（單源，待社群接力） | — |
 | 一則推文指控 Anthropic 開始限制用 Claude 重寫／移植既有電子遊戲，留言兩極 | 2026-10-30 · 2026-10-30 | 🔥🔥🔥 | ☄️閃現 | 留言兩極：AI devtools 公司該不該決定使用者能編譯出什麼程式，另一派反問 Anthropic 訓練資料本身的授權合法性；HN score 72（單源，待社群接力） | — |
+| Reddit r/ClaudeAI 週熱門：團隊用 Claude 打造出可在瀏覽器分頁內執行的完整 PS2 模擬器 TabStationToo | 2026-10-29 · 2026-10-29 | 🔥 | ☄️閃現 | 團隊用 Claude 協助打造出能在瀏覽器分頁內直接執行的 PS2 模擬器 TabStationToo；Reddit r/ClaudeAI 週熱門（0 留言，無獨立佐證） | — |
 | Simon Willison：vibe game 開發在 10 月出現能力拐點，延續去年 11 月 coding agent 拐點觀察 | 2026-10-28 · 2026-10-28 | 🔥 | ☄️閃現 | 延續去年 11 月 Opus 4.5／GPT-5.1 的 coding agent 拐點觀察，主張今年 10 月遊戲開發子領域出現類似能力轉折；具名表態，無社群延燒；[原文](https://simonwillison.net/2026/Oct/28/vibe-game-development/) | — |
 | 官方隱私文件：按意見回饋鍵或自行同意，商業方案對話也可能被用於訓練 | 2026-10-27 · 2026-10-27 | 🔥🔥🔥 | ☄️閃現 | privacy.claude.com 說明商業方案預設不用對話訓練模型，但按 👍👎 回饋鍵或另行同意後，對話與 coding session 可能被收進訓練；HN score 100（2 來源） | — |
 | Towards Data Science 田野實測：Claude Code 與 Cursor 的功能列表外的真實落差 | 2026-10-26 · 2026-10-26 | 🔥 | ☄️閃現 | 以實測方式比較 Claude Code 與 Cursor，指出單看官方功能列表會漏掉的實際使用差異；重要媒體報導，待社群接力（10-26） | — |
@@ -264,6 +268,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 ### 2026-11
 
+#### 工程師發現 OpenAI 悄悄重新開啟 Codex 對話訓練資料分享設定（2026-11-03）
+
+- **來源：** OpenAI seems to be silently re-enabling model training on Codex chats — Hacker News（151 分）；[原文](https://news.ycombinator.com/item?id=50352757)
+- **核心論點：** 工程師發現公司原本已關閉的 Codex「改善模型」資料分享設定被悄悄重新開啟，本人與同事均未重新同意；留言建議同時使用 Claude Code 等其他 coding agent 的人，也該檢查自己在這些工具上的資料分享設定是否被動過。
+- **關鍵回響：**（本次摘要未提供留言區細節，HN 151 分為本輪互動量最高的條目）
+- **收斂結論：**（無）單篇 HN 貼文指控 OpenAI 一方的設定異常，無 Anthropic 官方對應說明；本頁僅記錄這則訊號提醒讀者比對自己在 Claude Code 等多款工具上的資料分享設定，不代表 Claude Code 本身出現同類問題。
+
 #### Launch HN: Momentic (YC W24)——自動規劃探索抓蟲的 QA agent（2026-11-02）
 
 - **來源：** Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app — Hacker News（81 分）；[原文](https://momentic.ai/)
@@ -284,6 +295,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 ### 2026-10
 
+#### 資安工程師抱怨「vibe coded」標籤式嘲諷無視作品投入心力（2026-10-31）
+
+- **來源：** Security engineer here. The anti-AI hate is getting ridiculous — Reddit / r/ClaudeAI（週熱門，0 留言）；[原文](https://www.reddit.com/r/ClaudeAI/comments/1xkg97u/security_engineer_here_the_antiai_hate_is_getting/)
+- **核心論點：** 作者自述為資安工程師，觀察到只要作品被認出是用 AI 協助完成，社群的第一反應永遠是「vibe coded」式嘲諷，不論背後投入多少工夫。
+- **關鍵回響：**（0 留言，本次摘要未見跟進佐證或社群延燒）
+- **收斂結論：**（無）單一具名立場貼文，無正反交鋒細節可查，亦無官方回應；本頁僅記錄這則「AI 協作作品被標籤化嘲諷」的社群情緒訊號。
+
 #### 推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者自備替代模型（2026-10-31）
 
 - **來源：** 「Anthropic blocks users for anything touching training larger models」（Hacker News，232 分，原推文 @jiahaoshao1）；[原文](https://twitter.com/jiahaoshao1/status/2116475922190922088)
@@ -300,6 +318,13 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
   - 📝 反對限制：主張 AI 公司不該扮演「決定你能不能編譯」的角色，否則 AI 會從技術淪為意識形態審查。
   - 📝 質疑 Anthropic 立場一致性：指出 Anthropic 本身訓練資料的授權合法性也有爭議，兩者對照顯得矛盾。
 - **收斂結論：** 無——單一推文引發的爭論，尚無官方說明限制範圍或理由，亦無第二個獨立來源佐證「限制」確實發生。
+
+#### 團隊用 Claude 打造出可在瀏覽器分頁內執行的完整 PS2 模擬器 TabStationToo（2026-10-29）
+
+- **來源：** We used Claude to get a full PS2 emulator running in a browser tab: TabStationToo — Reddit / r/ClaudeAI（週熱門，0 留言）；[原文](https://www.reddit.com/r/ClaudeAI/comments/1xigpgr/we_used_claude_to_get_a_full_ps2_emulator_running/)
+- **核心論點：** 團隊用 Claude 協助打造出能在瀏覽器分頁內直接執行的完整 PS2 模擬器 TabStationToo。
+- **關鍵回響：**（0 留言，本次摘要未提供技術細節或留言區佐證）
+- **收斂結論：**（無）單篇展示性貼文，技術實作細節未見於本次摘要；本頁僅記錄其作為「Claude 能完成硬核技術挑戰」案例的熱度訊號。
 
 #### 官方隱私文件：按意見回饋鍵或自行同意，商業方案對話也可能被用於訓練（2026-10-27）
 

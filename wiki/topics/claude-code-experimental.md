@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-10-30
-**最後新聞更新：** 2026-10-30
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-10-30）
-> 2.1.314（自 2.1.312 起比對）新增 7 個第一階候選旗標：`CLAUDE_CODE_BRIDGE_CHILD_CLI_ENTRYPOINT`、`CLAUDE_CODE_CCR_LONG_POLL`、`CLAUDE_CODE_DISABLE_POOLED_CONNECTION_IDLE_LIMIT`、`CLAUDE_CODE_DISABLE_RESPONSE_COMPARISON`、`CLAUDE_CODE_MEMORY_CONTEXT_NO_WAIT`、`CLAUDE_CODE_STREAM_EVENT_MAX_LINE_BYTES`、`CLAUDE_CODE_UPFRONT_TOOLS`。對帳僅命中來源條目自身，新旗標暫不升第二階。
+> **最新動態**（2026-11-03）
+> 2.1.317（自 2.1.316 起比對）新增 12 個第一階候選旗標＋2 個代號旗標（`DEEP_TWILIGHT`、`FIZZY_GROVE`）；另 3 個設定類旗標依蒐集邊界不列；`CLAUDE_CODE_LAZY_ENV_GETTERS`（首見 2.1.299）消失，列 4 階。對帳僅命中來源條目與日報鏡像，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.317（11-03，自 2.1.316 起）新增 12 個候選旗標＋2 個代號旗標**（名單見追蹤表），皆第一階；另 3 個設定類旗標來源已過濾不列；`CLAUDE_CODE_LAZY_ENV_GETTERS`（首見 2.1.299）消失，列 4 階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.314（10-30，自 2.1.312 起）新增 7 個候選旗標**（名單見追蹤表），皆第一階；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.312（10-28，自 2.1.311 起）新增 1 個候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`**，第一階；`CLAUDE_CODE_MCP_HANDED_LISTINGS`（首見 2.1.311）消失，列 4 階「已移除」；另有 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.311（10-27，自 2.1.310 起）新增 15 個候選旗標**（名單見追蹤表），皆第一階；對帳僅命中來源條目與日報鏡像，暫不升第二階。`CLAUDE_CODE_TOOL_CONTAINER_PLUGINS_NAMED`（首見 2.1.310）消失，列 4 階「已移除」。
@@ -69,6 +70,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_AUTO_MODE_THREAD_ASK_OWN_WORK` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_CCR_SLOW_SKILLS_WATCH` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_DID_NOT_RUN_BASH_TOO_OLD` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_DISABLE_MCP_TASKS` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_DISABLE_SUBAGENT_HANDBACK` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_ENABLE_WRAP_UP` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_HOST_SHORT_TEMP_DIRS` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_PERSONAL_HOOKS_OFF` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_PLAIN_DELTA_DIRECT_WRITE` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_PLAIN_DELTA_TAKE_AT_SOURCE` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
+| `CLAUDE_CODE_RELAUNCH_RESUME_HINT_FLAGS` | 2.1.317（11-03） | 1 | — | — | 2.1.317 仍在（比對日 11-03） |
 | `CLAUDE_CODE_BRIDGE_CHILD_CLI_ENTRYPOINT` | 2.1.314（10-30） | 1 | — | — | 2.1.314 仍在（比對日 10-30） |
 | `CLAUDE_CODE_CCR_LONG_POLL` | 2.1.314（10-30） | 1 | — | — | 2.1.314 仍在（比對日 10-30） |
 | `CLAUDE_CODE_DISABLE_POOLED_CONNECTION_IDLE_LIMIT` | 2.1.314（10-30） | 1 | — | — | 2.1.314 仍在（比對日 10-30） |
@@ -135,7 +148,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_AUTO_MODE_COMPACT_THREAD_RULE` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
 | `CLAUDE_CODE_ENABLE_SHARE_BUNDLE` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
 | `CLAUDE_CODE_JIT_POLICY_AFTER_STARTUP` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
-| `CLAUDE_CODE_LAZY_ENV_GETTERS` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
+| `CLAUDE_CODE_LAZY_ENV_GETTERS` | 2.1.299（10-14） | 4 | — | — | 2.1.317（11-03）消失（來源條目消失清單） |
 | `CLAUDE_CODE_MCP_ALWAYS_LOAD_JOIN_BEFORE_INPUT` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
 | `CLAUDE_CODE_REMOTE_MCP_CONFIG` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
 | `CLAUDE_CODE_SANDBOX_LEAVE_DENIES_TO_SRT_WIN` | 2.1.299（10-14） | 1 | — | — | 2.1.299 仍在（比對日 10-14） |
@@ -286,6 +299,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_DEEP_TWILIGHT` | 2.1.317（11-03）出現 |
+| `CLAUDE_CODE_FIZZY_GROVE` | 2.1.317（11-03）出現 |
 | `CLAUDE_CODE_WITTY_DEWDROP` | 2.1.308（10-22）出現 |
 | `CLAUDE_CODE_DAPPER_CUPCAKE` | 2.1.301（10-16）出現 |
 | `CLAUDE_CODE_SNAPPY_PELICAN` | 2.1.296（10-10）出現 |
@@ -333,6 +348,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-03 | 2.1.317 新增 12 旗標＋2 代號（名單見追蹤表）；3 設定類不列；`LAZY_ENV_GETTERS` 消失列 4 階；對帳僅命中來源與日報鏡像 |
 | 2026-10-30 | 2.1.314（自 2.1.312 起）新增 7 個第一階候選旗標（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目自身，不算獨立佐證 |
 | 2026-10-28 | 2.1.312 新增候選旗標 `CLAUDE_CODE_HOST_GUARDS_ARTIFACTS_MCP`；`MCP_HANDED_LISTINGS`（首見 2.1.311）消失，列 4 階；僅命中來源與日報鏡像 |
 | 2026-10-27 | 2.1.311 新增 15 個第一階候選旗標（名單見追蹤表）；`TOOL_CONTAINER_PLUGINS_NAMED`（首見 2.1.310）消失，列 4 階；對帳僅命中來源條目與日報鏡像，不算獨立佐證 |

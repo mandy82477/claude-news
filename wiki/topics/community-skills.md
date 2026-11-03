@@ -31,13 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-01
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **Skills 設計再添三例：像素特效生成、電影分鏡提示詞、.NET 技能目錄**（2026-11-01）
-> - **patch-gg/pixelfx（2,351★）**：244 種像素藝術特效各自為一小段程式碼，附 Claude Code skill 讓使用者依現有慣例自製新特效。
-> - **jnMetaCode/ai-shortfilm-prompts（506★）**：把任意想法轉成 Sora／Kling／Veo／Seedance 可直接使用的電影化分鏡提示詞，21 種類型模板、五階段結構，附 eval 測試。
-> - **managedcode/dotnet-skills（500★）**：最大型 .NET 專屬技能收藏之一，提供目錄、CLI 與編排 agent，相容 Codex、Claude Code、GitHub Copilot、Gemini、Junie。
+> **Skills 設計新增一例：串接瀏覽器與終端自動產出附配音與字幕的產品示範影片**（2026-11-03）
+> - **aaitor/skill-video-studio**：Claude Code skill 串接瀏覽器與終端，自動產出附專業配音與多語字幕的產品示範影片；Hacker News ＋ HN Repo Bridge 合計 113 分。
 
 ---
 
@@ -95,6 +93,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### aaitor/skill-video-studio：串接瀏覽器與終端，自動產出附配音與多語字幕的產品示範影片 Skill（2026-11-02）
+
+- **主線：** —
+- **核心模式：** Claude Code skill，串接瀏覽器與終端自動化產出產品示範影片，附專業配音與多語字幕；作者自述開發新產品時常把精力全放在打造功能本身，行銷、教學文件與示範影片這類推廣素材反而長期被忽略，此 skill 補上這塊。
+- **與既有模式的關係：** 補上「Skills 設計」一個「產品推廣／示範影片生成」取向——既有做法多聚焦程式碼、UI 或文件類技能，本則首次把 skill 用在產品發布後的行銷素材產出；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News ＋ HN Repo Bridge 兩個來源合計 113 分，互動量達中等實測水準；具體配音與字幕品質未見第三方驗證。
+- **來源：** Hacker News ＋ HN Repo Bridge；[GitHub](https://github.com/aaitor/skill-video-studio)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### 同日三款 Skills 設計新實作：pixelfx（像素特效生成）、ai-shortfilm-prompts（電影分鏡提示詞）、dotnet-skills（.NET 技能目錄）（2026-11-01）
 
