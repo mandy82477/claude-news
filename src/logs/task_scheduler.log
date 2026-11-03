@@ -1401,3 +1401,4 @@ ABORTED: gathered_items.json date=2026-10-30 items=79，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-11-03T17:09:23Z]
 [2026-11-03T17:09:46Z] ABORTED: gathered_items.json date=2026-11-02 items=81，非目標日期（TARGET_DATE=2026-11-03）的新鮮資料 - cp src/gathered_archive/2026-11-03.json 失敗（檔案不存在），GitHub Actions daily-gather 最近一次成功 run #51 於 2026-11-02T20:25:06Z 完成（產出 11-02 資料），今日（11-03）排程尚未出現任何 run，現在 2026-11-03T17:09:46Z 已超出近期常態執行窗口，延遲程度仍在 _shared.md 記錄過的正常變異範圍內（實測最多 +11.2 小時），非上游故障判定。Step 0 昨日缺跑檢查：news/2026-11-02.md 存在，通過，無需本機承接。依本檔開頭多班設計，留待 22 UTC 班資料到齊後接手，不補跑、不等待。
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-03T17:09:46Z] TARGET_DATE=2026-11-03，Step 1a cp 失敗（src/gathered_archive/2026-11-03.json 不存在）→ Step 1b 新鮮度防線中止（gathered_items.json date=2026-11-02 items=81，非目標日期）。17 UTC 班（第二班），GitHub Actions daily-gather 今日尚未觸發，非失敗。留待 22 UTC 班接手。
+[cloud daily-news-pipeline-cloud STARTED 2026-11-03T22:09:09Z]
