@@ -3,17 +3,17 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-10-29"
-last_news_update: "2026-10-29"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 1
 parent: null
 children: "['topics/enterprise-tool-tracker-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 1
 inbound_links: 52
-attribution_count: 50
-attribution_last: "2026-10-29"
+attribution_count: 51
+attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-29
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-10-29）
-> TweakTown 報導 Epic Games 已用 Claude Code 與 Codex 直接協助改善／除錯 Unreal Engine 本體，僅標題可用；此前（10-12）官方僅釋出 skills 供外部開發者使用，兩者層次不同。Replit 合作爭議仍標「有爭議」未變。
+> **最新企業採用異動**（2026-11-03）
+> PYMNTS 報導高盛全面禁止行員使用 Claude Code 與 GitHub，是目前已知首見具名大型金融機構對 coding agent 下達禁用令；與 2026-08-20 香港 Claude AI 存取權限切斷（區域存取政策）為不同案例，僅標題可用，禁令範圍與生效時間未見報導。
 
 ## 摘要
 
@@ -66,6 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期退出／縮減：**
 
+- **Goldman Sachs**（❌ 新增，Claude Code／GitHub 全面禁用）：PYMNTS 報導禁止行員使用 Claude Code 與 GitHub，首見具名大型金融機構對 coding agent 下達禁用令；與既有 08-20 香港 Claude AI 存取權限切斷（不同案例）並列
 - **Replit**（⚠️ 有爭議）：執行長 10-16 台上稱不再與 Anthropic 合作，理由是成本、夥伴關係與效能；熟悉合作的匿名人士否認合作已結束，雙方無正式聲明
 - **Microsoft**（❌ 已停用 Claude Code）：成本考量；2026-06-21 確認於 Fable 5 封鎖期間加速退出，2026-06-22 The Jerusalem Post 跟進確認系統性降低對 Claude 依賴，GitHub Copilot 為主要替代方案
 - **JPMorgan Chase**（❌ 已退出）：香港分行因出口管制被迫退出
@@ -74,7 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
-**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture、美國參議院與 Replit 故為 51；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；Replit 合作狀態有爭議，不計入退出；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture、美國參議院與 Replit 故為 51；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；Goldman Sachs 名下有兩筆獨立退出記錄（08-20 香港 Claude AI 存取切斷、11-02 Claude Code／GitHub 全面禁用），企業計數仍算一家；Replit 合作狀態有爭議，不計入退出；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -90,6 +91,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Goldman Sachs | 頂尖 | Claude Code ＋ GitHub | ❌ | — | 全面禁止行員使用，首見具名大型金融機構對 coding agent 下達禁用令；與下方 08-20 香港 Claude AI 存取權限切斷為不同案例，禁令範圍與生效時間未見報導 | 2026-11-02 |
 | Replit | 大型（AI 編碼/應用開發平台） | Claude（API 整合） | ⚠️ 有爭議 | 2026-10-16 | 執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方 | 2026-10-17 |
 | Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
 | 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
@@ -188,13 +190,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 工具 | 企業採用數 | 趨勢 | 主要阻力 |
 |------|----------|------|---------|
-| Claude Code | 10 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce 等，詳見上方使用現況表）+2縮減（Uber、Meta）+2退出（Microsoft、Alibaba） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案例顯示「疑似後門」指控也可能成為退出理由（指控未經證實），且已確認具體替代方案（Qoder） |
+| Claude Code | 10 使用（Amazon、UiPath、Rubrik、JFrog、Salesforce 等，詳見上方使用現況表）+2縮減（Uber、Meta）+3退出（Microsoft、Alibaba、Goldman Sachs） | ⚠️ 成本壓力 + Fable 5 封鎖衝擊 + 安全疑慮與合規禁用新增退出理由；✅ 政府與晶片設計案例出現具體量化成效（Alberta 4.66 億行/20hr；Samsung 晶片設計/驗證時程壓縮，惟仍會犯嚴重錯誤） | 缺乏企業層級預算管控；Fable 5 出口管制加速部分企業評估替代方案；Alibaba 案顯示「疑似後門」指控亦可能成為退出理由（未經證實），已確認替代方案（Qoder）；Goldman Sachs 為首見全面禁用案，成因見下方細節 |
 | Claude API | 31（詳見下方「採用企業清單」）+ 1 退出（Lindy → DeepSeek）+ 1 有爭議（Replit） | 🟢 快速擴張（政府/合規/服務業縱深加深，新增醫療研究、金融科技、加密貨幣、教育機構、頂尖科技公司全體工程師開放）；⚠️ 部分 API 客戶因成本敏感轉向競品 | — |
 | GitHub Copilot | 1（Microsoft） | 🟢 Microsoft 背書 | 生態鎖定 |
 | OpenAI Codex | 2（Amazon、UiPath） | 🟢 快速成長 | — |
 | Cursor | 1（Uber） | ⚠️ 新創份額下滑 | 成本管控困難；企業級功能不如 Claude Code |
 
-> 本表按「企業×工具」計：Microsoft 的 10-05 縮減屬 Claude 整體使用、不計入 Claude Code 縮減數；Claude Code 退出 2 家＝Microsoft、Alibaba。Meta 與 Microsoft 同為 Claude Code 競品供應商（Muse Code；GitHub Copilot），見 [[topics/competitor-landscape]]。
+> 本表按「企業×工具」計：Microsoft 的 10-05 縮減屬 Claude 整體使用、不計入 Claude Code 縮減數；Claude Code 退出 3 家＝Microsoft、Alibaba、Goldman Sachs。Meta 與 Microsoft 同為 Claude Code 競品供應商（Muse Code；GitHub Copilot），見 [[topics/competitor-landscape]]。
 
 **採用企業清單（Claude API，31）**：Apple、KPMG、iCapital、哈佛、Fujitsu、Travelport、Nimble Gravity、ZoomInfo、LG Group、AppFolio、Salesforce Claude API、TCS、DXC Technology、Atlassian、JPMorgan Chase 美國本部、Charleston Hospitality Group、Notion、加州州政府、Globant、DataArt、Okta、Grasshopper Bank、Cognizant、ICON、Payward、Duke University、PicPay、T. Rowe Price、Google、Rubrik（Code Guardian）
 
@@ -215,6 +217,11 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ---
 
 ## 時序
+
+### 2026-11
+
+#### 2026-11-02
+- **[新增具名企業，❌ 已退出] PYMNTS：高盛全面禁止行員使用 Claude Code 與 GitHub**：首見具名大型金融機構對 coding agent 下達禁用令；與 08-20 香港 Claude AI 存取權限切斷（區域存取政策）為不同案例，僅標題可用，禁令範圍與生效時間未見報導，詳見上方使用現況表新增列（Google News/PYMNTS.com）
 
 ### 2026-10
 

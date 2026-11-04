@@ -243,8 +243,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "24f4113c5464710380ebc7134a4cca6d583475504757913995a82b2cf389d4d9",
-    "length": 209756,
+    "hash": "bac6e1289ac087224506d105985ac376ac13783c1e32a27ea6c3e3235a2a715c",
+    "length": 211650,
     "segments": [
       "\"HTTPS_PROXY\": \"http://proxy.example.com:8080\",",
       "\"NODE_EXTRA_CA_CERTS\": \"/etc/ssl/certs/example-ca.pem\"",
@@ -2284,8 +2284,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "3d39ebdd5ac8b2016e13ef7e8ca354c9259e6546304583d9c2df06439c07d8e2",
-    "length": 8389,
+    "hash": "653ef1c8768f169a7d4aace24136c7dbb30d18619f6d152f08eebf7467531706",
+    "length": 8393,
     "segments": [
       "All Collections Claude Usage and limits How do usage and length limits work? How do usage and length limits work?",
       "Amazon Bedrock",
@@ -2307,6 +2307,7 @@
       "How do usage and length limits work? | Claude Help Center Skip to main content API docs Release notes How to get support English Français Deutsch Bahasa Indonesia Italiano 日本語 한국어 Português Pусский 简体中文 Español 繁體中文 English Search ⌘ K Claude",
       "How do weekly limits work?",
       "How does the five-hour limit work?",
+      "How large is the context window on paid Claude plans?",
       "Identity management (SSO, JIT, SCIM)",
       "If you hit your session limit or weekly limit, you can wait for it to reset or upgrade your plan. If you upgrade, your new plan’s limits apply right away. With usage credits enabled, your work continues on usage credits instead of stopping. If you hit a length limit, you can start a new conversation or use features like projects to work with larger amounts of information more efficiently.",
       "If you&#x27;re using a paid plan, including Pro, Max, Ultra, Team, or seat-based Enterprise plans, see these articles for details about purchasing usage credits:",
@@ -2341,7 +2342,6 @@
       "Usage Policy",
       "Usage limit best practices",
       "Usage limits control how much you can interact with Claude over a specific time period. Think of this as your &quot;conversation budget&quot; that determines how many messages you can send to Claude, or how long you can work with Claude Code, before needing to wait for your limit to reset. Paid plans have two types of usage limits: a session limit that resets every five hours, and weekly limits that reset once every week.",
-      "Use Claude Code with your Pro, Max, or Ultra plan",
       "Utilize projects effectively: Projects use retrieval-augmented generation (RAG), which allows Claude to work with larger amounts of information more efficiently by only loading relevant content into the context window.",
       "Verified Ultra accounts don&#x27;t have a five-hour limit. Learn more about verified Ultra accounts .",
       "Weekly limits apply across all models, and some plans also have a separate weekly limit for Fable. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings &gt; Usage .",
@@ -2356,8 +2356,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan": {
-    "hash": "79a498ae76e67f03e988175a6b754f1e67a66c5e6cd3f3f78f8d5481f68e9ad9",
-    "length": 9151,
+    "hash": "adc2acbc18accd373ec67a532e8febad16573ad9836a5f3bef635c28fd347605",
+    "length": 9181,
     "segments": [
       "Adjust these settings in the Console if you prefer to avoid automatic credit purchases.",
       "All Collections Claude Code Use Claude Code with your Pro, Max, or Ultra plan Use Claude Code with your Pro, Max, or Ultra plan",
@@ -2441,6 +2441,7 @@
       "To maintain your Pro, Max, or Ultra plan budget, simply decline API credit options when offered.",
       "Ultra plan users",
       "Understanding two distinct systems",
+      "Understanding your Pro, Max, or Ultra plan invoices",
       "Usage Policy",
       "Usage will be billed at standard API rates (distinct from Pro/Max/Ultra plan pricing).",
       "Use Claude Code for your terminal-based coding workflows.",
@@ -2453,7 +2454,6 @@
       "What happens when you hit usage limits",
       "What is Claude Code?",
       "What is the Max plan?",
-      "What is the Pro plan?",
       "What is the Ultra plan?",
       "When prompted during setup or first use, log in with the same credentials you use for Claude.",
       "When you reach your usage limits, you can select from a few options based on your needs:",

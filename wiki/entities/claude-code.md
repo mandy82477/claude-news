@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "active"
 matrix_role: "產品"
 days_since_news: 1
@@ -14,12 +14,12 @@ children: "['entities/claude-code-archive', 'entities/claude-code-features', 'en
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 127
-attribution_count: 837
-attribution_last: "2026-11-02"
+attribution_count: 843
+attribution_last: "2026-11-03"
 top_source: "github-issues"
 pending_count: 6
-pending_overdue: 0
-pending_next_review: "2026-11-04"
+pending_overdue: 2
+pending_next_review: "2026-11-14"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -32,12 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-11-02）
-> - **MSIX GPU 當機找到根因**：新回報（#81341）指出錯誤碼 0x060C201E 源自 Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，每次開啟瀏覽器預覽都會當機，與既有 #80444 合併追蹤（見 [[entities/claude-code-known-issues]]）。
-> - **新已知問題**：圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（#62466，36 則留言；見 [[entities/claude-code-known-issues]]）。
+> **最新動態**（2026-11-03）
+> - **v2.1.317**：`/schedule` 新增雲端排程任務取得非使用者要求的 connector 時的警告與移除方式；新增工具呼叫前的確認檢查（官方原文截斷；見 [[entities/claude-code-releases]]）。
+> - **高互動已知問題更新**：卡住/凍結（#26224，132 則留言、152 個讚，全站今日互動量最高）、Cowork 網路白名單失效（#30112，77 則留言、59 個讚）、速率限制錯誤與用量上限無關（#53915，69 則留言、27 個讚）互動數同步更新（見 [[entities/claude-code-known-issues]]）。
+> - **桌面版文件增字**（209,756→211,650），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
 
 ---
 
@@ -47,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-02 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-02 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-02 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-03 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-03 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-03 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的
@@ -77,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.316**（2026-10-31）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
+- 最新 **v2.1.317**（2026-11-03）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
 - **該不該升**：沒用 Opus 4.8 fast mode，留在 stable 就夠；要 Monitor tool 或寫入邊界設定才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
@@ -102,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - ❓ **待查證**（標 2026-10-21｜查 old chat、warns you）｜**Claude Code 傳新增「接續舊對話前提醒會吃掉本次 5 小時額度」提示**（MIXED Reality News，2 個來源，2026-10-21 報導，僅標題可用）：功能名稱、版本號與是否已上線均未見官方確認；與今日桌面版文件新增的用量顯示段落是否同一功能待查。
 - ❓ **待查證**（標 2026-10-21｜查 Bedrock、schema-enforced）｜**AWS 傳 Amazon Bedrock 為 Claude 新增結構化輸出（schema-enforced outputs），涵蓋兩種 API 介面**（OpenTools，2026-10-20 報導，僅標題可用）：細節未見官方文件確認。

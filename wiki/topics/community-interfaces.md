@@ -3,8 +3,8 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/community-tech-patterns"
@@ -31,12 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **終端機 session 瀏覽新增一例，語音互動類再添兩個獨立實作**（2026-11-02）
-> - **victorcarrico/arvre**：終端機圖形化瀏覽 Claude Code session 與分支（fork）。
-> - **Smalt／Poinky**：語音操作 Claude Code，與 10 月的 tapq 合計已有三個獨立實作。
+> **介面元件複用新增一款 GUI，Agent 活動可視化新增一款角色旁白桌面小工具**（2026-11-03）
+> - **baocode-dev/baocode（519★）**：Claude Code CLI 的圖形化介面工具。
+> - **mochiiwuff/capri-desktop（517★）**：取材電玩角色 Capri 的桌面小工具，即時旁白講述 Claude Code 目前在做什麼。
 
 ---
 
@@ -57,6 +57,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### baocode-dev/baocode：Claude Code CLI 的圖形化介面工具（2026-11-03）
+
+- **主線：** —
+- **核心模式：** 圖形化 GUI 工具，包裝 Claude Code CLI 的操作介面；GitHub Search 519 星。
+- **與既有模式的關係：** 補上「介面元件複用」既有代表技巧（Brainless、statuslin.es 等，[[topics/community-interfaces#2026-10]]）一個「獨立 GUI 應用」取向——既有做法多是終端機美學外掛，本則換成圖形化桌面介面；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（519★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/baocode-dev/baocode)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### mochiiwuff/capri-desktop：取材電玩角色的桌面小工具即時旁白講述 Claude Code 操作（2026-11-03）
+
+- **主線：** —
+- **核心模式：** 桌面小工具，以《電馴邊緣行者》角色 Capri 的形象即時旁白講述 Claude Code 目前在做什麼；GitHub Search 517 星。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（claude-office、HachimoDock 桌面寵物等，[[topics/community-interfaces#2026-10]]）一個「具名角色語音旁白」取向——既有做法多走動畫場景或儀表板呈現狀態，本則改用角色旁白講述操作內容；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/mochiiwuff/capri-desktop)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### victorcarrico/arvre：終端機圖形化檢視 Claude Code session 與分支（fork）（2026-11-02）
 

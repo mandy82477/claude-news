@@ -3,8 +3,8 @@ page: "topics/anthropic-business-risks"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -31,11 +31,13 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-11-02）
-> - **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍；數字出自修訂版 S-1，見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)）
+> **最新動態**（2026-11-03）
+> - **Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計能力**，細節未見報導，只有標題（[The Information](https://news.google.com/rss/articles/CBMinAFBVV95cUxQYnpwS0FzRk9KWUhPNC1rT3JnNWdLN1NhTWM0VU5zWHkyZEo5NVR1dXJhTWdVY2R0ZGEwcVhDTGZ3TkR5SGRIemoyenlCUU1TV2xMTzNBa0xtZDJSb1hGeUVqVlhBVmJNRVFkVS1qb21LdmtqOUxmWEtVOEgwd3JnRnNJMHJIQXdfYndBMUpjZWNPaGRwSW55ZWJsdEk?oc=5)；Investing.com）
+> - **人事成本換算每人每月逾 $10.7 萬**：單季人事費用逾 $17 億，同出修訂版 S-1，見 [[topics/anthropic-ipo#數字細節]]（[TechSpot](https://www.techspot.com/news/114428-anthropic-ipo-filing-reveals-17-billion-quarterly-personnel.html)）
+> - **（11-02）內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍；數字出自修訂版 S-1，見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)）
 
 ---
 
@@ -199,6 +201,11 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-03
+- **[商業模式] Breakingthenews.net／The Information：Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計**：延續 08-05～07 自研晶片團隊信號，細節未見報導，只有標題（Google News/Breakingthenews.net；The Information；Investing.com）
+- **[商業風險] regenerator1.com：Q3 營收換算月增量近乎停滯**：與官方 $170 億為同一數字的四捨五入差異，數字並陳見 [[topics/anthropic-ipo#數字細節]]（HN 226 分）
+- **[商業模式] TechSpot 引 Business Insider：修訂版 S-1 換算人事成本至每人每月**：單季人事費用逾 $17 億，見 [[topics/anthropic-ipo#數字細節]]（TechSpot）
 
 #### 2026-11-02
 - **[商業模式] Business Insider：內部零售價換算的 Claude 使用量 4 月起已超過當月員工薪酬，1–9 月暴增逾 250 倍**：補上 11-01 已記錄事實的具體數字與時間點，S-1 揭露脈絡見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（Business Insider）

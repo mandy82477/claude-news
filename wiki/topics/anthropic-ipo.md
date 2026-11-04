@@ -3,17 +3,17 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 44
-attribution_count: 27
-attribution_last: "2026-11-02"
+inbound_links: 47
+attribution_count: 30
+attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 0
@@ -31,12 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-11-02）
-> - **修訂版 S-1（S-1/A）首度揭露 Q3 具體財報與採購承諾總額**：Q3 營收 170 億美元、採購承諾 8,950 億美元、營運虧損 12.5 億美元（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)、FT）
-> - **revenue-per-compute 比值由 2.08x 降至 1.72x**：每一美元算力投入產生的營收正在下降（Hacker News 引 SEC 文件）
+> **最新動態**（2026-11-03）
+> - **Hacker News 387 分：評論文章主張 SEC 應以保護公眾為由擋下 IPO**（[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)）
+> - **修訂版 S-1 新增揭露：公司認為可能「迫近」觸及內部定義的 RSI 臨界點**，強調現有模型未跨過（[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)；Wccftech）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -79,6 +79,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 
 | 議題 | 數字或事實 | 來源層級 | 對工程師的意涵 |
 |---|---|---|---|
+| 遞迴自我改進（RSI）接近性揭露（2026-11-03） | 公司自認可能「迫近」觸及內部定義的 RSI 臨界點，但強調現有在產模型皆未跨過 | 媒體轉述（引修訂版 S-1） | 治理層級風險揭露，非產品公告；安全治理完整脈絡見 [[topics/ai-agent-safety]] |
 | 9 個月累計財報（2026-11-02 修訂版 S-1） | Q3 單季營收 $170 億；9 個月累計營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億；每股有形帳面淨值 -$68.47；員工持股均價 $2.91 | 官方一手（SEC 文件） | 虧損規模遠小於 H1 淨損 $807 億（多為可轉換工具會計項），但現金負債已逼近資產總額，供應商穩定性要看現金走勢而非這個總數 |
 | 採購承諾總額升至 $8,950 億 | 其中 $4,475 億預計 2030 年底前支出完畢，取代此前 The Information $5,170 億統計口徑 | 官方一手 | 容量承諾進一步鎖定、服務不易斷供；代價是固定支出若需求不如預期可能傳導至定價 |
 | revenue-per-compute 比值 2.08x → 1.72x | 每一美元算力投入產生的營收下降，衡量期間與方法論未見細節 | 媒體轉述（引官方數字） | 若趨勢延續，可能削弱「規模帶來效率」的獲利敘事，是路演時機構投資人可能放大檢視的指標 |
@@ -101,6 +102,8 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
 - **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
 - **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[#S-1 揭露了什麼]]。
+- **Q3 換算月增量幾乎停滯（2026-11-02，regenerator1.com，HN 226 分）**：文章依官方 9 個月累計數字反推 7–9 月月增量，稱環比成長幅度小於 Q2；原文引 Q3 營收 $168 億為四捨五入差異，與本頁 $170 億為同一數字，非新數字（方法論未見完整揭露）（[regenerator1.com](https://www.regenerator1.com/p/anthropics-growth-just-flattened)）。
+- **人事成本首度換算至每人每月（2026-11-03，TechSpot 引 Business Insider，同一份修訂版 S-1）**：近期單季人事費用逾 $17 億，換算每位員工每月成本逾 $10.7 萬美元；與既有「內部 Claude 用量超過員工薪酬」（見下方 11-02 條）屬同一份揭露的不同欄位，員工人數基準未見報導（[TechSpot](https://www.techspot.com/news/114428-anthropic-ipo-filing-reveals-17-billion-quarterly-personnel.html)）。
 - **算力／採購承諾總額改用官方數字（2026-11-02）**：修訂版 S-1 揭露 $8,950 億採購承諾與租賃協議（$4,475 億於 2030 年底前支出完畢），取代此前 The Information 統計口徑的 $5,170 億（統計期至 2026-09，非官方數字，已移出指標表）；兩者涵蓋範圍可能不同，不可視為同一事物的新舊值直接相減。
 - **內部零售價換算的 Claude 使用量已超過員工薪酬（2026-11-02，Business Insider／CNBC，修訂版 S-1 揭露）**：4 月起每月內部使用量（按對外收費價格換算）已超過當月員工薪酬支出（不含股票獎酬），1–9 月累計暴增逾 250 倍；補上 11-01 已記錄同一事實的具體數字與時間點。
 - **公開版 S-1 正式提交（2026-10-26）**：淨損 $807 億與 10-20 WSJ 外流草稿同數字，多家引 S-1 為 80,748 百萬美元；本站未讀到原文，來源等級記為一級媒體引公司（[官方公告](https://www.anthropic.com/news/s1-sec)）。
@@ -162,6 +165,8 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-03 Tech Policy Press／Hacker News（387 分）：評論文章主張 SEC 應以保護公眾為由擋下 IPO**：作者為 AI 泡沫風險報告共同作者的智庫評論，非監管機關正式行動，具體法律論證未附，僅評論層級可用（[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)；Hacker News）
+- **2026-11-03 epyhia.com／Wccftech：修訂版 S-1 新增揭露，公司認為可能「迫近」觸及內部定義的 RSI 臨界點**：強調現有在產模型皆未跨過；治理與安全面完整脈絡見 [[topics/ai-agent-safety]]，表列見 [[#S-1 揭露了什麼]]（Google News/epyhia.com；Google News/Wccftech）
 - **2026-11-02 CNBC／FT／Axios／HN（208～211 分）：修訂版 S-1 首度揭露 Q3 財報與採購承諾**：營收 $170 億、採購承諾 $8,950 億（$4,475 億於 2030 年底前支出）、營運虧損 $12.5 億，詳見 [[topics/anthropic-business#現在的數字]]（CNBC；FT；Axios；HN）。
   - **revenue-per-compute 比值 2.08x→1.72x**：每一美元算力投入產生的營收正在下降。
   - **同日 Business Insider／Hacker News**：內部零售價換算的 Claude 使用量 4 月起已超過當月員工薪酬（不含股票），1–9 月暴增逾 250 倍（Business Insider；Hacker News）。

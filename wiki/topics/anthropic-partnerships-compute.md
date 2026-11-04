@@ -3,8 +3,8 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -31,12 +31,12 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-11-02）
-> - **Johns Hopkins 大學癌細胞圖譜技術獲選用於 Anthropic AI 專案**：具體應用細節未揭露（[Johns Hopkins University](https://news.google.com/rss/articles/CBMiggFBVV95cUxQQldCbnFMMG95WWZLYVJ0WUJnTHUtYU84enppOVdjSFllRm50WldNM3NfWl9oYXpkVkc0UEhRaGxqWGpHaGJ1a04xbTBXeTVpZ0pNaWZIbi1kNTVmNVZDX0FsLU5KMEJDVWFDR1gxRjVUVDJWaVVkRDV4SDVzdklLMzZ3?oc=5)）
-> - **修訂版 S-1 揭露算力採購承諾與租賃協議升至 8,950 億美元**（其中 4,475 億預計 2030 年底前支出完畢），數字細節見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)）
+> **最新動態**（2026-11-03）
+> - **athenahealth 推出 athenaPatient MCP**：病患電子病歷接入 Claude 供臨床人員查詢，具體資料範圍與存取權限未見報導（[Healthcare IT News](https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2E4a1FVbFVvRVV5V3hMbVNINGZHQkdqT1J0Slk1ZVZuU0NXYzdCS0lFZUszOHlSeGhHT1RwckVtdHFTWHNaSldUMjVuc3JfWXRlV3IwRUlxR05SYk5WUF9KUXZ6eVRwRl8yYUtCUGdhc0NkXzVRb3FoRTUxQzJRdFN2T21BV0lWX1NLRXM0cy1YNE14ZDJsYkhNZ0FxNDVCeGZWejRWbEJNMVZI?oc=5)、HIT Consultant 等 3 家媒體）
+> - **（11-02）修訂版 S-1 揭露算力採購承諾與租賃協議升至 8,950 億美元**（其中 4,475 億預計 2030 年底前支出完畢），數字細節見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)）
 
 ---
 
@@ -123,6 +123,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **athenahealth**（2026-11-03）：推出 athenaPatient MCP 伺服器，將病患電子病歷接入 Claude 供臨床人員查詢，Healthcare IT News 等 3 家媒體同日報導，具體資料範圍與存取權限未見報導（Google News/HIT Consultant；Google News/Healthcare IT News）
 - **Johns Hopkins University**（2026-11-02）：癌細胞圖譜技術獲選用於 Anthropic AI 專案，具體應用細節未揭露（Google News/Johns Hopkins University）
 - **AI for Science（擴大至 20 機構）**（2026-10-29）：官方擴大科研夥伴計畫，20 個基金會／機構／研究團隊取得免費 Claude 額度，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic；Google News）
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
@@ -286,6 +287,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-03
+- **[企業合作] Google News：醫療 IT 供應商 athenahealth 推出 athenaPatient MCP，將病患病歷接入 Claude**：Healthcare IT News 等 3 家媒體同日報導，見上方「其餘合作」清單（Google News/HIT Consultant；Google News/Healthcare IT News）
 
 #### 2026-11-02
 - **[戰略合作] Google News：Johns Hopkins 大學癌細胞圖譜技術獲選用於 Anthropic AI 專案**：具體應用細節未揭露，見上方「其餘合作」清單（Google News/Johns Hopkins University）

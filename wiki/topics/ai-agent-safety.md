@@ -3,15 +3,15 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-02"
+last_updated: "2026-11-03"
 last_news_update: "2026-10-29"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 127
+inbound_links: 129
 attribution_count: 301
 attribution_last: "2026-10-29"
 top_source: "google-news"
@@ -28,15 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-02
+**最後更新：** 2026-11-03
 **最後新聞更新：** 2026-10-29
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-02）
-> - **提示注入**：Homeland411 稱攻擊者藏匿惡意規則挾持 AI coding 助理（僅標題）。見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
-> - **網攻濫用**：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰（僅標題）。見 [[topics/ai-agent-safety-cyber#2026-11]]。
-> - **供應鏈**：SecurityWeek、CSO Online 跟進 Cursor 惡意 Claude Code 延伸套件 SSH 後門事件，無新事實。見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+> **最新動態**（2026-11-03）
+> - **供應鏈**：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 
 ---
 
@@ -55,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-02 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-02 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-03 |
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-02 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
@@ -82,6 +80,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
 | 灰市轉售的折扣帳號，營運者可以讀走你送出的每一段 prompt | 透過非官方管道買折扣 Claude 存取權的人 | 🔴 | 無回應（第三方轉售詐術，非 Anthropic 產品漏洞；2026-08-06 兩家媒體證實） | 只從官方管道買；已經買過的，換掉在那條管道送出過的所有憑證與機密 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 無回應（2026-10-26／10-27 兩個獨立來源披露，觸發機制與是否需使用者額外動作均未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
+
+另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 
 %% 2026-10-30：`bash -c` 包住危險 `rm` 那一列狀態翻 ✅（npm stable 2.1.308 已含 2.1.288 修正），依第 2 條退場；空位由 #81138 email 外流補位。同日候選 #53223 沒有攻擊者、不是攻擊面，改寫進「官方現在擋到哪」；內建瀏覽器元件遭攻破只有單一標題來源，不補。 %%
 

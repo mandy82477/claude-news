@@ -137,7 +137,7 @@ claude self-hosted-runner --hold-idle-file <path> --max-hold-min <分鐘數>
 
 **是什麼：** API 新增 message threads 支援，供多輪對話以執行緒方式管理；Python SDK 同時新增依維度（dimension）拆分的用量與費用報表，舊版報表標記為 legacy。
 
-**為何熱：** 兩個 SDK 同日同步發布同一功能，延續本月 10-21 User Profiles enforcement、10-15 speed 參數的連續成對發布節奏；社群跟進情況尚無資料。
+**為何熱：** 兩個 SDK 同日同步發布同一功能，延續本月 10-21 User Profiles enforcement、10-15 speed 參數的連續成對發布節奏；11-03 起 The New Stack／ZDNET／Unite.AI 等 3 家媒體跟進報導 Claude Code 端的等待時間縮短效果（宣稱 35%），但媒體用語為「Beta」，與本頁現記的「正式發布」不一致，待官方文件確認何者為準。
 
 **快速上手：**
 ```
@@ -810,7 +810,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
 | **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

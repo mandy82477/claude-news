@@ -475,11 +475,6 @@
       "id": "ai-eval-boundary-incidents",
       "name": "AI 評測越界事件",
       "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
-      "pageType": "topic"
     }
   ]
 }

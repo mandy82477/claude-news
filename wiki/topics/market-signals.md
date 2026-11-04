@@ -3,17 +3,17 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
+last_updated: "2026-11-03"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/market-signals-compute', 'topics/market-signals-customers', 'topics/market-signals-ipo', 'topics/market-signals-legal']"
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 14
-attribution_count: 115
-attribution_last: "2026-11-02"
+attribution_count: 120
+attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -30,19 +30,20 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-02
+**最後更新：** 2026-11-03
 **最後新聞更新：** 2026-11-02
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-02）
+> **最新判讀**（2026-11-03）
+> - **S-1/A 自評「可能迫近」觸及 RSI 門檻**：首度書面承認安全風險升高，同時強調現役模型皆未跨過此線（見 [[topics/market-signals-ipo]]）。
+> - **S-1 揭露單季人事費用逾 17 億美元**：換算每人每月約 10.7 萬美元，規模超過同期 12.5 億美元營運虧損（見 [[topics/market-signals-ipo]]）。
+>
+> 前一日（2026-11-02）：
 > - **S-1/A 首度揭露財報數字**：單季營收 170 億美元、營運虧損 12.5 億美元，revenue-per-compute 比值由 2.08x 降至 1.72x（見 [[topics/market-signals-ipo]]）。
 > - **採購承諾總額升至 8,950 億美元**：取代先前逾 5000 億美元口徑，含租賃協議，4,475 億美元 2030 年底前支出完畢（見 [[topics/market-signals-compute]]）。
->
-> 前一日（2026-10-31）：
-> - **Blackstone 告訴投資人預期 Anthropic 上市後拿 BB 級信評**：TechCrunch 引 FT，推翻「2027 年前達投資級」說法，僅標題可用（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -98,7 +99,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-02 S-1/A 首度揭露財報數字 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-03 S-1/A 自評迫近 RSI 門檻、單季人事費用逾 17 億 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 10-28 GSA 折扣擴大、向加州州長表態 |
 | 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-02 S-1/A 採購承諾升至 8,950 億 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |

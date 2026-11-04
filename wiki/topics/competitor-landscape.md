@@ -3,8 +3,8 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: null
@@ -12,10 +12,10 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
 inbound_links: 78
-attribution_count: 245
-attribution_last: "2026-11-02"
+attribution_count: 251
+attribution_last: "2026-11-03"
 top_source: "blog"
-pending_count: 8
+pending_count: 9
 pending_overdue: 0
 pending_next_review: "2026-11-11"
 pending_signalled: 2
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-02）
+> **本週衝擊**（2026-11-03）
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
 ---
@@ -246,6 +246,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-03
+- **Microsoft／GitHub**：Copilot 新增 JetBrains Air 原生整合，支援委派程式任務、引導執行與審查結果；衝擊力不如「對手雷達」現列 10-28/29 Fusion GA，暫不列入該表（Blog/GitHub Copilot Changelog）
+- **Google（分析文，非編碼領域）**：DeepMind 部落格介紹 Google Antigravity 與 Cheminformatics Skills 加速藥物探索工作流、搜尋化合物並提出新巨環分子；非編碼領域、未直接對比 Claude，屬廠商自宣，不列入「對手雷達」表（Blog/Google DeepMind Blog）
+- **OpenAI（分析文，非編碼工具）**：官方部落格宣布籌備下一輪內部安全衝刺，與 Cathedral Systems 合作測試並強化防禦；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：官方部落格宣布提高資安漏洞懸賞金額，新增報告品質、忠誠度與優先專案加成；非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（案例，透過 ChatGPT Enterprise／Codex，非編碼能力異動）**：官方部落格報導 Heimstaden 用 ChatGPT Enterprise 與 Codex 轉型房地產管理、降低成本；屬廠商客戶案例自宣，非編碼能力或定價對比，不列入「對手雷達」表（Blog/OpenAI News）
+- **Cogent Security**：❓ **待查證**（標 2026-11-03｜查 Cogent Security、VR-1.1）｜**VR-1.1 聲稱漏洞修補測試勝 Claude Code 與 Codex**：僅標題可用，方法論與分數未附（Google News/SiliconANGLE）
+  %% 新進入者，是否開「對手雷達」新列待主編裁示：表已滿 12 列、無 ⚪ 可汰，記者不自行汰除 🟡 %%
 
 #### 2026-11-02
 - **DeepSeek**：Techzine Global 稱 11-01 發布的「超級 agent」為開源版 Claude Code 替代品，權重開放範圍與發布規模未見細節；詳見「對手雷達」與「雷達細節」DeepSeek 列更新（Google News/Techzine Global）

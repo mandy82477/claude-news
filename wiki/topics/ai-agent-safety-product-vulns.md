@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/ai-agent-safety"
@@ -12,10 +12,10 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
 inbound_links: 17
-attribution_count: 15
-attribution_last: "2026-11-02"
+attribution_count: 16
+attribution_last: "2026-11-03"
 top_source: "google-news"
-pending_count: 15
+pending_count: 16
 pending_overdue: 1
 pending_next_review: "2026-11-06"
 pending_signalled: 2
@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-02）
-> SecurityWeek、CSO Online 跟進報導 Cursor 惡意 Claude Code 延伸套件 SSH 後門事件，均無新事實。
+> **最新動態**（2026-11-03）
+> Reddit／r/ClaudeCode 轉述 Reuters／NBC：Binance 63 億美元竊案源頭是偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本；收到測試題先自己看過再給 agent 跑。
 
 ---
 
@@ -56,7 +56,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
-- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；透過 Cursor 市集裝過 Claude Code 延伸套件的人立即查有無被植入的 SSH 金鑰，並照 Cursor 公告清查殘留檔案（解除安裝不夠）。
+- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；Cursor 市集裝過 Claude Code 延伸套件的人立即查有無被植入 SSH 金鑰並照公告清查殘留檔案；外部寄來的程式測試題 repo 先看過程式碼再執行，不丟給 agent 跑。
 
 ### Claude Code 供應鏈攻擊：跨月對照
 
@@ -71,14 +71,28 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 | Keyv 蠕蟲（npm，植入 Claude Code 與 VS Code hook） | 2026-08-04 | 30 分鐘內擴散至 400+ 套件名稱 | 開啟不明目錄前先看 hook；見 [[topics/ai-agent-safety-product-vulns#2026-08-04～08-05]] | 第三方事件，官方未見回應 |
 | Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵、非其所建；資安公司稱經官方帳號發出；兩說並存 |
 | 假 Anthropic 預覽誘騙員工 | 2026-10-29（CSO Online） | 手法與規模未見，僅標題層級 | 收到「新功能預覽」邀請，先走官方管道核實再點。見 [[topics/ai-agent-safety-product-vulns]] 時序 | 未見官方回應 |
+| 偽裝求職面試程式測試題 repo（暗藏漏洞／惡意程式，誘工程師自行執行） | 2026-11-03（回報稱全年持續） | Binance 案損失 63 億美元；其餘樣本規模未知 | 收到求職／外包方寄來的測試題，先自己看過程式碼再執行，別直接丟給 agent 跑 | 未見官方回應 |
 
-**讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七列瞄準人。官方有回應的只有 Cursor 事件，且雙方說法對不上。
+**讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七、八列瞄準人（假預覽邀約、求職測試題）。官方有回應的只有 Cursor 事件，且雙方說法對不上。
 
 ---
 
 ## 技術彙整
 
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
+
+### 2026-11
+
+#### Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本（2026-11-03 新增）
+
+- **揭露來源**：Reddit r/ClaudeCode（原始貼文，轉述 Reuters／NBC 報導；來源無「週熱門」標記，Reddit 本身 score 不可信，惟轉述內容源自主流媒體調查報導，0 留言）
+- **核心主張**：Reuters／NBC 報導稱，Binance 10-29 公開的約 63 億美元竊案可追溯至數月前一份偽裝成求職面試「程式設計考題」的 repo——一名錢包工程師 6 月安裝了其中的程式碼；貼文作者稱自己全年持續收到同類型暗藏漏洞的測試題 repo，均為惡意程式
+- **攻擊手法（僅標題／轉述層級可用）**：攻擊者以求職面試或外包試題為幌子，誘使工程師在本機或開發環境打開並執行看似正常的程式碼測試題，repo 內實際暗藏可利用漏洞或惡意程式；具體載入點（npm 依賴、postinstall script 或其他機制）、是否涉及 agent 自動執行均未見報導細節
+- **與既有敘事的關係**：與本頁既有供應鏈／惡意套件系列（Keyv npm 蠕蟲 08-04、tikalk 倉庫植入 08-04、FakeAgent 07-27 等）同屬「偽裝成正常物件誘工程師自己觸發」模式，本則首見鎖定「求職面試考題」這一社交工程載體；回報者發文於 r/ClaudeCode，暗示情境可能是收到測試題後未經檢視就交給 agent 執行
+- **你能先做什麼**：收到外部求職或外包方寄來的程式測試題 repo，先自己看過程式碼內容，不要在未經檢視前直接交給 agent 執行或安裝依賴
+- **可信度評估**：核心事實（Binance 竊案源自求職面試偽裝測試題）引自 Reuters／NBC 主流媒體調查報導（經 Reddit 轉述，原文本輪未直接取得）；「全年持續收到同類樣本」為貼文作者個人陳述，無法第三方驗證，與 Claude Code 的直接關聯（是否經由 agent 執行觸發）亦未見報導證實
+- ❓ **待查證**（標 2026-11-03｜查 Binance、coding assignment、求職測試題｜複 2026-11-17）｜**攻擊鏈細節與是否涉及 agent 自動執行**：Reuters／NBC 原文本輪未直接取得，惡意程式的具體觸發機制、受害規模是否僅限本案均未見報導
+%% 未列入現況表：表滿載，2026-11-03（母頁「現在還擋不住的攻擊」11 列已滿，逐列核對均未滿 90 天且無 ✅／⛔+替代方案可退場）%%
 
 ### 2026-10
 
@@ -517,6 +531,9 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-03
+- **[📋 新增，低可信度] Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo**：回報者稱全年持續收到同類暗藏漏洞樣本，Claude Code 的直接關聯未見報導證實，詳見「## 技術彙整」
 
 ### 2026-10-31
 - **[🔴 跟進，多源同報] Cursor 更新公告：Claude Code 惡意延伸套件受影響版本擴為 2.1.312／2.1.313，只解除安裝不夠**：Anthropic 稱自家系統未遭入侵，資安公司稱經官方帳號發出，雙方未說明取得權限途徑；微軟發表持久化 SSH 後門分析，詳見「## 技術彙整」

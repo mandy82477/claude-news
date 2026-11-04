@@ -3,17 +3,17 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-27"
+last_updated: "2026-11-03"
+last_news_update: "2026-11-03"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 1
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 7
-inbound_links: 43
-attribution_count: 61
-attribution_last: "2026-10-27"
+days_since_news_subtree: 1
+inbound_links: 44
+attribution_count: 65
+attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 7
 pending_overdue: 0
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-27
+**最後更新：** 2026-11-03
+**最後新聞更新：** 2026-11-03
 
-> **最新動態**（2026-10-27）
-> CNN／The Washington Post 補上 S-1 風險清單具體項目（生物武器、勒索、「AI 甦醒」警語）；Forbes／Times of India 另揭露 S-1 首度確認 Claude 占 Anthropic 自身程式碼比例超過 90%（續 06-04 報告「80–90%」）。政府/產品後果面見 [[topics/anthropic-government-policy]]。
+> **最新動態**（2026-11-03）
+> Anthropic 修訂版 S-1/A 新增揭露：自評可能「迫近」觸及內部定義的 RSI 門檻，但稱現役模型皆未跨過；首次書面承認接近臨界。
 
 ---
 
@@ -95,6 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-26，BBC／Axios／CNN：Anthropic IPO 前 S-1 文件揭露 AI「災難性風險」語言**：呼應本頁既有「核心矛盾」——呼籲謹慎示警的同時走向 IPO；政府與產品後果面完整記錄於 [[topics/anthropic-government-policy#攻防紀錄]]，本頁不重複，詳見「## 技術彙整」。
 - **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
   - Forbes／Times of India 另揭露 S-1 首度確認 Claude 占 Anthropic 自身程式碼比例超過 90%，為 06-04 報告「80–90%」數字的來源升級，詳見「## 技術彙整」。
+- **2026-11-02～03，修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻**：延續 10-26／27 S-1「災難性風險」披露系列，公司首度以申報文件明文承認自身可能接近其內部定義的遞歸自我改進門檻，同時強調現役全部模型均尚未跨過此線；具體門檻定義與量測方法均未見報導，詳見「## 技術彙整」。
 
 ---
 
@@ -114,6 +115,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### Hacker News（epyhia.com）／Wccftech／Gizmodo／Yahoo Finance＋TechCrunch：修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻（2026-11-02～03 新增）
+
+- **揭露來源**：[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)（經 Hacker News，27 分，2026-11-03 13:26 UTC）；Wccftech／Gizmodo／Yahoo Finance＋TechCrunch（經 Google News，2026-11-02～03，均僅標題可用，與 HN 條目同一事件）
+- **核心主張**：Anthropic 向 SEC 提交的修訂版 S-1/A 登記聲明新增揭露——公司認為自己可能「迫近」（imminently）觸及其內部定義的遞歸自我改進（RSI）門檻，即 AI 系統能自主改良自身訓練、觸發能力加速循環的臨界點；文件同時強調，截至申報時全部在產模型均尚未跨過此線
+- **與既有敘事的關係**：與 10-26／27 已記錄的 S-1「災難性風險」清單、Claude 程式碼占比超過 90% 為同一份修訂版申報文件的不同揭露面；本則是公司首次以正式申報文件書面承認「接近」自身定義的 RSI 臨界點，而非僅描述量化進展指標，比既有「煞車踏板」呼籲更具體——是對自身所處位置的直接自評
+- **原文質疑框架**：HN 條目標題本身即點出公司自評的「迫近」與現役模型「尚未跨過」兩個表述並陳（the loop isn't closed），並非單純示警
+- **可信度評估**：HN 27 分，互動量中等；Wccftech／Gizmodo／Yahoo Finance／TechCrunch 均為同一事件的媒體轉述，僅標題可用，S-1/A 原文對應條文、RSI 門檻的具體定義與量測方法均未見報導，暫記錄為自評措辭升級，不視為比既有 10-26／27 揭露更進一步的新量化數字
 
 ### Forbes／Times of India（經 AP News 系列報導）：S-1 申請文件首度揭露 Claude 現在寫下 Anthropic 自家超過 90% 程式碼（2026-10-26～27 新增）
 
@@ -423,6 +432,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-11-02～03
+- **[量化升級，新增] 修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻**：延續 10-26／27 S-1 披露系列，公司首度以申報文件書面承認接近自身定義的 RSI 臨界點，同時強調現役模型皆未跨過，詳見「## 技術彙整」
 
 ### 2026-10-10
 - **[離職示警升級，新增] Yahoo Finance：Jacob Coxon 稱有九成把握中國間諜已滲透美國各大 AI 公司**：延續 09-09／10-05 離職示警系列，首見具體「中國間諜滲透」指控與機率數字，詳見「## 技術彙整」

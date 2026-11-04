@@ -3,17 +3,17 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
+last_updated: "2026-11-03"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 180
-attribution_count: 500
-attribution_last: "2026-11-02"
+inbound_links: 181
+attribution_count: 507
+attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -30,13 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-02
+**最後更新：** 2026-11-03
 **最後新聞更新：** 2026-11-02
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-02）
-> - **修訂版 S-1 首度揭露具體財報**：Q3 營收 170 億美元、採購承諾升至 8,950 億美元、營運虧損 12.5 億美元（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)、FT），數字與 S-1 細節見 [[topics/anthropic-ipo]]
-> - **內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)），見 [[topics/anthropic-business-risks]]
+> **最新動態**（2026-11-03）
+> - **athenahealth 推出 athenaPatient MCP**：病患病歷接入 Claude 供臨床人員查詢（[Healthcare IT News](https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2E4a1FVbFVvRVV5V3hMbVNINGZHQkdqT1J0Slk1ZVZuU0NXYzdCS0lFZUszOHlSeGhHT1RwckVtdHFTWHNaSldUMjVuc3JfWXRlV3IwRUlxR05SYk5WUF9KUXZ6eVRwRl8yYUtCUGdhc0NkXzVRb3FoRTUxQzJRdFN2T21BV0lWX1NLRXM0cy1YNE14ZDJsYkhNZ0FxNDVCeGZWejRWbEJNMVZI?oc=5) 等 3 家媒體），見 [[topics/anthropic-partnerships-compute]]
+> - **修訂版 S-1 新增揭露：公司認為可能「迫近」觸及內部定義的 RSI 臨界點**；同日 Tech Policy Press 評論主張 SEC 擋下 IPO（HN 387 分），見 [[topics/anthropic-ipo]]（[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)；[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)）
+> - **Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計能力**，只有標題，見 [[topics/anthropic-business-risks]]（The Information；Investing.com）
 
 ---
 
@@ -80,9 +81,9 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-02 |
-| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-02 |
-| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-02 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-03 |
+| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-03 |
+| [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-03 |
 
 #### 算力與資金從哪來
 這一節現在在 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]。
