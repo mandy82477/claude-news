@@ -394,3 +394,6 @@
 {"id": "H-1cf735", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
 {"id": "H-fa1aa2", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
 {"id": "H-18d3f4", "opened": "2026-11-04", "from": "社群", "to": "功能", "page": "—", "note": "評估產品化矩陣新增列：Skills 設計三則（teardown／code-animation-prompts／mobile-app-ui-design）、可靠性測試一則（structured output 強制呼叫假工具失效案例）、記憶一則（Graphicle code graph+memory）、Token 成本一則（17 bot／$100 月費具名案例）；今日無 patterns 節點源自 discussions，衍生欄不適用", "status": "open", "force_reason": "跨領域矩陣頁面歸屬不明確，暫掛功能記者"}
+{"id": "H-5978d7", "closed": "2026-11-04", "status": "done", "by": "投資分析", "result": "投資分析記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-4dbf62", "closed": "2026-11-04", "status": "done", "by": "投資分析", "result": "投資分析記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-26cfb1", "closed": "2026-11-04", "status": "void", "by": "主編", "result": "主編已自行查證 npm dist-tags（2026-11-04：stable=2.1.311、latest=2.1.318）並寫入 topics/ai-agent-safety-product-vulns.md「目前結論」查證區，內容已處理完畢"}

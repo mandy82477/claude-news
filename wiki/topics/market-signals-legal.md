@@ -46,6 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現在怎麼判
 
+- **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
 - **會進風險因素的有三種**：訴訟（反壟斷合謀、Reddit 資料、音樂著作權）、機關調查（FTC 傳票）、政府客戶（五角大廈列黑名單後停用）。
 - **還沒有一件落到金額**：沒有判決、罰款或和解數字，多數判讀停在敘事型；GSA 折扣 40% 是本頁少數帶數字的一則。
 - **結算多半仍懸**：已結算 19 列裡 10 列「仍懸」，判決、和解、法案定案通常比兩週長。

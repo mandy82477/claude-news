@@ -46,6 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現在怎麼判
 
+- **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
 - **價格在降**：Opus 5.5、Haiku 5.5 牌價下修，Managed Agents 改毫秒計費；對毛利率的影響至今沒有一則被財報或 S-1 拆出來。
 - **客戶兩邊都有**：具名擴大（Barclays、JPMorgan、Novo Nordisk）與具名縮減（Meta、Microsoft、Replit、Accenture 每月 29 美元上限）並存，金額多數未經官方證實。
 - **線很散**：16 條線裡 14 條只有一則，單一消息很難看出方向，要對照「買得到的標的」表的同一列看。
@@ -59,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（數字型，動到使用額度補貼金額）｜誰有感：Charles Schwab（NYSE: SCHW，通路夥伴，事件對其自身財報不具重大性）｜硬度：單一標題（Citywire）｜線：Financial Advisors 使用額度優惠 ▸ 開線
 
-**為什麼這樣判**：新資訊是 Citywire 報導 Anthropic 向 Claude for Financial Advisors 用戶提供最高 4,800 美元額度抵用；此前本頁僅記錄 Schwab 通路資格緊縮（10-24 追加 20 席企業採購下限，排除逾 1.1 萬家小型顧問），未記錄過官方直接對使用者端的額度補貼金額。判兩面是因為額度補貼是爭取採用的正向誘因，但補貼代表 Anthropic 要用自身成本換取這塊客群的採用率，對毛利率是負向拉力，兩者方向相反；原文僅標題可用，額度適用對象（是否限 Schwab 通路、抑或所有 RIA）與補貼期限均未見報導。事實見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]、[[entities/pricing]]。
+**為什麼這樣判**：新資訊是 Citywire 報導 Anthropic 向 Claude for Financial Advisors 用戶提供最高 4,800 美元額度抵用；此前本頁僅記錄 Schwab 通路資格緊縮（10-24 追加 20 席企業採購下限，排除逾 1.1 萬家小型顧問），未記錄過官方直接對使用者端的額度補貼金額。判兩面是因為額度補貼是爭取採用的正向誘因，但補貼代表 Anthropic 要用自身成本換取這塊客群的採用率，對毛利率是負向拉力，兩者方向相反；原文僅標題可用，額度適用對象（是否限 Schwab 通路、抑或所有 RIA）與補貼期限均未見報導。事實見 [[topics/anthropic-partnerships-compute#哪個合作會改到你用的 Claude]]、[[entities/pricing]]。
 
 **下一個催化劑**：額度補貼的適用範圍（是否限特定通路）與期限是否經官方說明；是否與 10-24 Schwab 門檻收緊同屬一組組合措施。
 
@@ -119,7 +120,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：📉 負面（數字型，動到通路可服務客戶家數）｜誰有感：Charles Schwab（NYSE: SCHW，事件對其自身財報不具重大性）｜硬度：單一標題（RIABiz）｜線：Schwab RIA 通路准入 ▸ 開線
 
-**為什麼這樣判**：新資訊是 Schwab 原宣傳全數 1.6 萬家獨立投資顧問（RIA）都能用 Claude，今日追加 20 席企業採購下限，一次把逾 1.1 萬家小型顧問公司排除資格；此前 09-14 開線、09-15 定名「Claude for Financial Advisors」兩則記錄的都是通路上線本身，本則首次出現准入資格緊縮的消息。判負面是因為 20 席下限把原宣傳的 1.6 萬家可服務對象砍掉逾七成，時間點卡在 IMPACT 2026 大會前；但追加門檻也可能是 Schwab 控管服務品質或成本的商業決定，具體理由、生效時間與是否分階段放寬均未見報導。事實見 [[topics/anthropic-business#哪個合作會改到你用的 Claude]]。
+**為什麼這樣判**：新資訊是 Schwab 原宣傳全數 1.6 萬家獨立投資顧問（RIA）都能用 Claude，今日追加 20 席企業採購下限，一次把逾 1.1 萬家小型顧問公司排除資格；此前 09-14 開線、09-15 定名「Claude for Financial Advisors」兩則記錄的都是通路上線本身，本則首次出現准入資格緊縮的消息。判負面是因為 20 席下限把原宣傳的 1.6 萬家可服務對象砍掉逾七成，時間點卡在 IMPACT 2026 大會前；但追加門檻也可能是 Schwab 控管服務品質或成本的商業決定，具體理由、生效時間與是否分階段放寬均未見報導。事實見 [[topics/anthropic-partnerships-compute#哪個合作會改到你用的 Claude]]。
 
 **下一個催化劑**：Schwab 或 Anthropic 官方說明追加門檻的理由與生效時間；Orion 等同類通路是否跟進類似門檻。
 
@@ -132,7 +133,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 💰 TechCrunch：Replit 執行長稱已不再與 Anthropic 合作，合作狀態有爭議（2026-10-17）
 
-**一眼**：📉 負面（敘事型，未見具體數字，為具名客戶流失的第一手確認）｜誰有感：無（未上市；Replit 亦未上市）｜硬度：具名表態但有爭議（執行長 10-16 於 TechCrunch Disrupt 台上表態，理由為成本、夥伴關係、效能；一位匿名知情者向 TechCrunch 稱合作仍在，Replit 9 月部落格仍列 Fable 5／5.1 在生產環境；10-18 補查）｜線：具名客戶流失 ▸ 開線
+**一眼**：📉 負面（敘事型，未見具體數字，為具名客戶流失的第一手確認）｜誰有感：無（未上市；Replit 亦未上市）｜硬度：具名表態（執行長 10-16 於 TechCrunch Disrupt 台上表態，理由為成本、夥伴關係、效能；但一位匿名知情者向 TechCrunch 稱合作仍在，Replit 9 月部落格仍列 Fable 5／5.1 在生產環境，說法有爭議；10-18 補查）｜線：具名客戶流失 ▸ 開線
 
 **為什麼這樣判**：新資訊是 Replit 執行長首次公開表示已不再與 Anthropic 合作，此前本頁未判讀過「具名客戶完全終止合作」這種形式——既有 10-05「大型科技公司自建替代」線記錄的 Meta、Microsoft 是縮減內部用量、合約未取消，與本則「不再合作」的表述程度不同，故另開新線。判負面是因為 Replit 是曾公開採用 Claude 作為 AI 程式碼生成核心模型供應商之一的知名客戶，執行長親自表態終止合作比單純的用量縮減更接近會寫進 S-1 客戶流失風險因素的具體事件；但原文僅執行長一句表態，終止的原因、是否轉用其他模型供應商、合約終止時間均未見報導。事實見 [[topics/enterprise-tool-tracker]]、[[topics/competitor-landscape]]。
 
