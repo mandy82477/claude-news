@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "active"
 days_since_news: 1
 parent: "entities/claude-code"
@@ -33,12 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-03）
-> - **高互動已知問題互動數更新**：卡住/凍結 5–20 分鐘以上（[#26224](https://github.com/anthropics/claude-code/issues/26224)，132 則留言、152 個讚，全站今日互動量最高；🧠 組）、Cowork 網路白名單失效（[#30112](https://github.com/anthropics/claude-code/issues/30112)，77 則留言、59 個讚；🔌 平台相容性組）、速率限制錯誤與用量上限無關（[#53915](https://github.com/anthropics/claude-code/issues/53915)，69 則留言、27 個讚；💰 組）。
+> **最新動態**（2026-11-04）
+> - **新增功能請求**：Task queue——排入多個提示／任務依序或平行執行（[#33323](https://github.com/anthropics/claude-code/issues/33323)，34 則留言、65 個讚；🧠 組）。
+> - **高互動已知問題互動數更新**：Linear 整合觸發雲端 agent session（[#12925](https://github.com/anthropics/claude-code/issues/12925)，47 則留言、154 個讚；🔌 平台相容性組）。
 
 ---
 
@@ -95,26 +96,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
   - 這類「官方介面自己在耗 token」的社群偵測案例，與其他省 token 做法並列於 [[topics/community-cost]]。
 - 🔴 **未修復**｜**無介面 `claude -p`（SDK CLI 入口）相同工作負載下，每 token 耗用的 5 小時額度比互動式 CLI 多約 1.8 倍（GitHub issue #97074，累積 52 則留言、96 個讚，2026-10-27）**：headless／SDK 模式批次跑 Claude Code 的使用者可能在相同用量下更快撞到額度上限；官方尚未回應。
-- 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing]]。
+- 🔴 **未修復**｜**Max 20x 升級未反映在週額度，消耗速度仍按 Max 5x 或更低計算（GitHub issue #79773，31 則留言、5 讚，2026-10-21）**：7 月已升級 Max 20x，額度消耗速度仍以 Max 5x 計算；與既有額度異常回報同類，聚焦升級未反映換算；官方未回應。見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**v2.1.100+ 伺服器端 cache_creation 多算約 2 萬 tokens，同一請求 v2.1.98 無此現象（GitHub issue #46917，42 則留言、219 個讚，2026-10-03）**：成因疑在伺服器端快取計算，非用戶端送出內容變化；官方尚未回應。
 - 🔴 **未修復**｜**設定 `ANTHROPIC_API_KEY` 蓋過 Max／Pro 訂閱後遭「Organization has been disabled」擋下（GitHub issue #8327，122 則留言、22 讚，2026-10-02）**：與既有 ANTHROPIC_API_KEY 計費陷阱同屬該變數蓋過訂閱路徑問題，現象不同；官方尚未回應。
-- 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing]]。
+- 🔴 **未修復**｜**Max Plan 額度觸頂速度異常快（GitHub issue #37394，累積 92 則留言、43 個讚，2026-09-21）**：與既有額度異常消耗回報（#16157、#38335 等）同屬速度爭議，成因是否重疊待釐清，暫分列；官方尚未回應。見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**使用者實測：輸入第一個提示前即已耗用約 51,000 token（XDA，經 Google News 轉載，2026-08-28 報導）**：一名使用者實測發現 Claude Code 在自己輸入任何提示之前就已耗用約 5.1 萬 token，並記錄了自行排查、修正的過程；報導僅有標題與 Google News 轉址連結可用，原文內容未能取得，具體排查步驟與最終解法無法確認；與既有「`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字」（issue #63903）同屬啟動前 token 開銷偏高的訊號，惟本則數字（約 51k）遠高於該已知的記憶體前導文字量級。🔎 **查無官方**（標 2026-08-28｜查 51,000 token、63903｜複 2026-11-14）｜**成因是否與 issue #63903 重疊**：查證確認 XDA 原文內容——啟動開銷來自系統提示、內建工具、skill 描述、自訂 agent 與 CLAUDE.md／記憶檔等既有機制的加總，屬一般性起因說明，未點名與 #63903 同源；#63903 已於 2026-08-17 由回報者自行關閉（「Closing our side of this — no longer relevant to our workflow」，非官方修復，全程無官方留言），故兩者是否重疊仍查無官方說明。
 - 🔴 **未修復**｜**Pro 方案新開 session 預設開啟 1M context，且找不到關閉方式（GitHub Issues，累積 63 則留言、44 個讚，2026-08-25）**：使用者回報 Pro 方案下新開的 session 預設開啟 1M token context window，且找不到任何設定可關閉；v2.1.197（2026-07-01）曾將 Sonnet 5 設為預設模型並讓所有新 session 原生享有 1M context，當時定位為促銷特性。**（2026-08-30 更正）** 本則原推論「促銷 2026-08-31 到期後將產生額外計費」——該前提在本則寫下前 15 天即已失效：官方 2026-08-10 宣布 Sonnet 5 $2/$10 永久化、9/1 漲價取消，已無到期日可等（見 [[entities/pricing]]）。**問題本身仍成立**——Pro 使用者無法自行退出 1M context，而 Claude 4.6 以後的長脈絡雖不加價，1M 仍會觸發獨立 API 計費通道（0% 訂閱用量下仍可能被收費）；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
-- 🔴 **未修復**｜**Max 20（$200/月）方案升級至 v2.1.198 後，額度重置僅約 70 分鐘即 100% 用盡，此前版本未曾發生（GitHub issue #41788，累積 60 則留言，2026-08-09）**：使用者回報升級至 v2.1.198 後，5 小時額度重置僅約 70 分鐘就被 100% 用盡，且回報者指出前一批版本（2.1.86～2.1.88）從未發生此現象，屬版本更新後的回歸性配額消耗異常；官方尚未回應。與既有多起額度異常消耗回報（issue #38335、#16157 等）同屬配額爭議但版本觸發點不同，暫分列追蹤。定價/計費政策面另見 [[entities/pricing]]。
+- 🔴 **未修復**｜**Max 20（$200/月）方案升級至 v2.1.198 後，額度重置僅約 70 分鐘即 100% 用盡，此前版本未曾發生（GitHub issue #41788，累積 60 則留言，2026-08-09）**：使用者回報升級至 v2.1.198 後，5 小時額度重置僅約 70 分鐘就被 100% 用盡，且回報者指出前一批版本（2.1.86～2.1.88）從未發生此現象，屬版本更新後的回歸性配額消耗異常；官方尚未回應，版本觸發點與既有額度異常回報不同，暫分列。計費面另見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**Max 訂閱在使用者未做任何操作下被自動降級為 Free 方案（GitHub issue #41581，累積 39 則留言、9 個讚，2026-08-08）**：使用者回報自己的 Max 訂閱在未進行任何操作的情況下被降級為 Free 方案，屬訂閱計費異常 bug（非官方計費規則調整）；官方尚未回應。
-- 🔴 **未修復**｜**Max 5x 升級至 Max 20x 失敗，顯示「Unable to update subscription」，回報者稱與 #10832、#50710、#43118 同屬相同模式（GitHub issue #55266，累積 39 則留言、1 個讚，2026-08-02）**：使用者回報將訂閱方案從 Max 5x 升級至 Max 20x 時失敗，出現「Unable to update subscription」錯誤；回報者指出此與此前三則已回報問題（#10832、#50710、#43118）呈現相同模式，暗示屬持續未解的訂閱升級系統性 bug（此為回報者主張，本站未逐一查證前三則 issue 內容）；與既有「升級方案付款失敗 `PaymentIntent` 遭 `void_invoice` 作廢」（issue #55982）、「付款訂閱 Max 5x 方案後帳號反遭停用」（issue #5088）同屬訂閱升級／付款流程不穩定的訊號，暫分列追蹤；官方尚未回應。定價/計費政策面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**Fable 5 於 Max 方案自 2026-07-20 起持續要求「usage credits required」並靜默降級為 Opus 4.8（GitHub issue #79337，累積 77 則留言、26 個讚，2026-07-25 首見，2026-10-25 互動數更新）**：使用者回報自 2026-07-20（Fable 5 成為 Max 方案標準模型當天）起，Claude Code 在 Max 方案上執行 Fable 5 時反覆跳出「usage credits required」提示並靜默降級為 Opus 4.8，即使 session 已存 `claude-fable-5[1m]` 設定仍會被覆蓋；症狀與同日已標記「已修復」的 Anthropic Status 事件（見「🌐 服務穩定性」）重疊，但本則回報顯示問題並未隨該事件解決而消失，屬持續性 regression，自上線首日起已延燒逾 3 個月仍未修復；官方尚未針對此持續回報再次回應。定價/方案存取政策面另見 [[entities/pricing]]、[[topics/model-comparison]]；`[1m]` 變體遭覆蓋屬 1M model picker 控制權缺口。
+- 🔴 **未修復**｜**Max 5x 升級至 Max 20x 失敗，顯示「Unable to update subscription」，回報者稱與 #10832、#50710、#43118 同屬相同模式（GitHub issue #55266，累積 39 則留言、1 個讚，2026-08-02）**：使用者回報將訂閱方案從 Max 5x 升級至 Max 20x 時失敗，出現「Unable to update subscription」錯誤；回報者指出此與此前三則已回報問題（#10832、#50710、#43118）呈現相同模式，暗示屬持續未解的系統性 bug（回報者主張，未逐一查證前三則）；與既有付款流程不穩定回報同類，暫分列；官方尚未回應。計費面另見 [[entities/pricing-incidents]]。
+- 🔴 **未修復**｜**Fable 5 於 Max 方案自 2026-07-20 起持續要求「usage credits required」並靜默降級為 Opus 4.8（GitHub issue #79337，累積 77 則留言、26 個讚，2026-07-25 首見，2026-10-25 互動數更新）**：使用者回報自 2026-07-20（Fable 5 成為 Max 方案標準模型當天）起，Claude Code 在 Max 方案上執行 Fable 5 時反覆跳出「usage credits required」提示並靜默降級為 Opus 4.8，即使 session 已存 `claude-fable-5[1m]` 設定仍會被覆蓋；症狀與同日已標記「已修復」的 Anthropic Status 事件重疊，但本則顯示問題未隨之消失，屬持續性 regression，延燒逾 3 個月未修復；官方未再回應。另見 [[entities/pricing-incidents]]、[[topics/model-comparison]]；`[1m]` 遭覆蓋屬 1M model picker 控制權缺口。
 - 🔴 **未修復**｜**API Error: Rate limit reached，儘管訂閱 Claude Max 且僅使用 16% 額度（GitHub issue #29579，累積 153 則留言、94 個讚，2026-07-21）**：使用者回報訂閱 Claude Max 方案、用量儀表板僅顯示已用 16% 額度的情況下，仍收到「Rate limit reached」速率限制錯誤，顯示速率限制觸發條件與實際額度顯示可能未同步；與既有「額度顯示 84% 卻收到已達上限」（issue #19673）同屬額度計算與實際限制不一致的疑慮，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**方案 5 小時用量限額在不到 1 小時 30 分鐘內即用罄（GitHub Issues，累積 120 則留言、31 個讚，2026-07-19，今日互動量最高）**：使用者回報依標準 bug 回報範本提交，環境為 Anthropic API／Claude CLI v1.0.89，方案 5 小時用量限額實際不到 1 小時 30 分鐘即被用罄，遠低於預期使用時長；官方尚未回應，與既有「Max 訂閱方案立即觸及用量上限」（issue #16157）同屬配額消耗速度爭議，暫分列追蹤。
 - 🔴 **未修復**｜**「Server is temporarily limiting requests」錯誤與用量上限無關（GitHub issue #53915，累積 69 則留言、27 個讚，首見 2026-07-13，2026-11-03 互動數更新）**：使用者回報收到「伺服器暫時限制請求」的速率限制錯誤，官方訊息明確標註並非使用者用量上限所致；成因與是否可緩解官方尚未說明。
-- 🔴 **未修復**｜**Max 訂閱方案立即觸及用量上限（GitHub issue #16157，累積 1492 則留言、725 個讚，全站互動最高，2026-09-06 更新）**：使用者訂閱 Max 方案後幾乎立即觸頂；官方尚未回應。計費面另見 [[entities/pricing]]。
+- 🔴 **未修復**｜**Max 訂閱方案立即觸及用量上限（GitHub issue #16157，累積 1492 則留言、725 個讚，全站互動最高，2026-09-06 更新）**：使用者訂閱 Max 方案後幾乎立即觸頂；官方尚未回應。計費面另見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**圖片處理失敗導致 token 大量浪費（GitHub issue #60334，累積 76 則留言、19 個讚，首見 2026-07-12，2026-10-11 互動數更新）**：使用者回報一次圖片處理失敗即耗掉五小時額度約 70%，即使對話中沒有圖片也會觸發；Anthropic API 端圖片處理錯誤直接反映為使用者額度損失，官方尚未回應。
-- 🔴 **未修復**｜**v2.1.289 成本顯示把 Haiku 5.5 以 Opus 費率計算，讀數偏高達 17 倍（Reddit r/ClaudeAI，2026-10-11）**：單一使用者實測回報，官方未確認；依賴內建成本顯示控管支出者應自行核對帳單。定價面另見 [[entities/pricing]]。
+- 🔴 **未修復**｜**v2.1.289 成本顯示把 Haiku 5.5 以 Opus 費率計算，讀數偏高達 17 倍（Reddit r/ClaudeAI，2026-10-11）**：單一使用者實測回報，官方未確認；依賴內建成本顯示控管支出者應自行核對帳單。定價面另見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**功能請求：印度地區專屬定價方案（INR 計價）（GitHub issue #17432，累積 212 則留言、613 個讚［讚數未更新］，首見 2026-07-10，2026-08-17 留言數更新）**：使用者要求提供印度盧比計價的地區專屬訂閱方案，降低匯率轉換造成的實際負擔，類似 OpenAI（ChatGPT）與 Google（Gemini）已提供的方案；官方尚未回應。定價/計費層面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**付款訂閱 Max 5x 方案後帳號反遭停用（GitHub issue #5088，累積 184 則留言、65 個讚，2026-07-10 首見，2026-09-04 留言數更新）**：使用者回報完成 Claude Code Max 5x 方案付款訂閱後，帳號反而遭到停用；官方尚未回應，定價/帳務退款層面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**Max 方案額度自 3 月起異常快速耗盡（GitHub issue #38335，874 則留言、545 讚，2026-10-04 更新，今日全站互動最高）**：Max 方案 session 額度自 2026-03-23 起消耗異常加快（CLI 情境）；官方尚未回應。定價面另見 [[entities/pricing]]。
-- 🔴 **未修復**｜**HERMES.md 計費路由 bug（GitHub issue #53262，累積 93 則留言、533 個讚，2026-07-11 再度延燒）**：git commit 歷史中含大小寫敏感字串「HERMES.md」會觸發靜默切換至 API 額外計費，完全繞過 Max 方案內含額度；問題自 2026-04-25 首次回報以來持續未解，2026-07-11 以正式 issue 形式重新獲得大量社群回響；Anthropic 先前確認為 bug 但拒絕退款，修復狀態不明，已知損失達 $200。見 [[entities/pricing]]、[[topics/anthropic-commitments]]
+- 🔴 **未修復**｜**付款訂閱 Max 5x 方案後帳號反遭停用（GitHub issue #5088，累積 184 則留言、65 個讚，2026-07-10 首見，2026-09-04 留言數更新）**：使用者回報完成 Claude Code Max 5x 方案付款訂閱後，帳號反而遭到停用；官方尚未回應，定價/帳務退款層面另見 [[entities/pricing-incidents]]。
+- 🔴 **未修復**｜**Max 方案額度自 3 月起異常快速耗盡（GitHub issue #38335，874 則留言、545 讚，2026-10-04 更新，今日全站互動最高）**：Max 方案 session 額度自 2026-03-23 起消耗異常加快（CLI 情境）；官方尚未回應。定價面另見 [[entities/pricing-incidents]]。
+- 🔴 **未修復**｜**HERMES.md 計費路由 bug（GitHub issue #53262，累積 93 則留言、533 個讚，2026-07-11 再度延燒）**：git commit 歷史中含大小寫敏感字串「HERMES.md」會觸發靜默切換至 API 額外計費，完全繞過 Max 方案內含額度；問題自 2026-04-25 首次回報持續未解，07-11 以正式 issue 重獲大量回響；Anthropic 確認為 bug 但拒絕退款，修復狀態不明，已知損失 $200。見 [[entities/pricing-incidents]]、[[topics/anthropic-commitments]]
 - 🔴 **未修復**｜**OpenClaw 異常計費行為**（2026-04-30，HN 近千則討論）：若 Git 提交訊息或文件內容中含特定 JSON 格式的 "OpenClaw" 字串，Claude Code 會直接拒絕請求，或將帳單 Extra Usage 衝至 100%；表明 Claude Code 正主動掃描 repo 內容並據此改變計費策略，Anthropic 至今未公開說明
 - 🔴 **未修復**｜**ANTHROPIC_API_KEY 雲端計費陷阱**（2026-04-30）：雲端環境設置此環境變數時，所有呼叫自動改走 API 計費通道，見 [[entities/pricing]]
 - 🔴 **未修復**｜**額度顯示 84% 卻收到「You've hit your limit」（GitHub issue #19673，累積反應 75，2026-07-04）**：使用者反映用量儀表板顯示尚餘額度（僅用 84%）情況下即收到「已達額度上限」提示，質疑額度計算邏輯是否準確或存在顯示與實際計算不同步的問題；官方尚未回應
@@ -123,13 +124,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 勾選後 Desktop 會在額度重置後重試被中斷的那一輪，卡片顯示 `Auto-resuming at` 與重置時間。
     - **三個限制讓本則不改列已修復**：① 只在 Desktop，終端機版此週報未載；② 是使用者勾選的 opt-in，不是預設開啟；③ **週額度卡片不提供此選項**，只有 session 上限卡片有。
     - ⚠️ 社群 09-20 流傳的「v2.1.234 新增、預設開啟、可在 `/config` 關閉」與官方週報三處皆不符（版本區間為 v2.1.225–233、非預設、週報未提 `/config`），**不採信**。
-- 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 25 個讚，2026-07-18）**：使用者回報升級訂閱方案時付款流程失敗，`PaymentIntent` 在確認（confirm）尚未完成前就被 `void_invoice` 動作立即作廢，導致升級無法完成；官方尚未回應。定價/計費層面另見 [[entities/pricing]]。
+- 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 25 個讚，2026-07-18）**：使用者回報升級訂閱方案時付款流程失敗，`PaymentIntent` 在確認完成前就被 `void_invoice` 作廢，導致升級無法完成；官方未回應。計費面另見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（76 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
+### 🧠 行為與品質（77 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
 - 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
@@ -185,6 +186,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Claude Code 在部分提示上卡住/凍結 5–20 分鐘以上（GitHub issue #26224，累積 132 則留言、152 個讚，2026-11-03 互動數更新，全站今日互動量最高）**：大量提示情境下卡住／凍結，持續 5–20 分鐘以上，標題註記 URGENT；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 經常誤判所在工作目錄（GitHub issue #1669，累積 51 則留言、86 個讚，首見 2026-07-25，2026-10-13 互動數更新）**：使用者回報 Claude Code 經常誤判自己目前所在的工作目錄，導致指令執行失敗，且需經過多輪自我排查才能發現問題根源；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：訊息佇列模式——排入佇列而非中斷進行中任務（GitHub issue #50246，累積 67 則留言、236 個讚，首見 2026-07-25，2026-08-25 互動數更新，今日全站互動量次高）**：使用者反映 Claude 進行中任務時，目前唯一選項是中斷，若使用者想追加後續指令，只能打斷現有工作或事後另尋方式協調；呼籲新增訊息佇列機制，讓後續指令排隊等候而非強制中斷；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**功能請求：Task queue——排入多個提示依序或平行執行（issue #33323，34 留言、65 讚，2026-11-03）**：複雜專案常已知接下來 3–5 件待辦，卻無法排入佇列執行；與既有「訊息佇列模式」（#50246）訴求不同（批次排程而非不中斷），暫分列；官方未回應。
 - 🔴 **未修復**｜**Opus 5 xhigh 推理強度於 Claude Code Desktop 失效，因思考功能被強制關閉（Reddit r/ClaudeCode，2026-07-25，Opus 5 上線當天新增問題，單一來源待更多佐證）**：使用者回報 Claude Code Desktop 上將 Opus 5 設為 xhigh 推理強度時功能失效，追查發現是思考（thinking）功能被強制關閉所致；此為 Opus 5 於 Claude Code 上線當天即浮現的新 regression，目前僅單一 Reddit 貼文回報、尚無 GitHub Issue 或跨平台佐證，暫列待更多來源確認；官方尚未回應。
 - 🔴 **未修復**｜**Claude 自陳分析依據不足，卻仍在同一回應中完成該分析——自我識別的阻擋性缺口未真正阻止輸出（GitHub issue #60226，累積 50 則留言，2026-07-24，10-08 更新）**：使用者回報 Claude 明確指出分析依據不足（unfounded），卻在同一回應中繼續完成該分析並輸出結論；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--screen-reader` 模式改善 NVDA／JAWS 無障礙體驗（GitHub issue #11002，67 則留言、38 讚，首見 2026-07-21，2026-10-17 互動數更新）**：v2.1.218 changelog 曾提及螢幕報讀相關改善，惟原文截斷、範圍未知，暫不視為正式回應。
@@ -380,7 +382,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Remote Control：手機 app 連線時互動式權限提示未渲染（GitHub issue #35637，累積 26 則留言、32 個讚，2026-10-25）**：與自動重連失效（#34255）、方案驗證失敗（#28817）同屬可靠性問題，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：GitLab 整合（儲存庫連接、Merge Request、行動裝置存取）（GitHub issue #12346，累積 58 則留言、162 個讚，首見 2026-07-15，2026-11-02 互動數更新）**：使用者呼籲 Claude Code 支援 GitLab 整合，比照現有 GitHub 整合提供儲存庫連接、Merge Request 操作與行動裝置存取；官方尚未回應或排入路線圖。
-- 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-11-14）｜**功能請求：Linear 整合——指派 issue 給 Claude Code 觸發雲端 agent session（GitHub issue #12925，累積 45 則留言、146 個讚，2026-07-30）**：使用者呼籲支援將 Linear issue 指派給 Claude Code 即可觸發雲端 agent session，比照現有 GitHub Issues 指派觸發雲端工作流的模式擴展至 Linear；查證確認 issue 仍為 open（`enhancement`、`external`），無官方留言或排入路線圖跡象。
+- 🔎 **查無官方**（標 2026-08-09｜查 #12925、Linear｜複 2026-11-14）｜**功能請求：Linear 整合——指派 issue 觸發雲端 agent session（issue #12925，47 留言、154 讚，11-04 互動數更新）**：呼籲將 Linear issue 指派 Claude Code 即觸發雲端 agent，比照現有 GitHub Issues 模式擴展；issue 仍 open，無官方留言或路線圖跡象。
   - 09-24：146 讚為本日反應數最高功能請求；社群已有 Linear 官方 MCP＋本地 Lanes MCP 橋接做法，官方原生整合仍缺，見 [[topics/official-community-gap]]。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充功能比照 GitHub Copilot Edits Review 的差異審閱介面（GitHub issue #33932，累積 45 則留言、306 個讚，首見 2026-07-14，2026-10-24 更新，今日全站反應數最高）**：官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援 LaTeX 算式渲染（GitHub issue #16446，累積 42 則留言、138 個讚，首見 2026-07-14，2026-08-22 互動數更新）**：使用者請求「Claude Code for VS Code」外掛支援 LaTeX 算式渲染；官方尚未回應或排入路線圖。

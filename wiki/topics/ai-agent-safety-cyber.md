@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-02）
-> **駭客假冒 AI 機器人身分獵密碼（僅標題，CyberSecurityNews）**：假冒 ChatGPT、Claude、Perplexity 機器人搜尋密碼與金鑰，手法與規模未見報導。
+> **最新動態**（2026-11-04）
+> **印度 CERT-In 取得 Claude Mythos 存取權測試資安漏洞**：同日專訪 CERT-In 主管談 AI agent 事故通報義務與提示注入風險歸屬，兩則均僅標題可用。
 
 ---
 
@@ -80,6 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
 | 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
@@ -112,6 +113,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Moneycontrol／MediaNama：CERT-In 取得 Claude Mythos 存取權測試資安漏洞，同日專訪談 AI agent 事故通報義務與提示注入歸責（2026-11-04 新增）
+
+- **揭露來源**：Google News／Moneycontrol.com（11/03 17:19 UTC）；MediaNama（11/04 08:55 UTC）
+- **核心主張（僅標題可用）**：Moneycontrol 報導稱印度政府資安機構 CERT-In 取得 Anthropic Claude Mythos 的存取權，用於測試潛在資安漏洞；同日 MediaNama 刊出 CERT-In 主管專訪，談 AI agent 事故的通報義務與提示注入（prompt injection）風險歸屬。兩篇的存取範圍、測試成果與通報規則細節均未見報導
+- **性質判斷**：CERT-In 取得 Mythos 存取權屬「防守方放行」性質，與既有 CVP／Cyber Mission 等官方放行計畫同類，但主體是印度政府機構而非 Anthropic 自列的申請管道，暫不計入「## 防守方能申請什麼」表（該表僅收官方頁上自列的條件）；已列入「## 模型網攻能力與防護」表 11-04 列
+- **可信度評估**：兩則均止於標題層級，互動未載
+- ❓ **待查證**（標 2026-11-04｜查 CERT-In、Claude Mythos｜複 2026-11-18）｜**存取範圍、測試結果與通報義務細節**：CERT-In 測試的具體範圍與成果、AI agent 事故通報義務是否已成文規範均未見報導
 
 #### CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity AI 機器人身分獵取密碼與 API 金鑰（2026-11-02 新增）
 
@@ -146,8 +155,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-11-10）｜**分類器是否確有行為變化**：單一使用者回報、0 留言、無跨來源佐證，是分類器近期確有調整還是個案誤判均無定論
 - **可信度評估**：單一 Reddit 貼文、0 留言、無其他使用者附議或媒體跟進，可信度低，暫記錄觀察
 
-#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-31 更新）
+#### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-31／11-03 更新）
 
+- **2026-11-03 更新（Gizmodo）**：OpenAI 雇用聲稱入侵 Anthropic 系統的前 DOGE 成員，以強化自家資安團隊；報導未附入侵事件的具體時間、手法細節，OpenAI、Anthropic 官方回應均未見報導
 - **2026-10-31 更新（India Today 轉述，HN 74 分）**：報導指名新創為 Cathedral，稱其是在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時進入內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿
   - Cathedral 與前述前 DOGE 成員新創是否同一家（待確認，推論為同一事件）；是否在計畫授權範圍內、修補範圍與 Anthropic 回應均未見報導
 

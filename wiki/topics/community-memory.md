@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **Context 管理新增高星工具，跨環境記憶新增多帳號搬移範例**（2026-11-02）
-> - **mksglu/context-mode（33,266★）**：本機沙箱＋SQLite FTS5 全文搜尋把工具輸出攔在 context 外，稱可減少 99% 位元組；近 4 個月僅剩自動化提交，無真人開發紀錄。
-> - **altsang/claude-tandem**：多組 Claude 帳號／profile 管理工具，把 session 工作狀態搬到另一台 Mac／iPhone 繼續。
+> **索引記憶新增程式碼圖＋記憶合一工具**（2026-11-04）
+> - **Graphicle-AI/graphicle**：單一 Rust 程式為 coding agent 建立程式碼關聯圖與記憶層，相容 Claude Code、Codex、Cursor 與任意 MCP client（501★，僅標題可用）。
 
 ---
 
@@ -66,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Graphicle-AI/graphicle：單一 Rust 程式為 coding agent 提供程式碼圖與記憶，相容 Claude Code／Codex／Cursor／任意 MCP client（2026-11-04）
+
+- **主線：** 索引記憶
+- **核心模式：** 用單一 Rust 程式為 coding agent 建立程式碼關聯圖與記憶層，讓 agent 不必每次重新讀整個 repo 來回答「這段程式碼跟哪裡有關」；相容 Claude Code、Codex、Cursor 與任意 MCP client。
+- **與既有模式的關係：** 補上「記憶與知識管理」一個「程式碼圖＋記憶合一」的跨工具實作，與既有 context-mode（SQLite FTS5 全文索引，[[topics/community-memory#2026-11]]）同屬「索引取代重新讀取」一類，但本則聚焦程式碼關聯圖而非工具輸出；大型 repo 的 agent 最先撞到的是記不住跨檔案關聯，主線填索引記憶。
+- **可信度註記：** 僅 GitHub Search 星數可查（501★），forks／issues／近期 commit 佐證未查；描述僅標題可用，實際索引機制與效果未見第三方驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/Graphicle-AI/graphicle)
+- **成熟度：** ⏳ 新興（本庫首次收錄，僅標題可用，尚無社群採用回饋數據）
 
 #### mksglu/context-mode：本機沙箱＋SQLite FTS5 全文搜尋，把工具輸出攔在 context 之外（2026-11-02）
 

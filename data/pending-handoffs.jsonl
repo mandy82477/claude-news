@@ -382,3 +382,15 @@
 {"id": "H-645373", "closed": "2026-11-02", "status": "done", "by": "商業", "result": "第 24 波拆頁：總入口＝pricing 母頁「事故現在還在發生嗎」三路分流；根因三個（未列入總表標記在 %% 被剝、排序按留言數漂移、上限 6）以條文＋表修（上限 8、照最後動態、表下可見一行）；pricing 側互指本波補，code-quality-decline／community-cost 側另開轉知給社群"}
 {"id": "H-95764c", "closed": "2026-11-02", "status": "done", "by": "功能", "result": "已於 claude-code.md「💰 計費與配額」新增一行負向對照：muaaz9329/cheap-ag 宣稱「50x your Claude usage」，標證據薄弱"}
 {"id": "H-952d1f", "closed": "2026-11-02", "status": "void", "by": "主編", "result": "功能記者已評估：community-skills／community-integrations 2026-11-01 新增節點均為單一社群工具示例，未達 official-community-gap 開新列門檻（需 ≥2 獨立工具或 GitHub issue ≥100 讚），且表已滿 18 列，不開新列"}
+{"id": "H-5e5975", "opened": "2026-11-04", "from": "主編", "to": "功能", "page": "entities/claude-code", "note": "entities/claude-code.md L191「[[entities/cat-wu]]（Claude Code 產品負責人，AI 主動性論述）」描述已過期——Cat Wu 已於 2026-11-04 卸任，人物記者已更新 entities/cat-wu.md 但該行屬功能記者領域不可代改，請改寫為卸任後現況或移除職稱描述", "status": "open"}
+{"id": "H-5f3c59", "closed": "2026-11-04", "status": "done", "by": "人物", "result": "人物記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-fec1b0", "closed": "2026-11-04", "status": "done", "by": "人物", "result": "人物記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-f9ab90", "closed": "2026-11-04", "status": "done", "by": "功能", "result": "功能記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-f000d4", "closed": "2026-11-04", "status": "done", "by": "商業", "result": "商業記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-11d17b", "closed": "2026-11-04", "status": "done", "by": "商業", "result": "商業記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-0fd390", "closed": "2026-11-04", "status": "done", "by": "安全政策", "result": "安全政策記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-9c7428", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-9a89bc", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-1cf735", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-fa1aa2", "closed": "2026-11-04", "status": "done", "by": "社群", "result": "社群記者 2026-11-04 ingest 回報已處理"}
+{"id": "H-18d3f4", "opened": "2026-11-04", "from": "社群", "to": "功能", "page": "—", "note": "評估產品化矩陣新增列：Skills 設計三則（teardown／code-animation-prompts／mobile-app-ui-design）、可靠性測試一則（structured output 強制呼叫假工具失效案例）、記憶一則（Graphicle code graph+memory）、Token 成本一則（17 bot／$100 月費具名案例）；今日無 patterns 節點源自 discussions，衍生欄不適用", "status": "open", "force_reason": "跨領域矩陣頁面歸屬不明確，暫掛功能記者"}

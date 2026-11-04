@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-11-01
 
 > **Token 消耗異常訊號群新增一例：單次任務輸出 token 疑暴增 3.8 倍**（2026-11-01）
@@ -93,7 +93,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 2026-07-01 | 「Claude Code Just Got 5x More Expensive」：用戶回報原先兩天用量的 $50 配額現在一小時燒完 | Vincent Schmalbach blog（[原文](https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/)） | `單一貼文（HN 53 分）` |
 | 2026-07-01 | 獨立開發者單月燒 $62,021 token 的具名案例 | Reddit r/ClaudeAI（[原文](https://www.reddit.com/r/ClaudeAI/comments/1ukli2u/i_burned_62021_in_claude_tokens_in_june_solo_dev/)）| `具名個案（單一，非可複現統計）` |
 | 2026-07-03 | GitHub issue #16856：升級至 2.1.1 版後 token 消耗速度較前版快 4 倍以上 | [GitHub Issues #16856](https://github.com/anthropics/claude-code/issues/16856) | `GitHub issue（可重現，73 則留言）` |
-| 2026-07-03 | GitHub issue #38335：Max 方案 session 額度自 3/23 起異常加速消耗；截至 07-09 累積 791 則留言、536 個讚，社群互動量最高條目之一 | [GitHub Issues #38335](https://github.com/anthropics/claude-code/issues/38335) | `GitHub issue（791 則留言、536 個讚，07-09 數）` |
+| 2026-07-03 | GitHub issue #38335：Max 方案 session 額度自 3/23 起異常加速消耗，社群互動量最高條目之一（互動數見 [[entities/claude-code-known-issues]]） | [GitHub Issues #38335](https://github.com/anthropics/claude-code/issues/38335) | `GitHub issue（互動數見 [[entities/claude-code-known-issues]]）` |
 | 2026-07-08 | GitHub issue #41506：Max 方案（$100/月）token 消耗量自 3/28-29 起在未變更設定下增加約 3-5 倍，累積 54 則留言、29 個讚 | [GitHub Issues #41506](https://github.com/anthropics/claude-code/issues/41506) | `GitHub issue（54 則留言、29 個讚）` |
 | 2026-07-08 | 「Cache hit rate dropping by 20% doubles your agent's bills」：使用者以圖表分享 cache 命中率下降 20% 會讓 agent 帳單翻倍 | Reddit r/ClaudeCode（[原文](https://www.reddit.com/r/ClaudeCode/comments/1uqsah2/cache_hit_rate_dropping_by_20_doubles_your_agents_bills/)）| `單一貼文（圖為主，本群唯一機制解釋）` |
 | 2026-07-09 | 「Claude Max 20x: Why did 27% of one session consume 7% of my entire weekly limit?」：單一 session 27% 的時間即消耗掉整週額度 7% | Reddit r/ClaudeAI（[原文](https://www.reddit.com/r/ClaudeAI/comments/1urqgqx/claude_max_20x_why_did_27_of_one_session_consume/)）| `單一貼文（帶具體比例）` |
@@ -135,7 +135,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **模型真的退步**：若近期版本在等量任務上確實需要更多 tool call 或更長 thinking，會直接反映成 token 上升。目前沒有官方或第三方在同一組 prompt 上做版本前後的用量對照。
 - **計費或計量改變**：$62,021 案例與「5x 更貴」報導講的是帳單與配額速度，不是任務品質；cache 命中率若因 context 結構或後端調度而下降，重算的 token 會直接推高帳單，模型能力不必真的變差。
-- **你這端的配置**：multi-agent 與 MCP 工具疊加的成本是 [[topics/community-tech-discussions]] 已記錄的問題；若真是 context 腐蝕或配置問題，理論上調 CLAUDE.md、少一層 subagent 就會緩解，但至今沒有人回報緩解成功。
+- **你這端的配置**：multi-agent 與 MCP 工具疊加的成本是 [[topics/community-tech-discussions]] 已記錄的問題；若真是 context 腐蝕或配置問題，理論上調 CLAUDE.md、少一層 subagent 就會緩解，但至今沒有人回報緩解成功。用量具體流向哪裡，見 [[topics/community-cost#用量去向歸因]]。
 
 **目前的說法**：十則回報方向一致、來源獨立，但沒有一則帶測試方法或版本前後對照，三種解釋都排除不掉。官方對這一批沒有專文，[#65687](https://github.com/anthropics/claude-code/issues/65687) 到 2026-09-25 仍開啟（最後更新日，09-27 查）。10-30 那則沒有互動數也沒有新機制，只說明現象還在。
 
@@ -226,7 +226,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/claude-code]]「現在還沒修好的」——現在什麼壞了、誰會遇到、怎麼繞（逐個 issue）
 - [[entities/opus-5]]「這些數字是誰量的」——Opus 5 這個模型的官方基準與社群觀感（逐則原文）
 - [[feature-radar]]「從你現在的版本升上去，會遇到什麼」——升上去會壞什麼；你沒升版卻覺得變慢，才是本頁
-- [[entities/pricing]]「事故現在還在發生嗎」——帳單被扣錯、配額換軌；token 燒得比以前快在本頁
+- [[entities/pricing-incidents#還在發生的事故]]「帳單被扣錯、配額換軌」——token 燒得比以前快在本頁
 - [[topics/community-tech-discussions]]「現在吵到哪」——「越用越笨是模型退步還是 context 腐蝕」那場觀念之爭
 - [[topics/model-comparison]]、[[entities/opus-4-7]]、[[entities/opus-4-8]]——以上三頁是本頁事實的上下游：選型與成本換算、1M 這個旋鈕、以及兩代舊模型自己的頁。
 

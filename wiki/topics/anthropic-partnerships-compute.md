@@ -31,12 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **最新動態**（2026-11-03）
-> - **athenahealth 推出 athenaPatient MCP**：病患電子病歷接入 Claude 供臨床人員查詢，具體資料範圍與存取權限未見報導（[Healthcare IT News](https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2E4a1FVbFVvRVV5V3hMbVNINGZHQkdqT1J0Slk1ZVZuU0NXYzdCS0lFZUszOHlSeGhHT1RwckVtdHFTWHNaSldUMjVuc3JfWXRlV3IwRUlxR05SYk5WUF9KUXZ6eVRwRl8yYUtCUGdhc0NkXzVRb3FoRTUxQzJRdFN2T21BV0lWX1NLRXM0cy1YNE14ZDJsYkhNZ0FxNDVCeGZWejRWbEJNMVZI?oc=5)、HIT Consultant 等 3 家媒體）
-> - **（11-02）修訂版 S-1 揭露算力採購承諾與租賃協議升至 8,950 億美元**（其中 4,475 億預計 2030 年底前支出完畢），數字細節見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html)）
+> **最新動態**（2026-11-04）
+> - **TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，未附具體擔保金額，詳見「算力與資金從哪來」TeraWulf 列更新
 
 ---
 
@@ -75,7 +74,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽 | 目前無可見後果；循環融資質疑屬評論 |
 | Volta | 六年 $100 億，算力在挪威 Tydal（08-04） | 已簽 | 目前無可見後果 |
 | Riot Platforms | $90 億 20 年雲端運算協議（08-11） | 已簽 | 目前無可見後果 |
-| TeraWulf | $190 億 20 年肯塔基州園區租約（07-06） | 已簽 | 目前無可見後果 |
+| TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 提供信用擔保支應該計畫，具體金額未見（11-04） | 已簽；新增 Google 信用擔保 | 目前無可見後果。下一個觸發點：擔保金額揭露 |
 | AMD | 投資最高 $50 億並簽晶片協議；供應規模、股權比例未見（07-22） | 已簽 | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務） |
 | AWS | S-1 揭露承諾 $1,100 億（多家引 S-1，10-26）；先前報導逾 $1,000 億（09-06） | 已承諾 | 通路有價格後果：Bedrock 無 50% Batch 折扣，見 [[entities/pricing#通路：誰定價、怎麼開票]] |
 | Google | 直接投資最高 $400 億（04-24）；近 $2,000 億融資機制，結構未見（推論，08-04） | 投資已宣布，融資機制結構未見 | 融資無可見後果；Vertex AI 費率由 Google 自訂，見 [[entities/google-investment]] |
@@ -94,7 +93,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **財務面**：S-1 揭露的算力長約四家合計逾 5,000 億美元，會不會轉成定價壓力見 [[topics/anthropic-business-risks#還沒過去的風險]]；Amazon／Google 通路集中（2025 年近半營收經兩家雲端市集銷售，非客戶集中）見 [[topics/anthropic-ipo#S-1 揭露了什麼]]。
 
-**寫得出後果的只有兩則**：05-06 官方隨 SpaceX Colossus 1 容量上線提高用量上限；07-18 Startup Fortune 稱因運算吃緊收緊 Fable 5 存取，本站查證的官方文件只寫方案分界、未載原因，見 [[entities/pricing]]「當前生效的計費規則」07-20 條。各列共同的下一個觸發點是正式定價與股數公告（公開版 S-1 已於 2026-10-26 提交）。
+**本表（算力與資金從哪來）目前只有兩列寫得出具體後果**：SpaceX（05-06 官方隨 Colossus 1 容量上線提高用量上限）、AWS（通路有價格後果，Bedrock 無 50% Batch 折扣，見上表細節）。另一筆常與此並置的「運算吃緊」後果不在本表：07-18 Startup Fortune 稱因運算吃緊收緊 Fable 5 存取，本站查證的官方文件只寫方案分界、未載原因，屬 [[entities/pricing]]「當前生效的計費規則」07-20 條的計費政策事件，非本表合約列。各列共同的下一個觸發點是正式定價與股數公告（公開版 S-1 已於 2026-10-26 提交）。
 
 %% 維運備忘：2026-10-04 首次彙整；2026-10-25 週度回顧改為算力合約總表（拆列、補期限與狀態、Nscale 標第二筆）。新合約出現時先判斷「可見後果」欄寫不寫得出，寫不出就寫「目前無可見後果」；各交易原始細節的家仍是下方合作表一行制清單與 ## 時序。席位限縮是否為產能管控：無來源，不寫 %%
 
@@ -287,6 +286,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-04
+- **[資本支出] Reuters／Unite.AI：TeraWulf 取得 Google 信用擔保，支應其為 Anthropic 肯塔基州資料中心計畫**：兩篇報導均未附具體擔保金額，詳見「算力與資金從哪來」TeraWulf 列更新（Reuters；Unite.AI）
 
 #### 2026-11-03
 - **[企業合作] Google News：醫療 IT 供應商 athenahealth 推出 athenaPatient MCP，將病患病歷接入 Claude**：Healthcare IT News 等 3 家媒體同日報導，見上方「其餘合作」清單（Google News/HIT Consultant；Google News/Healthcare IT News）

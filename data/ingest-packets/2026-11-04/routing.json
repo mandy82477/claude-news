@@ -215,8 +215,10 @@
  "https://installrate.com/leaderboard/": {
   "title": "Show HN: InstallRate – what Claude, GPT and Gemini npm install (20 categories)",
   "source": "Hacker News",
-  "categories": [],
-  "reason": "社群類僅收 score≥30 的工具或技術討論／工作流模式；本則為單純工具發布（Show HN 1 分），不符任何一款",
+  "categories": [
+   "社群"
+  ],
+  "reason": "分類回退自排除：分類複核記者判定非單純工具發布，是 Claude/GPT/Gemini 套件選擇行為的實測比較，屬技術討論，score≥30 門檻只綁定「社群工具」子類不適用",
   "note": "",
   "summary_override": ""
  },

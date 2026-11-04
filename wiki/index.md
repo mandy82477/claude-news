@@ -64,7 +64,7 @@
 | [[entities/bernanke]] | person | 👤 人物 | active | 前聯準會主席，2026-07-09 加入 Anthropic 長期利益信託（Long-Term Benefit Trust）董事會 |
 | [[entities/boris-cherny]] | person | 👤 人物 | active | Claude Code 打造者與負責人，「Loops 是未來」設計哲學；07-17 稱同時執行數千個 Claude Code agent（出處已查實）　↳ 子故事：[[entities/boris-cherny-archive]] |
 | [[entities/john-jumper]] | person | 👤 人物 | active | 諾貝爾化學獎得主（AlphaFold），2026-06-19 離開 Google DeepMind 加入 Anthropic（Reuters 確認）　↳ 子故事：[[entities/john-jumper-archive]] |
-| [[entities/cat-wu]] | person | 👤 人物 | active | Claude Code 產品負責人，「AI 下一步是主動性（proactivity）」論述 |
+| [[entities/cat-wu]] | person | 👤 人物 | active | 2026-11-04 卸任 Claude Code 產品負責人；「AI 下一步是主動性（proactivity）」論述 |
 | [[entities/andrej-karpathy]] | person | 👤 人物 | active | 近期加入 Anthropic，CLAUDE.md 四條規則、「最小必要 context」費用控管原則 |
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
 | [[entities/chris-olah]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
