@@ -2,8 +2,8 @@
   "_note": "字元上限機械閘的存量基線（頁 → [{kind, anchor, max_len}]）。check_cell_limits.py 以「同頁同類型同錨點且長度 ≤ max_len」判存量，其餘判新增 FAIL。只准變緊：--rebuild 只能移除或收緊條目；要新增必須 --allow-grow --reason 並寫入 data/baseline-changes.jsonl，src/tests/test_baseline_ratchet.py 以 HEAD 版比對看守。記者不得 rebuild。",
   "_format": 2,
   "_baseline_set": "2026-09-05",
-  "_pages": 41,
-  "_hits": 600,
+  "_pages": 48,
+  "_hits": 492,
   "_migrated": "2026-09-25",
   "_migrated_from_hits": 915,
   "pages": {
@@ -31,13 +31,52 @@
     "entities/claude-code": [
       {
         "kind": "list_item",
-        "anchor": "--dangerously-skip-permi",
-        "max_len": 229
+        "anchor": "Anthropic 為 Claude Deskt",
+        "max_len": 335
       },
+      {
+        "kind": "list_item",
+        "anchor": "Claude Code 新增 Complianc",
+        "max_len": 408
+      }
+    ],
+    "entities/claude-code-features": [
       {
         "kind": "list_item",
         "anchor": "1Password 整合已確認（查證日 2026",
         "max_len": 353
+      },
+      {
+        "kind": "list_item",
+        "anchor": "CLI 權限客製化避免手動確認（2026-06-",
+        "max_len": 238
+      },
+      {
+        "kind": "list_item",
+        "anchor": "background 白名單",
+        "max_len": 236
+      },
+      {
+        "kind": "list_item",
+        "anchor": "官方文件更新（2026-08-29）",
+        "max_len": 204
+      },
+      {
+        "kind": "list_item",
+        "anchor": "桌面版官方文件：Auto Mode 模型門檻與",
+        "max_len": 331
+      },
+      {
+        "kind": "list_item",
+        "anchor": "自訂 agent 支援的 frontmatter",
+        "max_len": 295
+      }
+    ],
+    "entities/claude-code-known-issues": [
+      {
+        "kind": "list_item",
+        "anchor": "--dangerously-skip-permi",
+        "max_len": 229
       },
       {
         "kind": "list_item",
@@ -67,57 +106,12 @@
       {
         "kind": "list_item",
         "anchor": "Anthropic Status",
-        "max_len": 289
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 261
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
         "max_len": 245
       },
       {
         "kind": "list_item",
         "anchor": "Anthropic Status",
-        "max_len": 235
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
         "max_len": 233
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 227
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 212
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 210
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic Status",
-        "max_len": 206
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic 為 Claude Deskt",
-        "max_len": 335
       },
       {
         "kind": "list_item",
@@ -128,11 +122,6 @@
         "kind": "list_item",
         "anchor": "CLAUDE.md 作為 candidate-c",
         "max_len": 264
-      },
-      {
-        "kind": "list_item",
-        "anchor": "CLI 權限客製化避免手動確認（2026-06-",
-        "max_len": 238
       },
       {
         "kind": "list_item",
@@ -156,18 +145,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Claude Code 新增 Complianc",
-        "max_len": 408
-      },
-      {
-        "kind": "list_item",
         "anchor": "Claude Code 要求使用者幾乎每天都須重",
         "max_len": 269
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude Code 送出的 User-Age",
-        "max_len": 423
       },
       {
         "kind": "list_item",
@@ -206,11 +185,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Extended Thinking 輸出為加密摘",
-        "max_len": 202
-      },
-      {
-        "kind": "list_item",
         "anchor": "Extended Thinking「思考內容」實",
         "max_len": 301
       },
@@ -233,11 +207,6 @@
         "kind": "list_item",
         "anchor": "HERMES.md 計費路由 bug（GitHu",
         "max_len": 313
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Keyv 關聯 npm 供應鏈蠕蟲攻擊，植入 C",
-        "max_len": 511
       },
       {
         "kind": "list_item",
@@ -271,11 +240,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Opus 5 Auto Mode 安全機制遭具名",
-        "max_len": 846
-      },
-      {
-        "kind": "list_item",
         "anchor": "Opus 5 xhigh 推理強度於 Claud",
         "max_len": 310
       },
@@ -297,7 +261,7 @@
       {
         "kind": "list_item",
         "anchor": "Session 歷史 30 天自動刪除（Anth",
-        "max_len": 566
+        "max_len": 548
       },
       {
         "kind": "list_item",
@@ -326,23 +290,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Windows/MSIX 1.28929.0",
-        "max_len": 355
-      },
-      {
-        "kind": "list_item",
         "anchor": "autoMemoryEnabled=false",
         "max_len": 318
-      },
-      {
-        "kind": "list_item",
-        "anchor": "background 白名單",
-        "max_len": 236
-      },
-      {
-        "kind": "list_item",
-        "anchor": "claude.ai container crea",
-        "max_len": 229
       },
       {
         "kind": "list_item",
@@ -361,11 +310,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "symlink 記憶載入器缺口",
-        "max_len": 575
-      },
-      {
-        "kind": "list_item",
         "anchor": "v2.1.113 起原生二進位改依賴 glibc",
         "max_len": 295
       },
@@ -381,18 +325,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "✅ 已修復 v2.1.163｜Claude Co",
-        "max_len": 594
-      },
-      {
-        "kind": "list_item",
         "anchor": "✅ 已修復 v2.1.197（2026-07-0",
         "max_len": 601
-      },
-      {
-        "kind": "list_item",
-        "anchor": "✅ 已修復 v2.1.216（v2.1.223",
-        "max_len": 406
       },
       {
         "kind": "list_item",
@@ -403,16 +337,6 @@
         "kind": "list_item",
         "anchor": "✅ 已修復 v2.1.64｜CVE-2026-3",
         "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "⟨Q-14⟩ anthropic-sdk-pyt",
-        "max_len": 393
-      },
-      {
-        "kind": "list_item",
-        "anchor": "⟨Q-15⟩ anthropic-sdk-pyt",
-        "max_len": 271
       },
       {
         "kind": "list_item",
@@ -433,11 +357,6 @@
         "kind": "list_item",
         "anchor": "使用者實測：輸入第一個提示前即已耗用約 51,0",
         "max_len": 628
-      },
-      {
-        "kind": "list_item",
-        "anchor": "僅需請 Claude Code 摘要一個網址即可",
-        "max_len": 382
       },
       {
         "kind": "list_item",
@@ -526,11 +445,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "官方文件更新（2026-08-29）",
-        "max_len": 204
-      },
-      {
-        "kind": "list_item",
         "anchor": "對話壓縮（compaction）間歇性失敗或卡死",
         "max_len": 244
       },
@@ -546,28 +460,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "已通過 CVP 審核的組織在 Claude Co",
-        "max_len": 226
-      },
-      {
-        "kind": "list_item",
-        "anchor": "底層 runtime 確認改用 Rust 版 B",
-        "max_len": 285
-      },
-      {
-        "kind": "list_item",
         "anchor": "恢復曾用延伸思考的 session 永久失敗，A",
         "max_len": 438
-      },
-      {
-        "kind": "list_item",
-        "anchor": "惡意 .git 設定檔可讓 Claude、Cod",
-        "max_len": 424
-      },
-      {
-        "kind": "list_item",
-        "anchor": "應優先使用 Read／Grep 等內建工具的情境",
-        "max_len": 223
       },
       {
         "kind": "list_item",
@@ -591,11 +485,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "桌面版官方文件：Auto Mode 模型門檻與",
-        "max_len": 331
-      },
-      {
-        "kind": "list_item",
         "anchor": "畫面/終端機閃爍（GitHub issue #7",
         "max_len": 210
       },
@@ -606,11 +495,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "自訂 agent 支援的 frontmatter",
-        "max_len": 295
-      },
-      {
-        "kind": "list_item",
         "anchor": "記憶過多導致品質退步（2026-06-22 指控",
         "max_len": 205
       },
@@ -618,131 +502,13 @@
         "kind": "list_item",
         "anchor": "選用 opus-plan 模型時，即使已達成 1",
         "max_len": 303
-      },
+      }
+    ],
+    "entities/claude-code-releases": [
       {
         "kind": "list_item",
-        "anchor": "預設選擇依序：teammate 派的 → for",
-        "max_len": 251
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-01#c2",
-        "max_len": 443
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-02#c2",
-        "max_len": 570
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-04#c2",
-        "max_len": 551
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-05#c2",
-        "max_len": 513
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-07#c2",
-        "max_len": 652
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-08#c2",
-        "max_len": 938
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-09#c2",
-        "max_len": 883
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-10#c2",
-        "max_len": 474
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-11#c2",
-        "max_len": 286
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-12#c2",
-        "max_len": 188
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-13#c2",
-        "max_len": 618
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-14#c2",
-        "max_len": 1031
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-17#c2",
-        "max_len": 509
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-18#c2",
-        "max_len": 1055
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-19#c2",
-        "max_len": 911
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-20#c2",
-        "max_len": 832
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-21#c2",
-        "max_len": 788
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-22#c2",
-        "max_len": 848
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-23#c2",
-        "max_len": 869
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-24#c2",
-        "max_len": 370
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-25#c2",
-        "max_len": 396
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-27#c2",
-        "max_len": 352
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-29#c2",
-        "max_len": 1200
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "2026-08-30#c2",
-        "max_len": 642
+        "anchor": "底層 runtime 確認改用 Rust 版 B",
+        "max_len": 285
       },
       {
         "kind": "table_cell",
@@ -763,136 +529,6 @@
         "kind": "table_cell",
         "anchor": "anthropic-sdk-python v0.#c3",
         "max_len": 122
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "anthropic-sdk-typescript#c3",
-        "max_len": 123
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.142#c3",
-        "max_len": 174
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.145#c3",
-        "max_len": 162
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.150#c3",
-        "max_len": 207
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.152#c3",
-        "max_len": 211
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.153#c3",
-        "max_len": 144
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.160#c3",
-        "max_len": 203
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.162#c3",
-        "max_len": 127
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.163#c3",
-        "max_len": 216
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.169#c3",
-        "max_len": 122
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.178#c3",
-        "max_len": 135
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.183#c3",
-        "max_len": 139
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.185#c3",
-        "max_len": 151
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.186#c3",
-        "max_len": 159
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.195#c3",
-        "max_len": 138
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.196#c3",
-        "max_len": 127
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.197#c3",
-        "max_len": 162
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.202#c3",
-        "max_len": 149
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.207#c3",
-        "max_len": 151
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.211#c3",
-        "max_len": 150
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.212#c3",
-        "max_len": 232
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.214#c3",
-        "max_len": 157
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.215#c3",
-        "max_len": 144
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.216#c3",
-        "max_len": 214
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.217#c3",
-        "max_len": 157
-      },
-      {
-        "kind": "table_cell",
-        "anchor": "v2.1.218#c3",
-        "max_len": 164
       },
       {
         "kind": "table_cell",
@@ -1203,6 +839,33 @@
     "entities/pricing": [
       {
         "kind": "list_item",
+        "anchor": "Free／Pro 功能組成（2026-08-12",
+        "max_len": 241
+      },
+      {
+        "kind": "list_item",
+        "anchor": "usage credits 僅可在網頁版開通（2",
+        "max_len": 281
+      },
+      {
+        "kind": "list_item",
+        "anchor": "⚠️ usage credits 開啟後，方案用",
+        "max_len": 231
+      },
+      {
+        "kind": "list_item",
+        "anchor": "✅ 2026-07-20 生效｜旗艦模型的訂閱分",
+        "max_len": 526
+      },
+      {
+        "kind": "list_item",
+        "anchor": "✅ 2026-09-14 已生效（官方文件確認）",
+        "max_len": 502
+      }
+    ],
+    "entities/pricing-history": [
+      {
+        "kind": "list_item",
         "anchor": "07-17 早期信號（回溯記錄）",
         "max_len": 235
       },
@@ -1215,11 +878,6 @@
         "kind": "list_item",
         "anchor": "API 定價跨供應商比較難度浮上檯面（The R",
         "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Ars Technica 詳細報導",
-        "max_len": 218
       },
       {
         "kind": "list_item",
@@ -1238,11 +896,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "Free／Pro 功能組成（2026-08-12",
-        "max_len": 241
-      },
-      {
-        "kind": "list_item",
         "anchor": "Geeky Gadgets",
         "max_len": 345
       },
@@ -1253,48 +906,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "GitHub Issue #38335（792",
-        "max_len": 242
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #55266",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #55982（77 留",
-        "max_len": 213
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #79337",
-        "max_len": 403
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #79337 互動量持",
-        "max_len": 378
-      },
-      {
-        "kind": "list_item",
-        "anchor": "GitHub Issue #79337 互動量攀",
-        "max_len": 318
-      },
-      {
-        "kind": "list_item",
         "anchor": "GitHub Issue 要求 INR 在地化定",
         "max_len": 422
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Hacker News（2026-08-31 1",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "KED Global",
-        "max_len": 203
       },
       {
         "kind": "list_item",
@@ -1305,36 +918,6 @@
         "kind": "list_item",
         "anchor": "Official Docs（support.cl",
         "max_len": 390
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Pro／Team standard 過渡 cre",
-        "max_len": 449
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeAI",
-        "max_len": 434
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeAI",
-        "max_len": 321
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeAI 週熱門回報",
-        "max_len": 411
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Reddit r/ClaudeCode 回報週用",
-        "max_len": 255
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Team／Free／Enterprise 月費（",
-        "max_len": 218
       },
       {
         "kind": "list_item",
@@ -1353,53 +936,13 @@
       },
       {
         "kind": "list_item",
-        "anchor": "r/ClaudeAI 週熱門貼文",
-        "max_len": 420
-      },
-      {
-        "kind": "list_item",
-        "anchor": "usage credits 僅可在網頁版開通（2",
-        "max_len": 281
-      },
-      {
-        "kind": "list_item",
         "anchor": "usage credits 的隱性風險（Mana",
         "max_len": 222
       },
       {
         "kind": "list_item",
-        "anchor": "⚠️ usage credits 開啟後，方案用",
-        "max_len": 231
-      },
-      {
-        "kind": "list_item",
-        "anchor": "✅ 2026-07-20 生效｜旗艦模型的訂閱分",
-        "max_len": 526
-      },
-      {
-        "kind": "list_item",
-        "anchor": "✅ 2026-09-13 到期（更正",
-        "max_len": 431
-      },
-      {
-        "kind": "list_item",
-        "anchor": "✅ 2026-09-14 已生效（官方文件確認）",
-        "max_len": 502
-      },
-      {
-        "kind": "list_item",
-        "anchor": "✅ 官方答案（2026-08-22 查證）",
-        "max_len": 598
-      },
-      {
-        "kind": "list_item",
         "anchor": "一次性 credit 金額 ✅ 已於 2026-",
         "max_len": 356
-      },
-      {
-        "kind": "list_item",
-        "anchor": "企業合作層級（Select vs Preferr",
-        "max_len": 318
       },
       {
         "kind": "list_item",
@@ -1413,18 +956,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "同日 Reddit 疑似相關回報（單一貼文，未經",
-        "max_len": 219
-      },
-      {
-        "kind": "list_item",
         "anchor": "媒體視角補充，非新政策",
         "max_len": 253
-      },
-      {
-        "kind": "list_item",
-        "anchor": "官方 Help Center",
-        "max_len": 271
       },
       {
         "kind": "list_item",
@@ -1473,11 +1006,6 @@
       },
       {
         "kind": "list_item",
-        "anchor": "官方證實大規模帳務錯誤",
-        "max_len": 455
-      },
-      {
-        "kind": "list_item",
         "anchor": "對既有延長序列的意涵（推論）",
         "max_len": 285
       },
@@ -1498,28 +1026,13 @@
       },
       {
         "kind": "list_item",
-        "anchor": "旗艦分界的官方定義（2026-07-20 生效）",
-        "max_len": 279
-      },
-      {
-        "kind": "list_item",
         "anchor": "更正本頁既有記錄：本頁 07-12 條目曾將此促",
         "max_len": 262
       },
       {
         "kind": "list_item",
-        "anchor": "正面反例（同期出現）",
-        "max_len": 201
-      },
-      {
-        "kind": "list_item",
         "anchor": "社群對 Fable 5 訂閱去留持續揣測（非官方",
         "max_len": 409
-      },
-      {
-        "kind": "list_item",
-        "anchor": "社群集體反映配額縮減",
-        "max_len": 321
       },
       {
         "kind": "list_item",
@@ -1530,6 +1043,103 @@
         "kind": "list_item",
         "anchor": "與已回應事實的張力（非官方政策異動）",
         "max_len": 252
+      }
+    ],
+    "entities/pricing-incidents": [
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #38335（792",
+        "max_len": 242
+      },
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #55266",
+        "max_len": 401
+      },
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #55982（77 留",
+        "max_len": 213
+      },
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #79337",
+        "max_len": 403
+      },
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #79337 互動量持",
+        "max_len": 378
+      },
+      {
+        "kind": "list_item",
+        "anchor": "GitHub Issue #79337 互動量攀",
+        "max_len": 318
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Hacker News（2026-08-31 1",
+        "max_len": 224
+      },
+      {
+        "kind": "list_item",
+        "anchor": "KED Global",
+        "max_len": 203
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Reddit r/ClaudeAI",
+        "max_len": 434
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Reddit r/ClaudeAI",
+        "max_len": 321
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Reddit r/ClaudeAI 週熱門回報",
+        "max_len": 411
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Reddit r/ClaudeCode 回報週用",
+        "max_len": 255
+      },
+      {
+        "kind": "list_item",
+        "anchor": "r/ClaudeAI 週熱門貼文",
+        "max_len": 420
+      },
+      {
+        "kind": "list_item",
+        "anchor": "✅ 官方答案（2026-08-22 查證）",
+        "max_len": 598
+      },
+      {
+        "kind": "list_item",
+        "anchor": "企業合作層級（Select vs Preferr",
+        "max_len": 318
+      },
+      {
+        "kind": "list_item",
+        "anchor": "同日 Reddit 疑似相關回報（單一貼文，未經",
+        "max_len": 219
+      },
+      {
+        "kind": "list_item",
+        "anchor": "官方 Help Center",
+        "max_len": 271
+      },
+      {
+        "kind": "list_item",
+        "anchor": "官方證實大規模帳務錯誤",
+        "max_len": 455
+      },
+      {
+        "kind": "list_item",
+        "anchor": "正面反例（同期出現）",
+        "max_len": 201
       },
       {
         "kind": "list_item",
@@ -1539,7 +1149,7 @@
       {
         "kind": "list_item",
         "anchor": "長期 Max 用戶反映升級介面誤導、退款無門",
-        "max_len": 473
+        "max_len": 455
       }
     ],
     "entities/sonnet-5": [
@@ -1638,146 +1248,11 @@
         "max_len": 383
       }
     ],
-    "topics/anthropic-business": [
-      {
-        "kind": "list_item",
-        "anchor": "AMD（07-22）",
-        "max_len": 422
-      },
-      {
-        "kind": "list_item",
-        "anchor": "AWS Continuum（08-05）",
-        "max_len": 399
-      },
-      {
-        "kind": "list_item",
-        "anchor": "AWS 官方公告 Claude Fable 5.",
-        "max_len": 276
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Amazon AWS GovCloud（08-3",
-        "max_len": 340
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Amir Salek（08-21起，08-23",
-        "max_len": 932
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic 印度市場（08-03）",
-        "max_len": 226
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic 澳洲市場（08-25）",
-        "max_len": 275
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Anthropic 關聯資料中心私募信貸（08-",
-        "max_len": 351
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Blackstone（Ode，07-16起）",
-        "max_len": 606
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Casper Studios（08-20）",
-        "max_len": 409
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude for Teachers 免費開放",
-        "max_len": 364
-      },
+    "topics/anthropic-business-risks": [
       {
         "kind": "list_item",
         "anchor": "Claude 浮水印被繞過",
         "max_len": 291
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Claude 營收年增 1,000%（08-28",
-        "max_len": 235
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Cognizant（07-28）",
-        "max_len": 449
-      },
-      {
-        "kind": "list_item",
-        "anchor": "CrowdStrike（08-27）",
-        "max_len": 233
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Cyberhaven（07-23）",
-        "max_len": 281
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Decart（08-13起多輪跟進）",
-        "max_len": 727
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Deloitte（07-17）",
-        "max_len": 251
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Economic Futures Researc",
-        "max_len": 355
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Enterprise Frontier Safe",
-        "max_len": 800
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Google 近 2000 億美元融資機制（08",
-        "max_len": 440
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Lambda（09-01 交易，09-02 追加",
-        "max_len": 526
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Meta 運算力租賃（07-17）",
-        "max_len": 434
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Meta（$100 億美元支出，08-28 補強",
-        "max_len": 217
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Meta（亦敵亦友，08-27）",
-        "max_len": 292
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Millennium（08-06）",
-        "max_len": 269
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Morgan Stanley（08-02）",
-        "max_len": 340
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Nscale（08-28）",
-        "max_len": 271
       },
       {
         "kind": "list_item",
@@ -1786,183 +1261,8 @@
       },
       {
         "kind": "list_item",
-        "anchor": "OpenAI Q2 業績落後 Anthropic",
-        "max_len": 487
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Orca Security（07-21）",
-        "max_len": 205
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Oxide（07-29）",
-        "max_len": 377
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Riot Platforms（08-11）",
-        "max_len": 306
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Robert Mahari（08-07）",
-        "max_len": 308
-      },
-      {
-        "kind": "list_item",
-        "anchor": "SK 集團（07-26）",
-        "max_len": 397
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Salesforce（Claudeforce，0",
-        "max_len": 356
-      },
-      {
-        "kind": "list_item",
-        "anchor": "SpaceX（08-04）",
-        "max_len": 254
-      },
-      {
-        "kind": "list_item",
-        "anchor": "Surf AI（07-28）",
-        "max_len": 285
-      },
-      {
-        "kind": "list_item",
-        "anchor": "TechRadar：「AI 界的 Apple」：",
-        "max_len": 430
-      },
-      {
-        "kind": "list_item",
-        "anchor": "The Information",
-        "max_len": 229
-      },
-      {
-        "kind": "list_item",
-        "anchor": "UST 企業平台（07-20）",
-        "max_len": 258
-      },
-      {
-        "kind": "list_item",
-        "anchor": "UpToDate（08-24）",
-        "max_len": 292
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO 前瞻／財務狀況，重大，四方同步報導]",
-        "max_len": 220
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[IPO/估值敘事，正反論戰] Hacker N",
-        "max_len": 404
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[人才／文化] Axios 獨家",
-        "max_len": 527
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[具名企業/機構採用，詳見 enterprise",
-        "max_len": 212
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[具名企業退出，詳見 enterprise-to",
-        "max_len": 224
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[商業風險，升級] TechCrunch／Bus",
-        "max_len": 274
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[基礎設施投資規模，分析文章，2026-09-0",
-        "max_len": 401
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[市場滲透] Bloomberg.com",
-        "max_len": 335
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作] Anthropic 與新創雲端運算",
-        "max_len": 223
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作] crn.com",
-        "max_len": 201
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作] crn.com／Seeking A",
-        "max_len": 213
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作] 多家媒體",
-        "max_len": 208
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作，官方一手來源] Anthropic",
-        "max_len": 251
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作，市場觀感角度] Yahoo Fina",
-        "max_len": 323
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[戰略合作，收購洽談，跨多來源] Bloombe",
-        "max_len": 268
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[投資人／股權] Business Inside",
-        "max_len": 296
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[法律風險，🔎 查無新訴訟證據] The Pos",
-        "max_len": 209
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[計費/合規政策，詳見 pricing] 路透社",
-        "max_len": 307
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[財務狀況，多來源含相反訊號] WSJ／Coin",
-        "max_len": 221
-      },
-      {
-        "kind": "list_item",
-        "anchor": "[重大，戰略層級，硬體自主] Anthropic",
-        "max_len": 394
-      },
-      {
-        "kind": "list_item",
-        "anchor": "「Anthropic Tops $47B」報導",
-        "max_len": 299
-      },
-      {
-        "kind": "list_item",
         "anchor": "企業轉向開源模型分流訂單",
         "max_len": 277
-      },
-      {
-        "kind": "list_item",
-        "anchor": "創投人士質疑 IPO 前景",
-        "max_len": 232
       },
       {
         "kind": "list_item",
@@ -1976,28 +1276,13 @@
       },
       {
         "kind": "list_item",
-        "anchor": "未具名 AI 資安新創（08-25）",
-        "max_len": 220
-      },
-      {
-        "kind": "list_item",
         "anchor": "田納西大學提告（併入上列）",
         "max_len": 268
       },
       {
         "kind": "list_item",
-        "anchor": "知名放空投資人唱空估值敘事",
-        "max_len": 232
-      },
-      {
-        "kind": "list_item",
         "anchor": "著作權和解案執行細節",
         "max_len": 203
-      },
-      {
-        "kind": "list_item",
-        "anchor": "身心福祉評測獎助計畫",
-        "max_len": 248
       },
       {
         "kind": "list_item",
@@ -2250,6 +1535,195 @@
         "kind": "list_item",
         "anchor": "（已於 07-16 確認，見上方）politic",
         "max_len": 297
+      }
+    ],
+    "topics/anthropic-ipo": [
+      {
+        "kind": "list_item",
+        "anchor": "OpenAI Q2 業績落後 Anthropic",
+        "max_len": 487
+      },
+      {
+        "kind": "list_item",
+        "anchor": "TechRadar：「AI 界的 Apple」：",
+        "max_len": 429
+      },
+      {
+        "kind": "list_item",
+        "anchor": "The Information",
+        "max_len": 229
+      },
+      {
+        "kind": "list_item",
+        "anchor": "「Anthropic Tops $47B」報導",
+        "max_len": 299
+      },
+      {
+        "kind": "list_item",
+        "anchor": "創投人士質疑 IPO 前景",
+        "max_len": 232
+      },
+      {
+        "kind": "list_item",
+        "anchor": "知名放空投資人唱空估值敘事",
+        "max_len": 232
+      }
+    ],
+    "topics/anthropic-partnerships-compute": [
+      {
+        "kind": "list_item",
+        "anchor": "AWS Continuum（08-05）",
+        "max_len": 399
+      },
+      {
+        "kind": "list_item",
+        "anchor": "AWS 官方公告 Claude Fable 5.",
+        "max_len": 276
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Amazon AWS GovCloud（08-3",
+        "max_len": 340
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Amir Salek（08-21起，08-23",
+        "max_len": 932
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Anthropic 印度市場（08-03）",
+        "max_len": 226
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Anthropic 澳洲市場（08-25）",
+        "max_len": 275
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Anthropic 關聯資料中心私募信貸（08-",
+        "max_len": 351
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Casper Studios（08-20）",
+        "max_len": 409
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Claude for Teachers 免費開放",
+        "max_len": 364
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Claude 營收年增 1,000%（08-28",
+        "max_len": 235
+      },
+      {
+        "kind": "list_item",
+        "anchor": "CrowdStrike（08-27）",
+        "max_len": 233
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Decart（08-13起多輪跟進）",
+        "max_len": 727
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Economic Futures Researc",
+        "max_len": 355
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Enterprise Frontier Safe",
+        "max_len": 800
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Google 近 2000 億美元融資機制（08",
+        "max_len": 440
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Lambda（09-01 交易，09-02 追加",
+        "max_len": 526
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Meta（$100 億美元支出，08-28 補強",
+        "max_len": 217
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Meta（亦敵亦友，08-27）",
+        "max_len": 292
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Millennium（08-06）",
+        "max_len": 269
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Morgan Stanley（08-02）",
+        "max_len": 340
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Nscale（08-28）",
+        "max_len": 271
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Riot Platforms（08-11）",
+        "max_len": 306
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Robert Mahari（08-07）",
+        "max_len": 308
+      },
+      {
+        "kind": "list_item",
+        "anchor": "Salesforce（Claudeforce，0",
+        "max_len": 356
+      },
+      {
+        "kind": "list_item",
+        "anchor": "SpaceX（08-04）",
+        "max_len": 254
+      },
+      {
+        "kind": "list_item",
+        "anchor": "UpToDate（08-24）",
+        "max_len": 292
+      },
+      {
+        "kind": "list_item",
+        "anchor": "[戰略合作] crn.com",
+        "max_len": 201
+      },
+      {
+        "kind": "list_item",
+        "anchor": "[戰略合作] 多家媒體",
+        "max_len": 208
+      },
+      {
+        "kind": "list_item",
+        "anchor": "[戰略合作，官方一手來源] Anthropic",
+        "max_len": 251
+      },
+      {
+        "kind": "list_item",
+        "anchor": "未具名 AI 資安新創（08-25）",
+        "max_len": 220
+      },
+      {
+        "kind": "list_item",
+        "anchor": "身心福祉評測獎助計畫",
+        "max_len": 248
       }
     ],
     "topics/code-quality-decline": [
