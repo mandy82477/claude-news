@@ -3,7 +3,7 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-11-01"
+last_updated: "2026-11-04"
 last_news_update: "2026-11-01"
 status_main: "ongoing"
 days_since_news: 3

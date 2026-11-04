@@ -11,10 +11,10 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 6
-attribution_count: 0
-attribution_last: null
-top_source: null
+inbound_links: 7
+attribution_count: 5
+attribution_last: "2026-11-03"
+top_source: "google-news"
 pending_count: 22
 pending_overdue: 1
 pending_next_review: "2026-11-09"

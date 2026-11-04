@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-17"
+last_updated: "2026-11-04"
 last_news_update: "2026-10-11"
 status_main: "active"
 days_since_news: 24

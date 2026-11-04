@@ -3,7 +3,7 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-02"
+last_updated: "2026-11-04"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 2
