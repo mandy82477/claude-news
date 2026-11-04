@@ -35,7 +35,7 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **最後新聞更新：** 2026-11-04
 
 > **最新動態**（2026-11-04）
-> - **TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，未附具體擔保金額，詳見「算力與資金從哪來」TeraWulf 列更新
+> - **TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，未附具體擔保金額，詳見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] TeraWulf 列更新
 
 ---
 
