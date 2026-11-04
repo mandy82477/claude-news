@@ -1413,3 +1413,4 @@ ABORTED: gathered_items.json date=2026-10-30 items=79，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-04 2026-11-04T12:14:28Z] ABORTED: gathered_items.json date=2026-11-03 items=73，非目標日期的新鮮資料（src/gathered_archive/2026-11-04.json 尚不存在，GitHub Actions 抓料延遲，留給下一班 17/22 UTC 接手）
 [cloud daily-news-pipeline-cloud STARTED 2026-11-04T17:09:19Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-04 2026-11-04T17:10:14Z] ABORTED: gathered_items.json date=2026-11-03 items=73，非目標日期的新鮮資料（src/gathered_archive/2026-11-04.json 尚不存在，GitHub Actions 抓料延遲，留給下一班 22 UTC 接手）
+[cloud daily-news-pipeline-cloud STARTED 2026-11-04T22:08:45Z]
