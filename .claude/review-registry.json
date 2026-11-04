@@ -1398,7 +1398,8 @@
       ],
       "patterns": [
         "### 💰 事件名（YYYY-MM-DD）|MARKET_SIGNAL_RE",
-        "market-signals"
+        "market-signals",
+        "market_signal_pages"
       ],
       "_note": "2026-09-05 加入。alternation 兩支各對應一端：規格端釘判讀標題原形（機械契約字串表），程式端釘 regex 常數名；第二個 pattern 釘兩端都得認得同一份來源頁。"
     },

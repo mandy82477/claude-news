@@ -432,7 +432,13 @@
     }
   ],
   "preview": "Claude Code：v2.1.312：Claude apps gateway 新增 oidc.user_id_claim 設定，可用 sub 以外 id_token claim（如 Entra ID oid）識別使用者；同版 build 另新增 1 個功能候選旗標，追蹤見 topics/claude-code-ex",
-  "sedimentedToday": [],
+  "sedimentedToday": [
+    {
+      "id": "market-signals-legal",
+      "name": "官司、監管與政府這則怎麼判",
+      "pageType": "topic"
+    }
+  ],
   "reader": {
     "date": "2026-10-28",
     "summary": "",

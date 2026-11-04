@@ -877,7 +877,7 @@ def attach_sedimented_badges(digest_all: dict, entities: list, topics: list,
                     s["sedimented"] = refs[:3]
 
 
-# ── 投資訊號（wiki/topics/market-signals.md → 日報頁 💰 條目）───────────────
+# ── 投資訊號（wiki/topics/market-signals.md 與其子頁 → 日報頁 💰 條目）──────────
 # 判讀標題是規格與程式的共同契約：`### 💰 事件名（YYYY-MM-DD）`。規格端住
 # `.claude/reporter-rules/market/daily.md`「判讀格式（機械契約字串）」表，兩端互相指認
 # 並登記於 .claude/review-registry.json 的 sync_pairs——標題形狀改了而這裡沒跟，
@@ -886,14 +886,33 @@ MARKET_SIGNALS_PAGE = ROOT / "wiki" / "topics" / "market-signals.md"
 MARKET_SIGNAL_RE = re.compile(r"^###\s+💰\s*(.+?)（(\d{4}-\d{2}-\d{2})）\s*$", re.MULTILINE)
 
 
-def parse_market_signal(f: Path) -> dict | None:
-    """取最新一則判讀（頁面 `## 近期判讀` 最新在上，故第一個命中即最新）。"""
-    if not f.exists():
-        return None
-    m = MARKET_SIGNAL_RE.search(read_md(f))
-    if not m:
-        return None
-    return {"title": m.group(1).strip(), "date": m.group(2)}
+def market_signal_pages(root_page: Path = MARKET_SIGNALS_PAGE) -> list[Path]:
+    """母頁＋標頭 `**上層：** [[topics/market-signals]]` 指向它的子頁（2026-11-02 第 22 波起判讀住四子頁）。
+    子頁清單從上層欄現算、不寫死：日後增減子頁不必改這裡，漏改也不會讓 💰 條目靜默消失。"""
+    slug = f"{root_page.parent.name}/{root_page.stem}"
+    pages = [root_page]
+    for f in sorted(root_page.parent.parent.glob("*/*.md")):
+        if f == root_page:
+            continue
+        m = META_RE["parent"].search("\n".join(read_md(f).splitlines()[:60]))
+        if m and m.group(1).strip() == slug:
+            pages.append(f)
+    return pages
+
+
+def parse_market_signal(pages: Path | list[Path]) -> dict | None:
+    """取子樹裡最新的一則判讀。每頁 `## 近期判讀` 最新在上，故各頁第一個命中即該頁最新；
+    跨頁取日期最大者，同日取清單先出現者（母頁在前、子頁依檔名）。"""
+    if isinstance(pages, Path):
+        pages = [pages]
+    best = None
+    for f in pages:
+        if not f.exists():
+            continue
+        m = MARKET_SIGNAL_RE.search(read_md(f))
+        if m and (best is None or m.group(2) > best["date"]):
+            best = {"title": m.group(1).strip(), "date": m.group(2), "page": f.stem}
+    return best
 
 
 def attach_market_signal(digest_all: dict, signal: dict | None) -> None:
@@ -1830,7 +1849,7 @@ def build():
     # ── 投資訊號：最新判讀日期對得上的那天，日報頁末尾加一則 💰 條目 ──────────
     # 讀者版的日期不注入：市場記者的判讀本就是當日 wiki diff 的一部分，
     # 由讀者版自己寫在 💼 商業節末一條——注入與自寫擇一，不要雙份。
-    _signal = parse_market_signal(MARKET_SIGNALS_PAGE)
+    _signal = parse_market_signal(market_signal_pages())
     if _signal and _signal["date"] in reader_all:
         _signal = None
     attach_market_signal(digest_all, _signal)

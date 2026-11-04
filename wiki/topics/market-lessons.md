@@ -7,12 +7,12 @@ last_updated: "2026-10-31"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 12
+days_since_news: 13
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 12
-inbound_links: 5
+days_since_news_subtree: 13
+inbound_links: 11
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -72,11 +72,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 買不到的消息線（教材）
 
-主角本體都不可買（Anthropic 未上市）；有幾條線有上市的間接關聯標的，但本體仍不可買。這幾條線只能拿來練判讀，不能拿來交易。逐則判讀在 [[topics/market-signals#近期判讀]]。
+主角本體都不可買（Anthropic 未上市）；有幾條線有上市的間接關聯標的，但本體仍不可買。這幾條線只能拿來練判讀，不能拿來交易。逐則判讀依線分在四個子頁：[[topics/market-signals-ipo]]、[[topics/market-signals-legal]]、[[topics/market-signals-compute]]、[[topics/market-signals-customers]]。
 
 | 線 | 現在方向 | 則數 · 最後一則 | 下一個催化劑 | 這條線的課 |
 |---|---|---|---|---|
-| IPO 進程 | 〰 未定——傳最快 10-23 的公開版 S-1 已於 10-26 提交（價格區間未定）；H1 淨損 $807 億（外流，約 $720 億為非現金）；估值預期傳降至約 $1.5 兆 | 18 則 · 10-21 | 確認 EDGAR 全文的淨損、客戶集中度與估值區間（S-1 已提交，價格區間待定）；標普／穆迪／惠譽評等 | 押對了嗎：～ 仍懸 ×4、✅ ×1（10-05 PitchBook）。16 堂課名見表下「IPO 線的課」 |
+| IPO 進程 | 〰 未定——傳最快 10-23 的公開版 S-1 已於 10-26 提交（價格區間未定）；H1 淨損 $807 億（外流，約 $720 億為非現金）；估值預期傳降至約 $1.5 兆 | 21 則 · 10-31 | 確認 EDGAR 全文的淨損、客戶集中度與估值區間（S-1 已提交，價格區間待定）；標普／穆迪／惠譽評等 | 押對了嗎：～ 仍懸 ×4、✅ ×1（10-05 PitchBook）。16 堂課名見表下「IPO 線的課」 |
 | 反壟斷訴訟 | 📉 負面——原告已具名為四名消費者訂閱戶；CEO 書面承認可能觸及反壟斷問題 | 3 則 · 09-22 | 法院受理排審；求償金額揭露；官方回應 | 押對了嗎：✅（09-19 開線，10-03 結算；GOOGL 兩週反而 ↑）／10-10 再結算 ～（未排審、原告未具名，GOOGL 橫盤）。訴訟看程序走到哪一格；被提告本身是硬事件；原告身分決定求償路徑 |
 | Akamai 算力合約 | 📈 正面——7 年 116 億美元，附認股權證 | 1 則 · 09-25 | Akamai 財報／10-Q 揭露認列時程或上修全年指引（10-09）| 長約金額要先問分幾年認列 |
 | 英國模型審查限制 | 〰 未定——審查範圍與期限皆未公布 | 1 則 · 09-25 | 審查範圍與期限公布；是否涵蓋 Mythos 5.1 爭議（10-09）| 「暫緩」不等於「禁止」，先看期限有沒有寫；10-10 結算 ✅（催化劑出現：已確認涵蓋 Mythos 5.1，Anthropic 未交付英國 AISI；審查期限仍未公布） |
@@ -124,7 +124,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 一課一課學
 
-一課一列，完整的概念與機制在 [[topics/market-signals#近期判讀]] 對應那一則的最後一段；「押對了嗎」每週從 [[topics/market-signals#回顧結算]] 對回，兩週後才有答案。
+一課一列，完整的概念與機制在該則所在子頁（見 [[topics/market-signals#近期判讀]] 的路由表）的最後一段；「押對了嗎」每週從 [[topics/market-signals#回顧結算]] 對回，兩週後才有答案。
 
 | 課名 | 下次怎麼認 | 例題 | 押對了嗎 |
 | --- | --- | --- | --- |
@@ -199,5 +199,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 相關頁
 
-- [[topics/market-signals]] — 逐則判讀、買得到的標的、回顧結算、追蹤中的里程碑（每日）
+- [[topics/market-signals]] — 買得到的標的、子頁路由、四頁合計命中率；逐則判讀、結算列與里程碑在四個子頁（每日）
 - [[topics/anthropic-business]] — IPO 進程與估值的事實層

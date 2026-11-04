@@ -178,7 +178,7 @@ flowchart TD
     CONSOLIDATE --> LEDGER["data/source_attribution.jsonl\n（append：記者回報的『來源歸因』欄\n轉 日期×來源×類別×頁面）"]
     CONSOLIDATE --> HAND["data/pending-handoffs.jsonl\n（pending_handoffs.py open/close/void\n記者回報的轉知登帳與結案）"]
     CONSOLIDATE --> DEVP["4b devpractice 記者（sonnet，彙整後才派）\ndevpractice_diff.py show：上次基準線以來 wiki 新增\n→ 挑 coding 相關 → data/devpractice-candidates.jsonl\n→ mark 推進基準線（daily 只沉澱，不寫頁）"]
-    CONSOLIDATE --> MARKET["4c market 記者（sonnet，與 4b 同批）\n吃當日日報本身換市場框架重讀\n→ wiki/topics/market-signals.md 判讀"]
+    CONSOLIDATE --> MARKET["4c market 記者（sonnet，與 4b 同批）\n吃當日日報本身換市場框架重讀\n→ wiki/topics/market-signals 母頁＋四子頁判讀"]
     USERQ["使用者提問通道（user-query）\n主編 web 查證後直接沉澱，不經日報\n歸因 slug user-query，log Query 溯源"] -.-> SHARED
 ```
 

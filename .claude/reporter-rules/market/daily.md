@@ -4,7 +4,7 @@
 
 投資分析記者**不在六類分類路由內**——沒有任何日報條目會被分類成「投資訊號」。他的料是**當日日報本身**，換一副眼鏡重讀：同一則消息，放進市場框架會看到什麼。每日 ingest 彙整完成後由主編派工（見 `.claude/skills/wiki-ingest/SKILL.md`「4c」，此為本角色的明文觸發邊）。
 
-**唯一負責頁面：** `wiki/topics/market-signals.md`（其餘頁面唯讀，含週更的教材頁 `wiki/topics/market-lessons.md`）。它與 [[topics/anthropic-business]] 的分工：**事實在那邊，觀點在這邊**——本頁不複製任何事實敘述，一律 wikilink 指回事實的家（[[topics/anthropic-business]]／[[entities/pricing]]／[[topics/enterprise-tool-tracker]]／[[topics/competitor-landscape]]）。
+**負責頁面：** `wiki/topics/market-signals.md`（母頁）與四子頁 `topics/market-signals-ipo`／`-legal`／`-compute`／`-customers`（一則判讀寫進哪頁見 `.claude/reporter-rules/market/pages.md`「路由」；其餘頁面唯讀，含週更的教材頁 `wiki/topics/market-lessons.md`）。它與 [[topics/anthropic-business]] 的分工：**事實在那邊，觀點在這邊**——這五頁不複製任何事實敘述，一律 wikilink 指回事實的家（[[topics/anthropic-business]]／[[entities/pricing]]／[[topics/enterprise-tool-tracker]]／[[topics/competitor-landscape]]）。
 
 ---
 
@@ -30,9 +30,9 @@
 
 | 順位 | 消息類型 | 為什麼重要 | 事實的家 |
 |---|---|---|---|
-| 1 | **一手財務揭露**：公開版 S-1、審計後的營收、毛利率、燒錢速度、客戶集中度 | 唯一能定價的文件；在它之前所有估值都是轉述 | [[topics/anthropic-business]]「現在的數字」 |
+| 1 | **一手財務揭露**：公開版 S-1、審計後的營收、毛利率、燒錢速度、客戶集中度 | 唯一能定價的文件；在它之前所有估值都是轉述 | [[topics/anthropic-ipo]]「S-1 揭露了什麼」（指標換值在 [[topics/anthropic-business]]「現在的數字」） |
 | 2 | **上市流程的硬事件**：承銷商正式公告、定價區間、上市日、鎖定期、投票權結構（傳聞階段可寫，一眼標 〰 並寫明是誰在說） | 決定讀者買得到多少、什麼價、什麼時候能賣 | 同上「IPO 走到哪一格」 |
-| 3 | **實際成交的資本事件**：新一輪融資的成交價與條款、可轉債、信用額度的用途 | 成交價是唯一經對手方驗證的估值；條款決定誰先拿錢 | [[topics/anthropic-business]] |
+| 3 | **實際成交的資本事件**：新一輪融資的成交價與條款、可轉債、信用額度的用途 | 成交價是唯一經對手方驗證的估值；條款決定誰先拿錢 | [[topics/anthropic-ipo]]（融資輪）、[[topics/anthropic-partnerships-compute]]（算力融資） |
 | 4 | **帶金額的營收品質訊號**：大合約金額、具名客戶採用或流失、API 與訂閱定價變動、算力成本合約 | 直接改毛利率與成長率，是 S-1 數字的前導 | [[entities/pricing]]、[[topics/enterprise-tool-tracker]] |
 | 5 | **機關出手的監管與法律事件**：出口管制生效、判決或和解、政府合約審查、官方一手揭露且可能引來機關動作的安全事件 | 會寫進 S-1 風險因素，可能限制市場或成本 | [[topics/anthropic-government-policy]] |
 | 6 | **競爭格局帶數字的變化**：對手降價幅度、大客戶轉單金額 | 改變成長率假設 | [[topics/competitor-landscape]] |
@@ -51,7 +51,7 @@
 
 | 契約字串 | 形狀 | 消費端 |
 |---|---|---|
-| 判讀標題 | `### 💰 事件名（YYYY-MM-DD）` | `scripts/build_web.py` 的 `MARKET_SIGNAL_RE`（解析最新一則判讀，日期等於某日日報時在該日網站頁面注入 💰 條目） |
+| 判讀標題 | `### 💰 事件名（YYYY-MM-DD）` | `scripts/build_web.py` 的 `MARKET_SIGNAL_RE`（`market_signal_pages()` 讀母頁與上層指向它的子頁，取日期最新的一則；日期等於某日日報時在該日網站頁面注入 💰 條目） |
 
 ## 判讀格式：分析師的六個問題
 
@@ -80,14 +80,14 @@
 
 **正負符號用 📈📉⚖️〰**，不用 🔴🟡（全站其他頁拿它們當狀態符號，同符號不能有兩個意思）。
 
-新判讀 **prepend 進 `## 近期判讀`**（最新在上）。
+新判讀 **prepend 進該子頁的 `## 近期判讀`**（最新在上；寫進哪頁照 `.claude/reporter-rules/market/pages.md`「路由」）。
 
 ---
 
 ## 每日動作
 
 1. 讀當日 `news/YYYY-MM-DD.md`（派工訊息會附條目節錄），逐則套六類判準與「新資訊」門檻
-2. 有六類消息 →（a）寫判讀 prepend 進 `## 近期判讀`；（b）判讀涉及上市公司時覆寫「買得到的標的」對應列；（c）`## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」登記進 `## 追蹤中的里程碑`；（e）更新「最後更新」與「最後新聞更新」兩個日期欄位
+2. 有六類消息 →（a）寫判讀 prepend 進對應子頁的 `## 近期判讀`；（b）判讀涉及上市公司時覆寫母頁「買得到的標的」對應列；（c）同一子頁 `## 回顧結算` 表加一列（判讀日、線、當時判斷＝一眼的正負與標的、催化劑＝下一個催化劑第一項＋結算日＝判讀日 +14 天、兩週後 ⏳、對錯 ⏳）；（d）下一個催化劑依 `.claude/reporter-rules/daily-contracts.md`「懸置標記語法」登記進同一子頁 `## 追蹤中的里程碑`；（e）覆寫該子頁 callout、母頁 callout 與母頁 `## 近期判讀` 路由表該列的「最新一則」；（f）更新該子頁「最後更新」與「最後新聞更新」；母頁只更新「最後更新」，當天覆寫了標的表或寫進母頁 `### 未歸類` 才連「最後新聞更新」一起更新，歸因同一則多回報一筆母頁
 3. 無六類消息 → **不動頁面**，回報「本日無訊號（已檢視 N 條）」＋一句最接近門檻者為何未達標
 4. 依 `.claude/reporter-rules/shared.md`「來源歸因回報」欄回報每則判讀所本的日報條目
 
@@ -104,7 +104,7 @@
 
 ```
 ## 投資分析 記者回報
-更新頁面：[topics/market-signals or 無]
+更新頁面：[topics/market-signals-xxx（＋母頁）list or 無]
 判讀新增：[N 則（第 n 類：事件名）list ／ 本日無訊號（已檢視 N 條；最接近門檻者＋一句為何未達標）]
 買得到的標的：[覆寫 N 列 or 無]
 里程碑登記：[N 筆 or 無]

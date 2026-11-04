@@ -8467,8 +8467,46 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：本日無訊號（檢視 41 條，WSJ 雙重股權/Fortune 2 兆估值均為舊數字重複，DeepSeek agent 與 Max5/Max20 改名無具體數字，未過門檻）
 - devpractice 沉澱：候選 6 筆／手冊寫入 0 則（今日零官方使用指南條目，純候選撿拾；候選已寫入 data/devpractice-candidates.jsonl，基準線推進至 8ccec0a，留待下次週更落地）
 
-## 2026-11-02 Ingest
+## 2026-11-02 Query（第 21 波頁面健檢——claude-code 拆成母頁＋三子頁）
 
+- 裁決（主 session 代判七點＋N1–N5，使用者裁兩題：砍「現況」版本副本、雲端基線護欄下分支先 commit；記 `docs/page-audits/ledger.md` 2026-11-01／11-02 兩條）：[[entities/claude-code]] 由 1,234 行拆為母頁（正文約 173 行，使命句沿用第 4 波「Claude Code 現在有什麼毛病、哪些修了、哪些你得繞過去」加「版本、毛病、功能怎麼用，各往下鑽」）＋三子頁 [[entities/claude-code-known-issues]]（九組逐條）／[[entities/claude-code-releases]]（通道、版本表、歷史記錄）／[[entities/claude-code-features]]（桌面版功能地圖與文件時序、hooks、subagent）；拆前蒸餾進共用 [[entities/claude-code-archive]]：版本表逾 90 天 82 列、歷史記錄 08 月 24 列、已解決 Status 事故 40 條；現況 62 行版本副本補 v2.1.289、v2.1.269 兩列後砍；🛡️ 組 17 條與 [[topics/ai-agent-safety-product-vulns]] 重疊者縮成一行修補狀態，攝影機一條因安全 archive 狀態較舊留全文；照搬 925 行逐字核對、懸置 30→30；母頁保留 `## 版本更新`、`## hooks：…` 兩個同名殼接舊錨點。
+- 主編查證（一手，2026-11-01）：npm stable＝2.1.309、latest＝2.1.316（頁面原寫 2.1.308，L704「2.1.309 不在 stable」已不成立）；2.1.309 bypass 模式 rm 直接拒絕限 Desktop 與 VS Code；2.1.316 全文可得、補 Opus 4.8 fast mode 10-30 棄用 11-30 移除；官方 CLI changelog 無 2.1.313（Cursor 事件的版號是延伸套件）；hooks：官方 permissions 文件「PreToolUse hook 擋下的呼叫維持擋下、exit 2 先於權限規則」，hooks 文件「`if` 過濾器是 best-effort，硬性允許／拒絕用權限系統」——結論句改為「觸發即硬擋、但不保證觸發」；subagent 預設背景、同時上限 20。
+- 規則面：`features/pages.md` 的 claude-code 節拆成母頁（四問路由、每日准動五樣、兩個殼）／known-issues／releases／features 四節；`features/daily.md` 負責頁表一列變四列；`page-lifecycle.md` 母頁每日例外加 claude-code `## 現在還沒修好的` 與 `## 現況`；`sweeps.md` 5a 加第 6 條（npm dist-tags 週更母頁與 releases 結論）；safety-policy／models／commercial／community 分工句、classification、shared-when 改指子頁。
+- 轉知帳本：新開 H-02df2d（→開發實務，coding-workflow-guide L197 hook 硬擋句無官方逐字句、L393 錨點改指 features）、H-9c7428（→社群，community-guardrails L86 錨點）、H-26cfb1（→安全政策，product-vulns stable 改 2.1.309）、H-0fd390（→安全政策，ai-agent-safety L78 補連 hooks）、H-9a89bc（→社群，code-quality-decline #38335 互動數）、H-645373（→商業，pricing「額度掉得快」總入口，第 24 波處理）、H-afee03（→主編，feature-radar 預設值表補核 2.1.305–316）；H-7b713f（radar 錨點）、H-433341（index 鉤子與兩列入口）主編同 commit 執行並結案；結案 H-7526b2（Downloads 條目已在 known-issues）。
+- 已知缺口：cell 基線（107 筆搬家）與 reader-language 白名單（3 筆 page 欄）雲端 H6 改不了，本 commit 在分支上兩閘紅，清單見 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`，使用者本機重建後併 master。
+- 歸因 user-query／功能
+- 複驗（新冷讀者，原四題逐字）：Q1–Q4 皆拿到（第一輪 1 拿 3 半）；依複驗把 [[entities/claude-code-features]] hooks 結論改成「保證擋用沙箱，deny 規則與 hook 當第二層」（與 [[topics/ai-agent-safety]]「deny-list 也不是」對齊，母頁與摘要同步）、失效表補 2.1.316 PowerShell hook exit 2 修正、index 開發實務入口加 subagent 型別一列。剩餘缺口在他頁：額度事故總表漏近期事故（H-645373，pricing）、預設值表只核到 2.1.304（H-afee03）。評審實作複核放行（2 🔴 已修）。H-7b713f 結案文字誤寫 L52 帶錨點，實際為不帶錨點指 releases 頁（避免既有超限條目變長）。
+
+## 2026-11-02 Query（第 22 波頁面健檢——market-signals 拆成母頁＋四子頁）
+
+- 裁決（切法使用者選「四子頁＋收緊門檻」；其餘主 session 自決，使用者「你都自己決定好了 不要問我」；記 `docs/page-audits/ledger.md` 2026-11-02 第 22 波各條）：[[topics/market-signals]] 由 1,699 行拆為母頁（摘要、買得到的標的、子頁路由與四頁合計命中率）＋四子頁 [[topics/market-signals-ipo]]（IPO 與財務揭露 25 則）／[[topics/market-signals-legal]]（法律、監管與政府 24 則）／[[topics/market-signals-compute]]（算力與融資 14 則）／[[topics/market-signals-customers]]（定價、通路與企業採用 25 則）；88 則判讀連同各自的回顧結算列與里程碑照線別原文搬（一則三件同頁），照搬 1,083 行逐字核對、懸置 69→69；網站 💰 條目改讀整個子樹、點擊直達子頁；母頁留同名 h4 指路殼接 yann-lecun 錨點。記者草案三子頁落選：「算力、定價與採用」39 則約 670 行，出生即超 600。
+- 主編查證（2026-11-02；雲端解析不到 www.sec.gov，S-1 數字標「多家引 S-1」二手）：S-1 10-26 由官方公告、未生效、股數價格與掛牌日未定；上半年淨損 807 億中約 724 億為非現金公允價值變動（判讀已補）；GSA 擴大合作官方日期 10-27、「OneGov」為媒體用語；Public Benefit Fund 是撥入 Anthropic 全資子實體、待股東會核准；里程碑「S-1 尚未遞交」「市場預期 10 月上市」兩句過期已改。
+- 規則面：`market/pages.md` 改為母頁＋四子頁、照線歸頁（附查法）、`### 未歸類` 一則三件同處由主編週更分派；`market/daily.md` 寫入目標與母頁「最後新聞更新」條件；`market/weekly.md` 讀四張結算表；`page-lifecycle.md` 母頁每日例外加本頁；`wiki-ingest` SKILL 4c 把「投資分析」組待查證命中與轉知附給投資分析記者；記者角色檔、`commercial/daily.md`、`sweeps.md` 5h 同步。腳本：`build_web.py` 讀子樹、`pending_markers.py`／`pending_handoffs.py` 對照補本頁與四子頁（原本 285 筆命中誤記在商業記者名下）、`scan_pending_verifications.py`、`app.js` 標籤與兩支測試；`check_wiki_freshness.py` L78 說明字串屬雲端擋的閘檔，留本機改。
+- 歸因補登 1 筆（Citywire 10-29，網址在 customers callout）；The New Stack、BigGo、Bloomberg 三筆 10-29 漏報網址不在子頁內，依裁決不補。
+- 轉知帳本：新開 H-5978d7（→投資分析，六類判準回頭檢查——W41–W44 每週 12／13／9／16 則 vs 預期 3–5 則，使用者批准）、H-a450ba（→投資分析，market-lessons 連結改指四子頁、IPO 線則數更新）、H-5f3c59（→人物，yann-lecun／tom-brown／suleyman 錨點改指子頁，改完由主編刪母頁 h4 殼）、H-6109b3（→商業，anthropic-ipo／business 連結改指子頁、Microsoft 細節與 Nscale 口徑，第 23 波一併處理）。
+- 歸因 user-query／投資分析
+- 複驗（新冷讀者，原四題逐字）：Q1–Q3 拿到、Q4 半拿到（第一輪 2 拿 2 半）；依複驗在 [[topics/market-signals]] 標的表下補「曝險多大」三型說明。剩餘缺口屬 [[topics/anthropic-business]] 子樹（第 23 波）：[[topics/anthropic-ipo]] 一處仍寫「等待 S-1 遞交」、與 market-signals-ipo／compute 兩組讀者分不出差別。轉知更正：H-a450ba 作廢（market-lessons 由主編週更、記者唯讀），[[topics/market-lessons]] 三處連結改指四子頁、IPO 線則數 18→21 由主編同波直接改。評審實作複核有條件放行（派錯人 1 🔴 已修）。
+
+## 2026-11-02 Query（第 23 波頁面健檢——anthropic-business 拆成母頁＋兩子頁，財報併入 anthropic-ipo）
+
+- 裁決（主 session 自決，使用者授權；八點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-02 第 23 波兩條）：[[topics/anthropic-business]] 由 1,048 行拆為母頁（正文 189 行，使命句恢復第 7 波定稿「Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及哪幾件事會反過來改到你用的 Claude」）＋新子頁 [[topics/anthropic-partnerships-compute]]（合作與算力，含三大雲對照表）／[[topics/anthropic-business-risks]]（風險與商業模式）；營收估值群併入既有 [[topics/anthropic-ipo]]，標題改「上市與財報」（不另開 financials：S-1 數字會分住三頁，且名字與 [[topics/market-signals-ipo]] 鏡像）。拆前 08 月時序與 07 月合作清單蒸進 [[topics/anthropic-business-archive]]；照搬 910 行逐字核對、懸置 212→212；母頁留三個永久指路殼接讀者版日報 7 筆錨點。
+- 主編查證（2026-11-02；雲端解析不到 www.sec.gov）：Series H $9,650 億一致；淨損 807 億降為「多家引 S-1」並補九成非現金；「連續獲利」寫明調整後口徑（S-1 營業層仍虧約 6.9 億）；Q3 日期統一；SpaceX Colossus 1 對官方 05-06 頁一致；Nscale 1,030 億是全部客戶總合約、450 億是 Anthropic 那筆；補查 Microsoft 2025-11 承諾投資最高 $50 億＋$300 億 Azure、Amazon 累計 $80 億＋Series H $50 億（多家交叉）。anthropic-ipo 四處過期句（等 S-1 遞交、10 月中時程、10-20 外流當 S-1、「四件事」）改正，⟨Q-03⟩ 改問掛牌日與價格區間、複查 11-24。
+- 規則面：`commercial/pages.md`（子樹路由、母頁每日准動含 IPO 一句結論、三大雲表第 12 條、算力表 180 天退場第 13 條、訴訟留表與讓位不衝突）、`commercial/daily.md`／`weekly.md`、`page-lifecycle.md` L52 例外、`market/daily.md`（S-1 指標改指 anthropic-ipo）、`features/daily.md`、`sweeps.md`、兩記者角色檔。網站人物 chip 與讀者標籤測試補三子頁。
+- 轉知帳本：新開 H-fec1b0（→人物，tom-brown 錨點改指 partnerships-compute，改完主編刪暫時殼）、H-4dbf62（→投資分析，market-signals 子樹六項回掃與對稱互指句）、H-f000d4（→商業，時序類別標籤固定詞彙提案）；結案 H-6109b3（三項本波做完、一項移入 H-4dbf62）。`devpractice_diff.py mark` 未做（會跳過開發實務記者尚未撿料的範圍，第 20–22 波亦未做）。
+- 已知缺口：cell 基線本波 +46 筆搬家（累計 153），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`anthropic-business-2026-11-02-proposal-map.md` 第六節。
+- 歸因 user-query／商業
+- 複驗（新冷讀者，原四題逐字）：Q1–Q4 皆拿到、各 2 跳（第一輪 1 拿 3 半）；依複驗改 [[topics/anthropic-business-risks]] 保險列來源等級為「多家引 S-1」並修正 ⚠️ 高兩列排序、[[topics/anthropic-partnerships-compute]] Microsoft 列指路、[[topics/anthropic-ipo]] Q2 季增改 140%（Q2 $115 億對 Q1 $48 億）；其餘四項口徑矛盾開 H-11d17b（→商業）。評審實作複核放行。
+
+## 2026-11-02 Query（第 24 波頁面健檢——pricing 拆成母頁＋incidents／history，計費切割死案歸檔）
+
+- 裁決（主 session 自決，使用者授權；八點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-02 第 24 波兩條）：[[entities/pricing]] 由 969 行拆為母頁（正文約 293 行：方案、API 牌價、通路與乘數、生效規則、「額度掉得快」三路分流沿用 `## 事故現在還在發生嗎` 節名）＋[[entities/pricing-incidents]]（事故、配額與速率、灰色市場；事故表上限 8、照最後動態排序、未上表者表下可見一行）＋[[entities/pricing-history]]（定價與促銷沿革、成本案例，新增「最近三個月變了什麼」）；計費切割風波 101 行依使用者 09-06 裁決死案歸檔、06 月事故與配額條目一併進 [[entities/pricing-archive]]（116→231）；照搬 544 行逐字、懸置 4→4（全站 212）。乙案（另開 pricing-api 依讀者分）評估後落選，理由記 ledger。
+- 主編查證（官方一手，2026-11-02 claude.com/pricing 與 platform.claude.com 定價頁）：$200 那一檔改名 Ultra（Pro 的 10 倍週用量、驗證帳號無 5 小時上限、Fable 上限同 Max 為週用量 50%）；月度 API credits Max $100／Ultra $200／Team 最多 $500 共用、Pro 無；Enterprise $20／席年繳 20 席起＋用量按 API 費率；API 主表補 Haiku 5.5（≤100K $0.10／$0.50、>100K $0.50／$2.50），刪 Haiku 4.5「陣容中最低價」；方案表「資料截至」改 11-02。
+- 規則面：`commercial/pages.md` pricing 節改寫（四頁路由、事故表上限與排序條文、「單一社群回報型」定義、還沒確定表退場、history 可有三個月結論段、計費切割凍結條文刪除）、`commercial/daily.md`、`page-lifecycle.md` L52 例外；index 鉤子改寫並在開發實務入口補「要花多少、怎麼被計費」一列。
+- 轉知帳本：新開 H-f9ab90（→功能，known-issues 💰 組指事故者改指 pricing-incidents）、H-1cf735（→社群，code-quality-decline 三解表補連與錨點）、H-fa1aa2（→社群，community-cost 回指分流）；結案 H-645373（第 21 波冷讀者「額度掉得快總入口」）；index 一項主編同波直接改。
+- 已知缺口：cell 基線本波 +57 筆搬家（累計 210），雲端 H6 改不了，本機重建，清單 `docs/page-audits/claude-code-2026-11-01-baseline-moves.md`＋`pricing-2026-11-02-proposal-map.md` 第四節。
+- 歸因 user-query／商業
+- 複驗（新冷讀者，原四題逐字）：Q2、Q4 拿到，Q1、Q3 半拿到（第一輪 1 拿 3 半）；依官方原文修 [[entities/pricing-history]] Sonnet 5.5 快取讀取 $0.10（「half of Sonnet 5’s $0.20」）、Team premium 倍數照官方「Standard 席的 5 倍」（兩頁同改）。Q1 繞法分散三頁待 H-1cf735、H-fa1aa2 落地；Q3 Bedrock／Vertex 不記絕對價為頁面既定取捨。評審實作複核放行。拆頁候選隊列五頁（第 20–24 波）全部完成。
+## 2026-11-02 Ingest
 - 來源日報：[[news/2026-11-02]]
 - 更新頁面：
   - **模型**：entities/opus-5、entities/opus-5-5

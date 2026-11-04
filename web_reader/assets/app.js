@@ -321,10 +321,10 @@
       const refs = '';
       parts.push(`<li class="focus-item"><span class="focus-tag focus-tag--${cls}">${esc(f.tag)}</span><span>${esc(f.text)}</span>${refs}</li>`);
     });
-    // 投資訊號（wiki/topics/market-signals.md 的最新判讀日期＝本日時才有）：
+    // 投資訊號（wiki/topics/market-signals.md 子樹最新判讀日期＝本日時才有；page＝判讀所在子頁）：
     // 沿用 focus-item 版式接在聚焦列表末尾，點擊進判讀頁。教學型事件研究、非投資建議。
     if (d.marketSignal) {
-      parts.push(`<li class="focus-item focus-item--market"><span class="focus-tag focus-tag--market">投資訊號</span><button type="button" class="focus-item__link" onclick="openWikiPage('market-signals','topic')">${esc(d.marketSignal.title)} — 看判讀 →</button></li>`);
+      parts.push(`<li class="focus-item focus-item--market"><span class="focus-tag focus-tag--market">投資訊號</span><button type="button" class="focus-item__link" onclick="openWikiPage('${esc(d.marketSignal.page || 'market-signals')}','topic')">${esc(d.marketSignal.title)} — 看判讀 →</button></li>`);
     }
     parts.push('</ul>');
     // 常駐導流：重度使用者的核心問題「有什麼新功能值得用」答案在熱度雷達頁，
@@ -957,6 +957,7 @@ ${pmxOpenBtn(s.page, `看「${s.name}」的 wiki 頁`)}`;
     'anthropic-government-policy': '政府與軍事', 'community-tech-discussions': '社群討論',
     'community-tech-patterns': '社群工作流', 'recursive-self-improvement': 'AI 自我改進',
     'safety-china-trust-dispute': '中美信任', 'market-signals': '投資訊號', 'code-quality-decline': '效能退步',
+    'market-signals-ipo': '投資·IPO', 'market-signals-legal': '投資·官司監管', 'market-signals-compute': '投資·算力融資', 'market-signals-customers': '投資·定價客戶', 'anthropic-ipo': '商業·上市財報', 'anthropic-partnerships-compute': '商業·合作算力', 'anthropic-business-risks': '商業·風險',
   };
   const PPL_ORBIT_KEY = 'claude-news-ppl-orbit';
   const ppl = { view: 'overview', group: 'rel', filter: null, sel: null, people: [], issueSel: null, issueData: null, host: null };

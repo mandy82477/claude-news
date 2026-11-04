@@ -8,12 +8,12 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-20"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 14
+days_since_news: 15
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 14
-inbound_links: 9
+days_since_news_subtree: 15
+inbound_links: 14
 attribution_count: 6
 attribution_last: "2026-10-13"
 top_source: "google-news"

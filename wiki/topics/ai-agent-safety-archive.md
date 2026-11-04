@@ -7,12 +7,12 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-10-30"
 last_news_update: "2026-06-27"
 status_main: "resolved"
-days_since_news: 129
+days_since_news: 130
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 129
-inbound_links: 13
+days_since_news_subtree: 130
+inbound_links: 16
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # AI Agent 安全與可靠性 — 時序存檔

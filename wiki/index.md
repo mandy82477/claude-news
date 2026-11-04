@@ -29,6 +29,10 @@
 | 我關心的某類工具，現在誰最大、本週誰在竄升（七日星數差，每日快照） | [[topics/skill-interest-watch]] 各類別（按開發流程段） |
 | 它說做完了，我怎麼知道是真的——**官方**做法（要證據、`/goal`、Stop hook） | [[topics/coding-workflow-guide]] 第 6 段（驗證階梯）、第 9 段（要它出示證據） |
 | 我想讓 agent 自己跑幾小時／過夜，該用哪個（`/goal`、subagent、dynamic workflows、agent teams、agent view、Managed Agents、Agent SDK） | [[topics/anthropic-agent-stack]]「你該用哪個」 |
+| 升版前要知道什麼、該裝 stable 還是 latest | [[entities/claude-code-releases]]「現在該跟哪條」＋[[feature-radar]]「⚠️ 升級前要知道的預設值與破壞性變更」 |
+| 用 hook 或權限規則擋危險指令（`rm -rf` 之類），hook 擋不擋得住 | [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]] |
+| subagent 有哪幾種型別、要讓多個 subagent 同時跑該選哪種 | [[entities/claude-code-features#Subagent 型別差異對照]] |
+| 要花多少、怎麼被計費；額度掉得特別快是 bug 還是正常 | [[entities/pricing]]「事故現在還在發生嗎」 |
 | code review 該用哪個入口、一次多少錢（官方各入口的方案限制與計費；本庫刻意不推薦單一社群工具） | [[topics/coding-workflow-guide]] 第 5 段 |
 | 大型 codebase 的做法主線（並行／context／記憶／把關） | [[topics/community-large-codebase-workflow]] |
 | 多個 agent 怎麼分工、隔離，隔離之後誰先合併、誰驗收（官方三條路對照與缺口） | [[topics/community-multi-agent]] |
@@ -45,12 +49,12 @@
 | [[entities/sonnet-5]] | model | 🤖 模型 | active（Legacy） | Claude Sonnet 5：曾為預設 Sonnet（v2.1.197 起），1M context，$2/$10；09-28 起由 [[entities/sonnet-5-5]] 接手預設地位　↳ 子故事：[[entities/sonnet-5-archive]] |
 | [[entities/haiku-5-5]] | model | 🤖 模型 | active | Claude Haiku 5.5：2026-10-07 發布，取代 Haiku 4.5，官方稱最便宜最快最具能力的小型模型，成本降約 75%；牌價 From $0.10/$0.50、1M context（已查實） |
 | [[entities/claude-science]] | product | 🛠️ 工具/功能 | beta | Claude Science：科學家專用桌面 app（公開 beta），可稽核 artifact、本機／HPC／雲端 VM 皆可跑；Anthropic 宣布自行開發藥物 |
-| [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code CLI 主頁：功能、已知問題、社群工具　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-mods]] |
+| [[entities/claude-code]] | product | 🛠️ 工具/功能 | active | Claude Code 母頁：現在什麼沒修好、該跟哪版；已知問題、版本、功能用法各一子頁　↳ 子故事：[[entities/claude-code-archive]]、[[entities/claude-code-features]]、[[entities/claude-code-known-issues]]、[[entities/claude-code-releases]]、[[entities/claude-mods]] |
 | [[entities/opus-5-5]] | model | 🤖 模型 | active | Claude Opus 5.5：2026-09-22 發布的現行 Opus，$4/$20、快取讀取 $0.20，官方稱多數工作追平 Fable 5.1；v2.1.280 起為 Claude Code 預設模型 |
 | [[entities/opus-5]] | model | 🤖 模型 | active（Legacy） | Claude Opus 5：2026-09-22 起官方改列 Legacy 仍可用，$5/$25；預設 Opus 已由 [[entities/opus-5-5]] 接手 |
 | [[entities/opus-4-8]] | model | 🤖 模型 | active（Legacy） | Opus 4.8：SWE-bench Pro 69.2%、1M context、Fast Mode 1/3 費用；官方已列 Legacy、退役不早於 2027-05-28，建議遷移至 [[entities/opus-5]]　↳ 子故事：[[entities/opus-4-8-archive]] |
 | [[entities/opus-4-7]] | model | 🤖 模型 | active（Legacy）| Opus 4.7 發布細節、思考深度爭議、cache 問題 |
-| [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案、牌價與乘數、計費規則現況；09-14 起週配額換軌、還在發生的計費事故　↳ 子故事：[[entities/pricing-archive]] |
+| [[entities/pricing]] | policy | 💼 商業 | active | 訂閱方案（含月度 API 額度）、牌價與乘數、計費規則現況；額度掉得快先看分流　↳ 子故事：[[entities/pricing-archive]]、[[entities/pricing-history]]、[[entities/pricing-incidents]] |
 | [[entities/mythos]] | model | 🤖 模型 | active（已解禁） | 高能力安全模型；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview（4% vs 6% 控制流劫持），跨越先前模型做不到的門檻　↳ 子故事：[[entities/mythos-archive]] |
 | [[entities/bugcrawl]] | feature | 🛠️ 工具/功能 | beta | Anthropic 測試中的 Claude Code 漏洞偵測工具 |
 | [[entities/claude-design]] | feature | 🛠️ 工具/功能 | active | Anthropic AI 設計工具（10-08 脫離 beta、獨立站 12-14 關）；同頁收 Claude Dashboards 與 Motion（beta） |
@@ -132,8 +136,8 @@
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
-| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 商業健康度：公開版 S-1 已於 2026-10-26 正式提交 SEC（擬掛牌代號 ANT），確認 2026 上半年淨損 807 億美元；現在的數字、合作會不會改到你的帳單　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-ipo]] |
-| [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日）：先列你買得到的標的，再逐則照分析師六問判——新資訊嗎、動到哪個數字、誰有感、多可信、下一個催化劑、所以呢——兩週後結算催化劑出現了沒（教學型事件研究，非投資建議；事實在商業各頁，本頁只放觀點） |
+| [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 的錢現在怎樣：指標表與 IPO 一句；往下鑽合作與算力（含跟 Google／Amazon／Microsoft 的關係）、風險與商業模式、上市與財報　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-business-risks]]、[[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]] |
+| [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日，判讀分四條子線）：先列買得到的標的，再照分析師六問逐則判，兩週後結算（教學型事件研究，非投資建議；事實在商業各頁）　↳ 子故事：[[topics/market-signals-compute]]、[[topics/market-signals-customers]]、[[topics/market-signals-ipo]]、[[topics/market-signals-legal]] |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |
 | [[topics/ai-talent-flow]] | 💼 商業 | ongoing | AI 實驗室人才流動與對各公司影響：AMD 以約 82 億美元收購 World Labs、Fei-Fei Li 出任首席科學家；此前 Google DeepMind 高層與核心研究員異動、Anthropic 主要承接　↳ 子故事：[[topics/ai-talent-flow-archive]] |

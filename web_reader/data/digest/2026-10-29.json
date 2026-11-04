@@ -278,6 +278,10 @@
         {
           "id": "anthropic-business",
           "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
         }
       ]
     }
@@ -440,6 +444,11 @@
     {
       "id": "enterprise-cost-management",
       "name": "企業規模 Claude 成本管理",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-customers",
+      "name": "定價、通路與客戶這則怎麼判",
       "pageType": "topic"
     }
   ],

@@ -7,11 +7,11 @@ last_updated: "2026-10-31"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 11
+days_since_news_subtree: 12
 inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-09-10"
@@ -87,6 +87,7 @@ Continue that code review and now analyze the authorization logic
   `--agent`（v2.0.59 起）讓角色檔 body 整段取代預設 system prompt、resume 後身分保留；搭 `--name` 就成了一位長駐領域專家——別的 session 用傳訊丟任務給他、隔天 `--continue` 接續，context 不歸零（[官方 sub-agents 文件](https://code.claude.com/docs/en/sub-agents)，2026-09-12 查證）。
 
 - **還做不到什麼**：Explore 與 Plan 唯讀、一次性不能追問，且會跳過 CLAUDE.md 與上層 session 的 git status（官方明說只有這兩個省略）；Explore 的模型與主對話相同；主對話跑 Fable 時 Explore 改跑 Opus，要來回追問改用 `general-purpose`。**subagent 裡開不了 workflow**。
+  - fork、background、teammate 等軸線與「平行分派選哪種」見 [[entities/claude-code-features#Subagent 型別差異對照]]。
 
 **同一 session 內用 Agent tool 平行開 subagent，上限 20 路**：官方 sub-agents 文件——「By default, when 20 subagents are running in a session, spawning another with the Agent tool fails with `Concurrent subagent limit reached`」，可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（2026-09-23 查證）。這是**本節**的上限，第三節 dynamic workflows 的 16／256 路、[[entities/managed-agents]] 的 20 路子代理是另外兩個不互通、不疊加的場景。
 

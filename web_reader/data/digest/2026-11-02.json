@@ -486,6 +486,11 @@
       "pageType": "entity"
     },
     {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
       "id": "pricing",
       "name": "Anthropic 訂閱方案與計費政策",
       "pageType": "entity"
@@ -498,6 +503,11 @@
     {
       "id": "ai-agent-safety-prompt-injection",
       "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
       "pageType": "topic"
     },
     {
@@ -518,6 +528,16 @@
     {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],

@@ -51,7 +51,9 @@ DOMAIN_TO_CATEGORY = {"模型": "模型", "工具/功能": "功能", "商業": "
 # 領域欄推不出真正負責人的頁：market-signals 領域是商業、由投資分析記者維護
 # （.claude/reporter-rules/commercial/daily.md）；feature-radar 不在目錄表，歸功能記者
 OWNER_OVERRIDES = {"topics/market-signals": "投資分析", "feature-radar": "功能",
-                   "topics/coding-workflow-guide": "開發實務"}
+                   "topics/coding-workflow-guide": "開發實務",
+                   # 四子頁沿 parent 也推得到投資分析；明列是讓 owner_of 不必依賴 frontmatter 已生成
+                   **{f"topics/market-signals-{s}": "投資分析" for s in ("ipo", "legal", "compute", "customers")}}
 _WIKILINK = re.compile(r"\[\[([^\]|#]+)")
 _PARENT = re.compile(r'^parent:[ \t]*"?([^"\r\n]*?)"?[ \t]*$', re.MULTILINE)
 

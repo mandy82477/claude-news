@@ -509,8 +509,11 @@ def page_domain(path: Path) -> str | None:
     return m.group(1).strip() if m else None
 
 
-# 領域欄推不出真正負責人的頁（同 pending_handoffs.OWNER_OVERRIDES）：手冊領域是工具/功能、由開發實務記者維護
-PAGE_TO_REPORTER = {"topics/coding-workflow-guide": "wiki-reporter-devpractice"}
+# 領域欄推不出真正負責人的頁（同 pending_handoffs.OWNER_OVERRIDES）：手冊領域是工具/功能、由開發實務記者維護；
+# 投資訊號母頁與四子頁領域是商業、由投資分析記者維護（缺這列時命中全派給商業記者，2026-11-02 第 22 波查到 285 筆）
+PAGE_TO_REPORTER = {"topics/coding-workflow-guide": "wiki-reporter-devpractice",
+                    **{f"topics/market-signals{s}": "wiki-reporter-market"
+                       for s in ("", "-ipo", "-legal", "-compute", "-customers")}}
 
 
 def reporter_of(path: Path) -> str | None:

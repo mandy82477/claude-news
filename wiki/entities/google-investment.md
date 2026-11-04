@@ -7,12 +7,12 @@ domain: "💼 商業"
 last_updated: "2026-09-13"
 last_news_update: "2026-07-24"
 status_main: "resolved"
-days_since_news: 102
+days_since_news: 103
 parent: null
 children: "['entities/google-investment-archive']"
 page_role: "hub"
-days_since_news_subtree: 102
-inbound_links: 11
+days_since_news_subtree: 103
+inbound_links: 13
 attribution_count: 1
 attribution_last: "2026-07-24"
 top_source: "google-news"
@@ -44,7 +44,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Bloomberg、TechCrunch、Reuters、NYT、Axios 等多個主流媒體同步報導。
 
-> **後續**：2026-04-29/30，TechCrunch / Bloomberg 報導 Anthropic 正洽談以 $8,500–9,000 億美元估值進行新一輪 $500 億融資，為不同輪次事件，見 [[entities/pricing]]。
+> **後續**：2026-04-29/30，TechCrunch / Bloomberg 報導 Anthropic 正洽談以 $8,500–9,000 億美元估值進行新一輪 $500 億融資，為不同輪次事件，結果（2026-05-28 Series H）見 [[topics/anthropic-business#現在的數字]]。
 
 ---
 
@@ -68,7 +68,7 @@ Bloomberg、TechCrunch、Reuters、NYT、Axios 等多個主流媒體同步報導
 
 - Google 同時也在秘密開發 Claude Code 競品（見 [[topics/competitor-landscape]]），此舉顯示即使是戰略投資方也將 Claude Code 視為必須正面競爭的對手
 - 此投資延續 Google 先前已有的 Anthropic 股東關係（之前已有數輪投資）
-- Amazon 也是 Anthropic 的重要投資者，形成多方大廠支持格局
+- Amazon 也是 Anthropic 的重要投資者，形成多方大廠支持格局；三大雲各自的關係見 [[topics/anthropic-partnerships-compute#跟三大雲各是什麼關係]]
 
 ---
 

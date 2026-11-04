@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 11
+days_since_news: 12
 parent: null
 children: "['entities/cowork-archive']"
 page_role: "hub"
-days_since_news_subtree: 11
+days_since_news_subtree: 12
 inbound_links: 14
 attribution_count: 6
 attribution_last: "2026-10-23"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
 **最後更新：** 2026-10-23
 **最後新聞更新：** 2026-10-23
-**蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
+**蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code-known-issues]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
 > **最新動態**（2026-10-23）
 > 官方查證：Chrome 側邊欄仍是 beta；Pro／Max 新任務自 10-06 起一律雲端執行，Team 為 web／mobile beta。
@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **官方說明中心確認合併後的背景執行與沙箱（2026-10-17 查證）：** [〈Use Claude Cowork on web, desktop, and mobile〉](https://support.claude.com/en/articles/15520349)寫明「Claude Cowork is now just Claude」，在任何對話描述任務即可交給 Claude；雲端 session 在背景持續執行（「Close your laptop and Claude keeps going」），Pro、Max 於雲端執行，Team、Enterprise 的雲端 Cowork 為 beta。沙箱：[〈Claude Cowork architecture overview〉](https://support.claude.com/en/articles/14479288)載明雲端 session 各有獨立沙箱（session 開始時建立、結束時銷毀；未稱其為 Linux VM），本機 session 的指令與程式碼則在專屬 Linux VM 內執行。雲端 session 只能經桌面版 App 觸及本機檔案，App 離線即無法。[release notes](https://support.claude.com/en/articles/12138966-release-notes)（2026-09-16）另載聊天、Cowork 任務、專案、連接器、技能都會沿用，逐步開放給 Pro、Max。
 
-Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放（首波僅 Max）；2026-10-23 官方查證：Pro、Max 在每個介面都於雲端執行，10-06 起新任務一律雲端、介面已拿掉「Only on your computer」，Team 的 web／mobile 為 beta，Enterprise 需管理員開（[說明中心](https://support.claude.com/en/articles/15520349)；詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
+Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 VM（沙箱）中背景執行，闔上裝置或關閉筆電後任務仍在雲端持續進行；桌面版已正式發布，行動版與網頁版自 2026-07-07 起以 Preview 形式開放（首波僅 Max）；2026-10-23 官方查證：Pro、Max 在每個介面都於雲端執行，10-06 起新任務一律雲端、介面已拿掉「Only on your computer」，Team 的 web／mobile 為 beta，Enterprise 需管理員開（[說明中心](https://support.claude.com/en/articles/15520349)；詳見 [[feature-radar]]「Claude Cowork 行動版 / 網頁版擴展」）。Windows 是這條產品線目前最不穩定的平台——本庫累積至少五起獨立的 VM／服務啟動失敗事件與多起資料完整性問題，完整清單見 [[entities/claude-code-known-issues#已知問題]]，本頁不重複列出；一句結論：**Windows 上跑 Cowork，先假設它會出狀況，重要工作別只信任它的自動保存。**
 
 **跟 Claude Code 差在哪（合併前狀態，合併後見上方查證段）：** Claude Code 是終端機 CLI，面向工程師逐指令互動；Cowork 是圖形化桌面／行動／網頁介面，任務丟出去後可背景執行，不需要盯著終端機。兩者共用底層 Claude agent 能力（如 2026-05-03 macOS 電腦使用功能，Claude Code 與 Cowork 同步取得直接控制桌面滑鼠鍵盤的能力）。2026-05-11 一則 Reddit 貼文（單一使用者觀點，非官方聲明）指出，桌面版 Claude Code 推出後與 Cowork 功能高度重疊，使用者一度分不清楚兩者定位；此後未見官方公開發文說明差異。
 
@@ -75,7 +75,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 ## 相關議題
 
 - 同日推出的文件／簡報產品：[[entities/claude-docs]]、[[entities/claude-slides]]、[[entities/claude-design]]
-- Windows 平台不穩定事件全清單、狀態標記與繞法：[[entities/claude-code#現在還沒修好的]]、[[entities/claude-code#已知問題]]
+- Windows 平台不穩定事件全清單、狀態標記與繞法：[[entities/claude-code#現在還沒修好的]]、[[entities/claude-code-known-issues#已知問題]]
 - 桌面版終端機 session 同日改讀帳號 skills/plugins（同屬帳號統一方向）：[[entities/claude-code]]
 - 訂閱方案與計費規則：[[entities/pricing]]
 - 官方 agent 積木總覽中 Cowork 的定位：[[topics/anthropic-agent-stack]]
@@ -94,7 +94,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 - Anthropic Blog（2026-08-12，Chrome 側邊欄）
 - claude.com/pricing（2026-08-12 官方查證，方案功能組成）
 - The Verge、TechCrunch、WIRED、NBC News、The New Stack、Let's Data Science（2026-07-07～07-08，行動版/網頁版擴展）
-- GitHub Issues：#53940、#30457、#32668、#92958、#92984（Windows 相關全清單見 [[entities/claude-code]]）
+- GitHub Issues：#53940、#30457、#32668、#92958、#92984（Windows 相關全清單見 [[entities/claude-code-known-issues]]）
 
 ## 歷史記錄
 

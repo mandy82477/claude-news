@@ -26,13 +26,13 @@ pricing 的前三個彙整區塊吃的是**日報條目**；「通路與乘數�
 | 表上方「資料截至 YYYY-MM-DD」距今 > 30 天 | WebFetch 官方定價頁與平台可用性頁複查，一致則只更新查證日 |
 | 新模型世代發布 | 確認長脈絡是否仍不加價、tokenizer 是否再換代；後者回報模型記者（`.claude/reporter-rules/models/pages.md` I 條）|
 | 日報出現通路政策變動或乘數異動 | 以日報為**線索**，仍須 WebFetch 官方原文確認後才寫入，並標來源連結與查證日 |
-| 通路表任一列的計費手段或上限有異動 | 同批回掃 [[topics/anthropic-business]]「哪個合作會改到你用的 Claude」的引用快照與「資料截至」日 |
+| 通路表任一列的計費手段或上限有異動 | 同批回掃 [[topics/anthropic-partnerships-compute]]「哪個合作會改到你用的 Claude」的引用快照與「資料截至」日 |
 
 ### 紀律
 
 - **儲存格 ≤ 120 字元**（同 pricing 既有紀律）：通路的功能缺項清單、乘數的適用細節一律下沉表下條列
 - **partner 通路（Bedrock、Google Cloud）的絕對數字不寫入**——費率由該平台自訂且各自調整，抄下來即過期且無人複查，比不寫更糟。只寫「由該平台自訂」＋官方定價頁連結
-- **功能落差不在本區塊展開**：某通路取不到哪些功能，只列**影響計費的那幾項**（如 Bedrock 無 Message Batches API ⇒ 拿不到 Batch 折扣）；完整功能落差屬 [[entities/claude-code]]，加 wikilink 不複製（同 `wiki/CLAUDE.md`「每個事實只有一個家」）
+- **功能落差不在本區塊展開**：某通路取不到哪些功能，只列**影響計費的那幾項**（如 Bedrock 無 Message Batches API ⇒ 拿不到 Batch 折扣）；完整功能落差屬 [[entities/claude-code-known-issues]]（🔌 平台相容性），加 wikilink 不複製（同 `wiki/CLAUDE.md`「每個事實只有一個家」）
 - **模型間的選型換算不在本頁**：「同一份工作換個模型差多少」屬 [[topics/model-comparison]] 的 `## 同一份工作，換設定差多少`，加 wikilink 指過去
 - 通路的功能可用性若影響**升版或遷移決策**（如某通路取不到 compaction／context editing），走 `data/pending-handoffs.jsonl` 轉知功能記者評估是否同步 feature-radar 升版風險
 

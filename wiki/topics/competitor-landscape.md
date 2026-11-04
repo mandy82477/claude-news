@@ -6,12 +6,12 @@ domain: "💼 商業"
 last_updated: "2026-11-03"
 last_news_update: "2026-11-03"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 75
+days_since_news_subtree: 1
+inbound_links: 78
 attribution_count: 251
 attribution_last: "2026-11-03"
 top_source: "blog"
@@ -178,7 +178,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **現在的答案**
 - 10-28／29：Copilot Fusion 跨模型智慧路由正式 GA；The New Stack 稱其基準測試勝 Claude Code、API 成本減半，測試條件未載。
 - 10-22：VS 版 Copilot 新增聊天內瀏覽 PR、切換信任 AI 模型、偵測弱點套件自動修補；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA 生效——四者 Claude Code 在 VS 內均無對應。
-- 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business#還沒過去的風險]]。
+- 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business-risks#還沒過去的風險]]。
 **還沒解決**
 - Fusion 基準測試的任務類型、方法論與原始分數均未見報導；棄用型號完整清單、all-in-one Copilot app 定價亦未見完整報導。
 

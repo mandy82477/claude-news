@@ -430,6 +430,11 @@
   "preview": "Claude Code：v2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories：開啟後 Write／Edit／NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑。",
   "sedimentedToday": [
     {
+      "id": "pricing-history",
+      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+      "pageType": "entity"
+    },
+    {
       "id": "community-large-codebase-workflow",
       "name": "大型 Codebase 規模化開發：社群工作流主線",
       "pageType": "topic"
