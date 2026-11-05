@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 17
-attribution_count: 16
-attribution_last: "2026-11-03"
+attribution_count: 19
+attribution_last: "2026-11-04"
 top_source: "google-news"
-pending_count: 16
+pending_count: 18
 pending_overdue: 1
 pending_next_review: "2026-11-06"
 pending_signalled: 2
@@ -31,13 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-03）
-> Reddit／r/ClaudeCode 轉述 Reuters／NBC：Binance 63 億美元竊案源頭是偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本；收到測試題先自己看過再給 agent 跑。
+> **最新動態**（2026-11-04）
+> - **帳號／憑證**：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，CyberSecurityNews 稱竊得的權杖在重設密碼後仍可被濫用。
+> - **claude.ai 漏洞**：OrcaRouter 稱三個 claude.ai 瑕疵可串接成攻擊鏈，僅標題可用。
 
 ---
 
@@ -56,7 +57,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
-- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；Cursor 市集裝過 Claude Code 延伸套件的人立即查有無被植入 SSH 金鑰並照公告清查殘留檔案；外部寄來的程式測試題 repo 先看過程式碼再執行，不丟給 agent 跑。
+- **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；Cursor 套件使用者查 SSH 金鑰並清殘留檔；外部測試題 repo 先看過程式碼再執行，不丟給 agent 跑；僅改密碼不夠，需同步撤銷既有憑證／token。
 
 ### Claude Code 供應鏈攻擊：跨月對照
 
@@ -82,6 +83,22 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用（2026-11-04 新增，跨兩來源）
+
+- **揭露來源**：Google News／CyberSecurityNews（11/04 07:35 UTC）、Google News／dev.ua（11/04 08:28 UTC），2 個獨立媒體同日各自報導
+- **核心主張（僅標題可用）**：兩篇報導稱新型資訊竊取型（infostealer）惡意軟體鎖定 ChatGPT、Claude 與 Copilot／Codex 等工具的帳號權杖（token）；CyberSecurityNews 指出竊得的權杖在使用者重設密碼後仍可存活並繼續被濫用，具體惡意軟體家族名稱、感染管道與受害規模均未見報導
+- **與既有事件的關係**：與既有 08-31 官方警示「資訊竊取型惡意軟體偷走 session 憑證」（Vidar、LummaC2、StealC 等，見「### 2026-08」同日條目與母頁 [[topics/ai-agent-safety#現在還擋不住的攻擊]]）同屬憑證竊盜系列；本則首次點出「重設密碼不足以止損」，若屬實代表既有補救建議需補上撤銷 token 這一步
+- **你能先做什麼**：除改密碼外，同步撤銷所有既有登入 session／token 並檢查已授權裝置清單
+- **可信度評估**：兩個獨立媒體同日交叉報導提高訊號強度，但均止於標題層級，「重設密碼後仍存活」的技術機制未見任一方提供證據
+- ❓ **待查證**（標 2026-11-04｜查 CyberSecurityNews、Token Hunt｜複 2026-11-18）｜**惡意軟體家族、感染管道與受害規模**：是否為既有 Vidar／LummaC2／StealC 系列變體或全新家族、具體感染途徑與受害者數均未見報導
+
+#### OrcaRouter：「Claudy Day」稱三個 claude.ai 瑕疵可串接成攻擊鏈（2026-11-04 新增）
+
+- **揭露來源**：Google News／OrcaRouter（11/04 10:59 UTC）；僅標題可用，互動 0
+- **核心主張（僅標題可用）**：OrcaRouter 發文稱 claude.ai 存在三個瑕疵，串接後可組成攻擊鏈；三個瑕疵各自內容、串接方式與是否已通報官方均未見報導
+- **可信度評估**：單一來源、互動 0，原文未可讀，訊號強度低
+- ❓ **待查證**（標 2026-11-04｜查 OrcaRouter、Claudy Day｜複 2026-11-18）｜**三個瑕疵的技術細節與官方回應**：攻擊鏈具體組成、是否已修補、受影響範圍均未見報導，僅標題可用
 
 #### Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本（2026-11-03 新增）
 
@@ -244,6 +261,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
   - 🔎 **查無官方**（標 2026-10-17｜查 stable 追上日期、dist-tags 2.1.292｜複 2026-11-30）｜**stable 標籤追上 2.1.288 修正的確切日期**：官方 Changelog 與 npm dist-tags 僅顯示現況（stable 指向 2.1.292，10-06 發布），未載追上的日期；在野誤刪案例未見報導。
     - 已掃日報至 2026-10-24 無後續；官方頁面未再查證
   - 2026-10-30 查 npm dist-tags：stable＝2.1.308、latest＝2.1.312，stable 已含修正
+  - 2026-11-04 查 npm dist-tags：stable＝2.1.311、latest＝2.1.318，stable 已含修正
 %% 2026-10-30 依第 2 條退場（stable 已含修正、狀態翻 ✅），不是補位候選 %%
 
 #### mixed-news.com：Claude Code 2.1.287 新增 Mods 功能，Anthropic 稱外掛可讀取使用者 API Key（2026-10-02 新增）
@@ -531,6 +549,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-04
+- **[🔴 新增，跨兩來源] CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用**：與既有 08-31 infostealer 事件同屬憑證竊盜系列，首次點出改密碼不夠，詳見「## 技術彙整」
+- **[📋 新增，僅標題可用] OrcaRouter：「Claudy Day」稱三個 claude.ai 瑕疵可串接成攻擊鏈**：攻擊鏈細節與官方回應均未見報導，詳見「## 技術彙整」
 
 ### 2026-11-03
 - **[📋 新增，低可信度] Reddit／r/ClaudeCode（轉述 Reuters／NBC）：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo**：回報者稱全年持續收到同類暗藏漏洞樣本，Claude Code 的直接關聯未見報導證實，詳見「## 技術彙整」

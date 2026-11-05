@@ -3,24 +3,24 @@ page: "topics/market-signals-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
-inbound_links: 3
-attribution_count: 0
-attribution_last: null
-top_source: null
-pending_count: 13
+days_since_news_subtree: 0
+inbound_links: 4
+attribution_count: 2
+attribution_last: "2026-11-04"
+top_source: "google-news"
+pending_count: 14
 pending_overdue: 1
 pending_next_review: "2026-11-09"
 pending_signalled: 2
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 算力與融資這則怎麼判
@@ -31,28 +31,46 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-16
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：晶片商循環融資、Nscale 等 9 條線 14 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-02）
+> **最新判讀**（2026-11-04）
+> - **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，擔保金額未揭露，TeraWulf 新增為可交易標的。
+>
+> 前一日（2026-11-02）：
 > - **S-1/A 採購承諾與租賃協議總額升至 8,950 億美元**：[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html) 引 SEC 申報，取代先前逾 5000 億美元口徑，其中 4,475 億美元預計 2030 年底前支出完畢；新舊口徑涵蓋範圍差異未明。
 
 ---
 
 ## 現在怎麼判
 
-- **錢從三條路來**：晶片商與銀行安排的融資（Broadcom 630 億、Blackstone 雙位數殖利率私募信貸）、算力夥伴合約（Nscale、Akamai、SpaceX）、S-1 揭露逾 5,000 億的雲端承諾。
-- **多數只有標題**：14 則裡 10 則硬度是單一標題，方向多判兩面或未定；10-29 銀行撤回德州資料中心債券是第一個實際受挫的訊號；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
-- **下一個會讓答案變清楚的事**：630 億融資定價發行、Nvidia 信用支持的條件。
+- **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
+- **錢從三條路來**：晶片商與銀行安排的融資（Broadcom 630 億、Blackstone 雙位數殖利率私募信貸）、算力夥伴合約（Nscale、Akamai、SpaceX、TeraWulf）、S-1 揭露逾 5,000 億的雲端承諾。
+- **多數只有標題**：15 則裡多數硬度是單一標題或跨媒體轉述，方向多判兩面或未定；10-29 銀行撤回德州資料中心債券是第一個實際受挫的訊號；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
+- **下一個會讓答案變清楚的事**：630 億融資定價發行、Nvidia 信用支持的條件、TeraWulf 擔保金額揭露。
 - 一眼、結算與里程碑的記號怎麼讀見 [[topics/market-signals#近期判讀]]；你買得到的標的見 [[topics/market-signals#買得到的標的]]。
 
 ---
 
 ## 近期判讀
+
+### 💰 TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫（2026-11-04）
+
+**一眼**：〰 未定（敘事型，未見具體擔保金額，動到 TeraWulf 肯塔基資料中心計畫的融資信用風險）｜誰有感：TeraWulf（NASDAQ: WULF，新增標的）｜硬度：跨媒體與社群多來源（Reuters、Unite.AI 同日報導）｜線：TeraWulf 肯塔基資料中心融資 ▸ 開線
+
+**為什麼這樣判**：新資訊是 Reuters 與 Unite.AI 同日報導，資料中心營運商 TeraWulf 取得 Google 提供的信用擔保（credit backstop），用於支應其為 Anthropic 位於肯塔基州的 AI 資料中心計畫；此前本頁記錄的 TeraWulf 僅有 07-06（開站前）簽署的 190 億美元 20 年租約，未見第三方信用擔保這種融資保證形式介入。判未定是因為信用擔保若落實能降低 TeraWulf 履約該租約所需的融資成本與風險，對其是正向訊號，但兩篇報導均未附具體擔保金額、額度上限或生效條件，也未說明 Google 承擔的是擔保函、信用額度還是其他形式。事實見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] TeraWulf 列。
+
+**下一個催化劑**：擔保金額與條件是否經官方（Google 或 TeraWulf）證實披露；TeraWulf 下一份財報是否揭露此擔保對其融資成本的影響。
+
+**你的選項**：(a) 什麼都不做，擔保金額與條件均未揭露，無法估算對融資成本的實際影響；(b) 想追蹤 Anthropic 算力布局系列的讀者，留意 TeraWulf 新增為可交易標的，與既有 Nscale、Akamai 等供應商並列看。
+
+**一課｜複習：信用支持不是股權投資**
+- 這一則跟 10-30 Nvidia 為 Nscale 信用支持案不一樣在哪：10-30 是洽談階段、對象合約未定；這次是已實際取得的擔保，但擔保方（Google）同時也是 Anthropic 的既有投資人與雲端供應商，角色更疊加。
+- 下次怎麼認：看到「信用擔保」「credit backstop」這類字眼，先確認提供方是否與本案另有其他關係（投資人／供應商／客戶身分疊加）。
 
 ### 💰 修訂版 S-1 採購承諾總額升至 8,950 億美元，含租賃協議（2026-11-02）
 
@@ -72,7 +90,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：〰 未定（敘事型，未見具體金額，動到既有 Nscale 合約的融資保證結構）｜誰有感：Nvidia（NASDAQ: NVDA，既有投資人＋硬體供應商）｜硬度：單一標題（Reuters 引述 The Information）｜線：Nscale 算力合約規模 ▸ 第 3 則
 
-**為什麼這樣判**：新資訊是路透引述《The Information》報導，Nvidia 正洽談為 Nscale 與 Anthropic 之間的雲端運算協議提供信用支持；此前本線第 2 則（10-19）記錄的是雙方洽談第二筆約 450 億美元算力合作本身，均未提及由第三方提供信用背書這種融資保證形式，本則首次出現 Nvidia 以信用支持角色介入這筆合約。判未定是因為信用支持若落實能降低 Nscale 履約的融資風險，對合約落地是正向訊號；但原文僅標題層級，具體支持哪一筆合約（開線的 1,030 億美元或 10-19 新增的 450 億美元）、金額與條件均未附，也未說明是否與既有「晶片商循環融資疑慮」系列（Broadcom、AMD、Nvidia-Lambda）同屬一類結構。事實見 [[topics/anthropic-business]]「哪個合作會改到你用的 Claude」Nscale 條目。
+**為什麼這樣判**：新資訊是路透引述《The Information》報導，Nvidia 正洽談為 Nscale 與 Anthropic 之間的雲端運算協議提供信用支持；此前本線第 2 則（10-19）記錄的是雙方洽談第二筆約 450 億美元算力合作本身，均未提及由第三方提供信用背書這種融資保證形式，本則首次出現 Nvidia 以信用支持角色介入這筆合約。判未定是因為信用支持若落實能降低 Nscale 履約的融資風險，對合約落地是正向訊號；但原文僅標題層級，具體支持哪一筆合約（開線的 1,030 億美元或 10-19 新增的 450 億美元）、金額與條件均未附，也未說明是否與既有「晶片商循環融資疑慮」系列（Broadcom、AMD、Nvidia-Lambda）同屬一類結構。事實見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] Nscale 列。
 
 **下一個催化劑**：Nvidia 或 Anthropic／Nscale 官方證實信用支持條件與適用範圍；具體支應哪一筆 Nscale 合約是否釐清。
 
@@ -87,7 +105,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：📉 負面（數字型，動到基礎設施融資管道是否暢通）｜誰有感：無（發行人與資料中心業者未具名，未上市）｜硬度：單一標題（Bloomberg.com）｜線：德州資料中心債券流標 ▸ 開線
 
-**為什麼這樣判**：新資訊是 Bloomberg 報導銀行撤回一筆支應 Anthropic 關聯德州資料中心的債券發行案；此前本頁記錄的基礎設施融資疑慮多為晶片商循環融資（10-01 起 Broadcom／Blackstone 630 億美元融資案）與 10-17 KBRA 非投資等級評等，均未提及這座德州資料中心的獨立融資管道，本則首次揭露一筆具體債券發行案未能完成。判負面是因為銀行撤回（而非延後或縮小規模）意味市場對這筆基礎設施債務的需求不足或條件談不攏，加深既有融資成本疑慮；但原文僅標題可用，發行人身分、金額規模與撤回具體原因均未見報導。事實見 [[topics/anthropic-business]]「還沒過去的風險」細節區。
+**為什麼這樣判**：新資訊是 Bloomberg 報導銀行撤回一筆支應 Anthropic 關聯德州資料中心的債券發行案；此前本頁記錄的基礎設施融資疑慮多為晶片商循環融資（10-01 起 Broadcom／Blackstone 630 億美元融資案）與 10-17 KBRA 非投資等級評等，均未提及這座德州資料中心的獨立融資管道，本則首次揭露一筆具體債券發行案未能完成。判負面是因為銀行撤回（而非延後或縮小規模）意味市場對這筆基礎設施債務的需求不足或條件談不攏，加深既有融資成本疑慮；但原文僅標題可用，發行人身分、金額規模與撤回具體原因均未見報導。事實見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **下一個催化劑**：撤回原因與發行人身分是否經具名報導披露；這筆資料中心融資是否改以其他管道（如私募信貸）重新安排。
 
@@ -117,7 +135,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（數字型，動到融資規模，從既有 600 億美元升至 630 億美元）｜誰有感：Broadcom（NASDAQ: AVGO）、Blackstone（NYSE: BX）｜硬度：單一標題（路透社）｜線：晶片商循環融資疑慮 ▸ 第 4 則
 
-**為什麼這樣判**：新資訊是華爾街銀行與 Blackstone 共同安排一筆 630 億美元融資，支應 Anthropic 向 Broadcom 採購 AI 晶片；此前 10-05（第 3 則）僅知銀行已正式 launch 600 億美元融資案（辛迪加階段），本則首次確認 Blackstone 私募信貸（10-17 開線）併入同一筆融資，金額也從 600 億美元擴大至 630 億美元。判兩面是因為銀行與私募信貸機構共同安排代表交易落地機率進一步上升，對 Broadcom 是正向確認；但金額較既有規模再擴大，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類、槓桿規模更深，原文僅路透社一家報導，是否已完成定價或簽署均未見細節。事實見 [[topics/anthropic-business]]「還沒過去的風險」細節區。
+**為什麼這樣判**：新資訊是華爾街銀行與 Blackstone 共同安排一筆 630 億美元融資，支應 Anthropic 向 Broadcom 採購 AI 晶片；此前 10-05（第 3 則）僅知銀行已正式 launch 600 億美元融資案（辛迪加階段），本則首次確認 Blackstone 私募信貸（10-17 開線）併入同一筆融資，金額也從 600 億美元擴大至 630 億美元。判兩面是因為銀行與私募信貸機構共同安排代表交易落地機率進一步上升，對 Broadcom 是正向確認；但金額較既有規模再擴大，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類、槓桿規模更深，原文僅路透社一家報導，是否已完成定價或簽署均未見細節。事實見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **下一個催化劑**：這筆 630 億美元融資是否完成定價與正式發行；Blackstone 在其中的具體利率與規模拆分是否披露。
 
@@ -146,7 +164,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：〰 未定（數字型，洽談階段，動到資本支出承諾總規模）｜誰有感：無（未上市；Nscale 本身亦未上市）｜硬度：跨媒體與社群多來源（CNBC 率先披露，Reuters、Bloomberg 同日查證跟進）｜線：Nscale 算力合約規模 ▸ 第 2 則
 
-**為什麼這樣判**：新資訊是 CNBC 披露 Anthropic 正與 Nscale 洽談第二筆算力合作、規模約 450 億美元，與 09-21 揭露的第一筆（Nscale 總合約 1,030 億美元，Anthropic 與 Microsoft 並列最大客戶）是不同筆交易，本線首次出現同一供應商的第二輪洽談。判未定是因為僅為洽談階段，具體容量、條款與簽署時程均未披露，也未說明與既有 1,030 億美元合約是否重疊計算；持續擴大算力供給對滿足模型訓練與推論需求是正向訊號，但既有合約拆分金額尚未披露就再追加一筆，會加深外界對資本支出規模是否可持續的既有疑慮。事實見 [[topics/anthropic-business]]。
+**為什麼這樣判**：新資訊是 CNBC 披露 Anthropic 正與 Nscale 洽談第二筆算力合作、規模約 450 億美元，與 09-21 揭露的第一筆（Nscale 總合約 1,030 億美元，Anthropic 與 Microsoft 並列最大客戶）是不同筆交易，本線首次出現同一供應商的第二輪洽談。判未定是因為僅為洽談階段，具體容量、條款與簽署時程均未披露，也未說明與既有 1,030 億美元合約是否重疊計算——該 1,030 億美元其實是 Nscale 全部客戶的總合約金額（含 Microsoft），不是 Anthropic 單筆承諾，Anthropic 自己的第一筆是 450 億美元；持續擴大算力供給對滿足模型訓練與推論需求是正向訊號，但既有合約拆分金額尚未披露就再追加一筆，會加深外界對資本支出規模是否可持續的既有疑慮。事實見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]。
 
 **下一個催化劑**：雙方是否正式簽署並公布條款；新一筆金額與既有 1,030 億美元合約的拆分關係是否釐清。
 
@@ -161,7 +179,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（數字型，動到晶片融資的資金成本假設）｜誰有感：Blackstone（NYSE: BX）｜硬度：單一標題（FT／Yahoo Finance 轉載，未見具體利率數字或雙方官方聲明）｜線：私募信貸晶片融資 ▸ 開線
 
-**為什麼這樣判**：新資訊是 Anthropic 最新一輪晶片融資案首次出現私募信貸機構的具體參與條件——FT 報導 Anthropic 向 Blackstone 開出雙位數殖利率，爭取其參與晶片採購融資；此前既有「晶片商循環融資疑慮」系列（Broadcom、AMD、Nvidia-Lambda）記錄的都是晶片商自己或其關聯方提供融資，本則首次出現私募信貸機構作為獨立第三方放款人的形式。判兩面是因為雙位數殖利率對 Blackstone 是具吸引力的放款報酬、屬正向確認其參與意願，但對 Anthropic 而言代表舉債成本偏高，與同日 FT 報導的 KBRA 非投資等級評等方向一致，兩則消息互相印證 Anthropic 的融資成本處於偏高水位。原文未附精確利率數字、融資規模或是否已簽署，僅確認開出條件本身。事實見 [[topics/anthropic-business]]「還沒過去的風險」細節區。
+**為什麼這樣判**：新資訊是 Anthropic 最新一輪晶片融資案首次出現私募信貸機構的具體參與條件——FT 報導 Anthropic 向 Blackstone 開出雙位數殖利率，爭取其參與晶片採購融資；此前既有「晶片商循環融資疑慮」系列（Broadcom、AMD、Nvidia-Lambda）記錄的都是晶片商自己或其關聯方提供融資，本則首次出現私募信貸機構作為獨立第三方放款人的形式。判兩面是因為雙位數殖利率對 Blackstone 是具吸引力的放款報酬、屬正向確認其參與意願，但對 Anthropic 而言代表舉債成本偏高，與同日 FT 報導的 KBRA 非投資等級評等方向一致，兩則消息互相印證 Anthropic 的融資成本處於偏高水位。原文未附精確利率數字、融資規模或是否已簽署，僅確認開出條件本身。事實見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **下一個催化劑**：融資條款細節（期限、擔保品、確切利率）是否披露；是否有其他私募信貸機構跟進類似條件；Anthropic 或 Blackstone 官方是否證實交易。
 
@@ -191,7 +209,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（數字型，動到交易落地進度與槓桿規模）｜誰有感：Broadcom（NASDAQ: AVGO）｜硬度：單一標題（Financial Times，經 Google News 轉載）｜線：晶片商循環融資疑慮 ▸ 第 3 則
 
-**為什麼這樣判**：新資訊是主詞從「Broadcom 啟動籌資」換成「華爾街銀行正式 launch」這筆 600 億美元融資案——10-01 Reuters 稱 Broadcom「考慮」貸款 420 億美元，10-02 Yahoo Finance 等三家稱 Broadcom 已「啟動」600 億美元債務融資，本則首次由承銷銀行一方把交易正式帶到市場（辛迪加／發售階段），是本線第三次動詞升級。判兩面是因為銀行正式對外發售代表交易成交機率再往前推進一步，對 Broadcom 是正向確認；但金額仍是同一個 600 億美元，尚未見定價、利率或擔保條件，槓桿規模本身未縮小，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類疑慮不變。原文僅標題可讀，承銷團名單、利率與資金是否明確綁定晶片採購合約均未見報導。事實見 [[topics/anthropic-business]]「還沒過去的風險」細節區。
+**為什麼這樣判**：新資訊是主詞從「Broadcom 啟動籌資」換成「華爾街銀行正式 launch」這筆 600 億美元融資案——10-01 Reuters 稱 Broadcom「考慮」貸款 420 億美元，10-02 Yahoo Finance 等三家稱 Broadcom 已「啟動」600 億美元債務融資，本則首次由承銷銀行一方把交易正式帶到市場（辛迪加／發售階段），是本線第三次動詞升級。判兩面是因為銀行正式對外發售代表交易成交機率再往前推進一步，對 Broadcom 是正向確認；但金額仍是同一個 600 億美元，尚未見定價、利率或擔保條件，槓桿規模本身未縮小，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類疑慮不變。原文僅標題可讀，承銷團名單、利率與資金是否明確綁定晶片採購合約均未見報導。事實見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **下一個催化劑**：這筆 600 億美元融資是否完成定價與正式發行；承銷銀行名單與利率是否披露；Broadcom 下一份財報或 10-Q 是否揭露此筆舉債對槓桿比率的影響。
 
@@ -205,7 +223,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（數字型，動到槓桿規模與供應商資本結構）｜誰有感：Broadcom（NASDAQ: AVGO）｜硬度：跨媒體與社群多來源（Yahoo Finance、qz.com、Seeking Alpha 三家同日報導）｜線：晶片商循環融資疑慮 ▸ 第 2 則
 
-**為什麼這樣判**：新資訊是 Broadcom 從 10-01「考慮」貸款 Anthropic 最高 420 億美元的階段，推進為已啟動 600 億美元的實際債務融資以支應 Anthropic 晶片採購——金額擴大且動詞從「評估」升級為「啟動籌資」，是本線首次出現流程推進。判兩面是因為 Broadcom 真的開始借錢做這筆生意，代表交易落地機率上升，對其未來營收是正向確認；但舉債規模擴大到 600 億美元，意味著 Broadcom 自身槓桿同步墊高去支應客戶的晶片租賃需求，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類、程度更深。三家財經媒體同日報導但均未見貸款條款本身（利率、天期、擔保品）的獨立佐證，僅確認啟動籌資這件事。事實見 [[topics/anthropic-business]]「還沒過去的風險」細節區。
+**為什麼這樣判**：新資訊是 Broadcom 從 10-01「考慮」貸款 Anthropic 最高 420 億美元的階段，推進為已啟動 600 億美元的實際債務融資以支應 Anthropic 晶片採購——金額擴大且動詞從「評估」升級為「啟動籌資」，是本線首次出現流程推進。判兩面是因為 Broadcom 真的開始借錢做這筆生意，代表交易落地機率上升，對其未來營收是正向確認；但舉債規模擴大到 600 億美元，意味著 Broadcom 自身槓桿同步墊高去支應客戶的晶片租賃需求，與既有 AMD、Nvidia-Lambda 循環融資疑慮同屬一類、程度更深。三家財經媒體同日報導但均未見貸款條款本身（利率、天期、擔保品）的獨立佐證，僅確認啟動籌資這件事。事實見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **下一個催化劑**：600 億美元債務融資是否完成定價與正式發行；資金用途是否明確綁定 Anthropic 晶片採購合約；Broadcom 下一份財報或 10-Q 是否揭露此筆舉債對資產負債表槓桿比率的影響。
 
@@ -235,7 +253,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：📈 正面（數字型，動到 Akamai 未來多年期營收與資本結構）｜誰有感：Akamai（NASDAQ: AKAM）｜硬度：跨媒體與社群多來源（Bloomberg 首發，WSJ、IBD 跟進，Reddit 轉貼放大討論度）｜線：Akamai 算力合約 ▸ 開線
 
-**為什麼這樣判**：新資訊是本線首見具體合約條款——Anthropic 與 Akamai 簽署 7 年、116 億美元運算合約，取得 CPU 算力，Akamai 並發行認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股。Bloomberg 標題稱「120 億美元」，內文與 WSJ、IBD 均以精確的 116 億美元為準，兩個數字口徑不同、不可互換引用。判正面是因為對 Akamai 而言這是新增一筆逾百億美元的多年期營收承諾，認股權證更把 Anthropic 的利益綁進 Akamai 股價；Anthropic 自身未上市，這筆合約只讓既有「資本支出算術」系列（08-28 Nscale、09-01 Lambda、09-16 澳洲）再添一筆新供應商，不可交易。事實見 [[topics/anthropic-business]]「哪個合作會改到你用的 Claude」Akamai 條目。
+**為什麼這樣判**：新資訊是本線首見具體合約條款——Anthropic 與 Akamai 簽署 7 年、116 億美元運算合約，取得 CPU 算力，Akamai 並發行認股權證，Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股。Bloomberg 標題稱「120 億美元」，內文與 WSJ、IBD 均以精確的 116 億美元為準，兩個數字口徑不同、不可互換引用。判正面是因為對 Akamai 而言這是新增一筆逾百億美元的多年期營收承諾，認股權證更把 Anthropic 的利益綁進 Akamai 股價；Anthropic 自身未上市，這筆合約只讓既有「資本支出算術」系列（08-28 Nscale、09-01 Lambda、09-16 澳洲）再添一筆新供應商，不可交易。事實見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] Akamai 列。
 
 **下一個催化劑**：Akamai 下一份財報／10-Q 是否揭露此合約的營收認列時程並反映進全年指引；認股權證是否已實際行使。
 
@@ -250,7 +268,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：〰 未定（數字型，動到 Nscale 資料中心合約總規模與客戶集中度）｜誰有感：無（未上市，Anthropic 自身合約規模是否變動未知）；Microsoft（NASDAQ: MSFT）並列最大客戶但拆分未明｜硬度：單一標題（Bloomberg）｜線：Nscale 算力合約規模 ▸ 開線
 
-**為什麼這樣判**：新資訊是 Bloomberg 首度揭露 Nscale 資料中心合約總值達 1,030 億美元，Anthropic 與 Microsoft 是其中最大兩家客戶——此前（08-28）僅知 Anthropic 自身一筆 450 億美元、460 MW Vera Rubin 世代算力容量（[[topics/anthropic-business]]「資本支出算術」，該筆約當 Anthropic 年化營收 69%）。判未定是因為報導未拆分 Anthropic 與 Microsoft 各自佔多少，無法判斷 Anthropic 自身的 450 億美元承諾有沒有變動、還是總量單純因 Microsoft 加入而膨脹；僅 Bloomberg 單一媒體報導，三方均未見官方證實或拆分數字。事實見 [[topics/anthropic-business]]「哪個合作會改到你用的 Claude」Nscale 條目。
+**為什麼這樣判**：新資訊是 Bloomberg 首度揭露 Nscale 資料中心合約總值達 1,030 億美元，Anthropic 與 Microsoft 是其中最大兩家客戶——此前（08-28）僅知 Anthropic 自身一筆 450 億美元、460 MW Vera Rubin 世代算力容量（[[topics/anthropic-partnerships-compute#算力與資金從哪來]]，該筆約當 Anthropic 年化營收 69%）。判未定是因為報導未拆分 Anthropic 與 Microsoft 各自佔多少，無法判斷 Anthropic 自身的 450 億美元承諾有沒有變動、還是總量單純因 Microsoft 加入而膨脹；僅 Bloomberg 單一媒體報導，三方均未見官方證實或拆分數字——1,030 億美元實為 Nscale 全部客戶總合約（含 Microsoft），Anthropic 自己那一筆另為 450 億美元，兩者不可互相替代。事實見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] Nscale 列。
 
 **下一個催化劑**：Anthropic 與 Microsoft 各自合約金額拆分披露；是否影響既有「資本支出算術」（Nscale 佔 Anthropic 年化營收 69%）這項估算。
 
@@ -284,6 +302,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-11-04 | TeraWulf 肯塔基資料中心融資 | WULF 新增標的 〰（開線） | 擔保金額與條件是否經官方證實披露（11-18） | ⏳ | ⏳ |
 | 2026-11-02 | 雲端供應鏈承諾總額 | 本體不可買；AVGO／AMZN／GOOGL 間接關聯 📉（第 2 則） | 8,950 億美元口徑與先前總表關係是否經官方拆解（11-16） | ⏳ | ⏳ |
 | 2026-10-30 | Nscale 算力合約規模 | 本體不可買；NVDA 間接關聯 〰（第 3 則） | Nvidia 或 Anthropic／Nscale 官方證實信用支持條件與適用範圍（11-13） | ⏳ | ⏳ |
 | 2026-10-29 | 德州資料中心債券流標 | 本體不可買；間接曝險 📉（開線） | 撤回原因與發行人身分是否經具名報導披露（11-12） | ⏳ | ⏳ |
@@ -308,6 +327,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-04｜查 TeraWulf、信用擔保｜複 2026-11-18）｜**TeraWulf 信用擔保金額與條件是否經官方（Google 或 TeraWulf）證實披露**：Reuters、Unite.AI 報導僅標題可用，擔保金額、額度上限與生效條件均未見報導。
 - ❓ **待查證**（標 2026-11-02｜查 8,950億美元、租賃協議｜複 2026-11-16）｜**8,950 億美元採購承諾與租賃協議總額，與先前逾 5000 億美元／5,170 億美元口徑的涵蓋範圍差異是否經官方拆解**：修訂版 S-1 僅給出新總額數字，新舊口徑是否重疊、各筆履約時程與付款結構均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 Texas、bond｜複 2026-11-12）｜**銀行撤回德州資料中心債券發行案的原因與發行人身分是否經具名報導披露**：Bloomberg.com 報導僅標題可用，發行人、金額規模與撤回具體原因均未見報導。
 - ❓ **待查證**（標 2026-10-30｜查 Nvidia、信用支持｜複 2026-11-13）｜**Nvidia 信用支持 Nscale-Anthropic 協議的對象、金額與條件是否經官方證實**：Reuters 引《The Information》僅標題可用，支應哪一筆合約、金額與條件均未見報導。
@@ -342,5 +362,5 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 相關
 
 - [[topics/market-signals]] — 買得到的標的、四頁合計的命中率
-- [[topics/anthropic-business]] — 算力合約與融資的事實層
+- [[topics/anthropic-partnerships-compute]] — 算力合約與融資的事實層
 - [[topics/market-lessons]] — 課程表與消息線走向（週更）

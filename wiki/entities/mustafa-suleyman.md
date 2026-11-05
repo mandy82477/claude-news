@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-17"
+last_updated: "2026-11-04"
 last_news_update: "2026-10-07"
 status_main: "active"
 days_since_news: 28
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 公開評論 Anthropic 對 Claude 類人化與 AI 意識的說法
 **首次出現：** 2026-09-16
-**最後更新：** 2026-10-17
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-10-07
 
 > **對 Anthropic 的成本立場**（2026-10-07）
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|
 | 批評 Anthropic 對 Claude 類人化與 AI 意識的論述（2026-09-16，Bloomberg／BBC／Axios） | [[topics/recursive-self-improvement]]（AI 自我改進與意識論述的風險框架） |
 | 要「降低並最終消除」付給 Anthropic 的成本（06-04 Bloomberg 專訪） | [[topics/anthropic-business]]（算力與客戶集中度）、[[topics/enterprise-tool-tracker]]（企業換用紀錄） |
-| Microsoft 內部 Claude 支出砍逾三分之一（2026-10-05 報導） | [[topics/competitor-landscape]]（對手動態）、[[topics/market-signals]]（MSFT 判讀） |
+| Microsoft 內部 Claude 支出砍逾三分之一（2026-10-05 報導） | [[topics/competitor-landscape]]（對手動態）、[[topics/market-signals-customers]]（MSFT 判讀） |
 
 > 他是 Microsoft 側的發言人，不是 Anthropic 的人；本頁的追蹤理由只有一個——他的發言會改到 Microsoft 要不要繼續買 Claude。
 

@@ -3,7 +3,7 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-02"
+last_updated: "2026-11-04"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 2
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-02
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-11-02
 
 > **五則新增：測試作弊守門、執行前白話提示、規格驅動新實作，兩則不讓 agent 自己說了算**（2026-11-02）
@@ -86,7 +86,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Paveo**（Show HN，10-16）：在 Claude Code、Codex、Cursor 的指令執行前先檢查（僅標題）；貼文在 HN 被標 flagged。HN 1 分（10-16 快照）。
 - **Vibecheck**（Show HN，10-12）：自架的 GitHub merge gate，開 PR 時檢查作者懂不懂自己或 AI 寫的程式碼，BYOK Anthropic。HN 1 分（10-13 快照）。
 - **怎麼看**：有人開始審守衛本身，不只是再加一道守衛；但三則都是單一作者、互動近零，採用證據還很弱（推論）。
-- **官方的硬擋手段**：hook 加 `onFailure: "block"`（2.1.295）只補「hook 自己起不來或逾時」的缺口；官方文件說 `if` 條件是盡力比對，要硬擋請用權限系統（2026-10-11 查證，見 [[entities/claude-code#hooks：事件、失效模式與能不能當防線]]）。
+- **官方的硬擋手段**：hook 加 `onFailure: "block"`（2.1.295）只補「hook 自己起不來或逾時」的缺口；官方文件說 `if` 條件是盡力比對，要硬擋請用權限系統（2026-10-11 查證，見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]）。
 - **權限系統也要寫對**：Reddit 那則的例子正是 deny 規則，換一種指令寫法就漏，硬擋仍得覆蓋同一動作的各種寫法（推論）。
 - 來源：[Reddit 貼文](https://www.reddit.com/r/ClaudeCode/comments/1x5tbps/your_deny_rule_for_git_push_doesnt_stop_git_c/)、[Paveo](https://github.com/paveo-dev/paveo)、[Vibecheck](https://github.com/bhurghundii/vibecheck.dev)。
 

@@ -3,17 +3,17 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
-last_news_update: "2026-10-31"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 162
-attribution_count: 205
-attribution_last: "2026-10-31"
+attribution_count: 206
+attribution_last: "2026-11-04"
 top_source: "google-news"
 pending_count: 13
 pending_overdue: 0
@@ -28,14 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-31
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
-> **多線政府動態**（2026-10-31）
-> - **浮水印擴大**：Anthropic 寄信通知 API 客戶，浮水印擴及 Mythos 5、Opus 4.7／4.6、Sonnet 4.6；The Decoder 稱其中兩款舊模型調一個取樣參數即可避開，為單一來源分析。
-> - **政治獻金**：加州申報文件顯示 Anthropic 選前向各級民主黨委員會捐 90 萬美元。
-> - **揭露設業界標準**：Bloomberg Law 稱 Anthropic IPO 揭露「存在性」AI 風險正為業界設新標準，承 10-26 S-1「災難性風險」字眼。
+> **多線政府動態**（2026-11-04）
+> - **選舉不實訊息**：NYT 稱 OpenAI 與 Anthropic 共同成立「戰情室」應對美國期中選舉不實訊息，機制細節未載。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 
@@ -315,6 +313,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-11-03 | 🏢 | The New York Times：OpenAI 與 Anthropic 共同成立「戰情室」應對美國期中選舉不實訊息 | 兩家公司少見的具體聯手動作，機制與因應範圍均未見報導，僅標題可用；與既有 Public First Action 政治獻金線（本頁 07-22 條目）不同，聚焦不實訊息而非資金 |
 | 2026-10-31 | 🌐 | The Decoder：Anthropic 寄信通知 API 客戶，浮水印擴大到 Mythos 5、Opus 4.7、Opus 4.6、Sonnet 4.6，但兩款舊模型調一個取樣參數即可避開 | 兩款是哪兩款、是哪個參數、官方是否承認均未見報導（單一來源分析）；Bedrock 上線晚幾天，詳見「## 現在有哪幾條線在動」第 2 列 |
 | 2026-10-31 | 🏢 | The San Francisco Standard：依向加州州務卿提交的申報，Anthropic 選前向加州民主黨各級委員會捐 90 萬美元（州黨部 52.5 萬、投票動員 15 萬、五個郡黨部各 4.5 萬） | 單一來源；捐款用途與對應法案或選區未見報導，延續 [[topics/anthropic-government-policy#攻防紀錄]] 內 Public First 等政治佈局 |
 | 2026-10-29 | 🏢 | Pasquale Pillitteri：Claude 文字浮水印擴大至 Opus 4.7／4.6、Sonnet 4.6，11/3 生效 | 單一來源、僅標題可用，機制與是否沿用既有歐盟規範均未見報導，詳見「## 現在有哪幾條線在動」第 2 列 |
@@ -547,6 +546,9 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ## 時序
 
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
+
+### 2026-11-03
+- **[🏢] The New York Times：OpenAI 與 Anthropic 共同成立「戰情室」應對美國期中選舉不實訊息**：兩家公司少見的具體聯手動作，機制細節未見報導，僅標題可用，詳見「## 攻防紀錄」
 
 ### 2026-10-31
 - **[🌐] The Decoder：浮水印擴及 Mythos 5、Opus 4.7／4.6、Sonnet 4.6，兩款舊模型調一個取樣參數可避開**：Anthropic 寄信通知 API 客戶；繞過說為單一來源分析，詳見「## 攻防紀錄」、「浮水印：法源、爭點與未解」

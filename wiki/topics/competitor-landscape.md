@@ -3,17 +3,17 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 78
-attribution_count: 251
-attribution_last: "2026-11-03"
+attribution_count: 254
+attribution_last: "2026-11-04"
 top_source: "blog"
 pending_count: 9
 pending_overdue: 0
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-03）
+> **本週衝擊**（2026-11-04）
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
 ---
@@ -246,6 +246,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-04
+- **OpenAI（分析文，非編碼能力異動）**：官方宣布收購 Pierre Computer Company，稱將擴充 Codex 在建置、理解與審查程式碼方面的工具，具體功能與上線時間未見報導，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：GPT-5.6 Cyber（Daybreak Red）經 Amazon Bedrock 在 AWS GovCloud（US-East）上線，供經授權客戶執行網路安全工作，非編碼能力或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot 用量 API 新增可分辨 BYOK（自帶金鑰）與 Copilot 代管模型的用量統計，企業用量報表可拆分兩種來源，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 
 #### 2026-11-03
 - **Microsoft／GitHub**：Copilot 新增 JetBrains Air 原生整合，支援委派程式任務、引導執行與審查結果；衝擊力不如「對手雷達」現列 10-28/29 Fusion GA，暫不列入該表（Blog/GitHub Copilot Changelog）

@@ -3,17 +3,17 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-02"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
-inbound_links: 6
-attribution_count: 13
-attribution_last: "2026-11-02"
+days_since_news_subtree: 0
+inbound_links: 7
+attribution_count: 14
+attribution_last: "2026-11-04"
 top_source: "devto"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **新增一份給 coding agent 的省 token checklist**（2026-11-02）
-> - **Reddit「少浪費 token 20 招」**：從基礎到進階的檢查清單，點出 subagent 與背景模型呼叫是容易被忽略的疊加消耗。
+> **新增一則具名公開帳單案例：17 個 bot 全靠一個 Max 方案**（2026-11-04）
+> - **韓國 B2B 流通公司運營作者**：17 個 Claude Code bot 每天處理真實營運工作，全月帳單只靠一個 100 美元 Claude Max 方案，零額外 API 支出。
 
 ---
 
@@ -60,6 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⏳ **計價端的分段門檻：** Haiku 5.5 的 prompt 超過 10 萬 token 後單價跳五倍（$0.10／$0.50 → $0.50／$2.50），見 [[entities/haiku-5-5#實付成本]]。
 - ⏳ **事前試算：** 送出前先估成本——mcptoon（10-04）壓縮 MCP schema 的 context 佔用，條目見本頁〈activeing123/mcptoon〉；Haiku 價格閘門見本頁〈Claude Haiku 5.5 Is Cheap Until 100k Tokens〉。
 - **證據強度：** 單人一月樣本，尚無覆核；各節點細節以所在頁為準，此處只彙整歸因脈絡。
+- 本節答的是「額度掉得快，花在哪」；官方認了沒、事故現在還在不在，見 [[entities/pricing#事故現在還在發生嗎]]。
 
 ### 用量窗口與配額守門
 
@@ -105,6 +106,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### 韓國 B2B 流通公司：17 個 Claude Code bot 每月帳單僅 100 美元，零額外 API 支出（2026-11-04）
+
+- **主線：** —
+- **核心模式：** 非工程背景的運營人員公開實際帳單：17 個 Claude Code bot 自 2026 年起每天處理客訴比對等真實營運工作，全靠一個 100 美元 Claude Max 方案，零額外 API 支出。
+- **與既有模式的關係：** 補上「Token / 成本優化」一則「單一訂閱方案撐多 bot 規模」的具名公開帳單案例，與既有省 token 清單、MCP 工具成本實測（[[topics/community-cost#2026-10]]）並列參照；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News 單一貼文（13 分），作者公開具體帳單數字但非第三方審計，細節未見其他來源佐證。
+- **來源：** Hacker News；[原文](https://botsinproduction.com/blog/what-10-claude-code-bots-cost-per-month/)
+- **成熟度：** ⏳ 新興（單一公開案例，尚無其他團隊複現報告）
 
 #### Reddit：給 coding agent 的「少浪費 token 20 招」清單，從基礎到進階（2026-11-02）
 

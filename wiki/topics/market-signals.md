@@ -3,17 +3,17 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/market-signals-compute', 'topics/market-signals-customers', 'topics/market-signals-ipo', 'topics/market-signals-legal']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 14
-attribution_count: 120
-attribution_last: "2026-11-03"
+days_since_news_subtree: 0
+inbound_links: 11
+attribution_count: 117
+attribution_last: "2026-11-04"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -30,20 +30,19 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-03）
+> **最新判讀**（2026-11-04）
+> - **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：擔保金額未揭露，TeraWulf 新增為可交易標的（見 [[topics/market-signals-compute]]）。
+>
+> 前一日（2026-11-03）：
 > - **S-1/A 自評「可能迫近」觸及 RSI 門檻**：首度書面承認安全風險升高，同時強調現役模型皆未跨過此線（見 [[topics/market-signals-ipo]]）。
 > - **S-1 揭露單季人事費用逾 17 億美元**：換算每人每月約 10.7 萬美元，規模超過同期 12.5 億美元營運虧損（見 [[topics/market-signals-ipo]]）。
->
-> 前一日（2026-11-02）：
-> - **S-1/A 首度揭露財報數字**：單季營收 170 億美元、營運虧損 12.5 億美元，revenue-per-compute 比值由 2.08x 降至 1.72x（見 [[topics/market-signals-ipo]]）。
-> - **採購承諾總額升至 8,950 億美元**：取代先前逾 5000 億美元口徑，含租賃協議，4,475 億美元 2030 年底前支出完畢（見 [[topics/market-signals-compute]]）。
 
 ---
 
@@ -53,7 +52,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 每則判讀照分析師看消息的六個問題寫：**這是新資訊嗎、動到哪個數字、誰的口袋會有感、可信到什麼程度、下一個會讓答案變清楚的事件是什麼、所以我做什麼**；前四題壓成第一行「一眼」，要學的東西在每則最後的「一課」。先看「買得到的標的」，那是這頁裡你真的能交易的東西；沉澱過的課程表、未上市消息線的走向與 IPO 背景知識在週更的 [[topics/market-lessons]]。
 
-只有會進 S-1（美國上市申報文件，Anthropic 的公開版已於 2026-10-26 提交）、或會改變它數字的六類消息才寫上來——S-1 公開之後，看的是修正版與上市後第一份季報會不會改到這些數字；估值傳聞、員工言論、議員呼籲這類關注度訊號留在事實頁。沒有這種消息的日子，本頁就不動——**不虛報是這頁唯一的可信基礎**。事實一律連回 [[topics/anthropic-business]]、[[entities/pricing]]、[[topics/enterprise-tool-tracker]]、[[topics/competitor-landscape]]，不在本頁複製。
+只有會進 S-1（美國上市申報文件，Anthropic 的公開版已於 2026-10-26 提交）、或會改變它數字的六類消息才寫上來——S-1 公開之後，看的是修正版與上市後第一份季報會不會改到這些數字；估值傳聞、員工言論、議員呼籲這類關注度訊號留在事實頁。沒有這種消息的日子，本頁就不動——**不虛報是這頁唯一的可信基礎**。事實一律連回 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]、[[entities/pricing]]、[[topics/enterprise-tool-tracker]]、[[topics/competitor-landscape]]，不在本頁複製。
 
 ---
 
@@ -80,16 +79,17 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | Sandisk（NASDAQ: SNDK） | 無直接業務關係；被歸類為 AI 記憶體晶片概念股，隨 Anthropic 營收增速放緩消息同步下跌 | 10-15 Q3 營收揭露一則 | 📉 負面，純粹歸類連動、非業務關係 | 後續財報是否顯示記憶體晶片需求受 AI 資本支出週期影響 |
 | Blackstone（NYSE: BX） | 供應商，提供私募信貸參與 Anthropic 晶片融資案，與銀行團共同安排 630 億美元融資規模 | 10-17 私募信貸晶片融資一則、10-27 併入 630 億美元融資案一則、10-31 轉述預期 BB 級信評一則 | ⚖️ 兩面，融資規模已知為 630 億美元，具體殖利率與利率仍未披露；10-31 其向投資人預期 Anthropic 上市後為 BB 級（單一標題，非機構評等） | 630 億美元融資定價發行；Blackstone 具體利率與規模拆分是否披露 |
 | Charles Schwab（NYSE: SCHW） | 通路夥伴，「Claude for Financial Advisors」限 RIA 使用；10-24 追加 20 席採購下限排除逾 1.1 萬家小型顧問；10-29 另加碼最高 4,800 美元額度抵用，對 Schwab 財報不具重大性 | 10-24 Schwab 通路門檻一則；10-29 Financial Advisors 額度優惠一則 | ⚖️ 兩面，10-24 門檻收緊但 10-29 另加碼使用額度補貼 | 門檻理由與生效時間是否經官方說明；Orion 是否跟進類似門檻；額度補貼適用範圍與期限是否公布 |
+| TeraWulf（NASDAQ: WULF） | 供應商，07-06 簽 190 億美元 20 年肯塔基資料中心租約供應 Anthropic 算力；11-04 Google 提供信用擔保支應該計畫，具體擔保金額未披露 | 11-04 TeraWulf 信用擔保一則 | 〰 未定 | 擔保金額與條件是否經官方（Google 或 TeraWulf）證實披露 |
 
 **曝險多大**：表上每一檔對 Anthropic 都是間接曝險，分三型看。
 - 持股型（GOOGL、AMZN、NVDA、AMD）：持股金額相對自身市值很小，股價主要由本業決定；持股金額的報導見 [[topics/anthropic-ipo]]。
-- 供應商與通路型（AKAM、AVGO、BX、CRM、SCHW）：看合約金額何時認列進它們的財報。
+- 供應商與通路型（AKAM、AVGO、BX、CRM、SCHW、WULF）：看合約金額何時認列進它們的財報。
 - 客戶與其他（MSFT、META、JPM、NVO、ACN、BCS 是客戶，RDDT 是訴訟原告，SNDK 只是被歸成同概念股）：多數沒有可量化的金額，只能當方向參考。
 - Anthropic 本體尚未掛牌，公開市場買不到。
 
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
 
-**細節（Microsoft 列）**：10-09 The Register 報導，一家經 Azure AI Foundry Marketplace 使用 Claude 的新創，原以為受 Azure 贊助額度涵蓋，卻收到約 1.76 萬美元帳單；Microsoft 稱 Marketplace 合作夥伴收費無法調整，要新創直接找 Anthropic，雙方互踢責任，爭議是否解決未見報導。
+**細節（Microsoft 列）**：10-09 Azure Marketplace 轉售帳務爭議案例，見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 ---
 
@@ -101,7 +101,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 |---|---|---|
 | IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-03 S-1/A 自評迫近 RSI 門檻、單季人事費用逾 17 億 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 10-28 GSA 折扣擴大、向加州州長表態 |
-| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-02 S-1/A 採購承諾升至 8,950 億 |
+| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-04 TeraWulf 取得 Google 信用擔保 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 
@@ -144,7 +144,9 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 ## 相關實體
 
 - [[topics/market-lessons]] — 課程表、未上市消息線走向、IPO 背景知識（週更）
-- [[topics/anthropic-business]] — 融資、合作、IPO 前瞻與估值追蹤的事實層
+- [[topics/anthropic-ipo]] — 上市進程與財報數字的事實層
+- [[topics/anthropic-partnerships-compute]] — 算力合約與融資的事實層
+- [[topics/anthropic-business-risks]] — 商業風險與商業模式的事實層
 - [[entities/pricing]] — 訂閱與 API 計費事實
 - [[topics/enterprise-tool-tracker]] — 具名企業採用／退出軌跡
 - [[topics/competitor-landscape]] — 競品動態與定價對照

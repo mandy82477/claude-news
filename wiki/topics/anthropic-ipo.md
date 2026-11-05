@@ -3,7 +3,7 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
+last_updated: "2026-11-04"
 last_news_update: "2026-11-03"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,8 +11,8 @@ parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 47
-attribution_count: 30
+inbound_links: 78
+attribution_count: 32
 attribution_last: "2026-11-03"
 top_source: "google-news"
 pending_count: 2
@@ -31,7 +31,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-03
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-11-03
 
 > **最新動態**（2026-11-03）
@@ -99,6 +99,8 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 原文逐項核對尚未完成：🔎 **查無官方**（標 2026-11-01｜查 EDGAR、Anthropic S-1｜複 2026-11-15）｜**S-1 原文逐項核對**：上表各列來源皆為二手報導或官方公告，未直接核對 SEC 原文。
 
 ## 數字細節
+
+**這裡放的是母頁指標表與各事件數字的出處、口徑與查核脈絡；每個指標的最新單一數字住母頁 [[topics/anthropic-business#現在的數字]]，本節不重複列出那張表的數字。**
 - **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
 - **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
 - **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[#S-1 揭露了什麼]]。

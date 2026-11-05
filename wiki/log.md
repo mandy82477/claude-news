@@ -8549,3 +8549,30 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：H-7526b2 保留 open（功能，今日 v2.1.317 的 /schedule connector 警告為通用安全強化、非對應回報，續留意下一輪）
 - devpractice 沉澱：上則記錄有誤——主編原漏派工開發實務記者（誤判為「無開發實務.md 派工包即不派工」，實際上該記者的沉澱來源是獨立的 git diff 掃描，不依賴分類包）。補派後更正：候選 2 筆（topics/ai-agent-safety-product-vulns：Binance 竊案源頭查明為偽裝求職面試程式測試題 repo；entities/claude-code：v2.1.317 `/schedule` connector 警告與工具呼叫前確認檢查）；手冊寫入 0 則（候選一律等週更落地）；基準線 0460ad0cd0 → 7b6acf8509
 - market 判讀：判讀新增 2 則（S-1/A 首度書面自評「可能迫近」觸及 RSI 門檻；S-1/A 揭露單季人事費用逾 17 億美元），均來自同一次官方揭露的一手數字，過第 1／第 5 類判準；其餘候選（高盛禁用令、Anthropic 成長環比持平分析、SEC 應封殺 IPO 社論、晶片設計能力宣稱）因「非新資訊」（已於 11-02 沉澱）或「無具體數字且屬意見／傳聞層級」未過門檻
+
+## 2026-11-04 Ingest
+
+- 來源日報：[[news/2026-11-04]]（64 則；日報實收 34 則，另 30 則未進日報透過 `list_digest_omissions.py` 一併提供給記者判斷）
+- 分類派工：模型 5 則、功能 6 則、商業 13 則、安全政策 12 則、社群 24 則（分類回退後 25）、人物 4 則、排除 9 則（分類回退後 8）
+- 更新頁面：
+  - **人物**：entities/cat-wu（新寫入：Claude Code 產品負責人卸任，Business Insider 綜合至少三家媒體＋Unite.AI 雙源確認）、entities/yann-lecun、entities/tom-brown、entities/mustafa-suleyman（三頁為拆頁後 wikilink 錨點搬家，非新聞性）
+  - **功能**：wiki/entities/claude-code.md、entities/claude-code-features、entities/claude-code-releases（v2.1.318）、entities/claude-code-known-issues（新增 #33323、互動數更新 #12925）、topics/claude-code-experimental（12 個候選旗標）
+  - **商業**：topics/anthropic-partnerships-compute（TeraWulf／Google 信用擔保）、topics/anthropic-business-risks（Yahoo Finance 推論成本下滑）、topics/competitor-landscape（OpenAI 收購 Pierre、Daybreak Red AWS GovCloud、Copilot BYOK 用量 API）、topics/anthropic-ipo、topics/anthropic-business（母頁 callout 覆寫至 11-04）
+  - **安全政策**：topics/ai-agent-safety-product-vulns（claude.ai 三漏洞串接、infostealer 權杖竊取）、topics/ai-agent-safety-cyber（CERT-In 取得 Claude Mythos 測試權、OpenAI 雇用前 Anthropic 入侵者）、topics/ai-agent-safety（provable inference 未歸類）、topics/anthropic-government-policy（NYT 選舉戰情室）
+  - **社群**：topics/community-skills（teardown／code-animation-prompts／mobile-app-ui-design／dev.to 結構化輸出一則）、topics/community-memory（Graphicle code graph+memory）、topics/community-cost（17 bot／$100 月費案例）、topics/community-tech-patterns（母頁路由表＋模式概覽同步）、topics/community-guardrails、topics/code-quality-decline（純連結修復）
+  - **投資分析**：topics/market-signals-compute（TeraWulf 肯塔基資料中心融資開新線）、topics/market-signals-ipo、topics/market-signals-legal、topics/market-signals-customers、topics/market-signals（母頁，硬度值漂移 2 處順手修正）
+  - **主編**：wiki/index.md（cat-wu 鉤子過期改寫）、wiki/topics/ai-agent-safety-product-vulns.md（npm dist-tags 查證：stable＝2.1.311、latest＝2.1.318，回應 H-26cfb1）、wiki/topics/anthropic-business.md（hub callout 落後修復）
+- 新增頁面：無
+- feature-radar：本日無新功能（build flags 12 個全停在第一階；v2.1.318 mods/gateway 異動屬內部設定類，無新指令旗標；#12925、#33323 未達入表互動門檻）
+- index：1 處鉤子文字更新（entities/cat-wu：補「2026-11-04 卸任」）
+- 摘要：Claude Code 產品負責人 Cat Wu 卸任（多源確認）、Anthropic 官方發布可驗證推理研究並與 TechCrunch「證明 AI 模型身分」報導相呼應、新型 infostealer 鎖定 ChatGPT/Claude/Copilot 權杖且可存活密碼重設，為今日三件獨立新事實；TeraWulf 取得 Google 信用擔保支應 Anthropic 肯塔基資料中心計畫為第四件、同時過投資分析收錄門檻。
+- 呈現品質：全部通過（安全政策三頁、商業 anthropic-ipo 各 1 筆讀者語言或字元超限，記者於回報內已自行修復；主編於內容閘修復迴圈另修復功能類 7 筆字元超限條列、商業類 1 筆 hub callout 落後、安全政策 1 筆主編自己手誤造成的讀者語言外洩）
+- 分類回退：追加派工 1 筆（排除→社群：Show HN「InstallRate」，分類複核記者判定非單純工具發布、屬技術討論不受 score≥30 門檻限制；社群記者補核後仍以 community-tech-discussions 頁自身收錄門檻〔社群碰撞／具名表態／媒體深度報導三者皆未過〕判定不收錄——兩道閂各自獨立，分類回退只糾正類別、不豁免該類別頁面自己的收錄線）
+- 轉知帳本：結案 10 筆（H-5f3c59、H-fec1b0、H-f9ab90、H-f000d4、H-11d17b、H-0fd390、H-9c7428、H-9a89bc、H-1cf735、H-fa1aa2、H-5978d7、H-4dbf62，共 12 筆，含 4c 投資分析結的 2 筆）；H-26cfb1 由記者判定不適用（版本號屬主編查證範疇），主編已自行查證寫入；新開 2 筆草稿轉知功能記者：H-5e5975（entities/claude-code.md L191 cat-wu 描述過期）、H-18d3f4（社群記者建議評估社群工具產品化矩陣新增列，暫掛功能記者）；H-7526b2 續留 open（功能，本輪無對應回報）
+- devpractice 沉澱：候選 0 筆（本次 git diff 143 頁變動逐一核對後，絕大多數僅 frontmatter 計數器異動，少數大量新增為既有事實因拆頁搬動位置所致；真正落在 11-03 的新事實均已於先前 ingest 記錄在案，無遺漏）；手冊寫入 0 則；基準線 7b6acf85 → 6507507
+- market 判讀：判讀新增 1 則（TeraWulf 取得 Google 信用擔保支應肯塔基資料中心計畫，開新線並新增「買得到的標的」1 列 NASDAQ: WULF——⚠️ 代號為記者既有知識、無 web 工具可即時驗證，主編確認為公開常識性事實，暫採信）；其餘候選（Haiku 5.5 定價討論、DeepSeek/Copilot 競品消息、CERT-In／Cat Wu 等人物安全政策面）無具體數字或不動 S-1 數字，未過門檻。另完成 H-5978d7（W41–W44 六類判準回頭檢查：50 則全數通過新資訊門檻，48 則清楚落六類正面表列，2 則偏離〔Mithril Medicine 收購、Zero-Rust CPU 效率宣稱〕供主編覆核但本次只查不改；硬度值漂移 2 處順手修正格式）、H-4dbf62（business 拆頁回掃：四子頁裸連結與錨點改指拆分後的三個事實頁，含 Nscale 口徑釐清與母頁摘要同步）
+- 主編待辦：
+  - [投資分析] market-signals-customers「Anthropic 收購 Mithril Medicine」與 market-signals-compute「Zero-Rust CPU 效率宣稱」兩則是否符合六類判準，供下次規則沿革覆核（記者本次只查不改）
+  - [投資分析] daily.md 第 1、2 類「唯一能定價的文件」措辭已因 S-1/A 公開過時，下次規則沿革建議改對齊「S-1/A 修正版 vs 首份季報」分水嶺
+  - [商業] 時序類別標籤詞表提案（46 種變體→10 個封閉詞表），交主編裁決是否寫入 `.claude/reporter-rules/commercial/pages.md` 第 7 條
+  - [社群] H-18d3f4 產品化矩陣新增列建議，待功能記者下輪評估歸屬頁面

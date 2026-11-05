@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-03"
-last_news_update: "2026-10-29"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 0
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 129
-attribution_count: 301
-attribution_last: "2026-10-29"
+days_since_news_subtree: 0
+inbound_links: 130
+attribution_count: 303
+attribution_last: "2026-11-04"
 top_source: "google-news"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-11-18"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -28,13 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-03）
-> - **供應鏈**：Binance 63 億美元竊案源頭查明為偽裝求職面試的程式測試題 repo，回報者稱全年收到同類樣本。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> **最新動態**（2026-11-04）
+> - **帳號／憑證**：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> - **claude.ai 漏洞**：OrcaRouter 稱三個 claude.ai 瑕疵可串接成攻擊鏈，細節未載。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> - **防守方**：印度 CERT-In 取得 Claude Mythos 存取權測試資安漏洞。見 [[topics/ai-agent-safety-cyber#2026-11]]。
 
 ---
 
@@ -53,8 +55,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-02 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-03 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-02 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-04 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-04 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%
@@ -76,12 +78,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | deny-list 型權限設定可被繞過，只有 allow-list 型設定擋得住 | 用 deny-list（黑名單）方式設定 Claude Code 權限的人 | 🔴 | 官方 03 月回應稱 deny 規則不是擋刻意構造指令的安全屏障（他人轉述）；09-11 Show HN 展示 8 種繞過 | 改用 allow-list（白名單）方式設定權限，或在沙箱裡跑 |
 | 一句模糊的指令就可能讓它遞迴強制刪掉整個資料夾 | 用自然語言派刪除或整理任務、且沒有備份或版本控制的人 | 🔴 | 無回應（2026-04-28、2026-08-12、2026-09-17 三起同構事件；09-25 傳第四起 48,000 檔案案例，單一來源，見產品漏洞子頁 09-25 條目） | 動資料前先建備份；把 DROP、DELETE、`rm -rf` 設成要顯式確認才放行 |
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
-| 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款 |
+| 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
 | 灰市轉售的折扣帳號，營運者可以讀走你送出的每一段 prompt | 透過非官方管道買折扣 Claude 存取權的人 | 🔴 | 無回應（第三方轉售詐術，非 Anthropic 產品漏洞；2026-08-06 兩家媒體證實） | 只從官方管道買；已經買過的，換掉在那條管道送出過的所有憑證與機密 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 無回應（2026-10-26／10-27 兩個獨立來源披露，觸發機制與是否需使用者額外動作均未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
 
 另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+
+遞迴強制刪檔那一列的「要顯式確認才放行」可用 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線|hook]] 或本頁 [[#官方現在擋到哪|deny 規則]] 設確認關卡，兩者皆非保證擋下，詳見連結說明。
 
 %% 2026-10-30：`bash -c` 包住危險 `rm` 那一列狀態翻 ✅（npm stable 2.1.308 已含 2.1.288 修正），依第 2 條退場；空位由 #81138 email 外流補位。同日候選 #53223 沒有攻擊者、不是攻擊面，改寫進「官方現在擋到哪」；內建瀏覽器元件遭攻破只有單一標題來源，不補。 %%
 
@@ -143,7 +147,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 未歸類
 
-目前沒有。
+#### Anthropic 官方研究：可驗證推理（provable inference）進展，讓使用者驗證收到的回應確實出自宣稱的模型、未遭竄改（2026-11-04 新增）
+
+- **揭露來源**：[Anthropic 官方研究](https://www.anthropic.com/research/provable-inference)（Hacker News 48 分）；TechCrunch 同日跟進報導「Anthropic 正在打造一套證明 AI 模型身分的系統」
+- **核心主張**：官方研究提出機制，讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改；研究團隊含 Anthropic 與 EPFL、MIT、StarkWare 等外部研究者
+- **性質判斷**：答不出本頁四類判準（非評測越界、非模型網攻能力／防守方放行、非提示注入、非 Claude 產品漏洞或帳號濫用）——這是針對第三方轉送或推理串流完整性的信任機制研究，暫列未歸類，待週更分派
+%% 本則同時派給模型記者寫技術角度，見 data/source_attribution.jsonl %%
+- **可信度評估**：官方一手研究＋HN 討論＋TechCrunch 媒體跟進，可信度高；機制何時開放實際使用、適用範圍均未見報導
+- ❓ **待查證**（標 2026-11-04｜查 provable inference、Roy Rinberg｜複 2026-11-18）｜**開放時程與適用範圍**：這套驗證機制何時開放實際使用、是否需使用者額外操作均未見報導
 
 ### 2026-07（時段總結）
 

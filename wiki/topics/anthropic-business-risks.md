@@ -3,18 +3,18 @@ page: "topics/anthropic-business-risks"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
-inbound_links: 9
-attribution_count: 0
-attribution_last: null
-top_source: null
+days_since_news_subtree: 0
+inbound_links: 21
+attribution_count: 4
+attribution_last: "2026-11-04"
+top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
 pending_next_review: "2026-11-10"
@@ -31,13 +31,11 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **最新動態**（2026-11-03）
-> - **Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計能力**，細節未見報導，只有標題（[The Information](https://news.google.com/rss/articles/CBMinAFBVV95cUxQYnpwS0FzRk9KWUhPNC1rT3JnNWdLN1NhTWM0VU5zWHkyZEo5NVR1dXJhTWdVY2R0ZGEwcVhDTGZ3TkR5SGRIemoyenlCUU1TV2xMTzNBa0xtZDJSb1hGeUVqVlhBVmJNRVFkVS1qb21LdmtqOUxmWEtVOEgwd3JnRnNJMHJIQXdfYndBMUpjZWNPaGRwSW55ZWJsdEk?oc=5)；Investing.com）
-> - **人事成本換算每人每月逾 $10.7 萬**：單季人事費用逾 $17 億，同出修訂版 S-1，見 [[topics/anthropic-ipo#數字細節]]（[TechSpot](https://www.techspot.com/news/114428-anthropic-ipo-filing-reveals-17-billion-quarterly-personnel.html)）
-> - **（11-02）內部零售價換算的 Claude 用量，4 月起已超過當月員工薪資**（不含股票獎酬），1–9 月暴增逾 250 倍；數字出自修訂版 S-1，見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（[Business Insider](https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11)）
+> **最新動態**（2026-11-04）
+> - **Yahoo Finance：Anthropic 推論成本持續下滑，標題稱正變成其商業隱憂**：報導未附新數字，延續近期毛利結構討論
 
 ---
 
@@ -201,6 +199,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-04
+- **[商業風險] Yahoo Finance：標題稱 Anthropic 推論成本持續下滑，正讓這件事變成其商業隱憂**：報導未附新數字，延續 10-25《The Information》毛利結構討論（Yahoo Finance）
 
 #### 2026-11-03
 - **[商業模式] Breakingthenews.net／The Information：Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計**：延續 08-05～07 自研晶片團隊信號，細節未見報導，只有標題（Google News/Breakingthenews.net；The Information；Investing.com）

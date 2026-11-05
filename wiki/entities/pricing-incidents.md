@@ -12,7 +12,7 @@ parent: "entities/pricing"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 2
+inbound_links: 14
 attribution_count: 0
 attribution_last: null
 top_source: null
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 計費事故：誤扣、額度異常與帳號停用

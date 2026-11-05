@@ -4,18 +4,18 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 7
-attribution_count: 0
-attribution_last: null
-top_source: null
+attribution_count: 1
+attribution_last: "2026-11-04"
+top_source: "github"
 pending_count: 1
 pending_overdue: 1
 pending_next_review: null
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-03）
-> - **v2.1.317**：`/schedule` 新增警告——新建立的雲端排程任務若被附加非使用者要求的 connector，提示並附移除方式；新增一項工具呼叫前的確認檢查（官方原文截斷，其餘異動細節未附）（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）。同版 build 另新增 12 個功能候選旗標＋2 個代號旗標、1 個舊旗標消失，見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-11-04）
+> - **v2.1.318**：啟用 session 中寫出的 mods 時，新增記錄使用者的回答；Claude apps gateway 的 `mantle` 上游新增 `assume_role` 設定（官方原文截斷，角色細節未附）（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）。同版 build 另新增 12 個功能候選旗標、1 個舊旗標消失，見 [[topics/claude-code-experimental]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.318** | 2026-11-04 | 啟用 session 中寫出的 mods 時新增記錄使用者回答；Claude apps gateway `mantle` 上游新增 `assume_role` 設定；官方原文截斷，角色細節未附（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）|
 | **v2.1.317** | 2026-11-03 | `/schedule` 新增警告：雲端排程任務取得非使用者要求的 connector 時提示並附移除方式；新增工具呼叫前確認檢查；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）|
 | **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.1** | 2026-11-02 | Chores：為每個子套件的已發布型別宣告加上型別檢查，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1)）|
@@ -198,6 +199,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-04 | **v2.1.318**：mods 回答記錄；gateway 新增 `assume_role`。旗標+12/-1（見 [[topics/claude-code-experimental]]）。新增 #33323；互動更新 #12925。 |
 | 2026-11-03 | **v2.1.317**：`/schedule` connector 警告＋確認檢查；旗標+12＋2代號，消失1。文件字數增。互動更新 #26224／#30112／#53915。 |
 | 2026-10-24 | **v2.1.310**：Monitor tool＋plugin 監控；旗標+4。SDK 新增 Tag endpoint，修復 GCP 路由。新增已知問題 3 則；Status 事故 3 起（已解決）。 |
 | 2026-10-23 | **v2.1.309**：sandboxed Bash／`denyWrite` 修復，4 旗標。SDK 同步新增 message threads。互動更新 #74649／#65833／#23626。 |

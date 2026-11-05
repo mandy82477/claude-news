@@ -3,17 +3,17 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-02"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 181
-attribution_count: 507
-attribution_last: "2026-11-03"
+days_since_news_subtree: 0
+inbound_links: 137
+attribution_count: 500
+attribution_last: "2026-11-02"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -30,14 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-03）
-> - **athenahealth 推出 athenaPatient MCP**：病患病歷接入 Claude 供臨床人員查詢（[Healthcare IT News](https://news.google.com/rss/articles/CBMirAFBVV95cUxPa2E4a1FVbFVvRVV5V3hMbVNINGZHQkdqT1J0Slk1ZVZuU0NXYzdCS0lFZUszOHlSeGhHT1RwckVtdHFTWHNaSldUMjVuc3JfWXRlV3IwRUlxR05SYk5WUF9KUXZ6eVRwRl8yYUtCUGdhc0NkXzVRb3FoRTUxQzJRdFN2T21BV0lWX1NLRXM0cy1YNE14ZDJsYkhNZ0FxNDVCeGZWejRWbEJNMVZI?oc=5) 等 3 家媒體），見 [[topics/anthropic-partnerships-compute]]
-> - **修訂版 S-1 新增揭露：公司認為可能「迫近」觸及內部定義的 RSI 臨界點**；同日 Tech Policy Press 評論主張 SEC 擋下 IPO（HN 387 分），見 [[topics/anthropic-ipo]]（[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)；[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)）
-> - **Anthropic 向 IPO 投資人展示 Claude 協助自製晶片設計能力**，只有標題，見 [[topics/anthropic-business-risks]]（The Information；Investing.com）
+> **最新動態**（2026-11-04）
+> - **資料中心營運商 TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基州資料中心計畫**（Reuters；Unite.AI，均未附具體金額），見 [[topics/anthropic-partnerships-compute]]
+> - **Yahoo Finance：Anthropic 推論成本持續下滑，標題稱這正成為其商業模式隱憂**，延續 S-1 揭露後市場對毛利結構的討論，見 [[topics/anthropic-business-risks]]
+> - **Claude Code 產品負責人 Cat Wu 任職兩年後卸任**（Business Insider 綜合至少三家媒體；Unite.AI），見 [[entities/cat-wu]]
 
 ---
 
@@ -47,7 +47,7 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 **（2026-10-26）：** 公開版 S-1 提交 SEC：上半年淨損 807 億美元，約九成是估值上升造成的非現金會計損失；上半年營收約 163 億（多家引 S-1）。股數、價格區間與掛牌日未定。
 
-> **公開版 S-1 已提交但尚未生效，上市前沒有季度財報。** 下表每一列的最後兩欄告訴你這個數字是誰說的、下一次會有新數字的時點。**五種數字量級不同，不可互相替代或加總**——年化營收、單季營收、官方估值、IPO 估值預期、市場總量各答各的問題。
+> **公開版 S-1 已提交但尚未生效，上市前沒有季度財報。** 下表每一列的最後兩欄告訴你這個數字是誰說的、下一次會有新數字的時點。**五種數字量級不同，不可互相替代或加總**——年化營收、單季營收、官方估值、IPO 估值預期、市場總量各答各的問題。**本表只留一個指標一列一個最新值；完整出處、口徑與查核脈絡見 [[topics/anthropic-ipo#數字細節]]。**
 
 | 指標 | 這是什麼 | 現在的數字（資料日期） | 來源等級 | 下一個時點 |
 |---|---|---|---|---|

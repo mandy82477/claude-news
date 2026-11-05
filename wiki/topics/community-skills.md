@@ -3,17 +3,17 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 13
-attribution_count: 18
-attribution_last: "2026-11-01"
+attribution_count: 22
+attribution_last: "2026-11-04"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **Skills 設計新增一例：串接瀏覽器與終端自動產出附配音與字幕的產品示範影片**（2026-11-03）
-> - **aaitor/skill-video-studio**：Claude Code skill 串接瀏覽器與終端，自動產出附專業配音與多語字幕的產品示範影片；Hacker News ＋ HN Repo Bridge 合計 113 分。
+> **Skills 設計新增三則垂直實作，另一則揭露強迫呼叫假工具的結構化輸出技巧已隨 Opus 5.5 失效**（2026-11-04）
+> - **三款新 skill**：機器拆解 3D 模擬器（teardown）、程式碼動畫提示詞庫（code-animation-prompts）、行動應用 UI／UX 設計（mobile-app-ui-design）。
+> - **dev.to 案例**：靠強迫 Claude 呼叫不存在的工具取得結構化輸出的技巧，Opus 5.5 不再配合，作者改棄用此招。
 
 ---
 
@@ -93,6 +94,27 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### 同日三款 Skills 設計新實作：teardown（機器拆解 3D 模擬器）、code-animation-prompts（程式碼動畫提示詞庫）、mobile-app-ui-design（行動應用 UI／UX 設計）（2026-11-04）
+
+- **主線：** —
+- **核心模式：**
+  - elvarofficial/teardown：Claude Code skill 把任何機器轉成可拆解檢視的 3D 模擬器（1,869★）
+  - XiaoyeCodes/code-animation-prompts：封裝 341 種程式碼動畫風格提示詞、196 張參考靜態畫面與離線挑選器，做成可一鍵匯入的 Claude Code／Codex skill，支援 HTML 影片渲染（517★）
+  - ceorkm/mobile-app-ui-design：專為 Claude Code 設計的行動應用 UI／UX 設計 skill（501★）
+- **與既有模式的關係：** 補上「Skills 設計」三個新垂直：teardown 補教學／產品拆解展示一類 3D 視覺化技能；code-animation-prompts 補技術內容／教學影片的程式碼動畫提示詞庫；mobile-app-ui-design 補行動應用介面設計稿產出；主線填 —。
+- **可信度註記：** 三者僅有 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[teardown](https://github.com/elvarofficial/teardown)（1,869★）、[code-animation-prompts](https://github.com/XiaoyeCodes/code-animation-prompts)（517★）、[mobile-app-ui-design](https://github.com/ceorkm/mobile-app-ui-design)（501★）
+- **成熟度：** ⏳ 新興（三者皆本庫首次收錄，單一作者或小團隊工具，尚無社群採用回饋數據）
+
+#### 「The model that wouldn't be forced」：強迫呼叫不存在工具取得結構化輸出的技巧，在 Opus 5.5 上失效（2026-11-03）
+
+- **主線：** —
+- **核心模式：** 作者原本靠強迫 Claude 呼叫一個不存在的工具來取得結構化輸出，Opus 5.5 不再配合這招，修法是放棄這個技巧，改用別的方式取得結構化輸出。
+- **與既有模式的關係：** 補上「可靠性測試」一個反例：舊的 structured-output 變通技巧隨模型版本升級靜默失效，與既有「公開 skill 觸發寫法不可靠」「skill 品質量得出來但只有個案」同屬「做法會隨版本或環境悄悄失效」一類；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 單一作者第一手實作，按讚數為 0（dev.to 讚數不可信，依內容判讀收錄），未見其他來源覆核。
+- **來源：** dev.to；[原文](https://dev.to/phpboyscout/the-model-that-wouldnt-be-forced-16nc)
+- **成熟度：** ⏳ 新興（單一作者案例，尚無第三方驗證此失效普遍性）
 
 #### aaitor/skill-video-studio：串接瀏覽器與終端，自動產出附配音與多語字幕的產品示範影片 Skill（2026-11-02）
 

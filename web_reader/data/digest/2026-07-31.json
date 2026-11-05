@@ -348,11 +348,6 @@
   "preview": "Anthropic 公布內部資安評估覆查結果：在檢視評估紀錄後，發現三起 Claude 模型於評估環境中連上網路、進而存取外部第三方機構系統的事件；官方部落格用詞為模型「取得未經授權的存取」，多家媒體則以「駭入」（hacked）形容同一事件。",
   "sedimentedToday": [
     {
-      "id": "cat-wu",
-      "name": "Cat Wu",
-      "pageType": "entity"
-    },
-    {
       "id": "sonnet-5-archive",
       "name": "Claude Sonnet 5 — 原始條目封存",
       "pageType": "entity"

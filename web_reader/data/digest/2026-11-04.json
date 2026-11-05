@@ -1,0 +1,795 @@
+{
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04 22:40 UTC",
+  "articleCount": 64,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Linear Integration: Assign issues to Claude Code to trigger cloud agent sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/12925",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 13:17",
+      "sentiment": "",
+      "body": "使用者希望能直接在 Linear 指派 issue 給 Claude Code、藉此觸發雲端 agent session 自動處理，目前已累積 154 個讚與 47 則留言，官方尚未正式回應。常用 Linear 管理工程待辦事項的團隊可持續關注這項需求是否被納入路線圖。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Task queue for queuing multiple prompts/tasks",
+      "url": "https://github.com/anthropics/claude-code/issues/33323",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/03 23:28",
+      "sentiment": "",
+      "body": "使用者反映在複雜專案中常一次就知道接下來 3–5 件待辦，卻沒有辦法把多個任務排進佇列依序或平行執行，該請求已累積 65 個讚與 34 則留言。常需要一次丟多個指令給 Claude Code 的人，可留意這項功能何時成行。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Appllama/appllama-skills",
+      "url": "https://github.com/Appllama/appllama-skills",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "這套把「年度營收最高 app 的設計模式」轉成原生品質行動畫面的 Claude Code agent skills 專案，近 8 天新增 1,413 星（約每日 177 星），成長速度遠高於一般倉庫，目前累積 4,795 星。做行動應用介面設計、想找現成 skill 的開發者可留意。",
+      "focusTags": []
+    },
+    {
+      "title": "elvarofficial/teardown",
+      "url": "https://github.com/elvarofficial/teardown",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "這款 Claude Code skill 能把任何機器轉成可拆解檢視的 3D 模擬器，目前累積 1,869 星，是今日 GitHub Search 抓到的倉庫裡星數次高者。對教學或產品拆解展示有興趣的工程師可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI and Anthropic Set Up ‘War Rooms’ to Fight Disinfo About Midterm Elections",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWEZ5UW1FNFkxcXk5Y2pzN1hqR3dPZWdRRm9PT0phR3Y1cVg1N1E2RDk1ZWFCM2tCUnhvbVBHRVI0X2tfNEh6aFVmd3lxSGVvQ2s4SzRqQUFPMXJuUG5Sb19VMkpud1dBVVQ2VVBSMnM2WnhPLWVBTXFUZTlKcEJXRC1CcHdoUFZNWU5j?oc=5",
+      "source": "Google News / The New York Times",
+      "time": "11/03 18:00",
+      "sentiment": "",
+      "body": "《紐約時報》報導 OpenAI 與 Anthropic 共同成立「戰情室」，專門應對美國期中選舉期間的不實訊息，這是兩家公司少見的具體聯手動作，報導未附更多機制細節。關注 AI 公司選舉治理動作的人可持續留意後續進展。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "Claude Code 2.1.318 build 新增 12 個功能候選旗標（自 2.1.317 起）",
+      "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.318",
+      "source": "Build Flags",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "自 2.1.317 以來新增的候選旗標包含停用 agent 進度摘要、停用保留訊息的停止動作、停用逐字稿預讀、「實驗性 Code Mode」及其重啟相關旗標、MCP serve tunnel 二進位訊框、reply gate 政策、resume cache warm、teleport move 等，另有 4 個設定類旗標未列出；同時有 1 個旗標（設定缺失讀取保護）消失。build 裡出現的旗標不等於會正式上線，社群反應需後續觀察才有結論。想搶先了解 Claude Code 實驗功能動向的人可留意這批候選名單。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-experimental",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/claude-code] v2.1.318",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "11/04 00:01",
+      "sentiment": "",
+      "body": "release note 顯示這版新增：在 Claude Code 詢問是否要啟用它在某次 session 中寫出的 mods 時，會記錄使用者當時的回答；另外在 Claude apps gateway 的 `mantle` 上游新增 `assume_role`，用於角色相關設定，官方說明在角色細節處被截斷，需開連結查看完整內容。寫自訂 mods 或關注 gateway 權限設計的人可留意這兩項異動。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "Claude Code 桌面版文件篇幅由前次 211,650 字成長到本次 216,003 字，但該頁段落數（1,322）超過系統比對上限（1,200），無法自動產生逐段差異，具體改了什麼需要讀者自行開連結比對。近期在用桌面版的人可留意是否有新增說明。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "DeepSeek wants to steal Claude Code and Codex's lunch with an AI Super Agent that does not wait around",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPU2g5WFVPX0EySnY3X2dWYTVlb2xfaUNaVVAyTU45UjUyY3Vyb2xDYTQ5b2g0X192TmMxLWdxQ1cyOS1ubXlsalhQQm1sdUZPNWxvWV9JSERTNC1xbktGd3dwY1QtVFgxSlZJZm44SlI2UTJrZFhuN2VUVmNYcUg1aEVLeEc4emd3WFRTQUZxNmZpNFE?oc=5",
+      "source": "Google News / Yahoo Tech",
+      "time": "11/04 02:06",
+      "sentiment": "",
+      "body": "Yahoo Tech 報導 DeepSeek 推出新的自主程式開發 Super Agent，標題直指意在搶走 Claude Code 與 Codex 的市場，延續 11/01 多家媒體對 DeepSeek 新 agent 的競爭定位報導。觀察 coding agent 競爭格局的工程師可留意其公開細節。",
+      "focusTags": []
+    },
+    {
+      "title": "OpenAI Hires DOGE Alumni Who Hacked Into Anthropic to Strengthen Security",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOUhrSGxaV2NYak9yUHU4Sk1yalo3QmJYOVAzV2dtRm5leGdwc2tpekRZYjlWTWVlUUtuWmszNFpmcF9rN0tzZDllQ01QdHhzVktYRnUwMlViYUYzenZuOXNZLUdFQnBiYTg3cXUxak9hZUFwa2s5MjMtdGc5VmVsRkZrVFVJX3JIc3lEV2xZOFVLV1BTVklnN256YjJ5NUE1RUVOdURJTQ?oc=5",
+      "source": "Google News / Gizmodo",
+      "time": "11/03 18:15",
+      "sentiment": "",
+      "body": "Gizmodo 報導 OpenAI 雇用了曾經入侵 Anthropic 系統的「DOGE」前員工來強化自家安全團隊，標題未附入侵事件的具體時間或手法細節。關注兩家公司資安與人才流動的人可留意後續說明。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "CERT-In gets access to Anthropic's Claude Mythos to test cybersecurity vulnerabilities",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPZ0UtQVdGN0RXV2N6aHlla0xFTVlNU2tDYzkwaGpmbmRLNENKaFAtRkEtT1I2T00yMk15Z3ctekRSUXRWaXFZU21DeS1SU29rRC1BWWtmRGFXaVlETlNKSVFzYXltdll4d0ltUHZ0R0NPYnBZUE9UcGhlYm9VR09YSnJqME1LSmZqbTRCSHppc0NQcDJGQTdBVUFoVTdsaEJTX1QyMnZRWU1qOHdKQVE4ak9IMWlTNjRNaE9aNFJFWVUzU0RSTWplWTNfa3c1aXZpbG9YWU5UVF9XTkXSAeABQVVfeXFMTTRJNDJHdm5zbnloYUw5ampHVmhnSU5feTdscjUyaHFjTmM5aDM4RDJSX0RuSmY1ZXdRQW9Idno5OG9oMUI0TE8tcVdBUkpSOUhndm5VZGdqa2p3Vm41UlNuWDJlQUlLTlRuWFhJb0gyWFF5cC1ROWVLSXNlc1M1ellGWHZqWG84RGQwQU5Eb2xFS1VyMmVoSzk3azl0QzdjVGtRNDZES25SS2FuTkVWU1IyUkt3YTBjZVNjb011SnRSZl9seGxGcXB3akpvTzZyQXhfMzUzb0lLa05tZkNta2g?oc=5",
+      "source": "Google News / Moneycontrol.com",
+      "time": "11/03 17:19",
+      "sentiment": "",
+      "body": "Moneycontrol 報導印度政府資安機構 CERT-In 取得 Anthropic Claude Mythos 的存取權，用來測試潛在資安漏洞，呼應同日另一篇 CERT-In 主管專訪談 AI agent 事故與提示注入回報義務。在印度營運、受此機構監管的團隊可留意後續測試結果是否公開。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Debuts Tool for Your Boss to Spy on Your Claude Chats",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMnpIVHMtWlhsVGNpRDQyRGZXYTFRZWJUSENxRklKcXR4SWdOLTBocmQteVdUQXN1RXBNcC00WDB3TFV3Sjdta1ZvV012amtMS3E4WWtoWU8tMnBQSWxiMFVEVS1Za21JYnBHVDhSb2lMTlh6ZjJkcTNucXdPZVkybHYtSGpUV3g2djNJaFh2ZDJ6UldIZHc?oc=5",
+      "source": "Google News / Futurism",
+      "time": "11/03 18:03",
+      "sentiment": "",
+      "body": "Futurism 報導 Anthropic 推出讓企業管理者查看團隊成員 Claude 對話紀錄的新功能，標題用「監視」定調但報導本身未附功能的存取範圍或啟用方式細節。在受管理帳號下使用 Claude 的員工，可留意公司是否已開啟此類查看權限。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claudy Day: how three claude.ai flaws chain together",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9veTJmNFJYbnV3U3VvUHNqUTQwTTEyb1BPeG9pbG1OVW53VVFYVmFvckJJUVgyUWl6LWZhMS1oTy1xX0hRWmFsZUM2RWcwWXJxS2NVYkRCclQ0RHpLbTlIdG1nRUk5eGxZbGloUmdWdw?oc=5",
+      "source": "Google News / OrcaRouter",
+      "time": "11/04 15:53",
+      "sentiment": "",
+      "body": "OrcaRouter 發文揭露 claude.ai 有三個漏洞可串接成攻擊鏈，但本條只有標題資訊、無法取得攻擊鏈的具體技術細節。資安研究人員與平台維運團隊可留意原文公布的細節並自行評估影響範圍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Tell HN: You now need a government id in order to create an Anthropic account",
+      "url": "https://news.ycombinator.com/item?id=50356209",
+      "source": "Hacker News",
+      "time": "11/03 18:39",
+      "sentiment": "",
+      "body": "一名使用者抱怨申請 Anthropic 帳號被導向第三方身分驗證服務 withpersona.com，要求上傳身分證件並拍自拍照核對，貼文獲 19 分。覺得驗證門檻偏高、或驗證信收不到的使用者，可留意是否是帳號分級或防濫用措施的一部分。情緒：😤",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+      "url": "https://uncracked.city",
+      "source": "Hacker News",
+      "time": "11/03 21:20",
+      "sentiment": "",
+      "body": "一名獨立開發者推出偵探解謎遊戲，玩家要透過對話拆穿會說謊的 LLM 嫌疑人，貼文獲 117 分，目前可在 Android 免費玩、iOS 版等待上架審核。對用 LLM 做互動敘事遊戲設計感興趣的人可參考這個玩法。情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+      "url": "https://github.com/finic-ai/kairos",
+      "source": "Hacker News",
+      "time": "11/03 21:16",
+      "sentiment": "",
+      "body": "團隊推出開源風險與詐欺決策平台 Kairos，標榜用「系統一」式的自然語言規則補傳統 XGBoost 等模型缺乏標註資料的缺口，貼文獲 100 分。做風控或反詐欺系統的工程師可留意這個開源替代方案。情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "Ask HN: What's your current AI agentic setup?",
+      "url": "https://news.ycombinator.com/item?id=50366117",
+      "source": "Hacker News",
+      "time": "11/04 14:37",
+      "sentiment": "",
+      "body": "發文者調查其他 HN 讀者目前付費訂閱哪些 AI 服務（含是否同時訂多組 Claude 帳號）、是否改用 API 或自架模型、用什麼 coding harness，貼文獲 57 分。想比較自己工具鏈選擇是否主流的工程師可去串內看其他人的回覆。情緒：🤔",
+      "focusTags": []
+    },
+    {
+      "title": "Running 17 Claude Code bots in a real company for $100/month",
+      "url": "https://botsinproduction.com/blog/what-10-claude-code-bots-cost-per-month/",
+      "source": "Hacker News",
+      "time": "11/04 02:02",
+      "sentiment": "",
+      "body": "一名在韓國 B2B 流通公司做營運、非工程背景的作者分享實際帳單：17 個 Claude Code bot 全年用一個 100 美元的 Claude Max 方案跑、零額外 API 支出，貼文獲 13 分。想評估小團隊用 Claude Code 自動化日常作業成本的人可參考這份公開帳單。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "XiaoyeCodes/code-animation-prompts",
+      "url": "https://github.com/XiaoyeCodes/code-animation-prompts",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "這套專案封裝 341 種程式碼動畫風格提示詞、196 張參考靜態畫面與離線挑選器，做成可一鍵匯入的 Claude Code／Codex skill，支援 HTML 影片渲染，目前累積 517 星。做技術內容或教學影片的人可留意這個現成提示詞庫。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "ceorkm/mobile-app-ui-design",
+      "url": "https://github.com/ceorkm/mobile-app-ui-design",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "一款專為 Claude Code 設計的行動應用 UI／UX 設計 skill，目前累積 501 星。想用 Claude Code 產生行動應用介面設計稿的人可留意。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "Anthropic Launches Haiku 5.5: How Much Has Jev's Low-Price Moat Been Thinned?",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB4T2JseEFQcHZ2c1hhTnMyd2ZqOEZCTU5ycktpMGhVamRTRnZKbFRoZ0M4OG8wN3ZpMG5SbVFVbGV5clFjUjJHSWxQalFlenNFQ3l0all4bmt0a1JKUjBsaXRlQnZOak5OZVkyNXcxTWswOERYeFE?oc=5",
+      "source": "Google News / BigGo Finance",
+      "time": "11/04 02:06",
+      "sentiment": "",
+      "body": "BigGo Finance 報導 Anthropic 推出 Haiku 5.5，並以此討論低價市場的競爭護城河是否因此變薄，但報導僅有標題層級資訊，未附具體定價或效能數字。用低價模型跑大量小任務的團隊可留意後續官方定價公告再評估是否切換。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic's AI Is Getting Cheaper to Use. That's Becoming a Problem for Its Business",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOFRPcFBITzRzdjBMeXZrbzgydXFZSTJRRVAtX3U5bU81STgtTmJTMFdSTGVvTDRKaXlYU2poSGgtMFRpNWh2RmEyeEtwS3huT092OEhidXJ5LTl5YVNiaXBVQVhsVktjQnlVVDBLR0xGd0pEXzAzeEZrNGQxeG0yZHFlRFVtOHg2emZqcmR3ay1sdHhfc0JmbVZranlnNHhW?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "11/03 21:50",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導 Anthropic 推論成本持續下滑，標題直指這對其商業模式正逐漸變成問題，延續這兩天 S-1 揭露後市場對其毛利結構的討論，報導本身未附新數字。評估 Anthropic 長期定價策略是否穩定的人可留意後續財務揭露。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-business-risks",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 旗下 Claude Code 產品負責人 Cat Wu 任職兩年後卸任，Business Insider 綜合至少三家媒體報導證實，Unite.AI 另篇報導稱她是「Claude Code 的門面人物之一」；兩篇報導都未提到接任者或後續產品負責安排。持續關注 Claude Code 產品路線圖的團隊，可留意官方是否公布新負責人。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R0LUpTTHhUTnMwVFZQS2tiNHRpdHVuZVVjT0ZwZmJqbDdndlZZcGJkcHFQSElyZG5MSVdHczNtS0d3VGlONGVibnhVWDJIaVNNbHZMNENwR2ZzNFlaWWRjVDNQeHpaUXNEdk1OZ012a3MybFA?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcjc2VjlTUWh3WWFsVzkwWFVCVjRmNkNna1RESHVvVDBIeHhxbzNqYXRNTkEyWE9pZ1U3N3BwdHF6bUJnQVRvRmxneERyeXNPNFNyaTc3WXhfY21QeVhyOVY0cDdBZmx6dzRnSlRkUHl1dXRwWDlUelpLTFQ0VHpGSlYySmJyWnJNZDZrcA?oc=5"
+      ],
+      "ref_names": [
+        "Business Insider",
+        "Unite.AI"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 官方研究部落格發布「可驗證推理（provable inference）」研究進展，提出讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改的機制，相關討論在 Hacker News 獲 48 分；TechCrunch 同日報導稱 Anthropic 正在打造一套「證明 AI 模型身分」的系統。擔心第三方轉送或 token 串流遭竄改的團隊，可留意這套驗證機制何時開放實際使用。",
+      "ref_urls": [
+        "https://www.anthropic.com/research/provable-inference",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdTNUM28wSkNtcEpseEVkaWhkVGZraVJVNU5veHN0M3Y3ZWF1TktRelVYdE5pbjh6V29IdDJtTDlrVXJRSVBhY0JtTGVIdkxHbGFMZ3Vtb2NQXzhheDZoa0Y1TGVOcXd3MFN0QlBtWDVMdVpBSHQ2bkNSV2VibGh2dWRXQmUyMlpVTktJTFhmUkFuMGVnUm5RVzBobw?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic 官方研究",
+        "TechCrunch"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "CyberSecurityNews 與烏克蘭媒體 dev.ua 同日各自報導新型資訊竊取軟體，鎖定 ChatGPT、Claude 與 Copilot／Codex 等工具的帳號權杖（token），CyberSecurityNews 並指出竊得的權杖在使用者重設密碼後仍可存活繼續被濫用。只靠改密碼應對帳號風險的使用者，這次單改密碼不夠，需要連動撤銷既有登入憑證。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTFAxSnRud3B0NTJsRXRHSTIxaWxlaE9hTEJZWmtxak9uNjl5aExRanpDWXhiOWdRSXRBUHMtbHNrZFZSUEhiazlFWkJPMm1zNWJ2ekxZM1hBQy1YRTFlNHVjRFA5RnBObEhpZlFHa2VMWVBINF9n0gF6QVVfeXFMT0plMEJRdTEzNHkzTWVvTlhCM2JreGJiZnA5d2E4WHA1bzRodmlDRERaeHJtUUx1cl8yTHpIOVEtcWpuWnBUMm9VTVdic29YREk5NXZBWlgzUmtMZEZ1TWpwSVRCOUFiektvRWxyemRZWlBtcHhUcWVockE?oc=5",
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNk1wM3dYTXN2Z3V1NXR4enpxZWlKRlhBelZFc3ViVGJHMW9ZTzF2S0wxWk9NOTVFX2JrRGxFOHFMZ2cweXRvV0RHNUVncWVVLVRuUGVLZmxrdHhESGVTbm9GWW5sWjdUODljczc0UW1aSHF0VFNDaW1vTS1nQWhMeXRlaWQzcGVNSnN1cFBfYVU2QklpVHA3NGF4eFpOUVBYUmwzNHk4UWhYOEk?oc=5"
+      ],
+      "ref_names": [
+        "CyberSecurityNews",
+        "dev.ua"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Reuters 與 Unite.AI 同日報導，資料中心營運商 TeraWulf 取得 Google 提供的信用擔保（credit backstop），用於支應其為 Anthropic 位於肯塔基州的 AI 資料中心計畫；兩篇報導都未附具體擔保金額。持續追蹤 Anthropic 運算基礎建設資金來源的人可留意後續是否揭露金額。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdDRnZlVlY01kVjVYczh3YzN1N3ZrLWlLRFVURERNQ0lFcDFURElfOVJ3OXpvR3RodUpvaWZWaGtQMDBaNUFYVUNDZFFicC1DclF1aWl0dERFYkJXMVhFZnAwWE1uV0t2VUhkQmhYajRlWjZjWHpiRUJJR1ZtakdPQjNRWXRBRzFOLTRZZktDSldPcjFNa0ZSQm5yUWdOWGNHTFVvVGduOUQ5SlB3NHhHV2gtSQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUnltOFRmVUpzSXlNMFM3bXJ4bkFOUkJXRllRWTFFRldhamcyeTVaM3EzTGFackVjZFdnSEJnNFdGc1NZQ0RZOVhTZzhjNDJZamVYdkNUS3hmaTh0cDJWdEdmMG5aZ2VZZ1luMjhKQk1heURfLUJQcGxTSkdGTnFSTU9Oa1BhSktTQldzWDc1aGt1UkU?oc=5"
+      ],
+      "ref_names": [
+        "Reuters",
+        "Unite.AI"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+      "url": "https://openai.com/index/openai-to-acquire-pierre",
+      "body": "OpenAI 宣布收購 Pierre Computer Company，用以擴充 Codex 在建置、理解與審查程式碼方面的工具能力",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+      "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+      "body": "OpenAI 的 GPT-5.6 Cyber（Daybreak Red）經 Amazon Bedrock 在 AWS GovCloud 上線，供經授權客戶執行網路安全工作",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "BYOK and enterprise custom models in the Copilot usage API",
+      "url": "https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api",
+      "body": "GitHub Copilot 用量 API 新增可分辨「自帶金鑰（BYOK）」與 Copilot 代管模型的用量統計，企業用量報表可拆分兩種來源",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Interview: CERT-In chief on AI agent incidents, prompt injection and who must report them",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQaTdzYVRkd243NHR1UDlNMjJNT2pUbzZGMnZ6bFRVMzVhbDhXcjNESWxwcWZIZF9yUlUyemdxNGpXbTlDbHotLTAxV2MzazRlOUdsN09sVVFROVZMdWRQM244UzFTU2JDSS1rX1BaUHdKdi1zOUNRbkFVcC16NWVBX0pjNDdKWF9ycUpXYUlEeW0wc3c?oc=5",
+      "body": "印度 CERT-In 主管接受專訪，談 AI agent 事故的通報義務與提示注入（prompt injection）風險歸屬",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 29
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 8
+    }
+  ],
+  "preview": "Claude Code 實驗功能追蹤：2.1.318（自 2.1.317 起比對）新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；另 4 個設定類旗標依蒐集邊界不列；CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD（首見 2.1.317）消失，列 4 階。對帳僅命中來源",
+  "sedimentedToday": [
+    {
+      "id": "cat-wu",
+      "name": "Cat Wu",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-04",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.318（自 2.1.317 起比對）新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；另 4 個設定類旗標依蒐集邊界不列；`CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失，列 4 階。對帳僅命中來源條目自身，暫不升第二階。"
+          },
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增功能請求**：Task queue——排入多個提示／任務依序或平行執行（[#33323](https://github.com/anthropics/claude-code/issues/33323)，34 則留言、65 個讚；🧠 組）。\n- **高互動已知問題互動數更新**：Linear 整合觸發雲端 agent session（[#12925](https://github.com/anthropics/claude-code/issues/12925)，47 則留言、154 個讚；🔌 平台相容性組）。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.318**：啟用 session 中寫出的 mods 時，新增記錄使用者的回答；Claude apps gateway 的 `mantle` 上游新增 `assume_role` 設定（官方原文截斷，角色細節未附）（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）。同版 build 另新增 12 個功能候選旗標、1 個舊旗標消失，見 [[topics/claude-code-experimental]]。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **桌面版文件再增字**（211,650→216,003 字）：段落數 1322 超過自動比對上限（1200），沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，未附具體擔保金額，詳見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] TeraWulf 列更新"
+          },
+          {
+            "page": "topics/anthropic-business-risks",
+            "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Yahoo Finance：Anthropic 推論成本持續下滑，標題稱正變成其商業隱憂**：報導未附新數字，延續近期毛利結構討論"
+          },
+          {
+            "page": "topics/market-signals-compute",
+            "name": "算力與融資這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，擔保金額未揭露，TeraWulf 新增為可交易標的。\n\n前一日（2026-11-02）：\n- **S-1/A 採購承諾與租賃協議總額升至 8,950 億美元**：[CNBC](https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html) 引 SEC 申報，取代先前逾 5000 億美元口徑，其中 4,475 億美元預計 2030 年底前支出完畢；新舊口徑涵蓋範圍差異未明。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **選舉不實訊息**：NYT 稱 OpenAI 與 Anthropic 共同成立「戰情室」應對美國期中選舉不實訊息，機制細節未載。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **帳號／憑證**：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，CyberSecurityNews 稱竊得的權杖在重設密碼後仍可被濫用。\n- **claude.ai 漏洞**：OrcaRouter 稱三個 claude.ai 瑕疵可串接成攻擊鏈，僅標題可用。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "**印度 CERT-In 取得 Claude Mythos 存取權測試資安漏洞**：同日專訪 CERT-In 主管談 AI agent 事故通報義務與提示注入風險歸屬，兩則均僅標題可用。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計新增三則垂直實作，另一則揭露強迫呼叫假工具的結構化輸出技巧已隨 Opus 5.5 失效",
+            "date": "",
+            "body": "- **三款新 skill**：機器拆解 3D 模擬器（teardown）、程式碼動畫提示詞庫（code-animation-prompts）、行動應用 UI／UX 設計（mobile-app-ui-design）。\n- **dev.to 案例**：靠強迫 Claude 呼叫不存在的工具取得結構化輸出的技巧，Opus 5.5 不再配合，作者改棄用此招。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "新增一則具名公開帳單案例：17 個 bot 全靠一個 Max 方案",
+            "date": "",
+            "body": "- **韓國 B2B 流通公司運營作者**：17 個 Claude Code bot 每天處理真實營運工作，全月帳單只靠一個 100 美元 Claude Max 方案，零額外 API 支出。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "索引記憶新增程式碼圖＋記憶合一工具",
+            "date": "",
+            "body": "- **Graphicle-AI/graphicle**：單一 Rust 程式為 coding agent 建立程式碼關聯圖與記憶層，相容 Claude Code、Codex、Cursor 與任意 MCP client（501★，僅標題可用）。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/cat-wu",
+            "name": "Cat Wu",
+            "label": "卸任 Claude Code 產品負責人",
+            "date": "",
+            "body": "Business Insider 綜合至少三家媒體報導證實她任職兩年後卸任；Unite.AI 稱她是「Claude Code 門面人物之一」，兩篇皆未提接任者。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 15
+  },
+  "readerTopStories": [
+    {
+      "title": "Linear Integration: Assign issues to Claude Code to trigger cloud agent sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/12925",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 13:17",
+      "sentiment": "",
+      "body": "使用者希望能直接在 Linear 指派 issue 給 Claude Code、藉此觸發雲端 agent session 自動處理，目前已累積 154 個讚與 47 則留言，官方尚未正式回應。常用 Linear 管理工程待辦事項的團隊可持續關注這項需求是否被納入路線圖。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Task queue for queuing multiple prompts/tasks",
+      "url": "https://github.com/anthropics/claude-code/issues/33323",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/03 23:28",
+      "sentiment": "",
+      "body": "使用者反映在複雜專案中常一次就知道接下來 3–5 件待辦，卻沒有辦法把多個任務排進佇列依序或平行執行，該請求已累積 65 個讚與 34 則留言。常需要一次丟多個指令給 Claude Code 的人，可留意這項功能何時成行。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Appllama/appllama-skills",
+      "url": "https://github.com/Appllama/appllama-skills",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "這套把「年度營收最高 app 的設計模式」轉成原生品質行動畫面的 Claude Code agent skills 專案，近 8 天新增 1,413 星（約每日 177 星），成長速度遠高於一般倉庫，目前累積 4,795 星。做行動應用介面設計、想找現成 skill 的開發者可留意。",
+      "focusTags": []
+    },
+    {
+      "title": "elvarofficial/teardown",
+      "url": "https://github.com/elvarofficial/teardown",
+      "source": "GitHub Search",
+      "time": "11/04 18:06",
+      "sentiment": "",
+      "body": "這款 Claude Code skill 能把任何機器轉成可拆解檢視的 3D 模擬器，目前累積 1,869 星，是今日 GitHub Search 抓到的倉庫裡星數次高者。對教學或產品拆解展示有興趣的工程師可留意。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI and Anthropic Set Up ‘War Rooms’ to Fight Disinfo About Midterm Elections",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWEZ5UW1FNFkxcXk5Y2pzN1hqR3dPZWdRRm9PT0phR3Y1cVg1N1E2RDk1ZWFCM2tCUnhvbVBHRVI0X2tfNEh6aFVmd3lxSGVvQ2s4SzRqQUFPMXJuUG5Sb19VMkpud1dBVVQ2VVBSMnM2WnhPLWVBTXFUZTlKcEJXRC1CcHdoUFZNWU5j?oc=5",
+      "source": "Google News / The New York Times",
+      "time": "11/03 18:00",
+      "sentiment": "",
+      "body": "《紐約時報》報導 OpenAI 與 Anthropic 共同成立「戰情室」，專門應對美國期中選舉期間的不實訊息，這是兩家公司少見的具體聯手動作，報導未附更多機制細節。關注 AI 公司選舉治理動作的人可持續留意後續進展。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

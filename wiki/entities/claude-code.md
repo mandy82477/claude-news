@@ -4,18 +4,18 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-04"
+last_news_update: "2026-11-04"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 127
-attribution_count: 843
-attribution_last: "2026-11-03"
+days_since_news_subtree: 0
+inbound_links: 126
+attribution_count: 844
+attribution_last: "2026-11-04"
 top_source: "github-issues"
 pending_count: 6
 pending_overdue: 2
@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-04
+**最後新聞更新：** 2026-11-04
 
-> **最新動態**（2026-11-03）
-> - **v2.1.317**：`/schedule` 新增雲端排程任務取得非使用者要求的 connector 時的警告與移除方式；新增工具呼叫前的確認檢查（官方原文截斷；見 [[entities/claude-code-releases]]）。
-> - **高互動已知問題更新**：卡住/凍結（#26224，132 則留言、152 個讚，全站今日互動量最高）、Cowork 網路白名單失效（#30112，77 則留言、59 個讚）、速率限制錯誤與用量上限無關（#53915，69 則留言、27 個讚）互動數同步更新（見 [[entities/claude-code-known-issues]]）。
-> - **桌面版文件增字**（209,756→211,650），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
+> **最新動態**（2026-11-04）
+> - **v2.1.318**：啟用 session 中寫出的 mods 時新增記錄使用者回答；Claude apps gateway `mantle` 上游新增 `assume_role` 設定（官方原文截斷；見 [[entities/claude-code-releases]]）。
+> - **新增功能請求與互動更新**：Task queue 排入多個提示／任務（#33323）、Linear 整合觸發雲端 agent session 互動數更新（#12925）（見 [[entities/claude-code-known-issues]]）。
+> - **桌面版文件增字**（211,650→216,003），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
 
 ---
 
@@ -48,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-03 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-03 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-03 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-04 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-04 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-04 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的
@@ -78,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.317**（2026-11-03）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
+- 最新 **v2.1.318**（2026-11-04）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
 - **該不該升**：沒用 Opus 4.8 fast mode，留在 stable 就夠；要 Monitor tool 或寫入邊界設定才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
@@ -127,6 +127,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 2026-08-11 原文稱「beta」，2026-08-26 更新註記改為 Cowork（桌面／網頁／行動）與 Claude Code（CLI／桌面）涵蓋已 GA，僅 Microsoft 365 add-ins 與 Claude Science 仍 beta；
       - [Compliance API 官方文件](https://platform.claude.com/docs/en/manage-claude/compliance-api)對 Activity Feed 與 session 端點未標 beta，MIXED Reality News 的「beta」沿用部落格原文。與 [[entities/claude-security]] 同源。
 - **Claude Code 新增 Compliance API 與企業安全功能**（查證日 2026-09-20，來源：[Claude Help Center](https://support.claude.com/en/articles/13015708-access-the-compliance-api)、[platform.claude.com](https://platform.claude.com/docs/en/manage-claude/compliance-api)）：Compliance API 提供 Enterprise／Claude Console 客戶以程式化方式讀取組織 Activity Feed（含 chat、files、projects、sessions、users），供合規、稽核與治理使用；本機 Cowork／Claude Code session 端點於 2026-08-11 上線、2026-08-26 脫離 beta（遠端 Cowork session 端點則於 08-03 先上線）。與 Claude Enterprise／Claude Code Analytics API（回傳聚合用量與成本）不同，Compliance API 回傳逐事件紀錄。
+  - Futurism（2026-11-03）以「監視」用詞報導此功能，報導未附存取範圍或啟用方式細節；功能本體即上述已查證的 Compliance API，非新功能。隱私爭議面見 [[topics/ai-agent-safety]]。
 - **MCP Python SDK 的 OAuth 憑證外洩漏洞已修補（GHSA-qx49-fqc8-xw99，High、CVSS 7.5，2026-09-28 公開）**（查證日 2026-10-17，來源：[官方 advisory](https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-qx49-fqc8-xw99)）：安全面見 [[topics/ai-agent-safety]]。
   - 成因：OAuth 用戶端未在所有探索路徑驗證授權伺服器 issuer，惡意 MCP server 可誘使 client 把 client_secret、授權碼、PKCE verifier 送往攻擊者的 token endpoint。
   - 影響 1.9.1 至 1.30.0 前、2.0.0a1 至 2.2.0 前；1.30.0 與 2.2.0 已修補。stdio client、伺服器端與自帶 token 的 client 不受影響。

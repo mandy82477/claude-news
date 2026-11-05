@@ -496,23 +496,8 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-agent-safety-prompt-injection",
       "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
       "pageType": "topic"
     },
     {
@@ -523,21 +508,6 @@
     {
       "id": "community-integrations",
       "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-compute",
-      "name": "算力與融資這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],

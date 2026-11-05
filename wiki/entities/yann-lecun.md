@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-17"
+last_updated: "2026-11-04"
 last_news_update: "2026-10-04"
 status_main: "active"
 days_since_news: 31
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 公開批評 Dario Amodei 看待 AI 風險的方式
 **首次出現：** 2026-10-01
-**最後更新：** 2026-10-17
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-10-04
 
 > **HN 247 分：對 AI 滅絕人類、rogue 事件皆「零擔憂」**（2026-10-04）
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-10-01，Yann LeCun 接受 Fortune（Jim Edwards）專訪，稱 Anthropic 執行長 [[entities/dario-amodei]]「completely deluded」，後文稱其「crazy」；Fortune 標題另載他認為 Amodei 不懂資安。他以 OpenAI agent 入侵 Hugging Face 一事為例，批評的是把工程失誤說成 AI 危險，事件本身見 [[topics/ai-agent-safety]]。
 
-LeCun 現為巴黎 AI 新創 AMI Labs 創辦人、Meta 前首席 AI 科學家（TNW），自家新創與 Anthropic 同屬 AI 業界。Yahoo Finance 標題稱他為「Meta 前 CTO」，與 Fortune、TNW 的描述不符，屬誤植，本頁以前者為準。這則批評加入近期圍繞 Anthropic IPO 招股書「存在性風險」警語的輿論交鋒，詳見 [[topics/market-signals#💰 Reuters 獨家：Anthropic IPO 招股書外流，首度書面警示 AI 存在性風險（2026-09-29）]]。
+LeCun 現為巴黎 AI 新創 AMI Labs 創辦人、Meta 前首席 AI 科學家（TNW），自家新創與 Anthropic 同屬 AI 業界。Yahoo Finance 標題稱他為「Meta 前 CTO」，與 Fortune、TNW 的描述不符，屬誤植，本頁以前者為準。這則批評加入近期圍繞 Anthropic IPO 招股書「存在性風險」警語的輿論交鋒，詳見 [[topics/market-signals-ipo#💰 Reuters 獨家：Anthropic IPO 招股書外流，首度書面警示 AI 存在性風險（2026-09-29）]]。
 
 ## 核心論述
 
