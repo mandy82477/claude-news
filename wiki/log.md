@@ -8586,3 +8586,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 閘：cell 與讀者語言閘本波 0 筆新增，`run_tests` exit 0（不需本機重建基線）；網站企業矩陣 59→48 列，同鍵覆蓋問題隨一家一列消失。
 - 歸因 user-query／商業
 - 複驗（新冷讀者，原四題逐字）：Q1、Q3 拿到，Q2、Q4 半拿到（第一輪 Q4「做 agent 產品該押哪個生態」全站無答案，本波「選型影響」7 條後拼得出）；依複驗改 [[overview]] 外流時點句（「公開版 S-1 未遞交」改為當時狀態並註 10-26 已提交）、本頁「日報首提」改讀者用語。剩 Q2 企業選型比較與 Cursor 無專節屬 [[topics/competitor-landscape]]、Q4 index 無入口列。評審實作複核放行。
+
+## 2026-11-05 Query（第 26 波頁面健檢——recursive-self-improvement 結論層重寫、量化表改官方一手）
+
+- 裁決（主 session 自決，使用者授權；十點＋N1–N10 記 `docs/page-audits/ledger.md` 2026-11-05 兩條）：[[topics/recursive-self-improvement]] 使命句改為「Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻多近；有誰喊停，喊停之後真正落地了什麼」；「目前結論」由 32 條帶日期事件改寫為 7 條結論（到哪了、官方量到多少、喊停後落地的、還停在提案的、三處質疑、兩個時間窗說法只記原句與起算日、對做 agent 的你），各有撐腰事實與日期；量化表改一口徑一列；政治攻防五節原文搬到 [[topics/anthropic-government-policy]] 時序，本頁留指路節；時序 07 月與技術彙整 08 月蒸進 [[topics/recursive-self-improvement-archive]]；527→424 行，照搬 276 行逐字核對。
+- 主編查證（官方一手，2026-11-05）：anthropic.com/institute/measuring-pace-of-ai-development——Claude 主導 26% 的模型研發任務（2026-02 不到 1%）、沒有任何一類研發工作完全自主、最常用內部平台同時約 3 萬個 agent；本頁原把這三個數字標成社群轉述，已改官方一手並與 09-18「四分之一」併列。官方 10-15〈An update on independent evaluators〉：09 月簽署 White House Accord on Super Intelligence，內容為與獨立外部稽核或評估者合作，未提暫停；METR 10-15、Accenture 09-18 日期改正。S-1/A「可能迫近內部 RSI 門檻」維持多家引述（雲端解析不到 SEC），事實與待查證的家定在本頁。
+- 規則面：`safety-policy/pages.md` 新開本頁節（結論層條數與退場、量化表覆寫、指路節）、`safety-policy/daily.md` 不再「prepend 進目前結論」。主編同波執行：[[topics/market-signals-ipo]] 原 S-1/A ❓ 改為指路（懸置 −1，與本頁搬入 +1 對消）、[[topics/anthropic-commitments]] 補 Accenture、METR、Amodei 三步驟三列、index 鉤子改寫。
+- 轉知帳本：新開 H-e16406（→商業，anthropic-ipo L82、L171 改指本頁目前結論）、H-2a8d8a（→投資分析，market-signals-ipo L65 硬度改媒體轉述、L488 改指本頁）。
+- 閘：cell 與讀者語言閘 0 筆新增，`run_tests` exit 0；懸置計數 212→223（本波 −2 併家、搬家換頁，連同 11-02～11-04 ingest 未入基線 13 筆一併入帳）。
+- 歸因 user-query／安全政策

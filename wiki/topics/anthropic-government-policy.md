@@ -3,7 +3,7 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-04"
+last_updated: "2026-11-05"
 last_news_update: "2026-11-04"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,11 +11,11 @@ parent: null
 children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 161
+inbound_links: 164
 attribution_count: 206
 attribution_last: "2026-11-04"
 top_source: "google-news"
-pending_count: 13
+pending_count: 14
 pending_overdue: 0
 pending_next_review: "2026-11-10"
 pending_signalled: 0
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-04
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-11-04
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
@@ -326,6 +326,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-10-21 | 🏛️🏢 | Fox News：川普政府發表 AI 與資料中心政策立場；Anthropic 執行長 Amodei 同時為公司安全紀錄與對中銷售紀錄辯護 | 具體政策內容、Amodei 回應全文均未見報導，僅標題可用 |
 | 2026-10-20 | 🏛️ | FedScoop：美國衛生部（HHS）將對 Anthropic 做出「唯一來源」（sole-source）聯邦採購決定，先於後續更廣泛 AI 採購競標程序 | 具體採購標的、金額與競標排除範圍均未見報導，僅標題可用 |
 | 2026-10-17 | 🏛️ | 紐約市主計官致函 Dario Amodei，要求暫緩 IPO | 稱白宮所簽「道德約束力」AI 安全協議不足以回應風險；具體後續時程與 Anthropic 回應均未見報導，僅標題可用（HN 14 分），詳見「線的細節」 |
+| 2026-10-15 | 🏛️🏢 | Anthropic 官方稿稱上月已簽署 White House Accord on Super Intelligence | 簽署企業承諾與獨立外部稽核或評估者合作；官方稿未提暫停或減速；細節見「## 時序」10-15 |
 | 2026-10-15 | 🏛️ | CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料 | 調查從 09-30「開啟」進入取證程序；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 8 列 |
 | 2026-10-14 | 🏢 | WIRED：OpenAI、Anthropic 向英國國會議員表態支持接受監管 | 具體委員會名稱、聽證內容與監管訴求細節均未見報導，僅標題可用 |
 | 2026-10-14 | 🏢 | Bloomberg／Quartz：Anthropic 一名高管稱開源 AI 模型風險高於閉源模型 | 報導未點名具體模型或佐證資料，呼應「## 根本矛盾」與「出口管制」開放權重論戰（見「## 三個戰場」🚫 出口管制段落） |
@@ -591,6 +592,8 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-10-15
 - **[🏛️] CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料**：調查進入取證程序，較 09-30「調查開啟」更進一步；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」第 8 列
+- **[🏛️🏢] Anthropic 官方稿：上月（2026-09）已簽署 White House Accord on Super Intelligence**：簽署企業承諾與獨立外部稽核或評估者合作；官方稿未提暫停或減速承諾，協議全文未附（[Anthropic](https://www.anthropic.com/news/an-update-on-independent-evaluators)，2026-11-05 查證）
+  - 10-17 紐約市主計官信中「白宮所簽『道德約束力』AI 安全協議」可能就是這一份（推論）；評估者名單與存取範圍見 [[topics/recursive-self-improvement#技術彙整]]
 
 ### 2026-10-14
 - **[🏢] WIRED：OpenAI、Anthropic 向英國國會議員表態支持接受監管**：具體委員會、聽證內容與監管訴求細節均未見報導，僅標題可用，詳見「## 攻防紀錄」
@@ -649,6 +652,11 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-27
 - **[🏛️] 澳洲參議院傳喚 OpenAI、Anthropic 執行長出席 AI 調查聽證會**：Reuters／Bloomberg／Al Jazeera／Anadolu Ajansı 等至少 4 個來源同日報導；具體聽證會日期、調查範圍與傳喚法源均未見報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
+- **[🌐] TribLive／AP News：Anthropic 與 OpenAI 同步就 AI 安全發出警示，尋求主導安全規範制定；WSJ 同日側寫「AI 安全恐慌」推手**
+  - **揭露來源**：TribLive.com／AP News（經 Google News，2 個來源，2026-09-27 14:20 UTC）；WSJ 同日刊出側寫〈'Things Will Never Be Chill Again': The Doomers Who Shaped the AI Safety Freakout〉
+  - **核心主張（僅標題可用）**：報導稱 Anthropic 與 OpenAI 同步就 AI 安全風險發出警示，並試圖主導安全規範由誰、如何制定；WSJ 側寫聚焦「doomers」如何形塑當前的 AI 安全論述聲量
+  - 🔎 **查無官方**（標 2026-09-27｜查 TribLive、doomers freakout｜複 2026-11-14）：2026-10-17 公開檢索未見 AP／TribLive／WSJ 原文，亦無 Anthropic 官方對應聲明
+    - 同期背景（Reuters）：OpenAI 推動強制性全國 AI 安全要求、Altman 稱 2026 不上市、Anthropic 研究員警告滅絕風險（09-10）；「主導規範制定」是否即指此為推論
 
 ### 2026-09-25
 - **[🏛️] D.C. 巡迴上訴法院推翻地院判決，維持五角大廈供應鏈風險認定**：起因為 Anthropic 拒絕依軍方要求為 Claude 啟用特定功能；Reuters／WaPo／Ars Technica／Bloomberg 等跨十餘家媒體同日報導，HN 426 分，詳見「## 攻防紀錄」、「## 三個戰場」🪖 軍事合約段落
@@ -669,6 +677,13 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
   - Amodei 提三點：全體成員可支持的範圍限定協議（如禁止 AI 生物武器）、讓各國互相查核承諾的評估與查驗機制、共同測試標準加事件通報系統；Altman 呼籲共同的能力衡量方式、人類監督與快速事件通報
   - 美方立場為主要阻力：媒體稱美國拒絕「全球治理」，Axios 稱 OSTP 主任 Kratsios 同場稱此類治理為「globalist scheme」；會議未產出正式文件；他國響應未見
 - **[🏢] The Information：Google、OpenAI、Anthropic 三方組成的 AI 安全聯盟正在成形**：與同日聯合國呼籲屬同一週期安全合作訊號，是否為同一佈局的組織化版本未見報導，不逕自合併；具體架構與成員範圍僅標題可用，詳見「## 攻防紀錄」
+- **[🏛️] 政治連鎖反應延燒：川普陣營鎖定 Amodei「末日論」人設、企業家與 HN 社群質疑減速動機**
+  - **揭露來源**：Axios（獨家，經 Google News）；NDTV〈Vembu 訪談〉；NPR（經 Hacker News，10 分，低互動）〈AI freeze〉
+  - **核心主張**：Axios 稱川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，開闢新政治攻防戰線；Zoho 創辦人 Vembu 向 NDTV 表示 OpenAI、Anthropic 可放慢腳步，「沒有人拿槍指著他們」；NPR 報導「AI 凍結」恐讓大型 AI 公司更大、傷害小公司，HN 討論聚焦「監管俘獲」疑慮
+  - **查證（2026-10-17，媒體稱）**：[Axios 獨家 09-24](https://axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei) 的「新戰線」手法是一份在白宮內部流傳的備忘錄，作者為白宮以外的川普政治顧問，稱有效利他主義「打造了 AI 末日論管線」，點名 Dario 與 Daniela Amodei
+    - 匿名消息人士稱 Amodei 代表與「美國優先」相悖的全球主義路線；時間點在 Amodei 向聯合國安理會視訊簡報（09-23）的隔天；Anthropic 方面否認有效利他主義定義公司。「監管俘獲」框架不出自 Axios，見下兩項
+    - [NPR 09-23](https://www.kuow.org/npr-news/2026-09-23/how-an-ai-freeze-could-make-big-ai-companies-bigger-and-hurt-smaller-firms)：批評者（Bellamy、前 FTC 委員 Bedoya）稱「AI 凍結」鞏固頭部實驗室、壓垮小公司，並質疑無中國配合難以執行
+    - [YourStory](https://yourstory.com/2026/09/zoho-sridhar-vembu-big-tech-push-slow-ai-development-cynical)：Vembu 稱大公司可自行放慢、卻不能要求整個產業放慢，對減速呼籲抱「cynicism」；NDTV 原訪談與「沒有人拿槍指著他們」原句本輪未取得
 
 ### 2026-09-22
 - **[🏛️] Gizmodo：中國當局調查 DeepSeek、Moonshot AI，起因為 Anthropic 稱兩者曾將用戶請求轉發給 Claude 處理**：延續 09-11 Moonshot 挪用指控，首見中國監管機構正式動作，具體範圍與官方回應未見報導，詳見「## 攻防紀錄」
@@ -687,6 +702,13 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
   - **查證（2026-10-17，媒體稱，[Bloomberg Law](https://news.bloomberglaw.com/litigation/openai-anthropic-google-spacexai-hit-with-antitrust-lawsuit)、[ProPakistani](https://propakistani.pk/2026/09/21/subscribers-sue-openai-anthropic-google-and-xai-over-ai-slowdown/)；法院文件未讀）**：四名付費訂閱戶（Claude、ChatGPT、Grok、Gemini）於 2026-09-18 在加州北區聯邦地方法院舊金山分院提起擬議全國性集體訴訟，主張違反 Sherman Act 第 1 條
   - 求償：集體認證、禁制令與確認判決；訴狀以 Amodei 09-12 文章〈We Must Pace the Frontier〉及 Musk、Altman、Hassabis 同日背書為核心，並主張協調早於 7 月的員工聯署聲明；被告未公開回應、未見法院裁定
 
+### 2026-09-17
+- **[🏢] Politico：Anthropic 政策長稱贏得 AI 競賽是確保安全的關鍵**
+  - **揭露來源**：Google News／politico.com〈Anthropic policy chief says winning AI race key for safety〉（原僅標題可用；發言人經 2026-10-03 查證為 Sarah Heck）
+  - **核心主張（僅標題可用）**：Anthropic 政策長主張贏得 AI 競賽本身就是確保安全的關鍵；具體論證未見報導
+  - **查證結果（2026-10-03，具名媒體）**：發言人為 Anthropic 政策長 Sarah Heck，非 Jack Clark（媒體稱：CNBC 2026-09-16〈Anthropic policy chief says AI companies can't operate on 'honor code'〉、POLITICO Decoded 峰會報導）
+  - **發言內容（同上媒體）**：她於 09-16 稱美國須在 AI 上保持領先，「你不可能從第二名做安全」，同時主張政府針對生存風險訂規則，反對共和黨國會領袖倚賴的自律路線（「不能只靠榮譽制度、不能自己檢查自己的作業」）
+
 ### 2026-09-16
 - **[🌐] CNBC：質疑 Anthropic 與 OpenAI 自行提名 AI 風險評估機構的公信力**：延續 09-15 反壟斷豁免提案爭議，聚焦「自己提名評估自己」疑慮，具體人選未見報導，詳見「## 攻防紀錄」
   - 兩天後 [[topics/recursive-self-improvement#技術彙整]] 09-18 CNBC 報導多位專家聯署要求真正獨立的評測機構，與本則互為因果
@@ -697,6 +719,12 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-14
 - **[🏛️] Cybernews：Anthropic 稱偵測到中國政府相關行為者利用 Claude 追蹤異議人士**：延續 09-11 威脅情報報告系列揭露案例，詳見「## 現在有哪幾條線在動」中國線、「## 攻防紀錄」
+- **[🏛️] 政治連鎖反應：川普公開回絕、北京官媒批評為「冷戰」話術**
+  - **揭露來源**：Reuters／Yahoo／CNBC／NPR／ABC7（經 Google News 轉載，2026-09-14）
+  - **核心主張**：Dario Amodei 09-12～13 呼籲業界減速一事引發政治連鎖反應——川普公開回絕，表示不需要更多 AI 監管；北京官方媒體則反擊此類呼籲為「冷戰」話術
+  - **查證結果（2026-10-03，具名媒體；非 Anthropic 官方事項，無官方一手來源）**：媒體稱（Al Jazeera 09-14、Dataconomy 09-14、Rest of World、NBC News）中國外交部發言人郭嘉昆 09-11 稱 Amodei 的呼籲為「製造恐慌、對抗與惡性競爭」
+  - **官媒（媒體稱）**：環球時報社論〈Targeting China's AI: U.S. 'tech right' unfolds Cold War playbook〉稱其「真實議程」是以技術壁壘與監管壟斷遏制中國 AI、維持華府壟斷、把中國排除於 AI 治理之外
+  - **川普側（媒體稱）**：Rest of World、The Rundown 稱川普拒絕減速，曾稱 AI 毀滅警告為「騙局（HOAX）」並稱「whoever wins AI wins」；09-28 川普於白宮與 Amodei 會面仍主張美國贏得 AI 競賽（technology.org、Fox News）
 
 ### 2026-09-12
 - **[🌐] WSJ／Reuters／Guardian 等媒體：俄羅斯開發者疑似利用 Claude 打造能自主選擇目標的神風無人機**：屬 09-11 威脅情報報告揭露案例，與既有記錄的俄羅斯線（自動化調整惡意軟體規避防毒偵測）為不同案例，同屬傳統武器研發領域，詳見「## 攻防紀錄」
@@ -710,6 +738,15 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - **[🌐] SecurityWeek／The Record：俄羅斯關聯駭客被曝利用 Claude 自動化調整惡意軟體以規避防毒偵測**：並用於駭客行動，屬同一份威脅情報報告揭露案例
 - **[🏛️] qz.com／CNBC／Bloomberg：Anthropic 指控中國 AI 實驗室進行非法蒸餾攻擊，稱 Moonshot 曾暗中將用戶請求導向 Claude 處理**：與既有 07-22 蒸餾指控性質不同（挪用而非訓練），詳見「## 現在有哪幾條線在動」中國線
 - **[🏛️] qz.com／CNBC：跨黨派議員延續研究員滅絕警告後的監管呼籲；川普公開淡化 AI 滅絕風險說法，逾十餘位 OpenAI／Anthropic 內部人士連署籲放緩**：詳見「## 現在有哪幾條線在動」國會立法壓力列，人物面見 [[topics/recursive-self-improvement]] %% 未列入現況表：表滿載，2026-09-30 %%
+- **[🏛️] CNBC／The Guardian：主流媒體轉用「存在性風險」框架；川普淡化風險、Musk 稱是「psyop」**
+  - **揭露來源一**：CNBC〈Why fears of AI self-improvement are causing 'existential' concerns〉（09-11 11:00 UTC）
+  - **揭露來源二**：CNBC〈Trump dismisses AI extinction risks as more than a dozen...insiders call for a slowdown〉（09-11 10:58 UTC）
+  - **揭露來源三**：The Guardian〈More Anthropic researchers warn of AI's perils but Musk dismisses 'psyop'〉（09-11 03:15 UTC）
+  - **核心主張一（僅標題可用）**：CNBC 首篇將「AI 自我改進恐懼」明確定調為 Anthropic 與 OpenAI 業界的「存在性」（existential）疑慮
+  - **核心主張二**：The Guardian 報導更多 Anthropic 研究員發出警告，惟 Elon Musk 公開稱此類警告為「psyop」（輿論操作）
+  - **正文查證補齊**：Musk 稱這波警告是「psyop」，指控其為刻意設局、意圖以重度監管扼殺美國 AI 創新的公關操作；其他保守派 X 帳號同聲附和稱「設局」「psyop」
+  - 川普公開回應媒體提問時表示 AI「利遠大於弊」（"is going to be more good than bad by a lot"）、「情況會沒事的」（"It's going to be fine"）
+  - 川普並稱這些警告來自「同一批人」——即先前示警氣候變遷、且主張應調查他本人的人（[Foreign Policy](https://foreignpolicy.com/2026/09/16/ai-risk-jacob-coxon-openai-anthropic-dario-amodei-sam-altman-trump-doomsday/)／[AndroidHeadlines](https://www.androidheadlines.com/2026/09/trump-elon-musk-sam-altman-clash-over-ai-extinction-warnings.html)，查證 2026-09-26）
 
 ### 2026-09-10
 - **[🏢] FedScoop：Fable 5.1 已進 FedRAMP High 版 Claude for Government**：Teresa Carlson 證實，Desktop（含 Claude Code、Cowork）數週內轉正式，金額未揭露；採購角度見 [[topics/anthropic-business]]（查證 2026-09-26）

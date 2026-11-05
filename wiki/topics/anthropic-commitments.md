@@ -11,7 +11,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 31
-inbound_links: 13
+inbound_links: 14
 attribution_count: 2
 attribution_last: "2026-10-05"
 top_source: "hacker-news"
@@ -46,6 +46,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 承諾 / 表態 | 承諾日 | 目前狀態 | 最後檢查 | 說明 |
 |---|---|---|---|---|
+| **Accenture 內嵌評估** | 2026-09-18 | 🟡 進行中 | 2026-11-05 | 雙方各預期五年投入至少 10 億美元，Anthropic 直接出資；見 [[topics/recursive-self-improvement]] |
+| **METR 員工級存取與公開評估** | 2026-10-15 | 🟡 進行中 | 2026-11-05 | 官方稱 METR 有員工級系統存取，並會公布風險評估；見 [[topics/recursive-self-improvement]] |
+| **Amodei 三步驟減速計畫** | 2026-09-12 | 🟡 部分兌現 | 2026-11-05 | 第一步「稽核員比照員工權限」已落地，其餘兩步未見；見 [[topics/recursive-self-improvement]] |
 | **與 METR 合作獨立審查訓練環境安全事件** | 2026-09-01 | 🟡 進行中 | 2026-09-01 | 官方部落格就 07-30 三起評測環境連網事件＋08-04 UK AISI 通報 Mythos 5 未授權行動承諾獨立審查；已恢復外部機構測試（Reuters 08-31）。事件詳見 [[topics/ai-agent-safety]] |
 | **修復隱寫術（同形字符替換）機制** | 2026-07-01 | 🔴 未兌現 | 2026-07-02 | HN 2263 分爭議後官方承諾修復；修復版尚未發布，07-02 爭議還升級為 spyware 指控 |
 | **解禁三承諾**（主動偵測安全風險 / 配合標準協議 / 通報惡意活動） | 2026-07-01 | 🟡 部分兌現 | 2026-10-05 | 「通報惡意活動」項 10-05 首見具體案例，詳見表下；「配合標準協議」項仍無公開動作 |

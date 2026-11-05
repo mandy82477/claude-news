@@ -1,7 +1,7 @@
 {
-  "count": 212,
-  "updated": "2026-11-02",
-  "note": "第 24 波 pricing 拆頁：3 筆換 slug（entities/pricing→entities/pricing-incidents）",
+  "count": 223,
+  "updated": "2026-11-05",
+  "note": "第 26 波主編執行轉知 3：market-signals-ipo 的 S-1/A RSI 門檻 ❓ 已搬到 recursive-self-improvement，msi 原筆改為指路（−1）",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -260,6 +260,14 @@
       "label": "entities/tom-brown（標 2026-10-09｜查 woke、另一位共同創辦人）"
     },
     {
+      "key": "topics/ai-agent-safety-cyber::2026-11-04::cert-in、claude mythos",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-04｜查 CERT-In、Claude Mythos）"
+    },
+    {
+      "key": "topics/ai-agent-safety-cyber::2026-11-02::cybersecuritynews、impersonate",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-02｜查 CyberSecurityNews、impersonate）"
+    },
+    {
       "key": "topics/ai-agent-safety-cyber::2026-10-31::jiahaoshao1、訓練更大模型",
       "label": "topics/ai-agent-safety-cyber（標 2026-10-31｜查 jiahaoshao1、訓練更大模型）"
     },
@@ -298,6 +306,18 @@
     {
       "key": "topics/ai-agent-safety-cyber::2026-09-14::rescana、frkoo、trufflehog",
       "label": "topics/ai-agent-safety-cyber（標 2026-09-14｜查 Rescana、frkoo、TruffleHog）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-04::cybersecuritynews、token hunt",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-04｜查 CyberSecurityNews、Token Hunt）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-04::orcarouter、claudy day",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-04｜查 OrcaRouter、Claudy Day）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-03::binance、coding assignment、求職測試題",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-03｜查 Binance、coding assignment、求職測試題）"
     },
     {
       "key": "topics/ai-agent-safety-product-vulns::2026-10-30::2.1.313、ssh backdoor",
@@ -360,6 +380,10 @@
       "label": "topics/ai-agent-safety-product-vulns（標 2026-08-12｜查 deep_think、_can1357）"
     },
     {
+      "key": "topics/ai-agent-safety-prompt-injection::2026-11-02::homeland411、malicious rules",
+      "label": "topics/ai-agent-safety-prompt-injection（標 2026-11-02｜查 Homeland411、malicious rules）"
+    },
+    {
       "key": "topics/ai-agent-safety-prompt-injection::2026-10-26::downloads、codex",
       "label": "topics/ai-agent-safety-prompt-injection（標 2026-10-26｜查 Downloads、Codex）"
     },
@@ -394,6 +418,10 @@
     {
       "key": "topics/ai-agent-safety-prompt-injection::2026-08-27::ars technica、unowned code、hermes",
       "label": "topics/ai-agent-safety-prompt-injection（標 2026-08-27｜查 Ars Technica、unowned code、Hermes）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-11-04::provable inference、roy rinberg",
+      "label": "topics/ai-agent-safety（標 2026-11-04｜查 provable inference、Roy Rinberg）"
     },
     {
       "key": "topics/ai-eval-boundary-incidents::2026-10-24::alignment-assessment-ukaisi、inject malicious code",
@@ -438,6 +466,10 @@
     {
       "key": "topics/anthropic-government-policy::2026-07-26::india today、矽谷對中國 ai 模型",
       "label": "topics/anthropic-government-policy（標 2026-07-26｜查 India Today、矽谷對中國 AI 模型）"
+    },
+    {
+      "key": "topics/anthropic-government-policy::2026-09-27::triblive、doomers freakout",
+      "label": "topics/anthropic-government-policy（標 2026-09-27｜查 TribLive、doomers freakout）"
     },
     {
       "key": "topics/anthropic-government-policy::2026-09-26::d.c. circuit、anthropic supply chain risk appeal",
@@ -532,6 +564,10 @@
       "label": "topics/competitor-landscape（標 2026-08-10｜查 The Information、留存率）"
     },
     {
+      "key": "topics/competitor-landscape::2026-11-03::cogent security、vr-1.1",
+      "label": "topics/competitor-landscape（標 2026-11-03｜查 Cogent Security、VR-1.1）"
+    },
+    {
       "key": "topics/competitor-landscape::2026-08-13::grok、spacex",
       "label": "topics/competitor-landscape（標 2026-08-13｜查 Grok、SpaceX）"
     },
@@ -546,6 +582,14 @@
     {
       "key": "topics/market-lessons::2026-10-05::meta、microsoft、減少內部使用",
       "label": "topics/market-lessons（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
+    },
+    {
+      "key": "topics/market-signals-compute::2026-11-04::terawulf、信用擔保",
+      "label": "topics/market-signals-compute（標 2026-11-04｜查 TeraWulf、信用擔保）"
+    },
+    {
+      "key": "topics/market-signals-compute::2026-11-02::8,950億美元、租賃協議",
+      "label": "topics/market-signals-compute（標 2026-11-02｜查 8,950億美元、租賃協議）"
     },
     {
       "key": "topics/market-signals-compute::2026-10-29::texas、bond",
@@ -662,6 +706,14 @@
     {
       "key": "topics/market-signals-customers::2026-09-14::nvidia、palantir、booz allen、資料外洩",
       "label": "topics/market-signals-customers（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-03::人事成本、股權薪酬",
+      "label": "topics/market-signals-ipo（標 2026-11-03｜查 人事成本、股權薪酬）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-02::revenue-per-compute、1.72x",
+      "label": "topics/market-signals-ipo（標 2026-11-02｜查 revenue-per-compute、1.72x）"
     },
     {
       "key": "topics/market-signals-ipo::2026-10-31::blackstone、bb 級信評、投資級",
@@ -824,12 +876,8 @@
       "label": "topics/market-signals-legal（標 2026-09-10｜查 American Prospect、監控系統）"
     },
     {
-      "key": "topics/recursive-self-improvement::2026-09-21::stress-test each other、互相壓力測試",
-      "label": "topics/recursive-self-improvement（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試）"
-    },
-    {
-      "key": "topics/recursive-self-improvement::2026-10-05::jacob coxon、危言聳聽",
-      "label": "topics/recursive-self-improvement（標 2026-10-05｜查 Jacob Coxon、危言聳聽）"
+      "key": "topics/recursive-self-improvement::2026-11-03::遞迴自我改進、書面承認",
+      "label": "topics/recursive-self-improvement（標 2026-11-03｜查 遞迴自我改進、書面承認）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-10-10::jacob coxon、間諜滲透",
@@ -838,10 +886,6 @@
     {
       "key": "topics/recursive-self-improvement::2026-10-05::nyc ai safety hearing、jacob coxon testimony、gop senator alarmist",
       "label": "topics/recursive-self-improvement（標 2026-10-05｜查 NYC AI safety hearing、Jacob Coxon testimony、GOP senator alarmist）"
-    },
-    {
-      "key": "topics/recursive-self-improvement::2026-09-27::triblive、doomers freakout",
-      "label": "topics/recursive-self-improvement（標 2026-09-27｜查 TribLive、doomers freakout）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-09-21::stress-test、openai anthropic deal",

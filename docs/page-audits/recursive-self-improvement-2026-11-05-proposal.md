@@ -1,3 +1,5 @@
+> **2026-11-05 註：** 評審 🟡1–6 已由 `fix_review.py` 套用，數字已改為修法後（424 行、照搬 276 行）；文中若有與評審檔相反之處以評審檔為準。
+
 # 第 26 波設計提案：topics/recursive-self-improvement 把「目前結論」改回結論、量化表改官方一手、政治五節搬家（2026-11-05）
 
 > 上游：健檢卡 `recursive-self-improvement-2026-11-05.md`、冷讀者 `wave26-cold-reader-2026-11-05.md`、查證 `recursive-self-improvement-2026-11-05-verified.md`。十個裁決點照 ledger「2026-11-05｜第 26 波」條，不重開。
@@ -17,7 +19,7 @@
 | `## 相關實體` | 12 | 加 ipo、market-signals-ipo、commitments |
 | `## 時序` | 87 | 政治六行砍（家在 gov-policy）；07 月蒸成 4 行摘要；08、09、10、11 留 |
 
-主頁 527→**426 行**（正文 503→401），archive 87→120，gov-policy 935→972。原 527 行：留 379（原字 355、行內改 23、縮排 1）／進 archive 23／搬 gov 32／改 41／砍 40／結構 12（`D/accounting.txt`，逐段見 map 第二節）。
+主頁 527→**424 行**（正文 503→399），archive 87→120，gov-policy 935→972。原 527 行：留 377（原字 353、行內改 23、縮排 1）／進 archive 23／搬 gov 32／改 41／砍 41／結構 13（`D/accounting.txt`，逐段見 map 第二節）。
 
 ## 2. 結論層七條（裁決 1、10；逐字在 draft D 節）
 
@@ -99,8 +101,8 @@
 
 | 閘 | 改前 | 改後（原樣） | 驗紅（`D/redtest.txt`） |
 |---|---|---|---|
-| `build.py` 防呆 | — | `ok {'main': 426, 'archive': 120, 'gov': 972}` | 對改後樹跑 → `AssertionError: … 自設計 commit f659da4 後被改過`（1） |
-| `verify.py` | — | 照搬 277 行逐字；懸置三頁 20→19；`結論：OK` | 刪 S-1/A ❓ → `懸置標記不符`、FAIL（2）；刪 gov 的 Musk 行 → `缺：P375`、FAIL（3） |
+| `build.py` 防呆 | — | `ok {'main': 424, 'archive': 120, 'gov': 972}` | 對改後樹跑 → `AssertionError: … 自設計 commit f659da4 後被改過`（1） |
+| `verify.py` | — | 照搬 276 行逐字；懸置三頁 20→19；`結論：OK` | 刪 S-1/A ❓ → `懸置標記不符`、FAIL（2）；刪 gov 的 Musk 行 → `缺：P375`、FAIL（3） |
 | `gen_wiki_frontmatter.py` | exit 0 | exit 0；本頁 `pending_count` 7→5 | — |
 | `check_hierarchy.py` | ✅ 32 個母頁 | ✅ 32 個母頁 | — |
 | `check_pending_markers.py` | ✅ 225 筆（基線 212） | ✅ 224 筆（基線 212）；`--rebuild-count` 後基線 224 | 見 §7 |

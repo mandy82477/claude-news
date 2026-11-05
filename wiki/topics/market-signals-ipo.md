@@ -11,11 +11,11 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 7
+inbound_links: 8
 attribution_count: 5
 attribution_last: "2026-11-03"
 top_source: "google-news"
-pending_count: 22
+pending_count: 21
 pending_overdue: 1
 pending_next_review: "2026-11-09"
 pending_signalled: 3
@@ -518,7 +518,7 @@ IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等消息怎麼�
 
 ## 追蹤中的里程碑
 
-- ❓ **待查證**（標 2026-11-03｜查 遞迴自我改進、書面承認｜複 2026-11-17）｜**RSI 門檻定義與量測方法是否經官方進一步說明**：S-1/A 僅自評「可能迫近」，門檻定義、量測方法與是否已觸發任何內部應變機制均未見報導。
+- RSI 門檻定義與量測方法是否經官方進一步說明：待查證住 [[topics/recursive-self-improvement#目前結論]]（11-03 起追蹤），本頁只判讀。
 - ❓ **待查證**（標 2026-11-03｜查 人事成本、股權薪酬｜複 2026-11-17）｜**S-1/A 單季人事費用逾 17 億美元，人事成本與股權薪酬佔比是否進一步拆分揭露**：TechSpot 引 Business Insider 僅換算每人每月約 10.7 萬美元，員工人數基準口徑與股權薪酬佔比均未見報導。
 - ❓ **待查證**（標 2026-11-02｜查 revenue-per-compute、1.72x｜複 2026-11-16）｜**revenue-per-compute 比值由 2.08x 降至 1.72x 的衡量期間與原因是否經官方進一步說明**：CNBC／FT／Axios 引述 SEC 原文僅標題層級，方法論與是否反映進下一輪財報毛利率數字均未見報導。
 - ❓ **待查證**（標 2026-10-31｜查 Blackstone、BB 級信評、投資級｜複 2026-11-14）｜**Blackstone 預期 Anthropic 上市後拿 BB 級信評，是否經官方證實或由評等機構正式發布**：TechCrunch 引 FT 僅標題可用，標普、穆迪、惠譽評等與雙方官方說法均未見報導。
