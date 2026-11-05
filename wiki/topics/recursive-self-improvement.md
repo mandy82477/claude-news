@@ -177,7 +177,7 @@ Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻�
 
 - **揭露來源**：The Information（經 Google News）〈OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI〉（2026-09-21，RSS 僅提供跳轉連結，無正文）
 - **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 一度接近達成協議，讓雙方互相對彼此的 AI 模型進行壓力測試；具體協議內容、進度與是否已生效均未見報導
-- **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-19 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
+- **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-18 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
 - 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-11-14）：2026-10-17 查 Anthropic 官方站，10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均無說明；進度與是否簽署不明
   - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：洽談的是具法律效力的協議，範圍為互相取得對方已商用模型的 API 存取、不含未發布模型，並約定不留存對方資料；部分報導稱洽談早於 OpenAI 近期資安事件，是否仍在進行不明
 - **可信度評估**：僅單一媒體來源（The Information），RSS 摘要無正文，訊號強度低，暫不視為與 09-19 Accenture 內嵌評估者同一量級進展
