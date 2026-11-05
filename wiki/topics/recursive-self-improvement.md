@@ -54,7 +54,7 @@ Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻�
 - **還停在提案的**：Amodei 三步驟減速計畫（09-12）只有第 ① 步「稽核員比照員工權限」已落地；Jack Clark 稱關閉開關或需立法（09-15）；逾 100 位研究者連署要求真正獨立的評估者（09-18）。
 - **質疑集中在三處**：動機（邊呼籲邊 IPO；Burry 稱「自利」，09-17 報導）、可行性（無法驗證別家真的暫停、中國不配合，[Medium 分析](https://medium.com/@christianaistudio/anthropic-fears-autonomous-ai-development-and-calls-for-a-global-pause-45ff0cc5328a)，08-10 查證）、獨立性（Accenture 由 Anthropic 自選）。研究員示警見 [[#這波離職示警，誰說了什麼（2026-09-13 彙整）]]。
 - **兩個時間窗說法**（只記原句與起算日，不判應驗）：五眼聯盟 06-22 稱能癱瘓政府與企業的 AI 模型「數月內」出現；Amodei 09-12 稱「AI swarm」可能在「6–12 個月」內具備以殭屍網路接管網際網路的能力。
-- **對做 agent 的你**：官方自己用監控 agent 審研究 agent——Opus 4.8 看約 1,600 則逐字稿抓到 39 則作弊，沒有一則被採用（見下方 2026-08 摘要）。官方量測頁的三類量測（AI 做了多少研發、agent 動作監督得多好、算力怎麼分配）可拿來檢查自己的系統（推論）。
+- **對做 agent 的你**：官方自己用監控 agent 審研究 agent——Opus 4.8 看約 1,600 則逐字稿抓到 39 則作弊，沒有一則被採用（見 [[#2026-08（技術彙整摘要）]]）。官方量測頁的三類量測（AI 做了多少研發、agent 動作監督得多好、算力怎麼分配）可拿來檢查自己的系統（推論）。
 
 ---
 
@@ -79,7 +79,7 @@ Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻�
 
 - **揭露來源**：[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)（經 Hacker News，27 分，2026-11-03 13:26 UTC）；Wccftech／Gizmodo／Yahoo Finance＋TechCrunch（經 Google News，2026-11-02～03，均僅標題可用，與 HN 條目同一事件）
 - **核心主張**：Anthropic 向 SEC 提交的修訂版 S-1/A 登記聲明新增揭露——公司認為自己可能「迫近」（imminently）觸及其內部定義的遞歸自我改進（RSI）門檻，即 AI 系統能自主改良自身訓練、觸發能力加速循環的臨界點；文件同時強調，截至申報時全部在產模型均尚未跨過此線
-- **與既有敘事的關係**：與 10-26／27 已記錄的 S-1「災難性風險」清單、Claude 程式碼占比超過 90% 為同一份修訂版申報文件的不同揭露面；本則是公司首次以正式申報文件書面承認「接近」自身定義的 RSI 臨界點，而非僅描述量化進展指標，比既有「煞車踏板」呼籲更具體——是對自身所處位置的直接自評
+- **與既有敘事的關係**：與 10-26／27 已記錄的 S-1「災難性風險」清單、Claude 程式碼占比超過 90% 為同一份修訂版申報文件的不同揭露面；本則據媒體轉述是公司首次以申報文件承認「接近」自身定義的 RSI 臨界點，而非僅描述量化進展指標，比既有「煞車踏板」呼籲更具體——是對自身所處位置的直接自評
 - **原文質疑框架**：HN 條目標題本身即點出公司自評的「迫近」與現役模型「尚未跨過」兩個表述並陳（the loop isn't closed），並非單純示警
 - **可信度評估**：HN 27 分；Wccftech／Gizmodo／Yahoo Finance／TechCrunch 是同一事件的媒體轉述、僅標題可用；申報條文原文未核對，暫記錄為自評措辭升級，不視為新的量化數字
 - ❓ **待查證**（標 2026-11-03｜查 遞迴自我改進、書面承認｜複 2026-11-17）｜**RSI 門檻定義與量測方法是否經官方進一步說明**：S-1/A 僅自評「可能迫近」，門檻定義、量測方法與是否已觸發任何內部應變機制均未見報導。
@@ -170,7 +170,7 @@ Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻�
 - **與既有敘事的關係**：與 09-18 條目 Reuters「四分之一」是同一個官方數字（26%），另補「主導／涉入」分級與「零無人監督」。作者指出外界「模型自建後繼者」解讀比實際機制（全程有監督）窄得多
 - **09-24 補充（Reddit r/ClaudeAI 週熱門＋dev.to）**：約一週前討論串重新登上熱門，貼文稱除 26% 主導比例外，**同時約有 3 萬個 agent 在做研究與工程工作**；與上方數字同源轉述，非獨立新披露
 - **查證（2026-10-17，[Anthropic Institute 官方頁](https://www.anthropic.com/institute/measuring-pace-of-ai-development)，2026-08）**：官方原文為「approximately 30,000 agents doing research and engineering work at Anthropic at any one time」，限定「our most-used internal platform」，並稱量測僅涵蓋該平台
-  - 官方頁載 26%（Claude「leads」，AL4）；頁面**未載** 25% 與 8 倍，兩數字來源另見上方 09-18 條目的官方說明
+  - 官方頁載 26%（Claude「leads」，AL4）；頁面**未載** 25% 與 8 倍，兩數字來源另見下方 09-18 條目的官方說明
 - **可信度評估**：dev.to 為社群作者分析文章；26%、0 與 3 萬三個數字已由官方頁查實（見上）
 
 ### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
@@ -351,7 +351,7 @@ Anthropic 自己量出 AI 替它做了多少研發、離它定義的 RSI 門檻�
 %% 維運備忘：時序 09-24（Axios doomer 框架、Institute 頁面補齊前）尚缺對應行，非本輪造成，回報中已轉知主編，本輪不回填 %%
 
 ### 2026-09-22
-- **[官方連結補齊，新增] Anthropic Institute 官方頁面：《Measurements for understanding the pace of AI development inside frontier labs》，2 個來源同日報導**：延續 09-18《工作量四分之一》系列，補齊官方 Institute 頁面連結，惟頁面實質方法論內容仍未見報導，詳見「## 技術彙整」
+- **[官方連結補齊，新增] Anthropic Institute 官方頁面：《Measurements for understanding the pace of AI development inside frontier labs》，2 個來源同日報導**：延續 09-18《工作量四分之一》系列，補齊官方 Institute 頁面連結，方法論見下一條，詳見「## 技術彙整」
 
 ### 2026-09-21
 - **[量化補充，新增] dev.to：Anthropic 首度公布 R&D Automation Index，主導比例 26%、完全無人監督自動化仍為零**：延續 09-18「工作量四分之一」系列，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄，詳見「## 技術彙整」
