@@ -42,3 +42,8 @@
 - **V7**：模型頁 Context 1M、Max output 128K、Batch beta 300K、API 預設 effort `high`（第一節 #8、#10）。
 - **V9**：status.claude.com 雲端解析不到（不在允許網域），未核；維持頁面原記。
 - **V10**：逐字「runs 30%+ faster, and costs up to 30% less for most work」，一致。
+
+## 五、補查（設計者 N2，2026-11-05 重抓發布文）
+
+- 基準表共 **8 列**：第一節 #5 漏了「Agentic coding／**FrontierCode 1.1 (Main)**」——Sonnet 5.5 **46.2%（max）／52.1%（xhigh）**（註腳 2：Sonnet 5.5 在 max 反而低於 xhigh；兩數配對由註腳推得）、Sonnet 5 42.4%、Opus 5.5 54.4%。OSWorld 版本字串為「OSWorld 2.1」。
+- 第二節 Q1「與 Opus 5.5 差距在 1–3 分內」更正為：8 項中 7 項差 0.2–3.2 分（Terminal-Bench 反超 4.2），FrontierCode 差 2.3（xhigh）或 8.2（max）。
