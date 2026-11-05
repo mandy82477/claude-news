@@ -107,7 +107,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - **社群工具聲稱效能優於 Claude Code（Show HN「Synaps」，2 分，2026-11-05）**：作者稱自家 Rust 改寫版 agent 工具 7ms 可 attach 到運行中的 daemon、40ms 啟動 daemon、cache 命中率 99%+，未附測試方法或與官方數據的對照，單一貼文、低互動，證據薄弱；[GitHub](https://github.com/HaseebKhalid1507/SynapsCLI)。
-  - 同貼文稱 Anthropic 已為 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉；此說法為作者轉述其在 Reddit 看到的二手訊息、非一手，且與已查證的遊戲複製限制範圍（僅擋「重現他人特定遊戲」，原創仍可做，見 [[entities/claude-code-known-issues#行為與品質]]）不一致，不採信、不另立條目。
+  - 同貼文稱 Anthropic 已為 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉；此說法為作者轉述其在 Reddit 看到的二手訊息、非一手，且與已查證的遊戲複製限制範圍（僅擋「重現他人特定遊戲」，原創仍可做，見 [[entities/claude-code-known-issues]]「🧠 行為與品質」組）不一致，不採信、不另立條目。
 - ❓ **待查證**（標 2026-10-21｜查 old chat、warns you）｜**Claude Code 傳新增「接續舊對話前提醒會吃掉本次 5 小時額度」提示**（MIXED Reality News，2 個來源，2026-10-21 報導，僅標題可用）：功能名稱、版本號與是否已上線均未見官方確認；與今日桌面版文件新增的用量顯示段落是否同一功能待查。
 - ❓ **待查證**（標 2026-10-21｜查 Bedrock、schema-enforced）｜**AWS 傳 Amazon Bedrock 為 Claude 新增結構化輸出（schema-enforced outputs），涵蓋兩種 API 介面**（OpenTools，2026-10-20 報導，僅標題可用）：細節未見官方文件確認。
 - 🔎 **查無官方**（標 2026-10-15｜查 nested sessions｜複 2026-11-30）｜**Claude Code 桌面版推出「巢狀對話」**（Pasquale Pillitteri＋36Kr，2026-10-15，僅標題）：2 家媒體稱可讓單人同時指揮多個並行 agent；
