@@ -8576,3 +8576,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [投資分析] daily.md 第 1、2 類「唯一能定價的文件」措辭已因 S-1/A 公開過時，下次規則沿革建議改對齊「S-1/A 修正版 vs 首份季報」分水嶺
   - [商業] 時序類別標籤詞表提案（46 種變體→10 個封閉詞表），交主編裁決是否寫入 `.claude/reporter-rules/commercial/pages.md` 第 7 條
   - [社群] H-18d3f4 產品化矩陣新增列建議，待功能記者下輪評估歸屬頁面
+
+## 2026-11-05 Ingest
+
+- 來源日報：[[news/2026-11-05]]
+- 更新頁面：
+  - **人物**：entities/cat-wu.md（確認去向 OpenAI）、entities/dario-amodei.md（NYT 側寫）
+  - **功能**：entities/claude-code（Synaps 二手消息存查）、entities/claude-code-known-issues（Postman 供應鏈事件、cloud session 預設待查證、遊戲複製鬆綁子行）、entities/claude-code-releases（anthropic-sdk-python v2.5.0、anthropic-sdk-typescript 兩則安全修補）、entities/claude-code-features（Help Center Enterprise 安全中心、桌面文件篇幅異動）
+  - **商業**：topics/anthropic-partnerships-compute（TeraWulf／Google 信用擔保、AP 選舉授權、McGraw Hill、Addgene）、topics/competitor-landscape（GitHub Copilot 進駐 Xcode）、topics/anthropic-ipo（Michael Burry 唱空＋五則市場評論時序）、topics/anthropic-business-risks（Barchart 獲利壓力）、topics/anthropic-business（母頁 callout）、topics/enterprise-cost-management（\$1,070 評論案例）
+  - **安全政策**：topics/ai-agent-safety-product-vulns（Claude Dispatch 安全缺陷不修補、Postman 事件）、topics/ai-agent-safety（provable inference 續記）、topics/anthropic-government-policy（IPO 揭露風險延續 S-1 系列）
+  - **模型**：無（Fable 5.gguf 調侃貼文無可驗證事實，不收）
+  - **社群**：topics/community-tech-patterns（母頁：callout、路由表、模式概覽 4 列）、topics/community-memory、topics/community-integrations、topics/community-interfaces、topics/community-tech-discussions（新增 5 做法節點＋reverse-engineering 討論更新）
+  - **投資分析**：topics/market-signals-compute、topics/market-signals（TeraWulf 違約情境新進度，⟨S⟩ 待查證標訊）
+  - **開發實務**：topics/coding-workflow-guide.md（thinking 開關建議、H-02df2d 轉知處理）
+- 新增頁面：無
+- feature-radar：本日無新功能（SDK 變更屬 bug fix／minor，Help Center 新段落僅標題層級，已知問題與功能請求皆無新指令／旗標可操作，均未達收錄門檻）
+- index：無
+- 摘要：Cat Wu 確認下一站為 OpenAI、Claude 直接接入銀行帳戶、Claude Dispatch 安全缺陷官方確認不修補、遊戲複製禁令鬆綁（續 10-31）、Postman 用戶端未經同意植入 Claude Code／Codex 設定（三源同報），為今日五件獨立新事實；GitHub Copilot 進駐 Xcode 原生助理與 TeraWulf／Google 信用擔保違約情境為另兩條值得留意的競品與資金鏈進度。
+- 呈現品質：全部通過（商業類 anthropic-ipo.md 1 筆字元超限，主編於彙整階段修復；其餘記者回報均自查通過）
+- 分類回退：追加派工 4 筆（排除→功能：Show HN「Synaps」、Reddit「Cloud is so bad」，分類複核記者判定非單純工具展示而是具體指向 Claude Code 功能/政策異動；排除→商業：Show HN「\$1,070 reviews」，判定為商業類「成本案例」；安全政策→功能：「遊戲複製鬆綁」，安全政策記者判定答不出該類四頁任一觸發條件）；駁回 0 筆
+- 轉知帳本：結案 3 筆（H-5e5975、H-18d3f4：功能；H-02df2d：開發實務）；新開 1 筆草稿並登帳：H-98f96c（社群→功能，official-community-gap 產品化矩陣新增列評估＋逆向工程負向對照）；H-afee03 續留 open（主編，本輪無對應回報，詳下方主編待辦）
+- devpractice 沉澱：候選 2 筆（Fable 5 thinking 區塊顯示 bug、\$1,070 成本案例），皆已於既有 ingest 收錄不重複沉澱；官方使用指南 1 則全部處理（thinking 開關建議寫入第 2a 段）
+- market 判讀：判讀新增 1 則（TeraWulf／Google 信用擔保違約情境，覆寫「買得到的標的」1 列 NASDAQ: WULF，回顧結算 ⏳ 新增 1 列結算日 2026-11-19）；既有 11-04 標記 topics/market-signals-compute:346 標訊 2026-11-05，未結案
+- 主編待辦：
+  - [主編] H-afee03（續留 open）：feature-radar「⚠️ 預設值與破壞性變更表」只核對到 v2.1.304，需逐版補核 2.1.305–316（官方 CHANGELOG），本輪因非主編彙整常規工作且需 WebFetch 查證官方 CHANGELOG，未在雲端 routine 內處理，留給下次本機 session
+  - [商業] Claude Help Center release notes（Enterprise 安全中心／inference hooks／集中管理）與 Times of India「管理者可監看員工 Claude 使用」疑似同一組功能，僅標題層級無法確認是否同一事，待查證官方說明中心後判定歸屬 entities/pricing 或 topics/anthropic-business
+  - [安全政策→功能] Claude Dispatch 安全缺陷與 Postman 事件已記入 ai-agent-safety-product-vulns，功能記者本輪已於 claude-code-known-issues 同步收錄，視為已處理
