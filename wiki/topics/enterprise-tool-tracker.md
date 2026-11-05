@@ -203,7 +203,7 @@ Microsoft、Amazon、Google 同時是 Anthropic 的出資者與雲端通路；�
 ### 2026-07（總結；原始條目已移出）
 
 - **Alibaba 禁用 Claude Code（07-03～07-08）**：Reuters 07-03 首報「疑似後門風險」（HN 313 分）；07-05 確認生效日 07-10；07-07 三媒體確認改用內部工具 Qoder；07-08 Yahoo Finance 定調為中美 AI 資安爭端。首個以安全疑慮退出的案例，成因查證見 ⟨Q-01⟩。
-- **Meta 限制工程師使用 Claude**：07-06 日報首提（未確認），後於 ⟨Q-02⟩ 查證屬實。
+- **Meta 限制工程師使用 Claude**：07-06 首見報導（未確認），後於 ⟨Q-02⟩ 查證屬實。
 - **Alberta 省政府（07-07）**：Claude Code 20 小時掃描 4.66 億行程式碼，用於資安審查；繼加州州政府後第二個量化的地方政府案例。
 - **Partner 擴張**：Cognizant 升級 Global Premier Partner（07-28）；ICON 把 Claude 整合進臨床試驗流程（07-29，Cognizant 股價次日再漲 8%）；Grasshopper Bank 成為首家列入 MCP 目錄的銀行（07-15）。
 - **Microsoft（07-15）**：Yahoo Finance 傳其訓練業務團隊向客戶淡化 OpenAI 與 Anthropic 優勢（推論，未經官方證實）。
