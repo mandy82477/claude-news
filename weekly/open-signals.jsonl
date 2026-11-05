@@ -293,3 +293,7 @@
 {"date": "2026-11-01", "week": "2026-W44", "forecast": "正式信評會不會在上市前出來：目前只有 Blackstone 的「預期 BB 級」轉述，S&P、Moody's、Fitch 都沒公布", "origin": "新立", "probe": "BB", "entries": [{"title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards", "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1"}]}
 {"date": "2026-11-02", "week": "2026-W44", "forecast": "Claude Duet 會不會開放候補以外的人：目前只有美國 Pro、Max 能排候補", "origin": "續盯", "probe": "Duet", "entries": [{"title": "PSA if you have a banked reset from Claude Duet and downgrade from Ultra > Max, they take your reset away", "url": "https://www.reddit.com/r/ClaudeCode/comments/1xm7meb/psa_if_you_have_a_banked_reset_from_claude_duet/"}]}
 {"date": "2026-11-04", "week": "2026-W44", "forecast": "遊戲重製限制誤擋無害逆向工程會不會修：Opus 5.5 更新後連自家專案的逆向工程也被擋", "origin": "新立", "probe": "遊戲", "entries": []}
+{"date": "2026-11-05", "week": "2026-W44", "forecast": "Cursor 後門事件：攻擊者怎麼拿到發布權限：Anthropic 說系統沒被入侵，資安公司說套件經官方帳號送出，兩邊都沒解釋", "origin": "新立", "probe": "Cursor", "entries": []}
+{"date": "2026-11-05", "week": "2026-W44", "forecast": "遊戲重製限制誤擋無害逆向工程會不會修：Opus 5.5 更新後連自家專案的逆向工程也被擋", "origin": "新立", "probe": "逆向工程", "entries": []}
+{"date": "2026-11-05", "week": "2026-W44", "forecast": "遊戲重製限制誤擋無害逆向工程會不會修：Opus 5.5 更新後連自家專案的逆向工程也被擋", "origin": "新立", "probe": "遊戲", "entries": []}
+{"date": "2026-11-05", "week": "2026-W44", "forecast": "正式信評會不會在上市前出來：目前只有 Blackstone 的「預期 BB 級」轉述，S&P、Moody's、Fitch 都沒公布", "origin": "新立", "probe": "BB", "entries": []}
