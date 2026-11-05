@@ -160,6 +160,32 @@ radar 全覽表同時有 Fable 5 與 Fable 5.1 兩列時，本表對照的一律
 
 ---
 
+## entities/sonnet-5-5 的五節
+
+本頁回答「Claude Sonnet 5.5 是什麼、在 Claude Code 與 API 怎麼拿到（預設、別名、effort）、從 Sonnet 5 換過來差在哪與會壞什麼、官方拿哪些數字說它好、prompt 要改哪幾句」；選型的家是 [[topics/model-comparison]]，費率的家是 [[entities/pricing]]，熱度的家是 [[feature-radar]]。頁頂 callout 無新聞時寫「預設／別名／換了要調什麼」三行現況，有新聞照 daily-contracts 覆寫。
+
+### sonnet-5-5 的 `## 你現在拿到的是什麼`（覆寫式，8 列固定）
+
+照上方「模型頁兩代對照表」條文，對照軸 Sonnet 5（Legacy）vs Sonnet 5.5（現行）。列：現在誰是預設／牌價／context 與最大輸出／知識截止／會不會停掉／從舊代升上去會壞什麼／官方推薦拿它做什麼／我的方案能不能用。「現在誰是預設」寫 Claude Code 各方案預設與 `sonnet` 別名所指，出處是官方 Claude Code model-config，**不得以 GitHub release 一句代替**——changelog 不載各方案預設。「從舊代升上去會壞什麼」只寫一句數量＋指向 `## 從 Sonnet 5 換過來會壞什麼`。
+
+### sonnet-5-5 的 `## 從 Sonnet 5 換過來會壞什麼`（覆寫式，官方清單一項一條）
+
+正文條列＝官方 What's new「breaking changes」各項＋「without failing any request」各項，**一項一條、每條附官方錨點連結與查證日**；官方改版即整節覆寫。下方「換過來還會遇到的事」收官方文件寫明、但不在上述清單的差異（fallback、快取下限這類），上限 5 條；**前代本來就有的限制不寫成換代變更**，要寫就註明「Sonnet 5 本來就是如此」。媒體或社群報導只能作一條佐證，寫明對得上官方哪幾項、讀到多少（僅標題就寫僅標題）。記者無 web 工具：日報帶到新的破壞性變更時，留待查證行並回報主編查證官方 What's new，不自填。
+
+### sonnet-5-5 的 `## 這些數字是誰量的`（覆寫式，官方基準表上限 8 列）
+
+四欄固定：`官方拿來說的基準｜Sonnet 5.5｜Sonnet 5｜Opus 5.5`（第三欄＝同代上一階，讓讀者不必跨頁對數字）。入表判準照上方 opus-5 同名節兩條；官方表的跨家欄不抄，留一句指 [[topics/model-task-leaderboard]]。官方註腳（不同 effort、不同子集）寫成表下一條，不塞進格。表下條列上限 4 條；互動量（HN 分數）與媒體覆蓋不是量測，進 `## 歷史記錄`。表上方必標「資料截至 YYYY-MM-DD」。
+
+### sonnet-5-5 的 `## 熱度與試用價值`：一行指 feature-radar，不建表
+
+本頁不複製熱度值；radar 全覽表 Sonnet 5.5 那一列是唯一的家，本節只留一句指路。
+
+### sonnet-5-5 的 `## 歷史記錄`：累積式，上限 20 列，逾上限先走封存
+
+同 opus-5 歷史記錄條文：最新在上、同日合一列、已查證的列把結果寫進事件欄。封存照 `.claude/reporter-rules/page-lifecycle.md`「時段蒸餾與封存（全站通用）」，archive 子頁為 `entities/sonnet-5-5-archive`（2026-11-05 尚未建立；2026-09 時段 2026-12 起達門檻）。
+
+---
+
 ## entities/opus-5 的兩張表
 
 本頁回答「Opus 5 這個模型本身是什麼——規格、官方與第三方基準的位置、以及上線以來社群到底吵出了什麼」。`## 歷史記錄` 是逐則原文，上方兩張表是結論。

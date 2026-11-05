@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Claude 5.5 家族第三款模型，取代 Haiku 4.5；Haiku 4.5 無獨立頁，細節見 [[topics/model-comparison]]）"
 domain: "🤖 模型"
-last_updated: "2026-10-31"
+last_updated: "2026-11-05"
 last_news_update: "2026-10-09"
 status_main: "active"
 days_since_news: 27
@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 27
-inbound_links: 19
+inbound_links: 20
 attribution_count: 14
 attribution_last: "2026-10-09"
 top_source: "google-news"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-haiku-5-5
 **首次出現：** 2026-10-08（本站收錄；官方發布日 2026-10-07）
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-10-09
 
 > **牌價與 100K 分段已查實**（官方頁 2026-10-11 查證）
@@ -64,7 +64,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **表下細節**
 
 - context 上限：**官方已載 1M tokens**（官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview)、2026-10-10 查證），與 Haiku 4.5 的 200K 不同；三家媒體標題（MarkTechPost、shattered.io、tech-insider.org）的 1M 說法因此獲官方佐證。
-- 官方同批宣布 Sonnet 5.5 快取讀取價砍半，屬 Sonnet 定價事件非 Haiku 本身，細節見 [[entities/sonnet-5-5]]、[[entities/pricing]]。
 
 ### 實付成本
 
@@ -123,7 +122,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - [[topics/model-comparison]] — 這份工作該用哪個模型、Haiku 4.5 退役下限與選型細節
 - [[topics/model-task-leaderboard]] — 同一類任務跨家目前誰領先（Claude 家內選型看上一列，跨家看這頁）
-- [[entities/sonnet-5-5]] — 同批官方砍半快取讀取價的模型
+- [[entities/sonnet-5-5]] — 同 5.5 家族的中階款，快取讀取 $0.10
 - [[entities/opus-5-5]] — 官方稱可與之搭配作編碼 subagent 的旗艦
 - [[entities/pricing]] — 精確牌價與分層費率
 - [[topics/ai-agent-safety]] — Help Net Security 等 3 家媒體稱其抵抗隱藏指令注入能力比前代提升，安全框架細節見該頁
@@ -164,7 +163,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - VentureBeat 稱定價已與 GPT-6 Luna 看齊，屬跨家比較，本頁不展開，相關快照見 [[topics/competitor-landscape]]；精確牌價更新見 [[entities/pricing]]。
 - **2026-10-07**：Anthropic 發布 Claude Haiku 5.5（[官方發布文](https://www.anthropic.com/claude-haiku-5-5)，2026-10-07）。
   - 官方定位：最便宜、最快、最具能力的小型模型，面向高流量成本敏感任務（摘要、壓縮、DB 查詢、分類），與 Opus 5.5／Sonnet 5.5 搭配作編碼 subagent；平均執行成本比 Haiku 4.5 降約 75%
-  - 同批官方將 Sonnet 5.5 快取讀取價砍半，屬 Sonnet 定價事件，細節見 [[entities/sonnet-5-5]]、[[entities/pricing]]
   - AWS、GitHub Copilot 同日同步上架（[AWS 官方文章](https://news.google.com/rss/articles/CBMiigFBVV95cUxOQkU2SklzNGNKdXpOWUpkMFJhVEZvbGpLWlpUeDIzakxtcE1HbVRFeGp5N3FDNXlRd21BWWwzd19Na3RadEpaVk9wY3luT3lBc2tQdk9EcVkwNEZ1RTZJeUlpaDlVaG42MWx6U2h2RERsWXA0RTk3eXlTUC1EVzNFQ25EVjBLQUlrYVE?oc=5)，2026-10-07）
   - Reuters 將此次發布放進「Anthropic 第三款 5.5 系列模型、IPO 前擴充產品線」敘事，屬商業脈絡，見 [[topics/anthropic-business]]（[Google News/Reuters](https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5)，2026-10-07）
   - HN 互動合計 1,005 分（Hacker News＋Blog／Simon Willison＋HN Repo Bridge 3 個來源，2026-10-07），互動量高

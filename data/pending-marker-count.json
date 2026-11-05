@@ -1,7 +1,7 @@
 {
-  "count": 223,
+  "count": 221,
   "updated": "2026-11-05",
-  "note": "第 26 波主編執行轉知 3：market-signals-ipo 的 S-1/A RSI 門檻 ❓ 已搬到 recursive-self-improvement，msi 原筆改為指路（−1）",
+  "note": "第 28 波 sonnet-5-5：⟨Q-01⟩ 與 sonnet-5 同題 🔎 兩筆經官方 Claude Code model-config 查實結案（−2）",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -236,16 +236,8 @@
       "label": "entities/robert-mahari（標 2026-09-13｜查 Robert Mahari、Claude for Legal）"
     },
     {
-      "key": "entities/sonnet-5-5::2026-09-28::v2.1.284、claude code cli 預設",
-      "label": "entities/sonnet-5-5（標 2026-09-28｜查 v2.1.284、Claude Code CLI 預設）"
-    },
-    {
       "key": "entities/sonnet-5-archive::2026-08-26::tech-insider.org、57 score",
       "label": "entities/sonnet-5-archive（標 2026-08-26｜查 tech-insider.org、57 Score）"
-    },
-    {
-      "key": "entities/sonnet-5::2026-09-28::sonnet 5.5、claude code cli 預設",
-      "label": "entities/sonnet-5（標 2026-09-28｜查 Sonnet 5.5、Claude Code CLI 預設）"
     },
     {
       "key": "entities/sridhar-vembu::2026-09-24::sridhar vembu、ndtv、放慢腳步",

@@ -30,7 +30,7 @@
 | **Claude Fable 5.1** | 🟢 旗艦（2026-09-01 發布，取代 Fable 5）| 反萃取機制；快取讀取費率 0.025x（約省 75%）；官方 prompting 指南 2026-10-03 查證補進頁內 |
 | **Claude Mythos 5.1** | 🟢 政策限定（2026-09-01 發布）| 僅限信任機構；Anthropic 研究稱中國 GLM-5.3 網攻能力已逼近 Mythos Preview |
 | **Claude Opus 5.5** | 🟢 現行 Opus（2026-09-22 發布）| Claude Code v2.1.280 起為 `default`（Foundry 除外）；$4/$20；預設 effort 為 `medium`（Opus 5 為 `high`）|
-| **Claude Sonnet 5.5** | 🟢 現行 Sonnet（2026-09-28 發布）| v2.1.284 起為 API 端預設 Sonnet；Terminal-Bench 4.0 由 10.3% → 70.6%；牌價維持 $2/$10，**快取讀取 $0.10（×0.05，本輪更正）**；退役不早於 2027-09-28 |
+| **Claude Sonnet 5.5** | 🟢 現行 Sonnet（2026-09-28 發布）| v2.1.284 起為 `sonnet` 別名所指；Terminal-Bench 4.0 由 10.3% → 70.6%；牌價維持 $2/$10，**快取讀取 $0.10（×0.05，本輪更正）**；退役不早於 2027-09-28 |
 | Claude Opus 5 | ⚠️ Legacy（2026-09-22 起）| 仍可用，$5/$25、快取讀取 $0.50；**預設 effort `high`**（本輪查實，未被調高）、退役不早於 2027-07-24；跨代「重複修辭套路」問題持續（GitHub #77136）|
 | Claude Sonnet 5 | ⚠️ Legacy（官方 2026-10-10 複查）| 仍可用，$2/$10、快取讀取 $0.20；**退役不早於 2027-06-30**、知識截止 Jan 2026（本輪查實）；預設地位已由 Sonnet 5.5 接手 |
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 5／5.1 **資安類**請求被護欄攔下時的接手模型（生物／化學／生命科學類改由 Opus 5 接手）|
@@ -117,7 +117,7 @@
 
 | 功能 | 熱度 | 推薦 |
 |------|------|------|
-| Claude Sonnet 5.5（API 預設 Sonnet）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——牌價 $2/$10 不變、快取讀取 $0.10；effort 級距已重新校準，**換過來要重跑一次 sweep** |
+| Claude Sonnet 5.5（現行 Sonnet）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——牌價 $2/$10 不變、快取讀取 $0.10；effort 級距已重新校準，**換過來要重跑一次 sweep** |
 | Claude Code 讀取 AGENTS.md（v2.1.277）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——無 CLAUDE.md 時原生改讀，回應 #6235 |
 | Claude Haiku 5.5（現行 Haiku）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——成本比前代降約 75%；**它是第一款有 effort 的 Haiku**，thinking 預設開著且算進 `max_tokens`，沿用 4.5 的 `max_tokens` 會把回覆截斷 |
 | Claude Fable 5.1（旗艦）| 🔥🔥🔥🔥🔥 | ⚡ 有條件推薦——長時 agentic 工作流首選；`low` effort 下搜尋觸發會變少 |

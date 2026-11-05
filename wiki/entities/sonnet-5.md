@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-10-25"
+last_updated: "2026-11-05"
 last_news_update: "2026-09-28"
 status_main: "active"
 days_since_news: 38
@@ -12,13 +12,13 @@ parent: null
 children: "['entities/sonnet-5-archive']"
 page_role: "hub"
 days_since_news_subtree: 38
-inbound_links: 21
+inbound_links: 17
 attribution_count: 3
 attribution_last: "2026-07-31"
 top_source: "google-news"
-pending_count: 1
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-11-10"
+pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
 signal: "⚠️ 高引用但停滯"
@@ -30,23 +30,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）
-> [[entities/sonnet-5-5|Sonnet 5.5]] 發布，成為 Anthropic API 預設 Sonnet；本頁官方已列 Legacy（2026-10-10 查證，見下方「現況」）。
+> [[entities/sonnet-5-5|Sonnet 5.5]] 發布，Claude Code 的 `sonnet` 別名改指它；本頁官方已列 Legacy（2026-10-10 查證，見下方「現況」）。
 
 ---
 
 ## 現況
 
-**2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。自 2026-09-28 起無新動態（2026-10-31 核）；本代已被 Sonnet 5.5 取代，停滯是事實而非漏更新。
+**2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 起可選（`sonnet` 別名改指它）；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。自 2026-09-28 起無新動態（2026-10-31 核）；本代已被 Sonnet 5.5 取代，停滯是事實而非漏更新。
 
 - **本頁已是官方 Legacy（2026-10-10 查證）**：官方 [Sonnet 5 模型頁](https://platform.claude.com/docs/en/models/sonnet-5/overview) 頁首標 **Legacy**、狀態欄寫 `Active (legacy)`，[models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 也把它列在「Legacy models (still available)」；
   - 發布日 2026-06-30、退役不早於 **2027-06-30**（[model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations)）。
   - 可靠知識截止與訓練資料截止皆為 **Jan 2026**，預設 effort `high`，牌價 $2／$10、快取讀取 $0.20。
-- 🔎 **查無官方**（標 2026-09-28｜查 Sonnet 5.5、Claude Code CLI 預設｜複 2026-11-10）｜**Sonnet 5.5 是否同步為 Claude Code CLI 本身的預設模型**：官方只說「Anthropic API 預設 Sonnet」。
-  - 2026-10-10 查官方 models overview、model deprecations 與 [Claude Code settings reference](https://code.claude.com/docs/en/settings-reference) 三處皆未載 CLI 預設模型，同一題見 [[entities/sonnet-5-5]] ⟨Q-01⟩
+- **Claude Code 現在的預設（2026-11-05 查官方 [model-config](https://code.claude.com/docs/en/model-config)）**：各方案預設 [[entities/opus-5-5|Opus 5.5]]，`sonnet` 別名指 [[entities/sonnet-5-5|Sonnet 5.5]]；v2.1.280 前本代是 Pro 與 Team Standard 的預設。
+  - Sonnet 5.5 在 Claude Code 裡被資安旗標的請求會自動改跑本代，細節見 [[entities/sonnet-5-5#從 Sonnet 5 換過來會壞什麼]]
 
 **2026-09-27**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
 
@@ -54,7 +54,7 @@ Claude Sonnet 5 於 2026-07-01 正式發布，定位為 Anthropic **最 agentic 
 
 **與 [[entities/fable-5]] 的定位差異**：Fable 5（2026-09-01 起為 5.1）是最高階旗艦（Mythos 級推理能力，適合最複雜的多步驟任務）；Sonnet 5 則是主力平衡選項——以約 60% 的成本換取接近 Opus 4.8 的效能，適合日常 agentic 工作流與成本敏感場景，非追求極致推理深度的定位。
 
-**Claude Code 預設模型**：Claude Code v2.1.197 起已將 Sonnet 5 設為預設模型，取代前一代 Sonnet 版本。
+**Claude Code 預設模型**：v2.1.197 起曾是 Pro 與 Team Standard 的 Claude Code 預設（Max 等方案當時預設 Opus），v2.1.280 起已不是，現在的預設見上方「現況」。
 
 **定價**：$2/$10 per Mtok（input/output）。發布時為入門促銷價、載明 2026-08-31 到期，**已於 2026-08-10 官方永久化為標準價**，原訂 9/1 調至 $3/$15 的計畫取消（官方模型總覽頁 2026-08-26 查證：定價欄已無任何到期字樣）。社群稱此定價較 Opus 4.8 省約 60% 成本，形成「cost reset for AI agents」的討論；Opus 4.8 本身 API 定價未見官方逐項公布數字，完整定價彙整見 [[entities/pricing]]。
 
@@ -75,11 +75,8 @@ Claude Sonnet 5 於 2026-07-01 正式發布，定位為 Anthropic **最 agentic 
 
 **快速上手（Claude Code）：**
 ```
-# Claude Code v2.1.197 已預設使用 Sonnet 5，無需指定
-claude
-
-# 明確指定：
-claude --model claude-sonnet-5-20260701
+# v2.1.280 起各方案預設 Opus 5.5，要用本代必須明確指定：
+claude --model claude-sonnet-5
 ```
 
 **注意事項：**
@@ -92,7 +89,7 @@ claude --model claude-sonnet-5-20260701
 - **Agentic 定位**：reasoning、tool use、coding、knowledge work 全面提升，是 Anthropic 目前最強 agentic Sonnet
 - **效能 vs Opus 4.8**：社群多篇評測確認在 agentic 任務上效能接近 Opus 4.8，60% 成本差距
 - **1M token context**：原生支援，無需外部管理
-- **Claude Code 預設**：v2.1.197 起為 Claude Code 預設模型
+- **Claude Code 預設**：v2.1.197 起曾為 Pro 與 Team Standard 的預設，v2.1.280 起已不是
 
 **Terminal-Bench 2.1 成績已查得（2026-09-13）**：第三方彙整站給出 Sonnet 5 在 TB 2.1 為 **85.2%**；若固定在 Terminus-2 harness 上比較，Sonnet 5 **80.4%**、Opus 4.8 **74.6%**、Sonnet 4.6 **67.0%**——**這是本站記錄中第一個中階模型在同 harness 上勝過旗艦的評測項**，較 Sonnet 4.6 的 13.4 分進步幅度在該表中排第二大（[Artificial Analysis](https://artificialanalysis.ai/evaluations/terminalbench-v2-1)、[Vellum](https://www.vellum.ai/blog/claude-sonnet-5-benchmarks-explained)，皆為第三方彙整、非 Anthropic 官方公布）。跨版次不可比：TB 2.1 與 3.0／4.0 分數不能互換，榜單現況見 [[topics/model-task-leaderboard]]。
 
@@ -105,7 +102,7 @@ claude --model claude-sonnet-5-20260701
 
 ## 相關議題
 
-- [[entities/sonnet-5-5]] — 2026-09-28 發布的新一代，取代本頁成為 Anthropic API 預設 Sonnet
+- [[entities/sonnet-5-5]] — 2026-09-28 發布的新一代，現行 Sonnet；Claude Code `sonnet` 別名指向它
 - [[entities/fable-5]] — 現任最高階公開模型；Sonnet 5 為次階平衡選項，定位差異見上方「現況」
 - [[entities/opus-4-8]] — Opus 4.8 能力對比（Sonnet 5 效能接近 Opus 4.8，Opus 4.8 已於 2026-07-25 被 [[entities/opus-5|Opus 5]] 取代次旗艦地位）
 - [[entities/opus-5-5]] — 現行 Opus（2026-09-22 起取代 [[entities/opus-5|Opus 5]]），與 Sonnet 5 分屬不同定位（旗艦級 vs 主力平衡選項）

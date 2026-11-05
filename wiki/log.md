@@ -8612,3 +8612,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 實作複核放行（0 🔴、3 🟡 皆吃）：[[entities/dario-amodei-archive]] open-weights 日期 07-28→07-27，與主頁一致。
 - 轉知帳本：新開 H-f75ab5（→安全政策，[[topics/anthropic-government-policy]] open-weights 聲明 07-28 改官方發布日 07-27 或標明跟進日）。
 - 回訪 2026-11-12。歸因 user-query／人物
+
+## 2026-11-05 Query（第 28 波頁面健檢——sonnet-5-5 改答「在 Claude Code 怎麼拿到」與「換過來會壞什麼」）
+
+- 裁決（主 session 自決，使用者授權；十點＋N1–N7 記 `docs/page-audits/ledger.md` 2026-11-05 第 28 波兩條）：[[entities/sonnet-5-5]] 使命句改為「是什麼、在 Claude Code 與 API 怎麼拿到、從 Sonnet 5 換過來差在哪與會壞什麼、官方拿哪些數字說它好、prompt 要改哪幾句」；新開 `## 從 Sonnet 5 換過來會壞什麼`（官方 What's new 5 項回 400＋1 項不報錯）；基準表改官方 8 項三欄；核心功能節砍、熱度改一行指 [[feature-radar]]；表下細節去重。
+- 主編查證（2026-11-05，官方 Claude Code model-config）：各方案預設是 Opus 5.5，`sonnet` 別名指 Sonnet 5.5（需 v2.1.284+），Claude Code 內 effort 預設 medium；資安旗標請求自動改跑 Sonnet 5（可改成每次詢問）。⟨Q-01⟩ 與 [[entities/sonnet-5]] 同題 🔎 兩筆結案，懸置 223→221（`--rebuild-count` 明示）。MIXED「五處、一處靜默」即官方 What's new 結構，改為官方一手；快取讀取 $0.10 是發布時的價。
+- 回掃：[[entities/sonnet-5]]、[[entities/opus-5-5]]、[[entities/haiku-5-5]]、[[topics/model-comparison]] 事實句與互指句；[[feature-radar]]、[[index]]、[[overview]] 的「API 預設 Sonnet」改為「`sonnet` 別名」。
+- 規則面：`models/pages.md` 加 sonnet-5-5 節（現在誰是預設以 model-config 為出處），`models/daily.md` 一列；沿革記 `docs/rules-changelog/reporter-models.md`。
+- 轉知帳本：H-cdd17c、H-67d188（→商業，pricing、pricing-history 的「取代 Sonnet 5 為預設」）、H-98f7c9（→功能，claude-code-releases L119、L223）。
+- 閘：cell 與讀者語言 0 新增。歸因 user-query／模型

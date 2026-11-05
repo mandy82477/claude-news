@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-30
+**最後更新：** 2026-11-05
 
 > **這禮拜動了什麼**（2026-10-22）
 > Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
@@ -11,7 +11,7 @@
 
 ## ⭐ 現在值得跟的三件（最後輪替 2026-10-22）
 
-- **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
+- **Claude Sonnet 5.5 成為 Claude Code `sonnet` 別名所指模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
 - **Claude Haiku 5.5 可選用**：Claude 5.5 家族第三款模型，官方稱成本比前代降約 75%，適合高流量成本敏感任務。**怎麼開始：** `/model claude-haiku-5-5`，細節見 [[entities/haiku-5-5]]。
 - **Claude Mods**：外掛可修改 Claude Code 更深層行為（v2.1.287 GA，v2.1.300 起新增 `agent.spawn`、`prompt.change` hook），以你的權限執行、不受沙箱隔離。**怎麼開始：** 裝前先跑 `claude plugin validate ./some-mod`，安全面細節見 [[entities/claude-mods]]。
 
@@ -34,7 +34,7 @@
 | v2.1.300 | hook `updatedInput` 依 schema 驗證；大型請求預設 gzip（`CLAUDE_CODE_GZIP_REQUEST_BODIES=0` 關）；transcript 多記請求的 system prompt | 預設值改變 | 靠 hook 注入非 schema 欄位的要改寫；分享 transcript 前留意其中含 system prompt |
 | v2.1.295 | Bedrock／Vertex／Foundry 的 token 計數改用 AWS 官方 CountTokens API | 預設值改變 | 用這三個通道的企業管理者需額外授予 `bedrock:CountTokens` IAM 權限，否則計數功能可能受影響 |
 | v2.1.285 | 背景 Bash／PowerShell 指令加上時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守的 session | 預設值改變 | 無人值守跑長建置或測試的，用 `timeout` 參數明設時限 |
-| v2.1.284 | Anthropic API 端的 Sonnet 系列預設模型改指 Claude Sonnet 5.5（CLI 本身是否同步換見 [[entities/sonnet-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
+| v2.1.284 | Claude Code 的 `sonnet` 別名改指 Claude Sonnet 5.5；各方案預設仍是 Opus 5.5（官方 model-config，2026-11-05 查證，見 [[entities/sonnet-5-5]]） | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Sonnet 5 既有行為的排程任務先確認 |
 | v2.1.283 | 沒設權限模式時，互動 session 一律從 auto 模式開始（2.1.283 擴及第三方供應商與關 telemetry，2.1.284 擴及所有方案） | 預設值改變 | 要每步手動確認的人，在設定寫 `permissions.defaultMode` |
 | v2.1.280 | `default` 模型改指 Claude Opus 5.5（Foundry 仍 Sonnet 4.5）；未指定模型的 session、routines 與排程任務跟著換 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或原本跑 Sonnet 的排程用 `/model sonnet` 固定 |
 | v2.1.277 | 移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效；背景任務輸出改用 Read 讀檔 | 破壞性變更 | 引用 TaskOutput 的 hook、skill 或權限規則要改寫 |
@@ -505,14 +505,14 @@ claude --desktop                          # 在目前目錄開啟桌面版
 
 **注意事項：** 企業 API 供應商限制的具體設定方式，官方原文於抓取時截斷，細節見 [[entities/claude-code]] 版本表與 Release 原文。
 
-### Claude Sonnet 5.5 成為 API 預設 Sonnet 模型
+### Claude Sonnet 5.5 成為 Claude Code `sonnet` 別名所指模型
 **發布：** 2026-09-28（v2.1.284） | **狀態：** 正式發布
 
-**是什麼：** Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Anthropic API 端的預設 Sonnet 模型；速度較前代快逾三成、多數工作成本降低最多三成，Terminal-Bench 4.0 代理編碼評測從 10.3% 拉到 70.6%。模型規格與牌價細節見 [[entities/sonnet-5-5]]。
+**是什麼：** Claude Sonnet 5.5 上線，取代 Sonnet 5 成為 Claude Code `sonnet` 別名所指模型（各方案預設仍是 Opus 5.5）；速度較前代快逾三成、多數工作成本降低最多三成，Terminal-Bench 4.0 代理編碼評測從 10.3% 拉到 70.6%。模型規格與牌價細節見 [[entities/sonnet-5-5]]。
 
-**為何熱：** 不動手也會改變你行為的預設值變更；路透將此次上線與 Anthropic 上市（IPO）籌備進度並列報導，加上 TechCrunch、VentureBeat 等媒體及 Hacker News、Reddit 社群同日跟進，合計至少 7 個來源同日報導。
+**為何熱：** 用 `sonnet` 別名的人不動手就會換到新模型；路透將此次上線與 Anthropic 上市（IPO）籌備進度並列報導，加上 TechCrunch、VentureBeat 等媒體及 Hacker News、Reddit 社群同日跟進，合計至少 7 個來源同日報導。
 
-**現在要試嗎：** 已是預設，無需主動嘗試；額度敏感或依賴 Sonnet 5 既有行為的排程任務，建議 `/model` 確認實際套用的模型。
+**現在要試嗎：** 不是預設（Claude Code 各方案預設 Opus 5.5）；要用就 `/model sonnet`（需 v2.1.284+），從 Sonnet 5 換來先看 [[entities/sonnet-5-5#從 Sonnet 5 換過來會壞什麼]]。
 
 **快速上手：**
 ```
@@ -520,7 +520,7 @@ claude --desktop                          # 在目前目錄開啟桌面版
 # 檢查目前 session 實際套用的模型
 ```
 
-**注意事項：** Claude Code CLI 本身的預設 Sonnet 是否同步換為 5.5、Sonnet 5 是否正式改列 Legacy，見 [[entities/sonnet-5]] 追蹤。
+**注意事項：** Claude Code 各方案預設是 Opus 5.5，Sonnet 5 已列 Legacy（官方 [model-config](https://code.claude.com/docs/en/model-config)，2026-11-05 查證），細節見 [[entities/sonnet-5-5]]。
 
 ### x-claude-code-prompt-id 閘道提示標頭
 **發布：** 2026-09-25（v2.1.283） | **狀態：** 正式發布
@@ -832,7 +832,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Sonnet 5.5 成為 Claude Code `sonnet` 別名所指模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **maxProseWidth 設定**（v2.1.282，限制寬終端機散文寬度） | 2026-09-24 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude apps gateway desktop policy 支援**（v2.1.281，新版 Desktop 金鑰可設讀取範圍與繞過權限模式） | 2026-09-23 | 🔥 | ⏳ 觀望 | 正式發布 |

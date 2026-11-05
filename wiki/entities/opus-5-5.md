@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-11-03"
+last_updated: "2026-11-05"
 last_news_update: "2026-11-03"
 status_main: "active"
 days_since_news: 2
@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 2
-inbound_links: 36
+inbound_links: 40
 attribution_count: 38
 attribution_last: "2026-11-03"
 top_source: "google-news"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-03
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-11-03
 
 > **社群調侃：Opus 5.5 撐過十月整月發布潮**（2026-11-03）
@@ -157,7 +157,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/opus-5]] — 前代次旗艦，官方已改列 Legacy，仍可用
 - [[entities/fable-5]] — 現任旗艦；官方稱 Opus 5.5 多數工作表現與其追平
 - [[entities/mythos]] — 同權重無護欄版
-- [[entities/sonnet-5]] — Claude Code 的整體預設，日常規模開發首選
+- [[entities/sonnet-5-5]] — 現行 Sonnet，Claude Code 裡用 `/model sonnet` 選；前代 [[entities/sonnet-5]] 已列 Legacy
 - [[entities/pricing]] — 牌價 $4／$20、快取讀取費率、Pro／Max 用量上限調高
 - [[topics/model-comparison]] — 這份工作該用哪個模型、換一個實付差多少
 - [[topics/model-task-leaderboard]] — 跨家排名，現在誰在前面

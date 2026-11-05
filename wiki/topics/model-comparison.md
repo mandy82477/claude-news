@@ -3,7 +3,7 @@ page: "topics/model-comparison"
 kind: "topic"
 status: "monitoring"
 domain: "🤖 模型"
-last_updated: "2026-11-01"
+last_updated: "2026-11-05"
 last_news_update: "2026-10-08"
 status_main: "monitoring"
 days_since_news: 28
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** monitoring
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-10-08
 
 > **Haiku 5.5 發布，取代 Haiku 4.5**（2026-10-08）
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Fable 5.1**（2026-09-01 取代 5.0）：官方定位 long-running agents／deep reasoning／安全漏洞分析（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）；不適合日常短任務（改 Sonnet 5.5）或前沿 LLM 開發（護欄行為未經 5.1 查證）。存取與定價見 [[entities/fable-5]]、[[entities/pricing]]。
 - **Opus 5.5**（2026-09-23 取代 Opus 5）：比日常大一級、不到跨多天；不適合日常規模開發（改 Sonnet 5.5）或跨多天極長任務（改 Fable 5.1）。官方基準表全項優於 Fable 5.1（2026-09-25 查證），見 [[entities/opus-5-5#這些數字是誰量的]]。
 - **Opus 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，官方改列 Legacy，新採用一律改用 Opus 5.5。見 [[entities/opus-5]]。
-- **Sonnet 5.5**（2026-09-28 取代 Sonnet 5）：官方稱「界定清楚的日常任務」首選；TB 4.0 由 10.3%→70.6%（官方，2026-09-28）。CLI 是否同步預設見 [[entities/sonnet-5-5]]。不適合跨數十檔 refactor（改 Opus 5.5）或延遲敏感批量（改 Haiku 5.5）。
+- **Sonnet 5.5**（2026-09-28 取代 Sonnet 5）：官方稱「界定清楚的日常任務」首選；TB 4.0 由 10.3%→70.6%（官方，2026-09-28）。Claude Code 用 `/model sonnet` 選（見 [[entities/sonnet-5-5]]）。不適合跨數十檔 refactor（改 Opus 5.5）或延遲敏感批量（改 Haiku 5.5）。
 - **Sonnet 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，新採用一律改用 Sonnet 5.5。見 [[entities/sonnet-5]]。
 - **Sonnet 4.6**：**$3 / $15 per Mtok、1M context、128k 輸出**（官方模型總覽頁，2026-08-20 查證；legacy 仍可用）。適合既有穩定工作流；不適合新專案——Sonnet 5.5 更便宜且效能更高，新專案一律選 Sonnet 5.5。見 [[entities/pricing]]。
 - **Haiku 5.5**（2026-10-07 取代 Haiku 4.5）：官方定位最便宜、最快的小型模型，面向高流量成本敏感任務；與 Opus 5.5／Sonnet 5.5 搭配作編碼 subagent，平均成本比 Haiku 4.5 降約 75%（平均值，>100K 分段價見 [[entities/haiku-5-5#實付成本]]）；不適合多步驟深度推理（改 Sonnet 5.5）。
@@ -73,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你的情境 | 建議 | 依據 |
 |---------|------|------|
-| Claude Code 日常開發 | **Sonnet 5.5** | 官方 coding／agents 主力定位；Anthropic API 預設 Sonnet（2026-09-28 起），CLI 本身是否同步見 [[entities/sonnet-5-5]] |
+| Claude Code 日常開發 | **Sonnet 5.5** | 官方 coding／agents 主力定位；Claude Code 預設是 Opus 5.5，用 `/model sonnet` 切換（2026-11-05 查證，見 [[entities/sonnet-5-5]]）|
 | 想接近旗艦效能但成本降四成 | **Opus 5.5** | 官方稱多數工作表現追平 Fable 5.1、運算成本降 40%（相對 Opus 5，2026-09-23）；官方基準表已公布，見選型細節 |
 | 跨多天的複雜 agentic 任務 | **Fable 5.1** | 917 場景以 0.9 分險勝 Opus 4.8（5.0 世代數據，5.1 尚無同口徑對照），但 token 約 2 倍 |
 | 資安審查 / 漏洞分析 | **Fable 5.1**（首選）→ 次選 **Opus 5.5** | Fable 5.1 能力最強惟有分類器誤判；Mythos 5.1 非公開選項 |
@@ -82,7 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 情境推薦細節
 
-- **Claude Code 日常開發**：官方定位為 coding／agents 主力（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）；[[entities/sonnet-5-5|Sonnet 5.5]] 為 API 預設 Sonnet（v2.1.284，09-28，CLI 是否同步見 [[entities/sonnet-5-5]]）；1M context。
+- **Claude Code 日常開發**：官方定位為 coding／agents 主力（[choosing-a-model](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)）；[[entities/sonnet-5-5|Sonnet 5.5]] 是 Claude Code `sonnet` 別名所指（需 v2.1.284 以上；各方案預設為 Opus 5.5，官方 model-config 2026-11-05 查證）；1M context。
 - **想接近旗艦效能但成本降四成**：官方稱 Opus 5.5 多數工作表現追平 Fable 5.1、運算成本較 Opus 5 降 40%（2026-09-23）；官方基準表全項優於 Fable 5.1（2026-09-25 查證，見 [[entities/opus-5-5#這些數字是誰量的]]）。
 - **跨多天的複雜 agentic 任務**：官方定位 long-running agents；917 場景以 0.9 分之差略勝 Opus 4.8（Reddit，2026-06-12，5.0 世代數據），但 token 約 2 倍，需連成本一起讀。
 - **資安審查 / 漏洞分析**：Fable 5.1 能力最強，但 5.0 世代 07-02 起有 Defense in Depth 分類器誤判實測（5.1 是否延續未經查證）；Opus 5.5 隨附資安防護機制強化（The Verge，2026-09-23），惟 Mythos 5.1 非公開選項，不構成 Fable 5.1 首選的淘汰理由。
@@ -148,8 +148,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 風險 | 目前說法與證據強度 | 來源（日期） | 出口與建議 |
 |------|------------------|-------------|-----------|
-| Sonnet 5→5.5 升級行為差異 | 稱五種情境有差異、一種無錯誤訊息靜默失敗；原文僅標題可讀 | MIXED Reality News（2026-09-30） | 情境未載，升級前跑自己的回歸；見 [[entities/sonnet-5-5#你現在拿到的是什麼]] |
-| Sonnet 5.5 工作階段被降回 Sonnet 5 | 稱未主動輸入也可能被降回；觸發條件、範圍、可否關閉皆未載 | mixed-news.com（2026-10-01） | 核對實際跑的模型；釘選不一定成立，見 [[topics/code-quality-decline]] |
 | Haiku 5.5 的 Priority Tier 可用性 | 標題稱取代 Haiku 4.5 但 Priority Tier 未隨附；原文僅標題可讀 | MIXED Reality News（2026-10-07） | 細節未載，倚賴 Priority Tier 的流程升級前先向官方確認；見 [[entities/haiku-5-5]] |
 | 換代的實付成本 | Claude 4.7 起新 tokenizer 約多 30% token，牌價相同花費不同 | 官方定價頁（2026-08-29 查證） | 成本表在 [[#換代的實付成本：牌價相同不等於花費相同]]，遷移前用 `count_tokens` 量 |
 | Haiku 4.5 退役倒數 | 退役下限 2026-10-15（距 2026-10-11 剩 4 天），是下限非確定停用日；寫死 `claude-haiku-4-5` 的 agent 要改 | 官方 models overview（2026-10-03 查證） | 改用 Haiku 5.5，成本換算見 [[entities/haiku-5-5#實付成本]] |
@@ -157,7 +155,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **表下細節**
 
 - **Sonnet 4.5 退役**：2026-11-30 退役已官方確認（見上方 callout 與下方時序），仍用 4.5 者應儘速遷移。Foundry 的 `default` 仍指 Sonnet 4.5（2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
-- **升級行為差異與降回**：兩則皆只有標題可讀，Sonnet 5.5 頁各存一筆原文連結與日期；官方 migration guide 對 5→5.5 的記載尚不完整，本頁不推算具體情境。
+- **Sonnet 5→5.5 升級會壞什麼、請求被改跑 Sonnet 5**：兩則已於 2026-11-05 經官方文件查證，不再列入本表；逐項與關法見 [[entities/sonnet-5-5#從 Sonnet 5 換過來會壞什麼]]。
 
 ### 各模型現行行為限制與輸出標記
 

@@ -15,6 +15,7 @@
 | `wiki/entities/opus-4-7.md` | Opus 4.7 後續、思考深度議題 |
 | `wiki/entities/mythos.md` | Mythos 漏洞更新、安全模型動態 |
 | `wiki/entities/sonnet-5.md` | Sonnet 5 動態、評測、預設模型變化 |
+| `wiki/entities/sonnet-5-5.md` | Sonnet 5.5 動態、官方 What's new／migration guide／Claude Code model-config 的變動（預設、`sonnet` 別名、effort 預設、自動 fallback）、官方基準與社群實測。**費率不在本頁**（家是 [[entities/pricing]]），表格契約見 `pages.md`「entities/sonnet-5-5 的五節」 |
 | `wiki/entities/opus-5.md` | Opus 5 世代動態、官方基準與社群實測的對照、Legacy 與退役時程。**跨家分數不在本頁**（家是 [[topics/model-task-leaderboard]]），本頁只留一句結論與出口 |
 | `wiki/topics/model-comparison.md` | 任一模型發布/下線/狀態/定價/預設變更（見下方「選型對照同步」）|
 
