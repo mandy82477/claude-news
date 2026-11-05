@@ -14,7 +14,7 @@
 | 近期新增 L46–65、近期退出 L67–76 | 31 | **砍**（裁決 3） | 每條都在表上有列；L59 Samsung「跨 2」已與表「跨 3」漂 |
 | 計數口徑 L78 | 1 | 砍 | 一家一列後計數＝數狀態欄；條文進 pages.md「摘要」段 |
 | L80、L82 | 2 | 砍（裁決 3） | L80 與 ⟨Q-03⟩ 衝突；L82 的 06 淨變化家在 06 總結（原 L322–331） |
-| 現況表（86–152） | 67 | 留；**一家一列**（59 列／50 家→48 列）；原字 30 列、改寫 12 列（7 列是併後的新列）、併入 9 列、移出 8 列、新增 6 列，依確認日期重排 | 表頭 L92 一字不改；逐列見第三節 |
+| 現況表（86–152） | 67 | 留；**一家一列**（59 列／50 家→48 列）；原字 26 列、行內小改 4 列、改寫 12 列（7 列是併後的新列）、併入 9 列、移出 8 列、新增 6 列，依確認日期重排 | 表頭 L92 一字不改；逐列見第三節 |
 | 使用現況細節（154–177） | 24 | **併進時序**（裁決 4） | 12 條照搬到同日條目下；5 條（08 月）隨時段進 archive；6 條與時序或表重複者砍；標題砍 |
 | 懸置細節（179–183） | 5 | 留；L179 標題改「已查證的三件事」＋⟨Q-nn⟩ 圖例 | 冷讀者外洩 #8 |
 | 工具競爭態勢＋採用企業清單（187–201） | 18 | **砍**（裁決 5） | 指路句進選型影響第 7 條；計數漂移證據見健檢卡 §0-4 |
@@ -26,7 +26,7 @@
 | 相關實體、參考來源（351–366） | 16 | 留；相關實體加 partnerships-compute、market-signals-customers | — |
 | archive（151 行） | — | H1、最後更新改；末尾 append `## 2026-08`（43 行） | 原 151 行一字不刪（`verify.py` 第 3 項） |
 
-改後主頁 259 行（正文 234），archive 194 行。原 366 行去向：M 212（含 M 改 5）／A 41（含 A 改 2）／改 22／併入 9／砍 81／結構 1。
+改後主頁 259 行（正文 234），archive 194 行。原 366 行去向：M 212（含 M 改 10）／A 41（含 A 改 2）／改 22／併入 9／砍 81／結構 1。
 
 ## 二、逐段去向（`make_map.py` 產出）
 
@@ -56,7 +56,8 @@
 | 90 | 1 | 改：確認日期＋一家一列 | > 確認日期：媒體報導或消息來源的日期 |
 | 91–93 | 3 | M | ／ 企業 ／ 規模 ／ AI 編碼工具 ／ 狀態 ／ 事件日期 ／  |
 | 94 | 1 | 改：一家一列新列 | ／ Goldman Sachs ／ 頂尖 ／ Claude Code |
-| 95–97 | 3 | M | ／ Replit ／ 大型（AI 編碼/應用開發平台） ／ Clau |
+| 95 | 1 | M（改） | ／ Replit ／ 大型（AI 編碼/應用開發平台） ／ Clau |
+| 96–97 | 2 | M | ／ Accenture ／ 頂尖（全球諮詢巨頭，Anthropic「 |
 | 98 | 1 | 改：一家一列新列 | ／ Epic Games ／ 頂尖（遊戲引擎大廠，Unreal En |
 | 99 | 1 | 改：一家一列新列 | ／ Barclays ／ 頂尖（英國環球銀行） ／ Claude C |
 | 100 | 1 | 改：一家一列新列 | ／ JPMorgan Chase（美國本部） ／ 頂尖 ／ Clau |
@@ -64,12 +65,15 @@
 | 102 | 1 | 改：一家一列新列 | ／ Rubrik（NYSE: RBRK） ／ 大型 ／ Claude |
 | 103–104 | 2 | M | ／ T. Rowe Price ／ 大型（全球資產管理公司） ／ C |
 | 105 | 1 | 改：一家一列新列 | ／ Shopify ／ 頂尖 ／ Claude Code ／ ❓ ／ |
-| 106 | 1 | M | ／ ReliaQuest ／ 大型（資安廠商） ／ Claude A |
+| 106 | 1 | M（改） | ／ ReliaQuest ／ 大型（資安廠商） ／ Claude A |
 | 107 | 1 | 併入：P94 新列 | ／ Goldman Sachs ／ 頂尖 ／ Claude AI ／ |
 | 108 | 1 | 改：一家一列新列 | ／ OKX ／ 大型（加密貨幣交易平台） ／ Claude AI ／ |
-| 109–113 | 5 | M | ／ Payward（Kraken 母公司） ／ 大型（全球加密貨幣交 |
+| 109–110 | 2 | M | ／ Payward（Kraken 母公司） ／ 大型（全球加密貨幣交 |
+| 111 | 1 | M（改） | ／ Samsung ／ 頂尖 ／ Claude Code ／ ✅ ／ |
+| 112–113 | 2 | M | ／ Syracuse University ／ 大型（高等教育機構） |
 | 114 | 1 | 砍：通路夥伴，Cognizant → pc L207 07 月彙整；原始條目 business-archive L336、L367（附 anthropic.com/news/cognizant-anthropic） | ／ Cognizant ／ 頂尖 ／ Claude API ／ ✅  |
-| 115–117 | 3 | M | ／ Grasshopper Bank ／ 中型（銀行，聚焦金融科技產 |
+| 115–116 | 2 | M | ／ Grasshopper Bank ／ 中型（銀行，聚焦金融科技產 |
+| 117 | 1 | M（改） | ／ Meta ／ 頂尖 ／ Claude Code ／ ⚠️ ／ — |
 | 118 | 1 | 改：一家一列新列 | ／ Microsoft ／ 頂尖 ／ Claude（泛指內部整體使用 |
 | 119–120 | 2 | M | ／ Alibaba ／ 頂尖 ／ Claude Code → Qod |
 | 121 | 1 | 改：一家一列新列 | ／ 加州州政府 ／ 政府（州級） ／ Claude API ／ ✅  |
@@ -134,7 +138,9 @@
 | 324 | 1 | M（改） | - **Partner Network 密集擴張（06-09～06- |
 | 325–326 | 2 | M | - **產品/平台整合案例**：Atlassian Claude A |
 | 327 | 1 | M（改） | - **JPMorgan Chase 香港出口管制退出（06-18～ |
-| 328–366 | 39 | M | - **Lindy 100% 切換至 DeepSeek（06-29） |
+| 328–334 | 7 | M | - **Lindy 100% 切換至 DeepSeek（06-29） |
+| 335 | 1 | M（改） | - **2026-05-27**：Uber COO 確認 25% 生 |
+| 336–366 | 31 | M | - **2026-05-25**：Microsoft 宣布原訂 6/ |
 
 ## 三、主表一家一列：逐列帳
 
@@ -142,7 +148,7 @@
 - **改寫但不併 5 列**：L98 Epic（確認日改 10-29，括號首見 10-12，排序才對）；L99 Barclays（verified #1：「預期，非已達成」＋12 萬封／日、1.6 萬人）；L105 Shopify（確認日期格原填來源名，改 08-26；健檢卡 §3 格式漂移）；L108 OKX（「成因未明」與 ⟨Q-03⟩ 衝突，改「Anthropic 區域存取政策」）；L121 加州（刪指向拆頁前舊家 anthropic-business 的括號）。
 - **移出 8 列（通路夥伴，裁決 2；判準見 proposal §2）**：Cognizant L114、Globant L122、DataArt L123、Okta L124、DXC L131、Fujitsu L144、Nimble Gravity L146、KPMG L150。前 7 家的家已在 partnerships-compute L207／L208 彙整句與 business-archive 原始條目，本波**不改 partnerships-compute 任何一行**；Nimble Gravity 見 N3。
 - **新增 6 列（裁決 8）**：Nvidia、Palantir、Booz Allen（09-14；出處 ai-agent-safety-product-vulns L380、market-signals-customers L525–529；Palantir 另引 partnerships-compute L298 11-01）、Novo Nordisk（09-16；partnerships-compute L165）、Charles Schwab、Orion（09-14；partnerships-compute L167、L323）。三家限縮的官方懸置標記住 customers L525（複 11-30），本頁不另開標記、不複製。
-- **原字留 30 列**；狀態語意改後重數：✅ 35／⚠️ 7（Meta、Microsoft、Uber、Nvidia、Palantir、Booz Allen、Replit 有爭議）／❌ 3（Goldman、OKX、Alibaba）／🔄 1（Lindy）／❓ 2（參議院、Shopify）。舊摘要「6 家退出」裡的 Microsoft 改計 ⚠️（合約未取消、仍是投資人與通路），JPMorgan 計 ✅（香港寫備註）。
+- **原字留 26 列、行內小改 4 列**（Replit、ReliaQuest、Samsung、Meta 的「下方細節」改「細節見時序」，評審 🔴1）；狀態語意改後重數：✅ 35／⚠️ 7（Meta、Microsoft、Uber、Nvidia、Palantir、Booz Allen、Replit 有爭議）／❌ 3（Goldman、OKX、Alibaba）／🔄 1（Lindy）／❓ 2（參議院、Shopify）。舊摘要「6 家退出」裡的 Microsoft 改計 ⚠️（合約未取消、仍是投資人與通路），JPMorgan 計 ✅（香港寫備註）。
 - 網站矩陣（`parse_enterprise_tracker()` 實跑）：改前 59 列／51 家（Rubrik 3 列同鍵、06-09 蓋 06-30）×24 工具欄、58 格；改後 48 列／48 家 ×27 工具欄、48 格，同鍵覆蓋消失。工具欄寫法詞彙與稀疏表仍屬程式工作（裁決 10）。
 
 ## 四、cell 與 reader 兩閘搬家清單（`moves.py`，改前 `tmp_before`＝HEAD 工作樹）

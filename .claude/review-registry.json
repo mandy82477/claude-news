@@ -173,6 +173,11 @@
       "label": "蒐集邊界欄位（跨家榜單涵蓋範圍）——主題延伸到 Claude/Anthropic 之外的頁面必須誠實標示會漏什麼，欄位被刪＝讀者又看不出缺口",
       "pattern": "\\*\\*蒐集邊界：\\*\\*",
       "file": "wiki/topics/model-task-leaderboard.md"
+    },
+    {
+      "label": "企業採用主表表頭——scripts/build_web.py parse_enterprise_tracker() 以「企業」＋「AI 編碼工具」找表，改字網站企業矩陣靜默變空（第 25 波）",
+      "pattern": "\\| 企業 \\| 規模 \\| AI 編碼工具 \\| 狀態 \\| 事件日期 \\| 備註 \\| 確認日期 \\|",
+      "file": "wiki/topics/enterprise-tool-tracker.md"
     }
   ],
   "sync_pairs": [

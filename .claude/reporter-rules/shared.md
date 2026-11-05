@@ -134,7 +134,7 @@ gathered_items.json 的 score_unit 標明單位（分/讚/留言），不可跨�
 
 | 類別 | 自查項目 |
 |------|---------|
-| 商業 | 出現具名企業採用/退出/切換 → `enterprise-tool-tracker.md` 已同步新增列？定價變動 → `pricing.md` 已更新？ |
+| 商業 | 出現具名企業自己用 Claude 的採用/減用/退出/切換 → `enterprise-tool-tracker.md` 已新增或更新該公司那一列（一家一列；通路夥伴不開列）？定價變動 → `pricing.md` 已更新？ |
 | 模型 | 模型定價出現 → 已留給商業記者並加 pricing wikilink？模型狀態變更 → 已列入回報的 index.md 狀態變更欄？ |
 | 功能 | 功能異動 → `official-community-gap.md` 矩陣是否受影響？官方新功能 → 產品化矩陣已檢查？重大 bug → `claude-code.md` 已知問題已記錄並連結對應 topic？ |
 | 安全政策 | 安全事件涉及 Claude Code 功能面 → 已在回報中註明「請主編轉知功能記者」？ |

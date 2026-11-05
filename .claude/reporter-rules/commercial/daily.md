@@ -12,9 +12,9 @@
 |------|---------|
 | `wiki/topics/anthropic-business.md`（母頁） | 公司動態（辦公室、雇主排名、經濟研究、組織文化）；`## 現在的數字` 指標換值；`## IPO 走到哪一格` 一句結論（五格表換值時同批）；子線路由表「最後動態」。其餘商業事件寫進下面三子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
 | `wiki/topics/anthropic-ipo.md`（子頁「上市與財報」） | **IPO 與估值進程**、融資輪次、**公司層級財務數字**、治理與股權（五格表、S-1 揭露表、數字細節住這頁） |
-| `wiki/topics/anthropic-partnerships-compute.md`（子頁「合作與算力」） | 戰略合作、收購、算力合約與資本支出、政府採購、具名企業導入（採用率指數換值寫母頁 `## 現在的數字`） |
+| `wiki/topics/anthropic-partnerships-compute.md`（子頁「合作與算力」） | 戰略合作、收購、算力合約與資本支出、政府採購、通路夥伴（採用率指數換值寫母頁 `## 現在的數字`；企業自己用 Claude 寫 enterprise-tool-tracker） |
 | `wiki/topics/anthropic-business-risks.md`（子頁「風險與商業模式」） | **公司層級商業風險**（訴訟、企業退出、補貼結構）、商業模式、PMF 訊號 |
-| `wiki/topics/enterprise-tool-tracker.md` | 具名企業採用 / 退出 AI 編碼工具；企業工具切換報導（含有規模描述的匿名企業）；企業 AI 工具預算或成本相關的具名案例 |
+| `wiki/topics/enterprise-tool-tracker.md` | 具名企業或機構自己用 Claude（含 Claude Code）的採用、擴大、減用、退出或被切斷；企業工具切換報導（含有規模描述的匿名企業，只進時序）；通路夥伴不收（→ partnerships-compute） |
 | `wiki/topics/enterprise-cost-management.md` | 企業規模成本挑戰、具名案例 |
 | `wiki/entities/pricing.md`（母頁） | 訂閱方案、牌價、生效規則、還沒確定的計費變動等現行事實；子頁路由表「最後動態」。事故與沿革寫進下面兩子頁（路由見 `.claude/reporter-rules/commercial/pages.md` 該節第 0 條） |
 | `wiki/entities/pricing-incidents.md`（子頁「計費事故」） | 計費事故與爭議、額度與速率異常回報、灰色市場與轉售；`## 還在發生的事故` 表 |

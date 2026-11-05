@@ -72,7 +72,7 @@
 | 閘 | 改前 | 改後（原樣） | 驗紅／看守 |
 |---|---|---|---|
 | `build.py` 防呆 | — | `ok {'main': 259, 'archive': 194}` | 對改後樹跑 → `AssertionError: … 自設計 commit e90dace 後被改過`（redtest 1） |
-| `verify.py` | — | `照搬行逐字核對 155 行；懸置標記 0→0；表 59 列/50 家 → 48 列/家（通路移出 8）`、`結論：OK` | 刪 ⟨Q-02⟩ 定義 → `⟨Q⟩ 引用與定義不成對`、FAIL；刪 Apple 列 → FAIL（redtest 2、3） |
+| `verify.py` | — | `照搬行逐字核對 150 行（評審修法後）；懸置標記 0→0；表 59 列/50 家 → 48 列/家（通路移出 8）`、`結論：OK` | 刪 ⟨Q-02⟩ 定義 → `⟨Q⟩ 引用與定義不成對`、FAIL；刪 Apple 列 → FAIL（redtest 2、3） |
 | `gen_wiki_frontmatter.py` | exit 0 | exit 0 | — |
 | `check_hierarchy.py` | `✅ 通過（32 個母頁）` | `✅ 通過（32 個母頁）` | — |
 | `check_pending_markers.py` | 220 筆（基線 212）✅ | 220 筆（基線 212）✅；本頁 0→0 | 不需 `--rebuild-count` |

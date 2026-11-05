@@ -135,7 +135,7 @@
 | [[topics/anthropic-product-matrix]] | 🛠️ 工具/功能 | ongoing | 產品 × 功能對照表：Claude app、Claude Code、Tag、Platform、Duet 五欄 × 15 項功能，每格附官方來源；產品專屬功能與專用版另列 |
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
 | [[topics/enterprise-cost-management]] | 💼 商業 | ongoing | 企業規模採用 Claude 的成本結構挑戰：Uber/Microsoft 案例、缺失工具、因應策略；Bank of America 雇千名約聘人員修補 Mythos 掃出的漏洞　↳ 子故事：[[topics/enterprise-cost-management-archive]] |
-| [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
+| [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 哪些大企業在用、減用或退出 Claude，一家一列（通路夥伴在合作算力頁）　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 的錢現在怎樣：指標表與 IPO 一句；往下鑽合作與算力（含跟 Google／Amazon／Microsoft 的關係）、風險與商業模式、上市與財報　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-business-risks]]、[[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日，判讀分四條子線）：先列買得到的標的，再照分析師六問逐則判，兩週後結算（教學型事件研究，非投資建議；事實在商業各頁）　↳ 子故事：[[topics/market-signals-compute]]、[[topics/market-signals-customers]]、[[topics/market-signals-ipo]]、[[topics/market-signals-legal]] |
 | [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |

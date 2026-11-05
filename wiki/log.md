@@ -8576,3 +8576,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [投資分析] daily.md 第 1、2 類「唯一能定價的文件」措辭已因 S-1/A 公開過時，下次規則沿革建議改對齊「S-1/A 修正版 vs 首份季報」分水嶺
   - [商業] 時序類別標籤詞表提案（46 種變體→10 個封閉詞表），交主編裁決是否寫入 `.claude/reporter-rules/commercial/pages.md` 第 7 條
   - [社群] H-18d3f4 產品化矩陣新增列建議，待功能記者下輪評估歸屬頁面
+
+## 2026-11-05 Query（第 25 波頁面健檢——enterprise-tool-tracker 改為「誰在用、誰減用」一家一列）
+
+- 裁決（主 session 自決，使用者授權；十點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-04／11-05 兩條）：[[topics/enterprise-tool-tracker]] 改名「大型企業 Claude 採用追蹤：誰在用、誰減用」，使命句按買方收一般導入（含 Claude Code，不收窄成編碼工具）；主表 59 列／50 家改為一家一列 48 列（表頭不變），摘要家數由表重數（使用中 35／縮減 7／退出或被切斷 3／切換 1／未確認 2）；通路夥伴 8 家移出（事實已住 [[topics/anthropic-partnerships-compute]]），補 Nvidia、Palantir、Booz Allen、Novo Nordisk、Schwab、Orion；摘要兩串清單、手算工具計數表、市場分層觀察砍除，細節併入時序；「對 agent 開發者的選型影響」延伸為 7 條、每條附撐腰的列；08 月蒸進 [[topics/enterprise-tool-tracker-archive]]；366→259 行。照搬 150 行逐字核對、懸置 0→0。
+- 主編查證（2026-11-04，anthropic.com/news）：Barclays 10-01 官方稿，50% 為預期、另有 12 萬封／日郵件分流與 1.6 萬名員工；Accenture 內嵌評估 09-18、雙方各 ≥$10 億／五年；Cognizant「官方公告」官方索引查無，改等級；Microsoft 三列併一，內部使用與投資／通路分開寫並指合作算力頁三大雲表；香港斷線「出口管制」錯句改正。
+- 規則面：`commercial/pages.md` 本頁節（通路判準「寫得出這家自己怎麼用 Claude 嗎」、一家一列、換狀態同批重數家數）、`commercial/daily.md`、`shared.md` 自查句、review-registry；index 鉤子主編同波改。
+- 轉知帳本：新開 H-d43749（→投資分析，market-signals-customers JPMorgan／Accenture／Replit 口徑對齊、狀態只指本頁）、H-b86355（→投資分析，market-signals 母頁 Globant 改指合作算力頁）。
+- 閘：cell 與讀者語言閘本波 0 筆新增，`run_tests` exit 0（不需本機重建基線）；網站企業矩陣 59→48 列，同鍵覆蓋問題隨一家一列消失。
+- 歸因 user-query／商業

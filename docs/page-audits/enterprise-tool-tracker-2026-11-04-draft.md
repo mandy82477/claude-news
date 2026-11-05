@@ -31,12 +31,12 @@
 
 改寫列（左欄＝原行；併入列見 map 第二節）：
 
-- L94：`| Goldman Sachs | 頂尖 | Claude Code ＋ GitHub；Claude AI（香港） | ❌ | — | 11-02 報導全面禁止行員用 Claude Code 與 GitHub，範圍與生效時間未見；08-20 香港先被切斷，屬 Anthropic 區域存取政策（⟨Q-03⟩） | 2026-11-02 |`
-- L98：`| Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code ＋ Codex | ✅ | 2026-10-12 | TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見下方 | 2026-10-29（首見 2026-10-12） |`
+- L94：`| Goldman Sachs | 頂尖 | Claude Code；Claude AI（香港） | ❌ | — | 11-02 報導全面禁止行員用 Claude Code 與 GitHub，範圍與生效時間未見；08-20 香港先被切斷，屬 Anthropic 區域存取政策（⟨Q-03⟩） | 2026-11-02 |`
+- L98：`| Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code ＋ Codex | ✅ | 2026-10-12 | TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見時序 | 2026-10-29（首見 2026-10-12） |`
 - L99：`| Barclays | 頂尖（英國環球銀行） | Claude Code；Claude（營運） | ✅ | — | 官方 10-01：預期 2026 年底半數開發者用 Claude Code、2027 年擴及多數工程師（目標，非已達成）；郵件分流約 12 萬封／日、1.6 萬人用於知識檢索 | 2026-10-01 |`
 - L100：`| JPMorgan Chase | 頂尖 | Claude Code（美國本部）；Claude API（香港分行） | ✅ | — | 美國本部 8 月約 8,000 人持授權，部分工程師每月 $2,000 上限；香港分行 06-18 因出口管制停用，06-30 管制解除後是否恢復未見 | 2026-09-17 |`
 - L102：`| Rubrik（NYSE: RBRK） | 大型 | Claude Code；Claude Mythos 5 | ✅ | 2026-06-09 | 06-09 Agent Cloud for Claude Code、06-30 Claude Code 安全層、09-15 Code Guardian 用 Mythos 5 做程式碼紅隊測試 | 2026-10-09 |`
-- L105：`| Shopify | 頂尖 | Claude Code | ❓ | — | 執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節） | 2026-08-26 |`
+- L105：`| Shopify | 頂尖 | Claude Code | ❓ | — | 執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（細節見時序） | 2026-08-26 |`
 - L108：`| OKX | 大型（加密貨幣交易平台） | Claude AI | ❌ | — | 與高盛同批：香港被切斷 Claude AI 存取權限，屬 Anthropic 區域存取政策（⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]] | 2026-08-20 |`
 - L118：`| Microsoft | 頂尖 | Claude Code → GitHub Copilot；Claude（內部整體） | ⚠️ | 2026-06-21 | 06-21 起停用 Claude Code、改推 Copilot；10-05 內部 Claude 支出砍逾三分之一（已查證 2026-10-07），合約未取消 | 2026-10-05 |`
 - L121：`| 加州州政府 | 政府（州級） | Claude API | ✅ | 2026-06-29 | 州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例 | 2026-06-29 |`
@@ -63,11 +63,11 @@
 
 ### E. 選型影響（L215 → 七條）
 
-    - **退出不等於 Claude 不好用**：減用最多的 Meta、Microsoft 都自己賣編碼工具（Muse Code、GitHub Copilot），同期 Google 開放全體工程師使用、Amazon 雙軌並行；「自研夠強所以退」目前沒有證據。
+    - **退出不等於 Claude 不好用**：減用有數字的 Meta、Microsoft 都自己賣編碼工具（Muse Code、GitHub Copilot），而 Google（09-15）開放全體工程師使用、Amazon（05-05 起）雙軌並行；「自研夠強所以退」目前沒有證據。
     - **讀數字先問主詞與基期**：10-05 Meta 的數字是 Claude Code 使用人數、Microsoft 的是全部 Claude 花費，拆法見 [[#2026-10-05]]。
-    - **大公司多半不押單一供應商**：表上明寫並用他家的有 Amazon、UiPath、Epic Games（＋Codex）與 Uber（＋Cursor）；其餘只寫用了 Claude，有沒有並用目前沒有證據。
-    - **按量計費的 Claude Code 會被設上限**：Accenture 每月 $29、JPMorgan 部分工程師每月 $2,000、Uber 燒完全年預算後設上限；API 自建應用的控管案例本頁沒有，機制見 [[topics/enterprise-cost-management]]。
-    - **資料保留是限縮的具名理由**：09-14 Nvidia、Palantir、Booz Allen 都以資料外洩疑慮限縮，Palantir 要求零資料保留；官方保留政策見 [[topics/ai-agent-safety-product-vulns]]。
+    - **大公司多半不押單一供應商**：表上明寫並用他家的有 Amazon、UiPath、Epic Games（＋Codex）與 Uber（＋Cursor），Notion 則在自家產品同時接 Claude 與 Cursor；其餘只寫用了 Claude，有沒有並用目前沒有證據。
+    - **員工的 Claude 用量會被設上限**：Accenture 報銷每月 $29（是否限 Claude Code 未見）、JPMorgan 部分工程師 Claude Code 每月 $2,000、Uber 燒完全年預算後設上限；API 自建應用的控管案例本頁沒有，機制見 [[topics/enterprise-cost-management]]。
+    - **資料保留是限縮的具名理由**：09-14 The Information 稱 Nvidia、Palantir、Booz Allen 都因資料外洩疑慮限縮（官方未回應個案），Palantir 要求零資料保留；官方保留政策見 [[topics/ai-agent-safety-product-vulns]]。
     - **可用性可能不由你決定**：香港兩起切斷（06-18 出口管制、08-20 區域存取）與 Pentagon 黑名單都是別人劃的線；在這些地區或產業，先備好換得了供應商的工作流（推論，見 [[topics/anthropic-business-risks]]）。
     - **工具之間誰搶誰**：Codex、Copilot、Cursor 的企業攻勢本頁不另計數，見 [[topics/competitor-landscape]]（Microsoft 轉向見 [[topics/competitor-landscape#Microsoft／GitHub]]）。
 
@@ -83,6 +83,11 @@
 | 297 | `### 2026-08-14` | `#### 2026-08-14` |
 | 324 | `（詳見 [[topics/anthropic-business]]）` | `（詳見 [[topics/anthropic-partnerships-compute]]）` |
 | 327 | `成因已於下方 ⟨Q-03⟩ 查證` | `成因已於上方 ⟨Q-03⟩ 查證` |
+| 95 | `細節見下方` | `細節見時序` |
+| 106 | `（詳見下方細節）` | `（細節見時序）` |
+| 111 | `（詳見下方細節）` | `（細節見時序）` |
+| 117 | `細節見下方` | `細節見時序` |
+| 335 | `富士通、Travelport+Cognizant、Nimble Gravity 三案新增採用（詳見上方使用現況表）` | `Travelport+Cognizant 新增採用（見上方表）；富士通、Nimble Gravity 屬通路夥伴` |
 
 ### G. 08 月總結（取代 L274–310；原文照搬進 archive `## 2026-08`，L173–177 細節依日期插在該日條目下）
 

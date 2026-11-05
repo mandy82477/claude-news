@@ -3,14 +3,14 @@ page: "topics/enterprise-tool-tracker-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "💼 商業"
-last_updated: "2026-10-25"
+last_updated: "2026-11-04"
 last_news_update: "2026-05-27"
 status_main: "resolved"
-days_since_news: 161
+days_since_news: 162
 parent: "topics/enterprise-tool-tracker"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 161
+days_since_news_subtree: 162
 inbound_links: 0
 attribution_count: 0
 attribution_last: null
@@ -23,13 +23,13 @@ staleness_exempt: null
 signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
-# 大型企業 AI 編碼工具使用追蹤 — 原始條目封存
+# 大型企業 Claude 採用追蹤 — 原始條目封存
 
 **狀態：** resolved（封存頁）
 **領域：** 💼 商業
 **上層：** [[topics/enterprise-tool-tracker]]
 **開始日期：** 2026-05-26
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-04
 **最後新聞更新：** 2026-05-27
 
 > 本頁是 [[topics/enterprise-tool-tracker]] 的原始條目封存，重點層（企業工具使用現況表、摘要）都在主頁。
@@ -149,3 +149,46 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-06-02
 - **Uber 燒完整年預算**：Space Daily 確認 Uber 四個月燒完 2026 整年 AI 工具預算（Claude Code + Cursor）；與 COO 5/27 確認的 25% 生產力提升形成「效果好但成本更好」的矛盾敘事（Microsoft 退出後續進度已由 06-21/06-22 條目取代，見上方）
+
+## 2026-08
+
+#### 2026-08-26
+- **[❓ 未確認，新增追蹤] Shopify 執行長 Tobi Lütke 揚言封殺 Claude Code；The New Stack 指出 Anthropic 早已關閉相關功能請求**：analyticsindiamag.com、The New Stack 報導，僅標題層級可用，具體爭議緣由未見報導；尚未見官方確認實際執行封鎖，詳見上方使用現況表新增列（Google News/analyticsindiamag.com；Google News/The New Stack）
+- **Shopify（08-26）**：analyticsindiamag.com、The New Stack 報導 Shopify 執行長 Tobi Lütke 揚言封殺（"ban"）Claude Code；The New Stack 另指出 Anthropic 早已關閉（closed）相關功能請求（僅標題層級資訊）
+  - **對商業與生態的意涵**：本頁首見具名科技公司高層公開揚言封殺 Claude Code 的案例，區別於既有退出案例多為成本（Microsoft）、出口管制（JPMorgan）、安全疑慮（Alibaba）三類理由；爭議緣由、封鎖範圍均未見報導細節，Shopify 官方未確認實際執行封鎖，暫標「未確認」而非「已退出」（推論）
+
+#### 2026-08-25
+- **[三度確認，非新事實] TechRadar：Samsung 認為 Claude Code 有助晶片設計，惟仍會犯重大錯誤**：與 08-14/08-15 既有記錄同一事實的第三方媒體再確認，未見新增數字或細節，詳見上方使用現況表 Samsung 列更新（Google News/TechRadar）
+
+#### 2026-08-22
+- **[✅ 新增企業採用，資安廠商深化整合] TipRanks：ReliaQuest 深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環**：僅標題層級可用，詳見上方使用現況表新增列（Google News/TipRanks）
+- **ReliaQuest（08-22）**：TipRanks 報導資安廠商 ReliaQuest 深化與 Anthropic 技術整合，作為其去 SIEM 化（SIEM-less）資安策略一環（僅標題層級資訊）
+  - 延續近期 Cyberhaven（07-23）、Orca Security（07-21）、Tenable（06-29）等資安廠商整合 Claude Compliance API 的既有生態擴張模式（推論），惟本則整合範疇更廣（去 SIEM 化整體策略，非單一 Compliance API 功能）
+
+#### 2026-08-20
+- **[❌ 新增退出，香港區域存取] Goldman Sachs、OKX 雙雙於香港被切斷 Claude AI 存取權限**：Yahoo Finance 報導，涉及地緣政治與合規因素，僅標題層級可用；成因為 Anthropic 區域存取政策，與 06-18 JPMorgan Chase 香港分行的出口管制案不同源（2026-09-20 查證），詳見上方使用現況表新增列（Google News/Yahoo Finance）
+
+#### 2026-08-19
+- **[新增企業採用，受限模型案例] Payward（Kraken 母公司）採用 Claude Mythos 5 強化全球加密基礎設施**：FF News 報導，僅標題層級可用；Mythos 5 為僅限授權機構存取的安全強化模型，本案為具名企業採用該受限模型的具體案例，詳見上方使用現況表新增列（Google News/FF News）
+
+#### 2026-08-18
+- **[新增企業採用，具名高等教育機構] Duke University 與 Anthropic 合作，提供 pay-as-you-go Claude 訂閱方案**：The Duke Chronicle 報導，僅標題層級可用；為繼哈佛 FAS、Syracuse University 後另一具名高等教育機構採用案例，詳見上方使用現況表新增列（Google News/The Duke Chronicle）
+
+#### 2026-08-15
+- **[✅ 升級為量化採用，跨 2 媒體] TechSpot、Tech My Money：Samsung 用 Claude Code 壓縮晶片設計/驗證時程，惟仍會犯嚴重錯誤**：延續 08-14 記錄之 ❓ 未確認狀態，本次跨 2 媒體確認具體量化成效——TechSpot 稱「數週壓縮到數天」，Tech My Money 稱驗證階段「一個月縮到兩天」（兩則數字不同，並陳不擇一），兩則均明確指出 Claude Code 仍會犯嚴重錯誤；仍為媒體轉述、非官方發布。詳見上方使用現況表 Samsung 列更新（Google News/TechSpot；Google News/Tech My Money）
+- **Samsung（08-15，首見 08-14）**：跨 3 媒體確認具體量化成效，惟仍為媒體轉述、非三星或 Anthropic 官方發布：TechSpot（08-15）稱 Claude Code 能把晶片設計工作從「數週壓縮到數天」；Tech My Money（08-14）稱驗證階段「從一個月縮到兩天」——兩則數字不同，並陳不擇一。三則均明確指出 Claude Code **仍會犯嚴重錯誤**。延續 08-14 記錄之 ❓ 未確認狀態，08-15 升級為 ✅；與 [[topics/anthropic-business]] 已記錄之 Samsung 代工洽談（07-02/06）、Series H 投資人身份為不同性質事件——本則為 Samsung**使用**Claude Code 的採用案例，非供應鏈/投資關係（Google News/TechSpot；Google News/Tech My Money）。**08-25 三度確認（TechRadar，非新事實）**：TechRadar 報導同一事實——三星認為 Claude Code 有助其晶片設計，但坦言 AI 仍會犯下「令人擔憂的重大錯誤」；未見新增具體數字或案例細節，屬既有 08-14/08-15 記錄的第三方媒體再確認，狀態與量化數字均不變（Google News/TechRadar）。
+
+#### 2026-08-14
+- **[❓ 未確認，新增追蹤] Digital Trends：三星據稱使用 Claude 加速晶片設計**：報導稱三星正使用 Claude 加速晶片設計流程，「reportedly」措辭顯示尚未經三星或 Anthropic 官方證實；詳見上方使用現況表新增列（Google News/Digital Trends）
+
+#### 2026-08-10
+- **[媒體三度跟進，非新增合作事實] The Clinical Trial Vanguard：ICON 與 Anthropic 臨床試驗合作案分析文章**：延續 07-29 Clinical Trials Arena 首報、08-04 Fierce Biotech 二次確認之同一合作事件，本則為產業媒體深度評論角度，未見新增合作規模、範疇或時程，詳見上方使用現況表 ICON 列更新（Google News/The Clinical Trial Vanguard）
+
+#### 2026-08-07
+- **[新增企業採用，具名高等教育機構] Syracuse University 擴大 Claude Enterprise 授權，納入 Claude Code 與 Claude Cowork**：Syracuse University Today 官方報導，詳見上方使用現況表新增列（Google News/Syracuse University Today）
+
+#### 2026-08-06
+- **[媒體後續報導，無新增具體事實，不改變既有狀態] The Times of India：Microsoft 內部備忘錄再傳對 Anthropic 更多「壞消息」**：報導標題提及 Microsoft 稍早已要求員工停用 Claude Code（呼應上方使用現況表 Microsoft 列，狀態 ❌ 已退出，事件日期 2026-06-21），如今內部備忘錄再度傳出對 Anthropic 不利訊息。**注意**：原文摘要僅提供標題層級資訊，未見備忘錄具體內容或新增事實，本則視為既有「Microsoft 減少對 Claude 依賴」敘事的後續媒體關注度延續，非獨立新增退出/縮減事件，不更新使用現況表狀態（Google News/The Times of India）
+
+#### 2026-08-04
+- **[媒體二次確認，非新增合作事實] Fierce Biotech 跟進報導 ICON 與 Anthropic 臨床試驗合作**：Fierce Biotech 報導與 07-29 Clinical Trials Arena 首報同一事件，未見新增合作細節，詳見上方使用現況表 ICON 列更新（Google News/Fierce Biotech）
