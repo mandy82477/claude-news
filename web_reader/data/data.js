@@ -2840,14 +2840,14 @@ window.WIKI_DATA = {
     {
       "id": "enterprise-tool-tracker-archive",
       "pageType": "topic",
-      "name": "大型企業 AI 編碼工具使用追蹤 — 原始條目封存",
+      "name": "大型企業 Claude 採用追蹤 — 原始條目封存",
       "entityType": "",
       "status": "resolved（封存頁）",
       "domain": "💼 商業",
       "pill": "gray",
       "firstSeen": "",
       "startDate": "2026-05-26",
-      "lastUpdated": "2026-10-25",
+      "lastUpdated": "2026-11-04",
       "lastNewsUpdate": "2026-05-27",
       "updateFreq": "",
       "parent": "topics/enterprise-tool-tracker",
@@ -2861,25 +2861,37 @@ window.WIKI_DATA = {
     {
       "id": "enterprise-tool-tracker",
       "pageType": "topic",
-      "name": "大型企業 AI 編碼工具使用追蹤",
+      "name": "大型企業 Claude 採用追蹤：誰在用、誰減用",
       "entityType": "",
       "status": "ongoing",
       "domain": "💼 商業",
       "pill": "active",
       "firstSeen": "",
       "startDate": "2026-05-26",
-      "lastUpdated": "2026-11-03",
+      "lastUpdated": "2026-11-04",
       "lastNewsUpdate": "2026-11-03",
       "updateFreq": "",
       "parent": "",
-      "summary": "**目前追蹤 51 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）、1 家合作狀態有爭議（Replit）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，20…",
-      "latestHeadline": "目前追蹤 51 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）、1 家合作狀態有爭議（Replit）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」（最新異動見頂部 callout，2026-1",
+      "summary": "表上 48 家具名企業與機構：✅ 使用中 35、⚠️ 縮減或限縮 7（含 Replit 有爭議）、❌ 退出或被切斷 3、🔄 切換 1、❓ 未確認 2（2026-11-04 數表，一家一列）。見報的具名導入仍以新增為主；減用的理由集中在成本、自家有競品與資料外洩疑慮。 **退出與減用理由分兩類：** 客戶自己選的是成本（…",
+      "latestHeadline": "表上 48 家具名企業與機構：✅ 使用中 35、⚠️ 縮減或限縮 7（含 Replit 有爭議）、❌ 退出或被切斷 3、🔄 切換 1、❓ 未確認 2（2026-11-04 數表，一家一列）。見報的具名導入仍以新增為主；減用的理由集中在成本、自家有競品與資料外洩疑慮。",
       "pageRole": "",
       "enterpriseTracker": {
         "enterprises": [
           {
             "name": "Goldman Sachs",
             "size": "頂尖"
+          },
+          {
+            "name": "Palantir",
+            "size": "大型"
+          },
+          {
+            "name": "Epic Games",
+            "size": "頂尖（遊戲引擎大廠，Unreal Engine 開發商）"
+          },
+          {
+            "name": "Charles Schwab",
+            "size": "頂尖（美國券商）"
           },
           {
             "name": "Replit",
@@ -2894,24 +2906,44 @@ window.WIKI_DATA = {
             "size": "政府（聯邦立法機關）"
           },
           {
-            "name": "Epic Games",
-            "size": "頂尖（遊戲引擎大廠，Unreal Engine 開發商）"
+            "name": "Rubrik（NYSE: RBRK）",
+            "size": "大型"
+          },
+          {
+            "name": "Meta",
+            "size": "頂尖"
+          },
+          {
+            "name": "Microsoft",
+            "size": "頂尖"
           },
           {
             "name": "Barclays",
             "size": "頂尖（英國環球銀行）"
           },
           {
-            "name": "JPMorgan Chase（美國本部）",
+            "name": "JPMorgan Chase",
             "size": "頂尖"
+          },
+          {
+            "name": "Novo Nordisk",
+            "size": "頂尖（丹麥藥廠）"
           },
           {
             "name": "Google",
             "size": "頂尖"
           },
           {
-            "name": "Rubrik（NYSE: RBRK）",
+            "name": "Nvidia",
+            "size": "頂尖"
+          },
+          {
+            "name": "Booz Allen",
             "size": "大型"
+          },
+          {
+            "name": "Orion",
+            "size": "大型（RIA 財富管理平台）"
           },
           {
             "name": "T. Rowe Price",
@@ -2946,16 +2978,12 @@ window.WIKI_DATA = {
             "size": "頂尖"
           },
           {
-            "name": "Syracuse University",
-            "size": "大型（高等教育機構）"
-          },
-          {
             "name": "ICON（NASDAQ: ICLR）",
             "size": "大型（全球臨床研究委外機構 CRO）"
           },
           {
-            "name": "Cognizant",
-            "size": "頂尖"
+            "name": "Syracuse University",
+            "size": "大型（高等教育機構）"
           },
           {
             "name": "Grasshopper Bank",
@@ -2964,14 +2992,6 @@ window.WIKI_DATA = {
           {
             "name": "Alberta 省政府（加拿大）",
             "size": "政府（省級）"
-          },
-          {
-            "name": "Meta",
-            "size": "頂尖"
-          },
-          {
-            "name": "Microsoft",
-            "size": "頂尖"
           },
           {
             "name": "Alibaba",
@@ -2984,18 +3004,6 @@ window.WIKI_DATA = {
           {
             "name": "加州州政府",
             "size": "政府（州級）"
-          },
-          {
-            "name": "Globant（NYSE: GLOB）",
-            "size": "頂尖"
-          },
-          {
-            "name": "DataArt",
-            "size": "大型"
-          },
-          {
-            "name": "Okta",
-            "size": "大型"
           },
           {
             "name": "Notion",
@@ -3012,14 +3020,6 @@ window.WIKI_DATA = {
           {
             "name": "JFrog",
             "size": "大型"
-          },
-          {
-            "name": "JPMorgan Chase",
-            "size": "頂尖"
-          },
-          {
-            "name": "DXC Technology",
-            "size": "頂尖"
           },
           {
             "name": "TCS（Tata Consultancy Services）",
@@ -3042,15 +3042,7 @@ window.WIKI_DATA = {
             "size": "頂尖"
           },
           {
-            "name": "Amazon",
-            "size": "頂尖"
-          },
-          {
             "name": "Uber",
-            "size": "頂尖"
-          },
-          {
-            "name": "Fujitsu",
             "size": "頂尖"
           },
           {
@@ -3058,20 +3050,16 @@ window.WIKI_DATA = {
             "size": "大型"
           },
           {
-            "name": "Nimble Gravity",
-            "size": "中型"
-          },
-          {
             "name": "UiPath",
             "size": "大型"
           },
           {
-            "name": "Apple",
+            "name": "Amazon",
             "size": "頂尖"
           },
           {
-            "name": "KPMG",
-            "size": "大型"
+            "name": "Apple",
+            "size": "頂尖"
           },
           {
             "name": "iCapital",
@@ -3083,46 +3071,69 @@ window.WIKI_DATA = {
           }
         ],
         "tools": [
-          "Claude Code ＋ GitHub",
+          "Claude Code；Claude AI（香港）",
+          "Claude",
+          "Claude Code ＋ Codex",
+          "Claude for Financial Advisors",
           "Claude（API 整合）",
           "Claude（員工一般使用，不限特定工具）",
           "Claude（幕僚辦公室一般使用）",
-          "Claude Code ＋ Codex",
+          "Claude Code；Claude Mythos 5",
           "Claude Code",
+          "Claude Code → GitHub Copilot；Claude（內部整體）",
+          "Claude Code；Claude（營運）",
+          "Claude Code（美國本部）；Claude API（香港分行）",
           "Claude（不限版本，媒體未指明是否限 Claude Code）",
-          "Claude Mythos 5（Rubrik Code Guardian）",
           "Claude API + Claude Code",
           "Claude API（對話式 AI 金融服務）",
           "Claude API（AI 驅動資安平台整合）",
           "Claude AI",
           "Claude Mythos 5",
           "Claude（pay-as-you-go 訂閱方案）",
-          "Claude Code + Claude Cowork",
           "Claude API",
+          "Claude Code + Claude Cowork",
           "Claude API（MCP 整合）",
-          "Claude（泛指內部整體使用，非僅 Claude Code）",
           "Claude Code → Qoder（內部工具）",
           "Claude API → DeepSeek",
           "Claude Agents + Cursor",
-          "GitHub Copilot",
-          "OpenAI Codex",
-          "Cursor"
+          "Claude Code ＋ Cursor",
+          "Claude Code ＋ OpenAI Codex"
         ],
         "matrix": {
           "Goldman Sachs": {
-            "Claude Code ＋ GitHub": {
+            "Claude Code；Claude AI（香港）": {
               "status": "❌",
               "statusKey": "exited",
               "eventDate": "",
-              "note": "全面禁止行員使用，首見具名大型金融機構對 coding agent 下達禁用令；與下方 08-20 香港 Claude AI 存取權限切斷為不同案例，禁令範圍與生效時間未見報導",
+              "note": "11-02 報導全面禁止行員用 Claude Code 與 GitHub，範圍與生效時間未見；08-20 香港先被切斷，屬 Anthropic 區域存取政策（⟨Q-03⟩）",
               "confirmedDate": "2026-11-02"
-            },
-            "Claude AI": {
-              "status": "❌",
-              "statusKey": "exited",
+            }
+          },
+          "Palantir": {
+            "Claude": {
+              "status": "⚠️",
+              "statusKey": "warning",
               "eventDate": "",
-              "note": "香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 不同源（已查證 ⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]]",
-              "confirmedDate": "2026-08-20"
+              "note": "09-14 報導因資料外洩疑慮限縮內部使用，要求不可撤銷的零資料保留保證才上架；11-01 CTO 稱不後悔合作",
+              "confirmedDate": "2026-11-01"
+            }
+          },
+          "Epic Games": {
+            "Claude Code ＋ Codex": {
+              "status": "✅",
+              "statusKey": "active",
+              "eventDate": "2026-10-12",
+              "note": "TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見時序",
+              "confirmedDate": "2026-10-29（首見 2026-10-12）"
+            }
+          },
+          "Charles Schwab": {
+            "Claude for Financial Advisors": {
+              "status": "✅",
+              "statusKey": "active",
+              "eventDate": "2026-09-14",
+              "note": "把 Claude 接進給獨立投資顧問（RIA）的平台；10-24 追加 20 席採購下限，見 [[entities/pricing]]",
+              "confirmedDate": "2026-10-24"
             }
           },
           "Replit": {
@@ -3130,7 +3141,7 @@ window.WIKI_DATA = {
               "status": "⚠️ 有爭議",
               "statusKey": "warning",
               "eventDate": "2026-10-16",
-              "note": "執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方",
+              "note": "執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見時序",
               "confirmedDate": "2026-10-17"
             }
           },
@@ -3152,31 +3163,58 @@ window.WIKI_DATA = {
               "confirmedDate": "2026-10-15"
             }
           },
-          "Epic Games": {
-            "Claude Code ＋ Codex": {
+          "Rubrik（NYSE: RBRK）": {
+            "Claude Code；Claude Mythos 5": {
               "status": "✅",
               "statusKey": "active",
-              "eventDate": "2026-10-12",
-              "note": "TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見下方",
-              "confirmedDate": "2026-10-12（跟進 2026-10-29）"
+              "eventDate": "2026-06-09",
+              "note": "06-09 Agent Cloud for Claude Code、06-30 Claude Code 安全層、09-15 Code Guardian 用 Mythos 5 做程式碼紅隊測試",
+              "confirmedDate": "2026-10-09"
+            }
+          },
+          "Meta": {
+            "Claude Code": {
+              "status": "⚠️",
+              "statusKey": "warning",
+              "eventDate": "",
+              "note": "限制使用屬實（⟨Q-02⟩）；10-05 報導 Claude Code 使用者約 6 萬→約 3 萬，已查證 2026-10-07，細節見時序",
+              "confirmedDate": "2026-10-05（首見 2026-07-06）"
+            }
+          },
+          "Microsoft": {
+            "Claude Code → GitHub Copilot；Claude（內部整體）": {
+              "status": "⚠️",
+              "statusKey": "warning",
+              "eventDate": "2026-06-21",
+              "note": "06-21 起停用 Claude Code、改推 Copilot；10-05 內部 Claude 支出砍逾三分之一（已查證 2026-10-07），合約未取消",
+              "confirmedDate": "2026-10-05"
             }
           },
           "Barclays": {
-            "Claude Code": {
+            "Claude Code；Claude（營運）": {
               "status": "✅",
               "statusKey": "active",
               "eventDate": "",
-              "note": "Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統",
+              "note": "官方 10-01：預期 2026 年底半數開發者用 Claude Code、2027 年擴及多數工程師（目標，非已達成）；郵件分流約 12 萬封／日、1.6 萬人用於知識檢索",
               "confirmedDate": "2026-10-01"
             }
           },
-          "JPMorgan Chase（美國本部）": {
-            "Claude Code": {
+          "JPMorgan Chase": {
+            "Claude Code（美國本部）；Claude API（香港分行）": {
               "status": "✅",
               "statusKey": "active",
               "eventDate": "",
-              "note": "每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07",
+              "note": "美國本部 8 月約 8,000 人持授權，部分工程師每月 $2,000 上限；香港分行 06-18 因出口管制停用，06-30 管制解除後是否恢復未見",
               "confirmedDate": "2026-09-17"
+            }
+          },
+          "Novo Nordisk": {
+            "Claude": {
+              "status": "✅",
+              "statusKey": "active",
+              "eventDate": "",
+              "note": "用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見（Reuters 等 4 家）",
+              "confirmedDate": "2026-09-16"
             }
           },
           "Google": {
@@ -3188,20 +3226,31 @@ window.WIKI_DATA = {
               "confirmedDate": "2026-09-15"
             }
           },
-          "Rubrik（NYSE: RBRK）": {
-            "Claude Mythos 5（Rubrik Code Guardian）": {
+          "Nvidia": {
+            "Claude": {
+              "status": "⚠️",
+              "statusKey": "warning",
+              "eventDate": "",
+              "note": "09-14 The Information（經多家轉述）：因資料外洩疑慮限於較不敏感任務、內部改用自家 Nemotron；官方未回應個案",
+              "confirmedDate": "2026-09-14"
+            }
+          },
+          "Booz Allen": {
+            "Claude": {
+              "status": "⚠️",
+              "statusKey": "warning",
+              "eventDate": "",
+              "note": "同批報導：禁止員工以其商用模型處理專有資安工作；官方未回應個案",
+              "confirmedDate": "2026-09-14"
+            }
+          },
+          "Orion": {
+            "Claude for Financial Advisors": {
               "status": "✅",
               "statusKey": "active",
-              "eventDate": "2026-09-15",
-              "note": "發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；10-09 Business Wire 稱屬「Project Hourglass」計畫擴大的一環，具體效能數字未見報導",
-              "confirmedDate": "2026-09-15（擴大報導 2026-10-09）"
-            },
-            "Claude Code": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-06-09",
-              "note": "推出 Agent Cloud for Claude Code，將數據保護平台轉型為 AI agent；全球 GSI 同步入夥",
-              "confirmedDate": "2026-06-09"
+              "eventDate": "2026-09-14",
+              "note": "與 Schwab 同日宣布把 Claude 接進 RIA 平台，費率未見",
+              "confirmedDate": "2026-09-14"
             }
           },
           "T. Rowe Price": {
@@ -3227,8 +3276,8 @@ window.WIKI_DATA = {
               "status": "❓",
               "statusKey": "unknown",
               "eventDate": "",
-              "note": "執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節）",
-              "confirmedDate": "Google News/analyticsindiamag.com；Google News/The New Stack"
+              "note": "執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（細節見時序）",
+              "confirmedDate": "2026-08-26"
             }
           },
           "ReliaQuest": {
@@ -3236,7 +3285,7 @@ window.WIKI_DATA = {
               "status": "✅",
               "statusKey": "active",
               "eventDate": "",
-              "note": "深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環；具體整合範疇、合作規模未見報導（詳見下方細節）",
+              "note": "深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環；具體整合範疇、合作規模未見報導（細節見時序）",
               "confirmedDate": "2026-08-22"
             }
           },
@@ -3245,7 +3294,7 @@ window.WIKI_DATA = {
               "status": "❌",
               "statusKey": "exited",
               "eventDate": "",
-              "note": "與高盛同批：香港被切斷 Claude AI 存取權限，成因未明，詳見 [[topics/anthropic-government-policy]]",
+              "note": "與高盛同批：香港被切斷 Claude AI 存取權限，屬 Anthropic 區域存取政策（⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]]",
               "confirmedDate": "2026-08-20"
             }
           },
@@ -3272,17 +3321,8 @@ window.WIKI_DATA = {
               "status": "✅",
               "statusKey": "active",
               "eventDate": "",
-              "note": "跨 3 媒體確認：壓縮晶片設計/驗證時程（數週→數天／一月→兩天，數字不一），仍會犯嚴重錯誤（詳見下方細節）",
+              "note": "跨 3 媒體確認：壓縮晶片設計/驗證時程（數週→數天／一月→兩天，數字不一），仍會犯嚴重錯誤（細節見時序）",
               "confirmedDate": "2026-08-15（首見 2026-08-14）"
-            }
-          },
-          "Syracuse University": {
-            "Claude Code + Claude Cowork": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-08-05",
-              "note": "擴大 Claude Enterprise 授權，納入 Claude Code + Cowork；繼哈佛 FAS 後另一高教擴大採用案例",
-              "confirmedDate": "2026-08-05"
             }
           },
           "ICON（NASDAQ: ICLR）": {
@@ -3294,13 +3334,13 @@ window.WIKI_DATA = {
               "confirmedDate": "2026-08-10（首見 2026-07-29）"
             }
           },
-          "Cognizant": {
-            "Claude API": {
+          "Syracuse University": {
+            "Claude Code + Claude Cowork": {
               "status": "✅",
               "statusKey": "active",
-              "eventDate": "2026-07-28",
-              "note": "官方公告擴大合作，Claude 嵌入商業/工程平台，升級 Global Premier Partner，打造 Frontier Certified 人才梯隊",
-              "confirmedDate": "2026-07-28"
+              "eventDate": "2026-08-05",
+              "note": "擴大 Claude Enterprise 授權，納入 Claude Code + Cowork；繼哈佛 FAS 後另一高教擴大採用案例",
+              "confirmedDate": "2026-08-05"
             }
           },
           "Grasshopper Bank": {
@@ -3319,38 +3359,6 @@ window.WIKI_DATA = {
               "eventDate": "2025",
               "note": "自 2025 年起用 Claude Code 審查系統；20 小時內掃描 4.66 億行程式碼完成資安盤點與修補",
               "confirmedDate": "2026-07-07"
-            }
-          },
-          "Meta": {
-            "Claude Code": {
-              "status": "⚠️",
-              "statusKey": "warning",
-              "eventDate": "",
-              "note": "限制使用屬實（⟨Q-02⟩）；10-05 報導 Claude Code 使用者約 6 萬→約 3 萬，已查證 2026-10-07，細節見下方",
-              "confirmedDate": "2026-10-05（首見 2026-07-06）"
-            }
-          },
-          "Microsoft": {
-            "Claude（泛指內部整體使用，非僅 Claude Code）": {
-              "status": "⚠️",
-              "statusKey": "warning",
-              "eventDate": "",
-              "note": "10-05 報導原估逾 10 億美元的內部支出砍逾三分之一，已查證 2026-10-07；與 06-21 停用 Claude Code、09-20 自研模型降本同屬一脈",
-              "confirmedDate": "2026-10-05"
-            },
-            "Claude Code": {
-              "status": "❌",
-              "statusKey": "exited",
-              "eventDate": "2026-06-21",
-              "note": "Fable 5 封鎖期間宣布逐步停止讓內部工程師使用 Claude Code；自家 Codex 可能為替代方案；原預計 6/30 正式停用",
-              "confirmedDate": "2026-06-21"
-            },
-            "GitHub Copilot": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-15",
-              "note": "從 Claude Code 切換後採用",
-              "confirmedDate": "2026-05-25"
             }
           },
           "Alibaba": {
@@ -3376,35 +3384,8 @@ window.WIKI_DATA = {
               "status": "✅",
               "statusKey": "active",
               "eventDate": "2026-06-29",
-              "note": "州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例（詳見 [[topics/anthropic-business]]）",
+              "note": "州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例",
               "confirmedDate": "2026-06-29"
-            }
-          },
-          "Globant（NYSE: GLOB）": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-06-30",
-              "note": "與 Anthropic 結盟推出 Claude 驅動的 AI Pods，重新定義企業 AI 交付模式；上市公司，覆蓋全球多行業客戶（詳見 [[topics/anthropic-business]]）",
-              "confirmedDate": "2026-06-30"
-            }
-          },
-          "DataArt": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-06-30",
-              "note": "加入 Anthropic Claude Partner Network，成為服務軌道精選（Select）合作夥伴（詳見 [[topics/anthropic-business]]）",
-              "confirmedDate": "2026-06-30"
-            }
-          },
-          "Okta": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-06-30",
-              "note": "與 Anthropic 在 XAA（跨應用 agent 認證）、MCP 協定整合及 Glasswing 安全框架展開合作，為 agentic 工作流提供身份驗證基礎建設（詳見 [[topics/anthropic-business]]）",
-              "confirmedDate": "2026-06-30"
             }
           },
           "Notion": {
@@ -3441,24 +3422,6 @@ window.WIKI_DATA = {
               "eventDate": "2026-06-18",
               "note": "Governed Claude Code Integration，提供企業級安全管控的 Claude Code 部署方案",
               "confirmedDate": "2026-06-18"
-            }
-          },
-          "JPMorgan Chase": {
-            "Claude API": {
-              "status": "❌",
-              "statusKey": "exited",
-              "eventDate": "2026-06-18",
-              "note": "香港分行因美國出口管制指令被迫停止使用 Anthropic 服務（不含美國本部），是出口管制對頂尖金融機構的直接衝擊",
-              "confirmedDate": "2026-06-18"
-            }
-          },
-          "DXC Technology": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-06-12",
-              "note": "多年全球聯盟；訓練數萬名 Claude 認證工程師；覆蓋銀行、航空、保險、政府等受嚴格合規監管行業",
-              "confirmedDate": "2026-06-12"
             }
           },
           "TCS（Tata Consultancy Services）": {
@@ -3506,45 +3469,13 @@ window.WIKI_DATA = {
               "confirmedDate": "2026-06-06"
             }
           },
-          "Amazon": {
-            "Claude Code": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-05",
-              "note": "雙軌並行，不押注單一供應商",
-              "confirmedDate": "2026-05-05"
-            },
-            "OpenAI Codex": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-05",
-              "note": "與 Claude Code 同時部署",
-              "confirmedDate": "2026-05-05"
-            }
-          },
           "Uber": {
-            "Claude Code": {
+            "Claude Code ＋ Cursor": {
               "status": "⚠️",
               "statusKey": "warning",
               "eventDate": "2026-05-01",
-              "note": "4 個月燒完全年 AI 預算，CTO 承認成本失控；COO 5/27 確認帶來 25% 生產力提升",
-              "confirmedDate": "2026-05-27"
-            },
-            "Cursor": {
-              "status": "⚠️",
-              "statusKey": "warning",
-              "eventDate": "2026-05-01",
-              "note": "與 Claude Code 並行使用；四個月合計燒完整年 AI 預算，為成本失控具名案例之一",
+              "note": "4 個月燒完全年 AI 預算，CTO 承認成本失控，隨後設用量上限；COO 5/27 確認帶來 25% 生產力提升",
               "confirmedDate": "2026-06-02"
-            }
-          },
-          "Fujitsu": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-26",
-              "note": "富士通與 Anthropic 簽署全球戰略合作協議，強化日本市場企業 AI 部署",
-              "confirmedDate": "2026-05-27"
             }
           },
           "Travelport": {
@@ -3556,29 +3487,22 @@ window.WIKI_DATA = {
               "confirmedDate": "2026-05-27"
             }
           },
-          "Nimble Gravity": {
-            "Claude API": {
+          "UiPath": {
+            "Claude Code ＋ OpenAI Codex": {
               "status": "✅",
               "statusKey": "active",
-              "eventDate": "2026-05-27",
-              "note": "成立 Applied Anthropic Practice，專攻銀行、保險、金融服務業 AI 諮詢",
-              "confirmedDate": "2026-05-27"
+              "eventDate": "2026-05-12",
+              "note": "RPA 平台雙工具整合，同時部署",
+              "confirmedDate": "2026-05-12"
             }
           },
-          "UiPath": {
-            "Claude Code": {
+          "Amazon": {
+            "Claude Code ＋ OpenAI Codex": {
               "status": "✅",
               "statusKey": "active",
-              "eventDate": "2026-05-12",
-              "note": "RPA 平台雙工具整合",
-              "confirmedDate": "2026-05-12"
-            },
-            "OpenAI Codex": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-12",
-              "note": "與 Claude Code 同時部署",
-              "confirmedDate": "2026-05-12"
+              "eventDate": "2026-05-05",
+              "note": "雙軌並行，不押注單一供應商",
+              "confirmedDate": "2026-05-05"
             }
           },
           "Apple": {
@@ -3588,15 +3512,6 @@ window.WIKI_DATA = {
               "eventDate": "",
               "note": "外洩文件確認內部採用，非 Claude Code",
               "confirmedDate": "2026-05-01"
-            }
-          },
-          "KPMG": {
-            "Claude API": {
-              "status": "✅",
-              "statusKey": "active",
-              "eventDate": "2026-05-25",
-              "note": "戰略合作，重新定義客戶服務",
-              "confirmedDate": "2026-05-25"
             }
           },
           "iCapital": {
@@ -3622,12 +3537,42 @@ window.WIKI_DATA = {
           {
             "enterprise": "Goldman Sachs",
             "size": "頂尖",
-            "tool": "Claude Code ＋ GitHub",
+            "tool": "Claude Code；Claude AI（香港）",
             "status": "❌",
             "statusKey": "exited",
             "eventDate": "",
-            "note": "全面禁止行員使用，首見具名大型金融機構對 coding agent 下達禁用令；與下方 08-20 香港 Claude AI 存取權限切斷為不同案例，禁令範圍與生效時間未見報導",
+            "note": "11-02 報導全面禁止行員用 Claude Code 與 GitHub，範圍與生效時間未見；08-20 香港先被切斷，屬 Anthropic 區域存取政策（⟨Q-03⟩）",
             "confirmedDate": "2026-11-02"
+          },
+          {
+            "enterprise": "Palantir",
+            "size": "大型",
+            "tool": "Claude",
+            "status": "⚠️",
+            "statusKey": "warning",
+            "eventDate": "",
+            "note": "09-14 報導因資料外洩疑慮限縮內部使用，要求不可撤銷的零資料保留保證才上架；11-01 CTO 稱不後悔合作",
+            "confirmedDate": "2026-11-01"
+          },
+          {
+            "enterprise": "Epic Games",
+            "size": "頂尖（遊戲引擎大廠，Unreal Engine 開發商）",
+            "tool": "Claude Code ＋ Codex",
+            "status": "✅",
+            "statusKey": "active",
+            "eventDate": "2026-10-12",
+            "note": "TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見時序",
+            "confirmedDate": "2026-10-29（首見 2026-10-12）"
+          },
+          {
+            "enterprise": "Charles Schwab",
+            "size": "頂尖（美國券商）",
+            "tool": "Claude for Financial Advisors",
+            "status": "✅",
+            "statusKey": "active",
+            "eventDate": "2026-09-14",
+            "note": "把 Claude 接進給獨立投資顧問（RIA）的平台；10-24 追加 20 席採購下限，見 [[entities/pricing]]",
+            "confirmedDate": "2026-10-24"
           },
           {
             "enterprise": "Replit",
@@ -3636,7 +3581,7 @@ window.WIKI_DATA = {
             "status": "⚠️ 有爭議",
             "statusKey": "warning",
             "eventDate": "2026-10-16",
-            "note": "執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方",
+            "note": "執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見時序",
             "confirmedDate": "2026-10-17"
           },
           {
@@ -3660,34 +3605,64 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-10-15"
           },
           {
-            "enterprise": "Epic Games",
-            "size": "頂尖（遊戲引擎大廠，Unreal Engine 開發商）",
-            "tool": "Claude Code ＋ Codex",
+            "enterprise": "Rubrik（NYSE: RBRK）",
+            "size": "大型",
+            "tool": "Claude Code；Claude Mythos 5",
             "status": "✅",
             "statusKey": "active",
-            "eventDate": "2026-10-12",
-            "note": "TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見下方",
-            "confirmedDate": "2026-10-12（跟進 2026-10-29）"
+            "eventDate": "2026-06-09",
+            "note": "06-09 Agent Cloud for Claude Code、06-30 Claude Code 安全層、09-15 Code Guardian 用 Mythos 5 做程式碼紅隊測試",
+            "confirmedDate": "2026-10-09"
+          },
+          {
+            "enterprise": "Meta",
+            "size": "頂尖",
+            "tool": "Claude Code",
+            "status": "⚠️",
+            "statusKey": "warning",
+            "eventDate": "",
+            "note": "限制使用屬實（⟨Q-02⟩）；10-05 報導 Claude Code 使用者約 6 萬→約 3 萬，已查證 2026-10-07，細節見時序",
+            "confirmedDate": "2026-10-05（首見 2026-07-06）"
+          },
+          {
+            "enterprise": "Microsoft",
+            "size": "頂尖",
+            "tool": "Claude Code → GitHub Copilot；Claude（內部整體）",
+            "status": "⚠️",
+            "statusKey": "warning",
+            "eventDate": "2026-06-21",
+            "note": "06-21 起停用 Claude Code、改推 Copilot；10-05 內部 Claude 支出砍逾三分之一（已查證 2026-10-07），合約未取消",
+            "confirmedDate": "2026-10-05"
           },
           {
             "enterprise": "Barclays",
             "size": "頂尖（英國環球銀行）",
-            "tool": "Claude Code",
+            "tool": "Claude Code；Claude（營運）",
             "status": "✅",
             "statusKey": "active",
             "eventDate": "",
-            "note": "Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統",
+            "note": "官方 10-01：預期 2026 年底半數開發者用 Claude Code、2027 年擴及多數工程師（目標，非已達成）；郵件分流約 12 萬封／日、1.6 萬人用於知識檢索",
             "confirmedDate": "2026-10-01"
           },
           {
-            "enterprise": "JPMorgan Chase（美國本部）",
+            "enterprise": "JPMorgan Chase",
             "size": "頂尖",
-            "tool": "Claude Code",
+            "tool": "Claude Code（美國本部）；Claude API（香港分行）",
             "status": "✅",
             "statusKey": "active",
             "eventDate": "",
-            "note": "每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07",
+            "note": "美國本部 8 月約 8,000 人持授權，部分工程師每月 $2,000 上限；香港分行 06-18 因出口管制停用，06-30 管制解除後是否恢復未見",
             "confirmedDate": "2026-09-17"
+          },
+          {
+            "enterprise": "Novo Nordisk",
+            "size": "頂尖（丹麥藥廠）",
+            "tool": "Claude",
+            "status": "✅",
+            "statusKey": "active",
+            "eventDate": "",
+            "note": "用 Claude 加速藥物研發與醫學研究，合約範疇與費用未見（Reuters 等 4 家）",
+            "confirmedDate": "2026-09-16"
           },
           {
             "enterprise": "Google",
@@ -3700,14 +3675,34 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-09-15"
           },
           {
-            "enterprise": "Rubrik（NYSE: RBRK）",
+            "enterprise": "Nvidia",
+            "size": "頂尖",
+            "tool": "Claude",
+            "status": "⚠️",
+            "statusKey": "warning",
+            "eventDate": "",
+            "note": "09-14 The Information（經多家轉述）：因資料外洩疑慮限於較不敏感任務、內部改用自家 Nemotron；官方未回應個案",
+            "confirmedDate": "2026-09-14"
+          },
+          {
+            "enterprise": "Booz Allen",
             "size": "大型",
-            "tool": "Claude Mythos 5（Rubrik Code Guardian）",
+            "tool": "Claude",
+            "status": "⚠️",
+            "statusKey": "warning",
+            "eventDate": "",
+            "note": "同批報導：禁止員工以其商用模型處理專有資安工作；官方未回應個案",
+            "confirmedDate": "2026-09-14"
+          },
+          {
+            "enterprise": "Orion",
+            "size": "大型（RIA 財富管理平台）",
+            "tool": "Claude for Financial Advisors",
             "status": "✅",
             "statusKey": "active",
-            "eventDate": "2026-09-15",
-            "note": "發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；10-09 Business Wire 稱屬「Project Hourglass」計畫擴大的一環，具體效能數字未見報導",
-            "confirmedDate": "2026-09-15（擴大報導 2026-10-09）"
+            "eventDate": "2026-09-14",
+            "note": "與 Schwab 同日宣布把 Claude 接進 RIA 平台，費率未見",
+            "confirmedDate": "2026-09-14"
           },
           {
             "enterprise": "T. Rowe Price",
@@ -3736,8 +3731,8 @@ window.WIKI_DATA = {
             "status": "❓",
             "statusKey": "unknown",
             "eventDate": "",
-            "note": "執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（詳見下方細節）",
-            "confirmedDate": "Google News/analyticsindiamag.com；Google News/The New Stack"
+            "note": "執行長 Tobi Lütke 揚言封殺；Anthropic 早已關閉相關功能請求；未見官方確認執行，暫標未確認（細節見時序）",
+            "confirmedDate": "2026-08-26"
           },
           {
             "enterprise": "ReliaQuest",
@@ -3746,18 +3741,8 @@ window.WIKI_DATA = {
             "status": "✅",
             "statusKey": "active",
             "eventDate": "",
-            "note": "深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環；具體整合範疇、合作規模未見報導（詳見下方細節）",
+            "note": "深化與 Anthropic 技術整合，作為去 SIEM 化資安策略一環；具體整合範疇、合作規模未見報導（細節見時序）",
             "confirmedDate": "2026-08-22"
-          },
-          {
-            "enterprise": "Goldman Sachs",
-            "size": "頂尖",
-            "tool": "Claude AI",
-            "status": "❌",
-            "statusKey": "exited",
-            "eventDate": "",
-            "note": "香港被切斷 Claude AI 存取權限，成因與 JPMorgan Chase 不同源（已查證 ⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]]",
-            "confirmedDate": "2026-08-20"
           },
           {
             "enterprise": "OKX",
@@ -3766,7 +3751,7 @@ window.WIKI_DATA = {
             "status": "❌",
             "statusKey": "exited",
             "eventDate": "",
-            "note": "與高盛同批：香港被切斷 Claude AI 存取權限，成因未明，詳見 [[topics/anthropic-government-policy]]",
+            "note": "與高盛同批：香港被切斷 Claude AI 存取權限，屬 Anthropic 區域存取政策（⟨Q-03⟩），詳見 [[topics/anthropic-government-policy]]",
             "confirmedDate": "2026-08-20"
           },
           {
@@ -3796,18 +3781,8 @@ window.WIKI_DATA = {
             "status": "✅",
             "statusKey": "active",
             "eventDate": "",
-            "note": "跨 3 媒體確認：壓縮晶片設計/驗證時程（數週→數天／一月→兩天，數字不一），仍會犯嚴重錯誤（詳見下方細節）",
+            "note": "跨 3 媒體確認：壓縮晶片設計/驗證時程（數週→數天／一月→兩天，數字不一），仍會犯嚴重錯誤（細節見時序）",
             "confirmedDate": "2026-08-15（首見 2026-08-14）"
-          },
-          {
-            "enterprise": "Syracuse University",
-            "size": "大型（高等教育機構）",
-            "tool": "Claude Code + Claude Cowork",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-08-05",
-            "note": "擴大 Claude Enterprise 授權，納入 Claude Code + Cowork；繼哈佛 FAS 後另一高教擴大採用案例",
-            "confirmedDate": "2026-08-05"
           },
           {
             "enterprise": "ICON（NASDAQ: ICLR）",
@@ -3820,14 +3795,14 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-08-10（首見 2026-07-29）"
           },
           {
-            "enterprise": "Cognizant",
-            "size": "頂尖",
-            "tool": "Claude API",
+            "enterprise": "Syracuse University",
+            "size": "大型（高等教育機構）",
+            "tool": "Claude Code + Claude Cowork",
             "status": "✅",
             "statusKey": "active",
-            "eventDate": "2026-07-28",
-            "note": "官方公告擴大合作，Claude 嵌入商業/工程平台，升級 Global Premier Partner，打造 Frontier Certified 人才梯隊",
-            "confirmedDate": "2026-07-28"
+            "eventDate": "2026-08-05",
+            "note": "擴大 Claude Enterprise 授權，納入 Claude Code + Cowork；繼哈佛 FAS 後另一高教擴大採用案例",
+            "confirmedDate": "2026-08-05"
           },
           {
             "enterprise": "Grasshopper Bank",
@@ -3848,26 +3823,6 @@ window.WIKI_DATA = {
             "eventDate": "2025",
             "note": "自 2025 年起用 Claude Code 審查系統；20 小時內掃描 4.66 億行程式碼完成資安盤點與修補",
             "confirmedDate": "2026-07-07"
-          },
-          {
-            "enterprise": "Meta",
-            "size": "頂尖",
-            "tool": "Claude Code",
-            "status": "⚠️",
-            "statusKey": "warning",
-            "eventDate": "",
-            "note": "限制使用屬實（⟨Q-02⟩）；10-05 報導 Claude Code 使用者約 6 萬→約 3 萬，已查證 2026-10-07，細節見下方",
-            "confirmedDate": "2026-10-05（首見 2026-07-06）"
-          },
-          {
-            "enterprise": "Microsoft",
-            "size": "頂尖",
-            "tool": "Claude（泛指內部整體使用，非僅 Claude Code）",
-            "status": "⚠️",
-            "statusKey": "warning",
-            "eventDate": "",
-            "note": "10-05 報導原估逾 10 億美元的內部支出砍逾三分之一，已查證 2026-10-07；與 06-21 停用 Claude Code、09-20 自研模型降本同屬一脈",
-            "confirmedDate": "2026-10-05"
           },
           {
             "enterprise": "Alibaba",
@@ -3896,48 +3851,8 @@ window.WIKI_DATA = {
             "status": "✅",
             "statusKey": "active",
             "eventDate": "2026-06-29",
-            "note": "州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例（詳見 [[topics/anthropic-business]]）",
+            "note": "州長 Newsom 與 Anthropic 正式簽署協議，Claude 進入加州州政府應用；迄今最明確的美國地方政府採用案例",
             "confirmedDate": "2026-06-29"
-          },
-          {
-            "enterprise": "Globant（NYSE: GLOB）",
-            "size": "頂尖",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-30",
-            "note": "與 Anthropic 結盟推出 Claude 驅動的 AI Pods，重新定義企業 AI 交付模式；上市公司，覆蓋全球多行業客戶（詳見 [[topics/anthropic-business]]）",
-            "confirmedDate": "2026-06-30"
-          },
-          {
-            "enterprise": "DataArt",
-            "size": "大型",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-30",
-            "note": "加入 Anthropic Claude Partner Network，成為服務軌道精選（Select）合作夥伴（詳見 [[topics/anthropic-business]]）",
-            "confirmedDate": "2026-06-30"
-          },
-          {
-            "enterprise": "Okta",
-            "size": "大型",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-30",
-            "note": "與 Anthropic 在 XAA（跨應用 agent 認證）、MCP 協定整合及 Glasswing 安全框架展開合作，為 agentic 工作流提供身份驗證基礎建設（詳見 [[topics/anthropic-business]]）",
-            "confirmedDate": "2026-06-30"
-          },
-          {
-            "enterprise": "Rubrik（NYSE: RBRK）",
-            "size": "大型",
-            "tool": "Claude Code",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-30",
-            "note": "發布 Claude Code 專用 AI agent 與安全層；06-09 已有 Agent Cloud 前例，本次為專屬深化（詳見 [[topics/anthropic-business]]）",
-            "confirmedDate": "2026-06-30"
           },
           {
             "enterprise": "Notion",
@@ -3980,26 +3895,6 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-06-18"
           },
           {
-            "enterprise": "JPMorgan Chase",
-            "size": "頂尖",
-            "tool": "Claude API",
-            "status": "❌",
-            "statusKey": "exited",
-            "eventDate": "2026-06-18",
-            "note": "香港分行因美國出口管制指令被迫停止使用 Anthropic 服務（不含美國本部），是出口管制對頂尖金融機構的直接衝擊",
-            "confirmedDate": "2026-06-18"
-          },
-          {
-            "enterprise": "DXC Technology",
-            "size": "頂尖",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-12",
-            "note": "多年全球聯盟；訓練數萬名 Claude 認證工程師；覆蓋銀行、航空、保險、政府等受嚴格合規監管行業",
-            "confirmedDate": "2026-06-12"
-          },
-          {
             "enterprise": "TCS（Tata Consultancy Services）",
             "size": "頂尖",
             "tool": "Claude API",
@@ -4017,16 +3912,6 @@ window.WIKI_DATA = {
             "statusKey": "active",
             "eventDate": "2026-06-09",
             "note": "LG 集團旗下全體關聯企業宣布採用 Anthropic Claude，韓國大型財閥全面入局企業 AI",
-            "confirmedDate": "2026-06-09"
-          },
-          {
-            "enterprise": "Rubrik（NYSE: RBRK）",
-            "size": "大型",
-            "tool": "Claude Code",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-06-09",
-            "note": "推出 Agent Cloud for Claude Code，將數據保護平台轉型為 AI agent；全球 GSI 同步入夥",
             "confirmedDate": "2026-06-09"
           },
           {
@@ -4060,74 +3945,14 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-06-06"
           },
           {
-            "enterprise": "Microsoft",
-            "size": "頂尖",
-            "tool": "Claude Code",
-            "status": "❌",
-            "statusKey": "exited",
-            "eventDate": "2026-06-21",
-            "note": "Fable 5 封鎖期間宣布逐步停止讓內部工程師使用 Claude Code；自家 Codex 可能為替代方案；原預計 6/30 正式停用",
-            "confirmedDate": "2026-06-21"
-          },
-          {
-            "enterprise": "Microsoft",
-            "size": "頂尖",
-            "tool": "GitHub Copilot",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-15",
-            "note": "從 Claude Code 切換後採用",
-            "confirmedDate": "2026-05-25"
-          },
-          {
-            "enterprise": "Amazon",
-            "size": "頂尖",
-            "tool": "Claude Code",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-05",
-            "note": "雙軌並行，不押注單一供應商",
-            "confirmedDate": "2026-05-05"
-          },
-          {
-            "enterprise": "Amazon",
-            "size": "頂尖",
-            "tool": "OpenAI Codex",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-05",
-            "note": "與 Claude Code 同時部署",
-            "confirmedDate": "2026-05-05"
-          },
-          {
             "enterprise": "Uber",
             "size": "頂尖",
-            "tool": "Claude Code",
+            "tool": "Claude Code ＋ Cursor",
             "status": "⚠️",
             "statusKey": "warning",
             "eventDate": "2026-05-01",
-            "note": "4 個月燒完全年 AI 預算，CTO 承認成本失控；COO 5/27 確認帶來 25% 生產力提升",
-            "confirmedDate": "2026-05-27"
-          },
-          {
-            "enterprise": "Uber",
-            "size": "頂尖",
-            "tool": "Cursor",
-            "status": "⚠️",
-            "statusKey": "warning",
-            "eventDate": "2026-05-01",
-            "note": "與 Claude Code 並行使用；四個月合計燒完整年 AI 預算，為成本失控具名案例之一",
+            "note": "4 個月燒完全年 AI 預算，CTO 承認成本失控，隨後設用量上限；COO 5/27 確認帶來 25% 生產力提升",
             "confirmedDate": "2026-06-02"
-          },
-          {
-            "enterprise": "Fujitsu",
-            "size": "頂尖",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-26",
-            "note": "富士通與 Anthropic 簽署全球戰略合作協議，強化日本市場企業 AI 部署",
-            "confirmedDate": "2026-05-27"
           },
           {
             "enterprise": "Travelport",
@@ -4140,34 +3965,24 @@ window.WIKI_DATA = {
             "confirmedDate": "2026-05-27"
           },
           {
-            "enterprise": "Nimble Gravity",
-            "size": "中型",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-27",
-            "note": "成立 Applied Anthropic Practice，專攻銀行、保險、金融服務業 AI 諮詢",
-            "confirmedDate": "2026-05-27"
-          },
-          {
             "enterprise": "UiPath",
             "size": "大型",
-            "tool": "Claude Code",
+            "tool": "Claude Code ＋ OpenAI Codex",
             "status": "✅",
             "statusKey": "active",
             "eventDate": "2026-05-12",
-            "note": "RPA 平台雙工具整合",
+            "note": "RPA 平台雙工具整合，同時部署",
             "confirmedDate": "2026-05-12"
           },
           {
-            "enterprise": "UiPath",
-            "size": "大型",
-            "tool": "OpenAI Codex",
+            "enterprise": "Amazon",
+            "size": "頂尖",
+            "tool": "Claude Code ＋ OpenAI Codex",
             "status": "✅",
             "statusKey": "active",
-            "eventDate": "2026-05-12",
-            "note": "與 Claude Code 同時部署",
-            "confirmedDate": "2026-05-12"
+            "eventDate": "2026-05-05",
+            "note": "雙軌並行，不押注單一供應商",
+            "confirmedDate": "2026-05-05"
           },
           {
             "enterprise": "Apple",
@@ -4178,16 +3993,6 @@ window.WIKI_DATA = {
             "eventDate": "",
             "note": "外洩文件確認內部採用，非 Claude Code",
             "confirmedDate": "2026-05-01"
-          },
-          {
-            "enterprise": "KPMG",
-            "size": "大型",
-            "tool": "Claude API",
-            "status": "✅",
-            "statusKey": "active",
-            "eventDate": "2026-05-25",
-            "note": "戰略合作，重新定義客戶服務",
-            "confirmedDate": "2026-05-25"
           },
           {
             "enterprise": "iCapital",
@@ -7496,6 +7301,6 @@ window.WIKI_DATA = {
     ]
   }
 };
-window.TRANSPARENCY = {"window":{"days":114,"from":"2026-07-11","to":"2026-11-04"},"totals":{"gathered":12449,"emitted":7312,"wiki_hits":3848,"prior_emit":0.5873564141698129,"prior_wiki":0.526258205689278},"hhi":0.20630003003963499,"sources":[{"name":"Anthropic Blog","slug":"anthropic-blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":46,"filtered":35,"emitted":35,"wiki_hits":52,"emit_rate":0.7082898224757008,"emit_wilson":0.6206458383088198,"wiki_rate":1.2725018234865062,"presence":0.013513513513513514,"low_sample":false,"pc1_buckets":{"unknown":51,"high":1}},{"name":"Anthropic Status","slug":"anthropic-status","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":117,"filtered":103,"emitted":88,"wiki_hits":62,"emit_rate":0.728081228345958,"emit_wilson":0.6667207450882539,"wiki_rate":0.686352878131559,"presence":0.016112266112266113,"low_sample":false,"pc1_buckets":{"unknown":62}},{"name":"Claude API Release Notes","slug":"claude-api-release-notes","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":2,"filtered":2,"emitted":1,"wiki_hits":1,"emit_rate":0.5794149219725572,"emit_wilson":0.09452865480086611,"wiki_rate":0.5693256415357072,"presence":0.0002598752598752599,"low_sample":true,"pc1_buckets":{"unknown":1}},{"name":"GitHub","slug":"github","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":1673,"filtered":1505,"emitted":572,"wiki_hits":382,"emit_rate":0.34480043017329964,"emit_wilson":0.3195559112067188,"wiki_rate":0.6653996255273071,"presence":0.09927234927234928,"low_sample":false,"pc1_buckets":{"unknown":382}},{"name":"GitHub Issues","slug":"github-issues","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":114,"gathered":1665,"filtered":1657,"emitted":576,"wiki_hits":553,"emit_rate":0.34881135209697106,"emit_wilson":0.3234755141339534,"wiki_rate":0.952666522281387,"presence":0.1437110187110187,"low_sample":false,"pc1_buckets":{"unknown":553}},{"name":"Hacker News","slug":"hacker-news","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":114,"gathered":1709,"filtered":1566,"emitted":1401,"wiki_hits":436,"emit_rate":0.8170891430210505,"emit_wilson":0.8008430321166208,"wiki_rate":0.31273039125222735,"presence":0.11330561330561331,"low_sample":false,"pc1_buckets":{"unknown":303,"high":105,"mid":25,"low":3}},{"name":"Reddit","slug":"reddit","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":1215,"filtered":1195,"emitted":1113,"wiki_hits":225,"emit_rate":0.910726419662669,"emit_wilson":0.8991141791370013,"wiki_rate":0.20504237048699267,"presence":0.058471933471933475,"low_sample":false,"pc1_buckets":{"unknown":225}},{"name":"Google News","slug":"google-news","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":3641,"filtered":2726,"emitted":2588,"wiki_hits":1511,"emit_rate":0.7101194013338968,"emit_wilson":0.6958504112344231,"wiki_rate":0.5836268599141234,"presence":0.39267151767151764,"low_sample":false,"pc1_buckets":{"unknown":81,"high":1389,"mid":41}},{"name":"dev.to","slug":"devto","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":false,"days_seen":114,"gathered":1561,"filtered":1523,"emitted":192,"wiki_hits":76,"emit_rate":0.12887231390474146,"emit_wilson":0.1076241984900306,"wiki_rate":0.40229001018263755,"presence":0.01975051975051975,"low_sample":false,"pc1_buckets":{"unknown":76}},{"name":"Blogroll","slug":"blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":414,"filtered":407,"emitted":371,"wiki_hits":187,"emit_rate":0.8819058255377794,"emit_wilson":0.8630143405376607,"wiki_rate":0.5046261996243905,"presence":0.0485966735966736,"low_sample":false,"pc1_buckets":{"unknown":187}},{"name":"lobste.rs","slug":"lobsters","active":false,"score_reliability":"trusted","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":0,"emit_rate":0.5873564141698129,"emit_wilson":0.0,"wiki_rate":0.526258205689278,"presence":0.0,"low_sample":true,"pc1_buckets":{}},{"name":"Official Docs","slug":"official-docs","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":88,"gathered":198,"filtered":190,"emitted":179,"wiki_hits":92,"emit_rate":0.8749868269880562,"emit_wilson":0.854995205493456,"wiki_rate":0.514616836279856,"presence":0.02390852390852391,"low_sample":false,"pc1_buckets":{"unknown":92}},{"name":"Official Skills","slug":"official-skills","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":87,"gathered":2,"filtered":2,"emitted":2,"wiki_hits":2,"emit_rate":0.6248694674271026,"emit_wilson":0.3423719528896193,"wiki_rate":0.6052151714077316,"presence":0.0005197505197505198,"low_sample":true,"pc1_buckets":{"unknown":2}},{"name":"Topic Watch","slug":"topic-watch","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":82,"gathered":138,"filtered":136,"emitted":127,"wiki_hits":94,"emit_rate":0.8781463815404826,"emit_wilson":0.8629031494223316,"wiki_rate":0.7245443945758597,"presence":0.02442827442827443,"low_sample":false,"pc1_buckets":{"high":74,"mid":5,"unknown":15}},{"name":"User Query","slug":"user-query","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":112,"emit_rate":0.5873564141698129,"emit_wilson":0.0,"wiki_rate":11.726258205689279,"presence":0.029106029106029108,"low_sample":true,"pc1_buckets":{"unknown":99,"mid":7,"high":6}},{"name":"HN Repo Bridge","slug":"hn-repo-bridge","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":62,"gathered":36,"filtered":35,"emitted":35,"wiki_hits":30,"emit_rate":0.8347701479177904,"emit_wilson":0.8582996626496918,"wiki_rate":0.7836129345976174,"presence":0.007796257796257797,"low_sample":false,"pc1_buckets":{"unknown":30}},{"name":"Build Flags","slug":"build-flags","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":50,"gathered":32,"filtered":31,"emitted":31,"wiki_hits":33,"emit_rate":0.8220601592960819,"emit_wilson":0.8425539219962727,"wiki_rate":0.933233708704702,"presence":0.008575883575883576,"low_sample":false,"pc1_buckets":{"unknown":33}}],"unknown_slugs":{},"domain_data_loaded":11520};
+window.TRANSPARENCY = {"window":{"days":114,"from":"2026-07-11","to":"2026-11-04"},"totals":{"gathered":12449,"emitted":7312,"wiki_hits":3848,"prior_emit":0.5873564141698129,"prior_wiki":0.526258205689278},"hhi":0.206300030039635,"sources":[{"name":"Anthropic Blog","slug":"anthropic-blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":46,"filtered":35,"emitted":35,"wiki_hits":52,"emit_rate":0.7082898224757008,"emit_wilson":0.6206458383088198,"wiki_rate":1.2725018234865062,"presence":0.013513513513513514,"low_sample":false,"pc1_buckets":{"unknown":51,"high":1}},{"name":"Anthropic Status","slug":"anthropic-status","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":117,"filtered":103,"emitted":88,"wiki_hits":62,"emit_rate":0.728081228345958,"emit_wilson":0.6667207450882539,"wiki_rate":0.686352878131559,"presence":0.016112266112266113,"low_sample":false,"pc1_buckets":{"unknown":62}},{"name":"Claude API Release Notes","slug":"claude-api-release-notes","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":2,"filtered":2,"emitted":1,"wiki_hits":1,"emit_rate":0.5794149219725572,"emit_wilson":0.09452865480086611,"wiki_rate":0.5693256415357072,"presence":0.0002598752598752599,"low_sample":true,"pc1_buckets":{"unknown":1}},{"name":"GitHub","slug":"github","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":1673,"filtered":1505,"emitted":572,"wiki_hits":382,"emit_rate":0.34480043017329964,"emit_wilson":0.3195559112067188,"wiki_rate":0.6653996255273071,"presence":0.09927234927234928,"low_sample":false,"pc1_buckets":{"unknown":382}},{"name":"GitHub Issues","slug":"github-issues","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":114,"gathered":1665,"filtered":1657,"emitted":576,"wiki_hits":553,"emit_rate":0.34881135209697106,"emit_wilson":0.3234755141339534,"wiki_rate":0.952666522281387,"presence":0.1437110187110187,"low_sample":false,"pc1_buckets":{"unknown":553}},{"name":"Hacker News","slug":"hacker-news","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":114,"gathered":1709,"filtered":1566,"emitted":1401,"wiki_hits":436,"emit_rate":0.8170891430210505,"emit_wilson":0.8008430321166208,"wiki_rate":0.31273039125222735,"presence":0.11330561330561331,"low_sample":false,"pc1_buckets":{"unknown":303,"high":105,"mid":25,"low":3}},{"name":"Reddit","slug":"reddit","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":1215,"filtered":1195,"emitted":1113,"wiki_hits":225,"emit_rate":0.910726419662669,"emit_wilson":0.8991141791370013,"wiki_rate":0.20504237048699267,"presence":0.058471933471933475,"low_sample":false,"pc1_buckets":{"unknown":225}},{"name":"Google News","slug":"google-news","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":114,"gathered":3641,"filtered":2726,"emitted":2588,"wiki_hits":1511,"emit_rate":0.7101194013338968,"emit_wilson":0.6958504112344231,"wiki_rate":0.5836268599141234,"presence":0.39267151767151764,"low_sample":false,"pc1_buckets":{"unknown":81,"high":1389,"mid":41}},{"name":"dev.to","slug":"devto","active":true,"score_reliability":"untrusted","curation_mode":"content","rate_comparable":false,"days_seen":114,"gathered":1561,"filtered":1523,"emitted":192,"wiki_hits":76,"emit_rate":0.12887231390474146,"emit_wilson":0.1076241984900306,"wiki_rate":0.40229001018263755,"presence":0.01975051975051975,"low_sample":false,"pc1_buckets":{"unknown":76}},{"name":"Blogroll","slug":"blog","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":114,"gathered":414,"filtered":407,"emitted":371,"wiki_hits":187,"emit_rate":0.8819058255377794,"emit_wilson":0.8630143405376607,"wiki_rate":0.5046261996243905,"presence":0.0485966735966736,"low_sample":false,"pc1_buckets":{"unknown":187}},{"name":"lobste.rs","slug":"lobsters","active":false,"score_reliability":"trusted","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":0,"emit_rate":0.5873564141698129,"emit_wilson":0.0,"wiki_rate":0.526258205689278,"presence":0.0,"low_sample":true,"pc1_buckets":{}},{"name":"Official Docs","slug":"official-docs","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":88,"gathered":198,"filtered":190,"emitted":179,"wiki_hits":92,"emit_rate":0.8749868269880562,"emit_wilson":0.854995205493456,"wiki_rate":0.514616836279856,"presence":0.02390852390852391,"low_sample":false,"pc1_buckets":{"unknown":92}},{"name":"Official Skills","slug":"official-skills","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":87,"gathered":2,"filtered":2,"emitted":2,"wiki_hits":2,"emit_rate":0.6248694674271026,"emit_wilson":0.3423719528896193,"wiki_rate":0.6052151714077316,"presence":0.0005197505197505198,"low_sample":true,"pc1_buckets":{"unknown":2}},{"name":"Topic Watch","slug":"topic-watch","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":82,"gathered":138,"filtered":136,"emitted":127,"wiki_hits":94,"emit_rate":0.8781463815404826,"emit_wilson":0.8629031494223316,"wiki_rate":0.7245443945758597,"presence":0.02442827442827443,"low_sample":false,"pc1_buckets":{"high":74,"mid":5,"unknown":15}},{"name":"User Query","slug":"user-query","active":true,"score_reliability":"none","curation_mode":"whitelist","rate_comparable":true,"days_seen":0,"gathered":0,"filtered":0,"emitted":0,"wiki_hits":112,"emit_rate":0.5873564141698129,"emit_wilson":0.0,"wiki_rate":11.726258205689279,"presence":0.029106029106029108,"low_sample":true,"pc1_buckets":{"unknown":99,"mid":7,"high":6}},{"name":"HN Repo Bridge","slug":"hn-repo-bridge","active":true,"score_reliability":"trusted","curation_mode":"score","rate_comparable":true,"days_seen":62,"gathered":36,"filtered":35,"emitted":35,"wiki_hits":30,"emit_rate":0.8347701479177904,"emit_wilson":0.8582996626496918,"wiki_rate":0.7836129345976174,"presence":0.007796257796257797,"low_sample":false,"pc1_buckets":{"unknown":30}},{"name":"Build Flags","slug":"build-flags","active":true,"score_reliability":"none","curation_mode":"content","rate_comparable":true,"days_seen":50,"gathered":32,"filtered":31,"emitted":31,"wiki_hits":33,"emit_rate":0.8220601592960819,"emit_wilson":0.8425539219962727,"wiki_rate":0.933233708704702,"presence":0.008575883575883576,"low_sample":false,"pc1_buckets":{"unknown":33}}],"unknown_slugs":{},"domain_data_loaded":11520};
 // Digest content is loaded on-demand from data/digest/{date}.json
 // Wiki content is loaded on-demand from data/wiki/{id}.json
