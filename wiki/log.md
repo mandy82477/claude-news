@@ -8605,3 +8605,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-62f578（→安全政策，[[topics/recursive-self-improvement]] 批評者日期改發言日：Burry 09-14、Suleyman 09-16）。
 - 閘：cell 與讀者語言閘 0 筆新增，`run_tests` exit 0；懸置 223→223。
 - 歸因 user-query／人物
+
+## 2026-11-05 Query（第 27 波複驗——dario-amodei 定稿）
+
+- 原考題複驗：第一輪 Q1 拿、Q2 沒、Q3 拿、Q4 半 → 複驗 Q1 拿、Q2 半、Q3 拿、Q4 半。依複驗補摘要十月條目為三則（加 10-21 Fox 標題，僅標題可用）並指路 11-03 修訂版 S-1 的 RSI 門檻揭露（住 [[topics/recursive-self-improvement]]）。
+- 實作複核放行（0 🔴、3 🟡 皆吃）：[[entities/dario-amodei-archive]] open-weights 日期 07-28→07-27，與主頁一致。
+- 轉知帳本：新開 H-f75ab5（→安全政策，[[topics/anthropic-government-policy]] open-weights 聲明 07-28 改官方發布日 07-27 或標明跟進日）。
+- 回訪 2026-11-12。歸因 user-query／人物

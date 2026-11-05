@@ -1,6 +1,6 @@
 # Wave 27 冷讀者複驗：Dario Amodei（2026-11-05）
 
-> **誠實聲明：** 本次作答時，系統自動把 `/home/user/claude-news/CLAUDE.md`（專案說明）與 `wiki/CLAUDE.md`（wiki 規則，讀完 Dario 主頁後自動注入）載入 context。兩檔我都沒有主動去讀，也沒有用裡面的搜尋路徑（`wiki_search.py`、log、grep 全庫）來答題；不過 wiki/CLAUDE.md 讓我事先知道「`%% %%` 是維運備忘」「子故事頁」這些詞，第 5 節判斷內部用語時可能因此偏寬。
+> **誠實聲明：** 本次作答時，系統自動把 `CLAUDE.md`（專案根目錄，專案說明）與 `wiki/CLAUDE.md`（wiki 規則，讀完 Dario 主頁後自動注入）載入 context。兩檔我都沒有主動去讀，也沒有用裡面的搜尋路徑（`wiki_search.py`、log、grep 全庫）來答題；不過 wiki/CLAUDE.md 讓我事先知道「`%% %%` 是維運備忘」「子故事頁」這些詞，第 5 節判斷內部用語時可能因此偏寬。
 >
 > **走訪範圍：** `wiki/index.md` → `entities/dario-amodei` → `entities/dario-amodei-archive`、`topics/recursive-self-improvement`、`topics/anthropic-government-policy`、`entities/yann-lecun`。全程只在單頁內列標題、找字。
 

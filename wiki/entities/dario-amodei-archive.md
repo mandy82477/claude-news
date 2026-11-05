@@ -55,7 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 2026-07
 
-- 2026-07-28：於 Anthropic Blog 發表聲明「Our position on open-weights models」，澄清 Anthropic 從未主張禁止開源權重模型，並呼籲加強對中國晶片出口管制；人物角度僅記個人具名立場表態，政策細節詳見 [[topics/anthropic-government-policy]]（來源：Anthropic Blog）
+- 2026-07-27：於 Anthropic Blog 發表聲明「Our position on open-weights models」，澄清 Anthropic 從未主張禁止開源權重模型，並呼籲加強對中國晶片出口管制；人物角度僅記個人具名立場表態，政策細節詳見 [[topics/anthropic-government-policy]]（來源：Anthropic Blog）
 - 2026-07-16：**個人捐款 100 萬美元予 Public First**——Politico 原報導只寫「Anthropic 執行長」未具名，2026-09-13 複查已由 FEC 申報文件確認捐款人即本人，捐於 5 月，是他首筆七位數政治獻金（[Bloomberg](https://www.bloomberg.com/news/articles/2026-07-16/dario-amodei-anthropic-employees-give-millions-to-regulate-ai)）
   - **三筆捐款的關係（2026-09-13 釐清）**：同一個收款方（Public First／Public First Action），捐款人各自獨立——公司法人 4000 萬、Dario 個人 100 萬、其他員工合計 200–300 萬；不是同一筆資金分拆，也非公司代個人出資
   - 對手陣營為反監管的 Leading the Future 一系，雙方在 Bores 該席次補選對燒（詳見 [[topics/anthropic-government-policy]]）；WSJ／The Hill／Axios 的「選舉支出翻倍」框架與官方非選舉用途聲明的張力仍在
