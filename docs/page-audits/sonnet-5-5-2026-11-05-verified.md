@@ -47,3 +47,10 @@
 
 - 基準表共 **8 列**：第一節 #5 漏了「Agentic coding／**FrontierCode 1.1 (Main)**」——Sonnet 5.5 **46.2%（max）／52.1%（xhigh）**（註腳 2：Sonnet 5.5 在 max 反而低於 xhigh；兩數配對由註腳推得）、Sonnet 5 42.4%、Opus 5.5 54.4%。OSWorld 版本字串為「OSWorld 2.1」。
 - 第二節 Q1「與 Opus 5.5 差距在 1–3 分內」更正為：8 項中 7 項差 0.2–3.2 分（Terminal-Bench 反超 4.2），FrontierCode 差 2.3（xhigh）或 8.2（max）。
+
+## 六、補查（評審，2026-11-05 重抓原文）
+
+- What's new：`between_tools` 只收 low／medium／high（xhigh／max 用 adaptive）；強制工具改 `strict: true` 或 structured outputs；thinking block 綁定的 400 只限 2026-08-31 00:00 UTC 起建立的帳號（且未設 `prefix_mismatch_behavior`）；`computer_toolset_20260801` 取代，Bedrock 仍收 `computer_20251124`；`display` 預設 `omitted`；server-side fallback 不重試 bio／reasoning_extraction／general_harms。
+- 發布文：註腳 ¹「Terminal-Bench 4.0 results are reported for Claude Opus 5.5 at Xhigh effort」；“In Claude Code and our apps, the default effort is set to Medium”；“sharp eye for design”。
+- model-config：`switchModelsOnFlag: false`＝Ask each time，不是關閉 fallback；v2.1.280 前 Sonnet 5 只是 Pro 與 Team Standard 的預設，Max／Ultra／Team Premium／Enterprise／API 自 v2.1.219 起預設 Opus 5、更早是 Opus 4.8。
+- Sonnet 5 模型頁：`claude-sonnet-5`、1M／128K／Batch beta 300K、Jan 2026、退役不早於 2027-06-30、快取讀取 $0.20、六平台上架、sampling 參數回 400。

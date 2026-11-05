@@ -128,7 +128,7 @@ model-config：v2.1.280 前 Sonnet 5 只是 Pro 與 Team Standard 的預設；Ma
 
 1. 確認 HEAD 的五頁（sonnet-5-5、sonnet-5、opus-5-5、model-comparison、haiku-5-5）在 `e66cc9d` 之後沒被 ingest 動過（`git diff e66cc9d -- <五頁>` 為空）。不為空就續用設計者重產，不准手改。
 2. 在 `out/wiki/entities/sonnet-5-5.md` 套 🔴1（L108、L116、L117）、🟡4（L52）、🟡5（L133）、🟡6（L43）。
-3. 跑 `python apply.py`（全套，含 N3、N4）與 `python rules_patch.py /home/user/claude-news`，再把 `out/` 的 sonnet-5-5 複製進 repo。
+3. 跑 `python apply.py`（全套，含 N3、N4）與 `python rules_patch.py <repo>`，再把 `out/` 的 sonnet-5-5 複製進 repo。
 4. sonnet-5 加套 🔴3（L37、L43、L105）與 🟡8（L57、L95）。
 5. 主編直接改 feature-radar：L37、L519、L523（🔴2），L14、L508、L835 統一成「`sonnet` 別名」說法；改 index L48（🔴3）；overview L33、L120 同批改或記下週。
 6. 主編在 verified 末尾 append 第六節（🟡7）。
