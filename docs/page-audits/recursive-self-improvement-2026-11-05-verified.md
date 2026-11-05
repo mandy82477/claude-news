@@ -27,3 +27,8 @@
 3. 「目前結論」其實是 30 則帶日期的事件流，不是結論；METR 10-15、Accenture 09-18 兩個日期改正。
 
 來源：一手 [anthropic.com/institute/measuring-pace-of-ai-development](https://www.anthropic.com/institute/measuring-pace-of-ai-development)、anthropic.com/news 索引（10-15、09-18）；二手 [SiliconANGLE](https://siliconangle.com/2026/09/17/anthropic-details-practical-metrics-to-help-monitor-the-speed-of-ai-development/)、[Inven Global](https://www.invenglobal.com/articles/22500/ai-has-begun-to-make-itself-smarter-anthropics-warning)。
+
+## 四、補查（健檢卡 V2，2026-11-05）
+
+- 官方 anthropic.com/news/an-update-on-independent-evaluators（**2026-10-15**）：「Last month, we committed to stronger independent, third-party assessment of our models and safety practices.」「We also signed the White House Accord on Super Intelligence.」——簽署企業同意與獨立外部稽核／評估者合作；**原文未提暫停或減速承諾**。同文列 METR（員工級存取、會公布風險評估）、SecureBio（審 08 月 Risk Report 化生武器章）、Accenture（與 Faculty，評估、紅隊、防護測試）、Hugging Face（僅早期洽談）。
+- 判定：協議正式名稱是「White House Accord on Super Intelligence」、簽於 09 月（官方「last month」）；本頁「尚無任何機構正式同意協調暫停」仍成立——協議是第三方評估，不是暫停。
