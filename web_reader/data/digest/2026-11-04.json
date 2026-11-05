@@ -478,63 +478,13 @@
   "preview": "Claude Code 實驗功能追蹤：2.1.318（自 2.1.317 起比對）新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；另 4 個設定類旗標依蒐集邊界不列；CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD（首見 2.1.317）消失，列 4 階。對帳僅命中來源",
   "sedimentedToday": [
     {
-      "id": "cat-wu",
-      "name": "Cat Wu",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-known-issues",
-      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-releases",
-      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "ai-agent-safety-cyber",
       "name": "模型網攻能力、濫用與防守方放行",
       "pageType": "topic"
     },
     {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business-risks",
-      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
       "pageType": "topic"
     },
     {
@@ -548,33 +498,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-memory",
-      "name": "社群做法：記憶、CLAUDE.md 與 context",
-      "pageType": "topic"
-    },
-    {
       "id": "community-skills",
       "name": "社群做法：Skills 怎麼寫",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-compute",
-      "name": "算力與融資這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

@@ -424,21 +424,6 @@
       "pageType": "entity"
     },
     {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
       "pageType": "topic"

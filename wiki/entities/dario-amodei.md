@@ -11,10 +11,10 @@ days_since_news: 0
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 0
 inbound_links: 32
-attribution_count: 45
-attribution_last: "2026-10-29"
+attribution_count: 46
+attribution_last: "2026-11-05"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

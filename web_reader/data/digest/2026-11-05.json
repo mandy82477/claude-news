@@ -1,0 +1,876 @@
+{
+  "date": "2026-11-05",
+  "generatedAt": "2026-11-05 23:10 UTC",
+  "articleCount": 73,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Site permissions (\"Allow all websites\") ignored by the built-in browser in Claude Code Desktop",
+      "url": "https://github.com/anthropics/claude-code/issues/91495",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 02:24",
+      "sentiment": "",
+      "body": "使用者回報 Claude Code Desktop 內建瀏覽器無視「允許所有網站」設定，每次仍跳出權限提示，目前累積 31 則留言與 33 個讚，官方尚未回應修復時程。常用 Desktop 內建瀏覽器跑自動化流程的人，會被反覆跳出的權限視窗卡住。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Silent context degradation — tool results cleared without notification on 1M context sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/42542",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 09:52",
+      "sentiment": "",
+      "body": "issue 記錄三種機制（microcompact、cached microcompact、session memory compact）在 1M context 視窗下會悄悄清掉工具結果卻不通知使用者，累積 30 則留言與 11 個讚。靠長 context 視窗保留完整工具輸出做覆核的人，現在要留意輸出是否被悄悄砍掉而不自知。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+      "url": "https://github.com/anthropics/claude-code/issues/79808",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 16:52",
+      "sentiment": "",
+      "body": "使用者反映自己的信箱被系統判定為「驗證信已停發」，導致無法登入 Claude Code，而官方客服機器人沒有人工升級管道，累積 29 則留言與 7 個讚。信箱收不到驗證信又卡在客服機器人迴圈的人，這則目前是唯一可追的對照串。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Desktop app: support custom themes / accent colors (parity with CLI custom theme system)",
+      "url": "https://github.com/anthropics/claude-code/issues/79305",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 16:31",
+      "sentiment": "",
+      "body": "使用者要求 Desktop 版支援像 CLI 一樣的自訂主題與強調色，理由是目前僅有亮／暗兩色（含高對比），多數現代深色模式幾乎無法分辨視窗，累積 28 則留言與全站最高的 88 個讚。同時開多個 Desktop 視窗、靠顏色辨識專案的人，可持續關注這項需求是否納入路線圖。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Passkey (WebAuthn) sign-in for Claude accounts, across every surface",
+      "url": "https://github.com/anthropics/claude-code/issues/84862",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 01:34",
+      "sentiment": "",
+      "body": "使用者要求 Claude 帳號全平台支援 Passkey（WebAuthn）登入，累積 26 則留言，卻拿下全站最高的 209 個讚，顯示需求雖新但支持面很廣。在意帳號安全、想少打一次密碼的使用者可持續關注官方是否採納。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/05 18:07",
+      "sentiment": "",
+      "body": "Claude Help Center release notes 新增 Claude Enterprise 的安全與管理功能說明，包含安全中心（security center）、inference hooks 與集中管理等項目，移除的段落只是檔尾導覽文字。用 Enterprise 方案、需要集中管控團隊使用情況的管理者，可開連結看完整的新功能清單。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/05 18:07",
+      "sentiment": "",
+      "body": "Claude Code 桌面版文件篇幅由 216,003 字增加到 217,701 字，但頁面段落數（1,329）已超過系統可自動比對的上限（1,200），無法產生逐段差異，需要讀者自行開連結比對改了什麼。近期在用桌面版、擔心漏看說明更新的人，可自行點進去確認最新內容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-python] v2.5.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.5.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "11/04 20:27",
+      "sentiment": "",
+      "body": "新版為錯誤處理加入更細的錯誤型別與對應錯誤代碼，並讓列出 workspace 時可用 ids 篩選。用 Python SDK 處理 API 錯誤或管理多個 workspace 的開發者，升級後可拿到更精確的錯誤分類與篩選能力。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v1.1.3",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.3",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/04 20:25",
+      "sentiment": "",
+      "body": "修補讓 project、location、workspace ID 在組出的 base URL 裡做百分號編碼，值為 `.` 或 `..` 時直接丟出 AnthropicError，避免請求被導向非預期路徑。用 TypeScript SDK 搭配 Google Cloud Workspace 設定的人，這是安全性修補，建議升級。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.2",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.2",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/04 20:25",
+      "sentiment": "",
+      "body": "同批修補讓 Vertex 版的 project ID、region、model 在組請求路徑時做百分號編碼，防止 model 參數裡夾帶 `/` 把請求送到 `/publishers/anthropic/models/` 以外的端點。用 Vertex AI 介接 Claude 的團隊同樣建議升級這個安全性修補。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Cognitive Surrender: The Claude Code Engineer Who Wants You to Stop Trusting AI",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNakNhaUFDZUFEWDlGM3pZOGpvN2U3R0pqb3pYYm1MNE56Nkh1dl8zNEYxQ3dpTmM2NWVucmk2S0FYOXhHeVIxYzBHQ1V4MTg4bF9UTklyNUR4STNMWU50QzA4Rl8wOFd5eXh1TGZtVzF5MVJpVFN2VVdTVURWMlc4Qm1iNGs1Sld2ZGV3cVdyX00xelVUbW14N0dFOXBZenZxN1FReGEwWjFHZlk?oc=5",
+      "source": "Google News / Vocal",
+      "time": "11/05 16:43",
+      "sentiment": "",
+      "body": "Vocal 與 Business Insider 同日報導一名 Anthropic 工程師公開呼籲大家別再盲目信任 AI，稱自己的工作正被 agent 逐步取代，Vocal 形容這是「認知投降（cognitive surrender）」；兩篇報導都未附具體被取代的工作項目。常態性把判斷權交給 agent 的工程師，可用這篇作為自我提醒的參考角度。",
+      "focusTags": []
+    },
+    {
+      "title": "What Shaped Anthropic CEO Dario Amodei's Thinking on A.I.",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNQzc5ME9TaVQ4MWd2dlgyempENHN0eTRwRDZ0NmN1Vlo3OTRLQWpIdjVsRDVJSnFTSGlyWlJzamtaelVoTHpuSnVITlpuT0VLUnFKUlZpOWFWb2V5UUdyVk5EU3lYb1BwSzFBQ2c0TDNZY3pmcXZFTkM4MXpscEk4V3pR?oc=5",
+      "source": "Google News / The New York Times",
+      "time": "11/05 16:51",
+      "sentiment": "",
+      "body": "《紐約時報》整理 Anthropic CEO Dario Amodei 的思想脈絡如何形成他目前的 AI 路線，屬人物側寫，報導僅有標題層級資訊可判讀。想理解 Anthropic 決策邏輯背後脈絡的人，可參考這篇側寫。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "dario-amodei",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Is 'Betting Its Entire Existence On Optimism': Michael Burry Flags Risks After AI Firm's Updated S-1, Says Won't Pursue IPO Shares",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWExPTVlBa2RMdzE1bi1jVHZXSy05SUFpU3JvN1FDa2xldWw3QWtrbTFsVzBiM0NaWmUzVWtiLXcwY3JITG9XZnZ2bEFVUzJUbU5KVXowaG1YUTJ1Uk4xRHBnZGd0SGc1d25pVElJX1IzcW9Wblh1OVgwcXZFTXlIZGg4dXJ3d3ZEdmVBYjkzZ1BYbU5lanhjM3A3dE9fZ3pOSll5cERycC1Pa1E?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "11/05 08:11",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導知名投資人 Michael Burry 看完 Anthropic 修訂版 S-1 後示警，稱公司是「把整個存亡賭在樂觀上」，並表明不會參與這次 IPO 認購。持續關注 Anthropic 上市認購意願與風險評估的人，可將這則具名放空觀點納入參考。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Google could take stake in bitcoin miner TeraWulf's $19 billion AI project if Anthropic defaults",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYWRuWGNUdl9xM0ZqZ1VZV0F4dk4ySVg4aW5tMzB2S3ZXRkwxazd0NjVyM0NHbURkMFRWN01EUUxQbWFCVmlqT1NXYUdIeTJaVmtWZTlLVmRya3NhUzBmRGR6NHJjUW9VY0RLWFlnVExqS2RaWTBHc05od0NQZnRpOWlwUEpFcDBFV01LS09sUWI4RngyMXItdUl4Uk41WHUyalh1Vm5XdXZ5aUNqbGpxRklnQmNxa203ZWhHOVhtRjYwa3l2WEFQM2lwQmZfMk5Y?oc=5",
+      "source": "Google News / CoinDesk",
+      "time": "11/05 13:29",
+      "sentiment": "",
+      "body": "CoinDesk 報導若 Anthropic 日後違約，Google 可能依信用擔保條款取得 TeraWulf 這座 190 億美元 AI 資料中心計畫的股權，承上 11/04 TeraWulf 取得 Google 信用擔保的報導，這次補上「違約時會發生什麼」的具體情境，但仍未附擔保啟動的確切條件。追蹤 Anthropic 運算基礎建設資金鏈風險的人可留意這個新揭露的細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals-compute",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Nintendo Switch games running natively on Apple TV using Claude Code port",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeDctbGFZWG1JNnVub1pCTVF2REQ3UHZZWHBkYUk5c2ZsQkQzaFNndUN0ZXpUZWZwLXhEa3prNFFtWWVzek13Mkh4b3JFT1VSOElzcS14bmtaeHlBUHNDRnFvYmFMRmowUXB2LXd1Wmh6d0xpR0FCWEZzUnJDMlNKQUJFSHg1cEJ4bllYSk5HNWlqdmJ6WFNoeUJ1dmRjbzZxeFZnRTNCZXE?oc=5",
+      "source": "Google News / 9to5Mac",
+      "time": "11/05 13:07",
+      "sentiment": "",
+      "body": "9to5Mac 報導有人用 Claude Code 把 Nintendo Switch 遊戲移植成能在 Apple TV 原生執行，報導僅有標題層級資訊，未附移植技術細節或是否可重現。對用 Claude Code 做跨平台移植、逆向工程感興趣的人，恰好接在今天遊戲複製禁令放寬之後，可留意這類專案是否會變多。",
+      "focusTags": []
+    },
+    {
+      "title": "Addgene partners with Anthropic to integrate plasmid catalog into Claude",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSUYtTno4SXVsVUZhWDFNOFBIOTh0N054TjhDbzRlM0pnSVE5dnF2SFJsQXc0NGw4aTIzaGNXZjdTX29IUGJEM0RlakxHLVBkUTItbHI0UEhGWDFYTUliMHN4Mm5YX2NNTXhORHNnS3doVm53a1NVOU53ZnBKbW1XS01QMFo?oc=5",
+      "source": "Google News / The Business Journals",
+      "time": "11/05 11:00",
+      "sentiment": "",
+      "body": "The Business Journals 報導非營利生物材料存放機構 Addgene 與 Anthropic 合作，把旗下的質體（plasmid）目錄整合進 Claude 供研究人員查詢，報導未附開放對象或上線時間細節。在生物實驗室環境評估用 Claude 查詢試劑或材料資訊的研究人員可留意後續公開範圍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[BUG] Fable 5: mid-turn assistant text blocks intermittently delivered as summarized thinking blocks (turn appears silent)",
+      "url": "https://github.com/anthropics/claude-code/issues/74558",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 16:59",
+      "sentiment": "",
+      "body": "使用者回報 Fable 5 有時會把本該顯示的回覆文字，錯誤地當成摘要後的 thinking 區塊呈現，導致那個 turn 看起來完全沒回應，已有 26 則留言、20 個讚跟進，但官方始終沒說明是哪個機制造成的。用 Fable 5 跑長任務、重度依賴逐字稿核對輸出的人，要留意是否也遇到這個靜默失真。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs",
+      "url": "https://github.com/gauge-sh/gauge-cli",
+      "source": "Hacker News",
+      "time": "11/04 20:31",
+      "sentiment": "",
+      "body": "Gauge 團隊開源一套能針對 coding agent「遞迴改善」文件的 CLI 工具，內建本地執行後端、不需帳號就能試用，貼文獲 40 分。想讓 Claude Code 之類 agent 讀到的技術文件自動變精確的人可參考這個工具。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-memory",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+      "url": "https://news.ycombinator.com/item?id=50368804",
+      "source": "Hacker News",
+      "time": "11/04 17:31",
+      "sentiment": "",
+      "body": "Kino 團隊推出整合素材儲存、剪輯器與審閱連結的 AI 影片協作工具，主打讓團隊與 Codex、Claude Code 這類 agent 在同一條時間軸上一起工作，貼文獲 95 分。用 agent 協同製作影片素材的團隊可留意這個新工具。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: I paid Claude US$1,070 to read the worst reviews of 30k places to stay",
+      "url": "https://okstays.com",
+      "source": "Hacker News",
+      "time": "11/05 14:13",
+      "sentiment": "",
+      "body": "一名巴塞隆納獨立開發者花了 1,070 美元請 Claude 讀完 3 萬個住宿地點裡評分最低的評論，做成一個訂房前先看雷點的網站，貼文獲 1 分。想先知道訂房地雷卻不想自己逐條刷負評的人可去這個網站試試。情緒：😊",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-cost-management",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Yet another reason to self host: Anthropic has (again) cut back on reverse engineering tools",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xm33gr/yet_another_reason_to_self_host_anthropic_has/",
+      "source": "Reddit / r/LocalLLaMA · 週熱門",
+      "time": "11/02 17:13",
+      "sentiment": "",
+      "body": "r/LocalLLaMA 一則週熱門貼文引用 Tom's Hardware 對 Claude Code 限制逆向工程規則的報導，把它當成「這就是為什麼該自架模型」的論點，呼應今日官方鬆綁同一條規則的進度。偏好自架開源模型、對雲端供應商規則變動敏感的人，可參考這個社群角度的回應。情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Fable 5.gguf when?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjwtrv/fable_5gguf_when/",
+      "source": "Reddit / r/LocalLLaMA · 週熱門",
+      "time": "10/31 01:00",
+      "sentiment": "",
+      "body": "r/LocalLLaMA 一則週熱門貼文詢問 Anthropic 的 Fable 5 何時會有 GGUF 格式的開放權重版本，帶點調侃意味——Anthropic 目前並未開放任何模型權重。期待本地跑開放權重模型的人，這則算是社群對 Anthropic 封閉模型策略的調侃回應。情緒：🤔",
+      "focusTags": []
+    },
+    {
+      "title": "DenisSergeevitch/ex-ussr-kinship-research",
+      "url": "https://github.com/DenisSergeevitch/ex-ussr-kinship-research",
+      "source": "GitHub Search",
+      "time": "11/05 18:07",
+      "sentiment": "",
+      "body": "這套幫 AI agent（Codex、Claude Code）查族譜的 skill，整合了前蘇聯地區的教堂、民事、軍事與驅逐／鎮壓紀錄，可用使用者的語言回覆，目前累積 1,959 星，是今日 GitHub Search 抓到裡星數最高的倉庫。對做歷史檔案查詢或族譜研究工具感興趣的開發者可留意。情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "liguobao/ds-harness-remote",
+      "url": "https://github.com/liguobao/ds-harness-remote",
+      "source": "GitHub Search",
+      "time": "11/05 18:07",
+      "sentiment": "",
+      "body": "這套基於 DeepSeek Harness 插件機制的遠端存取方案，用低延遲、端到端加密的 P2P 連線讓 PC、行動裝置與網頁隨時連回本機上的 DSH、Codex、Cursor、Claude Code 工作區，目前累積 1,930 星，是今日第二高。想跨裝置遠端操作 Claude Code 工作區的人可留意這個替代方案。情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-interfaces",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：How do usage and length limits work?",
+      "url": "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work",
+      "source": "Official Docs",
+      "time": "11/05 18:07",
+      "sentiment": "",
+      "body": "文件新增一句建議：模型有 thinking 開關時，不需要加強推理就把它關掉；同時刪除舊版「如何搭配 Pro/Max 方案用 Claude Code」與「什麼是 Team 方案」兩段說明。想省 token、或還在找 Pro/Max/Team 方案說明的人，這次異動後內容位置可能跟記憶中不一樣。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "coding-workflow-guide",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-04）昨日卸任的 Claude Code 產品負責人 Cat Wu，The Decoder 與 Business Insider 今日同步報導她的下一站是 OpenAI，這是她卸任後首次有具體去向浮出；兩篇報導都未提到她在 OpenAI 的具體職位或負責項目。持續關注 Claude Code 產品路線圖與人才流向的人，可留意 OpenAI 是否藉此補強自家 coding agent 產品線。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQkxfUXV5QlJwOWNFTmRTdW9peVZWeFg5SzBIUGd0SUMzSGdSTVpCTlp2amcyVG1RQ1IxX1oyMzVVNGRKRGdiRGlvUE8xMkxHTE5xRlJwLVFsdk1LVGM5M0QtYjhYRkl5Y3lOVkt2MjdrMGhFc3VfZ3pDbmJzeC1GcUY2UG5SZkViZjgzSUVNN0kzNGRrVEtlbE1iRQ?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVmtsUnhTLUhSSnp4Q09CcWhMcS1lSGhSOUZKdUtWYUJxeW9YdHBRUTV6WW9LNUZ2RlRVWl9tUG02dkRMSzdtMk5NbENYVVhfczJMQ1lkV012RnFiTXRNUFhGdktjakpRcGlKWDRvQzFsNEZ1cnJDcTg2UlZpQWZ4WGpHVWdPejdlQ0E2QjZtNXRVLWRqdXBB?oc=5"
+      ],
+      "ref_names": [
+        "The Decoder",
+        "Business Insider"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "The Verge 報導 Claude AI 現在可以直接接入使用者的銀行帳戶，但該報導只給了這句標題，沒有進一步交代支援銀行範圍、驗證方式或可執行動作。會考慮把 Claude 接上自己財務帳戶的人，應先留意官方說明其存取範圍與風險揭露再決定是否開啟。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX3lQLVFKMlNaVkNiczJpdi1IZ1pjWWpSQVhjQTV0X3FHWnhIVklqX2swZFZHT1JJSzFkWEVsN002WGhOalpRSXBrT3Nzc09DU3RnS2VoZzUwMVFkTHlVb1ItME1QYmoyWGpmaFBwX2ZhTUY2V3Zid0M5OTg2d3kyam1pR3l5MXh6ZWpEZWJYVG8wY3EwOTNIN3BJd3NkVHZo?oc=5"
+      ],
+      "ref_names": [
+        "The Verge"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "The Register 報導 Anthropic 確認存在一個 Claude Dispatch 的安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令，但官方決定不修補；報導未附缺陷的具體觸發條件或是否已有真實攻擊案例。在企業環境啟用 Claude Dispatch 跨團隊功能的管理者，應留意官方是否後續提供規避建議。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMihAJBVV95cUxOWmNYRUNBVGRtakc4aTBFX3c2VXpUQzVuUGJtdjNzNHp0a3VVNG0xMXpUUVBzb053T19yeThmeXl0U1lYeGd4LWY4aF9jMmdHR3lERmN6MVBWai1ZTks5SW5CTEE3NnRSYVljWmpSVGRUMzJ3TnpRS2FEYXQtUnpUeC01eVNBdUM5WmJZakxGUzZvVXJocVBwUWhLWHJudDRIa05rT25udmFMWnhVX201MUJ2NjdWSFJVeVJvSjVDR2k3VE5KNm9iVVJwZnhDMzV3QmVzLUZxZ3ZIQkF2YzdDOGIzNW9UVFU1WDFHcmIzbFFkYm5QMjVXZXFHVGx1cDlkX0JQQw?oc=5"
+      ],
+      "ref_names": [
+        "The Register"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 10-31）Tom's Hardware 報導 Anthropic 放寬先前針對 Claude Code 重現他人特定遊戲的限制，改為使用者提出此類請求時主動提議改做同類型但原創的遊戲；相較 10/31 社群實測發現的全面擋下，這是官方對該規則的首次鬆動，但仍未恢復無害逆向工程案例的存取。用 Claude Code 做遊戲移植或逆向工程的人，可重新測試手上的專案是否能繼續進行。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5"
+      ],
+      "ref_names": [
+        "Tom's Hardware"
+      ]
+    },
+    {
+      "tag": "[風險警示]",
+      "text": "Mezha.net、Notebookcheck 與 BigGo Finance 三家媒體同日報導，Postman 用戶端的更新在未告知的情況下把自家外掛加進使用者的 Claude Code 與 Codex 設定，BigGo Finance 並將此事定位為加深開發工具信任危機的案例，但三篇報導都未說明外掛具體做了什麼或如何移除。裝有 Postman 用戶端、同時使用 Claude Code 或 Codex 的開發者，應檢查自己的設定檔是否被動加了未預期的外掛。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxPRngwSzk2cTkzaFlDdDQyS2JPSGVPR2RPREkwQWhkUDFZUDFadEtUR2loYXNwUzltdHBWOWctWXBVSnA5dGI0VE11WWtrRlpBemxCcjgxbkd6LUt5RVR6WHFES0lDQS1ZWmNUVmQ5NEhGa0lwMGdITURFY3hORFByRlR5aHFuQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTDVQaWJXWFI0Vkd2WDRwWTdKbUJqVE5kTG1zekpwemJDajJZX2hwT2tFSTFIVTJrY3hKRTh2MWh2VjZ5OXpnWWY3UFVEUlRkUHlpREIyV2trekNCcWZxT2p1bXZub2VCcVdFOWZvdzF1X0pPcjdRYW9JYUhVSHJ6b0tYVTlhN3dVOTFCUVRuUjFDX3M4SG9TOFZ0WDViRkZ6aGtkZ1dvNVY?oc=5"
+      ],
+      "ref_names": [
+        "Mezha.net",
+        "Notebookcheck"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "GitHub Copilot is now available in Xcode's coding assistant",
+      "url": "https://github.blog/changelog/2026-11-04-github-copilot-is-now-available-in-xcodes-coding-assistant",
+      "body": "GitHub Copilot 現在能直接整合進 Xcode 內建的程式碼助理，公開預覽階段；對比之下 Claude Code 目前沒有官方 Xcode 原生整合，蘋果生態開發者習慣在 IDE 內原生叫出 Copilot 的話，這會是跟 Claude Code CLI／外掛工作流選型時的另一個考量點",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 38
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 17
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 4
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 14
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 11
+    }
+  ],
+  "preview": "程式開發實戰手冊：usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁「官方的 session 經營建議」段同步補上這則建議。",
+  "sedimentedToday": [
+    {
+      "id": "cat-wu",
+      "name": "Cat Wu",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "coding-workflow-guide",
+      "name": "程式開發實戰手冊",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-memory",
+      "name": "社群做法：記憶、CLAUDE.md 與 context",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "enterprise-cost-management",
+      "name": "企業規模 Claude 成本管理",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-05",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "topics/coding-workflow-guide",
+            "name": "程式開發實戰手冊",
+            "label": "官方新增：關 thinking 省 token",
+            "date": "",
+            "body": "usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁「官方的 session 經營建議」段同步補上這則建議。"
+          },
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增功能請求**：Desktop 自訂主題／強調色（[#79305](https://github.com/anthropics/claude-code/issues/79305)，28 則留言、88 個讚，本日反應數最高；🔌 平台相容性組）、全平台 Passkey（WebAuthn）登入（[#84862](https://github.com/anthropics/claude-code/issues/84862)，26 則留言、209 個讚，全站今日讚數最高；👤 帳號管理組）。\n- **新增已知問題**：Fable 5 回覆文字偶被誤顯示為摘要後的 thinking 區塊（[#74558](https://github.com/anthropics/claude-code/issues/74558)，26 則留言、20 個讚；🧠 組）、Postman 用戶端未經同意把外掛加入 Claude Code／Codex 設定（三源同報，互動均 0；🛡️ 組，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]）、新 session 傳預設開在 cloud 影響簡單任務（Reddit 單一貼文、0 留言，❓ 待查證；🧠 組）。\n- **高互動已知問題互動數更新**：內建瀏覽器忽略站台權限（[#91495](https://github.com/anthropics/claude-code/issues/91495)，31 則留言、33 個讚；🔌 組）、1M context 靜默清除工具結果（[#42542](https://github.com/anthropics/claude-code/issues/42542)，30 則留言、11 個讚；🧠 組）、驗證信被抑制無法登入（[#79808](https://github.com/anthropics/claude-code/issues/79808)，29 則留言、7 個讚；👤 組）。\n- **已知問題狀態更新**：遊戲複製限制（10-31 新增）鬆綁，使用者提出重現他人遊戲請求時 Claude Code 改為主動提議做原創同類遊戲，無害逆向工程案例仍未恢復存取（🧠 組，Tom's Hardware）。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **無新 CLI 版本**；anthropic-sdk-typescript 兩版（google-cloud-sdk-v1.1.3、vertex-sdk-v1.1.2）修補 ID 路徑注入漏洞，anthropic-sdk-python v2.5.0 新增錯誤型別與 workspace 篩選。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **桌面版文件再增字**（216,003→217,701 字）：段落數 1329 超過自動比對上限（1200），沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Michael Burry 看完修訂版 S-1 示警：Anthropic「把存亡賭在樂觀上」，不參與這次 IPO 認購**（Yahoo Finance）\n- **Bloomberg Law／Institute for Law & AI：S-1 的 AI 風險揭露被視為安全盡職調查一環**，具體標準未見報導（Google News）"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。\n- 🟡 **GitHub Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段**（Blog/GitHub Copilot Changelog）——Claude Code 無對應整合，用 Xcode 開發 Apple 平台的人多一個選型考量點。"
+          },
+          {
+            "page": "topics/enterprise-cost-management",
+            "name": "企業規模 Claude 成本管理",
+            "label": "個人開發者具名成本案例：一次性資料任務花費 $1,070",
+            "date": "",
+            "body": "Show HN 揭露獨立開發者付 Claude $1,070 讀完 3 萬個住宿地點最差評論做成訂房避雷網站；10-29 官方傳的 AI 支出能見度新工具細節仍未見報導。"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **TeraWulf／Google**：CoinDesk 報導若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 190 億美元資料中心計畫股權，啟動條件未載\n- **Anthropic／AP**：ADWEEK 報導雙方達成首個內容授權合作，供選舉報導，授權範圍未載"
+          },
+          {
+            "page": "topics/anthropic-business-risks",
+            "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Barchart.com：市場評論稱 Anthropic 近 9000 億美元 AI 支出終將面臨華爾街獲利要求**：具體支出口徑與時間窗未見報導"
+          },
+          {
+            "page": "topics/market-signals-compute",
+            "name": "算力與融資這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **CoinDesk：Google 信用擔保若觸發，可能取得 TeraWulf 資料中心股權**：承接 11-04 信用擔保一則，首度揭露違約情境，股權比例與觸發條件未揭露。\n\n前一日（2026-11-04）：\n- **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，擔保金額未揭露，TeraWulf 新增為可交易標的。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **IPO 揭露風險**：Bloomberg Law News／Institute for Law & AI 稱 IPO 揭露風險的做法被定位為安全治理的盡職調查，承 10-26～10-29 S-1 揭露系列。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **產品漏洞／不修補**：The Register 報導 Claude Dispatch 缺陷可跨企業邊界執行遠端指令，官方確認但決定不修補。\n- **供應鏈／第三方**：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定，三家媒體同日報導。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "r/LocalLLaMA 週熱門把 Claude Code 逆向工程限制當成自架理由",
+            "date": "",
+            "body": "- **r/LocalLLaMA**：引 Tom's Hardware 報導 Claude Code 限縮逆向工程規則，當成「這就是為什麼該自架」的論點之一，呼應本頁「切換到開源模型的代價接近零」長期軸線。"
+          },
+          {
+            "page": "topics/community-memory",
+            "name": "社群做法：記憶、CLAUDE.md 與 context",
+            "label": "CLAUDE.md 管理新增文件遞迴改善工具",
+            "date": "",
+            "body": "- **Gauge CLI**：開源、免帳號即可試用，用「跑任務→分析→改文件」迴圈遞迴改善 coding agent 讀的文件，HN 40 分。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "Plugin／MCP 整合新增官方與可靠性兩例，創意工具新增人機共用時間軸案例",
+            "date": "",
+            "body": "- **makenotion/claude-code-notion-plugin**：Notion 官方帳號發布的 Claude Code 連接 plugin，官方廠商首例。\n- **ctoldigital/axuse**：MCP server 用 accessibility tree 取代截圖迴圈做電腦操作，792★。\n- **Launch HN: Kino AI**：YC S23 團隊讓真人與 Claude Code／Codex 共用同一條影片剪輯時間軸，HN 95 分。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "行動裝置遠端控制新增一款跨端 P2P 加密方案",
+            "date": "",
+            "body": "- **liguobao/ds-harness-remote**：低延遲端到端加密 P2P，PC／行動／網頁皆可連回本機 Claude Code 等 agent 工作區，1,930★。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "NYT 側寫整理其思想脈絡",
+            "date": "",
+            "body": "《紐約時報》刊出側寫文章，整理 Amodei 的思想脈絡如何形成他現行的 AI 路線；僅標題層級資訊可用，具體論點未見報導。"
+          },
+          {
+            "page": "entities/cat-wu",
+            "name": "Cat Wu",
+            "label": "卸任後下一站確認為 OpenAI",
+            "date": "",
+            "body": "The Decoder、Business Insider 同步報導：卸任 Claude Code 產品負責人的 Cat Wu，下一站確認為 OpenAI；兩篇均未提及具體職位或負責項目。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 18
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Site permissions (\"Allow all websites\") ignored by the built-in browser in Claude Code Desktop",
+      "url": "https://github.com/anthropics/claude-code/issues/91495",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 02:24",
+      "sentiment": "",
+      "body": "使用者回報 Claude Code Desktop 內建瀏覽器無視「允許所有網站」設定，每次仍跳出權限提示，目前累積 31 則留言與 33 個讚，官方尚未回應修復時程。常用 Desktop 內建瀏覽器跑自動化流程的人，會被反覆跳出的權限視窗卡住。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Silent context degradation — tool results cleared without notification on 1M context sessions",
+      "url": "https://github.com/anthropics/claude-code/issues/42542",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 09:52",
+      "sentiment": "",
+      "body": "issue 記錄三種機制（microcompact、cached microcompact、session memory compact）在 1M context 視窗下會悄悄清掉工具結果卻不通知使用者，累積 30 則留言與 11 個讚。靠長 context 視窗保留完整工具輸出做覆核的人，現在要留意輸出是否被悄悄砍掉而不自知。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Cannot log in to Claude Code: verification emails suppressed for my address, support bot has no escalation path",
+      "url": "https://github.com/anthropics/claude-code/issues/79808",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 16:52",
+      "sentiment": "",
+      "body": "使用者反映自己的信箱被系統判定為「驗證信已停發」，導致無法登入 Claude Code，而官方客服機器人沒有人工升級管道，累積 29 則留言與 7 個讚。信箱收不到驗證信又卡在客服機器人迴圈的人，這則目前是唯一可追的對照串。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Desktop app: support custom themes / accent colors (parity with CLI custom theme system)",
+      "url": "https://github.com/anthropics/claude-code/issues/79305",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/04 16:31",
+      "sentiment": "",
+      "body": "使用者要求 Desktop 版支援像 CLI 一樣的自訂主題與強調色，理由是目前僅有亮／暗兩色（含高對比），多數現代深色模式幾乎無法分辨視窗，累積 28 則留言與全站最高的 88 個讚。同時開多個 Desktop 視窗、靠顏色辨識專案的人，可持續關注這項需求是否納入路線圖。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Passkey (WebAuthn) sign-in for Claude accounts, across every surface",
+      "url": "https://github.com/anthropics/claude-code/issues/84862",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/05 01:34",
+      "sentiment": "",
+      "body": "使用者要求 Claude 帳號全平台支援 Passkey（WebAuthn）登入，累積 26 則留言，卻拿下全站最高的 209 個讚，顯示需求雖新但支持面很廣。在意帳號安全、想少打一次密碼的使用者可持續關注官方是否採納。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}
