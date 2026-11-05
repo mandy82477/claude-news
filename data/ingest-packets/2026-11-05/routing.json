@@ -195,10 +195,12 @@
     "summary_override": ""
   },
   "https://github.com/HaseebKhalid1507/SynapsCLI": {
-    "categories": [],
-    "reason": "HN 2 分未達社群工具門檻（≥30分）",
+    "categories": [
+      "功能"
+    ],
+    "reason": "分類回退自排除：分類複核記者判定具體指稱 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉，屬功能/政策異動線報",
     "note": "",
-    "summary_override": ""
+    "summary_override": "Show HN 貼文作者抱怨 Anthropic 在 Claude Code 新增規則禁止使用者自製遊戲且無選項關閉，貼文獲 2 分。"
   },
   "https://github.com/aisloperator/fedigoo": {
     "categories": [],
@@ -219,10 +221,12 @@
     "summary_override": ""
   },
   "https://okstays.com": {
-    "categories": [],
-    "reason": "HN 1 分未達社群工具門檻（≥30分）",
+    "categories": [
+      "商業"
+    ],
+    "reason": "分類回退自排除：分類複核記者判定具體揭露用 Claude 處理 3 萬筆評論花費 1,070 美元，符合商業類「成本案例」判準",
     "note": "",
-    "summary_override": ""
+    "summary_override": "Show HN 貼文作者揭露花費 US$1,070 請 Claude 讀完 3 萬個住宿地點裡評分最低的評論做成訂房避雷網站，貼文獲 1 分。"
   },
   "https://github.com/faique43/vexus": {
     "categories": [],
@@ -251,10 +255,12 @@
     "summary_override": ""
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xop1wm/cloud_is_so_bad_i_wish_i_never_activated_it/": {
-    "categories": [],
-    "reason": "個人單一抱怨、無具體技術細節，0 留言",
+    "categories": [
+      "功能"
+    ],
+    "reason": "分類回退自排除：分類複核記者判定具體指稱新 session 一律預設開在 cloud、無法完成簡單任務，屬 Claude Code cloud session 預設行為的具體抱怨",
     "note": "",
-    "summary_override": ""
+    "summary_override": "Reddit r/ClaudeCode 使用者抱怨新 session 現在一律預設開在 cloud，無法順利完成簡單任務，貼文 0 讚 0 留言。"
   },
   "https://www.reddit.com/r/ClaudeCode/comments/1xoozp6/geography_game_that_i_built_with_claude_code_in_3/": {
     "categories": [],
@@ -396,9 +402,9 @@
   },
   "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5": {
     "categories": [
-      "安全政策"
+      "功能"
     ],
-    "reason": "",
+    "reason": "分類回退自[安全政策]：記者判定答不出安全政策四頁任一觸發條件，建議改歸功能（entities/claude-code-known-issues.md 已有 2026-10-31 對應已知問題列）",
     "note": "Tom's Hardware：遊戲複製限制鬆綁，承接 10/31 全面擋下報導，為同一政策線的新進度。",
     "summary_override": ""
   },

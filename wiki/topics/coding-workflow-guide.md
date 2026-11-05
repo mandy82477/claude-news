@@ -40,7 +40,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
 > **官方新增：關 thinking 省 token**（2026-11-05）
-> usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁第 2a 段同步補上，見「官方的 session 經營建議」。
+> usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁「官方的 session 經營建議」段同步補上這則建議。
 
 ---
 

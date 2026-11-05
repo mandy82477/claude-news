@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
 > **最新動態**（2026-11-05）
-> - **無新 CLI 版本**；anthropic-sdk-typescript 兩版（google-cloud-sdk-v1.1.3、vertex-sdk-v1.1.2）修補 ID 路徑注入漏洞，anthropic-sdk-python v2.5.0 新增錯誤型別與 workspace 篩選（見下方「開發者須知」與「歷史記錄」）。
+> - **無新 CLI 版本**；anthropic-sdk-typescript 兩版（google-cloud-sdk-v1.1.3、vertex-sdk-v1.1.2）修補 ID 路徑注入漏洞，anthropic-sdk-python v2.5.0 新增錯誤型別與 workspace 篩選。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
