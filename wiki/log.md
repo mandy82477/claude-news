@@ -8621,3 +8621,10 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 規則面：`models/pages.md` 加 sonnet-5-5 節（現在誰是預設以 model-config 為出處），`models/daily.md` 一列；沿革記 `docs/rules-changelog/reporter-models.md`。
 - 轉知帳本：H-cdd17c、H-67d188（→商業，pricing、pricing-history 的「取代 Sonnet 5 為預設」）、H-98f7c9（→功能，claude-code-releases L119、L223）。
 - 閘：cell 與讀者語言 0 新增。歸因 user-query／模型
+
+## 2026-11-05 Query（第 28 波複驗——sonnet-5-5 定稿）
+
+- 原考題複驗：第一輪 Q1 拿、Q2 半、Q3 拿、Q4 半 → 複驗四題全拿，皆在 [[entities/sonnet-5-5]] 一跳內（Q3 單價齊全、算例的家是 [[entities/pricing]]）。
+- 實作複核放行（0 🔴、3 🟡 皆吃）；複驗後 [[topics/model-comparison]] 兩處「API 預設」改「`sonnet` 別名」，[[index]] sonnet-5 列限 Pro／Team Standard。
+- 轉知帳本：新開 H-afccab（→商業，pricing 快取乘數括號與 1M 計費句）。
+- 回訪 2026-11-12。歸因 user-query／模型

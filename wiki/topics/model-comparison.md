@@ -49,7 +49,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |------|---------|------------------------------|--------|
 | [[entities/fable-5\|Fable 5.1]] | 旗艦（Mythos 級公開版，2026-09-01 取代 5.0） | $10 / $50 · 1M（快取讀取降至 0.025×，見 [[entities/pricing]]） | 跨多天的長期 agentic 工作流、deep reasoning、安全漏洞分析 |
 | [[entities/opus-5-5\|Opus 5.5]] | 次旗艦（Pro／Max／Team／Enterprise／API 預設 Opus，2026-09-23 起） | $4 / $20（官方確認）· 1M | 數小時無人盯著的編碼任務、跨數十檔 refactor、複雜系統工程 |
-| [[entities/sonnet-5-5\|Sonnet 5.5]] | 主力平衡（現行 Sonnet，API 預設，2026-09-28 起） | $2 / $10（快取讀取 $0.10）· 1M | 日常規模開發（分鐘～1 小時級）、修 bug、文件/簡報/試算表產出、tool use 密集 |
+| [[entities/sonnet-5-5\|Sonnet 5.5]] | 主力平衡（現行 Sonnet，`sonnet` 別名所指，2026-09-28 起） | $2 / $10（快取讀取 $0.10）· 1M | 日常規模開發（分鐘～1 小時級）、修 bug、文件/簡報/試算表產出、tool use 密集 |
 | Sonnet 4.6 | 前代主力 | $3 / $15（官方確認）· 1M | 已驗證穩定、尚未遷移的既有工作流 |
 | [[entities/haiku-5-5\|Haiku 5.5]] | 輕量 worker（現行 Haiku，2026-10-07 取代 Haiku 4.5） | $0.10 / $0.50（prompt ≤100K；>100K 為 $0.50 / $2.50）· 1M（官方定價頁，官方頁 2026-10-11 查證；見 [[entities/haiku-5-5#實付成本]]）| 高流量成本敏感任務（摘要、分類、DB 查詢）；Opus 5.5／Sonnet 5.5 的 subagent；即時客服／瀏覽器操作 |
 
@@ -155,7 +155,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **表下細節**
 
 - **Sonnet 4.5 退役**：2026-11-30 退役已官方確認（見上方 callout 與下方時序），仍用 4.5 者應儘速遷移。Foundry 的 `default` 仍指 Sonnet 4.5（2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
-- **Sonnet 5→5.5 升級會壞什麼、請求被改跑 Sonnet 5**：兩則已於 2026-11-05 經官方文件查證，不再列入本表；逐項與關法見 [[entities/sonnet-5-5#從 Sonnet 5 換過來會壞什麼]]。
+- **Sonnet 5→5.5 升級會壞什麼、請求被改跑 Sonnet 5**：兩則已於 2026-11-05 經官方文件查證，不再列入本表；逐項與處理方式見 [[entities/sonnet-5-5#從 Sonnet 5 換過來會壞什麼]]。
 
 ### 各模型現行行為限制與輸出標記
 
@@ -227,7 +227,7 @@ Claude 家內選型看上方情境推薦；跨家比較（GLM、Qwen、Kimi 等�
 **2026-09**
 
 - 2026-09-30：**Sonnet 4.5 公告棄用，2026-11-30 退役**（官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證，與 mixed-news.com、dev.to 先行報導一致）：建議遷移至 `claude-sonnet-5-5`；Bedrock、GCP 另訂時程
-- 2026-09-28：**Sonnet 5.5 發布**，取代 Sonnet 5 成為 Anthropic API 預設 Sonnet；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3% 升至 70.6%
+- 2026-09-28：**Sonnet 5.5 發布**，取代 Sonnet 5 成為現行 Sonnet（Claude Code `sonnet` 別名改指它）；牌價維持 $2/$10，Terminal-Bench 4.0 由 10.3% 升至 70.6%
 - 2026-09-23：**Opus 5.5 發布**，取代 Opus 5 成為 Pro／Max／Team／Enterprise／API 的預設 Opus；Opus 5 改列 Legacy，仍可用。牌價 $4/$20（降 20%），官方稱運算成本降 40%
 - 2026-09-01：**Fable 5.1 發布**，取代 Fable 5.0 成為公開陣容旗艦；Mythos 5.1 同步發布，維持信任機構限定存取
 
