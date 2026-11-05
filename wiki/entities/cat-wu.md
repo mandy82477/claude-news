@@ -4,8 +4,8 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-04"
-last_news_update: "2026-11-04"
+last_updated: "2026-11-05"
+last_news_update: "2026-11-05"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -29,22 +29,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **類型：** person
 **狀態：** active
 **領域：** 👤 人物
-**身分：** 前 Anthropic Claude Code 產品負責人
-**與 Anthropic：** 前員工
+**身分：** OpenAI（前 Claude Code 產品負責人）
+**與 Anthropic：** 同業
 **職能：** 工程產品
-**為何追蹤：** 任內 Claude Code 產品方向（AI 主動性）的公開論述；卸任後持續追蹤接任安排
+**為何追蹤：** 任內 Claude Code 產品方向（AI 主動性）的公開論述；卸任後轉任 OpenAI，持續追蹤人才流向與對手布局
 **首次出現：** 2026-05-14
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **卸任 Claude Code 產品負責人**（2026-11-04）
-> Business Insider 綜合至少三家媒體報導證實她任職兩年後卸任；Unite.AI 稱她是「Claude Code 門面人物之一」，兩篇皆未提接任者。
+> **卸任後下一站確認為 OpenAI**（2026-11-05）
+> The Decoder、Business Insider 同步報導：卸任 Claude Code 產品負責人的 Cat Wu，下一站確認為 OpenAI；兩篇均未提及具體職位或負責項目。
 
 ---
 
 ## 現況
 
-2026-11-03，Business Insider 綜合至少三家媒體報導證實 Cat Wu 任職兩年後卸任 Claude Code 產品負責人；Unite.AI 稱她為「Claude Code 的門面人物之一」。兩篇報導均未提及接任者或後續產品負責安排。
+2026-11-05，The Decoder 與 Business Insider 同步報導 Cat Wu 卸任 Claude Code 產品負責人後的下一站確認為 OpenAI，為卸任後首次具體去向浮現；兩篇均未提及她在 OpenAI 的具體職位或負責項目。
 
 Cat Wu 原為 Anthropic Claude Code 產品負責人（Head of Claude Code Products），任內與創始人 [[entities/boris-cherny]] 共同主導 Claude Code 的產品方向；2026-05-14 提出 AI 下一個重大躍進是「主動性（proactivity）」，為其任內最後一次公開論述。
 
@@ -91,12 +91,16 @@ Cat Wu 接受公開訪問，指出：
 - [[news/2026-06-22]]
 - [[news/2026-07-08]]
 - [[news/2026-11-04]]
+- [[news/2026-11-05]]
 - [Simon Willison — A Fireside Chat with Cat and Thariq from the Claude Code team](https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything)
 - [Business Insider — Top Anthropic product leader Cat Wu, one of the faces of Claude Code, has left the startup](https://news.google.com/rss/articles/CBMinAFBVV95cUxNV3VPODg4OFh2Wk9FNTFNRlMzTzV4WnpOWGZ2Z1lNZ01nYUh2SS0xN1R0LUpTTHhUTnMwVFZQS2tiNHRpdHVuZVVjT0ZwZmJqbDdndlZZcGJkcHFQSElyZG5MSVdHczNtS0d3VGlONGVibnhVWDJIaVNNbHZMNENwR2ZzNFlaWWRjVDNQeHpaUXNEdk1OZ012a3MybFA?oc=5) — Google News／Business Insider，2026-11-03
 - [Unite.AI — Cat Wu Steps Down as Claude Code Product Chief After Two Years](https://news.google.com/rss/articles/CBMijAFBVV95cUxPcjc2VjlTUWh3WWFsVzkwWFVCVjRmNkNna1RESHVvVDBIeHhxbzNqYXRNTkEyWE9pZ1U3N3BwdHF6bUJnQVRvRmxneERyeXNPNFNyaTc3WXhfY21QeVhyOVY0cDdBZmx6dzRnSlRkUHl1dXRwWDlUelpLTFQ0VHpGSlYySmJyWnJNZDZrcA?oc=5) — Google News／Unite.AI，2026-11-04
+- [The Decoder — Anthropic loses product lead Catherine Wu behind Claude Code to OpenAI](https://news.google.com/rss/articles/CBMimwFBVV95cUxOQkxfUXV5QlJwOWNFTmRTdW9peVZWeFg5SzBIUGd0SUMzSGdSTVpCTlp2amcyVG1RQ1IxX1oyMzVVNGRKRGdiRGlvUE8xMkxHTE5xRlJwLVFsdk1LVGM5M0QtYjhYRkl5Y3lOVkt2MjdrMGhFc3VfZ3pDbmJzeC1GcUY2UG5SZkViZjgzSUVNN0kzNGRrVEtlbE1iRQ?oc=5) — Google News／The Decoder，2026-11-05
+- [Business Insider — A top Anthropic product leader has been poached by OpenAI](https://news.google.com/rss/articles/CBMilwFBVV95cUxPVmtsUnhTLUhSSnp4Q09CcWhMcS1lSGhSOUZKdUtWYUJxeW9YdHBRUTV6WW9LNUZ2RlRVWl9tUG02dkRMSzdtMk5NbENYVVhfczJMQ1lkV012RnFiTXRNUFhGdktjakpRcGlKWDRvQzFsNEZ1cnJDcTg2UlZpQWZ4WGpHVWdPejdlQ0E2QjZtNXRVLWRqdXBB?oc=5) — Google News／Business Insider，2026-11-05
 
 ## 歷史記錄
 
+- 2026-11-05：The Decoder 與 Business Insider 同步報導 Cat Wu 卸任後下一站確認為 OpenAI，為卸任後首次具體去向浮現；兩篇均未提及具體職位或負責項目（來源：The Decoder、Business Insider）
 - 2026-11-03：Business Insider 綜合至少三家媒體報導證實 Cat Wu 任職兩年後卸任 Claude Code 產品負責人，Unite.AI 稱她為「Claude Code 的門面人物之一」；兩篇報導均未提及接任者（來源：Business Insider、Unite.AI）
 - **「prompt engineering 不那麼重要」發言者查實為 Boris Cherny，非 Cat Wu**（2026-07-30 報導，2026-09-02 查證）：[Search Engine Journal 原文](https://www.searchenginejournal.com/head-of-anthropics-claude-code-says-prompt-engineering-not-that-important/584286/)具名 [[entities/boris-cherny]]（YC Diana Hu 訪談）——「不需要花俏的東西，給模型任務、給它驗證輸出的方式，它就會完成」，並勸使用者「不要聽 LinkedIn 影響者」、改以經驗式方法互動。本頁保留此列僅為澄清歸屬；完整論述見 [[entities/boris-cherny]]。
 - 2026-07-22：Simon Willison 發布紀要，確認本月稍早於 AI Engineer World's Fair 曾主持一場爐邊對談，與談人為 Cat Wu 與 Thariq Shihipar（Anthropic Claude Code 團隊）；原文對談具體內容未完整揭露，暫僅記錄參與事實，不推測發言內容
