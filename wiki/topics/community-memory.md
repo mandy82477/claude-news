@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **索引記憶新增程式碼圖＋記憶合一工具**（2026-11-04）
-> - **Graphicle-AI/graphicle**：單一 Rust 程式為 coding agent 建立程式碼關聯圖與記憶層，相容 Claude Code、Codex、Cursor 與任意 MCP client（501★，僅標題可用）。
+> **CLAUDE.md 管理新增文件遞迴改善工具**（2026-11-05）
+> - **Gauge CLI**：開源、免帳號即可試用，用「跑任務→分析→改文件」迴圈遞迴改善 coding agent 讀的文件，HN 40 分。
 
 ---
 
@@ -65,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Show HN: Gauge——開源 CLI 用遞迴 hillclimbing 迴圈改善 coding agent 讀的文件（2026-11-04）
+
+- **主線：** —
+- **核心模式：** CLI 內建本機執行後端（免帳號即可試用），讓團隊設計「coding agent 會用到這份文件」的任務（例如「設定 Gauge CI 檢查」），跑任務、分析結果、回頭修文件，反覆迴圈逐步把文件改到讓 agent 真正做對。
+- **與既有模式的關係：** 補上「CLAUDE.md 管理」一個「用任務結果反推文件缺口」的做法——既有共識是寫成規則而非建議，本則加一層持續驗證機制：文件對不對由 agent 任務成功率決定，不是人工審稿；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Hacker News Show HN，40 分（2 個來源），非純星數訊號。
+- **來源：** Hacker News；[GitHub](https://github.com/gauge-sh/gauge-cli)
+- **成熟度：** ⏳ 新興（本庫首次收錄，團隊剛開源起步，尚無第三方採用回饋）
 
 #### Graphicle-AI/graphicle：單一 Rust 程式為 coding agent 提供程式碼圖與記憶，相容 Claude Code／Codex／Cursor／任意 MCP client（2026-11-04）
 

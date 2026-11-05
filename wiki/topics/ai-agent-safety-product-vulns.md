@@ -31,14 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-04）
-> - **帳號／憑證**：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，CyberSecurityNews 稱竊得的權杖在重設密碼後仍可被濫用。
-> - **claude.ai 漏洞**：OrcaRouter 稱三個 claude.ai 瑕疵可串接成攻擊鏈，僅標題可用。
+> **最新動態**（2026-11-05）
+> - **產品漏洞／不修補**：The Register 報導 Claude Dispatch 缺陷可跨企業邊界執行遠端指令，官方確認但決定不修補。
+> - **供應鏈／第三方**：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定，三家媒體同日報導。
 
 ---
 
@@ -54,6 +54,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
 - **升版也還開著的**：惡意 `.git` 第二變體（至 2.1.252 未修，正常 clone 不受影響）（證據在 [[topics/ai-agent-safety-prompt-injection#2026-09]] 09-02 條目）、email 進 prompt 後被帶出（#81138，官方未回應）、User-Agent 夾帶 email（#78431，未見修復）。
+- **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05，僅標題可用）。
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
@@ -83,6 +84,22 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補（2026-11-05 新增，2 個來源）
+
+- **揭露來源**：Google News／The Register（11/05 13:00 UTC），互動 0；日報 dedup 另標 2 個來源，惟本輪原料僅可辨識 The Register 一家
+- **核心主張（僅標題可用）**：The Register 報導稱 Anthropic 確認 Claude Dispatch 存在一個安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令；官方決定不修補；缺陷具體觸發條件、是否已有在野攻擊案例均未見報導
+- **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨團隊功能的管理者，留意官方是否後續提供規避建議
+- **可信度評估**：僅標題層級可用，官方「確認但不修補」的原始聲明出處未見報導，單一可辨識媒體來源
+- ❓ **待查證**（標 2026-11-05｜查 Dispatch、跨企業邊界｜複 2026-11-19）｜**缺陷觸發條件與在野攻擊案例**：具體利用方式、影響範圍、是否已有實際攻擊案例均未見報導，僅標題可用
+
+#### Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code 與 Codex 設定（2026-11-05 新增，三源同報）
+
+- **揭露來源**：Google News／BigGo Finance（11/05 01:56 UTC）、Mezha.net（11/05 08:03 UTC）、Notebookcheck（11/05 07:43 UTC），三家媒體同日各自報導，互動均為 0
+- **核心主張（僅標題可用）**：三篇報導稱 Postman 用戶端的一次更新在未告知使用者的情況下，把自家外掛加入 Claude Code 與 Codex 的設定檔；BigGo Finance 將此事定位為加深開發工具信任危機的案例；外掛具體功能、如何移除、是否涉及資料存取，三篇均未見報導
+- **你能先做什麼**：裝有 Postman 用戶端、同時使用 Claude Code 或 Codex 的開發者，檢查自己的設定檔是否被動加入未預期的外掛
+- **可信度評估**：三個獨立媒體同日交叉報導提高訊號強度，但均止於標題層級，外掛行為與移除方式未見任一方提供證據
+- ❓ **待查證**（標 2026-11-05｜查 Postman、Codex｜複 2026-11-19）｜**外掛具體功能與移除方式**：外掛做了什麼、是否涉及資料存取或外送、使用者如何移除，三篇報導均未載
 
 #### CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用（2026-11-04 新增，跨兩來源）
 
@@ -549,6 +566,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-05
+- **[🔴 新增，官方確認不修補] The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補**：缺陷觸發條件與在野攻擊案例均未見報導，詳見「## 技術彙整」
+- **[🔴 新增，三源同報] Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定**：外掛具體功能與移除方式未見報導，詳見「## 技術彙整」
 
 ### 2026-11-04
 - **[🔴 新增，跨兩來源] CyberSecurityNews／dev.ua：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用**：與既有 08-31 infostealer 事件同屬憑證竊盜系列，首次點出改密碼不夠，詳見「## 技術彙整」

@@ -31,11 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **創意工具 Agent 整合再添一例：本機 AI 音效與語音克隆 MCP server**（2026-11-02）
-> - **HamSanders/soundbox**：免費開源、本機跑的 ElevenLabs／Suno 替代品，21 工具 MCP server 接 Claude Code、Cursor。
+> **Plugin／MCP 整合新增官方與可靠性兩例，創意工具新增人機共用時間軸案例**（2026-11-05）
+> - **makenotion/claude-code-notion-plugin**：Notion 官方帳號發布的 Claude Code 連接 plugin，官方廠商首例。
+> - **ctoldigital/axuse**：MCP server 用 accessibility tree 取代截圖迴圈做電腦操作，792★。
+> - **Launch HN: Kino AI**：YC S23 團隊讓真人與 Claude Code／Codex 共用同一條影片剪輯時間軸，HN 95 分。
 
 ---
 
@@ -58,6 +60,33 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### makenotion/claude-code-notion-plugin：Notion 官方發布的 Claude Code 連接 Plugin（2026-11-05）
+
+- **主線：** —
+- **核心模式：** Notion 官方帳號釋出的 Claude Code plugin，讓 Claude Code 透過官方 plugin 機制直接存取 Notion 工作區；描述僅標題可用，未附具體工具清單或操作範圍。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個由服務供應商官方維護（而非社群第三方）的實作——既有代表技巧皆為社群作者，本則是主流 SaaS 廠商首次以官方帳號發布 Claude Code plugin 的訊號；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 帳號為 Notion 官方組織帳號（makenotion），非匿名星數可比；commit 記錄近期由該組織員工持續提交。
+- **來源：** GitHub Search；[GitHub](https://github.com/makenotion/claude-code-notion-plugin)
+- **成熟度：** ⏳ 新興（本庫首次收錄，官方剛發布，尚無使用回饋；僅標題可用）
+
+#### ctoldigital/axuse：用瀏覽器 accessibility tree 取代截圖迴圈的 AI agent 電腦操作 MCP server（2026-11-05）
+
+- **主線：** —
+- **核心模式：** 一個 MCP server 相容所有 harness（Codex、Claude Code、OpenCode、Antigravity），透過 CDP 讀取瀏覽器／電腦的 DOM／accessibility tree，取代傳統截圖判讀迴圈：提供差異化快照、穩定的元素參照、可信輸入與型別化錯誤訊息；零依賴。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「電腦操作可靠性」取向——既有代表技巧多是接創作或資料工具，本則解決螢幕截圖判讀容易因 UI 微小變動而誤判的問題，改讀結構化 accessibility tree；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 查核近 30 天 commit 記錄，多名不同作者（tfusion666、soloratech、CTOL Team BJ 等）持續送出合併，非單一帳號灌水；GitHub Search 792★。
+- **來源：** GitHub Search；[GitHub](https://github.com/ctoldigital/axuse)
+- **成熟度：** ⏳ 新興（本庫首次收錄，多名貢獻者持續開發，尚無第三方量化採用數據）
+
+#### Launch HN: Kino AI (YC S23)——團隊與 Claude Code／Codex 共用同一條影片剪輯時間軸（2026-11-04）
+
+- **主線：** —
+- **核心模式：** 整合素材儲存、剪輯器與審閱連結的 AI 影片協作工具，讓團隊成員與 Codex、Claude Code 這類 coding agent 在同一條時間軸上一起剪片、留審閱備註。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「人機共用同一條時間軸」取向——既有例子多是 agent 單獨操作創作軟體，本則讓真人協作者與 agent 共享同一個工作區；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** YC S23 團隊正式產品發布（Launch HN），非匿名倉庫星數訊號；Hacker News 95 分。
+- **來源：** Hacker News；[官方網站](https://kino.ai)
+- **成熟度：** ⏳ 新興（本庫首次收錄，團隊產品剛發布，尚無第三方採用回饋）
 
 #### HamSanders/soundbox：本機免費開源 AI 音效、配樂與語音克隆，21 工具 MCP server 接 Claude Code（2026-11-02）
 

@@ -28,15 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-04
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-11-04
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-04）
-> - **帳號／憑證**：新型資訊竊取軟體鎖定 ChatGPT、Claude、Copilot／Codex 帳號權杖，重設密碼後仍可被濫用。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
-> - **claude.ai 漏洞**：OrcaRouter 稱三個 claude.ai 瑕疵可串接成攻擊鏈，細節未載。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
-> - **防守方**：印度 CERT-In 取得 Claude Mythos 存取權測試資安漏洞。見 [[topics/ai-agent-safety-cyber#2026-11]]。
+> **最新動態**（2026-11-05）
+> - **產品漏洞／不修補**：The Register 報導 Claude Dispatch 缺陷可跨企業邊界執行遠端指令，官方確認但決定不修補。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> - **供應鏈／第三方**：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定，三家媒體同報。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 
 ---
 
@@ -55,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-02 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-04 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-05 |
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-04 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
@@ -68,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 只列**現在還擋不住**的攻擊面，不收論述、教學與產業對照。狀態符號與 [[entities/claude-code]] 相同，語意在本頁是「現在仍會發生」：🔴 仍會發生／✅ 已修或官方已處置／⛔ 官方認定不修／❓ 待查證／🔎 查無官方。依「誰會遇到」的範圍由寬到窄；寫「所有人」的一律在最上。
 %% 維運備忘：本表上限 11 列，退場與補位判準見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」節第 2 條 %%
 %% 最後動態（列內無日期者）：套件供應鏈列＝2026-08-29（Alon Hertz `llms.txt` 揭露；前一則 Keyv npm 蠕蟲 2026-08-04），90 天退場判定日 2026-11-27 %%
+%% 2026-11-05：灰市轉售折扣帳號列（最後動態 08-06）距今逾 90 天，本輪無新事實，依第 2 條退場；事實仍在 [[topics/ai-agent-safety-product-vulns]] 2026-08 技術彙整。Claude Dispatch 新列（The Register，2026-11-05）補位 %%
 
 | 擋不住的是什麼 | 誰會遇到 | 狀態 | 官方擋到哪 | 你能先做什麼 |
 |---|---|---|---|---|
@@ -80,8 +80,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
-| 灰市轉售的折扣帳號，營運者可以讀走你送出的每一段 prompt | 透過非官方管道買折扣 Claude 存取權的人 | 🔴 | 無回應（第三方轉售詐術，非 Anthropic 產品漏洞；2026-08-06 兩家媒體證實） | 只從官方管道買；已經買過的，換掉在那條管道送出過的所有憑證與機密 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 無回應（2026-10-26／10-27 兩個獨立來源披露，觸發機制與是否需使用者額外動作均未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
+| Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認存在但決定不修補（2026-11-05 The Register 報導，僅標題可用；具體聲明原文與觸發條件未見報導） | 無繞法（官方未提供規避建議）；留意官方是否後續公布因應方式 |
 
 另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 

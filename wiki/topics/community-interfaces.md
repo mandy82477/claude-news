@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **介面元件複用新增一款 GUI，Agent 活動可視化新增一款角色旁白桌面小工具**（2026-11-03）
-> - **baocode-dev/baocode（519★）**：Claude Code CLI 的圖形化介面工具。
-> - **mochiiwuff/capri-desktop（517★）**：取材電玩角色 Capri 的桌面小工具，即時旁白講述 Claude Code 目前在做什麼。
+> **行動裝置遠端控制新增一款跨端 P2P 加密方案**（2026-11-05）
+> - **liguobao/ds-harness-remote**：低延遲端到端加密 P2P，PC／行動／網頁皆可連回本機 Claude Code 等 agent 工作區，1,930★。
 
 ---
 
@@ -57,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### liguobao/ds-harness-remote：P2P 加密遠端存取 Claude Code 等多款 agent 工作區（2026-11-05）
+
+- **主線：** —
+- **核心模式：** 基於 DeepSeek Harness 插件機制的遠端存取方案，用低延遲、端到端加密的 P2P 連線，讓 PC、行動裝置與網頁用戶端隨時連回本機上的 DSH、Codex、Cursor、Claude Code 工作區。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」一個「P2P 加密傳輸層」取向——既有做法多走雲端中介或特定平台 API，本則主打端到端加密直連、且同時支援 PC／行動／網頁三端；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 查核近 30 天 commit 記錄，單一作者（liguobao）但提交頻率高、持續至近日；GitHub Search 1,930★；forks／issues 未查。
+- **來源：** GitHub Search；[GitHub](https://github.com/liguobao/ds-harness-remote)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者專案，尚無第三方量化採用數據）
 
 #### baocode-dev/baocode：Claude Code CLI 的圖形化介面工具（2026-11-03）
 
