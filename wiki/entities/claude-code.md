@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **最新動態**（2026-11-04）
-> - **v2.1.318**：啟用 session 中寫出的 mods 時新增記錄使用者回答；Claude apps gateway `mantle` 上游新增 `assume_role` 設定（官方原文截斷；見 [[entities/claude-code-releases]]）。
-> - **新增功能請求與互動更新**：Task queue 排入多個提示／任務（#33323）、Linear 整合觸發雲端 agent session 互動數更新（#12925）（見 [[entities/claude-code-known-issues]]）。
-> - **桌面版文件增字**（211,650→216,003），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
+> **最新動態**（2026-11-05）
+> - **SDK 安全修補**：anthropic-sdk-typescript 兩版修補 ID 路徑注入漏洞；anthropic-sdk-python v2.5.0 新增錯誤型別（見 [[entities/claude-code-releases]]）。
+> - **新增已知問題**：Desktop 自訂主題功能請求（88 讚）、全平台 Passkey 登入（209 讚，全站最高）、Fable 5 回覆誤顯示為 thinking 區塊（見 [[entities/claude-code-known-issues]]）。
+> - **桌面版文件再增字**（216,003→217,701），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
 
 ---
 
@@ -115,9 +115,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-11-14｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：正式性仍待官方確認。
   - 2026-10-17 搜尋補查：第三方稱其 2026-09-30 上線、由 @ClaudeDevs 宣布、內容多為彙整既有文章；claude.dev 無法自本環境連線，未取得一手公告。
   - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。
-- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-11-14）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
+- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-11-14｜訊 2026-11-05）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
 - 媒體為 BleepingComputer、gHacks、TechRepublic；該 Money 分頁可連結銀行帳戶並詢問支出與計畫，多數用戶尚未開放。
 - 查證 2026-10-03：anthropic.com／support.claude.com 搜尋均未見官方公告，支援銀行、連結方式、適用方案與上線日皆未載。2026-10-17 再查 [Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（最新一筆 2026-10-07）仍無 Money 分頁或銀行帳戶連結條目。
+- 2026-11-05：The Verge 以「Claude AI 可直接接入銀行帳戶」為題跟進報導，僅標題可用，未附支援銀行範圍、驗證方式或可執行動作，未提供比既有報導更多的細節，維持查無官方。
 - **官方頁未見 Claude for Excel／Word／PowerPoint／Outlook 下架**（查證 2026-10-03）：[Claude for Microsoft 365](https://claude.com/claude-for-microsoft-365) 頁載明 Excel、PowerPoint、Word 在所有付費方案正式可用，Outlook 在所有付費方案 beta，無下架聲明。
 - support.claude.com 仍有獨立文章（[Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)、[Word](https://support.claude.com/en/articles/14465370-use-claude-for-word)）。09-15 五份文件移除相關段落的原因官方未說明，僅確認產品仍在架。
 - 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。
@@ -189,7 +190,7 @@ hook 一觸發就是硬擋（先於 allow 規則），但比對是盡力而為�
 - [[entities/openclaw]]（第三方 agentic 工具，Anthropic 主動管控中）
 - [[entities/claude-tag]]（Slack-native AI 協作工具，定位為 Claude Code 向團隊協作方向的延伸）
 - [[entities/boris-cherny]]（Claude Code 創始人）
-- [[entities/cat-wu]]（Claude Code 產品負責人，AI 主動性論述）
+- [[entities/cat-wu]]（前 Claude Code 產品負責人，AI 主動性論述；2026-11-04 卸任，下一站確認為 OpenAI）
 - [[entities/claude-for-teachers]]（同為 Anthropic 產品線，面向 K-12 教師的免費進階存取方案）
 
 ## 參考來源（最近 10 則）

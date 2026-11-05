@@ -28,13 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-04）
+> **本週衝擊**（2026-11-05）
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
+> - 🟡 **GitHub Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段**（Blog/GitHub Copilot Changelog）——Claude Code 無對應整合，用 Xcode 開發 Apple 平台的人多一個選型考量點。
 
 ---
 
@@ -49,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
-| **Microsoft／GitHub** 🏢 | 10-28 Copilot Fusion 跨模型智慧路由正式 GA；10-29 The New Stack 稱其基準測試勝 Claude Code、API 成本減半 → 選型比價基準要重算 | 能力 | 🔴 | GitHub 官方 changelog＋The New Stack 報導；Fusion 路由機制細節、測試條件均未載 |
+| **Microsoft／GitHub** 🏢 | 11-04 Copilot 正式整合進 Xcode 內建程式碼助理（公開預覽）→ Apple 生態開發者可在原生 IDE 內直接叫用 Copilot，Claude Code 無對應整合 | 生態 | 🟡 | GitHub 官方 changelog 一手來源；GA 時程與功能範圍未載 |
 | **Google（Gemini）** 🏢 | 10-28 Gemini 4 Carbon 發布，稱 AA Intelligence Index v5.0 第一（59分）、資安基準大幅領先 → 編碼/資安 agentic 評測再添一筆對照 | 能力 | 🔴 | DeepMind 官方一手；SEC-bench Pro／ExploitGym／CWE-bench 細節與對照模型未列 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
@@ -176,6 +177,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
+- 11-04：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；Claude Code 目前無官方 Xcode 原生整合（GitHub 官方 changelog）。
 - 10-28／29：Copilot Fusion 跨模型智慧路由正式 GA；The New Stack 稱其基準測試勝 Claude Code、API 成本減半，測試條件未載。
 - 10-22：VS 版 Copilot 新增聊天內瀏覽 PR、切換信任 AI 模型、偵測弱點套件自動修補；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA 生效——四者 Claude Code 在 VS 內均無對應。
 - 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business-risks#還沒過去的風險]]。
@@ -246,6 +248,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-05
+- **Microsoft／GitHub**：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；對比之下 Claude Code 無官方 Xcode 原生整合，詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）
 
 #### 2026-11-04
 - **OpenAI（分析文，非編碼能力異動）**：官方宣布收購 Pierre Computer Company，稱將擴充 Codex 在建置、理解與審查程式碼方面的工具，具體功能與上線時間未見報導，不列入「對手雷達」表（Blog/OpenAI News）

@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-04）
-> - **v2.1.318**：啟用 session 中寫出的 mods 時，新增記錄使用者的回答；Claude apps gateway 的 `mantle` 上游新增 `assume_role` 設定（官方原文截斷，角色細節未附）（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）。同版 build 另新增 12 個功能候選旗標、1 個舊旗標消失，見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-11-05）
+> - **無新 CLI 版本**；anthropic-sdk-typescript 兩版（google-cloud-sdk-v1.1.3、vertex-sdk-v1.1.2）修補 ID 路徑注入漏洞，anthropic-sdk-python v2.5.0 新增錯誤型別與 workspace 篩選（見下方「開發者須知」與「歷史記錄」）。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -184,6 +184,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 開發者須知
 
+- **anthropic-sdk-typescript 修補 ID 路徑注入漏洞（2026-11-04）**：project／location／workspace ID（Vertex 另含 model）組路徑前先百分號編碼，值為 `.` 或 `..` 改丟 `AnthropicError`，防止路徑逃逸；用 GCP／Vertex 的開發者建議升級。
 - **底層 runtime 確認改用 Rust 版 Bun（2026-07-19 證實）**：Simon Willison 透過字串比對驗證 Jarred Sumner 的說法——Claude Code 自 **v2.1.181**（2026-06-17 發布）起，底層執行環境已改用 Rust 重寫版 Bun runtime，Linux 平台啟動速度提升約 10%，但屬底層基礎設施更新，多數使用者對此毫無察覺（作者以 `strings ~/.local/bin/claude | grep -m1 'Bun v1'` 等指令驗證，找到 563 個 `.rs` 檔名）。
 
 
@@ -199,6 +200,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-05 | 無新版本。SDK：python v2.5.0 新增錯誤型別／ids 篩選；typescript 兩版修補路徑注入。新增已知問題 #79305／84862／74558；互動更新 #91495／42542／79808。 |
 | 2026-11-04 | **v2.1.318**：mods 回答記錄；gateway 新增 `assume_role`。旗標+12/-1（見 [[topics/claude-code-experimental]]）。新增 #33323；互動更新 #12925。 |
 | 2026-11-03 | **v2.1.317**：`/schedule` connector 警告＋確認檢查；旗標+12＋2代號，消失1。文件字數增。互動更新 #26224／#30112／#53915。 |
 | 2026-10-24 | **v2.1.310**：Monitor tool＋plugin 監控；旗標+4。SDK 新增 Tag endpoint，修復 GCP 路由。新增已知問題 3 則；Status 事故 3 起（已解決）。 |

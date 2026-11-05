@@ -30,14 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-04）
-> - **資料中心營運商 TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基州資料中心計畫**（Reuters；Unite.AI，均未附具體金額），見 [[topics/anthropic-partnerships-compute]]
-> - **Yahoo Finance：Anthropic 推論成本持續下滑，標題稱這正成為其商業模式隱憂**，延續 S-1 揭露後市場對毛利結構的討論，見 [[topics/anthropic-business-risks]]
-> - **Claude Code 產品負責人 Cat Wu 任職兩年後卸任**（Business Insider 綜合至少三家媒體；Unite.AI），見 [[entities/cat-wu]]
+> **最新動態**（2026-11-05）
+> - **CoinDesk：若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 190 億美元資料中心計畫股權**，見 [[topics/anthropic-partnerships-compute]]
+> - **ADWEEK：Anthropic 與 AP 達成首個內容授權合作，供選舉報導使用**，見 [[topics/anthropic-partnerships-compute]]
+> - **Yahoo Finance：知名空頭 Michael Burry 看完修訂版 S-1 後示警，不參與這次 IPO 認購**，見 [[topics/anthropic-ipo]]
 
 ---
 

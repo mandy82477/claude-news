@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-04）
-> - **桌面版文件再增字**（211,650→216,003 字）：段落數 1322 超過自動比對上限（1200），沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。
+> **最新動態**（2026-11-05）
+> - **桌面版文件再增字**（216,003→217,701 字）：段落數 1329 超過自動比對上限（1200），沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。
 
 ---
 
@@ -101,6 +101,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 本頁沒有桌面版文件對應條目；機制見「Subagent 型別差異對照」軸線 4。
 
 **其他**
+- 11-05：文件增字（216,003→217,701），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-04：文件增字（211,650→216,003），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-03：文件增字（209,756→211,650），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-02：文件增字（207,065→209,756），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
@@ -112,6 +113,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-05）：桌面版文件字數由 216,003 增至 217,701，但本頁段落數（1329）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-04）：桌面版文件字數由 211,650 增至 216,003，但本頁段落數（1322）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-03）：桌面版文件字數由 209,756 增至 211,650，但本頁段落數（1293）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-02）：桌面版文件字數由 207,065 增至 209,756，但本頁段落數（1284）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -263,6 +265,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 開發者須知
 
+- **Help Center 新增 Enterprise 安全／管理功能段落（2026-11-05，Official Docs）**：新增標題僅列 security center、inference hooks、centralized management，僅標題可用，與既有 [[entities/claude-code#現況|Inference Hooks]] 的關係待開[原文](https://support.claude.com/en/articles/12138966-release-notes)確認。
 - **桌面版官方文件新增關閉本機 session、改走指定 SSH host 的組織設定（2026-10-12 查證，Official Docs）**：新增 `disableDesktopLocalSessions` 與 `sshHost`／`sshHostAllowlist`，供組織關閉本機 session、集中走指定 SSH host；雲端 session 不受影響。見[官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：媒體轉述的「不要只依賴 hook 做安全防護」不見於官方 hooks 文件（2026-10-11 查證）；官方原意見「hooks：事件、失效模式與能不能當防線」。
 - **HIPAA 合規部署路徑擴大（2026-10-05，Official Docs）**：桌面版文件新增「Desktop」「雲端 session」兩個組織管理開關，HIPAA 組織「Desktop」預設關閉須 Owner 開啟；文件索引同步新增 [local mode HIPAA 設定指南](https://code.claude.com/docs/en/hipaa-setup.md)。

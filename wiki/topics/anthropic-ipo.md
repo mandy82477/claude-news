@@ -31,12 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **最新動態**（2026-11-03）
-> - **Hacker News 387 分：評論文章主張 SEC 應以保護公眾為由擋下 IPO**（[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)）
-> - **修訂版 S-1 新增揭露：公司認為可能「迫近」觸及內部定義的 RSI 臨界點**，強調現有模型未跨過（[epyhia.com](https://epyhia.com/anthropic-s-ipo-filing-warns-it-may-be-imminently-close-to-recursive)；Wccftech）
+> **最新動態**（2026-11-05）
+> - **Michael Burry 看完修訂版 S-1 示警：Anthropic「把存亡賭在樂觀上」，不參與這次 IPO 認購**（Yahoo Finance）
+> - **Bloomberg Law／Institute for Law & AI：S-1 的 AI 風險揭露被視為安全盡職調查一環**，具體標準未見報導（Google News）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -67,6 +67,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 ### 誰說撐不住：唱空與質疑
 
+- **知名空頭 Michael Burry 唱空**：Yahoo Finance 報導放空投資人 Michael Burry 看完 Anthropic 修訂版 S-1 後示警，稱公司「把整個存亡賭在樂觀上」，並表明不會參與這次 IPO 認購；具體持倉與論據細節未見報導（Google News/Yahoo Finance）。
 - **創投人士質疑 IPO 前景**：24/7 Wall St. 報導知名創投人 Chamath Palihapitiya 提出「3 個 AI 殺手」警訊，並質疑 Anthropic 傳聞中 2 兆美元 IPO 前景是否可能率先崩盤；與既有 08-15 Steve Eisman 唱空言論同屬市場知名人士公開質疑估值敘事的訊號，且與同日「IPO 追蹤」 表新增之 30 兆美元 TAM 論戰同源並發（推論）；具體「3 個殺手」論點內容、量化依據未見報導，僅標題可用。
 - **大學校產基金投資長唱空**：Business Insider 報導 Washington University 校產基金投資長公開表示 OpenAI、Anthropic「陷入大麻煩」，屬單一媒體轉述之市場觀感，具體論據未見報導細節，同屬純評論類，不入表（Google News/Business Insider，2026-09-25）。
 - **知名放空投資人唱空估值敘事**：Yahoo Finance 報導「Big Short」原型投資人 Steve Eisman 公開表示 Anthropic 與 OpenAI 是整體 AI 交易的「阿基里斯腱」（Achilles' heel）；屬市場觀察類評論，非官方財務數據或公司聲明，具體論據、部位規模未見報導。與同日出現的 CFO 早期 IPO 會議、投資人估值上看 2 兆美元等籌備信號同期並存，形成「籌備動作推進 vs 知名空頭唱空」的敘事張力（推論）。
@@ -297,6 +298,15 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-05
+- **[IPO前瞻] Yahoo Finance：知名空頭投資人 Michael Burry 看完修訂版 S-1 後示警，不參與這次 IPO 認購**：詳見「誰說撐不住：唱空與質疑」新增列（Google News/Yahoo Finance）
+- **[IPO前瞻，僅標題可用] Bloomberg Law News／Institute for Law & AI：S-1 的 AI 風險揭露被視為安全盡職調查的一環**：兩家媒體同標題同日報導，具體標準內容未見報導（Google News/Bloomberg Law News；Google News/Institute for Law & AI）
+- **[IPO前瞻，僅標題可用] Investing.com：AI 股票拋售潮為 Anthropic 鉅額 IPO 添變數**：具體論證未見報導（Google News/Investing.com）
+- **[IPO前瞻，僅標題可用] MarketWatch：AI 交易動盪之際評論 Anthropic IPO 前景**：具體論點未見報導（Google News/MarketWatch）
+- **[IPO前瞻，僅標題可用] Financial Times：IPO 評論文章再探 Anthropic 上市前景**：具體論點未見報導（Google News/Financial Times）
+- **[IPO前瞻，僅標題可用] NPR（The Indicator from Planet Money）：專題探討 Anthropic 能否賺到足夠的錢支撐其估值**：具體論點未見報導（Google News/NPR）
+- **[公司治理，僅標題可用] Yahoo Finance：Amazon 持有 Anthropic 約 62 億美元股權，分析風險所在**：具體風險內容未見報導（Google News/Yahoo Finance）
 
 #### 2026-11-02
 - **[IPO 前瞻] CNBC／FT／Axios：修訂版 S-1 首度揭露 Q3 財報與採購承諾**：營收 170 億、承諾 8,950 億、營運虧損 12.5 億；完整數字見 [[topics/anthropic-business#現在的數字]] 與本頁「S-1 揭露了什麼」（CNBC；FT；Axios；HN）

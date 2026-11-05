@@ -33,13 +33,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-04）
-> - **新增功能請求**：Task queue——排入多個提示／任務依序或平行執行（[#33323](https://github.com/anthropics/claude-code/issues/33323)，34 則留言、65 個讚；🧠 組）。
-> - **高互動已知問題互動數更新**：Linear 整合觸發雲端 agent session（[#12925](https://github.com/anthropics/claude-code/issues/12925)，47 則留言、154 個讚；🔌 平台相容性組）。
+> **最新動態**（2026-11-05）
+> - **新增功能請求**：Desktop 自訂主題／強調色（[#79305](https://github.com/anthropics/claude-code/issues/79305)，28 則留言、88 個讚，本日反應數最高；🔌 平台相容性組）、全平台 Passkey（WebAuthn）登入（[#84862](https://github.com/anthropics/claude-code/issues/84862)，26 則留言、209 個讚，全站今日讚數最高；👤 帳號管理組）。
+> - **新增已知問題**：Fable 5 回覆文字偶被誤顯示為摘要後的 thinking 區塊（[#74558](https://github.com/anthropics/claude-code/issues/74558)，26 則留言、20 個讚；🧠 組）、Postman 用戶端未經同意把外掛加入 Claude Code／Codex 設定（三源同報，互動均 0；🛡️ 組，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]）。
+> - **高互動已知問題互動數更新**：內建瀏覽器忽略站台權限（[#91495](https://github.com/anthropics/claude-code/issues/91495)，31 則留言、33 個讚；🔌 組）、1M context 靜默清除工具結果（[#42542](https://github.com/anthropics/claude-code/issues/42542)，30 則留言、11 個讚；🧠 組）、驗證信被抑制無法登入（[#79808](https://github.com/anthropics/claude-code/issues/79808)，29 則留言、7 個讚；👤 組）。
 
 ---
 
@@ -55,8 +56,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 母頁「現在還沒修好的」是本頁各組的結論表，條目本身不搬 %%
 
-### 🛡️ 安全與隱私（19 條未修復、5 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（20 條未修復、5 條已修復、1 條拒修、3 條❓）
 
+- 🔴 **未修復**｜**Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定檔（三源同報，互動均 0，2026-11-05）**：第三方供應鏈事件非 Claude Code 缺陷，外掛功能與移除方式未見報導，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令沒有強制力（#53223，31 則留言、5 讚，2026-10-28）**：官方未回應；與 #2544 同一限制（見「🧠 行為與品質」）。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - 🔴 **未修復**｜**使用者 email 被放進 prompt，可能被帶給外部網站（#81138，2026-10-29）**：官方未回應；與 #78431 觸發機制不同。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - ❓ **待查證**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 疑似移除 skip 模式的 `rm` 阻擋**：changelog 沒寫；2.1.309 的方向相反（改成直接拒絕）。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
@@ -130,8 +132,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（77 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
+### 🧠 行為與品質（78 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
 
+- 🔴 **未修復**｜**Fable 5：回覆文字偶被誤顯示為摘要後的 thinking 區塊，該輪看起來無回應（GitHub issue #74558，累積 26 則留言、20 個讚，2026-11-04）**：環境為 Claude Code 2.1.201、`claude-fable-5` 模型；官方尚未說明是哪個機制造成。
 - 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
@@ -146,7 +149,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：新增設定關閉自動把 IDE 目前選取內容塞進 context（GitHub issue #20944，累積 29 則留言、98 個讚，2026-10-08，本日反應數最高）**：使用者認為在大檔案或非相關選取情境下，自動帶入 IDE 選取內容反而干擾；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**功能請求：複合 Bash 指令（`&&`、`|`、`;`、`||`）權限比對應拆解逐段核對，而非整串當單位判斷（GitHub issue #16561，累積 48 則留言、176 個讚，2026-10-06）**：目前權限比對機制把整串複合指令當成單一單位判斷，常導致需要重複核准；使用者呼籲拆解每個組成分別比對權限規則；官方尚未回應。
 - 🔴 **未修復**｜**行內 KaTeX 數學式（`$...$`）不再渲染，只有區塊式（`$$...$$`）仍正常，regression（GitHub issue #65632，累積 37 則留言、94 個讚，首見 2026-10-04，2026-10-31 互動數更新）**：聊天輸出中行內數學式停止渲染，僅區塊式維持正常，屬渲染回歸；官方尚未回應。
-- 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，28 則留言、11 個讚，2026-10-01）**：microcompact／cached microcompact／session memory compact；官方未回應。
+- 🔴 **未修復**｜**1M context 三種機制靜默清除工具結果，未通知使用者（GitHub issue #42542，累積 30 則留言、11 個讚，2026-11-05 互動數更新）**：microcompact／cached microcompact／session memory compact；官方未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時觸發的 Hook（GitHub issue #9516，28 則留言、69 個讚，2026-10-01）**：盼中斷時觸發 hook 供自動化流程感知並處理；與既有 PreToolUse／PostToolUse 等 hook 同屬時機缺口；官方未回應。
 - 🔴 **未修復**｜**SSE 串流無逾時機制導致無限掛起，ESC 無法完全取消（GitHub issue #33949，累積 40 則留言、25 個讚，2026-09-28，附修復提案）**：回報者稱已困擾使用者數月，引用 #26224、#6836 為佐證；與既有「Claude Code 卡住/凍結」（#26224）同屬掛起類但聚焦 SSE 逾時與 ESC 失效成因，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code agent 於約 100 秒內刪除 48,000 個檔案，事後主動道歉（TechRadar，2026-09-27）**：報導稱使用者的 agent session 極短時間內刪除近五萬檔案並主動致歉。
@@ -285,11 +288,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Checkpoint Commits 污染 git history**（2026-05-12 社群熱議）：Claude Code 自動建立的 checkpoint commit 大量污染 git 歷史，搭配 worktree 使用時問題更嚴重（每個子 Agent 各自建立分支並獨立 checkpoint），討論串聚集多種清理方案（interactive rebase、squash、git filter-repo）；目前無官方解決方案。
 - 🔴 **未修復**｜**Prompt Cache Race Condition**（2026-04-27 確認）：連續兩次呼叫 `client.messages.create()` 時，第二個請求約有 40% 機率發生 cache miss；在兩次呼叫之間等待 2 秒可穩定解決；已由 Anthropic 工程師確認追蹤中。見 [Issue #1451](https://github.com/anthropics/anthropic-sdk-python/issues/1451)
 
-### 👤 帳號管理（6 條未修復）
+### 👤 帳號管理（7 條未修復）
 
 > 三個獨立平台（Mobile、Desktop、Web connector）在 2026-07-05～07-10 一週內各自湧現高互動的多帳號管理訴求，指向同一個 Claude 全平台共通的帳號架構缺口；2026-07-31 CLI 端亦出現同主軸的獨立功能請求。
 
-- 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 28 則留言、7 個讚，2026-10-31）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 26 則留言、209 個讚，全站今日讚數最高，2026-11-05）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
+- 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 29 則留言、7 個讚，2026-11-04 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
 - 🔴 **未修復**｜**已付費 Max 帳號登入成功卻因 `has_finished_claudeai_onboarding=false` 被導向新帳號 onboarding 流程（web／desktop／setup-token，第 10 次公開通報，累積 22 則留言，2026-08-29）**：回報者指出這是同一問題第 10 次被獨立公開通報，且首度在網路封包層級捕捉到觸發機制——已付費 Max 帳號登入驗證成功後，因帳號旗標 `has_finished_claudeai_onboarding=false`，被錯誤導向新帳號才需要的 onboarding 流程，涵蓋 web、desktop、setup-token 三種登入路徑；屬帳號狀態旗標與既有付費帳號判斷邏輯不同步的問題；官方尚未回應。
 - 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
@@ -321,10 +325,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（95 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（96 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**功能請求：Desktop 支援自訂主題與強調色，追平 CLI 既有自訂主題系統（GitHub issue #79305，累積 28 則留言、88 個讚，2026-11-04）**：目前僅亮／暗（含高對比）兩色，多數現代深色模式幾乎無法分辨視窗；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude in Chrome 自 2026-09-18 起在 reddit.com 與 redd.it 上所有工具都被「safety restrictions」擋下，9/17 前正常（GitHub issue #95326，累積 28 則留言、39 個讚，2026-10-31）**：用 Claude in Chrome 讀 Reddit 的人拿不到頁面；官方未回應。
-- 🔴 **未修復**｜**Claude Code Desktop 內建瀏覽器忽略「Allow all websites」站台權限設定（GitHub issue #91495，累積 26 則留言、30 個讚，2026-10-31）**：已設全站允許的使用者仍會被逐站詢問；官方尚未回應。
+- 🔴 **未修復**｜**Claude Code Desktop 內建瀏覽器忽略「Allow all websites」站台權限設定（GitHub issue #91495，累積 31 則留言、33 個讚，2026-11-05 互動數更新）**：已設全站允許的使用者仍會被逐站詢問；官方尚未回應。
 - 🔴 **未修復**｜**滑鼠滾輪捲動的是輸入歷史而非對話歷史（GitHub issue #12953，累積 28 則留言、23 個讚，2026-10-31）**：與 v2.1.150 起滾輪誤判為方向鍵的 #65833（見「行為與品質」）症狀相近；官方尚未回應。
 - 🔴 **未修復**｜**claude.ai/code 深色模式改版觀感不如舊版（GitHub issue #48158，累積 34 則留言、71 個讚，2026-10-27）**：常用深色模式瀏覽 claude.ai/code 的使用者反映新版觀感是倒退；官方尚未回應或提供恢復舊版選項。
 - 🔴 **未修復**｜**功能請求：Remote Control 連線工作階段支援語音朗讀回覆與語音模式（GitHub issue #42700，累積 32 則留言、49 個讚，2026-10-27）**：使用者希望 Remote Control 能加上 TTS 朗讀 Claude 回覆與語音輸入模式，方便雙手不便看螢幕時使用；官方尚未回應或排入路線圖。

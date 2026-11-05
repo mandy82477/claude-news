@@ -31,11 +31,12 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
-> **最新動態**（2026-11-04）
-> - **TeraWulf 取得 Google 信用擔保，支應 Anthropic 肯塔基資料中心計畫**：Reuters、Unite.AI 同日報導，未附具體擔保金額，詳見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] TeraWulf 列更新
+> **最新動態**（2026-11-05）
+> - **TeraWulf／Google**：CoinDesk 報導若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 190 億美元資料中心計畫股權，啟動條件未載
+> - **Anthropic／AP**：ADWEEK 報導雙方達成首個內容授權合作，供選舉報導，授權範圍未載
 
 ---
 
@@ -74,7 +75,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽 | 目前無可見後果；循環融資質疑屬評論 |
 | Volta | 六年 $100 億，算力在挪威 Tydal（08-04） | 已簽 | 目前無可見後果 |
 | Riot Platforms | $90 億 20 年雲端運算協議（08-11） | 已簽 | 目前無可見後果 |
-| TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 提供信用擔保支應該計畫，具體金額未見（11-04） | 已簽；新增 Google 信用擔保 | 目前無可見後果。下一個觸發點：擔保金額揭露 |
+| TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 信用擔保支應該計畫，違約時 Google 可能取得 TeraWulf 股權，機制細節未見（11-05） | 已簽；新增 Google 信用擔保（含違約股權條款） | 目前無可見後果。下一個觸發點：擔保啟動條件揭露 |
 | AMD | 投資最高 $50 億並簽晶片協議；供應規模、股權比例未見（07-22） | 已簽 | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務） |
 | AWS | S-1 揭露承諾 $1,100 億（多家引 S-1，10-26）；先前報導逾 $1,000 億（09-06） | 已承諾 | 通路有價格後果：Bedrock 無 50% Batch 折扣，見 [[entities/pricing#通路：誰定價、怎麼開票]] |
 | Google | 直接投資最高 $400 億（04-24）；近 $2,000 億融資機制，結構未見（推論，08-04） | 投資已宣布，融資機制結構未見 | 融資無可見後果；Vertex AI 費率由 Google 自訂，見 [[entities/google-investment]] |
@@ -122,6 +123,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **AP（Associated Press）**（2026-11-05）：Anthropic 首個內容授權合作，供選舉報導使用，授權範圍與費用未見報導（Google News/ADWEEK）
+- **McGraw Hill**（2026-11-05）：K-12 課程整合進 Claude for Teachers，開放對象與上線時間未見報導（Google News/Yahoo Finance）
+- **Addgene**（2026-11-05）：非營利生物材料存放機構，質體目錄整合進 Claude 供研究人員查詢，開放對象未見報導（Google News/The Business Journals）
 - **athenahealth**（2026-11-03）：推出 athenaPatient MCP 伺服器，將病患電子病歷接入 Claude 供臨床人員查詢，Healthcare IT News 等 3 家媒體同日報導，具體資料範圍與存取權限未見報導（Google News/HIT Consultant；Google News/Healthcare IT News）
 - **Johns Hopkins University**（2026-11-02）：癌細胞圖譜技術獲選用於 Anthropic AI 專案，具體應用細節未揭露（Google News/Johns Hopkins University）
 - **AI for Science（擴大至 20 機構）**（2026-10-29）：官方擴大科研夥伴計畫，20 個基金會／機構／研究團隊取得免費 Claude 額度，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic；Google News）
@@ -286,6 +290,12 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-05
+- **[資本支出] CoinDesk：若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 這筆 190 億美元資料中心計畫的股權**：承接 11-04 Google 信用擔保報導，擔保啟動條件未見報導，詳見「算力與資金從哪來」TeraWulf 列更新（Google News/CoinDesk）
+- **[企業合作] ADWEEK：Anthropic 與 AP 達成首個內容授權合作，供選舉報導使用**：僅標題可用，授權範圍與費用未見報導，詳見「其餘合作」清單（Google News/ADWEEK）
+- **[企業合作] Yahoo Finance：教育出版商 McGraw Hill 將 K-12 課程整合進 Claude for Teachers**：僅標題可用，開放對象與上線時間未見報導，詳見「其餘合作」清單（Google News/Yahoo Finance）
+- **[企業合作] The Business Journals：非營利生物材料存放機構 Addgene 與 Anthropic 合作，將質體目錄整合進 Claude**：僅標題可用，開放對象未見報導，詳見「其餘合作」清單（Google News/The Business Journals）
 
 #### 2026-11-04
 - **[資本支出] Reuters／Unite.AI：TeraWulf 取得 Google 信用擔保，支應其為 Anthropic 肯塔基州資料中心計畫**：兩篇報導均未附具體擔保金額，詳見「算力與資金從哪來」TeraWulf 列更新（Reuters；Unite.AI）
