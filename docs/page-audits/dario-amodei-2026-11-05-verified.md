@@ -24,3 +24,10 @@
 3. 批評者的日期統一用「發言日」並在 RSI 頁那邊同樣寫發言日（同維護者？若跨維護者走轉知）。
 
 來源：一手 [anthropic.com/news/position-open-weights-models](https://www.anthropic.com/news/position-open-weights-models)；二手 [VentureBeat](https://venturebeat.com/ai/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan)、[ClickOnDetroit／AP](https://www.clickondetroit.com/business/2026/09/12/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-slow-down-for-safety/)、[ITV](https://www.itv.com/news/2026-09-12/musk-and-chatgpt-ceo-back-calls-to-slow-down-development-of-ai)。
+
+## 四、補查（冷讀者抓到的算術錯誤，2026-11-05）
+
+- 頁面四處寫「275 萬美元超過他 1,800 萬美元年薪四倍以上」——算術不成立。
+- 多家引 IPO 申報文件（Fortune 10-29 經 biztoc；The Next Web、FourWeekMBA）：2025 年 Dario Amodei 人身安全支出 **2,745,874 美元**，是他 **654,167 美元底薪**的四倍多、約占 **1,796 萬美元總薪酬**的 15%；另為總裁 Daniela Amodei 支出 1,293,629 美元；兩人年薪 2026-07 起調為 140 萬美元。比較：Meta 為 Zuckerberg 花約 2,250 萬、Alphabet 為 Pichai 花 880 萬。
+- 判定：「四倍」是對**底薪**；1,800 萬是**總薪酬**（Reuters 10-06）。四處都要改成「約 275 萬美元，是底薪 65.4 萬美元的四倍多、總薪酬約 1,800 萬美元的 15%」。
+- 來源：[The Next Web](https://thenextweb.com/news/dario-amodei-security-cost-philanthropy-pledge-anthropic-ipo)、[FourWeekMBA](https://fourweekmba.com/ai-anthropic-paid-2-7m-for-dario-amodeis-security-in-2025/)、[BNN Bloomberg／Reuters](https://www.bnnbloomberg.ca/business/company-news/2026/10/06/anthropics-amodei-made-us18-million-last-year-middle-of-the-tech-ceo-pack-reuters-exclusive/)。
