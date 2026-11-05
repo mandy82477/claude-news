@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-24"
+last_updated: "2026-11-05"
 last_news_update: "2026-09-17"
 status_main: "active"
 days_since_news: 49
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 投資人
 **為何追蹤：** 公開評論 AI 公司高層呼籲減速的動機
 **首次出現：** 2026-09-17
-**最後更新：** 2026-10-24
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-09-17
 
 > **加入 AI 減速反彈陣營**（原文 2026-09-14｜HN 轉載 2026-09-17）
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 相關議題
 
-- [[entities/dario-amodei]] — Anthropic 執行長，2026-09-13 公開呼籲全球 AI 減速，為本則批評的對象之一
+- [[entities/dario-amodei]] — Anthropic 執行長，2026-09-12 公開呼籲全球 AI 減速，為本則批評的對象之一
 - [[topics/recursive-self-improvement]] — AI 遞歸自我改進與全球暫停呼籲，本則批評所加入的反彈聲浪脈絡
 - [[entities/eric-schmidt]] — 前 Google 執行長、Anthropic 約 1% 股東；2026-10-22 駁斥「AI 泡沫」說法，與本人對 AI 公司高層動機的質疑形成對照
 

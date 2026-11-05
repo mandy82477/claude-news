@@ -27,7 +27,7 @@
 
 - L117：
 
-    - [[topics/recursive-self-improvement]] — 09-12 減速文章的論證、三步驟與按論點整理的質疑
+    - [[topics/recursive-self-improvement]] — 09-12 減速文章的論證、三步驟與按論點整理的質疑；Anthropic 內部 AI 自動化的量測現況見 [[topics/recursive-self-improvement#自我改進量化指標]]
 
 - L152：
 
@@ -71,6 +71,7 @@
 
 ### C. 行內小改（原行號｜舊字 → 新字；L194–202 隨 08 月進 archive）
 
+- L101｜`| 09-28、09-29 |` → `| 09-23 錄製（09-28 報導）、09-29 |`
 - L108｜`與 [[entities/chris-olah|Chris Olah]] 等人` → `與 Daniela Amodei、[[entities/chris-olah|Chris Olah]] 等人`
 - L141｜`[FT 聯合國大會即時報導]` → `[FT 聯合國安理會簡報即時報導]`
 - L194｜`發言的具體場合與完整脈絡未見報導，查證狀態見上方公開立場表格標記` → `2026-09-20 查實場合為 08-26 CNBC 專訪，原話「We're not interested in destroying anyone...We think of this as a very positive sum thing, right?」`
@@ -97,7 +98,7 @@
     | 大眾對 AI 的反彈根本上是信任危機；要靠治癒癌症這類具體科學突破扭轉 | 2026-08-16 | 本人 X 貼文（[Simon Willison 全文引述](https://simonwillison.net/2026/Aug/16/dario-amodei/)） | — |
     | Anthropic 無意取代 SaaS 業者：「We're not interested in destroying anyone」，視為正和 | 2026-08-26 | [CNBC 專訪逐字稿](https://www.cnbc.com/2026/08/26/cnbc-exclusive-transcript-salesforce-chair-ceo-marc-benioff-and-anthropic-co-founder-ceo-dario-amodei-speak-with-cnbcs-jim-cramer-on-closing-bell-overtime-today.html)（與 Marc Benioff 同場） | [[topics/anthropic-business]] |
     | 企業文化而非產品決定 AI 競賽勝負；他最多花 40% 工時在文化 | 2026-10-17（06-08 首見） | 僅媒體轉述（[Fortune](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVndFZDV2OEU0dmx1U1N1Ri1MTnRjeFBpOHlGU040ekJHZ1VHZkhkcWhvYV9qVFdKNXdjdFpZZ0JWbW1wN1BWcGNHakgwY29GYjZRanRXLXl1QTlPaVhiNGg0WDhOZXhYQnNzUEhtRkREVl9nOGRDMXRieDhMUTNPLXNuWF9LSlByZGpqSXFxZEpWWmd5OC0wZDBzclNVUnh0dk1PeHRzR2o?oc=5)） | — |
-    | 政府應有能力阻止危險 AI 模型發布，主要針對中國競爭者 | 2026-06-10 | 僅媒體轉述（[Bloomberg](https://www.bloomberg.com/news/articles/2026-06-10/anthropic-ceo-says-government-should-be-able-to-block-new-models)） | [[topics/anthropic-government-policy]] |
+    | 政府應有能力阻止危險 AI 模型發布 | 2026-06-10 | 僅媒體轉述（[Bloomberg](https://www.bloomberg.com/news/articles/2026-06-10/anthropic-ceo-says-government-should-be-able-to-block-new-models)） | [[topics/anthropic-government-policy]] |
     | 「壓縮 21 世紀」（十年完成百年生醫進展）的願景目前還做不到 | 2026-07-06 | 僅媒體轉述（[STAT 專訪](https://www.statnews.com/2026/07/06/anthropic-ai-biotech-impact/)） | — |
     | 同業應對模型能力保持透明誠實 | 2026-10-03 | 僅媒體轉述（[WSJ，經 Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/nvidias-jensen-huang-other-ceos-213019720.html)） | [[entities/jensen-huang]] |
 
@@ -110,8 +111,8 @@
     列入本表的是具名的人或政治陣營，公開、直接點名 Amodei 或 Anthropic 的減速呼籲或風險示警；媒體評論文章不列（如 08-24 Fortune 以航空業為鑑的評論，見 [[entities/dario-amodei-archive#2026-08]]）。「何時」是發言日。
 
     | Gavin Baker | 08-16 前 | 在 All-In podcast 與 X 批他過度悲觀描繪 AI；Amodei 08-16 回應反彈是「信任危機」（[TechCrunch](https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/)） | 投資人；與 Anthropic 有無投資關係未見報導 |
-    | Mark Zuckerberg | 09-16 | 在 AI 減速辯論中點名批評 Anthropic，批評內容未見報導（[NYT](https://news.google.com/rss/articles/CBMijwFBVV95cUxNbDdJR2JuaHlmNmNBV3BFUDN1WVh6amQzM0VnWUcwLUl5MVFzaUJDMlBSQkNEeUhSSG1ZcjIya21VSWh5TXQ4dll4X0pHRE1BeUl3V3dydTctWEtRU0ZYQmE4V3BkcVM4VHV6MzdKVy1mNWE0WUtidXRubkFLZmxIRVFKblBEZ3NwczBLQ1habw?oc=5)，僅標題） | Meta 執行長，同業 |
-    | 川普陣營盟友（備忘錄作者未具名） | 09-24 | 白宮內流傳的備忘錄稱有效利他主義「打造 AI 末日論管線」，點名 Dario 與 Daniela Amodei（[Axios](https://axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei)） | 白宮以外的川普政治顧問，政治對手 |
+    | Mark Zuckerberg | 09-16 前 | 在 AI 減速辯論中點名批評 Anthropic，批評內容未見報導（[NYT](https://news.google.com/rss/articles/CBMijwFBVV95cUxNbDdJR2JuaHlmNmNBV3BFUDN1WVh6amQzM0VnWUcwLUl5MVFzaUJDMlBSQkNEeUhSSG1ZcjIya21VSWh5TXQ4dll4X0pHRE1BeUl3V3dydTctWEtRU0ZYQmE4V3BkcVM4VHV6MzdKVy1mNWE0WUtidXRubkFLZmxIRVFKblBEZ3NwczBLQ1habw?oc=5) 09-16 報導，僅標題） | Meta 執行長，同業 |
+    | 川普陣營盟友（備忘錄作者未具名） | 09-24 前 | 白宮內流傳的備忘錄稱有效利他主義「打造 AI 末日論管線」，點名 Dario 與 Daniela Amodei（[Axios](https://axios.com/2026/09/24/trump-anthropic-ai-doomerism-dario-amodei) 09-24 獨家） | 白宮以外的川普政治顧問，政治對手 |
 
 ### H. `## 在 Anthropic 的角色與影響` 末加一條（L81 聯署信的新家）
 

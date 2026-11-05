@@ -69,7 +69,7 @@
 | [[entities/fiona-fung]] | person | 👤 人物 | active | Anthropic 工程副總裁；「Claude Code 讓工程師更孤獨；coding 不再是瓶頸」論述（2026-06-22） |
 | [[entities/chris-olah]] | person | 👤 人物 | active（單一來源）| Anthropic 共同創辦人、AI 可解釋性研究先驅；2026-05-26 梵蒂岡封論揭幕演講；10-09 WSJ「另一位共同創辦人」候選之一（未具名，詳見頁內標記） |
 | [[entities/chris-ciauri]] | person | 👤 人物 | active | Anthropic 國際業務總監；首爾記者會稱出口管制「數日內」解禁（2026-06-18，07-01 解除） |
-| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：AI 風險論述與政府監管立場；九、十月六位公開批評者（黃仁勳、LeCun、Lonsdale 等）對照見頁內　↳ 子故事：[[entities/dario-amodei-archive]] |
+| [[entities/dario-amodei]] | person | 👤 人物 | active | Anthropic CEO：現在公開主張哪幾件事（附本人原文；減速論證在 [[topics/recursive-self-improvement]]）、誰公開批評他、與白宮的關係　↳ 子故事：[[entities/dario-amodei-archive]] |
 | [[entities/teresa-carlson]] | person | 👤 人物 | active（單一來源）| 前 Microsoft、AWS 高管；2026-07-07 加入 Anthropic 主導公部門（public sector）業務；職稱已查證，到任日期官方仍未公開（FedScoop）|
 | [[entities/kevin-buzzard]] | person | 👤 人物 | active | Imperial College London 數學教授、Xena Project 主持人，主持 EPSRC 資助的 FLT Lean 形式化計畫；2026-09-04 公開回應 Anthropic 搶先完成形式化（「Anthropic has beaten me to it」）|
 | [[entities/opencode]] | product | 💼 商業 | active（快速成長）| Claude Code 主要開源替代品，157K 開發者分流，OpenCode-power-pack 移植官方 11 個 skills　↳ 子故事：[[entities/opencode-archive]] |

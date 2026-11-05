@@ -8596,3 +8596,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 閘：cell 與讀者語言閘 0 筆新增，`run_tests` exit 0；懸置計數 212→223（本波 −2 併家、搬家換頁，連同 11-02～11-04 ingest 未入基線 13 筆一併入帳）。
 - 歸因 user-query／安全政策
 - 複驗（新冷讀者，原四題逐字）：Q1、Q2、Q4 拿到，Q3 半拿到；量化表被評為全頁最好的一段。依複驗與實作複核改：S-1/A 句補「據媒體轉述」、方位詞與一處矛盾句、2026-08 摘要改為頁內連結、Accenture 日期統一 09-18；[[topics/market-signals-ipo]] 指路句改指本頁 `#技術彙整` 的 S-1/A 節（原指錯節，舊字樣 19→18）；index 鉤子補「遞歸」。轉知更正：H-2a8d8a 指錯節作廢，改開 H-b720e9。剩 Q3「對做 agent 的你」只一句、Q4 反對聲音沒有彙整表，留下次。評審實作複核放行。
+
+## 2026-11-05 Query（第 27 波頁面健檢——dario-amodei 核心論述改為主張清單）
+
+- 裁決（主 session 自決，使用者授權；十點＋N1–N8 記 `docs/page-audits/ledger.md` 2026-11-05 第 27 波兩條）：[[entities/dario-amodei]] 使命句改為「Dario Amodei 是誰、現在公開主張哪幾件事（各附本人原文出處）、誰在公開反對他、與白宮的關係走到哪；主張的論證與後果住議題頁」；核心論述 20 列事件流改為 10 列主張清單（附本人原文或標「僅媒體轉述」），薪酬、安保等事件移回歷史記錄；批評者表寫明收錄判準並補 Gavin Baker、Zuckerberg、川普陣營三列，「何時」一律用發言日；參考來源 46→31 條、全部有連結；歷史記錄 08 月蒸進 [[entities/dario-amodei-archive]]；213→175 行；照搬 83 行逐字。
+- 主編查證（2026-11-05）：官方 anthropic.com/news/position-open-weights-models 是 **07-27**（非 07-28），三項主張為晶片出口管制、打擊工業規模蒸餾、**開源閉源都要強制安全測試**；減速文章〈We Must Pace the Frontier〉為 **09-12**（多家，非 09-13），[[entities/michael-burry]]、[[entities/sridhar-vembu]]、[[entities/jack-clark]] 同步改正；安保費多家引 IPO 文件：約 275 萬美元，是底薪 65.4 萬美元的四倍多、約占總薪酬 1,800 萬美元的 15%（原頁四處寫成「超過 1,800 萬年薪四倍」，算術錯誤）。
+- 規則面：新開 `people/pages.md`（本頁契約：主張清單覆寫、批評者收錄判準、發言日），`people/daily.md` 三行，人物記者角色檔必讀清單補 pages.md；index 鉤子主編同波改（拿掉「六位」）。
+- 轉知帳本：新開 H-62f578（→安全政策，[[topics/recursive-self-improvement]] 批評者日期改發言日：Burry 09-14、Suleyman 09-16）。
+- 閘：cell 與讀者語言閘 0 筆新增，`run_tests` exit 0；懸置 223→223。
+- 歸因 user-query／人物

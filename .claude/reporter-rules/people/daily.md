@@ -1,6 +1,6 @@
 # Wiki Ingest — 人物記者指南（daily）
 
-開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`。本記者的負責頁無結論表契約，故無 `pages.md`。
+開工先讀 `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md`；建頁另讀 `.claude/reporter-rules/page-templates.md`。負責頁的表格契約在 `.claude/reporter-rules/people/pages.md`（一頁一節，只讀本次要動的頁那一節；沒有列在那裡的頁無表格契約）。
 
 分類為「人物」的新聞條目由此記者負責。
 
@@ -13,7 +13,7 @@
 | `wiki/entities/boris-cherny.md` | Claude Code 創始人動態、設計哲學聲明 |
 | `wiki/entities/cat-wu.md` | Claude Code 產品負責人論述 |
 | `wiki/entities/andrej-karpathy.md` | Anthropic 加入確認、CLAUDE.md 論述 |
-| `wiki/entities/dario-amodei.md` | Anthropic CEO 公開聲明、政策立場 |
+| `wiki/entities/dario-amodei.md` | 本人公開發言與文章、他身上發生的事、具名批評（契約見 `.claude/reporter-rules/people/pages.md` 本頁節） |
 
 > 上表為核心頁面與觸發條件；此外 `wiki/index.md` 中領域為 👤 人物 的所有頁面（含日後新增）皆由本記者負責維護與 lint。
 
@@ -27,7 +27,7 @@
 
 **歷史記錄格式：** 每筆事件以 `- YYYY-MM-DD：[一句話描述]` 條列在 `## 歷史記錄`，最新在最上方。
 
-**論述記錄：** 有引用價值的公開聲明（含出處）記入 `## 核心論述` 或 `## 現況`；純推測不記錄。
+**論述記錄：** 有引用價值的公開聲明（含出處）記入 `## 核心論述` 或 `## 現況`；純推測不記錄。`pages.md` 有該頁節的，照該節寫（例：`entities/dario-amodei` 的核心論述是覆寫型主張清單，不 prepend）。
 
 **相關議題連結：** 人物的事件屬於某個 `wiki/topics/` 議題時，`## 相關議題` 要連到該議題頁。網站人物篩選頁的「議題陣容」只從這些正文連結算出每個人捲進哪些議題，漏連的人不會出現在那個議題欄。
 

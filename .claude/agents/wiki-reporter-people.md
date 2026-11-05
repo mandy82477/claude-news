@@ -12,6 +12,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 
 1. `.claude/reporter-rules/shared.md` ＋ `.claude/reporter-rules/daily-contracts.md` — 共用邊界限制、回報格式
 2. `.claude/reporter-rules/people/daily.md` — 負責頁面清單與人物更新規則
+2a. `.claude/reporter-rules/people/pages.md` — 個別人物頁的頁面契約（目前有 `entities/dario-amodei`：核心論述為主張清單、批評者收錄判準）
 3. 需建立新頁面時，另讀 `.claude/reporter-rules/page-templates.md`
 
 ## 類別特有規則

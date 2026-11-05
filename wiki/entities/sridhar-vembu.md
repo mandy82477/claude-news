@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active（單一來源）"
 domain: "👤 人物"
-last_updated: "2026-10-17"
+last_updated: "2026-11-05"
 last_news_update: "2026-10-04"
 status_main: "active"
 days_since_news: 32
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 評論 OpenAI、Anthropic 為何不自己放慢 AI 腳步
 **首次出現：** 2026-09-24
-**最後更新：** 2026-10-17
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-10-04
 
 > **公開評論 AI 減速爭論**（2026-09-24）
@@ -56,7 +56,7 @@ Vembu 與 Anthropic 無已知投資或競爭關係，屬外部企業家的評論
 
 ## 相關議題
 
-- [[entities/dario-amodei]] — Anthropic 執行長，2026-09-13 公開呼籲全球 AI 減速，為本則評論的對象之一
+- [[entities/dario-amodei]] — Anthropic 執行長，2026-09-12 公開呼籲全球 AI 減速，為本則評論的對象之一
 - [[entities/michael-burry]] — 知名放空交易員，同期另一則批評 AI 減速呼籲「自利」的外部評論
 - [[topics/recursive-self-improvement]] — AI 遞歸自我改進與全球暫停呼籲，本則評論所屬的減速爭論脈絡
 

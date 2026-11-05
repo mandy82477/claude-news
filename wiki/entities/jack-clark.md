@@ -4,7 +4,7 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-25"
+last_updated: "2026-11-05"
 last_news_update: "2026-10-25"
 status_main: "active"
 days_since_news: 11
@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 11
-inbound_links: 5
+inbound_links: 6
 attribution_count: 5
 attribution_last: "2026-10-25"
 top_source: "google-news"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 政策治理
 **為何追蹤：** Anthropic 對 AI 監管、緊急關閉開關與減速協調的政策說法
 **首次出現：** 2026-09-15
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-05
 **最後新聞更新：** 2026-10-25
 
 > **AI 自我改進時間點預測提前至 2027 年**（2026-10-25）
@@ -61,7 +61,7 @@ Jack Clark 現任 Anthropic 政策主管，此前已在 Anthropic 呼籲全球�
 
 - [[topics/recursive-self-improvement]] — AI 遞歸自我改進與全球暫停呼籲；本人先前提出「brake pedal」呼籲，10-25 將「AI 自我改進」出現時間點預測提前至 2027 年
 - [[topics/anthropic-government-policy]] — Anthropic 政府關係與 AI 監管立場
-- [[entities/dario-amodei]] — Anthropic CEO，2026-09-13 曾親自呼籲全球暫緩 AI 模型能力提升步調，論述方向與本人一致
+- [[entities/dario-amodei]] — Anthropic CEO，2026-09-12 曾親自呼籲全球暫緩 AI 模型能力提升步調，論述方向與本人一致
 - [[entities/chris-olah]]、[[entities/tom-brown]] — WSJ「另一位共同創辦人修補覺醒形象」報導的候選對象，身分未定
 
 ## 參考來源
