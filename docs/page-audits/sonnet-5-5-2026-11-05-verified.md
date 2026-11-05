@@ -32,3 +32,13 @@
 3. 「這些數字是誰量的」表改成官方 7 項三欄（Sonnet 5.5／Sonnet 5／Opus 5.5），刪掉兩處「GDPval 兩分截斷」與「所以呢：只有一項」。
 
 來源（全一手）：[發布文](https://www.anthropic.com/claude-sonnet-5-5)、[模型頁](https://platform.claude.com/docs/en/models/sonnet-5-5/overview)、[What's new](https://platform.claude.com/docs/en/models/sonnet-5-5/whats-new-sonnet-5-5)、[Migration guide](https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide)、[Claude Code model-config](https://code.claude.com/docs/en/model-config)。
+
+## 四、補查（對健檢卡 V1–V10，2026-11-05）
+
+- **V1**：見第一節 #3——官方 What's new 明列 5 項破壞性變更＋1 項不報錯的回應形狀改變，與 MIXED 標題「five ways, one fails silently」結構一致（MIXED 是否逐項相同：推論，只讀得到標題）。migration guide「Migrating from Claude Sonnet 5」另列 safety classifiers 擴大類別（cyber／bio／frontier_llm／reasoning_extraction／general_harms）、最小快取 512、建議重掃 effort。
+- **V2／V3**：發布文基準表 7 項三欄（第一節 #5），Sonnet 5 Terminal-Bench 4.0 10.3% 出自同一張官方表；opus-5-5 頁 Opus 5 的 52.3% 本次未核（非本頁事）。
+- **V4／V6／V8**：見第一節 #1、#2、#4（model-config 頁一手）。
+- **V5**：發布文定價段即寫「Cache reads: $0.10」，migration guide「same prices as Claude Sonnet 5, except for prompt cache reads, which cost $0.10 … half the Claude Sonnet 5 rate」——**發布時就是 $0.10**，不是 10-07 調降。本頁「本庫原記 $0.20、10-10 更正」是本庫記錄錯誤的更正，口徑對；haiku-5-5（同維護者）與 pricing-history（商業）若寫成「調降」則錯——交設計者判同維護者那頁的互指句，pricing-history 走轉知。
+- **V7**：模型頁 Context 1M、Max output 128K、Batch beta 300K、API 預設 effort `high`（第一節 #8、#10）。
+- **V9**：status.claude.com 雲端解析不到（不在允許網域），未核；維持頁面原記。
+- **V10**：逐字「runs 30%+ faster, and costs up to 30% less for most work」，一致。
