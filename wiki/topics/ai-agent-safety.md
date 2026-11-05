@@ -11,7 +11,7 @@ parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 130
+inbound_links: 131
 attribution_count: 303
 attribution_last: "2026-11-04"
 top_source: "google-news"
