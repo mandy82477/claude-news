@@ -8585,3 +8585,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：新開 H-d43749（→投資分析，market-signals-customers JPMorgan／Accenture／Replit 口徑對齊、狀態只指本頁）、H-b86355（→投資分析，market-signals 母頁 Globant 改指合作算力頁）。
 - 閘：cell 與讀者語言閘本波 0 筆新增，`run_tests` exit 0（不需本機重建基線）；網站企業矩陣 59→48 列，同鍵覆蓋問題隨一家一列消失。
 - 歸因 user-query／商業
+- 複驗（新冷讀者，原四題逐字）：Q1、Q3 拿到，Q2、Q4 半拿到（第一輪 Q4「做 agent 產品該押哪個生態」全站無答案，本波「選型影響」7 條後拼得出）；依複驗改 [[overview]] 外流時點句（「公開版 S-1 未遞交」改為當時狀態並註 10-26 已提交）、本頁「日報首提」改讀者用語。剩 Q2 企業選型比較與 Cursor 無專節屬 [[topics/competitor-landscape]]、Q4 index 無入口列。評審實作複核放行。

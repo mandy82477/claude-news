@@ -1,6 +1,6 @@
 # 第 25 波去向表：topics/enterprise-tool-tracker（2026-11-04）
 
-> 行號指改前原檔（commit `e90dace`，366 行）。第二節由 `<scratchpad>/w25/design/make_map.py` 從 `accounting.txt` 產出：`build.py` 斷言 1–366 每行恰消費一次，`verify.py` 對「M／A」照搬行逐字核對（155 行）。去向代號：**M**＝留主頁（原字）、**A**＝進 archive `## 2026-08`（原字）、**M（改）／A（改）**＝行內小改後留／搬（逐字在 draft F 節）、**改**＝新字取代、**併入**＝併進同公司的一列、**砍**＝刪（理由寫在格內）。
+> 行號指改前原檔（commit `e90dace`，366 行）。第二節由 `<scratchpad>/w25/design/make_map.py` 從 `accounting.txt` 產出：`build.py` 斷言 1–366 每行恰消費一次，`verify.py` 對「M／A」照搬行逐字核對（150 行，評審修法後）。去向代號：**M**＝留主頁（原字）、**A**＝進 archive `## 2026-08`（原字）、**M（改）／A（改）**＝行內小改後留／搬（逐字在 draft F 節）、**改**＝新字取代、**併入**＝併進同公司的一列、**砍**＝刪（理由寫在格內）。
 
 ## 一、逐節去向
 
