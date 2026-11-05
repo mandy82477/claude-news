@@ -8,11 +8,11 @@ last_updated: "2026-11-04"
 last_news_update: "2026-11-04"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 126
 attribution_count: 844
 attribution_last: "2026-11-04"

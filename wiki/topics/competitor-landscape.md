@@ -6,12 +6,12 @@ domain: "💼 商業"
 last_updated: "2026-11-04"
 last_news_update: "2026-11-04"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
-inbound_links: 78
+days_since_news_subtree: 1
+inbound_links: 79
 attribution_count: 254
 attribution_last: "2026-11-04"
 top_source: "blog"

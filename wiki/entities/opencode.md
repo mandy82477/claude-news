@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-10-31"
 last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 16
+days_since_news: 17
 parent: null
 children: "['entities/opencode-archive']"
 page_role: "hub"
-days_since_news_subtree: 16
+days_since_news_subtree: 17
 inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-19"

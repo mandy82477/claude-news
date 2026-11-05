@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-11-03"
 last_news_update: "2026-11-03"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 7
 attribution_count: 5
 attribution_last: "2026-11-03"
