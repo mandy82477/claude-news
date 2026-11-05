@@ -39,8 +39,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > **最新動態**（2026-11-05）
 > - **新增功能請求**：Desktop 自訂主題／強調色（[#79305](https://github.com/anthropics/claude-code/issues/79305)，28 則留言、88 個讚，本日反應數最高；🔌 平台相容性組）、全平台 Passkey（WebAuthn）登入（[#84862](https://github.com/anthropics/claude-code/issues/84862)，26 則留言、209 個讚，全站今日讚數最高；👤 帳號管理組）。
-> - **新增已知問題**：Fable 5 回覆文字偶被誤顯示為摘要後的 thinking 區塊（[#74558](https://github.com/anthropics/claude-code/issues/74558)，26 則留言、20 個讚；🧠 組）、Postman 用戶端未經同意把外掛加入 Claude Code／Codex 設定（三源同報，互動均 0；🛡️ 組，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]）。
+> - **新增已知問題**：Fable 5 回覆文字偶被誤顯示為摘要後的 thinking 區塊（[#74558](https://github.com/anthropics/claude-code/issues/74558)，26 則留言、20 個讚；🧠 組）、Postman 用戶端未經同意把外掛加入 Claude Code／Codex 設定（三源同報，互動均 0；🛡️ 組，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]）、新 session 傳預設開在 cloud 影響簡單任務（Reddit 單一貼文、0 留言，❓ 待查證；🧠 組）。
 > - **高互動已知問題互動數更新**：內建瀏覽器忽略站台權限（[#91495](https://github.com/anthropics/claude-code/issues/91495)，31 則留言、33 個讚；🔌 組）、1M context 靜默清除工具結果（[#42542](https://github.com/anthropics/claude-code/issues/42542)，30 則留言、11 個讚；🧠 組）、驗證信被抑制無法登入（[#79808](https://github.com/anthropics/claude-code/issues/79808)，29 則留言、7 個讚；👤 組）。
+> - **已知問題狀態更新**：遊戲複製限制（10-31 新增）鬆綁，使用者提出重現他人遊戲請求時 Claude Code 改為主動提議做原創同類遊戲，無害逆向工程案例仍未恢復存取（🧠 組，Tom's Hardware）。
 
 ---
 
@@ -132,12 +133,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（78 條未修復、3 條已修復、1 條拒修、7 條查無官方、1 條❓）
+### 🧠 行為與品質（78 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
 
 - 🔴 **未修復**｜**Fable 5：回覆文字偶被誤顯示為摘要後的 thinking 區塊，該輪看起來無回應（GitHub issue #74558，累積 26 則留言、20 個讚，2026-11-04）**：環境為 Claude Code 2.1.201、`claude-fable-5` 模型；官方尚未說明是哪個機制造成。
 - 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Claude Code 被引導不重現他人特定遊戲，使用者回報無害的逆向工程與移植也被拒（2026-10-31）**：Anthropic 證實 Opus 5.5 更新讓 Claude Code 避開「重現他人的特定遊戲」，原創與自有素材仍可做，但開發者回報自家專案被誤擋（[Wccftech](https://wccftech.com/claude-code-game-restrictions-target-clones-but-developers-say-legitimate-projects-are-being-blocked/)）；模型面見 [[entities/opus-5-5]]。
+  - **鬆綁一半（2026-11-05，Tom's Hardware）**：使用者提出重現他人遊戲的請求時，Claude Code 改為主動提議做同類型但原創的遊戲；無害逆向工程案例的存取仍未恢復。
+- ❓ **待查證**（標 2026-11-05｜查 1xop1wm、activated｜複 2026-11-19）｜**新 session 傳預設開在 cloud，簡單任務也跑不順（Reddit，單一貼文、0 留言）**：r/ClaudeCode 使用者抱怨新開的 session 現在一律預設在 cloud 執行；單一來源、0 讚 0 留言，無法判斷是否為普遍預設變更或個人環境設定問題。
 - 🔴 **未修復**｜**`--scope project` 安裝的外掛被其他專案誤判為全域已安裝（GitHub issue #14202，累積 27 則留言、66 個讚，2026-10-30）**：Marketplaces 畫面誤判「已安裝」並拒絕真正安裝；多專案各裝不同外掛者，安裝狀態顯示可能不可信；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.219 內部提示詞片段 `heron_brook` 只在 Opus 5 悄悄蓋過使用者委派政策，無關閉選項（GitHub issue #80988，累積 38 則留言、91 個讚，2026-10-29）**：注入「不要未經要求呼叫 AgentTool」，蓋過自訂委派策略且無法關閉；用 Opus 5 拆工作給子 agent 者可能發現委派未生效；官方尚未回應。
 - 🔴 **未修復**｜**輸入框拼字檢查無法關閉，紅色底線標記讓輸入文字難以閱讀（GitHub issue #58693，累積 31 則留言、18 個讚，2026-10-29）**：常輸入非英文或專有名詞的使用者受影響最明顯；官方尚未回應或提供設定選項。
