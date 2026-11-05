@@ -32,15 +32,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-22
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 
 > **本頁在回答什麼**
 > 用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查。
 > 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
-> **compact 之後 skill 不再被遺忘**（2026-10-22）
-> 官方 context-window 頁：v2.1.304 起，compact 後 skill 描述清單會重建並重新注入；更早的版本長 session 後較難自動觸發 skill，見第 1 段。
+> **官方新增：關 thinking 省 token**（2026-11-05）
+> usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁第 2a 段同步補上，見「官方的 session 經營建議」。
 
 ---
 
@@ -194,7 +194,7 @@ Database queries use Knex in src/db/. Never write raw SQL strings in route handl
 
 - **`paths:` 不是 rules 專屬**，skill frontmatter 也有，官方明寫「Uses the same format as path-specific rules」。
 - **skill 跟 CLAUDE.md 一樣是建議層。** 差別在載入時機與 token 成本，不在強制力。官方原話：一條 skill 若失效，「use hooks to enforce behavior deterministically」。
-- **強制層是 hooks 或 permissions 兩者。** 而 `PreToolUse` hook 最硬——它先於任何權限模式檢查，回 `deny` 時連 `bypassPermissions` 和 `--dangerously-skip-permissions` 都擋得住。
+- **強制層是 hooks 或 permissions 兩者。** `PreToolUse` hook 觸發即硬擋（先於 allow 規則），但比對是盡力而為、不保證一定觸發（官方 permissions／hooks 文件，2026-11-01 查）；要保證一定擋，用沙箱。
 
 **exit code 語意**（官方 hooks 文件，2026-09-23 查）：`exit 2` 才是硬攔截——「Exit 2 means a blocking error… exit 2 blocks whether or not you print JSON」。沒印出合法 JSON 到 stdout 時，`exit 1` 只會被當成 non-blocking error，Claude 照常放行該動作。`Stop` hook 的 `exit 2` 語意不同——不是攔阻工具呼叫，而是「Prevents Claude from stopping, continues the conversation」。
 
@@ -272,6 +272,8 @@ skill 的描述清單不一樣：**v2.1.304 起 compact 後會重建並重新注
 Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions)〉（2026-08-14）談如何讓每個 token 發揮最大價值，建議之一是**任務之間執行 `/clear`**，理由是避免前一個不相關任務累積的 context 被原樣送回模型。這與上面「同一個問題糾正超過兩次就 `/clear`」（見第 8 段）是同一個工具、不同觸發時機：那條管**單一任務內失敗重試**，這條管**任務邊界之間**的 context 衛生。
 
 **額度與用量限制**：用量（額度消耗）與長度（單一對話的 token 上限）是兩種限制，暫時關掉不用的工具或連接器可省用量（一則 dev.to 實測 20 個 MCP Actor 的 `tools/list`，單工具定義 token 中位數 3.8K、最高 32.7K，98% 是自動推論的輸出 schema，單一來源，接大量工具前可自己抽查，見 [[topics/community-cost]]）；額度怎麼算、用盡時會怎樣見 [[entities/pricing]]。
+
+**想省 token，先看 thinking 開關**：官方 usage-limits 文件新增建議——模型有 thinking 開關時，不需要加強推理就直接關掉（[原文](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)，2026-11-05 查）。同份文件同時拿掉了「怎麼搭配 Pro/Max/Ultra 方案用 Claude Code」與「什麼是 Team 方案」兩段舊說明，方案細節改查 [[entities/pricing]]。
 
 **`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
 
@@ -390,7 +392,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 - **`security-guidance` 外掛** —— 三層，深度差很多：每次 edit 是零模型呼叫的字串比對（零成本）；每個 turn 結束跑一次背景模型 review（≤30 檔、連續最多 3 次）；Claude 自己 commit/push 時跑深度 agentic review（每小時 ≤20 次）。預設用 Opus 4.7，可用 `SECURITY_REVIEW_MODEL`／`SG_AGENTIC_MODEL` 換。可加專案自訂規則（`.claude/claude-security-guidance.md` ≤8KB、`.claude/security-patterns.yaml` ≤50 條），只能加不能停用內建。
 - **`.claude/rules/` + `paths:`** —— 規則只在碰到匹配檔案時載入。
 
-⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
+⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
 
 想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
 
@@ -677,6 +679,10 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 - [Claude Code SDK / headless mode](https://code.claude.com/docs/en/headless) — `--bare` 旗標省啟動時間
 - [Automate actions with hooks](https://code.claude.com/docs/en/hooks-guide) — 補 `exit 1`／`exit 2` 語意（含 `Stop` hook 特例）
+
+2026-11-05 補查：
+
+- [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work) — 關 thinking 省 token 的建議，第 2a 段
 
 社群與一手觀察：
 
