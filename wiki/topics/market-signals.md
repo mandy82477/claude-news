@@ -30,19 +30,18 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-05
+**最後新聞更新：** 2026-11-05
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-04）
-> - **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：擔保金額未揭露，TeraWulf 新增為可交易標的（見 [[topics/market-signals-compute]]）。
+> **最新判讀**（2026-11-05）
+> - **CoinDesk：Google 信用擔保若觸發，可能取得 TeraWulf 股權**：違約情境首度曝光，股權比例與觸發條件未揭露（見 [[topics/market-signals-compute]]）。
 >
-> 前一日（2026-11-03）：
-> - **S-1/A 自評「可能迫近」觸及 RSI 門檻**：首度書面承認安全風險升高，同時強調現役模型皆未跨過此線（見 [[topics/market-signals-ipo]]）。
-> - **S-1 揭露單季人事費用逾 17 億美元**：換算每人每月約 10.7 萬美元，規模超過同期 12.5 億美元營運虧損（見 [[topics/market-signals-ipo]]）。
+> 前一日（2026-11-04）：
+> - **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：擔保金額未揭露，TeraWulf 新增為可交易標的（見 [[topics/market-signals-compute]]）。
 
 ---
 
@@ -79,7 +78,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | Sandisk（NASDAQ: SNDK） | 無直接業務關係；被歸類為 AI 記憶體晶片概念股，隨 Anthropic 營收增速放緩消息同步下跌 | 10-15 Q3 營收揭露一則 | 📉 負面，純粹歸類連動、非業務關係 | 後續財報是否顯示記憶體晶片需求受 AI 資本支出週期影響 |
 | Blackstone（NYSE: BX） | 供應商，提供私募信貸參與 Anthropic 晶片融資案，與銀行團共同安排 630 億美元融資規模 | 10-17 私募信貸晶片融資一則、10-27 併入 630 億美元融資案一則、10-31 轉述預期 BB 級信評一則 | ⚖️ 兩面，融資規模已知為 630 億美元，具體殖利率與利率仍未披露；10-31 其向投資人預期 Anthropic 上市後為 BB 級（單一標題，非機構評等） | 630 億美元融資定價發行；Blackstone 具體利率與規模拆分是否披露 |
 | Charles Schwab（NYSE: SCHW） | 通路夥伴，「Claude for Financial Advisors」限 RIA 使用；10-24 追加 20 席採購下限排除逾 1.1 萬家小型顧問；10-29 另加碼最高 4,800 美元額度抵用，對 Schwab 財報不具重大性 | 10-24 Schwab 通路門檻一則；10-29 Financial Advisors 額度優惠一則 | ⚖️ 兩面，10-24 門檻收緊但 10-29 另加碼使用額度補貼 | 門檻理由與生效時間是否經官方說明；Orion 是否跟進類似門檻；額度補貼適用範圍與期限是否公布 |
-| TeraWulf（NASDAQ: WULF） | 供應商，07-06 簽 190 億美元 20 年肯塔基資料中心租約供應 Anthropic 算力；11-04 Google 提供信用擔保支應該計畫，具體擔保金額未披露 | 11-04 TeraWulf 信用擔保一則 | 〰 未定 | 擔保金額與條件是否經官方（Google 或 TeraWulf）證實披露 |
+| TeraWulf（NASDAQ: WULF） | 供應商，07-06 簽 190 億美元 20 年肯塔基資料中心租約；11-04 Google 提供信用擔保；11-05 CoinDesk稱違約情境下 Google 可能取得股權，金額與條件均未披露 | 11-04 TeraWulf 信用擔保一則、11-05 違約情境一則 | 〰 未定，違約情境揭露潛在稀釋風險但觸發條件未知 | 擔保啟動條件、股權比例與觸發門檻是否經官方（Google 或 TeraWulf）證實披露 |
 
 **曝險多大**：表上每一檔對 Anthropic 都是間接曝險，分三型看。
 - 持股型（GOOGL、AMZN、NVDA、AMD）：持股金額相對自身市值很小，股價主要由本業決定；持股金額的報導見 [[topics/anthropic-ipo]]。
@@ -101,7 +100,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 |---|---|---|
 | IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-03 S-1/A 自評迫近 RSI 門檻、單季人事費用逾 17 億 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 10-28 GSA 折扣擴大、向加州州長表態 |
-| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-04 TeraWulf 取得 Google 信用擔保 |
+| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-05 CoinDesk：違約情境下 Google 可能取得 TeraWulf 股權 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 
