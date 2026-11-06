@@ -6,11 +6,11 @@ domain: "👤 人物"
 last_updated: "2026-09-27"
 last_news_update: "2026-06-26"
 status_main: "resolved"
-days_since_news: 132
+days_since_news: 133
 parent: "entities/john-jumper"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 132
+days_since_news_subtree: 133
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

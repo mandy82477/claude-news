@@ -461,11 +461,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-science",
-      "name": "Claude Science",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-security",
       "name": "Claude Security",
       "pageType": "entity"

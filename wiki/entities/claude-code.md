@@ -13,11 +13,11 @@ parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 125
-attribution_count: 846
-attribution_last: "2026-11-05"
+inbound_links: 126
+attribution_count: 849
+attribution_last: "2026-11-06"
 top_source: "github-issues"
-pending_count: 6
+pending_count: 7
 pending_overdue: 2
 pending_next_review: "2026-11-14"
 pending_signalled: 2

@@ -491,16 +491,6 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
       "pageType": "topic"

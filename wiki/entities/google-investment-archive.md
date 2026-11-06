@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-09-13"
 last_news_update: "2026-05-01"
 status_main: "resolved"
-days_since_news: 188
+days_since_news: 189
 parent: "entities/google-investment"
 children: "[]"
 page_role: "archive"
-days_since_news_subtree: 188
+days_since_news_subtree: 189
 inbound_links: 0
 attribution_count: 0
 attribution_last: null

@@ -11,10 +11,10 @@ days_since_news: 0
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 189
-attribution_count: 163
-attribution_last: "2026-11-02"
+attribution_count: 164
+attribution_last: "2026-11-06"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0

@@ -6,12 +6,12 @@ domain: "🌐 社群"
 last_updated: "2026-11-04"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
-inbound_links: 14
+days_since_news_subtree: 4
+inbound_links: 15
 attribution_count: 16
 attribution_last: "2026-11-02"
 top_source: "hacker-news"
