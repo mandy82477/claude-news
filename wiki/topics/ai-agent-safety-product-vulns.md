@@ -31,14 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-05）
-> - **產品漏洞／不修補**：The Register 報導 Claude Dispatch 缺陷可跨企業邊界執行遠端指令，官方確認但決定不修補。
-> - **供應鏈／第三方**：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定，三家媒體同日報導。
+> **最新動態**（2026-11-06）
+> - **升級／Claude Dispatch**：CyberSecurityNews／The Hacker News 曝光具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接電腦執行程式碼，承接 11-05 官方確認不修補。
+> - **升級／email 外洩**：Claude Code 以 User-Agent 夾帶使用者 email（#107757）再度引爆熱議（HN 1485 分），機制同既有 #78431；FourWeekMBA 稱 108 天後才新增 email 檢查（僅標題）。
 
 ---
 
@@ -53,8 +53,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 ## 目前結論
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
-- **升版也還開著的**：惡意 `.git` 第二變體（至 2.1.252 未修，正常 clone 不受影響）（證據在 [[topics/ai-agent-safety-prompt-injection#2026-09]] 09-02 條目）、email 進 prompt 後被帶出（#81138，官方未回應）、User-Agent 夾帶 email（#78431，未見修復）。
-- **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05，僅標題可用）。
+- **升版也還開著的**：`.git` 第二變體（至 2.1.252 未修）、email 進 prompt 外流（#81138，未回應）、User-Agent 夾帶 email（#78431／#107757，11-06 再度引爆，未修復）。
+- **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05）；11-06 另曝攻擊鏈為惡意瀏覽器外掛（僅標題可用）。
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
 - **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
@@ -85,13 +85,31 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 ### 2026-11
 
+#### CyberSecurityNews／The Hacker News：Claude Dispatch 攻擊鏈曝光，惡意瀏覽器外掛可在已連接電腦執行程式碼（2026-11-06 新增，升級既有 11-05 條目）
+
+- **揭露來源**：Google News／CyberSecurityNews（11/06 12:52 UTC）、The Hacker News（經 Google News，11/06 12:06 UTC），兩家媒體同日各自報導，互動均為 0
+- **核心主張（僅標題可用）**：兩家媒體報導 Claude Dispatch 安全缺陷的具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接的電腦上執行程式碼；承接 11-05 The Register 揭露的「官方確認但不修補」，本次補上觸發機制，惟是否已有在野攻擊案例、受影響版本範圍均未見報導
+- **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨裝置功能的管理者，優先檢查已連接裝置上的瀏覽器外掛來源
+- **可信度評估**：僅標題層級可用，兩家媒體同日各自報導同一事實，惟均未見官方對此攻擊鏈的確認或回應
+- Dataconomy（11/06 10:00 UTC）同日另以「官方放任缺陷不修」角度報導同一事件，與 The Register 11-05 說法一致，未補充新事實
+
+#### Hacker News／GitHub Issue #107757：Claude Code 以 User-Agent 夾帶使用者 email 再度引爆熱議（2026-11-05～06 新增，升級既有 08-11 #78431 條目）
+
+- **揭露來源**：Hacker News ＋ GitHub Issues（1485 分，2 個來源，2026-11-05 22:17 UTC），連往 [GitHub Issue #107757](https://github.com/anthropics/claude-code/issues/107757)；FourWeekMBA（經 Google News，2026-11-06 11:49 UTC）同日另文跟進
+- **核心主張**：HN 留言指出多人發現 Claude Code 存取需認證 API（如 SEC API）時，會把真實 email 塞進 User-Agent；SEC API 文件規定 User-Agent 須帶 email，留言附 curl demo 驗證
+- 機制與既有 08-11 [[#2026-08-11～08-12|#78431]]（User-Agent 夾帶 email，至今未見修復）相同，惟 #107757 為另一個 issue 編號，HN 熱度（1485 分）遠高於 #78431 當時（38 分）
+- **與既有事件的關係**：是否為 #78431 重新引爆、抑或獨立新報，未見報導說明；兩個 issue 是否已合併或指向同一次修復亦未見官方回應。FourWeekMBA 另稱 Anthropic 在「首次報告」後 108 天才新增 email 檢查機制（僅標題，細節未載，是否即解決本缺陷、所指「首次報告」是否為 #78431 均未見報導）
+- **你能先做什麼**：會呼叫需認證 API（如 SEC API）、在意個資外流的開發者，應檢查目前請求標頭是否帶出真實信箱
+- **可信度評估**：HN 高熱度（1485 分）＋社群提供可重現 demo（curl 驗證 SEC API 回應），機制可信度高；#107757 與 #78431 的關係、FourWeekMBA「108 天」說法的查證依據均未見報導
+- ❓ **待查證**（標 2026-11-06｜查 107757、FourWeekMBA｜複 2026-11-20）｜**#107757 與既有 #78431 是否同一缺陷、「108 天後新增 email 檢查」所指內容**：兩則報導機制描述相同（User-Agent 夾帶 email），但是否為同一 issue、官方是否已新增檢查、檢查內容為何，均未見報導確認
+
 #### The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補（2026-11-05 新增，2 個來源）
 
 - **揭露來源**：Google News／The Register（11/05 13:00 UTC），互動 0；日報 dedup 另標 2 個來源，惟本輪原料僅可辨識 The Register 一家
 - **核心主張（僅標題可用）**：The Register 報導稱 Anthropic 確認 Claude Dispatch 存在一個安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令；官方決定不修補；缺陷具體觸發條件、是否已有在野攻擊案例均未見報導
 - **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨團隊功能的管理者，留意官方是否後續提供規避建議
 - **可信度評估**：僅標題層級可用，官方「確認但不修補」的原始聲明出處未見報導，單一可辨識媒體來源
-- ❓ **待查證**（標 2026-11-05｜查 Dispatch、跨企業邊界｜複 2026-11-19）｜**缺陷觸發條件與在野攻擊案例**：具體利用方式、影響範圍、是否已有實際攻擊案例均未見報導，僅標題可用
+- ❓ **待查證**（標 2026-11-05｜查 Dispatch、跨企業邊界｜複 2026-11-19｜訊 2026-11-06）｜**缺陷觸發條件與在野攻擊案例**：CyberSecurityNews／The Hacker News（11-06）報導具體攻擊鏈為惡意瀏覽器外掛；影響範圍、是否已有實際在野攻擊案例仍未見報導
 
 #### Mezha.net／Notebookcheck／BigGo Finance：Postman 用戶端更新未經同意把外掛加入 Claude Code 與 Codex 設定（2026-11-05 新增，三源同報）
 

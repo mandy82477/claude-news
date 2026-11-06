@@ -3,8 +3,8 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/anthropic-business"
@@ -31,12 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
-> **最新動態**（2026-11-05）
-> - **TeraWulf／Google**：CoinDesk 報導若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 190 億美元資料中心計畫股權，啟動條件未載
-> - **Anthropic／AP**：ADWEEK 報導雙方達成首個內容授權合作，供選舉報導，授權範圍未載
+> **最新動態**（2026-11-06）
+> - **Microsoft 官方**：Copilot 內的 Claude 模型納入歐盟資料邊界（EU Data Boundary），資料處理與儲存限定在歐盟境內，見下方「哪個合作會改到你用的 Claude」Microsoft 列
 
 ---
 
@@ -111,7 +110,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
 | Google Cloud／Vertex AI | 新增走 GCP 帳單／帳戶權限的 Anthropic 代管 API 路線，處理器與功能選擇不同於標準 Vertex（MIXED News／OpenTools，10-26，單一來源各一）| 費率仍由 Google 自訂，第一方牌價不變 | 2026-10-26 |
 | AWS（模型上線） | Claude Fable 5.1 已在 AWS 平台可用 | 不改價 | 2026-09-02 |
-| Microsoft Foundry | 走 CCU 後付，折扣以「同一筆用量換算出較少 CCU」呈現 | 費率仍是 Anthropic 標準價 | 2026-09-03 |
+| Microsoft（Foundry／Copilot） | 走 CCU 後付，折扣以「同一筆用量換算出較少 CCU」呈現；Copilot 內的 Claude 模型資料處理新增納入歐盟資料邊界（EU Data Boundary） | 費率仍是 Anthropic 標準價 | 2026-11-05 |
 
 **通路的完整對照（誰營運、誰定價、計費單位）見 [[entities/pricing#通路：誰定價、怎麼開票]]，乘數見 [[entities/pricing#乘數：會互相疊乘]]。**
 
@@ -131,6 +130,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 - **AI for Science（擴大至 20 機構）**（2026-10-29）：官方擴大科研夥伴計畫，20 個基金會／機構／研究團隊取得免費 Claude 額度，涵蓋生物、醫學、物理、化學、氣候科學與數學（Anthropic；Google News）
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
 - **生命科學深度研究合作（6 組織）**（2026-10-27）：官方近況：與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 合作藥物開發，並啟動自家藥物探索；模型面見 [[entities/claude-science]]（Anthropic；HN 294 分）
+  - **2026-11-06 Fierce Biotech 跟進**：Generate（Generate Biomedicines）執行長稱用 Claude 縮短 CAR-T 細胞工程設計時程是「巨大機會」，具體時程縮短幅度與技術細節未見報導，僅標題可用（Google News/Fierce Biotech）。
 - **Mithril Medicine（收購）**（2026-10-27｜訊 2026-10-29）：收購一人神秘生技新創，由匿名 Twitter 用戶經營；Forbes 稱該新創此前以 Claude 運行藥物開發專案，金額與整合計畫未見報導（Endpoints News；R&D World；Forbes）
   - Mithril Medicine 為一人生技公司，創辦人 Cody Tranbarger，研究罕見肌肉萎縮症藥物；收購於 2026-10-27 公告，媒體稱交易發生在 7 月，金額未揭露（The Next Web、The Neuron、OfficeChai，2026-11-01 查證）。
   - Anthropic 稱最早 2028 年底進入臨床；「drug R&D chief」Endpoints 專訪原文未找到，負責人身分未確認（2026-11-01 查證）。

@@ -3,8 +3,8 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-05）
+> **本週衝擊**（2026-11-06）
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 > - 🟡 **GitHub Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段**（Blog/GitHub Copilot Changelog）——Claude Code 無對應整合，用 Xcode 開發 Apple 平台的人多一個選型考量點。
 
@@ -248,6 +248,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-06
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot 用量指標 API 新增 code review 回饋細節與「已處理率」欄位，企業可追蹤 code review 建議被接受的比例；非編碼能力或定價異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot 用量指標 API 新增旗標，標示缺少用戶端 telemetry 或 IDE／擴充套件版本低於最低需求的使用者；非編碼能力或定價異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **OpenAI（透過客戶案例，Codex，非編碼能力異動）**：官方部落格報導 Cult.fit 用 Codex 跨部門建置內部工具、加快流程；屬廠商客戶案例自宣，具體規模與效益數字未見，不列入「對手雷達」表（Blog/OpenAI News）
+- **Meta（分析文，非編碼工具）**：官方部落格宣布個人 AI agent「Muse」新增語音對話功能，於 App／網頁／Mac 開放；消費者助理產品非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Meta Newsroom）
+- **OpenAI（透過客戶案例，非編碼工具）**：官方部落格報導澳洲多所大學擴大 ChatGPT 使用、把 AI 帶入教學；教育場域採用案例非編碼工具或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-05
 - **Microsoft／GitHub**：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；對比之下 Claude Code 無官方 Xcode 原生整合，詳見「對手雷達」與「雷達細節」Microsoft／GitHub 列更新（Blog/GitHub Copilot Changelog）

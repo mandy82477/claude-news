@@ -3,8 +3,8 @@ page: "topics/enterprise-tool-tracker"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-03"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "ongoing"
 days_since_news: 2
 parent: null
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-11-03）
-> PYMNTS 報導高盛全面禁止行員使用 Claude Code 與 GitHub，是目前已知首見具名大型金融機構對 coding agent 下達禁用令；與 2026-08-20 香港 Claude AI 存取權限切斷（區域存取政策）為不同案例，僅標題可用，禁令範圍與生效時間未見報導。
+> **最新企業採用異動**（2026-11-06）
+> The Times of India 跟進稱高盛禁用 Claude Code／GitHub 範圍達數千名行員；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
 
 ## 摘要
 
@@ -91,7 +91,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
-| Goldman Sachs | 頂尖 | Claude Code ＋ GitHub | ❌ | — | 全面禁止行員使用，首見具名大型金融機構對 coding agent 下達禁用令；與下方 08-20 香港 Claude AI 存取權限切斷為不同案例，禁令範圍與生效時間未見報導 | 2026-11-02 |
+| Goldman Sachs | 頂尖 | Claude Code ＋ GitHub | ❌ | — | 全面禁止行員使用，一說涉及數千名行員；首見具名大型金融機構對 coding agent 下達禁用令，與下方 08-20 香港存取權限切斷為不同案例，生效時間未見報導 | 2026-11-02 |
 | Replit | 大型（AI 編碼/應用開發平台） | Claude（API 整合） | ⚠️ 有爭議 | 2026-10-16 | 執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方 | 2026-10-17 |
 | Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
 | 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
@@ -219,6 +219,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-06
+- **[媒體跟進，補充規模] The Times of India：高盛禁用 Claude Code／GitHub 一說涉及數千名行員**：延續 11-02 PYMNTS 首報之全面禁用令，首次提供規模描述；標題另稱「after a period」，原文不可讀，時間點未見報導，詳見上方使用現況表 Goldman Sachs 列更新（Google News/The Times of India）
 
 #### 2026-11-02
 - **[新增具名企業，❌ 已退出] PYMNTS：高盛全面禁止行員使用 Claude Code 與 GitHub**：首見具名大型金融機構對 coding agent 下達禁用令；與 08-20 香港 Claude AI 存取權限切斷（區域存取政策）為不同案例，僅標題可用，禁令範圍與生效時間未見報導，詳見上方使用現況表新增列（Google News/PYMNTS.com）

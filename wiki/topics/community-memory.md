@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
-> **CLAUDE.md 管理新增文件遞迴改善工具**（2026-11-05）
-> - **Gauge CLI**：開源、免帳號即可試用，用「跑任務→分析→改文件」迴圈遞迴改善 coding agent 讀的文件，HN 40 分。
+> **記憶與知識管理新增一例：rsc-harness 整合專案知識與工具存取**（2026-11-06）
+> - **rsc-harness**：以可審查安裝計畫整合專案知識、工具存取、274 個 skill 與強制規則，依任務分三路徑；GitHub 518 星。
 
 ---
 
@@ -65,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### ericrisco/rsc-harness：meta-harness 讀專案證據後提出可審查安裝計畫，整合知識、工具存取、274 個 skill 與強制規則（2026-11-06）
+
+- **主線：** —
+- **核心模式：** CLI（`rsc`）讀證據提出安裝計畫（哪些裝/暫緩/排除，附理由），核准才寫入；分四層：知識 wiki、工具慣例、274 個漸進載入 skill、強制規則；依複雜度分唯讀／局部修改／規格先行三路徑；支援 18 款 assistant，含 Claude Code、Codex。
+- **與既有模式的關係：** 補上「記憶與知識管理」一例——專案知識、工具慣例與規則整合成可審查安裝計畫；呼應「Skills 設計」漸進載入與「規格驅動開發」ASDD 規格先行鏈（同屬一類，[[topics/community-guardrails#2026-10]]）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** GitHub Search 518★；git clone 查核近 30 天 commit，11 月以來近乎每日有合併 PR 並持續發版（3.7.1→4.0.5），作者本人與至少 2 位外部貢獻者提交，非單一帳號灌水；forks／issues 本次無 API 權限，未查。
+- **來源：** GitHub Search；[GitHub](https://github.com/ericrisco/rsc-harness)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者主導且持續迭代，274 個 skill 目錄尚無第三方採用數據）
 
 #### Show HN: Gauge——開源 CLI 用遞迴 hillclimbing 迴圈改善 coding agent 讀的文件（2026-11-04）
 

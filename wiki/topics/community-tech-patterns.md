@@ -29,13 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-05
+**最後更新：** 2026-11-06
 **最後新聞更新：** 2026-11-01
 
-> **三個子頁同日更新：Plugin/MCP 整合新增官方與可靠性兩例，創意工具新增人機共用時間軸，行動遠端控制新增 P2P 加密方案，CLAUDE.md 管理新增文件遞迴改善工具**（2026-11-05）
-> - **整合**：Notion 官方帳號發布的 Claude Code 連接 plugin、以 accessibility tree 取代截圖迴圈的電腦操作 MCP server（axuse）、YC 團隊 Kino AI 讓真人與 agent 共用剪輯時間軸，見 [[topics/community-integrations#2026-11]]。
-> - **介面**：liguobao/ds-harness-remote 用低延遲端到端加密 P2P 讓 PC／行動／網頁連回 Claude Code 工作區，見 [[topics/community-interfaces#2026-11]]。
-> - **記憶**：Gauge CLI 用「跑任務→分析→改文件」迴圈遞迴改善 coding agent 讀的文件，見 [[topics/community-memory#2026-11]]。
+> **記憶與知識管理新增一例：rsc-harness 整合專案知識與工具存取**（2026-11-06）
+> - **記憶**：ericrisco/rsc-harness 用可審查安裝計畫把專案知識、工具存取慣例、274 個 skill 與強制規則整合進單一 meta-harness，見 [[topics/community-memory#2026-11]]。
 
 ---
 
@@ -54,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-05 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-06 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-04 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-04 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-02 |

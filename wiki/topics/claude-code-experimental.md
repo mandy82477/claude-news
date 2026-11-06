@@ -3,8 +3,8 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-04"
-last_news_update: "2026-11-04"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-04）
-> 2.1.318（自 2.1.317 起比對）新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；另 4 個設定類旗標依蒐集邊界不列；`CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失，列 4 階。對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-06）
+> 2.1.319（自 2.1.318 起比對）新增 13 個候選旗標：12 個第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；另 1 個設定類旗標依蒐集邊界不列；本輪無消失旗標。對帳僅命中來源條目自身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.319（11-06，自 2.1.318 起）新增 13 個候選旗標**：12 個第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；另 1 個設定類旗標來源已過濾不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.318（11-04，自 2.1.317 起）新增 12 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 4 個設定類旗標來源已過濾不列；`CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失，列 4 階；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.317（11-03，自 2.1.316 起）新增 12 個候選旗標＋2 個代號旗標**（名單見追蹤表），皆第一階；另 3 個設定類旗標來源已過濾不列；`CLAUDE_CODE_LAZY_ENV_GETTERS`（首見 2.1.299）消失，列 4 階；對帳僅命中來源條目與日報鏡像，暫不升第二階。
 - **2.1.314（10-30，自 2.1.312 起）新增 7 個候選旗標**（名單見追蹤表），皆第一階；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
@@ -71,6 +72,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_CCR_SKIP_HYDRATE_ON_CURRENT_TIP` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_COWORK_PLUGIN_SKILL` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_DESKTOP_WORKFLOW_LIMIT_WAIT` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_DISABLE_FEATURE_FLAGS` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_DISABLE_RESUME_LOAD_GOODBYE_SKIP` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_DROP_UNAVAILABLE_DEFERRED_TOOL` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_I_ACCEPT_CROSS_ORG_DATA_RISK` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_NATIVE_APP_BUNDLE` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_NORMALIZE_PREFIX_CACHE` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_NORMALIZE_PREFIX_CACHE_VERIFY` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_THREAD_CPU_ONE_IN` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
+| `CLAUDE_CODE_TRANSCRIPT_TAIL_LOAD` | 2.1.319（11-06） | 1 | — | — | 2.1.319 仍在（比對日 11-06） |
 | `CLAUDE_CODE_DISABLE_AGENT_PROGRESS_SUMMARIES` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_DISABLE_STOP_OF_HELD_MESSAGES` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_DISABLE_TRANSCRIPT_READ_AHEAD` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
@@ -312,6 +325,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_CRYPTIC_HORIZON` | 2.1.319（11-06）出現 |
 | `CLAUDE_CODE_DEEP_TWILIGHT` | 2.1.317（11-03）出現 |
 | `CLAUDE_CODE_FIZZY_GROVE` | 2.1.317（11-03）出現 |
 | `CLAUDE_CODE_WITTY_DEWDROP` | 2.1.308（10-22）出現 |
@@ -361,6 +375,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-06 | 2.1.319 新增 13 個候選旗標：12 第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；1 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |
 | 2026-11-04 | 2.1.318 新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；4 設定類不列；`ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失列 4 階；對帳僅命中來源條目自身 |
 | 2026-11-03 | 2.1.317 新增 12 旗標＋2 代號（名單見追蹤表）；3 設定類不列；`LAZY_ENV_GETTERS` 消失列 4 階；對帳僅命中來源與日報鏡像 |
 | 2026-10-30 | 2.1.314（自 2.1.312 起）新增 7 個第一階候選旗標（名單見追蹤表）；另 1 個設定類旗標依蒐集邊界不列；對帳僅命中來源條目自身，不算獨立佐證 |

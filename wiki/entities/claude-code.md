@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "active"
 matrix_role: "產品"
 days_since_news: 0
@@ -32,14 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
-> **最新動態**（2026-11-05）
-> - **SDK 安全修補**：anthropic-sdk-typescript 兩版修補 ID 路徑注入漏洞；anthropic-sdk-python v2.5.0 新增錯誤型別（見 [[entities/claude-code-releases]]）。
-> - **新增已知問題**：Desktop 自訂主題功能請求（88 讚）、全平台 Passkey 登入（209 讚，全站最高）、Fable 5 回覆誤顯示為 thinking 區塊、新 session 傳預設開在 cloud 影響簡單任務（單一貼文、待查證）（見 [[entities/claude-code-known-issues]]）。
-> - **已知問題狀態更新**：遊戲複製限制（10-31）鬆綁，Claude Code 改為主動提議原創同類遊戲取代重現他人遊戲，無害逆向工程案例仍未恢復（見 [[entities/claude-code-known-issues]]）。
-> - **桌面版文件再增字**（216,003→217,701），段落超過自動比對上限，無逐段差異（見 [[entities/claude-code-features]]）。
+> **最新動態**（2026-11-06）
+> - **v2.1.319**：⚠️ auto mode 遙測／功能旗標關閉時改一律詢問或拒絕，無遷移期；SDK（typescript sdk-v1.6.0／python v2.6.0）同步新增 ramp limit／External Key 錯誤代碼與強制全裝置登出（見 [[entities/claude-code-releases]]）。
+> - **新增已知問題**：Claude Code 自動把信箱塞進對外請求 User-Agent（HN 1,485 分，見 [[entities/claude-code-known-issues]]）、複製貼上功能故障、跨機器可攜式專案記憶、Analytics Admin API 查不到訂閱／OAuth 用戶（見 [[entities/claude-code-known-issues]]）。
+> - **高互動功能請求更新**：關閉貼上收合（191 讚）、串接 Claude.ai Projects 知識庫（668 讚，全站最高）（見 [[entities/claude-code-known-issues]]）。
 
 ---
 
@@ -49,8 +48,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-04 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-04 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-06 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-06 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-04 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
@@ -79,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.318**（2026-11-04）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
+- 最新 **v2.1.319**（2026-11-06）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
 - **該不該升**：沒用 Opus 4.8 fast mode，留在 stable 就夠；要 Monitor tool 或寫入邊界設定才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
@@ -104,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-11-06｜查 mean to Claude、Don't Be Mean）｜**Forbes：Anthropic 更新使用規範，其中一條要求使用者別對 Claude 說話太差**（Google News／Forbes，2026-11-06 報導，僅標題可用）：規範全文、生效時間與完整清單均未見官方確認。
 - **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。
 - **社群工具聲稱效能優於 Claude Code（Show HN「Synaps」，2 分，2026-11-05）**：作者稱自家 Rust 改寫版 agent 工具 7ms 可 attach 到運行中的 daemon、40ms 啟動 daemon、cache 命中率 99%+，未附測試方法或與官方數據的對照，單一貼文、低互動，證據薄弱；[GitHub](https://github.com/HaseebKhalid1507/SynapsCLI)。
@@ -118,10 +118,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-11-14｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：正式性仍待官方確認。
   - 2026-10-17 搜尋補查：第三方稱其 2026-09-30 上線、由 @ClaudeDevs 宣布、內容多為彙整既有文章；claude.dev 無法自本環境連線，未取得一手公告。
   - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。
-- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-11-14｜訊 2026-11-05）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
+- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-11-14｜訊 2026-11-06）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
 - 媒體為 BleepingComputer、gHacks、TechRepublic；該 Money 分頁可連結銀行帳戶並詢問支出與計畫，多數用戶尚未開放。
 - 查證 2026-10-03：anthropic.com／support.claude.com 搜尋均未見官方公告，支援銀行、連結方式、適用方案與上線日皆未載。2026-10-17 再查 [Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（最新一筆 2026-10-07）仍無 Money 分頁或銀行帳戶連結條目。
 - 2026-11-05：The Verge 以「Claude AI 可直接接入銀行帳戶」為題跟進報導，僅標題可用，未附支援銀行範圍、驗證方式或可執行動作，未提供比既有報導更多的細節，維持查無官方。
+- 2026-11-06：Help Center release notes 新增段落，官方原文稱推出 Personal Finance beta，可連結銀行、信用卡、貸款與投資帳戶；Reuters、TechCrunch、9to5Mac 同日報導，官方一手來源首次出現，詳見 [[entities/claude-personal-finance]]。
 - **官方頁未見 Claude for Excel／Word／PowerPoint／Outlook 下架**（查證 2026-10-03）：[Claude for Microsoft 365](https://claude.com/claude-for-microsoft-365) 頁載明 Excel、PowerPoint、Word 在所有付費方案正式可用，Outlook 在所有付費方案 beta，無下架聲明。
 - support.claude.com 仍有獨立文章（[Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)、[Word](https://support.claude.com/en/articles/14465370-use-claude-for-word)）。09-15 五份文件移除相關段落的原因官方未說明，僅確認產品仍在架。
 - 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。
@@ -168,6 +169,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **反向對照**（替代方案宣稱比 Claude Code 好，證據等級寫在條內）：
 
 - **社群工具 token-savior 自測宣稱優於 Claude Code 原生編碼表現（2026-10-07，Mibayy/token-savior GitHub repo 自述）**：作者自測稱 Claude Code 原生（plain）基準正確率 78.3%，低於其工具版本；證據等級僅作者自測，未附第三方覆核方法論或測試環境細節，僅供參考。
+- **ZDNET 一篇文章稱實測改用免費本地 AI 工具組取代 Claude Code（2026-11-06，僅標題可用）**：報導僅標題層級資訊，未附測試方法、任務類型或結論方向，證據等級薄弱，不確定結果孰優孰劣。
 
 
 ---

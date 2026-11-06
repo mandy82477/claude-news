@@ -30,18 +30,18 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-05
+**最後更新：** 2026-11-06
 **最後新聞更新：** 2026-11-05
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-05）
-> - **CoinDesk：Google 信用擔保若觸發，可能取得 TeraWulf 股權**：違約情境首度曝光，股權比例與觸發條件未揭露（見 [[topics/market-signals-compute]]）。
+> **最新判讀**（2026-11-06）
+> - **AI 股拋售潮加深 IPO 估值懷疑，估值預期恐探底至約 1 兆美元**：WSJ／Reuters／Yahoo Finance 同日各自獨家，具名新估值區間與官方證實均未見（見 [[topics/market-signals-ipo]]）。
 >
-> 前一日（2026-11-04）：
-> - **TeraWulf 取得 Google 信用擔保，支應肯塔基資料中心計畫**：擔保金額未揭露，TeraWulf 新增為可交易標的（見 [[topics/market-signals-compute]]）。
+> 前一日（2026-11-05）：
+> - **CoinDesk：Google 信用擔保若觸發，可能取得 TeraWulf 股權**：違約情境首度曝光，股權比例與觸發條件未揭露（見 [[topics/market-signals-compute]]）。
 
 ---
 
@@ -98,7 +98,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-03 S-1/A 自評迫近 RSI 門檻、單季人事費用逾 17 億 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-06 AI 股拋售潮加深估值懷疑，恐探底至約 1 兆美元 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 10-28 GSA 折扣擴大、向加州州長表態 |
 | 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-05 CoinDesk：違約情境下 Google 可能取得 TeraWulf 股權 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |

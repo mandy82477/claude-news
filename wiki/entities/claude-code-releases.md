@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -33,12 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-05）
-> - **無新 CLI 版本**；anthropic-sdk-typescript 兩版（google-cloud-sdk-v1.1.3、vertex-sdk-v1.1.2）修補 ID 路徑注入漏洞，anthropic-sdk-python v2.5.0 新增錯誤型別與 workspace 篩選。
+> **最新動態**（2026-11-06）
+> - **v2.1.319**：⚠️ auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway）行為改變——伺服器無法檢查的呼叫一律詢問使用者或直接拒絕，不再退回內建傳統分類方式，無遷移期。
+> - **SDK**：anthropic-sdk-typescript sdk-v1.6.0、anthropic-sdk-python v2.6.0 同步新增 ramp limit／External Key 驗證失敗的錯誤代碼，並支援強制組織成員全裝置登出。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +68,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.319** | 2026-11-06 | ⚠️ auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway）：伺服器無法檢查的呼叫一律詢問使用者或直接拒絕，不再退回內建傳統分類方式；無遷移期（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.319)）|
+| **anthropic-sdk-typescript sdk-v1.6.0** | 2026-11-05 | Features：新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.6.0)）|
+| **anthropic-sdk-python v2.6.0** | 2026-11-05 | Features：同步新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0)）|
 | **v2.1.318** | 2026-11-04 | 啟用 session 中寫出的 mods 時新增記錄使用者回答；Claude apps gateway `mantle` 上游新增 `assume_role` 設定；官方原文截斷，角色細節未附（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）|
 | **v2.1.317** | 2026-11-03 | `/schedule` 新增警告：雲端排程任務取得非使用者要求的 connector 時提示並附移除方式；新增工具呼叫前確認檢查；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）|
 | **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
@@ -200,6 +204,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-06 | **v2.1.319**：⚠️ auto mode 遙測／旗標關閉改一律詢問或拒絕。旗標+13，見 [[topics/claude-code-experimental]]。SDK 新增錯誤碼＋強制登出。互動更新 6 則。 |
 | 2026-11-05 | 無新版本。SDK：python v2.5.0 新增錯誤型別／ids 篩選；typescript 兩版修補路徑注入。新增已知問題 #79305／84862／74558；互動更新 #91495／42542／79808。 |
 | 2026-11-04 | **v2.1.318**：mods 回答記錄；gateway 新增 `assume_role`。旗標+12/-1（見 [[topics/claude-code-experimental]]）。新增 #33323；互動更新 #12925。 |
 | 2026-11-03 | **v2.1.317**：`/schedule` connector 警告＋確認檢查；旗標+12＋2代號，消失1。文件字數增。互動更新 #26224／#30112／#53915。 |

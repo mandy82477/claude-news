@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-03
-**最後新聞更新：** 2026-11-03
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
-> **最新動態**（2026-11-03）
-> Anthropic 修訂版 S-1/A 新增揭露：自評可能「迫近」觸及內部定義的 RSI 門檻，但稱現役模型皆未跨過；首次書面承認接近臨界。
+> **最新動態**（2026-11-06）
+> METR 發布獨立評估報告，稱 Anthropic 2026 年 10 月 AI 研發加速度可能已翻倍；延續 11-03 官方「迫近」RSI 門檻書面自評。
 
 ---
 
@@ -96,6 +96,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-10-27，CNN／The Washington Post 補上風險清單具體項目＋Forbes／Times of India 揭露程式碼比例新數字**：CNN／WaPo 為 10-26 S-1「災難性風險」條目補上具體項目（生物武器、勒索、「AI 甦醒」警語）
   - Forbes／Times of India 另揭露 S-1 首度確認 Claude 占 Anthropic 自身程式碼比例超過 90%，為 06-04 報告「80–90%」數字的來源升級，詳見「## 技術彙整」。
 - **2026-11-02～03，修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻**：延續 10-26／27 S-1「災難性風險」披露系列，公司首度以申報文件明文承認自身可能接近其內部定義的遞歸自我改進門檻，同時強調現役全部模型均尚未跨過此線；具體門檻定義與量測方法均未見報導，詳見「## 技術彙整」。
+- **2026-11-05～06，METR 發布獨立評估報告：Anthropic 研發加速度評估**：延續 11-02～03 RSI 門檻書面自評；The Information 稱研發速度可能翻倍，與既有「尚未達兩倍」（08-14）不同來源，詳見「## 技術彙整」。
+  - The Independent 另引述示警可能變得「極端」危險；METR 原文保留 Anthropic 遮蔽權，稱最高層級結論不受影響。
 
 ---
 
@@ -115,6 +117,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### METR／The Information／The Independent／AP News：METR 發布對 Anthropic 2026 年 10 月 AI 研發加速度的獨立評估（2026-11-05～06 新增）
+
+- **揭露來源**：METR 官方部落格（經 Hacker News，41 分，2026-11-05 20:16 UTC）；The Information、The Independent、AP News（經 Google News，2026-11-05～06，均僅標題/摘要可用，與 METR 原文同一事件）
+- **核心主張**：第三方評估機構 METR 發布針對 Anthropic 2026 年 10 月 AI 研發加速度的獨立評估；METR 文中自述保留 Anthropic 對非公開資訊的遮蔽權，但稱報告最高層級結論未受遮蔽影響
+- The Information 報導稱研究人員發現 Anthropic 研發速度可能已經翻倍；The Independent 引述報告示警相關能力未來可能突然變得「極端」且「危險」
+- AP News 以「業界有人呼籲減速的同時，外部研究機構稱 Anthropic 正加速 AI 開發」框架報導同一評估
+- **與既有敘事的關係**：延續上方 11-02～03 修訂版 S-1/A「可能迫近」RSI 門檻書面自評，本次是官方書面揭露後首見的第三方獨立評估；與既有「尚未達兩倍」（08-14《Risk Report》）、「約四分之一工作量」（09-18）等官方自評數字為不同來源、不同量測方法，不可直接互比，見 [[#自我改進量化指標]]
+- **可信度評估**：METR 具名第三方機構原文可查，惟 Anthropic 對報告保有遮蔽權；The Information／The Independent／AP News 均為二手轉述，僅標題或摘要層級可用，「翻倍」「極端」「危險」等用語出自媒體轉述而非 METR 原文直接引語，具體量化區間與方法論未見原文摘要覆述
+- ❓ **待查證**（標 2026-11-06｜查 METR、anthropic-ai-rd-acceleration｜複 2026-11-20）｜**METR 評估報告的具體量化區間與方法論**：媒體轉述稱研發速度「可能翻倍」，METR 原文是否給出具體區間、遮蔽部分是否影響此數字，均未見報導細節
 
 ### Hacker News（epyhia.com）／Wccftech／Gizmodo／Yahoo Finance＋TechCrunch：修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻（2026-11-02～03 新增）
 

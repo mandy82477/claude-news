@@ -8602,3 +8602,32 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [主編] H-afee03（續留 open）：feature-radar「⚠️ 預設值與破壞性變更表」只核對到 v2.1.304，需逐版補核 2.1.305–316（官方 CHANGELOG），本輪因非主編彙整常規工作且需 WebFetch 查證官方 CHANGELOG，未在雲端 routine 內處理，留給下次本機 session
   - [商業] Claude Help Center release notes（Enterprise 安全中心／inference hooks／集中管理）與 Times of India「管理者可監看員工 Claude 使用」疑似同一組功能，僅標題層級無法確認是否同一事，待查證官方說明中心後判定歸屬 entities/pricing 或 topics/anthropic-business
   - [安全政策→功能] Claude Dispatch 安全缺陷與 Postman 事件已記入 ai-agent-safety-product-vulns，功能記者本輪已於 claude-code-known-issues 同步收錄，視為已處理
+
+## 2026-11-06 Ingest
+
+- 來源日報：[[news/2026-11-06]]
+- 更新頁面：
+  - **人物**：entities/michael-burry.md（Business Insider 新表態：具體質疑 S-1 財務內容並表態不認購，續 09-14 自利動機批評）
+  - **功能**：topics/claude-code-experimental（Build Flags 2.1.319：13 候選旗標）、entities/claude-code-releases（v2.1.319、SDK sdk-v1.6.0／v2.6.0）、entities/claude-code-known-issues（新增 4 則、更新 3 則互動數）、entities/claude-code（母頁 callout／路由表／已知問題；Forbes「別對 Claude 說話太差」❓ 待查證；ZDNET 本地替代方案反向對照）、entities/claude-science（Benzinga／官方科研應用合併 ❓ 待查證）、entities/claude-personal-finance（新頁）
+  - **商業**：entities/pricing（web search 計費規則、Haiku 3.5 定價列移除）、topics/anthropic-ipo（WSJ／Reuters／Yahoo Finance 獨家＋Jerusalem Post／Quartz／Business Insider／Ramp data／Forbes／Bloomberg 跟進：AI 股拋售潮加深 IPO 估值懷疑，估值預期由 1.5 兆下修至近 1 兆美元）、topics/anthropic-business（母頁 callout）、topics/anthropic-partnerships-compute（Microsoft Foundry/Copilot 列併入 EU Data Boundary；Generate Biomedicines CAR-T 用例補列）、topics/competitor-landscape（GitHub Copilot usage metrics API×2、Cult.fit/Codex、Meta Muse、澳洲大學/ChatGPT 五則時序一行制）、topics/enterprise-tool-tracker（Goldman Sachs 禁用規模描述補強「數千名行員」）
+  - **安全政策**：topics/ai-agent-safety-product-vulns（Claude Dispatch 攻擊鏈升級：惡意瀏覽器外掛，標訊 2026-11-06；email 外洩 #107757 再引爆）、topics/recursive-self-improvement（METR 獨立評估 AI 研發加速度，The Information／The Independent／AP News 跟進，❓ 待查證）、topics/ai-agent-safety-prompt-injection（Arcjet／Security Boulevard 業界論述，未動訊號表）、topics/ai-agent-safety（母頁 callout／Claude Dispatch 列）
+  - **社群**：topics/community-memory（新節點 ericrisco/rsc-harness）、topics/community-tech-patterns（母頁 callout）、topics/community-tech-discussions（新列：擔心 agentic 能力被收回）
+  - **開發實務**：topics/coding-workflow-guide.md（第 2a 段新增「調整模型/推理強度/思考設定」官方使用指南一句）
+  - **投資分析**：topics/market-signals-ipo（AI 股拋售潮╱估值懷疑新進度，❓ 待查證，回顧結算 ⏳ 新增 1 列結算日 2026-11-20）、topics/market-signals（母頁）
+- 新增頁面：entities/claude-personal-finance.md（Anthropic 2026-11-05 推出 Personal Finance beta；同時命中 entities/claude-code.md 一則掛近兩個月的 🔎 查無官方標記「Claude Money」傳聞，已標訊 2026-11-06，未結案）
+- feature-radar：新增完整條目「Personal Finance」（Beta，🔥🔥🔥，⏳ 觀望）；「升級前要知道的預設值與破壞性變更」表新增 v2.1.319（auto mode 無遷移期破壞性變更），因 12 列上限移出 v2.1.257（併入下方「因上限移出」清單）
+- index：新增 entities/claude-personal-finance 一列；「最後更新」覆寫為 2026-11-06
+- 摘要：今日最大事件是 AI 股拋售潮加深 Anthropic IPO 估值懷疑（WSJ／Reuters／Yahoo Finance 獨家，估值預期由 1.5 兆下修至近 1 兆美元）與 Anthropic 正式推出 Personal Finance 銀行帳戶串接功能（Reuters／TechCrunch／9to5Mac）；另 METR 獨立評估佐證 AI 研發加速度持續追蹤（續 11-03 RSI 揭露）、Claude Dispatch 安全缺陷補上具體攻擊鏈（惡意瀏覽器外掛，續 11-05）、HN 1,485 分熱議 Claude Code 外洩使用者信箱至第三方 API。
+- 呈現品質：全部通過（功能類 1 筆讀者語言洩漏「記者」字樣，記者自行修復重跑；商業類 anthropic-ipo 1 筆字元超限，記者自行縮短重跑）
+- 分類回退：主編原始分類作業出現索引誤植，以 Step 3b/3c 補派糾正共 9 筆（5 則改派商業：Ramp data AI spending stalling、Forbes IPO Valuation Raises A Question、Fierce Biotech Generate CEO CAR-T、Goldman Sachs 禁用（原誤分社群）、Bloomberg Strategist Who Warned；4 則改派功能：Benzinga Claude Helped Scientists、Yahoo Tech Bank Accounts、ZDNET 本地替代方案、Forbes「Don't Be Mean To Claude」（原誤分安全政策，安全政策記者核對後建議改派））；另社群記者回退「Opus 5.5 變笨變貴」週熱門貼文應歸模型（依 code-quality-decline 列說明歸社群頁但不逕自收錄單一模型觀感節點，本輪未處理，留主編後續評估是否需在 topics/code-quality-decline 開列）
+- 轉知帳本：結案 1 筆（H-98f96c：社群→功能，5 個做法節點核對完畢皆不需新增 official-community-gap 列）；新開 1 筆（H-6872cb：社群→功能，新節點 ericrisco/rsc-harness 待評估 official-community-gap 是否新增列）
+- devpractice 沉澱：候選 0 筆（檢視 148 頁新增，判定皆為 frontmatter 機械計數器推進，非敘事新事實）；官方使用指南 1 則已處理（寫入 coding-workflow-guide 第 2a 段）
+- market 判讀：判讀新增 1 則（AI 股拋售潮／IPO 估值懷疑，標訊 2026-11-06｜複 2026-11-20：具名機構是否公開統一估值區間、拋售潮是否動搖上市時程）；既有逾期標記（market-signals-ipo／-compute／-legal 數筆）留 /wiki-lint 5c 查證，本輪未處理
+- 主編待辦：
+  - [主編] H-afee03（續留 open）：feature-radar「升級前要知道」表只核對到 v2.1.304，v2.1.305–318 區間仍需逐版補核（官方 CHANGELOG），今日僅直接收錄 v2.1.319（來自今日 GitHub release notes，非系統性補核），雲端 routine 無 WebFetch 查證官方 CHANGELOG，留給下次本機 session
+  - [主編] #2511「串接 Claude.ai Projects 知識庫」（668 讚，今日互動最高）滿足 official-community-gap 矩陣收錄判準①②③，但該表已滿 18/18 列，新列是否需擠掉某個既有 ✅ 列需要「哪個還有人在痛」的裁量比較，本輪未處理，留給下次主編專項review
+  - [主編] entities/claude-code-known-issues.md：#2511 在「📂 Session 與資料管理」與「🔌 平台相容性」兩組各留一份舊快照（非本輪造成），功能記者已同步更新互動數並標 %% 維運備忘 %%，去留留待 /wiki-lint 處理
+  - [主編] entities/claude-code.md 既有兩筆懸置標記複查日已逾期 2 天（2026-11-04），entities/claude-code-releases.md:90 同樣逾期，留 /wiki-lint 5c
+  - [主編] entities/claude-personal-finance.md 命中的 claude-code.md「Claude Money」🔎 查無官方標記已標訊 2026-11-06，待 /wiki-lint 5c 正式查證結案改寫
+  - [主編] topics/ai-agent-safety-product-vulns.md 的 Claude Dispatch ❓ 待查證（觸發條件）已標訊 2026-11-06（攻擊鏈有進展），「是否已有在野攻擊案例」仍未解，待 /wiki-lint 5c
+  - [主編] topics/recursive-self-improvement.md、topics/market-signals-ipo.md 的新增 ❓ 待查證標記（METR 量測區間原文未見；拋售潮統一估值區間未見），複查日見各頁標記，留 /wiki-lint 5c

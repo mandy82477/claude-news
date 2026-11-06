@@ -32,15 +32,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
 > **本頁在回答什麼**
 > 用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查。
 > 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
-> **官方新增：關 thinking 省 token**（2026-11-05）
-> usage-limits 文件新增建議：thinking 開關不需要加強推理時直接關掉；本頁「官方的 session 經營建議」段同步補上這則建議。
+> **官方新增：調整模型／effort／thinking 設定指南**（2026-11-06）
+> Help Center release notes 新增「Change the model, effort, and thinking settings」段；本頁「2a 官方的 session 經營建議」同步補上連結與摘要。
 
 ---
 
@@ -274,6 +274,8 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 **額度與用量限制**：用量（額度消耗）與長度（單一對話的 token 上限）是兩種限制，暫時關掉不用的工具或連接器可省用量（一則 dev.to 實測 20 個 MCP Actor 的 `tools/list`，單工具定義 token 中位數 3.8K、最高 32.7K，98% 是自動推論的輸出 schema，單一來源，接大量工具前可自己抽查，見 [[topics/community-cost]]）；額度怎麼算、用盡時會怎樣見 [[entities/pricing]]。
 
 **想省 token，先看 thinking 開關**：官方 usage-limits 文件新增建議——模型有 thinking 開關時，不需要加強推理就直接關掉（[原文](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)，2026-11-05 查）。同份文件同時拿掉了「怎麼搭配 Pro/Max/Ultra 方案用 Claude Code」與「什麼是 Team 方案」兩段舊說明，方案細節改查 [[entities/pricing]]。
+
+**官方另闢「調整模型、effort、thinking」專章**：Help Center release notes 新增「Change the model, effort, and thinking settings」段，說明怎麼切換模型、調整推理強度（effort）與 thinking 開關（細節未載）（[原文](https://support.claude.com/en/articles/12138966-release-notes)，2026-11-06 查）。
 
 **`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
 

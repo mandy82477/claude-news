@@ -401,3 +401,5 @@
 {"id": "H-5e5975", "closed": "2026-11-05", "status": "done", "by": "功能", "result": "entities/claude-code「相關議題」Cat Wu wikilink 描述已改寫為「前 Claude Code 產品負責人...2026-11-04 卸任，下一站確認為 OpenAI」"}
 {"id": "H-18d3f4", "closed": "2026-11-05", "status": "done", "by": "功能", "result": "四候選列皆單一案例，未達 official-community-gap 入口判準①，未開新列，已核對理由成立，void"}
 {"id": "H-02df2d", "closed": "2026-11-05", "status": "done", "by": "開發實務", "result": "功能記者 2026-11-02 轉知"}
+{"id": "H-98f96c", "closed": "2026-11-06", "status": "done", "by": "功能", "result": "功能記者 2026-11-06 ingest 回報已處理"}
+{"id": "H-6872cb", "opened": "2026-11-06", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 樹（community-memory）新增節點 ericrisco/rsc-harness（2026-11-06），請評估 official-community-gap 產品化矩陣是否新增列", "status": "open"}

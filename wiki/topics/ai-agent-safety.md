@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-05
+**最後更新：** 2026-11-06
 **最後新聞更新：** 2026-11-04
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-05）
-> - **產品漏洞／不修補**：The Register 報導 Claude Dispatch 缺陷可跨企業邊界執行遠端指令，官方確認但決定不修補。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
-> - **供應鏈／第三方**：Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定，三家媒體同報。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> **最新動態**（2026-11-06）
+> - **產品漏洞／帳號外洩升級**：Claude Dispatch 攻擊鏈曝光（惡意瀏覽器外掛）；Claude Code User-Agent 夾帶 email（#107757）再度引爆熱議。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> - **提示注入**：業界持續倡議內建偵測器、盤點防護方案，仍停在論述與教學層級。見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
 
 ---
 
@@ -53,8 +53,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-02 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-05 |
+| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-06 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-06 |
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-04 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
@@ -81,7 +81,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
 | 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 無回應（2026-10-26／10-27 兩個獨立來源披露，觸發機制與是否需使用者額外動作均未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
-| Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認存在但決定不修補（2026-11-05 The Register 報導，僅標題可用；具體聲明原文與觸發條件未見報導） | 無繞法（官方未提供規避建議）；留意官方是否後續公布因應方式 |
+| Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認但決定不修補（11-05 The Register）；11-06 CyberSecurityNews／The Hacker News 曝攻擊鏈為惡意瀏覽器外掛，僅標題可用 | 無繞法（官方未提供規避建議）；優先檢查已連接裝置上的瀏覽器外掛來源 |
 
 另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 

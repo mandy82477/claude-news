@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-10-30
+**最後更新：** 2026-11-06
 
 > **這禮拜動了什麼**（2026-10-22）
 > Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
@@ -29,6 +29,7 @@
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.319 | auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway 使用）：伺服器無法檢查的呼叫一律詢問或拒絕，不再退回內建傳統分類方式，無遷移期 | 破壞性變更 | 用 LLM gateway 或關閉遙測跑 Claude Code 的團隊，升級後遇到被詢問或拒絕的呼叫是預期行為，不是故障 |
 | v2.1.304 | 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟（gateway 回 400／422 會改不帶它重試）；壓縮後重送 skill 清單 | 預設值改變 | 走自家 gateway 的人：工具改為按需載入，若 gateway 不支援會多一次重試；可觀察請求量 |
 | v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
 | v2.1.300 | hook `updatedInput` 依 schema 驗證；大型請求預設 gzip（`CLAUDE_CODE_GZIP_REQUEST_BODIES=0` 關）；transcript 多記請求的 system prompt | 預設值改變 | 靠 hook 注入非 schema 欄位的要改寫；分享 transcript 前留意其中含 system prompt |
@@ -40,7 +41,6 @@
 | v2.1.277 | 移除 TaskOutput 工具，`taskOutputMaxChars` 與 `TASK_MAX_OUTPUT_LENGTH` 失效；背景任務輸出改用 Read 讀檔 | 破壞性變更 | 引用 TaskOutput 的 hook、skill 或權限規則要改寫 |
 | v2.1.261 | `keybindingFlavor` 設定失效，鍵位一律改成 Bash 式 | 預設值改變 | 設過 readline 模式的人：那行設定已無作用，可刪 |
 | v2.1.260 | subagent 背景指令的 1 小時上限移除 | 預設值改變 | 長跑代理不再被自動截斷，改用自己的逾時控制 |
-| v2.1.257 | 預設 Fable 模型換成 5.1；auto 模式新增 Containment Escape 規則 | 預設值改變 | Pro／Team standard 的 Fable 走 usage credits，升完看一次帳單通道；雲端 CI 若需抓 metadata／執行對外連線，在環境標記為預期用途，否則 auto 不再自動核准 |
 
 **與版本無關、已經生效的一件**：8/14 起 auto 已是 Pro／Max／Team 的預設權限模式，不論你裝哪一版都已套用。靠手動確認做安全把關的人，到 `/permissions` 的 Auto 分頁看一次。
 
@@ -49,7 +49,7 @@
 - **CLI 之外**：anthropic-sdk-python v1.0.0（2026-08-20）把 client 升到 httpx2，影響的是用該 SDK 寫的整合程式碼，不是 CLI 升版本身。
 - **與版本無關的未修問題**：升不升版都在，而且各自只發生在特定產品或平台上，見 [[entities/claude-code]]「現在還沒修好的」。**上表你都對不上號，版本面就沒有東西擋著你升級。**
 - **其餘預設值改變**（2.1.217–219 巢狀子代理深度、2.1.218、2.1.221、2.1.224、2.1.229、2.1.251），以及 2.1.270 後只影響窄場景的變更（如 2.1.275 npm 來源外掛不再跑安裝腳本），見[官方 changelog](https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md)。
-- **因上限 12 列移出的較舊門檻**：2.1.234／239／243 三項、2.1.212 `/fork` 改名 `/subtask`、2.1.215 `/code-review` 不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開啟、2.1.233 Todo 工具拿掉；見 [[entities/claude-code-releases]]。
+- **因上限 12 列移出的較舊門檻**：2.1.257 Fable 換 5.1、2.1.234／239／243 三項、2.1.212 `/fork` 改名、2.1.215 審查不再自動觸發、2.1.222 移除 ultraplan、2.1.232 forking 預設開、2.1.233 Todo 拿掉；見 [[entities/claude-code-releases]]。
 
 > Fable 5 Defense in Depth 誤判非升版可解，見 [[entities/fable-5]]。
 
@@ -65,6 +65,21 @@
 
 > 09-14 的週配額換軌已生效並移出本表：+50% 加成 09-13 到期，標準週配額改為永久 +25%，相對加成期間淨減約 17%，5 小時窗不受影響。官方說明中心當日確認換軌如期發生，完整規則與來源見 [[entities/pricing]]。
 > Fable 免費期限（原訂 7/19）已到期並移出本表；現在是常態分流：Max 與 Team premium 為標配（週用量 50% 內），Pro 與 standard 走 usage credits，5 與 5.1 同規則，詳見 [[entities/pricing]]。
+
+---
+
+## 🆕 最新功能（2026-11）
+
+### Personal Finance
+**發布：** 2026-11-05（Beta） | **狀態：** Beta
+
+**是什麼：** 讓使用者連結銀行、信用卡、貸款與投資帳戶，供 Claude 直接分析消費狀況。
+
+**為何熱：** Reuters、TechCrunch、9to5Mac 三家媒體同日報導，Claude Help Center release notes 同步確認，日報標為當日重大事件。
+
+**現在要試嗎：** 先讀官方說明掌握存取範圍；方案範圍、資料邊界與安全機制官方均未載明，不確定前先別急著連結。
+
+**快速上手：** 官方未附操作路徑，待補；細節見 [[entities/claude-personal-finance]]。
 
 ---
 
@@ -806,6 +821,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |
 | **v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`**（任何權限模式下拒絕寫入工作目錄外路徑） | 2026-10-30 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |

@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版，2026-10-23 官方查證）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
-last_news_update: "2026-10-23"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "beta"
 matrix_role: "專用版"
 days_since_news: 13
@@ -32,19 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 專用版（獨立桌面 app）
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 
-> **最新動態**（2026-10-23）
-> 產品頁標 Claude Science 為 Public Beta（非 active）；運算跑在本機、HPC 登入節點、雲端 VM 或 Slurm／Modal，非 Anthropic 動態調配。
+> **最新動態**（2026-11-06）
+> Benzinga 報導 Anthropic 稱 Claude 協助科學家繪製神秘細胞結構；同日 Anthropic 部落格「How scientists use Claude」疑似同一文章的案例之一，原文皆無法讀取，案例細節未載明。
 
 ---
 
 ## 現況
 
+❓ **待查證**（標 2026-11-06｜查 cell structure、scientists use）｜**Anthropic 稱 Claude 協助科學家繪製神秘細胞結構**（Benzinga，2026-11-06 報導，僅標題可用）：同日 Anthropic 部落格「How scientists use Claude」（Google News 聚合 3 個來源，11-05）疑似為同一篇文章的案例之一，兩者原文均無法讀取，案例細節、所屬研究團隊與是否與 09-24 CRISPR 特徵酶系統發現同屬同一計畫均未載明。
+
 **蠍毒神經毒素蛋白質結合物（2026-10-21）：** Anthropic 公布研究成果：Claude 自主設計出可中和蠍毒神經毒素的蛋白質結合物。投資機構 Citrini Research 應用此法測試 211 個候選蛋白，篩出 17 個有效 binder，尚待實驗室進一步驗證（Hacker News 111 分，4 個來源，含 Google News、HN Repo Bridge 跟進）。
 
-**CRISPR 特徵酶系統發現：官方公布與媒體跟進（2026-09-24～09-25）：** Anthropic 部落格 09-24 宣布新設生命科學研究團隊，聚焦以 Claude 分析 DNA 資料集、辨識未表徵蛋白質家族並大規模生成假說，早期成果為 Claude 僅獲高層指引即發現一組具 CRISPR 特徵的新型酶系統（Hacker News 729 分，4 個來源同日交叉報導，含 Reuters 獨立確認角度）。此團隊／實驗室與本頁所記錄、2026-07-01 發布的 Claude Science app 是否為同一產品線的延伸或另立獨立團隊，官方原文未載明，暫以獨立事件記錄；該酶系統實際用途原文亦未載明（The Next Web 標題稱「功能尚未確定」，僅供旁證）。09-25 the-scientist.com 揭露，這項發現出自 Anthropic 一個先前保密的「AI 驅動濕實驗室」首度曝光的成果，該濕實驗室與 [[topics/anthropic-business]] 09-18 起記錄之自有生物實驗室（AI 藥物開發布局）應屬同一設施，原文未逐字確認；Gizmodo 指出 Anthropic 目前仍無法完整說明酶系統的能力範圍，New Scientist 引述專家審慎看法稱其「充其量只是另一款基因編輯工具」，The New York Times、therundown.ai 同日跟進（Google News 聚合共 5 個來源，除 the-scientist.com 外均僅標題可用）。09-27 紐約時報追問這項發現是否真為 Claude 獨立完成，同日 Benzinga 報導另一名科學家稱先前已有類似發現，兩者均對「AI 獨立完成科學發現」的原創性提出質疑（Hacker News＋Google News，11 分／3 個來源）。09-29 the-scientist.com 與 WIRED 同日跟進，延續同一質疑方向：the-scientist.com 質疑發現可能借用另一科學家既有研究成果，WIRED 追問 Anthropic 是否已完整釐清該系統能力範圍（僅標題可用，無新技術細節）。10-06 IBM 發文檢視這項發現「實際上顯示了什麼」，延續同一質疑方向（僅標題可用）。
+CRISPR 特徵酶系統發現的完整時序見下方「歷史記錄」（2026-09-24～10-06）。
 
 %% 維運備忘：物理學家挑戰題（09-26）、DRC 伊波拉應用案例（09-25）兩段已移入「歷史記錄」表，不在現況雙重維護（「現況不被時序侵蝕」規則）；DRC 案例單一來源、低互動（HN 27 分），暫無專屬頁面 %%
 
@@ -86,6 +88,8 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 ## 參考來源
 
+- Google News / Benzinga："Anthropic Says Claude Helped Scientists Map a Mysterious Cell Structure"（2026-11-06，僅標題可用）
+- Google News / Anthropic："How scientists use Claude"（2026-11-05，3 個來源聚合，僅標題可用）
 - [Anthropic Research: Claude designed protein binders against scorpion neurotoxins](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design)（2026-10-21，Hacker News 111 分，4 個來源）
 - Hacker News 討論：[item?id=50170021](https://news.ycombinator.com/item?id=50170021)（70 則留言）
 - [Anthropic Science: Yes, Claude can do nine loops](https://www.anthropic.com/research/yes-claude-can-do-nine-loops)（2026-09-25，Hacker News 103 分）
@@ -117,6 +121,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-06 | ❓ 待查證：Benzinga 稱 Anthropic 表示 Claude 協助科學家繪製神秘細胞結構；疑似與同日 Anthropic 部落格「How scientists use Claude」同一篇文章案例，兩者原文均無法讀取 |
 | 2026-10-23 | 官方查證：產品頁標 beta；運算跑在本機／HPC／雲端 VM／Slurm／Modal，非動態調配的雲端運算（[來源](https://claude.com/product/claude-science)） |
 | 2026-10-21 | Anthropic 公布 Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物；Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分，4 個來源） |
 | 2026-10-06 | IBM 發文檢視 CRISPR 特徵酶系統發現「實際上顯示了什麼」，延續 09-27 起對原創性與能力範圍的質疑；僅標題可用 |

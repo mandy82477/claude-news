@@ -5,7 +5,7 @@
 **不收：** 快變事實（日期／熱度／近況→頁面標頭，盤點用 Grep）；異動紀錄（→ [[log]]）；每日新聞（→ `news/`）
 **讀法：** 整讀（本檔的存在意義就是便宜的一次讀）；查詢分流見 `wiki/CLAUDE.md`「搜尋策略」
 
-**最後更新：** 2026-11-03
+**最後更新：** 2026-11-06
 
 ---
 
@@ -106,6 +106,7 @@
 | [[entities/krishna-rao]] | person | 👤 人物 | active | Anthropic 財務長（CFO）；2026-08-14 主導早期 IPO 投資人會議（CNBC），2026-10-27 隨 S-1 提交迎來上任以來最關鍵考驗（Fortune） |
 | [[entities/claude-duet]] | product | 🛠️ 工具/功能 | active | Opus 5.5 驅動的主動式 agent，獨立 app（iOS／Android，電腦走 claude.ai）；2026-10-21 研究預覽，美國 Pro／Max 候補名單制 |
 | [[entities/addy-osmani]] | person | 👤 人物 | active | 前 Google Cloud AI 總監；2026-11-03 查證確認已轉職加入 Anthropic，任 Member of Technical Staff 負責 Claude Code |
+| [[entities/claude-personal-finance]] | feature | 🛠️ 工具/功能 | beta | Claude Personal Finance：2026-11-05 推出，連結銀行/信用卡/貸款/投資帳戶供 Claude 分析消費狀況；方案範圍、資料邊界與安全機制官方尚未載明 |
 ---
 
 ## Topics（進行中議題）

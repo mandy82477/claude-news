@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-02）
-> **規則檔藏惡意指令挾持助理（僅標題，Homeland411）**：規則檔類型與是否涉及 Claude Code 未見報導。
+> **最新動態**（2026-11-06）
+> **業界持續倡議內建提示注入偵測**（Arcjet／Security Boulevard，僅標題）：防法仍停在教學文與方案盤點層級，無第三方量測。
 
 ---
 
@@ -100,6 +100,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Computer Weekly（Arcjet）：倡議 coding agent 應內建提示注入偵測器，而非僅靠使用者注意（2026-11-06 新增）
+
+- **揭露來源**：Topic Watch／Computer Weekly（11/06 02:17 UTC）；僅標題可用，互動未載
+- **核心主張（僅標題可用）**：資安新創 Arcjet 主張 coding agent 應內建提示注入偵測器，而非僅要求使用者自行小心；文中以 Claude Code 目前主要靠權限提示（permission prompts）把關、未見官方內建注入偵測層為對照
+- **與既有敘事的關係**：呼應本頁「目前結論」既有判斷——防法仍停在教學文層級；倡議內建偵測器本身仍是論述層，未見第三方量測或實作細節
+- **可信度評估**：單一來源（經 Computer Weekly 轉載），互動未載，僅標題層級
+%% 本則為「AI coding 工具安全」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
+
+#### Security Boulevard：盤點 2026 年主要 AI 提示注入防護方案（2026-11-05 新增）
+
+- **揭露來源**：Topic Watch／Security Boulevard（11/05 18:06 UTC）；僅標題可用，互動未載
+- **核心主張（僅標題可用）**：盤點市面上主要的提示注入防護方案；具體產品名單、是否涵蓋 Claude Code 與測試方法均未見報導
+- **與既有敘事的關係**：供應商方案盤點，非新攻擊事件；是否有別於既有教學文層級的實測數據未見報導
+- **可信度評估**：單一來源，互動未載，僅標題層級
+%% 本則為「AI coding 工具安全」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
 #### Homeland411：攻擊者在 AI coding 專案裡藏匿惡意規則以挾持助理（2026-11-02 新增）
 

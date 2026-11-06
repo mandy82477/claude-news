@@ -331,10 +331,11 @@
   },
   "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5": {
     "categories": [
-      "安全政策"
+      "安全政策",
+      "功能"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['安全政策']，主編核對後改派功能",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaGEwdjl4QTY5N183SWZ4eUJJMzhyUWtUS24yU2syVDBvUkZNUklsUE9pb1RpMnZGUWtxNEkyNEJySWRvQkc4YkhJaDZDRzlxZ2lxU1NpWG55b1FYbWtQZ2wyeXAwTDFHVG9PTDBxVktqdmdtbVI2OXBHa0lCTjZ0X1phWHpYaVVJTFVSOFVzY25BMzhRRjhORzlxMWhNczRlNlE?oc=5": {
@@ -353,18 +354,20 @@
   },
   "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQllMZmdhNFpxNklLcTNFUnZXWUxOX050TkFqendsNDItX2NDeHE5NURWZHp5Q3NwSmZOQWZmQnI1Zm5fNkxYQkFkRWlqT2NxM0NoLVZZVTBmN05VdkRYdG50TFhxU1VYSzFIYVFiTWp6OFRTazM0Z3NRN0cyc0psRnpOMjZMSVB5TzQ0anF0amlPUVFuNTBqMV9pOVhsQWhnc3RkU3Rn?oc=5": {
     "categories": [
-      "功能"
+      "功能",
+      "商業"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['功能']，主編核對後改派商業",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5": {
     "categories": [
-      "商業"
+      "商業",
+      "功能"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['商業']，主編核對後改派功能",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVUV6dVh5WUcxemZzTXRjYmcxcVRXUHRqSjhUcjZ2VVJjbVdWMi0yMWFaaWIwZUZfTndvQ19LZl9fQk55bElVYUFyeE9pa3RmNEFBak05WEFvRkhpeG1PdFkzZkw5ZnUtczlrSS1HaU44UENxSi1ZTy1LNWZrb3BZQXRhSDZhTVpXODFvRUF2NTFoNkhNSEtYYld4LWpTaHNqSUM5WHIwWVpQNDlCelh5OFJmT0Znc1hrbGJLWDdIaUJUeExMN05KQk5DZkMtVUhiQWc?oc=5": {
@@ -377,26 +380,29 @@
   },
   "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQWh5TW5ncVBmTHNSUENyRmtOeHUtaUQwbzMzQzhFcV9SeG1FUlplU1psVGVjYnUtZGhaWlFZRWRKTW5rWHZQeHo4SW91bGE3akpWMDFfdlhlV3RaN2hPREk0OG9BNUVSSHlsSTczMk1uQUF3M0pwNzl0UHlJWHI1aGZiRDRack1jOUpnVkNHakZzdU5PRHBpTXB5aUhDRXVrQUJMS2hUak1HVDQtVVBnSG1lMk0?oc=5": {
     "categories": [
-      "功能"
+      "功能",
+      "商業"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['功能']，主編核對後改派商業",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU1l6bGwybDVpaTA3dE5NNnVtVGEwT3NTYkZ1RXAySjFWWDRhRU54aS1TajM1MGxhWk9SQ0ZnTVhhQWxDSGQ5QjRtZENyTF85UmVXTmI1RmktMGY4M1Bwak04bGtBTlRPWURYS1hKUGM0ZUttLTdYRHlKRjZGbVlBdkFqOW9kc2l2VmtXWi03dFVKXzdX?oc=5": {
     "categories": [
-      "商業"
+      "商業",
+      "功能"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['商業']，主編核對後改派功能",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5": {
     "categories": [
-      "功能"
+      "功能",
+      "商業"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['功能']，主編核對後改派商業",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ya3VLZ21XMzlVODNHcVZCRkdFZ0htQlZZZllZd3JUaWZvM0V2U1dvSjcyVzZ5amhoU2RHYlJjd3FaVTFyYkl0VEdsM0hybUFfVjdYQ2ZnVmdHSHZ5MmxMRW9uVHpQQ2s4YVVnUi1Wd3pQVXphRGM1LVl2TnJ1Mnc?oc=5": {
@@ -409,26 +415,29 @@
   },
   "https://news.google.com/rss/articles/CBMi3AJBVV95cUxQbGthQ2FWNGpZSTFxNkduVHNDY0dCSWt4am1NZUtEWVZBSXhkT05pclFxSmJIcmtFTlJEUGM4U0F2V2tjVUdkMFNYTkVKNE5zY2RzeS1HbENZNVJ5SXJoM3Z3alRWajZKNXVhTmJta1FpN05ZdzRQUHFEeWc5ZF9CODZlSnc0NXFTVWU0MnBsaGNGNlM2SzJLOW93VEM4c0JGeW5pQ0p0RU1jQ0NOb2swLWZLeC1iekg4ZVpLSW1xOXZOX09mMU1IQWIxTEdiZXpyRDBIRlpVeFVfNXVpc29tMEFJUlJMbFRsT0FFWFFSUWFQdVBnX1ZhdHhNVzVNVHNFRzk5X3BjdUp3dUw4VVZFRmxJczRmQ1dHZEJkYVpZRDlvUi01bFlFc2tWZm9fZWY0dFAwWVJRSW1MT2VQeE1XYVhQM3lBdW9pWDBSYmhGNEdZZlVlM0hrbERITmXSAeICQVVfeXFMT1lWcTJHaHYwbnltMjlyRjBzNWJzTEFZWlB3OC1EV2ZWdkFfdVl4RkJOMmFTMjcxeGhxdTVDYjNiRnFLck9mS2s3eHZlNEJYRi1PTDJrRXdCemRnZ0ZWWktzN1pwOHBZbmltTDBqaENmeVBzTFRtcWptZUZrLXV6bFp3OUg4RkhubU1DWk5vcnBnc0s4d0FtdUVZQVJTNjRwRHFpb3A1b2JJUTJmSnc5N3pwOGlNNHJDQS01RkFDSVRhVnBtMmhwaXBVZHNmSGhZUEw4MHJDOWZpLWZiZFd1NDlJX1dmZVFfb2xEbGxWd192dk54RGRWTnBIOXRtV3FIYkxyT01fbk1Ia2d3Z2tfMVpnSExQV2dqQXRXNUVKeHNpUGg5VnRqUDdqazY0c25NRGtFdERMZnU3d0Uyc2hwQWt4QjA2QjNjRzBmUDFZaWJFbm5lVkNSNjBnd0NVdzZwNVd3?oc=5": {
     "categories": [
-      "社群"
+      "社群",
+      "商業"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['社群']，主編核對後改派商業",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUlptZkRvbzF4ZHIzSUxpRTROYjVIbVVNZHFxMU9QZzdMLVJvb1Y5aEhGY0p0VVU2N2Y1N3MzUVBvUjdzWGdEXzlwSENoUnZyeksxM0hwZ19DWkt0bTV1cFZPZVpzMlZVUmZJdkhpczhQdWdWMi0xeUdmckFaN1BXUF9sYWNlNkVDd3ow?oc=5": {
     "categories": [
-      "商業"
+      "商業",
+      "功能"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['商業']，主編核對後改派功能",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5": {
     "categories": [
-      "功能"
+      "功能",
+      "商業"
     ],
     "reason": "",
-    "note": "",
+    "note": "分類回退自['功能']，主編核對後改派商業",
     "summary_override": ""
   },
   "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrSGFRcGxmcDl0X3hqaVo3djJiczhCWG9BWER2RVRKYWtCdnhGVENZbXNpUVRlUWtnc05TY3BiN2FyV2c0VjlvNmZpRW9Eb25kVDdZY05XVVVqcTFwTlZkdl9VNUxHWEtYTVFGVdIBckFVX3lxTE9vUVVGNGtrZkZVa3VvTXpGdUxhQkVIRTJVeG51aDFKUXJSZVQ1eXNLTHVkcXRfZUhONEVfbmhVOVlZVFhzdU9lb3FBMURCM29wcUFPUVFsQ0NjVWR0bVpZQ3QtZ1BFM2xzUUV2WnJhdGJMZw?oc=5": {

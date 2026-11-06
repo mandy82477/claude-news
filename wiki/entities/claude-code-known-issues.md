@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-06"
+last_news_update: "2026-11-06"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -33,15 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-06
+**最後新聞更新：** 2026-11-06
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-05）
-> - **新增功能請求**：Desktop 自訂主題／強調色（[#79305](https://github.com/anthropics/claude-code/issues/79305)，28 則留言、88 個讚，本日反應數最高；🔌 平台相容性組）、全平台 Passkey（WebAuthn）登入（[#84862](https://github.com/anthropics/claude-code/issues/84862)，26 則留言、209 個讚，全站今日讚數最高；👤 帳號管理組）。
-> - **新增已知問題**：Fable 5 回覆文字偶被誤顯示為摘要後的 thinking 區塊（[#74558](https://github.com/anthropics/claude-code/issues/74558)，26 則留言、20 個讚；🧠 組）、Postman 用戶端未經同意把外掛加入 Claude Code／Codex 設定（三源同報，互動均 0；🛡️ 組，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]）、新 session 傳預設開在 cloud 影響簡單任務（Reddit 單一貼文、0 留言，❓ 待查證；🧠 組）。
-> - **高互動已知問題互動數更新**：內建瀏覽器忽略站台權限（[#91495](https://github.com/anthropics/claude-code/issues/91495)，31 則留言、33 個讚；🔌 組）、1M context 靜默清除工具結果（[#42542](https://github.com/anthropics/claude-code/issues/42542)，30 則留言、11 個讚；🧠 組）、驗證信被抑制無法登入（[#79808](https://github.com/anthropics/claude-code/issues/79808)，29 則留言、7 個讚；👤 組）。
-> - **已知問題狀態更新**：遊戲複製限制（10-31 新增）鬆綁，使用者提出重現他人遊戲請求時 Claude Code 改為主動提議做原創同類遊戲，無害逆向工程案例仍未恢復存取（🧠 組，Tom's Hardware）。
+> **最新動態**（2026-11-06）
+> - **新增已知問題**：Claude Code 自動把使用者信箱塞進對外 HTTP 請求的 User-Agent（如 SEC API），HN 討論 1,485 分（[#107757](https://github.com/anthropics/claude-code/issues/107757)；🛡️ 組，與既有 #78431 同一現象不同 issue 號）、複製貼上功能故障（[#66192](https://github.com/anthropics/claude-code/issues/66192)，32 則留言、39 個讚；🧠 組）、功能請求：跨機器可攜式專案記憶（[#25739](https://github.com/anthropics/claude-code/issues/25739)，29 則留言、47 個讚；📂 組）、Analytics Admin API 查不到訂閱／OAuth 用戶（[#27780](https://github.com/anthropics/claude-code/issues/27780)，27 則留言、27 個讚；💰 組）。
+> - **高互動功能請求互動數更新**：關閉貼上文字自動收合（[#23134](https://github.com/anthropics/claude-code/issues/23134)，55 則留言、191 個讚；🧠 組）、串接 Claude.ai Projects 知識庫（[#2511](https://github.com/anthropics/claude-code/issues/2511)，55 則留言、668 個讚，全站今日讚數最高；📂／🔌 組）。
 
 ---
 
@@ -57,8 +55,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 母頁「現在還沒修好的」是本頁各組的結論表，條目本身不搬 %%
 
-### 🛡️ 安全與隱私（20 條未修復、5 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（21 條未修復、5 條已修復、1 條拒修、3 條❓）
 
+- 🔴 **未修復**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號；官方尚未回應。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - 🔴 **未修復**｜**Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定檔（三源同報，互動均 0，2026-11-05）**：第三方供應鏈事件非 Claude Code 缺陷，外掛功能與移除方式未見報導，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令沒有強制力（#53223，31 則留言、5 讚，2026-10-28）**：官方未回應；與 #2544 同一限制（見「🧠 行為與品質」）。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - 🔴 **未修復**｜**使用者 email 被放進 prompt，可能被帶給外部網站（#81138，2026-10-29）**：官方未回應；與 #78431 觸發機制不同。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
@@ -77,7 +76,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - ❓ **待查證**（標 2026-09-02｜查 fsmonitor、2.1.252｜複 2026-11-14）｜**第二變體是否仍未修補**：只有轉述，官方沒有證實這個變體。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**通過 CVP 審核的組織在 Claude Code 仍被資安防護擋下（#84352，201 則留言、29 讚，10-19 更新）**：官方未回應；CVP 綁 organization ID、可提申訴，條件見 [[topics/ai-agent-safety-cyber#防守方能申請什麼]]。
-- 🔴 **未修復**｜**User-Agent 字串夾帶使用者 email（#78431，2026-08-11）**：08-22 查 issue 仍 open、官方掛了 `area:security` 但無回覆，changelog 未見修復。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+- 🔴 **未修復**｜**User-Agent 字串夾帶使用者 email（#78431，2026-08-11）**：官方掛 `area:security` 無回覆；11-06 另一 issue #107757 經 HN（1,485 分）重新引發關注。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - ✅ **已修復 v2.1.163**｜**「Comment and Control」：開一則 GitHub Issue 就能經注入碰到 CI secrets（Novee，2026-08-05）**：受影響 v0.2.54–v2.1.162。證據見 [[topics/ai-agent-safety-prompt-injection#2026-08]]。
 - 🔴 **未修復**｜**Keyv 關聯 npm 蠕蟲在 repo 寫入 Claude Code hook（2026-08-04）**：至少 353 個套件版本（79 個套件名）受波及；屬 npm 供應鏈，Anthropic 無法單方修補。證據見 [[topics/ai-agent-safety-product-vulns#2026-08]]。
 - ✅ **已修復 v2.1.216（v2.1.223 加固）**｜**Auto Mode 下 Bash 複合重導向、隱形 Unicode 繞過權限**：v2.1.223 再補 4 項權限邊界。證據見 [[topics/ai-agent-safety-archive#2026-07]]。
@@ -91,10 +90,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Gmail MCP connector 黑暗設計模式批評（2026-06-28 HN 討論）**：Anthropic 推出的 Claude Gmail MCP 整合（官方 Google connector，Pro/Max/Team/Enterprise beta 可用）被社群批評授權頁面採用「黑暗設計模式」，介面設計被認為誤導用戶授予比預期更廣泛的 Google 帳號存取權限；目前 HN score 僅 3，為早期批評訊號，Anthropic 尚未回應。參見 [官方文件](https://claude.com/docs/connectors/google/gmail)
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 
-### 💰 計費與配額（29 條未修復、1 條❓）
+### 💰 計費與配額（30 條未修復、1 條❓）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**Claude Code Analytics Admin API 查不到用訂閱方案或 OAuth 登入的使用者，只看得到 API Key 用量（GitHub issue #27780，累積 27 則留言、27 個讚，2026-11-06）**：靠此 API 彙整團隊整體用量報表的管理者，報表會系統性少算訂閱制使用者；官方尚未回應。
 - 🔴 **未修復**｜**背景 agent 每隔約 30 秒重送完整對話記錄，僅為更新狀態列，疑增加隱性 token 用量（社群分析＋繞過腳本，Hacker News 527 分，2026-10-29）**：單一社群來源，官方無公開回應。
   - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
   - 這類「官方介面自己在耗 token」的社群偵測案例，與其他省 token 做法並列於 [[topics/community-cost]]。
@@ -133,8 +133,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（78 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
+### 🧠 行為與品質（79 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
 
+- 🔴 **未修復**｜**複製貼上功能故障（GitHub issue #66192，累積 32 則留言、39 個讚，2026-11-06）**：官方尚未在 issue 裡說明修復進度或暫時繞過方式。
 - 🔴 **未修復**｜**Fable 5：回覆文字偶被誤顯示為摘要後的 thinking 區塊，該輪看起來無回應（GitHub issue #74558，累積 26 則留言、20 個讚，2026-11-04）**：環境為 Claude Code 2.1.201、`claude-fable-5` 模型；官方尚未說明是哪個機制造成。
 - 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增選項可關閉 Edit/Write 工具輸出的行內差異對照（GitHub issue #37951，累積 35 則留言、127 個讚，2026-11-01）**：對話串中 Edit／Write 工具輸出的行內 diff 目前無法關閉顯示，雖有可按 Esc 關閉的 diff 對話框，但不等於能關掉行內顯示本身；官方尚未回應或提供設定選項。
@@ -209,7 +210,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**對話拉長後終端機不斷自動捲回頂端（GitHub issue #36582，2026-08-30）**：使用者回報對話拉長後終端機會不斷自動捲回頂端，難以持續追蹤最新輸出；與既有「主控台新增文字時畫面自動滾回歷史頂端」（issue #826）同屬終端機自動捲回頂端的症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**畫面/終端機閃爍（GitHub issue #769 進行中呼叫畫面閃爍，累積 306 則留言、335 個讚，Claude CLI v0.2.69，全站已知問題今日互動量最高；issue #1913 終端機閃爍，累積 187 則留言、321 個讚，皆 2026-07-09）**：使用者回報進行中的呼叫會造成畫面閃爍，另有獨立回報指出終端機介面本身也會閃爍，兩者疑為相關或重複問題；官方尚未回應。
 - 🔴 **未修復**｜**Thinking summaries 在 Opus 4.7 消失，harness 未設定 `display: "summarized"`（GitHub issue #49268，累積 49 則留言、78 個讚，首見 2026-07-17，Claude Code v2.1.111，2026-07-21 10:45 UTC 留言數更新）**：使用者改用 Opus 4.7 後思考摘要不再顯示，追查發現 harness 呼叫 extended-thinking API 時未設定 `display: "summarized"` 參數，屬 harness 端設定缺失而非模型行為變化；與既有「Opus 4.7 thinking summaries 未在 VS Code 擴充套件正確渲染」（issue #49322）同屬 thinking summary 顯示問題但根源不同，暫分列追蹤；官方尚未回應。見 [[entities/opus-4-7]]。
-- 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 51 則留言、159 個讚，首見 2026-07-16，2026-09-22 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
+- 🔴 **未修復**｜**功能請求：關閉輸入框貼上文字自動收合為 `[Pasted text #N +X lines]`（GitHub issue #23134，累積 55 則留言、191 個讚，首見 2026-07-16，2026-11-06 互動數更新）**：使用者希望能關閉輸入框將多行貼上文字自動收合顯示的行為，保留原始貼上內容的可視性；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**社群請願恢復已移除的 `/buddy` 功能（GitHub issue #45596，累積 283 則留言、2,116 個讚，2026-07-09 首見，2026-11-01 互動數更新）**：`/buddy` 已於 4/9 隨 v2.1.97 移除，官方 changelog 未提及；社群請願要求恢復，官方尚未回應。
 - 🔴 **未修復**｜**終端機複製夾帶多餘縮排與行尾空白（GitHub issue #18170，累積 136 則留言、294 個讚，首見 2026-07-08，2026-09-22 互動數更新）**：從 Claude Code 終端機複製文字（段落或程式碼區塊）時會夾帶前導縮排與行尾空白，影響貼上至其他編輯器或文件時的格式整潔；官方尚未回應。
 - 🔴 **未修復**｜**AskUserQuestion 60 秒逾時自動代答（GitHub issue #73125，累積 414 個讚，2026-09-10 更新）**：逾時未回應會自動代答並繼續執行，可能略過決策分岔點；官方確認為刻意設計（v2.1.198），非 bug，尚無可調逾時設定。討論見 [[topics/community-tech-discussions]]。
@@ -243,7 +244,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（25 條未修復、2 條已修復、3 條拒修、1 條查無官方）
+### 📂 Session 與資料管理（26 條未修復、2 條已修復、3 條拒修、1 條查無官方）
 
 **Session 保存與記憶生命週期（彙整，細節見各原條目）**
 
@@ -261,6 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 與下方「Session 歷史 30 天自動刪除」條目建議的延長解法矛盾——該設定本身可能不生效；靠 session 歷史回溯過去工作的使用者應留意是否真的被保留。
 - 🔴 **未修復（regression）**｜**桌面版跨 session 傳訊自 CCD 2.1.224+ 起靜默失效，訊息遺失、收訊 session 卡死 15–20 分鐘（GitHub issue #86012，42 則留言、9 讚，Windows／macOS，2026-10-17）**：與下方 #24798 已修復狀態矛盾；部分安裝已於 2.1.237 修復，穩定版頻道仍受影響。
 - 🔴 **未修復**｜**context compaction 後會抹除 `.claude/project-context.md` 的專案指引（GitHub issue #9796，累積 30 則留言、4 個讚，2026-10-08）**：使用者回報壓縮後專案指引遭清空；與跨 compaction 記憶缺口（#34556）同類但聚焦該檔案本身，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：專案記憶可攜式跨機器同步，而非每台裝置各自累積一份（GitHub issue #25739，累積 29 則留言、47 個讚，2026-11-06）**：與既有「CLI／Desktop 同步對話歷史」（#28791）、「原生 profile」（#7075）同屬延續性缺口但聚焦點不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：原生支援可切換的 Claude Code「profile」，隔離記憶、指令、hook 與設定（GitHub issue #7075，累積 32 則留言、58 個讚，2026-10-08）**：生態系框架各帶自己的 context／subagent 庫，混用易衝突，呼籲官方原生支援；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**`.claude.json` 持續累積每個專案的對話歷史，無上限，檔案膨脹至數百 MB 以上（GitHub issue #5024，累積 55 則留言、50 個讚，2026-10-07）**：使用者回報該檔案不斷累積歷史紀錄，導致啟動變慢、效能下降；官方尚未回應或提供自動清理機制。
 - 🔴 **未修復**｜**Routines 每次執行留下一個 session，Desktop app 僅能逐一刪除**（[naw103/claude-routine-cleanup](https://github.com/naw103/claude-routine-cleanup)，2026-10-03）：單一使用者回報一個 routine 累積 618 個未清理 session；社群 skill 用官方工具批次刪（每批 25 筆走核准卡）繞過；官方尚未回應。
@@ -272,7 +274,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復**（2026-08-17 CLOSED／COMPLETED）｜**提案：開放 compact／session 生命週期 hooks 供外部記憶層串接（GitHub issue #47023，累積 41 則留言、4 個讚，2026-08-04）**：彙整 5 個既有持久記憶 issue（含 #14227、#34556），呼籲官方開放 hook 供外部記憶層串接；官方答：`PreCompact`／`PostCompact`／`SessionStart`／`SessionEnd` 四個 hook 今天都有。
 - 🔴 **未修復**｜**Session 重新命名後，第二次退出即消失，僅第一次 resume 正常顯示（GitHub issue #25090，累積 32 則留言、29 個讚，2026-08-01）**：使用者為 session 重新命名後，第一次 resume 該 session 時名稱正常顯示，但第二次退出後名稱又消失，回報者已確認搜尋過現有 issue 未見重複回報；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：CLI 與 Desktop app 間同步對話歷史（GitHub issue #28791，累積 41 則留言、187 個讚，2026-11-02 互動數更新）**：使用者呼籲 Claude Code CLI 與 Claude Code Desktop app 之間能同步對話歷史，目前兩端各自獨立、無法互通；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**功能請求：串接 Claude Code 與 Claude.ai Projects 知識庫（GitHub issue #2511，累積 49 則留言、635 個讚，2026-07-29 首見，2026-09-11 互動數更新，今日全站互動量最高）**：呼籲 Claude Code 存取 Claude.ai Projects 知識庫，避免同一參考資料重複維護；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：串接 Claude Code 與 Claude.ai Projects 知識庫（GitHub issue #2511，累積 55 則留言、668 個讚，2026-07-29 首見，2026-11-06 互動數更新，全站讚數最高）**：呼籲 Claude Code 存取 Claude.ai Projects 知識庫，避免同一參考資料重複維護；官方尚未回應。
+  %% 維運備忘：本條與下方「🔌 平台相容性」組 #2511 列重複（兩組各留一份舊快照所致），待主編於 lint 核實後擇一保留、另一改指標 %%
 - 🔴 **未修復**｜**功能請求：跨 compaction 持久記憶（已自建 59 次 compaction 替代方案）（GitHub issue #34556，累積 114 則留言、6 個讚，首見 2026-07-25，2026-10-12 更新）**：每次壓縮遺失未外部保存內容；同屬記憶延續性缺口，見 [[topics/official-community-gap]]；官方未回應。
 - 🔴 **未修復**｜**對話壓縮（compaction）間歇性失敗或卡死（GitHub issue #20696，累積 61 則留言，2026-07-12 回報，regression）**：claude.ai 網頁版／行動版對話壓縮功能自 2026-01-15 起偶發失敗或卡死，回報者稱此為回歸性問題（先前版本未見）；官方尚未回應。與已列「Auto Compact 失效」為不同介面（此為 claude.ai web/mobile，另一為 Claude Code CLI），暫分列追蹤。
 - ✅ **已修復 v2.1.224**｜**功能請求：多 Claude session 間直接通訊（GitHub issue #24798，累積 75 則留言、21 個讚，首見 2026-07-08，2026-08-15 互動數更新）**：使用者呼籲支援 multi-Claude 工作流中大型專案裡各自獨立執行的工作流程能有更直接的溝通機制以串接依賴關係排序，避免需透過檔案系統或外部工具中繼協調；與 [issue #28300](https://github.com/anthropics/claude-code/issues/28300)（跨機器多 agent 協作 A2A 協定）同屬 agent 間直接通訊缺口，本則同機 session 訴求已由官方對應；**2026-08-15 更新：** issue 留言持續累積，內容顯示社群訴求未止於「能傳訊」本身——原始請求的核心是「依相依性排序高階流程步驟」，屬工作流編排（orchestration），而 `ListAgents`／`SendMessage` 提供的僅是點對點訊息傳遞原語，尚未涵蓋自動依賴排序；此缺口與 [[topics/official-community-gap]] 「Agent 間直接通訊協定」列既有的 🧪 部分產品化判定一致，✅ 已修復狀態僅適用於「同機 session 可互相傳訊」此一子項，編排層仍待官方對應。
@@ -353,7 +356,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Windows：app 視窗永遠置頂，無設定可關閉（GitHub issue #89467，累積 40 則留言、77 個讚，2026-10-10）**：與既有 #87895、#85891 同屬置頂問題但為獨立 issue，暫分列；需視窗退到背景者目前無法自行解決；官方尚未回應。
 - 🔴 **未修復**｜**GitHub connector 顯示已連結，Cowork 中未暴露工具（Windows 11，GitHub issue #61682，累積 33 則留言、25 個讚，2026-09-26）**：與「Google Drive connector」同類（#30457，見 MCP 整合分組），亦與 #71542、#32479 現象不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Cowork：Windows 下資料夾功能不支援 UNC 路徑（GitHub issue #45297，累積 31 則留言、32 個讚，2026-09-25）**：與 #76694 同屬 Chat／Cowork 合併後的資料夾功能退化，此則另回報 Windows 上資料夾選擇不支援 UNC（`\\server\share`）路徑格式；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，51 則留言、642 個讚，2026-09-22，本日反應數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
+- 🔴 **未修復**｜**功能請求：Claude Code 串接 Claude.ai Projects 知識庫（GitHub issue #2511，55 則留言、668 個讚，2026-11-06，全站讚數最高）**：盼 CLI 端可存取並運用 Projects 已整理的知識庫內容；官方尚未回應。
+  %% 維運備忘：與「📂 Session 與資料管理」組同號重複列出，待主編於 lint 核實後擇一保留 %%
 - 🔴 **未修復（官方已識別成因）**｜**Cowork（Windows）Plan9 共用資料夾因 KB5124008 全數掛載失敗（issue #92984，121 則留言、61 讚，11-01 更新）**：移除該 KB 可恢復；Anthropic Status 確認成因為 09-08 Windows 更新，尚未修復；[來源](https://status.claude.com/incidents/r1pqn1kb4hvk)。
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
