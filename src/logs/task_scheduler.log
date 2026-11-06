@@ -1427,3 +1427,4 @@ ABORTED: gathered_items.json date=2026-10-30 items=79，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud 2026-11-05] ABORTED: gathered_items.json date=2026-11-04 items=64，非目標日期的新鮮資料（今日 GitHub Actions 抓料尚未歸檔，src/gathered_archive/2026-11-05.json 不存在；交由後續班次接手）
 [cloud daily-news-pipeline-cloud STARTED 2026-11-05T22:08:02Z]
 [週五 2026/11/06 01:31:58.00] Watchdog push SENT - 每日新聞 2026-11-05 產出齊全，但 daily-news-pipeline-cloud 12:10 UTC 班等 2 班開跑後無結果紀錄（中途斷，疑撞用量上限），查該班 run log
+[cloud daily-news-pipeline-cloud STARTED 2026-11-06T12:10:37Z]
