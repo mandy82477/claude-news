@@ -8664,3 +8664,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - lint 遺留事項：本機承接——10-30 ingest「`collect_reporter_reports.py` 誤結案」已修：根因是 `handoff_closes()` 的 regex 只認「／不適用」或換行直接接「不適用」為段落終點，項目符號 `- 不適用：` 吃不到，lazy 匹配一路跑到結尾把不適用條收進結案清單；同時 `handoff_voids()` 會把其後的已處理條誤算成不適用。改為逐條判種類，附回歸測試 3 例（改前紅 2、改後綠）。11-01 ingest「Max5／Max20 改名」已查（改名屬實；5 小時限制只對 Ultra 驗證帳號取消）。10-26 ingest「S-1 四數字」部分查（sec.gov 原文超過 10MB 無法直讀，ANT／Nasdaq 確認、14 倍大致吻合、20 倍客戶集中度 S-1 摘錄查不到）。未做並記理由——3h 蒸餾 14 時段、6d 逾 60 天 57 節、6i 3d／3f 人工突變、6f 4 組 coupling hint、`source_attribution.jsonl` 歷史歸因頁名遷移：本週 lint 整輪沒跑，這五項屬規則與結構維護，併入下一次完整 lint 處理，不在週度回顧內零碎動
   - 開放迴路掃描：`open_loops.py`（2026-11-08 開工時）：需收尾 28（未 commit 1＝`pending_queue_history.csv`，隨本輪 push 收進；逾期 workaround 27 筆，最舊逾 112 天）｜已跳票 65｜存量遷移 20（舊語法盲區；5c 後重算為 25，新增的 5 筆落在 opencode、ai-agent-safety-cyber 等本輪記者寫回過的頁，成因未逐筆查，待 3g 回填時一併看）；人類質疑時效燈 ✅（6 天前）
 - 需使用者端設定：claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 8 週，2026-09-19 起）：leaderboard 組 11 個網域；5c 另撞 techradar.com、www.aisi.gov.uk、metr.org、www.edtechinnovationhub.com 等（11-07 雲端 run log）
+
+## 2026-11-07 Ingest
+
+- 來源日報：[[news/2026-11-07]]
+- 更新頁面：
+  - **功能**：entities/claude-code-features（Help Center release notes 新增段；桌面版文件字數時序；「Claude Code model configuration」段移除標❓待查證）、entities/cowork（Cowork 專案任務整理一句）、entities/claude-code-known-issues（新增 #10238／#29937／#13843 三組）、entities/claude-code（Claude Code Cloud 自動設定 repo／API 金鑰，兩則低流量來源標❓待查證「近期報導」）、entities/claude-personal-finance（Yahoo Finance：可連銀行帳戶但不提供投資建議）
+  - **商業**：entities/pricing（usage credits 說明頁改版：帳戶刪除不退額度、auto-reload 措辭改寫；移除「日本等地區 6 個月到期」條款現況不明，下新懸置標記）、entities/pricing-history（新條目）、entities/pricing-incidents（Claude Max 廣告誤導訴訟併入既有 2026-06-16 集體訴訟列）、topics/anthropic-ipo（IPO 估值持續探底：Bloomberg $1.1 兆、HN 談判區間 $1.2～1.3 兆，併 Zvi Mowshowitz S-1 逐條解讀播客與 The Verge OpenAI $1.25 兆對照）、topics/anthropic-business（WSJ Anthropic's Ambition to Cure Diseases 暫放「未歸類」區）、topics/enterprise-tool-tracker（Goldman Sachs 禁令「數千名員工」跟進時序）、topics/competitor-landscape（GitHub Copilot Changelog ×3＋Meta Muse spaces 寫入時序）
+  - **安全政策**：topics/ai-agent-safety-product-vulns（新事件：Claude Code「Don't Ask Again」選項外洩密鑰，1,994 倉庫／2,539 組密鑰、1,122 份公開複本，標❓待查證｜複 2026-11-21；email 外洩 #107757 跟進無新事實併入既有條目）、topics/ai-agent-safety（母頁 callout）
+  - **社群**：topics/community-multi-agent（新代表技巧：nateherkai/roast-room 固定人設小組辯論、AFK-surf/Comma 確定性 Agent 框架）、topics/community-memory（新節點：Anthropic 官方部落格 The Components of Agent Memory，HN 102 分＋HN Repo Bridge）、topics/community-interfaces（重新啟動「跨 Repo 依賴可視化」：dev.to 三款架構圖外掛實測）、topics/community-tech-discussions（新列證據：r/ClaudeCode 週熱門「一年 100% AI 強制令代價」，「AI 該寫多少程式碼」辯論由僵住轉回還在吵）、topics/community-tech-patterns（母頁 callout）
+  - **模型**：無（4 則逐一檢視皆不收錄：shattered.io 比較基準不明；Business Insider 量子運算僅標題無模型名稱；CIO 治理文與 Teaching AI scientific models 兩則分類回退見下）
+- 新增頁面：無
+- feature-radar：無新增
+- index：topics/community-tech-discussions 鉤子句同步改寫（5 場還在吵／4 場僵住 → 6 場還在吵／3 場僵住）；其餘頁面維持 ongoing
+- 摘要：今日最大事件是 Claude Code「Don't Ask Again」選項被多家資安媒體揭露可能外洩密鑰到公開 GitHub 倉庫（1,994 倉庫／2,539 組密鑰、另 1,122 份公開複本），另有 Claude Code 疑似透過 User-Agent 標頭外洩使用者 email；商業面 Anthropic IPO 估值持續探底（Bloomberg 喊價低探 $1.1 兆）、法院裁定 Anthropic 須就 Claude Max 廣告誤導指控進一步面對訴訟程序；社群面官方發布 agent 記憶設計研究＋多人設小組辯論、確定性 agent 框架兩款新工具受關注。
+- 呈現品質：全部通過
+- 分類回退：主編原始分類索引誤植共 2 筆，以 Step 3b/3c 補派糾正：「5 things CIOs must understand to govern Claude Code」（原誤分模型＋社群）→ 商業，補派記者核對後判定內容僅標題、無具名企業/案例/數字，未達任何商業子頁收錄門檻，不收錄；「Teaching AI to build scientific models」（原誤分模型）→ 社群，補派記者核對後判定內容不可讀、寫不出可複用機制描述，不收錄。兩筆分類方向本身皆已核對確認，僅因內容強度不足未落地任何頁面。
+- 轉知帳本：結案 1 筆（H-6872cb：功能記者評估 official-community-gap 矩陣，rsc-harness 判定不開新列）；新開 4 筆——H-872580（功能→商業，entities/pricing，Help Center release notes 企業計費代碼/成本追蹤段）、H-96b5cc（功能→安全政策，topics/anthropic-government-policy，「How Claude marks AI-generated content」段）、H-595d07（安全政策→功能，entities/claude-code-known-issues，Don't Ask Again 選項涉及確認對話框功能面設計）、H-d5ce8b（社群→功能，topics/official-community-gap，今日兩款新工具是否使產品化矩陣新增列）
+- devpractice 沉澱：候選 0 筆（今日無官方使用指南條目進開發實務包以外的新增行）
+- market 判讀：待 4c 完成後補（本輪稍後執行）
+- 分類複核：排除 2 則（Show HN: Solous 情緒日記 App、Reddit Blender 3D 建模請益），複核記者判定皆維持排除，無誤排除
+- 工作區異常：社群記者誤跑 `scripts/build_web.py` 產生基於中途（其他記者尚未收工）wiki 狀態的 web_reader 快照，主編已 `git checkout -- web_reader/` 還原，Step 4 會在全部記者與 4b/4c 完成後重新正式建置，不影響任何 wiki 內容
+- 主編待辦：
+  - [主編] topics/community-tech-patterns 母頁「模式概覽」表尚未同步今日三則新節點（固定人設小組辯論、確定性 Agent 框架代表技巧；跨 Repo 依賴可視化重新啟動）——依母頁契約，日常 ingest 僅能動 callout 與路由表「最後動態」欄，模式概覽表本身留給下次 `/weekly`
+  - [主編] topics/anthropic-business.md「WSJ Anthropic's Ambition to Cure Diseases」暫放於母頁「未歸類」區，留 /wiki-lint 5j 分派至合適子頁
+  - [主編] entities/pricing.md 新懸置標記（❓ 2026-11-07｜查「日本等地區 6 個月到期」條款移除後現況｜複 2026-11-21）
+  - [主編] topics/ai-agent-safety-product-vulns.md 新懸置標記（❓ 2026-11-07｜查 Don't Ask Again、2,539｜複 2026-11-21）；該事件已滿足母頁「現在還擋不住的攻擊」表收錄判準但該表已滿 11/11，本輪未新增列，僅於表下點名連結，留 /wiki-lint 評估是否有舊列可退場

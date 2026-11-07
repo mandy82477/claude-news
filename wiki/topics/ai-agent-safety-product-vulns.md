@@ -31,14 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-06）
-> - **升級／Claude Dispatch**：CyberSecurityNews／The Hacker News 曝光具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接電腦執行程式碼，承接 11-05 官方確認不修補。
-> - **升級／email 外洩**：Claude Code 以 User-Agent 夾帶使用者 email（#107757）再度引爆熱議（HN 1485 分），機制同既有 #78431；v2.1.317（11-03）起送出帳號信箱前會先詢問，穩定版 2.1.311 尚未包含（CHANGELOG，11-08 查證）。
+> **最新動態**（2026-11-07）
+> - **新增／設定外洩**：GBHackers／The Hacker News 揭露「是，並不要再問」選項外洩密鑰：1,994 個倉庫藏 2,539 組密鑰，1,122 份複本含外洩檔案。
+> - **跟進／email 外洩**：CyberSecurityNews／Dev.ua 追加報導 #107757 User-Agent 外洩 email，無新事實（官方修補已於 11-08 查證，見下方技術彙整）。
 
 ---
 
@@ -88,6 +88,16 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 ### 2026-11
 
+#### GBHackers News／The Hacker News／CyberSecurityNews／Cyber Press：Claude Code「是，並不要再問」選項外洩密碼與 API 金鑰至公開 GitHub 倉庫（2026-11-07 新增）
+
+- **揭露來源**：Google News／The Hacker News（11/07 06:44 UTC，2 個來源）、CyberSecurityNews（11/07 09:08 UTC，2 個來源）、GBHackers News（11/07 09:00 UTC）、Cyber Press（11/07 08:46 UTC，2 個來源），四家媒體同日各自報導，互動均為 0
+- **核心主張（僅標題可用）**：GBHackers 清查發現 1,994 個公開 GitHub 倉庫藏有 2,539 組外洩密鑰；The Hacker News 另指外洩檔案出現在 1,122 份公開複本裡；成因指向 Claude Code「是，並不要再問」選項
+- 使用者跳過重複確認後，含密碼或 API 金鑰的設定或對話紀錄疑似隨之進入公開倉庫；具體外洩檔案類型、觸發路徑與是否已通報官方均未見報導細節
+- **你能先做什麼**：習慣用這個選項跳過重複確認的開發者，應立即檢查自己的 repo 是否曾外流憑證，並全面輪替金鑰
+- **可信度評估**：四家資安媒體同日各自報導，互為交叉佐證提高訊號強度，但均止於標題層級；GBHackers（1,994 個倉庫／2,539 組密鑰）與 The Hacker News（1,122 份複本）兩組數字口徑不同，是否互相重疊未見說明，具體外洩機制未見任一方提供證據
+%% 未列入現況表：表滿載，2026-11-07（母頁「現在還擋不住的攻擊」11 列已滿，逐列核對均未滿 90 天且無 ✅／⛔+替代方案可退場）%%
+- ❓ **待查證**（標 2026-11-07｜查 Don't Ask Again、2,539｜複 2026-11-21）｜**外洩機制細節與官方回應**：具體哪些檔案或設定被提交外洩、觸發路徑、Anthropic 官方是否已回應或提供警示機制，四篇報導均未載
+
 #### CyberSecurityNews／The Hacker News：Claude Dispatch 攻擊鏈曝光，惡意瀏覽器外掛可在已連接電腦執行程式碼（2026-11-06 新增，升級既有 11-05 條目）
 
 - **揭露來源**：Google News／CyberSecurityNews（11/06 12:52 UTC）、The Hacker News（經 Google News，11/06 12:06 UTC），兩家媒體同日各自報導，互動均為 0
@@ -104,6 +114,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **與既有事件的關係**：是否為 #78431 重新引爆、抑或獨立新報，未見報導說明；兩個 issue 是否已合併或指向同一次修復亦未見官方回應。FourWeekMBA 另稱 Anthropic 在「首次報告」後 108 天才新增 email 檢查機制（僅標題，細節未載，是否即解決本缺陷、所指「首次報告」是否為 #78431 均未見報導）
 - **你能先做什麼**：會呼叫需認證 API（如 SEC API）、在意個資外流的開發者，應檢查目前請求標頭是否帶出真實信箱
 - **可信度評估**：HN 高熱度（1485 分）＋社群提供可重現 demo（curl 驗證 SEC API 回應），機制可信度高；#107757 與 #78431 的關係、FourWeekMBA「108 天」說法的查證依據均未見報導
+- **2026-11-07 跟進（無新事實）**：CyberSecurityNews（11-06 15:02 UTC）、Dev.ua（11-07 13:44 UTC）另文跟進同一事件，標題分別聚焦「User-Agent 外洩 email」與「這項外洩究竟如何發生」；原文均無可讀內文，未補充官方回應或技術細節
 - **查證結果（2026-11-08）**：#78431 於 2026-07-17 開、09-11 以 not planned 關閉（[#78431](https://github.com/anthropics/claude-code/issues/78431)）；[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)（2026-11-03）新增「web 或 shell 工具要把帳號信箱送上網路前先詢問」的檢查，距 #78431 開立約 109 天，與 FourWeekMBA「108 天」吻合。
   - 兩個 issue 是同一現象的兩次回報；官方未在任一 issue 回應，檢查涵蓋哪些情況未說明。npm 穩定版 11-08 仍為 2.1.311、尚未包含此檢查
 
@@ -591,6 +602,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-07
+- **[🔴 新增，四源同報] GBHackers／The Hacker News／CyberSecurityNews／Cyber Press：Claude Code「是，並不要再問」選項外洩密碼與 API 金鑰至公開 GitHub 倉庫**：1,994 個倉庫藏 2,539 組密鑰，1,122 份複本含外洩檔案；外洩機制細節與官方回應均未見報導，詳見「## 技術彙整」
+- **[🟡 跟進，無新事實] CyberSecurityNews／Dev.ua：另文跟進 #107757 User-Agent 外洩 email 事件**：原文均無可讀內文，未補充官方回應或技術細節，詳見「## 技術彙整」
 
 ### 2026-11-05
 - **[🔴 新增，官方確認不修補] The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補**：缺陷觸發條件與在野攻擊案例均未見報導，詳見「## 技術彙整」

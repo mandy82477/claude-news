@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **最新動態**（2026-11-06）
-> - **WSJ／Reuters／Yahoo Finance 同日並發：AI 股拋售潮下，主要投資人質疑能否達 $1.5 兆估值，Yahoo Finance 稱恐探底至約 $1 兆、Reuters 稱拋售潮可能動搖上市時程**（具體新估值區間未定案，HN 88 分）
+> **最新動態**（2026-11-07）
+> - **Bloomberg／HN（295 分）：IPO 買方喊價探底至 $1.1 兆；投資人談判區間已降至 $1.2～1.3 兆（原銀行溝通目標 $1.4～1.5 兆）；CNBC 稱期中選舉後資料中心政治反彈加劇市場疑慮**
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -49,9 +49,9 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
 | 什麼時候上市 | 掛牌日與價格區間官方仍未公布；公開版 S-1 已提交、未生效，先前「10 月上市」「延後」都只是媒體說法 🔎 查無官方 ⟨Q-03⟩ | Anthropic 官方公告（2026-10-26）；FT、Forbes、Yahoo Finance（08-13～09-08） | 官方一手／一級媒體 |
-| 值多少 | 最後一次定價 $9,650 億；投資人原估 $2 兆，10-16 下修至約 $1.5 兆；11-02 修訂版 S-1 首度揭露 Q3 具體財報：營收 $170 億、9 個月累計營收 $330 億、營運虧損 $12.5 億（CNBC；FT） | Series H 公告；FT（2026-05-28／08-13）；Reuters 獨家（2026-10-15）；Telegraph（2026-10-16）；多家引 S-1（10-26）；CNBC／FT（2026-11-02） | 官方一手／一級媒體 |
+| 值多少 | 最後一次定價 $9,650 億；10-16 預期下修至 $1.5 兆；11-07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Series H 公告；FT（08-13）；Reuters（10-15）；Telegraph（10-16）；Bloomberg（11-07） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
-| 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06 投資人質疑能否撐住、拋售潮恐動搖時程（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06） | 第三方研究／一級媒體引投資人 |
+| 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
 
 **下一個時點：** 股數與價格區間公告（路演期間或掛牌前）。公開版 S-1 已於 2026-10-26 提交，尚未生效。
 
@@ -60,12 +60,13 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 - $1.2 兆約為當前 ARR $650 億的 **18 倍**，也是 Amazon 上一會計年度營收 $7,169 億的 **1.7 倍**。Damodaran 自己的橋接句最關鍵：**即使達成 2028 年營收預測（$1,900–2,000 億），此後仍需以每年約 25% 連續成長 8 年**才碰得到第 10 年門檻——兩個數字是不同時點，不可直接相除
 - Damodaran 稱當前整個 AI 產品與服務市場僅約 **$2,500 億**，而 Anthropic 向投資人簡報的 TAM 是 **$30 兆**，相差約 **120 倍**
 
-**目前結論（推論）：** 公開版 S-1 已在 10-26 提交，剩股數、價格區間與生效。估值仍是「私募定價 9,650 億 vs 公開市場質疑」的剪刀差，投資人預期已從 2 兆下修到約 1.5 兆；11-06 AI 股拋售潮下該估值本身也開始被質疑，具體新數字未定案。S-1 揭露的淨損約九成是非現金，營業層虧約 6.9 億。
+**目前結論（推論）：** 公開版 S-1 已在 10-26 提交，剩股數、價格區間與生效。估值仍是「私募定價 9,650 億 vs 公開市場質疑」的剪刀差，投資人預期已從 2 兆下修到約 1.5 兆；11-06/07 AI 股拋售潮下估值持續探底：Bloomberg 稱買方喊價低探 $1.1 兆，投資人談判區間已降至 $1.2～1.3 兆（原銀行溝通目標 $1.4～1.5 兆）。S-1 揭露的淨損約九成是非現金，營業層虧約 6.9 億。
 
 **資本佈局背景（推論）：** 近兩週兩條線同步升溫——基礎建設／算力合約線（見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]：Riot $90 億／20 年、GIC、Macquarie、Volta $100 億、Morgan Stanley $150 億、Google 近 $2,000 億融資機制，其中 08-11 一天內四筆並發）與 IPO／估值／營收線（08-13 傳 $2 兆估值、08-15 Reuters 獨家指估值繫於 2028 年 $1,900–2,000 億營收預測、同日 Q2 營收超過 $115 億）。時間點重疊指向：長年期算力鎖定與遠期營收預測可能是同一套 IPO 敘事的兩面——算力合約支撐「產能撐得住 2028 年營收目標」的可信度，遠期營收預測則是估值定價的錨點（推論，非官方明述之因果）。兩條線本身各自完整記錄於既有表格與清單，此處僅為並置解讀，不重複列出個別事件。
 
 ### 誰說撐不住：唱空與質疑
 
+- **IPO 買方喊價探底至 $1.1 兆，談判區間降至 $1.2～1.3 兆（2026-11-07）**：Bloomberg 報導買方喊價低探 $1.1 兆；HN 討論稿（295 分）稱投資人談判區間已降至 $1.2～1.3 兆（原 $1.4～1.5 兆）；CNBC／MarketWatch 稱期中選舉後資料中心政治反彈加劇疑慮。
 - **AI 股拋售潮加深估值懷疑（2026-11-06）**：WSJ 獨家稱主要投資人質疑能否達 $1.5 兆估值；Reuters 獨家稱拋售潮可能動搖上市時程；Yahoo Finance 稱估值預期恐探底至約 $1 兆，新估值區間未定案（HN 88 分）（[WSJ](https://news.google.com/rss/articles/CBMitgFBVV95cUxPNVlmZWpuTHFFVDktVG9OaXlnVl9xSFliZFl4YXFRemVUZDFRRFFaajdEcnQ0b01sQTNJNDVDUkRaQXpLdEY3dGhVUjloVS16UHZIQ0cwUG5wQnpxaDcyX3lvX3A0VFZTb0xjMFBObUJKR3N5cVU2WFhqNzRMcEtjN09HQ3VKcnNIcy15V3VJUTdFRkk1OXhQYlNjMFpELUV0Y2o1MnNNa2dPd3lSN3JJdGM2Z0wzdw?oc=5)、[Reuters](https://news.google.com/rss/articles/CBMiswFBVV95cUxPNGVmWktzeU5zbmRiaDdiZ2pxbEJhRk94VGN2V1lxUmpTNTFFNjhLR0puTjROeHE4UENDYjQ3OEFNbHdralNNdVJ2ZThsMldHZFlrcDZ1U21BTS1aeHU1aGNUNWRnTHc2SU5DVUktREt0Q3hzUkNhN1VJNDZYR3JLdjhwZUlaQjZCSl9Oa1dfT0d2dUotaWhDMkgxU1RBdVJOSEMwMzJsd0M3TmIyTGZ2WFZpVQ?oc=5)、[Yahoo Finance](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVUV6dVh5WUcxemZzTXRjYmcxcVRXUHRqSjhUcjZ2VVJjbVdWMi0yMWFaaWIwZUZfTndvQ19LZl9fQk55bElVYUFyeE9pa3RmNEFBak05WEFvRkhpeG1PdFkzZkw5ZnUtczlrSS1HaU44UENxSi1ZTy1LNWZrb3BZQXRhSDZhTVpXODFvRUF2NTFoNkhNSEtYYld4LWpTaHNqSUM5WHIwWVpQNDlCelh5OFJmT0Znc1hrbGJLWDdIaUJUeExMN05KQk5DZkMtVUhiQWc?oc=5)）
 - **知名空頭 Michael Burry 唱空**：Yahoo Finance 報導放空投資人 Michael Burry 看完 Anthropic 修訂版 S-1 後示警，稱公司「把整個存亡賭在樂觀上」，並表明不會參與這次 IPO 認購；具體持倉與論據細節未見報導（Google News/Yahoo Finance）。
 - **創投人士質疑 IPO 前景**：24/7 Wall St. 報導知名創投人 Chamath Palihapitiya 提出「3 個 AI 殺手」警訊，並質疑 Anthropic 傳聞中 2 兆美元 IPO 前景是否可能率先崩盤；與既有 08-15 Steve Eisman 唱空言論同屬市場知名人士公開質疑估值敘事的訊號，且與同日「IPO 追蹤」 表新增之 30 兆美元 TAM 論戰同源並發（推論）；具體「3 個殺手」論點內容、量化依據未見報導，僅標題可用。
@@ -168,6 +169,11 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-07 綜合跟進：估值持續探底＋S-1 逐條解讀＋對照報導**：
+  - Bloomberg／Hacker News（295 分）：買方喊價探底至 $1.1 兆，談判區間降至 $1.2～1.3 兆（原銀行目標 $1.4～1.5 兆）。
+  - CNBC／MarketWatch／Seeking Alpha／Axios：期中選舉後 AI 資料中心政治反彈加劇市場疑慮，IPO 時程撞上近期最差氣氛，均僅標題可用。
+  - The Verge：OpenAI 估值達 $1.25 兆，與籌備中的 Anthropic IPO 並列報導，無進一步細節。
+  - Complex Systems Podcast（HN 37 分）：Patrick McKenzie 與 Zvi Mowshowitz 逐條解讀 S-1，談創辦人透過單一 Class F 股掌握 50.1% 投票權、無上限 3:1 員工捐款配比，呼應既有約 $8,950 億採購承諾；另稱 Q3 營收偏軟可能是 GPU 供給不足而非需求不足。
 - **2026-11-06 WSJ／Reuters／Yahoo Finance：AI 股拋售潮加深 IPO 估值懷疑**：WSJ 獨家稱主要投資人質疑能否達到 $1.5 兆估值；Reuters 獨家稱拋售潮可能動搖上市時程；Yahoo Finance 稱估值預期恐探底至約 $1 兆；三家同日並發，具體新估值區間未定案（HN 88 分）（[WSJ](https://news.google.com/rss/articles/CBMitgFBVV95cUxPNVlmZWpuTHFFVDktVG9OaXlnVl9xSFliZFl4YXFRemVUZDFRRFFaajdEcnQ0b01sQTNJNDVDUkRaQXpLdEY3dGhVUjloVS16UHZIQ0cwUG5wQnpxaDcyX3lvX3A0VFZTb0xjMFBObUJKR3N5cVU2WFhqNzRMcEtjN09HQ3VKcnNIcy15V3VJUTdFRkk1OXhQYlNjMFpELUV0Y2o1MnNNa2dPd3lSN3JJdGM2Z0wzdw?oc=5)；[Reuters](https://news.google.com/rss/articles/CBMiswFBVV95cUxPNGVmWktzeU5zbmRiaDdiZ2pxbEJhRk94VGN2V1lxUmpTNTFFNjhLR0puTjROeHE4UENDYjQ3OEFNbHdralNNdVJ2ZThsMldHZFlrcDZ1U21BTS1aeHU1aGNUNWRnTHc2SU5DVUktREt0Q3hzUkNhN1VJNDZYR3JLdjhwZUlaQjZCSl9Oa1dfT0d2dUotaWhDMkgxU1RBdVJOSEMwMzJsd0M3TmIyTGZ2WFZpVQ?oc=5)；[Yahoo Finance](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVUV6dVh5WUcxemZzTXRjYmcxcVRXUHRqSjhUcjZ2VVJjbVdWMi0yMWFaaWIwZUZfTndvQ19LZl9fQk55bElVYUFyeE9pa3RmNEFBak05WEFvRkhpeG1PdFkzZkw5ZnUtczlrSS1HaU44UENxSi1ZTy1LNWZrb3BZQXRhSDZhTVpXODFvRUF2NTFoNkhNSEtYYld4LWpTaHNqSUM5WHIwWVpQNDlCelh5OFJmT0Znc1hrbGJLWDdIaUJUeExMN05KQk5DZkMtVUhiQWc?oc=5)）
   - 同期另有 Jerusalem Post（估值可能因 $2.5 兆市值蒸發受影響）、Quartz（估值預期因拋售潮下修）、Business Insider（整理相關報導三個要點）、TechCrunch（Ramp 數據：AI 支出轉趨停滯）、Forbes（質疑 AI 是否值得其成本）、Bloomberg（策略師稱風險更大）同日跟進，僅標題可用，未見新增數字（Google News 各家）。
 - **2026-11-03 Tech Policy Press／Hacker News（387 分）：評論文章主張 SEC 應以保護公眾為由擋下 IPO**：作者為 AI 泡沫風險報告共同作者的智庫評論，非監管機關正式行動，具體法律論證未附，僅評論層級可用（[Tech Policy Press](https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/)；Hacker News）

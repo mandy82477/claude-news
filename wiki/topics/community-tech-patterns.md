@@ -29,11 +29,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **記憶與知識管理新增一例：rsc-harness 整合專案知識與工具存取**（2026-11-06）
-> - **記憶**：ericrisco/rsc-harness 用可審查安裝計畫把專案知識、工具存取慣例、274 個 skill 與強制規則整合進單一 meta-harness，見 [[topics/community-memory#2026-11]]。
+> **三個子頁同日更新：辯論式 multi-agent、官方記憶設計框架、架構圖外掛重新啟動一類**（2026-11-07）
+> - **Multi-agent**：roast-room 七人設小組即時辯論商業決策，見 [[topics/community-multi-agent#2026-11]]。
+> - **記憶**：Anthropic 官方部落格首次拆解 agent 記憶「編碼—整併—取回」三階段設計，見 [[topics/community-memory#2026-11]]。
+> - **介面**：dev.to 實測三款架構圖外掛，「跨 Repo 依賴可視化」重新啟動，見 [[topics/community-interfaces#2026-11]]。
 
 ---
 
@@ -51,13 +53,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
-| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-10-21 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-06 |
+| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-11-07 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-07 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-04 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-04 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-02 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-05 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-11-05 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-11-07 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 

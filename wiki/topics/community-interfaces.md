@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **行動裝置遠端控制新增一款跨端 P2P 加密方案**（2026-11-05）
-> - **liguobao/ds-harness-remote**：低延遲端到端加密 P2P，PC／行動／網頁皆可連回本機 Claude Code 等 agent 工作區，1,930★。
+> **「跨 Repo 依賴可視化」類別重新啟動**（2026-11-07）
+> - dev.to 作者實測三款 Claude Code 架構圖外掛（Floorplan／Archify／Understand Anything），逐一比較畫出的圖是否可信。
 
 ---
 
@@ -56,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### I ran 3 Claude Code architecture diagram tools on my repo：dev.to 實測 Floorplan／Archify／Understand Anything（2026-11-06）
+
+- **主線：** —
+- **核心模式：** 作者在跨 Python Lambda 後端、純 JS 網站、MCP 連接器等多個 repo 組成的專案上，同日實測三款以 Claude Code plugin 形式運作的架構圖／程式碼地圖外掛：Floorplan（畫出含端點與使用情境的應用地圖）、Archify、Understand Anything，逐一記錄各自畫出的圖是否可信。
+- **與既有模式的關係：** 重新啟動已移出模式概覽的「跨 Repo 依賴可視化」類別（原技巧為 blast radius 分析，[[topics/community-tech-patterns-archive#2026-06]]），首個新代表技巧；屬單一使用者體驗判讀，主線填 —。
+- **可信度註記：** dev.to 第一手實測文章，6 讚；三款外掛均為具名、可查證的 Claude Code plugin，惟實測者僅一人、單一專案，尚待第二方覆核。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/yahhi/i-ran-3-claude-code-architecture-diagram-tools-on-my-repo-heres-what-each-one-got-right-110n)
+- **成熟度：** ⏳ 新興（類別重新啟動，三款外掛各自仍為單一作者維護，尚無跨使用者比較之外的第二方驗證）
 
 #### liguobao/ds-harness-remote：P2P 加密遠端存取 Claude Code 等多款 agent 工作區（2026-11-05）
 

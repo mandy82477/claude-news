@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-06）
+> **本週衝擊**（2026-11-07）
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 > - 🟡 **GitHub Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段**（Blog/GitHub Copilot Changelog）——Claude Code 無對應整合，用 Xcode 開發 Apple 平台的人多一個選型考量點。
 
@@ -248,6 +248,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-07
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot code review 設定新增 REST／GraphQL API 管理，企業可從組織層級統一下放政策到各 repo；review overview 留言呈現同步更新；非編碼能力或定價異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot 用量儀表板的 Agent 採用率圖表新增 Chat 與 VS Code Agents 視窗，企業可橫向比較九種 Copilot 使用情境的採用狀況；屬用量分析功能，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub（週報彙整，非新事實）**：官方週報彙整本週更新，含已記錄之 JetBrains Air（11-03）、Xcode 公開預覽（11-05），另提 Agent Merge 等 PR 管理功能；不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
+- **Meta（分析文，非編碼工具）**：Meta Newsroom 介紹 Muse App 新增「spaces」個人化功能，可依描述建立客製互動體驗（如假期禮物追蹤、每日文字遊戲）；消費者個人化功能非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Meta Newsroom）
 
 #### 2026-11-06
 - **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot 用量指標 API 新增 code review 回饋細節與「已處理率」欄位，企業可追蹤 code review 建議被接受的比例；非編碼能力或定價異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）

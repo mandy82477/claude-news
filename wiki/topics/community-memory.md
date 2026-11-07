@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **記憶與知識管理新增一例：rsc-harness 整合專案知識與工具存取**（2026-11-06）
-> - **rsc-harness**：以可審查安裝計畫整合專案知識、工具存取、274 個 skill 與強制規則，依任務分三路徑；GitHub 518 星。
+> **官方首次公開 agent 記憶設計框架：編碼—整併—取回**（2026-11-07）
+> - Anthropic 研究部落格以海馬迴類比拆解記憶該留什麼、該忘什麼，HN 102 分、2 來源交叉報導。
 
 ---
 
@@ -65,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Anthropic Research：拆解 agent 記憶系統——編碼、整併（該留什麼、該忘什麼）、取回三階段設計框架（2026-11-07）
+
+- **主線：** —
+- **核心模式：** Anthropic 研究部落格提出為 agent 設計記憶系統的類人框架：仿海馬迴即時編碼經驗，區分哪些經驗該被保留、何時該整併或遺忘，再談取回時機，並以「人生只能回顧才看懂、卻必須向前活」的矛盾類比記憶設計本身的取捨。
+- **與既有模式的關係：** 補上「記憶與知識管理」官方一手的設計框架，與既有社群工具（claude-mem、projectmem 等，[[topics/community-memory#2026-10]]）並列比較——官方首次公開談「編碼—整併—取回」三階段式設計哲學，而非單一記憶工具的實作細節；官方框架泛用於各規模場景、非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** Anthropic 官方研究部落格一手來源；Hacker News 102 分，與 HN Repo Bridge 同日交叉報導（2 個來源）；本次摘要於機制細節處截斷，具體編碼／整併／取回判準未全載，僅可用摘要段落判讀。
+- **來源：** Hacker News ＋ HN Repo Bridge；[Anthropic Research](https://www.anthropic.com/research/components-of-agent-memory)
+- **成熟度：** ⏳ 新興（官方首次公開設計框架，具體機制細節待補，尚無社群實作驗證對照）
 
 #### ericrisco/rsc-harness：meta-harness 讀專案證據後提出可審查安裝計畫，整合知識、工具存取、274 個 skill 與強制規則（2026-11-06）
 

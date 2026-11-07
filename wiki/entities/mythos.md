@@ -62,7 +62,7 @@ Mythos 5.1 之後的下一代模型，目前只有一筆官方證實，其餘為
 | Anthropic 準備發布 Mythos 5.5（11-02）| TestingCatalog（僅標題） | ❓ 待查證 ⟨Q-01⟩ | 2026-11-22 |
 
 **懸置細節**
-- ⟨Q-01⟩ ❓ **待查證**（標 2026-11-08｜查 Claude Mythos 5.5、TestingCatalog｜複 2026-11-22）：TestingCatalog 2026-11-01 標題稱 Anthropic 準備發布 Mythos 5.5，原料無內文（僅標題），Mythos 為信任機構限定存取，發布方式與時程未載。
+- ⟨Q-01⟩ ❓ **待查證**（標 2026-11-07｜查 Claude Mythos 5.5、TestingCatalog｜複 2026-11-22）：TestingCatalog 2026-11-01 標題稱 Anthropic 準備發布 Mythos 5.5，原料無內文（僅標題），Mythos 為信任機構限定存取，發布方式與時程未載。
   - 來源：[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMijgFBVV95cUxNczIyQkU5ZzFYU2RPU0dZODhTNzNFd3ZfNTV4eTlJYzR6akVTVmhUM21sbzFQQnNaOVZBd2RhUnlOZXA1UFJ0X0NUbnEwWnNjX3lzUFN5WDJueE44MkJodVZRRHlncHBrQ2E2cGl0bmQyMzhKRW1nb3lMaDRxUnNXYlA4LUw1RWlSbHNEZmxn?oc=5)
 
 ---

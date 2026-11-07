@@ -33,13 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-06）
-> - **新增已知問題**：Claude Code 自動把使用者信箱塞進對外 HTTP 請求的 User-Agent（如 SEC API），HN 討論 1,485 分（[#107757](https://github.com/anthropics/claude-code/issues/107757)；🛡️ 組，與既有 #78431 同一現象不同 issue 號）、複製貼上功能故障（[#66192](https://github.com/anthropics/claude-code/issues/66192)，32 則留言、39 個讚；🧠 組）、功能請求：跨機器可攜式專案記憶（[#25739](https://github.com/anthropics/claude-code/issues/25739)，29 則留言、47 個讚；📂 組）、Analytics Admin API 查不到訂閱／OAuth 用戶（[#27780](https://github.com/anthropics/claude-code/issues/27780)，27 則留言、27 個讚；💰 組）。
-> - **高互動功能請求互動數更新**：關閉貼上文字自動收合（[#23134](https://github.com/anthropics/claude-code/issues/23134)，55 則留言、191 個讚；🧠 組）、串接 Claude.ai Projects 知識庫（[#2511](https://github.com/anthropics/claude-code/issues/2511)，55 則留言、668 個讚，全站今日讚數最高；📂／🔌 組）。
+> **最新動態**（2026-11-07）
+> - **新增已知問題／功能請求**：tmux 內終端機渲染錯亂，疊字覆蓋先前輸出（[#29937](https://github.com/anthropics/claude-code/issues/29937)，30 則留言、72 個讚；🔌 組）、功能請求：skills 目錄支援子資料夾分層（[#10238](https://github.com/anthropics/claude-code/issues/10238)，55 則留言、168 個讚；🧠 組）、功能請求：把 Claude.ai 對話上下文帶進 Claude Code（[#13843](https://github.com/anthropics/claude-code/issues/13843)，30 則留言、174 個讚；📂 組）。
 
 ---
 
@@ -136,8 +135,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（79 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
+### 🧠 行為與品質（80 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
 
+- 🔴 **未修復**｜**功能請求：skills 目錄支援子資料夾分層管理（GitHub issue #10238，累積 55 則留言、168 個讚，2026-11-06）**：目前所有 skill 檔案只能平鋪在單一層，無法用子資料夾分類；管理大量自訂 skills 的團隊受影響最明顯；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**複製貼上功能故障（GitHub issue #66192，累積 32 則留言、39 個讚，2026-11-06）**：官方尚未在 issue 裡說明修復進度或暫時繞過方式。
 - 🔴 **未修復**｜**Fable 5：回覆文字偶被誤顯示為摘要後的 thinking 區塊，該輪看起來無回應（GitHub issue #74558，累積 26 則留言、20 個讚，2026-11-04）**：環境為 Claude Code 2.1.201、`claude-fable-5` 模型；官方尚未說明是哪個機制造成。
 - 🔴 **未修復**｜**圖片處理失敗時「Image couldn't be processed」API 錯誤反覆發生，且每次失敗仍計入用量額度（GitHub issue #62466，累積 36 則留言、24 個讚，2026-11-02）**：圖片在後端無法處理時重複觸發同一錯誤而非一次失敗後停止，對話中常貼圖或處理截圖的使用者可能因此多耗用量；官方尚未回應。
@@ -247,7 +247,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（26 條未修復、2 條已修復、3 條拒修、1 條查無官方）
+### 📂 Session 與資料管理（27 條未修復、2 條已修復、3 條拒修、1 條查無官方）
 
 **Session 保存與記憶生命週期（彙整，細節見各原條目）**
 
@@ -259,6 +259,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 Windows Desktop 靜默清除紀錄：見母頁「現在還沒修好的」表列（#80444 等）與下方靜默資料遺失條目。
 - 讀者可做的事：靠 session 歷史回溯過去工作的人，自行定期備份 `~/.claude/projects`。
 
+- 🔴 **未修復**｜**功能請求：把 claude.ai 網頁版對話的上下文帶進 Claude Code 繼續工作（GitHub issue #13843，累積 30 則留言、174 個讚，2026-11-07）**：目前只能手動複製貼上；與跨 session 交接（#11455）、CLI／Desktop 對話同步（#28791）同屬延續性缺口，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：`/compact` 改為檔案化摘要並可選擇性還原（GitHub issue #17428，累積 45 則留言、117 個讚，2026-10-31）**：提議參考 Cursor 的 Dynamic Context Discovery，把摘要存成檔案、需要時再還原細節；官方尚未回應。
   - 備註：候選：記憶／context 格式取向，尚非有名字有規格的 format。
 - 🔴 **未修復**｜**明確設 `cleanupPeriodDays: 99999` 仍遭忽略，490 個 session 遭靜默刪除（GitHub issue #41458，26 則留言、11 讚，2026-10-29）**：官方尚未回應。
@@ -334,8 +335,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（96 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（97 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**tmux 內終端機渲染錯亂，文字疊字覆蓋先前輸出（Claude CLI 2.1.63，Ubuntu／alacritty 等終端機內跑 tmux，GitHub issue #29937，累積 30 則留言、72 個讚，2026-11-07）**：習慣在 tmux 裡跑 Claude Code 的使用者受影響；官方尚未回應或釐清觸發條件。
 - 🔴 **未修復**｜**功能請求：Desktop 支援自訂主題與強調色，追平 CLI 既有自訂主題系統（GitHub issue #79305，累積 28 則留言、88 個讚，2026-11-04）**：目前僅亮／暗（含高對比）兩色，多數現代深色模式幾乎無法分辨視窗；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude in Chrome 自 2026-09-18 起在 reddit.com 與 redd.it 上所有工具都被「safety restrictions」擋下，9/17 前正常（GitHub issue #95326，累積 28 則留言、39 個讚，2026-10-31）**：用 Claude in Chrome 讀 Reddit 的人拿不到頁面；官方未回應。
 - 🔴 **未修復**｜**Claude Code Desktop 內建瀏覽器忽略「Allow all websites」站台權限設定（GitHub issue #91495，累積 31 則留言、33 個讚，2026-11-05 互動數更新）**：已設全站允許的使用者仍會被逐站詢問；官方尚未回應。

@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-11-06）
-> The Times of India 跟進稱高盛禁用 Claude Code／GitHub 範圍達數千名行員；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
+> **最新企業採用異動**（2026-11-07）
+> NDTV Profit 跟進確認高盛禁用 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致（跨 3 媒體）；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
 
 ## 摘要
 
@@ -219,6 +219,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-07
+- **[媒體跟進，非新事實] NDTV Profit：高盛封鎖 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致**：報導未附精確人數，與 11-02 PYMNTS 首報、11-06 Times of India 跟進同屬同一禁令的規模補充，跨 3 媒體確認「數千名」規模但無精確數字（Google News/NDTV Profit）
 
 #### 2026-11-06
 - **[媒體跟進，補充規模] The Times of India：高盛禁用 Claude Code／GitHub 一說涉及數千名行員**：延續 11-02 PYMNTS 首報之全面禁用令，首次提供規模描述；標題另稱「after a period」，原文不可讀，時間點未見報導，詳見上方使用現況表 Goldman Sachs 列更新（Google News/The Times of India）

@@ -32,12 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-06）
-> - 官方[定價文件](https://platform.claude.com/docs/en/about-claude/pricing)新增 web search 計費規則：每次使用只算一次（不論回傳結果數），執行失敗的 web search 不計入用量；同批自頁面移除 Claude Haiku 3.5 的定價列（本頁現行模型表未列此型號，不影響現行牌價）。
+> **最新計費政策異動**（2026-11-07）
+> - 官方 [usage credits 說明頁](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 大改版（新增 21 段、移除 11 段）：新增「刪除帳戶即沒收剩餘 usage credits、不予退還」、auto-reload 措辭改寫為「餘額低於門檻時自動加購額度」；移除段落含舊版加值措辭與地區到期條款原文，細節見下方「當前生效的計費規則」。
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[#事故現在還在發生嗎]]。
 
 ## 現況
@@ -178,6 +178,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-11-07 官方 usage credits 說明頁改版｜刪除帳戶即沒收剩餘額度**：新增帳戶刪除不退 usage credits 規則；auto-reload 改寫為「餘額低於門檻自動加購」。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-07）
+- ❓ **待查證**（標 2026-11-07｜查 usage credits、Japan、expiration｜複 2026-11-21）｜**日本等地區額度 6 個月到期條款現況**：官方 11-07 改版移除此措辭所在段落，新版是否沿用相同地區規則或已改寫未見明文。
 - **✅ 2026-11-06 官方定價文件新增｜web search 用量計費規則補充**：每次 web search 使用只算一次，不論回傳結果數；執行過程中出錯的 web search 不計入用量。同批自頁面移除 Claude Haiku 3.5 定價列（來源：[官方定價文件](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測，2026-11-06）
 - **✅ 2026-10-30 官方定價頁新增｜Enterprise／API 可依用量與承諾支出談客製折扣**：官方 Plans & Pricing 頁新增問答，載明 Enterprise 與 API 定價可依用量與承諾支出（committed-spend）客製化、提供數量折扣；具體折扣門檻與幅度未公開，需洽業務（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-30）
 - **✅ 2026-10-16 查證｜Fast mode 不再標記「research preview」**：官方定價頁拿掉「in research preview」字樣，價格數字不變（來源：[官方定價頁](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測）

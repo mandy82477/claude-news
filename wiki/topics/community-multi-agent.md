@@ -31,12 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-21
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **Agent 規模化添託管式取向：Omnara（開源版 Claude Managed Agents 替代）**（2026-10-21）
-> - **Omnara**：Show HN（HN 98 分、4 個獨立管道報導），把執行迴圈、沙盒與密鑰放進託管層，不必自己在本機開並行 agent。
-> - **tmux 具名 session 工作流**（10-19）：具名、可重連 session 跑多個 agent 的實務設定，作者實測跑到第四個 agent 即觸頂。
+> **Multi-agent 架構添「固定人設小組辯論」取向：roast-room**（2026-11-07）
+> - **nateherkai/roast-room**：七位具名風格 AI 顧問圍桌即時辯論商業決策，GitHub 1,963★。
+> - **AFK-surf/Comma**：開源自架常駐 agent，主打取代 Muse／Dots／Town 等託管式服務，524★。
 
 ---
 
@@ -58,7 +58,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **機制細節**
 - **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器；omnigent 把協調邏輯與底層 harness（Claude Code／Codex／Cursor／Pi）解耦，換 harness 不必重寫協作邏輯
+- **Multi-agent 架構（辯論式）**：roast-room 用多個固定人設互相詰問同一個決策，而非分工拆任務
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
+- **確定性 Agent 框架**：Comma 主張自架常駐 agent 取代 Muse／Dots／Town 等託管服務，方向與 Omnara（託管式，2026-10-21）相反
 
 ---
 
@@ -134,6 +136,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### 2026-11
+
+#### nateherkai/roast-room：七位 AI 風格顧問圍桌辯論你的商業決策（2026-11-07）
+
+- **主線：** —
+- **核心模式：** 在 Claude Code 中設定七個固定人設（Bezos、Paul Graham、Hormozi、Gary Vee、Dan Martell、Gino Wickman、Buffett 風格），圍桌即時辯論使用者提出的商業決策，模擬多方意見衝突後再給結論；GitHub Search 1,963★。
+- **與既有模式的關係：** 補上「Multi-agent 架構」一個「固定人設小組辯論」取向——既有代表技巧（Claude Squad、ccteams 等）多走任務分工協調，本則用多個對立觀點的具名人設互相詰問同一個決策；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,963★），無 forks／issues／近期 commit 佐證可查，未另行查證；星數規模較大但單篇社群實測未見，列為新興並待後續驗證。
+- **來源：** GitHub Search；[GitHub](https://github.com/nateherkai/roast-room)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者專案，尚無第三方量化採用數據）
+
+#### AFK-surf/Comma：開源常駐型 agent，相容 Claude Code／Codex，主打自架取代託管式服務（2026-11-07）
+
+- **主線：** —
+- **核心模式：** 開源、可自架的常駐（always-on）、主動（proactive）、無固定 session 邊界的通用 agent 框架，內建瀏覽器操作、電腦控制、檔案存取與遠端控制，相容 ChatGPT／Codex 與 Claude Code；作者定位為 Muse、Dots、Town 等商用託管 agent 服務的自架替代方案。
+- **與既有模式的關係：** 補上「確定性 Agent 框架」一個「自架常駐通用 agent」取向——與 10-21 Omnara（[[topics/community-multi-agent#2026-10]]）方向相反：Omnara 把執行迴圈交給託管平台，本則反過來主張自架取代託管式服務；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（524★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/AFK-surf/Comma)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一專案，尚無第三方量化採用數據）
 
 ### 2026-10
 

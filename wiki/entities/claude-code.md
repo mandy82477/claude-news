@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **最新動態**（2026-11-06）
-> - **v2.1.319**：⚠️ auto mode 遙測／功能旗標關閉時改一律詢問或拒絕，無遷移期；SDK（typescript sdk-v1.6.0／python v2.6.0）同步新增 ramp limit／External Key 錯誤代碼與強制全裝置登出（見 [[entities/claude-code-releases]]）。
-> - **新增已知問題**：Claude Code 自動把信箱塞進對外請求 User-Agent（HN 1,485 分，見 [[entities/claude-code-known-issues]]）、複製貼上功能故障、跨機器可攜式專案記憶、Analytics Admin API 查不到訂閱／OAuth 用戶（見 [[entities/claude-code-known-issues]]）。
-> - **高互動功能請求更新**：關閉貼上收合（191 讚）、串接 Claude.ai Projects 知識庫（668 讚，全站最高）（見 [[entities/claude-code-known-issues]]）。
+> **最新動態**（2026-11-07）
+> - **新增已知問題／功能請求**：tmux 內終端機渲染錯亂（[#29937](https://github.com/anthropics/claude-code/issues/29937)，🔌 組）、功能請求支援 skills 子資料夾分層（[#10238](https://github.com/anthropics/claude-code/issues/10238)，🧠 組）、功能請求把 claude.ai 對話上下文帶進 Claude Code（[#13843](https://github.com/anthropics/claude-code/issues/13843)，📂 組）（見 [[entities/claude-code-known-issues]]）。
+> - **文件異動**：桌面版文件再增字（段落數超限無法逐段比對）；Help Center release notes 移除「Claude Code model configuration」段，待查證（見 [[entities/claude-code-features]]）。
+> - **近期報導新增（尚待官方佐證）**：Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰（FourWeekMBA＋Pasquale Pillitteri，僅標題）。
 
 ---
 
@@ -48,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-06 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-07 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-06 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-04 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-07 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的
@@ -103,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-11-07｜查 自動設定、API 金鑰）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）：兩篇低流量轉述來源稱雲端開新任務可自動配置，省去手動初始化，官方文件與 changelog 未見對應條目。
 - ❓ **待查證**（標 2026-11-06｜查 mean to Claude、Don't Be Mean）｜**Forbes：Anthropic 更新使用規範，其中一條要求使用者別對 Claude 說話太差**（Google News／Forbes，2026-11-06 報導，僅標題可用）：規範全文、生效時間與完整清單均未見官方確認。
 - **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足
 - **社群工具聲稱可讓 Max $20 方案用量「擴大 50 倍」**（[muaaz9329/cheap-ag](https://github.com/muaaz9329/cheap-ag)，186★，2026-11-01）：單一 GitHub repo 宣稱「50x your Claude usage」，未附測試方法或與官方用量上限的對照數據，證據薄弱；計費規則另見 [[entities/pricing]]。

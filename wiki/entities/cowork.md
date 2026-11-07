@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（已併入 Claude app）
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code-known-issues]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
-> **最新動態**（2026-10-23）
-> 官方查證：Chrome 側邊欄仍是 beta；Pro／Max 新任務自 10-06 起一律雲端執行，Team 為 web／mobile beta。
+> **最新動態**（2026-11-07）
+> Help Center release notes 新增「用專案整理任務」段落（僅標題，細節未載）；Chrome 側邊欄、雲端執行範圍仍以 10-23 查證為準。
 
 ---
 
@@ -71,6 +71,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 - **Chrome 側邊欄執行**（官方 2026-08-12 部落格）：可在瀏覽器側邊欄直接操作 Cowork，不需切到桌面應用程式。
 - **內建瀏覽器**：多家媒體轉述交叉確認，尚未取得官方原文。
 - **第三方 LLM 接入**（2026-05-04，社群自行發現、官方未曾公告）：Cowork／Desktop 可接任意第三方模型，含 OpenAI、Gemini、本地模型與企業閘道（Bedrock／Vertex／Foundry）。
+- **用專案整理任務**（Help Center release notes，2026-11-07 查，僅標題）：release notes 新增「Organize your tasks with projects in Claude Cowork」段，內容未載，待完整說明補齊。
 
 ## 相關議題
 
@@ -87,7 +88,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 - [Quoting Felix Rieseberg](https://simonwillison.net/2026/Oct/5/felix-rieseberg/)（Blog／Simon Willison，2026-10-05，轉引 Anthropic 工程師說明架構轉雲端原因）
 - [r/ClaudeAI：本機 Cowork VM 何時移除](https://www.reddit.com/r/ClaudeAI/comments/1wz56ih/will_claude_desktop_eventually_remove_the_local/)（2026-10-06，0 留言）
-- [Claude Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（官方文件變更偵測，2026-09-25 查，非新聞報導）
+- [Claude Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（官方文件變更偵測，2026-11-07 查，非新聞報導；另見 2026-09-25 查）
 - [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17；HN Repo Bridge 收錄，HN 討論 226 分；Simon Willison 部落格轉引）
 - Google News／Reuters、TechCrunch、Axios、Fortune、VentureBeat、Computerworld（2026-09-17，同事件媒體報導，僅標題／框架可用）
 - Help Center release notes（2026-08-25，跨介面記憶）
@@ -100,6 +101,7 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-07 | Help Center release notes 新增「用專案整理任務」段落（僅標題，細節未載） |
 | 2026-10-23 | 官方查證：Chrome 側邊欄仍 beta；Pro／Max 各介面皆雲端、10-06 起新任務一律雲端；Team beta、Enterprise 需管理員開（[來源](https://support.claude.com/en/articles/15520349)） |
 | 2026-10-06 | Simon Willison 部落格轉引 Anthropic 工程師 Felix Rieseberg 說明架構轉雲端原因（省硬碟電池、闔筆電不中斷）；r/ClaudeAI 使用者追問本機殘留 VM 何時釋放硬碟空間，官方未答 |
 | 2026-09-25 | Help Center release notes 新增段落確認 Cowork 進駐每個對話，可在任何對話（含 Claude Code、Artifact 介面）直接要求設計、簡報或文件 |

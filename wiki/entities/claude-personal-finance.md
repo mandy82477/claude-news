@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 功能（Claude App 專屬）
 **首次出現：** 2026-11-05
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-07
+**最後新聞更新：** 2026-11-07
 
-> **最新動態**（2026-11-06）
-> Anthropic 2026-11-05 推出 Personal Finance beta：可連結銀行、信用卡、貸款與投資帳戶，供 Claude 直接分析消費狀況；Reuters、TechCrunch、9to5Mac 同日報導，Claude Help Center release notes 同步新增對應段落。方案範圍、資料存取邊界與安全機制官方尚未載明。
+> **最新動態**（2026-11-07）
+> Yahoo Finance 報導明確界線：可連結銀行、信用卡與投資帳戶分析消費，但不提供投資建議。方案範圍、資料存取邊界與安全機制官方仍未載明。
 
 ---
 
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Anthropic 於 2026-11-05 推出 **Personal Finance** beta，讓使用者把銀行、信用卡、貸款與投資帳戶連結進 Claude，由 Claude 直接分析使用者的消費狀況；Reuters、TechCrunch、9to5Mac 同日報導，TechCrunch 說明這讓 Claude 能直接分析使用者的消費狀況。Claude Help Center release notes 同日新增對應段落（查證 2026-11-06），原文片段：「We're rolling out Personal Finance, a beta that lets you link your bank, credit card, loan, and investment accounts to Claude」（官方原文於此處截斷，完整說明未載）。
 
-**目前只能確認這些（細節未載）：** 功能名稱、推出日期、帳戶串接的四個類別（銀行、信用卡、貸款、投資）、Claude 可用這些資料分析消費。**尚未確認：** 適用方案（Free／Pro／Max／Team／Enterprise）、資料存取與儲存邊界、串接機構範圍、是否僅限美國、關閉／解除授權方式；官方文件尚未查到完整頁面。
+**目前只能確認這些（細節未載）：** 功能名稱、推出日期、帳戶串接的四個類別（銀行、信用卡、貸款、投資）、Claude 可用這些資料分析消費、**明確不提供投資建議**（Yahoo Finance，2026-11-07）。**尚未確認：** 適用方案（Free／Pro／Max／Team／Enterprise）、資料存取與儲存邊界、串接機構範圍、是否僅限美國、關閉／解除授權方式；官方文件尚未查到完整頁面。
 
 ## 熱度與試用價值
 
@@ -67,6 +67,7 @@ Anthropic 於 2026-11-05 推出 **Personal Finance** beta，讓使用者把銀�
 
 - **帳戶連結**：銀行、信用卡、貸款、投資帳戶四類，官方未附完整清單或支援機構範圍。
 - **消費分析**：連結後 Claude 可直接分析使用者的消費狀況（TechCrunch 說明，官方原文未附細節）。
+- **不提供投資建議**（Yahoo Finance，2026-11-07）：功能定位為消費分析工具，明確劃出與理財顧問的界線；是否逐日報導方自行歸納或有官方原文佐證未載。
 
 ## 相關議題
 
@@ -79,10 +80,13 @@ Anthropic 於 2026-11-05 推出 **Personal Finance** beta，讓使用者把銀�
 - Google News／TechCrunch「Claude can now analyze your spending with its new Personal Finance tool」（2026-11-05，僅標題可用）
 - Google News／9to5Mac「Anthropic upgrades Claude with new Personal Finance feature」（2026-11-05，僅標題可用）
 - Google News／Yahoo Tech「Anthropic Just Gave Claude Access to Your Bank Accounts – Here's What It Can See」（2026-11-06，僅標題可用，無新增細節，同一事件追加媒體）
+- Google News／Yahoo Finance「Anthropic's Claude Can Now Link Bank Accounts and Analyze Transactions But Won't Offer Investment Advice」（2026-11-07，僅標題可用）
 - [[news/2026-11-06]]
+- [[news/2026-11-07]]
 
 ## 歷史記錄
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-07 | Yahoo Finance 報導明確界線：可連結銀行、信用卡與投資帳戶分析消費，但不提供投資建議。 |
 | 2026-11-05 | 建頁。Anthropic 推出 Personal Finance beta：可連結銀行／信用卡／貸款／投資帳戶供分析消費；Reuters、TechCrunch、9to5Mac 同日報導，Help Center 同步新增段落。 |

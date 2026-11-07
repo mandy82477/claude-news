@@ -403,3 +403,8 @@
 {"id": "H-02df2d", "closed": "2026-11-05", "status": "done", "by": "開發實務", "result": "功能記者 2026-11-02 轉知"}
 {"id": "H-98f96c", "closed": "2026-11-06", "status": "done", "by": "功能", "result": "功能記者 2026-11-06 ingest 回報已處理"}
 {"id": "H-6872cb", "opened": "2026-11-06", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "patterns 樹（community-memory）新增節點 ericrisco/rsc-harness（2026-11-06），請評估 official-community-gap 產品化矩陣是否新增列", "status": "open"}
+{"id": "H-6872cb", "closed": "2026-11-07", "status": "done", "by": "功能", "result": "功能記者 2026-11-07 ingest 回報已處理"}
+{"id": "H-872580", "opened": "2026-11-07", "from": "功能", "to": "商業", "page": "entities/pricing", "note": "Help Center release notes 新增兩段屬企業計費功能：①Enterprise 專案可標既有收費代碼/charge code／client-matter；②依成本代碼追蹤花費（beta）。建議併入 entities/pricing 或 enterprise-tool-tracker", "status": "open"}
+{"id": "H-96b5cc", "opened": "2026-11-07", "from": "功能", "to": "安全政策", "page": "topics/anthropic-government-policy", "note": "Help Center release notes 新增「How Claude marks AI-generated content」段（AI 生成內容標記機制），屬內容溯源/政策議題，功能記者未收錄", "status": "open"}
+{"id": "H-595d07", "opened": "2026-11-07", "from": "安全政策", "to": "功能", "page": "entities/claude-code-known-issues", "note": "「是，並不要再問」選項外洩密鑰涉及功能面確認對話框選項設計，請評估是否需同步收錄一行", "status": "open"}
+{"id": "H-d5ce8b", "opened": "2026-11-07", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 community-multi-agent 新增「固定人設小組辯論」(roast-room)與「確定性 Agent 框架」(Comma)兩個新代表技巧，community-interfaces 重新啟動「跨 Repo 依賴可視化」類別，請評估 official-community-gap 產品化矩陣是否新增列", "status": "open"}
