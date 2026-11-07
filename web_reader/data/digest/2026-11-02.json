@@ -486,11 +486,6 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing-incidents",
-      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
-      "pageType": "entity"
-    },
-    {
       "id": "community-guardrails",
       "name": "社群做法：規則強制、審查與安全",
       "pageType": "topic"

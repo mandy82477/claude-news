@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-06"
 last_news_update: "2026-11-06"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 1
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 1
 inbound_links: 44
 attribution_count: 69
 attribution_last: "2026-11-06"

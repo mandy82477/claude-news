@@ -8,11 +8,11 @@ last_updated: "2026-10-24"
 last_news_update: "2026-10-24"
 status_main: "beta"
 matrix_role: "產品"
-days_since_news: 15
+days_since_news: 14
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 15
+days_since_news_subtree: 14
 inbound_links: 4
 attribution_count: 2
 attribution_last: "2026-10-24"

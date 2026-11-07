@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-06-20"
 status_main: "beta"
 matrix_role: "追蹤頁"
-days_since_news: 141
+days_since_news: 140
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 141
+days_since_news_subtree: 140
 inbound_links: 4
 attribution_count: 0
 attribution_last: null

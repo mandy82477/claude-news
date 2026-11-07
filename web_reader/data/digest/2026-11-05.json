@@ -527,11 +527,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -554,11 +549,6 @@
     {
       "id": "community-integrations",
       "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
       "pageType": "topic"
     },
     {

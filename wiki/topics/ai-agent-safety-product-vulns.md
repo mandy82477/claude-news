@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-06"
-last_news_update: "2026-11-06"
+last_updated: "2026-11-07"
+last_news_update: "2026-11-07"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 19
-attribution_count: 29
-attribution_last: "2026-11-06"
+attribution_count: 35
+attribution_last: "2026-11-07"
 top_source: "google-news"
-pending_count: 20
+pending_count: 21
 pending_overdue: 0
 pending_next_review: "2026-11-11"
 pending_signalled: 3
