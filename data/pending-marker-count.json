@@ -1,7 +1,7 @@
 {
-  "count": 212,
-  "updated": "2026-11-02",
-  "note": "第 24 波 pricing 拆頁：3 筆換 slug（entities/pricing→entities/pricing-incidents）",
+  "count": 223,
+  "updated": "2026-11-08",
+  "note": "W45 週度回顧：#107757／#78431 查實 v2.1.317 已加送出信箱前詢問，移除懸置標記",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -26,14 +26,6 @@
     {
       "key": "entities/claude-code-archive::2026-08-09::governor、token 浪費",
       "label": "entities/claude-code-archive（標 2026-08-09｜查 Governor、token 浪費）"
-    },
-    {
-      "key": "entities/claude-code-features::2026-10-25::mcp tasks、elicitations",
-      "label": "entities/claude-code-features（標 2026-10-25｜查 MCP Tasks、Elicitations）"
-    },
-    {
-      "key": "entities/claude-code-features::2026-10-24::`local sessions on managed devices`、devbox",
-      "label": "entities/claude-code-features（標 2026-10-24｜查 `Local sessions on managed devices`、devbox）"
     },
     {
       "key": "entities/claude-code-known-issues::2026-10-28::v2.1.311、skip permissions",
@@ -62,6 +54,10 @@
     {
       "key": "entities/claude-code-known-issues::2026-11-01::`128 mb、request size`",
       "label": "entities/claude-code-known-issues（標 2026-11-01｜查 `128 MB、request size`）"
+    },
+    {
+      "key": "entities/claude-code-known-issues::2026-11-05::1xop1wm、activated",
+      "label": "entities/claude-code-known-issues（標 2026-11-05｜查 1xop1wm、activated）"
     },
     {
       "key": "entities/claude-code-known-issues::2026-10-27::german、1xgvuu5",
@@ -116,20 +112,12 @@
       "label": "entities/claude-code-known-issues（標 2026-08-09｜查 Linux 沙箱、隱性故障）"
     },
     {
-      "key": "entities/claude-code-releases::2026-10-21::vertex-sdk-v1.0.0、取樣參數",
-      "label": "entities/claude-code-releases（標 2026-10-21｜查 vertex-sdk-v1.0.0、取樣參數）"
-    },
-    {
       "key": "entities/claude-code::2026-09-08::ios app、設定區塊",
       "label": "entities/claude-code（標 2026-09-08｜查 iOS App、設定區塊）"
     },
     {
-      "key": "entities/claude-code::2026-10-21::old chat、warns you",
-      "label": "entities/claude-code（標 2026-10-21｜查 old chat、warns you）"
-    },
-    {
-      "key": "entities/claude-code::2026-10-21::bedrock、schema-enforced",
-      "label": "entities/claude-code（標 2026-10-21｜查 Bedrock、schema-enforced）"
+      "key": "entities/claude-code::2026-11-06::mean to claude、don't be mean",
+      "label": "entities/claude-code（標 2026-11-06｜查 mean to Claude、Don't Be Mean）"
     },
     {
       "key": "entities/claude-code::2026-10-15::nested sessions",
@@ -146,6 +134,10 @@
     {
       "key": "entities/claude-duet::2026-10-26::[[entities/claude-duet]]、rogue",
       "label": "entities/claude-duet（標 2026-10-26｜查 [[entities/claude-duet]]、rogue）"
+    },
+    {
+      "key": "entities/claude-science::2026-11-06::cell structure、scientists use",
+      "label": "entities/claude-science（標 2026-11-06｜查 cell structure、scientists use）"
     },
     {
       "key": "entities/fable-5::2026-10-25::readies model、intentions better",
@@ -190,10 +182,6 @@
     {
       "key": "entities/mythos::2026-10-29::sentinelone、wayfinder",
       "label": "entities/mythos（標 2026-10-29｜查 SentinelOne、Wayfinder）"
-    },
-    {
-      "key": "entities/mythos::2026-10-24::mythos 5.1",
-      "label": "entities/mythos（標 2026-10-24｜查 Mythos 5.1）"
     },
     {
       "key": "entities/opencode::2026-10-19::[[entities/opencode]]、帳戶餘額歸零",
@@ -260,6 +248,14 @@
       "label": "entities/tom-brown（標 2026-10-09｜查 woke、另一位共同創辦人）"
     },
     {
+      "key": "topics/ai-agent-safety-cyber::2026-11-04::cert-in、claude mythos",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-04｜查 CERT-In、Claude Mythos）"
+    },
+    {
+      "key": "topics/ai-agent-safety-cyber::2026-11-02::cybersecuritynews、impersonate",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-02｜查 CyberSecurityNews、impersonate）"
+    },
+    {
       "key": "topics/ai-agent-safety-cyber::2026-10-31::jiahaoshao1、訓練更大模型",
       "label": "topics/ai-agent-safety-cyber（標 2026-10-31｜查 jiahaoshao1、訓練更大模型）"
     },
@@ -274,10 +270,6 @@
     {
       "key": "topics/ai-agent-safety-cyber::2026-10-26::doge、washington post",
       "label": "topics/ai-agent-safety-cyber（標 2026-10-26｜查 DOGE、Washington Post）"
-    },
-    {
-      "key": "topics/ai-agent-safety-cyber::2026-10-23::21-year、nearly 500",
-      "label": "topics/ai-agent-safety-cyber（標 2026-10-23｜查 21-year、nearly 500）"
     },
     {
       "key": "topics/ai-agent-safety-cyber::2026-10-21::ai-linked cyberattacks",
@@ -298,6 +290,26 @@
     {
       "key": "topics/ai-agent-safety-cyber::2026-09-14::rescana、frkoo、trufflehog",
       "label": "topics/ai-agent-safety-cyber（標 2026-09-14｜查 Rescana、frkoo、TruffleHog）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-05::dispatch、跨企業邊界",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-05｜查 Dispatch、跨企業邊界）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-05::postman、codex",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-05｜查 Postman、Codex）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-04::cybersecuritynews、token hunt",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-04｜查 CyberSecurityNews、Token Hunt）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-04::orcarouter、claudy day",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-04｜查 OrcaRouter、Claudy Day）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-03::binance、coding assignment、求職測試題",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-03｜查 Binance、coding assignment、求職測試題）"
     },
     {
       "key": "topics/ai-agent-safety-product-vulns::2026-10-30::2.1.313、ssh backdoor",
@@ -360,12 +372,12 @@
       "label": "topics/ai-agent-safety-product-vulns（標 2026-08-12｜查 deep_think、_can1357）"
     },
     {
-      "key": "topics/ai-agent-safety-prompt-injection::2026-10-26::downloads、codex",
-      "label": "topics/ai-agent-safety-prompt-injection（標 2026-10-26｜查 Downloads、Codex）"
+      "key": "topics/ai-agent-safety-prompt-injection::2026-11-02::homeland411、malicious rules",
+      "label": "topics/ai-agent-safety-prompt-injection（標 2026-11-02｜查 Homeland411、malicious rules）"
     },
     {
-      "key": "topics/ai-agent-safety-prompt-injection::2026-10-22::flowise、workflow hijacking",
-      "label": "topics/ai-agent-safety-prompt-injection（標 2026-10-22｜查 Flowise、workflow hijacking）"
+      "key": "topics/ai-agent-safety-prompt-injection::2026-10-26::downloads、codex",
+      "label": "topics/ai-agent-safety-prompt-injection（標 2026-10-26｜查 Downloads、Codex）"
     },
     {
       "key": "topics/ai-agent-safety-prompt-injection::2026-10-20::microsoft、prompt injection、hijack",
@@ -394,6 +406,10 @@
     {
       "key": "topics/ai-agent-safety-prompt-injection::2026-08-27::ars technica、unowned code、hermes",
       "label": "topics/ai-agent-safety-prompt-injection（標 2026-08-27｜查 Ars Technica、unowned code、Hermes）"
+    },
+    {
+      "key": "topics/ai-agent-safety::2026-11-04::provable inference、roy rinberg",
+      "label": "topics/ai-agent-safety（標 2026-11-04｜查 provable inference、Roy Rinberg）"
     },
     {
       "key": "topics/ai-eval-boundary-incidents::2026-10-24::alignment-assessment-ukaisi、inject malicious code",
@@ -532,6 +548,10 @@
       "label": "topics/competitor-landscape（標 2026-08-10｜查 The Information、留存率）"
     },
     {
+      "key": "topics/competitor-landscape::2026-11-03::cogent security、vr-1.1",
+      "label": "topics/competitor-landscape（標 2026-11-03｜查 Cogent Security、VR-1.1）"
+    },
+    {
       "key": "topics/competitor-landscape::2026-08-13::grok、spacex",
       "label": "topics/competitor-landscape（標 2026-08-13｜查 Grok、SpaceX）"
     },
@@ -546,6 +566,14 @@
     {
       "key": "topics/market-lessons::2026-10-05::meta、microsoft、減少內部使用",
       "label": "topics/market-lessons（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
+    },
+    {
+      "key": "topics/market-signals-compute::2026-11-04::terawulf、信用擔保",
+      "label": "topics/market-signals-compute（標 2026-11-04｜查 TeraWulf、信用擔保）"
+    },
+    {
+      "key": "topics/market-signals-compute::2026-11-02::8,950億美元、租賃協議",
+      "label": "topics/market-signals-compute（標 2026-11-02｜查 8,950億美元、租賃協議）"
     },
     {
       "key": "topics/market-signals-compute::2026-10-29::texas、bond",
@@ -664,6 +692,22 @@
       "label": "topics/market-signals-customers（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
     },
     {
+      "key": "topics/market-signals-ipo::2026-11-06::拋售潮、1兆美元",
+      "label": "topics/market-signals-ipo（標 2026-11-06｜查 拋售潮、1兆美元）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-03::遞迴自我改進、書面承認",
+      "label": "topics/market-signals-ipo（標 2026-11-03｜查 遞迴自我改進、書面承認）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-03::人事成本、股權薪酬",
+      "label": "topics/market-signals-ipo（標 2026-11-03｜查 人事成本、股權薪酬）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-02::revenue-per-compute、1.72x",
+      "label": "topics/market-signals-ipo（標 2026-11-02｜查 revenue-per-compute、1.72x）"
+    },
+    {
       "key": "topics/market-signals-ipo::2026-10-31::blackstone、bb 級信評、投資級",
       "label": "topics/market-signals-ipo（標 2026-10-31｜查 Blackstone、BB 級信評、投資級）"
     },
@@ -682,10 +726,6 @@
     {
       "key": "topics/market-signals-ipo::2026-10-26::年化成長、客戶集中度",
       "label": "topics/market-signals-ipo（標 2026-10-26｜查 年化成長、客戶集中度）"
-    },
-    {
-      "key": "topics/market-signals-ipo::2026-10-21::sec edgar、807億美元",
-      "label": "topics/market-signals-ipo（標 2026-10-21｜查 SEC EDGAR、807億美元）"
     },
     {
       "key": "topics/market-signals-ipo::2026-10-18::public benefit fund、股東會表決",
@@ -834,6 +874,10 @@
     {
       "key": "topics/recursive-self-improvement::2026-10-10::jacob coxon、間諜滲透",
       "label": "topics/recursive-self-improvement（標 2026-10-10｜查 Jacob Coxon、間諜滲透）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-11-06::metr、anthropic-ai-rd-acceleration",
+      "label": "topics/recursive-self-improvement（標 2026-11-06｜查 METR、anthropic-ai-rd-acceleration）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-10-05::nyc ai safety hearing、jacob coxon testimony、gop senator alarmist",
