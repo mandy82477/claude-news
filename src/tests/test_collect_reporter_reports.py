@@ -262,6 +262,30 @@ class TestParsing(unittest.TestCase):
         self.assertFalse(mod.mentioned("https://r.test/z", "Need some security advice", set(), text, pk))
 
 
+class TestHandoffVoidNotClosed(unittest.TestCase):
+    """「不適用：H-x（續留意下一輪）」與「已處理」逐行相鄰（2026-10-30 功能記者回報原形）時，
+    不適用那筆不得被當成已處理而結案，後面的已處理也不得被誤算成不適用。"""
+
+    VAL = (
+        "\n- 已處理：H-d06051（三處矛盾已修）\n"
+        "- 已處理：H-bf1dd0（改列「部分對應」，無出處句已移除）\n"
+        "- 不適用：H-6b29fd（今日無對應回報，續留意下一輪）\n"
+        "- 已處理（評估結論：不開新列）：H-7d0344（三者各自評估）"
+    )
+
+    def test_bullet_void_not_in_closes(self):
+        ids = [h for h, _ in mod.handoff_closes(self.VAL)]
+        self.assertEqual(ids, ["H-d06051", "H-bf1dd0", "H-7d0344"])
+
+    def test_voids_only_the_void_entry(self):
+        self.assertEqual(mod.handoff_voids(self.VAL), ["H-6b29fd"])
+
+    def test_inline_separator_forms_still_work(self):
+        v = "已處理 1 筆: H-abc123（補了 X） ／ 不適用 1 筆: H-def456（續留意下一輪）"
+        self.assertEqual(mod.handoff_closes(v), [("H-abc123", "補了 X")])
+        self.assertEqual(mod.handoff_voids(v), ["H-def456"])
+
+
 class TestContractWithShared(unittest.TestCase):
     """shared.md「回報格式」code block 的欄名＝收報腳本認得的欄名。改一邊這裡紅。"""
 

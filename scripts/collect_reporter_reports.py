@@ -346,24 +346,41 @@ def _balanced(s: str) -> str | None:
     return s[1:].split("\n")[0].strip()
 
 
+# 轉知處置的「條目」邊界：行首（含 - * • 項目符號）或 ／ 之後緊接「已處理／不適用」。
+_HO_ENTRY_SPLIT = re.compile(r"(?:\n[ \t]*[-*•]?[ \t]*|[ \t]*[／/][ \t]*)(?=已處理|不適用)")
+
+
+def _handoff_entries(val: str) -> list[tuple[str, str]]:
+    """把轉知處置切成 [(種類, 條目內文)]，種類只有「已處理」「不適用」。
+
+    逐條判種類：每個 H-id 只屬於它所在那一條的開頭關鍵字，不會因為前後條的字樣相鄰而被併進別條。
+    """
+    out = []
+    for piece in _HO_ENTRY_SPLIT.split("\n" + (val or "").replace("\r\n", "\n")):
+        piece = piece.lstrip(" \t\n-*•")
+        for kind in ("已處理", "不適用"):
+            if piece.startswith(kind):
+                out.append((kind, piece[len(kind):]))
+                break
+    return out
+
+
 def handoff_closes(val: str) -> list[tuple[str, str]]:
-    """「已處理 N 筆: H-a, H-b（補了 X）」→ [(id, result)]。只取「已處理」段，「不適用」段留給主編判斷。"""
+    """「已處理 N 筆: H-a, H-b（補了 X）」→ [(id, result)]。只取「已處理」條，「不適用」條留給主編判斷。"""
     if _is_none(val):
         return []
-    m = re.search(r"已處理(.*?)(?:／\s*不適用|/\s*不適用|\n\s*不適用|$)", val, re.S)
-    if not m:
-        return []
-    seg = m.group(1)
     out = []
-    for hm in _HID.finditer(seg):
-        result = _balanced(seg[hm.end():].lstrip()) or ""
-        out.append((hm.group(0), result))
+    for kind, seg in _handoff_entries(val):
+        if kind != "已處理":
+            continue
+        for hm in _HID.finditer(seg):
+            result = _balanced(seg[hm.end():].lstrip()) or ""
+            out.append((hm.group(0), result))
     return out
 
 
 def handoff_voids(val: str) -> list[str]:
-    m = re.search(r"不適用(.*)$", val or "", re.S)
-    return _HID.findall(m.group(1)) if m else []
+    return [h for kind, seg in _handoff_entries(val) if kind == "不適用" for h in _HID.findall(seg)]
 
 
 def split_warnings(val: str) -> list[str]:
