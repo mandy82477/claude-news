@@ -14,6 +14,8 @@ disable-model-invocation: true
 
 依序執行，全部讀 `.claude/skills/wiki-lint-sweeps/references/sweeps.md` 的對應節，不在此重述做法：
 
+0. **中途斷掉的雲端 lint**——`wiki/log.md` 最近一筆是 `### YYYY-MM-DD Lint 檢查點 N（進行中）`、其後沒有同日的 `## YYYY-MM-DD Lint` 紀錄＝雲端那輪死在檢查點 N 之後。照 `.claude/skills/wiki-lint/SKILL.md` 從該檢查點紀錄的「下一步」接跑到步驟 9（「已完成」列的步驟不重跑），補寫完整的步驟 8 紀錄；收尾併入下方同一個 push。完全沒有檢查點紀錄、`src/logs/task_scheduler.log` 卻有當週 `[cloud weekly-wiki-lint-cloud STARTED …]` 無後續＝死在檢查點 1 之前，整輪本機重跑
+
 1. **5b 跨家任務榜單週更**——雲端該步已記數字則跳過；記「雲端 egress 未開，跳過」才補跑，照 `.claude/skills/wiki-lint-sweeps/references/sweeps.md`「5b. 跨家任務榜單週更」執行（派 `general-purpose` ＋ `model: "haiku"` 抓榜）。**同理適用 5c、5e、5m、5n**——這五步的雲端執行與否由探測決定，不再固定落到本機；5m／5n 另一種落到本機的情況是雲端寫了「repo 授權不足，跳過」（探測通了但雲端 session 讀不到 `anthropics/claude-code`），本機用 `gh` 照該節補做
 
 2. **5c 逾期待查證清算（清零制）**——照該檔「5c. 逾期待查證清算」執行，**目標是把逾期清到 0，沒有每輪額度**。`check_pending_markers.py --queue` 已內建 Lane A／B 兩條分流（分流只標成本：A 多數可免 web、B 需 WebFetch；**探測判為未開時整個 5c 跳過**，本機一律可做）。**按頁面所有權把待清筆數拆給各類別記者並行**，不要一個人查完——這是清零做得完的前提。務必照 5c 第 5 步做結案回掃，並把輸出的「🎯 本輪目標」「📈 趨勢」與末尾「⚠️ 舊語法盲區」一併抄進回報
@@ -37,7 +39,7 @@ disable-model-invocation: true
 ## 邊界
 
 - 由跑 `/weekly` 的本機 session 執行；5b 抓榜派 `general-purpose` ＋ `model: "haiku"`，其餘自己做。
-- 不自行 commit、不 push——四項產出一律併入 `.claude/commands/weekly.md` 步驟 3 的單一 push。
+- 不自行 commit、不 push——各項產出一律併入 `.claude/commands/weekly.md` 步驟 3 的單一 push。
 - 雲端已完成的步驟不重跑；`open_loops.py` 失敗不得靜默回 0，照上表標「數量未知」。
 - 第 3、4 項的輸出**必須出現在 `/weekly` 的回報裡**才算做完，只寫進 `wiki/log.md` 不算。
 - 失效模式已知並接受：哪一週沒跑 `/weekly`，這幾步那週就沒跑（沿革檔 `docs/rules-changelog/weekly.md`）。

@@ -80,6 +80,7 @@ python3 scripts/cloud_bootstrap.py
 雲端 routine 無人值守，取捨照樣由主編判定；只有 runbook 標「雲端不動手」的項目留給本機，因此：
 
 - **STARTED 開跑標記（環境補丁之後、任何步驟之前）`[加入: 2026-07-27]`**：append 一行 `[cloud <routine 名> STARTED <UTC 時間戳>]` 到 `src/logs/task_scheduler.log`，立即 `git add` → commit（訊息 `chore: cloud <routine 名> started <date>`）→ **push**。**為什麼開跑就要 push 一次：** 收尾心跳只涵蓋「活著走到收尾」的情境；2026-07-25 weekly lint 的無聲失敗最可能死在中途（session 被殺不會留任何東西），單靠收尾心跳無法與「根本沒跑起來」分辨。有了開跑標記，GitHub 上變成四態可判：`STARTED + OK 心跳`＝成功；`STARTED + FAILED 心跳`＝失敗但可追查；**`STARTED 無後續`＝中途死（可據此查 session 層）**；`完全無 STARTED`＝trigger 沒觸發或環境起不來。**與「單一 push」原則不衝突**：該原則防的是收尾階段多次連續 push 造成 Pages 部署互相搶佔；開跑 push 與收尾 push 相隔整個 routine 時長（數十分鐘以上），無並發競爭，且其部署內容與線上無異、無害
+- **CHECKPOINT 進度標記（長 routine 的段落邊界）**：`[cloud <routine 名> CHECKPOINT <UTC 時間戳>] N <已完成到哪>`，隨該檢查點的 commit 一起 push（週更的位置與步驟見 `.claude/skills/wiki-lint/SKILL.md`「檢查點：已完成段先落地」）。它是進度、不是結果：`STARTED → CHECKPOINT 無後續` 仍判中途死，但已完成段已進 repo、可從檢查點接跑。結果行（OK／FAILED／ABORTED 心跳）照舊只在收尾寫
 
 
 - **runbook 標「雲端不動手／雲端不改」的動作不在雲端執行**：主編寫下判定與理由，記進 `wiki/log.md` 本次紀錄的「本機承接」，下次本機 session 由主編照判定執行；只有使用者才能做的設定（網路白名單、GitHub／帳號權限、憑證、付費）記「需使用者端設定」

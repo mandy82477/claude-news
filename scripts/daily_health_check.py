@@ -76,6 +76,9 @@ ORPHAN_GRACE = timedelta(hours=4)
 # 刻意只寫 STARTED 不寫結果的 routine：watchdog-push 的 runbook 規定「產出齊全時不寫 log」
 # （每天一筆平安紀錄會洗掉 log 可讀性），STARTED 無後續是它的正常靜默路徑，不是死掉。
 ORPHAN_EXEMPT = {"watchdog-push"}
+# 長 routine 的段落邊界進度標記（週更 lint 的檢查點）：已完成段已進 repo，但 routine 還沒結束。
+# 它不是結果——STARTED → CHECKPOINT 無後續照樣算斷掉，只是推播多說一句停在哪。
+PROGRESS_STATES = {"CHECKPOINT"}
 
 # 雲端 routine 停泊未併成果的分支。runbook 慣例是 `-unmerged` 結尾，但無人值守的班次會自己
 # 取名：2026-09-29 17:00 班推不上 master，把 commit 停在 `cloud-daily-2026-09-29-fix`，
@@ -105,6 +108,7 @@ def orphan_starts(target: date, repo: Path = REPO_ROOT, now: datetime | None = N
           正常跑完的班次誤報成死掉，而誤報會讓人開始忽略通知。
       (b) 同一 routine 的下一個事件是非 STARTED 狀態（結果行可能落在隔天 UTC，照檔案順序配對）。
     兩者皆否、且開跑已超過 ORPHAN_GRACE → 斷掉。讀檔失敗一律回 []：附加檢查不得讓看門狗崩掉。
+    同 routine 的 CHECKPOINT 行對 (a)(b) 都是透明的（進度不是結果），只記下最後一個檢查點的編號。
     """
     now = now or datetime.now(timezone.utc)
     log = repo / "src" / "logs" / "task_scheduler.log"
@@ -125,20 +129,46 @@ def orphan_starts(target: date, repo: Path = REPO_ROOT, now: datetime | None = N
         except ValueError:
             continue
         parsed.append((idx, m.group("name"), m.group("state"), ts))
+    by_line = {idx: (name, state) for (idx, name, state, _) in parsed}
     out = []
     for k, (idx, name, state, ts) in enumerate(parsed):
         if state != "STARTED" or name in ORPHAN_EXEMPT or ts.date().isoformat() != d:
             continue
-        # (a) 緊接著的非 [cloud 行區塊
-        block_end = next((j for j in range(idx + 1, len(lines)) if lines[j].startswith("[cloud ")), len(lines))
-        ended = any(lines[j].strip() for j in range(idx + 1, block_end))
-        # (b) 同 routine 的下一個事件
+        # (a) 緊接著的非 [cloud 行區塊；自己的 CHECKPOINT 行跳過不算結果，也不截斷區塊
+        ended = False
+        for j in range(idx + 1, len(lines)):
+            if by_line.get(j) and by_line[j][0] == name and by_line[j][1] in PROGRESS_STATES:
+                continue
+            if lines[j].startswith("[cloud "):
+                break
+            if lines[j].strip():
+                ended = True
+                break
+        # (b) 同 routine 的下一個非進度事件
+        later = [(i2, st) for (i2, n2, st, _) in parsed[k + 1:] if n2 == name]
         if not ended:
-            nxt = next((st for (_, n2, st, _) in parsed[k + 1:] if n2 == name), None)
+            nxt = next((st for (_, st) in later if st not in PROGRESS_STATES), None)
             ended = nxt is not None and nxt != "STARTED"
         if not ended and now - ts >= ORPHAN_GRACE:
-            out.append({"routine": name, "started": ts.strftime("%H:%M")})
+            o = {"routine": name, "started": ts.strftime("%H:%M")}
+            # 本班的檢查點：下一個同 routine STARTED 之前的最後一個 CHECKPOINT
+            cps = []
+            for (i2, st) in later:
+                if st == "STARTED":
+                    break
+                if st in PROGRESS_STATES:
+                    cps.append(i2)
+            if cps:
+                rest = lines[cps[-1]].split("]", 1)[-1].split()
+                o["checkpoint"] = rest[0] if rest else "?"
+            out.append(o)
     return out
+
+
+def _orphan_phrase(o: dict) -> str:
+    """一班斷掉的說法：routine＋開跑時間，有檢查點時說停在哪（決定要從哪接跑，不是整輪重跑）。"""
+    cp = f"，停在檢查點 {o['checkpoint']} 之後" if o.get("checkpoint") else ""
+    return f"{o['routine']} {o['started']} UTC 班{cp}"
 
 
 def check(target: date, repo: Path = REPO_ROOT, now: datetime | None = None) -> dict:
@@ -233,7 +263,8 @@ def render_md(r: dict) -> str:
                      else f"- ❌ ③b 讀者版缺件：daily/{r['date']}.md 不存在（Step 2b 漏跑，網站靜默退回舊格式）")
 
     for o in r.get("orphans", []):
-        lines.append(f"- ⚠️ ⑥ 中途斷掉的班次：{o['routine']} {o['started']} UTC 開跑後沒有任何結果紀錄"
+        cp = f"，最後停在檢查點 {o['checkpoint']}（之前的段已進 repo，從該檢查點接跑）" if o.get("checkpoint") else ""
+        lines.append(f"- ⚠️ ⑥ 中途斷掉的班次：{o['routine']} {o['started']} UTC 開跑後沒有任何結果紀錄{cp}"
                      "（常見原因：撞帳號用量上限、session 被終止；用 RemoteTrigger get_run_log 查該班 session）")
 
     parked = r.get("parked", [])
@@ -272,14 +303,16 @@ def render_push(r: dict) -> str:
     if r["healthy"] and orphans:
         o = orphans[0]
         extra = f"等 {len(orphans)} 班" if len(orphans) > 1 else ""
-        return (f"每日新聞 {r['date']} 產出齊全，但 {o['routine']} {o['started']} UTC 班{extra}開跑後無結果紀錄"
+        return (f"每日新聞 {r['date']} 產出齊全，但 {_orphan_phrase(o)}{extra}開跑後無結果紀錄"
                 "（中途斷，疑撞用量上限），查該班 run log")[:200]
     if r["healthy"]:
         return f"每日新聞 {r['date']} 產出齊全"
     what = "、".join(p[0] for p in r["problems"])
     msg = f"每日新聞 {r['date']} 缺件：{what}。本機跑 /news-pipeline {r['date']} 補"
     if orphans:
-        msg += f"（另有 {len(orphans)} 班開跑後無結果紀錄）"
+        # 點名第一班：週更 lint 斷掉的救法不是 /news-pipeline，只寫「另有 N 班」會被前一句的救法蓋掉
+        more = f"等 {len(orphans)} 班" if len(orphans) > 1 else ""
+        msg += f"（另有 {_orphan_phrase(orphans[0])}{more}開跑後無結果紀錄）"
     if r["holes"]:
         msg += f"（另有近 7 天 {len(r['holes'])} 個舊缺口）"
     return msg[:200]

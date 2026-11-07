@@ -20,6 +20,21 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 - **A 必須先於 B**：B 的 5f（devpractice 週彙整）與 5k（社群三表）都要等六記者寫完才不互踩。
 - **E 最後**：步驟 8 的 log 要收齊 A–D 全部回報行。
 - 單段失敗不阻斷其餘段；該段回報行寫明失敗原因；本機當輪重跑，雲端列入步驟 8 的「本機承接」行。
+- **兩個檢查點**：B 段的 5c 開工前（檢查點 1，A 段＋5a／5b 已完成）、C 段開工前（檢查點 2，B 段已完成），各執行一次下方「檢查點：已完成段先落地」。
+
+## 檢查點：已完成段先落地
+
+**為何必要：** 收尾 commit＋push 只在步驟 10；session 中途被終止（用量上限、環境回收）時，前面做完的段全部消失，也不留任何紀錄。5c 是最長、派工最多的一步，最容易死在它裡面，所以檢查點夾在它前後。
+
+依序執行（`REPO_ROOT`／`PYTHON` 同步驟 10）：
+
+1. 在 `wiki/log.md` 末尾 append 一筆檢查點紀錄，**模板住 `.claude/skills/wiki-lint/references/log-format.md`「檢查點紀錄模板」**，已完成各步的回報行原樣抄進去——這是中途斷掉時下一個 session 唯一能接手的依據。
+2. 指名 add：`wiki/`，加上本輪已完成步驟寫過的 data 帳本（`git -C REPO_ROOT status --short data/` 列出，逐一指名，不整個 add `data/`）→ `git -C REPO_ROOT commit -m "wiki: weekly lint checkpoint N YYYY-MM-DD"`。
+3. `git -C REPO_ROOT push`，失敗照 `.claude/skills/web-publish/SKILL.md` Step 5 的重試程序。**重試仍失敗不中止 lint**：commit 留著由步驟 10 的單一 push 一起帶上，步驟 10 的心跳紀錄寫明哪個檢查點沒推上去。
+
+**不跑 gate、不 build web**：檢查點只推 wiki 與帳本，`web_reader/` 不動，它觸發的 Pages 部署內容與線上相同；兩個檢查點與步驟 10 各相隔一整段（數十分鐘），不會互相搶佔部署。上站仍只在步驟 10。
+
+**接手判準**：`wiki/log.md` 有當日檢查點紀錄、卻沒有同日的步驟 8 lint 紀錄＝本輪中途斷掉，下一個 session 從檢查點紀錄寫的「下一步」接跑，已列為完成的步驟不重跑（本機由 `.claude/skills/weekly-local-catchup/SKILL.md` 第 0 項承接）。
 
 ## 月度判斷法（A 段月度蒸餾、C 段 6g 指標二／6j 共用）
 
@@ -29,7 +44,7 @@ description: 每週執行 wiki 品質檢查，修正矛盾/孤立/過期頁面�
 
 ## 8. 記錄本次 lint
 
-把 A–D 各段的回報行原樣填入模板，在 `wiki/log.md` 末尾 append。**模板住 `.claude/skills/wiki-lint/references/log-format.md`，寫之前逐字讀它**，不憑記憶重排欄位。
+把 A–D 各段的回報行原樣填入模板，在 `wiki/log.md` 末尾 append（檢查點紀錄已抄過的回報行照樣全抄，本筆是完整紀錄、不指回檢查點）。**模板住 `.claude/skills/wiki-lint/references/log-format.md`，寫之前逐字讀它**，不憑記憶重排欄位。
 
 ## 9. 更新 wiki/index.md
 

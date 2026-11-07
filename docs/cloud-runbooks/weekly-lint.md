@@ -44,6 +44,7 @@
 | `wiki-lint-rules-health` `6l. 讀者語言存量清理（每輪）` | 自主執行 `[加入: 2026-09-13]`：跑 `check_reader_language.py`，命中逐筆改寫或移進 `%% … %%`，純本地檔 |
 | `wiki-lint-reader-acceptance` `7. 讀者模擬驗收` | 自主執行 |
 | `wiki-lint-reader-acceptance` `7b. 歷史質疑代打` | 自主執行 `[加入: 2026-09-13]`，但**開工前必須先 `git fetch --unshallow`**：雲端容器是淺 clone，Q1 溯源探針的 `git rev-list --before` 在淺 clone 下靜默回空、看起來像「近 7 天沒有新數字」（2026-09-12 實際踩到）|
+| `wiki-lint` `檢查點：已完成段先落地` | 自主執行（5c 開工前、C 段開工前各一次）；雲端另在 commit 前 append 一行 `[cloud weekly-wiki-lint-cloud CHECKPOINT <UTC 時間戳>] N <已完成到哪>` 到 `src/logs/task_scheduler.log` 併入同一 commit——看門狗據此分辨「中途斷」並說出停在哪個檢查點 |
 | `wiki-lint` `8. 記錄本次 lint` | 自主執行，「主編判定」「本機承接」「需使用者端設定」三行寫在這裡 |
 | `wiki-lint` `9. 更新 wiki/index.md` | 自主執行 |
 | `wiki-lint` `10. 收尾閉迴路` | 自主執行，套用 `_shared.md` 的收尾閉迴路（單一 push），commit 訊息用 `wiki: weekly lint (cloud) <date>` 與 `web: rebuild (cloud) <date>` |

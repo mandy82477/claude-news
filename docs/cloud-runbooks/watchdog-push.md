@@ -59,6 +59,8 @@
 
 收到這種推播時：用 `RemoteTrigger` 的 `list_runs`／`get_run_log` 查那一班的 session，看死因（用量上限、session 被終止、環境錯誤）。日報若已由後面的班次補上，不需要重跑。
 
+週更 lint 會在段落邊界寫 `[cloud weekly-wiki-lint-cloud CHECKPOINT …] N …`（`_shared.md`「CHECKPOINT 進度標記」）：腳本把它當進度、不當結果，斷掉時推播會說「停在檢查點 N 之後」——檢查點之前的段已進 repo，由本機 `/weekly` 步驟 0 從該檢查點接跑，不是整輪重跑。推播也會點名斷掉的 routine，日報缺件的救法（`/news-pipeline`）不適用於 lint。
+
 `watchdog-push` 自己不在檢查範圍內：本 runbook 規定產出齊全時不寫 log，它留下的 STARTED 無後續是正常的靜默路徑。
 
 ---

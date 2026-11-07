@@ -82,3 +82,12 @@
 ## 2026-10-20（讀者模擬題型隨目標讀者改寫）
 
 `.claude/skills/wiki-lint-reader-acceptance/SKILL.md` 讀者模擬表：重度使用者題型由「該不該升版／壞了嗎」改「有什麼新功能／值不值得現在用」，系統開發者加「最近社群在討論什麼」。對應 `.claude/rules/collection-scope.md` 2026-10-20 的讀者定義改寫。
+
+## 2026-11-08（中途檢查點：已完成段先落地）
+
+2026-11-07 雲端 weekly lint（session cse_01XB7TfK4JNY94Mcy6BB1vSU）03:05 UTC 開跑，03:20 UTC 在 5c 派工中途撞帳號 5 小時用量上限（run log `rate_limit: rejected (five_hour)`）。收尾 commit＋push 只在步驟 10，前 15 分鐘做完的 A 段（含 3g 回填）與 5a 處置全部隨容器消失，repo 只剩 STARTED 一行。看門狗其實有抓到（⑥ 中途斷掉），但當天日報也缺件，推播把它縮成「另有 1 班開跑後無結果紀錄」接在「跑 /news-pipeline 補」後面，lint 斷掉被日報的救法蓋掉。
+
+- `.claude/skills/wiki-lint/SKILL.md` 加「檢查點：已完成段先落地」：5c 開工前、C 段開工前各 commit＋push 一次 wiki 與已寫帳本，`wiki/log.md` append `### … Lint 檢查點 N（進行中）`（模板住 `.claude/skills/wiki-lint/references/log-format.md`）。只推 wiki 不 build web——Pages 部署內容與線上相同，與步驟 10 相隔一整段，不違反單一 push 防的部署搶佔。
+- 雲端另寫 `[cloud weekly-wiki-lint-cloud CHECKPOINT …]` 到 `task_scheduler.log`；`scripts/daily_health_check.py` 把它當進度（不當結果），斷掉時推播說「停在檢查點 N 之後」，並點名斷掉的 routine 而非只給班數。
+- `.claude/skills/weekly-local-catchup/SKILL.md` 加第 0 項：有檢查點紀錄、無同日步驟 8 紀錄＝從檢查點的「下一步」接跑。
+- trigger 本體是薄殼，不需改。

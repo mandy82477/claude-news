@@ -591,6 +591,28 @@
       ]
     },
     {
+      "name": "週更 lint 檢查點：總指揮與雲端 runbook 都要有檢查點步驟標題，_shared.md 與看門狗都認 CHECKPOINT 是進度不是結果（2026-11-07 撞用量上限、收尾前的成果全失；只剩一側時，要嘛不落地、要嘛看門狗把 CHECKPOINT 誤當結果而漏報中途死）",
+      "assertion": "all_contain",
+      "files": [
+        ".claude/skills/wiki-lint/SKILL.md",
+        "docs/cloud-runbooks/weekly-lint.md"
+      ],
+      "patterns": [
+        "檢查點：已完成段先落地"
+      ]
+    },
+    {
+      "name": "CHECKPOINT 進度標記：_shared.md 規格端與 daily_health_check.py 消費端同名",
+      "assertion": "all_contain",
+      "files": [
+        "docs/cloud-runbooks/_shared.md",
+        "scripts/daily_health_check.py"
+      ],
+      "patterns": [
+        "CHECKPOINT"
+      ]
+    },
+    {
       "name": "雲端 STARTED 開跑標記：_shared.md 無人值守原則必須保留開跑即 push 的規定與四態判定（收尾心跳涵蓋不了中途死——07-25 的死法）",
       "assertion": "all_contain",
       "files": [

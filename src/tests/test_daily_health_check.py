@@ -509,6 +509,36 @@ class TestOrphanStarts(unittest.TestCase):
         log = "[cloud daily-news-pipeline-cloud STARTED 2026-09-26T17:08:29Z]\n"
         self.assertEqual(self._orphans(log), [])
 
+    def test_checkpoint_is_progress_not_result(self):
+        # 週更 lint 死在檢查點之後：CHECKPOINT 不算結果，仍判斷掉，並記下停在哪個檢查點
+        log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T03:05:23Z]\n"
+               "[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-09-27T03:20:00Z] 1 A 段＋5a／5b\n"
+               "[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-09-27T04:00:00Z] 2 B 段\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T12:08:07Z]\n"
+               "[cloud daily-news-pipeline-cloud OK 2026-09-27T12:40:00Z] ok\n")
+        self.assertEqual(self._orphans(log), [
+            {"routine": "weekly-wiki-lint-cloud", "started": "03:05", "checkpoint": "2"}])
+
+    def test_checkpoint_then_heartbeat_counts_as_ended(self):
+        log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T03:05:23Z]\n"
+               "[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-09-27T03:20:00Z] 1 A 段\n"
+               "[週日 2026/09/27 04:30:00.00] Weekly lint OK - 修 12 頁\n")
+        self.assertEqual(self._orphans(log), [])
+
+    def test_checkpoint_then_cloud_result_counts_as_ended(self):
+        log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T03:05:23Z]\n"
+               "[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-09-27T03:20:00Z] 1 A 段\n"
+               "[cloud daily-news-pipeline-cloud STARTED 2026-09-27T12:08:07Z]\n"
+               "[cloud weekly-wiki-lint-cloud FAILED 2026-09-27T12:30:00Z] 5c\n")
+        self.assertEqual([o["routine"] for o in self._orphans(log)], ["daily-news-pipeline-cloud"])
+
+    def test_checkpoint_of_later_run_not_attributed_to_earlier(self):
+        log = ("[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T03:05:23Z]\n"
+               "[cloud weekly-wiki-lint-cloud STARTED 2026-09-27T09:00:00Z]\n"
+               "[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-09-27T09:20:00Z] 1 A 段\n"
+               "[cloud weekly-wiki-lint-cloud OK 2026-09-27T10:00:00Z] ok\n")
+        self.assertEqual(self._orphans(log), [{"routine": "weekly-wiki-lint-cloud", "started": "03:05"}])
+
     def test_missing_log_is_failsafe(self):
         with TemporaryDirectory() as tmp:
             self.assertEqual(hc.orphan_starts(self.D, repo=Path(tmp), now=self.NOW), [])
@@ -525,7 +555,18 @@ class TestOrphanStarts(unittest.TestCase):
     def test_push_appends_orphan_count_when_unhealthy(self):
         r = {"date": "2026-09-27", "healthy": False, "problems": [("日報", "x")], "holes": [], "parked": [],
              "orphans": [{"routine": "daily-news-pipeline-cloud", "started": "17:08"}]}
-        self.assertIn("另有 1 班開跑後無結果紀錄", render_push(r))
+        msg = render_push(r)
+        self.assertIn("另有 daily-news-pipeline-cloud 17:08 UTC 班開跑後無結果紀錄", msg)
+
+    def test_push_names_lint_orphan_with_checkpoint_when_unhealthy(self):
+        # 2026-11-07 實例：日報缺件蓋掉了同日週更 lint 斷掉，舊訊息只說「另有 1 班」
+        r = {"date": "2026-11-07", "healthy": False, "problems": [("日報", "x")], "holes": [], "parked": [],
+             "gather_n": 83, "digest_ok": False, "web_ok": True,
+             "orphans": [{"routine": "weekly-wiki-lint-cloud", "started": "03:05", "checkpoint": "1"}]}
+        msg = render_push(r)
+        self.assertIn("weekly-wiki-lint-cloud 03:05 UTC 班，停在檢查點 1 之後", msg)
+        self.assertLessEqual(len(msg), 200)
+        self.assertIn("最後停在檢查點 1", render_md(r))
 
     def test_render_without_orphans_key_is_backward_compatible(self):
         r = {"date": "2026-09-27", "healthy": True, "problems": [], "holes": [], "parked": []}
