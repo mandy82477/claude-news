@@ -6,21 +6,21 @@ domain: "💼 商業"
 last_updated: "2026-11-02"
 last_news_update: "2026-10-28"
 status_main: "ongoing"
-days_since_news: 9
+days_since_news: 11
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 9
-inbound_links: 3
+days_since_news_subtree: 11
+inbound_links: 5
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 21
-pending_overdue: 3
-pending_next_review: "2026-11-07"
+pending_overdue: 0
+pending_next_review: "2026-11-10"
 pending_signalled: 3
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 官司、監管與政府這則怎麼判

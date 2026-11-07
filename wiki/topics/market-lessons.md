@@ -7,18 +7,18 @@ last_updated: "2026-10-31"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 15
+days_since_news: 17
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 15
+days_since_news_subtree: 17
 inbound_links: 11
 attribution_count: 0
 attribution_last: null
 top_source: null
 pending_count: 3
-pending_overdue: 1
-pending_next_review: "2026-11-24"
+pending_overdue: 0
+pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

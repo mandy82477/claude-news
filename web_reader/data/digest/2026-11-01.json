@@ -390,11 +390,6 @@
       "pageType": "entity"
     },
     {
-      "id": "code-quality-decline",
-      "name": "Claude Code 效能退步事件",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
       "pageType": "topic"

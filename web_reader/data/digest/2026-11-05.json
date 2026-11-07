@@ -537,6 +537,11 @@
       "pageType": "entity"
     },
     {
+      "id": "ai-talent-flow",
+      "name": "AI 實驗室人才流動",
+      "pageType": "topic"
+    },
+    {
       "id": "anthropic-business-risks",
       "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
       "pageType": "topic"
