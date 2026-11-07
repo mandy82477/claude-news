@@ -8690,3 +8690,6 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [主編] topics/anthropic-business.md「WSJ Anthropic's Ambition to Cure Diseases」暫放於母頁「未歸類」區，留 /wiki-lint 5j 分派至合適子頁
   - [主編] entities/pricing.md 新懸置標記（❓ 2026-11-07｜查「日本等地區 6 個月到期」條款移除後現況｜複 2026-11-21）
   - [主編] topics/ai-agent-safety-product-vulns.md 新懸置標記（❓ 2026-11-07｜查 Don't Ask Again、2,539｜複 2026-11-21）；該事件已滿足母頁「現在還擋不住的攻擊」表收錄判準但該表已滿 11/11，本輪未新增列，僅於表下點名連結，留 /wiki-lint 評估是否有舊列可退場
+- devpractice 沉澱（補記）：候選 4 筆（rsc-harness meta-harness 整合、額度頁降 effort／關 thinking 建議、閒置對話接續額度警告、MCP Tasks public beta／Elicitations），皆因缺一手來源或非官方使用指南性質暫不寫入 coding-workflow-guide；Lance Martin「72% 省錢指令」兩則原料僅二手轉述、無一手連結，依規則不逕自寫入，候選已記 `data/devpractice-candidates.jsonl`，留主編查證 Lance Martin 原始發言出處
+- market 判讀（補記）：判讀新增 2 則——topics/market-signals-legal 新開「Max 訂閱廣告誤導訴訟」線（Courthouse News，法院裁定須面對訴訟程序）；topics/market-signals-ipo 續「IPO 進程」線第 23 則（估值談判區間降至 $1.2～1.3 兆、買方喊價低探 $1.1 兆）；Goldman Sachs 禁令規模描述與量子運算模型報導等因無新數字或無具名金額未過判讀門檻
+- 轉知帳本（補記）：新開 1 筆 H-de35e7（開發實務→功能，entities/claude-code-features，MCP Tasks／Elicitations 是否影響 official-community-gap 矩陣）
