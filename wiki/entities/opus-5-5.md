@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-03
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-03
 
 > **社群調侃：Opus 5.5 撐過十月整月發布潮**（2026-11-03）
@@ -95,7 +95,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **與上則相反：「降智」觀感回報，同屬弱訊號**：[週熱門貼文](https://www.reddit.com/r/ClaudeAI/comments/1wuw9bc/opus_55_nerfing_how_to_measure_how_to_spot_how_to/)稱 Opus 5.5 上線前 5–6 天在其複雜工作（自製 C++ 3D 引擎、軟體物理求解器、Blender MCP）表現穩定，近日起在原本能處理的任務上失手；未附測試方法或量化指標、0 留言，屬主觀觀感，不構成已驗證的能力下降；同類主張累計見 [[topics/code-quality-decline]]。
 - **livenerf 追蹤第 29 天，仍稱「看不出被降規」**：[Day 29 貼文](https://www.reddit.com/r/ClaudeAI/comments/1xcraz9/did_they_nerf_opus_55_doesnt_look_like_it/)延續 10-03 建立的第 0 天基準線（[dev.to](https://dev.to/axrisi/is-claude-opus-55-nerfed-a-30-day-benchmark-started-the-clock-151d)，2026-09-30）與 10-14 [Day 20 更新](https://www.reddit.com/r/ClaudeAI/comments/1x606aj/are_they_nerfing_opus_55_livenerf_day_20_update/)，三則均未附具體數字或測試方法；30 天結論預計近日（約 10-24）公布，不能拿來支持或反駁上則觀感回報。
 - **500 個自製時鐘創意展示**：Hacker News 讀者分享作者連續多個 Claude 對話工作階段，以 Opus 5.5 生成 500 個各具巧思的自製時鐘網頁（單一 6.3 MB HTML 檔案），作者稱為個人版「鵜鶘騎自行車」創意測試基準；屬單一創意展示，非量化基準或複測（[Show HN](https://tkgally.github.io/500-clocks/)，54 分、2 個來源，2026-10-18）。
-- **跨版本重複修辭套路回報範圍擴至 Opus 5.5**（GitHub #77136，11-02 查證，累計 140 留言、578 反應）：原涵蓋 4.7、4.8、5.0 與 Fable，今日起 Opus 5.5 亦列入；issue 已於 10-03 關閉、留言持續累積，完整數字與沿革見 [[entities/opus-5]]「這些數字是誰量的」。
+- **跨版本重複修辭套路回報範圍擴至 Opus 5.5**（GitHub #77136，11-02 查證，累計 140 留言、578 反應）：原涵蓋 4.7、4.8、5.0 與 Fable，今日起 Opus 5.5 亦列入；issue 10-03 關閉、11-02 由發文者重開（11-08 查證），完整數字與沿革見 [[entities/opus-5]]「這些數字是誰量的」。
 - **跨家分數不進本頁**：GPT-6 Astra／GPT-5.6 Sol 欄位不抄進來；跨家「誰強」見 [[topics/model-task-leaderboard]] 與 [[topics/competitor-landscape]]。
 - **VentureBeat：em-dash 用量降 99%，但仍測得 2,548 處「AI 寫作特徵」**：報導稱 Opus 5.5 回覆中 em-dash（—）出現頻率較前代大幅降低、讀來更像真人，但同一批測試仍抓到 2,548 處其他「AI 寫作痕跡」；原文僅標題可讀，測試方法、樣本數與痕跡定義均未見完整記載，不採信推算（[VentureBeat](https://news.google.com/rss/articles/CBMi0wFBVV95cUxPNGpWZl9FaU93X1NjTFdHWHhmdmZlX3pLd3FDT2NxX0FZY2JKM1NZb1dZSUM5d1NsRUhUSjdOb3BFWGxNZmlBV2VpbTRXOHF3TWVMLWc0WmVxZnVKZkFDdGtzaDdnN0xGeGZGcl9yYTRoLXRtaUhBU1FranZGVUVVVS1jLWVrdVJ6NGhCMy1CRC1ndUlOenFwUFc0QjExdzVTOFBkT1FueFUyNlMwNVhWYTJ5eE51ZE5YNEZyM0JnVERqazNpbTFsMnhwd2VvU2RLV3FV?oc=5)，2026-09-30）
 
@@ -138,6 +138,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **原本跑 `thinking: disabled` 的整合要改從 `low` 起量，並刪掉「把推理寫進回覆」當替代品的指令**：那類提示會吃 `reasoning_extraction` 拒答，改設 `display: "summarized"` 從 thinking 區塊讀。
 - **非監督 agent 迴圈要把「只有文字、沒有 tool call」的回合當成報告而不是完工**：它會邊做邊回報、而那種回合的 `stop_reason` 是 `end_turn`，把它當結束的 harness 會停在半路；官方建議在系統提示末端點名你不要的那幾種提早收手。
 - **使用者貼進來的文字要用帶同一組隨機 id 的 `<pasted_content>` 標記並在系統提示說明**：它對間接注入的抵抗力強過任何前代 Opus，但貼上內容這一塊要靠這個標記才吃得到。
+
+- **別再用「強制呼叫不存在的工具」換結構化輸出**：dev.to 作者回報（2026-11-03，單一來源、0 讚）原本靠逼 Claude 呼叫一個不存在的工具拿結構化輸出，Opus 5.5 不再配合，作者的解法是放棄這招（[dev.to](https://dev.to/phpboyscout/the-model-that-wouldnt-be-forced-16nc)）。要穩定的結構化輸出，改用官方 [structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)。
 
 **表下細節**
 

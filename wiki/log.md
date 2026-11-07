@@ -8631,3 +8631,36 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [主編] entities/claude-personal-finance.md 命中的 claude-code.md「Claude Money」🔎 查無官方標記已標訊 2026-11-06，待 /wiki-lint 5c 正式查證結案改寫
   - [主編] topics/ai-agent-safety-product-vulns.md 的 Claude Dispatch ❓ 待查證（觸發條件）已標訊 2026-11-06（攻擊鏈有進展），「是否已有在野攻擊案例」仍未解，待 /wiki-lint 5c
   - [主編] topics/recursive-self-improvement.md、topics/market-signals-ipo.md 的新增 ❓ 待查證標記（METR 量測區間原文未見；拋售潮統一估值區間未見），複查日見各頁標記，留 /wiki-lint 5c
+## 2026-11-08 週度延伸回顧
+
+- 延伸（執行 9 項）：
+  - [功能／必做] [[feature-radar]] Message Threads 條目改寫：11-02 官方宣布公開測試（`thread` 參數、多數 Claude Code 使用者已預設開啟、50 萬～100 萬 token 請求首字延遲中位數降約 35%、token 用量不變、閒置 5 分鐘過期），狀態「正式發布」→ Public Beta、🔥🔥 → 🔥🔥🔥、⏳ → ⚡有條件推薦（主編 11-08 查官方說明）
+  - [主編／必做] #107757／#78431 事實更正：CHANGELOG 2.1.317（11-03）已加「web 或 shell 工具送出帳號信箱前先詢問」；#78431 07-17 開、09-11 以 not planned 關閉；npm 穩定版 11-08 仍為 2.1.311。[[entities/claude-code-known-issues]] 兩條 🔴→✅ 已修復 v2.1.317、🛡️ 組計數 21／5 → 19／7；[[topics/ai-agent-safety-product-vulns]] 五處現況句與 ❓（107757、FourWeekMBA）結案（「108 天」與 07-17→11-03 吻合）
+  - [安全政策／必做] [[topics/ai-agent-safety]] provable inference HN 分數 48 → 235（11-05 快照）
+  - [安全政策] [[topics/ai-agent-safety-product-vulns]]「Claude Code 供應鏈攻擊：跨月對照」表補三列（規則檔投毒、Postman 更新改寫 Claude Code 設定、Dispatch 惡意外掛鏈），讀法段改寫為「可信設定面被第三方悄悄擴大」＋讀者自查一句
+  - [模型] [[entities/mythos]] 新增「下一代模型訊號」表（官方自述的未命名更強模型／Fable 5.5 與「更懂意圖」查無官方／Mythos 5.5 TestingCatalog 僅標題，掛 ❓）
+  - [模型] [[entities/opus-5-5]] 補一條單一來源行為變化：強制呼叫不存在工具取結構化輸出的技巧失效，附官方 structured outputs 替代路
+  - [社群] [[topics/code-quality-decline]] callout 覆寫為 11-08（Opus 5.5「變差又變貴」、額度快兩倍，兩則皆單一貼文、0 留言、官方未回應），品質觀感表泛化列 8→9、總數 23→24，時序補 11-04～06 三筆，表下加官方 11-05 降 effort 建議與 prompt caching 文件「新款模型中途改 effort 不失效快取」；[[topics/community-guardrails]] 把關層彙整表補 5 列、新增類型「agent 不能自己宣告完成」（Nomos、aido、judge model 覆核外掛、Agent Flow；Intent-lens 歸檢查型）
+  - [人物→商業] [[topics/ai-talent-flow]] 補 Cat Wu（Claude Code 產品負責人 → OpenAI，11-04／05）與 Addy Osmani（Google → Anthropic，11-03）兩筆時序與 callout；[[entities/addy-osmani]] 入邊由 0 補至 1
+  - [主編] 投資記者 5c 回報的前提錯誤：[[topics/market-signals-customers]] callout「Anthropic 給 4,800 美元」更正為 Schwab 出資（InvestmentNews）、20 席是 Anthropic 企業方案最低席位
+- 判定不做（8 項，理由）：
+  - [模型] Opus 5.5 正負觀感並陳小表——五則皆 0 留言弱訊號，並陳會放大雜訊
+  - [功能] known-issues「session／記憶／context 連續性」彙整區塊——五則皆為功能請求，下次 known-issues 週更併入即可；L35 仍未達第三節點
+  - [功能] desktop.md 人工整檔 diff——四天「段落數超過比對上限 1,200」是偵測器盲區，不是缺頁；人工 diff 一次治標，根治在改比對器，已另開工作（見下）
+  - [商業] 「需求側支出放緩」新節——Ramp 一則僅標題，其餘四則已住 anthropic-ipo／market-signals-ipo；等 Ramp 一手數字再立
+  - [商業] 垂直領域夥伴升獨立小節——多數為企業整合、過不了工程師判準，維持附記
+  - [安全政策] Dispatch 獨立子區塊——主編 11-08 搜尋查無 Anthropic 一手說法，「不修」只見 The Register 轉述，立節會把媒體說法升格
+  - [安全政策] provable inference 改類／infostealer 小節——記者自評信心低
+  - [社群] 移植／逆向工程趨勢節點——五例多為殼層摘要、只有一例明寫開源，不達收錄門檻
+  - [讀者筆記] L35「agent 記憶的格式規約」維持 ⏳——本週記憶類訊號（#17428、#25739、#28791、best-agent-memory-mcp 比較表）皆為功能請求或工具，非有名字有規格的 format；無 📌 雜記可清
+- 聚焦校準：11 月已於 11-01 執行（46.0%），本次跳過
+- 本機補跑（`/weekly` 步驟 0）：
+  - **雲端 lint 本週未落地，根因已查**：`weekly-wiki-lint-cloud` 11-07 03:04 UTC 開跑，03:20 UTC 於 5c 派工途中撞 5 小時用量上限（run log：`rate_limit: rejected (five_hour)`），session 以 is_error 結束；收尾 commit 在最後一步，15 分鐘的成果（含 3g 回填、5a 處置）全數未推上 repo。本機只補 5b／5c／5e／5m／5n，其餘 lint 步驟本週沒跑
+  - 5b 跨家榜單週更：已更新 12 榜／0 榜無法取得（haiku 抓取）。圖像兩榜 GPT Image 2.6 登頂；Text 榜第三名換成 Muse Wonder、Opus 5.5 降第四；WebDev 榜 Sonnet 5.5 升第二；影片榜抓到含音訊總榜，是否同一子榜未確認
+  - 5c 逾期待查證清算：盤點 28 筆（Lane A 1／Lane B 27），清零 ✅；按所有權派五組記者並行。結案回掃各記者已做，另一處前提錯誤（Schwab 額度）主編改。🎯 逾期 0（近 7 天新增 21 筆，複查日未到）；📈 趨勢 2026-11-01 0 筆 → 今日 0 筆。⚠️ 舊語法盲區 25 筆（前三頁 metrics 5／ai-agent-safety-cyber 3／opencode 2）
+  - 5e pricing 通路與乘數：資料截至 2026-10-31（距今 8 天，未逾 30 天不觸發）；本週無新模型世代；商業記者無轉來查證
+  - 5m code-quality-decline 三條線：4 issue 比對／1 列已改（#77136 11-02 由發文者重開，稱 Opus 5.5 同樣退步）／資料截至 2026-11-08；回掃 opus-5、opus-5-5 三處「已於 10-03 關閉」現況句
+  - 5n 官方補了沒表：18 列比對／0 列翻轉（CHANGELOG 2.1.317–319 無補缺口項；#40043、#12925 讚數更新）／核對日逾 30 天 0 列
+  - lint 遺留事項：本機承接——10-30 ingest「`collect_reporter_reports.py` 誤結案」已修：根因是 `handoff_closes()` 的 regex 只認「／不適用」或換行直接接「不適用」為段落終點，項目符號 `- 不適用：` 吃不到，lazy 匹配一路跑到結尾把不適用條收進結案清單；同時 `handoff_voids()` 會把其後的已處理條誤算成不適用。改為逐條判種類，附回歸測試 3 例（改前紅 2、改後綠）。11-01 ingest「Max5／Max20 改名」已查（改名屬實；5 小時限制只對 Ultra 驗證帳號取消）。10-26 ingest「S-1 四數字」部分查（sec.gov 原文超過 10MB 無法直讀，ANT／Nasdaq 確認、14 倍大致吻合、20 倍客戶集中度 S-1 摘錄查不到）。未做並記理由——3h 蒸餾 14 時段、6d 逾 60 天 57 節、6i 3d／3f 人工突變、6f 4 組 coupling hint、`source_attribution.jsonl` 歷史歸因頁名遷移：本週 lint 整輪沒跑，這五項屬規則與結構維護，併入下一次完整 lint 處理，不在週度回顧內零碎動
+  - 開放迴路掃描：`open_loops.py`（2026-11-08 開工時）：需收尾 28（未 commit 1＝`pending_queue_history.csv`，隨本輪 push 收進；逾期 workaround 27 筆，最舊逾 112 天）｜已跳票 65｜存量遷移 20（舊語法盲區；5c 後重算為 25，新增的 5 筆落在 opencode、ai-agent-safety-cyber 等本輪記者寫回過的頁，成因未逐筆查，待 3g 回填時一併看）；人類質疑時效燈 ✅（6 天前）
+- 需使用者端設定：claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 8 週，2026-09-19 起）：leaderboard 組 11 個網域；5c 另撞 techradar.com、www.aisi.gov.uk、metr.org、www.edtechinnovationhub.com 等（11-07 雲端 run log）

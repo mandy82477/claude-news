@@ -3,7 +3,7 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-04"
+last_updated: "2026-11-08"
 last_news_update: "2026-11-02"
 status_main: "ongoing"
 days_since_news: 4
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-04
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-02
 
 > **五則新增：測試作弊守門、執行前白話提示、規格驅動新實作，兩則不讓 agent 自己說了算**（2026-11-02）
@@ -63,18 +63,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **查證備註**
 - 「Claude 審查 Codex 通過率 71.6%→89.7%」已查得學術來源：[Cross-Model LLM Code Review: Should you use Claude to review Codex or vice versa?](https://arxiv.org/abs/2607.21656)（arXiv 2607.21656）——116 則 LiveCodeBench 中／難題，六種條件對照，reviewer 只見題目與 writer 草稿、不能執行測試，近似真實 code review 流程；反向（Codex 審查 Claude）則使通過率從 91.4% 降至 82.8%，顯示審查方向有明顯不對稱效應，並非任一模型互審都有效（2026-08-13 查證）
 
-**把關層彙整（2026-10-04）**
+**把關層彙整（2026-11-02）**
 
-> 「它做完了、守規矩了嗎」目前有兩種把關：**檢查型**事後比對、不擋它；**強制型**由 agent 碰不到的一層直接擋或回滾。社群這一週的例子各有破口。
+> 「它做完了、守規矩了嗎」目前有兩種把關：**檢查型**事後比對、不擋它；**強制型**由 agent 碰不到的一層直接擋或回滾。另有一類把「完成判定」從 agent 手上拿走。社群的例子各有破口。
 
 | 工具／事件 | 類型 | 怎麼把關 | 已知破口 |
 |---|---|---|---|
 | RuleReceipt（09-30） | 檢查型 | 比對 agent 有沒有守 CLAUDE.md／AGENTS.md | 討論串有人質疑 agent 能關掉檢查 hook；趕工時最常繞過規則；無使用回報 |
 | Perspica（09-30） | 檢查型（輔助人審） | 審閱大型 AI PR 的語意化 diff，可選不靠 LLM 的機械分組 | 只幫人讀、不攔合併（推論）；LLM 分組模式仍靠模型判斷；無使用回報 |
 | 自主 agent 部署閘（10-01） | 強制型 | 預檢契約、帶硬門檻的 canary、agent 無法推翻的自動回滾 | 作者自述 340 餘次部署、零人工呼叫，無 repo 或指標可複核；閘是事故後才加 |
+| Intent-lens（11-02） | 檢查型（輔助人審） | 執行前一行白話說明指令用途，破壞性型態（`rm -rf`、強制推送）整行變紅 | 只提示、不擋，最後仍靠人按確認（推論）；HN 2 分，無採用回報 |
+| Nomos（11-02） | agent 不能自己宣告完成 | 靜態 Go binary 插在 repo 與 agent 之間，偵測刪測試、改回傳值等作弊 | HN 3 分；成績為作者自測（95 題），無第三方覆核 |
+| aido（11-02） | agent 不能自己宣告完成 | 規格驅動＋測試驅動 skill，實作須對照規格驗證 | 無採用回報；是否擋得住未載 |
+| judge model 覆核外掛（Reddit，11-02） | agent 不能自己宣告完成 | 另跑小型 judge model 覆核 Claude Code 輸出 | 判準與實測數字未載；覆核者仍是模型（推論）；無採用回報 |
+| Agent Flow（Reddit，11-02） | agent 不能自己宣告完成 | 本地工作流層：沒過測試閘與一次獨立複核，不能標記完成 | 單一作者自述，無採用回報 |
 | 刪除 48,000 檔事件（09-25，TechRadar） | 強制型缺位的個案 | 報導未提任何攔截層 | 單一媒體、來源為已刪除的 Reddit 貼文（Windows junction 清理腳本，10-17 查證，見 [[topics/ai-agent-safety]]）；備份與版本未載，不當作定論 |
 
 - **檢查型的共同破口**：被檢查的 agent 與檢查器同處一個環境時，agent 可能動到檢查本身；強制型把關住在 agent 碰不到的地方，這是兩型的分界（推論）。
+- **新類型「agent 不能自己宣告完成」**（出處見 [[topics/community-guardrails#2026-11]]）：11-02 一天有四則把完成判定交給 agent 以外的一層（測試閘、judge model、獨立複核、規格對照）；四則都是單一作者、無採用回報，同日集中出現不代表已有人採用（推論）。
 - **兩型都沒回答的是品質**：Ask HN〈Is anybody producing good code with coding agents?〉（HN 26 分，10-02）轉述資深工程師抱怨 AI 程式碼難讀、品質差；守規則與能安全出貨，不等於寫得好。
 - 來源：[RuleReceipt](https://github.com/rulereceipt/rulereceipt)、[Perspica](https://github.com/sshah03/perspica)（Show HN，日報 2026-10-01）；[部署閘](https://dev.to/yureki_lab/how-i-built-a-deploy-gate-so-my-autonomous-coding-agent-can-ship-to-prod-safely-1egb)；[Ask HN](https://news.ycombinator.com/item?id=49934037)；[TechRadar 報導](https://news.google.com/rss/articles/CBMiqAJBVV95cUxNQVVjM0pQRFpzektxX3NLM1ZqSERGMEljWW5pYWJ2c1hnTUZMTmZCVnRRdGtkRlpCQjlEQTR5bnd6MTRudlA3dWVubjZISzBGZng5eVg5NlBjcTdVRHdobXB5bDlfb1BncldYc2lUWVUzY0s2RkFZZmxpdFN2ZlNBU2huNzRIYUtEUGszYldjMksyS3ZXd0dwdFh2b1I3ZEQ2cFVuXzFKRVhlWGNUVC1ISkhvazJOYTZ0emtJR3FKUzBGR1JlMHdSekowekRDSzRZTmhGalZyWHZsdlVvQ1dHQVdWQ3lhWV9VakVFWUM2YkFDdUw0cXZUUEd2dmVSYnlldTAxeVVULUd0NjdqMTVXd2J5NUV3RjNYRHVmZjdFaWJRTHNPU2V0Mw?oc=5)（日報 2026-09-25；庫內條目見 [[topics/ai-agent-safety]]）；RuleReceipt 工具選型見 [[topics/community-tech-tools]]。
 

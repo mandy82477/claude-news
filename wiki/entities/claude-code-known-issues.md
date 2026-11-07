@@ -55,9 +55,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 母頁「現在還沒修好的」是本頁各組的結論表，條目本身不搬 %%
 
-### 🛡️ 安全與隱私（21 條未修復、5 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（19 條未修復、7 條已修復、1 條拒修、3 條❓）
 
-- 🔴 **未修復**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號；官方尚未回應。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+- ✅ **已修復 v2.1.317**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號。
+  - v2.1.317（11-03）起，web 或 shell 工具要把帳號信箱送上網路前會先詢問（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，2026-11-08 查證）；npm 穩定版 11-08 仍為 2.1.311、尚未包含。
+  - 官方未在 issue 回應，檢查涵蓋範圍未說明。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - 🔴 **未修復**｜**Postman 用戶端更新未經同意把外掛加入 Claude Code／Codex 設定檔（三源同報，互動均 0，2026-11-05）**：第三方供應鏈事件非 Claude Code 缺陷，外掛功能與移除方式未見報導，證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - 🔴 **未修復**｜**CLAUDE.md／AGENTS.md 指令沒有強制力（#53223，31 則留言、5 讚，2026-10-28）**：官方未回應；與 #2544 同一限制（見「🧠 行為與品質」）。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - 🔴 **未修復**｜**使用者 email 被放進 prompt，可能被帶給外部網站（#81138，2026-10-29）**：官方未回應；與 #78431 觸發機制不同。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
@@ -76,7 +78,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - ❓ **待查證**（標 2026-09-02｜查 fsmonitor、2.1.252｜複 2026-11-14）｜**第二變體是否仍未修補**：只有轉述，官方沒有證實這個變體。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**通過 CVP 審核的組織在 Claude Code 仍被資安防護擋下（#84352，201 則留言、29 讚，10-19 更新）**：官方未回應；CVP 綁 organization ID、可提申訴，條件見 [[topics/ai-agent-safety-cyber#防守方能申請什麼]]。
-- 🔴 **未修復**｜**User-Agent 字串夾帶使用者 email（#78431，2026-08-11）**：官方掛 `area:security` 無回覆；11-06 另一 issue #107757 經 HN（1,485 分）重新引發關注。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
+- ✅ **已修復 v2.1.317**｜**User-Agent 字串夾帶使用者 email（#78431，2026-08-11）**：issue 2026-07-17 開、09-11 以 not planned 關閉（[#78431](https://github.com/anthropics/claude-code/issues/78431)，2026-11-08 查證）。
+  - v2.1.317（11-03）才新增送出信箱前詢問的檢查（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)）。11-06 另一 issue #107757 經 HN（1,485 分）重新引發關注。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - ✅ **已修復 v2.1.163**｜**「Comment and Control」：開一則 GitHub Issue 就能經注入碰到 CI secrets（Novee，2026-08-05）**：受影響 v0.2.54–v2.1.162。證據見 [[topics/ai-agent-safety-prompt-injection#2026-08]]。
 - 🔴 **未修復**｜**Keyv 關聯 npm 蠕蟲在 repo 寫入 Claude Code hook（2026-08-04）**：至少 353 個套件版本（79 個套件名）受波及；屬 npm 供應鏈，Anthropic 無法單方修補。證據見 [[topics/ai-agent-safety-product-vulns#2026-08]]。
 - ✅ **已修復 v2.1.216（v2.1.223 加固）**｜**Auto Mode 下 Bash 複合重導向、隱形 Unicode 繞過權限**：v2.1.223 再補 4 項權限邊界。證據見 [[topics/ai-agent-safety-archive#2026-07]]。

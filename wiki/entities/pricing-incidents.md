@@ -257,10 +257,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 配額與速率
 
-#### 2026-10-30：Reddit 回報 Anthropic 已將 Max5、Max20 方案改名，並取消 Max20 的 5 小時用量窗口限制（單一貼文，官方頁面未查證）
+#### 2026-10-30：Reddit 回報 Anthropic 已將 Max5、Max20 方案改名，並取消 Max20 的 5 小時用量窗口限制（改名屬實；5 小時限制僅對 Ultra 驗證帳號取消，官方已查證）
 
 - **[r/ClaudeAI · 週熱門](https://www.reddit.com/r/ClaudeAI/comments/1xjlvlc/anthropic_renames_max5_and_max20_and_removes_5h/)**：貼文稱方案已改名、Max20 的 5 小時用量窗口限制已取消；僅有標題與圖片，無官方公告連結佐證（10-30 17:34 UTC）。
 - **2026-11-02 對官方方案頁查證**：改名屬實——$200 一檔現名 Ultra（Pro 的 10 倍用量），$100 的 Max 為 5 倍；5 小時窗：方案頁載 Ultra 驗證帳號無 5 小時上限，見 [[entities/pricing#我的方案現在有什麼]]。
+- **2026-11-08 複查官方說明**：[claude.com/pricing](https://claude.com/pricing) 載 Max（$100）為 Pro 5 倍、仍有 5 小時額度，Ultra（$200）「No 5-hour limit」並註明僅限驗證帳號。
+  - [support.claude.com〈Using Claude Code with your Pro or Max plan〉](https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan)載 Pro／Max 有 5 小時 session 上限與週上限，「verified Ultra accounts don't have a five-hour session limit」。
+  - **結論**：Reddit 貼文「Max20 改名、5 小時限制取消」半對——改名為 Ultra 屬實；取消並非全面，僅限驗證帳號，未驗證帳號可能有暫時性 session 上限；週上限仍在。
 
 #### 2026-10-14：官方再次更新《How do usage and length limits work?》——觸頂後續說明改為「升級方案後新上限立即生效」
 

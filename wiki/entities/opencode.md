@@ -34,13 +34,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-10-19
 
 > **最新動態**（2026-10-19）
-> 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；官方尚未公告修復時程或賠償方案。
+> 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；11-08 查證官方（狀態頁、GitHub）未載此事，僅 10-17 起的 Console 資安事件有跡可循，賠償方案亦未公布。
 
 ---
 
 ## 現況
 
-**最新動態（2026-10-19）：** 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；OpenCode 官方表示仍在搶修服務，尚未對外公告賠償或復原時程，僅標題可用（36Kr）。❓ **待查證**（標 2026-10-19｜查 [[entities/opencode]]、帳戶餘額歸零）｜**事故成因與修復時程未載**：影響範圍、復原時程與是否賠償均未見報導。
+**最新動態（2026-10-19）：** 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零，36Kr 稱官方仍在搶修、尚未公告賠償或復原時程，僅標題可用（36Kr，單一來源；官方未證實，見下）。🔎 **查無官方**（標 2026-10-19｜查 [[entities/opencode]]、帳戶餘額歸零｜複 2026-11-29）｜**「餘額歸零」當機事故官方未載**：2026-11-08 查證，OpenCode 狀態頁（[status.opencode.ai](https://status.opencode.ai)）與 GitHub issues 均無餘額歸零或當機公告，歸零一說僅 36Kr 單一來源；同期可確認的是 10-17 起的 Console 資安事件（媒體稱影響約 1.4% 使用者、建議輪換供應商金鑰），GitHub 上有使用者反映官方未公布賠償政策（[issue #56833](https://github.com/anomalyco/opencode/issues/56833)，使用者自述）。
 
 同一波事件中存放在 OpenCode 的 OpenAI、Anthropic、Google API 金鑰外洩風險，與其他第三方平台憑證事件並看，見 [[topics/ai-agent-safety-product-vulns]]，攻擊面總覽見 [[topics/ai-agent-safety]]。
 

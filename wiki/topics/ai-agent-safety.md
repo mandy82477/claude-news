@@ -149,7 +149,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Anthropic 官方研究：可驗證推理（provable inference）進展，讓使用者驗證收到的回應確實出自宣稱的模型、未遭竄改（2026-11-04 新增）
 
-- **揭露來源**：[Anthropic 官方研究](https://www.anthropic.com/research/provable-inference)（Hacker News 48 分）；TechCrunch 同日跟進報導「Anthropic 正在打造一套證明 AI 模型身分的系統」
+- **揭露來源**：[Anthropic 官方研究](https://www.anthropic.com/research/provable-inference)（Hacker News 235 分，11-05 快照；11-04 首日 48 分）；TechCrunch 同日跟進報導「Anthropic 正在打造一套證明 AI 模型身分的系統」
 - **核心主張**：官方研究提出機制，讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改；研究團隊含 Anthropic 與 EPFL、MIT、StarkWare 等外部研究者
 - **性質判斷**：答不出本頁四類判準（非評測越界、非模型網攻能力／防守方放行、非提示注入、非 Claude 產品漏洞或帳號濫用）——這是針對第三方轉送或推理串流完整性的信任機制研究，暫列未歸類，待週更分派
 %% 本則同時派給模型記者寫技術角度，見 data/source_attribution.jsonl %%

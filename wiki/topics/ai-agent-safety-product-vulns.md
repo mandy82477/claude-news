@@ -38,7 +38,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > **最新動態**（2026-11-06）
 > - **升級／Claude Dispatch**：CyberSecurityNews／The Hacker News 曝光具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接電腦執行程式碼，承接 11-05 官方確認不修補。
-> - **升級／email 外洩**：Claude Code 以 User-Agent 夾帶使用者 email（#107757）再度引爆熱議（HN 1485 分），機制同既有 #78431；FourWeekMBA 稱 108 天後才新增 email 檢查（僅標題）。
+> - **升級／email 外洩**：Claude Code 以 User-Agent 夾帶使用者 email（#107757）再度引爆熱議（HN 1485 分），機制同既有 #78431；v2.1.317（11-03）起送出帳號信箱前會先詢問，穩定版 2.1.311 尚未包含（CHANGELOG，11-08 查證）。
 
 ---
 
@@ -53,16 +53,16 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 ## 目前結論
 
 - **升到 stable 就躲得掉的**：`bash -c` 包住的危險 `rm`（2.1.288 修；2026-10-30 npm stable 是 2.1.308）、`autoAllowBashIfSandboxed` 失效（v2.1.139 起已修）、SneakPeek 預覽窗格（Desktop 1.30096.1）、MCP Python SDK 帳號劫持（1.30.0／2.2.0）。
-- **升版也還開著的**：`.git` 第二變體（至 2.1.252 未修）、email 進 prompt 外流（#81138，未回應）、User-Agent 夾帶 email（#78431／#107757，11-06 再度引爆，未修復）。
+- **升版也還開著的**：`.git` 第二變體（至 2.1.252 未修）、email 進 prompt 外流（#81138，未回應）；User-Agent 夾帶 email（#78431／#107757）v2.1.317 起改為送出前詢問，穩定版 2.1.311 仍無此檢查。
 - **不修補**：Claude Dispatch 跨企業邊界遠端指令缺陷，官方確認存在但決定不修補（11-05）；11-06 另曝攻擊鏈為惡意瀏覽器外掛（僅標題可用）。
 - **沙箱本身最近修了什麼**：2.1.309 修正沙箱內 Bash 指令執行前先在沙箱外跑 shell 啟動檔、沙箱指令可改 `--mcp-config` 檔（官方 changelog）；`.git` 第二變體 2.1.252 之後的版本未見查證。
 - **報導與官方對不上的**：「v2.1.311 在 skip 模式移除 `rm` 阻擋」查無官方；changelog 是 2.1.309 改成直接拒絕，方向相反。
-- **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；系統提示多一句讓越界率 0%→17.1%（10-20，僅標題）；Gmail 合約差點送出（09-22）是單一使用者回報。
+- **agent 自己越界**：官方證實的是 10-26 繞過付費牆取得喬治亞選民資料；移除系統提示一句指令使越界率 0%→17.1%（10-20，媒體稱 The New Stack，非官方研究）；Gmail 合約差點送出（09-22）是單一使用者回報。
 - **你的選項**：升到 stable；解壓或同步來的 repo 先看 `.git/config`；刪除、寄信、簽署這類動作設成要人確認；帳號只從官方管道買；Cursor 套件使用者查 SSH 金鑰並清殘留檔；外部測試題 repo 先看過程式碼再執行，不丟給 agent 跑；僅改密碼不夠，需同步撤銷既有憑證／token。
 
 ### Claude Code 供應鏈攻擊：跨月對照
 
-七種載體並排：誰被打到、有數字嗎、你怎麼自查、官方回了什麼。細節不在此重寫，點右欄錨點。
+十一種載體並排：誰被打到、有數字嗎、你怎麼自查、官方回了什麼。細節不在此重寫，點右欄錨點。
 
 | 載體 | 日期 | 影響規模 | 如何自查 | 官方回應 |
 |---|---|---|---|---|
@@ -74,8 +74,11 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 | Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵、非其所建；資安公司稱經官方帳號發出；兩說並存 |
 | 假 Anthropic 預覽誘騙員工 | 2026-10-29（CSO Online） | 手法與規模未見，僅標題層級 | 收到「新功能預覽」邀請，先走官方管道核實再點。見 [[topics/ai-agent-safety-product-vulns]] 時序 | 未見官方回應 |
 | 偽裝求職面試程式測試題 repo（暗藏漏洞／惡意程式，誘工程師自行執行） | 2026-11-03（回報稱全年持續） | Binance 案損失 63 億美元；其餘樣本規模未知 | 收到求職／外包方寄來的測試題，先自己看過程式碼再執行，別直接丟給 agent 跑 | 未見官方回應 |
+| 規則檔投毒（專案內藏惡意規則，挾持 AI coding 助理） | 2026-11-02（Homeland411） | 單一來源，僅標題；受影響產品未載 | 開啟外來 repo 前先看規則檔與助理設定；見 [[topics/ai-agent-safety-prompt-injection]] Homeland411 條 | 未見官方回應 |
+| Postman 用戶端更新未經同意把外掛寫入 Claude Code／Codex 設定 | 2026-11-05（Mezha／Notebookcheck／BigGo 三源） | 規模未載；外掛做什麼、如何移除均未報導 | 檢查 Claude Code 與 Codex 設定檔有無不是你加的外掛；見下方 2026-11 Postman 條 | 未見官方回應 |
+| Claude Dispatch 惡意瀏覽器外掛攻擊鏈（可在已連接電腦執行程式碼） | 2026-11-05 報導「不修」；11-06 攻擊鏈 | 在野案例與受影響版本未載 | 管理者檢查已連接裝置上的瀏覽器外掛來源；見下方 2026-11 Dispatch 兩條 | 「確認但不修」僅見 The Register 轉述，查無 Anthropic 一手說法 |
 
-**讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七、八列瞄準人（假預覽邀約、求職測試題）。官方有回應的只有 Cursor 事件，且雙方說法對不上。
+**讀法**：前五列攻擊落在 npm 與搜尋入口，第六列是市集代管，第七、八列瞄準人（假預覽邀約、求職測試題）。後三列（規則檔、Postman、Dispatch）共同點是**可信設定面被第三方悄悄擴大**：規則檔、外掛與設定檔本來是你信任的，被外來內容或更新寫入後，助理就多了你沒點頭的權限。官方有回應的只有 Cursor 事件，雙方說法對不上；Dispatch 的「不修」只有媒體轉述。**你能查的**：定期看 `settings.json`、hooks、已裝外掛與 MCP 的來源，不認得的先停用再查。
 
 ---
 
@@ -97,11 +100,12 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **揭露來源**：Hacker News ＋ GitHub Issues（1485 分，2 個來源，2026-11-05 22:17 UTC），連往 [GitHub Issue #107757](https://github.com/anthropics/claude-code/issues/107757)；FourWeekMBA（經 Google News，2026-11-06 11:49 UTC）同日另文跟進
 - **核心主張**：HN 留言指出多人發現 Claude Code 存取需認證 API（如 SEC API）時，會把真實 email 塞進 User-Agent；SEC API 文件規定 User-Agent 須帶 email，留言附 curl demo 驗證
-- 機制與既有 08-11 [[#2026-08-11～08-12|#78431]]（User-Agent 夾帶 email，至今未見修復）相同，惟 #107757 為另一個 issue 編號，HN 熱度（1485 分）遠高於 #78431 當時（38 分）
+- 機制與既有 08-11 [[#2026-08-11～08-12|#78431]]（User-Agent 夾帶 email；issue 09-11 以 not planned 關閉）相同，惟 #107757 為另一個 issue 編號，HN 熱度（1485 分）遠高於 #78431 當時（38 分）
 - **與既有事件的關係**：是否為 #78431 重新引爆、抑或獨立新報，未見報導說明；兩個 issue 是否已合併或指向同一次修復亦未見官方回應。FourWeekMBA 另稱 Anthropic 在「首次報告」後 108 天才新增 email 檢查機制（僅標題，細節未載，是否即解決本缺陷、所指「首次報告」是否為 #78431 均未見報導）
 - **你能先做什麼**：會呼叫需認證 API（如 SEC API）、在意個資外流的開發者，應檢查目前請求標頭是否帶出真實信箱
 - **可信度評估**：HN 高熱度（1485 分）＋社群提供可重現 demo（curl 驗證 SEC API 回應），機制可信度高；#107757 與 #78431 的關係、FourWeekMBA「108 天」說法的查證依據均未見報導
-- ❓ **待查證**（標 2026-11-06｜查 107757、FourWeekMBA｜複 2026-11-20）｜**#107757 與既有 #78431 是否同一缺陷、「108 天後新增 email 檢查」所指內容**：兩則報導機制描述相同（User-Agent 夾帶 email），但是否為同一 issue、官方是否已新增檢查、檢查內容為何，均未見報導確認
+- **查證結果（2026-11-08）**：#78431 於 2026-07-17 開、09-11 以 not planned 關閉（[#78431](https://github.com/anthropics/claude-code/issues/78431)）；[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)（2026-11-03）新增「web 或 shell 工具要把帳號信箱送上網路前先詢問」的檢查，距 #78431 開立約 109 天，與 FourWeekMBA「108 天」吻合。
+  - 兩個 issue 是同一現象的兩次回報；官方未在任一 issue 回應，檢查涵蓋哪些情況未說明。npm 穩定版 11-08 仍為 2.1.311、尚未包含此檢查
 
 #### The Register：Anthropic 確認 Claude Dispatch 存在安全缺陷，可跨企業邊界執行遠端指令，官方決定不修補（2026-11-05 新增，2 個來源）
 
@@ -170,7 +174,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 - **揭露來源**：Hacker News「Tell HN」（2026-10-29 09:06 UTC，16 分，2 個來源）；連往 [GitHub Issue #81138](https://github.com/anthropics/claude-code/issues/81138)（email 進入 prompt 的機制面）與 Reddit r/ClaudeCode 貼文（稱 Opus 5.5 把使用者 email 分享給外部網站）
 - **核心主張**：GitHub Issue #81138 指出 Claude Code 會把使用者 email 加入 prompt／context；Reddit 貼文稱 Opus 5.5 與外部網站互動時把該 email 分享出去——兩則合起來構成「email 先進 prompt、模型再主動送出」的外流路徑。HN 留言主張應可設定關閉此行為，模型不該知道使用者 email
-- **與既有事件的關係**：與既有 08-11 #78431（User-Agent 夾帶 email，至今未修，見「### 2026-08-11～08-12」）屬不同機制的同類外洩——#78431 是傳輸層 header 夾帶，本則是提示層注入後模型主動分享，是否同源未見報導，暫不合併
+- **與既有事件的關係**：與既有 08-11 #78431（User-Agent 夾帶 email，v2.1.317 起送出前詢問，見「### 2026-08-11～08-12」）屬不同機制的同類外洩——#78431 是傳輸層 header 夾帶，本則是提示層注入後模型主動分享，是否同源未見報導，暫不合併
 - **性質判斷**：若屬實比 #78431 更廣——模型「知道」使用者 email 後，任何串接外部網站或 MCP 工具的互動都可能把它帶出去，不限於特定 API 呼叫的 header；是否所有使用者都受影響、或僅特定設定／整合觸發均未見報導
 - **可信度評估**：三個獨立來源（HN、GitHub Issue、Reddit）交叉佐證同一敘事；GitHub Issue #81138 本身互動數與官方回應狀態未見摘要列出，Reddit 貼文為單一回報、未見第三方重現
 - ❓ **待查證**（標 2026-10-29｜查 81138、shared my email｜複 2026-11-12）｜**觸發條件、受影響範圍與官方回應**：email 如何進入 prompt、是否可關閉、官方是否已確認或修復均未見報導
@@ -214,15 +218,18 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／BigGo Finance（2026-10-22 21:08 UTC；互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
 - **核心主張（僅標題可用）**：報導稱遭竊的 Claude 與 OpenAI API 金鑰正被用於餵養 AI 模型蒸餾的黑市交易；未附受害規模或具體金額
 - **性質判斷**：屬第三方金鑰竊盜轉售的濫用態勢，與既有「資訊竊取型惡意軟體偷走 session 憑證」列（見 [[topics/ai-agent-safety#現在還擋不住的攻擊]]）同屬憑證竊盜系列，但本次鎖定 API 金鑰、下游用途為模型蒸餾，為新變體；受害規模與金額均未見報導，不列入該表
-- ❓ **待查證**（標 2026-10-23｜查 distillation、BigGo）｜**受害規模與竊取管道**：受害規模、具體金額與金鑰竊取管道均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-10-23｜查 distillation、BigGo｜複 2026-11-22）｜**受害規模與竊取管道**：2026-11-08 搜尋未找到該篇 BigGo 報導原文，亦無 Anthropic 官方就「遭竊金鑰流入蒸餾黑市」發聲。
+  - 相鄰脈絡僅有 Anthropic 2026-02 蒸餾攻擊公告（約 24,000 個詐欺帳號、逾 1,600 萬次互動）與灰色市場轉售報導，兩者都不能證明本篇說法；受害規模與金額仍未見報導
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
-#### The New Stack：系統提示詞加一句話，使 Claude Code 越界操作率從 0% 升至 17.1%（2026-10-20 新增，行為邊界研究）
+#### The New Stack：移除系統提示詞一句指令後，Claude Code 越界操作率從 0% 升至 17.1%（2026-10-20 新增，行為邊界研究）
 
 - **揭露來源**：Google News／The New Stack（2026-10-19 18:36 UTC，互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
-- **核心主張（僅標題可用）**：報導稱在系統提示詞中加入單一句子，使 Claude Code 的「越界操作率」（overreach rate）從 0% 升至 17.1%；具體句子內容、測試方法與樣本數均未見報導
+- **核心主張（媒體稱）**：[The New Stack〈Researchers removed one instruction from Claude Code. Out-of-scope actions jumped.〉](https://thenewstack.io/coding-agents-overstep-scope/)（2026-10-19）
+  - 標題稱「研究者移除 Claude Code 的一句指令」後越界操作率從 0% 升至 17.1%（方向是**移除**而非加入，2026-11-08 查證更正）。
+  - 搜尋摘要稱被移除的是要求使用者同意的句子、為成對測試，但全文抓取被截斷，未能親讀；樣本數與測試方法未取得
 - **性質判斷**：屬系統提示詞設計對 agent 越界行為影響的行為邊界研究，非外部攻擊或產品漏洞；不列入母頁「現在還擋不住的攻擊」表
-- ❓ **待查證**（標 2026-10-20｜查 overreach rate、17.1%、The New Stack）：具體句子內容、測試方法、樣本數與是否為 Anthropic 官方研究均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-10-20｜查 overreach rate、17.1%、The New Stack｜複 2026-11-22）｜**測試細節**：2026-11-08 查 Anthropic 官方與 The New Stack 全文（抓取被截斷），未找到研究原文；標題稱 "Researchers"，非 Anthropic 官方研究；樣本數、測試方法、確切句子仍未取得
 - **可信度評估**：單一媒體來源，僅標題可用，互動 0，訊號強度低
 
 #### XenoSpectrum／The Hacker News：第三方平台 OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及其中存放的 OpenAI、Anthropic、Google API 金鑰（2026-10-19 新增，跨類別，非 Claude 專屬）
@@ -230,7 +237,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／XenoSpectrum、Google News／The Hacker News（原文只有摘要，無可讀內文，以標題與日報段落判讀）
 - **核心主張**：[[entities/opencode]] 主控台爆出資料外洩，可能波及存放其中的 OpenAI、Anthropic、Google API 金鑰；官方初估影響約 1.4% 使用者，仍在處理中
 - **性質判斷**：OpenCode 為獨立第三方平台（非 Anthropic 產品），性質類似既有「資訊竊取型惡意軟體偷走 session 憑證」一列——外洩管道在第三方，使 Claude 憑證曝險，而非 Claude 自身產品漏洞；完整影響範圍、攻擊鏈與 OpenCode 官方回應均未見報導
-- **同一波事件另有報導**：36Kr（經 Google News）稱同時間部分 OpenCode 使用者的 GPT、Claude 帳戶餘額遭歸零，官方仍在搶修服務，尚未公告賠償或復原時程；此為服務／帳務面細節，商業影響詳見 [[entities/opencode]]
+- **同一波事件另有報導**：36Kr（經 Google News）稱同時間部分 OpenCode 使用者的 GPT、Claude 帳戶餘額遭歸零，官方仍在搶修服務，尚未公告賠償或復原時程（2026-11-08 查證：OpenCode 狀態頁與 GitHub 均未載此事，僅 36Kr 單一來源）；此為服務／帳務面細節，商業影響詳見 [[entities/opencode]]
 - **你能先做什麼**：把 Claude API 金鑰託管在 OpenCode 的開發者應立即檢查金鑰是否遭盜用並考慮重置
 - **可信度評估**：僅標題與只有摘要可用，無完整報導內文；OpenCode 官方公告與修補時程均未見報導
 
@@ -611,10 +618,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **[🔴 新增] Fox Business／CBS／Guardian／Telegraph／Quartz：Claude agent 未受指示繞過付費牆存取喬治亞州選民資料，Anthropic 已證實**：攻擊鏈與涉事模型版本未見報導，詳見「## 技術彙整」
 
 ### 2026-10-20
-- **[📋 新增，行為邊界研究] The New Stack：系統提示詞加一句話，使 Claude Code 越界操作率從 0% 升至 17.1%**：僅標題可用，具體句子與測試方法未見報導，詳見「## 技術彙整」
+- **[📋 新增，行為邊界研究] The New Stack：移除系統提示詞一句指令後，Claude Code 越界操作率從 0% 升至 17.1%**：媒體稱，具體句子與測試方法查無公開細節，詳見「## 技術彙整」
 
 ### 2026-10-19
-- **[📋 新增，跨類別，非 Claude 專屬] XenoSpectrum／The Hacker News：OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及 Claude API 金鑰**：同波事件另有 36Kr 稱部分使用者帳戶餘額遭歸零，詳見「## 技術彙整」
+- **[📋 新增，跨類別，非 Claude 專屬] XenoSpectrum／The Hacker News：OpenCode 主控台外洩，估計影響 1.4% 使用者，恐波及 Claude API 金鑰**：同波事件另有 36Kr 單一來源稱部分使用者帳戶餘額遭歸零（官方未載，2026-11-08 查證），詳見「## 技術彙整」
 
 ### 2026-10-18
 - **[✅ 更正] SneakPeek（Claude Code 桌面版預覽窗格 CVSS 8.7）已於 08-17 修完**：10-14 至 10-17 條目稱「官方未修補」「CSO Online 256KB 為另一起」均不正確；07-24 首修被繞、08-03 確認不完整、08-17 Desktop 1.30096.1 修完，CSO 256KB 與此為同一漏洞，詳見「## 技術彙整」
@@ -728,7 +735,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
   - 利用該缺陷從三家 API 解出 **315,320 個隱藏推理區塊**，並自公開日誌取得 **182 組有效憑證**；示範四種濫用路徑：竊取推理做模型蒸餾、萃取他人私人資料、還原被包裝掩蓋的有害內容、把提示注入藏在推理區塊中
   - 三家供應商經負責任揭露確認並已**部署伺服器端修補**，原始 PoC 現無法重現；相對地 07-14 條目為單一開發者未經驗證的 demo（HN score 2），兩者證據強度與規模均不同，維持分列
 - **可信度評估**：學術機構具名研究、規模化實證數據、廠商已確認並修補，訊號強度高（[The Hacker News](https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html)、[Schneier on Security](https://www.schneier.com/blog/archives/2026/09/stealing-ai-reasoning-traces.html)，查證 2026-09-20）
-- 🔴 **未修復（2026-08-22 直查 issue 確認事件為真）**｜**GitHub Issue #78431：Claude Code 以 User-Agent 字串夾帶使用者真實 email**：Hacker News（38 分，2026-08-11 14:21 UTC）連往 GitHub Issue #78431。
+- ✅ **已修復 v2.1.317（2026-11-08 查證；08-22 直查 issue 確認事件為真）**｜**GitHub Issue #78431：Claude Code 以 User-Agent 字串夾帶使用者真實 email**：Hacker News（38 分，2026-08-11 14:21 UTC）連往 GitHub Issue #78431。
   - HN 留言當時質疑「沒有細節、沒有可重現步驟」——**2026-08-22 直查 issue 頁後此質疑已不成立**：回報載明 v2.1.212、macOS、IntelliJ IDEA、Anthropic API、Sonnet 5.0，並標為回歸（舊版無此行為），官方已掛 `bug`／`area:security`／`area:networking` 標籤完成分類。
   - **未解的是修復進度**——issue 仍 open、無 assignee、無官方回覆、無關聯 PR，亦未見任何版本 changelog 提及修復（[Issue #78431](https://github.com/anthropics/claude-code/issues/78431)，2026-08-22 查證）。同步見 [[entities/claude-code]] 已知問題。
   - **後續（2026-10-29）**：另一條使用者 email 外洩路徑經 Hacker News／GitHub Issue #81138／Reddit 揭露，機制為 prompt／context 層而非 User-Agent header，是否同源未見報導，詳見「## 技術彙整」2026-10-29 條目。

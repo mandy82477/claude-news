@@ -87,7 +87,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **anthropic-sdk-typescript vertex-sdk-v1.1.0** | 2026-10-23 | 新增 message threads 支援，與同日 Python SDK 呼應（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0)）|
 | **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；Desktop／VS Code 的 bypass 模式危險 `rm`／`rmdir` 直接拒絕（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
 | **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
-| **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking：改支援新版 API；❓ **待查證**（標 2026-10-21｜查 vertex-sdk-v1.0.0、取樣參數）｜KuCoin 稱移除取樣參數（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
+| **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking：改支援新版 API，API 版本 `2026-10-21` 移除 `temperature`、`top_p`、`top_k` 請求參數，送出任一者在所有模型回 400（[Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
 | **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|
 | **v2.1.306** | 2026-10-21 | Bug fixes：修正雲端 session 未帶環境變數執行 `claude -p` 誤報「Not logged in」；修正原被「prompt too long」蓋掉的 API 錯誤；純 bug 修復（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.306)）|
 | **anthropic-sdk-python v1.17.0** | 2026-10-20 | Features：新增組織層級 webhook 端點與使用者個人資料強制設定事件；Admin API 新增 RBAC 群組擁有者權限錯誤碼；補 `unsupported_charset` 說明（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0)）|
@@ -185,6 +185,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.223** | 2026-08-06 | ⚠️ **安全修復**：一次修補 agentic 權限層 4 項邊界——Bash 指令可隱藏部分內容躲過權限掃描、tab／隱形 Unicode 填塞讓核准對話框看不出實際內容、workflow script 用動態 `import()` 逃出沙箱、`bypassPermissions` agent 定義無視組織政策停用 bypass 模式（2026-08-10 查證，見已知問題「🛡️ 安全與隱私」）|
 | **v2.1.222** | 2026-08-04 | ⚠️ **安全修復**：修復 worktree-isolated session 與其 subagent 可對主 checkout 執行破壞性 git 指令的隔離漏洞；隔離範圍擴大至每個 session 中的檔案編輯（file edits）與 Bash 執行，不再侷限於 git 層（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.222)）|
 | **v2.1.221** | 2026-08-04 | **[VSCode] 新增 Focus view**：chat-menu 切換選項，將工具活動摺疊為可展開的每輪摘要並附即時執行指示，可用 `Ctrl+Alt+F` 或選單切換（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.221)）|
+
+**表格細節**
+- **vertex-sdk-v1.0.0 的 API 版本依據（查證日 2026-11-08）**：[API 版本說明](https://platform.claude.com/docs/en/api/versioning)；SDK 預設送該版本，見[發布說明](https://platform.claude.com/docs/en/release-notes/overview)。
 
 ## 開發者須知
 

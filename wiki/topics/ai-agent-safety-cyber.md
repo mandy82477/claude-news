@@ -85,7 +85,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
 | 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
 | 10-22 | 防護 | Anthropic 與 Theorem 合作發布研究，示範 LLM 大規模產生正式軟體驗證證明，HN 392 分／5 個來源跟進 | 官方一手＋HN＋The Decoder；具體方法論與驗證規模未見於可讀摘要，僅標題可用 |
-| 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 單一來源（TechRadar）；是否源自 10-08 CIDP 開源掃描計畫未見證實（推論），僅標題可用 |
+| 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 官方一手（Anthropic〈attack surface reduction〉10-20，493 個問題／25 專案，2026-11-08 核實）；是否源自 10-08 CIDP 開源掃描計畫未見證實（推論） |
 | 10-21 | 防護 | Anthropic 官方研究文章說明用 Claude 分析降低程式碼攻擊面，HN 105 分／71 則留言 | 官方一手＋HN；具體方法論與量化成效數字未見全文，僅標題可用 |
 | 10-21 | 濫用 | 朝日新聞：AI 相關網路攻擊所用伺服器上發現 Claude Code 蹤跡 | Google News／朝日新聞；僅標題可用，攻擊鏈細節未載 |
 | 10-19 | 摩擦 | GitHub #84352 留言數持續攀升至 201 則、👍29，本日互動數最高的開發者回報 | Issue 一手回報；官方仍未公開回應或修復時程 |
@@ -190,15 +190,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現（2026-10-23 新增，防護能力展示）
 
 - **揭露來源**：Google News／TechRadar（2026-10-22 18:35 UTC；互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
-- **核心主張（僅標題可用）**：TechRadar 報導 Claude 標出近 500 個令人擔憂的開源安全問題，涵蓋 C、Java、Python 等語言，其中一個漏洞長達 21 年未被發現；完整清單、官方確認版本與對應 CVE 均未見報導
+- **核心主張（官方一手已核實，2026-11-08）**：TechRadar 該篇對應 Anthropic 官方研究 [〈attack surface reduction〉](https://www.anthropic.com/research/attack-surface-reduction)（2026-10-20 發布）：Claude 在 25 個開源專案（逾 500 萬行 C、C++、Java、PHP、Python）找出 **493 個**問題（標題「近 500」即此數）。
+  - 21 年漏洞是兩個設定衝突：一個要求每個客戶端出示憑證，另一個本意只是延後檢查卻把檢查整個關掉，使「只收信任客戶端」的伺服器對任何人開放；官方文章未指名受影響專案。
+  - 修補：OpenSSH 已由 Anthropic 回報並附修補，10.5 把 ML-DSA 相關檢查移到解析之前、10.6 補完 10.5 的缺口；其餘專案的修補狀態與 CVE 編號官方文章均未載（[The Next Web](https://thenextweb.com/news/claude-attack-surface-reduction-493-issues-openssh) 2026-10-21 同）
 - **性質判斷**：官方／第三方防護能力展示，非漏洞或攻擊事件，不列入「現在還擋不住的攻擊」表；是否源自 10-09 Cyber Mission 開源漏洞免費掃描計畫未見報導證實（推論：兩者議題高度重疊）；已列入「模型網攻能力與防護」
-- ❓ **待查證**（標 2026-10-23｜查 21-year、nearly 500）｜**完整清單與修補時程**：500 個問題的完整清單、對應 CVE 與修補時程均未見報導，僅標題可用
+- **官方未載**：完整 493 項清單、OpenSSH 以外專案的修補時程與 CVE 編號，官方文章與媒體均未公布（2026-11-08 查）
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
 #### Anthropic 官方研究：用 Claude 分析並降低程式碼的攻擊面（2026-10-21 新增，官方防護研究）
 
 - **揭露來源**：Anthropic 官方研究／Hacker News（2026-10-21 03:36 UTC；HN 105 分、71 則留言討論；https://www.anthropic.com/research/attack-surface-reduction）
-- **核心主張（僅標題可用）**：官方研究文章說明如何運用 Claude 分析程式碼、找出可縮減的攻擊面；具體方法論、測試範圍與量化成效數字未見於可讀摘要
+- **核心主張（2026-11-08 核實）**：官方研究（2026-10-20）用 Claude 分析 25 個開源專案、找出 493 個攻擊面問題，含一個存在 21 年、憑證檢查被設定衝突關閉的案例；OpenSSH 修補見 10.5／10.6；細節見上一條 TechRadar 條目
 - **性質判斷**：官方防護研究／工具說明，非漏洞或攻擊事件，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」
 - **可信度評估**：官方一手來源，經 Hacker News 轉載並有具體討論熱度（105 分、71 則留言），為今日互動數最高條目之一
 
@@ -207,7 +209,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／朝日新聞（2026-10-21 04:04 UTC，互動 0；只有摘要，原文無可讀內文，以標題判讀）
 - **核心主張（僅標題可用）**：報導稱在與 AI 相關的網路攻擊案件所使用的伺服器上發現 Claude Code 的蹤跡；具體攻擊鏈、調查單位與受害範圍均未見報導
 - **性質判斷**：屬「別人拿 Claude Code 打別人」的濫用態勢，不是 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」，與既有 10-07 CyberXero、09-14 ShinyHunters 同屬濫用態勢系列
-- ❓ **待查證**（標 2026-10-21｜查 AI-linked cyberattacks）：攻擊鏈細節、調查單位與伺服器用途均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-10-21｜查 AI-linked cyberattacks｜複 2026-11-22）｜**朝日新聞該篇內容**：2026-11-08 以日英文搜尋未找到該篇朝日報導，亦無官方資料指稱在攻擊伺服器上發現 Claude Code。
+  - 搜到一則相近但未證實同案的日本報導（GMO Cybersecurity by Ierae 稱在 6 台海外攻擊伺服器發現中國製 AI agent「ARTEX」痕跡，約 80 家日本企業受影響），其中並未提及 Claude Code；攻擊鏈、調查單位仍未見
 - **可信度評估**：單一來源，經 Google News 轉載，原文未可讀，互動 0，訊號強度低
 
 #### GitHub Issue #84352：CVP 誤擋留言數攀升至 201 則、👍29，本日互動數最高開發者回報（2026-10-19 新增，升級既有 08-12 事件）

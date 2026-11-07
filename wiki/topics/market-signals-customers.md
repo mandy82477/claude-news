@@ -39,7 +39,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
 > **最新判讀**（2026-10-29）
-> - **Anthropic 給 Claude for Financial Advisors 用戶最高 4,800 美元額度**：[Citywire](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5) 報導，僅標題可用；與 10-24 的 20 席門檻方向相反。
+> - **Schwab 給新簽 Claude Enterprise 的顧問最高 4,800 美元額度抵席位費（至 11-30）**：Citywire 原寫成 Anthropic 給，[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)（11-08 查證）寫明出錢的是 Schwab；20 席是 Anthropic 企業方案的最低席位、不是 Schwab 追加的門檻。原報導：[Citywire](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5) 報導。
 > - **GitHub Copilot Fusion 宣稱以一半 API 成本勝過 Claude Code**：基準測試方法未公開。
 
 ---
@@ -481,7 +481,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot｜複 2026-11-12）｜**GitHub Copilot Fusion「以一半 API 成本勝過 Claude Code」的基準測試方法論是否公開或遭社群複現反駁**：The New Stack 報導僅標題可用，測試範圍與第三方獨立複現均未見報導。
 - ❓ **待查證**（標 2026-10-28｜查 Mithril Medicine、匿名創辦人｜複 2026-11-11）｜**Anthropic 收購 Mithril Medicine 的金額與條款是否經官方揭露，創辦人真實身分是否公開**：R&D World、Endpoints News 報導僅標題可用，收購價、條款與創辦人身分均未見揭露。
 - ❓ **待查證**（標 2026-10-28｜查 inference_geo、Managed Agents｜複 2026-11-11）｜**Managed Agents 毫秒計費、Haiku 5.5 分級計價與美國資料落地加成的具體費率數字是否公布**：官方文件新增三項計費機制，具體費率數字均未見載明，無法判斷對毛利率的淨效果。
-- ❓ **待查證**（標 2026-10-24｜查 Schwab、小型顧問｜複 2026-11-07）｜**Schwab 追加 20 席門檻的理由與生效時間是否經官方說明**：RIABiz 報導僅標題可用，門檻生效時間、是否分階段放寬、Orion 是否跟進均未見報導。
+- 🔎 **查無官方**（標 2026-10-24｜查 Schwab、小型顧問｜複 2026-11-22）｜**Schwab 追加 20 席門檻的理由與生效時間是否經官方說明**：RIABiz 報導僅標題可用，門檻生效時間、是否分階段放寬、Orion 是否跟進均未見報導。
+  - 2026-11-08 查證（[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)）：**更正前提——20 席是 Anthropic 企業方案的最低席位，不是 Schwab 追加的門檻**。
+    - Schwab 的角色是提供 4,800 美元額度（等於 20 席一年 $20／席／月），僅限新簽企業方案者，11 月 30 日止（原文 available through Nov. 30）；token 用量費另計。
+    - 約 1.1 萬家、佔近 1.7 萬家 RIA 的小型事務所常不足 20 位顧問。生效日期、降席位計畫、Orion 是否跟進：報導均未載。
 - 🔎 **查無官方**（標 2026-10-17｜查 Replit、終止合作｜複 2026-11-30）｜**Replit 終止合作的說法有爭議，Anthropic 與 Replit 皆無正式聲明**：
   - [TechCrunch](https://techcrunch.com/2026/10/20/replit-is-no-longer-working-with-anthropic-ceo-says/) 載 Replit 執行長 Masad 在 Disrupt 稱已不再與 Anthropic 合作（理由成本、合作與效能，偏好 OpenAI），但知情人士稱合作仍在，Replit 模型選單仍列 Claude；Anthropic 官方站無回應（2026-10-31 查）。只能當「執行長單方說法」。
 - 🔎 **查無官方**（標 2026-10-16｜查 Accenture、支出上限｜複 2026-11-30）｜**Accenture $29 月上限屬媒體報導，Accenture 與 Anthropic 皆無官方說明**：404 Media 看過內部公告（The Next Web 轉述）：

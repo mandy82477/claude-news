@@ -58,7 +58,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 不含 bundled／enterprise skills；Remote Control 連線與跳過 feature-flag 抓取的 session 不可用
 - **Agent Teams** — 多 agent 協作，目前僅支援 Claude 實例（社群已有 workaround）
 - **MCP Servers** — 外部工具整合（注意：多個 MCP 可能導致每次訊息消耗 20k+ tokens）
-  - ❓ **待查證**（標 2026-10-25｜查 MCP Tasks、Elicitations）｜**MCP Tasks 與 Elicitations 支援傳出限量發布**：[Forkast News](https://news.google.com/rss/articles/CBMitAFBVV95cUxNZmIwUnNsbzdhTERIYWlMaWZhMEtVSWFCYU14dFZUQ3h5MWRSMlc1SklocTU5OUFPQm5xeEM1c1JxLXpiWU9aWkxlQUI5OHdVai1ZNFF1RHBnTjdiMW5MS2xhUnBPak5Dbmg1SDRuWkFQMGhEekZ2Y2dpWVdsbGN0WHEtcjdYOWY3Nlo0djRjQkVnRV9DX2l6OVVGX09FYmFkRlEyT01RNTNuTi1nejZsNVZNc3I?oc=5) 單一媒體報導，摘要為空，官方文件未見對應說明。
+  - **MCP Tasks（public beta）與 Elicitations 已有官方說明**：MCP tasks 由 server 執行長任務，需 Claude Code CLI v2.1.304+，v2.1.319 起無需 feature-flag 抓取即可使用，`CLAUDE_CODE_DISABLE_MCP_TASKS=1` 可關閉。
+    - Elicitation 對話框可在任務執行中向使用者要輸入（[MCP 文件](https://code.claude.com/docs/en/mcp.md)、[CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，查證日 2026-11-08）。
+    - 2026-10-25 Forkast News 的「限量發布」措辭官方未用。
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
@@ -77,7 +79,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **dev box 與受管裝置**
 - 10-24：新增內容集中於 dev box 設定範例（`acme-dev create`、`devbox` id／name）。
-- 10-24：移除「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 範例，官方未附遷移說明（查證標記在下方時序的 10-24 條）。
+- 10-24：「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 範例經 2026-11-08 查證仍在現行文件（hook 範例移到遠端 session 權限提示段），並非移除。
 - 10-12：組織設定 `disableDesktopLocalSessions`、`sshHost`／`sshHostAllowlist`（見「開發者須知」）。
 - 10-05：HIPAA 組織「Desktop」「雲端 session」兩個管理開關，Desktop 預設關閉（見「開發者須知」）。
 
@@ -120,7 +122,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **官方文件更新**（2026-10-30）：桌面版文件字數由 202,046 增至 203,154，但本頁段落數（1236）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-26）：桌面版文件字數由 189,365 增至 201,162，但本頁段落數（1222）超過自動比對上限，無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-24）：桌面版文件新增約 251 段、移除約 149 段（168,290→189,391 字）；新增內容集中於 dev box 相關設定範例（`acme-dev create`、`devbox` id／name 等）（[原文](https://code.claude.com/docs/en/desktop.md)）。
-  ❓ **待查證**（標 2026-10-24｜查 `Local sessions on managed devices`、devbox）｜**移除段落含「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 設定範例**：官方未附遷移說明，依賴這兩種 hook 範例設定的桌面版使用者可留意範例是否已搬到別處。
+  已查證（查證日 2026-11-08）：現行[桌面版文件](https://code.claude.com/docs/en/desktop.md)仍有「Local sessions on managed devices」一節（說明管理員可停用本機 session），Notification／PermissionRequest hook 範例也仍在，已移到遠端 session 權限提示段（在遠端機器的 `~/.claude/settings.json` 設定）；先前以為「被移除」其實是搬移。
 - **官方文件更新**（2026-10-21）：桌面版文件新增 95 段、移除 52 段（160,296→162,725 字），新增 Auto mode availability 小節、session details panel 用量顯示方式、新增憑證來源設定步驟；移除內容未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-20）：桌面版文件新增 171 段、移除 65 段（148,190→160,296 字，近期最大單日異動），聚焦 session 資料夾管理與已儲存環境；移除段落多為舊版操作說明，新版對應寫法未見列出（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-10-17）：桌面版文件重寫「結束 App 後任務是否還在跑」規則，依平台分流——macOS／Linux 以 Claude 帳號登入時結束 App，重開 session 可接續正在跑的任務；Windows 版或接第三方 provider 時結束 App，進度無法接回，須保持 App 開著直到任務完成（文件字數 148,156→148,190）（[原文](https://code.claude.com/docs/en/desktop.md)）。

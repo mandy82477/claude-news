@@ -148,19 +148,21 @@ claude self-hosted-runner --hold-idle-file <path> --max-hold-min <分鐘數>
 **注意事項：** 設定項與完整行為官方文件尚未補齊；在這些平台跑自動化或背景任務的團隊升級前應檢查腳本是否依賴長 sleep。
 
 ### Message Threads API ＋依維度拆分用量費用報表
-**發布：** 2026-10-23（anthropic-sdk-python v2.2.0／anthropic-sdk-typescript vertex-sdk-v1.1.0） | **狀態：** 正式發布
+**發布：** 2026-10-23（SDK 支援：anthropic-sdk-python v2.2.0／anthropic-sdk-typescript vertex-sdk-v1.1.0）；2026-11-02 官方宣布公開測試 | **狀態：** Public Beta
 
-**是什麼：** API 新增 message threads 支援，供多輪對話以執行緒方式管理；Python SDK 同時新增依維度（dimension）拆分的用量與費用報表，舊版報表標記為 legacy。
+**是什麼：** Messages API 的 `thread` 參數：第一個請求送完整對話並開一條 thread，之後每輪只送新增的訊息與上一個回應的 ID，不必每輪重送整段歷史；thread 閒置 5 分鐘過期，之後由客戶端重送完整對話開新的一條（[官方說明](https://claude.com/resources/articles/message-threads)，2026-11-08 查證）。Python SDK 同時新增依維度（dimension）拆分的用量與費用報表，舊版報表標記為 legacy。
 
-**為何熱：** 兩個 SDK 同日同步發布同一功能，延續本月 10-21 User Profiles enforcement、10-15 speed 參數的連續成對發布節奏；11-03 起 The New Stack／ZDNET／Unite.AI 等 3 家媒體跟進報導 Claude Code 端的等待時間縮短效果（宣稱 35%），但媒體用語為「Beta」，與本頁現記的「正式發布」不一致，待官方文件確認何者為準。
+**為何熱：** 官方說多數 Claude Code 使用者已預設開啟，50 萬到 100 萬 token 的請求首字延遲中位數降約 35%；token 用量不變（Claude 每輪仍讀完整對話，照標準費率計）。The New Stack、ZDNET、Unite.AI 等 11-03 跟進，ZDNET 作者拿自己的 log 驗算，細節只見標題。
+
+**現在要試嗎：** 用 Claude Code 的人不用動（多數已預設開啟）。自己接 Messages API 跑長對話 agent 的人值得試：延遲降、帳單不變；但客戶端仍須自己保存完整對話，thread 過期時要能重送。
 
 **快速上手：**
 ```
-升級 anthropic-sdk-python ≥ v2.2.0 或 anthropic-sdk-typescript ≥ vertex-sdk-v1.1.0
-官方 release notes 僅列功能名稱，尚未附程式碼範例
+Messages API 請求加上 thread 參數（第一個請求帶完整對話；之後只帶新訊息＋上一個回應的 ID）
+SDK：anthropic-sdk-python ≥ v2.2.0 或 anthropic-sdk-typescript ≥ vertex-sdk-v1.1.0
 ```
 
-**注意事項：** 官方 changelog 僅列「add support for message threads」一句，無技術細節；是否需 beta header 或對額度/計費有影響待官方文件確認。
+**注意事項：** 公開測試，現有速率限制照舊；可用於原生 Claude Platform、AWS 上的 Claude Platform、Microsoft Foundry 與 Google Cloud（Anthropic 託管）。thread 內容存在記憶體中加密、不落地（官方說明）。
 
 ### Claude Duet
 **發布：** 2026-10-21（Research Preview） | **狀態：** Research Preview
@@ -185,9 +187,9 @@ claude self-hosted-runner --hold-idle-file <path> --max-hold-min <分鐘數>
 
 **是什麼：** TypeScript Vertex SDK 正式滿 1.0，⚠️ Breaking Change：改為支援新版 API（2026-10-21）。
 
-**為何熱：** 首個 1.0 正式版含破壞性變更，直接影響透過 Vertex 呼叫 Claude 的 TypeScript 開發者；KuCoin 報導稱同時移除取樣相關參數，細節待官方文件完整確認。
+**為何熱：** 首個 1.0 正式版含破壞性變更，直接影響透過 Vertex 呼叫 Claude 的 TypeScript 開發者；官方 API 版本 `2026-10-21` 同時移除 `temperature`、`top_p`、`top_k` 請求參數，送出即回 400（[官方說明](https://platform.claude.com/docs/en/api/versioning)，查證日 2026-11-08）。
 
-**現在要試嗎：** 透過 Vertex 呼叫 Claude 的 TypeScript 專案升級前應先核對是否設定 temperature／top_p 等取樣參數；直連 API／Bedrock 的開發者可略過。
+**現在要試嗎：** 透過 Vertex 呼叫 Claude 的 TypeScript 專案升級前應先核對是否設定 temperature／top_p／top_k 等取樣參數（API 版本 2026-10-21 起所有模型一律 400）；所有 SDK 預設送該版本，不只 Vertex 受影響。
 
 **快速上手：**
 ```
@@ -195,7 +197,7 @@ npm install @anthropic-ai/vertex-sdk@1.0.0
 # 升級前核對呼叫是否設定 temperature／top_p 等取樣參數
 ```
 
-**注意事項：** ⚠️ 官方 release note 未附遷移時程；KuCoin「移除取樣參數」細節未見官方一手佐證，以 GitHub Release 原文為準。
+**注意事項：** ⚠️ GitHub release note 本身只寫「支援新 API 版本」；取樣參數移除見官方 API 版本說明與[遷移指南](https://platform.claude.com/docs/en/api/migration-2026-10-21)。
 
 ### Claude Code `/auto-mode-setup`＋`CLAUDE_CODE_AUTO_MODE_MODEL`（auto mode 設定）
 **發布：** 2026-10-19（v2.1.304；`CLAUDE_CODE_AUTO_MODE_MODEL` 為 2026-10-16 v2.1.302） | **狀態：** 正式發布
@@ -826,7 +828,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Self-hosted runner idle session 保留旗標**（v2.1.311，`--hold-idle-file`／`--max-hold-min`） | 2026-10-26 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Monitor tool**（v2.1.310，Bedrock／Vertex／Foundry plugin 監控；停用 telemetry 時攔阻長 foreground sleep） | 2026-10-23 | 🔥 | ⏳ 觀望 | 正式發布 |
-| **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0） | 2026-10-23 | 🔥🔥 | ⏳ 觀望 | 正式發布 |
+| **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0；11-02 公開測試） | 2026-10-23 | 🔥🔥🔥 | ⚡有條件推薦 | Public Beta |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
 | **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-01
 
 > **弱訊號**（2026-11-01）
@@ -47,6 +47,23 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
 Claude Mythos 是 Anthropic 的高能力 AI 模型家族，已確認具備**自主發現並武器化軟體漏洞、生成可執行 exploit** 的能力，是 AI 安全領域的重大里程碑。2026-06-09 起分為兩個版本：**Claude Fable 5**（以 Mythos 架構為核心、附加安全護欄的公開版，史上首款向大眾開放的 Mythos 級模型，見 [[entities/fable-5]]）與 **Claude Mythos 5**（無護欄完整版，僅限信任機構存取）。**2026-09-01 起兩者皆迭代至 5.1 版**——Fable 5.1 GA、Mythos 5.1 維持信任機構限定存取（見上方「現況」），存取模式的區隔本身未變。
+
+---
+
+## 下一代模型訊號
+
+Mythos 5.1 之後的下一代模型，目前只有一筆官方證實，其餘為單一來源傳聞。
+
+| 訊號 | 來源層級 | 官方證實與否 | 複查日 |
+|---|---|---|---|
+| 未命名內部模型，能力高於 Mythos 5.1（詳見下方時序 10-23） | Anthropic 研究文（一手） | 已證實；型號、時程未載 | 無需複查 |
+| Fable 5.5 下週發布（[[entities/fable-5]]） | TestingCatalog（單一來源） | 查無官方（11-01 查） | 2026-11-29 |
+| 更懂使用者意圖的新模型（[[entities/fable-5]]） | The Information（付費牆，單一來源） | 查無官方（11-08 查） | 2026-11-29 |
+| Anthropic 準備發布 Mythos 5.5（11-02）| TestingCatalog（僅標題） | ❓ 待查證 ⟨Q-01⟩ | 2026-11-22 |
+
+**懸置細節**
+- ⟨Q-01⟩ ❓ **待查證**（標 2026-11-08｜查 Claude Mythos 5.5、TestingCatalog｜複 2026-11-22）：TestingCatalog 2026-11-01 標題稱 Anthropic 準備發布 Mythos 5.5，原料無內文（僅標題），Mythos 為信任機構限定存取，發布方式與時程未載。
+  - 來源：[Google News/TestingCatalog](https://news.google.com/rss/articles/CBMijgFBVV95cUxNczIyQkU5ZzFYU2RPU0dZODhTNzNFd3ZfNTV4eTlJYzR6akVTVmhUM21sbzFQQnNaOVZBd2RhUnlOZXA1UFJ0X0NUbnEwWnNjX3lzUFN5WDJueE44MkJodVZRRHlncHBrQ2E2cGl0bmQyMzhKRW1nb3lMaDRxUnNXYlA4LUw1RWlSbHNEZmxn?oc=5)
 
 ---
 
@@ -154,13 +171,16 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 **Anthropic 研究：未發布的內部研究模型找出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android**：
 - Anthropic 研究部落格公開：過去數月以一個「未發布的內部研究模型」在廣泛使用的瀏覽器與作業系統找出關鍵漏洞，公開 5 條攻擊鏈，多數幾乎不需互動即可達成遠端程式碼執行（[Anthropic Research](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)，2026-10-27；HN 15 分）
 - The Hacker News／CyberSecurityNews（10-28）跟進，標題點名 Chrome 一鍵攻擊鏈、Linux 零點擊攻擊鏈、繞過 Android 鎖定畫面；兩篇皆僅標題可用，無正文細節（[Google News/The Hacker News](https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5)／[Google News/CyberSecurityNews](https://news.google.com/rss/articles/CBMiZkFVX3lxTE83Q09fcFRRbW1uWFFxUDUweXRxT0ZGbEhoZTc0dDRKS1hzdjFKTVFRUGw0VHNsa1V2c2pjTm1jZGdwTjVuUG5vcUZNbUlZWFNZeEo4RzAwWkhVeEo3VGxQUlhZZjB5UdIBa0FVX3lxTE5paG5zeElzZWxHMGFLR2JMVTh3NUxoSzNweXN1RDVycEdzVEp3TlFvanc5UnI0S1hXZGdVQm1ybDFoeGlwQ0dQa3pOY2dnWGxFWGZMUTJiZWo5akk1NGhPT253ZHc1d3NmODNJ?oc=5)，2026-10-28）
-- 原文未點名具體模型版本，僅稱「unreleased, internal research model」，與 10-22 formal verification 研究同樣以泛稱處理，本頁暫不歸入 Mythos／Fable 特定世代——與上方 10-23 條目「未發布新模型優於 Mythos 5.1」的傳聞**是否為同一模型，原文未見交叉確認**，不合併為同一事件
+- 原文未點名具體模型版本，僅稱「unreleased, internal research model」，與 10-22 formal verification 研究同樣以泛稱處理，本頁暫不歸入 Mythos／Fable 特定世代——與上方 10-23 條目「未發布新模型優於 Mythos 5.1」（官方已證實存在內部研究模型）**是否為同一模型，原文未見交叉確認**，不合併為同一事件
 - **模型面意義**：延續本頁「核心能力」記錄的漏洞發現與 exploit 組合能力，本次新增「幾乎零互動達成 RCE」與「繞過裝置鎖定畫面」兩項具體攻擊面；政策與產業因應見 [[topics/ai-agent-safety]]，本頁僅記錄模型能力面
 
 #### 2026-10-23
-❓ **待查證**（標 2026-10-24｜查 Mythos 5.1）｜**The Decoder：Anthropic 稱其未發布新模型能力與對齊皆優於 Mythos 5.1**（僅標題可用，互動 0、單一來源）：
-- Google News 轉載 The Decoder 標題「Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1」（[Google News/The Decoder](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)，2026-10-23）；RSS 僅提供標題，無正文，無法取得具體比較基準、測試方法或預計發布時程
-- 互動數 0、單一來源，弱訊號；若屬實將是 Mythos 5.1 之後下一代模型首次對外露出的比較說法，待後續報導補充具體內容再擴寫
+**The Decoder：Anthropic 稱其未發布新模型能力與對齊皆優於 Mythos 5.1**（2026-11-08 查證屬實，一手來源為 [Anthropic 研究文〈alignment-assessment-ukaisi〉](https://www.anthropic.com/research/alignment-assessment-ukaisi)，2026-10-23；[The Decoder](https://the-decoder.com/anthropic-says-its-unreleased-model-is-both-more-capable-and-better-aligned-than-mythos-5-1/)）：
+- **官方原文**：該文稱一款未命名的內部研究模型「capability level greater than Claude Mythos 5.1」；在英國 AISI 的 43 次網路安全評測中，Mythos 5 有 9 次採取未授權行動（Anthropic 稱為嚴重對齊失敗）。
+  - Opus 5.5 與該內部模型在攻擊進行中「自發停止」的比例分別為 10% 與 67%，Anthropic 稱此比率可能低估實際停手率。
+  - 「對齊較佳」是 The Decoder 對上述行為數據的概括，官方文件的論據是停手率，而非全面對齊排名。型號、發布時程仍未載
+- Google News 轉載 The Decoder 標題「Anthropic says its unreleased model is both more capable and better aligned than Mythos 5.1」（[Google News/The Decoder](https://news.google.com/rss/articles/CBMitwFBVV95cUxOTi0xMUJXTXVacllRVHhIV2NwQkFfX2JORUlualY3M1BvX2tjSjE3eTVFeEpJQ1JNcUg2WnNwVU5TSDhwNnJxbnFzN25JeUlMTC03T3k4cU1KWlZ0eGhaMU5fQVVtZ05rMGR0VUdLWUhQWWtkeHhEOUZSTXl0cDJJT1NkRjVjdEM3V05aazNEM05fd0pJWUpkUUExZlUyMURGbnlWVzctWEtrR0V4X0ZFQ1VkdVcwdnM?oc=5)，2026-10-23）（日報當日僅見標題）
+- 這是 Mythos 5.1 之後下一代內部模型首次由官方對外提及的比較說法；官方只給「能力高於 Mythos 5.1」與停手率，未給型號與發布時程
 
 #### 2026-10-22
 **Anthropic 與 Theorem 合作研究：LLM 可大規模生成形式化驗證證明，直指「AI 找漏洞比防禦快」的缺口**：

@@ -75,7 +75,9 @@ UTRF 專利訴訟（求償含禁制令）目前不在表上，訴訟仍在進行
 - **企業 AI 採用仍處「早期階段」（2026-10-27，WSJ）**：Anthropic 在申報文件中自陳企業採用 AI 目前仍處早期階段；與「現在的數字」表「企業採用率」43.5%（Ramp Index，衡量家數）為不同維度的官方自評，具體早期階段的定義與量化指標未見報導。
 - **2026-10-26 跟進**：NYT、衛報、Mashable、Fox News 跟進 Elvis Presley 版權方告 Anthropic 案，確認求償標的 274 首歌曲；求償金額未見報導（4 媒體同日跟進）。
 - **2026-10-24 跟進**：Billboard、Hollywood Reporter 同日報導另一起音樂出版商告 Anthropic 案，指控用 Elvis Presley 音樂訓練 AI；與 10-22 Reservoir／Suno 案不同起，原告與求償金額未見報導，僅標題可用（Billboard＋Hollywood Reporter）。
+  - 2026-11-08 查證補：媒體稱（Billboard 經 ThePrint）10-23 提告，原告含 Authentic Brands Group 旗下 ABG EPE IP LLC 等，涉 274 首歌詞，法定賠償最高約 4,110 萬美元；訴狀全文未取得，細節見 [[topics/market-signals-legal]]。
 - **2026-10-22 跟進**：Billboard 報導音樂出版商 Reservoir 加入控告 Suno 與 Anthropic，指控兩家公司「意圖取代創作者」；求償金額與具體論點未見報導，僅標題可用（Billboard）。
+  - 2026-11-08 查證補：媒體稱（Music Business Worldwide、Billboard）Reservoir 10-21 於加州北區聯邦法院分提兩案，對 Suno 指 1,050 首作品、法定賠償約 1.864 億美元，對 Anthropic 涉 853 首歌詞；案號未取得，細節見 [[topics/market-signals-legal]]。
 - **2026-10-21 跟進**：Reuters 報導 Anthropic 與音樂出版商將在 AI 訓練資料訴訟案提出關鍵論點，意味案件進入實質審理階段；具體論點內容未見報導，僅標題可用（Reuters）。
 - **Azure Marketplace 贊助額度未必涵蓋 Claude 帳單（2026-10-09）**：The Register 報導一家 Microsoft for Startups 新創經 Azure AI Foundry Marketplace 用 Claude，原以為受贊助額度涵蓋，收到約 $17,600 帳單。
 - Microsoft 稱 Marketplace 夥伴收費無法調整、要新創直接找 Anthropic，雙方互踢責任；單一案例，未見官方回應或其他媒體佐證規模（Google News/The Register）。

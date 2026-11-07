@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-10-26
-**最後新聞更新：** 2026-10-26
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-05
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
-> **最新動態**（2026-10-26）
-> EdTech Innovation Hub 點名 10-21 五角大廈合約辭職的 Google DeepMind 工程師為 Sofia Liguori；此前僅標題可用、姓名未載。
+> **最新動態**（2026-11-05）
+> Claude Code 產品負責人 [[entities/cat-wu|Cat Wu]] 11-04 卸任、11-05 報導去向 OpenAI，是本頁首見 Anthropic 產品主管流向 OpenAI；接任者兩家報導都沒提。同期 Claude Code 端有前 Google Cloud AI 總監 [[entities/addy-osmani|Addy Osmani]] 加入（11-03 查證）。
 
 ## 摘要
 
@@ -77,6 +77,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 人才流動為**雙向洗牌**（Google 同期亦失人至 OpenAI），非單向崩塌。
 
 ## 時序
+
+### 2026-11
+
+#### 2026-11-05
+- **Cat Wu 卸任 Claude Code 產品負責人後轉往 OpenAI**：11-04 Business Insider 等至少三家報導卸任，11-05 The Decoder 與 Business Insider 報導下一站是 OpenAI；在 OpenAI 的職位與 Claude Code 接任者都未見報導。細節見 [[entities/cat-wu]]。
+
+#### 2026-11-03
+- **Addy Osmani 加入 Anthropic 負責 Claude Code**：前 Google Cloud AI 總監、在 Google 逾 14 年，現為 Anthropic Member of Technical Staff（Google → Anthropic 方向），見 [[entities/addy-osmani]]。
 
 ### 2026-10
 

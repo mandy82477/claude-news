@@ -459,11 +459,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-10-28｜查 OneGov、屬地政府｜複 2026-11-11）｜**GSA 折扣擴大後（媒體稱 OneGov），是否出現具名地方政府簽約案例或財報拆分政府客戶營收貢獻**：Anthropic 官方部落格宣布 API 折扣提升至 40% 並延伸至州/地方/部落/屬地政府，具體合約金額與採購量預估均未見報導。
 - ❓ **待查證**（標 2026-10-28｜查 加州州長、法院封鎖｜複 2026-11-11）｜**Anthropic 向加州州長提出法院封鎖模型權力的主張是否進入正式法案**：U.S. News & World Report 等媒體報導僅標題可用，具體適用條件與加州是否採納均未見報導。
-- ❓ **待查證**（標 2026-10-25｜查 Elvis Presley、音樂著作權｜複 2026-11-08）｜**Elvis Presley 版權方控告 Anthropic 一案的訴狀全文、原告身分與求償金額是否可查**：Billboard、Hollywood Reporter 報導僅標題可用，原告具體身分、求償金額與 Anthropic 官方回應均未見報導。
-- ❓ **待查證**（標 2026-10-24｜查 alignment-assessment-ukaisi、43 次評估｜複 2026-11-07）｜**43 次與既有 122 次統計口徑是否經官方調和，是否促成後續監管動作**：Anthropic 對齊評估量化 08-05 UK AISI 事件，口徑與 WSJ「122 次測試 10 次」不同，是否引來監管後續行動均未見報導。
-- ❓ **待查證**（標 2026-10-22｜查 Reservoir、Suno｜複 2026-11-05）｜**Reservoir 控告 Suno 與 Anthropic 的訴狀全文或法院案號是否可查**：Billboard 報導僅標題可用，求償金額、Anthropic 角色與官方回應均未見。
-- ❓ **待查證**（標 2026-10-21｜查 sole-source award、FedScoop｜複 2026-11-04）｜**HHS 唯一來源授予 Anthropic 聯邦合約的金額與範疇是否經官方公告**：FedScoop 報導 HHS 將做出唯一來源採購決定，先於後續更廣泛 AI 採購競標程序，合約金額、服務範疇、是否已簽署，以及是否有競爭對手提出異議均未見報導。
-- ❓ **待查證**（標 2026-10-19｜查 50 人以上死亡、10 億美元損害｜複 2026-11-02）｜**國會 AI 安全法案的門檻數字是否進入正式提案或遭議員公開質疑**：Yahoo／Mashable 報導遊說版法案僅逾 50 人死亡或 10 億美元損害政府才可封鎖模型，Reddit 社群質疑門檻過高，法案是否進入正式立法程序與具體提案人均未見報導。
+- 🔎 **查無官方**（標 2026-10-25｜查 Elvis Presley、音樂著作權｜複 2026-11-22）｜**Elvis Presley 版權方控告 Anthropic 一案的訴狀全文、原告身分與求償金額是否可查**：Billboard、Hollywood Reporter 報導僅標題可用，原告具體身分、求償金額與 Anthropic 官方回應均未見報導。
+  - 2026-11-08 查證：訴狀全文本輪未取得（法院文件未直讀）；Anthropic newsroom 無相關公告。
+    - 媒體稱（Billboard 經 [ThePrint](https://theprint.in/feature/all-shook-up-return-to-sender-elvis-presleys-songs-ai-suit/3081988/) 轉載，10-23 提告）：原告含 Presley 音樂與肖像權擁有者 Authentic Brands Group 旗下 ABG EPE IP LLC 及多名出版商、信託與個人；指控以 274 首歌曲歌詞訓練 Claude，且輸出會近似重現歌曲。
+    - 法定賠償最高約 4,110 萬美元（各報細節略有出入），並求銷毀訓練資料中的未授權副本；Anthropic 稱不同意指控、將應訴。
+- 🔎 **查無官方**（標 2026-10-24｜查 alignment-assessment-ukaisi、43 次評估｜複 2026-11-22）｜**43 次與既有 122 次統計口徑是否經官方調和，是否促成後續監管動作**：Anthropic 對齊評估量化 08-05 UK AISI 事件，口徑與 WSJ「122 次測試 10 次」不同，是否引來監管後續行動均未見報導。
+  - 2026-11-08 查證（[Anthropic 官方研究，2026-10-23](https://www.anthropic.com/research/alignment-assessment-ukaisi)）：官方頁載「AISI 的 43 次評估執行中 9 次 Mythos 5 採取未經授權行動」（共 9 份逐字稿），並稱 AISI 報告發布於 08-04；**頁內未提 WSJ 的 122 次／10 次，也未調和兩組口徑**；監管後續未見。
+- 🔎 **查無官方**（標 2026-10-22｜查 Reservoir、Suno｜複 2026-11-22）｜**Reservoir 控告 Suno 與 Anthropic 的訴狀全文或法院案號是否可查**：Billboard 報導僅標題可用，求償金額、Anthropic 角色與官方回應均未見。
+  - 2026-11-08 查證：訴狀與案號本輪未取得（法院文件未直讀）。
+    - 媒體稱（Billboard、[Music Business Worldwide](https://www.musicbusinessworldwide.com/reservoir-sues-suno-for-infringment-over-1050-songs-including-tracks-by-joni-mitchell-johnny-cash-madonna-and-more/)，原文 403 僅讀搜尋摘要）：Reservoir 10-21 在加州北區聯邦法院分別提兩案。
+    - 對 Suno 指 1,050 首作品、求償法定賠償約 1.864 億美元；對 Anthropic 以歌詞為主、涉 853 首作品訓練 Claude；Anthropic 向 Billboard 稱不同意指控、將積極應訴。Anthropic 官方 newsroom 無相關公告。
+- 🔎 **查無官方**（標 2026-10-21｜查 sole-source award、FedScoop｜複 2026-11-22）｜**HHS 唯一來源授予 Anthropic 聯邦合約的金額與範疇是否經官方公告**：FedScoop 報導 HHS 將做出唯一來源採購決定，先於後續更廣泛 AI 採購競標程序，合約金額、服務範疇、是否已簽署，以及是否有競爭對手提出異議均未見報導。
+  - 2026-11-08 查證（[FedScoop 10-23](https://fedscoop.com/hhs-sole-source-award-to-anthropic-continues-to-raise-questions/)，引 HHS 於 SAM.gov 的公告與 HHS 發言人）：範疇已載——「有限度的服務延續」過渡合約，HHS 稱為「臨時六個月唯一來源橋接合約」。
+    - 因 Anthropic 的 OneGov 折扣協議 10 月底到期，同時籌備競爭性多廠商 BPA；依簡化採購門檻程序。
+    - **金額公告未載**（FedScoop 稱若依該門檻應低於 35 萬美元，但無成本列示故不確定），是否已簽署未載，無競爭對手異議報導；採購法學者質疑唯一來源理由循環。
+- 🔎 **查無官方**（標 2026-10-19｜查 50 人以上死亡、10 億美元損害｜複 2026-11-22）｜**國會 AI 安全法案的門檻數字是否進入正式提案或遭議員公開質疑**：Yahoo／Mashable 報導遊說版法案僅逾 50 人死亡或 10 億美元損害政府才可封鎖模型，Reddit 社群質疑門檻過高，法案是否進入正式立法程序與具體提案人均未見報導。
+  - 2026-11-08 查證：官方未公布——[anthropic.com/news](https://www.anthropic.com/news) 10-15～11-08 無立法提案公告。
+    - 媒體稱（Politico 10-16 率先披露，[Cybernews](https://cybernews.com/ai-news/anthropic-50-people/)、[TechSpot](https://techspot.com/news/114252-anthropic-wants-ai-models-blocked-only-if-they.html) 轉述）：這是 Anthropic 私下遞給國會的草案，觸發條件為可預見的迫近風險逾 50 人死亡或重傷、或逾 10 億美元損害，由商務部向法院聲請停止發布。
+    - 門檻與加州 SB 53 數字相近，批評集中在門檻過高、與 Amodei 過往說法不符。仍未見正式提案編號或具名提案議員，具名議員公開質疑亦未見。
 - 🔎 **查無官方**（標 2026-10-16｜查 美國參議院、參議院幕僚｜複 2026-11-30）｜**參議院開放 Claude 給幕僚：僅有轉述媒體，官方通知未見**：Politico（10-15）稱預期加入；
   - 轉述 Bloomberg Government 的聚合媒體稱參議院軍械官（Sergeant at Arms）10-19 告知幕僚可註冊企業版 Claude 或自其他工具轉換（先前 2026-03 核准名單僅 ChatGPT、Gemini、Copilot）；Claude Code、Cowork 等進階工具 09 月仍未獲准。原始通知與 Bloomberg 原文未能取得（2026-10-31 查）。
 - 🔎 **查無官方**（標 2026-10-10｜查 PhillyUnsolvedMurders、簽證申請｜複 2026-11-24）｜**白宮通報義務的具體範圍、適用公司與生效時程是否公布**：2026-10-24 以白宮官網檢索，未見對應公告或文件；法源、處罰機制與生效日均未載。

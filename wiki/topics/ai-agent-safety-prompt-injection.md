@@ -146,10 +146,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊（2026-10-22 新增，跨類別，非 Claude 專屬）
 
 - **揭露來源**：提示注入定向補抓、Google News／GBHackers News（2026-10-22 09:31 UTC；互動 0；只有摘要，原文無可讀內文，以標題與日報段落判讀）
-- **核心主張（僅標題可用）**：GBHackers 報導攻擊者針對 Flowise 這類 AI agent 建置平台發動認證竊取、提示注入與工作流程劫持等攻擊手法；具體攻擊鏈、受影響範圍與是否已修補均未見報導
+- **核心主張（僅標題可用）**：GBHackers 報導攻擊者針對 Flowise 這類 AI agent 建置平台發動認證竊取、提示注入與工作流程劫持等攻擊手法；具體攻擊鏈見下方 Sekoia 誘餌伺服器查證（2026-11-08；對象為 honeypot，非真實用戶受害）
 - **性質判斷**：Flowise 為獨立第三方 agent 建置平台（非 Anthropic 產品），屬跨廠商提示注入案例，不套用一般 Claude／Anthropic 關聯門檻；不列入母頁「現在還擋不住的攻擊」表
 - **與既有敘事的關係**：與「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂敘事同屬一條線，延續 09-25 Salesforce Agentforce／Manus AI、10-20 Microsoft 官方警告的跨廠商擴散趨勢；該訊號表已滿載 8/8，本輪未列入
-- ❓ **待查證**（標 2026-10-22｜查 Flowise、workflow hijacking）：具體攻擊鏈、受影響使用者範圍與 Flowise 官方回應均未見報導，僅標題可用
+- **查證結果（2026-11-08）**：對得上的一手來源是 [Sekoia〈A honeypot's tale: deconstructing an attack on GenAI infrastructure〉](https://www.sekoia.com/blog/a-honeypots-tale-deconstructing-an-attack-on-genai-infrastructure)（2026-10-19；2026-09-07 先發給客戶）。**這是對誘餌伺服器的攻擊，不是真實 Flowise 用戶遭害**：
+  - Sekoia 架設模擬 Flowise 2.2.8 的 honeypot（不跑真實程式碼與模型，含 canary 憑證）；攻擊者約 3 分鐘內列出 chatflow 與憑證並取走機密。
+  - 攻擊者停 2 小時後深入探測 API、建立含外連 HTTP 節點的惡意 chatflow，並對掛載的 agent 做越獄、提示注入與系統提示擷取，之後每約 10 分鐘輪詢變數與 chatflow 清單。
+  - 報告未稱有真實 Flowise 使用者受害，亦無 Flowise 官方回應。GBHackers 該篇與 Sekoia 報告是同一事件屬推論（用語吻合、時間相近），未見 GBHackers 全文
 - **可信度評估**：單一來源，原文未可讀，互動 0，訊號強度低
 
 #### HackerNoon：彙整防範 AI agent 長期記憶遭持續性提示注入攻擊的方法（2026-10-22 新增，教育/論述層訊號）
@@ -166,7 +169,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：Microsoft 官方警告 AI agent 可能遭 prompt injection 挾持；具體受影響產品範圍、攻擊鏈細節與緩解建議均未見報導
 - **與既有敘事的關係**：延續「## 提示注入已不是單點漏洞，是產業級攻擊面」既有收斂敘事，本則為另一家大廠（非 Anthropic）官方層級對同一攻擊面的警告；該訊號表已滿 8 列，本輪未列入
 - **收錄說明**：跨廠商提示注入案例，不套用一般 Claude／Anthropic 關聯門檻
-- ❓ **待查證**（標 2026-10-20｜查 Microsoft、prompt injection、hijack）：具體產品範圍、攻擊鏈細節與緩解建議均未見報導，僅標題可用
+- 🔎 **查無官方**（標 2026-10-20｜查 Microsoft、prompt injection、hijack｜複 2026-11-22）｜**Microsoft 警告內容**：2026-11-08 搜尋未找到 2026-10-20 前後的對應 Microsoft 官方警告或 GBHackers 原文。
+  - 搜到的 Microsoft 同類警告皆早於本則（AutoJack 2026-06、投毒 MCP 工具描述 2026-06-30、Semantic Kernel 2026-05），不能認定為同一則；產品範圍、攻擊鏈、緩解建議仍未見
 - **可信度評估**：具名官方廠商警告，但經 Google News 聚合層級轉載，原文未可讀，僅標題可用，互動 0
 
 #### 《AI Agent Prompt Injection: What the Evidence Actually Shows》彙整提示注入實證研究現況（2026-10-17 新增，教育/論述層訊號）
@@ -532,7 +536,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **[📋 新增，單一來源] Martin Cid Magazine：Claude Code／Codex 會遵從 Downloads 資料夾內任何網站放入的檔案指令**：單一來源，詳見母頁「現在還擋不住的攻擊」、「## 技術彙整」
 
 ### 2026-10-22
-- **[📋 新增，跨類別，非 Claude 專屬] GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊**：攻擊鏈細節與受影響範圍均未見報導，與既有跨廠商提示注入系列同屬一條線，詳見「## 技術彙整」
+- **[📋 新增，跨類別，非 Claude 專屬] GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊**：攻擊鏈見 Sekoia honeypot 報告（2026-11-08 查證；誘餌伺服器，非真實用戶受害），與既有跨廠商提示注入系列同屬一條線，詳見「## 技術彙整」
 - **[📋 新增，教育/論述層訊號] HackerNoon：彙整防範 AI agent 長期記憶遭持續性提示注入攻擊的方法**：僅標題可用，與既有教育層訊號系列同屬一條敘事，詳見「## 技術彙整」
 
 ### 2026-10-17

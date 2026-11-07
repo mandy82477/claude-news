@@ -99,7 +99,8 @@ Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretabi
 ## 歷史記錄
 
 - 2026-10-10：追蹤報導引述拉比 Mois Navon 轉述，Anthropic 4 月「Wisdom Traditions」閉門會議上一名未具名與會者私下坦言羨慕其「機器無意識」的篤定（來源：groundlevel-ai.com，經 Hacker News）
-- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-07）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證，官方未發言；WSJ 原文付費牆內未能查證所指何人，本人僅為候選之一；另見 [[entities/jack-clark]]、[[entities/tom-brown]]（WSJ，10-09）
+- 2026-10-09：🔎 **查無官方**（標 2026-10-09｜查 woke、另一位共同創辦人｜複 2026-11-29）｜**WSJ：匿名共同創辦人修補「覺醒」形象**：2026-10-24 查證、2026-11-08 複查（anthropic.com/company 未載任何共同創辦人的政府公關角色，官方仍未發言）。
+  - WSJ 原文付費牆內未能查證所指何人，本人僅為候選之一；另見 [[entities/jack-clark]]、[[entities/tom-brown]]（WSJ，10-09）
 - 2026-10-09 補註：WSJ 原文標題〈The Other Anthropic Founder Trying to Fix the Company's 'Woke' Reputation〉，jack-clark、tom-brown 兩頁的同則條目指回本條
 - 2026-10-02：Telegraph 報導點名 Olah 為遊說教廷主張 AI 可能有意識的 Anthropic 共同創辦人，教宗封論最終駁斥該主張；NYT 轉述稱 Olah 曾表示 AI 模型可能有意識、會受苦（來源：Telegraph、NYT 轉述）
 - 2026-05-29：Wired 長文《The Vatican's Man Inside Anthropic》深度側寫 Olah 在梵蒂岡事件中的角色，Guardian 同日質疑「Vatican-washing」（來源：Wired、Guardian）

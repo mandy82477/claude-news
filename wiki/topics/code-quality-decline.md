@@ -3,8 +3,8 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-11-04"
-last_news_update: "2026-11-01"
+last_updated: "2026-11-08"
+last_news_update: "2026-11-08"
 status_main: "ongoing"
 days_since_news: 5
 parent: null
@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 
-> **Token 消耗異常訊號群新增一例：單次任務輸出 token 疑暴增 3.8 倍**（2026-11-01）
-> - Reddit 使用者稱依自行做的 token 分析，本週表現較上週變差 3.8 倍；單一貼文、0 留言，週熱門標記，尚無其他使用者或官方佐證。
-> - 三條線現狀不變：2026-04 已結案，token 消耗與 Opus 5 品質觀感官方皆未回應。
+> **Opus 5.5「變差又變貴」登 r/ClaudeCode 週熱門，另有額度兩倍速耗盡回報**（2026-11-08）
+> - 11-05 週熱門貼文稱 Opus 5.5 回答變差、額度花得更快；11-06 另一則稱週額度消耗快兩倍。
+> - 兩則皆單一貼文、0 留言，官方未回應；官方額度說明頁 11-05 起建議例行工作降 effort。
 
 ---
 
@@ -49,17 +49,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-10-31。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-11-08。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
-| **token 消耗異常**（2026-10-30） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-10-16） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 於 2026-10-03 由發文者自行關閉，官方沒有修復說明，關閉後當天仍有人回報 Sonnet 5.5 一樣；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 2026-09-10；138／13 則留言，10-04 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **token 消耗異常**（2026-11-06） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；官方建議見表下；帳單面見 [[entities/pricing]] |
+| **Opus 5 上線後的品質觀感**（2026-11-05） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 10-03 發文者關閉、11-02 重開稱 Opus 5.5 同樣退步，官方無修復說明；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 09-10；140／13 則留言，11-08 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 
+- **你能先做什麼（官方文件，2026-11-08 查證）**：[額度說明頁](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)11-05 新增建議：例行工作降 effort、不需要時關 thinking；[prompt caching 文件](https://code.claude.com/docs/en/prompt-caching)載明 Opus 5.5、Sonnet 5.5、Haiku 5.5、Fable 5.1 以 API key 或訂閱使用時，中途改 effort 不會讓快取失效。
 - **04 月三個成因各自的修法**（官方 04-23 原文）：預設 reasoning effort 由 high 調為 medium（03-04 起，04-07 回復，v2.1.116）；thinking 內容每輪被清掉（03-26～04-10，v2.1.101）；system prompt 長度限制使評測掉約 3%（04-16～20，04-20 服務端回復，與版本號無關）。
 - 官方原文的用語是「three separate engineering changes」。中文媒體寫成「工程疏失」，那是轉述，不是官方說的話。
 - **09-03 全模型錯誤率升高**：12:43 UTC 起 Sonnet 5、Opus 5／4.8／4.6、Fable 5／5.1 與 Mythos 皆受影響，同日 16:16 UTC 排除（[Anthropic Status](https://status.claude.com/incidents/461yvfrzpwtt)）。屬服務穩定性事件，不是上表三條線之一。
@@ -119,6 +120,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **10-23「i hit claude session limit within 30 minutes after update」**：未列入上表（2026-11-01 起）；原文已在 [[topics/code-quality-decline#2026-10]] 10-23 時序條目一併提及。
 %% 維運備忘：訊號表上限 10 列已滿，本則取單一貼文（無互動數）中最舊者讓位給 10-27 新訊號（3.8x 表現變差），見規則檔「code-quality-decline 的三張表」第 2 條 %%
 - **10-30「Claude Code session token cache invalidating faster」**：session token cache 似乎比以前更快失效，約每 10 分鐘就重置一次；無互動數可佐證，訊號方向與既有十一則一致。
+- **11-06「Usage issues again- depleting two times faster」**：稱週額度重置後幾乎沒用就耗掉 8%，消耗速度快兩倍；單一貼文、0 留言，無測試方法或版本號，只說明這個現象還在。
 
 ### 三種解釋，目前各自站在哪
 
@@ -143,14 +145,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **23 則**訊號：下表六種主張收 22 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **24 則**訊號：下表六種主張收 23 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
 
 | 主張 | 則數 | 最後動態 | 證據硬度 |
 |---|---|---|---|
-| **泛化變慢／變囉唆**（不指名模型版本）| 8 | 2026-09-20「It's time to cancel your subscriptions」：指控悄悄調降推理預算 | 單一貼文（HN 25 分）＋七則無互動數貼文 |
+| **泛化變慢／變囉唆**（不指名模型版本）| 9 | 2026-11-05「Opus 5.5 is definitely getting dumber and costlier suddenly」（週熱門）| 單一貼文（HN 25 分）＋八則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
 | **懷疑正在被 A/B 測試降 effort** | 7 | 2026-10-01「Opus 5.5 nerfing - how to measure, how to spot, how to sue」 | 單一貼文（其中三則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
@@ -252,6 +254,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Anthropic's definition of safety is too narrow](https://jonathannen.com/anthropic-safety-too-narrow/)
 
 ## 時序（最新在上，按月分組）
+
+### 2026-11
+
+#### 2026-11-06
+- **「Usage issues again- depleting two times faster」：Token 消耗異常訊號群現象延續**：Reddit 使用者稱週額度重置後幾乎沒用就耗掉 8%，消耗速度快兩倍；單一貼文、0 留言，無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xpife7/usage_issues_again_depleting_two_times_faster/)）
+
+#### 2026-11-05
+- **「Opus 5.5 is definitely getting dumber and costlier suddenly」：「泛化變慢／變囉唆」主張第九則**：r/ClaudeCode 週熱門貼文稱 Opus 5.5 最近回答品質下滑、花費的額度卻變多；單一貼文、0 留言，無測試方法或版本號，官方未回應，只說明現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xodr56/opus_55_is_definitely_getting_dumber_and_costlier/)）
+
+#### 2026-11-04
+- **「Can warm Opus 5.5 cost more than cold Sol 6.1?」：快取比例決定誰貴**：Reddit 貼文作圖試算下一次請求成本，結論是「視快取輸入占比與預期輸出量而定」；屬成本試算而非退步回報，0 留言（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xnuq3b/can_warm_opus_55_cost_more_than_cold_sol_61/)）
 
 ### 2026-10
 

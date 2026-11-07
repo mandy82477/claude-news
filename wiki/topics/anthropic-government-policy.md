@@ -325,7 +325,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-10-26 | 🏢 | Root-Nation：Claude 已封鎖來自俄羅斯與香港的帳號 | 單一來源、互動 0，未見官方公告佐證；與既有「香港與中國大陸不在許可存取區」線（第 1 列）是否同一政策延伸或新增俄羅斯範圍均未見報導，僅標題可用 |
 | 2026-10-16～10-21 | 🏢🌐 | Anthropic 自提 AI 安全法案遊說國會：Politico 首報（10-16）、50 人死亡／10 億美元門檻曝光（10-19）、外界反彈與評論 | 法案文字與進度未見報導；要點、反彈、已知／未知見 [[topics/anthropic-government-policy#Anthropic 自提 AI 安全法案]] |
 | 2026-10-21 | 🏛️🏢 | Fox News：川普政府發表 AI 與資料中心政策立場；Anthropic 執行長 Amodei 同時為公司安全紀錄與對中銷售紀錄辯護 | 具體政策內容、Amodei 回應全文均未見報導，僅標題可用 |
-| 2026-10-20 | 🏛️ | FedScoop：美國衛生部（HHS）將對 Anthropic 做出「唯一來源」（sole-source）聯邦採購決定，先於後續更廣泛 AI 採購競標程序 | 具體採購標的、金額與競標排除範圍均未見報導，僅標題可用 |
+| 2026-10-20 | 🏛️ | FedScoop：美國衛生部（HHS）將對 Anthropic 做出「唯一來源」（sole-source）聯邦採購決定，先於後續更廣泛 AI 採購競標程序 | 具體採購標的、金額與競標排除範圍均未見報導，僅標題可用；2026-11-08 查證：HHS SAM.gov 公告為六個月臨時橋接合約（OneGov 折扣 10 月底到期），金額公告未載（[FedScoop 10-23](https://fedscoop.com/hhs-sole-source-award-to-anthropic-continues-to-raise-questions/)） |
 | 2026-10-17 | 🏛️ | 紐約市主計官致函 Dario Amodei，要求暫緩 IPO | 稱白宮所簽「道德約束力」AI 安全協議不足以回應風險；具體後續時程與 Anthropic 回應均未見報導，僅標題可用（HN 14 分），詳見「線的細節」 |
 | 2026-10-15 | 🏛️ | CBS News／The Hill：FTC 正式對 Anthropic、OpenAI 發出傳票，要求提交資料 | 調查從 09-30「開啟」進入取證程序；傳票範圍與回覆期限均未見報導，僅標題可用，詳見「## 現在有哪幾條線在動」第 8 列 |
 | 2026-10-14 | 🏢 | WIRED：OpenAI、Anthropic 向英國國會議員表態支持接受監管 | 具體委員會名稱、聽證內容與監管訴求細節均未見報導，僅標題可用 |

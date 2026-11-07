@@ -350,7 +350,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-10-29｜查 Zero-Rust、CPU 消耗｜複 2026-11-12）｜**Anthropic「Zero-Rust」團隊重建核心 API 降低 CPU 消耗 40% 的效果是否反映進財報毛利率數字**：BigGo Finance 報導僅標題可用，是否已入帳與適用範圍均未見報導。
 - ❓ **待查證**（標 2026-10-27｜查 630 億美元、Blackstone｜複 2026-11-10）｜**630 億美元融資是否完成定價發行，Blackstone 具體利率與規模拆分是否披露**：路透社報導僅標題可用，定價、承銷團名單與 Blackstone 拆分比例均未見報導。
 - ❓ **待查證**（標 2026-10-26｜查 Broadcom、履約時程｜複 2026-11-09）｜**S-1 揭露雲端供應鏈承諾總額逾 5000 億美元，各筆履約時程與付款結構是否披露**：S-1 首次揭露 Google、AWS、Broadcom、SpaceX 四家合計承諾金額，是否分年履約、信評機構是否依此更新評等均未見報導。
-- ❓ **待查證**（標 2026-10-20｜查 Nscale、450億美元｜複 2026-11-03）｜**Anthropic 與 Nscale 第二筆約 450 億美元算力合作是否正式簽署**：CNBC 披露洽談中，Reuters、Bloomberg 同日查證跟進，具體容量、條款與簽署時程均未披露，與既有 1,030 億美元合約的拆分關係亦未說明。
+- 🔎 **查無官方**（標 2026-10-20｜查 Nscale、450億美元｜複 2026-11-22）｜**Anthropic 與 Nscale 第二筆約 450 億美元算力合作是否正式簽署**：CNBC 披露洽談中，Reuters、Bloomberg 同日查證跟進，具體容量、條款與簽署時程均未披露，與既有 1,030 億美元合約的拆分關係亦未說明。
+  - 2026-11-08 查證：官方未公布——[anthropic.com/news](https://www.anthropic.com/news) 10-15～11-08 無 Nscale 公告；媒體稱（[TNW](https://thenextweb.com/news/nscale-and-anthropic-reportedly-in-talks-over-second-45bn-deal) 轉述 Bloomberg）第二筆約 450 億美元對應 Nscale 西維吉尼亞 Monarch 園區第二棟 460MW，仍為洽談，未見簽署報導；與 1,030 億總額的拆分仍未說明。
 - 🔎 **查無官方**（標 2026-10-17｜查 Blackstone、殖利率｜複 2026-11-30）｜**Anthropic 向 Blackstone 開出的晶片融資條件僅有媒體數字，無官方確認**：
   - 媒體稱（FT，10-16；The Star、Devdiscourse 轉載）殖利率逾 10%、「Project North Star」總額約 600 億美元（Blackstone 旗下基金約 90 億美元次順位債、約 420 億美元由 Broadcom 擔保的優先債），支撐約 1.5GW Google TPU；
     - 皆引知情人士，雙方無官方確認（2026-10-31 查；anthropic.com/news 無相關公告）。
