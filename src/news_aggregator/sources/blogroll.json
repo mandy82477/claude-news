@@ -11,8 +11,8 @@
         "llm-eval",
         "tools"
       ],
-      "status": "probation",
-      "notes": "llm CLI 作者，日更，橫跨模型評測/工具實測/生態觀察"
+      "status": "active",
+      "notes": "llm CLI 作者，日更，橫跨模型評測/工具實測/生態觀察；2026-11-08 試用期轉正：07-11 起 51 天上日報、22 頁 wiki 引用"
     },
     {
       "slug": "jessevincent",
@@ -24,8 +24,8 @@
         "plugins",
         "skills"
       ],
-      "status": "probation",
-      "notes": "Superpowers plugin 作者，篇篇命中 Claude Code plugin/skills 實務"
+      "status": "retired",
+      "notes": "Superpowers plugin 作者，篇篇命中 Claude Code plugin/skills 實務；2026-11-08 退場：07-11 起 0 天上日報、0 頁 wiki 引用"
     },
     {
       "slug": "arminronacher",
@@ -36,8 +36,8 @@
         "agent-design",
         "tooling"
       ],
-      "status": "probation",
-      "notes": "Flask 作者，深挖 agent 工具設計失敗機制與升版風險"
+      "status": "active",
+      "notes": "Flask 作者，深挖 agent 工具設計失敗機制與升版風險；2026-11-08 試用期轉正：量小（07-11 起 1 天上日報、1 頁 wiki 引用），低頻 RSS 留著成本近零"
     },
     {
       "slug": "antirez",
@@ -48,8 +48,8 @@
         "systems",
         "claude-code"
       ],
-      "status": "probation",
-      "notes": "Redis 創始人，Claude Code 批判性實測（頻率低但含金量高）"
+      "status": "active",
+      "notes": "Redis 創始人，Claude Code 批判性實測（頻率低但含金量高）；2026-11-08 試用期轉正：量小（07-11 起 2 天上日報、0 頁 wiki 引用），低頻 RSS 留著成本近零"
     },
     {
       "slug": "openai-news",
