@@ -287,12 +287,69 @@ class TestStateDiscipline(unittest.TestCase):
         self.assertEqual(state[URL]["segments"], ["Yesterday's real sentence."])
         self.assertIn("未能從頁面解析出可比對的段落", item.summary)
 
-    def test_yesterdays_baseline_survives_an_oversized_page(self):
+    def test_yesterdays_baseline_survives_a_page_beyond_the_hard_ceiling(self):
         prev = {"hash": "old", "length": 10, "segments": ["Yesterday's real sentence."]}
         state: dict = {}
-        huge = [f"segment number {n} with enough characters" for n in range(mod.MAX_SEGMENTS + 5)]
+        huge = [f"segment number {n} with enough characters" for n in range(mod.MAX_HASHED_SEGMENTS + 5)]
         mod._hash_item("x", URL, "x" * 900, prev, state, segments=huge, boilerplate=set())
         self.assertEqual(state[URL]["segments"], ["Yesterday's real sentence."])
+
+
+def _big(n, extra=()):
+    return sorted([f"Desktop section paragraph number {i} with enough characters." for i in range(n)]
+                  + list(extra))
+
+
+class TestOversizedPagesStillDiff(unittest.TestCase):
+    """desktop.md 超過 1200 段後連四天只吐「段落數超過上限」，新功能一條也沒偵測
+    （2026-11-02～05）。MAX_SEGMENTS 防的是 state 體積，不該綁死比對能力。"""
+
+    def test_a_page_past_the_full_text_cap_still_names_what_was_added(self):
+        n = mod.MAX_SEGMENTS + 100
+        before = _big(n)
+        prev = {"hash": "old", "length": 1000, "segments": before[:mod.MAX_SEGMENTS]}
+        gone = prev["segments"][3]
+        after = sorted((set(before) - {gone}) | {"Desktop now supports scheduled sessions."})
+        state: dict = {}
+        item = mod._hash_item("d", URL, "x" * 3000, prev, state, segments=after, boilerplate=set())
+        self.assertIn("Desktop now supports scheduled sessions.", item.summary)
+        self.assertIn(gone, item.summary)
+        self.assertNotIn("超過", item.summary)
+
+    def test_oversized_state_stores_hashes_not_full_text_and_diffs_next_day(self):
+        n = mod.MAX_SEGMENTS + 100
+        day1 = _big(n)
+        state: dict = {}
+        mod._hash_item("d", URL, "a" * 3000, None, state, segments=day1, boilerplate=set())
+        self.assertNotIn("segments", state[URL])
+        self.assertEqual(len(state[URL]["seg_hashes"]), n)
+        prev = state[URL]
+        day2 = _big(n, extra=["Brand new desktop feature paragraph here."])
+        gone = day2.pop(-1)
+        item = mod._hash_item("d", URL, "b" * 3200, prev, state, segments=day2, boilerplate=set())
+        self.assertIn("Brand new desktop feature paragraph here.", item.summary)
+        self.assertIn("另移除 1 段", item.summary)
+        self.assertNotIn(gone, item.summary)
+
+    def test_an_unchanged_oversized_page_emits_nothing(self):
+        n = mod.MAX_SEGMENTS + 100
+        segs = _big(n)
+        state: dict = {}
+        mod._hash_item("d", URL, "a" * 3000, None, state, segments=segs, boilerplate=set())
+        item = mod._hash_item("d", URL, "a" * 3000 + " ", state[URL], state,
+                              segments=segs, boilerplate=set())
+        self.assertIsNone(item)
+
+    def test_a_page_shrinking_back_under_the_cap_diffs_against_hashes(self):
+        n = mod.MAX_SEGMENTS + 100
+        state: dict = {}
+        mod._hash_item("d", URL, "a" * 3000, None, state, segments=_big(n), boilerplate=set())
+        small = _big(50, extra=["Only this paragraph is genuinely new today."])
+        item = mod._hash_item("d", URL, "b" * 900, state[URL], state, segments=small, boilerplate=set())
+        self.assertIn("Only this paragraph is genuinely new today.", item.summary)
+        self.assertIn("segments", state[URL])
+        self.assertNotIn("seg_hashes", state[URL])
+
 
     def test_the_message_matches_what_state_actually_holds(self):
         """訊息說「尚無可比對的前一版段落」時，state 裡就真的不能有。第 7 輪

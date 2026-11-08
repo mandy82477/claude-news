@@ -110,7 +110,14 @@ _NUMERIC_RE = re.compile(r"[0-9$%]")
 _BLOCK_END_RE = re.compile(
     r"</(?:p|li|h[1-6]|tr|section|article|blockquote|pre)\s*>|<br\s*/?>", re.I)
 MIN_SEGMENT_CHARS = 12   # 更短的多半是導覽殘骸與圖示 alt，進來只會製造假 diff
-MAX_SEGMENTS = 1200      # 超過此數的頁面不存 segments（state 檔無上限成長的閘）
+MAX_SEGMENTS = 1200      # 超過此數的頁面不存**全文**段落（state 檔無上限成長的閘）
+# MAX_SEGMENTS 防的是 state 檔體積，不是比對的演算法成本（集合差本來就是線性）。
+# 早期實作把「存全文」與「做比對」綁在同一個閘上，於是頁面一長過 1200 段就整頁
+# 失明：desktop.md 自 2026-11-02 連四天只吐「段落數超過上限」，新功能一條也沒偵測。
+# 大頁改存每段 10 碼雜湊（約全文的 1/20），比對靠雜湊集合差：新增段落的原文取自
+# 本次頁面（拿得到），移除段落若前版只有雜湊則只報段數。雜湊另設硬上限擋體積。
+MAX_HASHED_SEGMENTS = 20000
+SEG_HASH_CHARS = 10
 # 出現在幾個監看頁以上就算樣板。6 個 support 頁共享一份會變動的 Help Center
 # 文章索引，官方發一篇新文章時這些頁會同時「變了」——若不剔除，配額頁與計費頁
 # 會各自宣稱新增了一段不相干的文章標題（錯誤歸因，非單純噪音）。
@@ -182,19 +189,47 @@ class OfficialDocsWatch(BaseSource):
         return items
 
 
+def _seg_hash(seg: str) -> str:
+    return hashlib.sha1(seg.encode("utf-8")).hexdigest()[:SEG_HASH_CHARS]
+
+
+def _hashed_diff(segments: list[str], before_segs, before_hashes, boilerplate: set):
+    """大頁的段落差異：以雜湊集合差比對。回傳 (added, removed, removed_unnamed, raw_differs)。
+
+    前版有全文（剛跨過上限的那一天）就能列出移除段落原文；只有雜湊則 removed_unnamed
+    記段數。樣板同樣從兩邊剔除（雜湊側以樣板的雜湊剔除）。"""
+    bp_h = {_seg_hash(b) for b in boilerplate}
+    cur = {_seg_hash(sg): sg for sg in segments}
+    if before_segs is not None:
+        prev_map = {_seg_hash(sg): sg for sg in before_segs}
+    else:
+        prev_map = {h: None for h in before_hashes}
+    added = sorted(sg for h, sg in cur.items() if h not in prev_map and h not in bp_h)
+    gone = [h for h in prev_map if h not in cur and h not in bp_h]
+    removed = sorted(prev_map[h] for h in gone if prev_map[h] is not None)
+    unnamed = sum(1 for h in gone if prev_map[h] is None)
+    return added, removed, unnamed, set(cur) != set(prev_map)
+
+
 def _hash_item(name: str, url: str, text: str, prev, state: dict,
                segments: list[str], boilerplate: set) -> FeedItem | None:
     digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     usable = bool(segments) and len(segments) <= MAX_SEGMENTS
+    hashed = bool(segments) and MAX_SEGMENTS < len(segments) <= MAX_HASHED_SEGMENTS
 
     entry: dict = {"hash": digest, "length": len(text)}
     if usable:
         entry["segments"] = segments
-    elif prev and prev.get("segments"):
-        # 今日切不出段落（骨架頁、版型改版）或段落數超標，都不代表昨天的基線
-        # 該丟。丟了之後訊息會說「本頁尚無可比對的前一版段落」——而那句話在
-        # 剛丟完的當下必定是假的（2026-08-29 review 第 6 輪）。
-        entry["segments"] = prev["segments"]
+    elif hashed:
+        entry["seg_hashes"] = sorted({_seg_hash(sg) for sg in segments})
+    elif prev and (prev.get("segments") or prev.get("seg_hashes")):
+        if prev.get("seg_hashes"):
+            entry["seg_hashes"] = prev["seg_hashes"]
+        else:
+            entry["segments"] = prev["segments"]
+    # 上面 elif 分支：今日切不出段落（骨架頁、版型改版）或段落數超過雜湊硬上限，
+    # 都不代表昨天的基線該丟。丟了之後訊息會說「本頁尚無可比對的前一版段落」——
+    # 而那句話在剛丟完的當下必定是假的（2026-08-29 review 第 6 輪）。
     state[url] = entry
 
     if prev is None:
@@ -204,18 +239,26 @@ def _hash_item(name: str, url: str, text: str, prev, state: dict,
         return None
 
     before = prev.get("segments")
+    before_h = prev.get("seg_hashes")
     big_enough = abs(len(text) - int(prev.get("length", 0))) >= MIN_DELTA_CHARS
-    if usable and before:
-        # 樣板從兩邊同時剔除：對稱套用才不會憑空生出增減（理由見 BOILERPLATE_MIN_PAGES）
-        added = sorted((set(segments) - boilerplate) - (set(before) - boilerplate))
-        removed = sorted((set(before) - boilerplate) - (set(segments) - boilerplate))
-        if added or removed:
+    if (usable or hashed) and (before or before_h):
+        unnamed = 0
+        if hashed or before_h:
+            # 任一側是大頁：走雜湊集合差（前版若是全文，removed 仍可列原文）
+            added, removed, unnamed, raw_differs = _hashed_diff(
+                segments, before, before_h, boilerplate)
+        else:
+            # 樣板從兩邊同時剔除：對稱套用才不會憑空生出增減（理由見 BOILERPLATE_MIN_PAGES）
+            added = sorted((set(segments) - boilerplate) - (set(before) - boilerplate))
+            removed = sorted((set(before) - boilerplate) - (set(segments) - boilerplate))
+            raw_differs = set(segments) != set(before)
+        if added or removed or unnamed:
             if _touches_numbers(added, removed) or big_enough:
                 return _item(name, url, digest,
-                             _diff_summary(_head(name, prev, text), added, removed))
+                             _diff_summary(_head(name, prev, text), added, removed, unnamed))
             logger.info("Official watch '%s' sub-threshold non-numeric edit", name)
             return None
-        if set(segments) != set(before):
+        if raw_differs:
             # 原始有差、濾後全空：變動全部落在跨頁共用區，這一頁自己沒改。不發
             # 條目——發一則「未偵測到差異」等於把錯誤歸因從段落層級搬到條目層級。
             logger.info("Official watch '%s' changed only in shared chrome", name)
@@ -230,11 +273,11 @@ def _hash_item(name: str, url: str, text: str, prev, state: dict,
         logger.info("Official watch '%s' changed below threshold", name)
         return None
 
-    if not usable and segments:
-        why = f"本頁段落數（{len(segments)}）超過上限 {MAX_SEGMENTS}，不做段落比對"
+    if not usable and not hashed and segments:
+        why = f"本頁段落數（{len(segments)}）超過雜湊上限 {MAX_HASHED_SEGMENTS}，不做段落比對"
     elif not segments:
         why = "本次未能從頁面解析出可比對的段落"
-    elif before:
+    elif before or before_h:
         # 段落集合與前一版相同，變動落在段落層看不見的地方（低於
         # MIN_SEGMENT_CHARS 的碎片、或只有重複次數變化）。前一版段落是存在的，
         # 不可說「尚無」（2026-08-29 review 第 7 輪：這句話在此路徑上是假的）。
@@ -308,7 +351,7 @@ def _head(name: str, prev: dict, text: str) -> str:
     return f"{name} 內容有變動（前次 {int(prev.get('length', 0))} 字 → 本次 {len(text)} 字）。"
 
 
-def _diff_summary(head: str, added: list[str], removed: list[str]) -> str:
+def _diff_summary(head: str, added: list[str], removed: list[str], unnamed: int = 0) -> str:
     """把段落差異講成人話。移除型變動最容易被忽略——「9/1 漲價取消」在頁面上
     就是少了一句話，所以兩個方向都要列。"""
     def _fmt(label: str, rows: list[str]) -> str:
@@ -321,6 +364,8 @@ def _diff_summary(head: str, added: list[str], removed: list[str]) -> str:
         parts.append(_fmt("新增", added))
     if removed:
         parts.append(_fmt("移除", removed))
+    if unnamed:
+        parts.append(f"另移除 {unnamed} 段（前版僅存雜湊，無法列出原文）")
     return head + "；".join(parts) + "。（官方一手文件的變更偵測，非新聞報導）"
 
 def _index_item(name: str, url: str, text: str, prev, state: dict) -> FeedItem | None:
