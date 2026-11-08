@@ -1452,3 +1452,5 @@ ABORTED: gathered_items.json date=2026-11-05 items=73，非目標日期（2026-1
 [cloud daily-news-pipeline-cloud STARTED 2026-11-07T22:07:44Z]
 ABORTED: Step 0b 冪等閘命中，news/2026-11-07.md 已存在（17 UTC 班已完成全流程：news digest → wiki ingest → web build → single push，見 commit 6324786..c6a619d）。22 UTC 班（第三班）無需重跑，排程設計本就允許常態日前面班次先做完 [cloud daily-news-pipeline-cloud ABORTED 2026-11-07T22:08:21Z]
 [cloud watchdog-push STARTED 2026-11-08T01:32:54Z]
+[週日 2026/11/08 01:32:18.00] Watchdog push SENT - 每日新聞 2026-11-07 產出齊全，但 weekly-wiki-lint-cloud 03:05 UTC 班開跑後無結果紀錄（中途斷，疑撞用量上限），查該班 run log
+[週日 2026/11/08 01:35:00.00] Push PARKED - not on master (detached HEAD at session start, cloud_bootstrap.py 判定有未推送的本機 commit 不自動歸位；本次僅為 log append 無內容衝突，已推 cloud-daily-2026-11-08-unmerged，待下一輪歸位或人工 fast-forward 回 master)
