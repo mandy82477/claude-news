@@ -314,6 +314,18 @@ def safe_console(text: str) -> str:
     enc = (sys.stdout.encoding or "utf-8")
     return text.encode(enc, errors="replace").decode(enc, errors="replace")
 
+def make_console_safe() -> None:
+    """stdout／stderr 改成「編不出的字元以 ? 取代」，而不是拋 UnicodeEncodeError。
+
+    根因：Windows 預設主控台 cp950 編不出 emoji，而 build() 會把 wiki 內容（頁名、WARN 文字）
+    直接 print。print 拋例外時，若剛好位在 try/except Exception 裡，就被誤報成「頁面解析失敗」
+    （2026-11-08 對照表頁被誤報整頁消失，解析器本身沒問題）。在入口一次處理，所有 print 都受益；
+    不依賴 PYTHONUTF8 環境變數。"""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
+
+
 def strip_llm_sections(md: str) -> str:
     """Remove any H2 section whose title contains '給 LLM' (and everything after it)."""
     return re.sub(r'\n## [^\n]*給 LLM[^\n]*\n[\s\S]*', '', md)
@@ -1766,6 +1778,7 @@ def reader_search_text(r: dict, d: dict | None = None) -> str:
 # ── Build ─────────────────────────────────────────────────────────────────────
 
 def build():
+    make_console_safe()
     # ── Internal wikilink dead-link check (free, runs every build) ───────────
     all_wiki_md = sorted(WIKI_DIR.glob("*.md")) + sorted(WIKI_ENTITIES.glob("*.md")) + sorted(WIKI_TOPICS.glob("*.md"))
     # 錨點檢查另外補掃 weekly/——`[[頁#錨點]]` 也會出現在週報裡（2026-09-05 model-comparison
@@ -1815,12 +1828,14 @@ def build():
             raise FileNotFoundError
         product_matrix = parse_product_matrix(_pm_file)
         product_matrix["tracking"], _pm_warns = build_matrix_tracking(product_matrix, entities, topics, WIKI_RADAR)
-        for _w in _pm_warns:
-            print(f"WARN: {_w}")
     except FileNotFoundError:
         print("WARN: wiki/index.md 未登記 topics/anthropic-product-matrix，🛠️ 分頁退回列表")
     except Exception as e:
         wiki_parse_failures.append(f"product matrix {PRODUCT_MATRIX_PAGE.name}: {e}")
+    else:
+        # 警告在 try 外印：print 失敗不該被當成解析失敗
+        for _w in _pm_warns:
+            print(f"WARN: {_w}")
     for _it in entities + topics:
         if _it.get("matrixRole") and not matrix_role_main(_it["matrixRole"]):
             print(f"WARN: {_it['id']} 的對照角色「{_it['matrixRole']}」主詞不在 {MATRIX_ROLES}")
