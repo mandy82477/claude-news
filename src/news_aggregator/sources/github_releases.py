@@ -97,7 +97,8 @@ INVENTORY_PER_DAY = 3       # 每日至多吐幾則（2026-09-25：2→3，skill
 #   絕對暴衝型（orca +703★/日）與年輕爆紅型（anti-slop 1.7k 星 +166★/日=24%/日）。
 #   絕對線取 300（>p95，全體六日僅 7 個過線）；相對型取 100★/日 且 ≥5%/日
 #   （巨頭日常成長 <1%/日，5% 只有真的在爆的年輕 repo 過得了）。
-#   ⚠️ 校準基期僅 6 日，複查登記於 docs/workaround-register.md（2026-09-24）。
+#   複查結論（2026-11-08，星史 58 個資料日、近 14 次 run 的 Velocity sweep 吐出 0–2 則/日，
+#   無持續 >6 亦無連續 7 天 0）：閾值不動，見 docs/workaround-register.md「E 窗星速吐出端閾值」。
 VELOCITY_LOOKBACK_DAYS = 8   # 回看窗：與最舊比較點的最大距離
 VELOCITY_MIN_SPAN_DAYS = 2   # 兩筆觀測至少隔 2 天才算得出速度（單日雜訊不觸發）
 VELOCITY_ABS = 300           # ★/日：絕對暴衝線，單獨成立
