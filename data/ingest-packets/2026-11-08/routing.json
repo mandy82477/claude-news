@@ -1,0 +1,423 @@
+{
+  "https://support.claude.com/en/articles/12138966-release-notes": {
+    "title": "官方文件更新：Claude Help Center release notes",
+    "source": "Official Docs",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://status.claude.com/incidents/kw2lxj1th04c": {
+    "title": "[Status] Degraded performance for Claude Fable 5.1",
+    "source": "Anthropic Status",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/OpenMontageInc/OpenMontage": {
+    "title": "OpenMontageInc/OpenMontage",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/UnderleveledBuilder/awesome-short-drama-skills": {
+    "title": "UnderleveledBuilder/awesome-short-drama-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/duyunzhoudyz/dyz-gongwen-skills": {
+    "title": "duyunzhoudyz/dyz-gongwen-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/artemnovitckii/claude-animation-skills": {
+    "title": "artemnovitckii/claude-animation-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/microsoft/win-dev-skills": {
+    "title": "microsoft/win-dev-skills",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again": {
+    "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+    "source": "Hacker News",
+    "categories": [
+      "安全政策",
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/gogoymh/auto-ontology-mcp": {
+    "title": "gogoymh/auto-ontology-mcp",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/synchopate/llama-modchip": {
+    "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+    "source": "Hacker News",
+    "categories": [],
+    "reason": "與 Claude/Anthropic 生態無關（DeepSeek/llama.cpp 討論，內文未提及 Claude）",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/37394": {
+    "title": "[BUG] Claude Code Usage for Max Plan hitting limits extremely fast",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0": {
+    "title": "Anthropic strikes $3.4B deal to generate gas-fired power for data centres",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://dev.to/kunfieldnotes/same-local-model-3-coding-agents-pi-1212-codex-1212-claude-code-712-on-a-6gb-gpu-2f9m": {
+    "title": "Same Local Model, 3 Coding Agents: pi 12/12, Codex 12/12, Claude Code 7/12 on a 6GB GPU",
+    "source": "dev.to / #claudecode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://dev.to/vpodk/anthropic-sets-aside-five-percent-of-shares-for-public-trust-imj": {
+    "title": "Anthropic sets aside five percent of shares for public trust",
+    "source": "dev.to / #anthropic",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/sshah03/recalc": {
+    "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://rsnel.github.io/passkeychain/": {
+    "title": "Show HN: Cross-device passkey auth on Android 9, synced with Bitwarden",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/Bidthedog/throng/": {
+    "title": "Show HN: Throng, a project first, terminal 2nd IDE for command line people",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/jahala/conducted/": {
+    "title": "Show HN: Conductor sold to Meta. Rebuilding the app (3 days, $170) (MIT)",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://velork.com": {
+    "title": "Show HN: Velork – Design and Code, Together",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/j-asefa/loop": {
+    "title": "Show HN: Loop – your coding agents, from your phone",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://nosaka.ai/sentient/": {
+    "title": "Show HN: Sentient, Your Coding Agent Shouldn't Be a Black Box",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://wordspies.com/hn": {
+    "title": "Show HN: NLP capabilities of Opus, Astra, Argon measured by Codenames skills",
+    "source": "Hacker News",
+    "categories": [
+      "模型",
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://qorqbot.com": {
+    "title": "Show HN: OS Grokbot, can run on Claude/codex subs",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr2mvf/im_going_back_to_writing_some_code/": {
+    "title": "I'm going back to writing some code",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr2m0p/running_claude_code_across_machines/": {
+    "title": "Running Claude code across machines",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSXhsb01kaWx3N2pZUzZnT3NqWlpHdWFVZTlpWkZPcGV5WFZlVVYwY0cyT2xwR1pRMTJ5YVo0Rk9fY2kya2VyMG8wLVlGS1BsLUhzTDR5dU1nU183aUQ4ajRsVVIyNXFkNHZRTXJCeVRvdGNLeTFNYVJoSnBrOFhxOXZGOHZYcVU1WkxrcGlTRmxldTEt?oc=5": {
+    "title": "Anthropic’s $1.5 Trillion IPO Could Expose the Biggest Risk Facing the AI Boom - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr28ep/why_so_many_complaints/": {
+    "title": "Why so many complaints?",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr28by/forklift_driver_now_runs_his_own_vibe_coded/": {
+    "title": "Forklift driver now runs his own vibe coded startup with Claude code",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbG9kZlo4VzNzM2ZiX1BHci1HV0RKWS1wc3ZfdFh6WUtYUlUzZHEwZ1Y2d3dyZlk1cUY1ZGFiUXBueWdhUFhrMDBhUzFqS1phb3RYdHpTR3dXVjBUOHpJSEpCUkFMZXdKRFozaUF1SDZDVWVIVUlrTUIwRXZmR2ZzUVNQMnNfdFByMWRmLTV5eXhXUEhxNHJDVWZPeXc5R1BnUE0wdlR3Z3c3NG1ZZU96VWk0cFA4bUhhM2FWMDNDSQ?oc=5": {
+    "title": "Anthropic’s $895 Billion AI Gamble Could Become Wall Street’s Next Debt Nightmare - 24/7 Wall St.",
+    "source": "Google News / 24/7 Wall St.",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9mSWNwVVA0Q1gyVkNPTGpuNXc2blBmUExFTmlqWl93WVFrS2hXclZzQ3dmVDJpQk1zbkhEeGhQTzZGTldPMGFaeEdkZ2lJNFAwaVczc19kZDhidUJvcDBqMThEUmQ3M2s?oc=5": {
+    "title": "From Anthropic scare to $12.5 billion valuation: JFrog's AI comeback - CTech",
+    "source": "Google News / CTech",
+    "categories": [],
+    "reason": "主要敘述 JFrog 自身估值與業務故事，非 Claude/Anthropic 決策相關事實",
+    "note": "",
+    "summary_override": "從 Anthropic 一度令其恐慌的事件，到如今估值 125 億美元的 AI 系統供應商 JFrog 東山再起（標題直譯，原摘要為空）"
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr20yl/ban_for_using_personal_account_to_create_a/": {
+    "title": "Ban for using personal account to create a business?",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xr1yiq/i_built_a_mac_notch_app_that_gets_visibly_annoyed/": {
+    "title": "I built a Mac notch app that gets visibly annoyed when I leave Claude Code waiting",
+    "source": "Reddit / r/ClaudeCode",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeTJDUU11OHd3c1RRWWRaVEtYdWxCdlNCWGVMMUxiM1BLLXEzM1AyOHJyS2JlRGM2VG1DcGdzR1laV21seHBYaVRuSS13ZmNoY2xjSzVnUnVLXzl1QVdlRm44V1o5LXd6eDRGblZFZDZXWFVPRlpFdDlQN1h6MWZIaEhiWmd5aXBESng1MThuRTVlVU03VzBhQ3FKSQ?oc=5": {
+    "title": "Anthropic IPO to Test AI Industry's Financial Viability - BankInfoSecurity",
+    "source": "Google News / BankInfoSecurity",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5": {
+    "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters",
+    "source": "Google News / Reuters",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRk1icDF6S21KQU4xbWt4UFI0TkIxb1dzb0R1M0tPVmF3RkxVZWpyZTdYaHNnbHBLcWpqOHp5WEVpMElTdmZ0RVRWTEZQekJVNjdkWVRtcmJWczNIZ2d4bWJCZG1NTDZYMGp5Z0w0bXJVWVNNSTZqbW84TklaS0p6WFZxaWp0Nm1YRWF4NW9Na3k5dElFOHpRcXR3SE1fU2tCWTRNZEdqdm_SAa4BQVVfeXFMT3pUaUNhOWJmbGlPSHBEZEJJWHVpMjJoOHpRaEQzbmRBbm5oNWJNalNWZ1hmcjJZWXdZSjIzcUZjLWlDVmJ3X2hhcElvN0FyTVg0NTNtRVAtMUFNZ2loM3JMTU80X2h0alRlNDU0NTRhbFdCWTQ4WkZLYUt5WGFaX3FQdXEwSnY5NmZHTDkyaDN6VXd3YUIzRzFOa1VDVVJmSFpQaUFhaHpFMk5TNkJB?oc=5": {
+    "title": "NVIDIA’s Jensen Huang Rejects Anthropic’s Total China Chip Ban Push, Says “I Completely Disagree” And Believes “America Is About Competition” - Wccftech",
+    "source": "Google News / Wccftech",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxQSi00VTRySXpJSXQwU3ZiRnZUYzk3MDYtTEJLZ3V0cm0zRlBMVDV1czVMalNRbmRldHhCSWNaaFNoMEpfZkI1dU9HVW9pVXN5VGhYQ1VwRV9UOVF4cmVTY0ViMFhwZll3NjNjVE9sTDZFM0xFUzRFZ1VuSE5WNXdweFdJaU1NaURWanYxUG1VRkQ3emo0clAwRFFya3BBUDVLWHVENjQ4SkdrdGU3Q1FYZGdR?oc=5": {
+    "title": "Anthropic Buys Power for AI Data Centres in $3.4B Deal, FT Says - Bloomberg.com",
+    "source": "Google News / Bloomberg.com",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiigFBVV95cUxOX2dtUE9ScEtqY2t4Q1Bad3VkWjZYMXlpU09aXzZKWTFhYVIzdlJnRzlvTUJCZUlTckR0V215dnFudUxaMWZvOFRaU2NZNDBGUkl3cUNVWXpkR1BnUTI4RVJwWmlKQkZiZVJ6UVBkUVg2eDZfYnJxSEdDTHllWHFXZFJUNFl0WkdjM3c?oc=5": {
+    "title": "Developer Quits Claude Code for Pi, Citing 244 Releases - FourWeekMBA",
+    "source": "Google News / FourWeekMBA",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaGh3bGExVzQ0NDE2eG11QXBNT3E4ZjI0NEVWd1RWVWdUbnZwM3hQeG1meWJJeENJYkpzbEx5N2NObmF2dnlIUnRlMmh0OTNDOEpkNF96X3FnTmF5TlpPbXRZclRJckdfRDhXVndtTi1CTWZkZXZFai1jWjZtN1lQY1ZMekhHMkFWRWx0OTJB?oc=5": {
+    "title": "Anthropic: CLAUDE.md Rules Are Requests; Hooks Are Enforced - FourWeekMBA",
+    "source": "Google News / FourWeekMBA",
+    "categories": [
+      "開發實務"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMimgFBVV95cUxQOEh5dnF1SE5MVXByOUdjcnp6Q0hvcG0yWnE3RWJONVpieGJ2M3p3ellwSjZRdDAzOGpZblIzTkJBaWlkSHRqeUpfUGw1WE9zM2RSQ0VtX09fOTk3aFhNUXBVak9pTy01RkFSOXUtTmJySzRRbkpKNXR2TFNlTlRTSjM3bDM2aXJLU1VrZ1VTSHgtTS0za2NUaGFB?oc=5": {
+    "title": "Claude Code leaks passwords and API keys in 1,122 public GitHub files - Pasquale Pillitteri",
+    "source": "Google News / Pasquale Pillitteri",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4xVHRjckFvN3dmMnFTQVc5dG9WLWhZWlVrSXk3VE5sdGs4ajN4aHgtUzlucjNGREgyLUtlaUNmb3M1X0ZsX05aaDA0UGo2a0hYUHRGbVVPYw?oc=5": {
+    "title": "Claude Opus 5.5 Powers Solo 3D Creation in Blender - X",
+    "source": "Google News / X",
+    "categories": [
+      "社群"
+    ],
+    "reason": "僅有標題、原摘要為空，需人工核實內容",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMjU1VC1wRkJ4eDNDVmpFV1NfekRMVHdKV2RuSTdOc25LdWpaaks2TWJINkh3M3pLaklkZ2FHOVlGYnBjWEpRcWpPb1N2MmZ6MExDME9VM0pRTXJYM3JrbEl6UnF6VGhYMHdJNkdzMnV1Q255MjZIZ0I3SUp5RGFSaGdEUWJlODZPTTlwTkdFY1dDQQ?oc=5": {
+    "title": "Anthropic IPO: ANT Ticker, $16.3B Revenue, Control [2026] - https://tech-insider.org/",
+    "source": "Google News / https://tech-insider.org/",
+    "categories": [
+      "商業"
+    ],
+    "reason": "來源疑為低品質聚合站，數字未見其他媒體佐證，記者引用前應留意",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ1p5cnJDbnhoTElxN3ZodFpWRE52RmNSS01fNE90WTNYbHF2X3B5bDJET0RTTWRWRndUTEM0TkRBclhJVnVSVXM1ZG1yMXNaMmFGRmJhSmpLVGw1RXRpd2Vva2gyOU1rOEt6eE5zRVhaVmFZVFdrNGJ4MXcyRFZkQ09XRVE?oc=5": {
+    "title": "Anthropic S-1: Loss Narrows to $1.3B From $5.2B [2026] - shattered.io",
+    "source": "Google News / shattered.io",
+    "categories": [
+      "商業"
+    ],
+    "reason": "來源疑為低品質聚合站，數字未見其他媒體佐證，記者引用前應留意",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zRnZSbk1QNi1IRmJabGEzc2pNU1BnbTBfQmdiYk9ibGJYQXc2bDlKOXlWTmY5MUdaeVhCSlZoSGQ2YXNsR3dCUjgwaEIzc28xUVVKTlJZd0JSOC1zRFBqazR4QlBmUVlTdjJOYThkbDllLXNSM3c?oc=5": {
+    "title": "Anthropic Says Claude Wrote About 90% of Claude Code's Code, Discloses Six-Layer Review System - BigGo Finance",
+    "source": "Google News / BigGo Finance",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1YRi1zbjRteEQ2cV9USklzRFp3bWV3bmZJZTdWYlkxTng4Mk1meVdNZHZWbDhRNHNxZUtwdGUwZV83MmJiYXNCdjA1YmEyakhQUmtEOHFjdDQ?oc=5": {
+    "title": "Claude Code Alternatives in 2026: 9 Options and the Plan You Already Pay For - Fello AI",
+    "source": "Google News / Fello AI",
+    "categories": [],
+    "reason": "純列表型內容行銷文（SEO listicle），無新事實",
+    "note": "",
+    "summary_override": "2026年Claude Code替代方案9選與既有訂閱方案比較（標題直譯，原摘要為空）"
+  },
+  "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZk9hNVJEeFVWZkoxNE5rT080NEVsbTJnaFg4TE9GSElRODM1S3owUTdwUXljVmJnY2NaT2RSV2hDLVE4NURISk8yTS1rcWt1YTlBMVNfdVBYQlp1RGdkWTRkZG9pbUdyNlVlSFJwOU92NGlkUnZmcG5WaXRzMmlzR0FfR1ZYSEdBUWRfQ3IwV0o1THo0c2I2SA?oc=5": {
+    "title": "Anthropic Could Postpone Its $1.5 Trillion IPO, Per One Investor, As Market Sours On AI Trade. Another Says It Could End Up Closer To $1 Trillion - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikwJBVV95cUxPNmZkT2NzSmpyNzYyRGxCbUtuSUpyZ0FzejYzZzhfaHBHRXg3SXZyS0ljVDlTTFY4eWNhVVViTUxWYXZKajhzUnJaYkhUdFplZEpiR0ppX3ptNGJxNUEwNkVPRzRsTmhYeGhZQjlIZlF1aC00UEZGOHZucC14QVlKWnlGTmd0Uk5qYXh0aGlLTXdwa2kzR3VEejBCNHB2aHJOaEFCeVdfdUVhT3F5ZnZtU1NBMHo3ZFN3MHY3ZUdVa1prOVU2VUVqNGE0VUs4dEplRWpsZHdCNW4yQ0E4VHNvUWFPeXVTOHRHeXh2ZkdsOV90OHBfLVBBYU92RDdRWjdGNnprUXJibTVEbTJfNV95QV9qTQ?oc=5": {
+    "title": "Leading Anthropic dev says 'a human has to take responsibility' with AI code projects, as some skills get lost - TechRadar",
+    "source": "Google News / TechRadar",
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5": {
+    "title": "Claude Won't Clone Games Anymore. I Spent a Weekend Finding Out What It Will Do - PCMag UK",
+    "source": "Google News / PCMag UK",
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  }
+}
