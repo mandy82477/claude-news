@@ -22,8 +22,11 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_walk import iter_files as _walk_files  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
-TARGETS = [ROOT / "CLAUDE.md", ROOT / "wiki" / "CLAUDE.md", *sorted((ROOT / ".claude").rglob("*.md"))]
+TARGETS = [ROOT / "CLAUDE.md", ROOT / "wiki" / "CLAUDE.md", *sorted(_walk_files(ROOT / ".claude", ROOT, {".md"}))]
 
 # 方括號內：以「加入／改版／順序改版／改名／裁決／移入／擴充／使用者指示」開頭、含日期或 YYYY 佔位，可多段以全形逗號連接
 _KIND = r"(?:加入|改版|順序改版|改名|裁決|移入|擴充|使用者指示)"

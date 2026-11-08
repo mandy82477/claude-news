@@ -33,6 +33,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_walk import iter_files as _walk_files  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 REGISTRY_PATH = REPO_ROOT / ".claude" / "review-registry.json"
 # 全綠時寫入的時間戳記號檔，供 .claude/hooks/check_rule_modified.py 的
@@ -488,7 +491,7 @@ def _resolve_script(mention: str, basename: str, cache: dict) -> Path | None:
             found = cand
             break
     if found is None:
-        hits = [p for p in REPO_ROOT.rglob(basename) if ".git" not in p.parts and "node_modules" not in p.parts]
+        hits = [p for p in _walk_files(REPO_ROOT) if p.name == basename]  # 排除巢狀 worktree 副本，否則多一份就判不唯一
         found = hits[0] if len(hits) == 1 else None
     cache[basename] = found
     return found

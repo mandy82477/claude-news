@@ -34,6 +34,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_walk import iter_files as _walk_files  # noqa: E402
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MAIN_PY = REPO_ROOT / "src" / "news_aggregator" / "main.py"
 DESIGN_DIAGRAM = REPO_ROOT / "src" / "DesignDocument" / "Design Diagram.md"
@@ -333,9 +336,8 @@ def check_crons(report: Report):
     roots = [REPO_ROOT / "docs", REPO_ROOT / ".claude",
              REPO_ROOT / "src" / "DesignDocument", WORKFLOW_DIR]
     for root in roots:
-        for p in sorted(root.rglob("*")):
-            if p.is_dir() or p.suffix not in {".md", ".yml", ".json", ".html"}:
-                continue
+        # 排除 .claude/worktrees/* 等巢狀 git worktree（整個 repo 的副本）
+        for p in _walk_files(root, REPO_ROOT, {".md", ".yml", ".json", ".html"}):
             for i, line in enumerate(p.read_text(encoding="utf-8", errors="replace"
                                                  ).splitlines(), 1):
                 for m in pattern.finditer(line):

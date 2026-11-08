@@ -3,6 +3,7 @@
 hook 只看得到 session 當場下的指令；寫進程式碼、以後才跑的呼叫要靠這道靜態閘。
 """
 import importlib.util
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -48,6 +49,36 @@ class TestScanSettings(unittest.TestCase):
     def test_hook_command(self):
         self.assertTrue(mod.scan_settings('{"hooks":{"Stop":[{"hooks":[{"command":"claude -p hi"}]}]}}'))
         self.assertEqual(mod.scan_settings('{"hooks":{"Stop":[{"hooks":[{"command":"python x.py"}]}]}}'), [])
+
+
+class TestNestedWorktree(unittest.TestCase):
+    """Claude Desktop 在 .claude/worktrees/ 開的 git worktree 是 repo 副本，不是本 repo 的程式碼。"""
+
+    def _fake_repo(self, tmp: Path) -> Path:
+        wt = tmp / ".claude" / "worktrees" / "x"
+        (wt / "scripts").mkdir(parents=True)
+        (wt / ".git").write_text("gitdir: /elsewhere/.git/worktrees/x\n", encoding="utf-8")
+        (wt / "scripts" / "bad.sh").write_text("claude -p 'hi'\n", encoding="utf-8")
+        return tmp
+
+    def test_worktree_copy_not_reported(self):
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(mod.scan(self._fake_repo(Path(d))), [])
+
+    def test_worktree_without_git_file_still_excluded(self):
+        """worktree 被 prune 後 .git 檔可能不在，.claude/worktrees/ 路徑本身仍要排除。"""
+        with tempfile.TemporaryDirectory() as d:
+            root = self._fake_repo(Path(d))
+            (root / ".claude" / "worktrees" / "x" / ".git").unlink()
+            self.assertEqual(mod.scan(root), [])
+
+    def test_real_hits_next_to_worktree_still_found(self):
+        """排除只針對巢狀 worktree，不能把真命中一起吞掉（包括尚未 git add 的新檔）。"""
+        with tempfile.TemporaryDirectory() as d:
+            root = self._fake_repo(Path(d))
+            (root / "scripts").mkdir()
+            (root / "scripts" / "real.sh").write_text("claude -p 'hi'\n", encoding="utf-8")
+            self.assertEqual([f[0] for f in mod.scan(root)], ["scripts/real.sh"])
 
 
 class TestRepoClean(unittest.TestCase):

@@ -29,6 +29,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / ".claude" / "hooks"))
 from block_claude_print import is_claude_print  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_walk import iter_files as _walk_files  # noqa: E402
 
 SCAN_DIRS = ("src", "scripts", ".github", ".claude")
 SKIP_PARTS = {"__pycache__", "gathered_archive", "fixtures", "node_modules", ".git"}
@@ -113,8 +115,9 @@ def iter_files(root: Path):
         base = root / d
         if not base.is_dir():
             continue
-        for p in base.rglob("*"):
-            if not p.is_file() or SKIP_PARTS & set(p.relative_to(root).parts):
+        # 巢狀 git worktree（.claude/worktrees/*）是整個 repo 的副本，不是本 repo 的程式碼
+        for p in _walk_files(base, root):
+            if SKIP_PARTS & set(p.relative_to(root).parts):
                 continue
             yield p
 
