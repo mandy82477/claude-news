@@ -32,13 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-07
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-07
 
-> **最新動態**（2026-11-07）
-> - **新增已知問題／功能請求**：tmux 內終端機渲染錯亂（[#29937](https://github.com/anthropics/claude-code/issues/29937)，🔌 組）、功能請求支援 skills 子資料夾分層（[#10238](https://github.com/anthropics/claude-code/issues/10238)，🧠 組）、功能請求把 claude.ai 對話上下文帶進 Claude Code（[#13843](https://github.com/anthropics/claude-code/issues/13843)，📂 組）（見 [[entities/claude-code-known-issues]]）。
-> - **文件異動**：桌面版文件再增字（段落數超限無法逐段比對）；Help Center release notes 移除「Claude Code model configuration」段，待查證（見 [[entities/claude-code-features]]）。
-> - **近期報導新增（尚待官方佐證）**：Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰（FourWeekMBA＋Pasquale Pillitteri，僅標題）。
+> **最新動態**（2026-11-08）
+> - **服務事故（已解決）**：Anthropic Status 記錄 Fable 5.1 效能降低（08:18–08:32 UTC，約 14 分鐘），影響 claude.ai、Claude API、Claude Code、Cowork（見 [[entities/claude-code-known-issues]]）。
+> - **文件異動**：Help Center release notes「Claude Code model configuration」段 11-07 疑似移除、11-08 又出現，另新增模型自動切換說明（提及 Fable 5／5.1），待查證（見 [[entities/claude-code-features]]）。
 
 ---
 
@@ -48,9 +47,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-07 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-08 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-06 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-07 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-08 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的

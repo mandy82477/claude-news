@@ -33,13 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-07）
-> - **桌面版文件再增字**（217,701→219,230 字）：段落數 1332 超過自動比對上限（1200），沒有逐段差異可看，要知道改了什麼得自己開[原文](https://code.claude.com/docs/en/desktop.md)比對。
-> - **Help Center release notes 移除「Claude Code model configuration」段**：是否為功能異動待查證，見下方「核心功能」。
+> **最新動態**（2026-11-08）
+> Help Center release notes「Claude Code model configuration」段 11-07 疑似移除、11-08 又出現，像是搬移非功能變動，待查證（見核心功能）。
 
 ---
 
@@ -65,7 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
-- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21）｜**Help Center release notes 移除「Claude Code model configuration」段**：文件異動偵測顯示該段落已移除（查 2026-11-07），是功能異動、搬移還是文件整理，內容未載，待官方一手查證。
+- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-08）｜**「Claude Code model configuration」段復現**：11-07 疑似移除、11-08 又新增；同時新增模型切換說明、移除舊「調整模型設定」段，疑搬移非功能變動。
 
 ### 桌面版功能地圖
 

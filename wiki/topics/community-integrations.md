@@ -3,8 +3,8 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-05"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-08"
+last_news_update: "2026-11-08"
 status_main: "ongoing"
 days_since_news: 2
 parent: "topics/community-tech-patterns"
@@ -31,13 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-05
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 
-> **Plugin／MCP 整合新增官方與可靠性兩例，創意工具新增人機共用時間軸案例**（2026-11-05）
-> - **makenotion/claude-code-notion-plugin**：Notion 官方帳號發布的 Claude Code 連接 plugin，官方廠商首例。
-> - **ctoldigital/axuse**：MCP server 用 accessibility tree 取代截圖迴圈做電腦操作，792★。
-> - **Launch HN: Kino AI**：YC S23 團隊讓真人與 Claude Code／Codex 共用同一條影片剪輯時間軸，HN 95 分。
+> **Plugin／MCP 整合新增 Microsoft 官方跨 agent Windows 開發外掛集**（2026-11-08）
+> - **microsoft/win-dev-skills**：Microsoft 官方帳號發布，供 GitHub Copilot、Claude Code、OpenAI Codex 共用的 Windows 應用開發 agent plugin 集合，501★。
 
 ---
 
@@ -60,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### microsoft/win-dev-skills：Microsoft 官方跨 agent Windows 應用開發外掛集（2026-11-08）
+
+- **主線：** —
+- **核心模式：** Microsoft 官方帳號發布的 agent plugin 集合，供 GitHub Copilot、Claude Code、OpenAI Codex 等多款 coding agent 共用，協助開發 Windows 原生應用程式；GitHub Search 501 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個由作業系統廠商官方維護（而非社群第三方或單一服務供應商）的實作——既有代表技巧多是社群作者或單一 SaaS 廠商（Notion、Atlassian 等），本則是平台廠商官方跨多款 agent 發布的開發外掛集；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 帳號為 Microsoft 官方組織帳號，非匿名星數可比，造假誘因低於個人開發者專案（推論）；僅標題與一句描述可用，具體外掛涵蓋哪些 Windows API／UI 框架未見細節。
+- **來源：** GitHub Search；[GitHub](https://github.com/microsoft/win-dev-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，官方剛發布，尚無使用回饋）
 
 #### makenotion/claude-code-notion-plugin：Notion 官方發布的 Claude Code 連接 Plugin（2026-11-05）
 

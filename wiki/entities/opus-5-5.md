@@ -32,20 +32,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
 **最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-03
+**最後新聞更新：** 2026-11-08
 
-> **社群調侃：Opus 5.5 撐過十月整月發布潮**（2026-11-03）
-> Reddit 週熱門貼文稱 Opus 5.5 熬過十月各家密集發布新模型仍未被取代；0 留言，弱訊號，無具體數據佐證。
+> **PCMag UK 實測遊戲複刻鬆綁後 Claude 的實際回應**（2026-11-08）
+> PCMag UK 實測一整個週末記錄 Claude 面對複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用。
 
 ---
 
 ## 現況
 
-**2026-11-02 最新**：GitHub Issue #77136（跨版本重複修辭套路）回報範圍擴增至含 Opus 5.5，累計留言增至 140 則、反應增至 578 個；完整查核紀錄見 [[entities/opus-5]]「這些數字是誰量的」。同日社群對 Opus 5.5 是否「變笨」方向相反——一則稱說話像另一款模型、一則稱近乎完美——皆單一來源弱訊號，細節見「LiveNerf／降智觀感」。
+**2026-11-07 最新**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時具體會怎麼回應、改做出什麼，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。報導僅標題可用，無法複述具體測試項目或結果。鬆綁機制與已知問題狀態見 [[entities/claude-code-known-issues]]。
 
-**2026-10-31**：Anthropic 向 Game Developer 證實已發布 Opus 5.5 更新，引導 Claude Code 不去「重現他人的特定遊戲」，規則約 10-27 以伺服器下發設定推送（[Game Developer](https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games)）。Tom's Hardware 彙整多位使用者回報，連開發者對自家專案的逆向工程與跨平台移植也被拒，Anthropic 未公布判定邊界（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked)）。細節見「歷史記錄細節」2026-10-31 條。
+**2026-11-02**：GitHub Issue #77136（跨版本重複修辭套路）回報範圍擴增至含 Opus 5.5，累計留言增至 140 則、反應增至 578 個；完整查核紀錄見 [[entities/opus-5]]「這些數字是誰量的」。同日社群對 Opus 5.5 是否「變笨」方向相反——一則稱說話像另一款模型、一則稱近乎完美——皆單一來源弱訊號，細節見「LiveNerf／降智觀感」。
 
-上線同時伴隨資安相關防護機制強化（The Verge 報導），紐約時報將此次發布放進近期 AI 安全爭論的脈絡報導；機制細節與爭議屬安全政策線，本頁僅記模型面，完整脈絡見 [[topics/ai-agent-safety]]。定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]。
+定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]，資安防護機制與安全爭論脈絡見 [[topics/ai-agent-safety]]。
 
 ---
 
@@ -166,6 +166,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[topics/competitor-landscape]] — 同日 GPT-6 Sol／Luna 發布的價格戰脈絡
 - [[topics/ai-agent-safety]] — 資安防護機制強化與安全爭論脈絡
 - [[entities/claude-code]] — v2.1.280 完整改動
+- [[entities/claude-code-known-issues]] — 遊戲複製限制官方鬆綁進度、已知問題狀態
 - [[feature-radar]] — 這禮拜官方動了什麼、熱度現在幾格
 
 ## 參考來源
@@ -214,6 +215,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-11-02]]
 - [Reddit r/ClaudeAI：Opus 5.5 surviving the entire October AI release cycle 😂](https://www.reddit.com/r/ClaudeAI/comments/1xlkghv/opus_55_surviving_the_entire_october_ai_release/)（週熱門，2026-11-02）
 - [[news/2026-11-03]]
+- [Google News/PCMag UK：Claude Won't Clone Games Anymore. I Spent a Weekend Finding Out What It Will Do](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)（2026-11-07）
+- [[news/2026-11-08]]
 
 ## 歷史記錄
 
@@ -223,6 +226,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-07 | PCMag UK 實測一週末記錄 Claude 面對遊戲複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用 |
 | 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號；另一則週熱門貼文調侃 Opus 5.5 撐過十月發布潮（0 留言，弱訊號） |
 
 **2026-10**
@@ -250,6 +254,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-11**
 
+- **2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時的具體回應，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲；報導僅標題可用，無法複述測試細節（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。鬆綁機制狀態見 [[entities/claude-code-known-issues]]。
 - **2026-11-02**：GitHub #77136 回報範圍擴增至含 Opus 5.5，留言增至 140 則、反應增至 578 個；完整沿革見 [[entities/opus-5]]；已於 10-03 關閉、留言持續累積，官方無回應（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。
   - 同日 r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與上述修辭套路回報接近但不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)，2026-11-02）
   - 另一則週熱門貼文（10-28 發文、11-02 查核收錄）稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美，無具體案例或分數，方向相反（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門，2026-10-28）

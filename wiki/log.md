@@ -8693,3 +8693,30 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱（補記）：候選 4 筆（rsc-harness meta-harness 整合、額度頁降 effort／關 thinking 建議、閒置對話接續額度警告、MCP Tasks public beta／Elicitations），皆因缺一手來源或非官方使用指南性質暫不寫入 coding-workflow-guide；Lance Martin「72% 省錢指令」兩則原料僅二手轉述、無一手連結，依規則不逕自寫入，候選已記 `data/devpractice-candidates.jsonl`，留主編查證 Lance Martin 原始發言出處
 - market 判讀（補記）：判讀新增 2 則——topics/market-signals-legal 新開「Max 訂閱廣告誤導訴訟」線（Courthouse News，法院裁定須面對訴訟程序）；topics/market-signals-ipo 續「IPO 進程」線第 23 則（估值談判區間降至 $1.2～1.3 兆、買方喊價低探 $1.1 兆）；Goldman Sachs 禁令規模描述與量子運算模型報導等因無新數字或無具名金額未過判讀門檻
 - 轉知帳本（補記）：新開 1 筆 H-de35e7（開發實務→功能，entities/claude-code-features，MCP Tasks／Elicitations 是否影響 official-community-gap 矩陣）
+
+## 2026-11-08 Ingest
+
+- 來源日報：[[news/2026-11-08]]（47 則，15/15 來源；日報實收 19 則，另 23 則未進日報與 3 則排除透過 `list_digest_omissions.py`／分類排除一併提供給記者判斷）
+- 更新頁面：
+  - **人物**：entities/boris-cherny.md、entities/fiona-fung.md（TechRadar「Leading Anthropic dev」頭銜模糊未具名，兩頁同步加 ❓ 待查證標記並互相 wikilink）
+  - **功能**：entities/claude-code-features、entities/cowork、entities/claude-code-known-issues、entities/claude-code（release notes 新增/移除段落、Fable 5.1 短暫降級事故、「不再問」外洩密鑰 Boris 官方回應）
+  - **商業**：entities/pricing、topics/anthropic-partnerships-compute、topics/anthropic-ipo、topics/anthropic-business（Enterprise 計費代碼/成本追蹤段；Anthropic 34 億美元燃氣發電採購；IPO 估值持續受質疑）
+  - **安全政策**：topics/anthropic-government-policy、topics/ai-agent-safety-product-vulns（AI 生成內容標記說明；NVIDIA 黃仁勳反對全面對中晶片禁售；Boris 官方回應記入攻防紀錄）
+  - **模型**：entities/opus-5-5.md（PCMag UK 遊戲複刻限制實測後續，分類回退自安全政策）
+  - **社群**：topics/community-integrations.md、topics/community-tech-patterns.md（母頁僅動 callout＋路由表；新收 microsoft/win-dev-skills）
+  - **投資分析（4c）**：topics/market-signals-compute（＋母頁 topics/market-signals）——燃氣發電採購事件開新線，里程碑登記 1 筆（複查 2026-11-22）
+- 新增頁面：無
+- feature-radar：本日無新功能（功能／模型記者皆判定今日條目非使用者可取用新功能）
+- index：無
+- 摘要：今日最大新聞是 Anthropic 與發電業者簽下 34 億美元合約為 AI 資料中心採購燃氣發電機組（FT／Reuters／Bloomberg），以及 Anthropic 揭露 Claude Code 約九成程式碼由 Claude 自己撰寫並設六層審查機制；「不再問」外洩密鑰爭議首次獲 Claude Code 團隊成員 Boris 的 HN 公開回應；IPO 估值與財務前景持續受質疑（Yahoo Finance／BankInfoSecurity）。
+- 呈現品質：全部通過
+- 品質備註：BigGo Finance「六層審查機制」一詞，主編以 WebSearch 查證，目前可信來源（ai-tldr.dev 引述 Addy Osmani，10/15）報的是「七層」，未見「六層」的獨立佐證；社群記者本輪已判斷不寫入 wiki，維持不寫，日報該行屬如實轉述 BigGo Finance 報導用語，不回改。FourWeekMBA「CLAUDE.md Rules Are Requests; Hooks Are Enforced」主編以 WebSearch 查證，二手部落格多處引用但未能定位到可引用、附日期的 Anthropic 官方頁面，開發實務記者維持不寫入 coding-workflow-guide，判斷正確。
+- 分類回退：追加派工 1 筆——[安全政策→模型] Claude Won't Clone Games Anymore（PCMag UK）：安全政策記者判定已有家在 entities/opus-5-5.md（Opus 5.5 行為變更追蹤），非安全政策範疇；主編依 SKILL.md 步驟 3b 核對後補派模型記者，已寫入 entities/opus-5-5.md
+- 轉知帳本：結案 5 筆（H-595d07、H-d5ce8b、H-de35e7 由功能記者結案；H-872580 由商業記者結案；H-96b5cc 由安全政策記者結案）；新開 1 筆 H-a6e390（社群→功能，topics/official-community-gap，評估 microsoft/win-dev-skills 是否使產品化矩陣新增列）
+- devpractice 沉澱：候選 0 筆（FourWeekMBA CLAUDE.md/hooks 條目因無一手來源與日期未寫入；基準線推進至 7c7028f9c9）
+- market 判讀：判讀新增 1 則（燃氣發電採購事件，⚖️ 兩面，開新線；里程碑複查 2026-11-22）；其餘商業包條目核對後與 11-06 已載內容重疊或無新數字，未過判讀門檻
+- 分類複核：排除 3 則（Llama-modchip DeepSeek 討論、JFrog CTech 估值報導、Fello AI 替代方案 listicle），複核記者判定皆維持排除，無誤排除
+- 主編待辦：
+  - [主編] entities/pricing.md 2026-11-08 條目目前標「連結待補」，待補上 Help Center release notes 原始連結（`https://support.claude.com/en/articles/12138966-release-notes`）
+  - [主編] topics/anthropic-partnerships-compute.md 新列「發電業者（未具名，燃氣機組）」，FT／Reuters／Bloomberg 均未點名供電方，待後續報導補上
+  - [主編] topics/market-signals-ipo／anthropic-ipo 既有已查證 S-1 口徑（H1 淨損 8.07 億美元、Q3 單季營運虧損 12.5 億美元）與今日兩則低品質聚合站（shattered.io「損失收窄至 13 億美元」、tech-insider.org「營收 163 億美元」）數字對不上，兩則來源可信度存疑，今日未採信寫入；留待查證一手 S-1 文件後確認是否為不同期間口徑或純屬錯誤轉述

@@ -3,10 +3,10 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-04"
+last_updated: "2026-11-08"
+last_news_update: "2026-11-08"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-07）
-> - **產品漏洞／設定外洩**：「是，並不要再問」選項導致 1,994 個公開倉庫外洩 2,539 組密鑰；email 外洩事件（#107757）另有媒體跟進、無新事實。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> **最新動態**（2026-11-08）
+> - **產品漏洞／設定外洩**：「是，並不要再問」外洩密鑰爭議首次獲 Claude Code 團隊成員 Boris 的 HN 公開回應（研議中、建議改用 auto mode）。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 > - **提示注入**：業界持續倡議內建偵測器、盤點防護方案，仍停在論述與教學層級。見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
 
 ---
@@ -54,7 +54,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-06 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-07 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-08 |
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-04 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 

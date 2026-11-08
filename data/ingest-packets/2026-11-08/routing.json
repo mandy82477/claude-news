@@ -415,9 +415,9 @@
     "title": "Claude Won't Clone Games Anymore. I Spent a Weekend Finding Out What It Will Do - PCMag UK",
     "source": "Google News / PCMag UK",
     "categories": [
-      "安全政策"
+      "模型"
     ],
-    "reason": "",
+    "reason": "分類回退自安全政策（主編已核對：此為 Opus 5.5 行為變更追蹤，已有家在 entities/opus-5-5，非安全政策範疇）",
     "note": ""
   }
 }

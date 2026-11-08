@@ -31,11 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 
-> **最新動態**（2026-11-06）
-> - **Microsoft 官方**：Copilot 內的 Claude 模型納入歐盟資料邊界（EU Data Boundary），資料處理與儲存限定在歐盟境內，見下方「哪個合作會改到你用的 Claude」Microsoft 列
+> **最新動態**（2026-11-08）
+> - **FT／Reuters／Bloomberg：Anthropic 與發電業者簽 $34 億美元合約，採購燃氣機組供應 AI 資料中心**；HN 討論聚焦溫室氣體排放爭議，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] 新列
 
 ---
 
@@ -62,6 +62,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 | 對手方 | 金額與期限（日期） | 狀態 | 對可用性或價格的影響 |
 |---|---|---|---|
+| 發電業者（未具名，燃氣機組） | 約 $34 億，供應 AI 資料中心燃氣發電，期限未見（11-08） | 已簽（FT 報導，Reuters／Bloomberg 同日轉述） | 目前無可見後果。下一個觸發點：機組上線時程、供電方身分 |
 | Nscale（第二筆） | 約 $450 億，條款與年期未見（10-20） | 洽談中，尚未定案 | 目前無可見後果。下一個觸發點：簽約與容量公告 |
 | Nscale（第一筆） | $450 億，460 MW Vera Rubin 世代，年期未見（08-28）；Nscale 全部客戶合約共 1,030 億，含 Microsoft | 已簽 | 目前無可見後果；第二筆金額同為 $450 億，與此筆獨立 |
 | Blackstone | 晶片融資，兩位數殖利率；併入銀行團 $630 億 Broadcom 晶片融資方案（10-26 更新），殖利率仍未見 | 規模已確認，利率條款未載 | 目前無可見後果。下一個觸發點：利率與條款公開 |
@@ -81,6 +82,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | 股權與信貸 | Series H $650 億（05-28）；上市前信用額度傳逾 $100 億（08-18）；資料中心私募信貸 $13 億（08-19） | Series H 已完成；其餘為報導 | 目前無可見後果。下一個觸發點：定價與股數公告（S-1 已於 10-26 提交） |
 
 **來源**
+- 發電業者（未具名）：Financial Times（2026-11-08）；Reuters、Bloomberg.com 同日轉述（Google News）。Hacker News 討論聚焦燃氣供電的溫室氣體排放爭議，未附供電方身分或機組上線時程。
 - Nscale 兩筆：第二筆 CNBC、Reuters、Bloomberg（2026-10-20）；第一筆 Forbes、Financial Times（2026-08-28）。
 - Blackstone：Financial Times、Yahoo Finance（2026-10-17）；Reuters（630 億美元銀行＋Blackstone 聯合融資，2026-10-26）。EverWind：Global News、CBC（2026-10-16）。Samsung Foundry：TechPowerUp（2026-10-07）。
 - SpaceX：Barchart.com（2026-10-03）、Hacker News 轉 WSJ（2026-10-10）；WSJ 稱由共同創辦人 Tom Brown 透過共和黨人脈牽線（單一媒體說法，未獲第二家佐證；交易本身已獲 Anthropic 官方公告證實，2026-10-31 查）。

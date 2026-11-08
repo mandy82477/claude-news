@@ -409,3 +409,9 @@
 {"id": "H-595d07", "opened": "2026-11-07", "from": "安全政策", "to": "功能", "page": "entities/claude-code-known-issues", "note": "「是，並不要再問」選項外洩密鑰涉及功能面確認對話框選項設計，請評估是否需同步收錄一行", "status": "open"}
 {"id": "H-d5ce8b", "opened": "2026-11-07", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 community-multi-agent 新增「固定人設小組辯論」(roast-room)與「確定性 Agent 框架」(Comma)兩個新代表技巧，community-interfaces 重新啟動「跨 Repo 依賴可視化」類別，請評估 official-community-gap 產品化矩陣是否新增列", "status": "open"}
 {"id": "H-de35e7", "opened": "2026-11-07", "from": "開發實務", "to": "功能", "page": "entities/claude-code-features", "note": "entities/claude-code-features 今日新增 MCP Tasks（public beta）與 Elicitations 官方說明，請確認是否影響 official-community-gap 矩陣", "status": "open"}
+{"id": "H-a6e390", "opened": "2026-11-08", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "microsoft/win-dev-skills（跨 GitHub Copilot／Claude Code／OpenAI Codex 的 Windows 應用開發 agent plugin 集）是否構成產品化矩陣新增列的候選", "status": "open"}
+{"id": "H-595d07", "closed": "2026-11-08", "status": "done", "by": "功能", "result": "記入 claude-code-known-issues 🛡️ 組，Boris 的 HN 公開回應"}
+{"id": "H-d5ce8b", "closed": "2026-11-08", "status": "done", "by": "功能", "result": "official-community-gap 評估不開新列"}
+{"id": "H-de35e7", "closed": "2026-11-08", "status": "done", "by": "功能", "result": "official-community-gap 評估不開新列"}
+{"id": "H-872580", "closed": "2026-11-08", "status": "done", "by": "商業", "result": "併入 entities/pricing.md"}
+{"id": "H-96b5cc", "closed": "2026-11-08", "status": "done", "by": "安全政策", "result": "寫入 topics/anthropic-government-policy「浮水印：法源、爭點與未解」節"}

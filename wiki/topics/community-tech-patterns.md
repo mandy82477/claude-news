@@ -29,13 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-07
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-07
 
-> **三個子頁同日更新：辯論式 multi-agent、官方記憶設計框架、架構圖外掛重新啟動一類**（2026-11-07）
-> - **Multi-agent**：roast-room 七人設小組即時辯論商業決策，見 [[topics/community-multi-agent#2026-11]]。
-> - **記憶**：Anthropic 官方部落格首次拆解 agent 記憶「編碼—整併—取回」三階段設計，見 [[topics/community-memory#2026-11]]。
-> - **介面**：dev.to 實測三款架構圖外掛，「跨 Repo 依賴可視化」重新啟動，見 [[topics/community-interfaces#2026-11]]。
+> **Plugin／MCP 整合新增 Microsoft 官方跨 agent Windows 開發外掛集**（2026-11-08）
+> - **Plugin／MCP**：microsoft/win-dev-skills，Microsoft 官方發布，供 GitHub Copilot、Claude Code、OpenAI Codex 共用的 Windows 應用開發外掛集，見 [[topics/community-integrations#2026-11]]。
 
 ---
 
@@ -58,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-04 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-04 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-02 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-05 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-08 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-11-07 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。

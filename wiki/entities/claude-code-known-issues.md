@@ -33,12 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-07）
-> - **新增已知問題／功能請求**：tmux 內終端機渲染錯亂，疊字覆蓋先前輸出（[#29937](https://github.com/anthropics/claude-code/issues/29937)，30 則留言、72 個讚；🔌 組）、功能請求：skills 目錄支援子資料夾分層（[#10238](https://github.com/anthropics/claude-code/issues/10238)，55 則留言、168 個讚；🧠 組）、功能請求：把 Claude.ai 對話上下文帶進 Claude Code（[#13843](https://github.com/anthropics/claude-code/issues/13843)，30 則留言、174 個讚；📂 組）。
+> **最新動態**（2026-11-08）
+> - **服務事故（已解決）**：Anthropic Status 記錄 Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Cowork（08:18–08:32 UTC，約 14 分鐘），官方已標記解決（🌐 組）。
+> - **安全相關**：Claude Code 團隊 Boris 於 HN 回應「不再詢問」權限選項致密鑰外洩爭議：歷來未內建密鑰清除、正研究方案，建議改用 auto mode 取代手動維護的允許／拒絕清單（🛡️ 組）。
 
 ---
 
@@ -54,8 +55,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 母頁「現在還沒修好的」是本頁各組的結論表，條目本身不搬 %%
 
-### 🛡️ 安全與隱私（19 條未修復、7 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（20 條未修復、7 條已修復、1 條拒修、3 條❓）
 
+- 🔴 **未修復（研究中）**｜**「不再詢問」致密鑰外洩，Boris 公開回應（HN 497 分，11-07）**：歷來未內建密鑰清除，正研究方案，建議用 auto mode 取代手動維護的允許／拒絕清單。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - ✅ **已修復 v2.1.317**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號。
   - v2.1.317（11-03）起，web 或 shell 工具要把帳號信箱送上網路前會先詢問（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，2026-11-08 查證）；npm 穩定版 11-08 仍為 2.1.311、尚未包含。
   - 官方未在 issue 回應，檢查涵蓋範圍未說明。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
@@ -455,8 +457,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（12 條未修復、3 條已修復）
+### 🌐 服務穩定性（12 條未修復、4 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Claude Cowork（2026-11-08 08:18–08:32 UTC，約 14 分鐘）**：官方已標記解決；這段時間遇到回應變慢或失敗可確認是此次短暫異常。[來源](https://status.claude.com/incidents/kw2lxj1th04c)
 - 🔴 **未修復**｜**API Error: Connection closed mid-response，工作到一半無預警中斷（GitHub issue #70217，33 則留言、22 讚，2026-10-28）**：官方尚未回應。
   - 與既有同名錯誤（#69415）、「串流閒置逾時」（#46987）同屬串流可靠性問題但為獨立回報，暫分列追蹤；長時間跑自動化或大型任務的使用者可留意。
 - 🔴 **未修復（調查中）**｜**Anthropic Status：Google Calendar 連接器錯誤率升高，列出／搜尋行事曆事件請求自 10-26 起即開始失敗（2026-10-28 16:19 UTC 仍標記調查中）**：非 Claude Code CLI 本身問題，屬 Anthropic Status 頁面涵蓋的連接器生態系事故，補記於此供跨產品穩定性對照。[來源](https://status.claude.com/incidents/phg1y2yh07n2)

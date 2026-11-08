@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** 談 Claude Code 如何改變工程師工作型態的具名發言人
 **首次出現：** 2026-06-23
-**最後更新：** 2026-10-04
-**最後新聞更新：** 2026-06-23
+**最後更新：** 2026-11-08
+**最後新聞更新：** 2026-11-08
 
-> **最新論述**（2026-06-22）
-> Business Insider 採訪確認 Fiona Fung 為「Claude Code 讓工程師更孤獨」論述的具名發言人，澄清此說法初期誤報為 Boris Cherny 或 Cat Wu。
+> **待查證**（2026-11-08）
+> TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選，尚待確認是否為本人。
 
 ---
 
@@ -49,6 +49,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 Fiona Fung 是 Anthropic 工程副總裁（VP of Engineering）。
 
 > **歸屬釐清：** 此「工程師更孤獨」論述初期報導僅稱「engineering leader」，一度在 [[entities/boris-cherny]] 與 [[entities/cat-wu]] 頁面標記為身分未經確認；具名 Business Insider 來源確認發言人為 Fiona Fung，兩頁標記已解除。
+
+截至 2026-11-08，TechRadar 報導一位匿名「Anthropic 資深工程師」主張 AI 寫程式仍須人類負責、過度依賴 agent 會流失部分技能；標題未具名指向特定人，與 [[entities/boris-cherny]] 同列候選。
+
+❓ **待查證**（標 2026-11-08｜查 skills get lost、take responsibility）｜**AI 程式碼責任論述候選發言人**（2026-11-07 報導）：TechRadar 報導稱一位「Leading Anthropic dev」主張 AI 寫程式仍須人類負責、過度依賴流失技能；標題未具名指向特定人，互動 0，僅標題可用，尚待第二來源確認是否為本人或 [[entities/boris-cherny]]。
 
 ---
 
@@ -80,4 +84,5 @@ Fiona Fung 是 Anthropic 工程副總裁（VP of Engineering）。
 
 ## 歷史記錄
 
+- 2026-11-08：❓ **待查證**（標 2026-11-08｜查 skills get lost）｜**AI 程式碼責任論述候選發言人**：TechRadar 稱「Leading Anthropic dev」主張須人類負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選（TechRadar，2026-11-07）
 - 2026-06-23：Business Insider 採訪報導：Claude Code 讓 coding 不再是瓶頸，但工程師開始感到孤獨

@@ -30,19 +30,19 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-07
+**最後更新：** 2026-11-08
 **最後新聞更新：** 2026-11-05
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-07）
+> **最新判讀**（2026-11-08）
+> - **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議（見 [[topics/market-signals-compute]]）。
+>
+> 前一日（2026-11-07）：
 > - **法院裁定 Anthropic 須就 Claude Max 訂閱廣告誤導指控面對訴訟程序**：Courthouse News／The Next Web 同日報導，未附案號，與既有 06-16 集體訴訟是否同案尚待確認（見 [[topics/market-signals-legal]]）。
 > - **IPO 估值談判區間再探低**：Bloomberg／Hacker News 討論稿稱銀行原始目標 1.4～1.5 兆美元、談判區間已降至 1.2～1.3 兆美元，買方喊價低探至 1.1 兆美元（見 [[topics/market-signals-ipo]]）。
->
-> 前一日（2026-11-06）：
-> - **AI 股拋售潮加深 IPO 估值懷疑，估值預期恐探底至約 1 兆美元**：WSJ／Reuters／Yahoo Finance 同日各自獨家，具名新估值區間與官方證實均未見（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -101,7 +101,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 |---|---|---|
 | IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-07 估值談判區間再探低（銀行目標 1.4～1.5 兆 → 談判區間 1.2～1.3 兆） |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-07 法院裁定須就 Claude Max 廣告誤導指控面對訴訟程序 |
-| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-05 CoinDesk：違約情境下 Google 可能取得 TeraWulf 股權 |
+| 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-08 Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 
