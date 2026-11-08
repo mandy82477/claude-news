@@ -20,6 +20,8 @@
 失敗模式處理：
 - 狀態檔缺失／sha 已不在歷史中（rebase、force push）→ 退回「48 小時前的 commit」
   當基準線（用 rev-list --before，不用 reflog——雲端 fresh clone 的 reflog 是空的）。
+- 淺 clone（雲端容器）且 sha 不在本地 → 先 git fetch --shallow-since／--deepen 補歷史；
+  補不到才退到 48 小時前或「本 clone 最舊 commit」，並印警告（show 輸出第二行）。
 - diff 為空 → 印「無新增」，exit 0（無料是正常結果，不是錯誤）。
 """
 import json
@@ -49,18 +51,67 @@ def _fallback_sha():
     return r.stdout.strip() or None
 
 
+def _is_shallow() -> bool:
+    return _git("rev-parse", "--is-shallow-repository").stdout.strip() == "true"
+
+
+def _oldest_sha():
+    """本 clone 可見歷史的最舊 commit（淺 clone 的邊界 commit）。"""
+    r = _git("rev-list", "--max-parents=0", "HEAD")
+    lines = r.stdout.split()
+    return lines[-1] if lines else None
+
+
+def _has_commit(sha) -> bool:
+    return bool(sha) and _git("cat-file", "-e", f"{sha}^{{commit}}").returncode == 0
+
+
+def _deepen_for(sha, updated) -> bool:
+    """淺 clone 裡狀態檔的 sha 不在本地時，先補歷史再放棄（不靜默換基準）。
+    先 --shallow-since（狀態檔 updated 往前推 2 天，必含該 sha），不行再 --deepen。"""
+    attempts = []
+    try:
+        dt = datetime.strptime(updated, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        since = int(dt.timestamp()) - 2 * 86400
+        attempts.append(["fetch", "-q", f"--shallow-since={since}", "origin"])
+    except (TypeError, ValueError):
+        pass
+    attempts.append(["fetch", "-q", "--deepen=200", "origin"])
+    for args in attempts:
+        try:
+            _git(*args)
+        except OSError:
+            return False
+        if _has_commit(sha):
+            return True
+    return False
+
+
 def _base_sha():
-    """讀狀態檔的基準 sha；缺失或已不在歷史中則退回 48 小時前。"""
-    sha = None
+    """基準 sha 與來源。順序：
+    1. 狀態檔 sha 在本 clone → "state"
+    2. 淺 clone 且不在 → 嘗試補歷史取回 → "state-fetched"
+    3. 非淺 clone（rebase／force push）→ 48 小時前 → "fallback-48h"
+    4. 淺 clone 補不到 → 48 小時前（若有）否則本 clone 最舊 commit → "fallback-shallow-48h"／"fallback-shallow-oldest"
+    非 "state" 系的來源，show() 一律印警告，讓雲端 log 看得出基準被降級。"""
+    sha, updated = None, None
     if STATE.exists():
         try:
-            sha = json.loads(STATE.read_text(encoding="utf-8")).get("last_sha")
-        except (json.JSONDecodeError, OSError):
+            data = json.loads(STATE.read_text(encoding="utf-8"))
+            sha, updated = data.get("last_sha"), data.get("updated")
+        except (json.JSONDecodeError, OSError, AttributeError):
             sha = None
-    if sha and _git("cat-file", "-e", f"{sha}^{{commit}}").returncode == 0:
+    if _has_commit(sha):
         return sha, "state"
+    shallow = _is_shallow()
+    if sha and shallow and _deepen_for(sha, updated):
+        return sha, "state-fetched"
     fb = _fallback_sha()
-    return fb, "fallback-48h"
+    if not shallow:
+        return fb, "fallback-48h"
+    if fb:
+        return fb, "fallback-shallow-48h"
+    return _oldest_sha(), "fallback-shallow-oldest"
 
 
 def show():
@@ -70,6 +121,10 @@ def show():
         return 1
     head = _git("rev-parse", "HEAD").stdout.strip()
     print(f"基準線：{sha[:10]}（{origin}）→ HEAD {head[:10]}")
+    if origin not in ("state", "state-fetched"):
+        print(f"⚠️ 基準線被降級（{origin}）：狀態檔記的 commit 不在本 clone 且補不到；"
+              "基準線之前、狀態檔 sha 之後的 wiki 新增可能漏撈（不會重撈）。"
+              "雲端請改用較深的 clone。")
     if sha == head:
         print("無新增（基準線已是 HEAD）")
         return 0
