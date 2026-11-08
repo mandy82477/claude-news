@@ -78,3 +78,5 @@
 ## 2026-10-24（刪除 topics/long-context-1m 衍生頁）
 
 使用者裁決刪除 wiki 的 topics/long-context-1m 頁（含 archive 子頁，最後版本在 git 歷史 e1c19cd7）。功能記者的 daily 負責頁面表移除該列、pages 規則檔移除「topics/long-context-1m」一節。1M 相關條目回到原本的路由：計費規則→`entities/pricing`、預設行為與已知問題→`entities/claude-code`；不再維護「1M 這個旋鈕本身」的專頁。
+
+**2026-11-08**（批次修補試點補觸發條件）：10-11 上線的 `.claude/reporter-rules/batch-edit.md` 只靠 `.claude/reporter-rules/features/daily.md` 第 3 行一句「批次修改讀」掛鉤，沒有可判斷的條件；10-11～11-07 共 26 筆功能記者執行紀錄（`data/ingest-metrics.jsonl`）無一筆讀過它，回合數 52.1→44.0 僅降 15.5%，降幅不是批次修補的功勞。主編裁定不撤回（試點根本沒測到）、補觸發條件後重觀察兩週。做法：門檻沿用 `.claude/reporter-rules/batch-edit.md`「什麼時候用」的 ≥ 3 處（數字依據：同期 26 筆中 Edit 次數 ≥ 3 的有 21 筆、≥ 8 的有 20 筆，分布兩極，門檻 3 與 5 之間沒有差別，取原文的 3），把「第一次寫入前盤點處數、≥ 3 處讀 batch-edit.md」放進角色檔「開始前必讀」第 5 項（每輪必經），`.claude/reporter-rules/features/daily.md` 第 3 行改指該項；量測端不用改，`ingest_metrics.py` 的 `rule_reads` 本來就會記 Read／Grep／Bash 讀規則檔。複查 2026-11-22：同算法看 11-09 起功能記者 `edits ≥ 3` 的執行有幾筆在 `rule_reads` 出現 `.claude/reporter-rules/batch-edit.md`，以及回合數對基線 52.1 的降幅。

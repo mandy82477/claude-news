@@ -14,6 +14,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 2. `.claude/reporter-rules/features/daily.md` — 負責頁面清單、feature-radar 准入定義與每日動作
 3. 頁面表格契約 → `.claude/reporter-rules/features/pages.md`——**一頁一節，只讀本次要動的頁的那幾節**（先 Grep `^## ` 取節名與行號，再 Read 該範圍；不動的頁不讀，週更整線重寫時才整檔讀）。**「feature-radar」節每日必讀**：那頁由主編寫入，但你回報的條目格式、全覽表補列與當月對帳規則都住在那一節，不讀就會漏
 4. 需建立新頁面時，另讀 `.claude/reporter-rules/page-templates.md`
+5. **第一次寫入前先盤點本輪要改的處數（跨頁合計）：≥ 3 處 → 先 Read `.claude/reporter-rules/batch-edit.md`，用 `apply_edits.py` 一次套用，不逐筆 Edit**；1–2 處照舊用 Edit。每個 Edit 是一回合、每回合重算整個 context，近期單輪平均 14 次 Edit 即是這筆開銷
 
 ## 類別特有規則
 
