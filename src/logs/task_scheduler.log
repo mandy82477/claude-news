@@ -1454,3 +1454,11 @@ ABORTED: Step 0b 冪等閘命中，news/2026-11-07.md 已存在（17 UTC 班已�
 [cloud daily-news-pipeline-cloud STARTED 2026-11-08 12:08:00 UTC]
 ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮資料（Step 1a 改為 cp src/gathered_archive/2026-11-08.json 失敗：GitHub Actions 尚未抓取 2026-11-08 原料，archive 無該檔；12 UTC 班屬常態延遲，留給 17/22 UTC 後續班次接手） [cloud daily-news-pipeline-cloud ABORTED 2026-11-08T12:08:37Z]
 [cloud daily-news-pipeline-cloud STARTED 2026-11-08T17:08:23Z]
+[週日 2026/11/08 17:08:23.00] === Agent pipeline start (2026-11-08) ===
+[週日 2026/11/08 17:16:00.00] Aggregator OK
+[週日 2026/11/08 18:05:00.00] Wiki ingest OK
+[週日 2026/11/08 18:08:00.00] Building web reader...
+[週日 2026/11/08 18:08:00.00] 測試失敗含未登記案例（test_base_sha_fallback_on_bad_state (tests.test_devpractice_diff.TestStateRoundtrip.test_base_sha_fallback_on_bad_state)）- web build 擋下（環境 shallow clone 導致，不在允許修復清單內）
+[週日 2026/11/08 18:08:30.00] build_web SKIPPED - pushing news/wiki only
+[週日 2026/11/08 18:10:54.00] Single push done (news + wiki, web build skipped)
+[週日 2026/11/08 18:10:54.00] === Pipeline complete (agent) ===
