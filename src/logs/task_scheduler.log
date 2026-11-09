@@ -1466,3 +1466,4 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-08T22:08:30Z] Step 0b 冪等閘：news/2026-11-08.md 已存在（排程模式，非 backfill），本班（22 UTC）中止，前序班次已完成全部 pipeline（見 commit 65e6933）
 [cloud watchdog-push STARTED 2026-11-09T01:31:27Z]
 [Monday 2026/11/09 01:31:42.00] Watchdog push SENT - 每日新聞：成果停在未併分支 cloud-daily-2026-11-08-unmerged，push 曾失敗。用 git 救回勿跑 /news-pipeline 重抓
+[cloud daily-news-pipeline-cloud STARTED 2026-11-09T12:13:21Z]
