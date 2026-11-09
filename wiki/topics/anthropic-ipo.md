@@ -3,8 +3,8 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/anthropic-business"
@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-08）
-> - **Yahoo Finance／BankInfoSecurity：投資人出現「延後上市」說法，估值恐探底近 $1 兆；24/7 Wall St. 將 $8,950 億採購承諾重新框定為潛在債務風險**
+> **最新動態**（2026-11-09）
+> - **Yahoo Finance：IPO 時程傳瞄準 11 月掛牌，買方端估值看法持續探底；同日 Morningstar 另篇估出 $1.7 兆，與探底中的市場預期落差擴大**
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -48,8 +48,8 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
-| 什麼時候上市 | 掛牌日與價格區間官方仍未公布；公開版 S-1 已提交、未生效，先前「10 月上市」「延後」都只是媒體說法 🔎 查無官方 ⟨Q-03⟩ | Anthropic 官方公告（2026-10-26）；FT、Forbes、Yahoo Finance（08-13～09-08） | 官方一手／一級媒體 |
-| 值多少 | 最後一次定價 $9,650 億；11-07 買方喊價探底至 $1.1～1.3 兆；11-08 另有投資人倡延後上市、估值恐探底近 $1 兆（細節見下方） | Series H 公告；Bloomberg（11-07）；Yahoo Finance（11-08） | 官方一手／一級媒體 |
+| 什麼時候上市 | 掛牌日與價格區間官方仍未公布；11-09 Yahoo Finance 稱時程傳瞄準 11 月掛牌，仍非官方確認 🔎 查無官方 ⟨Q-03⟩ | Anthropic 官方公告（2026-10-26）；Yahoo Finance（11-09）；FT、Forbes（08-13～09-08） | 官方一手／一級媒體 |
+| 值多少 | 最後一次定價 $9,650 億；11-08 投資人估值恐探底近 $1 兆；11-09 Morningstar 另估 $1.7 兆，與探底中的市場預期落差擴大（細節見下方） | Series H 公告；Yahoo Finance（11-08／11-09）；Morningstar（11-09） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
 | 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
 
@@ -170,6 +170,10 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-09 Yahoo Finance／Morningstar：時程傳瞄準 11 月掛牌，估值估算落差擴大**：
+  - Yahoo Finance：IPO 時程傳出瞄準 **11 月**掛牌，但買方端估值看法持續探底；非官方確認，僅標題與導言可用。
+  - Morningstar：同日另篇分析估出 **$1.7 兆**，與市場探底中的預期（約 $1～1.3 兆，見上表「值多少」）形成明顯落差；方法論未見完整轉載，與既有 10-28 Damodaran 估值分析框架是否相關未見報導。
+  - **CNBC：Fable 5.2／Mythos 5.2 發布被框進「Amodei 呼籲減速後首次發布旗艦模型、IPO 聲量升溫」敘事**：報導將模型發布時機與籌備中的 IPO 並置，未見新增估值或時程數字，屬敘事框架報導而非新資料點，呼應既有 10-07 Reuters 將 Haiku 5.5 發布框進「IPO 前擴充產品線」的同一手法（Google News/CNBC）。
 - **2026-11-08 BankInfoSecurity／Yahoo Finance／24/7 Wall St.：估值疑慮三路並發**：
   - Yahoo Finance：一位投資人主張延後 IPO，另一位稱估值恐探底至接近 $1 兆（原 $1.5 兆）；與既有 11-06/07 探底敘事方向一致，「延後」為本鏈條首次出現的具體說法。
   - BankInfoSecurity：稱此次 IPO 將是檢驗整個 AI 產業財務可行性的指標事件，具體論證未見報導，僅標題可用。

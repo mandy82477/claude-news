@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（現行 Opus；取代 [[entities/opus-5|Opus 5]] 成為各方案預設，Opus 5 官方已改列 Legacy）"
 domain: "🤖 模型"
-last_updated: "2026-11-08"
-last_news_update: "2026-11-03"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
-days_since_news: 4
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 36
 attribution_count: 38
-attribution_last: "2026-11-03"
+attribution_last: "2026-11-09"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,19 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **PCMag UK 實測遊戲複刻鬆綁後 Claude 的實際回應**（2026-11-08）
-> PCMag UK 實測一整個週末記錄 Claude 面對複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用。
+> **HN 彙整多篇「被削弱」回報**（2026-11-09）
+> Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報；彙整者未附官方說明或量化對照，仍屬主觀觀感累積。
 
 ---
 
 ## 現況
 
-**2026-11-07 最新**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時具體會怎麼回應、改做出什麼，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。報導僅標題可用，無法複述具體測試項目或結果。鬆綁機制與已知問題狀態見 [[entities/claude-code-known-issues]]。
+**2026-11-08**：Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報（HN 23 分，2 個來源）；彙整者本身未附官方說明或量化對照，仍屬主觀觀感累積，與既有「LiveNerf／降智觀感」同類回報並陳，細節見該節。
 
-**2026-11-02**：GitHub Issue #77136（跨版本重複修辭套路）回報範圍擴增至含 Opus 5.5，累計留言增至 140 則、反應增至 578 個；完整查核紀錄見 [[entities/opus-5]]「這些數字是誰量的」。同日社群對 Opus 5.5 是否「變笨」方向相反——一則稱說話像另一款模型、一則稱近乎完美——皆單一來源弱訊號，細節見「LiveNerf／降智觀感」。
+**2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時具體會怎麼回應、改做出什麼，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。報導僅標題可用，無法複述具體測試項目或結果。鬆綁機制與已知問題狀態見 [[entities/claude-code-known-issues]]。
 
 定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]，資安防護機制與安全爭論脈絡見 [[topics/ai-agent-safety]]。
 
@@ -115,6 +115,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **相反的正向回饋**（10-28）：r/ClaudeCode 週熱門貼文稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美；無具體案例或分數（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門）。
 
 兩則方向相反的貼文不能互相抵銷，也不構成能力變化的證據。同類主張的累計與自行量測方法見 [[topics/code-quality-decline]]。
+
+- **HN 彙整貼文「A flood of reports」**（11-08）：列出四則 Reddit 貼文稱近兩週「降規」回報增多，HN 23 分、2 個來源；彙整者未附測試方法或官方說明，不構成獨立複測，連結見下方「參考來源」（[Hacker News](https://news.ycombinator.com/item?id=50419019)，2026-11-08）。
 
 ## 熱度與試用價值
 
@@ -217,6 +219,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[news/2026-11-03]]
 - [Google News/PCMag UK：Claude Won't Clone Games Anymore. I Spent a Weekend Finding Out What It Will Do](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)（2026-11-07）
 - [[news/2026-11-08]]
+- [Hacker News：Tell HN: A flood of reports of Opus 5.5 being nerfed](https://news.ycombinator.com/item?id=50419019)（2026-11-08，23 分）
+- [Reddit r/ClaudeCode：Opus 5.5 in the past two weeks](https://www.reddit.com/r/ClaudeCode/comments/1xr4urz/opus_55_in_the_past_two_weeks/)（2026-11-08）
+- [Reddit r/ClaudeCode：The nerf is real, thank you u/wum1ha1nho](https://www.reddit.com/r/ClaudeCode/comments/1xr9x5y/the_nerf_is_real_thank_you_uwum1ha1nho/)（2026-11-08）
+- [Reddit r/ClaudeCode：Anthropic should offer a free reset and restore](https://www.reddit.com/r/ClaudeCode/comments/1xqvqip/anthropic_should_offer_a_free_reset_and_restore/)（2026-11-08）
+- [[news/2026-11-09]]
 
 ## 歷史記錄
 
@@ -226,6 +233,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-08 | HN《Tell HN: A flood of reports》彙整四則 Reddit 貼文稱近兩週「降規」回報增多（23 分，2 個來源），彙整者未附測試方法或官方說明，弱訊號 |
 | 2026-11-07 | PCMag UK 實測一週末記錄 Claude 面對遊戲複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用 |
 | 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號；另一則週熱門貼文調侃 Opus 5.5 撐過十月發布潮（0 留言，弱訊號） |
 
@@ -254,6 +262,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-11**
 
+- **2026-11-08**：HN《A flood of reports of Opus 5.5 being nerfed》彙整四則 Reddit 貼文稱降規回報增多（23 分，2 個來源）；未附測試方法或官方說明，非獨立複測，完整連結與並陳見「LiveNerf／降智觀感」節（[Hacker News](https://news.ycombinator.com/item?id=50419019)，2026-11-08）。
 - **2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時的具體回應，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲；報導僅標題可用，無法複述測試細節（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。鬆綁機制狀態見 [[entities/claude-code-known-issues]]。
 - **2026-11-02**：GitHub #77136 回報範圍擴增至含 Opus 5.5，留言增至 140 則、反應增至 578 個；完整沿革見 [[entities/opus-5]]；已於 10-03 關閉、留言持續累積，官方無回應（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。
   - 同日 r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與上述修辭套路回報接近但不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)，2026-11-02）

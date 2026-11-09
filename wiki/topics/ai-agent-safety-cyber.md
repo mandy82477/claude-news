@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-04）
-> **印度 CERT-In 取得 Claude Mythos 存取權測試資安漏洞**：同日專訪 CERT-In 主管談 AI agent 事故通報義務與提示注入風險歸屬，兩則均僅標題可用。
+> **最新動態**（2026-11-09）
+> **企業防護工具整合 Mythos**：IBM 宣布計畫導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試，兩案均停在「宣布計畫」階段。
 
 ---
 
@@ -55,6 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
+- **企業端整合（11-09）**：IBM Concert、Cisco AI Defense 宣布計畫導入 Mythos 做資安推理與紅隊測試，僅宣布階段。
 - **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程。
 - **Glasswing 時程**：Project Glasswing 的啟動與擴張時間表見 [[entities/mythos#Project Glasswing]]。
 - **你的選項**：個人研究者能申請的只有 CVP Defense；被誤擋可走官方申訴表單，並在 #84352 補上可重現的情境。
@@ -80,6 +81,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-09 | 防護 | IBM 宣布計畫將 Mythos 導入 Concert 平台做資安推理；Cisco AI Defense 同日宣布用於 AI 紅隊測試 | IBM／Cisco Blogs 官方公告，均為「宣布計畫」階段，未附上線時程 |
 | 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
 | 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
@@ -104,7 +106,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 09-15～09-22 | 摩擦 | 通過 CVP 的研究者與組織仍被標記或封鎖（Reddit 貼文；GitHub #84352〔199 則留言〕等四個 Issue） | Issue 為一手回報；官方未公開修復時程 |
 | 09-18～09-19 | 測試與濫用 | Hacktron AI 用 Opus 5 約 3 小時做出 ARM64 exploit（Opus 4.8 須先關 ASLR），並循 OpenAI 官方懸賞存取其內部程式庫 | WSJ、Guardian 等多家；「入侵」與「合格研究」兩種說法並陳 |
 | 09-14 | 濫用 | 官方威脅情報報告：ShinyHunters 關聯操作者用 TruffleHog 掃 180 萬 APK，Claude 協助 token 與匯出工具，帳號已封 | 官方一手；Rescana 的媒體轉述放大 Claude 的角色 |
-| 09-01 | 防護 | Enterprise Frontier Safeguards：監看攻擊性網路能力開發與憑證外洩跡象 | 官方一手 |
 
 ---
 
@@ -113,6 +114,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### IBM／Cisco Blogs：IBM Concert 導入 Claude Mythos 做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試（2026-11-09 新增）
+
+- **揭露來源**：Google News／IBM（11/09 18:13 UTC，2 個來源）；Google News／Cisco Blogs（11/09 20:04 UTC，2 個來源）
+- **核心主張（僅標題可用）**：IBM 宣布計畫把 Claude Mythos 的網攻推理能力導入自家 Concert 平台做資安推理；同日 Cisco AI Defense 宣布計畫將 Mythos 用於 AI 紅隊測試；兩篇報導皆停在「宣布計畫」階段，未附具體上線時程或技術細節
+- **性質判斷**：屬「防守方」陣營採用官方網攻能力做防禦／測試用途；模型層能力與 Mythos 5.2 發布本身見 [[entities/mythos]]，企業採用面見 [[topics/anthropic-business]]
+- **可信度評估**：兩則均為企業官方公告經 Google News 轉載，互動 0，僅標題層級可用，兩案均未附上線時程
+- ❓ **待查證**（標 2026-11-09｜查 Concert、Cisco AI Defense｜複 2026-11-23）｜**上線時程與技術整合細節**：兩家公告均只稱「計畫」，整合方式、上線時間與是否已有實際部署均未見報導
 
 #### Moneycontrol／MediaNama：CERT-In 取得 Claude Mythos 存取權測試資安漏洞，同日專訪談 AI agent 事故通報義務與提示注入歸責（2026-11-04 新增）
 

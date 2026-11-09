@@ -415,3 +415,4 @@
 {"id": "H-de35e7", "closed": "2026-11-08", "status": "done", "by": "功能", "result": "official-community-gap 評估不開新列"}
 {"id": "H-872580", "closed": "2026-11-08", "status": "done", "by": "商業", "result": "併入 entities/pricing.md"}
 {"id": "H-96b5cc", "closed": "2026-11-08", "status": "done", "by": "安全政策", "result": "寫入 topics/anthropic-government-policy「浮水印：法源、爭點與未解」節"}
+{"id": "H-6ef202", "opened": "2026-11-09", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "topics/community-tech-patterns 今日新增「多代理 PR Review」節點：Simon Willison 把 agent 開的 PR 說明收進 <details><summary> 折疊區塊維持可讀性；請評估是否構成產品化矩陣新增列候選", "status": "open"}

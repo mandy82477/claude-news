@@ -2,22 +2,18 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-06
+**最後更新：** 2026-11-09
 
-> **這禮拜動了什麼**（2026-10-22）
-> Claude Duet 開放研究預覽（美國 Pro／Max，Opus 5.5 驅動主動式 agent）；anthropic-sdk-typescript Vertex SDK 正式滿 1.0、含破壞性變更。v2.1.300–v2.1.304 補收：新增 `/auto-mode-setup`、`CLAUDE_CODE_AUTO_MODE_MODEL`、`/claude-api managed-agents-secure`、`/config` Idle compaction 開關與 Code Review 審查等級（Quick／Standard／Deep）；v2.1.300 擴充 mods hook 與 OTel 屬性。⚠️ 預設值改變：`claude -p` 在部分環境改從 `default` 權限模式起跑、fork subagent 在 `-p`／SDK／桌面版預設開啟、自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟。
+> **本日新增重大發布**（2026-11-09）
+> Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
 
 ---
 
-## ⭐ 現在值得跟的三件（最後輪替 2026-10-22）
+## ⭐ 現在值得跟的三件（最後輪替 2026-11-09）
 
-- **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**：v2.1.284 起取代 Sonnet 5，速度快逾三成、多數工作成本降最多三成。**怎麼開始：** `/model` 看現在跑的是哪一個，細節見 [[entities/sonnet-5-5]]。
-- **Claude Haiku 5.5 可選用**：Claude 5.5 家族第三款模型，官方稱成本比前代降約 75%，適合高流量成本敏感任務。**怎麼開始：** `/model claude-haiku-5-5`，細節見 [[entities/haiku-5-5]]。
-- **Claude Mods**：外掛可修改 Claude Code 更深層行為（v2.1.287 GA，v2.1.300 起新增 `agent.spawn`、`prompt.change` hook），以你的權限執行、不受沙箱隔離。**怎麼開始：** 裝前先跑 `claude plugin validate ./some-mod`，安全面細節見 [[entities/claude-mods]]。
+- **Claude Fable 5.2／Mythos 5.2 發布**：新旗艦雙發布，Fable 5.2 已自動成為預設模型（1M context、降價兩成）。**怎麼開始：** `/model claude-fable-5-2` 確認版本，細節見 [[entities/fable-5]]、[[entities/mythos]]。
 
-%% 10-08 換上 Claude Haiku 5.5（🔥🔥🔥🔥🔥，10-07 發布，在 30 天時間閘內達標，與 AGENTS.md 同熱度但發布日較新，依規則排序優先），擠下 Claude Mods（🔥🔥🔥🔥，10-01 發布，熱度較低）；Sonnet 5.5／AGENTS.md 熱度與試用價值本輪未變動，第一條固定為預設值改變型 Sonnet 5.5 %%
-%% 10-31：本週無新達標功能，維持上週推薦（最後輪替：2026-10-22）。候選池 ≤30 天內同時過熱度與試用價值門檻者只有 Haiku 5.5（已在榜）；Duet 熱度達標但試用價值仍為觀望；全覽表 Mods 的熱度與本節 10-22 備忘所記不一致，交功能記者核對 %%
-%% 10-22 重算：AGENTS.md（09-18 發布）距今 34 天，出 30 天時間閘，換上 Claude Mods（🔥🔥🔥🔥 ⚡，10-01 發布，與 Opus 5.5 同熱度但較新）；Sonnet 5.5（第一條，預設值改變型）、Haiku 5.5 不動。本次補收的 v2.1.300／302／304 條目全為 🔥（僅 GitHub Release 單一來源、無社群報導），皆未達 🔥🔥🔥🔥 門檻 %%
+%% 11-09 重算：候選池＝發布日距今 ≤30 天或本輪熱度/試用價值有變動者。原三件（Sonnet 5.5 09-28、Haiku 5.5 10-07、Mods 10-01）距今 33～42 天，均已出時間閘，且本輪熱度/試用價值皆未變動，不在候選池內；候選池內僅新發布的 Fable 5.2／Mythos 5.2（🔥🔥🔥🔥🔥、✅，今日發布）一項，故本節僅列 1 件，非湊滿三格。本節已連續多輪（10-22 之後）未依規則每次 ingest 重算，建議 /wiki-lint 5a 全面複查候選池是否有其他符合 ≤30 天門檻的既有條目被漏算 %%
 
 ---
 
@@ -29,6 +25,7 @@
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
+| v2.1.321 | Claude Fable 5.2 成為預設 Fable 模型（取代 Fable 5.1），1M context、每 Mtok 輸入 $8／輸出 $40 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認；v2.1.305–v2.1.320 區間尚未逐版核對 |
 | v2.1.319 | auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway 使用）：伺服器無法檢查的呼叫一律詢問或拒絕，不再退回內建傳統分類方式，無遷移期 | 破壞性變更 | 用 LLM gateway 或關閉遙測跑 Claude Code 的團隊，升級後遇到被詢問或拒絕的呼叫是預期行為，不是故障 |
 | v2.1.304 | 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟（gateway 回 400／422 會改不帶它重試）；壓縮後重送 skill 清單 | 預設值改變 | 走自家 gateway 的人：工具改為按需載入，若 gateway 不支援會多一次重試；可觀察請求量 |
 | v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
@@ -69,6 +66,24 @@
 ---
 
 ## 🆕 最新功能（2026-11）
+
+### Claude Fable 5.2 與 Claude Mythos 5.2 發布
+**發布：** 2026-11-09（Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型） | **狀態：** 正式發布
+
+**是什麼：** Anthropic 新一代旗艦模型雙發布：Fable 5.2（1M context、每 Mtok 輸入 $8／輸出 $40，較前代 Fable 5.1 降價兩成）與 Mythos 5.2（延續信任機構限定存取，企業資安場景為主）。
+
+**為何熱：** 官方部落格在 HN 討論達 614 分（本日最高分討論串），Reuters、Bloomberg、VentureBeat、The Verge、CNBC 等十餘家外媒同日報導；Artificial Analysis 獨立評測給 Fable 5.2 打出 65 分，為該站當前最高分。
+
+**現在要試嗎：** 已自動成為預設 Fable 模型，用 API 直接呼叫 Fable 系列的團隊不需任何操作即套用新定價與 context 上限；但 Reddit 已有多篇回報指出實際使用時頻繁觸發 context compacting，與官方宣稱的 1M context 有落差，長任務使用者先留意。
+
+**快速上手：**
+```
+/model claude-fable-5-2
+```
+
+**注意事項：** 知識截止日、退役時程與官方 migration 指南今日來源均未載明，待官方模型總覽頁查證；Mythos 5.2 非一般使用者可透過 `--model` 選用，延續信任機構限定存取。細節見 [[entities/fable-5]]、[[entities/mythos]]。
+
+---
 
 ### Personal Finance
 **發布：** 2026-11-05（Beta） | **狀態：** Beta
@@ -823,6 +838,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |
 | **v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`**（任何權限模式下拒絕寫入工作目錄外路徑） | 2026-10-30 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude apps gateway OIDC 自訂 id_token claim**（v2.1.312，`oidc.user_id_claim` 設定，非 `sub` 欄位可識別使用者，如 Entra ID `oid`） | 2026-10-27 | 🔥 | ⏳ 觀望 | 正式發布 |

@@ -4,8 +4,8 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
 days_since_news: 0
 parent: "entities/pricing"
@@ -33,11 +33,11 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-07）
-> - [官方 usage credits 說明頁](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 大改版：新增帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文，新規則待查證。
+> **最新動態**（2026-11-09）
+> - **Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。
 
 ---
 
@@ -45,6 +45,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 官方已確認、會改到帳單的，新的在上；每條的現行規則住母頁，這裡只記什麼時候變。⚠️＝不必你操作就會改到帳單。
 
+- **11-09｜Fable 5.2 發布，牌價 $8/$40（降兩成），Fast mode 擴及 Fable 5.2，Batch 示範模型換代**：見 [[entities/pricing#模型 API 定價現況]]
 - **11-07｜usage credits 說明頁大改版**：帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文，新規則待查證。見 [[entities/pricing#當前生效的計費規則]]
 - **11-02 查證｜方案改名與附帶 API credits**：$200 一檔現名 Ultra（每週 Pro 的 10 倍用量、驗證帳號無 5 小時上限）；Max／Ultra／Team 每月附 $100／$200／最多 $500 API credits，不付 Claude Code。見 [[entities/pricing#我的方案現在有什麼]]
 - **10-30｜Opus 4.8 fast mode 宣告淘汰，11-30 移除** ⚠️：之後請求直接回錯誤、不退回標準 Opus 4.8；同批 Opus 5.5 fast mode 不再限第一方 API。見 [[entities/pricing#乘數：會互相疊乘]]
@@ -64,6 +65,14 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 ---
 
 ## 定價與促銷（模型定價、方案設計）
+
+#### 2026-11-09：Claude Fable 5.2／Mythos 5.2 發布，牌價降兩成；Plans & Pricing 頁同步擴大 Fast mode、換代 Batch 示範模型
+
+- **官方一手來源**：Anthropic 發布 [Fable 5.2 與 Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)，牌價 **$8/$40 per Mtok**，較前代（$10/$50）降兩成；1M context，快取讀取沿用 ×0.025。
+- Claude Code v2.1.321 已將 Fable 5.2 設為預設模型（多家外媒同日報導，含 Reuters、Bloomberg）。
+- **Official Docs 同日異動**：[API 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)（新增 21 段）確認四版本皆為 ×0.025 快取倍率；[Plans & Pricing 頁](https://claude.com/pricing) Batch 示範模型換成 Fable 5.2、Sonnet 5（屬範例更新，非費率變動）。
+- Fast mode 加速方案適用範圍由僅三款 Opus 擴大至 Fable 5.2（2x 標準定價、約 2.5 倍速度）。
+- **完整定價表與推算見** [[entities/pricing#模型 API 定價現況]]、[[entities/pricing#一小時／一個月大概多少]]；模型能力面見 [[entities/fable-5]]。
 
 #### 2026-11-07：官方 usage credits 說明頁大改版——新增帳戶刪除不退額度、auto-reload 措辭改寫，移除日本等地區 6 個月到期條款原文
 

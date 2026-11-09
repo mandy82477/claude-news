@@ -32,12 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-08）
-> - **服務事故（已解決）**：Anthropic Status 記錄 Fable 5.1 效能降低（08:18–08:32 UTC，約 14 分鐘），影響 claude.ai、Claude API、Claude Code、Cowork（見 [[entities/claude-code-known-issues]]）。
-> - **文件異動**：Help Center release notes「Claude Code model configuration」段 11-07 疑似移除、11-08 又出現，另新增模型自動切換說明（提及 Fable 5／5.1），待查證（見 [[entities/claude-code-features]]）。
+> **最新動態**（2026-11-09）
+> - **版本更新**：v2.1.321 將 Claude Fable 5.2 設為預設 Fable 模型，並新增 11 個功能候選旗標與 remote 相關 `--settings <file>` 參數（見 [[entities/claude-code-releases]]、[[topics/claude-code-experimental]]）。
+> - **已知問題新增**：User Interrupt Hook 功能請求、AskUserQuestion 同輪文字不顯示的 UI 回報（見 [[entities/claude-code-known-issues]]）。
+> - **文件異動**：Help Center release notes 新增「調整模型／effort／thinking 設定」「Cowork 專案整理任務」段（見 [[entities/claude-code-features]]、[[entities/cowork]]）；桌面版文件新增 SSH/WSL 預覽安全開關。
 
 ---
 

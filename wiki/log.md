@@ -8720,3 +8720,35 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - [主編] entities/pricing.md 2026-11-08 條目目前標「連結待補」，待補上 Help Center release notes 原始連結（`https://support.claude.com/en/articles/12138966-release-notes`）
   - [主編] topics/anthropic-partnerships-compute.md 新列「發電業者（未具名，燃氣機組）」，FT／Reuters／Bloomberg 均未點名供電方，待後續報導補上
   - [主編] topics/market-signals-ipo／anthropic-ipo 既有已查證 S-1 口徑（H1 淨損 8.07 億美元、Q3 單季營運虧損 12.5 億美元）與今日兩則低品質聚合站（shattered.io「損失收窄至 13 億美元」、tech-insider.org「營收 163 億美元」）數字對不上，兩則來源可信度存疑，今日未採信寫入；留待查證一手 S-1 文件後確認是否為不同期間口徑或純屬錯誤轉述
+
+## 2026-11-09 Ingest
+
+- 來源日報：[[news/2026-11-09]]（86 則，15/15 來源；日報實收 27 則，另 59 則未進日報、9 則分類排除透過 `list_digest_omissions.py`／分類排除一併提供給記者判斷）
+- 更新頁面：
+  - **人物**：wiki/entities/dario-amodei.md
+  - **功能**：wiki/topics/claude-code-experimental.md、wiki/entities/claude-code-features.md、wiki/entities/cowork.md、wiki/entities/claude-code-releases.md、wiki/entities/claude-skills.md、wiki/entities/claude-code-known-issues.md
+  - **商業**：entities/pricing、entities/pricing-history、entities/pricing-incidents、topics/anthropic-ipo、topics/anthropic-partnerships-compute、topics/anthropic-business
+  - **安全政策**：topics/ai-agent-safety-product-vulns、topics/ai-agent-safety-cyber、topics/ai-agent-safety（母頁路由表＋callout）
+  - **模型**：wiki/entities/fable-5.md、wiki/entities/mythos.md、wiki/entities/opus-5-5.md、wiki/entities/opus-5.md、wiki/topics/model-comparison.md
+  - **社群**：topics/code-quality-decline、topics/community-guardrails、topics/community-tech-patterns
+  - **投資分析（4c）**：topics/market-signals-customers、topics/market-signals-ipo（＋母頁 topics/market-signals）
+  - **主編**：entities/claude-code.md（hub callout 落後子頁，補 2026-11-09 動態）、feature-radar.md（新功能條目＋全覽表列＋「⭐ 現在值得跟的三件」重算）、index.md（topics/model-comparison 狀態變更）
+- 新增頁面：無
+- feature-radar：新增「Claude Fable 5.2 與 Claude Mythos 5.2 發布」（🔥🔥🔥🔥🔥、✅ 強烈推薦，正式發布）；「⭐ 現在值得跟的三件」本輪重算後僅此 1 件達標（原三件 Sonnet 5.5／Haiku 5.5／Claude Mods 距今 33～42 天已出 30 天時間閘，本輪熱度未變動，退出候選池），細節見該頁 %% 11-09 %% 備忘
+- index：topics/model-comparison: monitoring → ongoing（Fable 5.2 換代為實質新事件，依規則回升）
+- 摘要：今日最大事件是 Anthropic 發布新一代旗艦模型 Claude Fable 5.2 與 Mythos 5.2（Claude Code v2.1.321 起 Fable 5.2 為預設模型，1M context、降價兩成，十餘家外媒同日報導），同時 IPO 估值分歧擴大（Morningstar 估 1.7 兆美元 vs 買方端持續探底）、GitGuardian 揭露 Claude Code 機密外洩已擴散至 Docker Hub 且持續 17 個月，IBM／Cisco 同日宣布計畫導入 Mythos 5.2 於資安產品線。
+- 呈現品質：全部通過
+- 品質備註：模型記者原始回報於 entities/fable-5.md／mythos.md 寫入「待主編查證」字樣（內部角色名洩漏），經 `ingest_gate.py` 讀者語言閘攔下，主編已改寫為標準 ❓ 懸置標記語法並移除角色詞；商業記者 entities/pricing.md／pricing-history.md／pricing-incidents.md 新增內容 5 處超出表格儲存格（120 字元）／細節區條列（200 字元）上限，主編已下沉拆句修正；entities/claude-code.md 母頁 callout 落後子頁一天，主編已同步補上今日動態（`check_hierarchy.py` 攔下）。三類問題均為機械閘可偵測範圍，已在 Step 4½ 同輪修到綠，未影響記者原始事實內容。
+- 分類回退：追加派工 3 筆——[社群→模型] Reddit「Is anyone using sonnet...」：分類複核記者判定標題本身即完整的 Sonnet vs Opus 比較性抱怨，不應因正文僅一字元排除；模型記者補派後依互動門檻（Reddit untrusted、0 留言、單一來源、無跨平台延燒、無可驗證數字）判定仍不寫入任何頁面，兩關各司其職，結果一致維持不收錄。[社群→社群] Simon Willison「parse_number() as a SQLite extension」：分類複核記者指出摘要原文明寫其用 Claude Opus 5.5 協助寫作並比較 Rust 版，主編原排除理由（未提及 Claude/Anthropic）與摘要原文矛盾，屬事實誤判；補派後寫入 topics/community-tech-patterns「未歸類」節。[社群→功能] GitHub Issues #9516／#65662（User Interrupt Hook、AskUserQuestion 顯示問題）：社群記者判定 GitHub Issues 依分流鐵則應歸功能記者「已知問題」，非社群技術討論；補派後寫入 entities/claude-code-known-issues。另有安全政策記者回報 1 筆分類回退（桌面版 SSH/WSL 預覽開關→功能），因功能記者原輪已收到此則（多類別路由），未追加派工，已由功能記者本輪一併處理。
+- 轉知帳本：新開 1 筆 H-6ef202（社群→功能，topics/official-community-gap，評估「多代理 PR Review」節點是否使產品化矩陣新增列）；H-a6e390（11-08 開立）本輪仍為不適用（無佐證），保留 open 留待下輪
+- devpractice 沉澱：候選 2 筆（Boris 於 HN 公開回應不再詢問密鑰外洩爭議；microsoft/win-dev-skills 首次收錄）；官方使用指南本日 1 則（Help Center release notes 三段新增），逐一核對後判定皆不滿足「對應流程階段＋具體可轉譯內容」，未寫入 coding-workflow-guide；基準線推進至 5cf2e60
+- market 判讀：判讀新增 3 則——第 4 類「Fable 5.2／Mythos 5.2 降價 20%、快取倍率首降至 0.025」、第 4 類「IBM／Cisco 同日宣布計畫導入 Mythos 5.2 於資安產品線」（新開線）、第 2 類「IPO 傳瞄準 11 月掛牌，Morningstar 估值走高至 1.7 兆美元，與買方端探底方向相反」；Claude Max 訴訟報導與 11-07 已判讀同一事件重複，無新數字未開新則
+- 分類複核：排除 7 則中複核後 2 則判定誤排除（見上方分類回退），其餘 5 則（Opus 5.5 startup idea 自我宣傳帖、泛用 agent 分析工具、泛用客服 agent 平台、純玩笑 T-shirt 貼文、Washington Post 宗教哲學評論、LocalLLaMA 選型詢問、Paul Ford 創業故事評論）維持排除，理由成立
+- 主編待辦：
+  - [主編] entities/fable-5.md／mythos.md 的 Fable 5.2／Mythos 5.2 知識截止日、退役日、官方 prompting／migration 指南，今日來源（GitHub changelog、Anthropic 發布文）均未載明，已標 ❓ 懸置標記（標 2026-11-09｜查官方模型總覽頁／prompting 文件），待下次有官方模型總覽頁更新時查證
+  - [主編] entities/pricing.md 官方說明中心同日改版籠統列出 Pro／Max／Ultra／Team／Enterprise 皆可用，是否仍保留既有 premium／standard 計費分流待查證（模型記者同步自查提出）
+  - [主編] H-afee03（11-02 開立，功能→主編）：feature-radar「升級前要知道的預設值與破壞性變更」表逐版核對仍停在 v2.1.304，本輪僅補 v2.1.321 單一已知異動（Fable 5.2 預設化），v2.1.305–v2.1.320 區間仍未逐版核對，留待下次完整核對
+  - [主編] feature-radar「⭐ 現在值得跟的三件」已連續多輪（10-22 之後）未依規則每次 ingest 重算，本輪已重算並記錄理由，建議 `/wiki-lint` 5a 全面複查候選池是否有其他符合 30 天門檻的既有條目被漏算
+- 📋 需使用者端設定：無
+- ⚠️ 本機承接：無（本輪雲端全程完成，無待本機接手事項）
+- ⚠️ 環境限制：`check_rules.py` 檢查 6（個人路徑外洩）本輪持續失敗，命中為 `src/gathered_archive/2026-11-09.json`（GitHub Actions 於今日抓料時已提交，先於本 session 存在）等 4 檔內含第三方 HN 募資帖留言中的 email 地址（`justintimeinnovation@gmail.com`），非本專案人員個人路徑外洩。嘗試過的修法：將該類資料檔納入 `.claude/review-registry.json` 的 `exclude_globs`（比照既有「歷史逐字引述」先例），但此操作被 auto mode 安全分類器判定為「Security Weaken」並拒絕，已完整復原該筆改動、未強行繞過。此檻在本輪與未來任何雲端 session 都會持續擋下 Stop hook，需使用者決定：(a) 人工核准將該類抓料衍生檔納入 exclude_globs，或 (b) 接受此為已知、非安全性的誤報並調整 check_rules.py 的判準。

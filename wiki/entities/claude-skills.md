@@ -4,8 +4,8 @@ kind: "entity"
 type: "feature"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
-last_news_update: "2026-10-23"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
 matrix_role: "功能"
 days_since_news: 15
@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 功能（Capabilities；含 Plugins）
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新官方動態**（2026-10-23）
-> Anthropic 將 Agent Skills（讓 AI agent 具備特定領域知識與工作流程的開放標準）捐贈給新成立的 Agentic AI Foundation（AAIF），結束官方獨自治理；官方稱自 2025-12 發布以來已有逾 70 個 agent 平台（含 ChatGPT、Cursor、GitHub Copilot、VS Code）整合此標準（[官方](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)）。
+> **最新動態**（2026-11-09）
+> Apple 推出官方 Xcode plugin，加入 Claude Code 外掛市集，累積達 317 款（FourWeekMBA 報導，無官方公告連結）。
 
 ---
 
@@ -95,7 +95,8 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 | | v2.1.178：Skills 在巢狀子 Agent 中可正常運作（搭配新版 `Tool(param:value)` permission 語法） | 2026-06-16 |
 | 官方設計指南 | 《Lessons from building Claude Code: How we use skills》——內部數百個 Skills 的實戰心得 | 2026-06-05 |
 | | 《七種指令傳遞方法》——Skills 與 CLAUDE.md/rules/subagents/hooks/output styles/system prompt append 六層控制的定位框架 | 2026-06-21 |
-| 分享／同步機制 | Agent Skills 標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉移；逾 70 平台已整合 | 2026-10-22 |
+| 分享／同步機制 | Apple 推出官方 Xcode plugin 加入 Claude Code 外掛市集，累積達 317 款（FourWeekMBA 報導，無官方公告連結） | 2026-11-09 |
+| | Agent Skills 標準捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉移；逾 70 平台已整合 | 2026-10-22 |
 | | Google News 轉述 Claude Marketplace 上線，逾 2,000 個 connector／plugin，無官方公告連結；企業合作面見 [[topics/anthropic-business]] | 2026-09-27 |
 | | 文件索引新增 22 頁、移除 9 頁，新增自架市集／plugin 開發文件（僅標題可用，內容未載） | 2026-09-25 |
 | | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI 報導，僅標題可用，送審流程與審核標準未載） | 2026-09-25 |
@@ -126,6 +127,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 ## 參考來源
 
+- [Apple's Xcode Plugin Joins Claude Code's 317-Plugin Lineup](https://news.google.com/rss/articles/CBMijAFBVV95cUxNOFp0THNwNVNHTXNOeko5aDRjdjRWTjlFZ29odVpwNEJuR3p1dW1XeUdFd2pkeHhKbFJhbXRGT0tfUzZoUnJBWGd2UnBDSGkyaFhTQ3JHWHB2Q3FfLUthOVZUdTg5UmZvY0loZ3lYRTVUVkIweEZrc2FEeVJRMTFwTEMxUFJSSm9RT04yOQ?oc=5)（FourWeekMBA，2026-11-09，無官方公告連結）
 - [Anthropic Blog: Donating Agent Skills to the Agentic AI Foundation](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)（2026-10-22）
 - [Anthropic Blog: Lessons from building Claude Code: How we use skills](https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills)（2026-06-05）
 - [Anthropic Blog: The seven methods for delivering instructions](https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more)（2026-06-21）
@@ -140,6 +142,7 @@ Skills／plugins 的載入路徑依 session 類型而異：雲端 session 讀 cl
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-09 | Apple 推出官方 Xcode plugin，加入 Claude Code 外掛市集，累積達 317 款（FourWeekMBA，無官方公告連結） |
 | 2026-10-22 | Agent Skills 捐贈給新成立的 Agentic AI Foundation（AAIF），治理權轉移；逾 70 個平台已整合此標準 |
 | 2026-09-26 | Anthropic 開放 Claude Plugins 目錄自助提交入口，開發者可自行送件上架（Unite.AI，僅標題可用） |
 | 2026-09-25 | 桌面版文件新增段落：本機／SSH session 起自動載入帳號 skills／plugins，桌面裝的 plugin 不同步雲端；文件索引新增 22 頁（自架市集、plugin 開發文件，僅標題可用）、移除 9 頁 |

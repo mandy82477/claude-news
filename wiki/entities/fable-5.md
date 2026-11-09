@@ -2,12 +2,12 @@
 page: "entities/fable-5"
 kind: "entity"
 type: "model"
-status: "active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）"
+status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 是否正式改列 Legacy 待官方模型總覽頁查證；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-10-25"
-last_news_update: "2026-10-25"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
-days_since_news: 13
+days_since_news: 0
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
@@ -24,26 +24,26 @@ staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
-# Claude Fable 5 與 5.1
+# Claude Fable 5、5.1 與 5.2
 
-Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現行的 Fable 5.1。
+Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fable 5.1，11-09 再換代為現行的 Fable 5.2。
 
 **類型：** model
-**狀態：** active（現行世代為 Fable 5.1；Fable 5 為 Legacy，官方載明退役不早於 2027-06-09）
+**狀態：** active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 是否正式改列 Legacy 待官方模型總覽頁查證；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）
 **領域：** 🤖 模型
-**別名：** Fable 5, Fable 5.1, Claude Fable 5.1
+**別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-10-25
-**最後新聞更新：** 2026-10-25
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **穩定性事件**（2026-10-25）
-> Fable 5.1 一度錯誤率升高（08:08–08:29 UTC，約 21 分鐘），08:49 UTC 已解決；不影響能力或存取政策。
+> **Fable 5.2 發布**（2026-11-09）
+> Claude Code v2.1.321 起 Fable 5.2 為預設 Fable；1M context、$8/$40（降 20%），Artificial Analysis 評 65 分為該站最高。
 
 ---
 
 ## 現況
 
-現行世代是 **Fable 5.1**（2026-09-01 GA）；**Fable 5 仍可呼叫但已列為 Legacy**，官方建議遷移。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
+**2026-11-09 最新**：Anthropic 發布 **Fable 5.2**，取代 5.1 成為現行旗艦；Claude Code v2.1.321 起設為預設 Fable 模型，牌價降至 $8/$40（較 5.1 的 $10/$50 降 20%），快取讀取 $0.20/Mtok（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)；[GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)，2026-11-09）。獨立評測站 Artificial Analysis 給 Fable 5.2 打出 65 分，為該站目前所有模型最高分（2026-11-09）。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
 
 出口管制已於 2026-06-30 解除、07-01 起全球恢復存取，現在不影響你拿不拿得到；政府那條線之後怎麼走見 [[topics/anthropic-government-policy]]。方案內含什麼、超出怎麼算見 [[entities/pricing]]。
 
@@ -64,32 +64,34 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 
 ## 你現在拿到的是什麼
 
-> 本表比的是 Fable 這一代（5 vs 5.1）；Opus 這一代見 [[entities/opus-5-5]] 同名節。資料截至 2026-09-07（官方模型頁與說明中心查證）。一格一個你會問的問題，兩欄是兩代的答案。
+> 本表比的是 Fable 這一代（5.1 vs 5.2）；Fable 5 已退出對照，結論降為表下一句。Opus 這一代見 [[entities/opus-5-5]] 同名節。資料截至 2026-11-09（GitHub `v2.1.321` changelog、Anthropic 發布文）；**知識截止與退役日官方未在今日來源載明，見下表懸置標記**。一格一個你會問的問題，兩欄是兩代的答案。
 
-| 這一格 | Fable 5（Legacy） | Fable 5.1（現行） | 官方出處（查證日） |
+| 這一格 | Fable 5.1（Legacy） | Fable 5.2（現行） | 官方出處（查證日） |
 |---|---|---|---|
-| 現在誰是預設 | 否 | 是——Claude Code v2.1.257 起 Fable 預設即 5.1 | [[feature-radar]] 版本階梯（2026-09-04）|
-| 牌價（輸入／輸出，每百萬 token）| $10 ／ $50 | $10 ／ $50（同價）| 官方模型總覽頁（2026-09-07）|
-| 快取讀取 | 基礎輸入價 ×0.1（$1）| ×0.025（$0.25）——便宜 75% | 官方定價頁（2026-09-07）|
-| 知識截止 | 2026-01 | 2026-06 | 官方模型總覽頁（2026-09-07）|
-| 會不會停掉 | Legacy，退役**不早於 2027-06-09**，官方建議遷移 5.1 | 退役不早於 2027-09-01 | 官方模型總覽頁（2026-09-07）|
-| 官方推薦拿它做什麼 | 同右（官方已改推 5.1）| 高要求推理與長期 agentic 工作；Opus 5 調高 effort 仍不夠時 | 官方選型文件（2026-09-07）|
-| 我的方案能不能用 | Max 與 Team premium：週用量 50% 內免費；Pro 與 standard：走 usage credits | 同左，兩代同一套規則 | 官方說明中心（2026-09-07）→ [[entities/pricing]] |
+| 現在誰是預設 | 否，Claude Code v2.1.321 起改預設 5.2 | 是——Claude Code v2.1.321 起 Fable 預設即 5.2 | [GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)（2026-11-09）|
+| 牌價（輸入／輸出，每百萬 token）| $10 ／ $50 | $8 ／ $40（降 20%）| GitHub `v2.1.321` changelog（2026-11-09）|
+| 快取讀取 | 基礎輸入價 ×0.025（$0.25）| $0.20／Mtok（＝基礎輸入價 2.5%，同比例延續 5.1；換算非官方原文用語）| GitHub `v2.1.321` changelog（2026-11-09）|
+| 知識截止 | 2026-06 | ❓ 待查證（標 2026-11-09｜查官方模型總覽頁）| 今日來源未載 |
+| 會不會停掉 | 退役不早於 2027-09-01（沿用既有查證值，待官方新公告更新 Legacy 退役日） | ❓ 待查證（標 2026-11-09｜查官方模型總覽頁）| 今日來源未載 |
+| 官方推薦拿它做什麼 | 同右（官方已改推 5.2）| 官方稱設計用於應對最艱鉅技術挑戰，coding／reasoning／vision 均有改善；prerelease 期間協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題 | [Anthropic 官方發布文](https://www.anthropic.com/claude-fable-and-mythos-5-2)（2026-11-09）|
+| 我的方案能不能用 | 同右，Pro／Max／Ultra／Team／Enterprise 皆列入付費方案範圍 | Pro／Max／Ultra／Team／Enterprise 全數列入付費方案範圍；API 走標準費率 | [官方說明中心](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)（2026-11-09）→ [[entities/pricing]] |
 
 **表下細節**
 
-- **兩代共用一套方案規則**：Pro 拿得到 5 與 5.1，是走 usage credits 付費。2026-07-19 到期的是**限時免費促銷**，只適用 Fable 5；上表「我的方案能不能用」那列是促銷結束後仍在的**常態規則**，兩者是兩件事，不互斥。
-- **Context 與輸出長度兩代相同**：1,000,000 token context、128,000 token 最大輸出。1M 的計費規則見 [[entities/pricing]]。
-- **5.1 新增反萃取（anti-distillation）機制**，防止他人萃取權重或行為訓練競品（官方 2026-09-01 公告）。
+- **快取讀取換算比例與 5.1 一致**：$0.20÷$8＝0.025，與 5.1 的 ×0.025 倍率相同（本頁自行換算，非官方原文直接給出比例）。
+- **說明中心本次改版新列 Ultra 方案**：此前「我的方案能不能用」只列 Max／Team premium 與 Pro／standard 的分流規則，今日版本改為籠統列出「Pro／Max／Ultra／Team／Enterprise 皆可用」，是否仍保留 premium／standard 計費分流待 [[entities/pricing]] 查證，本頁不重複計費細節。
+- **Context 與輸出長度**：GitHub changelog 未提及是否變動，1M context 沿用前代（128K 最大輸出官方未在今日來源重申，待查證）。
+- **Fable 5（已退出本表）**：仍為 Legacy，退役不早於 2027-06-09，見「爭議」與「歷史記錄」。
+- **5.1 新增反萃取（anti-distillation）機制**，防止他人萃取權重或行為訓練競品（官方 2026-09-01 公告）；5.2 是否延續同機制，官方未在今日來源重申。
 
 ## 熱度與試用價值
 
 | 項目 | 評分 |
 |------|------|
-| 社群熱度 | 🔥🔥🔥🔥🔥 |
-| 試用價值 | ⚡ 有條件推薦（2026-09-07 判定）|
-| 最適合 | 跨多天的長期 agentic 工作流、多步驟深推理、安全漏洞分析 |
-| 不適合 | 日常短問答（成本過高）；分散式訓練基建、加速器設計這類前沿 LLM 開發（分類器會擋，見下一節）|
+| 社群熱度 | 🔥🔥🔥🔥🔥（HN 614 分，發布日，2 個來源；2026-11-09）|
+| 試用價值 | ⏳ 剛發布、資料不足（2026-11-09 判定）；Artificial Analysis 評 65 分為該站現行最高（2026-11-09） |
+| 最適合 | 待社群累積實測後補；官方定位同前代（跨多天的長期 agentic 工作流、多步驟深推理、安全漏洞分析）|
+| 不適合 | 待補；分散式訓練基建、加速器設計這類前沿 LLM 開發（分類器是否延續同範圍待官方查證，見下一節）|
 
 > 本表跟著 [[feature-radar]] 全覽表的現行世代那一列走；最新熱度以 [[feature-radar]] 為準。
 
@@ -117,6 +119,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - **「靜默」在本頁有兩個不同意思，別搞混**：護欄被觸發時**你會收到通知**（上表機制）；下方「歷史記錄」與「爭議」節提到的「靜默降級至 Opus 4.8」（GitHub #79337）指的是另一件事——一起計費/存取層的誤判缺陷，不是護欄機制本身不通知你。
 
 ## 跟它怎麼說話
+
+❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Fable 5.2 版本）｜**官方 Fable 5.2 專屬 prompting 指南尚未發布**：今日來源（GitHub changelog、Anthropic 發布文）未帶 prompting／migration 內容，下列仍為 Fable 5.1 版本，5.2 是否沿用或有新差異未經確認。
 
 官方 prompting 指南：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)（同一份涵蓋 [[entities/mythos]] 的 Mythos 5.1；查證 2026-10-03）。
 
@@ -210,10 +214,29 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為現
 - [[news/2026-09-17]]
 - [Google News/TestingCatalog AI News：Anthropic prepares to release Claude Fable 5.5 next week](https://news.google.com/rss/articles/CBMilAFBVV95cUxNTTdoZzVvZTJnVmNMLXF3cWFycWlnbHNPQ1VEamVCaHZqY1dmVXl2M182ZkRnNktmU0QxN0UxMDEtT2ZZbENuMTZqSkk3NmtSdHF5WWd0MEVZX1dVOERONk52XzhqdU5rOW93dGZITHhLU3ZRdGRxNGFRaU1GMHN0LU03T1dQUk00eVdfWnoweFQ4blR2?oc=5)（2026-10-17）
 - [[news/2026-10-18]]
+- [Anthropic：Claude Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)（2026-11-09）
+- [[anthropics/claude-code] v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)（2026-11-09）
+- [Official Docs：Claude Fable 5 on your plan（改版列入 Ultra 方案）](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)（2026-11-09 查證）
+- [Artificial Analysis：Claude Fable 5.2 模型頁（評分 65）](https://artificialanalysis.ai/models/claude-fable-5-2)（2026-11-09）
+- [Reddit r/ClaudeCode：Fable 5.2 200K context limit is shit. Compacting every few minutes](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)（2026-11-09）
+- [Reddit r/ClaudeCode：Fable 5.2 is compacting](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)（2026-11-09）
+- [[news/2026-11-09]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
+
+### 2026-11
+
+#### 2026-11-09
+**Claude Fable 5.2 與 Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable**：
+- Anthropic 官方發布文稱兩款模型在 coding、reasoning、vision 均有改善，prerelease 測試中協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)，2026-11-09）
+- 牌價降至 $8／$40 每 Mtok（較 5.1 的 $10／$50 降 20%），快取讀取 $0.20／Mtok（＝基礎輸入價 2.5%，換算同 5.1 比例）；完整兩代對照見上方「你現在拿到的是什麼」（[GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)，2026-11-09）
+- 官方說明中心同日改版〈Claude Fable 5 on your plan〉，籠統列出 Pro／Max／Ultra／Team／Enterprise 皆可用（新增 Ultra 一詞），是否仍保留既有 premium／standard 計費分流待 [[entities/pricing]] 查證（[Official Docs](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)，2026-11-09）
+- 獨立評測站 Artificial Analysis 給 Fable 5.2 打 65 分，為該站現行最高分，HN 討論（15 分）普遍正面（[Artificial Analysis](https://artificialanalysis.ai/models/claude-fable-5-2)，2026-11-09）
+- **與官方 1M context 落差的社群回報（弱訊號，0 留言）**：Reddit 兩則貼文稱 5.2 頻繁觸發 compacting，其一稱幾分鐘一次、尚未寫程式碼已壓縮 6 次；標題稱「200K context limit」，未附測試方法，無官方回應（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)，2026-11-09）
+- SDK 支援：`anthropic-sdk-typescript` v1.7.0、`anthropic-sdk-python` v2.7.0 同日新增 `claude-fable-5-2` 識別碼（[GitHub](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)，2026-11-09）
+- 多家外媒（Reuters、Bloomberg、VentureBeat、The Verge、MacRumors、AWS 等）同日跟進報導，多聚焦 IPO 前市場脈絡與定價戰，商業面見 [[entities/pricing]]、[[topics/anthropic-ipo]]；本頁僅記模型能力與規格面
 
 ### 2026-10
 

@@ -31,14 +31,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
-**最後更新：** 2026-11-02
-**最後新聞更新：** 2026-10-29
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-10-29）
+> **最新判讀**（2026-11-09）
+> - **Fable 5.2／Mythos 5.2 同步降價 20%，快取讀取倍率首降至 0.025 倍**：首次觸及 Fable 系列牌價與快取倍率結構本身。
+> - **IBM、Cisco 同日宣布計畫將 Mythos 5.2 導入資安產品線**：IBM Concert 做資安推理、Cisco AI Defense 做紅隊測試，均為宣布計畫階段。
+>
+> 前一輪（2026-10-29）：
 > - **Schwab 給新簽 Claude Enterprise 的顧問最高 4,800 美元額度抵席位費（至 11-30）**：Citywire 原寫成 Anthropic 給，[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)（11-08 查證）寫明出錢的是 Schwab；20 席是 Anthropic 企業方案的最低席位、不是 Schwab 追加的門檻。原報導：[Citywire](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5) 報導。
 > - **GitHub Copilot Fusion 宣稱以一半 API 成本勝過 Claude Code**：基準測試方法未公開。
 
@@ -55,6 +59,35 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 近期判讀
+
+### 💰 Fable 5.2／Mythos 5.2 發布同步降價：Fable 牌價降 20%、快取讀取倍率首次低於標準值（2026-11-09）
+
+**一眼**：📈 正面（數字型，動到 API 定價與快取成本結構）｜誰有感：無（未上市）｜硬度：官方一手（Anthropic Blog／Platform Docs／Help Center 同日更新）｜線：定價改版 ▸ 第 7 則
+
+**為什麼這樣判**：新資訊是 Anthropic 發布 Fable 5.2、Mythos 5.2 同時下修 Fable 系列牌價——Fable 5.2 輸入／輸出為 $8／$40 per Mtok，較前代 Fable 5.1 的 $10／$50 降約 20%，快取讀取倍率首次降到基礎輸入價的 0.025 倍（多數模型維持 0.1 倍）；此前「定價改版」線六則記錄的都是 Opus／Haiku／Sonnet 系列調價或計費結構異動，本則首次觸及 Fable 旗艦系列牌價與快取倍率結構本身。判正面是因為降價與能力升級同日發布（獨立評測站 Artificial Analysis 當日給 Fable 5.2 打出 65 分、為該站目前最高分），若單位成本降幅不小於售價降幅，代表這是在升級的同時改善毛利率；但快取倍率下修會直接壓低重度 prompt caching 客戶的單位營收，實際對整體 ARPU 的淨效果仍需看客群使用結構。事實見 [[entities/pricing]]、[[entities/fable-5]]。
+
+**下一個催化劑**：下一份財報或 S-1 是否拆分 Fable 系列營收與毛利率變化；0.025 倍快取讀取對重度快取客戶帳單的實際影響是否有數字佐證。
+
+**你的選項**：(a) 什麼都不做，整體對 ARPU 的淨效果需看客群使用結構，現在無法判斷；(b) 重度使用 Fable 系列並仰賴 prompt caching 的開發者，可比對自己下個計費週期的實際帳單，核對 0.025 倍快取讀取是否確實反映。
+
+**一課｜降價伴隨能力升級要拆開看**
+- 概念：同一次發布同時宣布「能力變強」與「價格更低」時，兩者對毛利率的意涵需要分開拆解，不能直接相加。
+- 機制：若單位成本降幅不小於售價降幅，毛利率不會被侵蝕；若只是行銷式同時宣布兩件好消息，成本面未必真的改善。
+- 下次怎麼認：看到「這次更強、還更便宜」的發布，先找有沒有單獨揭露成本面降幅的數字，沒有就只能看售價單邊。
+
+### 💰 IBM、Cisco 同日宣布計畫將 Mythos 5.2 導入資安產品線（2026-11-09）
+
+**一眼**：⚖️ 兩面（敘事型，未見合約金額，動到具名資安廠商產品整合範圍）｜誰有感：IBM（NYSE: IBM，新增標的）、Cisco（NASDAQ: CSCO，新增標的）｜硬度：官方一手（IBM、Cisco Blogs 同日公告）｜線：資安工具整合 Mythos ▸ 開線
+
+**為什麼這樣判**：新資訊是 Mythos 5.2 發布當天就有兩家具名資安大廠公開表態納入——IBM 宣布計畫將其導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布將用於 AI 紅隊測試；此前本頁與 [[topics/enterprise-tool-tracker]] 記錄的企業採用多為一般員工端使用或通路採購，未見資安廠商把 Mythos 嵌進自家安全產品線這種整合形式。判兩面是因為兩家具名、且同日表態，顯示 Mythos 系列在資安推理這個利基場景有具體產品整合在推進，是企業採用面的正向訊號；但兩篇報導都還停在「宣布計畫」階段，未附具體上線時程、合約金額或整合深度，也未說明是否為付費採購或技術夥伴關係。事實見 [[topics/enterprise-tool-tracker]]。
+
+**下一個催化劑**：IBM Concert 與 Cisco AI Defense 的 Mythos 整合是否正式上線並公布時程；是否有具體合約金額或採購形式（API 授權、嵌入式部署）被揭露。
+
+**你的選項**：(a) 什麼都不做，兩案均為宣布計畫階段，上線時程與金額未定；(b) 想追蹤企業採用線的讀者，把「IBM Concert」「Cisco AI Defense」這兩個產品名記下來，留意後續是否有具體上線公告。
+
+**一課｜複習：宣布計畫與已上線部署是兩個不同階段**
+- 這一則跟 10-15 美國參議院那則不一樣在哪：那次是單一政府機構「準備讓幕僚使用」內部工具，這次是兩家具名資安大廠同日各自宣布把 Mythos 嵌入自己對外銷售的產品線。
+- 下次怎麼認：看到「計畫導入」「將用於」這類措辭卻沒有「已上線」字樣，先歸類為計畫宣布階段，不論是內部工具還是對外產品。
 
 ### 💰 Citywire：Anthropic 向 Claude for Financial Advisors 用戶提供最高 4,800 美元額度抵用（2026-10-29）
 
@@ -441,6 +474,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-11-09 | 定價改版 | 本體不可買；間接曝險 📈（第 7 則） | 財報／S-1 是否拆分 Fable 系列營收與毛利率變化、快取倍率對帳單的實際影響是否有數字佐證（11-23） | ⏳ | ⏳ |
+| 2026-11-09 | 資安工具整合 Mythos | IBM／CSCO ⚖️（開線） | IBM Concert、Cisco AI Defense 的 Mythos 整合是否正式上線並公布時程或合約金額（11-23） | ⏳ | ⏳ |
 | 2026-10-29 | Financial Advisors 使用額度優惠 | SCHW ⚖️（開線） | 額度補貼適用範圍與期限是否經官方說明（11-12） | ⏳ | ⏳ |
 | 2026-10-29 | Copilot 性價比對標 Claude Code | 本體不可買；MSFT 間接關聯 📉（開線） | 基準測試方法論是否公開或遭社群複現反駁（11-12） | ⏳ | ⏳ |
 | 2026-10-28 | 生技策略併購 | 本體不可買；間接曝險 ⚖️（開線） | 收購金額與條款披露、創辦人身分公開（11-11） | ⏳ | ⏳ |
@@ -477,6 +512,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、快取讀取｜複 2026-11-23）｜**Fable 5.2 快取讀取倍率降至 0.025 倍對重度快取客戶帳單的實際影響是否有數字佐證**：官方文件僅載新倍率，財報或 S-1 是否拆分 Fable 系列營收與毛利率變化均未見報導。
+- ❓ **待查證**（標 2026-11-09｜查 IBM Concert、Cisco AI Defense｜複 2026-11-23）｜**IBM Concert、Cisco AI Defense 導入 Mythos 5.2 是否正式上線並公布時程或合約金額**：IBM、Cisco Blogs 報導僅標題可用，上線時程、整合深度與是否為付費採購均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 4,800、Financial Advisors｜複 2026-11-12）｜**Anthropic 向 Claude for Financial Advisors 用戶提供 4,800 美元額度抵用的適用範圍與期限是否經官方說明**：Citywire 報導僅標題可用，是否限特定通路、補貼期限與是否與 Schwab 門檻收緊同屬一組措施均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot｜複 2026-11-12）｜**GitHub Copilot Fusion「以一半 API 成本勝過 Claude Code」的基準測試方法論是否公開或遭社群複現反駁**：The New Stack 報導僅標題可用，測試範圍與第三方獨立複現均未見報導。
 - ❓ **待查證**（標 2026-10-28｜查 Mithril Medicine、匿名創辦人｜複 2026-11-11）｜**Anthropic 收購 Mithril Medicine 的金額與條款是否經官方揭露，創辦人真實身分是否公開**：R&D World、Endpoints News 報導僅標題可用，收購價、條款與創辦人身分均未見揭露。

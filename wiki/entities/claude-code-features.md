@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-08）
-> Help Center release notes「Claude Code model configuration」段 11-07 疑似移除、11-08 又出現，像是搬移非功能變動，待查證（見核心功能）。
+> **最新動態**（2026-11-09）
+> 桌面版文件新增 SSH／WSL session 內預覽 HTML 檔案（session 內不執行腳本）；Help Center「模型設定」段落持續改動，待查證（見核心功能、桌面版文件時序）。
 
 ---
 
@@ -64,13 +64,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
-- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-08）｜**「Claude Code model configuration」段復現**：11-07 疑似移除、11-08 又新增；同時新增模型切換說明、移除舊「調整模型設定」段，疑搬移非功能變動。
+- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-08｜訊 2026-11-09）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
 
 ### 桌面版功能地圖
 
 > 把下方「桌面版文件時序」的桌面版文件（`desktop.md`）異動依主題歸群；每條只收時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
 
 **SSH 遠端與離線續跑**
+- 11-09：新增 session 內預覽 HTML 檔案——session 內直接預覽不執行腳本，匯出後在本機瀏覽器開啟才會執行；組織可關閉此預覽的腳本執行。
 - 10-08：可從連結開啟 SSH session，分「已有連線」「新連線」。
 - 10-14：SSH 遠端工作流程擴充——連線需求、macOS／Linux 沿用既有 SSH 設定、支援 Windows 遠端機器；Desktop 離線時任務在背景續跑，連回後處理期間送達的請求。
 - 10-15：新增 SSH／TLS 代理疑難排解（`HTTPS_PROXY`、`NODE_EXTRA_CA_CERTS` 等）。
@@ -116,6 +117,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-09）：桌面版文件新增「在 SSH／WSL session 中預覽 HTML 檔案」一節（219,230→223,150 字）——匯出的檔案在使用者自己瀏覽器開啟會執行內含腳本；但 session 內直接預覽的檔案不執行腳本，腳本繪製的圖表／表格會顯示空白。同批新增組織層級「關閉 SSH／WSL 預覽腳本執行」開關，管理面細節見安全政策角度（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-07）：桌面版文件字數由 217,701 增至 219,230，但本頁段落數（1332）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-05）：桌面版文件字數由 216,003 增至 217,701，但本頁段落數（1329）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-04）：桌面版文件字數由 211,650 增至 216,003，但本頁段落數（1322）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。

@@ -31,14 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-02
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **五則新增：測試作弊守門、執行前白話提示、規格驅動新實作，兩則不讓 agent 自己說了算**（2026-11-02）
-> - **mgantlett/nomos**：Go binary 守門層，偵測刪測試、改回傳值等讓編譯器安靜放行的作弊手法。
-> - **Dhananjay-JSR/intent-lens**：執行前一行白話說明指令用途，偵測到破壞性指令變紅示警。
-> - **joebew42/aido**：規格驅動、測試驅動的 Claude Code 工程工作流 skill。
-> - **Reddit 兩則**：judge model 覆核輸出的外掛套件，與強制測試閘＋獨立複核才能收工的 Agent Flow。
+> **多代理 PR Review 補一招：把冗長 PR 說明收進折疊區塊**（2026-11-09）
+> - **Simon Willison**：agent 開的 PR 說明常偏長，收進 `<details><summary>` 折疊區塊後 PR 列表恢復可讀，不改動 agent 產生的內容本身。
 
 ---
 
@@ -103,6 +100,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### Simon Willison：把 agent 產生的冗長 PR 說明收進 `<details><summary>` 折疊區塊，維持 PR 列表可讀性（2026-11-09）
+
+- **主線：** —
+- **核心模式：** 多數 PR 由 Claude Code／Codex 自動開立、說明常偏長時，把完整 PR description 收進 Markdown `<details><summary>` 折疊區塊，PR 列表只顯示一行摘要，點開才看到 agent 寫的完整說明；不改動 agent 產生的內容本身，只調整呈現層。
+- **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧一個「大量 AI PR 下列表可讀性」取向——既有做法多處理審查品質，本則處理「PR 多到列表讀不下去」的前置問題；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 作者 Simon Willison 具名、長期撰寫 AI coding 實務部落格，技巧具體可直接複現；無第三方採用回饋數據。
+- **來源：** Blog / Simon Willison；[原文](https://simonwillison.net/2026/Nov/9/details-summary/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者技巧，尚無社群採用回饋數據）
 
 #### mgantlett/nomos：28MB 靜態 Go binary 當 repo 與 coding agent 間的守門層，偵測測試作弊（2026-11-02）
 

@@ -4,8 +4,8 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -32,12 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-08）
-> - Help Center release notes 新增兩段 Enterprise 計費功能：既有收費代碼（charge code）／client-matter 可標記在專案上；新增依成本代碼追蹤花費（beta）。細節見 [[entities/pricing#當前生效的計費規則]]。
+> **最新計費政策異動**（2026-11-09）
+> - **Claude Fable 5.2 發布，牌價 $8/$40 per Mtok，較 5.1 降兩成**；快取讀取沿用 ×0.025（$0.20/Mtok）。官方同日 Plans & Pricing 頁同步改版：Fast mode 擴大至 Fable 5.2（2 倍標準定價、約 2.5 倍速度），Batch processing 新增支援 Fable 5.2 與 Sonnet 5。細節見 [[entities/pricing#模型 API 定價現況]]、[[entities/pricing#一小時／一個月大概多少]]。
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。
 
 ## 現況
@@ -102,17 +102,17 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 本頁給的是「一小時多少」，[[topics/model-comparison#同一份工作，換設定差多少]] 給的是「這一件工作多少」。
 
-> 本表假設：**一小時 agent 工作 ＝ 50k 輸入 ＋ 15k 輸出 token ＋ 一個 session-hour**，取自官方 Managed Agents 算例。**2026-10-14 官方範例模型已從 Opus 5 換成 Opus 5.5**（WebFetch 官方定價頁逐字查證），下表數字除另註明外皆為推算，**不是實測**。資料截至 2026-10-14（Managed Agents 為 beta，須 beta header）。
+> 本表假設：**一小時 agent 工作 ＝ 50k 輸入 ＋ 15k 輸出 token ＋ 一個 session-hour**，取自官方 Managed Agents 算例。**2026-10-14 官方範例模型已從 Opus 5 換成 Opus 5.5**（WebFetch 官方定價頁逐字查證），下表數字除另註明外皆為推算，**不是實測**。資料截至 2026-11-09（Fable 行改用 5.2 牌價；Managed Agents 為 beta，須 beta header）。
 
 | 模型 | 一小時 | 一個月（每天 4 小時 × 22 天） | 這個數字哪來的 |
 |------|--------|------|------|
 | Opus 5.5 | 約 $0.58 | 約 $51 | **官方算例逐字確認**（input $0.20＋output $0.30＋session-hour $0.08，2026-10-14 WebFetch 查證）|
-| Fable 5.1 | 約 $1.33 | 約 $117 | 推算（$10/$50 牌價代入同一 token 量）|
+| Fable 5.2（2026-11-09 取代 5.1 為旗艦） | 約 $1.08 | 約 $95 | 推算（$8/$40 牌價代入同一 token 量；5.1 同算式為 $1.33／$117，已被取代）|
 | Sonnet 5.5（09-28 起為預設，同 Sonnet 5 價）| 約 $0.33 | 約 $29 | 推算（$2/$10 牌價代入同一 token 量）|
 
 **已查證的官方新數字（2026-10-14，WebFetch 逐字核對官方定價頁）**：官方算例確認無快取情境總成本為 **$0.58**（input $0.20＋output $0.30＋session-hour $0.08），40k／50k 輸入走快取情境下總成本為 **$0.428**（uncached input $0.04＋cache read $0.008＋output $0.30＋session-hour $0.08），兩者皆較 Opus 5 時代同情境下降：Opus 5 無快取 $0.705、快取 $0.525（已被取代，供對照）。
 
-**$100 買得到多少 API 用量**：以上表口徑（透過 Managed Agents 跑），$100 約等於 Fable 5.1 的 **75 小時**、Opus 5.5 的 **172 小時**；直接呼叫 API 沒有 $0.08 的 session-hour，同一份工作量約 **80 小時**與 **200 小時**。**這不是「訂閱划不划算」的答案**——Max 的 $100 買的是週配額，其中旗艦（Fable 5）只能用到週用量的 50%，超出後一樣按 API 費率扣 usage credits（見上方「我的方案現在有什麼」）。兩種貨幣不可直接相除。
+**$100 買得到多少 API 用量**：以上表口徑（透過 Managed Agents 跑），$100 約等於 Fable 5.2 的 **93 小時**、Opus 5.5 的 **172 小時**；直接呼叫 API 沒有 $0.08 的 session-hour，同一份工作量約 **100 小時**與 **200 小時**（Fable 5.1 時代為 75／80 小時，已被 5.2 取代）。**這不是「訂閱划不划算」的答案**——Max 的 $100 買的是週配額，其中旗艦（Fable 5）只能用到週用量的 50%，超出後一樣按 API 費率扣 usage credits（見上方「我的方案現在有什麼」）。兩種貨幣不可直接相除。
 
 **這個表沒告訴你什麼**
 
@@ -130,7 +130,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 | Claude Opus 5.5 | **$4 / $20** | 2026-09-22 發布，較 Opus 5 執行成本省 40%；快取讀取 5%（$0.20/Mtok），Batch 5 折。Opus 5、Fable 5 列為 legacy（[官方](https://www.anthropic.com/claude-opus-5-5)） |
 | Claude Sonnet 5.5 | **$2 / $10** | 2026-09-28 上線，取代 Sonnet 5 為 Claude Code／API 預設；支援 1M context，快取讀取 $0.10/Mtok；Batch 半價 $1／$5，無方案分層（10-17 [官方定價文件](https://platform.claude.com/docs/en/about-claude/pricing)查證） |
 | Claude Sonnet 5 | $2 / $10 | **標準定價**：$2/$10 永久化（2026-08-10）；2026-09-28 起預設改為 Sonnet 5.5（同價），Sonnet 5 仍可用 |
-| Claude Fable 5.1 | **$10 / $50** | 與 Fable 5 同價（官方定價頁 2026-09-03 查證）；**快取命中 ×0.025**（其餘模型 ×0.1），Batch $5/$25。Mythos 5.1 同價但僅限授權機構 |
+| Claude Fable 5.2 | **$8 / $40** | 2026-11-09 發布，較 5.1 降兩成；快取命中 ×0.025（$0.20/Mtok）；Fast mode 另計見下方細節區。Mythos 5.2 同價，僅限授權機構（[官方](https://www.anthropic.com/claude-fable-and-mythos-5-2)） |
+| Claude Fable 5.1 | $10 / $50 | 已被 5.2 取代為旗艦；快取命中 ×0.025，Batch $5/$25。Mythos 5.1 同價但僅限授權機構 |
 | Claude Fable 5 | $10 / $50 | Pro／Team standard 走此費率以 usage credits 計費；Max／Team premium 為標配（週用量 50% 內）。訂閱端分界見上方「我的方案現在有什麼」|
 | Claude Opus 5 | **$5 / $25** | 官方文件逐字確認，與 Opus 4.8 相同；Fast mode 另計 $10/$50 |
 | Claude Opus 4.8 | **$5 / $25** | 官方載明 Opus 5 定價「unchanged from Claude Opus 4.8」；2026-07-24 起次旗艦地位被 Opus 5 取代，各平台仍可用 |
@@ -145,6 +146,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **本表數字之官方查證（2026-08-20）**：Fable 5 $10/$50、Opus 5 與 Opus 4.8 $5/$25、Sonnet 5 $2/$10、Sonnet 4.6 $3/$15、Haiku 4.5 $1/$5，均與官方模型總覽頁一致（[Models overview](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-08-20 查證）。**（2026-08-28 更正）** 此註原寫「8/31 之後的 $3/$15 走向待定」——該說法在寫下時就已過期：官方早於 **2026-08-10** 宣布 $2/$10 永久化、9/1 漲價取消。已無到期日可等。
 
 **Fable 5.1／Mythos 5.1 快取費率新增（2026-09-02）**：官方定價文件載明兩版本的快取讀取／刷新費率為**標準輸入價的 0.025 倍**（標準快取命中乘數為 0.1 倍，見下方「通路與乘數」），長對話快取成本較前代最多省 75%。**（2026-09-03 更正）** 官方[定價頁](https://platform.claude.com/docs/en/about-claude/pricing)已載兩版本基礎定價 **$10 / $50 per Mtok**（與 Fable 5／Mythos 5 相同；Batch $5 / $25），上表已補列；長脈絡仍不加價、tokenizer 仍為 Claude 4.7 起導入的版本（尚無新世代 tokenizer 公告）。版本能力見 [[entities/fable-5]]。
+
+**Fable 5.2／Mythos 5.2 發布，牌價降兩成（2026-11-09）**：官方公告 Fable 5.2、Mythos 5.2，牌價 $8/$40 per Mtok（前代 Fable 5.1／Mythos 5.1 為 $10/$50）；同日官方 [API 定價文件](https://platform.claude.com/docs/en/about-claude/pricing) diff 確認快取讀取費率沿用 ×0.025（Fable 5.1／5.2、Mythos 5.1／5.2 四版本皆適用），較其餘模型 ×0.1 更低。模型能力面見 [[entities/fable-5]]；本表已更新。
 
 **Sonnet 4.5 官方退役日 2026-11-30（2026-10-05，已查證）**：dev.to 報導 Sonnet 5.5 於 Terminal-Bench 4.0 拿下 70.6% 分、牌價為 Opus 5.5 一半（$2/$10 per Mtok，與本表既有 Sonnet 5.5 牌價一致），同篇稱 Sonnet 4.5 將於 **2026-11-30** 退役——**經官方[模型棄用頁](https://platform.claude.com/docs/en/about-claude/model-deprecations)查證，此日期正確**：`claude-sonnet-4-5-20250929` 於 09-30 公告棄用、11-30 退役，建議遷移至 `claude-sonnet-5-5`；此日期適用 Claude API、AWS 上的 Claude Platform、Microsoft Foundry，Bedrock、Google Cloud 等夥伴平台另訂自己的生命週期時程，退役日可能不同。
 
@@ -243,17 +246,19 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 | 乘數 | 倍率 | 套用範圍 | 觸發條件 |
 |------|------|---------|---------|
-| 快取命中 | ×0.1（Fable 5.1／Mythos 5.1 為 **×0.025**；Opus 5.5 與 **Sonnet 5.5** 為 **×0.05**） | 讀取的 token | 命中既有快取 |
+| 快取命中 | ×0.1（Fable 5.1／5.2、Mythos 5.1／5.2 為 **×0.025**；Opus 5.5 與 **Sonnet 5.5** 為 **×0.05**） | 讀取的 token | 命中既有快取 |
 | Batch API | ×0.5 | 輸入＋輸出 | 非即時工作負載 |
 | 快取寫入（5 分／1 小時） | ×1.25／×2.0 | 寫入的 token | 建立快取 |
 | 資料落地 | ×1.1 | **輸入、輸出、快取讀寫全部**（Haiku 5.5 逾 10 萬 token 的高一檔價也適用） | `inference_geo:"us"`；Azure 為 US Data Zone Standard；Claude 4.6 以後 |
 | 地區端點 | ×1.1 | 全部 token | Bedrock／Google Cloud 用 regional 或 multi-region 端點 |
 | 長脈絡（Claude 4.6 以後） | ×1.0（**Haiku 5.5 除外**） | — | **不加價**，900k 與 9k 同費率；Haiku 5.5 不含此待遇，逾 10 萬 token 改用高一檔費率（$0.50／$2.50） |
 | 長脈絡（Sonnet 4／4.5 世代） | ×2.0 輸入／×1.5 輸出 | 僅超過 200K 的請求 | 該世代 1M 為預覽功能 |
-| Fast mode | Opus 5.5 改為 $8／$40；Opus 5 與 4.8 改為 $10／$50 | 取代基準費率 | 僅這三款 Opus，不能與 Batch 併用；可用通路與淘汰時程見細節區 |
+| Fast mode | Opus 5.5 改為 $8／$40；Opus 5 與 4.8 改為 $10／$50；**Fable 5.2 改為 $16／$80（2x 標準價，2026-11-09 新增）** | 取代基準費率 | 原僅三款 Opus，2026-11-09 起擴大至 Fable 5.2，約 2.5 倍速度；不能與 Batch 併用；可用通路與淘汰時程見細節區 |
 
 **乘數細節**
 
+- **Fast mode 擴大至 Fable 5.2（2026-11-09 官方 Plans & Pricing 頁查證）**：Fable 5.2 另計 $16／$80（2x 標準價），約 2.5 倍標準速度；此前 Fast mode 僅三款 Opus 可用，本次首度擴及非 Opus 模型。
+- 同日頁面 Batch processing 示範模型同步換代（Fable 5.1→5.2、新增 Sonnet 5），屬範例更新，不代表 Batch 折扣費率（×0.5）本身變動（同 09-28 示範換代先例）。
 - **會疊乘**：例如 Batch ×0.5 與資料落地 ×1.1 同時成立時兩者相乘。往下的只有快取命中與 Batch
 - **Fast mode 可用在哪些通路、哪一款要被淘汰（2026-10-31 官方查證）**：Opus 5.5 的 fast mode 另可用於 Google Cloud（Anthropic managed）與 Azure 上的 Microsoft Foundry，**不再限第一方 API**。
   - Opus 5 與 4.8 的 fast mode 仍是研究預覽；**Opus 4.8 的 fast mode 已於 2026-10-30 宣告淘汰、2026-11-30 移除**，之後請求會直接回錯誤、不會退回標準 Opus 4.8。

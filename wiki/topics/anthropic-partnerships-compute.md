@@ -3,8 +3,8 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-06"
-last_news_update: "2026-11-06"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/anthropic-business"
@@ -31,11 +31,12 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-08）
-> - **FT／Reuters／Bloomberg：Anthropic 與發電業者簽 $34 億美元合約，採購燃氣機組供應 AI 資料中心**；HN 討論聚焦溫室氣體排放爭議，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] 新列
+> **最新動態**（2026-11-09）
+> - **TechCrunch 跟進燃氣機組採購案（11-08 FT／Reuters／Bloomberg 原報導，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]）**
+> - **IBM／Cisco 同日宣布導入 Mythos 5.2 計畫**：IBM 擬用於 Concert 平台資安推理，Cisco AI Defense 擬用於紅隊測試，均僅「宣布計畫」階段，未附上線時程
 
 ---
 
@@ -82,7 +83,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | 股權與信貸 | Series H $650 億（05-28）；上市前信用額度傳逾 $100 億（08-18）；資料中心私募信貸 $13 億（08-19） | Series H 已完成；其餘為報導 | 目前無可見後果。下一個觸發點：定價與股數公告（S-1 已於 10-26 提交） |
 
 **來源**
-- 發電業者（未具名）：Financial Times（2026-11-08）；Reuters、Bloomberg.com 同日轉述（Google News）。Hacker News 討論聚焦燃氣供電的溫室氣體排放爭議，未附供電方身分或機組上線時程。
+- 發電業者（未具名）：Financial Times（2026-11-08）；Reuters、Bloomberg.com 同日轉述（Google News）；TechCrunch（2026-11-09 跟進，同一筆 $34 億交易，未見新增細節）。Hacker News 討論聚焦燃氣供電的溫室氣體排放爭議，未附供電方身分或機組上線時程。
 - Nscale 兩筆：第二筆 CNBC、Reuters、Bloomberg（2026-10-20）；第一筆 Forbes、Financial Times（2026-08-28）。
 - Blackstone：Financial Times、Yahoo Finance（2026-10-17）；Reuters（630 億美元銀行＋Blackstone 聯合融資，2026-10-26）。EverWind：Global News、CBC（2026-10-16）。Samsung Foundry：TechPowerUp（2026-10-07）。
 - SpaceX：Barchart.com（2026-10-03）、Hacker News 轉 WSJ（2026-10-10）；WSJ 稱由共同創辦人 Tom Brown 透過共和黨人脈牽線（單一媒體說法，未獲第二家佐證；交易本身已獲 Anthropic 官方公告證實，2026-10-31 查）。
@@ -124,6 +125,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **IBM／Cisco（Mythos 5.2 導入計畫）**（2026-11-09）：IBM 宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布計畫用於紅隊測試；兩者均停在「宣布計畫」階段，未附具體上線時程（Google News/IBM；Google News/Cisco Blogs）
 - **AP（Associated Press）**（2026-11-05）：Anthropic 首個內容授權合作，供選舉報導使用，授權範圍與費用未見報導（Google News/ADWEEK）
 - **McGraw Hill**（2026-11-05）：K-12 課程整合進 Claude for Teachers，開放對象與上線時間未見報導（Google News/Yahoo Finance）
 - **Addgene**（2026-11-05）：非營利生物材料存放機構，質體目錄整合進 Claude 供研究人員查詢，開放對象未見報導（Google News/The Business Journals）

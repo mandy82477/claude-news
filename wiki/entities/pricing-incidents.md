@@ -4,8 +4,8 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
 days_since_news: 0
 parent: "entities/pricing"
@@ -33,12 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-07）
-> - Courthouse News：法院裁定 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的指控面對訴訟程序，詳見 [[#還在發生的事故]] 「Max 20x 實際用量與廣告宣稱落差」列。
-> - 新 GitHub Issue [#62466](https://github.com/anthropics/claude-code/issues/62466)：圖片處理「Image couldn't be processed」錯誤重複發生，每次失敗仍計入付費用量（36 留言，官方未回應）。
+> **最新動態**（2026-11-09）
+> - Reuters／shattered.io 跟進確認：Anthropic 須就 Claude Max 訂閱廣告「5 倍、20 倍」用量宣稱面對訴訟程序，與 11-07 Courthouse News 報導同一裁定，詳見 [[entities/pricing-incidents#還在發生的事故]] 「Max 20x 實際用量與廣告宣稱落差」列。
 
 ---
 
@@ -54,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | infostealer 竊 session cookie，免密碼抽乾訂閱額度 | 🔴 未解 | 2026-09-09，官方 08-30 通知已強制登出、撤銷 token、退誤扣款 | 額度莫名見底先查有無不明登入；攻擊面見 [[topics/ai-agent-safety]] |
 | 7 月帳務錯誤：南韓免費用戶收到 $16.6M 無效帳單；審計稱企業多收 $1.7M | 🔴 未解 | 2026-07-20 | 核對 7 月帳單有無異常扣款；補救方式見下方細節 |
 | HERMES.md 字串觸發靜默切 API 計費 | ⛔ 官方拒修 | 2026-04-25，官方確認為 bug 但拒絕退款 | commit 訊息避開該大寫字串；已被扣費者官方不退 |
-| Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-11-07，法院裁定須就廣告是否誤導面對訴訟程序（Courthouse News）；另見 Issue #79773（10-21） | 依現況估算用量，不要以「20 倍」為預算基準 |
+| Max 20x 實際用量與廣告宣稱落差 | ⚖️ 司法中 | 2026-11-09，Reuters／shattered.io 跟進確認 11-07 裁定（須面對訴訟程序）；另見 Issue #79773（10-21） | 依現況估算用量，不要以「20 倍」為預算基準 |
 | Max 5x 續訂扣款後帳號遭停用 | 🔴 未解 | 2026-11-02，Issue #5088，官方仍無回應；同模式另見 #80872、#64480、#90531 | 續訂前保留付款證明；遭停用時留扣款紀錄向客服與發卡行申訴 |
 | Max 5x 升 Max 20x 付款持續失敗、客服未回應 | 🔴 未解 | 2026-10-24，Issue #56281，延續 #55266、#55982 | 升級前備妥備援付款方式、留錯誤截圖；別反覆重試 |
 | Fable 成 Max 標準模型起被誤判要先買 usage credits | 🔴 未解 | 2026-10-24，Issue #79337，07-20 起未修 | 對照 `Settings > Usage` 與帳單，於該 issue 回報佐證 |
@@ -79,6 +78,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **Courthouse News（2026-11-07）**：報導稱 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的相關指控進一步面對訴訟程序；報導未附具體案號或法官裁定全文，是否即 2026-06-16 集體訴訟（指控 Max 5x／Max 20x 實際限制遠低於廣告宣稱，見上方「還在發生的事故」⚖️ 列）未見確認，議題高度重疊（推論）。
 - **同事件另一報導（The Next Web，2026-11-07，非新事實）**：同日報導「Anthropic must face Claude Max ad claims, report says」，僅標題可用，未見新增案情細節。
+- **11-09 跟進（Reuters／shattered.io，非新事實）**：兩家同日報導同一裁定，Reuters 稱須就廣告「5 倍、20 倍」用量宣稱是否誤導消費者進一步面對訴訟；shattered.io 標題確認「5x, 20x Claims Proceed」。
+- 均未附新增案號或裁定全文，與 11-07 Courthouse News 報導為同一事件的媒體擴散（Google News/Reuters；Google News/shattered.io）。
 - **你能先做什麼**：維持既有建議——依現況估算用量，不要以廣告「20 倍」為預算基準；詳見上方「還在發生的事故」表。
 
 #### 🔴 2026-11-02：新 GitHub Issue #62466——圖片處理失敗重複發生，仍持續扣用量

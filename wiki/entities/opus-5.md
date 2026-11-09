@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）"
 domain: "🤖 模型"
-last_updated: "2026-11-02"
+last_updated: "2026-11-09"
 last_news_update: "2026-11-02"
 status_main: "active"
 days_since_news: 5
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（官方已改列 Legacy，仍可用；預設 Opus 已由 [[entities/opus-5-5|Opus 5.5]] 接手）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-25
-**最後更新：** 2026-11-02
+**最後更新：** 2026-11-09
 **最後新聞更新：** 2026-11-02
 
 > **跨版本修辭套路留言數再增**（2026-11-02）
@@ -80,7 +80,7 @@ Opus 5 官方 2026-07-24 發布（本站 07-25 收錄，兩個日期都會看到
 | 社群熱度 | 🔥🔥🔥🔥 |
 | 試用價值 | ⚡ 有條件推薦（2026-09-07 判定）|
 | 最適合 | 數小時、沒人盯著也要跑完的編碼任務；跨數十檔 refactor；複雜系統工程 |
-| 不適合 | 日常規模開發（改 Sonnet 5）；跨多天的極長任務（改 Fable 5.1）；資安滲透測試（仍落後 Mythos 5）|
+| 不適合 | 日常規模開發（改 Sonnet 5）；跨多天的極長任務（改 Fable 5.2）；資安滲透測試（仍落後 Mythos 5）|
 
 > 本表跟著 [[feature-radar]] 全覽表 Opus 5 那一列走；最新熱度以 [[feature-radar]] 為準。
 

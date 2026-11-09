@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **Opus 5.5「變差又變貴」登 r/ClaudeCode 週熱門，另有額度兩倍速耗盡回報**（2026-11-08）
-> - 11-05 週熱門貼文稱 Opus 5.5 回答變差、額度花得更快；11-06 另一則稱週額度消耗快兩倍。
-> - 兩則皆單一貼文、0 留言，官方未回應；官方額度說明頁 11-05 起建議例行工作降 effort。
+> **「Opus 5.5 被削弱」彙整文登 HN，匯整多篇 Reddit 投訴，仍無官方或量化佐證**（2026-11-09）
+> - HN「Tell HN: A flood of reports of Opus 5.5 being nerfed」匯整 4 篇 Reddit 貼文稱近兩週 Opus 5.5 疑似被削弱，23 分。
+> - 彙整者未附官方說明或測試數據，計入「泛化變慢／變囉唆」主張第十則。
 
 ---
 
@@ -145,14 +145,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## Opus 5 上線後品質觀感（2026-07-25 起）
 
-[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **24 則**訊號：下表六種主張收 23 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
+[[entities/opus-5]] 於 2026-07-24 上線後，本頁累積 **25 則**訊號：下表六種主張收 24 則，另一則（effort 旋鈕非單調）已證偽，見表下。收料起點是 Opus 5 的上線日，不是「這些抱怨都指向 Opus 5」——其中六則沒有指名模型版本。十七則裡十五則是單一使用者觀感，另兩則有外部依據（一則第三方基準已查證屬實、附重要但書、一則 GitHub issue 已查證屬實）。逐則原文與 Opus 5 這個模型自己的官方基準見 [[entities/opus-5]]「這些數字是誰量的」；本頁只記它作為第三條退步線的狀態。
 
 > 一種主張一列，同一批貼文不會在兩列各算一次。
 %% 維運備忘：上限 6 列、新貼文只改最後動態與則數、逾 90 天無新事實即移出，逐則原文留時序，見規則檔第 4 條 %%
 
 | 主張 | 則數 | 最後動態 | 證據硬度 |
 |---|---|---|---|
-| **泛化變慢／變囉唆**（不指名模型版本）| 9 | 2026-11-05「Opus 5.5 is definitely getting dumber and costlier suddenly」（週熱門）| 單一貼文（HN 25 分）＋八則無互動數貼文 |
+| **泛化變慢／變囉唆**（不指名模型版本）| 10 | 2026-11-08「Tell HN: A flood of reports of Opus 5.5 being nerfed」| 單一貼文（HN 25 分、HN 23 分）＋八則無互動數貼文 |
 | **Opus 5 過度自信、難以調教** | 4 | 2026-09-12「Hate Opus 5. Really dont know why they did this」 | 單一貼文（其中一則登上該週熱門榜）|
 | **懷疑正在被 A/B 測試降 effort** | 7 | 2026-10-01「Opus 5.5 nerfing - how to measure, how to spot, how to sue」 | 單一貼文（其中三則登上該週熱門榜，查證過程無法覆核）|
 | **第三方工具評測** | 1 | 2026-08-25 Sonar benchmark（已查證，見表下）| 唯一第三方量化評測：正確性上升但輸出量暴增（Sonar 原文＋HackerNoon 轉載） |
@@ -256,6 +256,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-11
+
+#### 2026-11-08
+- **「Tell HN: A flood of reports of Opus 5.5 being nerfed」：「泛化變慢／變囉唆」主張第十則**：HN 使用者彙整 4 篇 Reddit 貼文，稱近兩週 Opus 5.5 疑似被削弱；彙整者未附官方說明或量化對照數據，23 分（來源：[Hacker News](https://news.ycombinator.com/item?id=50419019)）
 
 #### 2026-11-06
 - **「Usage issues again- depleting two times faster」：Token 消耗異常訊號群現象延續**：Reddit 使用者稱週額度重置後幾乎沒用就耗掉 8%，消耗速度快兩倍；單一貼文、0 留言，無測試方法或版本號，只說明這個現象還在（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xpife7/usage_issues_again_depleting_two_times_faster/)）

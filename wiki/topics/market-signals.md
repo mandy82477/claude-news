@@ -30,19 +30,20 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-08）
-> - **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議（見 [[topics/market-signals-compute]]）。
+> **最新判讀**（2026-11-09）
+> - **Fable 5.2／Mythos 5.2 同步降價 20%，快取讀取倍率首降至 0.025 倍**（見 [[topics/market-signals-customers]]）。
+> - **IBM、Cisco 同日宣布計畫將 Mythos 5.2 導入資安產品線**：均為宣布計畫階段，未附上線時程（見 [[topics/market-signals-customers]]）。
+> - **IPO 傳瞄準 11 月掛牌，Morningstar 估值走高到 1.7 兆美元，與買方端探底方向相反**（見 [[topics/market-signals-ipo]]）。
 >
-> 前一日（2026-11-07）：
-> - **法院裁定 Anthropic 須就 Claude Max 訂閱廣告誤導指控面對訴訟程序**：Courthouse News／The Next Web 同日報導，未附案號，與既有 06-16 集體訴訟是否同案尚待確認（見 [[topics/market-signals-legal]]）。
-> - **IPO 估值談判區間再探低**：Bloomberg／Hacker News 討論稿稱銀行原始目標 1.4～1.5 兆美元、談判區間已降至 1.2～1.3 兆美元，買方喊價低探至 1.1 兆美元（見 [[topics/market-signals-ipo]]）。
+> 前一日（2026-11-08）：
+> - **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議（見 [[topics/market-signals-compute]]）。
 
 ---
 
@@ -75,6 +76,8 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | Akamai（NASDAQ: AKAM） | 供應商，簽 7 年 116 億美元運算合約供應 CPU 算力，並發行認股權證讓 Anthropic 可按每股 111.33 美元認購約 770 萬股 Akamai 普通股 | 09-25 Akamai 算力合約一則 | 📈 正面，動到未來多年期營收承諾 | 下一份財報／10-Q 是否揭露此合約認列時程或上修全年指引 |
 | Broadcom（NASDAQ: AVGO） | 華爾街銀行與 Blackstone 安排 630 億美元晶片融資案，金額較既有 600 億美元擴大，循環投資模式與 07-22 AMD、09-02 Nvidia-Lambda 同屬一類 | 10-01 開線、10-02 第 2 則、10-05 第 3 則、10-26 S-1 揭露 1610 億美元雲端承諾總額一則、10-27 第 4 則、11-02 總額升至 8,950 億美元一則 | ⚖️ 兩面，630 億美元融資持續推進，S-1/A 總承諾升至 8,950 億美元，認列關係未明 | 630 億美元融資定價發行；8,950 億美元 S-1/A 總承諾與既有融資案重疊關係是否釐清 |
 | Barclays（NYSE: BCS） | 具名客戶，官方宣布擴大導入 Claude Code 全行，首度提出可驗證的量化採用率目標 | 10-01 Barclays 擴大導入一則 | 📈 正面，動到可驗證的滲透率目標 | 2026 年底開發者採用率 50% 目標是否達成並獲證實 |
+| IBM（NYSE: IBM） | 具名客戶，宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，合約範疇與費用未揭露 | 11-09 IBM／Cisco 資安整合一則 | 〰 未定 | Concert 平台整合是否正式上線並公布時程 |
+| Cisco（NASDAQ: CSCO） | 具名客戶，宣布計畫將 Mythos 5.2 用於 AI Defense 紅隊測試，合約範疇與費用未揭露 | 11-09 IBM／Cisco 資安整合一則 | 〰 未定 | AI Defense 整合是否正式上線並公布時程 |
 | AMD（NASDAQ: AMD） | 投資人＋晶片供應商，07-22 投資 Anthropic 最高 50 億美元並簽晶片暨投資協議（見 [[topics/anthropic-business]]） | 10-15 Q3 營收揭露一則 | 📉 負面，隨 Anthropic 營收增速放緩消息同步下跌 | Anthropic 下一季營收增速是否回升或持續放緩 |
 | Sandisk（NASDAQ: SNDK） | 無直接業務關係；被歸類為 AI 記憶體晶片概念股，隨 Anthropic 營收增速放緩消息同步下跌 | 10-15 Q3 營收揭露一則 | 📉 負面，純粹歸類連動、非業務關係 | 後續財報是否顯示記憶體晶片需求受 AI 資本支出週期影響 |
 | Blackstone（NYSE: BX） | 供應商，提供私募信貸參與 Anthropic 晶片融資案，與銀行團共同安排 630 億美元融資規模 | 10-17 私募信貸晶片融資一則、10-27 併入 630 億美元融資案一則、10-31 轉述預期 BB 級信評一則 | ⚖️ 兩面，融資規模已知為 630 億美元，具體殖利率與利率仍未披露；10-31 其向投資人預期 Anthropic 上市後為 BB 級（單一標題，非機構評等） | 630 億美元融資定價發行；Blackstone 具體利率與規模拆分是否披露 |
@@ -84,7 +87,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **曝險多大**：表上每一檔對 Anthropic 都是間接曝險，分三型看。
 - 持股型（GOOGL、AMZN、NVDA、AMD）：持股金額相對自身市值很小，股價主要由本業決定；持股金額的報導見 [[topics/anthropic-ipo]]。
 - 供應商與通路型（AKAM、AVGO、BX、CRM、SCHW、WULF）：看合約金額何時認列進它們的財報。
-- 客戶與其他（MSFT、META、JPM、NVO、ACN、BCS 是客戶，RDDT 是訴訟原告，SNDK 只是被歸成同概念股）：多數沒有可量化的金額，只能當方向參考。
+- 客戶與其他（MSFT、META、JPM、NVO、ACN、BCS、IBM、CSCO 是客戶，RDDT 是訴訟原告，SNDK 只是被歸成同概念股）：多數沒有可量化的金額，只能當方向參考。
 - Anthropic 本體尚未掛牌，公開市場買不到。
 
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
@@ -99,10 +102,10 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-07 估值談判區間再探低（銀行目標 1.4～1.5 兆 → 談判區間 1.2～1.3 兆） |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-09 傳瞄準 11 月掛牌，Morningstar 估值走高至 1.7 兆美元 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-07 法院裁定須就 Claude Max 廣告誤導指控面對訴訟程序 |
 | 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-08 Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心 |
-| 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 10-29 Financial Advisors 額度、Copilot Fusion |
+| 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 11-09 Fable 5.2／Mythos 5.2 降價、IBM／Cisco 資安整合 |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
 
 每則五段：**一眼**（正負、誰有感、硬度、線）／**為什麼這樣判**（新資訊在哪、動到哪個數字）／**下一個催化劑**／**你的選項**／**一課**。有關聯的前一則在「為什麼這樣判」裡順手提；各則的「一課」彙整成課程表在 [[topics/market-lessons]]。

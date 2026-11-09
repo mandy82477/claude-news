@@ -2,16 +2,16 @@
 page: "entities/mythos"
 kind: "entity"
 type: "model"
-status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）"
+status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-11-08"
-last_news_update: "2026-11-01"
+last_updated: "2026-11-09"
+last_news_update: "2026-11-09"
 status_main: "active"
-days_since_news: 6
+days_since_news: 0
 parent: null
 children: "['entities/mythos-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 0
 inbound_links: 42
 attribution_count: 35
 attribution_last: "2026-11-01"
@@ -27,26 +27,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 # Claude Mythos
 
 **類型：** model
-**狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.1 已於 2026-09-01 發布，維持信任機構限定存取，未轉為全面公開）
+**狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-01
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **弱訊號**（2026-11-01）
-> HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息或惡意檔案誘餌。
+> **Mythos 5.2 發布**（2026-11-09）
+> 與 Fable 5.2 同日發布，同一模型不同防護層級；coding／reasoning／vision 均有改善，維持信任機構限定存取。
 
 ---
 
 ## 現況
 
-**2026-11-01（HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息）**：Hacker News（17 分）與 Reddit r/ClaudeAI 週熱門同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言，原網址因惡意軟體疑慮未附；留言者普遍判定此消息幾乎可以肯定是假的，手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類，疑在誘騙較不熟悉者下載並執行惡意程式碼（Hacker News，2026-11-01；詳見下方「時序」）。
+**2026-11-09 最新**：Anthropic 與 Fable 5.2 同日發布 **Mythos 5.2**；兩者為同一模型的不同防護層級，Mythos 5.2 延續信任機構限定存取（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)，2026-11-09）。官方稱兩款模型在 coding、reasoning、vision 均有改善，prerelease 測試中協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題；完整兩代對照與牌價見 [[entities/fable-5]]「你現在拿到的是什麼」，Mythos 面定價另見 [[entities/pricing]]。
 
-**2026-10-29（SentinelOne 稱將 Mythos 5.1 導入 Wayfinder 資安服務，僅標題可讀，列為弱訊號）**：Google News 轉載 VMblog 標題，稱 SentinelOne 將把 Claude Mythos 5.1 整合進其 Wayfinder Frontier AI 資安服務；原文僅標題可用、單一來源、互動數 0，整合管道（是否透過 Project Glasswing）與時程均未確認（Google News/VMblog，2026-10-29；詳見下方「時序」）。
+**2026-11-01（HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息）**：Hacker News（17 分）與 Reddit r/ClaudeAI 週熱門同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言，原網址因惡意軟體疑慮未附；留言者普遍判定此消息幾乎可以肯定是假的，手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類，疑在誘騙較不熟悉者下載並執行惡意程式碼（Hacker News，2026-11-01；詳見下方「時序」）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
-Claude Mythos 是 Anthropic 的高能力 AI 模型家族，已確認具備**自主發現並武器化軟體漏洞、生成可執行 exploit** 的能力，是 AI 安全領域的重大里程碑。2026-06-09 起分為兩個版本：**Claude Fable 5**（以 Mythos 架構為核心、附加安全護欄的公開版，史上首款向大眾開放的 Mythos 級模型，見 [[entities/fable-5]]）與 **Claude Mythos 5**（無護欄完整版，僅限信任機構存取）。**2026-09-01 起兩者皆迭代至 5.1 版**——Fable 5.1 GA、Mythos 5.1 維持信任機構限定存取（見上方「現況」），存取模式的區隔本身未變。
+Claude Mythos 是 Anthropic 的高能力 AI 模型家族，已確認具備**自主發現並武器化軟體漏洞、生成可執行 exploit** 的能力，是 AI 安全領域的重大里程碑。2026-06-09 起分為兩個版本：**Claude Fable 5**（以 Mythos 架構為核心、附加安全護欄的公開版，史上首款向大眾開放的 Mythos 級模型，見 [[entities/fable-5]]）與 **Claude Mythos 5**（無護欄完整版，僅限信任機構存取）。**2026-09-01 迭代至 5.1 版，2026-11-09 再迭代至 5.2 版**——Fable 5.2 GA、Mythos 5.2 維持信任機構限定存取（見上方「現況」），存取模式的區隔自 2026-06-09 起未變。
 
 ---
 
@@ -68,6 +68,8 @@ Mythos 5.1 之後的下一代模型，目前只有一筆官方證實，其餘為
 ---
 
 ## 跟它怎麼說話
+
+❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Mythos 5.2 版本）｜**Mythos 5.2 專屬 prompting 指南尚未發布**：今日來源未帶 prompting 內容，下列仍為 5.1 版本。
 
 官方 prompting 指南與 [[entities/fable-5]] 共用一份：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)，標題明載涵蓋 Claude Mythos 5.1（查證 2026-10-03）。官方未另出 Mythos 專屬 prompting 頁。
 
@@ -153,6 +155,13 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 解禁後（2026-06-27 起）
 
 ### 2026-11
+
+#### 2026-11-09
+**Claude Mythos 5.2 發布，與 Fable 5.2 同日、同一模型不同防護層級**：
+- Anthropic 官方發布文稱兩款模型在 coding、reasoning、vision 均有改善，prerelease 測試中協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)，2026-11-09）
+- **存取模式未變**：Mythos 5.2 延續信任機構限定存取，自 2026-06-09 Mythos 5 發布以來這點未變，變的是底層模型版本；完整規格、牌價兩代對照見 [[entities/fable-5]]「你現在拿到的是什麼」
+- `anthropic-sdk-typescript` v1.7.0、`anthropic-sdk-python` v2.7.0 同日新增 `claude-mythos-5-2` 識別碼（[GitHub](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)，2026-11-09）
+- 多家外媒同日跟進報導 Fable／Mythos 5.2 雙發布，多聚焦 IPO 前市場脈絡與定價戰，商業面見 [[entities/pricing]]、[[topics/anthropic-ipo]]；本頁僅記模型能力與存取面
 
 #### 2026-11-01
 ❓ **待查證**（標 2026-11-01｜查 Hugging Face、Mythos-class）｜**HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息**：
@@ -347,3 +356,6 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [[news/2026-10-28]]
 - [Google News/VMblog：SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)（2026-10-29，僅標題可用；懸置標記細節見「時序」2026-10-29 條目）
 - [Hacker News：Anthropic's Mythos-class model allegedly leaked on Hugging Face](https://news.ycombinator.com/item?id=50326727)（2026-11-01，17 分；懸置標記細節見「時序」2026-11-01 條目）
+- [Anthropic：Claude Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)（2026-11-09）
+- [anthropic-sdk-typescript sdk-v1.7.0](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)（2026-11-09）
+- [[news/2026-11-09]]

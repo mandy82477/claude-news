@@ -30,13 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-08）
-> - **Yahoo Finance／24/7 Wall St.：投資人出現「延後上市」說法，$8,950 億採購承諾被重新框定為潛在債務風險**，見 [[topics/anthropic-ipo]]
-> - **FT／Reuters／Bloomberg：Anthropic 與發電業者簽 $34 億美元合約採購燃氣機組供應資料中心**，見 [[topics/anthropic-partnerships-compute]]
+> **最新動態**（2026-11-09）
+> - **Yahoo Finance／Morningstar：IPO 傳瞄準 11 月掛牌，估值估算落差擴大至 $1～1.7 兆**，見 [[topics/anthropic-ipo]]
+> - **IBM／Cisco 宣布導入 Mythos 5.2 計畫（資安推理／紅隊測試），均未附上線時程**，見 [[topics/anthropic-partnerships-compute]]
+> - **Reuters／shattered.io 跟進確認 Claude Max 訂閱廣告訴訟須進一步面對訴訟程序**，見 [[entities/pricing-incidents]]
 
 ---
 

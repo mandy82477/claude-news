@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-06）
-> - **v2.1.319**：⚠️ auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway）行為改變——伺服器無法檢查的呼叫一律詢問使用者或直接拒絕，不再退回內建傳統分類方式，無遷移期。
-> - **SDK**：anthropic-sdk-typescript sdk-v1.6.0、anthropic-sdk-python v2.6.0 同步新增 ramp limit／External Key 驗證失敗的錯誤代碼，並支援強制組織成員全裝置登出。
+> **最新動態**（2026-11-09）
+> - **v2.1.321**：新增 `--settings <file>`，供 `claude remote-co…` 系列指令帶自訂設定檔連線（官方原文截斷）；Fable 5.2 成新預設 Fable 模型。
+> - **SDK**：anthropic-sdk-typescript sdk-v1.7.0、anthropic-sdk-python v2.7.0 同步新增組織 webhook `user_profile.program_status_updated`、parent organization filtering。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -68,6 +68,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.321** | 2026-11-09 | 新增 `--settings <file>` 供 `claude remote-co…` 指令帶設定檔連線（原文截斷）；Fable 5.2 成新預設 Fable 模型（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)）|
+| **anthropic-sdk-typescript sdk-v1.7.0** | 2026-11-09 | Features：webhook 新增 `user_profile.program_status_updated`；新增 parent org filtering、模型識別碼 2 項（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)）|
+| **anthropic-sdk-python v2.7.0** | 2026-11-09 | 同步 TS SDK：webhook、parent org filtering、模型識別碼新增（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.7.0)）|
 | **v2.1.319** | 2026-11-06 | ⚠️ auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway）：伺服器無法檢查的呼叫一律詢問使用者或直接拒絕，不再退回內建傳統分類方式；無遷移期（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.319)）|
 | **anthropic-sdk-typescript sdk-v1.6.0** | 2026-11-05 | Features：新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.6.0)）|
 | **anthropic-sdk-python v2.6.0** | 2026-11-05 | Features：同步新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0)）|
@@ -207,6 +210,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-09 | **v2.1.321**：新增 `--settings` 供 remote 指令帶設定檔；Fable 5.2 成預設模型。SDK 新增 webhook，旗標+11，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-06 | **v2.1.319**：⚠️ auto mode 遙測／旗標關閉改一律詢問或拒絕。旗標+13，見 [[topics/claude-code-experimental]]。SDK 新增錯誤碼＋強制登出。互動更新 6 則。 |
 | 2026-11-05 | 無新版本。SDK：python v2.5.0 新增錯誤型別／ids 篩選；typescript 兩版修補路徑注入。新增已知問題 #79305／84862／74558；互動更新 #91495／42542／79808。 |
 | 2026-11-04 | **v2.1.318**：mods 回答記錄；gateway 新增 `assume_role`。旗標+12/-1（見 [[topics/claude-code-experimental]]）。新增 #33323；互動更新 #12925。 |

@@ -29,11 +29,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-09
+**最後新聞更新：** 2026-11-09
 
-> **Plugin／MCP 整合新增 Microsoft 官方跨 agent Windows 開發外掛集**（2026-11-08）
-> - **Plugin／MCP**：microsoft/win-dev-skills，Microsoft 官方發布，供 GitHub Copilot、Claude Code、OpenAI Codex 共用的 Windows 應用開發外掛集，見 [[topics/community-integrations#2026-11]]。
+> **本日新增兩則技術彙整**（2026-11-09）
+> - **多代理 PR Review**：Simon Willison 把 agent 開的 PR 說明收進 `<details><summary>` 折疊區塊維持列表可讀性，見 [[topics/community-guardrails#2026-11]]。
+> - **技術彙整未歸類**：Simon Willison 具名實測，以 Claude（Opus 5.5）協助寫 SQLite parse_number() 擴充並比較 Rust 版實作，見 [[topics/community-tech-patterns#未歸類]]。
 
 ---
 
@@ -55,7 +56,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-07 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-04 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-04 |
-| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-02 |
+| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、安全架構、多代理 PR Review、規格驅動開發 | 2026-11-09 |
 | [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-08 |
 | [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化 | 2026-11-07 |
 
@@ -77,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Token / 成本優化** | MCP Code Execution、穴居人模式、pxpipe、headless 冷啟動、Haiku 5.5 價格閘門、tokentab、Apify MCP 成本實測（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-04 | HTML 轉 Markdown 降 80% token；快取不跨 session 是費用主因 |
 | **Plugin / MCP 整合** | pipeboard、makenotion/claude-code-notion-plugin、ctoldigital/axuse 等（[[topics/community-integrations#2026-11]]） | ⚡ 活躍 | 2026-11-05 | 避免不必要的 context 載入；Claude Code 主導 MCP 工具鏈 |
 | **模型使用策略** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、magpie、jev-router、Atticus、自製 harness 換便宜模型（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、官方審查機制（[[topics/community-guardrails#2026-10]]） | ⚡ 活躍 | 2026-10-16 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
+| **多代理 PR Review** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、PR 折疊呈現等（[[topics/community-guardrails#2026-11]]） | ⚡ 活躍 | 2026-11-09 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | **Context 管理** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-10]]） | ⚡ 活躍 | 2026-10-14 | 即時取回優於預先載入；避免 context 過早飽和 |
 | **Agent 活動可視化** | claude-office、agent-office、MioIsland、ccdeck、HachimoDock、capri-desktop 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-03 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **介面元件複用** | Brainless、statuslin.es、dsh-TUI、coralline、baocode 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-03 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
@@ -128,6 +129,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每一則做法的原始證據依類別住在七個子頁（見上方「每一類做法住哪一頁」）。這裡只留還分不出類的新做法，以及早期月份的總結。
 
 ### 未歸類
+
+#### Simon Willison：用 Claude（Opus 5.5）寫 SQLite parse_number() 擴充，比較 C 與 Rust 實作（2026-11-08）
+
+- **主線：** —
+- **核心模式：** Simon Willison 散步時起意，用 Claude Chat（Opus 5.5）協助撰寫 SQLite 自訂函式 `parse_number(value)`，把「-$1,234.56」「12.5%」這類字串轉成可排序、加總的數值；另寫一版 Rust 實作，比較兩種語言寫 SQLite 擴充的差異（原文截斷，具體比較結論未見報導）。
+- **與既有模式的關係：** 不屬於第 0 條路由表任何一類逐字命名的類別——這是單人以 Claude 對話協助撰寫原生語言 SQLite 擴充、並比較語言選擇的具體案例，不是既有 agent 使用模式或工具整合技巧，先放未歸類，週更時再判是否併入既有頁或另開類別；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 具名開發者原文（Simon Willison，本站另有 [[entities/simon-willison]]），非匿名轉述或行銷稿；原文截斷，具體 prompt 全文、Rust 版實作細節與兩種語言的比較結論均未見報導（細節未載）。
+- **來源：** Blog／Simon Willison；[simonwillison.net](https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單次個人實驗，僅標題與開頭摘要可用，無第三方採用或複現數據）
 
 #### Ansub/tv-detox：用 Claude Code／Codex 生成清理指令讓老舊 Android TV 恢復流暢，搭配無廣告簡化主畫面（2026-10-30）
 
