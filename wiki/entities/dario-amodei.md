@@ -41,7 +41,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
 > **最新動態**（2026-11-13）
-> - 癌症十年治癒說首度遭醫療界公開質疑時程過於樂觀，見下方核心論述
+> - 癌症十年治癒說首度遭醫療界公開質疑時程過於樂觀，詳見 [[entities/dario-amodei#核心論述]]
 > - 紐約時報報導稱已讓 OpenAI 等同業不滿，具體原因未見報導（僅標題）
 
 ---
