@@ -34,18 +34,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **新模型發布對照減速呼籲**（2026-11-09）
-> CNBC：Anthropic 發布新旗艦模型，為 Amodei 呼籲 AI 減速以來首次；IPO 聲浪漸起，僅標題可用。
+> **IPO 直播將由 Amodei、Dimon 同台**（2026-11-10）
+> Yahoo Finance 報導 Anthropic 規劃 IPO 直播，Amodei 與摩根大通執行長 [[entities/jamie-dimon|Jamie Dimon]] 同列；僅標題可用，時間與形式未見報導。IPO 脈絡見 [[topics/anthropic-ipo]]。
 
 ---
 
 ## 現況
+
+2026-11-10，Yahoo Finance 報導 Anthropic 規劃 IPO 直播，由 Amodei 與摩根大通執行長 [[entities/jamie-dimon|Jamie Dimon]] 出席；僅標題可用，播出時間、形式與 Dimon 角色未見報導。
 
 2026-11-09，CNBC 報導稱 Anthropic 發布新旗艦模型，為 Amodei 呼籲 AI 減速以來首次，同時提及 IPO 聲浪漸起；僅標題可用，具體內容未見報導。
 
@@ -59,6 +61,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-11-10 | Yahoo Finance：Anthropic 規劃 IPO 直播，Amodei 與 Dimon 同列（僅標題可用） | Google News／Yahoo Finance |
 | 2026-11-09 | CNBC：Anthropic 發布新旗艦模型，為 Amodei 呼籲減速以來首次，IPO 聲浪漸起（僅標題可用） | Google News／CNBC |
 | 2026-11-05 | NYT 側寫整理其思想脈絡如何形成現行 AI 路線（僅標題可用） | Google News／The New York Times |
 | 2026-10-29 | Fortune：公司去年花 275 萬美元保護本人人身安全，逾年薪（1,800 萬美元）4 倍以上（僅標題可用） | Google News／Fortune |
@@ -113,6 +116,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 相關議題
 
+- [[topics/anthropic-ipo]] — IPO 進程與直播規劃
+- [[entities/jamie-dimon]] — 摩根大通執行長，11-10 報導列為 IPO 直播同台者
 - [[entities/yann-lecun]] — 10-04 起在 Hacker News 擴散（247 分）的公開路線對立：LeCun 公開批評 Amodei 的風險示警，原話與查證見該頁
 - [[topics/anthropic-government-policy]] — 政府 AI 監管立場
 - [[topics/anthropic-business]] — 企業策略與商業動態
@@ -125,6 +130,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Anthropic Plans IPO Live Stream With Amodei, JPMorgan CEO Dimon](https://news.google.com/rss/articles/CBMimwFBVV95cUxOSW9rN0FucU5YWWx1Vm96c2JjVGowUmR3Q0hVaXNHRkFzMFNaaS1rNTViUXM3YzhibHByOXFSb3RMZlNMU3VGRkJVR3ctNmU5a2tVX1J0dXFmWGpHZlFPNHRsQkZQYUR4NTl1RnRwOTZJYWpCU0ZzS1hoTjNlUUVOR1NPZHhtcXczd3cxeDN1UXByWWJ5dzE0dFR3MA?oc=5) — Google News／Yahoo Finance，2026-11-10（僅標題可用）
 - [Anthropic releases first frontier models since Amodei's call for slowdown as IPO buzz builds](https://news.google.com/rss/articles/CBMif0FVX3lxTE1EZ19OSTNSY1dhR3hRS1h5MWdBMnQtbDBZRG9lNUl6c2Z3Sy1hYlh2LUY2elVFd1BzbUVrYkdHcC1XQVBuTFZ3d2p3ME9uTkRRb0k5NE1OdjB1eU5XNFFWb3pTcTd1OUw0cTF2Ynd4M25tSGFQaHdhVFFoZVZyR1U?oc=5) — Google News／CNBC，2026-11-09（僅標題可用）
 - [What Shaped Anthropic CEO Dario Amodei's Thinking on A.I.](https://news.google.com/rss/articles/CBMiggFBVV95cUxNQzc5ME9TaVQ4MWd2dlgyempENHN0eTRwRDZ0NmN1Vlo3OTRLQWpIdjVsRDVJSnFTSGlyWlJzamtaelVoTHpuSnVITlpuT0VLUnFKUlZpOWFWb2V5UUdyVk5EU3lYb1BwSzFBQ2c0TDNZY3pmcXZFTkM4MXpscEk4V3pR?oc=5) — Google News／The New York Times，2026-11-05（僅標題可用）
 - [Anthropic spent $2.75 million guarding Dario Amodei last year—more than 4 times his salary](https://news.google.com/rss/articles/CBMivwFBVV95cUxONTFYMkE3VElIM3Q5QlM3Q3FZSlJXQ2ExZDJwMkdqdmVTenZ0X0pwVXNkTHAwc2lBdkh0NVcxVENFN3Z0S21TZ3E0YWZ1UmZKdlZpc1Nsb0plTWRzU3dsZ05oX1dDX09yamJVWjN5bTRCeV95V0pnNjItWW91MC1Lak9ob3o5c2hGeERMOTJMdzNfSUgxQWdIR0tBeHd0d19XaVZPQkdGLWw3aC1mbTF2bUo3YlBiTkM1VVRpcXFUVQ?oc=5) — Google News／Fortune，2026-10-29（僅標題可用）
@@ -177,6 +183,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-11-10：Yahoo Finance 報導 Anthropic 規劃 IPO 直播，Amodei 與摩根大通執行長 [[entities/jamie-dimon|Dimon]] 同列；僅標題可用，播出時間與形式未見報導，IPO 脈絡見 [[topics/anthropic-ipo]]（來源：Google News／Yahoo Finance）
 - 2026-11-09：CNBC 報導稱 Anthropic 發布新旗艦模型，為 Amodei 呼籲 AI 減速以來首次，同時提及 IPO 聲浪漸起；具體模型與財務內容未見報導（僅標題可用）（來源：Google News／CNBC）
 - 2026-11-05：《紐約時報》刊出側寫文章，整理 Amodei 的思想脈絡如何形成他現行的 AI 路線；僅標題層級資訊可用，具體論點未見報導（來源：Google News／The New York Times）
 - 2026-10-29：Fortune 報導 Anthropic 去年花費 275 萬美元保護 Amodei 人身安全，金額超過他 1,800 萬美元年薪（見 10-06）四倍以上；具體安保措施未見報導（僅標題可用）（來源：Google News／Fortune）

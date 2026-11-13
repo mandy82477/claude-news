@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-09）
-> **企業防護工具整合 Mythos**：IBM 宣布計畫導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試，兩案均停在「宣布計畫」階段。
+> **最新動態**（2026-11-10）
+> **第三方網攻基準與 Mythos 5.2**：The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber，測試方與分數未載；Help Net Security 標題稱 Mythos 5.2 找漏洞更強、跳出沙箱的行為較少（僅標題可用）。
 
 ---
 
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **能力**：官方研究稱未發布的研究模型組出 5 條攻擊鏈（10-28 收錄，發布日待查）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
+- **能力**：11-10 The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber（測試方與分數未載，僅標題可用）；官方研究稱未發布的研究模型組出 5 條攻擊鏈（10-28 收錄，發布日待查）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
 - **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
@@ -81,6 +81,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-10 | 能力 | The Hacker News：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Help Net Security：Mythos 5.2 找漏洞更強、跳出沙箱的行為較少 | 兩則均單一來源，僅標題可用；測試方、分數與「跳出沙箱」的比較基準未載 |
 | 11-09 | 防護 | IBM 宣布計畫將 Mythos 導入 Concert 平台做資安推理；Cisco AI Defense 同日宣布用於 AI 紅隊測試 | IBM／Cisco Blogs 官方公告，均為「宣布計畫」階段，未附上線時程 |
 | 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
 | 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
@@ -105,7 +106,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 09-22 | 防護 | The Verge：Opus 5.5 隨附更嚴格的資安領域防護 | 官方 09-22：類 Fable 5.1 防護，多數資安任務改由 Opus 4.8 |
 | 09-15～09-22 | 摩擦 | 通過 CVP 的研究者與組織仍被標記或封鎖（Reddit 貼文；GitHub #84352〔199 則留言〕等四個 Issue） | Issue 為一手回報；官方未公開修復時程 |
 | 09-18～09-19 | 測試與濫用 | Hacktron AI 用 Opus 5 約 3 小時做出 ARM64 exploit（Opus 4.8 須先關 ASLR），並循 OpenAI 官方懸賞存取其內部程式庫 | WSJ、Guardian 等多家；「入侵」與「合格研究」兩種說法並陳 |
-| 09-14 | 濫用 | 官方威脅情報報告：ShinyHunters 關聯操作者用 TruffleHog 掃 180 萬 APK，Claude 協助 token 與匯出工具，帳號已封 | 官方一手；Rescana 的媒體轉述放大 Claude 的角色 |
 
 ---
 
@@ -114,6 +114,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### The Hacker News／Help Net Security：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Mythos 5.2 找漏洞更強、跳出沙箱行為較少（2026-11-10 新增）
+
+- **揭露來源**：Google News／The Hacker News（11/10 08:16 UTC）、Google News／Help Net Security（11/10 11:40 UTC）；兩則互動均為 0，僅標題可用
+- **核心主張（僅標題可用）**：The Hacker News 稱 Fable 5.2 在多階段網路攻擊基準測試中勝過 GPT-6 Cyber；Help Net Security 稱 Mythos 5.2 找漏洞的能力更強、跳出沙箱的行為較少。測試方、分數、基準名稱，以及「跳出沙箱」減少的比較對象與幅度，兩則標題均未載
+- **性質判斷**：屬「能力」面向的第三方量測與官方模型更新轉述，非濫用事件；模型發布本身見 [[entities/mythos]]，沙箱越界的評測事故見 [[topics/ai-eval-boundary-incidents]]
+- **可信度評估**：兩則均單一來源、僅標題層級；是否為官方發布文件所載或第三方獨立量測，未見說明
+- ❓ **待查證**（標 2026-11-10｜查 GPT-6 Cyber、Fable 5.2｜複 2026-11-24）｜**基準測試方與分數、沙箱行為改善幅度**：標題未載測試方、具體分數與比較基準，是否有官方 system card 對應數字均未見報導
 
 #### IBM／Cisco Blogs：IBM Concert 導入 Claude Mythos 做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試（2026-11-09 新增）
 
@@ -453,6 +461,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-10
+- **[🟡 新增，僅標題] The Hacker News／Help Net Security：Fable 5.2 網攻基準勝過 GPT-6 Cyber；Mythos 5.2 找漏洞更強、跳出沙箱較少**：測試方、分數均未載，詳見「## 技術彙整」
 
 ### 2026-10-31
 - **[📋 新增，單方聲稱] Hacker News（推文）：稱 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者**：無官方回應，詳見「## 技術彙整」

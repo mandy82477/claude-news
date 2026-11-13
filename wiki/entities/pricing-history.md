@@ -33,11 +33,12 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **最新動態**（2026-11-09）
-> - **Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。
+> **最新動態**（2026-11-10）
+> - **Plans & Pricing 頁改版：新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）**；歸屬方案與價格未載，同日 Anthropic 推出 Meetings、Sheets 辦公產品（Official Docs；TechCrunch；The Verge）
+> - （11-09）**Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。
 
 ---
 
@@ -45,6 +46,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 官方已確認、會改到帳單的，新的在上；每條的現行規則住母頁，這裡只記什麼時候變。⚠️＝不必你操作就會改到帳單。
 
+- **11-10｜Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落、移除 Dashboards（beta）段落**：官方頁字數 23,768→23,984；歸屬方案與是否另計費未載，見 [[entities/pricing#我的方案現在有什麼]]
 - **11-09｜Fable 5.2 發布，牌價 $8/$40（降兩成），Fast mode 擴及 Fable 5.2，Batch 示範模型換代**：見 [[entities/pricing#模型 API 定價現況]]
 - **11-07｜usage credits 說明頁大改版**：帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文，新規則待查證。見 [[entities/pricing#當前生效的計費規則]]
 - **11-02 查證｜方案改名與附帶 API credits**：$200 一檔現名 Ultra（每週 Pro 的 10 倍用量、驗證帳號無 5 小時上限）；Max／Ultra／Team 每月附 $100／$200／最多 $500 API credits，不付 Claude Code。見 [[entities/pricing#我的方案現在有什麼]]
@@ -65,6 +67,11 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 ---
 
 ## 定價與促銷（模型定價、方案設計）
+
+#### 2026-11-10：Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）
+- 官方定價頁字數 23,768→23,984，新增 7 段（Claude Data，以及 Data 搭配 Motion、Sheets、Whiteboards 的組合），移除 3 段（Claude Dashboards、Claude Motion and Dashboards）（Official Docs 變更偵測）
+- 各組合歸哪個方案、是否另計費，抓取內容未列；同日 TechCrunch、Reuters、The Verge、Bloomberg 報導 Anthropic 推出 Claude Meetings、Sheets 等辦公產品
+- 10-09 Dashboards（beta）曾載明算進方案用量；本次移除後該規則是否沿用至新產品未載
 
 #### 2026-11-09：Claude Fable 5.2／Mythos 5.2 發布，牌價降兩成；Plans & Pricing 頁同步擴大 Fast mode、換代 Batch 示範模型
 

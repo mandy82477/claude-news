@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-09）
-> - **功能請求**：使用者中斷（interrupt）時可觸發的 hook（GitHub issue #9516，30 則留言）尚未獲官方回應（🧠 組）。
-> - **UI 顯示 bug**：同一輪先輸出文字、接著呼叫 AskUserQuestion 時，前面的文字不會顯示，直接跳到問題對話框（GitHub issue #65662，25 則留言）（🧠 組）。
+> **最新動態**（2026-11-10）
+> - **互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。
+> - **功能請求**：Desktop／Cowork 支援 RTL（希伯來／阿拉伯文）排版（GitHub issue #38005）累積 47 則留言、126 個讚。
 
 ---
 
@@ -55,9 +55,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 按主題分組；各組內大致依回報時間倒序。每條開頭的狀態標記回答「現在還會發生嗎」：🔴 未修復 / ✅ 已修復（註明修復版本）/ ⛔ 官方拒修 / ❓ 待查證。
 %% 母頁「現在還沒修好的」是本頁各組的結論表，條目本身不搬 %%
 
-### 🛡️ 安全與隱私（20 條未修復、7 條已修復、1 條拒修、3 條❓）
+### 🛡️ 安全與隱私（19 條未修復、8 條已修復、1 條拒修、3 條❓）
 
-- 🔴 **未修復（研究中）**｜**「不再詢問」致密鑰外洩，Boris 公開回應（HN 497 分，11-07）**：歷來未內建密鑰清除，正研究方案，建議用 auto mode 取代手動維護的允許／拒絕清單。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+- ✅ **已修復 v2.1.323**｜**「不再詢問」致密鑰外洩（11-07）**：2.1.323 起含密鑰的允許規則不寫檔，`settings.local.json` 改全域忽略（[CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，11-14 查）。已外洩的金鑰要換。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
 - ✅ **已修復 v2.1.317**｜**Claude Code 把使用者信箱塞進對外 HTTP 請求 User-Agent（如 SEC API 要求）（GitHub issue #107757，HN 1,485 分，2026-11-05）**：與 #78431 同一現象、不同 issue 號。
   - v2.1.317（11-03）起，web 或 shell 工具要把帳號信箱送上網路前會先詢問（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)，2026-11-08 查證）；npm 穩定版 11-08 仍為 2.1.311、尚未包含。
   - 官方未在 issue 回應，檢查涵蓋範圍未說明。證據見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
@@ -398,7 +398,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork Edit/Write 工具因緩衝區容量上限靜默截斷檔案（byte-conservation buffer cap，GitHub issue #53940，累積 44 則留言／16 個讚，原始回報 2026-04-27，2026-07-16 為作者持續維護的長篇更新摘要）**：使用者回報 Cowork 的 Edit/Write 工具會因緩衝區容量上限機制靜默截斷檔案內容，且此問題具確定性、在任何檔案大小下皆會觸發，並非邊緣情況；屬嚴重的資料完整性缺陷；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 網路對外連線白名單失效（GitHub issue #30112，累積 77 則留言、59 個讚，首見 2026-07-17，2026-11-03 互動數更新）**：Cowork 的網路對外連線白名單機制失效，自訂網域即使已列入允許清單仍遭以 403 blocked-by-allowlist 擋下；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件新增停用自動附加開啟檔案/選取範圍設定（GitHub issue #24726，累積 77 則留言、243 個讚，首見 2026-07-17，2026-09-16 互動數更新）**：使用者希望 VS Code 擴充套件提供選項，可停用自動將目前開啟檔案或選取範圍附加進對話 context 的行為；官方尚未回應或提供設定選項。
-- 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-11-14）｜**Remote Control 自動重連失效（GitHub issue #34255，71 則留言、108 個讚，07-16 首見，09-19 更新）**：中斷不自動重連、無提示；仍 open。與 #28322、#29006 同屬不穩定訊號。
+- 🔎 **查無官方**（標 2026-08-09｜查 #34255、Remote Control｜複 2026-11-14）｜**Remote Control 自動重連失效（GitHub issue #34255，73 則留言、112 個讚，07-16 首見，11-10 更新）**：中斷不自動重連、無提示；仍 open。與 #28322、#29006 同屬不穩定訊號。
 - 🔴 **未修復**｜**Remote Control 顯示「不可用於目前方案」，儘管帳號已以 Pro 方案完成驗證（GitHub issue #28817，45 則留言，2026-10-05）**：Pro 方案帳號驗證通過後仍報「not yet available on your plan」，登出重登無效；與 #34255（自動重連失效）現象不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Remote Control：手機 app 連線時互動式權限提示未渲染（GitHub issue #35637，累積 26 則留言、32 個讚，2026-10-25）**：與自動重連失效（#34255）、方案驗證失敗（#28817）同屬可靠性問題，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：跨機器多 agent 協作（Agent-to-Agent 協定）（GitHub issue #28300，累積 36 則留言、41 個讚，首見 2026-07-14，2026-08-24 讚數更新）**：使用者呼籲 Claude Code 支援跨機器的多 agent 協作，採用 Agent-to-Agent 協定；與 [[entities/managed-agents]] 現有多代理協調能力相關，並與 [issue #24798](https://github.com/anthropics/claude-code/issues/24798)（多 Claude session 間直接通訊）同屬 agent 間直接通訊缺口；官方尚未回應或排入路線圖。
@@ -414,7 +414,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**VSCode 擴充套件 `ide_selection` 缺失、`ide_opened_file` 回報錯誤（GitHub issue #8451，累積 50 則留言、35 個讚，2026-07-10）**：VSCode 擴充套件未正確回報 `ide_selection`，且 `ide_opened_file` 欄位回傳錯誤檔案資訊，影響依賴這些欄位判斷編輯器狀態的工作流；官方尚未回應。
 - 🔴 **未修復**｜**GitHub Connector 已在 Claude Desktop 連結卻未被識別（GitHub issue #32479，累積 100 則留言、149 個讚，2026-10-02 互動數更新）**：Desktop 完成連結授權後 Claude 仍無法辨識，依賴 GitHub 存取的工作流無法使用；官方尚未回應。
 - 🔴 **未修復**｜**VSCode 擴充套件確認變更時未顯示 Edit 預覽/diff（GitHub issue #8660，累積 52 則留言、90 個讚，首見 2026-07-08，2026-09-11 互動數更新，已持續數月未修復）**：確認變更時 diff 畫面未正確顯示，難以於套用前檢視異動；官方尚未回應。
-- 🔴 **未修復**｜**Claude Desktop/Cowork 缺 RTL（希伯來/阿拉伯文）排版支援（GitHub issue #38005，累積 41 則留言、111 個讚，首見 2026-07-07，2026-08-05 互動數更新，功能請求）**：使用者要求 Claude Desktop 與 Cowork 介面支援 RTL（right-to-left）排版，目前不支援希伯來文、阿拉伯文等 RTL 語言的正確顯示；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop/Cowork 缺 RTL（希伯來/阿拉伯文）排版支援（GitHub issue #38005，累積 47 則留言、126 個讚，首見 2026-07-07，2026-11-10 互動數更新，功能請求）**：使用者要求 Claude Desktop 與 Cowork 介面支援 RTL（right-to-left）排版，目前不支援希伯來文、阿拉伯文等 RTL 語言的正確顯示；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Pro：CoworkVMService 因「signature verification initialization failed: failed to get service executable path」無法啟動（GitHub issue #29941，累積 39 則留言，首見 2026-07-23）**：使用者回報 Windows 11 Pro 上 CoworkVMService 因簽章驗證初始化失敗（找不到服務執行檔路徑）而無法啟動，導致 Cowork 功能在該平台完全無法使用；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Pro：缺少 HCS 服務 vfpext 導致 Cowork 無法運作（GitHub issue #74649，累積 87 則留言、7 個讚，2026-10-23 互動數更新，今日 GitHub Issues 討論量最高）**：與 #29941 同屬 Windows Cowork 啟動障礙但成因不同；官方尚未回應。
 - 🔴 **未修復**｜**Desktop：macOS 無法啟用 Bypass Permissions，自動退回 Accept Edits（GitHub issue #61415，累積 65 則留言、29 個讚，2026-09-11，v2.1.148）**：畫面顯示「Permission mode couldn't be changed」；官方尚未回應。

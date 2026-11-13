@@ -8752,3 +8752,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 📋 需使用者端設定：無
 - ⚠️ 本機承接：無（本輪雲端全程完成，無待本機接手事項）
 - ⚠️ 環境限制：`check_rules.py` 檢查 6（個人路徑外洩）本輪持續失敗，命中為 `src/gathered_archive/2026-11-09.json`（GitHub Actions 於今日抓料時已提交，先於本 session 存在）等 4 檔內含第三方 HN 募資帖留言中的 email 地址（`justintimeinnovation@gmail.com`），非本專案人員個人路徑外洩。嘗試過的修法：將該類資料檔納入 `.claude/review-registry.json` 的 `exclude_globs`（比照既有「歷史逐字引述」先例），但此操作被 auto mode 安全分類器判定為「Security Weaken」並拒絕，已完整復原該筆改動、未強行繞過。此檻在本輪與未來任何雲端 session 都會持續擋下 Stop hook，需使用者決定：(a) 人工核准將該類抓料衍生檔納入 exclude_globs，或 (b) 接受此為已知、非安全性的誤報並調整 check_rules.py 的判準。
+## 2026-11-10 Ingest
+
+- 來源日報：[[news/2026-11-10]]（2026-11-14 本機補跑：11-10～11-12 雲端排程因訂閱用量上限未開跑；原料走 archive replay，97 則）
+- 更新頁面：
+  - **模型**：entities/fable-5、entities/mythos
+  - **功能**：entities/claude-code-releases、entities/claude-code-known-issues、entities/claude-code-features、entities/cowork、entities/claude-code、topics/official-community-gap
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/anthropic-partnerships-compute、topics/enterprise-tool-tracker、entities/pricing、entities/pricing-history、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-product-vulns、topics/ai-agent-safety-cyber、topics/ai-agent-safety-prompt-injection、topics/ai-agent-safety
+  - **社群**：topics/community-multi-agent、topics/community-tech-patterns、topics/community-tech-discussions
+  - **人物**：entities/dario-amodei、entities/jamie-dimon
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals
+- 新增頁面：無
+- feature-radar：本日無新功能，radar 未動（Vertex fast mode 為既有功能擴平台；Preserved thinking 僅標題）
+- index：無
+- 摘要：IPO 路演開跑（官方載明 8.25 億股、每股 70～78 美元，掛牌日僅消息人士稱 11-19）；Claude Meetings／Sheets 辦公工具上線；「不再問」密鑰外洩六家再報；Fable 5.2 進 GitHub Copilot
+- 呈現品質：全部通過（product-vulns 新增條列 350 字已拆兩條）
+- 品質備註：[商業] 來源歸因十餘筆寫成「CNBC 新聞連結」等佔位字，主編依點名條目從原料回填 URL；[安全政策] 首次回報未照契約格式，追問後重交；[社群] 回報以散文交代不收條目，未逐則列 URL（收報腳本未回應清單 18 則皆屬此，判讀為已看過不收）；[主編] 本輪派工以包檔路徑請記者自行讀全文，代替貼入 prompt（內容相同、包尾 END 核對），以控制主 session 用量
+- 分類回退：追加派工 1 筆（STE80 Humanizer 排除→社群，已收）；kraken-cli 複核判社群、社群記者回退，主編最終判定排除（一跳上限）
+- 轉知帳本：結案 H-a6e390、H-6ef202（功能）；新開 H-e9d5d3（功能→模型：Help Center 訓練資料、Preserved thinking、AI 生成內容標記三段，原記者擬轉安全政策的標記段併入模型比較頁）、H-b914d1（商業→功能：Claude Meetings／Sheets 入產品矩陣）、H-b61772（商業→模型：Gemini 4 Carbon 牌價與 Fable 5.2 降價）、H-142c26（商業→安全政策：Microsoft 預設開放英國 Copilot 租戶、K-12 隱私協議）、H-e5ec4e（社群→功能：runner 是否入產品化矩陣）；H-8dc8a5（安全政策→功能：不再問外洩）主編當輪查證後結案
+- 主編查證（11-14）：「不再問」密鑰外洩官方已於 v2.1.323（11-12）修補——含密鑰或會存進 git 追蹤 `settings.local.json` 的允許規則改為只在本次 session、`settings.local.json` 改全域忽略；known-issues 該列 🔴→✅、product-vulns 懸置結案。IPO 價格區間 70～78 美元經查為官方公告載明（記者原寫消息人士，已改）。Claude Meetings／Sheets 方案歸屬（隨轉知 H-b914d1）與 Prompting Fable 5.2 全文（隨 fable-5 既有懸置）未查
+- devpractice 沉澱：候選 3 筆／手冊寫入 0 則
+- market 判讀：判讀 1 則（IPO 路演，⚖️）；里程碑登記 1 筆、回顧結算新增 1 列（11-24）

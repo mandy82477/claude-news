@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-09
+**最後更新：** 2026-11-10
 **最後新聞更新：** 2026-11-09
 
-> **最新動態**（2026-11-09）
-> - **版本更新**：v2.1.321 將 Claude Fable 5.2 設為預設 Fable 模型，並新增 11 個功能候選旗標與 remote 相關 `--settings <file>` 參數（見 [[entities/claude-code-releases]]、[[topics/claude-code-experimental]]）。
-> - **已知問題新增**：User Interrupt Hook 功能請求、AskUserQuestion 同輪文字不顯示的 UI 回報（見 [[entities/claude-code-known-issues]]）。
-> - **文件異動**：Help Center release notes 新增「調整模型／effort／thinking 設定」「Cowork 專案整理任務」段（見 [[entities/claude-code-features]]、[[entities/cowork]]）；桌面版文件新增 SSH/WSL 預覽安全開關。
+> **最新動態**（2026-11-10）
+> - **版本更新**：v2.1.322 新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度（見 [[entities/claude-code-releases]]）。
+> - **互動數更新**：Remote Control 自動重連失效（#34255）累積 73 則留言、112 個讚；Desktop／Cowork RTL 排版功能請求（#38005）47 則留言、126 個讚（見 [[entities/claude-code-known-issues]]）。
+> - **文件異動**：桌面版文件新增 SSH session 讀遠端主機 managed settings；Help Center 再移除「模型設定」與 Cowork「專案整理任務」段（見 [[entities/claude-code-features]]、[[entities/cowork]]）。
 
 ---
 
@@ -48,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-08 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-06 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-08 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-10 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-10 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-10 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的

@@ -29,12 +29,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-09
+**最後更新：** 2026-11-10
 **最後新聞更新：** 2026-11-09
 
-> **本日新增兩則技術彙整**（2026-11-09）
-> - **多代理 PR Review**：Simon Willison 把 agent 開的 PR 說明收進 `<details><summary>` 折疊區塊維持列表可讀性，見 [[topics/community-guardrails#2026-11]]。
-> - **技術彙整未歸類**：Simon Willison 具名實測，以 Claude（Opus 5.5）協助寫 SQLite parse_number() 擴充並比較 Rust 版實作，見 [[topics/community-tech-patterns#未歸類]]。
+> **本日新增一則技術彙整**（2026-11-10）
+> - **Multi-agent 架構**：yicheng47/runner 讓 Claude Code、Codex、Copilot CLI 與 pi 在同一任務裡協作、各保留原生終端介面，見 [[topics/community-multi-agent#2026-11]]。
 
 ---
 
@@ -52,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
-| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-11-07 |
+| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化 | 2026-11-10 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理、Agent 記憶保護 | 2026-11-07 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-04 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-04 |

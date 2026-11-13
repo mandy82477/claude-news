@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
-**最後更新：** 2026-10-30
+**最後更新：** 2026-11-10
 **最後新聞更新：** 2026-10-30
 
 > **官方補了沒更新**（2026-10-30）
@@ -200,6 +200,8 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[entities/claude-code]] — Claude Code 現在有哪些毛病、哪些修了，以及每個 issue 的留言與讚數
 
 ## 時序
+
+%% 2026-11-10：H-a6e390、H-6ef202 轉知評估——microsoft/win-dev-skills 是 Microsoft 自家跨 Copilot／Claude Code／Codex 的 Windows 開發 plugin 集，是單一來源的生態擴充，不是對 Claude Code 行為的痛點，亦無 ≥2 獨立社群工具或 ≥100 讚 issue；Simon Willison 把 agent 開的 PR 說明收進 `<details>` 折疊是單一個人做法，無對應官方缺口。兩者皆不開新列，維持現狀 %%
 
 %% 2026-10-17：H-987f57 轉知評估——next-ai-draw-io（聊天畫 draw.io 流程圖/MCP，36,275★）、cve-mcp-server（27 項資安情報工具/MCP，1,624★）、seo-skills（SEO 全流程 skill，506★）、SeeCode（JSON 規格→動態圖表，515★）均為單一工具，無既有矩陣列可對應（無 ≥2 獨立方案或 ≥100 讚 issue 佐證同一痛點），不開新列，維持現狀 %%
 

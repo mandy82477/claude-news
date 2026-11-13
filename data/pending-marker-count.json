@@ -1,15 +1,27 @@
 {
-  "count": 223,
-  "updated": "2026-11-08",
-  "note": "W45 週度回顧：#107757／#78431 查實 v2.1.317 已加送出信箱前詢問，移除懸置標記",
+  "count": 242,
+  "updated": "2026-11-14",
+  "note": "11-14 主編查證：不再問外洩 2.1.323 已修，結案一筆",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
       "label": "entities/boris-cherny（標 2026-10-26｜查 Boris Cherny、eu.36kr.com、正式辭職）"
     },
     {
+      "key": "entities/boris-cherny::2026-11-08::skills get lost、take responsibility",
+      "label": "entities/boris-cherny（標 2026-11-08｜查 skills get lost、take responsibility）"
+    },
+    {
       "key": "entities/boris-cherny::2026-10-26::boris cherny",
       "label": "entities/boris-cherny（標 2026-10-26｜查 Boris Cherny）"
+    },
+    {
+      "key": "entities/boris-cherny::2026-11-08::skills get lost、take responsibility",
+      "label": "entities/boris-cherny（標 2026-11-08｜查 skills get lost、take responsibility）"
+    },
+    {
+      "key": "entities/boris-cherny::2026-11-08::skills get lost",
+      "label": "entities/boris-cherny（標 2026-11-08｜查 skills get lost）"
     },
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -116,6 +128,10 @@
       "label": "entities/claude-code（標 2026-09-08｜查 iOS App、設定區塊）"
     },
     {
+      "key": "entities/claude-code::2026-11-07::自動設定、api 金鑰",
+      "label": "entities/claude-code（標 2026-11-07｜查 自動設定、API 金鑰）"
+    },
+    {
       "key": "entities/claude-code::2026-11-06::mean to claude、don't be mean",
       "label": "entities/claude-code（標 2026-11-06｜查 mean to Claude、Don't Be Mean）"
     },
@@ -148,12 +164,24 @@
       "label": "entities/fable-5（標 2026-10-18｜查 TestingCatalog、Fable 5.5）"
     },
     {
+      "key": "entities/fable-5::2026-11-09::官方 prompting 文件是否已補 fable 5.2 版本",
+      "label": "entities/fable-5（標 2026-11-09｜查 官方 prompting 文件是否已補 Fable 5.2 版本）"
+    },
+    {
       "key": "entities/fable-5::2026-09-16::complicated curve、scientific american",
       "label": "entities/fable-5（標 2026-09-16｜查 complicated curve、Scientific American）"
     },
     {
       "key": "entities/fable-5::2026-08-26::tech-insider.org、gpt-5.6 sol",
       "label": "entities/fable-5（標 2026-08-26｜查 tech-insider.org、GPT-5.6 Sol）"
+    },
+    {
+      "key": "entities/fiona-fung::2026-11-08::skills get lost、take responsibility",
+      "label": "entities/fiona-fung（標 2026-11-08｜查 skills get lost、take responsibility）"
+    },
+    {
+      "key": "entities/fiona-fung::2026-11-08::skills get lost",
+      "label": "entities/fiona-fung（標 2026-11-08｜查 skills get lost）"
     },
     {
       "key": "entities/jack-clark::2026-10-09::woke、另一位共同創辦人",
@@ -174,6 +202,14 @@
     {
       "key": "entities/mythos-archive::2026-08-10::mashable、public release",
       "label": "entities/mythos-archive（標 2026-08-10｜查 Mashable、public release）"
+    },
+    {
+      "key": "entities/mythos::2026-11-07::claude mythos 5.5、testingcatalog",
+      "label": "entities/mythos（標 2026-11-07｜查 Claude Mythos 5.5、TestingCatalog）"
+    },
+    {
+      "key": "entities/mythos::2026-11-09::官方 prompting 文件是否已補 mythos 5.2 版本",
+      "label": "entities/mythos（標 2026-11-09｜查 官方 prompting 文件是否已補 Mythos 5.2 版本）"
     },
     {
       "key": "entities/mythos::2026-11-01::hugging face、mythos-class",
@@ -220,6 +256,10 @@
       "label": "entities/pricing（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置）"
     },
     {
+      "key": "entities/pricing::2026-11-07::usage credits、japan、expiration",
+      "label": "entities/pricing（標 2026-11-07｜查 usage credits、Japan、expiration）"
+    },
+    {
       "key": "entities/robert-mahari::2026-09-13::robert mahari、claude for legal",
       "label": "entities/robert-mahari（標 2026-09-13｜查 Robert Mahari、Claude for Legal）"
     },
@@ -246,6 +286,14 @@
     {
       "key": "entities/tom-brown::2026-10-09::woke、另一位共同創辦人",
       "label": "entities/tom-brown（標 2026-10-09｜查 woke、另一位共同創辦人）"
+    },
+    {
+      "key": "topics/ai-agent-safety-cyber::2026-11-10::gpt-6 cyber、fable 5.2",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-10｜查 GPT-6 Cyber、Fable 5.2）"
+    },
+    {
+      "key": "topics/ai-agent-safety-cyber::2026-11-09::concert、cisco ai defense",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-09｜查 Concert、Cisco AI Defense）"
     },
     {
       "key": "topics/ai-agent-safety-cyber::2026-11-04::cert-in、claude mythos",
@@ -290,6 +338,10 @@
     {
       "key": "topics/ai-agent-safety-cyber::2026-09-14::rescana、frkoo、trufflehog",
       "label": "topics/ai-agent-safety-cyber（標 2026-09-14｜查 Rescana、frkoo、TruffleHog）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-09::dark reading、linux orgs",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-09｜查 Dark Reading、Linux Orgs）"
     },
     {
       "key": "topics/ai-agent-safety-product-vulns::2026-11-05::dispatch、跨企業邊界",
@@ -568,6 +620,10 @@
       "label": "topics/market-lessons（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
     },
     {
+      "key": "topics/market-signals-compute::2026-11-08::gas-fired、天然氣發電",
+      "label": "topics/market-signals-compute（標 2026-11-08｜查 gas-fired、天然氣發電）"
+    },
+    {
       "key": "topics/market-signals-compute::2026-11-04::terawulf、信用擔保",
       "label": "topics/market-signals-compute（標 2026-11-04｜查 TeraWulf、信用擔保）"
     },
@@ -622,6 +678,14 @@
     {
       "key": "topics/market-signals-compute::2026-09-16::澳洲資料中心、macquarie",
       "label": "topics/market-signals-compute（標 2026-09-16｜查 澳洲資料中心、Macquarie）"
+    },
+    {
+      "key": "topics/market-signals-customers::2026-11-09::fable 5.2、快取讀取",
+      "label": "topics/market-signals-customers（標 2026-11-09｜查 Fable 5.2、快取讀取）"
+    },
+    {
+      "key": "topics/market-signals-customers::2026-11-09::ibm concert、cisco ai defense",
+      "label": "topics/market-signals-customers（標 2026-11-09｜查 IBM Concert、Cisco AI Defense）"
     },
     {
       "key": "topics/market-signals-customers::2026-10-29::4,800、financial advisors",
@@ -690,6 +754,14 @@
     {
       "key": "topics/market-signals-customers::2026-09-14::nvidia、palantir、booz allen、資料外洩",
       "label": "topics/market-signals-customers（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-09::morningstar、瞄準 11 月",
+      "label": "topics/market-signals-ipo（標 2026-11-09｜查 Morningstar、瞄準 11 月）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-07::1.2兆美元、1.1兆美元",
+      "label": "topics/market-signals-ipo（標 2026-11-07｜查 1.2兆美元、1.1兆美元）"
     },
     {
       "key": "topics/market-signals-ipo::2026-11-06::拋售潮、1兆美元",
@@ -778,6 +850,10 @@
     {
       "key": "topics/market-signals-ipo::2026-09-08::標普全球、穆迪評等、投資級信評",
       "label": "topics/market-signals-ipo（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評）"
+    },
+    {
+      "key": "topics/market-signals-legal::2026-11-07::[[entities/pricing-incidents]]、courthouse news",
+      "label": "topics/market-signals-legal（標 2026-11-07｜查 [[entities/pricing-incidents]]、Courthouse News）"
     },
     {
       "key": "topics/market-signals-legal::2026-10-28::onegov、屬地政府",

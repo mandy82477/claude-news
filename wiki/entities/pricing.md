@@ -32,12 +32,13 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-09）
-> - **Claude Fable 5.2 發布，牌價 $8/$40 per Mtok，較 5.1 降兩成**；快取讀取沿用 ×0.025（$0.20/Mtok）。官方同日 Plans & Pricing 頁同步改版：Fast mode 擴大至 Fable 5.2（2 倍標準定價、約 2.5 倍速度），Batch processing 新增支援 Fable 5.2 與 Sonnet 5。細節見 [[entities/pricing#模型 API 定價現況]]、[[entities/pricing#一小時／一個月大概多少]]。
+> **最新計費政策異動**（2026-11-10）
+> - **官方 Plans & Pricing 頁新增 Claude Data、Sheets、Whiteboards（beta）相關段落，Dashboards（beta）段落移除**；各自歸哪個方案、是否另計費，抓取內容未列，方案表尚未更新
+> - （11-09）**Claude Fable 5.2 發布，牌價 $8/$40 per Mtok，較 5.1 降兩成**；快取讀取沿用 ×0.025（$0.20/Mtok）。官方同日 Plans & Pricing 頁同步改版：Fast mode 擴大至 Fable 5.2（2 倍標準定價、約 2.5 倍速度），Batch processing 新增支援 Fable 5.2 與 Sonnet 5。細節見 [[entities/pricing#模型 API 定價現況]]、[[entities/pricing#一小時／一個月大概多少]]。
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。
 
 ## 現況

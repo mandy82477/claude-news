@@ -28,12 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-11-07）
-> NDTV Profit 跟進確認高盛禁用 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致（跨 3 媒體）；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
+> **最新企業採用異動**（2026-11-10）
+> - **JPMorgan Chase 美國本部：Unite.AI 稱 Claude Code 使用範圍擴大到工程團隊以外**（僅標題，涉及部門與規模未載）；與先前每月 $2,000 上限只涵蓋部分工程師的做法相比方向放寬，是否同步調整上限未見報導
+> - NDTV Profit 跟進確認高盛禁用 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致（跨 3 媒體）；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
 
 ## 摘要
 
@@ -97,7 +98,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 美國參議院 | 政府（聯邦立法機關） | Claude（幕僚辦公室一般使用） | ❓ | — | Bloomberg Government 報導參議院準備讓幕僚開始使用 Claude，尚未確認已上線，資料存取規範未見報導 | 2026-10-15 |
 | Epic Games | 頂尖（遊戲引擎大廠，Unreal Engine 開發商） | Claude Code ＋ Codex | ✅ | 2026-10-12 | TweakTown（10-29）稱已用 Claude Code／Codex 改善除錯 Unreal Engine；10-12 官方釋出 skills 供外掛，527 星，細節見下方 | 2026-10-12（跟進 2026-10-29） |
 | Barclays | 頂尖（英國環球銀行） | Claude Code | ✅ | — | Anthropic 官方宣布擴大策略合作，目標 2026 年底開發者採用率達 50%、2027 年擴及多數軟體工程師，加速軟體開發、現代化既有系統 | 2026-10-01 |
-| JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；與香港分行退出（06-18 列）為不同辦公室，已查證 2026-10-07 | 2026-09-17 |
+| JPMorgan Chase（美國本部） | 頂尖 | Claude Code | ✅ | — | 每月 $2,000 支出上限，僅部分工程師；8 月約 8,000 人持 Claude 授權；11-09 Unite.AI 稱擴及非工程團隊（僅標題）；與香港分行退出為不同辦公室 | 2026-11-09 |
 | Google | 頂尖 | Claude（不限版本，媒體未指明是否限 Claude Code） | ✅ | 2026-09-15 | Business Insider 報導 Google 已開放全體工程師使用 Anthropic 的 Claude；具體工具範疇、部門、上線時程均未見報導細節 | 2026-09-15 |
 | Rubrik（NYSE: RBRK） | 大型 | Claude Mythos 5（Rubrik Code Guardian） | ✅ | 2026-09-15 | 發布新產品 Rubrik Code Guardian，用 Claude Mythos 5 做程式碼紅隊測試與資安風險排序；10-09 Business Wire 稱屬「Project Hourglass」計畫擴大的一環，具體效能數字未見報導 | 2026-09-15（擴大報導 2026-10-09）|
 | T. Rowe Price | 大型（全球資產管理公司） | Claude API + Claude Code | ✅ | — | 官方新聞稿宣布擴大在投資流程中使用 Claude 與 Claude Code；具體整合範疇、涵蓋部門未見報導細節 | 2026-09-10 |
@@ -219,6 +220,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-10
+- **[擴大採用，僅標題可用] Unite.AI（11-09 發布）：摩根大通把 Claude Code 使用範圍擴大到工程團隊以外**：部門與人數未載；與 09-17 每月 $2,000 上限（部分工程師）屬同一美國本部，見使用現況表（Google News/Unite.AI）
 
 #### 2026-11-07
 - **[媒體跟進，非新事實] NDTV Profit：高盛封鎖 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致**：報導未附精確人數，與 11-02 PYMNTS 首報、11-06 Times of India 跟進同屬同一禁令的規模補充，跨 3 媒體確認「數千名」規模但無精確數字（Google News/NDTV Profit）

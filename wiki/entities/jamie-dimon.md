@@ -34,15 +34,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 多次具名公開評論 Anthropic Mythos AI 的風險，所屬摩根大通亦為 Claude Code 企業客戶
 **首次出現：** 2026-07-16
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-07
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **稱 Mythos AI「supercharged」網路風險，雙源跟進**（2026-10-07）
-> Business Insider 跟進 10-06 Quartz 報導，再引述摩根大通執行長 Jamie Dimon 稱 Anthropic 的 Mythos AI 讓網路安全風險大增，是他第三度就 Mythos 風險公開表態（僅標題可用）。
+> **獲報將與 Amodei 同台 IPO 直播**（2026-11-10）
+> Yahoo Finance 報導 Anthropic 規劃 IPO 直播，摩根大通執行長 Jamie Dimon 與 [[entities/dario-amodei|Dario Amodei]] 同列；僅標題可用。此前 Dimon 三度公開評論 Mythos 風險（最近 10-07）。
 
 ---
 
 ## 現況
+
+2026-11-10，Yahoo Finance 報導 Anthropic 規劃 IPO 直播，由 [[entities/dario-amodei|Amodei]] 與 Dimon 出席；僅標題可用，Dimon 的角色（主持、對談或承銷關係）未見報導，不予推定。IPO 脈絡見 [[topics/anthropic-ipo]]。
 
 2026-10-06，Quartz（經 Google News 轉載）報導，摩根大通執行長 Jamie Dimon 公開表示 Anthropic 的 Mythos AI 讓網路安全風險提高達 10 倍；Business Insider 隔日（10-07）以「supercharged AI cybersecurity risks」措辭跟進報導同一主張，兩篇皆僅可讀取標題，具體發言場合、數據來源與完整論述脈絡未見揭露。
 
@@ -56,6 +58,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 相關議題
 
+- [[topics/anthropic-ipo]] — Anthropic IPO 進程；11-10 報導 Dimon 與 Amodei 同列直播
+- [[entities/dario-amodei]] — 直播同台者
 - [[entities/mythos]] — Anthropic 的 Mythos 模型，本人三度公開評論其風險的對象
 - [[topics/anthropic-government-policy]] — Mythos 出口管制與金融監管機構風險警示的完整政策脈絡
 - [[topics/enterprise-tool-tracker]] — 摩根大通同時是 Claude Code 企業客戶（每月 $2,000 支出上限）
@@ -63,12 +67,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 參考來源
 
+- [Anthropic Plans IPO Live Stream With Amodei, JPMorgan CEO Dimon](https://news.google.com/rss/articles/CBMimwFBVV95cUxOSW9rN0FucU5YWWx1Vm96c2JjVGowUmR3Q0hVaXNHRkFzMFNaaS1rNTViUXM3YzhibHByOXFSb3RMZlNMU3VGRkJVR3ctNmU5a2tVX1J0dXFmWGpHZlFPNHRsQkZQYUR4NTl1RnRwOTZJYWpCU0ZzS1hoTjNlUUVOR1NPZHhtcXczd3cxeDN1UXByWWJ5dzE0dFR3MA?oc=5) — Google News／Yahoo Finance，2026-11-10（僅標題可用）
 - [Jamie Dimon warns Anthropic's Mythos AI raised cyber risk 10-fold](https://news.google.com/rss/articles/CBMiekFVX3lxTFBSYUdTd1ppZjJ6a0xySXR1RzRHQjVqSW83VFJMeGt6R1ctZm9mY2R3WXUzLVItN05IenBaZW1rVEdtaHl1d1NUZUJacHg3cW1mTWlzUXc0RURTYllqSy1Nemw3bXpUX3lYbFQ2NWpXQkdacHZsSEp4dV9B?oc=5) — Google News／Quartz，2026-10-06（僅標題可用）
 - [Jamie Dimon says Anthropic's Mythos supercharged AI cybersecurity risks](https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdTh1RURaRjBrQThfSFZjOGk1S1lBVm9Wc0VMbnMzSk15YmtjSUZ1cEsxeTZnWjhGcndKUm11Q2x4SHBQbzZwSVo1ZzY0OGxkRzFpck5lbk5RMG5EU0NlUm5uajZVSXVCemJqcHhKZFBVSEJMdU00OUI1X0tlTGZwNG83SE9CdXRLeXh0cVBoakFDbmNUQ2hJU09GVUpMdXZBWHBldGItaDQ?oc=5) — Google News／Business Insider，2026-10-07（僅標題可用）
 - [[entities/mythos]]、[[topics/anthropic-government-policy]] 頁內收錄 07-13、07-16、08-10 三則前情報導與查證細節
 
 ## 歷史記錄
 
+- 2026-11-10：Yahoo Finance 報導 Anthropic 規劃 IPO 直播，Dimon 與 Amodei 同列；僅標題可用，其角色未見報導（來源：Google News／Yahoo Finance）
 - 2026-10-06：稱 Anthropic 的 Mythos AI 讓網路安全風險提高達 10 倍（來源：Google News／Quartz，僅標題可用）。**後續（2026-10-07）：** Business Insider 以「supercharged AI cybersecurity risks」措辭跟進報導同一主張（僅標題可用）
 - 2026-08-10：於參議員 Dave McCormick「賓州國防與創新峰會」稱「你正在把彈道飛彈交給擁有 Mythos 的個人」，詳見 [[entities/mythos]]（來源：Bloomberg）
 - 2026-07-16：稱 Mythos AI 風險是「真實的問題」（real issue），詳見 [[entities/mythos]]（來源：Google News／Reuters，僅標題可用）

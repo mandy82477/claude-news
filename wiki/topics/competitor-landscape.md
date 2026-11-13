@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-07）
+> **本週衝擊**（2026-11-10）
+> - 🔴 **Gemini 4 Carbon 11-10 對開發者與企業正式開放，VentureBeat 標題稱 API 價格低於 Claude Fable 5.2 與 Opus 5.5**（DeepMind；VentureBeat）——正在做 coding agent 選型、在意 API 成本的人，把 Carbon 加進比價清單；實際牌價與基準未載。
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
-> - 🟡 **GitHub Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段**（Blog/GitHub Copilot Changelog）——Claude Code 無對應整合，用 Xcode 開發 Apple 平台的人多一個選型考量點。
 
 ---
 
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Microsoft／GitHub** 🏢 | 11-04 Copilot 正式整合進 Xcode 內建程式碼助理（公開預覽）→ Apple 生態開發者可在原生 IDE 內直接叫用 Copilot，Claude Code 無對應整合 | 生態 | 🟡 | GitHub 官方 changelog 一手來源；GA 時程與功能範圍未載 |
-| **Google（Gemini）** 🏢 | 10-28 Gemini 4 Carbon 發布，稱 AA Intelligence Index v5.0 第一（59分）、資安基準大幅領先 → 編碼/資安 agentic 評測再添一筆對照 | 能力 | 🔴 | DeepMind 官方一手；SEC-bench Pro／ExploitGym／CWE-bench 細節與對照模型未列 |
+| **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對開發者、企業正式開放；VentureBeat 稱 API 價低於 Claude Fable 5.2 與 Opus 5.5 → 比價清單要加一個對象 | 定價 | 🔴 | DeepMind 官方一手＋VentureBeat 標題；Carbon 牌價數字與基準細節均未載 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
@@ -61,6 +61,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **Alibaba（Qwen3.8）** | 免費開放「最強」模型、稱幾乎追平 Claude（08-04）→ 低價層再多一個免費選項，能力宣稱待證 | 能力 | 🟡 | Decrypt 單一來源，無模型名稱、無 benchmark（🔎 見下方定價細節） |
 | **Kiro（AWS）** | spec-driven 編碼 agent，Free 至 Power $200 五級訂閱（08-03）→ 已在 AWS 生態的人可直接比價 | 定價 | 🟡 | 官網定價已查證（08-13）；標題並列的 80.8% SWE-bench 歸屬未獲證實 |
 | **OpenCode** | 開源免費替代，社群採用規模仍是主要訊號（08-01）→ 想離開訂閱制時的第一個候選 | 定價 | 🟡 | 下載量倍數的統計方法未揭露，完整脈絡見 [[entities/opencode]] |
+
+- **Gemini 4 Carbon**：10-28 發布，Google 稱 AA Index v5.0 第一。
 
 **🏢 圖例**：具名企業採用記錄（見 [[topics/enterprise-tool-tracker]]）或官方企業方案，缺一不標。企業評估候選名單：雷達表帶 🏢 者；具名採用／退出記錄見 [[topics/enterprise-tool-tracker]]。
 
@@ -136,6 +138,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Google（Gemini）
 **現在的答案**
+- 11-10 **Gemini 4 Carbon** 對開發者、企業、科學家與消費者正式開放，官方稱資安與長程 agent 工作流達前沿水準；VentureBeat 標題稱 API 價低於 Claude Fable 5.2、Opus 5.5（牌價數字未載，未納入定價對照表）。
 - 10-28 官方發布新一代前沿模型 **Gemini 4 Carbon**，稱 Artificial Analysis Intelligence Index v5.0 第一（59 分），資安攻防基準 SEC-bench Pro／ExploitGym／CWE-bench 大幅領先。
 - 10-13 Gemini 4 Argon 全面開放（API／AI Studio／Gemini app），定價 $2／$10 per Mtok 同 Sonnet 5；10-14 再 GA 上架 GitHub Copilot，進入 Claude Code 既有優勢的工具層戰場。
 - 官方稱 Argon 於 Vals Index 多項財金、法務、程式基準排名第一；評測方法論與對比的 Claude 模型均未載。
@@ -248,6 +251,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-10
+- **Google（Gemini）**：Gemini 4 Carbon 正式對開發者與企業開放；VentureBeat 稱 API 價低於 Claude Fable 5.2 與 Opus 5.5，詳見「對手雷達」Google 列（Blog/Google DeepMind Blog；Google News/VentureBeat）
+- **Meta**：Muse Ember 發布，Simon Willison 稱其為 Meta 對標 Claude Haiku／GPT Luna 的最小、最省模型；規格與定價未載（Blog/Simon Willison）
+- **Microsoft／GitHub**：Claude Fable 5.2 在 Copilot 正式提供，官方稱適用跨大型程式庫的多步驟編碼（11-09，Blog/GitHub Copilot Changelog）；C++ language server 自動設定 MSBuild 建置，非編碼模型異動（11-10，同來源）
+- **自架 vs 雲端（分析文）**：HackerNoon 比較本機與雲端 coding agent 的基準、硬體成本與效能，僅標題可用（Topic Watch）
+- **Google DeepMind／OpenAI（非編碼工具）**：AlphaProof Code（形式驗證 Signal 密碼協定）、Gemini Robotics 2.5，以及 OpenAI 的看護者／教育／自由工作者研究，皆非 AI 編碼工具競品，不列入「對手雷達」表
 
 #### 2026-11-07
 - **Microsoft／GitHub（分析文，非編碼能力異動）**：Copilot code review 設定新增 REST／GraphQL API 管理，企業可從組織層級統一下放政策到各 repo；review overview 留言呈現同步更新；非編碼能力或定價異動，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）

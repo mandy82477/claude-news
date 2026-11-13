@@ -416,3 +416,12 @@
 {"id": "H-872580", "closed": "2026-11-08", "status": "done", "by": "商業", "result": "併入 entities/pricing.md"}
 {"id": "H-96b5cc", "closed": "2026-11-08", "status": "done", "by": "安全政策", "result": "寫入 topics/anthropic-government-policy「浮水印：法源、爭點與未解」節"}
 {"id": "H-6ef202", "opened": "2026-11-09", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "topics/community-tech-patterns 今日新增「多代理 PR Review」節點：Simon Willison 把 agent 開的 PR 說明收進 <details><summary> 折疊區塊維持可讀性；請評估是否構成產品化矩陣新增列候選", "status": "open"}
+{"id": "H-a6e390", "closed": "2026-11-14", "status": "done", "by": "功能", "result": "功能記者 2026-11-10 ingest 回報已處理"}
+{"id": "H-6ef202", "closed": "2026-11-14", "status": "done", "by": "功能", "result": "均評估後不開新列，備忘寫進 official-community-gap 時序 %% 註解"}
+{"id": "H-e9d5d3", "opened": "2026-11-14", "from": "功能", "to": "模型", "page": "topics/model-comparison", "note": "Help Center 11-10 新增「Claude 訓練資料更新程度」段、「Preserved thinking」段（Messages API 處理 thinking blocks 以防蒸餾）與「Claude 如何標記 AI 生成內容」段；評估是否補進模型比較的行為限制與輸出標記表", "status": "open"}
+{"id": "H-b914d1", "opened": "2026-11-14", "from": "商業", "to": "功能", "page": "topics/anthropic-product-matrix", "note": "Claude Meetings（Google Meet 整合）與 Claude Sheets（beta）11-10 上線的產品面：是否入產品對照矩陣、哪些方案可用", "status": "open"}
+{"id": "H-b61772", "opened": "2026-11-14", "from": "商業", "to": "模型", "page": "topics/model-comparison", "note": "Gemini 4 Carbon 11-10 公開可用、VentureBeat 稱 API 牌價低於 Fable 5.2 與 Opus 5.5；Fable 5.2 降價——補選型比較的價格面", "status": "open"}
+{"id": "H-142c26", "opened": "2026-11-14", "from": "商業", "to": "安全政策", "page": "topics/anthropic-government-policy", "note": "Microsoft 預設開放 Claude 進英國 Copilot 租戶（The Register 11-10）、K-12 教師工會學生隱私協議（K-12 Dive 11-10）的資料治理與政策面", "status": "open"}
+{"id": "H-e5ec4e", "opened": "2026-11-14", "from": "安全政策", "to": "功能", "page": "entities/claude-code-known-issues", "note": "「don't ask again」把設定檔／核准檔裡的密碼與金鑰洩到公開 repo（11-10 六家再報，The Defiant 稱 1,379 組）：known-issues 🛡️ 列待官方修補版本或警示後更新", "status": "open"}
+{"id": "H-8dc8a5", "opened": "2026-11-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "yicheng47/runner（11-10，504★）：同一任務內多家 CLI agent 協作、各保留原生 TUI，評估是否構成產品化矩陣新增列", "status": "open"}
+{"id": "H-8dc8a5", "closed": "2026-11-14", "status": "done", "by": "主編", "result": "11-14 主編查 CHANGELOG：2.1.323（11-12）已修，known-issues 該列改 ✅ 已修復 v2.1.323、product-vulns 懸置結案"}

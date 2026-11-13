@@ -31,10 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **最新動態**（2026-11-09）
+> **最新動態**（2026-11-10）
+> - **The Register：Microsoft 傳預設讓 Claude 取得英國 Copilot 租戶存取**：僅標題可用，受影響資料與能否關閉未載；英國 Microsoft 365 Copilot 管理員應查租戶設定
 > - **TechCrunch 跟進燃氣機組採購案（11-08 FT／Reuters／Bloomberg 原報導，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]）**
 > - **IBM／Cisco 同日宣布導入 Mythos 5.2 計畫**：IBM 擬用於 Concert 平台資安推理，Cisco AI Defense 擬用於紅隊測試，均僅「宣布計畫」階段，未附上線時程
 
@@ -294,6 +295,10 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-10
+- **[戰略合作，僅標題可用] The Register：Microsoft 預設讓 Claude 取得英國 Copilot 租戶存取**：資料範圍與關閉方式未載（Google News/The Register）
+- **[戰略合作，僅標題可用] CRN／Cisco：Cisco AI Defense 將以 Claude Mythos 做 AI 紅隊測試**：承接 11-09 IBM／Cisco 導入計畫，上線時程未載（Google News/CRN；Google News/Cisco Systems）
 
 #### 2026-11-05
 - **[資本支出] CoinDesk：若 Anthropic 違約，Google 可能依信用擔保條款取得 TeraWulf 這筆 190 億美元資料中心計畫的股權**：承接 11-04 Google 信用擔保報導，擔保啟動條件未見報導，詳見「算力與資金從哪來」TeraWulf 列更新（Google News/CoinDesk）

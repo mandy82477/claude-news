@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 是否正式改列 Legacy 待官方模型總覽頁查證；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-11-09"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-10"
 status_main: "active"
 days_since_news: 0
 parent: null
@@ -33,17 +33,19 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **Fable 5.2 發布**（2026-11-09）
-> Claude Code v2.1.321 起 Fable 5.2 為預設 Fable；1M context、$8/$40（降 20%），Artificial Analysis 評 65 分為該站最高。
+> **官方 Fable 5.2 提示指南現身**（2026-11-10）
+> 提示寫「這份程式碼是你的」，小型編碼任務約半數會合併重複程式碼；沒寫不到十分之一（Simon Willison 摘引官方文件）。
 
 ---
 
 ## 現況
 
-**2026-11-09 最新**：Anthropic 發布 **Fable 5.2**，取代 5.1 成為現行旗艦；Claude Code v2.1.321 起設為預設 Fable 模型，牌價降至 $8/$40（較 5.1 的 $10/$50 降 20%），快取讀取 $0.20/Mtok（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)；[GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)，2026-11-09）。獨立評測站 Artificial Analysis 給 Fable 5.2 打出 65 分，為該站目前所有模型最高分（2026-11-09）。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
+**2026-11-10**：Anthropic 官方〈Prompting Claude Fable 5.2〉指南出現，Simon Willison 摘引其中一條：提示對「程式碼歸誰」的措辭會改變 5.2 是沿用既有結構、還是重整結構（見「跟它怎麼說話」表下細節；完整文件尚未逐條查證）。
+
+**2026-11-09**：Anthropic 發布 **Fable 5.2**，取代 5.1 成為現行旗艦；Claude Code v2.1.321 起設為預設 Fable 模型，牌價降至 $8/$40（較 5.1 的 $10/$50 降 20%），快取讀取 $0.20/Mtok（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)；[GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)，2026-11-09）。獨立評測站 Artificial Analysis 給 Fable 5.2 打出 65 分，為該站目前所有模型最高分（2026-11-09）。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
 
 出口管制已於 2026-06-30 解除、07-01 起全球恢復存取，現在不影響你拿不拿得到；政府那條線之後怎麼走見 [[topics/anthropic-government-policy]]。方案內含什麼、超出怎麼算見 [[entities/pricing]]。
 
@@ -120,7 +122,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 ## 跟它怎麼說話
 
-❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Fable 5.2 版本）｜**官方 Fable 5.2 專屬 prompting 指南尚未發布**：今日來源（GitHub changelog、Anthropic 發布文）未帶 prompting／migration 內容，下列仍為 Fable 5.1 版本，5.2 是否沿用或有新差異未經確認。
+❓ **待查證**（標 2026-11-09｜查官方 prompting 文件是否已補 Fable 5.2 版本｜訊 2026-11-10）｜**官方 Fable 5.2 專屬 prompting 指南已出現，內容未逐條查證**：2026-11-10 Simon Willison 摘引〈Prompting Claude Fable 5.2〉一段（見表下細節），完整文件尚未讀到，下列其餘仍為 Fable 5.1 版本，5.2 是否沿用或有新差異未經確認。
 
 官方 prompting 指南：[Prompting Claude Fable 5.1](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1)（同一份涵蓋 [[entities/mythos]] 的 Mythos 5.1；查證 2026-10-03）。
 
@@ -134,6 +136,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 - 與相鄰世代相反的那一邊：[[entities/opus-5-5]] 要**刪**系統提示裡「think carefully」那類句子（它自己決定想多久），而本頁要**加**自主執行段。
 - [[entities/sonnet-5-5]] 在 `low` effort 會跳過驗證、需要補一段驗證指令，本頁的 `low` 問題則在搜尋觸發。effort 旋鈕的通用建議見 [[topics/model-comparison]]「Effort dial 細節」。
+- **5.2 新增的一條（官方〈Prompting Claude Fable 5.2〉，經 Simon Willison 摘引，原文未直接查證）**：提示沒提或說成別人的程式碼，模型傾向沿既有結構往上加；寫「這份程式碼是你的」，小型編碼任務約半數會合併重複程式碼，沒寫不到十分之一（[Simon Willison](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)，2026-11-10）。要它順手整理就加那句（推論）。
 - 寫作面：官方說它的散文比 Fable 5 更密（句子更長、分段更少），對策是定義反面模式（mannered prose）而不是喊「寫簡單一點」；摘要文件時也更容易把原文整段複述而不標引號，官方建議在系統提示放一個完整正確範例。
 ---
 
@@ -220,13 +223,23 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [Artificial Analysis：Claude Fable 5.2 模型頁（評分 65）](https://artificialanalysis.ai/models/claude-fable-5-2)（2026-11-09）
 - [Reddit r/ClaudeCode：Fable 5.2 200K context limit is shit. Compacting every few minutes](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)（2026-11-09）
 - [Reddit r/ClaudeCode：Fable 5.2 is compacting](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)（2026-11-09）
+- [Simon Willison：Quoting Prompting Claude Fable 5.2](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)（2026-11-10）
+- [GitHub Changelog：Claude Fable 5.2 in GitHub Copilot](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot)（2026-11-09）
+- [Simon Willison：llm-anthropic 0.31](https://simonwillison.net/2026/Nov/9/llm-anthropic/)（2026-11-09）
 - [[news/2026-11-09]]
+- [[news/2026-11-10]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-10
+**Fable 5.2 提示指南摘引與第三方資安基準標題**：
+- Simon Willison 摘引 Anthropic〈Prompting Claude Fable 5.2〉：Fable 5.2 對提示中「程式碼歸誰」敏感；加一句「這份程式碼是你的」後，小型編碼任務約半數嘗試會合併重複程式碼，沒加不到十分之一。官方文件本身未直接查證，措辭面整理見「跟它怎麼說話」（[Simon Willison](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)，2026-11-10）
+- The Hacker News 標題稱 Fable 5.2 在多階段網路攻擊基準測試勝過 GPT-6 Cyber（僅標題；測試方與分數未載），資安面見 [[topics/ai-agent-safety-cyber]]（Google News/The Hacker News，2026-11-10）
+- Kingy AI 標題問 Fable 5.2 是否值得比 GPT-6.1 Sol 貴四倍（僅標題；計價基準未載），牌價見 [[entities/pricing]]（Google News/Kingy AI，2026-11-10）
 
 #### 2026-11-09
 **Claude Fable 5.2 與 Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable**：
@@ -236,6 +249,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - 獨立評測站 Artificial Analysis 給 Fable 5.2 打 65 分，為該站現行最高分，HN 討論（15 分）普遍正面（[Artificial Analysis](https://artificialanalysis.ai/models/claude-fable-5-2)，2026-11-09）
 - **與官方 1M context 落差的社群回報（弱訊號，0 留言）**：Reddit 兩則貼文稱 5.2 頻繁觸發 compacting，其一稱幾分鐘一次、尚未寫程式碼已壓縮 6 次；標題稱「200K context limit」，未附測試方法，無官方回應（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)；[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)，2026-11-09）
 - SDK 支援：`anthropic-sdk-typescript` v1.7.0、`anthropic-sdk-python` v2.7.0 同日新增 `claude-fable-5-2` 識別碼（[GitHub](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)，2026-11-09）
+- GitHub Copilot 同日（11-09）宣布 Fable 5.2 正式提供，官方稱可用於跨大型程式庫的多步驟編碼任務；競品面見 [[topics/competitor-landscape]]（[GitHub Changelog](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot)，2026-11-09）
+- **max effort 可能耗盡 token（單一實測，弱訊號）**：Simon Willison 以同一則鵜鶘 SVG 提示跑五個推理等級各一次，max 花掉 128,000 個 thinking token 仍未回傳圖片；同類 max 異常見 [[entities/simon-willison]]（[Simon Willison](https://simonwillison.net/2026/Nov/9/llm-anthropic/)，2026-11-09）
 - 多家外媒（Reuters、Bloomberg、VentureBeat、The Verge、MacRumors、AWS 等）同日跟進報導，多聚焦 IPO 前市場脈絡與定價戰，商業面見 [[entities/pricing]]、[[topics/anthropic-ipo]]；本頁僅記模型能力與規格面
 
 ### 2026-10

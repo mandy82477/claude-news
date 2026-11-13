@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-09）
-> 桌面版文件新增 SSH／WSL session 內預覽 HTML 檔案（session 內不執行腳本）；Help Center「模型設定」段落持續改動，待查證（見核心功能、桌面版文件時序）。
+> **最新動態**（2026-11-10）
+> 桌面版文件：SSH session 改讀遠端主機的 managed settings 檔；Help Center 再移除「模型設定」段，新增 Preserved thinking（僅標題，見開發者須知）。
 
 ---
 
@@ -64,13 +64,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
-- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-08｜訊 2026-11-09）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
+- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-10）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
+  - 11-10 該段與切換說明再被移除，內容仍未載。
 
 ### 桌面版功能地圖
 
 > 把下方「桌面版文件時序」的桌面版文件（`desktop.md`）異動依主題歸群；每條只收時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
 
 **SSH 遠端與離線續跑**
+- 11-10：SSH session 讀取遠端主機上的 managed settings 檔（後半句截斷）；Linux／macOS 遠端在 Desktop 斷線時，worktree 內的編輯仍可繼續。
 - 11-09：新增 session 內預覽 HTML 檔案——session 內直接預覽不執行腳本，匯出後在本機瀏覽器開啟才會執行；組織可關閉此預覽的腳本執行。
 - 10-08：可從連結開啟 SSH session，分「已有連線」「新連線」。
 - 10-14：SSH 遠端工作流程擴充——連線需求、macOS／Linux 沿用既有 SSH 設定、支援 Windows 遠端機器；Desktop 離線時任務在背景續跑，連回後處理期間送達的請求。
@@ -117,6 +119,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-10）：桌面版文件字數由 223,150 增至 223,476，新增三段、移除三段（移除的三段未載）。
+  - **新增內容**：SSH session 讀取遠端主機的 managed settings 檔；Linux／macOS 遠端在 Desktop 斷線時 worktree 內編輯可繼續；另一段列出 Terminal、Browser、iOS Simulator（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-09）：桌面版文件新增「在 SSH／WSL session 中預覽 HTML 檔案」一節（219,230→223,150 字）——匯出的檔案在使用者自己瀏覽器開啟會執行內含腳本；但 session 內直接預覽的檔案不執行腳本，腳本繪製的圖表／表格會顯示空白。同批新增組織層級「關閉 SSH／WSL 預覽腳本執行」開關，管理面細節見安全政策角度（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-07）：桌面版文件字數由 217,701 增至 219,230，但本頁段落數（1332）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-05）：桌面版文件字數由 216,003 增至 217,701，但本頁段落數（1329）超過自動比對上限（1200），無法產生逐段差異，具體改動需自行開原文比對（[原文](https://code.claude.com/docs/en/desktop.md)）。
@@ -271,6 +275,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 開發者須知
 
+- **Help Center 新增「Preserved thinking」等三段（2026-11-10，Official Docs）**：標題稱 Messages API 調整處理 thinking blocks 的方式以防範蒸餾（僅標題）；另兩段為 Claude 如何標記 AI 生成內容、訓練資料更新程度。多輪帶 thinking blocks 的 API 使用者須開[原文](https://support.claude.com/en/articles/12138966-release-notes)確認行為。
 - **Help Center 新增 Enterprise 安全／管理功能段落（2026-11-05，Official Docs）**：新增標題僅列 security center、inference hooks、centralized management，僅標題可用，與既有 [[entities/claude-code#現況|Inference Hooks]] 的關係待開[原文](https://support.claude.com/en/articles/12138966-release-notes)確認。
 - **桌面版官方文件新增關閉本機 session、改走指定 SSH host 的組織設定（2026-10-12 查證，Official Docs）**：新增 `disableDesktopLocalSessions` 與 `sshHost`／`sshHostAllowlist`，供組織關閉本機 session、集中走指定 SSH host；雲端 session 不受影響。見[官方文件](https://code.claude.com/docs/en/desktop.md)。
 - **hook `onFailure: "block"` 與官方安全建議有落差（2026-10-09，MIXED Reality News）**：媒體轉述的「不要只依賴 hook 做安全防護」不見於官方 hooks 文件（2026-10-11 查證）；官方原意見「hooks：事件、失效模式與能不能當防線」。

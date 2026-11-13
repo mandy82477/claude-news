@@ -28,17 +28,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **「AI 該寫多少程式碼」辯論重新開打**（2026-11-07）
-> - r/ClaudeCode 週熱門：團隊一年前全面強制 AI 寫程式，如今沒人看懂程式碼，「現在吵到哪」第 7 列由僵住轉回還在吵。
+> **最新動態**（2026-11-10）
+> - **「AI 該寫多少程式碼」辯論跨到 Hacker News**：「一年 100% AI 強制令後沒人看懂程式碼」貼文上 HN 拿到 144 分；有人回報身邊大企業開發者每天十小時餵需求、等待、審查卻學不到東西，也有人質疑貼文本身是 AI 生成的反 AI 內容。
+> - **STE80 去 AI 腔工具在 HN 拿到 102 分**：有人把 STE 風格寫進 Claude 全域指示，回報 Opus 與 Fable 似乎不遵守、Sonnet 很遵守。
 
 ---
 
 ## 摘要
 
-社群現在有六場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的。最新一則證據是 11-07 一則「一年 100% AI 強制令代價」的回顧，讓「AI 該寫多少程式碼」這場爭論由僵住轉回還在吵；CLAUDE.md 該寫多少那場距最後一則證據已逾 60 天，仍標僵住。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
+社群現在有六場關於 Claude Code 的觀念爭論還在吵，三場僵住了，暫無已吵出共識的。最新一則證據是 11-10「一年 100% AI 強制令」貼文跨到 Hacker News（144 分），讓「AI 該寫多少程式碼」這場爭論多了第二個平台的討論；CLAUDE.md 該寫多少那場距最後一則證據已逾 60 天，仍標僵住。本頁只記「該怎麼想這件事」的碰撞：什麼哲學正在成形、什麼假設被挑戰、誰拿得出證據。
 
 做法怎麼做、哪些做法已經站住腳，見 [[topics/community-tech-patterns]]；社群做法收斂成哪幾個方向、各自怎麼走到今天，見 [[topics/community-pattern-trends]]；工具該裝哪個見 [[topics/community-tech-tools]]。
 
@@ -50,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 爭論 | 現在狀態 | 最後一則證據 | 證據硬度 | 官方怎麼說 |
 |---|---|---|---|---|
-| **AI 該寫多少程式碼、該不該把工作改寫成 loop** | 還在吵 | 2026-11-07「一年 100% AI 強制令代價」（[[topics/community-tech-discussions#2026-11]]） | 具名表態，社群兩極化 ＋ 具名個案回報（週熱門） | 無公司層說法；創始人本人言論軌跡見 [[entities/boris-cherny]] |
+| **AI 該寫多少程式碼、該不該把工作改寫成 loop** | 還在吵 | 2026-11-10「一年 100% AI 強制令」（[[topics/community-tech-discussions#2026-11]]） | 具名表態，社群兩極化 ＋ 具名個案回報（Reddit 週熱門＋HN 144 分） | 無公司層說法；創始人本人言論軌跡見 [[entities/boris-cherny]] |
 | **換到開源模型的代價是不是接近零** | 還在吵 | 2026-10-16「dev.to 實測：同一本地」（[[topics/community-tech-discussions#2026-10]]） | 跨媒體與社群多來源 ＋ 單次高互動討論 | 無官方回應；商業面事實見 [[topics/anthropic-business]] |
 | **AI 輔助會不會讓人能力退化**（Skill Atrophy） | 還在吵 | 2026-10-06「按 Enter 的人該負多少」（[[topics/community-tech-discussions#🌊 持續關注中的長期議題]]） | 官方一手研究 ＋ 八則獨立貼文自述，本輪首見跨平台佐證（Reddit＋Blog 轉引同一推文） | Anthropic 2026-01 對照實驗：用 AI 的一組在剛學過的概念測驗低 17%，且「怎麼用」決定退化多少 |
 | **Claude 可能有意識嗎、該不該當它有感受** | 還在吵 | 2026-10-03「Vox 延續同題：Anthropic 與教宗之爭」（[[topics/community-tech-discussions#最近在討論什麼]]） | 具名表態 ＋ 跨媒體 | 官方憲章（2026-01）：不確定 Claude 是否有某種意識或道德地位 |
@@ -153,6 +154,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN: STE80 Humanizer——以簡化技術英文規則去除文字 AI 腔的工具 | 2026-11-10 · 2026-11-10 | 🔥🔥🔥 | ☄️閃現 | 有人指它是去 AI 化而非擬人化；另有留言稱 STE 風格寫進 Claude 全域指示後，Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述）；HN 102 分 | — |
 | r/ClaudeCode 週熱門：團隊一年前起 100% AI 強制令，如今沒人看得懂自己的程式碼 | 2026-11-07 · 2026-11-07 | 🔥 | ☄️閃現 | 團隊一年前要求全面改用 agent 寫程式、人工撰寫需附理由，前六個月出貨變快；呼應「現在吵到哪」第 1 列，該列由僵住轉回還在吵；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
 | Reddit r/ClaudeCode 週熱門：使用者擔心 agentic 能力終將被 Anthropic 收回限縮 | 2026-11-04 · 2026-11-04 | 🔥 | ☄️閃現 | 擔心未來 agentic 功能被收回或限縮，認為這項能力對一般使用者與中高階技術用戶過於有用；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
 | HN 讀者發現 OpenAI 悄悄重新開啟 Codex 對話訓練資料分享設定，籲比對其他 coding agent | 2026-11-03 · 2026-11-03 | 🔥🔥🔥 | ☄️閃現 | 公司原本關閉的 Codex「改善模型」設定被悄悄重新開啟、本人未重新同意；HN score 151（單源，待社群接力），留言籲同時用其他 coding agent 的人一併檢查設定 | — |
@@ -202,7 +204,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 | 用量限制驅動的「規劃用 Claude Code、實作交給本地模型」混合工作流小趨勢 | 2026-08-21 · 2026-08-27 | 🔥🔥 | 🌙靜候 | 近一週至少三則案例（Reddit×2＋XDA）主張因用量限制而分流；最後動態 2026-08-27（XDA 報導） | — |
 | Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | WSJ 報導 Anthropic 稱潛在市場規模達 30 兆美元；HN 留言（score 39）指出這是產業 TAM 估計，非營收承諾 | — |
 | Simon Willison 引述 Paul Dix：AI 寫了 100 萬行程式碼，仍需花數月精煉才能產出可靠軟體 | 2026-08-26 · 2026-08-26 | 🔥 | 🌙靜候 | Paul Dix：AI 一次寫出 100 萬行程式碼，仍需數月精煉才能產出可靠軟體（Simon Willison 轉引） | — |
-| Reddit r/ClaudeAI 週熱門：配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘 | 2026-08-24 · 2026-08-24 | 🔥 | 🌙靜候 | 使用者稱配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘（Reddit r/ClaudeAI 週熱門） | — |
 | Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天 | 2026-08-19 · 2026-08-27 | 🔥🔥🔥🔥 | 🌙靜候 | Issue #77136 累積 106 則留言、517 反應，HN score 181；最後動態 2026-08-27（累積留言數截至日） | — |
 | 隱形浮水印政策引發社群反彈——政策已上線，08-17 由 Gruber 專欄與 NPR/Yahoo Tech/inc.com 三家媒體同步跟進，08-25 New Atlas 續有跟進報導，質疑聲浪持續延燒至主流媒體層級 | 2026-08-11 · 2026-08-25 | 🔥🔥🔥🔥 | 🌙靜候 | 隱形浮水印政策反彈持續延燒：08-17 Gruber 專欄登 HN 首頁（293 分）＋NPR/Yahoo/inc.com 同步跟進，08-25 New Atlas 續報 | — |
 | 額度焦慮系列：Fable 5 集中爆發後跨方案／跨語言持續延燒，08-31 同日新增調降 17% 與「20x」標示誤導雙節點 | 2026-07-03 · 2026-08-31 | 🔥🔥🔥 | 🌙靜候 | 額度焦慮系列，最後動態 2026-08-31 同日兩則新節點：週限調降約 17%、「20x」標示誤導疑涉訴訟（細節見下方） | CCLimitPing, LimitBar, Die With Me |
@@ -216,6 +217,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Show HN: STE80 Humanizer——以 ASD-STE100 簡化技術英文規則去除文字 AI 腔**：HN score 102（2 個來源）；留言區認為它是去 AI 化、不是擬人化；有人把 STE 風格寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述，未附測試方法）；[原文](https://github.com/Dodaios/ste80-humanizer)（HN）
 - **Show HN: HackerBooks——找 Claude（Opus 5.5）寫出約 1.65 萬本 HN 推薦書的網站**：作者看到 Karpathy 的 HackerTube 後找 Claude 全程編寫，整理出至少兩位留言者提過的約 1.65 萬本書；HN score 105；[原文](https://hackerbooks.org)（HN）
 - **Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯**：作者做出逼真的虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源）；[原文](https://bbrouter.com/bbrouter/ben-eater-sap-1)（HN）
 - **一則推文指控 Anthropic 封鎖涉及「訓練更大模型」用途的使用者，HN 留言主張專業使用者應自備替代模型**：留言串的主流意見是不論多喜歡 Claude，專業使用者都應主動養一組替代模型與備援，並推動生態開放、標準化、可移植；留言把 Anthropic 形容為立場鮮明、偏理想主義；無官方說明，亦無第二來源佐證封鎖範圍；[原文](https://twitter.com/jiahaoshao1/status/2116475922190922088)（HN，232 分）
@@ -242,7 +244,6 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 - **用量限制驅動的「規劃用 Claude Code、實作交給本地模型」混合工作流小趨勢**：近一週至少三則同方向案例：r/LocalLLaMA 使用者戲謔宣告「Pro 訂閱到期後改用本地 Qwen3.8-27B，已 7 小時沒用 Claude Code」（[原文](https://www.reddit.com/r/LocalLLaMA/comments/1vu1e3u/i_did_it_im_free_its_been_7_hours_since_i_used/)，週熱門，08-21）；另一使用者因 Max 訂閱每日用完額度三次，設計 MCP 架構把部分工作分擔給本地 Qwen3.8-27B（[原文](https://www.reddit.com/r/LocalLLaMA/comments/1vze6jl/running_local_llms_as_agents_in_claude_code/)，08-27）；XDA 媒體報導同方向混合工作流，宣稱藉此不再撞到用量上限（[原文](https://www.xda-developers.com/use-claude-code-for-planning-but-a-local-model-for-building/)，08-27，Google News）；三則跨 2 平台、逾 6 天持續出現同一「本地模型分流因應用量限制」主張，與本頁 08-19「樹莓派本地模型宣稱超越 Opus 5 High」（☄️閃現、單一貼文、訊號強度極弱）方向一致但屬不同具體宣稱，本則聚焦「工作流分工」而非「效能對比」；與 [[topics/community-tech-patterns]] 07-05「本地小模型分流節省 Context」機制觀察同屬一條「用量限制→本地模型分流」實務軸線
 - **Anthropic 潛在市場規模「30 兆美元」說法引發社群質疑：留言指出這是產業潛在市場總量，非實際營收承諾**：WSJ 報導 Anthropic 準備向投資人簡報時宣稱潛在市場規模上看 30 兆美元，為可能的創紀錄 IPO 鋪路；HN 討論（score 39）留言區隨即有人指出，該數字是「AI 服務整體潛在市場總量（TAM）」的產業估計，並非 Anthropic 宣稱自己能實際拿下的營收，提醒讀者不要把潛在市場規模與實際財測數字混為一談；Reuters 另有一篇同主題報導（僅為重複報導同一商業事實，非社群延燒佐證）；商業面（融資動機、IPO 佈局）見 [[topics/anthropic-business]]，本頁僅記錄社群對數字本身的質疑角度；[原文](https://www.wsj.com/tech/ai/anthropic-expected-to-tell-investors-it-sees-over-30-trillion-in-potential-revenue-a611efea)（HN）
 - **Simon Willison 引述 Paul Dix：AI 寫了 100 萬行程式碼，仍需花數月精煉才能產出可靠軟體**：Simon Willison 部落格引述 Paul Dix（InfluxDB 創辦人）觀點：AI 一次寫出 100 萬行程式碼，隨後花費接下來幾個月時間加以精煉，才產出一套可靠軟體；凸顯「AI 寫得快」與「AI 寫得可靠」之間仍有落差，需大量人工後製；具名表態（Paul Dix／Simon Willison），無社群延燒；[原文](https://simonwillison.net/2026/Aug/26/paul-dix/)（Blog）
-- **Reddit r/ClaudeAI 週熱門：配偶遭資遣後用 Claude 打造求職平台，已促成三人獲聘**：使用者描述配偶懷孕期間遭 Indeed 資遣後，用 Claude 打造一個求職平台作為競品，貼文標題稱已促成三人成功獲聘；具體平台名稱、技術架構與媒合機制未見於本次摘要；呼應本頁既有「用 Claude 打造具體產品」系列案例（撲克 app、GTA6 demo 等），本則是該系列首度出現「已產生可驗證外部成效（實際招聘）」的敘事；Reddit r/ClaudeAI 週熱門標記；[原文](https://www.reddit.com/r/ClaudeAI/comments/1vx4kn7/indeed_laid_off_my_pregnant_wife_so_i_built_a_job/)（Reddit · 週熱門）
 - **Opus 5.0 用語浮誇引爆「行話」批評，Anthropic 疑似用 Claude 代寫官方回覆再添爭議：跨 HN／Reddit 延燒，issue 持續增溫 8 天**：Hacker News 熱門討論（連結至 [GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)）批評 Claude 4.7、4.8、5.0 與 Fable 模型輸出用詞浮誇，充斥「行話」（blast radius、earned its keep、spine 等被列入禁用詞清單的用語）且難以維持連貫散文，即使給出明確風格指示仍難改善；留言指出負責回覆此 issue 的 Anthropic 工程師疑似用 Claude 代寫回應，而該回覆本身仍帶有被抱怨的同類「Claude-isms」，引發讀者兩極反應（此為留言區質疑，未經官方證實）；HN score 181；08-20 Reddit r/ClaudeCode 貼文聚焦「官方回覆疑似 Claude 代寫」爭點延燒次日，跨平台佐證（）；截至 08-27 該 issue 已累積 106 則留言、517 個反應，8 天內持續增溫，符合 🌊延燒（3 天以上持續延燒）條件，由 ☄️閃現 升格；與本頁 08-10「把 Claude 式用語翻譯成一般英文的 plugin」同屬「Claude 制式措辭／行話」議題軸線；[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)（HN／Reddit／GitHub Issues）
 - **「Anthropic's War on open source AI」批評文於 HN 引發熱議，留言區另質疑該文本身是否由 AI（疑似 Grok 假扮 Claude）代筆**：一篇批評 Anthropic 對開源 AI 生態立場的貼文（以 X/Twitter 貼文形式流傳）於 Hacker News 引發熱議；HN 留言區除討論原文論點外，另有一派留言質疑該文字風格疑似非人類撰寫，懷疑是 Grok 冒充 Claude 語氣代筆，使討論分岔為「Anthropic 開源立場評價」與「AI 生成內容可信度」兩條並行爭論；HN score 146，單平台高互動、議題共鳴深，尚無跨平台佐證；原文具體論據未見於本次摘要，需讀者自行查閱；[原文](https://twitter.com/TheAhmadOsman/status/2065307070044234186)（HN）
 - **Show HN：show-me — 讓 coding agent 以精簡視覺化取代大量文字輸出的 agent skill**：`npx skills add humanlayer/skills --skill show-me` 安裝；HN score 10；與「現在吵到哪」第 10 列「HTML 還是 Markdown」同屬輸出格式議題軸線後續訊號；[原文](https://www.humanlayer.com/blog/show-me-skill)（HN）
@@ -268,6 +269,24 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-11
+
+#### Show HN：STE80 Humanizer 以簡化技術英文去 AI 腔，留言串談到各 Claude 模型對 STE 指示的遵守度（2026-11-10）
+
+- **來源：** 「Show HN: STE80 Humanizer – de-AI text by writing 80% of the way to ASD-STE100」（Hacker News，102 分，另經 HN Repo Bridge 收到）；[原文](https://github.com/Dodaios/ste80-humanizer)
+- **核心論點：** 作者用 ASD-STE100 簡化技術英文規則的約八成嚴格度改寫文字，去除 AI 慣用語。
+- **關鍵回響：**
+  - 📝 定位：有人指出它是去 AI 化、不是擬人化——目標是更清楚簡潔的文字，不是騙過讀者以為人寫的。
+  - 🧪 模型差異：有人把 STE 風格要求寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 則很遵守（單則自述，未附測試方法）。
+- **收斂結論：**（無）模型遵守度只有一則留言佐證，不構成跨模型結論（推論）；同類 skill 見 [[topics/community-skills#2026-09]]（asd-ste100-skill）。與「CLAUDE.md 與提示詞該寫多少」爭論相鄰，但本則談的是風格指令的遵守，不是規則多寡。
+
+#### 一年 100% AI 強制令後沒人看懂程式碼：同一則貼文上 Hacker News，144 分（2026-11-10）
+
+- **來源：** 「A year after the 100% AI mandate nobody understands our code」（Hacker News，144 分，指向 r/ClaudeCode 原貼文）；[原文](https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/)
+- **核心論點：** 11-07 已收的 r/ClaudeCode 貼文（0 留言）於 11-09 上 HN 拿到 144 分，留言分成兩邊：回報代價的一方與質疑貼文真偽的一方。
+- **關鍵回響：**
+  - 📝 支持：有人轉述任職大企業的朋友，12 年資歷從未如此厭惡工作，每天約 10 小時把需求輸入 Claude、等待、審查，覺得什麼也沒學到。
+  - 📝 質疑：有人稱貼文以 pangram 偵測為 100% AI 生成，認為這是用 AI 腳本衝互動的反 AI 內容；留言也承認內容本身有共鳴。
+- **收斂結論：**（無）質疑集中在貼文真偽而非強制令利弊，不構成對主張的反方證據（推論）；「AI 該寫多少程式碼」維持還在吵，證據來源由單一 Reddit 貼文擴到兩個平台。
 
 #### r/ClaudeCode 週熱門：團隊一年前起 100% AI 強制令，如今沒人看得懂自己的程式碼（2026-11-07）
 

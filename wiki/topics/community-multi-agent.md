@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-10
+**最後新聞更新：** 2026-11-10
 
-> **Multi-agent 架構添「固定人設小組辯論」取向：roast-room**（2026-11-07）
-> - **nateherkai/roast-room**：七位具名風格 AI 顧問圍桌即時辯論商業決策，GitHub 1,963★。
-> - **AFK-surf/Comma**：開源自架常駐 agent，主打取代 Muse／Dots／Town 等託管式服務，524★。
+> **Multi-agent 架構添「同一任務、各保留原生 TUI」取向：yicheng47/runner**（2026-11-10）
+> - **yicheng47/runner**：讓 Claude Code、Codex、Copilot CLI 與 pi 在同一個任務裡協作，各自保留真實終端機介面，GitHub 504★。
 
 ---
 
@@ -57,7 +56,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較；2026-10-09 新增的自架框架 zhikuncode 也走同一路，尚無第二方實測。
 
 **機制細節**
-- **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器；omnigent 把協調邏輯與底層 harness（Claude Code／Codex／Cursor／Pi）解耦，換 harness 不必重寫協作邏輯
+- **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器
+- **Multi-agent 架構（續）**：omnigent 把協調邏輯與底層 harness（Claude Code／Codex／Cursor／Pi）解耦，換 harness 不必重寫協作邏輯；runner 讓四款 CLI agent 在同一任務裡協作並保留各自 TUI
 - **Multi-agent 架構（辯論式）**：roast-room 用多個固定人設互相詰問同一個決策，而非分工拆任務
 - **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
 - **確定性 Agent 框架**：Comma 主張自架常駐 agent 取代 Muse／Dots／Town 等託管服務，方向與 Omnara（託管式，2026-10-21）相反
@@ -138,6 +138,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### yicheng47/runner：讓 Claude Code、Codex、Copilot CLI、pi 在同一任務裡協作，各自保留原生終端介面（2026-11-10）
+
+- **主線：** 並行規模
+- **核心模式：** 開源工具，讓 Claude Code、Codex、Copilot CLI 與 pi 在同一個任務（mission）裡協作，每個 agent 仍在真實終端機裡跑自己的 TUI；GitHub Search 504 星。
+- **與既有模式的關係：** 補上「Multi-agent 架構」既有跨廠商協調層（cezar、Offrun，見 [[topics/community-multi-agent#2026-10]]）一個「同一任務內協作、不取代各家 TUI」取向；跨 harness 並行是大型 codebase 的直接痛點，主線填並行規模。
+- **可信度註記：** GitHub API 查得 515★、36 forks、59 open issues、最近 commit 2026-11-13（2026-11-14 查）；forks 約星數 7%，略低於 1/10，issues 有真實往來，採信度中等；協作機制僅有一句描述，未見實測。
+- **來源：** GitHub Search；[GitHub](https://github.com/yicheng47/runner)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無第三方採用回饋）
 
 #### nateherkai/roast-room：七位 AI 風格顧問圍桌辯論你的商業決策（2026-11-07）
 

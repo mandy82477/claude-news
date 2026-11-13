@@ -315,3 +315,7 @@
 {"date": "2026-11-09", "week": "2026-W45", "forecast": "Cursor 後門事件：攻擊者怎麼拿到發布權限：Anthropic 說系統沒被入侵，資安公司說套件經官方帳號送出，兩邊都沒解釋", "origin": "續盯", "probe": "SSH", "entries": []}
 {"date": "2026-11-09", "week": "2026-W45", "forecast": "遊戲重製限制誤擋無害逆向工程會不會修：Opus 5.5 更新後連自家專案的逆向工程也被擋", "origin": "續盯", "probe": "逆向工程", "entries": []}
 {"date": "2026-11-09", "week": "2026-W45", "forecast": "遊戲重製限制誤擋無害逆向工程會不會修：Opus 5.5 更新後連自家專案的逆向工程也被擋", "origin": "續盯", "probe": "遊戲", "entries": []}
+{"date": "2026-11-10", "week": "2026-W45", "forecast": "上市時程會不會延後、價格區間會不會出來：媒體稱投資人質疑 1.5 兆估值，拋售潮可能動搖時程", "origin": "新立", "probe": "IPO", "entries": [{"title": "riponcm/projectmem", "url": "https://github.com/riponcm/projectmem"}]}
+{"date": "2026-11-10", "week": "2026-W45", "forecast": "上市時程會不會延後、價格區間會不會出來：媒體稱投資人質疑 1.5 兆估值，拋售潮可能動搖時程", "origin": "新立", "probe": "估值", "entries": []}
+{"date": "2026-11-10", "week": "2026-W45", "forecast": "Cursor 後門事件：攻擊者怎麼拿到發布權限：Anthropic 說系統沒被入侵，資安公司說套件經官方帳號送出，兩邊都沒解釋", "origin": "續盯", "probe": "SSH", "entries": []}
+{"date": "2026-11-10", "week": "2026-W45", "forecast": "正式信評會不會在上市前出來：目前只有 Blackstone 的「預期 BB 級」轉述，S&P、Moody's、Fitch 都沒公布", "origin": "續盯", "probe": "BB", "entries": []}
