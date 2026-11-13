@@ -3,8 +3,8 @@ page: "topics/market-signals-customers"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-09"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-13"
+last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 5
 parent: "topics/market-signals"
@@ -31,20 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-09）
+> **最新判讀**（2026-11-13）
+> - **RIABiz：Schwab 自建 MCP 伺服器並跨入 agentic AI，稱動搖 Anthropic 獨家 LLM 供應商地位**：報導未附具體時程，目前僅排除 RIA。
+>
+> 前一輪（2026-11-09）：
 > - **Fable 5.2／Mythos 5.2 同步降價 20%，快取讀取倍率首降至 0.025 倍**：首次觸及 Fable 系列牌價與快取倍率結構本身。
 > - **IBM、Cisco 同日宣布計畫將 Mythos 5.2 導入資安產品線**：IBM Concert 做資安推理、Cisco AI Defense 做紅隊測試，均為宣布計畫階段。
->
-> 前一輪（2026-10-29）：
-> - **Schwab 給新簽 Claude Enterprise 的顧問最高 4,800 美元額度抵席位費（至 11-30）**：Citywire 原寫成 Anthropic 給，[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)（11-08 查證）寫明出錢的是 Schwab；20 席是 Anthropic 企業方案的最低席位、不是 Schwab 追加的門檻。原報導：[Citywire](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5) 報導。
-> - **GitHub Copilot Fusion 宣稱以一半 API 成本勝過 Claude Code**：基準測試方法未公開。
 
 ---
 
@@ -59,6 +58,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 近期判讀
+
+### 💰 RIABiz：Schwab 自建 MCP 伺服器並跨入 agentic AI，稱動搖 Anthropic 獨家 LLM 供應商地位（2026-11-13）
+
+**一眼**：📉 負面（敘事型，未見具體時程，動到通路獨家供應商關係的性質）｜誰有感：Charles Schwab（NYSE: SCHW，通路夥伴）｜硬度：單一標題（RIABiz）｜線：Schwab 自建 MCP 動搖獨家地位 ▸ 開線
+
+**為什麼這樣判**：新資訊是 Schwab 自行推出 MCP 伺服器、從唯讀跨進能實際動手做事的 agentic AI，RIABiz 標題稱這讓 Anthropic 作為 Schwab 獨家 LLM 供應商的地位「日子有限」；此前本頁記錄的 Schwab 消息都是通路門檻（10-24）與使用額度補貼（10-29），均未涉及 Schwab 自建基礎設施、繞開對 Anthropic 的依賴。判負面是因為自建 MCP 伺服器是具體的技術動作，一旦跨進 agentic AI 就代表 Schwab 有能力接入其他 LLM 供應商，直接鬆動既有獨家關係的護城河；但報導未附具體時程，目前僅排除 RIA、範圍受限，獨家合作條款是否已變動均未見披露。事實見 [[topics/anthropic-partnerships-compute#哪個合作會改到你用的 Claude]]。
+
+**下一個催化劑**：Schwab 或 Anthropic 官方是否證實獨家合作條款是否已變動；Schwab 的 agentic AI 功能是否接入其他 LLM 供應商；RIA 通路何時納入此次升級範圍。
+
+**你的選項**：(a) 什麼都不做，報導未附時程，獨家條款是否已實際變動仍未證實；(b) 想追蹤 Schwab 這條通路的讀者，把「自建 MCP」「agentic AI」這兩個關鍵詞記下來，留意是否出現 Schwab 接入其他 LLM 供應商的具體公告。
+
+**一課｜客戶自建基礎設施是獨家關係的警訊**
+- 概念：通路夥伴自己動手建技術基礎設施，往往是為日後接入其他供應商鋪路，不只是功能升級。
+- 機制：自建基礎設施降低對單一供應商的技術依賴，獨家合作的談判籌碼會往客戶那邊移動。
+- 下次怎麼認：看到既有客戶「自建」原本外購的技術層，先問這是否在為引入替代供應商做準備。
 
 ### 💰 Fable 5.2／Mythos 5.2 發布同步降價：Fable 牌價降 20%、快取讀取倍率首次低於標準值（2026-11-09）
 
@@ -474,6 +488,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 判讀日 | 線 | 當時判斷 | 催化劑（結算日） | 兩週後 | 對錯 |
 |---|---|---|---|---|---|
+| 2026-11-13 | Schwab 自建 MCP 動搖獨家地位 | SCHW 📉（開線） | 獨家合作條款是否已變動、Schwab agentic AI 是否接入其他 LLM 供應商、RIA 何時納入（11-27） | ⏳ | ⏳ |
 | 2026-11-09 | 定價改版 | 本體不可買；間接曝險 📈（第 7 則） | 財報／S-1 是否拆分 Fable 系列營收與毛利率變化、快取倍率對帳單的實際影響是否有數字佐證（11-23） | ⏳ | ⏳ |
 | 2026-11-09 | 資安工具整合 Mythos | IBM／CSCO ⚖️（開線） | IBM Concert、Cisco AI Defense 的 Mythos 整合是否正式上線並公布時程或合約金額（11-23） | ⏳ | ⏳ |
 | 2026-10-29 | Financial Advisors 使用額度優惠 | SCHW ⚖️（開線） | 額度補貼適用範圍與期限是否經官方說明（11-12） | ⏳ | ⏳ |
@@ -512,6 +527,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 追蹤中的里程碑
 
+- ❓ **待查證**（標 2026-11-13｜查 自建 MCP、agentic AI｜複 2026-11-27）｜**Schwab 自建 MCP 伺服器後，獨家合作條款是否已變動、是否接入其他 LLM 供應商**：RIABiz 報導僅標題可用，具體時程、範圍與獨家條款現況均未見報導。
 - ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、快取讀取｜複 2026-11-23）｜**Fable 5.2 快取讀取倍率降至 0.025 倍對重度快取客戶帳單的實際影響是否有數字佐證**：官方文件僅載新倍率，財報或 S-1 是否拆分 Fable 系列營收與毛利率變化均未見報導。
 - ❓ **待查證**（標 2026-11-09｜查 IBM Concert、Cisco AI Defense｜複 2026-11-23）｜**IBM Concert、Cisco AI Defense 導入 Mythos 5.2 是否正式上線並公布時程或合約金額**：IBM、Cisco Blogs 報導僅標題可用，上線時程、整合深度與是否為付費採購均未見報導。
 - ❓ **待查證**（標 2026-10-29｜查 4,800、Financial Advisors｜複 2026-11-12）｜**Anthropic 向 Claude for Financial Advisors 用戶提供 4,800 美元額度抵用的適用範圍與期限是否經官方說明**：Citywire 報導僅標題可用，是否限特定通路、補貼期限與是否與 Schwab 門檻收緊同屬一組措施均未見報導。

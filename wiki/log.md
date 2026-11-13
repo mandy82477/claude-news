@@ -8818,3 +8818,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編查證（11-14）：官方 IPO 頁——Q3 單季淨損 $233 億含 $219 億可轉債等公允價值非現金費用、GAAP 營業利益率 (3)%、預計 11-18 定價、11-19 交易（需核准），anthropic-ipo 五格表、下一個時點與 market-signals-ipo 兩處同步改正，anthropic-ipo ⟨Q-03⟩（掛牌日與價格區間）結案；Claude Meetings 官方說明中心無頁，Axios 等稱 Team／Enterprise beta，以媒體稱寫進 pricing callout
 - devpractice 沉澱：候選 3 筆／手冊寫入 0 則
 - market 判讀：判讀 2 則（RSP 門檻「已達」📉、Q3 財務與客戶數 ⚖️）；里程碑登記 2 筆、回顧結算新增 2 列（11-26）
+
+## 2026-11-13 Ingest
+
+- 來源日報：[[news/2026-11-13]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei
+  - **功能**：entities/claude-code、entities/claude-code-known-issues、entities/claude-code-releases、topics/claude-code-experimental
+  - **商業**：entities/pricing、topics/anthropic-business-risks、topics/anthropic-ipo、topics/competitor-landscape；主編另覆寫母頁 topics/anthropic-business callout（hub 落後閘觸發後補）
+  - **安全政策**：topics/ai-agent-safety（母頁路由表＋callout）、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety-prompt-injection、topics/anthropic-government-policy、topics/recursive-self-improvement
+  - **社群**：topics/community-skills、topics/community-interfaces、topics/community-integrations、topics/community-tech-patterns（母頁 callout＋路由表最後動態）、topics/community-tech-discussions
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals-legal、topics/market-signals-customers（＋母頁 topics/market-signals）
+  - **模型**：無（Reddit 單則無標記貼文，未達收錄門檻）
+- 新增頁面：無
+- feature-radar：新增「Code Mode」（v2.1.323，Research Preview，🔥，⏳ 觀望）；「⭐ 現在值得跟的三件」重算後維持 Fable 5.2／Mythos 5.2 不動（Code Mode 熱度未達門檻）
+- index：無
+- 摘要：claude.ai／Claude API／Claude Code 多起錯誤升高事故與 Microsoft 365 同步故障；Anthropic 因「Mythos」模型名稱遭控商標侵權、非營利組織提告要求凍結「AI 軍備競賽」；IPO 路演認購約達六倍超額（續 11-10 價格區間）；Schwab 自建 MCP 動搖其獨家 LLM 地位；Claude Code v2.1.323 發布 Code Mode 實驗功能
+- 呈現品質：全部通過（9 道 ingest_gate 內容閘一度 3 紅：topics/anthropic-business hub callout 落後子頁、community-tech-discussions.md 讀者語言外洩「記者」字樣、community-skills.md 2 格超 200 字元細節區條列，主編同輪修復後全綠）
+- 品質備註：[商業] 官方 API 定價頁 11-13 diff（Browser use tool／AWS／Microsoft Foundry／Managed Agents 定價段落重組）主編 WebFetch 查證後確認無新費率、無新事實，不寫入
+- 分類回退：[社群] 「Tell HN: Claude Code Is Down」→ 已追加派工給[功能]（已處理，entities/claude-code-known-issues 補一筆增量細節）
+- 轉知帳本：H-6db5d4（社群→功能，評估產品化矩陣新增列：aa1143/NamiAgent、zhuyansen/agent-skills-hub、sun168567/cc-desk-tunnel、everyinfra/everyinfra-agent-plugins）open，待下一輪功能記者接手
+- devpractice 沉澱：候選 3 筆（Downshift 成本/context 實務、claude-code-claim-check 驗證 Stop hook、t3code／ovis／Aq 手機遠端操控）／手冊寫入 0 則（今日無開發實務分類包）
+- market 判讀：判讀 4 則（IPO 六倍超額 ⬆️、Mythos 商標訴訟 ⚖️ 開線、AI 軍備競賽凍結訴訟 ⚖️ 開線、Schwab 自建 MCP ⚠️ 開線）；里程碑登記 4 筆、回顧結算新增 4 列
