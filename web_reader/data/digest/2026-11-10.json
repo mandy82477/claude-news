@@ -522,16 +522,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：互動數更新：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。",
   "sedimentedToday": [
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-known-issues",
-      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-code-releases",
       "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
       "pageType": "entity"
@@ -547,11 +537,6 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
       "pageType": "topic"
@@ -564,11 +549,6 @@
     {
       "id": "enterprise-tool-tracker",
       "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-ipo",
-      "name": "IPO 與財務揭露這則怎麼判",
       "pageType": "topic"
     }
   ],

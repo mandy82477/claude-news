@@ -499,11 +499,6 @@
       "pageType": "topic"
     },
     {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
@@ -511,11 +506,6 @@
     {
       "id": "market-signals-customers",
       "name": "定價、通路與客戶這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],

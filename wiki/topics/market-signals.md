@@ -3,17 +3,17 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-11"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-12"
+last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 2
 parent: null
 children: "['topics/market-signals-compute', 'topics/market-signals-customers', 'topics/market-signals-ipo', 'topics/market-signals-legal']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 2
 inbound_links: 11
-attribution_count: 118
-attribution_last: "2026-11-05"
+attribution_count: 119
+attribution_last: "2026-11-12"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

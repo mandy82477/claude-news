@@ -4,17 +4,17 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-11"
-last_news_update: "2026-11-11"
+last_updated: "2026-11-12"
+last_news_update: "2026-11-12"
 status_main: "active"
-days_since_news: 3
+days_since_news: 2
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 2
 inbound_links: 194
-attribution_count: 171
-attribution_last: "2026-11-11"
+attribution_count: 172
+attribution_last: "2026-11-12"
 top_source: "google-news"
 pending_count: 2
 pending_overdue: 1

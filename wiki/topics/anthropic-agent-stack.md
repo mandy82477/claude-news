@@ -11,7 +11,7 @@ days_since_news: 22
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 22
+days_since_news_subtree: 2
 inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-09-10"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 官方 agent 積木：為什麼有它、讓你多做出什麼

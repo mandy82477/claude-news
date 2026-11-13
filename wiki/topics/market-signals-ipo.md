@@ -3,19 +3,19 @@ page: "topics/market-signals-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-10"
-last_news_update: "2026-11-10"
+last_updated: "2026-11-12"
+last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 2
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 2
 inbound_links: 7
-attribution_count: 16
-attribution_last: "2026-11-10"
+attribution_count: 19
+attribution_last: "2026-11-12"
 top_source: "google-news"
-pending_count: 25
+pending_count: 27
 pending_overdue: 10
 pending_next_review: "2026-11-16"
 pending_signalled: 6

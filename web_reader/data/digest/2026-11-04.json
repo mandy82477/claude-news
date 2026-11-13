@@ -476,13 +476,7 @@
     }
   ],
   "preview": "Claude Code 實驗功能追蹤：2.1.318（自 2.1.317 起比對）新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；另 4 個設定類旗標依蒐集邊界不列；CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD（首見 2.1.317）消失，列 4 階。對帳僅命中來源",
-  "sedimentedToday": [
-    {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-11-04",
     "summary": "",

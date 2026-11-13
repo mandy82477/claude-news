@@ -457,11 +457,6 @@
   "preview": "Claude Code：官方文件索引（llms.txt）移除 25 頁每週頁面，最早為 Week 13（2026-03-23～27）；連過去的週報連結可能失效。11-10 的 v2.1.322 與 SDK 更新見 entities/claude-code-releases。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-design",
       "name": "Claude Design",
       "pageType": "entity"
@@ -482,41 +477,6 @@
       "pageType": "entity"
     },
     {
-      "id": "pricing-history",
-      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-partnerships-compute",
       "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
       "pageType": "topic"
@@ -524,16 +484,6 @@
     {
       "id": "anthropic-product-matrix",
       "name": "Anthropic 產品 × 功能對照表",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-skills",
-      "name": "社群做法：Skills 怎麼寫",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
@@ -549,11 +499,6 @@
     {
       "id": "model-comparison",
       "name": "Claude 模型選型對照",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"
     }
   ],

@@ -1,0 +1,778 @@
+{
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-13 16:50 UTC",
+  "articleCount": 104,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Anthropic's Strictest Account-Ban Rules Take Effect Nov. 12, Closing Three Loopholes for Users in Unsupported Regions - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAtUmctQ3RYcWNjTGR3WEVwODFSVGNTZDNyaGtOOU8tUFEyeVhGd2phRENjazBVVWNyR2NrbnY3c0VTekdVWUtMWU8zb3lqOElQOHBnTHVRdkxCSHBQR3VkM0JRMTIycllVVjdwWG1tWVBlYkl3TVE?oc=5",
+      "source": "Google News / BigGo Finance",
+      "time": "11/11 12:05",
+      "sentiment": "",
+      "body": "BigGo Finance 報導 Anthropic 最嚴格的帳號封禁規則 11 月 12 日（今天）起生效，標題稱補上三個讓不受支援地區使用者鑽的漏洞。人在不受支援地區使用 Claude 的人，今天起要留意帳號被封的風險。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Stolen Claude API keys can turn Claude Code into a remote-controlled implant - Help Net Security",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWDRNVVdqMy1DQ19iWGZTM3NtaFN3a0RNWEV6ZlU1QWZlZVQwVjdBZFFBRkpEenBIN29yM2VRc0xGWTFfeHlfeUlaU2xIWkZnMjNXdXN4VFJjTWJIMXd1Wm9sRWJNU2djMkFuSm9NWC0xTnNBY0FheXVYWjR5N3RkdU40MERTLU96Ulk3eS1FTzdMRFVGd3Jv?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "11/12 11:00",
+      "sentiment": "",
+      "body": "2 個來源同日報導：Help Net Security 的標題指出，被竊取的 Claude API 金鑰可以把 Claude Code 變成能被遠端遙控的植入程式。用 API 金鑰驅動 Claude Code 的人最相關。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Inter-session communication for multi-Claude workflows",
+      "url": "https://github.com/anthropics/claude-code/issues/24798",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/12 14:11",
+      "sentiment": "",
+      "body": "這則功能請求今天累積 85 則留言、23 個 👍：提出者指出大型專案裡會同時開多個彼此隔離的 Claude session，希望它們能直接協作、依相依順序串起較高層的流程。同時跑多個平行 session 的人最有感。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] claude -p fails with \"tools.3.custom.input_examples: Extra inputs are not permitted\"",
+      "url": "https://github.com/anthropics/claude-code/issues/11678",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/12 11:52",
+      "sentiment": "",
+      "body": "`claude -p` 無頭模式一送出 prompt 就回 API 400 錯誤，訊息為 `tools.3.custom.input_examples: Extra inputs are not permitted`，今天累積 52 則留言、38 個 👍。用 `claude -p` 跑自動化腳本的人會直接撞到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[Status] Elevated errors affecting the Microsoft 365 connector",
+      "url": "https://status.claude.com/incidents/sqn3fg1l96dl",
+      "source": "Anthropic Status",
+      "time": "11/12 17:52",
+      "sentiment": "",
+      "body": "狀態頁在 11 月 12 日 17:52 UTC 標示調查中：Microsoft 365 連接器錯誤率升高、回應變慢，原文列出的受影響請求涵蓋郵件、SharePoint、Teams 聊天與行事曆。透過連接器存取這些資料的團隊，事件尚未標示解決。",
+      "focusTags": []
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/12 18:27",
+      "sentiment": "",
+      "body": "Claude Code 桌面版文件字數從 223,476 增為 226,189，新增 16 段、移除 5 段；新增內容含管理員設定提醒：`forceLoginOrgUUID` 不宜單獨搭配 Claude Console 組織 ID 部署，`browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三個設定需要新版 Claude Desktop，並說明預覽不執行腳本，所以由腳本繪製的圖表與表格會是空的。管理團隊電腦桌面版設定的人，先對照這幾段。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic's Lydia Hallie says Claude Code users should stop approving every command: only 14% of humans caught dangerous ones, auto mode blocked 89% - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9LZTBJTFBnM2F4QUUzYlY2VmMzZEpqU0tJSnpjYWE5aDNuRTNBSkJIdlJqRGFLbEwyenRLTFZmbWhCSEdpTUQ2X3E5b0hyMTdFREo1OTRyY2t2YnM?oc=5",
+      "source": "Google News / BigGo Finance",
+      "time": "11/12 04:10",
+      "sentiment": "",
+      "body": "BigGo Finance 轉述 Anthropic 的 Lydia Hallie 說，Claude Code 使用者不該再逐一批准每個指令；標題給的數字是人工只攔下 14% 的危險指令，自動模式攔下 89%。習慣逐條點允許的人，這是官方人員給的反向建議。",
+      "focusTags": []
+    },
+    {
+      "title": "Diluting Poisoned Fine-Tuning Data Can Strengthen Its Effect - Anthropic Alignment Science blog",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1pT3BQSS05MGNNbk1LLTc3SXExY3paYnBObEs1S2d3MDk3UEE2N29VenZFWlRtZm5RNXlKdE8xRlowXzY4NHN0TnRJQUhkYk9ZS191dnR6S3A1N1RKMWdGa0JYY0pubWJiRHc?oc=5",
+      "source": "Google News / Anthropic Alignment Science blog",
+      "time": "11/10 19:08",
+      "sentiment": "",
+      "body": "Anthropic Alignment Science 部落格 11 月 10 日的文章，標題指出稀釋被下毒的微調資料，反而可能讓下毒的效果增強。處理微調資料清理或資料投毒防禦的人，值得讀原文。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "AI models from Google, Anthropic and more lean on recommending promoted drugs: study - Fierce Pharma",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTlh1MGktTFl3SEdkWkN3Rlk2ZHNtTlhabzY2UkFuelZ5dFJfaHZ4U0VHc2dacDZ0bHoyVU1vSmRwTHdad1U3a3NDTUFHeEtGWlZreUxJMnJaRXFNaEV6VjY0bnVEVGhLWlVGR05CUnM4eldSZFJBXzRLT1F3Uk1VRm94c2ZaekR0S2hqTEVkRFhuX0d5MWx4ZDhVdnZqaHNfZVdIV3VLNS0yeTA?oc=5",
+      "source": "Google News / Fierce Pharma",
+      "time": "11/12 12:45",
+      "sentiment": "",
+      "body": "Fierce Pharma 報導一項研究，標題稱 Google、Anthropic 等公司的 AI 模型傾向推薦被推廣的藥品。在醫療或藥品情境使用這些模型的團隊，標題點出了推薦偏向的風險。",
+      "focusTags": []
+    },
+    {
+      "title": "Nvidia’s $10 Billion Anthropic IPO Pledge in Focus With CEO Exit - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMmswNUFEV3ZLRWJCVzZCQ244VzJlYVpUS3VTc29EVTNhckRQOUdTRWJaRHE0VkNDNkt1aGNoQ09STFhxUlV3YWxHNVJCWkhQRURFLW5FWkp6NjlYN1dWa0hnZ0hwZXZtOGJtUDZLMFdKWmhVMll1SnVTSjF0TF90a1h5S09QczhPV3lIX285ZUdHOXRYMnU5OHVrbjV2TS1pTVgxd0hZOUlwZ3JSclhDTzdUV28?oc=5",
+      "source": "Google News / Bloomberg.com",
+      "time": "11/12 16:19",
+      "sentiment": "",
+      "body": "Bloomberg 的標題把輝達對 Anthropic IPO 承諾的 100 億美元，與一位 CEO 離任並列為焦點。追蹤 Anthropic 股東結構的人，這是輝達承諾金額的數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic IPO: Can Indian investors apply for Claude maker's $64 billion share sale? Check rules - The Economic Times",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWGZPd2VWV1dZamRySElIc1FiNmwyTUxYVFplWEtQTHRYYVlUQmZTUW11UzloUUJOUU45aU1yWDk1N0pCX1FhdzhZaG51eVFaN3dFU0hBTjdyYi1JNTZDamhQU005MF83OXVCTlRsQ0p3YkZBcUFfNmlBRW5jZ3BHVFRCVkNaWDk3djBZNTNuSG9Odl9BNWxhby1QWlVjRGRXb2xvQjBIanpfX1J0eUpvUXhHY1lWbTZQb3V3bUxYUW9razhaSVYtMG9xRVdmcEFTSk01eWNLa2dHbFY4SDdBQkdpdjI3OWF1SEVWTnpoeXVFbVQtd1RlZjRHazVCUdIBgwJBVV95cUxNNlpoeU5KSmNpMWVWaXRnMXlLVmp6aDM4UG1MUXFlcGF2aUpneHRjTEJqdEp2azl1Q0tEQlBPTG1vS0ZVTnJVYVJkTUJHUUtZcjNvaTl0MS1USFRaZnpLMzltc0Q4QlU1Yjh3MUNhZktiNUl3SHd2ZlNLeDhHb0NaZlkxN0VicVoycEg1RkxfanBUODg0cDJhbVlNdnF6Y3BESXI4cmx6cmVuSkhLQnJNV3dia2doa3RXS0hESERBdFE1NnFoLVY1bDVVUGducC04TGVBWm1TQVdBaFJYaW5mS3RnMy1QWGJPZ3JNMUlBeWc3S0E3NW9UT0lReFF0d1JMZnpz?oc=5",
+      "source": "Google News / The Economic Times",
+      "time": "11/12 10:16",
+      "sentiment": "",
+      "body": "Economic Times 的標題以約 640 億美元的股票發行為題，說明印度投資人能否申購、要看哪些規則。人在印度、想了解申購資格的人，可讀文中的規則整理。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Should You Buy Anthropic IPO Stock? Here’s What History Says - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaXRUOVRlYlcyMXh0N2pRaFI4R2g2SFA1YWdxdnlJd2xsRHpzLWlwRWdSYVl1YS1fY3VieXBZRUNTLWhrT21feFY1ZEd5dVBpajVCZmdkS1M2VkFlUUgxZlVwU3kxclk0Zm1TRTVYaF9zQWRUblk5c2F4WE9ZNTVqc294THdXcmV3VUtOakhNamJwOXc3aDRxS184YjlFMmNGaWowRQ?oc=5",
+      "source": "Google News / The Motley Fool",
+      "time": "11/12 08:50",
+      "sentiment": "",
+      "body": "2 個來源同日報導：Motley Fool 的標題問「該不該買 Anthropic IPO 股票」，並以歷史案例作答。想看大型 IPO 過往表現對照的人，可讀這篇的歷史比較。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "CVP approved user being blocked on completely benign, non-security queries in fresh sessions on claude.ai (not ...",
+      "url": "https://github.com/anthropics/claude-code/issues/61889",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/12 14:11",
+      "sentiment": "",
+      "body": "標題指出已通過 CVP 核准的使用者，在 claude.ai 全新對話裡連完全無害、非資安的提問也被擋，目前 44 則留言。申請過 CVP 的人可留意這串。　情緒：😤",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Just say no to Anthropic's IPO",
+      "url": "https://garymarcus.substack.com/p/just-say-no-to-anthropics-ipo",
+      "source": "Hacker News",
+      "time": "11/12 00:34",
+      "sentiment": "",
+      "body": "Gary Marcus 的 Substack 文章在 HN 拿到 11 分；留言有人說這次 IPO 讓他第一次研究怎麼放空，另一人回應幾乎沒人會真的拒絕，因為 IPO 歷史上對早期投資人多半表現不錯。看社群如何討論這輪上市的人可讀留言。　情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
+      "url": "https://github.com/FrigadeHQ/yogurt",
+      "source": "Hacker News",
+      "time": "11/11 15:33",
+      "sentiment": "",
+      "body": "作者做了一個 MIT 授權、免費的桌面應用，用本機的小型模型轉錄、摘要並對會議內容提問，不加入通話，錄音與逐字稿都不離開電腦；HN 拿到 282 分。在意會議資料隱私的人，是與本週 Claude 推出會議功能同類需求的開源本機選項。　情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "llm-gemini 0.36",
+      "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+      "source": "Blog / Simon Willison",
+      "time": "11/10 20:09",
+      "sentiment": "",
+      "body": "Simon Willison 指出 Gemini 4 Carbon 原本只給一小群資安防禦者，現在開放給所有人，上線價是每百萬 token 輸入 2 美元、輸出 10 美元，與 Claude Sonnet 5.5 同價，但 12 月 1 日起會調到 4／20 美元，與 Opus 5.5 相同。為 coding agent 比價的人，要把這個調價日算進去。　情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "source": "GitHub Search",
+      "time": "11/12 18:27",
+      "sentiment": "",
+      "body": "（2026-02 出生、58,093 星，本庫今日首次收錄）從任何電腦或手機控制 Claude Code、Codex 等工具的專案。　情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-interfaces",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "janestreet/agent_skills",
+      "url": "https://github.com/janestreet/agent_skills",
+      "source": "GitHub Search",
+      "time": "11/12 18:27",
+      "sentiment": "",
+      "body": "（近 2 天新增 4,049 星、約每日 2,024 星，累計 7,512 星）Jane Street 公開的 agent skills 集合。　情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "11/12 18:27",
+      "sentiment": "",
+      "body": "承自架版 Managed Agents 的消息，API 定價頁今天只新增一句：自架版的定價請洽 Anthropic 客戶團隊，頁面沒有公開價格；全頁字數從 30,550 變為 30,638。想估算自架版成本的團隊，目前只能走洽談窗口。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing-history",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 在週二（11-10）送出的修訂版招股說明書裡宣告，公司已判定達到負責任擴展政策（RSP）中的一道安全門檻，條件是 AI 承擔了足夠多的 Anthropic 自家研究工作、使模型進步速度大約加倍；一週前公司才告訴投資人這可能「隨時」觸發，而這次判斷依據是對未來模型與整體進展速度的預期，不是目前模型的實測。HN 與 Google News 兩個來源同日收錄。關心 Anthropic 安全承諾如何落實的人，可對照 RSP 文件，看這道門檻觸發後要加上哪些更嚴格的防護。",
+      "ref_urls": [
+        "https://finance.yahoo.com/markets/article/anthropic-says-a-key-ai-safety-alarm-has-been-triggered-days-before-its-ipo-171519615.html"
+      ],
+      "ref_names": [
+        "Yahoo Finance"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-11）Anthropic 的 IPO 官方頁公布第三季財務：營收 170 億美元、年增逾 12 倍，年營收達 10 萬美元以上的客戶逾 11,900 家（同樣年增逾 12 倍），自 2025 年第一季以來運算效率提升逾 4 倍，調整後營業利益率 15%，淨損 233 億美元；Yahoo Finance 另報導將於 11 月 19 日（週四）開始交易，這個頁面在 HN 拿到 641 分。評估是否認購的人，現在手上有官方披露的營收與利潤數字，不再只有估值傳聞。",
+      "ref_urls": [
+        "https://ipo.anthropic.com/us/",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxOYVlrWkVzSzVWeVdsNDFGams2U1ZST2dRSjQtY2R5c3YzVmw5UGg2YVM3VG1uVExFYVZBTGFXd01qZUc2dmpTdW83Q2dIUnh3X1BhaUF4S2tLbk9RSnhOS2c2N2lnOVNUNVpOQm9aZ0t0UFQxU3JEcVVjMXN6RzgwbkswUjlwZGQ2NEJQeFhKM1dZbUF1VEROY196OUU1QmNBXy01MHRVdnNlX3NBcGZDaGlreWxpbnBiSWllcDRhQQ?oc=5"
+      ],
+      "ref_names": [
+        "官方 IPO 頁",
+        "Yahoo Finance"
+      ]
+    },
+    {
+      "tag": "[新工具]",
+      "text": "Anthropic 讓客戶自架 Claude Managed Agents：Help Net Security 的標題寫明自架版讓 agent 的憑證留在客戶自己的環境，Unite.AI 同日報導客戶可以自行託管。需要把 agent 憑證與執行環境留在內部的企業團隊，這是新增的部署選項。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNThmeVZGbWJzVGFwaXU1QWVDQlN2bVpWdHI5UUk5M2ZpRVJZUmhDZDV5OUpyV20xTHR3dFFrQUo2OVY5NDM2WDFSZ01aVDN0dVdOcUhRUzh3R0xISDdFck9lRXY3cy1KdGUzbWZaY28yMDUwbGF3VjAxb3pHMFN4by01cHk?oc=5"
+      ],
+      "ref_names": [
+        "Help Net Security",
+        "Unite.AI"
+      ]
+    },
+    {
+      "tag": "[新工具]",
+      "text": "Anthropic 推出 Claude for Manufacturing：marketscreener、Manufacturing Dive、Business Insider 三家同日報導，Business Insider 並點出這發生在 IPO 前夕。三則標題都沒有列出具體功能或價格，製造業客戶要判斷適不適用，得等官方說明補上涵蓋範圍。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRlpDQjRpNE5IcUlHXzhxN3hNTW1kMkExdUdqWkFTMTlOcGRnMWFweVE0bGE2eUtyeFN1VUgza3lPOUtUem5rR3JHRkJ2dC1UdXkzazdIREh0ZmVnc0oyQy14RFZmRnFxMDdFSE5vdUpIZTRtSDY0cmw2WThCY3RVWmM0M3oyLS1aUURPZExfMndFMm9ZVHNaSE5nU3o?oc=5",
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWRmQ1BneGdsLUtIeUJmSS1HeUpjVnRib1o1cnJOamNsV3k1aGNFZnR4X0J2ZjdxR1VfcGg4VUt0dHBNWlQ1SDJXRDREaDZwYk80clNHVGdoeG5icjFOdFFHUmNQLWtYOV9RWkRudWRlQ3cyQzNRdVQyRllBalFjUlEtQ0Y5RnFnV1VNbmE4ckFDc1ZK?oc=5",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRVFzTkpNdV9uc2JnQUFWcTF0c0Y1UnRVcU1ETUZHRGZVUjlRNGpBWXI5UGF4TThRWEFEc1J2alNTbmFYSUEzXzNhb1p4RlRpRDdmd1BSdi1xeXB4aFgwQTlUalZYc19yM2U1S2JYWFVWQWRvSUM3RF9ETkN2bWY0T2g1ZEtWemNpYThCM3lBZFhMRlM5VHRuTG94WDA?oc=5"
+      ],
+      "ref_names": [
+        "marketscreener",
+        "Manufacturing Dive",
+        "Business Insider"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Introducing Gemini 4 Hydrogen",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "body": "Google 推出主打日常 coding 與 agentic 工作流速度與效率的 Gemini 4 Hydrogen，開放給 AI Studio 各層級、Gemini API 與 Google Antigravity 付費訂閱者；官方稱它在 Artificial Analysis 智慧指數預設高思考等級為 51、超過 Argon 的 50，最高 xhigh 等級達 54",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Rain Launches Agent Vaults: AI Agent Payments on Single-Use Visa and Mastercard Cards - Tech Times",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYzAtNXh0ZTFVMlQxS29zZXMwUjBXbXhuaFF2YlpGeTVJUzJtcHdKVzRxMTlyWnlWajQ4MGpBVVZiUFNEMWc4NlBPcTE1NWh0d3ZjUm9YZXZuQWJtMmw0MEpXQUhQR3hhVG92UVJIU2J1LWlobzY0OHM0T2pHN1pHTmkzWEZYdTNLRk5XcGlHd1I1NUJPV1lEcTNEMncwdVNIYlBqdG8tb0R5QndVMzFzMGxCUVBaSEEta3A0dnhRM3R3Mnptbmt5T1BxbmE?oc=5",
+      "body": "Rain 推出讓 AI agent 用單次使用的 Visa 與 Mastercard 卡付款的 Agent Vaults",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "AWS Open-Sources AI Agent Evaluation Framework That Hardens Its AI Grader Against Prompt Injection - Tech Times",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOVF9uXzcyLVhXb0ZyRUY1SEhRMEozaW1vNGZlellqU3dUVXZoVTc5enFTM1JWZmttbzVUT2JsbWJjRGdCNHpFNFkySHptbVdoT250c3dfdHRJNk5vYWlqdHZpN0lZT0pXc1BOUnQzUU9JNWVBcjVud0NVWjVSWUw1NmExZk9hSjBqUjR1OTV3NU1DeG5Dbi1XWG9ZMlpnU3hBN2VuZkpfTEVqd2cwVGNnejRzTkhkbURfR3NCN1VOYkJtZEV2QXVyeDhJYWVWTGY3aW9EazQ5MFliWFF3d1ZhV1NGdkhQSFky?oc=5",
+      "body": "AWS 開源 AI agent 評估框架，並加強評分用 AI 對提示注入的防護",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Prompt injection attacks drive Red Hat and Nvidia's OpenShell - SiliconANGLE",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObzVJODFXaXNJZlJpWWZxaVAxd1FMLXJaNDBUSlN4cWo4dktLMWhYVEIxU0RKYWdac18tenl2dGE0TFZieTZ3dnFKTXBWZDVaa3IyOENwa0NUcGItWWJ0Qzd5Q3ZoYkFZb05IS21EcE8xVXRCSmdpR29NUzlKNktIR0l0TnA2bExRUTB0SmJXeDRiZVpFUGNIUjNqbFN4OFNCeFQ0LThOOA?oc=5",
+      "body": "Red Hat 與 Nvidia 的 OpenShell 以提示注入攻擊為設計動機",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 46
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 21
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 2
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Managed Agents：❓ 待查證（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜客戶自架 Managed Agents：Help Net Security 與 Unite.AI 標題稱 Anthropic 讓客戶自架，agent 憑證留",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "managed-agents",
+      "name": "Managed Agents",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-history",
+      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-12",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/managed-agents",
+            "name": "Managed Agents",
+            "label": "最新動態",
+            "date": "",
+            "body": "❓ **待查證**（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜**客戶自架 Managed Agents**：Help Net Security 與 Unite.AI 標題稱 Anthropic 讓客戶自架，agent 憑證留在客戶環境；原料無內文，方案、狀態、與既有自架沙箱的關係皆未載。\n\n10-23：\n官方查證 Proactive Workflows 底層已改稱 scheduled tasks（原 Routines）；社群出現負向對照——Show HN Omnara（98 分，4 個來源同日報導）自稱是開源替代方案，證據等級僅單一自述＋互動數字，尚無第三方測試數據。"
+          },
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增 bug**：`claude -p` 無頭模式送出 prompt 即回 API 400「input_examples: Extra inputs are not permitted」（GitHub issue #11678，52 則留言、38 個讚，仍 open，🔌 組）。\n- **互動數更新**：多 session 直接通訊功能請求（#24798，已修復 v2.1.224）增至 85 則留言、23 個讚（📂 組）。\n- 11-10：**互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。\n- **功能請求**：Desktop／Cowork 支援 RTL（希伯來／阿拉伯文）排版（GitHub issue #38005）累積 47 則留言、126 個讚。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "桌面版文件新增 16 段：管理員設定提醒（`forceLoginOrgUUID` 與 Console 組織、三個設定需新版 Claude Desktop）與預覽不執行腳本的說明；11-10 SSH session 改讀遠端主機的 managed settings 檔，Help Center 再移除「模型設定」段（見時序）。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **官方 IPO 頁公布 Q3：營收 $170 億、年增逾 12 倍；年營收 $10 萬以上客戶逾 11,900 家；調整後營業利益率 15%**（HN 641 分）；官方 IPO 頁載明預計 11-18 定價、11-19 開始交易"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🟡 **Google 推出 Gemini 4 Hydrogen，主打日常 coding 與 agentic 工作流速度，AA 智慧指數 51（Argon 50）**——價格未載；Antigravity 付費訂閱者可用，想省額度的人先觀察實測。\n- 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。\n- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/anthropic-business-risks",
+            "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Ars Technica 稱音樂出版商在 Sony 案引用 Anthropic 員工聊天紀錄，主張 $15 億書籍盜版和解不足以嚇阻**（HN 14 分；該案 08-29 已提告，見 [[topics/anthropic-business-risks#還沒過去的風險]]）"
+          },
+          {
+            "page": "topics/market-signals-ipo",
+            "name": "IPO 與財務揭露這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **修訂版招股書改寫為「已跨過」RSP 安全門檻**：距 11-03「可能迫近」僅一週，依據是對未來模型的預期，防護升級內容未載。\n- **官方 IPO 頁新增客戶數與調整後營業利益率 15%**：$10 萬以上客戶逾 11,900 家；Q3 營收與 11-02 同數，淨損與調整後利益是不同口徑。\n- **11-10 路演定價**：擬發 8.25 億股、每股 70～78 美元，傳最快 11-19 掛牌，估值報導分歧於 1～1.4 兆美元。"
+          },
+          {
+            "page": "entities/pricing-history",
+            "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **API 定價頁新增一句：自架版 Claude Managed Agents 的價格請洽 Anthropic 客戶團隊，頁面不公開**（官方 diff 偵測；全頁 30,550→30,638 字）\n- **usage credits 說明頁再改：購買一律不可退款（含取消訂閱或刪除帳戶），原「Monthly API credits」段落被移除**（官方說明中心 diff 偵測；段落移除的實際影響待官方文逐字查證）\n- **Whiteboards、Sheets（beta）與 Claude Data 官方介紹文出爐，日報摘要稱所有付費方案可用**；是否另計費未載"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "帳號封禁規則",
+            "date": "",
+            "body": "BigGo Finance 標題稱 Anthropic 最嚴格的帳號封禁規則 11-12 起生效，補上三個讓不受支援地區使用者鑽的漏洞；三個漏洞與規則內容未載（僅標題可用）。在不受支援地區使用 Claude 的人，帳號被封的風險提高。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Yahoo Finance 摘要稱，Anthropic 在 11-10（週二）送出的修訂版招股說明書裡寫明「我們判定已達到這個門檻」：條件是 AI 承擔足夠多的自家研究工作、使模型進步速度大約加倍；一週前公司才說可能「隨時」觸發。判定依據是對未來模型與整體進展速度的預期，不是目前模型的實測；對應 RSP 條文與後續防護措施未載。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **金鑰被竊的後果**：Help Net Security 標題稱被竊的 Claude API 金鑰可把 Claude Code 變成可遠端遙控的植入程式；兩個來源同日報導，攻擊手法與影響版本未載（僅標題可用）。\n- **agent 付款防護**：Tech Times 標題稱 Rain 推出 Agent Vaults，讓 AI agent 用單次使用的 Visa、Mastercard 卡付款；屬第三方產品動態。"
+          },
+          {
+            "page": "topics/ai-agent-safety-prompt-injection",
+            "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **防注入的工具動態**：Tech Times 標題稱 AWS 開源 AI agent 評估框架並加強評分用 AI 對提示注入的防護；SiliconANGLE 標題稱提示注入攻擊促成 Red Hat 與 Nvidia 的 OpenShell。兩則皆僅標題可用，非 Claude 專屬。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **誤擋**：已通過 CVP 核准的使用者，在 claude.ai 全新對話裡連完全無害、非資安的提問也被擋（GitHub #61889，44 則留言）；與 Claude Code 端的 #84352 是同一類問題，官方回應未載。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "Hooks 與自動化新增「完成宣告驗證」Stop hook",
+            "date": "",
+            "body": "- **claim-check**：agent 寫「fixed」卻沒跑過檢查時，Stop hook 退回一次要它補證據；作者實測 406 則宣告，0.2.0 擋 86 則、0.3.0 擋 2 則。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Jane Street 公開 agent skills 集合，兩天新增約 4,000 星",
+            "date": "",
+            "body": "- **janestreet/agent_skills**：累計 7,512 星、近 2 天新增 4,049 星，內容細節未載。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "新增一款開源省 token 工具 Downshift",
+            "date": "",
+            "body": "- **Downshift**：Go 開源工具，在 AI 讀到指令輸出前先壓縮、依政策替 subagent 選模型；作者自述仍在 beta，尚未量化省多少。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "遠端與多 session 介面新增兩則",
+            "date": "",
+            "body": "- **行動裝置遠端控制**：t3code（58,093 星）與 ovis（2,039 星）讓人用瀏覽器或手機操控 Claude Code、Codex 等多款 agent。\n- **Agent 活動可視化**：Aq 用等待佇列取代輪流切換分頁，直接列出哪個 session 在等人。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 17
+  },
+  "readerTopStories": [
+    {
+      "title": "Anthropic's Strictest Account-Ban Rules Take Effect Nov. 12, Closing Three Loopholes for Users in Unsupported Regions - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAtUmctQ3RYcWNjTGR3WEVwODFSVGNTZDNyaGtOOU8tUFEyeVhGd2phRENjazBVVWNyR2NrbnY3c0VTekdVWUtMWU8zb3lqOElQOHBnTHVRdkxCSHBQR3VkM0JRMTIycllVVjdwWG1tWVBlYkl3TVE?oc=5",
+      "source": "Google News / BigGo Finance",
+      "time": "11/11 12:05",
+      "sentiment": "",
+      "body": "BigGo Finance 報導 Anthropic 最嚴格的帳號封禁規則 11 月 12 日（今天）起生效，標題稱補上三個讓不受支援地區使用者鑽的漏洞。人在不受支援地區使用 Claude 的人，今天起要留意帳號被封的風險。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Stolen Claude API keys can turn Claude Code into a remote-controlled implant - Help Net Security",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWDRNVVdqMy1DQ19iWGZTM3NtaFN3a0RNWEV6ZlU1QWZlZVQwVjdBZFFBRkpEenBIN29yM2VRc0xGWTFfeHlfeUlaU2xIWkZnMjNXdXN4VFJjTWJIMXd1Wm9sRWJNU2djMkFuSm9NWC0xTnNBY0FheXVYWjR5N3RkdU40MERTLU96Ulk3eS1FTzdMRFVGd3Jv?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "11/12 11:00",
+      "sentiment": "",
+      "body": "2 個來源同日報導：Help Net Security 的標題指出，被竊取的 Claude API 金鑰可以把 Claude Code 變成能被遠端遙控的植入程式。用 API 金鑰驅動 Claude Code 的人最相關。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Inter-session communication for multi-Claude workflows",
+      "url": "https://github.com/anthropics/claude-code/issues/24798",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/12 14:11",
+      "sentiment": "",
+      "body": "這則功能請求今天累積 85 則留言、23 個 👍：提出者指出大型專案裡會同時開多個彼此隔離的 Claude session，希望它們能直接協作、依相依順序串起較高層的流程。同時跑多個平行 session 的人最有感。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] claude -p fails with \"tools.3.custom.input_examples: Extra inputs are not permitted\"",
+      "url": "https://github.com/anthropics/claude-code/issues/11678",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/12 11:52",
+      "sentiment": "",
+      "body": "`claude -p` 無頭模式一送出 prompt 就回 API 400 錯誤，訊息為 `tools.3.custom.input_examples: Extra inputs are not permitted`，今天累積 52 則留言、38 個 👍。用 `claude -p` 跑自動化腳本的人會直接撞到。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

@@ -516,11 +516,6 @@
       "pageType": "entity"
     },
     {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "community-memory",
       "name": "社群做法：記憶、CLAUDE.md 與 context",
       "pageType": "topic"
