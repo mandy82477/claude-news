@@ -4,25 +4,25 @@ kind: "entity"
 type: "feature"
 status: "active（初期，體驗粗糙）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
-last_news_update: "2026-10-23"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 22
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 22
+days_since_news_subtree: 3
 inbound_links: 17
-attribution_count: 6
-attribution_last: "2026-10-23"
+attribution_count: 7
+attribution_last: "2026-11-11"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Design

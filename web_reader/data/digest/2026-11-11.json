@@ -1,0 +1,777 @@
+{
+  "date": "2026-11-11",
+  "generatedAt": "2026-11-13 16:40 UTC",
+  "articleCount": 100,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude Traffic Surges 24% In October As Anthropic IPO Looms—Beating AI Rivals - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcnY3SEdBcnM4NEVjV1hISVF0SUxqSjh4MWtkdkI4b1BGS0U0Vi0xV3lUbUVhR0dvalBHOElHX1NtVWJwNzlkb1N3WjBrbjdpZkkwQjZzVEJPVHlyOEphNG1rSUVMYWVYRFhreVhBeEFScFRBYXhmUmV1VGMyN2FWRFJJaFMwNl9PQ1owaTFXc0F5a1lOYXFBX2lnYWRvZndpYXJEazZDU1Ywai10eDd2aDFENWp5U1FMYjl0OS1ZdDJyOUZNMEE?oc=5",
+      "source": "Google News / Forbes",
+      "time": "11/11 16:51",
+      "sentiment": "",
+      "body": "2 個來源同日報導 Claude 流量：Forbes 標題稱 Claude 10 月流量成長 24%，並稱表現勝過其他 AI 對手。關心使用者成長能否支撐上市估值的人，這是需求面少見帶有具體百分比的數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic: We See the Stock as Undervalued in the IPO Pricing Range - Morningstar",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQY1hSaVQ0ZjlQWE1Oa1JBZXV4YmM4eTM1MmNYMnlTd1hMZ2x2NWFNaWp3NUFjZFRvMWN0azRLZVdQelkwWS13V1F0dFh2eHRjZ1ZuNExQOXd1c2lnUmxsMGNFUUtmeUxmUHloZzJvb3pfOUljQ2lXS25JRDUwWGhtb2hBcGRoRU9iWHZyd1h3NjZOYkE4SW94eFZxbW8?oc=5",
+      "source": "Google News / Morningstar",
+      "time": "11/11 11:19",
+      "sentiment": "",
+      "body": "2 個來源同日報導：Morningstar 的標題表示他們認為 Anthropic 股票在 IPO 定價區間內屬於低估。追蹤上市估值爭論的人，多了一份分析師對定價區間的看法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic to Seek $1.3T Valuation in IPO",
+      "url": "https://www.wsj.com/finance/stocks/anthropic-to-seek-1-3-trillion-valuation-in-ipo-8337b669",
+      "source": "Hacker News",
+      "time": "11/10 12:49",
+      "sentiment": "",
+      "body": "HN 串拿到 60 分，標題為 WSJ 報導 Anthropic 擬以 1.3 兆美元估值上市；留言分歧，有人認為只要 Claude 比對手略聰明、企業客戶願意為此付費，這個估值就站得住，也有人說自己在告訴身邊的訂閱者，他們資助的是一家積極對抗開放權重模型的公司。想看社群如何評價 1.3 兆這個數字的人，可以讀這串留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[Status] Elevated errors on Fable 52 and Mythos 52",
+      "url": "https://status.claude.com/incidents/pgz8r13pk4sm",
+      "source": "Anthropic Status",
+      "time": "11/10 21:47",
+      "sentiment": "",
+      "body": "Fable 5.2 與 Mythos 5.2 在 11 月 10 日 21:47 UTC 標示過載錯誤已解決，影響持續四分鐘，官方稱事件已緩解。這兩款新模型的使用者這次只遇到短暫影響，不需要調整。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] google-cloud-sdk-v1.1.4",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.4",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/10 16:33",
+      "sentiment": "",
+      "body": "這版是錯誤修正：專案、地點或 workspace ID 若是 `;x`、`.;x`、`..;x` 這類字串，現在會拋出 AnthropicError。用 TypeScript SDK 串 Google Cloud 的團隊，輸入若含這類字元會改成直接報錯。",
+      "focusTags": []
+    },
+    {
+      "title": "官方文件索引異動：Claude Code 文件索引（llms.txt）（移除 25 頁）",
+      "url": "https://code.claude.com/docs/llms.txt",
+      "source": "Official Docs",
+      "time": "11/11 17:57",
+      "sentiment": "",
+      "body": "Claude Code 文件索引（llms.txt）移除 25 頁，列出的全是「Week 13 · March 23–27, 2026」起的每週頁面。曾引用這些週頁連結的人，建議確認連結是否仍可開啟。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic Discloses Over $10 Billion in New Deals with Microsoft, Google; Says Lambda Deal May Be Cancelled - The Information",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNY29jNmZNZkNLNElZV21RQXVOY3VCWGwzOFljUXBNRkNieEVLUmFqSG1YazBuanR1dVd1U0drbV90U2xmWEJBcXdhOW14Wk43UWIxMTlTcHZHQUo3bkJUNjdfeWYwdUhGcVI4OFNBYnpnbk5CUGVmdXE2WW1iU2ZlYVBnTm9uNkxiOThacTJ1b2g1bUgyWVl5Z2RkR3dUY1M1c1pVdjRZWUduNUFtOW1LMmR4NzlSWG5CYUw5d05lN2xkVU9BQlJuNA?oc=5",
+      "source": "Google News / The Information",
+      "time": "11/10 17:39",
+      "sentiment": "",
+      "body": "The Information 標題稱 Anthropic 揭露與 Microsoft、Google 新增超過 100 億美元的合約，並說與 Lambda 的交易可能被取消。追蹤 Anthropic 運算供應商組合變化的人，這是新增的合約數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals-compute",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "TSMC Approves Up to $1 Billion Investment Plan in Anthropic, OpenAI - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNT3ZlYXlWNllKZkZETDl2YUpGcXdKYnBpc01rZ2pMenZYcXJrcmVhbFdlUW5oQnFWeTZ1dlN2S2RwVFFUaVJIUWk0UVJsOHk4R25nSGt4NnlfYTZVNXZvTzlrcXU4V2ZGNUNQQTY1amMwcHZ3bC00aTFBMTRKcFExdThaQlY2Nmp4ek1qSXRDdVVuLUlOSWVPQWMtSHlqT0g3RmlCbQ?oc=5",
+      "source": "Google News / WSJ",
+      "time": "11/11 05:29",
+      "sentiment": "",
+      "body": "WSJ 標題稱台積電核准最高 10 億美元的投資計畫，對象為 Anthropic 與 OpenAI。報導內文未在抓取摘要中，投資如何分配兩家公司需讀原文。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSVhqV2gyYlFPU1FIZlNHRkp4SGJHQVJmMzB3cHE0a29DRHpzS09Obzh5NmlQRFFQd25aaE90ZlVxMXJCaUI0Y1FsOEltc09rX0VRTlJZZ01oUlZXN05KV3NxRXpYclhwb0g1VFE4WFEwZ2tZNllMTkpjdFQ3RVBLeWZMTWVJN3B1OVQtWVM1NkNYbER5a2NwNm1HVmI3R1pjOHFoSzJOdzBucW8tZU53?oc=5",
+      "source": "Google News / TechCrunch",
+      "time": "11/10 20:52",
+      "sentiment": "",
+      "body": "TechCrunch 報導紐約州的 AI 安全法生效，OpenAI 與 Anthropic 都面臨新的監督要求。在紐約州有業務或使用者的團隊，可留意具體義務。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals-legal",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code’s ‘don’t ask again’ button has a secrets-spilling problem - CSO Online",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPck9qckEtd0h0ZDN1dzAyRVQyNF9nWklmNzJzYnZHY2pkNmRpdl9uYVRfYVNSQ1FwZ05FUjhLMHZMZkI2MTdwYU9hdU5SRXZTRFRENEQ3UWY0WERqSUt0eXdQb28weVhRODFISjV6Zk5ELWlWRVg2eFZLcERKRnhCMk1mcVNrUXJFbERLa2pkMllPR2RkREE2SHp0c1ZhYVZPQmRjVGRaVVpDeEtpOE5YTk9n?oc=5",
+      "source": "Google News / CSO Online",
+      "time": "11/11 12:01",
+      "sentiment": "",
+      "body": "承 11-07 起的「是，並不要再問」外洩揭露，CSO Online 今日再報導，標題稱這個按鈕有洩漏機密的問題；XenoSpectrum 同日也有一篇。仍習慣使用該選項的開發者，應檢查自己的倉庫。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code AI Discovers Technique to Turn Dormant Model Neurons Into Hidden Malware Triggers - CyberSecurityNews",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxZXd1TV9kbkxOYjBtUUROT0RsbmxEaU5XcFNrQ1ZETHRSSjRjT19tdVVUS3hKSXhKaE54OTY3UUdfZVFONXN6TENVOVIybnVlblFZVUNtbzTSAV5BVV95cUxOWHQ0RHdxd25fV2x4Y2cxS3UwcDk1MlhVa2ItUlhadGlUUmktWktyelpxSVRtODI5R0VTd3dreElwVmdTaFEzUkp6UkxhdDA4Mk1BSzJpYi1sUl8wbjBB?oc=5",
+      "source": "Google News / CyberSecurityNews",
+      "time": "11/11 11:57",
+      "sentiment": "",
+      "body": "CyberSecurityNews 標題稱 Claude Code 找到一種把模型中休眠神經元變成隱藏惡意程式觸發器的技術。摘要沒有內文，是否為研究成果或攻擊示範需讀原文。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Jeopardizes NVIDIA’s CUDA Moat As Its Claude Mythos Model Took Only 3 Days To Figure Out How To Run Another Model On AMD’s MI355X GPUs - Wccftech",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQLWxCdDFqWG83WGFjblJ5bkc4azA3TzFOQ3FXa294MkRVMlFIV1JwSTB6MjBxb1pVdEk0Q2dMQTBvTmZFNTRSSnFJX2ZyZTRvZVlvSEJRNHQ1cUpaMVlNTDJqLUJHTlgxbUYxTFVyMlJZcDBYWm9ZWW5lLUNCVmdDMnBNdHJfSXpFd1c1T1pwVW5FTHBhdHhyWjl4bEkxZVExczgwNGFZek1UOUFOUnh5aThKeTUzWFNvc3VVTmpNTlU0dkNJLXg5cURjVVdBbmxieUxNUVl6U1EzZ20xUWpQMGlKT1dFajdpZ0l2bmFsQUlaUWtxbWxB0gH8AUFVX3lxTE1pcmlkV3Q5Q1ZyTnJaV1Vpc1BpRjBFb2NpdTIyc1VHb1dLaVF6REZBZWVYa19vS3lwQWJDY0kybWNoNmdVX0FGWVFrZVIxWDZyREpBMkFycTJzUWQ3cTV0SU1oZDVXd05ieXp1bWs0MlFzZFlPS19tRlQ2R1JmQnFqUGpSbVdIUEVGb2JxMmliM2JuSlpRUzlfRHIxUUM2OFItNXdEUGxPSEhaZER4YUJHOTVzSGw0Z1ZFYVJFRXF4QUc0OWdER1RoaWY2bmYzVVF6eW1zdG8yeFJXRkp4MG5uSE5PV1JOdldWTzVJb25qM043YU5IWkVoWjRMZw?oc=5",
+      "source": "Google News / Wccftech",
+      "time": "11/11 11:11",
+      "sentiment": "",
+      "body": "Wccftech 標題稱 Claude Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD 的 MI355X GPU 上，並以此推論對 NVIDIA CUDA 護城河的影響；推論是該媒體的標題角度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Claude Fable 5.2 Has 4 Breaking Changes. I Read the Migration Guide and Grepped My Own Code",
+      "url": "https://dev.to/aheadkit/claude-fable-52-has-4-breaking-changes-i-read-the-migration-guide-and-grepped-my-own-code-5hi1",
+      "source": "dev.to / #anthropic",
+      "time": "11/10 06:31",
+      "sentiment": "",
+      "body": "作者讀完官方遷移指南後，列出從 Fable 5.1 升級可能讓現有程式壞掉的 4 項變更，第一項是 thinking block 的前綴檢查現在套用到所有帳號，每個 thinking block 只在對應的系統提示、工具清單與對話歷史下有效；官方指南形容 5.1 升級「大致可直接替換」。要升級 Fable 5.2 的團隊，升級前先對照這四項。　情緒：🤔",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "What Is Anthropic Scion? Why Git Broke at Agent Scale",
+      "url": "https://dev.to/oyerohabib/what-is-anthropic-scion-why-git-broke-at-agent-scale-32o9",
+      "source": "dev.to / #anthropic",
+      "time": "11/07 07:27",
+      "sentiment": "",
+      "body": "2026 年 5 月 Anthropic 的 monorepo 每天約 2,500 次合併，9 月已超過 30,000 次；Anthropic 的回應是內部自建、以伺服器為中心的版本控制系統 Scion，並稱它不是通用的 git 替代品、也未公開釋出。管理大量 agent 提交的團隊，可看文中列出哪些負載讓 git 吃緊。　情緒：🤔",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Aq – an attention queue TUI for Claude Code",
+      "url": "https://github.com/nodo-labs-uk/attention-queue",
+      "source": "Hacker News",
+      "time": "11/11 11:43",
+      "sentiment": "",
+      "body": "作者原本為內部使用而做的終端機介面，用 hooks 把等待輸入的 Claude Code session 推進「注意力佇列」，讓使用者同時管理多個平行 session 並做程式碼審查與留言，另有測驗模式驗證使用者是否理解 agent 的設計選擇。同時開多個 session 的人可以試試。　情緒：😊",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Mimzie, an agent-neutral alternative to the Claude Suite/Claude Cowork",
+      "url": "https://mimzie.com/",
+      "source": "Hacker News",
+      "time": "11/11 00:29",
+      "sentiment": "",
+      "body": "作者做了不綁定特定廠商（agent-neutral）的桌面工作區，受 Claude Suite（Docs、Sheets、Slides）與 Cowork 啟發，可在原生 CLI 裡跑 ChatGPT、Claude、Gemini 與 Grok；動機是不想把工作押在單一 AI 廠商的產品上。不想綁定單一廠商工作區的人可以參考。　情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+      "source": "Blog / Simon Willison",
+      "time": "11/10 07:28",
+      "sentiment": "",
+      "body": "Simon Willison 轉介 Meta 推出的最小、最高效率模型 Muse Ember，並說這是 Meta 對標 Claude Haiku 與 GPT Luna 級別的產品。在小模型間比價選型的人，多了一個候選。　情緒：😐",
+      "focusTags": []
+    },
+    {
+      "title": "phuryn/product-engineering",
+      "url": "https://github.com/phuryn/product-engineering",
+      "source": "GitHub Search",
+      "time": "11/11 17:57",
+      "sentiment": "",
+      "body": "收錄 44 個從三個上線產品實作中整理出的 agent skills，流程涵蓋決定做什麼、用 Claude Code 或 Codex 實作、由第二個模型審查到發布（523 星）。想找完整開發流程 skills 的人可參考。　情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "obsidianmd/obsidian-skills",
+      "url": "https://github.com/obsidianmd/obsidian-skills",
+      "source": "GitHub Search",
+      "time": "11/11 17:57",
+      "sentiment": "",
+      "body": "（2026-01 出生、51,669 星，本庫今日首次收錄）給 Obsidian 的 agent skills，教 agent 使用 Obsidian CLI 與 Markdown、Bases、JSON Canvas 等開放格式。　情緒：😐",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：Manage usage credits for paid Claude plans",
+      "url": "https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans",
+      "source": "Official Docs",
+      "time": "11/11 17:57",
+      "sentiment": "",
+      "body": "「Manage usage credits for paid Claude plans」頁面新增兩段：刪除帳號時剩餘的 usage credits 會作廢且不退款，購買 usage credits 一律不可退款，包括取消訂閱或刪除帳號；原有的「Monthly API credits for Max, Ultra, and Team plans」段落同時被移除。買了 usage credits 的人，取消訂閱前先確認餘額。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing-history",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "11/11 17:57",
+      "sentiment": "",
+      "body": "API 模型定價頁新增 31 段、移除 19 段，字數從 30,687 變為 30,550；新增段落涵蓋快取寫入倍率（1 小時為 2 倍、5 分鐘為 1.25 倍）、Bedrock 全域與區域端點，以及 browser use 依標準 tool use 計價。透過 Bedrock 或 Google Cloud 端點呼叫 Claude 的團隊，先看端點與計價段。",
+      "focusTags": []
+    },
+    {
+      "title": "I compared OpenAI Codex and Claude Code's usage limits — and there's a catch with both $20 plans - Tom's Guide",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdXRaV0syMXFQTTZwcks5OU5JRlNwVEUzNi1ETGxYVUxZYVlfQzFzTVZ0aGtrcE5vUUZZYW9hN2xtQ0JZNUdleXYxT21Md2FkWU45amstU1lMX3BWaFV6czh0NzBGeUhnUVQzZWNrQnJDZFNra21YcEY3bXJJMVNVZktsZFV2SjdsY1RKa29LUHpSSnRvVFhyZEpuaWR0TnNGR0VUZzltLVA0TnFncDV1bDlYV2ZNVFJTeFIwRHhfcmw?oc=5",
+      "source": "Google News / Tom's Guide",
+      "time": "11/10 08:15",
+      "sentiment": "",
+      "body": "Tom's Guide 比較 OpenAI Codex 與 Claude Code 的使用上限，標題指出兩邊的 $20 方案都有但書。在這兩個 $20 方案間選擇的人，可先讀文中的限制說明。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "competitor-landscape",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[新工具]",
+      "text": "承昨日 Claude Meetings 與 Sheets 的發布，官方介紹文今天把整批產品講完整：Claude Whiteboards 與 Claude Sheets 以 beta 推出，原有的 Claude Dashboards 正式上線並更名為 Claude Data，三者所有付費方案都能用，HN 上這篇拿到 273 分。常把 Claude 產出搬去別的工具再整理的團隊，這批功能讓看板、試算表與儀表板可以留在 Claude 裡，由它即時看到修改。",
+      "ref_urls": [
+        "https://claude.com/resources/articles/sheets-whiteboards-data"
+      ],
+      "ref_names": [
+        "官方"
+      ]
+    },
+    {
+      "tag": "[社群趨勢]",
+      "text": "VulnCheck 追蹤 Project Glasswing 啟動七個月來的成果：442 個 CVE 可歸因於 Anthropic（約占今年全部 CVE 的 0.5%，只有 2 個確認遭實際利用），Anthropic 回報的 37,966 筆發現中僅 7,349 筆（19.4%）公開、217 筆標為已修復；9 月以來新增近 12,000 筆發現卻只多 15 筆修復，這篇在 HN 拿到 439 分。想評估 Glasswing 實際成效的人，這份報告給了發現數、公開數與修復數的對照。",
+      "ref_urls": [
+        "https://www.vulncheck.com/blog/anthropic-glasswing-november-update"
+      ],
+      "ref_names": [
+        "VulnCheck"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-10）Anthropic 路演影片裡有先前未公開的資訊：Simon Willison 整理出共同創辦人 Tom Brown 在「算力取向」段落的說法，Claude 現在在 AWS Trainium、Google TPU、NVIDIA GPU 與 AMD GPU 四大晶片系列上訓練與提供服務，源於早期押注多晶片策略；官方沒有提供逐字稿，Simon 用 MacWhisper 自行轉錄。評估這次上市的人，算力來源不綁單一晶片是路演影片給出的具體說法。",
+      "ref_urls": [
+        "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/"
+      ],
+      "ref_names": [
+        "Simon Willison"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Gemini 4 Carbon in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-10-gemini-4-carbon-in-github-copilot",
+      "body": "Copilot 宣布 Gemini 4 Carbon 正式提供，定位是複雜 coding、agentic 與推理任務並強調安全程式碼生成；Copilot 用戶多了一個可與 Claude 並列比較的模型選項",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 66
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code：官方文件索引（llms.txt）移除 25 頁每週頁面，最早為 Week 13（2026-03-23～27）；連過去的週報連結可能失效。11-10 的 v2.1.322 與 SDK 更新見 entities/claude-code-releases。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-design",
+      "name": "Claude Design",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5、5.1 與 5.2",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-history",
+      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-product-matrix",
+      "name": "Anthropic 產品 × 功能對照表",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-legal",
+      "name": "官司、監管與政府這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "model-comparison",
+      "name": "Claude 模型選型對照",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-11",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code",
+            "name": "Claude Code",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方文件索引（llms.txt）移除 25 頁每週頁面，最早為 Week 13（2026-03-23～27）；連過去的週報連結可能失效。11-10 的 v2.1.322 與 SDK 更新見 [[entities/claude-code-releases]]。"
+          },
+          {
+            "page": "entities/claude-design",
+            "name": "Claude Design",
+            "label": "最新工具動態",
+            "date": "",
+            "body": "Claude Dashboards 轉正式版並更名 Claude Data；新增 Claude Whiteboards、Claude Sheets 兩項 beta，官方稱所有付費方案都能用。"
+          },
+          {
+            "page": "topics/anthropic-product-matrix",
+            "name": "Anthropic 產品 × 功能對照表",
+            "label": "最新動態",
+            "date": "",
+            "body": "官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，新功能入表與否見 [[topics/anthropic-product-matrix#未定項目]]。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "從 5.1 升 5.2 先對照四項破壞性變更",
+            "date": "",
+            "body": "第三方作者讀官方遷移指南後列出 4 項，首項是 thinking block 前綴檢查改為全帳號適用；官方指南自稱 5.1 升級大致可直接替換。"
+          },
+          {
+            "page": "topics/model-comparison",
+            "name": "Claude 模型選型對照",
+            "label": "Fable 5.2 升級有遷移項，Gemini 4 Carbon 開放",
+            "date": "",
+            "body": "5.1 升 5.2 有 4 項破壞性變更（第三方整理）；Fable 5.2 牌價 $8/$40 降 20%，VentureBeat 標題稱 Carbon 牌價更低。"
+          },
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "Mythos 5.2 媒體解讀",
+            "date": "",
+            "body": "Wccftech 標題稱 Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X 上（僅標題）；11-10 有四分鐘過載事件已解決；仍限信任機構存取。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估**（皆僅標題）；股數與區間見 [[topics/anthropic-ipo#上市走到哪一格]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。\n- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **WSJ 標題：台積電核准最高 $10 億美元投資計畫，對象為 Anthropic 與 OpenAI**（僅標題；兩家如何分配未見）\n- **The Information 標題：Anthropic 揭露與 Microsoft、Google 新增逾 $100 億合約，與 Lambda 的交易可能取消**（僅標題；見算力表 Lambda 列）\n- **路演影片：Claude 在 AWS Trainium、Google TPU、NVIDIA GPU、AMD GPU 四系列晶片上訓練與服務**（Tom Brown 說法，Simon Willison 整理）"
+          },
+          {
+            "page": "topics/market-signals-legal",
+            "name": "官司、監管與政府這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **TechCrunch：紐約州 AI 安全法生效，OpenAI、Anthropic 面臨新的監督要求**：本頁第一則已生效的州法；義務、適用門檻與罰則標題未載。\n\n前一輪（2026-11-07）：\n- **法院裁定 Anthropic 須就 Claude Max 訂閱廣告誤導指控面對訴訟程序**：未附案號，與既有 06-16 集體訴訟是否同案尚待確認。"
+          },
+          {
+            "page": "topics/market-signals-compute",
+            "name": "算力與融資這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：標題同時有增有減，淨額未知；僅標題可用。\n\n前一輪（2026-11-08）：\n- **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議。"
+          },
+          {
+            "page": "entities/pricing-history",
+            "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **usage credits 說明頁再改：購買一律不可退款（含取消訂閱或刪除帳戶），原「Monthly API credits」段落被移除**（官方說明中心 diff 偵測；段落移除的實際影響待官方文逐字查證）\n- **Whiteboards、Sheets（beta）與 Claude Data 官方介紹文出爐，日報摘要稱所有付費方案可用**；是否另計費未載"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **紐約州 AI 安全法生效**：TechCrunch 報導 OpenAI、Anthropic 面臨新的州層級監督要求；具體義務未載（僅標題與一句摘要）。\n- **教師使用 Claude 的保護協議**：Education Week 標題稱 Anthropic 同意為使用 Claude 的教師提供保護，條款未載。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/recursive-self-improvement",
+            "name": "AI 遞歸自我改進與全球暫停呼籲",
+            "label": "最新動態",
+            "date": "",
+            "body": "Yahoo Finance 標題稱 Anthropic 說某個關鍵 AI 安全警報已被觸發，時間在 IPO 前數天；TechCrunch 稱新 Mythos、Fable 模型在 RSI 疑慮下發布（均僅標題可用）。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **「不再問」外洩再獲兩家資安媒體報導**：CSO Online 標題稱該按鈕有洩漏機密的問題，XenoSpectrum 稱可能存下明文機密並流入 GitHub；官方已在 2.1.323 修補（見 [[entities/claude-code-known-issues]]）。\n- **agent 逃脫測試**：ZDNET 標題稱作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出，結果未載（僅標題可用）。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Glasswing 成效（第三方計數）**：VulnCheck 稱啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、僅 2 筆在野利用；已公開 19.4%、217 筆標已修復。\n- **模型後門手法**：CyberSecurityNews 標題稱 Claude Code 找到把休眠神經元變成隱藏惡意觸發器的技術（僅標題可用，手法與性質未載）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計新增兩個大型收藏：Obsidian 官方組織的 obsidian-skills 與 44 個 skill 的 product-engineering",
+            "date": "",
+            "body": "- **obsidian-skills**：教 agent 用 Obsidian CLI 與 Markdown、Bases、JSON Canvas 開放格式，51,669 星、本庫首次收錄。\n- **product-engineering**：44 個 skill 串起「決定做什麼、實作、第二個模型審查、發布」，523 星、75 forks。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "Amodei：癌症、精神疾病將成歷史",
+            "date": "",
+            "body": "Seeking Alpha、NDTV 報導 Amodei 稱癌症與精神疾病在約十年內成為「過去的遺跡」；僅標題可用，場合與逐字未見報導。延續 08-16 的治癒癌症論述。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 18
+  },
+  "readerTopStories": [
+    {
+      "title": "Claude Traffic Surges 24% In October As Anthropic IPO Looms—Beating AI Rivals - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcnY3SEdBcnM4NEVjV1hISVF0SUxqSjh4MWtkdkI4b1BGS0U0Vi0xV3lUbUVhR0dvalBHOElHX1NtVWJwNzlkb1N3WjBrbjdpZkkwQjZzVEJPVHlyOEphNG1rSUVMYWVYRFhreVhBeEFScFRBYXhmUmV1VGMyN2FWRFJJaFMwNl9PQ1owaTFXc0F5a1lOYXFBX2lnYWRvZndpYXJEazZDU1Ywai10eDd2aDFENWp5U1FMYjl0OS1ZdDJyOUZNMEE?oc=5",
+      "source": "Google News / Forbes",
+      "time": "11/11 16:51",
+      "sentiment": "",
+      "body": "2 個來源同日報導 Claude 流量：Forbes 標題稱 Claude 10 月流量成長 24%，並稱表現勝過其他 AI 對手。關心使用者成長能否支撐上市估值的人，這是需求面少見帶有具體百分比的數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic: We See the Stock as Undervalued in the IPO Pricing Range - Morningstar",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQY1hSaVQ0ZjlQWE1Oa1JBZXV4YmM4eTM1MmNYMnlTd1hMZ2x2NWFNaWp3NUFjZFRvMWN0azRLZVdQelkwWS13V1F0dFh2eHRjZ1ZuNExQOXd1c2lnUmxsMGNFUUtmeUxmUHloZzJvb3pfOUljQ2lXS25JRDUwWGhtb2hBcGRoRU9iWHZyd1h3NjZOYkE4SW94eFZxbW8?oc=5",
+      "source": "Google News / Morningstar",
+      "time": "11/11 11:19",
+      "sentiment": "",
+      "body": "2 個來源同日報導：Morningstar 的標題表示他們認為 Anthropic 股票在 IPO 定價區間內屬於低估。追蹤上市估值爭論的人，多了一份分析師對定價區間的看法。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic to Seek $1.3T Valuation in IPO",
+      "url": "https://www.wsj.com/finance/stocks/anthropic-to-seek-1-3-trillion-valuation-in-ipo-8337b669",
+      "source": "Hacker News",
+      "time": "11/10 12:49",
+      "sentiment": "",
+      "body": "HN 串拿到 60 分，標題為 WSJ 報導 Anthropic 擬以 1.3 兆美元估值上市；留言分歧，有人認為只要 Claude 比對手略聰明、企業客戶願意為此付費，這個估值就站得住，也有人說自己在告訴身邊的訂閱者，他們資助的是一家積極對抗開放權重模型的公司。想看社群如何評價 1.3 兆這個數字的人，可以讀這串留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

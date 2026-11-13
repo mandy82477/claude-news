@@ -12,7 +12,7 @@ parent: null
 children: "['entities/openclaw-archive']"
 page_role: "hub"
 days_since_news_subtree: 27
-inbound_links: 9
+inbound_links: 10
 attribution_count: 4
 attribution_last: "2026-10-18"
 top_source: "google-news"

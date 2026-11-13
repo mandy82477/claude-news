@@ -451,11 +451,6 @@
   "preview": "Claude Code：版本：v2.1.309 修正 macOS／Linux 上 sandboxed Bash 與 denyWrite 沙盒規則比對問題；同日 anthropic-sdk-python v2.2.0、anthropic-sdk-typescript vertex-sdk-v1.1.0 同步新增 mess",
   "sedimentedToday": [
     {
-      "id": "claude-design",
-      "name": "Claude Design",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-docs",
       "name": "Claude Docs",
       "pageType": "entity"
@@ -478,11 +473,6 @@
     {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-product-matrix",
-      "name": "Anthropic 產品 × 功能對照表",
       "pageType": "topic"
     }
   ],

@@ -12,7 +12,7 @@ parent: "entities/pricing"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 5
-inbound_links: 16
+inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-11-09"
 top_source: "google-news"

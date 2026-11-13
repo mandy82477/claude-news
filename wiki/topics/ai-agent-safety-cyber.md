@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-10"
-last_news_update: "2026-11-10"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 3
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
-inbound_links: 7
-attribution_count: 11
-attribution_last: "2026-11-10"
+days_since_news_subtree: 3
+inbound_links: 8
+attribution_count: 14
+attribution_last: "2026-11-11"
 top_source: "google-news"
-pending_count: 13
+pending_count: 14
 pending_overdue: 5
 pending_next_review: "2026-11-16"
 pending_signalled: 1

@@ -3,19 +3,19 @@ page: "topics/market-signals-legal"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "ongoing"
-days_since_news: 7
+days_since_news: 3
 parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 7
+days_since_news_subtree: 3
 inbound_links: 5
-attribution_count: 1
-attribution_last: "2026-11-07"
+attribution_count: 2
+attribution_last: "2026-11-11"
 top_source: "google-news"
-pending_count: 22
+pending_count: 23
 pending_overdue: 11
 pending_next_review: "2026-11-21"
 pending_signalled: 3

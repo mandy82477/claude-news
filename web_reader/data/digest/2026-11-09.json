@@ -474,11 +474,6 @@
   "preview": "Claude Code 實驗功能追蹤：2.1.321（自 2.1.319 起比對）新增 11 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標依蒐集邊界不列；本輪無消失旗標。對帳僅命中來源條目自身，暫不升第二階。",
   "sedimentedToday": [
     {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-skills",
       "name": "Claude Skills",
       "pageType": "entity"
@@ -521,11 +516,6 @@
     {
       "id": "market-signals",
       "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "model-comparison",
-      "name": "Claude 模型選型對照",
       "pageType": "topic"
     }
   ],

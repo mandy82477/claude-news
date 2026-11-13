@@ -3,24 +3,24 @@ page: "topics/anthropic-product-matrix"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-24"
-last_news_update: "2026-10-23"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "ongoing"
-days_since_news: 22
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 22
+days_since_news_subtree: 3
 inbound_links: 1
-attribution_count: 41
-attribution_last: "2026-10-23"
+attribution_count: 42
+attribution_last: "2026-11-11"
 top_source: "user-query"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-11-25"
 pending_signalled: 0
 staleness_exempt: null
-signal: "休眠"
+signal: "孤島"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 產品 × 功能對照表

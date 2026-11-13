@@ -542,63 +542,13 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
-      "id": "fable-5",
-      "name": "Claude Fable 5、5.1 與 5.2",
-      "pageType": "entity"
-    },
-    {
       "id": "jamie-dimon",
       "name": "Jamie Dimon",
       "pageType": "entity"
     },
     {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing-history",
-      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-agent-safety-prompt-injection",
       "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
       "pageType": "topic"
     },
     {
@@ -609,11 +559,6 @@
     {
       "id": "community-tech-discussions",
       "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
