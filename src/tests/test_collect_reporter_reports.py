@@ -285,6 +285,13 @@ class TestHandoffVoidNotClosed(unittest.TestCase):
         self.assertEqual(mod.handoff_closes(v), [("H-abc123", "補了 X")])
         self.assertEqual(mod.handoff_voids(v), ["H-def456"])
 
+    def test_semicolon_and_comma_separators(self):
+        """2026-11-14：同一行用「；」分隔時，不適用那筆被吞進已處理而誤結案。"""
+        for sep in ("；", ";", "，", ","):
+            v = f"已處理 1 筆: H-abc123{sep}不適用 1 筆: H-def456（無新證據）"
+            self.assertEqual([h for h, _ in mod.handoff_closes(v)], ["H-abc123"], sep)
+            self.assertEqual(mod.handoff_voids(v), ["H-def456"], sep)
+
 
 class TestContractWithShared(unittest.TestCase):
     """shared.md「回報格式」code block 的欄名＝收報腳本認得的欄名。改一邊這裡紅。"""

@@ -347,7 +347,7 @@ def _balanced(s: str) -> str | None:
 
 
 # 轉知處置的「條目」邊界：行首（含 - * • 項目符號）或 ／ 之後緊接「已處理／不適用」。
-_HO_ENTRY_SPLIT = re.compile(r"(?:\n[ \t]*[-*•]?[ \t]*|[ \t]*[／/][ \t]*)(?=已處理|不適用)")
+_HO_ENTRY_SPLIT = re.compile(r"(?:\n[ \t]*[-*•]?[ \t]*|[ \t]*[／/；;，,][ \t]*)(?=已處理|不適用)")
 
 
 def _handoff_entries(val: str) -> list[tuple[str, str]]:
