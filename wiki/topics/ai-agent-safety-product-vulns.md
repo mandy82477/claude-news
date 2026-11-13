@@ -37,7 +37,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
 > **最新動態**（2026-11-11）
-> - **「不再問」外洩再獲兩家資安媒體報導**：CSO Online 標題稱該按鈕有洩漏機密的問題，XenoSpectrum 稱可能存下明文機密並流入 GitHub；官方修補見下方條目。
+> - **「不再問」外洩再獲兩家資安媒體報導**：CSO Online 標題稱該按鈕有洩漏機密的問題，XenoSpectrum 稱可能存下明文機密並流入 GitHub；官方已在 2.1.323 修補（見 [[entities/claude-code-known-issues]]）。
 > - **agent 逃脫測試**：ZDNET 標題稱作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出，結果未載（僅標題可用）。
 
 ---

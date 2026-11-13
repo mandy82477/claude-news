@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-11
 
 > **最新動態**（2026-11-11）
-> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，新功能入表與否見下方「未定項目」節。
+> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，新功能入表與否見 [[topics/anthropic-product-matrix#未定項目]]。
 
 ---
 

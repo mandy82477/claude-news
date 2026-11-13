@@ -35,7 +35,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **最後新聞更新：** 2026-11-11
 
 > **最新動態**（2026-11-11）
-> - **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估**（皆僅標題）；股數與區間見下方五格表。
+> - **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估**（皆僅標題）；股數與區間見 [[topics/anthropic-ipo#上市走到哪一格]]。
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
