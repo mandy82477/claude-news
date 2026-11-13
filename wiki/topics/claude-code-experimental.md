@@ -32,20 +32,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-09）
-> 2.1.321（自 2.1.319 起比對）新增 11 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標依蒐集邊界不列；本輪無消失旗標。對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-13）
+> 2.1.323（自 2.1.322 起比對）新增 13 個候選旗標，皆第一階、無代號旗標；另 9 個設定類旗標依蒐集邊界不列；消失 1 個原未入表的設定類旗標。同日官方發行 Code Mode 功能，與既有 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` 系列旗標名稱吻合，升第三階。
 
 ---
 
 ## 摘要
 
+- **2.1.323（11-13，自 2.1.322 起）新增 13 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另有 9 個設定類旗標來源已過濾不列；消失 1 個原未入表的設定類旗標；對帳僅命中來源條目自身，暫不升第二階。
+- **同輪升階**：官方同日發行的 v2.1.323 宣布 Code Mode 功能（Claude 改寫 JS 呼叫工具，預設關閉），與 2.1.318（11-04）追蹤到的 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` 系列旗標名稱吻合，升第三階；Release 未逐字列出旗標名，暫不升第四階；已回報 [[feature-radar]]。
 - **2.1.321（11-09，自 2.1.319 起）新增 11 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 2 個設定類旗標來源已過濾不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.319（11-06，自 2.1.318 起）新增 13 個候選旗標**：12 個第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；另 1 個設定類旗標來源已過濾不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.318（11-04，自 2.1.317 起）新增 12 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 4 個設定類旗標來源已過濾不列；`CLAUDE_CODE_ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失，列 4 階；對帳僅命中來源條目自身，暫不升第二階。
@@ -73,6 +75,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_AUTOMOUNT_ROOTS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_CCR_SKIP_NEEDLESS_STARTUP_READS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_DESKTOP_MESSAGE_CARD` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_DESKTOP_MODE_FROM_RECORD` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_DESKTOP_PLUGIN_INSTALL_FRAMES` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_FEATURE_FLAGS_KICK_FROM_INIT` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_FEATURE_FLAGS_KICK_ON_WARM_CACHE` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_HOST_ARTIFACT_TYPE_COMMANDS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_PLUGIN_REMOTE_MCP_REACHABLE_HOSTS_HINT` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_RESUME_HINT_COMMAND` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_SYSTEM_PROMPT_FEATURE_FLAG` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_USER_DELEGATED_SESSION` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_USER_DELEGATED_SESSION_ANY_CHECK_MODEL` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
 | `CLAUDE_CODE_BRIDGE_SETTINGS_BINDING` | 2.1.321（11-09） | 1 | — | — | 2.1.321 仍在（比對日 11-09） |
 | `CLAUDE_CODE_CCR_REQUESTS_BY_FETCH` | 2.1.321（11-09） | 1 | — | — | 2.1.321 仍在（比對日 11-09） |
 | `CLAUDE_CODE_GIT_CHECK_ONLY_IN_REPOSITORY` | 2.1.321（11-09） | 1 | — | — | 2.1.321 仍在（比對日 11-09） |
@@ -99,9 +114,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_DISABLE_AGENT_PROGRESS_SUMMARIES` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_DISABLE_STOP_OF_HELD_MESSAGES` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_DISABLE_TRANSCRIPT_READ_AHEAD` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
-| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
-| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE_RESTART` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
-| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE_RESTARTED_FROM` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
+| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` | 2.1.318（11-04） | 3 | 官方 v2.1.323 Release 宣布「Code Mode」功能（Claude 改寫 JS 呼叫工具，預設關閉），[官方文件](https://code.claude.com/docs/en/code-mode)；名稱吻合疑為對應旗標，Release 未逐字列出旗標名，暫不升第 4 階 | — | 2.1.323（11-12）官方宣布 Code Mode 功能，疑為對應旗標 |
+| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE_RESTART` | 2.1.318（11-04） | 3 | 疑與上列 `CODE_MODE` 同批隨 v2.1.323 出貨，證據同上 | — | 2.1.323（11-12）疑同批出貨 |
+| `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE_RESTARTED_FROM` | 2.1.318（11-04） | 3 | 疑與上列 `CODE_MODE` 同批隨 v2.1.323 出貨，證據同上 | — | 2.1.323（11-12）疑同批出貨 |
 | `CLAUDE_CODE_MCP_SERVE_TUNNEL_BINARY_FRAMES` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_PROGRAM_USE_CASE_STAMPED` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
 | `CLAUDE_CODE_REPLY_GATE_POLICY` | 2.1.318（11-04） | 1 | — | — | 2.1.318 仍在（比對日 11-04） |
@@ -387,6 +402,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-13 | 2.1.323 新增 13 候選旗標（9 設定類不列，消失 1，原未列表）；同日 Release 宣布 Code Mode，`EXPERIMENTAL_CODE_MODE` 系列升 3 階 |
 | 2026-11-09 | 2.1.321（自 2.1.319 起）新增 11 個第一階候選旗標（名單見追蹤表），無代號旗標；2 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |
 | 2026-11-06 | 2.1.319 新增 13 個候選旗標：12 第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；1 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |
 | 2026-11-04 | 2.1.318 新增 12 個第一階候選旗標（名單見追蹤表），無代號旗標；4 設定類不列；`ENABLE_CONFIG_MISSING_READ_GUARD`（首見 2.1.317）消失列 4 階；對帳僅命中來源條目自身 |

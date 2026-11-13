@@ -28,14 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-12
+**最後更新：** 2026-11-13
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-12）
-> - **誤擋**：CVP 核准使用者在 claude.ai 問無害問題也被擋（#61889）。見 [[topics/ai-agent-safety-cyber#2026-11]]。
-> - **憑證與防注入**：Help Net Security 標題稱被竊的 Claude API 金鑰可讓 Claude Code 變成遠端植入程式；AWS、Red Hat 與 Nvidia 各有防注入新工具（皆僅標題）。見 [[topics/ai-agent-safety-product-vulns#2026-11]]、[[topics/ai-agent-safety-prompt-injection#2026-11]]。
+> **最新動態**（2026-11-13）
+> - **第三方防護產品**：ArmourCode 推出 hooks 工具，標題稱用來攔阻 Claude Code 風險；攔截範圍與是否開源未載。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
+> - **防注入教育文**：Startup Fortune 標題稱提供 AI agent 建置者的提示注入防範指南，非 Claude 專屬、僅標題可用。見 [[topics/ai-agent-safety-prompt-injection#2026-11]]。
 ---
 
 ## 摘要
@@ -52,8 +52,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-12 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-12 |
+| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-13 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-13 |
 | [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-12 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 

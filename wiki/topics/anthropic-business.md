@@ -30,13 +30,13 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-12）
-> - **官方 IPO 頁：Q3 營收 $170 億，年營收 $10 萬以上客戶逾 11,900 家、調整後營業利益率 15%（HN 641 分）**，見 [[topics/anthropic-ipo]]
-> - **IPO 前夕再推 Claude for Manufacturing（Business Insider 點出時機；功能與價格未載）**，見 [[topics/anthropic-business#時序]]
+> **最新動態**（2026-11-13）
+> - **IPO 路演認購約達六倍超額（Yahoo Finance、Bloomberg）**，70–78 美元價格區間、最快 11-19 交易維持不變，見 [[topics/anthropic-ipo]]
+> - **Anthropic 因「Mythos」模型名稱遭控商標侵權而被告（Reuters）**，見 [[topics/anthropic-business-risks]]
 
 ---
 

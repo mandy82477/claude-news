@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-12）
-> - **防注入的工具動態**：Tech Times 標題稱 AWS 開源 AI agent 評估框架並加強評分用 AI 對提示注入的防護；SiliconANGLE 標題稱提示注入攻擊促成 Red Hat 與 Nvidia 的 OpenShell。兩則皆僅標題可用，非 Claude 專屬。
+> **最新動態**（2026-11-13）
+> - **防注入教育文**：Startup Fortune 標題稱提供 AI agent 建置者的提示注入防範指南，籲在客戶發現問題前先防；僅標題可用，非 Claude 專屬。
 ---
 
 ## 摘要
@@ -99,6 +99,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Startup Fortune（Topic Watch）：提示注入防範指南，籲 AI agent 建置者在客戶之前先防（2026-11-13 新增，定向補抓，非 Claude 專屬）
+
+- **揭露來源**：Topic Watch／Startup Fortune（11/12 19:34 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱提供一份給 AI agent 建置者的提示注入防範指南，主張應在客戶發現問題之前先行防範；具體防範步驟與是否涵蓋 Claude 均未載
+- **與既有系列的關係**：與既有「教讀者怎麼防」教育層訊號（09-28、10-11、10-14、11-05 Security Boulevard）同屬一條敘事；同站 Startup Fortune 09-18 曾發同類剖析文章（見「### 2026-09」）；未改變「## 目前結論」既有判斷，訊號表已滿載 8/8，本輪未列入
+- **可信度評估**：單一來源、無可讀內文，互動 0
+%% 本則為「ai-agent-safety」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
 #### Tech Times：AWS 開源 AI agent 評估框架，並加強評分用 AI 對提示注入的防護（2026-11-12 新增，定向補抓，非 Claude 專屬）
 

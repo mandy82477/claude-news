@@ -33,15 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-12）
-> - **新增 bug**：`claude -p` 無頭模式送出 prompt 即回 API 400「input_examples: Extra inputs are not permitted」（GitHub issue #11678，52 則留言、38 個讚，仍 open，🔌 組）。
-> - **互動數更新**：多 session 直接通訊功能請求（#24798，已修復 v2.1.224）增至 85 則留言、23 個讚（📂 組）。
-> - 11-10：**互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。
-> - **功能請求**：Desktop／Cowork 支援 RTL（希伯來／阿拉伯文）排版（GitHub issue #38005）累積 47 則留言、126 個讚。
+> **最新動態**（2026-11-13）
+> - **新增事故**：Anthropic Status 通報 claude.ai／Claude API／Claude Code 錯誤升高，與 Microsoft 365 全球性故障同時發生（🌐 組）。
+> - **互動數更新**：Windows Desktop 孤兒 Silo／Job Object（#53247）增至 110 則留言；console 閃爍（#14828）增至 66 則留言；tool call parse 錯誤（#63875）增至 77 則留言。
 
 ---
 
@@ -140,7 +138,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - ❓ **待查證**（標 2026-11-01｜查 `128 MB、request size`｜複 2026-11-15）｜**媒體稱 Claude API 單次請求上限由 32 MB 升至 128 MB（Bedrock 為 6.4 倍）**：FourWeekMBA、Startup Fortune 兩家 2026-10-30 報導（僅見標題，未讀內文）；生效時間與適用範圍未載，官方文件尚未查證。
 
-### 🧠 行為與品質（82 條未修復、3 條已修復、1 條拒修、7 條查無官方、2 條❓）
+### 🧠 行為與品質（82 條未修復、3 條已修復、1 條拒修、7 條查無官方、3 條❓）
 
 - 🔴 **未修復**｜**同一輪先輸出文字再呼叫 AskUserQuestion 時，前面的文字不會顯示（GitHub issue #65662，累積 25 則留言，2026-11-09）**：畫面直接跳到問題對話框，assistant 先前輸出的文字消失；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增使用者中斷（interrupt）時可觸發的 hook（GitHub issue #9516，累積 30 則留言，2026-11-08）**：目前 hook 系統未提供使用者主動中斷執行時的觸發點；官方尚未回應或排入路線圖。
@@ -213,7 +211,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**`autoMemoryEnabled=false` 未能抑制約 11–16k token 的記憶體前導文字（關聯已關閉的 issue #44829）（GitHub issue #63903，累積 47 則留言，首見 2026-07-23，2026-09-24 留言數更新）**：使用者回報將 `autoMemoryEnabled` 設為 `false` 後，系統確實不再嘗試寫入 auto-memory，但寫死的記憶體前導文字（memory preamble，約 11,000–16,000 token）仍未被抑制，設定未如預期完全生效；回報標題註明與先前已關閉的 issue #44829 相關；官方尚未回應。
 - 🔴 **未修復**｜**session 無法得知 auto-memory 索引完整載入、截斷還是未載入（issue #82056，51 則留言，08-28 首見，09-18 更新）**：出錯時使用者與 Claude 皆無從察覺記憶失真；與 #63903（停用未生效）不同面，暫分列；官方未回應。
 - 🔴 **未修復**｜**功能請求：`MEMORY.md` 自動記憶壓縮提醒門檻應可設定（GitHub issue #91188，累積 60 則留言，2026-09-08 首見，2026-10-30 互動數更新）**：使用者呼籲將壓縮提醒門檻改為可設定（或至少可個別關閉），現行為寫死固定值；與既有 auto-memory 成熟度缺口（#63903、#82056）同屬不同面向，暫分列；官方尚未回應。
-- 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 76 則留言、116 個讚，2026-09-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
+- ❓ **待查證**（標 2026-11-13｜查 109446）｜**社群指控官方無預警移除某項 Claude Code 功能**（Hacker News＋GitHub issue #109446，2026-11-13，HN 26 分）：留言稱此類無預警修改在 Claude Code 與 Kiro 已成常態；被移除的功能名稱與影響範圍未見報導。
+- 🔴 **未修復**｜**「The model's tool call could not be parsed (retry also failed)」間歇性中斷 session（issue #63875，累積 77 則留言、116 個讚，2026-11-13 互動數更新；issue #62123，累積 63 則留言、113 個讚，皆 2026-07-13 回報，屬同一 bug 兩則獨立高互動回報，合併追蹤）**：session 進行中間歇性中斷並顯示「The model's tool call could not be parsed (retry also failed)」錯誤；issue #62123 回報者指出在 Opus 4.7 環境下多次發生；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**`--dangerously-skip-permissions` 於 v2.1.77 後所有版本失效（GitHub issue #36168，2026-07-12 回報，regression）**：使用者回報 v2.1.77 之後的所有 Claude Code 版本，`--dangerously-skip-permissions`（跳過權限確認旗標）皆無法正常運作，影響依賴此旗標進行無人值守自動化的工作流；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**回應超過 32000 output token 上限觸發 API 錯誤（GitHub issue #24055，累積 137 則留言、85 個讚，2026-07-11）**：多名使用者回報回應長度超過 32000 output token 上限時觸發「API Error: Claude's response exceeded the 32000 output token maximum」；官方尚未回應。
 - 🔴 **未修復**｜**主控台新增文字時畫面自動滾回歷史頂端（GitHub issue #826，累積 354 則留言、822 個讚，2026-07-09 首次記錄，2026-09-21 互動數更新，全站已知問題本日互動量最高）**：使用者回報 Claude Code 主控台在新增文字輸出時，畫面會意外滾動回歷史紀錄最頂端，打斷閱讀最新輸出的動線；官方尚未回應。
@@ -448,7 +447,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**獨立個案：虛擬記憶體洩漏至 129GB，拖垮整機並導致當機（GitHub issue #11315，累積 66 則留言、58 個讚，2026-09-19 首見，2026-10-12 互動數更新）**：與上則 #4953 同屬記憶體洩漏症狀但為獨立回報，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**macOS 持續性 ECONNRESET 連線錯誤（GitHub issue #5674，累積 54 則留言、54 個讚，首見 2026-07-06，2026-09-21 互動數更新）**：僅在 macOS 上出現的持續性連線中斷問題（ECONNRESET），連線中斷導致任務被打斷，Windows 環境未見同樣狀況，疑為平台特定的網路層處理差異；官方尚未回應。
 - 🔴 **未修復**｜**Linux 上持續產生 Windows 換行（CRLF）檔案（GitHub issue #2805，累積 52 則留言、35 個讚，首見 2026-07-06，2026-08-25 互動數更新）**：即便 CLAUDE.md 已明確指示使用 LF 換行，Claude Code 在 Ubuntu Linux 上仍持續產生 CRLF 換行的檔案，跨平台團隊協作時易引發不必要的 diff 雜訊；官方尚未回應。
-- 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 65 則留言、38 個讚，首見 2026-07-06，2026-10-14 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
+- 🔴 **未修復**｜**Windows 執行工具時主控台視窗閃爍（GitHub issue #14828，累積 66 則留言、38 個讚，首見 2026-07-06，2026-11-13 互動數更新）**：Windows 版執行工具時主控台視窗會反覆閃爍，影響使用體驗，官方尚未回應。
 - 🔴 **未修復**｜**mapped drives / OneDrive 專案對話歷史無法保存（GitHub issue #14088，累積 39 則留言、13 個讚，2026-07-06）**：存放在網路磁碟機或 OneDrive 路徑下的專案，對話歷史無法正確保存，可能與路徑格式或雲端同步鎖定機制衝突；官方尚未回應。
 - 🔴 **未修復**｜**Windows IDE 擴充套件全面無法載入**（2026-05-09 UTC 00:24）：更新版本將 Linux 路徑硬編碼進擴充套件，導致 VS Code 等 IDE 在 Windows 上全面無法啟動，官方已確認並在狀態頁追蹤；臨時解法：降版至前一版本；此為第二次 Windows 平台相容性重大事故（見 2026-05-06 v2.1.131 緊急修復）。
 - 🔴 **未修復**｜**Bedrock 功能相容性落差（持續）**（2026-05-07 再次回報）：Claude Code 透過 AWS Bedrock 接入時功能異常，社群指出 Bedrock 與 Anthropic 直接服務的新功能同步速度慣常落後，每次新功能發布後的相容性落差問題已成常態。
@@ -460,7 +459,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復** v2.1.277（2026-09-18）｜**AGENTS.md 支援上線（issue #6235，396 則留言、6643 個讚，全站讚數最高）**：無 `CLAUDE.md` 時原生改讀 [AGENTS.md](https://agents.md/)；社群回報 `.agents/skills` 未涵蓋；三個邊界見 [[topics/official-community-gap]] ⟨G-08⟩。
   **09-22 補（HN 327 分）**：關掉 telemetry 讀不到本機 AGENTS.md 這件事（既有邊界）成因是載入器卡在遠端 feature flag 後、且無警告；官方 issue #95690 已追蹤並標記修復，版本號未見於 changelog，此邊界暫視為未解。
 - 🔴 **未修復**｜**Claude Desktop 無法在 Windows 上重啟（孤兒程序檔案鎖）（issue #42776，190 則留言、90 讚，09-16 更新）**：先前程序未正常結束、殘留檔案鎖，導致無法 Relaunch；官方尚未回應
-- 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020、AppModel-Runtime EventID 215/208，issue #53247，109 則留言、38 讚，10-28 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Windows 版 Desktop 崩潰後留孤兒 Silo／Job Object，僅登出或重開機可復（HRESULT 0x80070020、AppModel-Runtime EventID 215/208，issue #53247，110 則留言、38 讚，11-13 更新）**：與 #42776 檔案鎖問題同類但成因為 OS 層 Silo，分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop 1.1.4173 啟動後無視窗渲染，工作管理員仍可見進程（GitHub issue #28304，41 則留言、31 個讚，2026-10-09）**：更新至 1.1.4173 後啟動無畫面，但背景進程仍在執行；官方尚未回應。
 - 🔴 **未修復**｜**Cowork virtiofs FUSE mount 檔案過期未同步（GitHub issue #38993，累積 44 則留言、32 個讚，2026-07-12 更新）**：Cowork 的 virtiofs FUSE 掛載出現檔案截斷或過期問題，host 端檔案變更未反映至 VM 內，可能導致 VM 內操作基於舊版檔案內容；官方尚未回應
 - ✅ **已修復**（2026-08-17 官方關閉）｜**功能請求：Claude Desktop App 遠端控制 Claude Code session（GitHub issue #29006，累積 36 則留言、158 個讚，首見 2026-07-12）**：官方答遠端控制已可用，在「設定 > Claude Code > 預設啟用遠端控制」打開。
@@ -470,8 +469,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（12 條未修復、4 條已修復）
+### 🌐 服務穩定性（12 條未修復、5 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：claude.ai／Claude API／Claude Code 錯誤升高，與 Microsoft 365 故障同時發生（2026-11-13，約 10:18 UTC 登記、15:38 UTC 解決）**：對應 HN 討論串 440 分；依賴 API 的自動化留意重試。[來源](https://status.claude.com/incidents/34wq7gxnxvvm)
+  - 另一 HN 討論串回報具體症狀：`/login` 觸發 API 403、頁面顯示 Cloudflare「Attention Required」（[Tell HN: Claude Code Is Down](https://news.ycombinator.com/item?id=50480909)，37 分，11-13）；撞到此錯誤訊息的自動化可對照本次事故。
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Claude Cowork（2026-11-08 08:18–08:32 UTC，約 14 分鐘）**：官方已標記解決；這段時間遇到回應變慢或失敗可確認是此次短暫異常。[來源](https://status.claude.com/incidents/kw2lxj1th04c)
 - 🔴 **未修復**｜**API Error: Connection closed mid-response，工作到一半無預警中斷（GitHub issue #70217，33 則留言、22 讚，2026-10-28）**：官方尚未回應。
   - 與既有同名錯誤（#69415）、「串流閒置逾時」（#46987）同屬串流可靠性問題但為獨立回報，暫分列追蹤；長時間跑自動化或大型任務的使用者可留意。

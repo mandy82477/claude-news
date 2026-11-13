@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-12）
-> - 🟡 **Google 推出 Gemini 4 Hydrogen，主打日常 coding 與 agentic 工作流速度，AA 智慧指數 51（Argon 50）**——價格未載；Antigravity 付費訂閱者可用，想省額度的人先觀察實測。
+> **本週衝擊**（2026-11-13）
+> - 🟡 **OpenAI 推出 ChatGPT Wallet，讓 agent 經使用者核准完成購買，Claude 官方尚無對應能力**（Blog/OpenAI News）——評估讓 agent 代為付款情境的人，目前仍得自己接金流。
 > - 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
@@ -53,7 +53,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Microsoft／GitHub** 🏢 | 11-04 Copilot 正式整合進 Xcode 內建程式碼助理（公開預覽）→ Apple 生態開發者可在原生 IDE 內直接叫用 Copilot，Claude Code 無對應整合 | 生態 | 🟡 | GitHub 官方 changelog 一手來源；GA 時程與功能範圍未載 |
 | **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對外開放，上線價 $2／$10，12-01 起翻倍 $4／$20＝Opus 5.5 牌價 → 12-01 前是比價窗口，之後同價 | 定價 | 🔴 | DeepMind 官方一手；價格僅 Simon Willison 轉述（VentureBeat 標題同向），官方牌價頁未查證；基準細節未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 11-13 推出 ChatGPT Wallet，讓 agent 經使用者核准、用既有卡片保護完成購買 → Claude 官方尚無對應 agent 付款能力 | 能力 | 🟡 | 官方部落格一手；上線時間與 Work／Codex／dots 涵蓋範圍未見細節 |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
 | **Cursor** 🏢 | 10-27 把自家 coding agent 包成 TypeScript SDK，開放任何人在自己程式裡呼叫建置 → 從「工具」升級為可嵌入他人產品的平台，評估自建 agent 的人多一個選項 | 生態 | 🟡 | Startup Fortune 單一來源，僅標題可用，SDK 能力範圍與定價未載 |
@@ -257,6 +257,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-13
+- **OpenAI**：推出 ChatGPT Wallet，讓 agent 在 ChatGPT Work、Codex 與 dots 中經使用者核准、用既有卡片保護完成購買；詳見「對手雷達」OpenAI 列更新（Blog/OpenAI News）
+- **OpenAI（透過客戶案例，Amplitude／Wave）**：官方部落格報導 Amplitude 以 OpenAI 模型打造主動式產品 agent「Wave」，1–2 天內交付產品改版；屬廠商自宣客戶案例，具體規模與效益數字未見，不列入「對手雷達」表（Blog/OpenAI News）
 
 #### 2026-11-12
 - **Google（Gemini）**：Gemini 4 Hydrogen 發布，定位為日常 coding 與 agentic 工作流的快速款，AA 智慧指數 51 高於 Argon 的 50；詳見「雷達細節」Google 節（Blog/Google DeepMind Blog）

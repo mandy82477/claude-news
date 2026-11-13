@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 
-> **遠端與多 session 介面新增兩則**（2026-11-12）
-> - **行動裝置遠端控制**：t3code（58,093 星）與 ovis（2,039 星）讓人用瀏覽器或手機操控 Claude Code、Codex 等多款 agent。
-> - **Agent 活動可視化**：Aq 用等待佇列取代輪流切換分頁，直接列出哪個 session 在等人。
+> **行動裝置遠端控制新增反向隧道取向**（2026-11-13）
+> - **sun168567/cc-desk-tunnel**：桌面客戶端驅動雲端 Claude Code，經反向隧道把執行動作接回使用者本機 Windows。
 
 ---
 
@@ -57,6 +56,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### sun168567/cc-desk-tunnel：桌面客戶端驅動雲端 Claude Code，經反向隧道在 Windows 本機執行（2026-11-13）
+
+- **主線：** —
+- **核心模式：** 桌面客戶端驅動跑在雲端的 Claude Code，透過反向隧道（reverse tunnel）把實際執行環境接回使用者自己的 Windows 電腦；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（bot、MCP、web-app 三條路，t3code、ovis 等）一個方向相反的傳輸層取向——既有做法多是手機／瀏覽器連進雲端或遠端主機控制 Claude Code，本則反過來讓雲端 Claude Code 的執行動作落回使用者本機 Windows 環境；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/sun168567/cc-desk-tunnel)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### pingdotgg/t3code、devswha/ovis：從任何電腦或手機操控 Claude Code、Codex 等多款 agent 的 client（2026-11-12）
 

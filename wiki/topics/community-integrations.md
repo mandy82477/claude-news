@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-08
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 
-> **Plugin／MCP 整合新增 Microsoft 官方跨 agent Windows 開發外掛集**（2026-11-08）
-> - **microsoft/win-dev-skills**：Microsoft 官方帳號發布，供 GitHub Copilot、Claude Code、OpenAI Codex 共用的 Windows 應用開發 agent plugin 集合，501★。
+> **Plugin／MCP 整合新增社群媒體爬蟲 API 整合**（2026-11-13）
+> - **everyinfra/everyinfra-agent-plugins**：MCP server／plugin 接 TikTok、Instagram、Amazon、YouTube 等 106 個平台的 573 個資料 API。
 
 ---
 
@@ -58,6 +58,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### everyinfra/everyinfra-agent-plugins：MCP server／plugin 接社群媒體與電商平台爬蟲 API（2026-11-13）
+
+- **主線：** —
+- **核心模式：** EveryInfra MCP server 與 agent plugin，供 TikTok、Instagram、Amazon、YouTube、小紅書、抖音等爬蟲 API，涵蓋 106 個平台共 573 個資料 API，每千次呼叫自 $0.56 起計價；適用 Claude Code、Cursor、Codex。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「社群媒體與電商平台資料擷取」取向——既有代表技巧多接創作工具或企業 SaaS（Notion、Microsoft 等），本則把整合範圍換成跨平台爬蟲 API 的規模化訂閱服務；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（481★），無 forks／issues／近期 commit 佐證可查，未另行查證；計價與平台覆蓋數字為該服務自述，未經本庫查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/everyinfra/everyinfra-agent-plugins)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊服務，尚無社群採用回饋數據）
 
 #### microsoft/win-dev-skills：Microsoft 官方跨 agent Windows 應用開發外掛集（2026-11-08）
 

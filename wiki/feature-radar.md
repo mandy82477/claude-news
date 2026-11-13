@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-09
+**最後更新：** 2026-11-13
 
 > **本日新增重大發布**（2026-11-09）
 > Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
@@ -13,7 +13,9 @@
 
 - **Claude Fable 5.2／Mythos 5.2 發布**：新旗艦雙發布，Fable 5.2 已自動成為預設模型（1M context、降價兩成）。**怎麼開始：** `/model claude-fable-5-2` 確認版本，細節見 [[entities/fable-5]]、[[entities/mythos]]。
 
-%% 11-09 重算：候選池＝發布日距今 ≤30 天或本輪熱度/試用價值有變動者。原三件（Sonnet 5.5 09-28、Haiku 5.5 10-07、Mods 10-01）距今 33～42 天，均已出時間閘，且本輪熱度/試用價值皆未變動，不在候選池內；候選池內僅新發布的 Fable 5.2／Mythos 5.2（🔥🔥🔥🔥🔥、✅，今日發布）一項，故本節僅列 1 件，非湊滿三格。本節已連續多輪（10-22 之後）未依規則每次 ingest 重算，建議 /wiki-lint 5a 全面複查候選池是否有其他符合 ≤30 天門檻的既有條目被漏算 %%
+%% 11-09 重算：候選池＝發布日距今 ≤30 天或本輪熱度/試用價值有變動者。原三件（Sonnet 5.5 09-28、Haiku 5.5 10-07、Mods 10-01）距今 33～42 天，均已出時間閘，且本輪熱度/試用價值皆未變動，不在候選池內；候選池內僅新發布的 Fable 5.2／Mythos 5.2（🔥🔥🔥🔥🔥、✅，今日發布）一項，故本節僅列 1 件，非湊滿三格。
+
+11-13 重算：今日新增 Code Mode（🔥、⏳ 觀望），熱度未達 🔥🔥🔥🔥 門檻，不進候選池；本輪掃過 10-14～11-12 全部 🆕 最新功能條目，🔥🔥🔥🔥 以上且 ✅／⚡ 者仍僅 Fable 5.2／Mythos 5.2 一項（Claude Duet 🔥🔥🔥🔥🔥 但試用價值 ⏳ 觀望、未達 ✅／⚡ 門檻，不合格），維持現有推薦不動；距最後輪替僅 4 天，未達 7 天霸榜檢查門檻。 %%
 
 ---
 
@@ -67,6 +69,25 @@
 ---
 
 ## 🆕 最新功能（2026-11）
+
+### Code Mode
+**發布：** 2026-11-12（v2.1.323） | **狀態：** Research Preview
+
+**是什麼：** 讓 Claude 改寫 JavaScript 來呼叫自己工具的實驗性選項，預設關閉，需手動開啟。
+
+**為何熱：** 官方 v2.1.323 release notes 列為首項異動；單一 GitHub Release 來源，尚無社群討論。
+
+**現在要試嗎：** 想嘗鮮新呼叫方式的人可在非關鍵專案先試；依賴既有工具呼叫行為的正式工作流先別開。
+
+**快速上手：**
+```
+官方 release notes 未附具體指令／設定鍵名稱，啟用／關閉方式見官方文件
+https://code.claude.com/docs/en/code-mode
+```
+
+**注意事項：** 預設關閉，隨時可關掉；具體設定鍵與行為細節待官方文件或社群實測補齊。
+
+---
 
 ### Claude Whiteboards、Claude Sheets 與 Claude Data
 **發布：** 2026-11-10（官方文章） | **狀態：** Whiteboards／Sheets Beta；Claude Data 正式發布（認證查詢與即時分享仍 beta）
@@ -856,6 +877,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具） | 2026-11-12 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Claude Whiteboards／Sheets／Data**（Whiteboards、Sheets beta；Dashboards 轉正式版並更名 Claude Data） | 2026-11-10 | 🔥🔥🔥 | ⚡有條件推薦 | Beta／GA（全付費方案） |
 | **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |

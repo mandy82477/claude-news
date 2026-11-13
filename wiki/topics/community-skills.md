@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 
-> **Jane Street 公開 agent skills 集合，兩天新增約 4,000 星**（2026-11-12）
-> - **janestreet/agent_skills**：累計 7,512 星、近 2 天新增 4,049 星，內容細節未載。
+> **Skills 設計新增教程與策展目錄兩則**（2026-11-13）
+> - **aa1143/NamiAgent**：零基礎 AI Agent 教程，同時是可本機跑的 agent，附拆解 Claude Code／Codex 的課程。
+> - **zhuyansen/agent-skills-hub**：安全評級、每 8 小時更新的開源 skills／MCP／agent 工具目錄站。
 ---
 
 ## 摘要
@@ -92,6 +93,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### aa1143/NamiAgent：零基礎 AI Agent 教程，同時是可在本機跑的 agent（2026-11-13）
+
+- **主線：** —
+- **核心模式：** 零基礎入門 AI Agent 教程，同時是一個能在本機執行的 agent：讀寫檔案、執行指令、MCP、長期記憶，附網頁端顯示每一步；從 100 行最小循環開始逐課疊加能力，最後拆解 Claude Code、Codex 等主流 agent 的實作方式；GitHub Search 517 星。
+- **與既有模式的關係：** 屬課程／教材類資源盤點，與 09-30 decodingai-magazine/building-a-coding-agent-from-scratch-course、09-24 Callous-0923/agent-study 同屬「從零打造 agent」教學課程，差異是本則附可執行的最小 agent 本體；課程型資源不進模式概覽表，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/aa1143/NamiAgent)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者教材與工具，尚無社群採用回饋數據）
+
+#### zhuyansen/agent-skills-hub：安全評級、每 8 小時更新的開源 Claude skills／MCP／agent 工具目錄站（2026-11-13）
+
+- **主線：** —
+- **核心模式：** AgentSkillsHub（agentskillshub.top）彙整開源 Claude skills、MCP 伺服器與 AI agent 工具，依安全等級分類，每 8 小時刷新；GitHub Search 502 星。
+- **與既有模式的關係：** 屬策展型資源清單，與同作者 10-10 已收錄的 zhuyansen/awesome-claude-video-skills（[[topics/community-skills#2026-10]]）同屬「安全評級＋分類目錄」做法，擴大到全品類 skills／MCP／工具；清單彙整不進模式概覽表，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（502★），無 forks／issues／近期 commit 佐證可查，未另行查證；安全評級由該站自評，未經本庫查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/zhuyansen/agent-skills-hub)
+- **成熟度：** ⏳ 新興（本庫首次收錄，策展型資源站，尚無社群採用回饋數據）
 
 #### janestreet/agent_skills：Jane Street 公開的 agent skills 集合，近 2 天新增 4,049 星（2026-11-12）
 

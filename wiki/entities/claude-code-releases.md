@@ -33,13 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-10）
-> - **v2.1.322**：新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度。
-> - **SDK**：anthropic-sdk-python v2.8.0 新增 Claude Tag 分析指標與 Slack 頻道 `reply_mode`；TypeScript 的 vertex-sdk-v1.1.3、google-cloud-sdk-v1.1.4 對含 `;x` 的 ID 改拋 `AnthropicError`。
+> **最新動態**（2026-11-13）
+> - **v2.1.323**：新增 Code Mode，實驗性選項（預設關閉），讓 Claude 改寫 JavaScript 呼叫自己的工具；詳見 [[topics/claude-code-experimental]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -68,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.323** | 2026-11-12 | 新增 Code Mode（實驗性選項，預設關閉，讓 Claude 改寫 JavaScript 呼叫自己的工具）；金鑰外洩修復見 [[entities/claude-code-known-issues]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.323)）|
 | **v2.1.322** | 2026-11-10 | 新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.322)）|
 | **anthropic-sdk-python v2.8.0** | 2026-11-10 | Features：Claude Tag 分析彙總與使用者報表新增指標；Claude Tag Slack 頻道設定新增 `reply_mode`；另有 Bedrock 傳送「;」的修正（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.8.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.3** | 2026-11-10 | Bug fix：模型名稱中的「;」改以 `%3B` 傳送；專案 ID、區域或模型含 `;x` 類字串時拋 `AnthropicError`（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.3)）|
@@ -214,6 +214,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-13 | **v2.1.323**：新增 Code Mode（實驗性選項，JS 呼叫工具）。旗標增 13，見 [[topics/claude-code-experimental]]。互動更新 #53247／#63875／#14828。 |
 | 2026-11-10 | **v2.1.322**：Vertex 新增 fast mode（global／us／eu）。SDK 同步更新（見下）。互動更新 #34255／#38005。 |
 | 2026-11-09 | **v2.1.321**：新增 `--settings` 供 remote 指令帶設定檔；Fable 5.2 成預設模型。SDK 新增 webhook，旗標+11，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-06 | **v2.1.319**：⚠️ auto mode 遙測／旗標關閉改一律詢問或拒絕。旗標+13，見 [[topics/claude-code-experimental]]。SDK 新增錯誤碼＋強制登出。互動更新 6 則。 |

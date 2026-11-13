@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 
-> **最新動態**（2026-11-12）
-> - **官方 IPO 頁公布 Q3：營收 $170 億、年增逾 12 倍；年營收 $10 萬以上客戶逾 11,900 家；調整後營業利益率 15%**（HN 641 分）；官方 IPO 頁載明預計 11-18 定價、11-19 開始交易
+> **最新動態**（2026-11-13）
+> - **路演認購約六倍超額**（Yahoo Finance／Bloomberg，續 11-10）；11-10 公告的 $70～78 價格區間與最快 11-19 交易時程均未變
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -178,6 +178,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-13 Yahoo Finance／Bloomberg：路演認購約六倍超額**：兩家同日報導 IPO 路演認購約達六倍超額；11-10 官方公告每股 $70～78 價格區間與最快 11-19 開始交易時程均未變，具體認購細節未見報導，僅標題可用。
 - **2026-11-12 官方 IPO 頁／Yahoo Finance：Q3 財務公開、掛牌日傳 11-19**：
   - 官方 IPO 頁：Q3 營收 $170 億、客戶與營收年增皆逾 12 倍；$10 萬以上客戶逾 11,900 家；調整後營業利益率 15%、淨損 $233 億；數字明細見 [[#數字細節]]。
   - Yahoo Finance（標題）：Claude 開發商將於週四 11-19 開始交易；與 11-10 CNBC 引消息人士的「最快 11-19」同日期，仍非官方公告。
