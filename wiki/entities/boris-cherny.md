@@ -7,11 +7,11 @@ domain: "👤 人物"
 last_updated: "2026-11-08"
 last_news_update: "2026-11-08"
 status_main: "active"
-days_since_news: 6
+days_since_news: 5
 parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
-days_since_news_subtree: 6
+days_since_news_subtree: 5
 inbound_links: 35
 attribution_count: 12
 attribution_last: "2026-11-08"

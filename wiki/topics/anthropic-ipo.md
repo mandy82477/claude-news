@@ -3,17 +3,17 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-12"
-last_news_update: "2026-11-12"
+last_updated: "2026-11-13"
+last_news_update: "2026-11-13"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
-inbound_links: 92
-attribution_count: 92
-attribution_last: "2026-11-12"
+days_since_news_subtree: 0
+inbound_links: 94
+attribution_count: 94
+attribution_last: "2026-11-13"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0

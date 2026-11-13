@@ -4,22 +4,22 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-12"
-last_news_update: "2026-11-12"
+last_updated: "2026-11-13"
+last_news_update: "2026-11-13"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 127
-attribution_count: 852
-attribution_last: "2026-11-11"
+attribution_count: 853
+attribution_last: "2026-11-13"
 top_source: "github-issues"
 pending_count: 6
-pending_overdue: 2
-pending_next_review: "2026-11-20"
+pending_overdue: 0
+pending_next_review: "2026-11-14"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
