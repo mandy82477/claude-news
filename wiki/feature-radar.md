@@ -60,7 +60,7 @@
 
 | 日期 | 事件 | 到期後 | 你該做的決定 |
 |------|------|--------|------|
-| **2026-11-19** | Claude Data 在 Enterprise 方案預設開啟（原 Claude Dashboards） | 組織成員可接資料 connector、建共用儀表板 | 不想開的 Enterprise 管理員，11-19 前到 Organization settings > Artifacts 關掉；Team 方案早已預設開 |
+| **2026-11-20** | Claude Data 在 Enterprise 方案預設開啟（原 Claude Dashboards） | 組織成員可接資料 connector、建共用儀表板 | 不想開的 Enterprise 管理員，11-20 前到 Organization settings > Artifacts 關掉；Team 方案早已預設開 |
 | **2026-11-30** | Sonnet 4.5（`claude-sonnet-4-5-20250929`）API 退役 | 請求該模型將失敗 | 遷移至 `claude-sonnet-5-5`；Bedrock／GCP 另訂時程，詳見 [[entities/pricing]] |
 
 > 09-14 的週配額換軌已生效並移出本表：+50% 加成 09-13 到期，標準週配額改為永久 +25%，相對加成期間淨減約 17%，5 小時窗不受影響。官方說明中心當日確認換軌如期發生，完整規則與來源見 [[entities/pricing]]。
@@ -96,7 +96,7 @@ https://code.claude.com/docs/en/code-mode
 
 **為何熱：** 與同日的 Claude Meetings 一起，媒體定調為 Anthropic 自己的辦公套件、上市前直接對打 Microsoft；HN 273 分（11-11 快照）。
 
-**現在要試嗎：** 所有付費方案可用，網頁、桌面、手機都有。Team 方案三項預設開啟；Enterprise 的 Whiteboards、Sheets 預設關閉，**Claude Data 11-19 起預設開啟**。用量是否算進方案額度官方沒說。
+**現在要試嗎：** 所有付費方案可用，網頁、桌面、手機都有。Team 方案三項預設開啟；Enterprise 的 Whiteboards、Sheets 預設關閉，**Claude Data 11-20 起預設開啟**。用量是否算進方案額度官方沒說。
 
 **快速上手：**
 ```
@@ -104,7 +104,7 @@ https://code.claude.com/docs/en/code-mode
 Claude Data 需先接資料 connector（資料倉儲或 CRM）
 ```
 
-**注意事項：** Enterprise 管理員若不想讓 Claude Data 11-19 自動開啟，要在那之前關掉（見上方「倒數中」）。
+**注意事項：** Enterprise 管理員若不想讓 Claude Data 11-20 自動開啟，要在那之前關掉（見上方「倒數中」）。
 
 ### Claude Fable 5.2 與 Claude Mythos 5.2 發布
 **發布：** 2026-11-09（Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型） | **狀態：** 正式發布

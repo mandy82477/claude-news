@@ -8840,3 +8840,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：H-6db5d4（社群→功能，評估產品化矩陣新增列：aa1143/NamiAgent、zhuyansen/agent-skills-hub、sun168567/cc-desk-tunnel、everyinfra/everyinfra-agent-plugins）open，待下一輪功能記者接手
 - devpractice 沉澱：候選 3 筆（Downshift 成本/context 實務、claude-code-claim-check 驗證 Stop hook、t3code／ovis／Aq 手機遠端操控）／手冊寫入 0 則（今日無開發實務分類包）
 - market 判讀：判讀 4 則（IPO 六倍超額 ⬆️、Mythos 商標訴訟 ⚖️ 開線、AI 軍備競賽凍結訴訟 ⚖️ 開線、Schwab 自建 MCP ⚠️ 開線）；里程碑登記 4 筆、回顧結算新增 4 列
+- 主編查證（Step 3 截止日複查）：feature-radar.md「⏰ 倒數中」Claude Data Enterprise 預設開啟日期原寫 11-19，WebFetch 官方公告（claude.com/resources/articles/sheets-whiteboards-data，兩次獨立查詢皆確認原文為 "turns on by default on November 20, 2026"）後更正為 **2026-11-20**，全庫 3 處引用（倒數表、最新功能條目「現在要試嗎」與「注意事項」）已同步改正
