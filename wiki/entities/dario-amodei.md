@@ -34,22 +34,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-13
+**最後新聞更新：** 2026-11-13
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **Amodei：癌症、精神疾病將成歷史**（2026-11-11）
-> Seeking Alpha、NDTV 報導 Amodei 稱癌症與精神疾病在約十年內成為「過去的遺跡」；僅標題可用，場合與逐字未見報導。延續 08-16 的治癒癌症論述。
+> **最新動態**（2026-11-13）
+> - 癌症十年治癒說首度遭醫療界公開質疑時程過於樂觀，見下方核心論述
+> - 紐約時報報導稱已讓 OpenAI 等同業不滿，具體原因未見報導（僅標題）
 
 ---
 
 ## 現況
 
-2026-11-11，Seeking Alpha、NDTV 報導 Amodei 稱癌症與精神疾病將在約十年內成為「過去的遺跡」；僅標題可用，發言場合與具體依據未見報導。此說延續 08-16 他以「治癒癌症」作為扭轉大眾對 AI 不信任的論述。
-
-2026-11-10，Yahoo Finance 報導 Anthropic 規劃 IPO 直播，由 Amodei 與摩根大通執行長 [[entities/jamie-dimon|Jamie Dimon]] 出席；僅標題可用，播出時間、形式與 Dimon 角色未見報導。
+2026-11-13，Business Insider（經 Hacker News）報導，Amodei 在 Anthropic 11-10 公開的 42 分鐘 IPO 路演影片中稱癌症、阿茲海默症、心臟病與精神疾病將在不到十年內成為「過去的遺跡」；部分醫療社群公開質疑此時程不現實，為治癒癌症論述首見具名反面意見。同日紐約時報報導標題稱 Amodei 已讓 OpenAI 與其他 AI 同業感到不滿，具體原因標題未列出，僅標題可用。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -59,6 +58,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 | 日期 | 立場 | 來源 |
 |------|------|------|
+| 2026-11-13 | Business Insider（經 HN）：IPO 路演影片稱癌症、阿茲海默症等四病十年內成「過去的遺跡」，醫界質疑時程不現實 | Hacker News（29分）／Business Insider |
+| 2026-11-13 | NYT：標題稱已讓 OpenAI 等同業不滿，原因未見報導（僅標題） | Google News／The New York Times |
 | 2026-11-11 | Seeking Alpha、NDTV：稱癌症與精神疾病約十年內將成「過去的遺跡」（僅標題可用） | Google News／Seeking Alpha、NDTV |
 | 2026-11-10 | Yahoo Finance：Anthropic 規劃 IPO 直播，Amodei 與 Dimon 同列（僅標題可用） | Google News／Yahoo Finance |
 | 2026-11-09 | CNBC：Anthropic 發布新旗艦模型，為 Amodei 呼籲減速以來首次，IPO 聲浪漸起（僅標題可用） | Google News／CNBC |
@@ -129,6 +130,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Amodei Says AI Will Cure Cancer in a Decade. Doctors Are Skeptical.](https://www.businessinsider.com/dario-amodei-anthropic-cancer-cure-ipo-roadshow-backlash-doctors-2026-11) — Hacker News（29分）／Business Insider，2026-11-13：IPO 路演影片引述，醫療社群質疑十年治癒時程不現實
+- [Why Anthropic's Dario Amodei Has Angered OpenAI and Other A.I. Peers](https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUWxHUTR3T2hmZ0hnbEpjd1VtQUpIS3V4MjY5LUhvQzhTS1BaMEVwVEg5bVFnTlp1dGc3SEZrdG55VDByX1lXbVhxdTFLUlp4NklDXzFWZ1FOa2U0OFZlc1JsUi0zWXFXYXkxMVJHdU50X1psazB4SzZzZmVDNVJsdjRlSGdVdDJjRmQ0?oc=5) — Google News／The New York Times，2026-11-13（僅標題可用，具體原因未列出）
 - [Anthropic CEO says cancer, mental illness 'will be relics of the past' due to AI](https://news.google.com/rss/articles/CBMitgFBVV95cUxNTENGWGczU1BSQms5UktHUTR6c3NHWUNzZzlPWU5YYkh5SXlUSWl1dlpGWE50TERkUkE5Z3BsNy14cno3TGdrTVJQRjdxcFF1MUFtYktSSm5fMkJMSVZaV0pIUVp0Smd5dTQwbGFNdHJUZDVuck9CdG13RWQ4SURZcW5CRk9RRG5WcFR3ckNVcTRReTN2QVJUNDZ5YzI0aXFXcjU1WFMxRUI5TDh0ME5TRUpYTE5vdw?oc=5) — Google News／Seeking Alpha，2026-11-11（僅標題可用）
 - [Cancer Will Be History In 10 Years: Anthropic CEO's Big Promise](https://news.google.com/rss/articles/CBMitgFBVV95cUxNbGlIUU9rOF9fRU5VNnZrMk9VU0ZLUmVLX3U4LU0tVVRiQkYyTG1kTVNRclJ0cGk0VDAxN2xhdnZGcVBTTzkxY3lxVFNrWThyVU1PR2RDaGROTV9GWVdlRGhwYWZEZlVMNzhlT3NkaWZNeGR2dVI3WU9Ea2J5czR5RzZzRF96SXJRV1ZnQ25FdWlqTWRMYTR4QmswMXhxc3RTb1ZLX1ZpMWRNMWozUDFkR0pfbW9BUdIBvgFBVV95cUxNdWN4dGphV21JcFN3UlVjNS0wYnZrVUx3WXlzVlBkaTBzUE9UbzlxNmxpdGNQTGxHRWo5aExRekQ2WGRuS2wydjVOb2s5SnpNaWpUSHpnOEtIdDNwNmhCc0JDRmI0eGxkMTlKc0pwamhfWjQxWHpaUERYQkhJeTJSX2NTa0dHRmhNLWM2VjhvSFUxRVp2R3ZwX3lXYW9HMzI5SklFUDgyTl9HNVpnQ0hLRG1oMkpndExZXzhRalRn?oc=5) — Google News／NDTV，2026-11-11（僅標題可用）
 - [Anthropic Plans IPO Live Stream With Amodei, JPMorgan CEO Dimon](https://news.google.com/rss/articles/CBMimwFBVV95cUxOSW9rN0FucU5YWWx1Vm96c2JjVGowUmR3Q0hVaXNHRkFzMFNaaS1rNTViUXM3YzhibHByOXFSb3RMZlNMU3VGRkJVR3ctNmU5a2tVX1J0dXFmWGpHZlFPNHRsQkZQYUR4NTl1RnRwOTZJYWpCU0ZzS1hoTjNlUUVOR1NPZHhtcXczd3cxeDN1UXByWWJ5dzE0dFR3MA?oc=5) — Google News／Yahoo Finance，2026-11-10（僅標題可用）
@@ -184,6 +187,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-11-13：Business Insider（經 HN，29分）報導，Amodei 在 Anthropic 11-10 IPO 路演影片稱癌症等四病不到十年內成「過去的遺跡」，確認 11-11 報導場合；醫療社群質疑時程不現實，延續 08-16 論述（來源：Hacker News／Business Insider）
+- 2026-11-13：紐約時報報導標題稱 Amodei 已讓 OpenAI 與其他 AI 同業感到不滿，具體原因標題未列出，為僅標題報導（來源：Google News／The New York Times）
 - 2026-11-11：Seeking Alpha、NDTV 報導 Amodei 稱癌症與精神疾病將在約十年內成為「過去的遺跡」，延續 08-16 的治癒癌症論述；僅標題可用，發言場合與依據未見報導（來源：Google News／Seeking Alpha、Google News／NDTV）
 - 2026-11-10：Yahoo Finance 報導 Anthropic 規劃 IPO 直播，Amodei 與摩根大通執行長 [[entities/jamie-dimon|Dimon]] 同列；僅標題可用，播出時間與形式未見報導，IPO 脈絡見 [[topics/anthropic-ipo]]（來源：Google News／Yahoo Finance）
 - 2026-11-09：CNBC 報導稱 Anthropic 發布新旗艦模型，為 Amodei 呼籲 AI 減速以來首次，同時提及 IPO 聲浪漸起；具體模型與財務內容未見報導（僅標題可用）（來源：Google News／CNBC）
