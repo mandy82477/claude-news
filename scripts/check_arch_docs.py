@@ -379,4 +379,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    from console_safe import make_console_safe  # 同目錄；Windows cp950 印 emoji 不可當掉
+    make_console_safe()
     sys.exit(main())

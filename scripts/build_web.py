@@ -15,6 +15,11 @@ import sys
 import time
 from pathlib import Path
 
+# 共用主控台編碼防護（原本定義在本檔；抽出後各腳本共用，行為不變）。測試以 spec_from_file_location
+# 載入本檔時 scripts/ 不在 sys.path，所以先補。
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from console_safe import make_console_safe  # noqa: E402
+
 ROOT = Path(__file__).parent.parent
 WIKI_DIR      = ROOT / "wiki"
 WIKI_ENTITIES = ROOT / "wiki" / "entities"
@@ -313,18 +318,6 @@ def safe_console(text: str) -> str:
     就是這樣變得無從診斷的。"""
     enc = (sys.stdout.encoding or "utf-8")
     return text.encode(enc, errors="replace").decode(enc, errors="replace")
-
-def make_console_safe() -> None:
-    """stdout／stderr 改成「編不出的字元以 ? 取代」，而不是拋 UnicodeEncodeError。
-
-    根因：Windows 預設主控台 cp950 編不出 emoji，而 build() 會把 wiki 內容（頁名、WARN 文字）
-    直接 print。print 拋例外時，若剛好位在 try/except Exception 裡，就被誤報成「頁面解析失敗」
-    （2026-11-08 對照表頁被誤報整頁消失，解析器本身沒問題）。在入口一次處理，所有 print 都受益；
-    不依賴 PYTHONUTF8 環境變數。"""
-    for stream in (sys.stdout, sys.stderr):
-        if hasattr(stream, "reconfigure"):
-            stream.reconfigure(errors="replace")
-
 
 def strip_llm_sections(md: str) -> str:
     """Remove any H2 section whose title contains '給 LLM' (and everything after it)."""
