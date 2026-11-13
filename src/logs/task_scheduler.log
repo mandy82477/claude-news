@@ -1493,3 +1493,10 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [Saturday 2026/11/14 00:28:38.00] 測試全綠 - web build 放行（第 1 輪修復：check_rules 檢查 6 改為只比對使用者本人信箱，6d3fd13a）
 [Saturday 2026/11/14 00:28:38.00] Single push done (news + wiki + web)
 [Saturday 2026/11/14 00:28:38.00] === Pipeline complete (agent) ===
+[Saturday 2026/11/14 00:45:35.00] === Agent pipeline start (2026-11-11) === (local backfill)
+[Saturday 2026/11/14 00:45:35.00] Aggregator OK (archive replay from src/gathered_archive/2026-11-11.json)
+[Saturday 2026/11/14 00:45:35.00] Wiki ingest OK
+[Saturday 2026/11/14 00:45:35.00] Building web reader...
+[Saturday 2026/11/14 00:45:35.00] 測試全綠 - web build 放行
+[Saturday 2026/11/14 00:45:35.00] Single push done (news + wiki + web)
+[Saturday 2026/11/14 00:45:35.00] === Pipeline complete (agent) ===
