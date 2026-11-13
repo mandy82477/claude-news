@@ -61,5 +61,45 @@ class TestUntrackedFilesAreScanned(unittest.TestCase):
         self.assertTrue(self._run().ok)
 
 
+class TestOwnEmailOnly(unittest.TestCase):
+    """信箱只抓使用者自己的（registry 存 sha256）：抓料原文夾帶的第三方信箱不算外洩。
+
+    2026-11-09 起舊版用「任何 @gmail.com」把 HN 原文裡陌生人的信箱當外洩，web build 連續被擋；
+    log.md 是 append-only，引述過一次就永遠紅。
+    """
+    OWN = "owner.example" + "@" + "gmail.com"   # 拼接，避免本檔自己被掃到
+    STRANGER = "stranger.example" + "@" + "gmail.com"
+
+    def setUp(self):
+        import hashlib
+        self._td = tempfile.TemporaryDirectory()
+        self.repo = Path(self._td.name)
+        _git(self.repo, "init", "-q")
+        self._orig_root = mod.REPO_ROOT
+        mod.REPO_ROOT = self.repo
+        self.cfg = dict(CFG, own_email_sha256=[hashlib.sha256(self.OWN.encode()).hexdigest()])
+
+    def tearDown(self):
+        mod.REPO_ROOT = self._orig_root
+        self._td.cleanup()
+
+    def _run(self):
+        report = mod.Report()
+        mod.check_personal_paths(self.cfg, report)
+        return report
+
+    def test_third_party_email_passes(self):
+        (self.repo / "raw.md").write_text("contact " + self.STRANGER + "\n", encoding="utf-8")
+        self.assertTrue(self._run().ok)
+
+    def test_own_email_turns_red(self):
+        (self.repo / "leak.md").write_text("mail: " + self.OWN + "\n", encoding="utf-8")
+        self.assertFalse(self._run().ok)
+
+    def test_own_email_case_insensitive(self):
+        (self.repo / "leak.md").write_text("mail: " + self.OWN.upper() + "\n", encoding="utf-8")
+        self.assertFalse(self._run().ok)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1977,7 +1977,7 @@
     "min_mutual_references": 2
   },
   "personal_paths": {
-    "_doc": "檢查 6：個人路徑外洩。掃 git 追蹤的文字檔，命中任一 pattern 即失敗；exclude_globs 是歷史逐字引述（沿革檔、雲端探針記錄），允許保留。",
+    "_doc": "檢查 6：個人路徑外洩。掃 git 追蹤的文字檔，命中任一 pattern 即失敗；own_email_sha256 是使用者自己信箱的 sha256（不放明文），檔內任一信箱雜湊相符即失敗——第三方信箱（抓料原文常見）不算外洩；exclude_globs 是歷史逐字引述（沿革檔、雲端探針記錄），允許保留。",
     "extensions": [
       ".md",
       ".py",
@@ -1997,8 +1997,10 @@
       "[A-Za-z]:\\\\+Users\\\\+",
       "/Users/[A-Za-z]",
       "/home/[A-Za-z0-9_-]+/",
-      "AppData\\\\+",
-      "[A-Za-z0-9._-]+@gmail\\.com"
+      "AppData\\\\+"
+    ],
+    "own_email_sha256": [
+      "58d02d63747f5470e4e896c7920c7956c35c7c32ec09365dcc0c672f42633e7e"
     ],
     "exclude_globs": [
       "docs/rules-changelog/*.md",

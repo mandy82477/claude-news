@@ -424,6 +424,17 @@ def check_coupling_hints(cfg: dict, sync_pairs_cfg: list, report: Report):
 # 檢查 6：個人路徑外洩（personal_paths）
 # ---------------------------------------------------------------------------
 
+_EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def _has_own_email(line: str, hashes: set) -> bool:
+    if not hashes or "@" not in line:
+        return False
+    import hashlib
+    return any(hashlib.sha256(m.group(0).lower().encode("utf-8")).hexdigest() in hashes
+               for m in _EMAIL_RE.finditer(line))
+
+
 def check_personal_paths(cfg: dict, report: Report):
     """repo 內的文字檔（含尚未 git add 的新檔）不得含使用者本機路徑或個人帳號（repo 公開）。"""
     if not cfg:
@@ -433,6 +444,9 @@ def check_personal_paths(cfg: dict, report: Report):
 
     name = "檢查 6：個人路徑外洩（personal_paths）"
     patterns = [re.compile(p) for p in cfg.get("patterns", [])]
+    # 個人信箱只比對使用者自己的（registry 存 sha256，不放明文）：抓料原文常夾第三方信箱，
+    # 舊版用「任何 @gmail.com」會把陌生人信箱當外洩，而 log.md 是 append-only，一旦引述就永遠紅。
+    own_email_hashes = {h.lower() for h in cfg.get("own_email_sha256", [])}
     extensions = tuple(cfg.get("extensions", [".md", ".py"]))
     excludes = cfg.get("exclude_globs", [])
     try:
@@ -460,7 +474,7 @@ def check_personal_paths(cfg: dict, report: Report):
             continue
         scanned += 1
         for lineno, line in enumerate(text.splitlines(), start=1):
-            if any(rx.search(line) for rx in patterns):
+            if any(rx.search(line) for rx in patterns) or _has_own_email(line, own_email_hashes):
                 hits.append(f"{f}:{lineno}: {line.strip()[:100]}")
 
     details = [f"掃描 {scanned} 個檔（追蹤＋未追蹤未忽略），排除 {excludes}"]

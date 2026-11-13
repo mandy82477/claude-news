@@ -57,3 +57,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-10-25（規則檔不再把決定丟給使用者）
 
 使用者第五次指出待裁示多半不需要她，並要求「把這個要問使用者的規則刪掉」。`.claude/`、`docs/cloud-runbooks/`、`wiki/CLAUDE.md` 裡「回報使用者／經使用者確認／列待裁示／停下來問」的條文全數改為主編判定並執行、理由寫進 `wiki/log.md`（頁面健檢寫 `docs/page-audits/ledger.md`），回報只寫做了什麼：涵蓋 page-audit-review 裁決節奏、`/wiki-weekly-review` 步驟 3 可選項閘、月度蒸餾、規則矛盾與遵守率、密度蒸餾、來源觀察名單、題庫增刪、選材指引修正、語意分岔／死案、拆頁切法。完成摘要與 lint 紀錄的「待使用者裁示」改為「主編判定／本機承接／需使用者端設定」三行，registry 兩組 sync_pair 同步換字串。保留兩類例外：只有使用者能做的設定（雲端網路白名單、GitHub／帳號權限、憑證、付費）列「需使用者端設定」；雲端無人值守的既有安全邊界（6a／6c／6h／6j 不改規則檔、不動頁面結構、不改腳本與測試、lint 不改管線程式）原樣保留，只把後半「回報使用者」改成記「本機承接」或 `docs/workaround-register.md`，由下次本機 session 的主編照判定執行。
+
+## 2026-11-14（check_rules 檢查 6：信箱只比對使用者本人）
+
+`.claude/review-registry.json` 的 `personal_paths` 原用 `[A-Za-z0-9._-]+@gmail\.com` 擋信箱，11-09 抓料夾帶一則 HN 募資帖裡第三方的 gmail，`src/gathered_archive/`、ingest 包與分類帳本全被判外洩；雲端主編在 `wiki/log.md` 引述了這個信箱，log 是 append-only，於是此後每輪都紅，11-09 起雲端 web build 連續被擋（網站停更）。雲端曾想把抓料檔加進 `exclude_globs`，被安全分類器判為削弱防護而拒絕，改留待使用者裁示。根因是規則比對「任何 gmail」而非「使用者自己的帳號」：改為 registry 存使用者信箱的 sha256（`own_email_sha256`，不放明文），檔內任一信箱雜湊相符才算外洩——第三方信箱放行，使用者信箱換成任何網域也抓得到；路徑類 pattern 不動、`exclude_globs` 不加。回歸測試 `src/tests/test_check_rules_personal_paths.py::TestOwnEmailOnly`。
