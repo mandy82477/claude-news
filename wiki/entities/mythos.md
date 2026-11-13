@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-11-10"
-last_news_update: "2026-11-10"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "active"
 days_since_news: 4
 parent: null
@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **Mythos 5.2 媒體解讀**（2026-11-10）
-> Help Net Security 標題稱 5.2 找漏洞更強、跳出沙箱的行為更少（僅標題，細節未載）；仍限信任機構存取。
+> **Mythos 5.2 媒體解讀**（2026-11-11）
+> Wccftech 標題稱 Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X 上（僅標題）；11-10 有四分鐘過載事件已解決；仍限信任機構存取。
 
 ---
 
 ## 現況
 
-**2026-11-10**：Help Net Security 以標題指 Mythos 5.2「找漏洞能力更強、跳出沙箱的行為更少」，原料無內文，具體測法與數字未見（[Google News/Help Net Security](https://news.google.com/rss/articles/CBMilwFBVV95cUxQMnJScVlaSjg5cm9qZF81YzI0bFRxd0RxRjZRMXlvd1FfdGZKNHRvc0pMVnVQWTJXNGc0dnkzcnNVMEhkWEJsaG1jY2NlQzk3M3ZBRlBLOHBPNGREX1BLdGEzWnpSTVNJR3NqdmpnZnZoWG9MTkpCZ1lGUHQ4Ynpha0xXVkdJbzFqbF9KNy1sRk50QS1rbUY4?oc=5)，2026-11-10）。
+**2026-11-11**：Wccftech 標題稱 Claude Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X GPU 上，並據此推論對 NVIDIA CUDA 護城河的衝擊；衝擊是該媒體的標題角度，任務設定與測法原料未載（[Google News/Wccftech](https://news.google.com/rss/articles/CBMi9wFBVV95cUxQLWxCdDFqWG83WGFjblJ5bkc4azA3TzFOQ3FXa294MkRVMlFIV1JwSTB6MjBxb1pVdEk0Q2dMQTBvTmZFNTRSSnFJX2ZyZTRvZVlvSEJRNHQ1cUpaMVlNTDJqLUJHTlgxbUYxTFVyMlJZcDBYWm9ZWW5lLUNCVmdDMnBNdHJfSXpFd1c1T1pwVW5FTHBhdHhyWjl4bEkxZVExczgwNGFZek1UOUFOUnh5aThKeTUzWFNvc3VVTmpNTlU0dkNJLXg5cURjVVdBbmxieUxNUVl6U1EzZ20xUWpQMGlKT1dFajdpZ0l2bmFsQUlaUWtxbWxB0gH8AUFVX3lxTE1pcmlkV3Q5Q1ZyTnJaV1Vpc1BpRjBFb2NpdTIyc1VHb1dLaVF6REZBZWVYa19vS3lwQWJDY0kybWNoNmdVX0FGWVFrZVIxWDZyREpBMkFycTJzUWQ3cTV0SU1oZDVXd05ieXp1bWs0MlFzZFlPS19tRlQ2R1JmQnFqUGpSbVdIUEVGb2JxMmliM2JuSlpRUzlfRHIxUUM2OFItNXdEUGxPSEhaZER4YUJHOTVzSGw0Z1ZFYVJFRXF4QUc0OWdER1RoaWY2bmYzVVF6eW1zdG8yeFJXRkp4MG5uSE5PV1JOdldWTzVJb25qM043YU5IWkVoWjRMZw?oc=5)，2026-11-11）。Help Net Security 11-10 標題稱 5.2 找漏洞更強、跳出沙箱的行為更少，同為僅標題（見「時序」）。
 
 **2026-11-09**：Anthropic 與 Fable 5.2 同日發布 **Mythos 5.2**；兩者為同一模型的不同防護層級，Mythos 5.2 延續信任機構限定存取（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)，2026-11-09）。官方稱兩款模型在 coding、reasoning、vision 均有改善，prerelease 測試中協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題；完整兩代對照與牌價見 [[entities/fable-5]]「你現在拿到的是什麼」，Mythos 面定價另見 [[entities/pricing]]。
 
@@ -157,6 +157,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 解禁後（2026-06-27 起）
 
 ### 2026-11
+
+#### 2026-11-11
+**Wccftech：Mythos 三天讓另一模型跑上 AMD MI355X（僅標題）**：
+- 標題稱 Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X 上；是哪個模型、誰指派任務、是否經官方證實，原料未載；晶片市場面（CUDA 護城河）屬商業線，本頁只記模型能力面（[Google News/Wccftech](https://news.google.com/rss/articles/CBMi9wFBVV95cUxQLWxCdDFqWG83WGFjblJ5bkc4azA3TzFOQ3FXa294MkRVMlFIV1JwSTB6MjBxb1pVdEk0Q2dMQTBvTmZFNTRSSnFJX2ZyZTRvZVlvSEJRNHQ1cUpaMVlNTDJqLUJHTlgxbUYxTFVyMlJZcDBYWm9ZWW5lLUNCVmdDMnBNdHJfSXpFd1c1T1pwVW5FTHBhdHhyWjl4bEkxZVExczgwNGFZek1UOUFOUnh5aThKeTUzWFNvc3VVTmpNTlU0dkNJLXg5cURjVVdBbmxieUxNUVl6U1EzZ20xUWpQMGlKT1dFajdpZ0l2bmFsQUlaUWtxbWxB0gH8AUFVX3lxTE1pcmlkV3Q5Q1ZyTnJaV1Vpc1BpRjBFb2NpdTIyc1VHb1dLaVF6REZBZWVYa19vS3lwQWJDY0kybWNoNmdVX0FGWVFrZVIxWDZyREpBMkFycTJzUWQ3cTV0SU1oZDVXd05ieXp1bWs0MlFzZFlPS19tRlQ2R1JmQnFqUGpSbVdIUEVGb2JxMmliM2JuSlpRUzlfRHIxUUM2OFItNXdEUGxPSEhaZER4YUJHOTVzSGw0Z1ZFYVJFRXF4QUc0OWdER1RoaWY2bmYzVVF6eW1zdG8yeFJXRkp4MG5uSE5PV1JOdldWTzVJb25qM043YU5IWkVoWjRMZw?oc=5)，2026-11-11）
+- Anthropic 狀態頁：Fable 5.2 與 Mythos 5.2 於 11-10 21:47 UTC 標示過載錯誤已解決，影響四分鐘（[Anthropic Status](https://status.claude.com/incidents/pgz8r13pk4sm)，2026-11-10）
 
 #### 2026-11-10
 **Help Net Security：Mythos 5.2 找漏洞更強、較少跳出沙箱（僅標題）**：
@@ -365,4 +370,6 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [Anthropic：Claude Fable and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)（2026-11-09）
 - [anthropic-sdk-typescript sdk-v1.7.0](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0)（2026-11-09）
 - [[news/2026-11-09]]
+- [Anthropic Status：Elevated errors on Fable 5.2 and Mythos 5.2](https://status.claude.com/incidents/pgz8r13pk4sm)（2026-11-10）
 - [[news/2026-11-10]]
+- [[news/2026-11-11]]

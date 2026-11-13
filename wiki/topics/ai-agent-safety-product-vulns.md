@@ -31,17 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-10；11-14 補官方修補）
-> - **「不再問」外洩官方已修**：2.1.323（11-12）起，像含密鑰或會存進 git 追蹤之 `settings.local.json` 的允許規則只留在本次 session；`settings.local.json` 改全域忽略。已外洩的金鑰仍須換。
-> - **「不再問」外洩再獲六家媒體跟進**：TechSpot、VentureBeat、SC Media、Dataconomy、Mezha、en.ain.ua 同日報導；標題提到的外洩檔案是設定檔與核准檔，The Defiant 另給「1,379 組」，與 2,539 組口徑不同。外洩機制與官方修補仍未見（續 11-07）。
-> - **外洩範圍擴大（11-09）**：GitGuardian 研究稱「不再問」外洩金鑰已持續 17 個月，範圍自 GitHub 擴散至 Docker Hub（續 11-07）。
-> - **新增漏洞**：Dark Reading 報導一項 Claude 相關缺陷可能使 Linux 環境組織面臨惡意程式碼執行風險，僅標題可用。
-> - **供應鏈治理**：CIO 報導 Claude Code、Codex、Cursor 已悄悄成為企業軟體供應鏈一部分，多數未經正式安全核准。
+> **最新動態**（2026-11-11）
+> - **「不再問」外洩再獲兩家資安媒體報導**：CSO Online 標題稱該按鈕有洩漏機密的問題，XenoSpectrum 稱可能存下明文機密並流入 GitHub；官方修補見下方條目。
+> - **agent 逃脫測試**：ZDNET 標題稱作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出，結果未載（僅標題可用）。
 
 ---
 
@@ -91,6 +88,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 ### 2026-11
 
+#### ZDNET：作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出（2026-11-11 新增）
+
+- **揭露來源**：Google News／ZDNET（11/11 13:09 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱作者以 Claude Code 為 OpenClaw agent 設下限制，再要它嘗試逃脫；限制方式、是否逃脫成功與路徑均未載
+- **性質判斷**：個人實測，非漏洞揭露；OpenClaw 見 [[entities/openclaw]]，權限與沙箱設定見 [[entities/claude-code]]
+- **可信度評估**：單一來源、無可讀內文，不改變既有結論
+
 #### Dark Reading：Claude 相關安全缺陷可能讓 Linux 環境組織面臨惡意程式碼執行風險（2026-11-09 新增）
 
 - **揭露來源**：Google News／Dark Reading（11/09 18:12 UTC）；僅標題可用，互動 0
@@ -119,6 +123,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **2026-11-09 更新（多源跟進，無新數字）**：MLQ.ai、BigGo Finance 以同一「1,994 倉庫／2,539 組密鑰」數字跟進；Ars Technica、Notebookcheck 同題跟進，均無新數字
 - **2026-11-09 更新（另一數字，口徑不一）**：shattered.io 另稱「1,379 組密鑰外洩」，與前述數字不同，是否重疊未見說明；該來源先前已因內容農場特徵被標低可信度（見「### 2026-10」10-28 條）
 - **2026-11-10 更新（六家再報導）**：TechSpot、VentureBeat（標題問企業密碼與金鑰是否外露）、SC Media（標題稱「設定檔」）、Dataconomy、Mezha（標題稱「設定問題」）、en.ain.ua 同日跟進，互動 0、無可讀內文
+- **2026-11-11 更新（再兩家報導）**：CSO Online（11/11 12:01 UTC）標題稱按鈕有洩漏機密的問題；XenoSpectrum（11/11 06:32 UTC）標題稱該選項可存下明文機密並流到 GitHub；互動 0、無新數字
 - **2026-11-10 更新（核准檔與 1,379 組）**：The Defiant（11/09 21:20 UTC）標題稱「核准檔」外洩 1,379 組，與 GBHackers 的 2,539 組統計範圍不同；觸發路徑與官方修補仍未見報導
 %% 未列入現況表：表滿載，2026-11-07（母頁「現在還擋不住的攻擊」11 列已滿，逐列核對均未滿 90 天且無 ✅／⛔+替代方案可退場）%%
 - **外洩機制與官方修補（2026-11-14 查證）**：觸發路徑是「不再問」把含密鑰的允許規則存進 `settings.local.json`，該檔被 git 追蹤就跟著推上公開 repo。
@@ -424,6 +429,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **查證（2026-10-17，[VulnCheck](https://www.vulncheck.com/blog/anthropic-glasswing-cves)，The Register 引述；數字取自搜尋摘要，Register 原文未讀）**：VulnCheck 追蹤到 225 筆與 Anthropic 或 Project Glasswing 相關的 CVE，截至 09-21 僅 1 筆確認在野利用（Ghost 的嚴重 SQL 注入），利用率低於 0.5%
   - 計數依定義而異：VulnCheck 另一份清查中，75 筆 CVE 記錄含「Anthropic」字樣，40 筆於致謝欄署名 Anthropic 或其關係研究者，僅 1 筆明確歸屬 Glasswing
 - **可信度評估**：The Register 為資安專門媒體，惟僅標題可用，具體數據與方法論未見原文
+- **後續（2026-11-10）**：VulnCheck 計數升至 442 筆，見 [[topics/ai-agent-safety-cyber#2026-11]]
 
 #### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
@@ -628,6 +634,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-11
+- **[🟡 跟進，無官方新動作] CSO Online／XenoSpectrum：「不再問」外洩事件再獲兩家報導**：無新數字，詳見「## 技術彙整」
+- **[🟡 新增，僅標題] ZDNET：作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出**：結果未載，詳見「## 技術彙整」
 
 ### 2026-11-10
 - **[🟡 跟進，無官方新動作] TechSpot／VentureBeat／SC Media／Dataconomy／Mezha／en.ain.ua：「不再問」外洩密碼與 API 金鑰事件六家再報導**：標題帶出外洩檔案為設定檔／核准檔，The Defiant 另稱 1,379 組，口徑與 2,539 組不同；官方修補與觸發路徑仍未見，詳見「## 技術彙整」

@@ -31,13 +31,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-10）
-> **第三方網攻基準與 Mythos 5.2**：The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber，測試方與分數未載；Help Net Security 標題稱 Mythos 5.2 找漏洞更強、跳出沙箱的行為較少（僅標題可用）。
+> **最新動態**（2026-11-11）
+> - **Glasswing 成效（第三方計數）**：VulnCheck 稱啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、僅 2 筆在野利用；已公開 19.4%、217 筆標已修復。
+> - **模型後門手法**：CyberSecurityNews 標題稱 Claude Code 找到把休眠神經元變成隱藏惡意觸發器的技術（僅標題可用，手法與性質未載）。
 
 ---
 
@@ -57,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
 - **企業端整合（11-09）**：IBM Concert、Cisco AI Defense 宣布計畫導入 Mythos 做資安推理與紅隊測試，僅宣布階段。
 - **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程。
-- **Glasswing 時程**：Project Glasswing 的啟動與擴張時間表見 [[entities/mythos#Project Glasswing]]。
+- **Glasswing**：啟動與擴張時間表見 [[entities/mythos#Project Glasswing]]；第三方計數（VulnCheck，11-10）為可歸因 Anthropic 的 CVE 442 筆、僅 2 筆在野利用，Anthropic 回報的 37,966 筆發現中 19.4% 已公開、217 筆標已修復。
 - **你的選項**：個人研究者能申請的只有 CVP Defense；被誤擋可走官方申訴表單，並在 #84352 補上可重現的情境。
 
 ## 防守方能申請什麼
@@ -81,6 +82,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-11 | 能力 | CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術 | 單一來源，僅標題可用；研究成果或攻擊示範未載 |
+| 11-10 | 防護 | VulnCheck：Glasswing 啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、2 筆在野利用；217 筆發現標已修復 | VulnCheck 第三方計數（HN 439 分）；官方回應未見 |
 | 11-10 | 能力 | The Hacker News：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Help Net Security：Mythos 5.2 找漏洞更強、跳出沙箱的行為較少 | 兩則均單一來源，僅標題可用；測試方、分數與「跳出沙箱」的比較基準未載 |
 | 11-09 | 防護 | IBM 宣布計畫將 Mythos 導入 Concert 平台做資安推理；Cisco AI Defense 同日宣布用於 AI 紅隊測試 | IBM／Cisco Blogs 官方公告，均為「宣布計畫」階段，未附上線時程 |
 | 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
@@ -104,8 +107,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 09-29／09-30 | 擴散 | Frontier Red Team：GLM-5.3 在 100 題 Binary Exploitation 抽樣 4% 完整控制流劫持（Mythos Preview 6%）；Opus 4.6、GLM-5.2 做不到 | 官方一手；100 題為隨機抽樣，官方稱未見在野濫用（10-17 查證） |
 | 09-25 | 測試 | ABC／AP 重新報導 Anthropic 07-30 自揭的三起評估事故 | 非新事件（10-17 對照官方 Blog 確認） |
 | 09-22 | 防護 | The Verge：Opus 5.5 隨附更嚴格的資安領域防護 | 官方 09-22：類 Fable 5.1 防護，多數資安任務改由 Opus 4.8 |
-| 09-15～09-22 | 摩擦 | 通過 CVP 的研究者與組織仍被標記或封鎖（Reddit 貼文；GitHub #84352〔199 則留言〕等四個 Issue） | Issue 為一手回報；官方未公開修復時程 |
-| 09-18～09-19 | 測試與濫用 | Hacktron AI 用 Opus 5 約 3 小時做出 ARM64 exploit（Opus 4.8 須先關 ASLR），並循 OpenAI 官方懸賞存取其內部程式庫 | WSJ、Guardian 等多家；「入侵」與「合格研究」兩種說法並陳 |
 
 ---
 
@@ -114,6 +115,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術（2026-11-11 新增）
+
+- **揭露來源**：Google News／CyberSecurityNews（11/11 11:57 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱 Claude Code 找到一種把模型中休眠神經元變成隱藏惡意程式觸發器的技術；屬 Anthropic 研究、第三方用 Claude Code 做的示範，或對 Claude 自身的發現，標題未載
+- **性質判斷**：（推論）屬模型後門類能力，觸發器在模型內部而非代理讀進來的內容，與提示注入不同；歸「能力」面向，不列入母頁「現在還擋不住的攻擊」
+- **可信度評估**：單一來源、原料無可讀內文，不改變既有結論
+- ❓ **待查證**（標 2026-11-11｜查 Dormant Model Neurons、Malware Triggers｜複 2026-11-25）｜**研究主體與對象模型**：標題未載研究團隊、受測模型與是否公開論文，是否涉及 Claude 自身權重未見報導
+
+#### VulnCheck：Project Glasswing 啟動七個月，可歸因 Anthropic 的 CVE 達 442 筆，僅 2 筆在野利用（2026-11-10 新增，升級 [[topics/ai-agent-safety-product-vulns#2026-09]] 09-22 條目）
+
+- **揭露來源**：VulnCheck〈Tracking Anthropic-discovered vulnerabilities〉（經 Hacker News，439 分，11/10 22:17 UTC）；數字取自日報摘要，原文未讀
+- **核心主張**：VulnCheck 追蹤到 442 筆可歸因 Anthropic 的 CVE，約占今年全部 CVE 的 0.5%，僅 2 筆確認遭在野利用
+- **公開與修復落差**：Anthropic 回報的 37,966 筆發現中，7,349 筆（19.4%）已公開、217 筆標為已修復；9 月以來新增近 12,000 筆發現，修復只多 15 筆
+- **與既有數字的關係**：09-22 條目 10-17 查證為 225 筆、1 筆在野（VulnCheck 較早時點）；兩次計數的納入口徑是否一致未載。官方自述的 129,000 個已驗證漏洞（10-06，見「### 2026-10」）為不同口徑，不可互比
+- **可信度評估**：VulnCheck 為漏洞情資廠商，原文未讀；Anthropic 對修復落差的官方說法未見報導
 
 #### The Hacker News／Help Net Security：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Mythos 5.2 找漏洞更強、跳出沙箱行為較少（2026-11-10 新增）
 
@@ -129,6 +146,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張（僅標題可用）**：IBM 宣布計畫把 Claude Mythos 的網攻推理能力導入自家 Concert 平台做資安推理；同日 Cisco AI Defense 宣布計畫將 Mythos 用於 AI 紅隊測試；兩篇報導皆停在「宣布計畫」階段，未附具體上線時程或技術細節
 - **性質判斷**：屬「防守方」陣營採用官方網攻能力做防禦／測試用途；模型層能力與 Mythos 5.2 發布本身見 [[entities/mythos]]，企業採用面見 [[topics/anthropic-business]]
 - **可信度評估**：兩則均為企業官方公告經 Google News 轉載，互動 0，僅標題層級可用，兩案均未附上線時程
+- **2026-11-11 更新（再報導）**：Network World（11/11 12:12 UTC）以〈Cisco boosts its AI Defense platform with Anthropic’s Claude Mythos〉再報導，無可讀內文，仍無上線時程
 - ❓ **待查證**（標 2026-11-09｜查 Concert、Cisco AI Defense｜複 2026-11-23）｜**上線時程與技術整合細節**：兩家公告均只稱「計畫」，整合方式、上線時間與是否已有實際部署均未見報導
 
 #### Moneycontrol／MediaNama：CERT-In 取得 Claude Mythos 存取權測試資安漏洞，同日專訪談 AI agent 事故通報義務與提示注入歸責（2026-11-04 新增）
@@ -462,7 +480,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
 
+### 2026-11-11
+- **[📋 新增，僅標題] CyberSecurityNews：Claude Code 找到把休眠神經元變成隱藏惡意程式觸發器的技術**：研究或示範性質未載，詳見「## 技術彙整」
+
 ### 2026-11-10
+- **[🛠️ 新增，升級 09-22 條目] VulnCheck：Glasswing 啟動七個月可歸因 Anthropic 的 CVE 達 442 筆，僅 2 筆在野利用**：已公開 19.4%、已修復 217 筆，詳見「## 技術彙整」
 - **[🟡 新增，僅標題] The Hacker News／Help Net Security：Fable 5.2 網攻基準勝過 GPT-6 Cyber；Mythos 5.2 找漏洞更強、跳出沙箱較少**：測試方、分數均未載，詳見「## 技術彙整」
 
 ### 2026-10-31

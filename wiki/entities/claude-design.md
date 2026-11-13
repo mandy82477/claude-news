@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 功能（產出物；含 Dashboards、Motion）
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新工具動態**（2026-10-23）
-> Claude Code 端 `/design` 等範本現為 beta（非 research preview），需 v2.1.265+；Pro／Max／Team 預設開，Enterprise 由 Owner 逐項開。
+> **最新工具動態**（2026-11-11）
+> Claude Dashboards 轉正式版並更名 Claude Data；新增 Claude Whiteboards、Claude Sheets 兩項 beta，官方稱所有付費方案都能用。
 
 ---
 
@@ -56,7 +56,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 官方公告與說明中心 2026-10-11 查證（[公告](https://claude.com/resources/articles/dashboards-and-motion)、[Dashboards 說明](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)）：
 
-- **Claude Dashboards（beta）**：Pro／Max／Team／Enterprise 可用。用白話提問，Claude 為每張圖寫 SQL、對資料來源執行，做成會更新的儀表板。
+- **Claude Dashboards（beta）**：Pro／Max／Team／Enterprise 可用；2026-11-11 轉正式版、更名 Claude Data，見下一節。用白話提問，Claude 為每張圖寫 SQL、對資料來源執行，做成會更新的儀表板。
 - **資料來源**：Amazon Redshift、BigQuery、ClickHouse、Databricks、Snowflake，以及已連上 Claude 的其他應用（如 Salesforce）。
 - **可稽核**：每張圖顯示背後的查詢與上次更新時間；點數字看查詢，也可請 Claude 解釋。
 - **用量**：算進方案用量上限。定位是快速探索型問題，深入分析官方建議送到別的工具。
@@ -65,6 +65,15 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 - **Motion 不是影片生成**：官方明說不使用影片生成模型，沒有生成畫面或 AI 人物；字、數字、時間點都可改。
 - **管理員開關**：Enterprise 預設關閉，擁有者到 Organization settings > Artifacts 開，可用自訂角色限定群組。
 - **未載**：資料量或圖表數上限、分享後對方的權限，說明中心都沒寫。
+
+### Dashboards 轉正式版、Whiteboards 與 Sheets 上線（2026-11-11）
+
+官方文章「Claude Whiteboards, Claude Sheets, and Claude Data」（[官方](https://claude.com/resources/articles/sheets-whiteboards-data)，Hacker News 273 分；以下取自日報對該文的摘要，未讀官方全文）：
+
+- **Claude Data**：原 Claude Dashboards 轉為正式版（GA）並更名。
+- **Claude Whiteboards（beta）**：團隊與 Claude 一起腦力激盪的共用白板。
+- **Claude Sheets（beta）**：試算表；官方文章細節未取得（僅摘要開頭）。
+- **方案**：日報稱三者所有付費方案都能用；Enterprise 預設開關、用量是否沿用 Dashboards 規則，未載。定價頁同日異動見 [[entities/pricing-history]]。
 
 ### Docs、Slides、Design 脫離 beta（同日）
 
@@ -105,6 +114,7 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 
 ## 歷史記錄
 
+- 2026-11-11：官方文章宣布 Claude Dashboards 轉正式版並更名 Claude Data，新增 Whiteboards、Sheets（beta）；所有付費方案可用（日報轉述）
 - 2026-10-23：官方查證 Claude Code 端 `/design` 等範本現為 beta（非 research preview），需 v2.1.265+，Enterprise 由 Owner 逐項開（[來源](https://code.claude.com/docs/en/artifacts)）
 - 2026-10-08：官方發布 Claude Dashboards 與 Claude Motion（beta）；Design、Docs、Slides 脫離 beta；獨立站訂 2026-12-14 關閉（2026-10-11 查證）
 - 2026-10-09：官方「方案與定價」頁新增「Claude Dashboards (beta)」段落；Reuters、XDA 同日報導
@@ -128,6 +138,8 @@ Claude Design 是 Anthropic 推出的 AI 設計工具功能，旨在讓 Claude �
 - [官方公告：Build live dashboards and animate explainers with Claude](https://claude.com/resources/articles/dashboards-and-motion)（2026-10-08，2026-10-11 取得）
 - [官方說明中心：Get started with Claude Dashboards](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)（2026-10-11 取得）
 - [官方方案與定價頁](https://claude.com/pricing)（2026-10-09，Claude Dashboards／Claude Design 段落新增）
+- [官方文章：Claude Whiteboards, Claude Sheets, and Claude Data](https://claude.com/resources/articles/sheets-whiteboards-data)（2026-11-11，取自日報摘要）
+- [[news/2026-11-11]]
 - [[news/2026-10-09]]
 - [官方部落格：Claude Cowork and chat are now one Claude](https://claude.com/blog/cowork-is-now-claude)（2026-09-17，Claude Design 整合進對話段落）
 - [[news/2026-09-17]]

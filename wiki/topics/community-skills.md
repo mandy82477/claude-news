@@ -31,13 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **Skills 設計新增三則垂直實作，另一則揭露強迫呼叫假工具的結構化輸出技巧已隨 Opus 5.5 失效**（2026-11-04）
-> - **三款新 skill**：機器拆解 3D 模擬器（teardown）、程式碼動畫提示詞庫（code-animation-prompts）、行動應用 UI／UX 設計（mobile-app-ui-design）。
-> - **dev.to 案例**：靠強迫 Claude 呼叫不存在的工具取得結構化輸出的技巧，Opus 5.5 不再配合，作者改棄用此招。
-
+> **Skills 設計新增兩個大型收藏：Obsidian 官方組織的 obsidian-skills 與 44 個 skill 的 product-engineering**（2026-11-11）
+> - **obsidian-skills**：教 agent 用 Obsidian CLI 與 Markdown、Bases、JSON Canvas 開放格式，51,669 星、本庫首次收錄。
+> - **product-engineering**：44 個 skill 串起「決定做什麼、實作、第二個模型審查、發布」，523 星、75 forks。
 ---
 
 ## 摘要
@@ -94,6 +93,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### 同日兩個 Skills 收藏：obsidianmd/obsidian-skills（Obsidian 格式）、phuryn/product-engineering（產品開發全流程 44 skill）（2026-11-11）
+
+- **主線：** —
+- **核心模式：**
+  - obsidianmd/obsidian-skills：教 agent 使用 Obsidian CLI 與 Markdown、Bases、JSON Canvas 等開放格式（51,669★，2026-01 出生，本庫首次收錄）
+  - phuryn/product-engineering：44 個 skill，作者自述取自三個上線產品，流程為決定做什麼、用 Claude Code 或 Codex 實作、由第二個模型審查、發布（523★）
+- **與既有模式的關係：** 補上「Skills 設計」兩種收藏形態：obsidian-skills 是單一工具格式的 skill 包，product-engineering 是把產品開發各階段串成一組 skill，並把「第二個模型審查」寫進流程；主線填 —。
+- **可信度註記：** 查證日 2026-11-14（GitHub API）：obsidian-skills 52,238 星、3,713 forks、2 個 open issues、最近 push 2026-11-11。
+  - product-engineering 568 星、75 forks、0 個 open issues、最近 push 2026-11-11、建立於 2026-10-29。
+  - 兩者 forks 皆達星數約 1/10，但 product-engineering 無 issue 往來；「取自三個上線產品」為作者自述，未驗證。
+- **來源：** GitHub Search；[obsidian-skills](https://github.com/obsidianmd/obsidian-skills)（51,669★）、[product-engineering](https://github.com/phuryn/product-engineering)（523★）
+- **成熟度：** ⏳ 新興（product-engineering 建立不滿三週；obsidian-skills 星數高但尚無採用回饋內容）
 
 #### 同日三款 Skills 設計新實作：teardown（機器拆解 3D 模擬器）、code-animation-prompts（程式碼動畫提示詞庫）、mobile-app-ui-design（行動應用 UI／UX 設計）（2026-11-04）
 

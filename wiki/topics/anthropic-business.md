@@ -30,16 +30,14 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-10）
-> - **IPO 啟動路演：擬發 8.25 億股、每股 $70～78、代號 ANT，傳最快 11-19 掛牌；估值報導 $1～1.4 兆不一**，見 [[topics/anthropic-ipo]]
-> - **同日推出 Claude Meetings、Sheets 等辦公類產品，媒體稱直接對上 Microsoft；官方定價頁同步出現 Sheets（beta）**，見 [[entities/pricing-history]]
-> - **Microsoft 傳預設讓 Claude 進入英國 Copilot 租戶（僅標題）**，見 [[topics/anthropic-partnerships-compute]]
-> - **IBM／Cisco 宣布導入 Mythos 5.2 計畫（資安推理／紅隊測試），均未附上線時程**，見 [[topics/anthropic-partnerships-compute]]
-> - **Reuters／shattered.io 跟進確認 Claude Max 訂閱廣告訴訟須進一步面對訴訟程序**，見 [[entities/pricing-incidents]]
+> **最新動態**（2026-11-11）
+> - **Claude Whiteboards、Sheets（beta）與 Claude Data 官方介紹文出爐，HN 273 分；日報摘要稱三者所有付費方案可用**，見 [[entities/pricing-history]]
+> - **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估（皆僅標題）**，見 [[topics/anthropic-ipo]]
+> - **台積電傳核准最高 $10 億美元投資 Anthropic 與 OpenAI；The Information 稱與 Lambda 的交易可能取消（皆僅標題）**，見 [[topics/anthropic-partnerships-compute]]
 
 ---
 
@@ -83,8 +81,8 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-10 |
-| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-10 |
+| [[topics/anthropic-ipo]] | 上市走到哪、S-1 寫了多少營收和虧損、這些數字是誰說的 | 2026-11-11 |
+| [[topics/anthropic-partnerships-compute]] | 跟誰合作、算力和資金從哪來、跟 Google／Amazon／Microsoft 各是什麼關係、哪個合作會改到你用的 Claude | 2026-11-11 |
 | [[topics/anthropic-business-risks]] | 哪裡會出事、你能先做什麼，以及它怎麼賺錢 | 2026-11-03 |
 
 #### 算力與資金從哪來
@@ -147,6 +145,10 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 ### 未歸類
 
 - **[待分類] WSJ：側寫 Anthropic 以 Claude 投入疾病研究的野心**：報導聚焦公司定位與長期布局，未附具體療法進度或時間表，分類未定（商業模式／合作／公司動態皆有可能）（Google News/WSJ，2026-11-07）
+
+### 2026-11
+
+- **[公司動態] 官方介紹文：Claude Whiteboards 與 Sheets 以 beta 推出，Dashboards 正式上線並更名 Claude Data**：HN 273 分；日報摘要稱三者所有付費方案可用，是否另計費未載（Claude 官方；Hacker News，2026-11-11）
 
 ### 2026-10
 

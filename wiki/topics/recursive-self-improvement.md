@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-06
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-11-06）
-> METR 發布獨立評估報告，稱 Anthropic 2026 年 10 月 AI 研發加速度可能已翻倍；延續 11-03 官方「迫近」RSI 門檻書面自評。
+> **最新動態**（2026-11-11）
+> Yahoo Finance 標題稱 Anthropic 說某個關鍵 AI 安全警報已被觸發，時間在 IPO 前數天；TechCrunch 稱新 Mythos、Fable 模型在 RSI 疑慮下發布（均僅標題可用）。
 
 ---
 
@@ -117,6 +117,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 技術彙整
+
+### TechCrunch／Yahoo Finance：新 Mythos 與 Fable 模型在 RSI 疑慮下發布；IPO 前「關鍵 AI 安全警報」觸發（2026-11-09～11 新增）
+
+- **揭露來源**：Google News／TechCrunch（11/09 19:24 UTC）、Google News／Yahoo Finance（11/11 06:00 UTC）；互動均為 0，無可讀內文
+- **核心主張（僅標題可用）**：TechCrunch 標題稱 Anthropic 在 RSI 疑慮下發布新的 Mythos 與 Fable 模型；Yahoo Finance 標題稱 Anthropic 說某個關鍵 AI 安全警報已被觸發，時間在 IPO 前數天
+- **與既有敘事的關係**：（推論）「警報」可能指 11-02～03 S-1/A 自評「可能迫近」的內部 RSI 門檻，標題未寫明；模型發布本身見 [[entities/mythos]]、[[entities/fable-5]]
+- **可信度評估**：兩則均單一來源、僅標題層級；警報指涉對象、觸發時點與官方後續處置均未見報導
+- ❓ **待查證**（標 2026-11-11｜查 safety alarm、RSI threshold｜複 2026-11-25）｜**「關鍵安全警報」的指涉**：標題未載是哪一個警報、是否即 S-1/A 的 RSI 門檻，官方說法未見報導
 
 ### METR／The Information／The Independent／AP News：METR 發布對 Anthropic 2026 年 10 月 AI 研發加速度的獨立評估（2026-11-05～06 新增）
 
@@ -444,6 +452,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [[entities/evan-hubinger]]（09-09 存在性風險機率估計的當事人）
 
 ## 時序
+
+### 2026-11-09～11
+- **[新增，僅標題] TechCrunch／Yahoo Finance：新 Mythos 與 Fable 模型在 RSI 疑慮下發布；Anthropic 稱 IPO 前觸發關鍵 AI 安全警報**：警報指涉未載，詳見「## 技術彙整」
 
 ### 2026-11-02～03
 - **[量化升級，新增] 修訂版 S-1/A 首次書面自評「可能迫近」觸及內部 RSI 門檻**：延續 10-26／27 S-1 披露系列，公司首度以申報文件書面承認接近自身定義的 RSI 臨界點，同時強調現役模型皆未跨過，詳見「## 技術彙整」

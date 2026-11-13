@@ -32,13 +32,13 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-10）
-> - **官方 Plans & Pricing 頁新增 Claude Data、Sheets、Whiteboards（beta）相關段落，Dashboards（beta）段落移除**；各自歸哪個方案、是否另計費，抓取內容未列，方案表尚未更新
-> - （11-09）**Claude Fable 5.2 發布，牌價 $8/$40 per Mtok，較 5.1 降兩成**；快取讀取沿用 ×0.025（$0.20/Mtok）。官方同日 Plans & Pricing 頁同步改版：Fast mode 擴大至 Fable 5.2（2 倍標準定價、約 2.5 倍速度），Batch processing 新增支援 Fable 5.2 與 Sonnet 5。細節見 [[entities/pricing#模型 API 定價現況]]、[[entities/pricing#一小時／一個月大概多少]]。
+> **最新計費政策異動**（2026-11-11）
+> - **usage credits 一律不可退款，含取消訂閱或刪除帳戶**：官方說明頁新增「Refunds」節；買了 credits 的人，取消訂閱前先用完或確認餘額
+> - **官方介紹文稱 Whiteboards、Sheets（beta）與 Claude Data 所有付費方案可用**（日報摘要）；是否另計費、是否算進方案用量未載，方案表尚未更新
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。
 
 ## 現況
@@ -52,7 +52,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-02 |
-| [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-10-30 |
+| [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-11-11 |
 
 2026-04～06 的原始條目與已暫停的計費切割風波在 [[entities/pricing-archive]]。
 
@@ -182,6 +182,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-11-11 官方 usage credits 說明頁｜購買一律不可退款**：新增「Refunds」節，載明 usage credits 購買不可退款，含取消訂閱或刪除帳戶；剩餘額度在刪除帳戶時作廢。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，diff 偵測，2026-11-11）
 - **✅ 2026-11-08 Help Center release notes｜Enterprise 新增收費代碼標記＋成本代碼追蹤（beta）**：專案可標既有收費代碼（charge code）／client-matter；另可依成本代碼（cost code）追蹤花費。操作細節未見完整說明（來源：Help Center release notes，連結待補，查證 2026-11-08）
 - **✅ 2026-11-07 官方 usage credits 說明頁改版｜刪除帳戶即沒收剩餘額度**：新增帳戶刪除不退 usage credits 規則；auto-reload 改寫為「餘額低於門檻自動加購」。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-07）
 - ❓ **待查證**（標 2026-11-07｜查 usage credits、Japan、expiration｜複 2026-11-21）｜**日本等地區額度 6 個月到期條款現況**：官方 11-07 改版移除此措辭所在段落，新版是否沿用相同地區規則或已改寫未見明文。

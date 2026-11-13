@@ -28,13 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-10）
-> - 🔴 **Gemini 4 Carbon 11-10 對開發者與企業正式開放，VentureBeat 標題稱 API 價格低於 Claude Fable 5.2 與 Opus 5.5**（DeepMind；VentureBeat）——正在做 coding agent 選型、在意 API 成本的人，把 Carbon 加進比價清單；實際牌價與基準未載。
+> **本週衝擊**（2026-11-11）
+> - 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
 ---
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 |---|---|---|---|---|
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
 | **Microsoft／GitHub** 🏢 | 11-04 Copilot 正式整合進 Xcode 內建程式碼助理（公開預覽）→ Apple 生態開發者可在原生 IDE 內直接叫用 Copilot，Claude Code 無對應整合 | 生態 | 🟡 | GitHub 官方 changelog 一手來源；GA 時程與功能範圍未載 |
-| **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對開發者、企業正式開放；VentureBeat 稱 API 價低於 Claude Fable 5.2 與 Opus 5.5 → 比價清單要加一個對象 | 定價 | 🔴 | DeepMind 官方一手＋VentureBeat 標題；Carbon 牌價數字與基準細節均未載 |
+| **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對外開放，上線價 $2／$10，12-01 起翻倍 $4／$20＝Opus 5.5 牌價 → 12-01 前是比價窗口，之後同價 | 定價 | 🔴 | DeepMind 官方一手；價格僅 Simon Willison 轉述（VentureBeat 標題同向），官方牌價頁未查證；基準細節未載 |
 | **OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol／Terra）** 🏢 | 10-26 GPT-6.1 Terra 正式 GA 進駐 GitHub Copilot，官方定位比 Sol 更便宜、適合日常 agentic coding 與終端機工作 → 低價層再下探一階 | 定價 | 🔴 | GitHub 官方 changelog 一手來源；具體牌價未見，Sol 牌價已查證 ⟨Q-07⟩ |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
@@ -124,6 +124,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-04⟩ 已查證（2026-09-20）：5.4 倍統計基礎為 npm registry 公開下載數字——2026-07-31 止 30 天窗口 Claude Code 44,264,901 次 vs OpenCode 8,245,142 次，方法公開可驗證，非黑箱推算，脈絡見 [[entities/opencode]]。
 - ⟨Q-05⟩ 已查證（2026-09-20，[Cline 官方 FAQ](https://cline.bot/faq)）：Cline 工具免費、僅收所接模型 token 費；官方載明免費模型（如 Gemini）常遇 rate limit，惟未公布量化上限數字。
 - **已移出表**：GitHub Copilot Pro+（$39/月，Opus 採 27 倍加價換算）來源日期 2026-05-06 已逾 90 天，結論保留於「硬答案」；Kimi K3、HydraFusion 僅有相對成本的定性宣稱、無掛牌價，改記於「對手雷達」硬度欄與「雷達細節」。
+- **Gemini 4 Carbon（2026-11-10，Simon Willison，單一來源）**：上線價 $2／$10 per Mtok，12-01 起翻倍為 $4／$20；對 Claude 輸出約 1.0×（對 Sonnet 5 $10/Mtok）上線期間、2.0× 後（12-01 起）約同 Opus 5.5 $4／$20。官方牌價頁未查證；定價對照表已逾 12 列，未新增列。
 - **GitHub Copilot 加購 credits（2026-10-23，shattered.io，僅標題可用）**：$10 可換 1,500 AI credits；credit 與底層模型、token 量的對應關係未見報導，與已移出表之 Pro+ $39 月費（27 倍加價換算，2026-05-06 查證）是否同一套計費口徑待查。
 - **久未更新（2026-10-13，表滿 12 列換手，讓位給 Gemini 4 Argon、Muse Wonder Full）**：Antigravity（Google）Free／Pro ~$20／Ultra ~$100／Ultra Max $200，依附 Google AI 訂閱框架（2026-07-23，2026-08-13 查證）。
 - Cline 免費工具、token 費用另計，介於 Claude Code 與 Copilot 間的免費替代（2026-07-22，Google News/tech-insider.org）。兩者均訂閱制／免費工具，不可按 token 換算 vs Claude。
@@ -138,7 +139,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Google（Gemini）
 **現在的答案**
-- 11-10 **Gemini 4 Carbon** 對開發者、企業、科學家與消費者正式開放，官方稱資安與長程 agent 工作流達前沿水準；VentureBeat 標題稱 API 價低於 Claude Fable 5.2、Opus 5.5（牌價數字未載，未納入定價對照表）。
+- 11-10 **Gemini 4 Carbon** 對開發者、企業、科學家與消費者正式開放，官方稱資安與長程 agent 工作流達前沿水準；VentureBeat 標題稱 API 價低於 Claude Fable 5.2、Opus 5.5。上線價與 12-01 起翻倍的說法見「競品定價細節」。
 - 10-28 官方發布新一代前沿模型 **Gemini 4 Carbon**，稱 Artificial Analysis Intelligence Index v5.0 第一（59 分），資安攻防基準 SEC-bench Pro／ExploitGym／CWE-bench 大幅領先。
 - 10-13 Gemini 4 Argon 全面開放（API／AI Studio／Gemini app），定價 $2／$10 per Mtok 同 Sonnet 5；10-14 再 GA 上架 GitHub Copilot，進入 Claude Code 既有優勢的工具層戰場。
 - 官方稱 Argon 於 Vals Index 多項財金、法務、程式基準排名第一；評測方法論與對比的 Claude 模型均未載。
@@ -252,7 +253,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-11
 
+#### 2026-11-11
+- **OpenCode（比價分析文，僅標題可用）**：shattered.io 比較 OpenCode Go $10 與 Claude Pro $20（Google News/shattered.io）
+- **OpenAI（ChatGPT Plus 促銷）**：官方稱已有逾 2 萬名退伍軍人與轉職軍人領取一年免費 ChatGPT Plus；屬廠商自宣，不影響 Claude 方案選擇（Blog/OpenAI News）
+- **GitHub Copilot**：GitHub App 可呼叫企業層 Copilot 席位管理 API，管理員工具更新，與 Claude 無直接對照（11-10 changelog，Blog/GitHub Copilot Changelog）
+- **非編碼競品**：Google DeepMind 的 AlphaGenome 2（DNA 序列模型）與 OpenAI 的 Gilbert + Tobin 律所客戶案例，皆非 AI 編碼工具競品，不列入「對手雷達」表
+
 #### 2026-11-10
+- **Google（Gemini）**：Simon Willison 稱 Gemini 4 Carbon 上線價 $2／$10 per Mtok、12-01 起翻倍為 $4／$20，與 Sonnet 級、Opus 5.5 牌價各對應一階；單一來源，詳見「競品定價細節」（Blog/Simon Willison）
+- **Microsoft／GitHub**：Gemini 4 Carbon 於 Copilot 正式提供，主打複雜 coding、agentic 與推理並強調安全程式碼生成；Copilot 用戶多了可與 Claude 並列的模型選項（Blog/GitHub Copilot Changelog）
+- **比價分析文（僅標題可用）**：Tom's Guide 比較 OpenAI Codex 與 Claude Code 的使用上限，標題稱兩邊 $20 方案各有但書；Fello AI 比較 ChatGPT Pro 與 Claude Max／Ultra 的 $100／$200 方案（Google News/Tom's Guide；Google News/Fello AI）
 - **Google（Gemini）**：Gemini 4 Carbon 正式對開發者與企業開放；VentureBeat 稱 API 價低於 Claude Fable 5.2 與 Opus 5.5，詳見「對手雷達」Google 列（Blog/Google DeepMind Blog；Google News/VentureBeat）
 - **Meta**：Muse Ember 發布，Simon Willison 稱其為 Meta 對標 Claude Haiku／GPT Luna 的最小、最省模型；規格與定價未載（Blog/Simon Willison）
 - **Microsoft／GitHub**：Claude Fable 5.2 在 Copilot 正式提供，官方稱適用跨大型程式庫的多步驟編碼（11-09，Blog/GitHub Copilot Changelog）；C++ language server 自動設定 MSBuild 建置，非編碼模型異動（11-10，同來源）

@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** product matrix, 產品對照, product × feature
 **開始日期：** 2026-10-23
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-10-23）
-> 對照表上線：5 個產品 × 15 項功能共 75 格，官方逐項寫明的 44 格，用詞籠統 11 格，未公開 20 格。
+> **最新動態**（2026-11-11）
+> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，新功能入表與否見下方「未定項目」節。
 
 ---
 
@@ -122,7 +122,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 ### Claude Dashboards
 
 - **分組：** 產出物
-- **Claude app：** beta｜Pro／Max／Team／Enterprise｜對話中要或選 Output；Enterprise 預設關｜[來源](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)｜2026-10-23｜official
+- **Claude app：** available｜Pro／Max／Team／Enterprise｜11-11 轉正式版，更名 Claude Data；官方稱付費方案皆可用，Enterprise 預設開關未再查｜[來源](https://claude.com/resources/articles/sheets-whiteboards-data)｜2026-11-11｜official
 - **Claude Code：** vague｜Pro／Max／Team／Enterprise｜本站以非 Team 帳號在 Claude Code 列 artifact 範本有 Dashboard（2026-10-23 實測），官方文件未列；原文：「Ask Claude for a dashboard in any chat.」｜[來源](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)｜2026-10-23｜official
 - **Claude Tag：** vague｜Team／Enterprise｜Tag 託管頁可做儀表板，未說是 Claude Dashboards 範本；原文：「A hosted page ... Dashboards, prototypes, reports」｜[來源](https://claude.com/docs/claude-tag/concepts/how-it-works)｜2026-10-23｜official
 - **Claude Platform：** unknown｜—｜官方未提及｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
@@ -282,12 +282,13 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **欄的順序**：由左到右依「誰起手」排，是本站的解讀，不是官方分法。
 - **Extensions 的讀法**：Chrome、Google Workspace、Microsoft 365 本身是入口，跑在瀏覽器或 Office、Google 應用裡，用 Claude 帳號登入；Claude app 欄代表「這個訂閱能用」，不是在 Claude app 視窗裡叫得出來。
 
-## 待確認
+## 未定項目
 
 - **Claude Code × Dashboards**：本站以非 Team 帳號在 Claude Code 列 artifact 範本時看得到 Dashboard（2026-10-23 實測），官方文件只列 Slides、Design、Docs；等官方文件更新或更多帳號實測。
 - **Claude Code × Motion**：管理指南列為 artifact 範本、限 Team／Enterprise，Claude Code 文件沒提；需要 Team 帳號實測。
 - **Claude Duet × Motion**：Motion 只開 Team／Enterprise、Duet 還沒開放 Team／Enterprise，兩句合起來等於用不到，但官方沒直接寫，維持未公開。
 - **Claude Code × 語音**：Claude Code 有 /voice 語音輸入，說明中心另寫 voice mode（雙向對話）不在 Claude Code；本表把語音輸入算可用，兩者差別寫在格內。
+- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：官方稱 Sheets、Whiteboards 為 beta、付費方案皆可用（日報摘要）；Meetings 只見媒體標題；他產品欄未查
 - **Claude app × 背景／排程任務的 Free 方案**：說明中心列付費方案，Free 沒寫；官方部落格曾說 Free「soon」。
 
 ## 相關實體
@@ -301,3 +302,4 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 ## 時序
 
 - **2026-10-23**：建頁。逐格查證 75 格；說明中心有「哪裡可用」逐列段落的功能照段落填，只寫「在 Claude 裡」的標用詞籠統。同日更正：語音在 Claude app 為 beta（說明中心），Claude in Chrome 在 Claude app 為可用（只有 Chrome 側邊欄仍 beta），Skills 在 Platform 為 beta。
+- **2026-11-11**：官方文章宣布 Dashboards 轉正式版、更名 Claude Data；Dashboards 列 Claude app 格由 beta 改 available。Whiteboards、Sheets（beta）與 Meetings 暫列下方「未定項目」節，未增列。

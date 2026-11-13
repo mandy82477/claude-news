@@ -32,13 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-11-10）
-> - **版本更新**：v2.1.322 新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度（見 [[entities/claude-code-releases]]）。
-> - **互動數更新**：Remote Control 自動重連失效（#34255）累積 73 則留言、112 個讚；Desktop／Cowork RTL 排版功能請求（#38005）47 則留言、126 個讚（見 [[entities/claude-code-known-issues]]）。
-> - **文件異動**：桌面版文件新增 SSH session 讀遠端主機 managed settings；Help Center 再移除「模型設定」與 Cowork「專案整理任務」段（見 [[entities/claude-code-features]]、[[entities/cowork]]）。
+> **最新動態**（2026-11-11）
+> 官方文件索引（llms.txt）移除 25 頁每週頁面，最早為 Week 13（2026-03-23～27）；連過去的週報連結可能失效。11-10 的 v2.1.322 與 SDK 更新見 [[entities/claude-code-releases]]。
 
 ---
 
@@ -84,6 +82,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **近期平台與文件異動：**
 
 - 桌面版文件異動依主題歸群在 [[entities/claude-code-features#桌面版功能地圖]]，逐條時序在同頁。
+- **官方文件更新**（2026-11-11）：文件索引（[llms.txt](https://code.claude.com/docs/llms.txt)）移除 25 頁每週頁面，起點為 Week 13（2026-03-23～27），其餘頁名日報未列全。本站引用的 whats-new 週報連結（如 W33、W34）是否仍可開啟未驗證。
 - **官方文件更新**（2026-10-16）：文件索引新增 6 頁 Code Review 細項文件（用量費用、自訂設定、本機 `/code-review`、PR 讀取與請求審查、設定教學、疑難排解），呼應 Code Review 功能同日轉為正式發布（GA），詳見 [[feature-radar]]（[索引](https://code.claude.com/docs/llms.txt)）。
 - **Claude Code Projects 進入 Beta**（[官方文件](https://code.claude.com/docs/en/claude-projects.md)，查證 2026-10-03）：Pro、Max 公開 beta、逐步開放，先從用過雲端 session 且在 claude.ai chat／Cowork 沒有既有 projects 的帳號開始，Team／Enterprise 尚未提供。
 - Projects 運作：一個專案是一段持續對話，Claude 當協調者、每個任務開一條 thread（多為雲端 session，必要時可經 Remote Control 改派到自己的電腦）；用量計入與其他 Claude Code session 相同的方案額度且耗得更快，每天最多 200 個新 thread。

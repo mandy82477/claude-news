@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-11-10）
-> - **IPO 進入路演：擬發 8.25 億股、每股 $70～78、Nasdaq 代號 ANT，傳最快 11-19 掛牌**（官方公告；掛牌日為 CNBC 引消息人士）。公司自售部分按區間推算約 $561～625 億（推論）；估值報導分歧（$1～1.4 兆），見 [[topics/anthropic-ipo#上市走到哪一格]]。
+> **最新動態**（2026-11-11）
+> - **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估**（皆僅標題）；股數與區間見下方五格表。
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -320,9 +320,16 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 
 ### 2026-11
 
+#### 2026-11-11
+- **[IPO 需求面，僅標題可用] Forbes：Claude 10 月流量成長 24%，勝過其他 AI 對手**：2 個來源同日報導；流量口徑與對手名單未見（Google News/Forbes）
+- **[IPO 估值，僅標題可用] Morningstar：認為 Anthropic 股票在 IPO 定價區間內屬低估**：2 個來源同日報導；估值方法未見，11-09 該機構另估 $1.7 兆見上（Google News/Morningstar）
+- **[IPO 前瞻，僅標題可用] Bloomberg：承銷銀行團傳尋求調高 IPO 估值**：11-06／07 買方喊價探底的報導方向相反，具體幅度未見（Google News/Bloomberg.com）
+- **[IPO 前瞻，僅標題可用] Axios、NYT：評論 Anthropic IPO**：Axios 標題稱 IPO 可望給 AI 股所需的動能；NYT 評論 AI 產業的「圈內人」生意（clubby）（Google News/Axios；Google News/The New York Times）
+
 #### 2026-11-10
-- **[IPO] Anthropic 官方：啟動路演**：擬發 8.25 億股 A 類普通股（公司 801,351,354 股、既有股東 23,648,646 股），已申請 Nasdaq 代號 ANT；價格區間 $70～78 與最快 11-19 掛牌見 CNBC 引消息人士（Anthropic 官方；CNBC；HN 28 分）
-- **[IPO 估值] 各家對目標估值寫法不一**：Bloomberg／NYT／Reuters／Yahoo Finance 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；BBC 稱低於預期的 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆；多數僅標題可用，口徑與計算基準未見（各家 Google News；HN 50 分，WSJ 標題為 $1.3 兆）
+- **[IPO 前瞻，僅標題可用] CNBC：Jim Cramer 稱 Anthropic 的爆發性成長可支撐破紀錄的 IPO**：論據未見（Google News/CNBC）
+- **[IPO] Anthropic 官方：啟動路演**：擬發 8.25 億股 A 類普通股（公司 801,351,354 股、既有股東 23,648,646 股），已申請 Nasdaq 代號 ANT；價格區間 $70～78 與最快 11-19 掛牌見 CNBC 引消息人士（Anthropic 官方；CNBC；HN 31 分）
+- **[IPO 估值] 各家對目標估值寫法不一**：Bloomberg／NYT／Reuters／Yahoo Finance 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；BBC 稱低於預期的 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆；多數僅標題可用，口徑與計算基準未見（各家 Google News；HN 60 分，WSJ 標題為 $1.3 兆）
 - **[IPO 前瞻] FT：高盛預估 Anthropic 營收 2030 年超過 $6,000 億**：假設與基準年未見（僅標題）（Google News/Financial Times）
 - **[IPO 前瞻，僅標題可用] WSJ（11-09）：Anthropic 在市場震盪下準備推進 IPO**；Barron's、Sky News 同日評論 $1.4 兆目標，論點未見（Google News）
 - **[IPO 活動] Yahoo Finance：Anthropic 規劃 IPO 直播，Amodei 與 JPMorgan CEO Dimon 同台**：僅標題可用（Google News/Yahoo Finance）

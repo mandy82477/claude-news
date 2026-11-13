@@ -33,12 +33,12 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-11-10）
-> - **Plans & Pricing 頁改版：新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）**；歸屬方案與價格未載，同日 Anthropic 推出 Meetings、Sheets 辦公產品（Official Docs；TechCrunch；The Verge）
-> - （11-09）**Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。
+> **最新動態**（2026-11-11）
+> - **usage credits 說明頁再改：購買一律不可退款（含取消訂閱或刪除帳戶），原「Monthly API credits」段落被移除**（官方說明中心 diff 偵測；段落移除的實際影響待官方文逐字查證）
+> - **Whiteboards、Sheets（beta）與 Claude Data 官方介紹文出爐，日報摘要稱所有付費方案可用**；是否另計費未載
 
 ---
 
@@ -46,6 +46,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 官方已確認、會改到帳單的，新的在上；每條的現行規則住母頁，這裡只記什麼時候變。⚠️＝不必你操作就會改到帳單。
 
+- **11-11｜usage credits 說明頁再改版：購買一律不可退款（含取消訂閱或刪除帳戶）**；官方頁字數 10,373→10,786，「Monthly API credits for Max, Ultra, and Team plans」段落被移除。見 [[entities/pricing#當前生效的計費規則]]
 - **11-10｜Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落、移除 Dashboards（beta）段落**：官方頁字數 23,768→23,984；歸屬方案與是否另計費未載，見 [[entities/pricing#我的方案現在有什麼]]
 - **11-09｜Fable 5.2 發布，牌價 $8/$40（降兩成），Fast mode 擴及 Fable 5.2，Batch 示範模型換代**：見 [[entities/pricing#模型 API 定價現況]]
 - **11-07｜usage credits 說明頁大改版**：帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文，新規則待查證。見 [[entities/pricing#當前生效的計費規則]]
@@ -67,6 +68,13 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 ---
 
 ## 定價與促銷（模型定價、方案設計）
+
+#### 2026-11-11：usage credits 說明頁再改版——新增「Refunds」節，購買一律不可退款；「Monthly API credits」段落被移除
+
+- **Official Docs 異動（diff 偵測）**：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 字數 10,373→10,786；新增 2 段、移除 3 段。
+- **新增內容**：「Refunds」節載明 usage credits 購買不可退款，含取消訂閱或刪除帳戶的情況；帳戶刪除時剩餘額度作廢、不退款的句子同批重現（與 11-07 版本同義，位置有調整）。
+- **移除內容**：「Monthly API credits for Max, Ultra, and Team plans」段落。訂閱附帶 API credits 的現行規則見 [[entities/pricing#我的方案現在有什麼]]，該段移除是搬家還是規則改變，抓取內容未載（已知範圍：Max／Ultra／Team 每月附 API credits，見 11-02 查證）。
+- **同日官方介紹文**：[Claude Whiteboards、Sheets、Claude Data](https://claude.com/resources/articles/sheets-whiteboards-data)（HN 273 分）稱 Whiteboards 與 Sheets 以 beta 推出、Dashboards 正式上線更名為 Claude Data；日報摘要稱三者所有付費方案可用，是否另計費、是否算進方案用量未載，承接下方 11-10 條目。
 
 #### 2026-11-10：Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）
 - 官方定價頁字數 23,768→23,984，新增 7 段（Claude Data，以及 Data 搭配 Motion、Sheets、Whiteboards 的組合），移除 3 段（Claude Dashboards、Claude Motion and Dashboards）（Official Docs 變更偵測）

@@ -3,8 +3,8 @@ page: "topics/model-comparison"
 kind: "topic"
 status: "ongoing"
 domain: "🤖 模型"
-last_updated: "2026-11-09"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "ongoing"
 days_since_news: 5
 parent: null
@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **Fable 5.2 發布，取代 Fable 5.1 成為旗艦**（2026-11-09）
-> Claude Code v2.1.321 起 Fable 5.2 為預設 Fable；$8/$40（降 20%），Mythos 5.2 同日發布。
+> **Fable 5.2 升級有遷移項，Gemini 4 Carbon 開放**（2026-11-11）
+> 5.1 升 5.2 有 4 項破壞性變更（第三方整理）；Fable 5.2 牌價 $8/$40 降 20%，VentureBeat 標題稱 Carbon 牌價更低。
 
 ---
 
@@ -66,6 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Haiku 4.5（已被取代）**：官方載明退役不早於 2026-10-15，是下限而非確定停用日（[官方模型總覽](https://platform.claude.com/docs/en/about-claude/models/overview)，2026-10-03 查證）；僅適合尚未遷移者的既有工作流延續，新採用一律改用 Haiku 5.5。
 - **Opus 4.8 / Opus 4.7（已被取代）**：僅適合尚未遷移者的既有工作流延續，不建議新採用——次旗艦地位已由 Opus 5 接手，Fast Mode 亦非 4.8 獨佔優勢（官方文件確認 Opus 5 與 4.8 皆支援 fast mode）。Opus 4.7 另有 200K context 上限與思考深度議題，見 [[entities/opus-4-7]]。
 - **Mythos 5.2（非公開陣容，2026-11-09 取代 5.1）**：無護欄完整版，僅供信任機構的安全研究、滲透測試；一般使用者取不到，不可作為公開陣容模型的淘汰基準——公開陣容資安首選為 Fable 5.2。與 Fable 5.2 為同一模型的不同防護層級，存取模式（信任機構限定）自 5.0 起未變，詳見 [[entities/mythos]]。
+- **Fable 5.2 降價後的跨家價格面**：Fable 5.2 降至 $8 / $40（2026-11-09）；Gemini 4 Carbon 11-10 對開發者開放，VentureBeat 標題稱 API 牌價低於 Fable 5.2 與 Opus 5.5，數字未載，比價見 [[topics/competitor-landscape]]。
 - **定價備注**：Opus 5.5 為 **$4 / $20 per Mtok**（官方 models overview（2026-09-23 查證）），較 Opus 5 的 $5 / $25 降 20%。Opus 5 已改列 Legacy，沿用原定價未變。沿革見 [[entities/pricing#模型 API 定價現況]]。
 
 ## 情境推薦
@@ -156,6 +157,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **表下細節**
 
 - **Sonnet 4.5 退役**：2026-11-30 退役已官方確認（見上方 callout 與下方時序），仍用 4.5 者應儘速遷移。Foundry 的 `default` 仍指 Sonnet 4.5（2026-09-23 查證，見 [[entities/claude-code]]），受影響者先確認通道。
+- **Fable 5.1 升 5.2 的遷移項**：dev.to 作者讀官方遷移指南列出 4 項破壞性變更，首項為 thinking block 前綴檢查改為全帳號適用；官方原文未直接查證，細節見 [[entities/fable-5]]（[dev.to](https://dev.to/aheadkit/claude-fable-52-has-4-breaking-changes-i-read-the-migration-guide-and-grepped-my-own-code-5hi1)，2026-11-10，2 讚）。
+- **Help Center 11-10 新增三段**：Preserved thinking（Messages API 處理 thinking blocks 以防蒸餾）、AI 生成內容標記、訓練資料更新程度，皆僅標題；浮水印已在上表，另兩段內容未載，不入表，見 [[entities/claude-code-features]]。
 - **升級行為差異與降回**：兩則皆只有標題可讀，Sonnet 5.5 頁各存一筆原文連結與日期；官方 migration guide 對 5→5.5 的記載尚不完整，本頁不推算具體情境。
 
 ### 各模型現行行為限制與輸出標記

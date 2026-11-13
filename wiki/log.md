@@ -8774,3 +8774,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 主編查證（11-14）：「不再問」密鑰外洩官方已於 v2.1.323（11-12）修補——含密鑰或會存進 git 追蹤 `settings.local.json` 的允許規則改為只在本次 session、`settings.local.json` 改全域忽略；known-issues 該列 🔴→✅、product-vulns 懸置結案。IPO 價格區間 70～78 美元經查為官方公告載明（記者原寫消息人士，已改）。Claude Meetings／Sheets 方案歸屬（隨轉知 H-b914d1）與 Prompting Fable 5.2 全文（隨 fable-5 既有懸置）未查
 - devpractice 沉澱：候選 3 筆／手冊寫入 0 則
 - market 判讀：判讀 1 則（IPO 路演，⚖️）；里程碑登記 1 筆、回顧結算新增 1 列（11-24）
+## 2026-11-11 Ingest
+
+- 來源日報：[[news/2026-11-11]]（2026-11-14 本機補跑；原料走 archive replay，100 則）
+- 更新頁面：
+  - **模型**：entities/fable-5、entities/mythos、topics/model-comparison
+  - **功能**：entities/claude-design、topics/anthropic-product-matrix、entities/claude-code
+  - **商業**：topics/anthropic-ipo、topics/anthropic-partnerships-compute、topics/anthropic-business、topics/competitor-landscape、entities/pricing、entities/pricing-history
+  - **安全政策**：topics/ai-agent-safety-cyber、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety、topics/anthropic-government-policy、topics/recursive-self-improvement
+  - **社群**：topics/community-skills、topics/community-tech-patterns
+  - **人物**：entities/dario-amodei
+  - **投資分析**：topics/market-signals-compute、topics/market-signals-legal、topics/market-signals
+- 新增頁面：無
+- feature-radar：新增「Claude Whiteboards、Claude Sheets 與 Claude Data」（官方 11-10 文章查證：全付費方案；Enterprise 的 Claude Data 11-19 起預設開啟），全覽表一列、⏰ 倒數中新增 11-19 一列
+- index：無
+- 摘要：Claude Whiteboards／Sheets／Data 官方介紹（Dashboards 轉正並更名）；IPO 路演續報（承銷商擬上調估值、Morningstar 稱區間低估）；Glasswing 七個月漏洞追蹤（VulnCheck）；紐約州 AI 安全法生效
+- 呈現品質：全部通過（dario-amodei 現況段超上限、anthropic-product-matrix 懸置條列超長，均已修）
+- 品質備註：[商業] 來源歸因仍以佔位字代替 Google News 網址（連兩日），主編依標題從原料回填；[功能] 本輪首次照必讀第 5 項用批次修補（13 處／3 檔）；[主編] 11-10 log 轉知單號對錯——「不再問」外洩那張實為 H-e5ec4e（11-14 已結案），runner 那張 H-8dc8a5 被誤結案，已重開為 H-1d02ab
+- 分類回退：無（排除 3 則，複核維持）
+- 轉知帳本：結案 H-b914d1（功能）、H-142c26（安全政策）、H-e9d5d3、H-b61772（模型）；H-1d02ab 記者報不適用（無新證據），主編判保留 open 待評估；新開 H-ce2dc2（功能→商業：Claude Meetings 方案歸屬）、H-7dded2（社群→功能：product-engineering 第二模型審查是否入產品化矩陣）
+- 主編查證（11-14）：Fable 5.2 官方遷移指南四項破壞性變更與三項行為變更已寫進 fable-5（取代 dev.to 單一轉述）；Whiteboards／Sheets／Data 方案與 Enterprise 預設值查官方文章後寫進 feature-radar；usage credits 頁「Monthly API credits」段是搬到獨立文章，權益未變，pricing 方案表不動；本站引用的 whats-new W33／W34 連結經查仍為 200，未失效。Gemini 4 Carbon 12-01 漲價（僅 Simon Willison 轉述）、API 定價頁 11-11 異動、TSMC 投資條件、紐約州法條文未查
+- 工具修正：`collect_reporter_reports.py` 轉知處置以「；」分隔時把不適用條誤判為已處理（11-08 修正只認行首與「／」），已補分隔符號與回歸測試（e0dd694c；不登帳：工具修正，非記者間轉知）
+- devpractice 沉澱：候選 2 筆／手冊寫入 0 則
+- market 判讀：判讀 2 則（雲端合約與 Lambda ⚖️、紐約州 AI 安全法 〰）；里程碑登記 2 筆、回顧結算新增 2 列（11-25）

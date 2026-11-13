@@ -31,13 +31,13 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **最新動態**（2026-11-10）
-> - **The Register：Microsoft 傳預設讓 Claude 取得英國 Copilot 租戶存取**：僅標題可用，受影響資料與能否關閉未載；英國 Microsoft 365 Copilot 管理員應查租戶設定
-> - **TechCrunch 跟進燃氣機組採購案（11-08 FT／Reuters／Bloomberg 原報導，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]）**
-> - **IBM／Cisco 同日宣布導入 Mythos 5.2 計畫**：IBM 擬用於 Concert 平台資安推理，Cisco AI Defense 擬用於紅隊測試，均僅「宣布計畫」階段，未附上線時程
+> **最新動態**（2026-11-11）
+> - **WSJ 標題：台積電核准最高 $10 億美元投資計畫，對象為 Anthropic 與 OpenAI**（僅標題；兩家如何分配未見）
+> - **The Information 標題：Anthropic 揭露與 Microsoft、Google 新增逾 $100 億合約，與 Lambda 的交易可能取消**（僅標題；見算力表 Lambda 列）
+> - **路演影片：Claude 在 AWS Trainium、Google TPU、NVIDIA GPU、AMD GPU 四系列晶片上訓練與服務**（Tom Brown 說法，Simon Willison 整理）
 
 ---
 
@@ -74,7 +74,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Broadcom | 貸款租賃晶片：最高 $420 億（10-01）；華爾街銀行＋Blackstone 安排 $630 億融資（10-26，較 10-02 的 $600 億更新） | 規模已確認，條款未見 | 目前無可見後果。下一個觸發點：條款或交付時程 |
 | Akamai | $116 億 7 年 CPU 算力，另有報導稱 $120 億（09-25） | 已簽，含認股權證約 770 萬股 | 目前無可見後果 |
 | Fluidstack | $500 億算力建置案，結構與時程未見（09-07） | 報導稱主導建置，簽署未載（僅標題） | 目前無可見後果 |
-| Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽 | 目前無可見後果；循環融資質疑屬評論 |
+| Nvidia（經 Lambda） | Lambda 簽 $350 億雲端運算合約；Hut 8 同額案推論為同一筆（09-01） | 已簽；11-10 The Information 標題稱可能取消（僅標題） | 目前無可見後果；循環融資質疑屬評論 |
 | Volta | 六年 $100 億，算力在挪威 Tydal（08-04） | 已簽 | 目前無可見後果 |
 | Riot Platforms | $90 億 20 年雲端運算協議（08-11） | 已簽 | 目前無可見後果 |
 | TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 信用擔保支應該計畫，違約時 Google 可能取得 TeraWulf 股權，機制細節未見（11-05） | 已簽；新增 Google 信用擔保（含違約股權條款） | 目前無可見後果。下一個觸發點：擔保啟動條件揭露 |
@@ -126,6 +126,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **TSMC**（2026-11-11）：WSJ 標題稱台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI；分配與條件未見（Google News/WSJ）
+- **Microsoft、Google（新增合約）**（2026-11-10）：The Information 標題稱 Anthropic 揭露與兩家新增逾 100 億美元合約，並稱與 Lambda 的交易可能取消；合約內容未見（Google News/The Information）
+- **Stifel**（2026-11-10）：ThinkAdvisor 標題稱 Stifel 與 Anthropic 合作，把 Claude 帶給旗下理財顧問；規模與上線時程未見（Google News/ThinkAdvisor）
 - **IBM／Cisco（Mythos 5.2 導入計畫）**（2026-11-09）：IBM 宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布計畫用於紅隊測試；兩者均停在「宣布計畫」階段，未附具體上線時程（Google News/IBM；Google News/Cisco Blogs）
 - **AP（Associated Press）**（2026-11-05）：Anthropic 首個內容授權合作，供選舉報導使用，授權範圍與費用未見報導（Google News/ADWEEK）
 - **McGraw Hill**（2026-11-05）：K-12 課程整合進 Claude for Teachers，開放對象與上線時間未見報導（Google News/Yahoo Finance）
@@ -296,7 +299,15 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 ### 2026-11
 
+#### 2026-11-11
+- **[資本支出，僅標題可用] WSJ：台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI**：分配方式與條件未見，詳見「其餘合作」清單（Google News/WSJ）
+- **[算力] Simon Willison 整理路演影片：Claude 在 AWS Trainium、Google TPU、NVIDIA GPU、AMD GPU 四系列晶片上訓練與服務**：說法出自共同創辦人 Tom Brown「算力取向」段落，稱源於早期多晶片押注；官方未提供逐字稿（Blog/Simon Willison）
+- **[算力，僅標題可用] Wccftech：稱 Claude Mythos 只花 3 天就讓另一個模型跑上 AMD MI355X GPU**：對 NVIDIA CUDA 護城河的推論是該媒體的標題角度（Google News/Wccftech）
+- **[戰略合作，僅標題可用] Network World：Cisco AI Defense 納入 Claude Mythos**：承接 11-10 CRN 報導，上線時程未載（Google News/Network World）
+
 #### 2026-11-10
+- **[戰略合作，僅標題可用] The Information：Anthropic 揭露與 Microsoft、Google 新增逾 100 億美元合約，與 Lambda 的交易可能取消**：合約內容與取消條件未見，Lambda 列見「算力與資金從哪來」（Google News/The Information）
+- **[企業合作，僅標題可用] ThinkAdvisor：Stifel 與 Anthropic 合作，把 Claude 帶給旗下理財顧問**：規模與上線時程未見（Google News/ThinkAdvisor）
 - **[戰略合作，僅標題可用] The Register：Microsoft 預設讓 Claude 取得英國 Copilot 租戶存取**：資料範圍與關閉方式未載（Google News/The Register）
 - **[戰略合作，僅標題可用] CRN／Cisco：Cisco AI Defense 將以 Claude Mythos 做 AI 紅隊測試**：承接 11-09 IBM／Cisco 導入計畫，上線時程未載（Google News/CRN；Google News/Cisco Systems）
 

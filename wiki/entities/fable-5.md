@@ -4,8 +4,8 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 是否正式改列 Legacy 待官方模型總覽頁查證；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-11-10"
-last_news_update: "2026-11-10"
+last_updated: "2026-11-11"
+last_news_update: "2026-11-11"
 status_main: "active"
 days_since_news: 4
 parent: null
@@ -33,17 +33,17 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-11
+**最後新聞更新：** 2026-11-11
 
-> **官方 Fable 5.2 提示指南現身**（2026-11-10）
-> 提示寫「這份程式碼是你的」，小型編碼任務約半數會合併重複程式碼；沒寫不到十分之一（Simon Willison 摘引官方文件）。
+> **從 5.1 升 5.2 先對照四項破壞性變更**（2026-11-11）
+> 第三方作者讀官方遷移指南後列出 4 項，首項是 thinking block 前綴檢查改為全帳號適用；官方指南自稱 5.1 升級大致可直接替換。
 
 ---
 
 ## 現況
 
-**2026-11-10**：Anthropic 官方〈Prompting Claude Fable 5.2〉指南出現，Simon Willison 摘引其中一條：提示對「程式碼歸誰」的措辭會改變 5.2 是沿用既有結構、還是重整結構（見「跟它怎麼說話」表下細節；完整文件尚未逐條查證）。
+**2026-11-11**：dev.to 作者讀完官方遷移指南，列出 Fable 5.1 升 5.2 的 4 項破壞性變更；首項是 thinking block 前綴檢查現在套用到所有帳號，每個 thinking block 只在對應的系統提示、工具清單與對話歷史下有效（[dev.to](https://dev.to/aheadkit/claude-fable-52-has-4-breaking-changes-i-read-the-migration-guide-and-grepped-my-own-code-5hi1)，2026-11-10，2 讚）。其餘三項與官方原文未查證，細節見「你現在拿到的是什麼」表下。官方〈Prompting Claude Fable 5.2〉指南同期出現，見「跟它怎麼說話」。
 
 **2026-11-09**：Anthropic 發布 **Fable 5.2**，取代 5.1 成為現行旗艦；Claude Code v2.1.321 起設為預設 Fable 模型，牌價降至 $8/$40（較 5.1 的 $10/$50 降 20%），快取讀取 $0.20/Mtok（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)；[GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)，2026-11-09）。獨立評測站 Artificial Analysis 給 Fable 5.2 打出 65 分，為該站目前所有模型最高分（2026-11-09）。兩者都是 Mythos 級模型的公開版——與同世代 Mythos 共用模型權重，差別在 Fable 前置了安全分類器，判定高風險時**會通知你**並改由 Opus 4.8 回答。
 
@@ -82,6 +82,12 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 - **快取讀取換算比例與 5.1 一致**：$0.20÷$8＝0.025，與 5.1 的 ×0.025 倍率相同（本頁自行換算，非官方原文直接給出比例）。
 - **說明中心本次改版新列 Ultra 方案**：此前「我的方案能不能用」只列 Max／Team premium 與 Pro／standard 的分流規則，今日版本改為籠統列出「Pro／Max／Ultra／Team／Enterprise 皆可用」，是否仍保留 premium／standard 計費分流待 [[entities/pricing]] 查證，本頁不重複計費細節。
+- **從 5.1 升 5.2 的四項破壞性變更**（[官方遷移指南](https://platform.claude.com/docs/en/models/fable-5-2/migration-guide)，11-14 查證）：用 Claude Code、claude.ai、Managed Agents 或 Agent SDK 管對話歷史的人不受第 1 項影響。
+  1. 中途改過 `system`、`tools` 或舊訊息、再把 thinking block 送回，prefix check 失敗回 400；重送同一請求不會好。
+  2. 5.1 讀不了 5.2 的 thinking block：對話從 5.2 切到別的模型時，API 會丟掉讀不了的區塊（不計費）。
+  3. `computer_20251124` 工具除 Bedrock 外都回 400，要改宣告 `computer_toolset_20260801`。
+  4. advisor 工具（beta）：5.2 executor 只接受 Fable 5.2 或 Mythos 5.2 當 advisor。
+- **行為變更（同指南）**：要它「直接回答別多想」的提示行，在 `medium` effort 以上擋不住思考，要改降 effort；`xhigh`／`max` 時會自己開子 agent 審查，成本會上升；`max_tokens` 太小可能只剩思考沒有正文。
 - **Context 與輸出長度**：GitHub changelog 未提及是否變動，1M context 沿用前代（128K 最大輸出官方未在今日來源重申，待查證）。
 - **Fable 5（已退出本表）**：仍為 Legacy，退役不早於 2027-06-09，見「爭議」與「歷史記錄」。
 - **5.1 新增反萃取（anti-distillation）機制**，防止他人萃取權重或行為訓練競品（官方 2026-09-01 公告）；5.2 是否延續同機制，官方未在今日來源重申。
@@ -224,16 +230,24 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [Reddit r/ClaudeCode：Fable 5.2 200K context limit is shit. Compacting every few minutes](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)（2026-11-09）
 - [Reddit r/ClaudeCode：Fable 5.2 is compacting](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)（2026-11-09）
 - [Simon Willison：Quoting Prompting Claude Fable 5.2](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/)（2026-11-10）
+- [dev.to：Claude Fable 5.2 Has 4 Breaking Changes](https://dev.to/aheadkit/claude-fable-52-has-4-breaking-changes-i-read-the-migration-guide-and-grepped-my-own-code-5hi1)（2026-11-10）
+- [Anthropic Status：Elevated errors on Fable 5.2 and Mythos 5.2](https://status.claude.com/incidents/pgz8r13pk4sm)（2026-11-10）
 - [GitHub Changelog：Claude Fable 5.2 in GitHub Copilot](https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot)（2026-11-09）
 - [Simon Willison：llm-anthropic 0.31](https://simonwillison.net/2026/Nov/9/llm-anthropic/)（2026-11-09）
 - [[news/2026-11-09]]
 - [[news/2026-11-10]]
+- [[news/2026-11-11]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-11
+**Fable 5.2 升級遷移項與狀態頁事件**：
+- dev.to 作者讀官方遷移指南後列出 5.1 升 5.2 的 4 項破壞性變更，節錄僅首項：thinking block 前綴檢查改為全帳號適用（[dev.to](https://dev.to/aheadkit/claude-fable-52-has-4-breaking-changes-i-read-the-migration-guide-and-grepped-my-own-code-5hi1)，2026-11-10，2 讚）
+- Anthropic 狀態頁：Fable 5.2 與 Mythos 5.2 於 11-10 21:47 UTC 標示過載錯誤已解決，影響四分鐘，屬穩定性事件，與能力或存取政策無關（[Anthropic Status](https://status.claude.com/incidents/pgz8r13pk4sm)，2026-11-10）
 
 #### 2026-11-10
 **Fable 5.2 提示指南摘引與第三方資安基準標題**：

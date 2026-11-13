@@ -425,3 +425,11 @@
 {"id": "H-e5ec4e", "opened": "2026-11-14", "from": "安全政策", "to": "功能", "page": "entities/claude-code-known-issues", "note": "「don't ask again」把設定檔／核准檔裡的密碼與金鑰洩到公開 repo（11-10 六家再報，The Defiant 稱 1,379 組）：known-issues 🛡️ 列待官方修補版本或警示後更新", "status": "open"}
 {"id": "H-8dc8a5", "opened": "2026-11-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "yicheng47/runner（11-10，504★）：同一任務內多家 CLI agent 協作、各保留原生 TUI，評估是否構成產品化矩陣新增列", "status": "open"}
 {"id": "H-8dc8a5", "closed": "2026-11-14", "status": "done", "by": "主編", "result": "11-14 主編查 CHANGELOG：2.1.323（11-12）已修，known-issues 該列改 ✅ 已修復 v2.1.323、product-vulns 懸置結案"}
+{"id": "H-e5ec4e", "closed": "2026-11-14", "status": "done", "by": "主編", "result": "11-14 主編查 CHANGELOG：2.1.323（11-12）已修，known-issues 該列改 ✅、product-vulns 懸置結案"}
+{"id": "H-1d02ab", "opened": "2026-11-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "（重開：11-10 誤以 H-8dc8a5 結案）yicheng47/runner（11-10，504★）：同一任務內多家 CLI agent 協作、各保留原生 TUI，評估是否構成產品化矩陣新增列", "status": "open"}
+{"id": "H-b914d1", "closed": "2026-11-14", "status": "done", "by": "功能", "result": "功能記者 2026-11-11 ingest 回報已處理"}
+{"id": "H-142c26", "closed": "2026-11-14", "status": "done", "by": "安全政策", "result": "教師保護協議寫入 anthropic-government-policy；Microsoft 英國 Copilot 預設開放屬商業整合，商業記者 11-10 已在 partnerships-compute 記一行"}
+{"id": "H-e9d5d3", "closed": "2026-11-14", "status": "done", "by": "模型", "result": "模型記者 2026-11-11 ingest 回報已處理"}
+{"id": "H-b61772", "closed": "2026-11-14", "status": "done", "by": "模型", "result": "模型記者 2026-11-11 ingest 回報已處理"}
+{"id": "H-ce2dc2", "opened": "2026-11-14", "from": "功能", "to": "商業", "page": "entities/pricing", "note": "Claude Meetings（Google Meet 整合，11-10）方案歸屬與是否另計費：官方文章只寫 Whiteboards／Sheets／Data 全付費方案可用，Meetings 未載", "status": "open"}
+{"id": "H-7dded2", "opened": "2026-11-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "community-skills 11-11 新節點：phuryn/product-engineering 把「第二個模型審查」寫進 skill 流程，評估是否構成產品化矩陣列（對照官方 /code-review）", "status": "open"}
