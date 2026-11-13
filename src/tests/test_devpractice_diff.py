@@ -42,8 +42,12 @@ class TestExclude(unittest.TestCase):
 
 class TestStateRoundtrip(unittest.TestCase):
     def test_base_sha_fallback_on_bad_state(self):
-        """狀態檔壞掉（非 JSON／sha 不存在）→ 退回 fallback，不炸。"""
+        """狀態檔壞掉（非 JSON／sha 不存在）→ 退回 fallback，不炸。
+        固定視為完整 clone：本測試驗壞狀態檔的處理，淺 clone 分支由 TestShallowClone 驗；
+        不固定的話雲端淺 clone 會走 fallback-shallow-*，結果隨執行環境而變。"""
         orig = mod.STATE
+        orig_shallow = mod._is_shallow
+        mod._is_shallow = lambda: False
         try:
             mod.STATE = ROOT / "data" / "_devpractice_state_test.json"
             mod.STATE.write_text("not json", encoding="utf-8")
@@ -56,6 +60,7 @@ class TestStateRoundtrip(unittest.TestCase):
             if mod.STATE.exists():
                 mod.STATE.unlink()
             mod.STATE = orig
+            mod._is_shallow = orig_shallow
 
     def test_cli_show_runs(self):
         """show 在真 repo 上跑得動且 exit 0（有無新增皆為正常結果）。"""
