@@ -489,11 +489,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
-    },
-    {
       "id": "code-quality-decline",
       "name": "Claude Code 效能退步事件",
       "pageType": "topic"
@@ -501,11 +496,6 @@
     {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-customers",
-      "name": "定價、通路與客戶這則怎麼判",
       "pageType": "topic"
     }
   ],

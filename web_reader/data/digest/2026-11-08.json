@@ -370,11 +370,6 @@
       "id": "fiona-fung",
       "name": "Fiona Fung",
       "pageType": "entity"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
     }
   ],
   "reader": {

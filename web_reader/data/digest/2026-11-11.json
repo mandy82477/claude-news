@@ -462,11 +462,6 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "fable-5",
       "name": "Claude Fable 5、5.1 與 5.2",
       "pageType": "entity"
@@ -489,11 +484,6 @@
     {
       "id": "market-signals-compute",
       "name": "算力與融資這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-legal",
-      "name": "官司、監管與政府這則怎麼判",
       "pageType": "topic"
     },
     {

@@ -522,11 +522,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：互動數更新：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。",
   "sedimentedToday": [
     {
-      "id": "claude-code-releases",
-      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
-      "pageType": "entity"
-    },
-    {
       "id": "cowork",
       "name": "Cowork",
       "pageType": "entity"
@@ -539,11 +534,6 @@
     {
       "id": "community-multi-agent",
       "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
       "pageType": "topic"
     },
     {
