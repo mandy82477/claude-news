@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **Skills 設計新增兩個大型收藏：Obsidian 官方組織的 obsidian-skills 與 44 個 skill 的 product-engineering**（2026-11-11）
-> - **obsidian-skills**：教 agent 用 Obsidian CLI 與 Markdown、Bases、JSON Canvas 開放格式，51,669 星、本庫首次收錄。
-> - **product-engineering**：44 個 skill 串起「決定做什麼、實作、第二個模型審查、發布」，523 星、75 forks。
+> **Jane Street 公開 agent skills 集合，兩天新增約 4,000 星**（2026-11-12）
+> - **janestreet/agent_skills**：累計 7,512 星、近 2 天新增 4,049 星，內容細節未載。
 ---
 
 ## 摘要
@@ -93,6 +92,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### janestreet/agent_skills：Jane Street 公開的 agent skills 集合，近 2 天新增 4,049 星（2026-11-12）
+
+- **主線：** —
+- **核心模式：** Jane Street 公開的 agent skills 集合；GitHub 描述僅「Agent skills」（細節未載）。
+- **與既有模式的關係：** 補上「Skills 設計」一個「具名金融業者公開自家 skills」的案例，與既有收藏型條目（obsidian-skills 等，[[topics/community-skills#2026-11]]）並列；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 星速偵測：近 2 天 +4,049 星（約 2,024 星/日）；GitHub 查證日 2026-11-14：8,143 星、526 forks、9 個 open issues、2026-11-03 建立並 push 後無更新；skill 內容未讀，採用回饋未見。
+- **來源：** GitHub Search；[GitHub](https://github.com/janestreet/agent_skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，星數成長快但尚無採用回饋）
 
 #### 同日兩個 Skills 收藏：obsidianmd/obsidian-skills（Obsidian 格式）、phuryn/product-engineering（產品開發全流程 44 skill）（2026-11-11）
 

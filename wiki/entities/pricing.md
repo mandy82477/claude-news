@@ -32,13 +32,15 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-11）
+> **最新計費政策異動**（2026-11-12）
+> - **自架版 Claude Managed Agents 沒有公開價格，官方 API 定價頁新增一句請洽客戶團隊**：想估算自架成本，只能走洽談窗口
 > - **usage credits 一律不可退款，含取消訂閱或刪除帳戶**：官方說明頁新增「Refunds」節；買了 credits 的人，取消訂閱前先用完或確認餘額
-> - **官方介紹文稱 Whiteboards、Sheets（beta）與 Claude Data 所有付費方案可用**（日報摘要）；是否另計費、是否算進方案用量未載，方案表尚未更新
+> - **Whiteboards、Sheets（beta）與 Claude Data 所有付費方案可用**（[官方介紹文](https://claude.com/resources/articles/sheets-whiteboards-data)，11-14 查證）；是否算進方案用量官方未載，方案表不動
+> - **Claude Meetings（Google Meet）**：媒體稱只開給 Team 與 Enterprise（beta，[Axios](https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work)）；官方說明中心 11-14 查無對應頁
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。
 
 ## 現況
@@ -52,7 +54,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
 | [[entities/pricing-incidents]] | 帳單出錯、額度掉得快：官方認了沒、現在還在不在、你能先做什麼 | 2026-11-02 |
-| [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-11-11 |
+| [[entities/pricing-history]] | 價格、方案與促銷什麼時候變的，最近三個月改了什麼 | 2026-11-12 |
 
 2026-04～06 的原始條目與已暫停的計費切割風波在 [[entities/pricing-archive]]。
 
@@ -196,6 +198,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **✅ 2026-09-14 已生效（官方文件確認）｜標準週配額永久調高 25%，但取消 +50% 加成 → 相較「加成期間」水位實際減少約 17%**：官方公告（Bluesky @anthropicbot，2026-08-29）自 2026-09-14 起將 Claude Code 標準週配額**永久**調高 **25%**，適用 **Pro、Max、Team 與座位制 Enterprise**；上方 +50% 促銷 09-13 屆滿後由本規則接手，不留缺口。換算 `1.25 ÷ 1.50 ≈ 0.833`——09-14 起實際可用週配額約為加成期間的 83%，**減少約 17%**（BleepingComputer〈Anthropic is cutting Claude Code's current weekly limits by 17 percent〉即以此為框架）。**你該做的事**：工作流若貼近週配額上限，09-14 起應預期可用量下降，評估調整用量節奏或方案層級（來源：[Bluesky @anthropicbot](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)、[BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/)，2026-08-29）
 - **✅ Managed Agents 計費＝token＋session runtime（官方定價頁，2026-09-06 查證）**：token 依模型牌價（快取乘數、web search $10／1,000 次、`inference_geo` 1.1×、fast mode 溢價皆照 API 規則）；runtime **$0.08／session-hour**，只計 `running`
 - 上條來源：[Managed Agents pricing](https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing)；`idle`／`rescheduling`／`terminated` 不計時，毫秒計量
+- **自架版 Managed Agents 不公開定價（官方 API 定價頁，2026-11-12 新增）**：頁面寫請洽 Anthropic 客戶團隊；上條 $0.08／session-hour 是否適用自架版未載
 - **Managed Agents 不適用 Batch 折扣與 partner 雲端**（Bedrock／Vertex 無此產品）；runtime 取代 code execution 的 container-hour，不重複收
 - **官方算例已換模型（2026-10-14 WebFetch 逐字查證）**：現以 Opus 5.5 為例，1 小時、50k 輸入／15k 輸出，無快取 ≈ **$0.58**、40k 輸入走快取 ≈ **$0.428**（舊版 Opus 5 同情境分別為 $0.705／$0.525，已被取代），見「一小時／一個月大概多少」表
 - **Managed Agents 框架整體仍 beta**（須 `managed-agents-2026-04-01` header；[overview](https://platform.claude.com/docs/en/managed-agents/overview)，2026-09-06 查證）；選型與零件成熟度見 [[entities/managed-agents]]

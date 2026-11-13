@@ -433,3 +433,6 @@
 {"id": "H-b61772", "closed": "2026-11-14", "status": "done", "by": "模型", "result": "模型記者 2026-11-11 ingest 回報已處理"}
 {"id": "H-ce2dc2", "opened": "2026-11-14", "from": "功能", "to": "商業", "page": "entities/pricing", "note": "Claude Meetings（Google Meet 整合，11-10）方案歸屬與是否另計費：官方文章只寫 Whiteboards／Sheets／Data 全付費方案可用，Meetings 未載", "status": "open"}
 {"id": "H-7dded2", "opened": "2026-11-14", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "community-skills 11-11 新節點：phuryn/product-engineering 把「第二個模型審查」寫進 skill 流程，評估是否構成產品化矩陣列（對照官方 /code-review）", "status": "open"}
+{"id": "H-1d02ab", "closed": "2026-11-14", "status": "void", "by": "主編", "result": "主編判定：runner 為單一新工具、無採用回饋，未達產品化矩陣新增列門檻（≥2 個獨立社群工具或 ≥100 讚 issue），不開列"}
+{"id": "H-7dded2", "closed": "2026-11-14", "status": "void", "by": "主編", "result": "主編判定：product-engineering 的第二模型審查為單一 repo 做法，未達產品化矩陣新增列門檻，不開列"}
+{"id": "H-ce2dc2", "closed": "2026-11-14", "status": "done", "by": "主編", "result": "11-14 主編查：官方說明中心無 Meetings 頁；Axios 等媒體稱 Team／Enterprise beta，已以媒體稱寫進 pricing callout"}

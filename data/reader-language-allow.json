@@ -167,6 +167,12 @@
    "term": "門檻",
    "line_contains": "夠用」門檻",
    "reason": "「一旦競品達『夠用』門檻」是讀者語境的產品可用性門檻，非本庫收錄門檻的欄位名（2026-10-31 6l 清存量）"
+  },
+  {
+   "page": "topics/recursive-self-improvement",
+   "term": "門檻",
+   "line_contains": "我們判定已達到這個門檻",
+   "reason": "Yahoo Finance 引述修訂版招股說明書原話（RSP 安全門檻，正文概念非收錄門檻）；引號內原文不得改寫。2026-11-14 主編登記"
   }
  ]
 }

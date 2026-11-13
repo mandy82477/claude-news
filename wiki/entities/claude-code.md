@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **最新動態**（2026-11-11）
-> 官方文件索引（llms.txt）移除 25 頁每週頁面，最早為 Week 13（2026-03-23～27）；連過去的週報連結可能失效。11-10 的 v2.1.322 與 SDK 更新見 [[entities/claude-code-releases]]。
+> **最新動態**（2026-11-12）
+> 桌面版文件新增管理員設定提醒（見 [[entities/claude-code-features]]）；新增 `claude -p` 無頭模式 API 400 錯誤（#11678）與多 session 通訊請求互動數更新（見 [[entities/claude-code-known-issues]]）。11-11 官方文件索引移除 25 頁每週頁面；11-10 的 v2.1.322 見 [[entities/claude-code-releases]]。
 
 ---
 
@@ -46,9 +46,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-10 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-12 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-10 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-10 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-12 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的

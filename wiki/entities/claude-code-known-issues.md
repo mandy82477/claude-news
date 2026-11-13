@@ -33,12 +33,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-10）
-> - **互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。
+> **最新動態**（2026-11-12）
+> - **新增 bug**：`claude -p` 無頭模式送出 prompt 即回 API 400「input_examples: Extra inputs are not permitted」（GitHub issue #11678，52 則留言、38 個讚，仍 open，🔌 組）。
+> - **互動數更新**：多 session 直接通訊功能請求（#24798，已修復 v2.1.224）增至 85 則留言、23 個讚（📂 組）。
+> - 11-10：**互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。
 > - **功能請求**：Desktop／Cowork 支援 RTL（希伯來／阿拉伯文）排版（GitHub issue #38005）累積 47 則留言、126 個讚。
 
 ---
@@ -79,6 +81,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - ❓ **待查證**（標 2026-09-02｜查 fsmonitor、2.1.252｜複 2026-11-14）｜**第二變體是否仍未修補**：只有轉述，官方沒有證實這個變體。
 - 🔴 **未修復**｜**功能請求：OAuth 與其他第三方流程可設定外部 URL 白名單（GitHub issue #27263，累積 52 則留言、131 個讚，2026-08-17）**：使用者呼籲 Claude Code 開放可設定的外部 URL 白名單機制，套用於 OAuth 登入與其他需要導向第三方網域的流程，讓企業可控管允許連線的網域範圍；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**通過 CVP 審核的組織在 Claude Code 仍被資安防護擋下（#84352，201 則留言、29 讚，10-19 更新）**：官方未回應；CVP 綁 organization ID、可提申訴，條件見 [[topics/ai-agent-safety-cyber#防守方能申請什麼]]。
+  - 同主題另有 [#61889](https://github.com/anthropics/claude-code/issues/61889)：CVP 核准者在 claude.ai（非 Claude Code）全新對話被擋無害提問，44 則留言、4 個讚，2026-09-12 以 not planned 關閉（11-12 日報重提，11-14 查）。
 - ✅ **已修復 v2.1.317**｜**User-Agent 字串夾帶使用者 email（#78431，2026-08-11）**：issue 2026-07-17 開、09-11 以 not planned 關閉（[#78431](https://github.com/anthropics/claude-code/issues/78431)，2026-11-08 查證）。
   - v2.1.317（11-03）才新增送出信箱前詢問的檢查（[CHANGELOG v2.1.317](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)）。11-06 另一 issue #107757 經 HN（1,485 分）重新引發關注。證據見 [[topics/ai-agent-safety-product-vulns#2026-10]]。
 - ✅ **已修復 v2.1.163**｜**「Comment and Control」：開一則 GitHub Issue 就能經注入碰到 CI secrets（Novee，2026-08-05）**：受影響 v0.2.54–v2.1.162。證據見 [[topics/ai-agent-safety-prompt-injection#2026-08]]。
@@ -286,7 +289,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   %% 維運備忘：本條與下方「🔌 平台相容性」組 #2511 列重複（兩組各留一份舊快照所致），待主編於 lint 核實後擇一保留、另一改指標 %%
 - 🔴 **未修復**｜**功能請求：跨 compaction 持久記憶（已自建 59 次 compaction 替代方案）（GitHub issue #34556，累積 114 則留言、6 個讚，首見 2026-07-25，2026-10-12 更新）**：每次壓縮遺失未外部保存內容；同屬記憶延續性缺口，見 [[topics/official-community-gap]]；官方未回應。
 - 🔴 **未修復**｜**對話壓縮（compaction）間歇性失敗或卡死（GitHub issue #20696，累積 61 則留言，2026-07-12 回報，regression）**：claude.ai 網頁版／行動版對話壓縮功能自 2026-01-15 起偶發失敗或卡死，回報者稱此為回歸性問題（先前版本未見）；官方尚未回應。與已列「Auto Compact 失效」為不同介面（此為 claude.ai web/mobile，另一為 Claude Code CLI），暫分列追蹤。
-- ✅ **已修復 v2.1.224**｜**功能請求：多 Claude session 間直接通訊（GitHub issue #24798，累積 75 則留言、21 個讚，首見 2026-07-08，2026-08-15 互動數更新）**：使用者呼籲支援 multi-Claude 工作流中大型專案裡各自獨立執行的工作流程能有更直接的溝通機制以串接依賴關係排序，避免需透過檔案系統或外部工具中繼協調；與 [issue #28300](https://github.com/anthropics/claude-code/issues/28300)（跨機器多 agent 協作 A2A 協定）同屬 agent 間直接通訊缺口，本則同機 session 訴求已由官方對應；**2026-08-15 更新：** issue 留言持續累積，內容顯示社群訴求未止於「能傳訊」本身——原始請求的核心是「依相依性排序高階流程步驟」，屬工作流編排（orchestration），而 `ListAgents`／`SendMessage` 提供的僅是點對點訊息傳遞原語，尚未涵蓋自動依賴排序；此缺口與 [[topics/official-community-gap]] 「Agent 間直接通訊協定」列既有的 🧪 部分產品化判定一致，✅ 已修復狀態僅適用於「同機 session 可互相傳訊」此一子項，編排層仍待官方對應。
+- ✅ **已修復 v2.1.224**｜**功能請求：多 Claude session 間直接通訊（GitHub issue #24798，累積 85 則留言、23 個讚，首見 2026-07-08，2026-11-12 互動數更新；issue 已於 2026-08-17 以 completed 關閉，11-14 查）**
+  - 使用者呼籲支援 multi-Claude 工作流中大型專案裡各自獨立執行的工作流程能有更直接的溝通機制以串接依賴關係排序，避免需透過檔案系統或外部工具中繼協調。
+  - 與 [issue #28300](https://github.com/anthropics/claude-code/issues/28300)（跨機器多 agent 協作 A2A 協定）同屬 agent 間直接通訊缺口，本則同機 session 訴求已由官方對應。
+  - **2026-08-15 更新：** issue 留言持續累積，內容顯示社群訴求未止於「能傳訊」本身——原始請求的核心是「依相依性排序高階流程步驟」，屬工作流編排（orchestration）。
+  - `ListAgents`／`SendMessage` 提供的僅是點對點訊息傳遞原語，尚未涵蓋自動依賴排序；此缺口與 [[topics/official-community-gap]] 「Agent 間直接通訊協定」列既有的 🧪 部分產品化判定一致。
+  - ✅ 已修復狀態僅適用於「同機 session 可互相傳訊」此一子項，編排層仍待官方對應。
 %% 2026-08-08：五家媒體同步報導跨 session 訊息互通功能，狀態暫懸置。2026-08-09：官方文件（code.claude.com/docs/en/cross-session-messaging）確認，工具為 ListAgents＋SendMessage，狀態轉為已修復。2026-09-19 查證：v2.1.224 release notes（2026-08-07）本就載明 cross-session SendMessage，08-08「changelog 未見對應」為當時漏看；macOS／Linux 自 v2.1.224、他機 session 主動發起自 v2.1.225、原生 Windows 自 v2.1.234（2026-08-17） %%
 
 🔎 **查無官方**（標 2026-08-09｜查 #28300、跨機器｜複 2026-11-14）｜**#28300 跨機器範圍是否涵蓋於此次確認**：官方文件僅確認同機 session 訊息互通；查證 [issue #28300](https://github.com/anthropics/claude-code/issues/28300) 現況仍為 open，全程 37 則留言中無任何官方／協作者留言，故跨機器多 agent 協作（A2A 協定）範圍是否涵蓋在內仍查無官方說明。
@@ -339,8 +347,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（97 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（98 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**`claude -p` 無頭模式一送 prompt 就回 API 400「tools.3.custom.input_examples: Extra inputs are not permitted」（GitHub issue #11678，累積 52 則留言、38 個讚，2025-11-15 回報，2026-11-12 互動數更新）**
+  - 用 `claude -p` 跑自動化腳本的人會直接撞到。
+  - 標籤 bug、has repro、macOS，仍 open（[#11678](https://github.com/anthropics/claude-code/issues/11678)，2026-11-14 查）。
 - 🔴 **未修復**｜**tmux 內終端機渲染錯亂，文字疊字覆蓋先前輸出（Claude CLI 2.1.63，Ubuntu／alacritty 等終端機內跑 tmux，GitHub issue #29937，累積 30 則留言、72 個讚，2026-11-07）**：習慣在 tmux 裡跑 Claude Code 的使用者受影響；官方尚未回應或釐清觸發條件。
 - 🔴 **未修復**｜**功能請求：Desktop 支援自訂主題與強調色，追平 CLI 既有自訂主題系統（GitHub issue #79305，累積 28 則留言、88 個讚，2026-11-04）**：目前僅亮／暗（含高對比）兩色，多數現代深色模式幾乎無法分辨視窗；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude in Chrome 自 2026-09-18 起在 reddit.com 與 redd.it 上所有工具都被「safety restrictions」擋下，9/17 前正常（GitHub issue #95326，累積 28 則留言、39 個讚，2026-10-31）**：用 Claude in Chrome 讀 Reddit 的人拿不到頁面；官方未回應。

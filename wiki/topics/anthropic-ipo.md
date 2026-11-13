@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **最新動態**（2026-11-11）
-> - **路演次日：Forbes 稱 Claude 10 月流量成長 24%，Morningstar 稱定價區間內屬低估**（皆僅標題）；股數與區間見 [[topics/anthropic-ipo#上市走到哪一格]]。
+> **最新動態**（2026-11-12）
+> - **官方 IPO 頁公布 Q3：營收 $170 億、年增逾 12 倍；年營收 $10 萬以上客戶逾 11,900 家；調整後營業利益率 15%**（HN 641 分）；官方 IPO 頁載明預計 11-18 定價、11-19 開始交易
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -48,7 +48,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
-| 什麼時候上市 | **11-10 路演啟動**：官方公告擬發 825,000,000 股 A 類；價格區間 $70～78；最快 11-19 開始交易為消息人士說法，非官方 🔎 查無官方 ⟨Q-03⟩ | Anthropic 官方公告（11-10）；CNBC（11-10，引消息人士） | 官方一手／一級媒體 |
+| 什麼時候上市 | **11-10 路演啟動**：官方公告擬發 825,000,000 股 A 類；價格區間 $70～78；官方 IPO 頁：11-18 定價、11-19 開始交易（需核准） | Anthropic 官方公告（11-10）；[官方 IPO 頁](https://ipo.anthropic.com/us/)（11-14 查） | 官方一手／一級媒體 |
 | 值多少 | 最後一次定價 $9,650 億；11-10 各報導分歧（最高 $1.4 兆／近 $1.3 兆／約 $1 兆，見下）；11-09 Morningstar 另估 $1.7 兆（細節見下方） | Series H 公告；Bloomberg、NYT、ABC7、Fox Business（11-10）；Morningstar（11-09） | 官方一手／一級媒體 |
 | 誰承銷 | Morgan Stanley、Goldman Sachs；JPMorgan 一項為媒體轉述；09-08 Banking Exchange 稱正敲定最終承銷名單 | FT、NYT（2026-09-04）；Banking Exchange（09-08） | 一級媒體 |
 | 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
@@ -56,7 +56,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 - **路演股數拆分**（Anthropic 官方公告，11-10）：825,000,000 股中公司自售 801,351,354、既有股東售 23,648,646，公司不收後者款項。
 - **11-10 估值各家寫法**：Bloomberg／NYT／Reuters 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆。
 
-**下一個時點：** 定價與掛牌（傳最快 11-19，未經官方確認）。公開版 S-1 已於 2026-10-26 提交；股數與價格區間已於 11-10 公布。
+**下一個時點：** 11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易（官方 IPO 頁，需主管機關核准）。公開版 S-1 已於 2026-10-26 提交；股數與價格區間已於 11-10 公布。
 
 **估值算術（本頁計算，2026-08-29）：**
 - 撐起 $2 兆估值反推需**第 10 年（約 2036）營收 $1.2 兆**（隱含稅後營業利益 $3,600 億），前提為稅後營業利益率 30%、資金成本 10%、10 年達成熟期；若成熟期拉長至 15 年，門檻升至接近 $2 兆（Yahoo Finance，08-21／08-23）
@@ -107,6 +107,11 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 數字細節
 
 **這裡放的是母頁指標表與各事件數字的出處、口徑與查核脈絡；每個指標的最新單一數字住母頁 [[topics/anthropic-business#現在的數字]]，本節不重複列出那張表的數字。**
+- **官方 IPO 頁公布 Q3 財務與客戶數（2026-11-12，HN 641 分，2 個來源）**：Q3 營收 $170 億、年增逾 12 倍（與 11-02 修訂版 S-1 同數，非新值）。
+  - 年營收 $10 萬以上客戶逾 11,900 家、年增逾 12 倍（新指標）；自 2025 Q1 起運算效率提升逾 4 倍；調整後營業利益率 15%。
+  - Q3 單季淨損 $233 億（[官方 IPO 頁](https://ipo.anthropic.com/us/)，11-14 查證）。
+  - 淨損含 $219 億可轉債、衍生負債與 SAFE 公允價值變動的非現金費用；GAAP 營業利益率 (3)%。
+- **產業 TAM $30 兆（2026-08-26，一級媒體引公司）**：由母頁指標表移出，結論不變。%% 2026-11-12 讓位給資料日期更新、來源等級較硬的「年營收 $10 萬以上客戶數」，指標表滿載換手 %%
 - **修訂版 S-1 首度揭露 9 個月累計財報（2026-11-02，CNBC／FT／HN 引 SEC 文件）**：營收 $330 億、營運支出 $345 億、營運虧損 $12.5 億；資產 $1,540 億 vs 現金負債 $1,460 億。
 - **同一份揭露另兩項數字**：每股有形帳面淨值 -$68.47、員工持股均價 $2.91；虧損規模遠小於既有 H1 淨損 $807 億（多為可轉換工具會計項，兩者口徑不同不可相減）。
 - **revenue-per-compute 比值由 2.08x 降至 1.72x（2026-11-02，同上來源）**：每一美元算力投入產生的營收正在下降，衡量期間與方法論未見細節；若趨勢延續，可能削弱 IPO 路演的獲利敘事（推論），詳見 [[#S-1 揭露了什麼]]。
@@ -173,6 +178,10 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-12 官方 IPO 頁／Yahoo Finance：Q3 財務公開、掛牌日傳 11-19**：
+  - 官方 IPO 頁：Q3 營收 $170 億、客戶與營收年增皆逾 12 倍；$10 萬以上客戶逾 11,900 家；調整後營業利益率 15%、淨損 $233 億；數字明細見 [[#數字細節]]。
+  - Yahoo Finance（標題）：Claude 開發商將於週四 11-19 開始交易；與 11-10 CNBC 引消息人士的「最快 11-19」同日期，仍非官方公告。
+  - Economic Times（標題）：稱本次發行約 $64 billion，並整理印度投資人能否申購；與 8.25 億股×價格區間上緣 $78 的乘積量級相符，規則細節未見。
 - **2026-11-09 Yahoo Finance／Morningstar：時程傳瞄準 11 月掛牌，估值估算落差擴大**：
   - Yahoo Finance：IPO 時程傳出瞄準 **11 月**掛牌，但買方端估值看法持續探底；非官方確認，僅標題與導言可用。
   - Morningstar：同日另篇分析估出 **$1.7 兆**，與市場探底中的預期（約 $1～1.3 兆，見上表「值多少」）形成明顯落差；方法論未見完整轉載，與既有 10-28 Damodaran 估值分析框架是否相關未見報導。
@@ -236,10 +245,10 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **2026-09-28 機密招股書內容外流，首度書面警示存在性風險**：Reuters 獨家取得 Anthropic 機密遞交的 IPO 招股書，報導財報虧損龐大、營收高速成長，首度在正式文件警示 AI 存在性風險；具體數字未見完整摘要（Reuters）。
 - **09-29 跟進（8 家媒體同日轉述）**：Guardian、euronews、Forbes、CNBC、TechCrunch、Fortune、Yahoo Finance、San Francisco Chronicle 均複述同一份外流文件，未見獨立新增數字（Google News 各家）。
 - **2026-09-27 IPO 是 Amazon 3,000 億美元的一次考驗**：Yahoo Finance 稱 IPO 估值將測試 Amazon 持股價值（$3,000 億美元），與 08-20 Motley Fool 估算 $4,000 億美元基準不同（估值假設不同），僅標題可用（Google News/Yahoo Finance）。
-- **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列與 ⟨Q-03⟩（Google News/Bloomberg.com）。
+- **2026-09-22 IPO 計畫生變，市場情緒受衝擊**：Bloomberg 報導 Anthropic 首次公開發行計畫生變，美國市場情緒受到波及；僅標題可用，具體變動內容、新時程未見報導，詳見上表「什麼時候上市」列（Google News/Bloomberg.com）。
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。
-- ⟨Q-03⟩ 🔎 **查無官方**（標 2026-09-06｜查 calcalistech、IPO 延後｜複 2026-11-24｜訊 2026-11-10）｜**掛牌日與價格區間何時公布**：10-26 官方公告 S-1 已提交，沒給掛牌日與價格區間；2026-11-02 查 [anthropic.com/news](https://www.anthropic.com/news) 仍未公布。
+- **掛牌日與價格區間（2026-11-14 查證結案）**：11-10 官方路演公告載明價格區間 $70～78；[官方 IPO 頁](https://ipo.anthropic.com/us/)載明預計 11-18 定價、11-19 開始交易，需主管機關核准。
   - **11-10 更新**：官方路演公告載明股數與價格區間（價格區間 $70～78 另見 CNBC），掛牌日仍僅見消息人士說法。
   - **10-26 以前**官方只確認過 2026-06-01 機密送交 S-1 草案；「十月上市」「延後」「路演」都是媒體推估且彼此不一致，兩邊都不採信為事實。
   - **矛盾已偏向前者**：09-07 Forbes、09-08 Financial Times 與 Yahoo Finance 三家均稱延至十月，ETF Trends 一說未獲後續報導支持。仍無官方確認，兩家原文均未能取得。
@@ -319,6 +328,16 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-12
+- **[IPO 財務] 官方 IPO 頁：Q3 營收 $170 億、$10 萬以上客戶逾 11,900 家、調整後營業利益率 15%、淨損 $233 億**：HN 641 分；營收與 11-02 修訂版 S-1 同數，客戶數為新指標，明細見 [[#數字細節]]（官方 IPO 頁；Hacker News）
+- **[IPO 時程，僅標題可用] Yahoo Finance：Claude 開發商將於 11-19（週四）開始交易**：日期與 CNBC 11-10 消息人士說法相同，官方未載（Google News/Yahoo Finance）
+- **[IPO 申購，僅標題可用] Economic Times：約 $64 billion 的發行，印度投資人能否申購**；CNBC（11-11）稱 Anthropic 開放澳洲零售發行（Google News）
+- **[IPO 前瞻，僅標題可用] Bloomberg：輝達對 Anthropic IPO 承諾的 $100 億美元成焦點，並與一位 CEO 離任並列**：承諾形式與離任者身分標題未載（Google News/Bloomberg.com）
+- **[IPO 前瞻，僅標題可用] 評論與框架報導**：Bloomberg 稱 Anthropic 是 AI 交易的試金石；Fast Company 稱 IPO 可能讓 OpenAI 處於劣勢。
+  - Reuters 談巨型 IPO 的新打法；DW 問誰贏得 AI 競賽；Motley Fool 以歷史案例問該不該買。
+  - Yahoo Finance 選 Anthropic 為年度公司；Morningstar 談企業 AI 採用對估值的意涵；CrowdStrike CEO 期待 Anthropic 與 OpenAI 上市（Google News 各家）
+- **[IPO 唱空] Gary Marcus：〈Just say no to Anthropic's IPO〉**：HN 11 分；留言有人稱這次是第一次研究怎麼放空，另一人稱 IPO 歷史上對早期投資人多半不差（Hacker News）
 
 #### 2026-11-11
 - **[IPO 需求面，僅標題可用] Forbes：Claude 10 月流量成長 24%，勝過其他 AI 對手**：2 個來源同日報導；流量口徑與對手名單未見（Google News/Forbes）

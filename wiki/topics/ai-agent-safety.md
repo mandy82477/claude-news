@@ -28,15 +28,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-08
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
 
-> **最新動態**（2026-11-11）
-> - **產品漏洞／供應鏈**：「不再問」外洩再獲 CSO Online、XenoSpectrum 報導；ZDNET 稱有人測試讓 OpenClaw agent 逃出限制（僅標題）。見 [[topics/ai-agent-safety-product-vulns#2026-11]]。
-> - **模型網攻能力**：VulnCheck 稱 Glasswing 七個月已有 442 筆 CVE 可歸因 Anthropic、2 筆遭在野利用。見 [[topics/ai-agent-safety-cyber#2026-11]]。
-
+> **最新動態**（2026-11-12）
+> - **誤擋**：CVP 核准使用者在 claude.ai 問無害問題也被擋（#61889）。見 [[topics/ai-agent-safety-cyber#2026-11]]。
+> - **憑證與防注入**：Help Net Security 標題稱被竊的 Claude API 金鑰可讓 Claude Code 變成遠端植入程式；AWS、Red Hat 與 Nvidia 各有防注入新工具（皆僅標題）。見 [[topics/ai-agent-safety-product-vulns#2026-11]]、[[topics/ai-agent-safety-prompt-injection#2026-11]]。
 ---
 
 ## 摘要
@@ -53,9 +52,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 最後動態 |
 |---|---|---|
-| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-10 |
-| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-11 |
-| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-11 |
+| [[topics/ai-agent-safety-prompt-injection]] | 代理讀進來的網頁、檔案、MCP 回應憑什麼可信；注入會不會自己擴散 | 2026-11-12 |
+| [[topics/ai-agent-safety-product-vulns]] | Claude Code／MCP 哪些洞還開著、我的版本中不中；agent 做了沒叫它做的事；帳號與憑證 | 2026-11-12 |
+| [[topics/ai-agent-safety-cyber]] | 模型能做什麼攻擊、誰拿 Claude 打人、防守方能申請什麼、被誤擋怎麼辦 | 2026-11-12 |
 | [[topics/ai-eval-boundary-incidents]] | 評測環境裡 agent 碰到真實系統或真人的事件 | 2026-10-27 |
 
 %% 判不出歸哪一頁的事件先放本頁「技術彙整」的「未歸類」，週更時分派（規則見 safety-policy/pages.md 第 0 條） %%
@@ -146,6 +145,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件依類別住三個子頁（見「每一類住哪一頁」）；本節只留判不出歸哪一頁的事件，以及 2026-07 以前各月的總結。
 
 ### 未歸類
+
+#### Anthropic Alignment Science 部落格：稀釋被下毒的微調資料，反而可能讓下毒效果增強（2026-11-10 發布，11-12 新增）
+
+- **揭露來源**：Google News／Anthropic Alignment Science blog（11/10 19:08 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱把被下毒的微調資料混入更多乾淨資料稀釋後，下毒的效果可能反而變強；實驗模型、資料規模與機制均未載
+- **性質判斷**：答不出本頁四類判準——談的是訓練資料投毒（攻擊者在模型訓練階段動手），不是代理讀進來的內容、產品漏洞或網攻能力；暫列未歸類，待週更分派
+- **可信度評估**：官方研究部落格標題，原文未讀；對 Claude 自身訓練流程的影響未載
 
 #### Anthropic 官方研究：可驗證推理（provable inference）進展，讓使用者驗證收到的回應確實出自宣稱的模型、未遭竄改（2026-11-04 新增）
 

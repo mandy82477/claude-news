@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **多代理 PR Review 補一招：把冗長 PR 說明收進折疊區塊**（2026-11-09）
-> - **Simon Willison**：agent 開的 PR 說明常偏長，收進 `<details><summary>` 折疊區塊後 PR 列表恢復可讀，不改動 agent 產生的內容本身。
+> **Hooks 與自動化新增「完成宣告驗證」Stop hook**（2026-11-12）
+> - **claim-check**：agent 寫「fixed」卻沒跑過檢查時，Stop hook 退回一次要它補證據；作者實測 406 則宣告，0.2.0 擋 86 則、0.3.0 擋 2 則。
 
 ---
 
@@ -100,6 +100,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### Balance0014/claude-code-claim-check：Stop hook 在 agent 宣稱「fixed」「tests pass」卻沒有證據時退回一次（2026-11-12）
+
+- **主線：** 除錯分工
+- **核心模式：** agent 結束回合時若宣稱「fixed」「tests pass」「deployed」或「doesn't exist」，Stop hook 檢查本 session：「fixed」要求最後一次程式碼編輯之後有成功的 shell 指令、MCP 工具、URL 擷取或 subagent，`git diff`、`cat` 不算。
+  - 「不存在」要求同一回合兩次不同類的查找。
+  - 缺證據就退回一次並說明缺什麼，不連擋兩次，hook 當機時放行，坦承「尚未驗證」一律通過。
+- **與既有模式的關係：** 補上「Hooks 與自動化」既有代表技巧（nomos 測試作弊偵測、Agent Flow 完成閘，[[topics/community-guardrails#2026-11]]）一個「查完成宣告有無證據」取向，只擋一次、不卡死 agent；主線填除錯分工：處理多 agent 產出誰把關。
+- **關鍵回響：**
+  - 🧪 作者自測：去除 1,649 則重複回合後剩 3,977 則，406 則以宣告收尾；0.2.0 會擋 86 則，手查 24 則中 18 則是未附證據的收尾、3 則根本不是完成宣告。有人指出誤擋收尾會讓人關掉 hook，0.3.0 改承認先前回合的檢查，同一批只擋 2 則。
+- **可信度註記：** dev.to 第一手實作，6 讚；數字為作者自己的 session 歷史，非第三方量測，作者自述只比對固定句式、僅懂英文與中文、指令成功不代表測對東西；repo 公開可複現。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/gapmine/i-got-tired-of-claude-code-saying-its-fixed-when-nothing-had-run-1lkj)、[GitHub](https://github.com/Balance0014/claude-code-claim-check)
+- **成熟度：** ⏳ 新興（單一作者工具，有量化自測但尚無第二方覆核）
 
 #### Simon Willison：把 agent 產生的冗長 PR 說明收進 `<details><summary>` 折疊區塊，維持 PR 列表可讀性（2026-11-09）
 

@@ -34,10 +34,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Anthropic Managed Agents, 受管代理
 **上層：** [[topics/anthropic-agent-stack]]
 **首次出現：** 2026-04-28
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **最新動態**（2026-10-23）
+> **最新動態**（2026-11-12）
+> ❓ **待查證**（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜**客戶自架 Managed Agents**：Help Net Security 與 Unite.AI 標題稱 Anthropic 讓客戶自架，agent 憑證留在客戶環境；原料無內文，方案、狀態、與既有自架沙箱的關係皆未載。
+>
+> 10-23：
 > 官方查證 Proactive Workflows 底層已改稱 scheduled tasks（原 Routines）；社群出現負向對照——Show HN Omnara（98 分，4 個來源同日報導）自稱是開源替代方案，證據等級僅單一自述＋互動數字，尚無第三方測試數據。
 
 ---
@@ -136,6 +139,7 @@ Anthropic Managed Agents 是 Claude Platform 上的官方 agent 框架（[概覽
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-12 | Help Net Security、Unite.AI 報導客戶可自架 Claude Managed Agents，標題稱 agent 憑證留在客戶環境；僅標題，與既有自架沙箱（公開測試）關係待官方文件確認（見上方待查證）|
 | 2026-10-23 | 官方查證：Routines 已改名 scheduled tasks，狀態仍為研究預覽；routines 僅留於網址、別名、API 路徑（[來源](https://code.claude.com/docs/en/routines)） |
 | 2026-10-15 | **anthropic-sdk-python v1.14.0** 新增 Managed Agents 的 `execution_identity`，用法未載（TS vertex-sdk v0.21.0 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0)）|
 | 2026-10-09 | **anthropic-sdk-python v1.13.0** 新增 Managed Agents 的 workflows、多代理設定與 thread 過濾型別，用法未載（TS SDK 同步，見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0)）|

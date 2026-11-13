@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-04
-**最後新聞更新：** 2026-11-04
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **新增一則具名公開帳單案例：17 個 bot 全靠一個 Max 方案**（2026-11-04）
-> - **韓國 B2B 流通公司運營作者**：17 個 Claude Code bot 每天處理真實營運工作，全月帳單只靠一個 100 美元 Claude Max 方案，零額外 API 支出。
+> **新增一款開源省 token 工具 Downshift**（2026-11-12）
+> - **Downshift**：Go 開源工具，在 AI 讀到指令輸出前先壓縮、依政策替 subagent 選模型；作者自述仍在 beta，尚未量化省多少。
 
 ---
 
@@ -106,6 +106,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### tiagovilasboas/downshift-ai：Go 開源工具壓縮指令輸出並依政策路由 subagent 模型（2026-11-12）
+
+- **主線：** —
+- **核心模式：** 作者在 Pro 方案幾天就用完週額度，做出 Go 開源工具 Downshift：Compactor 在 AI 讀到指令結果前先縮短、保留錯誤與結束碼，Computer Use 時也壓縮螢幕描述並只送兩次讀取間的變化；Model-routing 依政策為 subagent 選模型與推理力度；另有 Agents 角色檔與 Telemetry。
+- **與既有模式的關係：** 補上「Token / 成本優化」既有代表技巧（MCP Code Execution、mcptoon 等，[[topics/community-cost#2026-10]]）一個「指令輸出壓縮加 subagent 模型路由」合一的實作，與 jev-router 的任務路由同方向；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** dev.to 第一手實作，7 讚；GitHub 查證日 2026-11-14：4 星、1 fork、最近 push 2026-11-12；作者自述已有特定情境結果，但延長 Pro 額度多少尚未量測。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/tiagovilasboas/como-economizar-tokens-no-claude-code-conheca-o-downshift-4f0m)、[GitHub](https://github.com/tiagovilasboas/downshift-ai)
+- **成熟度：** ⏳ 新興（beta、單一作者，無量化節省數字）
 
 #### 韓國 B2B 流通公司：17 個 Claude Code bot 每月帳單僅 100 美元，零額外 API 支出（2026-11-04）
 

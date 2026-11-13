@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-07
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **「跨 Repo 依賴可視化」類別重新啟動**（2026-11-07）
-> - dev.to 作者實測三款 Claude Code 架構圖外掛（Floorplan／Archify／Understand Anything），逐一比較畫出的圖是否可信。
+> **遠端與多 session 介面新增兩則**（2026-11-12）
+> - **行動裝置遠端控制**：t3code（58,093 星）與 ovis（2,039 星）讓人用瀏覽器或手機操控 Claude Code、Codex 等多款 agent。
+> - **Agent 活動可視化**：Aq 用等待佇列取代輪流切換分頁，直接列出哪個 session 在等人。
 
 ---
 
@@ -47,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂。**接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
+- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂；星數最高的是 t3code（58,093 星）。**接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
 - **介面與可視化**：各自單一實作居多，還在試；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
 
@@ -56,6 +57,28 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### pingdotgg/t3code、devswha/ovis：從任何電腦或手機操控 Claude Code、Codex 等多款 agent 的 client（2026-11-12）
+
+- **主線：** —
+- **核心模式：** t3code 讓人從任何電腦或手機控制 Claude Code、Codex 等 agent；ovis（原 herdr web UI）是 herdr 的免費開源瀏覽器與手機 client，提供 agent pane 的對話與即時終端機、SSH 遠端電腦與網頁推播通知。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（bot、MCP、web-app 三條路，[[topics/community-interfaces#2026-11]]）兩個高星數的 client 實作。
+  - t3code 不綁單一 agent，ovis 包在 herdr 之上。
+  - 官方 Claude Desktop 已可遠端控制 session，兩者與官方的差別未見比較；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** t3code 2026-02 出生、本庫今日首次收錄；查證日 2026-11-14（GitHub API）：t3code 59,278 星、10,774 forks、4,242 個 open issues、最近 push 2026-11-13。
+  - ovis 2,047 星、285 forks、149 個 open issues、最近 push 2026-11-13。
+  - forks 與 issues 往來皆足，非星數刷高。
+- **來源：** GitHub Search；[t3code](https://github.com/pingdotgg/t3code)（58,093★）、[ovis](https://github.com/devswha/ovis)（2,039★）
+- **成熟度：** ⚡ 活躍（兩者皆持續提交、使用者基礎大；尚無與官方遠端控制的第三方比較）
+
+#### nodo-labs-uk/attention-queue（Aq）：以等待佇列管理並行 Claude Code session 的終端機介面（2026-11-12）
+
+- **主線：** 並行規模
+- **核心模式：** 作者原為內部使用而做的 tmux 內 TUI：把「程式設計師的注意力是瓶頸」當設計前提，不在各 session 間輪流找誰在等輸入，而是把等待人的 session 排成佇列依序處理，提供 review、step、quiz、vibe 等處理模式，並可審閱變更、理解 agent 的設計選擇。
+- **與既有模式的關係：** 補上「Agent 活動可視化」既有代表技巧（Corgi、ccdeck 等多 session 總覽，[[topics/community-interfaces#2026-10]]）一個「依注意力排程而非全部攤開」取向；多 agent 協作工具，主線填並行規模。
+- **可信度註記：** Show HN 19 分、來源 2 個；GitHub 查證日 2026-11-14：10 星、0 forks、2026-11-10 建立、最近 push 2026-11-13，屬剛發布的單一作者專案。
+- **來源：** Hacker News；[GitHub](https://github.com/nodo-labs-uk/attention-queue)
+- **成熟度：** ⏳ 新興（剛發布，尚無第二方使用回報）
 
 #### I ran 3 Claude Code architecture diagram tools on my repo：dev.to 實測 Floorplan／Archify／Understand Anything（2026-11-06）
 

@@ -33,10 +33,11 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 
-> **最新動態**（2026-11-11）
+> **最新動態**（2026-11-12）
+> - **API 定價頁新增一句：自架版 Claude Managed Agents 的價格請洽 Anthropic 客戶團隊，頁面不公開**（官方 diff 偵測；全頁 30,550→30,638 字）
 > - **usage credits 說明頁再改：購買一律不可退款（含取消訂閱或刪除帳戶），原「Monthly API credits」段落被移除**（官方說明中心 diff 偵測；段落移除的實際影響待官方文逐字查證）
 > - **Whiteboards、Sheets（beta）與 Claude Data 官方介紹文出爐，日報摘要稱所有付費方案可用**；是否另計費未載
 
@@ -68,6 +69,11 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 ---
 
 ## 定價與促銷（模型定價、方案設計）
+
+#### 2026-11-12：API 定價頁新增自架版 Managed Agents 定價說明——不公開，洽客戶團隊
+
+- **Official Docs 異動（diff 偵測）**：[API 模型定價](https://platform.claude.com/docs/en/about-claude/pricing) 字數 30,550→30,638，新增 1 段：自架版 Claude Managed Agents 的定價請洽 Anthropic 客戶團隊。
+- **背景**：同日 Help Net Security、Unite.AI 標題稱 Anthropic 讓客戶自架 Managed Agents，agent 憑證留在客戶環境（僅標題）；自架版沒有公開牌價；既有 $0.08／session-hour 是否適用未載（見 [[entities/pricing#當前生效的計費規則]]）。
 
 #### 2026-11-11：usage credits 說明頁再改版——新增「Refunds」節，購買一律不可退款；「Monthly API credits」段落被移除
 

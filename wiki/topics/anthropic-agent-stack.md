@@ -37,11 +37,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-10-23）
-> 子頁 [[entities/managed-agents]] 依官方文件更正：排程觸發的官方名稱已改為 scheduled tasks（原 Routines，仍研究預覽），routines 只留在網址、`/routines` 別名、API 路徑與組織設定開關；本頁積木名稱不變，查證來源見子頁。
-
-> **較早變動**（2026-10-15）
-> Managed Agents 一節：anthropic-sdk-python v1.14.0／anthropic-sdk-typescript vertex-sdk-v0.21.0 同步新增 `execution_identity` 欄位，官方 release note 僅列欄位新增，具體可操作的 API 用法未載，詳見 [[entities/managed-agents]]。
+> **最近變動**（2026-11-12）
+> - **Managed Agents 傳出可由客戶自架**：兩家媒體標題稱 Anthropic 讓客戶自架、agent 憑證留在客戶環境；方案、狀態與既有自架沙箱的關係原料均未載，是否屬實仍不明，細節見子頁 [[entities/managed-agents]]。
+> - **排程觸發官方名稱改為 scheduled tasks**（10-23，原 Routines，仍為研究預覽）：本頁積木名稱不變，查證來源見子頁。
+> - **SDK 新增 `execution_identity` 欄位**（10-15）：官方 release note 僅列欄位新增，具體 API 用法未載，詳見同一子頁。
 
 ---
 
@@ -168,7 +167,7 @@ Tell me when the migration session finishes what it's working on
 
 - **還做不到什麼**：只傳純文字，不傳對話歷史與檔案，訊息也不帶依賴語意——要排誰先誰後得靠 workflow。
 - **跟 agent teams 怎麼分**：官方寫得很直接——隊友是 Claude 派出並監督的，用 agent teams；兩個都是你自己開、自己指揮的 session，才用跨 session 傳訊。
-- **當初的需求工單對上多少**：那張工單（[issue #24798](https://github.com/anthropics/claude-code/issues/24798)，已關閉、84 則留言）要的三件事裡，官方對上的是跨 session 傳訊與閒置通知，「共用專案暫存區」至今沒有對應品；協定級的 agent 互通（A2A）仍是未回應的功能請求（[issue #28300](https://github.com/anthropics/claude-code/issues/28300)）。
+- **當初的需求工單對上多少**：那張工單（[issue #24798](https://github.com/anthropics/claude-code/issues/24798)，已關閉）要的三件事裡，官方對上的是跨 session 傳訊與閒置通知，「共用專案暫存區」至今沒有對應品；協定級的 agent 互通（A2A）仍是未回應的功能請求（[issue #28300](https://github.com/anthropics/claude-code/issues/28300)）。
 
 ### 六、Agent view：把幾件互不相干的事丟出去，回頭再看
 

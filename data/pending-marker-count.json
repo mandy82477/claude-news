@@ -1,7 +1,7 @@
 {
-  "count": 242,
+  "count": 254,
   "updated": "2026-11-14",
-  "note": "11-14 主編查證：不再問外洩 2.1.323 已修，結案一筆",
+  "note": "11-14 主編查證：anthropic-ipo ⟨Q-03⟩ 掛牌日與價格區間官方已載明，結案",
   "fingerprints": [
     {
       "key": "entities/boris-cherny::2026-10-26::boris cherny、eu.36kr.com、正式辭職",
@@ -38,6 +38,10 @@
     {
       "key": "entities/claude-code-archive::2026-08-09::governor、token 浪費",
       "label": "entities/claude-code-archive（標 2026-08-09｜查 Governor、token 浪費）"
+    },
+    {
+      "key": "entities/claude-code-features::2026-11-07::claude code model configuration",
+      "label": "entities/claude-code-features（標 2026-11-07｜查 Claude Code model configuration）"
     },
     {
       "key": "entities/claude-code-known-issues::2026-10-28::v2.1.311、skip permissions",
@@ -156,6 +160,10 @@
       "label": "entities/claude-science（標 2026-11-06｜查 cell structure、scientists use）"
     },
     {
+      "key": "entities/cowork::2026-11-08::用專案整理任務",
+      "label": "entities/cowork（標 2026-11-08｜查 用專案整理任務）"
+    },
+    {
       "key": "entities/fable-5::2026-10-25::readies model、intentions better",
       "label": "entities/fable-5（標 2026-10-25｜查 Readies Model、Intentions Better）"
     },
@@ -198,6 +206,10 @@
     {
       "key": "entities/john-jumper::2026-08-10::alphabet、gemini 3.5",
       "label": "entities/john-jumper（標 2026-08-10｜查 Alphabet、Gemini 3.5）"
+    },
+    {
+      "key": "entities/managed-agents::2026-11-12::self-hosted managed agents、agent credentials",
+      "label": "entities/managed-agents（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）"
     },
     {
       "key": "entities/mythos-archive::2026-08-10::mashable、public release",
@@ -288,6 +300,14 @@
       "label": "entities/tom-brown（標 2026-10-09｜查 woke、另一位共同創辦人）"
     },
     {
+      "key": "topics/ai-agent-safety-cyber::2026-11-12::#61889、cvp approved",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-12｜查 #61889、CVP approved）"
+    },
+    {
+      "key": "topics/ai-agent-safety-cyber::2026-11-11::dormant model neurons、malware triggers",
+      "label": "topics/ai-agent-safety-cyber（標 2026-11-11｜查 Dormant Model Neurons、Malware Triggers）"
+    },
+    {
       "key": "topics/ai-agent-safety-cyber::2026-11-10::gpt-6 cyber、fable 5.2",
       "label": "topics/ai-agent-safety-cyber（標 2026-11-10｜查 GPT-6 Cyber、Fable 5.2）"
     },
@@ -338,6 +358,10 @@
     {
       "key": "topics/ai-agent-safety-cyber::2026-09-14::rescana、frkoo、trufflehog",
       "label": "topics/ai-agent-safety-cyber（標 2026-09-14｜查 Rescana、frkoo、TruffleHog）"
+    },
+    {
+      "key": "topics/ai-agent-safety-product-vulns::2026-11-12::remote-controlled implant、stolen claude api keys",
+      "label": "topics/ai-agent-safety-product-vulns（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys）"
     },
     {
       "key": "topics/ai-agent-safety-product-vulns::2026-11-09::dark reading、linux orgs",
@@ -540,8 +564,8 @@
       "label": "topics/anthropic-ipo（標 2026-11-01｜查 EDGAR、Anthropic S-1）"
     },
     {
-      "key": "topics/anthropic-ipo::2026-09-06::calcalistech、ipo 延後",
-      "label": "topics/anthropic-ipo（標 2026-09-06｜查 calcalistech、IPO 延後）"
+      "key": "topics/anthropic-product-matrix::2026-11-11::claude sheets、claude whiteboards、claude meetings",
+      "label": "topics/anthropic-product-matrix（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）"
     },
     {
       "key": "topics/community-guardrails::2026-08-10::certified architect、12 種",
@@ -618,6 +642,10 @@
     {
       "key": "topics/market-lessons::2026-10-05::meta、microsoft、減少內部使用",
       "label": "topics/market-lessons（標 2026-10-05｜查 Meta、Microsoft、減少內部使用）"
+    },
+    {
+      "key": "topics/market-signals-compute::2026-11-11::lambda、新增合約、承諾總額",
+      "label": "topics/market-signals-compute（標 2026-11-11｜查 Lambda、新增合約、承諾總額）"
     },
     {
       "key": "topics/market-signals-compute::2026-11-08::gas-fired、天然氣發電",
@@ -756,6 +784,18 @@
       "label": "topics/market-signals-customers（標 2026-09-14｜查 Nvidia、Palantir、Booz Allen、資料外洩）"
     },
     {
+      "key": "topics/market-signals-ipo::2026-11-12::負責任擴展政策、安全門檻",
+      "label": "topics/market-signals-ipo（標 2026-11-12｜查 負責任擴展政策、安全門檻）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-12::調整後營業利益率、11,900",
+      "label": "topics/market-signals-ipo（標 2026-11-12｜查 調整後營業利益率、11,900）"
+    },
+    {
+      "key": "topics/market-signals-ipo::2026-11-10::ipo priced、nov. 19、發行價",
+      "label": "topics/market-signals-ipo（標 2026-11-10｜查 IPO priced、Nov. 19、發行價）"
+    },
+    {
       "key": "topics/market-signals-ipo::2026-11-09::morningstar、瞄準 11 月",
       "label": "topics/market-signals-ipo（標 2026-11-09｜查 Morningstar、瞄準 11 月）"
     },
@@ -850,6 +890,10 @@
     {
       "key": "topics/market-signals-ipo::2026-09-08::標普全球、穆迪評等、投資級信評",
       "label": "topics/market-signals-ipo（標 2026-09-08｜查 標普全球、穆迪評等、投資級信評）"
+    },
+    {
+      "key": "topics/market-signals-legal::2026-11-11::紐約州、new york、ai 安全法",
+      "label": "topics/market-signals-legal（標 2026-11-11｜查 紐約州、New York、AI 安全法）"
     },
     {
       "key": "topics/market-signals-legal::2026-11-07::[[entities/pricing-incidents]]、courthouse news",
@@ -950,6 +994,10 @@
     {
       "key": "topics/recursive-self-improvement::2026-10-10::jacob coxon、間諜滲透",
       "label": "topics/recursive-self-improvement（標 2026-10-10｜查 Jacob Coxon、間諜滲透）"
+    },
+    {
+      "key": "topics/recursive-self-improvement::2026-11-11::safety alarm、rsi threshold",
+      "label": "topics/recursive-self-improvement（標 2026-11-11｜查 safety alarm、RSI threshold）"
     },
     {
       "key": "topics/recursive-self-improvement::2026-11-06::metr、anthropic-ai-rd-acceleration",

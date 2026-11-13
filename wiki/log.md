@@ -8797,3 +8797,24 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 工具修正：`collect_reporter_reports.py` 轉知處置以「；」分隔時把不適用條誤判為已處理（11-08 修正只認行首與「／」），已補分隔符號與回歸測試（e0dd694c；不登帳：工具修正，非記者間轉知）
 - devpractice 沉澱：候選 2 筆／手冊寫入 0 則
 - market 判讀：判讀 2 則（雲端合約與 Lambda ⚖️、紐約州 AI 安全法 〰）；里程碑登記 2 筆、回顧結算新增 2 列（11-25）
+## 2026-11-12 Ingest
+
+- 來源日報：[[news/2026-11-12]]（2026-11-14 本機補跑；原料走 archive replay，104 則）
+- 更新頁面：
+  - **功能**：entities/claude-code-features、entities/claude-code-known-issues、entities/claude-code、entities/managed-agents、topics/anthropic-agent-stack
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/anthropic-business-risks、entities/pricing、entities/pricing-history、topics/competitor-landscape
+  - **安全政策**：topics/ai-agent-safety-cyber、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety-prompt-injection、topics/anthropic-government-policy、topics/recursive-self-improvement、topics/ai-agent-safety
+  - **社群**：topics/community-interfaces、topics/community-guardrails、topics/community-cost、topics/community-skills、topics/community-tech-patterns
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals
+  - **模型、人物**：無（模型 3 則皆 11-11 已收；Lydia Hallie 未達建頁門檻）
+- 新增頁面：無
+- feature-radar：本日無新功能，radar 未動（自架 Managed Agents 僅標題、定價洽客戶團隊）
+- index：無
+- 摘要：修訂版招股書宣告已達 RSP 安全門檻；官方 IPO 頁公布 Q3 財務（營收 $170 億、單季淨損 $233 億含 $219 億非現金費用、11-19 交易）；Managed Agents 可自架；Claude for Manufacturing
+- 呈現品質：全部通過（community-skills 記者一度誤刪兩節，已由 HEAD 取回重做）
+- 品質備註：[功能] 回報未照契約格式、缺來源歸因，主編依點名條目從原料組回報；[商業] Google News 網址仍以佔位字代替（連三日），主編依標題回填；[社群] 記者自寫腳本誤判 callout 範圍刪掉兩節，自行發現並修復
+- 分類回退：無（排除 3 則，複核維持）
+- 轉知帳本：H-1d02ab（runner）、H-7dded2（product-engineering 第二模型審查）連兩輪記者報「無新證據」，主編判定未達產品化矩陣新增列門檻（≥2 個獨立社群工具或 ≥100 讚 issue），void；H-ce2dc2（Claude Meetings 方案）主編查證後結案；社群記者擬轉知 t3code／ovis／Aq／claim-check，不登帳：t3code／ovis 屬矩陣既有「手機或瀏覽器」列的社群補充，Aq／claim-check 為單一實作
+- 主編查證（11-14）：官方 IPO 頁——Q3 單季淨損 $233 億含 $219 億可轉債等公允價值非現金費用、GAAP 營業利益率 (3)%、預計 11-18 定價、11-19 交易（需核准），anthropic-ipo 五格表、下一個時點與 market-signals-ipo 兩處同步改正，anthropic-ipo ⟨Q-03⟩（掛牌日與價格區間）結案；Claude Meetings 官方說明中心無頁，Axios 等稱 Team／Enterprise beta，以媒體稱寫進 pricing callout
+- devpractice 沉澱：候選 3 筆／手冊寫入 0 則
+- market 判讀：判讀 2 則（RSP 門檻「已達」📉、Q3 財務與客戶數 ⚖️）；里程碑登記 2 筆、回顧結算新增 2 列（11-26）

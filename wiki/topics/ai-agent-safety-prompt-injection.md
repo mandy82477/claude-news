@@ -31,16 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-10）
-> - **偵測器實測教學（11-10）**：shattered.io 標題稱有一份 12 步、約 80 分鐘的提示注入偵測器測試流程；僅標題可用，來源先前已被標低可信度。
-> - **（11-06）**
-> **業界持續倡議內建提示注入偵測**（Arcjet／Security Boulevard，僅標題）：防法仍停在教學文與方案盤點層級，無第三方量測。
-
+> **最新動態**（2026-11-12）
+> - **防注入的工具動態**：Tech Times 標題稱 AWS 開源 AI agent 評估框架並加強評分用 AI 對提示注入的防護；SiliconANGLE 標題稱提示注入攻擊促成 Red Hat 與 Nvidia 的 OpenShell。兩則皆僅標題可用，非 Claude 專屬。
 ---
 
 ## 摘要
@@ -102,6 +99,22 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Tech Times：AWS 開源 AI agent 評估框架，並加強評分用 AI 對提示注入的防護（2026-11-12 新增，定向補抓，非 Claude 專屬）
+
+- **揭露來源**：Topic Watch／Tech Times（11/12 07:00 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱 AWS 開源一套評估 AI agent 的框架，並讓框架裡負責打分的 AI 能抵抗提示注入；防護做法、是否涵蓋 Claude 均未載
+- **與既有敘事的關係**：屬新防法（評分者被注入的風險），與 11-10 shattered.io 同為防法層級訊號；未改變「## 目前結論」
+- **可信度評估**：單一來源、無可讀內文
+%% 本則為「ai-agent-safety」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
+
+#### SiliconANGLE：提示注入攻擊促成 Red Hat 與 Nvidia 的 OpenShell（2026-11-11 新增，定向補抓，非 Claude 專屬）
+
+- **揭露來源**：Topic Watch／SiliconANGLE（11/11 18:55 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱 Red Hat 與 Nvidia 的 OpenShell 以提示注入攻擊為設計動機；OpenShell 的機制與發布狀態均未載
+- **與既有敘事的關係**：屬新防法（agent 執行環境隔離），與上則同為產業防法；未改變「## 目前結論」
+- **可信度評估**：單一來源、無可讀內文
+%% 本則為「ai-agent-safety」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
 #### shattered.io：提示注入偵測器測試流程，12 步、約 80 分鐘（2026-11-10 新增）
 
@@ -535,6 +548,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-12
+- **[🛠️ 新增，定向補抓] Tech Times：AWS 開源 agent 評估框架，加強評分 AI 對提示注入的防護**：非 Claude 專屬、僅標題可用，詳見「## 技術彙整」
+- **[🛠️ 新增，定向補抓] SiliconANGLE：提示注入攻擊促成 Red Hat 與 Nvidia 的 OpenShell**：事件日 11-11，非 Claude 專屬、僅標題可用，詳見「## 技術彙整」
 
 ### 2026-11-10
 - **[📋 新增，定向補抓] shattered.io：提示注入偵測器測試流程（12 步、約 80 分鐘）**：僅標題可用，來源低可信度，詳見「## 技術彙整」

@@ -28,12 +28,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-11）
+> **本週衝擊**（2026-11-12）
+> - 🟡 **Google 推出 Gemini 4 Hydrogen，主打日常 coding 與 agentic 工作流速度，AA 智慧指數 51（Argon 50）**——價格未載；Antigravity 付費訂閱者可用，想省額度的人先觀察實測。
 > - 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。
 > - 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。
 
@@ -139,6 +140,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Google（Gemini）
 **現在的答案**
+- 11-12 **Gemini 4 Hydrogen** 發布：Google 稱主打日常 coding 與 agentic 工作流的速度與效率，。
+  - Carbon、Argon 則留給長程推理。
+  - 官方稱 Artificial Analysis 智慧指數預設高思考等級 51（Argon 50），xhigh 達 54。
+  - 開放 AI Studio 各層級、Gemini API 與 Google Antigravity 付費訂閱者，價格未載（Blog/Google DeepMind Blog）。
 - 11-10 **Gemini 4 Carbon** 對開發者、企業、科學家與消費者正式開放，官方稱資安與長程 agent 工作流達前沿水準；VentureBeat 標題稱 API 價低於 Claude Fable 5.2、Opus 5.5。上線價與 12-01 起翻倍的說法見「競品定價細節」。
 - 10-28 官方發布新一代前沿模型 **Gemini 4 Carbon**，稱 Artificial Analysis Intelligence Index v5.0 第一（59 分），資安攻防基準 SEC-bench Pro／ExploitGym／CWE-bench 大幅領先。
 - 10-13 Gemini 4 Argon 全面開放（API／AI Studio／Gemini app），定價 $2／$10 per Mtok 同 Sonnet 5；10-14 再 GA 上架 GitHub Copilot，進入 Claude Code 既有優勢的工具層戰場。
@@ -252,6 +257,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-12
+- **Google（Gemini）**：Gemini 4 Hydrogen 發布，定位為日常 coding 與 agentic 工作流的快速款，AA 智慧指數 51 高於 Argon 的 50；詳見「雷達細節」Google 節（Blog/Google DeepMind Blog）
+- **OpenAI（Codex）**：Holiday Extras 客戶案例稱以 Codex 把客戶專長轉成更好的 app、提高訂位轉換率；官方客戶故事，無量化數字（Blog/OpenAI News）
+- **Google（Gemini Decisions API，Simon Willison 11-11）**：稱 Google 加入決策模型 API 類別，支援三類問題，每百萬計價與 GPT-6 Luna 決策模型相同；非 AI 編碼工具，不列入「對手雷達」表（Blog/Simon Willison）
+- **非編碼競品**：Meta 與水泥、鋼鐵、貨運、再生塑膠簽長期採購承諾（資料中心供應鏈）、OpenAI 投入 $200 萬美元兒少安全研究，皆非 AI 編碼工具競品，不列入「對手雷達」表
 
 #### 2026-11-11
 - **OpenCode（比價分析文，僅標題可用）**：shattered.io 比較 OpenCode Go $10 與 Claude Pro $20（Google News/shattered.io）

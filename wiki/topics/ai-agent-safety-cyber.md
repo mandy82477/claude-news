@@ -31,15 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-11）
-> - **Glasswing 成效（第三方計數）**：VulnCheck 稱啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、僅 2 筆在野利用；已公開 19.4%、217 筆標已修復。
-> - **模型後門手法**：CyberSecurityNews 標題稱 Claude Code 找到把休眠神經元變成隱藏惡意觸發器的技術（僅標題可用，手法與性質未載）。
-
+> **最新動態**（2026-11-12）
+> - **誤擋**：已通過 CVP 核准的使用者，在 claude.ai 全新對話裡連完全無害、非資安的提問也被擋（GitHub #61889，44 則留言）；與 Claude Code 端的 #84352 是同一類問題，官方回應未載。
 ---
 
 ## 摘要
@@ -57,7 +55,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
 - **企業端整合（11-09）**：IBM Concert、Cisco AI Defense 宣布計畫導入 Mythos 做資安推理與紅隊測試，僅宣布階段。
-- **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程。
+- **誤擋**：通過 CVP 仍被擋（GitHub #84352，201 則留言）自 08-12 起未解，官方有申訴表單、沒有修復時程；11-12 另有 claude.ai 端回報（#61889，44 則留言）：CVP 核准用戶在全新對話問無害問題也被擋。
 - **Glasswing**：啟動與擴張時間表見 [[entities/mythos#Project Glasswing]]；第三方計數（VulnCheck，11-10）為可歸因 Anthropic 的 CVE 442 筆、僅 2 筆在野利用，Anthropic 回報的 37,966 筆發現中 19.4% 已公開、217 筆標已修復。
 - **你的選項**：個人研究者能申請的只有 CVP Defense；被誤擋可走官方申訴表單，並在 #84352 補上可重現的情境。
 
@@ -115,6 +113,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### GitHub Issue #61889：CVP 核准使用者在 claude.ai 全新對話被擋，提問與資安無關（2026-11-12 新增）
+
+- **揭露來源**：GitHub Issues／anthropics/claude-code #61889（11/12 14:11 UTC），44 則留言、4 個 👍；issue 正文未取得，內容取自標題與日報摘要
+- **核心主張**：回報者稱已通過 CVP 核准，但在 claude.ai（非 Claude Code）開新對話問完全無害、非資安的問題仍被擋
+- **與既有敘事的關係**：與 #84352（Claude Code 端，201 則留言，08-12 起未解）同屬「通過審核仍被擋」；本則是 claude.ai 端首見，兩者是否同一機制未載。CVP 層級見「## 防守方能申請什麼」
+- **可信度評估**：使用者自述的單一 issue，官方回應與可重現情境未載；Claude Code 功能面見 [[entities/claude-code-features]]
+- ❓ **待查證**（標 2026-11-12｜查 #61889、CVP approved｜複 2026-11-26）｜**claude.ai 端誤擋是否已被官方確認**：issue 狀態與官方回覆未見報導
 
 #### CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術（2026-11-11 新增）
 
@@ -479,6 +485,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-12
+- **[📋 新增，使用者回報] GitHub Issue #61889：CVP 核准使用者在 claude.ai 全新對話被擋，提問與資安無關**：44 則留言，官方回應未載，詳見「## 技術彙整」
 
 ### 2026-11-11
 - **[📋 新增，僅標題] CyberSecurityNews：Claude Code 找到把休眠神經元變成隱藏惡意程式觸發器的技術**：研究或示範性質未載，詳見「## 技術彙整」

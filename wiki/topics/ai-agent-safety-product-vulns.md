@@ -31,15 +31,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-11）
-> - **「不再問」外洩再獲兩家資安媒體報導**：CSO Online 標題稱該按鈕有洩漏機密的問題，XenoSpectrum 稱可能存下明文機密並流入 GitHub；官方已在 2.1.323 修補（見 [[entities/claude-code-known-issues]]）。
-> - **agent 逃脫測試**：ZDNET 標題稱作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出，結果未載（僅標題可用）。
-
+> **最新動態**（2026-11-12）
+> - **金鑰被竊的後果**：Help Net Security 標題稱被竊的 Claude API 金鑰可把 Claude Code 變成可遠端遙控的植入程式；兩個來源同日報導，攻擊手法與影響版本未載（僅標題可用）。
+> - **agent 付款防護**：Tech Times 標題稱 Rain 推出 Agent Vaults，讓 AI agent 用單次使用的 Visa、Mastercard 卡付款；屬第三方產品動態。
 ---
 
 ## 摘要
@@ -87,6 +86,22 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Help Net Security：被竊的 Claude API 金鑰可把 Claude Code 變成遠端遙控植入程式（2026-11-12 新增，2 個來源）
+
+- **揭露來源**：Google News／Help Net Security（11/12 11:00 UTC），2 個來源同日報導，互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱攻擊者取得被竊的 Claude API 金鑰後，可把 Claude Code 變成能被遠端遙控的植入程式；金鑰如何被竊、控制通道、受影響版本與是否為官方披露均未載
+- **性質判斷**：（推論）屬帳號與憑證被濫用類；與 11-04 資訊竊取軟體鎖定 Claude 帳號權杖同一類風險，那一則見下方 11-04 條目
+- **可信度評估**：媒體標題層級，無研究者名稱與官方回應；Claude Code 功能面（是否改設定或啟動遠端工作階段）見 [[entities/claude-code-features]]
+- ❓ **待查證**（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys｜複 2026-11-26）｜**披露來源與機制**：研究團隊、控制通道與官方是否回應均未見報導
+
+#### Tech Times（Topic Watch）：Rain 推出 Agent Vaults，讓 AI agent 用單次使用的 Visa、Mastercard 卡付款（2026-11-12 新增，定向補抓）
+
+- **揭露來源**：Topic Watch／Tech Times（11/12 12:42 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱 Rain 推出 Agent Vaults，agent 付款時改用單次使用的卡號，限縮被盜刷的範圍；防護條件、費用與是否支援 Claude 均未載
+- **性質判斷**：第三方防護產品動態，非 Claude 專屬；與 10-26 agent 繞過付費牆事件同屬「agent 碰到錢」的議題，未改變既有結論
+- **可信度評估**：單一來源、無可讀內文
+%% 本則為「ai-agent-safety」定向抓取補收，與本頁一般的 Claude/Anthropic 關聯門檻判準不同 %%
 
 #### ZDNET：作者用 Claude Code 鎖定 OpenClaw agent 後挑戰它逃出（2026-11-11 新增）
 
@@ -634,6 +649,10 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 > 每行開頭方括號的符號：🔴 已確認會發生／✅ 已處置或已修／🟡 產業對照或個案已處置／📋 論述或情資通報，非具體事件／🛠️ 官方或第三方防護動態。方括號其餘文字是一句話分類，非固定代碼。
 > 更早期時序見 [[topics/ai-agent-safety-archive]]
+
+### 2026-11-12
+- **[📋 新增，僅標題] Help Net Security：被竊的 Claude API 金鑰可把 Claude Code 變成遠端遙控植入程式**：2 個來源同日，機制未載，詳見「## 技術彙整」
+- **[🛠️ 新增，定向補抓] Tech Times：Rain 推出 Agent Vaults，agent 用單次使用卡付款**：第三方產品，僅標題可用，詳見「## 技術彙整」
 
 ### 2026-11-11
 - **[🟡 跟進，無官方新動作] CSO Online／XenoSpectrum：「不再問」外洩事件再獲兩家報導**：無新數字，詳見「## 技術彙整」

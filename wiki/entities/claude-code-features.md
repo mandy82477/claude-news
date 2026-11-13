@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-12
+**最後新聞更新：** 2026-11-12
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-10）
-> 桌面版文件：SSH session 改讀遠端主機的 managed settings 檔；Help Center 再移除「模型設定」段，新增 Preserved thinking（僅標題，見開發者須知）。
+> **最新動態**（2026-11-12）
+> 桌面版文件新增 16 段：管理員設定提醒（`forceLoginOrgUUID` 與 Console 組織、三個設定需新版 Claude Desktop）與預覽不執行腳本的說明；11-10 SSH session 改讀遠端主機的 managed settings 檔，Help Center 再移除「模型設定」段（見時序）。
 
 ---
 
@@ -82,6 +82,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 09-25：本機與 SSH session 自動載入帳號已啟用的 skills／plugins。
 
 **dev box 與受管裝置**
+- 11-12：管理員提醒——`forceLoginOrgUUID` 不宜單獨搭配 Console 組織 ID。
+  - `browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三設定需新版 Claude Desktop（`disableMobileSimulatorTools` 首見 09-14）。
+  - 預覽不執行腳本，腳本繪製的圖表／表格會空白（同 11-09）。
 - 10-24：新增內容集中於 dev box 設定範例（`acme-dev create`、`devbox` id／name）。
 - 10-24：「Local sessions on managed devices」一節與 Notification／PermissionRequest hook 範例經 2026-11-08 查證仍在現行文件（hook 範例移到遠端 session 權限提示段），並非移除。
 - 10-12：組織設定 `disableDesktopLocalSessions`、`sshHost`／`sshHostAllowlist`（見「開發者須知」）。
@@ -119,6 +122,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-12）：桌面版文件字數由 223,476 增至 226,189，新增 16 段、移除 5 段（移除的五段未載）。
+  - **新增內容（原文列出的）**：Claude Console 組織不宜單獨部署 `forceLoginOrgUUID`（帶 Console 組織 ID）。
+    - 以 Enterprise Admin Console 派送 Desktop 設定的管理員，需先把電腦更新到新版 Claude Desktop，`browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三個設定才生效。
+    - 預覽不執行腳本，所以由腳本繪製的圖表與表格會是空的。
+    - 另有「檢查電腦上仍在跑的腳本」一小節（內文未載）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-10）：桌面版文件字數由 223,150 增至 223,476，新增三段、移除三段（移除的三段未載）。
   - **新增內容**：SSH session 讀取遠端主機的 managed settings 檔；Linux／macOS 遠端在 Desktop 斷線時 worktree 內編輯可繼續；另一段列出 Terminal、Browser、iOS Simulator（原文截斷）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-09）：桌面版文件新增「在 SSH／WSL session 中預覽 HTML 檔案」一節（219,230→223,150 字）——匯出的檔案在使用者自己瀏覽器開啟會執行內含腳本；但 session 內直接預覽的檔案不執行腳本，腳本繪製的圖表／表格會顯示空白。同批新增組織層級「關閉 SSH／WSL 預覽腳本執行」開關，管理面細節見安全政策角度（[原文](https://code.claude.com/docs/en/desktop.md)）。
