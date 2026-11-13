@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-06"
-last_news_update: "2026-11-06"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-10"
 status_main: "active"
-days_since_news: 1
+days_since_news: 4
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 4
 inbound_links: 7
-attribution_count: 7
-attribution_last: "2026-11-06"
+attribution_count: 14
+attribution_last: "2026-11-10"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

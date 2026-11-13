@@ -1,0 +1,724 @@
+{
+  "date": "2026-11-09",
+  "generatedAt": "2026-11-09 22:16 UTC",
+  "articleCount": 86,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.321",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "11/09 19:22",
+      "sentiment": "",
+      "body": "這版除了讓 Fable 5.2 成為預設模型，也新增了一個 `--settings <file>` 參數供 remote 連線相關指令使用；需要帶自訂設定檔連線的使用者可以留意這個新選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        },
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "model-comparison",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.7.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.7.0",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/09 18:52",
+      "sentiment": "",
+      "body": "TypeScript 與同日發布的 Python SDK（v2.7.0）都新增 `claude-fable-5-2`、`claude-mythos-5-2` 模型識別碼支援，並讓組織 webhook 端點能接收方案狀態變更通知。用 SDK 串接新模型或監聽組織帳務事件的團隊，這次改版直接補上介面。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        },
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/09 20:52",
+      "sentiment": "",
+      "body": "新增「在 SSH 與 WSL session 中預覽 HTML 檔案」與「為組織關閉 SSH/WSL 預覽中的腳本執行」兩段說明，後者讓管理者可以把預覽畫面限制在純靜態內容、不跑腳本。用桌面版連遠端機器開發、在意預覽畫面執行風險的組織管理者可以留意這個新開關。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/09 20:52",
+      "sentiment": "",
+      "body": "新增三段說明：如何調整模型、努力程度（effort）與思考設定；Claude Cowork 新增用專案（projects）整理工作的功能；以及 Claude 為何會在對話中從 Opus 5 或 Opus 5.5 切換模型。常用 Cowork 或對模型自動切換行為感到疑惑的使用者，這幾段官方說明值得一讀。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic must face lawsuit over Claude subscription marketing - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd1ZtZzZWNUh2ejlBRmZIQ2prdlNzWnlNTFFkOFZXRWJCaXpBdzVtaUk3cDBXZG1uUXdEaEdqZHNtSWF5N2o4Ni1xdjkzVHp0azBKQTFZb0k0ZVpDYU5id2l3ZTdtNlltZVJyNUhRZjIxWDluWHd4TW5YLXhCcHNlejNyamFlZjZUbWJsaS1yb0VGZDJFQnJXZUhaNmNoUEJjM2s3TWltbFREMmNMVkdDbkNLaXNJQQ?oc=5",
+      "source": "Google News / Reuters",
+      "time": "11/09 19:38",
+      "sentiment": "",
+      "body": "Reuters 報導法院裁定 Anthropic 須就 Claude Max 訂閱廣告「5 倍、20 倍」用量宣稱是否誤導消費者的指控進一步面對訴訟程序，shattered.io 另篇報導同日也證實這些主張將繼續審理。正在訂閱或評估 Claude Max 方案的使用者，可留意後續開庭進展。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing-incidents",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Flaw Threatens Linux Orgs with Malicious Code Execution - Dark Reading",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVEk0c3pENWRsUDZWeUh3emY1UGpxRDB3aUdscXRtVmhycUZNS0hma1g0Ykp2aG1RdUc1Qk96eF9DNzhwSHVDWmhwZnVDVTNldTh6dVhRNWNNSEpFSC1QNjhVbmNEMFNMYzJ3RmRIbTJNZ2JUVy1QZW1RWHoxUjhPNUxKVG9IdDdxV3BRMDJlN04wejZqeFRTZzFFQnV0Tl9ybHY4?oc=5",
+      "source": "Google News / Dark Reading",
+      "time": "11/09 18:12",
+      "sentiment": "",
+      "body": "Dark Reading 報導一項與 Claude 相關的安全缺陷可能讓 Linux 環境的組織面臨惡意程式碼被執行的風險，但報導未附具體攻擊鏈細節或是否已有實際攻擊案例。在企業 Linux 環境導入 Claude 的管理者，應留意官方是否後續發布修補資訊。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic IPO targets November debut as valuation expectations fall - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMmMtZEF5Z2ZXd0JlOUFqcVdHcU02MzAtYUh4VlZjQ2ZiVVl4VjUxT2JkcWlWVHdFaGhyX2NDZE1DZ2RmS1Zzb0h2ZGVLTUhlR3pzenZ2THkwRFBxSmlaTmF6WWc2c3MxeGdqdENzWmUxNEdUSTM3X2RKVENrb2doMEVLa1lPZ1d3UHdaRExJakt3V21tOGJocjdaRUprOEQ5SnQw?oc=5",
+      "source": "Google News / Yahoo Finance",
+      "time": "11/09 16:22",
+      "sentiment": "",
+      "body": "Yahoo Finance 報導 Anthropic IPO 時程傳出瞄準 11 月掛牌，但買方端估值看法持續探底；同日 Morningstar 另篇分析卻估出 1.7 兆美元，與探底中的市場預期形成明顯落差。評估是否參與這輪認購、或追蹤 Anthropic 現金流狀況的人，這幾天的估值分歧比先前幾日報導的區間更大。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        },
+        {
+          "id": "market-signals-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Apple's Xcode Plugin Joins Claude Code's 317-Plugin Lineup - FourWeekMBA",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNOFp0THNwNVNHTXNOeko5aDRjdjRWTjlFZ29odVpwNEJuR3p1dW1XeUdFd2pkeHhKbFJhbXRGT0tfUzZoUnJBWGd2UnBDSGkyaFhTQ3JHWHB2Q3FfLUthOVZUdTg5UmZvY0loZ3lYRTVUVkIweEZrc2FEeVJRMTFwTEMxUFJSSm9RT04yOQ?oc=5",
+      "source": "Google News / FourWeekMBA",
+      "time": "11/09 16:48",
+      "sentiment": "",
+      "body": "FourWeekMBA 報導 Apple 的 Xcode 外掛加入 Claude Code 外掛生態系，使官方外掛市集累積到 317 款。做 iOS／macOS 開發、使用 Xcode 工具鏈的 Claude Code 使用者，現在多了一個官方支援的選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-skills",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Code, Codex and Cursor have become part of your software supply chain – without approval - CIO",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNnRQVFJiQkVrZkdZdFBuV0JtVDBQeWpUWTR4UTFhQzhBcEdJN2ZLaFhpNnpDdzBOOGNxZXdNbmgwb0xWOEt3Q2NRa1k2V1NYdmwxYXBkdUJaYnB5NGdaWEtWeVVTZmE2RzN2aWwyZ09wdVJtMVJkYkZhVnpudjdBN0tKN0E1bzhKdUsxYkh1UDRobU1iSkk5bnNvN3BxNHBkLUxESVN6N1pFc2pQekxyTHdOWGFTT3J4S29MdXloUVdnRl9OczJWbHlKck5kUQ?oc=5",
+      "source": "Google News / CIO",
+      "time": "11/09 10:03",
+      "sentiment": "",
+      "body": "CIO 報導 Claude Code、Codex 與 Cursor 等 coding agent 已在企業內悄悄成為軟體供應鏈的一部分，但多數導入並未經過正式的安全核准流程，報導未附具體企業名稱或資料外洩案例。負責企業軟體供應鏈安全治理的人，這篇提醒的是盤點既有 agent 使用範圍，而不是等出事再處理。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Someone Used Claude Code to Hack Apple's AirPods 3, Got Head-Tracking Working on Linux - Gadget Review",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTXYwanRTSUU3OTN4RUM2SWdKamtYREVTLXI5UFEyYUdiZHE0TThxQm1lZjBWZ0NqbXdYSnozcjlsWlcyQVlIMVRkRnlxYzdOZzdISFRkZVg0ajJWakcwVF9RclhiRkl6NmM5NzE3MHpwd1FHY2tCekhPNjZRbUhEcFNxMHQxYnhoMHI5QnZOWlo5M19WdEpOTUFZMEp0QXNKWWxoWFRsR0M0eTI1M01NSThVZw?oc=5",
+      "source": "Google News / Gadget Review",
+      "time": "11/09 17:12",
+      "sentiment": "",
+      "body": "Gadget Review 報導有開發者用 Claude Code 逆向工程 Apple AirPods 3，在 Linux 上做出原本只有蘋果官方裝置支援的頭部追蹤（head-tracking）功能。對逆向工程或硬體周邊整合有興趣的 Claude Code 使用者，這是一個具體的「做出來了」案例可以參考。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Fable 5.2 200K context limit is shit. Compacting every few minutes",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/09 20:48 UTC ·",
+      "sentiment": "😤",
+      "body": "Reddit r/ClaudeCode 今天有多篇貼文反映 Fable 5.2 使用時頻繁觸發 compacting，其中一篇說幾分鐘就要壓縮一次、還沒寫一行程式碼就壓縮了 6 次；與官方宣布的 1M context 形成落差，實際體感的可用窗口似乎遠小於此。長時間跑 agent 任務的使用者，這幾天可以留意官方是否調整預設行為。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+      "source": "Hacker News",
+      "time": "11/09 20:04 UTC ·",
+      "sentiment": "😊",
+      "body": "獨立評測站 Artificial Analysis 給 Fable 5.2 打出 65 分，是該站目前所有模型中的最高分，HN 討論串對這個成績普遍正面。在意第三方跑分而非官方自報數字的人，這是今天少數有具體量化依據的評測。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Tell HN: A flood of reports of Opus 5.5 being nerfed",
+      "url": "https://news.ycombinator.com/item?id=50419019",
+      "source": "Hacker News",
+      "time": "11/08 23:49 UTC ·",
+      "sentiment": "😤",
+      "body": "HN 上有使用者彙整多篇 Reddit 貼文，指出近兩週 Opus 5.5 疑似被削弱（nerfed），但彙整者本身未附官方說明或量化對照數據。覺得 Opus 5.5 最近「變笨」的使用者不是只有自己這麼覺得，但目前仍停留在主觀回報階段。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        },
+        {
+          "id": "code-quality-decline",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] User Interrupt Hook",
+      "url": "https://github.com/anthropics/claude-code/issues/9516",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/08 19:05 UTC ·",
+      "sentiment": "🤔",
+      "body": "claude-code repo 的這個功能請求累積到 30 則留言，要求新增一個使用者中斷（interrupt）時可觸發的 hook。常寫自訂 hook、想在使用者打斷 agent 執行時插入自己邏輯的開發者，可以去留言附議或看官方回應進度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Assistant text before an AskUserQuestion dialog in the same turn is not displayed",
+      "url": "https://github.com/anthropics/claude-code/issues/65662",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/09 13:30 UTC ·",
+      "sentiment": "😐",
+      "body": "這個回報累積 25 則留言，指出 assistant 在同一輪裡先輸出文字、接著呼叫 AskUserQuestion 時，前面的文字不會顯示，畫面會直接跳到問題對話框。常用 AskUserQuestion 搭配說明文字的使用者，這個落差目前仍待官方確認是不是預期行為。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "How to Replace an n8n Workflow with Claude Code (Step by Step)",
+      "url": "https://dev.to/tariq_osmani/how-to-replace-an-n8n-workflow-with-claude-code-step-by-step-3a9h",
+      "source": "dev.to / #claudecode",
+      "time": "11/03 08:42 UTC ·",
+      "sentiment": "😊",
+      "body": "dev.to 這篇教學說明 Claude Code 能在工作流偏向自訂邏輯、少用現成連接器時取代 n8n，但強調它不是直接執行工作流本身，而是寫出使用者自己架設的一般程式碼。想把部分 n8n 流程換成程式碼維護的人，這篇給了具體步驟。",
+      "focusTags": []
+    },
+    {
+      "title": "Hide your slop PR descriptions behind <details><summary>",
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+      "source": "Blog / Simon Willison",
+      "time": "11/09 04:25 UTC ·",
+      "sentiment": "🤔",
+      "body": "Simon Willison 觀察到他現在多數專案的改動都是 Claude Code 或 Codex 開的 PR，因此建議把 agent 自動生成、偏冗長的 PR 說明收進 `<details><summary>` 折疊區塊，保持 PR 列表的可讀性。靠 agent 大量開 PR 的維護者，這是一個現成的排版技巧。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: Thrum – run Claude Code, Codex and other coding agents as one team",
+      "url": "https://thrum.team/",
+      "source": "Hacker News",
+      "time": "11/09 14:59 UTC ·",
+      "sentiment": "😊",
+      "body": "開發者 Leon 發布 Thrum，讓已經在用的多款 coding agent（包含 Claude Code、Codex）協同作為一個團隊運作，原本是去年底的開源專案、今年 5 月起轉為商業化經營。想同時指揮多個 agent 分工、而不是各自獨立跑的團隊，可以去看它怎麼切分角色。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: One TUI to Manage MCP Servers for Claude Code and Codex",
+      "url": "https://toolshed.run",
+      "source": "Hacker News",
+      "time": "11/09 15:31 UTC ·",
+      "sentiment": "😊",
+      "body": "開發者做了一套終端機介面 toolshed，讓同一批 MCP 伺服器可以同時掛到 Claude Code 與 Codex，憑證統一存在系統 keychain，一個指令管理所有常用的 npm／Python MCP 套件。手上 MCP 伺服器一多、懶得在兩套 agent 設定檔各設一份的人，這個工具省掉重複設定的麻煩。",
+      "focusTags": []
+    },
+    {
+      "title": "AnkleBreaker-Studio/unity-mcp-server",
+      "url": "https://github.com/AnkleBreaker-Studio/unity-mcp-server",
+      "source": "GitHub Search",
+      "time": "11/09 20:52 UTC ·",
+      "sentiment": "😐",
+      "body": "GitHub 上今天討論度上升的 MCP／技能工具，除了這套內建 268 個工具、讓 Claude、Cursor 等 agent 操作 Unity Editor 的 unity-mcp-server，還有 Qt 公司官方發布的 agent-skills（涵蓋 Claude Code、Codex、Copilot、Gemini 多款工具）與整合 LSP 伺服器外掛市集的 claude-code-lsps。做遊戲開發、或需要官方維護的跨工具技能包的人，這幾個值得收藏。",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：API 模型定價（Platform Docs）",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "source": "Official Docs",
+      "time": "11/09 20:52",
+      "sentiment": "",
+      "body": "Platform Docs 的 API 定價頁同步更新，新增 Fable 5.2 的快取讀取倍率：基礎輸入價的 0.025 倍，比大多數模型的 0.1 倍更低。常用 prompt caching、重複呼叫量大的團隊，這次改版後省下的成本會比單看輸入輸出單價更多。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing-history",
+          "pageType": "entity"
+        },
+        {
+          "id": "market-signals-customers",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：方案與定價（Plans & Pricing）",
+      "url": "https://claude.com/pricing",
+      "source": "Official Docs",
+      "time": "11/09 20:52",
+      "sentiment": "",
+      "body": "Batch 批次處理新增支援 Fable 5.2 與 Sonnet 5，Fast mode 加速方案的適用範圍也從原本的 Opus 系列擴大到 Fable 5.2（2 倍標準定價、約 2.5 倍速度）。用 Max、Team 或 Enterprise 方案跑批次任務、或想要更快回應速度的人，這次多了一個選項。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing-history",
+          "pageType": "entity"
+        },
+        {
+          "id": "market-signals-customers",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 發布新一代旗艦模型 Claude Fable 5.2 與 Mythos 5.2，Claude Code v2.1.321 已將 Fable 5.2 設為預設模型（1M context、每 Mtok 輸入 $8／輸出 $40、快取讀取 $0.20，較前代 Fable 5.1 的 $10／$50 降價兩成），多家外媒同日報導跟上。用 API 直接呼叫 Fable 系列模型的團隊，這次改版直接影響帳單與可用 context 長度。",
+      "ref_urls": [
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVzhYdUhsNzNPQkZ3aVh2eGJ4NEgtNlpiX0tRaDA3UFpFclkzMWRycGVrQlhaZVRNSnVoSlFBY2tWR0dyV2JTWWRBcy1qVnZyQ0VFWWE4SkozSFgyMmdzSXdQMkVLaXVJS0dFUUh5WXd6N1UyRjFGczJvU2VycHVEemxlZkRKQk5PRWtyakNiM0dSdzllZ1ItcjlJRzcyWnhkVE0zTy1paTZpWmJhLWZPaFVpeVFvWjMwNDdn?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic",
+        "Reuters"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Mythos 5.2 發布當天就有企業端具體表態：IBM 宣布計畫把它導入 Concert 平台做資安推理，Cisco AI Defense 同日也宣布將把它用於紅隊測試，兩篇報導都還停在「宣布計畫」階段，未附具體上線時程。企業安全團隊若已在用 Cisco 或 IBM 的工具鏈，可留意這兩項整合何時正式開放。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUzIybFNSQnhhTW1YVS12X3dwZlgxWTJFazloUUhfOFlvOVhhbU9BV09QV2k2bEpUc203cFRhQ01CNkZ5ZVZYcWdCeWw3UVlieUdMbHNUZHkxQXJBai04b2ExV2RlWmRXOHppY0VBRXpWZDBIREpncmlwQkVCcWh3OTVwNmZrc05vOXdWTlFzQThtSkhfRi1QbnZ2VXJCd2FVRWxTUTY1c256QVBFQ3V2ekp4QlN0QQ?oc=5",
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVHRrczdESHBGSFFjdElKV2pWODJEQ0xrbENTX2gyMUJMa1BIYWVBeHJsbWhMTjEzeTk0Z3d2WWpnYkxxcXp2TmVhbUNNZjQ1bUp4Vlg0T01meVZnQVB0TU9fdF85Z2VoN1pjVTBjZWQ3QllpTFBqUVVEbkVMb01fZ3JFbFF1RC1hWnpucFB5d3Z4LVZaY3hhVHJ3?oc=5"
+      ],
+      "ref_names": [
+        "IBM",
+        "Cisco Blogs"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-07）資安業者 GitGuardian 進一步揭露，Claude Code 的機密外洩時間已長達 17 個月，受影響範圍從 GitHub 擴散到 Docker Hub——比 11-07 揭露的單純公開倉庫外洩，持續時間與波及面都更廣。習慣用「是，並不要再問」跳過重複確認的開發者，這次要面對的外洩視窗比先前揭露的更長、更廣。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdFZaOThqNmVrQVBCVkRzTzdqU0dOX2c2UFc3b2pmRWhodVk1d2x1Y0kyaGxKbzZ3R2IySTlFR1MzMURtSTdjRC15ZmQwNllaRTdMMUgzUUkzYmtuRUdtdEFpdmpGRTV0UEdPNjZxdVJMNEhab0Q1Njg0OEQ2enkzUGlnTXpSR1k?oc=5"
+      ],
+      "ref_names": [
+        "GitGuardian Blog"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 58
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 6
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 5
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 8
+    }
+  ],
+  "preview": "Claude Code 實驗功能追蹤：2.1.321（自 2.1.319 起比對）新增 11 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標依蒐集邊界不列；本輪無消失旗標。對帳僅命中來源條目自身，暫不升第二階。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-skills",
+      "name": "Claude Skills",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-incidents",
+      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-experimental",
+      "name": "Claude Code 實驗功能追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-customers",
+      "name": "定價、通路與客戶這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "model-comparison",
+      "name": "Claude 模型選型對照",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-09",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "topics/claude-code-experimental",
+            "name": "Claude Code 實驗功能追蹤",
+            "label": "最新動態",
+            "date": "",
+            "body": "2.1.321（自 2.1.319 起比對）新增 11 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標依蒐集邊界不列；本輪無消失旗標。對帳僅命中來源條目自身，暫不升第二階。"
+          },
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **功能請求**：使用者中斷（interrupt）時可觸發的 hook（GitHub issue #9516，30 則留言）尚未獲官方回應（🧠 組）。\n- **UI 顯示 bug**：同一輪先輸出文字、接著呼叫 AskUserQuestion 時，前面的文字不會顯示，直接跳到問題對話框（GitHub issue #65662，25 則留言）（🧠 組）。"
+          },
+          {
+            "page": "entities/cowork",
+            "name": "Cowork",
+            "label": "最新動態",
+            "date": "",
+            "body": "Help Center release notes「用專案整理任務」段 11-07 新增、11-08 移除、11-09 再新增，反覆出現使功能是否穩定存在仍待查證（見核心功能）。"
+          },
+          {
+            "page": "entities/claude-skills",
+            "name": "Claude Skills",
+            "label": "最新動態",
+            "date": "",
+            "body": "Apple 推出官方 Xcode plugin，加入 Claude Code 外掛市集，累積達 317 款（FourWeekMBA 報導，無官方公告連結）。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.321**：新增 `--settings <file>`，供 `claude remote-co…` 系列指令帶自訂設定檔連線（官方原文截斷）；Fable 5.2 成新預設 Fable 模型。\n- **SDK**：anthropic-sdk-typescript sdk-v1.7.0、anthropic-sdk-python v2.7.0 同步新增組織 webhook `user_profile.program_status_updated`、parent organization filtering。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "桌面版文件新增 SSH／WSL session 內預覽 HTML 檔案（session 內不執行腳本）；Help Center「模型設定」段落持續改動，待查證（見核心功能、桌面版文件時序）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "Fable 5.2 發布",
+            "date": "",
+            "body": "Claude Code v2.1.321 起 Fable 5.2 為預設 Fable；1M context、$8/$40（降 20%），Artificial Analysis 評 65 分為該站最高。"
+          },
+          {
+            "page": "topics/model-comparison",
+            "name": "Claude 模型選型對照",
+            "label": "Fable 5.2 發布，取代 Fable 5.1 成為旗艦",
+            "date": "",
+            "body": "Claude Code v2.1.321 起 Fable 5.2 為預設 Fable；$8/$40（降 20%），Mythos 5.2 同日發布。"
+          },
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "Mythos 5.2 發布",
+            "date": "",
+            "body": "與 Fable 5.2 同日發布，同一模型不同防護層級；coding／reasoning／vision 均有改善，維持信任機構限定存取。"
+          },
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "HN 彙整多篇「被削弱」回報",
+            "date": "",
+            "body": "Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報；彙整者未附官方說明或量化對照，仍屬主觀觀感累積。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Yahoo Finance：IPO 時程傳瞄準 11 月掛牌，買方端估值看法持續探底；同日 Morningstar 另篇估出 $1.7 兆，與探底中的市場預期落差擴大**"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **TechCrunch 跟進燃氣機組採購案（11-08 FT／Reuters／Bloomberg 原報導，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]）**\n- **IBM／Cisco 同日宣布導入 Mythos 5.2 計畫**：IBM 擬用於 Concert 平台資安推理，Cisco AI Defense 擬用於紅隊測試，均僅「宣布計畫」階段，未附上線時程"
+          },
+          {
+            "page": "entities/pricing-incidents",
+            "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Reuters／shattered.io 跟進確認：Anthropic 須就 Claude Max 訂閱廣告「5 倍、20 倍」用量宣稱面對訴訟程序，與 11-07 Courthouse News 報導同一裁定，詳見 [[#還在發生的事故]] 「Max 20x 實際用量與廣告宣稱落差」列。"
+          },
+          {
+            "page": "topics/market-signals-ipo",
+            "name": "IPO 與財務揭露這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **IPO 傳瞄準 11 月掛牌，分析師估值走高到 1.7 兆美元**：Yahoo Finance 稱買方端估值看法持續探底、同日 Morningstar 另估 1.7 兆美元，與 11-07 談判區間 1.2～1.3 兆美元落差擴大；均未經官方或承銷商證實。\n\n前一輪（2026-11-07）：\n- **IPO 估值談判區間再探低**：Bloomberg／Hacker News 討論稿稱銀行原始目標 1.4～1.5 兆美元，談判區間已降至 1.2～1.3 兆美元，買方喊價低探至 1.1 兆美元；均為未具名轉述，承銷商尚未正式定價。"
+          },
+          {
+            "page": "topics/market-signals-customers",
+            "name": "定價、通路與客戶這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **Fable 5.2／Mythos 5.2 同步降價 20%，快取讀取倍率首降至 0.025 倍**：首次觸及 Fable 系列牌價與快取倍率結構本身。\n- **IBM、Cisco 同日宣布計畫將 Mythos 5.2 導入資安產品線**：IBM Concert 做資安推理、Cisco AI Defense 做紅隊測試，均為宣布計畫階段。\n\n前一輪（2026-10-29）：\n- **Schwab 給新簽 Claude Enterprise 的顧問最高 4,800 美元額度抵席位費（至 11-30）**：Citywire 原寫成 Anthropic 給，[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)（11-08 查證）寫明出錢的是 Schwab；20 席是 Anthropic 企業方案的最低席位、不是 Schwab 追加的門檻。原報導：[Citywire](https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMHpXNmtnSGZiWFFLTzVfaG04VlNQbnpuZHUtTnozWHBVbFpCbk5yNWh1cmQzNFlrQUp3UlczaG9oSDg3Y0djVmZxRXJrd0JKaVY0TVpGa2JaVU9NRzFPdWVGYVVYdERzS0ltOHF5b0JvQlhoM19WWklPNHMxdTdiWmFlUUh1THFMckd2MVJkWDc5Z2haeVJ4bHNKVXFOLWZsN0NLa21PZXM?oc=5) 報導。\n- **GitHub Copilot Fusion 宣稱以一半 API 成本勝過 Claude Code**：基準測試方法未公開。"
+          },
+          {
+            "page": "entities/pricing-history",
+            "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **外洩範圍擴大**：GitGuardian 研究稱「不再問」外洩金鑰已持續 17 個月，範圍自 GitHub 擴散至 Docker Hub（續 11-07）。\n- **新增漏洞**：Dark Reading 報導一項 Claude 相關缺陷可能使 Linux 環境組織面臨惡意程式碼執行風險，僅標題可用。\n- **供應鏈治理**：CIO 報導 Claude Code、Codex、Cursor 已悄悄成為企業軟體供應鏈一部分，多數未經正式安全核准。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "**企業防護工具整合 Mythos**：IBM 宣布計畫導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布用於 AI 紅隊測試，兩案均停在「宣布計畫」階段。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "「Opus 5.5 被削弱」彙整文登 HN，匯整多篇 Reddit 投訴，仍無官方或量化佐證",
+            "date": "",
+            "body": "- HN「Tell HN: A flood of reports of Opus 5.5 being nerfed」匯整 4 篇 Reddit 貼文稱近兩週 Opus 5.5 疑似被削弱，23 分。\n- 彙整者未附官方說明或測試數據，計入「泛化變慢／變囉唆」主張第十則。"
+          },
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "多代理 PR Review 補一招：把冗長 PR 說明收進折疊區塊",
+            "date": "",
+            "body": "- **Simon Willison**：agent 開的 PR 說明常偏長，收進 `<details><summary>` 折疊區塊後 PR 列表恢復可讀，不改動 agent 產生的內容本身。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "新模型發布對照減速呼籲",
+            "date": "",
+            "body": "CNBC：Anthropic 發布新旗艦模型，為 Amodei 呼籲 AI 減速以來首次；IPO 聲浪漸起，僅標題可用。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 21
+  },
+  "readerTopStories": []
+}

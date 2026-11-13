@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-10-31"
 last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 19
+days_since_news: 26
 parent: null
 children: "['entities/opencode-archive']"
 page_role: "hub"
-days_since_news_subtree: 19
+days_since_news_subtree: 26
 inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-19"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-29"
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # OpenCode

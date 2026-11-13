@@ -417,11 +417,6 @@
       "id": "addy-osmani",
       "name": "Addy Osmani",
       "pageType": "entity"
-    },
-    {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
     }
   ],
   "reader": {

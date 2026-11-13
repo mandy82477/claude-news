@@ -8,14 +8,14 @@ last_news_update: "2026-11-09"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 0
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 16
-attribution_count: 37
-attribution_last: "2026-11-06"
+days_since_news_subtree: 5
+inbound_links: 17
+attribution_count: 38
+attribution_last: "2026-11-09"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0

@@ -6,21 +6,21 @@ domain: "🤖 模型"
 last_updated: "2026-11-09"
 last_news_update: "2026-11-09"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 5
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 30
+days_since_news_subtree: 5
 inbound_links: 55
-attribution_count: 22
-attribution_last: "2026-10-08"
+attribution_count: 24
+attribution_last: "2026-11-09"
 top_source: "reddit"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude 模型選型對照

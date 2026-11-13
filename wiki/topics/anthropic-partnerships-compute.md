@@ -3,17 +3,17 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-09"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-10"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 4
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
-inbound_links: 27
-attribution_count: 10
-attribution_last: "2026-11-06"
+days_since_news_subtree: 4
+inbound_links: 28
+attribution_count: 19
+attribution_last: "2026-11-10"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

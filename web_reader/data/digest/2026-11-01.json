@@ -383,13 +383,7 @@
     }
   ],
   "preview": "Claude Code：/buddy 請願破 2,116 讚：issue #45596 今日增至 283 則留言、2,116 個 👍，官方仍未回應移除緣由。",
-  "sedimentedToday": [
-    {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-11-01",
     "summary": "",

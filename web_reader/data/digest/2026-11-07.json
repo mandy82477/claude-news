@@ -511,59 +511,9 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增已知問題／功能請求：tmux 內終端機渲染錯亂，疊字覆蓋先前輸出（#29937，30 則留言、72 個讚；🔌 組）、功能請求：skills 目錄支援子資料夾分層（#10238，55 則留言、168 個讚；🧠 組）、功能請求：把 Claude.ai 對話上下文",
   "sedimentedToday": [
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code-known-issues",
-      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
-      "pageType": "entity"
-    },
-    {
-      "id": "claude-code",
-      "name": "Claude Code",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-personal-finance",
       "name": "Claude Personal Finance",
       "pageType": "entity"
-    },
-    {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing-history",
-      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing-incidents",
-      "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
-      "pageType": "entity"
-    },
-    {
-      "id": "pricing",
-      "name": "Anthropic 訂閱方案與計費政策",
-      "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-business",
-      "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
-      "pageType": "topic"
     },
     {
       "id": "community-interfaces",
@@ -576,43 +526,8 @@
       "pageType": "topic"
     },
     {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-discussions",
-      "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-tech-patterns",
-      "name": "Claude Code 社群工作流模式",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
-      "pageType": "topic"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-ipo",
-      "name": "IPO 與財務揭露這則怎麼判",
-      "pageType": "topic"
-    },
-    {
       "id": "market-signals-legal",
       "name": "官司、監管與政府這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "skill-interest-watch",
-      "name": "社群工具規模榜",
       "pageType": "topic"
     }
   ],

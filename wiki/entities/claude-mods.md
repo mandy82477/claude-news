@@ -8,12 +8,12 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-20"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 18
+days_since_news: 25
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 18
-inbound_links: 14
+days_since_news_subtree: 25
+inbound_links: 13
 attribution_count: 6
 attribution_last: "2026-10-13"
 top_source: "google-news"
@@ -22,7 +22,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Mods

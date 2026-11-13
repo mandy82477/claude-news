@@ -470,11 +470,6 @@
   "preview": "程式開發實戰手冊：Help Center release notes 新增「Change the model, effort, and thinking settings」段；本頁「2a 官方的 session 經營建議」同步補上連結與摘要。",
   "sedimentedToday": [
     {
-      "id": "claude-code-releases",
-      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-science",
       "name": "Claude Science",
       "pageType": "entity"
@@ -483,21 +478,6 @@
       "id": "michael-burry",
       "name": "Michael Burry",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
-      "pageType": "topic"
-    },
-    {
-      "id": "claude-code-experimental",
-      "name": "Claude Code 實驗功能追蹤",
-      "pageType": "topic"
     },
     {
       "id": "coding-workflow-guide",

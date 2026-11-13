@@ -430,13 +430,7 @@
     }
   ],
   "preview": "Claude Code：新已知問題：cleanupPeriodDays 設為 99999 仍遭忽略、490 個 session 被靜默刪除（#41458）；CLAUDE.md／AGENTS.md 指令遵從性在架構上未被強制執行，彙整 10+ 份獨立回報（#53223）；輸入框拼字檢查無法關閉（#58693）；使用者 e",
-  "sedimentedToday": [
-    {
-      "id": "market-signals-customers",
-      "name": "定價、通路與客戶這則怎麼判",
-      "pageType": "topic"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-29",
     "summary": "",

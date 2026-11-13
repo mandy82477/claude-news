@@ -385,11 +385,6 @@
   "preview": "Claude Code：官方文件：桌面版文件再度異動（189,365→201,162 字），段落數超過自動比對上限，無法產生逐段差異，須自行開原文比對。",
   "sedimentedToday": [
     {
-      "id": "boris-cherny",
-      "name": "Boris Cherny",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-duet",
       "name": "Claude Duet",
       "pageType": "entity"

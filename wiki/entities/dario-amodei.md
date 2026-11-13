@@ -4,17 +4,17 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-09"
-last_news_update: "2026-11-09"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-10"
 status_main: "active"
-days_since_news: 0
+days_since_news: 4
 parent: null
 children: "['entities/dario-amodei-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 32
-attribution_count: 46
-attribution_last: "2026-11-05"
+days_since_news_subtree: 4
+inbound_links: 35
+attribution_count: 48
+attribution_last: "2026-11-10"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0

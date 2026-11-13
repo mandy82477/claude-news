@@ -7,12 +7,12 @@ domain: "👤 人物"
 last_updated: "2026-10-25"
 last_news_update: "2026-10-20"
 status_main: "active"
-days_since_news: 18
+days_since_news: 25
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 18
-inbound_links: 2
+days_since_news_subtree: 25
+inbound_links: 4
 attribution_count: 3
 attribution_last: "2026-10-20"
 top_source: "blog"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Simon Willison

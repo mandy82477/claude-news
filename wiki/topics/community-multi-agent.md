@@ -3,17 +3,17 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-10"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 4
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 4
 inbound_links: 8
-attribution_count: 5
-attribution_last: "2026-11-07"
+attribution_count: 6
+attribution_last: "2026-11-10"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

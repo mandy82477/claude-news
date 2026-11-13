@@ -454,11 +454,6 @@
   "preview": "Claude Code：v2.1.292 新增 claude plugin install --marketplace <source>，安裝外掛時可一併加入所需市集來源。",
   "sedimentedToday": [
     {
-      "id": "jamie-dimon",
-      "name": "Jamie Dimon",
-      "pageType": "entity"
-    },
-    {
       "id": "mustafa-suleyman",
       "name": "Mustafa Suleyman",
       "pageType": "entity"

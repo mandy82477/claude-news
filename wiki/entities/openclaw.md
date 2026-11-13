@@ -7,11 +7,11 @@ domain: "💼 商業"
 last_updated: "2026-10-31"
 last_news_update: "2026-10-18"
 status_main: "active"
-days_since_news: 20
+days_since_news: 27
 parent: null
 children: "['entities/openclaw-archive']"
 page_role: "hub"
-days_since_news_subtree: 20
+days_since_news_subtree: 27
 inbound_links: 9
 attribution_count: 4
 attribution_last: "2026-10-18"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # OpenClaw

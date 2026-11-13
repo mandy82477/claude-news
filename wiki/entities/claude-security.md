@@ -8,11 +8,11 @@ last_updated: "2026-10-23"
 last_news_update: "2026-10-23"
 status_main: "beta"
 matrix_role: "專用版"
-days_since_news: 15
+days_since_news: 22
 parent: null
 children: "['entities/claude-security-archive']"
 page_role: "hub"
-days_since_news_subtree: 15
+days_since_news_subtree: 22
 inbound_links: 16
 attribution_count: 10
 attribution_last: "2026-10-23"
@@ -22,7 +22,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Claude Security

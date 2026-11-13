@@ -1,0 +1,824 @@
+{
+  "date": "2026-11-10",
+  "generatedAt": "2026-11-10 18:05 UTC",
+  "articleCount": 97,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude Code's \"don't ask again\" button is leaking passwords and API keys to public GitHub repos - TechSpot",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRGZwT0M5NXFySEc3YWt3aHVrek9yZEs1R20xUkc4MnRha29ZeG44RGxLMFl5bTBNX2s1eXBWYl9TSEI4a0NGdDdhQlAzX2xGMFBOd1NhOUlBdUhUWXBkc2hTUkFfQVVnTnd4bnBvTjk0TzB0RjNiNGRna2JLV2hVYXFFVzVSZC16dXRWdGlxRzJYOEY0VFh2Nw?oc=5",
+      "source": "Google News / TechSpot",
+      "time": "11/10 12:03",
+      "sentiment": "",
+      "body": "承 11-07、11-09 的揭露，今日 TechSpot、VentureBeat、SC Media、Dataconomy、Mezha、en.ain.ua 共 6 家媒體同日再報導；VentureBeat 的標題追問企業的密碼與金鑰是否因此外露，The Defiant 則以標題給出「1,379 組機密」的數字，與 11-07 報導的 2,539 組不同，標題沒有交代兩者的統計範圍。用過「Don't Ask Again」選項的人，檢查自己公開 repo 裡的 Claude Code 設定與核准檔有沒有帶金鑰，有就輪替。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/claude-code] v2.1.322",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+      "source": "GitHub / anthropics/claude-code",
+      "time": "11/10 02:29",
+      "sentiment": "",
+      "body": "這版新增 Vertex 上的 fast mode，涵蓋 global、us、eu 三個區域，Vertex 若拒絕該請求就退回標準速度。透過 Vertex AI 使用 Claude Code 的團隊可以直接開啟，被拒時只是變慢、不會中斷。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-python] v2.8.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.8.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "11/10 16:32",
+      "sentiment": "",
+      "body": "新增 Claude Tag 的分析彙總與使用者報表指標，並在 Claude Tag 的 Slack 頻道設定加入 reply_mode 欄位，另有一項 Bedrock 端傳送「;」字元的修正。用 SDK 管理 Claude Tag Slack 部署的團隊，這版直接補上對應欄位。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] vertex-sdk-v1.1.3",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.3",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/10 16:33",
+      "sentiment": "",
+      "body": "TypeScript SDK 的 Vertex 套件改為把模型名稱中的「;」以 %3B 傳送，專案 ID、區域或模型若含 `;x` 這類字串會拋出 AnthropicError；同日的 google-cloud-sdk v1.1.4 對專案、地點、workspace ID 加了同樣的檢查。用 TypeScript SDK 串 Vertex 或 Google Cloud 的團隊，升級後格式不合法的 ID 會得到明確的錯誤。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/10 17:59",
+      "sentiment": "",
+      "body": "新增三段：Claude 如何標記 AI 生成內容、Claude 訓練資料的更新程度，以及「Preserved thinking」——Messages API 調整處理 thinking blocks 的方式以防範蒸餾；原本 11-09 新增的 Claude Code 模型設定、Cowork 專案整理與 Opus 5／5.5 模型切換說明三段，這次被移除。用 Messages API 帶 thinking blocks 做多輪對話的開發者，應讀 Preserved thinking 那段確認行為是否改變。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        },
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "官方文件更新：Claude Code 桌面版",
+      "url": "https://code.claude.com/docs/en/desktop.md",
+      "source": "Official Docs",
+      "time": "11/10 17:59",
+      "sentiment": "",
+      "body": "新增三段，講到 SSH session 會從遠端主機讀取 managed settings 檔，以及在 Linux 或 macOS 遠端機器上，桌面版斷線時 worktree 內的編輯仍可繼續；另有三段被移除。用 managed settings 管控遠端開發環境的組織管理者，要留意 SSH session 讀的是遠端主機上的那份檔案。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Claude Fable 5.2 vs GPT-6.1 Sol: Is Fable worth four times the price? - Kingy AI",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43dVhfY1U0VWxzNWxhcUdMakxYaEdrQ2lhZEtEZVlvWHh3OE5IUGprcVpET3dPNE9raVJNZTI4RDZDMVp6UnF4U3ZzME9jbEE1dVBUbFVFaDlhaTg?oc=5",
+      "source": "Google News / Kingy AI",
+      "time": "11/10 07:05",
+      "sentiment": "",
+      "body": "標題提出 Fable 5.2 是否值得比 GPT-6.1 Sol 貴上四倍的問題；抓取內容沒附四倍的計價基準。在兩者之間選型的人，可用自己的實際用量重新驗算價差。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark - The Hacker News",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXJOZE13aW5YNlFwQkNJUXA1dEZlUzd3c1l5c2t2MFh2V0RWVWV5ZXVpM004cmhReWs4MndrUVVFWEpENWM1NHpOaTFVQUhlNTB2ZThVVWQ2ZFl2U0tIbXYxaXpvZmNoLXNxSDl5QTB6dWFvalVjRWY0OXVFLUNxQnhhTQ?oc=5",
+      "source": "Google News / The Hacker News",
+      "time": "11/10 08:16",
+      "sentiment": "",
+      "body": "標題稱 Fable 5.2 在多階段網路攻擊基準測試中勝過 GPT-6 Cyber；測試方與具體分數標題沒有載明。做資安攻防評估的團隊，這是一份可以追原文的第三方比較。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        },
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Mythos 5.2 arrives with stronger bug hunting and less sandbox-breaking behavior - Help Net Security",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMnJScVlaSjg5cm9qZF81YzI0bFRxd0RxRjZRMXlvd1FfdGZKNHRvc0pMVnVQWTJXNGc0dnkzcnNVMEhkWEJsaG1jY2NlQzk3M3ZBRlBLOHBPNGREX1BLdGEzWnpSTVNJR3NqdmpnZnZoWG9MTkpCZ1lGUHQ4Ynpha0xXVkdJbzFqbF9KNy1sRk50QS1rbUY4?oc=5",
+      "source": "Google News / Help Net Security",
+      "time": "11/10 11:40",
+      "sentiment": "",
+      "body": "標題指 Mythos 5.2 找漏洞的能力更強，跳出沙箱的行為也較少。已在評估把 Mythos 用於資安推理或紅隊測試的企業，可拿這點對照 IBM、Cisco 昨日宣布的導入計畫。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-cyber",
+          "pageType": "topic"
+        },
+        {
+          "id": "mythos",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Microsoft is giving Claude the keys to UK Copilot tenants by default - The Register",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeHZMenBCVHdldnQyNHRRSllnVm9zb0VqM2NmUTd3M3RHX2ZtX3ZrdjJIRlpGeUFtNTRwRlV4eXgxdnFFSGloRFdaaWFET2s5RW42dzNnTGwwd3ZoYi1vNUVuSl80MXdqNjhDNndibjFUWkZQanZwUW1JTnl0ejY0ZTQyc3lEZ2NTZjRBZnM5c1pJR0JYaXkzUkN0dndDYmhZMkhVMkYxT0JaUjExOW5SV2psQ29CZTVLbWd6LTBtZWpXX2M?oc=5",
+      "source": "Google News / The Register",
+      "time": "11/10 11:30",
+      "sentiment": "",
+      "body": "標題稱 Microsoft 預設讓 Claude 取得英國 Copilot 租戶的存取；哪些資料受影響、能否關閉，標題沒有說明。英國 Microsoft 365 Copilot 的管理員，應去租戶設定確認 Claude 的預設狀態。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-partnerships-compute",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Goldman Sachs expects Anthropic revenue to exceed $600bn by 2030 - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPc0tWeGNDOUh5S1RleHBrVDlUdGNiRjktVDZGbmtRNlBUcXkwbDRfNXBuSXZ4Yk1NNVBOUTZXNDRlc09LdDI0VlpKMlFRMUVCaVh6VndVSWlwT2NkNElsc1JxUDVZUWFYZ2pWY3NFTFNKQm9fZnk1YkNTZWV6dnFVc2s0T2o?oc=5",
+      "source": "Google News / Financial Times",
+      "time": "11/10 14:52",
+      "sentiment": "",
+      "body": "《金融時報》報導高盛預估 Anthropic 營收到 2030 年將超過 6,000 億美元；預估的假設與基準年，抓取內容沒有列出。評估 IPO 的人，可把這個預估放在路演價格區間旁邊一起看。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "JPMorganChase Broadens Claude Code Use Beyond Engineering Teams - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaDVZWVBqVS1qLWZ1NEx6RjJZZ2ZXQmlLcnJteFlUY0JRRFZRYlpSeEFVdkpuRk9DYUF6WnRjeFlicVFRQWViQ3lSbVZwNnZldG1Lc3otQnVJVFY5a01FRmxFY2FCTTlTdW1rQTFZQmdrcWc1Z21jbFdQUzNGa25QSkxuNzNTdFRHUXhBU2p3?oc=5",
+      "source": "Google News / Unite.AI",
+      "time": "11/09 22:45",
+      "sentiment": "",
+      "body": "標題稱摩根大通把 Claude Code 的使用範圍擴大到工程團隊以外；涉及哪些部門，標題沒有說明。想把 Claude Code 推向非工程職能的企業，這是一個大型金融機構的實際做法可供參考。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "enterprise-tool-tracker",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "A year after the 100% AI mandate nobody understands our code",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xq2n3t/a_year_after_the_100_ai_mandate_nobody/",
+      "source": "Hacker News",
+      "time": "11/09 22:19 UTC ·",
+      "sentiment": "😤",
+      "body": "r/ClaudeCode 的貼文在 HN 拿到 144 分，討論中有人說身邊的大企業開發者每天花 10 小時把需求輸入 Claude、等待、審查，卻覺得什麼也沒學到；也有人質疑貼文本身是 AI 生成的反 AI 內容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Show HN: STE80 Humanizer – de-AI text by writing 80% of the way to ASD-STE100",
+      "url": "https://github.com/Dodaios/ste80-humanizer",
+      "source": "Hacker News ＋HN Repo Bridge",
+      "time": "11/09 18:05 UTC ·",
+      "sentiment": "🤔",
+      "body": "這個去 AI 腔的文字工具在 HN 拿到 102 分；有人指出它是去 AI 化而非擬人化，另有人說在 Claude 全域指示加入 STE 風格要求後，Opus 與 Fable 似乎不遵守，Sonnet 則很遵守。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-discussions",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Remote Control: automatic reconnection doesn't work -- connection drops silently with no recovery",
+      "url": "https://github.com/anthropics/claude-code/issues/34255",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/10 15:58 UTC ·",
+      "sentiment": "😤",
+      "body": "Claude Code issue 累積 73 則留言、112 個 👍：Remote Control 連線中斷後不會自動重連，也沒有任何提示。依賴 Remote Control 遠端操作長任務的人，斷線後得手動重連。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "RTL (Right-to-Left) Support for Hebrew & Arabic in Claude Desktop / Cowork",
+      "url": "https://github.com/anthropics/claude-code/issues/38005",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/10 07:44 UTC ·",
+      "sentiment": "🤔",
+      "body": "功能請求累積 47 則留言、126 個 👍，要求 Claude Desktop 與 Cowork 支援希伯來文與阿拉伯文的由右至左排版。用這兩種語言工作的使用者，這是目前被集中追蹤的需求。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] [Billing] Max 5x → Max 20x upgrade fails with \"Unable to update subscription\" — same pattern as #10832, #50710, #4…",
+      "url": "https://github.com/anthropics/claude-code/issues/55266",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/10 14:11 UTC ·",
+      "sentiment": "😤",
+      "body": "Max 5x 升級到 Max 20x 時出現「Unable to update subscription」錯誤，41 則留言；標題指出與 #10832、#50710 等舊 issue 是同一模式。打算升級 Max 方案的人，遇到這個錯誤不只你一個。",
+      "focusTags": []
+    },
+    {
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+      "source": "Blog / Simon Willison",
+      "time": "11/10 05:34 UTC ·",
+      "sentiment": "😐",
+      "body": "Simon Willison 摘引 Anthropic 文件：Fable 5.2 對提示裡「程式碼歸誰所有」很敏感，提示若沒提或寫成別人的程式碼，模型傾向沿著現有結構往上加；在提示中加一句「這份程式碼是你的」後，小型編碼任務中約一半的嘗試會合併重複程式碼，沒加則不到十分之一。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "llm-anthropic 0.31",
+      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+      "source": "Blog / Simon Willison",
+      "time": "11/09 23:58 UTC ·",
+      "sentiment": "😐",
+      "body": "Simon Willison 把 Fable 5.2 與 Mythos 5.2 加進 llm-anthropic，並用五個推理等級各跑一次「騎腳踏車的鵜鶘」SVG，其中 max 等級花掉 128,000 個 thinking token 後仍沒有回傳圖片。想用 llm 命令列試 Fable 5.2 的人，先知道 max 等級有耗盡 token 的風險。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "fable-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "riponcm/projectmem",
+      "url": "https://github.com/riponcm/projectmem",
+      "source": "GitHub Search",
+      "time": "11/10 17:59 UTC ·",
+      "sentiment": "😐",
+      "body": "（879 星）開源的 coding agent 記憶工具，記錄問題、嘗試、修法與決策，並在 agent 重複已失敗的做法前提出警告，內建 MCP 伺服器，主打完全本機、無雲端與遙測。",
+      "focusTags": []
+    },
+    {
+      "title": "krakenfx/kraken-cli",
+      "url": "https://github.com/krakenfx/kraken-cli",
+      "source": "GitHub Search",
+      "time": "11/10 17:59 UTC ·",
+      "sentiment": "😐",
+      "body": "（807 星）Kraken 的命令列工具，可在終端機或 AI agent 中交易加密貨幣、代幣化股票、外匯與期貨，內建 MCP 伺服器並提供以即時價格模擬的紙上交易。",
+      "focusTags": []
+    },
+    {
+      "title": "yicheng47/runner",
+      "url": "https://github.com/yicheng47/runner",
+      "source": "GitHub Search",
+      "time": "11/10 17:59 UTC ·",
+      "sentiment": "😐",
+      "body": "（504 星）讓 Claude Code、Codex、Copilot CLI 與 pi 在同一任務裡協作，各自保留自己在真實終端機裡的介面。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-multi-agent",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [
+    {
+      "title": "官方文件更新：方案與定價（Plans & Pricing）",
+      "url": "https://claude.com/pricing",
+      "source": "Official Docs",
+      "time": "11/10 17:59",
+      "sentiment": "",
+      "body": "頁面字數由 23,768 增至 23,984，新增 7 段，內容是 Claude Data，以及 Data 搭配 Motion、Sheets、Whiteboards（beta）的組合；原有的 Claude Dashboards（beta）與 Claude Motion and Dashboards（beta）相關段落被移除，各組合歸在哪個方案、價格多少，抓取內容沒有列出。正在評估付費方案的人，直接到定價頁確認 Sheets 與 Whiteboards 屬於哪個方案再決定。",
+      "focusTags": [
+        "[新工具]"
+      ],
+      "sedimented": [
+        {
+          "id": "pricing-history",
+          "pageType": "entity"
+        },
+        {
+          "id": "pricing",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[新工具]",
+      "text": "Anthropic 同日推出 Claude Meetings 與 Claude Sheets 等辦公類產品：TechCrunch 稱 Claude Meetings 把會議討論轉成計畫與任務，Reuters 稱 Claude 可進入 Google Meet 即時處理任務，The Verge 與 Bloomberg 則把這批產品形容為 Anthropic 自己的辦公套件、直接對上 Microsoft；官方定價頁也同步出現 Claude Sheets（beta）的新段落。平常靠線上會議協作的團隊，現在多了一個可試用的選項，採用前先去定價頁確認各方案的涵蓋範圍。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdkN0VWFWT3BuM1RBTG1ZWVp6TWs3RVpNZ2JHSGp2Q0NmcEh6Z3p6anZYY1FYYXpSTXRYZ2hoX2dXY2MyaXdGSXptUFlxWXhMRmVyLVgwbEw0N05PTWJmMmF5bE9uYzF5RkhGOHpueGpuUzA3UE5mekh1UE1oWmp1dWhvWTVEaHhacXJkb0poVklsRWd1V2xWVkpuWlZBbDQ3X3RHajUzWmlabGM5Wml4Ni1KWDZLOV9PYlhPag?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPa1lkekszdzZzWXNDOXRjbGg1SWhiaFR5NXZrWVNuSjluX0xOX1BQcm9YZDlneHJJU3dEOXA4Z0pvY09pbXhua1pGWlJKWU51OVNmVFdTNzY1QWN2cjl0b0ttTHR1b0cyQW9RX0habzJ3MVp1dHc2YXh6RGZLNHJGY3hCMlhsakFsOEUtSWJXUWVpb3I5eHpmcGNhVm5JTlo2VVE?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxOcjc0QUZNb0FYTVFPN2d1Vld4eTZPWk52NHNKN1Jiblc5MW9ZNkV2Tm0xWU8zR0VtazQ1NV9LQlk2QnJPelVvaXp2QWJDVUxicmowX2Z5TWVhdjE0RlhnanNaSm9ITndEMFpJUjlCUXpVdHljRFY4N2VuRm44cmwxRU1aMnNrTElDeVN3ZGR4YXVBeWNWX29sSzFfYjRlVDNrTEFaU1llSkljU0VQRnc?oc=5",
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZlMwX3dzdHpVbEFBcTlGVWlibGtMcDBYOGJwbVJaaWs5X2xiVWM3ZUVDZHBoM1dyM0t1NjNYdVpzTHlYVHhKYTRHbXJTSmpRSFRLZ3FENE9kcXRFcHZVVTloYVJybUJaWWJ0a0ZGcVZpWXA1U2dZNmp1ZjRtbEJWSEtSc1RRbXdsSnh3bjV2WE90SHpBeGJkQ1hfUUtnZV9ldW14RUJoRVFMMFZmVGxBemNXSlM?oc=5",
+        "https://claude.com/pricing"
+      ],
+      "ref_names": [
+        "TechCrunch",
+        "Reuters",
+        "The Verge",
+        "Bloomberg",
+        "官方定價頁"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-08）Anthropic IPO 進入路演：官方公告擬發行 8.25 億股 A 類普通股（其中公司自售 801,351,354 股）、價格區間每股 70 至 78 美元、已申請在那斯達克以代號「ANT」上市，CNBC 引述消息人士稱最快 11 月 19 日開始交易；各家對估值的報導仍不一致，ABC7 稱依申報文件近 1.3 兆美元，Bloomberg 寫 1.4 兆美元、NYT 寫最高 1.4 兆美元，Fox Business 則寫約 1 兆美元。評估是否認購的人，前幾天只有估值傳聞，現在有了官方每股價格區間可以對照。",
+      "ref_urls": [
+        "https://www.anthropic.com/news/roadshow-launch",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRndodzlpaTVnaEdjdDBCMHNyQlVjclVGb0tXV0xEdkU4YUIxbE83eTdHUFpRN1VYQ3UybWRYckJ4Q0s5UlhZSHRILXgzN0g4MHRveHVrbUlfZnhvcV85dWs3WjI0Y1VPeXBaakY1RTlJazBsZ2NPeFBEcGVLcHRtNXl3UzZ3ZzRDN1JEcUV4dWRMN0NhY1E?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYjJvM0IzbWxfT1AzbEpMTDR4QzNNLVZ6R3JtdV9DR3hwUllTbHNqeC1HUFE5VWF5aW9GRm9iVkFOTjJqRXJMNUdQeUxKXzZxSkVSQVBYN1BGakJxejVVdU9BVFBLa3JkSkIzZmRiODl3bVVXZENzc1dJOUhVR3Byd0hURjlwUTZhWDRHWS1neVcwVHFZSzBYNlNkWlJPaGs?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUTgtOV9zN3Ywb2UycWxaSlNwOGltSV91cjMtRWdlNnJibWhnTVgtQkZkd0ZYU0NweVB5MEhaMkd6ZVNpUXlra3JiQ2ltcU4xUUUta0pPV2dqb19uWWpLZWVkanNqTnlsVEo2YmdFeGw2M2dNcGtGVHdGb1hBMTN4MFRteXhkbUctZWIxSURUQjcxczZxbmdtbGQ0d3ZLWWJCcjFQQVpwb1pjNHNzWlE?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic 官方",
+        "CNBC",
+        "ABC7",
+        "Bloomberg"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Google 宣布 Gemini 4 Carbon 對開發者與企業正式開放，官方稱它主打資安能力與長程 agent 工作流；VentureBeat 的標題則指出它的 API 價格低於 Claude Fable 5.2 與 Opus 5.5。這是與 Claude 直接比價的競品動態，正在為 coding agent 選型、在意 API 成本的團隊，值得把 Carbon 加進比價清單。",
+      "ref_urls": [
+        "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTjR5SzFCUEJCS0phWGJKT2FDREJBQnA3U094UHh2azF6VVYtUENId29Zb3Iya3dLT29vdVNFMkJTMTdVS1dYYWJ5VmNaMlp1TG1qbUtUYVp3cEx1TzI0NFRLS3hROE1wall1eThWMnVzZ1pnc290OUpPd1FTVHR3OTJ3UmowSnQ2NUhDS21JYV8zNkoyWmw4RDk1Ql94d3VCeFRUemZ1YUprVmNWUGVFRnhKS0RNaEFtc25zN2lqQzdwMGJ5SzdSeFNaczJZZGhxclhJanJSeWd2bTQ?oc=5"
+      ],
+      "ref_names": [
+        "Google DeepMind",
+        "VentureBeat"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "Claude Fable 5.2 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot",
+      "body": "Copilot 11-09 宣布 Fable 5.2 正式提供，可用於跨大型程式庫的多步驟編碼任務",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Local vs. Cloud AI Coding Agents: Benchmark Results, Hardware Costs, and Performance - HackerNoon",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMDFUQmdlSVl0VS05Nm5WQ2RGVkpybGpTTU5tS3RyRmFmbF9NUTIwTXVSWTY5Ymtja0JzNy14OGdFMHNEcWU2WTlUeTVQU0xkbTNHYWVOQmxkUFU5NUtfZGFlSzhvVHl6Z2l3UVpuSzhBdWJVbnluZ3V2YUIyQXBIQkJtWFpHMk5XcFVDOHE0NnQ1NDVDMjFrbmwyd1o4ejRhLV9YMGFxcUUtZW5UdlZpQTh5RWsyR2lSa2c?oc=5",
+      "body": "比較本機與雲端 coding agent 的基準、硬體成本與效能，可作為自架與雲端方案取捨的參考",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    },
+    {
+      "title": "Prompt Injection Detector Test: 12 Steps, 80 Min [2026] - shattered.io",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBoM1hsNTE1SmRRQ0k0RWFwTWRrYjJDMkIyVEdkWHFOSUtXemFLa0p3c2F2alBpeTRnckluWDVwQU5lTTJLUHNGVVlSbDVOcHF2akV6RzJSY0tmWlp3LTF6OUJ6TUNQNl9tbXd5amZoYU1reWpPZFpGUQ?oc=5",
+      "body": "提示注入偵測器的實測流程，對 agent 防護選型有參考價值",
+      "topic": "ai-agent-safety",
+      "topicPage": {
+        "id": "ai-agent-safety",
+        "name": "AI Agent 安全與可靠性",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 66
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 16
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 13
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：互動數更新：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "cowork",
+      "name": "Cowork",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5、5.1 與 5.2",
+      "pageType": "entity"
+    },
+    {
+      "id": "jamie-dimon",
+      "name": "Jamie Dimon",
+      "pageType": "entity"
+    },
+    {
+      "id": "mythos",
+      "name": "Claude Mythos",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing-history",
+      "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+      "pageType": "entity"
+    },
+    {
+      "id": "pricing",
+      "name": "Anthropic 訂閱方案與計費政策",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-prompt-injection",
+      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-partnerships-compute",
+      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-multi-agent",
+      "name": "社群做法：多 agent 怎麼分工與協調",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-discussions",
+      "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "enterprise-tool-tracker",
+      "name": "大型企業 AI 編碼工具使用追蹤",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-10",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **互動數更新**：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。\n- **功能請求**：Desktop／Cowork 支援 RTL（希伯來／阿拉伯文）排版（GitHub issue #38005）累積 47 則留言、126 個讚。"
+          },
+          {
+            "page": "entities/cowork",
+            "name": "Cowork",
+            "label": "最新動態",
+            "date": "",
+            "body": "Help Center release notes「用專案整理任務」段 11-07 新增、11-08 移除、11-09 再新增、11-10 再移除，功能是否穩定存在仍待查證（見核心功能）。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **v2.1.322**：新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度。\n- **SDK**：anthropic-sdk-python v2.8.0 新增 Claude Tag 分析指標與 Slack 頻道 `reply_mode`；TypeScript 的 vertex-sdk-v1.1.3、google-cloud-sdk-v1.1.4 對含 `;x` 的 ID 改拋 `AnthropicError`。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "桌面版文件：SSH session 改讀遠端主機的 managed settings 檔；Help Center 再移除「模型設定」段，新增 Preserved thinking（僅標題，見開發者須知）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "官方 Fable 5.2 提示指南現身",
+            "date": "",
+            "body": "提示寫「這份程式碼是你的」，小型編碼任務約半數會合併重複程式碼；沒寫不到十分之一（Simon Willison 摘引官方文件）。"
+          },
+          {
+            "page": "entities/mythos",
+            "name": "Claude Mythos",
+            "label": "Mythos 5.2 媒體解讀",
+            "date": "",
+            "body": "Help Net Security 標題稱 5.2 找漏洞更強、跳出沙箱的行為更少（僅標題，細節未載）；仍限信任機構存取。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **IPO 進入路演：擬發 8.25 億股、每股 $70～78、Nasdaq 代號 ANT，傳最快 11-19 掛牌**（官方公告；掛牌日為 CNBC 引消息人士）。公司自售部分按區間推算約 $561～625 億（推論）；估值報導分歧（$1～1.4 兆），見 [[topics/anthropic-ipo#上市走到哪一格]]。"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🔴 **Gemini 4 Carbon 11-10 對開發者與企業正式開放，VentureBeat 標題稱 API 價格低於 Claude Fable 5.2 與 Opus 5.5**（DeepMind；VentureBeat）——正在做 coding agent 選型、在意 API 成本的人，把 Carbon 加進比價清單；實際牌價與基準未載。\n- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/enterprise-tool-tracker",
+            "name": "大型企業 AI 編碼工具使用追蹤",
+            "label": "最新企業採用異動",
+            "date": "",
+            "body": "- **JPMorgan Chase 美國本部：Unite.AI 稱 Claude Code 使用範圍擴大到工程團隊以外**（僅標題，涉及部門與規模未載）；與先前每月 $2,000 上限只涵蓋部分工程師的做法相比方向放寬，是否同步調整上限未見報導\n- NDTV Profit 跟進確認高盛禁用 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致（跨 3 媒體）；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **The Register：Microsoft 傳預設讓 Claude 取得英國 Copilot 租戶存取**：僅標題可用，受影響資料與能否關閉未載；英國 Microsoft 365 Copilot 管理員應查租戶設定\n- **TechCrunch 跟進燃氣機組採購案（11-08 FT／Reuters／Bloomberg 原報導，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]）**\n- **IBM／Cisco 同日宣布導入 Mythos 5.2 計畫**：IBM 擬用於 Concert 平台資安推理，Cisco AI Defense 擬用於紅隊測試，均僅「宣布計畫」階段，未附上線時程"
+          },
+          {
+            "page": "topics/market-signals-ipo",
+            "name": "IPO 與財務揭露這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **IPO 路演啟動：擬發 8.25 億股、價格區間每股 70～78 美元，傳最快 11-19 掛牌**：股數與價區官方公告載明，掛牌日僅消息人士說法（11-14 查證）；各家估值報導分歧於 1～1.4 兆美元。"
+          },
+          {
+            "page": "entities/pricing-history",
+            "name": "Anthropic 計費沿革：價格、方案與促銷怎麼變過來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Plans & Pricing 頁改版：新增 Claude Data／Sheets／Whiteboards（beta）段落，移除 Dashboards（beta）**；歸屬方案與價格未載，同日 Anthropic 推出 Meetings、Sheets 辦公產品（Official Docs；TechCrunch；The Verge）\n- （11-09）**Claude Fable 5.2 發布，牌價 $8/$40 per Mtok（降兩成）**；同日官方 Plans & Pricing 頁 Fast mode 擴大至 Fable 5.2（2x 標準價）、Batch processing 示範模型換代（Fable 5.1→5.2，新增 Sonnet 5）。見 [[entities/pricing#模型 API 定價現況]]。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "（；11-14 補官方修補）\n- **「不再問」外洩官方已修**：2.1.323（11-12）起，像含密鑰或會存進 git 追蹤之 `settings.local.json` 的允許規則只留在本次 session；`settings.local.json` 改全域忽略。已外洩的金鑰仍須換。\n- **「不再問」外洩再獲六家媒體跟進**：TechSpot、VentureBeat、SC Media、Dataconomy、Mezha、en.ain.ua 同日報導；標題提到的外洩檔案是設定檔與核准檔，The Defiant 另給「1,379 組」，與 2,539 組口徑不同。外洩機制與官方修補仍未見（續 11-07）。\n- **外洩範圍擴大（11-09）**：GitGuardian 研究稱「不再問」外洩金鑰已持續 17 個月，範圍自 GitHub 擴散至 Docker Hub（續 11-07）。\n- **新增漏洞**：Dark Reading 報導一項 Claude 相關缺陷可能使 Linux 環境組織面臨惡意程式碼執行風險，僅標題可用。\n- **供應鏈治理**：CIO 報導 Claude Code、Codex、Cursor 已悄悄成為企業軟體供應鏈一部分，多數未經正式安全核准。"
+          },
+          {
+            "page": "topics/ai-agent-safety-prompt-injection",
+            "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **偵測器實測教學（11-10）**：shattered.io 標題稱有一份 12 步、約 80 分鐘的提示注入偵測器測試流程；僅標題可用，來源先前已被標低可信度。\n- **（11-06）**\n**業界持續倡議內建提示注入偵測**（Arcjet／Security Boulevard，僅標題）：防法仍停在教學文與方案盤點層級，無第三方量測。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "**第三方網攻基準與 Mythos 5.2**：The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber，測試方與分數未載；Help Net Security 標題稱 Mythos 5.2 找漏洞更強、跳出沙箱的行為較少（僅標題可用）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-tech-discussions",
+            "name": "社群技術討論趨勢",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **「AI 該寫多少程式碼」辯論跨到 Hacker News**：「一年 100% AI 強制令後沒人看懂程式碼」貼文上 HN 拿到 144 分；有人回報身邊大企業開發者每天十小時餵需求、等待、審查卻學不到東西，也有人質疑貼文本身是 AI 生成的反 AI 內容。\n- **STE80 去 AI 腔工具在 HN 拿到 102 分**：有人把 STE 風格寫進 Claude 全域指示，回報 Opus 與 Fable 似乎不遵守、Sonnet 很遵守。"
+          },
+          {
+            "page": "topics/community-multi-agent",
+            "name": "社群做法：多 agent 怎麼分工與協調",
+            "label": "Multi-agent 架構添「同一任務、各保留原生 TUI」取向：yicheng47/runner",
+            "date": "",
+            "body": "- **yicheng47/runner**：讓 Claude Code、Codex、Copilot CLI 與 pi 在同一個任務裡協作，各自保留真實終端機介面，GitHub 504★。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "IPO 直播將由 Amodei、Dimon 同台",
+            "date": "",
+            "body": "Yahoo Finance 報導 Anthropic 規劃 IPO 直播，Amodei 與摩根大通執行長 [[entities/jamie-dimon|Jamie Dimon]] 同列；僅標題可用，時間與形式未見報導。IPO 脈絡見 [[topics/anthropic-ipo]]。"
+          },
+          {
+            "page": "entities/jamie-dimon",
+            "name": "Jamie Dimon",
+            "label": "獲報將與 Amodei 同台 IPO 直播",
+            "date": "",
+            "body": "Yahoo Finance 報導 Anthropic 規劃 IPO 直播，摩根大通執行長 Jamie Dimon 與 [[entities/dario-amodei|Dario Amodei]] 同列；僅標題可用。此前 Dimon 三度公開評論 Mythos 風險（最近 10-07）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 19
+  },
+  "readerTopStories": [
+    {
+      "title": "Claude Code's \"don't ask again\" button is leaking passwords and API keys to public GitHub repos - TechSpot",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRGZwT0M5NXFySEc3YWt3aHVrek9yZEs1R20xUkc4MnRha29ZeG44RGxLMFl5bTBNX2s1eXBWYl9TSEI4a0NGdDdhQlAzX2xGMFBOd1NhOUlBdUhUWXBkc2hTUkFfQVVnTnd4bnBvTjk0TzB0RjNiNGRna2JLV2hVYXFFVzVSZC16dXRWdGlxRzJYOEY0VFh2Nw?oc=5",
+      "source": "Google News / TechSpot",
+      "time": "11/10 12:03",
+      "sentiment": "",
+      "body": "承 11-07、11-09 的揭露，今日 TechSpot、VentureBeat、SC Media、Dataconomy、Mezha、en.ain.ua 共 6 家媒體同日再報導；VentureBeat 的標題追問企業的密碼與金鑰是否因此外露，The Defiant 則以標題給出「1,379 組機密」的數字，與 11-07 報導的 2,539 組不同，標題沒有交代兩者的統計範圍。用過「Don't Ask Again」選項的人，檢查自己公開 repo 裡的 Claude Code 設定與核准檔有沒有帶金鑰，有就輪替。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

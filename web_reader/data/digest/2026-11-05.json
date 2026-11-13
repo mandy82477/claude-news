@@ -527,11 +527,6 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "ai-talent-flow",
       "name": "AI 實驗室人才流動",
       "pageType": "topic"
@@ -542,28 +537,8 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
       "id": "enterprise-cost-management",
       "name": "企業規模 Claude 成本管理",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals-compute",
-      "name": "算力與融資這則怎麼判",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],

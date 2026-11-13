@@ -1,0 +1,558 @@
+{
+  "date": "2026-11-08",
+  "generatedAt": "2026-11-08 17:16 UTC",
+  "articleCount": 47,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "time": "11/07 20:45",
+      "sentiment": "",
+      "body": "承上 11/07 已曝光的「不再問」外洩密鑰爭議，Claude Code 團隊成員 Boris 在 Hacker News 討論串公開回應：歷史上 Claude Code 並未內建密鑰清除功能，團隊正研究能做什麼來預防，並建議改用風險較低的 auto mode 取代手動維護的允許／拒絕清單；討論串獲 497 分，是這起爭議目前少見的官方具名回應。還在等官方說法的人，可留意這則回應的內容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/08 16:44",
+      "sentiment": "",
+      "body": "Release notes 新增兩段：「Claude Code model configuration」與「為何你與 Fable 5／5.1 對話時 Claude 切換了模型」；同時移除「調整模型、思考努力與 thinking 設定」與「在 Claude Cowork 用專案整理任務」兩段舊說明。想知道 Claude 何時會自動切換模型、或找舊版設定說明的人，可開連結確認細節。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        },
+        {
+          "id": "cowork",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Status] Degraded performance for Claude Fable 5.1",
+      "url": "https://status.claude.com/incidents/kw2lxj1th04c",
+      "source": "Anthropic Status",
+      "time": "11/08 08:54",
+      "sentiment": "",
+      "body": "官方狀態頁記錄 11/8 08:18–08:32 UTC（約 14 分鐘）claude.ai、Claude API、Claude Code 與 Claude Cowork 出現 Fable 5.1 效能降低，官方已標記解決。若在這段時間遇到回應變慢或失敗，可確認是這次短暫異常，不是自己環境的問題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Anthropic: CLAUDE.md Rules Are Requests; Hooks Are Enforced",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaGh3bGExVzQ0NDE2eG11QXBNT3E4ZjI0NEVWd1RWVWdUbnZwM3hQeG1meWJJeENJYkpzbEx5N2NObmF2dnlIUnRlMmh0OTNDOEpkNF96X3FnTmF5TlpPbXRZclRJckdfRDhXVndtTi1CTWZkZXZFai1jWjZtN1lQY1ZMekhHMkFWRWx0OTJB?oc=5",
+      "source": "Google News / FourWeekMBA",
+      "time": "11/08 10:12",
+      "sentiment": "",
+      "body": "FourWeekMBA 報導指出，Anthropic 官方的定調是 CLAUDE.md 裡寫的規則只是「請求」，真正會被強制執行的是 hooks。習慣只靠 CLAUDE.md 約束 agent 行為的團隊，可重新檢視哪些規則該改寫成 hook 才真的擋得住。",
+      "focusTags": []
+    },
+    {
+      "title": "Leading Anthropic dev says 'a human has to take responsibility' with AI code projects, as some skills get lost",
+      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPNmZkT2NzSmpyNzYyRGxCbUtuSUpyZ0FzejYzZzhfaHBHRXg3SXZyS0ljVDlTTFY4eWNhVVViTUxWYXZKajhzUnJaYkhUdFplZEpiR0ppX3ptNGJxNUEwNkVPRzRsTmhYeGhZQjlIZlF1aC00UEZGOHZucC14QVlKWnlGTmd0Uk5qYXh0aGlLTXdwa2kzR3VEejBCNHB2aHJOaEFCeVdfdUVhT3F5ZnZtU1NBMHo3ZFN3MHY3ZUdVa1prOVU2VUVqNGE0VUs4dEplRWpsZHdCNW4yQ0E4VHNvUWFPeXVTOHRHeXh2ZkdsOV90OHBfLVBBYU92RDdRWjdGNnprUXJibTVEbTJfNV95QV9qTQ?oc=5",
+      "source": "Google News / TechRadar",
+      "time": "11/07 15:30",
+      "sentiment": "",
+      "body": "TechRadar 報導一位 Anthropic 資深工程師表示，AI 寫程式碼的專案仍需要有人承擔最終責任，並提到過度依賴 agent 會讓工程師流失部分原本具備的技能。把 coding agent 當全自動黑箱使用的團隊，可重新評估哪些環節仍該留人工把關。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "boris-cherny",
+          "pageType": "entity"
+        },
+        {
+          "id": "fiona-fung",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Claude Won't Clone Games Anymore. I Spent a Weekend Finding Out What It Will Do",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5",
+      "source": "Google News / PCMag UK",
+      "time": "11/07 15:00",
+      "sentiment": "",
+      "body": "承上 11/05 已鬆動的遊戲複刻限制，PCMag UK 記者實測一整個週末，記錄 Claude 面對複刻請求時具體會怎麼回應、改做出什麼。想拿 Claude Code 做遊戲移植或逆向工程的人，可對照這篇實測結果再決定怎麼下指令。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "opus-5-5",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic's $895 Billion AI Gamble Could Become Wall Street's Next Debt Nightmare",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbG9kZlo4VzNzM2ZiX1BHci1HV0RKWS1wc3ZfdFh6WUtYUlUzZHEwZ1Y2d3dyZlk1cUY1ZGFiUXBueWdhUFhrMDBhUzFqS1phb3RYdHpTR3dXVjBUOHpJSEpCUkFMZXdKRFozaUF1SDZDVWVIVUlrTUIwRXZmR2ZzUVNQMnNfdFByMWRmLTV5eXhXUEhxNHJDVWZPeXc5R1BnUE0wdlR3Z3c3NG1ZZU96VWk0cFA4bUhhM2FWMDNDSQ?oc=5",
+      "source": "Google News / 24/7 Wall St.",
+      "time": "11/08 16:20",
+      "sentiment": "",
+      "body": "24/7 Wall St. 從另一個角度分析 Anthropic 的 IPO 風險：聚焦其規模達 8,950 億美元的資料中心與運算採購承諾可能形成的債務負擔，而非單純估值數字。關注 Anthropic 資本結構風險的人可留意這個債務角度的分析。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "NVIDIA's Jensen Huang Rejects Anthropic's Total China Chip Ban Push, Says \"I Completely Disagree\" And Believes \"America Is About Competition\"",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRk1icDF6S21KQU4xbWt4UFI0TkIxb1dzb0R1M0tPVmF3RkxVZWpyZTdYaHNnbHBLcWpqOHp5WEVpMElTdmZ0RVRWTEZQekJVNjdkWVRtcmJWczNIZ2d4bWJCZG1NTDZYMGp5Z0w0bXJVWVNNSTZqbW84TklaS0p6WFZxaWp0Nm1YRWF4NW9Na3k5dElFOHpRcXR3SE1fU2tCWTRNZEdqdm_SAa4BQVVfeXFMT3pUaUNhOWJmbGlPSHBEZEJJWHVpMjJoOHpRaEQzbmRBbm5oNWJNalNWZ1hmcjJZWXdZSjIzcUZjLWlDVmJ3X2hhcElvN0FyTVg0NTNtRVAtMUFNZ2loM3JMTU80X2h0alRlNDU0NTRhbFdCWTQ4WkZLYUt5WGFaX3FQdXEwSnY5NmZHTDkyaDN6VXd3YUIzRzFOa1VDVVJmSFpQaUFhaHpFMk5TNkJB?oc=5",
+      "source": "Google News / Wccftech",
+      "time": "11/08 12:20",
+      "sentiment": "",
+      "body": "Wccftech 報導 NVIDIA 執行長黃仁勳公開反對 Anthropic 主張的全面對中國晶片禁售立場，稱自己「完全不同意」，強調美國的立場該是比競爭力而非全面封鎖。關注晶片出口政策走向、評估供應鏈風險的人可留意兩家公司立場的分歧。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-government-policy",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "discussions": [
+    {
+      "title": "Why so many complaints?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xr28ep/why_so_many_complaints/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/08 16:21 UTC ·",
+      "sentiment": "🤔",
+      "body": "r/ClaudeCode 使用者發文疑惑，自己用了一個多月覺得體驗近乎神奇，卻在社群裡看到大量抱怨，想請其他人解釋這種反差從何而來。想理解社群評價兩極背後原因的人可參考留言裡的各種解釋。",
+      "focusTags": []
+    },
+    {
+      "title": "I'm going back to writing some code",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xr2mvf/im_going_back_to_writing_some_code/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/08 16:38 UTC ·",
+      "sentiment": "🤔",
+      "body": "一位有近十年經驗的軟體工程師在 r/ClaudeCode 發文，說自己原本對 vibe coding 很懷疑，直到今年 7 月 Fable 5 推出後想法才開始改變，但從標題看，他現在決定重新拿回一部分程式碼自己寫。想了解資深工程師怎麼拿捏「交給 agent」與「自己動手」界線的人可參考這篇心得。",
+      "focusTags": []
+    },
+    {
+      "title": "Ban for using personal account to create a business?",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xr20yl/ban_for_using_personal_account_to_create_a/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/08 16:13 UTC ·",
+      "sentiment": "😤",
+      "body": "r/ClaudeCode 使用者發文反映，用個人方案帳號開發 SaaS 專案時 session 開始出現異狀，疑似因「用個人帳號做商業用途」被系統針對。打算用個人訂閱方案孕育新創或 side project 的人，應留意這類帳號使用限制是否也會發生在自己身上。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Sentient, Your Coding Agent Shouldn't Be a Black Box",
+      "url": "https://nosaka.ai/sentient/",
+      "source": "Hacker News",
+      "time": "11/07 23:26 UTC ·",
+      "sentiment": "🤔",
+      "body": "Show HN 作者分享，長期用 Claude Code 時常常不經思考就按允許，後來意識到 agent 背後其實跑了大量指令，一旦出包就很難追，因此做了 Sentient：開源、完全在本機執行，能在動作發生前先看清楚 agent 實際要做什麼並可攔下來。常對著一長串權限請求不假思索按允許的人可以看看這個做法。",
+      "focusTags": []
+    },
+    {
+      "title": "Same Local Model, 3 Coding Agents: pi 12/12, Codex 12/12, Claude Code 7/12 on a 6GB GPU",
+      "url": "https://dev.to/kunfieldnotes/same-local-model-3-coding-agents-pi-1212-codex-1212-claude-code-712-on-a-6gb-gpu-2f9m",
+      "source": "dev.to / #claudecode",
+      "time": "10/16 04:50 UTC ·",
+      "sentiment": "😤",
+      "body": "dev.to 作者在同一台 6GB GPU 筆電上，用相同的本地模型（LFM2.5-24B、Qwen3.6-35B）分別跑 pi、Codex 與 Claude Code 做同一組 12 道測試，結果 pi 與 Codex 都拿到 12/12，Claude Code 只過 7/12，作者認為差異出在各 agent 自己的 system prompt。在本地或小模型環境下選 coding agent 的人，可留意這個落差。",
+      "focusTags": []
+    },
+    {
+      "title": "Running Claude code across machines",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xr2m0p/running_claude_code_across_machines/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/08 16:37 UTC ·",
+      "sentiment": "😐",
+      "body": "r/ClaudeCode 使用者發問，原本只在 PC 上用 Claude Code 與 Codex，換了一台 MacBook Pro 後想知道怎麼在兩台機器間同步專案與設定才順手。需要跨桌機／筆電接續同一批 Claude Code 專案的人可參考留言裡的做法。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Loop – your coding agents, from your phone",
+      "url": "https://github.com/j-asefa/loop",
+      "source": "Hacker News",
+      "time": "11/08 15:11 UTC ·",
+      "sentiment": "😊",
+      "body": "Show HN 作者因為常常要一手抱著小孩、一手單手跟手機上的 agent 對話而不堪其擾，做了 Loop：把跑在自己電腦上的 coding agent 執行結果整理成手機可捲動瀏覽的動態牆，不是傳統聊天介面，不需帳號也不經伺服器中轉。常在手機上盯進度、不想被聊天式 UI 卡住的人可以試試。",
+      "focusTags": []
+    },
+    {
+      "title": "I built a Mac notch app that gets visibly annoyed when I leave Claude Code waiting",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1xr1yiq/i_built_a_mac_notch_app_that_gets_visibly_annoyed/",
+      "source": "Reddit / r/ClaudeCode",
+      "time": "11/08 16:10 UTC ·",
+      "sentiment": "😊",
+      "body": "r/ClaudeCode 使用者分享自製的 Mac 瀏海（notch）小工具，當 Claude Code 跑完工作在等他確認時會做出明顯不耐煩的動畫反應，提醒他別讓 agent 空等太久。覺得自己常忘記回頭看 Claude Code 等待確認的人可以參考這個點子。",
+      "focusTags": []
+    },
+    {
+      "title": "microsoft/win-dev-skills",
+      "url": "https://github.com/microsoft/win-dev-skills",
+      "source": "GitHub Search",
+      "time": "11/08 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "Microsoft 在 GitHub 上架 win-dev-skills，是一套可同時給 GitHub Copilot、Claude Code 與 OpenAI Codex 等多款 agent 共用的 Windows 應用程式開發外掛集。做 Windows 原生應用、同時混用多款 coding agent 的開發者可以直接拿來試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "OpenMontageInc/OpenMontage",
+      "url": "https://github.com/OpenMontageInc/OpenMontage",
+      "source": "GitHub Search",
+      "time": "11/08 16:44 UTC ·",
+      "sentiment": "😐",
+      "body": "",
+      "focusTags": []
+    }
+  ],
+  "billing": [
+    {
+      "title": "[BUG] Claude Code Usage for Max Plan hitting limits extremely fast",
+      "url": "https://github.com/anthropics/claude-code/issues/37394",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/08 14:33",
+      "sentiment": "",
+      "body": "claude-code 倉庫一則錯誤回報累積 44 個反應，回報者指出 Max 方案的用量額度消耗速度比預期快得多。用 Max 方案跑日常工作的人，這幾天可留意自己的額度消耗曲線是否也出現異常。",
+      "focusTags": []
+    }
+  ],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "《金融時報》報導、Reuters 與 Bloomberg 同日轉述，Anthropic 與發電業者簽下 34 億美元合約，為 AI 資料中心採購燃氣發電機組；Hacker News 討論串則聚焦這類燃氣供電安排對溫室氣體排放的爭議。持續追蹤 Anthropic 運算基礎建設能源來源的人，可留意這批燃氣機組的實際上線時程。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+        "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0"
+      ],
+      "ref_names": [
+        "Reuters",
+        "FT"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "BigGo Finance 報導 Anthropic 揭露，Claude Code 約九成程式碼由 Claude 自己撰寫，並說明內部設有六層審查機制把關這些由 AI 生成的程式碼。想了解 Anthropic 如何在自家工具上落實把關機制、評估這套做法能否套用到自己團隊的人，可留意細節。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zRnZSbk1QNi1IRmJabGEzc2pNU1BnbTBfQmdiYk9ibGJYQXc2bDlKOXlWTmY5MUdaeVhCSlZoSGQ2YXNsR3dCUjgwaEIzc28xUVVKTlJZd0JSOC1zRFBqazR4QlBmUVlTdjJOYThkbDllLXNSM3c?oc=5"
+      ],
+      "ref_names": [
+        "BigGo Finance"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-07） Anthropic IPO 估值與財務前景持續受質疑：Yahoo Finance 報導有潛在買方主張延後上市，估值預期可能從原訂的 1.5 兆美元探底到接近 1 兆美元，BankInfoSecurity 同日分析稱這將是檢驗整個 AI 產業財務可行性的指標事件。評估是否參與這輪認購、或追蹤 Anthropic 現金流狀況的人，這幾天仍是觀察區間重新定價的關鍵視窗。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZk9hNVJEeFVWZkoxNE5rT080NEVsbTJnaFg4TE9GSElRODM1S3owUTdwUXljVmJnY2NaT2RSV2hDLVE4NURISk8yTS1rcWt1YTlBMVNfdVBYQlp1RGdkWTRkZG9pbUdyNlVlSFJwOU92NGlkUnZmcG5WaXRzMmlzR0FfR1ZYSEdBUWRfQ3IwV0o1THo0c2I2SA?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxNeTJDUU11OHd3c1RRWWRaVEtYdWxCdlNCWGVMMUxiM1BLLXEzM1AyOHJyS2JlRGM2VG1DcGdzR1laV21seHBYaVRuSS13ZmNoY2xjSzVnUnVLXzl1QVdlRm44V1o5LXd6eDRGblZFZDZXWFVPRlpFdDlQN1h6MWZIaEhiWmd5aXBESng1MThuRTVlVU03VzBhQ3FKSQ?oc=5"
+      ],
+      "ref_names": [
+        "Yahoo Finance",
+        "BankInfoSecurity"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 22
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 9
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：服務事故（已解決）：Anthropic Status 記錄 Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Cowork（08:18–08:32 UTC，約 14 分鐘），官方已標記解決（🌐 組）。",
+  "sedimentedToday": [
+    {
+      "id": "boris-cherny",
+      "name": "Boris Cherny",
+      "pageType": "entity"
+    },
+    {
+      "id": "fiona-fung",
+      "name": "Fiona Fung",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety",
+      "name": "AI Agent 安全與可靠性",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-compute",
+      "name": "算力與融資這則怎麼判",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-08",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **服務事故（已解決）**：Anthropic Status 記錄 Fable 5.1 效能降低，影響 claude.ai、Claude API、Claude Code、Cowork（08:18–08:32 UTC，約 14 分鐘），官方已標記解決（🌐 組）。\n- **安全相關**：Claude Code 團隊 Boris 於 HN 回應「不再詢問」權限選項致密鑰外洩爭議：歷來未內建密鑰清除、正研究方案，建議改用 auto mode 取代手動維護的允許／拒絕清單（🛡️ 組）。"
+          },
+          {
+            "page": "entities/cowork",
+            "name": "Cowork",
+            "label": "最新動態",
+            "date": "",
+            "body": "Help Center release notes「用專案整理任務」段 11-07 新增、11-08 即移除，功能是否仍存在待查證（見核心功能）。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "Help Center release notes「Claude Code model configuration」段 11-07 疑似移除、11-08 又出現，像是搬移非功能變動，待查證（見核心功能）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "PCMag UK 實測遊戲複刻鬆綁後 Claude 的實際回應",
+            "date": "",
+            "body": "PCMag UK 實測一整個週末記錄 Claude 面對複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "entities/pricing",
+            "name": "Anthropic 訂閱方案與計費政策",
+            "label": "最新計費政策異動",
+            "date": "",
+            "body": "- Help Center release notes 新增兩段 Enterprise 計費功能：既有收費代碼（charge code）／client-matter 可標記在專案上；新增依成本代碼追蹤花費（beta）。細節見 [[entities/pricing#當前生效的計費規則]]。\n- 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。"
+          },
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Yahoo Finance／BankInfoSecurity：投資人出現「延後上市」說法，估值恐探底近 $1 兆；24/7 Wall St. 將 $8,950 億採購承諾重新框定為潛在債務風險**"
+          },
+          {
+            "page": "topics/anthropic-partnerships-compute",
+            "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **FT／Reuters／Bloomberg：Anthropic 與發電業者簽 $34 億美元合約，採購燃氣機組供應 AI 資料中心**；HN 討論聚焦溫室氣體排放爭議，見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]] 新列"
+          },
+          {
+            "page": "topics/market-signals-compute",
+            "name": "算力與融資這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **FT／Reuters／Bloomberg：Anthropic 簽 34 億美元合約採購燃氣機組供應資料中心**：發電業者未具名，HN 討論聚焦溫室氣體排放爭議。\n\n前一日（2026-11-05）：\n- **CoinDesk：Google 信用擔保若觸發，可能取得 TeraWulf 資料中心股權**：承接 11-04 信用擔保一則，首度揭露違約情境，股權比例與觸發條件未揭露。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/anthropic-government-policy",
+            "name": "Anthropic 政府與軍事政策",
+            "label": "多線政府動態",
+            "date": "",
+            "body": "- **晶片出口管制論戰**：Nvidia CEO 黃仁勳公開反對 Anthropic 推動對中國全面晶片禁售，稱「完全不同意」，延續 09-15、09-28 既有分歧。\n- **浮水印官方文件**：Anthropic Help Center 新增「How Claude marks AI-generated content」頁，首次以官方文件說明標記機制。\n\n詳見 [[topics/anthropic-government-policy#攻防紀錄]]。"
+          },
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **官方具名回應**：Claude Code 團隊成員 Boris 於 11-07「不再問」外洩密鑰討論串公開回應，稱歷史上未內建密鑰清除功能，建議改用風險較低的 auto mode。\n- **新增／設定外洩**：GBHackers／The Hacker News 揭露「是，並不要再問」選項外洩密鑰：1,994 個倉庫藏 2,539 組密鑰，1,122 份複本含外洩檔案。\n- **跟進／email 外洩**：CyberSecurityNews／Dev.ua 追加報導 #107757 User-Agent 外洩 email，無新事實（官方修補已於 11-08 查證，見 [[topics/ai-agent-safety-product-vulns#技術彙整]]）。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Opus 5.5「變差又變貴」登 r/ClaudeCode 週熱門，另有額度兩倍速耗盡回報",
+            "date": "",
+            "body": "- 11-05 週熱門貼文稱 Opus 5.5 回答變差、額度花得更快；11-06 另一則稱週額度消耗快兩倍。\n- 兩則皆單一貼文、0 留言，官方未回應；官方額度說明頁 11-05 起建議例行工作降 effort。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "Plugin／MCP 整合新增 Microsoft 官方跨 agent Windows 開發外掛集",
+            "date": "",
+            "body": "- **microsoft/win-dev-skills**：Microsoft 官方帳號發布，供 GitHub Copilot、Claude Code、OpenAI Codex 共用的 Windows 應用開發 agent plugin 集合，501★。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/boris-cherny",
+            "name": "Boris Cherny",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **辭職傳聞**：10-26 單一來源標題稱已正式辭職，與現任身分矛盾，仍待第二來源確認。\n- **AI 責任論述候選**：TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/fiona-fung]] 同列候選。"
+          },
+          {
+            "page": "entities/fiona-fung",
+            "name": "Fiona Fung",
+            "label": "待查證",
+            "date": "",
+            "body": "TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選，尚待確認是否為本人。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 14
+  },
+  "readerTopStories": [
+    {
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "Hacker News",
+      "time": "11/07 20:45",
+      "sentiment": "",
+      "body": "承上 11/07 已曝光的「不再問」外洩密鑰爭議，Claude Code 團隊成員 Boris 在 Hacker News 討論串公開回應：歷史上 Claude Code 並未內建密鑰清除功能，團隊正研究能做什麼來預防，並建議改用風險較低的 auto mode 取代手動維護的允許／拒絕清單；討論串獲 497 分，是這起爭議目前少見的官方具名回應。還在等官方說法的人，可留意這則回應的內容。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        },
+        {
+          "id": "ai-agent-safety-product-vulns",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ]
+}

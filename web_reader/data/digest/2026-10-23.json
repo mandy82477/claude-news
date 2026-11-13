@@ -466,11 +466,6 @@
       "pageType": "entity"
     },
     {
-      "id": "claude-skills",
-      "name": "Claude Skills",
-      "pageType": "entity"
-    },
-    {
       "id": "claude-slides",
       "name": "Claude Slides",
       "pageType": "entity"

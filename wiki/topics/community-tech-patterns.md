@@ -3,17 +3,17 @@ page: "topics/community-tech-patterns"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-07"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-10"
+last_news_update: "2026-11-09"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 5
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 4
 inbound_links: 54
-attribution_count: 269
-attribution_last: "2026-10-30"
+attribution_count: 270
+attribution_last: "2026-11-09"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

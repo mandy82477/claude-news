@@ -287,11 +287,6 @@
   "preview": "Claude Code：已知問題：VS Code diff 審閱 UI（#33932）今日反應數全站最高（306 讚）；新增 5 則中度互動 issue；Fable 5 用量誤判（#79337）逾 3 個月未修復。",
   "sedimentedToday": [
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5 與 5.1",
-      "pageType": "entity"
-    },
-    {
       "id": "jack-clark",
       "name": "Jack Clark",
       "pageType": "entity"

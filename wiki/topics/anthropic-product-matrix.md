@@ -6,11 +6,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-10-24"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
-days_since_news: 15
+days_since_news: 22
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 15
+days_since_news_subtree: 22
 inbound_links: 1
 attribution_count: 41
 attribution_last: "2026-10-23"
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 產品 × 功能對照表
