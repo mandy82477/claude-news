@@ -4,14 +4,14 @@ kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-14"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
-inbound_links: 96
+days_since_news_subtree: 0
+inbound_links: 101
 attribution_count: 94
 attribution_last: "2026-11-13"
 top_source: "google-news"
@@ -32,10 +32,10 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-14
 
-> **最新動態**（2026-11-13）
-> - **路演認購約六倍超額**（Yahoo Finance／Bloomberg，續 11-10）；11-10 公告的 $70～78 價格區間與最快 11-19 交易時程均未變
+> **最新動態**（2026-11-14）
+> - **IPO 估值預期降至 $2 兆門檻以下**：Amodei 路演基調轉為「寧可少承諾、多交付」，呼應既有下修至約 $1.5 兆的敘事（Yahoo Finance）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -329,6 +329,10 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-13
+- **[公司治理，僅標題可用] Chief Investment Officer／Equable Institute：近 20 個美國公共退休基金持有 Anthropic 股權曝險**：IPO 認購名單外的另一條曝險脈絡，具體基金名單與金額未見報導（Google News/Chief Investment Officer）
+- **[IPO 估值，僅標題可用] Yahoo Finance：Amodei 談『寧可少承諾、多交付』路演基調，IPO 估值預期降至 $2 兆門檻以下**：呼應既有下修至約 $1.5 兆的敘事，標題未附具體新估值數字（Google News/Yahoo Finance）
 
 #### 2026-11-12
 - **[IPO 財務] 官方 IPO 頁：Q3 營收 $170 億、$10 萬以上客戶逾 11,900 家、調整後營業利益率 15%、淨損 $233 億**：HN 641 分；營收與 11-02 修訂版 S-1 同數，客戶數為新指標，明細見 [[#數字細節]]（官方 IPO 頁；Hacker News）

@@ -3,7 +3,7 @@ page: "topics/community-tech-discussions-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "🌐 社群"
-last_updated: "2026-09-06"
+last_updated: "2026-11-14"
 last_news_update: "2026-06-30"
 status_main: "resolved"
 days_since_news: 137

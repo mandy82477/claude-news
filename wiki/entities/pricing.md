@@ -5,13 +5,13 @@ type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-14"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 195
 attribution_count: 173
 attribution_last: "2026-11-13"
@@ -33,10 +33,11 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-14
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-13）
+> **最新計費政策異動**（2026-11-14）
+> - **claude.ai 購買與方案變更一度出錯、已解決**：官方狀態頁 11-14 通報，延遲款項與方案變更已補上，詳見 [[entities/pricing-incidents]]
 > - **Claude Meetings（Google Meet）Team／Enterprise beta 現經官方確認**：[Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes) 11-13 新增，方案範圍與 Axios 11-10 媒體稱一致，不再只是媒體轉述
 > - **自架版 Claude Managed Agents 沒有公開價格，官方 API 定價頁新增一句請洽客戶團隊**：想估算自架成本，只能走洽談窗口
 > - **usage credits 一律不可退款，含取消訂閱或刪除帳戶**：官方說明頁新增「Refunds」節；買了 credits 的人，取消訂閱前先用完或確認餘額

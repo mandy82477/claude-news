@@ -12,7 +12,7 @@ parent: null
 children: "['entities/boris-cherny-archive']"
 page_role: "hub"
 days_since_news_subtree: 6
-inbound_links: 31
+inbound_links: 32
 attribution_count: 12
 attribution_last: "2026-11-08"
 top_source: "google-news"

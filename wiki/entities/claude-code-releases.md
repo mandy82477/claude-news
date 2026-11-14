@@ -5,14 +5,14 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-14"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
-inbound_links: 8
+days_since_news_subtree: 0
+inbound_links: 9
 attribution_count: 15
 attribution_last: "2026-11-13"
 top_source: "github"
@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-14
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-13）
-> - **v2.1.323**：新增 Code Mode，實驗性選項（預設關閉），讓 Claude 改寫 JavaScript 呼叫自己的工具；詳見 [[topics/claude-code-experimental]]。
+> **最新動態**（2026-11-14）
+> - **v2.1.325**：修補 zstd 壓縮回應解碼的安全性問題，另在 VS Code 等整合終端機加上重跑 notebook cell 的一次性提示；詳見 [[entities/claude-code-releases#最新版本]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.325** | 2026-11-13 | 修補 zstd 壓縮回應解碼的安全性問題；VS Code 等整合終端機新增重跑 notebook cell 一次性提示（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.325)）|
 | **v2.1.323** | 2026-11-12 | 新增 Code Mode（實驗性選項，預設關閉，讓 Claude 改寫 JavaScript 呼叫自己的工具）；金鑰外洩修復見 [[entities/claude-code-known-issues]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.323)）|
 | **v2.1.322** | 2026-11-10 | 新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.322)）|
 | **anthropic-sdk-python v2.8.0** | 2026-11-10 | Features：Claude Tag 分析彙總與使用者報表新增指標；Claude Tag Slack 頻道設定新增 `reply_mode`；另有 Bedrock 傳送「;」的修正（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.8.0)）|

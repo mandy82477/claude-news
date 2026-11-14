@@ -12,8 +12,8 @@ days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 1
-inbound_links: 127
+days_since_news_subtree: 0
+inbound_links: 128
 attribution_count: 853
 attribution_last: "2026-11-13"
 top_source: "github-issues"
@@ -35,9 +35,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
-> **最新動態**（2026-11-13）
-> - **v2.1.323**：新增 Code Mode 實驗性選項，見 [[entities/claude-code-releases]]。
-> - **服務穩定性**：官方狀態頁通報兩起錯誤升高事故，與 Microsoft 365 故障同時發生，見 [[entities/claude-code-known-issues]]。
+> **最新動態**（2026-11-14）
+> - **v2.1.325**：修補 zstd 解碼安全性問題，見 [[entities/claude-code-releases]]。
+> - **已知問題新增**：Gmail MCP 多帳號、Cowork egress 允許清單異常等，見 [[entities/claude-code-known-issues]]。
+> - **桌面版文件**：新增第三方推論與部署前檢查說明，見 [[entities/claude-code-features]]。
 
 ---
 
@@ -47,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-13 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-13 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-12 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-14 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-14 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-14 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
 
 ## 現在還沒修好的

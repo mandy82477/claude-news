@@ -15,10 +15,10 @@ inbound_links: 8
 attribution_count: 21
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 28
-pending_overdue: 10
+pending_count: 23
+pending_overdue: 0
 pending_next_review: "2026-11-16"
-pending_signalled: 6
+pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"

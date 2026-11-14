@@ -4,13 +4,13 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-14"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 3
 attribution_count: 25
 attribution_last: "2026-11-13"
@@ -32,10 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-14
 
-> **Plugin／MCP 整合新增社群媒體爬蟲 API 整合**（2026-11-13）
-> - **everyinfra/everyinfra-agent-plugins**：MCP server／plugin 接 TikTok、Instagram、Amazon、YouTube 等 106 個平台的 573 個資料 API。
+> **本日新增四則：行銷情報還原、自架聯網搜尋、Instagram 輪播圖、對嘴影片剪輯**（2026-11-14）
+> - **Plugin／MCP 整合**：reverse-engineer-marketing 貼網址還原對手行銷機器、ask-search 自架 SearxNG 免 API key 聯網搜尋。
+> - **創意工具 Agent 整合**：open-carrusel 對話設計 Instagram 輪播圖、ghost-editor 把對嘴素材剪成成品影片。
 
 ---
 
@@ -59,6 +60,42 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### dansugc/reverse-engineer-marketing：貼網址還原對手整套行銷機器，CLI／MCP server／本機 Web App（2026-11-14）
+
+- **主線：** —
+- **核心模式：** 貼上一個連結即自動還原背後的整套行銷機器——付費廣告、自然社群、SEO、Reddit、創辦人動態、轉換漏斗，逐項附證據來源；提供 CLI、MCP server 與可用自己 Claude Code／Codex 方案額度執行的本機 Web App；GitHub Search 602 星（2 個來源）。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「競品行銷情報還原」取向——既有代表技巧多接生產力服務、創作工具或資安情報源，本則把整套行銷分析包成可直接用自己 Claude Code／Codex 方案額度跑的工具；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（602★，2 個來源），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search（2 個來源）；[GitHub](https://github.com/dansugc/reverse-engineer-marketing)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### ythx-101/ask-search：自架 SearxNG 聯網搜尋，免 API key 供任何 agent 使用（2026-11-14）
+
+- **主線：** —
+- **核心模式：** CLI＋MCP server，包裝自架 SearxNG 聚合 Google、Bing、DuckDuckGo、Brave 等多個搜尋引擎，免 API key、免付費搜尋 API；相容 Claude Code、OpenClaw、Antigravity 與任何 shell，選配 Tavily 當後備來源；GitHub Search 540 星。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」一個「自架聚合多引擎、完全免 API key」連網搜尋取向——既有做法多綁單一第三方搜尋服務，本則改自架 SearxNG 聚合多家引擎；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（540★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/ythx-101/ask-search)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Hainrixz/open-carrusel：與 Claude 對話設計 Instagram 輪播圖，匯出符合官方尺寸的 PNG（2026-11-14）
+
+- **主線：** —
+- **核心模式：** AI 輔助的 Instagram 輪播圖產生器，與 Claude 對話設計每張投影片，匯出符合 Instagram 官方規格尺寸的 PNG；Claude Code 中輸入 `/start` 即可啟動；GitHub Search 522 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（Palmier Pro 等）一個「社群媒體輪播圖設計」取向——既有做法多鎖定影片或遊戲素材，本則把對話式設計延伸到 Instagram 輪播圖排版與匯出；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（522★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，日報未另行收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/Hainrixz/open-carrusel)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### kurbaitaev/ghost-editor：開源 AI 影片編輯器，把對嘴素材剪成成品 reel（2026-11-14）
+
+- **主線：** —
+- **核心模式：** 開源 AI 影片編輯器，供 Claude Code 使用，輸入未經剪輯的對嘴（talking-head）素材，輸出剪好的成品短影片；GitHub Search 516 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（reelmimic 等）一個「對嘴素材轉短影片」取向——既有做法多以參考影片定風格或分段規劃，本則聚焦單一素材類型（對嘴講話）直接產出成品；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（516★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，日報未另行收錄。
+- **來源：** GitHub Search；[GitHub](https://github.com/kurbaitaev/ghost-editor)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### everyinfra/everyinfra-agent-plugins：MCP server／plugin 接社群媒體與電商平台爬蟲 API（2026-11-13）
 

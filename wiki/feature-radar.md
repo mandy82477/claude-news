@@ -70,6 +70,25 @@
 
 ## 🆕 最新功能（2026-11）
 
+### Claude Code Projects 改版：對話式多代理協調台
+**發布：** 2026-11-14（beta） | **狀態：** Beta（Claude Code）
+
+**是什麼：** Claude Code 的 Projects 從「資料夾」改版為「對話」：描述目標後 Claude 自動拆解任務、指派執行、平行協調多條工作線，檢視產出後組裝成果（[官方介紹](https://claude.com/resources/articles/projects-redesigned)）。
+
+**為何熱：** Hacker News 93 分（2 個來源同日報導）；為官方對 Claude Code Projects 的首次重大改版。
+
+**現在要試嗎：** 想一次丟出多個子任務、不想自己手動拆工的人可試；本庫先前有多代理編排用量暴增的教訓（見 [[topics/official-community-gap]]），建議先小規模驗證再放大用量。
+
+**快速上手：**
+```
+官方文件未附具體指令範例；於 Claude Code 開啟一個 project，直接描述要完成的事即可
+https://claude.com/resources/articles/projects-redesigned
+```
+
+**注意事項：** Public beta，細節與限制待官方文件或社群實測補齊。
+
+---
+
 ### Code Mode
 **發布：** 2026-11-12（v2.1.323） | **狀態：** Research Preview
 
@@ -877,6 +896,7 @@ npm install @anthropic-ai/sdk@0.123.0
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
 | **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具） | 2026-11-12 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Claude Whiteboards／Sheets／Data**（Whiteboards、Sheets beta；Dashboards 轉正式版並更名 Claude Data） | 2026-11-10 | 🔥🔥🔥 | ⚡有條件推薦 | Beta／GA（全付費方案） |

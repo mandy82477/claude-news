@@ -3,17 +3,17 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-13"
-last_news_update: "2026-11-13"
+last_updated: "2026-11-14"
+last_news_update: "2026-11-14"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 19
+days_since_news_subtree: 0
+inbound_links: 18
 attribution_count: 40
 attribution_last: "2026-11-13"
 top_source: "build-flags"
@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-13
-**最後新聞更新：** 2026-11-13
+**最後更新：** 2026-11-14
+**最後新聞更新：** 2026-11-14
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-13）
-> 2.1.323（自 2.1.322 起比對）新增 13 個候選旗標，皆第一階、無代號旗標；另 9 個設定類旗標依蒐集邊界不列；消失 1 個原未入表的設定類旗標。同日官方發行 Code Mode 功能，與既有 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` 系列旗標名稱吻合，升第三階。
+> **最新動態**（2026-11-14）
+> 2.1.325（自 2.1.323 起比對）新增 2 個候選旗標，皆第一階、無代號旗標；另 1 個設定類旗標依蒐集邊界不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.325（11-14，自 2.1.323 起）新增 2 個候選旗標 `CLAUDE_CODE_DISABLE_EXPORTED_VARIABLE_PROMPT`、`CLAUDE_CODE_MCP_APPS_NO_TOOL_ROUTE`**，皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.323（11-13，自 2.1.322 起）新增 13 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另有 9 個設定類旗標來源已過濾不列；消失 1 個原未入表的設定類旗標；對帳僅命中來源條目自身，暫不升第二階。
 - **同輪升階**：官方同日發行的 v2.1.323 宣布 Code Mode 功能（Claude 改寫 JS 呼叫工具，預設關閉），與 2.1.318（11-04）追蹤到的 `CLAUDE_CODE_EXPERIMENTAL_CODE_MODE` 系列旗標名稱吻合，升第三階；Release 未逐字列出旗標名，暫不升第四階；已回報 [[feature-radar]]。
 - **2.1.321（11-09，自 2.1.319 起）新增 11 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 2 個設定類旗標來源已過濾不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
@@ -75,6 +76,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_DISABLE_EXPORTED_VARIABLE_PROMPT` | 2.1.325（11-14） | 1 | — | — | 2.1.325 仍在（比對日 11-14） |
+| `CLAUDE_CODE_MCP_APPS_NO_TOOL_ROUTE` | 2.1.325（11-14） | 1 | — | — | 2.1.325 仍在（比對日 11-14） |
 | `CLAUDE_CODE_AUTOMOUNT_ROOTS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
 | `CLAUDE_CODE_CCR_SKIP_NEEDLESS_STARTUP_READS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
 | `CLAUDE_CODE_DESKTOP_MESSAGE_CARD` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |

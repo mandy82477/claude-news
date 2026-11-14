@@ -5,13 +5,13 @@ type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-09"
+last_news_update: "2026-11-14"
 status_main: "active"
-days_since_news: 5
+days_since_news: 0
 parent: "entities/pricing"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 5
+days_since_news_subtree: 0
 inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-11-09"
@@ -34,10 +34,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-09
+**最後新聞更新：** 2026-11-14
 
-> **最新動態**（2026-11-09）
-> - Reuters／shattered.io 跟進確認：Anthropic 須就 Claude Max 訂閱廣告「5 倍、20 倍」用量宣稱面對訴訟程序，與 11-07 Courthouse News 報導同一裁定，詳見 [[entities/pricing-incidents#還在發生的事故]] 「Max 20x 實際用量與廣告宣稱落差」列。
+> **最新動態**（2026-11-14）
+> - Anthropic Status 官方通報：claude.ai 購買與方案變更一度出錯，延遲款項與方案變更已於 04:23 UTC 補上並標示解決。
 
 ---
 
@@ -73,6 +73,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### ✅ 2026-11-14：Anthropic Status 官方通報——claude.ai 購買與方案變更一度出錯，延遲款項已補上
+
+- **Anthropic Status（事故期間約 18:34 PT 起，2026-11-14 04:23 UTC 標示解決）**：官方狀態頁記錄 claude.ai 的購買與方案變更一度出錯，延遲的款項與方案變更已於解決時補上（[狀態頁](https://status.claude.com/incidents/qrpz8k79qm7x)）。
+- **你能先做什麼**：這段時間升級或續訂卡住的使用者，現在可確認款項已處理完成；若仍未見更新，循官方客服申訴。
 
 #### ⚖️ 2026-11-07：法院裁定 Anthropic 須就 Claude Max 訂閱廣告是否誤導使用者的指控面對訴訟程序
 

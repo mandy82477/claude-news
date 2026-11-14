@@ -4,13 +4,13 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-14"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 53
 attribution_count: 204
 attribution_last: "2026-11-13"
@@ -29,10 +29,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-14
 
-> **功能無預警被拿掉，留言稱業界已成常態**（2026-11-13）
-> Claude Code 一項使用者建自動化流程的功能被無預警拿掉；HN 留言稱這類不告知的變更在 Claude Code 與 Kiro 都已常態化，與既有「無預警拿掉功能」事件同類。
+> **Claude Meetings beta 公告登上 HN 首頁，拿下 104 分討論**（2026-11-14）
+> Claude Meetings（11-10 以 beta 形式發布，Team／Enterprise 方案）讓 Claude 以可見參與者身分加入視訊會議、邊聽邊動手做事；官方介紹頁今天在 Hacker News 拿到 104 分討論。
 
 ---
 
@@ -154,6 +154,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Claude Meetings beta 公告登上 Hacker News 首頁 | 2026-11-14 · 2026-11-14 | 🔥🔥🔥 | ☄️閃現 | Claude Meetings（11-10 beta，Team／Enterprise）讓 Claude 以可見參與者身分加入視訊會議並同步做事；HN 104 分（單源，待社群接力） | — |
 | Show HN: STE80 Humanizer——以簡化技術英文規則去除文字 AI 腔的工具 | 2026-11-10 · 2026-11-10 | 🔥🔥🔥 | ☄️閃現 | 有人指它是去 AI 化而非擬人化；另有留言稱 STE 風格寫進 Claude 全域指示後，Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述）；HN 102 分 | — |
 | r/ClaudeCode 週熱門：團隊一年前起 100% AI 強制令，如今沒人看得懂自己的程式碼 | 2026-11-07 · 2026-11-07 | 🔥 | ☄️閃現 | 團隊一年前要求全面改用 agent 寫程式、人工撰寫需附理由，前六個月出貨變快；呼應「現在吵到哪」第 1 列，該列由僵住轉回還在吵；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
 | Reddit r/ClaudeCode 週熱門：使用者擔心 agentic 能力終將被 Anthropic 收回限縮 | 2026-11-04 · 2026-11-04 | 🔥 | ☄️閃現 | 擔心未來 agentic 功能被收回或限縮，認為這項能力對一般使用者與中高階技術用戶過於有用；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
@@ -211,6 +212,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Claude Meetings beta 公告登上 Hacker News 首頁**：11-10 beta 發布（Team／Enterprise），Claude 可見參與者身分加入視訊會議、邊聽邊動手做事；未附留言內容；HN score 104（單源，待社群接力）；[原文](https://claude.com/resources/articles/claude-meetings)（HN）
 - **Show HN: STE80 Humanizer——以 ASD-STE100 簡化技術英文規則去除文字 AI 腔**：HN score 102（2 個來源）；留言區認為它是去 AI 化、不是擬人化；有人把 STE 風格寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述，未附測試方法）；[原文](https://github.com/Dodaios/ste80-humanizer)（HN）
 - **Show HN: HackerBooks——找 Claude（Opus 5.5）寫出約 1.65 萬本 HN 推薦書的網站**：作者看到 Karpathy 的 HackerTube 後找 Claude 全程編寫，整理出至少兩位留言者提過的約 1.65 萬本書；HN score 105；[原文](https://hackerbooks.org)（HN）
 - **Show HN: BBRouter——Ben Eater 8 位元電腦 3D 虛擬麵包板，支援 MCP 讓 Claude 協助除錯**：作者做出逼真的虛擬麵包板編輯器，具並排 diff、電路圖自動同步、自動佈線；可透過 MCP 接上 Claude 協助除錯；HN score 43（2 個來源）；[原文](https://bbrouter.com/bbrouter/ben-eater-sap-1)（HN）
@@ -263,6 +265,12 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-11
+
+#### Claude Meetings beta 公告登上 Hacker News 首頁，拿下 104 分討論（2026-11-14）
+
+- **來源：** 「Introducing Claude Meetings」（HN Repo Bridge，104 分）；[官方介紹](https://claude.com/resources/articles/claude-meetings)
+- **核心論點：** Claude Meetings 已於 11-10 以 beta 形式發布（Team／Enterprise 方案），讓 Claude 以可見參與者身分加入視訊會議、邊聽邊動手做事，會中可用語音或文字提問、預設以文字回答；本則為該公告於 Hacker News 拿到 104 分討論。
+- **收斂結論：**（無）本次摘要未附留言內容，僅見官方公告文字與 HN 分數；屬官方功能公告獲高互動度，非觀念爭論。
 
 #### Anthropic 被指無預警拿掉 Claude Code 既有功能，留言稱此做法在 Claude Code 與 Kiro 已成常態（2026-11-13）
 

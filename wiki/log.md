@@ -9043,3 +9043,21 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - **`overview`（145 行增刪）** → `web_reader/data/wiki/overview.json`（8 KB）：整頁重寫後的關鍵事實全在產物中——`Fable 5.2` ✅、`Claude Dispatch` ✅、`2.1.311` ✅、`usage credits` ✅、模型表的 `Active (legacy)` ✅。備忘剝除 ✅
 
 兩頁皆無表格爆版、無 wikilink 變裸字串、無懸置標記被解析器吞掉的跡象。`build_web.py` 輸出：`OK: 85 entities, 59 topics, 199 digests, 16 weekly reports + radar`、144 個 wiki 產物檔。
+
+## 2026-11-14 Ingest
+
+- 來源日報：[[news/2026-11-14]]
+- 更新頁面：
+  - **人物**：wiki/entities/dario-amodei.md
+  - **功能**：wiki/entities/claude-code.md、wiki/entities/claude-code-known-issues.md、wiki/entities/claude-code-releases.md、wiki/entities/claude-code-features.md、wiki/topics/claude-code-experimental.md、wiki/topics/anthropic-agent-stack.md、wiki/topics/official-community-gap.md
+  - **商業**：wiki/topics/anthropic-ipo.md、wiki/topics/anthropic-business.md、wiki/entities/pricing-incidents.md、wiki/topics/competitor-landscape.md
+  - **安全政策**：wiki/topics/ai-agent-safety-product-vulns.md、wiki/topics/ai-agent-safety.md
+  - **社群**：topics/community-integrations、topics/community-multi-agent、topics/community-tech-patterns（母頁 callout＋兩表同步）、topics/community-tech-discussions
+  - **主編**：wiki/entities/pricing.md（修復 hub callout 落後）、wiki/feature-radar.md、wiki/index.md
+- 新增頁面：無
+- 摘要：Claude Code Projects 大改版（對話式多代理協調，beta）與 Apiiro 揭露 GitHub 上 1,122 個 `.claude/settings.local.json` 洩密複本是今天兩條主線，其餘為 Anthropic IPO 路演進展（估值預期下修、公共退休基金曝險）與六則 Claude Code 社群 bug／功能請求回報
+- 呈現品質：全部通過
+- 品質備註：無
+- 分類回退：無
+- 轉知：本輪開立 H-75139f（社群→功能，4 個新社群工具節點＋Projects 改版，評估 official-community-gap 產品化矩陣新增列），本輪結案 0 筆、void 1 筆（H-6db5d4：議題已於 11-14 weekly lint checkpoint 處理完畢，4 個社群工具各指向不同痛點，未達開新列門檻，功能記者確認不重複處理）
+- 主編查證（Step 3 截止日複查）：feature-radar.md「⏰ 倒數中」Claude Data Enterprise 預設開啟日期 2026-11-20，WebFetch 官方公告（claude.com/resources/articles/sheets-whiteboards-data）再次確認原文「Claude Data turns on by default on November 20, 2026」，日期仍有效，不動

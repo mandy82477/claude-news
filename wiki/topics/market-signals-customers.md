@@ -15,9 +15,9 @@ inbound_links: 5
 attribution_count: 7
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 20
-pending_overdue: 6
-pending_next_review: "2026-11-22"
+pending_count: 19
+pending_overdue: 0
+pending_next_review: "2026-11-21"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"

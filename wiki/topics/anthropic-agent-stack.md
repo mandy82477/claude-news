@@ -4,14 +4,14 @@ kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-12"
+last_news_update: "2026-11-14"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-09-10"
@@ -32,12 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-12
+**最後新聞更新：** 2026-11-14
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-11-12）
+> **最近變動**（2026-11-14）
+> - **新增積木：Claude Code Projects 改版**——描述目標後自動拆解任務、指派執行、平行協調多工作線，beta，見 [[feature-radar]]。
 > - **Managed Agents 傳出可由客戶自架**：兩家媒體標題稱 Anthropic 讓客戶自架、agent 憑證留在客戶環境；方案、狀態與既有自架沙箱的關係原料均未載，是否屬實仍不明，細節見子頁 [[entities/managed-agents]]。
 > - **排程觸發官方名稱改為 scheduled tasks**（10-23，原 Routines，仍為研究預覽）：本頁積木名稱不變，查證來源見子頁。
 > - **SDK 新增 `execution_identity` 欄位**（10-15）：官方 release note 僅列欄位新增，具體 API 用法未載，詳見同一子頁。
@@ -199,6 +200,12 @@ claude self-hosted-runner
 ```
 
 - **還做不到什麼**：public beta、預設關閉，只有 Team 與 Enterprise 方案開得了（v2.1.224 起）。
+
+### 九、Claude Code Projects：把整個對話變成任務指揮台
+
+- **沒有它之前**：官方的說法是——管理一次建置裡的多個 session，過去得自己拆工作、手動交接、再把結果拼回去。
+- **官方多給了什麼**：在 Claude Code project 裡描述要完成的事，Claude 自動拆解請求、指派執行、平行協調多條工作線，檢視產出後組裝成果；可從手機插話，人離開電腦後仍繼續跑（[官方介紹](https://claude.com/resources/articles/projects-redesigned)，2026-11-14）。官方文件未附具體指令範例。
+- **還做不到什麼**：public beta；UltraCode 1.7M token 事件使本庫在 [[feature-radar]] 暫標不推薦，官方未就此發過說明。
 
 ---
 

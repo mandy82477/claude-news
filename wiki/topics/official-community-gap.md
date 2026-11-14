@@ -1,18 +1,18 @@
 ---
 page: "topics/official-community-gap"
 kind: "topic"
-status: "monitoring"
+status: "ongoing"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-14"
-last_news_update: "2026-10-30"
-status_main: "monitoring"
+last_news_update: "2026-11-14"
+status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 15
+days_since_news: 0
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 15
-inbound_links: 40
+days_since_news_subtree: 0
+inbound_links: 41
 attribution_count: 19
 attribution_last: "2026-10-30"
 top_source: "github-issues"
@@ -26,16 +26,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 官方功能 vs 社群痛點缺口分析
 
-**狀態：** monitoring
+**狀態：** ongoing
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-10-30
+**最後新聞更新：** 2026-11-14
 
-> **官方補了沒更新**（2026-10-30）
+> **官方補了沒更新**（2026-11-14）
+> - **把多 agent 工作流寫成能重跑的腳本**：Claude Code Projects 改版為對話式，自動拆解任務、指派執行、平行協調多工作線（beta），官方對應仍是 ✅。
 > - **它會不會跑出破壞性指令**：新增 v2.1.314 `permissions.blockWritesOutsideWorkingDirectories`，拒絕寫入工作目錄外路徑，官方在這題的對應仍是 ✅（git 層與寫入路徑都已補）。
-> - **「安全邊界」更正範圍**：原「✅ 高度對應」改列 🧪 部分對應——執行層已補，外部內容信任邊界仍缺，見 [[topics/ai-agent-safety]]。
 
 ## 摘要
 
@@ -52,7 +52,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ✅ 官方有正式功能、能直接用｜🧪 官方有東西但受限（測試中、須申請、只給企業端）｜❌ 官方目前無對應
 > 「核對日」＝這一列最後一次對過官方文件或 CHANGELOG 的日期；`—` 代表還沒對過，要拿它做決定時建議自己再查一次官方文件。
 > 每個 issue 現在多少人在吵、官方回了什麼，見 [[entities/claude-code]]。
-> **2026-11-14 掃描**：官方 CHANGELOG 已掃到 v2.1.325，新版本（2.1.322～325）全為修補，**沒有任何一列的缺口被補上**；各列核對日除第一列外維持 2026-11-08。
+> **2026-11-14 掃描**：官方 CHANGELOG 已掃到 v2.1.325，新版本（2.1.322～325）全為修補，**沒有任何一列的缺口被補上**；Projects 改版同步「官方給的是什麼」欄，核對日更新；其餘列除第一列外維持 2026-11-08。
 
 | 你痛的是什麼 | 官方補了沒 | 官方給的是什麼 | 還缺什麼、你現在能怎麼辦 | 核對日 |
 |---|---|---|---|---|
@@ -67,7 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Agent 之間直接傳訊 | 🧪 | 跨 session 訊息 `ListAgents`＋`SendMessage`（v2.1.224 起，原生 Windows v2.1.234），可達他機與雲端 | 點對點已跨機器；共享頻道式 A2A（issue #28300 仍開著）與自動依賴排序沒有 ⟨G-10⟩ | 2026-11-08 |
 | 它說做完了，但品質夠不夠 | 🧪 | `/goal` 判完成條件（一般功能）、`/code-review`（v2.1.218 起背景執行）；Outcomes 規格驗證屬 Managed Agents，仍是 beta、要帶 beta header | 答的是「做完沒」不是「寫得好不好」；社群的多模型對抗審查無公開對照數據 ⟨G-06⟩ | 2026-11-08 |
 | 手機或瀏覽器用得到嗎 | 🧪 | 用得到但不完整：Artifacts 可把成果輸出成網頁分享；Cowork 網頁／行動版自 2026-07-07 起逐步開放（beta，先給 Max 用戶），任務在雲端續跑 | 官方明說桌面版才是完整體驗——只有桌面能讓它用你本機的檔案與瀏覽器 | 2026-11-08 |
-| 把多 agent 工作流寫成能重跑的腳本 | ✅ | Dynamic workflows 全部付費方案可用（Pro 要在 `/config` 打開），最多 1,000 平行子代理；Claude Code Projects 可用一個對話協調多個雲端 session | Projects 還是 public beta、只給 Pro 與 Max；本庫因 UltraCode 1.7M token 事件在 [[feature-radar]] 標為暫不推薦，官方未就此發過說明 ⟨G-02⟩ | 2026-11-08 |
+| 把多 agent 工作流寫成能重跑的腳本 | ✅ | Dynamic workflows 全部付費方案可用（Pro 要在 `/config` 打開），最多 1,000 平行子代理；Claude Code Projects 2026-11 改版為對話式自動指派任務（beta） | Projects 還是 public beta、只給 Pro 與 Max；本庫因 UltraCode 1.7M token 事件在 [[feature-radar]] 標為暫不推薦，官方未就此發過說明 ⟨G-02⟩ | 2026-11-14 |
 | 別家 agent 的 AGENTS.md，它讀不讀 | ✅ | v2.1.277（2026-09-18）起原生讀 `AGENTS.md`；v2.1.281 起 Bedrock／Vertex／Foundry／LLM gateway／關閉遙測的 session 也讀得到 | 只剩預設順序這一項：有 `CLAUDE.md` 時預設只讀 `CLAUDE.md`，要兩者並讀在 `/config` 設 `claude-md-and-agents-md` ⟨G-08⟩ | 2026-11-08 |
 | 它需要你輸入時會不會叫你 | ✅ | 接上 Remote Control 可推手機通知、桌面閒置通知、`Notification` hook、`waitingFor` 可見性 | 社群補的是終端機標籤變色、實體燈號這類形式 ⟨G-03⟩ | 2026-11-08 |
 | 把活分給 subagent、編排它們 | ✅ | Managed Agents（beta，須帶 beta header）、`/fork`／`/subtask`、subagent forking 預設開啟（v2.1.232） | 隊友可指名 `.claude/agents/` 的定義（#24316 已於 08-17 出貨），但 `skills`／`mcpServers` 不套用 ⟨G-01⟩ | 2026-11-08 |
@@ -103,6 +103,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 子項缺口已補：issue #24316（自訂 `.claude/agents/` 定義無法當隊友）官方 2026-08-17 關閉，答「spawning a teammate 時可指名 `.claude/agents/` 的定義，隊友照該定義的 `tools` 白名單與 `model`」。
   - 同一則官方留言明說 `skills` 與 `mcpServers` frontmatter 不套用到隊友。代表社群工具：Claude Squad、Harness（multi-worktree）；Boris Cherny 2026-05-13 揭露內部「數千子代理夜間跑批」工作流。
 - ⟨G-02⟩ 把多 agent 工作流寫成能重跑的腳本：官方文件現在寫 Dynamic workflows「所有付費方案、Anthropic API、Bedrock、Google Cloud Agent Platform 與 Microsoft Foundry 皆可用」，Pro 要自己在 `/config` 的 Dynamic workflows 那一列打開——已不再標研究預覽。
+  - **2026-11-14 改版**：Projects 從「資料夾」變成「對話」——描述目標後 Claude 自動拆解任務、指派執行、平行協調多條工作線、檢視產出後組裝成果，可從手機插話，人離開電腦後仍繼續跑；beta（[官方介紹](https://claude.com/resources/articles/projects-redesigned)）。
   - 同一份文件寫：某個 agent 撞到你的 claude.ai 用量上限時，那一次執行會暫停而不是讓該 agent 失敗。
   - Claude Code Projects（public beta）讓一個對話協調多個平行雲端 session，目前只給 Pro 與 Max，Team 與 Enterprise 還沒有。
   - 手機遠端操控那條線已經收掉：issue #28322（`/rc` 不被辨識）官方 2026-08-19 關閉，答 v2.1.76 修好「Unknown skill」、v2.1.206 讓 `/remote-control` 一律解析得到。

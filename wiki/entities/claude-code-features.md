@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-12"
-last_news_update: "2026-11-12"
+last_updated: "2026-11-14"
+last_news_update: "2026-11-14"
 status_main: "active"
-days_since_news: 2
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 8
 attribution_count: 11
 attribution_last: "2026-11-12"
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-12
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-14
+**最後新聞更新：** 2026-11-14
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-12）
-> 桌面版文件新增 16 段：管理員設定提醒（`forceLoginOrgUUID` 與 Console 組織、三個設定需新版 Claude Desktop）與預覽不執行腳本的說明；11-10 SSH session 改讀遠端主機的 managed settings 檔，Help Center 再移除「模型設定」段（見時序）。
+> **最新動態**（2026-11-14）
+> 桌面版文件新增三段：第三方推論設定提醒、部署前三種情境檢查，以及補完 Terminal／Browser／iOS Simulator 或側邊聊天視窗保留條件（11-10 原文截斷處）。
 
 ---
 
@@ -64,6 +64,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Memories** — 跨 session 的持久記憶（Managed Agents Beta）
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
+- **官方文件新增頁：Claude Code 接 Google Cloud（Anthropic managed）模型**（[文件索引](https://code.claude.com/docs/llms.txt) 新增 [claude-models-on-google-cloud-anthropic-managed.md](https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md)，2026-11-14）：具體設定步驟與可用範圍未載（僅標題可用）。
 - ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-10）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
   - 11-10 該段與切換說明再被移除，內容仍未載。
 
@@ -122,6 +123,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-14）：桌面版文件字數由 226,189 增至 226,194，新增 3 段、移除 4 段（移除段落未載）。
+  - **新增內容**：使用者自建第三方推論設定時的相關提醒；部署前建議檢查三種情境（內文未列出具體情境）；補完 Terminal、Browser、iOS Simulator 或側邊聊天視窗保留工作進度的條件（11-10 原文截斷處）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-12）：桌面版文件字數由 223,476 增至 226,189，新增 16 段、移除 5 段（移除的五段未載）。
   - **新增內容（原文列出的）**：Claude Console 組織不宜單獨部署 `forceLoginOrgUUID`（帶 Console 組織 ID）。
     - 以 Enterprise Admin Console 派送 Desktop 設定的管理員，需先把電腦更新到新版 Claude Desktop，`browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三個設定才生效。

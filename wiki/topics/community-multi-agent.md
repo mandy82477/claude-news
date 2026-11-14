@@ -4,13 +4,13 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-10"
+last_news_update: "2026-11-14"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 4
+days_since_news_subtree: 0
 inbound_links: 8
 attribution_count: 6
 attribution_last: "2026-11-10"
@@ -32,10 +32,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-10
+**最後新聞更新：** 2026-11-14
 
-> **Multi-agent 架構添「同一任務、各保留原生 TUI」取向：yicheng47/runner**（2026-11-10）
-> - **yicheng47/runner**：讓 Claude Code、Codex、Copilot CLI 與 pi 在同一個任務裡協作，各自保留真實終端機介面，GitHub 504★。
+> **官方親自下場：Claude Code Projects 重新設計為對話式多線協作入口**（2026-11-14）
+> - **Anthropic 官方**：Projects beta 新版讓使用者描述目標後，Claude 自行界定範圍、分配工作、同時管理多條平行工作線並彙整產出。
 
 ---
 
@@ -139,6 +139,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Anthropic 官方：Claude Code Projects 重新設計，從資料夾變成對話式多線協作入口（2026-11-14）
+
+- **主線：** 並行規模
+- **核心模式：** Anthropic 官方將 Claude Code 的 Projects 功能重新設計為 beta：使用者描述要完成的目標後，Claude 自行界定範圍、分配工作、同時管理多條平行工作線，檢視各線產出後組裝成果；使用者可在工作進行中用手機插話，離開電腦後 Claude 仍持續執行。
+- **與既有模式的關係：** 補上「Multi-agent 架構」一個官方親自在產品層提供的「描述目標→自動拆解分工→平行協調→彙整」完整閉環——既有代表技巧多是社群編排工具接官方 API，本則是官方自己包進 Projects 介面；多線管理是規模化的直接痛點，主線填並行規模。
+- **可信度註記：** 官方一手介紹頁內容；Hacker News 93 分，2 個來源同日報導。
+- **來源：** Hacker News（2 個來源）；[官方介紹](https://claude.com/resources/articles/projects-redesigned)
+- **成熟度：** ⏳ 新興（官方剛發布 beta，尚無社群使用回饋）
 
 #### yicheng47/runner：讓 Claude Code、Codex、Copilot CLI、pi 在同一任務裡協作，各自保留原生終端介面（2026-11-10）
 
