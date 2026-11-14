@@ -3,7 +3,7 @@ page: "topics/ai-agent-safety"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
 days_since_news: 2
@@ -15,9 +15,9 @@ inbound_links: 132
 attribution_count: 304
 attribution_last: "2026-11-12"
 top_source: "google-news"
-pending_count: 1
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-11-18"
+pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -80,7 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 套件供應鏈：受感染 npm 套件植入 SessionStart hook；`llms.txt` 指向未註冊套件名可被搶注 | 讓 agent 照建議裝套件的人；安裝過受感染 npm 套件的開發環境 | 🔴 | 無回應（第三方生態；惡意版本帶有效簽章，常規信任檢查失效） | 裝套件前確認套件名已註冊、作者對得上；檢查專案裡有沒有不是你建立的 `.claude/settings.json` hook |
 | 資訊竊取型惡意軟體偷走 session 憑證，直接冒用你的帳號 | 裝過來路不明安裝包或破解軟體的使用者（Vidar、LummaC2、StealC 等） | 🔴 | 官方 2026-08-30 起主動通知受影響用戶：強制登出、移除已存付款方式、退款未授權扣款；平台本身未被入侵；11-04 另有報導稱新變種 token 重設密碼後仍可濫用，官方未回應 | 安裝檔只從官方 Releases 取；被強制登出後重新加付款方式，並核對帳單有無未授權扣款；僅改密碼不夠，需同步撤銷既有登入憑證／token |
 | Gmail 整合可未經詢問直接寄信，不再需要人工確認草稿 | 已啟用 Gmail 整合的人 | 🔴 | 無獨立官方安全說明（2026-08-19 媒體報導） | 把信箱權限收成唯讀搜尋，不給代寄與刪信 |
-| 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 無回應（2026-10-26／10-27 兩個獨立來源披露，觸發機制與是否需使用者額外動作均未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
+| 任何網站都能把指令檔丟進你的 Downloads 資料夾，Claude Code／Codex 會照著執行 | 允許 Claude Code 或 Codex 存取 Downloads 資料夾的使用者 | ❓ | 已查官方公告與 CHANGELOG，查無修補（2026-11-14；2026-10-26／10-27 兩個獨立來源披露，觸發機制未見報導） | 定期清空或隔離 Downloads 資料夾，別讓 agent 自動讀取裡面你沒建立的檔案 |
 | Claude Dispatch 存在安全缺陷，可能讓攻擊者跨企業邊界執行遠端指令 | 在企業環境啟用 Claude Dispatch 跨團隊功能的管理者 | ⛔ | 官方確認但決定不修補（11-05 The Register）；11-06 CyberSecurityNews／The Hacker News 曝攻擊鏈為惡意瀏覽器外掛，僅標題可用 | 無繞法（官方未提供規避建議）；優先檢查已連接裝置上的瀏覽器外掛來源 |
 
 另有偽裝求職面試程式測試題 repo 的供應鏈攻擊案例（Binance 竊案源頭）與「是，並不要再問」選項外洩密碼／金鑰案例（1,994 個倉庫、2,539 組密鑰，11-07），見 [[topics/ai-agent-safety-product-vulns#2026-11]]。

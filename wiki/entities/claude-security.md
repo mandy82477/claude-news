@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "beta（公開測試版）"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-10-23"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-23"
 status_main: "beta"
 matrix_role: "專用版"
@@ -32,13 +32,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 專用版（建在 claude.ai 網頁 app；Claude Code 另有外掛）
 **首次出現：** 2026-04-30
-**最後更新：** 2026-10-23
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-23
 
 > **最新資安產品動態**（2026-10-23）
 > 官方確認主產品是 claude.ai 網頁 app（Mythos 掃描僅此）；Claude Code 端為另裝的 claude-security 外掛，非內建整合。
 
 ## 現況
+
+**自 2026-10-22 起無新動態（2026-11-14 核）——官方未再公布新進展；不是漏更新。**
 
 **2026-10-22 新增「重複出現漏洞」偵測與修補進度追蹤：** Claude Security 新增偵測同一漏洞再次出現的能力，並持續追蹤修補進度，不再只是一次性掃描；Help Net Security、TestingCatalog AI News 同日報導（單一線報導，未見官方部落格或產品文件佐證，涵蓋語言／比對機制等細節未載）。
 

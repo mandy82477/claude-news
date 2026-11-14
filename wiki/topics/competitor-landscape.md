@@ -3,7 +3,7 @@ page: "topics/competitor-landscape"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -16,7 +16,7 @@ attribution_count: 282
 attribution_last: "2026-11-13"
 top_source: "blog"
 pending_count: 9
-pending_overdue: 6
+pending_overdue: 0
 pending_next_review: "2026-11-15"
 pending_signalled: 2
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
@@ -116,7 +116,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-01⟩ 已查證（2026-09-20，[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，快取未命中）；V4 Flash 輸入 $0.15／輸出 $0.60（離峰）。
 - V4-Pro 輸出約為 V4 Flash 的 3.3 倍，確認雙軌定價策略屬實；尖峰時段（UTC 01:00–04:00、06:00–10:00 週一至五）雙倍。
 - **DeepSeek 雙軌與對比對象**：V4-Pro 隨開源工具 Harness 同步上線，API 定價較 V4 Flash 高，可能為「低價 Flash／高價 Pro」雙軌策略（推論）；KuCoin「逼近 Claude 3 Opus」是 DeepSeek 對 Claude 的比較，與內部兩模型互比不可混用。
-- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-11-11｜訊 2026-09-06）：對標對象曾為非最新旗艦 Claude 3 Opus；09-06 tech-insider.org 改對照 Opus 5（現行旗艦，另含 Gemini 3.1），稱「15 分差距」，惟測試方法論與具體分數仍未見，官方頁面未查證。
+- ❓ **待查證**（標 2026-08-13｜查 DeepSeek V4 Pro、Claude 3 Opus｜複 2026-12-14｜訊 2026-09-06）：09-06 日報（tech-insider.org，09-05）標題稱 V4-Pro 對 Opus 5、Gemini 3.1 有「15 分差距」，僅標題可用，方法論與分數未見；DeepSeek 官方頁未查證。
+  - 此前對標對象為非最新旗艦 Claude 3 Opus（KuCoin）；DeepSeek 官方頁 2026-11-14 連不上。
 - **Lindy 案例（06-29，CNBC）**：AI 新創 Lindy 100% 流量自 Claude 切至 DeepSeek，每月省下數百萬美元，屬企業級大規模用量的相對節省，非單一訂閱價格對比。
 - **Muse Code 定價來源**：定價數字為媒體整理（Wavect、The New Stack），Meta 官方獨立掛牌頁未見（2026-08-13 查證）；09-01 三訂閱層與「20x」折扣層的實際費率均未公布。
 - ⟨Q-03⟩ 已查證（2026-09-20）：08-04 Decrypt 所稱「免費最強模型」即 08-03 正式發布的 **Qwen3.8-Max**——2.4 兆參數（95B 啟用）MoE、1M context，權重開源。
@@ -234,10 +235,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **查證快照細節**
 - **36Kr（08-22）**：「Codex 是否開始反擊 Claude Code？」產業競爭態勢觀察報導，與同日 Hacker News 高分貼文「Quick impressions: A week of using Codex more than Claude」呼應同一主題（該則個人觀察角度另見 [[topics/community-tech-discussions]]）。
-- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-22｜查 Codex、評測方法論｜複 2026-11-14）：延伸查證 36Kr 同系列報導確認此篇性質為產業競爭態勢觀察評論，非帶方法論的評測文章，站內未見任何一篇 36Kr 報導提供 Codex vs Claude Code 的量化分數或測試方法；判定此則本質上不存在可查證的「評測方法論」，非官方未公開。
-- ⟨Q-09⟩ 🔎 **查無官方**（標 2026-08-10｜查 HackerNoon、誠實裁決｜複 2026-11-14）｜**HackerNoon 三方比較文的評分數據**：08-10 查證結論為工程師個人觀點比較文、未見具體評分數據；10-17 網搜再查仍搜不到該文可驗證的評分。
-- ⟨Q-10⟩ 🔎 **查無官方**（標 2026-08-10｜查 SitePoint、Codex 5.3｜複 2026-11-14）｜**SitePoint 選型建議文的評測方法論或分數**：08-10 查證結論為工作流選型建議文、未見具體評測方法論或分數；10-17 網搜再查仍搜不到該文可驗證的數字。
-- ⟨Q-11⟩ 🔎 **查無官方**（標 2026-08-10｜查 The Information、留存率｜複 2026-11-14）｜**Claude Code 留存率與活躍用戶數的量化揭露**：08-10 查證結論為留存率、活躍用戶數等量化數字未見報導揭露；10-17 網搜再查仍未見引述 The Information 的留存數字。
+- ⟨Q-02⟩ 🔎 **查無官方**（標 2026-08-22｜查 Codex、評測方法論｜複 2026-12-14）：2026-11-14 再查仍同。延伸查證 36Kr 同系列報導確認此篇性質為產業競爭態勢觀察評論，非帶方法論的評測文章，站內未見任何一篇 36Kr 報導提供 Codex vs Claude Code 的量化分數或測試方法；判定此則本質上不存在可查證的「評測方法論」，非官方未公開。
+- ⟨Q-09⟩ 🔎 **查無官方**（標 2026-08-10｜查 HackerNoon、誠實裁決｜複 2026-12-14）｜**HackerNoon 三方比較文的評分數據**：08-10 查證結論為工程師個人觀點比較文、未見具體評分數據；10-17、11-14 網搜再查仍搜不到該文可驗證的評分。
+- ⟨Q-10⟩ 🔎 **查無官方**（標 2026-08-10｜查 SitePoint、Codex 5.3｜複 2026-12-14）｜**SitePoint 選型建議文的評測方法論或分數**：08-10 查證結論為工作流選型建議文、未見具體評測方法論或分數；10-17、11-14 網搜再查仍搜不到該文可驗證的數字。
+- ⟨Q-11⟩ 🔎 **查無官方**（標 2026-08-10｜查 The Information、留存率｜複 2026-12-14）｜**Claude Code 留存率與活躍用戶數的量化揭露**：08-10 查證結論為留存率、活躍用戶數等量化數字未見報導揭露；10-17、11-14 網搜再查仍未見引述 The Information 的留存數字。
 - **MarkTechPost（08-01）**：Supabase Evals 已查證（2026-08-13）——Build 階段 Opus 5／Kimi K3 均 100%（未輔助）；Sonnet 5 經 skills 輔助由 78%→100%、GPT-5.6 Sol 由 89%→100%（[supabase.com/evals](https://supabase.com/blog/introducing-supabase-evals)）。
 - **quasa.io（08-01）**：第三方彙整已查證（2026-08-13）——SWE-bench Verified 兩者持平 ~88.6–88.7%（Opus 5 於 07 月發布後 Claude 升至 97.0%）。
 - **quasa.io 其餘兩組**：SWE-bench Pro Claude Opus 4.8 領先 69.2% vs 58.6%；Terminal-Bench Codex 領先 82.7% vs 69.4%（2026-08-13 查證）。
@@ -611,8 +612,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### 2026-08-13
 - **DeepSeek**：TradingView、Bloomberg 報導 DeepSeek 公開組建團隊挑戰 Claude Code；KuCoin 與 Simon Willison 報導 V4 Pro 經 OpenRouter 以 API 上線，聲稱逼近 Claude 3 Opus、成本大幅降低（Google News；Blog/Simon Willison）
-- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-11-11｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
-  - 09-21 日報：Grok 4.7 已上線 GitHub Copilot（GitHub changelog），主打 agentic coding——新版確有發布，能力數字仍未見
+- ❓ **待查證**（標 2026-08-13｜查 Grok、SpaceX｜複 2026-12-14｜訊 2026-09-21）｜**xAI/Grok 新版發布，加壓 Anthropic 與 OpenAI**：Barron's 僅標題可用，能力提升內容仍未見（Google News/Barron's）
+  - 09-21 日報：Grok 4.7 已上線 GitHub Copilot（GitHub changelog），主打 agentic coding——新版確有發布；媒體稱（Decrypt 等，2026-11-14 查）定價 $2／$6 per Mtok、context 50 萬 token，能力數字為 xAI 自報，xAI 官方頁 2026-11-14 連不上，未查證
 - 後續（依 09-07 日報）：版本號為 **Grok 4.5**，shattered.io 稱定價每百萬 token 輸入 2 美元／輸出 6 美元、優於 GPT-5 與 Claude；該說法僅見媒體標題，xAI 官方頁面未查
 - **訊 2026-09-07**：Grok 4.5 官方定價 $2/$6 per Mtok，宣稱優於 GPT-5 與 Claude（shattered.io，單一來源），為此前訊號補上版本號與定價，詳見「競品定價對照」與「對手雷達」新增列。
 - **訊 2026-09-21**：Grok 4.7（基於 4.6，主打 agentic coding／複雜工作流）於 GitHub Copilot 上線，官方一手來源（GitHub Copilot Changelog），惟未提供 benchmark 或定價，未直接證實 Barron's 稱「加壓 Anthropic 與 OpenAI」的具體效果，詳見「對手雷達」新增列。

@@ -4,7 +4,7 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "active"
 matrix_role: "產品"
@@ -17,10 +17,10 @@ inbound_links: 127
 attribution_count: 853
 attribution_last: "2026-11-13"
 top_source: "github-issues"
-pending_count: 6
-pending_overdue: 2
+pending_count: 5
+pending_overdue: 0
 pending_next_review: "2026-11-20"
-pending_signalled: 2
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -117,14 +117,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 同報導的「已儲存環境設定」**已查實**：桌面版文件載有 saved environment（環境選擇器記錄 Claude 執行位置與資料夾，可建立、編輯、移除；查證日 2026-10-31，來源：[Desktop 文件](https://code.claude.com/docs/en/desktop.md#create-a-saved-environment)）。
 - ✅ **SneakPeek（桌面版預覽窗格漏洞，CVSS 8.7）已於 2026-08-17 修補**（[Noma Labs 原文](https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data)，查證 2026-10-18）：於 Claude Desktop 1.30096.1 修完並經自動更新推送；CSO Online 的「256KB 預覽窗格洩密」是同一個漏洞。
   - **你該做的**：確認桌面版不低於 1.30096.1；CVE 與 GitHub 安全公告待發，時間線見 [[topics/ai-agent-safety]]。
-- ❓ **待查證**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-11-14｜訊 2026-10-04）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01，僅標題）：正式性仍待官方確認。
+- 🔎 **查無官方**（標 2026-10-01｜查 claude.dev、developer hub｜複 2026-12-14）｜**Anthropic 據報推出 claude.dev 開發者中心**（Pasquale Pillitteri via Google News，2026-10-01
+  - 僅標題）：
+  - 2026-11-14 於 anthropic.com／claude.com／support.claude.com 等官方網域搜尋，未見 claude.dev 公告。
   - 2026-10-17 搜尋補查：第三方稱其 2026-09-30 上線、由 @ClaudeDevs 宣布、內容多為彙整既有文章；claude.dev 無法自本環境連線，未取得一手公告。
-  - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心仍待官方頁面查證。
-- 🔎 **查無官方**（標 2026-09-17｜查 bank account、financial data｜複 2026-11-14｜訊 2026-11-06）｜**BleepingComputer：Anthropic 據報推動讓 Claude 分析銀行帳戶與財務資料**（2026-09-17）：媒體稱在 Claude iOS App 發現名為「Claude Money」的 Money 分頁。
-- 媒體為 BleepingComputer、gHacks、TechRepublic；該 Money 分頁可連結銀行帳戶並詢問支出與計畫，多數用戶尚未開放。
-- 查證 2026-10-03：anthropic.com／support.claude.com 搜尋均未見官方公告，支援銀行、連結方式、適用方案與上線日皆未載。2026-10-17 再查 [Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes)（最新一筆 2026-10-07）仍無 Money 分頁或銀行帳戶連結條目。
-- 2026-11-05：The Verge 以「Claude AI 可直接接入銀行帳戶」為題跟進報導，僅標題可用，未附支援銀行範圍、驗證方式或可執行動作，未提供比既有報導更多的細節，維持查無官方。
-- 2026-11-06：Help Center release notes 新增段落，官方原文稱推出 Personal Finance beta，可連結銀行、信用卡、貸款與投資帳戶；Reuters、TechCrunch、9to5Mac 同日報導，官方一手來源首次出現，詳見 [[entities/claude-personal-finance]]。
+  - 後續（日報 10-04）：claude.dev 網域出現 Opus 5.5 使用教學文（HN 單日 224 分），可見該網域有內容在線；是否為官方開發者中心，官方網域未載。
+- ✅ **Personal Finance 已於 2026-11-05 推出 beta（官方確認）**（[Anthropic 公告](https://claude.com/resources/articles/introducing-personal-finance-in-claude)、[說明中心](https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude)，查證 2026-11-14）：美國 Pro／Max／Ultra 方案，唯讀連結銀行與信用卡帳戶，不能轉帳或投資。
+  - 前身：2026-09-17 BleepingComputer 等據報在 iOS App 發現「Claude Money」Money 分頁；官方頁面未用該名稱，詳見 [[entities/claude-personal-finance]]。
 - **官方頁未見 Claude for Excel／Word／PowerPoint／Outlook 下架**（查證 2026-10-03）：[Claude for Microsoft 365](https://claude.com/claude-for-microsoft-365) 頁載明 Excel、PowerPoint、Word 在所有付費方案正式可用，Outlook 在所有付費方案 beta，無下架聲明。
 - support.claude.com 仍有獨立文章（[Excel](https://support.claude.com/en/articles/12650343-use-claude-for-excel)、[Word](https://support.claude.com/en/articles/14465370-use-claude-for-word)）。09-15 五份文件移除相關段落的原因官方未說明，僅確認產品仍在架。
 - 同批新增 Salesforce in Claude（beta），09-16 Help Center release notes 另載 M365 connector 新增寫入工具（[release notes](https://support.claude.com/en/articles/12138966-release-notes)）。

@@ -12,7 +12,7 @@ parent: "entities/pricing"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 2
-inbound_links: 3
+inbound_links: 4
 attribution_count: 9
 attribution_last: "2026-11-12"
 top_source: "official-docs"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Anthropic 計費沿革：價格、方案與促銷怎麼變過來
@@ -64,7 +64,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 - **09-19｜Auto mode 改用 server-side classifier，分類器耗用不計費**（API、Enterprise、雲端通路）。見 [[entities/pricing#當前生效的計費規則]]
 - **09-14｜週配額換軌** ⚠️：+50% 加成到期、永久 +25% 接手，水位約為加成期間的 83%。見 [[entities/pricing#現況]]
 - **08-10｜Sonnet 5 維持 $2／$10**，原訂 9/1 漲到 $3／$15 的計畫取消。見 [[entities/pricing#模型 API 定價現況]]
-- **還沒證實的**：Opus 5.5 實驗性用量重置。見 [[entities/pricing#還沒確定的計費變動]]
+- **09-22｜Opus 5.5 發布附帶限額重置**：官方稱提高五小時上限並給訂閱用戶一次可存著用的重置（2026-11-14 查證）。見 [[entities/pricing#當前生效的計費規則]]
 
 ---
 
@@ -156,8 +156,8 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 #### 2026-09-23：Claude Code cloud sessions 上線，新用戶最高可領 $250 額度
 3 個獨立來源同日報導（Google News/Pasquale Pillitteri 等）：Claude Code cloud sessions 正式上線，新用戶可領最高 $250 額度；額度使用條件、到期日與是否僅限特定方案均未見報導細節，功能本身見 [[entities/claude-code]]。後續（2026-09-26）：BleepingComputer 報導補上使用條件缺口——此額度僅限 cloud sessions 使用，到期日仍未見報導。後續（2026-09-27）：gHacks 報導同一額度明確限定 Pro 與 Max 訂閱戶可領，與此前「新用戶」說法是否為同一資格範圍未見報導釐清，僅標題可用（Google News/gHacks）。
 
-#### ❓ 2026-09-23：Opus 5.5 上線同時傳「實驗性用量上限重置」機制
-查證進度與現況見 [[entities/pricing#還沒確定的計費變動]]。
+#### 2026-09-23：媒體稱 Opus 5.5 上線同時導入「實驗性用量上限重置」，官方確認有重置、無「實驗性」字樣
+已查證（2026-11-14）：[Opus 5.5 發布稿](https://www.anthropic.com/news/claude-opus-5-5)（09-22）稱給訂閱用戶一次可存著用的限額重置，說明中心 [What is a limit reset?](https://support.claude.com/en/articles/17007452-what-is-a-limit-reset) 載明用法與到期規則；單一來源（Pasquale Pillitteri）所稱的設定頁籤名稱、10-22 到期日與適用方案，官方頁面均未載。現況見 [[entities/pricing#當前生效的計費規則]]。
 
 #### 2026-09-22／23：Claude Opus 5.5 發布，牌價 $4/$20 per Mtok
 

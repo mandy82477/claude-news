@@ -3,7 +3,7 @@ page: "topics/coding-workflow-guide"
 kind: "topic"
 status: "ongoing"
 domain: "💻 開發實務"
-last_updated: "2026-11-06"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-06"
 update_freq: "🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）"
 status_main: "ongoing"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-11-06
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-06
 
 > **本頁在回答什麼**
@@ -277,7 +277,16 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 **官方另闢「調整模型、effort、thinking」專章**：Help Center release notes 新增「Change the model, effort, and thinking settings」段，說明怎麼切換模型、調整推理強度（effort）與 thinking 開關（細節未載）（[原文](https://support.claude.com/en/articles/12138966-release-notes)，2026-11-06 查）。
 
-**`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫（官方未載預設值），見 [[entities/claude-code]]。
+**`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫，見 [[entities/claude-code]]。
+
+**預設是展開的**：官方環境變數頁把它描述為「關掉 `@` 展開」的開關（設為 `1` 生效），即**不設它就會灌全文**；需 v2.1.299 以上，且只能設在 shell 或 user／managed settings 的 `env`，**專案與 local settings 會被忽略**（[官方環境變數頁](https://code.claude.com/docs/en/env-vars)，2026-11-14 查證）。另一個副作用：`@` 不產生工具呼叫，所以 **PreToolUse hook 不會跑**。
+- 🔎 **查無官方**（標 2026-10-14｜查 CLAUDE_CODE_DISABLE_FILE_MENTIONS、預設值｜複 2026-12-14）：官方**沒有明文寫出該變數的 default 值**，上面的「預設展開」是從它的開關語意推得；另官方 changelog 有一條稱該變數「單獨設定會被忽略」，與環境變數頁說法不一致，本輪未能判定哪條為現行
+
+**長 session 中途調 effort 不會打掉快取**：官方 prompt-caching 文件載明 Opus 5.5、Sonnet 5.5、Haiku 5.5、Fable 5.1 以 API key 或訂閱使用時，中途改 effort 不讓快取失效，例行工作可放心中途降檔，見 [[topics/code-quality-decline]]。
+
+**接續閒置對話前會先警告**：v2.1.304 起 Pro／Max 若接續會吃掉相當比例的 5 小時額度，先提示，可選仍接續或開新對話讓 Claude 查前一段，見 [[entities/claude-code]]。
+
+**成本旋鈕再兩個**：`CLAUDE_CODE_SUBAGENT_EFFORT`（v2.1.316）固定 subagent 的 effort，與 `CLAUDE_CODE_SUBAGENT_MODEL` 並列，仍只能固定、不能動態路由，見 [[topics/official-community-gap]]；`CLAUDE_CODE_DISABLE_ULTRATHINK`（同版）讓 ultrathink 關鍵字不再觸發額外思考。
 
 **腳本／SDK 呼叫場景的省法：** 官方 headless 文件（2026-09-23 查）記載 `--bare` 旗標——「Add `--bare` to reduce startup time by skipping auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md」；官方稱這是 script 與 SDK 呼叫的建議模式，未來會成為 `-p` 的預設值。這與上方「分層 CLAUDE.md」「`claudeMdExcludes`」等互動式 session 的省法不同層級——後者省的是載入內容的量，`--bare` 省的是連自動發現這個動作本身都跳過，只適合不需要專案客製化行為的一次性腳本呼叫。
 
@@ -396,7 +405,9 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ⚠️ **security-guidance 不阻擋任何東西**：官方明寫「None of the layers block writes or commits」「not deterministic guardrails」「the review model can miss issues」。要硬性阻擋得自己配 hook 或 CI，而 hook 本身也會失靈，三件事先知道：command／HTTP hook 設 `onFailure: "block"`（v2.1.295 起），hook 起不來或逾時就擋下動作、不默默放行；沙箱自動放行（`autoAllowBashIfSandboxed`）遇到含 shell expansion 的指令不保證成立，無人值守前先自測；標為強制的 CLAUDE.md 規則被忽略是長期未解的已知問題，強制性要落在 hook 而不是措辭。issue 狀態與其他失效模式見 [[entities/claude-code-features#hooks：事件、失效模式與能不能當防線]]。改了 hooks、MCP 或 plugin 設定後要完整重啟 session 才生效、沒有熱重載（GitHub issue #24057，未修復），改設定前先收尾手上的工作。
 
-想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
+想把寫入範圍鎖在工作目錄內，v2.1.314 起可開 `permissions.blockWritesOutsideWorkingDirectories`（預設關；2026-11-14 仍只在 `latest` 通道 2.1.325，`stable` 2.1.311 沒有，通道見 [[entities/claude-code-releases]]）：Write／Edit／NotebookEdit 在任何權限模式（含 bypass）都拒絕寫入工作目錄外的路徑，不必自己寫 hook；官方只列這三個工具，Bash 寫入不在其中（推論）。若依賴 sandboxed Bash 當隔離邊界，v2.1.309 之前的版本實際比預期鬆——指令執行前會先跑 shell 啟動檔而落在沙盒外，macOS 的 `denyWrite` glob 也比對不完全，兩者 v2.1.309 修復，見 [[entities/claude-code]]。
+
+「不再詢問」存進 repo 的密鑰已有官方修補：v2.1.323 起含密鑰的允許規則只在本次 session 有效、不寫檔，`settings.local.json` 改全域忽略；曾被存進 repo 的金鑰仍須換，見 [[topics/ai-agent-safety-product-vulns]]。
 
 硬擋層還有兩個寫法上的坑：`permissions.deny` 要覆蓋同一動作的各種寫法——Reddit 一則回報稱對 `git push` 設的 deny 擋不住 `git -C . push`（單一來源，2026-10-14），見 [[topics/community-guardrails]]；v2.1.300 起 hook 回傳的 `updatedInput` 依 schema 驗證，靠 hook 改寫 schema 以外欄位的寫法，升版後會失效，見 [[entities/claude-code]]。
 
@@ -440,6 +451,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 社群做法收斂度最高的是 **Read-Only Reviewer**（審查者不給寫入權限）；另有對抗性審查（計畫前＋程式碼後）、4-agent 分工、跨模型互審（Claude 審 Codex，通過率 71.6% → 89.7%；方法論已查得——[Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656)：116 則 LiveCodeBench 中／難題、六種條件對照，reviewer 僅見題目與 writer 草稿、不能執行測試。**方向不對稱**：反向（Codex 審 Claude）反而使通過率由 91.4% 降至 82.8%——**不是任一組合互審都有效**）、以及把品質把關前移到任務拆解與驗收條件設計。
 
+agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收進 `<details><summary>` 折疊區塊、PR 列表只留一行摘要（單一作者，2026-11-09），可寫進 PR 模板或指示檔，見 [[topics/community-guardrails]]。
+
 官方也推對抗式 review，但**同一節就自己踩煞車**——這句社群幾乎沒人提：
 
 > A reviewer prompted to find gaps will usually report some, **even when the work is sound**, because that is what it was asked to do. Chasing every finding leads to over-engineering: extra abstraction layers, defensive code, and tests for cases that can't happen.
@@ -473,9 +486,15 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 **升版檢查：`claude -p` 的預設權限模式變了。** v2.1.302 起，`claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑（先前是 auto）；CI 或無人值守腳本若依賴舊行為，升版後要明寫 `--permission-mode auto`。同版起 fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟，不想要就設 `CLAUDE_CODE_FORK_SUBAGENT=0`，見 [[entities/claude-code]]。同樣跑無人值守，v2.1.310 起停用 telemetry 或非必要流量時，長時間 foreground sleep 會被攔阻，腳本裡用 sleep 輪詢的寫法升版後可能中斷；同版新增官方 Monitor tool 可改走監控。另有 issue 回報 headless `claude -p` 相同工作負載耗用 5 小時額度約為互動式 CLI 的 1.8 倍（#97074，未修復、單一回報），批次排程前先把這個倍率算進成本，見 [[entities/claude-code]]。
 
+**Fable 5.2 升級對 effort 與成本的影響**：v2.1.321（11-09）起 5.2 成預設 Fable，牌價 $8/$40；官方遷移指南稱「別多想」類提示在 medium 以上擋不住思考，xhigh／max 會自開子 agent 審查，成本要看 effort 而非提示措辭，見 [[entities/fable-5]]。
+
+**`claude -p` 撞 API 400**：GitHub issue #11678（仍 open，52 則留言）回報無頭模式一送 prompt 即回 `tools.3.custom.input_examples` 400，CI 腳本先查此 issue，無官方修復，見 [[entities/claude-code-known-issues]]。
+
 **跨模型比較表現前先釘 effort**：各代的預設 effort 不同，省略 effort 的請求在新世代可能低一級；懷疑新模型變笨前，先用 `--effort` 把兩邊釘在同一檔，見 [[topics/model-comparison]]。
 
 `/goal` 只管單一 session；要跨 session 保留狀態或 20 路並行，官方的另一格是 Managed Agents——各選項的分界見 [[topics/anthropic-agent-stack]]「你該用哪個」。
+
+**Stop hook 收尾把關的社群實作**：claude-code-claim-check 在 agent 宣稱 fixed／tests pass 卻無最後一次編輯後的成功證據時退回一次補證據、不連擋兩次；作者自測誤擋由 86 降到 2，樣本為自己的 session 歷史，無第三方覆核，見 [[topics/community-guardrails]]。
 
 **社群做法：** 官方沒回答的問題——「規則寫了 Claude 真的會照做嗎」——社群有一份量化答案，且是負面的：**即使 CLAUDE.md 明寫 `## TDD First` 六行規則，30 天提交審計顯示 60% 的情況 Claude Code 仍先寫程式碼、事後才補測試**（規則遵守率僅 40%；dev.to「I Told Claude Code to Do TDD. It Wrote the Test AFTER the Code 6 Out of 10 Times.」，2026-05-25，原始報導見 [[topics/community-tech-discussions-archive#2026-05]]）。這與第 4 段「CLAUDE.md 規則遷移到 hooks 強制執行」是同一個機率性遵守問題的測試版本。
 
@@ -552,6 +571,8 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 **讓它自己驗完再交給你，一句話**：同一個 prompt 叫它跑檢查 → `/goal` 設可量測的完成條件 → `Stop` hook 跑你的 script、不過不放行 → 驗證 subagent，成本遞增；四級的寫法見[第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)。共同重點是**把裁決權從執行者手上拿走**。
 
 **同一批工具呼叫全標錯誤時，先找第一個真正失敗的**（推論）：單一訊息內的平行工具呼叫只要一個失敗，同批其餘會被自動取消並標為錯誤（GitHub issue #22264，2026-10-16，未修復、官方未回應）；依賴平行工具呼叫的流程不能假設批次內各自獨立，見 [[entities/claude-code]]。
+
+**某輪看起來沒回應或問題對話框前的說明消失，先別重送**：Fable 5 的回覆偶被誤顯示成 thinking 區塊（#74558），先展開確認；先輸出文字再呼叫 AskUserQuestion 時前面的文字不顯示（#65662，未修復），把說明放進問題本身，見 [[entities/claude-code-known-issues]]。
 
 **要看它當時實際看到什麼**：v2.1.300 起 transcript 每次請求多記當時的 system prompt 與 tools，可直接翻；分享 transcript 前要知道裡面現在含完整 system prompt。
 
@@ -640,11 +661,11 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 ## 本週 coding 亮點
 
-- **可把寫入鎖在工作目錄內**：v2.1.314 的 `permissions.blockWritesOutsideWorkingDirectories`，連 bypass 模式也擋，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **sandboxed Bash 的隔離邊界在 v2.1.309 前較鬆**：升版前別拿它當安全假設，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
-- **無人值守腳本升版會踩的兩件事**：長時間 foreground sleep 在關 telemetry 時被攔、headless 額度耗用偏高，見 [第 6 段](#6-測試與上線-怎麼讓它自己驗完再交給你)
+- **「不再詢問」存進 repo 的密鑰已修**：v2.1.323 起只在本次 session 有效，舊金鑰仍須換，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **寫入邊界設定只在 latest 通道**：`blockWritesOutsideWorkingDirectories` 預設關，stable 2.1.311 沒有，見 [第 4 段](#4-實際動手寫-錯誤何時被攔)
+- **長 session 的成本旋鈕**：中途調 effort 不打掉快取、閒置對話接續前會先警告、subagent effort 可固定，見 [第 2a 段](#2a-怎麼讀得省)
 
-%% 亮點檢查日 2026-10-31；其餘候選（用量與定價、工具星數類、單一作者做法、mods 內部事件、安全事件、功能請求類 issue）屬他頁，不入本節。 %%
+%% 亮點檢查日 2026-11-14；其餘候選（工具星數類、單一作者工具、安全事件、功能請求類 issue、Code Mode 與 Monitor tool 屬他頁）不入本節。 %%
 
 ---
 
@@ -688,7 +709,7 @@ Boris Cherny 反對「vibe coding」推動術語向 spec-driven 靠攏，2026-05
 
 社群與一手觀察：
 
-- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-10-31 查證，近 7 天無增減
+- [anthropics/skills](https://github.com/anthropics/skills) ／ [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) — 官方技能清冊，2026-11-14 查證，近 7 天無增減
 - [Putting Spec Kit through its paces](https://blog.scottlogic.com/2025/11/26/putting-spec-kit-through-its-paces-radical-idea-or-reinvented-waterfall.html) — spec-driven 反方實測
 - [Cross-Model LLM Code Review（arXiv 2607.21656）](https://arxiv.org/abs/2607.21656) — 跨模型互審通過率方法論，[[topics/community-guardrails]]「查證備註」2026-08-13 查證
 - 熱門專案設定調查 — 14 個 repo，2026-08-08 一手觀察，樣本限制見該節

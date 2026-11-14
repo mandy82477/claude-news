@@ -1520,3 +1520,4 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [Friday 2026/11/13 23:20:40.00] === Pipeline complete (agent) ===
 [cloud weekly-wiki-lint-cloud STARTED 2026-11-14T03:05:03Z]
 [cloud weekly-wiki-lint-cloud CHECKPOINT 2026-11-14T03:32:25Z] 1 A段1-5＋5a／5b／5d／5e／5i／5j／5l 完成，下一步 5c（盤點 108 筆）
+[cloud weekly-wiki-lint-cloud CHECKPOINT 2026-11-14T03:49:09Z] 2 A段＋B段 5a-5o 完成（5c 清零 116→0），下一步 C 段 6a-6l

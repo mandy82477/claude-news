@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（Legacy，仍可呼叫）"
 domain: "🤖 模型"
-last_updated: "2026-10-25"
+last_updated: "2026-11-14"
 last_news_update: "2026-09-28"
 status_main: "active"
 days_since_news: 47
@@ -16,8 +16,8 @@ inbound_links: 21
 attribution_count: 3
 attribution_last: "2026-07-31"
 top_source: "google-news"
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（Legacy，仍可呼叫）
 **領域：** 🤖 模型
 **首次出現：** 2026-07-01
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-09-28
 
 > **最新動態**（2026-09-28）
@@ -40,13 +40,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現況
 
+**自 2026-09-28 起無新動態（2026-11-14 核）——它已是 Legacy，預設地位由 [[entities/sonnet-5-5]] 接手；本頁留著是因為仍有 21 個頁面指向它。**
+
 **2026-09-28 最新**：Anthropic 發布 [[entities/sonnet-5-5|Claude Sonnet 5.5]]，Claude Code v2.1.284 將其設為 **Anthropic API 預設 Sonnet 模型**；Terminal-Bench 4.0 由本代的 10.3% 升至 70.6%，牌價維持 $2/$10 不變（[官方發布文](https://www.anthropic.com/claude-sonnet-5-5)；[GitHub v2.1.284](https://github.com/anthropics/claude-code/releases/tag/v2.1.284)，2026-09-28）。完整換代對照見 [[entities/sonnet-5-5]]。自 2026-09-28 起無新動態（2026-10-31 核）；本代已被 Sonnet 5.5 取代，停滯是事實而非漏更新。
 
 - **本頁已是官方 Legacy（2026-10-10 查證）**：官方 [Sonnet 5 模型頁](https://platform.claude.com/docs/en/models/sonnet-5/overview) 頁首標 **Legacy**、狀態欄寫 `Active (legacy)`，[models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 也把它列在「Legacy models (still available)」；
   - 發布日 2026-06-30、退役不早於 **2027-06-30**（[model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations)）。
   - 可靠知識截止與訓練資料截止皆為 **Jan 2026**，預設 effort `high`，牌價 $2／$10、快取讀取 $0.20。
-- 🔎 **查無官方**（標 2026-09-28｜查 Sonnet 5.5、Claude Code CLI 預設｜複 2026-11-10）｜**Sonnet 5.5 是否同步為 Claude Code CLI 本身的預設模型**：官方只說「Anthropic API 預設 Sonnet」。
-  - 2026-10-10 查官方 models overview、model deprecations 與 [Claude Code settings reference](https://code.claude.com/docs/en/settings-reference) 三處皆未載 CLI 預設模型，同一題見 [[entities/sonnet-5-5]] ⟨Q-01⟩
+- **Sonnet 5.5 不是 Claude Code 的預設模型**：官方 [Claude Code model-config](https://code.claude.com/docs/en/model-config) 列 `default` 為 Opus 5.5（Pro／Max／Team／Enterprise／Anthropic API）
+  - Sonnet 5.5 是 `sonnet` 別名的目標；v2.1.280 前 Pro 與 Team Standard 的 `default` 解析為 Sonnet 5（2026-11-14 查證），見 [[entities/sonnet-5-5]]
 
 **2026-09-27**：GitHub Issue #65961 回報 Claude 生成程式碼時預設加上大量註解，即使於 prompt 中明確指示停止仍持續產生，累積 248 個反應、39 則留言，尚無官方回應；與社群既有「Claudism」冗語傾向同屬一類，見 [[topics/community-tech-patterns]]「CCN」清理工具章節，完整記錄見下方「爭議」與「歷史記錄」。
 

@@ -3,7 +3,7 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-07"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-07"
 status_main: "ongoing"
 days_since_news: 7
@@ -49,11 +49,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **記憶**：官方 auto memory＋把決策寫回 repo 是現在的底；社群工具（claude-mem、projectmem、brain.md、token-savior 等）各走一路，還沒收斂；
-  - 10-27 至 10-30 連出三個本機工具（memory-forge-rs、scope-recall-hermes、open-second-brain），賣點都是記憶可檢視、可修正、來源可追溯，皆只有星數佐證。**接下來看什麼：** 有沒有人拿兩三個工具在同一個專案上做比較。
+- **記憶**：官方 auto memory＋把決策寫回 repo 是現在的底；2026-11-07 Anthropic 研究部落格首次公開「編碼—整併—取回」三階段設計框架，是官方對記憶該留什麼、該忘什麼的第一份一手說明，但機制細節未全載，還沒有社群實作拿來對照；
+  - 社群工具（claude-mem、projectmem、memory-forge-rs、scope-recall-hermes、open-second-brain 等）各走一路，賣點多是記憶可檢視、可修正、來源可追溯，皆只有星數佐證。**接下來看什麼：** 有沒有人拿官方框架的三階段去評比這些工具，或在同一個專案上並排比較。
 - **Agent 寫出的文件**：2026-10-08 有人提出把規劃文件發布到可持久引用的連結，避免檔案被取代後脈絡消失；單一作者做法，還在試。
-- **CLAUDE.md**：寫成規則而不是建議，違反架構的改動交給 CI 或 hook 攔；要 100% 遵守的規則不該只放 CLAUDE.md，見 [[topics/community-guardrails]]。
-- **Context**：即時取回優於預先載入；官方 2026-07-26 移除逾 80% Claude Code 系統提示詞，是這條路唯一的廠商一手依據（見下方 2026-07）。
+- **CLAUDE.md**：寫成規則而不是建議，違反架構的改動交給 CI 或 hook 攔；2026-11-04 Gauge 再加一層「用 agent 任務成功率回頭修文件」的驗證做法（HN 40 分）；要 100% 遵守的規則不該只放 CLAUDE.md，見 [[topics/community-guardrails]]。
+- **Context**：即時取回優於預先載入；2026-11-02 context-mode 把工具輸出攔在本機 SQLite、只回傳搜尋結果，是同一方向的新做法；官方 2026-07-26 移除逾 80% Claude Code 系統提示詞，是這條路唯一的廠商一手依據（見下方 2026-07）。
 - **你的選項：** 先用官方 auto memory，決策寫進 repo；要團隊共享或跨工具攜帶時才加社群工具，並記得它們都還沒有第二方驗證。
 
 **機制細節**

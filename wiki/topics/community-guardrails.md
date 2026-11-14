@@ -3,7 +3,7 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
 days_since_news: 2
@@ -16,7 +16,7 @@ attribution_count: 18
 attribution_last: "2026-11-12"
 top_source: "hacker-news"
 pending_count: 2
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 1
 staleness_exempt: null
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-12
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-12
 
 > **Hooks 與自動化新增「完成宣告驗證」Stop hook**（2026-11-12）
@@ -50,7 +50,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **強制勝過建議**：規則寫進 CLAUDE.md 只是提醒，邊界要放在 hook、CI 或部署閘這類 agent 改不到的地方。
 - **把關分兩型**：檢查型事後比對、不擋；強制型直接擋或回滾。檢查器若和 agent 同處一個環境，agent 可能動到檢查本身（見下方「把關層彙整」）。
 - **審查有方向性**：跨模型互審不是對稱的，Claude 審 Codex 有效、反向反而變差（見下方「查證備註」）。
-- **你的選項：** 先把「必須遵守」的規則從 CLAUDE.md 搬到 hook；多 agent 的產出至少配一個只能讀、不能改的審查者。
+- **「完成」開始由 agent 以外的一層判定**：2026-11-02 一天四則（測試閘、judge model、獨立複核、規格對照），11-12 claim-check 再加一個 Stop hook，agent 宣稱「fixed」卻沒有成功執行紀錄就退回一次補證據；作者實測 406 則宣告中 0.2.0 擋 86 則、0.3.0 擋 2 則，皆單一作者、無第二方採用回報。
+- **你的選項：** 先把「必須遵守」的規則從 CLAUDE.md 搬到 hook；多 agent 的產出至少配一個只能讀、不能改的審查者；想擋「假完成」可試 Stop hook，但只當輔助，因為它只擋一次。
 
 **機制細節**
 - **Hooks 與自動化**：Stop Hook 要求可驗證完成證明；Pre-completion Hook 防模糊結束；hooks 可感知 agent 活躍狀態驅動環境副作用（螢幕喚醒、實體燈光顏色，見 Adrafinil、氛圍狀態燈）
@@ -523,5 +524,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ⟨Q-03⟩ 🔎 **查無官方**（標 2026-08-10｜查 Certified Architect、12 種｜複 2026-11-24）：複查（2026-10-24）原始 Reddit 貼文仍未能定位，多輪關鍵字調整均無結果。
   - 僅查得背景資訊：Anthropic 於 2026-03-12 發布首個技術認證「Claude Certified Architect, Foundations」。
   - 12 條具體錯誤內容仍無法查證。
-- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-11-11｜訊 2026-08-15）：原始文章已定位——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
+- ⟨Q-04⟩ 🔎 **查無官方**（標 2026-08-10｜查 subagent、silent failure｜複 2026-12-14｜訊 2026-08-15）：原始文章已定位（2026-11-14 複查：08-15 日報確認指向同一篇，dev.to 在本輪連線範圍外、四種模式逐條內文仍未核對
+  - 官方文件沒有專談這四種模式的說明）——dev.to《Your AI Subagents Are Lying to You: 4 Silent Failure Modes》（07-29 發表，08-15 日報收錄附連結）
   - 內容是「約 317 個硬編碼色碼的 design token 清理切給多個並行 subagent」的第一手記錄；四種模式的逐條內文仍未核對
+  - 官方文件只載明失敗如何回報給父代理，不是對這四種模式的回應（2026-11-14 查 [Claude Code subagents 文件](https://code.claude.com/docs/en/sub-agents)）：被截斷的 subagent 會回傳部分輸出並註明未完成，完全無產出會回錯誤而非空結果；「內容對不對」仍須自行驗證。

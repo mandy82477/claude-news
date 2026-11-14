@@ -15,10 +15,10 @@ inbound_links: 8
 attribution_count: 15
 attribution_last: "2026-11-12"
 top_source: "google-news"
-pending_count: 18
-pending_overdue: 8
+pending_count: 17
+pending_overdue: 0
 pending_next_review: "2026-11-16"
-pending_signalled: 1
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **能力**：11-10 The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber（測試方與分數未載，僅標題可用）；官方研究稱未發布的研究模型組出 5 條攻擊鏈（10-28 收錄，發布日待查）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
+- **能力**：11-10 The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber（測試方與分數未載，僅標題可用）；官方研究稱未發布的研究模型組出 5 條攻擊鏈（官方文章 10-27 發布）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
 - **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
@@ -68,7 +68,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 航班、電網、電信等可影響生命或市場的系統 | CVP Specialized | 每個組織與美國政府深度審查；Glasswing 既有夥伴免重審 |
 | 關鍵基礎設施業者 | Cyber Mission 的 CIDP | 11 家創始夥伴起步，其他業者可填表登記意願 |
 | 開源專案維護者 | Cyber Mission 的 OSS Scanner | 免費、自願加入；報告由模型產生、未經人工審查 |
-| 生醫專業人士 | LSVP（Beta） | 先開放已完成早期存取的機構，放寬幅度未公告 |
+| 生醫專業人士 | LSVP（Beta） | 標準用途放寬科學任務分類器；高風險用途加購、限單一專案 |
 | 要監看憑證外洩與攻擊性能力開發的企業 | Enterprise Frontier Safeguards | 本身免費、雲端儲存另計，今秋分階段推出 |
 
 - 出處：[CVP](https://www.anthropic.com/news/cyber-verification-program)（10-06）、[Cyber Mission](https://www.anthropic.com/news/anthropic-cyber-mission)（10-08），皆 2026-10-30 查證；LSVP（09-18）、EFS（09-01）見下方技術彙整與時序。
@@ -87,7 +87,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 11-04 | 防護 | CERT-In 取得 Claude Mythos 存取權測試資安漏洞；同日專訪談 AI agent 事故通報義務與提示注入歸責 | Moneycontrol／MediaNama，僅標題可用 |
 | 11-02 | 濫用 | CyberSecurityNews：駭客假冒 ChatGPT、Claude、Perplexity 機器人獵密碼與金鑰 | 單一來源，僅標題可用 |
 | 10-27 | 能力 | Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 關鍵漏洞，公開 5 條攻擊鏈，含 RCE 與繞過 Android 鎖定畫面 | 官方一手（HN 15 分）；The Hacker News／CyberSecurityNews 同日跟進，僅標題可用 |
-| 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 單一來源（Help Net Security）；機制細節、適用範圍均未見報導，僅標題可用 |
+| 10-26 | 防護 | Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計 | 官方 10-23 安全頁載明：核可門檻、獨立檢查器、明列禁止、機敏資料分類器、憑證隔離、獨立 VM |
 | 10-22 | 防護 | Anthropic 與 Theorem 合作發布研究，示範 LLM 大規模產生正式軟體驗證證明，HN 392 分／5 個來源跟進 | 官方一手＋HN＋The Decoder；具體方法論與驗證規模未見於可讀摘要，僅標題可用 |
 | 10-22 | 防護 | TechRadar：Claude 標出近 500 個開源安全問題，一漏洞 21 年未被發現 | 官方一手（Anthropic〈attack surface reduction〉10-20，493 個問題／25 專案，2026-11-08 核實）；是否源自 10-08 CIDP 開源掃描計畫未見證實（推論） |
 | 10-21 | 防護 | Anthropic 官方研究文章說明用 Claude 分析降低程式碼攻擊面，HN 105 分／71 則留言 | 官方一手＋HN；具體方法論與量化成效數字未見全文，僅標題可用 |
@@ -195,7 +195,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 #### Hacker News（推文）：稱 Anthropic 封鎖任何涉及「訓練更大模型」用途的使用者（2026-10-31 新增，單方聲稱）
 
 - **揭露來源**：Hacker News 232 分（推文 [@jiahaoshao1](https://twitter.com/jiahaoshao1/status/2116475922190922088)），單一來源；留言串主流意見是專業使用者應主動準備替代模型與備援
-- ❓ **待查證**（標 2026-10-31｜查 jiahaoshao1、訓練更大模型｜複 2026-11-14）｜**封鎖範圍與官方政策依據**：推文指稱的封鎖條件、被封者實際做了什麼、是否出於 Anthropic 禁止以輸出訓練競爭模型的使用條款，均未見官方回應或第二來源；與 [[topics/anthropic-government-policy]] 蒸餾線的關係未見報導
+- 🔎 **查無官方**（標 2026-10-31｜查 jiahaoshao1、訓練更大模型｜複 2026-12-14）｜**封鎖範圍與官方政策依據**：2026-11-14 查 [10-12 蒸餾防禦文](https://www.anthropic.com/news/distillation-defenses)，只載封鎖數萬個蒸餾相關帳號，未提該帳號與條款依據；未見官方回應或第二來源；與 [[topics/anthropic-government-policy]] 蒸餾線的關係未見報導
 - **性質判斷**：屬使用限制與誤擋的單方說法，可信度低，暫記錄觀察；用 Claude 產生訓練資料或做模型研究的團隊，可先對照自己用途與使用條款
 
 #### Anthropic 官方研究：未發布內部研究模型找出 Chrome、Safari、Windows、Linux 等軟體關鍵漏洞，組出 5 條攻擊鏈（2026-10-28 新增，官方能力展示）
@@ -203,35 +203,39 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic 官方研究〈Discovering and exploiting vulnerabilities in real-world software with Claude〉](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)（2026-10-27 20:18 UTC；HN 15 分）；The Hacker News、CyberSecurityNews 同日跟進
 - **研究內容**：官方稱過去數月使用一個未發布的內部研究模型，在多款廣泛使用的軟體（含瀏覽器與作業系統）中找出關鍵漏洞；公開 5 條攻擊鏈，於 Chrome、Safari、Windows、Linux 達成遠端程式碼執行，並可繞過 Android 鎖定畫面，多數幾乎不需使用者互動
 - **性質判斷**：官方能力展示／研究發表，Claude 本身並非被攻擊方；不列入母頁「現在還擋不住的攻擊」表（該表只收打得到讀者的攻擊面）；與既有 07-29 Mythos Preview 密碼分析攻擊改進、09-29 GLM-5.3 控制流劫持比較研究同屬「模型網攻能力」系列，已列入「## 模型網攻能力與防護」表
-- **可信度評估**：官方一手來源＋HN；The Hacker News／CyberSecurityNews 同日跟進均為標題層級轉述，5 條攻擊鏈完整技術細節、受影響廠商是否已修補、模型是否/何時公開發布均未見報導
+- **可信度評估**：官方一手來源＋HN；The Hacker News／CyberSecurityNews 同日跟進均為標題層級轉述，報導僅標題層級；廠商修補狀態見下方 11-14 官方查證
 - **CSO Online 跟進（2026-10-30）**：指出 5 條攻擊鏈其中一條命中 Linux kernel，可讓攻擊者取得遠端 root 權限；僅標題可用，CVE 編號與受影響版本未附
-- ❓ **待查證**（標 2026-10-28｜查 Chrome、Android｜複 2026-11-11）｜**漏洞修補與模型發布狀態**：官方僅稱揭露五條攻擊鏈示範，受影響廠商修補進度與該研究模型會否公開發布均未見報導
+- **修補與發布狀態**（2026-11-14 查 [Anthropic 研究文](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude)）：Chrome 62 個 CVE 於 Chrome 156 前修補，Apple 已修 Safari，Google 已處理 Android，Microsoft 已修 Windows（CVE-2026-33096），Linux 上游修補並回補穩定分支；該模型只稱「未發布的內部研究模型」，官方未載是否公開發布
 
 #### Reddit／r/ClaudeCode：使用者回報 opus-5-5 安全分類器近期大量誤觸「推理萃取」防護（2026-10-27 新增，單一使用者回報）
 
 - **揭露來源**：Reddit／r/ClaudeCode（單一貼文，無「週熱門」標記，score 不可信，0 留言）
 - **核心主張（僅標題可用，使用者回報、非官方確認）**：使用者稱自前一晚約 22:30 PT 起，多數 opus-5-5 工作階段僅被要求「實作任務 X」就觸發「推理萃取」安全防護機制（reasoning extraction safeguards）；具體觸發條件、受影響範圍與官方說明均未見報導
 - **性質判斷**：屬產品使用限制／疑似誤攔，非外部攻擊面，不列入母頁「現在還擋不住的攻擊」表；與本頁「模型層安全≠產品層安全」既有框架同類，主題上與 09-15 CVP 分類器誤標研究者訊息、10-26 XDA 電視逆向工程限制相近，但未見報導提及與 CVP 或既有分類器變更的關聯，暫不併線
-- ❓ **待查證**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-11-10）｜**分類器是否確有行為變化**：單一使用者回報、0 留言、無跨來源佐證，是分類器近期確有調整還是個案誤判均無定論
+- 🔎 **查無官方**（標 2026-10-27｜查 reasoning extraction、opus-5-5｜複 2026-12-14）｜**分類器是否確有行為變化**：2026-11-14 查官方，[10-12 蒸餾防禦文](https://www.anthropic.com/news/distillation-defenses)稱兩段式分類器誤報率低於 0.1%、[Opus 5.5 system card](https://www-cdn.anthropic.com/fc1b44717c85dc068bc6ba5024219938094694bd/Claude%20Opus%205.5%20System%20Card.pdf)稱仍在降誤報率；未載 10 月下旬有調整，該回報仍為個案
 - **可信度評估**：單一 Reddit 貼文、0 留言、無其他使用者附議或媒體跟進，可信度低，暫記錄觀察
 
 #### Gizmodo／The Washington Post：前 DOGE 成員創立新創公司聲稱入侵 Anthropic（2026-10-26 新增，2026-10-31／11-03 更新）
 
 - **2026-11-03 更新（Gizmodo）**：OpenAI 雇用聲稱入侵 Anthropic 系統的前 DOGE 成員，以強化自家資安團隊；報導未附入侵事件的具體時間、手法細節，OpenAI、Anthropic 官方回應均未見報導
 - **2026-10-31 更新（India Today 轉述，HN 74 分）**：報導指名新創為 Cathedral，稱其是在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時進入內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿
-  - ❓ **待查證**（標 2026-10-31｜查 Cathedral、前 DOGE 成員）｜**Cathedral 與前述前 DOGE 成員新創是否同一家**（2026-10-31 報導）：推論為同一事件；已掃日報至 2026-11-13 無後續（11-04 Gizmodo 僅稱「前 DOGE 員工」）；官方頁面未查證
+  - 🔎 **查無官方**（標 2026-10-31｜查 Cathedral、前 DOGE 成員｜複 2026-12-14）｜**Cathedral 與前述前 DOGE 成員新創是否同一家**：媒體稱（Forklog 引 Washington Post、Fast Company）同一家，Cathedral 由前 DOGE 成員創辦；2026-11-14 查官方新聞室未見相關說明
   - 授權範圍、修補範圍與 Anthropic 回應均未見報導
 
 - **2026-10-28 更新（The Independent 跟進）**：The Independent 報導稱該新創聲稱在不到 12 小時內「攻破」Anthropic；具體攻擊手法、影響範圍與 Anthropic 官方回應仍未見報導，與 10-26 Gizmodo／WaPo 的聲稱同源（Anthropic 未回應）
 - **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體；10-28 The Independent 第三家媒體跟進
-- ❓ **待查證**（標 2026-10-26｜查 DOGE、Washington Post｜訊 2026-10-31）｜**入侵聲稱（單方聲稱，細節增至員工資料與內部訊息）**：由多名前美國政府效率部（DOGE）成員創立的新創公司聲稱已入侵 Anthropic 系統；三篇報導均未附具體攻擊鏈、技術細節或受影響範圍；已掃日報至 2026-10-30 未見 Anthropic 回應，官方頁面未查證
+- 🔎 **查無官方**（標 2026-10-26｜查 DOGE、Washington Post｜複 2026-12-14）｜**入侵聲稱（單方聲稱，細節增至員工資料與內部訊息）**：2026-11-14 查 anthropic.com 新聞室與官方搜尋，未見 Anthropic 就此聲稱發布說明
+  - 媒體稱（Fast Company、Forklog 引 Bloomberg）手法為第三方業務軟體弱點與承包商員工憑證，細節均出自該新創自身草稿報告，未經獨立查證
 - **可信度評估**：僅為該新創公司單方聲稱，Anthropic 尚未公開回應或證實，不當作既成事實；三家主流媒體跨日報導但內容均止於標題層級，10-28 跟進僅加「不到 12 小時」細節，未提高可信度
 
 #### Help Net Security：Anthropic 說明防止 agent 產品 Claude Duet「失控」的機制設計（2026-10-26 新增，官方安全回應）
 
-- **揭露來源**：Google News／Help Net Security（只有摘要，原文無可讀內文，互動 0）
-- **核心主張（僅標題可用）**：報導稱 Anthropic 說明了防止 Claude Duet「失控」的具體機制；機制細節、適用範圍與是否為既有防護（Auto 模式 best-effort 定性、Enterprise Frontier Safeguards）的延伸均未見報導
-- **可信度評估**：單一來源、互動 0，原文不可讀；併入「## 模型網攻能力與防護」表 10-26 列
+- **揭露來源**：Google News／Help Net Security（原為標題摘要；機制細節以官方安全頁為準）
+- **核心主張**：Anthropic 說明防止 Claude Duet「失控」的機制，官方頁已載明（見下方 2026-11-14 官方查證）
+- **可信度評估**：官方一手頁可證；併入「## 模型網攻能力與防護」表 10-26 列
+- **官方機制**（2026-11-14 查 [Claude Duet 安全與隱私頁](https://claude.com/resources/articles/claude-duet-safety-privacy-and-security)，2026-10-23）：敏感動作（寄送、付款、刪除）先顯示動作、目的地、內容並待核可，官方稱核可頻率仍在校準
+  - 獨立檢查器在工作模型之外判斷動作是否符合意圖；交易證券、銀行轉帳、存取他人帳號即使核可也禁止；分類器擋外送的憑證、卡號、證件
+  - 憑證隔離：模型看不到密碼、cookie、登入權杖（權杖由代理供應）；瀏覽器跑在專屬雲端 VM，只能經固定指令操作
 
 #### XDA：使用者回報 Anthropic 已限制 Claude 執行電視逆向工程相關任務（2026-10-26 新增，使用者回報）
 
@@ -433,8 +437,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/life-sciences-verification-program)（2026-09-18 14:33 UTC）
 - **核心內容**：Anthropic 推出「生命科學驗證計畫」（LSVP），先以 Beta 形式向已完成早期存取的機構與團隊開放，讓通過驗證的生醫專業人士使用 Mythos、Opus、Sonnet 時適用較寬鬆但仍有把關的生物相關安全防護措施；官方表示會逐步擴大到個人 Pro／Max 方案
 - **性質判斷**：屬模型層安全防護的官方調整（放寬既有生物風險 safeguards，非新增防護），與本頁既有 07-08「An off switch for dual-use knowledge in AI models」同屬 Anthropic 主動公開的模型層安全機制說明，區別於本頁多數條目聚焦的產品層安全（沙箱逃逸、誤操作）
-- ❓ **待查證**（標 2026-09-18｜查 LSVP、生命科學驗證計畫）｜**「較寬鬆」的具體範圍與驗證審核標準**（2026-09-18 公告）：已掃日報至 2026-11-13 無後續；官方頁面未查證
-- **可信度評估**：Anthropic 官方一手公告，可信度高；惟放寬幅度與審核機制的技術細節僅見官方摘要
+- **官方審核與放寬範圍**（2026-11-14 查 [官方公告](https://www.anthropic.com/news/life-sciences-verification-program)與[支援頁](https://support.claude.com/en/articles/16975617-what-is-the-life-sciences-verification-program)）：標準用途用「對科學任務較寬鬆」的精修分類器，每年續期；高風險用途加購、限單一研究專案，移除所有擋生命科學請求的防護、每 6 個月續期；網路攻擊分類器照常保留
+- **官方審核標準**：審查研究資歷、資安標準與研究倫理監督；含企業驗證與生命科學佐證（如 FDA 登記或臨床試驗編號），通常約 3 個工作日；LSVP 流量須留存 30 天、改離線監控；Beta 僅限第一方 Enterprise／Team／API，不含 Pro／Max 與雲端供應商
+- **可信度評估**：Anthropic 官方一手公告，可信度高；放寬幅度與審核機制見上方官方補充
 
 #### Reddit／r/ClaudeAI：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息（2026-09-15 新增）
 
@@ -454,7 +459,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **規模敘事的保留**：官方報告顯示 180 萬 APK 的掃描主要靠 TruffleHog，Claude 的角色是 API／token 與批次匯出工具（見下方官方說明），不宜直接等同「Claude 自動化萃取」
 - **官方說明（2026-10-03 查證，[Anthropic 威脅情報報告 2026-09](https://www.anthropic.com/threat-intelligence-report-september-2026)）**：ShinyHunters 關聯操作者「frkoo」以 10 台 AWS EC2 節點從多個 app store 下載 180 萬個 Android APK，反編譯後以 TruffleHog 掃描硬編碼憑證，驗證過的憑證即時轉送 Telegram 群組並分類，為其多數已確認入侵的初始存取來源
 - **Claude 的角色（同報告）**：協助識別／使用開發者與認證 API、建立與轉換特權 token、打造批次匯出與跨租戶資料蒐集工具，**掃描本身由 TruffleHog 執行**，並未稱 Claude 自動化逆向工程
-- **官方處置（同報告）**：Anthropic 已封鎖相關帳號、部署偵測並通報當局、產業夥伴與受害者；受害者數量：🔎 **查無官方**（標 2026-09-14｜查 Rescana、frkoo、TruffleHog｜複 2026-11-14）｜**受害者數量**：2026-10-17 重讀官方報告 frkoo 專節，僅稱其憑證管線供應「多數已確認入侵」的初始存取，未載受害者總數
+- **官方處置（同報告）**：Anthropic 已封鎖相關帳號、部署偵測並通報當局、產業夥伴與受害者；受害者數量：🔎 **查無官方**（標 2026-09-14｜查 Rescana、frkoo、TruffleHog｜複 2026-12-14）｜**受害者數量**：2026-11-14 重讀[官方報告](https://www.anthropic.com/threat-intelligence-report-september-2026) frkoo 專節，仍僅稱其憑證管線供應「多數已確認入侵」的初始存取，未載受害者總數
 - **二手摘要落差**：Rescana「利用 Claude 萃取 180 萬 App 憑證」為二手摘要，把 Claude 的角色寫得比官方報告更大
 - **可信度評估**：Anthropic 官方威脅情報報告為一手來源（見上方官方說明）；Rescana 為二手分析，Claude 的角色描述較官方報告放大
 
@@ -467,7 +472,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 數日後 AISLE 提交 29 份報告，其中 6 份於 **curl 8.22.0**（09-02）正式列為 CVE（均 **Low** 嚴重度），由 curl 安全團隊審核認定，具名 AISLE 的 Stanislav Fort 為回報者
   - 同批比較中，其他 AI 廠牌工具最多僅拿下 3 個 CVE，使用 Anthropic／OpenAI 模型的獨立研究者各僅 1 個；Linux 維護者 Greg Kroah-Hartman 稱在 Linux 觀察到類似落差，但屬軼事佐證非獨立稽核
 - **可信度評估**：curl 官方（專案維護團隊）已確認 CVE 有效性並公開列冊，非 AISLE 單方聲明
-- ❓ **待查證**（標 2026-09-02｜查 AISLE、curl 8.22.0）｜**OpenAI／Anthropic 當初掃描的方法論與「零發現」可比性**（2026-09-02 事件）：完整方法論與涵蓋範圍未見官方說明，「零發現」是否為同批次、同工具鏈的可比較測試無法確認；已掃日報至 2026-11-13 無後續；官方頁面未查證
+- 🔎 **查無官方**（標 2026-09-02｜查 AISLE、curl 8.22.0｜複 2026-12-14）｜**OpenAI／Anthropic 當初掃描的方法論與「零發現」可比性**（2026-09-02 事件）：2026-11-14 查 anthropic.com 無說明
+  - 媒體稱（curl 維護者 08-24 轉述，經 Enterprise DNA 等彙整）掃描提示與工具鏈均未公開，亦未獨立重現
 
 ### 2026-08
 
@@ -531,7 +537,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-10-26
 - **[📋 新增，單方聲稱] Gizmodo／The Washington Post：前 DOGE 成員新創聲稱入侵 Anthropic**：無攻擊鏈或技術細節，官方未回應，詳見「## 技術彙整」
-- **[🛠️ 新增，官方防護] Help Net Security：Anthropic 說明防止 Claude Duet「失控」的機制設計**：僅標題可用，詳見「## 技術彙整」、「## 模型網攻能力與防護」
+- **[🛠️ 新增，官方防護] Help Net Security：Anthropic 說明防止 Claude Duet「失控」的機制設計**：官方 10-23 安全頁已載明機制，詳見「## 技術彙整」、「## 模型網攻能力與防護」
 - **[📋 新增，使用者回報] XDA：使用者稱 Claude 已限制電視逆向工程相關任務**：非官方公告，詳見「## 技術彙整」
 
 ### 2026-10-21

@@ -234,7 +234,7 @@ SDK：anthropic-sdk-python ≥ v2.2.0 或 anthropic-sdk-typescript ≥ vertex-sd
 # 官方未提供 CLI／API 層級設定說明
 ```
 
-**注意事項：** 僅美國 Pro／Max 候補名單，官方未提供其他地區／方案時程；發訊息、付款前會先問，其餘權限模型與通知管道尚未公開。詳見 [[entities/claude-duet]]。
+**注意事項：** 僅美國 Pro／Max 候補名單，官方未提供其他地區／方案時程；發訊息、付款前會先問。**防護設計官方已公開**（2026-10-23 安全頁：核可門檻、獨立檢查器、明列禁止、敏感資料分類器、憑證隔離與 VM），通知管道仍未載。詳見 [[entities/claude-duet]]。
 
 ### anthropic-sdk-typescript Vertex SDK 1.0.0（Breaking Change）
 **發布：** 2026-10-21（vertex-sdk-v1.0.0） | **狀態：** 正式發布
@@ -591,7 +591,7 @@ claude --desktop                          # 在目前目錄開啟桌面版
 # 檢查目前 session 實際套用的模型
 ```
 
-**注意事項：** Claude Code CLI 本身的預設 Sonnet 是否同步換為 5.5、Sonnet 5 是否正式改列 Legacy，見 [[entities/sonnet-5]] 追蹤。
+**注意事項：** 兩題官方都已答（2026-11-14 查證）——Claude Code 的 `default` 是 **Opus 5.5**（Pro／Max／Team／Enterprise／Anthropic API），Sonnet 5.5 只是 `sonnet` 別名的目標（v2.1.284 起）；Sonnet 5 自 2026-10-10 起官方列 Legacy。見 [[entities/sonnet-5-5]]、[[entities/sonnet-5]]。
 
 ### x-claude-code-prompt-id 閘道提示標頭
 **發布：** 2026-09-25（v2.1.283） | **狀態：** 正式發布

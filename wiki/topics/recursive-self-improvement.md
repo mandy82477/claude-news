@@ -11,12 +11,12 @@ parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 45
+inbound_links: 44
 attribution_count: 74
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 11
-pending_overdue: 5
+pending_count: 9
+pending_overdue: 0
 pending_next_review: "2026-11-20"
 pending_signalled: 1
 staleness_exempt: null
@@ -81,7 +81,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **2026-09-19，獨立評估首見落地**：Anthropic 指定 Accenture 為首位「內嵌評估者」，承諾 10 億美元評估前沿 AI 安全，回應 09-18 獨立評測呼籲；同日四家業者因「踩煞車」遭控反壟斷合謀，主線見 [[topics/anthropic-government-policy]]，詳見下方。
 - **2026-09-21，dev.to：Anthropic 首度公布 R&D Automation Index，Claude「主導」研發任務比例 26%，完全無人監督自動化仍為零**：延續 09-18《工作量四分之一》量化系列，補上「主導／涉入」分級與「零無人監督」新資訊，社群作者強調外界「模型自建後繼者」解讀比實際運作機制窄得多，詳見「## 技術彙整」。
 - **2026-09-21，The Information（單一來源）：OpenAI 與 Anthropic 傳一度近乎達成協議，互相壓力測試對方 AI 模型**：與既有 09-18／09-19「獨立評測機構」治理提案系列方向不同（同業互評 vs 第三方獨立），僅單一來源，詳見「## 技術彙整」。
-  - 🔎 **查無官方**（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試｜複 2026-11-14）｜**OpenAI 與 Anthropic 互測協議**：2026-10-17 查官方 10-15〈An update on independent evaluators〉，列 METR、SecureBio 等夥伴，未提與 OpenAI 互測；雙方均無說明
+  - 🔎 **查無官方**（標 2026-09-21｜查 Stress-Test Each Other、互相壓力測試｜複 2026-12-14）｜**OpenAI 與 Anthropic 互測協議**：2026-11-14 重查官方，雙方均無說明
+    - 重查官方 10-15〈An update on independent evaluators〉，列 METR、SecureBio、Accenture、Faculty，未提與 OpenAI 互測
   - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：雙方曾洽談具法律效力的互測協議，各自取得對方已商用模型的 API 存取（不含未發布模型）、不留存對方資料；是否已簽署不明，消息來自知情人士
 - **2026-09-24，政治攻防升級與減速動機質疑並進**：Axios 獨家報導川普陣營盟友把 Amodei 塑造成 AI「末日論」代表人物，延續 09-14 政治連鎖反應系列；Zoho 創辦人 Sridhar Vembu 與 HN 社群（NPR「AI 凍結」報導）分別從企業家與監管經濟學角度質疑減速呼籲的動機，首見「監管俘獲」框架，詳見「## 技術彙整」。
 - **2026-09-24，Reddit 週熱門重新炒熱 26% 主導比例數字，並補上「同時約 3 萬個 agent 做研究與工程工作」新數字**：與 09-18～09-21《工作量四分之一》／R&D Automation Index 系列同源轉述，規模數字尚未見官方一手來源，詳見「## 技術彙整」。
@@ -187,7 +188,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **同列評估者**：SecureBio 與 Accenture 同列評估者，官方並稱正與包括 Hugging Face 在內的多個組織洽談中
 - **與既有敘事的關係**：延續下方 09-19 條目「Anthropic 指定 Accenture 為首位內嵌評估者」——當時官方已稱 METR「亦有參與」，本次是 METR 角色的具體落實（由「參與」升級為「員工級存取權」），非全新機制
 - **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作
-- ❓ **待查證**（標 2026-10-16｜查 White House Accord on Super Intelligence、超級智慧協議）｜**白宮超級智慧協議的確切簽署日期與條款**（2026-10-16 官方稱「上月簽署」）：本頁首次記錄此協議名稱；已掃日報至 2026-11-13 無後續；官方頁面未查證
+- **白宮超級智慧協議**（2026-11-14 查）：[Anthropic 〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)確認公司已簽署，承諾與獨立外部稽核員或評估者合作；Anthropic 2026 公益報告稱協議屬自願、無罰則；簽署日 2026-09-29（媒體稱，Infosecurity、Al Jazeera）；白宮條款全文本輪未連上
 - **官方原文補充**（2026-10-31 查 [Anthropic〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)）：METR 由 6 名員工組成，取得公司硬體、辦公空間與內部工具及系統，存取程度「約與 Anthropic 自家風險評估團隊相當」；
   - Anthropic 不能否決 METR 發布，但可要求對預定類別（如機密智財）做遮蔽；文中未賦予 METR 中止部署權，也未給發布時程；SecureBio 正審查 8 月風險報告的化生武章節，Anthropic 將於審查後考慮提高其存取；協議簽署日期與條款官方文中未載
 - **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上），協議日期與條款官方未載
@@ -230,7 +231,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：TribLive.com／AP News（經 Google News，2 個來源，2026-09-27 14:20 UTC）；WSJ 同日刊出側寫〈'Things Will Never Be Chill Again': The Doomers Who Shaped the AI Safety Freakout〉
 - **核心主張（僅標題可用）**：報導稱 Anthropic 與 OpenAI 同步就 AI 安全風險發出警示，並試圖主導安全規範由誰、如何制定；WSJ 側寫聚焦「doomers」如何形塑當前的 AI 安全論述聲量
 - **與既有敘事的關係**：延續 09-24 Axios「川普陣營鎖定 Amodei 末日論人設」政治框架系列，以及 [[topics/anthropic-government-policy]] 09-15 Anthropic／OpenAI 反壟斷豁免提案（自行提名風險評估機構）系列，皆屬「Anthropic 主導安全規範制定權」既有主線；本則是否引入新事實或僅為既有敘事再彙整，報導層級不足以判斷
-- 🔎 **查無官方**（標 2026-09-27｜查 TribLive、doomers freakout｜複 2026-11-14）：2026-10-17 公開檢索未見 AP／TribLive／WSJ 原文，亦無 Anthropic 官方對應聲明
+- 🔎 **查無官方**（標 2026-09-27｜查 TribLive、doomers freakout｜複 2026-12-14）：2026-11-14 重查，公開檢索仍未見 TribLive 原文，亦無 Anthropic 官方對應聲明；同期 Reason、Axios、Semafor 等具名媒體有報導該爭議
   - 同期背景（Reuters）：OpenAI 推動強制性全國 AI 安全要求、Altman 稱 2026 不上市、Anthropic 研究員警告滅絕風險（09-10）；「主導規範制定」是否即指此為推論
 - **可信度評估**：TribLive／AP News 為主流媒體轉載，惟 RSS 僅提供標題聚合、無正文；WSJ 側寫屬敘事分析文章，非新事實揭露，訊號強度中等偏弱
 
@@ -263,14 +264,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 官方頁載 26%（Claude「leads」，AL4）；頁面**未載** 25% 與 8 倍，兩數字來源另見上方 09-18 條目的官方說明
 - **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：26% 即官方 AL4「主導」比例（2026-08），「涉入九成以上」對應 AL3（協作）以上占 90% 以上，另載未測得任何 AL5 完全自主的子集；衡量方法（任務籃、人時加權）見上方 09-18 條目的官方說明
 - **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度
-- ❓ **待查證**（標 2026-09-21｜查 R&D Automation Index、reidmarlow）｜**26% 主導比例與「約 3 萬個 agent」數字是否忠實反映官方原始資料**（2026-09-21 報導，09-24 Reddit 重新流通）：已掃日報至 2026-11-13 無官方一手後續；官方頁面未查證
+- **官方原文核對**（2026-11-14 查 [Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）：26% 與「約 3 萬個 agent」均忠於官方——26% 為 2026-08 的 AL4「主導」比例，3 萬為最常用內部平台同時運行數，不代表全公司
 
 ### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
 
 - **揭露來源**：The Information（經 Google News）〈OpenAI and Anthropic Neared Deal to Stress-Test Each Other's AI〉（2026-09-21，RSS 僅提供跳轉連結，無正文）
 - **核心主張（僅標題可用）**：報導稱 OpenAI 與 Anthropic 一度接近達成協議，讓雙方互相對彼此的 AI 模型進行壓力測試；具體協議內容、進度與是否已生效均未見報導
 - **與既有敘事的關係**：延續本頁治理提案系列——09-18 CNBC 專家聯署呼籲「真正獨立」的安全評測機構、09-19 Anthropic 指定 Accenture 為首位內嵌評估者；本則若屬實為**同業互評**而非第三方獨立評測，與既有「獨立性」訴求方向不同，兩者是否互斥待後續報導釐清
-- 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-11-14）：2026-10-17 查 Anthropic 官方站，10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均無說明；進度與是否簽署不明
+- 🔎 **查無官方**（標 2026-09-21｜查 stress-test、OpenAI Anthropic deal｜複 2026-12-14）：2026-11-14 重查 Anthropic 官方站（至 11-10 貼文），10-15〈An update on independent evaluators〉未提與 OpenAI 的互測協議，兩家官方均無說明；進度與是否簽署不明
   - 媒體稱（[aiweekly 轉述 The Information](https://aiweekly.co/alerts/openai-anthropic-neared-legal-deal-to-stress-test-rival-models)）：洽談範圍為互相取得對方已商用模型的 API 存取、不含未發布模型，並約定不留存對方資料；部分報導稱洽談早於 OpenAI 近期資安事件，是否仍在進行不明
 - **可信度評估**：僅單一媒體來源（The Information），RSS 摘要無正文，訊號強度低，暫不視為與 09-19 Accenture 內嵌評估者同一量級進展
 

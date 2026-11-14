@@ -1,18 +1,18 @@
 ---
 page: "topics/official-community-gap"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-10"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-30"
-status_main: "ongoing"
+status_main: "monitoring"
 matrix_role: "追蹤頁"
 days_since_news: 15
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
 days_since_news_subtree: 15
-inbound_links: 41
+inbound_links: 40
 attribution_count: 19
 attribution_last: "2026-10-30"
 top_source: "github-issues"
@@ -52,10 +52,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ✅ 官方有正式功能、能直接用｜🧪 官方有東西但受限（測試中、須申請、只給企業端）｜❌ 官方目前無對應
 > 「核對日」＝這一列最後一次對過官方文件或 CHANGELOG 的日期；`—` 代表還沒對過，要拿它做決定時建議自己再查一次官方文件。
 > 每個 issue 現在多少人在吵、官方回了什麼，見 [[entities/claude-code]]。
+> **2026-11-14 掃描**：官方 CHANGELOG 已掃到 v2.1.325，新版本（2.1.322～325）全為修補，**沒有任何一列的缺口被補上**；各列核對日除第一列外維持 2026-11-08。
 
 | 你痛的是什麼 | 官方補了沒 | 官方給的是什麼 | 還缺什麼、你現在能怎麼辦 | 核對日 |
 |---|---|---|---|---|
-| Cowork 專案想移除已加入的本機資料夾 | ❌ | 無——Cowork 專案目前只能新增本機資料夾，截至 2026-10-01 官方文件未見移除機制 | 社群提出刪除／重新整理需求待補；issue [#40043](https://github.com/anthropics/claude-code/issues/40043) 累積 33 則留言、106 個讚（11-08 快照） | 2026-11-08 |
+| Cowork 專案想移除已加入的本機資料夾 | ❌ | 無——Cowork 專案目前只能新增本機資料夾，截至 2026-10-01 官方文件未見移除機制 | 社群提出刪除／重新整理需求待補；issue [#40043](https://github.com/anthropics/claude-code/issues/40043) 累積 33 則留言、109 個讚（11-14 快照，仍 open） | 2026-11-14 |
 | CLAUDE.md 寫了它不聽 | ❌ | 沒有強制生效的機制，只有一支健檢：`/doctor prompt-audit`（v2.1.283）掃 CLAUDE.md／skills／agents／commands，先列失效路徑、失效指令與互相牴觸的指示檔 | 官方給的是「找出哪裡寫壞了」，不是「保證它會照做」；為什麼一直沒補見下一節 | 2026-11-08 |
 | 用 AI 寫久了技能退化、技術債變快 | ❌ | 無——截至 2026-09-19 官方文件未見，官方公開說法的方向與此相反 | 你能做的是自己量，見下一節 | 2026-11-08 |
 | 想在一個地方操作好幾家 agent | ❌ | 無——官方只管 Claude Code 自己的 session，截至 2026-09-19 官方文件未見 | 只有社群工具，08-24 起一個月冒出 10 款 ⟨G-11⟩ | 2026-11-08 |

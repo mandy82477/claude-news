@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 0
+inbound_links: 1
 attribution_count: 19
 attribution_last: "2026-11-13"
 top_source: "github"
@@ -47,8 +47,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂；星數最高的是 t3code（58,093 星）。**接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
-- **介面與可視化**：各自單一實作居多，還在試；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
+- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂，傳輸層從 bot、web-app 到 P2P 加密（ds-harness-remote，11-05）與反向隧道（cc-desk-tunnel，11-13），後者反過來讓雲端 session 的動作落在本機 Windows；星數最高的是 t3code（58,093 星）。**接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
+- **介面與可視化**：各自單一實作居多，還在試；十一月新增兩個方向：並行 session 用等待佇列管理（Aq，11-12）與跨 repo 架構圖外掛的單人實測（Floorplan、Archify、Understand Anything，11-06，單一專案、單一實測者）；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
 
 ---

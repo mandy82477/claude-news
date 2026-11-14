@@ -17,7 +17,7 @@ attribution_count: 4
 attribution_last: "2026-11-09"
 top_source: "google-news"
 pending_count: 3
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 1
 staleness_exempt: null
@@ -175,9 +175,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **GitHub Issue #5088（184 留言，2026-09-04 查證）**：Max 5x 續訂扣款完成後帳號隨即遭停用，無法使用已付費的方案；184 則為本頁計費爭議類目前最高（前次高點 77／67 則）。
 - 出處：[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088)
 - **與既有事故的關係**：與 08-12 Issue #55982（升級流程 PaymentIntent 遭提前作廢）同屬「付款/帳務基礎設施層故障」而非「用量計費異常」，惟本則更嚴重——付款已扣款成功、帳號卻遭停用，使用者付了錢反而喪失服務存取權，是本頁目前記錄最直接侵害付費用戶權益的計費事故型態（推論）；機制面／官方是否回應修復詳見 [[entities/claude-code]] 已知問題，此處僅記計費/帳務面
-- 🔎 **查無官方**（標 2026-09-04｜查 Max 5x、帳號停用｜複 2026-11-10｜訊 2026-11-02）：[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088) 現況（2026-09-20）——仍為 open，無 Anthropic 人員留言、無成因說明
+- 🔎 **查無官方**（標 2026-09-04｜查 Max 5x、帳號停用｜複 2026-12-14｜訊 2026-11-02）：[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088) 現況（2026-11-14）——仍為 open，無 Anthropic 人員留言、無成因說明
   - 支援信件與退款申請均未見回覆；日報 11-02 再報累積 190 則留言、69 個 👍，仍為續訂付款後帳號停用個案
-  - 官方回應已掃日報至 2026-11-13 無後續，官方頁面未查證
+  - 2026-11-14 查官方說明中心 [付費方案帳務 FAQ](https://support.claude.com/en/articles/8325618-paid-plan-billing-faqs) 與 [Safeguards 警告與申訴](https://support.claude.com/en/articles/8241253-safeguards-warnings-and-appeals)：前者只載扣款失敗降級、後者只載違規停權申訴流程，均未提「付款後帳號停用」；日報掃至 11-13 亦無後續
   - 2026-10-10 另查官方 [說明中心](https://support.claude.com/)，**未見任何關於 Max 5x 訂戶帳號停用成因或申訴流程的條目**；issue 本身本輪無法複驗（本 session 未取得 `anthropics/claude-code` 讀取授權，依規不擴權）。
 - 已確認屬「付款成功後帳號隨即遭停用」的重複模式（另見 #80872、#64480、#90531），惟仍無官方就根因或修復時程表態。
 - **後續（2026-11-02）**：留言數增至 190（+6），新增 69 個 👍 reactions 數據；官方仍無回應（[GitHub #5088](https://github.com/anthropics/claude-code/issues/5088)）。

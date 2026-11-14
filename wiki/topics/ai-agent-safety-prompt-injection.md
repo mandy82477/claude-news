@@ -3,7 +3,7 @@ page: "topics/ai-agent-safety-prompt-injection"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -16,9 +16,9 @@ attribution_count: 7
 attribution_last: "2026-11-13"
 top_source: "topic-watch"
 pending_count: 9
-pending_overdue: 3
+pending_overdue: 0
 pending_next_review: "2026-11-16"
-pending_signalled: 2
+pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -31,10 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-07
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 **蒐集邊界：** 以 Claude 與 Claude Code 讀進外部內容被塞指令的事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的注入事件只在補上新載體或新防法時收，其餘會漏。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
+%% 拆頁評估 2026-11-14：該拆，切出「他家 agent 事件與業界論述／防護指南」子頁（技術彙整約 230 行加對應時序與「產業級攻擊面」表約 20 行）；母頁留 Claude 系注入事件約 150 行、自我複製節約 90 行、摘要結論、時序約 130 行，須再去重時序才進 300 行以內；落選：另切自我複製（約 90 行，低於 150 太薄）。雲端不拆，交本機頁面健檢波。 %%
 
 > **最新動態**（2026-11-13）
 > - **防注入教育文**：Startup Fortune 標題稱提供 AI agent 建置者的提示注入防範指南，籲在客戶發現問題前先防；僅標題可用，非 Claude 專屬。
@@ -171,7 +172,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Google News／Martin Cid Magazine（2026-10-26，單一來源，互動 0）；Google News／CyberSecurityNews（2026-10-26 16:45 UTC，獨立第二來源，互動 0）
 - **核心主張（僅標題可用）**：兩家報導均稱攻擊者可利用使用者 Downloads 資料夾內的檔案劫持 Claude Code 與 OpenAI Codex，任何網站都能把這類檔案放進該資料夾；具體觸發機制、是否需使用者額外動作與官方回應，兩篇報導均僅標題層級，仍未見報導
 - **性質判斷**：若屬實，為本地檔案層級的提示注入攻擊面，跨 Claude Code 與 OpenAI Codex，與既有「代理把外部內容當可信輸入」敘事同源，見「## 提示注入已不是單點漏洞，是產業級攻擊面」
-- ❓ **待查證**（標 2026-10-26｜查 Downloads、Codex｜複 2026-11-09｜訊 2026-10-27）｜**Downloads 資料夾檔案提示注入觸發機制**：10-27 CyberSecurityNews 為第二個獨立來源報導同一攻擊路徑，但觸發機制與是否已有官方回應兩篇報導仍均未見細節，查證問題本身未解
+- 🔎 **查無官方**（標 2026-10-26｜查 Downloads、Codex｜複 2026-12-14）｜**Downloads 資料夾檔案提示注入觸發機制**：2026-11-14 查官方資安文件與新聞室，無 Downloads 專屬說明
+  - 媒體稱（InfoWorld、CSO、BleepingComputer）研究者指在 Downloads 啟動 agent 即會遵從植入檔，Codex 逾 9 成、Claude Code 約半數，稱廠商無可修補
 - **可信度評估**：已由單一來源升級為兩個獨立媒體同報導同一攻擊面，惟兩篇報導均僅標題層級、互動 0、原文不可讀，訊號強度仍低；已列入母頁「現在還擋不住的攻擊」表，標記維持 ❓
 
 #### GBHackers：Flowise AI agent 平台遭認證竊取、提示注入與工作流程劫持攻擊（2026-10-22 新增，跨類別，非 Claude 專屬）
@@ -376,7 +378,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **揭露來源**：Hacker News〈With 1 Extension: $20K in Bounties from Anthropic, Perplexity, Google, Microsoft〉（10 分）
 - **核心內容**：資安研究團隊揭露透過瀏覽器內建 AI 助理（Claude in Chrome、Chrome／Edge／Opera 內建 AI、Perplexity Comet）的「bragjack」劫持技術，稱已攻陷 5 款主流瀏覽器；Anthropic、Perplexity、Google、Microsoft 等廠商懸賞合計 2 萬美元；手法與修補狀態見下方 🔎 標記
 - **性質判斷**：與本頁既有「Claude for Chrome 兩項權限缺陷」（合成點擊、skipPermissions）屬不同技術手法，暫無足夠細節確認是否為同一攻擊面的延伸，故不併入該列；具名安全研究、有具體懸賞金額佐證，訊號強度高於一般論述文章
-- 🔎 **查無官方**（標 2026-09-17｜查 bragjack、Claude in Chrome｜複 2026-11-14）：2026-10-03 查 support.claude.com「Use Claude in Chrome safely」等官方頁與 Anthropic 提示注入防禦文章，均未載 BragJack；官方聲明與修補版本未見（10-17 再查同）
+- 🔎 **查無官方**（標 2026-09-17｜查 bragjack、Claude in Chrome｜複 2026-12-14）：2026-10-03 查 support.claude.com「Use Claude in Chrome safely」等官方頁與 Anthropic 提示注入防禦文章，均未載 BragJack；官方聲明與修補版本未見（10-17、11-14 再查同）
+  - 媒體稱（BleepingComputer）Claude 一項為中等嚴重度
   - 媒體稱（BleepingComputer、GBHackers 等；多數原文 egress 封鎖僅取搜尋摘要）：Forever Security 的 Gal Weizman 於 2026-09-16 公布，惡意擴充套件以 declarativeNetRequest 加 content script 劫持 AI 助理與其特權元件間的通道（「prompt forcing」，不經提示注入、繞過模型層過濾）
   - 媒體稱（續）：安裝後無需點擊，可讀本機檔案、截圖並可能觸及相機麥克風；波及 Chrome（Gemini）、Edge（Copilot）、Opera Neon、Perplexity Comet 與 Claude in Chrome
   - 媒體稱（修補）：Chrome（CVE-2026-0628，7,000 美元）與 Edge（CVE-2026-55945）已修補；Anthropic 據稱修補了 Claude in Chrome 的特定弱點並付 600 美元獎金，合計獎金逾 2 萬美元
@@ -463,7 +466,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **The Register：Claude Code 本身的觸發路徑**：僅需要求 Claude Code「摘要一個網站」，即足以讓其讀取並信任該網站的 llms.txt 內容做出非預期行為——具體示範了 Ars Technica／Hertz 研究中「agent 信任 llms.txt」機制在 Claude Code 上的最小觸發條件；
   - 僅標題與轉址連結可用，未見與 Hertz 研究是否為同一次揭露或獨立示範的說明
 - **性質判斷**：屬「agent 對外部內容過度信任」的產品層安全問題（提示注入的一種變體），非模型層安全問題；攻擊鏈已具體化為「llms.txt 指向未註冊套件名稱 → 攻擊者搶注 → agent 依指示安裝 → 惡意程式碼進入企業內網」，屬可重現的供應鏈攻擊方法論
-- ❓ **待查證**（標 2026-08-27｜查 Ars Technica、unowned code、Hermes｜複 2026-11-11｜訊 2026-08-29）｜**攻擊性質**：120 份問題檔案是否已有套件被搶注、是否有真實在野感染案例，Hertz 報告與 The Register 均未見報導
+- 🔎 **查無官方**（標 2026-08-27｜查 Ars Technica、unowned code、Hermes｜複 2026-12-14）｜**攻擊性質**：2026-11-14 查官方無說明；媒體稱（轉述 Ars Technica）Hertz 報告是研究者自行註冊無主套件後觀察到 agent 執行，120 個為受影響網站數；真實在野感染案例未見報導
   - 性質本身已由 08-29 Hertz 研究釐清：屬第三方可預先佈局的供應鏈攻擊（llms.txt 指向未註冊套件名，攻擊者搶注後經 agent 安裝流程植入企業內網），非「agent 自主行為的意外後果」
   - **2026-09-27 依日報複查**：訊號日 08-29 對應的日報條目（`news/2026-08-29.md`）確認為同一起 Alon Hertz 揭露（同一批 6,214 網域／8,265 檔案／120 份未註冊套件名稱數字），非探針誤命中；惟內容與本頁既有段落相同，未提供「套件是否已被搶注」或「是否有真實在野感染案例」的新事實。未查官方一手來源，標記保留，狀態維持 ❓
 - **可信度評估**：Ars Technica 為主流資安/科技媒體；startupfortune.com 補充具名研究者與量化掃描數據（6,214 域名／8,265 檔案／120 份問題檔案），數字具體可查證性較高，惟 startupfortune.com 本身知名度較低，數字尚待其他資安媒體交叉確認；The Register 為主流資安媒體但僅標題可用

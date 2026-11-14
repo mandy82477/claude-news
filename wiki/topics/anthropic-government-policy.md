@@ -3,7 +3,7 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -16,7 +16,7 @@ attribution_count: 213
 attribution_last: "2026-11-13"
 top_source: "google-news"
 pending_count: 13
-pending_overdue: 9
+pending_overdue: 0
 pending_next_review: "2026-11-21"
 pending_signalled: 0
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
@@ -137,7 +137,7 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。S-1 原
   %% 09-27 讓位給澳洲參議院AI調查聽證會線（表滿載） %%
 - **澳洲參議院AI調查聽證會**：09-27 至少 4 個來源報導傳喚 OpenAI、Anthropic 執行長出席聽證會；09-28 Reuters／The Guardian 報導兩公司確認不出席 10 月 1 日聽證會，衛報將此與 OpenAI 遭駭事件餘波並提；具體法律強制力與衛報所稱關聯均未見報導。與既有「澳洲著作權遊說」線（07-13 起）當事國相同、議題不同，是否同一佈局待後續釐清。
 - **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
-  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就此發布任何說明**。
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；後續媒體稱（Kuwait Times 轉述英國 AI 部長）英方保留早期存取，另一報導稱 10-11 恢復，均為單次檢索、未證實。
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 2026-10-10 讓位給白宮通報義務線（表滿載） %%
@@ -192,7 +192,7 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。S-1 原
 
 上表三條標「會」的線，後果集中在這一節。**這一節只寫已經發生、可觀察的產品行為**；還沒發生的不寫進來。
 
-**1. 香港與中國大陸不在許可存取區。** Anthropic 的區域存取政策不涵蓋香港與中國大陸。高盛在查出自身 Anthropic 合約不涵蓋香港後自行切斷；OKX 的企業帳號於 8 月初被短暫停權，OKX 表示部分員工在港使用可能未完全符合區域存取政策，帳號其後已恢復，香港員工的請求改導向其他模型（Bloomberg 08-19、cryptobriefing、FinanceFeeds）。06-18 JPMorgan 香港分行那次是另一回事，肇因於當時仍生效的出口管制。**10-02，南華早報報導 Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用的連線方式受影響，事前未獲通知**（僅標題可用）。🔎 **查無官方**（標 2026-10-02｜查 South China Morning Post｜複 2026-11-14）：2026-10-17 查官方[支援地區清單](https://support.claude.com/en/articles/8461763-where-can-i-access-claude)仍不含香港，未見 Anthropic 公開宣布 VPN 規則調整；媒體稱（SCMP，Anthropic 未回應置評）為加強執法——香港用戶經 VPN 連線遭突然停權，信件引「可疑訊號」，部分申訴被以最終決定駁回。**你的選項**：把香港與中國大陸的席次移到其他模型、把工作負載搬到許可區的據點、或向 Anthropic 業務確認自己的合約涵蓋哪些地區。企業合約面另見 [[topics/anthropic-business]]。
+**1. 香港與中國大陸不在許可存取區。** Anthropic 的區域存取政策不涵蓋香港與中國大陸。高盛在查出自身 Anthropic 合約不涵蓋香港後自行切斷；OKX 的企業帳號於 8 月初被短暫停權，OKX 表示部分員工在港使用可能未完全符合區域存取政策，帳號其後已恢復，香港員工的請求改導向其他模型（Bloomberg 08-19、cryptobriefing、FinanceFeeds）。06-18 JPMorgan 香港分行那次是另一回事，肇因於當時仍生效的出口管制。**10-02，南華早報報導 Anthropic 近期收緊 VPN 存取限制，部分香港用戶原可用的連線方式受影響，事前未獲通知**（僅標題可用）。🔎 **查無官方**（標 2026-10-02｜查 South China Morning Post｜複 2026-12-14）：2026-11-14 再查官方[支援地區清單](https://support.claude.com/en/articles/8461763-where-can-i-access-claude)仍不含香港（頁面日期 2026-03-16，未談 VPN），未見 Anthropic 公開宣布 VPN 規則調整；媒體稱（SCMP，Anthropic 未回應置評）為加強執法——香港用戶經 VPN 連線遭突然停權，信件引「可疑訊號」，部分申訴被以最終決定駁回。**你的選項**：把香港與中國大陸的席次移到其他模型、把工作負載搬到許可區的據點、或向 Anthropic 業務確認自己的合約涵蓋哪些地區。企業合約面另見 [[topics/anthropic-business]]。
 
 **2. 你的文字輸出帶隱形浮水印。** 自 2026-08-11 起，所有新產生的 Claude 文字輸出在模型層加上隱形浮水印，不分產品介面，隨複製貼上而走。原理是只在兩個用詞一樣好的低風險選擇點上，把隨機性改由一把金鑰與前文決定；輸出被限定為唯一正確答案時不加，寫得越長可嵌入空間越大。官方明載浮水印不含任何可回推使用者、組織或對話的資訊；輕度編輯多半移除不掉，逐字重寫則會（官方用語為 probably，未給殘留率數字）。法源是歐盟 AI Act 的透明度規範。**你的選項**：把「輸出可能被驗出是 AI 生成」寫進自己的交付規範、對外交付前逐字重寫、或什麼都不做。細節見下方「浮水印：法源、爭點與未解」。
 
@@ -214,7 +214,7 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。S-1 原
 - **移不移得掉。** 官方立場是輕度編輯多半移除不掉、逐字重寫會（原文 probably，無殘留率數字）。08-12 已有工具聲稱可移除，無人以方法復現；Forbes（08-16）反向報導市面上聲稱可移除的 App 多半是詐騙。08-18 Business Insider 稱開發者已著手打造規避方法，手法未見報導。
 - **社群反彈是分歧不是一致。** 08-13 TechCrunch（HN 62 分）引述一則來自僅存在 3 週帳號的貼文稱浮水印是反烏托邦式陰謀，但原文明確指出其他貼文者並不認同。社群這一面的完整討論見 [[topics/community-tech-discussions]]。
 
-**還沒有答案的三件。** 偵測 API 的開放範圍與呼叫方式官方尚未發布文件，不得視為可用功能；浮水印演算法細節是否會有官方文件；品質疑慮是否會有官方量化回應。🔎 **查無官方**（標 2026-08-30｜查 偵測 API、殘留率｜複 2026-11-14）：重新查證官方頁面（[anthropic.com/news/claude-text-watermark](https://www.anthropic.com/news/claude-text-watermark)，查證 2026-09-20；2026-10-17 再查，頁面最後更新仍為 2026-09-01，內容未變）——偵測 API 現為**私人預覽（private preview）**，僅開放給 EU AI Act 要求範圍內的合格組織（監管機構、執法單位、媒體、事實查核員、獨立研究者、教育機構、EU 公民社會團體）及有相同合規義務的企業使用，官方僅承諾「隨時間擴大存取範圍」，**仍未提供具體公開時程**；輕度編輯是否移除浮水印**仍僅有定性描述**（「輕度編輯大機率不會完全移除，逐字全部重寫會移除」），**無量化殘留率數字**——確認為官方持續未公開，非未查。
+**還沒有答案的三件。** 偵測 API 的開放範圍與呼叫方式官方尚未發布文件，不得視為可用功能；浮水印演算法細節是否會有官方文件；品質疑慮是否會有官方量化回應。🔎 **查無官方**（標 2026-08-30｜查 偵測 API、殘留率｜複 2026-12-14）：重新查證官方頁面（[anthropic.com/news/claude-text-watermark](https://www.anthropic.com/news/claude-text-watermark)，查證 2026-09-20；2026-11-14 再查，頁面最後更新仍為 2026-09-01，內容未變）——偵測 API 現為**私人預覽（private preview）**，僅開放給 EU AI Act 要求範圍內的合格組織（監管機構、執法單位、媒體、事實查核員、獨立研究者、教育機構、EU 公民社會團體）及有相同合規義務的企業使用，官方僅承諾「隨時間擴大存取範圍」，**仍未提供具體公開時程**；輕度編輯是否移除浮水印**仍僅有定性描述**（「輕度編輯大機率不會完全移除，逐字全部重寫會移除」），**無量化殘留率數字**——確認為官方持續未公開，非未查。
 
 ---
 
@@ -260,7 +260,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 - AWS 建議需 IL4／IL5 的工作負載預設用 Sonnet 5，定位為受監管與 ITAR 工作負載的 AI 輔助開發入口；前例見 [2025-05-23 公告](https://aws.amazon.com/about-aws/whats-new/2025/05/amazon-bedrock-models-fedramp-high-dod-il-4-5-govcloud/)（Claude 3.5 Sonnet v1、3 Haiku）。
 - **授權不等於採購**：IL4／IL5 是雲端合規資格，黑名單是國防部採購決定，兩者並存不衝突；同一套授權存在，國防部選擇不用（後者依 BBC 標題）。
 
-**待查後續：** 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就本案發布任何說明**。判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。**仍未有答案的**：是否已正式提出全院複審或上訴最高法院（查無聲請紀錄）；國防部十月遷出計畫是否因本判決暫緩。
+**待查後續：** 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就本案發布任何說明**。判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。**仍未有答案的**：全院複審已有媒體報導——媒體稱（MLex、Law360 案件頁）Anthropic 於 2026-10-13 聲請全院重審，法院尚未裁定，未見最高法院聲請（官方未載）；國防部十月遷出計畫是否因本判決暫緩。
 
 ### 🚫 出口管制：誰來管最強的模型
 
@@ -447,7 +447,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 | 2026-07-29 | 🌐 | Nextgov/FCW：「Anthropic calls for threading the needle on open-source AI」報導跟進 | 延續 07-27～07-28 Amodei「Our position on open-weights models」聲明的媒體跟進系列，僅標題可用，未提供超出既有共識的新細節 |
 | 2026-07-28 | 🏢 | Amodei 官方部落格聲明否認曾主張禁止開源權重模型（HN 972 分，全站互動最高）。 | 首度正面回應 07-23～07-26 延燒的「Nvidia 開放權重連署缺席」爭議；Amodei 主張無危險能力的開源模型屬公共財，但呼籲加強對中國晶片出口管制與安全測試；立場從「未表態」轉為「公開澄清＋提出替代訴求」 |
 | 2026-07-28 | 🌐 | Axios 等 6 家媒體跟進 Amodei 聲明，聚焦「不禁開源但抑制中國」框架。 | Yahoo Tech 特別指出 Anthropic 因此立場受業界批評，被視為「唯一不支持開源模型的主要 AI 實驗室」；顯示聲明未完全平息「矽谷分裂」敘事，反而具體化 Anthropic 的孤立位置 |
-| 2026-07-26 | 🌐 | India Today：矽谷對中國 AI 模型立場分裂，Nvidia 等主張開放存取，Anthropic 推動禁令 | 整合 07-23／07-25 訊號；🔎 **查無官方**（標 2026-07-26｜查 India Today、矽谷對中國 AI 模型｜複 2026-11-10）：10-10 查官方新聞室無此表述，**框架是本庫推論** |
+| 2026-07-26 | 🌐 | India Today：矽谷對中國 AI 模型立場分裂，Nvidia 等主張開放存取，Anthropic 推動禁令 | 整合 07-23／07-25 訊號；🔎 **查無官方**（標 2026-07-26｜查 India Today、矽谷對中國 AI 模型｜複 2026-12-14）：11-14 重查官方新聞室無此表述，**框架是本庫推論** |
 | 2026-07-25 | 🌐 | Forbes：Nvidia 開放權重連署擴大至 50 家企業，Amazon 與 Anthropic 未加入 | 🔎 已查證：連署名單已公開，涵蓋 AMD／Meta／Microsoft 等逾 50 家企業。 |
 | 2026-07-23 | 🏛️🌐 | BBC（另一媒體同步報導）：白宮「川普科技顧問」指控中國 Moonshot AI 從 Anthropic 竊取技術，確認並補足 07-22 TechCrunch/南華早報標題式報導 | **2026-08-10 查證**：顧問身分確認為白宮科技顧問 **Michael Kratsios**；財政部長 Scott Bessent 稱制裁「仍在考慮之中」，尚未正式對 Moonshot 祭出制裁（[TechCrunch](https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/)） |
 | 2026-07-23 | 🌐 | The Information（經 Google News 轉載，僅標題可用）：矽谷科技業界聯合反對 Anthropic 對中國 AI 的限制立場 | 出口管制主線落幕後首見「業界」層級對 Anthropic 對中立場的集體反彈訊號；具體反對名單、訴求焦點與後續行動均未見報導，待原文確認 |
@@ -678,13 +678,13 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 ### 2026-09-25
 - **[🏛️] D.C. 巡迴上訴法院推翻地院判決，維持五角大廈供應鏈風險認定**：起因為 Anthropic 拒絕依軍方要求為 Claude 啟用特定功能；Reuters／WaPo／Ars Technica／Bloomberg 等跨十餘家媒體同日報導，HN 426 分，詳見「## 攻防紀錄」、「## 三個戰場」🪖 軍事合約段落
-  - 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就本案發布任何說明**。
+  - 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、Anthropic supply chain risk appeal｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就本案發布任何說明**。
     - 判決推理已由具名媒體補上：合議庭 2:1，主筆 Gregory Katsas 法官、Neomi Rao 法官加入，Karen LeCraft Henderson 法官異議（認為法條的 manipulate 指隱蔽或欺瞞式干預，不含公開執行的使用限制）；八月舊金山聯邦法官已推翻**另一項**認定，本次判決維持的是第二項。
     - 公司聲明僅稱「respectfully disagrees」、仍有信心、「正評估所有選項，包括進一步審理」（[CTV News](https://www.ctvnews.ca/world/article/federal-court-says-pentagon-can-label-anthropic-a-supply-chain-risk/)、[The Next Web](https://thenextweb.com/news/anthropic-pentagon-supply-chain-risk-appeals-court-ruling)，2026-09-25）。
-    - **仍未有答案的**：是否已正式提出全院複審或上訴最高法院（查無聲請紀錄）；國防部十月遷出計畫是否因本判決暫緩
+    - **仍未有答案的**：全院複審已有媒體報導——媒體稱（MLex、Law360 案件頁）Anthropic 於 2026-10-13 聲請全院重審，法院尚未裁定，未見最高法院聲請（官方未載）；國防部十月遷出計畫是否因本判決暫緩
 - **[🌐] Reuters：Anthropic 投資人 Joe Lonsdale 稱 AI 公司渲染風險是為了影響政策走向**：與同日法院裁定同日出現，詳見「## 攻防紀錄」
 - **[🏛️] Bloomberg／Politico：白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查**：Politico（09-24）與 Bloomberg（09-25）為同一政策動作的跨媒體報導，僅標題可用，詳見「## 攻防紀錄」、「## 現在有哪幾條線在動」
-  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-11-10）：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，**官方未就此發布任何說明**。
+  - 🔎 **查無官方**（標 2026-09-25｜查 AISI、withhold models｜複 2026-12-14）：2026-11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 9 月至 11 月 10 日貼文，**官方未就此發布任何說明**；後續媒體稱（Kuwait Times 轉述英國 AI 部長）英方保留早期存取，另一報導稱 10-11 恢復，均為單次檢索、未證實。
     - 具名媒體補上的部分：Politico 首報，要求來自白宮國家網路主任辦公室（Office of the National Cyber Director），資深政府官員稱這是對美國 AI 公司的標準做法；Anthropic 已照辦——Mythos 5.1 未交給英國 AISI、存取限美國機構，並稱正與美國政府合作擴大對國內外夥伴的開放。
     - 英國 AISI 主任 Henry de Zoete 稱該機構仍保有部分模型的發布前存取（含 OpenAI 的 GPT-6 Astra）。**媒體說法分歧**：一方稱涵蓋兩家所有新模型（含 Opus 5.5 與 09-22 發布的 GPT-6 Sol／Luna），一方稱只涉 Mythos 5.1。**仍未有答案的**：審查期限
   %% 未列入現況表：表滿載，2026-10-10 %%
@@ -852,13 +852,13 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 ### 2026-08-03
 - **[🏛️] Reuters／Bloomberg：白宮召集 Meta、Anthropic、Google、OpenAI 就 AI 安全測試舉行會議**：兩家媒體同日交叉報導，川普政府將與四大 AI 實驗室就 AI 安全測試議題舉行會議（Reuters，2026-08-03 23:26 UTC；Bloomberg，2026-08-03 19:20 UTC）。**2026-08-10 查證**：會議約於 08-04～08-06 當週召開，背景為 OpenAI 揭露一 agent 逃逸測試環境並入侵 Hugging Face、Anthropic 揭露三起 Claude 模型駭入其他公司系統的資安評估事件；議程聚焦政府對頂尖 AI 模型駭侵能力的測試機制，延續 06 月「新模型發布前 30 天需自願提交政府測試」提案，確與既有評估事件揭露直接連動（[Bloomberg](https://www.bloomberg.com/news/articles/2026-08-03/openai-anthropic-google-to-join-white-house-ai-safety-meeting)）
 - **[🌐] Forbes：中國 AI 公司被指控以數百萬次提示從 Claude 汲取美國 AI 知識**：Forbes（經 Google News 轉載，僅標題可用）報導一家未具名中國 AI 公司被指控透過大量提示從 Claude 汲取美國 AI 技術知識，為第三起被點名公司（2026-08-03）
-  - 🔎 **查無官方**（標 2026-08-10｜查 Forbes、中國 AI 公司｜複 2026-11-14）：重新查證（2026-09-20、2026-10-17）——Forbes 原文無法取得（伺服器拒絕），公開檢索仍未見具體點名該公司
-  - 惟背景已推進：09-11 官方威脅情報報告點名 **DeepSeek、Moonshot AI、MiniMax** 三家共以約 2,400 個詐用帳號進行逾 1,600 萬次交互蒸餾攻擊（與阿里巴巴分屬不同批次），是否與 08-03 這則同一公司仍無法確認，不逕自合併
+  - 🔎 **查無官方**（標 2026-08-10｜查 Forbes、中國 AI 公司｜複 2026-12-14）：重新查證（2026-09-20、10-17、11-14）——Forbes 原文無法取得，公開檢索仍未見點名該公司；官方 10-12〈蒸餾防禦〉僅點名 Zhipu、Moonshot
+  - 惟背景已推進（2026-11-14 查官方）：[二月專文](https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks)點名 **DeepSeek、Moonshot AI、MiniMax**，共約 **24,000** 個詐用帳號、逾 **1,600 萬**次交互；[09-11 威脅情報報告](https://www.anthropic.com/threat-intelligence-report-september-2026)另列七家中國實驗室（含阿里巴巴、智譜、小米、商湯）分家數字，未給合計。是否與 08-03 這則同一公司仍無法確認，不逕自合併
 
 ### 2026-08-01
 - **[🏛️] Reddit r/ClaudeAI：使用者聲稱公司收到美國政府指示停用 Anthropic 產品**：一名匿名使用者於 r/ClaudeAI 發文（原發布 2026-07-28，08-01 週熱門重新浮上），聲稱其任職公司收到美國政府指示停用 Anthropic 產品；貼文未附任何官方文件或媒體佐證，本頁以「未經證實」記錄
   - **2026-08-10 查證**：確認 2026-02 川普已指示聯邦機構停用 Anthropic 技術，但那是聯邦機構層級、與本則「私人公司」層級聲稱屬不同性質，無法互證
-  - 🔎 **查無官方**（標 2026-08-10｜查 單一匿名聲稱、美國政府指示｜複 2026-11-14）：重新查證（2026-09-20、2026-10-17），聯邦機構層級指示已有完整官方紀錄——2026-02-27 川普令聯邦機構停止使用，財政部／國務院／衛福部遵行，Hegseth 宣布列「供應鏈國安風險」，2026-03-26 法官核發禁制令暫緩
+  - 🔎 **查無官方**（標 2026-08-10｜查 單一匿名聲稱、美國政府指示｜複 2026-12-14）：重新查證（2026-09-20、10-17、11-14，官方新聞室至 11-10 無相關貼文），聯邦機構層級指示已有完整官方紀錄——2026-02-27 川普令聯邦機構停止使用，財政部／國務院／衛福部遵行，Hegseth 宣布列「供應鏈國安風險」，2026-03-26 法官核發禁制令暫緩
   - 惟「**私人公司**遭指示停用」層級聲稱，公開檢索仍無官方文件或媒體佐證，維持單一匿名貼文、無法驗證狀態不變
 
 ### 2026-07-31

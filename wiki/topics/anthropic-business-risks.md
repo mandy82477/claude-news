@@ -3,7 +3,7 @@ page: "topics/anthropic-business-risks"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -16,8 +16,8 @@ attribution_count: 10
 attribution_last: "2026-11-13"
 top_source: "google-news"
 pending_count: 1
-pending_overdue: 1
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-14"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **最新動態**（2026-11-13）
@@ -117,7 +117,7 @@ UTRF 專利訴訟（求償含禁制令）目前不在表上，訴訟仍在進行
 - **和解金分配方式引發原告陣營內鬥（2026-09-06／07）**：NDTV、TechCrunch 報導 15 億美元著作權和解金分配方式引發爭議——出版商、經紀人與作者陣營各執一詞，作者方已公開反彈（Google News/NDTV；Google News/TechCrunch）。
 - 與既有「和解案執行細節」（91% 賠付申請率，見「這些數字是誰說的」表）不同：本則是**誰能分到多少**的陣營內部爭議，屬和解案後續新面向（推論，具體分配公式未見報導）。
 - **著作權訴訟疑似重複報導**：The Post-Crescent 報導 Anthropic 因訓練 AI 使用受版權保護書籍遭提告；同期查無其他獨立媒體報導有別於既有 15 億美元著作權集體訴訟和解案（見「這些數字是誰說的」表）的新訴訟。
-- 🔎 **查無官方**（標 2026-08-13｜查 Post-Crescent、著作權訴訟｜複 2026-11-10）｜**是否為獨立新訴訟**：延伸查證僅得 Bartz v. Anthropic 和解案官方／法院文件，未查得 Post-Crescent 具名的獨立新案號；維持「高度疑似地方報重提既有和解案」判斷。
+- 🔎 **查無官方**（標 2026-08-13｜查 Post-Crescent、著作權訴訟｜複 2026-12-14）｜**是否為獨立新訴訟**：2026-11-14 再查，仍僅得 Bartz v. Anthropic 和解案官方／法院文件，未查得 Post-Crescent 具名的獨立新案號；維持「高度疑似地方報重提既有和解案」判斷。
 
 ---
 
@@ -323,7 +323,8 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 - **[商業風險] Dealroom（2 源）：開發者把 Claude Code 導向非 Anthropic 模型執行，Anthropic 收不到對應 token 費用**：若官方為堵漏收緊政策，重度混用第三方模型的用戶路由彈性可能受限（推論）；讀者端見 [[topics/official-community-gap#🧪 部分對應：多模型路由 / 鎖定防禦]]
 
 #### 2026-09-14
-- **[產品線擴張，僅標題可用] TestingCatalog AI News：據報 Anthropic 籌備個人理財工具「Claude Money」**：與同日 Schwab／Orion 金融顧問通路布局呼應，顯示金融領域產品線持續擴張，上線時間、功能範疇均未見報導
+- **[產品線擴張，僅標題可用] TestingCatalog AI News：據報 Anthropic 籌備個人理財工具「Claude Money」**：與同日 Schwab／Orion 金融顧問通路布局呼應，顯示金融領域產品線持續擴張
+  - **後續已明朗（2026-11-14 查證）：官方 2026-11-05 推出 [Personal Finance](https://claude.com/resources/articles/introducing-personal-finance-in-claude) beta（美國 Pro／Max／Ultra，唯讀），官方頁未用「Claude Money」此名**。原報導的上線時間、功能範疇均未見報導
 - **[商業風險，跨類別] The Information：Nvidia、Palantir、Booz Allen 因資料外洩疑慮限縮 Anthropic 模型內部使用範圍**：背景對上官方 06-09 起 covered models 30 天保留政策（2026-10-03 查證）
   - 各家限縮範圍見 [[topics/ai-agent-safety]]；安全政策面另見 [[topics/ai-agent-safety]]，本頁不展開安全機制細節
 

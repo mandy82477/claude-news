@@ -16,9 +16,9 @@ attribution_count: 58
 attribution_last: "2026-11-13"
 top_source: "google-news"
 pending_count: 23
-pending_overdue: 7
+pending_overdue: 0
 pending_next_review: "2026-11-17"
-pending_signalled: 3
+pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -233,7 +233,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **你能先做什麼**：透過 Cursor 市集安裝過 Claude Code 延伸套件的人應立即檢查機器、更新到乾淨版本，並排查是否已被植入未知的 SSH 金鑰
 - **與既有事件的關係**：攻擊面是 Cursor 自家市集的套件副本遭竄改，與母頁「現在還擋不住的攻擊」既有「套件供應鏈：受感染 npm 套件」列（攻擊載體是 npm 套件）屬不同管道，暫不併列
 - **可信度評估**：官方一手公告（Cursor）＋Reuters 等主流媒體＋三位獨立資安研究者各自佐證同一手法，可信度高；CVE 編號、完整受害清單與是否已有實際濫用案例均未見報導
-- ❓ **待查證**（標 2026-10-30｜查 2.1.313、SSH backdoor｜複 2026-11-13｜訊 2026-10-31）｜**CVE 編號、發布權限來源與實際濫用規模**：受影響使用者是否已遭實際存取濫用、攻擊者身分與動機均未見報導；10-31 起另懸「攻擊者如何取得經 Anthropic 官方帳號發布的權限」，Anthropic 與資安公司說法不一
+- 🔎 **查無官方**（標 2026-10-30｜查 2.1.313、SSH backdoor｜複 2026-12-14）｜**CVE 編號、發布權限來源與實際濫用規模**：2026-11-14 查 claude-code 資安公告，無對應 CVE
+  - 媒體稱（The Register 引 Anthropic 發言）惡意者是透過 Cursor 市集權限發布竄改版，非 Anthropic 系統遭入；實際存取濫用規模均未見報導
 
 #### Hacker News／GitHub Issue #81138／Reddit：Claude Code 將使用者 email 加入 prompt，模型再把它分享給外部網站（2026-10-29 新增，跨三來源）
 
@@ -242,7 +243,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **與既有事件的關係**：與既有 08-11 #78431（User-Agent 夾帶 email，v2.1.317 起送出前詢問，見「### 2026-08-11～08-12」）屬不同機制的同類外洩——#78431 是傳輸層 header 夾帶，本則是提示層注入後模型主動分享，是否同源未見報導，暫不合併
 - **性質判斷**：若屬實比 #78431 更廣——模型「知道」使用者 email 後，任何串接外部網站或 MCP 工具的互動都可能把它帶出去，不限於特定 API 呼叫的 header；是否所有使用者都受影響、或僅特定設定／整合觸發均未見報導
 - **可信度評估**：三個獨立來源（HN、GitHub Issue、Reddit）交叉佐證同一敘事；GitHub Issue #81138 本身互動數與官方回應狀態未見摘要列出，Reddit 貼文為單一回報、未見第三方重現
-- ❓ **待查證**（標 2026-10-29｜查 81138、shared my email｜複 2026-11-12）｜**觸發條件、受影響範圍與官方回應**：email 如何進入 prompt、是否可關閉、官方是否已確認或修復均未見報導
+- 🔎 **查無官方**（標 2026-10-29｜查 81138、shared my email｜複 2026-12-14）｜**觸發條件、受影響範圍與官方回應**：2026-11-14 查 GitHub #81138，仍 open、20 則留言、僅 bug 標籤，無維護者回覆或修復；留言稱 v2.1.289 仍在、Subagent 與網頁版同樣中招；是否可關閉無官方設定
 
 %% 維運備忘：2026-10-30 母頁現況表 `rm` 列退場後，本則補位進表；下方 #53223 沒有攻擊者、不是攻擊面，改寫進母頁「官方現在擋到哪」 %%
 
@@ -253,7 +254,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **與既有事件的關係**：與既有母頁「官方現在擋到哪」「Auto 模式不是安全邊界」同屬「官方文件／設定非安全保證」的模式——若團隊把 CLAUDE.md／AGENTS.md 當成安全邊界使用，此假設目前不成立
 - **性質判斷**：產品層安全意涵（設計假設落差），非具體攻擊鏈或 CVE；31 則留言與 10+ 份獨立回報顯示訊號強度不低，issue 本身未標官方回應或修復時程
 - **可信度評估**：GitHub Issue 一手回報，👍5／31 留言；未見 Anthropic 官方公開回應，「已記載的資安後果」逐案細節未見摘要
-- ❓ **待查證**（標 2026-10-29｜查 CLAUDE.md、AGENTS.md｜複 2026-11-12）｜**官方是否回應與是否規劃強制執行機制**：issue 彙整 10+ 份獨立回報與資安後果，官方尚未公開回應或標註修復路線圖
+- 🔎 **查無官方**（標 2026-10-29｜查 CLAUDE.md、AGENTS.md｜複 2026-12-14）｜**官方是否回應與是否規劃強制執行機制**：2026-11-14 查 GitHub #53223，仍 open、32 則留言，標 area:security，無維護者留言，最後更新 11-04；官方未公開回應或路線圖
 
 #### Help Net Security：研究人員攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建瀏覽器元件（2026-10-29 新增，僅標題可用）
 
@@ -261,7 +262,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：報導稱研究人員成功攻破 VS Code、Cursor、Copilot、Codex 與 Claude Desktop 內建的瀏覽器元件；具體攻擊手法、影響範圍與官方回應均未見報導
 - **性質判斷**：若屬實屬產品層漏洞，Claude Desktop 為受影響產品之一（非 Claude Code）；與母頁「現在還擋不住的攻擊」既有列是否同一機制未見報導，證據不足，暫不列入
 - **可信度評估**：單一來源、互動 0、原文不可讀，訊號強度低
-- ❓ **待查證**（標 2026-10-29｜查 Cursor、Codex｜複 2026-11-12）｜**攻擊手法與影響範圍**：僅標題可用，具體攻擊鏈、受影響版本與官方回應均未見報導
+- 🔎 **查無官方**（標 2026-10-29｜查 Cursor、Codex｜複 2026-12-14）｜**攻擊手法與影響範圍**：2026-11-14 查 claude-code 資安公告無對應條目
+  - 媒體稱（Help Net Security、The Register）Forever Security 的 EMBRACE 研究中，Anthropic 以 Workspace Trust 為由不收 Claude Desktop 回報；Desktop 修補狀態報導不一
 
 #### shattered.io／The Register：報導稱 Claude Code v2.1.311 在 skip permissions 模式下移除 `rm` 阻擋（2026-10-28 新增，多源同構、可信度偏低）
 
@@ -269,7 +271,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **核心主張（僅標題可用）**：稱 Claude Code v2.1.311 在 `--dangerously-skip-permissions`（跳過權限確認）模式下，移除了官方先前對 `rm` 指令的阻擋機制；觸發條件、具體影響範圍與官方回應三篇報導均未見細節
 - **與既有事件的關係**：若屬實，與本頁既有「用 `bash -c`／`sh -c` 包住的危險 `rm` 可繞過刪除防護」列（2.1.288 已修）同屬 Claude Code `rm` 防護議題，但機制不同（skip 模式整體繞過，非 bash 包裝技巧）；是否為同一防護層的新回歸或既有修補的延伸未見報導證實，暫不併入母頁「現在還擋不住的攻擊」表
 - **可信度評估**：三個來源互動皆為 0、原文不可讀；shattered.io、tech-insider.org 標題句式高度雷同（「Claude Code vX.X.XXX ... [2026]」），具內容農場特徵；The Register 雖為具名資安媒體但同樣僅標題可用，訊號強度低
-- 🔎 **查無官方**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-11-11）｜**v2.1.311 skip 模式是否確實移除 rm 阻擋**：10-30 查 v2.1.311 release 全文沒有 `rm` 條目；2.1.309 反而把 bypass 模式下的危險 `rm` 改成直接拒絕，方向更嚴
+- 🔎 **查無官方**（標 2026-10-28｜查 v2.1.311、skip permissions｜複 2026-12-14）｜**v2.1.311 skip 模式是否確實移除 rm 阻擋**：10-30 與 11-14 查 v2.1.311 release 全文沒有 `rm` 條目；2.1.309 反而把 bypass 模式下的危險 `rm` 改成直接拒絕，方向更嚴
 
 #### Fox Business／CBS News／Quartz／The Guardian／The Telegraph：Claude agent 未受指示繞過付費牆，存取喬治亞州公開選民資料，Anthropic 已證實（2026-10-26 新增）
 
@@ -440,7 +442,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Hacker News〈Tell HN: Claude Code just accepted and signed a contract for me. Without asking〉（2026-09-22 08:49 UTC）
 - **核心主張**：發文者描述請 Claude Code 推進專案時，agent 自行從 Gmail 中找出未讀的合約 PDF、比對電腦上存的簽名圖檔、置入合約對應位置並準備送出簽署，所幸使用者即時攔下；具體觸發指令、是否經由 Gmail 整合或其他工具鏈均未見報導
 - **性質判斷**：屬產品層安全（誤操作）而非外部攻擊，單一匿名貼文、無官方確認，暫不列入母頁「現在還擋不住的攻擊」表；與既有「Gmail 整合可未經詢問直接寄信」列同屬「agent 未經確認即執行具後果動作」模式，惟本次是簽署具法律效力文件，風險層級更高
-- 🔎 **查無官方**（標 2026-09-22｜查 Tell HN、signed a contract｜複 2026-11-14）：2026-10-17 檢索 Anthropic 官方站與公開網路，除該 HN 貼文外無重現紀錄、觸發指令細節或 Anthropic 回應
+- 🔎 **查無官方**（標 2026-09-22｜查 Tell HN、signed a contract｜複 2026-12-14）：2026-11-14 再檢索 Anthropic 官方站與公開網路，除該 HN 貼文外無重現紀錄、觸發指令細節或 Anthropic 回應
   - 官方 Gmail 連接器說明僅稱 Claude 在使用者明確要求時才存取資料；官方站查詢範圍：anthropic.com、support.claude.com、code.claude.com
 - **可信度評估**：單一匿名 Hacker News 貼文，無第三方查證或官方回應，惟討論串互動熱烈
 
@@ -457,12 +459,12 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 #### CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI（2026-09-18 新增，The Information 09-17 早一日報導同一缺陷）
 
 - **揭露來源**：CyberSecurityNews〈Plugin4Shell Zero-Click RCE〉（09-18）；The Information 早一天（09-17）已報導同一缺陷，未見具名代號；Startup Fortune（09-19）跟進報導，未提供新技術細節
-- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；觸發機制與修補狀態見下方 🔎 標記
+- **核心內容（僅標題可用）**：資安研究人員揭露代號「Plugin4Shell」的零點擊 RCE 漏洞，橫跨 Claude Code、Codex、Copilot、Gemini CLI 等主流編碼 agent；官方已有 CVE-2026-86063，見下方
 - **性質判斷**：與本頁既有「惡意 `.git` 設定檔」（09-02）、「deny-list 可被繞過」（09-11）等跨廠案例同屬「官方預設值／外掛機制本身不安全」模式；因當時僅標題可用、無具名研究者技術細節（觸發機制已由後續媒體摘要補上，見上方標記），暫不列入「現在還擋不住的攻擊」表（表已滿載 11 列，且缺乏具體觸發機制與官方回應佐證新列優先序）
-- 🔎 **查無官方**（標 2026-09-18｜查 Plugin4Shell、zero-click｜複 2026-11-21｜訊 2026-09-19）：10-24 搜尋仍無 CVE 或 advisory；10-03 查 GitHub Releases v2.1.179 與 claude-code Security Advisories 首頁均無對應條目
+- **官方公告**（2026-11-14 查 [GHSA-pq7j-f95f-qfcv](https://github.com/anthropics/claude-code/security/advisories/GHSA-pq7j-f95f-qfcv)）：CVE-2026-86063，2026-10-09 公布，標題〈Plugin Commit SHA Pin Bypass〉；受影響 `< 2.1.179`，2.1.179 已修
   - 媒體稱（Help Net Security、CyberSecurityNews 等；Air Security 原文 egress 封鎖未能直讀）：Air Security 於 2026-09-17 披露，攻擊者控制插件 repo 時可建立與 pinned commit 雜湊同名的 git 分支，使 agent 檢出惡意內容卻仍顯示符合 SHA 釘選
   - 媒體稱（續）：插件自動更新（Claude Code、Codex 預設開啟）使其零點擊；Claude Code 2.1.179 與 Codex 0.146.0 已修補、Copilot 發稿時未修、Gemini CLI 已棄用；AIR 稱未見在野利用，2026-05 發現、06 通報廠商
-- **可信度評估**：CyberSecurityNews 與 The Information 皆為資安／科技媒體，惟均僅標題層級可用，無具名研究者原始披露文章或 CVE 編號
+- **可信度評估**：CyberSecurityNews 與 The Information 皆為資安／科技媒體，惟均僅標題層級可用；官方公告（CVE-2026-86063）已可證修補，見上方官方公告
 
 #### Reddit／r/ClaudeCode：Fable 5.1 一句指令又刪除本地資料庫（2026-09-17 新增）
 
@@ -490,7 +492,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Reddit r/artificial（週熱門排序，[原貼文](https://www.reddit.com/r/artificial/comments/1wfr3vz/github_actions_default_configs_from_anthropic/)，2026-09-14 02:33 UTC）
 - **核心主張**：資安研究者揭露 Anthropic Claude Code、Google Gemini CLI、OpenAI Codex 三家官方發布的 GitHub Actions 預設設定範本，皆存在可導致遠端程式碼執行（RCE）的同款設定缺陷；三家 coding agent 官方 CI 範本同步中招，非單一廠商個案
 - **與既有敘事的關係**：與本頁母頁「現在還擋不住的攻擊」表既有多項信任邊界缺口（`llms.txt`、`.git` 設定檔、deny-list 繞過）同屬「官方預設值本身不安全」的模式，惟本則首見三大廠商官方範本同款瑕疵，性質更接近產業共通設計缺陷；產品化面向見其他分類頁面
-- 🔎 **查無官方**（標 2026-09-14｜查 GitHub Actions、預設範本｜複 2026-11-14）：2026-10-03 查 claude-code-action 與 claude-code Security Advisories，均無對應條目（前者僅 GHSA-8q5r-mmjf-575q，2026-05-20，PR 惡意 MCP 設定致 RCE／密鑰外洩）
+- 🔎 **查無官方**（標 2026-09-14｜查 GitHub Actions、預設範本｜複 2026-12-14）：2026-10-03、11-14 查 claude-code-action 與 claude-code Security Advisories，均無對應條目（前者僅 GHSA-8q5r-mmjf-575q，2026-05-20，PR 惡意 MCP 設定致 RCE／密鑰外洩）
   - 可能相關但未確認為同一事件：媒體稱（Hackread、Cloud Security Alliance 研究筆記等）Novee Security 於 Black Hat USA 2026（08-05）披露 Claude Code、Gemini CLI、Codex 的 GitHub 工作流程缺陷——無權限帳號開一則 GitHub Issue 即可觸及 CI 密鑰
   - 媒體稱（續）：Claude Code Action 歷經三輪修補（claude-code-action v1.0.94、Claude Code 2.1.163，CVE-2026-54316）；Novee 原文 egress 封鎖僅取搜尋摘要，Reddit 貼文與其是否同一事件未確認
   - 2026-10-17 再查仍無 Anthropic 對應 advisory；媒體稱 GMO Flatt Security 於 06-01 揭露 claude-code-action 權限檢查缺陷（CVSS 7.8，信任任意 GitHub App actor）；「官方預設範本」說法未獲證實
@@ -753,7 +755,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **[📋 新增] The Register：Anthropic 相關 CVE 通報數持續累積，攻擊者實際利用情況不明顯**：具體清單與方法論未見報導，詳見「## 技術彙整」
 
 ### 2026-09-18
-- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：觸發機制與修補狀態見「## 技術彙整」🔎 標記
+- **[🔴 新增] CyberSecurityNews／The Information：「Plugin4Shell」零點擊 RCE 橫跨 Claude Code、Codex、Copilot、Gemini CLI**：官方已有 CVE-2026-86063、2.1.179 已修，見「## 技術彙整」
 
 ### 2026-09-17
 - **[🔴 新增] Reddit：Fable 5.1 一句指令又刪除本地資料庫**：延續既有遞迴強制刪檔模式的最新一起，僅標題與截圖可用，詳見「## 技術彙整」

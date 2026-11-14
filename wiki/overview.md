@@ -11,7 +11,7 @@
 
 **Fable 5.2 成為新預設旗艦，而且降價**：11-09 發布，**$8／$40**（前代 Fable 5.1 為 $10／$50，降約兩成）、1M context、快取讀取為基礎輸入價的 2.5%、知識截止 **Jun 2026**、退役**不早於 2027-11-09**（官方模型總覽頁，2026-11-14 查證）。同日發布信任機構限定的 **Mythos 5.2**（同為 $8／$40）。官方遷移指南列出**四項破壞性變更與三項行為變更**——換代前先讀那一節，見 [[entities/fable-5]]。
 
-**Claude Dispatch：官方確認有缺陷，但決定不修**：11-05／11-06 兩個來源披露 Claude Dispatch 可讓攻擊者跨企業邊界執行遠端指令，官方確認後**決定不修補**。這是目前站上風險最高、且官方明示不會補的一條；在企業環境開了 Dispatch 跨團隊功能的管理者要自己收權限。另 10-26／10-27 披露的 **Downloads 資料夾任意指令檔**至今官方無回應。攻擊面 11 列本輪全查、全數維持，見 [[topics/ai-agent-safety]]。
+**Claude Dispatch：官方確認有缺陷，但決定不修**：11-05／11-06 兩個來源披露 Claude Dispatch 可讓攻擊者跨企業邊界執行遠端指令，官方確認後**決定不修補**。這是目前站上風險最高、且官方明示不會補的一條；在企業環境開了 Dispatch 跨團隊功能的管理者要自己收權限。另 10-26／10-27 披露的 **Downloads 資料夾任意指令檔**：本輪查官方安全公告與 CHANGELOG **查無對應修補**（不是沒人查，是查了沒有）。攻擊面 11 列本輪全查、全數維持，見 [[topics/ai-agent-safety]]。
 
 **Monitor tool 進了 stable**：npm `stable`＝**2.1.311**、`latest`＝**2.1.325**（2026-11-14 查證）。這一跨讓 Monitor tool（2.1.310）不再需要 latest；只有寫入邊界設定 `blockWritesOutsideWorkingDirectories`（2.1.314，預設關）還留在 latest。v2.1.323 另推出實驗性 **Code Mode**（Research Preview）。見 [[entities/claude-code-releases]]、[[entities/claude-code]]。
 
@@ -34,12 +34,12 @@
 | **Claude Opus 5.5** | 🟢 現行 Opus | $4／$20；快取讀取為輸入價 5%；預設 effort `medium`（Opus 5 為 `high`）；知識截止 Jun 2026；退役不早於 2027-09-22 |
 | **Claude Sonnet 5.5** | 🟢 現行 Sonnet | $2／$10；知識截止 Jun 2026；退役不早於 2027-09-28；Models API 回報它**不接受關閉 thinking**、可用 `between_tools` |
 | **Claude Haiku 5.5** | 🟢 現行 Haiku | From $0.10／$0.50；**唯一按 prompt 長度計價的現行模型**（逾 10 萬 token 改高一檔）；退役不早於 2027-10-07 |
-| Claude Fable 5.1 | ⚠️ Legacy（2026-11-09 起）| 仍可呼叫，$10／$50 |
+| Claude Fable 5.1 | 🟡 前代（**官方 deprecations 表仍列 Active**，退役不早於 2027-09-01）| 仍可呼叫，$10／$50；新工作建議改用 5.2 |
 | Claude Mythos 5.1 | ⚠️ Legacy | 仍限信任機構，$10／$50 |
 | Claude Opus 5 | ⚠️ Legacy｜官方標 Active (legacy) | $5／$25、快取讀取 $0.50；知識截止 May 2026、退役不早於 2027-07-24；**官方已不建議新採用、建議遷移 Opus 5.5**（2026-11-14 複查）|
 | Claude Sonnet 5 | ⚠️ Legacy | $2／$10；退役不早於 2027-06-30 |
 | Claude Opus 4.8 | ⚠️ Legacy | 仍是 Fable 系**資安類**請求被護欄攔下時的接手模型；**fast mode 已宣告淘汰、2026-11-30 移除** |
-| Claude Opus 4.7／4.6、Sonnet 4.6、Haiku 4.5 | ⚠️ Legacy | 仍可選用；4.7 起為新 tokenizer（同文字約多 30% token）|
+| Claude Opus 4.7／4.6、Sonnet 4.6、Haiku 4.5 | ⚠️ Legacy | 仍可選用；**4.7 起換新 tokenizer**，同一份文字約 **1x–1.35x** token（官方遷移指南；計價頁另寫「約多 30%」，取決於內容）|
 
 > 快速選型與情境推薦見 **[[topics/model-comparison]]**；跨家任務榜單見 **[[topics/model-task-leaderboard]]**（本輪因雲端網路未開放榜單網域未更新）
 > 現行模型頁的「跟它怎麼說話」節均已從官方 prompting 指南補齊——**換代時哪幾句 prompt 要加、哪幾句要刪**看那一節。同一句話在相鄰兩代常是相反的藥。
@@ -52,12 +52,12 @@
 
 1. **[[topics/anthropic-ipo]] — 定價前最後一週，官方數字與媒體時程並存**
    - $70～78 區間、825M 股、約六倍超額認購；Q3 單季營收 $170 億但淨損 $233 億（含 $219 億非現金）；掛牌日本輪未能自行向官方頁複核
-2. **[[topics/ai-agent-safety]] — Claude Dispatch 官方確認但不修補，Downloads 資料夾仍無回應**
+2. **[[topics/ai-agent-safety]] — Claude Dispatch 官方確認但不修補，Downloads 資料夾查無修補**
    - 攻擊面表 11 列滿載、本輪全查全留；下輪先看 Gmail 代寄（判定日 11-17）與套件供應鏈（11-27）兩列
 3. **[[topics/market-signals-legal]] — 三條法律線同週開啟**
    - Mythos 商標侵權、AI 軍備競賽凍結訴訟、紐約州 AI 安全法生效
 4. **[[entities/claude-code-known-issues]] — 多起錯誤升高事故與 Microsoft 365 同步故障**
-   - 11-13 claude.ai／Claude API／Claude Code 同期事故；逾期待查證筆數本輪為站上最高
+   - 11-13 claude.ai／Claude API／Claude Code 同期事故；本輪該頁待核實的條目數為站上最高
 
 ### 🟡 持續追蹤
 
@@ -133,5 +133,5 @@
 - HN 討論熱度：🔥🔥🔥🔥 高（Fable 5.2 換代、IPO 定價週、Whiteboards／Sheets 官方文 273 分）
 - Reddit 情緒：😤 成本與品質疑慮延續；11-13 多起事故當日「Claude Code Is Down」討論再起
 - 開發者工具活躍度：📈 明顯升溫（本輪策展新增 52 筆、目錄 243 列；手機遠端操控與 Context 管理同期爆發）
-- 信任指標：↘ 走弱（**Claude Dispatch 官方確認卻不修補**、Downloads 資料夾無回應、提示注入已產業級）
+- 信任指標：↘ 走弱（**Claude Dispatch 官方確認卻不修補**、Downloads 資料夾查官方公告與 CHANGELOG 皆無修補、提示注入已產業級）
 - 競爭壓力：🟡 中（Fable 5.2 降價兩成回應價格戰；Schwab 自建 MCP 顯示大客戶開始去獨家化）

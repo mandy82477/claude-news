@@ -4,7 +4,7 @@ kind: "entity"
 type: "model"
 status: "active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）"
 domain: "🤖 模型"
-last_updated: "2026-11-11"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-11"
 status_main: "active"
 days_since_news: 3
@@ -17,7 +17,7 @@ attribution_count: 42
 attribution_last: "2026-11-11"
 top_source: "google-news"
 pending_count: 4
-pending_overdue: 1
+pending_overdue: 0
 pending_next_review: "2026-11-15"
 pending_signalled: 0
 staleness_exempt: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-11
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-11
 
 > **Mythos 5.2 媒體解讀**（2026-11-11）
@@ -183,9 +183,10 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 2026-10
 
 #### 2026-10-29
-❓ **待查證**（標 2026-10-29｜查 SentinelOne、Wayfinder）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（僅標題可讀，弱訊號）：
+🔎 **查無官方**（標 2026-10-29｜查 SentinelOne、Wayfinder｜複 2026-12-14）｜**VMblog：SentinelOne 稱將把 Claude Mythos 5.1 導入 Wayfinder Frontier AI 資安服務**（Anthropic 官方未載；僅標題可讀，弱訊號）：
 - Google News 轉載 VMblog 標題「SentinelOne to Add Anthropic's Claude Mythos 5.1 to Wayfinder Frontier AI Services」（[Google News/VMblog](https://news.google.com/rss/articles/CBMirgFBVV95cUxQeXRSNXVUa3JVMUtTRVgxX1N2TDVBSjdsOEdrS0dnUl9obk9jV0Q1a2x0bHNUWVdXeVhyRlhSSkJMcmNZdHNNYXRlRG1VR1czU05LZlNrQUk5WWw1Qmpmd2pobkdmQXZqQXVvOV91WXBhLUtBcjkwRU9HeXlNTTlWbHJzWHlNVzRhdm8xU0l3SUU1YTFmaWJDMkVTYWQ2VlZacU03UHVWaEdWVU16ZWc?oc=5)，2026-10-29）；RSS 僅提供標題，無正文，互動數 0、單一來源、未進當日日報正文
-- 無法確認整合是否透過 Project Glasswing、整合範圍或上線時程；企業採用面細節見 [[topics/enterprise-tool-tracker]]
+- 2026-11-14 查 [anthropic.com/news](https://www.anthropic.com/news) 與 [Models overview](https://platform.claude.com/docs/en/models/overview)，均無 SentinelOne／Wayfinder 相關公告
+  - 搜尋結果另見 SentinelOne 自家新聞稿（BusinessWire，2026-10-29，本輪未能開啟原文）。Mythos 官方仍列限驗證組織存取，整合方式與上線時程無從確認；企業採用面細節見 [[topics/enterprise-tool-tracker]]
 
 #### 2026-10-27
 **Anthropic 研究：未發布的內部研究模型找出 5 條攻擊鏈，波及 Chrome、Safari、Windows、Linux、Android**：
@@ -281,7 +282,7 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 - **Dimon 表態（07-16）**：摩根大通執行長 Jamie Dimon 稱 Mythos 帶來的 AI 風險是「真實問題」（Reuters，僅標題可用）。
 - **Fed 示警卻拿不到模型（07-21）**：CNBC 查證，Fed 與財政部 4 月召集銀行執行長示警，但 Fed 自該次示警後至少三個月未取得 Mythos Preview 存取權，截至 07-15 仍在爭取；監管關注鏈為加拿大（07-13）→ Dimon（07-16）→ 聯準會（07-21）。
 - **csoonline Mythos FAQ（07-20）**：僅標題，連結 08-26 已 404，無獨立事實，不再追蹤。Nozomi Networks 同日加入 Glasswing（見「政策與存取管控」表）。
-- **Mashable「可能對外公開發布」（07-25）**：僅標題；09-01 Mythos 5.1 仍限信任機構，公開發布猜測未成立。該則 ❓ 懸置標記（複 2026-11-10）隨原文留在 [[entities/mythos-archive#2026-07]]。
+- **Mashable「可能對外公開發布」（07-25）**：僅標題；09-01 Mythos 5.1 仍限信任機構，公開發布猜測未成立。該則已於 2026-11-14 依官方 Models overview 結案（Mythos 仍限驗證組織），原文留在 [[entities/mythos-archive#2026-07]]。
 - **密碼學研究（07-28）**：Mythos Preview 發現兩項改進的攻擊——大幅削弱 HAWK 簽章方案、round-reduced AES 的新攻擊法；官方稱目前不影響任何正式系統（[Anthropic Research](https://www.anthropic.com/research/discovering-cryptographic-weaknesses)，HN 221）；GitHub 有 HAWK-256 實際金鑰恢復示範。同日 Oxide Computer 加入 Glasswing。
 - **專業社群反應（07-29）**：Cryptography Engineering（HN 168）評 HAWK 攻擊是真成果（數小時跑完、等於把安全強度砍半）、AES 攻擊只是 2013 年舊研究的常數倍改進（2^89 次加密運算、2^105 個選擇明文）；Matthew Green 將其放入後量子密碼轉型脈絡。
 - 原始條目見 [[entities/mythos-archive#2026-07]]

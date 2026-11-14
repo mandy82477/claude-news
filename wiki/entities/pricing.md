@@ -12,13 +12,13 @@ parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
 days_since_news_subtree: 1
-inbound_links: 194
+inbound_links: 195
 attribution_count: 173
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 3
-pending_overdue: 1
-pending_next_review: "2026-11-21"
+pending_count: 1
+pending_overdue: 0
+pending_next_review: "2026-12-12"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -167,12 +167,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 |------|------|-----------|
 | Ultra→Max 降級是否取消已存的 Claude Duet 額度重置 | 單一來源（Reddit，2026-11-02）稱降級後已存的重置機會被收回，官方未確認 | 官方說明或第二來源佐證 |
 | 是否新增訂閱留存優惠應對競品追近 | 單一來源（Startup Fortune，2026-10-15）稱官方「現在付費留住訂閱者」，具體機制、金額與適用方案均未見，僅標題可用 | 官方公告或第二來源佐證 |
-| Opus 5.5 的「實驗性用量上限重置」 | 單一來源稱有；官方說明中心未見此機制（查證進度見表下） | 2026-11-10 複查 |
 | 拒答計費的類別清單 | 官方已載現行三類，但稱可能隨誤判率調整 | 下次官方文件改版 |
 | Claude Code Code Review GA 附帶 $50,000 美元點數方案 | 媒體稱 Code Review 2026-10-15 轉 GA 附帶 $50,000 點數方案；2026-10-16 查證官方 code-review／code-review-costs 頁僅載計費機制，均未提及此點數方案 | 官方點數方案細節公告 |
-
-**懸置細節**
-🔎 **查無官方**（標 2026-09-24｜查 Pasquale Pillitteri、實驗性重置｜複 2026-11-10）｜**Claude 是否新增實驗性用量上限重置機制**：2026-10-10 查官方 [說明中心](https://support.claude.com/)「Usage and limits」與 Pro／Max 方案分類，**未見此機制的任何條目**。⚠️ 並查出一件事：看似多家報導其實是**同一個來源**——pasqualepillitteri.it 以 9 種語言各發一篇（en／de／fr／nl／es／pt／id／tr／zh），仍屬單一來源。該來源稱是 Pro／Max／Team 可保留自用的一次性額度、入口在設定→用量的「Resets」頁籤、10-22 到期；**這些細節一概未經官方佐證，不採信為事實**：Google News／Pasquale Pillitteri 單一來源稱 Opus 5.5 上線同時導入「experimental usage limit resets」，具體機制、適用方案與是否官方確認均未見報導；同一媒體 09-05 曾以「Anthropic Resets Claude Limits」為題報導，09-06 查證結果為價格結構未變（見上方「2026-09-05」條），故本則比照處理，不逕自視為新規則寫入「當前生效的計費規則」。
 
 **Code Review 實際怎麼計費**：官方費用頁只給估算與封頂方法、沒有單次價格，整理見 [[topics/enterprise-cost-management#LLM code review 一次多少錢：官方給的是估法，不是單價]]。
 
@@ -213,6 +209,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **⚠️ usage credits 開啟後，方案用量上限不再是硬停止**：credits 為 opt-in、預設關閉，於 `Settings > Usage` 開關，可設 auto-reload（每日兌換上限 $2,000）。開啟後 Claude 會在額度用盡後繼續回答並從 credits 扣款，體感與額度內無異，但每則超額回應皆計費——靠方案硬上限控管支出者需主動確認此開關（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-08-08 查證）
 - **（2026-10-09 更新）** 官方同批改版拿掉「過渡到 API 額度計費需使用者明確同意」與「購買用量包」措辭，見 [[entities/pricing-history]] 10-09 條
 - **✅ 五小時 session 額度用盡時的「收尾」寬限（官方文件逐字查證，2026-10-22）**：回應進行中碰到上限會短暫繼續做完這一步、不停在半途，介面顯示「wrapping up」；寬限**小且有上限**，只蓋進行中的回應，上限後才送的新訊息不適用，功能仍逐步推出中（來源：[Pro/Max 方案用 Claude Code](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan)，2026-10-22 查證）
+- **✅ 用量上限重置（官方，2026-11-14 查證）**：[Opus 5.5 發布稿](https://www.anthropic.com/news/claude-opus-5-5)（2026-09-22）稱提高 Pro／Max／Team／seat-based Enterprise 的五小時上限，並給訂閱用戶一次可存著用的限額重置。
+  - 用法見 [What is a limit reset?](https://support.claude.com/en/articles/17007452-what-is-a-limit-reset)：`Settings > Usage` 按 Reset for free；到期日列在該筆優惠上；Claude Code 終端機／IDE 內無此按鈕。
 - **✅ 安全分類器拒答的計費（官方文件，2026-10-04 查證）**：適用 Fable 5.1／Fable 5／Opus 5.5／Opus 5／Sonnet 5.5，拒答回 `stop_reason: "refusal"`（[Refusals and fallback](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback)「How refusals are billed」）
 - 上條計費範圍：輸出前的拒答**只有 `bio`、`frontier_llm`、`reasoning_extraction` 三類計費**，`cyber`、`general_harms` 不計；串流途中拒答計已送出的輸入與輸出——證實 09-27 MIXED「五類中三類收費」的標題
 - 上條 fallback：觸發的拒答若屬計費類或發生在串流中也照計，Fallback credit 可補償重複的 prompt cache 成本；適用 Claude API、Bedrock、Claude Platform on AWS、Google Cloud、Microsoft Foundry

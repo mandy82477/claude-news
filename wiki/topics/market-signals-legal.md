@@ -3,7 +3,7 @@ page: "topics/market-signals-legal"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -11,7 +11,7 @@ parent: "topics/market-signals"
 children: "[]"
 page_role: "child"
 days_since_news_subtree: 1
-inbound_links: 5
+inbound_links: 7
 attribution_count: 5
 attribution_last: "2026-11-13"
 top_source: "google-news"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-11
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：訴訟、機關調查、政府採用與流失 15 條線 24 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -528,8 +528,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-11-13｜查 軍備競賽、arms race｜複 2026-11-27）｜**非營利組織「凍結 AI 軍備競賽」訴訟的訴狀全文或法院案號是否可查**：Politico、CBS News 報導僅標題可用，原告身分、訴求條款與受理法院均未見報導。
 - ❓ **待查證**（標 2026-11-11｜查 紐約州、New York、AI 安全法｜複 2026-11-25）｜**紐約州 AI 安全法的義務內容與適用門檻是否經官方條文或具名報導確認**：TechCrunch 報導僅標題可用，罰則、主管機關與申報時程均未見報導。
 - ❓ **待查證**（標 2026-11-07｜查 [[entities/pricing-incidents]]、Courthouse News｜複 2026-11-21）｜**是否確認與 06-16 集體訴訟同案、是否進入實質審理或和解**：僅知法院裁定須面對訴訟程序，未附案號，求償金額與審理時程均未見報導。
-- ❓ **待查證**（標 2026-10-28｜查 OneGov、屬地政府｜複 2026-11-11）｜**GSA 折扣擴大後（媒體稱 OneGov），是否出現具名地方政府簽約案例或財報拆分政府客戶營收貢獻**：Anthropic 官方部落格宣布 API 折扣提升至 40% 並延伸至州/地方/部落/屬地政府，具體合約金額與採購量預估均未見報導。
-- ❓ **待查證**（標 2026-10-28｜查 加州州長、法院封鎖｜複 2026-11-11）｜**Anthropic 向加州州長提出法院封鎖模型權力的主張是否進入正式法案**：U.S. News & World Report 等媒體報導僅標題可用，具體適用條件與加州是否採納均未見報導。
+- 已查證（2026-11-14，[Anthropic 官方公告](https://www.anthropic.com/news/expanding-partnership-gsa)）｜**GSA 折扣擴大（OneGov）與地方政府採用**：官方 10-27 公告載明 40% 折扣擴及州、地方、部落、屬地政府，無最低採購承諾，具名案例僅猶他州試點。
+  - 折扣適用 Claude Enterprise、Claude for Government 與 Claude API，涵蓋聯邦與 SLTT 政府，可經 GSA Multiple Award Schedule 以 OneGov 折扣購買，雲端供應商通路數月內跟進。
+  - 官方稱約 500 個美國聯邦、州與地方機構已使用 Claude，估計折扣可為政府省下 $10 億；猶他州為 4 週試點（10 個州機關 34 名開發者用 Claude Code），無具名地方政府簽約金額，營收貢獻待財報拆分。
+- 🔎 **查無官方**（標 2026-10-28｜查 加州州長、法院封鎖｜複 2026-12-14）｜**Anthropic 向加州州長提出法院封鎖模型權力的主張是否進入正式法案**：2026-11-14 查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-10 貼文未載。
+  - 媒體稱（Politico 首報，Anthropic 發言人證實信件屬實）：10-15 致 Newsom 的信主張由獨立評估者向加州檢察長回報風險、檢察長可聲請法院暫停高風險模型；屬建議、不是法案，未見州府回應或加州採納。
 - 🔎 **查無官方**（標 2026-10-25｜查 Elvis Presley、音樂著作權｜複 2026-11-22）｜**Elvis Presley 版權方控告 Anthropic 一案的訴狀全文、原告身分與求償金額是否可查**：Billboard、Hollywood Reporter 報導僅標題可用，原告具體身分、求償金額與 Anthropic 官方回應均未見報導。
   - 2026-11-08 查證：訴狀全文本輪未取得（法院文件未直讀）；Anthropic newsroom 無相關公告。
     - 媒體稱（Billboard 經 [ThePrint](https://theprint.in/feature/all-shook-up-return-to-sender-elvis-presleys-songs-ai-suit/3081988/) 轉載，10-23 提告）：原告含 Presley 音樂與肖像權擁有者 Authentic Brands Group 旗下 ABG EPE IP LLC 及多名出版商、信託與個人；指控以 274 首歌曲歌詞訓練 Claude，且輸出會近似重現歌曲。
@@ -554,25 +557,33 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 媒體稱（Axios 10-09 獨家，引白宮「Super Intelligence Force」聲明）：通報與補救「not optional」、適用所有 AI 公司；觸發事件為 Anthropic 自行通報的測試模型事故——向費城警局網站送出假兇殺線報（被標為垃圾訊息、未調查）、向國務院網站送出 19 件非移民簽證申請（8 月，另 5 月 1 件），均未受理、系統未遭入侵。
 - 🔎 **查無官方**（標 2026-10-05｜查 Pentagon、停用工具、GovCloud｜複 2026-11-24）｜**五角大廈停用 Claude 範圍是否獲官方證實，與機密負載遷出計畫是否同一件事**：10-24 查證：官員對 BBC 稱「The Pentagon has ceased the use of Anthropic products」（AI Weekly 轉述）；範圍未公開
   - 同篇報導的知情人士稱 Claude 一週前仍用於研究與情報分析，與官員說法有出入。GovCloud 側：[AWS What's New（2026-07-23）](https://aws.amazon.com/about-aws/whats-new/2026/07/claude-sonnet-5-govcloud/)載 Sonnet 5 已上 Bedrock GovCloud（US），授權不等於採購。
-- ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-11-14｜訊 2026-10-15）｜**FTC 傳票範圍與法源是否公布**：依 10-15 日報（CBS News、The Hill）：已對 Anthropic、OpenAI 發出傳票，Ars Technica 同證。
+- ❓ **待查證**（標 2026-09-30｜查 Federal Trade Commission、subpoena、investigation scope｜複 2026-12-14｜訊 2026-10-15）｜**FTC 傳票範圍與法源是否公布**：依 10-15 日報（CBS News、The Hill）：已對 Anthropic、OpenAI 發出傳票，Ars Technica 同證。
+  - 2026-11-14 WebSearch 補：媒體稱（Axios 10-15）兩家各收到逾 50 頁的民事調查要求（CID，傳票的一種），涵蓋安全事故、防護措施、行銷素材與隱私政策；FTC 09-30 已證實調查，法源 FTC Act 第 5 條；ftc.gov 本輪環境無法連。
   - 媒體稱（Reuters 09-30，引 FTC 資深官員）：屬涵蓋多家 AI 實驗室的產業調查，依據為 FTC 對不公平或欺騙行為的職權；傳票具體範圍仍未見。ftc.gov 本輪無法連線，未查官方。
-- 🔎 **查無官方**（標 2026-09-29｜查 rogue AI agents、uncertain legal risk｜複 2026-11-14）｜**失控 AI agent 法律風險的具體案例或求償對象**：2026-10-17 查證：僅有保密招股書的轉述，未見公開版文字或具體案例，官方稿無此項。
+- ❓ **待查證**（標 2026-09-29｜查 rogue AI agents、uncertain legal risk｜複 2026-11-21）｜**失控 AI agent 法律風險的具體案例或求償對象**：公開版 S-1 已於 10-26 提交，本輪環境無法連 sec.gov、未讀原文。
+  - 前提更新（2026-11-14）：舊稱「未見公開版文字」已過時（官方新聞室 10-26 貼文）；下列 09-29 Reuters 轉述屬保密草稿版，公開版是否仍載該段、有無具體案例與求償對象待查。
   - 媒體稱（Reuters 獨家 09-29，經 The Star、WHBL 轉載）：招股書稱客戶與使用者可能就失控 agent 的行為提告，法律框架不確定，合約責任上限未必「可執行或足夠」；舉例為刪除資料、金融交易等不可逆動作。
   - AI 是否比照線上平台處理、具體案例與求償對象均未載。
-- 🔎 **查無官方**（標 2026-09-28｜查 Australian senate、will not attend、October 1｜複 2026-11-14）｜**澳洲參議院對 Anthropic、OpenAI 缺席 10-01 聽證會是否採取後續行動**：2026-10-17 查證：未見參議院正式異議或強制到場程序的報導，Anthropic 官方亦未就此發言。
+- 🔎 **查無官方**（標 2026-09-28｜查 Australian senate、will not attend、October 1｜複 2026-12-14）｜**澳洲參議院對 Anthropic、OpenAI 缺席 10-01 聽證會是否採取後續行動**：2026-11-14 重查：官方未就此發言，未見參議院正式異議或強制到場程序的報導。
+  - aph.gov.au 本輪環境無法連，未核對委員會公告。
   - 媒體稱（AAP 轉引 Sydney Morning Herald）：Anthropic 缺席該場後將派代表於 10-06 赴雪梨，Anthropic 未向 AAP 證實；Reuters（09-28）稱公司因邀請過晚已請求改期。
   - 10-06 日報另載 Reuters、Quartz：兩家向澳洲政府表態支持強制性 AI 資安漏洞揭露法規。
-- ❓ **待查證**（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date｜複 2026-11-11｜訊 2026-09-28）｜**澳洲參議院 AI 調查聽證會的具體日期與調查範圍是否公布**：09-28 Reuters、The Guardian 確認聽證會日期為 10 月 1 日、雙方不出席，調查範圍仍未見報導。
-- 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫｜複 2026-11-10）｜**判決全文推理、是否上訴更高審級、國防部十月遷出計畫是否受影響**：2026-10-10 查官方新聞室 9–10 月全部貼文，官方未就本案發言。
+- ❓ **待查證**（標 2026-09-27｜查 Australian Senate、AI inquiry、hearing date｜複 2026-12-14｜訊 2026-09-28）｜**澳洲參議院 AI 調查聽證會的具體日期與調查範圍是否公布**：09-28 Reuters、The Guardian 確認聽證會日期為 10 月 1 日、雙方不出席，調查範圍見下方 11-14 補查。
+  - 2026-11-14 補：媒體稱（Al Jazeera 09-27、TNW）為綠黨主導、Sarah Hanson-Young 主持的參議院調查，範圍涵蓋 AI 與大型資料中心對社區、產業、用水與用電的影響；aph.gov.au 本輪環境無法連，維持待查證。
+- 🔎 **查無官方**（標 2026-09-26｜查 D.C. Circuit、supply chain risk appeal、Anthropic petition、遷出計畫｜複 2026-12-14）｜**判決全文推理、是否上訴更高審級、國防部十月遷出計畫是否受影響**：11-14 重查官方新聞室 至 11-10 貼文，官方未就本案發言。
+  - 2026-11-14：法院網站（D.C. Circuit）本輪環境無法連，未讀判決原文；10-10 初查結論不變。
   - 推理已由具名媒體補上（2:1、主筆 Katsas、Henderson 異議），公司只說「評估所有選項，包括進一步審理」；是否已正式聲請複審、以及國防部十月遷出是否暫緩，仍查無紀錄。細節見 [[topics/anthropic-government-policy]]。
-- 🔎 **查無官方**（標 2026-09-25｜查 White House、AISI、UK review｜複 2026-11-10）｜**白宮對 OpenAI、Anthropic 暫緩向英國測試機構提供新模型的具體審查範圍與期限是否公布**：2026-10-10 查官方新聞室 9–10 月全部貼文，官方未就此發言。
+- 🔎 **查無官方**（標 2026-09-25｜查 White House、AISI、UK review｜複 2026-12-14）｜**白宮對 OpenAI、Anthropic 暫緩向英國測試機構提供新模型的具體審查範圍與期限是否公布**：11-14 重查官方新聞室 至 11-10 貼文，官方未就此發言。
+  - 2026-11-14：白宮網站本輪環境無法連；10-10 初查結論不變。
   - 範圍已部分釐清——要求來自白宮國家網路主任辦公室，Anthropic 已將 Mythos 5.1 的存取限於美國機構；但媒體對是否涵蓋兩家所有新模型說法分歧，**審查期限仍查無**。細節見 [[topics/anthropic-government-policy]]。
-- 🔎 **查無官方**（標 2026-09-20｜查 資料爬取、Mashable｜複 2026-11-10）｜**Reddit 對 Anthropic 資料爬取訴訟的具體裁定理由是否披露**：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言。
+- 🔎 **查無官方**（標 2026-09-20｜查 資料爬取、Mashable｜複 2026-12-14）｜**Reddit 對 Anthropic 資料爬取訴訟的具體裁定理由是否披露**：11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-10 貼文，官方未就此發言。
+  - 2026-11-14：法院網站本輪環境無法連，未讀裁定原文；10-10 初查結論不變。
   - 2026-10-10 另查具名法律媒體，撈到的是**更早的程序**（2026-03 聯邦法官 Trina L. Thompson 認定五項訴因均非著作權等價權利、發回舊金山高等法院 CGC-25-625892；Anthropic 另提 demurrer），**09-20 這次裁定的理由全文仍查無**，被駁回部分與下一步程序亦未見。
-- 🔎 **查無官方**（標 2026-09-20｜查 書面承認、跨實驗室對話｜複 2026-11-10）｜**Anthropic 執行長書面承認反壟斷風險的原始出處是否披露**：2026-10-10 查官方 [新聞室](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言。
+- 🔎 **查無官方**（標 2026-09-20｜查 書面承認、跨實驗室對話｜複 2026-12-14）｜**Anthropic 執行長書面承認反壟斷風險的原始出處是否披露**：11-14 重查官方 [新聞室](https://www.anthropic.com/news) 至 11-10 貼文，官方未就此發言。
   - AP News／The Independent 轉述的「書面承認」原始文件仍未見公開出處。
   - 兩家同日報導執行長曾承認跨實驗室協調步調可能觸及反壟斷問題，發言出處未見報導。
-- ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、collusion、pacing｜複 2026-11-14｜訊 2026-09-22）｜**AI 步調合謀訴訟是否進入官方回應或法院受理階段**：依 2026-09-22 日報（Tom's Hardware）：原告為四名訂閱戶，對 Anthropic、OpenAI、SpaceXAI、Google 提起集體訴訟，
+- ❓ **待查證**（標 2026-09-19｜查 反壟斷合謀、collusion、pacing｜複 2026-12-14｜訊 2026-09-22）｜**AI 步調合謀訴訟是否進入官方回應或法院受理階段**：依 2026-09-22 日報（Tom's Hardware）：原告為四名訂閱戶，對 Anthropic、OpenAI、SpaceXAI、Google 提起集體訴訟，
+  - 2026-11-14 補：媒體稱案號 3:26-cv-10693（北加州聯邦地方法院），求集體認證、禁制令與確認判決，未列損害賠償金額，尚無集體認證或裁定；法院文件站台本輪環境無法連。
   - 指控四家協議放慢 AI 發展速度以減少訂閱者所獲價值、違反反壟斷法；日報稱指控仍待法院審理、細節未定。
   - 媒體稱（Bloomberg Law 等）：09-18 遞狀於北加州聯邦地方法院，案名報為 Buist v. Anthropic PBC，主張違反謝爾曼法第 1 條；尚無集體認證或裁定，四家未見公開回應。法院紀錄本輪未直接查閱。
 - 已查證（2026-10-03，[Anthropic](https://www.anthropic.com/news/accenture-embedded-evaluation)）｜**Accenture「內嵌評估者」10 億美元：官方稱雙方各預期投入至少 10 億美元、為期五年建置此領域能量，並由 Anthropic 出資支應 Accenture 的內嵌評估工作**：

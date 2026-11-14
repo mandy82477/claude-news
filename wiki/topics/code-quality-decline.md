@@ -3,7 +3,7 @@ page: "topics/code-quality-decline"
 kind: "topic"
 status: "ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）"
 domain: "🌐 社群"
-last_updated: "2026-11-09"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-09"
 status_main: "ongoing"
 days_since_news: 5
@@ -15,8 +15,8 @@ inbound_links: 44
 attribution_count: 50
 attribution_last: "2026-11-09"
 top_source: "reddit"
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -49,14 +49,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 三條線現在到哪
 
-> 資料截至 2026-11-08。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
+> 資料截至 2026-11-14（四個 issue 以 `gh api` 實查）。「現在還在嗎」看的是官方說明與 GitHub issue 的開關狀態，不看討論熱度。
 %% 維運備忘：上限 4 列、現有三列固定不移除、入口與退場判準見 .claude/rules/wiki-ingest-community.md「code-quality-decline 的三張表」第 1 條 %%
 
 | 線（最後動態） | 官方說了什麼（日期） | 現在還在嗎 | 你能先做什麼 |
 |---|---|---|---|
 | **2026-03～04 效能退步**（2026-04-24） | 官方〈An update on recent Claude Code quality reports〉2026-04-23：三件各自獨立的工程變更，各有各的修法（見表下） | 已結案（[#41930](https://github.com/anthropics/claude-code/issues/41930) 於 2026-04-24 關閉） | 還停在 2026-04 之前的版本就先升版；三個修法各自的版本見表下 |
 | **token 消耗異常**（2026-11-06） | 無官方專文 | 還在（[#65687](https://github.com/anthropics/claude-code/issues/65687) 仍開啟，最後更新 2026-09-25） | 先量一次自己的用量再判斷，見「怎麼自己量一次」；官方建議見表下；帳單面見 [[entities/pricing]] |
-| **Opus 5 上線後的品質觀感**（2026-11-05） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 10-03 發文者關閉、11-02 重開稱 Opus 5.5 同樣退步，官方無修復說明；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 09-10；140／13 則留言，11-08 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
+| **Opus 5 上線後的品質觀感**（2026-11-05） | Boris Cherny 2026-08-17 在 #77136 回覆：屬模型行為回饋、不是 Claude Code 的 bug，已轉給模型調校；建議先用 custom output styles 壓住語氣 | 還在（[#77136](https://github.com/anthropics/claude-code/issues/77136) 10-03 發文者關閉、11-02 重開稱 Opus 5.5 同樣退步，官方無修復說明，最後更新 2026-11-09；[#83510](https://github.com/anthropics/claude-code/issues/83510) 仍開啟，最後更新 09-10；140／13 則留言，11-08 快照） | 十五則裡十三則是單一使用者觀感（不含已證偽的 effort dial 那一則），不足以據此換模型；逐則見 [[entities/opus-5]]「這些數字是誰量的」 |
 
 **這張表怎麼讀**
 
@@ -189,7 +189,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立。
 
-**同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。單一使用者回報、無官方確認。❓ **待查證**（標 2026-09-24｜查 1wp462o、default effort）｜**Opus 5 預設 effort 是否悄悄上調**（2026-09-24 Reddit 貼文）：已掃日報至 2026-11-13 無後續；官方頁面未查證；相關狀態見 [[entities/claude-code]]（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。
+**同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」的疑慮，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。**官方文件不支持「被調高」（2026-11-14 複核）**：[Opus 5 模型頁](https://platform.claude.com/docs/en/models/opus-5/overview)規格表與 [effort 文件](https://platform.claude.com/docs/en/build-with-claude/effort)都寫 Opus 5 的預設是 `high`；[Claude Code 模型設定頁](https://code.claude.com/docs/en/model-config)的預設規則則只把 Fable 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5 列為 `medium`，Opus 5 歸在「其他模型」即 `high`。官方文件載明的調降發生在**換代**——Opus 5.5 預設改為 `medium`，比 Opus 5 低一級。文件只給現值、沒有版本沿革，所以「某個 CLI 版本前後有沒有動過」官方未載；那則貼文的 33 題基準是作者自建、非第三方驗證（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。要比較不同模型或不同時間的結果，仍建議用 `--effort` 釘住同一檔；官方預設值整理見 [[entities/claude-code-known-issues]]「Opus 5 預設 effort 官方為 `high`」。
 
 ---
 

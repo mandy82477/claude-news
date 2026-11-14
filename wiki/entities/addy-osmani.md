@@ -12,7 +12,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 11
-inbound_links: 2
+inbound_links: 7
 attribution_count: 1
 attribution_last: "2026-11-03"
 top_source: "user-query"
@@ -21,7 +21,7 @@ pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
-signal: "孤島"
+signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # Addy Osmani

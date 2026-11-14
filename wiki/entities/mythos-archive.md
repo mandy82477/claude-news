@@ -3,7 +3,7 @@ page: "entities/mythos-archive"
 kind: "entity"
 status: "resolved（封存頁）"
 domain: "🤖 模型"
-last_updated: "2026-10-25"
+last_updated: "2026-11-14"
 last_news_update: "2026-05-30"
 status_main: "resolved"
 days_since_news: 168
@@ -15,10 +15,10 @@ inbound_links: 0
 attribution_count: 0
 attribution_last: null
 top_source: null
-pending_count: 1
-pending_overdue: 1
+pending_count: 0
+pending_overdue: 0
 pending_next_review: null
-pending_signalled: 1
+pending_signalled: 0
 staleness_exempt: null
 signal: "休眠"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** resolved（封存頁）
 **領域：** 🤖 模型
 **上層：** [[entities/mythos]]
-**最後更新：** 2026-10-25
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-05-30
 
 > 本頁是原始條目的存放處，重點層見 [[entities/mythos]]。
@@ -163,7 +163,7 @@ ENISA（歐盟網路安全局）獲准存取，成首個歐洲政府機構。英
 - **Oxide 加入 Project Glasswing**：Oxide Computer 宣布加入 Project Glasswing，將 Claude Mythos 5 應用於主動識別並修補自家開源程式碼庫（韌體、作業系統、控制平面、網路堆疊）中的潛在漏洞（[Oxide Blog](https://oxide.computer/blog/oxide-anthropic-project-glasswing)，HN score 16）。Oxide 強調其一貫信念「所有關鍵軟體都應可被檢視」，故開源自身全部程式碼；此為 Project Glasswing 又一具名企業夥伴案例，能力面詳見本頁，商業/安全政策面另見相關頁面。
 
 #### 2026-07-25
-❓ **待查證**（標 2026-08-10｜查 Mashable、public release｜複 2026-11-10｜訊 2026-09-02）｜**Mashable：Claude Mythos 或類似模型可能對外公開發布**（僅標題可用；09-01 發布的 Mythos 5.1 仍限信任機構，「公開發布」猜測依日報未成立，Mashable 原文與官方是否另有公開時程未查官方；日報 2026-09-02 僅載 Mythos 5.1 仍限信任機構，2026-10-10 依日報收斂）：
+**媒體稱（Mashable）：Claude Mythos 或類似模型可能對外公開發布**——未成立（僅標題可用；Mashable 原文未能取得）。官方 [Models overview](https://platform.claude.com/docs/en/models/overview) 至 2026-11-14 仍把 Mythos 5.2 列為 limited availability，僅限經 Cyber Verification Program 等驗證計畫的組織；09-01 發布的 Mythos 5.1 同樣限信任機構（日報 2026-09-02 一致）：
 - Google News 轉載 Mashable 標題「Anthropic's Claude Mythos, or a model like it, to get public release」（[Google News/Mashable](https://mashable.com/tech/anthropic-mythos-might-get-public-release)）；RSS 僅提供標題與轉址連結，無正文摘要，無法確認具體時程、版本形態（完整無護欄版 vs 附加護欄新版本）或與現有 Fable 5 的關係
 - 若屬實將是繼 Fable 5（2026-06-09，Mythos 架構附加護欄公開版）後，Mythos 級能力進一步向大眾開放的重大政策轉向；暫無第二來源佐證，待後續報導補充具體內容再擴寫分析
 - **後續（2026-09-01）**：Anthropic 正式發布 Claude Mythos 5.1，但**存取模式維持信任機構限定**（「available only through our trusted access programs」），並未如標題所暗示轉為全面公開發布；版本迭代屬實，「公開發布」的猜測則未成立。詳見上方「現況」（[Anthropic Blog](https://www.anthropic.com/claude-fable-and-mythos-5-1)，2026-09-01）

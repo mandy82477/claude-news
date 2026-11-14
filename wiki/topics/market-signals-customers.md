@@ -3,7 +3,7 @@ page: "topics/market-signals-customers"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-08-26
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：定價改版、企業採用等 16 條線 25 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -137,11 +137,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **一眼**：⚖️ 兩面（敘事型，未見收購金額，動到資本配置方向與治理風險）｜誰有感：無（未上市；Mithril Medicine 亦未上市）｜硬度：跨媒體與社群多來源（R&D World、Endpoints News 同日報導）｜線：生技策略併購 ▸ 開線
 
-**為什麼這樣判**：新資訊是 R&D World 與 Endpoints News 同日報導 Anthropic 已收購一人生技新創 Mithril Medicine，創辦人為使用假名的匿名 Twitter 用戶；同日官方部落格宣布與六家藥廠的深度研究夥伴關係並稱「已展開自己的藥物發現工作」，但未點名 Mithril，本則是獨立於官方公告之外、經媒體查證的一筆已完成收購。判兩面是因為收購代表 Anthropic 正式將資本投入自有藥物發現能力，是官方敘事的具體落地；但標的創辦人身分刻意匿名化，收購前的實質審查與治理透明度引發疑慮，收購價與條款均未揭露。事實見 [[topics/anthropic-business]]。
+**為什麼這樣判**：新資訊是 R&D World 與 Endpoints News 同日報導 Anthropic 已收購一人生技新創 Mithril Medicine，創辦人被媒體描述為使用假名的匿名 Twitter 用戶（11-14 官方文章已具名 Cody Tranbarger）；同日官方部落格宣布與六家藥廠的深度研究夥伴關係並稱「已展開自己的藥物發現工作」，但未點名 Mithril，本則是獨立於官方公告之外、經媒體查證的一筆已完成收購。判兩面是因為收購代表 Anthropic 正式將資本投入自有藥物發現能力，是官方敘事的具體落地；但標的創辦人身分刻意匿名化，收購前的實質審查與治理透明度引發疑慮，收購價與條款均未揭露。事實見 [[topics/anthropic-business]]。
 
 **下一個催化劑**：收購金額與條款是否經官方揭露；創辦人真實身分是否公開。
 
-**你的選項**：(a) 什麼都不做，收購金額未揭露，無法估算對現金位置的影響；(b) 想追蹤 Anthropic 生技布局的讀者，把「Mithril Medicine」「匿名創辦人」這組關鍵詞記下來，留意創辦人身分是否曝光。
+**你的選項**：(a) 什麼都不做，收購金額未揭露，無法估算對現金位置的影響；(b) 想追蹤 Anthropic 生技布局的讀者，把「Mithril Medicine」「匿名創辦人」這組關鍵詞記下來，留意收購價與條款是否經申報揭露。
 
 **一課｜併購標的的治理風險**
 - 概念：收購一家創辦人身分不透明的新創，風險不只在價格，也在對方的實質審查與治理紀錄能否查核。
@@ -530,10 +530,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-11-13｜查 自建 MCP、agentic AI｜複 2026-11-27）｜**Schwab 自建 MCP 伺服器後，獨家合作條款是否已變動、是否接入其他 LLM 供應商**：RIABiz 報導僅標題可用，具體時程、範圍與獨家條款現況均未見報導。
 - ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、快取讀取｜複 2026-11-23）｜**Fable 5.2 快取讀取倍率降至 0.025 倍對重度快取客戶帳單的實際影響是否有數字佐證**：官方文件僅載新倍率，財報或 S-1 是否拆分 Fable 系列營收與毛利率變化均未見報導。
 - ❓ **待查證**（標 2026-11-09｜查 IBM Concert、Cisco AI Defense｜複 2026-11-23）｜**IBM Concert、Cisco AI Defense 導入 Mythos 5.2 是否正式上線並公布時程或合約金額**：IBM、Cisco Blogs 報導僅標題可用，上線時程、整合深度與是否為付費採購均未見報導。
-- ❓ **待查證**（標 2026-10-29｜查 4,800、Financial Advisors｜複 2026-11-12）｜**Anthropic 向 Claude for Financial Advisors 用戶提供 4,800 美元額度抵用的適用範圍與期限是否經官方說明**：Citywire 報導僅標題可用，是否限特定通路、補貼期限與是否與 Schwab 門檻收緊同屬一組措施均未見報導。
-- ❓ **待查證**（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot｜複 2026-11-12）｜**GitHub Copilot Fusion「以一半 API 成本勝過 Claude Code」的基準測試方法論是否公開或遭社群複現反駁**：The New Stack 報導僅標題可用，測試範圍與第三方獨立複現均未見報導。
-- ❓ **待查證**（標 2026-10-28｜查 Mithril Medicine、匿名創辦人｜複 2026-11-11）｜**Anthropic 收購 Mithril Medicine 的金額與條款是否經官方揭露，創辦人真實身分是否公開**：R&D World、Endpoints News 報導僅標題可用，收購價、條款與創辦人身分均未見揭露。
-- ❓ **待查證**（標 2026-10-28｜查 inference_geo、Managed Agents｜複 2026-11-11）｜**Managed Agents 毫秒計費、Haiku 5.5 分級計價與美國資料落地加成的具體費率數字是否公布**：官方文件新增三項計費機制，具體費率數字均未見載明，無法判斷對毛利率的淨效果。
+- 🔎 **查無官方**（標 2026-10-29｜查 4,800、Financial Advisors｜複 2026-12-14）｜**Anthropic 向 Claude for Financial Advisors 用戶提供 4,800 美元額度抵用的適用範圍與期限是否經官方說明**：官方新聞室至 11-10 未載，前提需更正。
+  - 媒體稱（[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)）：4,800 美元額度由 Schwab 提供、非 Anthropic，等於 20 席企業方案一年最低消費，11 月 30 日前簽約者適用，token 用量費另計；是否延長未見報導。
+- 🔎 **查無官方**（標 2026-10-29｜查 Copilot Fusion、GitHub Copilot｜複 2026-12-14）｜**GitHub Copilot Fusion「以一半 API 成本勝過 Claude Code」的基準測試方法論是否公開或遭社群複現反駁**：官方新聞室至 11-10 無回應，GitHub 與評測方官網本輪環境無法連。
+  - 媒體稱（The New Stack、VentureBeat）：數字源自 Artificial Analysis 的 Coding Agent Index（獨立評測，方法由該站公開）：Fusion Max 60 分、每任務約 $5.59，對照 Claude Code＋Opus 5.5 Max 的 62 分、約 $11.42。
+  - 「一半」是 API 每任務成本、非 Copilot 訂閱價；約 40% 提速為 GitHub 自家數字；未見獨立複現或反駁。
+- 🔎 **查無官方**（標 2026-10-28｜查 Mithril Medicine、匿名創辦人｜複 2026-12-14）｜**Anthropic 收購 Mithril Medicine 的金額與條款是否經官方揭露，創辦人真實身分是否公開**：官方 10-27 研究文章未載收購價與條款。
+  - 2026-11-14 讀 [官方文章](https://www.anthropic.com/research/early-progress-drug-development)：載明已收購 Mithril（一人公司，研發兩種罕見肌肉萎縮症療法），未載日期、價格、條款。
+  - 創辦人已具名為 Cody Tranbarger（用 Claude 整理合約、後勤與 11 間外部實驗室實驗，現於 Anthropic 繼續研究），「匿名創辦人」前提不成立。
+- 已查證（2026-11-14，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)、[Haiku 5.5 公告](https://www.anthropic.com/news/claude-haiku-5-5)）｜**Managed Agents 毫秒計費、Haiku 5.5 分級計價與美國資料落地加成的費率**：官方文件均已載明費率，淨毛利效果官方未說明。
+  - Managed Agents 另收 session 運行時間 $0.08／session-hour，只在 running 狀態計、精度到毫秒（idle 不計，取代 code execution 容器小時計費）；token 照模型牌價。
+  - inference_geo 設 "us" 套 1.1 倍乘數（Managed Agents 釘 us 時 token 同樣 1.1 倍）；Haiku 5.5 提示 100K token 內 $0.10／$0.50、超過 $0.50／$2.50（每百萬 token 輸入／輸出），官方稱比 Haiku 4.5 平均便宜約 75%。
 - 🔎 **查無官方**（標 2026-10-24｜查 Schwab、小型顧問｜複 2026-11-22）｜**Schwab 追加 20 席門檻的理由與生效時間是否經官方說明**：RIABiz 報導僅標題可用，門檻生效時間、是否分階段放寬、Orion 是否跟進均未見報導。
   - 2026-11-08 查證（[InvestmentNews](https://www.investmentnews.com/transformation/schwab-offers-4800-credit-to-cover-claude-enterprise-seat-cost-for-rias/268779)）：**更正前提——20 席是 Anthropic 企業方案的最低席位，不是 Schwab 追加的門檻**。
     - Schwab 的角色是提供 4,800 美元額度（等於 20 席一年 $20／席／月），僅限新簽企業方案者，11 月 30 日止（原文 available through Nov. 30）；token 用量費另計。
@@ -559,15 +566,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 已查證（2026-10-24，[SemiAnalysis X 貼文](https://x.com/SemiAnalysis_/status/2107204965710053510)）｜**SemiAnalysis「5 倍」的口徑與方法**：原題「Anthropic Subscriptions Offer 5x+ More Value Than OpenAI」，各家訂閱方案跑額度測試至週上限並換算 API 牌價等值，稱 Anthropic $200 方案約為 OpenAI 同價位 5 倍。
   - 口徑是「用戶得到的價值」，不是財報補貼金額。
   - 媒體稱（AI Weekly、Dataconomy）：SemiAnalysis 估計訂閱用掉約 42% 推論算力、僅貢獻約 10% 營收，為假設推算。完整報告部分付費牆，方案別美元拆分本輪未取得。
-- 🔎 **查無官方**（標 2026-10-01｜查 Barclays、採用率｜複 2026-11-14）｜**Barclays 2026 年底開發者採用率 50% 目標是否達成**：2026-10-17 查 [Anthropic 官方稿](https://anthropic.com/news/barclays-scales-claude)（10-01），50% 是預期目標，不是已達成數字。
+- 🔎 **查無官方**（標 2026-10-01｜查 Barclays、採用率｜複 2027-01-15）｜**Barclays 2026 年底開發者採用率 50% 目標是否達成**：2026-11-14 重查 [Anthropic 官方稿](https://anthropic.com/news/barclays-scales-claude)（10-01），50% 是預期目標，不是已達成數字。
+  - 年底前不會有可查的達成數字，故複查日設在 2027-01-15；2026-11-14 重讀官方稿原文無變。
   - 官方原文：「expects Claude Code adoption to reach 50% of its developer population by the end of 2026」。合約金額與席位數官方稿無此項；達成與否要等年底後才有可查的數字。
 - 已查證（2026-10-17，[Claude 定價文件](https://platform.claude.com/docs/en/about-claude/pricing)）｜**Sonnet 5.5 不依訂閱方案分層，「$1–$2 input／$5–$10 output」是標準價與 Batch 價兩檔**：官方定價文件列標準價 $2 input／$10 output 每百萬 token，Batch API 半價 $1／$5；[claude.com/pricing](https://claude.com/pricing) 同列 $2／$10，未依方案分層。
   - 官方文件中依提示長度分層的是 Haiku 5.5（100K token 內 $0.10／$0.50，超過 $0.50／$2.50），不是 Sonnet 5.5。原先「方案對照」的前提不成立，本筆結案。
 - 已查證（2026-10-17，[API 發行說明](https://platform.claude.com/docs/en/release-notes/overview)、[拒答與備援文件](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback)）｜**拒答計費改版：官方確認五類拒答分類，其中三類在輸出前拒答也計費**：2026-09-24 起，`stop_details.category` 為 bio、frontier_llm、reasoning_extraction 的輸出前拒答，照所跑模型的一般費率計費。
   - 五類為 cyber、bio、frontier_llm、reasoning_extraction、general_harms；cyber、general_harms 與 category 為 null 的輸出前拒答不計費，但仍計入速率限制。
   - 串流中途拒答本就計費；06-02 起「輸出前拒答一律不計費」的規則因此收窄。官方稱計費類別會依誤判率量測結果調整。
-- 🔎 **查無官方**（標 2026-09-23｜查 GPT-6 Sol、毛利率｜複 2026-11-10）｜**Opus 5.5 定價下修對 Anthropic 整體毛利率的實際影響是否揭露**：2026-10-10 查官方 [anthropic.com/news](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言；
-  - 官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 只載牌價（Opus 5.5 $4／$20、快取讀取 5%），無任何毛利率或成本結構揭露，S-1 公開版亦尚未出現：官方稱運算成本降 40%、牌價僅降 20%，暗示單位毛利率上升，但下一份財報或 S-1 尚未出現，OpenAI GPT-6 Sol／Luna 正式定價亦未見公告。
+- ❓ **待查證**（標 2026-09-23｜查 GPT-6 Sol、毛利率｜複 2026-11-21）｜**Opus 5.5 定價下修對 Anthropic 整體毛利率的實際影響是否揭露**：11-14 重查官方 [anthropic.com/news](https://www.anthropic.com/news) 至 11-10 貼文，只載牌價、未載毛利率；
+  - 2026-11-14：公開版 S-1 已於 10-26 提交、官方 IPO 頁 11-12 公布 Q3 財務，本輪環境無法連 sec.gov 與該頁，未讀毛利率相關數字，不宣稱查無，維持待查證。
+  - 官方 [models overview](https://platform.claude.com/docs/en/about-claude/models/overview) 只載牌價（Opus 5.5 $4／$20、快取讀取 5%），無任何毛利率或成本結構揭露，官方稱運算成本降 40%、牌價僅降 20%，暗示單位毛利率上升，但下一份財報或 S-1 尚未出現，OpenAI GPT-6 Sol／Luna 正式定價亦未見公告。
 - 🔎 **查無官方**（標 2026-09-17｜查 JPMorgan、摩根大通、支出上限｜複 2026-11-30）｜**JPMorgan 合約規模／席位數與更多受監管金融機構跟進，官方站未見說明**：查證 2026-10-31，Anthropic 官方站（anthropic.com、claude.com）仍未見 JPMorgan 合約規模或席位數；
   - 媒體僅有 JPMorgan 內部平台使用量與 2026-06 FT 報導其限制香港員工使用 Claude（原因與授權條款措辭有關，雙方未說明）。
   - 媒體稱（Business Insider，經 Newsquawk 等轉述）部分工程師設每月 2,000 美元 Claude Code 支出上限、約 8,000 人持授權，均為媒體數字，非官方。

@@ -3,7 +3,7 @@ page: "topics/community-tech-patterns-archive"
 kind: "topic"
 status: "resolved（封存頁）"
 domain: "🌐 社群"
-last_updated: "2026-11-01"
+last_updated: "2026-11-14"
 last_news_update: "2026-06-30"
 status_main: "resolved"
 days_since_news: 137
@@ -11,7 +11,7 @@ parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
 days_since_news_subtree: 137
-inbound_links: 10
+inbound_links: 12
 attribution_count: 0
 attribution_last: null
 top_source: null

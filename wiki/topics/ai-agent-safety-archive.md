@@ -4,7 +4,7 @@ kind: "topic"
 type: "event"
 status: "resolved（封存頁）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-30"
+last_updated: "2026-11-14"
 last_news_update: "2026-06-27"
 status_main: "resolved"
 days_since_news: 140
@@ -20,8 +20,8 @@ pending_count: 0
 pending_overdue: 0
 pending_next_review: null
 pending_signalled: 0
-staleness_exempt: null
-signal: "⚠️ 高引用但停滯"
+staleness_exempt: "本頁是封存層，收的是母頁清掉的原始條目，**依設計不吃新聞**——「最後新聞更新」停在 2026-06-27 是正確狀態，不是漏更新；新事件一律進母頁 [[topics/ai-agent-safety]] 與三個子頁。"
+signal: "🗓️ 非新聞驅動"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # AI Agent 安全與可靠性 — 時序存檔
@@ -31,10 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-04-27
-**最後更新：** 2026-10-30
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-06-27
 
 > 本頁為 [[topics/ai-agent-safety]] 的原始條目封存，重點層見主頁。收：時序（2026-05-21 以前，及 2026-09-04 遷入的 2026-06）＋技術彙整（2026-05-18 以前，2026-07-01 遷入；2026-05-25～05-09 五條 2026-09-04 遷入）。
+
+**新鮮度豁免：** 本頁是封存層，收的是母頁清掉的原始條目，**依設計不吃新聞**——「最後新聞更新」停在 2026-06-27 是正確狀態，不是漏更新；新事件一律進母頁 [[topics/ai-agent-safety]] 與三個子頁。
 
 ---
 

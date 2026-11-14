@@ -12,13 +12,13 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 6
-inbound_links: 11
+inbound_links: 6
 attribution_count: 1
 attribution_last: "2026-11-08"
 top_source: "google-news"
-pending_count: 3
+pending_count: 0
 pending_overdue: 0
-pending_next_review: "2026-11-22"
+pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -37,8 +37,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-08
 
-> ❓ **待查證**（標 2026-11-08｜查 skills get lost、take responsibility）｜**AI 程式碼責任論述候選發言人**：TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選。已掃日報至 2026-11-13 無後續；官方頁面未查證。
-
 ---
 
 ## 現況
@@ -49,9 +47,8 @@ Fiona Fung 是 Anthropic 工程副總裁（VP of Engineering）。
 
 > **歸屬釐清：** 此「工程師更孤獨」論述初期報導僅稱「engineering leader」，一度在 [[entities/boris-cherny]] 與 [[entities/cat-wu]] 頁面標記為身分未經確認；具名 Business Insider 來源確認發言人為 Fiona Fung，兩頁標記已解除。
 
-截至 2026-11-08，TechRadar 報導一位匿名「Anthropic 資深工程師」主張 AI 寫程式仍須人類負責、過度依賴 agent 會流失部分技能；標題未具名指向特定人，與 [[entities/boris-cherny]] 同列候選。
+截至 2026-11-14，原列於本頁的 TechRadar「AI 寫程式仍須人類負責、技能不練會流失」論述候選已撤：經搜尋摘要確認發言人為 Anthropic 工程師 [[entities/addy-osmani]]，與本頁人物無關（techradar.com 原文本環境無法連線，未能開啟）。
 
-❓ **待查證**（標 2026-11-08｜查 skills get lost、take responsibility）｜**AI 程式碼責任論述候選發言人**（2026-11-07 報導）：TechRadar 報導稱一位「Leading Anthropic dev」主張 AI 寫程式仍須人類負責、過度依賴流失技能；標題未具名指向特定人，互動 0，僅標題可用，尚待第二來源確認是否為本人或 [[entities/boris-cherny]]。
 
 ---
 
@@ -83,5 +80,5 @@ Fiona Fung 是 Anthropic 工程副總裁（VP of Engineering）。
 
 ## 歷史記錄
 
-- 2026-11-08：❓ **待查證**（標 2026-11-08｜查 skills get lost）｜**AI 程式碼責任論述候選發言人**：TechRadar 稱「Leading Anthropic dev」主張須人類負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選（TechRadar，2026-11-07）
+- 2026-11-08：TechRadar 報導 Anthropic 工程師主張 AI 寫程式仍須人類負責、過度依賴流失技能；2026-11-14 經搜尋摘要確認發言人為 [[entities/addy-osmani]]，與本頁人物無關（techradar.com 原文本環境無法連線；TechRadar，2026-11-07）
 - 2026-06-23：Business Insider 採訪報導：Claude Code 讓 coding 不再是瓶頸，但工程師開始感到孤獨

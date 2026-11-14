@@ -3,7 +3,7 @@ page: "topics/market-signals-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-11"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-11"
 status_main: "ongoing"
 days_since_news: 3
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[topics/market-signals]]
 **開始日期：** 2026-09-16
-**最後更新：** 2026-11-11
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-11
 %% 2026-11-02 第 22 波自 [[topics/market-signals]] 拆出：晶片商循環融資、Nscale 等 9 條線 14 則，連同各自的回顧結算列與追蹤中的里程碑原文照搬，歸群照線別（同一條線的後續判讀寫進同一頁）。 %%
 
@@ -50,7 +50,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **事實與數字**：住 [[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]]、[[topics/anthropic-business-risks]]，本頁只寫判讀。
 - **錢從三條路來**：晶片商與銀行安排的融資（Broadcom 630 億、Blackstone 雙位數殖利率私募信貸）、算力夥伴合約（Nscale、Akamai、SpaceX、TeraWulf）、S-1 揭露逾 5,000 億的雲端承諾。
-- **多數只有標題**：15 則裡多數硬度是單一標題或跨媒體轉述，方向多判兩面或未定；10-29 銀行撤回德州資料中心債券是第一個實際受挫的訊號；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
+- **多數只有標題**：15 則裡多數硬度是單一標題或跨媒體轉述，方向多判兩面或未定；10-29 銀行延後出售德州資料中心債券（原標題讀為撤回，11-14 查證更正）是第一個實際受挫的訊號；評等面（KBRA 非投資級最高一檔、Blackstone 預期上市後 BB 級）在 [[topics/market-signals-ipo]]。
 - **下一個會讓答案變清楚的事**：630 億融資定價發行、Nvidia 信用支持的條件、TeraWulf 擔保金額揭露。
 - 一眼、結算與里程碑的記號怎麼讀見 [[topics/market-signals#近期判讀]]；你買得到的標的見 [[topics/market-signals#買得到的標的]]。
 
@@ -379,11 +379,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ❓ **待查證**（標 2026-11-08｜查 gas-fired、天然氣發電｜複 2026-11-22）｜**燃氣發電採購合約的發電業者身分、合約期限與是否計入下一版 S-1/A 承諾總額是否經官方披露**：FT 報導僅標題可用，Reuters／Bloomberg 同日轉述，發電業者身分、機組上線時程與合約期限均未見報導。
 - ❓ **待查證**（標 2026-11-04｜查 TeraWulf、信用擔保｜複 2026-11-18｜訊 2026-11-05）｜**TeraWulf 信用擔保金額與條件是否經官方（Google 或 TeraWulf）證實披露**：Reuters、Unite.AI 報導僅標題可用，擔保金額、額度上限與生效條件均未見報導；11-05 CoinDesk 補充違約情境，仍未附觸發條件。
 - ❓ **待查證**（標 2026-11-02｜查 8,950億美元、租賃協議｜複 2026-11-16）｜**8,950 億美元採購承諾與租賃協議總額，與先前逾 5000 億美元／5,170 億美元口徑的涵蓋範圍差異是否經官方拆解**：修訂版 S-1 僅給出新總額數字，新舊口徑是否重疊、各筆履約時程與付款結構均未見報導。
-- ❓ **待查證**（標 2026-10-29｜查 Texas、bond｜複 2026-11-12）｜**銀行撤回德州資料中心債券發行案的原因與發行人身分是否經具名報導披露**：Bloomberg.com 報導僅標題可用，發行人、金額規模與撤回具體原因均未見報導。
-- ❓ **待查證**（標 2026-10-30｜查 Nvidia、信用支持｜複 2026-11-13）｜**Nvidia 信用支持 Nscale-Anthropic 協議的對象、金額與條件是否經官方證實**：Reuters 引《The Information》僅標題可用，支應哪一筆合約、金額與條件均未見報導。
-- ❓ **待查證**（標 2026-10-29｜查 Zero-Rust、CPU 消耗｜複 2026-11-12）｜**Anthropic「Zero-Rust」團隊重建核心 API 降低 CPU 消耗 40% 的效果是否反映進財報毛利率數字**：BigGo Finance 報導僅標題可用，是否已入帳與適用範圍均未見報導。
-- ❓ **待查證**（標 2026-10-27｜查 630 億美元、Blackstone｜複 2026-11-10）｜**630 億美元融資是否完成定價發行，Blackstone 具體利率與規模拆分是否披露**：路透社報導僅標題可用，定價、承銷團名單與 Blackstone 拆分比例均未見報導。
-- ❓ **待查證**（標 2026-10-26｜查 Broadcom、履約時程｜複 2026-11-09）｜**S-1 揭露雲端供應鏈承諾總額逾 5000 億美元，各筆履約時程與付款結構是否披露**：S-1 首次揭露 Google、AWS、Broadcom、SpaceX 四家合計承諾金額，是否分年履約、信評機構是否依此更新評等均未見報導。
+- 🔎 **查無官方**（標 2026-10-29｜查 Texas、bond｜複 2026-12-14）｜**銀行撤回德州資料中心債券發行案的原因與發行人身分是否經具名報導披露**：官方新聞室至 11-10 無貼文，Anthropic 與開發商 Nexus 均拒評。
+  - 具名報導已有細節（媒體稱：Bloomberg 10-28、CNBC）：摩根士丹利領頭的銀行團**延後**出售一筆約 $150 億、Anthropic 承租的德州 Hubbard 資料中心貸款的部分債券，歸因德州州長 Abbott 09-21 指令暫停資料中心相關許可。
+  - 報導為延後、非取消，本頁舊稱「撤回」應讀作延後；Nexus Data Centers 為開發商，Google 為租約與電力義務提供擔保並取得約 20% 專案股權；各報發行規模不一，不採二手轉述數字。
+- 🔎 **查無官方**（標 2026-10-30｜查 Nvidia、信用支持｜複 2026-12-14）｜**Nvidia 信用支持 Nscale-Anthropic 協議的對象、金額與條件是否經官方證實**：官方新聞室至 11-10 無貼文，Nvidia、Nscale 官網本輪環境無法連。
+  - 媒體稱（《The Information》10-29，Reuters、Bloomberg 跟進）：Nvidia 洽談為 Nscale 西維吉尼亞 460MW 園區（Anthropic 擬使用）的債務提供數十億美元信用保證，尚未簽署；金額與條款未載。
+- ❓ **待查證**（標 2026-10-29｜查 Zero-Rust、CPU 消耗｜複 2026-11-21）｜**Anthropic「Zero-Rust」團隊重建核心 API 降低 CPU 消耗 40% 的效果是否反映進財報毛利率數字**：官方新聞室至 11-10 無相關公告。
+  - 媒體稱 CPU 降 40～50% 源自公司人員的 Podcast 訪談（10 月下旬）、非已發表量測，各報對是否為生產流量量測口徑不一。
+  - 是否反映進毛利率要看 S-1 與財報，本輪環境無法連 sec.gov，未讀原文，故維持待查證。
+- ❓ **待查證**（標 2026-10-27｜查 630 億美元、Blackstone｜複 2026-11-28）｜**630 億美元融資是否完成定價發行，Blackstone 具體利率與規模拆分是否披露**：路透社報導僅標題可用，補查見下方。
+  - 2026-11-14 WebSearch 補：媒體稱（Reuters 10-26）Bank of America、Citi、Morgan Stanley 安排第一順位債務（約 $435 億、約 69%，官方稿未拆分），Blackstone 為第二順位承諾部分唯一提供者，由新設 SPV 購晶片租給 Anthropic。
+  - 定價發行、利率與承銷團名單仍未見報導。
+- ❓ **待查證**（標 2026-10-26｜查 Broadcom、履約時程｜複 2026-11-21）｜**S-1 揭露雲端供應鏈承諾總額逾 5000 億美元，各筆履約時程與付款結構是否披露**：S-1 首次揭露 Google、AWS、Broadcom、SpaceX 四家合計承諾金額，是否分年履約、信評機構是否依此更新評等均未見報導。
+  - 2026-11-14 本輪環境無法連 sec.gov，未讀 S-1 原文，不宣稱查過官方；履約時程與評等調整仍未見報導。
 - 🔎 **查無官方**（標 2026-10-20｜查 Nscale、450億美元｜複 2026-11-22）｜**Anthropic 與 Nscale 第二筆約 450 億美元算力合作是否正式簽署**：CNBC 披露洽談中，Reuters、Bloomberg 同日查證跟進，具體容量、條款與簽署時程均未披露，與既有 1,030 億美元合約的拆分關係亦未說明。
   - 2026-11-08 查證：官方未公布——[anthropic.com/news](https://www.anthropic.com/news) 10-15～11-08 無 Nscale 公告；媒體稱（[TNW](https://thenextweb.com/news/nscale-and-anthropic-reportedly-in-talks-over-second-45bn-deal) 轉述 Bloomberg）第二筆約 450 億美元對應 Nscale 西維吉尼亞 Monarch 園區第二棟 460MW，仍為洽談，未見簽署報導；與 1,030 億總額的拆分仍未說明。
 - 🔎 **查無官方**（標 2026-10-17｜查 Blackstone、殖利率｜複 2026-11-30）｜**Anthropic 向 Blackstone 開出的晶片融資條件僅有媒體數字，無官方確認**：
@@ -393,13 +401,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - Anthropic 官方 [Higher usage limits and a SpaceX compute deal](https://www.anthropic.com/news/higher-limits-spacex)（2026-05-06）載使用 SpaceX Colossus 1 全部容量（逾 300MW、逾 22 萬顆 NVIDIA GPU），[Series H 公告](https://www.anthropic.com/news/series-h)列入 Colossus 1／2 的 GPU 容量協議。
     - 媒體稱（Business Insider 引 Anthropic 發言人、SpaceX IPO 文件）每月約 12.5 億美元、至 2029-05，任一方可提前 90 天終止。
     - WSJ 稱 Tom Brown 運用共和黨人脈促成，為 WSJ 單一說法，未獲第二家佐證。
-- ❓ **待查證**（標 2026-10-02｜查 Broadcom、debt financing、600億｜複 2026-11-14｜訊 2026-10-06）｜**Broadcom 600 億美元融資是否完成定價發行**：依 2026-10-06 日報（FT）：銀行已正式 launch（辛迪加階段）；10-07 至 10-16 日報無定價或發行後續，承銷團、利率與資金用途仍未見。本輪未查官方。
-- ❓ **待查證**（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資｜複 2026-11-14｜訊 2026-10-11）｜**Broadcom 貸款 Anthropic 420 億美元是否正式簽署**：Reuters 獨家取得文件稱「考慮」貸款；依 2026-10-11 日報，Barchart 把該案框成「420 億美元貸款」，屬單一媒體解讀。
+- ❓ **待查證**（標 2026-10-02｜查 Broadcom、debt financing、600億｜複 2026-11-28｜訊 2026-10-06）｜**Broadcom 600 億美元融資是否完成定價發行**：依 2026-10-06 日報（FT）：銀行已正式 launch（辛迪加階段）；10-07 至 10-25 日報無定價後續，承銷團與利率仍未見。本輪未查官方。
+  - 2026-11-14：10-26／27 日報（Reuters）續報銀行與 Blackstone 安排 630 億美元融資供 Anthropic 向 Broadcom 採購晶片，事實層記為較 600 億的更新（見 [[topics/anthropic-partnerships-compute]]），仍未見定價發行。
+- ❓ **待查證**（標 2026-10-01｜查 Broadcom、晶片租賃、循環投資｜複 2026-11-28｜訊 2026-10-11）｜**Broadcom 貸款 Anthropic 420 億美元是否正式簽署**：Reuters 獨家取得文件稱「考慮」貸款；依 2026-10-11 日報，Barchart 把該案框成「420 億美元貸款」，屬單一媒體解讀。
+  - 2026-11-14 WebSearch 補：媒體稱（依文件的報導）Broadcom 同意提供最高 $420 億貸款；10-26 起銀行與 Blackstone 的 630 億美元融資改由新設 SPV 購買 Broadcom 晶片與網通設備再租給 Anthropic。
   - 簽署、條款與利率仍未見報導，且口徑與 10-02 的 600 億融資不同；本輪未查官方。
-- 🔎 **查無官方**（標 2026-09-25｜查 Akamai、10-Q、營收指引｜複 2026-11-10）｜**Akamai 是否在下一份財報／10-Q 揭露此合約的營收認列時程或反映進全年指引**：2026-10-10 查官方 [新聞室](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言。
+- ❓ **待查證**（標 2026-09-25｜查 Akamai、10-Q、營收指引｜複 2026-11-21）｜**Akamai 是否在下一份財報／10-Q 揭露此合約的營收認列時程或反映進全年指引**：官方 [新聞室](https://www.anthropic.com/news) 至 11-10 貼文未就此發言（11-14 重查）；Akamai 官網與 sec.gov 本輪環境無法連，不宣稱查無。
   - Akamai 自身的 10-Q 屬對方揭露義務，非 Anthropic 官方可載；下次財報估 2026-11-05。
   - Bloomberg／WSJ／IBD 同日報導合約簽署與認股權證條款，認列時程與認股權證是否已行使均未見報導。
-- 🔎 **查無官方**（標 2026-09-21｜查 Nscale、Microsoft、資料中心｜複 2026-11-10）｜**Anthropic 與 Microsoft 在 Nscale 1,030 億美元合約中的個別拆分金額是否披露**：2026-10-10 查官方 [新聞室](https://www.anthropic.com/news) 9–10 月全部貼文，官方未就此發言。
+- 🔎 **查無官方**（標 2026-09-21｜查 Nscale、Microsoft、資料中心｜複 2026-12-14）｜**Anthropic 與 Microsoft 在 Nscale 1,030 億美元合約中的個別拆分金額是否披露**：11-14 重查官方 [新聞室](https://www.anthropic.com/news) 至 11-10 貼文，官方未就此發言。
+  - 2026-11-14：Nscale、Microsoft 官方揭露本輪環境無法連；媒體稱（Nscale IPO 文件，經 FT 等）Anthropic 對首棟建物的合約約 $446 億，與 Microsoft 的拆分仍未載。
   - 拆分金額與 450 億美元承諾是否變動均無官方數字。
   - Bloomberg 首度揭露合約總值與客戶排名，具體拆分與承諾變動均未見報導。
 - 🔎 **查無官方**（標 2026-09-16｜查 澳洲資料中心、Macquarie｜複 2026-11-30）｜**澳洲資料中心協議：Anthropic 官方站未載，媒體與州政府已有細節**：

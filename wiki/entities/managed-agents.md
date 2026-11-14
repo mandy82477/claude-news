@@ -17,7 +17,7 @@ inbound_links: 40
 attribution_count: 13
 attribution_last: "2026-11-12"
 top_source: "github"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-11-26"
 pending_signalled: 0

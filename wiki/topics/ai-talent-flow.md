@@ -3,7 +3,7 @@ page: "topics/ai-talent-flow"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-08"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-05"
 status_main: "ongoing"
 days_since_news: 9
@@ -11,13 +11,13 @@ parent: null
 children: "['topics/ai-talent-flow-archive']"
 page_role: "hub"
 days_since_news_subtree: 9
-inbound_links: 22
+inbound_links: 21
 attribution_count: 29
 attribution_last: "2026-10-26"
 top_source: "topic-watch"
 pending_count: 2
-pending_overdue: 2
-pending_next_review: null
+pending_overdue: 0
+pending_next_review: "2026-12-14"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-11-08
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-05
 **蒐集邊界：** 以與 Anthropic 相關的人才流動為主，另針對本主題定向補抓（每日至多 3 則）；其他實驗室之間、與 Anthropic 無關的異動仍可能延遲或缺漏，重大者由人工查證補記。
 
@@ -192,12 +192,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 相關實體
 
-- [[entities/amir-salek]] — Google 自研晶片計畫創辦人；🔎 **查無官方**（標 2026-08-21｜查 [[entities/amir-salek]]｜複 2026-11-14）：2026-10-17 查 anthropic.com／claude.com 無官方公告；09-12 日報未見提及，原「訊」為誤命中已撤銷。
+- [[entities/amir-salek]] — Google 自研晶片計畫創辦人；🔎 **查無官方**（標 2026-08-21｜查 [[entities/amir-salek]]｜複 2026-12-14）：2026-11-14 再查 anthropic.com 新聞頁與站內搜尋，仍無官方公告；09-12 日報未見提及，原「訊」為誤命中已撤銷。
   - Bloomberg 08-21 獨家（[fourweekmba.com](https://fourweekmba.com/ai-anthropic-amir-salek-tpu-chip-compute-strategy/) 轉述）：加入 compute 團隊、向 Bradbury 匯報；到任日期仍未見揭露。
 - [[entities/john-jumper]] — 諾貝爾獎得主，DeepMind → Anthropic（6/21 Reuters 確認）
 - [[entities/andrej-karpathy]] — 已查證（2026-08-13）：OpenAI 共同創辦人 Andrej Karpathy 已於 **2026-05-19** 正式加入 Anthropic，本人於 X 公開宣布，主導以 Claude 加速 pre-training 研究的新團隊，多家媒體同步確認（[TechCrunch](https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/)；[CNBC](https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html)；[Axios](https://www.axios.com/2026/05/19/anthropic-openai-karpathy-andrej-claude)）
-- [[entities/teresa-carlson]] — 前 Microsoft/AWS 高管，2026-07-07 加入 Anthropic 主導公部門業務；🔎 **查無官方**（標 2026-08-10｜查 [[entities/teresa-carlson]]｜複 2026-11-14）｜**是否屬與研究員流動潮同期的整體人才佈局**
-  - 2026-10-17 查 anthropic.com 未見任命公告；FedScoop、Nextgov（07 月）報導其出任首位全球公部門負責人。
+- [[entities/teresa-carlson]] — 前 Microsoft/AWS 高管，2026-07-07 加入 Anthropic 主導公部門業務；🔎 **查無官方**（標 2026-08-10｜查 [[entities/teresa-carlson]]｜複 2026-12-14）｜**是否屬與研究員流動潮同期的整體人才佈局**
+  - 2026-11-14 再查 anthropic.com 新聞頁與站內搜尋，仍未見任命公告；FedScoop、Nextgov（07 月）報導其出任首位全球公部門負責人。
   - 未見任何來源把此聘任與研究員流動潮定性為同一策略動作，維持推論層級
 - [[topics/competitor-landscape]] — Google / OpenAI 競品格局
 - [[topics/anthropic-business]] — Anthropic 商業與人才動態
