@@ -3,21 +3,21 @@ page: "topics/recursive-self-improvement"
 kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 45
 attribution_count: 74
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 9
-pending_overdue: 0
-pending_next_review: "2026-11-14"
+pending_count: 11
+pending_overdue: 5
+pending_next_review: "2026-11-20"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **非營利組織提告「凍結 AI 軍備競賽」**（2026-11-13）
@@ -186,7 +186,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心主張**：Anthropic 宣布已開始給予非營利評估機構 METR 的團隊類似員工等級的系統存取權；METR 將公開發布其風險評估結果
 - **同列評估者**：SecureBio 與 Accenture 同列評估者，官方並稱正與包括 Hugging Face 在內的多個組織洽談中
 - **與既有敘事的關係**：延續下方 09-19 條目「Anthropic 指定 Accenture 為首位內嵌評估者」——當時官方已稱 METR「亦有參與」，本次是 METR 角色的具體落實（由「參與」升級為「員工級存取權」），非全新機制
-- **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作；本頁首次記錄此協議名稱，確切簽署日期尚未見官方公告
+- **白宮協議**：官方稱此舉呼應上月簽署的白宮「超級智慧協議」（White House Accord on Super Intelligence），公司承諾與獨立外部稽核員或評估者合作
+- ❓ **待查證**（標 2026-10-16｜查 White House Accord on Super Intelligence、超級智慧協議）｜**白宮超級智慧協議的確切簽署日期與條款**（2026-10-16 官方稱「上月簽署」）：本頁首次記錄此協議名稱；已掃日報至 2026-11-13 無後續；官方頁面未查證
 - **官方原文補充**（2026-10-31 查 [Anthropic〈獨立評估者更新〉](https://www.anthropic.com/news/an-update-on-independent-evaluators)）：METR 由 6 名員工組成，取得公司硬體、辦公空間與內部工具及系統，存取程度「約與 Anthropic 自家風險評估團隊相當」；
   - Anthropic 不能否決 METR 發布，但可要求對預定類別（如機密智財）做遮蔽；文中未賦予 METR 中止部署權，也未給發布時程；SecureBio 正審查 8 月風險報告的化生武章節，Anthropic 將於審查後考慮提高其存取；協議簽署日期與條款官方文中未載
 - **可信度評估**：Anthropic 官方部落格一手發布，訊號強度高；存取範圍已由官方原文說明（見上），協議日期與條款官方未載
@@ -261,7 +262,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **查證（2026-10-17，[Anthropic Institute 官方頁](https://www.anthropic.com/institute/measuring-pace-of-ai-development)，2026-08）**：官方原文為「approximately 30,000 agents doing research and engineering work at Anthropic at any one time」，限定「our most-used internal platform」，並稱量測僅涵蓋該平台
   - 官方頁載 26%（Claude「leads」，AL4）；頁面**未載** 25% 與 8 倍，兩數字來源另見上方 09-18 條目的官方說明
 - **官方說明（2026-10-03 查證，[Anthropic Institute](https://www.anthropic.com/institute/measuring-pace-of-ai-development)）**：26% 即官方 AL4「主導」比例（2026-08），「涉入九成以上」對應 AL3（協作）以上占 90% 以上，另載未測得任何 AL5 完全自主的子集；衡量方法（任務籃、人時加權）見上方 09-18 條目的官方說明
-- **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度；具體數字是否忠實反映官方原始資料待官方一手來源核實
+- **可信度評估**：dev.to 為社群作者分析文章，非 Anthropic 官方一手發布或主流媒體報導，單一來源；Reddit 週熱門標記顯示社群熱度但不提升事實可信度
+- ❓ **待查證**（標 2026-09-21｜查 R&D Automation Index、reidmarlow）｜**26% 主導比例與「約 3 萬個 agent」數字是否忠實反映官方原始資料**（2026-09-21 報導，09-24 Reddit 重新流通）：已掃日報至 2026-11-13 無官方一手後續；官方頁面未查證
 
 ### The Information：OpenAI 與 Anthropic 傳一度近乎達成協議，擬互相壓力測試對方 AI 模型（2026-09-21 新增，單一來源）
 

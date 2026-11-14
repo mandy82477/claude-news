@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-11-13"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 135
 attribution_count: 511
 attribution_last: "2026-11-12"
@@ -141,11 +141,11 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 
 **本節只收公司動態**（辦公室、雇主排名、經濟研究、組織文化）；合作與算力、上市與財報、風險與商業模式的逐日條目在三個子頁的 `## 時序`。
 
-### 未歸類
-
-- **[待分類] WSJ：側寫 Anthropic 以 Claude 投入疾病研究的野心**：報導聚焦公司定位與長期布局，未附具體療法進度或時間表，分類未定（商業模式／合作／公司動態皆有可能）（Google News/WSJ，2026-11-07）
-
 ### 2026-11
+
+%% 2026-11-14：WSJ 疾病研究側寫原在 `### 未歸類`，本輪分派——屬「Anthropic 自己做了什麼」的定位層，非合作／上市／風險三子頁，故留母頁時序；未歸類節已空並移除 %%
+
+- **[公司動態，僅標題可用] WSJ（2026-11-07）：側寫 Anthropic 以 Claude 投入疾病研究的野心**：報導聚焦公司定位與長期布局，未附具體療法進度或時間表，分類未定（商業模式／合作／公司動態皆有可能）（Google News/WSJ，2026-11-07）
 
 - **[公司動態，僅標題可用] Claude for Manufacturing 推出**：marketscreener、Manufacturing Dive、Business Insider 同日報導，Business Insider 點出在 IPO 前夕；涵蓋範圍與價格未載（Google News，2026-11-12）
 - **[公司動態] 官方介紹文：Claude Whiteboards 與 Sheets 以 beta 推出，Dashboards 正式上線並更名 Claude Data**：HN 273 分；日報摘要稱三者所有付費方案可用，是否另計費未載（Claude 官方；Hacker News，2026-11-11）

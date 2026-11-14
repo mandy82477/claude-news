@@ -8,11 +8,11 @@ last_updated: "2026-11-09"
 last_news_update: "2026-11-09"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['entities/claude-skills-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 13
 attribution_count: 16
 attribution_last: "2026-11-09"

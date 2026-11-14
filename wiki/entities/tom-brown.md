@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-04"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-11"
 status_main: "active"
-days_since_news: 33
+days_since_news: 34
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 33
+days_since_news_subtree: 34
 inbound_links: 7
 attribution_count: 2
 attribution_last: "2026-10-11"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** 06-24 起接手與白宮的出口管制談判，促成 Mythos 5 解封
 **首次出現：** 2026-06-25
-**最後更新：** 2026-11-04
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-11
 
 > **牽線 SpaceX 運算交易**（2026-10-11）
@@ -46,7 +46,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 2026-10-10，WSJ 報導 Tom Brown 利用共和黨人脈，牽線促成一筆每月 12.5 億美元的 SpaceX 運算容量交易（僅標題，細節未載）；交易對 Anthropic 運算產能與財務的意義見 [[topics/anthropic-partnerships-compute#算力與資金從哪來]]。
 
-2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；標題稱「另一位」共同創辦人，內文因付費牆未能查證所指何人（2026-10-24 查證，官方未載），Tom Brown 僅列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/chris-olah]]，待具名來源出現後收斂。
+2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；標題稱「另一位」共同創辦人，所指何人未能確認，Tom Brown 僅列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/chris-olah]]。懸置標記見歷史記錄 2026-10-09 條（🔎 查無官方，已掃日報至 2026-11-13 無後續）。
 
 Brown 是 Anthropic 共同創辦人，曾在 OpenAI 參與 GPT-3 開發（論文作者之一）；06-24／25 接管與白宮的 Fable 5 出口管制談判，詳見歷史記錄。TechCrunch 報導 Lutnick 來函的收件人職稱為 chief compute officer。
 

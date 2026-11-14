@@ -4,14 +4,14 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-12"
 status_main: "active"
-days_since_news: 1
+days_since_news: 2
 parent: "entities/pricing"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 3
 attribution_count: 9
 attribution_last: "2026-11-12"
@@ -33,7 +33,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-12
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-12
 
 > **最新動態**（2026-11-12）
@@ -50,7 +50,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 - **11-11｜usage credits 說明頁再改版：購買一律不可退款（含取消訂閱或刪除帳戶）**；官方頁字數 10,373→10,786，「Monthly API credits for Max, Ultra, and Team plans」段落被移除。見 [[entities/pricing#當前生效的計費規則]]
 - **11-10｜Plans & Pricing 頁新增 Claude Data／Sheets／Whiteboards（beta）段落、移除 Dashboards（beta）段落**：官方頁字數 23,768→23,984；歸屬方案與是否另計費未載，見 [[entities/pricing#我的方案現在有什麼]]
 - **11-09｜Fable 5.2 發布，牌價 $8/$40（降兩成），Fast mode 擴及 Fable 5.2，Batch 示範模型換代**：見 [[entities/pricing#模型 API 定價現況]]
-- **11-07｜usage credits 說明頁大改版**：帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文，新規則待查證。見 [[entities/pricing#當前生效的計費規則]]
+- **11-07｜usage credits 說明頁大改版**：帳戶刪除不退額度、auto-reload 措辭改寫；移除日本等地區 6 個月到期條款原文。**新版規則已於 2026-11-14 查證**：12-07 前購買的不到期、該日起 12 個月到期，各國到期日可能不同但未點名日本。見 [[entities/pricing#當前生效的計費規則]]
 - **11-02 查證｜方案改名與附帶 API credits**：$200 一檔現名 Ultra（每週 Pro 的 10 倍用量、驗證帳號無 5 小時上限）；Max／Ultra／Team 每月附 $100／$200／最多 $500 API credits，不付 Claude Code。見 [[entities/pricing#我的方案現在有什麼]]
 - **10-30｜Opus 4.8 fast mode 宣告淘汰，11-30 移除** ⚠️：之後請求直接回錯誤、不退回標準 Opus 4.8；同批 Opus 5.5 fast mode 不再限第一方 API。見 [[entities/pricing#乘數：會互相疊乘]]
 - **10-30｜Enterprise／API 可依承諾支出談客製折扣**（門檻未公開）。見 [[entities/pricing#當前生效的計費規則]]
@@ -99,7 +99,7 @@ Claude 的價格、方案與促銷是什麼時候、怎麼變的，以及最近�
 
 - **Official Docs 異動（diff 偵測）**：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans) 字數由 8,715 增至 10,355 字；新增 21 段、移除 11 段。
 - **新增內容**：帳戶刪除後剩餘 usage credits 不予退還、不予退款；auto-reload 措辭改寫為「餘額低於門檻時自動購買額度」；新增「能否退款」問答、「購買用量包」段落（另有 16 段未列細節）。
-- **移除內容**：舊版「餘額低於門檻自動加值」措辭、「部分地區（如日本）額度 6 個月到期」條款原文；新版是否沿用相同地區規則未見明文，見 [[entities/pricing#當前生效的計費規則]] 待查證標記。
+- **移除內容**：舊版「餘額低於門檻自動加值」措辭、「部分地區（如日本）額度 6 個月到期」條款原文；**2026-11-14 查證新版**只寫「部分國家到期日可能不同」、未點名日本也未載 6 個月，數字細節指向 Consumer Credit Terms，母頁 [[entities/pricing#當前生效的計費規則]] 留 🔎 追蹤。
 - **與既有記錄的關係**：本頁與母頁多次引用此同一頁作為 usage credits 規則的單一來源（如 08-08、09-24、10-04、10-09 條目），本次為該頁最大規模改版之一。
 
 #### 2026-10-31：GitHub Issue #47509 升至 195 👍、70 留言——Team 方案高階座位提案仍無官方回應

@@ -6,11 +6,11 @@ domain: "🌐 社群"
 last_updated: "2026-11-01"
 last_news_update: "2026-06-30"
 status_main: "resolved"
-days_since_news: 136
+days_since_news: 137
 parent: "topics/community-tech-patterns"
 children: "['topics/community-tech-timeline']"
 page_role: "archive"
-days_since_news_subtree: 136
+days_since_news_subtree: 137
 inbound_links: 10
 attribution_count: 0
 attribution_last: null
@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-01
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-06-30
 
 > 本頁保存 [[topics/community-tech-patterns]] 被搬離主頁的原始條目，以及 2026-04-25～05-22 的社群時序流水帳（舊時序頁 [[topics/community-tech-timeline]] 已併回此處）。條目一字不刪，只是搬離主頁讓主頁讀得動。
@@ -1065,3 +1065,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔥🔥🔥 **CodeAlmanac**（7/22，YC S26，Show HN score 54）：從「記格式」轉向「記文件」——隨對話自動更新 codebase wiki，取代手動維護的 MANUAL.md／DESIGN.md；30 天內無後續採用回饋，2026-08-29 已自 [[topics/community-tech-tools]] 移除追蹤
 - 🔥🔥🔥 **OzBrain**（8/21，HN 69，多家報導）：從「單一使用者跨 session」延伸到「team 共享」——主張 agent 與團隊共用知識庫，取代傳統筆記/任務管理工具
 - 🔥（估） **手動 Obsidian vault 取代官方自動記憶**（8/24，Reddit）：與前三者「補充記憶層」方向相反的第一個「取代」案例——使用者主張自己策展的 LLM Wiki 比官方自動記憶更可控、更可信賴
+
+
+## 趨勢三演進封存
+
+> 搬自 [[topics/community-pattern-trends]] 趨勢三演進最早 2 個節點（2026-11-14 精簡，原文一字不刪）。
+
+- 🔥🔥🔥（估） **Context 是核心瓶頸**（5/12）：確認大型專案的真正天花板是 context 管理，而非程式碼生成品質
+- 🔥🔥🔥（估） **Context Rot 修復五法**（6/20）：「Claude 越用越笨」幾乎都是 context 腐蝕；五種具體修復策略成社群共識
+
+## 趨勢二演進封存
+
+> 搬自 [[topics/community-pattern-trends]] 趨勢二演進最早 3 個節點（2026-11-14 精簡，原文一字不刪）。
+
+- 🔥（估） **零星嘗試**（4/26）：多 agent 概念出現，但還沒解決「互相踩到彼此檔案」的問題
+- 🔥🔥🔥（估） **Git Worktrees 作為隔離原語**（5/23）：找到關鍵解法——每個 agent 配一個 git worktree，檔案系統完全隔離
+- 🔥🔥（估） **並行工作流轉型指南**（6/24）：從「單一 prompt 反覆調整」的線性做法，轉為「任務分解 → 並行派發 → 彙整驗證」

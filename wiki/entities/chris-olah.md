@@ -4,14 +4,14 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-10-31"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-10"
 status_main: "active"
-days_since_news: 34
+days_since_news: 35
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 34
+days_since_news_subtree: 35
 inbound_links: 8
 attribution_count: 3
 attribution_last: "2026-10-10"
@@ -34,7 +34,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 研究者
 **為何追蹤：** 梵蒂岡封論現場代表 Anthropic 發言；可解釋性研究是其安全論述的根基
 **首次出現：** 2026-05-26
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-10
 
 > **拉比轉述：匿名與會者羨慕他「機器無意識」的篤定**（2026-10-10）
@@ -48,7 +48,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 🔎 **查無官方**（標 2026-10-10｜查 Mois Navon、Wisdom Traditions｜複 2026-11-30）｜**匿名與會者回應是否出自 Olah**（2026-10-31 查證）：Anthropic 官方確認有與「wisdom traditions」的對話（[Widening the conversation on frontier AI](https://www.anthropic.com/news/widening-conversation-ai)，2026-05-19），但該文未提 4 月會議、與會者發言或 Olah；anthropic.com 未載此回應。僅見匿名與會者經 Navon 轉述（groundlevel-ai.com 及轉載該事的多家媒體），措辭為「I wish I had your faith」（信念，非「信心」），與會者身分未公開，**不得視為 Olah 本人說法**。
 
-2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；標題稱「另一位」共同創辦人，內文因付費牆未能查證所指何人（2026-10-24 查證，官方未載），Chris Olah 僅列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]（懸置標記見歷史記錄 2026-10-09 條）。
+2026-10-09，WSJ 側寫一位「較少露面」的 Anthropic 共同創辦人，稱其近期試圖修補外界對公司「覺醒（woke）」形象的觀感；標題稱「另一位」共同創辦人，所指何人未能確認，Chris Olah 僅列為候選對象之一，另見 [[entities/jack-clark]]、[[entities/tom-brown]]。懸置標記見歷史記錄 2026-10-09 條（🔎 查無官方，已掃日報至 2026-11-13 無後續）。
 
 Olah 是 Anthropic 共同創辦人之一，也是 AI 可解釋性（interpretability）研究的重要先驅。他以「神經網路電路」研究著名，主張透過理解 AI 內部機制確保安全，是 Anthropic 技術文化中「理解先於能力」立場的核心人物。
 

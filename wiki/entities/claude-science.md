@@ -8,11 +8,11 @@ last_updated: "2026-11-06"
 last_news_update: "2026-11-06"
 status_main: "beta"
 matrix_role: "專用版"
-days_since_news: 7
+days_since_news: 8
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 7
+days_since_news_subtree: 8
 inbound_links: 9
 attribution_count: 23
 attribution_last: "2026-11-06"
@@ -121,7 +121,7 @@ Claude Science 是 Anthropic 於 2026-07-01 發布的科學家專用 AI 工作�
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-06 | ❓ 待查證：Benzinga 稱 Anthropic 表示 Claude 協助科學家繪製神秘細胞結構；疑似與同日 Anthropic 部落格「How scientists use Claude」同一篇文章案例，兩者原文均無法讀取 |
+| 2026-11-06 | ❓ **待查證**（標 2026-11-06｜查 cell structure、scientists use）｜**細胞結構報導**：Benzinga 稱 Claude 協助繪製神秘細胞結構，疑與同日部落格同文 |
 | 2026-10-23 | 官方查證：產品頁標 beta；運算跑在本機／HPC／雲端 VM／Slurm／Modal，非動態調配的雲端運算（[來源](https://claude.com/product/claude-science)） |
 | 2026-10-21 | Anthropic 公布 Claude 自主設計可中和蠍毒神經毒素的蛋白質結合物；Citrini Research 測試 211 候選、篩出 17 個有效 binder，待實驗室驗證（HN 111 分，4 個來源） |
 | 2026-10-06 | IBM 發文檢視 CRISPR 特徵酶系統發現「實際上顯示了什麼」，延續 09-27 起對原創性與能力範圍的質疑；僅標題可用 |

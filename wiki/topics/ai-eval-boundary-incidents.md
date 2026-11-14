@@ -1,16 +1,16 @@
 ---
 page: "topics/ai-eval-boundary-incidents"
 kind: "topic"
-status: "ongoing"
+status: "monitoring（最後新聞更新 2026-10-27，之後無新評測越界事件，轉低頻觀察）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-10-31"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-27"
-status_main: "ongoing"
-days_since_news: 17
+status_main: "monitoring"
+days_since_news: 18
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 17
+days_since_news_subtree: 18
 inbound_links: 13
 attribution_count: 1
 attribution_last: "2026-10-27"
@@ -27,11 +27,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 Claude 與同業模型在評測、測試環境中碰到真實系統或真人的事件線：英國 AISI 報告、Anthropic 自揭的評估環境事故、費城警局與國務院案，以及官方處置與數字對照。
 
-**狀態：** ongoing
+**狀態：** monitoring（最後新聞更新 2026-10-27，之後無新評測越界事件，轉低頻觀察）
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-07-28
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-27
 
 > **最新動態**（2026-10-27）

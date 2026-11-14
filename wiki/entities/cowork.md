@@ -8,11 +8,11 @@ last_updated: "2026-11-10"
 last_news_update: "2026-11-10"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "['entities/cowork-archive']"
 page_role: "hub"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 14
 attribution_count: 10
 attribution_last: "2026-11-10"
@@ -32,12 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（已併入 Claude app）
 **首次出現：** 2026-05（本庫日報最早提及 2026-05-03；官方正式推出日期未見報導）
-**最後更新：** 2026-11-10
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-10
 **蒐集邊界：** 官方一手來源（Help Center release notes、Anthropic Blog、Claude API Release Notes、Anthropic Status）＋日報路由到的社群回報（GitHub Issues／HN／Reddit）為主；Windows 平台不穩定事件叢集的完整清單住 [[entities/claude-code-known-issues]]「已知問題」，本頁不重複列出；企業採用與商業合作案例住 [[topics/anthropic-business]]，本頁只留指路，不逐筆收錄。
 
 > **最新動態**（2026-11-10）
-> Help Center release notes「用專案整理任務」段 11-07 新增、11-08 移除、11-09 再新增、11-10 再移除，功能是否穩定存在仍待查證（見核心功能）。
+> 「用專案整理任務」段 11-07 起四天內三度增刪；❓ **待查證**（標 2026-11-10｜查 用專案整理任務）｜**功能是否穩定存在**：見核心功能。
 
 ---
 
@@ -101,9 +101,9 @@ Anthropic 的圖形化協作介面讓使用者指派任務給 Claude 在獨立 V
 
 | 日期 | 事件 |
 |------|------|
-| 2026-11-10 | Help Center release notes「用專案整理任務」段再度移除（與「模型設定」「模型切換」兩段同批），功能存續仍待查證 |
-| 2026-11-09 | Help Center release notes「用專案整理任務」段再度新增（11-07 新增、11-08 移除、11-09 再新增），功能存續仍待查證 |
-| 2026-11-08 | Help Center release notes「用專案整理任務」段 11-07 新增後僅一天即移除，功能存續待查證 |
+| 2026-11-10 | Help Center release notes「用專案整理任務」段再度移除（與「模型設定」「模型切換」兩段同批）；❓ **待查證**（標 2026-11-10｜查 用專案整理任務）｜**功能存續** |
+| 2026-11-09 | Help Center release notes「用專案整理任務」段再度新增；❓ **待查證**（標 2026-11-09｜查 用專案整理任務）｜**功能存續** |
+| 2026-11-08 | Help Center release notes「用專案整理任務」段 11-07 新增後僅一天即移除；❓ **待查證**（標 2026-11-08｜查 用專案整理任務）｜**功能存續** |
 | 2026-11-07 | Help Center release notes 新增「用專案整理任務」段落（僅標題，細節未載） |
 | 2026-10-23 | 官方查證：Chrome 側邊欄仍 beta；Pro／Max 各介面皆雲端、10-06 起新任務一律雲端；Team beta、Enterprise 需管理員開（[來源](https://support.claude.com/en/articles/15520349)） |
 | 2026-10-06 | Simon Willison 部落格轉引 Anthropic 工程師 Felix Rieseberg 說明架構轉雲端原因（省硬碟電池、闔筆電不中斷）；r/ClaudeAI 使用者追問本機殘留 VM 何時釋放硬碟空間，官方未答 |

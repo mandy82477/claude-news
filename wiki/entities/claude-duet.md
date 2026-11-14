@@ -8,11 +8,11 @@ last_updated: "2026-10-31"
 last_news_update: "2026-10-26"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 18
+days_since_news: 19
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 18
+days_since_news_subtree: 19
 inbound_links: 4
 attribution_count: 9
 attribution_last: "2026-10-26"
@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 產品（入口：獨立 app，電腦走網頁；誰起手：它自己判斷）
 **別名：** Duet
 **首次出現：** 2026-10-21
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-26
 
 由 [[entities/opus-5-5|Opus 5.5]] 驅動的主動式 agent，是一個獨立 app（iOS／Android，電腦上走 claude.ai 網頁）：攔截使用者未開口的待辦事項、在背景持續工作，只在需要使用者拍板時才打斷；2026-10-21 以研究預覽開放，美國 Pro／Max 訂閱戶需先加入候補名單。
 
 > **最新動態**（2026-10-26）
-> 媒體稱 Anthropic 說明讓 Duet 不「失控」的防護設計，僅標題可用，見下方待查證；介面與取得方式仍以 2026-10-23 官方產品頁查證為準——候補名單制，Team／Enterprise 尚未納入。
+> 媒體稱 Anthropic 說明讓 Duet 不「失控」的防護設計（僅標題可用）；❓ **待查證**（標 2026-10-26｜查 Duet、rogue）｜**防護機制內容**：已掃日報至 2026-11-13 無後續；官方頁面未查證。介面與取得方式仍以 2026-10-23 官方產品頁查證為準——候補名單制，Team／Enterprise 尚未納入。
 
 ---
 

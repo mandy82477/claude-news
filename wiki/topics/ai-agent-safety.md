@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-13"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: null
 children: "['topics/ai-agent-safety-archive', 'topics/ai-agent-safety-cyber', 'topics/ai-agent-safety-product-vulns', 'topics/ai-agent-safety-prompt-injection', 'topics/ai-eval-boundary-incidents']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 132
 attribution_count: 304
 attribution_last: "2026-11-12"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-04-27
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 與 Claude Code 的安全事件為主，另針對提示注入定向補抓（每天最多 3 則）；他家 agent 的獨立事件多半只在與 Claude 同案或同一篇報導時才會出現。
 %% 拆頁評估 2026-10-30：已拆（第 20 波）。母頁留現況表、官方立場、各類一句結論與路由；逐則證據住 ai-agent-safety-prompt-injection／-product-vulns／-cyber 三個子頁與 ai-eval-boundary-incidents。落選：記者 10-25 草案四子頁（官方防護一群蒸餾 07 月後 131 行，低於 150 行，併入 cyber）；網攻表與提示注入節留母頁（網攻表 25 列是事件流、沒有上限）。 %%
@@ -66,6 +66,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 只列**現在還擋不住**的攻擊面，不收論述、教學與產業對照。狀態符號與 [[entities/claude-code]] 相同，語意在本頁是「現在仍會發生」：🔴 仍會發生／✅ 已修或官方已處置／⛔ 官方認定不修／❓ 待查證／🔎 查無官方。依「誰會遇到」的範圍由寬到窄；寫「所有人」的一律在最上。
 %% 維運備忘：本表上限 11 列，退場與補位判準見 `.claude/reporter-rules/safety-policy/pages.md`「topics/ai-agent-safety」節第 2 條 %%
 %% 最後動態（列內無日期者）：套件供應鏈列＝2026-08-29（Alon Hertz `llms.txt` 揭露；前一則 Keyv npm 蠕蟲 2026-08-04），90 天退場判定日 2026-11-27 %%
+%% 2026-11-14 複查（11 列全查，移除 0／補位 0／滿載 11/11）——逐列最後動態與 90 天判定日：Auto 模式列＝2026-08-31（embracethered／The Register 實測 60–80%，見 prompt-injection 2026-08-31 條），判定日 2026-11-29；Gmail 代寄列＝2026-08-19（媒體報導，無後續），判定日 2026-11-17；deny-list 列＝2026-09-11（Show HN 8 種繞過），判定日 2026-12-10；資訊竊取型惡意軟體列＝2026-08-30（官方通知），判定日 2026-11-28。下輪先看 Gmail 與套件供應鏈兩列 %%
 %% 2026-11-05：灰市轉售折扣帳號列（最後動態 08-06）距今逾 90 天，本輪無新事實，依第 2 條退場；事實仍在 [[topics/ai-agent-safety-product-vulns]] 2026-08 技術彙整。Claude Dispatch 新列（The Register，2026-11-05）補位 %%
 
 | 擋不住的是什麼 | 誰會遇到 | 狀態 | 官方擋到哪 | 你能先做什麼 |
@@ -116,7 +117,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 產品層漏洞與誤操作
 
-已修的升到 stable 就躲得掉（2026-10-30 npm stable 是 2.1.308）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（2.1.252 之後未見查證；攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
+已修的升到 stable 就躲得掉（2026-11-14 npm stable 是 2.1.311）；升版也還開著的是上表的 email 外流與誤刪類，以及 `.git` 第二變體（2.1.252 之後未見查證；攻擊手法是塞進 repo 設定，事件住 [[topics/ai-agent-safety-prompt-injection#2026-09]]）。逐則版本與狀態見 [[topics/ai-agent-safety-product-vulns#目前結論]]。
 
 ### 模型網攻能力與防護
 
@@ -143,24 +144,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 逐則事件依類別住三個子頁（見「每一類住哪一頁」）；本節只留判不出歸哪一頁的事件，以及 2026-07 以前各月的總結。
-
-### 未歸類
-
-#### Anthropic Alignment Science 部落格：稀釋被下毒的微調資料，反而可能讓下毒效果增強（2026-11-10 發布，11-12 新增）
-
-- **揭露來源**：Google News／Anthropic Alignment Science blog（11/10 19:08 UTC），互動 0，僅標題可用
-- **核心主張（僅標題可用）**：標題稱把被下毒的微調資料混入更多乾淨資料稀釋後，下毒的效果可能反而變強；實驗模型、資料規模與機制均未載
-- **性質判斷**：答不出本頁四類判準——談的是訓練資料投毒（攻擊者在模型訓練階段動手），不是代理讀進來的內容、產品漏洞或網攻能力；暫列未歸類，待週更分派
-- **可信度評估**：官方研究部落格標題，原文未讀；對 Claude 自身訓練流程的影響未載
-
-#### Anthropic 官方研究：可驗證推理（provable inference）進展，讓使用者驗證收到的回應確實出自宣稱的模型、未遭竄改（2026-11-04 新增）
-
-- **揭露來源**：[Anthropic 官方研究](https://www.anthropic.com/research/provable-inference)（Hacker News 235 分，11-05 快照；11-04 首日 48 分）；TechCrunch 同日跟進報導「Anthropic 正在打造一套證明 AI 模型身分的系統」
-- **核心主張**：官方研究提出機制，讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改；研究團隊含 Anthropic 與 EPFL、MIT、StarkWare 等外部研究者
-- **性質判斷**：答不出本頁四類判準（非評測越界、非模型網攻能力／防守方放行、非提示注入、非 Claude 產品漏洞或帳號濫用）——這是針對第三方轉送或推理串流完整性的信任機制研究，暫列未歸類，待週更分派
-%% 本則同時派給模型記者寫技術角度，見 data/source_attribution.jsonl %%
-- **可信度評估**：官方一手研究＋HN 討論＋TechCrunch 媒體跟進，可信度高；機制何時開放實際使用、適用範圍均未見報導
-- ❓ **待查證**（標 2026-11-04｜查 provable inference、Roy Rinberg｜複 2026-11-18）｜**開放時程與適用範圍**：這套驗證機制何時開放實際使用、是否需使用者額外操作均未見報導
 
 ### 2026-07（時段總結）
 

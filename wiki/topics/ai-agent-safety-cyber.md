@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety-cyber"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 2
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 8
 attribution_count: 15
 attribution_last: "2026-11-12"
 top_source: "google-news"
-pending_count: 15
-pending_overdue: 3
-pending_next_review: "2026-11-14"
+pending_count: 18
+pending_overdue: 8
+pending_next_review: "2026-11-16"
 pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-12
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-12
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
@@ -113,6 +113,25 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+%% 2026-11-14 /wiki-lint 5i：以下兩則由母頁 `### 未歸類` 分派進本頁——皆為官方安全研究表態，答不出母頁四問（非注入載體、非產品漏洞、非評測越界），依本頁「官方非資安的安全政策表態」收。主編判定與理由見 log %%
+
+#### Anthropic Alignment Science 部落格：稀釋被下毒的微調資料，反而可能讓下毒效果增強（2026-11-10 發布，11-12 新增）
+
+- **揭露來源**：Google News／Anthropic Alignment Science blog（11/10 19:08 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱把被下毒的微調資料混入更多乾淨資料稀釋後，下毒的效果可能反而變強；實驗模型、資料規模與機制均未載
+- **性質判斷**：答不出本頁四類判準——談的是訓練資料投毒（攻擊者在模型訓練階段動手），不是代理讀進來的內容、產品漏洞或網攻能力；暫列未歸類，待週更分派
+- **可信度評估**：官方研究部落格標題，原文未讀；對 Claude 自身訓練流程的影響未載
+
+#### Anthropic 官方研究：可驗證推理（provable inference）進展，讓使用者驗證收到的回應確實出自宣稱的模型、未遭竄改（2026-11-04 新增）
+
+- **揭露來源**：[Anthropic 官方研究](https://www.anthropic.com/research/provable-inference)（Hacker News 235 分，11-05 快照；11-04 首日 48 分）；TechCrunch 同日跟進報導「Anthropic 正在打造一套證明 AI 模型身分的系統」
+- **核心主張**：官方研究提出機制，讓使用者驗證收到的回應確實出自宣稱的模型、未被路由服務或攻擊者偷換竄改；研究團隊含 Anthropic 與 EPFL、MIT、StarkWare 等外部研究者
+- **性質判斷**：答不出本頁四類判準（非評測越界、非模型網攻能力／防守方放行、非提示注入、非 Claude 產品漏洞或帳號濫用）——這是針對第三方轉送或推理串流完整性的信任機制研究，暫列未歸類，待週更分派
+%% 本則同時派給模型記者寫技術角度，見 data/source_attribution.jsonl %%
+- **可信度評估**：官方一手研究＋HN 討論＋TechCrunch 媒體跟進，可信度高；機制何時開放實際使用、適用範圍均未見報導
+- ❓ **待查證**（標 2026-11-04｜查 provable inference、Roy Rinberg｜複 2026-11-18）｜**開放時程與適用範圍**：這套驗證機制何時開放實際使用、是否需使用者額外操作均未見報導
+
 
 #### GitHub Issue #61889：CVP 核准使用者在 claude.ai 全新對話被擋，提問與資安無關（2026-11-12 新增）
 
@@ -200,7 +219,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **2026-11-03 更新（Gizmodo）**：OpenAI 雇用聲稱入侵 Anthropic 系統的前 DOGE 成員，以強化自家資安團隊；報導未附入侵事件的具體時間、手法細節，OpenAI、Anthropic 官方回應均未見報導
 - **2026-10-31 更新（India Today 轉述，HN 74 分）**：報導指名新創為 Cathedral，稱其是在 Anthropic 開放外部研究者找漏洞的計畫中做測試，不到 12 小時進入內部系統，接觸員工資料、薪資、聘書與討論先進模型的內部訊息；消息出自《華盛頓郵報》看過的報告草稿
-  - Cathedral 與前述前 DOGE 成員新創是否同一家（待確認，推論為同一事件）；是否在計畫授權範圍內、修補範圍與 Anthropic 回應均未見報導
+  - ❓ **待查證**（標 2026-10-31｜查 Cathedral、前 DOGE 成員）｜**Cathedral 與前述前 DOGE 成員新創是否同一家**（2026-10-31 報導）：推論為同一事件；已掃日報至 2026-11-13 無後續（11-04 Gizmodo 僅稱「前 DOGE 員工」）；官方頁面未查證
+  - 授權範圍、修補範圍與 Anthropic 回應均未見報導
 
 - **2026-10-28 更新（The Independent 跟進）**：The Independent 報導稱該新創聲稱在不到 12 小時內「攻破」Anthropic；具體攻擊手法、影響範圍與 Anthropic 官方回應仍未見報導，與 10-26 Gizmodo／WaPo 的聲稱同源（Anthropic 未回應）
 - **揭露來源**：Gizmodo、The Washington Post 同日報導，2 個獨立媒體；10-28 The Independent 第三家媒體跟進
@@ -373,7 +393,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **查證（2026-10-17，[Anthropic 官方公告](https://www.anthropic.com/claude-opus-5-5)，2026-09-22）**：Opus 5.5 套用與 Fable 5.1 類似的資安防護；日常找 bug、修 bug 仍可用，多數資安任務改由 Opus 4.8 處理
   - 官方說明中心（[模型切換說明](https://support.claude.com/en/articles/16049681-why-claude-switched-models-in-your-conversation-with-opus-5)）：弱點利用程式產生、二進位弱點掃描、滲透測試屬高風險類別；原始碼層級的弱點掃描仍允許
   - 資安從業者走 Cyber Verification Program（官方稱將擴大涵蓋 Opus 5.5）；系統卡（2026-09-22）稱防護與 Opus 5 同政策、強度與 Fable 5.1 相當
-- **可信度評估**：The Verge 為主流科技媒體，惟僅標題層級可用，待官方發布稿或更詳細報導佐證
+- **可信度評估**：The Verge 為主流科技媒體；原僅標題層級，已由上方 2026-10-17 官方公告與說明中心查證補足
 
 #### ABC News：Anthropic 表示已攔截一起潛在 AI 生物武器濫用意圖（2026-09-22 新增，與 09-11 條目關聯未明）
 
@@ -412,7 +432,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - **揭露來源**：[Anthropic 官方部落格](https://www.anthropic.com/news/life-sciences-verification-program)（2026-09-18 14:33 UTC）
 - **核心內容**：Anthropic 推出「生命科學驗證計畫」（LSVP），先以 Beta 形式向已完成早期存取的機構與團隊開放，讓通過驗證的生醫專業人士使用 Mythos、Opus、Sonnet 時適用較寬鬆但仍有把關的生物相關安全防護措施；官方表示會逐步擴大到個人 Pro／Max 方案
-- **性質判斷**：屬模型層安全防護的官方調整（放寬既有生物風險 safeguards，非新增防護），與本頁既有 07-08「An off switch for dual-use knowledge in AI models」同屬 Anthropic 主動公開的模型層安全機制說明，區別於本頁多數條目聚焦的產品層安全（沙箱逃逸、誤操作）；「較寬鬆」具體指哪些限制、驗證審核標準均未見官方公告細節
+- **性質判斷**：屬模型層安全防護的官方調整（放寬既有生物風險 safeguards，非新增防護），與本頁既有 07-08「An off switch for dual-use knowledge in AI models」同屬 Anthropic 主動公開的模型層安全機制說明，區別於本頁多數條目聚焦的產品層安全（沙箱逃逸、誤操作）
+- ❓ **待查證**（標 2026-09-18｜查 LSVP、生命科學驗證計畫）｜**「較寬鬆」的具體範圍與驗證審核標準**（2026-09-18 公告）：已掃日報至 2026-11-13 無後續；官方頁面未查證
 - **可信度評估**：Anthropic 官方一手公告，可信度高；惟放寬幅度與審核機制的技術細節僅見官方摘要
 
 #### Reddit／r/ClaudeAI：資安研究者稱通過 CVP 審核後 Opus 5 仍持續標記其研究訊息（2026-09-15 新增）
@@ -445,7 +466,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **查證結果**（查證 2026-09-20）：**curl 官方已確認**——創辦人 Daniel Stenberg 曾公開表示 Anthropic **Mythos**（非泛指全公司掃描）、OpenAI Codex Security 與 Zeropath 已「無可再報」
   - 數日後 AISLE 提交 29 份報告，其中 6 份於 **curl 8.22.0**（09-02）正式列為 CVE（均 **Low** 嚴重度），由 curl 安全團隊審核認定，具名 AISLE 的 Stanislav Fort 為回報者
   - 同批比較中，其他 AI 廠牌工具最多僅拿下 3 個 CVE，使用 Anthropic／OpenAI 模型的獨立研究者各僅 1 個；Linux 維護者 Greg Kroah-Hartman 稱在 Linux 觀察到類似落差，但屬軼事佐證非獨立稽核
-- **可信度評估**：curl 官方（專案維護團隊）已確認 CVE 有效性並公開列冊，非 AISLE 單方聲明；惟 OpenAI／Anthropic 當初掃描的完整方法論與涵蓋範圍細節仍未見官方說明，「零發現」是否為同批次、同工具鏈的可比較測試無法完全確認
+- **可信度評估**：curl 官方（專案維護團隊）已確認 CVE 有效性並公開列冊，非 AISLE 單方聲明
+- ❓ **待查證**（標 2026-09-02｜查 AISLE、curl 8.22.0）｜**OpenAI／Anthropic 當初掃描的方法論與「零發現」可比性**（2026-09-02 事件）：完整方法論與涵蓋範圍未見官方說明，「零發現」是否為同批次、同工具鏈的可比較測試無法確認；已掃日報至 2026-11-13 無後續；官方頁面未查證
 
 ### 2026-08
 
@@ -470,7 +492,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - **受害規模**：2026 年 6 月下旬起至少 **8 個組織**，含澳洲能源公用事業、模里西斯金融服務公司、泰國與美國製造商，及多國 IT／經銷企業
 - **可信度評估**：多家資安媒體交叉報導，攻擊鏈技術細節具體且一致，訊號強度高（[CyberSecurityNews](https://cybersecuritynews.com/claude-code-helps-ransomware-operator/)，查證 2026-09-20）
 - **性質判斷**：查證後確認屬實，為繼 OALABS 蜜罐分析（14 家企業）、Cisco Talos 揭露攻擊者濫用 AI 編碼工具（含 Claude Code）之後，另一起「進攻性濫用已成熟至勒索軟體行動」的具體案例，且已有具體受害組織數量與跨國分布佐證；與本頁既有「AI agent 安全事故已從理論轉為實際」結論同一脈絡，可併入既有結論
-- **可信度評估**：CyberSecurityNews 為資安垂直媒體，單一來源，無 HN／Reddit 或其他媒體交叉確認，待後續查證
+- **可信度評估**：原為 CyberSecurityNews 單一來源，已由上方 2026-09-20 查證補足（多家資安媒體交叉報導）
 
 #### Cisco 警告駭客濫用 Claude Code、Codex、Cursor、Gemini 等 AI 模型（2026-08-04 新增，僅標題）
 

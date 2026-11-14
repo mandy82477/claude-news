@@ -4,19 +4,19 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 194
 attribution_count: 173
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 2
+pending_count: 3
 pending_overdue: 1
 pending_next_review: "2026-11-21"
 pending_signalled: 0
@@ -32,7 +32,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
@@ -40,7 +40,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 > - **Claude Meetings（Google Meet）Team／Enterprise beta 現經官方確認**：[Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes) 11-13 新增，方案範圍與 Axios 11-10 媒體稱一致，不再只是媒體轉述
 > - **自架版 Claude Managed Agents 沒有公開價格，官方 API 定價頁新增一句請洽客戶團隊**：想估算自架成本，只能走洽談窗口
 > - **usage credits 一律不可退款，含取消訂閱或刪除帳戶**：官方說明頁新增「Refunds」節；買了 credits 的人，取消訂閱前先用完或確認餘額
-> - **Whiteboards、Sheets（beta）與 Claude Data 所有付費方案可用**（[官方介紹文](https://claude.com/resources/articles/sheets-whiteboards-data)，11-14 查證）；是否算進方案用量官方未載，方案表不動
+> - **Whiteboards、Sheets（beta）與 Claude Data 所有付費方案可用，且吃的是你原有的用量額度、沒有另一份配額**（官方說明中心，11-14 查證）；與 Claude Code 共用同一份額度，方案表不動
 > - 最近三個月改了什麼，見 [[entities/pricing-history#最近三個月變了什麼]]；額度掉得快、帳單出錯，先看 [[entities/pricing#事故現在還在發生嗎]]。
 
 ## 現況
@@ -187,7 +187,14 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **✅ 2026-11-11 官方 usage credits 說明頁｜購買一律不可退款**：新增「Refunds」節，載明 usage credits 購買不可退款，含取消訂閱或刪除帳戶；剩餘額度在刪除帳戶時作廢。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，diff 偵測，2026-11-11）
 - **✅ 2026-11-08 Help Center release notes｜Enterprise 新增收費代碼標記＋成本代碼追蹤（beta）**：專案可標既有收費代碼（charge code）／client-matter；另可依成本代碼（cost code）追蹤花費。操作細節未見完整說明（來源：Help Center release notes，連結待補，查證 2026-11-08）
 - **✅ 2026-11-07 官方 usage credits 說明頁改版｜刪除帳戶即沒收剩餘額度**：新增帳戶刪除不退 usage credits 規則；auto-reload 改寫為「餘額低於門檻自動加購」。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-07）
-- ❓ **待查證**（標 2026-11-07｜查 usage credits、Japan、expiration｜複 2026-11-21）｜**日本等地區額度 6 個月到期條款現況**：官方 11-07 改版移除此措辭所在段落，新版是否沿用相同地區規則或已改寫未見明文。
+- **Whiteboards／Sheets（beta）算進你原有的方案用量，沒有獨立配額**（官方說明中心 [Artifacts admin guide](https://support.claude.com/en/articles/16994751-artifacts-admin-guide-for-team-and-enterprise-plans)、[Whiteboards](https://support.claude.com/en/articles/18324319-get-started-with-claude-whiteboards)，2026-11-14 查證）：
+  - **吃哪份額度**：artifacts 走使用者既有上限，與 Claude 其他功能及 Claude Code 共用，無另計費
+  - **Team／席次制 Enterprise**：由席次額度扣，管理員可加購 usage credits；用量制 Enterprise 按標準 API 費率計，受支出上限約束
+  - **分享不另收**：分享 artifact 對寄件者免費，用量算在各接收者自己的方案上
+  - **唯一例外**：Claude Meetings 通話中建立的 artifact 至 **2027-02-10** 前免費（[官方說明](https://claude.com/resources/articles/claude-meetings)）
+  - **方案範圍**：Pro／Max／Ultra／Team／Enterprise 的 beta；Team 預設開啟，Enterprise 需管理員開啟
+- **usage credits 到期規則（官方說明中心 [Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-14 查證）**：**2026-12-07 之前買的不會到期**；該日起買的在購買日後 **12 個月**到期，到期未用的從餘額移除
+  - 🔎 **查無官方**（標 2026-11-07｜查 usage credits、Japan、expiration｜複 2026-12-12）：官方只寫「部分國家到期日可能不同」「某些司法管轄區到期日有別」，**未點名日本、未載 6 個月數字**，細節指向 [Consumer Credit Terms](https://www.anthropic.com/legal/consumer-credit-terms)（本輪未逐條讀該條款）
 - **✅ 2026-11-06 官方定價文件新增｜web search 用量計費規則補充**：每次 web search 使用只算一次，不論回傳結果數；執行過程中出錯的 web search 不計入用量。同批自頁面移除 Claude Haiku 3.5 定價列（來源：[官方定價文件](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測，2026-11-06）
 - **✅ 2026-10-30 官方定價頁新增｜Enterprise／API 可依用量與承諾支出談客製折扣**：官方 Plans & Pricing 頁新增問答，載明 Enterprise 與 API 定價可依用量與承諾支出（committed-spend）客製化、提供數量折扣；具體折扣門檻與幅度未公開，需洽業務（來源：[claude.com/pricing](https://claude.com/pricing)，diff 偵測，2026-10-30）
 - **✅ 2026-10-16 查證｜Fast mode 不再標記「research preview」**：官方定價頁拿掉「in research preview」字樣，價格數字不變（來源：[官方定價頁](https://platform.claude.com/docs/en/about-claude/pricing)，diff 偵測）

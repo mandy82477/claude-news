@@ -7,11 +7,11 @@ last_updated: "2026-10-31"
 last_news_update: "2026-10-23"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 21
+days_since_news: 22
 parent: null
 children: "['entities/managed-agents']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 2
 inbound_links: 15
 attribution_count: 4
 attribution_last: "2026-09-10"
@@ -31,8 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 追蹤頁
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-10-31
-**最後新聞更新：** 2026-10-23
+**最後更新：** 2026-11-14
+**最後新聞更新：** 2026-11-12
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。

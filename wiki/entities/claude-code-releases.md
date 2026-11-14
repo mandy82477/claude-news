@@ -7,11 +7,11 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-11-13"
 last_news_update: "2026-11-13"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 7
 attribution_count: 15
 attribution_last: "2026-11-13"
@@ -33,7 +33,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
@@ -45,9 +45,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 現在該跟哪條
 
-- **stable＝2.1.309、latest＝2.1.316**（npm dist-tags，查證 2026-11-01），差 7 個版號。
+- **stable＝2.1.311、latest＝2.1.325**（npm dist-tags，查證 2026-11-14），差 14 個版號。
 - **沒用 Opus 4.8 fast mode，stable 已夠**：危險 `rm` 的兩道修正（2.1.287／288）與 bypass 模式改直接拒絕（2.1.309，限 Desktop 與 VS Code）都在 stable 裡。
-- **要這些才需要 latest**：Monitor tool（2.1.310）、`blockWritesOutsideWorkingDirectories`（2.1.314，預設關）。
+- **要這些才需要 latest**：`blockWritesOutsideWorkingDirectories`（2.1.314，預設關）。**Monitor tool（2.1.310）已隨 stable 升到 2.1.311 進入 stable**，不再需要 latest。
 - **升版會改到既有行為的**：破壞性變更與預設值改變見 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]。
 
 ## 發布通道（stable／latest）

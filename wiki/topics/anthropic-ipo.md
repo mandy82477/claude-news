@@ -3,14 +3,14 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 94
 attribution_count: 94
 attribution_last: "2026-11-13"
@@ -31,7 +31,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **最新動態**（2026-11-13）
@@ -250,7 +250,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **2026-09-19 IPO 追求與安全警訊的對比敘事**：The New York Times 報導 Anthropic 積極籌備 IPO，儘管公司過去屢次就 AI 安全發出警訊，形成立場對比；未見新增估值數字、時程或承銷細節，屬敘事框架報導而非新資料點（Google News/The New York Times）。
 - **2026-09-11 Nvidia 洽談入股 IPO**：Reuters 獨家引述消息人士稱 Nvidia 正洽談投資 Anthropic 規劃中的 IPO，尚未定案；具體金額、股權比例、是否確定參與均未見報導，僅標題可用（Google News/Reuters）。
 - **掛牌日與價格區間（2026-11-14 查證結案）**：11-10 官方路演公告載明價格區間 $70～78；[官方 IPO 頁](https://ipo.anthropic.com/us/)載明預計 11-18 定價、11-19 開始交易，需主管機關核准。
-  - **11-10 更新**：官方路演公告載明股數與價格區間（價格區間 $70～78 另見 CNBC），掛牌日仍僅見消息人士說法。
+  - **11-10 更新**：官方路演公告載明股數與價格區間（價格區間 $70～78 另見 CNBC）；當時掛牌日僅見消息人士說法，後由官方 IPO 頁補齊（見上）。
   - **10-26 以前**官方只確認過 2026-06-01 機密送交 S-1 草案；「十月上市」「延後」「路演」都是媒體推估且彼此不一致，兩邊都不採信為事實。
   - **矛盾已偏向前者**：09-07 Forbes、09-08 Financial Times 與 Yahoo Finance 三家均稱延至十月，ETF Trends 一說未獲後續報導支持。仍無官方確認，兩家原文均未能取得。
 - **訊 2026-09-07 追蹤**：Forbes 報導 IPO 延至 10 月中，同步鎖定 $150 億信用額度（此前 08-18 報導規模為「逾 100 億」，本次更具體）；仍為單一媒體來源，未見官方確認，詳見「五列判讀表」表。
@@ -332,7 +332,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 
 #### 2026-11-12
 - **[IPO 財務] 官方 IPO 頁：Q3 營收 $170 億、$10 萬以上客戶逾 11,900 家、調整後營業利益率 15%、淨損 $233 億**：HN 641 分；營收與 11-02 修訂版 S-1 同數，客戶數為新指標，明細見 [[#數字細節]]（官方 IPO 頁；Hacker News）
-- **[IPO 時程，僅標題可用] Yahoo Finance：Claude 開發商將於 11-19（週四）開始交易**：日期與 CNBC 11-10 消息人士說法相同，官方未載（Google News/Yahoo Finance）
+- **[IPO 時程，僅標題可用] Yahoo Finance：Claude 開發商將於 11-19（週四）開始交易**：日期與 CNBC 11-10 消息人士說法相同，並與官方 IPO 頁的預計 11-19 開始交易一致（2026-11-14 查證，見上方「掛牌日與價格區間」；Google News/Yahoo Finance）
 - **[IPO 申購，僅標題可用] Economic Times：約 $64 billion 的發行，印度投資人能否申購**；CNBC（11-11）稱 Anthropic 開放澳洲零售發行（Google News）
 - **[IPO 前瞻，僅標題可用] Bloomberg：輝達對 Anthropic IPO 承諾的 $100 億美元成焦點，並與一位 CEO 離任並列**：承諾形式與離任者身分標題未載（Google News/Bloomberg.com）
 - **[IPO 前瞻，僅標題可用] 評論與框架報導**：Bloomberg 稱 Anthropic 是 AI 交易的試金石；Fast Company 稱 IPO 可能讓 OpenAI 處於劣勢。

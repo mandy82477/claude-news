@@ -1,17 +1,17 @@
 ---
 page: "topics/market-lessons"
 kind: "topic"
-status: "ongoing"
+status: "monitoring"
 domain: "💼 商業"
-last_updated: "2026-10-31"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-22"
 update_freq: "🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）"
-status_main: "ongoing"
-days_since_news: 22
+status_main: "monitoring"
+days_since_news: 23
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 22
+days_since_news_subtree: 23
 inbound_links: 11
 attribution_count: 0
 attribution_last: null
@@ -26,11 +26,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # 投資判讀教材（週更）
 
-**狀態：** ongoing
+**狀態：** monitoring
 **領域：** 💼 商業
 **更新頻率：** 🗓️ 週更（每週從 [[topics/market-signals]] 的判讀與結算沉澱一次；更新日期停留數天屬正常節奏）
 **開始日期：** 2026-09-12
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-22
 
 > ⚠️ **教學型事件研究，非投資建議**

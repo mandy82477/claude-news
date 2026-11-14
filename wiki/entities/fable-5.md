@@ -7,16 +7,16 @@ domain: "🤖 模型"
 last_updated: "2026-11-11"
 last_news_update: "2026-11-11"
 status_main: "active"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 71
 attribution_count: 57
 attribution_last: "2026-11-11"
 top_source: "google-news"
-pending_count: 5
+pending_count: 8
 pending_overdue: 1
 pending_next_review: "2026-11-23"
 pending_signalled: 1
@@ -33,7 +33,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-11
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-11
 
 > **從 5.1 升 5.2 先對照四項破壞性變更**（2026-11-11）
@@ -51,7 +51,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 ## 下一代模型傳聞彙整
 
-三則關於下一代 Claude 模型的訊號：其中「更強、對齊更好的未發布模型」已於 2026-11-08 由 Anthropic 研究文證實存在，另兩則官方仍未證實（單一來源、互動數近 0）；原回查日 2026-10-25，官方頁面 11-08 補查。
+三則關於下一代 Claude 模型的訊號：其中「更強、對齊更好的未發布模型」已於 2026-11-08 由 Anthropic 研究文證實存在，另兩則官方查無對應頁面（見下方兩筆 🔎 標記；單一來源、互動數近 0）；原回查日 2026-10-25，官方頁面 11-08 補查。
 
 - **Fable 5.5 下週發布**：TestingCatalog 2026-10-17 稱官方下週發布，可信度低（單一來源、無日期規格定價）；截至 10-24 無官方公告或第二來源。細節見「歷史記錄」2026-10-18。
 - **「更強、對齊更好」的未發布模型（官方證實）**：Anthropic 2026-10-23 研究文自述有一款未命名內部研究模型，能力高於 [[entities/mythos|Mythos 5.1]]，並在英國 AISI 網安評測中攻擊進行時自發停手 67%（Opus 5.5 為 10%）。
@@ -73,10 +73,15 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 | 現在誰是預設 | 否，Claude Code v2.1.321 起改預設 5.2 | 是——Claude Code v2.1.321 起 Fable 預設即 5.2 | [GitHub `v2.1.321`](https://github.com/anthropics/claude-code/releases/tag/v2.1.321)（2026-11-09）|
 | 牌價（輸入／輸出，每百萬 token）| $10 ／ $50 | $8 ／ $40（降 20%）| GitHub `v2.1.321` changelog（2026-11-09）|
 | 快取讀取 | 基礎輸入價 ×0.025（$0.25）| $0.20／Mtok（＝基礎輸入價 2.5%，同比例延續 5.1；換算非官方原文用語）| GitHub `v2.1.321` changelog（2026-11-09）|
-| 知識截止 | 2026-06 | ❓ 待查證（標 2026-11-09｜查官方模型總覽頁）| 今日來源未載 |
-| 會不會停掉 | 退役不早於 2027-09-01（沿用既有查證值，待官方新公告更新 Legacy 退役日） | ❓ 待查證（標 2026-11-09｜查官方模型總覽頁）| 今日來源未載 |
+| 知識截止 | 2026-06 | ❓ 待查證 ⟨Q-05⟩ | 今日來源未載 |
+| 會不會停掉 | 退役不早於 2027-09-01（沿用既有查證值，待官方新公告更新 Legacy 退役日） | ❓ 待查證 ⟨Q-06⟩ | 今日來源未載 |
 | 官方推薦拿它做什麼 | 同右（官方已改推 5.2）| 官方稱設計用於應對最艱鉅技術挑戰，coding／reasoning／vision 均有改善；prerelease 期間協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題 | [Anthropic 官方發布文](https://www.anthropic.com/claude-fable-and-mythos-5-2)（2026-11-09）|
 | 我的方案能不能用 | 同右，Pro／Max／Ultra／Team／Enterprise 皆列入付費方案範圍 | Pro／Max／Ultra／Team／Enterprise 全數列入付費方案範圍；API 走標準費率 | [官方說明中心](https://support.claude.com/en/articles/15424964-claude-fable-5-on-your-plan)（2026-11-09）→ [[entities/pricing]] |
+
+**懸置細節**
+
+- ⟨Q-05⟩ ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、knowledge cutoff）｜**Fable 5.2 知識截止日**：發布文與 GitHub changelog 未載；官方頁面未查證。
+- ⟨Q-06⟩ ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、deprecation）｜**Fable 5.2 退役日**：發布文與 GitHub changelog 未載；官方頁面未查證。
 
 **表下細節**
 
@@ -88,7 +93,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
   3. `computer_20251124` 工具除 Bedrock 外都回 400，要改宣告 `computer_toolset_20260801`。
   4. advisor 工具（beta）：5.2 executor 只接受 Fable 5.2 或 Mythos 5.2 當 advisor。
 - **行為變更（同指南）**：要它「直接回答別多想」的提示行，在 `medium` effort 以上擋不住思考，要改降 effort；`xhigh`／`max` 時會自己開子 agent 審查，成本會上升；`max_tokens` 太小可能只剩思考沒有正文。
-- **Context 與輸出長度**：GitHub changelog 未提及是否變動，1M context 沿用前代（128K 最大輸出官方未在今日來源重申，待查證）。
+- **Context 與輸出長度**：GitHub changelog 未提及是否變動，1M context 沿用前代。❓ **待查證**（標 2026-11-09｜查 Fable 5.2、128K）｜**Fable 5.2 最大輸出長度**：128K 官方未在 11-09 來源重申；官方頁面未查證。
 - **Fable 5（已退出本表）**：仍為 Legacy，退役不早於 2027-06-09，見「爭議」與「歷史記錄」。
 - **5.1 新增反萃取（anti-distillation）機制**，防止他人萃取權重或行為訓練競品（官方 2026-09-01 公告）；5.2 是否延續同機制，官方未在今日來源重申。
 

@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 
 > **本日新增重大發布**（2026-11-09）
 > Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
@@ -906,7 +906,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code HIPAA-ready 組織本地模式部署**（Enterprise HIPAA 組織，Desktop／Cloud sessions 管理開關） | 2026-10-05 | 🔥 | ⏳ 觀望 | 正式發布（Enterprise HIPAA 組織） |
 | **Claude Code v2.1.288**（`/code-review --max-findings`、`claude purge`；修正 `bash -c` 包住危險 `rm` 繞過檢查） | 2026-10-02 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Mods**（外掛可修改 Claude Code 更深層行為；v2.1.287 GA，內建示範 mod「You should know」） | 2026-10-01 | 🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Claude Code v2.1.285**（關閉 WebFetch 的 `CLAUDE_CODE_DISABLE_WEB_FETCH`；`claude --desktop` 指令；企業 API 供應商限制） | 2026-09-29 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Sonnet 5.5 成為 API 預設 Sonnet 模型**（v2.1.284，取代 Sonnet 5；模型本身見 [[entities/sonnet-5-5]]） | 2026-09-28 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **x-claude-code-prompt-id 閘道提示標頭**（v2.1.283，LLM gateway 依使用者提示分組請求；`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1` 選擇加入） | 2026-09-25 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **maxProseWidth 設定**（v2.1.282，限制寬終端機散文寬度） | 2026-09-24 | 🔥 | ⏳ 觀望 | 正式發布 |
@@ -943,9 +943,9 @@ npm install @anthropic-ai/sdk@0.123.0
 | **Claude Code v2.1.232**（Subagent forking 預設開啟，`subagent_type: "fork"` 繼承完整對話與 prompt cache；派工行為亦調整，原文截斷） | 2026-08-13 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Desktop Code 分頁「額度重置後自動續行」**（v2.1.225–233，Desktop 限定 opt-in，回應 issue #13354） | 2026-08-10 | 🔥 | ⚡ 有條件推薦 | 正式發布（Desktop 限定）|
 | **Claude Code v2.1.224**（新增 `claude self-hosted-runner`，可把自有機器或容器變成 web／mobile／desktop session 執行環境，Team／Enterprise 適用） | 2026-08-07 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **API Inference Hooks**（Enterprise 組織 beta，claude.ai／Cowork／Claude Code 上受管治 prompt 可導向企業自有 AI 安全伺服器） | 2026-08-05 | 🔥 | ⏳ 觀望 | Beta（Enterprise） |
+| **API Inference Hooks**（受管治 prompt 可導向企業自有 AI 安全伺服器；11-05 官方 Help Center 已列入 Enterprise 功能） | 2026-08-05 | 🔥 | ⚡ 有條件推薦（限 Enterprise） | 官方文件已載（Enterprise） |
 | **Claude Code v2.1.222**（安全修復：worktree 隔離 session 及其 subagent 可對主 checkout 執行破壞性 git 指令的漏洞，隔離範圍擴及檔案編輯與 Bash 執行） | 2026-08-04 | 🔥 | ✅ 建議升級 | 正式發布（安全修復） |
-| **Claude Code v2.1.221**（VSCode 新增 Focus view：chat-menu 切換選項，將工具活動摺疊為可展開的每輪摘要並附即時執行指示，`Ctrl+Alt+F` 開關） | 2026-08-04 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Claude Code v2.1.221**（VSCode Focus view：工具活動摺疊為每輪摘要，`Ctrl+Alt+F`；08-04 公告後未見後續，掃至 11-14） | 2026-08-04 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Opus 5**（新次旗艦，`--model` 可選；$5/$25 與 4.8 同價、為 Fable 5 一半；Max／Team premium／API 的預設 Opus） | 2026-07-25 | 🔥🔥🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude 語音模式 Opus／Sonnet 選擇**（所有使用者開放於 Opus／Sonnet 間切換語音模式底層模型，六家媒體同步報導，無官方版本號） | 2026-07-24 | 🔥 | ⚡ 有條件推薦 | 正式發布（全使用者開放） |
 | **API 新增 Stop Reason `model_continue`**（SDK v0.119.0／v0.114.0）（2026-07-23 公告，此後未見後續報導） | 2026-07-23 | 🔥 | ⏳ 觀望 | 正式發布（SDK 層） |
@@ -997,7 +997,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **`claude agents --json`**（v2.1.145） | 2026-05-20 | 🔥 | ✅ 推薦 | 正式發布 |
 | **自架沙箱 + MCP 隧道**（完整文件） | 2026-05-22 | 🔥 | ⚡ 有條件推薦 | 公開測試 |
 | **`/resume` 背景 session 擴展**（v2.1.144） | 2026-05-19 | 🔥 | ✅ 推薦 | 正式發布 |
-| **Proactive Workflows**（2026-05-18 公告；官方以 scheduled tasks（原 Routines）落地，見 [[entities/managed-agents]]） | 2026-05-18 | 🔥 | ⏳ 觀望 | scheduled tasks 研究預覽 |
+| **Proactive Workflows**（官方以 scheduled tasks 落地，見 [[entities/managed-agents]]；在等它轉 GA，官方未給時程，掃至 11-14） | 2026-05-18 | 🔥 | ⏳ 觀望 | scheduled tasks 研究預覽 |
 | **Capability Curve**（Code w/ Claude 演講主題，非產品功能，見 [[entities/managed-agents]]）（2026-05-18 公告，此後未見後續報導） | 2026-05-18 | 🔥 | ⏳ 觀望 | 演講主題 |
 | **Plugin 依賴關係強制執行**（v2.1.143） | 2026-05-16 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`claude agents` 細粒度旗標**（v2.1.142） | 2026-05-14 | 🔥 | ⚡ 有條件 | 正式發布 |
@@ -1013,7 +1013,7 @@ npm install @anthropic-ai/sdk@0.123.0
 | **MCP `alwaysLoad`** | 2026-04-28 | 🔥 | ✅ 推薦 | 正式發布 |
 | **`worktree.baseRef` 設定** | 2026-05-08 | 🔥 | ⚡ 有條件 | 正式發布 |
 | **Claude Design** | 2026-04-27 | 🔥 | ❌ 暫不推薦 | 正式發布 |
-| **Dreaming 記憶整合**（最後後續 2026-07-17：Python SDK 0.117.0 新增 dreaming API 支援；已掃日報至 2026-10-30 無新後續，尚無採用回報） | 2026-05-07 | 🔥 | ⏳ 觀望 | Research Preview |
+| **Dreaming 記憶整合**（最後後續 2026-07-17：Python SDK 0.117.0 新增 dreaming API 支援；已掃日報至 2026-11-14 無新後續，尚無採用回報） | 2026-05-07 | 🔥 | ⏳ 觀望 | Research Preview |
 | **Outcomes 規格驗證** | 2026-05-07 | 🔥 | ⚡ 有條件 | 公開測試 |
 
 ---

@@ -6,17 +6,17 @@ domain: "🌐 社群"
 last_updated: "2026-11-09"
 last_news_update: "2026-11-09"
 status_main: "ongoing"
-days_since_news: 4
+days_since_news: 5
 parent: null
 children: "['topics/code-quality-decline-archive']"
 page_role: "hub"
-days_since_news_subtree: 4
+days_since_news_subtree: 5
 inbound_links: 44
 attribution_count: 50
 attribution_last: "2026-11-09"
 top_source: "reddit"
-pending_count: 0
-pending_overdue: 0
+pending_count: 1
+pending_overdue: 1
 pending_next_review: null
 pending_signalled: 0
 staleness_exempt: null
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-09
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-09
 
 > **「Opus 5.5 被削弱」彙整文登 HN，匯整多篇 Reddit 投訴，仍無官方或量化佐證**（2026-11-09）
@@ -189,7 +189,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **這件事會改到你的成本估算**：[[topics/model-comparison]] 的實付成本換算假設你跑在你選的模型上，而 #46221 記錄的正是「選定狀態無法保持」。在那頁做模型或 context 的成本比較之前，先確認釘選成不成立。
 
-**同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。單一使用者回報、無官方確認，待查證標記見 [[entities/claude-code]]（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。
+**同類但標的不同：effort 也不保証（2026-09-24）**：Reddit 貼文稱 Opus 5 預設 effort 在 CLI 版本未更新下疑似悄悄調高，作者以自建 33 題基準測試佐證，籲測試時 `--effort` 釘住等級；與上述四項同屬「你宣告的設定不被保証」，標的是 effort 而非模型版本，且為首見「疑似上調」（既有訊號多為疑降）。單一使用者回報、無官方確認。❓ **待查證**（標 2026-09-24｜查 1wp462o、default effort）｜**Opus 5 預設 effort 是否悄悄上調**（2026-09-24 Reddit 貼文）：已掃日報至 2026-11-13 無後續；官方頁面未查證；相關狀態見 [[entities/claude-code]]（[Reddit 原文](https://www.reddit.com/r/ClaudeCode/comments/1wp462o/claude_codes_default_effort_for_opus_5_went_up/)）。
 
 ---
 

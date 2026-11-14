@@ -6,18 +6,18 @@ domain: "🌐 社群"
 last_updated: "2026-11-07"
 last_news_update: "2026-11-07"
 status_main: "ongoing"
-days_since_news: 6
+days_since_news: 7
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 6
+days_since_news_subtree: 7
 inbound_links: 6
 attribution_count: 16
 attribution_last: "2026-11-07"
 top_source: "github"
-pending_count: 0
+pending_count: 1
 pending_overdue: 0
-pending_next_review: null
+pending_next_review: "2026-11-16"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-07
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-07
 
 > **官方首次公開 agent 記憶設計框架：編碼—整併—取回**（2026-11-07）
@@ -107,7 +107,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **主線：** Context 管理
 - **核心模式：** 在本機沙箱執行工具呼叫，輸出改存 SQLite 並建 FTS5 全文索引，agent 只拿到搜尋結果而非整段輸出，稱可讓進 context 的位元組減少 99%；相容 Claude Code、Codex 等 10 款以上 agent。
 - **與既有模式的關係：** 補上「Context 管理」既有代表技巧（Just-in-Time @-file、Repo-as-Memory 等，[[topics/community-memory#2026-10]]）一個 sandbox＋全文索引取代整段工具輸出的實作；主線填 Context 管理。
-- **可信度註記：** 查核 git commit 記錄：2026-02-23～06-29 有十餘位具名貢獻者、逾 1,400 筆真人 commit，非單一帳號灌水；但 2026-06-29 後至今僅剩 GitHub Actions 機器人每日自動提交「update install stats」，無任何真人 commit，近期維護活躍度存疑；forks／issues 本次無 API 權限，未查。
+- **可信度註記：** 查核 git commit 記錄：2026-02-23～06-29 有十餘位具名貢獻者、逾 1,400 筆真人 commit，非單一帳號灌水；但 2026-06-29 後至今僅剩 GitHub Actions 機器人每日自動提交「update install stats」，無任何真人 commit；forks／issues 本次無 API 權限，未查。
+- ❓ **待查證**（標 2026-11-02｜查 mksglu、context-mode）｜**近期維護活躍度**：僅機器人提交、無真人 commit；已掃日報至 2026-11-13 無後續；官方頁面未查證。
 - **來源：** GitHub Search；[GitHub](https://github.com/mksglu/context-mode)
 - **成熟度：** ⏳ 新興（本庫今日首次收錄；曾有真實多人開發期，近 4 個月僅自動化提交，採用規模與維護現況待觀察）
 

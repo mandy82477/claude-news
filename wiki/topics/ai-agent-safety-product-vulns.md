@@ -3,21 +3,21 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 22
 attribution_count: 58
 attribution_last: "2026-11-13"
 top_source: "google-news"
-pending_count: 22
-pending_overdue: 5
-pending_next_review: "2026-11-14"
+pending_count: 23
+pending_overdue: 7
+pending_next_review: "2026-11-17"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"
@@ -31,7 +31,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
@@ -156,7 +156,8 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **揭露來源**：Google News／CyberSecurityNews（11/06 12:52 UTC）、The Hacker News（經 Google News，11/06 12:06 UTC），兩家媒體同日各自報導，互動均為 0
 - **核心主張（僅標題可用）**：兩家媒體報導 Claude Dispatch 安全缺陷的具體攻擊鏈——惡意瀏覽器外掛可藉此在已連接的電腦上執行程式碼；承接 11-05 The Register 揭露的「官方確認但不修補」，本次補上觸發機制，惟是否已有在野攻擊案例、受影響版本範圍均未見報導
 - **你能先做什麼**：在企業環境啟用 Claude Dispatch 跨裝置功能的管理者，優先檢查已連接裝置上的瀏覽器外掛來源
-- **可信度評估**：僅標題層級可用，兩家媒體同日各自報導同一事實，惟均未見官方對此攻擊鏈的確認或回應
+- ❓ **待查證**（標 2026-11-06｜查 Claude Dispatch、The Register）｜**Dispatch 攻擊鏈的官方確認、在野案例與受影響版本**（2026-11-06 報導）：已掃日報至 2026-11-13 無後續；官方頁面未查證
+- **可信度評估**：僅標題層級可用，兩家媒體同日各自報導同一事實
 - Dataconomy（11/06 10:00 UTC）同日另以「官方放任缺陷不修」角度報導同一事件，與 The Register 11-05 說法一致，未補充新事實
 
 #### Hacker News／GitHub Issue #107757：Claude Code 以 User-Agent 夾帶使用者 email 再度引爆熱議（2026-11-05～06 新增，升級既有 08-11 #78431 條目）

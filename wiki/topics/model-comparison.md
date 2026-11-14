@@ -6,18 +6,18 @@ domain: "🤖 模型"
 last_updated: "2026-11-11"
 last_news_update: "2026-11-11"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 55
 attribution_count: 25
 attribution_last: "2026-11-11"
 top_source: "reddit"
-pending_count: 0
-pending_overdue: 0
-pending_next_review: null
+pending_count: 2
+pending_overdue: 1
+pending_next_review: "2026-11-23"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
@@ -28,7 +28,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🤖 模型
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-11
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-11
 
 > **Fable 5.2 升級有遷移項，Gemini 4 Carbon 開放**（2026-11-11）
@@ -56,7 +56,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 選型細節
 
-- **Fable 5.2**（2026-11-09 取代 5.1）：定位沿用前代 long-running agents／deep reasoning／安全漏洞分析，5.2 官方選型文件待查證；不適合日常短任務（改 Sonnet 5.5）或前沿 LLM 開發。存取與定價見 [[entities/fable-5]]、[[entities/pricing]]。
+- **Fable 5.2**（2026-11-09 取代 5.1）：定位沿用前代 long-running agents／deep reasoning／安全漏洞分析；不適合日常短任務（改 Sonnet 5.5）或前沿 LLM 開發。存取與定價見 [[entities/fable-5]]、[[entities/pricing]]。
+  - ❓ **待查證**（標 2026-11-09｜查 Fable 5.2、models overview）｜**Fable 5.2 官方選型文件**：發布當日來源未帶選型指引；官方頁面未查證。
 - **Opus 5.5**（2026-09-23 取代 Opus 5）：比日常大一級、不到跨多天；不適合日常規模開發（改 Sonnet 5.5）或跨多天極長任務（改 Fable 5.2）。官方基準表全項優於 Fable 5.1（2026-09-25 查證，5.2 尚無同口徑對照），見 [[entities/opus-5-5#這些數字是誰量的]]。
 - **Opus 5（已被取代）**：僅適合尚未遷移者的既有工作流延續，官方改列 Legacy，新採用一律改用 Opus 5.5。見 [[entities/opus-5]]。
 - **Sonnet 5.5**（2026-09-28 取代 Sonnet 5）：官方稱「界定清楚的日常任務」首選；TB 4.0 由 10.3%→70.6%（官方，2026-09-28）。CLI 是否同步預設見 [[entities/sonnet-5-5]]。不適合跨數十檔 refactor（改 Opus 5.5）或延遲敏感批量（改 Haiku 5.5）。
@@ -122,8 +123,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Sonnet 5 | 新 +30% | 130K + 6.5K | $0.33 | 2.6× |
 | Sonnet 4.6 | 舊 | 100K + 5K | $0.38 | 3× |
 | Opus 4.6（非可選項，換代前基準線） | 舊 | 100K + 5K | $0.63 | 5× |
-| Opus 5.5 | 新 +30%（沿用 Opus 5 起的 tokenizer，官方未載變動） | 130K + 6.5K | $0.65 | 5× |
+| Opus 5.5 | 新 +30%（沿用 Opus 5 起的 tokenizer）❓ 待查證 ⟨Q-01⟩ | 130K + 6.5K | $0.65 | 5× |
 | Fable 5 | 新 +30% | 130K + 6.5K | $1.63 | 13× |
+
+**懸置細節**
+
+- ⟨Q-01⟩ ❓ **待查證**（標 2026-09-23｜查 Opus 5.5、tokenizer）｜**Opus 5.5 的 tokenizer 增幅**：沿用 Opus 5 起的 tokenizer、+30% 為換算假設，Opus 5.5 專屬增幅官方未載；官方頁面未查證。
 
 **兩個只有換算後才看得出來的結論：**
 

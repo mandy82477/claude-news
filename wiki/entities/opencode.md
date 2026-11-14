@@ -4,14 +4,14 @@ kind: "entity"
 type: "product"
 status: "active（快速成長）"
 domain: "💼 商業"
-last_updated: "2026-10-31"
+last_updated: "2026-11-14"
 last_news_update: "2026-10-19"
 status_main: "active"
-days_since_news: 25
+days_since_news: 26
 parent: null
 children: "['entities/opencode-archive']"
 page_role: "hub"
-days_since_news_subtree: 25
+days_since_news_subtree: 26
 inbound_links: 8
 attribution_count: 1
 attribution_last: "2026-10-19"
@@ -30,17 +30,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（快速成長）
 **領域：** 💼 商業
 **首次出現：** 2026-04-27
-**最後更新：** 2026-10-31
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-10-19
 
 > **最新動態**（2026-10-19）
-> 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；11-08 查證官方（狀態頁、GitHub）未載此事，僅 10-17 起的 Console 資安事件有跡可循，賠償方案亦未公布。
+> 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零；11-08 查證官方（狀態頁、GitHub）查無此事紀錄，僅 10-17 起的 Console 資安事件有跡可循，賠償方案亦未公布。
 
 ---
 
 ## 現況
 
-**最新動態（2026-10-19）：** 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零，36Kr 稱官方仍在搶修、尚未公告賠償或復原時程，僅標題可用（36Kr，單一來源；官方未證實，見下）。🔎 **查無官方**（標 2026-10-19｜查 [[entities/opencode]]、帳戶餘額歸零｜複 2026-11-29）｜**「餘額歸零」當機事故官方未載**：2026-11-08 查證，OpenCode 狀態頁（[status.opencode.ai](https://status.opencode.ai)）與 GitHub issues 均無餘額歸零或當機公告，歸零一說僅 36Kr 單一來源；同期可確認的是 10-17 起的 Console 資安事件（媒體稱影響約 1.4% 使用者、建議輪換供應商金鑰），GitHub 上有使用者反映官方未公布賠償政策（[issue #56833](https://github.com/anomalyco/opencode/issues/56833)，使用者自述）。
+**最新動態（2026-10-19）：** 36Kr 報導 OpenCode 發生重大當機危機，使用者反映 GPT 與 Claude 帳戶餘額一覺醒來遭歸零，36Kr 稱官方仍在搶修、尚未公告賠償或復原時程，僅標題可用（36Kr，單一來源；官方側結果見下方標記）。🔎 **查無官方**（標 2026-10-19｜查 [[entities/opencode]]、帳戶餘額歸零｜複 2026-11-29）｜**「餘額歸零」當機事故是否發生**：2026-11-08 查證，OpenCode 狀態頁（[status.opencode.ai](https://status.opencode.ai)）與 GitHub issues 均無餘額歸零或當機公告，歸零一說僅 36Kr 單一來源；同期可確認的是 10-17 起的 Console 資安事件（媒體稱影響約 1.4% 使用者、建議輪換供應商金鑰），GitHub 上有使用者反映官方未公布賠償政策（[issue #56833](https://github.com/anomalyco/opencode/issues/56833)，使用者自述）。
 
 同一波事件中存放在 OpenCode 的 OpenAI、Anthropic、Google API 金鑰外洩風險，與其他第三方平台憑證事件並看，見 [[topics/ai-agent-safety-product-vulns]]，攻擊面總覽見 [[topics/ai-agent-safety]]。
 

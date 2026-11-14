@@ -4,19 +4,19 @@ kind: "entity"
 type: "person"
 status: "active"
 domain: "👤 人物"
-last_updated: "2026-11-08"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-08"
 status_main: "active"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 11
 attribution_count: 1
 attribution_last: "2026-11-08"
 top_source: "google-news"
-pending_count: 2
+pending_count: 3
 pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
@@ -34,11 +34,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 工程產品
 **為何追蹤：** 談 Claude Code 如何改變工程師工作型態的具名發言人
 **首次出現：** 2026-06-23
-**最後更新：** 2026-11-08
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-08
 
-> **待查證**（2026-11-08）
-> TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選，尚待確認是否為本人。
+> ❓ **待查證**（標 2026-11-08｜查 skills get lost、take responsibility）｜**AI 程式碼責任論述候選發言人**：TechRadar 稱匿名「Anthropic 資深工程師」主張人類須為 AI 程式碼負責、過度依賴流失技能；未具名，與 [[entities/boris-cherny]] 同列候選。已掃日報至 2026-11-13 無後續；官方頁面未查證。
 
 ---
 

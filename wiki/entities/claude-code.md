@@ -8,18 +8,18 @@ last_updated: "2026-11-13"
 last_news_update: "2026-11-13"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 0
+days_since_news_subtree: 1
 inbound_links: 127
 attribution_count: 853
 attribution_last: "2026-11-13"
 top_source: "github-issues"
 pending_count: 6
-pending_overdue: 0
-pending_next_review: "2026-11-14"
+pending_overdue: 2
+pending_next_review: "2026-11-20"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"
@@ -32,7 +32,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **最新動態**（2026-11-13）
@@ -77,8 +77,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.323**（2026-11-12）；npm `stable`＝2.1.309、`latest`＝2.1.316（查證 2026-11-01）。
-- **該不該升**：沒用 Opus 4.8 fast mode，留在 stable 就夠；要 Monitor tool 或寫入邊界設定才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
+- 最新 **v2.1.325**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
+- **該不該升**：**Monitor tool 已進 stable**（2.1.310），沒用 Opus 4.8 fast mode 的人留在 stable 就夠；只有要寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
 
