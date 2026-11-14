@@ -507,6 +507,16 @@
       "pageType": "topic"
     },
     {
+      "id": "community-large-codebase-workflow",
+      "name": "大型 Codebase 規模化開發：社群工作流主線",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-pattern-trends",
+      "name": "社群趨勢觀察（週更）",
+      "pageType": "topic"
+    },
+    {
       "id": "community-skills",
       "name": "社群做法：Skills 怎麼寫",
       "pageType": "topic"
@@ -514,6 +524,11 @@
     {
       "id": "community-tech-discussions",
       "name": "社群技術討論趨勢",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-tools",
+      "name": "社群工具目錄",
       "pageType": "topic"
     },
     {

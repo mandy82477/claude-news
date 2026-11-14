@@ -9034,3 +9034,12 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - **#4 母頁 300 行看守只覆蓋 patterns 樹**——實測 `entities/pricing` 正文已 **314 行**、破線且無任何訊號
   - **#15 `features/pages.md` 漏登記旗標前綴硬契約**——破了會讓 `build_flags_mentions.py` 整支 exit 2，而錯誤訊息會把原因誤報成「階欄要 1–4 單一數字」，記者會去改一個沒壞的欄
 - `lint_health.py misses` 登記：本輪已登 3 筆（見步驟 8「漏抓帳」）。C 的 20 項**不另登 misses**——它們是「對抗輪本來就該抓的、而既有檢查器設計上抓不到」的類型（reviewer 已逐項附 grep 證明現行檢查器為何漏掉），登了會把 misses 帳本灌成規則債清單；真正該登的是「既有檢查器本該抓到卻沒抓到」的那三筆。下次本機修完 #1／#2／#3 後，若判定某項其實該有機械看守，再補登。
+
+### 2026-11-14 Lint 補記：渲染層驗收（步驟 10 的 3b）
+
+雲端無瀏覽器，依條文改讀 build 產物，查本輪**改動最多的 2 頁**（以 `git diff --numstat` 自開跑 commit 起算）：
+
+- **`topics/community-tech-tools`（本輪 208 行增刪，最多）** → `web_reader/data/wiki/community-tech-tools.json`（55 KB）：本輪改動的段落全部出現在產物中——6g 死鏈處置後的 `headcount`／`skilldock` 兩列與「已不在上表」說明句 ✅、5k 策展新增的 `context-mode`／`claim-check` ✅。**`%% … %%` 維運備忘已被建置剝除**（「移出理由…」那行不在產物裡）✅
+- **`overview`（145 行增刪）** → `web_reader/data/wiki/overview.json`（8 KB）：整頁重寫後的關鍵事實全在產物中——`Fable 5.2` ✅、`Claude Dispatch` ✅、`2.1.311` ✅、`usage credits` ✅、模型表的 `Active (legacy)` ✅。備忘剝除 ✅
+
+兩頁皆無表格爆版、無 wikilink 變裸字串、無懸置標記被解析器吞掉的跡象。`build_web.py` 輸出：`OK: 85 entities, 59 topics, 199 digests, 16 weekly reports + radar`、144 個 wiki 產物檔。

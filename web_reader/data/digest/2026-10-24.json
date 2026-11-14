@@ -412,11 +412,6 @@
       "id": "claude-tag",
       "name": "Claude Tag",
       "pageType": "entity"
-    },
-    {
-      "id": "community-pattern-trends",
-      "name": "社群趨勢觀察（週更）",
-      "pageType": "topic"
     }
   ],
   "reader": {
