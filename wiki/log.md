@@ -9061,3 +9061,4 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 分類回退：無
 - 轉知：本輪開立 H-75139f（社群→功能，4 個新社群工具節點＋Projects 改版，評估 official-community-gap 產品化矩陣新增列），本輪結案 0 筆、void 1 筆（H-6db5d4：議題已於 11-14 weekly lint checkpoint 處理完畢，4 個社群工具各指向不同痛點，未達開新列門檻，功能記者確認不重複處理）
 - 主編查證（Step 3 截止日複查）：feature-radar.md「⏰ 倒數中」Claude Data Enterprise 預設開啟日期 2026-11-20，WebFetch 官方公告（claude.com/resources/articles/sheets-whiteboards-data）再次確認原文「Claude Data turns on by default on November 20, 2026」，日期仍有效，不動
+- devpractice 沉澱：候選 5 筆（gauge-cli 任務成功率回修文件、Anthropic 記憶三階段框架、Claude Code Projects 改版入口、skill 隨模型版本靜默失效應對、Cowork egress 允許清單收斂現象）／手冊寫入 0 則（候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 a3909d8
