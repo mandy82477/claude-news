@@ -704,6 +704,94 @@
    ],
    "reviewed": "2026-10-31",
    "why": "anthropic-commitments 只追蹤官方明文承諾（修復、政策、拒絕）；提示注入頁目前沒有任何官方承諾可建檔（官方只有模型層數字與立場），兩頁僅因共享安全母頁鄰居而相似，待官方出現注入相關承諾再補連結"
+  },
+  {
+   "pages": [
+    "topics/market-signals-ipo",
+    "topics/market-signals-legal"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "四子頁是同一母頁 topics/market-signals 的路由分支，動線由母頁路由表與合計表承擔；子頁互連會讓同一判讀在兩頁各長一份"
+  },
+  {
+   "pages": [
+    "topics/market-signals-compute",
+    "topics/market-signals-legal"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "同上：market-signals 四子頁之間不互連，母頁負責路由"
+  },
+  {
+   "pages": [
+    "topics/market-signals-customers",
+    "topics/market-signals-legal"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "同上：market-signals 四子頁之間不互連，母頁負責路由"
+  },
+  {
+   "pages": [
+    "topics/market-signals-customers",
+    "topics/market-signals-ipo"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "同上：market-signals 四子頁之間不互連，母頁負責路由"
+  },
+  {
+   "pages": [
+    "topics/market-signals-compute",
+    "topics/market-signals-customers"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "同上：market-signals 四子頁之間不互連，母頁負責路由"
+  },
+  {
+   "pages": [
+    "entities/mustafa-suleyman",
+    "topics/market-signals-ipo"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "人物頁與投資判讀頁無讀者動線：共同鄰居是競品與商業頁，該人物與 Anthropic IPO 無直接關係，連了會把競爭對手高層塞進 IPO 判讀的閱讀路徑"
+  },
+  {
+   "pages": [
+    "entities/mustafa-suleyman",
+    "topics/market-signals"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "同上：人物頁不指向判讀母頁"
+  },
+  {
+   "pages": [
+    "topics/anthropic-government-policy",
+    "topics/market-signals"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "20 則共同落地新聞的判讀家在子頁 topics/market-signals-legal，該子頁已連 gov-policy 26 處；母頁只放路由與合計表，不重複連事實頁"
+  },
+  {
+   "pages": [
+    "topics/ai-agent-safety",
+    "topics/market-signals"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "安全母頁不談投資判讀（動線單向：判讀頁指向事實頁）；共同落地的 AISI 事件事實家在 topics/ai-eval-boundary-incidents"
+  },
+  {
+   "pages": [
+    "entities/opus-5-5",
+    "topics/market-signals"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "模型頁不收投資判讀；判讀層對模型發布的引用由 market-signals 單向指出"
+  },
+  {
+   "pages": [
+    "entities/pricing-history",
+    "topics/market-signals-customers"
+   ],
+   "reviewed": "2026-11-14",
+   "why": "判讀層單向引用定價事實，pricing-history 是沿革帳本、不反向連判讀頁"
   }
  ]
 }

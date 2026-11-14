@@ -268,7 +268,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**wheresryan22/anatomy**](https://github.com/wheresryan22/anatomy) | Skills | ⏳ | 2026-10-13 | 畫互動式等角機械示意圖的 skill，可選配 WebGL 著色；近 2 天暴增 5,899 星、累計 7,894 星，增速異常，僅星數佐證（2026-10-13 首見，此後未見後續報導） |
 | [**lemomo-ai/lemo-opuscar**](https://github.com/lemomo-ai/lemo-opuscar) | Skills | ⏳ | 2026-10-13 | 純程式碼（不用影片模型）產生短片的 skill，附 43 種影片風格提示詞；2,159 星（2026-10-13 首見，此後未見後續報導） |
 | [**MemTensor/memmy-agent**](https://github.com/MemTensor/memmy-agent) | 記憶工具 | ⏳ | 2026-10-13 | 讓 Claude Code、Codex、OpenClaw 等多個 agent 共用同一份使用者可控的長期記憶；2,095 星（2026-10-13 首見，此後未見後續報導） |
-| [**cbrock84/headcount**](https://github.com/cbrock84/headcount) | 多 Agent | ⏳ | 2026-10-13 | 把 agent 組織成一間公司：15 個以上部門、125 個以上可獨立安裝 skill，各自引用對應標準或法規；2,046 星（2026-10-13 首見，此後未見後續報導） |
 | [**josefchen/muster**](https://github.com/josefchen/muster) | IDE/終端 | ⏳ | 2026-10-13 | Show HN：Mac 選單列切換器，把多個 coding agent 依等待中／執行中／剛完成分類，可直接核准或拒絕請求；HN 單來源（2026-10-13 首見，此後未見後續報導） |
 | [**AGGIB/Stroq**](https://github.com/AGGIB/Stroq) | 安全工具 | ⏳ | 2026-10-13 | Show HN：掃描 Claude Code、Codex、Cursor 的 session 記錄找出意外留下的 API 金鑰，自架、不上傳；HN 單來源（2026-10-13 首見，此後未見後續報導） |
 | [**bhurghundii/vibecheck.dev**](https://github.com/bhurghundii/vibecheck.dev) | 工作流 | ⏳ | 2026-10-13 | Show HN：自架 GitHub merge gate，檢查 PR 作者是否真的理解自己或 AI 寫的程式碼，支援 BYOK Anthropic；HN 單來源（2026-10-13 首見，此後未見後續報導） |
@@ -375,7 +374,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**plannotator/effective-html**](https://github.com/plannotator/effective-html) | Skills | ⏳ | 2026-09-07 | Agent Skills 技能包，產出可用 HTML artifact、線框稿、互動原型、計畫與圖表；3,023 星（2026-09-07 首見，此後未見後續報導）|
 | [**thedotmack/claude-mem**](https://github.com/thedotmack/claude-mem) | 記憶工具 | ⚡ | 2026-09-02 | 跨 harness（Claude Code、Codex、Gemini 等 7 種以上）持久記憶，擷取 session 並用 AI 壓縮後注入；9.3 萬星，2025-08-31 出生（10-31 由 ✅ 降 ⚡：簡介只有星數） |
 | [**yetone/cumora**](https://github.com/yetone/cumora) | 工作流 | ⏳ | 2026-09-02 | 跨平台團隊聊天工具，讓 AI agent 成為聊天中的「一等公民」隊友，可接 Claude Code／Codex；3,416 星，作者具名知名開源開發者（2026-09-02 首見，此後未見後續報導） |
-| [**wanghuan9/skilldock**](https://github.com/wanghuan9/skilldock) | Skills | ⏳ | 2026-09-02 | AI skill 管理桌面應用，安裝/整理/編輯/同步/更新 Skills、MCP servers、plugins，跨 5 種 AI coding 工具；503 星（2026-09-02 首見，此後未見後續報導） |
 | [**Understand-Anything**](https://github.com/Egonex-AI/Understand-Anything) | 搜尋/診斷 | ⏳ | 2026-09-02 | 互動式 code 知識圖（可探索/搜尋/提問），跨 harness；81,325★、2026-03 出生，09-02 查證（防刷通過），社群實測待累積 |
 | [**codegraph**](https://github.com/colbymchenry/codegraph) | 記憶工具 | ⏳ | 2026-09-02 | 預索引 code 知識圖、改 code 自動同步、全本機省 token；69,253★、2026-01 出生，09-02 查證（防刷通過），graphify 競品 |
 | [**archify**](https://github.com/tt-a1i/archify) | Skills | ⏳ | 2026-09-02 | 架構/時序/資料流圖 agent skill，自包含 HTML；43,378★、2026-04 出生，09-02 查證（防刷通過） |
@@ -411,6 +409,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [**Groundtruth**](https://github.com/vnmoorthy/groundtruth) | 工作流 | ⚡ | 2026-04-27 | Stop Hook，強制 Claude 提供可驗證執行證明才能宣告完成 |
 
 **收錄註記**（表內「見收錄註記」的一筆）
+- **headcount、skilldock 已不在上表**（2026-11-14）：兩個 GitHub repo 在 2026-11-13 的連結檢查都回 404，點不進去；原始條目仍留在 [[topics/community-skills]]，原文已標失效。
+%% 移出理由：連結 404（weekly-linkcheck 2026-11-13）＋首見後（10-13、09-02）零後續，依 community/weekly.md 策展規則第 4／4b 條移出；2026-11-14 /wiki-lint 6g %%
 - **andrej-karpathy-skills**（08-29）：僅 GitHub Search 星數，無 forks／issues 佐證可查，增速異常，不作為獨立驗證訊號。
 
 **一則細節**

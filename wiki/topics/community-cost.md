@@ -3,7 +3,7 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-12"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-12"
 status_main: "ongoing"
 days_since_news: 2
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-12
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-12
 
 > **新增一款開源省 token 工具 Downshift**（2026-11-12）

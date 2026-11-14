@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-discussions]]
 **開始日期：** 2026-05-01
-**最後更新：** 2026-09-06
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-06-30
 
 > 本頁保存 [[topics/community-tech-discussions]] 被搬離主頁的原始討論筆記，一字不刪。想知道現在吵到哪，回主頁的「現在吵到哪」。
@@ -133,7 +133,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 #### Claude Code vs Cursor vs Copilot 2026：從競爭走向分工的工具定位論（2026-06-25）
 
-- **來源：** ["Claude Code vs Cursor vs Copilot for Real Production Work 2026"](https://dev.to/umesh_malik/claude-code-vs-cursor-vs-copilot-for-real-production-work-2026-3ne6)（dev.to，Umesh Malik，06-25）
+- **來源：** ["Claude Code vs Cursor vs Copilot for Real Production Work 2026"](https://dev.to/umesh_malik/claude-code-vs-cursor-vs-copilot-for-real-production-work-2026-3ne6)（dev.to，Umesh Malik，06-25）**（原文已失效）**
 - **核心論點：** 三工具在 2026 年已不再是「哪個最強」的競爭關係，而是各有適用場景的分工格局：Copilot 適合流暢日常編碼（inline completion flow）、Cursor 適合 IDE 內的 agentic 編輯與重構、Claude Code 適合全任務自主執行與 CI pipeline 整合
 - **關鍵回響：**
   - 📝 支持：呼應「Claude Code vs Codex 工具選擇：OMP + Opus 4.8 成主流」（2026-06-21）的「依任務路由模型」社群方向

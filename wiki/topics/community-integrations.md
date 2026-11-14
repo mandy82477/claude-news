@@ -3,7 +3,7 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **Plugin／MCP 整合新增社群媒體爬蟲 API 整合**（2026-11-13）

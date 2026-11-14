@@ -3,7 +3,7 @@ page: "topics/community-multi-agent"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-10"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-10"
 status_main: "ongoing"
 days_since_news: 4
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-10
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-10
 
 > **Multi-agent 架構添「同一任務、各保留原生 TUI」取向：yicheng47/runner**（2026-11-10）
@@ -53,7 +53,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **戰線已經從「怎麼隔離」移到「隔離之後怎麼協調」**：worktree 解決了互相覆蓋，但沒有解決誰先合併、誰驗收（見下方缺口追蹤「協調與衝突解決」那一列）。**你的選項：** 用本地合併佇列（[[topics/community-multi-agent#2026-07]]）自己排序，或維持人工把關，或等官方補。
 - **開到多大**：超過 10 個並行 agent 要獨立 worktree 加一層協調；官方 session 預設同時跑到 20 個 subagent 時再開新的會失敗，上限可用 `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 調（官方 sub-agents 文件，2026-10-09 查證）。
 - **怎麼停下來**：「怎麼停」比「怎麼跑起來」更難，要寫顯式終止條件；目前只有一則做法（2026-08-19），之後兩個月沒有新做法，已移出概覽表。
-- **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較；十一月新增兩個方向都還只有單一專案：runner（11-10）讓四款 CLI agent 在同一任務裡各保留原生終端機，Comma（11-07）主張自架常駐 agent 取代託管服務，與 10-21 的 Omnara 方向相反，尚無第二方實測。
+- **接下來看什麼：** 官方 agent teams 何時脫離實驗性、會不會補上隔離；社群控制平面（amux、cezar、Offrun 這一路）有沒有人拿出跨工具比較。
+  - 十一月新增兩個單一專案方向：runner（11-10）讓四款 CLI agent 同一任務各保留原生終端機，Comma（11-07）主張自架常駐、與 10-21 的託管式 Omnara 相反；皆無第二方實測。
 
 **機制細節**
 - **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器

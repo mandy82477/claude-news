@@ -344,7 +344,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** 設計決策後自動派出 3 個 fable agent 扮演「實習生」角色進行對抗式審查，要求開發者把回覆當作「沒經驗的生澀實習生意見」，藉此避免過度工程化
 - **與既有模式的關係：** 與「多代理 PR Review」既有代表技巧（4-agent Code Review、對抗性審查、Read-Only Reviewer）同屬對抗式審查取向，差異在於刻意把審查者意見「降階」為實習生等級以減少過度採信；歸入主線 [[topics/community-large-codebase-workflow]] 除錯分工主線
 - **可信度註記：** Hacker News Show HN，12 分，屬中低互動；單一開發者提案，尚無其他使用者實測回報
-- **來源：** 「Show HN: Claude Skill – Interns must review」— Hacker News（12 分）；[GitHub](https://github.com/alpbahadur/interns-review-plugin)
+- **來源：** 「Show HN: Claude Skill – Interns must review」— Hacker News（12 分）；[GitHub](https://github.com/alpbahadur/interns-review-plugin)**（原文已失效）**
 - **成熟度：** ⏳ 新興（單一開發者提案，尚無社群採用回饋）
 
 #### karanb192/claude-code-hooks：hooks 套件＋可安裝外掛市集，涵蓋安全性／成本／可觀測性／生產力（2026-09-06）

@@ -3,7 +3,7 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-13"
+last_updated: "2026-11-14"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 1
@@ -31,7 +31,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-13
+**最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-13
 
 > **Skills 設計新增教程與策展目錄兩則**（2026-11-13）
@@ -389,7 +389,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - reladraw：可自訂版面配置的圖表描述語言，附 npm 套件與可搭配 Claude 等 agent 使用的 skill，作者不滿 Mermaid／Graphviz 自動排版與 Draw.io 太耗時；Hacker News 351 分
 - **與既有模式的關係：** 補上「Skills 設計」既有代表技巧三個新取向——組織化 skill 目錄（headcount）、Obsidian 整合（personal-os-skills）、圖表描述語言（reladraw，與既有 drawio-skill 同屬圖表類但走描述語言而非工具整合）；非大型 codebase 特有痛點，主線填 —。
 - **可信度註記：** headcount／personal-os-skills 僅有 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證；reladraw 來自 Hacker News，351 分遠高於當日其他討論，惟未見留言數或跨平台佐證。
-- **來源：** GitHub Search；[headcount](https://github.com/cbrock84/headcount)（1,684★）、[personal-os-skills](https://github.com/ArtemXTech/personal-os-skills)（537★）；Hacker News；[reladraw](https://github.com/reladraw/reladraw)（351 分）
+- **來源：** GitHub Search；[headcount](https://github.com/cbrock84/headcount)（1,684★）**（原文已失效）**、[personal-os-skills](https://github.com/ArtemXTech/personal-os-skills)（537★）；Hacker News；[reladraw](https://github.com/reladraw/reladraw)（351 分）
 - **成熟度：** ⏳ 新興（三者皆本庫首次收錄，尚無社群採用回饋數據）
 
 #### 同日四款專項 Skills 合集：nature-skills、emilkowalski/skills、drama-skills、asd-ste100-skill（2026-09-26）
@@ -538,7 +538,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **核心模式：** AI skill 管理桌面應用，支援 Claude Code、Cursor、Codex、Windsurf、Gemini CLI 等多種 AI coding 工具，可安裝、整理、編輯、同步、更新 Skills、MCP servers、plugins；GitHub Search 累積 503 星
 - **與既有模式的關係：** 直接回應 [[topics/community-tech-discussions]]「🌊 持續關注中的長期議題」中「工具生態發現性問題」（🌙靜候，「Skills/MCP 散落各處，缺乏集中發現機制」）——本則是針對此痛點的具體桌面應用解法，把跨工具（5 種 AI coding 工具）的 Skills／MCP／plugins 管理集中到單一介面；[[topics/community-tech-discussions]] 該議題的狀態是否因此類工具出現而調整，留待後續追蹤
 - **可信度註記：** 星數（503），惟資料僅含 GitHub Search 星數，無 forks／issues／近期 commit 佐證可查，未另行查證，依內容具體程度（功能清單明確、跨工具支援清楚）判斷收錄
-- **來源：** GitHub Search（503★）；[GitHub](https://github.com/wanghuan9/skilldock)
+- **來源：** GitHub Search（503★）；[GitHub](https://github.com/wanghuan9/skilldock)**（原文已失效）**
 - **成熟度：** ⏳ 新興（今日首見，尚無社群採用回饋或量化效果數據）
 
 #### dev.to：把 markdown 一鍵轉為多平台發布版本的 Claude Code Skill——dev.to／AWS Builder Center／Medium／LinkedIn（2026-09-02）

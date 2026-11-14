@@ -123,15 +123,15 @@
 | [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
-| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：20 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
+| [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |
 | [[topics/community-large-codebase-workflow]] | 🌐 社群 | ongoing | 🗓️ 週更 大型 codebase 規模化開發主線——每條線先給「現在的答案」，再列子問題表；每個做法的證據見 [[topics/community-tech-patterns]] |
 | [[topics/community-pattern-trends]] | 🌐 社群 | ongoing | 🗓️ 週更 社群做法收斂成的九個方向：各自怎麼走到今天、你現有設計可以回頭檢查什麼；每種做法的原始證據與成熟度見 [[topics/community-tech-patterns]] |
-| [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：6 場還在吵、3 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
+| [[topics/community-tech-discussions]] | 🌐 社群 | ongoing | 社群觀念爭論盤點 9 場：4 場還在吵、5 場僵住（已吵出共識的另列一節），每場標最後一則證據的日期與官方說法　↳ 子故事：[[topics/community-tech-discussions-archive]] |
 | [[topics/llm-wiki-pattern]] | 🌐 社群 | monitoring | Karpathy 式 LLM wiki 模式：三層＋三動作怎麼設計、外面八種公開實作各自最有辨識度的一招，以及本庫對照下來有什麼、缺什麼 |
 | [[topics/safety-china-trust-dispute]] | 🏛️ 政策/安全 | monitoring | 中美 AI 工具信任對峙：代理偵測指控 → 企業禁用 → 官方後門警示 vs 07-10 否認。記到 07-11，之後見 [[topics/anthropic-government-policy]]　↳ 子故事：[[topics/safety-china-trust-dispute-archive]] |
 | [[topics/ai-agent-safety]] | 🏛️ 政策/安全 | ongoing | AI agent 安全入口：現在什麼打得到你、官方擋到哪（沙箱才是安全邊界，Auto 與 deny-list 都不是）；提示注入、產品漏洞與誤操作、網攻與防守方放行各一個子頁　↳ 子故事：[[topics/ai-agent-safety-archive]]、[[topics/ai-agent-safety-cyber]]、[[topics/ai-agent-safety-product-vulns]]、[[topics/ai-agent-safety-prompt-injection]]、[[topics/ai-eval-boundary-incidents]] |
 | [[topics/anthropic-government-policy]] | 🏛️ 政策/安全 | ongoing | 出口管制已解除；現有八條線在動——五角大廈供應鏈風險黑名單上訴法院維持（09-25）、FTC 新開產品風險調查，另三條已改到你的 Claude　↳ 子故事：[[topics/anthropic-government-policy-archive]] |
-| [[topics/official-community-gap]] | 🛠️ 工具/功能 | ongoing | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
+| [[topics/official-community-gap]] | 🛠️ 工具/功能 | monitoring | 社群喊的痛，官方補了哪幾個、哪幾個還沒補、為什麼沒補　↳ 子故事：[[topics/official-community-gap-archive]] |
 | [[topics/anthropic-agent-stack]] | 🛠️ 工具/功能 | ongoing | 官方 agent 積木總覽：八塊積木各自為什麼出、讓你多做出什麼、怎麼疊；選型表與六層架構收附錄　↳ 子故事：[[entities/managed-agents]]、[[entities/managed-agents-archive]] |
 | [[topics/anthropic-product-matrix]] | 🛠️ 工具/功能 | ongoing | 產品 × 功能對照表：Claude app、Claude Code、Tag、Platform、Duet 五欄 × 15 項功能，每格附官方來源；產品專屬功能與專用版另列 |
 | [[topics/coding-workflow-guide]] | 💻 開發實務 | ongoing | 🗓️ 週更（官方指南每日） 程式開發實戰手冊：用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查 |
@@ -139,6 +139,6 @@
 | [[topics/enterprise-tool-tracker]] | 💼 商業 | ongoing | 大型企業現在用哪套 AI 編碼工具、換過什麼；Alibaba 已禁用 Claude Code　↳ 子故事：[[topics/enterprise-tool-tracker-archive]] |
 | [[topics/anthropic-business]] | 💼 商業 | ongoing | Anthropic 的錢現在怎樣：指標表與 IPO 一句；往下鑽合作與算力（含跟 Google／Amazon／Microsoft 的關係）、風險與商業模式、上市與財報　↳ 子故事：[[topics/anthropic-business-archive]]、[[topics/anthropic-business-risks]]、[[topics/anthropic-ipo]]、[[topics/anthropic-partnerships-compute]] |
 | [[topics/market-signals]] | 💼 商業 | ongoing | 投資訊號判讀（每日，判讀分四條子線）：先列買得到的標的，再照分析師六問逐則判，兩週後結算（教學型事件研究，非投資建議；事實在商業各頁）　↳ 子故事：[[topics/market-signals-compute]]、[[topics/market-signals-customers]]、[[topics/market-signals-ipo]]、[[topics/market-signals-legal]] |
-| [[topics/market-lessons]] | 💼 商業 | ongoing | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
+| [[topics/market-lessons]] | 💼 商業 | monitoring | 投資判讀教材（週更）：判讀沉澱出的課程表（一課一列、押對了嗎）、未上市消息線各走到哪、IPO 流程六格與 S-1 先看五處 |
 | [[topics/recursive-self-improvement]] | 🏛️ 政策/安全 | ongoing | AI 遞歸自我改進：官方《Risk Report August 2026》（08-14）首度就內部 AI R&D 加速幅度提供量化區間自評，並確認 Model 2 暫無釋出計畫　↳ 子故事：[[topics/recursive-self-improvement-archive]] |
 | [[topics/ai-talent-flow]] | 💼 商業 | ongoing | AI 實驗室人才流動與對各公司影響：AMD 以約 82 億美元收購 World Labs、Fei-Fei Li 出任首席科學家；此前 Google DeepMind 高層與核心研究員異動、Anthropic 主要承接　↳ 子故事：[[topics/ai-talent-flow-archive]] |
