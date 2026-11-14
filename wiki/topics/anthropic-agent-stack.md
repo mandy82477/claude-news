@@ -13,8 +13,8 @@ children: "['entities/managed-agents']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 15
-attribution_count: 4
-attribution_last: "2026-09-10"
+attribution_count: 5
+attribution_last: "2026-11-14"
 top_source: "user-query"
 pending_count: 0
 pending_overdue: 0

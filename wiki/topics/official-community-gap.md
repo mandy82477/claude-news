@@ -12,9 +12,9 @@ parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
-inbound_links: 41
-attribution_count: 19
-attribution_last: "2026-10-30"
+inbound_links: 42
+attribution_count: 20
+attribution_last: "2026-11-14"
 top_source: "github-issues"
 pending_count: 0
 pending_overdue: 0

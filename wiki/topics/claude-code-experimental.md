@@ -14,8 +14,8 @@ children: "[]"
 page_role: "root"
 days_since_news_subtree: 0
 inbound_links: 18
-attribution_count: 40
-attribution_last: "2026-11-13"
+attribution_count: 41
+attribution_last: "2026-11-14"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0

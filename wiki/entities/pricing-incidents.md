@@ -13,8 +13,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 15
-attribution_count: 4
-attribution_last: "2026-11-09"
+attribution_count: 5
+attribution_last: "2026-11-14"
 top_source: "google-news"
 pending_count: 3
 pending_overdue: 0

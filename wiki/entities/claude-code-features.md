@@ -13,8 +13,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 11
-attribution_last: "2026-11-12"
+attribution_count: 13
+attribution_last: "2026-11-14"
 top_source: "official-docs"
 pending_count: 1
 pending_overdue: 0

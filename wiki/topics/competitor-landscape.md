@@ -12,8 +12,8 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 80
-attribution_count: 282
-attribution_last: "2026-11-13"
+attribution_count: 285
+attribution_last: "2026-11-14"
 top_source: "blog"
 pending_count: 9
 pending_overdue: 0
