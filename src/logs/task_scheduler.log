@@ -1525,3 +1525,10 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-11-14T12:07:40Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-14T12:08:47Z] TARGET_DATE=2026-11-14，Step 1a cp 失敗（src/gathered_archive/2026-11-14.json 不存在，GitHub Actions 今日抓料尚未歸檔）→ Step 1b 新鮮度防線中止（gathered_items.json date=2026-11-13 items=76，非目標日期）。12 UTC 班（第一班），屬常態延遲，留待下一班（17/22 UTC）資料到齊後接手，不補跑、不等待。Step 0 昨日缺跑檢查：news/2026-11-13.md 存在，通過，無需本機承接。
 [cloud daily-news-pipeline-cloud STARTED 2026-11-14T17:08:23Z]
+[Saturday 2026/11/14 18:01:48.00] === Agent pipeline start (2026-11-14) ===
+[Saturday 2026/11/14 18:01:48.00] Aggregator OK
+[Saturday 2026/11/14 18:01:48.00] Wiki ingest OK
+[Saturday 2026/11/14 18:01:48.00] Building web reader...
+[Saturday 2026/11/14 18:01:48.00] 測試全綠 - web build 放行
+[Saturday 2026/11/14 18:01:48.00] Single push done (news + wiki + web)
+[Saturday 2026/11/14 18:01:48.00] === Pipeline complete (agent) ===
