@@ -449,6 +449,12 @@ OTHER_SHORT_RE = re.compile(r"⟨[A-Z]-\d{2}⟩")
 def _exempt(doc: "Doc", path: Path | None, m: re.Match, cls: str, reason: str) -> str:
     if path is not None and "-archive" in path.stem:
         return "archive"
+    # metrics.md 是主編的指標帳本：它逐輪記的是「上一輪 5c 查了什麼」，所以
+    # 「確認官方未載 27」這種計數句必然含舊字樣，卻不是任何頁面上的懸置標記。
+    # 不豁免的話，這 5 筆永遠進 3g 盲區、每輪配一次回填配額，而回填會把帳本寫壞
+    # （2026-11-14：42 筆盲區裡有 5 筆是它）。
+    if path is not None and path.stem == "metrics":
+        return "ledger"
     line = doc.line_text(m.start())
     if STATUS_FORMAT_RE.match(line) or (cls == "M" and reason == "frontmatter"):
         return "status_format"

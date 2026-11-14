@@ -86,13 +86,19 @@ class TestReporterPages(unittest.TestCase):
 
 
 class TestRealWikiAgreesWithIndex(unittest.TestCase):
-    """frontmatter 口徑必須和 index 領域欄一致，否則改用本腳本會讓記者認領的頁變了。"""
+    """frontmatter 口徑必須和 index 領域欄一致，否則改用本腳本會讓記者認領的頁變了。
+
+    兩邊都先套 `OWNER_OVERRIDES`（單一來源住 pending_handoffs）再比：領域欄答的是「這頁屬哪個領域」，
+    覆寫表答的是「誰維護它」，market-signals 五頁正是兩者不同的那組（領域商業、投資分析記者維護）。
+    不套就會把那組永久的設計差異當成漂移，而真正的漂移（新頁 domain 打錯）仍照樣抓得到。
+    """
 
     def test_every_index_row_same_category(self):
         idx = ph.index_owners(REPO_ROOT / "wiki" / "index.md")
         cats = rp.page_categories(REPO_ROOT / "wiki")
         if not idx:
             self.skipTest("wiki/index.md 無領域表")
+        idx = {p: ph.OWNER_OVERRIDES.get(p, c) for p, c in idx.items()}
         diffs = {p: (c, cats.get(p)) for p, c in idx.items() if cats.get(p) != c}
         self.assertEqual(diffs, {}, "index 領域欄 vs 頁面 domain 不一致（index, frontmatter）")
 

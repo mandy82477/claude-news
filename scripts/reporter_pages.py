@@ -27,15 +27,19 @@ PAGE_DIRS = ("entities", "topics")
 UNCLASSIFIED = "未分類"
 
 
-def _load_domain_map() -> dict[str, str]:
+def _load_handoffs_module():
     spec = importlib.util.spec_from_file_location("_ph_for_reporter_pages", ROOT / "scripts" / "pending_handoffs.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return {**mod.DOMAIN_TO_CATEGORY, "開發實務": "開發實務"}
+    return mod
 
 
-DOMAIN_TO_CATEGORY = _load_domain_map()
-CATEGORIES = tuple(dict.fromkeys(DOMAIN_TO_CATEGORY.values()))
+_PH = _load_handoffs_module()
+DOMAIN_TO_CATEGORY = {**_PH.DOMAIN_TO_CATEGORY, "開發實務": "開發實務"}
+# 領域欄推不出真正負責人的頁（market-signals 母子頁領域是商業、由投資分析記者維護等）：
+# 覆寫表的家在 pending_handoffs.OWNER_OVERRIDES，這裡只消費，不複製第二份
+OWNER_OVERRIDES = dict(_PH.OWNER_OVERRIDES)
+CATEGORIES = tuple(dict.fromkeys((*DOMAIN_TO_CATEGORY.values(), *OWNER_OVERRIDES.values())))
 
 FM_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---", re.DOTALL)
 FM_DOMAIN_RE = re.compile(r'^domain:[ \t]*"?([^"\r\n]*?)"?[ \t]*$', re.MULTILINE)
@@ -68,7 +72,9 @@ def page_categories(wiki_dir: Path = WIKI_DIR) -> dict[str, str]:
             continue
         for f in base.rglob("*.md"):
             key = f.relative_to(wiki_dir).with_suffix("").as_posix()
-            out[key] = domain_category(page_domain(f.read_text(encoding="utf-8")))
+            # 覆寫優先於領域欄：否則 --category 商業 會把 market-signals 五頁一起列出，
+            # 而那五頁由投資分析記者維護，商業記者依規則檔會（正確地）拒收（2026-11-14 實際踩到）
+            out[key] = OWNER_OVERRIDES.get(key) or domain_category(page_domain(f.read_text(encoding="utf-8")))
     return dict(sorted(out.items()))
 
 
