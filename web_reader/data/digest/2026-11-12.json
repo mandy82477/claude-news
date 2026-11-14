@@ -447,11 +447,6 @@
   "preview": "Managed Agents：❓ 待查證（標 2026-11-12｜查 Self-hosted Managed Agents、agent credentials）｜客戶自架 Managed Agents：Help Net Security 與 Unite.AI 標題稱 Anthropic 讓客戶自架，agent 憑證留",
   "sedimentedToday": [
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
       "id": "managed-agents",
       "name": "Managed Agents",
       "pageType": "entity"
@@ -469,11 +464,6 @@
     {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-agent-stack",
-      "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
       "pageType": "topic"
     },
     {
