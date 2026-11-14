@@ -1523,3 +1523,4 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud weekly-wiki-lint-cloud CHECKPOINT 2026-11-14T03:49:09Z] 2 A段＋B段 5a-5o 完成（5c 清零 116→0），下一步 C 段 6a-6l
 [cloud weekly-wiki-lint-cloud OK 2026-11-14T04:19:57Z] Weekly lint OK - 5c 清零 116→0（七路並行：查實 23／官方未載 69／失效移除 2／依日報收斂 8／官方源連不到 14）、5h 結算 26 列（✅8／❌3／～15）、5m/5n 雲端首次跑成、6j 月度對抗輪三 agent 收報（20 項，3 🔴）、採用驗證率 1.4%→5.3%；測試全綠（1364 案例）、gate_web_build 放行「測試全綠 - web build 放行」、build OK（85 entities/59 topics/144 wiki 產物）、渲染層驗收 2 頁通過、單一 push 待執行。⚠️ 本輪最重要發現：多 repo 雲端 session 不載入專案 hook，14 個 hook 全失效（已登漏抓帳＋需使用者端設定）
 [cloud daily-news-pipeline-cloud STARTED 2026-11-14T12:07:40Z]
+[cloud daily-news-pipeline-cloud ABORTED 2026-11-14T12:08:47Z] TARGET_DATE=2026-11-14，Step 1a cp 失敗（src/gathered_archive/2026-11-14.json 不存在，GitHub Actions 今日抓料尚未歸檔）→ Step 1b 新鮮度防線中止（gathered_items.json date=2026-11-13 items=76，非目標日期）。12 UTC 班（第一班），屬常態延遲，留待下一班（17/22 UTC）資料到齊後接手，不補跑、不等待。Step 0 昨日缺跑檢查：news/2026-11-13.md 存在，通過，無需本機承接。
