@@ -6,7 +6,7 @@ domain: "🌐 社群"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-09"
 status_main: "ongoing"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"

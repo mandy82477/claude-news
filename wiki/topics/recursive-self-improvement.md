@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing（08-14 官方風險報告揭露新對齊疑慮；08-29 新增「自動化研究員」對齊維護研究，08-31 補上量化數字）"
 domain: "🏛️ 政策/安全"
 last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_news_update: "2026-11-15"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 44
-attribution_count: 74
-attribution_last: "2026-11-13"
+attribution_count: 76
+attribution_last: "2026-11-15"
 top_source: "google-news"
 pending_count: 9
 pending_overdue: 0

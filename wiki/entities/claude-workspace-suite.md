@@ -1,3 +1,30 @@
+---
+page: "entities/claude-workspace-suite"
+kind: "entity"
+type: "feature"
+status: "beta（Whiteboards、Sheets 為 beta；Claude Data 為正式版，認證查詢與即時分享仍 beta）"
+domain: "🛠️ 工具/功能"
+last_updated: "2026-11-15"
+last_news_update: "2026-11-15"
+status_main: "beta"
+matrix_role: "功能"
+days_since_news: 0
+parent: null
+children: "[]"
+page_role: "root"
+days_since_news_subtree: 0
+inbound_links: 11
+attribution_count: 1
+attribution_last: "2026-11-15"
+top_source: "anthropic-official"
+pending_count: 1
+pending_overdue: 0
+pending_next_review: "2026-11-29"
+pending_signalled: 0
+staleness_exempt: null
+signal: "健康"
+generated_by: "scripts/gen_wiki_frontmatter.py"
+---
 # Claude 協作三件組（Whiteboards、Sheets、Data）
 
 Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算表與接資料的儀表板，2026-11 推出。

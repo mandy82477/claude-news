@@ -7,12 +7,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-14"
 status_main: "active"
-days_since_news: 0
+days_since_news: 1
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 0
-inbound_links: 9
+days_since_news_subtree: 1
+inbound_links: 10
 attribution_count: 16
 attribution_last: "2026-11-14"
 top_source: "github"

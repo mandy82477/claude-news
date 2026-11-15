@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-14"
 last_news_update: "2026-10-27"
 status_main: "monitoring"
-days_since_news: 18
+days_since_news: 19
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 18
+days_since_news_subtree: 19
 inbound_links: 14
 attribution_count: 1
 attribution_last: "2026-10-27"

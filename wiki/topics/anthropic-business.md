@@ -6,7 +6,7 @@ domain: "💼 商業"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-14"
 status_main: "ongoing"
-days_since_news: 0
+days_since_news: 1
 parent: null
 children: "['topics/anthropic-business-archive', 'topics/anthropic-business-risks', 'topics/anthropic-ipo', 'topics/anthropic-partnerships-compute']"
 page_role: "hub"

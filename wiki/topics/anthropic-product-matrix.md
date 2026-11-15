@@ -6,12 +6,12 @@ domain: "🛠️ 工具/功能"
 last_updated: "2026-11-11"
 last_news_update: "2026-11-11"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 4
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 3
-inbound_links: 1
+days_since_news_subtree: 4
+inbound_links: 2
 attribution_count: 42
 attribution_last: "2026-11-11"
 top_source: "user-query"
