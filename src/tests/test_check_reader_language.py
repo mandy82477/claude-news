@@ -207,5 +207,30 @@ class TestRepoState(unittest.TestCase):
             self.assertTrue(t.get("alt"), t["key"])
 
 
+class TestTopicWatchAndTableOpTerms(_Case):
+    """題材線代號與表格操作句兩條禁詞（2026-11-14 lint 對抗輪 B）：一正一反。"""
+
+    def terms(self, text):
+        return {h["term"] for h in self.scan("x.md", "# X\n\n" + text + "\n")}
+
+    def test_topic_watch_code_caught(self):
+        self.assertIn("題材線代號", self.terms("某媒體報導了這件事（Topic Watch/market-signals）。"))
+        self.assertIn("題材線代號", self.terms("某媒體報導了這件事(Topic Watch/ipo-news)。"))
+
+    def test_topic_watch_clean_samples_not_caught(self):
+        for ok in ("本刊推論此事影響有限（本刊推論）。", "此欄僅標題可用。",
+                   "Topic Watch 是一種抓取方式。"):
+            self.assertNotIn("題材線代號", self.terms(ok), ok)
+
+    def test_table_operation_sentence_caught(self):
+        for bad in ("詳見上方表新增 IPO 列。", "詳見融資表列更新。", "詳見時間線列新增。"):
+            self.assertIn("表格操作句", self.terms(bad), bad)
+
+    def test_table_operation_clean_samples_not_caught(self):
+        for ok in ("詳見 [[topics/x#節]]。", "僅標題可用，詳見 [[topics/anthropic-ipo#時間線]]。",
+                   "（本刊推論）"):
+            self.assertNotIn("表格操作句", self.terms(ok), ok)
+
+
 if __name__ == "__main__":
     unittest.main()

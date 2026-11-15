@@ -103,5 +103,36 @@ class TestRealWikiAgreesWithIndex(unittest.TestCase):
         self.assertEqual(diffs, {}, "index 領域欄 vs 頁面 domain 不一致（index, frontmatter）")
 
 
+class TestMarketSignalsOwnerOverride(unittest.TestCase):
+    """ba7b3973：market-signals 母子五頁領域欄是商業，但由投資分析記者維護；
+    --category 商業 不得列出它們，--category 投資分析 必須列得到。"""
+
+    SLUGS = ("market-signals", "market-signals-ipo", "market-signals-legal",
+             "market-signals-compute", "market-signals-customers")
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.wiki = Path(self.tmp.name)
+        for s in self.SLUGS:
+            write(self.wiki, f"topics/{s}.md", '---\ndomain: "💼 商業"\n---\n# m\n')
+        write(self.wiki, "topics/biz-plain.md", '---\ndomain: "💼 商業"\n---\n# b\n')
+
+    def test_commercial_excludes_market_signals(self):
+        rc, out, _ = run(["--category", "商業", "--wiki-dir", str(self.wiki)])
+        self.assertEqual(rc, 0)
+        self.assertEqual(out.splitlines(), ["wiki/topics/biz-plain.md"])
+        for s in self.SLUGS:
+            self.assertNotIn(f"wiki/topics/{s}.md", out.splitlines())
+
+    def test_investment_category_lists_all_five(self):
+        rc, out, _ = run(["--category", "投資分析", "--wiki-dir", str(self.wiki)])
+        self.assertEqual(rc, 0)
+        self.assertEqual(sorted(out.splitlines()), sorted(f"wiki/topics/{s}.md" for s in self.SLUGS))
+
+    def test_override_table_comes_from_pending_handoffs(self):
+        self.assertEqual(rp.OWNER_OVERRIDES, dict(ph.OWNER_OVERRIDES))
+
+
 if __name__ == "__main__":
     unittest.main()

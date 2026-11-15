@@ -246,5 +246,25 @@ class TestScanScope(unittest.TestCase):
         self.assertEqual(names, {"real.md", "overview.md"})
 
 
+class TestLedgerExemption(unittest.TestCase):
+    """ba7b3973：wiki/metrics.md 是主編帳本，計數句含舊字樣不是懸置標記；一般頁同字樣照算。"""
+
+    TEXT = "- 5c 查證：確認官方未載 27\n"
+
+    def test_metrics_page_is_ledger_exempt(self):
+        hits = mod.iter_legacy(self.TEXT, pathlib.Path("wiki/metrics.md"))
+        self.assertTrue(hits)
+        for h in hits:
+            self.assertEqual(h.exempt, "ledger")
+        self.assertEqual(mod.actionable(hits), [])
+
+    def test_topics_page_same_text_still_counted(self):
+        hits = mod.iter_legacy(self.TEXT, pathlib.Path("wiki/topics/foo.md"))
+        self.assertTrue(hits)
+        for h in hits:
+            self.assertNotEqual(h.exempt, "ledger")
+        self.assertEqual(mod.actionable(hits), hits)
+
+
 if __name__ == "__main__":
     unittest.main()
