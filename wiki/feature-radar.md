@@ -113,6 +113,8 @@ https://code.claude.com/docs/en/code-mode
 
 **是什麼：** Whiteboards 是團隊與 Claude 共用的腦力激盪白板；Sheets 是 Claude 陪你建、改的試算表；Claude Data（原 Claude Dashboards）讓團隊問公司資料、做認證指標與共用儀表板（[官方說明](https://claude.com/resources/articles/sheets-whiteboards-data)，11-14 查證）。
 
+**詳見：** [[entities/claude-workspace-suite]]
+
 **為何熱：** 與同日的 Claude Meetings 一起，媒體定調為 Anthropic 自己的辦公套件、上市前直接對打 Microsoft；HN 273 分（11-11 快照）。
 
 **現在要試嗎：** 所有付費方案可用，網頁、桌面、手機都有。Team 方案三項預設開啟；Enterprise 的 Whiteboards、Sheets 預設關閉，**Claude Data 11-20 起預設開啟**。用量是否算進方案額度官方沒說。

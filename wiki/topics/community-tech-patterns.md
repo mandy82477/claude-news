@@ -32,10 +32,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-11-14
 **最後新聞更新：** 2026-11-09
 
-> **本日新增五則技術彙整：官方親自示範 Multi-agent 架構、兩個 Plugin／MCP 新工具、兩個創意工具整合**（2026-11-14）
-> - **Multi-agent 架構**：Anthropic 官方重新設計 Claude Code Projects，使用者描述目標後由 Claude 自動拆解分工並平行協調多線，見 [[topics/community-multi-agent#2026-11]]。
-> - **Plugin / MCP 整合**：reverse-engineer-marketing 還原對手行銷機器、ask-search 自架免金鑰聯網搜尋，見 [[topics/community-integrations#2026-11]]。
-> - **創意工具 Agent 整合**：open-carrusel 設計 Instagram 輪播圖、ghost-editor 把對嘴素材剪成成品影片，見 [[topics/community-integrations#2026-11]]。
+> **本週彙整：並行 session 管理工具比較、Fable 5.2 額度抱怨集中**（2026-11-15）
+> - **並行 session 管理**：Aq、Thrum、Taskman、Agentlink 等 7 個工具並列比較（等待佇列、活動 feed、跨帳號、實體硬體），見 [[topics/community-interfaces#並行 session 管理工具]]。
+> - **Fable 5.2 額度與 context 體感**：壓縮過勤、5 小時額度秒用完等回報集中成一節，全屬單一貼文、待觀察，見 [[topics/code-quality-decline#Fable 5.2 額度與 context 體感（2026-11-09 起）]]。
 
 ---
 

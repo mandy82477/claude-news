@@ -103,6 +103,8 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 
 > 本表跟著 [[feature-radar]] 全覽表的現行世代那一列走；最新熱度以 [[feature-radar]] 為準。
 
+發布首週社群回報 5.2 壓縮過勤、額度燒得快，全是單一貼文、未經複現，彙整在 [[topics/code-quality-decline#Fable 5.2 額度與 context 體感（2026-11-09 起）]]。
+
 ## 護欄會怎麼改寫你的請求
 
 送進去的請求若被前置安全分類器判為高風險，**你會收到通知**（回覆上會標出實際作答的模型），不是安靜地把品質調低（官方 2026-06-30〈Redeploying Claude Fable 5〉：「Users will be notified if a request to Fable 5 is blocked」）。2026-06-09 發布時的「降級且不告知」已於 06-11 由官方道歉撤回。
@@ -185,6 +187,7 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [[entities/pricing]] — 我的方案內含什麼、超出後怎麼算、一小時大概多少
 - [[topics/model-comparison]] — 這份工作該用哪個模型（Fable 5.1 vs Opus 5 vs Sonnet 5）
 - [[topics/anthropic-government-policy]] — 政府那條線會不會讓你哪天用不到、或用到被改派的版本
+- [[entities/claude-code-releases#最新版本]] — v2.1.321 起 Claude Code 預設 Fable 模型換成 5.2，要跟哪一版看這頁
 - [[entities/claude-code]] — Claude Code 現在有什麼毛病（Fable 相關的 issue 追蹤在這）
 - [[topics/ai-agent-safety]] — 護欄被繞過、越獄與提示注入這類攻擊面（本頁爭議節那幾條的安全政策脈絡）
 

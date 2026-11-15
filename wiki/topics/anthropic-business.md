@@ -34,9 +34,9 @@ Anthropic 的錢現在是什麼狀況、外面拿哪些數字在賭它，以及�
 **最後新聞更新：** 2026-11-14
 %% 拆頁評估 2026-11-02：已拆（第 23 波，`docs/page-audits/ledger.md` 裁決紀錄）。合作與算力 → topics/anthropic-partnerships-compute；風險與商業模式 → topics/anthropic-business-risks；營收估值與數字出處併入 topics/anthropic-ipo（標題改「上市與財報」）。母頁留指標表、IPO 一句、子線路由、人物、公司動態時序與時段總結；子頁時序照搬未去重（G1 約 65% 是指路句），去重列 /wiki-lint 候選。 %%
 
-> **最新動態**（2026-11-14）
-> - **IPO 估值預期降至 $2 兆門檻以下**（Yahoo Finance），Amodei 路演基調轉為「寧可少承諾、多交付」，見 [[topics/anthropic-ipo]]
-> - **Anthropic 因「Mythos」模型名稱遭控商標侵權而被告（Reuters）**，見 [[topics/anthropic-business-risks]]
+> **最新動態**（2026-11-15）
+> - **上市前備好兩張表**：IPO 頁預留「定價與首日結果」與「上市後追蹤」，鎖定期依 S-1/A 原文為 180 天（共同創辦人與大股東 365 天），見 [[topics/anthropic-ipo]]
+> - **訴訟一表看完**：Max 用量宣稱、Sony、Mythos 商標、非營利聯告等七案整理成對照表，見 [[topics/anthropic-business-risks]]
 
 ---
 

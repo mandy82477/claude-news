@@ -113,6 +113,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **期滿結論**：原預計 10-24 前後公布；截至 10-24 日報與原料包沒有結論貼文，題組與評分方法也從未公開，兩邊都無法驗證。
 - **風格變了，像另一款模型**（11-02）：r/ClaudeCode 單一貼文稱 Opus 5.5 說話像 ChatGPT 4o；0 留言、sort=new 分數不可信，方向與同日 GitHub #77136 跨版本修辭套路回報接近，但各自單一訊號，不構成同一驗證（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xm7ksq/is_opus_55_suddenly_dumb_again/)）。
 - **相反的正向回饋**（10-28）：r/ClaudeCode 週熱門貼文稱 Opus 在兩個複雜專案的設計、規劃、實作到部署都近乎完美；無具體案例或分數（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xi0b7c/has_anyone_else_noticed_that_opus_has_become/)，週熱門）。
+- **尖峰時段降級說**（11-13）：r/ClaudeCode 單一貼文稱寧要不會變的弱模型，也不要尖峰時段被降級的強模型；0 留言，未附量測（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xve1u7/id_rather_have_a_weaker_model_that_never_changes/)）。同週 Fable 5.2 的同類回報見 [[topics/code-quality-decline#Fable 5.2 額度與 context 體感（2026-11-09 起）]]。
 
 兩則方向相反的貼文不能互相抵銷，也不構成能力變化的證據。同類主張的累計與自行量測方法見 [[topics/code-quality-decline]]。
 

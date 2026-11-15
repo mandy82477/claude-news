@@ -29,7 +29,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-06-04
 **最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後新聞更新：** 2026-11-15
 
 > **非營利組織提告「凍結 AI 軍備競賽」**（2026-11-13）
 > Politico 與 CBS News 同日報導，一群非營利組織對 Anthropic、Google 等多家科技公司提告，主張凍結所謂的「AI 軍備競賽」；CBS 標題稱這些 AI 開發商「無法控制自己的技術」。兩篇報導均未附具體訴求條款或法院文件連結，是本頁「全球暫停呼籲」系列首見訴訟層級行動。
@@ -122,6 +122,18 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 技術彙整
 
+### RSP 門檻：招股書揭露時間線
+
+兩週內，Anthropic 對自己是否觸及 RSP 安全門檻的說法由「可能迫近」改為「已判定跨過」，外部隨即出現訴訟與官方評測文章。以下只列時間點，細節在各所指段落。
+
+- **11-02～03「可能迫近」**：修訂版 S-1/A 首度書面承認可能迫近內部 RSI 門檻，現役模型均未跨過（見下方「修訂版 S-1/A 首次書面自評」）。
+- **11-10「已判定跨過」**：11-10 提交的 [S-1/A 第 2 次修訂](https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm) 原文寫明，判定已達 RSP 的「AI 研發能力門檻」，依據是對未來模型的預期，而非現役模型的表現（2026-11-15 查 EDGAR 原文）。
+  - 原句：「we have met this threshold based on what we expect from future models」；細節見下方「在修訂版招股說明書稱已跨過」。
+- **11-12 非營利組織提告**：Politico、CBS News 同日報導，與招股書的關聯未載，僅標題可用（見上方「非營利組織對 Anthropic、Google 等科技公司提告」）。
+- **11-13 官方文章**：Anthropic〈Building strong safety evaluations〉，Benzinga 轉載稱好的安全評測很難做、現有評分易誤導；標題與日期取自日報原料，原文未開，與門檻判定是否相關未載。
+
+商業面見 [[topics/anthropic-ipo]]，政策面見 [[topics/anthropic-government-policy]]。
+
 ### Politico／CBS News：一群非營利組織對 Anthropic、Google 等科技公司提告，要求凍結「AI 軍備競賽」（2026-11-12 新增）
 
 - **揭露來源**：Google News／Politico（11/12 22:24 UTC）、Google News／CBS News（11/12 22:12 UTC），2 個獨立媒體同日報導，互動均為 0，僅標題可用
@@ -132,11 +144,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Yahoo Finance／Hacker News／Google News：Anthropic 在修訂版招股說明書稱已跨過 RSP 安全門檻，AI 承擔足夠研究工作使進度約加倍（2026-11-10 申報，11-12 收錄，2 個來源）
 
-- **揭露來源**：Hacker News 與 Google News／Yahoo Finance（11/11 18:23 UTC），互動 15 分；內容取自日報摘要，招股說明書原文未讀
+- **揭露來源**：Hacker News 與 Google News／Yahoo Finance（11/11 18:23 UTC），互動 15 分；2026-11-15 已對 EDGAR 原文（S-1/A 第 2 次修訂）確認判定依據
 - **核心主張**：Yahoo Finance 稱 Anthropic 在 11-10 送出、同時載明 IPO 價格區間的修訂版招股說明書中，寫明「我們判定已達到這個門檻」；一週前公司對投資人說這可能「隨時」觸發。門檻條件為 AI 承擔足夠多的 Anthropic 研究工作，使模型進步速度約加倍（日報轉述為負責任擴展政策 RSP 的一道安全門檻）
-- **判定依據**：據摘要，是公司對未來模型與整體進展速度的預期，不是目前模型的實測
+- **判定依據**：原文確認，是公司對未來模型與整體進展速度的預期，不是目前模型的實測
 - **與既有敘事的關係**：延續 11-02～03「可能迫近」與 11-05～06 METR 評估（見上），從「可能」升為公司自己的「已跨過」判定；與 08-14 官方自評「尚未達兩倍」口徑不同，兩者不可直接互比。下方 11-09～11 條目的「警報指涉」，此則即指向同一門檻
-- **可信度評估**：Yahoo Finance 報導轉述申報文件，HN 與 Google News 兩源同日收錄；招股說明書原文、RSP 對應條文與觸發後新增防護均未見報導
+- **可信度評估**：Yahoo Finance 報導轉述申報文件，HN 與 Google News 兩源同日收錄；招股書原文已確認判定措辭；RSP 對應條文與觸發後新增哪些防護，原文未載
 %% 本則同時派給商業記者寫 IPO 面，見 data/source_attribution.jsonl %%
 
 ### TechCrunch／Yahoo Finance：新 Mythos 與 Fable 模型在 RSI 疑慮下發布；IPO 前「關鍵 AI 安全警報」觸發（2026-11-09～11 新增）

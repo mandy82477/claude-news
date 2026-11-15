@@ -199,6 +199,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 開發者須知
 
+- **v2.1.321 起預設 Fable 模型換成 5.2**：換版後的牌價、與 5.1 的差異與遷移注意見 [[entities/fable-5#你現在拿到的是什麼]]。
 - **anthropic-sdk-typescript 修補 ID 路徑注入漏洞（2026-11-04）**：project／location／workspace ID（Vertex 另含 model）組路徑前先百分號編碼，值為 `.` 或 `..` 改丟 `AnthropicError`，防止路徑逃逸；用 GCP／Vertex 的開發者建議升級。
 - **底層 runtime 確認改用 Rust 版 Bun（2026-07-19 證實）**：Simon Willison 透過字串比對驗證 Jarred Sumner 的說法——Claude Code 自 **v2.1.181**（2026-06-17 發布）起，底層執行環境已改用 Rust 重寫版 Bun runtime，Linux 平台啟動速度提升約 10%，但屬底層基礎設施更新，多數使用者對此毫無察覺（作者以 `strings ~/.local/bin/claude | grep -m1 'Bun v1'` 等指令驗證，找到 563 個 `.rs` 檔名）。
 

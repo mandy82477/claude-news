@@ -129,7 +129,8 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 - **TSMC**（2026-11-11）：WSJ 標題稱台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI；分配與條件未見（Google News/WSJ）
 - **Microsoft、Google（新增合約）**（2026-11-10）：The Information 標題稱 Anthropic 揭露與兩家新增逾 100 億美元合約，並稱與 Lambda 的交易可能取消；合約內容未見（Google News/The Information）
 - **Stifel**（2026-11-10）：ThinkAdvisor 標題稱 Stifel 與 Anthropic 合作，把 Claude 帶給旗下理財顧問；規模與上線時程未見（Google News/ThinkAdvisor）
-- **IBM／Cisco（Mythos 5.2 導入計畫）**（2026-11-09）：IBM 宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布計畫用於紅隊測試；兩者均停在「宣布計畫」階段，未附具體上線時程（Google News/IBM；Google News/Cisco Blogs）
+- **IBM／Cisco（Mythos 5.2 導入計畫）**（2026-11-09）：IBM 宣布計畫將 Mythos 5.2 導入 Concert 平台做資安推理，Cisco AI Defense 同日宣布計畫用於紅隊測試；兩者均停在「宣布計畫」階段，未附具體上線時程（Google News/IBM；Google News/Cisco Blogs）。
+  - Mythos 在資安面的用途與管控見 [[topics/ai-agent-safety-cyber#目前結論]]。
 - **AP（Associated Press）**（2026-11-05）：Anthropic 首個內容授權合作，供選舉報導使用，授權範圍與費用未見報導（Google News/ADWEEK）
 - **McGraw Hill**（2026-11-05）：K-12 課程整合進 Claude for Teachers，開放對象與上線時間未見報導（Google News/Yahoo Finance）
 - **Addgene**（2026-11-05）：非營利生物材料存放機構，質體目錄整合進 Claude 供研究人員查詢，開放對象未見報導（Google News/The Business Journals）
@@ -139,12 +140,12 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 - **Mollie**（2026-10-29）：荷蘭金融科技公司推出 AI plugins 與 MCP server，供 Claude 與 ChatGPT 使用；具體功能與計費未見報導（Google News/The Paypers）
 - **生命科學深度研究合作（6 組織）**（2026-10-27）：官方近況：與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 合作藥物開發，並啟動自家藥物探索；模型面見 [[entities/claude-science]]（Anthropic；HN 294 分）
   - **2026-11-06 Fierce Biotech 跟進**：Generate（Generate Biomedicines）執行長稱用 Claude 縮短 CAR-T 細胞工程設計時程是「巨大機會」，具體時程縮短幅度與技術細節未見報導，僅標題可用（Google News/Fierce Biotech）。
-- **Mithril Medicine（收購）**（2026-10-27｜訊 2026-10-29）：收購一人神秘生技新創，由匿名 Twitter 用戶經營；Forbes 稱該新創此前以 Claude 運行藥物開發專案，金額與整合計畫未見報導（Endpoints News；R&D World；Forbes）
+- **Mithril Medicine（收購）**（2026-10-27｜訊 2026-10-29）：收購一人生技新創，官方載明創辦人為 Cody Tranbarger；Forbes 稱該新創此前以 Claude 運行藥物開發專案，金額與整合計畫未見報導（Endpoints News；R&D World；Forbes）
   - Mithril Medicine 為一人生技公司，創辦人 Cody Tranbarger，研究罕見肌肉萎縮症藥物；收購於 2026-10-27 公告，媒體稱交易發生在 7 月，金額未揭露（The Next Web、The Neuron、OfficeChai，2026-11-01 查證）。
   - Anthropic 稱最早 2028 年底進入臨床；「drug R&D chief」Endpoints 專訪原文未找到，負責人身分未確認（2026-11-01 查證）。
 - **Claude for Legal Artifacts**（2026-10-28）：Reuters／Law.com 報導 Anthropic 推出互動式法律工具組，僅標題可用，延續 08-07 設立 Claude for Legal 部門（[[entities/robert-mahari|Robert Mahari]] 負責）（Google News/Reuters；Law.com）
 - **Lumia Security**（2026-10-27）：資安治理平台新增整合 Claude Compliance API，延續 Surf AI（07-28）、Cyberhaven（07-23）、Orca Security（07-21）等資安夥伴生態擴張模式，具體規模與商業條款未見報導（Google News/Yahoo Finance）
-- **Claude for Financial Advisors（訊號）**（2026-10-28｜訊 2026-10-29）：PYMNTS 稱擴大整合範圍，新增對象未見報導；Citywire 稱用戶最高可領 $4,800 額度抵用，門檻與期限未附（PYMNTS；Citywire）
+- **Claude for Financial Advisors（訊號）**（2026-10-28｜訊 2026-10-29）：PYMNTS 稱擴大整合範圍，新增對象未見報導；Citywire 稱用戶最高可領 $4,800 額度抵用（額度由 Schwab 提供，2026-11-14 查證，見 [[topics/market-signals]]），門檻與期限未附（PYMNTS；Citywire）
 - **Enterprise Frontier Safeguards（AWS／Google Cloud／Azure 三雲）**（2026-09-01）：企業客戶資料改存在自己控制的雲端，EFS 免費，2026 秋季起分階段開放；個人 Pro／Max 不在範圍內（原列於上表，2026-10-27 讓位給 GSA 折扣列移入本清單，事實不變）
 - **Hg（歐洲顧問服務）**（2026-10-23）：Financial Times 與 SQ Magazine 同日報導 Anthropic 與私募基金 Hg 合作，於歐洲推出 AI 顧問服務供當地企業導入 AI，合作細節與服務範疇未見報導（Google News/Financial Times；Google News/SQ Magazine）
 - **學術機構／生命科學（Guest Investigator Program）**（2026-10-23）：官方公開徵求學術機構、非營利組織或政府實驗室研究團隊，於 8–12 週內與 Anthropic 研究員合作研究因果人類生物學、分子生物學、藥物化學等題目，模型與運算成本由官方負擔（[Anthropic Blog](https://www.anthropic.com/news/open-call-guest-investigators-life-sciences)）
@@ -341,7 +342,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 #### 2026-10-28
 - **[重大事件] Anthropic／FedScoop：GSA 擴大 OneGov 協議，Claude Enterprise／for Government／API 折扣提升至 40%，首度涵蓋全部採購管道並延伸至州地方部落屬地政府**：詳見「哪個合作會改到你用的 Claude」表新增列（Anthropic；Google News/FedScoop；Hacker News）
 - **[重大事件] Anthropic 官方：生命科學團隊公開近況，與 BigHat、BMS、Divergence Labs、Enveda、Generate Biomedicines、The Column Group 六組織展開藥物開發合作**：詳見「哪個合作」清單新增列（Anthropic；HN 294 分）
-- **[戰略合作] Endpoints News／R&D World：Anthropic 收購一人神秘生技新創 Mithril Medicine**：匿名 Twitter 用戶經營的潛伏式新創，詳見「哪個合作」清單新增列（Google News/Endpoints News；R&D World）
+- **[戰略合作] Endpoints News／R&D World：Anthropic 收購一人神秘生技新創 Mithril Medicine**：一人生技新創（創辦人 Cody Tranbarger，官方 10-27 具名），詳見「哪個合作」清單新增列（Google News/Endpoints News；R&D World）
 - **[戰略合作，僅標題可用] Reuters／Law.com：Anthropic 推出「Claude for Legal Artifacts」法律工具組**：延續 08-07 設立 Claude for Legal 部門（[[entities/robert-mahari|Robert Mahari]]），詳見「哪個合作」清單新增列（Google News/Reuters；Law.com）
 - **[戰略合作，僅標題可用] Yahoo Finance：資安治理平台 Lumia Security 整合 Claude Compliance API**：延續 Surf AI、Cyberhaven、Orca Security 等資安夥伴生態擴張模式，詳見清單新增列（Google News/Yahoo Finance）
 

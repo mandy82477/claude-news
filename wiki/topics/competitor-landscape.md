@@ -88,8 +88,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Kiro 標題那個 $200 是跟 Claude Max 比嗎？** 不是——那是 Kiro 自身 Power 方案的月費，非跨產品比較（2026-08-13 查證 kiro.dev）。
 - **Gemini CLI 還免費嗎？** 不是——2026-06-18 起免費／Pro／Ultra 帳號停止 Gemini CLI，併入 Antigravity CLI，個人開發者需轉付費 API key（2026-08-13 查證）。
 - **GitHub Copilot Pro+ $39 比 Claude 便宜嗎？** 名義月費較低，但 Opus 存取採 27 倍加價換算，重度使用時實際成本可能反超（2026-05-06 查證，此後未回訪）。
-- **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 單一來源、條件未載：10-29 The New Stack 稱 Fusion 勝 Claude Code、API 成本減半，測試條件未載；先別據此重算比價，見「對手雷達」Microsoft／GitHub 列。
-  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-11-15）｜**Fusion 成本與勝負的測試條件**：僅 The New Stack 一家，官方 changelog 只確認 10-28 GA。
+- **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 10-29 The New Stack 稱 Fusion 勝 Claude Code、成本減半。
+  - 媒體稱數字源自 Artificial Analysis 的 Coding Agent Index：Fusion Max 60 分、每任務約 $5.59，對 Claude Code＋Opus 5.5 Max 62 分、約 $11.42（2026-11-14 查證）。
+  - 「一半」是 API 每任務成本、不是訂閱價，不能拿來重算訂閱比價；見「對手雷達」Microsoft／GitHub 列。
+  - ❓ **待查證**（標 2026-11-01｜查 Copilot Fusion、The New Stack｜複 2026-11-15）｜**Fusion 成本與勝負的測試條件**：The New Stack、VentureBeat 皆稱出自 Artificial Analysis 指數（媒體稱，評測原頁未讀）；官方 changelog 只確認 10-28 GA。
 
 ## 競品定價對照
 
@@ -192,7 +194,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 10-22：VS 版 Copilot 新增聊天內瀏覽 PR、切換信任 AI 模型、偵測弱點套件自動修補；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA 生效——四者 Claude Code 在 VS 內均無對應。
 - 已查證（09-20）：自研模型取代已獲官方高層證實動機（Microsoft AI 執行長 Suleyman，Bloomberg 專訪 2026-06-04，[TNW](https://thenextweb.com/news/microsofts-ai-chief-says-the-company-wants-to-eliminate-what-it-pays-anthropic)），非僅傳聞，詳見 [[topics/anthropic-business-risks#還沒過去的風險]]。
 **還沒解決**
-- Fusion 基準測試的任務類型、方法論與原始分數均未見報導；棄用型號完整清單、all-in-one Copilot app 定價亦未見完整報導。
+- Fusion 基準測試的任務類型與逐項分數未見報導（總分與每任務成本見上）；棄用型號完整清單、all-in-one Copilot app 定價亦未見完整報導。
 
 ### Zhipu Z.AI
 **現在的答案**

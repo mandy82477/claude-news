@@ -31,8 +31,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
 > **行動裝置遠端控制新增反向隧道取向**（2026-11-13）
 > - **sun168567/cc-desk-tunnel**：桌面客戶端驅動雲端 Claude Code，經反向隧道把執行動作接回使用者本機 Windows。
@@ -51,6 +51,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - **接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
 - **介面與可視化**：各自單一實作居多，還在試；十一月新增兩個方向：並行 session 用等待佇列管理（Aq，11-12）與跨 repo 架構圖外掛的單人實測（Floorplan、Archify、Understand Anything，11-06，單一專案、單一實測者）；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
+
+---
+
+## 並行 session 管理工具
+
+十一月 Show HN 連出七個管理多個 Claude Code session 的工具，解的問題不同；全是剛發布的單一作者專案，熱度都低，沒有第二方使用回報。
+
+| 工具 | 解決什麼 | 熱度 | 連結 |
+|---|---|---|---|
+| Aq | 等待佇列：把等你輸入的 session 排隊處理 | HN 19 分（11-12） | [GitHub](https://github.com/nodo-labs-uk/attention-queue) |
+| Thrum | 多 agent 當一個團隊：Claude Code、Codex 分工 | HN 6 分（11-09） | [官網](https://thrum.team/) |
+| Taskman | 終端機 TUI：管理多個 Claude／Codex session | HN 1 分（11-10） | [GitHub](https://github.com/sanagnos/taskman) |
+| Agentlink | 跨帳號：不同帳號的 Claude Code agent 互傳訊息 | HN 1 分（11-10） | [GitHub](https://github.com/tombaldwin/agentlink) |
+| Friday | Claude Code、Codex、Cursor 當一個團隊（開源） | HN 2 分（11-11） | [GitHub](https://github.com/splashxmoon/friday) |
+| AI Juggler | 跨帳號：桌面版 Claude／Codex 額度用完時換帳號 | HN 2 分（11-13） | [GitHub](https://github.com/figurehead-ai/AI-juggler) |
+| Cyberviber | 實體硬體：US$15 觸控螢幕列出 session 狀態，點選跳回終端機 | HN 4 分（11-14） | [官網](https://cyberviber.de/) |
+
+分數是各工具首次收錄的快照，不代表之後熱度。Aq 的內容見下方 [[topics/community-interfaces#2026-11]] 條目。
 
 ---
 

@@ -28,12 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（2026-04 那次官方已結案；06 月起的兩條線官方未回應）
 **領域：** 🌐 社群
 **開始日期：** 2026-03（推測）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **「Opus 5.5 被削弱」彙整文登 HN，匯整多篇 Reddit 投訴，仍無官方或量化佐證**（2026-11-09）
-> - HN「Tell HN: A flood of reports of Opus 5.5 being nerfed」匯整 4 篇 Reddit 貼文稱近兩週 Opus 5.5 疑似被削弱，23 分。
-> - 彙整者未附官方說明或測試數據，計入「泛化變慢／變囉唆」主張第十則。
+> **Fable 5.2 上線後出現額度與 context 體感抱怨，皆為單一來源**（2026-11-15）
+> - 11-09 起 r/ClaudeCode 有人稱 Fable 5.2 幾分鐘就壓縮一次，11-14 有人稱 5 小時額度 30 秒用完；官方未回應。
+> - 歸類與逐則見「Fable 5.2 額度與 context 體感」小節；Opus 5.5 被削弱彙整文（11-08，HN 23 分）仍無量化佐證。
 
 ---
 
@@ -140,6 +140,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **你這端的配置**：multi-agent 與 MCP 工具疊加的成本是 [[topics/community-tech-discussions]] 已記錄的問題；若真是 context 腐蝕或配置問題，理論上調 CLAUDE.md、少一層 subagent 就會緩解，但至今沒有人回報緩解成功。用量具體流向哪裡，見 [[topics/community-cost#用量去向歸因]]。
 
 **目前的說法**：十則回報方向一致、來源獨立，但沒有一則帶測試方法或版本前後對照，三種解釋都排除不掉。官方對這一批沒有專文，[#65687](https://github.com/anthropics/claude-code/issues/65687) 到 2026-09-25 仍開啟（最後更新日，09-27 查）。10-30 那則沒有互動數也沒有新機制，只說明現象還在。
+
+---
+
+## Fable 5.2 額度與 context 體感（2026-11-09 起）
+
+Fable 5.2 於 11-09 發布後，r/ClaudeCode 出現三則額度或 context 抱怨，另有兩則把降質歸給 Opus 與尖峰時段；全部是單一貼文、0 留言，沒有測試方法或版本對照，官方未回應，先當單一來源、待觀察。依上面「三種解釋」分：compacting 偏「你這端的配置」或「計量」（200K 與官方 1M 的落差來源不明），額度秒耗偏「計費或計量改變」，沒有一則支持「模型真的退步」。
+
+- **11-09「Fable 5.2 200K context limit is shit. Compacting every few minutes」**：稱使用時頻繁壓縮，與官方宣布的 1M context 有落差；0 留言（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)）
+- **11-09「Fable 5.2 is compacting」**：稱約每 3 分鐘壓縮一次、一行程式碼沒寫就壓縮 6 次；同日第二篇，0 留言（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)）
+- **11-13「I'd rather have a weaker model that never changes than one that gets degraded every peak hour」**：稱 Opus 近日品質逐日不一致、尖峰時段降質；未指名 Fable，0 留言，無量測（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xve1u7/id_rather_have_a_weaker_model_that_never_changes/)）
+- **11-14「5 hour limit reached under 30 seconds using Fable 5.2, is this normal?」**：稱 5 小時額度 30 秒內用完；0 留言，無用量截圖或設定描述（[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xw63ig/5_hour_limit_reached_under_30_seconds_using_fable/)）
+- **11-08「Tell HN: A flood of reports of Opus 5.5 being nerfed」**：HN 23 分，彙整 4 篇 Reddit 貼文，無量化資料；已計入上節「泛化變慢／變囉唆」，逐則見 [[topics/code-quality-decline#2026-11]]。
+- **11-10 官方 Status「Elevated errors on Fable 52 and Mythos 52」**：Fable 5.2 與 Mythos 5.2 過載錯誤 4 分鐘，21:47 UTC 標已解決；屬服務穩定性，不能直接當作額度秒耗的原因（[Anthropic Status](https://status.claude.com/incidents/pgz8r13pk4sm)）
+
+模型面見 [[entities/fable-5]]；這些抱怨與 Fable 5.2 的 context 規格是否相符，本頁未查證。
 
 ---
 
@@ -256,6 +271,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序（最新在上，按月分組）
 
 ### 2026-11
+
+#### 2026-11-14
+- **「5 hour limit reached under 30 seconds using Fable 5.2, is this normal?」：Fable 5.2 額度體感**：Reddit 使用者稱 5 小時額度 30 秒內用完；單一貼文、0 留言，無測試方法，官方未回應（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xw63ig/5_hour_limit_reached_under_30_seconds_using_fable/)）
+
+#### 2026-11-13
+- **「I'd rather have a weaker model that never changes than one that gets degraded every peak hour」：尖峰時段降質主張**：Reddit 使用者稱 Opus 近日品質逐日不一致、尖峰時段降質；單一貼文、0 留言，無量測（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xve1u7/id_rather_have_a_weaker_model_that_never_changes/)）
+
+#### 2026-11-10
+- **官方 Status「Elevated errors on Fable 52 and Mythos 52」**：Fable 5.2 與 Mythos 5.2 過載錯誤 4 分鐘，21:47 UTC 標已解決；服務穩定性事件，非額度問題（來源：[Anthropic Status](https://status.claude.com/incidents/pgz8r13pk4sm)）
+
+#### 2026-11-09
+- **「Fable 5.2 200K context limit is shit. Compacting every few minutes」：Fable 5.2 context 體感**：Reddit 使用者稱頻繁壓縮，與官方 1M context 有落差；單一貼文、0 留言（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs3a8g/fable_52_200k_context_limit_is_shit_compacting/)）
+- **「Fable 5.2 is compacting」**：同日第二篇，稱約每 3 分鐘壓縮一次、一行程式碼沒寫就壓縮 6 次；0 留言（來源：[Reddit](https://www.reddit.com/r/ClaudeCode/comments/1xs2xug/fable_52_is_compacting/)）
 
 #### 2026-11-08
 - **「Tell HN: A flood of reports of Opus 5.5 being nerfed」：「泛化變慢／變囉唆」主張第十則**：HN 使用者彙整 4 篇 Reddit 貼文，稱近兩週 Opus 5.5 疑似被削弱；彙整者未附官方說明或量化對照數據，23 分（來源：[Hacker News](https://news.ycombinator.com/item?id=50419019)）

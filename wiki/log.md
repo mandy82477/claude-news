@@ -9062,3 +9062,35 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知：本輪開立 H-75139f（社群→功能，4 個新社群工具節點＋Projects 改版，評估 official-community-gap 產品化矩陣新增列），本輪結案 0 筆、void 1 筆（H-6db5d4：議題已於 11-14 weekly lint checkpoint 處理完畢，4 個社群工具各指向不同痛點，未達開新列門檻，功能記者確認不重複處理）
 - 主編查證（Step 3 截止日複查）：feature-radar.md「⏰ 倒數中」Claude Data Enterprise 預設開啟日期 2026-11-20，WebFetch 官方公告（claude.com/resources/articles/sheets-whiteboards-data）再次確認原文「Claude Data turns on by default on November 20, 2026」，日期仍有效，不動
 - devpractice 沉澱：候選 5 筆（gauge-cli 任務成功率回修文件、Anthropic 記憶三階段框架、Claude Code Projects 改版入口、skill 隨模型版本靜默失效應對、Cowork egress 允許清單收斂現象）／手冊寫入 0 則（候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 a3909d8
+
+## 2026-11-15 週度延伸回顧
+
+- 延伸（執行 8 項）：
+  - [功能／必做] 新建 [[entities/claude-workspace-suite]]：Whiteboards、Sheets（beta）與 Claude Data（原 Dashboards，正式版）三件組，週 lint 指定要有家；[[entities/claude-design]]、[[topics/anthropic-product-matrix]] 對應段縮成一句指過去，[[feature-radar]] 該條加「詳見」、index 補一列。主編 WebFetch 官方文章確認 Enterprise 的 Claude Data **11-20** 起預設開（記者回報與 W46 週報初稿誤作 11-19，週報已改；誤值源自本 log 11-10 那筆舊紀錄）
+  - [安全政策／必做] [[topics/anthropic-government-policy]] S-1 原文核對到期（複 11-15）：記者無 web 工具被擋，主編自查 EDGAR，取得 11-10 提交的 S-1/A 第 2 次修訂全文，核對風險條文（「resist shutdown」「behavior resembling blackmail」）與 RSP 段落；長期利益信託治理條文與 Computerworld／Reuters／Quartz 原報導仍待查，複查日順延至 11-29
+  - [安全政策] [[topics/recursive-self-improvement]] 新增「RSP 門檻：招股書揭露時間線」子區塊（11-02 可能迫近→11-10 已判定跨過→11-12 非營利提告→11-13 官方評測文章）；11-10 那點改用 EDGAR 原句（判定依據是對未來模型的預期，不是現役模型表現），下方細節段三處「原文未讀」上修
+  - [商業／必做] [[topics/anthropic-ipo]] 預建「定價與首日結果」表與「上市後追蹤」小節（11-18 定價前要有位置放數字）；鎖定期由主編自 S-1/A 補入：一般股東最長 180 天、共同創辦人與持股逾 0.5% 者最長 365 天
+  - [商業] [[topics/anthropic-business-risks]] 新增「訴訟案件對照」七列（Max 用量宣稱、Sony／Warner、音樂出版商、UTRF、反壟斷集體訴訟、Mythos 商標、非營利聯告）；後兩案僅標題可用
+  - [人物] [[entities/dario-amodei]] 新增「IPO 路演期表態（2026 年 11 月）」彙整區，核心論述表 7 列、歷史記錄 7 條併入；批評者對照補 NYT 11-13 與 Musk 11-11 兩列
+  - [社群] [[topics/code-quality-decline]] 時序補 11-09～11-14，新增「Fable 5.2 額度與 context 體感（2026-11-09 起）」子區塊（六則全標單一來源待觀察）；主編在 [[entities/fable-5]]、[[entities/opus-5-5]] 各加一行指過去（opus-5-5 LiveNerf 節補 11-13 尖峰時段降級說）
+  - [社群] [[topics/community-interfaces]] 新增「並行 session 管理工具」比較表 7 個工具
+- 判定不做（9 項，理由）：
+  - [功能] claude-code-features「多 session 協調」彙整節——Projects 改版 11-14 才 beta，官方原生能力還在動，等一週再彙整才不會馬上過時
+  - [模型] fable-5 另開 context／穩定性子條目——同一批貼文已住 code-quality-decline，fable-5 只放一行指路（每個事實一個家）
+  - [人物] Jamie Dimon 直播角色查證——官方 IPO 承銷名單未列 JPMorgan，現有僅一則標題，查證成本高於讀者價值
+  - [安全政策] product-vulns 拆頁（844 行）——拆頁是裁決點，需先數行數、看考題分群，排入下次 lint 厚頁評估
+  - [安全政策] CVP 誤擋小節——本週只多一個 issue（#61889），現有一句已足
+  - [商業] Nvidia 領導層動盪 × IPO 承諾線——全部僅標題，「Huang 去職」這類重大說法未取得一手來源，不能用標題立節
+  - [社群] community-guardrails 守門工具彙整——各工具 1–3 分，過不了採用訊號
+  - [功能] 讀者筆記 L35 維持 ⏳——本週功能、開發實務原料都沒有有名字、有規格的 format 提案
+  - 無 📌 📓 雜記可清
+- 聚焦校準：11 月已於 11-01 執行（46.0%），本次跳過
+- 本機補跑（`/weekly` 步驟 0）：
+  - 5b 跨家榜單週更：12 榜全更新，[[topics/model-task-leaderboard]] callout 改為「本週快照重點（2026-11-15）」（WebDev：Fable 5.2 1838 > Opus 5.5 1815 > Sonnet 5.5 1772）
+  - lint 遺留事項已做：月度蒸餾 5 條＋wiki-lint-sweeps 6a 措辭共 6 處規則（77caaf92）；讀者語言禁詞補「題材線代號」「表格操作句」，存量 166 筆入基線並記 `data/baseline-changes.jsonl`（371be554）；投資分析記者交回 7 筆事實層舊說法改正（anthropic-ipo、partnerships-compute、gov-policy、competitor-landscape）；6k 留下的 2 對連結補上（claude-code-releases↔fable-5、ai-agent-safety-cyber↔partnerships-compute）；leaderboard callout 日期落後已修
+  - lint 遺留事項延後（理由）：3h 蒸餾 37 個時段（大段搬移、需逐條核唯一細節出處，留給下次 lint 有完整額度時做）；厚頁 4 頁（拆頁是裁決點，prompt-injection 已有切法，其餘 3 頁未評估）；社群工具目錄 gh 實查（第三方 repo 403 待換查法）；對抗輪 C 的 20 項規則修訂（原文存 `docs/adversarial/2026-11-14-prompt-reviewer.md`，改規則檔需獨立一輪照 SKILL-PRINCIPLES 做）；加拿大出版商著作權訴訟（不在任何日報裡，補收前須先取得訴狀或法院文件）；`devpractice_diff.py consume`；5g 兩頁宣告是否被覆寫的 git 歷史查核
+  - 開放迴路掃描（`open_loops.py`）：需收尾 0｜已跳票 13｜存量遷移 24｜人類質疑時效燈 ✅（13 天）
+- 需使用者端設定：
+  - claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 8 週）：leaderboard 組網域，另加 sec.gov、ipo.anthropic.com
+  - 雲端 routine 多 repo session 的 hook 全部未載入：建議從 routine sources 移除第二個 repo（anthropics/claude-code），由使用者決定
+  - Reddit API secrets

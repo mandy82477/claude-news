@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-11
 
 > **最新動態**（2026-11-11）
-> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，新功能入表與否見 [[topics/anthropic-product-matrix#未定項目]]。
+> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，三項專頁見 [[entities/claude-workspace-suite]]，新功能入表與否見 [[topics/anthropic-product-matrix#未定項目]]。
 
 ---
 
@@ -122,7 +122,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 ### Claude Dashboards
 
 - **分組：** 產出物
-- **Claude app：** available｜Pro／Max／Team／Enterprise｜11-11 轉正式版，更名 Claude Data；官方稱付費方案皆可用，Enterprise 預設開關未再查｜[來源](https://claude.com/resources/articles/sheets-whiteboards-data)｜2026-11-11｜official
+- **Claude app：** available｜Pro／Max／Team／Enterprise｜11-11 轉正式版，更名 Claude Data；官方稱付費方案皆可用，Enterprise 11-20 起預設開（細節見 [[entities/claude-workspace-suite]]）｜[來源](https://claude.com/resources/articles/sheets-whiteboards-data)｜2026-11-11｜official
 - **Claude Code：** vague｜Pro／Max／Team／Enterprise｜本站以非 Team 帳號在 Claude Code 列 artifact 範本有 Dashboard（2026-10-23 實測），官方文件未列；原文：「Ask Claude for a dashboard in any chat.」｜[來源](https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards)｜2026-10-23｜official
 - **Claude Tag：** vague｜Team／Enterprise｜Tag 託管頁可做儀表板，未說是 Claude Dashboards 範本；原文：「A hosted page ... Dashboards, prototypes, reports」｜[來源](https://claude.com/docs/claude-tag/concepts/how-it-works)｜2026-10-23｜official
 - **Claude Platform：** unknown｜—｜官方未提及｜[來源](https://platform.claude.com/docs/en/build-with-claude/overview)｜2026-10-23｜official
@@ -288,14 +288,15 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 - **Claude Code × Motion**：管理指南列為 artifact 範本、限 Team／Enterprise，Claude Code 文件沒提；需要 Team 帳號實測。
 - **Claude Duet × Motion**：Motion 只開 Team／Enterprise、Duet 還沒開放 Team／Enterprise，兩句合起來等於用不到，但官方沒直接寫，維持未公開。
 - **Claude Code × 語音**：Claude Code 有 /voice 語音輸入，說明中心另寫 voice mode（雙向對話）不在 Claude Code；本表把語音輸入算可用，兩者差別寫在格內。
-- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：官方稱 Sheets、Whiteboards 為 beta、付費方案皆可用（日報摘要）；Meetings 只見媒體標題；他產品欄未查
+- ❓ **待查證**（標 2026-11-11｜查 Claude Sheets、Claude Whiteboards、Claude Meetings）｜**Meetings、Sheets、Whiteboards 未入表**：Sheets、Whiteboards 為 beta，專頁見 [[entities/claude-workspace-suite]]；Meetings 只見媒體標題；他產品欄未查
 - **Claude app × 背景／排程任務的 Free 方案**：說明中心列付費方案，Free 沒寫；官方部落格曾說 Free「soon」。
 
 ## 相關實體
 
 - [[entities/cowork]]：Claude app 與原 Cowork 的合併
 - [[entities/claude-code]]、[[entities/claude-tag]]、[[entities/claude-duet]]、[[entities/managed-agents]]
-- [[entities/claude-design]]（含 Dashboards、Motion）、[[entities/claude-docs]]、[[entities/claude-slides]]、[[entities/claude-skills]]、[[entities/claude-mods]]
+- [[entities/claude-design]]（含 Dashboards、Motion）、[[entities/claude-workspace-suite]]、[[entities/claude-docs]]、[[entities/claude-slides]]
+- [[entities/claude-skills]]、[[entities/claude-mods]]
 - [[entities/claude-security]]、[[entities/claude-science]]、[[entities/claude-for-teachers]]
 - 官方 agent 積木怎麼疊：[[topics/anthropic-agent-stack]]；功能熱度：[[feature-radar]]
 
