@@ -4,6 +4,8 @@
 
 （2026-09-13 由 原 `wiki-reporter-shared.md` 條文旁的敘事搬入；條文本身未改一字。）
 
+**2026-11-14**（月度蒸餾五條立法，雲端 lint 判採納、本機落地）：近 30 天記者回報的重複失誤——①商業記者來源歸因 URL 欄寫「Google News 新聞連結」等佔位字（≥4 次）→ shared.md「來源歸因回報」補禁佔位字、只有轉址時填原文；②六類記者回報欄位不照契約（≥6 次）→ 只在 shared.md「回報格式」加一句逐欄自檢（單一來源，各角色檔本來就指向它，不逐檔抄）；③自述通過但未實測（W42 缺轉知處置欄、W44 3e 未驗與 3h 未跑）→ daily-contracts.md 呈現品質節加「自述通過要有實測」；④3g 改寫舊語法後儲存格超限（`ai-agent-safety-cyber:222` 209 字元、`pricing-incidents:178` 226 字元，均主編代修）→ daily-contracts.md「表格變體」加該頁必跑 `check_cell_limits.py --page`；⑤流程詞外洩讀者正文（11-13 社群、11-11 模型，主編自己也犯一次）→ shared.md「派工過程不上頁」加流程理由一律進 `%% … %%`。同日 wiki-lint-sweeps 邊界節與 wiki-ingest 步驟 3 的矛盾（6a）見 `docs/rules-changelog/wiki-lint.md` 同日段。
+
 **2026-10-11**（記者規則拆「每日必讀」與「碰到才讀」）：近 14 天 120 次記者派工量測：`page-templates.md`（20 KB）被讀 130 次、`shared.md`（21 KB）121 次。角色檔明寫 page-templates「建頁時另讀」，記者卻每次都讀，因為其他規則指向它的「懸置標記語法」「Wiki 頁面呈現品質標準」兩節；shared.md 裡「大型頁面讀取策略」「事實更正必回掃」「待查證命中處置」「轉知接手處置」則是碰到才需要。讀進來的規則之後每一回合都被重算。
 處置：那兩節原文搬到 `.claude/reporter-rules/daily-contracts.md`、那四節原文搬到 `.claude/reporter-rules/shared-when.md`，原處只留指路，條文一字未改；角色檔「開始前必讀」改為 shared.md ＋ daily-contracts.md，page-templates 回到建頁時才讀。每日固定讀量由約 41 KB 降到約 27 KB（shared.md 16 KB ＋ daily-contracts.md 11 KB）。
 

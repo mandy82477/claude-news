@@ -40,7 +40,7 @@ disable-model-invocation: true
 
 ## 邊界
 
-- 由主編（本機主 session 或雲端頂層 session）執行；派工帶明確 `model`，記者派工明寫 `run_in_background: false`（Agent 工具省略此欄即為背景，hook 只擋明寫 true，不會替你補；背景派出就得等完成通知收齊才進下一步），記者不可再呼叫 Agent tool 委派。
+- 由主編（本機主 session 或雲端頂層 session）執行；派工帶明確 `model`，記者派工照 `.claude/skills/wiki-ingest/SKILL.md` 步驟 3（Agent 工具 2.1.288 起已無 `run_in_background` 參數、子 agent 一律背景：等完成通知收齊才進下一步；`.claude/hooks/guard_roles.py` 只擋明寫 `true` 的派工），記者不可再呼叫 Agent tool 委派。
 - `news/` 唯讀、`log.md` 只能 append、繁體中文為主：見 `wiki/CLAUDE.md`「🚫 絕對限制」；wiki 檔案只能建立或修改在 `wiki/`（repo 根下）路徑內。
 - 本段沒有要使用者決定的事：5g 連續 2 輪照該節改宣告單頁豁免、不動全域門檻；5k 滿載讓位照 `.claude/reporter-rules/community/pages.md` 的讓位序直接做（含移出列的細節條目一併處理）；5o 厚頁照 `.claude/reporter-rules/page-lifecycle.md`「升格／併回 verify 流程」直接拆，拆錯一週內併回。
 - 驗證閘：十五行回報全部有值（跳過者寫明跳過理由）才算完。
