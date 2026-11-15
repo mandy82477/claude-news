@@ -447,21 +447,6 @@
       "pageType": "topic"
     },
     {
-      "id": "anthropic-business-risks",
-      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-government-policy",
-      "name": "Anthropic 政府與軍事政策",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-interfaces",
-      "name": "社群做法：手機遠端、介面與 agent 可視化",
-      "pageType": "topic"
-    },
-    {
       "id": "community-large-codebase-workflow",
       "name": "大型 Codebase 規模化開發：社群工作流主線",
       "pageType": "topic"
@@ -499,11 +484,6 @@
     {
       "id": "market-signals",
       "name": "投資訊號判讀",
-      "pageType": "topic"
-    },
-    {
-      "id": "recursive-self-improvement",
-      "name": "AI 遞歸自我改進與全球暫停呼籲",
       "pageType": "topic"
     }
   ],

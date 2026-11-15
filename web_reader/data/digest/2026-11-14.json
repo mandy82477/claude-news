@@ -450,11 +450,6 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "pricing-incidents",
       "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
       "pageType": "entity"
@@ -477,11 +472,6 @@
     {
       "id": "anthropic-business",
       "name": "Anthropic 商業健康度",
-      "pageType": "topic"
-    },
-    {
-      "id": "anthropic-ipo",
-      "name": "Anthropic 上市與財報",
       "pageType": "topic"
     },
     {
