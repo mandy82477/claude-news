@@ -1,0 +1,436 @@
+{
+  "https://support.claude.com/en/articles/12138966-release-notes": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/tradermonty/claude-trading-skills": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/andyhuo520/digital-human-koubo": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/kyy-logs/code-review-gate-skill": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/Innei/ryugi": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/imraywang/ray-sticker-shop": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/baiblinocun1986/blender-ai-copilot-hub": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/91870": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/26302": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/48237": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/38536": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/100730": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/19877": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/89673": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/102142": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.nytimes.com/2026/11/15/business/anthropic-ipo-filing-prospectus.html": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/CLoaKY233/kith": {
+    "categories": [],
+    "reason": "通用 homelab／VPN 工具，僅帶一句「我用了很多 Claude」路過提及，與 Claude/Anthropic 生態無直接關聯",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/noambrand/ai-time-estimator": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/raed667/claudette": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/TomerAberbach/profiler-md": {
+    "categories": [],
+    "reason": "performance profiler 轉換工具，標題與摘要全文皆未提及 Claude 或 Anthropic，屬通用 AI agent 效能討論",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/robertodf99/hook-me-up": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/taherchhabra/pi-managed-agents-api": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/btahir/saylark": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.orgiggly.com/dominoes": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://letthembuild.com": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://github.com/shubhamverma8991/claude-model-share": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://tessera.shiptiffin.app/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx0wfy/five_ways_ten_parallel_claude_code_sessions_broke/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx0vft/claude_code_kept_writing_routes_with_no_auth/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx0tkj/chisle_a_skill_which_saves_more_tokens_than/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx0qz9/im_afraid_for_my_career/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LU1AzNnpYd25PdXVua1dKVTJOSzhMX3lCVnEtT1hJcGRCRXpqd084YUVkZVRBSk1xWXJXS3B3bWZJQ2N0Ykk3ak0wUlZZM0FuVnRkRlZTSEU3bTU4dUlYaDdvVDg0V1owUG0wWkVIU0lJa01OQTZ4SUdYajh5UFU?oc=5": {
+    "categories": [
+      "人物"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx08wz/exactly_25_years_ago_big_advancements_since_then/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://www.reddit.com/r/ClaudeCode/comments/1xx00d9/combining_antigravity_claude_code/": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTE54MXBVUFZsLWJsQVpNTUtwZGxaZ09WTXRvMERYZVhLLXVsVzAyRE43OGZqNEtiQ0dVd3JGX3IyWTVCd3RGdDJjaklhNExSdU1Sbk9tVndvZXo3MThXRTdlSHQtdDd1RUIwODN2Y2tMM2pnUGZianM2RXRCRmxyVzQ?oc=5": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdEJ1X2RvWFE1cjAwY3lxdndBWkVCQzQ1TU1YdFBXdVphRVBwN3BSdm9YRHlTWVNROUFXaUpYUWFXU2tRbUpSN2VseWYtc2p0Szh4QzBpNFFQWW0yV0t5VnlRTHJLZ183U3l1V2pvM19Wem54aWc2TW1pOE0yRmI4Y2Q4UVZvMXZ0ZGxZOWRGY0xqY2s0Zk9jT3lpaVhUQklZb3dfUjAzdnhGeC1FT0JDQWpkTQ?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE5pd2VxVGttcjNWcUxFdlRqamhuT09ScWZKQkcwYTd4WlN0QVhwRTgyWjFqSWNiMjQ0ODdGV2JUQ3ZVM3BDckJfaHZncHFwWmNGUWk0MkFkcmREejNSaEV2WTMxaGZqZzdTWWJTQ0pRd0lpLVRHN0E?oc=5": {
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYmQ0bmtkbzg1OUl4N09xLWk2UEhQcjZUdEI2Ym1HczBQTHBtYXZocjA3Vml6bTRvZmQzUVNfUmdqVFk4SC1RNGFWRlFycURxSEFjT09BSjFvcmVLeDlycEFsU28xcGhISWNTMF96Q2c0R1FEY1RHS3hvUUxmc21jWjYwNUJRaXIz?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0E5Z0ZIZDR2Nm1zM2xobkpzZUdJVlFhSTVUd0dJSURzbmxzMUlmdHplcEY4T2xPdlZLekR2RlpZVXlPSW5zel94WG9aQTBpU2JOWkR6Qzdsa1RWU3hqYnlHWGtKYXJZM3AzUjJ1c2ZnUkstZVJWNGU1R1NROXJVN3NFaVVLVXNUM3hmQ2VfbE9wVUJa?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOFFaaTFOMmRsSmNwRlBQZTNqWUJhZXlDbzRYQk5TRWpoLVQ5R0trbFZySzNhQU9pa1JZRXE5Q2VhVTNBUVhxOFB2b0JiUVNLZHpWQkxsYW5EeHY5YW9jU09hNzFhbnMxMnctaVFaUTdyYnhGS1g2Z2pNU0pWdmlYUUtuR0pWR2ZnMVhMWHhjd3VweXMyd0h2X2ZRc9IBoAFBVV95cUxObFlSaHJnalF6bnZ6eDUwbTlYZGlPNjlFN2xxZ3Q1blZNREx3YTlQaWx4NEtXeHlEbmZqc0doTExsM1RXSXMzM05TaVEzTjIxd1N6OGVWYkFhZUZLaXZKZWkyLW5EaW85eHQtMk5FMUcxMmVkNmJwSHZOWWZpVUZVd1FROVJKYjBlWUxERUpxZTNYdUZ0aldWX3RIa0ZrUXR3?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMihAFBVV95cUxOelhLb2QtNy1faTdqOEwwQVNzSk5IX25mc0VOQjQzVTdPc3pZdUMyOE9EWkxVd1pJX0huTDZMMTBNR0ZLV0E2WHVkb1Vuam1vMjJ3TUptVGloS2VhWFlmYW1ITGJvVjJpNzNCdkYyQ3hTdXIzUlhaUElJN01UQzVWc2NfSjE?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMizwFBVV95cUxPRGowX3ljRUhFOUtMR2diRUJHR2xTalpGZExTNFRKTExUQTQ2cUtNQXZfWEVRM3BMYldsOEh2czRtSmJZVExCakN0Q2VaWVRWWmFSYjRsRFBqNzRucXh1c2pIcW84aDUzdkhjY3pyZFFkVjRSN2gzU0dNM1NEWXI2WHIxdXl0OTB4OVM3QVVsSXg5V2NUQVVLVmZJWURyaWhXOUxyTWE3cm1qVXRQTFktZWQ0Y3hmaWlaenFrTi1jc3ZPSTFlWUVEbXRaYUVQOU0?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEN6Mk43NjhtMVJzaVNhWTRvOUtSZ3NLd1I4UWtRTHI1Vk9RTGRSbFlHZ1g4bTY0MnVqb0ltNEh1NTVqVmpLb2tCTGp2dTBNUHpfWFI1aDB1VjBmcFNseG9KbHNkbXVUV2JIdEI0ZlNPVW13Q0IxTTZWZkxnSHJPRC1oOWlScHJkSVhzZGltSEtzVFdPZzUtMVByU0ZMZExMbXFsREFlclVMbldRRWd1TmoyVQ?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxPaDdkN3JhRHlQT0huQ3g1cVAweHp0VDJLWDBLekFlM1lNTmc1S3VBM0FqNU1EbGRtb1VPVlRlZC1TQ2FhQ294MkZNSGZvSDJrMVcxR21lZWJhcnBzNHp0ZUJyMkZiTFVIcnlCTFJ1dTB1UEhMakVFaU1maFRxcnVhV0lfLVYzQQ?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVXVlcW9fRWJWT2RZTC1RMks4Rk5OX1RSVTUyM2JwVHozd2l5blZSajNWVjJabFB2YUpwQll1cTQwb2swclZvQXRhVEIxSFhEU0FRcm1OM0hHcVp1OEQzTmk0Ri1kUnFkNzFRRmk5VHBaVURpaVUxRjBXRGpOQUpMZUdWa3p4cExDRFc0NTh5WQ?oc=5": {
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOXFLdmRZbnlVUFpPYVduNHEzNm1oRlM5ZWZPSVFhUTJsdUZvdWtyd292Snd6TGJablgxSmRNRldtbUFuNDVXc2VKSGswT3VKUGZmZzBSRklEdUN2Z2FudWwxdlVzZTdRc1hWNG5RN21IemU1WkhYSFVaVTB4OUhIOXVIOFRfa2FYdWxfd3cwWkluOFphOUF0OFZVdGVIRmxiVmlFNHZya2RjUzZEQ3hGb1hEV0ZEcjB6bGlKQw?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxPX0RWQ19WVmdZdzNSV2VQcV9TM2c1UGlEdjM5TUVWRmwtTXltMnZ5MTA0a3phZ2xVMjBsbjVmTUNycmhUMi14STh5N2dwTUxpVGhkdUFWbHdrQ1V6ekJ2OFd0UVp1UjM2Y0VhUTI0NWRQVElBdWsyUU5Zdzlud2J5VXZhVDZfNmc?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "與 HN 條目（item 15／nytimes.com 直連）為同一篇 NYT 文章的兩個抓取記錄，內容相同",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQa1hEODlXNkxNTUtURTZ1VDBmem95TTlQdXY5YzQySlF4VENvYkVMWUdHV2c4MkdsVWZSNko5Zk51aHVpV0dONkx6WjhxM05FU3hKc1RUNDQzMzUwcmFVOERGc05uVWZoeFVRMENnS3hGYktoNmJtMmUxYzlyTWdaWkd4UDF3RmhXbFpWdElLVEEyTmZOQXA0NEVHTWRxT0RGN3VpWGo5THVicW1xWVRsZWNHY2RnRjVVaUlmbW1vaHl3T1E5NlctLU5zYzJNZXlzTDZmb3l6ZXI?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE5GQmQwcXFwZUpYeVVqTU56TUNNMkx2UGdOcERTaHlXdDlmUjkya0ZXR09CT0dSUnJQZUY1bHVzakhqa3FKTjZyUlN1SHgyWng5RTJKclFKODRxNUpvLVBsX2JjS1pQYXpkQUNLWkVObEFpYVA4blE?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZ0pVd0VKNnk2Vmpxalp6amtSaFlvX0Vpd0NOQkNZVldpTjRYdzQyZHd2c2IwdmhEdm5RNElZWXJ6bWtMVGhlemhGX0FqM0d3Vnp3MWRvWUNxTGJwMnV3Ymx0cy1TbWJJMVliVi1HM0xaUExCZ0FQU3NOMEJWWHJhaGZ3?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcGZpdzFaZENrMTFSOS1ZUFJveU5CT1l4MWt5ZUU5cy1KRV82SlItV3A3bjJWR0lDR0kzX1l5ZHRDZ0M3TkFPNXp0anl0bFh4X3QtSmxsc3BvMHFqMzRqVHhZQXplMW9qWjM2SkJmcm5PLVdtUk5VM1RXWndWaVlrR2xnd1M2VzRD?oc=5": {
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://simonwillison.net/2026/Nov/14/datasette-llm/": {
+    "categories": [],
+    "reason": "Datasette LLM 外掛新增 OpenAI 相容端點支援，全文未提及 Claude 或 Anthropic",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiywFBVV95cUxQcHZ4cmtrWmFOWXB6M0oyLWFDX2dJMEdOV3ZVelNIUUxpZDF4ZkdJaU5EZ2t6bUduUk9MaFJleEdsOHAzY3V6bWRzNmpxaTJFVGxYQVFic1BBU2VsUU01TjQ3S2dHNWlhZVhZczVzNi1aNTFLV3FnYmx0SVNsNjh1RC1FX21LZ0V0R0ktaDRLWTJjSWl6MHU1bUlrN3UxN0dXMklxNmV6T0VCalBZWm1aYUZYY05LdXJaWGtpM1c3UUFQb1Q5Q1M0Wk5YWQ?oc=5": {
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZGZ6cDY2N1VKakpFcW9sN0NqTkJBck9xMGxNbGdzTDJQUmt0cmNmdzlBdWdaQ2tzbEF4U1JoZVBsWGFQTWxuZUN4WHVNcGhTMjBCOE85eWVLdFZnRk9JV0c3QWRXUnl1Y0JkM3dPNGlyNHNnR29PT3J6eU95cHZ3SW1WOHEwcUM4ZG1FR3BPSHkzaUdDc0Z0TExMSHRlV2c1OFg4REhaeGphZHd6cTR1YUliWnBFRFVlWUE?oc=5": {
+    "categories": [
+      "安全政策"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  },
+  "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5": {
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": "",
+    "summary_override": ""
+  }
+}
