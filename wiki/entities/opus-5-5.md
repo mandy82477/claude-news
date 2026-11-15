@@ -31,19 +31,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🤖 模型
 **別名：** claude-opus-5-5
 **首次出現：** 2026-09-23（本站收錄；官方發布日 2026-09-22）
-**最後更新：** 2026-11-09
-**最後新聞更新：** 2026-11-09
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **HN 彙整多篇「被削弱」回報**（2026-11-09）
-> Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報；彙整者未附官方說明或量化對照，仍屬主觀觀感累積。
+> **官方：舊版提示習慣拖慢 Opus 5.5**（2026-11-15）
+> The Decoder 等 2 來源同日報導，Anthropic 表示不少人仍用舊版提示習慣對話，拖慢模型本可有的效能；僅標題可用，既有提示建議見「跟它怎麼說話」。
 
 ---
 
 ## 現況
 
-**2026-11-08**：Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報（HN 23 分，2 個來源）；彙整者本身未附官方說明或量化對照，仍屬主觀觀感累積，與既有「LiveNerf／降智觀感」同類回報並陳，細節見該節。
+**2026-11-15**：Anthropic 表示，不少使用者仍用舊版提示習慣跟 Opus 5.5 對話，拖慢了模型本可有的效能（The Decoder 同日報導，另一來源同日跟進，2026-11-14）。原料僅標題與編輯摘要可用，無法複述官方原文或具體建議內容，既有官方 prompting 要點見 [[#跟它怎麼說話]]。本頁「LiveNerf／降智觀感」已累積多筆效能觀感回報，此次官方說法是否回應該爭議未見明載，不逕自連結。
 
-**2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時具體會怎麼回應、改做出什麼，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。報導僅標題可用，無法複述具體測試項目或結果。鬆綁機制與已知問題狀態見 [[entities/claude-code-known-issues]]。
+**2026-11-08**：Hacker News 貼文彙整近期 Reddit 上多篇 Opus 5.5「被削弱」回報（HN 23 分，2 個來源）；彙整者本身未附官方說明或量化對照，仍屬主觀觀感累積，與既有「LiveNerf／降智觀感」同類回報並陳，細節見該節。
 
 定價與方案內含見 [[entities/pricing]]，這份工作該用哪個模型見 [[topics/model-comparison]]，資安防護機制與安全爭論脈絡見 [[topics/ai-agent-safety]]。
 
@@ -225,6 +225,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - [Reddit r/ClaudeCode：The nerf is real, thank you u/wum1ha1nho](https://www.reddit.com/r/ClaudeCode/comments/1xr9x5y/the_nerf_is_real_thank_you_uwum1ha1nho/)（2026-11-08）
 - [Reddit r/ClaudeCode：Anthropic should offer a free reset and restore](https://www.reddit.com/r/ClaudeCode/comments/1xqvqip/anthropic_should_offer_a_free_reset_and_restore/)（2026-11-08）
 - [[news/2026-11-09]]
+- [Google News/The Decoder：Anthropic says outdated prompting habits are slowing down Claude Opus 5.5](https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5)（2026-11-14）
+- [[news/2026-11-15]]
 
 ## 歷史記錄
 
@@ -234,6 +236,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-15 | Anthropic 向媒體表示，不少人仍用舊版提示習慣對話，拖慢 Opus 5.5 本可有的效能；The Decoder 等 2 來源同日報導，僅標題可用 |
 | 2026-11-08 | HN《Tell HN: A flood of reports》彙整四則 Reddit 貼文稱近兩週「降規」回報增多（23 分，2 個來源），彙整者未附測試方法或官方說明，弱訊號 |
 | 2026-11-07 | PCMag UK 實測一週末記錄 Claude 面對遊戲複刻請求的具體回應，承接 11-05 官方鬆綁一半措施；報導僅標題可用 |
 | 2026-11-02 | GitHub #77136 回報範圍擴至 Opus 5.5，累計 140 留言、578 反應；Reddit 兩則觀感相反（「變笨」vs「近乎完美」），皆弱訊號；另一則週熱門貼文調侃 Opus 5.5 撐過十月發布潮（0 留言，弱訊號） |
@@ -263,6 +266,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **2026-11**
 
+- **2026-11-15**：Anthropic 表示不少人仍用舊版提示習慣對話，拖慢 Opus 5.5 本可有的效能；The Decoder 同日報導，另一來源跟進。僅標題可用，官方 prompting 要點見「跟它怎麼說話」；與「LiveNerf」既有回報是否相關未明說（[Google News/The Decoder](https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5)，2026-11-14）。
 - **2026-11-08**：HN《A flood of reports of Opus 5.5 being nerfed》彙整四則 Reddit 貼文稱降規回報增多（23 分，2 個來源）；未附測試方法或官方說明，非獨立複測，完整連結與並陳見「LiveNerf／降智觀感」節（[Hacker News](https://news.ycombinator.com/item?id=50419019)，2026-11-08）。
 - **2026-11-07**：PCMag UK 實測一整個週末，記錄 Claude 面對遊戲複刻請求時的具體回應，承接 11-05 官方「鬆綁一半」改主動提議做同類型原創遊戲；報導僅標題可用，無法複述測試細節（[Google News/PCMag UK](https://news.google.com/rss/articles/CBMirAFBVV95cUxOYjJUSXJXVktURzV3ZUdESE1uQm5ycWRmaGFUS055c1BHX0M1M29LTkZxalJiWURldS1GWWxHdzgzdWRjQ0g4dFlaWjllNy16UFo5Y0pPSHFYdEpmN3RHZHZOaTlGdzVObHhhZzY3YllkU2d0ZjhjWUoyRlRlR3J5bFZVWjNUeHpRM3plR3lBWFVlclFscy1fSENtX3NBbHFZWndMc3gteHlVdW9H?oc=5)，2026-11-07）。鬆綁機制狀態見 [[entities/claude-code-known-issues]]。
 - **2026-11-02**：GitHub #77136 回報範圍擴增至含 Opus 5.5，留言增至 140 則、反應增至 578 個；完整沿革見 [[entities/opus-5]]；已於 10-03 關閉、留言持續累積，官方無回應（[GitHub Issue #77136](https://github.com/anthropics/claude-code/issues/77136)，2026-11-02 查證）。

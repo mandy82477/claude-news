@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **別名：** Function Hooks, mods, `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS`（這支旗標從 build 旗標升到出貨的四階歷程見 [[topics/claude-code-experimental]]）
 **上層：** [[entities/claude-code]]
 **首次出現：** 2026-09-04
-**最後更新：** 2026-10-23
-**最後新聞更新：** 2026-10-20
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **最新判讀**（2026-10-20）
-> v2.1.304 新增 mod 跳過 hook 時具名記錄 transcript，以及 `tool.check` 的 `decider: "person"` 選項，供標示核准由人或 mod 決定。
+> **最新判讀**（2026-11-15）
+> 官方追蹤串 #91870 累積到 277 則留言、225 個 👍（10-01 出貨當日為 233／218），官方持續同步修復進度。
 
 ---
 
@@ -117,7 +117,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 
 ## 社群用法與回饋
 
-- **issue #91870**：官方追蹤串（原提案「Mods - make Claude 10x more extensible」），出貨當日累積 233 則留言、218 個讚，官方表示逐一處理使用者回饋。
+- **issue #91870**：官方追蹤串（原提案「Mods - make Claude 10x more extensible」），出貨當日累積 233 則留言、218 個讚，官方表示逐一處理使用者回饋；11-15 累積至 277 則留言、225 個 👍，官方仍持續同步修復進度。
 - **statuslin.es**：Show HN 的 Claude Code status line 樣式庫，收錄見 [[topics/community-tech-patterns]]。
 - **statuslin.es 作者的 mod**：10-02 用 Mods 的 function hooks 把狀態列延伸進 Claude 桌面 App；HN 2 分＋Reddit r/ClaudeCode 轉發，訊號薄弱，見 [[topics/community-tech-discussions]]。
 - **競品相容層**：Pandaily（經 Google News 轉載，2026-10-04，僅標題可用）報導競品 DeepSeek Harness v0.2.1-alpha.1 新增實驗性 Claude Code Mods 相容層；相容範圍與技術細節未見報導，單一來源。
@@ -140,6 +140,7 @@ mixed-news.com（10-02）標題稱 Anthropic 說外掛可讀取 API key，the-de
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-15 | 追蹤串 #91870 互動數更新：277 則留言、225 個 👍（10-01 出貨當日 233／218）。 |
 | 2026-10-19 | v2.1.304：mod 跳過 hook 新增具名 transcript 訊息；`tool.check` 新增 `decider: "person"` 選項。 |
 | 2026-10-13 | MIXED Reality News（單一來源，僅標題）報導九個政策變數隔離於外掛可改寫範圍外；XDA（僅標題）報導外掛／skill 客製化玩法。 |
 | 2026-10-04 | 建頁；依官方 overview 文件整理權限範圍、關閉方式與內建 mods |

@@ -33,15 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-14）
-> - **新增事故**：Anthropic Status 調查 iOS App「使用 Apple 登入」註冊失敗（🌐 組）。
-> - **新增已知問題**：Gmail MCP 多帳號（🔌 MCP）、Cowork egress 允許清單異常（🔌 平台相容性）、呼叫工具前文字遺失（🧠）、更新後檔案鎖定錯誤（🔌 平台相容性）。
-> - **互動數更新**：MCP 孤兒行程（#1935）增至 48 則留言；Output styles frontmatter 未注入（#47482）增至 41 則留言。
-> - **安全修復**：v2.1.325 修補 zstd 解碼安全性問題（🛡️ 組）。
+> **最新動態**（2026-11-15）
+> - **新增已知問題**：Cowork auto mode 分類器誤擋擁有者自己的排程與跨機器檔案傳輸（#100730）、Desktop Code 分頁字體大小請求（#48237）、Desktop Routines 區塊重啟後重設隱藏（#102142）、Desktop 輸入框 Enter／Ctrl+Enter 請求（#89673）、團隊共享記憶（#38536）、自動化流程條件式 `/compact`（#19877）。
+> - **互動數更新**：Desktop 1.1.3189 UI 延遲與滑鼠卡頓（#26302）增至 56 則留言、48 個讚。
 
 ---
 
@@ -261,7 +259,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 查證確認：該 issue 2026-06-19 由 `github-actions[bot]` 自動關閉並標 `state_reason: not_planned`，全程無官方／協作者留言，屬 stale-issue 自動關閉而非人工判定拒修。
 - 🔴 **未修復**｜**Fable 5 advisor（Opus 4.8 主模型）跨全部 session 持續顯示「unavailable」（GitHub issue #73365，累積 87 則留言、176 個讚，首見 2026-07-10，2026-08-10 互動數更新，v2.1.198 起出現）**：使用者回報自 v2.1.198 起，搭配 Opus 4.8 作為主模型時，Fable 5 advisor 功能在所有 session 中皆顯示無法使用；官方尚未回應。Advisor 功能面涉及 Fable 5 模型行為，另見 [[entities/fable-5]]。
 
-### 📂 Session 與資料管理（27 條未修復、2 條已修復、3 條拒修、1 條查無官方）
+### 📂 Session 與資料管理（29 條未修復、2 條已修復、3 條拒修、1 條查無官方）
 
 **Session 保存與記憶生命週期（彙整，細節見各原條目）**
 
@@ -273,6 +271,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 Windows Desktop 靜默清除紀錄：見母頁「現在還沒修好的」表列（#80444 等）與下方靜默資料遺失條目。
 - 讀者可做的事：靠 session 歷史回溯過去工作的人，自行定期備份 `~/.claude/projects`。
 
+- 🔴 **未修復**｜**功能請求：團隊共享記憶（Shared Team Memory），取代現行僅限個人的記憶系統（GitHub issue #38536，累積 34 則留言、14 個讚，2026-11-14）**：多人共用同一 repo 的團隊無法互通知識，須反覆向 Claude 重新說明；官方尚未回應。
+  - 備註：與既有跨 session 持久記憶（⛔ #14227）同屬記憶延續性缺口，但聚焦多人共享而非單人跨 session，暫分列。
+- 🔴 **未修復**｜**功能請求：讓 Claude 可在自動化工作流程中視狀況自行呼叫 `/compact`（conditional /compact，GitHub issue #19877，累積 26 則留言、25 個讚，2026-11-15）**：跑長時間自動化流程、常被 context 塞滿打斷的人目前只能靠人手動觸發；官方尚未回應。
+  - 備註：與既有 `/compact` 檔案化摘要訴求（#17428）同屬 compact 機制缺口，但聚焦自動觸發而非儲存格式，暫分列。
 - 🔴 **未修復**｜**功能請求：把 claude.ai 網頁版對話的上下文帶進 Claude Code 繼續工作（GitHub issue #13843，累積 30 則留言、174 個讚，2026-11-07）**：目前只能手動複製貼上；與跨 session 交接（#11455）、CLI／Desktop 對話同步（#28791）同屬延續性缺口，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：`/compact` 改為檔案化摘要並可選擇性還原（GitHub issue #17428，累積 45 則留言、117 個讚，2026-10-31）**：提議參考 Cursor 的 Dynamic Context Discovery，把摘要存成檔案、需要時再還原細節；官方尚未回應。
   - 備註：候選：記憶／context 格式取向，尚非有名字有規格的 format。
@@ -355,8 +357,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（100 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（104 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**Auto mode 分類器誤擋帳號擁有者自己的排程任務與跨機器檔案傳輸（Cowork 雲端 session，GitHub issue #100730，累積 26 則留言，2026-11-15）**：把擁有者自己排定的排程任務與機器間檔案傳輸都判定為需額外確認而擋下；官方尚未回應。
+  - 備註：與既有 auto mode 分類器誤擋已授權操作的回報（#97613）相關。
+- 🔴 **未修復**｜**功能請求：Claude Desktop 的 Code 分頁新增字體大小調整選項（GitHub issue #48237，累積 37 則留言、135 個讚，2026-11-15）**：反應數遠高於留言數，顯示訴求集中；常在 Desktop Code 分頁看程式碼、覺得字級不合用的人反映最多；官方尚未回應或提供設定選項。
+- 🔴 **未修復**｜**Desktop 2.37337.1：側邊欄改版後 Code 分頁 Routines 區塊被隱藏，且每次重啟都重設回隱藏（GitHub issue #102142，累積 23 則留言、16 個讚，2026-11-15）**：靠 Routines 區塊管理排程任務的人每次重開都須手動叫出；官方尚未回應。
+  - 備註：與既有側邊欄「Group by」自訂分組被移除（#102088）同屬同一輪側邊欄改版的回歸，但現象不同，暫分列。
+- 🔴 **未修復**｜**功能請求：Desktop app 聊天輸入框提供 Enter 換行、Ctrl+Enter（或 Cmd+Enter）送出的選項（GitHub issue #89673，累積 25 則留言、141 個讚，2026-11-14）**：目前 Enter 一律直接送出，常打多行訊息卻被提早送出的人反應集中（反應數遠高於留言數）；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Cowork 雲端沙盒 egress 允許清單收斂至約 5 個網域，即使帳號設定已選「All domains」（GitHub issue #93525，累積 35 則留言，2026-11-14）**：依賴存取自訂網域的工作流可能實際連不到預期網域，建議先手動確認實際能連到哪些網域；官方尚未回應。
 - 🔴 **未修復**｜**更新後操作檔案跳出「另一個程式正在使用此檔案」錯誤（GitHub issue #51847，累積 32 則留言、18 個讚，2026-11-14）**：剛更新完版本的使用者可能撞到此錯誤；官方尚未說明成因或提供繞法。
 - 🔴 **未修復**｜**`claude -p` 無頭模式一送 prompt 就回 API 400「tools.3.custom.input_examples: Extra inputs are not permitted」（GitHub issue #11678，累積 52 則留言、38 個讚，2025-11-15 回報，2026-11-12 互動數更新）**
@@ -397,7 +405,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：新增 `--quiet`（或 `--minimal-output`）旗標抑制互動模式工具呼叫輸出（GitHub issue #9340，累積 32 則留言、47 個讚，2026-08-29）**：社群呼籲新增 `--quiet` 旗標，讓互動模式下的工具呼叫輸出可被抑制、僅顯示精簡進度，方便長時間執行時減少畫面雜訊；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：Claude Desktop／Cowork 支援 AWS Bedrock 作為替代後端（GitHub issue #32668，累積 65 則留言、241 個讚，2026-10-15）**：使用者呼籲讓 Claude Desktop 與 Cowork 支援 Amazon Bedrock 作為替代後端，做法比照 Claude Code CLI 既有的 `CLAUDE_CODE_USE_BEDROCK=1` 環境變數；與既有「Bedrock 功能相容性落差（持續）」「Bedrock：Claude Opus 4.7 回傳 permission_error」同屬 Bedrock 接入層缺口，此則聚焦 Desktop／Cowork 尚未支援 Bedrock 接入本身（而非既有 CLI 接入後的功能落差）；官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，為更新後效能退化（GitHub issue #26302，累積 49 則留言、47 個讚，2026-10-11 互動數更新）**：使用者回報升級後出現嚴重 UI 延遲與滑鼠卡頓，屬效能退化（regression）；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，為更新後效能退化（GitHub issue #26302，累積 56 則留言、48 個讚，2026-11-15 互動數更新）**：使用者回報升級後出現嚴重 UI 延遲與滑鼠卡頓，屬效能退化（regression）；官方尚未回應。
 - 🔴 **未修復**｜**v2.1.113 起原生二進位改依賴 glibc，Termux（Android）環境完全無法使用，無 JS fallback（GitHub issue #50270，累積 72 則留言、64 個讚，首見 2026-08-19，2026-10-07 互動數更新）**：使用者回報自 v2.1.113 起，Claude Code 從 JavaScript 入口（`cli.js`）改為需要 glibc 的原生二進位（`bin/claude.exe`），導致在 Termux（Android）上完全無法使用，且不再提供 JS fallback，屬破壞性回歸；官方尚未回應。
 
 > Windows 上 Cowork VM 啟動失敗於 8 天內至少 5 起獨立事件湧現：#29941 Windows 11 Pro CoworkVMService 簽章驗證初始化失敗（07-23）、#74649 缺少 HCS vfpext 服務導致無法運作（07-27～07-29）、#27801 workspace 啟動顯示「VM service not running」、重開機亦無法解決（07-28）、#40198 Windows ARM64（Snapdragon）無法啟動（07-28）、#40175 Cowork Global instructions 儲存後靜默還原舊版本（08-01）；五起成因各異（簽章驗證、服務缺失、VM 啟動、架構相容、設定持久化），疑指向 Cowork Windows VM 層本身不穩定，而非個別 driver 問題；官方尚未回應或確認共同成因，此為推論。
@@ -451,7 +459,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。
   - 同一錯誤碼另有回報指出根因（GitHub issue #81341，累積 35 則留言、8 個讚，2026-11-02）：Windows CIG（MicrosoftSignedOnly）政策與 vendor 簽署 `vk_swiftshader.dll` 衝突，瀏覽器預覽必當機。
 - 🔴 **未修復**｜**claude.exe 列出目錄時（`NtQueryDirectoryFileEx`）疑似透過 Wof.sys 觸發 Windows 藍屏（BSOD）（GitHub issue #32870，累積 41 則留言，首見 2026-07-29，2026-08-15 互動數更新）**：使用者回報 claude.exe 在列出目錄內容（`NtQueryDirectoryFileEx`）時，疑似透過 Windows 系統的 Wof.sys（Windows Overlay Filter driver）觸發系統藍屏當機；屬嚴重穩定性問題，官方尚未回應。
-- 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓（GitHub issue #26302，累積 49 則留言、47 個讚，2026-10-11 互動數更新）**：回報為效能退步（regression）；與既有「Cowork 10GB VM bundle」（#22543）同屬效能問題但情境不同，暫分列；官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓（GitHub issue #26302，累積 56 則留言、48 個讚，2026-11-15 互動數更新）**：回報為效能退步（regression）；與既有「Cowork 10GB VM bundle」（#22543）同屬效能問題但情境不同，暫分列；官方尚未回應。
 - 🔴 **未修復**｜**Windows Desktop app：GPU process crash（exit code 101457950）導致整個應用與所有執行中 session 一併中斷（GitHub issue #81698，累積 68 則留言、6 個讚，2026-08-16）**：環境：Claude desktop app 1.24012.9 MSIX 安裝、Claude Code CCD 2.1.219、bundled Node 24.18.0，Windows 11 Home build 10.0.26200，NVIDIA GeForce RTX 5080；與既有「Claude Desktop 1.1.3189 於 Windows 出現嚴重 UI 延遲與滑鼠卡頓」（issue #26302）同屬 Desktop app 於 Windows 上的穩定性問題但成因不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Windows/MSIX 1.28929.0：跨 session 訊息停在目標輸入框不送出，該 session 從此無回應（GitHub issue #86069，41 則留言、9 個讚，2026-10-31）**：與已修復的跨 session 傳訊功能（#24798）同源但限 Windows/MSIX；官方未回應。
 - 🔴 **未修復**｜**進程記憶體洩漏，增長至 120GB+ 遭 OOM Killed（GitHub issue #4953，累積 98 則留言、77 個讚，2026-09-22 互動數更新）**：Claude Code 進程持續增長至 120GB 以上記憶體，最終遭系統 OOM killed，屬嚴重穩定性缺陷；長時間執行或大型專案場景風險較高，官方尚未回應或說明成因。

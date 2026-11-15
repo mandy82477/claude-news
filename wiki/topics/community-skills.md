@@ -3,8 +3,8 @@ page: "topics/community-skills"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_updated: "2026-11-15"
+last_news_update: "2026-11-15"
 status_main: "ongoing"
 days_since_news: 2
 parent: "topics/community-tech-patterns"
@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **Skills 設計新增教程與策展目錄兩則**（2026-11-13）
-> - **aa1143/NamiAgent**：零基礎 AI Agent 教程，同時是可本機跑的 agent，附拆解 Claude Code／Codex 的課程。
-> - **zhuyansen/agent-skills-hub**：安全評級、每 8 小時更新的開源 skills／MCP／agent 工具目錄站。
+> **Skills 設計新增交易技能合集，8 天暴增 1,647 星**（2026-11-15）
+> - **claude-trading-skills**：市場分析、技術圖表、篩股器與交易策略開發 skills 合集；commit 記錄顯示多名貢獻者持續開發，非單純灌星。
 ---
 
 ## 摘要
@@ -95,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### tradermonty/claude-trading-skills：股票與交易專用 Claude Code skills 合集，8 天內暴增 1,647 星（2026-11-15）
+
+- **主線：** —
+- **核心模式：** 針對股票／交易投資者的 Claude Code skills 合集：市場分析、技術圖表、經濟日曆、篩股器與交易策略開發；近 8 天新增約 1,647 星（約 206 星/日），GitHub Search 5,324 星。
+- **與既有模式的關係：** 屬垂直領域 Skills 合集，與資安、SEO 等職能 skills 合集同屬「整套流程包成 skill」做法，換成交易領域；垂直合集不進模式概覽表，主線填 —。
+- **可信度註記：** 星速異常（8 天 +1,647 星）；`git clone` 查核 commit 記錄，11-14／11-15 有 tradermonty、narutomanchester、Saim Shafique 等多位不同帳號提交並合併 PR，非單一帳號灌水；forks／issues 無 API 權限，未查。
+- **來源：** GitHub Search；[GitHub](https://github.com/tradermonty/claude-trading-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，多名貢獻者持續開發，尚無第三方量化採用數據）
 
 #### aa1143/NamiAgent：零基礎 AI Agent 教程，同時是可在本機跑的 agent（2026-11-13）
 

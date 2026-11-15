@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-15
 **最後新聞更新：** 2026-11-13
 
-> **最新動態**（2026-11-14）
-> - **v2.1.325**：修補 zstd 解碼安全性問題，見 [[entities/claude-code-releases]]。
-> - **已知問題新增**：Gmail MCP 多帳號、Cowork egress 允許清單異常等，見 [[entities/claude-code-known-issues]]。
-> - **桌面版文件**：新增第三方推論與部署前檢查說明，見 [[entities/claude-code-features]]。
+> **最新動態**（2026-11-15）
+> - **已知問題新增**：Cowork auto mode 分類器誤擋擁有者自己的排程與跨機器檔案傳輸、Desktop 字體大小／Routines 隱藏／輸入框送出方式等請求，見 [[entities/claude-code-known-issues]]。
+> - **Help Center**：model configuration 段落第三次改版，見 [[entities/claude-code-features]]。
+> - **Claude Mods**：追蹤串 #91870 互動數更新，見 [[entities/claude-mods]]。
 
 ---
 
@@ -48,10 +48,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-14 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-15 |
 | 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-14 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-14 |
-| Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-10-20 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-15 |
+| Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
 ## 現在還沒修好的
 

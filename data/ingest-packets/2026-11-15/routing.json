@@ -150,9 +150,11 @@
     "summary_override": ""
   },
   "https://github.com/TomerAberbach/profiler-md": {
-    "categories": [],
-    "reason": "performance profiler 轉換工具，標題與摘要全文皆未提及 Claude 或 Anthropic，屬通用 AI agent 效能討論",
-    "note": "",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": "分類回退自 排除（分類複核記者判定：全文核心為 agent 工作流可複用模式，非出處篩選）",
     "summary_override": ""
   },
   "https://github.com/robertodf99/hook-me-up": {

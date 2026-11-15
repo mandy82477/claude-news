@@ -3,8 +3,8 @@ page: "topics/community-integrations"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-14"
+last_updated: "2026-11-15"
+last_news_update: "2026-11-15"
 status_main: "ongoing"
 days_since_news: 1
 parent: "topics/community-tech-patterns"
@@ -31,12 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **本日新增四則：行銷情報還原、自架聯網搜尋、Instagram 輪播圖、對嘴影片剪輯**（2026-11-14）
-> - **Plugin／MCP 整合**：reverse-engineer-marketing 貼網址還原對手行銷機器、ask-search 自架 SearxNG 免 API key 聯網搜尋。
-> - **創意工具 Agent 整合**：open-carrusel 對話設計 Instagram 輪播圖、ghost-editor 把對嘴素材剪成成品影片。
+> **創意工具 Agent 整合新增三則：數字人影片、貼圖包、Blender 多供應商中樞**（2026-11-15）
+> - **digital-human-koubo**：一張照片生成數字人說話影片，5 種剪輯風格＋48 個打包元件。
+> - **ray-sticker-shop**：一張照片或角色圖生成一整套形象一致的動態表情包。
+> - **blender-ai-copilot-hub**：多供應商 LLM 接進 Blender，27 個受監督場景工具＋內建 MCP server。
 
 ---
 
@@ -60,6 +61,33 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### andyhuo520/digital-human-koubo：一張照片生成數字人說話影片，5 種剪輯風格＋48 個打包元件（2026-11-15）
+
+- **主線：** —
+- **核心模式：** 由一張照片生成數字人（digital human）說話影片的 agent skill：以 Renoise MCP 做生成，提供 5 種編輯風格與 48 個「創作者級」打包元件，供 Claude Code、Codex、OpenClaw、WorkBuddy 等多款 agent 使用；GitHub Search 1,993 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（ghost-editor 對嘴素材剪輯等，[[topics/community-integrations#2026-11]]）一個「單張照片生成數字人影片」取向——既有做法多是剪輯既有素材，本則改為從單張照片直接生成會說話的數字人影像；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（1,993★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，48 個打包元件與 5 種剪輯風格的具體內容未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/andyhuo520/digital-human-koubo)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### imraywang/ray-sticker-shop：一張照片或角色圖生成一整套形象一致的動態表情包與微信投稿素材（2026-11-15）
+
+- **主線：** —
+- **核心模式：** 供 Claude Code／Codex 使用的 skill：輸入一張照片或角色圖，生成一整套角色形象一致的動態表情包（貼圖）與微信投稿素材；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（open-carrusel 社群媒體輪播圖等，[[topics/community-integrations#2026-11]]）一個「角色一致性貼圖包生成」取向——既有做法多是單張靜態排版，本則要求整套輸出維持同一角色形象一致；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，角色一致性具體做法未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/imraywang/ray-sticker-shop)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### baiblinocun1986/blender-ai-copilot-hub：多供應商 AI copilot 中樞接進 Blender，27 個受監督場景工具＋內建 MCP server（2026-11-15）
+
+- **主線：** —
+- **核心模式：** Blender 用的多供應商 AI copilot 中樞：把 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、OpenCode Zen、Ollama 與自訂端點都接進同一套已儲存連線管理中心，附 27 個受監督的場景操作工具與內建 MCP server；GitHub Search 466 星（2 個來源）。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧一個「多 LLM 供應商可切換」取向——既有 Blender 整合多綁單一供應商，本則讓使用者切換不同廠商模型，並對場景操作加監督把關；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（466★，2 個來源），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search（2 個來源）；[GitHub](https://github.com/baiblinocun1986/blender-ai-copilot-hub)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### dansugc/reverse-engineer-marketing：貼網址還原對手整套行銷機器，CLI／MCP server／本機 Web App（2026-11-14）
 

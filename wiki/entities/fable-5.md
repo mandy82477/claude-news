@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **從 5.1 升 5.2 先對照四項破壞性變更**（2026-11-11）
-> 第三方作者讀官方遷移指南後列出 4 項，首項是 thinking block 前綴檢查改為全帳號適用；官方指南自稱 5.1 升級大致可直接替換。
+> **單一創意展示：97 KB、180 FPS 水下世界、無遊戲引擎**（2026-11-15）
+> BigGo Finance 報導 Fable 5.2 生成一個 97 KB、180 FPS 的水下世界，未用現成遊戲引擎；僅標題可讀，無測試方法或效能量測細節。
 
 ---
 
@@ -240,12 +240,17 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [[news/2026-11-09]]
 - [[news/2026-11-10]]
 - [[news/2026-11-11]]
+- [Google News/BigGo Finance：Claude Fable 5.2 Builds a 97 KB Underwater World at 180 FPS, No Game Engine Needed](https://news.google.com/rss/articles/CBMidkFVX3lxTE5pd2VxVGttcjNWcUxFdlRqamhuT09ScWZKQkcwYTd4WlN0QVhwRTgyWjFqSWNiMjQ0ODdGV2JUQ3ZVM3BDckJfaHZncHFwWmNGUWk0MkFkcmREejNSaEV2WTMxaGZqZzdTWWJTQ0pRd0lpLVRHN0E?oc=5)（2026-11-15）
+- [[news/2026-11-15]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-15
+**BigGo Finance：Fable 5.2 建出 97 KB、180 FPS 水下世界，無遊戲引擎**：Google News 轉載 BigGo Finance 標題稱 Fable 5.2 生成一個 97 KB、180 FPS 的水下世界，未使用現成遊戲引擎；原料僅標題可讀，測試方法與效能量測方式均未見報導，列為單一創意展示（[Google News/BigGo Finance](https://news.google.com/rss/articles/CBMidkFVX3lxTE5pd2VxVGttcjNWcUxFdlRqamhuT09ScWZKQkcwYTd4WlN0QVhwRTgyWjFqSWNiMjQ0ODdGV2JUQ3ZVM3BDckJfaHZncHFwWmNGUWk0MkFkcmREejNSaEV2WTMxaGZqZzdTWWJTQ0pRd0lpLVRHN0E?oc=5)，2026-11-15）。
 
 #### 2026-11-11
 **Fable 5.2 升級遷移項與狀態頁事件**：

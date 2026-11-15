@@ -29,12 +29,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-15
 **最後新聞更新：** 2026-11-09
 
-> **本週彙整：並行 session 管理工具比較、Fable 5.2 額度抱怨集中**（2026-11-15）
+> **本日社群五頁各補一則新動態**（2026-11-15）
 > - **並行 session 管理**：Aq、Thrum、Taskman、Agentlink 等 7 個工具並列比較（等待佇列、活動 feed、跨帳號、實體硬體），見 [[topics/community-interfaces#並行 session 管理工具]]。
 > - **Fable 5.2 額度與 context 體感**：壓縮過勤、5 小時額度秒用完等回報集中成一節，全屬單一貼文、待觀察，見 [[topics/code-quality-decline#Fable 5.2 額度與 context 體感（2026-11-09 起）]]。
+> - **Skills 設計**：claude-trading-skills 交易技能合集，8 天暴增 1,647 星，見 [[topics/community-skills#2026-11]]。
+> - **多代理 PR Review、規格驅動開發**：code-review-gate-skill 四探針稽核＋JSON 合併關卡、ryugi 可留言 artifact 送回 agent，見 [[topics/community-guardrails#2026-11]]。
+> - **創意工具 Agent 整合**：數字人影片、貼圖包、Blender 多供應商中樞三則新作，見 [[topics/community-integrations#2026-11]]。
 
 ---
 
@@ -55,10 +58,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-14 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理 | 2026-11-07 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-12 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-13 |
-| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-12 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-14 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-13 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-15 |
+| [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-15 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-15 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-15 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 

@@ -3,7 +3,7 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-14"
+last_updated: "2026-11-15"
 last_news_update: "2026-11-15"
 status_main: "ongoing"
 days_since_news: 0
@@ -31,11 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-15
 **最後新聞更新：** 2026-11-15
 
-> **最新動態**（2026-11-14）
-> - **IPO 估值預期降至 $2 兆門檻以下**：Amodei 路演基調轉為「寧可少承諾、多交付」，呼應既有下修至約 $1.5 兆的敘事（Yahoo Finance）
+> **最新動態**（2026-11-15）
+> - **Madonna 經紀人創投持 Anthropic 股權達 $70 億**：持股比例、入股時間未載（Bloomberg）
+> - **IPO 今日登場框入 AI 類股拋售敘事**：11-10 價格區間 $70～78、11-13 約六倍超額認購均未變（Startup Fortune／CNBC）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -349,6 +350,11 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-15
+- **[公司治理] Bloomberg：Madonna 經紀人經營之創投公司持 Anthropic 股權達 $70 億**：標題未附持股比例或入股時間（Google News/Bloomberg.com）
+- **[IPO 前瞻，僅標題可用] Startup Fortune／CNBC：IPO 登場框入 AI 類股拋售敘事**：兩家稱此次發行（規模約 $640 億，與 11-12 Economic Times 同數，非新值）成為承壓 AI 類股的焦點；11-10 價格區間、11-13 超額認購倍數均未變（Google News/Startup Fortune；Google News/CNBC）
+- **[IPO 前瞻，僅標題可用] WSJ：散戶對 IPO 熱衷，對 AI 產業前景轉趨保守**：標題未附調查數字（Google News/WSJ）
 
 #### 2026-11-13
 - **[公司治理，僅標題可用] Chief Investment Officer／Equable Institute：近 20 個美國公共退休基金持有 Anthropic 股權曝險**：IPO 認購名單外的另一條曝險脈絡，具體基金名單與金額未見報導（Google News/Chief Investment Officer）

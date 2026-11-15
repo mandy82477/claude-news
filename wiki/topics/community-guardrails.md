@@ -3,8 +3,8 @@ page: "topics/community-guardrails"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-12"
+last_updated: "2026-11-15"
+last_news_update: "2026-11-15"
 status_main: "ongoing"
 days_since_news: 3
 parent: "topics/community-tech-patterns"
@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 
-> **Hooks 與自動化新增「完成宣告驗證」Stop hook**（2026-11-12）
-> - **claim-check**：agent 寫「fixed」卻沒跑過檢查時，Stop hook 退回一次要它補證據；作者實測 406 則宣告，0.2.0 擋 86 則、0.3.0 擋 2 則。
+> **多代理 PR Review、規格驅動開發各新增一則做法**（2026-11-15）
+> - **code-review-gate-skill**：四道獨立探針產出證據式稽核報告，彙整 JSON 作合併關卡決定 PR 能否通過。
+> - **ryugi**：agent 產出的設計稿、白板、驗證報告可直接留言，留言送回給 agent。
 
 ---
 
@@ -101,6 +102,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### kyy-logs/code-review-gate-skill：四道獨立探針產生證據式稽核報告，JSON 合併關卡把關（2026-11-15）
+
+- **主線：** 除錯分工
+- **核心模式：** 供 Claude Code 與 Codex 使用的可稽核程式碼審查 skill：跑四道互相獨立的檢查探針，每項發現都附證據支撐，再彙整成 JSON，由此衍生出合併關卡（merge gate）決定 PR 能不能通過；GitHub Search 504 星。
+- **與既有模式的關係：** 補上「多代理 PR Review」既有代表技巧一個「探針互相獨立＋JSON 合併關卡」取向——既有做法多靠多模型互審，本則拆成多道獨立檢查並用規則決定能否合併；主線填除錯分工：多個 agent 產出後誰把關。
+- **可信度註記：** 僅有 GitHub Search 星數（504★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述僅標題與一句摘要，四道探針具體檢查項目與合併關卡判定規則均未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/kyy-logs/code-review-gate-skill)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### Innei/ryugi：agent 產出的設計稿、白板與驗證報告可直接留言，留言送回給 agent（2026-11-15）
+
+- **主線：** —
+- **核心模式：** 供 coding agent 使用的 artifact 工具：mockup、設計文件、白板、驗證報告皆可直接留言，留言送回給產出它的 agent；可只裝 artifact，也可裝「腦力激盪→規格→TDD」全流程；GitHub Search 501 星。
+- **與既有模式的關係：** 補上「規格驅動開發」既有代表技巧一個「中間產出可留言、回饋給 agent」取向——既有做法先產出規格文件再實作，本則把白板、設計稿變成可留言介面，留言成為下一輪輸入；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（501★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，留言如何映射回 agent 的具體機制與 TDD 流程細節未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/Innei/ryugi)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Balance0014/claude-code-claim-check：Stop hook 在 agent 宣稱「fixed」「tests pass」卻沒有證據時退回一次（2026-11-12）
 

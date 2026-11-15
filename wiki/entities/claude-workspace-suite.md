@@ -69,6 +69,7 @@ Meetings 目前只見媒體報導、未見官方一手文章，本頁不把它�
 
 ## 時間線
 
+- 2026-11-15：ZDNET 實測稱 Claude Sheets 在四方面比用 Google Sheets 連接器更好用，具體四項與測試方法未載（僅標題可用）。
 - 2026-11-15：確認 Enterprise 預設值：Claude Data 11-20 起預設開，Whiteboards、Sheets 預設關（取自官方文章，非 11-19）
 - 2026-11-11：官方文章發布，HN 273 分；Dashboards 轉正式版更名 Claude Data
 - 2026-11-10：Claude Meetings 與 Sheets 見報；官方定價頁同步出現 Claude Sheets（beta）段落，異動見 [[entities/pricing-history]]

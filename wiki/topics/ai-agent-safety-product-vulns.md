@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-14）
-> - **來源溯源**：外洩密鑰報導沿用的「1,122」數字，原始研究單位是資安業者 Apiiro。
+> **最新動態**（2026-11-15）
+> - **Cursor 證實起因**：10 月延伸套件後門源自被竊的 Fireworks AI 金鑰；規模維持最多 5,000 人。
 ---
 
 ## 摘要
@@ -69,7 +69,7 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 | 637 個 npm 套件植入 SessionStart hook | 2026-05-19 攻擊，06-02 完整分析 | 39 分鐘內 323 套件受害，累計 637 套件（dev.to） | 檢查專案與使用者設定裡不是你加的 hook；見 [[topics/ai-agent-safety#現在還擋不住的攻擊]] | 第三方生態，無回應 |
 | 294,842 筆 secrets 外洩 | 2026-06-10 更新 | 6,943 台機器、294,842 個 secrets（Reddit 轉述，單一來源） | 裝過可疑套件的機器輪換 API 金鑰與憑證。見 [[topics/ai-agent-safety-archive]] | 未見官方回應 |
 | Keyv 蠕蟲（npm，植入 Claude Code 與 VS Code hook） | 2026-08-04 | 30 分鐘內擴散至 400+ 套件名稱 | 開啟不明目錄前先看 hook；見 [[topics/ai-agent-safety-product-vulns#2026-08-04～08-05]] | 第三方事件，官方未見回應 |
-| Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵、非其所建；資安公司稱經官方帳號發出；兩說並存 |
+| Cursor 市集 2.1.312／2.1.313 後門 | 2026-10-29 美東 05:27–16:35 | 最多 5,000 人（Cursor 公告） | 查有無陌生 SSH 金鑰並清殘留檔，解除安裝不夠；見下方 2026-10 首條 | Anthropic 稱未遭入侵；Cursor 11-14 證實起因為被竊 Fireworks AI 金鑰；資安公司稱經帳號發出，兩說並存 |
 | 假 Anthropic 預覽誘騙員工 | 2026-10-29（CSO Online） | 手法與規模未見，僅標題層級 | 收到「新功能預覽」邀請，先走官方管道核實再點。見 [[topics/ai-agent-safety-product-vulns]] 時序 | 未見官方回應 |
 | 偽裝求職面試程式測試題 repo（暗藏漏洞／惡意程式，誘工程師自行執行） | 2026-11-03（回報稱全年持續） | Binance 案損失 63 億美元；其餘樣本規模未知 | 收到求職／外包方寄來的測試題，先自己看過程式碼再執行，別直接丟給 agent 跑 | 未見官方回應 |
 | 規則檔投毒（專案內藏惡意規則，挾持 AI coding 助理） | 2026-11-02（Homeland411） | 單一來源，僅標題；受影響產品未載 | 開啟外來 repo 前先看規則檔與助理設定；見 [[topics/ai-agent-safety-prompt-injection]] Homeland411 條 | 未見官方回應 |
@@ -93,13 +93,14 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **性質判斷**：第三方防護產品動態，非官方修補；與 11-12 Tech Times「Rain 推出 Agent Vaults」同屬「第三方廠商對 Claude Code 風險推出防護產品」一類，不改變既有結論
 - **可信度評估**：單一來源、無可讀內文，訊號強度低
 
-#### Help Net Security：被竊的 Claude API 金鑰可把 Claude Code 變成遠端遙控植入程式（2026-11-12 新增，2 個來源）
+#### Help Net Security：被竊的 Claude API 金鑰可把 Claude Code 變成遠端遙控植入程式（2026-11-12 新增，2 個來源；2026-11-15 跟進）
 
 - **揭露來源**：Google News／Help Net Security（11/12 11:00 UTC），2 個來源同日報導，互動 0，僅標題可用
 - **核心主張（僅標題可用）**：標題稱攻擊者取得被竊的 Claude API 金鑰後，可把 Claude Code 變成能被遠端遙控的植入程式；金鑰如何被竊、控制通道、受影響版本與是否為官方披露均未載
 - **性質判斷**：（推論）屬帳號與憑證被濫用類；與 11-04 資訊竊取軟體鎖定 Claude 帳號權杖同一類風險，那一則見下方 11-04 條目
 - **可信度評估**：媒體標題層級，無研究者名稱與官方回應；Claude Code 功能面（是否改設定或啟動遠端工作階段）見 [[entities/claude-code-features]]
-- ❓ **待查證**（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys｜複 2026-11-26）｜**披露來源與機制**：研究團隊、控制通道與官方是否回應均未見報導
+- **2026-11-15 跟進（無新事實）**：Help Net Security 自家「一週回顧」專欄把本事件列為一週要點之一，僅重述標題，未補充研究團隊、控制通道或官方回應
+- ❓ **待查證**（標 2026-11-12｜查 Remote-Controlled Implant、Stolen Claude API Keys｜複 2026-11-26｜訊 2026-11-15）｜**披露來源與機制**：研究團隊、控制通道與官方是否回應均未見報導
 
 #### Tech Times（Topic Watch）：Rain 推出 Agent Vaults，讓 AI agent 用單次使用的 Visa、Mastercard 卡付款（2026-11-12 新增，定向補抓）
 
@@ -217,8 +218,9 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 
 ### 2026-10
 
-#### Cursor 市集代管的 Claude Code VS Code 延伸套件 2.1.312／2.1.313 版遭惡意竄改植入 SSH 後門，官方證實最多 5,000 人受影響（2026-10-30 新增，2026-10-31／11-02 更新，供應鏈攻擊，多源同報）
+#### Cursor 市集代管的 Claude Code VS Code 延伸套件 2.1.312／2.1.313 版遭惡意竄改植入 SSH 後門，官方證實最多 5,000 人受影響（2026-10-30 新增，2026-10-31／11-02／11-14 更新，供應鏈攻擊，多源同報）
 
+- **2026-11-14～15 更新（Cursor 證實發布權限來源）**：Cursor 證實攻擊者透過一組遭竊的 Fireworks AI 金鑰取得發布權限，植入惡意版本延伸套件；規模維持最多 5,000 人（BleepingComputer、BigGo Finance、The Hacker News 三源同日報導，僅標題可用）
 - **2026-11-02 更新（媒體跟進，無新事實）**：SecurityWeek、CSO Online 同日跟進報導（均僅標題可用），覆述既有「Cursor 已移除延伸套件、SSH 後門」事實，未見新攻擊鏈或受害數字
 - **2026-10-31 更新（Cursor 擴大公告）**：MIXED、The Next Web 轉述 Cursor 更新後的安全公告：受影響版本由 2.1.313 擴為 2.1.312 與 2.1.313 兩版（Windows、macOS），Cursor 警告「只解除安裝延伸套件可能不夠」，機器上可能仍殘留惡意檔案
   - 窗口為 10-29（週四）美東 05:27–16:35，約 11 小時（Northeast Times 引 Ars Technica、CyberSecurityNews）
@@ -233,8 +235,9 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 - **你能先做什麼**：透過 Cursor 市集安裝過 Claude Code 延伸套件的人應立即檢查機器、更新到乾淨版本，並排查是否已被植入未知的 SSH 金鑰
 - **與既有事件的關係**：攻擊面是 Cursor 自家市集的套件副本遭竄改，與母頁「現在還擋不住的攻擊」既有「套件供應鏈：受感染 npm 套件」列（攻擊載體是 npm 套件）屬不同管道，暫不併列
 - **可信度評估**：官方一手公告（Cursor）＋Reuters 等主流媒體＋三位獨立資安研究者各自佐證同一手法，可信度高；CVE 編號、完整受害清單與是否已有實際濫用案例均未見報導
-- 🔎 **查無官方**（標 2026-10-30｜查 2.1.313、SSH backdoor｜複 2026-12-14）｜**CVE 編號、發布權限來源與實際濫用規模**：2026-11-14 查 claude-code 資安公告，無對應 CVE
+- 🔎 **查無官方**（標 2026-10-30｜查 2.1.313、SSH backdoor｜複 2026-12-14｜訊 2026-11-15）｜**CVE 編號、發布權限來源與實際濫用規模**：2026-11-14 查 claude-code 資安公告，無對應 CVE
   - 媒體稱（The Register 引 Anthropic 發言）惡意者是透過 Cursor 市集權限發布竄改版，非 Anthropic 系統遭入；實際存取濫用規模均未見報導
+  - **2026-11-14～15 跟進**：BleepingComputer、BigGo Finance、The Hacker News 稱 Cursor 證實發布權限來源是一組遭竊的 Fireworks AI 金鑰；CVE 編號與實際濫用規模仍未見報導，官方一手公告仍未查得
 
 #### Hacker News／GitHub Issue #81138／Reddit：Claude Code 將使用者 email 加入 prompt，模型再把它分享給外部網站（2026-10-29 新增，跨三來源）
 

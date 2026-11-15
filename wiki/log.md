@@ -9094,3 +9094,22 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
   - claude.ai 雲端環境網路白名單 Trusted → Custom（⏳ 已擱置 8 週）：leaderboard 組網域，另加 sec.gov、ipo.anthropic.com
   - 雲端 routine 多 repo session 的 hook 全部未載入：建議從 routine sources 移除第二個 repo（anthropics/claude-code），由使用者決定
   - Reddit API secrets
+
+## 2026-11-15 Ingest
+
+- 來源日報：[[news/2026-11-15]]
+- 更新頁面：
+  - **模型**：entities/fable-5.md、entities/opus-5-5.md
+  - **安全政策**：topics/ai-agent-safety-product-vulns.md（實質更新）、topics/ai-agent-safety.md（母頁 callout＋路由表）
+  - **功能**：entities/claude-code-features.md、entities/claude-mods.md、entities/claude-code.md、entities/claude-code-known-issues.md、entities/claude-workspace-suite.md
+  - **商業**：topics/anthropic-ipo.md、topics/anthropic-business.md
+  - **社群**：topics/community-skills.md、topics/community-guardrails.md、topics/community-integrations.md、topics/community-tech-patterns.md（母頁 callout＋路由表）
+  - **人物**：無
+- 新增頁面：無
+- 摘要：Cursor 證實上月 Claude Code 延伸套件後門事件的根因（遭竊 Fireworks AI 金鑰）；Anthropic IPO 持續追蹤（續 11-13，$640 億發行規模與選售情緒框架，無新數字異動表格）；Anthropic 稱舊版提示習慣拖慢 Opus 5.5；社群 patterns 樹新增 6 個工具節點。
+- 呈現品質：全部通過
+- 品質備註：[安全政策] 來源歸因欄 slug 誤寫為 Google News 子來源名（bleepingcomputer／biggo-finance），主編已改正為註冊 slug `google-news` 才落帳
+- 分類回退：追加派工 1 筆（profiler-md：排除→社群，分類複核記者判定成立）＋原因：全文核心為 agent 工作流可複用模式，非出處篩選；追加派工後記者判定互動訊號未達收錄門檻，未寫入頁面。駁回 0 筆
+- 轉知帳本：結案 H-75139f（功能：official-community-gap 門檻評估，4 個社群工具節點皆未達新增列門檻）；新開 H-73a7cc（社群→功能：評估產品化矩陣新增列，本日 patterns 子頁新增 6 則節點）
+- devpractice 沉澱：本日無候選（當日無開發實務包）
+- market 判讀：本日無訊號（檢視 53 條；最接近門檻者 Startup Fortune「$64 億 IPO」，判定為既有價格區間×股數的算術結果，非新披露，未開新則）

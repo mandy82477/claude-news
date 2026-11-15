@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-15
+**最後新聞更新：** 2026-11-15
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-14）
-> 桌面版文件新增三段：第三方推論設定提醒、部署前三種情境檢查，以及補完 Terminal／Browser／iOS Simulator 或側邊聊天視窗保留條件（11-10 原文截斷處）。
+> **最新動態**（2026-11-15）
+> Help Center release notes 的「model/effort/thinking」段落第三次改版：新增「Claude Code model configuration」與模型切換說明兩段，移除舊版兩段（見「核心功能」待查證）。
 
 ---
 
@@ -65,8 +65,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 - **官方文件新增頁：Claude Code 接 Google Cloud（Anthropic managed）模型**（[文件索引](https://code.claude.com/docs/llms.txt) 新增 [claude-models-on-google-cloud-anthropic-managed.md](https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md)，2026-11-14）：具體設定步驟與可用範圍未載（僅標題可用）。
-- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-10）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
+- ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-15）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
   - 11-10 該段與切換說明再被移除，內容仍未載。
+  - 11-15 再新增「Claude Code model configuration」與「為何對話中換成 Opus 5／5.5」兩段，同時移除「切換模型、effort 與 thinking 設定」與「訓練資料多新」兩段；段落在新增／移除間反覆第三次，具體設定內容仍未載。
 
 ### 桌面版功能地圖
 
