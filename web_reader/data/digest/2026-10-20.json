@@ -331,11 +331,6 @@
   "preview": "Claude Code 實驗功能追蹤：2.1.304（自 2.1.303 起比對）新增 11 個第一階候選旗標，涵蓋歸因追蹤、遠端瀏覽器自動模式、外掛 MCP 伺服器開關與磁碟／記憶體不足警告。",
   "sedimentedToday": [
     {
-      "id": "claude-mods",
-      "name": "Claude Mods",
-      "pageType": "entity"
-    },
-    {
       "id": "linus-torvalds",
       "name": "Linus Torvalds",
       "pageType": "entity"

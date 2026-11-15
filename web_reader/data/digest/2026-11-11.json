@@ -462,11 +462,6 @@
       "pageType": "entity"
     },
     {
-      "id": "fable-5",
-      "name": "Claude Fable 5、5.1 與 5.2",
-      "pageType": "entity"
-    },
-    {
       "id": "mythos",
       "name": "Claude Mythos",
       "pageType": "entity"

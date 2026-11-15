@@ -1,0 +1,733 @@
+{
+  "date": "2026-11-15",
+  "generatedAt": "2026-11-15 22:13 UTC",
+  "articleCount": 55,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "Mods - make Claude 10x more extensible",
+      "url": "https://github.com/anthropics/claude-code/issues/91870",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 09:22",
+      "sentiment": "",
+      "body": "這則討論串自今年 10 月起追蹤 Claude Code「Mods」擴充功能的社群回饋，官方團隊持續在串內同步修復進度，今天累積到 277 則留言、225 個 👍。想了解 Mods 開發近況與已知問題的人，可以直接看這串最新的留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop 1.1.3189 severe UI lag and mouse stutter on Windows — performance regression after update",
+      "url": "https://github.com/anthropics/claude-code/issues/26302",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 14:42",
+      "sentiment": "",
+      "body": "這則回報指出 Claude Desktop 1.1.3189 版在 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，是一次效能倒退，累積 56 則留言、48 個 👍。剛更新到這個版本、在 Windows 上使用 Desktop 介面變得卡頓的人，可以去這則底下補充佐證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add font size adjustment for Code tab in Claude Desktop",
+      "url": "https://github.com/anthropics/claude-code/issues/48237",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 09:08",
+      "sentiment": "",
+      "body": "這則功能請求希望 Claude Desktop 的 Code 分頁能調整字體大小，累積 37 則留言、135 個 👍，反應數明顯高於留言數，顯示訴求集中。常在 Desktop 的 Code 分頁看程式碼、覺得字級不合用的人，可以去加 👍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Feature Request: Shared Team Memory for Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/38536",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/14 23:13",
+      "sentiment": "",
+      "body": "這則提案指出 Claude Code 的記憶系統目前只限個人使用，團隊成員間的知識無法互通，主張做出可共享的團隊記憶，累積 34 則留言、14 個 👍。多人共用同一個 repo、常得重複跟 Claude 解釋同一件事的團隊，可以關注這張需求單的後續設計方向。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Auto mode classifier blocks the account owner's own scheduled task (\"Cowork Run Routine Now\"), and blocked file transfer between the owner's own machines",
+      "url": "https://github.com/anthropics/claude-code/issues/100730",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 15:22",
+      "sentiment": "",
+      "body": "這則回報指出 Cowork 雲端 session 的 auto mode 分類器，會把帳號擁有者自己排定的排程任務（`Cowork Run Routine Now`）與擁有者自己機器間的檔案傳輸都判定為需要額外確認而擋下，累積 26 則留言，並關聯另一則同類回報 #97613。用 Cowork 排程自動化、或常在自己的多台機器間搬檔案的人，目前可能會被系統誤判成未授權動作而卡住。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "官方文件更新：Claude Help Center release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "source": "Official Docs",
+      "time": "11/15 17:17",
+      "sentiment": "",
+      "body": "Claude 官方說明中心的 release notes 今天改版：新增「Claude Code model configuration」與「為什麼 Claude 在你跟 Opus 5 或 Opus 5.5 對話時會換模型」兩段，同時移除舊版「切換模型、effort 與 thinking 設定」與「Claude 訓練資料多新」兩段。想知道 Claude Code 怎麼設定模型、或好奇對話中途為何換模型的人，官方文件現在有專門說明可以看。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-features",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [
+    {
+      "title": "Meet the miso-making engineer behind Anthropic's biggest hit product - CNN",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1LU1AzNnpYd25PdXVua1dKVTJOSzhMX3lCVnEtT1hJcGRCRXpqd084YUVkZVRBSk1xWXJXS3B3bWZJQ2N0Ykk3ak0wUlZZM0FuVnRkRlZTSEU3bTU4dUlYaDdvVDg0V1owUG0wWkVIU0lJa01OQTZ4SUdYajh5UFU?oc=5",
+      "source": "Google News / CNN",
+      "time": "11/15 17:00",
+      "sentiment": "",
+      "body": "CNN 刊出一篇人物側寫，講一位曾做味噌的工程師如何成為 Anthropic 熱門產品背後的開發者，標題未點名具體是哪個產品，另有兩個來源同日報導。對 Anthropic 團隊背景、想多了解熱門產品幕後故事的讀者，這是一篇人物側寫，不是產品公告。",
+      "focusTags": []
+    },
+    {
+      "title": "4 ways Anthropic's new Claude Sheets beat using a Google Sheets connector in my tests - ZDNET",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE54MXBVUFZsLWJsQVpNTUtwZGxaZ09WTXRvMERYZVhLLXVsVzAyRE43OGZqNEtiQ0dVd3JGX3IyWTVCd3RGdDJjaklhNExSdU1Sbk9tVndvZXo3MThXRTdlSHQtdDd1RUIwODN2Y2tMM2pnUGZianM2RXRCRmxyVzQ?oc=5",
+      "source": "Google News / ZDNET",
+      "time": "11/15 16:13",
+      "sentiment": "",
+      "body": "ZDNET 實測比較指出，11 月上旬發布的 Claude Sheets 在四個方面比用 Google Sheets 連接器更好用，標題未附具體四項內容，另有一個來源同日報導。已經在用 Claude 搭配 Google Sheets 連接器、考慮要不要換成 Claude Sheets 的人，這篇測試給了正面訊號。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-workspace-suite",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "VC Firm Run by Madonna's Manager Has $7 Billion Anthropic Stake - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdEJ1X2RvWFE1cjAwY3lxdndBWkVCQzQ1TU1YdFBXdVphRVBwN3BSdm9YRHlTWVNROUFXaUpYUWFXU2tRbUpSN2VseWYtc2p0Szh4QzBpNFFQWW0yV0t5VnlRTHJLZ183U3l1V2pvM19Wem54aWc2TW1pOE0yRmI4Y2Q4UVZvMXZ0ZGxZOWRGY0xqY2s0Zk9jT3lpaVhUQklZb3dfUjAzdnhGeC1FT0JDQWpkTQ?oc=5",
+      "source": "Google News / Bloomberg.com",
+      "time": "11/15 16:00",
+      "sentiment": "",
+      "body": "Bloomberg 報導，由流行歌手 Madonna 經紀人經營的一家創投公司，持有價值 70 億美元的 Anthropic 股權，標題未附持股比例或入股時間。關心 Anthropic 股權結構、認購前想了解早期投資人輪廓的人，這是新增的一條具體數字。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "The Individual Investors Who Are Hot on Anthropic's IPO but Cool on AI - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEN6Mk43NjhtMVJzaVNhWTRvOUtSZ3NLd1I4UWtRTHI1Vk9RTGRSbFlHZ1g4bTY0MnVqb0ltNEh1NTVqVmpLb2tCTGp2dTBNUHpfWFI1aDB1VjBmcFNseG9KbHNkbXVUV2JIdEI0ZlNPVW13Q0IxTTZWZkxnSHJPRC1oOWlScHJkSVhzZGltSEtzVFdPZzUtMVByU0ZMZExMbXFsREFlclVMbldRRWd1TmoyVQ?oc=5",
+      "source": "Google News / WSJ",
+      "time": "11/15 10:30",
+      "sentiment": "",
+      "body": "承上，同一波 IPO 熱潮裡，WSJ 報導散戶投資人對 Anthropic 這次 IPO 很熱衷，卻對 AI 產業整體前景偏保守，標題未附調查數字。想理解市場對 AI 類股情緒分歧的人，這是認購熱度之外的另一條線索。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "anthropic-ipo",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Anthropic Outlines AI-Powered Code Review for Claude Code - news.lavx.hu",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVXVlcW9fRWJWT2RZTC1RMks4Rk5OX1RSVTUyM2JwVHozd2l5blZSajNWVjJabFB2YUpwQll1cTQwb2swclZvQXRhVEIxSFhEU0FRcm1OM0hHcVp1OEQzTmk0Ri1kUnFkNzFRRmk5VHBaVURpaVUxRjBXRGpOQUpMZUdWa3p4cExDRFc0NTh5WQ?oc=5",
+      "source": "Google News / news.lavx.hu",
+      "time": "11/15 10:21",
+      "sentiment": "",
+      "body": "報導稱 Anthropic 公開說明 Claude Code 裡 AI 驅動的程式碼審查功能的設計方向，標題未附具體功能範圍或上線時間。關心 Claude Code 自動化 code review 怎麼做的人，可留意官方後續是否放出更完整的說明。",
+      "focusTags": []
+    },
+    {
+      "title": "Anthropic Just Delivered Great News for AMD Investors and Bad News for Nvidia - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOXFLdmRZbnlVUFpPYVduNHEzNm1oRlM5ZWZPSVFhUTJsdUZvdWtyd292Snd6TGJablgxSmRNRldtbUFuNDVXc2VKSGswT3VKUGZmZzBSRklEdUN2Z2FudWwxdlVzZTdRc1hWNG5RN21IemU1WkhYSFVaVTB4OUhIOXVIOFRfa2FYdWxfd3cwWkluOFphOUF0OFZVdGVIRmxiVmlFNHZya2RjUzZEQ3hGb1hEV0ZEcjB6bGlKQw?oc=5",
+      "source": "Google News / The Motley Fool",
+      "time": "11/15 10:20",
+      "sentiment": "",
+      "body": "The Motley Fool 與 Yahoo Finance 同日報導，Anthropic 近期動作被解讀為對 AMD 投資人是好消息、對 Nvidia 投資人是壞消息，標題未附具體供應鏈數字或合作條款。留意 AI 晶片供應商競爭格局、持有相關持股的人，這是今天新增的一條解讀。",
+      "focusTags": []
+    }
+  ],
+  "discussions": [
+    {
+      "title": "[FEATURE] Claude-invocable conditional /compact for automated workflows",
+      "url": "https://github.com/anthropics/claude-code/issues/19877",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 05:33 UTC ·",
+      "sentiment": "😐",
+      "body": "這則功能請求希望讓 Claude 能在自動化工作流程裡視狀況自己呼叫 `/compact`，不必靠人手動觸發，累積 26 則留言、25 個 👍。跑長時間自動化流程、常被 context 塞滿打斷的人可以去加 👍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Desktop app: option to make Enter insert a newline and Ctrl+Enter submit in the chat composer",
+      "url": "https://github.com/anthropics/claude-code/issues/89673",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/14 17:01 UTC ·",
+      "sentiment": "😐",
+      "body": "這則功能請求希望 Desktop app 的聊天輸入框能把 Enter 設成換行、改用 Ctrl+Enter（或 Cmd+Enter）送出，累積 25 則留言、141 個 👍，反應數遠高於留言數。常在輸入框打多行訊息卻被提早送出的人可以去加 👍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Desktop 2.37337.1: Code tab Routines section hidden after the sidebar update, reset to hidden on every launch",
+      "url": "https://github.com/anthropics/claude-code/issues/102142",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 08:39 UTC ·",
+      "sentiment": "😤",
+      "body": "這則回報指出側邊欄改版後，Code 分頁裡的 Routines 區塊被隱藏，而且每次重啟都會被重設回隱藏狀態，累積 23 則留言、16 個 👍。靠 Routines 區塊管理排程任務的人，目前得每次重開都手動把它叫出來。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "這套 Claude Code skill 給股票與期貨交易者用：市場分析、技術圖表、經濟日曆、篩選器與交易策略開發整合在一起，星數正在快速衝高、不是今天剛發布。想把 Claude Code 接進交易研究流程的人可以留意這個成長速度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-skills",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "一張照片生成數字人說話影片：Renoise MCP 生成加 5 種剪輯風格與 48 個創作者級素材包，是給 Claude Code、Codex 等平台用的 agent skill。想做短影音數字人內容的人可以試試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "kyy-logs/code-review-gate-skill",
+      "url": "https://github.com/kyy-logs/code-review-gate-skill",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "給 Claude Code 與 Codex 用的可審查程式碼審查 skill：四個獨立探針、附證據的發現項，以及由 JSON 推導出的合併關卡。想在 CI 裡加一道可稽核的 AI code review 關卡的團隊可以參考。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "Innei/ryugi",
+      "url": "https://github.com/Innei/ryugi",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "給 coding agent 用的產出物工具：mockup 看板、設計文件、白板、HTML 測試台與驗證報告都能直接留言，留言會送回給 agent；可以只裝產出物功能，也可以用全套腦力激盪到 TDD 的流程，支援 Claude Code、Codex 等。想讓 agent 的產出物變得可逐條留言修改的人可以試試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "imraywang/ray-sticker-shop",
+      "url": "https://github.com/imraywang/ray-sticker-shop",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "一張照片或角色圖，生成一整套風格一致的動態表情包與微信投稿素材，是給 Claude Code、Codex 用的 skill。想批量做表情包素材的人可以試試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "baiblinocun1986/blender-ai-copilot-hub",
+      "url": "https://github.com/baiblinocun1986/blender-ai-copilot-hub",
+      "source": "GitHub Search",
+      "time": "11/15 17:17 UTC ·",
+      "sentiment": "😐",
+      "body": "給 Blender 用的多供應商 AI 副駕駛整合中心：把 OpenAI、Anthropic Claude、Google Gemini、OpenRouter、Ollama 等都接進同一個連線中心，內建 27 個受監督的場景工具與一個 MCP 伺服器，另有一個來源同日報導。用 Blender 建模、想讓多家 AI 模型輪替輔助的人可以試試。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[風險警示]",
+      "text": "Cursor 證實上月資安事故源頭：一組被竊的 Fireworks AI 金鑰讓攻擊者在 Claude Code 擴充套件裡植入惡意版本，最多 5,000 名使用者受影響。裝過 Cursor 平台上 Claude Code 擴充套件的人，建議現在檢查擴充套件版本與近期活動記錄。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE5GQmQwcXFwZUpYeVVqTU56TUNNMkx2UGdOcERTaHlXdDlmUjkya0ZXR09CT0dSUnJQZUY1bHVzakhqa3FKTjZyUlN1SHgyWng5RTJKclFKODRxNUpvLVBsX2JjS1pQYXpkQUNLWkVObEFpYVA4blE?oc=5",
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZ0pVd0VKNnk2Vmpxalp6amtSaFlvX0Vpd0NOQkNZVldpTjRYdzQyZHd2c2IwdmhEdm5RNElZWXJ6bWtMVGhlemhGX0FqM0d3Vnp3MWRvWUNxTGJwMnV3Ymx0cy1TbWJJMVliVi1HM0xaUExCZ0FQU3NOMEJWWHJhaGZ3?oc=5",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZGZ6cDY2N1VKakpFcW9sN0NqTkJBck9xMGxNbGdzTDJQUmt0cmNmdzlBdWdaQ2tzbEF4U1JoZVBsWGFQTWxuZUN4WHVNcGhTMjBCOE85eWVLdFZnRk9JV0c3QWRXUnl1Y0JkM3dPNGlyNHNnR29PT3J6eU95cHZ3SW1WOHEwcUM4ZG1FR3BPSHkzaUdDc0Z0TExMSHRlV2c1OFg4REhaeGphZHd6cTR1YUliWnBFRFVlWUE?oc=5"
+      ],
+      "ref_names": [
+        "BigGo Finance",
+        "The Hacker News",
+        "BleepingComputer"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-13）Anthropic IPO 今日正式登場：Startup Fortune 報導發行規模達 640 億美元，CNBC 稱這是在承壓的 AI 類股交易中尋找喘息點；11-10 公告的每股 70–78 美元價格區間、11-13 約六倍超額認購的狀況維持不變。評估是否參與認購、或持有相關概念股的人，今天是觀察這波 IPO 正式落地情況的時間點。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0E5Z0ZIZDR2Nm1zM2xobkpzZUdJVlFhSTVUd0dJSURzbmxzMUlmdHplcEY4T2xPdlZLekR2RlpZVXlPSW5zel94WG9aQTBpU2JOWkR6Qzdsa1RWU3hqYnlHWGtKYXJZM3AzUjJ1c2ZnUkstZVJWNGU1R1NROXJVN3NFaVVLVXNUM3hmQ2VfbE9wVUJa?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOFFaaTFOMmRsSmNwRlBQZTNqWUJhZXlDbzRYQk5TRWpoLVQ5R0trbFZySzNhQU9pa1JZRXE5Q2VhVTNBUVhxOFB2b0JiUVNLZHpWQkxsYW5EeHY5YW9jU09hNzFhbnMxMnctaVFaUTdyYnhGS1g2Z2pNU0pWdmlYUUtuR0pWR2ZnMVhMWHhjd3VweXMyd0h2X2ZRc9IBoAFBVV95cUxObFlSaHJnalF6bnZ6eDUwbTlYZGlPNjlFN2xxZ3Q1blZNREx3YTlQaWx4NEtXeHlEbmZqc0doTExsM1RXSXMzM05TaVEzTjIxd1N6OGVWYkFhZUZLaXZKZWkyLW5EaW85eHQtMk5FMUcxMmVkNmJwSHZOWWZpVUZVd1FROVJKYjBlWUxERUpxZTNYdUZ0aldWX3RIa0ZrUXR3?oc=5"
+      ],
+      "ref_names": [
+        "Startup Fortune",
+        "CNBC"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 表示，不少人仍用舊版提示習慣跟 Claude Opus 5.5 對話，拖慢了模型本可以有的效能，The Decoder 同日報導，另有一個來源同日報導。覺得 Opus 5.5 回應變慢的人，可能是提示寫法該跟著新模型調整，而不是模型本身變慢。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTFM5cnNsaGNIMzZfVDNWZ19qWUg3c0UtNVZLdUdMbzc4ZS1uTGJ0VnN2dFItbVV5Q0VCMno4RGxNV05nQWd3ZDhlaVFIT3JZS0JMVFpMaUR0VlR5TGFROXpZMGwxUXBYdE9YUmtpZlZ5RVVSX0VYN1EzR2RTWW1UX0FGWHFxZVB0OUNvcEpPdDdvRUJMazNjdVRkM1RIdzA?oc=5"
+      ],
+      "ref_names": [
+        "The Decoder"
+      ]
+    }
+  ],
+  "topicRadar": [],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 29
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 11
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增已知問題：Cowork auto mode 分類器誤擋擁有者自己的排程與跨機器檔案傳輸（#100730）、Desktop Code 分頁字體大小請求（#48237）、Desktop Routines 區塊重啟後重設隱藏（#102142）、Desktop 輸入",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-features",
+      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-mods",
+      "name": "Claude Mods",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-workspace-suite",
+      "name": "Claude 協作三件組（Whiteboards、Sheets、Data）",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5、5.1 與 5.2",
+      "pageType": "entity"
+    },
+    {
+      "id": "opus-5-5",
+      "name": "Claude Opus 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business-risks",
+      "name": "Anthropic 風險與商業模式：哪裡會出事、怎麼賺錢",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-government-policy",
+      "name": "Anthropic 政府與軍事政策",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "code-quality-decline",
+      "name": "Claude Code 效能退步事件",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-skills",
+      "name": "社群做法：Skills 怎麼寫",
+      "pageType": "topic"
+    },
+    {
+      "id": "recursive-self-improvement",
+      "name": "AI 遞歸自我改進與全球暫停呼籲",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-15",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增已知問題**：Cowork auto mode 分類器誤擋擁有者自己的排程與跨機器檔案傳輸（#100730）、Desktop Code 分頁字體大小請求（#48237）、Desktop Routines 區塊重啟後重設隱藏（#102142）、Desktop 輸入框 Enter／Ctrl+Enter 請求（#89673）、團隊共享記憶（#38536）、自動化流程條件式 `/compact`（#19877）。\n- **互動數更新**：Desktop 1.1.3189 UI 延遲與滑鼠卡頓（#26302）增至 56 則留言、48 個讚。"
+          },
+          {
+            "page": "entities/claude-mods",
+            "name": "Claude Mods",
+            "label": "最新判讀",
+            "date": "",
+            "body": "官方追蹤串 #91870 累積到 277 則留言、225 個 👍（10-01 出貨當日為 233／218），官方持續同步修復進度。"
+          },
+          {
+            "page": "entities/claude-workspace-suite",
+            "name": "Claude 協作三件組（Whiteboards、Sheets、Data）",
+            "label": "最新動態",
+            "date": "",
+            "body": "Enterprise 方案的 Claude Data 11-20 起預設開啟，Whiteboards、Sheets 仍預設關；不想自動開的管理員要在 11-20 前關掉。"
+          },
+          {
+            "page": "entities/claude-code-features",
+            "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
+            "label": "最新動態",
+            "date": "",
+            "body": "Help Center release notes 的「model/effort/thinking」段落第三次改版：新增「Claude Code model configuration」與模型切換說明兩段，移除舊版兩段（見「核心功能」待查證）。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "單一創意展示：97 KB、180 FPS 水下世界、無遊戲引擎",
+            "date": "",
+            "body": "BigGo Finance 報導 Fable 5.2 生成一個 97 KB、180 FPS 的水下世界，未用現成遊戲引擎；僅標題可讀，無測試方法或效能量測細節。"
+          },
+          {
+            "page": "entities/opus-5-5",
+            "name": "Claude Opus 5.5",
+            "label": "官方：舊版提示習慣拖慢 Opus 5.5",
+            "date": "",
+            "body": "The Decoder 等 2 來源同日報導，Anthropic 表示不少人仍用舊版提示習慣對話，拖慢模型本可有的效能；僅標題可用，既有提示建議見「跟它怎麼說話」。"
+          },
+          {
+            "page": "topics/model-task-leaderboard",
+            "name": "任務 × 跨家模型領先者週快照",
+            "label": "本週快照重點",
+            "date": "",
+            "body": "WebDev 榜由 11-09 發布的 Claude Fable 5.2 登頂，前三全是 Claude；文案聊天榜仍由 Gemini 4 Carbon 領先、Claude 最好的是第四名；音樂榜 ACE Music v1 新登頂。12 榜全數取得。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Madonna 經紀人創投持 Anthropic 股權達 $70 億**：持股比例、入股時間未載（Bloomberg）\n- **IPO 今日登場框入 AI 類股拋售敘事**：11-10 價格區間 $70～78、11-13 約六倍超額認購均未變（Startup Fortune／CNBC）"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **Cursor 證實起因**：10 月延伸套件後門源自被竊的 Fireworks AI 金鑰；規模維持最多 5,000 人。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/code-quality-decline",
+            "name": "Claude Code 效能退步事件",
+            "label": "Fable 5.2 上線後出現額度與 context 體感抱怨，皆為單一來源",
+            "date": "",
+            "body": "- 11-09 起 r/ClaudeCode 有人稱 Fable 5.2 幾分鐘就壓縮一次，11-14 有人稱 5 小時額度 30 秒用完；官方未回應。\n- 歸類與逐則見「Fable 5.2 額度與 context 體感」小節；Opus 5.5 被削弱彙整文（11-08，HN 23 分）仍無量化佐證。"
+          },
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "多代理 PR Review、規格驅動開發各新增一則做法",
+            "date": "",
+            "body": "- **code-review-gate-skill**：四道獨立探針產出證據式稽核報告，彙整 JSON 作合併關卡決定 PR 能否通過。\n- **ryugi**：agent 產出的設計稿、白板、驗證報告可直接留言，留言送回給 agent。"
+          },
+          {
+            "page": "topics/community-skills",
+            "name": "社群做法：Skills 怎麼寫",
+            "label": "Skills 設計新增交易技能合集，8 天暴增 1,647 星",
+            "date": "",
+            "body": "- **claude-trading-skills**：市場分析、技術圖表、篩股器與交易策略開發 skills 合集；commit 記錄顯示多名貢獻者持續開發，非單純灌星。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "創意工具 Agent 整合新增三則：數字人影片、貼圖包、Blender 多供應商中樞",
+            "date": "",
+            "body": "- **digital-human-koubo**：一張照片生成數字人說話影片，5 種剪輯風格＋48 個打包元件。\n- **ray-sticker-shop**：一張照片或角色圖生成一整套形象一致的動態表情包。\n- **blender-ai-copilot-hub**：多供應商 LLM 接進 Blender，27 個受監督場景工具＋內建 MCP server。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 13
+  },
+  "readerTopStories": [
+    {
+      "title": "Mods - make Claude 10x more extensible",
+      "url": "https://github.com/anthropics/claude-code/issues/91870",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 09:22",
+      "sentiment": "",
+      "body": "這則討論串自今年 10 月起追蹤 Claude Code「Mods」擴充功能的社群回饋，官方團隊持續在串內同步修復進度，今天累積到 277 則留言、225 個 👍。想了解 Mods 開發近況與已知問題的人，可以直接看這串最新的留言。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-mods",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Claude Desktop 1.1.3189 severe UI lag and mouse stutter on Windows — performance regression after update",
+      "url": "https://github.com/anthropics/claude-code/issues/26302",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 14:42",
+      "sentiment": "",
+      "body": "這則回報指出 Claude Desktop 1.1.3189 版在 Windows 上出現嚴重 UI 延遲與滑鼠卡頓，是一次效能倒退，累積 56 則留言、48 個 👍。剛更新到這個版本、在 Windows 上使用 Desktop 介面變得卡頓的人，可以去這則底下補充佐證。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[FEATURE] Add font size adjustment for Code tab in Claude Desktop",
+      "url": "https://github.com/anthropics/claude-code/issues/48237",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 09:08",
+      "sentiment": "",
+      "body": "這則功能請求希望 Claude Desktop 的 Code 分頁能調整字體大小，累積 37 則留言、135 個 👍，反應數明顯高於留言數，顯示訴求集中。常在 Desktop 的 Code 分頁看程式碼、覺得字級不合用的人，可以去加 👍。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Feature Request: Shared Team Memory for Claude Code",
+      "url": "https://github.com/anthropics/claude-code/issues/38536",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/14 23:13",
+      "sentiment": "",
+      "body": "這則提案指出 Claude Code 的記憶系統目前只限個人使用，團隊成員間的知識無法互通，主張做出可共享的團隊記憶，累積 34 則留言、14 個 👍。多人共用同一個 repo、常得重複跟 Claude 解釋同一件事的團隊，可以關注這張需求單的後續設計方向。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Auto mode classifier blocks the account owner's own scheduled task (\"Cowork Run Routine Now\"), and blocked file transfer between the owner's own machines",
+      "url": "https://github.com/anthropics/claude-code/issues/100730",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 15:22",
+      "sentiment": "",
+      "body": "這則回報指出 Cowork 雲端 session 的 auto mode 分類器，會把帳號擁有者自己排定的排程任務（`Cowork Run Routine Now`）與擁有者自己機器間的檔案傳輸都判定為需要額外確認而擋下，累積 26 則留言，並關聯另一則同類回報 #97613。用 Cowork 排程自動化、或常在自己的多台機器間搬檔案的人，目前可能會被系統誤判成未授權動作而卡住。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

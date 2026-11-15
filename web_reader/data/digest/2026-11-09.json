@@ -479,11 +479,6 @@
       "pageType": "entity"
     },
     {
-      "id": "opus-5-5",
-      "name": "Claude Opus 5.5",
-      "pageType": "entity"
-    },
-    {
       "id": "community-tech-patterns",
       "name": "Claude Code 社群工作流模式",
       "pageType": "topic"
