@@ -1582,8 +1582,8 @@
     ]
   },
   "https://claude.com/pricing": {
-    "hash": "18b4a8df48ab3def72a5c6dcb19bfc6fe1292af723661de67268f725110c64d6",
-    "length": 23945,
+    "hash": "43504f904fc82fc7bab225a13d06edc77c1fc5ed0ec98e12d8e80325081ea6cb",
+    "length": 23981,
     "segments": [
       "$0.01 / MTok",
       "$0.05 / MTok",
@@ -2471,8 +2471,8 @@
     ]
   },
   "https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work": {
-    "hash": "c953e10b3971d0b581f5150fda2866dc4442f507f358a3d300054e1044522c42",
-    "length": 8473,
+    "hash": "89bad717100a28a383a7dc35d601199e4bb4992294cba995ff1358363aebf7c4",
+    "length": 8472,
     "segments": [
       "All Collections Claude Usage and limits How do usage and length limits work? How do usage and length limits work?",
       "Amazon Bedrock",
@@ -2534,7 +2534,7 @@
       "Weekly limits apply across all models, and some plans also have a separate weekly limit for Fable. Weekly limits reset at a fixed time each week that is assigned to your account. Your reset day and time stay the same regardless of when you start using Claude or when your subscription begins, and you receive your full weekly allowance each cycle. You can see your next reset time in Settings &gt; Usage .",
       "What are length limits?",
       "What are usage limits?",
-      "What is the Team plan?",
+      "What is the Pro plan?",
       "While you can&#x27;t increase the fixed context window size for your plan, you can use these strategies to maximize available context space and optimize both your context window and usage limits:",
       "Yes. We may adjust usage limits at our discretion to manage capacity and ensure fair access to all users. For example, we may limit your usage with weekly and monthly caps or model and feature usage. We don&#x27;t guarantee uninterrupted service.",
       "You can see how much you&#x27;ve used and the time remaining under Current session in Settings &gt; Usage .",
@@ -2649,8 +2649,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "e2f7df5ed35b2e6e92be3ffd47598b4ff3515a4956968bd13cb66841b5ce9b71",
-    "length": 32936,
+    "hash": "1f9d3501e5c94011b60f5a381b2982cb66bb429e1fdb54da33b73f701cd19b71",
+    "length": 32927,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -2689,11 +2689,11 @@
       "August 6, 2025",
       "August 6, 2026",
       "Build plugins for Claude",
+      "Change the model, effort, and thinking settings",
       "Claude API and Console",
       "Claude Code Security Reviews",
       "Claude Code access added to Team plan Standard seats",
       "Claude Code integration: Build in your terminal with Claude Code, then test and verify in the browser with the Chrome extension. Claude can read console errors, network requests, and DOM state to help debug issues directly.",
-      "Claude Code model configuration",
       "Claude Cowork",
       "Claude Cowork OpenTelemetry support. For more information, see Monitor Claude Cowork activity with OpenTelemetry .",
       "Claude Cowork comes to every conversation",
@@ -2795,6 +2795,7 @@
       "Health features are available on Pro and Max plans and currently limited to users in the US. On Android, Health Connect and Android 14 or later are required.",
       "How Claude marks AI-generated content",
       "How large is the context window on paid Claude plans?",
+      "How up-to-date is Claude&#x27;s training data?",
       "Identity management (SSO, JIT, SCIM)",
       "Import and export your memory from Claude",
       "Importing and exporting your memory from Claude",
@@ -2961,7 +2962,6 @@
       "We’ve upgraded Claude Opus to a new version. Claude Opus 4.8 shows improvements over Opus 4.7 in coding, agentic skills, reasoning, and practical knowledge work tasks. For more information, see our blog post: Introducing Claude Opus 4.8 .",
       "We’ve upgraded our smartest model and improved its coding skills. Read our blog post for more information: Introducing Claude Opus 4.6 .",
       "When Claude writes a draft in chat or Claude Cowork (a report, a plan, a brief), it opens right beside your chat. Highlight the part you want changed, type the change, and Claude makes the edit right where you marked it. No switching apps, no re-describing paragraphs in chat. For more information, see Work with artifacts .",
-      "Why Claude switched models in your conversation with Opus 5 or Opus 5.5",
       "With Opus 4.7, we also launched Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create visual outputs like designs, prototypes, slides, and one-pagers. For more information, see Get started with Claude Design .",
       "Work across Excel and PowerPoint",
       "Work across multiple tabs: Claude can now juggle multiple browser tabs at once. Just drag tabs into Claude&#x27;s tab group and it can see and work across all of them simultaneously—no more jumping back and forth to gather information before taking action.",
