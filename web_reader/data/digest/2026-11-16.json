@@ -1,0 +1,734 @@
+{
+  "date": "2026-11-16",
+  "generatedAt": "2026-11-16 22:18 UTC",
+  "articleCount": 71,
+  "sourceCount": "15/15",
+  "bulletin": "",
+  "topStories": [
+    {
+      "title": "[BUG] Plan upgrade payment fails — PaymentIntent voided immediately with `void_invoice` before confirm can complete",
+      "url": "https://github.com/anthropics/claude-code/issues/55982",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 06:23",
+      "sentiment": "",
+      "body": "這則回報累積 80 則留言、26 個 👍，是今日社群互動最高的議題：升級付費方案時，`PaymentIntent` 在使用者確認完成前就被 `void_invoice` 立即撤銷，導致升級流程失敗。正在升級方案卻卡住的人，可以先去這則底下確認是不是同一個問題，而不是急著重試或懷疑自己被重複扣款。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Make autonomous Claude Code actually viable: tiered Opus brains + Sonnet workers + persistent state",
+      "url": "https://github.com/anthropics/claude-code/issues/56913",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 14:22",
+      "sentiment": "",
+      "body": "這則提案累積 50 則留言：主張把 Claude Code 架成長時間自主運作的「大腦」——用 Opus 做決策層、Sonnet 當執行層，再補上跨 session 的持久狀態，而不只是配對寫程式的助手。想把 Claude Code 架成長駐自動化系統、而非一次性對話的人，這串討論的架構方向值得追。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop Windows installer fails with AddPackage HRESULT 0x80073CF6 after an earlier \"successful\" install left the package in an inconsistent state",
+      "url": "https://github.com/anthropics/claude-code/issues/49917",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 22:06",
+      "sentiment": "",
+      "body": "這則回報累積 43 則留言、7 個 👍：Windows 版 Claude Desktop 安裝程式在前一次「看似成功」的安裝留下不一致狀態後，重新安裝會以 `AddPackage` HRESULT 0x80073CF6 失敗。在 Windows 上裝過 Claude Desktop、重裝時卡在這個錯誤碼的人，可能要先清掉上一次留下的套件殘留才能重裝。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 13:01",
+      "sentiment": "",
+      "body": "這則回報累積 42 則留言、19 個 👍：Cowork／雲端 session 推送到「未列入該 session 授權 repo 清單」的倉庫時被 git proxy 擋下，連使用者自己帶的 PAT 直通也不再生效，回報者推測與 `CCR_TEST_GITPROXY` 的推送機制調整有關。用雲端 session 推多個 repo、或依賴自帶 PAT 繞過授權清單的人，目前可能卡在推不上去。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cowork scheduled tasks ignore \"Always allow\" folder/tool permissions — prompts reappear every run (macOS)",
+      "url": "https://github.com/anthropics/claude-code/issues/47180",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 14:20",
+      "sentiment": "",
+      "body": "這則回報累積 41 則留言、48 個 👍，反應數高於留言數：macOS 上的 Cowork 排程任務不記得「永久允許」的資料夾／工具權限設定，每次執行都重新跳出確認提示。靠 Cowork 排程跑無人值守任務的人，目前每次觸發都可能卡在等人按確認。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "techUpdates": [
+    {
+      "title": "[anthropics/anthropic-sdk-python] v2.9.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0",
+      "source": "GitHub / anthropics/anthropic-sdk-python",
+      "time": "11/16 16:47",
+      "sentiment": "",
+      "body": "官方發行 Python SDK v2.9.0：RBAC Role 讀取端點新增 source 與 error codes 欄位，並新增 Update Bundle 功能，可設定 Claude Tag Bundle 的指示內容、讀回時回傳該 Bundle 的指示。用 SDK 管理團隊 RBAC 角色或 Claude Tag Bundle 的人，升級後就能拿到這兩項新欄位／端點。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-tag",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[anthropics/anthropic-sdk-typescript] sdk-v1.9.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.9.0",
+      "source": "GitHub / anthropics/anthropic-sdk-typescript",
+      "time": "11/16 16:47",
+      "sentiment": "",
+      "body": "TypeScript SDK 同日同步發行 sdk-v1.9.0，內容與上則 Python 版一致。用 TypeScript／Node 串接的團隊同步拿到這兩項更新，不必等下一版。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-releases",
+          "pageType": "entity"
+        },
+        {
+          "id": "claude-tag",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[Status] Claude unable to join meetings",
+      "url": "https://status.claude.com/incidents/b5cq662qf2wm",
+      "source": "Anthropic Status",
+      "time": "11/16 18:10",
+      "sentiment": "",
+      "body": "官方狀態頁更新：Claude Meetings（beta）仍有部分通話無法加入，Auto-join 功能持續暫停，但已在進行中的通話與其他 Claude 功能不受影響。正在用 Claude Meetings beta 排會議的人，這幾天先別太依賴 Auto-join。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ],
+  "mediaReports": [],
+  "discussions": [
+    {
+      "title": "[Bug] Authentication redirect loops to onboarding for existing account with active subscription",
+      "url": "https://github.com/anthropics/claude-code/issues/36797",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 14:27 UTC ·",
+      "sentiment": "😤",
+      "body": "這則回報累積 39 則留言、15 個 👍：既有有效訂閱帳號的使用者，登入 claude.ai 時被導回 onboarding 流程形成迴圈，進不去帳戶。訂閱中卻突然被導去新手引導頁、登不進去的人，不是帳號被取消，是這個已知的登入迴圈問題。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Is Anthropic behind the Jensen Huang drama?",
+      "url": "https://www.reddit.com/r/amodei/s/XMhqsmm4br",
+      "source": "Hacker News",
+      "time": "11/16 14:20 UTC ·",
+      "sentiment": "🤔",
+      "body": "這則討論在 HN 拿到 13 分，有留言推測 Jensen Huang 近期的爭議是否與 Anthropic IPO 前釋出資金的動機有關；屬社群臆測，沒有具體證據支持。",
+      "focusTags": []
+    },
+    {
+      "title": "Show HN: Fakemetrics.com – \"build in public\" like a superstar",
+      "url": "https://fakemetrics.com/",
+      "source": "Hacker News",
+      "time": "11/16 18:08 UTC ·",
+      "sentiment": "😊",
+      "body": "開發者用 Claude Opus 做了一個產生假「build in public」成長截圖的工具，拿到 32 分，動機是測試 Claude Opus 能不能做出像素級還原的 UI 複製品。想測 Claude Opus 仿寫既有介面能力的人，可以看這個案例當參考。",
+      "focusTags": []
+    },
+    {
+      "title": "datasette-maplibre 0.1a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+      "source": "Blog / Simon Willison",
+      "time": "11/15 23:58 UTC ·",
+      "sentiment": "😊",
+      "body": "Simon Willison 用單一提示請 Claude Fable 5.2 參考兩個既有外掛、組合出新的 Datasette 地理空間外掛，整合 MapLibre GL 與 OpenFreeMap；他特別提到「發揮創意、跳出框架想」這句提示帶出了幾個他沒預期到的功能點子。用 Claude 寫 Datasette 外掛、或想看提示寫法如何影響產出創意的人，這篇有具體提示原文可參考。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "datasette 1.0a43",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+      "source": "Blog / Simon Willison",
+      "time": "11/15 23:20 UTC ·",
+      "sentiment": "😊",
+      "body": "Simon Willison 持續靠 Claude Fable 5.2 推進 Datasette 1.0 里程碑（目前 53% 完成），這版加入串流輸出渲染器、CSV／TSV 匯出改用同一套機制，並修了一個可能外洩私有儲存查詢標題與 SQL 的安全性問題。自架 Datasette 處理大量資料輸出的人，這版的串流支援值得升級。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-tech-patterns",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "hitkeeen/blender-ai-mcp-addon",
+      "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+      "source": "GitHub Search",
+      "time": "11/16 20:34 UTC ·",
+      "sentiment": "😐",
+      "body": "Blender 的 AI／MCP 外掛，近 3 天內新增約 1,995 星（約 665 星/日），目前 2,123 星；支援 ChatGPT、Claude、Gemini、Ollama 等多個模型，提供視覺化對話、場景工具與多 agent 工作流。用 Claude 操作 Blender 做 3D 內容的人可以留意這款外掛的成長速度。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "cth9191/animate",
+      "url": "https://github.com/cth9191/animate",
+      "source": "GitHub Search",
+      "time": "11/16 20:34 UTC ·",
+      "sentiment": "😐",
+      "body": "2,054 星的 Claude Code 程式化動畫工具，可產生單檔案的短篇動畫影片，內建 7 種風格或自動比對參考素材抓風格，並能配上自己的音樂與真實產品截圖。想用 Claude Code 批量產生短影音素材的人可以看一下這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-integrations",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "chutingyean/Agent-Cockpit",
+      "url": "https://github.com/chutingyean/Agent-Cockpit",
+      "source": "GitHub Search",
+      "time": "11/16 20:34 UTC ·",
+      "sentiment": "😐",
+      "body": "505 星的證據鏈白板＋MCP 伺服器，讓 Claude Code、Codex、Cursor、Gemini CLI 等 AI research agent 的每個結論都能追溯回產生它的執行紀錄與程式碼，今日有 2 個獨立來源同時提到。在意 agent 研究結論可追溯性、怕被幻覺誤導的人可以看看這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-guardrails",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "KarpelesLab/teamclaude",
+      "url": "https://github.com/KarpelesLab/teamclaude",
+      "source": "GitHub Search",
+      "time": "11/16 20:34 UTC ·",
+      "sentiment": "😐",
+      "body": "503 星的多帳號代理工具，可把 Claude Max、ChatGPT／Codex、API 金鑰與第三方後端帳號集中成一個帳號池，額度用完自動輪替到下一個。常撞到單一帳號額度上限、想多帳號輪替的人可以看看這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-cost",
+          "pageType": "topic"
+        }
+      ]
+    },
+    {
+      "title": "leeguooooo/iphone-use",
+      "url": "https://github.com/leeguooooo/iphone-use",
+      "source": "GitHub Search",
+      "time": "11/16 20:34 UTC ·",
+      "sentiment": "😐",
+      "body": "502 星的工具，讓 Claude Code、Codex 等 MCP client 可以操作真實 iPhone：讀畫面、點擊、輸入、滑動，透過 USB 或 Wi-Fi 連線，自帶可回放的 App 操作流程記錄，開源且自架於 macOS。想用 agent 跑手機 App 自動化測試的人可以看看這個工具。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "community-interfaces",
+          "pageType": "topic"
+        }
+      ]
+    }
+  ],
+  "billing": [],
+  "focus": [
+    {
+      "tag": "[重大事件]",
+      "text": "Claude Sonnet 5.5 與 Claude Fable 5.2 今天同時出現錯誤率升高，波及 claude.ai、Claude API、Claude Code 與 Claude Cowork 四項服務，自 07:32 UTC 持續到 09:04 UTC 才解決，約 1.5 小時。仰賴 Claude API 跑自動化、當天這個時段任務失敗或重試增多的團隊，原因在此。",
+      "ref_urls": [
+        "https://status.claude.com/incidents/r1b4f9bbnsx1"
+      ],
+      "ref_names": [
+        "Anthropic Status"
+      ]
+    },
+    {
+      "tag": "[持續追蹤]",
+      "text": "（續 11-13）Anthropic IPO 認購熱度再升溫：Yahoo Finance 報導超額認購已到 7 倍（11-13 時約 6 倍），CNBC 另報導知名投資人、Altimeter 創辦人 Brad Gerstner 宣布投入 50 億美元認購這輪 IPO。評估是否參與認購、或持有相關概念股的人，這是比上次多出的具體數字。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQckw3X3Rrb0lZaUgyX3ljNzhPQW1PdUFhR3k2c2txMjdGNHBzQ1JoTXk5NlZLU2xKWlNrU2U0SkZKZzJRNnFycWtjdnVmWmdwTW9adlBubnhvS3Y3VTFsSkY3bzFVRDd1eTZ2ME03RXZNTXRNcHFlbl9GaEFST2VXZ2xkcnkxSXhTUEo3dGZYQngySHpFWkREZ3NPclEwYl9IY1pGNlR4dDJGdw?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZWsta3NJMEZJLTlRcHl5TGVlU0oyODVkT2xJV3NmWWR2dXhOSTZCeTBRSFlQV180eTNHbW9hM0ZwaTZaejNQMUU4SHZpQm5aRnFodkNrQVFrNUFTV2I5bHBJUk5URDFmTm1UQnRQcXpVbDgyb3hreGowR0otMDZweHVMbFhuT1A4MWpyNnNPc2VJNUZOckhaQWR2cWxGZEHSAaQBQVVfeXFMT2ZTeDRvb2NxdVZfVUNtelBYSGVjY1NodS1UVXJxb21CV05PYkVLOEN4VGpUa0Y0bXRVaHdJQlN5dzY4U1pRakxpMjVod05TSnU5UmVJel9pRkhReDlNd1ZuOWNDSGxRU0RjaGdDdUsxTVduRGdXU0RPQmlBTFdpRjdnT3h3LVJ5WEk2c3cxUFozeGVGZEhWSFdkRnNoVHdPOFptLWw?oc=5"
+      ],
+      "ref_names": [
+        "Yahoo Finance",
+        "CNBC"
+      ]
+    },
+    {
+      "tag": "[重大事件]",
+      "text": "Anthropic 更新「協同漏洞揭露（coordinated vulnerability disclosure）政策」的時間表規定，官方貼文標題僅示意為時間表調整，未附新舊時限差異的細節。回報漏洞給 Anthropic 的資安研究者，升級細節出來前先留意官方頁面本身已經異動。",
+      "ref_urls": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVmdyVmc1MjVDcWtuV0NsWG44R3ZzQU5rX1BkVHNkR1NlN2w4cFRselR2dTVLOS1EcjlRbU1idlVSMW11bGFWaFZjN2tydks4VkJUR1dlcXY3b2dZX1k5aE5NMUxFck5kQWZtcXlKNHF3bC1ZZXJTa0xjMDNIN1l3TlF6ZzlwMF8z?oc=5"
+      ],
+      "ref_names": [
+        "Anthropic"
+      ]
+    }
+  ],
+  "topicRadar": [
+    {
+      "title": "GitHub Copilot models deprecated on November 16, 2026",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
+      "body": "GitHub Copilot 今天在 Chat、inline edits、ask／agent 模式與 code completions 等多數體驗裡停用一批模型；原本用這些模型的 Copilot 使用者，這幾天要重新確認自己慣用的模型是否還能叫到",
+      "topic": "competitor-landscape",
+      "topicPage": {
+        "id": "competitor-landscape",
+        "name": "AI 編碼工具競品動態",
+        "pageType": "topic"
+      }
+    }
+  ],
+  "sourceStatus": [
+    {
+      "name": "Anthropic Status",
+      "ok": true,
+      "count": 3
+    },
+    {
+      "name": "Build Flags",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "dev.to",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Anthropic Blog",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Google News",
+      "ok": true,
+      "count": 29
+    },
+    {
+      "name": "Claude API Release Notes",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "GitHub Issues",
+      "ok": true,
+      "count": 15
+    },
+    {
+      "name": "Official Skills",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Topic Watch",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "HN Repo Bridge",
+      "ok": true,
+      "count": 0
+    },
+    {
+      "name": "Hacker News",
+      "ok": true,
+      "count": 13
+    },
+    {
+      "name": "Official Docs",
+      "ok": true,
+      "count": 1
+    },
+    {
+      "name": "GitHub",
+      "ok": true,
+      "count": 12
+    },
+    {
+      "name": "Blogroll",
+      "ok": true,
+      "count": 7
+    },
+    {
+      "name": "Reddit",
+      "ok": true,
+      "count": 6
+    }
+  ],
+  "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增已知問題：既有有效訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（#36797）；Anthropic Status 新增 Claude Meetings（beta）Auto-join 持續暫停、Claude Sonnet 5.5／Fab",
+  "sedimentedToday": [
+    {
+      "id": "claude-code-known-issues",
+      "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code-releases",
+      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "pageType": "entity"
+    },
+    {
+      "id": "claude-tag",
+      "name": "Claude Tag",
+      "pageType": "entity"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "pageType": "entity"
+    },
+    {
+      "id": "fable-5",
+      "name": "Claude Fable 5、5.1 與 5.2",
+      "pageType": "entity"
+    },
+    {
+      "id": "krishna-rao",
+      "name": "Krishna Rao",
+      "pageType": "entity"
+    },
+    {
+      "id": "sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "pageType": "entity"
+    },
+    {
+      "id": "ai-agent-safety-cyber",
+      "name": "模型網攻能力、濫用與防守方放行",
+      "pageType": "topic"
+    },
+    {
+      "id": "ai-agent-safety-product-vulns",
+      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-business",
+      "name": "Anthropic 商業健康度",
+      "pageType": "topic"
+    },
+    {
+      "id": "anthropic-ipo",
+      "name": "Anthropic 上市與財報",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-cost",
+      "name": "社群做法：token、成本與模型路由",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-guardrails",
+      "name": "社群做法：規則強制、審查與安全",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-integrations",
+      "name": "社群做法：MCP、plugin 與外部工具整合",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-interfaces",
+      "name": "社群做法：手機遠端、介面與 agent 可視化",
+      "pageType": "topic"
+    },
+    {
+      "id": "community-tech-patterns",
+      "name": "Claude Code 社群工作流模式",
+      "pageType": "topic"
+    },
+    {
+      "id": "competitor-landscape",
+      "name": "AI 編碼工具競品動態",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals-ipo",
+      "name": "IPO 與財務揭露這則怎麼判",
+      "pageType": "topic"
+    },
+    {
+      "id": "market-signals",
+      "name": "投資訊號判讀",
+      "pageType": "topic"
+    },
+    {
+      "id": "skill-interest-watch",
+      "name": "社群工具規模榜",
+      "pageType": "topic"
+    }
+  ],
+  "reader": {
+    "date": "2026-11-16",
+    "summary": "",
+    "noNews": false,
+    "sections": [
+      {
+        "label": "🛠️ 功能",
+        "key": "features",
+        "items": [
+          {
+            "page": "entities/claude-code-known-issues",
+            "name": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **新增已知問題**：既有有效訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（#36797）；Anthropic Status 新增 Claude Meetings（beta）Auto-join 持續暫停、Claude Sonnet 5.5／Fable 5.2 錯誤率升高（已修復）兩起事故。\n- **互動數更新**：升級付款 PaymentIntent 作廢（#55982）增至 80 則留言；雲端 session git proxy 擋 push（#76248）增至 42 則留言；Cowork 排程「永遠允許」失效（#47180）增至 41 則留言；Windows 安裝程式 HRESULT 0x80073CF6（#49917）增至 43 則留言。"
+          },
+          {
+            "page": "entities/claude-code-releases",
+            "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0**：新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點新增 source／error codes 欄位；詳見 [[entities/claude-code-releases#最新版本]]。\n- **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。"
+          },
+          {
+            "page": "entities/claude-tag",
+            "name": "Claude Tag",
+            "label": "最新動態",
+            "date": "",
+            "body": "anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0（2026-11-16）新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點同時新增 source／error codes 欄位。"
+          }
+        ]
+      },
+      {
+        "label": "🤖 模型",
+        "key": "models",
+        "items": [
+          {
+            "page": "entities/fable-5",
+            "name": "Claude Fable 5、5.1 與 5.2",
+            "label": "穩定性事件",
+            "date": "",
+            "body": "Fable 5.2 與 [[entities/sonnet-5-5|Sonnet 5.5]] 錯誤率升高，07:32–09:04 UTC（約 1.5 小時）已解決，另波及 claude.ai／API／Code／Cowork。"
+          },
+          {
+            "page": "entities/sonnet-5-5",
+            "name": "Claude Sonnet 5.5",
+            "label": "穩定性事件",
+            "date": "",
+            "body": "Sonnet 5.5 與 [[entities/fable-5|Fable 5.2]] 錯誤率升高，07:32–09:04 UTC（約 1.5 小時）已解決，另波及 claude.ai／API／Code／Cowork。"
+          }
+        ]
+      },
+      {
+        "label": "💼 商業",
+        "key": "commercial",
+        "items": [
+          {
+            "page": "topics/anthropic-ipo",
+            "name": "Anthropic 上市與財報",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **路演超額認購傳已達 7 倍**：11-13 時約 6 倍（Yahoo Finance）\n- **Altimeter 創辦人 Brad Gerstner 宣布投入 $50 億美元認購**：持股比例、認購方式未載（CNBC）"
+          },
+          {
+            "page": "topics/competitor-landscape",
+            "name": "AI 編碼工具競品動態",
+            "label": "本週衝擊",
+            "date": "",
+            "body": "- 🟡 **GitHub Copilot 11-16 正式停用 Chat、inline edits、ask／agent 模式與 code completions 多數體驗的一批舊模型**（Blog/GitHub Copilot Changelog）——習慣這些模型的 Copilot 使用者，這幾天該重新確認常用模型還能不能叫到。\n- 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。\n- 🔴 **DeepSeek 發布自主程式開發「超級 agent」，11-02 Techzine Global 稱為開源版 Claude Code 替代品**（Bloomberg／南華早報／Techzine Global）——評估 coding agent 選型的人應留意後續發布規模與定價。"
+          },
+          {
+            "page": "topics/market-signals-ipo",
+            "name": "IPO 與財務揭露這則怎麼判",
+            "label": "最新判讀",
+            "date": "",
+            "body": "- **CNBC：Altimeter 的 Brad Gerstner 宣布投入 50 億美元認購 IPO**：本線首次出現具名投資人公開承諾具體認購金額。\n- **Yahoo Finance：路演認購倍數由約六倍升至約七倍**：70～78 美元價格區間與 11-19 掛牌時程未變。\n\n前一輪（2026-11-13）：\n- **Yahoo Finance／Bloomberg：路演認購約達六倍超額**：70～78 美元價格區間與 11-19 掛牌時程未變。"
+          }
+        ]
+      },
+      {
+        "label": "🏛️ 安全政策",
+        "key": "safetyPolicy",
+        "items": [
+          {
+            "page": "topics/ai-agent-safety-product-vulns",
+            "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **CVD 時間表更新**：官方更新協同漏洞揭露政策的回應時限規定；新舊時限差異未載。"
+          },
+          {
+            "page": "topics/ai-agent-safety-cyber",
+            "name": "模型網攻能力、濫用與防守方放行",
+            "label": "最新動態",
+            "date": "",
+            "body": "- **濫用新增（第三方說法）**：GNET 稱胡塞組織藉 AI（含 Claude Code）開出飛彈擴散新路徑；僅標題可用，Anthropic 未回應。"
+          }
+        ]
+      },
+      {
+        "label": "🌐 社群",
+        "key": "community",
+        "items": [
+          {
+            "page": "topics/community-guardrails",
+            "name": "社群做法：規則強制、審查與安全",
+            "label": "安全架構新增證據鏈白板：agent 研究結論可追溯回執行紀錄",
+            "date": "",
+            "body": "- **Agent-Cockpit**：MCP 伺服器＋白板，讓 Claude Code、Codex、Cursor、Gemini CLI 的每個結論可追溯回產生它的執行紀錄與程式碼。"
+          },
+          {
+            "page": "topics/community-cost",
+            "name": "社群做法：token、成本與模型路由",
+            "label": "新增多帳號代理工具 teamclaude，集中帳號池並自動輪替",
+            "date": "",
+            "body": "- **teamclaude**：Claude Max、ChatGPT／Codex、API 金鑰與第三方後端帳號集中成一個帳號池，額度用完自動輪替到下一個。"
+          },
+          {
+            "page": "topics/community-integrations",
+            "name": "社群做法：MCP、plugin 與外部工具整合",
+            "label": "創意工具 Agent 整合再添兩款：Blender 多模型 MCP 外掛、Claude Code 程式化動畫工具",
+            "date": "",
+            "body": "- **blender-ai-mcp-addon**：多模型（Claude／GPT／Gemini／Ollama）視覺化對話＋場景工具＋multi-agent 外掛，近 3 天星數暴增。\n- **animate**：Claude Code 專用程式化動畫工具，單檔案輸出短篇 canvas 動畫並配分鏡回饋。"
+          },
+          {
+            "page": "topics/community-interfaces",
+            "name": "社群做法：手機遠端、介面與 agent 可視化",
+            "label": "行動裝置遠端控制再添一款「agent 操作手機」實作：iphone-use",
+            "date": "",
+            "body": "- **leeguooooo/iphone-use**：讓 Claude Code、Codex 等 MCP client 操作真實 iPhone，USB／Wi-Fi 連線，自帶可回放操作記錄，自架於 macOS。"
+          }
+        ]
+      },
+      {
+        "label": "👤 人物",
+        "key": "people",
+        "items": [
+          {
+            "page": "entities/dario-amodei",
+            "name": "Dario Amodei",
+            "label": "最新動態",
+            "date": "",
+            "body": "- Yahoo Finance：未具名資深科技投資人稱他藉 IPO「自我造勢」（僅標題）\n- Bloomberg：稱他隨 IPO 已成 AI 業界「頭號代言人」（僅標題）"
+          },
+          {
+            "page": "entities/krishna-rao",
+            "name": "Krishna Rao",
+            "label": "媒體側寫",
+            "date": "",
+            "body": "CNBC 以「Anthropic's Wall Street whisperer」側寫財務長 Krishna Rao（僅標題可用）。"
+          }
+        ]
+      }
+    ],
+    "itemCount": 16
+  },
+  "readerTopStories": [
+    {
+      "title": "[BUG] Plan upgrade payment fails — PaymentIntent voided immediately with `void_invoice` before confirm can complete",
+      "url": "https://github.com/anthropics/claude-code/issues/55982",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 06:23",
+      "sentiment": "",
+      "body": "這則回報累積 80 則留言、26 個 👍，是今日社群互動最高的議題：升級付費方案時，`PaymentIntent` 在使用者確認完成前就被 `void_invoice` 立即撤銷，導致升級流程失敗。正在升級方案卻卡住的人，可以先去這則底下確認是不是同一個問題，而不是急著重試或懷疑自己被重複扣款。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "Make autonomous Claude Code actually viable: tiered Opus brains + Sonnet workers + persistent state",
+      "url": "https://github.com/anthropics/claude-code/issues/56913",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 14:22",
+      "sentiment": "",
+      "body": "這則提案累積 50 則留言：主張把 Claude Code 架成長時間自主運作的「大腦」——用 Opus 做決策層、Sonnet 當執行層，再補上跨 session 的持久狀態，而不只是配對寫程式的助手。想把 Claude Code 架成長駐自動化系統、而非一次性對話的人，這串討論的架構方向值得追。",
+      "focusTags": []
+    },
+    {
+      "title": "[BUG] Claude Desktop Windows installer fails with AddPackage HRESULT 0x80073CF6 after an earlier \"successful\" install left the package in an inconsistent state",
+      "url": "https://github.com/anthropics/claude-code/issues/49917",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/15 22:06",
+      "sentiment": "",
+      "body": "這則回報累積 43 則留言、7 個 👍：Windows 版 Claude Desktop 安裝程式在前一次「看似成功」的安裝留下不一致狀態後，重新安裝會以 `AddPackage` HRESULT 0x80073CF6 失敗。在 Windows 上裝過 Claude Desktop、重裝時卡在這個錯誤碼的人，可能要先清掉上一次留下的套件殘留才能重裝。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cloud/Cowork sessions: git proxy now blocks all pushes — \"not in this session's authorized repository set\"; PAT pass-through no longer works (CCR_TEST_GITPROXY rollout?)",
+      "url": "https://github.com/anthropics/claude-code/issues/76248",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 13:01",
+      "sentiment": "",
+      "body": "這則回報累積 42 則留言、19 個 👍：Cowork／雲端 session 推送到「未列入該 session 授權 repo 清單」的倉庫時被 git proxy 擋下，連使用者自己帶的 PAT 直通也不再生效，回報者推測與 `CCR_TEST_GITPROXY` 的推送機制調整有關。用雲端 session 推多個 repo、或依賴自帶 PAT 繞過授權清單的人，目前可能卡在推不上去。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    },
+    {
+      "title": "[BUG] Cowork scheduled tasks ignore \"Always allow\" folder/tool permissions — prompts reappear every run (macOS)",
+      "url": "https://github.com/anthropics/claude-code/issues/47180",
+      "source": "GitHub Issues / claude-code",
+      "time": "11/16 14:20",
+      "sentiment": "",
+      "body": "這則回報累積 41 則留言、48 個 👍，反應數高於留言數：macOS 上的 Cowork 排程任務不記得「永久允許」的資料夾／工具權限設定，每次執行都重新跳出確認提示。靠 Cowork 排程跑無人值守任務的人，目前每次觸發都可能卡在等人按確認。",
+      "focusTags": [],
+      "sedimented": [
+        {
+          "id": "claude-code-known-issues",
+          "pageType": "entity"
+        }
+      ]
+    }
+  ]
+}

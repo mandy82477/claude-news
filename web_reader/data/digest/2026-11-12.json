@@ -457,18 +457,8 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-cyber",
-      "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
-    },
-    {
       "id": "ai-agent-safety",
       "name": "AI Agent 安全與可靠性",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-cost",
-      "name": "社群做法：token、成本與模型路由",
       "pageType": "topic"
     }
   ],

@@ -407,13 +407,7 @@
     }
   ],
   "preview": "Claude Code：版本：v2.1.310 新增 Monitor tool，支援 Bedrock／Vertex／Foundry 的 plugin 監控；停用 telemetry 或非必要流量時，長時間 foreground sleep 也會被攔阻（詳見 entities/claude-code#版本更新）。",
-  "sedimentedToday": [
-    {
-      "id": "claude-tag",
-      "name": "Claude Tag",
-      "pageType": "entity"
-    }
-  ],
+  "sedimentedToday": [],
   "reader": {
     "date": "2026-10-24",
     "summary": "",

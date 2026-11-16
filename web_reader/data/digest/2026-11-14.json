@@ -435,11 +435,6 @@
   "preview": "官方功能 vs 社群痛點缺口分析：把多 agent 工作流寫成能重跑的腳本：Claude Code Projects 改版為對話式，自動拆解任務、指派執行、平行協調多工作線（beta），官方對應仍是 ✅。",
   "sedimentedToday": [
     {
-      "id": "claude-code-releases",
-      "name": "Claude Code 版本與發布通道：現在到哪一版、該跟哪條",
-      "pageType": "entity"
-    },
-    {
       "id": "pricing-incidents",
       "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
       "pageType": "entity"
@@ -467,11 +462,6 @@
     {
       "id": "community-tech-discussions",
       "name": "社群技術討論趨勢",
-      "pageType": "topic"
-    },
-    {
-      "id": "competitor-landscape",
-      "name": "AI 編碼工具競品動態",
       "pageType": "topic"
     },
     {
