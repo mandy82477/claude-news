@@ -13,8 +13,8 @@ children: "['entities/dario-amodei-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 35
-attribution_count: 55
-attribution_last: "2026-11-15"
+attribution_count: 57
+attribution_last: "2026-11-16"
 top_source: "google-news"
 pending_count: 0
 pending_overdue: 0
