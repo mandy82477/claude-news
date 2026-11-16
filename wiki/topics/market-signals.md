@@ -3,7 +3,7 @@ page: "topics/market-signals"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-14"
+last_updated: "2026-11-16"
 last_news_update: "2026-11-13"
 status_main: "ongoing"
 days_since_news: 2
@@ -30,22 +30,22 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-13
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-13）
+> **最新判讀**（2026-11-16）
+> - **CNBC：Altimeter 的 Brad Gerstner 宣布投入 50 億美元認購 IPO**：本線首次出現具名投資人公開承諾具體認購金額（見 [[topics/market-signals-ipo]]）。
+> - **Yahoo Finance：路演認購倍數由約六倍升至約七倍**：價格區間與 11-19 掛牌時程未變（見 [[topics/market-signals-ipo]]）。
+>
+> 前一輪（2026-11-13）：
 > - **IPO 路演認購約達六倍超額**：70～78 美元價格區間與 11-19 掛牌時程未變（見 [[topics/market-signals-ipo]]）。
 > - **Anthropic 因模型名稱「Mythos」遭控商標侵權提告**：僅起訴動作，原告身分與主張細節未附（見 [[topics/market-signals-legal]]）。
 > - **非營利組織對 Anthropic、Google 等提告，要求凍結「AI 軍備競賽」**：訴求條款與法院文件未附（見 [[topics/market-signals-legal]]）。
 > - **Schwab 自建 MCP 伺服器並跨入 agentic AI**：報導稱動搖 Anthropic 獨家 LLM 供應商地位，具體時程未附（見 [[topics/market-signals-customers]]）。
->
-> 前一輪（2026-11-12）：
-> - **修訂版招股書改寫為「已跨過」RSP 安全門檻**：距 11-03「可能迫近」僅一週，防護升級內容未載（見 [[topics/market-signals-ipo]]）。
-> - **官方 IPO 頁新增 $10 萬以上客戶逾 11,900 家與調整後營業利益率 15%**：Q3 營收與 11-02 同數，調整後口徑未拆項（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -106,7 +106,7 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-13 路演認購約六倍超額，70～78 美元區間與 11-19 掛牌未變 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-16 Gerstner／Altimeter 宣布認購 50 億美元；路演認購倍數升至約七倍 |
 | 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-13 Mythos 商標侵權提告；非營利組織提告要求凍結「AI 軍備競賽」 |
 | 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-11 新增逾 100 億美元 Microsoft、Google 合約，Lambda 交易可能取消 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 11-13 Schwab 自建 MCP 跨入 agentic AI，報導稱動搖獨家 LLM 地位 |

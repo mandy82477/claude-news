@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **單一創意展示：97 KB、180 FPS 水下世界、無遊戲引擎**（2026-11-15）
-> BigGo Finance 報導 Fable 5.2 生成一個 97 KB、180 FPS 的水下世界，未用現成遊戲引擎；僅標題可讀，無測試方法或效能量測細節。
+> **穩定性事件**（2026-11-16）
+> Fable 5.2 與 [[entities/sonnet-5-5|Sonnet 5.5]] 錯誤率升高，07:32–09:04 UTC（約 1.5 小時）已解決，另波及 claude.ai／API／Code／Cowork。
 
 ---
 
@@ -248,6 +248,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-16
+**Anthropic 狀態頁：Fable 5.2 與 Sonnet 5.5 同批錯誤率升高（09:04 UTC 已解決，影響約 1.5 小時）**：
+- 官方 09:04 UTC 標記已解決；影響期間 23:32 PT 11-15／07:32 UTC 11-16 起，同批波及 claude.ai、Claude API、Claude Code 與 Claude Cowork 四項服務（[Anthropic Status](https://status.claude.com/incidents/r1b4f9bbnsx1)，2026-11-16）
+- 屬穩定性事件，非能力或存取政策變化；Sonnet 5.5 面記錄見 [[entities/sonnet-5-5]]
 
 #### 2026-11-15
 **BigGo Finance：Fable 5.2 建出 97 KB、180 FPS 水下世界，無遊戲引擎**：Google News 轉載 BigGo Finance 標題稱 Fable 5.2 生成一個 97 KB、180 FPS 的水下世界，未使用現成遊戲引擎；原料僅標題可讀，測試方法與效能量測方式均未見報導，列為單一創意展示（[Google News/BigGo Finance](https://news.google.com/rss/articles/CBMidkFVX3lxTE5pd2VxVGttcjNWcUxFdlRqamhuT09ScWZKQkcwYTd4WlN0QVhwRTgyWjFqSWNiMjQ0ODdGV2JUQ3ZVM3BDckJfaHZncHFwWmNGUWk0MkFkcmREejNSaEV2WTMxaGZqZzdTWWJTQ0pRd0lpLVRHN0E?oc=5)，2026-11-15）。

@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-15）
-> - **新增已知問題**：Cowork auto mode 分類器誤擋擁有者自己的排程與跨機器檔案傳輸（#100730）、Desktop Code 分頁字體大小請求（#48237）、Desktop Routines 區塊重啟後重設隱藏（#102142）、Desktop 輸入框 Enter／Ctrl+Enter 請求（#89673）、團隊共享記憶（#38536）、自動化流程條件式 `/compact`（#19877）。
-> - **互動數更新**：Desktop 1.1.3189 UI 延遲與滑鼠卡頓（#26302）增至 56 則留言、48 個讚。
+> **最新動態**（2026-11-16）
+> - **新增已知問題**：既有有效訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（#36797）；Anthropic Status 新增 Claude Meetings（beta）Auto-join 持續暫停、Claude Sonnet 5.5／Fable 5.2 錯誤率升高（已修復）兩起事故。
+> - **互動數更新**：升級付款 PaymentIntent 作廢（#55982）增至 80 則留言；雲端 session git proxy 擋 push（#76248）增至 42 則留言；Cowork 排程「永遠允許」失效（#47180）增至 41 則留言；Windows 安裝程式 HRESULT 0x80073CF6（#49917）增至 43 則留言。
 
 ---
 
@@ -137,7 +137,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
     - 勾選後 Desktop 會在額度重置後重試被中斷的那一輪，卡片顯示 `Auto-resuming at` 與重置時間。
     - **三個限制讓本則不改列已修復**：① 只在 Desktop，終端機版此週報未載；② 是使用者勾選的 opt-in，不是預設開啟；③ **週額度卡片不提供此選項**，只有 session 上限卡片有。
     - ⚠️ 社群 09-20 流傳的「v2.1.234 新增、預設開啟、可在 `/config` 關閉」與官方週報三處皆不符（版本區間為 v2.1.225–233、非預設、週報未提 `/config`），**不採信**。
-- 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 25 個讚，2026-07-18）**：使用者回報升級訂閱方案時付款流程失敗，`PaymentIntent` 在確認完成前就被 `void_invoice` 作廢，導致升級無法完成；官方未回應。計費面另見 [[entities/pricing-incidents]]。
+- 🔴 **未修復**｜**升級方案付款失敗，`PaymentIntent` 於確認完成前即遭 `void_invoice` 作廢（GitHub issue #55982，累積 80 則留言、26 個讚，2026-11-16 互動數更新）**：確認前就被作廢，升級無法完成；官方未回應。計費面另見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**一般開發操作在數分鐘內即異常耗盡 token／配額（GitHub issue #42249，累積 44 則留言、17 個讚，2026-08-22）**：使用者回報讀檔、編輯程式碼、執行 git 指令等一般開發任務，在數分鐘內即異常耗盡 token／配額，消耗速度遠超預期；與既有多起額度異常消耗回報（issue #16157、#38335 等）同屬配額消耗速度爭議，成因是否重疊尚待釐清，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**選用 opus-plan 模型時，即使已達成 1M context 資格仍要求另開用量額度（GitHub issue #61869，2026-08-30）**：使用者回報選用 opus-plan 模型時，即使已達成 1M context 使用資格，仍被要求另外開通用量額度（Usage credits）才能使用；與既有「Fable 5 於 Max 方案持續要求 usage credits required」（issue #79337）同屬 1M 資格與用量額度門檻不一致的訊號但涉及模型不同，暫分列追蹤；官方尚未回應。1M 的計費規則見 [[entities/pricing]]。
 
@@ -319,13 +319,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Checkpoint Commits 污染 git history**（2026-05-12 社群熱議）：Claude Code 自動建立的 checkpoint commit 大量污染 git 歷史，搭配 worktree 使用時問題更嚴重（每個子 Agent 各自建立分支並獨立 checkpoint），討論串聚集多種清理方案（interactive rebase、squash、git filter-repo）；目前無官方解決方案。
 - 🔴 **未修復**｜**Prompt Cache Race Condition**（2026-04-27 確認）：連續兩次呼叫 `client.messages.create()` 時，第二個請求約有 40% 機率發生 cache miss；在兩次呼叫之間等待 2 秒可穩定解決；已由 Anthropic 工程師確認追蹤中。見 [Issue #1451](https://github.com/anthropics/anthropic-sdk-python/issues/1451)
 
-### 👤 帳號管理（7 條未修復）
+### 👤 帳號管理（8 條未修復）
 
 > 三個獨立平台（Mobile、Desktop、Web connector）在 2026-07-05～07-10 一週內各自湧現高互動的多帳號管理訴求，指向同一個 Claude 全平台共通的帳號架構缺口；2026-07-31 CLI 端亦出現同主軸的獨立功能請求。
 
 - 🔴 **未修復**｜**功能請求：Claude 帳號全平台支援 Passkey（WebAuthn）登入（GitHub issue #84862，累積 26 則留言、209 個讚，全站今日讚數最高，2026-11-05）**：使用者要求取代或補強密碼登入；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**驗證信對使用者信箱被抑制而無法登入 Claude Code，客服機器人沒有轉真人管道（GitHub issue #79808，累積 29 則留言、7 個讚，2026-11-04 互動數更新）**：收不到驗證信的人目前無自助繞法；官方尚未回應。
 - 🔴 **未修復**｜**已付費 Max 帳號登入成功卻因 `has_finished_claudeai_onboarding=false` 被導向新帳號 onboarding 流程（web／desktop／setup-token，第 10 次公開通報，累積 22 則留言，2026-08-29）**：回報者指出這是同一問題第 10 次被獨立公開通報，且首度在網路封包層級捕捉到觸發機制——已付費 Max 帳號登入驗證成功後，因帳號旗標 `has_finished_claudeai_onboarding=false`，被錯誤導向新帳號才需要的 onboarding 流程，涵蓋 web、desktop、setup-token 三種登入路徑；屬帳號狀態旗標與既有付費帳號判斷邏輯不同步的問題；官方尚未回應。
+- 🔴 **未修復**｜**既有訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（GitHub issue #36797，累積 39 則留言、15 個讚，2026-11-16）**：帳號狀態判斷錯誤，訂閱中帳號進不去帳戶；疑與上則 `has_finished_claudeai_onboarding=false` 同屬一缺口，暫分列；官方未回應。
 - 🔴 **未修復**｜**Claude Code 要求使用者幾乎每天都須重新透過網頁驗證登入（GitHub issue #1757，累積 83 則留言、70 個讚，2026-08-03 首見，2026-09-04 互動數更新）**：使用者回報 Claude Code 幾乎每天都要求重新透過網頁驗證登入，認為過於頻繁且不必要；與既有「OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析」（issue #33238）同屬登入／驗證體驗問題但現象不同（一為逾時失敗、一為驗證有效期過短），暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：多帳號設定檔支援（Multi-Account Profile Support）（GitHub issue #20131，累積 39 則留言，2026-07-31）**：Claude Code 目前僅支援單一已驗證帳號，使用者呼籲支援同時設定多組帳號設定檔（例如同時管理一個 API 計費帳號與一個一般訂閱帳號），方便切換；與既有三平台多帳號缺口（Mobile／Desktop／Web connector）同屬帳號架構議題，此則聚焦 CLI 端設定檔機制；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
@@ -384,10 +385,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
   - 另有獨立 issue #16345（累積 33 則留言、58 個讚，2026-10-20）提出相同訴求，引用 Agent Skills 標準（agentskills.io）將 `.agents/skills/` 列為建議共用路徑；官方尚未回應。
 - 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、56 個讚，2026-10-15）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
-- 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 39 則留言、48 個讚，2026-10-15）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
+- 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 41 則留言、48 個讚，2026-10-15 首見，2026-11-16 互動數更新）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Insider（MSIX）Cowork VM 完全無法使用，EXDEV 跨裝置重新命名錯誤未解（v1.1.4010，GitHub issue #27897，累積 36 則留言、15 個讚，2026-10-16）**：MSIX 封裝 EXDEV rename 錯誤，與既有 Cowork VM 啟動失敗同屬平台不穩定訊號；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤（GitHub issue #20571，累積 133 則留言、183 個讚，2026-10-13）**：VS Code 版擴充套件近期更新後，每次工具呼叫皆觸發 API 400 錯誤；CLI 版不受影響；可暫時切換至 CLI 版繞過；官方尚未回應。
-- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 41 則留言、17 個讚，2026-10-28 更新）**：push 到「session 授權清單」外 repo 一律被擋，無繞法；官方尚未回應。
+- 🔴 **未修復**｜**Cloud／Cowork session 的 git proxy 擋下清單外 repo 的所有 push，自帶 PAT 亦失效（GitHub issue #76248，累積 42 則留言、19 個讚，2026-11-16 互動數更新）**：疑與 `CCR_TEST_GITPROXY` 推送機制調整有關；官方尚未回應。
 - 🔴 **未修復**｜**Cowork Dispatch 在 macOS 無回應（GitHub issue #40283，累積 32 則留言、14 個讚，2026-10-08）**：使用者回報 Cowork Dispatch 功能在 macOS 上無回應；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援刪除與重新命名對話（GitHub issue #10747，累積 42 則留言、52 個讚，2026-10-07）**：VS Code 擴充套件目前無法刪除或重新命名既有對話，長期管理多個對話的使用者只能任由清單累積；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop（Windows）視窗永遠置頂（Always on Top）（GitHub issue #87895，累積 30 則留言、88 個讚，2026-09-30）**：使用者回報 Windows 版 Claude Desktop 視窗出現異常「永遠置頂」行為，無法如一般視窗般切換至背景；官方尚未回應。
@@ -400,7 +401,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork（Windows）09 月累積更新致 device_bash 失效，ARM64／x64 皆受影響（GitHub issue #92958，累積 56 則留言，2026-09-20）**：與上列 Plan9 掛載失敗（#92984）同源不同現象；官方尚未回應。
   - ARM64（KB5124012／28000.2954）、x64（KB5124008／26200.9445）皆受影響；回報者以五台機器 rollback A/B 測試確認。
 - 🔴 **未修復**｜**C# LSP（csharp-ls）在 Claude Code 中無法運作，缺少 `workspace/configuration` 等請求處理器（GitHub issue #16360，累積 34 個讚，長年未解）**：官方尚未回應或排入路線圖。
-- 🔴 **未修復**｜**Claude Desktop（Windows）安裝程式因先前一次「顯示成功」實則套件狀態不一致的安裝，導致後續安裝以 HRESULT 0x80073CF6 失敗（GitHub issue #49917，累積 38 則留言、8 個讚）**：官方尚未回應。
+- 🔴 **未修復**｜**Claude Desktop（Windows）安裝程式因先前一次「顯示成功」實則套件狀態不一致的安裝，導致後續安裝以 HRESULT 0x80073CF6 失敗（GitHub issue #49917，累積 43 則留言、7 個讚，2026-11-16 互動數更新）**：官方尚未回應。
 - 🔴 **未修復**｜**Claude Desktop（Windows）反覆當機，須進「進階選項→修復」才能恢復（GitHub issue #85199，累積 52 則留言、11 個讚，首見 2026-08-30，2026-10-19 互動數更新）**：使用者回報 Windows 版 Claude Desktop 反覆當機，每次都須進入「進階選項→修復」才能恢復使用，屬穩定性問題；官方尚未回應。
 - 🔴 **未修復**｜**功能請求：新增 `--quiet`（或 `--minimal-output`）旗標抑制互動模式工具呼叫輸出（GitHub issue #9340，累積 32 則留言、47 個讚，2026-08-29）**：社群呼籲新增 `--quiet` 旗標，讓互動模式下的工具呼叫輸出可被抑制、僅顯示精簡進度，方便長時間執行時減少畫面雜訊；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**context window 狀態列對 Claude Sonnet 4.6 僅顯示 200k 上限，但該模型實際支援 1M（GitHub issue #61734，累積 24 則留言，2026-08-29）**：使用者回報介面的 context window 狀態列對 Claude Sonnet 4.6 僅顯示 20 萬 token 上限，但該模型實際支援 100 萬 token，屬狀態列顯示與模型實際能力不同步的 UI bug；官方尚未回應。
@@ -488,8 +489,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（13 條未修復、5 條已修復）
+### 🌐 服務穩定性（14 條未修復、6 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Sonnet 5.5、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)
+- 🔴 **未修復（部分功能持續受影響）**｜**Anthropic Status：Claude Meetings（beta）部分通話仍無法加入，Auto-join 持續暫停（2026-11-16 18:10 UTC 更新）**：已在進行中的通話與其他 Claude 功能不受影響；排會議依賴 Auto-join 的使用者這幾天宜先改手動加入。[來源](https://status.claude.com/incidents/b5cq662qf2wm)
 - 🔴 **未修復（調查中）**｜**Anthropic Status：部分使用者無法在 Claude iOS App 用「使用 Apple 登入」註冊新帳號，主要影響新帳號（2026-11-14 07:11 UTC 起調查中）**：官方建議這段時間改用 Google 或 email 註冊。[來源](https://status.claude.com/incidents/ct4c2pwf2xpj)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：claude.ai／Claude API／Claude Code 錯誤升高，與 Microsoft 365 故障同時發生（2026-11-13，約 10:18 UTC 登記、15:38 UTC 解決）**：對應 HN 討論串 440 分；依賴 API 的自動化留意重試。[來源](https://status.claude.com/incidents/34wq7gxnxvvm)
   - 另一 HN 討論串回報具體症狀：`/login` 觸發 API 403、頁面顯示 Cloudflare「Attention Required」（[Tell HN: Claude Code Is Down](https://news.ycombinator.com/item?id=50480909)，37 分，11-13）；撞到此錯誤訊息的自動化可對照本次事故。

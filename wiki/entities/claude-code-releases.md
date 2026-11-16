@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-14）
-> - **v2.1.325**：修補 zstd 壓縮回應解碼的安全性問題，另在 VS Code 等整合終端機加上重跑 notebook cell 的一次性提示；詳見 [[entities/claude-code-releases#最新版本]]。
+> **最新動態**（2026-11-16）
+> - **anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0**：新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點新增 source／error codes 欄位；詳見 [[entities/claude-code-releases#最新版本]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +67,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v2.9.0** | 2026-11-16 | Features：RBAC Role 讀取端點新增 source 與 error codes 欄位；新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容（官方原文截斷）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0)）|
+| **anthropic-sdk-typescript sdk-v1.9.0** | 2026-11-16 | 同步 Python SDK：RBAC Role 讀取端點新增 source／error codes；新增 Update Bundle 設定 Claude Tag Bundle 指示內容（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.9.0)）|
 | **v2.1.325** | 2026-11-13 | 修補 zstd 壓縮回應解碼的安全性問題；VS Code 等整合終端機新增重跑 notebook cell 一次性提示（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.325)）|
 | **v2.1.323** | 2026-11-12 | 新增 Code Mode（實驗性選項，預設關閉，讓 Claude 改寫 JavaScript 呼叫自己的工具）；金鑰外洩修復見 [[entities/claude-code-known-issues]]（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.323)）|
 | **v2.1.322** | 2026-11-10 | 新增 Vertex 上 fast mode（global、us、eu 區域），Vertex 拒絕時退回標準速度（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.322)）|

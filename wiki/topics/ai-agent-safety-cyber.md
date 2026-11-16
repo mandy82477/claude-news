@@ -31,13 +31,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 **蒐集邊界：** 以 Claude 的網攻能力、濫用與 Anthropic 的防守方計畫為主；他家模型的網攻能力只在官方研究或同一篇報導拿來和 Claude 對照時才會出現。
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；官方非資安政策表態 7 則隨本頁；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 
-> **最新動態**（2026-11-12）
-> - **誤擋**：已通過 CVP 核准的使用者，在 claude.ai 全新對話裡連完全無害、非資安的提問也被擋（GitHub #61889，44 則留言）；與 Claude Code 端的 #84352 是同一類問題，官方回應未載。
+> **最新動態**（2026-11-16）
+> - **濫用新增（第三方說法）**：GNET 稱胡塞組織藉 AI（含 Claude Code）開出飛彈擴散新路徑；僅標題可用，Anthropic 未回應。
 ---
 
 ## 摘要
@@ -51,7 +51,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 目前結論
 
 - **能力**：11-10 The Hacker News 標題稱 Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber（測試方與分數未載，僅標題可用）；官方研究稱未發布的研究模型組出 5 條攻擊鏈（官方文章 10-27 發布）；GLM-5.3 在 100 題抽樣中 4% 達完整控制流劫持（Mythos Preview 6%），能力不再是 Anthropic 專有。
-- **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創都是第三方說法，官方沒有證實也沒有回應。
+- **濫用，誰承認的**：官方威脅情報報告承認並封號的是 09-14 ShinyHunters 關聯操作；官方 09 月報告的七大危害領域見 [[topics/anthropic-government-policy#攻防紀錄]] 09-11 條目。CrowdStrike 南韓銀行案、CyberXero、朝日新聞、前 DOGE 成員新創、GNET 胡塞飛彈擴散都是第三方說法，官方沒有證實也沒有回應。
 - **官方承認過的在野濫用（清單）**：09-14 ShinyHunters 封號、09-11 報告攔截生物武器濫用意圖與非法蒸餾（[[topics/anthropic-government-policy#攻防紀錄]]）、10-15 選舉報告封鎖境外帳號、10-26 agent 繞過付費牆取選民資料（[[topics/ai-agent-safety-product-vulns#目前結論]]）。
 - **防守方**：主軸是驗證身分後放行，CVP 三層（10-06）、Cyber Mission（10-08）、LSVP（09-18），誰能申請哪一層見下表；修補端的成本首見 Bank of America 雇千名約聘修 Mythos 掃出的漏洞（10-15，單一來源）。
 - **企業端整合（11-09）**：IBM Concert、Cisco AI Defense 宣布計畫導入 Mythos 做資安推理與紅隊測試，僅宣布階段；合作面見 [[topics/anthropic-partnerships-compute#哪個合作會改到你用的 Claude]]。
@@ -80,6 +80,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 面向 | 事件 | 來源強度 |
 |---|---|---|---|
+| 11-16 | 擴散 | GNET：胡塞組織藉 AI（含 Claude Code）跨越專業門檗，稱開出飛彈擴散新路徑 | 單一來源（反極端主義研究機構），僅標題可用；具體手法與機制未載 |
 | 11-11 | 能力 | CyberSecurityNews：Claude Code 找到把模型休眠神經元變成隱藏惡意程式觸發器的技術 | 單一來源，僅標題可用；研究成果或攻擊示範未載 |
 | 11-10 | 防護 | VulnCheck：Glasswing 啟動七個月可歸因 Anthropic 的 CVE 達 442 筆、2 筆在野利用；217 筆發現標已修復 | VulnCheck 第三方計數（HN 439 分）；官方回應未見 |
 | 11-10 | 能力 | The Hacker News：Fable 5.2 在多階段網攻基準勝過 GPT-6 Cyber；Help Net Security：Mythos 5.2 找漏洞更強、跳出沙箱的行為較少 | 兩則均單一來源，僅標題可用；測試方、分數與「跳出沙箱」的比較基準未載 |
@@ -104,8 +105,6 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 10-03～10-04 | 能力 | Mythos 揭露 Rejetto HFS 漏洞（CVE-2026-61500）；隔天即在野攻擊，10-04 修補版 3.2.1 釋出 | dev.to／#anthropic；非 Claude 自身產品事件，揭露到利用僅一天 |
 | 09-29／09-30 | 擴散 | Frontier Red Team：GLM-5.3 在 100 題 Binary Exploitation 抽樣 4% 完整控制流劫持（Mythos Preview 6%）；Opus 4.6、GLM-5.2 做不到 | 官方一手；100 題為隨機抽樣，官方稱未見在野濫用（10-17 查證） |
 | 09-25 | 測試 | ABC／AP 重新報導 Anthropic 07-30 自揭的三起評估事故 | 非新事件（10-17 對照官方 Blog 確認） |
-| 09-22 | 防護 | The Verge：Opus 5.5 隨附更嚴格的資安領域防護 | 官方 09-22：類 Fable 5.1 防護，多數資安任務改由 Opus 4.8 |
-
 ---
 
 ## 技術彙整
@@ -113,6 +112,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### GNET：胡塞武裝組織藉 AI（含 Claude Code）跨越專業門檗，稱開出飛彈擴散新路徑（2026-11-16 新增）
+%% 揭露原料為 Google News 原始抓取（日報「今日焦點」未收錄），僅標題層級，記者依收錄判準另行評估收錄 %%
+
+- **揭露來源**：Google News／Global Network on Extremism and Technology（GNET）（11/16 11:59 UTC），互動 0，僅標題可用；原料無可讀內文
+- **核心主張（標題所述，未見原文細節）**：標題稱胡塞武裝組織（the Houthis）藉由 AI（含 Claude Code）跨越原本需要的專業門檗，開出一條飛彈擴散的新路徑；具體使用方式、Claude Code 在其中扮演的角色與是否已造成實際擴散結果均未見報導，不可代為推斷攻擊手法或具體機制
+- **性質判斷**：屬「有人拿 Claude 打第三方」的濫用態勢（擴散面向），非 Claude 產品本身的攻擊面，不列入母頁「現在還擋不住的攻擊」表；已列入「## 模型網攻能力與防護」表 11-16 列
+- **可信度評估**：單一來源（反極端主義研究機構），僅標題層級，Anthropic 官方未回應或證實，可信度待第二來源佐證
+- ❓ **待查證**（標 2026-11-16｜查 Houthis、missile proliferation｜複 2026-11-30）｜**AI／Claude Code 在擴散路徑中的具體角色**：標題未載具體使用方式、Claude Code 涉入程度與是否已有實際擴散結果，官方回應未見報導
 
 %% 2026-11-14 /wiki-lint 5i：以下兩則由母頁 `### 未歸類` 分派進本頁——皆為官方安全研究表態，答不出母頁四問（非注入載體、非產品漏洞、非評測越界），依本頁「官方非資安的安全政策表態」收。主編判定與理由見 log %%
 

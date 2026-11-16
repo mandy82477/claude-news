@@ -31,12 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **多代理 PR Review、規格驅動開發各新增一則做法**（2026-11-15）
-> - **code-review-gate-skill**：四道獨立探針產出證據式稽核報告，彙整 JSON 作合併關卡決定 PR 能否通過。
-> - **ryugi**：agent 產出的設計稿、白板、驗證報告可直接留言，留言送回給 agent。
+> **安全架構新增證據鏈白板：agent 研究結論可追溯回執行紀錄**（2026-11-16）
+> - **Agent-Cockpit**：MCP 伺服器＋白板，讓 Claude Code、Codex、Cursor、Gemini CLI 的每個結論可追溯回產生它的執行紀錄與程式碼。
 
 ---
 
@@ -102,6 +101,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### chutingyean/Agent-Cockpit：證據鏈白板＋MCP 伺服器，讓 agent 研究結論可追溯回執行紀錄與程式碼（2026-11-16）
+
+- **主線：** 除錯分工
+- **核心模式：** 證據鏈白板＋MCP 伺服器，讓 Claude Code、Codex、Cursor、Gemini CLI 等 AI research agent 的每個結論都能追溯回產生它的執行紀錄與程式碼；今日 2 個獨立來源同時提到。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（Grepathy 等追蹤 agent 自主決策，[[topics/community-guardrails#2026-10]]）一個「結論可追溯性」取向——既有做法聚焦稽核 agent 的行為決策本身，本則聚焦 agent 產出的研究結論能否回溯到產生它的證據；多 agent 產出誰把關，主線填除錯分工。
+- **可信度註記：** 僅有 GitHub Search 星數（505★，2 個來源），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，白板與 MCP 的具體整合機制未見報導（細節未載）。
+- **來源：** GitHub Search（2 個來源）；[GitHub](https://github.com/chutingyean/Agent-Cockpit)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### kyy-logs/code-review-gate-skill：四道獨立探針產生證據式稽核報告，JSON 合併關卡把關（2026-11-15）
 

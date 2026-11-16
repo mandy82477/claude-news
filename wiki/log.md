@@ -9113,3 +9113,25 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 轉知帳本：結案 H-75139f（功能：official-community-gap 門檻評估，4 個社群工具節點皆未達新增列門檻）；新開 H-73a7cc（社群→功能：評估產品化矩陣新增列，本日 patterns 子頁新增 6 則節點）
 - devpractice 沉澱：本日無候選（當日無開發實務包）
 - market 判讀：本日無訊號（檢視 53 條；最接近門檻者 Startup Fortune「$64 億 IPO」，判定為既有價格區間×股數的算術結果，非新披露，未開新則）
+
+## 2026-11-16 Ingest
+
+- 來源日報：[[news/2026-11-16]]
+- 更新頁面：
+  - **模型**：entities/sonnet-5-5.md、entities/fable-5.md
+  - **功能**：entities/claude-code-known-issues.md、entities/claude-code-releases.md、entities/claude-tag.md、entities/claude-code.md
+  - **商業**：topics/anthropic-ipo.md、topics/anthropic-business.md、topics/competitor-landscape.md
+  - **安全政策**：topics/ai-agent-safety-product-vulns.md、topics/ai-agent-safety-cyber.md、topics/ai-agent-safety.md（母頁）
+  - **社群**：topics/community-integrations.md、topics/community-cost.md、topics/community-interfaces.md、topics/community-guardrails.md、topics/community-tech-patterns.md（母頁）
+  - **人物**：entities/dario-amodei.md、entities/krishna-rao.md
+  - **投資分析**：topics/market-signals-ipo.md、topics/market-signals.md（母頁）
+- 新增頁面：無
+- 摘要：Sonnet 5.5／Fable 5.2 四服務錯誤率升高事故（07:32–09:04 UTC，約 1.5 小時）；Anthropic IPO 持續追蹤（續 11-13，超額認購 6 倍→7 倍、Altimeter Gerstner 投入 50 億美元）；GitHub Copilot 停用一批模型；社群五筆 GitHub 高星工具與 Simon Willison 兩篇 Claude Fable 5.2 實測；安全政策收錄 Anthropic CVD 政策時間表更新與 GNET 的 Houthis／Claude Code 飛彈擴散指控（皆標 ❓ 待查證、未代為推斷）。
+- 呈現品質：全部通過（功能／安全政策／商業／社群四位記者各有 1–4 筆首版超字元上限，皆已自行縮短復測轉綠）
+- 品質備註：無
+- 分類回退：2 筆，皆判定「理由成立但目標類別原輪已收到該事實，本輪不追加派工」——[功能] issue #56913（autonomous Claude Code 提案）→ 應屬社群，既有家 topics/community-tech-patterns（2026-08-14），今日僅留言數 49→50，無新事實；[模型] 「[Status] Claude unable to join meetings」→ 應屬功能，已於原輪同時派給功能記者處理。駁回 0 筆
+- 轉知帳本：結案 H-73a7cc（功能：official-community-gap 產品化矩陣評估，6 個新節點皆標「⏳ 新興、單一作者」，未達開新列門檻）；新開 H-afa06d（社群→功能：評估產品化矩陣新增列，本日 patterns 子頁新增 6 則工作流/工具節點）
+- devpractice 沉澱：本日無候選（當日無開發實務包）
+- market 判讀：新增 2 則（IPO 流程硬事件：Gerstner 50 億美元認購、超額認購 6→7 倍），里程碑登記 2 筆，皆寫入 topics/market-signals-ipo
+- 本機承接：[社群] community-tech-patterns.md「兩類仍在 60 天內」段落「安全架構」一項疑誤連結 `[[topics/community-integrations#2026-10]]`（實際節點全在 community-guardrails.md），屬模式概覽週更範圍，留 `/wiki-weekly-review` 複查修正
+- 📋 需使用者端設定：無

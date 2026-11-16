@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-12
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **新增一款開源省 token 工具 Downshift**（2026-11-12）
-> - **Downshift**：Go 開源工具，在 AI 讀到指令輸出前先壓縮、依政策替 subagent 選模型；作者自述仍在 beta，尚未量化省多少。
+> **新增多帳號代理工具 teamclaude，集中帳號池並自動輪替**（2026-11-16）
+> - **teamclaude**：Claude Max、ChatGPT／Codex、API 金鑰與第三方後端帳號集中成一個帳號池，額度用完自動輪替到下一個。
 
 ---
 
@@ -73,7 +73,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 選單列／儀表板 | 看見剩餘額度與重置時間 | syrtis、Pulse 等 | ⏳ 最多一族 |
 | 暫停與恢復 | 撞限速後不丟進度 | resume-on-ratelimit | ⏳ 單人腳本 |
 | 預算圍欄 | 到門檻自動停手 | agent-usage-guard；官方 Spend Controls | ⏳／官方有警示無暫停 |
-| 中轉與 gateway 比價 | 換便宜管道或多帳號 | Folkbench、OmniRoute | ⏳ 星數待證 |
+| 中轉與 gateway 比價 | 換便宜管道或多帳號 | Folkbench、OmniRoute、teamclaude | ⏳ 星數待證 |
 | 成本拆解實測 | 找出額度被誰吃掉 | aidiveyt | ⏳ 單一樣本 |
 
 - **事前攔截 hook**：[[topics/community-cost#rbartoli/agent-usage-guard：Claude Code hook 防用量窗口被幾分鐘內燒完（2026-10-23）|agent-usage-guard]] 在快取過期、內容過大時提示先壓縮，用量逾 80% 時擋下新子 agent；單次爆量 365 降到 27 是作者 75 天自述。
@@ -89,6 +89,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **中轉與 gateway 比價**
   - [[topics/community-cost#Folkbench/folkbench：評測各家 AI API 中轉站可用率、延遲與價格並支援一鍵切換（2026-10-18）|Folkbench]] 量中轉站可用率與價格
   - [[topics/community-cost#cheaper-inference/OmniRoute：單一端點整合 375 家供應商、1,400+ 模型的免費 AI gateway，配額感知備援＋壓縮省 token（2026-10-22）|OmniRoute]] 的 79,703 星異常高，不當採用證據。
+  - [[topics/community-cost#KarpelesLab/teamclaude：多帳號代理集中 Claude Max、Codex、API key 帳號池，額度用完自動輪替（2026-11-16）|teamclaude]] 多帳號額度池自動輪替
 - **成本拆解實測**
   - [[topics/community-cost#aidiveyt：逐 session 拆帳一個月用量，量出 subagent 佔全部 token 48.1%、寫了 64% 的輸出（2026-10-08）|aidiveyt]] 一個月 455 個 session 拆帳，subagent 佔 48.1%
   - [[topics/community-cost#MCP Server 設計對每輪對話隱藏 token 成本的實測比較（2026-07-21）|MCP 隱藏成本]]：單一作者實測各設計每輪注入的 token
@@ -107,6 +108,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### KarpelesLab/teamclaude：多帳號代理集中 Claude Max、Codex、API key 帳號池，額度用完自動輪替（2026-11-16）
+
+- **主線：** —
+- **核心模式：** Claude Code 與 Codex 用的多帳號代理，把 Claude Max、ChatGPT／Codex、API 金鑰與第三方後端帳號集中成一個帳號池，單一帳號額度用完時自動輪替到下一個。
+- **與既有模式的關係：** 本表既有類別聚焦 agent 工作流本身（Skills、Hooks、MCP、記憶、模型路由等），本則是帳號層級的代理與輪替機制，與既有代表技巧不重疊，判為帳號橋接取向歸入本頁（同類先例：ardeyouxipianyi/workbuddy2api-hub，[[topics/community-cost#2026-09]]）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（503★），無 forks／issues／近期 commit 佐證可查，未另行查證；多帳號輪替用途未載明是否涉及規避官方帳號政策，本庫不評論其合規性。
+- **來源：** GitHub Search；[GitHub](https://github.com/KarpelesLab/teamclaude)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一團隊工具，尚無社群採用回饋數據）
 
 #### tiagovilasboas/downshift-ai：Go 開源工具壓縮指令輸出並依政策路由 subagent 模型（2026-11-12）
 

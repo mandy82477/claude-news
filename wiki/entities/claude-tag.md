@@ -32,19 +32,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：Slack 裡 @Claude；誰起手：你每句下令）
 **首次出現：** 2026-06-24
-**最後更新：** 2026-10-24
-**最後新聞更新：** 2026-10-24
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **最新動態**（2026-10-24）
-> anthropic-sdk-python v2.3.0（2026-10-23）新增 Claude Tag 的 Enterprise 組織 API endpoint，SDK 端可服務 Claude Tag 部署。
+> **最新動態**（2026-11-16）
+> anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0（2026-11-16）新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點同時新增 source／error codes 欄位。
 
 ---
 
 ## 現況
 
-**最新動態：** anthropic-sdk-python v2.3.0（2026-10-23）新增 Claude Tag endpoints，服務 Claude Enterprise 組織（詳見 [[entities/claude-code-releases#最新版本]]）。
-
-Anthropic Status 確認 Claude Tag 的 GitHub 操作於 2026-07-07 一度出現錯誤率升高，已於同日 15:52 UTC 恢復正常（事故頁：[status.claude.com](https://status.claude.com/incidents/d23j8s7t8rx2)），屬短暫中性事件，細節見下方「穩定性事件」。
+**最新動態：** anthropic-sdk-python v2.9.0 與 TypeScript sdk-v1.9.0（2026-11-16）新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點同時新增 source 與 error codes 欄位（官方原文截斷，詳見 [[entities/claude-code-releases#最新版本]]）。
 
 Claude Tag 是 Anthropic 於 2026-06-24 發布的 Slack-native AI 協作工具，讓 AI 以隊友身份加入 Slack 頻道，可讀取頻道上下文、記憶資訊、主動完成任務，並連接程式碼庫、工具與資料。Anthropic 內部已有 **65% 產品程式碼**由 Claude Tag 生成，定位為 Claude Code 向「更主動、更團隊協作」方向的延伸。
 
@@ -93,3 +91,4 @@ https://www.anthropic.com/news/introducing-claude-tag
 | 2026-07-07 | GitHub 操作錯誤率一度升高，Anthropic Status 頁面確認並展開調查 |
 | 2026-10-23 | 官方查證：文件全站標 Public Beta，僅 Team／Enterprise，Owner 於 admin-settings 配對 Slack（[來源](https://claude.com/docs/claude-tag/overview)） |
 | 2026-10-23 | anthropic-sdk-python v2.3.0 新增 Claude Tag endpoints，服務 Claude Enterprise 組織（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0)） |
+| 2026-11-16 | anthropic-sdk-python v2.9.0／TS sdk-v1.9.0 新增 Update Bundle；RBAC Role 讀取端點新增 source／error codes（原文截斷）（[Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0)） |

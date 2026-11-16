@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **行動裝置遠端控制新增反向隧道取向**（2026-11-13）
-> - **sun168567/cc-desk-tunnel**：桌面客戶端驅動雲端 Claude Code，經反向隧道把執行動作接回使用者本機 Windows。
+> **行動裝置遠端控制再添一款「agent 操作手機」實作：iphone-use**（2026-11-16）
+> - **leeguooooo/iphone-use**：讓 Claude Code、Codex 等 MCP client 操作真實 iPhone，USB／Wi-Fi 連線，自帶可回放操作記錄，自架於 macOS。
 
 ---
 
@@ -75,6 +75,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### leeguooooo/iphone-use：讓 Claude Code、Codex 等 MCP client 操作真實 iPhone，自架於 macOS（2026-11-16）
+
+- **主線：** —
+- **核心模式：** 讓 AI agent（Claude Code、Codex、任意 MCP client）讀畫面、點擊、輸入、滑動以操作真實 iPhone，透過 USB 或 Wi-Fi 連線，自帶可回放的 App 操作流程記錄；開源，自架於 macOS。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（ios-mcp、iCTRL 等，[[topics/community-interfaces#2026-10]]）方向相反取向的第三個實作，再添一個 USB／Wi-Fi 連線＋可回放記錄版本；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（502★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/leeguooooo/iphone-use)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### sun168567/cc-desk-tunnel：桌面客戶端驅動雲端 Claude Code，經反向隧道在 Windows 本機執行（2026-11-13）
 

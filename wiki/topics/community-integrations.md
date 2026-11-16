@@ -31,13 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-16
+**最後新聞更新：** 2026-11-16
 
-> **創意工具 Agent 整合新增三則：數字人影片、貼圖包、Blender 多供應商中樞**（2026-11-15）
-> - **digital-human-koubo**：一張照片生成數字人說話影片，5 種剪輯風格＋48 個打包元件。
-> - **ray-sticker-shop**：一張照片或角色圖生成一整套形象一致的動態表情包。
-> - **blender-ai-copilot-hub**：多供應商 LLM 接進 Blender，27 個受監督場景工具＋內建 MCP server。
+> **創意工具 Agent 整合再添兩款：Blender 多模型 MCP 外掛、Claude Code 程式化動畫工具**（2026-11-16）
+> - **blender-ai-mcp-addon**：多模型（Claude／GPT／Gemini／Ollama）視覺化對話＋場景工具＋multi-agent 外掛，近 3 天星數暴增。
+> - **animate**：Claude Code 專用程式化動畫工具，單檔案輸出短篇 canvas 動畫並配分鏡回饋。
 
 ---
 
@@ -61,6 +60,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### hitkeeen/blender-ai-mcp-addon：Blender 用的多模型 AI／MCP 外掛，視覺化對話＋場景工具＋multi-agent 工作流（2026-11-16）
+
+- **主線：** —
+- **核心模式：** Blender 外掛＋MCP server，供 ChatGPT、Claude、Gemini、Ollama、OpenCode 等多款模型使用，提供視覺化對話介面、場景操作工具與 multi-agent 工作流；近 3 天新增約 1,995 星（約 665 星/日），GitHub Search 累積 2,123 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（blender-ai-copilot-hub 等，[[topics/community-integrations#2026-11]]）本週第二個多模型接 Blender 實作——既有做法聚焦場景工具與連線管理，本則另加視覺化對話與 multi-agent 工作流；主線填 —。
+- **可信度註記：** 星速偵測收錄（近 3 天 +1,995 星，約 665 星/日），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，multi-agent 工作流具體機制未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/hitkeeen/blender-ai-mcp-addon)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，星速異常偏高，尚無第三方採用或複現數據）
+
+#### cth9191/animate：Claude Code 專用程式化動畫工具，單檔案輸出短篇 canvas 動畫並配分鏡回饋（2026-11-16）
+
+- **主線：** —
+- **核心模式：** 供 Claude Code 使用的程式化動畫工具，產出單檔案、任意風格的短篇 canvas 動畫；內建 7 種風格可選，或自動比對參考素材抓風格，可配自己的音樂與真實產品截圖，過程附故事與分鏡回饋 check-in。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（andyhuo520/digital-human-koubo 等生成式影片工具，[[topics/community-integrations#2026-11]]）一個「程式化動畫＋分鏡回饋迴圈」取向——既有做法多是單次生成，本則在生成過程加入故事與分鏡的中途檢查點；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（2,054★），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，具體「分鏡 check-in」互動方式未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/cth9191/animate)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### andyhuo520/digital-human-koubo：一張照片生成數字人說話影片，5 種剪輯風格＋48 個打包元件（2026-11-15）
 
