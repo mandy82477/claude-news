@@ -3,8 +3,8 @@ page: "topics/community-cost"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/community-tech-patterns"
@@ -12,9 +12,9 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 7
-attribution_count: 16
-attribution_last: "2026-11-16"
-top_source: "devto"
+attribution_count: 18
+attribution_last: "2026-11-17"
+top_source: "github"
 pending_count: 0
 pending_overdue: 0
 pending_next_review: null

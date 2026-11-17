@@ -12,12 +12,12 @@ children: "['topics/competitor-landscape-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 80
-attribution_count: 290
-attribution_last: "2026-11-16"
+attribution_count: 298
+attribution_last: "2026-11-17"
 top_source: "blog"
 pending_count: 9
-pending_overdue: 1
-pending_next_review: "2026-11-17"
+pending_overdue: 2
+pending_next_review: "2026-11-24"
 pending_signalled: 2
 staleness_exempt: null
 signal: "健康"

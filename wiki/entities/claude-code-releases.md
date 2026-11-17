@@ -13,8 +13,8 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 10
-attribution_count: 18
-attribution_last: "2026-11-16"
+attribution_count: 21
+attribution_last: "2026-11-17"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0

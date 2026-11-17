@@ -3,8 +3,8 @@ page: "topics/market-signals-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/market-signals"
@@ -15,9 +15,9 @@ inbound_links: 8
 attribution_count: 23
 attribution_last: "2026-11-16"
 top_source: "google-news"
-pending_count: 25
-pending_overdue: 1
-pending_next_review: "2026-11-17"
+pending_count: 27
+pending_overdue: 3
+pending_next_review: "2026-11-20"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"

@@ -3,19 +3,19 @@ page: "topics/ai-agent-safety-prompt-injection"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-13"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 10
-attribution_count: 7
-attribution_last: "2026-11-13"
+attribution_count: 10
+attribution_last: "2026-11-17"
 top_source: "topic-watch"
-pending_count: 9
+pending_count: 10
 pending_overdue: 1
 pending_next_review: "2026-11-21"
 pending_signalled: 0
