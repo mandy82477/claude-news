@@ -1563,3 +1563,10 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-11-17T17:08:40Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-17T17:08:59Z] TARGET_DATE=2026-11-17，Step 1a cp 失敗（src/gathered_archive/2026-11-17.json 不存在，GitHub Actions 今日抓料尚未歸檔）→ Step 1b 新鮮度防線中止（gathered_items.json date=2026-11-16 items=71，非目標日期）。17 UTC 班（第二班），屬常態延遲，留待下一班（22 UTC）資料到齊後接手，不補跑、不等待。Step 0 昨日缺跑檢查：news/2026-11-16.md 存在，通過，無需本機承接。
 [cloud daily-news-pipeline-cloud STARTED 2026-11-17T22:07:58Z]
+[Tue 2026/11/17 23:18:08.00] === Agent pipeline start (2026-11-17) ===
+[Tue 2026/11/17 23:18:08.00] Aggregator OK (cloud replay path: cp gathered_archive/2026-11-17.json)
+[Tue 2026/11/17 23:18:08.00] Wiki ingest OK (6 reporters + classify-review + devpractice + market daily; 0 分類回退; 2 轉知新開 H-4f90e4／H-3dcb56, 1 結案 H-afa06d; 主編 WebFetch/WebSearch 查證 Linked Billing 機制與 Claude Code model configuration 補寫入 pricing.md／coding-workflow-guide.md)
+[Tue 2026/11/17 23:18:08.00] Reader digest OK (daily/2026-11-17.md, 22 頁當日最新動態, 0 WARN)
+[Tue 2026/11/17 23:18:08.00] 測試全綠 - web build 放行
+[Tue 2026/11/17 23:18:08.00] Single push done (news + wiki + web)
+[Tue 2026/11/17 23:18:08.00] === Pipeline complete (agent) ===
