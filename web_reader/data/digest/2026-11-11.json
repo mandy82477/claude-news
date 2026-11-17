@@ -462,16 +462,6 @@
       "pageType": "entity"
     },
     {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    },
-    {
-      "id": "anthropic-partnerships-compute",
-      "name": "Anthropic 合作與算力：跟誰簽、算力從哪來",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-product-matrix",
       "name": "Anthropic 產品 × 功能對照表",
       "pageType": "topic"

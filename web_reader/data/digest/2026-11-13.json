@@ -437,11 +437,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增事故：Anthropic Status 通報 claude.ai／Claude API／Claude Code 錯誤升高，與 Microsoft 365 全球性故障同時發生（🌐 組）。",
   "sedimentedToday": [
     {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
       "id": "community-large-codebase-workflow",
       "name": "大型 Codebase 規模化開發：社群工作流主線",
       "pageType": "topic"
