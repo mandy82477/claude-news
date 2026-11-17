@@ -32,15 +32,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **開始日期：** 2026-08-08
 **領域：** 💻 開發實務
 **更新頻率：** 🗓️ 週更（隨官方文件與社群策展更新；日期停留數天屬正常節奏）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-06
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
 > **本頁在回答什麼**
 > 用 Claude Code 寫程式時，每個流程階段官方怎麼做、社群補了什麼、哪裡還沒有答案——照階段查，不照工具查。
 > 只讀這頁就拿得到每一段可照做的答案與關鍵數字；細節與原始證據在各段指向的頁。官方做法在前（可查證、會更新），社群做法只在官方留白處補位，並標明證據強度。
 
-> **官方新增：調整模型／effort／thinking 設定指南**（2026-11-06）
-> Help Center release notes 新增「Change the model, effort, and thinking settings」段；本頁「2a 官方的 session 經營建議」同步補上連結與摘要。
+> **官方查證：Claude Code 模型切換三法**（2026-11-17）
+> 官方說明中心確認模型切換三法（`/model`／`--model`／環境變數）＋`/status` 確認目前模型；managed-settings.json 不套用到 cloud session 或 Claude Desktop。本頁「2a 官方的 session 經營建議」同步更新。
 
 ---
 
@@ -275,7 +275,7 @@ Anthropic 官方部落格〈[Maximizing the value of your Claude Code sessions](
 
 **想省 token，先看 thinking 開關**：官方 usage-limits 文件新增建議——模型有 thinking 開關時，不需要加強推理就直接關掉（[原文](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work)，2026-11-05 查）。同份文件同時拿掉了「怎麼搭配 Pro/Max/Ultra 方案用 Claude Code」與「什麼是 Team 方案」兩段舊說明，方案細節改查 [[entities/pricing]]。
 
-**官方另闢「調整模型、effort、thinking」專章**：Help Center release notes 新增「Change the model, effort, and thinking settings」段，說明怎麼切換模型、調整推理強度（effort）與 thinking 開關（細節未載）（[原文](https://support.claude.com/en/articles/12138966-release-notes)，2026-11-06 查）。
+**切換模型有三種方式**：`/model` 互動選單立即切換；`--model` 旗標只影響單次 session；環境變數設永久預設值。切換後用 `/status` 確認目前跑哪個模型。組織設 `managed-settings.json` 時該設定優先於組織層級預設值，但**只套用到本機終端機／IDE session，不套用於 cloud session 或 Claude Desktop 裡的 Claude Code**（[官方說明中心 Claude Code model configuration](https://support.claude.com/en/articles/11940350-claude-code-model-configuration)，2026-11-17 查證）。
 
 **`@` 提及不灌全文**：設 `CLAUDE_CODE_DISABLE_FILE_MENTIONS`（v2.1.299 起），`@` 檔案提及只傳路徑，內容改由 Read／Grep 工具讀取；常 `@` 長檔的流程可省 context，代價是多幾次工具呼叫，見 [[entities/claude-code]]。
 
@@ -706,6 +706,10 @@ agent 開的 PR 說明太長時，Simon Willison 的做法是把完整描述收�
 2026-11-05 補查：
 
 - [How do usage and length limits work?](https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work) — 關 thinking 省 token 的建議，第 2a 段
+
+2026-11-17 補查：
+
+- [Claude Code model configuration](https://support.claude.com/en/articles/11940350-claude-code-model-configuration) — 模型切換三法、`/status`、managed-settings.json 的適用範圍，第 2a 段
 
 社群與一手觀察：
 

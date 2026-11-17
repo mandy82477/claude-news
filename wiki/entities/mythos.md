@@ -30,21 +30,19 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **Mythos 5.2 媒體解讀**（2026-11-11）
-> Wccftech 標題稱 Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X 上（僅標題）；11-10 有四分鐘過載事件已解決；仍限信任機構存取。
+> **AMD 移植細節曝光**（2026-11-17）
+> Tom's Hardware：Anthropic 向 IPO 投資人稱 Mythos 把模型移植上 AMD MI355X 的工作從 6–12 個月縮至 3 天，幾乎全自主寫 kernel；仍限信任機構存取。
 
 ---
 
 ## 現況
 
-**2026-11-11**：Wccftech 標題稱 Claude Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X GPU 上，並據此推論對 NVIDIA CUDA 護城河的衝擊；衝擊是該媒體的標題角度，任務設定與測法原料未載（[Google News/Wccftech](https://news.google.com/rss/articles/CBMi9wFBVV95cUxQLWxCdDFqWG83WGFjblJ5bkc4azA3TzFOQ3FXa294MkRVMlFIV1JwSTB6MjBxb1pVdEk0Q2dMQTBvTmZFNTRSSnFJX2ZyZTRvZVlvSEJRNHQ1cUpaMVlNTDJqLUJHTlgxbUYxTFVyMlJZcDBYWm9ZWW5lLUNCVmdDMnBNdHJfSXpFd1c1T1pwVW5FTHBhdHhyWjl4bEkxZVExczgwNGFZek1UOUFOUnh5aThKeTUzWFNvc3VVTmpNTlU0dkNJLXg5cURjVVdBbmxieUxNUVl6U1EzZ20xUWpQMGlKT1dFajdpZ0l2bmFsQUlaUWtxbWxB0gH8AUFVX3lxTE1pcmlkV3Q5Q1ZyTnJaV1Vpc1BpRjBFb2NpdTIyc1VHb1dLaVF6REZBZWVYa19vS3lwQWJDY0kybWNoNmdVX0FGWVFrZVIxWDZyREpBMkFycTJzUWQ3cTV0SU1oZDVXd05ieXp1bWs0MlFzZFlPS19tRlQ2R1JmQnFqUGpSbVdIUEVGb2JxMmliM2JuSlpRUzlfRHIxUUM2OFItNXdEUGxPSEhaZER4YUJHOTVzSGw0Z1ZFYVJFRXF4QUc0OWdER1RoaWY2bmYzVVF6eW1zdG8yeFJXRkp4MG5uSE5PV1JOdldWTzVJb25qM043YU5IWkVoWjRMZw?oc=5)，2026-11-11）。Help Net Security 11-10 標題稱 5.2 找漏洞更強、跳出沙箱的行為更少，同為僅標題（見「時序」）。
+**2026-11-17**：Tom's Hardware 報導，Anthropic 向 IPO 投資人表示 Claude Mythos Preview 完成讓一款 Anthropic 模型在 AMD MI355X GPU 上達到「有用效能水準」的 prompt processing 移植工作，過程「基本上沒有人工介入」、耗時約 3 天，此前同類工作需 6 到 12 個月，Mythos 移植或撰寫了「幾乎 100%」的 kernel（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat)，2026-11-17；Hacker News 51 分）。此為 11-11 Wccftech 僅標題報導同一事件的具體化版本，補上任務設定與測法細節；對 NVIDIA CUDA 生態衝擊的市場解讀屬商業線，本頁僅記模型能力面。
 
-**2026-11-09**：Anthropic 與 Fable 5.2 同日發布 **Mythos 5.2**；兩者為同一模型的不同防護層級，Mythos 5.2 延續信任機構限定存取（[Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)，2026-11-09）。官方稱兩款模型在 coding、reasoning、vision 均有改善，prerelease 測試中協助工程師完成「原本不可行的軟體遷移」、設計三款可運作的電子裝置原型、解開兩個開放數學問題；完整兩代對照與牌價見 [[entities/fable-5]]「你現在拿到的是什麼」，Mythos 面定價另見 [[entities/pricing]]。
-
-**2026-11-01（HN／Reddit 傳聞 Mythos 級模型外流至 Hugging Face，留言者普遍判定為假消息）**：Hacker News（17 分）與 Reddit r/ClaudeAI 週熱門同步出現「Anthropic 的 Mythos-class 模型外流到 Hugging Face」傳言，原網址因惡意軟體疑慮未附；留言者普遍判定此消息幾乎可以肯定是假的，手法與近期「Fable 5 checkpoint 在暗網論壇出售」傳聞同屬一類，疑在誘騙較不熟悉者下載並執行惡意程式碼（Hacker News，2026-11-01；詳見下方「時序」）。
+**2026-11-11**：Wccftech 標題稱 Claude Mythos 只花 3 天就弄懂如何讓另一個模型跑在 AMD MI355X GPU 上，任務設定與測法原料當時未載，11-17 Tom's Hardware 已補齊（見上方）（[Google News/Wccftech](https://news.google.com/rss/articles/CBMi9wFBVV95cUxQLWxCdDFqWG83WGFjblJ5bkc4azA3TzFOQ3FXa294MkRVMlFIV1JwSTB6MjBxb1pVdEk0Q2dMQTBvTmZFNTRSSnFJX2ZyZTRvZVlvSEJRNHQ1cUpaMVlNTDJqLUJHTlgxbUYxTFVyMlJZcDBYWm9ZWW5lLUNCVmdDMnBNdHJfSXpFd1c1T1pwVW5FTHBhdHhyWjl4bEkxZVExczgwNGFZek1UOUFOUnh5aThKeTUzWFNvc3VVTmpNTlU0dkNJLXg5cURjVVdBbmxieUxNUVl6U1EzZ20xUWpQMGlKT1dFajdpZ0l2bmFsQUlaUWtxbWxB0gH8AUFVX3lxTE1pcmlkV3Q5Q1ZyTnJaV1Vpc1BpRjBFb2NpdTIyc1VHb1dLaVF6REZBZWVYa19vS3lwQWJDY0kybWNoNmdVX0FGWVFrZVIxWDZyREpBMkFycTJzUWQ3cTV0SU1oZDVXd05ieXp1bWs0MlFzZFlPS19tRlQ2R1JmQnFqUGpSbVdIUEVGb2JxMmliM2JuSlpRUzlfRHIxUUM2OFItNXdEUGxPSEhaZER4YUJHOTVzSGw0Z1ZFYVJFRXF4QUc0OWdER1RoaWY2bmYzVVF6eW1zdG8yeFJXRkp4MG5uSE5PV1JOdldWTzVJb25qM043YU5IWkVoWjRMZw?oc=5)，2026-11-11）。Help Net Security 11-10 標題稱 5.2 找漏洞更強、跳出沙箱的行為更少，同為僅標題（見「時序」）。
 
 出口管制已於 2026-06-30 宣布解除、07-01 起全球恢復存取，Mythos 5 可用範圍從機構白名單擴大為全球一般用戶，交換條件為 Anthropic 承諾主動偵測安全風險、配合標準協議、通報惡意活動（天數口徑見 [[topics/anthropic-government-policy]]，完整經過見下方「時序」）。
 
@@ -157,6 +155,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 解禁後（2026-06-27 起）
 
 ### 2026-11
+
+#### 2026-11-17
+**Tom's Hardware：Anthropic 向 IPO 投資人稱 Mythos 把 AMD GPU 移植工作從 6–12 個月縮至約 3 天**：
+- Anthropic 向 IPO 投資人表示，Mythos Preview 把一款模型移植上 AMD MI355X 的 prompt processing 工作從 6–12 個月縮至約 3 天，幾乎零人工介入、全自主寫 kernel（[Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat)，2026-11-17；Hacker News 51 分）
+- 本則是 11-11 Wccftech 僅標題報導同一事件的具體化版本，補上任務設定與測法細節；對 NVIDIA CUDA 生態衝擊的市場解讀屬商業線，本頁僅記模型能力面
 
 #### 2026-11-11
 **Wccftech：Mythos 三天讓另一模型跑上 AMD MI355X（僅標題）**：

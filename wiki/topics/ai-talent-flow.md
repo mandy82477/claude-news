@@ -3,8 +3,8 @@ page: "topics/ai-talent-flow"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-05"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 11
 parent: null
@@ -25,21 +25,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # AI 實驗室人才流動
 
-這頁追蹤 AI 前沿實驗室之間誰往哪走。最新一筆是 Claude Code 產品負責人 Cat Wu 11-04 卸任、11-05 報導轉往 OpenAI；其餘多為 Google DeepMind 人才流向 Anthropic。要判斷各家實驗室的組織穩定度，先看下方「對各公司的影響」表。
+這頁追蹤 AI 前沿實驗室之間誰往哪走。最新一筆是 Google DeepMind 策略長 Jasjeet Sekhon 離職並加入 Anthropic；其餘多為 Google DeepMind 人才流向 Anthropic。要判斷各家實驗室的組織穩定度，先看下方「對各公司的影響」表。
 
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-05
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **最新動態**（2026-11-05）
-> Claude Code 產品負責人 [[entities/cat-wu|Cat Wu]] 11-04 卸任，11-05 報導去向 OpenAI，是本頁首見 Anthropic 產品主管流向 OpenAI。接任者兩家報導都沒提。
-> 另一件事：前 Google Cloud AI 總監 [[entities/addy-osmani|Addy Osmani]] 11-03 加入 Anthropic（11-03 查證），職位是 Member of Technical Staff，**不是 Cat Wu 的接任者**。
+> **最新動態**（2026-11-17）
+> Google DeepMind 策略長 [[entities/jasjeet-sekhon|Jasjeet Sekhon]]（The Information 標題，新職位未載）離職並加入 Anthropic，延續「Google DeepMind 淨流失、Anthropic 主要承接」既有格局。
+> 11-04／11-05 另一件事：Claude Code 產品負責人 [[entities/cat-wu|Cat Wu]] 卸任轉往 OpenAI，接任者兩家報導都沒提；同期 [[entities/addy-osmani|Addy Osmani]] 加入 Anthropic，但**不是 Cat Wu 的接任者**。
 
 ## 摘要
 
-**11 月現況：** Cat Wu 11-04 卸任 Claude Code 產品負責人，11-05 報導她轉往 OpenAI；接任者尚無報導。同期前 Google Cloud AI 總監 Addy Osmani 加入 Anthropic，但他並非接任者。另有一則 10-26 的單一來源傳聞稱 Claude Code 創作者 Boris Cherny 辭職，2026-11-14 查證未獲證實，仍視為現任。
+**11 月現況：** Google DeepMind 策略長 Jasjeet Sekhon 離職並加入 Anthropic，新職位未載（The Information）。本月早些時候 Claude Code 產品負責人 Cat Wu 11-04 卸任並轉往 OpenAI，接任者尚無報導；同期 Addy Osmani 加入 Anthropic 但非接任者，細節見「時序」。
 
 **夏季主線是 Google DeepMind 淨流出：** 06-21 至 06-29 兩週內，至少 4–5 位頂尖研究員轉投 Anthropic。最矚目的是 2024 諾貝爾化學獎得主 John Jumper（06-19，蛋白質結構預測，DeepMind 近 9 年），另有 Jonas Adler（AI 編碼）、Alexander Pritzel（訓練）與 2 位資深研究員；一名未具名研究員轉投 OpenAI。08-05／08-06 Jeff Dean 等四人另創 Discovery Loop，09 月又有警告型離職。
 
@@ -56,8 +56,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 公司 | 角色 | 具體影響 | 評估 |
 |------|------|---------|------|
 | **Meta** | 淨流失方 | 傳一位「明星」AI 研究員離職轉投 Anthropic（09-10，WSJ；只有標題，內文未取得，可信度低，姓名與職稱未載）| ℹ️ 具體人名、職稱、加入 Anthropic 後的職位均未見報導，戰力影響待觀察 |
-| **Google DeepMind** | 淨流失方＋高層動盪 | 出走批次＋創業潮＋離職警告 AI 對齊風險下降（6/21–09/13）；市值蒸發約 $2,700 億美元（詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
-| **Anthropic** | 主要承接方 | 科學計算（Jumper）／AI 編碼（Adler）／訓練（Pritzel）／安全經濟；08-21/23 新增晶片人才 Amir Salek（前 Google TPU 計畫創辦人，入 compute 團隊）| 🟢 招募已擴及硬體自主設計；到任日未公開（推論：戰力影響待觀察）|
+| **Google DeepMind** | 淨流失方＋高層動盪 | 出走批次＋創業潮＋離職警告 AI 對齊風險下降（6/21–09/13）；11-16 策略長 [[entities/jasjeet-sekhon\|Jasjeet Sekhon]] 離職轉投 Anthropic；市值蒸發約 $2,700 億美元（詳見下方細節） | 🔴 技術核心＋高層治理雙重動盪，策略層再失一人，削弱 Google 組織穩定性訊號（推論，已查證 2026-08-13）|
+| **Anthropic** | 主要承接方 | 科學計算（Jumper）／AI 編碼（Adler）／訓練（Pritzel）／安全經濟／策略（11-16 Sekhon）；08-21/23 新增晶片人才 Amir Salek（前 Google TPU 計畫創辦人，入 compute 團隊）| 🟢 招募已擴及硬體自主設計與策略層；到任日未公開（推論：戰力影響待觀察）|
 | **OpenAI** | 次要承接方 | 獲得一名 Google 頂尖研究員（6/23 SEJ 報導，姓名未具名）| 🟡 同步受惠於 Google 人才外流，規模小於 Anthropic |
 | **Meshy**（3D 生成新創，非 Anthropic 生態） | 人才承接方 | 電腦繪圖資深學者童欣（Dr. Xin Tong）加入出任首席科學家（09-09，只有標題，內文未取得，可信度低）| ℹ️ 3D 生成賽道人才強化；與 Google／Anthropic 人才戰無直接關聯，具體職責與履歷未見報導 |
 | **Vesoma**（慕尼黑人形機器人新創，非 Anthropic 生態） | 人才承接方 | 60 人團隊由前 DeepMind AI 主管領軍，走出隱身模式（09-24，Dealroom；只有標題，內文未取得，可信度低）| ℹ️ 人形機器人賽道人才強化；主管姓名、具體職稱與離職時間均未見報導 |
@@ -89,6 +89,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-16
+- **Google DeepMind 策略長 Jasjeet Sekhon 離職並加入 Anthropic**：The Information 報導，新職位名稱與到職時間未見報導，僅標題可用；延續「Google DeepMind 淨流出、Anthropic 主要承接」既有格局。見 [[entities/jasjeet-sekhon]]。
 
 #### 2026-11-14（查證）
 - **Claude Code 創作者 Boris Cherny 傳辭職，查證未獲證實**：10-26 單一來源（Google News 轉載 eu.36kr.com）標題稱其正式辭職；2026-11-14 查證 Anthropic 官方與本人公開發文均未見離職說法，仍視為現任。見 [[entities/boris-cherny]]。
@@ -194,6 +197,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - [[entities/amir-salek]] — Google 自研晶片計畫創辦人；🔎 **查無官方**（標 2026-08-21｜查 [[entities/amir-salek]]｜複 2026-12-14）：2026-11-14 再查 anthropic.com 新聞頁與站內搜尋，仍無官方公告；09-12 日報未見提及，原「訊」為誤命中已撤銷。
   - Bloomberg 08-21 獨家（[fourweekmba.com](https://fourweekmba.com/ai-anthropic-amir-salek-tpu-chip-compute-strategy/) 轉述）：加入 compute 團隊、向 Bradbury 匯報；到任日期仍未見揭露。
+- [[entities/jasjeet-sekhon]] — 前 Google DeepMind 策略長，11-16 離職轉投 Anthropic，新職位未載（The Information，僅標題可用）
 - [[entities/john-jumper]] — 諾貝爾獎得主，DeepMind → Anthropic（6/21 Reuters 確認）
 - [[entities/andrej-karpathy]] — 已查證（2026-08-13）：OpenAI 共同創辦人 Andrej Karpathy 已於 **2026-05-19** 正式加入 Anthropic，本人於 X 公開宣布，主導以 Claude 加速 pre-training 研究的新團隊，多家媒體同步確認（[TechCrunch](https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/)；[CNBC](https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html)；[Axios](https://www.axios.com/2026/05/19/anthropic-openai-karpathy-andrej-claude)）
 - [[entities/teresa-carlson]] — 前 Microsoft/AWS 高管，2026-07-07 加入 Anthropic 主導公部門業務；🔎 **查無官方**（標 2026-08-10｜查 [[entities/teresa-carlson]]｜複 2026-12-14）｜**是否屬與研究員流動潮同期的整體人才佈局**

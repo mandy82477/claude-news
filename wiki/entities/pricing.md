@@ -4,8 +4,8 @@ kind: "entity"
 type: "policy"
 status: "active（持續調整中）"
 domain: "💼 商業"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-14"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "active"
 days_since_news: 2
 parent: null
@@ -32,11 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-14）
+> **最新計費政策異動**（2026-11-17）
+> - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
 > - **claude.ai 購買與方案變更一度出錯、已解決**：官方狀態頁 11-14 通報，延遲款項與方案變更已補上，詳見 [[entities/pricing-incidents]]
 > - **Claude Meetings（Google Meet）Team／Enterprise beta 現經官方確認**：[Help Center release notes](https://support.claude.com/en/articles/12138966-release-notes) 11-13 新增，方案範圍與 Axios 11-10 媒體稱一致，不再只是媒體轉述
 > - **自架版 Claude Managed Agents 沒有公開價格，官方 API 定價頁新增一句請洽客戶團隊**：想估算自架成本，只能走洽談窗口
@@ -97,6 +98,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **更正（2026-10-17 官方定價頁查證）：Free 現已含 Design／Slides／Docs**：官方定價頁 Free 方案條列已新增「Claude Design, Slides, Docs」，與上方 2026-10-03 查證的「Free 不含」結論不再成立；Pro 條列仍列出相同三項，故此變動不影響付費方案（來源：[claude.com/pricing](https://claude.com/pricing)）
 - 已查證（2026-10-17，[claude.com/pricing](https://claude.com/pricing)）｜**Free 不含 Opus、Pro 可用**：官方方案表 Opus 列 Free 為 No，Pro、Max 5x／20x、Team、Enterprise 皆為 Yes，與 shattered.io 的說法一致。
   - 方案表只寫 Opus、未逐版本標示；[Opus 5.5 發布稿](https://www.anthropic.com/claude-opus-5-5)（09-22）也未逐方案列出可用範圍。
+  - **此列指 claude.ai 聊天介面，非 Claude Code**：Claude Code 裡 Pro 方案用不到 Opus 系列模型，見 [[topics/coding-workflow-guide#官方的 session 經營建議]]（2026-11-17 查證）
 - **同日 Cowork 與 chat 合併為單一 Claude，Docs／Slides（beta）上線**：Design 整合進對話，先在 Pro、Max 陸續開放；官方部落格公告，HN 226 分，Axios、Reuters、VentureBeat、Fortune、TechCrunch、Computerworld 等多家媒體同步報導（2026-09-17）
 - **Plans & Pricing 頁新增「Claude Dashboards（beta）」（2026-10-09）**：無獨立費率，但官方說明中心載明算進方案用量上限（2026-10-11 查證），見 [[entities/claude-design]]
 
@@ -181,6 +183,10 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 %% 維運備忘：一條一規則，附來源日期；失效規則移除 %%
 
+- **✅ 2026-11-17 Linked Billing 公開測試上線**：第三方 app 的客戶可用自己的 Claude organization 付該 app 的 API 用量；SDK 同步支援，Railway、Harness（Cosmos）同日宣布採用（來源：[release notes](https://platform.claude.com/docs/en/release-notes/api)、[billing connections](https://platform.claude.com/docs/en/manage-claude/oauth-apps/organization-billing-connections)，查證 2026-11-17）：
+  - **流程**：客戶連結 organization 到你的 app → 你每次請求設 `billing_policy.bill_to`：`"user_profile"` 由客戶付、`"self"`／留空由你付 → 客戶在 Console 自設月度上限或解除連結
+  - **限制**：客戶須直接付費 Anthropic（非雲端市集／僅訂閱制），否則 `403`；扣不到客戶款時 API 拒絕該請求、不轉嫁你；額度不足回 `402`
+  - **費用**：官方未載額外平台費；你的用量報表不計入客戶付的請求
 - **✅ 2026-11-11 官方 usage credits 說明頁｜購買一律不可退款**：新增「Refunds」節，載明 usage credits 購買不可退款，含取消訂閱或刪除帳戶；剩餘額度在刪除帳戶時作廢。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，diff 偵測，2026-11-11）
 - **✅ 2026-11-08 Help Center release notes｜Enterprise 新增收費代碼標記＋成本代碼追蹤（beta）**：專案可標既有收費代碼（charge code）／client-matter；另可依成本代碼（cost code）追蹤花費。操作細節未見完整說明（來源：Help Center release notes，連結待補，查證 2026-11-08）
 - **✅ 2026-11-07 官方 usage credits 說明頁改版｜刪除帳戶即沒收剩餘額度**：新增帳戶刪除不退 usage credits 規則；auto-reload 改寫為「餘額低於門檻自動加購」。細節見 [[entities/pricing-history]]（來源：[Manage usage credits](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans)，2026-11-07）

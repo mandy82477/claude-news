@@ -107,6 +107,7 @@
 | [[entities/krishna-rao]] | person | 👤 人物 | active | Anthropic 財務長（CFO）；2026-08-14 主導早期 IPO 投資人會議（CNBC），2026-10-27 隨 S-1 提交迎來上任以來最關鍵考驗（Fortune） |
 | [[entities/claude-duet]] | product | 🛠️ 工具/功能 | active | Opus 5.5 驅動的主動式 agent，獨立 app（iOS／Android，電腦走 claude.ai）；2026-10-21 研究預覽，美國 Pro／Max 候補名單制 |
 | [[entities/addy-osmani]] | person | 👤 人物 | active | 前 Google Cloud AI 總監；2026-11-03 查證確認已轉職加入 Anthropic，任 Member of Technical Staff 負責 Claude Code |
+| [[entities/jasjeet-sekhon]] | person | 👤 人物 | active（單一來源） | Google DeepMind 前策略長；2026-11-16 The Information 報導離職加入 Anthropic，新職位名稱與到職時間未見報導 |
 | [[entities/claude-personal-finance]] | feature | 🛠️ 工具/功能 | beta | Claude Personal Finance：2026-11-05 推出，連結銀行/信用卡/貸款/投資帳戶供 Claude 分析消費狀況；方案範圍、資料邊界與安全機制官方尚未載明 |
 ---
 

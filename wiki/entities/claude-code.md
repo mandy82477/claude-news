@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "active"
 matrix_role: "產品"
 days_since_news: 0
@@ -32,13 +32,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **最新動態**（2026-11-16）
-> - **服務穩定性**：Anthropic Status 新增 Claude Sonnet 5.5／Fable 5.2 錯誤率升高（已修復）與 Claude Meetings（beta）Auto-join 持續暫停兩起事故，見 [[entities/claude-code-known-issues]]。
-> - **已知問題新增**：既有訂閱帳號登入被導回 onboarding 迴圈（#36797）；付款、git proxy、Cowork 排程權限等多條互動數更新，見 [[entities/claude-code-known-issues]]。
-> - **SDK**：anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0 新增 Update Bundle（Claude Tag Bundle 指示內容）與 RBAC Role 欄位，見 [[entities/claude-code-releases]]。
+> **最新動態**（2026-11-17）
+> - **服務穩定性**：Anthropic Status 新增「部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App」事故，見 [[entities/claude-code-known-issues]]。
+> - **已知問題新增**：瀏覽器 OAuth 登入流程回 500 錯誤並 15 秒逾時（#44271）；MCP OAuth Entra ID 驗證失敗（#52871）互動數更新，見 [[entities/claude-code-known-issues]]。
+> - **版本**：v2.1.326 新增啟用 agent teams 時可同時開 Code Mode 的支援；SDK 新增計費相關 beta 參數與錯誤碼，見 [[entities/claude-code-releases]]。
 
 ---
 
@@ -48,8 +48,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-16 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-16 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-17 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-17 |
 | hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-15 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
@@ -78,7 +78,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.325**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
+- 最新 **v2.1.326**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
 - **該不該升**：**Monitor tool 已進 stable**（2.1.310），沒用 Opus 4.8 fast mode 的人留在 stable 就夠；只有要寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**
@@ -104,6 +104,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期報導（尚待官方佐證）：**
 
+- ❓ **待查證**（標 2026-11-17｜查 Claude Sheets）｜**財經媒體稱 Anthropic 推出「Claude Sheets」**（Google News／The Motley Fool，2026-11-17，殼層摘要、無可讀內文）：標題稱推出新產品並藉此質疑 Microsoft 股價，未附產品細節；非官方來源，官方文件與 changelog 未見對應名稱。
 - ❓ **待查證**（標 2026-11-07｜查 自動設定、API 金鑰）｜**Claude Code Cloud 據報新增自動設定 repo 與 API 金鑰**（Google News／FourWeekMBA＋Pasquale Pillitteri，2026-11-07，僅標題）：兩篇低流量轉述來源稱雲端開新任務可自動配置，省去手動初始化，官方文件與 changelog 未見對應條目。
 - ❓ **待查證**（標 2026-11-06｜查 mean to Claude、Don't Be Mean）｜**Forbes：Anthropic 更新使用規範，其中一條要求使用者別對 Claude 說話太差**（Google News／Forbes，2026-11-06 報導，僅標題可用）：規範全文、生效時間與完整清單均未見官方確認。
 - **漏洞修補負向對照（訊號待驗）**：SiliconANGLE 報導 Cogent Security 的 VR-1.1 模型在漏洞修補測試分數超越 Claude Code 與 Codex（2026-11-03）；僅標題層級，未附測試項目、樣本量或分數細節，證據不足

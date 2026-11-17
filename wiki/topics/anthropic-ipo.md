@@ -3,8 +3,8 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/anthropic-business"
@@ -31,12 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **最新動態**（2026-11-16）
-> - **路演超額認購傳已達 7 倍**：11-13 時約 6 倍（Yahoo Finance）
-> - **Altimeter 創辦人 Brad Gerstner 宣布投入 $50 億美元認購**：持股比例、認購方式未載（CNBC）
+> **最新動態**（2026-11-17）
+> - **Bloomberg：公司已指引承銷商以每股 $70～78 區間頂端或更高定價，估值上看 $1.4 兆**
+> - **Altimeter：認購熱度升至 10～20 倍**（11-16 時約 7 倍），仍押注 $50 億美元認購
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -50,7 +50,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
 | 什麼時候上市 | **11-10 路演啟動**：官方公告擬發 825,000,000 股 A 類；價格區間 $70～78；官方 IPO 頁：11-18 定價、11-19 開始交易（需核准） | Anthropic 官方公告（11-10）；[官方 IPO 頁](https://ipo.anthropic.com/us/)（11-14 查） | 官方一手／一級媒體 |
-| 值多少 | 最後一次定價 $9,650 億；11-10 各報導分歧（最高 $1.4 兆／近 $1.3 兆／約 $1 兆，見下）；11-09 Morningstar 另估 $1.7 兆（細節見下方） | Series H 公告；Bloomberg、NYT、ABC7、Fox Business（11-10）；Morningstar（11-09） | 官方一手／一級媒體 |
+| 值多少 | 最後一次定價 $9,650 億；11-17 Bloomberg 稱公司已指引區間頂端或更高定價，估值上看 $1.4 兆；11-09 Morningstar 另估 $1.7 兆（細節見下方） | Series H 公告；Bloomberg（11-17）；Morningstar（11-09） | 官方一手／一級媒體引公司 |
 | 誰承銷 | 官方路演公告只點名 Goldman Sachs、Morgan Stanley 為索取招股書窗口；JPMorgan 未列（2026-11-14 查證） | [Anthropic 路演公告](https://www.anthropic.com/news/roadshow-launch)（11-10）；FT、NYT（09-04）媒體稱由兩家主辦 | 官方一手＋媒體 |
 | 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
 
@@ -199,6 +199,9 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-17 Bloomberg：公司指引承銷商以區間頂端或更高定價，估值上看 $1.4 兆**：每股 $70～78 區間頂端或更高，預計週三（11-18）公布定價。
+  - **同日 Yahoo Finance：Altimeter 稱認購熱度升至 10～20 倍**（11-16 約 7 倍），仍押注 $50 億美元認購。
+  - **同日 CTech（僅標題可用）**：稱 IPO 可能讓員工平均身價達約 $4,100 萬，細節未載。
 - **2026-11-16 Yahoo Finance／CNBC：路演認購升至 7 倍，Gerstner 投入 $50 億**：Yahoo Finance 稱超額認購已到 7 倍（11-13 約 6 倍）；CNBC 稱 Altimeter 創辦人 Brad Gerstner 宣布投入 $50 億美元認購，持股比例未載，僅標題可用。
 - **2026-11-13 Yahoo Finance／Bloomberg：路演認購約六倍超額**：兩家同日報導 IPO 路演認購約達六倍超額；11-10 官方公告每股 $70～78 價格區間與最快 11-19 開始交易時程均未變，具體認購細節未見報導，僅標題可用。
 - **2026-11-12 官方 IPO 頁／Yahoo Finance：Q3 財務公開、掛牌日傳 11-19**：

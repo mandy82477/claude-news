@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-03
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **新增多帳號代理工具 teamclaude，集中帳號池並自動輪替**（2026-11-16）
-> - **teamclaude**：Claude Max、ChatGPT／Codex、API 金鑰與第三方後端帳號集中成一個帳號池，額度用完自動輪替到下一個。
+> **模型使用策略再添兩款：便宜模型配測試把關、跨廠商 CLI 橋接**（2026-11-17）
+> - **cheap-ag**：便宜模型寫程式、測試結果決定上不上，宣稱讓訂閱用量延長 50 倍。
+> - **antigravity-for-claude-code**：把 Google Antigravity CLI（Gemini）接成 Claude Code 的協作子 agent，跨模型路由任務。
 
 ---
 
@@ -108,6 +109,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### muaaz9329/cheap-ag：便宜模型寫程式、測試結果決定能不能上，MCP server 宣稱讓訂閱用量延長 50 倍（2026-11-17）
+
+- **主線：** —
+- **核心模式：** MCP server，讓便宜模型負責寫每一行程式碼，再用測試結果決定哪些變更真正送出（ship），作者宣稱可讓 Opus／Astra 等方案的 $20 訂閱不再頻繁撞到用量上限，號稱提升 50 倍可用量；供 Claude Code 與 Codex 使用。
+- **與既有模式的關係：** 補上「模型使用策略」既有代表技巧（自製 harness 搭配 DeepSeek／GLM Flash 等便宜模型追平設計品質，[[topics/community-cost#2026-10]]）一個「測試結果當上線關卡」取向——既有做法只宣稱便宜模型能追平設計品質，本則額外用測試結果把關，不是單靠模型本身判斷對錯；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（335★），無 forks／issues／近期 commit 佐證可查，未另行查證；50 倍用量與品質把關的具體量測方法未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/muaaz9329/cheap-ag)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，宣稱倍數未經第三方驗證）
+
+#### yuting0624/antigravity-for-claude-code：把 Google Antigravity CLI（Gemini）接成 Claude Code 的協作子 agent，依任務跨模型路由（2026-11-17）
+
+- **主線：** —
+- **核心模式：** Claude Code plugin，讓使用者把 Google 的 Antigravity CLI（底層為 Gemini）當成協作子 agent 呼叫，在軟體開發生命週期各階段依任務智慧選用模型；專案聲明與 Google／Anthropic 無關，為社群專案。
+- **與既有模式的關係：** 補上「模型使用策略」既有代表技巧（多模型路由、jev-router 等，[[topics/community-cost#2026-10]]）一個「跨廠商 CLI 橋接」取向——既有路由多在 Claude 家內部模型或換供應商端點，本則直接把另一家廠商的官方 CLI 接成子 agent 參與編排；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證；「智慧選用模型」的具體路由規則未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/yuting0624/antigravity-for-claude-code)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### KarpelesLab/teamclaude：多帳號代理集中 Claude Max、Codex、API key 帳號池，額度用完自動輪替（2026-11-16）
 

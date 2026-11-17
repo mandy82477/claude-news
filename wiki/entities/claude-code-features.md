@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-15"
-last_news_update: "2026-11-15"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "active"
 days_since_news: 1
 parent: "entities/claude-code"
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-15）
-> Help Center release notes 的「model/effort/thinking」段落第三次改版：新增「Claude Code model configuration」與模型切換說明兩段，移除舊版兩段（見「核心功能」待查證）。
+> **最新動態**（2026-11-17）
+> 桌面版文件新增側邊欄將 Connectors 與 Plugins 整合進同一個 Plugins 目錄入口（選 Plugins → Browse plugins，或缺入口時選 Manage plugins）。
 
 ---
 
@@ -112,6 +112,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 本頁沒有桌面版文件對應條目；機制見「Subagent 型別差異對照」軸線 4。
 
 **其他**
+- 11-17：側邊欄整合 Connectors 與 Plugins 進單一 Plugins 目錄入口。
 - 11-05：文件增字（216,003→217,701），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-04：文件增字（211,650→216,003），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-03：文件增字（209,756→211,650），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
@@ -124,6 +125,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-17）：桌面版文件字數由 226,194 增至 226,602，新增 12 段、移除 6 段（移除段落未載）。
+  - **新增內容**：側邊欄的 Plugins 入口現同時列出 connectors 與 plugins，選 **Plugins** 見 **Browse plugins**（或 **Manage plugins**），選 **Connectors** 見 **Browse connectors**（原文另列 7 段未附）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-14）：桌面版文件字數由 226,189 增至 226,194，新增 3 段、移除 4 段（移除段落未載）。
   - **新增內容**：使用者自建第三方推論設定時的相關提醒；部署前建議檢查三種情境（內文未列出具體情境）；補完 Terminal、Browser、iOS Simulator 或側邊聊天視窗保留工作進度的條件（11-10 原文截斷處）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-12）：桌面版文件字數由 223,476 增至 226,189，新增 16 段、移除 5 段（移除的五段未載）。

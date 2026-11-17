@@ -28,11 +28,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **Claude Meetings beta 公告登上 HN 首頁，拿下 104 分討論**（2026-11-14）
-> Claude Meetings（11-10 以 beta 形式發布，Team／Enterprise 方案）讓 Claude 以可見參與者身分加入視訊會議、邊聽邊動手做事；官方介紹頁今天在 Hacker News 拿到 104 分討論。
+> **Show HN: Tokendoctor 分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例**（2026-11-17）
+> 開發者推出 Tokendoctor 分析使用者的 Claude Code token 用量浪費在哪；HN 留言反駁：一味砍 token 可能犧牲輸出品質，自己改用加大 context 換到更少需要重做的結果。
 
 ---
 
@@ -154,6 +154,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 | 討論主題 | 首見 · 最後動態 | 當時熱度 | 模式 | 核心論點 | 衍生 |
 |---------|------|------|------|---------|------|
+| Show HN: Tokendoctor——分析 Claude Code token 浪費，留言為「省 token 未必更好」提反例 | 2026-11-17 · 2026-11-17 | 🔥 | ☄️閃現 | 開發者推出工具分析 token 浪費；留言反駁稱砍 token 可能犧牲品質，加大 context 反而減少重做（2026-11-17） | — |
 | Claude Meetings beta 公告登上 Hacker News 首頁 | 2026-11-14 · 2026-11-14 | 🔥🔥🔥 | ☄️閃現 | Claude Meetings（11-10 beta，Team／Enterprise）讓 Claude 以可見參與者身分加入視訊會議並同步做事；HN 104 分（單源，待社群接力） | — |
 | Show HN: STE80 Humanizer——以簡化技術英文規則去除文字 AI 腔的工具 | 2026-11-10 · 2026-11-10 | 🔥🔥🔥 | ☄️閃現 | 有人指它是去 AI 化而非擬人化；另有留言稱 STE 風格寫進 Claude 全域指示後，Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述）；HN 102 分 | — |
 | r/ClaudeCode 週熱門：團隊一年前起 100% AI 強制令，如今沒人看得懂自己的程式碼 | 2026-11-07 · 2026-11-07 | 🔥 | ☄️閃現 | 團隊一年前要求全面改用 agent 寫程式、人工撰寫需附理由，前六個月出貨變快；呼應「現在吵到哪」第 1 列，該列由僵住轉回還在吵；Reddit r/ClaudeCode 週熱門（0 留言，無獨立佐證） | — |
@@ -212,6 +213,7 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 
 **最近在討論什麼細節**
 
+- **Show HN: Tokendoctor——分析 Claude Code token 浪費的工具**：開發者推出工具分析使用者 Claude Code 的 token 用量中有多少被浪費；留言反駁稱一味砍 token 可能犧牲輸出品質，自己改用加大 context 換到更少需要重做的結果；HN score 31；[原文](https://github.com/localixai/tokendoctor)（HN）
 - **Claude Meetings beta 公告登上 Hacker News 首頁**：11-10 beta 發布（Team／Enterprise），Claude 可見參與者身分加入視訊會議、邊聽邊動手做事；未附留言內容；HN score 104（單源，待社群接力）；[原文](https://claude.com/resources/articles/claude-meetings)（HN）
 - **Show HN: STE80 Humanizer——以 ASD-STE100 簡化技術英文規則去除文字 AI 腔**：HN score 102（2 個來源）；留言區認為它是去 AI 化、不是擬人化；有人把 STE 風格寫進 Claude 全域指示，稱 Opus 與 Fable 似乎不遵守、Sonnet 很遵守（單則自述，未附測試方法）；[原文](https://github.com/Dodaios/ste80-humanizer)（HN）
 - **Show HN: HackerBooks——找 Claude（Opus 5.5）寫出約 1.65 萬本 HN 推薦書的網站**：作者看到 Karpathy 的 HackerTube 後找 Claude 全程編寫，整理出至少兩位留言者提過的約 1.65 萬本書；HN score 105；[原文](https://hackerbooks.org)（HN）
@@ -265,6 +267,14 @@ MCP 的實際成本遠超多數使用者預期，已有多個量化案例：
 逐則原始筆記，最新的月份在最上面。回響符號：📝 是支持或反駁的後續說法，🧪 是有人真的去測了。❓ 表示這一則有事實還沒查實，🔎 表示查過官方但官方沒寫；`⟨Q-01⟩` 這種編號指向該月最下方的「懸置細節」。
 
 ### 2026-11
+
+#### Show HN: Tokendoctor——分析 Claude Code token 浪費的工具，留言為「省 token 未必更好」提反例（2026-11-17）
+
+- **來源：** 「Tokendoctor – See what your Claude Code use overpays」（Hacker News，31 分）；[GitHub](https://github.com/localixai/tokendoctor)
+- **核心論點：** 開發者推出 Tokendoctor，分析使用者的 Claude Code token 用量中有多少被浪費掉。
+- **關鍵回響：**
+  - 📝 反駁：留言認為一味砍 token 用量可能犧牲輸出品質，自己改用加大 context 的做法，換到更少需要重做的結果。
+- **收斂結論：**（無）正反各一方，尚無跨平台延燒或第二方實測佐證（單篇 HN 討論）。
 
 #### Claude Meetings beta 公告登上 Hacker News 首頁，拿下 104 分討論（2026-11-14）
 

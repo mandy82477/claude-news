@@ -29,15 +29,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 🌐 社群
 **開始日期：** 2026-04-25
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **本日社群四頁各補一則新動態，母頁未歸類再添一則**（2026-11-16）
-> - **創意工具 Agent 整合**：Blender 多模型 MCP 外掛、Claude Code 程式化動畫工具兩則，見 [[topics/community-integrations#2026-11]]。
-> - **帳號橋接**：多帳號代理 teamclaude 集中 Claude Max／Codex／API key 帳號池，見 [[topics/community-cost#2026-11]]。
-> - **行動裝置遠端控制**：iphone-use 讓 agent 操作真實 iPhone，見 [[topics/community-interfaces#2026-11]]。
-> - **安全架構**：Agent-Cockpit 證據鏈白板讓研究結論可追溯，見 [[topics/community-guardrails#2026-11]]。
-> - **未歸類**：Simon Willison 用 Claude Fable 5.2 組合既有外掛、推進 Datasette 1.0，見本頁「技術彙整」未歸類。
+> **官方揭露驗證方法論撐住 Agent 規模化；創意工具 Agent 整合再添三款專精 skill／plugin**（2026-11-17）
+> - **Agent 規模化**：Anthropic 官方部落格揭露 Claude Code 團隊靠端對端／property／差異測試驗證迴圈才能規模化平行委派，見 [[topics/community-multi-agent#2026-11]]。
+> - **創意工具 Agent 整合**：Blender 94 技能生產管線（blender-skills）、Opus 5.5 影片 skill 庫（opus-video-skills）、對話式剪輯 plugin（ChatCut agent-plugin），見 [[topics/community-integrations#2026-11]]。
+> - **MCP 長 Session 穩健化**：dev.to 整理三種隱性失效模式，重新出現代表技巧，見 [[topics/community-integrations#2026-11]]。
+> - **模型使用策略**：測試把關的便宜模型 MCP（cheap-ag）、跨廠商 CLI 子 agent 橋接（antigravity-for-claude-code），見 [[topics/community-cost#2026-11]]。
+> - **行動裝置遠端控制**：fardesk 經自架 Tailscale 網路把多台電腦的 session 集中到手機，見 [[topics/community-interfaces#2026-11]]。
 
 ---
 
@@ -55,13 +55,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
-| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-14 |
+| [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-17 |
 | [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理 | 2026-11-07 |
-| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-16 |
+| [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-17 |
 | [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-15 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-16 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-16 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-16 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-17 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-17 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 
@@ -82,9 +82,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | ****多代理 PR Review**** | 4-agent Code Review、對抗性審查、Read-Only Reviewer、interns-review-plugin、PR 折疊呈現等（[[topics/community-guardrails#2026-11]]） | ⚡ 活躍 | 2026-11-09 | 架構師代理協調 ＋ 跨廠商模型交叉審查 |
 | ****記憶與知識管理**** | claude-mem、projectmem、memory-forge-rs、itechmeat/open-second-brain 等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-07 | 跨 session、跨工具、跨機器的持久記憶協定 |
 | ****Context 管理**** | Just-in-Time @-file、Repo-as-Memory、對話分支與合併、nightshift、context antipattern 診斷清單等（[[topics/community-memory#2026-11]]） | ⚡ 活躍 | 2026-11-02 | 即時取回優於預先載入；避免 context 過早飽和 |
-| ****模型使用策略**** | 分層模型、多模型路由、Workweave Router、Fable 5 編排、magpie、jev-router、Atticus、自製 harness 換便宜模型（[[topics/community-cost#2026-10]]） | ⚡ 活躍 | 2026-10-30 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
-| ****創意工具 Agent 整合**** | open-carrusel、ghost-editor、Palmier Pro、reelmimic 等（[[topics/community-integrations#2026-11]]） | ⏳ 新興 | 2026-11-14 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
-| ****行動裝置遠端控制**** | ccgram、OpenMinis/iCTRL、liguobao/ds-harness-remote 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-13 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
+| ****模型使用策略**** | 分層模型、多模型路由、cheap-ag、antigravity-for-claude-code、jev-router、Atticus 等（[[topics/community-cost#2026-11]]） | ⚡ 活躍 | 2026-11-17 | 依任務複雜度路由；社群轉載數字 46% 成本／96% 效能（非官方基準，見 [[entities/fable-5]]） |
+| ****創意工具 Agent 整合**** | blender-skills、opus-video-skills、ChatCut agent-plugin 等（[[topics/community-integrations#2026-11]]） | ⏳ 新興 | 2026-11-17 | 把 agent 整合從程式碼場域擴到創作工具鏈 |
+| ****行動裝置遠端控制**** | fardesk、ccgram、OpenMinis/iCTRL 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-17 | 手機當 agent 控制介面，各自選不同傳輸層；10 月起也出現反向（agent 操作手機）取向 |
 | ****Agent 活動可視化**** | claude-office、agent-office、MioIsland、ccdeck、HachimoDock、capri-desktop 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-12 | 把 Claude Code 工具呼叫映射成遊戲化空間視覺化，取代純文字終端機輸出（推論） |
 | **確定性 Agent 框架** | AFK-surf/Comma、Agentic Orchestrator 混合架構（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-07 | 自架、常駐、不設 session 邊界的通用 agent 框架，與把執行迴圈交給託管平台的取向相反 |
 | ****規格驅動開發**** | spec-kit、nick-vels/skills、sharptoolbox/ontology-driven-dev（[[topics/community-memory#2026-11]]） | ⏳ 新興 | 2026-11-06 | 先產出可審查的規格／計畫再讓 agent 依此實作（spec→plan→tasks→implement），取代直接下 vibe coding 提示 |
@@ -92,14 +92,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | ****介面元件複用**** | Brainless、statuslin.es、dsh-TUI、coralline、baocode 等（[[topics/community-interfaces#2026-11]]） | ⏳ 新興 | 2026-11-03 | 把 AI coding 工具的介面美學封裝成可一鍵安裝的前端元件 |
 | ****可靠性測試**** | requirement failure／test coupling 判讀框架（[[topics/community-skills#2026-11]]） | ⏳ 新興 | 2026-11-03 | agent 測試失敗時先分清是需求沒做到、還是測試寫得太綁死實作細節 |
 | ****Agent 預算控制**** | rbartoli/agent-usage-guard（[[topics/community-cost#2026-10]]） | ⏳ 新興 | 2026-10-23 | 以 hooks 在用量窗口超過門檻時防新 subagent，提前提示先壓縮再送出 |
-| ****Agent 規模化**** | 20-instance 崩潰分析、Personas vs Tool-scoping、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-10]]） | ⏳ 新興 | 2026-10-21 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層 |
+| ****Agent 規模化**** | Anthropic 官方驗證方法論、20-instance 崩潰分析、agent-channels、Omnara 託管式（[[topics/community-multi-agent#2026-11]]） | ⏳ 新興 | 2026-11-17 | 超過 10 個並行 agent 需獨立 worktree ＋ orchestrator 協調層；官方指出驗證迴圈（測試證據）才是規模化前提 |
 | **架構邊界合約** | HERO-Anti-OverDefense、ANMA YAML contracts、ISO 29148 規格驅動（[[topics/community-guardrails#2026-10]]） | ⏳ 新興 | 2026-10-18 | 把架構邊界寫成 agent 必須遵守的契約，形式從獨立規格文件、YAML 設定到貼入式提示詞 |
 
 > 成熟度：✅ 成熟（社群廣泛實踐）／⚡ 活躍（持續演進中）／⏳ 新興（近期出現，尚在探索）
 
-**四類已超過 60 天或算不出最近的動靜，原始條目仍在：**Agent Loop 終止條件（Loop exit condition 設計模式，最後動態 2026-08-19，已逾 60 天移出，原始條目見 [[topics/community-multi-agent#2026-08]]）、Agent 版本控制（ADR 注入、架構決策文件先於實作，最後動態 2026-07-31，已逾 60 天移出，原始條目見 [[topics/community-guardrails#2026-07]]）、跨環境 Agent 記憶（Core Memory Packet，代表技巧與「記憶與知識管理」重疊，已併入該列）、MCP 長 Session 穩健化（MCP server 失效模式防護，最後動態 2026-08-14，已逾 60 天移出，原始條目見 [[topics/community-integrations#2026-08]]）。
+**三類已超過 60 天或算不出最近的動靜，原始條目仍在：**Agent Loop 終止條件（Loop exit condition 設計模式，最後動態 2026-08-19，已逾 60 天移出，原始條目見 [[topics/community-multi-agent#2026-08]]）、Agent 版本控制（ADR 注入、架構決策文件先於實作，最後動態 2026-07-31，已逾 60 天移出，原始條目見 [[topics/community-guardrails#2026-07]]）、跨環境 Agent 記憶（Core Memory Packet，代表技巧與「記憶與知識管理」重疊，已併入該列）。
 
-**兩類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、安全架構（Grepathy、OneCLI、agent-scan 等，最後動態 2026-10-16，原始條目見 [[topics/community-integrations#2026-10]]）。
+**三類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、安全架構（Grepathy、OneCLI、agent-scan 等，最後動態 2026-10-16，原始條目見 [[topics/community-integrations#2026-10]]）、MCP 長 Session 穩健化（dev.to 三種隱性失效模式排查清單重新出現代表技巧，最後動態 2026-11-17，原始條目見 [[topics/community-integrations#2026-11]]）。
+
+%% MCP 長 Session 穩健化出現新代表技巧，是否補回「模式概覽」表需比對現有 21 列留表優先序，留待 /wiki-lint 判定，2026-11-17 %%
 
 %% 未列入概覽表：表滿載，2026-11-14。Agent 記憶保護與安全架構讓位給重新出現代表技巧的跨 Repo 依賴可視化、架構邊界合約（同為 ⏳，最後動態較新），依 pages.md 第 1 條留表優先序。確定性 Agent 框架補位 1 列。 %%
 

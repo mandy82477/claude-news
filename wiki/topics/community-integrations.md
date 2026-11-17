@@ -31,12 +31,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **創意工具 Agent 整合再添兩款：Blender 多模型 MCP 外掛、Claude Code 程式化動畫工具**（2026-11-16）
-> - **blender-ai-mcp-addon**：多模型（Claude／GPT／Gemini／Ollama）視覺化對話＋場景工具＋multi-agent 外掛，近 3 天星數暴增。
-> - **animate**：Claude Code 專用程式化動畫工具，單檔案輸出短篇 canvas 動畫並配分鏡回饋。
+> **創意工具 Agent 整合再添三款專精 skill／plugin；MCP 長 Session 穩健化補上失效模式排查清單**（2026-11-17）
+> - **blender-skills**：94 個 Blender 專精 skill 串成完整生產管線，近 2 天星數暴增。
+> - **opus-video-skills**：Claude Opus 5.5 專用影片製作 skill 庫，一風格一技能。
+> - **ChatCut agent-plugin**：對話剪輯自己拍的素材，plugin＋MCP server 同時相容八款 agent 客戶端。
+> - **MCP 三種隱性失效模式**：schema 膨脹、8MB 回應砍伺服器、工具順序變動洗快取。
 
 ---
 
@@ -60,6 +62,42 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### arjun988/blender-skills：94 個 Blender 專精 skill 組成完整生產管線，供 Cursor／Claude Code／Kiro／Codex 使用（2026-11-17）
+
+- **主線：** —
+- **核心模式：** 94 個 Blender 專精技能（specialist skills）透過 MCP 串接，涵蓋從 blockout 建模到遊戲引擎匯出的完整生產管線，供 Cursor、Claude Code、Kiro、Codex 使用；近 2 天新增約 494 星（約 247 星/日），GitHub Search 累積 4,084 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有 Blender 代表技巧一個「技能庫而非外掛／copilot」取向——既有做法是單一外掛接多供應商模型，本則拆成 94 個獨立技能模組組成生產管線；主線填 —。
+- **可信度註記：** 星速偵測收錄（近 2 天 +494 星，約 247 星/日），無 forks／issues／近期 commit 佐證可查，未另行查證；原始描述較簡略，94 個技能的具體清單未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/arjun988/blender-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，星速偏高，尚無第三方採用或複現數據）
+
+#### ChatCut-Inc/agent-plugin：對話剪輯自己素材的 AI 影片編輯器，plugin＋MCP server 同時相容八款 agent 客戶端（2026-11-17）
+
+- **主線：** —
+- **核心模式：** ChatCut 推出的影片編輯 plugin 與 MCP server，供 Codex、ChatGPT、Claude Code、Cursor、Grok、Gemini CLI、WorkBuddy、Doubao Work、Qwen Work 使用；可用對話剪自己拍的素材、加字幕、去除冗音與填充詞、產生動態圖像，並匯出可編輯時間軸；GitHub 累積 1,055 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」既有代表技巧（cth9191/animate 等生成式影片工具，[[topics/community-integrations#2026-11]]）一個「剪輯使用者既有真實素材」取向——既有做法多是生成全新影片內容，本則針對使用者自己拍好的素材做對話式剪輯；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub 星數（1,055★），無 forks／issues／近期 commit 佐證可查，未另行查證；匯出時間軸相容哪些剪輯軟體未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/ChatCut-Inc/agent-plugin)
+- **成熟度：** ⏳ 新興（本庫首次收錄，多客戶端相容，尚無第三方採用或複現數據）
+
+#### tuzhechen2005/opus-video-skills：Claude Opus 5.5 專用影片製作 skill 庫，一風格一技能、逐格與分鏡皆由程式產生（2026-11-17）
+
+- **主線：** —
+- **核心模式：** 供 Claude Code 中 Claude Opus 5.5 使用的影片製作 skill 庫，每種風格獨立成一個 skill（如手繪動畫、動態排版影片），逐格畫面與分鏡筆記皆由程式碼產生；GitHub 525 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」一個「單一風格單一 skill」的影片製作庫取向——與 cth9191/animate 同屬程式化動畫，本則改用技能庫拆分風格而非單一工具內建風格選單，與 arjun988/blender-skills（見上）同屬本輪新出現的「專精 skill 庫」做法；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（525★），無 forks／issues／近期 commit 佐證可查，未另行查證；技能總數與具體風格清單未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/tuzhechen2005/opus-video-skills)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### dev.to：MCP 三種隱性失效模式整理——schema token 膨脹、8MB 回應砍掉 stdio 伺服器、工具順序變動悄悄洗掉 prompt cache（2026-11-17）
+
+- **主線：** —
+- **核心模式：** dev.to 文章整理三種 MCP 隱性失效模式：①多伺服器掛載致 schema 塞爆每輪 context；②工具回應超過 8MB 讓 stdio 伺服器被砍、回報 `Connection closed`（對應 `anthropics/claude-code#105703`）；③工具順序變動悄悄洗掉 prompt cache。
+- **與既有模式的關係：** 補上「MCP 長 Session 穩健化」（逾 60 天移出母頁概覽表，見 [[topics/community-integrations#2026-08]]）一份排查清單——既有做法聚焦心跳、重試、快照三種防護，本則補上診斷面；主線填 —。
+- **可信度註記：** dev.to 第一手技術整理，3 讚（依規則以內容判斷不看讚數）；8MB 崩潰對應官方 issue 編號具體可查，schema token 數與 prompt cache 失效機制未附獨立測試數據，未另行查證。
+- **來源：** dev.to / #claudecode；[原文](https://dev.to/framy2/how-an-8mb-mcp-tool-response-crashes-claude-code-and-how-to-debug-prompt-cache-misses-across-3kob)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者整理，三個失效模式其中一個有官方 issue 佐證，其餘未經第三方覆核）
 
 #### hitkeeen/blender-ai-mcp-addon：Blender 用的多模型 AI／MCP 外掛，視覺化對話＋場景工具＋multi-agent 工作流（2026-11-16）
 

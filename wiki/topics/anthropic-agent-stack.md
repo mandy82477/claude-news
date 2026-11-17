@@ -3,8 +3,8 @@ page: "topics/anthropic-agent-stack"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-14"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
 days_since_news: 2
@@ -31,17 +31,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 追蹤頁
 **別名：** agent stack, dynamic workflows, agent teams, cross-session messaging, agent view, self-hosted runner
 **開始日期：** 2026-09-10
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
 > **這頁在回答什麼**
 > 官方把 agent 拆成八塊積木。每一塊這裡答三件事：沒有它之前你卡在哪、官方多給了什麼（附可貼上就跑的最小指令）、它現在還做不到什麼。
 
-> **最近變動**（2026-11-14）
+> **最近變動**（2026-11-17）
+> - **Agent teams 可與 Code Mode 同開**（v2.1.326）：已開啟 teams 的 session 升級後直接以 Code Mode 啟動，Code Mode 為 Claude 改寫 JavaScript 呼叫自己工具的實驗性選項，見 [[feature-radar]]。
 > - **新增積木：Claude Code Projects 改版**——描述目標後自動拆解任務、指派執行、平行協調多工作線，beta，見 [[feature-radar]]。
 > - **Managed Agents 傳出可由客戶自架**：兩家媒體標題稱 Anthropic 讓客戶自架、agent 憑證留在客戶環境；方案、狀態與既有自架沙箱的關係原料均未載，是否屬實仍不明，細節見子頁 [[entities/managed-agents]]。
 > - **排程觸發官方名稱改為 scheduled tasks**（10-23，原 Routines，仍為研究預覽）：本頁積木名稱不變，查證來源見子頁。
-> - **SDK 新增 `execution_identity` 欄位**（10-15）：官方 release note 僅列欄位新增，具體 API 用法未載，詳見同一子頁。
 
 ---
 
@@ -150,6 +150,7 @@ Update the findings doc with whatever consensus emerges.
 ```
 
   怎麼打開：環境變數 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`（v2.1.32 起的研究預覽，官方註明很吃 token）。
+  v2.1.326 起可與 Code Mode 同時開啟：已開 teams 的 session 升級後會直接以 Code Mode 啟動（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.326)，2026-11-16）。
 
 - **還做不到什麼**：實驗性、預設關閉；`/resume` 不還原行程內的 teammate、一個 session 只能有一個 team、不可巢狀、`-p` 之下不會派出 teammate。
 

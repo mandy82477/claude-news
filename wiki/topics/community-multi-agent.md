@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **官方親自下場：Claude Code Projects 重新設計為對話式多線協作入口**（2026-11-14）
-> - **Anthropic 官方**：Projects beta 新版讓使用者描述目標後，Claude 自行界定範圍、分配工作、同時管理多條平行工作線並彙整產出。
+> **官方部落格揭露驗證方法論：測試證據是規模化平行委派的前提**（2026-11-17）
+> Claude Code 團隊公開內部做法：約 90% 程式碼由 Claude 自己寫、自己審，靠端對端／property／差異測試三種驗證迴圈讓 agent 自證工作，才能同時平行跑幾十甚至上百個 Claude；HN 194 分。
 
 ---
 
@@ -60,7 +60,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Multi-agent 架構**：ccteams 將驗證良好的 subagent 組合打包為可跨專案安裝的套件；OtoDock 將 Claude Code 與 Codex 組成協作團隊部署於自有伺服器
 - **Multi-agent 架構（續）**：omnigent 把協調邏輯與底層 harness（Claude Code／Codex／Cursor／Pi）解耦，換 harness 不必重寫協作邏輯；runner 讓四款 CLI agent 在同一任務裡協作並保留各自 TUI
 - **Multi-agent 架構（辯論式）**：roast-room 用多個固定人設互相詰問同一個決策，而非分工拆任務
-- **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；無人監督排程任務已有完整 Mac Mini M4 方案；可觀測性層（live-log-viewer-next）開始補足「多 agent 進度難追蹤」的協調盲點；agent-channels 提供跨 worktree 通訊
+- **Agent 規模化**：工具範圍限制比角色描述更可靠的邊界守護；可觀測性層（live-log-viewer-next）補足協調盲點；agent-channels 提供跨 worktree 通訊；官方部落格指出規模化前提是驗證迴圈讓 agent 自證工作，不是單純加開更多 agent
 - **確定性 Agent 框架**：Comma 主張自架常駐 agent 取代 Muse／Dots／Town 等託管服務，方向與 Omnara（託管式，2026-10-21）相反
 
 ---
@@ -139,6 +139,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### Anthropic 官方部落格：Claude Code 團隊的驗證方法論——端對端、property、差異測試讓 agent 自證工作，撐住大規模平行委派（2026-11-17）
+
+- **主線：** 並行規模
+- **核心模式：** Claude Code 團隊公開內部方法論：團隊內部約 90% 程式碼由 Claude 自己寫、自己審，靠端對端測試、property test、差異測試三種「驗證迴圈」讓 agent 拿證據證明工作做對，而非只回報「完成了」；團隊稱有驗證迴圈才能同時平行跑幾十甚至上百個 Claude，否則一次只能顧一兩個。
+- **與既有模式的關係：** 補上「Agent 規模化」一個官方親自揭露的「驗證迴圈即規模化前提」取向——既有代表技巧（20-instance 崩潰分析、可觀測性層等）多聚焦並行數量與協調機制本身，本則指出能規模化委派的真正前提是 agent 能自證工作正確，而非單純加開更多 agent 數量；並行規模是直接痛點，主線填並行規模。
+- **可信度註記：** Anthropic 官方部落格一手內容；Hacker News 194 分，單一來源。
+- **來源：** Hacker News；[官方部落格](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/)
+- **成熟度：** ⚡ 活躍（官方一手方法論，描述已在團隊內部長期使用的既有做法，非剛發布的實驗性工具）
 
 #### Anthropic 官方：Claude Code Projects 重新設計，從資料夾變成對話式多線協作入口（2026-11-14）
 

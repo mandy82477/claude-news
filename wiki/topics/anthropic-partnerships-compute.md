@@ -3,8 +3,8 @@ page: "topics/anthropic-partnerships-compute"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-11"
-last_news_update: "2026-11-11"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "ongoing"
 days_since_news: 5
 parent: "topics/anthropic-business"
@@ -31,13 +31,11 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **最新動態**（2026-11-11）
-> - **WSJ 標題：台積電核准最高 $10 億美元投資計畫，對象為 Anthropic 與 OpenAI**（僅標題；兩家如何分配未見）
-> - **The Information 標題：Anthropic 揭露與 Microsoft、Google 新增逾 $100 億合約，與 Lambda 的交易可能取消**（僅標題；見算力表 Lambda 列）
-> - **路演影片：Claude 在 AWS Trainium、Google TPU、NVIDIA GPU、AMD GPU 四系列晶片上訓練與服務**（Tom Brown 說法，Simon Willison 整理）
+> **最新動態**（2026-11-17）
+> - **Claude Mythos 把 AMD GPU 移植工作從 6～12 個月壓到約 3 天、幾乎全自主寫出核心運算 kernel**：Anthropic 向 IPO 投資人揭露的數字（Tom's Hardware；Hacker News 51 分），承接 11-11 Wccftech 僅標題可用的同一事件；對外計費與可用性細節未見
 
 ---
 
@@ -78,7 +76,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 | Volta | 六年 $100 億，算力在挪威 Tydal（08-04） | 已簽 | 目前無可見後果 |
 | Riot Platforms | $90 億 20 年雲端運算協議（08-11） | 已簽 | 目前無可見後果 |
 | TeraWulf | $190 億 20 年肯塔基州園區租約（07-06）；Google 信用擔保支應該計畫，違約時 Google 可能取得 TeraWulf 股權，機制細節未見（11-05） | 已簽；新增 Google 信用擔保（含違約股權條款） | 目前無可見後果。下一個觸發點：擔保啟動條件揭露 |
-| AMD | 投資最高 $50 億並簽晶片協議；供應規模、股權比例未見（07-22） | 已簽 | 目前無可見後果（未見 Claude 改在 AMD 晶片上服務） |
+| AMD | 投資最高 $50 億並簽晶片協議；供應規模、股權比例未見（07-22） | 已簽 | 已見後果：Claude Mythos 3 天內幾乎全自主完成 AMD MI355X 核心運算 kernel 移植（11-17，Anthropic 向 IPO 投資人揭露）；對外計費與可用性細節未見 |
 | AWS | S-1 揭露承諾 $1,100 億（多家引 S-1，10-26）；先前報導逾 $1,000 億（09-06） | 已承諾 | 通路有價格後果：Bedrock 無 50% Batch 折扣，見 [[entities/pricing#通路：誰定價、怎麼開票]] |
 | Google | 直接投資最高 $400 億（04-24）；近 $2,000 億融資機制，結構未見（推論，08-04） | 投資已宣布，融資機制結構未見 | 融資無可見後果；Vertex AI 費率由 Google 自訂，見 [[entities/google-investment]] |
 | 股權與信貸 | Series H $650 億（05-28）；上市前信用額度傳逾 $100 億（08-18）；資料中心私募信貸 $13 億（08-19） | Series H 已完成；其餘為報導 | 目前無可見後果。下一個觸發點：定價與股數公告（S-1 已於 10-26 提交） |
@@ -299,6 +297,9 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-17
+- **[算力] Tom's Hardware（經 Hacker News，51 分）：Claude Mythos 把 AMD GPU 移植工作從 6～12 個月壓到約 3 天、幾乎全自主完成核心運算 kernel**：Anthropic 向 IPO 投資人揭露的數字，承接 11-11 Wccftech 僅標題可用的同一事件（Hacker News）
 
 #### 2026-11-11
 - **[資本支出，僅標題可用] WSJ：台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI**：分配方式與條件未見，詳見「其餘合作」清單（Google News/WSJ）

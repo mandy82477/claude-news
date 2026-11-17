@@ -75,7 +75,7 @@
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
-| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具） | 2026-11-12 | 🔥 | ⏳ 觀望 | Research Preview |
+| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥 | ⏳ 觀望 | Research Preview |
 | **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Claude Whiteboards／Sheets／Data**（Whiteboards、Sheets beta；Dashboards 轉正式版並更名 Claude Data） | 2026-11-10 | 🔥🔥🔥 | ⚡有條件推薦 | Beta／GA（全付費方案） |
 | **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |
@@ -259,7 +259,7 @@ https://claude.com/resources/articles/projects-redesigned
 
 **是什麼：** 讓 Claude 改寫 JavaScript 來呼叫自己工具的實驗性選項，預設關閉，需手動開啟。
 
-**為何熱：** 官方 v2.1.323 release notes 列為首項異動；單一 GitHub Release 來源，尚無社群討論。
+**為何熱：** 官方 v2.1.323 release notes 列為首項異動；v2.1.326（2026-11-16）新增與 agent teams 整合支援，已開 teams 的 session 現在會直接以 Code Mode 啟動；單一 GitHub Release 來源，尚無社群討論。
 
 **現在要試嗎：** 想嘗鮮新呼叫方式的人可在非關鍵專案先試；依賴既有工具呼叫行為的正式工作流先別開。
 

@@ -9135,3 +9135,29 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：新增 2 則（IPO 流程硬事件：Gerstner 50 億美元認購、超額認購 6→7 倍），里程碑登記 2 筆，皆寫入 topics/market-signals-ipo
 - 本機承接：[社群] community-tech-patterns.md「兩類仍在 60 天內」段落「安全架構」一項疑誤連結 `[[topics/community-integrations#2026-10]]`（實際節點全在 community-guardrails.md），屬模式概覽週更範圍，留 `/wiki-weekly-review` 複查修正
 - 📋 需使用者端設定：無
+
+## 2026-11-17 Ingest
+
+- 來源日報：[[news/2026-11-17]]
+- 更新頁面：
+  - **模型**：entities/mythos.md
+  - **功能**：topics/claude-code-experimental.md、entities/claude-code-releases.md、entities/claude-code-known-issues.md、entities/claude-code.md、entities/claude-code-features.md、topics/anthropic-agent-stack.md
+  - **商業**：entities/pricing.md、topics/anthropic-business.md、topics/anthropic-ipo.md、topics/anthropic-partnerships-compute.md、topics/competitor-landscape.md、topics/ai-talent-flow.md
+  - **安全政策**：topics/anthropic-government-policy.md、topics/ai-agent-safety-prompt-injection.md、topics/ai-agent-safety-product-vulns.md、topics/ai-agent-safety.md（母頁）
+  - **社群**：topics/community-integrations.md、topics/community-cost.md、topics/community-multi-agent.md、topics/community-interfaces.md、topics/community-tech-discussions.md、topics/community-tech-patterns.md（母頁）
+  - **人物**：無
+  - **開發實務**：topics/coding-workflow-guide.md
+  - **投資分析**：topics/market-signals-ipo.md、topics/market-signals.md（母頁）
+  - **主編**：wiki/feature-radar.md（Code Mode 熱度 🔥→🔥🔥，補 agent teams 整合說明）
+- 新增頁面：wiki/entities/jasjeet-sekhon.md
+- 摘要：Anthropic 推出 Linked Billing 公開測試（主編已 WebFetch 查證官方機制細節並補寫入 pricing.md）；IPO 定價傳指引至區間頂端或以上、估值上看 1.4 兆美元，認購倍數傳 10-20 倍；Claude Mythos 向 IPO 投資人披露 AMD GPU 移植僅需約 3 天；Google DeepMind 策略長 Jasjeet Sekhon 轉投 Anthropic；安全政策收錄 METR 監管俘獲指控、AI 模型誤判民間人士為軍事目標等多筆待查證安全訊號；社群新增 8 則 GitHub／HN 工具與模式節點。
+- 呈現品質：全部通過（功能／社群／商業三位記者首版各有數筆超字元上限或內部用語外洩，皆已自行修復復測轉綠；主編編輯 pricing.md／feature-radar.md 新增內容亦逐頁跑四支機械自查全綠）
+- 品質備註：[商業] 因回報摘要過度精簡，`collect_reporter_reports.py` 首輪誤判 10 則條目「未回應」，主編核對原始回報後逐一補列條目標題，二輪清零；下次回報請避免用「詳見完整回報」取代逐則列舉
+- 分類回退：無（[社群] 說明 METR 一則雖同時派給社群但判斷不屬 community-tech-discussions 範圍，已由安全政策記者收錄，非分類錯誤，不算回退）
+- 轉知帳本：結案 H-afa06d（功能：official-community-gap 產品化矩陣評估，前批 6 節點皆未達新增列門檻）；新開 H-4f90e4（社群→功能：評估今日新增 8 則 patterns 節點是否影響產品化矩陣）；新開 H-3dcb56（社群→功能：核對 `anthropics/claude-code#105703` 是否已收錄 known-issues）
+- 主編查證：Linked Billing 計費機制（bill_to=user_profile／self、403／402 失敗模式、無額外平台費）已以 WebFetch 查證官方 API release notes 與 billing connections 文件，寫入 entities/pricing.md；Claude Code model configuration 的三種模型切換法已以 WebSearch 查證，經開發實務記者二輪派工寫入 topics/coding-workflow-guide.md；過程中發現 entities/pricing.md 既有「Free 不含 Opus、Pro 可用」列僅指 claude.ai 聊天介面，已補一句區分 Claude Code 內的限制不同，避免誤讀為矛盾
+- 主編裁決：[商業] 建議更新 index.md「topics/anthropic-ipo 值多少」鉤子——依 `wiki/CLAUDE.md`「index 只放慢變事實，快變數字留頁面標頭」，IPO 估值數字屬快變事實，不寫進 index.md，不採納；topics/anthropic-ipo.md 本身已更新「值多少」表格列，足夠
+- 待查證標記逾期提醒（非今日新增，留 `/wiki-lint` 5c）：topics/ai-agent-safety-cyber:198、-product-vulns:224、-prompt-injection:181；topics/anthropic-ipo.md:126；topics/competitor-landscape.md:94、334
+- devpractice 沉澱：候選 0／本日無每日候選；另因主編查證補一則官方使用指南落地（模型切換三法＋managed-settings.json 適用範圍）
+- market 判讀：新增 2 則（IPO 定價指引方向、認購倍數 7→10-20 倍），里程碑登記 2 筆，回顧結算 ⏳ 新增 2 列，皆寫入 topics/market-signals-ipo
+- 📋 需使用者端設定：無

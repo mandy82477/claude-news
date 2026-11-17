@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -33,12 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-16）
-> - **anthropic-sdk-python v2.9.0／TypeScript sdk-v1.9.0**：新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容；RBAC Role 讀取端點新增 source／error codes 欄位；詳見 [[entities/claude-code-releases#最新版本]]。
+> **最新動態**（2026-11-17）
+> - **v2.1.326**：新增在啟用 agent teams 時可同時開啟 Code Mode 的支援，已開啟 teams 的 session 現在直接以 Code Mode 啟動；新增一則啟動警告（觸發條件原文未完整列出）。
+> - **anthropic-sdk-python v2.10.0／TypeScript sdk-v1.10.0**：新增 beta 支援的 `billing_policy` 請求參數、`contract_spend_limit_reached` 錯誤碼，以及連結計費退款相關新錯誤碼；詳見 [[entities/claude-code-releases#最新版本]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +68,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **anthropic-sdk-python v2.10.0** | 2026-11-17 | Features：新增 beta 支援的 `billing_policy` 請求參數、`contract_spend_limit_reached` 錯誤碼，以及連結計費退款相關新錯誤碼（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.10.0)）|
+| **anthropic-sdk-typescript sdk-v1.10.0** | 2026-11-17 | 同步 Python SDK：`billing_policy` beta 參數、`contract_spend_limit_reached` 與連結計費退款錯誤碼（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.10.0)）|
+| **v2.1.326** | 2026-11-16 | 新增在啟用 agent teams 時可同時開啟 Code Mode 的支援，已開啟 teams 的 session 現在直接以 Code Mode 啟動；新增一則啟動警告（觸發條件原文未完整列出）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.326)）|
 | **anthropic-sdk-python v2.9.0** | 2026-11-16 | Features：RBAC Role 讀取端點新增 source 與 error codes 欄位；新增 Update Bundle，可設定並讀回 Claude Tag Bundle 的指示內容（官方原文截斷）（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0)）|
 | **anthropic-sdk-typescript sdk-v1.9.0** | 2026-11-16 | 同步 Python SDK：RBAC Role 讀取端點新增 source／error codes；新增 Update Bundle 設定 Claude Tag Bundle 指示內容（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.9.0)）|
 | **v2.1.325** | 2026-11-13 | 修補 zstd 壓縮回應解碼的安全性問題；VS Code 等整合終端機新增重跑 notebook cell 一次性提示（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.325)）|

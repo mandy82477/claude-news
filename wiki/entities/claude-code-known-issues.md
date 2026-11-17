@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-17"
+last_news_update: "2026-11-17"
 status_main: "active"
 days_since_news: 0
 parent: "entities/claude-code"
@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-16）
-> - **新增已知問題**：既有有效訂閱帳號登入 claude.ai 被導回 onboarding 迴圈（#36797）；Anthropic Status 新增 Claude Meetings（beta）Auto-join 持續暫停、Claude Sonnet 5.5／Fable 5.2 錯誤率升高（已修復）兩起事故。
-> - **互動數更新**：升級付款 PaymentIntent 作廢（#55982）增至 80 則留言；雲端 session git proxy 擋 push（#76248）增至 42 則留言；Cowork 排程「永遠允許」失效（#47180）增至 41 則留言；Windows 安裝程式 HRESULT 0x80073CF6（#49917）增至 43 則留言。
+> **最新動態**（2026-11-17）
+> - **新增已知問題**：Anthropic Status 新增「部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App」（已識別原因，修復中）；瀏覽器 OAuth 登入流程回 500 錯誤並 15 秒逾時（#44271，新增追蹤）。
+> - **互動數更新**：MCP OAuth 於 `resource` 參數多加斜線導致 Entra ID 驗證失敗（#52871）增至 52 則留言、33 個讚。
 
 ---
 
@@ -345,7 +345,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 - 🔴 **未修復**｜**MCP servers 於 Claude Code 結束時未被正確終止，留下孤兒行程（GitHub issue #1935，48 則留言、20 讚，Claude CLI v1.0.18，2026-11-14 互動數更新）**：使用者回報 Claude Code 結束時未正確終止其啟動的 MCP server 行程，留下孤兒行程持續佔用系統資源；官方尚未回應。
 - 🔴 **未修復**｜**宣告 draft-07 `outputSchema` 的 MCP server 完全無法使用（issue #86142，53 則留言，2026-09-18 互動數更新）**：送出前就被判定「unsupported dialect」拒絕，官方未回應。
-- 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 50 則留言、31 個讚，首見 2026-08-02，2026-10-15 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
+- 🔴 **未修復**｜**MCP OAuth 於 `resource` 參數尾端多加一個斜線，導致 Microsoft Entra ID 驗證失敗（AADSTS9010010）（GitHub issue #52871，累積 52 則留言、33 個讚，首見 2026-08-02，2026-11-17 互動數更新）**：使用者回報 MCP OAuth 流程會在 `resource` 參數尾端多加一個斜線，導致採用 Microsoft Entra ID 的企業 SSO 驗證失敗並拋出 AADSTS9010010 錯誤代碼；屬企業 SSO／驗證整合的具體技術性 bug；官方尚未回應。
 - 🔴 **未修復**｜**Microsoft 365 Connector 僅限 Team／Enterprise 方案，Max 個人版無法使用（GitHub issue #20469，累積 60 則留言、105 個讚，2026-07-26）**：使用者反映 Microsoft 365 connector 目前僅開放 Team／Enterprise 方案使用，訂閱 Max 方案（月費 $100 或 $200）的個人使用者即使付費仍無法存取此整合；官方尚未回應或說明是否將開放個人方案。
 - 🔴 **未修復**｜**macOS：Claude Desktop 對官方 Filesystem extension 從未送出 `tools/call`（GitHub issue #80002，累積 64 則留言、27 個讚，首見 2026-07-23，2026-09-21 留言數更新）**：`tools/list` 正常但工具從未實際觸發，log 無紀錄；官方尚未回應。
 - 🔴 **未修復**｜**排程 routine 對 custom connector 呼叫任何 MCP 工具皆顯示「MCP tool call requires approval」（GitHub issue #61015，累積 40 則留言、52 個讚，首見 2026-07-23，回報者指出約 2026-05-20 出現回歸）**：使用者回報排定執行的 routine 在呼叫 custom connector 上的任何 MCP 工具時，一律被要求「MCP tool call requires approval」而無法自動執行，回報者指出此問題約於 2026-05-20 開始出現，屬回歸性問題；官方尚未回應。
@@ -489,8 +489,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（14 條未修復、6 條已修復）
+### 🌐 服務穩定性（16 條未修復、6 條已修復）
 
+- 🔴 **未修復（已識別原因，修復中）**｜**Anthropic Status：部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App（2026-11-17 18:55 UTC 起調查，18:56 UTC 已識別原因）**：其他登入方式與既有 session 不受影響。[來源](https://status.claude.com/incidents/1lglzf469c0z)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Sonnet 5.5、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)
 - 🔴 **未修復（部分功能持續受影響）**｜**Anthropic Status：Claude Meetings（beta）部分通話仍無法加入，Auto-join 持續暫停（2026-11-16 18:10 UTC 更新）**：已在進行中的通話與其他 Claude 功能不受影響；排會議依賴 Auto-join 的使用者這幾天宜先改手動加入。[來源](https://status.claude.com/incidents/b5cq662qf2wm)
 - 🔴 **未修復（調查中）**｜**Anthropic Status：部分使用者無法在 Claude iOS App 用「使用 Apple 登入」註冊新帳號，主要影響新帳號（2026-11-14 07:11 UTC 起調查中）**：官方建議這段時間改用 Google 或 email 註冊。[來源](https://status.claude.com/incidents/ct4c2pwf2xpj)
@@ -509,6 +510,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復（監控中，尚未見「已解決」時間戳）**｜**Anthropic Status：Claude Mythos 5、Claude Fable 5 等多模型效能降級（2026-08-05 07:05 UTC 識別成因 → 09:13 UTC 仍在處理中）**：官方已識別造成 Mythos 5、Fable 5 等模型請求錯誤率升高的成因，09:13 UTC 彙整時仍在修復中，尚未確認完全解決；Benzinga 等媒體同步報導使用者反映服務異常（[Benzinga 報導](https://news.google.com/rss/articles/CBMi1wFBVV95cUxOSDZqVFhFZm9GTkFGNUVGb1N0aGM0Y3pwTDU0V2RPOFRJVTdXYUFoa0JiNXliOEdRWWRzV19nM0xWLXEyamhHY3cxOTdWellodDR0VmR2bTJScmJfNkQ5OV9sU2hVQkZKamZUWWxJS3h4bTMxRmNkTDR0VlE4cnpvekt4SF9QcjB3OVkxa29ZQmNOYUlkOG1JQ05BYXBUdjc4NFpHTDRoRWhNU1l6QnNNOGhycnlUYTVFRjNaU1JFTGlzVHI4R2F3RzlyT1BtdzdEOWdub0p0MA?oc=5)）。[來源](https://status.claude.com/incidents/f6gkkq6txl7z)
 - 🔴 **未修復（監控中，尚未見「已解決」時間戳）**｜**Anthropic Status：Fable 5 錯誤率升高（2026-07-21 11:47 UTC 起）**：狀態頁標記「Monitoring - A fix has been implemented and we are monitoring the results」，套用修復後仍在觀察階段，尚未確認完全解決；與 07-17 及下方 07-20 的 Fable 5 事件為不同批次的獨立事故。[來源](https://status.claude.com/incidents/lw0sb1srtznh)
 - 🔴 **未修復**｜**OAuth 登入逾時失敗，`auth.anthropic.com` 網域無法解析（GitHub issue #33238，累積 153 則留言、47 個讚，2026-07-14 首次記錄，2026-07-21 留言數更新）**：使用者回報 Claude Code OAuth 登入逾時失敗，`auth.anthropic.com` 網域完全無法透過 DNS 解析，導致使用者完全無法完成驗證流程；官方尚未回應。
+- 🔴 **未修復**｜**瀏覽器 OAuth 登入流程回 500 錯誤並於 15 秒逾時，無法完成驗證（GitHub issue #44271，累積 46 則留言、30 個讚，2026-11-16）**：官方尚未回應。
+  - 與既有 #33238（DNS 無法解析）現象不同，暫分列追蹤。
 - 🔴 **未修復**｜**claude.ai visualize 功能故障，claudemcpcontent.com 無法連線（DNS_PROBE_FINISHED_NXDOMAIN）（GitHub issue #34820，累積 96 則留言、39 個讚，首見 2026-07-10，2026-08-04 互動數更新）**：使用者回報 claude.ai 的 visualize 功能故障，依賴的 claudemcpcontent.com 網域無法解析（DNS 錯誤）；官方尚未回應。
 - 🔴 **未修復**｜**API Error: 串流閒置逾時，僅收到部分回應（GitHub issue #46987，累積 184 則留言、197 個讚，2026-07-09）**：使用者回報今日多次遇到串流閒置逾時（stream idle timeout）的 API 錯誤，僅收到部分回應即中斷；官方尚未回應或說明成因。
 - 🔴 **未修復**｜**API Error: Connection closed mid-response——頻繁發生到讓 Claude Code 幾乎無法用於任何任務（GitHub issue #69415，累積 56 則留言、95 個讚，首見 2026-07-23，2026-10-16 互動數更新，今日全站已知問題互動量最高）**：使用者回報連線在回應中途遭關閉（Connection closed mid-response）的 API 錯誤發生頻率極高，嚴重到使 Claude Code 幾乎無法用於任何任務；與既有「串流閒置逾時」（issue #46987）同屬串流連線可靠性問題但錯誤訊息不同，暫分列追蹤；官方尚未回應。

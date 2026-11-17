@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-17
+**最後新聞更新：** 2026-11-17
 
-> **行動裝置遠端控制再添一款「agent 操作手機」實作：iphone-use**（2026-11-16）
-> - **leeguooooo/iphone-use**：讓 Claude Code、Codex 等 MCP client 操作真實 iPhone，USB／Wi-Fi 連線，自帶可回放操作記錄，自架於 macOS。
+> **行動裝置遠端控制再添一款 P2P 直連實作：fardesk**（2026-11-17）
+> - **fardesk**：iPhone／Mac 開源 app，經使用者自己的 Tailscale 網路把多台電腦的 Claude Code session 集中到手機檢視，無 Fardesk 自己的伺服器或帳號。
 
 ---
 
@@ -47,7 +47,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ## 目前結論
 
-- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂，傳輸層有 bot、web-app、P2P 加密（ds-harness-remote，11-05）、反向隧道（cc-desk-tunnel，11-13）；星數最高的是 t3code（58,093 星）。
+- **手機遠端**：官方已可遠端控制；社群五個以上實作各走一路，還沒有收斂，傳輸層有 bot、web-app、P2P 加密（ds-harness-remote，11-05）、反向隧道（cc-desk-tunnel，11-13）、自架 Tailscale 網路（fardesk，11-17）；星數最高的是 t3code（58,093 星）。
   - **接下來看什麼：** 有沒有人比較官方與社群做法在離線、通知、多 session 上的差別。
 - **介面與可視化**：各自單一實作居多，還在試；十一月新增兩個方向：並行 session 用等待佇列管理（Aq，11-12）與跨 repo 架構圖外掛的單人實測（Floorplan、Archify、Understand Anything，11-06，單一專案、單一實測者）；2026-10-09 起有人讓 agent 直接在桌面螢幕疊加箭頭與文字，社群同時示警繪圖層可能遮蔽權限彈窗，尚無開發者回應。
 - **你的選項：** 要從手機看進度先開官方遠端控制；要多 agent 總覽看 tools 頁「一堆 agent 在跑，看不到誰卡住」那一列。
@@ -75,6 +75,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### fardesk：iPhone／Mac 開源 app 經自有 Tailscale 網路，在手機上集中讀取多台電腦的 Claude Code session（2026-11-17）
+
+- **主線：** —
+- **核心模式：** iPhone／Mac 開源 app（Apache-2.0），透過使用者自己的 Tailscale 網路把多台電腦上的 Claude Code session 集中到手機上檢視，可讀取每個 session 的提示、回覆、改了哪些檔案與執行結果；不經過 Fardesk 自己的伺服器或帳號。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧一個「P2P 直連、無中介伺服器」取向——既有做法多數經雲端中轉或自架後端，本則完全依賴使用者自己的 Tailscale 網路，不設 Fardesk 自己的伺服器或帳號；主線填 —。
+- **可信度註記：** Hacker News 1 分（2 個來源），無 GitHub star 數據可查；內容依使用者自述，未另行查證。
+- **來源：** Hacker News（2 個來源）；[原文](https://fardesk.franzai.com/)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無第三方採用回饋）
 
 #### leeguooooo/iphone-use：讓 Claude Code、Codex 等 MCP client 操作真實 iPhone，自架於 macOS（2026-11-16）
 
