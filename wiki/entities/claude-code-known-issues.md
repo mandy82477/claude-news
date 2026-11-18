@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-17）
-> - **新增已知問題**：Anthropic Status 新增「部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App」（已識別原因，修復中）；瀏覽器 OAuth 登入流程回 500 錯誤並 15 秒逾時（#44271，新增追蹤）。
-> - **互動數更新**：MCP OAuth 於 `resource` 參數多加斜線導致 Entra ID 驗證失敗（#52871）增至 52 則留言、33 個讚。
+> **最新動態**（2026-11-18）
+> - **新增已知問題**：VS Code 擴充套件無故遺失對話紀錄（#29017，35 則留言）；VS Code 擴充套件功能請求支援重新命名分頁（#11145，94 個讚）；Max 方案 1M context 誤判需額外付費用量（#45390，34 則留言）；MCP 回應逾 8MB 疑砍掉 stdio 伺服器（#105703，❓ 待查證）。
+> - **已解決**：Anthropic Status：Google Docs connector 編輯文件錯誤（claude.ai／Code／Cowork，11-18 01:44 UTC 解決）。
 
 ---
 
@@ -100,10 +100,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Gmail MCP connector 黑暗設計模式批評（2026-06-28 HN 討論）**：Anthropic 推出的 Claude Gmail MCP 整合（官方 Google connector，Pro/Max/Team/Enterprise beta 可用）被社群批評授權頁面採用「黑暗設計模式」，介面設計被認為誤導用戶授予比預期更廣泛的 Google 帳號存取權限；目前 HN score 僅 3，為早期批評訊號，Anthropic 尚未回應。參見 [官方文件](https://claude.com/docs/connectors/google/gmail)
 - 🔴 **未修復**｜**原始碼外洩與 DMCA 風波**（2026-05-04 持續延燒）：Anthropic 因人為疏失導致 Claude Code 原始碼外洩，已向各平台發出逾 8,100 次 DMCA 下架請求，引發 AI 生成程式碼版權歸屬的法律辯論；社群以外洩程式碼為基礎重建的「Claw-Code」分支隨之誕生，影響已超出技術層面。
 
-### 💰 計費與配額（30 條未修復、1 條❓）
+### 💰 計費與配額（31 條未修復、1 條❓）
 
 > 2026-06 下旬起配額/成本爭議集中爆發，多起獨立回報同時指向額度消耗與計費透明度問題。
 
+- 🔴 **未修復**｜**Max 方案啟用 1M context 被誤判為需要額外付費用量（GitHub issue #45390，累積 34 則留言、27 個讚，2026-11-18）**：選用 Opus 4.6（1M context）即使實際用量遠低於需要加購的量仍顯示「Extra usage required」；官方尚未回應。見 [[entities/pricing-incidents]]。
 - 🔴 **未修復**｜**Claude Code Analytics Admin API 查不到用訂閱方案或 OAuth 登入的使用者，只看得到 API Key 用量（GitHub issue #27780，累積 27 則留言、27 個讚，2026-11-06）**：靠此 API 彙整團隊整體用量報表的管理者，報表會系統性少算訂閱制使用者；官方尚未回應。
 - 🔴 **未修復**｜**背景 agent 每隔約 30 秒重送完整對話記錄，僅為更新狀態列，疑增加隱性 token 用量（社群分析＋繞過腳本，Hacker News 527 分，2026-10-29）**：單一社群來源，官方無公開回應。
   - 作者（Flamerix AI，MIT License）發布 `no-agent-summary.js`（Bun `--preload`）可停用此計時器而不改 Claude Code 本體，在 Linux v2.1.257–2.1.312 測試過，macOS 據稱亦可運作。同時跑多個背景 agent 的使用者可留意 token 用量。
@@ -332,8 +333,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**手機號碼驗證機制異常（GitHub issue #34229，累積 741 則留言、892 個讚，2026-07-16，全站已知問題今日互動量最高）**：使用者回報 Claude 帳號的手機號碼驗證流程出現問題；原文摘要於 preflight checklist 處被截斷，具體異常現象未知，僅能確認高互動量與「手機驗證」主題；官方尚未回應。見 [issue](https://github.com/anthropics/claude-code/issues/34229)
 - 🔴 **未修復**｜**Claude 全平台共通的帳號架構缺口——三平台各自提出多帳號管理訴求**：Mobile（[#36151](https://github.com/anthropics/claude-code/issues/36151)，1006 讚，全站讚數新高）、Desktop（[#18435](https://github.com/anthropics/claude-code/issues/18435)，1,246 讚、228 則留言）、Web connector（[#27302](https://github.com/anthropics/claude-code/issues/27302)，636 讚、291 則留言，2026-10-31 更新）皆缺多帳號支援；官方尚未回應。
 
-### 🔌 MCP 整合（16 條未修復、2 條已修復／已變更）
+### 🔌 MCP 整合（16 條未修復、2 條已修復／已變更、1 條❓）
 
+- ❓ **待查證**（標 2026-11-18｜查 105703、stdio｜複 2026-12-02）｜**MCP 回應逾 8MB 可能砍掉 stdio 伺服器（GitHub issue #105703）**：dev.to 文章提及此 issue，互動數與官方回應未載。
 - 🔴 **未修復**｜**功能請求：Gmail MCP 整合支援連結多個帳號（GitHub issue #36024，累積 36 則留言、88 個讚，2026-11-13）**：目前 Gmail MCP 整合一次僅可連結一個帳號，不少使用者同時有私人與公司 Gmail／Workspace 帳號，盼能同時連結多個；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Claude Desktop 顯示 MCP server 已連線、工具清單正常列出，但對話介面仍叫不到工具（GitHub issue #2682，累積 37 則留言、28 個讚，2026-10-23）**：`tools/list` 請求回應正常、連線顯示成功，但實際對話中無法呼叫任何已列出的工具；官方尚未回應。
 - ✅ **已變更 v2.1.292**｜**本機（stdio）MCP server 預設協商新協定**：[官方 Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) 2.1.292 載明預設協商協定 2026-07-28，含 Bedrock、Vertex、Foundry 一律適用，設 `MCP_PROTOCOL_NEGOTIATION=legacy` 可退出（查證日 2026-10-24）。
@@ -358,8 +360,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - ✅ **已修復（v2.1.287，2026-10-01）**｜**Function Hooks 更名「Claude Mods」正式出貨（issue #91870）**：機制、權限與社群回饋見 [[entities/claude-mods]]；旗標追蹤見 [[topics/claude-code-experimental]]。
 - 🔴 **未修復**｜**MCP Token 消耗問題**：多個 MCP Server 併用時，每條訊息可能消耗 20,000+ tokens
 
-### 🔌 平台相容性（104 條未修復、3 條已修復、3 條查無官方）
+### 🔌 平台相容性（106 條未修復、3 條已修復、3 條查無官方）
 
+- 🔴 **未修復**｜**VS Code 擴充套件無故遺失對話紀錄（GitHub issue #29017，累積 35 則留言、27 個讚，2026-11-18）**：依賴對話歷史接續任務的使用者受影響；官方尚未回應或提供修復時程。
+- 🔴 **未修復**｜**功能請求：VS Code 擴充套件支援重新命名分頁（GitHub issue #11145，累積 33 則留言、94 個讚，2026-11-18）**：方便整理多個並行對話；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**Auto mode 分類器誤擋帳號擁有者自己的排程任務與跨機器檔案傳輸（Cowork 雲端 session，GitHub issue #100730，累積 26 則留言，2026-11-15）**：把擁有者自己排定的排程任務與機器間檔案傳輸都判定為需額外確認而擋下；官方尚未回應。
   - 備註：與既有 auto mode 分類器誤擋已授權操作的回報（#97613）相關。
 - 🔴 **未修復**｜**功能請求：Claude Desktop 的 Code 分頁新增字體大小調整選項（GitHub issue #48237，累積 37 則留言、135 個讚，2026-11-15）**：反應數遠高於留言數，顯示訴求集中；常在 Desktop Code 分頁看程式碼、覺得字級不合用的人反映最多；官方尚未回應或提供設定選項。
@@ -489,8 +493,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（16 條未修復、6 條已修復）
+### 🌐 服務穩定性（16 條未修復、7 條已修復）
 
+- ✅ **已修復**｜**Anthropic Status：Google Docs connector 編輯文件錯誤，影響 claude.ai／Code／Cowork（11-17 16:19 PT 起，11-18 已解決）**：這段時間編輯文件失敗即屬此次事故，現已恢復。[來源](https://status.claude.com/incidents/6prv10gjdpz1)
 - 🔴 **未修復（已識別原因，修復中）**｜**Anthropic Status：部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App（2026-11-17 18:55 UTC 起調查，18:56 UTC 已識別原因）**：其他登入方式與既有 session 不受影響。[來源](https://status.claude.com/incidents/1lglzf469c0z)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Sonnet 5.5、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)
 - 🔴 **未修復（部分功能持續受影響）**｜**Anthropic Status：Claude Meetings（beta）部分通話仍無法加入，Auto-join 持續暫停（2026-11-16 18:10 UTC 更新）**：已在進行中的通話與其他 Claude 功能不受影響；排會議依賴 Auto-join 的使用者這幾天宜先改手動加入。[來源](https://status.claude.com/incidents/b5cq662qf2wm)

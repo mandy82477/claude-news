@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-02
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **安全架構新增證據鏈白板：agent 研究結論可追溯回執行紀錄**（2026-11-16）
-> - **Agent-Cockpit**：MCP 伺服器＋白板，讓 Claude Code、Codex、Cursor、Gemini CLI 的每個結論可追溯回產生它的執行紀錄與程式碼。
+> **安全架構新增「外部沙盒」設計：agent 留在沙盒外，要執行的程式碼才進沙盒**（2026-11-18）
+> - **外部沙盒**：Simon Willison 與 Prime Radiant 合作，agent 本身不進沙盒、只有要跑的程式碼進沙盒，列出三種實作（其中一種用 v86 在 WebAssembly 裡跑 Alpine Linux）。
 
 ---
 
@@ -101,6 +101,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### Simon Willison × Prime Radiant：外部沙盒讓 agent 留在沙盒外，實際執行的程式碼才跑進獨立沙盒（2026-11-17）
+
+- **主線：** —
+- **核心模式：** 與 Prime Radiant（Superpowers 作者）合作提出「外部沙盒」設計：agent 本身不在沙盒裡執行，只有它產生、要跑的程式碼進沙盒，目的是在不犧牲可用性的前提下，降低本機模型或提示注入攻擊造成實際損害的風險；文中列出三種實作，其中一種用 v86 在 WebAssembly 裡跑 Alpine Linux。
+- **與既有模式的關係：** 補上「安全架構」既有代表技巧（Grepathy、Spare Mac 隔離環境等，[[topics/community-guardrails#2026-10]]）一個「agent 與執行環境分離」取向——既有做法多整個隔離 agent，本則只把要執行的程式碼丟進沙盒；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 作者 Simon Willison 為知名開發者（本庫先前已收錄其具名發言），文章附三種具體實作細節，惟實際採用數據與第三方覆核未見報導。
+- **來源：** Blog / Simon Willison；[原文](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/)
+- **成熟度：** ⏳ 新興（本庫首次收錄此設計，具名作者提出具體實作，尚無第三方量化採用）
 
 #### chutingyean/Agent-Cockpit：證據鏈白板＋MCP 伺服器，讓 agent 研究結論可追溯回執行紀錄與程式碼（2026-11-16）
 

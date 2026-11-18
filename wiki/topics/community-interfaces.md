@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **行動裝置遠端控制再添一款 P2P 直連實作：fardesk**（2026-11-17）
-> - **fardesk**：iPhone／Mac 開源 app，經使用者自己的 Tailscale 網路把多台電腦的 Claude Code session 集中到手機檢視，無 Fardesk 自己的伺服器或帳號。
+> **行動裝置遠端控制再添一款多通訊 App 橋接：nanoclaw**（2026-11-18）
+> - **nanoclaw**：常駐個人 AI 助理，agent 跑在獨立容器，底層 harness 可選 Claude Code／Codex／Cursor／OpenCode，並可從 Slack、WhatsApp、Telegram、Discord 等通訊 App 對話。
 
 ---
 
@@ -75,6 +75,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### nanocoai/nanoclaw：常駐個人 AI 助理，agent 各自跑在容器裡、可選 harness，並從多個通訊 App 對話（2026-11-18）
+
+- **主線：** —
+- **核心模式：** 自架、常駐的個人 AI 助理：每個 agent 各自跑在獨立容器，底層 harness 可選 Claude Code、Codex、Cursor 或 OpenCode，並可從 Slack、WhatsApp、Telegram、Discord 等多個通訊 App 對話；2026-01 出生，本庫今日首次收錄，GitHub Search 31,121 星。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（bot、MCP、web-app 三條路，[[topics/community-interfaces#2026-11]]）一個「多通訊 App 橋接＋harness 可換」取向——既有做法多綁單一傳輸層或底層 agent，本則同支援四種通訊管道與四種 harness；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（31,121★），無 forks／issues／近期 commit 佐證可查，未另行查證；容器隔離與多 harness 切換的具體實作機制未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/nanocoai/nanoclaw)
+- **成熟度：** ⏳ 新興（本庫首次收錄，星數高但尚無第三方採用回饋或 forks／issues 佐證）
 
 #### fardesk：iPhone／Mac 開源 app 經自有 Tailscale 網路，在手機上集中讀取多台電腦的 Claude Code session（2026-11-17）
 

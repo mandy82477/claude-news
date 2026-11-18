@@ -34,21 +34,20 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **職能：** 經營者
 **為何追蹤：** Anthropic 公司策略、政府關係與 AI 減速呼籲的主要對外發言人
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
 > **Fortune 評論內容已查實**（2026-08-24，2026-09-20 查證）
 > [Fortune 評論文章](https://fortune.com/2026/08/25/airline-industry-dario-amodei-ai-distrust-safety-association/)論點：Amodei 陷入公關界熟知的「問題聯想」陷阱——航空業數十年前即學到絕不把「safety」一詞用於行銷素材；信任必須來自長期行為紀錄，而非訊息傳播本身，航空業的信任是靠多年無趣但扎實的安全紀錄建立，不是靠強調重視安全的行銷活動。文章脈絡：Amodei 因不滿 OpenAI 不夠重視安全而出走創立 Anthropic，如今自家公司也在創辦使命與商業壓力間拉扯。
 
-> **最新動態**（2026-11-16）
-> - Yahoo Finance：未具名資深科技投資人稱他藉 IPO「自我造勢」（僅標題）
-> - Bloomberg：稱他隨 IPO 已成 AI 業界「頭號代言人」（僅標題）
+> **最新動態**（2026-11-18）
+> OpenAI 執行長 Sam Altman 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入下方公開批評者對照（ADWEEK、TheWrap）。
 
 ---
 
 ## 現況
 
-2026-11-16，Yahoo Finance 報導一位未具名資深科技投資人稱 Amodei 藉 IPO「自我造勢」（僅標題）；同日 Bloomberg 稱他隨 IPO 已成 AI 業界「頭號代言人」（僅標題）。2026-11-09 至 11-14 是 IPO 路演期：Amodei 稱癌症等四病十年內成「過去的遺跡」並遭醫界質疑，隨後口徑轉為「寧可少承諾、多交付」，彙整見 [[#IPO 路演期表態（2026 年 11 月）]]。
+2026-11-18，OpenAI 執行長 Sam Altman 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入下方公開批評者對照（ADWEEK、TheWrap）。2026-11-16，Yahoo Finance 報導一位未具名資深科技投資人稱 Amodei 藉 IPO「自我造勢」；同日 Bloomberg 稱他已成 AI 業界「頭號代言人」（均僅標題）。2026-11-09 至 11-14 為 IPO 路演期，表態彙整見 [[#IPO 路演期表態（2026 年 11 月）]]。
 
 Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities/chris-olah|Chris Olah]]、Daniela Amodei 等人從 OpenAI 出走後創立 Anthropic。主導公司整體策略與安全定位，在 AI 治理、政府政策、企業文化三條線高度活躍。白宮一度對其失去信任、談判改由聯合創辦人 Tom Brown 接管一事已收斂（出口管制已解除，見 [[entities/tom-brown]]、[[entities/fable-5]]、下方歷史記錄）；09-27 白宮晚餐為本人與 Trump 首次公開重新互動的跡象，10-01 Trump 公開表態「喜歡」Amodei 本人，為關係解凍添一實質訊號，惟是否完全修復仍未見報導證實。
 
@@ -124,6 +123,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 | [[entities/yann-lecun]] | 10-01 | 稱 Amodei「completely deluded」；批把沙盒設計不良說成 AI 危險 | AMI Labs 創辦人，Meta 前首席 AI 科學家 |
 | The New York Times 報導（對象未具名） | 11-13 | 標題稱 Amodei 已讓 OpenAI 與其他同業不滿，原因未見報導（僅標題） | 媒體報導，不滿者身分與內容均未載 |
 | Yahoo Finance 報導（投資人未具名） | 11-16 | 稱 Amodei 藉 IPO「自我造勢」，資深科技投資人說法，身分未具名（僅標題） | 媒體報導，資深科技投資人身分未載 |
+| Sam Altman | 11-18 | 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」 | OpenAI 執行長，同業 |
 | Elon Musk（對照：肯定而非批評） | 11-11（Times of India） | 標題稱 Musk 稱 Claude 為「masterpiece」（僅標題，內文未取得） | xAI／Grok 競爭者 |
 
 各人原話與來源見各人物頁；論述層（減速呼籲與反彈聲浪）見 [[topics/recursive-self-improvement]]。
@@ -150,6 +150,8 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 參考來源
 
+- [Sam Altman on Whether Anthropic Is Building Safe AI: 'I Don't Know'](https://news.google.com/rss/articles/CBMimAFBVV95cUxOSDZ0Q0wyR09mUF9BajdjNGdpVzdBMEdEdWVxSmhmTkM0Z0cwZ2N4R0ZRVFE5THhLTmU4TFRyTVFfb0xXZXgzRXNud1RnMWZBLTBCekw1TXgtNk90NmJWV2hwTzZGVlViSjhRUjdmTTY2SmVOay1NZ3g4ZDVMdlB1R0pwUFJWaFdjV2UwVlN2ME54SWdtRGgyUg?oc=5) — Google News／ADWEEK，2026-11-18：受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入公開批評者對照
+- [Sam Altman Says He Doesn't Know if Anthropic's AI Development Is Safe Ahead of IPO](https://news.google.com/rss/articles/CBMiiwFBVV95cUxNODFfdG0wWTh1Sk1KaWQ0QjNhV0Z2VmUzcGhNTy1rQkJ3X09sTVFhazFVbDNSYkdoV19faW5HQ29OeEJkNXpvcllWY3o3SWxKRUoyekItU1pJS0pkaEs5R2IxeVVlOWNHR3FoYUtiZWZYeTk3RUhPRU84cEVDSW9laE9JZEhrczRTWnBJ?oc=5) — Google News／TheWrap，2026-11-18（同一事件另一篇報導）
 - [Anthropic's Dario Amodei is 'just setting himself up' with IPO, veteran tech investor warns](https://news.google.com/rss/articles/CBMi5gFBVV95cUxNR0VnRWFnN0o3am4ydmh5a3hTenhOU29heTF4MGxYZy03R1VGNC1FNU5Wd2lDRzhMLWJoYmQydTk1ZzlOTXNHaGVhVlFiUmNSUGkzUjdkSGtDemJXTWdITkZGdzlKZDByR2Zhb05pZ1dOOV9yeG9HclNXb2xFbF9yZFMxelMxb0l4SF9RRGFrUnlXa1JQSGR2aFVubW9mNzB2bWZfa0FkMXhpbUx0MVNOYnEyUTRHbFhLOFhWR1AxMU9FTnNTVmJQU3V3WFFpa1JEb2FJb3A1OTgxMFB1RklMTlQzdkVZdw?oc=5) — Google News／Yahoo Finance，2026-11-16（僅標題可用，投資人身分未具名）
 - [With Anthropic IPO, Dario Amodei Becomes AI's Leading Pitchman](https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYXJwMmxnNFdIVGVKMTR2VUdUa3NXT0I2eUFpNTRsUHBkdVQyTzFmMFUycXVRMlVFckRJalFhOHR6TmI0X1RCZnNibHNvM29pbDJSdTBUcEdQejFQWEJpRHRacWs0eVJSQmRlQWVEOTRGbjNPUXdwUUVmWE9JRzBlLWdZSVhGUk1kZ2hNVkxYSUR1cDYydkNKOGx3N1FJTi1uUWltY190VEdhVFJXZFF4RWZLYUx2d1paN2FlRmJRNVNPRTA?oc=5) — Google News／Bloomberg.com，2026-11-16（僅標題可用）
 - [The 4 types of people Dario Amodei said he won't hire — and what Anthropic looks for instead](https://news.google.com/rss/articles/CBMiowFBVV95cUxQa283c1h5YlcwMGFkTWxMTzVrUVJOWnVzUlU1WHNSLWxyNy1JdTNqZHJaWVFYcFRXSUNmSDlHQkl4cDRWcjdmVTh2UHJobmdLZE40WW5OekF4bW8zcHdCRGlSNzBiN2o4eHJTNVRSb1MtaWNxaXl2Z284ZHpBdklfQ2JDVUdCZV84dEREZUtfVDE1S0pBQVRxVnp1b25KZC1YcDhz?oc=5) — Google News／Business Insider，2026-11-13（僅標題可用，列表細節未載）
@@ -212,6 +214,7 @@ Dario Amodei 是 Anthropic 共同創辦人兼執行長（CEO），與 [[entities
 
 ## 歷史記錄
 
+- 2026-11-18：OpenAI 執行長 Sam Altman 受訪被問 Anthropic 是否安全開發 AI，答「我不知道」，列入公開批評者對照（來源：Google News／ADWEEK、Google News／TheWrap）
 - 2026-11-16：Yahoo Finance 報導一位未具名資深科技投資人稱 Amodei 藉 IPO「自我造勢」，批評者身分未載（僅標題可用）（來源：Google News／Yahoo Finance）
 - 2026-11-16：Bloomberg 報導稱隨 Anthropic IPO，Amodei 已成 AI 業界「頭號代言人」（僅標題可用）（來源：Google News／Bloomberg.com）
 - 2026-11（11-09 至 11-13 總結）：IPO 路演期表態——癌症十年論與醫界質疑、「少承諾多交付」口徑、同業不滿標題等，彙整見 [[#IPO 路演期表態（2026 年 11 月）]]

@@ -3,8 +3,8 @@ page: "topics/ai-agent-safety-product-vulns"
 kind: "topic"
 status: "ongoing"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-17"
-last_news_update: "2026-11-17"
+last_updated: "2026-11-18"
+last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: "topics/ai-agent-safety"
@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-17）
-> - **Cursor 正式歸因，是否同案待確認**：Dark Reading 稱 Cursor 已正式將 Claude Code 延伸套件惡意事故歸因於第三方資安漏洞，是否即為已證實的遭竊 Fireworks AI 金鑰外洩未見報導，僅標題可用。
+> **最新動態**（2026-11-18）
+> Astra Security 推出新 MCP 伺服器，把自動化滲透測試接進 Claude Code 與 GitHub Copilot；與既有第三方防護產品同屬一類（mykxlg.com，僅標題可用）。
 ---
 
 ## 摘要
@@ -85,6 +85,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### mykxlg.com：Astra Security 推出新 MCP 伺服器，將自動化滲透測試接入 Claude Code 與 GitHub Copilot（2026-11-18 新增）
+
+- **揭露來源**：Google News／mykxlg.com（11/18 17:17 UTC），互動 0，僅標題可用
+- **核心主張（僅標題可用）**：標題稱資安業者 Astra Security 推出新 MCP 伺服器，把自動化滲透測試接進 Claude Code 與 GitHub Copilot；具體測試範圍、機制與是否開源均未載
+- **性質判斷**：第三方防護產品動態，非官方修補；與 11-13 ArmourCode、11-12 Rain Agent Vaults 同屬「第三方廠商對 Claude Code 風險推出防護產品」一類，不改變既有結論
+- **可信度評估**：單一來源、無可讀內文，訊號強度低
 
 #### Anthropic 官方：更新協同漏洞揭露（CVD）政策的時間表規定（2026-11-16 新增）
 

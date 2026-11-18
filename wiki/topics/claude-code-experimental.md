@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-17）
-> 2.1.326（自 2.1.325 起比對）新增 13 個候選旗標，10 個已知名稱中 8 個入表（皆第一階、無代號旗標），2 個為設定類旗標（逾時／識別碼）不列；另 3 個因原料截斷未附名稱，暫無法登記；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-18）
+> 2.1.327（自 2.1.326 起）新增 10 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標來源已過濾不列；消失 2 個：`CLAUDE_CODE_CONSENT_POINTERLESS`（首見 2.1.306，列 4 階）、`CLAUDE_CODE_SPARE_KEEPS_BOOT_SESSION_ID`（首見早於追蹤範圍）；對帳僅命中來源條目自身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.327（11-18，自 2.1.326 起）新增 10 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 2 個設定類旗標已過濾不列；消失 2 個（`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`，列 4 階）；對帳僅命中來源條目，暫不升第二階。
 - **2.1.326（11-17，自 2.1.325 起）新增 13 個候選旗標，10 個已知名稱中 8 個入表**（名單見追蹤表），皆第一階、無代號旗標。
   - 2 個設定類旗標（逾時／識別碼）不列；另 3 個旗標名稱原料截斷未附，暫無法登記；本輪無消失旗標，對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.325（11-14，自 2.1.323 起）新增 2 個候選旗標 `CLAUDE_CODE_DISABLE_EXPORTED_VARIABLE_PROMPT`、`CLAUDE_CODE_MCP_APPS_NO_TOOL_ROUTE`**，皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
@@ -78,6 +79,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_DESKTOP_RESULT_FIRST` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_DISABLE_LAYOUT_CHECK` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_DISABLE_PROXY_SCHEME_REPAIR` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_DISABLE_SHELL_HEAD_START` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_HOST_AUTH_ASK_AT_START` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_LAUNCHER_RUNS_API_KEY_HELPER` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_MCP_SERVE_MACHINE_PLUGINS` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_REMOTE_TOOLS_DESKTOP_APP_HOST` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_SHELL_HANDOVER_KEY` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
+| `CLAUDE_CODE_SPARE_DEFER_ALL_MCP` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
 | `CLAUDE_CODE_ARTIFACT_LIVE_WATCH` | 2.1.326（11-17） | 1 | — | — | 2.1.326 仍在（比對日 11-17） |
 | `CLAUDE_CODE_DISABLE_EARLY_KEY_GUARD` | 2.1.326（11-17） | 1 | — | — | 2.1.326 仍在（比對日 11-17） |
 | `CLAUDE_CODE_DISABLE_MCP_INDEX_ROOM_COUNT` | 2.1.326（11-17） | 1 | — | — | 2.1.326 仍在（比對日 11-17） |
@@ -189,7 +200,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_AUTO_MODE_EMAIL_SENDER_TURN` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
 | `CLAUDE_CODE_CCR_EARLY_SYNC_AFTER_SETTINGS_REFUSAL` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
 | `CLAUDE_CODE_CCR_EVENT_FLUSH_POLICY` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
-| `CLAUDE_CODE_CONSENT_POINTERLESS` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
+| `CLAUDE_CODE_CONSENT_POINTERLESS` | 2.1.306（10-21） | 4 | — | — | 2.1.327（11-18）消失（來源條目消失清單） |
 | `CLAUDE_CODE_ENTRYPOINT_ON_REQUESTS` | 2.1.306（10-21） | 1 | — | — | 2.1.306 仍在（比對日 10-21） |
 | `CLAUDE_CODE_ATTRIBUTION_PROJECT` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
 | `CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER` | 2.1.304（10-19） | 1 | — | — | 2.1.304 仍在（比對日 10-19） |
@@ -399,6 +410,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - `CLAUDE_CODE_HOLD_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_RETIRE_UNANSWERED_PARKED_PERMISSION`（2.1.274–2.1.276 之間，首見版本早於本頁基線，未曾單獨列於追蹤表）
 - `CLAUDE_CODE_ADOPT_UNDERIVABLE_PARKED_PERMISSION`（2.1.306–2.1.308 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
+- `CLAUDE_CODE_SPARE_KEEPS_BOOT_SESSION_ID`（2.1.326–2.1.327 之間消失，首見版本早於本頁追蹤範圍，未曾單獨列於追蹤表）
 
 ## 靜默表
 
@@ -415,6 +427,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-18 | 2.1.327 新增 10 個第一階候選旗標；2 設定類不列；消失 2 個：`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`；僅命中來源條目，暫不升二階 |
 | 2026-11-13 | 2.1.323 新增 13 候選旗標（9 設定類不列，消失 1，原未列表）；同日 Release 宣布 Code Mode，`EXPERIMENTAL_CODE_MODE` 系列升 3 階 |
 | 2026-11-09 | 2.1.321（自 2.1.319 起）新增 11 個第一階候選旗標（名單見追蹤表），無代號旗標；2 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |
 | 2026-11-06 | 2.1.319 新增 13 個候選旗標：12 第一階（名單見追蹤表）＋代號旗標 `CRYPTIC_HORIZON`；1 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |

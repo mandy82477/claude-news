@@ -32,13 +32,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **最新動態**（2026-11-17）
-> - **服務穩定性**：Anthropic Status 新增「部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App」事故，見 [[entities/claude-code-known-issues]]。
-> - **已知問題新增**：瀏覽器 OAuth 登入流程回 500 錯誤並 15 秒逾時（#44271）；MCP OAuth Entra ID 驗證失敗（#52871）互動數更新，見 [[entities/claude-code-known-issues]]。
-> - **版本**：v2.1.326 新增啟用 agent teams 時可同時開 Code Mode 的支援；SDK 新增計費相關 beta 參數與錯誤碼，見 [[entities/claude-code-releases]]。
+> **最新動態**（2026-11-18）
+> - **版本**：v2.1.327 新增 `/install-github-app` 確認提示與 `claude mcp add-json -`（stdin 讀 JSON），見 [[entities/claude-code-releases]]。
+> - **已知問題新增**：VS Code 擴充套件遺失對話紀錄（#29017）與重新命名分頁請求（#11145）；Max 方案 1M context 誤判需額外付費（#45390），見 [[entities/claude-code-known-issues]]。
+> - **服務穩定性**：Google Docs connector 編輯錯誤已解決（claude.ai／Code／Cowork），見 [[entities/claude-code-known-issues]]。
+> - **桌面版**：新增 release channel 版本頻道設定；文件新增內建 Claude Code 版本超過組織上限時的提示訊息，見 [[entities/claude-code-features]]。
 
 ---
 
@@ -48,9 +49,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-17 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-17 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-15 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-18 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-18 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-18 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
 ## 現在還沒修好的
@@ -78,7 +79,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.326**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
+- 最新 **v2.1.327**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
 - **該不該升**：**Monitor tool 已進 stable**（2.1.310），沒用 Opus 4.8 fast mode 的人留在 stable 就夠；只有要寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**

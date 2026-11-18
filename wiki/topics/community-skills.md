@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-15
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **Skills 設計新增交易技能合集，8 天暴增 1,647 星**（2026-11-15）
-> - **claude-trading-skills**：市場分析、技術圖表、篩股器與交易策略開發 skills 合集；commit 記錄顯示多名貢獻者持續開發，非單純灌星。
+> **可靠性測試新增 QA 證據鏈工具：canary**（2026-11-18）
+> - **canary**：Claude Code 專用 QA harness，測試失敗時附螢幕錄影、console log、network HAR 與 Playwright trace 的完整證據鏈。
 ---
 
 ## 摘要
@@ -94,6 +94,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### 0xnyn/canary：QA harness 搭配螢幕錄影、console log、network HAR 與 Playwright trace 的完整證據鏈（2026-11-18）
+
+- **主線：** —
+- **核心模式：** 專為 Claude Code 寫的端對端測試打造的 QA harness，測試失敗時附上螢幕錄影、console log、network HAR 與 Playwright trace 的完整證據鏈；GitHub Search 500 星。
+- **與既有模式的關係：** 補上「可靠性測試」既有代表技巧（Caliper pass@k 量測、Skill Linter 等，[[topics/community-skills#2026-11]]）一個「失敗證據鏈」取向——既有做法多判斷失敗原因或量化分數，本則補齊失敗當下可重現的完整證據；主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（500★），無 forks／issues／近期 commit 佐證可查，未另行查證。
+- **來源：** GitHub Search；[GitHub](https://github.com/0xnyn/canary)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### tradermonty/claude-trading-skills：股票與交易專用 Claude Code skills 合集，8 天內暴增 1,647 星（2026-11-15）
 

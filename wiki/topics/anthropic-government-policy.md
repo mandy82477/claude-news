@@ -3,8 +3,8 @@ page: "topics/anthropic-government-policy"
 kind: "topic"
 status: "ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）"
 domain: "🏛️ 政策/安全"
-last_updated: "2026-11-17"
-last_news_update: "2026-11-17"
+last_updated: "2026-11-18"
+last_news_update: "2026-11-18"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
@@ -28,13 +28,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing（出口管制已結案；八條政府線在動，其中三條已經改到讀者手上的 Claude）
 **領域：** 🏛️ 政策/安全
 **開始日期：** 2026-05-01
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 %% 拆頁評估 2026-10-25：不拆，理由＝分得出群但每群太薄（<150 行）。全列各節所答：摘要／現在有哪幾條線在動／誰在動／政府動作對你的產品做了什麼／根本矛盾／三個戰場＝「政府對 Claude 做了什麼」的結論層（約 262 行，一個故事，不可再分）；攻防紀錄 172＋時序 366 為事件流，依主題粗估可分三群（含結論層相關列）：軍事／五角大廈／聯邦採購約 106 行、出口管制／中國／蒸餾／地區約 127 行、立法／遊說／監管調查約 158 行，只有立法群過 150，其餘兩群併鄰群後仍與其交錯（中國線同時跨出口管制、蒸餾、香港），且 134＋43 行無法歸群；下次蒸餾 2026-07～08 時段後再量。 %%
 
-> **監管俘獲質疑升溫**（2026-11-17）
-> - **METR 獨立性遭質疑**：HN 推文指控 Anthropic 藉資助 METR 形成監管俘獲，稱經 Good Ventures 持逾 70 億美元股票；單一推文、未經證實。
-> - **軍事誤判風險**：Bloomberg 稱 Anthropic 與其他廠商模型測試中常把民間人士誤判為軍事目標，方法與樣本量未載。
+> **遊說支出細節浮出**（2026-11-18）
+> ZeroHedge（經 HN，99 分）報導 Anthropic 兩家遊說公司持續活動於國務卿 Rubio 任內辦公室，其中一家已付 74 萬美元，兩家合計 163 萬美元，客戶名單列 NSC。
 >
 > 詳見 [[topics/anthropic-government-policy#攻防紀錄]]。
 ---
@@ -135,7 +134,8 @@ S-1 寫了哪些風險、誰能叫停、與既有承諾對得上多少。下表�
   - 阿里巴巴仍未提出詳細公開反駁，僅 Global Times 引述中國學者稱指控缺乏實據、屬「科技霸權焦慮」
 - **10-13 中國線新增**：Anthropic 發布防禦性蒸餾研究，稱新方法已讓蒸餾者從 Claude 竊得的資料量減少約 90～99%；The Decoder 稱蒸餾式推理 token 竊取「減少高達 99%」，落在官方區間上緣（[Anthropic 研究](https://www.anthropic.com/research/distillation-defenses)、[The Decoder](https://news.google.com/rss/articles/CBMizwFBVV95cUxObDFIVHFpeHdyaFNHR192aEFSU2Y0RjRhYktNYU1rNHJaYkMxYjlIaTYzU0RwSDY1T3BhRVVZVEx5c0xocHV1cVF4bkhpY2txVjF0OXI4ckczZmVTYVk4NVhuT0x2U0ZheEZEdkNzTUc4dENTOEtrdFJKODdObU0xYTNpaGtKUE03YjMzb1YwQ3ZwcEZBX1dQWGZVUWh4UG9oc08zV0dTV3hfa0IyYkxETG42WUNoQ1FRbkZJUUFkRHFKOUlOMUxTZ0NKODYyNWc?oc=5)）
 - **11-13 中國線新增**：Technology Org（經 Google News）報導 Anthropic 收緊 Claude 在中國的存取規則；具體條款與生效日期均未見報導，僅標題可用，與 11-12 帳號封禁規則報導（見「## 攻防紀錄」）是否為同一事件未見報導，並陳記錄
-- **Anthropic 的政治與遊說佈局**：08-28 麻州州議會獻金與遊說支出增加（The Boston Globe），延續「州級 AI 規則倡議」；Dario Amodei 與員工捐逾 300 萬美元予 PAC「Public First」，與公司 4000 萬美元予 Public First Action 屬同體系兩法律實體。距今最後動態 08-28，未列入上表，此處續留追蹤。
+- **Anthropic 的政治與遊說佈局**：08-28 麻州州議會獻金與遊說支出增加（The Boston Globe），延續「州級 AI 規則倡議」；Dario Amodei 與員工捐逾 300 萬美元予 PAC「Public First」，與公司 4000 萬美元予 Public First Action 屬同體系兩法律實體。距今最後動態 11-17，未列入上表，此處續留追蹤。
+- **11-17 新增**：ZeroHedge（經 HN，99 分）報導，Anthropic 兩家遊說公司持續活動於國務卿 Rubio 任內辦公室，其中一家（由 Rubio 前參議院幕僚長主持）自 2025-04 起已付 74 萬美元，兩家合計 163 萬美元；一份報告列其 4–6 月客戶名單含國家安全會議（NSC），單一媒體報導。
   %% 09-27 讓位給澳洲參議院AI調查聽證會線（表滿載） %%
 - **澳洲參議院AI調查聽證會**：09-27 至少 4 個來源報導傳喚 OpenAI、Anthropic 執行長出席聽證會；09-28 Reuters／The Guardian 報導兩公司確認不出席 10 月 1 日聽證會，衛報將此與 OpenAI 遭駭事件餘波並提；具體法律強制力與衛報所稱關聯均未見報導。與既有「澳洲著作權遊說」線（07-13 起）當事國相同、議題不同，是否同一佈局待後續釐清。
 - **英國測試機構模型存取受限**：Politico（09-24）與 Bloomberg（09-25）跨媒體報導白宮要求 OpenAI、Anthropic 暫緩向英國測試機構提供新模型，待美方完成審查，僅標題可用。與 09-09「未依 AISI 要求提交 Mythos 5.1」時間相近，惟兩則報導未建立因果關係，暫不合併。
@@ -320,6 +320,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 
 | 日期 | 方 | 動作 | 效果 |
 |------|----|------|------|
+| 2026-11-17 | 🏢 | ZeroHedge（經 HN，99 分）：Anthropic 兩家遊說公司持續活動於國務卿 Rubio 辦公室，其中一家自 2025-04 起已付 74 萬美元，兩家合計 163 萬美元 | 一份報告列其 4–6 月客戶名單含國家安全會議（NSC）；單一媒體報導，具體遊說內容與是否影響政策未見報導，詳見「線的細節」政治與遊說佈局段落 |
 | 2026-11-17 | 🌐 | Bloomberg：Anthropic 與其他廠商 AI 模型在測試中經常把民間人士誤判為軍事目標 | 測試方法、樣本量與具名研究機構均未見報導，僅標題可用；風險若屬實呼應「## 三個戰場」🪖 軍事合約段落護欄爭議 |
 | 2026-11-17 | 🌐 | Hacker News（kevinnbass 推文，135 分）：指控 Anthropic 透過資助 METR 形成監管俘獲，稱 METR 經 Good Ventures 持逾 70 億美元 Anthropic 股票而無法獨立評估風險 | 單一推文、未經證實；與既有 09-19 NY Post 監管俘獲質疑同屬一條敘事，METR 獨立審查脈絡見 [[topics/ai-eval-boundary-incidents#技術彙整]] |
 | 2026-11-17 | 🌐 | The Atlantic（經 HN 轉載，19 分）：評論質疑 Anthropic 一邊強調 AI 風險、一邊衝 IPO 募資的矛盾，留言區質疑安全論述為政府合約鋪路 | 評論文章非新事實披露，呼應「## 根本矛盾」既有論述；合約鋪路主張無佐證，僅留言層級推測 |
@@ -564,6 +565,7 @@ Anthropic 的整個品牌建立在一個論述上：「我們建造了史上最�
 > 每行開頭符號：🏛️ 政府或法院／🏢 Anthropic／🌐 媒體與社群。
 
 ### 2026-11-17
+- **[🏢] ZeroHedge（經 Hacker News，99 分）：Anthropic 兩家遊說公司持續活動於國務卿 Rubio 任內辦公室**：其中一家（由 Rubio 前參議院幕僚長主持）自 2025-04 起已付 74 萬美元，兩家合計 163 萬美元；一份報告列其 4–6 月客戶名單含國家安全會議（NSC），單一媒體報導，詳見「## 攻防紀錄」、「線的細節」政治與遊說佈局段落
 - **[🌐] Bloomberg：Anthropic 與其他廠商 AI 模型在測試中經常把民間人士誤判為軍事目標**：測試方法、樣本量與具名研究機構均未見報導，僅標題可用，呼應「## 三個戰場」🪖 軍事合約段落，詳見「## 攻防紀錄」
 - **[🌐] Hacker News（kevinnbass 推文，135 分）：指控 Anthropic 透過資助 METR 形成監管俘獲**：稱 METR 經 Good Ventures 持逾 70 億美元 Anthropic 股票而無法獨立評估風險；單一推文、未經證實，與既有 09-19 NY Post 監管俘獲質疑同屬一條敘事，詳見「## 攻防紀錄」
 - **[🌐] The Atlantic（經 HN 轉載，19 分）：評論質疑 Anthropic 一邊強調 AI 風險、一邊衝 IPO 募資的矛盾**：留言區質疑安全論述為政府合約鋪路，僅留言層級推測，呼應「## 根本矛盾」，詳見「## 攻防紀錄」

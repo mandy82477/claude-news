@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-17）
-> 桌面版文件新增側邊欄將 Connectors 與 Plugins 整合進同一個 Plugins 目錄入口（選 Plugins → Browse plugins，或缺入口時選 Manage plugins）。
+> **最新動態**（2026-11-18）
+> 桌面版文件新增「內建 Claude Code 版本比組織上限還新」的提示說明；Claude Desktop 新增 release channel 版本頻道設定（Stable 頻道維持現狀），見 [Help Center](https://support.claude.com/en/articles/12138966-release-notes)。
 
 ---
 
@@ -65,6 +65,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Claude Artifacts 負向對照（訊號待驗）**：Show HN「r3, A local alternative to Claude Artifacts」（2026-09-26）主張本地替代方案優於官方 Artifacts；僅單一 HN 貼文、2 分，未附測試方法或具體指標，證據不足
 - **1Password 整合已確認**（查證日 2026-09-20，[Claude Help Center](https://support.claude.com/en/articles/15936181-get-started-with-1password-for-claude)）：「1Password for Claude」為 beta 功能，適用 Pro／Max／Team／Enterprise 付費方案，僅支援 macOS 版 Claude Desktop；於 Desktop「設定 > Connectors」連結 1Password 後，Claude 遇到登入頁面時向 1Password 請求憑證，1Password 顯示欲使用的項目並經生物辨識確認，憑證由 1Password 直接填入頁面，密碼與一次性驗證碼皆不進入模型的 context、記憶體或 Anthropic 系統；Team／Enterprise 組織預設關閉，須由 Owner 於組織設定手動開啟。
 - **官方文件新增頁：Claude Code 接 Google Cloud（Anthropic managed）模型**（[文件索引](https://code.claude.com/docs/llms.txt) 新增 [claude-models-on-google-cloud-anthropic-managed.md](https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md)，2026-11-14）：具體設定步驟與可用範圍未載（僅標題可用）。
+- **Claude Desktop 新增 release channel 版本頻道設定**（[Help Center Release Notes](https://support.claude.com/en/articles/12138966-release-notes)，2026-11-17）：可選擇更新時走哪個版本頻道，Stable 頻道維持現狀；同一批文件移除「Organize your tasks with projects in Claude Cowork」一段。
 - ❓ **待查證**（標 2026-11-07｜查 Claude Code model configuration｜複 2026-11-21｜訊 2026-11-15）｜**模型設定段落再變**：11-09 新增「model/effort/thinking」段；切換說明改指 Opus 5／5.5（原 Fable），疑搬移非功能。
   - 11-10 該段與切換說明再被移除，內容仍未載。
   - 11-15 再新增「Claude Code model configuration」與「為何對話中換成 Opus 5／5.5」兩段，同時移除「切換模型、effort 與 thinking 設定」與「訓練資料多新」兩段；段落在新增／移除間反覆第三次，具體設定內容仍未載。
@@ -84,6 +85,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 09-25：本機與 SSH session 自動載入帳號已啟用的 skills／plugins。
 
 **dev box 與受管裝置**
+- 11-18：桌面版內建 Claude Code 版本比組織設定上限還新時，顯示提示訊息。
 - 11-12：管理員提醒——`forceLoginOrgUUID` 不宜單獨搭配 Console 組織 ID。
   - `browserExternalPageTools`、`disableMobileSimulatorTools`、`disableBrowserExternalNavigation` 三設定需新版 Claude Desktop（`disableMobileSimulatorTools` 首見 09-14）。
   - 預覽不執行腳本，腳本繪製的圖表／表格會空白（同 11-09）。
@@ -125,6 +127,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-18）：桌面版文件字數由 226,602 增至 227,103，新增內建 Claude Code 版本比組織設定的上限還新時顯示的提示訊息說明（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-17）：桌面版文件字數由 226,194 增至 226,602，新增 12 段、移除 6 段（移除段落未載）。
   - **新增內容**：側邊欄的 Plugins 入口現同時列出 connectors 與 plugins，選 **Plugins** 見 **Browse plugins**（或 **Manage plugins**），選 **Connectors** 見 **Browse connectors**（原文另列 7 段未附）（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-14）：桌面版文件字數由 226,189 增至 226,194，新增 3 段、移除 4 段（移除段落未載）。
