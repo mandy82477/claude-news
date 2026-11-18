@@ -220,8 +220,8 @@
     }
   },
   "https://code.claude.com/docs/en/desktop.md": {
-    "hash": "4f8206460d777f0f298eedde2c2603bdd18558841b4182603470bcb55549dff3",
-    "length": 226602,
+    "hash": "29b485b52c611b3bda97c8b8af7c46f2a2408ee1a84702cf0bca94ffe0781cdc",
+    "length": 227103,
     "seg_hashes": [
       "0094d4b978",
       "00a7ec8a8f",
@@ -882,6 +882,7 @@
       "80d2b96169",
       "80e2729290",
       "8119b74944",
+      "814f4a54b2",
       "819c39c648",
       "81e341c063",
       "825316178c",
@@ -1304,6 +1305,7 @@
       "cdba9c69d5",
       "cdbf0e0fd0",
       "ce39129f22",
+      "ce7a1220a8",
       "ce85690647",
       "ce8cb5036c",
       "ce8ce2a8ce",
@@ -1917,8 +1919,8 @@
     ]
   },
   "https://platform.claude.com/docs/en/about-claude/pricing": {
-    "hash": "bfe071ac2313fcaeb6c434b2b908f7e53ae929d7f39dc499fc9d95b76d6da2e5",
-    "length": 30563,
+    "hash": "31ea87849a4c502841c7079cc10ed878a195c354b5b0006aaf8c9fc0c81eeb30",
+    "length": 30567,
     "segments": [
       "\"cache_creation_input_tokens\" : 0 ,",
       "\"cache_creation_input_tokens\" : 7345 ,",
@@ -2260,7 +2262,7 @@
       "text_editor_20250728 (Claude 4.7 and later models and Claude Mythos Preview) 974 tokens",
       "tool_result content blocks in API requests",
       "tool_use content blocks in API requests and responses",
-      " API reference  English   Console Log in   Search Ctrl K Models Models overview Claude Fable 5.2 Claude Opus 5.5 Claude Sonnet 5.5 Claude Haiku 5.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing API credits for subscribers System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
+      " API reference  English   Console Log in   Search ⌘ K Ctrl K Models Models overview Claude Fable 5.2 Claude Opus 5.5 Claude Sonnet 5.5 Claude Haiku 5.5 Specialized models  Legacy models  Guides Choosing a model Optimizing for cost and intelligence Upgrade between model versions Lifecycle and reference Model IDs and versioning Model deprecations Model cards Pricing API credits for subscribers System prompts  Console Models &amp; pricing  Lifecycle and reference Pricing",
       " Copy page  Learn about Anthropic’s pricing structure for models and features",
       " Copy page  This page provides detailed pricing information for Anthropic’s models and features. All prices are in USD.",
       " Additional notes All other models use the standard 0.1x multiplier. Claude 4.7 and later models and Claude Mythos Preview use a newer tokenizer that contributes to their improved performance on a wide range of tasks. This tokenizer produces approximately 30% more tokens for the same text. The exact increase depends on the content and workload shape. Claude Sonnet 4.6 and earlier models use the previous tokenizer.",
@@ -2655,8 +2657,8 @@
     ]
   },
   "https://support.claude.com/en/articles/12138966-release-notes": {
-    "hash": "68d8a6f6cb10f551ab15ecb9df46364af2e441ed59a2d29c419a6b2daa9eb096",
-    "length": 32909,
+    "hash": "901f46f115afb3c9ca691d00af99eaaabceac16ca6ac14ae19dfe5ede5cae308",
+    "length": 33290,
     "segments": [
       "/security-review command",
       "/slash commands: Save your best-working prompts as shortcuts (/slash commands) and reuse these proven workflows instantly without retyping instructions to Claude.",
@@ -2696,6 +2698,8 @@
       "August 6, 2025",
       "August 6, 2026",
       "Build plugins for Claude",
+      "Change the model, effort, and thinking settings",
+      "Choose a release channel in Claude Desktop",
       "Claude API and Console",
       "Claude Code Security Reviews",
       "Claude Code access added to Team plan Standard seats",
@@ -2851,6 +2855,7 @@
       "New security and admin controls for Enterprise plans",
       "Note: Refer to our docs for historical release notes.",
       "November 12, 2026",
+      "November 17, 2026",
       "November 2025",
       "November 24, 2025",
       "November 5, 2026",
@@ -2863,7 +2868,6 @@
       "October 7, 2026",
       "On this page November 2026",
       "Opus 4 and 4.1 deprecated from Claude and Claude Code",
-      "Organize your tasks with projects in Claude Cowork",
       "Our latest model, Claude Opus 4.7, is now generally available. Opus 4.7 shows improvements in software engineering and complex, long-running coding tasks, as well as better vision, allowing it to see images in higher resolution. For more information, see our blog post: Introducing Claude Opus 4.7 .",
       "Personal Finance in Claude",
       "Powered by Haiku 4.5: Claude in Chrome now defaults to Haiku 4.5 so it’s a faster, more responsive experience. You can always switch back to Sonnet 4.5.",
@@ -2976,6 +2980,7 @@
       "You can now ask for a design, deck, or document in any conversation with Claude, including in Claude Code and the Artifacts tab, and edit it with Claude or directly as you work. Claude Design works inside your conversations with all of its features, including on-canvas editing and importing your design system. Claude Slides gives presentations their own starting point, and Claude Docs is a new way to write living documents with Claude and your team. Artifacts, including Claude Design, Claude Slides, and Claude Docs, are available on every plan, including Free. On Enterprise plans, Claude Design, Claude Slides, and Claude Docs are in beta. Learn more in What are artifacts and how do I use them? and Get started with Claude Docs .",
       "You can now manage HIPAA readiness for your Claude organizations yourself. This applies to both Claude Enterprise and the Claude Platform (API). In each product, an eligible admin can review the Business Associate Agreement (BAA), download the implementation guide, and enable the HIPAA configuration in a single flow. For more information, refer to HIPAA-ready Enterprise plans and HIPAA readiness for Claude API .",
       "You can now submit plugins to the Claude directory through a new developer portal, track them through review, and see usage analytics once they’re live. For more information, see our blog post: Build plugins for Claude .",
+      "You can now use a release channel to set which version of Claude Desktop you get when the app updates. Stable stays the default and gets new versions less often, after more testing. Latest gets a new version about once a day, so fixes and new features reach you sooner. For more information, see Choose a release channel .",
       "Your monthly recap is a new feature at Settings &gt; Reflect that shows you the topics you spent time on, your most active day and peak hour, and observations about how you work with Claude. It&#x27;s in beta on Free, Pro, and Max plans on the web and Claude Desktop, and requires memory to be on. Alongside it, Settings &gt; Time and focus lets you set optional break reminders and quiet hours. For more information, refer to See your monthly recap and Set break reminders and quiet hours ."
     ]
   }
