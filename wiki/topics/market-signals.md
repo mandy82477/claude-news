@@ -30,20 +30,21 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-09-05
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 **蒐集邊界：** 本頁只讀本庫日報——也就是以 Anthropic 為中心的消息面（官方公告、企業合作、融資與定價、社群實測）。因此三件事會漏：與 Anthropic 無關的產業消息不在範圍；利空型消息（財測下修、客戶流失）的覆蓋明顯弱於利多；沒有籌碼面與技術面資料。消息本身也慢一天——本庫抓料到日報有約一天延遲，盤中即時反應追不上。
 
 > ⚠️ **教學型事件研究，非投資建議**
 > 本頁把消息面事件拆成分析師的六個問題練習判讀，不推薦任何標的、不下買賣指令。作者非持牌投資顧問，讀者自負決策責任。
 
-> **最新判讀**（2026-11-17）
-> - **Bloomberg：IPO 定價傳指引至區間頂端或以上**：估值上看 1.4 兆美元，低於 11-09 Morningstar 估的 1.7 兆美元（見 [[topics/market-signals-ipo]]）。
-> - **Altimeter：認購倍數傳達 10-20 倍超額**：較 11-16 約七倍大幅上修，單一具名機構說法（見 [[topics/market-signals-ipo]]）。
+> **最新判讀**（2026-11-18）
+> - **CNBC／NYT：IPO 定價進入最後階段，傳考慮加碼發行規模**：仍為消息人士轉述，與 11-17 指引至頂端或以上同方向（見 [[topics/market-signals-ipo]]）。
+> - **TechCrunch：S-1 揭露 Amazon 持股約 14.7%、與 Google 合計近 30%**：部分來自換股價僅 $2.09～5.05 的可轉換票面（見 [[topics/market-signals-ipo]]）。
+> - **ZeroHedge：Anthropic 兩家遊說公司活動於國務卿 Rubio 辦公室，合計 163 萬美元**：客戶名單列國家安全會議（見 [[topics/market-signals-legal]]）。
 >
-> 前一輪（2026-11-16）：
-> - **CNBC：Altimeter 的 Brad Gerstner 宣布投入 50 億美元認購 IPO**：本線首次出現具名投資人公開承諾具體認購金額（見 [[topics/market-signals-ipo]]）。
-> - **Yahoo Finance：路演認購倍數由約六倍升至約七倍**：價格區間與 11-19 掛牌時程未變（見 [[topics/market-signals-ipo]]）。
+> 前一輪（2026-11-17）：
+> - **Bloomberg：IPO 定價傳指引至區間頂端或以上**：估值上看 1.4 兆美元（見 [[topics/market-signals-ipo]]）。
+> - **Altimeter：認購倍數傳達 10-20 倍超額**：較 11-16 約七倍大幅上修（見 [[topics/market-signals-ipo]]）。
 
 ---
 
@@ -64,9 +65,9 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 | 標的 | 跟 Anthropic 的關係 | 相關判讀（所在子頁見「近期判讀」表） | 現在方向 | 下一個催化劑 |
 |---|---|---|---|---|
 | Salesforce（NYSE: CRM） | 合作夥伴，「Claudeforce」深度整合進 CRM | 08-26 Claudeforce 一則 | 📈 正面，動到全年營收預測 | 下一份季報是否拆分 Claudeforce 貢獻 |
-| Alphabet（NASDAQ: GOOGL） | Anthropic 的投資人，持股佔市值極小，買它幾乎等於沒曝險；亦為 09-19 反壟斷合謀訴訟被告之一；09-30 招股書外流稱與 Amazon 合計為 Anthropic 近半營收來源（金額對 Alphabet 自身財報不具重大性） | IPO 線、09-19／09-22 反壟斷訴訟、09-30 客戶集中度、10-13 Gemini 4 Argon 競品定價、10-26 1140億Google雲端承諾、11-02 8950億總額、11-13 AI軍備競賽凍結訴訟共八則被點到 | ⚖️ 兩面，S-1/A 總承諾升至 8,950 億美元，持股與客戶集中度精確比例仍未揭露 | Anthropic 公開版 S-1 揭露持股與客戶集中度精確比例；8,950 億美元總額與先前口徑關係是否釐清；AI軍備競賽凍結訴訟是否進入實質審理 |
+| Alphabet（NASDAQ: GOOGL） | Anthropic 的投資人，IPO 後約與 Amazon 合計持股近 30%（Google 自身比例未單獨列出）；亦為 09-19 反壟斷合謀訴訟被告之一 | IPO 線、反壟斷訴訟、客戶集中度、Gemini 4 競品定價、雲端承諾、11-13 AI軍備競賽凍結訴訟、11-18 雲端夥伴持股揭露共九則被點到 | ⚖️ 兩面，11-18 持股比例首度揭露但未單獨列出 Google 份額，部分來自低換股價可轉換票面 | 可轉換票面具體條款與 Google 自身持股比例是否單獨揭露；8,950 億美元總額與先前口徑關係是否釐清；AI軍備競賽凍結訴訟是否進入實質審理 |
 | Reddit（NYSE: RDDT） | 原告，對 Anthropic 提起資料爬取／授權訴訟，聯邦法官裁定大部分可續行 | 09-19 Reddit 資料訴訟一則 | ⚖️ 兩面 | 具體裁定理由與被駁回部分披露；雙方是否進入和解談判 |
-| Amazon（NASDAQ: AMZN） | 投資人，持股佔市值極小，非訴訟被告；09-30 招股書外流稱與 Google 合計為 Anthropic 近半營收來源（金額對 Amazon 自身財報不具重大性） | IPO 線與 09-30 客戶集中度共兩則被點到、10-26 S-1 揭露 1100 億美元 AWS 雲端承諾、11-02 總額升至 8,950 億美元共三則被點到 | ⚖️ 兩面，S-1/A 總承諾升至 8,950 億美元，持股與客戶集中度精確比例仍未揭露 | 持股與客戶集中度精確比例是否揭露；8,950 億美元總額與先前口徑關係是否釐清 |
+| Amazon（NASDAQ: AMZN） | 投資人，IPO 後約持股 14.7%，部分來自換股價僅 $2.09～5.05 的可轉換票面；非訴訟被告 | IPO 線與 09-30 客戶集中度、10-26 S-1 揭露 1100 億美元 AWS 雲端承諾、11-02 總額升至 8,950 億美元、11-18 雲端夥伴持股揭露共四則被點到 | ⚖️ 兩面，11-18 持股比例首度揭露為 14.7%，低換股價可轉換票面稀釋其他股東 | 可轉換票面具體條款是否披露；8,950 億美元總額與先前口徑關係是否釐清 |
 | Nvidia（NASDAQ: NVDA） | 既有投資人＋硬體供應商，傳洽談加碼投資 IPO；10-30 另傳洽談為 Nscale 與 Anthropic 雲端協議提供信用支持；持股佔市值極小 | 09-12 Nvidia 洽談投資 IPO 一則；10-30 Nscale 信用支持洽談一則 | 〰 未定 | Nvidia 官方證實／否認（IPO 投資）；信用支持洽談對象、金額與條件是否披露 |
 | Novo Nordisk（NYSE: NVO） | 具名客戶，採用 Claude 加速藥物研發，合約範疇與費用未揭露 | 09-16 諾和諾德具名採用一則 | 〰 未定 | 合約範疇與費用披露；財報是否提及成本效益 |
 | JPMorgan Chase（NYSE: JPM） | 具名客戶，導入 Claude 並設 2,000 美元支出上限與額外安全管控 | 09-17 摩根大通導入一則 | 〰 未定 | 更多受監管金融機構是否跟進；上限適用範圍與席位數是否披露 |
@@ -92,6 +93,8 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 其他具名採用 Claude 的上市公司（ICON、Globant、Rubrik 等）的採用事實在 [[topics/enterprise-tool-tracker]]，目前都沒有帶金額的消息，本頁未判讀。
 
+**細節（Amazon／Google 列）**：11-18 TechCrunch 披露申報文件細節，稱 IPO 後 Amazon 約持股 14.7%、與 Google 合計近 30%，部分來自換股價僅 $2.09～5.05 的可轉換票面，條款與 Google 單獨比例未見報導，見 [[topics/market-signals-ipo#💰 TechCrunch：S-1 揭露 IPO 後 Amazon 持股約 14.7%、與 Google 合計近 30%，部分來自低換股價可轉換票面（2026-11-18）]]。
+
 **細節（Microsoft 列）**：10-09 Azure Marketplace 轉售帳務爭議案例，見 [[topics/anthropic-business-risks#還沒過去的風險]] 細節區。
 
 **細節（Schwab 列）**：11-13 Schwab 自建 MCP 伺服器並跨入 agentic AI，RIABiz 稱動搖 Anthropic 作為其獨家 LLM 供應商的地位，報導未附時程、目前僅排除 RIA，見 [[topics/market-signals-customers#💰 RIABiz：Schwab 自建 MCP 伺服器並跨入 agentic AI，稱動搖 Anthropic 獨家 LLM 供應商地位（2026-11-13）]]。
@@ -104,8 +107,8 @@ Anthropic 的消息放進市場框架怎麼讀：它動到哪個數字、碰到�
 
 | 你想知道 | 去哪頁 | 最新一則 |
 |---|---|---|
-| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-17 Bloomberg 定價傳指引至頂端或以上；Altimeter 稱認購 10-20 倍超額 |
-| 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-13 Mythos 商標侵權提告；非營利組織提告要求凍結「AI 軍備競賽」 |
+| IPO 走到哪一格、外流與 S-1 的數字該打幾折、評等怎麼看 | [[topics/market-signals-ipo]] | 11-18 CNBC／NYT：傳考慮加碼發行規模；TechCrunch：S-1 揭露 Amazon 持股約 14.7%、與 Google 合計近 30% |
+| 官司、機關調查、政府採購會不會寫進風險因素 | [[topics/market-signals-legal]] | 11-18 ZeroHedge：兩家遊說公司活動於國務卿 Rubio 辦公室，合計 163 萬美元，客戶列 NSC |
 | 誰借錢給 Anthropic 買算力、條件多貴 | [[topics/market-signals-compute]] | 11-11 新增逾 100 億美元 Microsoft、Google 合約，Lambda 交易可能取消 |
 | 價格怎麼改、客戶誰進誰出、對手怎麼比價 | [[topics/market-signals-customers]] | 11-13 Schwab 自建 MCP 跨入 agentic AI，報導稱動搖獨家 LLM 地位 |
 | 學過哪些課、未上市的消息線各走到哪 | [[topics/market-lessons]] | 每週更新 |
