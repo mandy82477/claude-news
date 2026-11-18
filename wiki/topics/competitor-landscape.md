@@ -28,15 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-17）
-> - 🟡 **GitHub Copilot 11-16 正式停用 Chat、inline edits、ask／agent 模式與 code completions 多數體驗的一批舊模型**（Blog/GitHub Copilot Changelog）——習慣這些模型的 Copilot 使用者，這幾天該重新確認常用模型還能不能叫到。
+> **本週衝擊**（2026-11-18）
+> - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
 > - 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。
-> - 🟡 **OpenAI 11-17 發布 GPT-6.2 Astra／Sol，稱 ChatGPT Work、Codex、API 全面降成本並提升程式能力與 computer use**（OpenAI 官方）——暫缺 benchmark 分數與對 Claude 的價格對照，評估模型選型的人留意後續查證數字。
+> - 🟡 **GPT-6.2 Astra 確認 input $8／Mtok（為前代 6 Astra 八折），Sol 與完整 output 價未見**（Blog/Simon Willison；同日全面上線 GitHub Copilot）——評估換模型的人多一個輸入價基準，但頭對頭成本仍待 output 價補齊。
 
 ---
 
@@ -50,10 +50,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
+| **Microsoft／GitHub** 🏢 | 11-17 Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5% → 若屬實，成本敏感團隊有理由重算預算 | 定價 | 🔴 | 廠商自稱＋ZDNET／GeekWire／Kingy AI 轉述，缺官方牌價與第三方跑分，5% 為概估比例非 $ 數字 |
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
-| **Microsoft／GitHub** 🏢 | 11-17 Copilot Fusion 擴大可用模型與平台覆蓋，公布兩項 Terminal-Bench 排行榜成績 → 跨模型路由選型的人多兩筆可查證分數 | 能力 | 🟡 | GitHub Copilot Changelog 官方一手來源；具體名次與分數未列全，僅標題可用 |
 | **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對外開放，上線價 $2／$10，12-01 起翻倍 $4／$20＝Opus 5.5 牌價 → 12-01 前是比價窗口，之後同價 | 定價 | 🔴 | DeepMind 官方一手；價格僅 Simon Willison 轉述（VentureBeat 標題同向），官方牌價頁未查證；基準細節未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.2 Astra／Sol）** 🏢 | 11-17 發布 GPT-6.2 Astra／Sol，官方稱 ChatGPT Work、Codex、API 全面降成本並提升專業輸出、程式能力與 computer use → 升級後規格與對 Claude 的價格對照待查 | 能力 | 🟡 | 官方發布稿一手；benchmark 分數與對 Claude 的價格對照均未列 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.2 Astra／Sol）** 🏢 | 11-17 發布 GPT-6.2 Astra／Sol，官方稱 ChatGPT Work、Codex、API 全面降成本並提升專業輸出、程式能力與 computer use → 升級後規格與對 Claude 的價格對照待查 | 能力 | 🟡 | 官方發布稿一手；Simon Willison 轉述確認 Astra input $8/Mtok（為 6 Astra 八折），output 數字未完整引用，對 Claude 的完整頭對頭價格仍缺 |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
 | **Cursor** 🏢 | 10-27 把自家 coding agent 包成 TypeScript SDK，開放任何人在自己程式裡呼叫建置 → 從「工具」升級為可嵌入他人產品的平台，評估自建 agent 的人多一個選項 | 生態 | 🟡 | Startup Fortune 單一來源，僅標題可用，SDK 能力範圍與定價未載 |
@@ -105,14 +105,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Muse Code / Muse Spark 1.2 / Muse Glimmer（Meta）| 按量計費：標準層 $1.25／$4.25、Contributor 層 $0.10／$0.20（每 M token）；Glimmer 開源免費 | 標準層≈0.43×、Contributor 層≈0.02×（對 Sonnet 5.5 $10/Mtok 輸出）；Glimmer 免費 | 明確對標 Claude Code 與 Codex，第一步策略是價格而非能力 | 2026-09-01（定價數字為媒體整理，2026-08-13 查證）|
 | DeepSeek（V4-Pro／V4 Flash／Lindy 案例）| 官方查證：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，每 M token，快取未命中；尖峰時段雙倍）；V4 Flash（官方頁列「DeepSeek-Flash」）輸入 $0.15／輸出 $0.60（離峰） | V4-Pro 輸出≈0.198×、V4 Flash 輸出≈0.06×（對 Sonnet 5 $10/Mtok 輸出，離峰價） | 低價 Flash／高價 Pro 雙軌已證實；Lindy 全量切換每月省數百萬美元 | 2026-08-14 上線（Google News/VentureBeat）；定價 2026-09-20 查證（[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）|
 | Alibaba Qwen3.8-Max（已查證 ⟨Q-03⟩）| 免費開放權重（Hugging Face／ModelScope） | 免費（無倍數可算） | 2.4 兆參數（95B 啟用），Terminal-Bench 2.1 得 86.6（Opus 4.8／Fable 5 同 84.6），細節見下方 | 2026-08-04 首報；08-03 發布＋benchmark 09-20 查證 |
-| Kiro（AWS） | Free（50 credits）／Pro $20／Pro+ $40／Pro Max $100／Power $200，每人每月 | —（訂閱制，非按 token 計費，不可比） | AWS 旗下 spec-driven 編碼 agent（IDE/CLI/Web）；$200 為其自身頂層方案，非跨產品比較 | 2026-08-03（[kiro.dev](https://kiro.dev/)，2026-08-13 查證定價）|
-| OpenCode | 免費（開源）| —（免費開源工具，實際成本取決於所接模型） | 開源免費 vs 訂閱付費（$20/月）的採用落差，是本頁最早的分流訊號；已查證 ⟨Q-04⟩：下載量統計為 npm registry 公開數字，非推算 | 2026-08-01（Google News/tech-insider.org）|
 | Cursor | Hobby 免費／Pro $20／Pro+ $60／Ultra $200／Teams $40/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：SpaceX 收購後未見因收購而生的定價異動，6 級方案為既有架構延續 | 2026-08-13 查證（收購確認 2026-06-17）|
 | OpenAI Codex CLI | Free（試用）／Go $8／Plus $20／Pro 5x $100／Pro 20x $200／Business $30/user／Enterprise 客製 | —（訂閱制，不可比） | 已查證：2026-04-02 起改按 token 用量計費，非固定訊息數 | 2026-08-13 查證（多方比較站彙整）|
 | GitHub Copilot（加購 AI credits） | $10 ＝ 1,500 credits（加購制，非月費） | —（credit 制非按 token 計費，不可比；單個 credit 對應的底層模型與 token 量未載） | 2026 年方案彙整頁換算，與既有 Pro+ $39 月費訂閱層屬不同計費面，關係未載 | 2026-10-23（shattered.io，單一來源，僅標題可用）|
-| GPT-5.6（OpenAI API） | 已查證：Luna 降 80%（$0.20／$1.20）；Terra 降 20%（$2／$12）；Sol 未降價但提速 2.5 倍 | Luna≈0.12×、Terra≈1.2×（對 Sonnet 5 $10/Mtok 輸出）；Sol 未提新價 | OpenAI 官方明確訴求以更低價格對打 Anthropic | 2026-07-30（OpenAI 官方；2026-08-13 查證數字）|
 | Gemini CLI / Gemini 系列 | 已查證：Free $10 一次性／Pro $60/月／Max $200/月；2026-06-18 起免費層併入 Antigravity CLI | —（訂閱制，不可比） | 免費層緊縮後，個人開發者需轉 Antigravity CLI 或付費 API key | 2026-08-13 查證（多方比較站彙整）|
 | Grok 4.5（xAI） | $2／$6 per Mtok（input／output） | 輸入 1.0×、輸出 ≈0.6×（對 Sonnet 5 $2/$10 per Mtok） | 宣稱優於 GPT-5 與 Claude，對標哪個 Claude 模型未指明，無 benchmark 佐證 | 2026-09-07（單一來源 shattered.io）|
+| MAI Code 2（Microsoft） | 未見官方掛牌價；廠商稱效能比得上 Opus 5.5、成本僅其 5% | ≈0.05×（對 Opus 5.5 $4/$20 per Mtok，比例為廠商概估，非官方 $ 數字） | 首次由 Microsoft 自研編碼模型直接對比 Claude 定價；具體牌價與第三方跑分未見 | 2026-11-17（Google News/ZDNET；GeekWire；Kingy AI）|
+| GPT-6.2 Astra（OpenAI API） | input $8/Mtok（官方降為前代 6 Astra 的八折）；output 數字原文截斷未完整引用 | 輸入 2.0×（對 Opus 5.5 $4/Mtok 輸入）；output 未確認，暫無法換算 | 新一代旗艦降價但輸出牌價缺，對 Claude 的完整頭對頭成本待補 | 2026-11-17（Blog/Simon Willison）|
 
 **競品定價細節**
 - ⟨Q-01⟩ 已查證（2026-09-20，[DeepSeek 官方定價頁](https://api-docs.deepseek.com/quick_start/pricing/)）：V4-Pro 輸入 $0.66／輸出 $1.98（離峰，快取未命中）；V4 Flash 輸入 $0.15／輸出 $0.60（離峰）。
@@ -131,6 +130,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Gemini 4 Carbon（2026-11-10，Simon Willison，單一來源）**：上線價 $2／$10 per Mtok，12-01 起翻倍為 $4／$20；對 Claude 輸出約 1.0×（對 Sonnet 5 $10/Mtok）上線期間、2.0× 後（12-01 起）約同 Opus 5.5 $4／$20。官方牌價頁未查證；定價對照表已逾 12 列，未新增列。
 - **GitHub Copilot 加購 credits（2026-10-23，shattered.io，僅標題可用）**：$10 可換 1,500 AI credits；credit 與底層模型、token 量的對應關係未見報導，與已移出表之 Pro+ $39 月費（27 倍加價換算，2026-05-06 查證）是否同一套計費口徑待查。
 - **久未更新（2026-10-13，表滿 12 列換手，讓位給 Gemini 4 Argon、Muse Wonder Full）**：Antigravity（Google）Free／Pro ~$20／Ultra ~$100／Ultra Max $200，依附 Google AI 訂閱框架（2026-07-23，2026-08-13 查證）。
+- **久未更新（2026-11-18，表滿 12 列換手，讓位給 MAI Code 2、GPT-6.2 Astra）**：GPT-5.6（OpenAI，07-30 查證，已被 GPT-6.2 世代取代）、Kiro（AWS，08-13 查證）、OpenCode（08-01，完整脈絡見 [[entities/opencode]]）。
 - Cline 免費工具、token 費用另計，介於 Claude Code 與 Copilot 間的免費替代（2026-07-22，Google News/tech-insider.org）。兩者均訂閱制／免費工具，不可按 token 換算 vs Claude。
 - **pi-coding-agent**：低成本編碼 agent 的成本數字已升格為「硬答案」條目（Databricks，2026-08-13 查證）。
 - **GLM-5.2 外部榜單佐證**：FrontierSWE 74.4 vs Opus 4.8 75.1、Terminal-Bench 2.1 81.0、SWE-bench Pro 62.1；單一外部來源、非日報進料，使用者 2026-07-17 手動查證，詳見 [[log]] 該日 Query 條目。
@@ -177,6 +177,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### OpenAI（Codex CLI／ChatGPT Work・GPT-6.1 Sol）
 **現在的答案**
+- 11-17：Simon Willison 確認 GPT-6.2 Astra input 價 $8/Mtok（前代八折），output 數字原文截斷未完整引用；同日 GPT-6.2 Astra／Sol 全面上線 GitHub Copilot，主打 agentic coding 與程式碼審查優於前代（Blog/Simon Willison；Blog/GitHub Copilot Changelog）。
+- 11-18：OpenAI 公開 Codex sandbox 技術文件，說明如何在 macOS／Linux／Windows 執行指令並由使用者控制檔案系統與網路存取限制（OpenAI 官方）。
 - 選型看任務類型：不同基準測不同能力面向，無單一「孰優孰劣」結論（數字見「查證快照」）。
 - **Anthropic 官方對照（Opus 5.5 發布文，09-22）**：Terminal-Bench 4.0 Opus 5.5 66.4%、GPT-6 Astra 57.9%、GPT-5.6 Sol 37.3%；FrontierCode 54.4／53.3／47.5%。
 - 同表 AutomationBench（41.4% vs 40.0%）與 Terminal-Bench-Science（64.6% vs 58.7%）GPT-6 Astra 領先；GPT 分數為 OpenAI 自報，TB 4.0 Opus 用 xhigh、Astra 用 high（[官方](https://www.anthropic.com/claude-opus-5-5)，查證 10-03）。
@@ -189,6 +191,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Microsoft／GitHub
 **現在的答案**
+- 11-17：Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%（ZDNET／GeekWire／Kingy AI 轉述；Fello AI 另整理 benchmark 與定價），官方牌價與第三方跑分未見。
 - 11-04：Copilot 正式整合進 Xcode 內建程式碼助理，公開預覽階段；Claude Code 目前無官方 Xcode 原生整合（GitHub 官方 changelog）。
 - 10-28／29：Copilot Fusion 跨模型智慧路由正式 GA；The New Stack 稱其基準測試勝 Claude Code、API 成本減半，測試條件未載。
 - 10-22：VS 版 Copilot 新增聊天內瀏覽 PR、切換信任 AI 模型、偵測弱點套件自動修補；同日官方確認 09-24／25 公布之全域預設開啟政策現已正式 GA 生效——四者 Claude Code 在 VS 內均無對應。
@@ -260,6 +263,17 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-18
+- **Microsoft／GitHub**：Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%；ZDNET／GeekWire／Kingy AI 同期報導，Fello AI 另整理定價與 benchmark；官方牌價與第三方跑分均未見（Google News/ZDNET；GeekWire；Kingy AI）
+- **OpenAI**：Simon Willison 確認 GPT-6.2 Astra input 價 $8/Mtok（前代八折）；同日 GPT-6.2 Astra／Sol 全面上線 GitHub Copilot，主打 agentic coding 與程式碼審查優於前代（Blog/Simon Willison；Blog/GitHub Copilot Changelog）
+- **OpenAI（分析文，非編碼能力異動）**：官方說明 Codex sandbox 如何在 macOS／Linux／Windows 執行指令，並由使用者控制檔案系統與網路存取限制；屬既有功能說明文件，非新能力或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：官方部落格發表觀點文章，探討更強 AI 如何重塑社會治理；非產品或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **OpenAI（分析文，非編碼工具）**：官方部落格稱以 GPT-6 Astra 最佳化 Jalapeño 晶片電路與 RISC-V 核心設計；晶片設計研究展示，非編碼能力或定價異動，不列入「對手雷達」表（Blog/OpenAI News）
+- **Google DeepMind（分析文，非編碼工具）**：Genie 4 互動世界生成工具正式對 Google AI Ultra 訂閱者開放；非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Google DeepMind Blog）
+- **Meta（分析文，非編碼工具）**：公布暫緩後的 commercial terms of service 修訂方式，聚焦網路爬蟲政策；非 AI 編碼工具競品，不列入「對手雷達」表（Blog/Meta Newsroom）
+- **Meta（分析文，非編碼工具）**：加拿大零售商 Loblaw 成為 Muse 首個加拿大零售連結夥伴；消費者助理產品的通路擴張，與編碼工具 Muse Code 無直接關聯，不列入「對手雷達」表（Blog/Meta Newsroom）
+- **分析文（非編碼能力異動）**：FT 稱 Jensen Huang 政治失勢連帶衝擊「開放」模型陣營，對 Anthropic 與 OpenAI 相對有利；屬競爭格局評論，非具名產品動態，不列入「對手雷達」表（Hacker News／FT）
 
 #### 2026-11-17
 - **Microsoft／GitHub**：Copilot Fusion 擴大可用模型、擴及更多 Copilot 平台，並公布兩個 Terminal-Bench 排行榜成績，跨模型路由選型的人多兩筆可查證分數（Blog/GitHub Copilot Changelog）

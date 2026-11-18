@@ -30,12 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-06-21
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **最新動態**（2026-11-17）
-> Google DeepMind 策略長 [[entities/jasjeet-sekhon|Jasjeet Sekhon]]（The Information 標題，新職位未載）離職並加入 Anthropic，延續「Google DeepMind 淨流失、Anthropic 主要承接」既有格局。
-> 11-04／11-05 另一件事：Claude Code 產品負責人 [[entities/cat-wu|Cat Wu]] 卸任轉往 OpenAI，接任者兩家報導都沒提；同期 [[entities/addy-osmani|Addy Osmani]] 加入 Anthropic，但**不是 Cat Wu 的接任者**。
+> **最新動態**（2026-11-18）
+> NeoTeo 跟進報導 AMD 收購 World Labs 一案，稱此案為 AMD 帶來模型研究能力；延續既有 09-29 收購記錄，細節未附，僅標題可用。
 
 ## 摘要
 
@@ -89,6 +88,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-18
+- **NeoTeo 跟進 AMD 收購 World Labs，稱為其帶來模型研究能力**：延續 09-29 既有收購記錄（見「對各公司的影響」表 AMD 列），細節未附，僅標題可用。
 
 #### 2026-11-16
 - **Google DeepMind 策略長 Jasjeet Sekhon 離職並加入 Anthropic**：The Information 報導，新職位名稱與到職時間未見報導，僅標題可用；延續「Google DeepMind 淨流出、Anthropic 主要承接」既有格局。見 [[entities/jasjeet-sekhon]]。

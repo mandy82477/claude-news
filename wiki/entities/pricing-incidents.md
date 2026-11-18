@@ -33,11 +33,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 💼 商業
 **上層：** [[entities/pricing]]
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-14
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **最新動態**（2026-11-14）
-> - Anthropic Status 官方通報：claude.ai 購買與方案變更一度出錯，延遲款項與方案變更已於 04:23 UTC 補上並標示解決。
+> **最新動態**（2026-11-18）
+> - **新 GitHub Issue #45390：Max 方案啟用 1M context 時被誤判為需要加購用量**，累積 34 則留言、27 個 👍 反應，官方尚無回應。
 
 ---
 
@@ -58,7 +58,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | Max 5x 升 Max 20x 付款持續失敗、客服未回應 | 🔴 未解 | 2026-10-24，Issue #56281，延續 #55266、#55982 | 升級前備妥備援付款方式、留錯誤截圖；別反覆重試 |
 | Fable 成 Max 標準模型起被誤判要先買 usage credits | 🔴 未解 | 2026-10-24，Issue #79337，07-20 起未修 | 對照 `Settings > Usage` 與帳單，於該 issue 回報佐證 |
 
-**還在發生、沒進上表的**（同一排序，新的在前）：#16157 Max 幾乎一開工就撞上用量上限（09-17）、#38335 Max session 額度加速耗盡（09-16）；只有單一社群來源的：#62466 圖片處理失敗仍扣用量（11-02）、Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、#37394 Max 觸頂過快（09-21）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
+**還在發生、沒進上表的**（同一排序，新的在前）：#45390 Max 方案 1M context 誤判需加購用量（11-18，單一 issue，34 留言）、#16157 Max 幾乎一開工就撞上用量上限（09-17）、#38335 Max session 額度加速耗盡（09-16）；只有單一社群來源的：#62466 圖片處理失敗仍扣用量（11-02）、Reddit 用量暴增 8 倍（10-27）、Console 小數點多扣 100 倍（10-16）、成本顯示把 Haiku 5.5 算成 Opus 價（10-11）、#8327 設 API key 後組織遭停用（10-02）、#37394 Max 觸頂過快（09-21）、Reddit Max 20x 半小時 0%→100%（08-04）、Reddit Max 升級誤購 credits（07-02）。每件見下方「事故與爭議」同日條目。
 
 表只寫 issue 號；留言數與讚數以 [[entities/claude-code-known-issues]] 為準，下方各條目裡的數字是當日快照。
 
@@ -73,6 +73,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 
 ## 事故與爭議（誤扣費、靜默計費改動、帳號安全）
+
+#### 🔴 2026-11-18：新 GitHub Issue #45390——Max 方案啟用 1M context 視窗被誤判為需要加購用量
+
+- **GitHub Issue #45390**：Max 方案使用者回報，在 Claude Code 選用 Opus 4.6（1M context）時系統顯示「Extra usage required」，即使實際用量遠低於需要加購的量；官方尚無回應（[GitHub #45390](https://github.com/anthropics/claude-code/issues/45390)）。
+- **你能先做什麼**：用 Max 方案開 1M context 視窗前，先對照 `Settings > Usage` 確認實際用量是否真的超額，帳單出現額外扣款時保留紀錄向客服申訴。
 
 #### ✅ 2026-11-14：Anthropic Status 官方通報——claude.ai 購買與方案變更一度出錯，延遲款項已補上
 

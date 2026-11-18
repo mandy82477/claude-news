@@ -31,11 +31,12 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-18
+**最後新聞更新：** 2026-11-18
 
-> **最新動態**（2026-11-17）
-> - **Claude Mythos 把 AMD GPU 移植工作從 6～12 個月壓到約 3 天、幾乎全自主寫出核心運算 kernel**：Anthropic 向 IPO 投資人揭露的數字（Tom's Hardware；Hacker News 51 分），承接 11-11 Wccftech 僅標題可用的同一事件；對外計費與可用性細節未見
+> **最新動態**（2026-11-18）
+> - **Tessera 成為 Linked Billing 公開測試後首個具名落地的企業合作方**（Business Wire），把該計費功能接上 Claude Platform
+> - **Infor 把 Claude 整合進製造業 ERP 系統**（Techzine Global），整合細節未附
 
 ---
 
@@ -124,6 +125,8 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 **其餘合作（新的在上）** — 未列入上表者每筆一行：
 
+- **Tessera**（2026-11-17）：Business Wire 報導 Tessera 把 Linked Billing 接上 Claude Platform，為官方 beta 公開測試後首個具名落地的企業合作方；規模與條款未見報導（Google News/Business Wire）
+- **Infor**（2026-11-18）：Techzine Global 報導企業軟體商 Infor 把 Claude 整合進製造業 ERP 系統，整合細節未附（Google News/Techzine Global）
 - **TSMC**（2026-11-11）：WSJ 標題稱台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI；分配與條件未見（Google News/WSJ）
 - **Microsoft、Google（新增合約）**（2026-11-10）：The Information 標題稱 Anthropic 揭露與兩家新增逾 100 億美元合約，並稱與 Lambda 的交易可能取消；合約內容未見（Google News/The Information）
 - **Stifel**（2026-11-10）：ThinkAdvisor 標題稱 Stifel 與 Anthropic 合作，把 Claude 帶給旗下理財顧問；規模與上線時程未見（Google News/ThinkAdvisor）
@@ -298,8 +301,12 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 ### 2026-11
 
+#### 2026-11-18
+- **[企業合作] Techzine Global：企業軟體商 Infor 把 Claude 整合進製造業 ERP 系統**：整合細節未附，詳見「其餘合作」清單（Google News/Techzine Global）
+
 #### 2026-11-17
 - **[算力] Tom's Hardware（經 Hacker News，51 分）：Claude Mythos 把 AMD GPU 移植工作從 6～12 個月壓到約 3 天、幾乎全自主完成核心運算 kernel**：Anthropic 向 IPO 投資人揭露的數字，承接 11-11 Wccftech 僅標題可用的同一事件（Hacker News）
+- **[企業合作] Business Wire：Tessera 把 Linked Billing 接上 Claude Platform，為官方 beta 公開測試後首個具名落地的企業合作方**：規模與條款未見報導，詳見「其餘合作」清單（Google News/Business Wire）
 
 #### 2026-11-11
 - **[資本支出，僅標題可用] WSJ：台積電核准最高 10 億美元投資計畫，對象為 Anthropic 與 OpenAI**：分配方式與條件未見，詳見「其餘合作」清單（Google News/WSJ）
