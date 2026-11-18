@@ -9161,3 +9161,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 0／本日無每日候選；另因主編查證補一則官方使用指南落地（模型切換三法＋managed-settings.json 適用範圍）
 - market 判讀：新增 2 則（IPO 定價指引方向、認購倍數 7→10-20 倍），里程碑登記 2 筆，回顧結算 ⏳ 新增 2 列，皆寫入 topics/market-signals-ipo
 - 📋 需使用者端設定：無
+
+## 2026-11-18 Ingest
+
+- 來源日報：[[news/2026-11-18]]
+- 更新頁面：
+  - **人物**：entities/dario-amodei.md
+  - **功能**：topics/claude-code-experimental.md、entities/claude-code-releases.md、entities/claude-code-known-issues.md、entities/claude-code.md、entities/claude-code-features.md
+  - **商業**：topics/anthropic-ipo.md、topics/anthropic-business.md、topics/anthropic-partnerships-compute.md、entities/pricing-incidents.md、entities/pricing.md、topics/ai-talent-flow.md、topics/competitor-landscape.md
+  - **安全政策**：topics/anthropic-government-policy.md、topics/ai-agent-safety-product-vulns.md、topics/ai-agent-safety.md（母頁）
+  - **社群**：topics/community-skills.md、topics/community-interfaces.md、topics/community-guardrails.md、topics/community-tech-patterns.md（母頁）
+  - **投資分析**：topics/market-signals-ipo.md、topics/market-signals-legal.md、topics/market-signals.md（母頁）
+  - **開發實務**：無（本日無官方使用指南落地頁，候選 7 筆記入帳本待後續）
+  - **主編**：wiki/feature-radar.md（新增 Claude Desktop Release Channel；Code Mode 熱度 🔥🔥→🔥🔥🔥）
+- 新增頁面：無
+- 摘要：Anthropic IPO 今天進入定價最後階段（紐約時報稱準備敲定發行價、CNBC 稱考慮加碼發行規模），TechCrunch 同時揭露 Amazon／Google 合計持股近 30%（Amazon 約 14.7%，部分來自低換股價可轉換票面）；IPO 前夕 Anthropic 安全品牌同時受多方質疑（科學家／法律學者聯名信、ESG Dive「高風險」評級、Sam Altman 受訪稱不知道 Anthropic 是否安全）；Claude Code 新增 Code Mode 多媒體跟進報導稱 token 消耗降 77%；ZeroHedge 報導 Anthropic 兩家遊說公司活動於國務卿 Rubio 辦公室、合計已付 163 萬美元；Claude Desktop 新增 release channel 版本頻道設定；VSCode 擴充套件與 Max 方案 1M context 計費各有一則高留言 bug。
+- 呈現品質：全部通過（六位記者一輪皆有數筆超字元上限、讀者語言內部用語外洩或表格操作句違規，主編同輪逐一修復並重跑機械自查轉綠；詳見本輪各 commit）
+- 品質備註：[社群] EL4CTEO/blender-skills（2,187★）疑與 2026-11-17 已收錄的 arjun988/blender-skills（[[topics/community-integrations#2026-11]]）高度重疊（同為「Blender 多技能生產管線」且同名 blender-skills），社群記者已判斷為疑似仿作／刷量並未收錄，主編尚未進一步查證，留待 `/wiki-lint` 複核是否為同一管線誤判
+- 分類回退：[安全政策] 3 則回退（Sam Altman ADWEEK／TheWrap 兩則→人物；Business Wire 聯名信→商業）——原輪 routing 已將這 3 則雙重分類給目標類別，目標記者（人物、商業）本輪已處理，不追加派工
+- 轉知帳本：結案 H-4f90e4（功能：評估社群 11-17 轉知的 8 則 patterns 節點，無新列）、H-3dcb56（功能：已於 entities/claude-code-known-issues.md 新增 issue #105703 待查證條目）；新開 H-959ab3（社群→功能：今日 patterns 樹新增三節點，請評估 official-community-gap 產品化矩陣是否需新增列）、H-8ff4bb（商業→安全政策：ESG Dive／Business Wire 安全品牌質疑完整內容待補寫入 topics/ai-agent-safety）
+- 主編裁決：[商業] 建議同步 index.md「topics/anthropic-ipo」「topics/competitor-landscape」鉤子——兩頁皆非 index 獨立列（ipo 是 anthropic-business 的子故事，competitor-landscape 現有鉤子框架仍涵蓋今日內容），依 `wiki/CLAUDE.md`「index 只放慢變事實」判準不採納，沿用 2026-11-17 同款裁決
+- devpractice 沉澱：候選 7／本日無官方使用指南落地頁（Claude Desktop release channel、功能記者已知問題逐一核對後判定不符開發實務收錄門檻）
+- market 判讀：新增 3 則（IPO 加碼發行規模／雲端夥伴持股揭露、遊說支出開線），里程碑登記 3 筆，回顧結算 ⏳ 新增 3 列（結算日 2026-12-02），皆寫入 topics/market-signals-ipo／market-signals-legal
+- 📋 需使用者端設定：無
