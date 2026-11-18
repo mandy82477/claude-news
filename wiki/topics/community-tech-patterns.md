@@ -97,7 +97,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **三類已超過 60 天或算不出最近的動靜，原始條目仍在：**Agent Loop 終止條件（Loop exit condition 設計模式，最後動態 2026-08-19，已逾 60 天移出，原始條目見 [[topics/community-multi-agent#2026-08]]）、Agent 版本控制（ADR 注入、架構決策文件先於實作，最後動態 2026-07-31，已逾 60 天移出，原始條目見 [[topics/community-guardrails#2026-07]]）、跨環境 Agent 記憶（Core Memory Packet，代表技巧與「記憶與知識管理」重疊，已併入該列）。
 
-**三類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、安全架構（Grepathy、OneCLI、agent-scan 等，最後動態 2026-10-16，原始條目見 [[topics/community-integrations#2026-10]]）、MCP 長 Session 穩健化（dev.to 三種隱性失效模式排查清單重新出現代表技巧，最後動態 2026-11-17，原始條目見 [[topics/community-integrations#2026-11]]）。
+**三類仍在 60 天內、暫未列入概覽表：**Agent 記憶保護（AGENTS.md 輸出持久化片段，最後動態 2026-10-08，原始條目見 [[topics/community-memory#2026-10]]）、安全架構（Grepathy、OneCLI、agent-scan、外部沙盒等，最後動態 2026-11-17，原始條目見 [[topics/community-guardrails#2026-11]]）、MCP 長 Session 穩健化（dev.to 三種隱性失效模式排查清單重新出現代表技巧，最後動態 2026-11-17，原始條目見 [[topics/community-integrations#2026-11]]）。
 
 %% MCP 長 Session 穩健化出現新代表技巧，是否補回「模式概覽」表需比對現有 21 列留表優先序，留待 /wiki-lint 判定，2026-11-17 %%
 

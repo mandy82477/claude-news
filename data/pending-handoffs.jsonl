@@ -446,3 +446,6 @@
 {"id": "H-afa06d", "closed": "2026-11-17", "status": "done", "by": "功能", "result": "評估 blender-ai-mcp-addon／animate／teamclaude／iphone-use／Agent-Cockpit／Datasette 創意提示 6 節點，均不滿足官方補了沒入口判準；表已滿 18 列不開新列"}
 {"id": "H-4f90e4", "opened": "2026-11-17", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日新增 8 則 patterns 節點（創意工具 Agent 整合 ×3、MCP 長 Session 穩健化 ×1、模型使用策略 ×2、Agent 規模化 ×1、行動裝置遠端控制 ×1），請評估「產品化矩陣」是否新增列", "status": "open"}
 {"id": "H-3dcb56", "opened": "2026-11-17", "from": "社群", "to": "功能", "page": "entities/claude-code-known-issues", "note": "dev.to 文章提到 anthropics/claude-code#105703（MCP 回應逾 8MB 砍掉 stdio 伺服器）此 issue 編號目前未見於 entities/claude-code-known-issues，建議核對是否已收錄", "status": "open"}
+{"id": "H-1ab41a", "opened": "2026-11-18", "from": "社群", "to": "功能", "page": "feature-radar", "note": "今日 patterns 樹新增三個節點（0xnyn/canary、nanocoai/nanoclaw、Simon Willison 外部沙盒設計），請評估 official-community-gap 產品化矩陣是否需新增列", "status": "open"}
+{"id": "H-1ab41a", "closed": "2026-11-18", "status": "void", "by": "主編", "result": "page 填錯（feature-radar 應為 topics/official-community-gap），重開正確單號"}
+{"id": "H-959ab3", "opened": "2026-11-18", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 patterns 樹新增三個節點（0xnyn/canary、nanocoai/nanoclaw、Simon Willison 外部沙盒設計），請評估「產品化矩陣」是否需新增列", "status": "open"}
