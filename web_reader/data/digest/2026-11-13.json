@@ -455,11 +455,6 @@
       "id": "market-signals-customers",
       "name": "定價、通路與客戶這則怎麼判",
       "pageType": "topic"
-    },
-    {
-      "id": "market-signals-legal",
-      "name": "官司、監管與政府這則怎麼判",
-      "pageType": "topic"
     }
   ],
   "reader": {

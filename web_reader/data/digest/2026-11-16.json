@@ -404,11 +404,6 @@
       "pageType": "entity"
     },
     {
-      "id": "dario-amodei",
-      "name": "Dario Amodei",
-      "pageType": "entity"
-    },
-    {
       "id": "fable-5",
       "name": "Claude Fable 5、5.1 與 5.2",
       "pageType": "entity"
@@ -426,16 +421,6 @@
     {
       "id": "ai-agent-safety-cyber",
       "name": "模型網攻能力、濫用與防守方放行",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-guardrails",
-      "name": "社群做法：規則強制、審查與安全",
-      "pageType": "topic"
-    },
-    {
-      "id": "market-signals",
-      "name": "投資訊號判讀",
       "pageType": "topic"
     }
   ],
