@@ -449,3 +449,5 @@
 {"id": "H-1ab41a", "opened": "2026-11-18", "from": "社群", "to": "功能", "page": "feature-radar", "note": "今日 patterns 樹新增三個節點（0xnyn/canary、nanocoai/nanoclaw、Simon Willison 外部沙盒設計），請評估 official-community-gap 產品化矩陣是否需新增列", "status": "open"}
 {"id": "H-1ab41a", "closed": "2026-11-18", "status": "void", "by": "主編", "result": "page 填錯（feature-radar 應為 topics/official-community-gap），重開正確單號"}
 {"id": "H-959ab3", "opened": "2026-11-18", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 patterns 樹新增三個節點（0xnyn/canary、nanocoai/nanoclaw、Simon Willison 外部沙盒設計），請評估「產品化矩陣」是否需新增列", "status": "open"}
+{"id": "H-4f90e4", "closed": "2026-11-18", "status": "done", "by": "功能", "result": "逐一比對 official-community-gap 產品化矩陣 18 列現況，8 個 patterns 節點皆已對應既有列或不構成獨立缺口，未開新列"}
+{"id": "H-3dcb56", "closed": "2026-11-18", "status": "done", "by": "功能", "result": "已於 entities/claude-code-known-issues.md「🔌 MCP 整合」新增 ❓ 待查證條目（issue #105703，探針 105703／stdio，複查日 2026-12-02）"}
