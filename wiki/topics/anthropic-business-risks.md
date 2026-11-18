@@ -6,11 +6,11 @@ domain: "💼 商業"
 last_updated: "2026-11-14"
 last_news_update: "2026-11-15"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 3
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 3
 inbound_links: 21
 attribution_count: 14
 attribution_last: "2026-11-15"

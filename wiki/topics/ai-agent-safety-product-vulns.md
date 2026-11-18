@@ -12,12 +12,12 @@ children: "[]"
 page_role: "child"
 days_since_news_subtree: 0
 inbound_links: 24
-attribution_count: 66
-attribution_last: "2026-11-17"
+attribution_count: 67
+attribution_last: "2026-11-18"
 top_source: "google-news"
 pending_count: 23
-pending_overdue: 1
-pending_next_review: "2026-11-18"
+pending_overdue: 3
+pending_next_review: "2026-11-19"
 pending_signalled: 3
 staleness_exempt: null
 signal: "健康"

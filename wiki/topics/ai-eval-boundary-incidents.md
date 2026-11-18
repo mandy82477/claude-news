@@ -6,11 +6,11 @@ domain: "🏛️ 政策/安全"
 last_updated: "2026-11-14"
 last_news_update: "2026-10-27"
 status_main: "monitoring"
-days_since_news: 21
+days_since_news: 22
 parent: "topics/ai-agent-safety"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 21
+days_since_news_subtree: 22
 inbound_links: 15
 attribution_count: 1
 attribution_last: "2026-10-27"
@@ -20,7 +20,7 @@ pending_overdue: 0
 pending_next_review: "2026-11-22"
 pending_signalled: 0
 staleness_exempt: null
-signal: "健康"
+signal: "⚠️ 高引用但停滯"
 generated_by: "scripts/gen_wiki_frontmatter.py"
 ---
 # AI 評測越界事件

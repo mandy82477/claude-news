@@ -12,8 +12,8 @@ children: "['topics/anthropic-government-policy-archive']"
 page_role: "hub"
 days_since_news_subtree: 0
 inbound_links: 165
-attribution_count: 217
-attribution_last: "2026-11-17"
+attribution_count: 218
+attribution_last: "2026-11-18"
 top_source: "google-news"
 pending_count: 13
 pending_overdue: 0
