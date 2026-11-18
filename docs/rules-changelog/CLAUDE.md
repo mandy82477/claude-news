@@ -61,3 +61,7 @@ Claude Code 程式本體裡先出現、未公告的 `CLAUDE_CODE_*` 旗標（每
 ## 2026-11-14（check_rules 檢查 6：信箱只比對使用者本人）
 
 `.claude/review-registry.json` 的 `personal_paths` 原用 `[A-Za-z0-9._-]+@gmail\.com` 擋信箱，11-09 抓料夾帶一則 HN 募資帖裡第三方的 gmail，`src/gathered_archive/`、ingest 包與分類帳本全被判外洩；雲端主編在 `wiki/log.md` 引述了這個信箱，log 是 append-only，於是此後每輪都紅，11-09 起雲端 web build 連續被擋（網站停更）。雲端曾想把抓料檔加進 `exclude_globs`，被安全分類器判為削弱防護而拒絕，改留待使用者裁示。根因是規則比對「任何 gmail」而非「使用者自己的帳號」：改為 registry 存使用者信箱的 sha256（`own_email_sha256`，不放明文），檔內任一信箱雜湊相符才算外洩——第三方信箱放行，使用者信箱換成任何網域也抓得到；路徑類 pattern 不動、`exclude_globs` 不加。回歸測試 `src/tests/test_check_rules_personal_paths.py::TestOwnEmailOnly`。
+
+## 2026-11-18（check_rules 檢查 6：`/home/` pattern 排除純數字 URL 路徑段）
+
+11-18 抓料裡一則 Business Wire 新聞連結（`.../news/home/20261118974464/en/...`）的網址路徑慣例剛好撞上 `/home/[A-Za-z0-9_-]+/` pattern，`src/gathered_items.json` 與 `src/gathered_archive/2026-11-18.json` 被判外洩，與 11-09 的 gmail 事故同一類根因：規則比對「任何看起來像 `/home/X/` 的字串」而非「真的是本機使用者家目錄」。此次**不**重蹈「把抓料檔整份加進 `exclude_globs`」——那條路已在 11-09 被判定削弱防護而駁回，對路徑類 pattern 同樣適用：抓料檔之後仍可能夾帶真實洩漏，整份排除等於拔掉這道閘。改為收斂 pattern 本身：真實 Unix 使用者名稱幾乎不會是純數字，而這類新聞連結的路徑 ID 幾乎都是純數字，於是把 `/home/[A-Za-z0-9_-]+/` 改成 `/home/(?=[A-Za-z0-9_-]*[A-Za-z])[A-Za-z0-9_-]+/`——要求片段至少含一個字母才算命中，真實洩漏（`/home/someone/`、`/home/ubuntu/`）照樣抓得到，純數字的 URL 路徑段不再誤判。`exclude_globs` 不加。回歸測試 `src/tests/test_check_rules_personal_paths.py::TestHomePatternExcludesNumericUrlIds`。

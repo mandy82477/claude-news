@@ -1996,7 +1996,7 @@
     "patterns": [
       "[A-Za-z]:\\\\+Users\\\\+",
       "/Users/[A-Za-z]",
-      "/home/[A-Za-z0-9_-]+/",
+      "/home/(?=[A-Za-z0-9_-]*[A-Za-z])[A-Za-z0-9_-]+/",
       "AppData\\\\+"
     ],
     "own_email_sha256": [
