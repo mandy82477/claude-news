@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-18
 
 > **本日新增重大發布**（2026-11-09）
 > Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
@@ -75,7 +75,8 @@
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
-| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥 | ⏳ 觀望 | Research Preview |
+| **Claude Desktop Release Channel**（選擇 Desktop 更新走哪個版本頻道，Stable 維持現狀） | 2026-11-17 | 🔥 | ⏳ 觀望 | 正式發布 |
+| **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥🔥 | ⏳ 觀望 | Research Preview |
 | **Claude Fable 5.2／Mythos 5.2 發布**（Fable 5.2 為新預設模型，1M context，降價兩成；Mythos 5.2 信任機構限定） | 2026-11-09 | 🔥🔥🔥🔥🔥 | ✅ 強烈推薦（自動套用，無需操作） | 正式發布 |
 | **Claude Whiteboards／Sheets／Data**（Whiteboards、Sheets beta；Dashboards 轉正式版並更名 Claude Data） | 2026-11-10 | 🔥🔥🔥 | ⚡有條件推薦 | Beta／GA（全付費方案） |
 | **Personal Finance**（beta，連結銀行/信用卡/貸款/投資帳戶供分析消費） | 2026-11-05 | 🔥🔥🔥 | ⏳ 觀望 | Beta（範圍未載） |
@@ -254,12 +255,30 @@ https://claude.com/resources/articles/projects-redesigned
 
 ---
 
+### Claude Desktop Release Channel
+**發布：** 2026-11-17 | **狀態：** 正式發布
+
+**是什麼：** Claude Desktop 新增版本頻道設定，可選擇更新時走哪個版本頻道，Stable 頻道行為維持現狀。
+
+**為何熱：** 官方 Help Center Release Notes 2026-11-17 公告；同批文件新增說明，當桌面版內建的 Claude Code 版本比組織設定的上限還新時會跳出的提示訊息。單一官方來源，尚無社群討論。
+
+**現在要試嗎：** 受組織版本上限管控、或想固定在 Stable 頻道不隨意跳版的團隊可留意這個新設定入口。
+
+**快速上手：**
+```
+Claude Desktop → 設定 → 選擇 release channel（Stable／其他）
+```
+
+**注意事項：** 具體可選頻道清單與設定路徑未在摘要中完整列出；受組織版本上限管控的團隊可留意新提示訊息。
+
+---
+
 ### Code Mode
 **發布：** 2026-11-12（v2.1.323） | **狀態：** Research Preview
 
 **是什麼：** 讓 Claude 改寫 JavaScript 來呼叫自己工具的實驗性選項，預設關閉，需手動開啟。
 
-**為何熱：** 官方 v2.1.323 release notes 列為首項異動；v2.1.326（2026-11-16）新增與 agent teams 整合支援，已開 teams 的 session 現在會直接以 Code Mode 啟動；單一 GitHub Release 來源，尚無社群討論。
+**為何熱：** 官方 v2.1.323 release notes 列為首項異動；v2.1.326（2026-11-16）新增與 agent teams 整合支援；11-18 MarkTechPost 與 36氪兩個獨立媒體來源跟進報導，稱 token 消耗最多可降 77%，熱度由單一官方來源升為有跨媒體佐證。
 
 **現在要試嗎：** 想嘗鮮新呼叫方式的人可在非關鍵專案先試；依賴既有工具呼叫行為的正式工作流先別開。
 
