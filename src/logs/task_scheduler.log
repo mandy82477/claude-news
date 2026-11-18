@@ -1575,3 +1575,11 @@ ABORTED: gathered_items.json date=2026-11-07 items=68，非目標日期的新鮮
 [cloud daily-news-pipeline-cloud STARTED 2026-11-18T17:08:21Z]
 [cloud daily-news-pipeline-cloud ABORTED 2026-11-18T17:08:36Z] TARGET_DATE=2026-11-18，Step 1a cp 失敗（src/gathered_archive/2026-11-18.json 不存在，GitHub Actions 今日抓料尚未歸檔）→ Step 1b 新鮮度防線中止（gathered_items.json date=2026-11-17 items=79，非目標日期）。17 UTC 班（第二班），屬常態延遲，留待下一班（22 UTC）資料到齊後接手，不補跑、不等待。Step 0 昨日缺跑檢查：news/2026-11-17.md 存在，通過，無需本機承接。
 [cloud daily-news-pipeline-cloud STARTED 2026-11-18T22:07:57Z]
+[Wed 2026/11/18 23:30:57.00] === Agent pipeline start (2026-11-18) ===
+[Wed 2026/11/18 23:30:57.00] Aggregator OK (replay: cp src/gathered_archive/2026-11-18.json -> gathered_items.json; 72 items)
+[Wed 2026/11/18 23:30:57.00] Wiki ingest OK (6 類記者 + devpractice + market 全數完成，含內容閘修正；分類回退 3 筆已由雙重分類涵蓋；轉知結案 2 筆、新開 2 筆)
+[Wed 2026/11/18 23:30:57.00] Reader digest OK (daily/2026-11-18.md，17 頁當日動態，WARN 0)
+[Wed 2026/11/18 23:30:57.00] Building web reader...
+[Wed 2026/11/18 23:30:57.00] 測試全綠 - web build 放行
+[Wed 2026/11/18 23:30:57.00] Single push done (news + wiki + web), 20 commits, 9e44f88..c9f4ece
+[Wed 2026/11/18 23:30:57.00] === Pipeline complete (agent) ===
