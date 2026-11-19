@@ -1,0 +1,667 @@
+{
+  "https://www.npmjs.com/package/@anthropic-ai/claude-code-linux-x64/v/2.1.328": {
+    "title": "Claude Code 2.1.328 build 新增 8 個功能候選旗標（自 2.1.327 起）",
+    "source": "Build Flags",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://support.claude.com/en/articles/12138966-release-notes": {
+    "title": "官方文件更新：Claude Help Center release notes",
+    "source": "Official Docs",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://platform.claude.com/docs/en/about-claude/pricing": {
+    "title": "官方文件更新：API 模型定價（Platform Docs）",
+    "source": "Official Docs",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://status.claude.com/incidents/c1kmrkmv5f3d": {
+    "title": "[Status] Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+    "source": "Anthropic Status",
+    "categories": [
+      "模型",
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.328": {
+    "title": "[anthropics/claude-code] v2.1.328",
+    "source": "GitHub / anthropics/claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/nexu-io/openmotion": {
+    "title": "nexu-io/openmotion",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/NVIDIA/SkillEvaluator": {
+    "title": "NVIDIA/SkillEvaluator",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/AbubakrChan/product-launch-motion": {
+    "title": "AbubakrChan/product-launch-motion",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/win4r/video-director": {
+    "title": "win4r/video-director",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/udaysharmadev/Gravitas": {
+    "title": "udaysharmadev/Gravitas",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.anthropic.com/news/anthropic-prices-initial-public-offering": {
+    "title": "Anthropic prices initial public offering",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/": {
+    "title": "Anthropic hits $2T in Nasdaq debut",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/Faixiang/Moodle-MCP": {
+    "title": "Faixiang/Moodle-MCP",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon": {
+    "title": "bookwjitchieni1986/blender-ai-mcp-addon",
+    "source": "GitHub Search",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.anthropic.com/research/claude-black-hole-physics": {
+    "title": "Claude solves two open problems in the physics of black holes",
+    "source": "HN Repo Bridge",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/25128": {
+    "title": "[BUG] Drag and drop not working in VS Code extension chat panel (works in terminal CLI)",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/onlook-dev/onlook/": {
+    "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+    "source": "Hacker News",
+    "categories": [],
+    "reason": "內容未提及 Claude/Anthropic，為泛用 AI coding agent 工具報導，與本站收錄範圍無直接關聯",
+    "note": ""
+  },
+  "https://news.ycombinator.com/item?id=50562528": {
+    "title": "Anthropic (ANT) stock lists at nearly $2T valuation",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/anthropics/claude-code/issues/31005": {
+    "title": "Support for AGENTS.md and .agents/skills/, the community has been asking since August 2025",
+    "source": "GitHub Issues / claude-code",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://springcraft-ai.github.io/springrep/": {
+    "title": "Show HN: Robotics needs better CAD, so I wrote a B-rep kernel and 3,487 tests",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://garymarcus.substack.com/p/just-say-no-to-anthropics-ipo": {
+    "title": "Just say no to Anthropic's IPO",
+    "source": "Hacker News",
+    "categories": [
+      "商業",
+      "人物"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://apnews.com/article/anthropic-ipo-pricing-70b660ddf900d90bbf484ecdf1fb441c": {
+    "title": "Anthropic reportedly prices its IPO at $83 per share, valuing at $1.5T",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/rxolve/zpup": {
+    "title": "Show HN: Zpup – Zdog style 3D scenes in JSON, SVG from any angle",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.wsj.com/finance/stocks/anthropic-prices-ipo-at-83-a-share-0290494c": {
+    "title": "Anthropic Prices IPO at $83 a Share",
+    "source": "Hacker News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://www.kradle.ai?1": {
+    "title": "Show HN: KradleBench – Multi-agent AI evals in Minecraft",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://agentbolt.dev/#game": {
+    "title": "Show HN: Agent Bolt – a browser game that teaches Claude Code by doing",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://concepts.laxmena.com/concepts/claude-md-census/": {
+    "title": "Show HN: Tool to compare your Claude.md and Agents.md against 40k public repos",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/aiusageball/ai-usage-ball": {
+    "title": "Show HN: AI Usage Ball – Claude, Codex, Antigravity Quota Left as Mac Orbs",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://keepplain.com/transcript": {
+    "title": "Show HN: Read a Claude Code or Codex session file as a page, in the browser",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://contentin.io/linkedin-mcp-server/setup/": {
+    "title": "Show HN: An MCP server that lets Claude or ChatGPT schedule LinkedIn posts",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.com/chayworks/milo-pointer": {
+    "title": "Show HN: A 149M model handles 70% of phone-agent steps locally, Claude the rest",
+    "source": "Hacker News",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE45bTR3Zzh2OENUSmxiYWhGSmF6QWh2Q2Jsbm5KZldsY0pEQUkteVNqVTFwSWVreVVwcEZ2bDdjbTRyeXNDNmRVMXF6NDNqckxnMHAyay05Ukh4enRNdG1jOXJoQVF5b01iWG10cWFFOHBsVWlWbVE?oc=5": {
+    "title": "Anthropic IPO Live Updates: Stock Begins Trading at $111.50 Per Share - The New York Times",
+    "source": "Google News / The New York Times",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMif0FVX3lxTFBpNkpMbW03Vk1PQzdhOWpsR3Z0ZHRRbFJVem9ETTFLMkJ5UTZQZFNwVXVIQVZienBVZnZ4cG9LVHZVUlk3ZTl0cW96NFQ3c0V6NzRmU2ppNHJqWG80UlZ0c21qWExaTXgzR3RrTWt1MzdxQXloRE8wRTNxMExxUFU?oc=5": {
+    "title": "Anthropic soars in Wall Street debut despite AI jitters - Tech Xplore",
+    "source": "Google News / Tech Xplore",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdFZHRzItQU43cVpRUk9vYkJNVC13TFA2dHpUR0ZjRDhFbldQV0V5OEVrOHZpSTMwYlhwOEQ4aFVVQ0lDc0pJR1hyYzRLeVU3ZE1KNUZhOEdOLWZoUjR6NXlpanFUVWw2UWNEZ3NVQXZBSDFONGxkalRwNVNJeGRzdA?oc=5": {
+    "title": "Anthropic’s Claude Fable 5.2 takes the top spot on Code Arena’s WebDev leaderboard - Crypto Briefing",
+    "source": "Google News / Crypto Briefing",
+    "categories": [
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMzhvTFYxa3AyUGJGVFJNcFJycUxBRXdoWjdnQV8xRkt0aFVOcmxTcnRPNndXNDhZOVdnS3E5QzdPTDlpS2dIVG44U3ZiSk1VZ0FOamV2T0JfOXdTOWVhbjl4aEdqdEEzeThWa01LNlJHM2Y1ZHlDUEg0OTNPeUNNS2lnNDkyS1hKdXZFM2pPcjhmRGRBMmdpUVkwSWhqdldrd3o1NmRGMnFqMzlXbG1ydDM4SHJoel9zS19MM28tMXpkY0NJVGQ5WUNB?oc=5": {
+    "title": "Is Anthropic Worth $2 Trillion, or $1.5 Trillion? How to Make Sense of the Valuations - WSJ",
+    "source": "Google News / WSJ",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONFhTcEs0ZXJTOXhCWUVEQlBXR3BaeFdLVjdiNkNXdVFrNWtaVjFJRVc0cTcyRUJBRXBqV0JZUHUza3I0TndGYzZRX3N3eU4zR3plNl9wUkR5VU1FQ0phSjZEODlXYjJYQk5QaVRoTFotemhuTWFwSkhrYzFfNE1tM0JJNlBFY1BmNFNhS0FTeURyaGtHM2xJb3VoRE5LY0I1SVUxeko5dDJvRGlGam1ITllSRFU1OEV6T0tF?oc=5": {
+    "title": "Wall St falls sharply as Anthropic debut fails to reignite AI trade - Reuters",
+    "source": "Google News / Reuters",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiggFBVV95cUxPckx2b2tGYjRHR01ZSjFVN1dzNlFsTHlST1Fidjh2V1ZsVzFwWGl1R3pZUl9Zc2JKOTFvTjA4OGNaQ3VXNFNNZ0JKNXJIWHM4Zk5wcHJQckpzQWtmTVEtUWxjclZ1S0tUSGhJTmZVQkN1ZVRGWGRuVmxLbUpjd1A3RXl3?oc=5": {
+    "title": "Anthropic IPO details: Price, valuation, stock ticker, more - Mashable",
+    "source": "Google News / Mashable",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR0hadXpsX0QyNnNhb3RxbElnaTdTaDVIN18tY2xYWUQzOVZTbk9PNURNS1pBVTF5alo4WEFuMGtHdlUydXRydVhhS2ZlamFHZFRfVW42MVo0VEQzQmtleFdtVGNvMDdIdEFHN25hMDVORll5T196MzRqaEFkX1BJU1JLb1R5eTN5NnJvbThZMWRYczA0b253dUV1bnBzZTRJMERsaUFPZEpfOWktRlYxRkt3?oc=5": {
+    "title": "Amazon’s $18B bet on Anthropic tops $200B in the Claude maker’s historic market debut - GeekWire",
+    "source": "Google News / GeekWire",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX0doUFFYbC13ZkRzVklYaXZncGdPM0IzQUR6QnRGRmxDdXcyaGJrNnlIUWZYQWdnRXd2RnBPc3E2RUQ5RVh5aE9nYm0xYkhYLUN6SktFUFBuekVSbnhMMTNGSlBfUnFCU1B5YkRERnAwUFA5ck44ZnBNdGMxdzZtV05NMkhpTHV3ZGZBaHhB?oc=5": {
+    "title": "Investors scramble for a piece of AI giant Anthropic in blockbuster IPO - NPR",
+    "source": "Google News / NPR",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWko5TExZSy0yNlBjMXZTTXJzdzNtWV9aWVNCSklIWkVkRFoybmNsdnJwOFpfd2JYZDQ3b3FRMHdjdTFqTXdOLTlsRG5HcWpxQ1AySzNoakdBRUZLdFlndGgxcXBGSHRQSHVBcWFCMks3YjEyb1BKYjRRN192alFadlhpNS1PLTFGXzdIRWt6bzBDSmk3MnJoX1FXSm83WDRmTVlydm5QTURtOHk1eUpLWmhuMndqTkRtUUNvWWVWbk05RTBDZVNsOEln?oc=5": {
+    "title": "Anthropic stock's first trade was worth $12 billion — 34% above its IPO price - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivAFBVV95cUxQRHR2LW5hM095VHZ0ZzFzTW9xUlVkMTByVUpkOTMwbG54N1ZuLUg3dnZiZzQ0MmxBQTNEcmhfN0dxUUVEVGU2MWVIeW9CNTJ1SVJoeldrbDVidEtIYjRaSFBIU2U2eXJMbTBzUEtUUGs2bk1qZHpLOGYwRGRuaFBQVGFDUlZ6SjhMRGtpLUc2VXVGZUY1M2FvZlNBZGdJaFRSXy15T2FuODFVZTFUN19NNlpoajNJMlhNbXpDUQ?oc=5": {
+    "title": "Anthropic shares rise over 30% in market debut, valuing Claude maker at about $2T - Anadolu Ajansı",
+    "source": "Google News / Anadolu Ajansı",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15d1V6WHR6dGhFbVdYaHphak5OM2lFd3pwVmtFSXl1OERpbklBbHVJYTd5Z1g2SVp3eUNGX0pXWXN6VHpvNkJ6MEI4Y3RYTG5HTEFvQkV0cm1xdElFM0E?oc=5": {
+    "title": "A “headless Slack”: Vercel’s new message board lets Claude Code and Codex agents work together - The New Stack",
+    "source": "Google News / The New Stack",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdWV1ZzN4X2tPMHAxeVRUY3hQeGRkcVNjYnpmR2VyWGlLODJ5OV82YnZPb3J5UmxHYU1CcU1zZ0pYODg3ZTFfWW9iSl8tRl96NUxtS2szSExKR09vdVZCOXpjU2FTVVVPU1VyZlhVTEQ1RjVnOElCTVBIQ0RpRVE2WjE2YlNoT1pGa1IxbWs3ZkhkMkl3T2w4NDN3UXVYMzNJMllJ?oc=5": {
+    "title": "Anthropic IPO Live: Shares Pop 34% To Open At $111.50 - Forbes",
+    "source": "Google News / Forbes",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMimgFBVV95cUxPY1lLYlk2OTRwSkFYeC1wQ183WGxSdWoxdGdDMEJPazB1ZDBpMjBkT0syRTdRajhYQi10X3R0SFZZS2JKZHI4NGVORmhUV3J2TnJSaHE3UjJIdG1hM0l4NUE5UDBoaU9DazVJdHdhOVA5SlZ3LTVIYUxOelFTN0RacmlNYlhJV2gteVhpZFE1MXNVbTJvVEt3cU5R?oc=5": {
+    "title": "Should You Buy Anthropic Stock Now That It's Public? - The Motley Fool",
+    "source": "Google News / The Motley Fool",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMifkFVX3lxTE9FMG1KU0o0NERzUTNyMkszYVJhbGNJd2hnd3BGQ21uSFUtWC1KOUNCSkhxczlKQlVCVmoxZDhqRUMtOThWZGlXWnVCVjRYYlJQaENHN1hsUUp5RXdMQzF2Z0wwYW9wdVl4b1VrdG4tSXpHUVQxTnJZNVk2N0I2dw?oc=5": {
+    "title": "Anthropic’s Trillion-Dollar Debut Is Watershed Moment for A.I.’s Risks and Rewards - The New York Times",
+    "source": "Google News / The New York Times",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMikgFBVV95cUxNYjZQd0p2TExYYUFGTXZXVTFUNnBQSUhGbHZ1U0JGZ1NDZm8tTnMwbFRocE9sazE4Yno4YzBBMTRGQ25Ia3lXT0JpQWJ1LUlxajlMZFhmN1dXb2pRMHE4cHlDSVJ2MEJTMGxjZk5LNTM4QjkzU1UxZ2FhZXAwRmxfT1VpNWt1TGZZOFVScV8tRlhpUQ?oc=5": {
+    "title": "Claude Code and Codex Reverse-Engineer a 1994 Jeep’s Engine Computer - Technology Org",
+    "source": "Google News / Technology Org",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVUQyQ0JQSHpaYy0zQWtFemxqSnhlM2VXVUhMb1VMVkNrZ1pGX3N1QlI3SmdkamdRQmZ0QU1mVUZuNVJNWnhnOFg2d2V5bXdrdUVoVHFhVnkxeVRIQWMycFpxMjA1VTRkTG1KU1NzYy1jLThsTVlvTV9vaDFXbVM1X1BZc0ZsQXRkbTVR?oc=5": {
+    "title": "Anthropic’s Public Debut Sets Up ‘Experiment’ in Corporate Power - The New York Times",
+    "source": "Google News / The New York Times",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15eVFIWE5uZFRSSHFUOTNCZWJySy1leGw3NHYxbVZkZVpFU01maWdFYW5FU1lrY25NSDEwQV9NRXBpaG5LSDB5dEhXcW83X3JTVEF4aGlIM0FrVm8?oc=5": {
+    "title": "Anthropic raises $81bn in record-breaking stock market debut - BBC",
+    "source": "Google News / BBC",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQc3A5Sl95RmhBS3NDX0xMMi1jaUxQNVNLYkRlTmhycldnUlpPZFh5ZTJjYVFkTko4OHdkVm9ZbC1BYjlmY3lac2RvWkFYV0prUXNPTHlQckpkNU0zZ1g3T1E2ZmxPa0xhT2h3akN4Tkd3QVpmUFhhbzA1RWtwYldBa0ROQnRPLU5iZHpxVWpNX2Nac2lpcng0Zy1XcVpYeEduLWVnemtWQVREVG5xYjJPWmpnd1NjVW5LQkh0RFU2c2o2b0lqcVpLMUl1YW9jZE9hV01WN1hld3FEQ0dn?oc=5": {
+    "title": "Google Launches Gemini 4 Neon With Claude Opus 5.5-Level Coding Performance at 25% Lower API Token Prices - OODA Loop",
+    "source": "Google News / OODA Loop",
+    "categories": [
+      "商業",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQY3BUWGhIRWx3bUhMcXMzVWNCUzNYQ0o3TVVwNE5MOHo2dWhPT1VLQ0lUbHhaYUZHOWFIajJla3o1bTBScU9VSlNuSU9WZjdFWmtmX01WNXN1XzhhUGFVNnlveFgyZWs2cEtpeXFFbW1vLVBNVHhjTW5oQ1JoVkM0X0plY3hrWXhPMk40UGdZV3czbi1mX3B5cmc0b08xV01mTnNqQ3llOERNeEloemZKUXh4V3RtZ2J0ZXNDREdoSWZIX1JacWI1d19WWVdsRzhsa0tkQ09xMTBFUG43MUh3?oc=5": {
+    "title": "Anthropic goes public as AI bug hunters push cybersecurity stocks higher: Chart of the Day - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUGZKYjkzRTYyempxdHlueUt6QUtlNnJydm9NVkt6bDNpVlNUQW8zV01XdXF0YzRSUGdMMWZGMElMeTd6R1gzNGNyWmlnZ2stang5cEh4Smt5bjc5QUhMNXF5TzBsQUF5R0VFOFZ3Tk5RQkF4enV6SHZYM2N4d2RCYmVkUnozQjV2UEQwS1ZDLUo0OGxmZWtlM3I5ODRKM3lFbXY5ajlSSUFiZGxSUUJaOFFqcDZMUGJkWGtrYTF5QdIBxAFBVV95cUxPQ0U4ODdZQUxSOUVGVkRSbzRxUFg5dHpGVjdRTGdJaVhfUjV3Nm9CRjN4S05oUmwzWW84M1pudm9iSy1WbVVRaUhzUFFVYVNjaXdHdWtjcndJTWZwUUUzVS1SQVU0NkZacEZZWnc4Mzk0bi1uMkZsOUk1OWVuU3JiNVRENEdNRTVVYUpYTGFrRU54N3k5dzFCWXhoYkplRXMxYlRDNnVMS0t3NDdaNkJnRnktdzVPdi0ya1JkM3lBUmlQT1U5?oc=5": {
+    "title": "Anthropic set to begin trading as a $1.5 trillion company in the biggest IPO on record - PBS",
+    "source": "Google News / PBS",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb0diQmhsYTNGbWRBTnNjclBOYmE4MURVSzZ3WmN5MXN3bmtSRFFXVG5TYWdGa3hVY3JlNUh1YXVlNzVqOG9WRXlWT2w5YmhSNVdXUHpNMkFrUGVLUWdrQ0V3MTAwRzZ4MnZaOGdXMy1FeldpN0FCY0RKN1AzRjlnd2hfTmliTGMw?oc=5": {
+    "title": "Anthropic Pushes the Reset Button for AI - WSJ",
+    "source": "Google News / WSJ",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQUlCck41bVlFamthWGZnMXNTRG8wSm1KejZibkVvRHk1RWhpRHlMRENjTUVVZXZ1M2ZLdUkzZ3BnczZDY0JRU0t0d1J4LWZ5NndLNDdQX1BmNE1iblFHQkFpSDZlWmpTUVBOZ0t4NVZfYzh2dTduZFBvV1VibTlwNVZaaWg2QVc0MjUtMWpDNXd6OVRuNkg1QnJjSzg0WWFDQnlz0gGoAUFVX3lxTE0yc1BGd2w2T3FZY0owLXVKc1dNdTVCaDFTOGZxeDhuV2RzN0lsZjFBTDN6NThodlZEU2pMcHZZenktUzRLVFVPeDJjRmQyS3dOSy1PTkkwM2xaNVBXSlpGNUN4U0ZOUl85dVUxLXZwWVBDMFBtSE1YOGtwR3dIOENxUDVhRFZTNkJNQjFVUHhsTjh3dC1FZnNsQTR3QTBfd2ZZYVlrenQwRg?oc=5": {
+    "title": "Anthropic IPO, AI wealth spawn a new, leaner kind of family office - CNBC",
+    "source": "Google News / CNBC",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZE5vcUdvQk40ZHhGMjJJYlN1ZmZrT3IxLVNlSFh4N0F3TkJlVXRsNk9Hd3d1Q215VFg5LVBJQjhpVGtMLVN2NEx6RVpFWW9BV295bF82WVRrS3VydlpLWnFuSDBQWHJSWnVVcjE1M05WTVR4bGNGTDlXenRuQTN3T0Y1YUhmVmZiTDg1aVpsT0JiMGtDMDNrUWhtUnFXcVNodl9uUU9XWEpvNFF4alN0MWRjZXhMR0ZXSnJNZ080Qlc1a2lPVnhROExDYw?oc=5": {
+    "title": "How does Anthropic make money? Inside the business of AI. - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE12cFlac2o3amVKQWstQ01BZ3VlYjJraEt5SS1IZklmSkdzeFJnQjN5aXVIa1d4alFIdFdTVEN5blBEVmhCdlk0WDR0NnhCR25vQzdYMXZYY3NjX2NvbGZyY3hHc1N1dTA5RFFsZlRhTnlmb0NQ?oc=5": {
+    "title": "Anthropic joins SpaceX with a mega-IPO company - Reuters",
+    "source": "Google News / Reuters",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTE5zaXRWT25VRVcyM1NtbmRta1dHZWJZcHlKS1NPWUNmemJLZGxPd3lPRVlxc1ZfY0VuZXNuRm14Y015Vl9IMWNfc2Nsb0gxckNXR2UwcGRPN1RtTXZYWklKeWNIWEhtbUV5SUxpelJFYzc0eWZh?oc=5": {
+    "title": "Anthropic shares soar in Nasdaq trading debut, surging as high as $114.99 - CBS News",
+    "source": "Google News / CBS News",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMifkFVX3lxTE5zRTg4UnVPclZpb3N2eldCZHF0aXpWQTZpU3JyZVBJOEpkUGthS1ZaY1h0X3ZEdjFXaXJweEVMZk1US2UzbGFKNlY5UlBSVnZqZUtQenNfTFhLZU1xTUxGc0k3ZDVRbEl5Ujd6clpiN0hvcTE1azQ0WDJ2bC1Kdw?oc=5": {
+    "title": "An analyst explains the ‘trigger’ that prompted him to sell every stock he owns on Anthropic IPO day - CNBC",
+    "source": "Google News / CNBC",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://about.fb.com/news/2026/11/meta-premieres-indias-first-government-led-microdrama-series-on-scams-awareness/": {
+    "title": "Meta premieres India’s First Government-Led Microdrama Series on Scams Awareness",
+    "source": "Blog / Meta Newsroom",
+    "categories": [],
+    "reason": "Meta Newsroom 地區性消費產品新聞（防詐短劇），與 Claude/Anthropic 或 AI 競品動態無關，blogroll topic watch 誤收",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeWZHVTllX0Nkbzk2Mkw2X2h1QXBNa213UlBfT3B6cXNsU2VvR3VMNWppZWRMMWFMb3RRcURkWG5rZWlpOERIY0prMk90YnVfaUkxWHRySUFkTG9sM0pHYVI1RHUwVkJnbkhDbmxha3FtYVRlcVloV1dDV194ZnRQZ3ROOWxSZw?oc=5": {
+    "title": "Anthropic begins public trading at $2tn valuation after largest-ever IPO - The Guardian",
+    "source": "Google News / The Guardian",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbUIxbTVoNmlmMlVLbzJBOThCOXdCYl8xTUxvY0lEZG1WM05KZVJvdDlCY21uZE1qaGJDOG9kT3dtMkg4N2VWRTI0ZXNkdjExN1BGaGpUQWI4bTF5NEpnejBOWmRyNFZiNUhEemJTUVZzYkxxaWwwNUxtQ1dYdmMtTmxVcUpvclJwclZzbk4wZnk1VXpxMktIeEtVLS0?oc=5": {
+    "title": "IDrive Launches AI Agents Backup to Protect Claude Code, Cursor, Codex and Cline Data - Yahoo Finance",
+    "source": "Google News / Yahoo Finance",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdHhPb0tnUFlCVGFncjFTaDdocHdGdXJ1MkdGODRJOVVSMms5SXExRTJ6Um5uR25Tc1dTbDBFU1QwRWgtZ0szM3RhSDJfaWhoVzQ0dEpqZ0swZUY0SWk5VEl4M3JJTklkZ0I5ZEVCTHN2c1J1S3dDdWJZeDdkQmhzbWFUeVVlVlkyeWxMM2x6TzA1Mjg0M1l5NEZUdEx1eXJEMTVWT21n?oc=5": {
+    "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself - WIRED",
+    "source": "Google News / WIRED",
+    "categories": [
+      "商業",
+      "安全政策"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMivgFBVV95cUxPZUxQSi1tYnBzUjB0YkxtSVVUVlNxZlhOa1dXZ2M2TTJtbE5oRFRNSFRaNm9QdnBIU3BFMUJOZkFKcEt3elo4eWdoR1k4UnRuTVRUNC1XVVFoUEh1YnF5V3Raamh0N05qMHdGTWV5MEtCQmRnTml4aW0tTEg5T01uS3pXVkRkemVNSUpWWks1ejk3NUN0UGRDRDVlZ01kLS11Ml9lTURPd0dFN3VidV9BM3hxUm5QdFlxTGlxX0tB?oc=5": {
+    "title": "Ctrl+F only searches one tab, so I used Claude Code to build an extension that searches them all - XDA",
+    "source": "Google News / XDA",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNHkwS2RhdjQwMkZPNmdsUXoyQ1RPRVA3VEJydEx6TkRCbFZDQnZFT1NVVDJWcFZIcmplM1VvNFFSVFBFTzhBb0JVeFZ6VXlwbUFOTGZkSHpKQ21CWUlmeHNoYTVmNS1KRi0wWlpaaG9iSmtfYnFRVVEtTmVLVzJBWE9NOW9XTE42THhfMWRncw?oc=5": {
+    "title": "Anthropic Adds Code Mode To Claude Code For Chained JavaScript Tool Calls - Dataconomy",
+    "source": "Google News / Dataconomy",
+    "categories": [
+      "功能"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMidkFVX3lxTE1QSzdoRk9paG9NcGV0cnZySlR6aERfaFFzclpZemdOVk52S3BxbkNKWU9VUW52Y09jUzFKa0ZUQmc5VjlYRGQwYmZOZFhwZnQxMGFFdEZ4RmRQZmE2SWN3V003bzlLLUllSnBXWkZwR3pkZjNfd2c?oc=5": {
+    "title": "OpenAI's Astra 6.2 Undercuts Claude Fable 5.2 on Speed and API Cost, but Loses 7 of 12 Tasks - BigGo Finance",
+    "source": "Google News / BigGo Finance",
+    "categories": [
+      "商業",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMihwFBVV95cUxNc0M5UkNKMUtqN3p2UFZaTDcxdDloVzNSbUNyOElrUDdKRXBydWl6azBwekZrMmhDY0ZYejdmMFc0RFRGMlRRRzVJQkluYmgyODVhd00wOGdqUm52UVAtUzk5QkZIdkFvWW9uV0xid2ZuTlNzX205VFBLTWRBYjYxenhBd3FPX0k?oc=5": {
+    "title": "HubSpot won't charge extra when Claude or ChatGPT works its CRM - PPC Land",
+    "source": "Google News / PPC Land",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast": {
+    "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+    "source": "Blog / OpenAI News",
+    "categories": [],
+    "reason": "OpenAI 內部工程部落格，純敘述自家效能維運流程，未提及 Claude/Anthropic 或具體競品對比數字",
+    "note": ""
+  },
+  "https://about.fb.com/news/2026/11/forum-a-dedicated-app-for-facebook-groups-is-now-available-in-indonesia/": {
+    "title": "Forum, a Dedicated App for Facebook Groups, Is Now Available in Indonesia",
+    "source": "Blog / Meta Newsroom",
+    "categories": [],
+    "reason": "Meta Newsroom 地區性消費產品新聞（Facebook Groups App），與 Claude/Anthropic 或 AI 競品動態無關，blogroll topic watch 誤收",
+    "note": ""
+  },
+  "https://simonwillison.net/2026/Nov/18/llm-gemini/": {
+    "title": "llm-gemini 0.38",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMie0FVX3lxTE45ZV9aZUpNTGl2cUJrTEZ3SzR5a2ZjcW42VURGbElXZ1B1TUtISE4zeXhEVlFTWW11ajJpV2FSNzNCM0lRYlBWREpXMURsUWJGUlppbTdnbUpjdXNuVU1yQ3VFLW1wam5kNDVZQ1o1cDE2bVg0UUFweWE3VQ?oc=5": {
+    "title": "Anthropic IPO raises record $81.3 billion on strong AI demand - NPR",
+    "source": "Google News / NPR",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot": {
+    "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+    "source": "Blog / GitHub Copilot Changelog",
+    "categories": [
+      "商業"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot": {
+    "title": "Gemini 4 Neon in GitHub Copilot",
+    "source": "Blog / GitHub Copilot Changelog",
+    "categories": [
+      "商業",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://deepmind.google/blog/introducing-gemini-4-neon/": {
+    "title": "Introducing Gemini 4 Neon",
+    "source": "Blog / Google DeepMind Blog",
+    "categories": [
+      "商業",
+      "模型"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbUpvMjV0Ul9PZEo2OWRRcVdPeVRBQTkxZUtlUndoZllpRVlua2ZXWlpzbFZHMVVPWWVvWXhYTlhDQ2o5WEVVQ2l6U1ZwRTNTd21zNTg4S0tWZzFDWVlzNl9tRTQzcVg4MmJpQzJqdFRNU3JzLW1QeFlnN0FTQlBUYWw4SjU0bGxaY2owYkdDOHJpSTVMcFYtSTNvYzdvelk3N0tTSHhBd09qU1haZnY2dVRud2dqa3NmU3Zrd2YzY0xBRHNDLTJDNGN2c3htQQ?oc=5": {
+    "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor - TechCrunch",
+    "source": "Google News / TechCrunch",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  },
+  "https://simonwillison.net/2026/Nov/18/datasette-arrows/": {
+    "title": "datasette-arrows 0.1a0",
+    "source": "Blog / Simon Willison",
+    "categories": [
+      "社群"
+    ],
+    "reason": "",
+    "note": ""
+  }
+}
