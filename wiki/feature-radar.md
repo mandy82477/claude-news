@@ -87,7 +87,7 @@
 | **Message Threads API＋依維度用量費用報表**（anthropic-sdk-python v2.2.0／typescript vertex-sdk-v1.1.0；11-02 公開測試） | 2026-10-23 | 🔥🔥🔥 | ⚡有條件推薦 | Public Beta |
 | **Claude Duet**（Opus 5.5 驅動主動式 agent，美國 Pro／Max 研究預覽） | 2026-10-21 | 🔥🔥🔥🔥🔥 | ⏳ 觀望（技術細節未公開） | Research Preview |
 | **Vertex SDK 1.0.0**（TypeScript，⚠️ Breaking Change，新版 API 2026-10-21） | 2026-10-21 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
-| **Auto mode 設定**（v2.1.304 `/auto-mode-setup` 引導設定；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL` 指定分類器模型） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
+| **Auto mode 設定**（v2.1.304 `/auto-mode-setup`；v2.1.302 `CLAUDE_CODE_AUTO_MODE_MODEL`；v2.1.328 擴及 Opus 4.6／Sonnet 4.6 跨平台） | 2026-10-19 | 🔥🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **`/claude-api managed-agents-secure`**（v2.1.304，對照官方安全指南檢查 Managed Agents 設定，唯讀） | 2026-10-19 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Code Review 審查等級 Quick／Standard／Deep**（v2.1.304，組織層或逐 repo 設定；新增審查全組織 repo 選項） | 2026-10-19 | 🔥 | ⚡ 有條件推薦 | 正式發布 |
 | **Claude Code v2.1.302**（`/config` Idle compaction 開關；`-p` 預設權限模式與 fork subagent 預設改變） | 2026-10-16 | 🔥 | ⚡ 有條件推薦 | 正式發布 |

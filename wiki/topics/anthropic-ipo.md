@@ -31,12 +31,12 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **最新動態**（2026-11-18）
-> - **TechCrunch：IPO 後 Amazon 將持股約 14.7%，與 Google 合計近 30%**，部分持股來自換股價 $2.09～5.05 的可轉換票面
-> - **CNBC：投資人需求持續升溫下，公司正考慮加碼發行規模**；NYT 稱準備敲定最終發行價
+> **最新動態**（2026-11-19）
+> - **正式定價 $83／股，11-19 以代號 ANT 在 Nasdaq 開始交易**：開盤 $111.50（漲約 34%），盤中最高 $114.99
+> - **官方稱募資約 $81.3 億美元，為史上規模最大 IPO**；市值估算各家不一，見下方「值多少」
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -49,28 +49,26 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
-| 什麼時候上市 | **11-10 路演啟動**：官方公告擬發 825,000,000 股 A 類；價格區間 $70～78；官方 IPO 頁：11-18 定價、11-19 開始交易（需核准）；11-18 CNBC 稱投資人需求升溫下公司正考慮加碼發行規模 | Anthropic 官方公告（11-10）；[官方 IPO 頁](https://ipo.anthropic.com/us/)（11-14 查）；CNBC（11-18） | 官方一手／一級媒體 |
-| 值多少 | 最後一次定價 $9,650 億；11-17 Bloomberg 稱公司已指引區間頂端或更高定價，估值上看 $1.4 兆；11-09 Morningstar 另估 $1.7 兆（細節見下方） | Series H 公告；Bloomberg（11-17）；Morningstar（11-09） | 官方一手／一級媒體引公司 |
+| 什麼時候上市 | **已完成：11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易**；官方公告發行規模上修至 980,000,000 股（原路演擬發 825,000,000 股） | [Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)（11-18/19） | 官方一手 |
+| 值多少 | **正式定價 $83／股；開盤 $111.50、盤中最高 $114.99**；市值估算不一——Reuters 稱盤中衝高近 $2 兆後回落約 $1.2 兆，WSJ 稱依股數口徑介於 $1.5 兆～2 兆（尚無共識數字，細節見下方） | Anthropic 官方（11-18）；Reuters／WSJ（11-19） | 官方一手／一級媒體 |
 | 誰承銷 | 官方路演公告只點名 Goldman Sachs、Morgan Stanley 為索取招股書窗口；JPMorgan 未列（2026-11-14 查證） | [Anthropic 路演公告](https://www.anthropic.com/news/roadshow-launch)（11-10）；FT、NYT（09-04）媒體稱由兩家主辦 | 官方一手＋媒體 |
 | 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
 
-- **路演股數拆分**（Anthropic 官方公告，11-10）：825,000,000 股中公司自售 801,351,354、既有股東售 23,648,646，公司不收後者款項。
-- **11-10 估值各家寫法**：Bloomberg／NYT／Reuters 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆。
-- **雲端夥伴持股（2026-11-18，TechCrunch）**：IPO 後 Amazon 約持股 14.7%、與 Google 合計近 30%；部分持股源自換股價僅 $2.09～5.05 的可轉換票面，具體條款未見報導。
+- **正式股數拆分**（[Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)，11-18）：980,000,000 股中公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項；較 11-10 路演擬發 825,000,000 股上修。
+- **11-10 估值各家寫法**：Bloomberg／NYT／Reuters 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆（歷史值，已被正式定價取代）。
+- **雲端夥伴持股（2026-11-18，TechCrunch）**：IPO 後 Amazon 約持股 14.7%、與 Google 合計近 30%；部分持股源自換股價僅 $2.09～5.05 的可轉換票面，具體條款未見報導。Amazon 持股市值隨掛牌衝上逾 $2,000 億，見 [[topics/anthropic-partnerships-compute#跟三大雲各是什麼關係]]。
 
-**下一個時點：** 11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易（官方 IPO 頁，需主管機關核准）。公開版 S-1 已於 2026-10-26 提交；股數與價格區間已於 11-10 公布。
+**下一個時點：** 已完成 11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易。下一個時點：鎖定期到期日、首份財報日期（見下方「上市後追蹤」）。
 
 ### 定價與首日結果
 
 | 這一格 | 結果 | 來源（限官方公告／Nasdaq／一級媒體） |
 |---|---|---|
-| 最終發行價 | 待 11-18／19（路演區間 $70～78） | 待官方公告 |
-| 實發股數 | 待 11-18／19（路演公告擬發 825,000,000 股） | 待官方公告 |
-| 超額配售行使 | 待 11-18／19 | 待官方公告或 Nasdaq |
-| 首日開盤／收盤 | 待 11-18／19 | 待 Nasdaq 行情或一級媒體 |
-| 首日市值 | 待 11-18／19 | 待一級媒體 |
-
-%% 11-19 交易後把「遞件了沒」「什麼時候上市」兩列改為上市後問句 %%
+| 最終發行價 | $83／股 | [Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)（11-18） |
+| 實發股數 | 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646） | Anthropic 官方公告（11-18） |
+| 超額配售行使 | 未見官方公告 | — |
+| 首日開盤／收盤 | 開盤 $111.50（漲約 34%）；盤中最高 $114.99；HN 留言稱盤中已跌至約 $97（非官方數據，未查證） | Reuters／CBS News／Forbes／Hacker News（11-19） |
+| 首日市值 | 估算不一，無共識數字：Reuters 稱盤中衝高近 $2 兆後回落約 $1.2 兆；WSJ 稱依股數口徑介於 $1.5 兆～2 兆 | Reuters／WSJ（11-19） |
 
 ### 上市後追蹤
 
@@ -91,6 +89,9 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 ### 誰說撐不住：唱空與質疑
 
+- **上市首日：分析師賣光所有持股（2026-11-19，CNBC）**：一位分析師說明觸發他賣光手上所有持股的「扳機」，具體理由僅標題可用。
+- **HN 質疑「$2 兆」標題誇大（2026-11-19，306 分）**：Reuters 報導的討論串有留言稱市值一度衝高到約 $1.5 兆後回落至約 $1.2 兆；另一則（38 分）稱開盤 $110、已跌至 $97（Hacker News）。
+- **低流通股比例可能扭曲估值的論點浮現（2026-11-18，HN 對 Gary Marcus 反對認購文章的討論，25 分）**：留言指出 Anthropic 與 SpaceX 這類 IPO 流通股比例都低於 10%，認為需求可能被少量流通股人為放大；若流通股達 30～40% 留言者才會更願意進場（Hacker News）。
 - **投資人圈首度出現「延後上市」說法，估值恐探底近 $1 兆（2026-11-08）**：Yahoo Finance 稱一位投資人主張延後、另一位稱估值探底至約 $1 兆；24/7 Wall St. 同日將 $8,950 億採購承諾框定為潛在債務風險，僅標題可用，細節見下方（Yahoo Finance；24/7 Wall St.）。
 - **IPO 買方喊價探底至 $1.1 兆，談判區間降至 $1.2～1.3 兆（2026-11-07）**：Bloomberg 報導買方喊價低探 $1.1 兆；HN 討論稿（295 分）稱投資人談判區間已降至 $1.2～1.3 兆（原 $1.4～1.5 兆）；CNBC／MarketWatch 稱期中選舉後資料中心政治反彈加劇疑慮。
 - **AI 股拋售潮加深估值懷疑（2026-11-06）**：WSJ 獨家稱主要投資人質疑能否達 $1.5 兆估值；Reuters 獨家稱拋售潮可能動搖上市時程；Yahoo Finance 稱估值預期恐探底至約 $1 兆，新估值區間未定案（HN 88 分）（[WSJ](https://news.google.com/rss/articles/CBMitgFBVV95cUxPNVlmZWpuTHFFVDktVG9OaXlnVl9xSFliZFl4YXFRemVUZDFRRFFaajdEcnQ0b01sQTNJNDVDUkRaQXpLdEY3dGhVUjloVS16UHZIQ0cwUG5wQnpxaDcyX3lvX3A0VFZTb0xjMFBObUJKR3N5cVU2WFhqNzRMcEtjN09HQ3VKcnNIcy15V3VJUTdFRkk1OXhQYlNjMFpELUV0Y2o1MnNNa2dPd3lSN3JJdGM2Z0wzdw?oc=5)、[Reuters](https://news.google.com/rss/articles/CBMiswFBVV95cUxPNGVmWktzeU5zbmRiaDdiZ2pxbEJhRk94VGN2V1lxUmpTNTFFNjhLR0puTjROeHE4UENDYjQ3OEFNbHdralNNdVJ2ZThsMldHZFlrcDZ1U21BTS1aeHU1aGNUNWRnTHc2SU5DVUktREt0Q3hzUkNhN1VJNDZYR3JLdjhwZUlaQjZCSl9Oa1dfT0d2dUotaWhDMkgxU1RBdVJOSEMwMzJsd0M3TmIyTGZ2WFZpVQ?oc=5)、[Yahoo Finance](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPVUV6dVh5WUcxemZzTXRjYmcxcVRXUHRqSjhUcjZ2VVJjbVdWMi0yMWFaaWIwZUZfTndvQ19LZl9fQk55bElVYUFyeE9pa3RmNEFBak05WEFvRkhpeG1PdFkzZkw5ZnUtczlrSS1HaU44UENxSi1ZTy1LNWZrb3BZQXRhSDZhTVpXODFvRUF2NTFoNkhNSEtYYld4LWpTaHNqSUM5WHIwWVpQNDlCelh5OFJmT0Znc1hrbGJLWDdIaUJUeExMN05KQk5DZkMtVUhiQWc?oc=5)）
@@ -130,6 +131,9 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 數字細節
 
 **這裡放的是母頁指標表與各事件數字的出處、口徑與查核脈絡；每個指標的最新單一數字住母頁 [[topics/anthropic-business#現在的數字]]，本節不重複列出那張表的數字。**
+- **IPO 正式定價 $83／股，募資約 $81.3 億美元——史上最大規模 IPO（2026-11-18/19）**：官方發行 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項）；NPR、BBC 等媒體稱募資規模約 $81.3 億美元（[Anthropic 官方](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)）。
+- **開盤 $111.50、盤中最高 $114.99，較發行價漲約 34%（2026-11-19）**：Reuters、CBS News、Forbes 等多家同步報導；Yahoo Finance 稱首筆交易價值約 $120 億美元。
+- **市值估算各家口徑不同，尚無共識數字（2026-11-19，WSJ）**：WSJ 指出以不同股數口徑計算，市值介於 $1.5 兆至 2 兆之間；Reuters 稱盤中一度衝高近 $2 兆後回落至約 $1.2 兆，兩者皆非官方數字。
 - **官方 IPO 頁公布 Q3 財務與客戶數（2026-11-12，HN 641 分，2 個來源）**：Q3 營收 $170 億、年增逾 12 倍（與 11-02 修訂版 S-1 同數，非新值）。
   - 年營收 $10 萬以上客戶逾 11,900 家、年增逾 12 倍（新指標）；自 2025 Q1 起運算效率提升逾 4 倍；調整後營業利益率 15%。
   - Q3 單季淨損 $233 億（[官方 IPO 頁](https://ipo.anthropic.com/us/)，11-14 查證）。
@@ -201,6 +205,13 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-19 Anthropic 官方／多家媒體：IPO 正式定價 $83／股，股票以代號 ANT 在 Nasdaq 開始交易**：官方公告發行 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項），募資約 $81.3 億美元，為史上規模最大 IPO（[Anthropic 官方](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)；NPR；BBC）。
+  - **開盤 $111.50（漲約 34%），盤中最高 $114.99**：Reuters、CBS News、Forbes、Yahoo Finance 等多家同步報導；Yahoo Finance 稱首筆交易價值約 $120 億美元。
+  - **市值估算不一，無共識數字**：WSJ 稱依股數口徑介於 $1.5 兆至 2 兆；Reuters 稱盤中一度衝高近 $2 兆後回落至約 $1.2 兆；PBS、Guardian、CBS 等標題多引用 $1.5～2 兆區間，僅標題可用。
+  - **HN 討論（306 分、38 分）**：留言質疑「$2 兆」標題誇大，稱已回落至約 $1.2 兆；另一則稱開盤 $110、盤中已跌至 $97。
+  - **CNBC：一位分析師在 IPO 當天賣光所有持股**，具體理由僅標題可用。
+  - **HN 對 Gary Marcus 反對認購文章的討論（25 分）**：留言指流通股比例低於 10%（與 SpaceX 同類），可能讓需求人為放大估值。
+  - **Amazon 持股市值隨掛牌衝上逾 $2,000 億（GeekWire）**：先前投入的 $180 億美元持股現市值已逾 $2,000 億美元，見 [[topics/anthropic-partnerships-compute#跟三大雲各是什麼關係]]。
 - **2026-11-17 Bloomberg：公司指引承銷商以區間頂端或更高定價，估值上看 $1.4 兆**：每股 $70～78 區間頂端或更高，預計週三（11-18）公布定價。
   - **同日 Yahoo Finance：Altimeter 稱認購熱度升至 10～20 倍**（11-16 約 7 倍），仍押注 $50 億美元認購。
   - **同日 CTech（僅標題可用）**：稱 IPO 可能讓員工平均身價達約 $4,100 萬，細節未載。

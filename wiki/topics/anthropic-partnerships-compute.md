@@ -31,12 +31,12 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **最新動態**（2026-11-18）
-> - **Tessera 成為 Linked Billing 公開測試後首個具名落地的企業合作方**（Business Wire），把該計費功能接上 Claude Platform
-> - **Infor 把 Claude 整合進製造業 ERP 系統**（Techzine Global），整合細節未附
+> **最新動態**（2026-11-19）
+> - **GeekWire：Amazon 先前投入的 $180 億美元持股，隨 Anthropic 掛牌市值已逾 $2,000 億美元**
+> - **HubSpot：CRM 裡用 Claude 或 ChatGPT 跑流程不另外加收費用**（PPC Land）
 
 ---
 
@@ -47,7 +47,7 @@ Anthropic 跟誰簽了合作、算力和資金從哪來、跟三大雲各是什�
 | 公司 | 出資 | 算力 | 通路 | 也是客戶或對手 |
 |---|---|---|---|---|
 | Google | 2026-04-24 宣布最高 $400 億，見 [[entities/google-investment]] | TPU；S-1 承諾 $1,140 億（多家引 S-1） | Vertex AI，費率由 Google 自訂，見下方合作表 | Gemini 是直接對手，見 [[topics/competitor-landscape]] |
-| Amazon | 累計 $80 億（2023-09～2024-11 三筆，媒體稱）；Series H 再出 $50 億（2026-05-28，多家報導） | S-1 承諾 $1,100 億（多家引 S-1） | Bedrock、Claude Platform on AWS；2025 年近半營收經 Amazon、Google 雲端市集賣出 | 賣家工具首波接 Claude（09-23）；Alexa 傳降低對高成本模型依賴（07-23） |
+| Amazon | 累計 $80 億（2023-09～2024-11 三筆，媒體稱）；Series H 再出 $50 億（2026-05-28，多家報導）；持股市值隨 11-19 掛牌衝上逾 $2,000 億（GeekWire） | S-1 承諾 $1,100 億（多家引 S-1） | Bedrock、Claude Platform on AWS；2025 年近半營收經 Amazon、Google 雲端市集賣出 | 賣家工具首波接 Claude（09-23）；Alexa 傳降低對高成本模型依賴（07-23） |
 | Microsoft | 2025-11 承諾投資最高 $50 億（多家報導；實際入股金額未見） | 承諾購買 Azure 容量 $300 億（2025-11；[官方 05-06 公告](https://www.anthropic.com/news/higher-limits-spacex)提及） | Microsoft Foundry，CCU 後付 | 以自研 MAI 取代 Excel／Outlook 裡的 Claude，見 [[topics/anthropic-business-risks]] 細節區 |
 
 Amazon 累計 $80 億與 Microsoft 承諾最高 $50 億是 2026-11-02 多家媒體交叉（[Fortune](https://fortune.com/2024/11/22/amazon-4-billion-investment-startup-anthropic-founder-defected-openai/)、[Nasdaq](https://www.nasdaq.com/articles/microsoft-and-nvidia-deals-push-anthropic-toward-350-bln-valuation)），未見 Anthropic 一手。
@@ -108,6 +108,7 @@ Nscale、Akamai、SpaceX 等其餘算力來源見下表；2025 年雲端市集 4
 
 | 合作方 | 會改到什麼 | 不會改到什麼 | 最後動態 |
 |---|---|---|---|
+| HubSpot | CRM 工作流裡用 Claude 或 ChatGPT 執行任務不另外加收費用（PPC Land，細節未附） | 其他 HubSpot 功能計費規則不變 | 2026-11-19 |
 | GSA（美國聯邦總務署，OneGov） | Claude Enterprise／Claude for Government／API 折扣提升至 40%，首度涵蓋全部採購管道（含日後透過雲端供應商採購），並延伸至州、地方、部落與屬地政府 | 非政府機構採購不適用 | 2026-10-27 |
 | Amazon Bedrock | 走 Bedrock 拿不到 50% Batch 折扣；compaction／context editing／task budgets 都不可用；首爾／新加坡新增境內推論；新增 structured outputs 支援 | 第一方 API 與訂閱席次不受影響 | 2026-10-20 |
 | Claude Platform on AWS | 組織固定在 Start 層不自動升級，月花費上限 $500，提額要聯繫客戶代表 | 費率仍是 Anthropic 標準價 | 2026-09-03 |

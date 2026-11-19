@@ -33,13 +33,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-18）
-> - **新增已知問題**：VS Code 擴充套件無故遺失對話紀錄（#29017，35 則留言）；VS Code 擴充套件功能請求支援重新命名分頁（#11145，94 個讚）；Max 方案 1M context 誤判需額外付費用量（#45390，34 則留言）；MCP 回應逾 8MB 疑砍掉 stdio 伺服器（#105703，❓ 待查證）。
-> - **已解決**：Anthropic Status：Google Docs connector 編輯文件錯誤（claude.ai／Code／Cowork，11-18 01:44 UTC 解決）。
+> **最新動態**（2026-11-19）
+> - **已解決**：Anthropic Status：Claude Mythos 5.2、Claude Fable 5.2 錯誤率升高（claude.ai／API／Code／Cowork，11-19 09:11 UTC 解決，約 15 分鐘）。
+> - **互動數更新**：AGENTS.md／`.agents/skills/` 支援請求（#31005，累積 38 則留言、643 個讚）；VS Code 擴充套件拖放失效（#25128，63 個讚）。
 
 ---
 
@@ -384,11 +384,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**功能請求：Remote Control 連線工作階段支援語音朗讀回覆與語音模式（GitHub issue #42700，累積 32 則留言、49 個讚，2026-10-27）**：使用者希望 Remote Control 能加上 TTS 朗讀 Claude 回覆與語音輸入模式，方便雙手不便看螢幕時使用；官方尚未回應或排入路線圖。
 - 🔴 **未修復**｜**功能請求：Windows 版 Claude Desktop 提供關閉內建 Cowork 背景服務（CoworkVMService）的選項（GitHub issue #57371，累積 33 則留言、67 個讚，2026-10-31 互動數更新）**：不使用 Cowork 的使用者希望能停用隨附啟動的 CoworkVMService 背景服務；官方尚未回應或提供設定選項。
 - 🔴 **未修復**｜**Windows：VS Code 擴充功能編輯檔案時觸發當機，`_claude_fs_right:<file>` 相對路徑無法解析（GitHub issue #3381，累積 56 則留言、46 個讚，2026-10-24，今日互動量最高）**：PowerShell 安裝下讀檔正常，編輯檔案時擲出相對路徑解析錯誤並當機；官方尚未回應。
-- 🔴 **未修復**｜**功能請求：支援 AGENTS.md 與 `.agents/skills/`（GitHub issue #31005，累積 36 則留言、565 個讚，本日反應數最高，2026-10-20）**：社群自 2025 年 8 月起持續要求，官方尚未回應或排入路線圖；相關脈絡見下方「已修復」issue #6235。
+- 🔴 **未修復**｜**功能請求：支援 AGENTS.md 與 `.agents/skills/`（GitHub issue #31005，累積 38 則留言、643 個讚，2026-10-20 首見，2026-11-18 互動數更新）**：社群自 2025 年 8 月起持續要求，官方尚未回應或排入路線圖；相關脈絡見下方「已修復」issue #6235。
   - `.agents/skills/` 目錄慣例未涵蓋在 v2.1.277 AGENTS.md 支援範圍內，與既有 [[topics/official-community-gap]] ⟨G-08⟩ 缺口相符。
   - 另有獨立 issue #16345（累積 33 則留言、58 個讚，2026-10-20）提出相同訴求，引用 Agent Skills 標準（agentskills.io）將 `.agents/skills/` 列為建議共用路徑；官方尚未回應。
 - 🔴 **未修復**｜**Desktop 2.37337.1：Code 分頁側邊欄「Group by」自訂分組選項被移除，session 現在只能按環境分組（GitHub issue #102088，累積 54 則留言、38 個讚，2026-10-16）**：桌面版更新後側邊欄不再提供自訂分組，同時管理大量 session 的使用者只能依環境分組；官方尚未回應。
-- 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、56 個讚，2026-10-15）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
+- 🔴 **未修復**｜**VS Code 擴充套件聊天面板拖放檔案失效，終端機 CLI 模式正常，回報為退化（GitHub issue #25128，累積 41 則留言、63 個讚，2026-10-15 首見，2026-11-19 互動數更新）**：拖放功能在終端機／CLI 模式完全正常，VS Code 擴充套件聊天面板卻完全無法使用，回報者指出為 regression；官方尚未回應。
 - 🔴 **未修復**｜**Cowork 排程任務在 macOS 無法套用「永遠允許」資料夾／工具權限，每次執行都重新跳出確認提示（GitHub issue #47180，累積 41 則留言、48 個讚，2026-10-15 首見，2026-11-16 互動數更新）**：macOS 上 Cowork 排程任務忽略使用者已設定的「永遠允許」權限，導致無人值守自動化仍須每次手動確認；官方尚未回應。
 - 🔴 **未修復**｜**Windows 11 Insider（MSIX）Cowork VM 完全無法使用，EXDEV 跨裝置重新命名錯誤未解（v1.1.4010，GitHub issue #27897，累積 36 則留言、15 個讚，2026-10-16）**：MSIX 封裝 EXDEV rename 錯誤，與既有 Cowork VM 啟動失敗同屬平台不穩定訊號；官方尚未回應。
 - 🔴 **未修復**｜**VS Code 擴充套件更新後所有工具呼叫跳出「tool use concurrency」400 錯誤（GitHub issue #20571，累積 133 則留言、183 個讚，2026-10-13）**：VS Code 版擴充套件近期更新後，每次工具呼叫皆觸發 API 400 錯誤；CLI 版不受影響；可暫時切換至 CLI 版繞過；官方尚未回應。
@@ -493,8 +493,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**帳號限制後申訴表單重新導向迴圈（GitHub issue #62503，累積 42 則留言、5 個讚，首見 2026-07-07，2026-09-21 留言數更新）**：帳號遭限制的使用者嘗試提交申訴表單時陷入重新導向迴圈，無法完成申訴流程，官方尚未回應。
 - 🔴 **未修復**｜**功能請求聚集：跨平台支援需求未滿足**：多項高反應數 feature request 顯示使用者對跨平台支援的強烈需求——官方 Linux（Ubuntu LTS / Debian）Desktop build（[issue #65697](https://github.com/anthropics/claude-code/issues/65697)，累積反應 655，2026-08-13 互動數更新）、Desktop 於 Windows 上改用 WSL 執行指令的選項（[issue #12506](https://github.com/anthropics/claude-code/issues/12506)，累積反應 134）、Desktop 與 CLI 之間同步 Skills（[issue #20697](https://github.com/anthropics/claude-code/issues/20697)，累積 49 則留言、171 個讚，2026-10-26 互動數更新）；均為社群高投票 feature request，官方尚未排入路線圖。多帳號管理相關訴求已獨立整併至「👤 帳號管理」分組
 
-### 🌐 服務穩定性（16 條未修復、7 條已修復）
+### 🌐 服務穩定性（16 條未修復、8 條已修復）
 
+- ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Mythos 5.2、Claude Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-19 08:56–09:11 UTC，約 15 分鐘）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/c1kmrkmv5f3d)
 - ✅ **已修復**｜**Anthropic Status：Google Docs connector 編輯文件錯誤，影響 claude.ai／Code／Cowork（11-17 16:19 PT 起，11-18 已解決）**：這段時間編輯文件失敗即屬此次事故，現已恢復。[來源](https://status.claude.com/incidents/6prv10gjdpz1)
 - 🔴 **未修復（已識別原因，修復中）**｜**Anthropic Status：部分使用者無法透過 Apple 帳號登入 claude.ai 與 Claude iOS App（2026-11-17 18:55 UTC 起調查，18:56 UTC 已識別原因）**：其他登入方式與既有 session 不受影響。[來源](https://status.claude.com/incidents/1lglzf469c0z)
 - ✅ **已修復（服務已恢復）**｜**Anthropic Status：Claude Sonnet 5.5、Fable 5.2 錯誤率升高，影響 claude.ai／API／Code／Cowork（2026-11-16 07:32–09:04 UTC，約 1.5 小時）**：該時段任務失敗或重試增多即屬此次事故。[來源](https://status.claude.com/incidents/r1b4f9bbnsx1)

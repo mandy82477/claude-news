@@ -109,6 +109,7 @@
 | [[entities/addy-osmani]] | person | 👤 人物 | active | 前 Google Cloud AI 總監；2026-11-03 查證確認已轉職加入 Anthropic，任 Member of Technical Staff 負責 Claude Code |
 | [[entities/jasjeet-sekhon]] | person | 👤 人物 | active（單一來源） | Google DeepMind 前策略長；2026-11-16 The Information 報導離職加入 Anthropic，新職位名稱與到職時間未見報導 |
 | [[entities/claude-personal-finance]] | feature | 🛠️ 工具/功能 | beta | Claude Personal Finance：2026-11-05 推出，連結銀行/信用卡/貸款/投資帳戶供 Claude 分析消費狀況；方案範圍、資料邊界與安全機制官方尚未載明 |
+| [[entities/gary-marcus]] | person | 👤 人物 | active | AI 評論家；多次公開批評 Anthropic（估值敘事、IPO 流通股比例），2026-11-19 建頁彙整其歷次具名表態 |
 ---
 
 ## Topics（進行中議題）
@@ -122,7 +123,7 @@
 | [[topics/model-task-leaderboard]] | 🤖 模型 | ongoing | 🗓️ 週更 任務 × 跨家模型領先者快照：「做某類任務目前哪家最強」——18 類任務的活榜單每週速讀＋各榜評比方式索引；跨家排名的終點在這頁，Claude 家內選型見模型選型對照 |
 | [[topics/anthropic-commitments]] | 🏛️ 政策/安全 | monitoring | 承諾兌現追蹤：「Anthropic 說過要做的事做了嗎」——官方承諾/拒絕建檔，狀態變化時每日更新 |
 | [[topics/code-quality-decline]] | 🌐 社群 | ongoing | 「變笨了」三條線：04 月那次官方已結案，06 月起 token 異常官方沒說法、Opus 5 品質觀感官方只說轉給模型調校；先知道你釘不住你選的模型　↳ 子故事：[[topics/code-quality-decline-archive]] |
-| [[topics/competitor-landscape]] | 💼 商業 | ongoing | Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
+| [[topics/competitor-landscape]] | 💼 商業 | ongoing | 11-19 Google Gemini 4 Neon 發布躍居對手雷達首位（稱追平 Opus 5.5、API 價低 25%）；Meta 三層訂閱打價格戰 + 中國陣營「免費夠用」+ 開源旗艦權重釋出，戰場從「誰更強」移到「誰更便宜」　↳ 子故事：[[topics/competitor-landscape-archive]] |
 | [[topics/community-tech-tools]] | 🌐 社群 | ongoing | 🗓️ 週更：先查「我卡在這裡」症狀決策表拿首選，再看工具目錄的活躍度與採用狀態 |
 | [[topics/skill-interest-watch]] | 🌐 社群 | ongoing | 🗓️ 每日快照 社群工具規模榜：各類工具在 GitHub 上現在誰最大、本週誰在漲；該裝哪個每類附一行連到社群工具目錄症狀列；機器產出，星數是規模不是品質 |
 | [[topics/community-tech-patterns]] | 🌐 社群 | ongoing | 社群做法總覽：21 類依讀者會問的問題分成 7 個子頁，每頁有目前結論與逐則證據；已收斂的方向看 [[topics/community-pattern-trends]]　↳ 子故事：[[topics/community-cost]]、[[topics/community-guardrails]]、[[topics/community-integrations]]、[[topics/community-interfaces]]、[[topics/community-memory]]、[[topics/community-multi-agent]]、[[topics/community-skills]] |

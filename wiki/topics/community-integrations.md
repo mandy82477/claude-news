@@ -31,14 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **創意工具 Agent 整合再添三款專精 skill／plugin；MCP 長 Session 穩健化補上失效模式排查清單**（2026-11-17）
-> - **blender-skills**：94 個 Blender 專精 skill 串成完整生產管線，近 2 天星數暴增。
-> - **opus-video-skills**：Claude Opus 5.5 專用影片製作 skill 庫，一風格一技能。
-> - **ChatCut agent-plugin**：對話剪輯自己拍的素材，plugin＋MCP server 同時相容八款 agent 客戶端。
-> - **MCP 三種隱性失效模式**：schema 膨脹、8MB 回應砍伺服器、工具順序變動洗快取。
+> **創意工具 Agent 整合新增全端影片工作室 openmotion，近 2 天暴增約 1,954 星**（2026-11-19）
+> - **openmotion**：開源 Claude Motion／CapCut 替代品，全端 agentic 影片工作室，支援 22 款 agent（含 Claude）。
 
 ---
 
@@ -62,6 +59,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### nexu-io/openmotion：開源 Claude Motion／CapCut 替代品，全端 agentic 影片工作室支援 22 款 agent（2026-11-19）
+
+- **主線：** —
+- **核心模式：** 開源的 Claude Motion／CapCut 替代品，把參考影片轉成可編輯動態圖像並套用品牌素材，匯出短影音格式；全端 agentic 影片工作室，支援 22 款 agent（含 Claude）；近 2 天新增約 1,954 星（約 977 星/日），累積 12,737 星。
+- **與既有模式的關係：** 補上「創意工具 Agent 整合」（[[topics/community-integrations#2026-11]]）一個「取代既有商業剪輯軟體」取向——既有做法多是技能包，本則是獨立全端產品；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 星速偵測收錄（近 2 天 +1,954 星，約 977 星/日），無 forks／issues／近期 commit 佐證可查，未另行查證；22 款 agent 的具體清單與相容程度未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/nexu-io/openmotion)
+- **成熟度：** ⏳ 新興（本庫首次收錄，星速偏高，尚無第三方採用或複現數據）
 
 #### arjun988/blender-skills：94 個 Blender 專精 skill 組成完整生產管線，供 Cursor／Claude Code／Kiro／Codex 使用（2026-11-17）
 

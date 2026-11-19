@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-01
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **官方部落格揭露驗證方法論：測試證據是規模化平行委派的前提**（2026-11-17）
-> Claude Code 團隊公開內部做法：約 90% 程式碼由 Claude 自己寫、自己審，靠端對端／property／差異測試三種驗證迴圈讓 agent 自證工作，才能同時平行跑幾十甚至上百個 Claude；HN 194 分。
+> **確定性 Agent 框架新增跨模型紀律移植案例：Gravitas 把 Claude Code 工作流程套用在 Gemini 上**（2026-11-19）
+> Gravitas 強制 Gemini 編輯前先檢視檔案、規劃變更、測試自己的工作，並要求每次「完成」附實際證據；501 星。
 
 ---
 
@@ -139,6 +139,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### udaysharmadev/Gravitas：把 Claude Code 的「讀檔→規劃→測試→拿證據」流程強制套用在 Gemini 上（2026-11-19）
+
+- **主線：** —
+- **核心模式：** 強制 Gemini 在編輯前先檢視檔案、規劃變更、測試自己的工作，並要求每次「完成」都附實際證據；目標是把 Claude Code 慣用的工作紀律複製到其他模型上；501 星。
+- **與既有模式的關係：** 補上「確定性 Agent 框架」一個「把既有模型紀律移植到另一模型」取向，與既有 Comma（自架常駐，[[topics/community-multi-agent#2026-11]]）不同層次——後者爭部署形態，本則爭紀律能否脫離原生模型複製（推論）；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（501★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體強制機制（hook／prompt wrapper）未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/udaysharmadev/Gravitas)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Anthropic 官方部落格：Claude Code 團隊的驗證方法論——端對端、property、差異測試讓 agent 自證工作，撐住大規模平行委派（2026-11-17）
 

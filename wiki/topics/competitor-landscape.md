@@ -28,15 +28,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-04
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 %% 拆頁評估 2026-10-31：不拆（理由：分不出群／每群太薄）。正文約 585 行，未過 600；各節所答＝摘要／對手雷達／硬答案／競品定價對照／雷達細節＝「各家競品現在站哪、誰衝擊最大」（約 200 行）；查證快照＝一次性查證（到期日 2027-02-09 整節移除）；時序＝同一題的逐日證據（約 320 行，條目按對手分散在 10 餘家，每家不到 60 行，按對手切出來是 log 不是故事）。現況群與事件流答同一題，且雷達列的衝擊度靠時序支撐；30 天內無官方事件改變分法。時序已加月份分組層（日期錨點全庫無人連入）；2026-08 時段 11 月滿 3 個月後走蒸餾。 %%
 **蒐集邊界：** 以 Claude 為參照系的競品動態為主，另針對競品發布與定價定向補抓（每日至多 2 則）；競品自身未與 Claude 對比的發布可能延遲或缺漏。**帶跑分數字的第三方對照評測收不到**——這類內容多發表於對照型部落格，不在本站蒐集範圍，因此本頁的競品能力比較以官方數字與社群並排實測為主，缺口處改指向外部活榜單（見 [[topics/model-comparison]] 的外部評測榜單節），不自行推算。
 
-> **本週衝擊**（2026-11-18）
+> **本週衝擊**（2026-11-19）
 > - 🔴 **Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%**（ZDNET／GeekWire／Kingy AI 轉述）——目前只有廠商數字與媒體轉述，沒有官方牌價或第三方跑分，先別照這個比例重算預算。
-> - 🔴 **Gemini 4 Carbon 上線價 $2／$10，12-01 起翻倍為 $4／$20（＝Opus 5.5 牌價）**（Simon Willison 轉述；VentureBeat 11-10 稱價低於 Fable 5.2 與 Opus 5.5）——在意 API 成本的人，比價窗口只到 12-01；官方牌價頁與基準未查證。
-> - 🟡 **GPT-6.2 Astra 確認 input $8／Mtok（為前代 6 Astra 八折），Sol 與完整 output 價未見**（Blog/Simon Willison；同日全面上線 GitHub Copilot）——評估換模型的人多一個輸入價基準，但頭對頭成本仍待 output 價補齊。
+> - 🔴 **Gemini 4 Neon 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25%**——成本與能力宣稱同時出現，在意兩者的人都該重新比價，但基準與第三方跑分未查證。
+> - 🟡 **GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項**（BigGo Finance 轉述）——多工向任務先別急著換，但成本敏感的人有理由找機會實測對照。
 
 ---
 
@@ -50,10 +50,10 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 對手 | 最新動態（日期） | 衝擊面 | 衝擊度 | 這個消息有多硬 |
 |---|---|---|---|---|
+| **Google（Gemini）** 🏢 | 11-19 **Gemini 4 Neon** 發布，DeepMind 稱程式撰寫能力追平 Opus 5.5，OODA Loop 稱 API 價比 Opus 5.5 低 25% → 成本與能力都有感，該重新比價 | 定價 | 🔴 | DeepMind 官方一手（AA 智慧指數 61 分列第 3）；API 價格對比僅 OODA Loop 轉述，官方牌價頁與基準未查證 |
 | **Microsoft／GitHub** 🏢 | 11-17 Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5% → 若屬實，成本敏感團隊有理由重算預算 | 定價 | 🔴 | 廠商自稱＋ZDNET／GeekWire／Kingy AI 轉述，缺官方牌價與第三方跑分，5% 為概估比例非 $ 數字 |
 | **DeepSeek** 🏢 | 11-01 發布自主程式開發「超級 agent」挑戰 Claude Code；11-02 Techzine Global 稱為開源版替代品 → 權重開放範圍與發布規模待觀察 | 能力 | 🔴 | 跨 5 媒體同報（Bloomberg／南華早報／Investing.com／Stocktwits／Techzine Global），功能細節與定價均未附；V4-Pro 費率已查證 ⟨Q-01⟩（見「競品定價對照」） |
-| **Google（Gemini）** 🏢 | 11-10 Gemini 4 Carbon 對外開放，上線價 $2／$10，12-01 起翻倍 $4／$20＝Opus 5.5 牌價 → 12-01 前是比價窗口，之後同價 | 定價 | 🔴 | DeepMind 官方一手；價格僅 Simon Willison 轉述（VentureBeat 標題同向），官方牌價頁未查證；基準細節未載 |
-| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.2 Astra／Sol）** 🏢 | 11-17 發布 GPT-6.2 Astra／Sol，官方稱 ChatGPT Work、Codex、API 全面降成本並提升專業輸出、程式能力與 computer use → 升級後規格與對 Claude 的價格對照待查 | 能力 | 🟡 | 官方發布稿一手；Simon Willison 轉述確認 Astra input $8/Mtok（為 6 Astra 八折），output 數字未完整引用，對 Claude 的完整頭對頭價格仍缺 |
+| **OpenAI（Codex CLI／ChatGPT Work・GPT-6.2 Astra／Sol）** 🏢 | 11-19 BigGo Finance：Astra 6.2 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項 → 多工向任務 Claude 仍較穩，成本敏感者有理由找機會比價 | 定價 | 🟡 | BigGo Finance 單一來源轉述，任務清單與方法論未附；11-17 官方發布稿為一手來源 |
 | **Zhipu Z.AI** | GLM-5.3 主打資安、稱抓 bug 優於 Anthropic 與 OpenAI（08-17）→ 靠 Claude 做安全審查的人值得找機會實測對照 | 能力 | 🔴 | 2 家媒體，無方法論；10-05 另傳獲 Anthropic 背書，Anthropic 側查無官方 🔎 查無官方 ⟨Q-08⟩ |
 | **Moonshot AI（Kimi K3.1 Pro）** | 10-23 K3.1 Pro 上 Kimi API（權重未開源），The Decoder 稱逼近 Opus 5.5；K3 開源版成本約三分之一 → 逼近說法尚無數字可核 | 能力 | 🔴 | 弱訊號：媒體標題無量化數字，官方發布經 Simon Willison 轉述；K3 量化實測見雷達細節 |
 | **Cursor** 🏢 | 10-27 把自家 coding agent 包成 TypeScript SDK，開放任何人在自己程式裡呼叫建置 → 從「工具」升級為可嵌入他人產品的平台，評估自建 agent 的人多一個選項 | 生態 | 🟡 | Startup Fortune 單一來源，僅標題可用，SDK 能力範圍與定價未載 |
@@ -88,6 +88,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Kiro 標題那個 $200 是跟 Claude Max 比嗎？** 不是——那是 Kiro 自身 Power 方案的月費，非跨產品比較（2026-08-13 查證 kiro.dev）。
 - **Gemini CLI 還免費嗎？** 不是——2026-06-18 起免費／Pro／Ultra 帳號停止 Gemini CLI，併入 Antigravity CLI，個人開發者需轉付費 API key（2026-08-13 查證）。
 - **GitHub Copilot Pro+ $39 比 Claude 便宜嗎？** 名義月費較低，但 Opus 存取採 27 倍加價換算，重度使用時實際成本可能反超（2026-05-06 查證，此後未回訪）。
+- **Astra 6.2 比 Fable 5.2 便宜快，代表更強嗎？** 不一定——BigGo Finance 稱 OpenAI Astra 6.2 在速度與 API 成本上勝過 Claude Fable 5.2，但 12 項任務裡輸了 7 項；任務清單與方法論未附（2026-11-19 查證）。
 - **跨模型路由（GitHub Copilot Fusion）會不會改變選 Claude Code 的成本論點？** 10-29 The New Stack 稱 Fusion 勝 Claude Code、成本減半。
   - 媒體稱數字源自 Artificial Analysis 的 Coding Agent Index：Fusion Max 60 分、每任務約 $5.59，對 Claude Code＋Opus 5.5 Max 62 分、約 $11.42（2026-11-14 查證）。
   - 「一半」是 API 每任務成本、不是訂閱價，不能拿來重算訂閱比價；見「對手雷達」Microsoft／GitHub 列。
@@ -143,6 +144,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### Google（Gemini）
 **現在的答案**
+- 11-19 **Gemini 4 Neon** 發布：DeepMind 稱帶來前沿級智慧、跨軟體工程／知識工作／科學工作流的快速端到端任務完成；AA 智慧指數 61 分列全球第 3，Agent Arena 可操控性排名第 2（DeepMind 官方）。
+  - 程式撰寫能力追平 Claude Opus 5.5（DeepMind 官方稱）；OODA Loop 稱 API token 價比 Opus 5.5 低 25%；同日全面上線 GitHub Copilot（Blog/GitHub Copilot Changelog；OODA Loop）。
+  - Simon Willison 指出 Gemini 4 系列定價更混亂：現售價由貴到便宜依序為 Carbon（現打五折）、Neon（$3／百萬 input、$15／百萬 output，目前實際最貴）、Hydrogen（$1 起），官方新圖未再提及既有 Argon 系列（Blog/Simon Willison）。
 - 11-12 **Gemini 4 Hydrogen** 發布：Google 稱主打日常 coding 與 agentic 工作流的速度與效率，。
   - Carbon、Argon 則留給長程推理。
   - 官方稱 Artificial Analysis 智慧指數預設高思考等級 51（Argon 50），xhigh 達 54。
@@ -264,7 +268,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 2026-11
 
+#### 2026-11-19
+- **OpenAI**：BigGo Finance 稱 GPT-6.2 Astra 速度與 API 成本勝過 Claude Fable 5.2，但 12 項任務中輸 7 項，見 [[#硬答案]]（BigGo Finance）
+
 #### 2026-11-18
+- **Google DeepMind**：正式發布 **Gemini 4 Neon**，同日全面上線 GitHub Copilot；詳見「對手雷達」Google 列與「雷達細節」更新（Blog/Google DeepMind Blog；Blog/GitHub Copilot Changelog）
+- **Microsoft／GitHub（生態擴張，非編碼能力異動）**：Copilot 新增 Supabase、Box、Calendly 等 8 個 GitHub 驗證 MCP connector 公開測試，累計已可連結逾 25 個服務；屬連接器生態擴張，不列入「對手雷達」表（Blog/GitHub Copilot Changelog）
 - **Microsoft／GitHub**：Microsoft 稱自研編碼模型 MAI Code 2 效能比得上 Claude Opus 5.5、成本僅其 5%；ZDNET／GeekWire／Kingy AI 同期報導，Fello AI 另整理定價與 benchmark；官方牌價與第三方跑分均未見（Google News/ZDNET；GeekWire；Kingy AI）
 - **OpenAI**：Simon Willison 確認 GPT-6.2 Astra input 價 $8/Mtok（前代八折）；同日 GPT-6.2 Astra／Sol 全面上線 GitHub Copilot，主打 agentic coding 與程式碼審查優於前代（Blog/Simon Willison；Blog/GitHub Copilot Changelog）
 - **OpenAI（分析文，非編碼能力異動）**：官方說明 Codex sandbox 如何在 macOS／Linux／Windows 執行指令，並由使用者控制檔案系統與網路存取限制；屬既有功能說明文件，非新能力或定價異動，不列入「對手雷達」表（Blog/OpenAI News）

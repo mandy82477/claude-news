@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-18）
-> - **v2.1.327**：`/install-github-app` 變更 repository 設定前新增確認提示；新增 `claude mcp add-json <name> -`，可從 stdin 讀入 MCP 伺服器 JSON 設定，token 不必留在命令列歷史。
+> **最新動態**（2026-11-19）
+> - **v2.1.328**：Auto mode 新增支援 Opus 4.6、Sonnet 4.6 於 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 與 Claude apps gateway；互動階段啟用後不再跳出許可提示（官方原文未附細節）。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -67,6 +67,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.328** | 2026-11-19 | Auto mode 新增支援 Opus 4.6、Sonnet 4.6 於 Bedrock、GCP Agent Platform、Microsoft Foundry、apps gateway，互動階段免許可提示（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.328)）|
 | **v2.1.327** | 2026-11-17 | 新增確認提示：變更前先詢問 `/install-github-app`；新增 `claude mcp add-json <name> -` 從 stdin 讀入 MCP JSON，token 不留命令列歷史（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.327)）|
 | **anthropic-sdk-python v2.10.0** | 2026-11-17 | Features：新增 beta 支援的 `billing_policy` 請求參數、`contract_spend_limit_reached` 錯誤碼，以及連結計費退款相關新錯誤碼（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.10.0)）|
 | **anthropic-sdk-typescript sdk-v1.10.0** | 2026-11-17 | 同步 Python SDK：`billing_policy` beta 參數、`contract_spend_limit_reached` 與連結計費退款錯誤碼（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.10.0)）|
@@ -222,6 +223,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-19 | **v2.1.328**：Auto mode 擴及 Opus 4.6／Sonnet 4.6，免許可提示。旗標增8消1，見 [[topics/claude-code-experimental]]。互動更新 #31005／#25128。 |
 | 2026-11-18 | **v2.1.327**：`/install-github-app` 新增確認；`claude mcp add-json -` 讀 stdin。旗標增10消2，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-13 | **v2.1.323**：新增 Code Mode（實驗性選項，JS 呼叫工具）。旗標增 13，見 [[topics/claude-code-experimental]]。互動更新 #53247／#63875／#14828。 |
 | 2026-11-10 | **v2.1.322**：Vertex 新增 fast mode（global／us／eu）。SDK 同步更新（見下）。互動更新 #34255／#38005。 |

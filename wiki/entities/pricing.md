@@ -32,11 +32,12 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 **狀態：** active（持續調整中）
 **領域：** 💼 商業
 **首次出現：** 2026-04-25
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 %% 拆頁評估 2026-11-02：已拆（第 24 波，`docs/page-audits/ledger.md` 裁決紀錄）。事故＋配額與速率＋灰色市場 → entities/pricing-incidents；定價與促銷＋成本案例 → entities/pricing-history；計費切割風波死案歸檔 entities/pricing-archive。母頁留方案、牌價、還沒確定、生效規則、通路與乘數、三路分流；正文上限 300 行，逾線時下一刀是 API 塊（一小時、模型 API 定價、通路與乘數連續三節，整塊切出）。 %%
 
-> **最新計費政策異動**（2026-11-18）
+> **最新計費政策異動**（2026-11-19）
+> - **官方定價文件新增 Managed Agents 計費依據與各平台乘數規則細項**，並移除舊版 Google Cloud 定價與每千次搜尋 $10 的 web search 定價行（細節見下方「當前生效的計費規則」，待查證移除後的替代寫法）
 > - **Max 方案 1M context 誤判需加購**：GitHub Issue #45390 回報，選用 Opus 4.6（1M context）即使用量遠低於需要加購的量仍顯示「Extra usage required」，官方尚無回應，詳見 [[entities/pricing-incidents]]
 > - **Linked Billing 公開測試上線**：第三方平台可把自己的計費系統接上 Claude API 用量帳務，Python／TypeScript SDK 同日新增 `billing_policy` 參數與對應錯誤碼；Railway、Harness（Cosmos）同日宣布已支援
 > - **claude.ai 購買與方案變更一度出錯、已解決**：官方狀態頁 11-14 通報，延遲款項與方案變更已補上，詳見 [[entities/pricing-incidents]]
@@ -234,6 +235,8 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 - **✅ 內建工具的計費（官方定價頁，2026-09-06 查證）**：程式碼執行每月 1,550 小時免費，超出後 $0.05／小時；網頁搜尋 $10／1,000 次；網頁擷取免費
 - **✅ Claude Security 跑 Mythos 5＝標準 token 計費**（Enterprise 方案內，無須加購；官方 blog 2026-08-21）
 
+- ❓ **待查證**（標 2026-11-19｜查 Managed Agents、multiplier｜複 2026-12-03）｜**官方定價文件疑似移除 web search $10／1,000 次與舊版 Google Cloud 定價**：11-19 偵測到文件新增 Managed Agents 計費依據與各平台乘數規則，同批疑似移除上述兩項，是否仍適用待官方全文核對（[官方定價文件](https://platform.claude.com/docs/en/about-claude/pricing)）
+
 > **已失效並移除的規則**：Fable 5 免費使用期（2026-07-19 到期，由上方 07-20 分界取代）；Claude Code 週用量 +50% 促銷（2026-09-13 到期，09-14 由上方永久 +25% 接手）。經過見 [[entities/pricing-history]]。
 
 ---
@@ -254,6 +257,7 @@ Claude 現在怎麼收你的錢，以及最近哪幾件事改變了這個答案�
 
 **通路細節**
 
+- ❓ **待查證（同上，標 2026-11-19）**｜**官方定價文件區分 Google Cloud Anthropic 代管與 Google 代管**：前者疑似與 Claude API、AWS 同套乘數；後者與 Bedrock 並列為合作方自營，乘數由對方自訂；與上表現有寫法是否同一件事待核對
 - **partner 通路（Bedrock、Google Cloud）的絕對數字本頁不記**——費率由該平台自訂且會各自調整，抄下來即過期。查 [Bedrock 定價](https://aws.amazon.com/bedrock/pricing/)／[Google Cloud 定價](https://cloud.google.com/vertex-ai/generative-ai/pricing#claude-models)
 - **Bedrock 無 Message Batches API ⇒ 拿不到 50% 批次折扣**；亦不支援 `anthropic-beta` 標頭，compaction／context editing／task budgets 皆不可用——長脈絡的成本控制手段少一半
 - **Claude Platform on AWS 組織固定於 Start 層且不自動升級**，月花費上限 $500，提額須聯繫 Anthropic 客戶代表；私有報價須在產生用量**前**接受，折扣不溯及既往

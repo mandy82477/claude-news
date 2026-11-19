@@ -9184,3 +9184,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - devpractice 沉澱：候選 7／本日無官方使用指南落地頁（Claude Desktop release channel、功能記者已知問題逐一核對後判定不符開發實務收錄門檻）
 - market 判讀：新增 3 則（IPO 加碼發行規模／雲端夥伴持股揭露、遊說支出開線），里程碑登記 3 筆，回顧結算 ⏳ 新增 3 列（結算日 2026-12-02），皆寫入 topics/market-signals-ipo／market-signals-legal
 - 📋 需使用者端設定：無
+
+## 2026-11-19 Ingest
+
+- 來源日報：[[news/2026-11-19]]
+- 更新頁面：
+  - **人物**：無（新增見下）
+  - **功能**：entities/claude-code、entities/claude-code-known-issues、entities/claude-code-releases、topics/claude-code-experimental
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/anthropic-partnerships-compute、entities/pricing、topics/competitor-landscape
+  - **安全政策**：無（今日唯一條目為殼層摘要，無可補寫事實）
+  - **模型**：entities/fable-5、entities/mythos
+  - **社群**：topics/community-tech-patterns、topics/community-skills、topics/community-integrations、topics/community-multi-agent
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals-customers（＋母頁 topics/market-signals）
+  - **主編**：wiki/feature-radar.md（Auto mode 設定熱度 🔥→🔥🔥，v2.1.328 擴及 Opus 4.6／Sonnet 4.6）、wiki/index.md（新增 entities/gary-marcus 列；competitor-landscape 鉤子改寫為今日 Gemini 4 Neon 躍居首位）、wiki/overview.md（「當前局勢」IPO 段落由「傳」改寫為已確認的定價與掛牌結果，僅此一段，非週更全文重寫）
+- 新增頁面：wiki/entities/gary-marcus.md（人物記者：AI 評論家，多次公開批評 Anthropic，達 2 次以上提及建頁門檻）
+- 摘要：Anthropic 完成 IPO 定價（$83／股）並於 Nasdaq 正式掛牌（代號 ANT，開盤 $111.50、一度 $114.99），是今日主線；同日 Google 發布 Gemini 4 Neon 並同步上線 GitHub Copilot，官方稱程式撰寫能力追平 Claude Opus 5.5、API 價低 25%，OpenAI Astra 6.2 亦被報導在速度與成本上優於 Claude Fable 5.2 但輸 7/12 任務，為今日次要主線（競品定價/能力對標）；其餘為 Claude Code 2.1.328 一般版本更新與社群工具若干。
+- 呈現品質：全部通過
+- 品質備註：無
+- 分類回退：無
+- 轉知帳本：結案 H-959ab3（功能：patterns 新節點不列入產品化矩陣，理由見功能記者回報）；新開 H-03e408（社群→功能：今日 patterns 子頁新增 4 則節點，請評估 official-community-gap 產品化矩陣是否需新增列）；H-8ff4bb（商業→安全政策，2026-11-18 開立）**保持 open**——安全政策記者今日核對確認聯名信簽署人與具體主張不存在於任何一天的日報原文（僅標題可用），需查 Business Wire 原文一手來源；本輪主編嘗試 WebFetch `businesswire.com`／`news.google.com` 皆被雲端 egress 擋下（`getaddrinfo ENOTFOUND`，Trusted 網域清單未涵蓋），非永久事實，見下方「📋 需使用者端設定」
+- devpractice 沉澱：本日無候選（分類階段 0 則落入開發實務類）
+- market 判讀：新增 3 則（IPO 定價與掛牌、Amazon 帳面市值變化、Gemini 4 Neon／Astra 6.2 競品定價對標），標的表覆寫 3 列，里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列（結算日見各子頁），已標訊既有待查證標記 2 筆（market-signals-ipo，未結案）
+- 📋 需使用者端設定：
+  - `businesswire.com`、`news.google.com` 被雲端環境網路政策（Trusted）擋下，無法 WebFetch 查證 H-8ff4bb 所需的 Business Wire 聯名信原文；使用者可在 claude.ai 雲端環境設定將網路存取改為 Custom 並加入這兩個網域，或留待下次本機 session 查證

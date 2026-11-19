@@ -452,3 +452,5 @@
 {"id": "H-4f90e4", "closed": "2026-11-18", "status": "done", "by": "功能", "result": "逐一比對 official-community-gap 產品化矩陣 18 列現況，8 個 patterns 節點皆已對應既有列或不構成獨立缺口，未開新列"}
 {"id": "H-3dcb56", "closed": "2026-11-18", "status": "done", "by": "功能", "result": "已於 entities/claude-code-known-issues.md「🔌 MCP 整合」新增 ❓ 待查證條目（issue #105703，探針 105703／stdio，複查日 2026-12-02）"}
 {"id": "H-8ff4bb", "opened": "2026-11-18", "from": "商業", "to": "安全政策", "page": "topics/ai-agent-safety", "note": "商業記者已在 anthropic-ipo『誰說撐不住』寫入 ESG Dive『高風險』評級與 Business Wire〈Anthropic is Not a Safe AI Company〉聯名信的投資人視角摘要並 wikilink 過來；安全品牌質疑與聯名訴求的完整內容（聯名人士、具體主張）仍待安全政策記者在本頁補寫", "status": "open"}
+{"id": "H-959ab3", "closed": "2026-11-19", "status": "done", "by": "功能", "result": "功能記者 2026-11-19 ingest 回報已處理"}
+{"id": "H-03e408", "opened": "2026-11-19", "from": "社群", "to": "功能", "page": "topics/official-community-gap", "note": "今日 patterns 子頁新增 4 則節點（NVIDIA/SkillEvaluator、product-launch-motion＋video-director、openmotion、Gravitas），請評估是否列入「產品化矩陣」", "status": "open"}

@@ -31,11 +31,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **可靠性測試新增 QA 證據鏈工具：canary**（2026-11-18）
-> - **canary**：Claude Code 專用 QA harness，測試失敗時附螢幕錄影、console log、network HAR 與 Playwright trace 的完整證據鏈。
+> **可靠性測試新增 skill 品質評估框架；Skills 設計再添兩款 Code-rendered 影片技能**（2026-11-19）
+> - **SkillEvaluator**：NVIDIA 發布的多層級框架，在 skill 安裝前就篩掉低品質或重疊的 skill。
+> - **product-launch-motion／video-director**：兩款把「不剪接、節拍同步」與「QA 把關流程」寫進技能本體的 code-rendered 影片 skill。
 ---
 
 ## 摘要
@@ -94,6 +95,26 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### NVIDIA/SkillEvaluator：多層級框架評估 AI agent skills／plugins 品質，含安全掃描與語意重疊偵測（2026-11-19）
+
+- **主線：** —
+- **核心模式：** NVIDIA 發布的多層級框架，評估 AI agent skills 與 plugins 品質：品質門檻、安全掃描、harness 相容性檢查、語意重疊偵測、合成評測資料集生成，以及量測 skill 對 agent 實際行為影響的 live agent evaluation；附可重用 CI 範本；GitHub Search 4,067 星。
+- **與既有模式的關係：** 補上「可靠性測試」既有代表技巧（0xnyn/canary 的失敗證據鏈等，[[topics/community-skills#2026-11]]）一個「skill 本身品質怎麼評」的上游取向——既有做法多驗證單次執行結果，本則在 skill 安裝前就篩掉低品質或重疊的 skill；大廠具名發布，非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 星速偵測收錄（近 2 天 +774 星，約 387 星/日），無 forks／issues／近期 commit 佐證可查，未另行查證；來源方為 NVIDIA 官方帳號。
+- **來源：** GitHub Search；[GitHub](https://github.com/NVIDIA/SkillEvaluator)
+- **成熟度：** ⏳ 新興（本庫首次收錄，星速偏高，尚無第三方採用或複現數據）
+
+#### 同日兩款 Code-rendered 影片 Skill：AbubakrChan/product-launch-motion（商品發佈動畫）、win4r/video-director（HTML/Canvas → MP4 把關流程）（2026-11-19）
+
+- **主線：** —
+- **核心模式：**
+  - AbubakrChan/product-launch-motion：Claude Code skill，從程式碼產出 Dribbble 等級商品發佈影片——單一形狀不剪接、彈簧動畫、游標驅動每個變化、節拍同步音效、60fps 動態模糊；v2 建議搭配 Claude Opus 5.5；505 星。
+  - win4r/video-director：Claude skill，專責指導、建置與驗證「程式碼渲染影片」（HTML/Canvas → MP4）：原則、關卡式流程（gated workflow）、QA script 與 evals；503 星。
+- **與既有模式的關係：** 補上「Skills 設計」既有 code-rendered 影片做法（[[topics/community-skills#2026-10]]）兩個新取向：product-launch-motion 把產出規格寫死進 skill；video-director 把驗證步驟獨立成技能本體；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 兩者皆僅有 GitHub Search 星數（505★／503★），無 forks／issues／近期 commit 佐證可查，未另行查證；具體 QA script／evals 內容未見報導（細節未載）。
+- **來源：** GitHub Search；[product-launch-motion](https://github.com/AbubakrChan/product-launch-motion)（505★）、[video-director](https://github.com/win4r/video-director)（503★）
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### 0xnyn/canary：QA harness 搭配螢幕錄影、console log、network HAR 與 Playwright trace 的完整證據鏈（2026-11-18）
 

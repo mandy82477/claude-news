@@ -30,11 +30,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** active（出口管制解除，2026-07-01 起全球恢復存取；5.2 已於 2026-11-09 發布，維持信任機構限定存取，未轉為全面公開）
 **領域：** 🤖 模型
 **首次出現：** 2026-04（限定夥伴 Preview）
-**最後更新：** 2026-11-17
-**最後新聞更新：** 2026-11-17
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **AMD 移植細節曝光**（2026-11-17）
-> Tom's Hardware：Anthropic 向 IPO 投資人稱 Mythos 把模型移植上 AMD MI355X 的工作從 6–12 個月縮至 3 天，幾乎全自主寫 kernel；仍限信任機構存取。
+> **穩定性事件**（2026-11-19）
+> Mythos 5.2 與 [[entities/fable-5|Fable 5.2]] 錯誤率升高，08:56–09:11 UTC（約 15 分鐘）已解決，另波及 claude.ai／API／Code／Cowork。
 
 ---
 
@@ -155,6 +155,11 @@ Anthropic 的官方 AI 資安能力研究計畫，Mythos Preview 為核心工具
 ### 解禁後（2026-06-27 起）
 
 ### 2026-11
+
+#### 2026-11-19
+**Anthropic 狀態頁：Mythos 5.2 與 Fable 5.2 同批錯誤率升高（09:33 UTC 已解決，影響約 15 分鐘）**：
+- 官方標記已解決；影響期間 00:56–01:11 PT（08:56–09:11 UTC），同批波及 claude.ai、Claude API、Claude Code 與 Claude Cowork 四項服務（[Anthropic Status](https://status.claude.com/incidents/c1kmrkmv5f3d)，2026-11-19）
+- 屬穩定性事件，非能力或存取政策變化；Fable 5.2 面記錄見 [[entities/fable-5]]
 
 #### 2026-11-17
 **Tom's Hardware：Anthropic 向 IPO 投資人稱 Mythos 把 AMD GPU 移植工作從 6–12 個月縮至約 3 天**：
@@ -377,3 +382,5 @@ Claude Fable 5 發布後社群爭議持續：Anthropic 被揭露在偵測到使�
 - [Anthropic Status：Elevated errors on Fable 5.2 and Mythos 5.2](https://status.claude.com/incidents/pgz8r13pk4sm)（2026-11-10）
 - [[news/2026-11-10]]
 - [[news/2026-11-11]]
+- [Anthropic Status：Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2](https://status.claude.com/incidents/c1kmrkmv5f3d)（2026-11-19）
+- [[news/2026-11-19]]

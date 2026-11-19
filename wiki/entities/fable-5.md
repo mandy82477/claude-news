@@ -33,11 +33,11 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-16
-**最後新聞更新：** 2026-11-16
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 
-> **穩定性事件**（2026-11-16）
-> Fable 5.2 與 [[entities/sonnet-5-5|Sonnet 5.5]] 錯誤率升高，07:32–09:04 UTC（約 1.5 小時）已解決，另波及 claude.ai／API／Code／Cowork。
+> **穩定性事件**（2026-11-19）
+> Fable 5.2 與 [[entities/mythos|Mythos 5.2]] 錯誤率升高，08:56–09:11 UTC（約 15 分鐘）已解決，另波及 claude.ai／API／Code／Cowork。
 
 ---
 
@@ -242,12 +242,27 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [[news/2026-11-11]]
 - [Google News/BigGo Finance：Claude Fable 5.2 Builds a 97 KB Underwater World at 180 FPS, No Game Engine Needed](https://news.google.com/rss/articles/CBMidkFVX3lxTE5pd2VxVGttcjNWcUxFdlRqamhuT09ScWZKQkcwYTd4WlN0QVhwRTgyWjFqSWNiMjQ0ODdGV2JUQ3ZVM3BDckJfaHZncHFwWmNGUWk0MkFkcmREejNSaEV2WTMxaGZqZzdTWWJTQ0pRd0lpLVRHN0E?oc=5)（2026-11-15）
 - [[news/2026-11-15]]
+- [Anthropic Status：Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2](https://status.claude.com/incidents/c1kmrkmv5f3d)（2026-11-19）
+- [Claude solves two open problems in the physics of black holes](https://www.anthropic.com/research/claude-black-hole-physics) — Anthropic Research（2026-11-19，HN 133 分）
+- [Google News/Crypto Briefing：Anthropic's Claude Fable 5.2 takes the top spot on Code Arena's WebDev leaderboard](https://news.google.com/rss/articles/CBMigAFBVV95cUxPdFZHRzItQU43cVpRUk9vYkJNVC13TFA2dHpUR0ZjRDhFbldQV0V5OEVrOHZpSTMwYlhwOEQ4aFVVQ0lDc0pJR1hyYzRLeVU3ZE1KNUZhOEdOLWZoUjR6NXlpanFUVWw2UWNEZ3NVQXZBSDFONGxkalRwNVNJeGRzdA?oc=5)（2026-11-19，僅標題可用）
+- [[news/2026-11-19]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-19
+**Anthropic 狀態頁：Fable 5.2 與 Mythos 5.2 同批錯誤率升高（09:33 UTC 已解決，影響約 15 分鐘）**：
+- 官方標記已解決；影響期間 00:56–01:11 PT（08:56–09:11 UTC），同批波及 claude.ai、Claude API、Claude Code 與 Claude Cowork 四項服務（[Anthropic Status](https://status.claude.com/incidents/c1kmrkmv5f3d)，2026-11-19）
+- 屬穩定性事件，非能力或存取政策變化；Mythos 5.2 面記錄見 [[entities/mythos]]
+
+**Anthropic 研究：Claude 解出兩道黑洞物理／量子重力公開問題**：
+- Anthropic 研究部落格稱 Claude 完成一道物理學家 20 餘年前提出、始終未解的計算，證實黑洞形成相關的某個突然轉變在時空不再有明確定義時仍然存在；原文未點名具體模型版本（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)，2026-11-19；Hacker News 133 分）
+
+**Google News／Crypto Briefing：稱 Fable 5.2 登上 Code Arena WebDev 排行榜冠軍（僅標題，弱訊號）**：
+- 原料無可讀內文，測試方法與分數均未見報導，互動數 0；跨家排名之家為 [[topics/model-task-leaderboard]]，本頁僅記錄此則報導存在，不代表已查證（[Google News/Crypto Briefing](https://news.google.com/rss/articles/CBMigAFBVV95cUxPdFZHRzItQU43cVpRUk9vYkJNVC13TFA2dHpUR0ZjRDhFbldQV0V5OEVrOHZpSTMwYlhwOEQ4aFVVQ0lDc0pJR1hyYzRLeVU3ZE1KNUZhOEdOLWZoUjR6NXlpanFUVWw2UWNEZ3NVQXZBSDFONGxkalRwNVNJeGRzdA?oc=5)，2026-11-19）
 
 #### 2026-11-16
 **Anthropic 狀態頁：Fable 5.2 與 Sonnet 5.5 同批錯誤率升高（09:04 UTC 已解決，影響約 1.5 小時）**：

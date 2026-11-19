@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-19
+**最後新聞更新：** 2026-11-19
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-18）
-> 2.1.327（自 2.1.326 起）新增 10 個候選旗標，皆第一階、無代號旗標；另 2 個設定類旗標來源已過濾不列；消失 2 個：`CLAUDE_CODE_CONSENT_POINTERLESS`（首見 2.1.306，列 4 階）、`CLAUDE_CODE_SPARE_KEEPS_BOOT_SESSION_ID`（首見早於追蹤範圍）；對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-19）
+> 2.1.328（自 2.1.327 起）新增 8 個候選旗標，7 個第一階（名單見追蹤表）＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個：`CLAUDE_CODE_CCR_SKIP_NEEDLESS_STARTUP_READS`（首見 2.1.323，列 4 階）；對帳僅命中來源條目自身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.328（11-19，自 2.1.327 起）新增 8 個候選旗標**：7 個第一階（名單見追蹤表）＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個（`CCR_SKIP_NEEDLESS_STARTUP_READS`，列 4 階）；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.327（11-18，自 2.1.326 起）新增 10 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 2 個設定類旗標已過濾不列；消失 2 個（`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`，列 4 階）；對帳僅命中來源條目，暫不升第二階。
 - **2.1.326（11-17，自 2.1.325 起）新增 13 個候選旗標，10 個已知名稱中 8 個入表**（名單見追蹤表），皆第一階、無代號旗標。
   - 2 個設定類旗標（逾時／識別碼）不列；另 3 個旗標名稱原料截斷未附，暫無法登記；本輪無消失旗標，對帳僅命中來源條目自身，暫不升第二階。
@@ -79,6 +80,13 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_CCR_AFFINITY_KEY` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_DISABLE_DEFERRED_TOOL_RESUME` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_HOST_CHECKED_FOLDER` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_RELAUNCH_SANDBOX_HOLD` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_SHELL_MCP_SERVERS` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_THINKING_RESUMPTION` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
+| `CLAUDE_CODE_WATCHED_SLEEP` | 2.1.328（11-19） | 1 | — | — | 2.1.328 仍在（比對日 11-19） |
 | `CLAUDE_CODE_DESKTOP_RESULT_FIRST` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
 | `CLAUDE_CODE_DISABLE_LAYOUT_CHECK` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
 | `CLAUDE_CODE_DISABLE_PROXY_SCHEME_REPAIR` | 2.1.327（11-18） | 1 | — | — | 2.1.327 仍在（比對日 11-18） |
@@ -100,7 +108,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | `CLAUDE_CODE_DISABLE_EXPORTED_VARIABLE_PROMPT` | 2.1.325（11-14） | 1 | — | — | 2.1.325 仍在（比對日 11-14） |
 | `CLAUDE_CODE_MCP_APPS_NO_TOOL_ROUTE` | 2.1.325（11-14） | 1 | — | — | 2.1.325 仍在（比對日 11-14） |
 | `CLAUDE_CODE_AUTOMOUNT_ROOTS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
-| `CLAUDE_CODE_CCR_SKIP_NEEDLESS_STARTUP_READS` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
+| `CLAUDE_CODE_CCR_SKIP_NEEDLESS_STARTUP_READS` | 2.1.323（11-13） | 4 | — | — | 2.1.328（11-19）消失（來源條目消失清單） |
 | `CLAUDE_CODE_DESKTOP_MESSAGE_CARD` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
 | `CLAUDE_CODE_DESKTOP_MODE_FROM_RECORD` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
 | `CLAUDE_CODE_DESKTOP_PLUGIN_INSTALL_FRAMES` | 2.1.323（11-13） | 1 | — | — | 2.1.323 仍在（比對日 11-13） |
@@ -376,6 +384,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 動靜 |
 |---|---|
+| `CLAUDE_CODE_PEPPY_STARLIGHT` | 2.1.328（11-19）出現 |
 | `CLAUDE_CODE_CRYPTIC_HORIZON` | 2.1.319（11-06）出現 |
 | `CLAUDE_CODE_DEEP_TWILIGHT` | 2.1.317（11-03）出現 |
 | `CLAUDE_CODE_FIZZY_GROVE` | 2.1.317（11-03）出現 |
@@ -427,6 +436,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-19 | 2.1.328 新增 8 個候選旗標：7 第一階＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個：`CCR_SKIP_NEEDLESS_STARTUP_READS`（首見 2.1.323）列 4 階；僅命中來源條目，暫不升二階 |
 | 2026-11-18 | 2.1.327 新增 10 個第一階候選旗標；2 設定類不列；消失 2 個：`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`；僅命中來源條目，暫不升二階 |
 | 2026-11-13 | 2.1.323 新增 13 候選旗標（9 設定類不列，消失 1，原未列表）；同日 Release 宣布 Code Mode，`EXPERIMENTAL_CODE_MODE` 系列升 3 階 |
 | 2026-11-09 | 2.1.321（自 2.1.319 起）新增 11 個第一階候選旗標（名單見追蹤表），無代號旗標；2 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，不算獨立佐證 |
