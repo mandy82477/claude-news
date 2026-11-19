@@ -8,11 +8,11 @@ last_updated: "2026-11-15"
 last_news_update: "2026-11-15"
 status_main: "active"
 matrix_role: "功能"
-days_since_news: 3
+days_since_news: 4
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 4
 inbound_links: 13
 attribution_count: 7
 attribution_last: "2026-11-15"

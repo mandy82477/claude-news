@@ -601,11 +601,6 @@
       "pageType": "entity"
     },
     {
-      "id": "mythos",
-      "name": "Claude Mythos",
-      "pageType": "entity"
-    },
-    {
       "id": "ai-agent-safety-prompt-injection",
       "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
       "pageType": "topic"
@@ -623,16 +618,6 @@
     {
       "id": "community-cost",
       "name": "社群做法：token、成本與模型路由",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-integrations",
-      "name": "社群做法：MCP、plugin 與外部工具整合",
-      "pageType": "topic"
-    },
-    {
-      "id": "community-multi-agent",
-      "name": "社群做法：多 agent 怎麼分工與協調",
       "pageType": "topic"
     },
     {

@@ -4,17 +4,17 @@ kind: "entity"
 type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 官方仍列 Active、退役不早於 2027-09-01（2026-11-14 查證）；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
-last_updated: "2026-11-16"
-last_news_update: "2026-11-16"
+last_updated: "2026-11-19"
+last_news_update: "2026-11-19"
 status_main: "active"
-days_since_news: 2
+days_since_news: 0
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
-inbound_links: 76
-attribution_count: 59
-attribution_last: "2026-11-16"
+days_since_news_subtree: 0
+inbound_links: 78
+attribution_count: 62
+attribution_last: "2026-11-19"
 top_source: "google-news"
 pending_count: 5
 pending_overdue: 0

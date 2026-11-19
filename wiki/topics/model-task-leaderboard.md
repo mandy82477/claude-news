@@ -7,12 +7,12 @@ last_updated: "2026-11-15"
 last_news_update: "2026-08-05"
 update_freq: "🗓️ 週更（每週抓取一次外部榜單快照；更新日期停留數天屬正常節奏）"
 status_main: "ongoing"
-days_since_news: 105
+days_since_news: 106
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 105
-inbound_links: 21
+days_since_news_subtree: 106
+inbound_links: 22
 attribution_count: 0
 attribution_last: null
 top_source: null

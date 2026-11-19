@@ -3,8 +3,8 @@ page: "topics/anthropic-business"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-18"
-last_news_update: "2026-11-18"
+last_updated: "2026-11-19"
+last_news_update: "2026-11-19"
 status_main: "ongoing"
 days_since_news: 0
 parent: null
