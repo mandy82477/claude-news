@@ -9203,7 +9203,7 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - 品質備註：無
 - 分類回退：無
 - 轉知帳本：結案 H-959ab3（功能：patterns 新節點不列入產品化矩陣，理由見功能記者回報）；新開 H-03e408（社群→功能：今日 patterns 子頁新增 4 則節點，請評估 official-community-gap 產品化矩陣是否需新增列）；H-8ff4bb（商業→安全政策，2026-11-18 開立）**保持 open**——安全政策記者今日核對確認聯名信簽署人與具體主張不存在於任何一天的日報原文（僅標題可用），需查 Business Wire 原文一手來源；本輪主編嘗試 WebFetch `businesswire.com`／`news.google.com` 皆被雲端 egress 擋下（`getaddrinfo ENOTFOUND`，Trusted 網域清單未涵蓋），非永久事實，見下方「📋 需使用者端設定」
-- devpractice 沉澱：本日無候選（分類階段 0 則落入開發實務類）
+- devpractice 沉澱：候選 3 筆（v2.1.328 Auto mode 跨平台擴及 Opus 4.6／Sonnet 4.6；udaysharmadev/Gravitas 移植 Claude Code 工作紀律到 Gemini；NVIDIA/SkillEvaluator 安裝前 skill 品質評估框架）／手冊寫入 0 則（分類階段 0 則落入開發實務類，候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 b9c94a8
 - market 判讀：新增 3 則（IPO 定價與掛牌、Amazon 帳面市值變化、Gemini 4 Neon／Astra 6.2 競品定價對標），標的表覆寫 3 列，里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列（結算日見各子頁），已標訊既有待查證標記 2 筆（market-signals-ipo，未結案）
 - 📋 需使用者端設定：
   - `businesswire.com`、`news.google.com` 被雲端環境網路政策（Trusted）擋下，無法 WebFetch 查證 H-8ff4bb 所需的 Business Wire 聯名信原文；使用者可在 claude.ai 雲端環境設定將網路存取改為 Custom 並加入這兩個網域，或留待下次本機 session 查證
