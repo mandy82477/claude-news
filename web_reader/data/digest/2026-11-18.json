@@ -515,11 +515,6 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：新增已知問題：VS Code 擴充套件無故遺失對話紀錄（#29017，35 則留言）；VS Code 擴充套件功能請求支援重新命名分頁（#11145，94 個讚）；Max 方案 1M context 誤判需額外付費用量（#45390，34 則留言）；MCP 回應",
   "sedimentedToday": [
     {
-      "id": "claude-code-features",
-      "name": "Claude Code 功能怎麼用：hooks、subagent、桌面版",
-      "pageType": "entity"
-    },
-    {
       "id": "dario-amodei",
       "name": "Dario Amodei",
       "pageType": "entity"
@@ -528,11 +523,6 @@
       "id": "pricing-incidents",
       "name": "Anthropic 計費事故：誤扣、額度異常與帳號停用",
       "pageType": "entity"
-    },
-    {
-      "id": "ai-agent-safety-product-vulns",
-      "name": "Claude Code／MCP 的漏洞、誤操作與帳號安全",
-      "pageType": "topic"
     },
     {
       "id": "ai-talent-flow",

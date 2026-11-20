@@ -601,11 +601,6 @@
       "pageType": "entity"
     },
     {
-      "id": "ai-agent-safety-prompt-injection",
-      "name": "提示注入與自我複製：代理讀進來的東西憑什麼可信",
-      "pageType": "topic"
-    },
-    {
       "id": "anthropic-agent-stack",
       "name": "官方 agent 積木：為什麼有它、讓你多做出什麼",
       "pageType": "topic"

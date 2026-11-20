@@ -522,19 +522,9 @@
   "preview": "Claude Code 已知問題：哪裡壞、修了沒、怎麼繞：互動數更新：Remote Control 自動重連失效（GitHub issue #34255）累積 73 則留言、112 個讚，仍 open（🌐 組）。",
   "sedimentedToday": [
     {
-      "id": "cowork",
-      "name": "Cowork",
-      "pageType": "entity"
-    },
-    {
       "id": "jamie-dimon",
       "name": "Jamie Dimon",
       "pageType": "entity"
-    },
-    {
-      "id": "enterprise-tool-tracker",
-      "name": "大型企業 AI 編碼工具使用追蹤",
-      "pageType": "topic"
     }
   ],
   "reader": {
