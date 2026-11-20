@@ -35,7 +35,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後新聞更新：** 2026-11-20
 
 > **最新動態**（2026-11-20）
-> 官方 release notes 新增「Computer use (beta) for Team and Enterprise plans」段；電腦操作列 Claude app 格新增 Team／Enterprise（beta），細節見下方「電腦操作」節。
+> 官方 release notes 新增「Computer use (beta) for Team and Enterprise plans」段；電腦操作列 Claude app 格新增 Team／Enterprise（beta），詳見 [[topics/anthropic-product-matrix#電腦操作（computer use）]]。
 
 ---
 

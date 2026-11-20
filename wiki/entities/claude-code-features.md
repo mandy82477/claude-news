@@ -38,7 +38,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
 > **最新動態**（2026-11-20）
-> 桌面版文件新增 SSH connection 設定流程——主機顯示按鈕或清單皆可觸發新增，連線名稱可選填；另載 SSH／WSL 檔案在 Browser pane 開啟時的預覽限制，見「桌面版功能地圖」SSH 分組。
+> 桌面版文件新增 SSH connection 設定流程——主機顯示按鈕或清單皆可觸發新增，連線名稱可選填；另載 SSH／WSL 檔案在 Browser pane 開啟時的預覽限制，詳見 [[entities/claude-code-features#桌面版功能地圖]]「SSH 遠端與離線續跑」。
 
 ---
 
