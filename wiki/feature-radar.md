@@ -2,7 +2,7 @@
 
 追蹤 Anthropic 官方發布的 Claude / Claude Code 功能熱度與試用價值；僅收官方 changelog、release note 或官方公告，社群工具見 [[topics/community-tech-tools]]。
 
-**最後更新：** 2026-11-18
+**最後更新：** 2026-11-20
 
 > **本日新增重大發布**（2026-11-09）
 > Claude Fable 5.2 與 Claude Mythos 5.2 發布，Claude Code v2.1.321 起 Fable 5.2 為預設 Fable 模型（1M context、降價兩成）；多家外媒同日報導，HN 討論達 614 分。
@@ -33,14 +33,25 @@
 
 ## ⚠️ 升級前要知道的預設值與破壞性變更
 
-找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.304，2026-10-22；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+找到你現在裝的版本，**它上面的每一列都會落在你身上**。**本表的依據是官方 changelog 逐版核對（核對到 v2.1.321，2026-11-20；v2.1.289–v2.1.294、v2.1.296–v2.1.299、v2.1.301、v2.1.303 區間尚未逐版核對，待下次補齊），不是本庫的報導覆蓋率**；2.1.213／230／242／249／250／315／320 是官方未發行的跳號，不是缺漏。v2.1.262–v2.1.269 期間官方 changelog 無新增破壞性變更或預設值改變（v2.1.267 進一步限縮任務追蹤工具 Task/TodoWrite 的可用模型範圍，屬既有 v2.1.233 列限制的延伸，不另立新列）。
+
+%% 2026-11-20：本表新增 v2.1.305–v2.1.318 共 9 列後，目前有 21 列、超過每週整理時「12 列」的上限；v2.1.260 那一列的事實目前只住本表、還沒有別的家，下次每週整理要先把它搬進 [[entities/claude-code-releases]] 才能從本表移除。這批列的去留排序留給下次每週整理處理，已記 wiki/log.md。 %%
 
 **本表與下方版本表記的不是同一件事**：本表只收破壞性變更與預設值改變（來源官方 changelog）；[[entities/claude-code-releases#最新版本]] 記的是本站報導過的新功能（來源日報）。同一版本兩邊內容不同是正常的。
 
 | 你若停在這一版之前 | 升上去會遇到 | 型態 | 你要做的事 |
 |---|---|---|---|
-| v2.1.321 | Claude Fable 5.2 成為預設 Fable 模型（取代 Fable 5.1），1M context、每 Mtok 輸入 $8／輸出 $40 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認；v2.1.305–v2.1.320 區間尚未逐版核對 |
+| v2.1.321 | Claude Fable 5.2 成為預設 Fable 模型（取代 Fable 5.1），1M context、每 Mtok 輸入 $8／輸出 $40 | 預設值改變 | `/model` 確認實際套用的模型；額度敏感或依賴 Fable 5.1 既有行為的排程任務先確認 |
 | v2.1.319 | auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway 使用）：伺服器無法檢查的呼叫一律詢問或拒絕，不再退回內建傳統分類方式，無遷移期 | 破壞性變更 | 用 LLM gateway 或關閉遙測跑 Claude Code 的團隊，升級後遇到被詢問或拒絕的呼叫是預期行為，不是故障 |
+| v2.1.318 | 復原 2.1.288 的修正，恢復對話不再保留先前 thinking；新建 managed agent 預設給 auto 權限政策 | 破壞性變更 | 依賴恢復對話仍保留 thinking 行為的人會發現已失效；新建代理人要自行確認權限模式 |
+| v2.1.317 | Read 工具移除「檔案未變更」提示，重讀未變更檔案直接回傳內容 | 預設值改變 | 大量重讀同一檔案的 hook／腳本，留意 token 用量可能變化 |
+| v2.1.316 | Opus 4.8 fast mode 10-30 起列為淘汰，11-30 將移除；移除後請求直接回錯誤、不退回標準 Opus 4.8 | 破壞性變更 | 用 Opus 4.8 fast mode 的人請在 11-30 前遷移到 Opus 5.5 以保留加速效果 |
+| v2.1.314 | permissions.blockWritesOutsideWorkingDirectories 在所有權限模式下都會擋 Write/Edit/NotebookEdit 寫到工作目錄外 | 破壞性變更 | 原本靠 bypass 模式寫工作目錄外檔案的腳本或 hook，升級後會被直接擋下 |
+| v2.1.312 | Bedrock／Vertex／Foundry／Mantle 對不認識的模型名稱改用較短 system prompt | 預設值改變 | 用這些通道接自訂或微調模型名稱的人，提示內容會不同 |
+| v2.1.311 | DISABLE_COMPACT 只能關閉壓縮、不能再重新打開 | 破壞性變更 | 曾經用這個環境變數動態開關壓縮的腳本，升級後只能關不能開 |
+| v2.1.309 | claude ultrareview 改為需要工作區信任；bypass 模式下危險的 rm／rmdir 改直接拒絕（非再提示） | 破壞性變更 | CI 或自動化若靠 bypass 模式跑這兩種指令，升級後會被直接擋下 |
+| v2.1.307 | 自架 runner 的 checkout hook 預設 30 分鐘後停止；axScreenReader 不再接受 settings env 區塊設定 | 預設值改變 | 自架 CI 設定時間較長的人要調 `--checkout-hook-timeout-min`；用 env 區塊設螢幕閱讀器選項的要改到 user／managed 設定 |
+| v2.1.305 | allowedMcpServers 不再過濾 managed-mcp.json 裡只在 env 用 `${VAR}` 的 stdio 伺服器，原本被排除的伺服器升級後會載入 | 破壞性變更 | 靠這個白名單規則讓某些 MCP 伺服器保持停用的管理員，要改用 `deniedMcpServers` 才能繼續停用 |
 | v2.1.304 | 自訂 `ANTHROPIC_BASE_URL` 下 tool search 預設開啟（gateway 回 400／422 會改不帶它重試）；壓縮後重送 skill 清單 | 預設值改變 | 走自家 gateway 的人：工具改為按需載入，若 gateway 不支援會多一次重試；可觀察請求量 |
 | v2.1.302 | `claude -p`／Agent SDK 未指定權限模式時，在第三方供應商、關 telemetry 或全新安裝上改從 `default` 起跑；fork subagent 在 `-p`／SDK／桌面版／VS Code 預設開啟 | 預設值改變 | CI 要 auto 就加 `--permission-mode auto`；不要 fork 設 `CLAUDE_CODE_FORK_SUBAGENT=0` |
 | v2.1.300 | hook `updatedInput` 依 schema 驗證；大型請求預設 gzip（`CLAUDE_CODE_GZIP_REQUEST_BODIES=0` 關）；transcript 多記請求的 system prompt | 預設值改變 | 靠 hook 注入非 schema 欄位的要改寫；分享 transcript 前留意其中含 system prompt |
