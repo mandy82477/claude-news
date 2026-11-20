@@ -110,6 +110,7 @@
 | [[entities/jasjeet-sekhon]] | person | 👤 人物 | active（單一來源） | Google DeepMind 前策略長；2026-11-16 The Information 報導離職加入 Anthropic，新職位名稱與到職時間未見報導 |
 | [[entities/claude-personal-finance]] | feature | 🛠️ 工具/功能 | beta | Claude Personal Finance：2026-11-05 推出，連結銀行/信用卡/貸款/投資帳戶供 Claude 分析消費狀況；方案範圍、資料邊界與安全機制官方尚未載明 |
 | [[entities/gary-marcus]] | person | 👤 人物 | active | AI 評論家；多次公開批評 Anthropic（估值敘事、IPO 流通股比例），2026-11-19 建頁彙整其歷次具名表態 |
+| [[entities/vas-narasimhan]] | person | 👤 人物 | active（單一來源） | Anthropic 董事會成員、Novartis 執行長；2026-11-20 公開表示看好用 AI 解決藥物研發「生物學延遲」問題 |
 ---
 
 ## Topics（進行中議題）
