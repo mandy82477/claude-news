@@ -31,13 +31,13 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 **領域：** 🏛️ 政策/安全
 **上層：** [[topics/ai-agent-safety]]
 **開始日期：** 2026-08-04
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 %% 2026-10-30 第 20 波自 [[topics/ai-agent-safety]] 拆出：節點原文照搬、標題降一級，依日期分月；agent 自己越界的 14 則併在本頁（蒸餾後 145 行，不足自成一頁）；2026-07 以前的條目在 [[topics/ai-agent-safety-archive]] %%
 %% 拆頁評估 2026-10-30：正文 603 行，不拆——agent 自己越界那一群蒸餾 07 月後 145 行，低於 150 行（太薄）；漏洞、供應鏈、帳號三類共用「我的版本中不中、還開著哪些」一題。2026-08 時段 11 月滿 3 個月蒸餾後重算 %%
 
-> **最新動態**（2026-11-18）
-> Astra Security 推出新 MCP 伺服器，把自動化滲透測試接進 Claude Code 與 GitHub Copilot；與既有第三方防護產品同屬一類（mykxlg.com，僅標題可用）。
+> **最新動態**（2026-11-20）
+> **試用濫用新手法**：Simon Willison 轉述 ChatPRD 創辦人揭露，有團體偽裝個人試用大量申請免費試用與促銷碼，再轉售 AI 用量牟利；單一創辦人訪談，非 Claude 專屬。
 ---
 
 ## 摘要
@@ -85,6 +85,16 @@ Claude Code、Claude Desktop、MCP SDK 與外掛的漏洞，agent 自己做出�
 逐則事件，新的在上；2026-07 以前見 [[topics/ai-agent-safety-archive]]。
 
 ### 2026-11
+
+#### Simon Willison：ChatPRD 創辦人揭露，有團體偽裝個人試用大量申請免費試用與促銷碼，轉售 AI token 用量牟利（2026-11-20 新增，跨類別，非 Claude 專屬）
+
+- **揭露來源**：Blog／Simon Willison〈Token fraud is here and it's BAD〉（2026-11-20 02:49 UTC；https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/）；轉述 YouTube 影片，互動 0
+- **核心主張**：ChatPRD 創辦人 Claire Vo 稱大量團體偽裝個人試用、重複使用促銷碼取得存取，再「tunnel」進 agent 轉售用量或拿去跑其他商業專案
+- **原話引用**：「I am funding an international Roblox and Fortnite map studio. They run a loop of free trials and promo codes and then tunnel to my agent...」
+- **性質判斷**：ChatPRD 底層模型未見報導指名，非確認的 Claude／Anthropic 事件，屬第三方 SaaS 的試用機制濫用
+- **與既有系列的關係**：手法與既有「帳號、憑證、付費存取被盜用或轉售」主題（08-05～06 灰市轉售、09-09 抽乾訂閱額度、10-23 遭竊金鑰流入黑市）同類，差異是入口為試用／促銷碼濫用而非竊取憑證；未改變「## 目前結論」
+- **可信度評估**：單一來源（創辦人親述 YouTube 影片），互動 0，無第三方佐證或規模數字
+%% 本則同時派給社群記者，寫這則部落格本身的技術討論角度；本頁僅寫濫用／詐欺防禦角度 %%
 
 #### mykxlg.com：Astra Security 推出新 MCP 伺服器，將自動化滲透測試接入 Claude Code 與 GitHub Copilot（2026-11-18 新增）
 

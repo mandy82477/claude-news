@@ -31,12 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-19
-**最後新聞更新：** 2026-11-19
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 
-> **最新動態**（2026-11-19）
-> - **正式定價 $83／股，11-19 以代號 ANT 在 Nasdaq 開始交易**：開盤 $111.50（漲約 34%），盤中最高 $114.99
-> - **官方稱募資約 $81.3 億美元，為史上規模最大 IPO**；市值估算各家不一，見下方「值多少」
+> **最新動態**（2026-11-20）
+> - **IPO 正式結算：超額配售權全額行使，發行上修至 11.27 億股，毛額約 $93.5 億美元，Anthropic 實收約 $91.6 億美元**（官方）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -49,16 +48,17 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 這一格 | 現在的答案 | 誰說的（日期） | 來源等級 |
 |---|---|---|---|
 | 遞件了沒 | **公開版 S-1 已於 2026-10-26 正式提交 SEC**；擬以代號「ANT」在 Nasdaq Global Select Market 掛牌 Class A 普通股，股數與價格區間未定 | Anthropic 官方公告（2026-10-26） | 官方一手 |
-| 什麼時候上市 | **已完成：11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易**；官方公告發行規模上修至 980,000,000 股（原路演擬發 825,000,000 股） | [Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)（11-18/19） | 官方一手 |
-| 值多少 | **正式定價 $83／股；開盤 $111.50、盤中最高 $114.99**；市值估算不一——Reuters 稱盤中衝高近 $2 兆後回落約 $1.2 兆，WSJ 稱依股數口徑介於 $1.5 兆～2 兆（尚無共識數字，細節見下方） | Anthropic 官方（11-18）；Reuters／WSJ（11-19） | 官方一手／一級媒體 |
+| 什麼時候上市 | **已完成：11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易、11-20 正式結算**；超額配售權全額行使，發行規模上修至 1,127,000,000 股（11-18 公告時為 980,000,000 股） | [Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)（11-20） | 官方一手 |
+| 值多少 | **正式定價 $83／股**；結算毛額約 $93.5 億美元，Anthropic 實收約 $91.6 億美元；市值估算仍不一（細節見下方） | Anthropic 官方（11-18／11-20）；Reuters／WSJ（11-19） | 官方一手／一級媒體 |
 | 誰承銷 | 官方路演公告只點名 Goldman Sachs、Morgan Stanley 為索取招股書窗口；JPMorgan 未列（2026-11-14 查證） | [Anthropic 路演公告](https://www.anthropic.com/news/roadshow-launch)（11-10）；FT、NYT（09-04）媒體稱由兩家主辦 | 官方一手＋媒體 |
 | 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
 
 - **正式股數拆分**（[Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)，11-18）：980,000,000 股中公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項；較 11-10 路演擬發 825,000,000 股上修。
+- **IPO 結算，超額配售權全額行使（[Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)，11-20）**：追加 147,000,000 股，總發行上修至 1,127,000,000 股（公司自售 1,103,351,354、既有股東售 23,648,646，股東售股部分不變）；毛額約 $93.5 億美元，Anthropic 實收約 $91.6 億美元，公司同樣未自股東售股取得款項。
 - **11-10 估值各家寫法**：Bloomberg／NYT／Reuters 寫最高 $1.4 兆；ABC7 稱依申報文件近 $1.3 兆；Fox Business／NBC／CBC 寫約 $1 兆（歷史值，已被正式定價取代）。
 - **雲端夥伴持股（2026-11-18，TechCrunch）**：IPO 後 Amazon 約持股 14.7%、與 Google 合計近 30%；部分持股源自換股價僅 $2.09～5.05 的可轉換票面，具體條款未見報導。Amazon 持股市值隨掛牌衝上逾 $2,000 億，見 [[topics/anthropic-partnerships-compute#跟三大雲各是什麼關係]]。
 
-**下一個時點：** 已完成 11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易。下一個時點：鎖定期到期日、首份財報日期（見下方「上市後追蹤」）。
+**下一個時點：** 已完成 11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易、11-20 正式結算。下一個時點：鎖定期到期日、首份財報日期（見下方「上市後追蹤」）。
 
 ### 定價與首日結果
 
@@ -66,7 +66,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 |---|---|---|
 | 最終發行價 | $83／股 | [Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)（11-18） |
 | 實發股數 | 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646） | Anthropic 官方公告（11-18） |
-| 超額配售行使 | 未見官方公告 | — |
+| 超額配售行使 | 全額行使，追加 147,000,000 股 | [Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)（11-20） |
 | 首日開盤／收盤 | 開盤 $111.50（漲約 34%）；盤中最高 $114.99；HN 留言稱盤中已跌至約 $97（非官方數據，未查證） | Reuters／CBS News／Forbes／Hacker News（11-19） |
 | 首日市值 | 估算不一，無共識數字：Reuters 稱盤中衝高近 $2 兆後回落約 $1.2 兆；WSJ 稱依股數口徑介於 $1.5 兆～2 兆 | Reuters／WSJ（11-19） |
 
@@ -74,7 +74,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 - **鎖定期**：一般既有股東最長 180 天；共同創辦人與發行前持股逾 0.5%（完全稀釋）者最長 365 天，自招股書日期起算（[S-1/A 第 2 次修訂](https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm)，2026-11-15 查 EDGAR）。到期日待最終招股書日期確定後換算。
 - **首份財報日期**：待公布。
-- **超額配售（greenshoe）行使**：待公布，結果填入上方「定價與首日結果」。
+- **超額配售（greenshoe）行使**：已完成，全額行使，見上方「定價與首日結果」。
 - **信評**：待公布；上市前僅有 FT 引 Blackstone 的 BB 級預期（見 [[#S-1 揭露了什麼]]），評等機構未公開評等。
 - **指數納入**：待公布。
 
@@ -131,6 +131,8 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 ## 數字細節
 
 **這裡放的是母頁指標表與各事件數字的出處、口徑與查核脈絡；每個指標的最新單一數字住母頁 [[topics/anthropic-business#現在的數字]]，本節不重複列出那張表的數字。**
+- **IPO 正式結算，超額配售權全額行使（2026-11-20，[Anthropic 官方](https://www.anthropic.com/news/ipo-close)）**：發行上修至 1,127,000,000 股，增加 147,000,000 股；結算毛額約 $93.5 億美元，Anthropic 實收約 $91.6 億美元，取代 11-18 公告的 $81.3 億美元。
+  - 股數拆分：公司自售 1,103,351,354 股、既有股東售 23,648,646 股（較 11-18 的 980,000,000 股僅公司自售部分增加，股東售股數不變）；公司未取得股東售股款項。
 - **IPO 正式定價 $83／股，募資約 $81.3 億美元——史上最大規模 IPO（2026-11-18/19）**：官方發行 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項）；NPR、BBC 等媒體稱募資規模約 $81.3 億美元（[Anthropic 官方](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)）。
 - **開盤 $111.50、盤中最高 $114.99，較發行價漲約 34%（2026-11-19）**：Reuters、CBS News、Forbes 等多家同步報導；Yahoo Finance 稱首筆交易價值約 $120 億美元。
 - **市值估算各家口徑不同，尚無共識數字（2026-11-19，WSJ）**：WSJ 指出以不同股數口徑計算，市值介於 $1.5 兆至 2 兆之間；Reuters 稱盤中一度衝高近 $2 兆後回落至約 $1.2 兆，兩者皆非官方數字。
@@ -205,6 +207,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-20 Anthropic 官方：IPO 正式結算，超額配售權全額行使**：發行上修至 1,127,000,000 股，較定價時增加 147,000,000 股；結算毛額約 $93.5 億美元，Anthropic 實收約 $91.6 億美元，股數拆分見上方「上市走到哪一格」（[Anthropic 官方](https://www.anthropic.com/news/ipo-close)）。
 - **2026-11-19 Anthropic 官方／多家媒體：IPO 正式定價 $83／股，股票以代號 ANT 在 Nasdaq 開始交易**：官方公告發行 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項），募資約 $81.3 億美元，為史上規模最大 IPO（[Anthropic 官方](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)；NPR；BBC）。
   - **開盤 $111.50（漲約 34%），盤中最高 $114.99**：Reuters、CBS News、Forbes、Yahoo Finance 等多家同步報導；Yahoo Finance 稱首筆交易價值約 $120 億美元。
   - **市值估算不一，無共識數字**：WSJ 稱依股數口徑介於 $1.5 兆至 2 兆；Reuters 稱盤中一度衝高近 $2 兆後回落至約 $1.2 兆；PBS、Guardian、CBS 等標題多引用 $1.5～2 兆區間，僅標題可用。

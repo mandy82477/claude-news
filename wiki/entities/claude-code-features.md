@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-18）
-> 桌面版文件新增「內建 Claude Code 版本比組織上限還新」的提示說明；Claude Desktop 新增 release channel 版本頻道設定（Stable 頻道維持現狀），見 [Help Center](https://support.claude.com/en/articles/12138966-release-notes)。
+> **最新動態**（2026-11-20）
+> 桌面版文件新增 SSH connection 設定流程——主機顯示按鈕或清單皆可觸發新增，連線名稱可選填；另載 SSH／WSL 檔案在 Browser pane 開啟時的預覽限制，見「桌面版功能地圖」SSH 分組。
 
 ---
 
@@ -75,6 +75,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > 把下方「桌面版文件時序」的桌面版文件（`desktop.md`）異動依主題歸群；每條只收時序條目已記的事實，日期指向時序原條。官方文件 [desktop.md](https://code.claude.com/docs/en/desktop.md)，彙整日 2026-10-25。
 
 **SSH 遠端與離線續跑**
+- 11-20：主機顯示按鈕或清單時皆可新增 SSH connection（清單方式在最下方選取）；連線名稱可選填，留空用 SSH host 值；SSH／WSL 檔案在 Browser pane 開啟時預覽不執行腳本，腳本繪製的圖表／表格會是空的。
 - 11-10：SSH session 讀取遠端主機上的 managed settings 檔（後半句截斷）；Linux／macOS 遠端在 Desktop 斷線時，worktree 內的編輯仍可繼續。
 - 11-09：新增 session 內預覽 HTML 檔案——session 內直接預覽不執行腳本，匯出後在本機瀏覽器開啟才會執行；組織可關閉此預覽的腳本執行。
 - 10-08：可從連結開啟 SSH session，分「已有連線」「新連線」。
@@ -127,6 +128,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-20）：桌面版文件字數由 227,103 增至 227,349，新增 26 段、移除 21 段（移除段落僅存雜湊，無法列出原文）。
+  - **新增內容（原文列出的）**：主機顯示為按鈕時選 **Add SSH connection…**；顯示為清單時打開清單、在最下方選 **Add SSH connection…**；連線名稱可選填，留空則用 SSH host 值（[原文](https://code.claude.com/docs/en/desktop.md)）。
+    - SSH／WSL 檔案在 Browser pane 開啟時，預覽不執行腳本，腳本繪製的圖表／表格會是空的；側邊面板可顯示或隱藏，可從面板清單選分頁（原文另有 21 段未列）。
 - **官方文件更新**（2026-11-18）：桌面版文件字數由 226,602 增至 227,103，新增內建 Claude Code 版本比組織設定的上限還新時顯示的提示訊息說明（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-17）：桌面版文件字數由 226,194 增至 226,602，新增 12 段、移除 6 段（移除段落未載）。
   - **新增內容**：側邊欄的 Plugins 入口現同時列出 connectors 與 plugins，選 **Plugins** 見 **Browse plugins**（或 **Manage plugins**），選 **Connectors** 見 **Browse connectors**（原文另列 7 段未附）（[原文](https://code.claude.com/docs/en/desktop.md)）。

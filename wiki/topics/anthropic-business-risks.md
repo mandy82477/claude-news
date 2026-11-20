@@ -31,13 +31,12 @@ Anthropic 哪裡會出事、你能先做什麼，以及它靠什麼賺錢、產�
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-15
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 
-> **最新動態**（2026-11-13）
-> - **Reuters：Anthropic 遭控「Mythos」模型名稱侵犯商標**，原告身分與主張細節未見報導
-> - **Politico／CBS：非營利組織告 Anthropic、Google 等，訴求凍結「AI 軍備競賽」**（安全面見 [[topics/ai-agent-safety]]）
-> - **RIABiz：嘉信理財自建 MCP 伺服器，稱動搖 Anthropic 作為其獨家 LLM 供應商地位**
+> **最新動態**（2026-11-20）
+> - **IPO 敲鐘現場外出現「別為 AI 泡沫紓困」抗議**（techpolicy.press）：示威者於那斯達克掛牌現場外表達對泡沫風險與紓困預期的疑慮
+> - **Claude Code 撐起 IPO 敘事，公司下一步要找新成長動能**（Business Insider／The New Stack）：內部逾 90% 程式碼由 Claude 撰寫與審查，重點在「怎麼檢查」這道關卡
 
 ---
 
@@ -223,7 +222,9 @@ Financial Times 報導 Anthropic 旗艦模型在吸引一般使用者（general 
 
 ### 2026-11
 
-#### 2026-11-12
+#### 2026-11-20
+- **[商業風險] techpolicy.press（HN 50 分）：Anthropic 高層在那斯達克敲鐘時，示威者在場外抗議「別為 AI 泡沫紓困」**：抗議訴求聚焦泡沫風險與企業紓困預期，具體組織名稱與人數未見報導（Hacker News／techpolicy.press）
+- **[商業模式] The New Stack／Business Insider：Claude Code 撐起 IPO 敘事，公司上市後要找下一個成長動能**：自家逾 90% 程式碼由 Claude 撰寫審查為核心證據，查核方式見 [[topics/anthropic-ipo#S-1 揭露了什麼]]（Google News/The New Stack；Business Insider）
 - **[商業風險] Ars Technica（HN 14 分）：Sony 音樂訴訟引用 Anthropic 員工稱讚 Z-Library 的聊天紀錄**：文中稱音樂出版商認為 $15 億書籍盜版和解（逾 700 萬本）不足以嚇阻；文章網址日期為 08 月，是舊案報導在 HN 重新浮現，非新提告，案情進度未見（Hacker News）
 
 #### 2026-11-05

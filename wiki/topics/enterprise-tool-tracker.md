@@ -28,17 +28,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **狀態：** ongoing
 **領域：** 💼 商業
 **開始日期：** 2026-05-26
-**最後更新：** 2026-11-10
-**最後新聞更新：** 2026-11-10
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 **蒐集邊界：** 僅涵蓋 Claude 相關報導所帶出的企業案例。未提及 Claude 的企業工具決策不在自動蒐集範圍——公開報導本就少見具名企業的內部工具決策，本表為已見報者的彙整，非市場全貌。
 
-> **最新企業採用異動**（2026-11-10）
-> - **JPMorgan Chase 美國本部：Unite.AI 稱 Claude Code 使用範圍擴大到工程團隊以外**（僅標題，涉及部門與規模未載）；與先前每月 $2,000 上限只涵蓋部分工程師的做法相比方向放寬，是否同步調整上限未見報導
-> - NDTV Profit 跟進確認高盛禁用 Claude Code／GitHub 範圍涉及數千名員工，與 11-06 Times of India 說法一致（跨 3 媒體）；11-02 首度確認的全面禁用令本身未變，生效時間仍未見報導。
+> **最新企業採用異動**（2026-11-20）
+> - **Citadel、BNY：PYMNTS 報導兩家金融機構已將 Claude 導入工作流程**（僅標題，具體工具與規模未載），與既有 Barclays 全行導入並列同篇報導
 
 ## 摘要
 
-**目前追蹤 51 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）、1 家合作狀態有爭議（Replit）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-16）。
+**目前追蹤 53 家具名企業/機構，多數使用中（✅）、6 家退出/切換（❌🔄）、3 家縮減中（⚠️）、1 家合作狀態有爭議（Replit）；整體趨勢為 Claude API 企業與政府採用持續擴大，退出理由正從「成本」「出口管制」「安全疑慮」擴散至「區域存取」與「自家有競品」**（最新異動見頂部 callout，2026-10-16）。
 
 **退出理由分兩類：** 客戶自己選的是成本、安全疑慮、自家有競品（Meta、Microsoft，10-05 已查證）；別人劃線的是出口管制、區域存取（Goldman、OKX，2026-08-19/20，Anthropic 區域存取政策，與出口管制無關，見 ⟨Q-03⟩）、Pentagon 黑名單，詳見 [[topics/anthropic-government-policy]]。
 
@@ -46,6 +45,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **近期新增／擴大採用：**
 
+- **Citadel**：PYMNTS 報導已將 Claude 導入工作流程，具體工具與規模未見報導
+- **BNY**：PYMNTS 報導已將 Claude 導入工作流程，具體工具與規模未見報導
 - **Accenture**：將員工使用 Claude 由公司報銷的支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；仍屬使用中，詳見下方細節與 [[topics/enterprise-cost-management]]
 - **美國參議院**（❓ 未確認）：Bloomberg Government 報導準備讓幕僚開始使用 Claude，尚未確認已上線
 - **Epic Games**：官方 GitHub 帳號釋出 Unreal Engine skills 供 Claude Code 外掛使用（527 星），生態系支持信號，內部採用規模未見報導；該 skills 包的社群做法面見 [[topics/community-integrations]]
@@ -76,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - **Lindy**（🔄 已切換）：API 客戶 100% 切換至 DeepSeek，顯示 API 客戶對成本敏感度高、可能因競品定價優勢流失
 - **Uber**（⚠️ 縮減中）：成本管控
 
-**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture、美國參議院與 Replit 故為 51；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；Goldman Sachs 名下有兩筆獨立退出記錄（08-20 香港 Claude AI 存取切斷、11-02 Claude Code／GitHub 全面禁用），企業計數仍算一家；Replit 合作狀態有爭議，不計入退出；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
+**計數口徑：** 摘要按企業計，JPMorgan Chase 美國本部與香港分行分列，加計 Accenture、美國參議院與 Replit 故為 51，2026-11-20 新增 Citadel、BNY 故為 53；「6 家退出/切換」＝Microsoft、JPMorgan Chase 香港、Alibaba、Goldman Sachs、OKX、Lindy；Goldman Sachs 名下有兩筆獨立退出記錄（08-20 香港 Claude AI 存取切斷、11-02 Claude Code／GitHub 全面禁用），企業計數仍算一家；Replit 合作狀態有爭議，不計入退出；「3 家縮減中」＝Meta、Microsoft、Uber，Microsoft 因 Claude Code 退出、整體使用縮減而兩類各計一次。
 
 出口管制 + 成本壓力雙重因素持續影響頂尖企業工具選擇。
 
@@ -92,6 +93,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 企業 | 規模 | AI 編碼工具 | 狀態 | 事件日期 | 備註 | 確認日期 |
 |------|------|-----------|------|---------|------|---------|
+| Citadel | 頂尖（對沖基金） | Claude（通用，工具細節未載） | ✅ | — | PYMNTS 報導已導入 Claude 工作流程，與 Barclays、BNY 同篇報導；僅標題可用，規模未見報導 | 2026-11-20 |
+| BNY | 頂尖（銀行／資產服務） | Claude（通用，工具細節未載） | ✅ | — | PYMNTS 報導已導入 Claude 工作流程，與 Barclays、Citadel 同篇報導；僅標題可用，規模未見報導 | 2026-11-20 |
 | Goldman Sachs | 頂尖 | Claude Code ＋ GitHub | ❌ | — | 全面禁止行員使用，一說涉及數千名行員；首見具名大型金融機構對 coding agent 下達禁用令，與下方 08-20 香港存取權限切斷為不同案例，生效時間未見報導 | 2026-11-02 |
 | Replit | 大型（AI 編碼/應用開發平台） | Claude（API 整合） | ⚠️ 有爭議 | 2026-10-16 | 執行長稱已不合作，匿名知情人士否認，雙方無正式聲明；細節見下方 | 2026-10-17 |
 | Accenture | 頂尖（全球諮詢巨頭，Anthropic「內嵌評估者」夥伴） | Claude（員工一般使用，不限特定工具） | ✅ | — | 將員工可由公司報銷的 Claude 支出上限設在每月 $29，此前已有員工單月花費高達 $1,000；多家媒體同日跟進 | 2026-10-16 |
@@ -220,6 +223,9 @@ Claude Code 是工程師日常編碼工具（CLI），成本隨使用量線性�
 ## 時序
 
 ### 2026-11
+
+#### 2026-11-20
+- **[新增具名企業，✅ 使用中] PYMNTS：Barclays、Citadel、BNY 已將 Claude 導入工作流程**：Barclays 既有全行導入案例見上方使用現況表 10-01 列；Citadel、BNY 為本表新增列，僅標題可用，具體工具與規模未見報導（Google News/PYMNTS.com）
 
 #### 2026-11-10
 - **[擴大採用，僅標題可用] Unite.AI（11-09 發布）：摩根大通把 Claude Code 使用範圍擴大到工程團隊以外**：部門與人數未載；與 09-17 每月 $2,000 上限（部分工程師）屬同一美國本部，見使用現況表（Google News/Unite.AI）

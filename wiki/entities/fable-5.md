@@ -33,11 +33,12 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **領域：** 🤖 模型
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
-**最後更新：** 2026-11-19
-**最後新聞更新：** 2026-11-19
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 
-> **穩定性事件**（2026-11-19）
-> Fable 5.2 與 [[entities/mythos|Mythos 5.2]] 錯誤率升高，08:56–09:11 UTC（約 15 分鐘）已解決，另波及 claude.ai／API／Code／Cowork。
+> **研究動態與未驗證宣稱**（2026-11-20）
+> - **黎曼猜想未驗證宣稱**：Anthropic 數學家稱與 Claude 合作得出證明，尚未同行審查，本站列未查證。
+> - **黑洞物理兩道難題**：官方確認解開兩道懸置逾 20 年的理論問題，附兩篇預印本論文。
 
 ---
 
@@ -246,12 +247,36 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 - [Claude solves two open problems in the physics of black holes](https://www.anthropic.com/research/claude-black-hole-physics) — Anthropic Research（2026-11-19，HN 133 分）
 - [Google News/Crypto Briefing：Anthropic's Claude Fable 5.2 takes the top spot on Code Arena's WebDev leaderboard](https://news.google.com/rss/articles/CBMigAFBVV95cUxPdFZHRzItQU43cVpRUk9vYkJNVC13TFA2dHpUR0ZjRDhFbldQV0V5OEVrOHZpSTMwYlhwOEQ4aFVVQ0lDc0pJR1hyYzRLeVU3ZE1KNUZhOEdOLWZoUjR6NXlpanFUVWw2UWNEZ3NVQXZBSDFONGxkalRwNVNJeGRzdA?oc=5)（2026-11-19，僅標題可用）
 - [[news/2026-11-19]]
+- [Google News/Mashable：Anthropic claims Claude solved 2 enduring mysteries about black holes](https://news.google.com/rss/articles/CBMidkFVX3lxTFBBYkVUNFdNUHY4TGo2TnhfOGpReDNjLWNydjluX2ZVd19uclJKU2NlUXhOd1F6RTBpQmRFTUFaYXlVUWt4Rnd1U0JveWFJdmtFQmdBT0oxaFVXRzRDVlozUjIzQ0tONF9xc1hMcElsNy1mZEN6eWc?oc=5)（2026-11-20）
+- [Simon Willison：Quoting Levent Alpöge](https://simonwillison.net/2026/Nov/20/levent-alpoge/)（2026-11-20）
+- [Google News/WSJ：Anthropic Mathematician Says AI Has Solved the Most Famous Problem in Math](https://news.google.com/rss/articles/CBMitgFBVV95cUxQd2R1UU5HMEVNTGhtYWxQaTNBMjVRZnZxZjJVU0U1MVk0U2dIRHh6akhYNV9tNWxXYjNmeU16UzdqZDM3bUpDS1BxOEd2b3oySzVMako4Z25JMmNFUVd5ZlFWNTZ4WmJ6d2NXT0R5Z1JsNVNGMi04MGowVF9CQkl4dEEtXzJNYWRDeHA3Rk1hV250dEZWQjNRLW5RZHZPQ0ZMMlNLSDdkejFKTklvZW1ZNDZZalFOQQ?oc=5)（2026-11-20）
+- [Google News/The Verge：Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude](https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEZDbk4zRlNqQlluWm15Rk5CUTh6S2JuUHphM1N3MVBpRmJxTndYYm1tcElvaUxmZWxfVmhTY3M5RWVISzVxcllJUVZCZWtXeUV0Ui1pRTladU5ocGE3ZHlmXzgtN1lLZjZ3UUVWTndJRHJaODdxM1pnd0d2eG1zREFFVkpvWVBBOW0yaGlVc1dzeDZWalQtMVBlYVI4THN3dHQxYWRMVW5QTnNnSkd6RllzZw?oc=5)（2026-11-20）
+- [Google News/Tom's Hardware：Anthropic mathematician claims to have solved 167-year-old math problem with Claude](https://news.google.com/rss/articles/CBMiwgJBVV95cUxNQ2pfbTNIQ2pMc1c0LUhZMzl3NU1IRkJfVXItM2F1Z3dIY3lVX1RjSWoxeGh1bkl4cmh2WDNBdFpTcS1GUUxYS1NwQTdHcG1TcXNNaDNXb3FodXlSQU96dEloYVF4WUZGa0RKWVVtQ0ozbUVZRDZVT0hCX3FLZWR5ZXZjbWtIUU1CLVoyc0pEMUZ6dXpUaDRwR3Zjd2dTOTVtWlF1OWh4MDFaOVh0dmRDdDJkdDYzX0pNYmZYWHJoRGJ5MFFIQmx2endfRjdFSnh5R3c5ZUJKbkEtWkc3OGJkWWdjR0FSUWJMeUczbFNtTGNqbW1JbGktRVNyM0hIRmlMUUZ4MXBJS1lHZ1NpSkdKLVdXUDctUFhpOEhUeWpNb0xEejIyQlphOEljVmhTRjRlR1pORmJYTHk0QklaaU1laUN3?oc=5)（2026-11-20）
+- [Google News/New Scientist：Anthropic mathematician claims AI-assisted proof of the Riemann hypothesis](https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnhwd1IyUERONU1RclBYRDZQQi1fSXg5Z1BwWENSVG9jZzZPWjRJZFlQQVlpZkFIYUlDbkljRU9VYkpWOWo1dTdqQ0lIMzBSY0laZ3hhUVFPRDIwcTRiclNjUDgxZmxZTHpjV0J0Q3IwSnpES0Q4cHR1QlBLS0pkLUVyM0luSTFYM1JDRVRRZmxpdXJiRFdELVN0R3VmUE9qTWtyenpaVjcySmJEMmttdEJUMkstMEhRQTBILQ?oc=5)（2026-11-20）
+- [Google News/Phys.org：Anthropic researcher says Claude solved math's greatest riddle](https://news.google.com/rss/articles/CBMifEFVX3lxTFA3NTVZTVFpencyOTFMdnlVUm9QUGRnVHNnWXh2TjNZQjlTUHFvOFFid2cybTAxZnRYOGVabWh5U3F5QmtlUXdPbzhCb1hNR2h6c0wySmVMQTdFR2c5ZEtOZ2s4V2djOE1uR29JNFUzMU1DclZTWkVxZ1ZZY04?oc=5)（2026-11-20）
+- [Google News/Scientific American：Anthropic mathematician claims to prove Riemann hypothesis, most famous problem in all of math](https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcl9DRERIZlViX1BNaFBRYU1WbjI4ejNhb2x6b2d1aXJRenVWQ3NtUUttb1VvTnRYUWNvUE5pQy1vbkpvcEpXeHU4bldwVXpfM3pwdzVtMjJyT3BvcTdyU0lZQUdtdzJEN2xoa1AtR1prQkd3Q1FDakxiZi1XRWVnSmt5aHNYTzlvRDhWcXl3emNNd2NNTTNESWF5bnFiWk5kYWZVQkdiSHFtX2RVYjlrNElMOV9lQ1c5R0dLQnN5RlRqemlIR0huTGhzMjZMb1ZRNU5r?oc=5)（2026-11-20）
+- [Google News/Unite.AI：Levent Alpöge's Unverified Riemann Claim Puts Claude's Lean Code in Focus](https://news.google.com/rss/articles/CBMimAFBVV95cUxNOGlMcGRpVnRlX1BvLTV2eUp1U2VsRTR2RWNUekVld3BNekxoNWJLS0RMMExibkJKMzhjTm9aN1JIX0RSMzlSTTg1TnRMVzhrRVJYOWRKeWFlX3dIeVF6RlN2aWE2NDRDTzRJQ1hXa3h4d1BwcUY4QTR0My16cWFJdGZhbmdFaUlGbWFyNmo5MU9MeEMxMjNWTg?oc=5)（2026-11-20）
+- [Google News/The New Stack：Anthropic says Claude writes and reviews 90% of its team's code](https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ0UGlfSUtTb0FLdXNtcUdncnZiMW1hc1N4ejVPWVk2SkRGajRndFRkTjExMXZwU1dZQXhEaGQteUE?oc=5)（2026-11-20）
+- [[news/2026-11-20]]
 
 ## 歷史記錄
 
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-20
+**Anthropic 研究部落格：黑洞物理兩道難題補充第二項發現，Mashable 同日跟進（詳見 11-19 條目）**：
+- 官方部落格今日版本補充第二項發現：找出測試候選量子重力理論某項技術方法的精確極限（第一項計算詳見下方 11-19 條目），兩項均附預印本論文；HN 討論分數已升至 **543 分**，Mashable 同日另發報導跟進（[Anthropic Research](https://www.anthropic.com/research/claude-black-hole-physics)；[Mashable](https://news.google.com/rss/articles/CBMidkFVX3lxTFBBYkVUNFdNUHY4TGo2TnhfOGpReDNjLWNydjluX2ZVd19uclJKU2NlUXhOd1F6RTBpQmRFTUFaYXlVUWt4Rnd1U0JveWFJdmtFQmdBT0oxaFVXRzRDVlozUjIzQ0tONF9xc1hMcElsNy1mZEN6eWc?oc=5)，2026-11-20）
+
+**Anthropic 數學家稱與 Claude 合作得出黎曼猜想證明（未經同行審查，本站列未查證）**：
+- Anthropic 數學家 Levent Alpöge 在個人論文草稿中寫道「我相信自己與 Claude 合作，發現了黎曼猜想的證明」，稱同一方法可延伸解開其他懸而未解的數學問題（經 Simon Willison 摘引轉述，[Simon Willison](https://simonwillison.net/2026/Nov/20/levent-alpoge/)，2026-11-20）
+- WSJ、New Scientist、Scientific American、The Verge、Tom's Hardware、Phys.org、Unite.AI 等多家媒體同日跟進報導，均強調尚未經同行審查、真偽未定（[WSJ](https://news.google.com/rss/articles/CBMitgFBVV95cUxQd2R1UU5HMEVNTGhtYWxQaTNBMjVRZnZxZjJVU0U1MVk0U2dIRHh6akhYNV9tNWxXYjNmeU16UzdqZDM3bUpDS1BxOEd2b3oySzVMako4Z25JMmNFUVd5ZlFWNTZ4WmJ6d2NXT0R5Z1JsNVNGMi04MGowVF9CQkl4dEEtXzJNYWRDeHA3Rk1hV250dEZWQjNRLW5RZHZPQ0ZMMlNLSDdkejFKTklvZW1ZNDZZalFOQQ?oc=5)，2026-11-20）
+- 與同一數學家此前紀錄一脈相承：Alpöge 曾於 09-16／10-03 與 Ava Howell 用 Claude 刷新橢圓曲線 rank 紀錄（見下方 09-16 條目），08-11 另有未發布研究版 Claude 改進黎曼 zeta 函數零點下界紀錄（見下方 08-11 條目）；本次聲稱所用模型版本未見報導
+
+❓ **待查證**（標 2026-11-20｜查 Alpöge、Riemann hypothesis｜複 2026-12-04）｜**黎曼猜想證明是否經同行審查確認**：Levent Alpöge 聲稱與 Claude 合作完成證明，截至 11-20 尚無同行審查或獨立驗證結果
+
+**The New Stack：Anthropic 稱其工程團隊 90% 程式碼由 Claude 撰寫與審查（僅標題可用，弱訊號）**：報導標題稱 Anthropic 自家團隊 90% 程式碼由 Claude 撰寫與審查，重點在「如何檢查」而非撰寫本身；原料僅標題可讀，無法查證具體模型版本、方法論或數字定義，互動數 0、單一來源，與上述黎曼猜想宣稱、黑洞物理研究為獨立事件（[Google News/The New Stack](https://news.google.com/rss/articles/CBMiakFVX3lxTFBubFFkd0ZmODhXb3FwN2tYNTRHT2hLbTdDZ0taWDJncU1OdTBqTmJ0eDQ0UGlfSUtTb0FLdXNtcUdncnZiMW1hc1N4ejVPWVk2SkRGajRndFRkTjExMXZwU1dZQXhEaGQteUE?oc=5)，2026-11-20）
 
 #### 2026-11-19
 **Anthropic 狀態頁：Fable 5.2 與 Mythos 5.2 同批錯誤率升高（09:33 UTC 已解決，影響約 15 分鐘）**：

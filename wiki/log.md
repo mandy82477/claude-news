@@ -9207,3 +9207,26 @@ GH Actions 抓料排 10:23 UTC，到 14:45 UTC 仍未落地（+4.4 小時且持�
 - market 判讀：新增 3 則（IPO 定價與掛牌、Amazon 帳面市值變化、Gemini 4 Neon／Astra 6.2 競品定價對標），標的表覆寫 3 列，里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列（結算日見各子頁），已標訊既有待查證標記 2 筆（market-signals-ipo，未結案）
 - 📋 需使用者端設定：
   - `businesswire.com`、`news.google.com` 被雲端環境網路政策（Trusted）擋下，無法 WebFetch 查證 H-8ff4bb 所需的 Business Wire 聯名信原文；使用者可在 claude.ai 雲端環境設定將網路存取改為 Custom 並加入這兩個網域，或留待下次本機 session 查證
+
+## 2026-11-20 Ingest
+
+- 來源日報：[[news/2026-11-20]]
+- 更新頁面：
+  - **人物**：無（新增見下）
+  - **功能**：entities/claude-code、entities/claude-code-known-issues、entities/claude-code-releases、entities/claude-code-features、entities/cowork、topics/claude-code-experimental、topics/anthropic-product-matrix、topics/official-community-gap
+  - **商業**：topics/anthropic-ipo、topics/anthropic-business、topics/anthropic-business-risks、topics/anthropic-partnerships-compute、topics/competitor-landscape、topics/enterprise-tool-tracker
+  - **安全政策**：topics/ai-agent-safety-prompt-injection、topics/ai-agent-safety-product-vulns、topics/ai-agent-safety（母頁 callout＋路由表）
+  - **模型**：entities/fable-5
+  - **社群**：無（8 則皆為既有節點重複出現或未達門檻，詳見記者回報）
+  - **投資分析**：topics/market-signals-ipo、topics/market-signals-customers（＋母頁 topics/market-signals）
+  - **主編**：wiki/feature-radar.md（功能記者逐版補核官方 changelog v2.1.305–v2.1.321，升級變更表由核對至 v2.1.304 補齊至 v2.1.321，新增 8 列；因此超過每週整理「12 列」上限，詳見下方「主編裁決」）
+- 新增頁面：wiki/entities/vas-narasimhan.md（人物記者：Anthropic 董事會成員、Novartis 執行長，公開表態看好 AI 解決「生物學延遲」問題，單一來源 active）
+- 摘要：Anthropic 官方部落格發文確認 IPO 已正式完成結算（每股 83 美元、11.27 億股、毛額約 935 億美元、實收約 916 億美元），同日 NBC／Guardian／Reuters 等多家媒體報導掛牌第二天股價較前一日再跌逾 11%、那斯達克綜合指數抹平 2026 全年漲幅，為今日主線之一；另一主線是 Anthropic 數學家 Levent Alpöge 聲稱與 Claude 合作發現黎曼猜想的證明（尚未經同行審查、多家媒體以「unverified」措辭跟進），以及 Anthropic Research 官方發文稱 Claude 解開黑洞物理裡兩個懸置超過 20 年的理論問題（附預印本論文）；次要事件含 Claude Code 2.1.329 常規版本更新與多筆高互動 GitHub Issues bug 回報（Max 方案 session 限制異常耗盡 876 留言居冠）、Barclays／Citadel／BNY 將 Claude 導入金融業工作流、Anthropic 董事會成員 Vas Narasimhan／Novartis 的 AI 新藥研發表態。
+- 呈現品質：全部通過
+- 品質備註：無
+- 分類回退：[商業] 1 則——CROO Launches CROO Skill（Investing.com／TradingView 兩則第三方 AI agent 市集 Skill 接進 Claude Code／Codex）商業記者回報「應屬功能或社群」；主編核對 `.claude/skills/wiki-ingest/references/classification.md` 分類表後判定**不成立，不改派**：功能類門檻要求 Anthropic 官方版本／SDK／breaking change，CROO 為第三方產品非官方功能；社群類「社群工具」門檻要求 Show HN ≥30 分或具體技術討論，此則為 0 互動的新聞稿轉載，不構成技術討論。維持不收錄；此類「協力廠商在 Claude Code／Codex 上推出市集／Skill 整合」消息目前六類頁面皆無明確收錄落點，留待主編或商業記者評估是否需擴充 `topics/enterprise-tool-tracker` 或另立分類，非本輪處理範圍
+- 主編裁決：功能記者今日逐版補核官方 CLI changelog（`raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md`，透過 WebFetch，非沙盒 egress）v2.1.305–v2.1.321 全區間，回應 2026-11-02 轉知帳本逾期項 H-afee03（功能→主編，第 21 波冷讀者發現核對只到 v2.1.304）；新增 8 列（v2.1.305／307／309／311／312／314／316／317／318）後，`wiki/feature-radar.md`「⚠️ 升級前要知道的預設值與破壞性變更」表現有 21 列，超過 `.claude/reporter-rules/features/pages.md` 規定的「上限 12 列」；v2.1.260 那一列的事實目前只住該表、尚無其他家，汰除前須先搬進 [[entities/claude-code-releases]]。此為雲端 daily ingest 延伸處理官方查證工作，裁決：**不在本輪做汰除排序**（汰除判斷與搬家動作屬 `/wiki-lint` 範圍），已於表內加 `%% … %%` 維運備忘標注現況，留給下次 `/wiki-lint` 處理。H-afee03 本輪視為已回應，但完整的「列數裁剪」仍待週更收尾，不銷帳
+- 轉知帳本：結案 H-03e408（功能：patterns 新節點 NVIDIA/SkillEvaluator、product-launch-motion＋video-director、openmotion、Gravitas 均未達「≥2 獨立社群工具或 ≥100 讚 issue」門檻，且 official-community-gap 表已滿 18/18 列，不開新列）；H-8ff4bb（商業→安全政策，2026-11-18 開立）**保持 open**——安全政策記者今日沿用 2026-11-18／19 查證結果（log.md 對應段），本記者同樣無 web 工具，依轉知指示維持 `topics/ai-agent-safety` 現狀不動；H-afee03（功能→主編，2026-11-02 開立）本輪已由功能記者逐版補核回應，但列數裁剪仍待 `/wiki-lint`，**暫不銷帳**
+- devpractice 沉澱：候選 8 筆（entities/claude-code-releases v2.1.305／307／309／311／312／316／317／318 共 8 項行為變化，含 Opus 4.8 fast mode 11-30 淘汰、Read 工具移除「檔案未變更」提示、DISABLE_COMPACT 改單向、claude ultrareview 改需工作區信任等）／手冊寫入 0 則（分類階段 0 則落入開發實務類；候選已 append `data/devpractice-candidates.jsonl`，待週更落地判斷）；基準線已推進至 ec1331c
+- market 判讀：新增 3 則（IPO 結算完成硬數字、掛牌次日股價重挫、Barclays／Citadel／BNY 金融業採用），標的表覆寫 2 列、新增 1 列（BNY），里程碑登記 3 筆、回顧結算 ⏳ 新增 3 列（結算日見各子頁）
+- 📋 需使用者端設定：無

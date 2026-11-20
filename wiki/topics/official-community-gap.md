@@ -30,7 +30,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **開始日期：** 2026-05-17
-**最後更新：** 2026-11-14
+**最後更新：** 2026-11-20
 **最後新聞更新：** 2026-11-14
 
 > **官方補了沒更新**（2026-11-14）
@@ -202,6 +202,8 @@ v2.1.196（2026-06-29）新增 org default model 功能，企業管理員可在 
 - [[entities/claude-code]] — Claude Code 現在有哪些毛病、哪些修了，以及每個 issue 的留言與讚數
 
 ## 時序
+
+%% 2026-11-20：H-03e408 轉知評估——NVIDIA/SkillEvaluator（skill 安裝前品質篩選工具）、product-launch-motion＋video-director（兩款 code-rendered 影片 skill）、openmotion（Claude Motion／CapCut 開源替代品）、Gravitas（把 Claude Code 讀檔-規劃-測試-證據流程移植到 Gemini）四者分屬不同主題：前三者均為單一工具（openmotion、SkillEvaluator）或非針對「Claude Code／Anthropic 產品行為缺口」（兩款影片 skill 是創意應用擴充，非官方功能缺口）；Gravitas 甚至是反向案例——證明 Claude Code 流程值得移植到別家模型，不是在指出 Claude 的缺口。四者均無 ≥2 獨立社群工具或 ≥100 讚 issue 佐證同一痛點，且表已滿 18/18 列，不開新列，維持現狀 %%
 
 %% 2026-11-14：H-6db5d4 轉知評估——NamiAgent（教程型 agent）、agent-skills-hub（skills 目錄站）、cc-desk-tunnel（雲端 Claude Code 接回本機 Windows）、everyinfra-agent-plugins（爬蟲 API MCP）四者各指向不同痛點，同一痛點無 ≥2 獨立社群工具、亦無 ≥100 讚 issue，且表已滿 18/18 列，不開新列 %%
 

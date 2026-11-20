@@ -32,13 +32,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-19
-**最後新聞更新：** 2026-11-19
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 
-> **最新動態**（2026-11-19）
-> - **版本**：v2.1.328 新增 Auto mode 支援 Opus 4.6、Sonnet 4.6 於 Bedrock、GCP Agent Platform、Microsoft Foundry、Claude apps gateway，互動階段免許可提示，見 [[entities/claude-code-releases]]。
-> - **服務穩定性**：Anthropic Status：Claude Mythos 5.2、Claude Fable 5.2 錯誤率升高已解決（約 15 分鐘），見 [[entities/claude-code-known-issues]]。
-> - **互動數更新**：AGENTS.md／`.agents/skills/` 支援請求（#31005，643 讚）、VS Code 擴充套件拖放失效（#25128，63 讚），見 [[entities/claude-code-known-issues]]。
+> **最新動態**（2026-11-20）
+> - **版本**：v2.1.329 新增信任對話框警示，告知資料夾 hooks 宣告位置；Desktop 等非互動環境於對話中新增 hooks 警告，見 [[entities/claude-code-releases]]。
+> - **互動數更新**：Max 方案額度異常（#38335，876 則留言）、畫面/終端機閃爍（#769，307 則留言）、額度顯示落差（#19673，102 則留言），見 [[entities/claude-code-known-issues]]。
 
 ---
 
@@ -48,9 +47,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-19 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-19 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-18 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-20 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-20 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-20 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
 ## 現在還沒修好的
@@ -78,7 +77,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **版本：**
 
-- 最新 **v2.1.328**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
+- 最新 **v2.1.329**；npm `stable`＝2.1.311、`latest`＝2.1.325（查證 2026-11-14）。
 - **該不該升**：**Monitor tool 已進 stable**（2.1.310），沒用 Opus 4.8 fast mode 的人留在 stable 就夠；只有要寫入邊界設定（`blockWritesOutsideWorkingDirectories`，2.1.314）才需要 latest。逐版與通道見 [[entities/claude-code-releases]]。
 
 **近期平台與文件異動：**

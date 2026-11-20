@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **別名：** product matrix, 產品對照, product × feature
 **開始日期：** 2026-10-23
-**最後更新：** 2026-11-11
-**最後新聞更新：** 2026-11-11
+**最後更新：** 2026-11-20
+**最後新聞更新：** 2026-11-20
 
-> **最新動態**（2026-11-11）
-> 官方 11-11 文章：Dashboards 轉正式版並更名 Claude Data，另有 Whiteboards、Sheets 兩項 beta；Dashboards 列的 Claude app 格已改，三項專頁見 [[entities/claude-workspace-suite]]，新功能入表與否見 [[topics/anthropic-product-matrix#未定項目]]。
+> **最新動態**（2026-11-20）
+> 官方 release notes 新增「Computer use (beta) for Team and Enterprise plans」段；電腦操作列 Claude app 格新增 Team／Enterprise（beta），細節見下方「電腦操作」節。
 
 ---
 
@@ -222,7 +222,7 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 ### 電腦操作（computer use）
 
 - **分組：** 其他
-- **Claude app：** beta｜Pro／Max｜需開著 Claude Desktop；網頁／手機經桌面版代操｜[來源](https://support.claude.com/en/articles/15520349)｜2026-10-23｜official
+- **Claude app：** beta｜Pro／Max／Team／Enterprise（11-20 起 Team／Enterprise 加入 beta）｜需開著 Claude Desktop；網頁／手機經桌面版代操｜[來源](https://support.claude.com/en/articles/12138966-release-notes)｜2026-11-20｜official
 - **Claude Code：** preview｜Pro／Max｜CLI 限 macOS；Desktop 支援 macOS／Windows；Team／Ent 不可｜[來源](https://code.claude.com/docs/en/computer-use)｜2026-10-23｜official
 - **Claude Tag：** unknown｜—｜官方未提及｜[來源](https://claude.com/docs/claude-tag/overview)｜2026-10-23｜official
 - **Claude Platform：** available｜API（按量計費）｜Claude API 正式；AWS／Bedrock／Foundry 為 beta｜[來源](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool)｜2026-10-23｜official
@@ -304,3 +304,4 @@ claude.com 導覽列 Product 選單，2026-10-23 查證。
 
 - **2026-10-23**：建頁。逐格查證 75 格；說明中心有「哪裡可用」逐列段落的功能照段落填，只寫「在 Claude 裡」的標用詞籠統。同日更正：語音在 Claude app 為 beta（說明中心），Claude in Chrome 在 Claude app 為可用（只有 Chrome 側邊欄仍 beta），Skills 在 Platform 為 beta。
 - **2026-11-11**：官方文章宣布 Dashboards 轉正式版、更名 Claude Data；Dashboards 列 Claude app 格由 beta 改 available。Whiteboards、Sheets（beta）與 Meetings 暫列下方「未定項目」節，未增列。
+- **2026-11-20**：Help Center release notes 新增「Computer use (beta) for Team and Enterprise plans」段；電腦操作列 Claude app 格新增 Team／Enterprise（beta）。
