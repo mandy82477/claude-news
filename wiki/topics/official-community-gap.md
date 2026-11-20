@@ -3,15 +3,15 @@ page: "topics/official-community-gap"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-14"
+last_updated: "2026-11-20"
 last_news_update: "2026-11-14"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 5
+days_since_news: 6
 parent: null
 children: "['topics/official-community-gap-archive']"
 page_role: "hub"
-days_since_news_subtree: 5
+days_since_news_subtree: 6
 inbound_links: 42
 attribution_count: 20
 attribution_last: "2026-11-14"

@@ -3,17 +3,17 @@ page: "topics/anthropic-product-matrix"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-11"
-last_news_update: "2026-11-11"
+last_updated: "2026-11-20"
+last_news_update: "2026-11-20"
 status_main: "ongoing"
-days_since_news: 8
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 8
+days_since_news_subtree: 0
 inbound_links: 2
-attribution_count: 42
-attribution_last: "2026-11-11"
+attribution_count: 43
+attribution_last: "2026-11-20"
 top_source: "user-query"
 pending_count: 1
 pending_overdue: 0

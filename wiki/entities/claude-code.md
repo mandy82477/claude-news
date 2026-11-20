@@ -4,8 +4,8 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-19"
-last_news_update: "2026-11-19"
+last_updated: "2026-11-20"
+last_news_update: "2026-11-20"
 status_main: "active"
 matrix_role: "產品"
 days_since_news: 0
@@ -18,8 +18,8 @@ attribution_count: 855
 attribution_last: "2026-11-17"
 top_source: "github-issues"
 pending_count: 6
-pending_overdue: 0
-pending_next_review: "2026-11-20"
+pending_overdue: 1
+pending_next_review: "2026-11-21"
 pending_signalled: 0
 staleness_exempt: null
 signal: "健康"
