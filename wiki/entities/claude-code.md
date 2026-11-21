@@ -5,14 +5,14 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-20"
+last_news_update: "2026-11-21"
 status_main: "active"
 matrix_role: "產品"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/claude-code-archive', 'entities/claude-code-features', 'entities/claude-code-known-issues', 'entities/claude-code-releases', 'entities/claude-mods']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 128
 attribution_count: 855
 attribution_last: "2026-11-17"
@@ -33,11 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **對照角色：** 產品（入口：終端機、IDE、桌面、網頁；誰起手：你每句下令）
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-21
 
-> **最新動態**（2026-11-20）
-> - **版本**：v2.1.329 新增信任對話框警示，告知資料夾 hooks 宣告位置；Desktop 等非互動環境於對話中新增 hooks 警告，見 [[entities/claude-code-releases]]。
-> - **互動數更新**：Max 方案額度異常（#38335，876 則留言）、畫面/終端機閃爍（#769，307 則留言）、額度顯示落差（#19673，102 則留言），見 [[entities/claude-code-known-issues]]。
+> **最新動態**（2026-11-21）
+> - **版本**：v2.1.330 新增登入 Enterprise Admin Console 管理組織支援，見 [[entities/claude-code-releases]]。
+> - **互動數更新**：Cowork 工作區啟動失敗「VM service not running」（#27801，73 則留言、42 讚），見 [[entities/claude-code-known-issues]]。
+> - **文件**：桌面版新增 Code tab Computer use 方案限制、Dispatch 不再開放新使用者，見 [[entities/claude-code-features]]。
 
 ---
 
@@ -47,9 +48,9 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 你想知道 | 去哪頁 | 最後動態 |
 |---|---|---|
-| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-20 |
-| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-20 |
-| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-20 |
+| 某個 bug 修了沒、誰會遇到、有沒有繞法（九組逐條） | [[entities/claude-code-known-issues]] | 2026-11-21 |
+| 現在到哪一版、stable 還是 latest、哪一版加了什麼 | [[entities/claude-code-releases]] | 2026-11-21 |
+| hook 能不能當防線、subagent 派哪種、桌面版能做什麼 | [[entities/claude-code-features]] | 2026-11-21 |
 | Claude Mods 是什麼、權限怎麼管 | [[entities/claude-mods]] | 2026-11-15 |
 
 ## 現在還沒修好的

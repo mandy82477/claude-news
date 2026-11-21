@@ -10,7 +10,7 @@ days_since_news: 3
 parent: null
 children: "['topics/community-cost', 'topics/community-guardrails', 'topics/community-integrations', 'topics/community-interfaces', 'topics/community-memory', 'topics/community-multi-agent', 'topics/community-skills', 'topics/community-tech-patterns-archive']"
 page_role: "hub"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 54
 attribution_count: 272
 attribution_last: "2026-11-16"
@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-18
 
-> **可靠性測試新增 skill 品質評估框架；創意工具 Agent 整合新增全端影片工作室；確定性 Agent 框架新增跨模型紀律移植案例**（2026-11-19）
-> - **可靠性測試**：NVIDIA SkillEvaluator 在 skill 安裝前就篩掉低品質或重疊的 skill，見 [[topics/community-skills#2026-11]]。
-> - **Skills 設計**：兩款 code-rendered 影片 skill 把「不剪接、節拍同步」與「QA 把關流程」寫進技能本體，見 [[topics/community-skills#2026-11]]。
-> - **創意工具 Agent 整合**：openmotion 開源 Claude Motion／CapCut 替代品，支援 22 款 agent，見 [[topics/community-integrations#2026-11]]。
-> - **確定性 Agent 框架**：Gravitas 把 Claude Code 的讀檔-規劃-測試-證據流程強制套用在 Gemini，見 [[topics/community-multi-agent#2026-11]]。
+> **Skills 設計添抓漏合集；記憶新增 Obsidian 第二大腦；MCP 整合添手機操控；行動裝置添動態島推播**（2026-11-21）
+> - **Skills 設計**：Claude-BugHunter（82 個 skill 抓漏合集）與 article2media（內容再製自驗收 skill），見 [[topics/community-skills#2026-11]]。
+> - **記憶與知識管理**：avenoxbeyin 以 Obsidian 整合 Claude Code 做跨 session 持久記憶，見 [[topics/community-memory#2026-11]]。
+> - **Plugin / MCP 整合**：phonedriver 讓 agent 操控手機；同名 Blender 外掛第三度換帳號出現，疑似假星數手法，見 [[topics/community-integrations#2026-11]]。
+> - **行動裝置遠端控制**：Fuyu 把 Claude Code 核准請求併入桌面動態島推播到手機，見 [[topics/community-interfaces#2026-11]]。
 
 ---
 
@@ -55,12 +55,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | 子頁 | 答什麼 | 收哪幾類 | 最後動態 |
 |---|---|---|---|
 | [[topics/community-multi-agent]] | 多個 agent 怎麼分工、隔離、協調；開到 10 個以上會怎樣、怎麼停下來；官方機制對照與缺口 | Multi-agent 架構、Agent 規模化、確定性 Agent 框架 | 2026-11-19 |
-| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理 | 2026-11-07 |
+| [[topics/community-memory]] | 怎麼讓 agent 跨 session 記得專案、CLAUDE.md 怎麼寫才會被照做、context 怎麼不被撐爆 | 記憶與知識管理、CLAUDE.md 管理、Context 管理 | 2026-11-21 |
 | [[topics/community-cost]] | 怎麼省 token、怎麼看見花了多少、哪種任務派哪個模型 | Token / 成本優化、模型使用策略、Agent 預算控制 | 2026-11-17 |
-| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-19 |
+| [[topics/community-skills]] | skill 怎麼寫才會觸發、有哪些慣例與地雷、品質怎麼量 | Skills 設計、可靠性測試 | 2026-11-21 |
 | [[topics/community-guardrails]] | 怎麼讓規則被強制而不只是建議、多 agent 的產出誰來審、怎麼防 agent 亂來或洩漏密鑰 | Hooks 與自動化、多代理 PR Review、規格驅動開發、架構邊界合約 | 2026-11-18 |
-| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-19 |
-| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-18 |
+| [[topics/community-integrations]] | 社群接了哪些 MCP 與 plugin、MCP 斷線或逾時怎麼辦、agent 能不能接進創作工具 | Plugin / MCP 整合、創意工具 Agent 整合 | 2026-11-21 |
+| [[topics/community-interfaces]] | 能不能從手機控制、有沒有更好的終端機、怎麼看到 agent 正在做什麼 | 介面元件複用、行動裝置遠端控制、Agent 活動可視化、跨 Repo 依賴可視化 | 2026-11-21 |
 
 一則做法若同時屬於兩類，住它第一個寫到的那一類的子頁；還分不出類的新做法，先放在本頁下方「技術彙整」的「未歸類」。
 

@@ -3,19 +3,19 @@ page: "topics/claude-code-experimental"
 kind: "topic"
 status: "ongoing"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
-last_news_update: "2026-11-20"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 update_freq: "每日（有新版本才有新料；Claude Code 近期約一天一版）"
 status_main: "ongoing"
 matrix_role: "追蹤頁"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "[]"
 page_role: "root"
-days_since_news_subtree: 1
-inbound_links: 21
-attribution_count: 45
-attribution_last: "2026-11-20"
+days_since_news_subtree: 0
+inbound_links: 24
+attribution_count: 46
+attribution_last: "2026-11-21"
 top_source: "build-flags"
 pending_count: 0
 pending_overdue: 0
@@ -32,20 +32,21 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **對照角色：** 追蹤頁
 **更新頻率：** 每日（有新版本才有新料；Claude Code 近期約一天一版）
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 **蒐集邊界：** 每個新版本出貨後，比對程式本體裡新增與消失的 `CLAUDE_CODE_*` 旗標名稱（每版一次）。只看得到名字，看不到行為；逾時、識別碼一類的設定旗標不列。官方態度靠 issue、文件、changelog 的既有監看；社群反應靠本站已抓進來的 HN、Reddit、issue 摘要對名字。名字本身不是承諾。
 
 > **本頁是什麼**（快照 2026-09-16）
 > 出貨的 Claude Code 程式本體裡先出現、還沒有任何公告的功能旗標。旗標在這裡分四階：出現在 build、有人談論、官方承認、已出貨或已移除。**每往上一階都要證據連結**，沒證據就停在第一階，讀者一看就知道那只是名字。起因：`CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` 在 09-04 的 build 就有了，官方 09-09 才在 issue 承諾出貨並更名 Claude Mods，changelog 到 09-14 仍未提——build 是實驗功能最早露臉的地方，changelog 是最晚的。
 
-> **最新動態**（2026-11-20）
-> 2.1.329（自 2.1.328 起）新增 7 個候選旗標（名單見追蹤表），皆第一階；消失 8 個，皆為測試用旗標，先前已過濾未入表；對帳僅命中來源條目自身，暫不升第二階。
+> **最新動態**（2026-11-21）
+> 2.1.330（自 2.1.329 起）新增 10 個候選旗標（名單見追蹤表），皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
 
 ---
 
 ## 摘要
 
+- **2.1.330（11-21，自 2.1.329 起）新增 10 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；另 1 個設定類旗標來源已過濾不列；對帳僅命中來源條目自身，暫不升第二階。
 - **2.1.329（11-20，自 2.1.328 起）新增 7 個候選旗標**（名單見追蹤表），皆第一階、無代號旗標；對帳僅命中來源條目自身，暫不升第二階。
   - 消失 8 個皆為測試用旗標（`MOCK_TRIAL`、`TEST_ALLOW_REAL_NETWORK`、`TEST_FIXTURES_ROOT`、`TEST_FORCE_DENY` 等；含 2 個 `ULTRAREVIEW_*_FIXTURE`），先前已過濾未入表，不另立列。
 - **2.1.328（11-19，自 2.1.327 起）新增 8 個候選旗標**：7 個第一階（名單見追蹤表）＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個（`CCR_SKIP_NEEDLESS_STARTUP_READS`，列 4 階）；對帳僅命中來源條目自身，暫不升第二階。
@@ -82,6 +83,16 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 旗標 | 首見 | 階 | 官方態度（證據） | 社群反應（證據） | 最後動靜 |
 |---|---|---|---|---|---|
+| `CLAUDE_CODE_COWORK_SHELL_CHECK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_DISABLE_REDIRECT_DENY_RECHECK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_FULL_SIGN_IN_LINK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_HOST_ALLOW_RESETS_DENIAL_STREAK` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_HOST_READS_NO_BASH_EDIT_DIFF` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_MODEL_NOBODY_CHOSE` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_PROJECTS_FEATURE_FLAGS` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_RELAUNCH_BYPASS_SWITCH` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_RUNNER_START_NOTES` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
+| `CLAUDE_CODE_STOP_ON_UNUSABLE_PROFILE` | 2.1.330（11-21） | 1 | — | — | 2.1.330 仍在（比對日 11-21） |
 | `CLAUDE_CODE_CFC_REFUSED` | 2.1.329（11-20） | 1 | — | — | 2.1.329 仍在（比對日 11-20） |
 | `CLAUDE_CODE_HOST_SHOWS_CONNECTION_NOTICE` | 2.1.329（11-20） | 1 | — | — | 2.1.329 仍在（比對日 11-20） |
 | `CLAUDE_CODE_LINKED_SPINDLE` | 2.1.329（11-20） | 1 | — | — | 2.1.329 仍在（比對日 11-20） |
@@ -445,6 +456,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |---|---|
+| 2026-11-21 | 2.1.330 新增 10 個第一階候選旗標（名單見追蹤表），無代號旗標；1 設定類不列；本輪無消失旗標；對帳僅命中來源條目自身，暫不升第二階 |
 | 2026-11-19 | 2.1.328 新增 8 個候選旗標：7 第一階＋代號旗標 `PEPPY_STARLIGHT`；消失 1 個：`CCR_SKIP_NEEDLESS_STARTUP_READS`（首見 2.1.323）列 4 階；僅命中來源條目，暫不升二階 |
 | 2026-11-18 | 2.1.327 新增 10 個第一階候選旗標；2 設定類不列；消失 2 個：`CONSENT_POINTERLESS`、`SPARE_KEEPS_BOOT_SESSION_ID`；僅命中來源條目，暫不升二階 |
 | 2026-11-13 | 2.1.323 新增 13 候選旗標（9 設定類不列，消失 1，原未列表）；同日 Release 宣布 Code Mode，`EXPERIMENTAL_CODE_MODE` 系列升 3 階 |

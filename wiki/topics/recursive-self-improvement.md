@@ -11,7 +11,7 @@ parent: null
 children: "['topics/recursive-self-improvement-archive']"
 page_role: "hub"
 days_since_news_subtree: 6
-inbound_links: 44
+inbound_links: 46
 attribution_count: 76
 attribution_last: "2026-11-15"
 top_source: "google-news"

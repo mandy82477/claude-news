@@ -13,7 +13,7 @@ parent: null
 children: "[]"
 page_role: "root"
 days_since_news_subtree: 6
-inbound_links: 10
+inbound_links: 11
 attribution_count: 2
 attribution_last: "2026-11-15"
 top_source: "anthropic-official"
@@ -38,8 +38,8 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 **最後更新：** 2026-11-21
 **最後新聞更新：** 2026-11-15
 
-> **最新動態**（2026-11-15）
-> Enterprise 方案的 Claude Data 11-20 起預設開啟，Whiteboards、Sheets 仍預設關；不想自動開的管理員要在 11-20 前關掉。
+> **最新動態**（2026-11-21）
+> Enterprise 方案的 Claude Data 已於 11-20 如期預設開啟（官方文章 2026-11-21 複查確認未延期），Whiteboards、Sheets 仍預設關；不想自動開的管理員現在就到 Organization settings > Artifacts 關掉。
 
 ---
 
@@ -47,7 +47,7 @@ Anthropic 在 Claude 內建的三項團隊協作功能：共用白板、試算�
 
 官方文章（[Claude Whiteboards, Claude Sheets, and Claude Data](https://claude.com/resources/articles/sheets-whiteboards-data)）把三項功能一起介紹：Whiteboards 與 Sheets 以 beta 推出，原 Claude Dashboards 轉正式版並更名 Claude Data。三項所有付費方案都能用，網頁、桌面、手機都有（2026-11-14 查證）。
 
-管理員在 Organization settings > Artifacts 開關三項。Enterprise 的 Claude Data 11-20 起預設開啟，倒數見 [[feature-radar]]。
+管理員在 Organization settings > Artifacts 開關三項。Enterprise 的 Claude Data 已於 11-20 起預設開啟（已生效，不再列於 [[feature-radar]] 倒數表）。
 
 ### 三項功能對照
 

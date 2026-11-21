@@ -5,16 +5,16 @@ type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-20"
+last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 14
-attribution_count: 26
-attribution_last: "2026-11-20"
+attribution_count: 28
+attribution_last: "2026-11-21"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -34,11 +34,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-21
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：發布通道、版本表、歷史記錄原文照搬；發布超過 90 天的 82 列與 2026-08 歷史 24 列移到 [[entities/claude-code-archive]]；母頁現況的逐版副本刪除，只在那裡的 v2.1.289、v2.1.269 補成表列 %%
 
-> **最新動態**（2026-11-20）
-> - **v2.1.329**：新增信任對話框警示，告知資料夾 hooks 宣告位置；Desktop 等非互動環境於對話中新增 hooks 警告（官方原文截斷）。SDK 同步新增 `image_dimensions_too_large` 錯誤碼（TS sdk-v1.12.0／Python v2.12.0）。
+> **最新動態**（2026-11-21）
+> - **v2.1.330**：新增登入由 Enterprise Admin Console 管理的組織支援——`claude auth login` 後套用該組織設定並使用其雲端供應商。build 同時新增 10 個候選旗標，見 [[topics/claude-code-experimental]]。
 > - **⚠️ Opus 4.8 fast mode 10-30 起棄用、11-30 移除**：移除後不會自動改用別的模型，請求直接回錯誤；用 fast mode 的人要改 Opus 5.5。
 
 ---
@@ -71,6 +71,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 版本 | 發布日 | 重點 |
 |------|------|------|
+| **v2.1.330** | 2026-11-20 | 新增登入 Enterprise Admin Console 管理的組織支援：執行 `claude auth login` 後套用該組織設定並使用其雲端供應商（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.330)）|
 | **anthropic-sdk-typescript sdk-v1.12.0** | 2026-11-20 | Features：新增 `image_dimensions_too_large` 錯誤碼；Bug fix：修正 `ANTHROPIC_CUSTOM_HEADERS` 合併 bug（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.12.0)）|
 | **anthropic-sdk-python v2.12.0** | 2026-11-20 | Features：同步新增 `image_dimensions_too_large` 錯誤碼；Bug fix：修正 Amazon Bedrock 情境下 `user_profile_id` 未正確送入請求內文（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0)）|
 | **v2.1.329** | 2026-11-19 | 新增信任對話框警示，告知資料夾 hooks 宣告位置；Claude Desktop 等非互動環境於對話中新增 hooks 警告；另修復一批既有 bug（官方原文截斷）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.329)）|
@@ -93,7 +94,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.319** | 2026-11-06 | ⚠️ auto mode 在遙測或功能旗標關閉時（含透過 LLM gateway）：伺服器無法檢查的呼叫一律詢問使用者或直接拒絕，不再退回內建傳統分類方式；無遷移期（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.319)）|
 | **anthropic-sdk-typescript sdk-v1.6.0** | 2026-11-05 | Features：新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/sdk-v1.6.0)）|
 | **anthropic-sdk-python v2.6.0** | 2026-11-05 | Features：同步新增 ramp limit 錯誤代碼、External Key 驗證失敗錯誤代碼，支援強制組織成員全裝置登出（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.6.0)）|
-| **v2.1.318** | 2026-11-04 | 啟用 session 中寫出的 mods 時新增記錄使用者回答；Claude apps gateway `mantle` 上游新增 `assume_role` 設定；官方原文截斷，角色細節未附（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）|
+| **v2.1.318** | 2026-11-04 | 新增 mods 回答記錄、gateway `mantle` `assume_role` 設定；⚠️ 恢復對話不再保留 thinking、新建 managed agent 預設 auto 權限（細節見下表格細節）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.318)）|
 | **v2.1.317** | 2026-11-03 | `/schedule` 新增警告：雲端排程任務取得非使用者要求的 connector 時提示並附移除方式；新增工具呼叫前確認檢查；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.317)）|
 | **anthropic-sdk-python v2.4.0** | 2026-11-02 | Features：新增 analytics、spend limits 與 RBAC 的 GA 方法；新增 unified metrics、RBAC 刪除回應的具名 beta 型別（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.1** | 2026-11-02 | Chores：為每個子套件的已發布型別宣告加上型別檢查，無使用者端功能異動（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.1)）|
@@ -101,13 +102,14 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 | **v2.1.316** | 2026-10-31 | 新增 `CLAUDE_CODE_DISABLE_ULTRATHINK`；⚠️ Opus 4.8 fast mode 11-30 移除；修 PowerShell hook exit 2 沒擋（[Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.316)）|
 | **v2.1.314** | 2026-10-30 | 新增 `permissions.blockWritesOutsideWorkingDirectories`：Write、Edit、NotebookEdit 在任何權限模式下拒絕寫入工作目錄外路徑；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.314)）|
 | **v2.1.312** | 2026-10-27 | 新增 `oidc.user_id_claim` 設定，gateway 可用 `sub` 以外 id_token claim（如 Entra ID `oid`）識別使用者；另有異動但原文截斷（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.312)）|
-| **v2.1.311** | 2026-10-26 | `self-hosted-runner` 新增 `--hold-idle-file`、`--max-hold-min`，host 回報殘留行程時可保留 idle session 不被提早回收（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)）|
+| **v2.1.311** | 2026-10-26 | `self-hosted-runner` 新增 idle session 保留旗標；⚠️ `DISABLE_COMPACT` 改單向（細節見下表格細節）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.311)）|
 | **v2.1.310** | 2026-10-23 | 新增 Monitor tool，含 Bedrock／Vertex／Foundry 的 plugin 監控；停用 telemetry 或非必要流量時攔阻長時間 foreground sleep（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.310)）|
 | **anthropic-sdk-python v2.3.0** | 2026-10-23 | Features：新增 Claude Tag（Claude Enterprise 組織）API endpoint；Bug fix：Google Cloud 路由下使用者個人資料請求改送往組織端點（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0)）|
 | **anthropic-sdk-typescript google-cloud-sdk-v1.1.1** | 2026-10-23 | Bug fix：Google Cloud 路由下使用者個人資料請求改送往組織端點；測試不再預期 beta query 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/google-cloud-sdk-v1.1.1)）|
+| **v2.1.305** | 2026-10-20 | allowedMcpServers 不再過濾只在 env 用 `${VAR}` 的 stdio 伺服器，原被排除者升級後會載入；改用 `deniedMcpServers` 才能繼續停用（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.305)）|
 | **anthropic-sdk-python v2.2.0** | 2026-10-23 | 新增 message threads 支援與依維度拆分用量費用報表；client 不再建議 `max_tokens` 用 `math.inf`（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.2.0)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.1.0** | 2026-10-23 | 新增 message threads 支援，與同日 Python SDK 呼應（見 [Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.1.0)）|
-| **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash 執行前跑過 shell 啟動檔、macOS `denyWrite` 規則比對不完全；Desktop／VS Code 的 bypass 模式危險 `rm`／`rmdir` 直接拒絕（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
+| **v2.1.309** | 2026-10-22 | 修正 sandboxed Bash／macOS `denyWrite` 檢查不完全；bypass 模式危險 `rm`／`rmdir` 改直接拒絕；⚠️ `ultrareview` 改需工作區信任（細節見下表格細節）（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.309)）|
 | **v2.1.308** | 2026-10-22 | Bug fixes and reliability improvements，官方 changelog 未列具體項目，純可靠性修正，無使用者端功能異動（見 [Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.308)）|
 | **anthropic-sdk-typescript vertex-sdk-v1.0.0** | 2026-10-21 | 正式滿 1.0；⚠️ Breaking：改支援新版 API，API 版本 `2026-10-21` 移除 `temperature`、`top_p`、`top_k` 請求參數，送出任一者在所有模型回 400（[Release](https://github.com/anthropics/anthropic-sdk-typescript/releases/tag/vertex-sdk-v1.0.0)）|
 | **anthropic-sdk-python v2.1.0** | 2026-10-21 | Features：User Profiles API 新增 enforcement status、actions 與 filter 參數（見 [Release](https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0)）|
@@ -189,8 +191,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **表格細節**
 - **自升級變更表移入的預設值改變（2026-11-21，原住 [[feature-radar#⚠️ 升級前要知道的預設值與破壞性變更]]）**：以下 10 版已因表上限 12 列移出該表。
+- **v2.1.318**：恢復對話（resume）不再保留先前 thinking 內容（復原 2.1.288 的修正）；新建的 managed agent 預設給 auto 權限政策，需自行確認權限模式。
 - **v2.1.317**：Read 工具移除「檔案未變更」提示，重讀未變更檔案直接回傳內容；大量重讀同檔的 hook／腳本留意 token 用量。
 - **v2.1.312**：Bedrock／Vertex／Foundry／Mantle 對不認識的模型名稱改用較短 system prompt；接自訂或微調模型名稱者提示內容會不同。
+- **v2.1.311**：`DISABLE_COMPACT` 環境變數改為單向——只能用來關閉自動壓縮，不能再用它重新打開。
+- **v2.1.309**：`claude ultrareview` 改為需要工作區信任才能執行，CI／自動化若未先建立信任會被擋下。
 - **v2.1.307**：自架 runner 的 checkout hook 預設 30 分鐘後停止（`--checkout-hook-timeout-min` 可調）；axScreenReader 不再接受 settings env 區塊，改放 user／managed 設定。
 - **v2.1.285**：背景 Bash／PowerShell 指令加時限（預設 30 分、最長 2 小時），到時自動停止；v2.1.288 起只套用在無人值守 session，長建置用 `timeout` 明設。
 - **v2.1.261**：`keybindingFlavor` 設定失效，鍵位一律改成 Bash 式；設過 readline 模式者可刪該設定。
@@ -217,6 +222,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 | 日期 | 事件 |
 |------|------|
+| 2026-11-21 | **v2.1.330**：新增登入 Enterprise Admin Console 組織支援。旗標增10，見 [[topics/claude-code-experimental]]。 |
 | 2026-11-20 | **v2.1.329**：新增信任對話框警示（hooks 宣告位置）。旗標增7消8，見 [[topics/claude-code-experimental]]。SDK 新增錯誤碼。互動更新 #38335／#769／#19673。 |
 | 2026-11-19 | **v2.1.328**：Auto mode 擴及 Opus 4.6／Sonnet 4.6，免許可提示。旗標增8消1，見 [[topics/claude-code-experimental]]。互動更新 #31005／#25128。 |
 | 2026-11-18 | **v2.1.327**：`/install-github-app` 新增確認；`claude mcp add-json -` 讀 stdin。旗標增10消2，見 [[topics/claude-code-experimental]]。 |

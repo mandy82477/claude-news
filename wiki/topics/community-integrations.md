@@ -4,18 +4,18 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-19"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 4
-attribution_count: 39
-attribution_last: "2026-11-19"
+attribution_count: 41
+attribution_last: "2026-11-21"
 top_source: "github"
-pending_count: 1
+pending_count: 2
 pending_overdue: 0
 pending_next_review: "2026-11-24"
 pending_signalled: 0
@@ -32,10 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-15
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-19
+**最後新聞更新：** 2026-11-21
 
-> **創意工具 Agent 整合新增全端影片工作室 openmotion，近 2 天暴增約 1,954 星**（2026-11-19）
-> - **openmotion**：開源 Claude Motion／CapCut 替代品，全端 agentic 影片工作室，支援 22 款 agent（含 Claude）。
+> **Plugin / MCP 整合新增手機操控 MCP 伺服器；同名 Blender 外掛兩個月內第三度換帳號出現**（2026-11-21）
+> - **phonedriver**：MCP 伺服器＋CLI 讓 agent 讀手機畫面文字並操控 Android／iPhone。
+> - **blender-ai-mcp-addon**：第三個帳號（bookwjitchieni1986）發布同名同描述外掛，前兩次（LiCinCan、hitkeeen）連結均已失效，疑似假星數手法。
 
 ---
 
@@ -59,6 +60,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 > ⟨Q-nn⟩ 標的是這一則還沒查實的地方，完整說明在該月份分組最後的「懸置細節」。
 
 ### 2026-11
+
+#### hridaya423/phonedriver：MCP 伺服器＋CLI 讓 Claude Code、Codex、Cursor 讀螢幕文字並操控 Android／iPhone（2026-11-21）
+
+- **主線：** —
+- **核心模式：** MCP 伺服器與 CLI，讓 Claude Code、Codex、Cursor 等 agent 能看到並操控 Android 與 iPhone；把手機畫面讀成文字供 agent 判讀，涉及付款動作前會先詢問。
+- **與既有模式的關係：** 補上「Plugin / MCP 整合」（既有做法多接創作或資安服務，mukul975/cve-mcp-server 等，[[topics/community-integrations#2026-10]]）一個「MCP 控制實體手機」取向——既有做法接的是軟體服務，本則把 MCP 的控制對象延伸到實體行動裝置；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（335★），無 forks／issues／近期 commit 佐證可查，未另行查證；「螢幕讀成文字」的辨識準確度與支援機型清單未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/hridaya423/phonedriver)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
+
+#### bookwjitchieni1986/blender-ai-mcp-addon：同名 Blender MCP 外掛兩個月內第三度換帳號出現（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 與兩個月內另兩次同名同描述的 Blender MCP 外掛（hitkeeen 11-16、LiCinCan 10-18，原連結皆已失效）相同，本次由第三個帳號 bookwjitchieni1986 發布；近 2 天新增約 1,871 星，累積 2,075 星。
+- **與既有模式的關係：** 不計入「創意工具 Agent 整合」代表技巧——同一描述換帳號重發兩次後連結皆已失效，本次第三度出現星速異常，佐證為重複假帳號衝星數，非新做法；主線填 —。
+- **可信度註記：** ❓ **待查證**（標 2026-11-21｜查 blender-ai-mcp-addon、bookwjitchieni1986）｜**是否為重複假帳號衝星數手法**：星速偵測收錄（近 2 天 +1,871 星，約 936 星/日），無 forks／issues／近期 commit 佐證可查，待下一輪連結健檢確認是否重演。
+- **來源：** GitHub Search；[GitHub](https://github.com/bookwjitchieni1986/blender-ai-mcp-addon)
+- **成熟度：** ⏳ 新興（本庫首次收錄，同名專案第三度換帳號出現，疑似假星數手法，尚無第三方採用或複現數據）
 
 #### nexu-io/openmotion：開源 Claude Motion／CapCut 替代品，全端 agentic 影片工作室支援 22 款 agent（2026-11-19）
 

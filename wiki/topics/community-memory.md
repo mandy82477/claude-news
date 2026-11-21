@@ -3,17 +3,17 @@ page: "topics/community-memory"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-14"
-last_news_update: "2026-11-07"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 14
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 14
+days_since_news_subtree: 0
 inbound_links: 7
-attribution_count: 16
-attribution_last: "2026-11-07"
+attribution_count: 17
+attribution_last: "2026-11-21"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-10
-**最後更新：** 2026-11-14
-**最後新聞更新：** 2026-11-07
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 
-> **官方首次公開 agent 記憶設計框架：編碼—整併—取回**（2026-11-07）
-> - Anthropic 研究部落格以海馬迴類比拆解記憶該留什麼、該忘什麼，HN 102 分、2 來源交叉報導。
+> **記憶與知識管理新增 Obsidian 當記憶後端的「AI 第二大腦」**（2026-11-21）
+> - **avenoxbeyin**：開源系統整合 Obsidian 與 Claude Code，提供跨 session 持久記憶。
 
 ---
 
@@ -65,6 +65,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### avenoxai/avenoxbeyin：Obsidian＋Claude Code 打造的「AI 第二大腦」，提供跨 session 持久記憶（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 以單一指令啟動的開源系統，整合 Obsidian 與 Claude Code，提供跨 session 持久記憶，宣稱可作為使用者的「AI 第二大腦」。
+- **與既有模式的關係：** 補上「記憶與知識管理」既有社群工具（claude-mem、projectmem 等，[[topics/community-memory#2026-10]]）一個「借用 Obsidian 筆記庫當記憶後端」取向——既有做法多自建儲存格式，本則直接接上既有 Obsidian 生態；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（515★），無 forks／issues／近期 commit 佐證可查，未另行查證；「持久記憶」的寫入頻率與衝突處理機制未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/avenoxai/avenoxbeyin)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### Anthropic Research：拆解 agent 記憶系統——編碼、整併（該留什麼、該忘什麼）、取回三階段設計框架（2026-11-07）
 

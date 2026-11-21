@@ -11,7 +11,7 @@ parent: null
 children: "['topics/community-tech-discussions-archive']"
 page_role: "hub"
 days_since_news_subtree: 4
-inbound_links: 53
+inbound_links: 55
 attribution_count: 206
 attribution_last: "2026-11-17"
 top_source: "hacker-news"

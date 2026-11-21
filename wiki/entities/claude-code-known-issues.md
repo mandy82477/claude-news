@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
-last_news_update: "2026-11-20"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 22
-attribution_count: 76
-attribution_last: "2026-11-20"
+attribution_count: 77
+attribution_last: "2026-11-21"
 top_source: "github-issues"
 pending_count: 21
 pending_overdue: 0
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：九組原文照搬；🛡️ 組與安全子頁重疊的 17 條只留修補狀態一行（事件證據住安全子頁）；已解決的 Anthropic Status 事故 40 條原文移到 [[entities/claude-code-archive]]。拆頁評估 2026-11-01：不拆——九組共用「我這版會不會出事」一題；平台相容性一組最大，日後逾 600 行時先依 Windows／Desktop／Cowork 再切 %%
 
-> **最新動態**（2026-11-20）
-> - **互動數更新**：Max 方案額度自 3 月起異常快速耗盡（#38335，876 則留言、545 讚）；畫面/終端機閃爍（#769，307 則留言、334 讚）；額度顯示 84% 卻收到已達上限（#19673，102 則留言、77 讚）。
+> **最新動態**（2026-11-21）
+> - **互動數更新**：Cowork 工作區啟動失敗「VM service not running」，重開機未解（#27801，73 則留言、42 讚）。
 
 ---
 
@@ -465,7 +465,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 🔴 **未修復**｜**Cowork VM 在 Windows ARM64（Samsung Galaxy Book4 Edge、Snapdragon）無法啟動（GitHub issue #40198，累積 68 則留言／反應，2026-07-28 首見，2026-08-20 互動數更新）**：使用者回報在搭載 Snapdragon 處理器的 Windows ARM64 裝置（Samsung Galaxy Book4 Edge）上，Cowork VM 無法啟動；顯示 Cowork 對 Windows ARM64 架構的支援尚不完整，互動量自 7/28 首見的 13 個讚大幅攀升，官方尚未回應。
 - 🔴 **未修復**｜**Cowork 在 ARM64（Snapdragon X）裝置上，即使通過環境就緒檢查仍失敗（GitHub issue #50674，累積 44 則留言，2026-10-11）**：與上列 #40198 同屬 Windows ARM64／Snapdragon 相容性問題，此則回報環境已通過 readiness check 仍失敗，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**多起 API 連線錯誤彙整回報（API Error: Connection error.，GitHub issue #4297，累積 48 則留言／反應，環境：Windows 11、Anthropic API 平台，2026-08-20）**：GitHub Issue 彙集多起使用者回報的 API 連線錯誤（Connection error），環境集中於 Windows 11 搭配 Anthropic API 平台；官方尚未回應或說明成因。
-- 🔴 **未修復**｜**Cowork 工作區啟動失敗「Failed to start Claude's workspace」，VM service not running，重開機後問題依然存在（GitHub issue #27801，累積 73 則留言、41 個讚，2026-07-28 首見，2026-08-19 互動數更新）**：使用者回報 Cowork 嘗試啟動工作區時失敗，顯示 VM service not running 錯誤，即便重新開機仍無法解決；與既有 Windows 平台 Cowork 啟動障礙（issue #29941、#74649、#40198）同屬 Cowork VM 啟動失敗但成因與平台細節不同，暫分列追蹤；官方尚未回應。
+- 🔴 **未修復**｜**Cowork 工作區啟動失敗「Failed to start Claude's workspace」，VM service not running，重開機後問題依然存在（GitHub issue #27801，累積 73 則留言、42 個讚，2026-07-28 首見，2026-11-21 互動數更新）**：使用者回報 Cowork 嘗試啟動工作區時失敗，顯示 VM service not running 錯誤，即便重新開機仍無法解決；與既有 Windows 平台 Cowork 啟動障礙（issue #29941、#74649、#40198）同屬 Cowork VM 啟動失敗但成因與平台細節不同，暫分列追蹤；官方尚未回應。
 - 🔴 **未修復**｜**Linux（Ubuntu）無法從剪貼簿貼上圖片（GitHub issue #8324，累積 42 個 reactions、44 則留言，首見 2026-07-29，2026-08-19 互動數更新）**：使用者回報在 Linux（Ubuntu）環境下，無法透過剪貼簿貼上圖片至 Claude Code；官方尚未回應。
 - 🔴 **未修復**｜**Windows 桌面版開啟內建瀏覽器分頁時發生致命 GPU 當機（錯誤碼 0x060C201E），崩潰後 MSIX 應用卡在 appxState=2 需 Repair 才能修復（GitHub issue #80444，累積 17 個 reactions、111 則留言，2026-08-19 首見，2026-09-15 互動數更新）**：官方尚未回應。
   - 環境：Claude desktop app 1.24012.1（MSIX，Windows 11 Home 26200）；與既有「GPU process crash（exit code 101457950）」（issue #81698）同屬 GPU 穩定性問題但錯誤碼不同，暫分列追蹤。

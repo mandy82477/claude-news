@@ -5,21 +5,21 @@ type: "model"
 status: "active（現行世代為 Fable 5.2，2026-11-09 取代 5.1 成為預設；5.1 官方仍列 Active、退役不早於 2027-09-01（2026-11-14 查證）；Fable 5 仍為 Legacy，官方載明退役不早於 2027-06-09）"
 domain: "🤖 模型"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-20"
+last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: null
 children: "['entities/fable-5-archive']"
 page_role: "hub"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 82
-attribution_count: 73
-attribution_last: "2026-11-20"
+attribution_count: 80
+attribution_last: "2026-11-21"
 top_source: "google-news"
-pending_count: 5
+pending_count: 6
 pending_overdue: 0
 pending_next_review: "2026-11-29"
-pending_signalled: 0
+pending_signalled: 1
 staleness_exempt: null
 signal: "健康"
 generated_by: "scripts/gen_wiki_frontmatter.py"
@@ -34,10 +34,10 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 **別名：** Fable 5, Fable 5.1, Fable 5.2, Claude Fable 5.2
 **首次出現：** 2026-06-09
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-20
+**最後新聞更新：** 2026-11-21
 
-> **研究動態與未驗證宣稱**（2026-11-20）
-> - **黎曼猜想未驗證宣稱**：Anthropic 數學家稱與 Claude 合作得出證明，尚未同行審查，本站列未查證。
+> **研究動態與未驗證宣稱**（2026-11-21）
+> - **黎曼猜想爭議升溫**：史丹佛發布競爭性全人類證明草稿，雙方均未經同行審查。
 > - **黑洞物理兩道難題**：官方確認解開兩道懸置逾 20 年的理論問題，附兩篇預印本論文。
 
 ---
@@ -272,6 +272,14 @@ Anthropic 的旗艦模型系列，2026-06-09 發布 Fable 5，09-01 換代為 Fa
 ### 解禁後（2026-07-01 起）
 
 ### 2026-11
+
+#### 2026-11-21
+**The Decoder：Anthropic 宣稱數小時後，史丹佛發布另一份全人類完成的競爭證明草稿**：
+- 史丹佛大學研究團隊在 Levent Alpöge 聲稱與 Claude 合作得出黎曼猜想證明後數小時，發布一份完全由人類完成、與其競爭的證明草稿；兩份草稿均尚未經同行審查（[The Decoder](https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUGJqSjZWaXNISk8tTE9CM0d4czdubmlPOW4zQjNBTG51X0drbzlBSGl2Mkx4NHdCS0RtWmhNSERHdm4yMkk1bGJZZnhlMzZRMVMzaGZMZTlMekJaVFNQdkpDUDMyUERoQWhhWW9QSVJIQk53eFVUa1EwdUpQUFZTSFVuemIwcWFmWlRyRl8xdm5KUDd6V2Qza3ZPM1IzbHVTRl91TFNDNDNxUnhzdXZXWk1teGcyN2RORU5xTTdHYzJZUkZLaE1ySEpraWljMFlJQV9ZR2JXcDU?oc=5)，2026-11-21）
+
+**媒體接力報導（無新增技術細節）**：The Guardian、AP News、Broadband Breakfast、IBM、DW.com、The Economist 同日跟進轉載 11-20 原始宣稱，敘事與上方一致，未見超出官方原文的新細節（[The Guardian](https://news.google.com/rss/articles/CBMinAFBVV95cUxNZjl5ODZTYXRNU2pfRmhEdnR0ckVzdE9iVVhrX3ZmZzZTMl9acTJENHAyUUFJazdRNGw1a2pES2pjWEpuTG1qTmtfNjBCd1NTQkxXb0c0X2pwSzZtNDJpWS1HbUR6aU5PUC1Gc1N0cXNEZEV5cTd2ZnYtWk9oWU95d3lERkRUOHdSQXRFSTY2OUllVktJenpTODQzU2g?oc=5)，2026-11-21）
+
+❓ **待查證**（標 2026-11-20｜查 Alpöge、Riemann hypothesis｜複 2026-12-04｜訊 2026-11-21）｜**黎曼猜想證明是否經同行審查確認**：Levent Alpöge 聲稱與 Claude 合作完成證明，11-21 史丹佛另發表競爭性全人類草稿，雙方截至目前均未經同行審查
 
 #### 2026-11-20
 **Anthropic 研究部落格：黑洞物理兩道難題補充第二項發現，Mashable 同日跟進（詳見 11-19 條目）**：

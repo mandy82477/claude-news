@@ -3,17 +3,17 @@ page: "topics/anthropic-ipo"
 kind: "topic"
 status: "ongoing"
 domain: "💼 商業"
-last_updated: "2026-11-20"
-last_news_update: "2026-11-20"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 1
+days_since_news: 0
 parent: "topics/anthropic-business"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 113
-attribution_count: 120
-attribution_last: "2026-11-20"
+attribution_count: 127
+attribution_last: "2026-11-21"
 top_source: "google-news"
 pending_count: 1
 pending_overdue: 0
@@ -31,11 +31,11 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 **領域：** 💼 商業
 **上層：** [[topics/anthropic-business]]
 **開始日期：** 2026-05-28
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 
-> **最新動態**（2026-11-20）
-> - **IPO 正式結算：超額配售權全額行使，發行上修至 11.27 億股，毛額約 $935 億美元，Anthropic 實收約 $916 億美元**（官方）
+> **最新動態**（2026-11-21）
+> - **上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆，Nvidia 同步重挫；承銷商曾平倉避險倉位穩定 ANT 股價**（WSJ／Axios／Reuters）
 
 **怎麼讀這頁：** 上半是現況（五格表、S-1 揭露了什麼、數字細節、誰說的），下半是逐日細節。這頁只放事實；會不會波及你用的 Claude 見 [[topics/anthropic-business-risks]]，判讀見 [[topics/market-signals-ipo]]；母頁指標表見 [[topics/anthropic-business#現在的數字]]；定價見 [[entities/pricing]]。
 
@@ -51,7 +51,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 | 什麼時候上市 | **已完成：11-18 定價、11-19 在 Nasdaq 以 ANT 開始交易、11-20 正式結算**；超額配售權全額行使，發行規模上修至 1,127,000,000 股（11-18 公告時為 980,000,000 股） | [Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)（11-20） | 官方一手 |
 | 值多少 | **正式定價 $83／股**；結算毛額約 $935 億美元，Anthropic 實收約 $916 億美元；市值估算仍不一（細節見下方） | Anthropic 官方（11-18／11-20）；Reuters／WSJ（11-19） | 官方一手／一級媒體 |
 | 誰承銷 | 官方路演公告只點名 Goldman Sachs、Morgan Stanley 為索取招股書窗口；JPMorgan 未列（2026-11-14 查證） | [Anthropic 路演公告](https://www.anthropic.com/news/roadshow-launch)（11-10）；FT、NYT（09-04）媒體稱由兩家主辦 | 官方一手＋媒體 |
-| 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-02 revenue-per-compute 2.08x→1.72x；11-06/07 買方喊價探底至 $1.1～1.3 兆（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；CNBC／FT（2026-11-02）；WSJ／Reuters（2026-11-06）；Bloomberg／CNBC（2026-11-07） | 第三方研究／一級媒體引投資人 |
+| 誰說撐不住 | 撐住 $2 兆需營收 $1.2 兆；11-06/07 買方喊價探底至 $1.1～1.3 兆；11-21 上市後賣壓擴大為全板塊 $4 兆蒸發（細節見下方） | Damodaran、Stocktwits（2026-08-23／09-02）；WSJ／Reuters（2026-11-06）；WSJ／Axios／Reuters（2026-11-21） | 第三方研究／一級媒體引投資人 |
 
 - **正式股數拆分**（[Anthropic 官方公告](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)，11-18）：980,000,000 股中公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項；較 11-10 路演擬發 825,000,000 股上修。
 - **IPO 結算，超額配售權全額行使（[Anthropic 官方公告](https://www.anthropic.com/news/ipo-close)，11-20）**：追加 147,000,000 股，總發行上修至 1,127,000,000 股（公司自售 1,103,351,354、既有股東售 23,648,646，股東售股部分不變）；毛額約 $935 億美元，Anthropic 實收約 $916 億美元，公司同樣未自股東售股取得款項。
@@ -89,6 +89,7 @@ Anthropic 的上市走到哪、S-1 和財報寫了多少營收和虧損、這些
 
 ### 誰說撐不住：唱空與質疑
 
+- **上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆（2026-11-21）**：WSJ 稱損失達 $4 兆；Axios 稱 Nvidia 股價同步重挫；Reuters 稱承銷商曾平倉避險倉位穩定 ANT 股價；CNBC／CNN 稱撞上科技股最差一週、Nasdaq 今年漲幅遭抹平（[WSJ](https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90)、[Axios](https://news.google.com/rss/articles/CBMieEFVX3lxTE9lT3pUcFhra290UDVtQVlwcVBjeDdBX1NLX1lPMGVjM3lPRHZDZk04eHI3cDk1STFLejBDODdHZWYtVFJzRnd3Q2ZDLW5EdjN1RTZzT3ZLblNoa004bmN6bjRSWXF4Y0RoQWs1UGR4UThYR004a1hWcw?oc=5)、[Reuters](https://www.reuters.com/markets/us/anthropics-ipo-bank-closed-position-meant-stabilize-stock-removing-source-2026-11-20)、[CNBC](https://news.google.com/rss/articles/CBMicEFVX3lxTFBuZ3QwZ1Qzd0FwWVhzOWhhbWZ5YWEzNTI0anpyemhZQXF6LVM1d202X3VSVGthTFNUaE13UlNfWUx5VkNhTEduOHctbWZtVlloME45dGFBMDA3OGpWdDhXdTUxNFVhSFpya21aMnpGVHHSAXZBVV95cUxORlNoeVVtbW1fLU1EY01EellhNHg0VldaY0Y5R3Y5enVEaTdZZTZENDJMWFNrblBqTEtORGZFRlZacjBwOWQ2ZXNjSF9KZFNsNkQ4WEtTallYdnVHMm5JRVBMYWl5bHhlb19QUzlIcUZOTXh2U1hB?oc=5)、[CNN](https://news.google.com/rss/articles/CBMicEFVX3lxTE9mdllsNUVFYnVqeDVsNWpGX1U5ckw2RURWWUc0ZDdaWksyYzF0c3JJUjAxaHRCbFR2a3F6R1RsLVhSRjBoTngtZWNSRHVybWd4cUN0STB2VWhQSDVtZTBIVG9jMFp0WHBrSGpydlhNTWI?oc=5)）
 - **上市首日：分析師賣光所有持股（2026-11-19，CNBC）**：一位分析師說明觸發他賣光手上所有持股的「扳機」，具體理由僅標題可用。
 - **HN 質疑「$2 兆」標題誇大（2026-11-19，306 分）**：Reuters 報導的討論串有留言稱市值一度衝高到約 $1.5 兆後回落至約 $1.2 兆；另一則（38 分）稱開盤 $110、已跌至 $97（Hacker News）。
 - **低流通股比例可能扭曲估值的論點浮現（2026-11-18，HN 對 Gary Marcus 反對認購文章的討論，25 分）**：留言指出 Anthropic 與 SpaceX 這類 IPO 流通股比例都低於 10%，認為需求可能被少量流通股人為放大；若流通股達 30～40% 留言者才會更願意進場（Hacker News）。
@@ -210,6 +211,7 @@ S-1 原文：<https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168
 - **「Anthropic Tops $47B」報導**：tech-insider.org 標題稱「Anthropic Tops $47B」。已查證（2026-08-13）：Anthropic ARR 於 2026-05 達 $47B（由 $14B/2 月、$19B/3 月、$30B/4 月一路攀升），本則為同一 5 月里程碑的媒體重提，查證後未見更新的更高數字（[MLQ News](https://mlq.ai/news/anthropics-annualized-revenue-hits-47b-as-daniela-amodei-defends-ai-economics-ahead-of-ipo/)；[Simon Willison](https://simonwillison.net/2026/May/29/anthropic/)）；同篇報導另提及一次 5 小時 44 分鐘的 Claude 服務中斷，屬可靠度事件而非商業本業範疇，詳見 [[entities/claude-code]] 已知問題（若已收錄）。
 
 ## IPO 細節
+- **2026-11-21 WSJ／Axios／Reuters／CNBC／CNN：上市後賣壓擴大為全 AI 板塊性賣壓，市值蒸發達 $4 兆**：Nvidia 同步重挫，承銷商曾平倉避險倉位穩定 ANT 股價；細節見上方「誰說撐不住：唱空與質疑」。
 - **2026-11-20 Anthropic 官方：IPO 正式結算，超額配售權全額行使**：發行上修至 1,127,000,000 股，較定價時增加 147,000,000 股；結算毛額約 $935 億美元，Anthropic 實收約 $916 億美元，股數拆分見上方「上市走到哪一格」（[Anthropic 官方](https://www.anthropic.com/news/ipo-close)）。
 - **2026-11-19 Anthropic 官方／多家媒體：IPO 正式定價 $83／股，股票以代號 ANT 在 Nasdaq 開始交易**：官方公告發行 980,000,000 股（公司自售 956,351,354、既有股東售 23,648,646，公司不收後者款項），募資約 $81.3 億美元，為史上規模最大 IPO（[Anthropic 官方](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)；NPR；BBC）。
   - **開盤 $111.50（漲約 34%），盤中最高 $114.99**：Reuters、CBS News、Forbes、Yahoo Finance 等多家同步報導；Yahoo Finance 稱首筆交易價值約 $120 億美元。

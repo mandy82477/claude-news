@@ -4,16 +4,16 @@ kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
 last_updated: "2026-11-21"
-last_news_update: "2026-11-19"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 2
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 2
+days_since_news_subtree: 0
 inbound_links: 16
-attribution_count: 32
-attribution_last: "2026-11-19"
+attribution_count: 34
+attribution_last: "2026-11-21"
 top_source: "github"
 pending_count: 0
 pending_overdue: 0
@@ -32,11 +32,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-12
 **最後更新：** 2026-11-21
-**最後新聞更新：** 2026-11-19
+**最後新聞更新：** 2026-11-21
 
-> **可靠性測試新增 skill 品質評估框架；Skills 設計再添兩款 Code-rendered 影片技能**（2026-11-19）
-> - **SkillEvaluator**：NVIDIA 發布的多層級框架，在 skill 安裝前就篩掉低品質或重疊的 skill。
-> - **product-launch-motion／video-director**：兩款把「不剪接、節拍同步」與「QA 把關流程」寫進技能本體的 code-rendered 影片 skill。
+> **Skills 設計新增抓漏合集與內容再製自驗收 Skill**（2026-11-21）
+> - **Claude-BugHunter**：抓漏與紅隊用 skill 合集，82 個 skill、15 個斜線指令，含 681 個已揭露報告範式。
+> - **article2media**：文章／影片一鍵轉社群圖文與配音短影音，21 套主題，產出前自動驗收。
 ---
 
 ## 摘要
@@ -96,6 +96,24 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### elementalsouls/Claude-BugHunter：抓漏與紅隊用 Claude Code skill 合集，82 個 skill、15 個斜線指令，含 681 個已揭露報告範式（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 聚焦抓漏（bug hunting）與外部紅隊工作的 Claude Code skill 合集，含 82 個 skill、15 個斜線指令，整理跨 24 類核心漏洞的 681 個已揭露報告範式，另含企業身分與基礎設施攻擊矩陣。
+- **與既有模式的關係：** 補上「Skills 設計」一個「攻擊性安全研究垂直領域 skill 庫」取向——既有做法多是生產力或創作領域封裝，本則延伸到紅隊／抓漏場景；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 星速偵測收錄（近 2 天 +3,372 星，約 1,686 星/日），累積 15,587 星，無 forks／issues／近期 commit 佐證可查，未另行查證；82 個 skill 與 681 個報告範式的具體清單未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/elementalsouls/Claude-BugHunter)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，星速異常偏高，尚無第三方採用或複現數據）
+
+#### threerocks/article2media：文章或影片逐字稿一鍵轉小紅書圖文、長圖、公眾號排版與 AI 配音短影音的自驗收 Skill（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 把一篇文章或一支影片（抖音、B 站、YouTube 先轉逐字稿）一鍵轉成小紅書圖文、雜誌長圖、公眾號排版與 AI 配音口播短影音，21 套主題可選，產出前自動驗收，零 npm 依賴。
+- **與既有模式的關係：** 補上「Skills 設計」一個「內容再製＋自動驗收」取向——既有地雷多指出品質量測仍靠人工或第三方工具（SkillEvaluator 等，[[topics/community-skills#2026-11]]），本則把「產出前自動驗收」做進 skill 本體；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（517★），無 forks／issues／近期 commit 佐證可查，未另行查證；21 套主題清單與「自動驗收」具體判準未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/threerocks/article2media)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### NVIDIA/SkillEvaluator：多層級框架評估 AI agent skills／plugins 品質，含安全掃描與語意重疊偵測（2026-11-19）
 

@@ -3,17 +3,17 @@ page: "topics/community-interfaces"
 kind: "topic"
 status: "ongoing"
 domain: "🌐 社群"
-last_updated: "2026-11-18"
-last_news_update: "2026-11-18"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 status_main: "ongoing"
-days_since_news: 3
+days_since_news: 0
 parent: "topics/community-tech-patterns"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 3
+days_since_news_subtree: 0
 inbound_links: 1
-attribution_count: 28
-attribution_last: "2026-11-18"
+attribution_count: 29
+attribution_last: "2026-11-21"
 top_source: "hacker-news"
 pending_count: 0
 pending_overdue: 0
@@ -31,11 +31,11 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🌐 社群
 **上層：** [[topics/community-tech-patterns]]
 **開始日期：** 2026-07-08
-**最後更新：** 2026-11-18
-**最後新聞更新：** 2026-11-18
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 
-> **行動裝置遠端控制再添一款多通訊 App 橋接：nanoclaw**（2026-11-18）
-> - **nanoclaw**：常駐個人 AI 助理，agent 跑在獨立容器，底層 harness 可選 Claude Code／Codex／Cursor／OpenCode，並可從 Slack、WhatsApp、Telegram、Discord 等通訊 App 對話。
+> **行動裝置遠端控制新增桌面動態島整合 Claude Code 核准推播**（2026-11-21）
+> - **Fuyu**：Windows／macOS 動態島整合多通訊 App 通知，並把 Claude Code／Codex 狀態與核准請求推播到手機。
 
 ---
 
@@ -75,6 +75,15 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 ## 技術彙整
 
 ### 2026-11
+
+#### TixXin/Fuyu：Windows／macOS 動態島整合通訊 App 通知與 Claude Code／Codex 狀態、核准推播到手機（2026-11-21）
+
+- **主線：** —
+- **核心模式：** 桌面動態島（dynamic island）工具，整合 Telegram、Discord、WhatsApp、QQ、微信的訊息提醒，並把 Claude Code／Codex 的狀態與核准請求同步推播到手機，另含剪貼簿歷史、翻譯、歌詞、待辦與外掛機制。
+- **與既有模式的關係：** 補上「行動裝置遠端控制」既有代表技巧（nanoclaw、fardesk 等，[[topics/community-interfaces#2026-11]]）一個「桌面動態島＋多通訊 App 通知」取向——既有做法多是獨立 app 或 web 介面，本則把 Claude Code 核准請求併入桌面通知系統統一推播；非大型 codebase 特有痛點，主線填 —。
+- **可信度註記：** 僅有 GitHub Search 星數（503★），無 forks／issues／近期 commit 佐證可查，未另行查證；「核准推播到手機」的延遲與離線行為未見報導（細節未載）。
+- **來源：** GitHub Search；[GitHub](https://github.com/TixXin/Fuyu)
+- **成熟度：** ⏳ 新興（本庫首次收錄，單一作者工具，尚無社群採用回饋數據）
 
 #### nanocoai/nanoclaw：常駐個人 AI 助理，agent 各自跑在容器裡、可選 harness，並從多個通訊 App 對話（2026-11-18）
 

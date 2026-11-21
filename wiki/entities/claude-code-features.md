@@ -4,17 +4,17 @@ kind: "entity"
 type: "product"
 status: "active"
 domain: "🛠️ 工具/功能"
-last_updated: "2026-11-20"
-last_news_update: "2026-11-20"
+last_updated: "2026-11-21"
+last_news_update: "2026-11-21"
 status_main: "active"
-days_since_news: 1
+days_since_news: 0
 parent: "entities/claude-code"
 children: "[]"
 page_role: "child"
-days_since_news_subtree: 1
+days_since_news_subtree: 0
 inbound_links: 8
-attribution_count: 18
-attribution_last: "2026-11-20"
+attribution_count: 19
+attribution_last: "2026-11-21"
 top_source: "official-docs"
 pending_count: 0
 pending_overdue: 0
@@ -33,12 +33,12 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 **領域：** 🛠️ 工具/功能
 **上層：** [[entities/claude-code]]
 **首次出現：** 2025（正式推出）
-**最後更新：** 2026-11-20
-**最後新聞更新：** 2026-11-20
+**最後更新：** 2026-11-21
+**最後新聞更新：** 2026-11-21
 %% 2026-11-01 第 21 波自 [[entities/claude-code]] 拆出：核心功能、桌面版功能地圖、hooks、subagent 原文照搬；母頁現況的 23 條桌面版文件異動與「開發者須知」中屬用法的 8 條一併搬來；hooks 結論句依官方權限文件改寫、subagent 補平行分派一句（查證 2026-11-01） %%
 
-> **最新動態**（2026-11-20）
-> 桌面版文件新增 SSH connection 設定流程——主機顯示按鈕或清單皆可觸發新增，連線名稱可選填；另載 SSH／WSL 檔案在 Browser pane 開啟時的預覽限制，詳見 [[entities/claude-code-features#桌面版功能地圖]]「SSH 遠端與離線續跑」。
+> **最新動態**（2026-11-21）
+> 桌面版文件新增：Code tab 的 Computer use 需 Pro／Max／Ultra 方案（macOS／Windows）；Dispatch 不再開放給新使用者；詳見 [[entities/claude-code-features#桌面版功能地圖]]「其他」「Dispatch 與 Claude 建議的任務」。
 
 ---
 
@@ -101,6 +101,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 **Dispatch 與 Claude 建議的任務**
 - Dispatch：10-22 桌面文件增 Dispatch 說明（細節未載，見 [[entities/claude-code-releases#歷史記錄]]）；相關未修問題見已知問題頁 #40283、#45937。
+- 11-21：Dispatch 不開放給新使用者；未出現於 Claude app 時另有替代做法（連結文字截斷，見上方時序）。
 - Claude 建議的任務：本頁尚無對應的時序條目。
 
 **Auto mode availability**
@@ -119,6 +120,7 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 - 本頁沒有桌面版文件對應條目；機制見「Subagent 型別差異對照」軸線 4。
 
 **其他**
+- 11-21：Code tab 的 Computer use 需 Pro／Max／Ultra 方案（macOS／Windows）；使用前須在設定開啟（另見 09-15 背景行為、10-04 設定路徑搬動）。
 - 11-17：側邊欄整合 Connectors 與 Plugins 進單一 Plugins 目錄入口。
 - 11-05：文件增字（216,003→217,701），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
 - 11-04：文件增字（211,650→216,003），段落超過自動比對上限，改了哪些主題未知，需自行開原文比對。
@@ -132,6 +134,8 @@ generated_by: "scripts/gen_wiki_frontmatter.py"
 
 ### 桌面版文件時序
 
+- **官方文件更新**（2026-11-21）：桌面版文件字數由 227,349 增至 227,979，新增 5 段（移除段落未列出）。
+  - **新增內容（原文列出的）**：Code tab 的 Computer use 需 Pro／Max／Ultra 方案，macOS／Windows 可用（其餘平台未列，原文截斷）；Dispatch 現在不開放給新使用者，未出現時另有替代做法（連結文字截斷）；使用前先在設定確認 Computer use 已開啟（[原文](https://code.claude.com/docs/en/desktop.md)）。
 - **官方文件更新**（2026-11-20）：桌面版文件字數由 227,103 增至 227,349，新增 26 段、移除 21 段（移除段落僅存雜湊，無法列出原文）。
   - **新增內容（原文列出的）**：主機顯示為按鈕時選 **Add SSH connection…**；顯示為清單時打開清單、在最下方選 **Add SSH connection…**；連線名稱可選填，留空則用 SSH host 值（[原文](https://code.claude.com/docs/en/desktop.md)）。
     - SSH／WSL 檔案在 Browser pane 開啟時，預覽不執行腳本，腳本繪製的圖表／表格會是空的；側邊面板可顯示或隱藏，可從面板清單選分頁（原文另有 21 段未列）。

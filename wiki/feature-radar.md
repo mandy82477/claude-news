@@ -23,9 +23,9 @@
 
 | 日期 | 事件 | 到期後 | 你該做的決定 |
 |------|------|--------|------|
-| **2026-11-20** | Claude Data 在 Enterprise 方案預設開啟（原 Claude Dashboards） | 組織成員可接資料 connector、建共用儀表板 | 不想開的 Enterprise 管理員，11-20 前到 Organization settings > Artifacts 關掉；Team 方案早已預設開 |
 | **2026-11-30** | Sonnet 4.5（`claude-sonnet-4-5-20250929`）API 退役 | 請求該模型將失敗 | 遷移至 `claude-sonnet-5-5`；Bedrock／GCP 另訂時程，詳見 [[entities/pricing]] |
 
+> 11-20 的 Claude Data Enterprise 預設開啟已生效並移出本表：官方文章（[來源](https://claude.com/resources/articles/sheets-whiteboards-data)，2026-11-21 複查）確認「turns on by default on November 20, 2026」如期發生，未延期；Whiteboards、Sheets 仍預設關，細節見 [[entities/claude-workspace-suite]]。
 > 09-14 的週配額換軌已生效並移出本表：+50% 加成 09-13 到期，標準週配額改為永久 +25%，相對加成期間淨減約 17%，5 小時窗不受影響。官方說明中心當日確認換軌如期發生，完整規則與來源見 [[entities/pricing]]。
 > Fable 免費期限（原訂 7/19）已到期並移出本表；現在是常態分流：Max 與 Team premium 為標配（週用量 50% 內），Pro 與 standard 走 usage credits，5 與 5.1 同規則，詳見 [[entities/pricing]]。
 
@@ -77,6 +77,7 @@
 
 | 功能 | 發布日期 | 熱度 | 試用價值 | 狀態 |
 |------|----------|------|----------|------|
+| **Enterprise Admin Console 組織登入**（`claude auth login` 自動套用受管組織設定與雲端供應商，v2.1.330） | 2026-11-20 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Claude Code Projects 改版**（對話式協調，自動拆解任務／平行協調多工作線，beta） | 2026-11-14 | 🔥🔥 | ⏳ 觀望 | Beta（Claude Code） |
 | **Claude Desktop Release Channel**（選擇 Desktop 更新走哪個版本頻道，Stable 維持現狀） | 2026-11-17 | 🔥 | ⏳ 觀望 | 正式發布 |
 | **Code Mode**（v2.1.323，實驗性選項，預設關閉，Claude 改寫 JavaScript 呼叫自己的工具；v2.1.326 起可與 agent teams 同時開啟） | 2026-11-12 | 🔥🔥🔥 | ⏳ 觀望 | Research Preview |
@@ -238,6 +239,25 @@
 ---
 
 ## 🆕 最新功能（2026-11）
+
+### Claude Code v2.1.330：Enterprise Admin Console 組織登入
+**發布：** 2026-11-20（v2.1.330） | **狀態：** 正式發布
+
+**是什麼：** `claude auth login` 登入由 Anthropic Enterprise Admin Console 集中管理的組織時，Claude Code 自動套用該組織的設定並使用其雲端供應商。
+
+**為何熱：** 單一 GitHub Release 來源，尚無社群討論。
+
+**現在要試嗎：** 用 Enterprise Admin Console 集中管理團隊的公司可直接用公司帳號登入並套用對應設定；非此方式管理的個人或組織帳號不受影響，無需動作。
+
+**快速上手：**
+```
+claude auth login
+```
+帳號屬 Enterprise Admin Console 管理的組織時自動套用組織設定與雲端供應商，無需額外旗標。
+
+**注意事項：** 僅影響用 Enterprise Admin Console 集中管理團隊的組織；一般個人或未受此方式管理的組織帳號登入流程不變。
+
+---
 
 ### Claude Code Projects 改版：對話式多代理協調台
 **發布：** 2026-11-14（beta） | **狀態：** Beta（Claude Code）

@@ -12,7 +12,7 @@ parent: null
 children: "['entities/pricing-archive', 'entities/pricing-history', 'entities/pricing-incidents']"
 page_role: "hub"
 days_since_news_subtree: 2
-inbound_links: 192
+inbound_links: 193
 attribution_count: 179
 attribution_last: "2026-11-19"
 top_source: "google-news"
